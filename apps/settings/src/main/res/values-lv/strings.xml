@@ -389,4 +389,12 @@
     <string name="accounts_field_topic">Tēma</string>
     <string name="accounts_field_secret">Parakstīšanas noslēpums</string>
     <string name="account_totp_open">Atvērt autentifikācijas lietotnē</string>
+    <string name="accounts_revoke">Atsaukt piekļuvi</string>
+    <string name="accounts_capability_calendar">Kalendārs</string>
+    <string name="accounts_capability_notify">Paziņojumi</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Pieteikšanās</string>
+    <string name="accounts_provider_caldav">Kalendāra serveris</string>
+    <string name="accounts_revoke_confirm">Tādējādi tiks atsaukta %1$s piekļuve kalendāram. Pieteikšanās ar %2$s saglabāsies, līdz to atsaistīsiet pieteikšanās lapā.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

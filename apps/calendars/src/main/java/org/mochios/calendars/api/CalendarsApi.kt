@@ -7,6 +7,8 @@ package org.mochios.calendars.api
 
 import org.mochios.android.api.ApiResponse
 import org.mochios.android.sync.EventComponent
+import org.mochios.calendars.model.AccountResponse
+import org.mochios.calendars.model.AccountsResponse
 import org.mochios.calendars.model.CalendarResponse
 import org.mochios.calendars.model.CalendarsResponse
 import org.mochios.calendars.model.ChangesResponse
@@ -18,6 +20,7 @@ import org.mochios.calendars.model.LinkResponse
 import org.mochios.calendars.model.Multiweek
 import org.mochios.calendars.model.PollResponse
 import org.mochios.calendars.model.PreferencesResponse
+import org.mochios.calendars.model.RemoteResponse
 import org.mochios.calendars.model.SplitResponse
 import org.mochios.calendars.model.TokenDeleteResponse
 import org.mochios.calendars.model.TokenResponse
@@ -156,6 +159,35 @@ interface CalendarsApi {
     @POST("-/calendars/subscribe")
     suspend fun subscribeCalendar(
         @Field("url") url: String,
+        @Field("name") name: String,
+        // contract-ok: the handler reads colour through colour_input.
+        @Field("colour") colour: String,
+    ): Response<ApiResponse<CalendarResponse>>
+
+    @GET("-/calendars/accounts")
+    suspend fun listAccounts(): Response<ApiResponse<AccountsResponse>>
+
+    @FormUrlEncoded
+    @POST("-/calendars/account")
+    suspend fun addAccount(
+        @Field("type") type: String,
+        @Field("url") url: String,
+        @Field("username") username: String,
+        @Field("password") password: String,
+        @Field("label") label: String,
+    ): Response<ApiResponse<AccountResponse>>
+
+    @FormUrlEncoded
+    @POST("-/calendars/remote")
+    suspend fun remoteCalendars(
+        @Field("account") account: String,
+    ): Response<ApiResponse<RemoteResponse>>
+
+    @FormUrlEncoded
+    @POST("-/calendars/link")
+    suspend fun linkCalendar(
+        @Field("account") account: String,
+        @Field("collection") collection: String,
         @Field("name") name: String,
         // contract-ok: the handler reads colour through colour_input.
         @Field("colour") colour: String,

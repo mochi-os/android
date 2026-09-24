@@ -154,4 +154,26 @@
     <string name="calendars_scope_copy">Kopijuoti šį įvykį</string>
     <string name="calendars_editor_copy_title">Kopijuoti įvykį</string>
     <string name="calendars_title_required">Pavadinimas yra privalomas</string>
+    <string name="calendars_link_submit">Susieti</string>
+    <string name="calendars_link_sync">Sinchronizuoti dabar</string>
+    <string name="calendars_link_grant">Leiskite prieigą prie kalendoriaus žiniatinklio programoje</string>
+    <string name="calendars_link_linked">Susieta</string>
+    <string name="calendars_link_marker">Susietas kalendorius</string>
+    <string name="calendars_link_remote_empty">Nėra kalendorių</string>
+    <string name="calendars_poll_conflict">Įvykis pakeistas abiejose pusėse</string>
+    <string name="calendars_poll_missing">Kalendoriaus nebėra jo serveryje</string>
+    <string name="calendars_poll_unauthorised">Kalendoriaus serveris atmetė paskyros prisijungimo duomenis</string>
+    <string name="calendars_subscribe_username">Vartotojo vardas</string>
+    <string name="calendars_subscribe_password">Slaptažodis</string>
+    <string name="calendars_subscribe_connect">Prisijungti</string>
+    <string name="calendars_subscribe_server">Kitas Mochi arba CalDAV serveris</string>
+    <string name="calendars_subscribe_address">Paskelbto kalendoriaus adresas (tik skaitymui)</string>
+    <string name="calendars_subscribe_password_apple">Programai skirtas slaptažodis</string>
+    <string name="calendars_subscribe_server_url">Serverio adresas</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Google paskyros šiame serveryje neįjungtos. Įjunkite jas skiltyje Nustatymai, Sistemos nustatymai.</string>
+    <string name="calendars_subscribe_google_connect">Neprijungėte Google paskyros. Prijunkite ją žiniatinklio programoje.</string>
 </resources>

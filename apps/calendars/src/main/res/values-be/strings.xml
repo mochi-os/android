@@ -157,4 +157,26 @@
     <string name="calendars_scope_copy">Скапіраваць гэтую падзею</string>
     <string name="calendars_editor_copy_title">Скапіраваць падзею</string>
     <string name="calendars_title_required">Назва абавязковая</string>
+    <string name="calendars_link_submit">Звязаць</string>
+    <string name="calendars_link_sync">Сінхранізаваць цяпер</string>
+    <string name="calendars_link_grant">Дазвольце доступ да календара ў вэб-праграме</string>
+    <string name="calendars_link_linked">Звязаны</string>
+    <string name="calendars_link_marker">Звязаны каляндар</string>
+    <string name="calendars_link_remote_empty">Няма календароў</string>
+    <string name="calendars_poll_conflict">Падзея змянілася з абодвух бакоў</string>
+    <string name="calendars_poll_missing">Календара больш няма на яго серверы</string>
+    <string name="calendars_poll_unauthorised">Сервер календара адхіліў уліковыя даныя акаўнта</string>
+    <string name="calendars_subscribe_username">Імя карыстальніка</string>
+    <string name="calendars_subscribe_password">Пароль</string>
+    <string name="calendars_subscribe_connect">Падключыцца</string>
+    <string name="calendars_subscribe_server">Іншы сервер Mochi або CalDAV</string>
+    <string name="calendars_subscribe_address">Апублікаваны адрас календара (толькі для чытання)</string>
+    <string name="calendars_subscribe_password_apple">Пароль для праграмы</string>
+    <string name="calendars_subscribe_server_url">Адрас сервера</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Уліковыя запісы Google не ўключаны на гэтым серверы. Уключыце іх у Налады, Сістэмныя налады.</string>
+    <string name="calendars_subscribe_google_connect">Вы не падключылі ўліковы запіс Google. Падключыце яго ў вэб-праграме.</string>
 </resources>

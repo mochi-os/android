@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">ఈ ఈవెంట్‌ను కాపీ చేయండి</string>
     <string name="calendars_editor_copy_title">ఈవెంట్‌ను కాపీ చేయండి</string>
     <string name="calendars_title_required">శీర్షిక అవసరం</string>
+    <string name="calendars_link_submit">లింక్ చేయి</string>
+    <string name="calendars_link_sync">ఇప్పుడే సింక్ చేయండి</string>
+    <string name="calendars_link_grant">వెబ్ యాప్‌లో క్యాలెండర్ యాక్సెస్‌ను అనుమతించండి</string>
+    <string name="calendars_link_linked">లింక్ చేయబడింది</string>
+    <string name="calendars_link_marker">లింక్ చేసిన క్యాలెండర్</string>
+    <string name="calendars_link_remote_empty">క్యాలెండర్‌లు లేవు</string>
+    <string name="calendars_poll_conflict">ఒక ఈవెంట్ రెండు వైపులా మారింది</string>
+    <string name="calendars_poll_missing">క్యాలెండర్ దాని సర్వర్ నుండి తొలగిపోయింది</string>
+    <string name="calendars_poll_unauthorised">క్యాలెండర్ సర్వర్ ఖాతా ఆధారాలను తిరస్కరించింది</string>
+    <string name="calendars_subscribe_username">వినియోగదారు పేరు</string>
+    <string name="calendars_subscribe_password">పాస్‌వర్డ్</string>
+    <string name="calendars_subscribe_connect">కనెక్ట్ చేయండి</string>
+    <string name="calendars_subscribe_server">మరో Mochi లేదా CalDAV సర్వర్</string>
+    <string name="calendars_subscribe_address">ప్రచురించిన క్యాలెండర్ చిరునామా (చదవడం-మాత్రమే)</string>
+    <string name="calendars_subscribe_password_apple">యాప్‌కు ప్రత్యేక పాస్‌వర్డ్</string>
+    <string name="calendars_subscribe_server_url">సర్వర్ చిరునామా</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">ఈ సర్వర్‌లో Google ఖాతాలు ప్రారంభించబడలేదు. వాటిని సెట్టింగ్‌లు, సిస్టమ్ సెట్టింగ్‌లు లో ప్రారంభించండి.</string>
+    <string name="calendars_subscribe_google_connect">మీరు Google ఖాతాను కనెక్ట్ చేయలేదు. దీన్ని వెబ్ యాప్‌లో కనెక్ట్ చేయండి.</string>
 </resources>

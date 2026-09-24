@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">Kopyahin ang kaganapang ito</string>
     <string name="calendars_editor_copy_title">Kopyahin ang kaganapan</string>
     <string name="calendars_title_required">Kailangan ng pamagat</string>
+    <string name="calendars_link_submit">I-link</string>
+    <string name="calendars_link_sync">Mag-sync ngayon</string>
+    <string name="calendars_link_grant">Payagan ang access sa kalendaryo sa web app</string>
+    <string name="calendars_link_linked">Naka-link</string>
+    <string name="calendars_link_marker">Naka-link na kalendaryo</string>
+    <string name="calendars_link_remote_empty">Walang kalendaryo</string>
+    <string name="calendars_poll_conflict">May kaganapang nabago sa magkabilang panig</string>
+    <string name="calendars_poll_missing">Wala na ang kalendaryo sa server nito</string>
+    <string name="calendars_poll_unauthorised">Tinanggihan ng server ng kalendaryo ang mga kredensyal ng account</string>
+    <string name="calendars_subscribe_username">Pangalan ng user</string>
+    <string name="calendars_subscribe_password">Password</string>
+    <string name="calendars_subscribe_connect">Kumonekta</string>
+    <string name="calendars_subscribe_server">Ibang Mochi o CalDAV server</string>
+    <string name="calendars_subscribe_address">Address ng nailathalang kalendaryo (read-only)</string>
+    <string name="calendars_subscribe_password_apple">Password na para lang sa app</string>
+    <string name="calendars_subscribe_server_url">Address ng server</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Hindi pinagana ang mga Google account sa server na ito. Paganahin ang mga ito sa Mga setting, Mga system setting.</string>
+    <string name="calendars_subscribe_google_connect">Wala kang nakakonektang Google account. Ikonekta ito sa web app.</string>
 </resources>

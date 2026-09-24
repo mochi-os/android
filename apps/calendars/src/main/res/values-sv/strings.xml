@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">Kopiera denna händelse</string>
     <string name="calendars_editor_copy_title">Kopiera händelse</string>
     <string name="calendars_title_required">Titel krävs</string>
+    <string name="calendars_link_submit">Länka</string>
+    <string name="calendars_link_sync">Synkronisera nu</string>
+    <string name="calendars_link_grant">Tillåt kalenderåtkomst i webbappen</string>
+    <string name="calendars_link_linked">Länkad</string>
+    <string name="calendars_link_marker">Länkad kalender</string>
+    <string name="calendars_link_remote_empty">Inga kalendrar</string>
+    <string name="calendars_poll_conflict">En händelse ändrades på båda sidor</string>
+    <string name="calendars_poll_missing">Kalendern finns inte längre på sin server</string>
+    <string name="calendars_poll_unauthorised">Kalenderns server avvisade kontots inloggningsuppgifter</string>
+    <string name="calendars_subscribe_username">Användarnamn</string>
+    <string name="calendars_subscribe_password">Lösenord</string>
+    <string name="calendars_subscribe_connect">Anslut</string>
+    <string name="calendars_subscribe_server">En annan Mochi- eller CalDAV-server</string>
+    <string name="calendars_subscribe_address">Publicerad kalenderadress (skrivskyddad)</string>
+    <string name="calendars_subscribe_password_apple">Appspecifikt lösenord</string>
+    <string name="calendars_subscribe_server_url">Serveradress</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Google-konton är inte aktiverade på den här servern. Aktivera dem under Inställningar, Systeminställningar.</string>
+    <string name="calendars_subscribe_google_connect">Du har inte anslutit något Google-konto. Anslut det i webbappen.</string>
 </resources>

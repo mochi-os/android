@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">Téma</string>
     <string name="accounts_field_secret">Aláírási titok</string>
     <string name="account_totp_open">Megnyitás hitelesítő alkalmazásban</string>
+    <string name="accounts_revoke">Hozzáférés visszavonása</string>
+    <string name="accounts_capability_calendar">Naptár</string>
+    <string name="accounts_capability_notify">Értesítések</string>
+    <string name="accounts_capability_ai">MI</string>
+    <string name="accounts_capability_login">Bejelentkezés</string>
+    <string name="accounts_provider_caldav">Naptárkiszolgáló</string>
+    <string name="accounts_revoke_confirm">Ezzel visszavonja %1$s naptárhozzáférését. A %2$s fiókkal való bejelentkezés megmarad, amíg a Bejelentkezés oldalon le nem választja.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

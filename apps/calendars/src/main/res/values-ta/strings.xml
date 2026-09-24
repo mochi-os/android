@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">இந்த நிகழ்வை நகலெடு</string>
     <string name="calendars_editor_copy_title">நிகழ்வை நகலெடு</string>
     <string name="calendars_title_required">தலைப்பு தேவை</string>
+    <string name="calendars_link_submit">இணை</string>
+    <string name="calendars_link_sync">இப்போது ஒத்திசை</string>
+    <string name="calendars_link_grant">வலை செயலியில் நாட்காட்டி அணுகலை அனுமதிக்கவும்</string>
+    <string name="calendars_link_linked">இணைக்கப்பட்டது</string>
+    <string name="calendars_link_marker">இணைக்கப்பட்ட நாட்காட்டி</string>
+    <string name="calendars_link_remote_empty">நாட்காட்டிகள் இல்லை</string>
+    <string name="calendars_poll_conflict">ஒரு நிகழ்வு இரு பக்கமும் மாறியுள்ளது</string>
+    <string name="calendars_poll_missing">நாட்காட்டி அதன் சேவையகத்தில் இல்லை</string>
+    <string name="calendars_poll_unauthorised">நாட்காட்டியின் சேவையகம் கணக்கின் சான்றுகளை நிராகரித்தது</string>
+    <string name="calendars_subscribe_username">பயனர்பெயர்</string>
+    <string name="calendars_subscribe_password">கடவுச்சொல்</string>
+    <string name="calendars_subscribe_connect">இணைக்கவும்</string>
+    <string name="calendars_subscribe_server">வேறு Mochi அல்லது CalDAV சேவையகம்</string>
+    <string name="calendars_subscribe_address">வெளியிடப்பட்ட நாட்காட்டி முகவரி (படிக்க மட்டும்)</string>
+    <string name="calendars_subscribe_password_apple">செயலிக்கான தனிக் கடவுச்சொல்</string>
+    <string name="calendars_subscribe_server_url">சேவையக முகவரி</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">இந்த சர்வரில் Google கணக்குகள் இயக்கப்படவில்லை. அவற்றை அமைப்புகள், சிஸ்டம் அமைப்புகள் இல் இயக்கவும்.</string>
+    <string name="calendars_subscribe_google_connect">நீங்கள் Google கணக்கை இணைக்கவில்லை. அதை வலை செயலியில் இணைக்கவும்.</string>
 </resources>

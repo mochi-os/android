@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">Тема</string>
     <string name="accounts_field_secret">Кол коюу сыры</string>
     <string name="account_totp_open">Аутентификатор колдонмосунда ачуу</string>
+    <string name="accounts_revoke">Мүмкүнчүлүктү кайтарып алуу</string>
+    <string name="accounts_capability_calendar">Календарь</string>
+    <string name="accounts_capability_notify">Билдирмелер</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Кирүү</string>
+    <string name="accounts_provider_caldav">Календар сервери</string>
+    <string name="accounts_revoke_confirm">Бул %1$s календарына кирүүнү жокко чыгарат. %2$s аркылуу кирүү, аны Кирүү барагында ажыратмайынча сакталат.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

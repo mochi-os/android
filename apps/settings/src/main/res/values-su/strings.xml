@@ -386,4 +386,12 @@
     <string name="accounts_field_topic">Topik</string>
     <string name="accounts_field_secret">Rusiah tanda tangan</string>
     <string name="account_totp_open">Buka dina aplikasi authenticator</string>
+    <string name="accounts_revoke">Cabut aksés</string>
+    <string name="accounts_capability_calendar">Kalénder</string>
+    <string name="accounts_capability_notify">Bewara</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Asup</string>
+    <string name="accounts_provider_caldav">Server kalénder</string>
+    <string name="accounts_revoke_confirm">Ieu bakal ngabatalkeun aksés kalénder %1$s. Asup ku %2$s tetep aya nepi ka anjeun nyoplokkeun tumbuna dina kaca Asup.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">Mowzuk</string>
     <string name="accounts_field_secret">Gol çekiş syry</string>
     <string name="account_totp_open">Autentifikator programmasynda aç</string>
+    <string name="accounts_revoke">Elýeterliligi ýatyr</string>
+    <string name="accounts_capability_calendar">Kalendar</string>
+    <string name="accounts_capability_notify">Bildirişler</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Giriş</string>
+    <string name="accounts_provider_caldav">Kalendar serweri</string>
+    <string name="accounts_revoke_confirm">Bu %1$s kalendaryna girişi ýatyrar. %2$s bilen giriş, Giriş sahypasynda baglanyşygy aýyrýançaňyz galar.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

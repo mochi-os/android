@@ -395,4 +395,12 @@
     <string name="accounts_field_topic">Pwnc</string>
     <string name="accounts_field_secret">Cyfrinach lofnodi</string>
     <string name="account_totp_open">Agor yn yr ap dilysu</string>
+    <string name="accounts_revoke">Dirymu mynediad</string>
+    <string name="accounts_capability_calendar">Calendr</string>
+    <string name="accounts_capability_notify">Hysbysiadau</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Mewngofnodi</string>
+    <string name="accounts_provider_caldav">Gweinydd calendr</string>
+    <string name="accounts_revoke_confirm">Bydd hyn yn diddymu mynediad %1$s at y calendr. Bydd mewngofnodi gyda %2$s yn aros nes i chi ei ddatgysylltu ar y dudalen fewngofnodi.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

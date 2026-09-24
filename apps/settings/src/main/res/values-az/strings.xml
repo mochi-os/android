@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">Mövzu</string>
     <string name="accounts_field_secret">İmza sirri</string>
     <string name="account_totp_open">Autentifikator tətbiqində aç</string>
+    <string name="accounts_revoke">Girişi ləğv et</string>
+    <string name="accounts_capability_calendar">Təqvim</string>
+    <string name="accounts_capability_notify">Bildirişlər</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Giriş</string>
+    <string name="accounts_provider_caldav">Təqvim serveri</string>
+    <string name="accounts_revoke_confirm">Bu, %1$s hesabının təqvimə girişini ləğv edəcək. %2$s ilə giriş, Giriş səhifəsində əlaqəni kəsənə qədər qalır.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

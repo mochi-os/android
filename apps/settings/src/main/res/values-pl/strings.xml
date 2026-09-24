@@ -391,4 +391,12 @@
     <string name="accounts_field_topic">Temat</string>
     <string name="accounts_field_secret">Sekret podpisu</string>
     <string name="account_totp_open">Otwórz w aplikacji uwierzytelniającej</string>
+    <string name="accounts_revoke">Cofnij dostęp</string>
+    <string name="accounts_capability_calendar">Kalendarz</string>
+    <string name="accounts_capability_notify">Powiadomienia</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Logowanie</string>
+    <string name="accounts_provider_caldav">Serwer kalendarza</string>
+    <string name="accounts_revoke_confirm">Spowoduje to odebranie dostępu do kalendarza dla %1$s. Logowanie przez %2$s pozostanie, dopóki nie odłączysz go na stronie logowania.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

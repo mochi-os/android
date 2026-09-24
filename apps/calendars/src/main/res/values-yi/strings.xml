@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">קאָפּירן די געשעעניש</string>
     <string name="calendars_editor_copy_title">קאָפּירן געשעעניש</string>
     <string name="calendars_title_required">קעפּל איז פֿאָדערלעך</string>
+    <string name="calendars_link_submit">פֿאַרבינדן</string>
+    <string name="calendars_link_sync">סינכראָניזיר איצט</string>
+    <string name="calendars_link_grant">דערלויבט קאַלענדאַר־צוטריט אין דער וועב־אַפּליקאַציע</string>
+    <string name="calendars_link_linked">פֿאַרבונדן</string>
+    <string name="calendars_link_marker">פֿאַרבונדענער קאַלענדאַר</string>
+    <string name="calendars_link_remote_empty">קיין קאַלענדאַרן</string>
+    <string name="calendars_poll_conflict">אַן אונטערנעמונג האָט זיך געענדערט אויף ביידע זײַטן</string>
+    <string name="calendars_poll_missing">דער קאַלענדאַר איז מער נישט אויף זײַן סערווער</string>
+    <string name="calendars_poll_unauthorised">דער סערווער פֿון דעם קאַלענדאַר האָט אָפּגעזאָגט די קאָנטע־דאַטן</string>
+    <string name="calendars_subscribe_username">באַניצער נאָמען</string>
+    <string name="calendars_subscribe_password">פּאַראָל</string>
+    <string name="calendars_subscribe_connect">פֿאַרבינדן</string>
+    <string name="calendars_subscribe_server">אַן אַנדער Mochi אָדער CalDAV סערווער</string>
+    <string name="calendars_subscribe_address">פֿאַרעפֿנטלעכטער קאַלענדאַר־אַדרעס (נאָר־לײענען)</string>
+    <string name="calendars_subscribe_password_apple">אַפּ־ספּעציפֿישער פּאַראָל</string>
+    <string name="calendars_subscribe_server_url">סערווער־אַדרעס</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Google קאָנטעס זענען נישט אַקטיווירט אויף דעם סערווער. אַקטיווירט זיי אונטער אײַנשטעלונגען, סיסטעם־אײַנשטעלונגען.</string>
+    <string name="calendars_subscribe_google_connect">איר האָט נישט פֿאַרבונדן קיין Google קאָנטע. פֿאַרבינדט עס אין דער וועב־אַפּליקאַציע.</string>
 </resources>

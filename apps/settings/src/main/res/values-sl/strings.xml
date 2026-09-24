@@ -391,4 +391,12 @@
     <string name="accounts_field_topic">Tema</string>
     <string name="accounts_field_secret">Skrivnost za podpisovanje</string>
     <string name="account_totp_open">Odpri v aplikaciji za preverjanje pristnosti</string>
+    <string name="accounts_revoke">Prekliči dostop</string>
+    <string name="accounts_capability_calendar">Koledar</string>
+    <string name="accounts_capability_notify">Obvestila</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Prijava</string>
+    <string name="accounts_provider_caldav">Strežnik koledarja</string>
+    <string name="accounts_revoke_confirm">S tem bo preklican dostop do koledarja za %1$s. Prijava z %2$s ostane, dokler je ne prekinete na strani za prijavo.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

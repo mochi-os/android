@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">Mada</string>
     <string name="accounts_field_secret">Siri ya kutia saini</string>
     <string name="account_totp_open">Fungua katika programu ya uthibitishaji</string>
+    <string name="accounts_revoke">Batilisha ufikiaji</string>
+    <string name="accounts_capability_calendar">Kalenda</string>
+    <string name="accounts_capability_notify">Arifa</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Kuingia</string>
+    <string name="accounts_provider_caldav">Seva ya kalenda</string>
+    <string name="accounts_revoke_confirm">Hii itabatilisha ufikiaji wa kalenda wa %1$s. Kuingia kwa %2$s kutaendelea hadi utenganishe kwenye ukurasa wa Kuingia.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

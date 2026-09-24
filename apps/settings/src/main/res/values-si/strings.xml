@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">මාතෘකාව</string>
     <string name="accounts_field_secret">අත්සන් රහස</string>
     <string name="account_totp_open">සත්‍යාපන යෙදුමේ විවෘත කරන්න</string>
+    <string name="accounts_revoke">ප්‍රවේශය අවලංගු කරන්න</string>
+    <string name="accounts_capability_calendar">දින දර්ශනය</string>
+    <string name="accounts_capability_notify">දැනුම්දීම්</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">පුරනය වීම</string>
+    <string name="accounts_provider_caldav">දින දර්ශන සේවාදායකය</string>
+    <string name="accounts_revoke_confirm">මෙය %1$s හි දින දර්ශන ප්‍රවේශය අවලංගු කරයි. පිවිසුම් පිටුවේ එය විසන්ධි කරන තුරු %2$s සමඟ පුරනය වීම පවතී.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

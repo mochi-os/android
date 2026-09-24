@@ -18,4 +18,8 @@
     <string name="calendars_undo">Desfazer</string>
     <string name="calendars_event_resize">Alterar o horário de término</string>
     <string name="calendars_title_required">O título é obrigatório</string>
+    <string name="calendars_subscribe_password">Senha</string>
+    <string name="calendars_subscribe_connect">Conectar</string>
+    <string name="calendars_subscribe_google_enable">As contas do Google não estão ativadas neste servidor. Ative-as em Configurações, Configurações do sistema.</string>
+    <string name="calendars_subscribe_google_connect">Você não conectou nenhuma conta do Google. Conecte-a no aplicativo web.</string>
 </resources>

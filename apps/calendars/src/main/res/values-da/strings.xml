@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">Kopier denne begivenhed</string>
     <string name="calendars_editor_copy_title">Kopier begivenhed</string>
     <string name="calendars_title_required">Titel er påkrævet</string>
+    <string name="calendars_link_submit">Tilknyt</string>
+    <string name="calendars_link_sync">Synkronisér nu</string>
+    <string name="calendars_link_grant">Tillad kalenderadgang i webappen</string>
+    <string name="calendars_link_linked">Tilknyttet</string>
+    <string name="calendars_link_marker">Tilknyttet kalender</string>
+    <string name="calendars_link_remote_empty">Ingen kalendere</string>
+    <string name="calendars_poll_conflict">En begivenhed blev ændret på begge sider</string>
+    <string name="calendars_poll_missing">Kalenderen findes ikke længere på sin server</string>
+    <string name="calendars_poll_unauthorised">Kalenderens server afviste kontoens loginoplysninger</string>
+    <string name="calendars_subscribe_username">Brugernavn</string>
+    <string name="calendars_subscribe_password">Adgangskode</string>
+    <string name="calendars_subscribe_connect">Opret forbindelse</string>
+    <string name="calendars_subscribe_server">En anden Mochi- eller CalDAV-server</string>
+    <string name="calendars_subscribe_address">Offentliggjort kalenderadresse (skrivebeskyttet)</string>
+    <string name="calendars_subscribe_password_apple">Appspecifik adgangskode</string>
+    <string name="calendars_subscribe_server_url">Serveradresse</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Google-konti er ikke aktiveret på denne server. Aktivér dem under Indstillinger, Systemindstillinger.</string>
+    <string name="calendars_subscribe_google_connect">Du har ikke forbundet en Google-konto. Forbind den i webappen.</string>
 </resources>

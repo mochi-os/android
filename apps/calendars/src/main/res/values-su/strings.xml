@@ -148,4 +148,26 @@
     <string name="calendars_scope_copy">Salin acara ieu</string>
     <string name="calendars_editor_copy_title">Salin acara</string>
     <string name="calendars_title_required">Judul diperlukeun</string>
+    <string name="calendars_link_submit">Tumbukeun</string>
+    <string name="calendars_link_sync">Sinkronisasi ayeuna</string>
+    <string name="calendars_link_grant">Idinan aksés kalénder dina aplikasi wéb</string>
+    <string name="calendars_link_linked">Ditumbukeun</string>
+    <string name="calendars_link_marker">Kalénder nu ditumbukeun</string>
+    <string name="calendars_link_remote_empty">Teu aya kalénder</string>
+    <string name="calendars_poll_conflict">Hiji acara robah di dua sisi</string>
+    <string name="calendars_poll_missing">Kalénder geus euweuh dina servérna</string>
+    <string name="calendars_poll_unauthorised">Server kalénder nolak kredensial akun</string>
+    <string name="calendars_subscribe_username">Ngaran pamaké</string>
+    <string name="calendars_subscribe_password">Kecap sandi</string>
+    <string name="calendars_subscribe_connect">Nyambung</string>
+    <string name="calendars_subscribe_server">Server Mochi atawa CalDAV séjén</string>
+    <string name="calendars_subscribe_address">Alamat kalénder anu dipedalkeun (maca-wungkul)</string>
+    <string name="calendars_subscribe_password_apple">Kecap sandi husus aplikasi</string>
+    <string name="calendars_subscribe_server_url">Alamat server</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Akun Google tacan diaktipkeun dina server ieu. Aktipkeun dina Setélan, Setélan sistem.</string>
+    <string name="calendars_subscribe_google_connect">Anjeun tacan nyambungkeun akun Google. Sambungkeun dina aplikasi wéb.</string>
 </resources>

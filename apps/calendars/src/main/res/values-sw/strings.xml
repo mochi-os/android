@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">Nakili tukio hili</string>
     <string name="calendars_editor_copy_title">Nakili tukio</string>
     <string name="calendars_title_required">Kichwa kinahitajika</string>
+    <string name="calendars_link_submit">Unganisha</string>
+    <string name="calendars_link_sync">Sawazisha sasa</string>
+    <string name="calendars_link_grant">Ruhusu ufikiaji wa kalenda katika programu ya wavuti</string>
+    <string name="calendars_link_linked">Imeunganishwa</string>
+    <string name="calendars_link_marker">Kalenda iliyounganishwa</string>
+    <string name="calendars_link_remote_empty">Hakuna kalenda</string>
+    <string name="calendars_poll_conflict">Tukio limebadilika pande zote mbili</string>
+    <string name="calendars_poll_missing">Kalenda haipo tena kwenye seva yake</string>
+    <string name="calendars_poll_unauthorised">Seva ya kalenda ilikataa vitambulisho vya akaunti</string>
+    <string name="calendars_subscribe_username">Jina la mtumiaji</string>
+    <string name="calendars_subscribe_password">Nenosiri</string>
+    <string name="calendars_subscribe_connect">Unganisha</string>
+    <string name="calendars_subscribe_server">Seva nyingine ya Mochi au CalDAV</string>
+    <string name="calendars_subscribe_address">Anwani ya kalenda iliyochapishwa (soma-tu)</string>
+    <string name="calendars_subscribe_password_apple">Nenosiri mahususi la programu</string>
+    <string name="calendars_subscribe_server_url">Anwani ya seva</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Akaunti za Google hazijawashwa kwenye seva hii. Ziwashe katika Mipangilio, Mipangilio ya mfumo.</string>
+    <string name="calendars_subscribe_google_connect">Hujaunganisha akaunti ya Google. Iunganishe katika programu ya wavuti.</string>
 </resources>

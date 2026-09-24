@@ -388,4 +388,12 @@
     <string name="accounts_field_topic">Tópico</string>
     <string name="accounts_field_secret">Segredo de assinatura</string>
     <string name="account_totp_open">Abrir na aplicação de autenticação</string>
+    <string name="accounts_revoke">Revogar acesso</string>
+    <string name="accounts_capability_calendar">Calendário</string>
+    <string name="accounts_capability_notify">Notificações</string>
+    <string name="accounts_capability_ai">IA</string>
+    <string name="accounts_capability_login">Início de sessão</string>
+    <string name="accounts_provider_caldav">Servidor de calendário</string>
+    <string name="accounts_revoke_confirm">Isto revoga o acesso ao calendário de %1$s. O início de sessão com %2$s mantém-se até o desassociar na página de início de sessão.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

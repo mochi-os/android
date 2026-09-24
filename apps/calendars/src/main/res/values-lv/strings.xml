@@ -154,4 +154,26 @@
     <string name="calendars_scope_copy">Kopēt šo notikumu</string>
     <string name="calendars_editor_copy_title">Kopēt notikumu</string>
     <string name="calendars_title_required">Virsraksts ir obligāts</string>
+    <string name="calendars_link_submit">Saistīt</string>
+    <string name="calendars_link_sync">Sinhronizēt tagad</string>
+    <string name="calendars_link_grant">Atļaujiet piekļuvi kalendāram tīmekļa lietotnē</string>
+    <string name="calendars_link_linked">Saistīts</string>
+    <string name="calendars_link_marker">Saistīts kalendārs</string>
+    <string name="calendars_link_remote_empty">Nav kalendāru</string>
+    <string name="calendars_poll_conflict">Notikums ir mainīts abās pusēs</string>
+    <string name="calendars_poll_missing">Kalendāra vairs nav tā serverī</string>
+    <string name="calendars_poll_unauthorised">Kalendāra serveris noraidīja konta akreditācijas datus</string>
+    <string name="calendars_subscribe_username">Lietotājvārds</string>
+    <string name="calendars_subscribe_password">Parole</string>
+    <string name="calendars_subscribe_connect">Pieslēgties</string>
+    <string name="calendars_subscribe_server">Cits Mochi vai CalDAV serveris</string>
+    <string name="calendars_subscribe_address">Publicēta kalendāra adrese (tikai lasāms)</string>
+    <string name="calendars_subscribe_password_apple">Lietotnei paredzēta parole</string>
+    <string name="calendars_subscribe_server_url">Servera adrese</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Google konti šajā serverī nav iespējoti. Iespējo tos sadaļā Iestatījumi, Sistēmas iestatījumi.</string>
+    <string name="calendars_subscribe_google_connect">Tu neesi savienojis Google kontu. Savieno to tīmekļa lietotnē.</string>
 </resources>

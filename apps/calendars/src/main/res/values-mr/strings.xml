@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">हा कार्यक्रम कॉपी करा</string>
     <string name="calendars_editor_copy_title">कार्यक्रम कॉपी करा</string>
     <string name="calendars_title_required">शीर्षक आवश्यक आहे</string>
+    <string name="calendars_link_submit">लिंक करा</string>
+    <string name="calendars_link_sync">आता सिंक करा</string>
+    <string name="calendars_link_grant">वेब ॲपमध्ये कॅलेंडर प्रवेशास अनुमती द्या</string>
+    <string name="calendars_link_linked">लिंक केलेले</string>
+    <string name="calendars_link_marker">लिंक केलेले कॅलेंडर</string>
+    <string name="calendars_link_remote_empty">कॅलेंडर नाहीत</string>
+    <string name="calendars_poll_conflict">एक इव्हेंट दोन्ही बाजूंनी बदलला</string>
+    <string name="calendars_poll_missing">कॅलेंडर त्याच्या सर्व्हरवरून गेले आहे</string>
+    <string name="calendars_poll_unauthorised">कॅलेंडरच्या सर्व्हरने अकाउंटची ओळखपत्रे नाकारली</string>
+    <string name="calendars_subscribe_username">वापरकर्तानाव</string>
+    <string name="calendars_subscribe_password">पासवर्ड</string>
+    <string name="calendars_subscribe_connect">कनेक्ट करा</string>
+    <string name="calendars_subscribe_server">दुसरा Mochi किंवा CalDAV सर्व्हर</string>
+    <string name="calendars_subscribe_address">प्रकाशित कॅलेंडरचा पत्ता (केवळ-वाचनीय)</string>
+    <string name="calendars_subscribe_password_apple">अ‍ॅपसाठी खास पासवर्ड</string>
+    <string name="calendars_subscribe_server_url">सर्व्हरचा पत्ता</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">या सर्व्हरवर Google खाती सक्षम केलेली नाहीत. ती सेटिंग्ज, सिस्टम सेटिंग्ज मध्ये सक्षम करा.</string>
+    <string name="calendars_subscribe_google_connect">तुम्ही कोणतेही Google खाते कनेक्ट केलेले नाही. ते वेब ॲपमध्ये कनेक्ट करा.</string>
 </resources>

@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">Kay ruwanata copiay</string>
     <string name="calendars_editor_copy_title">Ruwanata copiay</string>
     <string name="calendars_title_required">Sutinchay munasqa</string>
+    <string name="calendars_link_submit">T\'inkiy</string>
+    <string name="calendars_link_sync">Kunan tinkichiy</string>
+    <string name="calendars_link_grant">Web aplicacionpi kalendaryuman yaykuyta saqiy</string>
+    <string name="calendars_link_linked">T\'inkisqa</string>
+    <string name="calendars_link_marker">T\'inkisqa kalendaryu</string>
+    <string name="calendars_link_remote_empty">Mana kalendaryukuna kanchu</string>
+    <string name="calendars_poll_conflict">Huk eventoqa iskaynin ladopi tikrarqa</string>
+    <string name="calendars_poll_missing">Kalendaryuqa servidorninpi manaña kanchu</string>
+    <string name="calendars_poll_unauthorised">Kalendaryup servidorninqa cuentap credencialninkunata mana chaskirqachu</string>
+    <string name="calendars_subscribe_username">Sutiyay</string>
+    <string name="calendars_subscribe_password">Contraseña</string>
+    <string name="calendars_subscribe_connect">Tinkichiy</string>
+    <string name="calendars_subscribe_server">Huk Mochi utaq CalDAV seridor</string>
+    <string name="calendars_subscribe_address">Willakusqa kalendaryu dirección (ñawinchanallapaq)</string>
+    <string name="calendars_subscribe_password_apple">Aplicacionpaq contraseña</string>
+    <string name="calendars_subscribe_server_url">Seridor dirección</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Google cuentakunaqa manam kay servidorpi kallpachasqachu. Chaykunata Wakichiykuna, Sistema wakichiykuna ukhupi kallpachay.</string>
+    <string name="calendars_subscribe_google_connect">Manam ima Google cuentatapas tinkichirqankichu. Chayta web aplicacionpi tinkichiy.</string>
 </resources>

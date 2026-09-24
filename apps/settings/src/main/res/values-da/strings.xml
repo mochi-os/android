@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">Emne</string>
     <string name="accounts_field_secret">Signeringshemmelighed</string>
     <string name="account_totp_open">Åbn i godkendelsesapp</string>
+    <string name="accounts_revoke">Tilbagekald adgang</string>
+    <string name="accounts_capability_calendar">Kalender</string>
+    <string name="accounts_capability_notify">Notifikationer</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Log ind</string>
+    <string name="accounts_provider_caldav">Kalenderserver</string>
+    <string name="accounts_revoke_confirm">Dette tilbagekalder kalenderadgangen for %1$s. Login med %2$s forbliver, indtil du fjerner det på loginsiden.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

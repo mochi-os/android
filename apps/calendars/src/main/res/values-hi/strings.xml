@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">यह इवेंट कॉपी करें</string>
     <string name="calendars_editor_copy_title">इवेंट कॉपी करें</string>
     <string name="calendars_title_required">टाइटल ज़रूरी है</string>
+    <string name="calendars_link_submit">लिंक करें</string>
+    <string name="calendars_link_sync">अभी सिंक करें</string>
+    <string name="calendars_link_grant">वेब ऐप में कैलेंडर एक्सेस की अनुमति दें</string>
+    <string name="calendars_link_linked">लिंक किया गया</string>
+    <string name="calendars_link_marker">लिंक किया गया कैलेंडर</string>
+    <string name="calendars_link_remote_empty">कोई कैलेंडर नहीं</string>
+    <string name="calendars_poll_conflict">एक इवेंट दोनों ओर बदल गया</string>
+    <string name="calendars_poll_missing">कैलेंडर अपने सर्वर से हट चुका है</string>
+    <string name="calendars_poll_unauthorised">कैलेंडर के सर्वर ने अकाउंट के क्रेडेंशियल अस्वीकार कर दिए</string>
+    <string name="calendars_subscribe_username">उपयोगकर्ता नाम</string>
+    <string name="calendars_subscribe_password">पासवर्ड</string>
+    <string name="calendars_subscribe_connect">कनेक्ट करें</string>
+    <string name="calendars_subscribe_server">कोई अन्य Mochi या CalDAV सर्वर</string>
+    <string name="calendars_subscribe_address">प्रकाशित कैलेंडर का पता (केवल पढ़ने योग्य)</string>
+    <string name="calendars_subscribe_password_apple">ऐप-विशिष्ट पासवर्ड</string>
+    <string name="calendars_subscribe_server_url">सर्वर का पता</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">इस सर्वर पर Google खाते सक्षम नहीं किए गए हैं। उन्हें सेटिंग्स, सिस्टम सेटिंग्स में सक्षम करें।</string>
+    <string name="calendars_subscribe_google_connect">आपने कोई Google खाता कनेक्ट नहीं किया है। इसे वेब ऐप में कनेक्ट करें।</string>
 </resources>

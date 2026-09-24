@@ -33,6 +33,10 @@ data class ConnectedAccount(
     val default: String = "",
     // The device a push account was registered from, or "" for none.
     val device: String = "",
+    // What the account may be used for now: `login`, `calendar`, `notify`,
+    // `ai`, `mcp`. An account linked for sign-in alone holds `login` until
+    // something else is granted.
+    val granted: List<String> = emptyList(),
 )
 
 // A phone or tablet the user runs Mochi on; its push account hangs off it.

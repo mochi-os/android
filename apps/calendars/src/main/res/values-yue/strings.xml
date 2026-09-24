@@ -148,4 +148,26 @@
     <string name="calendars_event_copied">已複製活動</string>
     <string name="calendars_scope_copy">複製呢個活動</string>
     <string name="calendars_title_required">必須輸入標題</string>
+    <string name="calendars_link_submit">連結</string>
+    <string name="calendars_link_sync">即刻同步</string>
+    <string name="calendars_link_grant">喺網頁應用程式度允許日曆存取</string>
+    <string name="calendars_link_linked">已連結</string>
+    <string name="calendars_link_marker">已連結日曆</string>
+    <string name="calendars_link_remote_empty">冇日曆</string>
+    <string name="calendars_poll_conflict">有個活動喺兩邊都改咗</string>
+    <string name="calendars_poll_missing">呢個日曆已經唔喺佢個伺服器度</string>
+    <string name="calendars_poll_unauthorised">日曆伺服器拒絕咗個帳戶嘅憑證</string>
+    <string name="calendars_subscribe_username">使用者名稱</string>
+    <string name="calendars_subscribe_password">密碼</string>
+    <string name="calendars_subscribe_connect">連接</string>
+    <string name="calendars_subscribe_server">其他 Mochi 或 CalDAV 伺服器</string>
+    <string name="calendars_subscribe_address">已發佈嘅日曆網址（唯讀）</string>
+    <string name="calendars_subscribe_password_apple">應用程式專用密碼</string>
+    <string name="calendars_subscribe_server_url">伺服器地址</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">呢個伺服器仲未啟用 Google 帳戶。請喺 設定、系統設定 度啟用。</string>
+    <string name="calendars_subscribe_google_connect">你仲未連接 Google 帳戶。請喺網頁應用程式度連接。</string>
 </resources>

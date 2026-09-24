@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">విషయం</string>
     <string name="accounts_field_secret">సంతకం రహస్యం</string>
     <string name="account_totp_open">ప్రామాణీకరణ యాప్‌లో తెరవండి</string>
+    <string name="accounts_revoke">యాక్సెస్ ఉపసంహరించు</string>
+    <string name="accounts_capability_calendar">క్యాలెండర్</string>
+    <string name="accounts_capability_notify">నోటిఫికేషన్‌లు</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">సైన్-ఇన్</string>
+    <string name="accounts_provider_caldav">క్యాలెండర్ సర్వర్</string>
+    <string name="accounts_revoke_confirm">ఇది %1$s యొక్క క్యాలెండర్ యాక్సెస్‌ను ఉపసంహరిస్తుంది. లాగిన్ పేజీలో అన్‌లింక్ చేసే వరకు %2$s తో సైన్-ఇన్ కొనసాగుతుంది.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

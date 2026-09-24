@@ -386,4 +386,12 @@
     <string name="accounts_field_topic">主題</string>
     <string name="accounts_field_secret">簽署密鑰</string>
     <string name="account_totp_open">在驗證器應用程式中開啟</string>
+    <string name="accounts_revoke">撤銷存取權限</string>
+    <string name="accounts_capability_calendar">行事曆</string>
+    <string name="accounts_capability_notify">通知</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">登入</string>
+    <string name="accounts_provider_caldav">行事曆伺服器</string>
+    <string name="accounts_revoke_confirm">這將撤銷 %1$s 的行事曆存取權。使用 %2$s 登入會保留，直到你在登入頁面解除連結。</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

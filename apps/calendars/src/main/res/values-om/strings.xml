@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">Taatee kana garagalchi</string>
     <string name="calendars_editor_copy_title">Taatee garagalchi</string>
     <string name="calendars_title_required">Mata dureen barbaachisaa dha</string>
+    <string name="calendars_link_submit">Walqabsiisi</string>
+    <string name="calendars_link_sync">Amma walsimsiisi</string>
+    <string name="calendars_link_grant">Appii weebii keessatti qaqqabummaa kaalaandarii eeyyami</string>
+    <string name="calendars_link_linked">Walqabsiifame</string>
+    <string name="calendars_link_marker">Kaalaandarii walqabsiifame</string>
+    <string name="calendars_link_remote_empty">Kaalaandaroonni hin jiran</string>
+    <string name="calendars_poll_conflict">Taateen tokko gama lamaanuu jijjiirame</string>
+    <string name="calendars_poll_missing">Kaalaandariin saarvarii isaa irraa badeera</string>
+    <string name="calendars_poll_unauthorised">Saarvariin kaalaandarii ragaa seensa akkaawuntichaa didee</string>
+    <string name="calendars_subscribe_username">Maqaa fayyadamaa</string>
+    <string name="calendars_subscribe_password">Jecha darbii</string>
+    <string name="calendars_subscribe_connect">Walitti hidhi</string>
+    <string name="calendars_subscribe_server">Seerverii Mochi ykn CalDAV biraa</string>
+    <string name="calendars_subscribe_address">Teessoo kaalaandarii maxxanfamee (dubbisaa qofa)</string>
+    <string name="calendars_subscribe_password_apple">Jecha darbii addaa appiif</string>
+    <string name="calendars_subscribe_server_url">Teessoo seerverii</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Akkaawuntiiwwan Google sarvarii kana irratti hin dandeessifamne. Qindaa\'inoota, Qindaa\'inoota sirnaa keessatti isaan dandeessisi.</string>
+    <string name="calendars_subscribe_google_connect">Akkaawuntii Google hin walqabsiifne. Appii weebii keessatti isa walqabsiisi.</string>
 </resources>

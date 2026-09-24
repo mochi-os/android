@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">මෙම සිදුවීම පිටපත් කරන්න</string>
     <string name="calendars_editor_copy_title">සිදුවීම පිටපත් කරන්න</string>
     <string name="calendars_title_required">මාතෘකාව අවශ්‍යයි</string>
+    <string name="calendars_link_submit">සම්බන්ධ කරන්න</string>
+    <string name="calendars_link_sync">දැන් සමමුහුර්ත කරන්න</string>
+    <string name="calendars_link_grant">වෙබ් යෙදුමේ දින දර්ශනයට ප්‍රවේශය ලබා දෙන්න</string>
+    <string name="calendars_link_linked">සම්බන්ධිතයි</string>
+    <string name="calendars_link_marker">සම්බන්ධිත දින දර්ශනය</string>
+    <string name="calendars_link_remote_empty">දින දර්ශන නැත</string>
+    <string name="calendars_poll_conflict">සිදුවීමක් දෙපැත්තෙන්ම වෙනස් විය</string>
+    <string name="calendars_poll_missing">දින දර්ශනය එහි සේවාදායකයේ තවදුරටත් නැත</string>
+    <string name="calendars_poll_unauthorised">දින දර්ශනයේ සේවාදායකය ගිණුමේ අක්තපත්‍ර ප්‍රතික්ෂේප කළේය</string>
+    <string name="calendars_subscribe_username">පරිශීලක නාමය</string>
+    <string name="calendars_subscribe_password">මුරපදය</string>
+    <string name="calendars_subscribe_connect">සම්බන්ධ වන්න</string>
+    <string name="calendars_subscribe_server">වෙනත් Mochi හෝ CalDAV සේවාදායකයක්</string>
+    <string name="calendars_subscribe_address">ප්‍රකාශිත දින දර්ශන ලිපිනය (කියවීමට පමණි)</string>
+    <string name="calendars_subscribe_password_apple">යෙදුමට ආවේණික මුරපදය</string>
+    <string name="calendars_subscribe_server_url">සේවාදායක ලිපිනය</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">මෙම සේවාදායකයේ Google ගිණුම් සක්‍රිය කර නැත. ඒවා සැකසුම්, පද්ධති සැකසුම් තුළ සක්‍රිය කරන්න.</string>
+    <string name="calendars_subscribe_google_connect">ඔබ Google ගිණුමක් සම්බන්ධ කර නැත. එය වෙබ් යෙදුමේ සම්බන්ධ කරන්න.</string>
 </resources>

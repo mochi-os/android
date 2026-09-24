@@ -386,4 +386,12 @@
     <string name="accounts_field_topic">주제</string>
     <string name="accounts_field_secret">서명 비밀</string>
     <string name="account_totp_open">인증 앱에서 열기</string>
+    <string name="accounts_revoke">액세스 취소</string>
+    <string name="accounts_capability_calendar">캘린더</string>
+    <string name="accounts_capability_notify">알림</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">로그인</string>
+    <string name="accounts_provider_caldav">캘린더 서버</string>
+    <string name="accounts_revoke_confirm">%1$s의 캘린더 접근 권한이 해제돼요. %2$s 로그인은 로그인 페이지에서 연결을 끊을 때까지 유지돼요.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

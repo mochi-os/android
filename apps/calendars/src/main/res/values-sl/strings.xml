@@ -157,4 +157,26 @@
     <string name="calendars_scope_copy">Kopiraj ta dogodek</string>
     <string name="calendars_editor_copy_title">Kopiraj dogodek</string>
     <string name="calendars_title_required">Naslov je obvezen</string>
+    <string name="calendars_link_submit">Poveži</string>
+    <string name="calendars_link_sync">Sinhroniziraj zdaj</string>
+    <string name="calendars_link_grant">Dovolite dostop do koledarja v spletni aplikaciji</string>
+    <string name="calendars_link_linked">Povezano</string>
+    <string name="calendars_link_marker">Povezan koledar</string>
+    <string name="calendars_link_remote_empty">Ni koledarjev</string>
+    <string name="calendars_poll_conflict">Dogodek se je spremenil na obeh straneh</string>
+    <string name="calendars_poll_missing">Koledarja ni več na njegovem strežniku</string>
+    <string name="calendars_poll_unauthorised">Strežnik koledarja je zavrnil poverilnice računa</string>
+    <string name="calendars_subscribe_username">Uporabniško ime</string>
+    <string name="calendars_subscribe_password">Geslo</string>
+    <string name="calendars_subscribe_connect">Poveži</string>
+    <string name="calendars_subscribe_server">Drug strežnik Mochi ali CalDAV</string>
+    <string name="calendars_subscribe_address">Naslov objavljenega koledarja (samo za branje)</string>
+    <string name="calendars_subscribe_password_apple">Geslo za aplikacijo</string>
+    <string name="calendars_subscribe_server_url">Naslov strežnika</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Računi Google na tem strežniku niso omogočeni. Omogočite jih v Nastavitve, Sistemske nastavitve.</string>
+    <string name="calendars_subscribe_google_connect">Niste povezali računa Google. Povežite ga v spletni aplikaciji.</string>
 </resources>

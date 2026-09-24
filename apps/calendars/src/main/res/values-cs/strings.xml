@@ -154,4 +154,26 @@
     <string name="calendars_scope_copy">Kopírovat tuto událost</string>
     <string name="calendars_editor_copy_title">Kopírovat událost</string>
     <string name="calendars_title_required">Název je povinný</string>
+    <string name="calendars_link_submit">Propojit</string>
+    <string name="calendars_link_sync">Synchronizovat nyní</string>
+    <string name="calendars_link_grant">Povolte přístup ke kalendáři ve webové aplikaci</string>
+    <string name="calendars_link_linked">Propojeno</string>
+    <string name="calendars_link_marker">Propojený kalendář</string>
+    <string name="calendars_link_remote_empty">Žádné kalendáře</string>
+    <string name="calendars_poll_conflict">Událost se změnila na obou stranách</string>
+    <string name="calendars_poll_missing">Kalendář už na svém serveru není</string>
+    <string name="calendars_poll_unauthorised">Server kalendáře odmítl přihlašovací údaje účtu</string>
+    <string name="calendars_subscribe_username">Uživatelské jméno</string>
+    <string name="calendars_subscribe_password">Heslo</string>
+    <string name="calendars_subscribe_connect">Připojit</string>
+    <string name="calendars_subscribe_server">Jiný server Mochi nebo CalDAV</string>
+    <string name="calendars_subscribe_address">Zveřejněná adresa kalendáře (pouze ke čtení)</string>
+    <string name="calendars_subscribe_password_apple">Heslo pro aplikaci</string>
+    <string name="calendars_subscribe_server_url">Adresa serveru</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Účty Google nejsou na tomto serveru povoleny. Povolte je v Nastavení, Systémová nastavení.</string>
+    <string name="calendars_subscribe_google_connect">Nepřipojili jste žádný účet Google. Připojte jej ve webové aplikaci.</string>
 </resources>

@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">এই ইভেন্টটি কপি করুন</string>
     <string name="calendars_editor_copy_title">ইভেন্ট কপি করুন</string>
     <string name="calendars_title_required">শিরোনাম প্রয়োজন</string>
+    <string name="calendars_link_submit">সংযুক্ত করুন</string>
+    <string name="calendars_link_sync">এখন সিঙ্ক করুন</string>
+    <string name="calendars_link_grant">ওয়েব অ্যাপে ক্যালেন্ডারের অ্যাক্সেস অনুমোদন করুন</string>
+    <string name="calendars_link_linked">সংযুক্ত</string>
+    <string name="calendars_link_marker">সংযুক্ত ক্যালেন্ডার</string>
+    <string name="calendars_link_remote_empty">কোনো ক্যালেন্ডার নেই</string>
+    <string name="calendars_poll_conflict">একটি ইভেন্ট উভয় দিকেই পরিবর্তিত হয়েছে</string>
+    <string name="calendars_poll_missing">ক্যালেন্ডারটি তার সার্ভারে আর নেই</string>
+    <string name="calendars_poll_unauthorised">ক্যালেন্ডারের সার্ভার অ্যাকাউন্টের শংসাপত্র প্রত্যাখ্যান করেছে</string>
+    <string name="calendars_subscribe_username">ব্যবহারকারীর নাম</string>
+    <string name="calendars_subscribe_password">পাসওয়ার্ড</string>
+    <string name="calendars_subscribe_connect">সংযোগ করুন</string>
+    <string name="calendars_subscribe_server">অন্য Mochi বা CalDAV সার্ভার</string>
+    <string name="calendars_subscribe_address">প্রকাশিত ক্যালেন্ডারের ঠিকানা (শুধুমাত্র পাঠযোগ্য)</string>
+    <string name="calendars_subscribe_password_apple">অ্যাপ-নির্দিষ্ট পাসওয়ার্ড</string>
+    <string name="calendars_subscribe_server_url">সার্ভারের ঠিকানা</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">এই সার্ভারে Google অ্যাকাউন্ট সক্রিয় করা হয়নি। সেটিংস, সিস্টেম সেটিংস-এ গিয়ে সেগুলি সক্রিয় করুন।</string>
+    <string name="calendars_subscribe_google_connect">আপনি কোনো Google অ্যাকাউন্ট সংযুক্ত করেননি। ওয়েব অ্যাপে এটি সংযুক্ত করুন।</string>
 </resources>

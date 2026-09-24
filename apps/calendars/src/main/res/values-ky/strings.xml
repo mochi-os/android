@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">Бул иш-чараны көчүрүү</string>
     <string name="calendars_editor_copy_title">Иш-чараны көчүрүү</string>
     <string name="calendars_title_required">Аталышы талап кылынат</string>
+    <string name="calendars_link_submit">Байланыштыруу</string>
+    <string name="calendars_link_sync">Азыр синхрондоштуруу</string>
+    <string name="calendars_link_grant">Веб колдонмодо календарга кирүүгө уруксат бериңиз</string>
+    <string name="calendars_link_linked">Байланышкан</string>
+    <string name="calendars_link_marker">Байланышкан календар</string>
+    <string name="calendars_link_remote_empty">Календарлар жок</string>
+    <string name="calendars_poll_conflict">Окуя эки жакта тең өзгөрдү</string>
+    <string name="calendars_poll_missing">Календар өз серверинде жок</string>
+    <string name="calendars_poll_unauthorised">Календардын сервери аккаунттун маалыматтарын четке какты</string>
+    <string name="calendars_subscribe_username">Колдонуучу аты</string>
+    <string name="calendars_subscribe_password">Сырсөз</string>
+    <string name="calendars_subscribe_connect">Туташуу</string>
+    <string name="calendars_subscribe_server">Башка Mochi же CalDAV сервери</string>
+    <string name="calendars_subscribe_address">Жарыяланган календардын дареги (окуу үчүн гана)</string>
+    <string name="calendars_subscribe_password_apple">Колдонмо үчүн атайын сырсөз</string>
+    <string name="calendars_subscribe_server_url">Сервердин дареги</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Бул серверде Google аккаунттары иштетилген эмес. Аларды Жөндөөлөр, Системалык жөндөөлөр бөлүмүнөн иштетиңиз.</string>
+    <string name="calendars_subscribe_google_connect">Сиз Google аккаунтун туташтырган жоксуз. Аны веб колдонмодо туташтырыңыз.</string>
 </resources>

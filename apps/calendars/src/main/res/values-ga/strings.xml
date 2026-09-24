@@ -160,4 +160,26 @@
     <string name="calendars_scope_copy">Cóipeáil an t-imeacht seo</string>
     <string name="calendars_editor_copy_title">Cóipeáil imeacht</string>
     <string name="calendars_title_required">Teideal de dhíth</string>
+    <string name="calendars_link_submit">Nasc</string>
+    <string name="calendars_link_sync">Sioncronaigh anois</string>
+    <string name="calendars_link_grant">Ceadaigh rochtain ar an bhféilire san aip gréasáin</string>
+    <string name="calendars_link_linked">Nasctha</string>
+    <string name="calendars_link_marker">Féilire nasctha</string>
+    <string name="calendars_link_remote_empty">Níl aon fhéilire ann</string>
+    <string name="calendars_poll_conflict">Athraíodh imeacht ar an dá thaobh</string>
+    <string name="calendars_poll_missing">Níl an féilire ar a fhreastalaí a thuilleadh</string>
+    <string name="calendars_poll_unauthorised">Dhiúltaigh freastalaí an fhéilire do dhintiúir an chuntais</string>
+    <string name="calendars_subscribe_username">Ainm úsáideora</string>
+    <string name="calendars_subscribe_password">Pasfhocal</string>
+    <string name="calendars_subscribe_connect">Ceangail</string>
+    <string name="calendars_subscribe_server">Freastalaí Mochi nó CalDAV eile</string>
+    <string name="calendars_subscribe_address">Seoladh féilire foilsithe (inléite amháin)</string>
+    <string name="calendars_subscribe_password_apple">Pasfhocal sonrach don aip</string>
+    <string name="calendars_subscribe_server_url">Seoladh an fhreastalaí</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Níl cuntais Google cumasaithe ar an bhfreastalaí seo. Cumasaigh iad faoi Socruithe, Socruithe an chórais.</string>
+    <string name="calendars_subscribe_google_connect">Níl cuntas Google ceangailte agat. Ceangail é san aip gréasáin.</string>
 </resources>

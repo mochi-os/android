@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">Bu tadbirni nusxalash</string>
     <string name="calendars_editor_copy_title">Tadbirni nusxalash</string>
     <string name="calendars_title_required">Sarlavha talab qilinadi</string>
+    <string name="calendars_link_submit">Bogʻlash</string>
+    <string name="calendars_link_sync">Hozir sinxronlash</string>
+    <string name="calendars_link_grant">Veb ilovada kalendarga kirishga ruxsat bering</string>
+    <string name="calendars_link_linked">Bogʻlangan</string>
+    <string name="calendars_link_marker">Bogʻlangan kalendar</string>
+    <string name="calendars_link_remote_empty">Kalendarlar yoʻq</string>
+    <string name="calendars_poll_conflict">Tadbir ikkala tomonda ham oʻzgardi</string>
+    <string name="calendars_poll_missing">Kalendar oʻz serverida yoʻq</string>
+    <string name="calendars_poll_unauthorised">Kalendar serveri hisob maʼlumotlarini rad etdi</string>
+    <string name="calendars_subscribe_username">Foydalanuvchi nomi</string>
+    <string name="calendars_subscribe_password">Parol</string>
+    <string name="calendars_subscribe_connect">Ulanish</string>
+    <string name="calendars_subscribe_server">Boshqa Mochi yoki CalDAV serveri</string>
+    <string name="calendars_subscribe_address">Chop etilgan kalendar manzili (faqat o\'qish uchun)</string>
+    <string name="calendars_subscribe_password_apple">Ilova uchun maxsus parol</string>
+    <string name="calendars_subscribe_server_url">Server manzili</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Bu serverda Google hisoblari yoqilmagan. Ularni Sozlamalar, Tizim sozlamalari boʻlimida yoqing.</string>
+    <string name="calendars_subscribe_google_connect">Siz Google hisobini ulamagansiz. Uni veb ilovada ulang.</string>
 </resources>

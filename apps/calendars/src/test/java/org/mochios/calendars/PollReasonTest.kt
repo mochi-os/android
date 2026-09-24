@@ -12,9 +12,11 @@ import org.mochios.calendars.ui.components.PollReason
 import org.mochios.calendars.ui.components.pollReason
 
 /**
- * The failure token a subscription carries, as the drawer reads it. The
- * tokens are the ones `subscription_fetch` in `apps/calendars/calendars.star`
- * records: empty, `too_large`, `invalid`, or `status:<n>`.
+ * The failure token a subscription or a linked calendar carries, as the
+ * drawer reads it. A subscription's are the ones `subscription_fetch` in
+ * `apps/calendars/calendars.star` records: empty, `too_large`, `invalid`, or
+ * `status:<n>`. A linked calendar's are `unauthorised`, `unauthorised:<n>`,
+ * `conflict`, `missing`, `large`, `transport` and `status:<n>`.
  */
 class PollReasonTest {
 
@@ -28,6 +30,29 @@ class PollReasonTest {
     fun `the tokens the server records read as themselves`() {
         assertEquals(PollReason.Large, pollReason("too_large"))
         assertEquals(PollReason.Invalid, pollReason("invalid"))
+    }
+
+    @Test
+    fun `a linked calendar's credential failure reads the same with a status or without`() {
+        assertEquals(PollReason.Unauthorised, pollReason("unauthorised"))
+        assertEquals(PollReason.Unauthorised, pollReason("unauthorised:401"))
+        assertEquals(PollReason.Unauthorised, pollReason("unauthorised:403"))
+    }
+
+    @Test
+    fun `the tokens a linked calendar's sync records read as themselves`() {
+        assertEquals(PollReason.Conflict, pollReason("conflict"))
+        assertEquals(PollReason.Missing, pollReason("missing"))
+    }
+
+    /**
+     * A linked calendar's sync writes its own word for two failures a
+     * subscription spells differently; both reach the same words on screen.
+     */
+    @Test
+    fun `a sync's size and transport failures read as a fetch's do`() {
+        assertEquals(PollReason.Large, pollReason("large"))
+        assertEquals(PollReason.Unreachable, pollReason("transport"))
     }
 
     @Test

@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">ವಿಷಯ</string>
     <string name="accounts_field_secret">ಸಹಿ ರಹಸ್ಯ</string>
     <string name="account_totp_open">ದೃಢೀಕರಣ ಆ್ಯಪ್‌ನಲ್ಲಿ ತೆರೆಯಿರಿ</string>
+    <string name="accounts_revoke">ಪ್ರವೇಶವನ್ನು ಹಿಂಪಡೆಯಿರಿ</string>
+    <string name="accounts_capability_calendar">ಕ್ಯಾಲೆಂಡರ್</string>
+    <string name="accounts_capability_notify">ನೋಟಿಫಿಕೇಶನ್‌ಗಳು</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">ಸೈನ್-ಇನ್</string>
+    <string name="accounts_provider_caldav">ಕ್ಯಾಲೆಂಡರ್ ಸರ್ವರ್</string>
+    <string name="accounts_revoke_confirm">ಇದು %1$s ನ ಕ್ಯಾಲೆಂಡರ್ ಪ್ರವೇಶವನ್ನು ರದ್ದುಗೊಳಿಸುತ್ತದೆ. ಲಾಗಿನ್ ಪುಟದಲ್ಲಿ ಅನ್‌ಲಿಂಕ್ ಮಾಡುವವರೆಗೆ %2$s ನೊಂದಿಗೆ ಸೈನ್-ಇನ್ ಉಳಿಯುತ್ತದೆ.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

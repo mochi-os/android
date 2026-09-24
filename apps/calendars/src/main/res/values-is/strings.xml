@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">Afrita þennan viðburð</string>
     <string name="calendars_editor_copy_title">Afrita viðburð</string>
     <string name="calendars_title_required">Titill er nauðsynlegur</string>
+    <string name="calendars_link_submit">Tengja</string>
+    <string name="calendars_link_sync">Samstilla núna</string>
+    <string name="calendars_link_grant">Leyfðu aðgang að dagatali í vefforritinu</string>
+    <string name="calendars_link_linked">Tengt</string>
+    <string name="calendars_link_marker">Tengt dagatal</string>
+    <string name="calendars_link_remote_empty">Engin dagatöl</string>
+    <string name="calendars_poll_conflict">Atburði var breytt báðum megin</string>
+    <string name="calendars_poll_missing">Dagatalið er ekki lengur á þjóni sínum</string>
+    <string name="calendars_poll_unauthorised">Þjónn dagatalsins hafnaði auðkennum reikningsins</string>
+    <string name="calendars_subscribe_username">Notandanafn</string>
+    <string name="calendars_subscribe_password">Lykilorð</string>
+    <string name="calendars_subscribe_connect">Tengjast</string>
+    <string name="calendars_subscribe_server">Annar Mochi- eða CalDAV-þjónn</string>
+    <string name="calendars_subscribe_address">Birt dagatalsvistfang (skrifvarið)</string>
+    <string name="calendars_subscribe_password_apple">Sérstakt lykilorð fyrir forrit</string>
+    <string name="calendars_subscribe_server_url">Vistfang þjóns</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Google-reikningar hafa ekki verið virkjaðir á þessum þjóni. Virkjaðu þá undir Stillingar, Kerfisstillingar.</string>
+    <string name="calendars_subscribe_google_connect">Þú hefur ekki tengt Google-reikning. Tengdu hann í vefforritinu.</string>
 </resources>

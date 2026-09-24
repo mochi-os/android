@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">Kopier denne hendelsen</string>
     <string name="calendars_editor_copy_title">Kopier hendelse</string>
     <string name="calendars_title_required">Tittel er påkrevd</string>
+    <string name="calendars_link_submit">Koble til</string>
+    <string name="calendars_link_sync">Synkroniser nå</string>
+    <string name="calendars_link_grant">Tillat kalendertilgang i nettappen</string>
+    <string name="calendars_link_linked">Tilkoblet</string>
+    <string name="calendars_link_marker">Tilkoblet kalender</string>
+    <string name="calendars_link_remote_empty">Ingen kalendere</string>
+    <string name="calendars_poll_conflict">En hendelse ble endret på begge sider</string>
+    <string name="calendars_poll_missing">Kalenderen finnes ikke lenger på tjeneren sin</string>
+    <string name="calendars_poll_unauthorised">Kalenderens tjener avviste kontoens påloggingsinformasjon</string>
+    <string name="calendars_subscribe_username">Brukernavn</string>
+    <string name="calendars_subscribe_password">Passord</string>
+    <string name="calendars_subscribe_connect">Koble til</string>
+    <string name="calendars_subscribe_server">En annen Mochi- eller CalDAV-server</string>
+    <string name="calendars_subscribe_address">Publisert kalenderadresse (skrivebeskyttet)</string>
+    <string name="calendars_subscribe_password_apple">Appspesifikt passord</string>
+    <string name="calendars_subscribe_server_url">Serveradresse</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Google-kontoer er ikke aktivert på denne serveren. Aktiver dem under Innstillinger, Systeminnstillinger.</string>
+    <string name="calendars_subscribe_google_connect">Du har ikke koblet til en Google-konto. Koble den til i nettappen.</string>
 </resources>

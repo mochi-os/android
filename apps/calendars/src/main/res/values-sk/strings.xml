@@ -154,4 +154,26 @@
     <string name="calendars_scope_copy">Kopírovať túto udalosť</string>
     <string name="calendars_editor_copy_title">Kopírovať udalosť</string>
     <string name="calendars_title_required">Názov je povinný</string>
+    <string name="calendars_link_submit">Prepojiť</string>
+    <string name="calendars_link_sync">Synchronizovať teraz</string>
+    <string name="calendars_link_grant">Povoľte prístup ku kalendáru vo webovej aplikácii</string>
+    <string name="calendars_link_linked">Prepojené</string>
+    <string name="calendars_link_marker">Prepojený kalendár</string>
+    <string name="calendars_link_remote_empty">Žiadne kalendáre</string>
+    <string name="calendars_poll_conflict">Udalosť sa zmenila na oboch stranách</string>
+    <string name="calendars_poll_missing">Kalendár už na svojom serveri nie je</string>
+    <string name="calendars_poll_unauthorised">Server kalendára odmietol prihlasovacie údaje účtu</string>
+    <string name="calendars_subscribe_username">Používateľské meno</string>
+    <string name="calendars_subscribe_password">Heslo</string>
+    <string name="calendars_subscribe_connect">Pripojiť</string>
+    <string name="calendars_subscribe_server">Iný server Mochi alebo CalDAV</string>
+    <string name="calendars_subscribe_address">Adresa zverejneného kalendára (iba na čítanie)</string>
+    <string name="calendars_subscribe_password_apple">Heslo pre aplikáciu</string>
+    <string name="calendars_subscribe_server_url">Adresa servera</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Účty Google nie sú na tomto serveri povolené. Povoľte ich v Nastavenia, Systémové nastavenia.</string>
+    <string name="calendars_subscribe_google_connect">Nepripojili ste žiadny účet Google. Pripojte ho vo webovej aplikácii.</string>
 </resources>

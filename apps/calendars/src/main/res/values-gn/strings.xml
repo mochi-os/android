@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">Ekopia ko evento</string>
     <string name="calendars_editor_copy_title">Ekopia evento</string>
     <string name="calendars_title_required">Téra tekotevẽ</string>
+    <string name="calendars_link_submit">Embojuaju</string>
+    <string name="calendars_link_sync">Embojoja ko\'ág̃a</string>
+    <string name="calendars_link_grant">Emoneĩ jeike arapapahápe web aplicación-pe</string>
+    <string name="calendars_link_linked">Ojuaju</string>
+    <string name="calendars_link_marker">Arapapaha ojuajúva</string>
+    <string name="calendars_link_remote_empty">Ndaipóri arapapaha</string>
+    <string name="calendars_poll_conflict">Peteĩ mba\'e oikóva iñambue mokõive hendápe</string>
+    <string name="calendars_poll_missing">Arapapaha ndaipóri véima imohendahápe</string>
+    <string name="calendars_poll_unauthorised">Arapapaha mohendaha nomoneĩri cuenta credencial</string>
+    <string name="calendars_subscribe_username">Téra puruharakuéra</string>
+    <string name="calendars_subscribe_password">Ñe\'ẽñemi</string>
+    <string name="calendars_subscribe_connect">Embojoaju</string>
+    <string name="calendars_subscribe_server">Ambue Mochi térã CalDAV servidor</string>
+    <string name="calendars_subscribe_address">Arapapaha dirección ojepublicáva (moñe\'ẽrã añónte)</string>
+    <string name="calendars_subscribe_password_apple">Aplicación ñe\'ẽñemi</string>
+    <string name="calendars_subscribe_server_url">Servidor dirección</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Google cuentakuéra ndoñemyendýi ko mohendahápe. Emyendy Ñemboheko, Sistema ñemboheko-pe.</string>
+    <string name="calendars_subscribe_google_connect">Ndembojuajúi peteĩ Google cuenta. Embojuaju web aplicación-pe.</string>
 </resources>

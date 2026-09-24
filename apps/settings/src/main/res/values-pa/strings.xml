@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">ਵਿਸ਼ਾ</string>
     <string name="accounts_field_secret">ਦਸਤਖਤ ਗੁਪਤ</string>
     <string name="account_totp_open">ਪ੍ਰਮਾਣਕ ਐਪ ਵਿੱਚ ਖੋਲ੍ਹੋ</string>
+    <string name="accounts_revoke">ਪਹੁੰਚ ਰੱਦ ਕਰੋ</string>
+    <string name="accounts_capability_calendar">ਕੈਲੰਡਰ</string>
+    <string name="accounts_capability_notify">ਨੋਟੀਫਿਕੇਸ਼ਨ</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">ਸਾਈਨ-ਇਨ</string>
+    <string name="accounts_provider_caldav">ਕੈਲੰਡਰ ਸਰਵਰ</string>
+    <string name="accounts_revoke_confirm">ਇਹ %1$s ਦੀ ਕੈਲੰਡਰ ਪਹੁੰਚ ਰੱਦ ਕਰ ਦੇਵੇਗਾ। %2$s ਨਾਲ ਸਾਈਨ-ਇਨ ਉਦੋਂ ਤੱਕ ਰਹੇਗਾ ਜਦੋਂ ਤੱਕ ਤੁਸੀਂ ਲੌਗਇਨ ਪੰਨੇ ਉੱਤੇ ਇਸਨੂੰ ਅਣਲਿੰਕ ਨਹੀਂ ਕਰਦੇ।</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">Kwafi wannan taron</string>
     <string name="calendars_editor_copy_title">Kwafi taron</string>
     <string name="calendars_title_required">Ana buƙatar take</string>
+    <string name="calendars_link_submit">Haɗa</string>
+    <string name="calendars_link_sync">Daidaita yanzu</string>
+    <string name="calendars_link_grant">Ba da izinin shiga kalanda a cikin manhajar yanar gizo</string>
+    <string name="calendars_link_linked">An haɗa</string>
+    <string name="calendars_link_marker">Kalandar da aka haɗa</string>
+    <string name="calendars_link_remote_empty">Babu kalanda</string>
+    <string name="calendars_poll_conflict">An canja taro a bangarorin biyu</string>
+    <string name="calendars_poll_missing">Kalandar ba ta kan sabar ta ba</string>
+    <string name="calendars_poll_unauthorised">Sabar kalandar ta ƙi bayanan shiga na asusun</string>
+    <string name="calendars_subscribe_username">Sunan mai amfani</string>
+    <string name="calendars_subscribe_password">Kalmar sirri</string>
+    <string name="calendars_subscribe_connect">Haɗa</string>
+    <string name="calendars_subscribe_server">Wani uwar garken Mochi ko CalDAV</string>
+    <string name="calendars_subscribe_address">Adireshin kalandar da aka wallafa (karatu kawai)</string>
+    <string name="calendars_subscribe_password_apple">Kalmar sirri ta musamman ga manhaja</string>
+    <string name="calendars_subscribe_server_url">Adireshin uwar garke</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Ba a kunna asusun Google a wannan sabar ba. Kunna su a Saitunan, Saitunan system.</string>
+    <string name="calendars_subscribe_google_connect">Ba ka haɗa asusun Google ba. Haɗa shi a cikin manhajar yanar gizo.</string>
 </resources>

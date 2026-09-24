@@ -148,4 +148,26 @@
     <string name="calendars_scope_copy">Ṣe àdàkọ ìṣẹ̀lẹ̀ yìí</string>
     <string name="calendars_editor_copy_title">Ṣe àdàkọ ìṣẹ̀lẹ̀</string>
     <string name="calendars_title_required">Àkọlé ṣe pàtàkì</string>
+    <string name="calendars_link_submit">So pọ̀</string>
+    <string name="calendars_link_sync">Ṣe àmúṣiṣẹ́pọ̀ báyìí</string>
+    <string name="calendars_link_grant">Fàyè gba ìwọlé kàlẹ́ńdà nínú ohun-èlò wẹ́ẹ̀bù</string>
+    <string name="calendars_link_linked">Tí a so pọ̀</string>
+    <string name="calendars_link_marker">Kàlẹ́ńdà tí a so pọ̀</string>
+    <string name="calendars_link_remote_empty">Kò sí kàlẹ́ńdà</string>
+    <string name="calendars_poll_conflict">Ìṣẹ̀lẹ̀ kan yípadà ní ẹ̀gbẹ́ méjèèjì</string>
+    <string name="calendars_poll_missing">Kàlẹ́ńdà náà kò sí lórí sáfà rẹ̀ mọ́</string>
+    <string name="calendars_poll_unauthorised">Sáfà kàlẹ́ńdà kọ àwọn ẹ̀rí ìròyìn náà</string>
+    <string name="calendars_subscribe_username">Orukọ olumulo</string>
+    <string name="calendars_subscribe_password">Ọ̀rọ̀ aṣínà</string>
+    <string name="calendars_subscribe_connect">Sopọ̀</string>
+    <string name="calendars_subscribe_server">Olùṣẹ́ Mochi tàbí CalDAV mìíràn</string>
+    <string name="calendars_subscribe_address">Àdírẹ́sì kàlẹ́ńdà tí a tẹ̀jáde (kíkà nìkan)</string>
+    <string name="calendars_subscribe_password_apple">Ọ̀rọ̀ aṣínà pàtàkì fún ohun-èlò</string>
+    <string name="calendars_subscribe_server_url">Àdírẹ́sì olùṣẹ́</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">A kò tíì mú àwọn àkáǹtì Google ṣiṣẹ́ lórí sáfà yìí. Mú wọn ṣiṣẹ́ ní Àwọn ìṣètò, Àwọn ìṣètò system.</string>
+    <string name="calendars_subscribe_google_connect">O kò tíì so àkáǹtì Google kankan pọ̀. So ó pọ̀ nínú ohun-èlò wẹ́ẹ̀bù.</string>
 </resources>

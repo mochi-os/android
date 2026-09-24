@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">Onderwerp</string>
     <string name="accounts_field_secret">Ondertekeningsgeheim</string>
     <string name="account_totp_open">Maak oop in verifikasie-app</string>
+    <string name="accounts_revoke">Herroep toegang</string>
+    <string name="accounts_capability_calendar">Kalender</string>
+    <string name="accounts_capability_notify">Kennisgewings</string>
+    <string name="accounts_capability_ai">KI</string>
+    <string name="accounts_capability_login">Aanmelding</string>
+    <string name="accounts_provider_caldav">Kalenderbediener</string>
+    <string name="accounts_revoke_confirm">Dit sal die kalendertoegang van %1$s herroep. Aanmelding met %2$s bly totdat jy dit op die Aanmeldbladsy ontkoppel.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

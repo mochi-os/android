@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">Copia aquest esdeveniment</string>
     <string name="calendars_editor_copy_title">Copia l\'esdeveniment</string>
     <string name="calendars_title_required">El títol és obligatori</string>
+    <string name="calendars_link_submit">Enllaça</string>
+    <string name="calendars_link_sync">Sincronitza ara</string>
+    <string name="calendars_link_grant">Permeteu l\'accés al calendari a l\'aplicació web</string>
+    <string name="calendars_link_linked">Enllaçat</string>
+    <string name="calendars_link_marker">Calendari enllaçat</string>
+    <string name="calendars_link_remote_empty">Cap calendari</string>
+    <string name="calendars_poll_conflict">Un esdeveniment ha canviat a banda i banda</string>
+    <string name="calendars_poll_missing">El calendari ja no és al seu servidor</string>
+    <string name="calendars_poll_unauthorised">El servidor del calendari ha rebutjat les credencials del compte</string>
+    <string name="calendars_subscribe_username">Nom d\'usuari</string>
+    <string name="calendars_subscribe_password">Contrasenya</string>
+    <string name="calendars_subscribe_connect">Connecta</string>
+    <string name="calendars_subscribe_server">Un altre servidor Mochi o CalDAV</string>
+    <string name="calendars_subscribe_address">Adreça de calendari publicada (només lectura)</string>
+    <string name="calendars_subscribe_password_apple">Contrasenya específica de l\'aplicació</string>
+    <string name="calendars_subscribe_server_url">Adreça del servidor</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Els comptes de Google no estan activats en aquest servidor. Activa\'ls a Configuració, Configuració del sistema.</string>
+    <string name="calendars_subscribe_google_connect">No has connectat cap compte de Google. Connecta\'l a l\'aplicació web.</string>
 </resources>

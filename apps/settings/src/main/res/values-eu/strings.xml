@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">Gaia</string>
     <string name="accounts_field_secret">Sinaduraren sekretua</string>
     <string name="account_totp_open">Ireki autentifikazio-aplikazioan</string>
+    <string name="accounts_revoke">Ezeztatu sarbidea</string>
+    <string name="accounts_capability_calendar">Egutegia</string>
+    <string name="accounts_capability_notify">Jakinarazpenak</string>
+    <string name="accounts_capability_ai">AA</string>
+    <string name="accounts_capability_login">Saioa hastea</string>
+    <string name="accounts_provider_caldav">Egutegi-zerbitzaria</string>
+    <string name="accounts_revoke_confirm">Honek %1$s kontuaren egutegirako sarbidea baliogabetuko du. %2$s bidezko saio-hasiera mantendu egingo da saioa hasteko orrian deslotu arte.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

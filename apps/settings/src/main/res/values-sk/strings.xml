@@ -391,4 +391,12 @@
     <string name="accounts_field_topic">Téma</string>
     <string name="accounts_field_secret">Tajný kľúč podpisu</string>
     <string name="account_totp_open">Otvoriť v overovacej aplikácii</string>
+    <string name="accounts_revoke">Zrušiť prístup</string>
+    <string name="accounts_capability_calendar">Kalendár</string>
+    <string name="accounts_capability_notify">Notifikácie</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Prihlásenie</string>
+    <string name="accounts_provider_caldav">Server kalendára</string>
+    <string name="accounts_revoke_confirm">Týmto sa zruší prístup ku kalendáru pre %1$s. Prihlasovanie cez %2$s zostane, kým ho neodpojíte na stránke prihlásenia.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

@@ -148,4 +148,26 @@
     <string name="calendars_scope_copy">Salin acara ini</string>
     <string name="calendars_editor_copy_title">Salin acara</string>
     <string name="calendars_title_required">Tajuk diperlukan</string>
+    <string name="calendars_link_submit">Pautkan</string>
+    <string name="calendars_link_sync">Segerakkan sekarang</string>
+    <string name="calendars_link_grant">Benarkan akses kalendar dalam aplikasi web</string>
+    <string name="calendars_link_linked">Berpaut</string>
+    <string name="calendars_link_marker">Kalendar berpaut</string>
+    <string name="calendars_link_remote_empty">Tiada kalendar</string>
+    <string name="calendars_poll_conflict">Satu acara berubah di kedua-dua belah</string>
+    <string name="calendars_poll_missing">Kalendar tiada lagi pada pelayannya</string>
+    <string name="calendars_poll_unauthorised">Pelayan kalendar menolak kelayakan akaun</string>
+    <string name="calendars_subscribe_username">Nama pengguna</string>
+    <string name="calendars_subscribe_password">Kata laluan</string>
+    <string name="calendars_subscribe_connect">Sambung</string>
+    <string name="calendars_subscribe_server">Pelayan Mochi atau CalDAV lain</string>
+    <string name="calendars_subscribe_address">Alamat kalendar yang diterbitkan (baca sahaja)</string>
+    <string name="calendars_subscribe_password_apple">Kata laluan khusus apl</string>
+    <string name="calendars_subscribe_server_url">Alamat pelayan</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Akaun Google belum didayakan pada pelayan ini. Dayakannya di Tetapan, Tetapan sistem.</string>
+    <string name="calendars_subscribe_google_connect">Anda belum menyambungkan akaun Google. Sambungkannya dalam aplikasi web.</string>
 </resources>

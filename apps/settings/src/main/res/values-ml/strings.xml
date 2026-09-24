@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">വിഷയം</string>
     <string name="accounts_field_secret">ഒപ്പ് രഹസ്യം</string>
     <string name="account_totp_open">ഓതന്റിക്കേറ്റർ ആപ്പിൽ തുറക്കുക</string>
+    <string name="accounts_revoke">ആക്‌സസ് പിൻവലിക്കുക</string>
+    <string name="accounts_capability_calendar">കലണ്ടർ</string>
+    <string name="accounts_capability_notify">അറിയിപ്പുകൾ</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">സൈൻ-ഇൻ</string>
+    <string name="accounts_provider_caldav">കലണ്ടർ സെർവർ</string>
+    <string name="accounts_revoke_confirm">ഇത് %1$s-ന്റെ കലണ്ടർ ആക്സസ് പിൻവലിക്കും. ലോഗിൻ പേജിൽ അൺലിങ്ക് ചെയ്യുന്നതുവരെ %2$s ഉപയോഗിച്ചുള്ള സൈൻ-ഇൻ തുടരും.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

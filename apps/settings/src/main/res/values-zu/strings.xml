@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">Isihloko</string>
     <string name="accounts_field_secret">Imfihlo yokusayina</string>
     <string name="account_totp_open">Vula ku-app yokuqinisekisa</string>
+    <string name="accounts_revoke">Buyisela ukufinyelela</string>
+    <string name="accounts_capability_calendar">Ikhalenda</string>
+    <string name="accounts_capability_notify">Izaziso</string>
+    <string name="accounts_capability_ai">I-AI</string>
+    <string name="accounts_capability_login">Ukungena</string>
+    <string name="accounts_provider_caldav">Iseva yekhalenda</string>
+    <string name="accounts_revoke_confirm">Lokhu kuzohoxisa ukufinyelela kwekhalenda kuka-%1$s. Ukungena nge-%2$s kuzohlala kuze kube yilapho uyisusa ekhasini lokuNgena.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">Энэ үйл явдлыг хуулах</string>
     <string name="calendars_editor_copy_title">Үйл явдлыг хуулах</string>
     <string name="calendars_title_required">Гарчиг шаардлагатай</string>
+    <string name="calendars_link_submit">Холбох</string>
+    <string name="calendars_link_sync">Одоо синк хийх</string>
+    <string name="calendars_link_grant">Вэб аппад хуанлийн хандалтыг зөвшөөрнө үү</string>
+    <string name="calendars_link_linked">Холбосон</string>
+    <string name="calendars_link_marker">Холбосон хуанли</string>
+    <string name="calendars_link_remote_empty">Хуанли байхгүй</string>
+    <string name="calendars_poll_conflict">Үйл явдал хоёр талдаа өөрчлөгдсөн</string>
+    <string name="calendars_poll_missing">Хуанли өөрийн сервер дээр байхгүй болжээ</string>
+    <string name="calendars_poll_unauthorised">Хуанлийн сервер бүртгэлийн нэвтрэх мэдээллийг татгалзлаа</string>
+    <string name="calendars_subscribe_username">Хэрэглэгчийн нэр</string>
+    <string name="calendars_subscribe_password">Нууц үг</string>
+    <string name="calendars_subscribe_connect">Холбогдох</string>
+    <string name="calendars_subscribe_server">Өөр Mochi эсвэл CalDAV сервер</string>
+    <string name="calendars_subscribe_address">Нийтэлсэн хуанлийн хаяг (зөвхөн уншигдах)</string>
+    <string name="calendars_subscribe_password_apple">Аппад зориулсан нууц үг</string>
+    <string name="calendars_subscribe_server_url">Серверийн хаяг</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Энэ сервер дээр Google бүртгэлүүд идэвхжээгүй байна. Тэдгээрийг Тохиргоо, Системийн тохиргоо хэсэгт идэвхжүүлнэ үү.</string>
+    <string name="calendars_subscribe_google_connect">Та Google бүртгэл холбоогүй байна. Үүнийг вэб аппад холбоно уу.</string>
 </resources>

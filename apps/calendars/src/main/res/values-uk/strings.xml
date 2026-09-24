@@ -157,4 +157,26 @@
     <string name="calendars_scope_copy">Копіювати цю подію</string>
     <string name="calendars_editor_copy_title">Копіювати подію</string>
     <string name="calendars_title_required">Заголовок обовʼязковий</string>
+    <string name="calendars_link_submit">Зв\'язати</string>
+    <string name="calendars_link_sync">Синхронізувати зараз</string>
+    <string name="calendars_link_grant">Дозвольте доступ до календаря у вебзастосунку</string>
+    <string name="calendars_link_linked">Зв\'язаний</string>
+    <string name="calendars_link_marker">Зв\'язаний календар</string>
+    <string name="calendars_link_remote_empty">Немає календарів</string>
+    <string name="calendars_poll_conflict">Подію змінено з обох боків</string>
+    <string name="calendars_poll_missing">Календаря більше немає на його сервері</string>
+    <string name="calendars_poll_unauthorised">Сервер календаря відхилив облікові дані запису</string>
+    <string name="calendars_subscribe_username">Ім\'я користувача</string>
+    <string name="calendars_subscribe_password">Пароль</string>
+    <string name="calendars_subscribe_connect">Підключитися</string>
+    <string name="calendars_subscribe_server">Інший сервер Mochi або CalDAV</string>
+    <string name="calendars_subscribe_address">Адреса опублікованого календаря (лише для читання)</string>
+    <string name="calendars_subscribe_password_apple">Пароль для застосунку</string>
+    <string name="calendars_subscribe_server_url">Адреса сервера</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Облікові записи Google не ввімкнено на цьому сервері. Увімкніть їх у розділі Налаштування, Системні налаштування.</string>
+    <string name="calendars_subscribe_google_connect">Ви не підключили обліковий запис Google. Підключіть його у вебзастосунку.</string>
 </resources>

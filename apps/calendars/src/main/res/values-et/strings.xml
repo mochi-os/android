@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">Kopeeri see sündmus</string>
     <string name="calendars_editor_copy_title">Kopeeri sündmus</string>
     <string name="calendars_title_required">Pealkiri on nõutav</string>
+    <string name="calendars_link_submit">Seo</string>
+    <string name="calendars_link_sync">Sünkroniseeri kohe</string>
+    <string name="calendars_link_grant">Luba kalendri juurdepääs veebirakenduses</string>
+    <string name="calendars_link_linked">Seotud</string>
+    <string name="calendars_link_marker">Seotud kalender</string>
+    <string name="calendars_link_remote_empty">Kalendreid pole</string>
+    <string name="calendars_poll_conflict">Sündmust muudeti mõlemal pool</string>
+    <string name="calendars_poll_missing">Kalendrit pole enam selle serveris</string>
+    <string name="calendars_poll_unauthorised">Kalendri server lükkas konto mandaadi tagasi</string>
+    <string name="calendars_subscribe_username">Kasutajanimi</string>
+    <string name="calendars_subscribe_password">Parool</string>
+    <string name="calendars_subscribe_connect">Ühenda</string>
+    <string name="calendars_subscribe_server">Muu Mochi või CalDAV server</string>
+    <string name="calendars_subscribe_address">Avaldatud kalendri aadress (kirjutuskaitstud)</string>
+    <string name="calendars_subscribe_password_apple">Rakendusepõhine parool</string>
+    <string name="calendars_subscribe_server_url">Serveri aadress</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Google\'i kontod ei ole selles serveris lubatud. Luba need menüüs Seaded, Süsteemi seaded.</string>
+    <string name="calendars_subscribe_google_connect">Sa ei ole Google\'i kontot ühendanud. Ühenda see veebirakenduses.</string>
 </resources>

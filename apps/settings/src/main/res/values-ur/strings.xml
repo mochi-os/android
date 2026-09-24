@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">موضوع</string>
     <string name="accounts_field_secret">دستخط کا راز</string>
     <string name="account_totp_open">تصدیق کنندہ ایپ میں کھولیں</string>
+    <string name="accounts_revoke">رسائی منسوخ کریں</string>
+    <string name="accounts_capability_calendar">کیلنڈر</string>
+    <string name="accounts_capability_notify">notifications</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">سائن-ان</string>
+    <string name="accounts_provider_caldav">کیلنڈر سرور</string>
+    <string name="accounts_revoke_confirm">اس سے %1$s کی کیلنڈر رسائی منسوخ ہو جائے گی۔ %2$s کے ساتھ سائن-ان اس وقت تک رہے گا جب تک آپ لاگ ان صفحے پر اسے ان لنک نہ کریں۔</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

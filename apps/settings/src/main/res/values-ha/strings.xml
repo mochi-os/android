@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">Batu</string>
     <string name="accounts_field_secret">Sirrin sa hannu</string>
     <string name="account_totp_open">Buɗe a manhajar tantancewa</string>
+    <string name="accounts_revoke">Soke damar shiga</string>
+    <string name="accounts_capability_calendar">Kalanda</string>
+    <string name="accounts_capability_notify">Sanarwa</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Shiga</string>
+    <string name="accounts_provider_caldav">Sabar kalanda</string>
+    <string name="accounts_revoke_confirm">Wannan zai soke izinin kalanda na %1$s. Shiga da %2$s zai ci gaba har sai ka cire haɗin sa a shafin Shiga.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

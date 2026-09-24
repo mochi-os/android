@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">આ ઇવેન્ટ કૉપિ કરો</string>
     <string name="calendars_editor_copy_title">ઇવેન્ટ કૉપિ કરો</string>
     <string name="calendars_title_required">શીર્ષક આવશ્યક છે</string>
+    <string name="calendars_link_submit">લિંક કરો</string>
+    <string name="calendars_link_sync">હમણાં સિંક કરો</string>
+    <string name="calendars_link_grant">વેબ ઍપમાં કૅલેન્ડર ઍક્સેસની મંજૂરી આપો</string>
+    <string name="calendars_link_linked">લિંક થયેલું</string>
+    <string name="calendars_link_marker">લિંક કરેલું કૅલેન્ડર</string>
+    <string name="calendars_link_remote_empty">કોઈ કૅલેન્ડર નથી</string>
+    <string name="calendars_poll_conflict">એક ઇવેન્ટ બંને બાજુ બદલાઈ છે</string>
+    <string name="calendars_poll_missing">કૅલેન્ડર તેના સર્વર પરથી જતું રહ્યું છે</string>
+    <string name="calendars_poll_unauthorised">કૅલેન્ડરના સર્વરે ખાતાની ઓળખાણ નકારી</string>
+    <string name="calendars_subscribe_username">વપરાશકર્તાનામ</string>
+    <string name="calendars_subscribe_password">પાસવર્ડ</string>
+    <string name="calendars_subscribe_connect">કનેક્ટ કરો</string>
+    <string name="calendars_subscribe_server">અન્ય Mochi અથવા CalDAV સર્વર</string>
+    <string name="calendars_subscribe_address">પ્રકાશિત કૅલેન્ડરનું સરનામું (ફક્ત-વાંચન)</string>
+    <string name="calendars_subscribe_password_apple">ઍપ-વિશિષ્ટ પાસવર્ડ</string>
+    <string name="calendars_subscribe_server_url">સર્વરનું સરનામું</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">આ સર્વર પર Google ખાતાં સક્ષમ કરવામાં આવ્યાં નથી. તેમને સેટિંગ્સ, સિસ્ટમ સેટિંગ્સ માં સક્ષમ કરો.</string>
+    <string name="calendars_subscribe_google_connect">તમે કોઈ Google ખાતું જોડ્યું નથી. તેને વેબ ઍપમાં જોડો.</string>
 </resources>

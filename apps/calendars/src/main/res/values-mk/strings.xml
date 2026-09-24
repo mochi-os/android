@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">Копирај го овој настан</string>
     <string name="calendars_editor_copy_title">Копирај настан</string>
     <string name="calendars_title_required">Насловот е задолжителен</string>
+    <string name="calendars_link_submit">Поврзи</string>
+    <string name="calendars_link_sync">Синхронизирај сега</string>
+    <string name="calendars_link_grant">Дозволете пристап до календарот во веб-апликацијата</string>
+    <string name="calendars_link_linked">Поврзан</string>
+    <string name="calendars_link_marker">Поврзан календар</string>
+    <string name="calendars_link_remote_empty">Нема календари</string>
+    <string name="calendars_poll_conflict">Настан е променет од двете страни</string>
+    <string name="calendars_poll_missing">Календарот го нема на неговиот сервер</string>
+    <string name="calendars_poll_unauthorised">Серверот на календарот ги одби акредитивите на сметката</string>
+    <string name="calendars_subscribe_username">Корисничко име</string>
+    <string name="calendars_subscribe_password">Лозинка</string>
+    <string name="calendars_subscribe_connect">Поврзи се</string>
+    <string name="calendars_subscribe_server">Друг Mochi или CalDAV сервер</string>
+    <string name="calendars_subscribe_address">Објавена адреса на календар (само за читање)</string>
+    <string name="calendars_subscribe_password_apple">Лозинка за апликацијата</string>
+    <string name="calendars_subscribe_server_url">Адреса на серверот</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Сметките на Google не се овозможени на овој сервер. Овозможи ги во Поставки, Системски поставки.</string>
+    <string name="calendars_subscribe_google_connect">Не си поврзал сметка на Google. Поврзи ја во веб-апликацијата.</string>
 </resources>

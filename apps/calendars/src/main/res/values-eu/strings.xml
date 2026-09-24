@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">Kopiatu gertaera hau</string>
     <string name="calendars_editor_copy_title">Kopiatu gertaera</string>
     <string name="calendars_title_required">Izenburua beharrezkoa da</string>
+    <string name="calendars_link_submit">Lotu</string>
+    <string name="calendars_link_sync">Sinkronizatu orain</string>
+    <string name="calendars_link_grant">Baimendu egutegirako sarbidea web aplikazioan</string>
+    <string name="calendars_link_linked">Lotuta</string>
+    <string name="calendars_link_marker">Lotutako egutegia</string>
+    <string name="calendars_link_remote_empty">Ez dago egutegirik</string>
+    <string name="calendars_poll_conflict">Gertaera bat bi aldeetan aldatu da</string>
+    <string name="calendars_poll_missing">Egutegia ez dago jada bere zerbitzarian</string>
+    <string name="calendars_poll_unauthorised">Egutegiaren zerbitzariak kontuaren kredentzialak ukatu ditu</string>
+    <string name="calendars_subscribe_username">Erabiltzaile-izena</string>
+    <string name="calendars_subscribe_password">Pasahitza</string>
+    <string name="calendars_subscribe_connect">Konektatu</string>
+    <string name="calendars_subscribe_server">Beste Mochi edo CalDAV zerbitzari bat</string>
+    <string name="calendars_subscribe_address">Argitaratutako egutegiaren helbidea (irakurtzeko soilik)</string>
+    <string name="calendars_subscribe_password_apple">Aplikaziorako pasahitz berezia</string>
+    <string name="calendars_subscribe_server_url">Zerbitzariaren helbidea</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Google kontuak ez daude gaituta zerbitzari honetan. Gaitu itzazu Ezarpenak, Sistemako ezarpenak atalean.</string>
+    <string name="calendars_subscribe_google_connect">Ez duzu Google konturik konektatu. Konektatu web aplikazioan.</string>
 </resources>

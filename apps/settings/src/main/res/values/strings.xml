@@ -242,6 +242,13 @@
     <string name="accounts_verify_resend">Resend code</string>
     <string name="accounts_verify_hint">Enter the code sent to %1$s.</string>
     <string name="accounts_remove">Remove</string>
+    <string name="accounts_revoke">Revoke access</string>
+    <string name="accounts_revoke_confirm">This will revoke the calendar access of %1$s. Signing in with %2$s stays until you unlink it on the Login page.</string>
+    <string name="accounts_capability_login">Sign-in</string>
+    <string name="accounts_capability_calendar">Calendar</string>
+    <string name="accounts_capability_notify">Notifications</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_mcp">MCP</string>
     <string name="accounts_remove_title">Remove account?</string>
     <string name="accounts_remove_message">This will remove the connected account \"%1$s\".</string>
     <string name="accounts_devices">Devices</string>
@@ -414,6 +421,7 @@
     <string name="accounts_provider_unifiedpush">Push notification</string>
     <string name="accounts_provider_url">External URL</string>
     <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_provider_caldav">Calendar server</string>
     <string name="accounts_verified">Account verified</string>
     <string name="accounts_verify_invalid">Invalid verification code</string>
     <string name="accounts_verify_sent">Verification code sent</string>

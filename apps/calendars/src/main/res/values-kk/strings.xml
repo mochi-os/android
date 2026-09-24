@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">Бұл іс-шараны көшіру</string>
     <string name="calendars_editor_copy_title">Іс-шараны көшіру</string>
     <string name="calendars_title_required">Тақырып міндетті</string>
+    <string name="calendars_link_submit">Байланыстыру</string>
+    <string name="calendars_link_sync">Қазір синхрондау</string>
+    <string name="calendars_link_grant">Веб қолданбада күнтізбеге қатынасуға рұқсат беріңіз</string>
+    <string name="calendars_link_linked">Байланысқан</string>
+    <string name="calendars_link_marker">Байланысқан күнтізбе</string>
+    <string name="calendars_link_remote_empty">Күнтізбелер жоқ</string>
+    <string name="calendars_poll_conflict">Оқиға екі жақта да өзгерді</string>
+    <string name="calendars_poll_missing">Күнтізбе өз серверінде жоқ</string>
+    <string name="calendars_poll_unauthorised">Күнтізбе сервері тіркелгінің тіркелу деректерін қабылдамады</string>
+    <string name="calendars_subscribe_username">Пайдаланушы аты</string>
+    <string name="calendars_subscribe_password">Құпия сөз</string>
+    <string name="calendars_subscribe_connect">Қосылу</string>
+    <string name="calendars_subscribe_server">Басқа Mochi немесе CalDAV сервері</string>
+    <string name="calendars_subscribe_address">Жарияланған күнтізбе мекенжайы (тек оқуға арналған)</string>
+    <string name="calendars_subscribe_password_apple">Қолданбаға арналған құпия сөз</string>
+    <string name="calendars_subscribe_server_url">Сервер мекенжайы</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Бұл серверде Google тіркелгілері қосылмаған. Оларды Параметрлер, Жүйе параметрлері бөлімінде қосыңыз.</string>
+    <string name="calendars_subscribe_google_connect">Сіз Google тіркелгісін қоспағансыз. Оны веб қолданбада қосыңыз.</string>
 </resources>

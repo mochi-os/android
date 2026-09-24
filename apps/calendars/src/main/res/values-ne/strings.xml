@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">यो कार्यक्रम प्रतिलिपि गर्नुहोस्</string>
     <string name="calendars_editor_copy_title">कार्यक्रम प्रतिलिपि गर्नुहोस्</string>
     <string name="calendars_title_required">शीर्षक आवश्यक छ</string>
+    <string name="calendars_link_submit">लिङ्क गर्नुहोस्</string>
+    <string name="calendars_link_sync">अहिले सिङ्क गर्नुहोस्</string>
+    <string name="calendars_link_grant">वेब एपमा क्यालेन्डर पहुँच अनुमति दिनुहोस्</string>
+    <string name="calendars_link_linked">लिङ्क गरिएको</string>
+    <string name="calendars_link_marker">लिङ्क गरिएको क्यालेन्डर</string>
+    <string name="calendars_link_remote_empty">कुनै क्यालेन्डर छैन</string>
+    <string name="calendars_poll_conflict">एउटा इभेन्ट दुवैतिर परिवर्तन भयो</string>
+    <string name="calendars_poll_missing">क्यालेन्डर आफ्नो सर्भरबाट हटेको छ</string>
+    <string name="calendars_poll_unauthorised">क्यालेन्डरको सर्भरले खाताको प्रमाणहरू अस्वीकार गर्‍यो</string>
+    <string name="calendars_subscribe_username">प्रयोगकर्ता नाम</string>
+    <string name="calendars_subscribe_password">पासवर्ड</string>
+    <string name="calendars_subscribe_connect">जडान गर्नुहोस्</string>
+    <string name="calendars_subscribe_server">अर्को Mochi वा CalDAV सर्भर</string>
+    <string name="calendars_subscribe_address">प्रकाशित क्यालेन्डरको ठेगाना (पढ्ने मात्र)</string>
+    <string name="calendars_subscribe_password_apple">एपका लागि विशेष पासवर्ड</string>
+    <string name="calendars_subscribe_server_url">सर्भरको ठेगाना</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">यो सर्भरमा Google खाताहरू सक्षम गरिएका छैनन्। तिनीहरूलाई सेटिङहरू, प्रणाली सेटिङहरू मा सक्षम गर्नुहोस्।</string>
+    <string name="calendars_subscribe_google_connect">तपाईंले कुनै Google खाता जडान गर्नुभएको छैन। यसलाई वेब एपमा जडान गर्नुहोस्।</string>
 </resources>

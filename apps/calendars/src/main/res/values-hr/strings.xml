@@ -154,4 +154,26 @@
     <string name="calendars_scope_copy">Kopiraj ovaj događaj</string>
     <string name="calendars_editor_copy_title">Kopiraj događaj</string>
     <string name="calendars_title_required">Naslov je obavezan</string>
+    <string name="calendars_link_submit">Poveži</string>
+    <string name="calendars_link_sync">Sinkroniziraj sada</string>
+    <string name="calendars_link_grant">Dopustite pristup kalendaru u web aplikaciji</string>
+    <string name="calendars_link_linked">Povezano</string>
+    <string name="calendars_link_marker">Povezani kalendar</string>
+    <string name="calendars_link_remote_empty">Nema kalendara</string>
+    <string name="calendars_poll_conflict">Događaj je promijenjen s obje strane</string>
+    <string name="calendars_poll_missing">Kalendara više nema na njegovu poslužitelju</string>
+    <string name="calendars_poll_unauthorised">Poslužitelj kalendara odbio je vjerodajnice računa</string>
+    <string name="calendars_subscribe_username">Korisničko ime</string>
+    <string name="calendars_subscribe_password">Lozinka</string>
+    <string name="calendars_subscribe_connect">Poveži se</string>
+    <string name="calendars_subscribe_server">Drugi Mochi ili CalDAV poslužitelj</string>
+    <string name="calendars_subscribe_address">Objavljena adresa kalendara (samo za čitanje)</string>
+    <string name="calendars_subscribe_password_apple">Lozinka za aplikaciju</string>
+    <string name="calendars_subscribe_server_url">Adresa poslužitelja</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Google računi nisu omogućeni na ovom poslužitelju. Omogućite ih u Postavke, Postavke sustava.</string>
+    <string name="calendars_subscribe_google_connect">Niste povezali Google račun. Povežite ga u web aplikaciji.</string>
 </resources>

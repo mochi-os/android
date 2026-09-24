@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">Kopjo këtë ngjarje</string>
     <string name="calendars_editor_copy_title">Kopjo ngjarjen</string>
     <string name="calendars_title_required">Titulli kërkohet</string>
+    <string name="calendars_link_submit">Lidh</string>
+    <string name="calendars_link_sync">Sinkronizo tani</string>
+    <string name="calendars_link_grant">Lejo qasjen në kalendar në aplikacionin e uebit</string>
+    <string name="calendars_link_linked">I lidhur</string>
+    <string name="calendars_link_marker">Kalendar i lidhur</string>
+    <string name="calendars_link_remote_empty">Asnjë kalendar</string>
+    <string name="calendars_poll_conflict">Një ngjarje ndryshoi në të dyja anët</string>
+    <string name="calendars_poll_missing">Kalendari nuk gjendet më në serverin e tij</string>
+    <string name="calendars_poll_unauthorised">Serveri i kalendarit i refuzoi kredencialet e llogarisë</string>
+    <string name="calendars_subscribe_username">Emri i përdoruesit</string>
+    <string name="calendars_subscribe_password">Fjalëkalimi</string>
+    <string name="calendars_subscribe_connect">Lidhu</string>
+    <string name="calendars_subscribe_server">Një server tjetër Mochi ose CalDAV</string>
+    <string name="calendars_subscribe_address">Adresa e kalendarit të publikuar (vetëm për lexim)</string>
+    <string name="calendars_subscribe_password_apple">Fjalëkalim i posaçëm për aplikacionin</string>
+    <string name="calendars_subscribe_server_url">Adresa e serverit</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Llogaritë Google nuk janë aktivizuar në këtë server. Aktivizoji te Cilësimet, Cilësimet e sistemit.</string>
+    <string name="calendars_subscribe_google_connect">Nuk ke lidhur asnjë llogari Google. Lidhe në aplikacionin e uebit.</string>
 </resources>

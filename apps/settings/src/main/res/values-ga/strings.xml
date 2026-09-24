@@ -393,4 +393,12 @@
     <string name="accounts_field_topic">Ábhar</string>
     <string name="accounts_field_secret">Rún sínithe</string>
     <string name="account_totp_open">Oscail san aip fíordheimhnithe</string>
+    <string name="accounts_revoke">Cúlghair rochtain</string>
+    <string name="accounts_capability_calendar">Féilire</string>
+    <string name="accounts_capability_notify">Fógraí</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Síniú isteach</string>
+    <string name="accounts_provider_caldav">Freastalaí féilire</string>
+    <string name="accounts_revoke_confirm">Cuirfidh sé seo rochtain %1$s ar an bhféilire ar ceal. Fanfaidh síniú isteach le %2$s go dtí go ndínascfaidh tú é ar an leathanach sínithe isteach.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

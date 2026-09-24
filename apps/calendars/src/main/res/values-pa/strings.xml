@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">ਇਹ ਇਵੈਂਟ ਕਾਪੀ ਕਰੋ</string>
     <string name="calendars_editor_copy_title">ਇਵੈਂਟ ਕਾਪੀ ਕਰੋ</string>
     <string name="calendars_title_required">ਸਿਰਲੇਖ ਜ਼ਰੂਰੀ ਹੈ</string>
+    <string name="calendars_link_submit">ਲਿੰਕ ਕਰੋ</string>
+    <string name="calendars_link_sync">ਹੁਣੇ ਸਿੰਕ ਕਰੋ</string>
+    <string name="calendars_link_grant">ਵੈੱਬ ਐਪ ਵਿੱਚ ਕੈਲੰਡਰ ਪਹੁੰਚ ਦੀ ਆਗਿਆ ਦਿਓ</string>
+    <string name="calendars_link_linked">ਲਿੰਕ ਕੀਤਾ</string>
+    <string name="calendars_link_marker">ਲਿੰਕ ਕੀਤਾ ਕੈਲੰਡਰ</string>
+    <string name="calendars_link_remote_empty">ਕੋਈ ਕੈਲੰਡਰ ਨਹੀਂ</string>
+    <string name="calendars_poll_conflict">ਇੱਕ ਇਵੈਂਟ ਦੋਹਾਂ ਪਾਸੇ ਬਦਲ ਗਿਆ</string>
+    <string name="calendars_poll_missing">ਕੈਲੰਡਰ ਆਪਣੇ ਸਰਵਰ ਤੋਂ ਹਟ ਗਿਆ ਹੈ</string>
+    <string name="calendars_poll_unauthorised">ਕੈਲੰਡਰ ਦੇ ਸਰਵਰ ਨੇ ਅਕਾਊਂਟ ਦੇ ਕਰੈਡੈਂਸ਼ੀਅਲ ਰੱਦ ਕਰ ਦਿੱਤੇ</string>
+    <string name="calendars_subscribe_username">ਉਪਭੋਗਤਾ ਨਾਮ</string>
+    <string name="calendars_subscribe_password">ਪਾਸਵਰਡ</string>
+    <string name="calendars_subscribe_connect">ਕਨੈਕਟ ਕਰੋ</string>
+    <string name="calendars_subscribe_server">ਹੋਰ Mochi ਜਾਂ CalDAV ਸਰਵਰ</string>
+    <string name="calendars_subscribe_address">ਪ੍ਰਕਾਸ਼ਿਤ ਕੈਲੰਡਰ ਦਾ ਪਤਾ (ਕੇਵਲ-ਪੜ੍ਹਨਯੋਗ)</string>
+    <string name="calendars_subscribe_password_apple">ਐਪ ਲਈ ਖਾਸ ਪਾਸਵਰਡ</string>
+    <string name="calendars_subscribe_server_url">ਸਰਵਰ ਦਾ ਪਤਾ</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">ਇਸ ਸਰਵਰ \'ਤੇ Google ਖਾਤੇ ਸਮਰੱਥ ਨਹੀਂ ਕੀਤੇ ਗਏ ਹਨ। ਇਹਨਾਂ ਨੂੰ ਸੈਟਿੰਗਾਂ, ਸਿਸਟਮ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਸਮਰੱਥ ਕਰੋ।</string>
+    <string name="calendars_subscribe_google_connect">ਤੁਸੀਂ ਕੋਈ Google ਖਾਤਾ ਨਹੀਂ ਜੋੜਿਆ ਹੈ। ਇਸਨੂੰ ਵੈੱਬ ਐਪ ਵਿੱਚ ਜੋੜੋ।</string>
 </resources>

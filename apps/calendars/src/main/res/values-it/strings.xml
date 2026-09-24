@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">Copia questo evento</string>
     <string name="calendars_editor_copy_title">Copia evento</string>
     <string name="calendars_title_required">Il titolo è obbligatorio</string>
+    <string name="calendars_link_submit">Collega</string>
+    <string name="calendars_link_sync">Sincronizza ora</string>
+    <string name="calendars_link_grant">Consenti l\'accesso al calendario nell\'app web</string>
+    <string name="calendars_link_linked">Collegato</string>
+    <string name="calendars_link_marker">Calendario collegato</string>
+    <string name="calendars_link_remote_empty">Nessun calendario</string>
+    <string name="calendars_poll_conflict">Un evento è cambiato su entrambi i lati</string>
+    <string name="calendars_poll_missing">Il calendario non è più sul suo server</string>
+    <string name="calendars_poll_unauthorised">Il server del calendario ha rifiutato le credenziali dell\'account</string>
+    <string name="calendars_subscribe_username">Nome utente</string>
+    <string name="calendars_subscribe_password">Password</string>
+    <string name="calendars_subscribe_connect">Connetti</string>
+    <string name="calendars_subscribe_server">Un altro server Mochi o CalDAV</string>
+    <string name="calendars_subscribe_address">Indirizzo di calendario pubblicato (sola lettura)</string>
+    <string name="calendars_subscribe_password_apple">Password specifica per l\'app</string>
+    <string name="calendars_subscribe_server_url">Indirizzo del server</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Gli account Google non sono abilitati su questo server. Abilitali in Impostazioni, Impostazioni di sistema.</string>
+    <string name="calendars_subscribe_google_connect">Non hai connesso alcun account Google. Connettilo nell\'app web.</string>
 </resources>

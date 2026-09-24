@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">ಈ ಈವೆಂಟ್ ಅನ್ನು ನಕಲಿಸಿ</string>
     <string name="calendars_editor_copy_title">ಈವೆಂಟ್ ನಕಲಿಸಿ</string>
     <string name="calendars_title_required">ಶೀರ್ಷಿಕೆ ಅಗತ್ಯವಿದೆ</string>
+    <string name="calendars_link_submit">ಲಿಂಕ್ ಮಾಡಿ</string>
+    <string name="calendars_link_sync">ಈಗ ಸಿಂಕ್ ಮಾಡಿ</string>
+    <string name="calendars_link_grant">ವೆಬ್ ಅಪ್ಲಿಕೇಶನ್‌ನಲ್ಲಿ ಕ್ಯಾಲೆಂಡರ್ ಪ್ರವೇಶಕ್ಕೆ ಅನುಮತಿಸಿ</string>
+    <string name="calendars_link_linked">ಲಿಂಕ್ ಆಗಿದೆ</string>
+    <string name="calendars_link_marker">ಲಿಂಕ್ ಮಾಡಿದ ಕ್ಯಾಲೆಂಡರ್</string>
+    <string name="calendars_link_remote_empty">ಯಾವುದೇ ಕ್ಯಾಲೆಂಡರ್‌ಗಳಿಲ್ಲ</string>
+    <string name="calendars_poll_conflict">ಒಂದು ಈವೆಂಟ್ ಎರಡೂ ಕಡೆ ಬದಲಾಗಿದೆ</string>
+    <string name="calendars_poll_missing">ಕ್ಯಾಲೆಂಡರ್ ಅದರ ಸರ್ವರ್‌ನಿಂದ ಹೋಗಿದೆ</string>
+    <string name="calendars_poll_unauthorised">ಕ್ಯಾಲೆಂಡರ್‌ನ ಸರ್ವರ್ ಖಾತೆಯ ರುಜುವಾತುಗಳನ್ನು ನಿರಾಕರಿಸಿದೆ</string>
+    <string name="calendars_subscribe_username">ಬಳಕೆದಾರಹೆಸರು</string>
+    <string name="calendars_subscribe_password">ಪಾಸ್‌ವರ್ಡ್</string>
+    <string name="calendars_subscribe_connect">ಸಂಪರ್ಕಿಸಿ</string>
+    <string name="calendars_subscribe_server">ಇನ್ನೊಂದು Mochi ಅಥವಾ CalDAV ಸರ್ವರ್</string>
+    <string name="calendars_subscribe_address">ಪ್ರಕಟಿಸಿದ ಕ್ಯಾಲೆಂಡರ್ ವಿಳಾಸ (ಓದಲು-ಮಾತ್ರ)</string>
+    <string name="calendars_subscribe_password_apple">ಅಪ್ಲಿಕೇಶನ್-ನಿರ್ದಿಷ್ಟ ಪಾಸ್‌ವರ್ಡ್</string>
+    <string name="calendars_subscribe_server_url">ಸರ್ವರ್ ವಿಳಾಸ</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">ಈ ಸರ್ವರ್‌ನಲ್ಲಿ Google ಖಾತೆಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿಲ್ಲ. ಅವುಗಳನ್ನು ಸೆಟ್ಟಿಂಗ್‌ಗಳು, ಸಿಸ್ಟಮ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳು ನಲ್ಲಿ ಸಕ್ರಿಯಗೊಳಿಸಿ.</string>
+    <string name="calendars_subscribe_google_connect">ನೀವು Google ಖಾತೆಯನ್ನು ಸಂಪರ್ಕಿಸಿಲ್ಲ. ಅದನ್ನು ವೆಬ್ ಅಪ್ಲಿಕೇಶನ್‌ನಲ್ಲಿ ಸಂಪರ್ಕಿಸಿ.</string>
 </resources>

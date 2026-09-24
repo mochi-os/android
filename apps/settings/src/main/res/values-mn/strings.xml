@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">Сэдэв</string>
     <string name="accounts_field_secret">Гарын үсгийн нууц</string>
     <string name="account_totp_open">Баталгаажуулагч аппад нээх</string>
+    <string name="accounts_revoke">Хандалтыг цуцлах</string>
+    <string name="accounts_capability_calendar">Хуанли</string>
+    <string name="accounts_capability_notify">Мэдэгдэл</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Нэвтрэлт</string>
+    <string name="accounts_provider_caldav">Хуанлийн сервер</string>
+    <string name="accounts_revoke_confirm">Энэ нь %1$s-ийн хуанлийн хандалтыг цуцална. %2$s-ээр нэвтрэх нь Нэвтрэх хуудсан дээр салгах хүртэл хэвээр байна.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

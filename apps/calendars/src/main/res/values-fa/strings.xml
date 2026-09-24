@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">کپی این رویداد</string>
     <string name="calendars_editor_copy_title">کپی رویداد</string>
     <string name="calendars_title_required">عنوان الزامی است</string>
+    <string name="calendars_link_submit">پیوند دادن</string>
+    <string name="calendars_link_sync">همگام‌سازی اکنون</string>
+    <string name="calendars_link_grant">دسترسی تقویم را در برنامهٔ وب مجاز کنید</string>
+    <string name="calendars_link_linked">پیوندشده</string>
+    <string name="calendars_link_marker">تقویم پیوندشده</string>
+    <string name="calendars_link_remote_empty">هیچ تقویمی وجود ندارد</string>
+    <string name="calendars_poll_conflict">یک رویداد در هر دو سو تغییر کرده است</string>
+    <string name="calendars_poll_missing">تقویم دیگر روی سرورش نیست</string>
+    <string name="calendars_poll_unauthorised">سرور تقویم اطلاعات ورود حساب را نپذیرفت</string>
+    <string name="calendars_subscribe_username">نام کاربری</string>
+    <string name="calendars_subscribe_password">گذرواژه</string>
+    <string name="calendars_subscribe_connect">اتصال</string>
+    <string name="calendars_subscribe_server">سرور Mochi یا CalDAV دیگر</string>
+    <string name="calendars_subscribe_address">نشانی تقویم منتشرشده (فقط خواندنی)</string>
+    <string name="calendars_subscribe_password_apple">گذرواژه ویژه برنامه</string>
+    <string name="calendars_subscribe_server_url">آدرس سرور</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">حساب‌های Google در این سرور فعال نشده‌اند. آن‌ها را در تنظیمات، تنظیمات سیستم فعال کنید.</string>
+    <string name="calendars_subscribe_google_connect">هیچ حساب Google متصل نکرده‌اید. آن را در برنامهٔ وب متصل کنید.</string>
 </resources>

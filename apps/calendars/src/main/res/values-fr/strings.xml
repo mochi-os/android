@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">Copier cet événement</string>
     <string name="calendars_editor_copy_title">Copier l\'événement</string>
     <string name="calendars_title_required">Le titre est obligatoire</string>
+    <string name="calendars_link_submit">Associer</string>
+    <string name="calendars_link_sync">Synchroniser maintenant</string>
+    <string name="calendars_link_grant">Autorisez l\'accès au calendrier dans l\'application web</string>
+    <string name="calendars_link_linked">Associé</string>
+    <string name="calendars_link_marker">Calendrier associé</string>
+    <string name="calendars_link_remote_empty">Aucun calendrier</string>
+    <string name="calendars_poll_conflict">Un événement a changé des deux côtés</string>
+    <string name="calendars_poll_missing">Le calendrier ne se trouve plus sur son serveur</string>
+    <string name="calendars_poll_unauthorised">Le serveur du calendrier a refusé les identifiants du compte</string>
+    <string name="calendars_subscribe_username">Nom d\'utilisateur</string>
+    <string name="calendars_subscribe_password">Mot de passe</string>
+    <string name="calendars_subscribe_connect">Se connecter</string>
+    <string name="calendars_subscribe_server">Un autre serveur Mochi ou CalDAV</string>
+    <string name="calendars_subscribe_address">Adresse de calendrier publiée (lecture seule)</string>
+    <string name="calendars_subscribe_password_apple">Mot de passe spécifique à l\'application</string>
+    <string name="calendars_subscribe_server_url">Adresse du serveur</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Les comptes Google ne sont pas activés sur ce serveur. Activez-les dans Paramètres, Paramètres système.</string>
+    <string name="calendars_subscribe_google_connect">Vous n\'avez pas connecté de compte Google. Connectez-le dans l\'application web.</string>
 </resources>

@@ -154,4 +154,26 @@
     <string name="calendars_scope_copy">Копирај овај догађај</string>
     <string name="calendars_editor_copy_title">Копирај догађај</string>
     <string name="calendars_title_required">Наслов је обавезан</string>
+    <string name="calendars_link_submit">Повежи</string>
+    <string name="calendars_link_sync">Синхронизуј сада</string>
+    <string name="calendars_link_grant">Дозволите приступ календару у веб апликацији</string>
+    <string name="calendars_link_linked">Повезан</string>
+    <string name="calendars_link_marker">Повезани календар</string>
+    <string name="calendars_link_remote_empty">Нема календара</string>
+    <string name="calendars_poll_conflict">Догађај је промењен са обе стране</string>
+    <string name="calendars_poll_missing">Календара више нема на његовом серверу</string>
+    <string name="calendars_poll_unauthorised">Сервер календара је одбио акредитиве налога</string>
+    <string name="calendars_subscribe_username">Корисничко име</string>
+    <string name="calendars_subscribe_password">Лозинка</string>
+    <string name="calendars_subscribe_connect">Poveži se</string>
+    <string name="calendars_subscribe_server">Други Mochi или CalDAV сервер</string>
+    <string name="calendars_subscribe_address">Адреса објављеног календара (само за читање)</string>
+    <string name="calendars_subscribe_password_apple">Лозинка за апликацију</string>
+    <string name="calendars_subscribe_server_url">Адреса сервера</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Google налози нису омогућени на овом серверу. Омогућите их у Поставке, Системске поставке.</string>
+    <string name="calendars_subscribe_google_connect">Нисте повезали Google налог. Повежите га у веб апликацији.</string>
 </resources>

@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">Тема</string>
     <string name="accounts_field_secret">Тайна за подписване</string>
     <string name="account_totp_open">Отваряне в приложението за удостоверяване</string>
+    <string name="accounts_revoke">Отмяна на достъпа</string>
+    <string name="accounts_capability_calendar">Календар</string>
+    <string name="accounts_capability_notify">Известия</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Вход</string>
+    <string name="accounts_provider_caldav">Сървър за календари</string>
+    <string name="accounts_revoke_confirm">Това ще отнеме достъпа до календара на %1$s. Влизането с %2$s остава, докато не го прекратите от страницата за вход.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

@@ -386,4 +386,12 @@
     <string name="accounts_field_topic">主题</string>
     <string name="accounts_field_secret">签名密钥</string>
     <string name="account_totp_open">在身份验证器应用中打开</string>
+    <string name="accounts_revoke">撤销访问权限</string>
+    <string name="accounts_capability_calendar">日历</string>
+    <string name="accounts_capability_notify">通知</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">登录</string>
+    <string name="accounts_provider_caldav">日历服务器</string>
+    <string name="accounts_revoke_confirm">此操作将撤销 %1$s 的日历访问权限。使用 %2$s 登录会保留，直到你在登录页面解除关联。</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

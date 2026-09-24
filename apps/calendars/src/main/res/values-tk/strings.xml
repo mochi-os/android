@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">Şu çäräni nusgala</string>
     <string name="calendars_editor_copy_title">Çäräni nusgala</string>
     <string name="calendars_title_required">At gerekli</string>
+    <string name="calendars_link_submit">Baglanyşdyr</string>
+    <string name="calendars_link_sync">Indi sinhronlaşdyr</string>
+    <string name="calendars_link_grant">Web programmasynda kalendara girmäge rugsat ber</string>
+    <string name="calendars_link_linked">Baglanyşdyryldy</string>
+    <string name="calendars_link_marker">Baglanyşdyrylan kalendar</string>
+    <string name="calendars_link_remote_empty">Kalendarlar ýok</string>
+    <string name="calendars_poll_conflict">Waka iki tarapda-da üýtgedi</string>
+    <string name="calendars_poll_missing">Kalendar öz serwerinde ýok</string>
+    <string name="calendars_poll_unauthorised">Kalendaryň serweri hasabyň giriş maglumatlaryny ret etdi</string>
+    <string name="calendars_subscribe_username">Ulanyjy ady</string>
+    <string name="calendars_subscribe_password">Parol</string>
+    <string name="calendars_subscribe_connect">Birik</string>
+    <string name="calendars_subscribe_server">Başga Mochi ýa-da CalDAV serweri</string>
+    <string name="calendars_subscribe_address">Çap edilen kalendaryň salgysy (diňe okamak üçin)</string>
+    <string name="calendars_subscribe_password_apple">Programma üçin ýörite parol</string>
+    <string name="calendars_subscribe_server_url">Serweriň salgysy</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Google hasaplary bu serwerde işjeňleşdirilmedi. Olary Sazlamalar, Ulgam sazlamalary bölüminde işjeňleşdiriň.</string>
+    <string name="calendars_subscribe_google_connect">Google hasaby baglanyşdyrmadyňyz. Ony web programmasynda baglaň.</string>
 </resources>

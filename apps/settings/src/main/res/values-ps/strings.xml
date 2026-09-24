@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">موضوع</string>
     <string name="accounts_field_secret">د لاسلیک راز</string>
     <string name="account_totp_open">په تصدیق کوونکي اپ کې خلاص کړئ</string>
+    <string name="accounts_revoke">لاسرسی لغوه کړئ</string>
+    <string name="accounts_capability_calendar">کالنډر</string>
+    <string name="accounts_capability_notify">خبرتیاوې</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">ننوتل</string>
+    <string name="accounts_provider_caldav">د کالنډر سرور</string>
+    <string name="accounts_revoke_confirm">دا به د %1$s کالنډر لاسرسی لغوه کړي. د %2$s سره ننوتل به تر هغه پاتې وي چې تاسو یې د ننوتلو پاڼه کې جلا نه کړئ.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

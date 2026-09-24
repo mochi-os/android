@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">کۆپیکردنی ئەم ڕووداوە</string>
     <string name="calendars_editor_copy_title">کۆپیکردنی ڕووداو</string>
     <string name="calendars_title_required">ناونیشان داواکراوە</string>
+    <string name="calendars_link_submit">بەستنەوە</string>
+    <string name="calendars_link_sync">ئێستا هاوکاتبکە</string>
+    <string name="calendars_link_grant">ڕێگە بە دەستڕاگەیشتنی ڕۆژژمێر بدە لە ئەپی وێب</string>
+    <string name="calendars_link_linked">بەستراوە</string>
+    <string name="calendars_link_marker">ڕۆژژمێری بەستراو</string>
+    <string name="calendars_link_remote_empty">هیچ ڕۆژژمێرێک نییە</string>
+    <string name="calendars_poll_conflict">ڕووداوێک لە هەردوو لا گۆڕدراوە</string>
+    <string name="calendars_poll_missing">ڕۆژژمێرەکە لەسەر ڕاژەکەی نەماوە</string>
+    <string name="calendars_poll_unauthorised">ڕاژەی ڕۆژژمێر بڕوانامەکانی هەژمارەکەی ڕەتکردەوە</string>
+    <string name="calendars_subscribe_username">ناوی بەکارهێنەر</string>
+    <string name="calendars_subscribe_password">وشەی نهێنی</string>
+    <string name="calendars_subscribe_connect">پەیوەندی بکە</string>
+    <string name="calendars_subscribe_server">سێرڤەرێکی تری Mochi یان CalDAV</string>
+    <string name="calendars_subscribe_address">ناونیشانی ڕۆژژمێری بڵاوکراوە (تەنیا خوێندنەوە)</string>
+    <string name="calendars_subscribe_password_apple">وشەی نهێنی تایبەت بە ئەپ</string>
+    <string name="calendars_subscribe_server_url">ناونیشانی سێرڤەر</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">هەژمارەکانی Google لەم ڕاژەکارەدا چالاک نەکراون. لە ڕێکخستنەکان، ڕێکخستنەکانی سیستەم چالاکیان بکە.</string>
+    <string name="calendars_subscribe_google_connect">تۆ هیچ هەژمارێکی Google پەیوەست نەکردووە. لە ئەپی وێب پەیوەستی بکە.</string>
 </resources>

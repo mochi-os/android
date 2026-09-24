@@ -25,12 +25,15 @@ import org.mochios.calendars.api.EventUpdateRequest
 import org.mochios.calendars.api.EventsBatchRequest
 import org.mochios.calendars.api.MenuApi
 import org.mochios.calendars.api.PreferencesRequest
+import org.mochios.calendars.model.AccountsResponse
 import org.mochios.calendars.model.Calendar
+import org.mochios.calendars.model.CalendarAccount
 import org.mochios.calendars.model.DeviceToken
 import org.mochios.calendars.model.Event
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.LinkResponse
 import org.mochios.calendars.model.Preferences
+import org.mochios.calendars.model.RemoteCalendar
 import org.mochios.calendars.ui.calendar.Bounds
 import org.mochios.calendars.ui.editor.excluded
 import org.mochios.calendars.ui.editor.truncated
@@ -144,7 +147,55 @@ class CalendarsRepository @Inject constructor(
         throw error?.let { ApiException(response.code(), it).toMochiError() } ?: MochiError.NetworkError()
     }
 
-    /** Fetches a subscription now, answering how many events moved. */
+    /**
+     * The connected accounts a calendar can be linked through, with the
+     * capabilities each holds now, and the providers the server can grant a
+     * new account from.
+     */
+    suspend fun listAccounts(): AccountsResponse = call {
+        api.listAccounts().unwrap()
+    }
+
+    /**
+     * Connects an account a calendar can be linked through: an Apple ID with
+     * an app-specific password, or a CalDAV server with a login. [url] is the
+     * server's address, empty for Apple, and [label] what the account is
+     * called here, empty for none. The server tries the account against its
+     * own server before keeping it, so a wrong password is refused here.
+     */
+    suspend fun addAccount(
+        type: String,
+        url: String,
+        username: String,
+        password: String,
+        label: String,
+    ): CalendarAccount = call {
+        api.addAccount(type, url, username, password, label).unwrap().account
+    }
+
+    /** The calendars an account's server offers, to link one of. */
+    suspend fun remoteCalendars(account: String): List<RemoteCalendar> = call {
+        api.remoteCalendars(account).unwrap().calendars
+    }
+
+    /**
+     * Links a collection on the account's server as a calendar here. The
+     * server pulls its events before answering, so the calendar arrives
+     * whole.
+     */
+    suspend fun linkCalendar(
+        account: String,
+        collection: String,
+        name: String,
+        colour: String,
+    ): Calendar = call {
+        api.linkCalendar(account, collection, name, colour).unwrap().calendar
+    }.also { announce() }
+
+    /**
+     * Fetches a subscription or syncs a linked calendar now, answering how
+     * many events moved.
+     */
     suspend fun pollCalendar(calendar: String): Int = call {
         api.pollCalendar(calendar).unwrap().changed
     }.also { announce() }

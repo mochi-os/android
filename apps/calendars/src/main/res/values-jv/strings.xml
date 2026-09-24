@@ -148,4 +148,26 @@
     <string name="calendars_scope_copy">Salin acara iki</string>
     <string name="calendars_editor_copy_title">Salin acara</string>
     <string name="calendars_title_required">Judul kudu diisi</string>
+    <string name="calendars_link_submit">Tautaké</string>
+    <string name="calendars_link_sync">Sinkronisasi saiki</string>
+    <string name="calendars_link_grant">Idini akses kalender ing aplikasi web</string>
+    <string name="calendars_link_linked">Kasambung</string>
+    <string name="calendars_link_marker">Kalender kasambung</string>
+    <string name="calendars_link_remote_empty">Ora ana kalender</string>
+    <string name="calendars_poll_conflict">Acara owah ing loro sisih</string>
+    <string name="calendars_poll_missing">Kalender wis ora ana ing servere</string>
+    <string name="calendars_poll_unauthorised">Server kalender nolak kredensial akun</string>
+    <string name="calendars_subscribe_username">Jeneng panganggo</string>
+    <string name="calendars_subscribe_password">Tembung sandhi</string>
+    <string name="calendars_subscribe_connect">Sambungake</string>
+    <string name="calendars_subscribe_server">Server Mochi utawa CalDAV liyane</string>
+    <string name="calendars_subscribe_address">Alamat kalender sing diterbitake (mung waca)</string>
+    <string name="calendars_subscribe_password_apple">Tembung sandhi khusus aplikasi</string>
+    <string name="calendars_subscribe_server_url">Alamat server</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Akun Google durung diaktifaké ing server iki. Aktifaké ing Setelan, Setelan sistem.</string>
+    <string name="calendars_subscribe_google_connect">Sampeyan durung nyambungaké akun Google. Sambungaké ing aplikasi web.</string>
 </resources>

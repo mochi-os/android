@@ -157,4 +157,26 @@
     <string name="calendars_scope_copy">Dèan lethbhreac dhen tachartas seo</string>
     <string name="calendars_editor_copy_title">Dèan lethbhreac dhen tachartas</string>
     <string name="calendars_title_required">Tha tiotal a dhìth</string>
+    <string name="calendars_link_submit">Ceangail</string>
+    <string name="calendars_link_sync">Sioncronaich a-nis</string>
+    <string name="calendars_link_grant">Ceadaich inntrigeadh a\' mhìosachain san aplacaid-lìn</string>
+    <string name="calendars_link_linked">Ceangailte</string>
+    <string name="calendars_link_marker">Mìosachan ceangailte</string>
+    <string name="calendars_link_remote_empty">Chan eil mìosachan ann</string>
+    <string name="calendars_poll_conflict">Dh\'atharraich tachartas air an dà thaobh</string>
+    <string name="calendars_poll_missing">Chan eil am mìosachan air an fhrithealaiche aige tuilleadh</string>
+    <string name="calendars_poll_unauthorised">Dhiùlt frithealaiche a\' mhìosachain teisteasan a\' chunntais</string>
+    <string name="calendars_subscribe_username">Ainm-cleachdaiche</string>
+    <string name="calendars_subscribe_password">Facal-faire</string>
+    <string name="calendars_subscribe_connect">Ceangail</string>
+    <string name="calendars_subscribe_server">Frithealaiche Mochi no CalDAV eile</string>
+    <string name="calendars_subscribe_address">Seòladh mìosachain fhoillsichte (leughadh a-mhàin)</string>
+    <string name="calendars_subscribe_password_apple">Facal-faire sònraichte don aplacaid</string>
+    <string name="calendars_subscribe_server_url">Seòladh an fhrithealaiche</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Chan eil cunntasan Google air an cur an comas air an fhrithealaiche seo. Cuir an comas iad fo Roghainnean, Roghainnean an t-siostaim.</string>
+    <string name="calendars_subscribe_google_connect">Cha do cheangail thu cunntas Google. Ceangail e san aplacaid-lìn.</string>
 </resources>

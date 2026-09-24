@@ -23,6 +23,9 @@
     <string name="calendars_poll_invalid">The address did not return a calendar</string>
     <string name="calendars_poll_unreachable">The address could not be reached</string>
     <string name="calendars_poll_status">The address answered %1$d</string>
+    <string name="calendars_poll_unauthorised">The calendar\'s server refused the account\'s credentials</string>
+    <string name="calendars_poll_conflict">An event changed on both sides</string>
+    <string name="calendars_poll_missing">The calendar is gone from its server</string>
     <string name="calendars_delete_title">Delete %1$s?</string>
     <string name="calendars_delete_message">Its events are deleted with it.</string>
     <plurals name="calendars_polled">
@@ -133,6 +136,29 @@
     <string name="calendars_link_exists">A link already exists for this calendar.</string>
     <string name="calendars_link_replace">Replace</string>
     <string name="calendars_link_revoke">Revoke</string>
+
+    <!-- Subscribe wizard -->
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_server">Another Mochi or CalDAV server</string>
+    <string name="calendars_subscribe_address">Published calendar address (read-only)</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_password_apple">App-specific password</string>
+    <string name="calendars_subscribe_server_url">Server address</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_username">Username</string>
+    <string name="calendars_subscribe_password">Password</string>
+    <string name="calendars_subscribe_connect">Connect</string>
+    <string name="calendars_subscribe_google_enable">Google accounts have not been enabled on this server. Enable them under Settings, System settings.</string>
+    <string name="calendars_subscribe_google_connect">You haven\'t connected a Google account. Connect it in the web app.</string>
+
+    <!-- Linked calendars -->
+    <string name="calendars_link_submit">Link</string>
+    <string name="calendars_link_sync">Sync now</string>
+    <string name="calendars_link_marker">Linked calendar</string>
+    <string name="calendars_link_linked">Linked</string>
+    <string name="calendars_link_remote_empty">No calendars</string>
+    <string name="calendars_link_grant">Allow calendar access in the web app</string>
 
     <!-- Subscribe permission -->
     <string name="calendars_permission_title">Allow access?</string>

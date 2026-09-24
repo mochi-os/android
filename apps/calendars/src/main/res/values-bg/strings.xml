@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">Копирай това събитие</string>
     <string name="calendars_editor_copy_title">Копиране на събитие</string>
     <string name="calendars_title_required">Заглавието е задължително</string>
+    <string name="calendars_link_submit">Свържи</string>
+    <string name="calendars_link_sync">Синхронизирай сега</string>
+    <string name="calendars_link_grant">Разрешете достъп до календара в уеб приложението</string>
+    <string name="calendars_link_linked">Свързан</string>
+    <string name="calendars_link_marker">Свързан календар</string>
+    <string name="calendars_link_remote_empty">Няма календари</string>
+    <string name="calendars_poll_conflict">Събитие е променено и от двете страни</string>
+    <string name="calendars_poll_missing">Календарът вече го няма на сървъра си</string>
+    <string name="calendars_poll_unauthorised">Сървърът на календара отхвърли данните за вход на акаунта</string>
+    <string name="calendars_subscribe_username">Потребителско име</string>
+    <string name="calendars_subscribe_password">Парола</string>
+    <string name="calendars_subscribe_connect">Свързване</string>
+    <string name="calendars_subscribe_server">Друг сървър Mochi или CalDAV</string>
+    <string name="calendars_subscribe_address">Публикуван адрес на календар (само за четене)</string>
+    <string name="calendars_subscribe_password_apple">Парола за приложението</string>
+    <string name="calendars_subscribe_server_url">Адрес на сървъра</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Акаунтите в Google не са активирани на този сървър. Активирайте ги от Настройки, Системни настройки.</string>
+    <string name="calendars_subscribe_google_connect">Не сте свързали акаунт в Google. Свържете го в уеб приложението.</string>
 </resources>

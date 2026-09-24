@@ -32,6 +32,7 @@ import androidx.compose.material.icons.outlined.Refresh
 import androidx.compose.material.icons.outlined.RssFeed
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.Smartphone
+import androidx.compose.material.icons.outlined.Sync
 import androidx.compose.material.icons.outlined.Visibility
 import androidx.compose.material3.DrawerState
 import androidx.compose.material3.HorizontalDivider
@@ -79,8 +80,8 @@ enum class CalendarAction {
  * The calendars app's drawer. There is no "All calendars" row: the view is
  * always the overlay of the checked calendars, so each row is a checkbox in
  * the calendar's own colour rather than a link. Each row carries an overflow
- * menu; beneath them sit Create, Subscribe, Preferences, Connect a device and
- * the phone-sync switch.
+ * menu; beneath them sit Create, Subscribe, Preferences, Connect a device
+ * and the phone-sync switch.
  */
 @Composable
 fun CalendarDrawer(
@@ -156,9 +157,10 @@ fun CalendarDrawer(
 }
 
 /**
- * One calendar: a checkbox in its own colour, its name, a subscription or
- * birthday marker, and its overflow menu. The row itself is the checkbox, so
- * a tap anywhere on it shows or hides the calendar.
+ * One calendar: a checkbox in its own colour, its name, the linked marker
+ * where the calendar mirrors one on another server, and its overflow menu.
+ * The row itself is the checkbox, so a tap anywhere on it shows or hides the
+ * calendar.
  */
 @Composable
 private fun CalendarRow(
@@ -178,14 +180,28 @@ private fun CalendarRow(
         ColourCheckbox(calendar.colour, shown)
         Spacer(Modifier.size(12.dp))
         Column(modifier = Modifier.weight(1f)) {
-            Text(
-                text = calendar.name,
-                style = MaterialTheme.typography.bodyLarge,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-            // Why a subscription has stopped updating, under its name. The
-            // row's own menu carries "Poll now", which is the way out of it.
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    text = calendar.name,
+                    style = MaterialTheme.typography.bodyLarge,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f, fill = false),
+                )
+                // A linked calendar is the user's to write in, so the only
+                // thing to say about it is where its events also live.
+                if (calendar.linked) {
+                    Spacer(Modifier.size(6.dp))
+                    Icon(
+                        Icons.Outlined.Sync,
+                        contentDescription = stringResource(R.string.calendars_link_marker),
+                        modifier = Modifier.size(14.dp),
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+            }
+            // Why a calendar has stopped updating, under its name. The row's
+            // own menu carries the fetch that is the way out of it.
             val failure = pollFailure(calendar.failure)
             if (failure != null) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
@@ -248,10 +264,25 @@ private fun CalendarRow(
                         onAction(CalendarAction.LINK)
                     },
                 )
-                if (calendar.subscription) {
+                if (calendar.subscription || calendar.linked) {
                     MochiDropdownMenuItem(
-                        text = { Text(stringResource(R.string.calendars_poll)) },
-                        leadingIcon = { Icon(Icons.Outlined.Refresh, contentDescription = null) },
+                        text = {
+                            Text(
+                                stringResource(
+                                    if (calendar.linked) {
+                                        R.string.calendars_link_sync
+                                    } else {
+                                        R.string.calendars_poll
+                                    },
+                                ),
+                            )
+                        },
+                        leadingIcon = {
+                            Icon(
+                                if (calendar.linked) Icons.Outlined.Sync else Icons.Outlined.Refresh,
+                                contentDescription = null,
+                            )
+                        },
                         onClick = {
                             expanded = false
                             onAction(CalendarAction.POLL)
@@ -274,13 +305,19 @@ private fun CalendarRow(
     }
 }
 
-/** Why a subscription's last fetch failed, in words, or null when it did not. */
+/**
+ * Why a calendar's last fetch or sync failed, in words, or null when it did
+ * not.
+ */
 @Composable
 private fun pollFailure(failure: String): String? = when (val reason = pollReason(failure)) {
     null -> null
     PollReason.Large -> stringResource(R.string.calendars_poll_large)
     PollReason.Invalid -> stringResource(R.string.calendars_poll_invalid)
     PollReason.Unreachable -> stringResource(R.string.calendars_poll_unreachable)
+    PollReason.Unauthorised -> stringResource(R.string.calendars_poll_unauthorised)
+    PollReason.Conflict -> stringResource(R.string.calendars_poll_conflict)
+    PollReason.Missing -> stringResource(R.string.calendars_poll_missing)
     is PollReason.Status -> stringResource(R.string.calendars_poll_status, reason.code)
     is PollReason.Other -> reason.token
 }

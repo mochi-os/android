@@ -386,4 +386,12 @@
     <string name="accounts_field_topic">Topik</string>
     <string name="accounts_field_secret">Rahsia tandatangan</string>
     <string name="account_totp_open">Buka dalam apl pengesah</string>
+    <string name="accounts_revoke">Batalkan akses</string>
+    <string name="accounts_capability_calendar">Kalendar</string>
+    <string name="accounts_capability_notify">Pemberitahuan</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Log masuk</string>
+    <string name="accounts_provider_caldav">Pelayan kalendar</string>
+    <string name="accounts_revoke_confirm">Ini akan membatalkan akses kalendar %1$s. Log masuk dengan %2$s kekal sehingga anda menyahpaut di halaman Log masuk.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">Kopye evènman sa a</string>
     <string name="calendars_editor_copy_title">Kopye evènman</string>
     <string name="calendars_title_required">Tit obligatwa</string>
+    <string name="calendars_link_submit">Konekte</string>
+    <string name="calendars_link_sync">Sinkronize kounye a</string>
+    <string name="calendars_link_grant">Pèmèt aksè kalandriye nan aplikasyon entènèt la</string>
+    <string name="calendars_link_linked">Konekte</string>
+    <string name="calendars_link_marker">Kalandriye konekte</string>
+    <string name="calendars_link_remote_empty">Pa gen kalandriye</string>
+    <string name="calendars_poll_conflict">Yon evènman chanje toude bò yo</string>
+    <string name="calendars_poll_missing">Kalandriye a pa sou sèvè li ankò</string>
+    <string name="calendars_poll_unauthorised">Sèvè kalandriye a refize enfòmasyon koneksyon kont lan</string>
+    <string name="calendars_subscribe_username">Non itilizatè</string>
+    <string name="calendars_subscribe_password">Modpas</string>
+    <string name="calendars_subscribe_connect">Konekte</string>
+    <string name="calendars_subscribe_server">Yon lòt sèvè Mochi oswa CalDAV</string>
+    <string name="calendars_subscribe_address">Adrès kalandriye pibliye (lekti sèlman)</string>
+    <string name="calendars_subscribe_password_apple">Modpas espesyal pou aplikasyon an</string>
+    <string name="calendars_subscribe_server_url">Adrès sèvè a</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Kont Google yo pa aktive sou sèvè sa a. Aktive yo anba Paramèt, Paramèt sistèm.</string>
+    <string name="calendars_subscribe_google_connect">Ou pa konekte okenn kont Google. Konekte l nan aplikasyon entènèt la.</string>
 </resources>

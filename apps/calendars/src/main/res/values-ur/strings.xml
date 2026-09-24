@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">یہ ایونٹ کاپی کریں</string>
     <string name="calendars_editor_copy_title">ایونٹ کاپی کریں</string>
     <string name="calendars_title_required">عنوان درکار ہے</string>
+    <string name="calendars_link_submit">لنک کریں</string>
+    <string name="calendars_link_sync">ابھی سنک کریں</string>
+    <string name="calendars_link_grant">ویب ایپ میں کیلنڈر تک رسائی کی اجازت دیں</string>
+    <string name="calendars_link_linked">لنک شدہ</string>
+    <string name="calendars_link_marker">لنک شدہ کیلنڈر</string>
+    <string name="calendars_link_remote_empty">کوئی کیلنڈر نہیں</string>
+    <string name="calendars_poll_conflict">ایک ایونٹ دونوں طرف تبدیل ہوا</string>
+    <string name="calendars_poll_missing">کیلنڈر اپنے سرور سے ہٹ چکا ہے</string>
+    <string name="calendars_poll_unauthorised">کیلنڈر کے سرور نے اکاؤنٹ کی اسناد مسترد کر دیں</string>
+    <string name="calendars_subscribe_username">صارف نام</string>
+    <string name="calendars_subscribe_password">پاس ورڈ</string>
+    <string name="calendars_subscribe_connect">منسلک کریں</string>
+    <string name="calendars_subscribe_server">کوئی اور Mochi یا CalDAV سرور</string>
+    <string name="calendars_subscribe_address">شائع شدہ کیلنڈر کا پتہ (صرف پڑھنے کے لیے)</string>
+    <string name="calendars_subscribe_password_apple">ایپ کے لیے مخصوص پاس ورڈ</string>
+    <string name="calendars_subscribe_server_url">سرور کا پتہ</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">اس سرور پر Google اکاؤنٹس فعال نہیں کیے گئے۔ انہیں سیٹنگز، سسٹم سیٹنگز میں فعال کریں۔</string>
+    <string name="calendars_subscribe_google_connect">آپ نے کوئی Google اکاؤنٹ کنیکٹ نہیں کیا۔ اسے ویب ایپ میں کنیکٹ کریں۔</string>
 </resources>

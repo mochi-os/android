@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">ይህን ክስተት ቅዳ</string>
     <string name="calendars_editor_copy_title">ክስተት ቅዳ</string>
     <string name="calendars_title_required">ርዕስ ያስፈልጋል</string>
+    <string name="calendars_link_submit">ያገናኙ</string>
+    <string name="calendars_link_sync">አሁን ያመሳስሉ</string>
+    <string name="calendars_link_grant">በድር መተግበሪያው ውስጥ የቀን መቁጠሪያ መዳረሻን ይፍቀዱ</string>
+    <string name="calendars_link_linked">ተገናኝቷል</string>
+    <string name="calendars_link_marker">የተገናኘ የቀን መቁጠሪያ</string>
+    <string name="calendars_link_remote_empty">ምንም የቀን መቁጠሪያዎች የሉም</string>
+    <string name="calendars_poll_conflict">አንድ ክስተት በሁለቱም በኩል ተቀይሯል</string>
+    <string name="calendars_poll_missing">የቀን መቁጠሪያው ከአገልጋዩ ላይ የለም</string>
+    <string name="calendars_poll_unauthorised">የቀን መቁጠሪያው አገልጋይ የመለያውን መረጃዎች ውድቅ አደረገ</string>
+    <string name="calendars_subscribe_username">የተጠቃሚ ስም</string>
+    <string name="calendars_subscribe_password">የይለፍ ቃል</string>
+    <string name="calendars_subscribe_connect">ይገናኙ</string>
+    <string name="calendars_subscribe_server">ሌላ Mochi ወይም CalDAV አገልጋይ</string>
+    <string name="calendars_subscribe_address">የታተመ የቀን መቁጠሪያ አድራሻ (ለንባብ ብቻ)</string>
+    <string name="calendars_subscribe_password_apple">ለመተግበሪያ የተወሰነ የይለፍ ቃል</string>
+    <string name="calendars_subscribe_server_url">የአገልጋይ አድራሻ</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">የGoogle መለያዎች በዚህ ሰርቨር ላይ አልተነቁም። በቅንብሮች፣ የስርዓት ቅንብሮች ውስጥ ያንቁዋቸው።</string>
+    <string name="calendars_subscribe_google_connect">የGoogle መለያ አላገናኙም። በድር መተግበሪያው ውስጥ ያገናኙት።</string>
 </resources>

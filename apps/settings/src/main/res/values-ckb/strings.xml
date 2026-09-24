@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">بابەت</string>
     <string name="accounts_field_secret">نهێنی واژۆ</string>
     <string name="account_totp_open">لە ئەپی ڕەسەنێتی بکەرەوە</string>
+    <string name="accounts_revoke">ڕەتکردنەوەی دەستپێگەیشتن</string>
+    <string name="accounts_capability_calendar">ڕۆژژمێر</string>
+    <string name="accounts_capability_notify">ئاگادارکردنەوەکان</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">چوونەژوورەوە</string>
+    <string name="accounts_provider_caldav">ڕاژەی ڕۆژژمێر</string>
+    <string name="accounts_revoke_confirm">ئەمە دەستڕاگەیشتنی ڕۆژژمێری %1$s هەڵدەوەشێنێتەوە. چوونەژوورەوە بە %2$s دەمێنێتەوە تا لە پەڕەی چوونەژوورەوە لێی جیا دەکەیتەوە.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">विषय</string>
     <string name="accounts_field_secret">स्वाक्षरी गुप्त की</string>
     <string name="account_totp_open">ऑथेंटिकेटर ॲपमध्ये उघडा</string>
+    <string name="accounts_revoke">प्रवेश रद्द करा</string>
+    <string name="accounts_capability_calendar">कॅलेंडर</string>
+    <string name="accounts_capability_notify">नोटिफिकेशन्स</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">साइन-इन</string>
+    <string name="accounts_provider_caldav">कॅलेंडर सर्व्हर</string>
+    <string name="accounts_revoke_confirm">यामुळे %1$s चा कॅलेंडर प्रवेश रद्द होईल. लॉगिन पृष्ठावर अनलिंक करेपर्यंत %2$s सह साइन-इन राहील.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

@@ -386,4 +386,12 @@
     <string name="accounts_field_topic">Àkòrí</string>
     <string name="accounts_field_secret">Àṣírí ìfọwọ́sí</string>
     <string name="account_totp_open">Ṣí nínú ohun èlò ìjẹ́rìísí</string>
+    <string name="accounts_revoke">Fagilé ìwọlé</string>
+    <string name="accounts_capability_calendar">Kàlẹ́ńdà</string>
+    <string name="accounts_capability_notify">Àwọn ìfìtọ́nisí</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Ìwọlé</string>
+    <string name="accounts_provider_caldav">Sáfà kàlẹ́ńdà</string>
+    <string name="accounts_revoke_confirm">Èyí yóò fagilé ìwọlé kàlẹ́ńdà ti %1$s. Ìwọlé pẹ̀lú %2$s yóò dúró títí tí ìwọ yóò fi tú u sílẹ̀ ní ojú-ìwé Ìwọlé.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

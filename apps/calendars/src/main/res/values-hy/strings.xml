@@ -151,4 +151,26 @@
     <string name="calendars_scope_copy">Պատճենել այս միջոցառումը</string>
     <string name="calendars_editor_copy_title">Պատճենել միջոցառումը</string>
     <string name="calendars_title_required">Վերնագիրը պարտադիր է</string>
+    <string name="calendars_link_submit">Կապել</string>
+    <string name="calendars_link_sync">Համաժամանակեցնել հիմա</string>
+    <string name="calendars_link_grant">Թույլատրեք օրացույցի հասանելիությունը վեբ հավելվածում</string>
+    <string name="calendars_link_linked">Կապված</string>
+    <string name="calendars_link_marker">Կապված օրացույց</string>
+    <string name="calendars_link_remote_empty">Օրացույցներ չկան</string>
+    <string name="calendars_poll_conflict">Իրադարձությունը փոխվել է երկու կողմից</string>
+    <string name="calendars_poll_missing">Օրացույցն այլևս չկա իր սերվերում</string>
+    <string name="calendars_poll_unauthorised">Օրացույցի սերվերը մերժեց հաշվի մուտքի տվյալները</string>
+    <string name="calendars_subscribe_username">Օգտանուն</string>
+    <string name="calendars_subscribe_password">Գաղտնաբառ</string>
+    <string name="calendars_subscribe_connect">Միանալ</string>
+    <string name="calendars_subscribe_server">Այլ Mochi կամ CalDAV սերվեր</string>
+    <string name="calendars_subscribe_address">Հրապարակված օրացույցի հասցե (միայն կարդալու)</string>
+    <string name="calendars_subscribe_password_apple">Հավելվածի հատուկ գաղտնաբառ</string>
+    <string name="calendars_subscribe_server_url">Սերվերի հասցե</string>
+    <string name="calendars_subscribe_apple">Apple iCloud</string>
+    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
+    <string name="calendars_subscribe_google_enable">Google հաշիվներն այս սերվերում միացված չեն։ Միացրեք դրանք Կարգավորումներ, Համակարգի կարգավորումներ բաժնում։</string>
+    <string name="calendars_subscribe_google_connect">Դուք Google հաշիվ չեք միացրել։ Միացրեք այն վեբ հավելվածում։</string>
 </resources>
