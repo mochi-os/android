@@ -133,13 +133,13 @@ class PreferencesManager @Inject internal constructor(
         rawPrefs = raw
         _preferences.value = resolveAuto(raw)
 
-        // Mirror the server's language onto the boot-time store and apply it to
-        // the running app. On Android 13+ this re-applies the per-app locale
-        // (no-op when unchanged; an actual change triggers an Activity
-        // recreate); older versions pick it up next launch via LanguageStore.
-        val languageTag = raw["language"]
-        LanguageStore.set(context, languageTag)
-        LocaleHelper.apply(context, languageTag)
+        // Mirror the server's language onto the boot-time store and, when it
+        // changed, apply it to the running app. On Android 13+ that sets the
+        // per-app locale (an actual change triggers an Activity recreate);
+        // older versions pick it up next launch via LanguageStore.
+        val update = languageUpdate(LanguageStore.get(context), raw["language"])
+        LanguageStore.set(context, update.tag)
+        if (update.apply) LocaleHelper.apply(context, update.tag)
     }
 
     private fun resolveAuto(raw: Map<String, String>): UserPreferences {

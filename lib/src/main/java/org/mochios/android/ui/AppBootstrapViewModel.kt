@@ -25,7 +25,6 @@ import org.mochios.android.api.ApiException
 import org.mochios.android.auth.AuthRepository
 import org.mochios.android.auth.Identity
 import org.mochios.android.auth.SessionManager
-import org.mochios.android.i18n.LanguageRepository
 import org.mochios.android.i18n.LanguageStore
 import org.mochios.android.i18n.LocaleHelper
 import org.mochios.android.i18n.PreferencesManager
@@ -77,7 +76,6 @@ class AppBootstrapViewModel @Inject constructor(
     private val sessionManager: SessionManager,
     private val authRepository: AuthRepository,
     private val themeRepository: ThemeRepository,
-    private val languageRepository: LanguageRepository,
     private val preferencesManager: PreferencesManager,
     private val webSocket: MochiWebSocket,
     private val unreadStore: NotificationsUnreadStore,

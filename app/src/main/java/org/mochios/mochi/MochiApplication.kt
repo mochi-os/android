@@ -76,7 +76,6 @@ class MochiApplication : Application(), SingletonImageLoader.Factory {
     override fun onCreate() {
         super.onCreate()
         AppContext.set(this)
-        LocaleHelper.apply(this, LanguageStore.get(this))
         setupFeedsNotificationChannel(this)
         setupChatNotificationChannel(this)
         setupForumsNotificationChannel(this)
