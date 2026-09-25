@@ -13,21 +13,18 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.material3.ExposedDropdownMenuAnchorType
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
-import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -42,6 +39,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.FilterChipRow
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenuItem
@@ -54,7 +52,7 @@ import org.mochios.market.model.Currency
  * Filters apply live as the user toggles them; Apply only dismisses, Clear
  * resets every axis.
  */
-@OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FilterSheet(
     state: HomeUiState,
@@ -83,31 +81,30 @@ fun FilterSheet(
             CategoryDropdown(state = state, onUpdate = onUpdate)
 
             SectionLabel(stringResource(R.string.market_filter_type))
-            ChipRow(
-                value = state.filters[Filter.TYPE],
+            FilterChipRow(
                 options = listOf(
                     null to stringResource(R.string.market_filter_all),
                     "physical" to stringResource(R.string.market_filter_type_physical),
                     "digital" to stringResource(R.string.market_filter_type_digital),
                 ),
+                isSelected = { option -> option == state.filters[Filter.TYPE] },
                 onSelect = { onUpdate(Filter.TYPE, it) },
             )
 
             SectionLabel(stringResource(R.string.market_filter_condition))
-            ChipRow(
-                value = state.filters[Filter.CONDITION],
+            FilterChipRow(
                 options = listOf(
                     null to stringResource(R.string.market_filter_all),
                     "new" to stringResource(R.string.market_filter_condition_new),
                     "used" to stringResource(R.string.market_filter_condition_used),
                     "refurbished" to stringResource(R.string.market_filter_condition_refurbished),
                 ),
+                isSelected = { option -> option == state.filters[Filter.CONDITION] },
                 onSelect = { onUpdate(Filter.CONDITION, it) },
             )
 
             SectionLabel(stringResource(R.string.market_filter_pricing))
-            ChipRow(
-                value = state.filters[Filter.PRICING],
+            FilterChipRow(
                 options = listOf(
                     null to stringResource(R.string.market_filter_all),
                     "fixed" to stringResource(R.string.market_filter_pricing_fixed),
@@ -115,25 +112,26 @@ fun FilterSheet(
                     "subscription" to stringResource(R.string.market_filter_pricing_subscription),
                     "auction" to stringResource(R.string.market_filter_pricing_auction),
                 ),
+                isSelected = { option -> option == state.filters[Filter.PRICING] },
                 onSelect = { onUpdate(Filter.PRICING, it) },
             )
 
             SectionLabel(stringResource(R.string.market_filter_delivery))
-            ChipRow(
-                value = state.filters[Filter.DELIVERY],
+            FilterChipRow(
                 options = listOf(
                     null to stringResource(R.string.market_filter_all),
                     "shipping" to stringResource(R.string.market_filter_delivery_shipping),
                     "pickup" to stringResource(R.string.market_filter_delivery_pickup),
                     "download" to stringResource(R.string.market_filter_delivery_download),
                 ),
+                isSelected = { option -> option == state.filters[Filter.DELIVERY] },
                 onSelect = { onUpdate(Filter.DELIVERY, it) },
             )
 
             SectionLabel(stringResource(R.string.market_filter_price_range))
-            ChipRow(
-                value = state.filters[Filter.CURRENCY] ?: HomeViewModel.DEFAULT_CURRENCY,
+            FilterChipRow(
                 options = Currency.entries.map { it.name.lowercase() to it.name },
+                isSelected = { option -> option == state.filters[Filter.CURRENCY] ?: HomeViewModel.DEFAULT_CURRENCY },
                 onSelect = { onUpdate(Filter.CURRENCY, it) },
             )
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -192,27 +190,6 @@ private fun SectionLabel(text: String) {
         style = MaterialTheme.typography.titleSmall,
         fontWeight = FontWeight.Medium,
     )
-}
-
-@OptIn(ExperimentalLayoutApi::class)
-@Composable
-private fun ChipRow(
-    value: String?,
-    options: List<Pair<String?, String>>,
-    onSelect: (String?) -> Unit,
-) {
-    FlowRow(
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp),
-    ) {
-        for ((optionValue, label) in options) {
-            FilterChip(
-                selected = value == optionValue,
-                onClick = { onSelect(optionValue) },
-                label = { Text(label) },
-            )
-        }
-    }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)

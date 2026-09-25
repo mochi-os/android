@@ -5,16 +5,14 @@
 
 package org.mochios.staff.ui.components
 
-import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
-import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.FilterList
@@ -23,16 +21,15 @@ import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.FilterChipRow
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.staff.R
@@ -133,7 +130,6 @@ fun StaffFilterButton(activeCount: Int, onClick: () -> Unit) {
  * The choices of [filter] as chips, [StaffFilter.anyLabel] first: on one line
  * that scrolls sideways when [singleLine], wrapping onto more lines otherwise.
  */
-@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun ChoiceChips(
     filter: StaffFilter,
@@ -141,44 +137,26 @@ private fun ChoiceChips(
     singleLine: Boolean,
     modifier: Modifier = Modifier,
 ) {
-    val choices = listOf<Pair<String?, String>>(null to filter.anyLabel) + filter.options
-    val content: @Composable () -> Unit = {
-        if (labelled) {
-            Text(
-                text = filter.label,
-                style = MaterialTheme.typography.labelLarge,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-        }
-        choices.forEach { (value, label) ->
-            FilterChip(
-                selected = filter.current == value,
-                onClick = { filter.onSelect(value) },
-                label = { Text(label) },
-            )
-        }
-    }
-    if (singleLine) {
-        Row(
-            modifier = modifier
-                .fillMaxWidth()
-                .horizontalScroll(rememberScrollState())
-                .padding(horizontal = 16.dp),
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            content()
-        }
-    } else {
-        FlowRow(
-            modifier = modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-            verticalArrangement = Arrangement.spacedBy(4.dp),
-            itemVerticalAlignment = Alignment.CenterVertically,
-        ) {
-            content()
-        }
-    }
+    FilterChipRow(
+        options = listOf<Pair<String?, String>>(null to filter.anyLabel) + filter.options,
+        isSelected = { value -> filter.current == value },
+        onSelect = filter.onSelect,
+        modifier = modifier,
+        singleLine = singleLine,
+        contentPadding = if (singleLine) PaddingValues(horizontal = 16.dp) else PaddingValues(0.dp),
+        verticalSpacing = 4.dp,
+        leading = if (labelled) {
+            {
+                Text(
+                    text = filter.label,
+                    style = MaterialTheme.typography.labelLarge,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+        } else {
+            null
+        },
+    )
 }
 
 @OptIn(ExperimentalMaterial3Api::class)

@@ -7,8 +7,6 @@ package org.mochios.crm.ui.crm
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -34,6 +32,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.FilterChipRow
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.crm.R
@@ -44,7 +43,7 @@ import org.mochios.crm.model.FieldOption
  * Sort and filter sheet for the object list. Changes apply live, so there is no
  * Apply button. [activeSort] null means no chip reads as selected.
  */
-@OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SortFilterSheet(
     fieldSortOptions: List<Pair<String, String>>,
@@ -124,44 +123,40 @@ fun SortFilterSheet(
             // keys every CRM has — the split the old dropdown drew as a divider.
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 if (fieldSortOptions.isNotEmpty()) {
-                    FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        fieldSortOptions.forEach { (id, label) ->
-                            FilterChip(
-                                selected = id == activeSort,
-                                onClick = { onSortChange(id) },
-                                label = { Text(label) },
-                            )
-                        }
-                    }
+                    FilterChipRow(
+                        options = fieldSortOptions,
+                        isSelected = { id -> id == activeSort },
+                        onSelect = onSortChange,
+                        verticalSpacing = 0.dp,
+                    )
                 }
-                FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    builtInSortOptions.forEach { (id, label) ->
-                        FilterChip(
-                            selected = id == activeSort,
-                            onClick = { onSortChange(id) },
-                            label = { Text(label) },
-                        )
-                    }
-                }
+                FilterChipRow(
+                    options = builtInSortOptions,
+                    isSelected = { id -> id == activeSort },
+                    onSelect = onSortChange,
+                    verticalSpacing = 0.dp,
+                )
             }
 
             filterFields.forEach { (field, options) ->
                 val selected = activeFieldFilters[field.id].orEmpty()
                 SectionLabel(field.name)
-                FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    FilterChip(
-                        selected = selected.isEmpty(),
-                        onClick = { onClearFieldFilter(field.id) },
-                        label = { Text(stringResource(R.string.crm_filter_all)) },
-                    )
-                    options.forEach { option ->
-                        FilterChip(
-                            selected = option.id in selected,
-                            onClick = { onToggleFieldValue(field.id, option.id) },
-                            label = { Text(option.name) },
-                        )
-                    }
-                }
+                FilterChipRow(
+                    options = listOf<Pair<String?, String>>(
+                        null to stringResource(R.string.crm_filter_all),
+                    ) + options.map { option -> option.id to option.name },
+                    isSelected = { optionId ->
+                        if (optionId == null) selected.isEmpty() else optionId in selected
+                    },
+                    onSelect = { optionId ->
+                        if (optionId == null) {
+                            onClearFieldFilter(field.id)
+                        } else {
+                            onToggleFieldValue(field.id, optionId)
+                        }
+                    },
+                    verticalSpacing = 0.dp,
+                )
             }
 
             SectionLabel(stringResource(R.string.crm_filter_other))
