@@ -5,25 +5,17 @@
 
 package org.mochios.staff.navigation
 
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.PersonAdd
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.Text
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
-import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiFab
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.staff.R
 import org.mochios.staff.ui.accounts.AccountsScreen
@@ -110,22 +102,20 @@ fun NavGraphBuilder.staffNavGraph(
             ReviewsScreen(navController = navController)
         }
     }
-    // Categories needs a topbar "Add" action; mount the VM at the route so
-    // the screen body and the topbar share one instance.
+    // Categories needs an "Add" FAB; mount the VM at the route so the screen
+    // body and the FAB share one instance.
     composable(StaffApp.CATEGORIES) {
         val viewModel: CategoriesViewModel = hiltViewModel()
         StaffLayout(
             navController = navController,
             currentRoute = StaffApp.CATEGORIES,
             titleRes = R.string.staff_sidebar_categories,
-            topBarActions = {
-                MochiButton(
-                    onClick = { viewModel.openCreate() },
-                    modifier = Modifier.padding(end = 8.dp),
-                ) {
-                    Icon(Icons.Default.Add, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
-                    Spacer(Modifier.width(ButtonDefaults.IconSpacing))
-                    Text(stringResource(R.string.staff_categories_add))
+            floatingActionButton = {
+                MochiFab(onClick = { viewModel.openCreate() }) {
+                    Icon(
+                        Icons.Default.Add,
+                        contentDescription = stringResource(R.string.staff_categories_add),
+                    )
                 }
             },
         ) {
@@ -155,26 +145,21 @@ fun NavGraphBuilder.staffNavGraph(
             }
         }
     }
-    // Team needs an admin-only "Add member" topbar action, gated on
+    // Team needs an admin-only "Add member" FAB, gated on
     // LocalStaffMe.current.role.
     composable(StaffApp.TEAM) {
         StaffLayout(
             navController = navController,
             currentRoute = StaffApp.TEAM,
             titleRes = R.string.staff_sidebar_team,
-            topBarActions = {
+            floatingActionButton = {
                 val isAdmin = LocalStaffMe.current?.role == "admin"
                 if (isAdmin) {
-                    MochiButton(
-                        onClick = { navController.navigate(StaffApp.TEAM_ADD) },
-                        modifier = Modifier.padding(end = 8.dp),
-                    ) {
+                    MochiFab(onClick = { navController.navigate(StaffApp.TEAM_ADD) }) {
                         Icon(
                             Icons.Default.PersonAdd,
-                            contentDescription = null,
-                            modifier = Modifier.padding(end = 4.dp),
+                            contentDescription = stringResource(R.string.staff_team_add_member),
                         )
-                        Text(stringResource(R.string.staff_team_add_member))
                     }
                 }
             },

@@ -140,7 +140,7 @@ private fun TeamBody(
             else -> {
                 LazyColumn(
                     modifier = Modifier.fillMaxSize(),
-                    contentPadding = PaddingValues(vertical = 6.dp),
+                    contentPadding = PaddingValues(top = 6.dp, bottom = 88.dp),
                 ) {
                     items(state.members, key = { member -> member.id }) { member ->
                         MemberRow(

@@ -146,7 +146,7 @@ private fun CategoriesBody(
         )
         else -> LazyColumn(
             modifier = Modifier.fillMaxSize(),
-            contentPadding = PaddingValues(vertical = 16.dp),
+            contentPadding = PaddingValues(top = 16.dp, bottom = 88.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
             items(state.categories, key = { category -> category.id }) { category ->

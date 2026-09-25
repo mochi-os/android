@@ -101,7 +101,8 @@ class StaffLayoutViewModel @Inject constructor(
 /**
  * Shell for every staff screen: drawer with [StaffSidebar], top bar, and the
  * staff-events WebSocket. Provides [LocalStaffMe]; the drawer stays mounted in
- * the loading and error states so the user can navigate away.
+ * the loading and error states so the user can navigate away. A screen's one
+ * add action goes in [floatingActionButton], which can read [LocalStaffMe].
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -110,6 +111,7 @@ fun StaffLayout(
     currentRoute: String,
     @StringRes titleRes: Int,
     topBarActions: @Composable RowScope.() -> Unit = {},
+    floatingActionButton: @Composable () -> Unit = {},
     layoutViewModel: StaffLayoutViewModel = hiltViewModel(),
     content: @Composable () -> Unit,
 ) {
@@ -169,6 +171,11 @@ fun StaffLayout(
                         },
                         actions = topBarActions,
                     )
+                },
+                floatingActionButton = {
+                    if (state is StaffLayoutUiState.Ready) {
+                        floatingActionButton()
+                    }
                 },
             ) { padding ->
                 Box(
