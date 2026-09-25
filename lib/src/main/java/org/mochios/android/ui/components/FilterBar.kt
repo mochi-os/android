@@ -26,6 +26,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.selected
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R
@@ -104,20 +106,29 @@ fun FilterBar(
 }
 
 /**
- * Top bar button that opens a [FilterBarStyle.Sheet] filter sheet, badged
- * with how many filters are set.
+ * Top bar button that opens a filter sheet, with a dot while [active], that is
+ * while some filter is set. A dot rather than a count: the filters themselves
+ * show on screen, and a number beside the notification bell would read as
+ * unread items.
  */
 @Composable
-fun FilterButton(activeCount: Int, onClick: () -> Unit) {
-    MochiIconButton(onClick = onClick) {
+fun FilterButton(
+    active: Boolean,
+    onClick: () -> Unit,
+    contentDescription: String = stringResource(R.string.common_filter),
+) {
+    MochiIconButton(
+        onClick = onClick,
+        modifier = Modifier.semantics { selected = active },
+    ) {
         BadgedBox(
             badge = {
-                if (activeCount > 0) {
-                    Badge { Text(activeCount.toString()) }
+                if (active) {
+                    Badge(modifier = Modifier.size(6.dp))
                 }
             },
         ) {
-            Icon(Icons.Default.FilterList, contentDescription = stringResource(R.string.common_filter))
+            Icon(Icons.Default.FilterList, contentDescription = contentDescription)
         }
     }
 }

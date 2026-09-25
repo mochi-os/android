@@ -29,6 +29,23 @@ enum class Filter {
 }
 
 /**
+ * How many listing attributes [filters] narrows by; any at all puts a dot on
+ * the filter button. A price range counts once whichever bounds it has; the sort
+ * order and the currency the range is read in are not filters of their own.
+ */
+fun activeFilterCount(filters: Map<Filter, String>): Int {
+    val attributes = listOf(
+        Filter.CATEGORY,
+        Filter.TYPE,
+        Filter.CONDITION,
+        Filter.PRICING,
+        Filter.DELIVERY,
+    ).count { filter -> filters.containsKey(filter) }
+    val priceRange = filters.containsKey(Filter.PRICE_MIN) || filters.containsKey(Filter.PRICE_MAX)
+    return attributes + if (priceRange) 1 else 0
+}
+
+/**
  * Browse screen state. [filters] is sparse: a missing key means "all", default
  * sort, or no price bound.
  */

@@ -104,7 +104,7 @@ fun NavGraphBuilder.staffNavGraph(
             titleRes = R.string.staff_sidebar_accounts,
             topBarActions = {
                 FilterButton(
-                    activeCount = listOfNotNull(state.status, state.seller).size,
+                    active = listOfNotNull(state.status, state.seller).isNotEmpty(),
                     onClick = { filtersOpen = true },
                 )
             },
@@ -127,7 +127,7 @@ fun NavGraphBuilder.staffNavGraph(
             titleRes = R.string.staff_sidebar_listings,
             topBarActions = {
                 FilterButton(
-                    activeCount = listOfNotNull(state.status, state.moderation).size,
+                    active = listOfNotNull(state.status, state.moderation).isNotEmpty(),
                     onClick = { filtersOpen = true },
                 )
             },
@@ -155,7 +155,7 @@ fun NavGraphBuilder.staffNavGraph(
             titleRes = R.string.staff_sidebar_reports,
             topBarActions = {
                 FilterButton(
-                    activeCount = listOfNotNull(state.type, state.status).size,
+                    active = listOfNotNull(state.type, state.status).isNotEmpty(),
                     onClick = { filtersOpen = true },
                 )
             },

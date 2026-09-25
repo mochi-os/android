@@ -33,7 +33,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.Label
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.SearchOff
 import androidx.compose.material.icons.filled.Storefront
@@ -71,6 +70,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.delay
 import org.mochios.android.ui.components.EmptyState
+import org.mochios.android.ui.components.FilterButton
 import org.mochios.android.ui.components.FilterChipRow
 import org.mochios.android.ui.components.FilterSheet
 import org.mochios.android.ui.components.MochiButton
@@ -132,12 +132,11 @@ fun HomeScreen(
         currentRoute = MarketApp.HOME,
         titleRes = R.string.market_title,
         actions = {
-            MochiIconButton(onClick = { viewModel.openFilterSheet() }) {
-                Icon(
-                    Icons.Default.FilterList,
-                    contentDescription = stringResource(R.string.market_filter_open),
-                )
-            }
+            FilterButton(
+                active = activeFilterCount(state.filters) > 0,
+                onClick = { viewModel.openFilterSheet() },
+                contentDescription = stringResource(R.string.market_filter_open),
+            )
             NotificationBell(onClick = onOpenNotifications)
         },
     ) { padding ->
