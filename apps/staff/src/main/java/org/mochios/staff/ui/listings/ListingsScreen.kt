@@ -5,7 +5,6 @@
 
 package org.mochios.staff.ui.listings
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -18,7 +17,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Close
@@ -40,7 +38,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -48,6 +45,8 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.delay
+import org.mochios.android.format.formatFingerprint
+import org.mochios.android.format.formatPrice
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EmptyState
@@ -55,11 +54,10 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.FilterDropdown
 import org.mochios.android.ui.components.InfiniteList
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
-import org.mochios.android.format.formatFingerprint
-import org.mochios.android.format.formatPrice
 import org.mochios.staff.R
 import org.mochios.staff.model.PendingListing
 import org.mochios.staff.ui.components.FilterChipSpec
@@ -237,95 +235,95 @@ private fun ListingRow(
         (listing.moderation == "hold" || listing.moderation == "review")
     val canRemove = listing.status == "active"
 
-    Column(
+    MochiCard(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 12.dp, vertical = 6.dp)
-            .clip(RoundedCornerShape(10.dp))
-            .background(MaterialTheme.colorScheme.surface)
-            .padding(12.dp),
+            .padding(horizontal = 16.dp, vertical = 6.dp),
+        shape = MaterialTheme.shapes.medium,
     ) {
-        // Title -> opens market listing detail
-        Text(
-            text = listing.title,
-            style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis,
-            modifier = Modifier
-                .fillMaxWidth()
-                .clickable(onClick = onOpen),
-        )
-        Spacer(Modifier.height(6.dp))
-
-        // Seller — avatar + name + onboarded tick.
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            EntityAvatar(
-                name = listing.sellerName.ifBlank { listing.seller },
-                seed = listing.seller,
-                size = 20.dp,
-            )
-            Spacer(Modifier.width(6.dp))
+        Column(modifier = Modifier.padding(16.dp)) {
+            // Title -> opens market listing detail
             Text(
-                text = listing.sellerName.ifBlank { formatFingerprint(listing.sellerFingerprint) },
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                text = listing.title,
+                style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.weight(1f),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable(onClick = onOpen),
             )
-            if (listing.sellerOnboarded != 0) {
-                Icon(
-                    Icons.Default.CheckCircle,
-                    contentDescription = stringResource(R.string.staff_listings_seller_verified),
-                    tint = MaterialTheme.colorScheme.tertiary,
-                    modifier = Modifier.size(14.dp),
+            Spacer(Modifier.height(6.dp))
+
+            // Seller — avatar + name + onboarded tick.
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                EntityAvatar(
+                    name = listing.sellerName.ifBlank { listing.seller },
+                    seed = listing.seller,
+                    size = 20.dp,
+                )
+                Spacer(Modifier.width(6.dp))
+                Text(
+                    text = listing.sellerName.ifBlank { formatFingerprint(listing.sellerFingerprint) },
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f),
+                )
+                if (listing.sellerOnboarded != 0) {
+                    Icon(
+                        Icons.Default.CheckCircle,
+                        contentDescription = stringResource(R.string.staff_listings_seller_verified),
+                        tint = MaterialTheme.colorScheme.tertiary,
+                        modifier = Modifier.size(14.dp),
+                    )
+                }
+            }
+            Spacer(Modifier.height(8.dp))
+
+            // Status / moderation / score chips.
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                StaffStatusBadge(status = listing.status)
+                StaffStatusBadge(status = listing.moderation)
+                ScoreColorChip(score = listing.score.toInt())
+            }
+            Spacer(Modifier.height(6.dp))
+
+            // Price + created.
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                val priceText = if (listing.price > 0L) {
+                    formatPrice(listing.price, listing.currency)
+                } else {
+                    stringResource(R.string.staff_listings_price_placeholder)
+                }
+                Text(
+                    text = priceText,
+                    style = MaterialTheme.typography.labelMedium,
+                    modifier = Modifier.weight(1f),
+                )
+                Text(
+                    text = format.formatTimestamp(listing.created),
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
-        }
-        Spacer(Modifier.height(8.dp))
 
-        // Status / moderation / score chips.
-        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-            StaffStatusBadge(status = listing.status)
-            StaffStatusBadge(status = listing.moderation)
-            ScoreColorChip(score = listing.score.toInt())
-        }
-        Spacer(Modifier.height(6.dp))
-
-        // Price + created.
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            val priceText = if (listing.price > 0L) {
-                formatPrice(listing.price, listing.currency)
-            } else {
-                stringResource(R.string.staff_listings_price_placeholder)
-            }
-            Text(
-                text = priceText,
-                style = MaterialTheme.typography.labelMedium,
-                modifier = Modifier.weight(1f),
-            )
-            Text(
-                text = format.formatTimestamp(listing.created),
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-        }
-
-        // Action row.
-        if (pending || canRemove) {
-            Spacer(Modifier.height(8.dp))
-            Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                if (pending) {
-                    MochiOutlinedButton(onClick = { onAction(ListingActionType.APPROVE) }) {
-                        Text(stringResource(R.string.staff_listings_approve))
+            // Action row.
+            if (pending || canRemove) {
+                Spacer(Modifier.height(8.dp))
+                Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    if (pending) {
+                        MochiOutlinedButton(onClick = { onAction(ListingActionType.APPROVE) }) {
+                            Text(stringResource(R.string.staff_listings_approve))
+                        }
+                        MochiOutlinedButton(onClick = { onAction(ListingActionType.REJECT) }) {
+                            Text(stringResource(R.string.staff_listings_reject))
+                        }
                     }
-                    MochiOutlinedButton(onClick = { onAction(ListingActionType.REJECT) }) {
-                        Text(stringResource(R.string.staff_listings_reject))
-                    }
-                }
-                if (canRemove) {
-                    MochiOutlinedButton(onClick = { onAction(ListingActionType.REMOVE) }) {
-                        Text(stringResource(R.string.staff_listings_remove))
+                    if (canRemove) {
+                        MochiOutlinedButton(onClick = { onAction(ListingActionType.REMOVE) }) {
+                            Text(stringResource(R.string.staff_listings_remove))
+                        }
                     }
                 }
             }

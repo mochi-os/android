@@ -5,7 +5,6 @@
 
 package org.mochios.staff.ui.reports
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -17,7 +16,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Flag
 import androidx.compose.material3.CircularProgressIndicator
@@ -34,13 +32,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
+import org.mochios.android.format.formatFingerprint
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EmptyState
@@ -48,9 +46,9 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.FilterDropdown
 import org.mochios.android.ui.components.InfiniteList
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.staff.R
-import org.mochios.android.format.formatFingerprint
 import org.mochios.staff.model.Report
 import org.mochios.staff.ui.components.FilterChipSpec
 import org.mochios.staff.ui.components.FilterChipsRow
@@ -176,86 +174,86 @@ private fun ReportRow(
 ) {
     val format = LocalFormat.current
 
-    Column(
+    MochiCard(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 12.dp, vertical = 6.dp)
-            .clip(RoundedCornerShape(10.dp))
-            .background(MaterialTheme.colorScheme.surface)
-            .padding(12.dp),
+            .padding(horizontal = 16.dp, vertical = 6.dp),
+        shape = MaterialTheme.shapes.medium,
     ) {
-        // Target (listing title links to market detail; user shows resolved name).
-        val targetText = targetText(report)
-        if (report.type == "listing" && report.listing != null) {
-            Text(
-                text = targetText,
-                style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clickable { onOpenListing(report.listing.id) },
-            )
-        } else {
-            Text(
-                text = targetText,
-                style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.fillMaxWidth(),
-            )
-        }
-        Spacer(Modifier.height(6.dp))
-
-        // Reporter row.
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            EntityAvatar(
-                name = report.reporterName.ifBlank { report.reporter },
-                seed = report.reporter,
-                size = 20.dp,
-            )
-            Spacer(Modifier.width(6.dp))
-            Text(
-                text = report.reporterName.ifBlank { formatFingerprint(report.reporterFingerprint) },
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.weight(1f),
-            )
-        }
-        Spacer(Modifier.height(8.dp))
-
-        // Type / status / reason chips.
-        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-            StaffStatusBadge(status = report.type)
-            StaffStatusBadge(status = report.status)
-        }
-        Spacer(Modifier.height(6.dp))
-
-        // Reason text.
-        Text(
-            text = reasonLabel(report.reason),
-            style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-            maxLines = 2,
-            overflow = TextOverflow.Ellipsis,
-        )
-        Spacer(Modifier.height(6.dp))
-
-        // Created + action row.
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Text(
-                text = format.formatTimestamp(report.created),
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.weight(1f),
-            )
-            MochiOutlinedButton(onClick = onActionClick) {
+        Column(modifier = Modifier.padding(16.dp)) {
+            // Target (listing title links to market detail; user shows resolved name).
+            val targetText = targetText(report)
+            if (report.type == "listing" && report.listing != null) {
                 Text(
-                    if (report.status == "pending") stringResource(R.string.staff_reports_action)
-                    else stringResource(R.string.staff_reports_view),
+                    text = targetText,
+                    style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable { onOpenListing(report.listing.id) },
                 )
+            } else {
+                Text(
+                    text = targetText,
+                    style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.fillMaxWidth(),
+                )
+            }
+            Spacer(Modifier.height(6.dp))
+
+            // Reporter row.
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                EntityAvatar(
+                    name = report.reporterName.ifBlank { report.reporter },
+                    seed = report.reporter,
+                    size = 20.dp,
+                )
+                Spacer(Modifier.width(6.dp))
+                Text(
+                    text = report.reporterName.ifBlank { formatFingerprint(report.reporterFingerprint) },
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f),
+                )
+            }
+            Spacer(Modifier.height(8.dp))
+
+            // Type / status / reason chips.
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                StaffStatusBadge(status = report.type)
+                StaffStatusBadge(status = report.status)
+            }
+            Spacer(Modifier.height(6.dp))
+
+            // Reason text.
+            Text(
+                text = reasonLabel(report.reason),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis,
+            )
+            Spacer(Modifier.height(6.dp))
+
+            // Created + action row.
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    text = format.formatTimestamp(report.created),
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.weight(1f),
+                )
+                MochiOutlinedButton(onClick = onActionClick) {
+                    Text(
+                        if (report.status == "pending") stringResource(R.string.staff_reports_action)
+                        else stringResource(R.string.staff_reports_view),
+                    )
+                }
             }
         }
     }

@@ -5,7 +5,6 @@
 
 package org.mochios.staff.ui.moderation
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -17,7 +16,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
@@ -36,7 +34,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
@@ -45,14 +42,15 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.delay
+import org.mochios.android.format.formatFingerprint
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
-import org.mochios.android.format.formatFingerprint
 import org.mochios.staff.R
 import org.mochios.staff.model.ModerationEntry
 import org.mochios.staff.ui.components.ScoreColorChip
@@ -137,68 +135,68 @@ private fun ModerationRow(
 ) {
     val format = LocalFormat.current
 
-    Column(
+    MochiCard(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 12.dp, vertical = 6.dp)
-            .clip(RoundedCornerShape(10.dp))
-            .background(MaterialTheme.colorScheme.surface)
-            .padding(12.dp),
+            .padding(horizontal = 16.dp, vertical = 6.dp),
+        shape = MaterialTheme.shapes.medium,
     ) {
-        // Listing link
-        val linkText = entry.listingTitle.ifBlank {
-            stringResource(R.string.staff_moderation_unknown_listing, entry.listing)
-        }
-        Text(
-            text = linkText,
-            style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis,
-            modifier = Modifier
-                .fillMaxWidth()
-                .clickable(onClick = onOpen),
-        )
-        Spacer(Modifier.height(6.dp))
-
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(6.dp),
-        ) {
-            StaffStatusBadge(status = entry.action)
-            ScoreColorChip(score = entry.score.toInt())
-        }
-        Spacer(Modifier.height(6.dp))
-
-        // Actor + reason + created
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            val actorLabel = when {
-                entry.actor == "system" -> stringResource(R.string.staff_moderation_system)
-                entry.actorName.isNotBlank() -> entry.actorName
-                else -> formatFingerprint(entry.actorFingerprint)
+        Column(modifier = Modifier.padding(16.dp)) {
+            // Listing link
+            val linkText = entry.listingTitle.ifBlank {
+                stringResource(R.string.staff_moderation_unknown_listing, entry.listing)
             }
             Text(
-                text = actorLabel,
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                text = linkText,
+                style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.width(120.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable(onClick = onOpen),
             )
-            Spacer(Modifier.width(8.dp))
-            Text(
-                text = entry.reason,
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                maxLines = 2,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.weight(1f),
-            )
-            Spacer(Modifier.width(8.dp))
-            Text(
-                text = format.formatTimestamp(entry.created),
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
+            Spacer(Modifier.height(6.dp))
+
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(6.dp),
+            ) {
+                StaffStatusBadge(status = entry.action)
+                ScoreColorChip(score = entry.score.toInt())
+            }
+            Spacer(Modifier.height(6.dp))
+
+            // Actor + reason + created
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                val actorLabel = when {
+                    entry.actor == "system" -> stringResource(R.string.staff_moderation_system)
+                    entry.actorName.isNotBlank() -> entry.actorName
+                    else -> formatFingerprint(entry.actorFingerprint)
+                }
+                Text(
+                    text = actorLabel,
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.width(120.dp),
+                )
+                Spacer(Modifier.width(8.dp))
+                Text(
+                    text = entry.reason,
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f),
+                )
+                Spacer(Modifier.width(8.dp))
+                Text(
+                    text = format.formatTimestamp(entry.created),
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
         }
     }
 }

@@ -21,16 +21,14 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.outlined.Block
-import androidx.compose.material.icons.outlined.Restore
-import androidx.compose.ui.draw.clip
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.StarOutline
+import androidx.compose.material.icons.outlined.Block
+import androidx.compose.material.icons.outlined.Restore
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SnackbarHost
@@ -45,6 +43,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -54,6 +53,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
+import org.mochios.android.format.formatFingerprint
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.EmptyState
@@ -61,10 +61,10 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.LoadingState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.format.formatFingerprint
 import org.mochios.staff.R
 import org.mochios.staff.model.Review
 import org.mochios.staff.ui.components.FilterChipSpec
@@ -177,7 +177,6 @@ private fun ReviewsBody(
                             onAction = onAction,
                             onAskRemove = onAskRemove,
                         )
-                        HorizontalDivider()
                     }
                     if (state.hasMore) {
                         item {
@@ -276,76 +275,81 @@ private fun ReviewRow(
     val avatarUrl = review.reviewer.takeIf { reviewer -> reviewer.isNotBlank() }?.let { reviewer ->
         "/staff/-/user/$reviewer/asset/avatar"
     }
-    Row(
+    MochiCard(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 12.dp),
-        verticalAlignment = Alignment.Top,
+            .padding(horizontal = 16.dp, vertical = 6.dp),
+        shape = MaterialTheme.shapes.medium,
     ) {
-        Column(modifier = Modifier.weight(1f)) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                EntityAvatar(name = reviewerName, src = avatarUrl, seed = review.reviewer, size = 36.dp)
-                Spacer(modifier = Modifier.width(10.dp))
-                Column(modifier = Modifier.weight(1f)) {
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(6.dp),
-                    ) {
-                        Text(
-                            text = reviewerName,
-                            style = MaterialTheme.typography.titleSmall,
-                            fontWeight = FontWeight.SemiBold,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis,
-                            modifier = Modifier.weight(1f, fill = false),
-                        )
-                        ReviewerRoleChip(role = review.role)
+        Row(
+            modifier = Modifier.padding(16.dp),
+            verticalAlignment = Alignment.Top,
+        ) {
+            Column(modifier = Modifier.weight(1f)) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    EntityAvatar(name = reviewerName, src = avatarUrl, seed = review.reviewer, size = 36.dp)
+                    Spacer(modifier = Modifier.width(10.dp))
+                    Column(modifier = Modifier.weight(1f)) {
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(6.dp),
+                        ) {
+                            Text(
+                                text = reviewerName,
+                                style = MaterialTheme.typography.titleSmall,
+                                fontWeight = FontWeight.SemiBold,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis,
+                                modifier = Modifier.weight(1f, fill = false),
+                            )
+                            ReviewerRoleChip(role = review.role)
+                        }
                     }
+                    StaffStatusBadge(status = review.status)
                 }
-                StaffStatusBadge(status = review.status)
-            }
-            Spacer(modifier = Modifier.height(6.dp))
-            // Subject + listing block.
-            Text(
-                text = subjectName,
-                style = MaterialTheme.typography.bodyMedium,
-            )
-            val listingTitle = review.listingTitle.orEmpty()
-            if (listingTitle.isNotEmpty()) {
+                Spacer(modifier = Modifier.height(6.dp))
+                // Subject + listing block.
                 Text(
-                    text = listingTitle,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.primary,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
+                    text = subjectName,
+                    style = MaterialTheme.typography.bodyMedium,
                 )
-            }
-            if (review.order.isNotEmpty()) {
+                val listingTitle = review.listingTitle.orEmpty()
+                if (listingTitle.isNotEmpty()) {
+                    Text(
+                        text = listingTitle,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.primary,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                    )
+                }
+                if (review.order.isNotEmpty()) {
+                    Text(
+                        text = stringResource(R.string.staff_reviews_order_label, review.order),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+                Spacer(modifier = Modifier.height(6.dp))
+                InlineRatingStars(rating = review.rating)
+                if (review.text.isNotEmpty()) {
+                    Spacer(modifier = Modifier.height(4.dp))
+                    Text(
+                        text = review.text,
+                        style = MaterialTheme.typography.bodyMedium,
+                        maxLines = 3,
+                        overflow = TextOverflow.Ellipsis,
+                    )
+                }
+                Spacer(modifier = Modifier.height(4.dp))
                 Text(
-                    text = stringResource(R.string.staff_reviews_order_label, review.order),
+                    text = format.formatRelativeTime(review.created),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
-            Spacer(modifier = Modifier.height(6.dp))
-            InlineRatingStars(rating = review.rating)
-            if (review.text.isNotEmpty()) {
-                Spacer(modifier = Modifier.height(4.dp))
-                Text(
-                    text = review.text,
-                    style = MaterialTheme.typography.bodyMedium,
-                    maxLines = 3,
-                    overflow = TextOverflow.Ellipsis,
-                )
-            }
-            Spacer(modifier = Modifier.height(4.dp))
-            Text(
-                text = format.formatRelativeTime(review.created),
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
+            OverflowMenu(review = review, onAction = onAction, onAskRemove = onAskRemove)
         }
-        OverflowMenu(review = review, onAction = onAction, onAskRemove = onAskRemove)
     }
 }
 
