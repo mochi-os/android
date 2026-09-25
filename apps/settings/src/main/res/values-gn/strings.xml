@@ -386,4 +386,12 @@
     <string name="accounts_field_topic">Tema</string>
     <string name="accounts_field_secret">Firma ñemiguáva</string>
     <string name="account_totp_open">Embojuruja aplicación autenticador-pe</string>
+    <string name="accounts_revoke">Emboyke jeike</string>
+    <string name="accounts_capability_calendar">Arapapaha</string>
+    <string name="accounts_capability_notify">Ñehenói</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Jeike</string>
+    <string name="accounts_provider_caldav">Arapapaha mohendaha</string>
+    <string name="accounts_revoke_confirm">Kóva oipe\'áta %1$s jeike arapapahápe. Jeike %2$s ndive opytáta ejeíta peve chugui Jeike roguépe.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

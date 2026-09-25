@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">Efni</string>
     <string name="accounts_field_secret">Undirritunarleyndarmál</string>
     <string name="account_totp_open">Opna í auðkenningarforriti</string>
+    <string name="accounts_revoke">Afturkalla aðgang</string>
+    <string name="accounts_capability_calendar">Dagatal</string>
+    <string name="accounts_capability_notify">Tilkynningar</string>
+    <string name="accounts_capability_ai">Gervigreind</string>
+    <string name="accounts_capability_login">Innskráning</string>
+    <string name="accounts_provider_caldav">Dagatalsþjónn</string>
+    <string name="accounts_revoke_confirm">Þetta afturkallar dagatalsaðgang %1$s. Innskráning með %2$s helst þar til þú aftengir hana á innskráningarsíðunni.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

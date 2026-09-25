@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Staff</string>
-    <string name="launcher_staff">సిబ్బంది</string>
+    <string name="launcher_staff">Mochi Staff</string>
     <string name="staff_accounts_action_ban_title">ఖాతాను నిషేధించండి</string>
     <string name="staff_accounts_action_suspend_title">ఖాతాను నిలిపివేయండి</string>
     <string name="staff_accounts_action_unban_title">నిషేధాన్ని తొలగించు</string>

@@ -164,4 +164,5 @@
     <string name="people_device_delete_title">Apparaat verwijderen?</string>
     <string name="people_device_delete_message">Het apparaat kan dan geen contacten meer synchroniseren.</string>
     <string name="people_device_deleted">Apparaat verwijderd</string>
+    <string name="people_contact_friend">Mochi-vriend</string>
 </resources>

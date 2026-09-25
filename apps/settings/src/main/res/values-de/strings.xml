@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">Thema</string>
     <string name="accounts_field_secret">Signaturgeheimnis</string>
     <string name="account_totp_open">In Authenticator-App öffnen</string>
+    <string name="accounts_revoke">Zugriff widerrufen</string>
+    <string name="accounts_capability_calendar">Kalender</string>
+    <string name="accounts_capability_notify">Benachrichtigungen</string>
+    <string name="accounts_capability_ai">KI</string>
+    <string name="accounts_capability_login">Anmeldung</string>
+    <string name="accounts_provider_caldav">Kalenderserver</string>
+    <string name="accounts_revoke_confirm">Damit wird der Kalenderzugriff von %1$s widerrufen. Die Anmeldung mit %2$s bleibt bestehen, bis Sie sie auf der Anmeldeseite trennen.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

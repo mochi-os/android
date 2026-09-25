@@ -44,6 +44,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -160,7 +161,7 @@ private fun Content(
         // Resolve the active language. Honour the user's explicit choice if it's
         // still available for the current tab, otherwise fall back to the device
         // locale, then English, then the first available language.
-        val deviceLang = Locale.getDefault().language.lowercase()
+        val deviceLang = LocalConfiguration.current.locales[0].language.lowercase()
         val activeLanguage = state.language?.takeIf { languages.contains(it) }
             ?: languages.firstOrNull { it == deviceLang }
             ?: languages.firstOrNull { it == "en" }

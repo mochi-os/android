@@ -30,7 +30,6 @@
     <string name="projects_create_object_type">Typ</string>
     <string name="projects_field_type">Typ</string>
     <string name="projects_views_type">Typ</string>
-    <string name="projects_create_object_title_field">Titel</string>
     <string name="projects_request_field_title">Titel</string>
     <string name="projects_settings_unsubscribe">Abbestellen</string>
     <string name="projects_settings_unsubscribe_title">Abbestellen</string>
@@ -355,4 +354,5 @@
     <string name="projects_settings_not_set">Nicht festgelegt</string>
     <string name="projects_settings_updated">Projekt aktualisiert</string>
     <string name="projects_board_add_column">Spalte hinzufügen</string>
+    <string name="projects_attachment_remove">Anhang entfernen</string>
 </resources>

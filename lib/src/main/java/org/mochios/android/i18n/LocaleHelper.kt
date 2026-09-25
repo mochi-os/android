@@ -14,7 +14,14 @@ import java.util.Locale
 
 object LocaleHelper {
 
+    /**
+     * The process's base context in the stored language, for Android 12 and
+     * below. From 13 the system applies the per-app locale to every context
+     * itself, and the store may lag a language the user picked for the app in
+     * the system settings, so pinning here would undo that choice.
+     */
     fun wrap(context: Context, tag: String?): Context {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) return context
         if (tag.isNullOrBlank()) return context
         val locale = Locale.forLanguageTag(tag)
         Locale.setDefault(locale)

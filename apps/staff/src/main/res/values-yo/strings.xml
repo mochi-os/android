@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Staff</string>
-    <string name="launcher_staff">Òṣìṣẹ́</string>
+    <string name="launcher_staff">Mochi Staff</string>
     <string name="staff_accounts_action_ban_title">Fòfin de àkáǹtì</string>
     <string name="staff_accounts_action_suspend_title">Dá àkáǹtì dúró</string>
     <string name="staff_accounts_any_seller">Gbogbo</string>
@@ -67,7 +67,7 @@
     <string name="staff_audit_action_category_created">A ti dá ẹ̀ka</string>
     <string name="staff_audit_action_category_deleted">A ti pa ẹ̀ka rẹ́</string>
     <string name="staff_audit_action_category_updated">A ti ṣe àtúnyẹ̀wò ẹ̀ka</string>
-    <string name="staff_audit_action_config_thresholds_updated">Àwọn ààlà ìṣàkóso ti dojúìwọ́n</string>
+    <string name="staff_audit_action_config_thresholds_updated">A ti ṣe imudojúìwọ̀n àwọn ààlà ìṣàkóso</string>
     <string name="staff_audit_action_config_updated">A ti ṣe àtúnyẹ̀wò ìṣètò</string>
     <string name="staff_audit_action_dispute_opened">A béèrè padà</string>
     <string name="staff_audit_action_dispute_resolved_buyer">A ti fọwọ́sí padà</string>

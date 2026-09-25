@@ -30,8 +30,10 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.SnackbarResult
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
@@ -72,11 +74,11 @@ import org.mochios.calendars.ui.components.CalendarAction
 import org.mochios.calendars.ui.components.CalendarDrawer
 import org.mochios.calendars.ui.dialogs.ColourCalendarDialog
 import org.mochios.calendars.ui.dialogs.DeleteCalendarDialog
-import org.mochios.calendars.ui.dialogs.DeleteEventDialog
 import org.mochios.calendars.ui.dialogs.LinkDialog
 import org.mochios.calendars.ui.dialogs.PreferencesDialog
 import org.mochios.calendars.ui.dialogs.RenameCalendarDialog
 import org.mochios.calendars.ui.dialogs.ScopeDialog
+import org.mochios.calendars.ui.editor.Scope
 import org.mochios.calendars.ui.router.CalendarsSection
 import java.time.LocalDate
 
@@ -84,7 +86,11 @@ import java.time.LocalDate
  * The calendars app's one screen: the drawer of calendars, the toolbar that
  * moves the range, the view itself and the "New event" button. Every view
  * renders from the same occurrence list, so switching between them is a
- * redraw and not a fetch of a different shape.
+ * redraw and not a fetch of a different shape. [onCopyEvent] opens the
+ * editor on a copy of a stored event's occurrence, with how far the copy
+ * reaches; [onCopyOccurrence] on a copy of one the editor cannot load, a
+ * subscription's or a birthday. [copied] says a copy was just saved, which
+ * the screen reports once and [onCopiedShown] clears.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -92,8 +98,12 @@ fun CalendarScreen(
     onCreateCalendar: () -> Unit,
     onSubscribe: () -> Unit,
     onConnectDevice: () -> Unit,
-    onNewEvent: (Long) -> Unit,
+    onNewEvent: (Long, Boolean?) -> Unit,
     onEditEvent: (String, Long) -> Unit,
+    onCopyEvent: (String, Long, Scope) -> Unit,
+    onCopyOccurrence: (Instance) -> Unit,
+    copied: Boolean = false,
+    onCopiedShown: () -> Unit = {},
     viewModel: CalendarViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -104,28 +114,59 @@ fun CalendarScreen(
     val resources = LocalResources.current
 
     var selected by remember { mutableStateOf<Instance?>(null) }
+    var copying by remember { mutableStateOf<Instance?>(null) }
+    var moving by remember { mutableStateOf<Move?>(null) }
     var renaming by remember { mutableStateOf<Calendar?>(null) }
     var colouring by remember { mutableStateOf<Calendar?>(null) }
     var deleting by remember { mutableStateOf<Calendar?>(null) }
     var linking by remember { mutableStateOf<Calendar?>(null) }
-    var removing by remember { mutableStateOf<Instance?>(null) }
-    var scoping by remember { mutableStateOf<Instance?>(null) }
     var preferences by remember { mutableStateOf(false) }
 
     DisposableRefresh(lifecycle) { viewModel.load(refreshing = true, reset = false) }
 
     LaunchedEffect(Unit) {
+        // Each message on its own, so a move's "Undo" waiting to be tapped
+        // does not hold up the next.
         viewModel.events.collect { event ->
-            when (event) {
-                is CalendarEvent.Failed -> snackbar.showSnackbar(event.error.userMessage())
-                is CalendarEvent.Polled -> snackbar.showSnackbar(
-                    resources.getQuantityString(
-                        R.plurals.calendars_polled,
-                        event.changed,
-                        event.changed,
-                    ),
-                )
+            scope.launch {
+                when (event) {
+                    is CalendarEvent.Failed -> snackbar.showSnackbar(event.error.userMessage())
+                    is CalendarEvent.Polled -> snackbar.showSnackbar(
+                        resources.getQuantityString(
+                            R.plurals.calendars_polled,
+                            event.changed,
+                            event.changed,
+                        ),
+                    )
+                    CalendarEvent.Moved -> {
+                        val chosen = snackbar.showSnackbar(
+                            message = resources.getString(R.string.calendars_event_moved),
+                            actionLabel = resources.getString(R.string.calendars_undo),
+                            duration = SnackbarDuration.Long,
+                        )
+                        if (chosen == SnackbarResult.ActionPerformed) viewModel.undo()
+                    }
+                    CalendarEvent.Changed -> snackbar.showSnackbar(resources.getString(R.string.calendars_event_changed))
+                }
             }
+        }
+    }
+
+    LaunchedEffect(copied) {
+        // Said from the screen's own scope: the flag clears at once, and the
+        // message outlives this effect.
+        if (copied) {
+            onCopiedShown()
+            scope.launch { snackbar.showSnackbar(resources.getString(R.string.calendars_event_copied)) }
+        }
+    }
+
+    // A drag on a repeating occurrence has to say which occurrences it moved.
+    fun request(instance: Instance, run: (Scope) -> Unit) {
+        if (instance.recurring) {
+            moving = Move(instance, run)
+        } else {
+            run(Scope.ALL)
         }
     }
 
@@ -164,7 +205,7 @@ fun CalendarScreen(
             },
             snackbarHost = { SnackbarHost(snackbar) },
             floatingActionButton = {
-                MochiFab(onClick = { onNewEvent(0) }) {
+                MochiFab(onClick = { onNewEvent(0, null) }) {
                     Icon(Icons.Default.Add, contentDescription = stringResource(R.string.calendars_event_new))
                 }
             },
@@ -203,7 +244,24 @@ fun CalendarScreen(
                                     modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp),
                                 )
                             }
-                            View(uiState, viewModel, onOpen = { selected = it }, onNewEvent = onNewEvent)
+                            View(
+                                uiState,
+                                viewModel,
+                                onOpen = { instance ->
+                                    if (instance.editable) {
+                                        onEditEvent(instance.event, if (instance.recurring) instance.start else 0)
+                                    } else {
+                                        selected = instance
+                                    }
+                                },
+                                onNewEvent = onNewEvent,
+                                onMove = { instance, start, finish ->
+                                    request(instance) { scope -> viewModel.move(instance, start, finish, scope) }
+                                },
+                                onMoveDay = { instance, day ->
+                                    request(instance) { scope -> viewModel.move(instance, day, scope) }
+                                },
+                            )
                         }
                     }
                 }
@@ -211,44 +269,58 @@ fun CalendarScreen(
         }
     }
 
-    selected?.let { instance ->
-        EventSheet(
-            instance = instance,
-            calendar = uiState.calendars.firstOrNull { it.id == instance.calendar },
-            onDismiss = { selected = null },
-            onEdit = {
-                selected = null
-                onEditEvent(instance.event, if (instance.recurring) instance.start else 0)
+    moving?.let { move ->
+        ScopeDialog(
+            deleting = false,
+            onDismiss = { moving = null },
+            onOne = {
+                moving = null
+                move.run(Scope.ONE)
             },
-            onDelete = {
-                selected = null
-                if (instance.recurring) scoping = instance else removing = instance
+            onFollowing = {
+                moving = null
+                move.run(Scope.FOLLOWING)
+            },
+            onAll = {
+                moving = null
+                move.run(Scope.ALL)
             },
         )
     }
 
-    scoping?.let { instance ->
+    // A copy of a repeating stored event asks how far it reaches; one of an
+    // event that does not repeat, or of an occurrence with no stored event
+    // to load, is a single event and opens at once.
+    copying?.let { instance ->
         ScopeDialog(
-            deleting = true,
-            onDismiss = { scoping = null },
+            deleting = false,
+            copying = true,
+            following = false,
+            onDismiss = { copying = null },
             onOne = {
-                scoping = null
-                viewModel.delete(instance, DeleteScope.ONE)
+                copying = null
+                onCopyEvent(instance.event, instance.occurrence, Scope.ONE)
             },
             onAll = {
-                scoping = null
-                removing = instance
+                copying = null
+                onCopyEvent(instance.event, instance.occurrence, Scope.ALL)
             },
         )
     }
-    removing?.let { instance ->
-        DeleteEventDialog(
-            summary = instance.summary,
-            deleting = false,
-            onDismiss = { removing = null },
-            onConfirm = {
-                removing = null
-                viewModel.delete(instance, DeleteScope.ALL)
+
+    selected?.let { instance ->
+        EventSheet(
+            instance = instance,
+            calendar = uiState.calendars.firstOrNull { it.id == instance.calendar },
+            zones = uiState.preferences.zones,
+            onDismiss = { selected = null },
+            onCopy = {
+                selected = null
+                when {
+                    !instance.editable -> onCopyOccurrence(instance)
+                    instance.recurring -> copying = instance
+                    else -> onCopyEvent(instance.event, 0, Scope.ALL)
+                }
             },
         )
     }
@@ -318,17 +390,28 @@ fun CalendarScreen(
     }
 }
 
-/** The view the state names, drawn from the same occurrence list. */
+/** A dragged repeating occurrence, waiting for the user to say which occurrences move. */
+private class Move(val instance: Instance, val run: (Scope) -> Unit)
+
+/**
+ * The view the state names, drawn from the same occurrence list. [onMove]
+ * is a block dragged or resized in a time grid, with the occurrence's new
+ * ends; [onMoveDay] a chip dropped on a day in a month grid, with the
+ * occurrence's new first day.
+ */
 @Composable
 private fun View(
     state: CalendarUiState,
     viewModel: CalendarViewModel,
     onOpen: (Instance) -> Unit,
-    onNewEvent: (Long) -> Unit,
+    onNewEvent: (Long, Boolean?) -> Unit,
+    onMove: (Instance, Long, Long) -> Unit,
+    onMoveDay: (Instance, LocalDate) -> Unit,
 ) {
     // A tap on a cell names a day and, in a time grid, an hour; the editor
     // wants the moment, measured in the user's own zone rather than the
-    // device's.
+    // device's. A cell is a timed event, and says so, which the editor's
+    // memory of the last new event does not override.
     val moment = { day: LocalDate, hour: Int ->
         day.atStartOfDay(viewModel.timezone()).plusHours(hour.toLong()).toEpochSecond()
     }
@@ -338,7 +421,8 @@ private fun View(
             state = state,
             viewModel = viewModel,
             onOpen = onOpen,
-            onCreate = { day, hour -> onNewEvent(moment(day, hour)) },
+            onCreate = { day, hour -> onNewEvent(moment(day, hour), false) },
+            onMove = onMove,
         )
         CalendarsSection.WEEK -> {
             val week = viewModel.week(state.anchor)
@@ -349,7 +433,8 @@ private fun View(
                 state = state,
                 viewModel = viewModel,
                 onOpen = onOpen,
-                onCreate = { day, hour -> onNewEvent(moment(day, hour)) },
+                onCreate = { day, hour -> onNewEvent(moment(day, hour), false) },
+                onMove = onMove,
             )
         }
         CalendarsSection.MULTIWEEK -> MonthGrid(
@@ -358,7 +443,8 @@ private fun View(
             state = state,
             viewModel = viewModel,
             onOpen = onOpen,
-            onCreate = { day -> onNewEvent(moment(day, 9)) },
+            onCreate = { day -> onNewEvent(moment(day, 9), null) },
+            onMove = onMoveDay,
         )
         CalendarsSection.MONTH -> MonthGrid(
             weeks = viewModel.weeks(state),
@@ -366,7 +452,8 @@ private fun View(
             state = state,
             viewModel = viewModel,
             onOpen = onOpen,
-            onCreate = { day -> onNewEvent(moment(day, 9)) },
+            onCreate = { day -> onNewEvent(moment(day, 9), null) },
+            onMove = onMoveDay,
         )
         // The list view opens on the anchor day and pages on as the reader
         // scrolls, so it has no range to pick — only something to search.
@@ -385,7 +472,7 @@ private fun View(
     }
 }
 
-/** Today, previous, next, the range's title, and the view switcher. */
+/** Previous, today, next, the range's title, and the view switcher. */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun Toolbar(
@@ -409,14 +496,14 @@ private fun Toolbar(
             }
         },
         actions = {
-            MochiIconButton(onClick = onToday) {
-                Icon(Icons.Outlined.Today, contentDescription = stringResource(R.string.calendars_today))
-            }
             MochiIconButton(onClick = onPrevious) {
                 Icon(
                     Icons.Default.ChevronLeft,
                     contentDescription = stringResource(R.string.calendars_previous),
                 )
+            }
+            MochiIconButton(onClick = onToday) {
+                Icon(Icons.Outlined.Today, contentDescription = stringResource(R.string.calendars_today))
             }
             MochiIconButton(onClick = onNext) {
                 Icon(Icons.Default.ChevronRight, contentDescription = stringResource(R.string.calendars_next))

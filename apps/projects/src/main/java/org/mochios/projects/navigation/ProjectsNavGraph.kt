@@ -262,14 +262,10 @@ fun NavGraphBuilder.projectsNavGraph(
         val projectId = backStackEntry.arguments?.getString("projectId").orEmpty()
         CreateObjectScreen(
             onBack = { navController.popBackStack() },
-            // Navigate rather than pop back: the existing entry's view model
-            // holds the objects fetched before the create, so the new one would
-            // not show.
-            onCreated = { objectId ->
-                navController.navigate(ProjectsApp.projectObject(projectId, objectId)) {
-                    popUpTo(ProjectsApp.CREATE_OBJECT) { inclusive = true }
-                }
-            },
+            // Back to the board or list the form was opened from, as the web
+            // dialog closes onto its board; ProjectContent refreshes on the
+            // return, so the new object shows.
+            onCreated = { navController.popBackStack() },
         )
     }
 

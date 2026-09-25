@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">د همغږۍ لپاره بیا ننوځئ</string>
     <string name="people_sync_transport">سرور ته نه شو رسېدلی</string>
     <string name="people_sync_refused">یوه اړیکه همغږي نه شوه: %1$s</string>
+    <string name="people_contact_friend">د Mochi ملګری</string>
 </resources>

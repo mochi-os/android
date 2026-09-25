@@ -9,6 +9,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavType
 import androidx.navigation.compose.composable
+import android.net.Uri
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
 import org.mochios.people.ui.components.PeopleSidebarSection
@@ -33,7 +34,7 @@ object PeopleApp {
     const val ROUTER = "people/router"
 
     const val CONTACTS = "people/contacts?action={action}"
-    const val CONTACTS_ADD = "people/contacts/add"
+    const val CONTACTS_ADD = "people/contacts/add?contact={contact}&name={name}"
     const val CONTACT_NEW = "people/contacts/new"
     const val CONTACT_EDIT = "people/contacts/{id}"
     const val BOOK_CREATE = "people/books/create"
@@ -46,6 +47,10 @@ object PeopleApp {
     const val GROUP_ADD_MEMBER = "people/groups/{id}/add-member"
     const val PERSON_VIEW = "people/person/{id}"
     const val DEVICES = "people/devices"
+
+    /** The add screen, on an ordinary search or opened to link one card to the person it finds. */
+    fun contactsAdd(contact: String = "", name: String = ""): String =
+        "people/contacts/add?contact=${Uri.encode(contact)}&name=${Uri.encode(name)}"
 
     fun groupDetail(id: String) = "people/groups/$id"
     fun groupAddMember(id: String) = "people/groups/$id/add-member"
@@ -125,7 +130,7 @@ fun NavGraphBuilder.peopleNavGraph(
             onOpenNotifications = onOpenNotifications,
             onLogout = onLogout,
             onMessage = { person -> onOpenLink("chat/new?friend=$person") },
-            onAddContact = { navController.navigate(PeopleApp.CONTACTS_ADD) },
+            onAddContact = { navController.navigate(PeopleApp.contactsAdd()) },
             onConnectDevice = { navController.navigate(PeopleApp.DEVICES) },
             initialAction = action.ifBlank { null },
         )
@@ -150,7 +155,7 @@ fun NavGraphBuilder.peopleNavGraph(
             onOpenNotifications = onOpenNotifications,
             onLogout = onLogout,
             onMessage = { person -> onOpenLink("chat/new?friend=$person") },
-            onAddContact = { navController.navigate(PeopleApp.CONTACTS_ADD) },
+            onAddContact = { navController.navigate(PeopleApp.contactsAdd()) },
             onConnectDevice = { navController.navigate(PeopleApp.DEVICES) },
         )
     }
@@ -159,7 +164,13 @@ fun NavGraphBuilder.peopleNavGraph(
         ConnectDeviceScreen(onBack = { navController.popBackStack() })
     }
 
-    composable(PeopleApp.CONTACTS_ADD) {
+    composable(
+        route = PeopleApp.CONTACTS_ADD,
+        arguments = listOf(
+            navArgument("contact") { type = NavType.StringType; defaultValue = "" },
+            navArgument("name") { type = NavType.StringType; defaultValue = "" },
+        ),
+    ) {
         AddContactScreen(
             onBack = { navController.popBackStack() },
             onNewContact = { navController.navigate(PeopleApp.CONTACT_NEW) },
@@ -167,6 +178,9 @@ fun NavGraphBuilder.peopleNavGraph(
             // stale, and popping back would land on the entry that was already
             // there. Navigating builds a fresh one that reloads.
             onContactsChanged = { navController.openContacts() },
+            // Linking was asked for from a contact's editor, which reloads on
+            // the repository's change signal, so stepping back shows the switch on.
+            onLinked = { navController.popBackStack() },
         )
     }
 
@@ -185,6 +199,7 @@ fun NavGraphBuilder.peopleNavGraph(
     ) {
         ContactEditScreen(
             onBack = { navController.popBackStack() },
+            onFindPerson = { contact, name -> navController.navigate(PeopleApp.contactsAdd(contact, name)) },
             // The list behind reloads on the repository's contactsChanged, so
             // stepping back to it shows the edit.
             onSaved = { navController.popBackStack() },

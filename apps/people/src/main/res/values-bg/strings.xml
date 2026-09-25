@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Влезте отново, за да синхронизирате</string>
     <string name="people_sync_transport">Сървърът е недостъпен</string>
     <string name="people_sync_refused">Контакт не можа да бъде синхронизиран: %1$s</string>
+    <string name="people_contact_friend">Приятел в Mochi</string>
 </resources>

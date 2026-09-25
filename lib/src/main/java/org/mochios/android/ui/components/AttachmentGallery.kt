@@ -43,6 +43,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -87,6 +88,7 @@ fun AttachmentGallery(
     var downloadingId by remember { mutableStateOf<String?>(null) }
 
     val context = LocalContext.current
+    val resources = LocalResources.current
     val scope = rememberCoroutineScope()
 
     // Resolve the caller's (possibly relative) paths to absolute URLs once, for
@@ -188,7 +190,7 @@ fun AttachmentGallery(
                                 downloadingId = file.id
                                 Toast.makeText(
                                     context,
-                                    context.getString(R.string.common_opening_file),
+                                    resources.getString(R.string.common_opening_file),
                                     Toast.LENGTH_SHORT
                                 ).show()
                                 scope.launch {
@@ -211,7 +213,7 @@ fun AttachmentGallery(
                                     if (message != null) {
                                         Toast.makeText(
                                             context,
-                                            context.getString(message),
+                                            resources.getString(message),
                                             Toast.LENGTH_SHORT
                                         ).show()
                                     }

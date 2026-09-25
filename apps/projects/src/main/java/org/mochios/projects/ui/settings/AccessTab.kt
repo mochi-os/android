@@ -30,7 +30,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -65,7 +65,7 @@ fun AccessTab(
     viewModel: ProjectSettingsViewModel
 ) {
     var peopleQuery by remember { mutableStateOf("") }
-    val context = LocalContext.current
+    val resources = LocalResources.current
 
     val filteredPeople = if (peopleQuery.isBlank()) {
         uiState.people
@@ -102,7 +102,7 @@ fun AccessTab(
                 subjectAuthenticated = stringResource(R.string.projects_access_subject_authenticated),
                 anyoneDesc = stringResource(R.string.projects_access_anyone_desc),
                 authenticatedDesc = stringResource(R.string.projects_access_authenticated_desc),
-                selected = { name -> context.getString(R.string.projects_access_selected, name) }
+                selected = { name -> resources.getString(R.string.projects_access_selected, name) }
             ),
             users = uiState.userSearchResults.map { user ->
                 AccessCandidate(user.id, user.name.ifBlank { user.id })

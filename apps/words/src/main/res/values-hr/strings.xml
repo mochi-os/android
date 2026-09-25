@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_list_title">Words</string>
+    <string name="words_list_title">Riječi</string>
     <string name="words_list_menu">Izbornik</string>
     <string name="words_list_logout">Odjavi se</string>
     <string name="words_sidebar_completed">Završeno</string>

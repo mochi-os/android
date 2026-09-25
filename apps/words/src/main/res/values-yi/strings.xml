@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_list_title">Words</string>
+    <string name="words_list_title">ווערטער</string>
     <string name="words_list_menu">מעניו</string>
     <string name="words_list_logout">אַרויסקומען</string>
     <string name="words_sidebar_completed">פֿאַרענדיקט</string>

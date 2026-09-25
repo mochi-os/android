@@ -216,4 +216,5 @@
     <string name="people_sync_authorization">Conectează-te din nou pentru a sincroniza</string>
     <string name="people_sync_transport">Serverul nu a putut fi contactat</string>
     <string name="people_sync_refused">Un contact nu a putut fi sincronizat: %1$s</string>
+    <string name="people_contact_friend">Prieten Mochi</string>
 </resources>

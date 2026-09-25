@@ -68,6 +68,9 @@ import org.mochios.android.ui.components.rememberFileKind
 import org.mochios.crm.R
 import org.mochios.crm.model.CrmObject
 import org.mochios.crm.ui.`object`.FieldEditor
+import org.mochios.crm.util.creatableClasses
+import org.mochios.crm.util.parentChoice
+import org.mochios.crm.util.parentRequired
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -85,6 +88,12 @@ fun CreateObjectScreen(
     val options = details?.options.orEmpty()
     val objects = uiState.objects
 
+    // A class that needs a parent is only offered once one exists to put it
+    // under; the server refuses it anywhere else.
+    val creatable = remember(classes, hierarchy, objects) {
+        creatableClasses(classes, hierarchy, objects)
+    }
+
     LaunchedEffect(uiState.createdObjectId) {
         uiState.createdObjectId?.let { newId ->
             onCreated(newId)
@@ -92,28 +101,13 @@ fun CreateObjectScreen(
         }
     }
 
-    // A class the design gives parent classes cannot be created until an object
-    // exists to parent it, and the form has nothing but the blocked message to
-    // show for one. So the opening class is the first that can actually be
-    // created, not simply the first on offer.
-    val initialClassId = remember(details, uiState.activeView, objects) {
-        fun creatable(classId: String): Boolean {
-            val parentClasses = (hierarchy[classId] ?: emptyList())
-                .filter { id -> id.isNotBlank() }
-            return parentClasses.isEmpty() ||
-                objects.any { obj -> obj.objectClass in parentClasses }
-        }
+    // The opening class is the first the view asks for that can be created,
+    // else the first creatable class.
+    val initialClassId = remember(creatable, uiState.activeView) {
         // Only classes the CRM still defines: a view may name a deleted class.
-        val activeView = uiState.activeView
-        val preferred = if (activeView != null && activeView.classes.isNotEmpty()) {
-            activeView.classes.mapNotNull { id -> classes.find { cls -> cls.id == id } }
-        } else {
-            emptyList()
-        }
-        // What the view asked for first, every class after it as the fallback.
-        val ordered = preferred + classes
-        val chosen = ordered.firstOrNull { cls -> creatable(cls.id) } ?: ordered.firstOrNull()
-        chosen?.id.orEmpty()
+        val preferred = uiState.activeView?.classes.orEmpty()
+            .mapNotNull { id -> creatable.find { cls -> cls.id == id } }
+        (preferred + creatable).firstOrNull()?.id.orEmpty()
     }
 
     // Held rather than derived, because the type picker below writes to it. The
@@ -149,15 +143,14 @@ fun CreateObjectScreen(
     var selectedParentId by remember { mutableStateOf<String?>(null) }
     var parentExpanded by remember { mutableStateOf(false) }
 
-    // The picker offers no "none" entry, so a child object always names its
-    // parent. Nothing selected — the form just opened, or changing class
-    // cleared a parent the new class cannot take — falls back to the first
-    // candidate, the one the picker lists at the top.
+    // A class that may sit at the top level offers a "none" entry and opens on
+    // it. One that cannot has no such entry, so it always names its parent:
+    // nothing selected — the form just opened, or changing class cleared a
+    // parent the new class cannot take — falls back to the first candidate,
+    // the one the picker lists at the top.
+    val required = parentRequired(hierarchy, selectedClassId)
     LaunchedEffect(selectedClassId, parentCandidates) {
-        val stillValid = parentCandidates.any { candidate -> candidate.id == selectedParentId }
-        if (!stillValid) {
-            selectedParentId = parentCandidates.firstOrNull()?.id
-        }
+        selectedParentId = parentChoice(selectedParentId, parentCandidates, required)
     }
 
     // Per-field values entered on the form, keyed by field id. The title
@@ -213,15 +206,15 @@ fun CreateObjectScreen(
             classOptions[field.id].orEmpty().isEmpty()
     }
 
-    // The selected class is a child type — the design gives it parent classes —
-    // and nothing exists to parent it, so no create can succeed. Every field
-    // below would be busywork, so the form holds the message alone: Create is
-    // dead and Back is the way out.
-    val blockedNoParent = allowedParentClasses.any { id -> id.isNotBlank() } &&
-        parentCandidates.isEmpty()
+    // No class can be created — each needs a parent none exists for, or has
+    // no place at all — so no create can succeed. Every field below would be
+    // busywork, so the form holds the message alone: Create is dead and Back
+    // is the way out.
+    val blockedNoParent = creatable.isEmpty()
 
     val canCreate = details != null && selectedClassId.isNotBlank() &&
-        !blockedNoParent && !missingRequired && !uiState.isCreating
+        !blockedNoParent && (!required || selectedParentId != null) &&
+        !missingRequired && !uiState.isCreating
 
     Scaffold(
         topBar = {
@@ -330,13 +323,13 @@ fun CreateObjectScreen(
                                 modifier = Modifier.padding(bottom = 12.dp)
                             )
                         }
-                        if (classes.size > 1) {
+                        if (creatable.size > 1) {
                             ExposedDropdownMenuBox(
                                 expanded = classExpanded,
                                 onExpandedChange = { expanded -> classExpanded = expanded }
                             ) {
                                 MochiTextField(
-                                    value = classes.find { cls -> cls.id == selectedClassId }
+                                    value = creatable.find { cls -> cls.id == selectedClassId }
                                         ?.name
                                         .orEmpty(),
                                     onValueChange = {},
@@ -360,7 +353,7 @@ fun CreateObjectScreen(
                                     expanded = classExpanded,
                                     onDismissRequest = { classExpanded = false }
                                 ) {
-                                    classes.forEach { cls ->
+                                    creatable.forEach { cls ->
                                         MochiDropdownMenuItem(
                                             text = { Text(cls.name) },
                                             onClick = {
@@ -378,7 +371,8 @@ fun CreateObjectScreen(
                         }
 
                         // Parent picker, only for classes the hierarchy gives
-                        // parents. No root entry: such a class is a child type.
+                        // parents. The "none" entry only for a class that may
+                        // also sit at the top level.
                         if (parentCandidates.isNotEmpty()) {
                             val selectedParentLabel = selectedParentId?.let { id ->
                                 objects.firstOrNull { obj -> obj.id == id }
@@ -412,6 +406,21 @@ fun CreateObjectScreen(
                                     expanded = parentExpanded,
                                     onDismissRequest = { parentExpanded = false }
                                 ) {
+                                    if (!required) {
+                                        MochiDropdownMenuItem(
+                                            text = {
+                                                Text(
+                                                    stringResource(
+                                                        R.string.crm_create_object_parent_none
+                                                    )
+                                                )
+                                            },
+                                            onClick = {
+                                                selectedParentId = null
+                                                parentExpanded = false
+                                            },
+                                        )
+                                    }
                                     parentCandidates.forEach { candidate ->
                                         MochiDropdownMenuItem(
                                             text = { Text(parentLabel(candidate)) },

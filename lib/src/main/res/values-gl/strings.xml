@@ -271,6 +271,9 @@
     <string name="attachment_caption_add">Engadir lenda</string>
     <string name="attachment_caption_edit">Editar a lenda</string>
     <string name="about_check_background">Continuar en segundo plano</string>
+    <string name="update_install">Instalar</string>
+    <string name="update_available">Actualización dispoñible</string>
+    <string name="update_later">Máis tarde</string>
     <string name="notifications_category_unassigned">Sen asignar</string>
     <string name="notifications_change_category">Cambiar categoría de notificación</string>
     <string name="lightbox_comments_none">Aínda non hai comentarios nesta imaxe.</string>

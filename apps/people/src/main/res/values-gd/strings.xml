@@ -217,4 +217,5 @@
     <string name="people_sync_authorization">Clàraich a-steach a-rithist airson sioncronachadh</string>
     <string name="people_sync_transport">Cha b\' urrainn ruigsinn air an fhrithealaiche</string>
     <string name="people_sync_refused">Cha b\' urrainn dhuinn neach-aithne a shioncronachadh: %1$s</string>
+    <string name="people_contact_friend">Caraid Mochi</string>
 </resources>

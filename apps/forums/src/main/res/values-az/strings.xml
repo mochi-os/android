@@ -6,8 +6,8 @@
     <string name="forums_list_title">Forumlar</string>
     <string name="forums_list_find">Forumları tap</string>
     <string name="forums_list_logout">Çıx</string>
-    <string name="forums_list_unsubscribe">CRM-dən abunəlikdən çıx</string>
-    <string name="forums_list_unsubscribe_title">CRM-dən abunəlikdən çıx</string>
+    <string name="forums_list_unsubscribe">Abunəlikdən çıx</string>
+    <string name="forums_list_unsubscribe_title">Abunəlikdən çıx</string>
     <string name="forums_create_title">Forum yarat</string>
     <string name="forums_create_name">Ad</string>
     <string name="forums_create_privacy">Məxfilik</string>
@@ -26,7 +26,7 @@
     <string name="forums_sort_label">Sırala</string>
     <string name="forums_sort_new">Yeni</string>
     <string name="forums_sort_hot">İsti</string>
-    <string name="forums_sort_top">Mövzular</string>
+    <string name="forums_sort_top">Yuxarı</string>
     <string name="forums_sort_interests">Maraqlar</string>
     <string name="forums_post_title_field">Başlıq</string>
     <string name="forums_post_attach">Faylları qoş</string>
@@ -42,17 +42,17 @@
     <string name="forums_post_removed">Silindi</string>
     <string name="forums_post_pending">Gözləmədə</string>
     <string name="forums_post_pin">Sancaqla</string>
-    <string name="forums_post_unpin">Tanınmayan ödəniş</string>
+    <string name="forums_post_unpin">Sancağı götür</string>
     <string name="forums_post_lock">Kilidlə</string>
-    <string name="forums_post_unlock">Sancağı götür</string>
+    <string name="forums_post_unlock">Kilidi aç</string>
     <string name="forums_post_approve">Təsdiqlə</string>
     <string name="forums_post_remove">Sil</string>
     <string name="forums_post_restore">Bərpa et</string>
-    <string name="forums_post_report">Hesabat ver</string>
+    <string name="forums_post_report">Şikayət et</string>
     <string name="forums_comment_approve">Təsdiqlə</string>
     <string name="forums_comment_remove">Sil</string>
     <string name="forums_comment_restore">Bərpa et</string>
-    <string name="forums_comment_report">Hesabat ver</string>
+    <string name="forums_comment_report">Şikayət et</string>
     <string name="forums_post_tag_label">Etiket</string>
     <string name="forums_tab_general">Ümumi</string>
     <string name="forums_tab_access">Giriş</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">Etiket</string>
     <string name="forums_ai_account_default">Default hesab</string>
     <string name="forums_ai_prompt_reset">Standarta sıfırla</string>
-    <string name="forums_settings_unsubscribe">CRM-dən abunəlikdən çıx</string>
+    <string name="forums_settings_unsubscribe">Abunəlikdən çıx</string>
     <string name="forums_moderation_title">Moderasiya</string>
     <string name="forums_moderation_tab_queue">Növbə</string>
     <string name="forums_moderation_tab_reports">Hesabatlar</string>
@@ -104,7 +104,7 @@
     <string name="forums_report_reason_misinformation">Yanlış məlumat</string>
     <string name="forums_report_reason_offtopic">Mövzudan kənar</string>
     <string name="forums_report_reason_other">Digər</string>
-    <string name="forums_post_default_author">İstifadəçi yaradıldı</string>
+    <string name="forums_post_default_author">İstifadəçi</string>
     <string name="forums_comments">Şərhlər</string>
     <string name="forums_no_comments">Hələ şərh yoxdur</string>
     <string name="forums_comment_save">Saxla</string>
@@ -234,7 +234,7 @@
     <string name="forums_moderation_reject">Rədd et</string>
     <string name="forums_moderation_report_by">%1$s üzrə</string>
     <string name="forums_moderation_restriction_state_banned">Bloklandı</string>
-    <string name="forums_moderation_unit_days">məs. Staging</string>
+    <string name="forums_moderation_unit_days">gün</string>
     <string name="forums_settings_banner_saved">Banner yadda saxlandı</string>
     <string name="forums_settings_access_updated">Giriş yeniləndi</string>
     <string name="forums_settings_access_revoked">İcaxə ləğv edildi</string>
@@ -322,7 +322,7 @@
     <string name="forums_moderation_action_resolve">Həll edilmiş hesabat</string>
     <string name="forums_moderation_target_post">Post</string>
     <string name="forums_moderation_target_comment">Şərh</string>
-    <string name="forums_moderation_target_user">İstifadəçi yaradıldı</string>
+    <string name="forums_moderation_target_user">İstifadəçi</string>
     <string name="forums_moderation_reason_spam">Spam</string>
     <string name="forums_moderation_reason_harassment">Təqib</string>
     <string name="forums_moderation_reason_hate">Nifrət nitqi</string>

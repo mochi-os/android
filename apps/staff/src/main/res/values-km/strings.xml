@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Staff</string>
-    <string name="launcher_staff">បុគ្គលិក</string>
+    <string name="launcher_staff">Mochi Staff</string>
     <string name="staff_accounts_action_ban_title">ហាមឃាត់គណនី</string>
     <string name="staff_accounts_action_suspend_title">ផ្អាកគណនី</string>
     <string name="staff_accounts_action_unban_title">ដោះការហាមឃាត់</string>

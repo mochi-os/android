@@ -265,4 +265,5 @@
     <string name="format_code">Código</string>
     <string name="common_preview">Vista previa</string>
     <string name="rss_revoke_confirm">Revocar</string>
+    <string name="update_install">Instalá</string>
 </resources>

@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">Θέμα</string>
     <string name="accounts_field_secret">Μυστικό υπογραφής</string>
     <string name="account_totp_open">Άνοιγμα στην εφαρμογή ελέγχου ταυτότητας</string>
+    <string name="accounts_revoke">Ανάκληση πρόσβασης</string>
+    <string name="accounts_capability_calendar">Ημερολόγιο</string>
+    <string name="accounts_capability_notify">Ειδοποιήσεις</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Σύνδεση</string>
+    <string name="accounts_provider_caldav">Διακομιστής ημερολογίου</string>
+    <string name="accounts_revoke_confirm">Αυτό θα ανακαλέσει την πρόσβαση στο ημερολόγιο του %1$s. Η σύνδεση με %2$s παραμένει μέχρι να την αποσυνδέσετε στη σελίδα σύνδεσης.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

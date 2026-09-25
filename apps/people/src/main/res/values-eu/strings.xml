@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Hasi saioa berriro sinkronizatzeko</string>
     <string name="people_sync_transport">Ezin izan da zerbitzarira iritsi</string>
     <string name="people_sync_refused">Ezin izan da kontaktu bat sinkronizatu: %1$s</string>
+    <string name="people_contact_friend">Mochi laguna</string>
 </resources>

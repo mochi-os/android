@@ -273,6 +273,9 @@
     <string name="attachment_caption_add">Afegeix una llegenda</string>
     <string name="attachment_caption_edit">Edita la llegenda</string>
     <string name="about_check_background">Continua en segon pla</string>
+    <string name="update_install">Instal·la</string>
+    <string name="update_available">Actualització disponible</string>
+    <string name="update_later">Més tard</string>
     <string name="notifications_category_unassigned">Sense assignar</string>
     <string name="notifications_change_category">Canvia la categoria de notificació</string>
     <string name="lightbox_comments_none">Encara no hi ha comentaris a aquesta imatge.</string>

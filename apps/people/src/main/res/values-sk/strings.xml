@@ -216,4 +216,5 @@
     <string name="people_sync_authorization">Na synchronizáciu sa znova prihláste</string>
     <string name="people_sync_transport">Nepodarilo sa spojiť so serverom</string>
     <string name="people_sync_refused">Kontakt sa nepodarilo synchronizovať: %1$s</string>
+    <string name="people_contact_friend">Priateľ v Mochi</string>
 </resources>

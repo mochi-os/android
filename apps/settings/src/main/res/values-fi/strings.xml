@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">Aihe</string>
     <string name="accounts_field_secret">Allekirjoitussalaisuus</string>
     <string name="account_totp_open">Avaa todennussovelluksessa</string>
+    <string name="accounts_revoke">Peruuta käyttöoikeus</string>
+    <string name="accounts_capability_calendar">Kalenteri</string>
+    <string name="accounts_capability_notify">Ilmoitukset</string>
+    <string name="accounts_capability_ai">Tekoäly</string>
+    <string name="accounts_capability_login">Kirjautuminen</string>
+    <string name="accounts_provider_caldav">Kalenteripalvelin</string>
+    <string name="accounts_revoke_confirm">Tämä peruuttaa tilin %1$s kalenterin käyttöoikeuden. Kirjautuminen tilillä %2$s säilyy, kunnes poistat sen linkityksen kirjautumissivulla.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

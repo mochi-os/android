@@ -15,9 +15,11 @@ import android.util.Log
 import androidx.core.content.FileProvider
 
 /**
- * Hand a pre-downloaded APK to the system installer, from the host Activity's
- * onResume. Android's own "Update Mochi?" confirmation for a sideloaded install
- * cannot be suppressed.
+ * Offer a pre-downloaded APK and, when the user says so, hand it to the system
+ * installer. The installer is never launched unasked: a Samsung with Auto
+ * Blocker on refuses it, and the refusal would otherwise greet the user on
+ * every return to the app. Android's own "Update Mochi?" confirmation for a
+ * sideloaded install cannot be suppressed.
  */
 object UpdateInstaller {
 
@@ -25,66 +27,78 @@ object UpdateInstaller {
     private const val FILE_PROVIDER_AUTHORITY_SUFFIX = ".updates"
 
     /**
-     * Launch the system installer for a staged APK newer than the running one.
-     * Idempotent, called every onResume: the prompted version is recorded so a
-     * declined update is not re-asked until a newer one is staged, or
-     * [forcePrompt].
+     * The staged version to offer the user, or null. Called from the host
+     * Activity's onResume: a version the user has already answered is not
+     * offered again until a newer one is staged, unless [force] - the About
+     * dialog, where they asked explicitly.
      */
-    fun promptIfPending(activity: Activity) {
-        promptInternal(activity, force = false)
-    }
-
-    /**
-     * Prompt even when the user has already been asked for this version - for
-     * the About dialog, where they asked explicitly.
-     */
-    fun forcePrompt(activity: Activity) {
-        promptInternal(activity, force = true)
-    }
-
-    private fun promptInternal(activity: Activity, force: Boolean) {
-        val ctx = activity.applicationContext
+    fun pending(context: Context, force: Boolean = false): String? {
+        val ctx = context.applicationContext
         if (InstallSource.isStoreInstalled(ctx)) {
             // Belt and braces: UpdateChecker should already have skipped
             // the download, but if a pending APK is sitting in cacheDir
             // from a previous non-store install + later store reinstall,
-            // never prompt the user to install it.
-            return
+            // never offer it.
+            return null
         }
         val prefs = UpdateChecker.prefs(ctx)
-        val pending = prefs.getString(UpdateChecker.KEY_PENDING, "")
-            ?.takeIf { it.isNotBlank() } ?: return
+        val staged = prefs.getString(UpdateChecker.KEY_PENDING, "")
+            ?.takeIf { it.isNotBlank() } ?: return null
 
         val current = UpdateChecker.currentVersionName(ctx)
-        if (current != null && UpdateChecker.compareVersions(pending, current) <= 0) {
+        if (current != null && UpdateChecker.compareVersions(staged, current) <= 0) {
             // Already installed (either by this prompt or out-of-band) — clean up.
             clear(ctx)
-            return
+            return null
         }
 
-        // Skip if the user has already been prompted for this exact version
-        // and hasn't asked us to retry. A newer staged version clears the
-        // suppression because KEY_PROMPTED_VERSION won't match.
-        val promptedFor = prefs.getString(KEY_PROMPTED_VERSION, "") ?: ""
-        if (!force && promptedFor == pending) {
-            Log.d(TAG, "Already prompted for $pending; not re-asking")
-            return
-        }
-
-        val apk = UpdateChecker.apkFile(ctx, pending)
+        val apk = UpdateChecker.apkFile(ctx, staged)
         // Length only, not the digest: this runs on the main thread from every
         // onResume, and hashing 40 MB there would be felt. UpdateChecker
         // re-hashes on the next check.
         val size = prefs.getLong(UpdateChecker.KEY_PENDING_SIZE, 0L)
         if (!apk.exists() || apk.length() == 0L || (size > 0L && apk.length() != size)) {
-            Log.w(TAG, "Pending update $pending is ${apk.length()} bytes, expected $size; clearing")
+            Log.w(TAG, "Pending update $staged is ${apk.length()} bytes, expected $size; clearing")
             clear(ctx)
-            return
+            return null
         }
+
+        return offer(staged, current, prefs.getString(KEY_PROMPTED_VERSION, ""), force)
+    }
+
+    /**
+     * Whether [pending] is worth offering: newer than [current] (an unknown
+     * current never blocks), and not the version already answered as
+     * [promptedFor] unless [force]. A newer stage clears the suppression,
+     * because it no longer matches.
+     */
+    internal fun offer(pending: String?, current: String?, promptedFor: String?, force: Boolean): String? {
+        val version = pending?.takeIf { it.isNotBlank() } ?: return null
+        if (current != null && UpdateChecker.compareVersions(version, current) <= 0) return null
+        if (!force && promptedFor == version) return null
+        return version
+    }
+
+    /** The user answered "later": [version] is not offered again until a newer one is staged. */
+    fun decline(context: Context, version: String) {
+        UpdateChecker.prefs(context.applicationContext).edit()
+            .putString(KEY_PROMPTED_VERSION, version)
+            .apply()
+    }
+
+    /**
+     * Launch the system installer for the staged [version] - the user's
+     * answer to [pending]'s offer, or the About dialog's explicit ask.
+     */
+    fun install(activity: Activity, version: String) {
+        val ctx = activity.applicationContext
+        val prefs = UpdateChecker.prefs(ctx)
+        val apk = UpdateChecker.apkFile(ctx, version)
 
         // Android 8+ needs per-app "install unknown apps" consent; without it
         // the system installer bounces the user with a generic dialog. Send
-        // them to the toggle instead and bail out - the next onResume retries.
+        // them to the toggle instead and bail out - the offer is not recorded
+        // as answered, so the next onResume asks again.
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O &&
             !ctx.packageManager.canRequestPackageInstalls()) {
             try {
@@ -93,7 +107,7 @@ object UpdateInstaller {
                     Uri.parse("package:" + ctx.packageName),
                 ).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 activity.startActivity(grant)
-                Log.i(TAG, "Prompting user to grant install-unknown-apps for $pending")
+                Log.i(TAG, "Prompting user to grant install-unknown-apps for $version")
             } catch (e: Exception) {
                 // Some OEM builds don't expose the per-app screen; fall back
                 // to the global one so the user can find the toggle manually.
@@ -108,11 +122,11 @@ object UpdateInstaller {
             return
         }
 
-        // Record that we've prompted for this version BEFORE starting the
-        // activity. The system dialog shows independently of our Activity
-        // lifecycle, and we'd otherwise re-prompt on every onResume cycle
-        // while the dialog sits there (and forever if the user taps No).
-        prefs.edit().putString(KEY_PROMPTED_VERSION, pending).apply()
+        // Record the answer BEFORE starting the activity. The system dialog
+        // shows independently of our Activity lifecycle, and we'd otherwise
+        // offer again on every onResume while it sits there (and forever if
+        // the user taps No, or Auto Blocker refuses it).
+        prefs.edit().putString(KEY_PROMPTED_VERSION, version).apply()
 
         try {
             val uri = FileProvider.getUriForFile(
@@ -127,10 +141,18 @@ object UpdateInstaller {
                 addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             }
             activity.startActivity(install)
-            Log.i(TAG, "Launched installer for $pending")
+            Log.i(TAG, "Launched installer for $version")
         } catch (e: Exception) {
             Log.w(TAG, "Could not launch installer: ${e.message}")
         }
+    }
+
+    /**
+     * Straight to the installer, even for a version the user has already
+     * declined - for the About dialog, where they asked explicitly.
+     */
+    fun forcePrompt(activity: Activity) {
+        pending(activity, force = true)?.let { version -> install(activity, version) }
     }
 
     private fun clear(ctx: Context) {

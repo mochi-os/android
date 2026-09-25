@@ -21,13 +21,13 @@
     <string name="chess_open_chat">ചാറ്റ് പാനൽ തുറക്കുക</string>
     <string name="chess_open_actions">ഗെയിം പ്രവർത്തനങ്ങൾ തുറക്കുക</string>
     <string name="chess_offer_draw">സമനില വാഗ്ദാനം ചെയ്യുക</string>
-    <string name="chess_resign">ഗെയിം പിന്മാറണോ?</string>
-    <string name="chess_rematch">നീക്കം ചെയ്യുക</string>
+    <string name="chess_resign">പിന്മാറുക</string>
+    <string name="chess_rematch">വീണ്ടും മത്സരം</string>
     <string name="chess_delete_game">ഗെയിം ഇല്ലാതാക്കുക</string>
     <string name="chess_side_white">വെള്ള</string>
     <string name="chess_side_black">കറുപ്പ്</string>
-    <string name="chess_resign_title">പിന്മാറുന്നു...</string>
-    <string name="chess_resign_confirm">ഗെയിം പിന്മാറണോ?</string>
+    <string name="chess_resign_title">ഗെയിമിൽ നിന്ന് പിന്മാറണോ?</string>
+    <string name="chess_resign_confirm">പിന്മാറുക</string>
     <string name="chess_delete_confirm">ഗെയിം ഇല്ലാതാക്കുക</string>
     <string name="chess_draw_accept">സ്വീകരിക്കുക</string>
     <string name="chess_draw_decline">നിരസിക്കുക</string>
@@ -63,7 +63,7 @@
     <string name="chess_delete_title">ഗെയിം ഇല്ലാതാക്കണോ?</string>
     <string name="chess_delete_message">ഇത് കളിയെ നിങ്ങളുടെ പട്ടികയിൽ നിന്ന് നീക്കം ചെയ്യും.</string>
     <string name="chess_ws_connecting">കണക്റ്റ് ചെയ്യുന്നു…</string>
-    <string name="chess_ws_disconnected">Offline</string>
+    <string name="chess_ws_disconnected">ഓഫ്‌ലൈൻ</string>
     <string name="chess_ws_reconnecting">വീണ്ടും കണക്റ്റ് ചെയ്യുന്നു…</string>
     <string name="chess_ws_failed">കണക്ഷൻ പരാജയപ്പെട്ടു</string>
     <string name="chess_move_capture">%1$s %2$s എടുത്തു</string>

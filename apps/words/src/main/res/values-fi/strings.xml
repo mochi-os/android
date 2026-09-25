@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_list_title">Words</string>
+    <string name="words_list_title">Sanat</string>
     <string name="words_list_menu">Valikko</string>
     <string name="words_list_logout">Kirjaudu ulos</string>
     <string name="words_sidebar_completed">Valmis</string>

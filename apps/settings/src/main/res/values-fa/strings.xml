@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">موضوع</string>
     <string name="accounts_field_secret">راز امضا</string>
     <string name="account_totp_open">باز کردن در برنامه احراز هویت</string>
+    <string name="accounts_revoke">لغو دسترسی</string>
+    <string name="accounts_capability_calendar">تقویم</string>
+    <string name="accounts_capability_notify">اعلان‌ها</string>
+    <string name="accounts_capability_ai">هوش مصنوعی</string>
+    <string name="accounts_capability_login">ورود</string>
+    <string name="accounts_provider_caldav">سرور تقویم</string>
+    <string name="accounts_revoke_confirm">این کار دسترسی تقویم %1$s را لغو می‌کند. ورود با %2$s تا زمانی که در صفحهٔ ورود آن را جدا کنید باقی می‌ماند.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

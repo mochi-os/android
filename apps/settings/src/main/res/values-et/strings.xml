@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">Teema</string>
     <string name="accounts_field_secret">Allkirjastamise saladus</string>
     <string name="account_totp_open">Ava autentimisrakenduses</string>
+    <string name="accounts_revoke">Tühista juurdepääs</string>
+    <string name="accounts_capability_calendar">Kalender</string>
+    <string name="accounts_capability_notify">Teavitused</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Sisselogimine</string>
+    <string name="accounts_provider_caldav">Kalendriserver</string>
+    <string name="accounts_revoke_confirm">See tühistab %1$s kalendri juurdepääsu. Sisselogimine %2$s kaudu jääb alles, kuni selle sisselogimislehel lahutate.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

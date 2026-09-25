@@ -8,7 +8,10 @@ package org.mochios.calendars
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
+import org.mochios.calendars.model.Instance
+import org.mochios.calendars.model.Zone
 import org.mochios.calendars.navigation.CalendarsApp
+import org.mochios.calendars.ui.editor.Scope
 import org.mochios.calendars.ui.router.CalendarsSection
 import org.mochios.calendars.ui.router.calendarsView
 
@@ -62,6 +65,8 @@ class CalendarsRouterTest {
             CalendarsApp.EVENT_EDIT,
             CalendarsApp.newEvent(0),
             CalendarsApp.event("event-1", 1_790_067_600),
+            CalendarsApp.copyEvent("event-1", 1_790_067_600, Scope.ONE),
+            CalendarsApp.copyOccurrence(Instance(summary = "Tea")),
         )
         for (route in routes) {
             assertTrue(route, route.startsWith("calendars/"))
@@ -75,6 +80,69 @@ class CalendarsRouterTest {
             "calendars/events/edit/event-1?occurrence=1790067600",
             CalendarsApp.event("event-1", 1_790_067_600),
         )
+        assertEquals("calendars/events/new?start=0", CalendarsApp.newEvent())
+    }
+
+    @Test
+    fun `a copy of a stored event names it, the occurrence and how far the copy reaches`() {
+        assertEquals(
+            "calendars/events/new?source=event&copy=event-1&occurrence=1790067600&scope=one",
+            CalendarsApp.copyEvent("event-1", 1_790_067_600, Scope.ONE),
+        )
+        assertEquals(
+            "calendars/events/new?source=event&copy=event-1&occurrence=0&scope=all",
+            CalendarsApp.copyEvent("event-1", 0, Scope.ALL),
+        )
+    }
+
+    /**
+     * An occurrence with no stored event travels in the route itself, so
+     * every character its text can hold has to survive the query string.
+     */
+    @Test
+    fun `a copy of an occurrence with no stored event carries the occurrence itself, encoded`() {
+        val instance = Instance(
+            event = "birthday-1",
+            summary = "Tea & cake",
+            location = "Café",
+            description = "Line one\nline two",
+            start = 1,
+            finish = 2,
+            allday = true,
+            date = "2026-09-16",
+            zone = Zone("Europe/London", ""),
+        )
+        assertEquals(
+            "calendars/events/new?source=occurrence&start=1&finish=2&allday=1&date=2026-09-16" +
+                "&summary=Tea%20%26%20cake&location=Caf%C3%A9&description=Line%20one%0Aline%20two" +
+                "&zones=Europe%2FLondon%2C",
+            CalendarsApp.copyOccurrence(instance),
+        )
+        val timed = Instance(summary = "Call", start = 3, finish = 4)
+        assertEquals(
+            "calendars/events/new?source=occurrence&start=3&finish=4&allday=0&date=" +
+                "&summary=Call&location=&description=&zones=%2C",
+            CalendarsApp.copyOccurrence(timed),
+        )
+    }
+
+    /** A parameter the pattern does not name would be dropped on the way to the editor. */
+    @Test
+    fun `every parameter a copy route carries is one the new-event pattern names`() {
+        val routes = listOf(
+            CalendarsApp.copyEvent("event-1", 1, Scope.ALL),
+            CalendarsApp.copyOccurrence(Instance(summary = "Tea", date = "2026-09-16", zone = Zone("a", "b"))),
+        )
+        for (route in routes) {
+            assertEquals("calendars/events/new", route.substringBefore('?'))
+            for (parameter in route.substringAfter('?').split('&').map { it.substringBefore('=') }) {
+                assertTrue(
+                    parameter,
+                    CalendarsApp.EVENT_NEW.contains("?$parameter={$parameter}") ||
+                        CalendarsApp.EVENT_NEW.contains("&$parameter={$parameter}"),
+                )
+            }
+        }
         assertEquals("calendars/events/new?start=0", CalendarsApp.newEvent())
     }
 

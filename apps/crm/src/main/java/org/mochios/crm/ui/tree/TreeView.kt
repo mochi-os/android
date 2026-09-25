@@ -28,6 +28,7 @@ import org.mochios.crm.model.CrmObject
 import org.mochios.crm.model.Person
 import org.mochios.crm.model.CrmView
 import org.mochios.crm.ui.crm.CrmViewModel
+import org.mochios.crm.util.reparentAllowed
 
 data class TreeNode(
     val obj: CrmObject,
@@ -138,12 +139,17 @@ private fun handleTreeDrop(
 
     val allObjects = viewModel.uiState.value.objects
     val sourceObj = allObjects.find { it.id == sourceId } ?: return
+    // A drop the hierarchy forbids does nothing, rather than being sent for
+    // the server to refuse.
+    val hierarchy = viewModel.uiState.value.crmDetails?.hierarchy.orEmpty()
 
     when (edge) {
         DragEdge.On -> {
             // Reparent under the target. The server appends to the end of
             // the new parent's children automatically.
-            if (sourceObj.parent != targetNode.obj.id) {
+            if (sourceObj.parent != targetNode.obj.id &&
+                reparentAllowed(sourceObj, targetNode.obj.id, allObjects, hierarchy)
+            ) {
                 viewModel.reparentObject(sourceId, targetNode.obj.id)
             }
         }
@@ -154,7 +160,9 @@ private fun handleTreeDrop(
                 // Cross-parent: reparent only, the server appends. A follow-up
                 // rank update would race the reparent and land against the
                 // wrong parent.
-                viewModel.reparentObject(sourceId, newParent)
+                if (reparentAllowed(sourceObj, newParent, allObjects, hierarchy)) {
+                    viewModel.reparentObject(sourceId, newParent)
+                }
                 return
             }
             // Same-parent reorder. The server reads an empty scope as

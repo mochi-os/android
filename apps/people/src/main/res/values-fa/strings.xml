@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">برای همگام‌سازی دوباره وارد شوید</string>
     <string name="people_sync_transport">دسترسی به سرور ممکن نشد</string>
     <string name="people_sync_refused">همگام‌سازی یک مخاطب ممکن نشد: %1$s</string>
+    <string name="people_contact_friend">دوست Mochi</string>
 </resources>

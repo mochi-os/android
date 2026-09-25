@@ -214,4 +214,5 @@
     <string name="people_sync_authorization">Masuk lagi untuk menyinkronkan</string>
     <string name="people_sync_transport">Tidak dapat menjangkau server</string>
     <string name="people_sync_refused">Tidak dapat menyinkronkan kontak: %1$s</string>
+    <string name="people_contact_friend">Teman Mochi</string>
 </resources>

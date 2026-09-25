@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">सिङ्क गर्न फेरि लग इन गर्नुहोस्</string>
     <string name="people_sync_transport">सर्भरमा पुग्न सकिएन</string>
     <string name="people_sync_refused">एउटा सम्पर्क सिङ्क गर्न सकिएन: %1$s</string>
+    <string name="people_contact_friend">Mochi साथी</string>
 </resources>

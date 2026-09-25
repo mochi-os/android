@@ -391,4 +391,12 @@
     <string name="accounts_field_topic">Тема</string>
     <string name="accounts_field_secret">Секрет подписи</string>
     <string name="account_totp_open">Открыть в приложении-аутентификаторе</string>
+    <string name="accounts_revoke">Отозвать доступ</string>
+    <string name="accounts_capability_calendar">Календарь</string>
+    <string name="accounts_capability_notify">Уведомления</string>
+    <string name="accounts_capability_ai">ИИ</string>
+    <string name="accounts_capability_login">Вход</string>
+    <string name="accounts_provider_caldav">Сервер календарей</string>
+    <string name="accounts_revoke_confirm">Это отзовёт доступ к календарю для %1$s. Вход через %2$s сохранится, пока вы не отвяжете его на странице входа.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

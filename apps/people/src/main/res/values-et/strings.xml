@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Logi sünkroonimiseks uuesti sisse</string>
     <string name="people_sync_transport">Serveriga ei õnnestunud ühendust luua</string>
     <string name="people_sync_refused">Kontakti ei õnnestunud sünkroonida: %1$s</string>
+    <string name="people_contact_friend">Mochi sõber</string>
 </resources>

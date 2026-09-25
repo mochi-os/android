@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Staff</string>
-    <string name="launcher_staff">Nhân viên</string>
+    <string name="launcher_staff">Mochi Staff</string>
     <string name="staff_accounts_action_ban_title">Cấm tài khoản</string>
     <string name="staff_accounts_action_suspend_title">Tạm ngưng tài khoản</string>
     <string name="staff_accounts_action_unban_title">Bỏ chặn</string>

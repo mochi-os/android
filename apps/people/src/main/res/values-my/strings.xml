@@ -214,4 +214,5 @@
     <string name="people_sync_authorization">ထပ်တူပြုရန် ထပ်မံဝင်ရောက်ပါ</string>
     <string name="people_sync_transport">ဆာဗာသို့ ဆက်သွယ်၍မရပါ</string>
     <string name="people_sync_refused">အဆက်အသွယ်တစ်ခုကို ထပ်တူပြု၍မရပါ: %1$s</string>
+    <string name="people_contact_friend">Mochi သူငယ်ချင်း</string>
 </resources>

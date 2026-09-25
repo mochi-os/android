@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">سنڪ ڪرڻ لاءِ ٻيھر لاگ ان ٿيو</string>
     <string name="people_sync_transport">سرور تائين پھچي نه سگھيو</string>
     <string name="people_sync_refused">هڪ رابطو سنڪ نه ٿي سگهيو: %1$s</string>
+    <string name="people_contact_friend">Mochi دوست</string>
 </resources>

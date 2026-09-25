@@ -386,4 +386,12 @@
     <string name="accounts_field_topic">Chủ đề</string>
     <string name="accounts_field_secret">Bí mật ký</string>
     <string name="account_totp_open">Mở trong ứng dụng xác thực</string>
+    <string name="accounts_revoke">Thu hồi quyền truy cập</string>
+    <string name="accounts_capability_calendar">Lịch</string>
+    <string name="accounts_capability_notify">Thông báo</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Đăng nhập</string>
+    <string name="accounts_provider_caldav">Máy chủ lịch</string>
+    <string name="accounts_revoke_confirm">Thao tác này sẽ thu hồi quyền truy cập lịch của %1$s. Việc đăng nhập bằng %2$s vẫn còn cho đến khi bạn hủy liên kết trên trang Đăng nhập.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

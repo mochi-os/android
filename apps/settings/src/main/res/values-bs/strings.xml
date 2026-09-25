@@ -389,4 +389,12 @@
     <string name="accounts_field_topic">Tema</string>
     <string name="accounts_field_secret">Tajna za potpisivanje</string>
     <string name="account_totp_open">Otvori u aplikaciji za autentifikaciju</string>
+    <string name="accounts_revoke">Opozovi pristup</string>
+    <string name="accounts_capability_calendar">Kalendar</string>
+    <string name="accounts_capability_notify">Obavještenja</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Prijava</string>
+    <string name="accounts_provider_caldav">Server kalendara</string>
+    <string name="accounts_revoke_confirm">Ovo će opozvati pristup kalendaru za %1$s. Prijava putem %2$s ostaje dok je ne prekinete na stranici za prijavu.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

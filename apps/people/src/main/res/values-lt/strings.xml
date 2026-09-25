@@ -216,4 +216,5 @@
     <string name="people_sync_authorization">Prisijunkite iš naujo, kad galėtumėte sinchronizuoti</string>
     <string name="people_sync_transport">Nepavyko pasiekti serverio</string>
     <string name="people_sync_refused">Nepavyko sinchronizuoti kontakto: %1$s</string>
+    <string name="people_contact_friend">Mochi draugas</string>
 </resources>

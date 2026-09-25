@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">موضوع</string>
     <string name="accounts_field_secret">دستخط راز</string>
     <string name="account_totp_open">تصديق ڪندڙ ايپ ۾ کوليو</string>
+    <string name="accounts_revoke">رسائي واپس وٺو</string>
+    <string name="accounts_capability_calendar">ڪئلينڊر</string>
+    <string name="accounts_capability_notify">اطلاعون</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">سائن-اِن</string>
+    <string name="accounts_provider_caldav">ڪئلينڊر سرور</string>
+    <string name="accounts_revoke_confirm">هي %1$s جي ڪئلينڊر رسائي منسوخ ڪندو. %2$s سان سائن-اِن تيستائين رهندو جيستائين توهان لاگ اِن صفحي تي ان کي الڳ نه ڪريو.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chess_app_title">Chess</string>
-    <string name="chess_sidebar_header">Chess</string>
+    <string name="chess_app_title">ໝາກຮຸກ</string>
+    <string name="chess_sidebar_header">ໝາກຮຸກ</string>
     <string name="chess_sidebar_active">ເກມທີ່ໃຊ້ງານຢູ່</string>
     <string name="chess_sidebar_completed">ສຳເລັດແລ້ວ</string>
     <string name="chess_sidebar_new_game">ເກມໃໝ່</string>

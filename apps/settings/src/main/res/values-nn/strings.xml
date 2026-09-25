@@ -389,4 +389,12 @@
     <string name="accounts_field_topic">Emne</string>
     <string name="accounts_field_secret">Signeringsløyndom</string>
     <string name="account_totp_open">Opne i autentiseringsapp</string>
+    <string name="accounts_revoke">Trekk tilbake tilgang</string>
+    <string name="accounts_capability_calendar">Kalender</string>
+    <string name="accounts_capability_notify">Varsel</string>
+    <string name="accounts_capability_ai">KI</string>
+    <string name="accounts_capability_login">Pålogging</string>
+    <string name="accounts_provider_caldav">Kalendertenar</string>
+    <string name="accounts_revoke_confirm">Dette tilbakekallar kalendertilgangen til %1$s. Pålogging med %2$s står ved lag til du koplar henne frå på påloggingssida.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

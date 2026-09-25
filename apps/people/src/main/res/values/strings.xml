@@ -20,6 +20,7 @@
     <string name="people_contacts_sort_recent">Recently added</string>
     <string name="people_contacts_actions">Contact actions</string>
     <string name="people_contacts_friend">Friend</string>
+    <string name="people_contact_friend">Mochi friend</string>
     <string name="people_contacts_invite">Invite</string>
     <string name="people_contacts_invited">Invited</string>
     <string name="people_contacts_accept">Accept</string>
@@ -40,13 +41,13 @@
     <string name="people_contact_section_address">Address</string>
     <string name="people_contact_section_detail">Details</string>
     <string name="people_contact_name">Name</string>
-    <string name="people_contact_given">Given name</string>
-    <string name="people_contact_family">Family name</string>
+    <string name="people_contact_given">Forename</string>
+    <string name="people_contact_family">Surname</string>
     <string name="people_contact_nickname">Nickname</string>
     <string name="people_contact_email">Email</string>
-    <string name="people_contact_phone">Phone</string>
+    <string name="people_contact_phone">Telephone</string>
     <string name="people_contact_add_email">Add email</string>
-    <string name="people_contact_add_phone">Add phone</string>
+    <string name="people_contact_add_phone">Add telephone</string>
     <string name="people_contact_add_address">Add address</string>
     <string name="people_contact_street">Street</string>
     <string name="people_contact_city">City</string>
@@ -213,8 +214,8 @@
     <string name="people_person_decline">Decline</string>
     <string name="people_profile_too_long">Profile is too long</string>
 
-    <!-- Connect a device (CardDAV) -->
-    <string name="people_device_title">Connect a device</string>
+    <!-- Connect device (CardDAV) -->
+    <string name="people_device_title">Connect device</string>
     <string name="people_device_name">Device name</string>
     <string name="people_device_create">Create</string>
     <string name="people_device_server">Server</string>

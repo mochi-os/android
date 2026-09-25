@@ -68,6 +68,8 @@ import org.mochios.crm.model.FieldOption
 import org.mochios.crm.model.CrmDetails
 import org.mochios.crm.model.CrmField
 import org.mochios.crm.model.CrmObject
+import org.mochios.crm.util.HIERARCHY_ROOT
+import org.mochios.crm.util.parentAllowed
 import org.mochios.android.R as MochiR
 
 @Composable
@@ -113,6 +115,7 @@ fun PropertiesTab(
         val parentOptions = uiState.siblingObjects
             .filter { it.objectClass in allowedParentClasses && it.id !in descendants }
         val currentParent = uiState.siblingObjects.find { it.id == obj.parent }
+        val rootAllowed = parentAllowed(crmDetails.hierarchy, obj.objectClass, HIERARCHY_ROOT)
         val showParent = parentOptions.isNotEmpty() || currentParent != null
         val parentLabel = stringResource(R.string.crm_parent_label)
 
@@ -126,6 +129,7 @@ fun PropertiesTab(
                     crmDetails = crmDetails,
                     currentParent = currentParent,
                     parentOptions = parentOptions,
+                    rootAllowed = rootAllowed,
                     canWrite = canWrite,
                     onSelect = { newParent -> viewModel.updateParent(newParent) }
                 )
@@ -155,6 +159,7 @@ fun PropertiesTab(
                         crmDetails = crmDetails,
                         currentParent = currentParent,
                         parentOptions = parentOptions,
+                        rootAllowed = rootAllowed,
                         canWrite = canWrite,
                         onSelect = { newParent -> viewModel.updateParent(newParent) }
                     )
@@ -251,6 +256,7 @@ private fun ParentPicker(
     crmDetails: CrmDetails,
     currentParent: CrmObject?,
     parentOptions: List<CrmObject>,
+    rootAllowed: Boolean,
     canWrite: Boolean,
     onSelect: (String) -> Unit
 ) {
@@ -304,20 +310,22 @@ private fun ParentPicker(
                     .fillMaxWidth()
                     .padding(horizontal = 8.dp, vertical = 4.dp)
             )
-            // (no parent) option
-            MochiDropdownMenuItem(
-                text = {
-                    Text(
-                        text = stringResource(R.string.crm_parent_none),
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                },
-                onClick = {
-                    onSelect("")
-                    expanded = false
-                    query = ""
-                },
-            )
+            // (no parent) option, for a class that may sit at the top level
+            if (rootAllowed) {
+                MochiDropdownMenuItem(
+                    text = {
+                        Text(
+                            text = stringResource(R.string.crm_parent_none),
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    },
+                    onClick = {
+                        onSelect("")
+                        expanded = false
+                        query = ""
+                    },
+                )
+            }
             val q = query.trim().lowercase()
             parentOptions
                 .map { it to objectDisplayTitle(it, crmDetails, untitled) }

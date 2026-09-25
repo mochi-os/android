@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_list_title">Words</string>
+    <string name="words_list_title">کلمات</string>
     <string name="words_list_menu">منو</string>
     <string name="words_list_logout">خروج</string>
     <string name="words_sidebar_completed">تکمیل شد</string>

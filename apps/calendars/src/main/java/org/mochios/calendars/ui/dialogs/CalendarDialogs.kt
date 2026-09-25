@@ -31,6 +31,8 @@ import org.mochios.android.ui.components.DataChip
 import org.mochios.android.ui.components.LabeledSelectField
 import org.mochios.android.ui.components.LabeledSwitchRow
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiButtonTone
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Calendar
@@ -163,6 +165,7 @@ fun PreferencesDialog(
     var previous by rememberSaveable { mutableIntStateOf(preferences.multiweek.previous) }
     var duration by rememberSaveable { mutableIntStateOf(preferences.duration) }
     var reminder by rememberSaveable { mutableIntStateOf(preferences.reminder) }
+    var zones by rememberSaveable { mutableStateOf(preferences.zones) }
 
     val hours = (0..23).map { it.toString() to it.toString().padStart(2, '0') + ":00" }
     val ends = (1..24).map { it.toString() to it.toString().padStart(2, '0') + ":00" }
@@ -189,6 +192,7 @@ fun PreferencesDialog(
                     duration = duration,
                     reminder = reminder,
                     view = preferences.view,
+                    zones = zones,
                 ),
             )
         },
@@ -266,6 +270,11 @@ fun PreferencesDialog(
                     selected = reminder.toString(),
                     onSelect = { reminder = it.toIntOrNull() ?: reminder },
                 )
+                LabeledSwitchRow(
+                    label = stringResource(R.string.calendars_preferences_zones),
+                    checked = zones,
+                    onCheckedChange = { zones = it },
+                )
             }
         },
     )
@@ -284,29 +293,45 @@ fun reminderOptions(): List<Pair<String, String>> = listOf(
 )
 
 /**
- * "This event" or "All events" for a recurring occurrence. An override
- * changes or removes the one occurrence; the whole series changes or removes
- * every one of them.
+ * "This event", "This and following" or "All events" for a recurring
+ * occurrence. An override changes or removes the one occurrence; the series
+ * cut at it changes or removes it and every one after it; the whole series
+ * changes or removes every one of them. A copy, [copying], is of the one
+ * occurrence or of the whole series, and asks without the middle choice,
+ * which [following] leaves out.
  */
 @Composable
 fun ScopeDialog(
     deleting: Boolean,
+    copying: Boolean = false,
+    following: Boolean = true,
     onDismiss: () -> Unit,
     onOne: () -> Unit,
+    onFollowing: () -> Unit = {},
     onAll: () -> Unit,
 ) {
+    val tone = if (deleting) MochiButtonTone.Destructive else MochiButtonTone.Primary
     MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = if (deleting) {
-            stringResource(R.string.calendars_scope_delete)
-        } else {
-            stringResource(R.string.calendars_scope_edit)
+        title = when {
+            deleting -> stringResource(R.string.calendars_scope_delete)
+            copying -> stringResource(R.string.calendars_scope_copy)
+            else -> stringResource(R.string.calendars_scope_edit)
         },
-        confirmText = stringResource(R.string.calendars_scope_one),
-        onConfirm = onOne,
-        destructive = deleting,
-        dismissText = stringResource(R.string.calendars_scope_all),
-        onDismiss = onAll,
+        dismissText = stringResource(MochiR.string.common_cancel),
+        content = {
+            Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                for ((label, choose) in listOfNotNull(
+                    R.string.calendars_scope_one to onOne,
+                    (R.string.calendars_scope_following to onFollowing).takeIf { following },
+                    R.string.calendars_scope_all to onAll,
+                )) {
+                    MochiOutlinedButton(onClick = choose, tone = tone, modifier = Modifier.fillMaxWidth()) {
+                        Text(stringResource(label))
+                    }
+                }
+            }
+        },
     )
 }
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_list_title">Words</string>
+    <string name="words_list_title">Faclan</string>
     <string name="words_list_menu">Clàr-taice</string>
     <string name="words_list_logout">Clàraich a-mach</string>
     <string name="words_sidebar_completed">Crìochnaichte</string>

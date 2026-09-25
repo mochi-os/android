@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Aangemaakt</string>
     <string name="projects_sort_updated">Bijgewerkt</string>
     <string name="projects_create_object_type">Type</string>
-    <string name="projects_create_object_title_field">Titel</string>
     <string name="projects_create_object_parent">Bovenliggend</string>
     <string name="projects_settings_title">Instellingen</string>
     <string name="projects_settings_tab_general">Algemeen</string>
@@ -362,4 +361,5 @@
     <string name="projects_board_add_column">Kolom toevoegen</string>
     <string name="projects_option_delete_title">Optie verwijderen</string>
     <string name="projects_option_delete_message">Weet u zeker dat u de optie \"%1$s\" wilt verwijderen?</string>
+    <string name="projects_create_object_no_types">Er kunnen nog geen itemtypes aangemaakt worden. Maak eerst de vereiste bovenliggende items aan.</string>
 </resources>

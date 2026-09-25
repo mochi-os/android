@@ -20,18 +20,24 @@ import org.mochios.android.api.unwrap
 import org.mochios.android.sync.EventComponent
 import org.mochios.calendars.api.CalendarsApi
 import org.mochios.calendars.api.EventCreateRequest
+import org.mochios.calendars.api.EventSplitRequest
 import org.mochios.calendars.api.EventUpdateRequest
 import org.mochios.calendars.api.EventsBatchRequest
 import org.mochios.calendars.api.MenuApi
 import org.mochios.calendars.api.PreferencesRequest
+import org.mochios.calendars.model.AccountsResponse
 import org.mochios.calendars.model.Calendar
+import org.mochios.calendars.model.CalendarAccount
 import org.mochios.calendars.model.DeviceToken
 import org.mochios.calendars.model.Event
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.LinkResponse
 import org.mochios.calendars.model.Preferences
+import org.mochios.calendars.model.GrantResponse
+import org.mochios.calendars.model.RemoteCalendar
 import org.mochios.calendars.ui.calendar.Bounds
 import org.mochios.calendars.ui.editor.excluded
+import org.mochios.calendars.ui.editor.truncated
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -142,7 +148,66 @@ class CalendarsRepository @Inject constructor(
         throw error?.let { ApiException(response.code(), it).toMochiError() } ?: MochiError.NetworkError()
     }
 
-    /** Fetches a subscription now, answering how many events moved. */
+    /**
+     * The connected accounts a calendar can be linked through, with the
+     * capabilities each holds now, and the providers the server can grant a
+     * new account from.
+     */
+    suspend fun listAccounts(): AccountsResponse = call {
+        api.listAccounts().unwrap()
+    }
+
+    /**
+     * Connects an account a calendar can be linked through: an Apple ID with
+     * an app-specific password, or a CalDAV server with a login. [url] is the
+     * server's address, empty for Apple, and [label] what the account is
+     * called here, empty for none. The server tries the account against its
+     * own server before keeping it, so a wrong password is refused here.
+     */
+    suspend fun addAccount(
+        type: String,
+        url: String,
+        username: String,
+        password: String,
+        label: String,
+    ): CalendarAccount = call {
+        api.addAccount(type, url, username, password, label).unwrap().account
+    }
+
+    /** The calendars an account's server offers, to link one of. */
+    suspend fun remoteCalendars(account: String): List<RemoteCalendar> = call {
+        api.remoteCalendars(account).unwrap().calendars
+    }
+
+    /**
+     * Starts the provider's consent that grants calendar access to [account],
+     * or, with none, to whichever account of [provider] the user picks. The
+     * consent opens in the system browser and returns on the app's deep link,
+     * bound by [challenge], the app's PKCE challenge; the grant lands at the
+     * exchange with the verifier.
+     */
+    suspend fun grant(account: String, provider: String, challenge: String): GrantResponse = call {
+        api.grant(account, provider, "/calendars/", "mobile", "mochi", challenge).unwrap()
+    }
+
+    /**
+     * Links a collection on the account's server as a calendar here. The
+     * server pulls its events before answering, so the calendar arrives
+     * whole.
+     */
+    suspend fun linkCalendar(
+        account: String,
+        collection: String,
+        name: String,
+        colour: String,
+    ): Calendar = call {
+        api.linkCalendar(account, collection, name, colour).unwrap().calendar
+    }.also { announce() }
+
+    /**
+     * Fetches a subscription or syncs a linked calendar now, answering how
+     * many events moved.
+     */
     suspend fun pollCalendar(calendar: String): Int = call {
         api.pollCalendar(calendar).unwrap().changed
     }.also { announce() }
@@ -161,14 +226,20 @@ class CalendarsRepository @Inject constructor(
 
     /**
      * Every occurrence between [start] and [finish], epoch seconds, in the
-     * calendars named; an empty [calendars] means all of them. The second of
-     * the pair says the range held more than the server will list.
+     * calendars named; an empty [calendars] means all of them. [timezone] is
+     * the IANA zone the phone draws in, so the server reads floating times
+     * and day boundaries the way the views do. The second of the pair says
+     * the range held more than the server will list.
      */
-    suspend fun listEvents(start: Long, finish: Long, calendars: List<String>): Pair<List<Instance>, Boolean> =
-        call {
-            val body = api.listEvents(start, finish, calendars.joinToString(",")).unwrap()
-            body.instances to body.truncated
-        }
+    suspend fun listEvents(
+        start: Long,
+        finish: Long,
+        calendars: List<String>,
+        timezone: String,
+    ): Pair<List<Instance>, Boolean> = call {
+        val body = api.listEvents(start, finish, calendars.joinToString(","), timezone).unwrap()
+        body.instances to body.truncated
+    }
 
     /**
      * Where the named calendars' events begin and end; an empty [calendars]
@@ -200,6 +271,26 @@ class CalendarsRepository @Inject constructor(
         api.updateEvent(EventUpdateRequest(event, etag, calendar, components)).unwrap().event
     }.also { _eventsChanged.tryEmit(Unit) }
 
+    /**
+     * Cuts a series in two at the occurrence starting at [start], epoch
+     * seconds as the server listed it: the event is rewritten as
+     * [components], ending before that occurrence, and a new event is
+     * created from [following], in [calendar] when given. Both halves go in
+     * one call, so the series is never left with both or neither. Answers
+     * the old event and the new one.
+     */
+    suspend fun splitEvent(
+        event: String,
+        etag: String?,
+        start: Long,
+        components: List<EventComponent>,
+        following: List<EventComponent>,
+        calendar: String? = null,
+    ): Pair<Event, Event> = call {
+        val body = api.splitEvent(EventSplitRequest(event, etag, start, components, following, calendar)).unwrap()
+        body.event to body.following
+    }.also { _eventsChanged.tryEmit(Unit) }
+
     suspend fun deleteEvent(event: String, etag: String) {
         call { api.deleteEvent(event, etag).unwrap() }
         _eventsChanged.tryEmit(Unit)
@@ -219,6 +310,30 @@ class CalendarsRepository @Inject constructor(
         } catch (_: EventChangedException) {
             val fresh = getEvent(event)
             updateEvent(event, fresh.etag, null, excluded(fresh.components, occurrence))
+        }
+    }
+
+    /**
+     * Removes one occurrence of a recurring event and every one after it:
+     * the series is cut to end just before it. [occurrence] is the start an
+     * override of it is matched by. The series' first occurrence has nothing
+     * before it, so removing from there deletes the event. A 412 means the
+     * server moved on, so the event is read again and the cut applied to
+     * that copy.
+     */
+    suspend fun truncateEvent(event: String, occurrence: Long) {
+        suspend fun cut(current: Event) {
+            val components = truncated(current.components, occurrence)
+            if (components == null) {
+                deleteEvent(event, current.etag)
+            } else {
+                updateEvent(event, current.etag, null, components)
+            }
+        }
+        try {
+            cut(getEvent(event))
+        } catch (_: EventChangedException) {
+            cut(getEvent(event))
         }
     }
 

@@ -39,6 +39,12 @@ data class ContactEditUiState(
     val deleteRequested: Boolean = false,
     val saved: Boolean = false,
     val deleted: Boolean = false,
+
+    /** Persons with an invitation out, which is how a pending invite is known. */
+    val sent: Set<String> = emptySet(),
+    val unfriendRequested: Boolean = false,
+    /** The friend switch is mid-handshake: inviting, cancelling or unfriending. */
+    val isToggling: Boolean = false,
 )
 
 /**
@@ -65,7 +71,15 @@ class ContactEditViewModel @Inject constructor(
     val uiState: StateFlow<ContactEditUiState> = _uiState.asStateFlow()
 
     init {
-        if (creating) loadBooks() else load()
+        if (creating) {
+            loadBooks()
+        } else {
+            load()
+            // The friend switch's handshake lands through other screens too - the
+            // search that links the card, an accept arriving - so follow the
+            // repository's change signal rather than the user's own actions only.
+            viewModelScope.launch { repository.contactsChanged.collect { refresh() } }
+        }
     }
 
     fun load() {
@@ -77,11 +91,69 @@ class ContactEditViewModel @Inject constructor(
                     isLoading = false,
                     contact = contact,
                     form = contactForm(contact.card, contact.book),
+                    sent = fetchSent(),
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }
             fetchBooks()
+        }
+    }
+
+    /** The contact and the sent list again, leaving the form the user may be typing in alone. */
+    private suspend fun refresh() {
+        try {
+            val contact = repository.getContact(contactId)
+            _uiState.value = _uiState.value.copy(contact = contact, sent = fetchSent())
+        } catch (_: Exception) {
+            // A failed refresh leaves the last state showing; the next action reloads.
+        }
+    }
+
+    private suspend fun fetchSent(): Set<String> = try {
+        repository.listContacts().sent.map { it.id }.toSet()
+    } catch (_: Exception) {
+        emptySet()
+    }
+
+    /** The friend switch turned on for a linked contact: invite. */
+    fun invite() {
+        val contact = _uiState.value.contact ?: return
+        if (contact.person.isBlank() || contact.friend) return
+        toggle { repository.inviteFriend(contact.person, contact.directory.ifBlank { contact.name }) }
+    }
+
+    /** The friend switch turned off while the invitation is out: cancel it. */
+    fun cancelInvite() {
+        val contact = _uiState.value.contact ?: return
+        if (contact.person.isBlank() || contact.friend) return
+        toggle { repository.removeFriend(contact.person) }
+    }
+
+    fun requestUnfriend() {
+        _uiState.value = _uiState.value.copy(unfriendRequested = true)
+    }
+
+    fun cancelUnfriend() {
+        _uiState.value = _uiState.value.copy(unfriendRequested = false)
+    }
+
+    fun confirmUnfriend() {
+        val contact = _uiState.value.contact ?: return
+        _uiState.value = _uiState.value.copy(unfriendRequested = false)
+        toggle { repository.removeFriend(contact.person) }
+    }
+
+    private fun toggle(block: suspend () -> Unit) {
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(isToggling = true, error = null)
+            try {
+                block()
+                refresh()
+                _uiState.value = _uiState.value.copy(isToggling = false)
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(isToggling = false, error = e.toMochiError())
+            }
         }
     }
 

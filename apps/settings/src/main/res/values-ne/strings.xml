@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">विषय</string>
     <string name="accounts_field_secret">हस्ताक्षर गोप्य</string>
     <string name="account_totp_open">प्रमाणीकरण एपमा खोल्नुहोस्</string>
+    <string name="accounts_revoke">पहुँच रद्द गर्नुहोस्</string>
+    <string name="accounts_capability_calendar">क्यालेन्डर</string>
+    <string name="accounts_capability_notify">सूचनाहरू</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">साइन-इन</string>
+    <string name="accounts_provider_caldav">क्यालेन्डर सर्भर</string>
+    <string name="accounts_revoke_confirm">यसले %1$s को क्यालेन्डर पहुँच खारेज गर्नेछ। लगइन पृष्ठमा अनलिङ्क नगरेसम्म %2$s मार्फत साइन-इन रहनेछ।</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

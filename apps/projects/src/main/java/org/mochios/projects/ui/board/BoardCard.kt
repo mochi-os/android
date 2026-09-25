@@ -85,7 +85,8 @@ fun BoardCard(
     targetColumnId: String = "",
     /** The lane this card sits in, sent as row_value so a drop changes lane. */
     targetRowId: String = "",
-    onClick: () -> Unit
+    /** Opens the tapped card's object; a nested card names its own, not its parent's. */
+    onOpen: (String) -> Unit
 ) {
     var showMoveSheet by rememberSaveable(obj.id) { mutableStateOf(false) }
     var showOverflow by remember(obj.id) { mutableStateOf(false) }
@@ -198,7 +199,7 @@ fun BoardCard(
                 borderColor ?: MaterialTheme.colorScheme.outlineVariant,
                 MaterialTheme.shapes.small,
             )
-            .clickable(onClick = onClick),
+            .clickable { onOpen(obj.id) },
         shape = MaterialTheme.shapes.small,
         colors = CardDefaults.cardColors(
             containerColor = if (!isNested) MaterialTheme.colorScheme.surface
@@ -353,7 +354,7 @@ fun BoardCard(
                                     columnFieldId = columnFieldId,
                                     rowFieldId = rowFieldId,
                                     depth = depth + 1,
-                                    onClick = onClick
+                                    onOpen = onOpen
                                 )
                             }
                         }

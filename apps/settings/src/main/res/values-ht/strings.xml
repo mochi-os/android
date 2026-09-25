@@ -386,4 +386,12 @@
     <string name="accounts_field_topic">Sijè</string>
     <string name="accounts_field_secret">Sekrè siyati</string>
     <string name="account_totp_open">Louvri nan aplikasyon otantifikasyon an</string>
+    <string name="accounts_revoke">Revoke aksè</string>
+    <string name="accounts_capability_calendar">Kalandriye</string>
+    <string name="accounts_capability_notify">Notifikasyon</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Koneksyon</string>
+    <string name="accounts_provider_caldav">Sèvè kalandriye</string>
+    <string name="accounts_revoke_confirm">Sa ap retire aksè kalandriye %1$s. Koneksyon ak %2$s ap rete jiskaske ou dekonekte l nan paj Koneksyon an.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

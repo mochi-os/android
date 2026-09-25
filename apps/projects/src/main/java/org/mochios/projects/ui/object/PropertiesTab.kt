@@ -69,6 +69,9 @@ import org.mochios.projects.model.FieldOption
 import org.mochios.projects.model.ProjectDetails
 import org.mochios.projects.model.ProjectField
 import org.mochios.projects.model.ProjectObject
+import org.mochios.projects.util.HIERARCHY_ROOT
+import org.mochios.projects.util.objectTitle
+import org.mochios.projects.util.parentAllowed
 import org.mochios.android.R as MochiR
 
 @Composable
@@ -123,6 +126,7 @@ fun PropertiesTab(
         val parentOptions = uiState.siblingObjects
             .filter { it.objectClass in allowedParentClasses && it.id !in descendants }
         val currentParent = uiState.siblingObjects.find { it.id == obj.parent }
+        val rootAllowed = parentAllowed(projectDetails.hierarchy, obj.objectClass, HIERARCHY_ROOT)
         val showParent = parentOptions.isNotEmpty() || currentParent != null
         val parentLabel = stringResource(R.string.projects_parent_label)
 
@@ -136,6 +140,7 @@ fun PropertiesTab(
                     projectDetails = projectDetails,
                     currentParent = currentParent,
                     parentOptions = parentOptions,
+                    rootAllowed = rootAllowed,
                     canWrite = canWrite,
                     onSelect = { newParent -> viewModel.updateParent(newParent) }
                 )
@@ -165,6 +170,7 @@ fun PropertiesTab(
                         projectDetails = projectDetails,
                         currentParent = currentParent,
                         parentOptions = parentOptions,
+                        rootAllowed = rootAllowed,
                         canWrite = canWrite,
                         onSelect = { newParent -> viewModel.updateParent(newParent) }
                     )
@@ -266,26 +272,19 @@ private fun collectDescendants(objects: List<ProjectObject>, rootId: String): Se
     return result
 }
 
-private fun objectDisplayTitle(obj: ProjectObject, projectDetails: ProjectDetails): String {
-    val cls = projectDetails.classes.find { it.id == obj.objectClass }
-    val titleField = cls?.title.orEmpty()
-    val titleVal = if (titleField.isNotBlank()) obj.values[titleField]?.toString().orEmpty() else ""
-    if (titleVal.isNotBlank()) return titleVal
-    val prefix = projectDetails.project.prefix
-    return if (prefix.isNotBlank()) "$prefix-${obj.number}" else "#${obj.number}"
-}
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun ParentPicker(
     projectDetails: ProjectDetails,
     currentParent: ProjectObject?,
     parentOptions: List<ProjectObject>,
+    rootAllowed: Boolean,
     canWrite: Boolean,
     onSelect: (String) -> Unit
 ) {
     val noParentLabel = stringResource(R.string.projects_parent_none)
-    val displayText = currentParent?.let { objectDisplayTitle(it, projectDetails) } ?: noParentLabel
+    val prefix = projectDetails.project.prefix
+    val displayText = currentParent?.let { objectTitle(it, projectDetails.classes, prefix) } ?: noParentLabel
 
     // The label lives in the enclosing PropertyRow, so nothing here repeats it.
     if (!canWrite) {
@@ -333,23 +332,25 @@ private fun ParentPicker(
                     .fillMaxWidth()
                     .padding(horizontal = 8.dp, vertical = 4.dp)
             )
-            // (no parent) option
-            MochiDropdownMenuItem(
-                text = {
-                    Text(
-                        text = stringResource(R.string.projects_parent_none),
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                },
-                onClick = {
-                    onSelect("")
-                    expanded = false
-                    query = ""
-                },
-            )
+            // (no parent) option, for a class that may sit at the top level
+            if (rootAllowed) {
+                MochiDropdownMenuItem(
+                    text = {
+                        Text(
+                            text = stringResource(R.string.projects_parent_none),
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    },
+                    onClick = {
+                        onSelect("")
+                        expanded = false
+                        query = ""
+                    },
+                )
+            }
             val q = query.trim().lowercase()
             parentOptions
-                .map { it to objectDisplayTitle(it, projectDetails) }
+                .map { it to objectTitle(it, projectDetails.classes, prefix) }
                 .filter { (_, title) -> q.isEmpty() || title.lowercase().contains(q) }
                 .forEach { (parentObj, title) ->
                     MochiDropdownMenuItem(

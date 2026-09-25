@@ -165,4 +165,5 @@
     <string name="people_device_delete_message">O dispositivo não poderá mais sincronizar contatos.</string>
     <string name="people_device_deleted">Dispositivo excluído</string>
     <string name="people_sync_title">Sincronizar com este celular</string>
+    <string name="people_contact_friend">Amigo no Mochi</string>
 </resources>

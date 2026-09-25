@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Staff</string>
-    <string name="launcher_staff">员工</string>
+    <string name="launcher_staff">Mochi Staff</string>
     <string name="staff_accounts_action_ban_title">封禁账户</string>
     <string name="staff_accounts_action_suspend_title">暂停账户</string>
     <string name="staff_accounts_action_unban_title">解除封禁</string>

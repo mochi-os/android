@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Ingia tena ili kusawazisha</string>
     <string name="people_sync_transport">Haikuweza kufikia seva</string>
     <string name="people_sync_refused">Haikuweza kusawazisha anwani: %1$s</string>
+    <string name="people_contact_friend">Rafiki wa Mochi</string>
 </resources>

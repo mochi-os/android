@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Ngena ngemvume futhi ukuze uvumelanise</string>
     <string name="people_sync_transport">Ayikwazanga ukufinyelela iseva</string>
     <string name="people_sync_refused">Ayikwazanga ukuvumelanisa othintwayo oyedwa: %1$s</string>
+    <string name="people_contact_friend">Umngane we-Mochi</string>
 </resources>

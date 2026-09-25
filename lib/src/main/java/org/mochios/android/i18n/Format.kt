@@ -25,26 +25,32 @@ import java.util.TimeZone
  */
 class Format(val preferences: UserPreferences) {
 
-    /** Epoch seconds → user-format date (no time). */
-    fun formatDate(epochSeconds: Long): String {
+    /**
+     * Epoch seconds → user-format date (no time). [zone] is an IANA zone to
+     * read the date in instead of the user's own, for a time that belongs to
+     * another place; blank or unknown means the user's.
+     */
+    fun formatDate(epochSeconds: Long, zone: String? = null): String {
         if (epochSeconds <= 0) return ""
         val date = Date(epochToMillis(epochSeconds))
-        return formatDateInternal(date)
+        return formatDateInternal(date, zoneOf(zone))
     }
 
 
     /**
      * Epoch seconds → user-format time of day, without seconds: what a
-     * calendar grid, an agenda row and a time picker show.
+     * calendar grid, an agenda row and a time picker show. [zone] reads the
+     * clock in another IANA zone than the user's; blank or unknown means the
+     * user's.
      */
-    fun formatTime(epochSeconds: Long): String {
+    fun formatTime(epochSeconds: Long, zone: String? = null): String {
         if (epochSeconds <= 0) return ""
         val pattern = when (preferences.timeFormat) {
             TimeFormat.H12 -> "h:mm a"
             TimeFormat.H24 -> "HH:mm"
         }
         val formatter = SimpleDateFormat(pattern, Locale.getDefault())
-        formatter.timeZone = timeZone
+        formatter.timeZone = zoneOf(zone)
         return formatter.format(Date(epochToMillis(epochSeconds)))
     }
 
@@ -65,11 +71,16 @@ class Format(val preferences: UserPreferences) {
         return formatter.format(Date(clamped * 3_600_000L))
     }
 
-    /** Epoch seconds → "$date $time" using both user formats. */
-    fun formatDateTime(epochSeconds: Long): String {
+    /**
+     * Epoch seconds → "$date $time" using both user formats. [zone] reads
+     * both in another IANA zone than the user's; blank or unknown means the
+     * user's.
+     */
+    fun formatDateTime(epochSeconds: Long, zone: String? = null): String {
         if (epochSeconds <= 0) return ""
         val date = Date(epochToMillis(epochSeconds))
-        return "${formatDateInternal(date)} ${formatTimeInternal(date)}"
+        val tz = zoneOf(zone)
+        return "${formatDateInternal(date, tz)} ${formatTimeInternal(date, tz)}"
     }
 
     /**
@@ -110,8 +121,17 @@ class Format(val preferences: UserPreferences) {
      */
     val timeZone: TimeZone get() = TimeZone.getTimeZone(preferences.timezone)
 
-    private fun formatDateInternal(date: Date): String {
-        val tz = TimeZone.getTimeZone(preferences.timezone)
+    /**
+     * The zone a caller named, or the user's own when it named none or one
+     * the platform does not know. Through `ZoneId` rather than `TimeZone`
+     * alone, which answers GMT for any name it does not know.
+     */
+    private fun zoneOf(zone: String?): TimeZone {
+        if (zone.isNullOrBlank()) return timeZone
+        return runCatching { TimeZone.getTimeZone(java.time.ZoneId.of(zone)) }.getOrDefault(timeZone)
+    }
+
+    private fun formatDateInternal(date: Date, tz: TimeZone = timeZone): String {
         val pattern = when (preferences.dateFormat) {
             DateFormat.YYYY_MM_DD -> "yyyy-MM-dd"
             DateFormat.DD_SLASH_MM_YYYY -> "dd/MM/yyyy"
@@ -124,8 +144,7 @@ class Format(val preferences: UserPreferences) {
         return sdf.format(date)
     }
 
-    private fun formatTimeInternal(date: Date): String {
-        val tz = TimeZone.getTimeZone(preferences.timezone)
+    private fun formatTimeInternal(date: Date, tz: TimeZone = timeZone): String {
         val pattern = when (preferences.timeFormat) {
             TimeFormat.H12 -> "h:mm:ss a"
             TimeFormat.H24 -> "HH:mm:ss"

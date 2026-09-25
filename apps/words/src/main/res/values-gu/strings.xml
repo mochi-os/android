@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_list_title">Words</string>
+    <string name="words_list_title">શબ્દો</string>
     <string name="words_list_menu">મેનૂ</string>
     <string name="words_list_logout">લૉગ આઉટ કરો</string>
     <string name="words_sidebar_completed">પૂર્ણ</string>

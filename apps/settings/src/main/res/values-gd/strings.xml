@@ -391,4 +391,12 @@
     <string name="accounts_field_topic">Cuspair</string>
     <string name="accounts_field_secret">Rùn soidhnidh</string>
     <string name="account_totp_open">Fosgail san aplacaid dearbhaidh</string>
+    <string name="accounts_revoke">Cùl-ghairm inntrigeadh</string>
+    <string name="accounts_capability_calendar">Mìosachan</string>
+    <string name="accounts_capability_notify">Brathan</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Clàradh a-steach</string>
+    <string name="accounts_provider_caldav">Frithealaiche mìosachain</string>
+    <string name="accounts_revoke_confirm">Cuiridh seo às do inntrigeadh mìosachain %1$s. Mairidh an clàradh a-steach le %2$s gus an dì-cheangail thu e air duilleag a\' chlàraidh a-steach.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

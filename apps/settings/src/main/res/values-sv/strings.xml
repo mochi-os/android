@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">Ämne</string>
     <string name="accounts_field_secret">Signeringshemlighet</string>
     <string name="account_totp_open">Öppna i autentiseringsapp</string>
+    <string name="accounts_revoke">Återkalla åtkomst</string>
+    <string name="accounts_capability_calendar">Kalender</string>
+    <string name="accounts_capability_notify">Aviseringar</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Inloggning</string>
+    <string name="accounts_provider_caldav">Kalenderserver</string>
+    <string name="accounts_revoke_confirm">Detta återkallar kalenderåtkomsten för %1$s. Inloggning med %2$s finns kvar tills du tar bort länken på inloggningssidan.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

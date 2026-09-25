@@ -84,6 +84,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
@@ -311,6 +312,7 @@ private fun ForumContent(
 
     val snackbar = remember { SnackbarHostState() }
     val context = LocalContext.current
+    val resources = LocalResources.current
     val rssClipboardLabel = stringResource(R.string.forums_rss_clipboard_label)
     val rssCopiedMessage = stringResource(R.string.forums_rss_copied)
     val shareLinkTitle = stringResource(R.string.forums_share_link_title)
@@ -345,7 +347,7 @@ private fun ForumContent(
                 is ForumEvent.RssRevoked -> snackbar.showSnackbar(rssRevokedMessage)
                 is ForumEvent.ShowError -> snackbar.showSnackbar(event.error.userMessage())
                 is ForumEvent.ShowMessage ->
-                    snackbar.showSnackbar(context.getString(event.message))
+                    snackbar.showSnackbar(resources.getString(event.message))
             }
         }
     }

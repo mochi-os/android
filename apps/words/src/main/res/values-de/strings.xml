@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_list_title">Words</string>
+    <string name="words_list_title">Wörter</string>
     <string name="words_list_menu">Menü</string>
     <string name="words_list_logout">Abmelden</string>
     <string name="words_sidebar_completed">Abgeschlossen</string>

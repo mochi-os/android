@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">ርዕስ</string>
     <string name="accounts_field_secret">የፊርማ ሚስጥር</string>
     <string name="account_totp_open">በማረጋገጫ መተግበሪያ ውስጥ ክፈት</string>
+    <string name="accounts_revoke">መዳረሻን ሻር</string>
+    <string name="accounts_capability_calendar">የቀን መቁጠሪያ</string>
+    <string name="accounts_capability_notify">ማሳወቂያዎች</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">መግቢያ</string>
+    <string name="accounts_provider_caldav">የቀን መቁጠሪያ አገልጋይ</string>
+    <string name="accounts_revoke_confirm">ይህ የ%1$s የቀን መቁጠሪያ መዳረሻን ይሽራል። በ%2$s መግባት በመግቢያ ገጽ ላይ እስኪያላቅቁት ድረስ ይቀጥላል።</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="words_list_title">Words</string>
+    <string name="words_list_title">Hitzak</string>
     <string name="words_list_menu">Menua</string>
     <string name="words_list_logout">Amaitu saioa</string>
     <string name="words_sidebar_completed">Osatua</string>

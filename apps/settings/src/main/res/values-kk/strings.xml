@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">Тақырып</string>
     <string name="accounts_field_secret">Қолтаңба құпиясы</string>
     <string name="account_totp_open">Аутентификатор қолданбасында ашу</string>
+    <string name="accounts_revoke">Кіруді қайтарып алу</string>
+    <string name="accounts_capability_calendar">Күнтізбе</string>
+    <string name="accounts_capability_notify">Хабарландырулар</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Кіру</string>
+    <string name="accounts_provider_caldav">Күнтізбе сервері</string>
+    <string name="accounts_revoke_confirm">Бұл %1$s күнтізбесіне қатынасты жояды. %2$s арқылы кіру, оны Кіру бетінде ажыратқанға дейін сақталады.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

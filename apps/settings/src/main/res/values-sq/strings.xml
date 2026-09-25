@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">Tema</string>
     <string name="accounts_field_secret">Sekreti i nënshkrimit</string>
     <string name="account_totp_open">Hap në aplikacionin e vërtetimit</string>
+    <string name="accounts_revoke">Anulo aksesin</string>
+    <string name="accounts_capability_calendar">Kalendari</string>
+    <string name="accounts_capability_notify">Njoftime</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Hyrje</string>
+    <string name="accounts_provider_caldav">Server kalendari</string>
+    <string name="accounts_revoke_confirm">Kjo do të revokojë qasjen në kalendar të %1$s. Hyrja me %2$s mbetet derisa ta shkëputni në faqen e hyrjes.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

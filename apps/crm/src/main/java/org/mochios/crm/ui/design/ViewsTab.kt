@@ -8,7 +8,7 @@ package org.mochios.crm.ui.design
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import org.mochios.android.ui.components.ClassListItem
 import org.mochios.android.ui.components.ViewFieldOption
@@ -95,17 +95,17 @@ internal fun Map<String, List<CrmField>>.toViewFieldOptions() =
 /** Wording for the shared view list and view form, in this feature's strings. */
 @Composable
 internal fun viewListLabels(): ViewListLabels {
-    val context = LocalContext.current
+    val resources = LocalResources.current
     return ViewListLabels(
         addAction = stringResource(R.string.crm_views_add),
         empty = stringResource(R.string.crm_views_empty),
         emptySubtitle = stringResource(R.string.crm_views_empty_subtitle),
         deleteTitle = stringResource(R.string.crm_views_delete_title),
         deleteMessage = { viewName ->
-            context.getString(R.string.crm_views_delete_message, viewName)
+            resources.getString(R.string.crm_views_delete_message, viewName)
         },
-        byField = { fieldName -> context.getString(R.string.crm_views_by, fieldName) },
-        sortedBy = { direction -> context.getString(R.string.crm_views_sorted, direction) },
+        byField = { fieldName -> resources.getString(R.string.crm_views_by, fieldName) },
+        sortedBy = { direction -> resources.getString(R.string.crm_views_sorted, direction) },
         typeBoard = stringResource(R.string.crm_views_type_board),
         typeList = stringResource(R.string.crm_views_type_list),
         dragRow = stringResource(R.string.crm_drag_row),

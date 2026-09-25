@@ -48,6 +48,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -87,6 +88,7 @@ fun PurchaseDetailScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
     val context = LocalContext.current
+    val resources = LocalResources.current
     val snackbar = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
     var refundDialogOpen by remember { mutableStateOf(false) }
@@ -107,7 +109,7 @@ fun PurchaseDetailScreen(
                     )
                     if (outcome != AttachmentOpener.OpenResult.OPENED) {
                         snackbar.showSnackbar(
-                            context.getString(
+                            resources.getString(
                                 if (outcome == AttachmentOpener.OpenResult.NO_APP) {
                                     R.string.market_asset_no_app
                                 } else {

@@ -7,6 +7,8 @@ package org.mochios.calendars.api
 
 import org.mochios.android.api.ApiResponse
 import org.mochios.android.sync.EventComponent
+import org.mochios.calendars.model.AccountResponse
+import org.mochios.calendars.model.AccountsResponse
 import org.mochios.calendars.model.CalendarResponse
 import org.mochios.calendars.model.CalendarsResponse
 import org.mochios.calendars.model.ChangesResponse
@@ -18,6 +20,9 @@ import org.mochios.calendars.model.LinkResponse
 import org.mochios.calendars.model.Multiweek
 import org.mochios.calendars.model.PollResponse
 import org.mochios.calendars.model.PreferencesResponse
+import org.mochios.calendars.model.GrantResponse
+import org.mochios.calendars.model.RemoteResponse
+import org.mochios.calendars.model.SplitResponse
 import org.mochios.calendars.model.TokenDeleteResponse
 import org.mochios.calendars.model.TokenResponse
 import org.mochios.calendars.model.TokensResponse
@@ -73,6 +78,23 @@ data class EventUpdateRequest(
 )
 
 /**
+ * Body of `-/events/split`: a series cut in two at the occurrence starting
+ * at [start], epoch seconds as the server listed it. [components] is the
+ * old event's whole tree, ending before that occurrence, and [following]
+ * the new event's, going on from it; the server writes the new event first
+ * and shortens a `COUNT` itself. [etag] is the copy the caller read, refused
+ * with 412 when stale. [calendar] puts the new event in another calendar.
+ */
+data class EventSplitRequest(
+    val event: String,
+    val etag: String? = null,
+    val start: Long,
+    val components: List<EventComponent>,
+    val following: List<EventComponent>,
+    val calendar: String? = null,
+)
+
+/**
  * Body of `-/preferences/set`. Every field is optional: the server validates
  * what it is sent and answers the whole set.
  */
@@ -83,6 +105,7 @@ data class PreferencesRequest(
     val duration: Int? = null,
     val reminder: Int? = null,
     val view: String? = null,
+    val zones: Boolean? = null,
 )
 
 /**
@@ -142,6 +165,46 @@ interface CalendarsApi {
         @Field("colour") colour: String,
     ): Response<ApiResponse<CalendarResponse>>
 
+    @GET("-/calendars/accounts")
+    suspend fun listAccounts(): Response<ApiResponse<AccountsResponse>>
+
+    @FormUrlEncoded
+    @POST("-/calendars/account")
+    suspend fun addAccount(
+        @Field("type") type: String,
+        @Field("url") url: String,
+        @Field("username") username: String,
+        @Field("password") password: String,
+        @Field("label") label: String,
+    ): Response<ApiResponse<AccountResponse>>
+
+    @FormUrlEncoded
+    @POST("-/calendars/remote")
+    suspend fun remoteCalendars(
+        @Field("account") account: String,
+    ): Response<ApiResponse<RemoteResponse>>
+
+    @FormUrlEncoded
+    @POST("-/calendars/grant")
+    suspend fun grant(
+        @Field("account") account: String,
+        @Field("provider") provider: String,
+        @Field("target") target: String,
+        @Field("mode") mode: String,
+        @Field("scheme") scheme: String,
+        @Field("challenge") challenge: String,
+    ): Response<ApiResponse<GrantResponse>>
+
+    @FormUrlEncoded
+    @POST("-/calendars/link")
+    suspend fun linkCalendar(
+        @Field("account") account: String,
+        @Field("collection") collection: String,
+        @Field("name") name: String,
+        // contract-ok: the handler reads colour through colour_input.
+        @Field("colour") colour: String,
+    ): Response<ApiResponse<CalendarResponse>>
+
     @FormUrlEncoded
     @POST("-/calendars/poll")
     suspend fun pollCalendar(
@@ -155,6 +218,7 @@ interface CalendarsApi {
         // contract-ok: the handler reads start and finish through range_input.
         @Query("finish") finish: Long,
         @Query("calendars") calendars: String,
+        @Query("timezone") timezone: String,
     ): Response<ApiResponse<InstancesResponse>>
 
     @GET("-/events/bounds")
@@ -176,6 +240,9 @@ interface CalendarsApi {
 
     @POST("-/events/update")
     suspend fun updateEvent(@Body request: EventUpdateRequest): Response<ApiResponse<EventResponse>>
+
+    @POST("-/events/split")
+    suspend fun splitEvent(@Body request: EventSplitRequest): Response<ApiResponse<SplitResponse>>
 
     @FormUrlEncoded
     @POST("-/events/delete")

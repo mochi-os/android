@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">தலைப்பு</string>
     <string name="accounts_field_secret">கையொப்ப ரகசியம்</string>
     <string name="account_totp_open">அங்கீகரிப்பு செயலியில் திறக்கவும்</string>
+    <string name="accounts_revoke">அணுகலை நீக்கு</string>
+    <string name="accounts_capability_calendar">நாட்காட்டி</string>
+    <string name="accounts_capability_notify">அறிவிப்புகள்</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">உள்நுழைவு</string>
+    <string name="accounts_provider_caldav">நாட்காட்டி சேவையகம்</string>
+    <string name="accounts_revoke_confirm">இது %1$s இன் நாட்காட்டி அணுகலை ரத்து செய்யும். உள்நுழைவு பக்கத்தில் இணைப்பை நீக்கும் வரை %2$s மூலம் உள்நுழைவு தொடரும்.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

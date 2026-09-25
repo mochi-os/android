@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Синк хийхийн тулд дахин нэвтэрнэ үү</string>
     <string name="people_sync_transport">Серверт холбогдож чадсангүй</string>
     <string name="people_sync_refused">Харилцагчийг синк хийж чадсангүй: %1$s</string>
+    <string name="people_contact_friend">Mochi найз</string>
 </resources>

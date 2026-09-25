@@ -22,6 +22,15 @@ class OAuthReturnTest {
 
     private val ours = "nonce-ours"
 
+    /** Each ceremony's return has its own name; an unknown name is nobody's. */
+    @Test
+    fun `each deep-link name belongs to one ceremony`() {
+        assertEquals(OAuthReturnKind.LOGIN, oauthReturnKind("oauth-return"))
+        assertEquals(OAuthReturnKind.LINK, oauthReturnKind("oauth-link-return"))
+        assertEquals(OAuthReturnKind.GRANT, oauthReturnKind("oauth-grant-return"))
+        assertNull(oauthReturnKind("oauth-grant"))
+    }
+
     @Test
     fun `a return carrying our nonce is accepted`() {
         assertTrue(shouldAcceptOAuthReturn(true, ours, ours, code = "abc", error = null))

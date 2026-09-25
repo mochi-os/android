@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">Mavzu</string>
     <string name="accounts_field_secret">Imzo maxfiy kaliti</string>
     <string name="account_totp_open">Autentifikator ilovasida ochish</string>
+    <string name="accounts_revoke">Kirishni bekor qilish</string>
+    <string name="accounts_capability_calendar">Kalendar</string>
+    <string name="accounts_capability_notify">Bildirishnomalar</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Kirish</string>
+    <string name="accounts_provider_caldav">Kalendar serveri</string>
+    <string name="accounts_revoke_confirm">Bu %1$s kalendariga kirishni bekor qiladi. %2$s bilan kirish, uni Kirish sahifasida uzmaguningizcha saqlanadi.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

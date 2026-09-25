@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Inicia sesión de nuevo para sincronizar</string>
     <string name="people_sync_transport">No se pudo conectar con el servidor</string>
     <string name="people_sync_refused">No se pudo sincronizar un contacto: %1$s</string>
+    <string name="people_contact_friend">Amigo de Mochi</string>
 </resources>

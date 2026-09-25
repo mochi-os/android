@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_list_title">Words</string>
+    <string name="words_list_title">शब्द</string>
     <string name="words_list_menu">मेनू</string>
     <string name="words_list_logout">लॉग आउट</string>
     <string name="words_sidebar_completed">पूरा कइल गइल</string>

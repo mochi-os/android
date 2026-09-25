@@ -2,7 +2,7 @@
 <resources>
     <string name="projects_auth_display_name">காட்சிப் பெயர்</string>
     <string name="projects_auth_verification_failed">சரிபார்ப்பு தோல்வியடைந்தது</string>
-    <string name="projects_list_title">Projectகள்</string>
+    <string name="projects_list_title">திட்டங்கள்</string>
     <string name="projects_list_close_search">தேடலை மூடு</string>
     <string name="projects_list_search">தேடு</string>
     <string name="projects_list_find">திட்டங்களைக் கண்டுபிடி</string>
@@ -33,7 +33,6 @@
     <string name="projects_sort_created">உருவாக்கப்பட்டது</string>
     <string name="projects_sort_updated">புதுப்பிக்கப்பட்டது</string>
     <string name="projects_create_object_type">வகை</string>
-    <string name="projects_create_object_title_field">தலைப்பு</string>
     <string name="projects_create_object_parent">பெற்றோர்</string>
     <string name="projects_settings_title">அமைப்புகள்</string>
     <string name="projects_settings_tab_general">பொது</string>
@@ -154,7 +153,7 @@
     <string name="projects_views_sort_created">உருவாக்கப்பட்டது</string>
     <string name="projects_views_sort_updated">புதுப்பிக்கப்பட்டது</string>
     <string name="projects_views_sort_rank">தரவரிசை</string>
-    <string name="projects_project_not_found">Project கிடைக்கவில்லை</string>
+    <string name="projects_project_not_found">திட்டம் கிடைக்கவில்லை</string>
     <string name="projects_list_more">மேலும்</string>
     <string name="projects_more">மேலும்</string>
     <string name="projects_request_more">மேலும்</string>
@@ -355,7 +354,7 @@
     <string name="projects_create_import_backup">காப்புப்பிரதியிலிருந்து இறக்குமதி (விருப்பம்)</string>
     <string name="projects_create_upload_json">.json கோப்பை பதிவேற்று</string>
     <string name="projects_settings_not_set">அமைக்கப்படவில்லை</string>
-    <string name="projects_settings_updated">Project புதுப்பிக்கப்பட்டது</string>
+    <string name="projects_settings_updated">திட்டம் புதுப்பிக்கப்பட்டது</string>
     <string name="projects_property_select">தேர்ந்தெடுக்கவும் …</string>
     <string name="projects_activity_attached">இணைத்தார்</string>
     <string name="projects_activity_commented">கருத்திட்டார்</string>
@@ -380,4 +379,7 @@
     <string name="projects_design_sample">மாதிரி %1$d</string>
     <string name="projects_option_delete_title">விருப்பத்தை நீக்கு</string>
     <string name="projects_option_delete_message">\"%1$s\" விருப்பத்தை நீக்க விரும்புகிறீர்களா?</string>
+    <string name="projects_create_object_no_types">உருப்படி வகைகள் எதையும் இன்னும் உருவாக்க முடியாது. முதலில் தேவையான பெற்றோர் உருப்படிகளை உருவாக்கவும்.</string>
+    <string name="projects_create_blocked_no_options">உருவாக்க முடியாது: %1$s தேவை ஆனால் தேர்ந்தெடுக்க விருப்பங்கள் இல்லை. வடிவமைப்பில் விருப்பங்களைச் சேர்க்கவும்.</string>
+    <string name="projects_attachment_remove">Remove attachment</string>
 </resources>

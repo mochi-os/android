@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chess_app_title">Chess</string>
-    <string name="chess_sidebar_header">Chess</string>
+    <string name="chess_app_title">Ajedrez</string>
+    <string name="chess_sidebar_header">Ajedrez</string>
     <string name="chess_sidebar_active">Anatawi Lurkaski</string>
     <string name="chess_sidebar_completed">Tukuyata</string>
     <string name="chess_sidebar_new_game">Machaqa anatawi</string>
@@ -63,7 +63,7 @@
     <string name="chess_delete_title">¿Anataw chhaqtayañati?</string>
     <string name="chess_delete_message">Akax anatawi listamat apsuwa.</string>
     <string name="chess_ws_connecting">Mayacht\'asiski…</string>
-    <string name="chess_ws_disconnected">Offline</string>
+    <string name="chess_ws_disconnected">Jan conectata</string>
     <string name="chess_ws_reconnecting">Wasitat mayacht’asiña…</string>
     <string name="chess_ws_failed">Mayacht’awix jan waliki</string>
     <string name="chess_move_capture">%1$s %2$s apsuna</string>

@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">A szinkronizáláshoz jelentkezzen be újra</string>
     <string name="people_sync_transport">A kiszolgáló nem érhető el</string>
     <string name="people_sync_refused">Nem sikerült szinkronizálni egy névjegyet: %1$s</string>
+    <string name="people_contact_friend">Mochi-barát</string>
 </resources>

@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Sake shiga don daidaitawa</string>
     <string name="people_sync_transport">An kasa isa ga sabar</string>
     <string name="people_sync_refused">An kasa daidaita lambar sadarwa: %1$s</string>
+    <string name="people_contact_friend">Abokin Mochi</string>
 </resources>

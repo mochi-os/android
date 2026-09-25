@@ -20,6 +20,37 @@ import org.mochios.calendars.ui.editor.recurrence
  */
 class RecurrenceTest {
 
+    // ---- a rule the settings cannot express ----
+
+    @Test
+    fun `a rule read from an event is written back as it was while the settings are untouched`() {
+        val second = "FREQ=MONTHLY;BYDAY=2TU"
+        assertEquals(second, recurrence(second).rule())
+        assertEquals("FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU", recurrence("FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU").rule())
+        assertEquals("FREQ=MONTHLY;BYMONTHDAY=1,15", recurrence("FREQ=MONTHLY;BYMONTHDAY=1,15").rule())
+    }
+
+    @Test
+    fun `the settings say whether they can express what was read`() {
+        assertEquals(true, recurrence("FREQ=WEEKLY;INTERVAL=2;BYDAY=MO,WE").expressible)
+        assertEquals(true, recurrence("FREQ=MONTHLY;COUNT=5").expressible)
+        assertEquals(false, recurrence("FREQ=MONTHLY;BYDAY=2TU").expressible)
+        assertEquals(false, recurrence("FREQ=MONTHLY;BYMONTHDAY=15").expressible)
+        assertEquals(false, recurrence("FREQ=MONTHLY;BYDAY=TU").expressible)
+        assertEquals(false, recurrence("FREQ=HOURLY").expressible)
+    }
+
+    @Test
+    fun `a change to the settings drops the kept rule, and no change keeps it`() {
+        val read = recurrence("FREQ=MONTHLY;BYDAY=2TU")
+        val same = read.revised(read.copy())
+        assertEquals("FREQ=MONTHLY;BYDAY=2TU", same.rule())
+        val changed = read.revised(read.copy(frequency = Frequency.WEEKLY))
+        assertNull(changed.rule)
+        assertEquals("FREQ=WEEKLY;BYDAY=TU", changed.rule())
+        assertEquals(true, changed.expressible)
+    }
+
     // ---- the rule a choice builds ----
 
     @Test

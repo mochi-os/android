@@ -100,7 +100,7 @@
     <string name="feeds_unable_to_load">ਪੰਨਾ ਲੋਡ ਕਰਨ ਵਿੱਚ ਅਸਮਰੱਥ</string>
     <string name="feeds_delete_post_confirm">ਕੀ ਤੁਸੀਂ ਪੱਕਾ ਇਸ ਪੋਸਟ ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ? ਇਹ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।</string>
     <string name="feeds_delete_comment_confirm">ਕੀ ਤੁਸੀਂ ਪੱਕਾ ਇਸ ਟਿੱਪਣੀ ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
-    <string name="feeds_anonymous">ਅਣਜਾਣ</string>
+    <string name="feeds_anonymous">ਅਗਿਆਤ</string>
     <string name="feeds_replying_to_author">%1$s ਨੂੰ ਜਵਾਬ ਦੇ ਰਹੇ ਹੋ</string>
     <string name="feeds_attach_file">ਫ਼ਾਈਲ ਨੱਥੀ ਕਰੋ</string>
     <string name="feeds_file">ਫ਼ਾਈਲ</string>
@@ -159,7 +159,7 @@
     <string name="feeds_permission_deny">ਇਨਕਾਰ ਕਰੋ</string>
     <string name="feeds_rss_feed">RSS ਫੀਡ</string>
     <string name="feeds_settings_field_entity_id">ਇਕਾਈ ID</string>
-    <string name="feeds_settings_field_fingerprint">ਉਂਗਲੀ ਦਾ ਨਿਸ਼ਾਨ</string>
+    <string name="feeds_settings_field_fingerprint">ਫਿੰਗਰਪ੍ਰਿੰਟ</string>
     <string name="feeds_settings_field_server">ਸਰਵਰ</string>
     <string name="feeds_settings_name_edit_cd">ਨਾਮ ਸੰਪਾਦਿਤ ਕਰੋ</string>
     <string name="feeds_settings_section_identity">ਪਛਾਣ</string>

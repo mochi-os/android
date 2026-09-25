@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Eike jey embojoja hag̃ua</string>
     <string name="people_sync_transport">Ndaikatúi og̃uahẽ mohendahápe</string>
     <string name="people_sync_refused">Ndaikatúi oñembojoja peteĩ contacto: %1$s</string>
+    <string name="people_contact_friend">Mochi angirũ</string>
 </resources>

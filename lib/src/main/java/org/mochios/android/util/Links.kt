@@ -6,6 +6,8 @@
 package org.mochios.android.util
 
 import android.net.Uri
+import org.mochios.android.i18n.Flights
+import java.net.URLEncoder
 
 /**
  * Whether a peer-supplied URL is a web link - the only kind that may leave the
@@ -48,4 +50,31 @@ fun entityDeepLink(app: String?, segments: List<String>, apps: List<String>): St
         append('/').append(app).append('/').append(entity)
         for (s in segments.drop(1)) append('/').append(s)
     }
+}
+
+// A flight number on its own: an airline's two-character code (two letters, or
+// a letter and a digit) and one to four digits with an optional letter, with or
+// without a space between. matchEntire anchors both patterns.
+private val BARE = Regex("([A-Z]{2}|[A-Z][0-9]|[0-9][A-Z]) ?([0-9]{1,4}[A-Z]?)")
+// The airline's name and then its flight number, "Aer Lingus EI59": only the
+// two-letter code form after a name, so "Gate B12" is not a flight.
+private val NAMED = Regex(".*\\s([A-Z]{2}) ?([0-9]{1,4}[A-Z]?)")
+
+/**
+ * The flight number a location holds, or null. A location is a flight when it
+ * is a flight number alone, or an airline's name followed by one, and nothing
+ * else, so a street address, "EI59 gate 12" or "Alaska 1342" is not. Answers
+ * the number normalised, upper case and unspaced. The web's flightNumber()
+ * reads the same shape.
+ */
+fun flightNumber(location: String): String? {
+    val text = location.trim().uppercase()
+    val match = BARE.matchEntire(text) ?: NAMED.matchEntire(text) ?: return null
+    return match.groupValues[1] + match.groupValues[2]
+}
+
+/** A flight's page on the user's tracker, by its number as [flightNumber] answers it. */
+fun flightLink(flight: String, service: Flights): String = when (service) {
+    Flights.FLIGHTAWARE -> "https://www.flightaware.com/live/flight/" + URLEncoder.encode(flight, "UTF-8")
+    Flights.FLIGHTRADAR24 -> "https://www.flightradar24.com/data/flights/" + URLEncoder.encode(flight.lowercase(), "UTF-8")
 }

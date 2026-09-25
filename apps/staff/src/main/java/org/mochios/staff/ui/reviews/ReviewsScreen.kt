@@ -45,7 +45,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -86,14 +86,14 @@ fun ReviewsScreen(
 
     val state by viewModel.state.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
-    val context = LocalContext.current
+    val resources = LocalResources.current
 
     LaunchedEffect(Unit) {
         viewModel.events.collect { event ->
             when (event) {
-                is ReviewsEvent.Toast -> snackbarHostState.showSnackbar(context.getString(event.messageRes))
+                is ReviewsEvent.Toast -> snackbarHostState.showSnackbar(resources.getString(event.messageRes))
                 is ReviewsEvent.Error -> {
-                    val fallback = context.getString(R.string.staff_reviews_toast_update_failed)
+                    val fallback = resources.getString(R.string.staff_reviews_toast_update_failed)
                     val msg = event.error.userMessage().ifBlank { fallback }
                     snackbarHostState.showSnackbar(msg)
                 }

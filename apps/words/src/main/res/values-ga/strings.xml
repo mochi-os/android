@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_list_title">Words</string>
+    <string name="words_list_title">Focail</string>
     <string name="words_list_menu">Roghchlár</string>
     <string name="words_list_logout">Logáil amach</string>
     <string name="words_sidebar_completed">Críochnaithe</string>

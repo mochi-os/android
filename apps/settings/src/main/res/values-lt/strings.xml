@@ -391,4 +391,12 @@
     <string name="accounts_field_topic">Tema</string>
     <string name="accounts_field_secret">Pasirašymo paslaptis</string>
     <string name="account_totp_open">Atidaryti autentifikavimo programoje</string>
+    <string name="accounts_revoke">Atšaukti prieigą</string>
+    <string name="accounts_capability_calendar">Kalendorius</string>
+    <string name="accounts_capability_notify">Pranešimai</string>
+    <string name="accounts_capability_ai">DI</string>
+    <string name="accounts_capability_login">Prisijungimas</string>
+    <string name="accounts_provider_caldav">Kalendorių serveris</string>
+    <string name="accounts_revoke_confirm">Tai panaikins %1$s prieigą prie kalendoriaus. Prisijungimas naudojant %2$s išliks, kol atsiesite jį prisijungimo puslapyje.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

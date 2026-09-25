@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chess_app_title">Chess</string>
-    <string name="chess_sidebar_header">Chess</string>
+    <string name="chess_app_title">Ajedrez</string>
+    <string name="chess_sidebar_header">Ajedrez</string>
     <string name="chess_sidebar_active">Kawsachkan Pukllaykuna</string>
     <string name="chess_sidebar_completed">Tukusqa</string>
     <string name="chess_sidebar_new_game">Musuq pukllay</string>

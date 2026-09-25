@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Tinkichinapaq yapamanta yaykuy</string>
     <string name="people_sync_transport">Servidorman mana chayayta atikunchu</string>
     <string name="people_sync_refused">Huk contactota mana tinkichiyta atikunchu: %1$s</string>
+    <string name="people_contact_friend">Mochi masi</string>
 </resources>

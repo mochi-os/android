@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Log ind igen for at synkronisere</string>
     <string name="people_sync_transport">Kunne ikke nå serveren</string>
     <string name="people_sync_refused">Kunne ikke synkronisere en kontakt: %1$s</string>
+    <string name="people_contact_friend">Mochi-ven</string>
 </resources>

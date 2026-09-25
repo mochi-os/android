@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_list_title">Words</string>
+    <string name="words_list_title">字詞</string>
     <string name="words_list_menu">選單</string>
     <string name="words_list_logout">登出</string>
     <string name="words_sidebar_completed">已完成</string>

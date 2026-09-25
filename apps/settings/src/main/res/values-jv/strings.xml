@@ -385,4 +385,12 @@
     <string name="accounts_field_topic">Topik</string>
     <string name="accounts_field_secret">Rahasia tandha tangan</string>
     <string name="account_totp_open">Bukak ing aplikasi authenticator</string>
+    <string name="accounts_revoke">Batalake akses</string>
+    <string name="accounts_capability_calendar">Kalender</string>
+    <string name="accounts_capability_notify">Notifikasi</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Mlebu</string>
+    <string name="accounts_provider_caldav">Server kalender</string>
+    <string name="accounts_revoke_confirm">Iki bakal mbatalaké akses kalender %1$s. Mlebu nganggo %2$s tetep nganti sampeyan ngeculaké tautané ing kaca Mlebu.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

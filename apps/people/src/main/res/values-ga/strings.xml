@@ -218,4 +218,5 @@
     <string name="people_sync_authorization">Logáil isteach arís chun sioncrónú</string>
     <string name="people_sync_transport">Níorbh fhéidir teagmháil a dhéanamh leis an bhfreastalaí</string>
     <string name="people_sync_refused">Níorbh fhéidir teagmháil a shioncrónú: %1$s</string>
+    <string name="people_contact_friend">Cara Mochi</string>
 </resources>

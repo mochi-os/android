@@ -385,4 +385,12 @@
     <string name="accounts_field_topic">ຫົວຂໍ້</string>
     <string name="accounts_field_secret">ຄວາມລັບການເຊັນ</string>
     <string name="account_totp_open">ເປີດໃນແອັບຢືນຢັນຕົວຕົນ</string>
+    <string name="accounts_revoke">ຖອນການເຂົ້າເຖິງ</string>
+    <string name="accounts_capability_calendar">ປະຕິທິນ</string>
+    <string name="accounts_capability_notify">ການແຈ້ງເຕືອນ</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">ເຂົ້າສູ່ລະບົບ</string>
+    <string name="accounts_provider_caldav">ເຊີບເວີປະຕິທິນ</string>
+    <string name="accounts_revoke_confirm">ນີ້ຈະຖອນການເຂົ້າເຖິງປະຕິທິນຂອງ %1$s. ການເຂົ້າສູ່ລະບົບດ້ວຍ %2$s ຈະຍັງຄົງຢູ່ຈົນກວ່າທ່ານຈະຕັດການເຊື່ອມຕໍ່ໃນໜ້າເຂົ້າສູ່ລະບົບ.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

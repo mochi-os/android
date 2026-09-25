@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Синхрондоштуруу үчүн кайра кириңиз</string>
     <string name="people_sync_transport">Серверге жетүү мүмкүн болбоду</string>
     <string name="people_sync_refused">Байланышты синхрондоштуруу мүмкүн болбоду: %1$s</string>
+    <string name="people_contact_friend">Mochi досу</string>
 </resources>

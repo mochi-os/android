@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">Konu</string>
     <string name="accounts_field_secret">İmzalama sırrı</string>
     <string name="account_totp_open">Kimlik doğrulayıcı uygulamasında aç</string>
+    <string name="accounts_revoke">Erişimi iptal et</string>
+    <string name="accounts_capability_calendar">Takvim</string>
+    <string name="accounts_capability_notify">Bildirimler</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Oturum açma</string>
+    <string name="accounts_provider_caldav">Takvim sunucusu</string>
+    <string name="accounts_revoke_confirm">Bu, %1$s hesabının takvim erişimini iptal eder. %2$s ile oturum açma, Giriş sayfasında bağlantıyı kaldırana kadar devam eder.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

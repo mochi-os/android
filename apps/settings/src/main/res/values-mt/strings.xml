@@ -393,4 +393,12 @@
     <string name="accounts_field_topic">Suġġett</string>
     <string name="accounts_field_secret">Sigriet tal-iffirmar</string>
     <string name="account_totp_open">Iftaħ fl-app tal-awtentikazzjoni</string>
+    <string name="accounts_revoke">Irrevoka l-aċċess</string>
+    <string name="accounts_capability_calendar">Kalendarju</string>
+    <string name="accounts_capability_notify">Notifiki</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Dħul</string>
+    <string name="accounts_provider_caldav">Server tal-kalendarju</string>
+    <string name="accounts_revoke_confirm">Dan se jirrevoka l-aċċess għall-kalendarju ta\' %1$s. Id-dħul b\'%2$s jibqa\' sakemm tħollu fil-paġna tad-dħul.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

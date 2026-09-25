@@ -6,6 +6,7 @@
 package org.mochios.calendars
 
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
@@ -13,12 +14,17 @@ import org.junit.Test
 import org.mochios.android.sync.CalendarsMapping
 import org.mochios.android.sync.EventComponent
 import org.mochios.android.sync.property
+import org.mochios.calendars.model.Zone
 import org.mochios.calendars.ui.editor.EventForm
 import org.mochios.calendars.ui.editor.Frequency
 import org.mochios.calendars.ui.editor.Recurrence
 import org.mochios.calendars.ui.editor.Scope
 import org.mochios.calendars.ui.editor.components
 import org.mochios.calendars.ui.editor.excluded
+import org.mochios.calendars.ui.editor.follow
+import org.mochios.calendars.ui.editor.foreign
+import org.mochios.calendars.ui.editor.moved
+import org.mochios.calendars.ui.editor.written
 
 /**
  * The tree the editor sends: what "This event" and "All events" each change,
@@ -69,7 +75,7 @@ class EventComponentsTest {
         title = title,
         start = start,
         finish = finish,
-        timezone = LONDON,
+        zone = Zone(LONDON, LONDON),
         recurrence = recurrence,
         reminder = reminder,
         occurrence = occurrence,
@@ -159,7 +165,7 @@ class EventComponentsTest {
     @Test
     fun `a new event is built from the form as it stands`() {
         val tree = components(
-            EventForm(title = "One off", start = TEN, finish = ELEVEN, timezone = LONDON),
+            EventForm(title = "One off", start = TEN, finish = ELEVEN, zone = Zone(LONDON, LONDON)),
             emptyList(),
             Scope.ALL,
         )
@@ -233,5 +239,105 @@ class EventComponentsTest {
         val tree = excluded(listOf(master(), override(), other), NEXT)
         assertEquals(2, tree.size)
         assertEquals("Another week", tree[1].value("SUMMARY"))
+    }
+
+    // ---- zones ----
+
+    private val NEW_YORK = "America/New_York"
+
+    @Test
+    fun `each end is stamped in its own zone`() {
+        val tree = components(
+            EventForm(title = "Flight", start = TEN, finish = ELEVEN, zone = Zone(LONDON, NEW_YORK)),
+            emptyList(),
+            Scope.ALL,
+        )
+        val starts = tree[0].property("DTSTART")!!
+        val finishes = tree[0].property("DTEND")!!
+        assertEquals(LONDON, starts.parameter("TZID"))
+        assertEquals(NEW_YORK, finishes.parameter("TZID"))
+        // 10:00 London is 05:00 New York; the instant is the same either way.
+        assertEquals("20260922T100000", starts.value)
+        assertEquals("20260922T060000", finishes.value)
+        assertEquals(TEN, start(tree[0]))
+        assertEquals(ELEVEN, finish(tree[0]))
+    }
+
+    @Test
+    fun `a finish zone left blank follows the start zone`() {
+        val tree = components(
+            EventForm(title = "One off", start = TEN, finish = ELEVEN, zone = Zone(LONDON, "")),
+            emptyList(),
+            Scope.ALL,
+        )
+        assertEquals(LONDON, tree[0].property("DTEND")!!.parameter("TZID"))
+    }
+
+    @Test
+    fun `reading takes each end's own TZID`() {
+        val component = EventComponent(
+            name = "VEVENT",
+            properties = listOf(
+                property("DTSTART", "20260922T100000", "TZID", LONDON),
+                property("DTEND", "20260922T060000", "TZID", NEW_YORK),
+            ),
+        )
+        assertEquals(Zone(LONDON, NEW_YORK), written(component, "Pacific/Auckland"))
+    }
+
+    @Test
+    fun `reading a DTEND without a TZID follows the start`() {
+        val component = EventComponent(
+            name = "VEVENT",
+            properties = listOf(
+                property("DTSTART", "20260922T100000", "TZID", LONDON),
+                property("DTEND", "20260922T100000Z"),
+            ),
+        )
+        assertEquals(Zone(LONDON, LONDON), written(component, "Pacific/Auckland"))
+    }
+
+    @Test
+    fun `reading no TZID at all means the user's zone`() {
+        val component = EventComponent(
+            name = "VEVENT",
+            properties = listOf(
+                property("DTSTART", "20260922T090000Z"),
+                property("DTEND", "20260922T100000Z"),
+            ),
+        )
+        assertEquals(Zone("Pacific/Auckland", "Pacific/Auckland"), written(component, "Pacific/Auckland"))
+    }
+
+    @Test
+    fun `the finish zone follows the start zone while the two are equal`() {
+        assertEquals(Zone(NEW_YORK, NEW_YORK), follow(Zone(LONDON, LONDON), NEW_YORK))
+    }
+
+    @Test
+    fun `the finish zone stops following once set apart`() {
+        assertEquals(Zone("Asia/Tokyo", NEW_YORK), follow(Zone(LONDON, NEW_YORK), "Asia/Tokyo"))
+    }
+
+    @Test
+    fun `both ends in the user's zone need no zones shown`() {
+        assertFalse(foreign(Zone(LONDON, LONDON), LONDON))
+        // An end with no zone reads in the user's.
+        assertFalse(foreign(Zone("", ""), LONDON))
+        assertFalse(foreign(Zone(LONDON, ""), LONDON))
+    }
+
+    @Test
+    fun `either end in another zone shows the zones`() {
+        assertTrue(foreign(Zone(NEW_YORK, LONDON), LONDON))
+        assertTrue(foreign(Zone(LONDON, NEW_YORK), LONDON))
+        assertTrue(foreign(Zone(NEW_YORK, NEW_YORK), LONDON))
+    }
+
+    @Test
+    fun `a time moved to another zone keeps its clock reading`() {
+        // 10:00 London on the 22nd reads 10:00 New York five hours later.
+        assertEquals(TEN + 5 * 3600, moved(TEN, LONDON, NEW_YORK))
+        assertEquals(TEN, moved(TEN, LONDON, LONDON))
     }
 }

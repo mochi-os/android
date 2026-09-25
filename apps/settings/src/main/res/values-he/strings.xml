@@ -391,4 +391,12 @@
     <string name="accounts_field_topic">נושא</string>
     <string name="accounts_field_secret">סוד חתימה</string>
     <string name="account_totp_open">פתיחה באפליקציית האימות</string>
+    <string name="accounts_revoke">בטל גישה</string>
+    <string name="accounts_capability_calendar">יומן</string>
+    <string name="accounts_capability_notify">התראות</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">כניסה</string>
+    <string name="accounts_provider_caldav">שרת יומנים</string>
+    <string name="accounts_revoke_confirm">פעולה זו תבטל את גישת היומן של %1$s. הכניסה עם %2$s תישאר עד שתנתק אותה בדף הכניסה.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

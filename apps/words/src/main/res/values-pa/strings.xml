@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_list_title">Words</string>
+    <string name="words_list_title">ਸ਼ਬਦ</string>
     <string name="words_list_menu">ਮੇਨੂ</string>
     <string name="words_list_logout">ਲੌਗ ਆਊਟ</string>
     <string name="words_sidebar_completed">ਪੂਰਾ</string>
@@ -19,15 +19,15 @@
     <string name="words_detail_status_opponent_resigned">ਵਿਰੋਧੀ ਨੇ ਅਸਤੀਫ਼ਾ ਦਿੱਤਾ — ਤੁਸੀਂ ਜਿੱਤੇ!</string>
     <string name="words_detail_status_you_resigned">ਤੁਸੀਂ ਅਸਤੀਫ਼ਾ ਦਿੱਤਾ</string>
     <string name="words_detail_label_you">ਤੁਸੀਂ</string>
-    <string name="words_detail_action_shuffle">rack ਮਿਲਾਓ</string>
+    <string name="words_detail_action_shuffle">ਰੈਕ ਮਿਲਾਓ</string>
     <string name="words_detail_action_pass">ਪਾਸ</string>
     <string name="words_detail_action_exchange">ਟਾਈਲਾਂ ਅਦਲਾ-ਬਦਲੀ ਕਰੋ</string>
     <string name="words_detail_action_cancel_exchange">ਅਦਲਾ-ਬਦਲੀ ਰੱਦ ਕਰੋ</string>
     <string name="words_detail_action_resign">ਅਸਤੀਫ਼ਾ ਦਿਓ</string>
-    <string name="words_detail_action_rematch">Rematch</string>
+    <string name="words_detail_action_rematch">ਦੁਬਾਰਾ ਮੈਚ</string>
     <string name="words_detail_action_delete">ਖੇਡ ਮਿਟਾਓ</string>
     <string name="words_detail_chat_title">ਚੈਟ</string>
-    <string name="words_detail_recall">Recall</string>
+    <string name="words_detail_recall">ਵਾਪਸ ਲਓ</string>
     <string name="words_detail_submit">ਜਮ੍ਹਾਂ ਕਰੋ</string>
     <string name="words_detail_cancel">ਰੱਦ ਕਰੋ</string>
     <string name="words_detail_exchange">ਬਦਲੋ</string>
@@ -43,14 +43,14 @@
     <string name="words_new_game_opponents_hint">(1-3)</string>
     <string name="words_new_game_player_count">%1$d players</string>
     <string name="words_new_game_no_friends_subtitle">ਖੇਡਣਾ ਸ਼ੁਰੂ ਕਰਨ ਲਈ People ਐਪ ਵਿੱਚ ਦੋਸਤ ਜੋੜੋ।</string>
-    <string name="words_detail_title">Game</string>
+    <string name="words_detail_title">ਗੇਮ</string>
     <string name="words_detail_status_opponent_move">%1$s ਦੀ ਚਾਲ</string>
     <string name="words_detail_status_winner_wins">%1$s wins</string>
     <string name="words_detail_player_fallback">Player %1$d</string>
     <string name="words_detail_player_count">%1$d players</string>
     <string name="words_detail_label_tiles_left">%1$d tiles left</string>
-    <string name="words_detail_action_open_chat">Open chat</string>
-    <string name="words_detail_action_more">Game actions</string>
+    <string name="words_detail_action_open_chat">ਚੈਟ ਖੋਲ੍ਹੋ</string>
+    <string name="words_detail_action_more">ਗੇਮ ਕਾਰਵਾਈਆਂ</string>
     <string name="words_detail_exchange_count">Exchange (%1$d)</string>
     <string name="words_detail_chat_you_played">You played %1$s</string>
     <string name="words_detail_chat_player_played">%1$s ਨੇ %2$s ਖੇਡਿਆ</string>

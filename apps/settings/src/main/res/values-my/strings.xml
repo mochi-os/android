@@ -385,4 +385,12 @@
     <string name="accounts_field_topic">ခေါင်းစဉ်</string>
     <string name="accounts_field_secret">လက်မှတ်လျှို့ဝှက်ချက်</string>
     <string name="account_totp_open">အထောက်အထားစိစစ်ရေးအက်ပ်တွင် ဖွင့်ရန်</string>
+    <string name="accounts_revoke">အသုံးပြုခွင့် ရုပ်သိမ်းရန်</string>
+    <string name="accounts_capability_calendar">ပြက္ခဒိန်</string>
+    <string name="accounts_capability_notify">အသိပေးချက်များ</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">ဝင်ရောက်ခြင်း</string>
+    <string name="accounts_provider_caldav">ပြက္ခဒိန် ဆာဗာ</string>
+    <string name="accounts_revoke_confirm">၎င်းသည် %1$s ၏ ပြက္ခဒိန် အသုံးပြုခွင့်ကို ရုပ်သိမ်းပါမည်။ %2$s ဖြင့် ဝင်ရောက်ခြင်းသည် လော့ဂ်အင်စာမျက်နှာတွင် ချိတ်ဆက်မှု ဖြုတ်သည်အထိ ဆက်ရှိနေပါမည်။</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

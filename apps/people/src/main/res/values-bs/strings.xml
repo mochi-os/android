@@ -216,4 +216,5 @@
     <string name="people_sync_authorization">Prijavite se ponovo za sinhronizaciju</string>
     <string name="people_sync_transport">Server nije dostupan</string>
     <string name="people_sync_refused">Sinhronizacija kontakta nije uspjela: %1$s</string>
+    <string name="people_contact_friend">Mochi prijatelj</string>
 </resources>

@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Staff</string>
-    <string name="launcher_staff">Zespół</string>
+    <string name="launcher_staff">Mochi Staff</string>
     <string name="staff_accounts_action_ban_title">Zbanuj konto</string>
     <string name="staff_accounts_action_suspend_title">Zawieś konto</string>
     <string name="staff_accounts_action_unban_title">Cofnij ban</string>

@@ -389,4 +389,12 @@
     <string name="accounts_field_topic">Subiect</string>
     <string name="accounts_field_secret">Secret de semnare</string>
     <string name="account_totp_open">Deschide în aplicația de autentificare</string>
+    <string name="accounts_revoke">Revocă accesul</string>
+    <string name="accounts_capability_calendar">Calendar</string>
+    <string name="accounts_capability_notify">Notificări</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Autentificare</string>
+    <string name="accounts_provider_caldav">Server de calendar</string>
+    <string name="accounts_revoke_confirm">Aceasta va revoca accesul la calendar al %1$s. Autentificarea cu %2$s rămâne până când o deconectezi din pagina de autentificare.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

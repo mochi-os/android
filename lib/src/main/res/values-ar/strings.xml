@@ -271,6 +271,9 @@
     <string name="attachment_caption_add">إضافة تسمية توضيحية</string>
     <string name="attachment_caption_edit">تعديل التسمية التوضيحية</string>
     <string name="about_check_background">المتابعة في الخلفية</string>
+    <string name="update_install">تثبيت</string>
+    <string name="update_available">يتوفر تحديث</string>
+    <string name="update_later">لاحقًا</string>
     <string name="notifications_category_unassigned">غير معين</string>
     <string name="notifications_change_category">تغيير فئة الإشعار</string>
     <string name="lightbox_comments_none">لا توجد تعليقات على هذه الصورة بعد.</string>

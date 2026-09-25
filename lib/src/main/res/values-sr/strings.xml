@@ -271,6 +271,9 @@
     <string name="attachment_caption_add">Додај натпис</string>
     <string name="attachment_caption_edit">Уреди натпис</string>
     <string name="about_check_background">Настави у позадини</string>
+    <string name="update_install">Инсталирај</string>
+    <string name="update_available">Доступно је ажурирање</string>
+    <string name="update_later">Касније</string>
     <string name="notifications_category_unassigned">Недодељено</string>
     <string name="notifications_change_category">Промени категорију обавештења</string>
     <string name="lightbox_comments_none">Још нема коментара на ову слику.</string>

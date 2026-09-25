@@ -10,12 +10,12 @@
     <string name="forums_list_unsubscribe_title">അൺസബ്സ്ക്രൈബ് ചെയ്യുക</string>
     <string name="forums_create_title">ഫോറം സൃഷ്ടിക്കുക</string>
     <string name="forums_create_name">പേര്</string>
-    <string name="forums_create_privacy">സ്വകാര്യതാ നയം</string>
+    <string name="forums_create_privacy">സ്വകാര്യത</string>
     <string name="forums_create_private">സ്വകാര്യം</string>
     <string name="forums_create_public">പൊതു</string>
     <string name="forums_create_action">സൃഷ്ടിക്കുക</string>
     <string name="forums_find_title">ഫോറങ്ങൾ കണ്ടെത്തുക</string>
-    <string name="forums_find_recommended">ശുപാർശ ചെയ്യുന്ന CRM-കൾ</string>
+    <string name="forums_find_recommended">ശുപാർശ ചെയ്തത്</string>
     <string name="forums_find_subscribe">സബ്സ്ക്രൈബ് ചെയ്യുക</string>
     <string name="forums_find_no_results">ഫോറങ്ങളൊന്നും കണ്ടെത്തിയില്ല</string>
     <string name="forums_loading">ലോഡുചെയ്യുന്നു…</string>
@@ -73,7 +73,7 @@
     <string name="forums_settings_unsubscribe">അൺസബ്സ്ക്രൈബ് ചെയ്യുക</string>
     <string name="forums_moderation_title">മോഡറേഷൻ</string>
     <string name="forums_moderation_tab_queue">ക്യൂ</string>
-    <string name="forums_moderation_tab_reports">റിപ്പോസിറ്ററികൾ</string>
+    <string name="forums_moderation_tab_reports">റിപ്പോർട്ടുകൾ</string>
     <string name="forums_moderation_tab_log">ലോഗ്</string>
     <string name="forums_moderation_tab_restrictions">നിയന്ത്രണങ്ങൾ</string>
     <string name="forums_moderation_reports_pending">തീർപ്പുകൽപ്പിക്കാത്തത്</string>
@@ -87,7 +87,7 @@
     <string name="forums_moderation_restriction_type_muted">നിശബ്ദമാക്കുക</string>
     <string name="forums_moderation_restriction_type_banned">വിലക്കുക</string>
     <string name="forums_moderation_section_premoderation">മുൻ-മോഡറേഷൻ</string>
-    <string name="forums_moderation_section_ratelimiting">റേറ്റിംഗ്</string>
+    <string name="forums_moderation_section_ratelimiting">റേറ്റ് പരിധി</string>
     <string name="forums_moderation_require_posts">പുതിയ ഉപയോക്താക്കൾക്ക് അംഗീകാരം ആവശ്യപ്പെടുക</string>
     <string name="forums_moderation_require_comments">പുതിയ പോസ്റ്റുകൾക്ക് അംഗീകാരം ആവശ്യപ്പെടുക</string>
     <string name="forums_moderation_require_new_users">ഡൊമെയ്ൻ verification ആവശ്യപ്പെടുക</string>
@@ -113,8 +113,8 @@
     <string name="forums_comment_edit_attach">ഫയലുകൾ അറ്റാച്ച് ചെയ്യുക</string>
     <string name="forums_comment_delete">അഭിപ്രായം ഇല്ലാതാക്കുക</string>
     <string name="forums_comment_delete_title">അഭിപ്രായം ഇല്ലാതാക്കുക</string>
-    <string name="forums_comment_reply">റിപ്പോർട്ട് ചെയ്യുക</string>
-    <string name="forums_settings_rename">കോളം പുനർനാമകരണം ചെയ്യുക</string>
+    <string name="forums_comment_reply">മറുപടി</string>
+    <string name="forums_settings_rename">പുനർനാമകരണം ചെയ്യുക</string>
     <string name="forums_settings_save">സേവ് ചെയ്യുക</string>
     <string name="forums_settings_delete">ഫോറം ഇല്ലാതാക്കുക</string>
     <string name="forums_settings_delete_title">ഫോറം ഇല്ലാതാക്കുക</string>
@@ -126,7 +126,7 @@
     <string name="forums_post_edit_body_field">ഉള്ളടക്കം</string>
     <string name="forums_comment_edit_body_field">ഉള്ളടക്കം</string>
     <string name="forums_tag_clear">ഫിൽട്ടർ മായ്ക്കുക</string>
-    <string name="forums_post_tag_add">Add tag</string>
+    <string name="forums_post_tag_add">ടാഗ് ചേർക്കുക</string>
     <string name="forums_write_comment">ഒരു അഭിപ്രായം എഴുതുക…</string>
     <string name="forums_auth_login_failed">ലോഗിൻ പരാജയപ്പെട്ടു</string>
 
@@ -205,7 +205,7 @@
         <item quantity="one">%d പുതിയ പോസ്റ്റ്</item>
         <item quantity="other">%d പുതിയ പോസ്റ്റുകൾ</item>
     </plurals>
-    <string name="forums_rss_feed">റാങ്ക്</string>
+    <string name="forums_rss_feed">RSS ഫീഡ്</string>
     <string name="forums_rss_mode_posts">പോസ്റ്റുകൾ</string>
     <string name="forums_rss_mode_posts_comments">പോസ്റ്റുകളും അഭിപ്രായങ്ങളും</string>
     <string name="forums_rss_copied">RSS URL ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്തി</string>
@@ -231,7 +231,7 @@
     <string name="forums_clear">മായ്ക്കുക</string>
     <string name="forums_ai_account_label">അക്കൗണ്ട്</string>
     <string name="forums_ai_prompt_default">ഡിഫോൾട്ട്</string>
-    <string name="forums_moderation_reject">എല്ലാം നിരസിക്കുക</string>
+    <string name="forums_moderation_reject">നിരസിക്കുക</string>
     <string name="forums_moderation_report_by">%1$s പ്രകാരം</string>
     <string name="forums_moderation_restriction_state_banned">വിലക്കി</string>
     <string name="forums_moderation_unit_days">ദിവസങ്ങൾ</string>
@@ -308,7 +308,7 @@
     <string name="forums_reject_forum_missing">ഫോറം ഇനി ലഭ്യമല്ല</string>
     <string name="forums_reject_post_server">ഫോറം സെർവറിൽ പോസ്റ്റ് സംരക്ഷിക്കാൻ കഴിഞ്ഞില്ല</string>
     <string name="forums_reject_comment_server">ഫോറം സെർവറിൽ അഭിപ്രായം സംരക്ഷിക്കാൻ കഴിഞ്ഞില്ല</string>
-    <string name="forums_moderation_rejected">സ്റ്റാഫ് നിരസിച്ചു</string>
+    <string name="forums_moderation_rejected">നിരസിച്ചു</string>
     <string name="forums_post_edited">%1$s (എഡിറ്റുചെയ്തു)</string>
     <string name="forums_moderation_action_remove">നീക്കംചെയ്തു</string>
     <string name="forums_moderation_action_restore">പുനഃസ്ഥാപിച്ചു</string>

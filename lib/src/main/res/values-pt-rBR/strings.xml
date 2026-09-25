@@ -299,4 +299,5 @@
     <string name="settings_card_theme">Do tema</string>
     <string name="settings_card_flat">Plano</string>
     <string name="settings_card_raised">Elevado</string>
+    <string name="update_install">Instalar</string>
 </resources>

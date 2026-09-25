@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Zum Synchronisieren erneut anmelden</string>
     <string name="people_sync_transport">Server nicht erreichbar</string>
     <string name="people_sync_refused">Ein Kontakt konnte nicht synchronisiert werden: %1$s</string>
+    <string name="people_contact_friend">Mochi-Freund</string>
 </resources>

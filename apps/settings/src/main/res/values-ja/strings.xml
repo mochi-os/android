@@ -386,4 +386,12 @@
     <string name="accounts_field_topic">トピック</string>
     <string name="accounts_field_secret">署名シークレット</string>
     <string name="account_totp_open">認証アプリで開く</string>
+    <string name="accounts_revoke">アクセスを取り消す</string>
+    <string name="accounts_capability_calendar">カレンダー</string>
+    <string name="accounts_capability_notify">通知</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">サインイン</string>
+    <string name="accounts_provider_caldav">カレンダーサーバー</string>
+    <string name="accounts_revoke_confirm">%1$s のカレンダーへのアクセスを取り消します。%2$s でのサインインは、ログインページでリンクを解除するまで有効です。</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

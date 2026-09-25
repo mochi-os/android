@@ -218,4 +218,5 @@
     <string name="people_sync_authorization">Idħol mill-ġdid biex tissinkronizza</string>
     <string name="people_sync_transport">Ma rnexxiex jilħaq is-server</string>
     <string name="people_sync_refused">Ma rnexxiex jissinkronizza kuntatt: %1$s</string>
+    <string name="people_contact_friend">Ħabib ta\' Mochi</string>
 </resources>

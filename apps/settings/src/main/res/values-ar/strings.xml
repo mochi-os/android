@@ -395,4 +395,12 @@
     <string name="accounts_field_topic">الموضوع</string>
     <string name="accounts_field_secret">سر التوقيع</string>
     <string name="account_totp_open">فتح في تطبيق المصادقة</string>
+    <string name="accounts_revoke">إلغاء الوصول</string>
+    <string name="accounts_capability_calendar">التقويم</string>
+    <string name="accounts_capability_notify">الإشعارات</string>
+    <string name="accounts_capability_ai">الذكاء الاصطناعي</string>
+    <string name="accounts_capability_login">تسجيل الدخول</string>
+    <string name="accounts_provider_caldav">خادم تقويم</string>
+    <string name="accounts_revoke_confirm">سيؤدي هذا إلى إلغاء وصول %1$s إلى التقويم. يظل تسجيل الدخول باستخدام %2$s حتى تلغي ربطه من صفحة تسجيل الدخول.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

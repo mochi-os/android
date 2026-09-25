@@ -29,7 +29,6 @@
     <string name="projects_create_object_type">Type</string>
     <string name="projects_field_type">Type</string>
     <string name="projects_views_type">Type</string>
-    <string name="projects_create_object_title_field">Titre</string>
     <string name="projects_request_field_title">Titre</string>
     <string name="projects_settings_unsubscribe">Se désabonner</string>
     <string name="projects_settings_unsubscribe_title">Se désabonner</string>
@@ -366,4 +365,5 @@
     <string name="projects_settings_not_set">Non défini</string>
     <string name="projects_settings_updated">Projet mis à jour</string>
     <string name="projects_board_add_column">Ajouter une colonne</string>
+    <string name="projects_attachment_remove">Retirer la pièce jointe</string>
 </resources>

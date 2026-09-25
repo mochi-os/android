@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Staff</string>
-    <string name="launcher_staff">Προσωπικό</string>
+    <string name="launcher_staff">Mochi Staff</string>
     <string name="staff_accounts_action_ban_title">Αποκλεισμός λογαριασμού</string>
     <string name="staff_accounts_action_suspend_title">Αναστολή λογαριασμού</string>
     <string name="staff_accounts_action_unban_title">Άρση αποκλεισμού</string>

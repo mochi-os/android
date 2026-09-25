@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Kirjaudu uudelleen sisään synkronoidaksesi</string>
     <string name="people_sync_transport">Palvelimeen ei saatu yhteyttä</string>
     <string name="people_sync_refused">Yhteystietoa ei voitu synkronoida: %1$s</string>
+    <string name="people_contact_friend">Mochi-ystävä</string>
 </resources>

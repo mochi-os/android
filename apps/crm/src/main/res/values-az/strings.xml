@@ -23,7 +23,7 @@
     <string name="crm_sort_direction">İstiqamət</string>
     <string name="crm_sort_rank">Manual</string>
     <string name="crm_sort_created">Yaradıldı</string>
-    <string name="crm_sort_updated">Yenilənir...</string>
+    <string name="crm_sort_updated">Yeniləndi</string>
     <string name="crm_create_object_title">Obyekt yarat</string>
     <string name="crm_create_object_type">Növ</string>
     <string name="crm_create_object_parent">Əsas</string>
@@ -34,7 +34,7 @@
     <string name="crm_option_icon">İkon</string>
     <string name="crm_option_icon_placeholder">məs. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Abunəlikdən çıx</string>
-    <string name="crm_settings_delete_crm">Layihəni sil</string>
+    <string name="crm_settings_delete_crm">CRM-i sil</string>
     <string name="crm_settings_delete_confirm_title">CRM-i sil</string>
     <string name="crm_settings_unsubscribe_title">Abunəlikdən çıx</string>
     <string name="crm_settings_unsubscribe_message">Bu CRM-dən abunəliyi ləğv etmək istədiyinizə əminsiniz?</string>
@@ -62,12 +62,12 @@
     <string name="crm_property_remove">Sil</string>
     <string name="crm_attachments">Qoşmalar</string>
     <string name="crm_attachment_add">Qoşma əlavə et</string>
-    <string name="crm_board_unassigned">İcazəsiz giriş</string>
+    <string name="crm_board_unassigned">Təyin edilməyib</string>
     <string name="crm_board_new">Yeni</string>
     <string name="crm_board_rename">Adı dəyiş</string>
     <string name="crm_board_rename_column">Sütun adını dəyiş</string>
     <string name="crm_move_position">Mövqe</string>
-    <string name="crm_move_position_top">Mövzular</string>
+    <string name="crm_move_position_top">Yuxarı</string>
     <string name="crm_move_current">Cari</string>
     <string name="crm_design_title">Dizayn</string>
     <string name="crm_design_export">Dizaynı ixrac et</string>
@@ -78,7 +78,7 @@
     <string name="crm_design_or_upload_json">Yaxud fayl yükləyin</string>
     <string name="crm_design_upload_json">Versiyanı yüklə</string>
     <string name="crm_design_tab_classes">Siniflər</string>
-    <string name="crm_design_tab_views">Səs ver və bax</string>
+    <string name="crm_design_tab_views">Baxışlar</string>
     <string name="crm_design_import_dialog_title">Dizaynı idxal et</string>
     <string name="crm_design_import_choose_template">Şablon seçin</string>
     <string name="crm_design_replace_title">Dizaynı əvəz edək?</string>
@@ -88,14 +88,14 @@
     <string name="crm_classes_create">Yarat</string>
     <string name="crm_class_name">Ad</string>
     <string name="crm_class_save_name">Adı saxla</string>
-    <string name="crm_class_title_field">Sağ paneli açıb-bağla</string>
+    <string name="crm_class_title_field">Başlıq sahəsi</string>
     <string name="crm_class_fields">Sahələr</string>
     <string name="crm_class_add_field">Sahə əlavə et</string>
     <string name="crm_class_delete">Sinifi sil</string>
     <string name="crm_class_delete_title">Sinifi sil</string>
     <string name="crm_field_type_text">Mətn</string>
     <string name="crm_field_type_number">Nömrə</string>
-    <string name="crm_field_type_user">İstifadəçi yaradıldı</string>
+    <string name="crm_field_type_user">İstifadəçi</string>
     <string name="crm_field_type_date">Tarix</string>
     <string name="crm_field_type_checklist">Yoxlama siyahısı</string>
     <string name="crm_field_name">Ad</string>
@@ -121,9 +121,9 @@
     <string name="crm_views_type_list">Siyahı</string>
     <string name="crm_views_direction">İstiqamət</string>
     <string name="crm_views_sort_created">Yaradıldı</string>
-    <string name="crm_views_sort_updated">Yenilənir...</string>
+    <string name="crm_views_sort_updated">Yeniləndi</string>
     <string name="crm_views_sort_rank">Sıra</string>
-    <string name="crm_not_found">Layihə tapılmadı</string>
+    <string name="crm_not_found">CRM tapılmadı</string>
     <string name="crm_more">Daha çox</string>
     <string name="crm_comment_send">Göndər</string>
 
@@ -246,7 +246,7 @@
     <string name="crm_settings_entity_id">Qurum ID</string>
     <string name="crm_settings_fingerprint">Barmaq izi</string>
     <string name="crm_settings_server">Server</string>
-    <string name="crm_untitled">Təsdiqlənməyib</string>
+    <string name="crm_untitled">Başlıqsız</string>
     <string name="crm_property_select">Seçin …</string>
     <string name="crm_filter">Filtr</string>
     <string name="crm_sort_filter_title">Sırala və filtrlə</string>

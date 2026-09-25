@@ -386,4 +386,12 @@
     <string name="accounts_field_topic">Tema</string>
     <string name="accounts_field_secret">Firma pakasqa</string>
     <string name="account_totp_open">Autenticador aplicacionpi kichay</string>
+    <string name="accounts_revoke">Yaykuyta chinkachiy</string>
+    <string name="accounts_capability_calendar">Kalendaryu</string>
+    <string name="accounts_capability_notify">Notificacionkuna</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Yaykuy</string>
+    <string name="accounts_provider_caldav">Kalendaryu servidor</string>
+    <string name="accounts_revoke_confirm">Kayqa %1$s kalendaryuman yaykuyninta qichunqa. %2$s nisqawan yaykuyqa Yaykuy p\'anqapi mana t\'inkita paskaspaykiqa qhipakunqa.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

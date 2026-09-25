@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Sinhronlaşdyrmak üçin täzeden giriň</string>
     <string name="people_sync_transport">Servere ýetip bolmady</string>
     <string name="people_sync_refused">Kontakty sinhronlaşdyryp bolmady: %1$s</string>
+    <string name="people_contact_friend">Mochi dosty</string>
 </resources>

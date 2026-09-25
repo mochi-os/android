@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">Mata duree</string>
     <string name="accounts_field_secret">Iccitii mallattoo</string>
     <string name="account_totp_open">Appii mirkaneessaa keessatti bani</string>
+    <string name="accounts_revoke">Argama haqi</string>
+    <string name="accounts_capability_calendar">Kaalaandarii</string>
+    <string name="accounts_capability_notify">Beeksisaalee</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Seensa</string>
+    <string name="accounts_provider_caldav">Saarvarii kaalaandarii</string>
+    <string name="accounts_revoke_confirm">Kun qaqqabummaa kaalaandarii %1$s ni haqa. %2$s waliin seensi hamma fuula Seensaa irratti hiiktutti ni tura.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

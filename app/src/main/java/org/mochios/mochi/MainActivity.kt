@@ -22,6 +22,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.stringResource
+import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
@@ -103,6 +104,9 @@ open class MainActivity : ComponentActivity() {
     // Mochi task to the link, not just the one that received it.
     private val pendingLink = MutableStateFlow<String?>(null)
 
+    /** A staged update to offer, set on every resume; null once answered. */
+    private val pendingUpdate = MutableStateFlow<String?>(null)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val hosted = targetAppOf(componentName)
@@ -135,6 +139,27 @@ open class MainActivity : ComponentActivity() {
                 FormatProvider(manager = preferencesManager) {
                     RequestNotificationPermission()
                     OemBackgroundHintDialog()
+                    // A staged update is offered here, never handed to the
+                    // installer unasked: on a Samsung with Auto Blocker on
+                    // the installer is refused, so it has to be the user's
+                    // move. "Later" and a tap outside decline this version.
+                    val update by pendingUpdate.collectAsState()
+                    update?.let { version ->
+                        MochiAlertDialog(
+                            onDismissRequest = {
+                                UpdateInstaller.decline(this@MainActivity, version)
+                                pendingUpdate.value = null
+                            },
+                            title = stringResource(MochiR.string.update_available),
+                            text = stringResource(MochiR.string.about_version, version),
+                            confirmText = stringResource(MochiR.string.update_install),
+                            onConfirm = {
+                                pendingUpdate.value = null
+                                UpdateInstaller.install(this@MainActivity, version)
+                            },
+                            dismissText = stringResource(MochiR.string.update_later),
+                        )
+                    }
                     LaunchedEffect(isAuthenticated) {
                         Log.i(TAG, "LaunchedEffect(isAuthenticated)=$isAuthenticated")
                         if (isAuthenticated) {
@@ -386,10 +411,9 @@ open class MainActivity : ComponentActivity() {
     override fun onResume() {
         super.onResume()
         // When the daily worker has staged a newer APK in cacheDir/updates/,
-        // hand it off to the system installer now. Android shows its own
-        // confirmation dialog; we can't suppress that, but pre-downloading
-        // means the user never sees the browser/file-picker chain.
-        UpdateInstaller.promptIfPending(this)
+        // offer it; the dialog in setContent hands it to the system installer
+        // only on the user's say-so.
+        pendingUpdate.value = UpdateInstaller.pending(this)
 
         // A socket dropped in the background otherwise waits out its backoff
         // timer.
@@ -497,6 +521,7 @@ open class MainActivity : ComponentActivity() {
             else -> when (oauthReturnKind(name)) {
                 OAuthReturnKind.LOGIN -> applyOAuthReturn(params["code"], params["error"], params["nonce"])
                 OAuthReturnKind.LINK -> applyOAuthLinkReturn(params["code"], params["error"], params["nonce"])
+                OAuthReturnKind.GRANT -> applyOAuthGrantReturn(params["code"], params["error"], params["nonce"])
                 null -> Log.w(TAG, "Unknown system intent in $uri")
             }
         }
@@ -533,6 +558,11 @@ open class MainActivity : ComponentActivity() {
                     uri.getQueryParameter("nonce"),
                 )
                 OAuthReturnKind.LINK -> applyOAuthLinkReturn(
+                    uri.getQueryParameter("code"),
+                    uri.getQueryParameter("error"),
+                    uri.getQueryParameter("nonce"),
+                )
+                OAuthReturnKind.GRANT -> applyOAuthGrantReturn(
                     uri.getQueryParameter("code"),
                     uri.getQueryParameter("error"),
                     uri.getQueryParameter("nonce"),
@@ -635,13 +665,27 @@ open class MainActivity : ComponentActivity() {
     }
 
     /**
+     * GRANT ceremony return, a capability granted to a connected account,
+     * gated against the grant ceremony the same way.
+     */
+    private fun applyOAuthGrantReturn(code: String?, error: String?, nonce: String?) {
+        lifecycleScope.launch {
+            val ceremony = sessionManager.oauthGrantCeremony()
+            if (!shouldAcceptOAuthReturn(ceremony.hasVerifier, ceremony.nonce, nonce, code, error)) {
+                Log.w(TAG, "Ignoring mochi:oauth-grant-return that matches no outstanding ceremony")
+                return@launch
+            }
+            sessionManager.setOAuthGrantReturn(code, error)
+        }
+    }
+
+    /**
      * Whether [route] already has an entry on the back stack.
      *
      * @param route a destination's route pattern.
      * @return true when the stack holds one.
      */
-    private fun NavController.holds(route: String): Boolean =
-        currentBackStack.value.any { entry -> entry.destination.route == route }
+    private fun NavController.holds(route: String): Boolean = topmost(route) != null
 
     /**
      * Whether [route] is the screen already on top, arguments and all.
@@ -651,8 +695,24 @@ open class MainActivity : ComponentActivity() {
      */
     private fun NavController.isAt(route: String): Boolean {
         val entry = currentBackStackEntry ?: return false
-        return entry.destination.hasRoute(route, entry.arguments)
+        return topmost(route) === entry
     }
+
+    /**
+     * The entry nearest the top of the back stack that [route] matches, by the
+     * same destination-and-arguments test popBackStack(route) uses. The public
+     * way to ask: the back stack itself and that test are internal to the
+     * navigation library.
+     *
+     * @param route a route pattern or a filled route.
+     * @return the entry, or null when none on the stack matches.
+     */
+    private fun NavController.topmost(route: String): NavBackStackEntry? =
+        try {
+            getBackStackEntry(route)
+        } catch (_: IllegalArgumentException) {
+            null
+        }
 
     /**
      * Make [home] the parent of the destination a deep link is about to open:
@@ -904,7 +964,7 @@ open class MainActivity : ComponentActivity() {
         // navigates to SettingsApp.NOTIFICATIONS; the Mochi Settings launcher
         // class hosts SettingsApp.HOME.
 
-        private val LEGACY_SYSTEM_INTENT_AUTHORITIES = setOf("notification", "oauth-return", "oauth-link-return")
+        private val LEGACY_SYSTEM_INTENT_AUTHORITIES = setOf("notification", "oauth-return", "oauth-link-return", "oauth-grant-return")
 
         /**
          * Every bundled app; the bootstrap mints a JWT for each so

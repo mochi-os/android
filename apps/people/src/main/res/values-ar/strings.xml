@@ -219,4 +219,5 @@
     <string name="people_sync_authorization">سجّل الدخول مرة أخرى للمزامنة</string>
     <string name="people_sync_transport">تعذر الوصول إلى الخادم</string>
     <string name="people_sync_refused">تعذرت مزامنة جهة اتصال: %1$s</string>
+    <string name="people_contact_friend">صديق Mochi</string>
 </resources>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chess_app_title">Chess</string>
-    <string name="chess_sidebar_header">Chess</string>
+    <string name="chess_app_title">អុកអន្តរជាតិ</string>
+    <string name="chess_sidebar_header">អុកអន្តរជាតិ</string>
     <string name="chess_sidebar_active">ហ្គេមសកម្ម</string>
     <string name="chess_sidebar_completed">បានបញ្ចប់</string>
     <string name="chess_sidebar_new_game">ហ្គេមថ្មី</string>

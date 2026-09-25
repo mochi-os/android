@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">Թեմա</string>
     <string name="accounts_field_secret">Ստորագրության գաղտնիք</string>
     <string name="account_totp_open">Բացել նույնականացման հավելվածում</string>
+    <string name="accounts_revoke">Չեղարկել մուտքը</string>
+    <string name="accounts_capability_calendar">Օրացույց</string>
+    <string name="accounts_capability_notify">Ծանուցումներ</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Մուտք</string>
+    <string name="accounts_provider_caldav">Օրացույցի սերվեր</string>
+    <string name="accounts_revoke_confirm">Սա կչեղարկի %1$s-ի օրացույցի հասանելիությունը։ %2$s-ով մուտքը կմնա, մինչև այն անջատեք Մուտքի էջում։</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

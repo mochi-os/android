@@ -12,6 +12,8 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import org.mochios.android.auth.AuthRepository
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.auth.ShellApi
+import org.mochios.android.auth.shellRequest
 import java.time.DayOfWeek
 import java.time.temporal.WeekFields
 import java.util.Locale
@@ -39,6 +41,7 @@ class PreferencesManager @Inject internal constructor(
     private val sessionManager: SessionManager,
     private val api: PreferencesApi,
     private val authRepository: AuthRepository,
+    private val shellApi: ShellApi,
 ) {
 
     private val _preferences = MutableStateFlow(resolveAuto(emptyMap()))
@@ -104,6 +107,10 @@ class PreferencesManager @Inject internal constructor(
             ?: authRepository.fetchToken("settings").getOrNull()
 
     suspend fun refresh() {
+        // Report the device's zone first, so a preference set to "auto" means
+        // this device's zone on the server as well as here. Failure is fine:
+        // the server then keeps whatever it last heard.
+        runCatching { shellApi.boot(shellRequest()) }
         val token = sessionManager.getToken("settings")
             ?: authRepository.fetchToken("settings").getOrNull()
             ?: return
@@ -126,13 +133,13 @@ class PreferencesManager @Inject internal constructor(
         rawPrefs = raw
         _preferences.value = resolveAuto(raw)
 
-        // Mirror the server's language onto the boot-time store and apply it to
-        // the running app. On Android 13+ this re-applies the per-app locale
-        // (no-op when unchanged; an actual change triggers an Activity
-        // recreate); older versions pick it up next launch via LanguageStore.
-        val languageTag = raw["language"]
-        LanguageStore.set(context, languageTag)
-        LocaleHelper.apply(context, languageTag)
+        // Mirror the server's language onto the boot-time store and, when it
+        // changed, apply it to the running app. On Android 13+ that sets the
+        // per-app locale (an actual change triggers an Activity recreate);
+        // older versions pick it up next launch via LanguageStore.
+        val update = languageUpdate(LanguageStore.get(context), raw["language"])
+        LanguageStore.set(context, update.tag)
+        if (update.apply) LocaleHelper.apply(context, update.tag)
     }
 
     private fun resolveAuto(raw: Map<String, String>): UserPreferences {
@@ -181,7 +188,8 @@ class PreferencesManager @Inject internal constructor(
             density = Density.fromString(raw["density"]),
             radius = Radius.fromString(raw["radius"]),
             font = FontPref.fromString(raw["font"]),
-            fontSize = FontSizePref.fromString(raw["font_size"])
+            fontSize = FontSizePref.fromString(raw["font_size"]),
+            flights = Flights.fromString(raw["flights"]),
         )
     }
 

@@ -219,4 +219,5 @@
     <string name="people_sync_authorization">Mewngofnodwch eto i gysoni</string>
     <string name="people_sync_transport">Methu cyrraedd y gweinydd</string>
     <string name="people_sync_refused">Methu cysoni cyswllt: %1$s</string>
+    <string name="people_contact_friend">Ffrind Mochi</string>
 </resources>

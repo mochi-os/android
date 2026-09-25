@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_list_title">Words</string>
+    <string name="words_list_title">စကားလုံးများ</string>
     <string name="words_list_menu">မီနူး</string>
     <string name="words_list_logout">ထွက်</string>
     <string name="words_sidebar_completed">ပြီးစီးပြီး</string>

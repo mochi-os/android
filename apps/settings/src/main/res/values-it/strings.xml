@@ -388,4 +388,12 @@
     <string name="accounts_field_topic">Argomento</string>
     <string name="accounts_field_secret">Segreto di firma</string>
     <string name="account_totp_open">Apri nell\'app di autenticazione</string>
+    <string name="accounts_revoke">Revoca accesso</string>
+    <string name="accounts_capability_calendar">Calendario</string>
+    <string name="accounts_capability_notify">Notifiche</string>
+    <string name="accounts_capability_ai">IA</string>
+    <string name="accounts_capability_login">Accesso</string>
+    <string name="accounts_provider_caldav">Server di calendario</string>
+    <string name="accounts_revoke_confirm">Questa azione revocherà l\'accesso al calendario di %1$s. L\'accesso con %2$s resta finché non lo scolleghi nella pagina di accesso.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

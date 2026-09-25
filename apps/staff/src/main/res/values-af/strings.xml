@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Staff</string>
-    <string name="launcher_staff">Personeel</string>
+    <string name="launcher_staff">Mochi Staff</string>
     <string name="staff_accounts_action_ban_title">Verban rekening</string>
     <string name="staff_accounts_action_suspend_title">Skort rekening op</string>
     <string name="staff_accounts_action_unban_title">Hef verbod op</string>

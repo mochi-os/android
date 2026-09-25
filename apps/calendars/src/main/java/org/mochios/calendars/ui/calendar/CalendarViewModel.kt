@@ -29,12 +29,22 @@ import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.Preferences
 import org.mochios.calendars.repository.CalendarsRepository
+import org.mochios.calendars.repository.EventChangedException
 import org.mochios.calendars.storage.VisibilityStore
+import org.mochios.calendars.ui.editor.EventForm
+import org.mochios.calendars.ui.editor.Scope
+import org.mochios.calendars.ui.editor.advanced
+import org.mochios.calendars.ui.editor.components
+import org.mochios.calendars.ui.editor.draft
+import org.mochios.calendars.ui.editor.instant
+import org.mochios.calendars.ui.editor.matches
+import org.mochios.calendars.ui.editor.split
 import org.mochios.calendars.ui.router.CALENDARS_FEATURE
 import org.mochios.calendars.ui.router.CalendarsSection
 import org.mochios.calendars.ui.router.calendarsView
 import java.time.LocalDate
 import java.time.ZoneId
+import java.time.temporal.ChronoUnit
 import javax.inject.Inject
 
 /**
@@ -81,16 +91,16 @@ data class LinkState(
     val busy: Boolean = false,
 )
 
-/** Whether a delete takes one occurrence or the whole series. */
-enum class DeleteScope {
-    ONE,
-    ALL,
-}
-
 /** Something the screen has to say once rather than hold in its state. */
 sealed class CalendarEvent {
     data class Failed(val error: MochiError) : CalendarEvent()
     data class Polled(val changed: Int) : CalendarEvent()
+
+    /** An occurrence was moved, and [CalendarViewModel.undo] puts it back. */
+    data object Moved : CalendarEvent()
+
+    /** The event changed elsewhere since it was read, so nothing was written. */
+    data object Changed : CalendarEvent()
 }
 
 @HiltViewModel
@@ -116,6 +126,9 @@ class CalendarViewModel @Inject constructor(
 
     /** The first day of a week for this user: 0 Sunday, 1 Monday, 6 Saturday. */
     private val weekStart: Int get() = preferencesManager.preferences.value.weekStartsOn
+
+    /** Whether the views show each event at its own wall-clock time, in its own zones. */
+    private val zones: Boolean get() = _uiState.value.preferences.zones
 
     /** True until the user has picked a view on this device. */
     private var untouched = LastViewedStore.get(context, CALENDARS_FEATURE).isNullOrBlank()
@@ -181,7 +194,11 @@ class CalendarViewModel @Inject constructor(
                     pages(state, reset)
                 } else {
                     val (start, finish) = range(state)
-                    val (instances, truncated) = repository.listEvents(start, finish, emptyList())
+                    // With events shown in their own zones, a day's
+                    // occurrences can begin or end up to a day away by the
+                    // user's clock, so the range reaches a day each side.
+                    val margin = if (state.preferences.zones) 86_400L else 0L
+                    val (instances, truncated) = repository.listEvents(start - margin, finish + margin, emptyList(), zone.id)
                     _uiState.value = _uiState.value.copy(
                         instances = ordered(instances),
                         truncated = truncated,
@@ -214,7 +231,7 @@ class CalendarViewModel @Inject constructor(
         var truncated = false
         for (index in first..last) {
             val span = page(state.anchor, index, zone)
-            val (instances, cut) = repository.listEvents(span.start, span.finish, emptyList())
+            val (instances, cut) = repository.listEvents(span.start, span.finish, emptyList(), zone.id)
             gathered.addAll(instances)
             truncated = truncated || cut
         }
@@ -259,7 +276,7 @@ class CalendarViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(paging = true)
             try {
                 val span = page(state.anchor, index, zone)
-                val (instances, truncated) = repository.listEvents(span.start, span.finish, emptyList())
+                val (instances, truncated) = repository.listEvents(span.start, span.finish, emptyList(), zone.id)
                 val current = _uiState.value
                 _uiState.value = current.copy(
                     // Merged rather than appended: a multi-day occurrence
@@ -307,9 +324,9 @@ class CalendarViewModel @Inject constructor(
         load()
     }
 
-    fun previous() = anchor(step(-1))
+    fun previous() = anchor(step(_uiState.value.view, _uiState.value.anchor, -1))
 
-    fun next() = anchor(step(1))
+    fun next() = anchor(step(_uiState.value.view, _uiState.value.anchor, 1))
 
     fun workweek(value: Boolean) {
         _uiState.value = _uiState.value.copy(workweek = value)
@@ -317,21 +334,6 @@ class CalendarViewModel @Inject constructor(
 
     fun search(value: String) {
         _uiState.value = _uiState.value.copy(search = value)
-    }
-
-    /** The anchor one step forward or back, by the current view's own unit. */
-    private fun step(direction: Int): LocalDate {
-        val state = _uiState.value
-        val anchor = state.anchor
-        return when (state.view) {
-            CalendarsSection.DAY -> anchor.plusDays(direction.toLong())
-            CalendarsSection.WEEK -> anchor.plusWeeks(direction.toLong())
-            CalendarsSection.MULTIWEEK -> anchor.plusWeeks((direction * state.preferences.multiweek.weeks).toLong())
-            CalendarsSection.MONTH -> anchor.plusMonths(direction.toLong())
-            // The list view pages as the reader scrolls, so its arrows move a
-            // month at a time rather than by a range it no longer has.
-            else -> anchor.plusMonths(direction.toLong())
-        }
     }
 
     // ---- the drawer ----
@@ -388,15 +390,6 @@ class CalendarViewModel @Inject constructor(
      * The etag comes from the server rather than the occurrence, which does
      * not carry one.
      */
-    fun delete(instance: Instance, scope: DeleteScope) = act {
-        if (scope == DeleteScope.ONE && instance.recurring) {
-            repository.excludeOccurrence(instance.event, instance.start)
-        } else {
-            repository.deleteEvent(instance.event, repository.getEvent(instance.event).etag)
-        }
-        load(refreshing = true)
-    }
-
     fun rename(calendar: String, name: String) = act { repository.renameCalendar(calendar, name) }
 
     fun recolour(calendar: String, colour: String) = act { repository.recolourCalendar(calendar, colour) }
@@ -411,10 +404,114 @@ class CalendarViewModel @Inject constructor(
                 multiweek = value.multiweek,
                 duration = value.duration,
                 reminder = value.reminder,
+                zones = value.zones,
             ),
         )
         _uiState.value = _uiState.value.copy(preferences = saved)
         load(refreshing = true)
+    }
+
+    // ---- moving an occurrence ----
+
+    /** How to put the last move back, until another move replaces it. */
+    private var undo: (suspend () -> Unit)? = null
+
+    /**
+     * A block dragged or resized in the day and week views: the occurrence
+     * now runs from [start] to [finish], epoch seconds. The stored event
+     * moves by as far as the occurrence did, so a whole series shifts
+     * rather than jumping onto the occurrence, and takes the new length.
+     */
+    fun move(instance: Instance, start: Long, finish: Long, scope: Scope) = rewrite(instance, scope) { form ->
+        val begins = instant(form, zone.id) + (start - instance.start)
+        form.copy(allday = false, start = begins, finish = begins + (finish - start))
+    }
+
+    /**
+     * A chip dragged onto another day in the month and multiweek views: the
+     * occurrence's first day is now [day], and the stored event moves by as
+     * many days, each end keeping its clock reading.
+     */
+    fun move(instance: Instance, day: LocalDate, scope: Scope) = rewrite(instance, scope) { form ->
+        advanced(form, ChronoUnit.DAYS.between(day(instance), day))
+    }
+
+    /**
+     * Rewrites the stored event for a drag. The event is read first: a move
+     * rewrites the same component the editor would, so a series keeps its
+     * rule and an override keeps being an override. The draft a [change]
+     * starts from is the whole series' master, one occurrence's own override
+     * or, failing one, the master moved onto the occurrence, so a change by
+     * a day or an hour lands where the occurrence is rather than where the
+     * series began. Every write says what it did, with a way back.
+     */
+    private fun rewrite(instance: Instance, scope: Scope, change: (EventForm) -> EventForm) {
+        viewModelScope.launch {
+            try {
+                val event = repository.getEvent(instance.event)
+                val master = event.master() ?: return@launch
+                val user = zone.id
+                val key = instance.occurrence
+                val restore: suspend (String) -> Unit = { etag ->
+                    repository.updateEvent(event.id, etag, null, event.components)
+                }
+
+                // This occurrence and the ones after it: the series is cut
+                // there. The first occurrence has nothing before it, so that
+                // is the whole series.
+                var chosen = scope
+                if (chosen == Scope.FOLLOWING && event.recurring) {
+                    val halves = split(event.components, change(draft(master, user, key)), key, user)
+                    if (halves != null) {
+                        val (kept, following) = repository.splitEvent(
+                            event.id,
+                            event.etag,
+                            instance.start,
+                            halves.first,
+                            halves.second,
+                        )
+                        undo = {
+                            repository.deleteEvent(following.id, following.etag)
+                            restore(kept.etag)
+                        }
+                        _events.tryEmit(CalendarEvent.Moved)
+                        return@launch
+                    }
+                    chosen = Scope.ALL
+                }
+
+                val override = event.overrides().firstOrNull { matches(it, key) }
+                val base = when {
+                    chosen == Scope.ALL || !event.recurring -> draft(master, user)
+                    override != null -> draft(override, user)
+                    else -> draft(master, user, key)
+                }
+                val form = change(base).copy(occurrence = if (chosen == Scope.ONE) key else 0)
+                val components = components(form, event.components, if (event.recurring) chosen else Scope.ALL, user)
+                val written = repository.updateEvent(event.id, event.etag, null, components)
+                undo = { restore(written.etag) }
+                _events.tryEmit(CalendarEvent.Moved)
+            } catch (_: EventChangedException) {
+                _events.tryEmit(CalendarEvent.Changed)
+            } catch (e: Exception) {
+                _events.tryEmit(CalendarEvent.Failed(e.toMochiError()))
+            }
+        }
+    }
+
+    /** Puts the last move back: a split's new event goes, and the old one is restored. */
+    fun undo() {
+        val restore = undo ?: return
+        undo = null
+        viewModelScope.launch {
+            try {
+                restore()
+            } catch (_: EventChangedException) {
+                _events.tryEmit(CalendarEvent.Changed)
+            } catch (e: Exception) {
+                _events.tryEmit(CalendarEvent.Failed(e.toMochiError()))
+            }
+        }
     }
 
     /** One call whose only outcome that matters is whether it failed. */
@@ -534,24 +631,25 @@ class CalendarViewModel @Inject constructor(
         else -> listOf(week(state.anchor))
     }
 
-    /** The day an occurrence belongs to, in the user's zone. */
+    /**
+     * The day an occurrence belongs to: an all-day one's own date, a timed
+     * one's start day in the user's zone, or in its own zone when the views
+     * show events in theirs.
+     */
     fun day(instance: Instance): LocalDate = when {
         instance.date != null -> runCatching { LocalDate.parse(instance.date) }
-            .getOrElse { java.time.Instant.ofEpochSecond(instance.start).atZone(zone).toLocalDate() }
-        else -> java.time.Instant.ofEpochSecond(instance.start).atZone(zone).toLocalDate()
+            .getOrElse { days(instance, zone, zones).first }
+        else -> days(instance, zone, zones).first
     }
 
     /** The last day an occurrence covers, for a chip stretched across days. */
     fun finish(instance: Instance): LocalDate {
-        val ends = java.time.Instant.ofEpochSecond(maxOf(instance.finish, instance.start)).atZone(zone)
-        // A range that ends exactly at midnight belongs to the day before.
-        val date = ends.toLocalDate()
-        return if (ends.toLocalTime() == java.time.LocalTime.MIDNIGHT && date.isAfter(day(instance))) {
-            date.minusDays(1)
-        } else {
-            date
-        }
+        if (instance.date != null) return last(day(instance), instance.start, instance.finish)
+        return days(instance, zone, zones).second
     }
+
+    /** The block a timed occurrence puts on [day], null when it does not touch the day. */
+    fun cut(instance: Instance, day: LocalDate): Cut? = cut(instance, day, zone, zones)
 
     /** Whether an occurrence touches [day], a multi-day one on every day it spans. */
     fun covers(instance: Instance, day: LocalDate): Boolean {
@@ -570,6 +668,30 @@ class CalendarViewModel @Inject constructor(
     /** The zone the screen draws in, for the views' own arithmetic. */
     fun timezone(): ZoneId = zone
 
+    /** Whether the views show each event in its own zones, for their clock text. */
+    fun zones(): Boolean = zones
+
     /** The first day of the week, for the views' column headers. */
     fun start(): Int = weekStart
 }
+
+/**
+ * The anchor one step forward (1) or back (-1) by the view's own unit. The
+ * multiweek view steps a week at a time, so its span slides a row rather than
+ * jumping its length; the list view pages as the reader scrolls, so its arrows
+ * move a month at a time rather than by a range it no longer has.
+ */
+fun step(view: String, anchor: LocalDate, direction: Int): LocalDate = when (view) {
+    CalendarsSection.DAY -> anchor.plusDays(direction.toLong())
+    CalendarsSection.WEEK, CalendarsSection.MULTIWEEK -> anchor.plusWeeks(direction.toLong())
+    else -> anchor.plusMonths(direction.toLong())
+}
+
+/**
+ * The last day an all-day occurrence covers: its date plus its whole days less
+ * one. By the date and the day count rather than the finish instant, so a
+ * device in another zone than the server expanded in does not draw it a day
+ * out.
+ */
+fun last(date: LocalDate, start: Long, finish: Long): LocalDate =
+    date.plusDays(maxOf(1L, Math.round((finish - start) / 86400.0)) - 1)

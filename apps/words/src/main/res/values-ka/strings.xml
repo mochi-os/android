@@ -17,8 +17,8 @@
     <string name="words_detail_status_you_win">თქვენ გაიმარჯვეთ!</string>
     <string name="words_detail_status_game_over">თამაში დასრულდა</string>
     <string name="words_detail_status_opponent_resigned">მოწინააღმდეგემ ჩააბარა — თქვენ მოიგეთ!</string>
-    <string name="words_detail_status_you_resigned">თქვენ დატოვეთ ეს ჩატი</string>
-    <string name="words_detail_label_you">დიახ, ძალით</string>
+    <string name="words_detail_status_you_resigned">თქვენ დანებდით</string>
+    <string name="words_detail_label_you">თქვენ</string>
     <string name="words_detail_action_shuffle">სტოიკის შერევა</string>
     <string name="words_detail_action_pass">გამოტოვება</string>
     <string name="words_detail_action_exchange">ფილების გაცვლა</string>
@@ -27,7 +27,7 @@
     <string name="words_detail_action_rematch">რევანში</string>
     <string name="words_detail_action_delete">თამაშის წაშლა</string>
     <string name="words_detail_chat_title">ჩატი</string>
-    <string name="words_detail_recall">გახსენება</string>
+    <string name="words_detail_recall">უკან დაბრუნება</string>
     <string name="words_detail_submit">გაგზავნა</string>
     <string name="words_detail_cancel">გაუქმება</string>
     <string name="words_detail_exchange">გაცვლა</string>
@@ -43,14 +43,14 @@
     <string name="words_new_game_opponents_hint">(1-3)</string>
     <string name="words_new_game_player_count">%1$d players</string>
     <string name="words_new_game_no_friends_subtitle">დაამატეთ მეგობრები People აპლიკაციაში თამაშის დასაწყებად.</string>
-    <string name="words_detail_title">Game</string>
+    <string name="words_detail_title">თამაში</string>
     <string name="words_detail_status_opponent_move">%1$s-ის სვლა</string>
     <string name="words_detail_status_winner_wins">იგებს %1$s</string>
     <string name="words_detail_player_fallback">Player %1$d</string>
     <string name="words_detail_player_count">%1$d players</string>
     <string name="words_detail_label_tiles_left">%1$d tiles left</string>
-    <string name="words_detail_action_open_chat">Open chat</string>
-    <string name="words_detail_action_more">Game actions</string>
+    <string name="words_detail_action_open_chat">ჩატის გახსნა</string>
+    <string name="words_detail_action_more">თამაშის მოქმედებები</string>
     <string name="words_detail_exchange_count">Exchange (%1$d)</string>
     <string name="words_detail_chat_you_played">You played %1$s</string>
     <string name="words_detail_chat_player_played">%1$s-მა ითამაშა %2$s</string>

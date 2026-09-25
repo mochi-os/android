@@ -386,4 +386,12 @@
     <string name="accounts_field_topic">Мавзӯъ</string>
     <string name="accounts_field_secret">Сирри имзо</string>
     <string name="account_totp_open">Дар барномаи аутентификатор кушодан</string>
+    <string name="accounts_revoke">Дастрасиро бекор кунед</string>
+    <string name="accounts_capability_calendar">Тақвим</string>
+    <string name="accounts_capability_notify">Огоҳиномаҳо</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Воридшавӣ</string>
+    <string name="accounts_provider_caldav">Сервери тақвим</string>
+    <string name="accounts_revoke_confirm">Ин дастрасии тақвими %1$s-ро бекор мекунад. Воридшавӣ бо %2$s то он даме ки шумо онро дар саҳифаи воридшавӣ ҷудо накунед, боқӣ мемонад.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

@@ -152,7 +152,7 @@
     <string name="staff_status_review">評論</string>
 
     <string name="app_name">員工</string>
-    <string name="launcher_staff">員工</string>
+    <string name="launcher_staff">Mochi 員工</string>
     <string name="staff_accounts_action_ban_title">封禁帳戶</string>
     <string name="staff_accounts_action_suspend_title">暫停帳戶</string>
     <string name="staff_accounts_action_unban_title">解除封禁</string>

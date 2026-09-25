@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_list_title">Words</string>
+    <string name="words_list_title">Geiriau</string>
     <string name="words_list_menu">Dewislen</string>
     <string name="words_list_logout">Allgofnodi</string>
     <string name="words_sidebar_completed">Wedi cwblhau</string>

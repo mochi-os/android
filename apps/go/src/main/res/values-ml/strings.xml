@@ -6,8 +6,8 @@
     <string name="go_action_offer_draw">സമനില വാഗ്ദാനം ചെയ്യുക</string>
     <string name="go_action_open_chat">ചാറ്റ് പാനൽ തുറക്കുക</string>
     <string name="go_action_pass">പാസ് ചെയ്യുക</string>
-    <string name="go_action_rematch">നീക്കം ചെയ്യുക</string>
-    <string name="go_action_resign">ഗെയിം പിന്മാറണോ?</string>
+    <string name="go_action_rematch">വീണ്ടും മത്സരം</string>
+    <string name="go_action_resign">പിന്മാറുക</string>
     <string name="go_app_title">പോകുക</string>
     <string name="go_captures_black_sr">കറുപ്പ് പിടിക്കൽ</string>
     <string name="go_captures_white_sr">വെള്ള പിടിക്കൽ</string>
@@ -45,9 +45,9 @@
     <string name="go_pass_end_title">ഗെയിം അവസാനിപ്പിക്കണോ?</string>
     <string name="go_pass_message">നിങ്ങളുടെ ഊഴം ഒഴിവാക്കി എതിരാളിക്ക് കൈമാറുക.</string>
     <string name="go_pass_title">ടേൺ പാസ് ചെയ്യണോ?</string>
-    <string name="go_resign_confirm">ഗെയിം പിന്മാറണോ?</string>
+    <string name="go_resign_confirm">പിന്മാറുക</string>
     <string name="go_resign_message">നിങ്ങൾ കീഴടങ്ങാൻ തീർച്ചയാണോ? %1$s ഗെയിം ജയിക്കും.</string>
-    <string name="go_resign_title">പിന്മാറുന്നു...</string>
+    <string name="go_resign_title">ഗെയിമിൽ നിന്ന് പിന്മാറണോ?</string>
     <string name="go_sidebar_completed">പൂർത്തിയായി</string>
     <string name="go_sidebar_new_game">പുതിയ ഗെയിം</string>
     <string name="go_status_draw">സമനില</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">സൈഡ്‌ബാർ തുറക്കുക</string>
     <string name="go_sidebar_active">സജീവ ഗെയിമുകൾ</string>
     <string name="go_empty_active">ഇതുവരെ സജീവ ഗെയിമുകളില്ല.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">പിന്മാറി</string>
     <string name="go_new_game_title">പുതിയ Go ഗെയിം</string>
     <string name="go_new_game_no_friends">ഗെയിം ആരംഭിക്കുന്നതിന് മുമ്പ് ഒരു സുഹൃത്തിനെ ചേർക്കണം.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

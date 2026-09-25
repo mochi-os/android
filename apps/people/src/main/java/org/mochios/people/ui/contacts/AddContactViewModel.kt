@@ -5,6 +5,7 @@
 
 package org.mochios.people.ui.contacts
 
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -40,6 +41,8 @@ data class AddContactUiState(
     val preview: AddContactPreview? = null,
     val actionError: MochiError? = null,
     val contactsChanged: Boolean = false,
+    /** The card this screen was opened for has been linked and invited; the caller can step back. */
+    val linked: Boolean = false,
 )
 
 /**
@@ -77,21 +80,40 @@ fun addContactState(
 /** Drives the add-contact screen. */
 @HiltViewModel
 class AddContactViewModel @Inject constructor(
+    savedStateHandle: SavedStateHandle,
     private val repository: PeopleRepository,
 ) : ViewModel() {
+
+    /**
+     * An existing card to link, when the screen was opened from a contact's
+     * friend switch: the invite names it, so the card becomes the friend and
+     * no second contact appears. Empty on an ordinary search.
+     */
+    val linking: String = savedStateHandle.get<String>("contact").orEmpty()
 
     private val _uiState = MutableStateFlow(AddContactUiState())
     val uiState: StateFlow<AddContactUiState> = _uiState.asStateFlow()
 
+    init {
+        // The search opens on the card's name, so the likely match is a tap away.
+        val name = savedStateHandle.get<String>("name").orEmpty()
+        if (linking.isNotBlank() && name.isNotBlank()) updateSearchQuery(name)
+    }
+
     private var searchJob: Job? = null
     private var previewJob: Job? = null
 
-    fun state(user: User): AddContactState = addContactState(
-        user,
-        added = user.id in _uiState.value.addedUserIds,
-        invited = user.id in _uiState.value.invitedUserIds,
-        friended = user.id in _uiState.value.friendedUserIds,
-    )
+    fun state(user: User): AddContactState {
+        val state = addContactState(
+            user,
+            added = user.id in _uiState.value.addedUserIds,
+            invited = user.id in _uiState.value.invitedUserIds,
+            friended = user.id in _uiState.value.friendedUserIds,
+        )
+        // Linking a card, the person is already in the address book: the row
+        // offers the invite alone, never a second contact.
+        return if (linking.isNotBlank() && state == AddContactState.NONE) AddContactState.IN_CONTACTS else state
+    }
 
     fun updateSearchQuery(query: String) {
         _uiState.value = _uiState.value.copy(searchQuery = query)
@@ -204,12 +226,13 @@ class AddContactViewModel @Inject constructor(
                     friendedUserIds = _uiState.value.friendedUserIds + user.id,
                 )
             } else {
-                repository.inviteFriend(user.id, user.name)
+                repository.inviteFriend(user.id, user.name, linking.ifBlank { null })
                 _uiState.value = _uiState.value.copy(
                     invitedUserIds = _uiState.value.invitedUserIds + user.id,
                     // Inviting creates or links the contact server-side, so the
                     // list behind this screen has a new row either way.
                     contactsChanged = true,
+                    linked = linking.isNotBlank(),
                 )
             }
         }

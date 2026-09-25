@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">सिंक करे खातिर फेर से लॉग इन करीं</string>
     <string name="people_sync_transport">सर्वर ले ना पहुँचल जा सकल</string>
     <string name="people_sync_refused">एगो संपर्क सिंक ना हो सकल: %1$s</string>
+    <string name="people_contact_friend">Mochi दोस्त</string>
 </resources>

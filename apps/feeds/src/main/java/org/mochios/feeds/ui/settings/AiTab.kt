@@ -16,7 +16,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.AiChoiceRow
@@ -31,7 +31,7 @@ fun AiTab(viewModel: FeedSettingsViewModel) {
     val aiAccounts by viewModel.aiAccounts.collectAsState()
     val aiOverrides by viewModel.aiOverrides.collectAsState()
     val aiDefaults by viewModel.aiDefaults.collectAsState()
-    val context = LocalContext.current
+    val resources = LocalResources.current
 
     // Load the prompt defaults in the background; the mode/account rows come from
     // the already-loaded feed row and render immediately.
@@ -86,7 +86,7 @@ fun AiTab(viewModel: FeedSettingsViewModel) {
                     defaultLabel = promptDefault,
                     customLabel = promptCustom,
                     variablesLabel = { names ->
-                        context.getString(R.string.feeds_ai_prompt_variables, names)
+                        resources.getString(R.string.feeds_ai_prompt_variables, names)
                     },
                     onSaveCustom = { text -> viewModel.saveAiPrompt(type, text) },
                     onResetDefault = { viewModel.resetAiPrompt(type) },

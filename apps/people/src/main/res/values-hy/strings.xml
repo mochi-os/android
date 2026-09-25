@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Կրկին մուտք գործեք՝ համաժամացնելու համար</string>
     <string name="people_sync_transport">Չհաջողվեց կապվել սերվերի հետ</string>
     <string name="people_sync_refused">Չհաջողվեց համաժամացնել մի կոնտակտ՝ %1$s</string>
+    <string name="people_contact_friend">Mochi ընկեր</string>
 </resources>

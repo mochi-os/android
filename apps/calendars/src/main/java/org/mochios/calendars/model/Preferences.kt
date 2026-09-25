@@ -16,7 +16,9 @@ data class Multiweek(val weeks: Int = 4, val previous: Int = 0)
  * `-/preferences/get` and `-/preferences/set`. [days] are the work days,
  * 0 for Sunday through 6 for Saturday. [duration] is the default event length
  * in minutes and [reminder] the default reminder in minutes before the start,
- * -1 for none. [view] is the view the app opens on.
+ * -1 for none. [view] is the view the app opens on. [zones] shows each event
+ * at its own wall-clock time, each end in the zone it was written in, rather
+ * than in the user's zone.
  */
 data class Preferences(
     val hours: Hours = Hours(),
@@ -25,6 +27,7 @@ data class Preferences(
     val duration: Int = 60,
     val reminder: Int = 15,
     val view: String = "month",
+    val zones: Boolean = false,
 )
 
 /** The body of `-/preferences/get` and `-/preferences/set`. */

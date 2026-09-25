@@ -22,7 +22,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
@@ -46,7 +46,7 @@ fun SourcesScreen(
     val actionMessage by viewModel.actionMessage.collectAsState()
 
     val snackbarHostState = remember { SnackbarHostState() }
-    val context = LocalContext.current
+    val resources = LocalResources.current
 
     LaunchedEffect(Unit) {
         viewModel.loadSources()
@@ -61,7 +61,7 @@ fun SourcesScreen(
 
     LaunchedEffect(actionMessage) {
         actionMessage?.let { messageRes ->
-            snackbarHostState.showSnackbar(context.getString(messageRes))
+            snackbarHostState.showSnackbar(resources.getString(messageRes))
             viewModel.clearActionMessage()
         }
     }

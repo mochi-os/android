@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">ለማመሳሰል እንደገና ይግቡ</string>
     <string name="people_sync_transport">አገልጋዩ ላይ መድረስ አልተቻለም</string>
     <string name="people_sync_refused">እውቂያን ማመሳሰል አልተቻለም: %1$s</string>
+    <string name="people_contact_friend">የMochi ጓደኛ</string>
 </resources>

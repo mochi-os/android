@@ -271,6 +271,9 @@
     <string name="attachment_caption_add">Legg til bilettekst</string>
     <string name="attachment_caption_edit">Rediger bileteksten</string>
     <string name="about_check_background">Hald fram i bakgrunnen</string>
+    <string name="update_install">Installer</string>
+    <string name="update_available">Oppdatering tilgjengeleg</string>
+    <string name="update_later">Seinare</string>
     <string name="notifications_category_unassigned">Ikkje tildelt</string>
     <string name="notifications_change_category">Endre varselkategori</string>
     <string name="lightbox_comments_none">Ingen kommentarar til dette biletet enno.</string>

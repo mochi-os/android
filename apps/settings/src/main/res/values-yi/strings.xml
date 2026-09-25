@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">טעמע</string>
     <string name="accounts_field_secret">אונטערשריפט סוד</string>
     <string name="account_totp_open">עפֿענען אין דער אויטענטיקאַציע־אַפּ</string>
+    <string name="accounts_revoke">רופֿט צוריק צוטריט</string>
+    <string name="accounts_capability_calendar">קאַלענדאַר</string>
+    <string name="accounts_capability_notify">מעלדונגען</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">אײַנלאָגירן</string>
+    <string name="accounts_provider_caldav">קאַלענדאַר־סערווער</string>
+    <string name="accounts_revoke_confirm">דאָס וועט אָפּרופֿן דעם קאַלענדאַר־צוטריט פֿון %1$s. אײַנלאָגירן מיט %2$s בלײַבט ביז איר וועט עס אָפּבינדן אויף דער אײַנלאָג־זײַט.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

@@ -53,7 +53,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -88,19 +88,19 @@ fun EditListingScreen(
 ) {
     val state by viewModel.state.collectAsState()
     val snackbar = remember { SnackbarHostState() }
-    val context = LocalContext.current
+    val resources = LocalResources.current
 
     // Surface ViewModel-emitted events onto the snackbar host and handle the
     // terminal events (deleted / published) by navigating back.
     LaunchedEffect(Unit) {
         viewModel.events.collect { event ->
             when (event) {
-                is EditListingEvent.Notice -> snackbar.showSnackbar(context.getString(event.message))
+                is EditListingEvent.Notice -> snackbar.showSnackbar(resources.getString(event.message))
                 is EditListingEvent.Error -> snackbar.showSnackbar(event.error.userMessage())
                 is EditListingEvent.Deleted -> navController.popBackStack()
                 is EditListingEvent.Published -> navController.popBackStack()
                 is EditListingEvent.TitleRequired ->
-                    snackbar.showSnackbar(context.getString(R.string.market_editor_title_required))
+                    snackbar.showSnackbar(resources.getString(R.string.market_editor_title_required))
             }
         }
     }

@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">سنک کرنے کے لیے دوبارہ لاگ ان کریں</string>
     <string name="people_sync_transport">سرور تک پہنچنا ممکن نہ ہوا</string>
     <string name="people_sync_refused">ایک رابطہ سنک نہیں ہو سکا: %1$s</string>
+    <string name="people_contact_friend">Mochi دوست</string>
 </resources>

@@ -24,8 +24,20 @@ data class UserPreferences(
     val density: Density = Density.THEME,
     val radius: Radius = Radius.THEME,
     val font: FontPref = FontPref.THEME,
-    val fontSize: FontSizePref = FontSizePref.THEME
+    val fontSize: FontSizePref = FontSizePref.THEME,
+    /** Where a flight number links to. Maps need no preference here: a location opens in the phone's own map app. */
+    val flights: Flights = Flights.FLIGHTRADAR24,
 )
+
+/** The flight tracker a flight number links to; the server's `flights` preference. */
+enum class Flights(val key: String) {
+    FLIGHTRADAR24("flightradar24"),
+    FLIGHTAWARE("flightaware");
+
+    companion object {
+        fun fromString(s: String?): Flights = entries.firstOrNull { it.key == s } ?: FLIGHTRADAR24
+    }
+}
 
 enum class Appearance {
     LIGHT, DARK, AUTO;

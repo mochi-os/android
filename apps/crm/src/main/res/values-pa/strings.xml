@@ -13,7 +13,7 @@
     <string name="crm_find_title">CRM ਲੱਭੋ</string>
     <string name="crm_find_recommended">ਸਿਫ਼ਾਰਸ਼ ਕੀਤੇ</string>
     <string name="crm_loading">ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ…</string>
-    <string name="crm_watched">watched</string>
+    <string name="crm_watched">ਨਿਗਰਾਨੀ ਅਧੀਨ</string>
     <string name="crm_create_object">ਆਬਜੈਕਟ ਬਣਾਓ</string>
     <string name="crm_search">ਖੋਜ</string>
     <string name="crm_settings">ਸੈਟਿੰਗਾਂ</string>
@@ -34,7 +34,7 @@
     <string name="crm_option_icon">ਆਈਕਨ</string>
     <string name="crm_option_icon_placeholder">ਉਦਾ. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
-    <string name="crm_settings_delete_crm">ਪ੍ਰੋਜੈਕਟ ਮਿਟਾਓ</string>
+    <string name="crm_settings_delete_crm">CRM ਮਿਟਾਓ</string>
     <string name="crm_settings_delete_confirm_title">CRM ਮਿਟਾਓ</string>
     <string name="crm_settings_unsubscribe_title">ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
     <string name="crm_settings_unsubscribe_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਹੋ ਕਿ ਤੁਸੀਂ ਇਸ CRM ਤੋਂ ਅਨਸਬਸਕ੍ਰਾਈਬ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
@@ -123,7 +123,7 @@
     <string name="crm_views_sort_created">ਬਣਾਇਆ ਗਿਆ</string>
     <string name="crm_views_sort_updated">ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ</string>
     <string name="crm_views_sort_rank">ਰੈਂਕ</string>
-    <string name="crm_not_found">ਪ੍ਰੋਜੈਕਟ ਨਹੀਂ ਮਿਲਿਆ</string>
+    <string name="crm_not_found">CRM ਨਹੀਂ ਮਿਲਿਆ</string>
     <string name="crm_more">ਹੋਰ</string>
     <string name="crm_comment_send">ਭੇਜੋ</string>
     <string name="crm_field_position_body">ਮੁੱਖ ਭਾਗ</string>
@@ -244,7 +244,7 @@
     <string name="crm_attachment_remove">Remove attachment</string>
     <string name="crm_board_add_column">ਕਾਲਮ ਜੋੜੋ</string>
     <string name="crm_settings_entity_id">ਇਕਾਈ ID</string>
-    <string name="crm_settings_fingerprint">ਉਂਗਲੀ ਦਾ ਨਿਸ਼ਾਨ</string>
+    <string name="crm_settings_fingerprint">ਫਿੰਗਰਪ੍ਰਿੰਟ</string>
     <string name="crm_settings_server">ਸਰਵਰ</string>
     <string name="crm_untitled">ਬਿਨਾਂ ਸਿਰਲੇਖ</string>
     <string name="crm_property_select">ਚੁਣੋ …</string>

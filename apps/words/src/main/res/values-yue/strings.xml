@@ -6,7 +6,7 @@
 
     <string name="words_channel_name">Words 通知</string>
     <string name="words_channel_description">關於 Words 出手、換字母同遊戲結果嘅通知。</string>
-    <string name="words_list_title">Words</string>
+    <string name="words_list_title">字詞</string>
     <string name="words_list_menu">選單</string>
     <string name="words_sidebar_active">進行中嘅對局</string>
     <string name="words_sidebar_completed">已完成</string>

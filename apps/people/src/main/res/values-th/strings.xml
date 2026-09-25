@@ -214,4 +214,5 @@
     <string name="people_sync_authorization">เข้าสู่ระบบอีกครั้งเพื่อซิงค์</string>
     <string name="people_sync_transport">ไม่สามารถเชื่อมต่อเซิร์ฟเวอร์ได้</string>
     <string name="people_sync_refused">ไม่สามารถซิงค์รายชื่อติดต่อหนึ่งรายการได้: %1$s</string>
+    <string name="people_contact_friend">เพื่อน Mochi</string>
 </resources>

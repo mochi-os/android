@@ -6,7 +6,7 @@
     <string name="go_action_offer_draw">ਡਰਾਅ ਦੀ ਪੇਸ਼ਕਸ਼</string>
     <string name="go_action_open_chat">ਚੈਟ ਪੈਨਲ ਖੋਲ੍ਹੋ</string>
     <string name="go_action_pass">ਪਾਸ</string>
-    <string name="go_action_rematch">Rematch</string>
+    <string name="go_action_rematch">ਦੁਬਾਰਾ ਮੈਚ</string>
     <string name="go_action_resign">ਅਸਤੀਫ਼ਾ ਦਿਓ</string>
     <string name="go_app_title">ਜਾਓ</string>
     <string name="go_captures_black_sr">ਕਾਲੇ ਫੜੇ ਗਏ</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">ਸਾਈਡਬਾਰ ਖੋਲ੍ਹੋ</string>
     <string name="go_sidebar_active">ਕਿਰਿਆਸ਼ੀਲ ਖੇਡਾਂ</string>
     <string name="go_empty_active">ਹਾਲੇ ਕੋਈ ਸਰਗਰਮ ਖੇਡ ਨਹੀਂ।</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">ਹਾਰ ਮੰਨ ਲਈ</string>
     <string name="go_new_game_title">ਨਵੀਂ Go ਖੇਡ</string>
     <string name="go_new_game_no_friends">ਖੇਡ ਸ਼ੁਰੂ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਤੁਹਾਨੂੰ ਦੋਸਤ ਜੋੜਨਾ ਪਵੇਗਾ।</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

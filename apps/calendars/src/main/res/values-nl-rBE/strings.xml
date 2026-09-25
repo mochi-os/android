@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="calendars_view">Weergeven</string>
+    <string name="calendars_scope_following">Deze en volgende</string>
+    <string name="calendars_event_moved">Afspraak verplaatst</string>
+    <string name="calendars_event_changed">Deze afspraak is elders gewijzigd.</string>
+    <string name="calendars_undo">Ongedaan maken</string>
+    <string name="calendars_title_required">Titel is verplicht</string>
+    <string name="calendars_link_grant">Agendatoegang toestaan</string>
+    <string name="calendars_subscribe_google_connect">Je hebt geen Google-account gekoppeld.</string>
+    <string name="calendars_subscribe_google_connect_action">Google verbinden</string>
+    <string name="calendars_grant_failed">Agendatoegang is niet verleend</string>
 </resources>

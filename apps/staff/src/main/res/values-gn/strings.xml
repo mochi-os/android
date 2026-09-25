@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mba\'apohára</string>
+    <string name="launcher_staff">Mochi Staff</string>
     <string name="staff_accounts_action_ban_title">Emboyke tetãygua</string>
     <string name="staff_accounts_action_suspend_title">Embohasy cuenta</string>
     <string name="staff_accounts_any_seller">Opaite</string>

@@ -385,4 +385,12 @@
     <string name="accounts_field_topic">ប្រធានបទ</string>
     <string name="accounts_field_secret">សម្ងាត់ហត្ថលេខា</string>
     <string name="account_totp_open">បើកក្នុងកម្មវិធីផ្ទៀងផ្ទាត់</string>
+    <string name="accounts_revoke">ដកហូតការចូលប្រើ</string>
+    <string name="accounts_capability_calendar">ប្រតិទិន</string>
+    <string name="accounts_capability_notify">ការជូនដំណឹង</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">ចូលគណនី</string>
+    <string name="accounts_provider_caldav">ម៉ាស៊ីនមេប្រតិទិន</string>
+    <string name="accounts_revoke_confirm">នេះនឹងដកសិទ្ធិចូលប្រើប្រតិទិនរបស់ %1$s។ ការចូលដោយ %2$s នៅតែមានរហូតដល់អ្នកផ្តាច់វានៅលើទំព័រចូល។</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

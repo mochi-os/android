@@ -8,7 +8,7 @@ package org.mochios.projects.ui.design
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import org.mochios.android.ui.components.ClassListItem
 import org.mochios.android.ui.components.ViewFieldOption
@@ -95,19 +95,19 @@ internal fun Map<String, List<ProjectField>>.toViewFieldOptions() =
 /** Wording for the shared view list and view form, in this feature's strings. */
 @Composable
 internal fun viewListLabels(): ViewListLabels {
-    val context = LocalContext.current
+    val resources = LocalResources.current
     return ViewListLabels(
         addAction = stringResource(R.string.projects_views_add),
         empty = stringResource(R.string.projects_views_empty),
         emptySubtitle = stringResource(R.string.projects_views_empty_subtitle),
         deleteTitle = stringResource(R.string.projects_views_delete_title),
         deleteMessage = { viewName ->
-            context.getString(R.string.projects_views_delete_message, viewName)
+            resources.getString(R.string.projects_views_delete_message, viewName)
         },
-        byField = { fieldName -> context.getString(R.string.projects_views_by, fieldName) },
+        byField = { fieldName -> resources.getString(R.string.projects_views_by, fieldName) },
         sortedBy = { direction ->
             val label = if (direction == "desc") R.string.projects_views_direction_desc else R.string.projects_views_direction_asc
-            context.getString(R.string.projects_views_sorted, context.getString(label))
+            resources.getString(R.string.projects_views_sorted, resources.getString(label))
         },
         typeBoard = stringResource(R.string.projects_views_type_board),
         typeList = stringResource(R.string.projects_views_type_list),

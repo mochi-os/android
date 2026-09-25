@@ -241,11 +241,32 @@ fun ConnectedAccountsScreen(
         )
     }
     deleting?.let { acc ->
+        // Removing an account the user signs in with revokes what it was
+        // granted; the identity itself stays until it is unlinked on the
+        // Login page, and the confirmation says so.
+        val provider = state.providers.firstOrNull { it.type == acc.type }
+        val revoking = provider?.flow == "oauth" && acc.granted.any { it != CAPABILITY_LOGIN }
         MochiAlertDialog(
             onDismissRequest = { deleting = null },
-            title = stringResource(R.string.accounts_remove_title),
-            text = stringResource(R.string.accounts_remove_message, displayName(acc)),
-            confirmText = stringResource(R.string.accounts_remove),
+            title = if (revoking) {
+                stringResource(R.string.accounts_revoke)
+            } else {
+                stringResource(R.string.accounts_remove_title)
+            },
+            text = if (revoking) {
+                stringResource(
+                    R.string.accounts_revoke_confirm,
+                    displayName(acc),
+                    providerTypeLabel(acc.type),
+                )
+            } else {
+                stringResource(R.string.accounts_remove_message, displayName(acc))
+            },
+            confirmText = if (revoking) {
+                stringResource(R.string.accounts_revoke)
+            } else {
+                stringResource(R.string.accounts_remove)
+            },
             onConfirm = {
                 viewModel.remove(acc.id)
                 deleting = null
@@ -324,6 +345,13 @@ private fun AccountRow(
     val needsVerify = provider?.verify == true && account.verified == 0
     val isAi = account.type == "claude" || account.type == "openai"
     val notifyCapable = provider?.capabilities?.contains("notify") == true
+    // An account the user signed in through carries what it has been granted
+    // so far, which is the useful thing to say about it: "Sign-in" alone, or
+    // "Sign-in, Calendar" once a calendar has been linked through it.
+    val oauth = provider?.flow == "oauth"
+    val granted = account.granted.map { capability -> capabilityLabel(capability) }.joinToString(", ")
+    val revocable = oauth && account.granted.any { it != CAPABILITY_LOGIN }
+    val loginOnly = oauth && account.granted == listOf(CAPABILITY_LOGIN)
     var menu by remember { mutableStateOf(false) }
 
     MochiCard(modifier = Modifier.fillMaxWidth()) {
@@ -355,7 +383,7 @@ private fun AccountRow(
                     else -> R.string.accounts_status_connected
                 }
                 Text(
-                    text = stringResource(statusRes),
+                    text = if (oauth && granted.isNotEmpty()) granted else stringResource(statusRes),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -395,11 +423,22 @@ private fun AccountRow(
                             leadingIcon = { Icon(Icons.Outlined.AutoAwesome, contentDescription = null) },
                         )
                     }
-                    MochiDropdownMenuItem(
-                        text = { Text(stringResource(R.string.accounts_remove)) },
-                        onClick = { menu = false; onRemove() },
-                        leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
-                    )
+                    // An account that only signs the user in is ended on the
+                    // Login page, by unlinking it there; removing it here would
+                    // say it goes when it stays.
+                    if (!loginOnly) {
+                        MochiDropdownMenuItem(
+                            text = {
+                                Text(
+                                    stringResource(
+                                        if (revocable) R.string.accounts_revoke else R.string.accounts_remove,
+                                    ),
+                                )
+                            },
+                            onClick = { menu = false; onRemove() },
+                            leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
+                        )
+                    }
                 }
             }
         }
@@ -590,26 +629,56 @@ private fun SnackBanner(message: String, onDismiss: () -> Unit) {
 @Composable
 private fun displayName(account: ConnectedAccount): String {
     if (account.label.isNotBlank()) return account.label
-    if (account.type == "email" && account.identifier.isNotBlank()) return account.identifier
+    if (account.identifier.isNotBlank() && account.type in IDENTIFIED) return account.identifier
     return providerTypeLabel(account.type)
 }
 
+/**
+ * The account types whose identifier is worth showing as a name: the address
+ * or handle the user knows the account by.
+ */
+private val IDENTIFIED = setOf(
+    "email", "google", "microsoft", "github", "facebook", "x", "apple", "caldav",
+)
+
+/** The capability an account holds only to sign the user in. */
+private const val CAPABILITY_LOGIN = "login"
+
+/** One granted capability, in words. */
+@Composable
+private fun capabilityLabel(capability: String): String = when (capability) {
+    CAPABILITY_LOGIN -> stringResource(R.string.accounts_capability_login)
+    "calendar" -> stringResource(R.string.accounts_capability_calendar)
+    "notify" -> stringResource(R.string.accounts_capability_notify)
+    "ai" -> stringResource(R.string.accounts_capability_ai)
+    "mcp" -> stringResource(R.string.accounts_capability_mcp)
+    else -> capability
+}
+
 // Mirrors providerLabels() in lib/web/src/features/accounts/types.ts, which
-// wraps seven of these eleven in t`` — including "Mochi web", where only the
-// brand is fixed. Only Claude, ntfy, OpenAI and Pushbullet are bare product
-// names that stay verbatim across locales per the glossary.
+// translates the descriptive labels — including "Mochi web", where only the
+// brand is fixed. The bare product and company names (Apple, Claude, Facebook,
+// GitHub, Google, Microsoft, ntfy, OpenAI, Pushbullet, X) stay verbatim across
+// locales per the glossary.
 @Composable
 private fun providerTypeLabel(type: String): String = when (type) {
+    "apple" -> "Apple"
     "browser" -> stringResource(R.string.accounts_provider_browser)
+    "caldav" -> stringResource(R.string.accounts_provider_caldav)
     "claude" -> "Claude"
     "email" -> stringResource(R.string.accounts_field_email)
+    "facebook" -> "Facebook"
     "fcm" -> stringResource(R.string.accounts_provider_fcm)
+    "github" -> "GitHub"
+    "google" -> "Google"
     "mcp" -> stringResource(R.string.accounts_provider_mcp)
+    "microsoft" -> "Microsoft"
     "ntfy" -> "ntfy"
     "openai" -> "OpenAI"
     "pushbullet" -> "Pushbullet"
     "unifiedpush" -> stringResource(R.string.accounts_provider_unifiedpush)
     "url" -> stringResource(R.string.accounts_provider_url)
     "web" -> stringResource(R.string.accounts_provider_web)
+    "x" -> "X"
     else -> type
 }

@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Staff</string>
-    <string name="launcher_staff">Ажилтнууд</string>
+    <string name="launcher_staff">Mochi Staff</string>
     <string name="staff_accounts_action_ban_title">Бүртгэлд хориг тавих</string>
     <string name="staff_accounts_action_suspend_title">Дансыг түр зогсоох</string>
     <string name="staff_accounts_action_unban_title">Хорио цуцлах</string>

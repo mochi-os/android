@@ -271,6 +271,9 @@
     <string name="attachment_caption_add">Añadir leyenda</string>
     <string name="attachment_caption_edit">Editar leyenda</string>
     <string name="about_check_background">Continuar en segundo plano</string>
+    <string name="update_install">Instalar</string>
+    <string name="update_available">Actualización disponible</string>
+    <string name="update_later">Más tarde</string>
     <string name="notifications_category_unassigned">Sin asignar</string>
     <string name="notifications_change_category">Cambiar categoría de notificación</string>
     <string name="lightbox_comments_none">Aún no hay comentarios en esta imagen.</string>

@@ -386,4 +386,12 @@
     <string name="accounts_field_topic">Topik</string>
     <string name="accounts_field_secret">Rahasia penandatanganan</string>
     <string name="account_totp_open">Buka di aplikasi autentikator</string>
+    <string name="accounts_revoke">Cabut akses</string>
+    <string name="accounts_capability_calendar">Kalender</string>
+    <string name="accounts_capability_notify">Notifikasi</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Masuk</string>
+    <string name="accounts_provider_caldav">Server kalender</string>
+    <string name="accounts_revoke_confirm">Ini akan mencabut akses kalender %1$s. Masuk dengan %2$s tetap berlaku sampai Anda melepas tautannya di halaman Masuk.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

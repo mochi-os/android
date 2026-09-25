@@ -11,7 +11,7 @@
     <string name="crm_create_template_none">ഒന്നുമില്ല</string>
     <string name="crm_create_action">സൃഷ്ടിക്കുക</string>
     <string name="crm_find_title">CRM-കൾ കണ്ടെത്തുക</string>
-    <string name="crm_find_recommended">ശുപാർശ ചെയ്യുന്ന CRM-കൾ</string>
+    <string name="crm_find_recommended">ശുപാർശ ചെയ്തത്</string>
     <string name="crm_loading">ലോഡുചെയ്യുന്നു…</string>
     <string name="crm_watched">വാച്ച് ചെയ്തു</string>
     <string name="crm_create_object">ഒബ്ജക്റ്റ് സൃഷ്ടിക്കുക</string>
@@ -26,7 +26,7 @@
     <string name="crm_sort_updated">അപ്ഡേറ്റ് ചെയ്തു</string>
     <string name="crm_create_object_title">ഒബ്ജക്റ്റ് സൃഷ്ടിക്കുക</string>
     <string name="crm_create_object_type">തരം</string>
-    <string name="crm_create_object_parent">parent</string>
+    <string name="crm_create_object_parent">പാരന്റ്</string>
     <string name="crm_settings_title">ക്രമീകരണങ്ങൾ</string>
     <string name="crm_settings_tab_general">പൊതുവായവ</string>
     <string name="crm_settings_tab_access">ആക്സസ്</string>
@@ -34,7 +34,7 @@
     <string name="crm_option_icon">ഐക്കൺ</string>
     <string name="crm_option_icon_placeholder">ഉദാ. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">അൺസബ്സ്ക്രൈബ് ചെയ്യുക</string>
-    <string name="crm_settings_delete_crm">പ്രോജക്റ്റ് ഇല്ലാതാക്കുക</string>
+    <string name="crm_settings_delete_crm">CRM ഇല്ലാതാക്കുക</string>
     <string name="crm_settings_delete_confirm_title">CRM ഇല്ലാതാക്കുക</string>
     <string name="crm_settings_unsubscribe_title">അൺസബ്സ്ക്രൈബ് ചെയ്യുക</string>
     <string name="crm_settings_unsubscribe_message">ഈ CRM-ൽ നിന്ന് അൺസബ്സ്ക്രൈബ് ചെയ്യണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ?</string>
@@ -43,7 +43,7 @@
     <string name="crm_object_tab_properties">സവിശേഷതകൾ</string>
     <string name="crm_object_tab_comments">അഭിപ്രായങ്ങൾ</string>
     <string name="crm_object_tab_activity">പ്രവർത്തനം</string>
-    <string name="crm_parent_label">parent</string>
+    <string name="crm_parent_label">പാരന്റ്</string>
     <string name="crm_parent_search_placeholder">തിരയുക</string>
     <string name="crm_links_title">ലിങ്കുകൾ</string>
     <string name="crm_links_add">ലിങ്ക് ചേർക്കുക</string>
@@ -64,8 +64,8 @@
     <string name="crm_attachment_add">അറ്റാച്ച്മെന്റ് ചേർക്കുക</string>
     <string name="crm_board_unassigned">നിയോഗിച്ചിട്ടില്ല</string>
     <string name="crm_board_new">പുതിയത്</string>
-    <string name="crm_board_rename">കോളം പുനർനാമകരണം ചെയ്യുക</string>
-    <string name="crm_board_rename_column">പേജ് പുനർനാമകരണം ചെയ്യുക</string>
+    <string name="crm_board_rename">പുനർനാമകരണം ചെയ്യുക</string>
+    <string name="crm_board_rename_column">കോളം പുനർനാമകരണം ചെയ്യുക</string>
     <string name="crm_move_position">സ്ഥാനം</string>
     <string name="crm_move_position_top">മുകളിൽ</string>
     <string name="crm_move_current">നിലവിലുള്ളത്</string>
@@ -101,7 +101,7 @@
     <string name="crm_field_name">പേര്</string>
     <string name="crm_field_type">തരം</string>
     <string name="crm_field_flags">ഫ്ലാഗുകൾ</string>
-    <string name="crm_field_required">Reserve പൂർത്തിയായില്ല</string>
+    <string name="crm_field_required">ആവശ്യമാണ്</string>
     <string name="crm_field_position_default">ഡിഫോൾട്ട്</string>
     <string name="crm_field_position_sidebar">സൈഡ്ബാർ</string>
     <string name="crm_field_save">മാറ്റങ്ങൾ സേവ് ചെയ്യുക</string>
@@ -122,8 +122,8 @@
     <string name="crm_views_direction">ദിശ</string>
     <string name="crm_views_sort_created">സൃഷ്ടിച്ചു</string>
     <string name="crm_views_sort_updated">അപ്ഡേറ്റ് ചെയ്തു</string>
-    <string name="crm_views_sort_rank">Rate Limiting</string>
-    <string name="crm_not_found">പ്രോജക്റ്റ് ലഭ്യമല്ല</string>
+    <string name="crm_views_sort_rank">റാങ്ക്</string>
+    <string name="crm_not_found">CRM കണ്ടെത്താനായില്ല</string>
     <string name="crm_more">കൂടുതൽ</string>
     <string name="crm_comment_send">അയയ്ക്കുക</string>
     <string name="crm_field_position_body">ഉള്ളടക്കം</string>

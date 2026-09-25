@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">विषय</string>
     <string name="accounts_field_secret">हस्ताक्षर गुप्त कुंजी</string>
     <string name="account_totp_open">ऑथेंटिकेटर ऐप में खोलीं</string>
+    <string name="accounts_revoke">पहुँच रद्द करीं</string>
+    <string name="accounts_capability_calendar">कैलेंडर</string>
+    <string name="accounts_capability_notify">सूचना</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">साइन-इन</string>
+    <string name="accounts_provider_caldav">कैलेंडर सर्वर</string>
+    <string name="accounts_revoke_confirm">एह से %1$s के कैलेंडर पहुंच खतम हो जाई। %2$s से साइन-इन तब ले रही जब ले रउआ लॉगिन पन्ना पर ओकरा के अलग ना करीं।</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

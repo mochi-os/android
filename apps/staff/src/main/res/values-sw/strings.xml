@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Staff</string>
-    <string name="launcher_staff">Wafanyakazi</string>
+    <string name="launcher_staff">Mochi Staff</string>
     <string name="staff_accounts_action_ban_title">Piga akaunti marufuku</string>
     <string name="staff_accounts_action_suspend_title">Simamisha akaunti</string>
     <string name="staff_accounts_action_unban_title">Ondoa marufuku</string>

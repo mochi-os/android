@@ -29,6 +29,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.browser)
     implementation(project(":lib"))
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)

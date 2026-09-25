@@ -63,7 +63,7 @@
     <string name="chess_delete_title">ਖੇਡ ਮਿਟਾਉਣੀ ਹੈ?</string>
     <string name="chess_delete_message">ਇਹ ਖੇਡ ਨੂੰ ਤੁਹਾਡੀ ਸੂਚੀ ਵਿੱਚੋਂ ਹਟਾ ਦਿੰਦਾ ਹੈ।</string>
     <string name="chess_ws_connecting">ਕਨੈਕਟ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…</string>
-    <string name="chess_ws_disconnected">Offline</string>
+    <string name="chess_ws_disconnected">ਔਫਲਾਈਨ</string>
     <string name="chess_ws_reconnecting">ਦੁਬਾਰਾ ਕਨੈਕਟ ਹੋ ਰਿਹਾ ਹੈ…</string>
     <string name="chess_ws_failed">ਕਨੈਕਸ਼ਨ ਅਸਫਲ ਰਿਹਾ</string>
     <string name="chess_move_capture">%1$s ਨੇ %2$s ਲਿਆ</string>

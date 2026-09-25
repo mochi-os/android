@@ -10,4 +10,19 @@
     <string name="calendars_device_done">Pronto</string>
     <string name="calendars_device_delete">Excluir</string>
     <string name="calendars_sync_title">Sincronizar com este celular</string>
+    <string name="calendars_preferences_zones">Mostrar os eventos no próprio fuso horário</string>
+    <string name="calendars_event_zone_finish">Fuso horário de término</string>
+    <string name="calendars_scope_following">Este e os seguintes</string>
+    <string name="calendars_event_moved">Evento movido</string>
+    <string name="calendars_event_changed">Este evento foi alterado em outro lugar.</string>
+    <string name="calendars_undo">Desfazer</string>
+    <string name="calendars_event_resize">Alterar o horário de término</string>
+    <string name="calendars_title_required">O título é obrigatório</string>
+    <string name="calendars_subscribe_password">Senha</string>
+    <string name="calendars_subscribe_connect">Conectar</string>
+    <string name="calendars_subscribe_google_enable">As contas do Google não estão ativadas neste servidor. Ative-as em Configurações, Configurações do sistema.</string>
+    <string name="calendars_subscribe_google_connect">Você não conectou nenhuma conta do Google.</string>
+    <string name="calendars_link_grant">Permitir o acesso ao calendário</string>
+    <string name="calendars_subscribe_google_connect_action">Conectar o Google</string>
+    <string name="calendars_grant_failed">O acesso ao calendário não foi concedido</string>
 </resources>

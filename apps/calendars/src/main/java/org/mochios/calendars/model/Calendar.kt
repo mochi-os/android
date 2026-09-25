@@ -7,10 +7,14 @@ package org.mochios.calendars.model
 
 /**
  * One calendar of the signed-in identity, as `-/calendars` returns it.
- * [kind] is `own`, `subscription` or `birthdays`; the last two are read-only,
- * which [readonly] says outright. [url] is a subscription's source, [fetched]
- * when it was last polled and [failure] what went wrong the last time, both
- * empty on a calendar of the user's own.
+ * [kind] is `own`, `subscription`, `birthdays` or `linked`; a subscription
+ * and a birthday calendar are read-only, which [readonly] says outright. A
+ * linked calendar mirrors a collection on another server through a connected
+ * account and is written to as the user's own is: [account] is the account it
+ * syncs through and [collection] the remote collection's URL. [url] is a
+ * subscription's source, [fetched] when the calendar was last fetched and
+ * [failure] what went wrong the last time, all empty on a calendar of the
+ * user's own.
  */
 data class Calendar(
     val id: String = "",
@@ -20,6 +24,8 @@ data class Calendar(
     val colour: String = "",
     val kind: String = KIND_OWN,
     val url: String = "",
+    val account: String = "",
+    val collection: String = "",
     val readonly: Boolean = false,
     val default: Boolean = false,
     val version: Long = 0,
@@ -32,10 +38,13 @@ data class Calendar(
 
     val birthdays: Boolean get() = kind == KIND_BIRTHDAYS
 
+    val linked: Boolean get() = kind == KIND_LINKED
+
     companion object {
         const val KIND_OWN = "own"
         const val KIND_SUBSCRIPTION = "subscription"
         const val KIND_BIRTHDAYS = "birthdays"
+        const val KIND_LINKED = "linked"
     }
 }
 

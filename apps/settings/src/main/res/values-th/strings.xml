@@ -386,4 +386,12 @@
     <string name="accounts_field_topic">หัวข้อ</string>
     <string name="accounts_field_secret">ความลับสำหรับลงนาม</string>
     <string name="account_totp_open">เปิดในแอปยืนยันตัวตน</string>
+    <string name="accounts_revoke">เพิกถอนการเข้าถึง</string>
+    <string name="accounts_capability_calendar">ปฏิทิน</string>
+    <string name="accounts_capability_notify">การแจ้งเตือน</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">การลงชื่อเข้าใช้</string>
+    <string name="accounts_provider_caldav">เซิร์ฟเวอร์ปฏิทิน</string>
+    <string name="accounts_revoke_confirm">การดำเนินการนี้จะเพิกถอนการเข้าถึงปฏิทินของ %1$s การลงชื่อเข้าใช้ด้วย %2$s จะยังคงอยู่จนกว่าคุณจะยกเลิกการเชื่อมโยงในหน้าเข้าสู่ระบบ</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

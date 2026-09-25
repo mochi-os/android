@@ -5,6 +5,9 @@
 
 package org.mochios.calendars.model
 
+import java.time.LocalDate
+import java.time.ZoneOffset
+
 /**
  * One occurrence of an event inside a range, as `-/events` returns it. The
  * server expands recurrences itself, so every view renders from this shape.
@@ -13,7 +16,8 @@ package org.mochios.calendars.model
  * occurrence only, as `YYYY-MM-DD`, and is what a view should place it by:
  * an all-day occurrence's [start] is the midnight of that date in the user's
  * own timezone, not in the viewer's. [exception] marks an occurrence the user
- * has detached from its series.
+ * has detached from its series. [zone] is the zone each end was written in,
+ * on a timed occurrence only.
  */
 data class Instance(
     val event: String = "",
@@ -32,14 +36,39 @@ data class Instance(
     val date: String? = null,
     val recurring: Boolean = false,
     val exception: Boolean = false,
+    val zone: Zone? = null,
 ) {
     /** A birthday occurrence is derived from a contact and has no event to open. */
     val birthday: Boolean get() = event.startsWith(BIRTHDAY)
+
+    /** Whether a tap opens the editor; a read-only occurrence opens the summary sheet instead. */
+    val editable: Boolean get() = !readonly && !birthday
+
+    /**
+     * The start an override of this occurrence is matched by, which is how
+     * the event's tree names it: a timed occurrence's own instant, and the
+     * UTC midnight of an all-day one's date, which is what its `DATE` value
+     * reads as. [start] itself is the user's midnight for an all-day one.
+     */
+    val occurrence: Long
+        get() = date?.let { value ->
+            runCatching { LocalDate.parse(value).atStartOfDay(ZoneOffset.UTC).toEpochSecond() }.getOrNull()
+        } ?: start
 
     companion object {
         const val BIRTHDAY = "birthday-"
     }
 }
+
+/**
+ * The IANA zone each end of a timed occurrence was written in, its `TZID`:
+ * a flight can start in one and end in another. Blank means UTC or floating,
+ * which is read in the user's own zone.
+ */
+data class Zone(
+    val start: String = "",
+    val finish: String = "",
+)
 
 /**
  * The body of `-/events`. [truncated] means the range held more occurrences

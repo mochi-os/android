@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">વિષય</string>
     <string name="accounts_field_secret">સહી ગુપ્ત કી</string>
     <string name="account_totp_open">ઓથેન્ટિકેટર ઍપમાં ખોલો</string>
+    <string name="accounts_revoke">ઍક્સેસ રદ કરો</string>
+    <string name="accounts_capability_calendar">કૅલેન્ડર</string>
+    <string name="accounts_capability_notify">સૂચનાઓ</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">સાઇન-ઇન</string>
+    <string name="accounts_provider_caldav">કૅલેન્ડર સર્વર</string>
+    <string name="accounts_revoke_confirm">આ %1$s ની કૅલેન્ડર ઍક્સેસ રદ કરશે. %2$s સાથે સાઇન-ઇન ત્યાં સુધી રહેશે જ્યાં સુધી તમે લૉગિન પૃષ્ઠ પર તેને અનલિંક ન કરો.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

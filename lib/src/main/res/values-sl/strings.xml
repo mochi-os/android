@@ -271,6 +271,9 @@
     <string name="attachment_caption_add">Dodaj napis</string>
     <string name="attachment_caption_edit">Uredi napis</string>
     <string name="about_check_background">Nadaljuj v ozadju</string>
+    <string name="update_install">Namesti</string>
+    <string name="update_available">Na voljo je posodobitev</string>
+    <string name="update_later">Pozneje</string>
     <string name="notifications_category_unassigned">Nedodeljeno</string>
     <string name="notifications_change_category">Spremeni kategorijo obvestila</string>
     <string name="lightbox_comments_none">Ta slika še nima komentarjev.</string>

@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Hyni përsëri për të sinkronizuar</string>
     <string name="people_sync_transport">Serveri nuk u arrit</string>
     <string name="people_sync_refused">Një kontakt nuk u sinkronizua: %1$s</string>
+    <string name="people_contact_friend">Mik në Mochi</string>
 </resources>

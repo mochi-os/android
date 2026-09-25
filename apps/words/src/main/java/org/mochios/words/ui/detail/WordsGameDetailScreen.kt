@@ -68,6 +68,7 @@ import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -1069,7 +1070,7 @@ data class WordsHeaderModel(
 
 @Composable
 private fun buildHeaderModel(game: Game, myIdentity: String): WordsHeaderModel {
-    val context = LocalContext.current
+    val resources = LocalResources.current
     val playerName = { num: Int ->
         val raw = when (num) {
             1 -> game.player1_name
@@ -1078,7 +1079,7 @@ private fun buildHeaderModel(game: Game, myIdentity: String): WordsHeaderModel {
             4 -> game.player4_name ?: ""
             else -> ""
         }
-        raw.ifBlank { context.getString(R.string.words_detail_player_fallback, num) }
+        raw.ifBlank { resources.getString(R.string.words_detail_player_fallback, num) }
     }
     val playerIdentity = { num: Int ->
         when (num) {
@@ -1106,21 +1107,21 @@ private fun buildHeaderModel(game: Game, myIdentity: String): WordsHeaderModel {
     val status: String = when (game.status) {
         "active" -> {
             if (game.current_turn == game.my_player_number) {
-                context.getString(R.string.words_detail_status_your_move)
+                resources.getString(R.string.words_detail_status_your_move)
             } else {
-                context.getString(R.string.words_detail_status_opponent_move, playerName(game.current_turn))
+                resources.getString(R.string.words_detail_status_opponent_move, playerName(game.current_turn))
             }
         }
         "finished" -> {
-            if (isMyWin) context.getString(R.string.words_detail_status_you_win)
+            if (isMyWin) resources.getString(R.string.words_detail_status_you_win)
             else {
                 val winnerNum = (1..game.player_count).firstOrNull {
                     playerIdentity(it) == game.winner
                 }
                 if (winnerNum != null) {
-                    context.getString(R.string.words_detail_status_winner_wins, playerName(winnerNum))
+                    resources.getString(R.string.words_detail_status_winner_wins, playerName(winnerNum))
                 } else {
-                    context.getString(R.string.words_detail_status_game_over)
+                    resources.getString(R.string.words_detail_status_game_over)
                 }
             }
         }
@@ -1132,11 +1133,11 @@ private fun buildHeaderModel(game: Game, myIdentity: String): WordsHeaderModel {
             val resigner = resignerSlot(game)
             when {
                 isResigner(game, myIdentity) ->
-                    context.getString(R.string.words_detail_status_you_resigned)
-                isMyWin -> context.getString(R.string.words_detail_status_opponent_resigned)
+                    resources.getString(R.string.words_detail_status_you_resigned)
+                isMyWin -> resources.getString(R.string.words_detail_status_opponent_resigned)
                 resigner != null ->
-                    context.getString(MochiR.string.game_system_resign, playerName(resigner))
-                else -> context.getString(R.string.words_detail_status_game_over)
+                    resources.getString(MochiR.string.game_system_resign, playerName(resigner))
+                else -> resources.getString(R.string.words_detail_status_game_over)
             }
         }
     }
@@ -1152,7 +1153,7 @@ private fun buildHeaderModel(game: Game, myIdentity: String): WordsHeaderModel {
         val isMe = isMeForPlayer(num)
         WordsHeaderPlayer(
             playerNumber = num,
-            label = if (isMe) context.getString(R.string.words_detail_label_you)
+            label = if (isMe) resources.getString(R.string.words_detail_label_you)
             else playerName(num),
             score = score,
             isCurrentTurn = game.status == "active" && game.current_turn == num,
@@ -1168,11 +1169,11 @@ private fun buildHeaderModel(game: Game, myIdentity: String): WordsHeaderModel {
         title = title,
         status = status,
         players = players,
-        tilesLeftLabel = context.getString(R.string.words_detail_label_tiles_left, game.bag_count),
+        tilesLeftLabel = resources.getString(R.string.words_detail_label_tiles_left, game.bag_count),
         // A game always seats two to four, so the singular never arises and the
         // plain string - which every catalogue already carries - is enough.
         playersLabel = if (game.player_count > 2) {
-            context.getString(R.string.words_detail_player_count, game.player_count)
+            resources.getString(R.string.words_detail_player_count, game.player_count)
         } else {
             null
         },

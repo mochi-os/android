@@ -165,4 +165,5 @@
     <string name="people_device_delete_title">¿Eliminar el dispositivo?</string>
     <string name="people_device_delete_message">El dispositivo ya no podrá sincronizar contactos.</string>
     <string name="people_device_deleted">Dispositivo eliminado</string>
+    <string name="people_contact_friend">Amigo de Mochi</string>
 </resources>

@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Senkronize etmek için tekrar giriş yapın</string>
     <string name="people_sync_transport">Sunucuya ulaşılamadı</string>
     <string name="people_sync_refused">Bir kişi senkronize edilemedi: %1$s</string>
+    <string name="people_contact_friend">Mochi arkadaşı</string>
 </resources>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chess_app_title">Chess</string>
-    <string name="chess_sidebar_header">Chess</string>
+    <string name="chess_app_title">Dara</string>
+    <string name="chess_sidebar_header">Dara</string>
     <string name="chess_sidebar_active">Wasannin da ke kan ci gaba</string>
     <string name="chess_sidebar_completed">An kammala</string>
     <string name="chess_sidebar_new_game">Sabon wasa</string>

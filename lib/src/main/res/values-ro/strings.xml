@@ -271,6 +271,9 @@
     <string name="attachment_caption_add">Adaugă legendă</string>
     <string name="attachment_caption_edit">Editează legenda</string>
     <string name="about_check_background">Continuă în fundal</string>
+    <string name="update_install">Instalează</string>
+    <string name="update_available">Actualizare disponibilă</string>
+    <string name="update_later">Mai târziu</string>
     <string name="notifications_category_unassigned">Neatribuit</string>
     <string name="notifications_change_category">Schimbă categoria notificării</string>
     <string name="lightbox_comments_none">Încă nu există comentarii la această imagine.</string>

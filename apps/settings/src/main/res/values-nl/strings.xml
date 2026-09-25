@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">Onderwerp</string>
     <string name="accounts_field_secret">Ondertekeningsgeheim</string>
     <string name="account_totp_open">Openen in authenticator-app</string>
+    <string name="accounts_revoke">Toegang intrekken</string>
+    <string name="accounts_capability_calendar">Agenda</string>
+    <string name="accounts_capability_notify">Meldingen</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Aanmelden</string>
+    <string name="accounts_provider_caldav">Agendaserver</string>
+    <string name="accounts_revoke_confirm">Hiermee wordt de agendatoegang van %1$s ingetrokken. Aanmelden met %2$s blijft bestaan totdat je het ontkoppelt op de inlogpagina.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

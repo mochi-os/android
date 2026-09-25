@@ -6,7 +6,6 @@
 
     <string name="words_channel_name">Words-Benachrichtigungen</string>
     <string name="words_channel_description">Benachrichtigungen über Words-Züge, Buchstabentausch und Spielergebnisse.</string>
-    <string name="words_list_title">Words</string>
     <string name="words_list_menu">Menü</string>
     <string name="words_sidebar_active">Aktive Spiele</string>
     <string name="words_sidebar_completed">Abgeschlossen</string>

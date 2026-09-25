@@ -214,4 +214,5 @@
     <string name="people_sync_authorization">ເຂົ້າສູ່ລະບົບອີກຄັ້ງເພື່ອຊິງຄ໌</string>
     <string name="people_sync_transport">ບໍ່ສາມາດເຂົ້າເຖິງເຊີບເວີໄດ້</string>
     <string name="people_sync_refused">ບໍ່ສາມາດຊິງຄ໌ຜູ້ຕິດຕໍ່ໄດ້: %1$s</string>
+    <string name="people_contact_friend">ໝູ່ Mochi</string>
 </resources>

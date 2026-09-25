@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Staff</string>
-    <string name="launcher_staff">Кызматкерлер</string>
+    <string name="launcher_staff">Mochi Staff</string>
     <string name="staff_accounts_action_ban_title">Аккаунтка тыюу салуу</string>
     <string name="staff_accounts_action_suspend_title">Аккаунтту токтотуп туруу</string>
     <string name="staff_accounts_action_unban_title">Тыюуну алып салуу</string>

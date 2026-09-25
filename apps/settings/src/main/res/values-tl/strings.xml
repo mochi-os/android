@@ -387,4 +387,12 @@
     <string name="accounts_field_topic">Paksa</string>
     <string name="accounts_field_secret">Lihim sa paglagda</string>
     <string name="account_totp_open">Buksan sa authenticator app</string>
+    <string name="accounts_revoke">Bawiin ang access</string>
+    <string name="accounts_capability_calendar">Kalendaryo</string>
+    <string name="accounts_capability_notify">Mga Notification</string>
+    <string name="accounts_capability_ai">AI</string>
+    <string name="accounts_capability_login">Pag-sign in</string>
+    <string name="accounts_provider_caldav">Server ng kalendaryo</string>
+    <string name="accounts_revoke_confirm">Aalisin nito ang access sa kalendaryo ng %1$s. Mananatili ang pag-sign in gamit ang %2$s hanggang sa i-unlink mo ito sa pahina ng Login.</string>
+    <string name="accounts_capability_mcp">MCP</string>
 </resources>

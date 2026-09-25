@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_list_title">Words</string>
+    <string name="words_list_title">ពាក្យ</string>
     <string name="words_list_menu">ម៉ឺនុយ</string>
     <string name="words_list_logout">ចាកចេញ</string>
     <string name="words_sidebar_completed">បានបញ្ចប់</string>

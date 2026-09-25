@@ -25,14 +25,15 @@ fun shouldAcceptOAuthReturn(
 }
 
 /**
- * Which OAuth ceremony a `mochi:` deep-link name belongs to, or null. Sign-in
- * and link are separate names gated on separate stored ceremonies: either fed
- * to the other's handler would burn or misuse that ceremony.
+ * Which OAuth ceremony a `mochi:` deep-link name belongs to, or null. Sign-in,
+ * link and grant are separate names gated on separate stored ceremonies: any
+ * fed to another's handler would burn or misuse that ceremony.
  */
-enum class OAuthReturnKind { LOGIN, LINK }
+enum class OAuthReturnKind { LOGIN, LINK, GRANT }
 
 fun oauthReturnKind(name: String): OAuthReturnKind? = when (name) {
     "oauth-return" -> OAuthReturnKind.LOGIN
     "oauth-link-return" -> OAuthReturnKind.LINK
+    "oauth-grant-return" -> OAuthReturnKind.GRANT
     else -> null
 }
