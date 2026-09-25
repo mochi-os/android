@@ -5,10 +5,10 @@
 
 package org.mochios.staff.ui.reports
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -174,34 +174,19 @@ private fun ReportRow(
 ) {
     val format = LocalFormat.current
 
-    MochiCard(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 6.dp),
-        shape = MaterialTheme.shapes.medium,
-    ) {
+    val cardModifier = Modifier
+        .fillMaxWidth()
+        .padding(horizontal = 16.dp, vertical = 6.dp)
+    val content: @Composable ColumnScope.() -> Unit = {
         Column(modifier = Modifier.padding(16.dp)) {
-            // Target (listing title links to market detail; user shows resolved name).
-            val targetText = targetText(report)
-            if (report.type == "listing" && report.listing != null) {
-                Text(
-                    text = targetText,
-                    style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .clickable { onOpenListing(report.listing.id) },
-                )
-            } else {
-                Text(
-                    text = targetText,
-                    style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier.fillMaxWidth(),
-                )
-            }
+            // Target: the listing title, or the reported user's resolved name.
+            Text(
+                text = targetText(report),
+                style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.fillMaxWidth(),
+            )
             Spacer(Modifier.height(6.dp))
 
             // Reporter row.
@@ -256,6 +241,17 @@ private fun ReportRow(
                 }
             }
         }
+    }
+    val listing = report.listing
+    if (report.type == "listing" && listing != null) {
+        MochiCard(
+            onClick = { onOpenListing(listing.id) },
+            modifier = cardModifier,
+            shape = MaterialTheme.shapes.medium,
+            content = content,
+        )
+    } else {
+        MochiCard(modifier = cardModifier, shape = MaterialTheme.shapes.medium, content = content)
     }
 }
 

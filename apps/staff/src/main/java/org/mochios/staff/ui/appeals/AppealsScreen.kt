@@ -5,7 +5,6 @@
 
 package org.mochios.staff.ui.appeals
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -150,6 +149,7 @@ private fun AppealRow(
     val format = LocalFormat.current
 
     MochiCard(
+        onClick = onOpenListing,
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 16.dp, vertical = 6.dp),
@@ -162,9 +162,7 @@ private fun AppealRow(
                 style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clickable(onClick = onOpenListing),
+                modifier = Modifier.fillMaxWidth(),
             )
             Spacer(Modifier.height(6.dp))
 
