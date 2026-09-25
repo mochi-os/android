@@ -411,6 +411,7 @@
     <string name="staff_team_role_support">ਸਹਾਇਤਾ</string>
     <string name="staff_team_toast_add_failed">ਮੈਂਬਰ ਜੋੜਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="staff_team_toast_removed">ਮੈਂਬਰ ਹਟਾਇਆ ਗਿਆ</string>
+    <string name="staff_team_toast_added">ਮੈਂਬਰ ਜੋੜਿਆ ਗਿਆ</string>
     <string name="staff_team_toast_role_updated">ਭੂਮਿਕਾ ਅੱਪਡੇਟ ਹੋਈ</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">ਆਰਡਰ #%1$s</string>

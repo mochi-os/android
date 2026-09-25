@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">תמיכה</string>
     <string name="staff_team_toast_add_failed">הוספת חבר נכשלה</string>
     <string name="staff_team_toast_removed">החבר הוסר</string>
+    <string name="staff_team_toast_added">החבר נוסף</string>
     <string name="staff_team_toast_role_updated">התפקיד עודכן</string>
 
     <string name="staff_config_field_stripe_webhook">סוד החתימה של ה-Webhook</string>

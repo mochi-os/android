@@ -409,6 +409,7 @@
     <string name="staff_team_role_support">Tallafi</string>
     <string name="staff_team_toast_add_failed">An gaza ƙara memba</string>
     <string name="staff_team_toast_removed">An cire memba</string>
+    <string name="staff_team_toast_added">An ƙara memba</string>
     <string name="staff_team_toast_role_updated">An sabunta matsayi</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">Oda #%1$s</string>

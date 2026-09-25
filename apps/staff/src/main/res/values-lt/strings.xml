@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">Pagalba</string>
     <string name="staff_team_toast_add_failed">Nepavyko pridėti nario</string>
     <string name="staff_team_toast_removed">Narys pašalintas</string>
+    <string name="staff_team_toast_added">Narys pridėtas</string>
     <string name="staff_team_toast_role_updated">Vaidmuo atnaujintas</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook pasirašymo paslaptis</string>

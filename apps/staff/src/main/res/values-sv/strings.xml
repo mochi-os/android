@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">Support</string>
     <string name="staff_team_toast_add_failed">Kunde inte lägga till medlem</string>
     <string name="staff_team_toast_removed">Medlem borttagen</string>
+    <string name="staff_team_toast_added">Medlem tillagd</string>
     <string name="staff_team_toast_role_updated">Roll uppdaterad</string>
 
     <string name="staff_config_field_stripe_webhook">Signeringshemlighet för webhook</string>

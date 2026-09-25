@@ -416,6 +416,7 @@
     <string name="staff_team_role_support">پشتگیری</string>
     <string name="staff_team_toast_add_failed">زیادکردنی ئەندام سەرکەوتوو نەبوو</string>
     <string name="staff_team_toast_removed">ئەندام لابرا</string>
+    <string name="staff_team_toast_added">ئەندام زیادکرا</string>
     <string name="staff_team_toast_role_updated">ڕۆڵ نوێکرایەوە</string>
 
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>

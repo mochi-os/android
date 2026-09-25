@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">Aðstoð</string>
     <string name="staff_team_toast_add_failed">Tókst ekki að bæta við meðlimi</string>
     <string name="staff_team_toast_removed">Meðlimur fjarlægður</string>
+    <string name="staff_team_toast_added">Meðlimi bætt við</string>
     <string name="staff_team_toast_role_updated">Hlutverk uppfært</string>
 
     <string name="staff_config_field_stripe_webhook">Undirritunarleynd webhook</string>

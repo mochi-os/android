@@ -434,6 +434,7 @@
     <string name="staff_team_role_support">Tacaíocht</string>
     <string name="staff_team_toast_add_failed">Theip ar bhall a chur leis</string>
     <string name="staff_team_toast_removed">Ball bainte</string>
+    <string name="staff_team_toast_added">Ball curtha leis</string>
     <string name="staff_team_toast_role_updated">Ról nuashonraithe</string>
 
 

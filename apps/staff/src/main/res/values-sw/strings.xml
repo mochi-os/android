@@ -436,6 +436,7 @@
     <string name="staff_team_role_support">Usaidizi</string>
     <string name="staff_team_toast_add_failed">Imeshindwa kuongeza mwanachama</string>
     <string name="staff_team_toast_removed">Mwanachama ameondolewa</string>
+    <string name="staff_team_toast_added">Mwanachama ameongezwa</string>
     <string name="staff_team_toast_role_updated">Jukumu limesasishwa</string>
 
 

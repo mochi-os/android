@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">Atbalsts</string>
     <string name="staff_team_toast_add_failed">Neizdevās pievienot dalībnieku</string>
     <string name="staff_team_toast_removed">Dalībnieks noņemts</string>
+    <string name="staff_team_toast_added">Dalībnieks pievienots</string>
     <string name="staff_team_toast_role_updated">Loma atjaunināta</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook parakstīšanas noslēpums</string>

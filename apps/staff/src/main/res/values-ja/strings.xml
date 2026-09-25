@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">サポート</string>
     <string name="staff_team_toast_add_failed">メンバーの追加に失敗しました</string>
     <string name="staff_team_toast_removed">メンバーを削除しました</string>
+    <string name="staff_team_toast_added">メンバーを追加しました</string>
     <string name="staff_team_toast_role_updated">ロールを更新しました</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook 署名シークレット</string>

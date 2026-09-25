@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">सपोर्ट</string>
     <string name="staff_team_toast_add_failed">सदस्य जोड़ने में विफल</string>
     <string name="staff_team_toast_removed">सदस्य हटाया गया</string>
+    <string name="staff_team_toast_added">सदस्य जोड़ा गया</string>
     <string name="staff_team_toast_role_updated">भूमिका अपडेट की गई</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook हस्ताक्षर गुप्त</string>

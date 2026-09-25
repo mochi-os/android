@@ -434,6 +434,7 @@
     <string name="staff_team_role_support">Աջակցություն</string>
     <string name="staff_team_toast_add_failed">Չհաջողվեց ավելացնել անդամին</string>
     <string name="staff_team_toast_removed">Անդամը հեռացվեց</string>
+    <string name="staff_team_toast_added">Անդամն ավելացվեց</string>
     <string name="staff_team_toast_role_updated">Դերը թարմացված է</string>
 
 

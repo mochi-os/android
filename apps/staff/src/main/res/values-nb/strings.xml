@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">Støtte</string>
     <string name="staff_team_toast_add_failed">Kunne ikke legge til medlem</string>
     <string name="staff_team_toast_removed">Medlem fjernet</string>
+    <string name="staff_team_toast_added">Medlem lagt til</string>
     <string name="staff_team_toast_role_updated">Rolle oppdatert</string>
 
     <string name="staff_config_field_stripe_webhook">Hemmelig signeringsnøkkel for webhook</string>

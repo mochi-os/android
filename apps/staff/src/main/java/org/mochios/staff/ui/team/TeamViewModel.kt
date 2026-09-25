@@ -62,6 +62,14 @@ class TeamViewModel @Inject constructor(
         }
     }
 
+    /** Reloads after the add screen added a member, and says so. */
+    fun onAdded() {
+        viewModelScope.launch {
+            _events.send(TeamEvent.Toast(org.mochios.staff.R.string.staff_team_toast_added))
+        }
+        load()
+    }
+
     fun askRemove(member: StaffMember) {
         _state.value = _state.value.copy(removeTarget = member)
     }

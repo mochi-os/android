@@ -416,6 +416,7 @@
     <string name="staff_team_role_support">Appoġġ</string>
     <string name="staff_team_toast_add_failed">Ma rnexxiex jiżdied il-membru</string>
     <string name="staff_team_toast_removed">Tneħħa l-membru</string>
+    <string name="staff_team_toast_added">Żdied il-membru</string>
     <string name="staff_team_toast_role_updated">Ir-rwol ġie aġġornat</string>
 
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>

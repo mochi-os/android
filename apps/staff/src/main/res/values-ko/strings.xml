@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">지원</string>
     <string name="staff_team_toast_add_failed">멤버 추가에 실패했어요</string>
     <string name="staff_team_toast_removed">멤버가 제거되었어요</string>
+    <string name="staff_team_toast_added">멤버가 추가되었어요</string>
     <string name="staff_team_toast_role_updated">역할이 업데이트되었습니다</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook 서명 시크릿</string>

@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">การสนับสนุน</string>
     <string name="staff_team_toast_add_failed">ไม่สามารถเพิ่มสมาชิกได้</string>
     <string name="staff_team_toast_removed">ลบสมาชิกแล้ว</string>
+    <string name="staff_team_toast_added">เพิ่มสมาชิกแล้ว</string>
     <string name="staff_team_toast_role_updated">อัปเดตบทบาทแล้ว</string>
 
     <string name="staff_config_field_stripe_webhook">รหัสลับสำหรับลงนาม Webhook</string>

@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">Destek</string>
     <string name="staff_team_toast_add_failed">Üye eklenemedi</string>
     <string name="staff_team_toast_removed">Üye kaldırıldı</string>
+    <string name="staff_team_toast_added">Üye eklendi</string>
     <string name="staff_team_toast_role_updated">Rol güncellendi</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook imzalama gizli anahtarı</string>

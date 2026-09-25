@@ -419,6 +419,7 @@
     <string name="staff_team_role_support">Taic</string>
     <string name="staff_team_toast_add_failed">Cha b\' urrainn ball a chur ris</string>
     <string name="staff_team_toast_removed">Chaidh ball a thoirt air falbh</string>
+    <string name="staff_team_toast_added">Chaidh ball a chur ris</string>
     <string name="staff_team_toast_role_updated">Chaidh an dreuchd ùrachadh</string>
 
     <string name="staff_disputes_dialog_title_chargeback">Cosgairt-air-ais: %1$s</string>

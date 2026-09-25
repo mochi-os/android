@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">Поддержка</string>
     <string name="staff_team_toast_add_failed">Не удалось добавить участника</string>
     <string name="staff_team_toast_removed">Участник удалён</string>
+    <string name="staff_team_toast_added">Участник добавлен</string>
     <string name="staff_team_toast_role_updated">Роль обновлена</string>
 
     <string name="staff_config_field_stripe_webhook">Секретный ключ подписи webhook</string>

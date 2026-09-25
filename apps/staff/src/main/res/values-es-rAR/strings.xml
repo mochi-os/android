@@ -442,6 +442,7 @@
     <string name="staff_team_role_support">Soporte</string>
     <string name="staff_team_toast_add_failed">No se pudo agregar el miembro</string>
     <string name="staff_team_toast_removed">Miembro eliminado</string>
+    <string name="staff_team_toast_added">Miembro agregado</string>
     <string name="staff_team_toast_role_updated">Rol actualizado</string>
 
     <string name="staff_disputes_meta_already_refunded">Ya reembolsado</string>

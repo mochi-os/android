@@ -422,6 +422,7 @@
     <string name="staff_team_role_support">Qoʻllab-quvvatlash</string>
     <string name="staff_team_toast_add_failed">Aʼzo qoʻshib boʻlmadi</string>
     <string name="staff_team_toast_removed">Aʼzo olib tashlandi</string>
+    <string name="staff_team_toast_added">Aʼzo qo‘shildi</string>
     <string name="staff_team_toast_role_updated">Rol yangilandi</string>
 
 

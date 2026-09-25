@@ -411,6 +411,7 @@
     <string name="staff_team_role_support">പിന്തുണ</string>
     <string name="staff_team_toast_add_failed">അംഗത്തെ ചേർക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="staff_team_toast_removed">അംഗത്തെ നീക്കം ചെയ്തു</string>
+    <string name="staff_team_toast_added">അംഗത്തെ ചേർത്തു</string>
     <string name="staff_team_toast_role_updated">റോൾ അപ്ഡേറ്റ് ചെയ്തു</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">ഓർഡർ #%1$s</string>

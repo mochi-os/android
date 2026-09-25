@@ -434,6 +434,7 @@
     <string name="staff_team_role_support">Падтрымка</string>
     <string name="staff_team_toast_add_failed">Не ўдалося дадаць удзельніка</string>
     <string name="staff_team_toast_removed">Удзельнік выдалены</string>
+    <string name="staff_team_toast_added">Удзельнік дададзены</string>
     <string name="staff_team_toast_role_updated">Роля абноўлена</string>
 
 

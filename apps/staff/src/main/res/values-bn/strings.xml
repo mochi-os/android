@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">সহায়তা</string>
     <string name="staff_team_toast_add_failed">সদস্য যোগ করতে ব্যর্থ</string>
     <string name="staff_team_toast_removed">সদস্য সরানো হয়েছে</string>
+    <string name="staff_team_toast_added">সদস্য যোগ করা হয়েছে</string>
     <string name="staff_team_toast_role_updated">ভূমিকা আপডেট হয়েছে</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook স্বাক্ষর গোপন কী</string>

@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">Tugi</string>
     <string name="staff_team_toast_add_failed">Liikme lisamine ebaõnnestus</string>
     <string name="staff_team_toast_removed">Liige eemaldatud</string>
+    <string name="staff_team_toast_added">Liige lisatud</string>
     <string name="staff_team_toast_role_updated">Roll on uuendatud</string>
 
     <string name="staff_config_field_stripe_webhook">Webhooki allkirjastamise saladus</string>

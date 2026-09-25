@@ -405,6 +405,7 @@
     <string name="staff_team_role_support">Yanapaña</string>
     <string name="staff_team_toast_add_failed">Janiw integrante yapxataña atinkti</string>
     <string name="staff_team_toast_removed">Integrante apsutawa</string>
+    <string name="staff_team_toast_added">Integrante yapxatata</string>
     <string name="staff_team_toast_role_updated">Rol machaqachata</string>
 
     <string name="staff_accounts_action_unban_title">Jark\'aqäwi apaqaña</string>

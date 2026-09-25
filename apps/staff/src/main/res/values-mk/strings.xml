@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">Поддршка</string>
     <string name="staff_team_toast_add_failed">Неуспешно додавање на член</string>
     <string name="staff_team_toast_removed">Членот е отстранет</string>
+    <string name="staff_team_toast_added">Членот е додаден</string>
     <string name="staff_team_toast_role_updated">Улогата е ажурирана</string>
 
     <string name="staff_config_field_stripe_webhook">Тајна за потпишување Webhook</string>

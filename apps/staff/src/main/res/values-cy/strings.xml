@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">Cymorth</string>
     <string name="staff_team_toast_add_failed">Methwyd ychwanegu aelod</string>
     <string name="staff_team_toast_removed">Aelod wedi\'i ddileu</string>
+    <string name="staff_team_toast_added">Aelod wedi\'i ychwanegu</string>
     <string name="staff_team_toast_role_updated">Diweddarwyd y rôl</string>
 
     <string name="staff_config_field_stripe_webhook">Cyfrinach lofnodi Webhook</string>

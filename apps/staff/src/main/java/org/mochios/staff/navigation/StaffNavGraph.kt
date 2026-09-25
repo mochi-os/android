@@ -188,7 +188,7 @@ fun NavGraphBuilder.staffNavGraph(
             entry.savedStateHandle.getStateFlow(TEAM_MEMBER_ADDED, false).collect { added ->
                 if (added) {
                     entry.savedStateHandle.remove<Boolean>(TEAM_MEMBER_ADDED)
-                    viewModel.load()
+                    viewModel.onAdded()
                 }
             }
         }

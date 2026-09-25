@@ -411,6 +411,7 @@
     <string name="staff_team_role_support">समर्थन</string>
     <string name="staff_team_toast_add_failed">सदस्य थप्न असफल</string>
     <string name="staff_team_toast_removed">सदस्य हटाइयो</string>
+    <string name="staff_team_toast_added">सदस्य थपियो</string>
     <string name="staff_team_toast_role_updated">भूमिका अद्यावधिक गरियो</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">अर्डर #%1$s</string>

@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">支持</string>
     <string name="staff_team_toast_add_failed">添加成员失败</string>
     <string name="staff_team_toast_removed">已移除成员</string>
+    <string name="staff_team_toast_added">已添加成员</string>
     <string name="staff_team_toast_role_updated">角色已更新</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook 签名密钥</string>

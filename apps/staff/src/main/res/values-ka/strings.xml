@@ -423,6 +423,7 @@
     <string name="staff_team_role_support">მხარდაჭერა</string>
     <string name="staff_team_toast_add_failed">წევრის დამატება ვერ მოხერხდა</string>
     <string name="staff_team_toast_removed">წევრი წაიშალა</string>
+    <string name="staff_team_toast_added">წევრი დაემატა</string>
     <string name="staff_team_toast_role_updated">როლი განახლდა</string>
 
 

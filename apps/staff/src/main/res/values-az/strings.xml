@@ -434,6 +434,7 @@
     <string name="staff_team_role_support">Dəstək</string>
     <string name="staff_team_toast_add_failed">Üzv əlavə etmək alınmadı</string>
     <string name="staff_team_toast_removed">Üzv silindi</string>
+    <string name="staff_team_toast_added">Üzv əlavə edildi</string>
     <string name="staff_team_toast_role_updated">Rol yeniləndi</string>
 
 

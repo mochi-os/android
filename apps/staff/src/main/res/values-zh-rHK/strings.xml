@@ -448,6 +448,7 @@
     <string name="staff_team_role_support">客戶支援</string>
     <string name="staff_team_toast_add_failed">無法新增成員</string>
     <string name="staff_team_toast_removed">已移除成員</string>
+    <string name="staff_team_toast_added">已加入成員</string>
     <string name="staff_team_toast_role_updated">已更新角色</string>
 
     <string name="staff_disputes_meta_already_refunded">已退款</string>

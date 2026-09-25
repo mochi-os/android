@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">Laguntza</string>
     <string name="staff_team_toast_add_failed">Ezin izan da kidea gehitu</string>
     <string name="staff_team_toast_removed">Kidea kenduta</string>
+    <string name="staff_team_toast_added">Kidea gehituta</string>
     <string name="staff_team_toast_role_updated">Rola eguneratu da</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook sinatzeko sekretua</string>

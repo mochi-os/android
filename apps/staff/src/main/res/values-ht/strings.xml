@@ -416,6 +416,7 @@
     <string name="staff_team_role_support">Sipò</string>
     <string name="staff_team_toast_add_failed">Echwe pou ajoute manm</string>
     <string name="staff_team_toast_removed">Manm retire</string>
+    <string name="staff_team_toast_added">Manm ajoute</string>
     <string name="staff_team_toast_role_updated">Wòl la mete ajou</string>
 
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>

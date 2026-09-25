@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">Podpora</string>
     <string name="staff_team_toast_add_failed">Nepodařilo se přidat člena</string>
     <string name="staff_team_toast_removed">Člen odebrán</string>
+    <string name="staff_team_toast_added">Člen přidán</string>
     <string name="staff_team_toast_role_updated">Role aktualizována</string>
 
     <string name="staff_config_field_stripe_webhook">Tajný klíč pro podpis Webhooku</string>

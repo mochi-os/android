@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">Tuki</string>
     <string name="staff_team_toast_add_failed">Jäsenen lisääminen epäonnistui</string>
     <string name="staff_team_toast_removed">Jäsen poistettu</string>
+    <string name="staff_team_toast_added">Jäsen lisätty</string>
     <string name="staff_team_toast_role_updated">Rooli päivitetty</string>
 
     <string name="staff_config_field_stripe_webhook">Webhookin allekirjoitussalaisuus</string>

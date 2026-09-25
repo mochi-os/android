@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">Podpora</string>
     <string name="staff_team_toast_add_failed">Neuspešno dodajanje člana</string>
     <string name="staff_team_toast_removed">Član odstranjen</string>
+    <string name="staff_team_toast_added">Član dodan</string>
     <string name="staff_team_toast_role_updated">Vloga posodobljena</string>
 
     <string name="staff_config_field_stripe_webhook">Skrivni ključ za podpisovanje webhooka</string>

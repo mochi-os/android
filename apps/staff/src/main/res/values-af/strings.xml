@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">Ondersteuning</string>
     <string name="staff_team_toast_add_failed">Kon nie lid byvoeg nie</string>
     <string name="staff_team_toast_removed">Lid verwyder</string>
+    <string name="staff_team_toast_added">Lid bygevoeg</string>
     <string name="staff_team_toast_role_updated">Rol opgedateer</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook-ondertekeningsgeheim</string>

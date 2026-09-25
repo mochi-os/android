@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">Támogatás</string>
     <string name="staff_team_toast_add_failed">Nem sikerült hozzáadni a tagot</string>
     <string name="staff_team_toast_removed">Tag eltávolítva</string>
+    <string name="staff_team_toast_added">Tag hozzáadva</string>
     <string name="staff_team_toast_role_updated">Szerepkör frissítve</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook aláírási titok</string>

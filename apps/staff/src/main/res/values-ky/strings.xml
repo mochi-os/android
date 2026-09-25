@@ -418,6 +418,7 @@
     <string name="staff_team_role_support">Колдоо</string>
     <string name="staff_team_toast_add_failed">Мүчө кошуу ишке ашкан жок</string>
     <string name="staff_team_toast_removed">Мүчө алынып салынды</string>
+    <string name="staff_team_toast_added">Мүчө кошулду</string>
     <string name="staff_team_toast_role_updated">Ролу жаңыртылды</string>
 
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>

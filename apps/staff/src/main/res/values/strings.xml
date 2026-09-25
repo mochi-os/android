@@ -452,5 +452,6 @@
     <string name="staff_team_role_support">Support</string>
     <string name="staff_team_toast_add_failed">Failed to add member</string>
     <string name="staff_team_toast_removed">Member removed</string>
+    <string name="staff_team_toast_added">Member added</string>
     <string name="staff_team_toast_role_updated">Role updated</string>
 </resources>

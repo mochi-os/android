@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">پشتیبانی</string>
     <string name="staff_team_toast_add_failed">افزودن عضو ناموفق بود</string>
     <string name="staff_team_toast_removed">عضو حذف شد</string>
+    <string name="staff_team_toast_added">عضو اضافه شد</string>
     <string name="staff_team_toast_role_updated">نقش به‌روزرسانی شد</string>
 
     <string name="staff_config_field_stripe_webhook">راز امضای وب‌هوک</string>

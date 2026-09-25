@@ -434,6 +434,7 @@
     <string name="staff_team_role_support">Қолдау</string>
     <string name="staff_team_toast_add_failed">Мүшені қосу сәтсіз аяқталды</string>
     <string name="staff_team_toast_removed">Мүше жойылды</string>
+    <string name="staff_team_toast_added">Мүше қосылды</string>
     <string name="staff_team_toast_role_updated">Рөл жаңартылды</string>
 
 

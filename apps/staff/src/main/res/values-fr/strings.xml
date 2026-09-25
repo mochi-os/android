@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">Assistance</string>
     <string name="staff_team_toast_add_failed">Échec de l\'ajout du membre</string>
     <string name="staff_team_toast_removed">Membre supprimé</string>
+    <string name="staff_team_toast_added">Membre ajouté</string>
     <string name="staff_team_toast_role_updated">Rôle mis à jour</string>
 
     <string name="staff_config_field_stripe_webhook">Secret de signature du webhook</string>

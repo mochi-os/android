@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">Mbështetja</string>
     <string name="staff_team_toast_add_failed">Shtimi i anëtarit dështoi</string>
     <string name="staff_team_toast_removed">Anëtari u hoq</string>
+    <string name="staff_team_toast_added">Anëtari u shtua</string>
     <string name="staff_team_toast_role_updated">Roli u përditësua</string>
 
     <string name="staff_config_field_stripe_webhook">Sekreti i nënshkrimit të webhook-ut</string>

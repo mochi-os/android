@@ -406,6 +406,7 @@
     <string name="staff_team_role_support">सहायता</string>
     <string name="staff_team_toast_add_failed">सदस्य जोड़े में विफल</string>
     <string name="staff_team_toast_removed">सदस्य हटल</string>
+    <string name="staff_team_toast_added">सदस्य जोड़ल गइल</string>
     <string name="staff_team_toast_role_updated">भूमिका अपडेट हो गइल</string>
 
     <string name="staff_accounts_action_unban_title">बैन हटाईं</string>

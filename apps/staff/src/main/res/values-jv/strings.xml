@@ -411,6 +411,7 @@
     <string name="staff_team_role_support">Bantuan</string>
     <string name="staff_team_toast_add_failed">Gagal nambah anggota</string>
     <string name="staff_team_toast_removed">Anggota dibusak</string>
+    <string name="staff_team_toast_added">Anggota ditambahake</string>
     <string name="staff_team_toast_role_updated">Peran wis dianyari</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">Pesenan #%1$s</string>

@@ -436,6 +436,7 @@
     <string name="staff_team_role_support">Suporta</string>
     <string name="staff_team_toast_add_failed">Nabigong magdagdag ng member</string>
     <string name="staff_team_toast_removed">Naalis ang miyembro</string>
+    <string name="staff_team_toast_added">Naidagdag ang miyembro</string>
     <string name="staff_team_toast_role_updated">Na-update ang papel</string>
 
 

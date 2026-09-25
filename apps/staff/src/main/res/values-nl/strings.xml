@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">Ondersteuning</string>
     <string name="staff_team_toast_add_failed">Lid toevoegen mislukt</string>
     <string name="staff_team_toast_removed">Lid verwijderd</string>
+    <string name="staff_team_toast_added">Lid toegevoegd</string>
     <string name="staff_team_toast_role_updated">Rol bijgewerkt</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook-ondertekeningsgeheim</string>

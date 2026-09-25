@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">Hỗ trợ</string>
     <string name="staff_team_toast_add_failed">Không thêm thành viên được</string>
     <string name="staff_team_toast_removed">Đã xoá thành viên</string>
+    <string name="staff_team_toast_added">Đã thêm thành viên</string>
     <string name="staff_team_toast_role_updated">Đã cập nhật vai trò</string>
 
     <string name="staff_config_field_stripe_webhook">Khóa bí mật ký Webhook</string>

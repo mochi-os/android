@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">Asistență</string>
     <string name="staff_team_toast_add_failed">Adăugarea membrului a eșuat</string>
     <string name="staff_team_toast_removed">Membru eliminat</string>
+    <string name="staff_team_toast_added">Membru adăugat</string>
     <string name="staff_team_toast_role_updated">Rol actualizat</string>
 
     <string name="staff_config_field_stripe_webhook">Secret de semnare webhook</string>

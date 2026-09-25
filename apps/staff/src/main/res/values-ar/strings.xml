@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">الدعم</string>
     <string name="staff_team_toast_add_failed">فشل إضافة العضو</string>
     <string name="staff_team_toast_removed">تمت إزالة العضو</string>
+    <string name="staff_team_toast_added">تمت إضافة العضو</string>
     <string name="staff_team_toast_role_updated">تم تحديث الدور</string>
 
     <string name="staff_config_field_stripe_webhook">سر توقيع Webhook</string>

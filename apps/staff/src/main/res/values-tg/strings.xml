@@ -416,6 +416,7 @@
     <string name="staff_team_role_support">Дастгирӣ</string>
     <string name="staff_team_toast_add_failed">Илова кардани узв ба анҷом нарасид</string>
     <string name="staff_team_toast_removed">Узв бартараф шуд</string>
+    <string name="staff_team_toast_added">Узв илова шуд</string>
     <string name="staff_team_toast_role_updated">Нақш навсозӣ шуд</string>
 
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>

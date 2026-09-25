@@ -415,6 +415,7 @@
     <string name="staff_team_role_support">ድጋፍ</string>
     <string name="staff_team_toast_add_failed">አባል መጨመር አልተሳካም</string>
     <string name="staff_team_toast_removed">አባል ተወግዷል</string>
+    <string name="staff_team_toast_added">አባል ታክሏል</string>
     <string name="staff_team_toast_role_updated">ሚና ተዘምኗል</string>
 
     <string name="staff_appeals_reason_label">የሻጩ ይግባኝ ምክንያት</string>

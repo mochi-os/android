@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">Sokongan</string>
     <string name="staff_team_toast_add_failed">Gagal menambah ahli</string>
     <string name="staff_team_toast_removed">Ahli dialih keluar</string>
+    <string name="staff_team_toast_added">Ahli ditambah</string>
     <string name="staff_team_toast_role_updated">Peranan dikemas kini</string>
 
     <string name="staff_config_field_stripe_webhook">Rahsia tandatangan Webhook</string>

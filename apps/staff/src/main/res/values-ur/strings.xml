@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">سپورٹ</string>
     <string name="staff_team_toast_add_failed">ممبر شامل کرنے میں ناکامی</string>
     <string name="staff_team_toast_removed">ممبر ہٹا دیا گیا</string>
+    <string name="staff_team_toast_added">ممبر شامل کر دیا گیا</string>
     <string name="staff_team_toast_role_updated">کردار اپ ڈیٹ ہو گیا</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook دستخط کا خفیہ کلید</string>

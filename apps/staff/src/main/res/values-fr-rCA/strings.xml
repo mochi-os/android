@@ -374,6 +374,7 @@
     <string name="staff_team_role_support">Soutien</string>
     <string name="staff_team_toast_add_failed">Échec de l\'ajout du membre</string>
     <string name="staff_team_toast_removed">Membre retiré</string>
+    <string name="staff_team_toast_added">Membre ajouté</string>
     <string name="staff_team_toast_role_updated">Rôle mis à jour</string>
 
     <string name="staff_audit_actor_system">Système</string>

@@ -450,6 +450,7 @@
     <string name="staff_team_role_support">Υποστήριξη</string>
     <string name="staff_team_toast_add_failed">Αποτυχία προσθήκης μέλους</string>
     <string name="staff_team_toast_removed">Το μέλος αφαιρέθηκε</string>
+    <string name="staff_team_toast_added">Το μέλος προστέθηκε</string>
     <string name="staff_team_toast_role_updated">Ο ρόλος ενημερώθηκε</string>
 
     <string name="staff_config_field_stripe_webhook">Μυστικό υπογραφής Webhook</string>
