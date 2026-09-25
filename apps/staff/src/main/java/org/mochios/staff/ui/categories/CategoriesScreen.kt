@@ -55,17 +55,18 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.staff.R
 import org.mochios.staff.model.Category
+import org.mochios.staff.navigation.StaffApp
 import org.mochios.staff.ui.components.StaffStatusBadge
-import org.mochios.staff.ui.dialog.CategoryEditDialog
 
 /**
  * Port of `apps/staff/web/src/features/categories/categories-page.tsx`; the Add
- * action is mounted at the route level in StaffNavGraph.
+ * action is mounted at the route level in StaffNavGraph, and both Add and Edit
+ * open [CategoryFormScreen].
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CategoriesScreen(
-    @Suppress("UNUSED_PARAMETER") navController: NavController,
+    navController: NavController,
     viewModel: CategoriesViewModel = hiltViewModel(),
 ) {
     // Categories surfaces are admin-gated server-side, but every staff role
@@ -95,25 +96,12 @@ fun CategoriesScreen(
     Box(modifier = Modifier.fillMaxSize()) {
         CategoriesBody(
             state = state,
-            onEdit = viewModel::openEdit,
+            onEdit = { category -> navController.navigate(StaffApp.categoryEdit(category.id)) },
             onDelete = viewModel::askDelete,
         )
         SnackbarHost(
             hostState = snackbarHostState,
             modifier = Modifier.align(Alignment.BottomCenter),
-        )
-    }
-
-    // Edit / create dialog
-    if (state.dialogMode != null) {
-        CategoryEditDialog(
-            mode = state.dialogMode!!,
-            form = state.form,
-            categories = state.categories,
-            submitting = state.submitting,
-            onFormChange = viewModel::setForm,
-            onSubmit = viewModel::submit,
-            onCancel = viewModel::closeDialog,
         )
     }
 

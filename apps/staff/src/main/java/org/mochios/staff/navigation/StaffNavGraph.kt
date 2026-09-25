@@ -5,16 +5,20 @@
 
 package org.mochios.staff.navigation
 
+import android.net.Uri
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.PersonAdd
 import androidx.compose.material3.Icon
+import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
+import androidx.navigation.NavType
 import androidx.navigation.compose.composable
+import androidx.navigation.navArgument
 import org.mochios.android.ui.components.MochiFab
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.staff.R
@@ -22,6 +26,7 @@ import org.mochios.staff.ui.accounts.AccountsScreen
 import org.mochios.staff.ui.appeals.AppealsScreen
 import org.mochios.staff.ui.categories.CategoriesScreen
 import org.mochios.staff.ui.categories.CategoriesViewModel
+import org.mochios.staff.ui.categories.CategoryFormScreen
 import org.mochios.staff.ui.components.LocalStaffMe
 import org.mochios.staff.ui.components.StaffLayout
 import org.mochios.staff.ui.config.ConfigScreen
@@ -33,6 +38,7 @@ import org.mochios.staff.ui.reports.ReportsScreen
 import org.mochios.staff.ui.reviews.ReviewsScreen
 import org.mochios.staff.ui.team.AddTeamMemberScreen
 import org.mochios.staff.ui.team.TeamScreen
+import org.mochios.staff.ui.team.TeamViewModel
 
 /**
  * Staff routes; all class-level (no entity scope) and assume a signed-in staff
@@ -48,10 +54,22 @@ object StaffApp {
     const val APPEALS = "staff/appeals"
     const val REVIEWS = "staff/reviews"
     const val CATEGORIES = "staff/categories"
+    const val CATEGORY_NEW = "staff/categories/new"
+    const val CATEGORY_EDIT = "staff/categories/edit/{id}"
     const val CONFIG = "staff/config"
     const val TEAM = "staff/team"
     const val TEAM_ADD = "staff/team/add"
+
+    /** Route of the form that edits the category [id]. */
+    fun categoryEdit(id: String) = "staff/categories/edit/${Uri.encode(id)}"
 }
+
+/**
+ * Keys a form screen sets on the list below it before popping back, so the
+ * list reloads only when something was saved.
+ */
+private const val CATEGORY_SAVED = "category_saved"
+private const val TEAM_MEMBER_ADDED = "team_member_added"
 
 fun NavGraphBuilder.staffNavGraph(
     navController: NavController,
@@ -102,16 +120,24 @@ fun NavGraphBuilder.staffNavGraph(
             ReviewsScreen(navController = navController)
         }
     }
-    // Categories needs an "Add" FAB; mount the VM at the route so the screen
-    // body and the FAB share one instance.
-    composable(StaffApp.CATEGORIES) {
+    // Mount the VM at the route so the screen body and the form's result
+    // share one instance.
+    composable(StaffApp.CATEGORIES) { entry ->
         val viewModel: CategoriesViewModel = hiltViewModel()
+        LaunchedEffect(entry) {
+            entry.savedStateHandle.getStateFlow<Int?>(CATEGORY_SAVED, null).collect { message ->
+                if (message != null) {
+                    entry.savedStateHandle.remove<Int>(CATEGORY_SAVED)
+                    viewModel.onSaved(message)
+                }
+            }
+        }
         StaffLayout(
             navController = navController,
             currentRoute = StaffApp.CATEGORIES,
             titleRes = R.string.staff_sidebar_categories,
             floatingActionButton = {
-                MochiFab(onClick = { viewModel.openCreate() }) {
+                MochiFab(onClick = { navController.navigate(StaffApp.CATEGORY_NEW) }) {
                     Icon(
                         Icons.Default.Add,
                         contentDescription = stringResource(R.string.staff_categories_add),
@@ -121,6 +147,15 @@ fun NavGraphBuilder.staffNavGraph(
         ) {
             CategoriesScreen(navController = navController, viewModel = viewModel)
         }
+    }
+    composable(StaffApp.CATEGORY_NEW) {
+        CategoryFormRoute(navController)
+    }
+    composable(
+        route = StaffApp.CATEGORY_EDIT,
+        arguments = listOf(navArgument("id") { type = NavType.StringType }),
+    ) {
+        CategoryFormRoute(navController)
     }
     // Admin gate at route level (web's `beforeLoad` redirect): non-admins are
     // sent to the dashboard. Stays inside StaffLayout because `LocalStaffMe` is
@@ -147,7 +182,16 @@ fun NavGraphBuilder.staffNavGraph(
     }
     // Team needs an admin-only "Add member" FAB, gated on
     // LocalStaffMe.current.role.
-    composable(StaffApp.TEAM) {
+    composable(StaffApp.TEAM) { entry ->
+        val viewModel: TeamViewModel = hiltViewModel()
+        LaunchedEffect(entry) {
+            entry.savedStateHandle.getStateFlow(TEAM_MEMBER_ADDED, false).collect { added ->
+                if (added) {
+                    entry.savedStateHandle.remove<Boolean>(TEAM_MEMBER_ADDED)
+                    viewModel.load()
+                }
+            }
+        }
         StaffLayout(
             navController = navController,
             currentRoute = StaffApp.TEAM,
@@ -164,21 +208,28 @@ fun NavGraphBuilder.staffNavGraph(
                 }
             },
         ) {
-            TeamScreen(navController = navController)
+            TeamScreen(navController = navController, viewModel = viewModel)
         }
     }
 
     composable(StaffApp.TEAM_ADD) {
         AddTeamMemberScreen(
             onBack = { navController.popBackStack() },
-            // Rebuild the team in place once a member has joined: popping back
-            // would land on the team entry that was already there, whose view
-            // model still holds the list fetched before the add.
             onAdded = {
-                navController.navigate(StaffApp.TEAM) {
-                    popUpTo(StaffApp.TEAM) { inclusive = true }
-                }
+                navController.previousBackStackEntry?.savedStateHandle?.set(TEAM_MEMBER_ADDED, true)
+                navController.popBackStack()
             },
         )
     }
+}
+
+@Composable
+private fun CategoryFormRoute(navController: NavController) {
+    CategoryFormScreen(
+        onBack = { navController.popBackStack() },
+        onSaved = { message ->
+            navController.previousBackStackEntry?.savedStateHandle?.set(CATEGORY_SAVED, message)
+            navController.popBackStack()
+        },
+    )
 }
