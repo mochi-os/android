@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Irnaqirinaka</string>
-    <string name="launcher_staff">Mochi irnaqirinaka</string>
+    <string name="launcher_staff">Mochi Staff</string>
     <string name="staff_accounts_action_ban_title">Cuenta jark\'aña</string>
     <string name="staff_accounts_action_suspend_title">Cuenta inakacht\'aña</string>
     <string name="staff_accounts_any_seller">Taqpach</string>
