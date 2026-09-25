@@ -45,15 +45,15 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.FilterDropdown
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.staff.R
 import org.mochios.staff.model.Report
-import org.mochios.staff.ui.components.FilterChipSpec
-import org.mochios.staff.ui.components.FilterChipsRow
 import org.mochios.staff.ui.components.StaffCardAction
 import org.mochios.staff.ui.components.StaffCardMenu
+import org.mochios.staff.ui.components.StaffFilter
+import org.mochios.staff.ui.components.StaffFilterStyle
+import org.mochios.staff.ui.components.StaffFilters
 import org.mochios.staff.ui.components.StaffStatusBadge
 import org.mochios.staff.ui.components.StaffUserAvatar
 import org.mochios.staff.ui.dialog.ReportActionDialog
@@ -63,6 +63,8 @@ import org.mochios.staff.ui.dialog.ReportActionDialog
 fun ReportsScreen(
     navController: NavController,
     viewModel: ReportsViewModel = hiltViewModel(),
+    filtersOpen: Boolean = false,
+    onFiltersDismiss: () -> Unit = {},
 ) {
     val state by viewModel.state.collectAsState()
     val snackbar = remember { SnackbarHostState() }
@@ -86,6 +88,8 @@ fun ReportsScreen(
     Box(Modifier.fillMaxSize()) {
         ReportsBody(
             state = state,
+            filtersOpen = filtersOpen,
+            onFiltersDismiss = onFiltersDismiss,
             onTypeChange = viewModel::setType,
             onStatusChange = viewModel::setStatus,
             onLoadMore = viewModel::loadMore,
@@ -118,6 +122,8 @@ fun ReportsScreen(
 @Composable
 private fun ReportsBody(
     state: ReportsUiState,
+    filtersOpen: Boolean,
+    onFiltersDismiss: () -> Unit,
     onTypeChange: (String?) -> Unit,
     onStatusChange: (String?) -> Unit,
     onLoadMore: () -> Unit,
@@ -126,17 +132,28 @@ private fun ReportsBody(
     onRetry: () -> Unit,
 ) {
     Column(Modifier.fillMaxSize()) {
-        FiltersRow(
-            type = state.type,
-            status = state.status,
-            onTypeChange = onTypeChange,
-            onStatusChange = onStatusChange,
-        )
-        ActiveFilterChips(
-            type = state.type,
-            status = state.status,
-            onTypeChange = onTypeChange,
-            onStatusChange = onStatusChange,
+        StaffFilters(
+            style = StaffFilterStyle.Sheet,
+            sheetOpen = filtersOpen,
+            onSheetDismiss = onFiltersDismiss,
+            filters = listOf(
+                StaffFilter(
+                    label = stringResource(R.string.staff_reports_filter_type_label),
+                    chipLabel = stringResource(R.string.staff_filter_label_type),
+                    anyLabel = stringResource(R.string.staff_reports_any_type),
+                    options = reportTypeOptions(),
+                    current = state.type,
+                    onSelect = onTypeChange,
+                ),
+                StaffFilter(
+                    label = stringResource(R.string.staff_reports_filter_status_label),
+                    chipLabel = stringResource(R.string.staff_filter_label_status),
+                    anyLabel = stringResource(R.string.staff_reports_any_status),
+                    options = reportStatusOptions(),
+                    current = state.status,
+                    onSelect = onStatusChange,
+                ),
+            ),
         )
 
         when {
@@ -283,38 +300,6 @@ private fun reasonLabel(reason: String): String = when (reason) {
 }
 
 @Composable
-private fun FiltersRow(
-    type: String?,
-    status: String?,
-    onTypeChange: (String?) -> Unit,
-    onStatusChange: (String?) -> Unit,
-) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 8.dp),
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
-    ) {
-        FilterDropdown(
-            label = stringResource(R.string.staff_reports_filter_type_label),
-            current = type,
-            options = reportTypeOptions(),
-            anyLabel = stringResource(R.string.staff_reports_any_type),
-            onSelect = onTypeChange,
-            modifier = Modifier.weight(1f),
-        )
-        FilterDropdown(
-            label = stringResource(R.string.staff_reports_filter_status_label),
-            current = status,
-            options = reportStatusOptions(),
-            anyLabel = stringResource(R.string.staff_reports_any_status),
-            onSelect = onStatusChange,
-            modifier = Modifier.weight(1f),
-        )
-    }
-}
-
-@Composable
 private fun reportTypeOptions(): List<Pair<String, String>> = listOf(
     "listing" to stringResource(R.string.staff_reports_type_listing),
     "user" to stringResource(R.string.staff_reports_type_user),
@@ -328,26 +313,3 @@ private fun reportStatusOptions(): List<Pair<String, String>> = listOf(
     "dismissed" to stringResource(R.string.staff_reports_status_dismissed),
 )
 
-@Composable
-private fun ActiveFilterChips(
-    type: String?,
-    status: String?,
-    onTypeChange: (String?) -> Unit,
-    onStatusChange: (String?) -> Unit,
-) {
-    val typeLabel = stringResource(R.string.staff_filter_label_type)
-    val statusLabel = stringResource(R.string.staff_filter_label_status)
-    val typeOpts = reportTypeOptions()
-    val statusOpts = reportStatusOptions()
-    val chips = buildList {
-        if (!type.isNullOrBlank()) {
-            val value = typeOpts.firstOrNull { it.first == type }?.second ?: type
-            add(FilterChipSpec(typeLabel, value) { onTypeChange(null) })
-        }
-        if (!status.isNullOrBlank()) {
-            val value = statusOpts.firstOrNull { it.first == status }?.second ?: status
-            add(FilterChipSpec(statusLabel, value) { onStatusChange(null) })
-        }
-    }
-    FilterChipsRow(chips = chips)
-}

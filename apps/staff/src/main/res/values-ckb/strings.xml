@@ -253,9 +253,9 @@
     <string name="staff_disputes_status_reviewing">هەڵسەنگاندن</string>
     <string name="staff_disputes_view">بینین</string>
     <string name="staff_filter_chip_remove">لابردنی فلتەر</string>
+    <string name="staff_filter">فلتەر</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">مۆدێراسیۆن</string>
-    <string name="staff_filter_label_query">گەڕان</string>
     <string name="staff_filter_label_seller">فرۆشیار</string>
     <string name="staff_filter_label_status">بار</string>
     <string name="staff_filter_label_type">جۆر</string>

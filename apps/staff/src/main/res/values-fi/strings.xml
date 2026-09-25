@@ -281,9 +281,9 @@
     <string name="staff_disputes_stripe_unrecognized">tuntematon veloitus</string>
     <string name="staff_disputes_view">Näytä</string>
     <string name="staff_filter_chip_remove">Poista suodatin</string>
+    <string name="staff_filter">Suodata</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderointi</string>
-    <string name="staff_filter_label_query">Haku</string>
     <string name="staff_filter_label_seller">Myyjä</string>
     <string name="staff_filter_label_status">Tila</string>
     <string name="staff_filter_label_type">Tyyppi</string>

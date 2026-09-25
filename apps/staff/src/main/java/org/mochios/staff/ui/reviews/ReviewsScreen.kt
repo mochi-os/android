@@ -22,7 +22,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.StarOutline
 import androidx.compose.material.icons.outlined.Block
@@ -37,7 +36,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -58,16 +56,13 @@ import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.LoadingState
 import org.mochios.android.ui.components.MochiAlertDialog
-import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
-import org.mochios.android.ui.components.MochiDropdownMenu
-import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.staff.R
 import org.mochios.staff.model.Review
-import org.mochios.staff.ui.components.FilterChipSpec
-import org.mochios.staff.ui.components.FilterChipsRow
 import org.mochios.staff.ui.components.StaffCardAction
 import org.mochios.staff.ui.components.StaffCardMenu
+import org.mochios.staff.ui.components.StaffFilter
+import org.mochios.staff.ui.components.StaffFilters
 import org.mochios.staff.ui.components.StaffStatusBadge
 import org.mochios.staff.ui.components.StaffUserAvatar
 
@@ -160,8 +155,29 @@ private fun ReviewsBody(
             .fillMaxSize()
             .padding(padding),
     ) {
-        FilterBar(state.filter, onFilterChange)
-        ActiveFilterChips(filter = state.filter, onFilterChange = onFilterChange)
+        StaffFilters(
+            filters = listOf(
+                StaffFilter(
+                    label = stringResource(R.string.staff_filter_label_status),
+                    chipLabel = stringResource(R.string.staff_filter_label_status),
+                    anyLabel = stringResource(R.string.staff_reviews_filter_all),
+                    options = listOf(
+                        "published" to stringResource(R.string.staff_reviews_filter_published),
+                        "removed" to stringResource(R.string.staff_reviews_filter_removed),
+                    ),
+                    current = state.filter.wireValue(),
+                    onSelect = { value ->
+                        onFilterChange(
+                            when (value) {
+                                "published" -> ReviewStatusFilter.PUBLISHED
+                                "removed" -> ReviewStatusFilter.REMOVED
+                                else -> ReviewStatusFilter.ALL
+                            },
+                        )
+                    },
+                ),
+            ),
+        )
 
         when {
             state.isLoading && state.reviews.isEmpty() -> LoadingState()
@@ -197,70 +213,6 @@ private fun ReviewsBody(
             }
         }
     }
-}
-
-@Composable
-private fun FilterBar(
-    current: ReviewStatusFilter,
-    onChange: (ReviewStatusFilter) -> Unit,
-) {
-    var expanded by remember { mutableStateOf(false) }
-    val label = when (current) {
-        ReviewStatusFilter.ALL -> stringResource(R.string.staff_reviews_filter_all)
-        ReviewStatusFilter.PUBLISHED -> stringResource(R.string.staff_reviews_filter_published)
-        ReviewStatusFilter.REMOVED -> stringResource(R.string.staff_reviews_filter_removed)
-    }
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 8.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        Box {
-            MochiButton(onClick = { expanded = true }) {
-                Text(label)
-                Icon(Icons.Default.ArrowDropDown, contentDescription = null)
-            }
-            MochiDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
-                ReviewStatusFilter.values().forEach { option ->
-                    MochiDropdownMenuItem(
-                        text = { Text(when (option) {
-                            ReviewStatusFilter.ALL -> stringResource(R.string.staff_reviews_filter_all)
-                            ReviewStatusFilter.PUBLISHED -> stringResource(R.string.staff_reviews_filter_published)
-                            ReviewStatusFilter.REMOVED -> stringResource(R.string.staff_reviews_filter_removed)
-                        }) },
-                        onClick = {
-                            expanded = false
-                            onChange(option)
-                        },
-                        selected = current == option,
-                    )
-                }
-            }
-        }
-    }
-}
-
-@Composable
-private fun ActiveFilterChips(
-    filter: ReviewStatusFilter,
-    onFilterChange: (ReviewStatusFilter) -> Unit,
-) {
-    if (filter == ReviewStatusFilter.ALL) {
-        FilterChipsRow(chips = emptyList())
-        return
-    }
-    val label = stringResource(R.string.staff_filter_label_status)
-    val value = when (filter) {
-        ReviewStatusFilter.ALL -> stringResource(R.string.staff_reviews_filter_all)
-        ReviewStatusFilter.PUBLISHED -> stringResource(R.string.staff_reviews_filter_published)
-        ReviewStatusFilter.REMOVED -> stringResource(R.string.staff_reviews_filter_removed)
-    }
-    FilterChipsRow(
-        chips = listOf(
-            FilterChipSpec(label, value) { onFilterChange(ReviewStatusFilter.ALL) },
-        ),
-    )
 }
 
 @Composable

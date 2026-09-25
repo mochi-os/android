@@ -281,9 +281,9 @@
     <string name="staff_disputes_stripe_unrecognized">無法辨識的扣款</string>
     <string name="staff_disputes_view">檢視</string>
     <string name="staff_filter_chip_remove">移除篩選</string>
+    <string name="staff_filter">篩選</string>
     <string name="staff_filter_chip_template">%1$s:%2$s</string>
     <string name="staff_filter_label_moderation">審核</string>
-    <string name="staff_filter_label_query">搜尋</string>
     <string name="staff_filter_label_seller">賣家</string>
     <string name="staff_filter_label_status">狀態</string>
     <string name="staff_filter_label_type">類型</string>

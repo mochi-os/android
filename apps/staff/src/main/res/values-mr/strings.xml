@@ -249,9 +249,9 @@
     <string name="staff_disputes_status_reviewing">पुनरावलोकन करत आहे</string>
     <string name="staff_disputes_view">पहा</string>
     <string name="staff_filter_chip_remove">फिल्टर काढा</string>
+    <string name="staff_filter">फिल्टर</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">मॉडरेशन</string>
-    <string name="staff_filter_label_query">शोध</string>
     <string name="staff_filter_label_seller">विक्रेता</string>
     <string name="staff_filter_label_status">स्थिती</string>
     <string name="staff_filter_label_type">प्रकार</string>

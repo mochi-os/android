@@ -249,9 +249,9 @@
     <string name="staff_disputes_status_reviewing">ਸਮੀਖਿਆ ਕਰ ਰਿਹਾ ਹੈ</string>
     <string name="staff_disputes_view">ਦੇਖੋ</string>
     <string name="staff_filter_chip_remove">ਫਿਲਟਰ ਹਟਾਓ</string>
+    <string name="staff_filter">ਫਿਲਟਰ</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">ਮਾਡਰੇਸ਼ਨ</string>
-    <string name="staff_filter_label_query">ਖੋਜੋ</string>
     <string name="staff_filter_label_seller">ਵਿਕਰੇਤਾ</string>
     <string name="staff_filter_label_status">ਸਥਿਤੀ</string>
     <string name="staff_filter_label_type">ਕਿਸਮ</string>

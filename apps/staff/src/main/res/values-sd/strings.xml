@@ -247,9 +247,9 @@
     <string name="staff_disputes_status_reviewing">جائزو وٺي رهيو آهي</string>
     <string name="staff_disputes_view">ڏسو</string>
     <string name="staff_filter_chip_remove">فلٽر ختم ڪريو</string>
+    <string name="staff_filter">فلٽر</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">اعتدال</string>
-    <string name="staff_filter_label_query">ڳولها</string>
     <string name="staff_filter_label_seller">وڪرو ڪندڙ</string>
     <string name="staff_filter_label_status">حالت</string>
     <string name="staff_filter_label_type">قسم</string>

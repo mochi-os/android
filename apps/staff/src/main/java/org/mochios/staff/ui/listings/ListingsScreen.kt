@@ -53,18 +53,18 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.FilterDropdown
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
 import org.mochios.staff.model.PendingListing
-import org.mochios.staff.ui.components.FilterChipSpec
-import org.mochios.staff.ui.components.FilterChipsRow
 import org.mochios.staff.ui.components.ScoreColorChip
 import org.mochios.staff.ui.components.StaffCardAction
 import org.mochios.staff.ui.components.StaffCardMenu
+import org.mochios.staff.ui.components.StaffFilter
+import org.mochios.staff.ui.components.StaffFilterStyle
+import org.mochios.staff.ui.components.StaffFilters
 import org.mochios.staff.ui.components.StaffStatusBadge
 import org.mochios.staff.ui.components.StaffUserAvatar
 import org.mochios.staff.ui.dialog.ListingActionDialog
@@ -80,6 +80,8 @@ import org.mochios.staff.ui.dialog.ListingActionDialog
 fun ListingsScreen(
     navController: NavController,
     viewModel: ListingsViewModel = hiltViewModel(),
+    filtersOpen: Boolean = false,
+    onFiltersDismiss: () -> Unit = {},
 ) {
     val state by viewModel.state.collectAsState()
     val snackbar = remember { SnackbarHostState() }
@@ -116,6 +118,8 @@ fun ListingsScreen(
     Box(Modifier.fillMaxSize()) {
         ListingsBody(
             state = state,
+            filtersOpen = filtersOpen,
+            onFiltersDismiss = onFiltersDismiss,
             searchInput = searchInput,
             onSearchInput = { searchInput = it },
             onClearSearch = {
@@ -150,6 +154,8 @@ fun ListingsScreen(
 @Composable
 private fun ListingsBody(
     state: ListingsUiState,
+    filtersOpen: Boolean,
+    onFiltersDismiss: () -> Unit,
     searchInput: String,
     onSearchInput: (String) -> Unit,
     onClearSearch: () -> Unit,
@@ -161,39 +167,50 @@ private fun ListingsBody(
     onRetry: () -> Unit,
 ) {
     Column(Modifier.fillMaxSize()) {
-        FiltersRow(
-            status = state.status,
-            moderation = state.moderation,
-            onStatusChange = onStatusChange,
-            onModerationChange = onModerationChange,
-        )
-        MochiTextField(
-            value = searchInput,
-            onValueChange = onSearchInput,
-            placeholder = { Text(stringResource(R.string.staff_listings_search_placeholder)) },
-            leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
-            trailingIcon = if (searchInput.isNotEmpty()) {
-                {
-                    MochiIconButton(onClick = onClearSearch) {
-                        Icon(
-                            Icons.Default.Close,
-                            contentDescription = stringResource(R.string.staff_listings_search_clear),
-                        )
-                    }
-                }
-            } else null,
-            singleLine = true,
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 16.dp, vertical = 8.dp),
-        )
-        ActiveFilterChips(
-            status = state.status,
-            moderation = state.moderation,
-            query = state.query,
-            onStatusChange = onStatusChange,
-            onModerationChange = onModerationChange,
-            onClearSearch = onClearSearch,
+        StaffFilters(
+            style = StaffFilterStyle.Sheet,
+            sheetOpen = filtersOpen,
+            onSheetDismiss = onFiltersDismiss,
+            filters = listOf(
+                StaffFilter(
+                    label = stringResource(R.string.staff_listings_filter_status_label),
+                    chipLabel = stringResource(R.string.staff_filter_label_status),
+                    anyLabel = stringResource(R.string.staff_listings_any_status),
+                    options = listingStatusOptions(),
+                    current = state.status,
+                    onSelect = onStatusChange,
+                ),
+                StaffFilter(
+                    label = stringResource(R.string.staff_listings_filter_moderation_label),
+                    chipLabel = stringResource(R.string.staff_filter_label_moderation),
+                    anyLabel = stringResource(R.string.staff_listings_any_moderation),
+                    options = moderationStateOptions(),
+                    current = state.moderation,
+                    onSelect = onModerationChange,
+                ),
+            ),
+            search = {
+                MochiTextField(
+                    value = searchInput,
+                    onValueChange = onSearchInput,
+                    placeholder = { Text(stringResource(R.string.staff_listings_search_placeholder)) },
+                    leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
+                    trailingIcon = if (searchInput.isNotEmpty()) {
+                        {
+                            MochiIconButton(onClick = onClearSearch) {
+                                Icon(
+                                    Icons.Default.Close,
+                                    contentDescription = stringResource(R.string.staff_listings_search_clear),
+                                )
+                            }
+                        }
+                    } else null,
+                    singleLine = true,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 8.dp),
+                )
+            },
         )
 
         val currentError = state.error
@@ -344,38 +361,6 @@ private fun ListingRow(
 }
 
 @Composable
-private fun FiltersRow(
-    status: String?,
-    moderation: String?,
-    onStatusChange: (String?) -> Unit,
-    onModerationChange: (String?) -> Unit,
-) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 8.dp),
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
-    ) {
-        FilterDropdown(
-            label = stringResource(R.string.staff_listings_filter_status_label),
-            current = status,
-            options = listingStatusOptions(),
-            anyLabel = stringResource(R.string.staff_listings_any_status),
-            onSelect = onStatusChange,
-            modifier = Modifier.weight(1f),
-        )
-        FilterDropdown(
-            label = stringResource(R.string.staff_listings_filter_moderation_label),
-            current = moderation,
-            options = moderationStateOptions(),
-            anyLabel = stringResource(R.string.staff_listings_any_moderation),
-            onSelect = onModerationChange,
-            modifier = Modifier.weight(1f),
-        )
-    }
-}
-
-@Composable
 private fun listingStatusOptions(): List<Pair<String, String>> = listOf(
     "active" to stringResource(R.string.staff_listings_status_active),
     "draft" to stringResource(R.string.staff_listings_status_draft),
@@ -394,34 +379,4 @@ private fun moderationStateOptions(): List<Pair<String, String>> = listOf(
     "manual" to stringResource(R.string.staff_listings_moderation_manual),
     "rejected" to stringResource(R.string.staff_listings_moderation_rejected),
 )
-
-@Composable
-private fun ActiveFilterChips(
-    status: String?,
-    moderation: String?,
-    query: String,
-    onStatusChange: (String?) -> Unit,
-    onModerationChange: (String?) -> Unit,
-    onClearSearch: () -> Unit,
-) {
-    val statusLabel = stringResource(R.string.staff_filter_label_status)
-    val moderationLabel = stringResource(R.string.staff_filter_label_moderation)
-    val queryLabel = stringResource(R.string.staff_filter_label_query)
-    val statusOpts = listingStatusOptions()
-    val modOpts = moderationStateOptions()
-    val chips = buildList {
-        if (!status.isNullOrBlank()) {
-            val value = statusOpts.firstOrNull { it.first == status }?.second ?: status
-            add(FilterChipSpec(statusLabel, value) { onStatusChange(null) })
-        }
-        if (!moderation.isNullOrBlank()) {
-            val value = modOpts.firstOrNull { it.first == moderation }?.second ?: moderation
-            add(FilterChipSpec(moderationLabel, value) { onModerationChange(null) })
-        }
-        if (query.isNotBlank()) {
-            add(FilterChipSpec(queryLabel, query, onClearSearch))
-        }
-    }
-    FilterChipsRow(chips = chips)
-}
 

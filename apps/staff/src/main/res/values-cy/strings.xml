@@ -281,9 +281,9 @@
     <string name="staff_disputes_stripe_unrecognized">tâl anhysbys</string>
     <string name="staff_disputes_view">Gweld</string>
     <string name="staff_filter_chip_remove">Tynnu hidlydd</string>
+    <string name="staff_filter">Hidlo</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Cymedroli</string>
-    <string name="staff_filter_label_query">Chwilio</string>
     <string name="staff_filter_label_seller">Gwerthwr</string>
     <string name="staff_filter_label_status">Statws</string>
     <string name="staff_filter_label_type">Math</string>

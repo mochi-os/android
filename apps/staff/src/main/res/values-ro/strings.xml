@@ -281,9 +281,9 @@
     <string name="staff_disputes_stripe_unrecognized">plată nerecunoscută</string>
     <string name="staff_disputes_view">Vizualizează</string>
     <string name="staff_filter_chip_remove">Elimină filtrul</string>
+    <string name="staff_filter">Filtrează</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderare</string>
-    <string name="staff_filter_label_query">Căutare</string>
     <string name="staff_filter_label_seller">Vânzător</string>
     <string name="staff_filter_label_status">Stare</string>
     <string name="staff_filter_label_type">Tip</string>

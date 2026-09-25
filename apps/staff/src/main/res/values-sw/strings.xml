@@ -267,9 +267,9 @@
     <string name="staff_disputes_status_reviewing">Inapitia</string>
     <string name="staff_disputes_view">Tazama</string>
     <string name="staff_filter_chip_remove">Ondoa kichujio</string>
+    <string name="staff_filter">Chuja</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Udhibiti</string>
-    <string name="staff_filter_label_query">Tafuta</string>
     <string name="staff_filter_label_seller">Muuzaji</string>
     <string name="staff_filter_label_status">Hali</string>
     <string name="staff_filter_label_type">Aina</string>

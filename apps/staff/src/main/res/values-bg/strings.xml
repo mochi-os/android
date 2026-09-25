@@ -281,9 +281,9 @@
     <string name="staff_disputes_stripe_unrecognized">неразпозната такса</string>
     <string name="staff_disputes_view">Преглед</string>
     <string name="staff_filter_chip_remove">Премахни филтъра</string>
+    <string name="staff_filter">Филтър</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Модерация</string>
-    <string name="staff_filter_label_query">Търсене</string>
     <string name="staff_filter_label_seller">Продавач</string>
     <string name="staff_filter_label_status">Статус</string>
     <string name="staff_filter_label_type">Тип</string>

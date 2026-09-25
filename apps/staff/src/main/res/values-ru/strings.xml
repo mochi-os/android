@@ -281,9 +281,9 @@
     <string name="staff_disputes_stripe_unrecognized">неопознанное списание</string>
     <string name="staff_disputes_view">Просмотр</string>
     <string name="staff_filter_chip_remove">Убрать фильтр</string>
+    <string name="staff_filter">Фильтр</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Модерация</string>
-    <string name="staff_filter_label_query">Поиск</string>
     <string name="staff_filter_label_seller">Продавец</string>
     <string name="staff_filter_label_status">Статус</string>
     <string name="staff_filter_label_type">Тип</string>

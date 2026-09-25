@@ -259,9 +259,9 @@
     <string name="staff_disputes_status_reviewing">მიმოხილვა</string>
     <string name="staff_disputes_view">ნახვა</string>
     <string name="staff_filter_chip_remove">ფილტრის წაშლა</string>
+    <string name="staff_filter">ფილტრი</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">მოდერაცია</string>
-    <string name="staff_filter_label_query">ძიება</string>
     <string name="staff_filter_label_seller">გამყიდველი</string>
     <string name="staff_filter_label_status">სტატუსი</string>
     <string name="staff_filter_label_type">ტიპი</string>

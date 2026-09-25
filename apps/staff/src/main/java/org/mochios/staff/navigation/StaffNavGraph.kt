@@ -12,6 +12,11 @@ import androidx.compose.material.icons.filled.PersonAdd
 import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
@@ -23,18 +28,22 @@ import org.mochios.android.ui.components.MochiFab
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.staff.R
 import org.mochios.staff.ui.accounts.AccountsScreen
+import org.mochios.staff.ui.accounts.AccountsViewModel
 import org.mochios.staff.ui.appeals.AppealsScreen
 import org.mochios.staff.ui.categories.CategoriesScreen
 import org.mochios.staff.ui.categories.CategoriesViewModel
 import org.mochios.staff.ui.categories.CategoryFormScreen
 import org.mochios.staff.ui.components.LocalStaffMe
+import org.mochios.staff.ui.components.StaffFilterButton
 import org.mochios.staff.ui.components.StaffLayout
 import org.mochios.staff.ui.config.ConfigScreen
 import org.mochios.staff.ui.dashboard.DashboardScreen
 import org.mochios.staff.ui.disputes.DisputesScreen
 import org.mochios.staff.ui.listings.ListingsScreen
+import org.mochios.staff.ui.listings.ListingsViewModel
 import org.mochios.staff.ui.moderation.ModerationLogScreen
 import org.mochios.staff.ui.reports.ReportsScreen
+import org.mochios.staff.ui.reports.ReportsViewModel
 import org.mochios.staff.ui.reviews.ReviewsScreen
 import org.mochios.staff.ui.team.AddTeamMemberScreen
 import org.mochios.staff.ui.team.TeamScreen
@@ -86,13 +95,49 @@ fun NavGraphBuilder.staffNavGraph(
         }
     }
     composable(StaffApp.ACCOUNTS) {
-        StaffLayout(navController, StaffApp.ACCOUNTS, R.string.staff_sidebar_accounts) {
-            AccountsScreen(navController = navController)
+        val viewModel: AccountsViewModel = hiltViewModel()
+        val state by viewModel.state.collectAsState()
+        var filtersOpen by rememberSaveable { mutableStateOf(false) }
+        StaffLayout(
+            navController = navController,
+            currentRoute = StaffApp.ACCOUNTS,
+            titleRes = R.string.staff_sidebar_accounts,
+            topBarActions = {
+                StaffFilterButton(
+                    activeCount = listOfNotNull(state.status, state.seller).size,
+                    onClick = { filtersOpen = true },
+                )
+            },
+        ) {
+            AccountsScreen(
+                navController = navController,
+                viewModel = viewModel,
+                filtersOpen = filtersOpen,
+                onFiltersDismiss = { filtersOpen = false },
+            )
         }
     }
     composable(StaffApp.LISTINGS) {
-        StaffLayout(navController, StaffApp.LISTINGS, R.string.staff_sidebar_listings) {
-            ListingsScreen(navController = navController)
+        val viewModel: ListingsViewModel = hiltViewModel()
+        val state by viewModel.state.collectAsState()
+        var filtersOpen by rememberSaveable { mutableStateOf(false) }
+        StaffLayout(
+            navController = navController,
+            currentRoute = StaffApp.LISTINGS,
+            titleRes = R.string.staff_sidebar_listings,
+            topBarActions = {
+                StaffFilterButton(
+                    activeCount = listOfNotNull(state.status, state.moderation).size,
+                    onClick = { filtersOpen = true },
+                )
+            },
+        ) {
+            ListingsScreen(
+                navController = navController,
+                viewModel = viewModel,
+                filtersOpen = filtersOpen,
+                onFiltersDismiss = { filtersOpen = false },
+            )
         }
     }
     composable(StaffApp.MODERATION) {
@@ -101,8 +146,26 @@ fun NavGraphBuilder.staffNavGraph(
         }
     }
     composable(StaffApp.REPORTS) {
-        StaffLayout(navController, StaffApp.REPORTS, R.string.staff_sidebar_reports) {
-            ReportsScreen(navController = navController)
+        val viewModel: ReportsViewModel = hiltViewModel()
+        val state by viewModel.state.collectAsState()
+        var filtersOpen by rememberSaveable { mutableStateOf(false) }
+        StaffLayout(
+            navController = navController,
+            currentRoute = StaffApp.REPORTS,
+            titleRes = R.string.staff_sidebar_reports,
+            topBarActions = {
+                StaffFilterButton(
+                    activeCount = listOfNotNull(state.type, state.status).size,
+                    onClick = { filtersOpen = true },
+                )
+            },
+        ) {
+            ReportsScreen(
+                navController = navController,
+                viewModel = viewModel,
+                filtersOpen = filtersOpen,
+                onFiltersDismiss = { filtersOpen = false },
+            )
         }
     }
     composable(StaffApp.DISPUTES) {

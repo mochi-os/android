@@ -277,9 +277,9 @@
     <string name="staff_disputes_stripe_unrecognized">cobrança não reconhecida</string>
     <string name="staff_disputes_view">Visualizar</string>
     <string name="staff_filter_chip_remove">Remover filtro</string>
+    <string name="staff_filter">Filtrar</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderação</string>
-    <string name="staff_filter_label_query">Pesquisa</string>
     <string name="staff_filter_label_seller">Vendedor</string>
     <string name="staff_filter_label_type">Tipo</string>
     <string name="staff_listings_action_approve_title">Aprovar anúncio</string>

@@ -247,9 +247,9 @@
     <string name="staff_disputes_status_reviewing">Ningali</string>
     <string name="staff_disputes_view">Tingali</string>
     <string name="staff_filter_chip_remove">Hapus saringan</string>
+    <string name="staff_filter">Saring</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Modérasi</string>
-    <string name="staff_filter_label_query">Téangan</string>
     <string name="staff_filter_label_seller">Anu nyade</string>
     <string name="staff_filter_label_status">Status</string>
     <string name="staff_filter_label_type">Jenis</string>

@@ -38,7 +38,6 @@
     <string name="staff_categories_dialog_parent_none">無</string>
     <string name="staff_sidebar_settings">設定</string>
     <string name="staff_accounts_search_placeholder">搜尋</string>
-    <string name="staff_filter_label_query">搜尋</string>
     <string name="staff_listings_remove">移除</string>
     <string name="staff_reports_action_remove">移除</string>
     <string name="staff_reviews_action_remove">移除</string>
@@ -115,6 +114,7 @@
     <string name="staff_dashboard_order_fallback">訂單 #%1$s</string>
     <string name="staff_disputes_meta_seller_response">賣家的回應</string>
     <string name="staff_filter_chip_remove">移除篩選</string>
+    <string name="staff_filter">篩選</string>
     <string name="staff_listings_approve">批准</string>
     <string name="staff_reports_meta_target">目標</string>
     <string name="staff_sidebar_market">市場</string>

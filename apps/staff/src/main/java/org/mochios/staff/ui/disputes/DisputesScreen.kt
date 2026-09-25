@@ -45,15 +45,14 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.FilterDropdown
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.staff.R
 import org.mochios.staff.model.Dispute
-import org.mochios.staff.ui.components.FilterChipSpec
-import org.mochios.staff.ui.components.FilterChipsRow
 import org.mochios.staff.ui.components.StaffCardAction
 import org.mochios.staff.ui.components.StaffCardMenu
+import org.mochios.staff.ui.components.StaffFilter
+import org.mochios.staff.ui.components.StaffFilters
 import org.mochios.staff.ui.components.StaffStatusBadge
 import org.mochios.staff.ui.components.StaffUserAvatar
 import org.mochios.staff.ui.dialog.DisputeReviewDialog
@@ -126,13 +125,17 @@ private fun DisputesBody(
     onRetry: () -> Unit,
 ) {
     Column(Modifier.fillMaxSize()) {
-        FiltersRow(
-            status = state.status,
-            onStatusChange = onStatusChange,
-        )
-        ActiveFilterChips(
-            status = state.status,
-            onStatusChange = onStatusChange,
+        StaffFilters(
+            filters = listOf(
+                StaffFilter(
+                    label = stringResource(R.string.staff_disputes_filter_status_label),
+                    chipLabel = stringResource(R.string.staff_filter_label_status),
+                    anyLabel = stringResource(R.string.staff_disputes_any_status),
+                    options = disputeStatusOptions(),
+                    current = state.status,
+                    onSelect = onStatusChange,
+                ),
+            ),
         )
 
         when {
@@ -289,28 +292,6 @@ private fun disputeReasonText(dispute: Dispute): String {
 }
 
 @Composable
-private fun FiltersRow(
-    status: String?,
-    onStatusChange: (String?) -> Unit,
-) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 8.dp),
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
-    ) {
-        FilterDropdown(
-            label = stringResource(R.string.staff_disputes_filter_status_label),
-            current = status,
-            options = disputeStatusOptions(),
-            anyLabel = stringResource(R.string.staff_disputes_any_status),
-            onSelect = onStatusChange,
-            modifier = Modifier.weight(1f),
-        )
-    }
-}
-
-@Composable
 private fun disputeStatusOptions(): List<Pair<String, String>> = listOf(
     "open" to stringResource(R.string.staff_disputes_status_open),
     "responded" to stringResource(R.string.staff_disputes_status_responded),
@@ -319,22 +300,6 @@ private fun disputeStatusOptions(): List<Pair<String, String>> = listOf(
     "resolved_seller" to stringResource(R.string.staff_disputes_status_resolved_seller),
     "escalated" to stringResource(R.string.staff_disputes_status_escalated),
 )
-
-@Composable
-private fun ActiveFilterChips(
-    status: String?,
-    onStatusChange: (String?) -> Unit,
-) {
-    val statusLabel = stringResource(R.string.staff_filter_label_status)
-    val statusOpts = disputeStatusOptions()
-    val chips = buildList {
-        if (!status.isNullOrBlank()) {
-            val value = statusOpts.firstOrNull { it.first == status }?.second ?: status
-            add(FilterChipSpec(statusLabel, value) { onStatusChange(null) })
-        }
-    }
-    FilterChipsRow(chips = chips)
-}
 
 @Composable
 internal fun stripeReasonLabel(reason: String): String = when (reason) {

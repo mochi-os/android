@@ -248,9 +248,9 @@
     <string name="staff_disputes_status_reviewing">Syn edilýär</string>
     <string name="staff_disputes_view">Görkez</string>
     <string name="staff_filter_chip_remove">Süzgüçi aýyr</string>
+    <string name="staff_filter">Süzgüç</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderasiýa</string>
-    <string name="staff_filter_label_query">Gözle</string>
     <string name="staff_filter_label_seller">Satyjy</string>
     <string name="staff_filter_label_status">Ýagdaý</string>
     <string name="staff_filter_label_type">Tipi</string>

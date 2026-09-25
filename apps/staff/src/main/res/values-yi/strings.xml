@@ -248,9 +248,9 @@
     <string name="staff_disputes_status_reviewing">רעצענזירן</string>
     <string name="staff_disputes_view">בליק</string>
     <string name="staff_filter_chip_remove">אַראָפּנעמען פֿילטער</string>
+    <string name="staff_filter">פֿילטער</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">מאָדעראַציע</string>
-    <string name="staff_filter_label_query">זוכן</string>
     <string name="staff_filter_label_seller">פֿאַרקויפֿער</string>
     <string name="staff_filter_label_status">סטאַטוס</string>
     <string name="staff_filter_label_type">טיפּ</string>

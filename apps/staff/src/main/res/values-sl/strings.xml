@@ -281,9 +281,9 @@
     <string name="staff_disputes_stripe_unrecognized">neprepoznana bremenitev</string>
     <string name="staff_disputes_view">Pogled</string>
     <string name="staff_filter_chip_remove">Odstrani filter</string>
+    <string name="staff_filter">Filter</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderiranje</string>
-    <string name="staff_filter_label_query">Iskanje</string>
     <string name="staff_filter_label_seller">Prodajalec</string>
     <string name="staff_filter_label_status">Stanje</string>
     <string name="staff_filter_label_type">Vrsta</string>

@@ -259,9 +259,9 @@
     <string name="staff_disputes_status_reviewing">Koʻrib chiqilmoqda</string>
     <string name="staff_disputes_view">Koʻrish</string>
     <string name="staff_filter_chip_remove">Filtrni olib tashlash</string>
+    <string name="staff_filter">Filtr</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderatsiya</string>
-    <string name="staff_filter_label_query">Qidirish</string>
     <string name="staff_filter_label_seller">Sotuvchi</string>
     <string name="staff_filter_label_status">Holat</string>
     <string name="staff_filter_label_type">Turi</string>

@@ -246,9 +246,9 @@
     <string name="staff_disputes_status_reviewing">Ń yẹ̀wò</string>
     <string name="staff_disputes_view">Wo</string>
     <string name="staff_filter_chip_remove">Yọ àyàn kúrò</string>
+    <string name="staff_filter">Yọ́</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Ìṣàkóso</string>
-    <string name="staff_filter_label_query">Wá</string>
     <string name="staff_filter_label_seller">Olùtà</string>
     <string name="staff_filter_label_status">Ipo</string>
     <string name="staff_filter_label_type">Irú</string>

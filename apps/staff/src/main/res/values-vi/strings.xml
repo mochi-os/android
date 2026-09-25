@@ -281,9 +281,9 @@
     <string name="staff_disputes_stripe_unrecognized">tính phí không rõ</string>
     <string name="staff_disputes_view">Xem</string>
     <string name="staff_filter_chip_remove">Xóa bộ lọc</string>
+    <string name="staff_filter">Bộ lọc</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Kiểm duyệt</string>
-    <string name="staff_filter_label_query">Tìm kiếm</string>
     <string name="staff_filter_label_seller">Người bán</string>
     <string name="staff_filter_label_status">Trạng thái</string>
     <string name="staff_filter_label_type">Loại</string>

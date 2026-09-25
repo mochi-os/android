@@ -249,9 +249,9 @@
     <string name="staff_disputes_status_reviewing">သုံးသပ်နေသည်</string>
     <string name="staff_disputes_view">ကြည့်ရှုမည်</string>
     <string name="staff_filter_chip_remove">စစ်ထုတ်မှု ဖယ်ပါ</string>
+    <string name="staff_filter">စိစစ်</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">စိစစ်မှု</string>
-    <string name="staff_filter_label_query">ရှာဖွေပါ</string>
     <string name="staff_filter_label_seller">ရောင်းသူ</string>
     <string name="staff_filter_label_status">အခြေအနေ</string>
     <string name="staff_filter_label_type">အမျိုးအစား</string>

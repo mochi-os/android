@@ -247,9 +247,9 @@
     <string name="staff_disputes_status_reviewing">Tê nirxandin</string>
     <string name="staff_disputes_view">Bibîne</string>
     <string name="staff_filter_chip_remove">Parzûnê rake</string>
+    <string name="staff_filter">Parzûna</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Modarasyon</string>
-    <string name="staff_filter_label_query">Lêgerîn</string>
     <string name="staff_filter_label_seller">Firoşkar</string>
     <string name="staff_filter_label_status">Rewş</string>
     <string name="staff_filter_label_type">Cure</string>

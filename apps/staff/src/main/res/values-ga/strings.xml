@@ -267,9 +267,9 @@
     <string name="staff_disputes_status_reviewing">Á athbhreithniú</string>
     <string name="staff_disputes_view">Féach</string>
     <string name="staff_filter_chip_remove">Bain scagaire</string>
+    <string name="staff_filter">Scag</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Modhnú</string>
-    <string name="staff_filter_label_query">Cuardach</string>
     <string name="staff_filter_label_seller">Díoltóir</string>
     <string name="staff_filter_label_status">Stádas</string>
     <string name="staff_filter_label_type">Cineál</string>

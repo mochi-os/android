@@ -245,9 +245,9 @@
     <string name="staff_disputes_status_reviewing">Oñehesa\'ỹijohína</string>
     <string name="staff_disputes_view">Ehecha</string>
     <string name="staff_filter_chip_remove">Embogue mboheko</string>
+    <string name="staff_filter">Mboaty</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderación</string>
-    <string name="staff_filter_label_query">Heka</string>
     <string name="staff_filter_label_seller">Hepyme\'ẽha</string>
     <string name="staff_filter_label_status">Mba\'éichapa</string>
     <string name="staff_filter_label_type">Mba\'éichagua</string>

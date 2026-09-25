@@ -19,6 +19,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.History
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -53,6 +54,7 @@ import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
 import org.mochios.staff.model.ModerationEntry
 import org.mochios.staff.ui.components.ScoreColorChip
+import org.mochios.staff.ui.components.StaffFilters
 import org.mochios.staff.ui.components.StaffStatusBadge
 
 /**
@@ -74,25 +76,31 @@ fun ModerationLogScreen(
     }
 
     Column(Modifier.fillMaxSize()) {
-        MochiTextField(
-            value = listingInput,
-            onValueChange = { v -> listingInput = v.filter { it.isDigit() } },
-            placeholder = { Text(stringResource(R.string.staff_moderation_listing_filter_placeholder)) },
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
-            singleLine = true,
-            trailingIcon = if (listingInput.isNotEmpty()) {
-                {
-                    MochiIconButton(onClick = { listingInput = "" }) {
-                        Icon(
-                            Icons.Default.Close,
-                            contentDescription = stringResource(R.string.staff_moderation_filter_clear),
-                        )
-                    }
-                }
-            } else null,
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 16.dp, vertical = 8.dp),
+        StaffFilters(
+            filters = emptyList(),
+            search = {
+                MochiTextField(
+                    value = listingInput,
+                    onValueChange = { v -> listingInput = v.filter { it.isDigit() } },
+                    placeholder = { Text(stringResource(R.string.staff_moderation_listing_filter_placeholder)) },
+                    leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+                    singleLine = true,
+                    trailingIcon = if (listingInput.isNotEmpty()) {
+                        {
+                            MochiIconButton(onClick = { listingInput = "" }) {
+                                Icon(
+                                    Icons.Default.Close,
+                                    contentDescription = stringResource(R.string.staff_moderation_filter_clear),
+                                )
+                            }
+                        }
+                    } else null,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 8.dp),
+                )
+            },
         )
 
         val currentError = state.error

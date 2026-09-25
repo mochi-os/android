@@ -281,9 +281,9 @@
     <string name="staff_disputes_stripe_unrecognized">débit non reconnu</string>
     <string name="staff_disputes_view">Vue</string>
     <string name="staff_filter_chip_remove">Supprimer le filtre</string>
+    <string name="staff_filter">Filtrer</string>
     <string name="staff_filter_chip_template">%1$s : %2$s</string>
     <string name="staff_filter_label_moderation">Modération</string>
-    <string name="staff_filter_label_query">Recherche</string>
     <string name="staff_filter_label_seller">Vendeur</string>
     <string name="staff_filter_label_status">Statut</string>
     <string name="staff_filter_label_type">Type</string>

@@ -276,9 +276,9 @@
     <string name="staff_disputes_stripe_unrecognized">onbekende afschrijving</string>
     <string name="staff_disputes_view">Weergeven</string>
     <string name="staff_filter_chip_remove">Filter verwijderen</string>
+    <string name="staff_filter">Filter</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderatie</string>
-    <string name="staff_filter_label_query">Zoeken</string>
     <string name="staff_filter_label_seller">Verkoper</string>
     <string name="staff_filter_label_status">Status</string>
     <string name="staff_filter_label_type">Type</string>

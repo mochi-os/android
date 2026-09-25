@@ -267,9 +267,9 @@
     <string name="staff_disputes_status_reviewing">Sinusuri</string>
     <string name="staff_disputes_view">Tingnan</string>
     <string name="staff_filter_chip_remove">Tanggalin ang filter</string>
+    <string name="staff_filter">I-filter</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Pagmodera</string>
-    <string name="staff_filter_label_query">Maghanap</string>
     <string name="staff_filter_label_seller">Nagbebenta</string>
     <string name="staff_filter_label_status">Katayuan</string>
     <string name="staff_filter_label_type">Uri</string>

@@ -281,9 +281,9 @@
     <string name="staff_disputes_stripe_unrecognized">心当たりのない請求</string>
     <string name="staff_disputes_view">ビュー</string>
     <string name="staff_filter_chip_remove">フィルターを削除</string>
+    <string name="staff_filter">フィルター</string>
     <string name="staff_filter_chip_template">%1$s:%2$s</string>
     <string name="staff_filter_label_moderation">モデレーション</string>
-    <string name="staff_filter_label_query">検索</string>
     <string name="staff_filter_label_seller">出品者</string>
     <string name="staff_filter_label_status">ステータス</string>
     <string name="staff_filter_label_type">種類</string>

@@ -246,9 +246,9 @@
     <string name="staff_disputes_status_reviewing">Gamaaggamaa jira</string>
     <string name="staff_disputes_view">Daawwadhu</string>
     <string name="staff_filter_chip_remove">Calaltuu balleessuu</string>
+    <string name="staff_filter">Filannoo</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Toattaachuu</string>
-    <string name="staff_filter_label_query">Barbaaduu</string>
     <string name="staff_filter_label_seller">Gurguraa</string>
     <string name="staff_filter_label_status">Haala</string>
     <string name="staff_filter_label_type">Gosa</string>

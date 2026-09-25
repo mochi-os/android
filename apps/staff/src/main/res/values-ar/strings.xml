@@ -281,9 +281,9 @@
     <string name="staff_disputes_stripe_unrecognized">خصم غير معروف</string>
     <string name="staff_disputes_view">عرض</string>
     <string name="staff_filter_chip_remove">إزالة الفلتر</string>
+    <string name="staff_filter">تصفية</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">الإشراف</string>
-    <string name="staff_filter_label_query">البحث</string>
     <string name="staff_filter_label_seller">البائع</string>
     <string name="staff_filter_label_status">الحالة</string>
     <string name="staff_filter_label_type">النوع</string>

@@ -253,9 +253,9 @@
     <string name="staff_disputes_status_reviewing">Ap revize</string>
     <string name="staff_disputes_view">Wè</string>
     <string name="staff_filter_chip_remove">Retire filt la</string>
+    <string name="staff_filter">Filtre</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderasyon</string>
-    <string name="staff_filter_label_query">Rechèch</string>
     <string name="staff_filter_label_seller">Vandè</string>
     <string name="staff_filter_label_status">Estati</string>
     <string name="staff_filter_label_type">Tip</string>

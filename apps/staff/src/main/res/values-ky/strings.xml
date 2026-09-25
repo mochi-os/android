@@ -255,9 +255,9 @@
     <string name="staff_disputes_status_reviewing">Каралууда</string>
     <string name="staff_disputes_view">Көрүү</string>
     <string name="staff_filter_chip_remove">Чыпканы алып салуу</string>
+    <string name="staff_filter">Чыпка</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Модерация</string>
-    <string name="staff_filter_label_query">Издөө</string>
     <string name="staff_filter_label_seller">Сатуучу</string>
     <string name="staff_filter_label_status">Абал</string>
     <string name="staff_filter_label_type">Түрү</string>

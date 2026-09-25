@@ -249,9 +249,9 @@
     <string name="staff_disputes_status_reviewing">ವಿಮರ್ಶಿಸಲಾಗುತ್ತಿದೆ</string>
     <string name="staff_disputes_view">ವೀಕ್ಷಿಸಿ</string>
     <string name="staff_filter_chip_remove">ಫಿಲ್ಟರ್ ತೆಗೆದುಹಾಕಿ</string>
+    <string name="staff_filter">ಫಿಲ್ಟರ್</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">ಮಾಡರೇಶನ್</string>
-    <string name="staff_filter_label_query">ಹುಡುಕಿ</string>
     <string name="staff_filter_label_seller">ಮಾರಾಟಗಾರ</string>
     <string name="staff_filter_label_status">ಸ್ಥಿತಿ</string>
     <string name="staff_filter_label_type">ಪ್ರಕಾರ</string>

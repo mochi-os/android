@@ -58,7 +58,6 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.FilterDropdown
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
@@ -67,10 +66,11 @@ import org.mochios.android.ui.components.StatusBadge
 import org.mochios.android.ui.components.StatusTone
 import org.mochios.staff.R
 import org.mochios.staff.model.Account
-import org.mochios.staff.ui.components.FilterChipSpec
-import org.mochios.staff.ui.components.FilterChipsRow
 import org.mochios.staff.ui.components.StaffCardAction
 import org.mochios.staff.ui.components.StaffCardMenu
+import org.mochios.staff.ui.components.StaffFilter
+import org.mochios.staff.ui.components.StaffFilterStyle
+import org.mochios.staff.ui.components.StaffFilters
 import org.mochios.staff.ui.components.StaffStatusBadge
 import org.mochios.staff.ui.components.StaffUserAvatar
 import org.mochios.staff.ui.dialog.AccountActionDialog
@@ -84,6 +84,8 @@ import org.mochios.staff.ui.dialog.AccountAuditDialog
 fun AccountsScreen(
     @Suppress("UNUSED_PARAMETER") navController: NavController,
     viewModel: AccountsViewModel = hiltViewModel(),
+    filtersOpen: Boolean = false,
+    onFiltersDismiss: () -> Unit = {},
 ) {
     val state by viewModel.state.collectAsState()
     val snackbar = remember { SnackbarHostState() }
@@ -122,6 +124,8 @@ fun AccountsScreen(
     Box(Modifier.fillMaxSize()) {
         AccountsBody(
             state = state,
+            filtersOpen = filtersOpen,
+            onFiltersDismiss = onFiltersDismiss,
             searchInput = searchInput,
             onSearchInput = { searchInput = it },
             onClearSearch = {
@@ -161,6 +165,8 @@ fun AccountsScreen(
 @Composable
 private fun AccountsBody(
     state: AccountsUiState,
+    filtersOpen: Boolean,
+    onFiltersDismiss: () -> Unit,
     searchInput: String,
     onSearchInput: (String) -> Unit,
     onClearSearch: () -> Unit,
@@ -172,39 +178,50 @@ private fun AccountsBody(
     onRetry: () -> Unit,
 ) {
     Column(Modifier.fillMaxSize()) {
-        FiltersRow(
-            status = state.status,
-            seller = state.seller,
-            onStatusChange = onStatusChange,
-            onSellerChange = onSellerChange,
-        )
-        MochiTextField(
-            value = searchInput,
-            onValueChange = onSearchInput,
-            placeholder = { Text(stringResource(R.string.staff_accounts_search_placeholder)) },
-            leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
-            trailingIcon = if (searchInput.isNotEmpty()) {
-                {
-                    MochiIconButton(onClick = onClearSearch) {
-                        Icon(
-                            Icons.Default.Close,
-                            contentDescription = stringResource(R.string.staff_accounts_search_clear),
-                        )
-                    }
-                }
-            } else null,
-            singleLine = true,
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 16.dp, vertical = 8.dp),
-        )
-        ActiveFilterChips(
-            status = state.status,
-            seller = state.seller,
-            query = state.query,
-            onStatusChange = onStatusChange,
-            onSellerChange = onSellerChange,
-            onClearSearch = onClearSearch,
+        StaffFilters(
+            style = StaffFilterStyle.Sheet,
+            sheetOpen = filtersOpen,
+            onSheetDismiss = onFiltersDismiss,
+            filters = listOf(
+                StaffFilter(
+                    label = stringResource(R.string.staff_accounts_filter_status_label),
+                    chipLabel = stringResource(R.string.staff_filter_label_status),
+                    anyLabel = stringResource(R.string.staff_accounts_any_status),
+                    options = accountStatusOptions(),
+                    current = state.status,
+                    onSelect = onStatusChange,
+                ),
+                StaffFilter(
+                    label = stringResource(R.string.staff_accounts_filter_seller_label),
+                    chipLabel = stringResource(R.string.staff_filter_label_seller),
+                    anyLabel = stringResource(R.string.staff_accounts_any_seller),
+                    options = sellerOptions(),
+                    current = state.seller,
+                    onSelect = onSellerChange,
+                ),
+            ),
+            search = {
+                MochiTextField(
+                    value = searchInput,
+                    onValueChange = onSearchInput,
+                    placeholder = { Text(stringResource(R.string.staff_accounts_search_placeholder)) },
+                    leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
+                    trailingIcon = if (searchInput.isNotEmpty()) {
+                        {
+                            MochiIconButton(onClick = onClearSearch) {
+                                Icon(
+                                    Icons.Default.Close,
+                                    contentDescription = stringResource(R.string.staff_accounts_search_clear),
+                                )
+                            }
+                        }
+                    } else null,
+                    singleLine = true,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 8.dp),
+                )
+            },
         )
 
         when {
@@ -445,38 +462,6 @@ private fun RatingMini(rating: Double, reviews: Long) {
 }
 
 @Composable
-private fun FiltersRow(
-    status: String?,
-    seller: String?,
-    onStatusChange: (String?) -> Unit,
-    onSellerChange: (String?) -> Unit,
-) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 8.dp),
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
-    ) {
-        FilterDropdown(
-            label = stringResource(R.string.staff_accounts_filter_status_label),
-            current = status,
-            options = accountStatusOptions(),
-            anyLabel = stringResource(R.string.staff_accounts_any_status),
-            onSelect = onStatusChange,
-            modifier = Modifier.weight(1f),
-        )
-        FilterDropdown(
-            label = stringResource(R.string.staff_accounts_filter_seller_label),
-            current = seller,
-            options = sellerOptions(),
-            anyLabel = stringResource(R.string.staff_accounts_any_seller),
-            onSelect = onSellerChange,
-            modifier = Modifier.weight(1f),
-        )
-    }
-}
-
-@Composable
 private fun accountStatusOptions(): List<Pair<String, String>> = listOf(
     "active" to stringResource(R.string.staff_accounts_status_active),
     "suspended" to stringResource(R.string.staff_accounts_status_suspended),
@@ -489,32 +474,3 @@ private fun sellerOptions(): List<Pair<String, String>> = listOf(
     "no" to stringResource(R.string.staff_accounts_seller_buyers),
 )
 
-@Composable
-private fun ActiveFilterChips(
-    status: String?,
-    seller: String?,
-    query: String,
-    onStatusChange: (String?) -> Unit,
-    onSellerChange: (String?) -> Unit,
-    onClearSearch: () -> Unit,
-) {
-    val statusLabel = stringResource(R.string.staff_filter_label_status)
-    val sellerLabel = stringResource(R.string.staff_filter_label_seller)
-    val queryLabel = stringResource(R.string.staff_filter_label_query)
-    val statusOptions = accountStatusOptions()
-    val sellerOpts = sellerOptions()
-    val chips = buildList {
-        if (!status.isNullOrBlank()) {
-            val value = statusOptions.firstOrNull { it.first == status }?.second ?: status
-            add(FilterChipSpec(statusLabel, value) { onStatusChange(null) })
-        }
-        if (!seller.isNullOrBlank()) {
-            val value = sellerOpts.firstOrNull { it.first == seller }?.second ?: seller
-            add(FilterChipSpec(sellerLabel, value) { onSellerChange(null) })
-        }
-        if (query.isNotBlank()) {
-            add(FilterChipSpec(queryLabel, query, onClearSearch))
-        }
-    }
-    FilterChipsRow(chips = chips)
-}

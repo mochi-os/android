@@ -281,9 +281,9 @@
     <string name="staff_disputes_stripe_unrecognized">cargo non recoñecido</string>
     <string name="staff_disputes_view">Ver</string>
     <string name="staff_filter_chip_remove">Eliminar o filtro</string>
+    <string name="staff_filter">Filtrar</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderación</string>
-    <string name="staff_filter_label_query">Procura</string>
     <string name="staff_filter_label_seller">Vendedor</string>
     <string name="staff_filter_label_status">Estado</string>
     <string name="staff_filter_label_type">Tipo</string>

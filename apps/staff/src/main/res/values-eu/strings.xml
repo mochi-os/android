@@ -281,9 +281,9 @@
     <string name="staff_disputes_stripe_unrecognized">ezagutzen ez den ordainketa</string>
     <string name="staff_disputes_view">Ikusi</string>
     <string name="staff_filter_chip_remove">Iragazkia kendu</string>
+    <string name="staff_filter">Iragazi</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderazioa</string>
-    <string name="staff_filter_label_query">Bilatu</string>
     <string name="staff_filter_label_seller">Saltzailea</string>
     <string name="staff_filter_label_status">Egoera</string>
     <string name="staff_filter_label_type">Mota</string>

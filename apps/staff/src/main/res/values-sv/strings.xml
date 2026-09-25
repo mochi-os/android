@@ -281,9 +281,9 @@
     <string name="staff_disputes_stripe_unrecognized">okänd debitering</string>
     <string name="staff_disputes_view">Visa</string>
     <string name="staff_filter_chip_remove">Ta bort filter</string>
+    <string name="staff_filter">Filter</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderering</string>
-    <string name="staff_filter_label_query">Sök</string>
     <string name="staff_filter_label_seller">Säljare</string>
     <string name="staff_filter_label_status">Status</string>
     <string name="staff_filter_label_type">Typ</string>

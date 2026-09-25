@@ -249,9 +249,9 @@
     <string name="staff_disputes_status_reviewing">સમીક્ષા કરી રહ્યું છે</string>
     <string name="staff_disputes_view">જુઓ</string>
     <string name="staff_filter_chip_remove">ફિલ્ટર દૂર કરો</string>
+    <string name="staff_filter">ફિલ્ટર</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">મોડરેશન</string>
-    <string name="staff_filter_label_query">શોધો</string>
     <string name="staff_filter_label_seller">વેચનાર</string>
     <string name="staff_filter_label_status">સ્થિતિ</string>
     <string name="staff_filter_label_type">પ્રકાર</string>

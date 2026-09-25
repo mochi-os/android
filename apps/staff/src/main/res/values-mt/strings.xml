@@ -253,9 +253,9 @@
     <string name="staff_disputes_status_reviewing">Qed jirrevedi</string>
     <string name="staff_disputes_view">Ara</string>
     <string name="staff_filter_chip_remove">Neħħi l-filtru</string>
+    <string name="staff_filter">Iffiltra</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderazzjoni</string>
-    <string name="staff_filter_label_query">Tfittxija</string>
     <string name="staff_filter_label_seller">Bejjiegħ</string>
     <string name="staff_filter_label_status">Status</string>
     <string name="staff_filter_label_type">Tip</string>

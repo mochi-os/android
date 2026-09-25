@@ -281,9 +281,9 @@
     <string name="staff_disputes_stripe_unrecognized">tanınmayan ücret</string>
     <string name="staff_disputes_view">Görüntüle</string>
     <string name="staff_filter_chip_remove">Filtreyi kaldır</string>
+    <string name="staff_filter">Filtrele</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderasyon</string>
-    <string name="staff_filter_label_query">Arama</string>
     <string name="staff_filter_label_seller">Satıcı</string>
     <string name="staff_filter_label_status">Durum</string>
     <string name="staff_filter_label_type">Tür</string>

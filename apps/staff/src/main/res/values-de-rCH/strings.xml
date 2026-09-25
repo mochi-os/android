@@ -31,7 +31,6 @@
     <string name="staff_categories_dialog_parent_none">Keine</string>
     <string name="staff_sidebar_settings">Einstellungen</string>
     <string name="staff_accounts_search_placeholder">Suchen</string>
-    <string name="staff_filter_label_query">Suchen</string>
     <string name="staff_listings_remove">Entfernen</string>
     <string name="staff_reports_action_remove">Entfernen</string>
     <string name="staff_reviews_action_remove">Entfernen</string>
@@ -309,6 +308,7 @@
     <string name="staff_disputes_stripe_subscription_canceled">Abonnement gekündigt</string>
     <string name="staff_disputes_stripe_unrecognized">nicht erkannte Belastung</string>
     <string name="staff_filter_chip_remove">Filter entfernen</string>
+    <string name="staff_filter">Filter</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderation</string>
     <string name="staff_filter_label_seller">Verkäuferin/Verkäufer</string>

@@ -281,9 +281,9 @@
     <string name="staff_disputes_stripe_unrecognized">addebito non riconosciuto</string>
     <string name="staff_disputes_view">Visualizza</string>
     <string name="staff_filter_chip_remove">Rimuovi filtro</string>
+    <string name="staff_filter">Filtro</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderazione</string>
-    <string name="staff_filter_label_query">Ricerca</string>
     <string name="staff_filter_label_seller">Venditore</string>
     <string name="staff_filter_label_status">Stato</string>
     <string name="staff_filter_label_type">Tipo</string>
