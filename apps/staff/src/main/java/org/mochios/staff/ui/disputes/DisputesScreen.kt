@@ -17,6 +17,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Report
+import androidx.compose.material.icons.outlined.Gavel
+import androidx.compose.material.icons.outlined.Visibility
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
@@ -47,11 +49,12 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.FilterDropdown
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiCard
-import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.staff.R
 import org.mochios.staff.model.Dispute
 import org.mochios.staff.ui.components.FilterChipSpec
 import org.mochios.staff.ui.components.FilterChipsRow
+import org.mochios.staff.ui.components.StaffCardAction
+import org.mochios.staff.ui.components.StaffCardMenu
 import org.mochios.staff.ui.components.StaffStatusBadge
 import org.mochios.staff.ui.dialog.DisputeReviewDialog
 
@@ -179,12 +182,33 @@ private fun DisputeRow(
         shape = MaterialTheme.shapes.medium,
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
-            Text(
-                text = dispute.title.ifBlank { stringResource(R.string.staff_disputes_listing_label, dispute.listing) },
-                style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    text = dispute.title.ifBlank {
+                        stringResource(R.string.staff_disputes_listing_label, dispute.listing)
+                    },
+                    style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f),
+                )
+                if (showAction) {
+                    val stripe = dispute.opener == "stripe"
+                    StaffCardMenu(
+                        actions = listOf(
+                            StaffCardAction(
+                                label = if (stripe) {
+                                    stringResource(R.string.staff_disputes_view)
+                                } else {
+                                    stringResource(R.string.staff_disputes_review)
+                                },
+                                icon = if (stripe) Icons.Outlined.Visibility else Icons.Outlined.Gavel,
+                                onClick = onActionClick,
+                            ),
+                        ),
+                    )
+                }
+            }
             Spacer(Modifier.height(6.dp))
 
             // Seller row.
@@ -243,23 +267,11 @@ private fun DisputeRow(
             )
             Spacer(Modifier.height(6.dp))
 
-            // Created + action button.
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(
-                    text = format.formatTimestamp(dispute.created),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.weight(1f),
-                )
-                if (showAction) {
-                    MochiOutlinedButton(onClick = onActionClick) {
-                        Text(
-                            if (dispute.opener == "stripe") stringResource(R.string.staff_disputes_view)
-                            else stringResource(R.string.staff_disputes_review),
-                        )
-                    }
-                }
-            }
+            Text(
+                text = format.formatTimestamp(dispute.created),
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
         }
     }
 }

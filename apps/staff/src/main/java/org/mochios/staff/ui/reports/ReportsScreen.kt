@@ -18,6 +18,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Flag
+import androidx.compose.material.icons.outlined.Gavel
+import androidx.compose.material.icons.outlined.Visibility
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
@@ -47,11 +49,12 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.FilterDropdown
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiCard
-import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.staff.R
 import org.mochios.staff.model.Report
 import org.mochios.staff.ui.components.FilterChipSpec
 import org.mochios.staff.ui.components.FilterChipsRow
+import org.mochios.staff.ui.components.StaffCardAction
+import org.mochios.staff.ui.components.StaffCardMenu
 import org.mochios.staff.ui.components.StaffStatusBadge
 import org.mochios.staff.ui.dialog.ReportActionDialog
 
@@ -180,13 +183,29 @@ private fun ReportRow(
     val content: @Composable ColumnScope.() -> Unit = {
         Column(modifier = Modifier.padding(16.dp)) {
             // Target: the listing title, or the reported user's resolved name.
-            Text(
-                text = targetText(report),
-                style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.fillMaxWidth(),
-            )
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    text = targetText(report),
+                    style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f),
+                )
+                val pending = report.status == "pending"
+                StaffCardMenu(
+                    actions = listOf(
+                        StaffCardAction(
+                            label = if (pending) {
+                                stringResource(R.string.staff_reports_action)
+                            } else {
+                                stringResource(R.string.staff_reports_view)
+                            },
+                            icon = if (pending) Icons.Outlined.Gavel else Icons.Outlined.Visibility,
+                            onClick = onActionClick,
+                        ),
+                    ),
+                )
+            }
             Spacer(Modifier.height(6.dp))
 
             // Reporter row.
@@ -225,21 +244,11 @@ private fun ReportRow(
             )
             Spacer(Modifier.height(6.dp))
 
-            // Created + action row.
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(
-                    text = format.formatTimestamp(report.created),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.weight(1f),
-                )
-                MochiOutlinedButton(onClick = onActionClick) {
-                    Text(
-                        if (report.status == "pending") stringResource(R.string.staff_reports_action)
-                        else stringResource(R.string.staff_reports_view),
-                    )
-                }
-            }
+            Text(
+                text = format.formatTimestamp(report.created),
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
         }
     }
     val listing = report.listing

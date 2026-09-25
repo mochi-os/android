@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Gavel
+import androidx.compose.material.icons.outlined.Gavel
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
@@ -44,10 +45,11 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiCard
-import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.staff.R
 import org.mochios.staff.model.Appeal
 import org.mochios.staff.ui.components.ScoreColorChip
+import org.mochios.staff.ui.components.StaffCardAction
+import org.mochios.staff.ui.components.StaffCardMenu
 import org.mochios.staff.ui.components.StaffStatusBadge
 import org.mochios.staff.ui.dialog.AppealDecideDialog
 
@@ -156,14 +158,26 @@ private fun AppealRow(
         shape = MaterialTheme.shapes.medium,
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
-            // Title → opens market listing detail.
-            Text(
-                text = appeal.title.ifBlank { stringResource(R.string.staff_appeals_listing_label, appeal.listing) },
-                style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.fillMaxWidth(),
-            )
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    text = appeal.title.ifBlank {
+                        stringResource(R.string.staff_appeals_listing_label, appeal.listing)
+                    },
+                    style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f),
+                )
+                StaffCardMenu(
+                    actions = listOf(
+                        StaffCardAction(
+                            label = stringResource(R.string.staff_appeals_decide),
+                            icon = Icons.Outlined.Gavel,
+                            onClick = onDecideClick,
+                        ),
+                    ),
+                )
+            }
             Spacer(Modifier.height(6.dp))
 
             // Seller row.
@@ -204,18 +218,11 @@ private fun AppealRow(
                 Spacer(Modifier.height(6.dp))
             }
 
-            // Created + decide button.
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(
-                    text = format.formatTimestamp(appeal.created),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.weight(1f),
-                )
-                MochiOutlinedButton(onClick = onDecideClick) {
-                    Text(stringResource(R.string.staff_appeals_decide))
-                }
-            }
+            Text(
+                text = format.formatTimestamp(appeal.created),
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
         }
     }
 }

@@ -21,6 +21,9 @@ import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.ShieldMoon
+import androidx.compose.material.icons.outlined.Block
+import androidx.compose.material.icons.outlined.CheckCircle
+import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -55,13 +58,14 @@ import org.mochios.android.ui.components.FilterDropdown
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
 import org.mochios.staff.model.PendingListing
 import org.mochios.staff.ui.components.FilterChipSpec
 import org.mochios.staff.ui.components.FilterChipsRow
 import org.mochios.staff.ui.components.ScoreColorChip
+import org.mochios.staff.ui.components.StaffCardAction
+import org.mochios.staff.ui.components.StaffCardMenu
 import org.mochios.staff.ui.components.StaffStatusBadge
 import org.mochios.staff.ui.dialog.ListingActionDialog
 
@@ -233,6 +237,34 @@ private fun ListingRow(
     val pending = listing.status == "active" &&
         (listing.moderation == "hold" || listing.moderation == "review")
     val canRemove = listing.status == "active"
+    val actions = buildList {
+        if (pending) {
+            add(
+                StaffCardAction(
+                    label = stringResource(R.string.staff_listings_approve),
+                    icon = Icons.Outlined.CheckCircle,
+                    onClick = { onAction(ListingActionType.APPROVE) },
+                ),
+            )
+            add(
+                StaffCardAction(
+                    label = stringResource(R.string.staff_listings_reject),
+                    icon = Icons.Outlined.Block,
+                    onClick = { onAction(ListingActionType.REJECT) },
+                ),
+            )
+        }
+        if (canRemove) {
+            add(
+                StaffCardAction(
+                    label = stringResource(R.string.staff_listings_remove),
+                    icon = Icons.Outlined.Delete,
+                    destructive = true,
+                    onClick = { onAction(ListingActionType.REMOVE) },
+                ),
+            )
+        }
+    }
 
     MochiCard(
         onClick = onOpen,
@@ -242,14 +274,16 @@ private fun ListingRow(
         shape = MaterialTheme.shapes.medium,
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
-            // Title -> opens market listing detail
-            Text(
-                text = listing.title,
-                style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.fillMaxWidth(),
-            )
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    text = listing.title,
+                    style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f),
+                )
+                StaffCardMenu(actions = actions)
+            }
             Spacer(Modifier.height(6.dp))
 
             // Seller — avatar + name + onboarded tick.
@@ -304,26 +338,6 @@ private fun ListingRow(
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
-            }
-
-            // Action row.
-            if (pending || canRemove) {
-                Spacer(Modifier.height(8.dp))
-                Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                    if (pending) {
-                        MochiOutlinedButton(onClick = { onAction(ListingActionType.APPROVE) }) {
-                            Text(stringResource(R.string.staff_listings_approve))
-                        }
-                        MochiOutlinedButton(onClick = { onAction(ListingActionType.REJECT) }) {
-                            Text(stringResource(R.string.staff_listings_reject))
-                        }
-                    }
-                    if (canRemove) {
-                        MochiOutlinedButton(onClick = { onAction(ListingActionType.REMOVE) }) {
-                            Text(stringResource(R.string.staff_listings_remove))
-                        }
-                    }
-                }
             }
         }
     }
