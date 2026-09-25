@@ -18,6 +18,9 @@
     <string name="common_back">Ar ais</string>
     <string name="common_close">Dún</string>
     <string name="common_cancel">Cealaigh</string>
+    <string name="common_filter">Scag</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Bain scagaire</string>
     <string name="common_confirm">Deimhnigh</string>
     <string name="common_save">Sábháil</string>
     <string name="common_saving">Á shábháil…</string>

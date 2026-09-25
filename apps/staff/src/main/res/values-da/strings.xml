@@ -280,9 +280,6 @@
     <string name="staff_disputes_stripe_subscription_canceled">abonnement opsagt</string>
     <string name="staff_disputes_stripe_unrecognized">ukendt debitering</string>
     <string name="staff_disputes_view">Vis</string>
-    <string name="staff_filter_chip_remove">Fjern filter</string>
-    <string name="staff_filter">Filter</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderation</string>
     <string name="staff_filter_label_seller">Sælger</string>
     <string name="staff_filter_label_status">Status</string>

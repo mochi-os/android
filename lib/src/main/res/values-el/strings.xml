@@ -18,6 +18,9 @@
     <string name="common_back">Πίσω</string>
     <string name="common_close">Κλείσιμο</string>
     <string name="common_cancel">Ακύρωση</string>
+    <string name="common_filter">Φίλτρο</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Αφαίρεση φίλτρου</string>
     <string name="common_confirm">Επιβεβαίωση</string>
     <string name="common_save">Αποθήκευση</string>
     <string name="common_saving">Αποθήκευση…</string>

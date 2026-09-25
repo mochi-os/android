@@ -18,6 +18,9 @@
     <string name="common_back">ย้อนกลับ</string>
     <string name="common_close">ปิด</string>
     <string name="common_cancel">ยกเลิก</string>
+    <string name="common_filter">กรอง</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">ลบตัวกรอง</string>
     <string name="common_confirm">ยืนยัน</string>
     <string name="common_save">บันทึก</string>
     <string name="common_saving">กำลังบันทึก…</string>

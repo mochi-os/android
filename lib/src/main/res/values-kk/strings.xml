@@ -18,6 +18,9 @@
     <string name="common_back">Артқа</string>
     <string name="common_close">Жабу</string>
     <string name="common_cancel">Болдырмау</string>
+    <string name="common_filter">Сүзгі</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Сүзгіні алып тастау</string>
     <string name="common_confirm">Растау</string>
     <string name="common_save">Сақтау</string>
     <string name="common_saving">Сақталуда…</string>

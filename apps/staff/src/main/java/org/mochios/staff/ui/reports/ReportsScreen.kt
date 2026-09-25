@@ -43,17 +43,17 @@ import androidx.navigation.NavController
 import org.mochios.android.format.formatFingerprint
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.ui.components.ChoiceFilter
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.FilterBar
+import org.mochios.android.ui.components.FilterBarStyle
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.staff.R
 import org.mochios.staff.model.Report
 import org.mochios.staff.ui.components.StaffCardAction
 import org.mochios.staff.ui.components.StaffCardMenu
-import org.mochios.staff.ui.components.StaffFilter
-import org.mochios.staff.ui.components.StaffFilterStyle
-import org.mochios.staff.ui.components.StaffFilters
 import org.mochios.staff.ui.components.StaffStatusBadge
 import org.mochios.staff.ui.components.StaffUserAvatar
 import org.mochios.staff.ui.dialog.ReportActionDialog
@@ -132,12 +132,12 @@ private fun ReportsBody(
     onRetry: () -> Unit,
 ) {
     Column(Modifier.fillMaxSize()) {
-        StaffFilters(
-            style = StaffFilterStyle.Sheet,
+        FilterBar(
+            style = FilterBarStyle.Sheet,
             sheetOpen = filtersOpen,
             onSheetDismiss = onFiltersDismiss,
             filters = listOf(
-                StaffFilter(
+                ChoiceFilter(
                     label = stringResource(R.string.staff_reports_filter_type_label),
                     chipLabel = stringResource(R.string.staff_filter_label_type),
                     anyLabel = stringResource(R.string.staff_reports_any_type),
@@ -145,7 +145,7 @@ private fun ReportsBody(
                     current = state.type,
                     onSelect = onTypeChange,
                 ),
-                StaffFilter(
+                ChoiceFilter(
                     label = stringResource(R.string.staff_reports_filter_status_label),
                     chipLabel = stringResource(R.string.staff_filter_label_status),
                     anyLabel = stringResource(R.string.staff_reports_any_status),

@@ -280,9 +280,6 @@
     <string name="staff_disputes_stripe_subscription_canceled">המינוי בוטל</string>
     <string name="staff_disputes_stripe_unrecognized">חיוב לא מזוהה</string>
     <string name="staff_disputes_view">הצג</string>
-    <string name="staff_filter_chip_remove">הסרת מסנן</string>
-    <string name="staff_filter">סינון</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">ניהול</string>
     <string name="staff_filter_label_seller">מוכר</string>
     <string name="staff_filter_label_status">מצב</string>

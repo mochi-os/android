@@ -18,6 +18,9 @@
     <string name="common_back">Vegere</string>
     <string name="common_close">Bigire</string>
     <string name="common_cancel">Betal bike</string>
+    <string name="common_filter">Parzûna</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Parzûnê rake</string>
     <string name="common_confirm">Piştrast bike</string>
     <string name="common_save">Tomar bike</string>
     <string name="common_saving">Tê tomarkirin…</string>

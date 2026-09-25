@@ -18,6 +18,9 @@
     <string name="common_back">Quay lại</string>
     <string name="common_close">Đóng</string>
     <string name="common_cancel">Hủy</string>
+    <string name="common_filter">Bộ lọc</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Xóa bộ lọc</string>
     <string name="common_confirm">Xác nhận</string>
     <string name="common_save">Lưu</string>
     <string name="common_saving">Đang lưu…</string>

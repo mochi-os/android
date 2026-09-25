@@ -258,9 +258,6 @@
     <string name="staff_disputes_status_responded">Хариулсан</string>
     <string name="staff_disputes_status_reviewing">Шүүмжилж байна</string>
     <string name="staff_disputes_view">Үзэх</string>
-    <string name="staff_filter_chip_remove">Шүүлтүүр устгах</string>
-    <string name="staff_filter">Шүүлтүүр</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Зохицуулалт</string>
     <string name="staff_filter_label_seller">Худалдагч</string>
     <string name="staff_filter_label_status">Төлөв</string>

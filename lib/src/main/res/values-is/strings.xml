@@ -18,6 +18,9 @@
     <string name="common_back">Til baka</string>
     <string name="common_close">Loka</string>
     <string name="common_cancel">Hætta við</string>
+    <string name="common_filter">Sía</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Fjarlægja síu</string>
     <string name="common_confirm">Staðfesta</string>
     <string name="common_save">Vista</string>
     <string name="common_saving">Vistar…</string>

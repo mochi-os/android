@@ -245,9 +245,6 @@
     <string name="staff_disputes_status_responded">Kutichisqa</string>
     <string name="staff_disputes_status_reviewing">Reseñashan</string>
     <string name="staff_disputes_view">Qhaway</string>
-    <string name="staff_filter_chip_remove">Llaqwana hurquy</string>
-    <string name="staff_filter">Suysuy</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderacion</string>
     <string name="staff_filter_label_seller">Vendiq</string>
     <string name="staff_filter_label_status">Estado</string>

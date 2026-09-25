@@ -56,8 +56,11 @@ import kotlinx.coroutines.delay
 import org.mochios.android.format.formatFingerprint
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.ui.components.ChoiceFilter
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.FilterBar
+import org.mochios.android.ui.components.FilterBarStyle
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
@@ -68,9 +71,6 @@ import org.mochios.staff.R
 import org.mochios.staff.model.Account
 import org.mochios.staff.ui.components.StaffCardAction
 import org.mochios.staff.ui.components.StaffCardMenu
-import org.mochios.staff.ui.components.StaffFilter
-import org.mochios.staff.ui.components.StaffFilterStyle
-import org.mochios.staff.ui.components.StaffFilters
 import org.mochios.staff.ui.components.StaffStatusBadge
 import org.mochios.staff.ui.components.StaffUserAvatar
 import org.mochios.staff.ui.dialog.AccountActionDialog
@@ -178,12 +178,12 @@ private fun AccountsBody(
     onRetry: () -> Unit,
 ) {
     Column(Modifier.fillMaxSize()) {
-        StaffFilters(
-            style = StaffFilterStyle.Sheet,
+        FilterBar(
+            style = FilterBarStyle.Sheet,
             sheetOpen = filtersOpen,
             onSheetDismiss = onFiltersDismiss,
             filters = listOf(
-                StaffFilter(
+                ChoiceFilter(
                     label = stringResource(R.string.staff_accounts_filter_status_label),
                     chipLabel = stringResource(R.string.staff_filter_label_status),
                     anyLabel = stringResource(R.string.staff_accounts_any_status),
@@ -191,7 +191,7 @@ private fun AccountsBody(
                     current = state.status,
                     onSelect = onStatusChange,
                 ),
-                StaffFilter(
+                ChoiceFilter(
                     label = stringResource(R.string.staff_accounts_filter_seller_label),
                     chipLabel = stringResource(R.string.staff_filter_label_seller),
                     anyLabel = stringResource(R.string.staff_accounts_any_seller),

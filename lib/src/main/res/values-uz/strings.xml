@@ -18,6 +18,9 @@
     <string name="common_back">Orqaga</string>
     <string name="common_close">Yopish</string>
     <string name="common_cancel">Bekor qilish</string>
+    <string name="common_filter">Filtr</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Filtrni olib tashlash</string>
     <string name="common_confirm">Tasdiqlash</string>
     <string name="common_save">Saqlash</string>
     <string name="common_saving">Saqlanmoqda…</string>

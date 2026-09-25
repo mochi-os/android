@@ -18,6 +18,9 @@
     <string name="common_back">Vissza</string>
     <string name="common_close">Bezárás</string>
     <string name="common_cancel">Mégse</string>
+    <string name="common_filter">Szűrő</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Szűrő eltávolítása</string>
     <string name="common_confirm">Megerősítés</string>
     <string name="common_save">Mentés</string>
     <string name="common_saving">Mentés…</string>

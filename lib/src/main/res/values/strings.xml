@@ -72,6 +72,9 @@
     <string name="common_back">Back</string>
     <string name="common_close">Close</string>
     <string name="common_cancel">Cancel</string>
+    <string name="common_filter">Filter</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Remove filter</string>
     <string name="common_confirm">Confirm</string>
     <string name="common_save">Save</string>
     <string name="common_saving">Saving…</string>

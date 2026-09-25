@@ -18,6 +18,9 @@
     <string name="common_back">Retounen</string>
     <string name="common_close">Fèmen</string>
     <string name="common_cancel">Anile</string>
+    <string name="common_filter">Filtre</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Retire filt la</string>
     <string name="common_confirm">Konfime</string>
     <string name="common_save">Sove</string>
     <string name="common_saving">Ap sove…</string>

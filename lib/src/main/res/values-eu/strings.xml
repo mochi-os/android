@@ -18,6 +18,9 @@
     <string name="common_back">Atzera</string>
     <string name="common_close">Itxi</string>
     <string name="common_cancel">Utzi</string>
+    <string name="common_filter">Iragazi</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Iragazkia kendu</string>
     <string name="common_confirm">Berretsi</string>
     <string name="common_save">Gorde</string>
     <string name="common_saving">Gordetzen…</string>

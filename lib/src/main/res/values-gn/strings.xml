@@ -18,6 +18,9 @@
     <string name="common_back">Tapykuépe</string>
     <string name="common_close">Mboty</string>
     <string name="common_cancel">Heja</string>
+    <string name="common_filter">Mboaty</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Embogue mboheko</string>
     <string name="common_confirm">Emoneĩ</string>
     <string name="common_save">Ñongatu</string>
     <string name="common_saving">Oñeñongatuhína…</string>

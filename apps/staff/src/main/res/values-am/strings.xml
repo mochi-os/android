@@ -251,9 +251,6 @@
     <string name="staff_disputes_status_responded">ምላሽ ተሰጥቷል</string>
     <string name="staff_disputes_status_reviewing">በመገምገም ላይ</string>
     <string name="staff_disputes_view">ይመልከቱ</string>
-    <string name="staff_filter_chip_remove">ማጣሪያ አስወግድ</string>
-    <string name="staff_filter">ማጣሪያ</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">ማስተካከያ</string>
     <string name="staff_filter_label_seller">ሻጭ</string>
     <string name="staff_filter_label_status">ሁኔታ</string>

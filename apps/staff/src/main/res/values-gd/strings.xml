@@ -256,9 +256,6 @@
     <string name="staff_disputes_status_responded">Air freagairt</string>
     <string name="staff_disputes_status_reviewing">A\' lèirmheas</string>
     <string name="staff_disputes_view">Seall</string>
-    <string name="staff_filter_chip_remove">Thoir air falbh a\' chriathrag</string>
-    <string name="staff_filter">Sìolachan</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Maoir-ùghdarrais</string>
     <string name="staff_filter_label_seller">Reiceadair</string>
     <string name="staff_filter_label_status">Cor</string>

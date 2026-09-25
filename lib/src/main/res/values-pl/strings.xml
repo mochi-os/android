@@ -18,6 +18,9 @@
     <string name="common_back">Wstecz</string>
     <string name="common_close">Zamknij</string>
     <string name="common_cancel">Anuluj</string>
+    <string name="common_filter">Filtr</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Usuń filtr</string>
     <string name="common_confirm">Potwierdź</string>
     <string name="common_save">Zapisz</string>
     <string name="common_saving">Zapisywanie…</string>

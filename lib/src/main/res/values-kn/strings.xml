@@ -18,6 +18,9 @@
     <string name="common_back">ಹಿಂದೆ</string>
     <string name="common_close">ಮುಚ್ಚಿ</string>
     <string name="common_cancel">ರದ್ದುಮಾಡಿ</string>
+    <string name="common_filter">ಫಿಲ್ಟರ್</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">ಫಿಲ್ಟರ್ ತೆಗೆದುಹಾಕಿ</string>
     <string name="common_confirm">ದೃಢೀಕರಿಸಿ</string>
     <string name="common_save">ಉಳಿಸಿ</string>
     <string name="common_saving">ಉಳಿಸಲಾಗುತ್ತಿದೆ…</string>

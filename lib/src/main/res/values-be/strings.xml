@@ -18,6 +18,9 @@
     <string name="common_back">Назад</string>
     <string name="common_close">Закрыць</string>
     <string name="common_cancel">Адмена</string>
+    <string name="common_filter">Фільтр</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Прыбраць фільтр</string>
     <string name="common_confirm">Пацвердзіць</string>
     <string name="common_save">Захаваць</string>
     <string name="common_saving">Захаванне…</string>

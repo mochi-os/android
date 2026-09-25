@@ -280,9 +280,6 @@
     <string name="staff_disputes_stripe_subscription_canceled">áskrift sögð upp</string>
     <string name="staff_disputes_stripe_unrecognized">óþekkt greiðsla</string>
     <string name="staff_disputes_view">Skoða</string>
-    <string name="staff_filter_chip_remove">Fjarlægja síu</string>
-    <string name="staff_filter">Sía</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Stjórnun</string>
     <string name="staff_filter_label_seller">Seljandi</string>
     <string name="staff_filter_label_status">Staða</string>

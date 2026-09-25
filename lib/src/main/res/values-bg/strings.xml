@@ -18,6 +18,9 @@
     <string name="common_back">Назад</string>
     <string name="common_close">Затвори</string>
     <string name="common_cancel">Отказ</string>
+    <string name="common_filter">Филтър</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Премахни филтъра</string>
     <string name="common_confirm">Потвърди</string>
     <string name="common_save">Запази</string>
     <string name="common_saving">Запазва се…</string>

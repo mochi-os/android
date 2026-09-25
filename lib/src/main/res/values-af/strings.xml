@@ -18,6 +18,9 @@
     <string name="common_back">Terug</string>
     <string name="common_close">Sluit</string>
     <string name="common_cancel">Kanselleer</string>
+    <string name="common_filter">Filter</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Verwyder filter</string>
     <string name="common_confirm">Bevestig</string>
     <string name="common_save">Stoor</string>
     <string name="common_saving">Stoor…</string>

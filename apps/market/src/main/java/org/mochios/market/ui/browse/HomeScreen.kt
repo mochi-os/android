@@ -9,17 +9,17 @@ import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.GridItemSpan
@@ -28,8 +28,10 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.Label
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.Search
@@ -40,10 +42,12 @@ import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.ExposedDropdownMenuAnchorType
+import androidx.compose.material3.ExposedDropdownMenuBox
+import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -60,13 +64,17 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.delay
 import org.mochios.android.ui.components.EmptyState
+import org.mochios.android.ui.components.FilterChipRow
+import org.mochios.android.ui.components.FilterSheet
 import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
@@ -74,6 +82,7 @@ import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.market.R
 import org.mochios.market.model.Category
+import org.mochios.market.model.Currency
 import org.mochios.market.model.Listing
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.components.MarketLayout
@@ -160,7 +169,7 @@ fun HomeScreen(
     }
 
     if (state.filterSheetOpen) {
-        FilterSheet(
+        MarketFilterSheet(
             state = state,
             onUpdate = viewModel::setFilter,
             onDismiss = viewModel::closeFilterSheet,
@@ -520,3 +529,237 @@ private fun OnboardingCard(
     }
 }
 
+/**
+ * Filters apply live as the user toggles them; Apply only dismisses, Clear
+ * resets every axis.
+ */
+@Composable
+private fun MarketFilterSheet(
+    state: HomeUiState,
+    onUpdate: (Filter, String?) -> Unit,
+    onDismiss: () -> Unit,
+    onClearAll: () -> Unit,
+) {
+    FilterSheet(
+        title = stringResource(R.string.market_filter_title),
+        onDismiss = onDismiss,
+        bottomSpacing = 8.dp,
+    ) {
+        CategoryDropdown(state = state, onUpdate = onUpdate)
+
+        SectionLabel(stringResource(R.string.market_filter_type))
+        FilterChipRow(
+            options = listOf(
+                null to stringResource(R.string.market_filter_all),
+                "physical" to stringResource(R.string.market_filter_type_physical),
+                "digital" to stringResource(R.string.market_filter_type_digital),
+            ),
+            isSelected = { option -> option == state.filters[Filter.TYPE] },
+            onSelect = { onUpdate(Filter.TYPE, it) },
+        )
+
+        SectionLabel(stringResource(R.string.market_filter_condition))
+        FilterChipRow(
+            options = listOf(
+                null to stringResource(R.string.market_filter_all),
+                "new" to stringResource(R.string.market_filter_condition_new),
+                "used" to stringResource(R.string.market_filter_condition_used),
+                "refurbished" to stringResource(R.string.market_filter_condition_refurbished),
+            ),
+            isSelected = { option -> option == state.filters[Filter.CONDITION] },
+            onSelect = { onUpdate(Filter.CONDITION, it) },
+        )
+
+        SectionLabel(stringResource(R.string.market_filter_pricing))
+        FilterChipRow(
+            options = listOf(
+                null to stringResource(R.string.market_filter_all),
+                "fixed" to stringResource(R.string.market_filter_pricing_fixed),
+                "pwyw" to stringResource(R.string.market_filter_pricing_pwyw),
+                "subscription" to stringResource(R.string.market_filter_pricing_subscription),
+                "auction" to stringResource(R.string.market_filter_pricing_auction),
+            ),
+            isSelected = { option -> option == state.filters[Filter.PRICING] },
+            onSelect = { onUpdate(Filter.PRICING, it) },
+        )
+
+        SectionLabel(stringResource(R.string.market_filter_delivery))
+        FilterChipRow(
+            options = listOf(
+                null to stringResource(R.string.market_filter_all),
+                "shipping" to stringResource(R.string.market_filter_delivery_shipping),
+                "pickup" to stringResource(R.string.market_filter_delivery_pickup),
+                "download" to stringResource(R.string.market_filter_delivery_download),
+            ),
+            isSelected = { option -> option == state.filters[Filter.DELIVERY] },
+            onSelect = { onUpdate(Filter.DELIVERY, it) },
+        )
+
+        SectionLabel(stringResource(R.string.market_filter_price_range))
+        FilterChipRow(
+            options = Currency.entries.map { it.name.lowercase() to it.name },
+            isSelected = { option ->
+                option == (state.filters[Filter.CURRENCY] ?: HomeViewModel.DEFAULT_CURRENCY)
+            },
+            onSelect = { onUpdate(Filter.CURRENCY, it) },
+        )
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            MochiTextField(
+                value = state.filters[Filter.PRICE_MIN].orEmpty(),
+                onValueChange = { onUpdate(Filter.PRICE_MIN, it.ifBlank { null }) },
+                label = { Text(stringResource(R.string.market_filter_price_min)) },
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
+                singleLine = true,
+                modifier = Modifier.weight(1f),
+            )
+            MochiTextField(
+                value = state.filters[Filter.PRICE_MAX].orEmpty(),
+                onValueChange = { onUpdate(Filter.PRICE_MAX, it.ifBlank { null }) },
+                label = { Text(stringResource(R.string.market_filter_price_max)) },
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
+                singleLine = true,
+                modifier = Modifier.weight(1f),
+            )
+        }
+        SectionLabel(stringResource(R.string.market_filter_sort))
+        SortDropdown(state = state, onUpdate = onUpdate)
+
+        Row(
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            modifier = Modifier.fillMaxWidth(),
+        ) {
+            MochiOutlinedButton(
+                onClick = onClearAll,
+                modifier = Modifier.weight(1f),
+            ) {
+                Text(stringResource(R.string.market_filter_clear))
+            }
+            MochiButton(
+                onClick = onDismiss,
+                modifier = Modifier.weight(1f),
+            ) {
+                Icon(
+                    Icons.Default.Check,
+                    contentDescription = null,
+                    modifier = Modifier.size(ButtonDefaults.IconSize),
+                )
+                Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+                Text(stringResource(R.string.market_filter_apply))
+            }
+        }
+    }
+}
+
+@Composable
+private fun SectionLabel(text: String) {
+    Text(
+        text = text,
+        style = MaterialTheme.typography.titleSmall,
+        fontWeight = FontWeight.Medium,
+    )
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun CategoryDropdown(
+    state: HomeUiState,
+    onUpdate: (Filter, String?) -> Unit,
+) {
+    var expanded by remember { mutableStateOf(false) }
+    val current = state.filters[Filter.CATEGORY]
+    val selectedLabel = if (current == null) {
+        stringResource(R.string.market_filter_all)
+    } else {
+        state.categories.firstOrNull { it.id.toString() == current }?.name
+            ?: stringResource(R.string.market_filter_all)
+    }
+    Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+        SectionLabel(stringResource(R.string.market_filter_category))
+        ExposedDropdownMenuBox(
+            expanded = expanded,
+            onExpandedChange = { expanded = it },
+        ) {
+            MochiTextField(
+                value = selectedLabel,
+                onValueChange = {},
+                readOnly = true,
+                singleLine = true,
+                trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable),
+            )
+            ExposedDropdownMenu(
+                expanded = expanded,
+                onDismissRequest = { expanded = false },
+            ) {
+                MochiDropdownMenuItem(
+                    text = { Text(stringResource(R.string.market_filter_all)) },
+                    onClick = {
+                        onUpdate(Filter.CATEGORY, null)
+                        expanded = false
+                    },
+                )
+                for (category in state.categories) {
+                    MochiDropdownMenuItem(
+                        text = { Text(category.name) },
+                        onClick = {
+                            onUpdate(Filter.CATEGORY, category.id.toString())
+                            expanded = false
+                        },
+                    )
+                }
+            }
+        }
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun SortDropdown(
+    state: HomeUiState,
+    onUpdate: (Filter, String?) -> Unit,
+) {
+    var expanded by remember { mutableStateOf(false) }
+    val sortOptions = listOf(
+        null to stringResource(R.string.market_filter_sort_default),
+        "recent" to stringResource(R.string.market_filter_sort_recent),
+        "price_low" to stringResource(R.string.market_filter_sort_price_low),
+        "price_high" to stringResource(R.string.market_filter_sort_price_high),
+        "rating" to stringResource(R.string.market_filter_sort_rating),
+    )
+    val current = state.filters[Filter.SORT]
+    val selectedLabel = sortOptions.firstOrNull { it.first == current }?.second
+        ?: stringResource(R.string.market_filter_sort_default)
+    Box {
+        ExposedDropdownMenuBox(
+            expanded = expanded,
+            onExpandedChange = { expanded = it },
+        ) {
+            MochiTextField(
+                value = selectedLabel,
+                onValueChange = {},
+                readOnly = true,
+                singleLine = true,
+                trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable),
+            )
+            ExposedDropdownMenu(
+                expanded = expanded,
+                onDismissRequest = { expanded = false },
+            ) {
+                for ((value, label) in sortOptions) {
+                    MochiDropdownMenuItem(
+                        text = { Text(label) },
+                        onClick = {
+                            onUpdate(Filter.SORT, value)
+                            expanded = false
+                        },
+                    )
+                }
+            }
+        }
+    }
+}

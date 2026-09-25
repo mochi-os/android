@@ -18,6 +18,9 @@
     <string name="common_back">തിരികെ</string>
     <string name="common_close">അടയ്ക്കുക</string>
     <string name="common_cancel">റദ്ദാക്കുക</string>
+    <string name="common_filter">ഫിൽട്ടർ</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">ഫിൽട്ടർ നീക്കം ചെയ്യുക</string>
     <string name="common_confirm">സ്ഥിരീകരിക്കുക</string>
     <string name="common_save">സേവ് ചെയ്യുക</string>
     <string name="common_saving">സംരക്ഷിക്കുന്നു…</string>

@@ -51,8 +51,11 @@ import org.mochios.android.format.formatFingerprint
 import org.mochios.android.format.formatPrice
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.ui.components.ChoiceFilter
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.FilterBar
+import org.mochios.android.ui.components.FilterBarStyle
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
@@ -62,9 +65,6 @@ import org.mochios.staff.model.PendingListing
 import org.mochios.staff.ui.components.ScoreColorChip
 import org.mochios.staff.ui.components.StaffCardAction
 import org.mochios.staff.ui.components.StaffCardMenu
-import org.mochios.staff.ui.components.StaffFilter
-import org.mochios.staff.ui.components.StaffFilterStyle
-import org.mochios.staff.ui.components.StaffFilters
 import org.mochios.staff.ui.components.StaffStatusBadge
 import org.mochios.staff.ui.components.StaffUserAvatar
 import org.mochios.staff.ui.dialog.ListingActionDialog
@@ -167,12 +167,12 @@ private fun ListingsBody(
     onRetry: () -> Unit,
 ) {
     Column(Modifier.fillMaxSize()) {
-        StaffFilters(
-            style = StaffFilterStyle.Sheet,
+        FilterBar(
+            style = FilterBarStyle.Sheet,
             sheetOpen = filtersOpen,
             onSheetDismiss = onFiltersDismiss,
             filters = listOf(
-                StaffFilter(
+                ChoiceFilter(
                     label = stringResource(R.string.staff_listings_filter_status_label),
                     chipLabel = stringResource(R.string.staff_filter_label_status),
                     anyLabel = stringResource(R.string.staff_listings_any_status),
@@ -180,7 +180,7 @@ private fun ListingsBody(
                     current = state.status,
                     onSelect = onStatusChange,
                 ),
-                StaffFilter(
+                ChoiceFilter(
                     label = stringResource(R.string.staff_listings_filter_moderation_label),
                     chipLabel = stringResource(R.string.staff_filter_label_moderation),
                     anyLabel = stringResource(R.string.staff_listings_any_moderation),

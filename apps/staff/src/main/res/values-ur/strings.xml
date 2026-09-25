@@ -280,9 +280,6 @@
     <string name="staff_disputes_stripe_subscription_canceled">سبسکرپشن منسوخ</string>
     <string name="staff_disputes_stripe_unrecognized">ناقابل شناخت ادائیگی</string>
     <string name="staff_disputes_view">دیکھیں</string>
-    <string name="staff_filter_chip_remove">فلٹر ہٹائیں</string>
-    <string name="staff_filter">فلٹر</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">نگرانی</string>
     <string name="staff_filter_label_seller">فروخت کنندہ</string>
     <string name="staff_filter_label_status">حالت</string>

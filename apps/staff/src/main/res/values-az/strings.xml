@@ -266,9 +266,6 @@
     <string name="staff_disputes_status_responded">Cavablandırıldı</string>
     <string name="staff_disputes_status_reviewing">Nəzərdən keçirilir</string>
     <string name="staff_disputes_view">Bax</string>
-    <string name="staff_filter_chip_remove">Filtri sil</string>
-    <string name="staff_filter">Filtr</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderasiya</string>
     <string name="staff_filter_label_seller">Satıcı</string>
     <string name="staff_filter_label_status">Status</string>

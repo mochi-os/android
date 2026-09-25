@@ -280,9 +280,6 @@
     <string name="staff_disputes_stripe_subscription_canceled">ยกเลิกการสมัครสมาชิก</string>
     <string name="staff_disputes_stripe_unrecognized">เรียกเก็บเงินไม่รู้จัก</string>
     <string name="staff_disputes_view">ดู</string>
-    <string name="staff_filter_chip_remove">ลบตัวกรอง</string>
-    <string name="staff_filter">กรอง</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">การตรวจสอบ</string>
     <string name="staff_filter_label_seller">ผู้ขาย</string>
     <string name="staff_filter_label_status">สถานะ</string>

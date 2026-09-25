@@ -18,6 +18,9 @@
     <string name="common_back">ກັບຄືນ</string>
     <string name="common_close">ປິດ</string>
     <string name="common_cancel">ຍົກເລີກ</string>
+    <string name="common_filter">ຕົວກອງ</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">ລົບຕົວກອງ</string>
     <string name="common_confirm">ຢືນຢັນ</string>
     <string name="common_save">ບັນທຶກ</string>
     <string name="common_saving">ກຳລັງບັນທຶກ…</string>

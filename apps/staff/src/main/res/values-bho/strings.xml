@@ -245,9 +245,6 @@
     <string name="staff_disputes_status_responded">जवाब दिहल</string>
     <string name="staff_disputes_status_reviewing">समीक्षा कर रहल बा</string>
     <string name="staff_disputes_view">देखीं</string>
-    <string name="staff_filter_chip_remove">फिल्टर हटाईं</string>
-    <string name="staff_filter">फिल्टर</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">मॉडरेशन</string>
     <string name="staff_filter_label_seller">बेचवइया</string>
     <string name="staff_filter_label_status">स्थिति</string>

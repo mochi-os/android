@@ -280,9 +280,6 @@
     <string name="staff_disputes_stripe_subscription_canceled">претплатата е откажана</string>
     <string name="staff_disputes_stripe_unrecognized">непрепознатлива наплата</string>
     <string name="staff_disputes_view">Прикажи</string>
-    <string name="staff_filter_chip_remove">Отстрани филтер</string>
-    <string name="staff_filter">Филтер</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Модерација</string>
     <string name="staff_filter_label_seller">Продавач</string>
     <string name="staff_filter_label_status">Статус</string>

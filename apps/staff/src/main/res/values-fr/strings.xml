@@ -280,9 +280,6 @@
     <string name="staff_disputes_stripe_subscription_canceled">abonnement annulé</string>
     <string name="staff_disputes_stripe_unrecognized">débit non reconnu</string>
     <string name="staff_disputes_view">Vue</string>
-    <string name="staff_filter_chip_remove">Supprimer le filtre</string>
-    <string name="staff_filter">Filtrer</string>
-    <string name="staff_filter_chip_template">%1$s : %2$s</string>
     <string name="staff_filter_label_moderation">Modération</string>
     <string name="staff_filter_label_seller">Vendeur</string>
     <string name="staff_filter_label_status">Statut</string>

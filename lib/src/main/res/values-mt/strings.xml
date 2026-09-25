@@ -18,6 +18,9 @@
     <string name="common_back">Lura</string>
     <string name="common_close">Agħlaq</string>
     <string name="common_cancel">Ikkanċella</string>
+    <string name="common_filter">Iffiltra</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Neħħi l-filtru</string>
     <string name="common_confirm">Ikkonferma</string>
     <string name="common_save">Issejvja</string>
     <string name="common_saving">Qed jiġi ssejvjat…</string>

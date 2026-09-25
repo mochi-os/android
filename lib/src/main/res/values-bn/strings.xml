@@ -18,6 +18,9 @@
     <string name="common_back">ফিরে যান</string>
     <string name="common_close">বন্ধ করুন</string>
     <string name="common_cancel">বাতিল করুন</string>
+    <string name="common_filter">ফিল্টার</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">ফিল্টার সরান</string>
     <string name="common_confirm">নিশ্চিত করুন</string>
     <string name="common_save">সংরক্ষণ করুন</string>
     <string name="common_saving">সংরক্ষণ করা হচ্ছে…</string>

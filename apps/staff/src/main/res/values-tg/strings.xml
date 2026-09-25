@@ -252,9 +252,6 @@
     <string name="staff_disputes_status_responded">Ҷавоб дода шуд</string>
     <string name="staff_disputes_status_reviewing">Шарҳ дар ҳоли иҷро</string>
     <string name="staff_disputes_view">Намоиш</string>
-    <string name="staff_filter_chip_remove">Филтрро тоза кардан</string>
-    <string name="staff_filter">Филтр</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Модератсия</string>
     <string name="staff_filter_label_seller">Фурӯшанда</string>
     <string name="staff_filter_label_status">Вазъ</string>

@@ -18,6 +18,9 @@
     <string name="common_back">Înapoi</string>
     <string name="common_close">Închide</string>
     <string name="common_cancel">Anulează</string>
+    <string name="common_filter">Filtrează</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Elimină filtrul</string>
     <string name="common_confirm">Confirmă</string>
     <string name="common_save">Salvează</string>
     <string name="common_saving">Se salvează…</string>

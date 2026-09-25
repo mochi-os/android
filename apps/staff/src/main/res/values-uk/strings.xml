@@ -280,9 +280,6 @@
     <string name="staff_disputes_stripe_subscription_canceled">підписку скасовано</string>
     <string name="staff_disputes_stripe_unrecognized">невпізнане списання</string>
     <string name="staff_disputes_view">Переглянути</string>
-    <string name="staff_filter_chip_remove">Видалити фільтр</string>
-    <string name="staff_filter">Фільтр</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Модерація</string>
     <string name="staff_filter_label_seller">Продавець</string>
     <string name="staff_filter_label_status">Статус</string>

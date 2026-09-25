@@ -18,6 +18,9 @@
     <string name="common_back">უკან</string>
     <string name="common_close">დახურვა</string>
     <string name="common_cancel">გაუქმება</string>
+    <string name="common_filter">ფილტრი</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">ფილტრის წაშლა</string>
     <string name="common_confirm">დადასტურება</string>
     <string name="common_save">შენახვა</string>
     <string name="common_saving">შენახვა…</string>

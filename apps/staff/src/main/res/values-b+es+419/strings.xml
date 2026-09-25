@@ -280,9 +280,6 @@
     <string name="staff_disputes_stripe_subscription_canceled">suscripción cancelada</string>
     <string name="staff_disputes_stripe_unrecognized">cargo no reconocido</string>
     <string name="staff_disputes_view">Ver</string>
-    <string name="staff_filter_chip_remove">Quitar filtro</string>
-    <string name="staff_filter">Filtrar</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderación</string>
     <string name="staff_filter_label_seller">Vendedor</string>
     <string name="staff_filter_label_status">Estado</string>

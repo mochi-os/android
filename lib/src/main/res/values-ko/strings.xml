@@ -18,6 +18,9 @@
     <string name="common_back">뒤로</string>
     <string name="common_close">닫기</string>
     <string name="common_cancel">취소</string>
+    <string name="common_filter">필터</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">필터 제거</string>
     <string name="common_confirm">확인</string>
     <string name="common_save">저장</string>
     <string name="common_saving">저장 중…</string>

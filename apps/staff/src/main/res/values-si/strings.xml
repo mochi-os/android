@@ -248,9 +248,6 @@
     <string name="staff_disputes_status_responded">ප්‍රතිචාර දැක්වූ</string>
     <string name="staff_disputes_status_reviewing">සමාලෝචනය කරමින්</string>
     <string name="staff_disputes_view">බලන්න</string>
-    <string name="staff_filter_chip_remove">පෙරහන ඉවත් කරන්න</string>
-    <string name="staff_filter">පෙරහන</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">මෝඩරේෂන්</string>
     <string name="staff_filter_label_seller">විකුණුම්කරු</string>
     <string name="staff_filter_label_status">තත්ත්වය</string>

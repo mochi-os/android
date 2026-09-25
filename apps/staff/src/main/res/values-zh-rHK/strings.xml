@@ -113,8 +113,6 @@
     <string name="staff_config_saving">正在儲存…</string>
     <string name="staff_dashboard_order_fallback">訂單 #%1$s</string>
     <string name="staff_disputes_meta_seller_response">賣家的回應</string>
-    <string name="staff_filter_chip_remove">移除篩選</string>
-    <string name="staff_filter">篩選</string>
     <string name="staff_listings_approve">批准</string>
     <string name="staff_reports_meta_target">目標</string>
     <string name="staff_sidebar_market">市場</string>
@@ -349,7 +347,6 @@
     <string name="staff_disputes_stripe_product_unacceptable">產品不符要求</string>
     <string name="staff_disputes_stripe_subscription_canceled">訂閱已取消</string>
     <string name="staff_disputes_stripe_unrecognized">無法識別的收費</string>
-    <string name="staff_filter_chip_template">%1$s：%2$s</string>
     <string name="staff_listings_action_approve_title">批准刊登</string>
     <string name="staff_listings_action_reject_title">拒絕刊登</string>
     <string name="staff_listings_action_remove_title">移除刊登</string>

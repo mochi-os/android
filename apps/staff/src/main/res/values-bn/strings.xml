@@ -280,9 +280,6 @@
     <string name="staff_disputes_stripe_subscription_canceled">সাবস্ক্রিপশন বাতিল</string>
     <string name="staff_disputes_stripe_unrecognized">অপরিচিত চার্জ</string>
     <string name="staff_disputes_view">দেখুন</string>
-    <string name="staff_filter_chip_remove">ফিল্টার সরান</string>
-    <string name="staff_filter">ফিল্টার</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">মডারেশন</string>
     <string name="staff_filter_label_seller">বিক্রেতা</string>
     <string name="staff_filter_label_status">স্থিতি</string>

@@ -24,6 +24,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import org.mochios.android.ui.components.FilterButton
 import org.mochios.android.ui.components.MochiFab
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.staff.R
@@ -34,7 +35,6 @@ import org.mochios.staff.ui.categories.CategoriesScreen
 import org.mochios.staff.ui.categories.CategoriesViewModel
 import org.mochios.staff.ui.categories.CategoryFormScreen
 import org.mochios.staff.ui.components.LocalStaffMe
-import org.mochios.staff.ui.components.StaffFilterButton
 import org.mochios.staff.ui.components.StaffLayout
 import org.mochios.staff.ui.config.ConfigScreen
 import org.mochios.staff.ui.dashboard.DashboardScreen
@@ -103,7 +103,7 @@ fun NavGraphBuilder.staffNavGraph(
             currentRoute = StaffApp.ACCOUNTS,
             titleRes = R.string.staff_sidebar_accounts,
             topBarActions = {
-                StaffFilterButton(
+                FilterButton(
                     activeCount = listOfNotNull(state.status, state.seller).size,
                     onClick = { filtersOpen = true },
                 )
@@ -126,7 +126,7 @@ fun NavGraphBuilder.staffNavGraph(
             currentRoute = StaffApp.LISTINGS,
             titleRes = R.string.staff_sidebar_listings,
             topBarActions = {
-                StaffFilterButton(
+                FilterButton(
                     activeCount = listOfNotNull(state.status, state.moderation).size,
                     onClick = { filtersOpen = true },
                 )
@@ -154,7 +154,7 @@ fun NavGraphBuilder.staffNavGraph(
             currentRoute = StaffApp.REPORTS,
             titleRes = R.string.staff_sidebar_reports,
             topBarActions = {
-                StaffFilterButton(
+                FilterButton(
                     activeCount = listOfNotNull(state.type, state.status).size,
                     onClick = { filtersOpen = true },
                 )

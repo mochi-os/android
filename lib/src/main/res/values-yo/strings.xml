@@ -18,6 +18,9 @@
     <string name="common_back">Padà</string>
     <string name="common_close">Tì</string>
     <string name="common_cancel">Fagilé</string>
+    <string name="common_filter">Yọ́</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Yọ àyàn kúrò</string>
     <string name="common_confirm">Fọwọ́sí</string>
     <string name="common_save">Fi pamọ́</string>
     <string name="common_saving">Ń tọ́jú…</string>

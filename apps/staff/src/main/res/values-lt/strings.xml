@@ -280,9 +280,6 @@
     <string name="staff_disputes_stripe_subscription_canceled">prenumerata atšaukta</string>
     <string name="staff_disputes_stripe_unrecognized">neatpažintas mokestis</string>
     <string name="staff_disputes_view">Peržiūrėti</string>
-    <string name="staff_filter_chip_remove">Pašalinti filtrą</string>
-    <string name="staff_filter">Filtras</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderavimas</string>
     <string name="staff_filter_label_seller">Pardavėjas</string>
     <string name="staff_filter_label_status">Būsena</string>

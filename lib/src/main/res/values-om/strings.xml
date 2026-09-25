@@ -18,6 +18,9 @@
     <string name="common_back">Duuba</string>
     <string name="common_close">Cufi</string>
     <string name="common_cancel">Haquu</string>
+    <string name="common_filter">Filannoo</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Calaltuu balleessuu</string>
     <string name="common_confirm">Mirkaneessi</string>
     <string name="common_save">Olkaa\'i</string>
     <string name="common_saving">Olkaa\'aa jira…</string>

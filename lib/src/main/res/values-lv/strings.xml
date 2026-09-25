@@ -18,6 +18,9 @@
     <string name="common_back">Atpakaļ</string>
     <string name="common_close">Aizvērt</string>
     <string name="common_cancel">Atcelt</string>
+    <string name="common_filter">Filtrēt</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Noņemt filtru</string>
     <string name="common_confirm">Apstiprināt</string>
     <string name="common_save">Saglabāt</string>
     <string name="common_saving">Saglabā…</string>

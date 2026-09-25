@@ -231,9 +231,6 @@
     <string name="staff_disputes_stripe_product_unacceptable">produit inacceptable</string>
     <string name="staff_disputes_stripe_subscription_canceled">abonnement annulé</string>
     <string name="staff_disputes_stripe_unrecognized">frais non reconnus</string>
-    <string name="staff_filter_chip_remove">Retirer le filtre</string>
-    <string name="staff_filter">Filtrer</string>
-    <string name="staff_filter_chip_template">%1$s : %2$s</string>
     <string name="staff_filter_label_moderation">Modération</string>
     <string name="staff_filter_label_seller">Vendeur</string>
     <string name="staff_listings_action_approve_title">Approuver l\'annonce</string>

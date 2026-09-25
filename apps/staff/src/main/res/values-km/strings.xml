@@ -248,9 +248,6 @@
     <string name="staff_disputes_status_responded">បានឆ្លើយតប</string>
     <string name="staff_disputes_status_reviewing">កំពុងពិនិត្យ</string>
     <string name="staff_disputes_view">មើល</string>
-    <string name="staff_filter_chip_remove">លុបតម្រង</string>
-    <string name="staff_filter">តម្រង</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">ការសម្របសម្រួល</string>
     <string name="staff_filter_label_seller">អ្នកលក់</string>
     <string name="staff_filter_label_status">ស្ថានភាព</string>

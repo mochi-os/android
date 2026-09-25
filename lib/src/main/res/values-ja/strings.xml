@@ -18,6 +18,9 @@
     <string name="common_back">戻る</string>
     <string name="common_close">閉じる</string>
     <string name="common_cancel">キャンセル</string>
+    <string name="common_filter">フィルター</string>
+    <string name="common_filter_chip">%1$s:%2$s</string>
+    <string name="common_filter_remove">フィルターを削除</string>
     <string name="common_confirm">確認</string>
     <string name="common_save">保存</string>
     <string name="common_saving">保存中…</string>

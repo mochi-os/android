@@ -280,9 +280,6 @@
     <string name="staff_disputes_stripe_subscription_canceled">langganan dibatalkan</string>
     <string name="staff_disputes_stripe_unrecognized">caj tidak dikenali</string>
     <string name="staff_disputes_view">Lihat</string>
-    <string name="staff_filter_chip_remove">Buang penapis</string>
-    <string name="staff_filter">Tapis</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Penyederhanaan</string>
     <string name="staff_filter_label_seller">Penjual</string>
     <string name="staff_filter_label_status">Status</string>

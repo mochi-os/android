@@ -280,9 +280,6 @@
     <string name="staff_disputes_stripe_subscription_canceled">abonements atcelts</string>
     <string name="staff_disputes_stripe_unrecognized">neatpazīts maksājums</string>
     <string name="staff_disputes_view">Skatīt</string>
-    <string name="staff_filter_chip_remove">Noņemt filtru</string>
-    <string name="staff_filter">Filtrēt</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderēšana</string>
     <string name="staff_filter_label_seller">Pārdevējs</string>
     <string name="staff_filter_label_status">Statuss</string>

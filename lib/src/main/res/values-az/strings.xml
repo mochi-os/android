@@ -18,6 +18,9 @@
     <string name="common_back">Geri</string>
     <string name="common_close">Bağla</string>
     <string name="common_cancel">Ləğv et</string>
+    <string name="common_filter">Filtr</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Filtri sil</string>
     <string name="common_confirm">Təsdiqlə</string>
     <string name="common_save">Saxla</string>
     <string name="common_saving">Saxlanılır…</string>

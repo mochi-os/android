@@ -248,9 +248,6 @@
     <string name="staff_disputes_status_responded">பதிலளிக்கப்பட்டது</string>
     <string name="staff_disputes_status_reviewing">மதிப்பாய்வு செய்கிறது</string>
     <string name="staff_disputes_view">காட்டு</string>
-    <string name="staff_filter_chip_remove">வடிகட்டியை அகற்று</string>
-    <string name="staff_filter">வடிகட்டி</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">மிதப்படுத்தல்</string>
     <string name="staff_filter_label_seller">விற்பனையாளர்</string>
     <string name="staff_filter_label_status">நிலை</string>

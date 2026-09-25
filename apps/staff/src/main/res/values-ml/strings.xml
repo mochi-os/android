@@ -248,9 +248,6 @@
     <string name="staff_disputes_status_responded">പ്രതികരിച്ചു</string>
     <string name="staff_disputes_status_reviewing">അവലോകനം ചെയ്യുന്നു</string>
     <string name="staff_disputes_view">കാണുക</string>
-    <string name="staff_filter_chip_remove">ഫിൽട്ടർ നീക്കം ചെയ്യുക</string>
-    <string name="staff_filter">ഫിൽട്ടർ</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">മോഡറേഷൻ</string>
     <string name="staff_filter_label_seller">വിൽപ്പനക്കാരൻ</string>
     <string name="staff_filter_label_status">സ്ഥിതി</string>

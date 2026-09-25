@@ -53,7 +53,9 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.format.formatFingerprint
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
+import org.mochios.android.ui.components.ChoiceFilter
 import org.mochios.android.ui.components.EmptyState
+import org.mochios.android.ui.components.FilterBar
 import org.mochios.android.ui.components.LoadingState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
@@ -61,8 +63,6 @@ import org.mochios.staff.R
 import org.mochios.staff.model.Review
 import org.mochios.staff.ui.components.StaffCardAction
 import org.mochios.staff.ui.components.StaffCardMenu
-import org.mochios.staff.ui.components.StaffFilter
-import org.mochios.staff.ui.components.StaffFilters
 import org.mochios.staff.ui.components.StaffStatusBadge
 import org.mochios.staff.ui.components.StaffUserAvatar
 
@@ -155,9 +155,9 @@ private fun ReviewsBody(
             .fillMaxSize()
             .padding(padding),
     ) {
-        StaffFilters(
+        FilterBar(
             filters = listOf(
-                StaffFilter(
+                ChoiceFilter(
                     label = stringResource(R.string.staff_filter_label_status),
                     chipLabel = stringResource(R.string.staff_filter_label_status),
                     anyLabel = stringResource(R.string.staff_reviews_filter_all),

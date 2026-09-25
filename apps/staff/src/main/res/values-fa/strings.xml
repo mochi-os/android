@@ -280,9 +280,6 @@
     <string name="staff_disputes_stripe_subscription_canceled">اشتراک لغو شد</string>
     <string name="staff_disputes_stripe_unrecognized">هزینهٔ ناشناخته</string>
     <string name="staff_disputes_view">نمایش</string>
-    <string name="staff_filter_chip_remove">حذف فیلتر</string>
-    <string name="staff_filter">فیلتر</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">نظارت</string>
     <string name="staff_filter_label_seller">فروشنده</string>
     <string name="staff_filter_label_status">وضعیت</string>

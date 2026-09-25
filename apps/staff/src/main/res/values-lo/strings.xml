@@ -248,9 +248,6 @@
     <string name="staff_disputes_status_responded">ຕອບແລ້ວ</string>
     <string name="staff_disputes_status_reviewing">ກຳລັງກວດສອບ</string>
     <string name="staff_disputes_view">ເບິ່ງ</string>
-    <string name="staff_filter_chip_remove">ລົບຕົວກອງ</string>
-    <string name="staff_filter">ຕົວກອງ</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">ການກວດກາ</string>
     <string name="staff_filter_label_seller">ຜູ້ຂາຍ</string>
     <string name="staff_filter_label_status">ສະຖານະ</string>

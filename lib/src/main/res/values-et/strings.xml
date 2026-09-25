@@ -18,6 +18,9 @@
     <string name="common_back">Tagasi</string>
     <string name="common_close">Sulge</string>
     <string name="common_cancel">Tühista</string>
+    <string name="common_filter">Filter</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Eemalda filter</string>
     <string name="common_confirm">Kinnita</string>
     <string name="common_save">Salvesta</string>
     <string name="common_saving">Salvestamine…</string>

@@ -18,6 +18,9 @@
     <string name="common_back">ਵਾਪਸ</string>
     <string name="common_close">ਬੰਦ ਕਰੋ</string>
     <string name="common_cancel">ਰੱਦ ਕਰੋ</string>
+    <string name="common_filter">ਫਿਲਟਰ</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">ਫਿਲਟਰ ਹਟਾਓ</string>
     <string name="common_confirm">ਪੁਸ਼ਟੀ ਕਰੋ</string>
     <string name="common_save">ਸੰਭਾਲੋ</string>
     <string name="common_saving">ਸੰਭਾਲ ਰਿਹਾ ਹੈ…</string>

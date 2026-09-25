@@ -43,16 +43,16 @@ import org.mochios.android.format.formatFingerprint
 import org.mochios.android.format.formatPrice
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.ui.components.ChoiceFilter
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.FilterBar
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.staff.R
 import org.mochios.staff.model.Dispute
 import org.mochios.staff.ui.components.StaffCardAction
 import org.mochios.staff.ui.components.StaffCardMenu
-import org.mochios.staff.ui.components.StaffFilter
-import org.mochios.staff.ui.components.StaffFilters
 import org.mochios.staff.ui.components.StaffStatusBadge
 import org.mochios.staff.ui.components.StaffUserAvatar
 import org.mochios.staff.ui.dialog.DisputeReviewDialog
@@ -125,9 +125,9 @@ private fun DisputesBody(
     onRetry: () -> Unit,
 ) {
     Column(Modifier.fillMaxSize()) {
-        StaffFilters(
+        FilterBar(
             filters = listOf(
-                StaffFilter(
+                ChoiceFilter(
                     label = stringResource(R.string.staff_disputes_filter_status_label),
                     chipLabel = stringResource(R.string.staff_filter_label_status),
                     anyLabel = stringResource(R.string.staff_disputes_any_status),

@@ -246,9 +246,6 @@
     <string name="staff_disputes_status_responded">ځواب ورکړل شو</string>
     <string name="staff_disputes_status_reviewing">د بیاکتلو په حال کې</string>
     <string name="staff_disputes_view">ولید</string>
-    <string name="staff_filter_chip_remove">فلټر لرې کړئ</string>
-    <string name="staff_filter">فلټر</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">اعتدال</string>
     <string name="staff_filter_label_seller">پلورونکی</string>
     <string name="staff_filter_label_status">حالت</string>

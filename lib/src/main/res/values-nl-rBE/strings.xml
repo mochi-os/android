@@ -18,6 +18,9 @@
     <string name="common_back">Terug</string>
     <string name="common_close">Sluiten</string>
     <string name="common_cancel">Annuleren</string>
+    <string name="common_filter">Filter</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Filter verwijderen</string>
     <string name="common_confirm">Bevestigen</string>
     <string name="common_save">Opslaan</string>
     <string name="common_saving">Opslaan…</string>

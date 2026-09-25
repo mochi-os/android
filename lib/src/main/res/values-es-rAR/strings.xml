@@ -3,6 +3,9 @@
 
     <string name="auth_continue">Continuá</string>
     <string name="common_save">Guardá</string>
+    <string name="common_filter">Filtrar</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Quitar filtro</string>
     <string name="common_delete">Eliminá</string>
     <string name="common_add">Agregá</string>
     <string name="common_logout">Cerrá sesión</string>

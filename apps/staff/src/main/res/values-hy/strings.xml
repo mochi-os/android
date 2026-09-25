@@ -266,9 +266,6 @@
     <string name="staff_disputes_status_responded">Արձագանքվել է</string>
     <string name="staff_disputes_status_reviewing">Վերանայվում է</string>
     <string name="staff_disputes_view">Դիտել</string>
-    <string name="staff_filter_chip_remove">Հեռացնել զտիչը</string>
-    <string name="staff_filter">Զտել</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Մոդերացիայի բաժիններ</string>
     <string name="staff_filter_label_seller">Վաճառող</string>
     <string name="staff_filter_label_status">Կարգավիճակ</string>

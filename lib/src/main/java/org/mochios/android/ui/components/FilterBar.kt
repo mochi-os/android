@@ -3,7 +3,7 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
-package org.mochios.staff.ui.components
+package org.mochios.android.ui.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -20,7 +20,6 @@ import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -29,13 +28,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import org.mochios.android.ui.components.FilterChipRow
-import org.mochios.android.ui.components.MochiBottomSheet
-import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.staff.R
+import org.mochios.android.R
 
 /**
- * One filter in [StaffFilters].
+ * One single-choice filter in a [FilterBar].
  *
  * @property label Name of the filter, shown before its choices.
  * @property chipLabel Label of the removable chip shown while the filter is set.
@@ -44,7 +40,7 @@ import org.mochios.staff.R
  * @property current The picked wire value, or null for any.
  * @property onSelect Called with the picked wire value, or null to clear it.
  */
-data class StaffFilter(
+data class ChoiceFilter(
     val label: String,
     val chipLabel: String,
     val anyLabel: String,
@@ -53,38 +49,38 @@ data class StaffFilter(
     val onSelect: (String?) -> Unit,
 )
 
-/** Where [StaffFilters] puts the choices. */
-enum class StaffFilterStyle {
+/** Where [FilterBar] puts the choices. */
+enum class FilterBarStyle {
     /** A sideways-scrolling line of choice chips per filter, above the list. */
     Chips,
 
     /**
-     * In a bottom sheet opened from [StaffFilterButton], with a removable chip
+     * In a bottom sheet opened from [FilterButton], with a removable chip
      * above the list for each filter that is set. For many or long choices.
      */
     Sheet,
 }
 
 /**
- * The filter block every staff list screen puts above its list: its filters in
+ * The filter block a list screen puts above its list: its filters in
  * the given [style], then an optional [search] field. The search text gets no
  * chip, since the field already shows it.
  *
- * @param sheetOpen Whether the [StaffFilterStyle.Sheet] sheet is showing.
+ * @param sheetOpen Whether the [FilterBarStyle.Sheet] sheet is showing.
  * @param onSheetDismiss Called when that sheet is swiped or tapped away.
  */
 @Composable
-fun StaffFilters(
-    filters: List<StaffFilter>,
+fun FilterBar(
+    filters: List<ChoiceFilter>,
     modifier: Modifier = Modifier,
-    style: StaffFilterStyle = StaffFilterStyle.Chips,
+    style: FilterBarStyle = FilterBarStyle.Chips,
     sheetOpen: Boolean = false,
     onSheetDismiss: () -> Unit = {},
     search: (@Composable () -> Unit)? = null,
 ) {
     Column(modifier = modifier.fillMaxWidth()) {
         when (style) {
-            StaffFilterStyle.Chips -> {
+            FilterBarStyle.Chips -> {
                 val labelled = filters.size > 1
                 filters.forEach { filter ->
                     ChoiceChips(
@@ -96,23 +92,23 @@ fun StaffFilters(
                 }
                 search?.invoke()
             }
-            StaffFilterStyle.Sheet -> {
+            FilterBarStyle.Sheet -> {
                 search?.invoke()
                 ActiveChips(filters)
             }
         }
     }
-    if (style == StaffFilterStyle.Sheet && sheetOpen) {
-        FilterSheet(filters, onSheetDismiss)
+    if (style == FilterBarStyle.Sheet && sheetOpen) {
+        ChoiceSheet(filters, onSheetDismiss)
     }
 }
 
 /**
- * Top bar button that opens a [StaffFilterStyle.Sheet] filter sheet, badged
+ * Top bar button that opens a [FilterBarStyle.Sheet] filter sheet, badged
  * with how many filters are set.
  */
 @Composable
-fun StaffFilterButton(activeCount: Int, onClick: () -> Unit) {
+fun FilterButton(activeCount: Int, onClick: () -> Unit) {
     MochiIconButton(onClick = onClick) {
         BadgedBox(
             badge = {
@@ -121,18 +117,18 @@ fun StaffFilterButton(activeCount: Int, onClick: () -> Unit) {
                 }
             },
         ) {
-            Icon(Icons.Default.FilterList, contentDescription = stringResource(R.string.staff_filter))
+            Icon(Icons.Default.FilterList, contentDescription = stringResource(R.string.common_filter))
         }
     }
 }
 
 /**
- * The choices of [filter] as chips, [StaffFilter.anyLabel] first: on one line
+ * The choices of [filter] as chips, [ChoiceFilter.anyLabel] first: on one line
  * that scrolls sideways when [singleLine], wrapping onto more lines otherwise.
  */
 @Composable
 private fun ChoiceChips(
-    filter: StaffFilter,
+    filter: ChoiceFilter,
     labelled: Boolean,
     singleLine: Boolean,
     modifier: Modifier = Modifier,
@@ -159,34 +155,29 @@ private fun ChoiceChips(
     )
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun FilterSheet(filters: List<StaffFilter>, onDismiss: () -> Unit) {
-    MochiBottomSheet(onDismissRequest = onDismiss) {
-        Column(
-            modifier = Modifier.padding(start = 16.dp, end = 16.dp, bottom = 24.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp),
-        ) {
+private fun ChoiceSheet(filters: List<ChoiceFilter>, onDismiss: () -> Unit) {
+    FilterSheet(
+        title = stringResource(R.string.common_filter),
+        onDismiss = onDismiss,
+        titleWeight = null,
+        sectionSpacing = 8.dp,
+    ) {
+        filters.forEach { filter ->
             Text(
-                text = stringResource(R.string.staff_filter),
-                style = MaterialTheme.typography.titleLarge,
+                text = filter.label,
+                style = MaterialTheme.typography.titleSmall,
+                fontWeight = FontWeight.Medium,
+                modifier = Modifier.padding(top = 8.dp),
             )
-            filters.forEach { filter ->
-                Text(
-                    text = filter.label,
-                    style = MaterialTheme.typography.titleSmall,
-                    fontWeight = FontWeight.Medium,
-                    modifier = Modifier.padding(top = 8.dp),
-                )
-                ChoiceChips(filter = filter, labelled = false, singleLine = false)
-            }
+            ChoiceChips(filter = filter, labelled = false, singleLine = false)
         }
     }
 }
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun ActiveChips(filters: List<StaffFilter>) {
+private fun ActiveChips(filters: List<ChoiceFilter>) {
     val set = filters.filter { filter -> !filter.current.isNullOrBlank() }
     if (set.isEmpty()) {
         return
@@ -209,7 +200,7 @@ private fun ActiveChips(filters: List<StaffFilter>) {
                 label = {
                     Text(
                         text = stringResource(
-                            R.string.staff_filter_chip_template,
+                            R.string.common_filter_chip,
                             filter.chipLabel,
                             value,
                         ),
@@ -218,7 +209,7 @@ private fun ActiveChips(filters: List<StaffFilter>) {
                 trailingIcon = {
                     Icon(
                         Icons.Default.Close,
-                        contentDescription = stringResource(R.string.staff_filter_chip_remove),
+                        contentDescription = stringResource(R.string.common_filter_remove),
                         modifier = Modifier.size(AssistChipDefaults.IconSize),
                     )
                 },

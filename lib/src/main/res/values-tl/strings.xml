@@ -18,6 +18,9 @@
     <string name="common_back">Bumalik</string>
     <string name="common_close">Isara</string>
     <string name="common_cancel">Kanselahin</string>
+    <string name="common_filter">I-filter</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Tanggalin ang filter</string>
     <string name="common_confirm">Kumpirmahin</string>
     <string name="common_save">I-save</string>
     <string name="common_saving">Nagse-save…</string>

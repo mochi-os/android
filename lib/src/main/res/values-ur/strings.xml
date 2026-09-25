@@ -18,6 +18,9 @@
     <string name="common_back">واپس</string>
     <string name="common_close">بند کریں</string>
     <string name="common_cancel">منسوخ کریں</string>
+    <string name="common_filter">فلٹر</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">فلٹر ہٹائیں</string>
     <string name="common_confirm">تصدیق کریں</string>
     <string name="common_save">محفوظ کریں</string>
     <string name="common_saving">محفوظ کیا جا رہا ہے…</string>

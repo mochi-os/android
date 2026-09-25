@@ -18,6 +18,9 @@
     <string name="common_back">Atgal</string>
     <string name="common_close">Uždaryti</string>
     <string name="common_cancel">Atšaukti</string>
+    <string name="common_filter">Filtras</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Pašalinti filtrą</string>
     <string name="common_confirm">Patvirtinti</string>
     <string name="common_save">Išsaugoti</string>
     <string name="common_saving">Išsaugoma…</string>

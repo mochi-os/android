@@ -280,9 +280,6 @@
     <string name="staff_disputes_stripe_subscription_canceled">η συνδρομή ακυρώθηκε</string>
     <string name="staff_disputes_stripe_unrecognized">μη αναγνωρισμένη χρέωση</string>
     <string name="staff_disputes_view">Προβολή</string>
-    <string name="staff_filter_chip_remove">Αφαίρεση φίλτρου</string>
-    <string name="staff_filter">Φίλτρο</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Συντονισμός</string>
     <string name="staff_filter_label_seller">Πωλητής</string>
     <string name="staff_filter_label_status">Κατάσταση</string>

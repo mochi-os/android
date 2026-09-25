@@ -280,9 +280,6 @@
     <string name="staff_disputes_stripe_subscription_canceled">구독 취소됨</string>
     <string name="staff_disputes_stripe_unrecognized">알 수 없는 청구</string>
     <string name="staff_disputes_view">보기</string>
-    <string name="staff_filter_chip_remove">필터 제거</string>
-    <string name="staff_filter">필터</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">조정</string>
     <string name="staff_filter_label_seller">판매자</string>
     <string name="staff_filter_label_status">상태</string>
