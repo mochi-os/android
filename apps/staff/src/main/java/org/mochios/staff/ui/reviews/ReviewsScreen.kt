@@ -56,7 +56,6 @@ import org.mochios.android.format.formatFingerprint
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.EmptyState
-import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.LoadingState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButton
@@ -70,6 +69,7 @@ import org.mochios.staff.ui.components.FilterChipsRow
 import org.mochios.staff.ui.components.StaffCardAction
 import org.mochios.staff.ui.components.StaffCardMenu
 import org.mochios.staff.ui.components.StaffStatusBadge
+import org.mochios.staff.ui.components.StaffUserAvatar
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -272,9 +272,6 @@ private fun ReviewRow(
     val format = LocalFormat.current
     val reviewerName = review.reviewerName.orEmpty().ifBlank { formatFingerprint(review.reviewerFingerprint.orEmpty()) }
     val subjectName = review.subjectName.orEmpty().ifBlank { formatFingerprint(review.subjectFingerprint.orEmpty()) }
-    val avatarUrl = review.reviewer.takeIf { reviewer -> reviewer.isNotBlank() }?.let { reviewer ->
-        "/staff/-/user/$reviewer/asset/avatar"
-    }
     MochiCard(
         modifier = Modifier
             .fillMaxWidth()
@@ -287,7 +284,7 @@ private fun ReviewRow(
         ) {
             Column(modifier = Modifier.weight(1f)) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    EntityAvatar(name = reviewerName, src = avatarUrl, seed = review.reviewer, size = 36.dp)
+                    StaffUserAvatar(name = reviewerName, id = review.reviewer, size = 36.dp)
                     Spacer(modifier = Modifier.width(10.dp))
                     Text(
                         text = reviewerName,

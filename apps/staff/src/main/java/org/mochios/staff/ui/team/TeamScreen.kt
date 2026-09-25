@@ -50,7 +50,6 @@ import org.mochios.android.format.formatFingerprint
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.EmptyState
-import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.LoadingState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
@@ -62,6 +61,7 @@ import org.mochios.staff.R
 import org.mochios.staff.model.StaffMember
 import org.mochios.staff.ui.components.LocalStaffMe
 import org.mochios.staff.ui.components.StaffStatusBadge
+import org.mochios.staff.ui.components.StaffUserAvatar
 
 /**
  * Staff team management. Admin gating here is cosmetic; the server enforces it
@@ -167,7 +167,6 @@ private fun MemberRow(
 ) {
     val format = LocalFormat.current
     val displayName = member.name?.takeIf { it.isNotBlank() } ?: formatFingerprint(member.fingerprint)
-    val avatarUrl = "/staff/-/user/${member.id}/asset/avatar"
 
     MochiCard(
         modifier = Modifier
@@ -177,7 +176,7 @@ private fun MemberRow(
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                EntityAvatar(name = displayName, src = avatarUrl, seed = member.id, size = 32.dp)
+                StaffUserAvatar(name = displayName, id = member.id, size = 32.dp)
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
                     text = displayName,
@@ -235,12 +234,7 @@ private fun AddedByLine(member: StaffMember, added: String) {
             )
         } else {
             val name = member.addedbyName?.takeIf { it.isNotBlank() } ?: formatFingerprint(member.addedbyFingerprint)
-            EntityAvatar(
-                name = name,
-                src = "/staff/-/user/${member.addedby}/asset/avatar",
-                seed = member.addedby,
-                size = 20.dp,
-            )
+            StaffUserAvatar(name = name, id = member.addedby, size = 20.dp)
             Spacer(modifier = Modifier.width(6.dp))
             Text(
                 text = name,

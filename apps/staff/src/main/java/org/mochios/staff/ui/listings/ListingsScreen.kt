@@ -52,7 +52,6 @@ import org.mochios.android.format.formatPrice
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EmptyState
-import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.FilterDropdown
 import org.mochios.android.ui.components.InfiniteList
@@ -67,6 +66,7 @@ import org.mochios.staff.ui.components.ScoreColorChip
 import org.mochios.staff.ui.components.StaffCardAction
 import org.mochios.staff.ui.components.StaffCardMenu
 import org.mochios.staff.ui.components.StaffStatusBadge
+import org.mochios.staff.ui.components.StaffUserAvatar
 import org.mochios.staff.ui.dialog.ListingActionDialog
 
 /**
@@ -288,9 +288,9 @@ private fun ListingRow(
 
             // Seller — avatar + name + onboarded tick.
             Row(verticalAlignment = Alignment.CenterVertically) {
-                EntityAvatar(
+                StaffUserAvatar(
                     name = listing.sellerName.ifBlank { listing.seller },
-                    seed = listing.seller,
+                    id = listing.seller,
                     size = 20.dp,
                 )
                 Spacer(Modifier.width(6.dp))

@@ -57,7 +57,6 @@ import org.mochios.android.format.formatFingerprint
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EmptyState
-import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.FilterDropdown
 import org.mochios.android.ui.components.InfiniteList
@@ -73,6 +72,7 @@ import org.mochios.staff.ui.components.FilterChipsRow
 import org.mochios.staff.ui.components.StaffCardAction
 import org.mochios.staff.ui.components.StaffCardMenu
 import org.mochios.staff.ui.components.StaffStatusBadge
+import org.mochios.staff.ui.components.StaffUserAvatar
 import org.mochios.staff.ui.dialog.AccountActionDialog
 import org.mochios.staff.ui.dialog.AccountAuditDialog
 
@@ -255,9 +255,9 @@ private fun AccountRow(
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                EntityAvatar(
+                StaffUserAvatar(
                     name = displayName,
-                    seed = account.id,
+                    id = account.id,
                     size = 32.dp,
                 )
                 Spacer(Modifier.width(8.dp))

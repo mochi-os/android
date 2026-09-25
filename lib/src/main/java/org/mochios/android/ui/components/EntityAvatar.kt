@@ -14,7 +14,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -66,6 +66,7 @@ fun rememberServerUrl(): String {
  * Circular avatar for a person entity. [src] may be absolute or server-relative
  * ("/people/<id>/-/avatar"), which `RelativeAssetUrlMapper` expands against the
  * session server; a blank or failing URL falls back to seeded initials.
+ * [fallbackSrc] is tried when [src] is blank or fails, before the initials.
  */
 @Composable
 fun EntityAvatar(
@@ -79,8 +80,13 @@ fun EntityAvatar(
     contentColor: Color = Color.Black,
     borderColor: Color = MaterialTheme.colorScheme.outlineVariant,
     modifier: Modifier = Modifier,
+    fallbackSrc: String? = null,
 ) {
-    var loadFailed by remember(src) { mutableStateOf(false) }
+    val sources = remember(src, fallbackSrc) {
+        listOfNotNull(src, fallbackSrc).filter { source -> source.isNotBlank() }
+    }
+    var failures by remember(sources) { mutableIntStateOf(0) }
+    val current = sources.getOrNull(failures)
 
     val ringColor = accent?.let { parseHexColour(it) }
     val ringModifier = when {
@@ -90,17 +96,16 @@ fun EntityAvatar(
     }
     val outer = modifier.size(size).then(ringModifier).clip(shape)
 
-    val useImage = !src.isNullOrBlank() && !loadFailed
-    if (useImage) {
+    if (current != null) {
         val context = LocalContext.current
         AsyncImage(
             model = ImageRequest.Builder(context)
-                .data(src)
+                .data(current)
                 .crossfade(true)
                 .build(),
             contentDescription = stringResource(R.string.entity_avatar_alt, name),
             contentScale = ContentScale.Crop,
-            onError = { loadFailed = true },
+            onError = { failures += 1 },
             modifier = outer,
         )
     } else {

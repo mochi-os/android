@@ -53,7 +53,6 @@ import org.mochios.android.format.formatFingerprint
 import org.mochios.android.format.formatPrice
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
-import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiTab
 import org.mochios.android.ui.components.MochiTabRow
@@ -66,6 +65,7 @@ import org.mochios.staff.model.ModerationEntry
 import org.mochios.staff.ui.components.KpiCard
 import org.mochios.staff.ui.components.ScoreColorChip
 import org.mochios.staff.ui.components.StaffStatusBadge
+import org.mochios.staff.ui.components.StaffUserAvatar
 
 /**
  * Port of `apps/staff/web/src/features/dashboard/dashboard-page.tsx`. The
@@ -352,12 +352,7 @@ private fun SignupCard(signup: ActivitySignup) {
     val name = signup.name.ifBlank { formatFingerprint(signup.fingerprint) }
     ActivityCard {
         Row(verticalAlignment = Alignment.CenterVertically) {
-            EntityAvatar(
-                name = name,
-                src = if (signup.id.isNotBlank()) "/people/${signup.id}/-/avatar" else null,
-                seed = signup.id.ifBlank { name },
-                size = 40.dp,
-            )
+            StaffUserAvatar(name = name, id = signup.id, size = 40.dp)
             Spacer(Modifier.width(12.dp))
             Column(modifier = Modifier.weight(1f)) {
                 Text(
@@ -520,12 +515,7 @@ private fun LabeledEntity(label: String, id: String, name: String, fingerprint: 
     val display = name.ifBlank { formatFingerprint(fingerprint) }
     Row(verticalAlignment = Alignment.CenterVertically) {
         FieldLabel(text = label)
-        EntityAvatar(
-            name = display,
-            src = if (id.isNotBlank()) "/people/$id/-/avatar" else null,
-            seed = id.ifBlank { display },
-            size = 20.dp,
-        )
+        StaffUserAvatar(name = display, id = id, size = 20.dp)
         Spacer(Modifier.width(6.dp))
         Text(
             text = display,
@@ -566,12 +556,7 @@ private fun FieldLabel(text: String) {
 @Composable
 private fun Byline(id: String, name: String, time: String) {
     Row(verticalAlignment = Alignment.CenterVertically) {
-        EntityAvatar(
-            name = name,
-            src = if (id.isNotBlank()) "/people/$id/-/avatar" else null,
-            seed = id.ifBlank { name },
-            size = 20.dp,
-        )
+        StaffUserAvatar(name = name, id = id, size = 20.dp)
         Spacer(Modifier.width(6.dp))
         Text(
             text = name,

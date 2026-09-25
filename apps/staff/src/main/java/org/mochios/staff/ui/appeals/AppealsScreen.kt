@@ -41,7 +41,6 @@ import org.mochios.android.format.formatFingerprint
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EmptyState
-import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiCard
@@ -51,6 +50,7 @@ import org.mochios.staff.ui.components.ScoreColorChip
 import org.mochios.staff.ui.components.StaffCardAction
 import org.mochios.staff.ui.components.StaffCardMenu
 import org.mochios.staff.ui.components.StaffStatusBadge
+import org.mochios.staff.ui.components.StaffUserAvatar
 import org.mochios.staff.ui.dialog.AppealDecideDialog
 
 /**
@@ -182,9 +182,9 @@ private fun AppealRow(
 
             // Seller row.
             Row(verticalAlignment = Alignment.CenterVertically) {
-                EntityAvatar(
+                StaffUserAvatar(
                     name = appeal.sellerName.ifBlank { appeal.seller },
-                    seed = appeal.seller,
+                    id = appeal.seller,
                     size = 20.dp,
                 )
                 Spacer(Modifier.width(6.dp))
