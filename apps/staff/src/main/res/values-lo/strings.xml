@@ -340,7 +340,6 @@
     <string name="staff_reviews_filter_all">ສະຖານະທັງໝົດ</string>
     <string name="staff_reviews_filter_published">ເຜີຍແຜ່ແລ້ວ</string>
     <string name="staff_reviews_filter_removed">ລຶບແລ້ວ</string>
-    <string name="staff_reviews_overflow_actions">ການກະທຳ</string>
     <string name="staff_reviews_remove_confirm">ລຶບອອກ</string>
     <string name="staff_reviews_remove_title">ລຶບຄຳວິຈານ?</string>
     <string name="staff_reviews_role_buyer">ຜູ້ຊື້</string>

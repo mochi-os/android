@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">Publicat</string>
     <string name="staff_reviews_filter_removed">Eliminat</string>
     <string name="staff_reviews_order_label">comanda núm. %1$s</string>
-    <string name="staff_reviews_overflow_actions">Accions</string>
     <string name="staff_reviews_remove_confirm">Elimina</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s el %3$s. Eliminar definitivament aquesta ressenya? Aquesta acció no es pot desfer.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Eliminar definitivament aquesta ressenya? Aquesta acció no es pot desfer.</string>

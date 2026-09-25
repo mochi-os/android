@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">প্রকাশিত</string>
     <string name="staff_reviews_filter_removed">সরানো হয়েছে</string>
     <string name="staff_reviews_order_label">অর্ডার #%1$s</string>
-    <string name="staff_reviews_overflow_actions">অ্যাকশন</string>
     <string name="staff_reviews_remove_confirm">সরান</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$s তারিখে। এই পর্যালোচনাটি স্থায়ীভাবে মুছে ফেলুন? এই পদক্ষেপটি ফিরিয়ে আনা যাবে না।</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s। এই পর্যালোচনাটি স্থায়ীভাবে মুছে ফেলুন? এই পদক্ষেপটি ফিরিয়ে আনা যাবে না।</string>

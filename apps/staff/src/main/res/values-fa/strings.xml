@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">منتشر شد</string>
     <string name="staff_reviews_filter_removed">حذف شد</string>
     <string name="staff_reviews_order_label">سفارش #%1$s</string>
-    <string name="staff_reviews_overflow_actions">عملیات</string>
     <string name="staff_reviews_remove_confirm">حذف</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s در %3$s. این نقد را برای همیشه حذف کنیم؟ این عمل قابل بازگشت نیست.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. این نقد را برای همیشه حذف کنیم؟ این عمل قابل بازگشت نیست.</string>

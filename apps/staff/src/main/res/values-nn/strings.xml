@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">Publisert</string>
     <string name="staff_reviews_filter_removed">Fjerna</string>
     <string name="staff_reviews_order_label">tinging #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Handlingar</string>
     <string name="staff_reviews_remove_confirm">Fjern</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s den %3$s. Slette denne vurderinga permanent? Denne handlinga kan ikkje angrast.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Slette denne vurderinga permanent? Denne handlinga kan ikkje angrast.</string>

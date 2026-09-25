@@ -23,7 +23,6 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
-import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.StarOutline
 import androidx.compose.material.icons.outlined.Block
@@ -64,11 +63,12 @@ import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
-import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.staff.R
 import org.mochios.staff.model.Review
 import org.mochios.staff.ui.components.FilterChipSpec
 import org.mochios.staff.ui.components.FilterChipsRow
+import org.mochios.staff.ui.components.StaffCardAction
+import org.mochios.staff.ui.components.StaffCardMenu
 import org.mochios.staff.ui.components.StaffStatusBadge
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -289,22 +289,21 @@ private fun ReviewRow(
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     EntityAvatar(name = reviewerName, src = avatarUrl, seed = review.reviewer, size = 36.dp)
                     Spacer(modifier = Modifier.width(10.dp))
-                    Column(modifier = Modifier.weight(1f)) {
-                        Row(
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.spacedBy(6.dp),
-                        ) {
-                            Text(
-                                text = reviewerName,
-                                style = MaterialTheme.typography.titleSmall,
-                                fontWeight = FontWeight.SemiBold,
-                                maxLines = 1,
-                                overflow = TextOverflow.Ellipsis,
-                                modifier = Modifier.weight(1f, fill = false),
-                            )
-                            ReviewerRoleChip(role = review.role)
-                        }
-                    }
+                    Text(
+                        text = reviewerName,
+                        style = MaterialTheme.typography.titleSmall,
+                        fontWeight = FontWeight.SemiBold,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier.weight(1f),
+                    )
+                }
+                Spacer(modifier = Modifier.height(8.dp))
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(6.dp),
+                ) {
+                    ReviewerRoleChip(role = review.role)
                     StaffStatusBadge(status = review.status)
                 }
                 Spacer(modifier = Modifier.height(6.dp))
@@ -348,46 +347,24 @@ private fun ReviewRow(
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
-            OverflowMenu(review = review, onAction = onAction, onAskRemove = onAskRemove)
-        }
-    }
-}
-
-@Composable
-private fun OverflowMenu(
-    review: Review,
-    onAction: (Review, String) -> Unit,
-    onAskRemove: (Review) -> Unit,
-) {
-    var expanded by remember { mutableStateOf(false) }
-    Box {
-        MochiIconButton(onClick = { expanded = true }) {
-            Icon(
-                Icons.Default.MoreHoriz,
-                contentDescription = stringResource(R.string.staff_reviews_overflow_actions),
+            StaffCardMenu(
+                actions = listOf(
+                    if (review.status == "removed") {
+                        StaffCardAction(
+                            label = stringResource(R.string.staff_reviews_action_restore),
+                            icon = Icons.Outlined.Restore,
+                            onClick = { onAction(review, "restore") },
+                        )
+                    } else {
+                        StaffCardAction(
+                            label = stringResource(R.string.staff_reviews_action_remove),
+                            icon = Icons.Outlined.Block,
+                            destructive = true,
+                            onClick = { onAskRemove(review) },
+                        )
+                    },
+                ),
             )
-        }
-        MochiDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
-            if (review.status == "removed") {
-                MochiDropdownMenuItem(
-                    text = { Text(stringResource(R.string.staff_reviews_action_restore)) },
-                    onClick = {
-                        expanded = false
-                        onAction(review, "restore")
-                    },
-                    leadingIcon = { Icon(Icons.Outlined.Restore, contentDescription = null) },
-                )
-            }
-            if (review.status != "removed") {
-                MochiDropdownMenuItem(
-                    text = { Text(stringResource(R.string.staff_reviews_action_remove)) },
-                    onClick = {
-                        expanded = false
-                        onAskRemove(review)
-                    },
-                    leadingIcon = { Icon(Icons.Outlined.Block, contentDescription = null) },
-                )
-            }
         }
     }
 }

@@ -362,7 +362,6 @@
     <string name="staff_reviews_filter_published">Dərc edildi</string>
     <string name="staff_reviews_filter_removed">Silindi</string>
     <string name="staff_reviews_order_label">sifariş #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Əməliyyatlar</string>
     <string name="staff_reviews_remove_confirm">Sil</string>
     <string name="staff_reviews_remove_title">Rəyi silək?</string>
     <string name="staff_reviews_role_buyer">Alıcı</string>

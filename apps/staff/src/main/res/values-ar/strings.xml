@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">منشور</string>
     <string name="staff_reviews_filter_removed">تمت الإزالة</string>
     <string name="staff_reviews_order_label">الطلب رقم %1$s</string>
-    <string name="staff_reviews_overflow_actions">الإجراءات</string>
     <string name="staff_reviews_remove_confirm">إزالة</string>
     <string name="staff_reviews_remove_desc_full">%1$s ← %2$s في %3$s. حذف هذه المراجعة نهائيًا؟ لا يمكن التراجع عن هذا الإجراء.</string>
     <string name="staff_reviews_remove_desc_short">%1$s ← %2$s. حذف هذه المراجعة نهائيًا؟ لا يمكن التراجع عن هذا الإجراء.</string>

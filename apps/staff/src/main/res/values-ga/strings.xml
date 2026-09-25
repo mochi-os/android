@@ -362,7 +362,6 @@
     <string name="staff_reviews_filter_published">Foilsithe</string>
     <string name="staff_reviews_filter_removed">Bainte</string>
     <string name="staff_reviews_order_label">ordú #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Gníomhartha</string>
     <string name="staff_reviews_remove_confirm">Bain</string>
     <string name="staff_reviews_remove_title">Bain athbhreithniú?</string>
     <string name="staff_reviews_role_buyer">Ceannaitheoir</string>

@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">I publikuar</string>
     <string name="staff_reviews_filter_removed">I hequr</string>
     <string name="staff_reviews_order_label">porosia #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Veprimet</string>
     <string name="staff_reviews_remove_confirm">Hiq</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s më %3$s. Fshi përgjithmonë këtë vlerësim? Ky veprim nuk mund të zhbëhet.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Fshi përgjithmonë këtë vlerësim? Ky veprim nuk mund të zhbëhet.</string>

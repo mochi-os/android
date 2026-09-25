@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">Objavljeno</string>
     <string name="staff_reviews_filter_removed">Uklonjeno</string>
     <string name="staff_reviews_order_label">narudžba #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Radnje</string>
     <string name="staff_reviews_remove_confirm">Ukloni</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s dana %3$s. Trajno obrisati ovu recenziju? Ova radnja se ne može poništiti.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Trajno obrisati ovu recenziju? Ova radnja se ne može poništiti.</string>

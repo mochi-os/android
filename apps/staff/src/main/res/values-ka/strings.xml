@@ -352,7 +352,6 @@
     <string name="staff_reviews_filter_all">ყველა სტატუსი</string>
     <string name="staff_reviews_filter_published">გამოქვეყნებული</string>
     <string name="staff_reviews_filter_removed">წაშლილი</string>
-    <string name="staff_reviews_overflow_actions">მოქმედებები</string>
     <string name="staff_reviews_remove_confirm">წაშლა</string>
     <string name="staff_reviews_remove_title">მიმოხილვის წაშლა?</string>
     <string name="staff_reviews_role_buyer">მყიდველი</string>

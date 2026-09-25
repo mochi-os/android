@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">Опубліковано</string>
     <string name="staff_reviews_filter_removed">Видалено</string>
     <string name="staff_reviews_order_label">замовлення № %1$s</string>
-    <string name="staff_reviews_overflow_actions">Дії</string>
     <string name="staff_reviews_remove_confirm">Видалити</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s від %3$s. Назавжди видалити цей відгук? Цю дію не можна скасувати.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Назавжди видалити цей відгук? Цю дію не можна скасувати.</string>

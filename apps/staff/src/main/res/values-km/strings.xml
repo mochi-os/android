@@ -340,7 +340,6 @@
     <string name="staff_reviews_filter_all">ស្ថានភាពទាំងអស់</string>
     <string name="staff_reviews_filter_published">បានផ្សព្វផ្សាយ</string>
     <string name="staff_reviews_filter_removed">បានយកចេញ</string>
-    <string name="staff_reviews_overflow_actions">សកម្មភាព</string>
     <string name="staff_reviews_remove_confirm">យកចេញ</string>
     <string name="staff_reviews_remove_title">យកការវាយតម្លៃចេញ?</string>
     <string name="staff_reviews_role_buyer">អ្នកទិញ</string>

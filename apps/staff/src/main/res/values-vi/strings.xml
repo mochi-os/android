@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">Đã xuất bản</string>
     <string name="staff_reviews_filter_removed">Đã xoá</string>
     <string name="staff_reviews_order_label">đơn hàng #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Hành động</string>
     <string name="staff_reviews_remove_confirm">Xoá</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s vào %3$s. Xóa vĩnh viễn đánh giá này? Hành động này không thể hoàn tác.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Xóa vĩnh viễn đánh giá này? Hành động này không thể hoàn tác.</string>

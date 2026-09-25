@@ -351,7 +351,6 @@
     <string name="staff_reviews_filter_all">Barcha holatlar</string>
     <string name="staff_reviews_filter_published">Nashr qilingan</string>
     <string name="staff_reviews_filter_removed">Olib tashlandi</string>
-    <string name="staff_reviews_overflow_actions">Amallar</string>
     <string name="staff_reviews_remove_confirm">Olib tashlash</string>
     <string name="staff_reviews_remove_title">Sharhni olib tashlasinmi?</string>
     <string name="staff_reviews_role_buyer">Xaridor</string>

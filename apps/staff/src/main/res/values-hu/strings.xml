@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">Közzétéve</string>
     <string name="staff_reviews_filter_removed">Eltávolítva</string>
     <string name="staff_reviews_order_label">rendelés #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Műveletek</string>
     <string name="staff_reviews_remove_confirm">Eltávolítás</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s ekkor: %3$s. Véglegesen törli ezt az értékelést? Ez a művelet nem vonható vissza.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Véglegesen törli ezt az értékelést? Ez a művelet nem vonható vissza.</string>

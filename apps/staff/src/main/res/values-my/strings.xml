@@ -340,7 +340,6 @@
     <string name="staff_reviews_filter_all">အခြေအနေအားလုံး</string>
     <string name="staff_reviews_filter_published">ထုတ်ဝေပြီးသည်</string>
     <string name="staff_reviews_filter_removed">ဖယ်ရှားပြီး</string>
-    <string name="staff_reviews_overflow_actions">လုပ်ဆောင်ချက်များ</string>
     <string name="staff_reviews_remove_confirm">ဖယ်ရှား</string>
     <string name="staff_reviews_remove_title">သုံးသပ်ချက် ဖယ်ရှားမလား?</string>
     <string name="staff_reviews_role_buyer">ဝယ်သူ</string>

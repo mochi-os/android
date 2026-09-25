@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">公開済み</string>
     <string name="staff_reviews_filter_removed">削除済み</string>
     <string name="staff_reviews_order_label">注文 #%1$s</string>
-    <string name="staff_reviews_overflow_actions">操作</string>
     <string name="staff_reviews_remove_confirm">削除</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s(%3$s)。このレビューを完全に削除しますか?この操作は取り消せません。</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s。このレビューを完全に削除しますか?この操作は取り消せません。</string>

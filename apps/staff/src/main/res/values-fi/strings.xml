@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">Julkaistu</string>
     <string name="staff_reviews_filter_removed">Poistettu</string>
     <string name="staff_reviews_order_label">tilaus #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Toiminnot</string>
     <string name="staff_reviews_remove_confirm">Poista</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$s. Poistetaanko tämä arvostelu pysyvästi? Tätä toimintoa ei voi peruuttaa.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Poistetaanko tämä arvostelu pysyvästi? Tätä toimintoa ei voi peruuttaa.</string>

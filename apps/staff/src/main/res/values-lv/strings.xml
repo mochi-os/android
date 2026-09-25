@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">Publicēts</string>
     <string name="staff_reviews_filter_removed">Noņemts</string>
     <string name="staff_reviews_order_label">pasūtījums Nr. %1$s</string>
-    <string name="staff_reviews_overflow_actions">Darbības</string>
     <string name="staff_reviews_remove_confirm">Noņemt</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$s. Pavisam dzēst šo atsauksmi? Šo darbību nevar atsaukt.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Pavisam dzēst šo atsauksmi? Šo darbību nevar atsaukt.</string>

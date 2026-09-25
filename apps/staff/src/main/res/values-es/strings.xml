@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">Publicado</string>
     <string name="staff_reviews_filter_removed">Eliminado</string>
     <string name="staff_reviews_order_label">pedido n.º %1$s</string>
-    <string name="staff_reviews_overflow_actions">Acciones</string>
     <string name="staff_reviews_remove_confirm">Eliminar</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s el %3$s. ¿Eliminar esta reseña de forma permanente? Esta acción no se puede deshacer.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. ¿Eliminar esta reseña de forma permanente? Esta acción no se puede deshacer.</string>

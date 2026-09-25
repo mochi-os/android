@@ -362,7 +362,6 @@
     <string name="staff_reviews_filter_published">Жарияланды</string>
     <string name="staff_reviews_filter_removed">Жойылды</string>
     <string name="staff_reviews_order_label">тапсырыс #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Әрекеттер</string>
     <string name="staff_reviews_remove_confirm">Жою</string>
     <string name="staff_reviews_remove_title">Шолуды жою керек пе?</string>
     <string name="staff_reviews_role_buyer">Сатып алушы</string>

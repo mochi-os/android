@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">Publicat</string>
     <string name="staff_reviews_filter_removed">Eliminat</string>
     <string name="staff_reviews_order_label">comanda nr. %1$s</string>
-    <string name="staff_reviews_overflow_actions">Acțiuni</string>
     <string name="staff_reviews_remove_confirm">Elimină</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s pe %3$s. Ștergi definitiv această recenzie? Această acțiune nu poate fi anulată.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Ștergi definitiv această recenzie? Această acțiune nu poate fi anulată.</string>

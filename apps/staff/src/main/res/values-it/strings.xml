@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">Pubblicato</string>
     <string name="staff_reviews_filter_removed">Rimosso</string>
     <string name="staff_reviews_order_label">ordine n. %1$s</string>
-    <string name="staff_reviews_overflow_actions">Azioni</string>
     <string name="staff_reviews_remove_confirm">Rimuovi</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s il %3$s. Eliminare definitivamente questa recensione? Questa azione non può essere annullata.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Eliminare definitivamente questa recensione? Questa azione non può essere annullata.</string>

@@ -368,7 +368,6 @@
     <string name="staff_reviews_filter_published">Gepubliceerd</string>
     <string name="staff_reviews_filter_removed">Verwijderd</string>
     <string name="staff_reviews_order_label">bestelling nr. %1$s</string>
-    <string name="staff_reviews_overflow_actions">Acties</string>
     <string name="staff_reviews_remove_confirm">Verwijderen</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s op %3$s. Deze beoordeling permanent verwijderen? Dit kan niet ongedaan worden gemaakt.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Deze beoordeling permanent verwijderen? Dit kan niet ongedaan worden gemaakt.</string>

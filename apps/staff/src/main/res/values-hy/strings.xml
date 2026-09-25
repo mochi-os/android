@@ -362,7 +362,6 @@
     <string name="staff_reviews_filter_published">Հրապարակված է</string>
     <string name="staff_reviews_filter_removed">Հեռացված է</string>
     <string name="staff_reviews_order_label">պատվեր #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Գործողություններ</string>
     <string name="staff_reviews_remove_confirm">Հեռացնել</string>
     <string name="staff_reviews_remove_title">Հեռացնե՞լ կարծիքը։</string>
     <string name="staff_reviews_role_buyer">Գնորդ</string>

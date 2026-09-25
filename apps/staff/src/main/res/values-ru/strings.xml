@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">Опубликовано</string>
     <string name="staff_reviews_filter_removed">Удалено</string>
     <string name="staff_reviews_order_label">заказ № %1$s</string>
-    <string name="staff_reviews_overflow_actions">Действия</string>
     <string name="staff_reviews_remove_confirm">Удалить</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s от %3$s. Удалить этот отзыв навсегда? Это действие нельзя отменить.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Удалить этот отзыв навсегда? Это действие нельзя отменить.</string>

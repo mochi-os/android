@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">게시됨</string>
     <string name="staff_reviews_filter_removed">제거됨</string>
     <string name="staff_reviews_order_label">주문 #%1$s</string>
-    <string name="staff_reviews_overflow_actions">작업</string>
     <string name="staff_reviews_remove_confirm">제거</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s (%3$s). 이 리뷰를 영구 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. 이 리뷰를 영구 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.</string>

@@ -362,7 +362,6 @@
     <string name="staff_reviews_filter_published">Na-publish</string>
     <string name="staff_reviews_filter_removed">Naalis</string>
     <string name="staff_reviews_order_label">order #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Mga aksyon</string>
     <string name="staff_reviews_remove_confirm">Alisin</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s noong %3$s. Permanenteng burahin ang review na ito? Hindi maaaring ibalik ang aksyong ito.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Permanenteng burahin ang review na ito? Hindi maaaring ibalik ang aksyong ito.</string>

@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">Δημοσιεύτηκε</string>
     <string name="staff_reviews_filter_removed">Αφαιρέθηκε</string>
     <string name="staff_reviews_order_label">παραγγελία #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Ενέργειες</string>
     <string name="staff_reviews_remove_confirm">Αφαίρεση</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s στις %3$s. Διαγραφή αυτής της κριτικής μόνιμα; Αυτή η ενέργεια δεν αναιρείται.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Διαγραφή αυτής της κριτικής μόνιμα; Αυτή η ενέργεια δεν αναιρείται.</string>

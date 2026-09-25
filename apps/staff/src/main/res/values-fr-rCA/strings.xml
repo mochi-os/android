@@ -307,7 +307,6 @@
     <string name="staff_reviews_filter_published">Publiés</string>
     <string name="staff_reviews_filter_removed">Supprimés</string>
     <string name="staff_reviews_order_label">commande nº %1$s</string>
-    <string name="staff_reviews_overflow_actions">Actions</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s le %3$s. Supprimer définitivement cet avis ? Cette action est irréversible.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Supprimer définitivement cet avis ? Cette action est irréversible.</string>
     <string name="staff_reviews_remove_title">Supprimer l\'avis ?</string>

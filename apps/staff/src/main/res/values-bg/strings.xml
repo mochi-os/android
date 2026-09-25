@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">Публикуван</string>
     <string name="staff_reviews_filter_removed">Премахнато</string>
     <string name="staff_reviews_order_label">поръчка #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Действия</string>
     <string name="staff_reviews_remove_confirm">Премахни</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s на %3$s. Изтрий ли този отзив за постоянно? Това действие не може да бъде отменено.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Изтрий ли този отзив за постоянно? Това действие не може да бъде отменено.</string>

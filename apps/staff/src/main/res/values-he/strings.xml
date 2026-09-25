@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">פורסם</string>
     <string name="staff_reviews_filter_removed">הוסר</string>
     <string name="staff_reviews_order_label">הזמנה #%1$s</string>
-    <string name="staff_reviews_overflow_actions">פעולות</string>
     <string name="staff_reviews_remove_confirm">הסר</string>
     <string name="staff_reviews_remove_desc_full">%1$s ← %2$s בתאריך %3$s. למחוק ביקורת זו לצמיתות? לא ניתן לבטל פעולה זו.</string>
     <string name="staff_reviews_remove_desc_short">%1$s ← %2$s. למחוק ביקורת זו לצמיתות? לא ניתן לבטל פעולה זו.</string>

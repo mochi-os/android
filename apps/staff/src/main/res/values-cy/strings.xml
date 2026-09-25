@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">Wedi\'i gyhoeddi</string>
     <string name="staff_reviews_filter_removed">Wedi\'i dynnu</string>
     <string name="staff_reviews_order_label">archeb #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Gweithredoedd</string>
     <string name="staff_reviews_remove_confirm">Tynnu</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s ar %3$s. Dileu\'r adolygiad hwn yn barhaol? Ni ellir dadwneud y weithred hon.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Dileu\'r adolygiad hwn yn barhaol? Ni ellir dadwneud y weithred hon.</string>

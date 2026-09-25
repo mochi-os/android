@@ -336,7 +336,6 @@
     <string name="staff_reviews_filter_all">सब स्थिति</string>
     <string name="staff_reviews_filter_published">प्रकाशित</string>
     <string name="staff_reviews_filter_removed">हटावल गइल</string>
-    <string name="staff_reviews_overflow_actions">क्रिया</string>
     <string name="staff_reviews_remove_confirm">हटाईं</string>
     <string name="staff_reviews_remove_title">समीक्षा हटाईं?</string>
     <string name="staff_reviews_role_buyer">खरीदार</string>

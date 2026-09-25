@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">เผยแพร่แล้ว</string>
     <string name="staff_reviews_filter_removed">ลบแล้ว</string>
     <string name="staff_reviews_order_label">คำสั่งซื้อ #%1$s</string>
-    <string name="staff_reviews_overflow_actions">การกระทำ</string>
     <string name="staff_reviews_remove_confirm">ลบ</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s เมื่อ %3$s ลบรีวิวนี้ถาวร? การกระทำนี้ไม่สามารถยกเลิกได้</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s ลบรีวิวนี้ถาวร? การกระทำนี้ไม่สามารถยกเลิกได้</string>

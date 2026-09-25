@@ -347,7 +347,6 @@
     <string name="staff_reviews_filter_all">Бардык абалдар</string>
     <string name="staff_reviews_filter_published">Жарыяланды</string>
     <string name="staff_reviews_filter_removed">Алынды</string>
-    <string name="staff_reviews_overflow_actions">Аракеттер</string>
     <string name="staff_reviews_remove_confirm">Алуу</string>
     <string name="staff_reviews_remove_title">Пикирди аласызбы?</string>
     <string name="staff_reviews_role_buyer">Сатып алуучу</string>

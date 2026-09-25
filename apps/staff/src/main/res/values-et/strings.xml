@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">Avaldatud</string>
     <string name="staff_reviews_filter_removed">Eemaldatud</string>
     <string name="staff_reviews_order_label">tellimus #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Tegevused</string>
     <string name="staff_reviews_remove_confirm">Eemalda</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$s. Kustuta see arvustus jäädavalt? Seda toimingut ei saa tagasi võtta.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Kustuta see arvustus jäädavalt? Seda toimingut ei saa tagasi võtta.</string>

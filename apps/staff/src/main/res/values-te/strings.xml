@@ -340,7 +340,6 @@
     <string name="staff_reviews_filter_all">అన్ని స్థితులు</string>
     <string name="staff_reviews_filter_published">పబ్లిష్ చేయబడింది</string>
     <string name="staff_reviews_filter_removed">తొలగించబడింది</string>
-    <string name="staff_reviews_overflow_actions">చర్యలు</string>
     <string name="staff_reviews_remove_confirm">తొలగించండి</string>
     <string name="staff_reviews_remove_title">రివ్యూను తొలగించాలా?</string>
     <string name="staff_reviews_role_buyer">కొనుగోలుదారుడు</string>

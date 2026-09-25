@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">Објавено</string>
     <string name="staff_reviews_filter_removed">Отстрането</string>
     <string name="staff_reviews_order_label">нарачка #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Акции</string>
     <string name="staff_reviews_remove_confirm">Отстрани</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s на %3$s. Трајно избришете го овој преглед? Ова дејство не може да се поништи.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Трајно избришете го овој преглед? Ова дејство не може да се поништи.</string>

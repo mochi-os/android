@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">Birt</string>
     <string name="staff_reviews_filter_removed">Fjarlægt</string>
     <string name="staff_reviews_order_label">pöntun #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Aðgerðir</string>
     <string name="staff_reviews_remove_confirm">Fjarlægja</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s þann %3$s. Eyða þessari umsögn varanlega? Ekki er hægt að afturkalla þessa aðgerð.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Eyða þessari umsögn varanlega? Ekki er hægt að afturkalla þessa aðgerð.</string>

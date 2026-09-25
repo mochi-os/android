@@ -340,7 +340,6 @@
     <string name="staff_reviews_filter_all">എല്ലാ സ്റ്റാറ്റസുകളും</string>
     <string name="staff_reviews_filter_published">പ്രസിദ്ധീകരിച്ചു</string>
     <string name="staff_reviews_filter_removed">നീക്കംചെയ്തു</string>
-    <string name="staff_reviews_overflow_actions">പ്രവർത്തനങ്ങൾ</string>
     <string name="staff_reviews_remove_confirm">നീക്കം ചെയ്യുക</string>
     <string name="staff_reviews_remove_title">അവലോകനം നീക്കം ചെയ്യണോ?</string>
     <string name="staff_reviews_role_buyer">വാങ്ങുന്നയാൾ</string>

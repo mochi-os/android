@@ -362,7 +362,6 @@
     <string name="staff_reviews_filter_published">Imechapishwa</string>
     <string name="staff_reviews_filter_removed">Imeondolewa</string>
     <string name="staff_reviews_order_label">agizo #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Vitendo</string>
     <string name="staff_reviews_remove_confirm">Ondoa</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s mnamo %3$s. Futa kabisa hakiki hii? Kitendo hiki hakiwezi kutenduliwa.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Futa kabisa hakiki hii? Kitendo hiki hakiwezi kutenduliwa.</string>

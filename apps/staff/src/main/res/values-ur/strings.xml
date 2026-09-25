@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">publish ہو گیا</string>
     <string name="staff_reviews_filter_removed">ہٹا دیا گیا</string>
     <string name="staff_reviews_order_label">آرڈر #%1$s</string>
-    <string name="staff_reviews_overflow_actions">ایکشنز</string>
     <string name="staff_reviews_remove_confirm">ہٹائیں</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s بتاریخ %3$s. اس جائزے کو مستقل طور پر حذف کریں؟ یہ عمل واپس نہیں ہو سکتا۔</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. اس جائزے کو مستقل طور پر حذف کریں؟ یہ عمل واپس نہیں ہو سکتا۔</string>

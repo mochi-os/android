@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">Publicado</string>
     <string name="staff_reviews_filter_removed">Eliminado</string>
     <string name="staff_reviews_order_label">pedido n.º %1$s</string>
-    <string name="staff_reviews_overflow_actions">Accións</string>
     <string name="staff_reviews_remove_confirm">Eliminar</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s o %3$s. Eliminar permanentemente esta crítica? Esta acción non se pode desfacer.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Eliminar permanentemente esta crítica? Esta acción non se pode desfacer.</string>

@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">Publikované</string>
     <string name="staff_reviews_filter_removed">Odstránené</string>
     <string name="staff_reviews_order_label">objednávka č. %1$s</string>
-    <string name="staff_reviews_overflow_actions">Akcie</string>
     <string name="staff_reviews_remove_confirm">Odstrániť</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s dňa %3$s. Trvalo odstrániť túto recenziu? Túto akciu nemožno vrátiť späť.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Trvalo odstrániť túto recenziu? Túto akciu nemožno vrátiť späť.</string>

@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">Yayınlandı</string>
     <string name="staff_reviews_filter_removed">Kaldırıldı</string>
     <string name="staff_reviews_order_label">sipariş #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Eylemler</string>
     <string name="staff_reviews_remove_confirm">Kaldır</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$s tarihinde. Bu değerlendirme kalıcı olarak silinsin mi? Bu işlem geri alınamaz.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Bu değerlendirme kalıcı olarak silinsin mi? Bu işlem geri alınamaz.</string>

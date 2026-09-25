@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">已发布</string>
     <string name="staff_reviews_filter_removed">已移除</string>
     <string name="staff_reviews_order_label">订单 #%1$s</string>
-    <string name="staff_reviews_overflow_actions">操作</string>
     <string name="staff_reviews_remove_confirm">移除</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s 于 %3$s。永久删除此评价?此操作无法撤销。</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s。永久删除此评价?此操作无法撤销。</string>

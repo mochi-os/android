@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">Objavljeno</string>
     <string name="staff_reviews_filter_removed">Odstranjeno</string>
     <string name="staff_reviews_order_label">naročilo #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Dejanja</string>
     <string name="staff_reviews_remove_confirm">Odstrani</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s dne %3$s. Trajno izbrisati to oceno? Tega dejanja ni mogoče razveljaviti.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Trajno izbrisati to oceno? Tega dejanja ni mogoče razveljaviti.</string>

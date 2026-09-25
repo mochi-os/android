@@ -378,7 +378,6 @@
     <string name="staff_reviews_filter_published">Published</string>
     <string name="staff_reviews_filter_removed">Removed</string>
     <string name="staff_reviews_order_label">order #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Actions</string>
     <string name="staff_reviews_remove_confirm">Remove</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s on %3$s. Permanently delete this review? This cannot be undone.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Permanently delete this review? This cannot be undone.</string>

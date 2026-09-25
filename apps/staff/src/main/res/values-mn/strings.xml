@@ -351,7 +351,6 @@
     <string name="staff_reviews_filter_all">Бүх төлөв</string>
     <string name="staff_reviews_filter_published">Нийтлэгдсэн</string>
     <string name="staff_reviews_filter_removed">Хасагдсан</string>
-    <string name="staff_reviews_overflow_actions">Үйлдлүүд</string>
     <string name="staff_reviews_remove_confirm">Хасах</string>
     <string name="staff_reviews_remove_title">Шүүмж хасах уу?</string>
     <string name="staff_reviews_role_buyer">Худалдан авагч</string>

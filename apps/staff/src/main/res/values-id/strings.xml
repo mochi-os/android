@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">Diterbitkan</string>
     <string name="staff_reviews_filter_removed">Dihapus</string>
     <string name="staff_reviews_order_label">pesanan #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Tindakan</string>
     <string name="staff_reviews_remove_confirm">Hapus</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s pada %3$s. Hapus permanen ulasan ini? Tindakan ini tidak dapat dibatalkan.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Hapus permanen ulasan ini? Tindakan ini tidak dapat dibatalkan.</string>

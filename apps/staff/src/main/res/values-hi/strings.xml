@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">पब्लिश किया गया</string>
     <string name="staff_reviews_filter_removed">हटाया गया</string>
     <string name="staff_reviews_order_label">ऑर्डर #%1$s</string>
-    <string name="staff_reviews_overflow_actions">एक्शन्स</string>
     <string name="staff_reviews_remove_confirm">हटाएँ</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s दिनांक %3$s. इस समीक्षा को स्थायी रूप से हटाएं? यह क्रिया पूर्ववत नहीं की जा सकती।</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. इस समीक्षा को स्थायी रूप से हटाएं? यह क्रिया पूर्ववत नहीं की जा सकती।</string>

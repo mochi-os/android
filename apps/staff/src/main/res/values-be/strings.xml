@@ -362,7 +362,6 @@
     <string name="staff_reviews_filter_published">Апублікавана</string>
     <string name="staff_reviews_filter_removed">Выдалена</string>
     <string name="staff_reviews_order_label">заказ #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Дзеянні</string>
     <string name="staff_reviews_remove_confirm">Выдаліць</string>
     <string name="staff_reviews_remove_title">Выдаліць водгук?</string>
     <string name="staff_reviews_role_buyer">Пакупнік</string>

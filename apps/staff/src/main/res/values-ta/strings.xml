@@ -340,7 +340,6 @@
     <string name="staff_reviews_filter_all">அனைத்து நிலைகள்</string>
     <string name="staff_reviews_filter_published">வெளியிடப்பட்டது</string>
     <string name="staff_reviews_filter_removed">அகற்றப்பட்டது</string>
-    <string name="staff_reviews_overflow_actions">செயல்கள்</string>
     <string name="staff_reviews_remove_confirm">அகற்று</string>
     <string name="staff_reviews_remove_title">விமர்சனத்தை அகற்றவா?</string>
     <string name="staff_reviews_role_buyer">வாங்குபவர்</string>

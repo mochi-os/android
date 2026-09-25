@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">Opublikowano</string>
     <string name="staff_reviews_filter_removed">Usunięto</string>
     <string name="staff_reviews_order_label">zamówienie #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Akcje</string>
     <string name="staff_reviews_remove_confirm">Usuń</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s w dniu %3$s. Czy trwale usunąć tę recenzję? Tej operacji nie można cofnąć.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Czy trwale usunąć tę recenzję? Tej operacji nie można cofnąć.</string>

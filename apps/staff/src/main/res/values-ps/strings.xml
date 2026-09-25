@@ -338,7 +338,6 @@
     <string name="staff_reviews_filter_all">ټول حالتونه</string>
     <string name="staff_reviews_filter_published">خپور شوی</string>
     <string name="staff_reviews_filter_removed">لرې شوی</string>
-    <string name="staff_reviews_overflow_actions">کړنې</string>
     <string name="staff_reviews_remove_confirm">لرې کول</string>
     <string name="staff_reviews_remove_title">بیاکتنه لرې کړو؟</string>
     <string name="staff_reviews_role_buyer">پیرودونکی</string>

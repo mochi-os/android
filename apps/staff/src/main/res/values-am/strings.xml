@@ -344,7 +344,6 @@
     <string name="staff_reviews_filter_all">ሁሉም ሁኔታዎች</string>
     <string name="staff_reviews_filter_published">ታትሟል</string>
     <string name="staff_reviews_filter_removed">ተወግዷል</string>
-    <string name="staff_reviews_overflow_actions">እርምጃዎች</string>
     <string name="staff_reviews_remove_confirm">አስወግድ</string>
     <string name="staff_reviews_remove_title">ግምገማ ይወገድ?</string>
     <string name="staff_reviews_role_buyer">ገዢ</string>

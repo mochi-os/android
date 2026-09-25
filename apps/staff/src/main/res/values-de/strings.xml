@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">Veröffentlicht</string>
     <string name="staff_reviews_filter_removed">Entfernt</string>
     <string name="staff_reviews_order_label">Bestellung Nr. %1$s</string>
-    <string name="staff_reviews_overflow_actions">Aktionen</string>
     <string name="staff_reviews_remove_confirm">Entfernen</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s am %3$s. Diese Bewertung dauerhaft löschen? Dies kann nicht rückgängig gemacht werden.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Diese Bewertung dauerhaft löschen? Dies kann nicht rückgängig gemacht werden.</string>

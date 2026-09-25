@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">Publicerad</string>
     <string name="staff_reviews_filter_removed">Borttagen</string>
     <string name="staff_reviews_order_label">beställning #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Åtgärder</string>
     <string name="staff_reviews_remove_confirm">Ta bort</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s den %3$s. Ta bort denna recension permanent? Detta går inte att ångra.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Ta bort denna recension permanent? Detta går inte att ångra.</string>

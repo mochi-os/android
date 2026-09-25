@@ -376,7 +376,6 @@
     <string name="staff_reviews_filter_published">Paskelbta</string>
     <string name="staff_reviews_filter_removed">Pašalinta</string>
     <string name="staff_reviews_order_label">užsakymas Nr. %1$s</string>
-    <string name="staff_reviews_overflow_actions">Veiksmai</string>
     <string name="staff_reviews_remove_confirm">Šalinti</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$s. Visam laikui ištrinti šį atsiliepimą? Šio veiksmo atšaukti negalima.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Visam laikui ištrinti šį atsiliepimą? Šio veiksmo atšaukti negalima.</string>
