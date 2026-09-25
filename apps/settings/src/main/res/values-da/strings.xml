@@ -77,7 +77,7 @@
     <string name="system_status_update">Opdater</string>
     <string name="system_status_refresh">Opdater</string>
     <string name="system_status_install_update">Installer opdatering</string>
-    <string name="system_status_download_installer">Download installer</string>
+    <string name="system_status_download_installer">Download installationsprogram</string>
     <string name="system_status_download_from_packages">Download fra packages.mochi-os.org</string>
     <string name="system_status_copy">Kopier</string>
     <string name="system_status_peers">Peers</string>

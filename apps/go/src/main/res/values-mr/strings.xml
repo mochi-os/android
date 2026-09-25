@@ -8,7 +8,7 @@
     <string name="go_action_pass">पास</string>
     <string name="go_action_rematch">रीमॅच</string>
     <string name="go_action_resign">राजीनामा द्या</string>
-    <string name="go_app_title">जा</string>
+    <string name="go_app_title">गो</string>
     <string name="go_captures_black_sr">काळे पकडलेले</string>
     <string name="go_captures_white_sr">पांढरे पकडलेले</string>
     <string name="go_chat_title">चॅट</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">साइडबार उघडा</string>
     <string name="go_sidebar_active">सक्रिय खेळ</string>
     <string name="go_empty_active">अद्याप कोणतेही सक्रिय खेळ नाहीत.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">हार मानली</string>
     <string name="go_new_game_title">नवीन Go खेळ</string>
     <string name="go_new_game_no_friends">खेळ सुरू करण्यापूर्वी तुम्हाला मित्र जोडावा लागेल.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

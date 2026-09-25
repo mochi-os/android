@@ -94,7 +94,7 @@
     <string name="crm_class_delete">حذف کلاس</string>
     <string name="crm_class_delete_title">حذف کلاس</string>
     <string name="crm_field_type_text">متن</string>
-    <string name="crm_field_type_number">شماره</string>
+    <string name="crm_field_type_number">عدد</string>
     <string name="crm_field_type_user">کاربر</string>
     <string name="crm_field_type_date">تاریخ</string>
     <string name="crm_field_type_checklist">چک‌لیست</string>
@@ -117,7 +117,7 @@
     <string name="crm_views_edit_dialog_title">ویرایش نما</string>
     <string name="crm_views_delete_title">حذف نما</string>
     <string name="crm_views_type">نوع</string>
-    <string name="crm_views_type_board">تخته</string>
+    <string name="crm_views_type_board">تابلو</string>
     <string name="crm_views_type_list">فهرست</string>
     <string name="crm_views_direction">جهت</string>
     <string name="crm_views_sort_created">ساخته شد</string>
@@ -126,7 +126,7 @@
     <string name="crm_not_found">پروژه یافت نشد</string>
     <string name="crm_more">بیشتر</string>
     <string name="crm_comment_send">ارسال</string>
-    <string name="crm_field_position_body">متن</string>
+    <string name="crm_field_position_body">بدنه</string>
     <string name="crm_list_add_to_home">افزودن به صفحه اصلی</string>
     <string name="crm_sort_field">مرتب‌سازی بر اساس</string>
     <string name="crm_views_move_up">انتقال به بالا</string>

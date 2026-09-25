@@ -9,13 +9,13 @@
     <string name="launcher_people">Mochi Abantu</string>
     <string name="launcher_settings">Mochi Iisetingi</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Iiwiki</string>
     <string name="launcher_chess">Mochi Itshesi</string>
-    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_go">Mochi I-Go</string>
     <string name="launcher_words">Mochi Amagama</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi Imarike</string>
     <string name="launcher_calendars">Mochi Iikhalenda</string>
-    <string name="launcher_staff">Mochi Abasebenzi</string>
+    <string name="launcher_staff">Abasebenzi beMochi</string>
 
 
     <string name="app_name">Mochi</string>

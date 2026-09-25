@@ -10,7 +10,7 @@
     <string name="calendars_delete">Устгах</string>
     <string name="calendars_previous">Өмнөх</string>
     <string name="calendars_next">Дараах</string>
-    <string name="calendars_view">Үзэх</string>
+    <string name="calendars_view">Харагдац</string>
     <string name="calendars_view_list">Жагсаалт</string>
     <string name="calendars_list_search">Хайх</string>
     <string name="calendars_event_untitled">Гарчиггүй</string>
@@ -53,9 +53,9 @@
     <string name="calendars_colour">Өнгө</string>
     <string name="calendars_view_day">Өдөр</string>
     <string name="calendars_event_start">Эхлүүлэх</string>
-    <string name="notification_channel_calendars">Хуанлиуд</string>
-    <string name="calendars_drawer_title">Хуанлиуд</string>
-    <string name="calendars_drawer_open">Хуанлиуд</string>
+    <string name="notification_channel_calendars">Календарууд</string>
+    <string name="calendars_drawer_title">Календарууд</string>
+    <string name="calendars_drawer_open">Календарууд</string>
     <string name="calendars_calendar_menu">%1$s-ийн сонголтууд</string>
     <string name="calendars_only_this">Зөвхөн энэ</string>
     <string name="calendars_create">Хуанли үүсгэх</string>
@@ -169,7 +169,7 @@
     <string name="calendars_subscribe_server_url">Серверийн хаяг</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google Календарь</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Энэ сервер дээр Google бүртгэлүүд идэвхжээгүй байна. Тэдгээрийг Тохиргоо, Системийн тохиргоо хэсэгт идэвхжүүлнэ үү.</string>
     <string name="calendars_subscribe_google_connect">Та Google бүртгэл холбоогүй байна.</string>

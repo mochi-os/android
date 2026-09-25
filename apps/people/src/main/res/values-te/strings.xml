@@ -72,11 +72,11 @@
     <string name="people_common_close">మూసివేయండి</string>
     <string name="people_common_save">సేవ్ చేయండి</string>
     <string name="people_welcome_dismiss">విస్మరించండి</string>
-    <string name="people_sidebar_header">పీపుల్</string>
+    <string name="people_sidebar_header">వ్యక్తులు</string>
     <string name="people_open_sidebar">నావిగేషన్‌ను ఓపెన్ చేయండి</string>
     <string name="people_person_state_friend">స్నేహితులు</string>
     <string name="people_person_state_self">మీరు</string>
-    <string name="people_person_message">సందేశం</string>
+    <string name="people_person_message">సందేశం పంపండి</string>
     <string name="people_person_accept">అంగీకరించండి</string>
     <string name="people_person_decline">తిరస్కరించండి</string>
 
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">చెల్లుబాటు అయ్యే హెక్స్ రంగును నమోదు చేయండి (ఉదా. #a78bfa)</string>
     <string name="people_profile_accent_none">ఏదీ లేదు</string>
     <string name="people_profile_privacy_private_desc">పరస్పర స్నేహితులు మాత్రమే మీ ప్రొఫైల్‌ను చూడగలరు</string>
-    <string name="people_welcome_title">People కు స్వాగతం</string>
+    <string name="people_welcome_title">వ్యక్తులకు స్వాగతం</string>
     <string name="people_person_banner_alt">%1$s కోసం బ్యానర్</string>
     <string name="people_person_private">ఈ ప్రొఫైల్ ప్రైవేట్</string>
     <string name="people_person_state_invited">ఆహ్వానించబడింది</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">అన్నీ అంగీకరించు</string>
     <string name="people_invitations_decline_all">అన్నీ తిరస్కరించు</string>
     <string name="people_invitations_cancel_all">అన్నీ రద్దు చేయి</string>
+    <string name="people_invitations_cancel">రద్దు చేయండి</string>
     <string name="people_invitations_all_accepted">అన్ని ఆహ్వానాలు అంగీకరించబడ్డాయి</string>
     <string name="people_invitations_all_declined">అన్ని ఆహ్వానాలు తిరస్కరించబడ్డాయి</string>
     <string name="people_invitations_all_cancelled">అన్ని ఆహ్వానాలు రద్దు చేయబడ్డాయి</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">శోధించండి…</string>
     <string name="people_contacts_invited">ఆహ్వానించబడింది</string>
     <string name="people_contacts_accept">అంగీకరించండి</string>
-    <string name="people_contacts_message">సందేశం</string>
+    <string name="people_contacts_message">సందేశం పంపండి</string>
     <string name="people_contacts_no_people_found">ఎవరూ కనుగొనబడలేదు</string>
     <string name="people_contacts_try_adjusting">మీ శోధనను సర్దుబాటు చేయడం ప్రయత్నించండి</string>
     <string name="people_contact_section_address">చిరునామా</string>

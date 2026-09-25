@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Abrir navegación</string>
     <string name="people_person_state_friend">Amigos</string>
     <string name="people_person_state_self">Ti</string>
-    <string name="people_person_message">Mensaxe</string>
+    <string name="people_person_message">Enviar mensaxe</string>
     <string name="people_person_accept">Aceptar</string>
     <string name="people_person_decline">Rexeitar</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Aceptar todo</string>
     <string name="people_invitations_decline_all">Rexeitar todo</string>
     <string name="people_invitations_cancel_all">Cancelar todo</string>
+    <string name="people_invitations_cancel">Cancelar</string>
     <string name="people_invitations_all_accepted">Todas as invitacións aceptadas</string>
     <string name="people_invitations_all_declined">Todas as invitacións rexeitadas</string>
     <string name="people_invitations_all_cancelled">Todas as invitacións canceladas</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Buscar…</string>
     <string name="people_contacts_invited">Invitado</string>
     <string name="people_contacts_accept">Aceptar</string>
-    <string name="people_contacts_message">Mensaxe</string>
+    <string name="people_contacts_message">Enviar mensaxe</string>
     <string name="people_contacts_no_people_found">Non se atoparon persoas</string>
     <string name="people_contacts_try_adjusting">Tenta axustar a túa busca</string>
     <string name="people_contact_section_address">Enderezo</string>

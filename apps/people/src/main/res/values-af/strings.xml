@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Maak navigasie oop</string>
     <string name="people_person_state_friend">Vriende</string>
     <string name="people_person_state_self">Jy</string>
-    <string name="people_person_message">Boodskap</string>
+    <string name="people_person_message">Stuur boodskap</string>
     <string name="people_person_accept">Aanvaar</string>
     <string name="people_person_decline">Wys af</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Aanvaar almal</string>
     <string name="people_invitations_decline_all">Wys almal van die hand</string>
     <string name="people_invitations_cancel_all">Kanselleer almal</string>
+    <string name="people_invitations_cancel">Kanselleer</string>
     <string name="people_invitations_all_accepted">Alle uitnodigings aanvaar</string>
     <string name="people_invitations_all_declined">Alle uitnodigings van die hand gewys</string>
     <string name="people_invitations_all_cancelled">Alle uitnodigings gekanselleer</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Soek…</string>
     <string name="people_contacts_invited">Uitgenooi</string>
     <string name="people_contacts_accept">Aanvaar</string>
-    <string name="people_contacts_message">Boodskap</string>
+    <string name="people_contacts_message">Stuur boodskap</string>
     <string name="people_contacts_no_people_found">Geen mense gevind nie</string>
     <string name="people_contacts_try_adjusting">Probeer jou soektog aanpas</string>
     <string name="people_contact_section_address">Adres</string>

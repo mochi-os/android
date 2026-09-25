@@ -38,7 +38,7 @@
     <string name="access_add_rule">Cuir riail leis</string>
     <string name="access_owner">Úinéir</string>
     <string name="access_revoke">Cúlghair</string>
-    <string name="access_level_comment">Nóta tráchta</string>
+    <string name="access_level_comment">Déan trácht</string>
     <string name="access_level_view">Féach</string>
     <string name="access_level_none">Faic</string>
     <string name="reaction_like">Is maith liom</string>

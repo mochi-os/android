@@ -24,7 +24,7 @@
     <string name="forums_settings">ការកំណត់</string>
     <string name="forums_load_more">ផ្ទុកបន្ថែម</string>
     <string name="forums_sort_label">តម្រៀប</string>
-    <string name="forums_sort_new">ថ្មី</string>
+    <string name="forums_sort_new">ថ្មីបំផុត</string>
     <string name="forums_sort_hot">ក្ដៅ</string>
     <string name="forums_sort_top">កំពូល</string>
     <string name="forums_sort_interests">ចំណាប់អារម្មណ៍</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">សមាជិក</string>
     <string name="forums_tab_banner">បដា</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">គោលដៅ</string>
+    <string name="forums_access_target">អ្នកប្រើប្រាស់ ឬក្រុម</string>
     <string name="forums_access_level_view">មើល</string>
     <string name="forums_access_level_vote">បោះឆ្នោត</string>
-    <string name="forums_access_level_comment">មតិយោបល់</string>
+    <string name="forums_access_level_comment">បញ្ចេញមតិ</string>
     <string name="forums_access_level_post">ប្រកាស</string>
     <string name="forums_access_level_none">គ្មាន</string>
     <string name="forums_members_empty">មិនមានសមាជិក</string>
     <string name="forums_banner_dismiss">បិទបដា</string>
-    <string name="forums_ai_mode_tag">ស្លាក</string>
+    <string name="forums_ai_mode_tag">ដាក់ស្លាក</string>
     <string name="forums_ai_account_default">គណនីលំនាំដើម</string>
     <string name="forums_ai_prompt_reset">កំណត់ឡើងវិញទៅលំនាំដើម</string>
     <string name="forums_settings_unsubscribe">ឈប់ជាវ</string>
@@ -80,7 +80,7 @@
     <string name="forums_moderation_reports_resolved">បានដោះស្រាយ</string>
     <string name="forums_moderation_reports_all">ទាំងអស់</string>
     <string name="forums_moderation_reports_empty">មិនមានរបាយការណ៍</string>
-    <string name="forums_moderation_report_dismiss">បិទ</string>
+    <string name="forums_moderation_report_dismiss">ច្រានចោល</string>
     <string name="forums_moderation_restrictions_empty">មិនមានការរឹតបន្តឹង</string>
     <string name="forums_moderation_restriction_remove">យកចេញ</string>
     <string name="forums_moderation_restriction_type">ប្រភេទ</string>
@@ -126,12 +126,12 @@
     <string name="forums_post_edit_body_field">តួអត្ថបទ</string>
     <string name="forums_comment_edit_body_field">តួអត្ថបទ</string>
     <string name="forums_tag_clear">សម្អាតតម្រង</string>
-    <string name="forums_post_tag_add">Add tag</string>
+    <string name="forums_post_tag_add">បន្ថែមស្លាក</string>
     <string name="forums_write_comment">សរសេរមតិយោបល់…</string>
     <string name="forums_auth_login_failed">ការចូលបានបរាជ័យ</string>
 
     <string name="notification_channel_forums">ការជូនដំណឹងវេទិកា</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi វេទិកា</string>
     <string name="forums_auth_create_identity_failed">បរាជ័យក្នុងការបង្កើតអត្តសញ្ញាណ</string>
     <string name="forums_auth_mfa_unsupported">MFA មិនទាន់គាំទ្រនៅក្នុងកម្មវិធីទូរស័ព្ទនៅឡើយទេ</string>
     <string name="forums_auth_enter_code_sent">បញ្ចូលលេខកូដដែលបានផ្ញើទៅ %1$s</string>
@@ -189,10 +189,10 @@
     <string name="forums_tag_interest_remove">យកចំណាប់អារម្មណ៍ចេញ</string>
     <string name="forums_access_tab_users">អ្នកប្រើប្រាស់</string>
     <string name="forums_access_tab_groups">ក្រុម</string>
-    <string name="forums_access_tab_manual">សៀវភៅណែនាំ</string>
+    <string name="forums_access_tab_manual">ដោយដៃ</string>
     <string name="forums_access_search_users">ស្វែងរកអ្នកប្រើ</string>
     <string name="forums_access_no_groups">មិនមានក្រុម</string>
-    <string name="forums_saved_title">បានរក្សាទុក</string>
+    <string name="forums_saved_title">ធាតុដែលបានរក្សាទុក</string>
     <string name="forums_saved_save">រក្សាទុកសម្រាប់ពេលក្រោយ</string>
     <string name="forums_saved_remove">លុបចេញពីការរក្សាទុក</string>
     <string name="forums_saved_clear_all">សម្អាតទាំងអស់</string>
@@ -207,7 +207,7 @@
     <string name="forums_rss_feed">មតិព័ត៌មាន RSS</string>
     <string name="forums_rss_mode_posts">ប្រកាស</string>
     <string name="forums_rss_mode_posts_comments">ប្រកាស និងមតិយោបល់</string>
-    <string name="forums_rss_copied">បានចម្លង RSS URL ទៅ clipboard</string>
+    <string name="forums_rss_copied">បានចម្លង RSS URL ទៅ ក្ដារតម្បៀតខ្ទាស់</string>
     <string name="forums_find_results">លទ្ធផលស្វែងរក</string>
     <string name="forums_markdown_supported">គាំទ្រ Markdown</string>
     <string name="forums_attachment_file">ឯកសារ</string>
@@ -238,7 +238,7 @@
     <string name="forums_settings_access_updated">បានធ្វើបច្ចុប្បន្នភាពការចូលប្រើ</string>
     <string name="forums_settings_access_revoked">សិទ្ធិបែររបស៴គទែរ</string>
     <string name="forums_settings_member_removed">បានដកសមាជិក</string>
-    <string name="forums_settings_prompt_saved">បានរក្សាទុក prompt</string>
+    <string name="forums_settings_prompt_saved">បានរក្សាទុកការសួរ</string>
     <string name="forums_settings_section_identity">អត្តសញ្ញាណ</string>
     <string name="forums_settings_field_name">ឈ្មោះ</string>
     <string name="forums_settings_field_entity_id">លេខសម្គាល់អង្គភាព</string>
@@ -319,7 +319,7 @@
     <string name="forums_moderation_action_restrict">ត្រូវបានរឹតបន្តឹង</string>
     <string name="forums_moderation_action_unrestrict">គ្មានការរឹតបន្តឹង</string>
     <string name="forums_moderation_action_resolve">របាយការណ៍ដែលបានដោះស្រាយ</string>
-    <string name="forums_moderation_target_post">ប្រកាស</string>
+    <string name="forums_moderation_target_post">ការបង្ហោះ</string>
     <string name="forums_moderation_target_comment">មតិយោបល់</string>
     <string name="forums_moderation_target_user">អ្នកប្រើប្រាស់</string>
     <string name="forums_moderation_reason_spam">សារឥតបានការ</string>

@@ -24,13 +24,13 @@
     <string name="forums_settings">Roghainnean</string>
     <string name="forums_load_more">Luchdaich barrachd</string>
     <string name="forums_sort_label">Seòrsaich</string>
-    <string name="forums_sort_new">Ùr</string>
+    <string name="forums_sort_new">As ùire</string>
     <string name="forums_sort_hot">Teth</string>
-    <string name="forums_sort_top">Mullach</string>
+    <string name="forums_sort_top">As fheàrr</string>
     <string name="forums_sort_interests">Ùidhean</string>
     <string name="forums_post_title_field">Tiotal</string>
     <string name="forums_post_attach">Ceangail faidhlichean</string>
-    <string name="forums_post_create_action">Post</string>
+    <string name="forums_post_create_action">Postaich</string>
     <string name="forums_post_edit">Deasaich am post</string>
     <string name="forums_post_edit_title">Deasaich am post</string>
     <string name="forums_post_edit_title_field">Tiotal</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Buill</string>
     <string name="forums_tab_banner">Bratach</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Targaid</string>
+    <string name="forums_access_target">Cleachdaiche no buidheann</string>
     <string name="forums_access_level_view">Seall</string>
     <string name="forums_access_level_vote">Bhòt</string>
-    <string name="forums_access_level_comment">Beachd</string>
-    <string name="forums_access_level_post">Post</string>
+    <string name="forums_access_level_comment">Thoir beachd</string>
+    <string name="forums_access_level_post">Postaich</string>
     <string name="forums_access_level_none">Chan eil gin</string>
     <string name="forums_members_empty">Gun bhall</string>
     <string name="forums_banner_dismiss">Leig seachad a\' bhratach</string>
-    <string name="forums_ai_mode_tag">Taga</string>
+    <string name="forums_ai_mode_tag">Tagaich</string>
     <string name="forums_ai_account_default">Cunntas bunaiteach</string>
     <string name="forums_ai_prompt_reset">Ath-shuidhich chun a\' bhun-tuiteamais</string>
     <string name="forums_settings_unsubscribe">Dì-fho-sgrìobh</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_enter_code_sent">Cuir a-steach an còd a chaidh a chur gu %1$s</string>
     <string name="forums_auth_create_identity">Cruthaich do dhearbh-aithne</string>
     <string name="forums_tag_clear">Glan a\' chriathrag</string>
-    <string name="forums_post_tag_add">Add tag</string>
+    <string name="forums_post_tag_add">Cuir taga ris</string>
     <string name="forums_write_comment">Sgrìobh beachd…</string>
 
     <string name="notification_channel_forums">Brathan nam fòraman</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">Le làimh</string>
     <string name="forums_access_search_users">Lorg cleachdaichean</string>
     <string name="forums_access_no_groups">Chan eil buidhnean rim faotainn</string>
-    <string name="forums_saved_title">Air a shàbhaladh</string>
+    <string name="forums_saved_title">Air an sàbhaladh</string>
     <string name="forums_saved_save">Sàbhail airson às dèidh seo</string>
     <string name="forums_saved_remove">Thoir air falbh bho na sàbhailte</string>
     <string name="forums_saved_clear_all">Falamhaich a h-uile</string>

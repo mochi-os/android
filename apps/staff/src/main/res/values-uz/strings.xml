@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">Mochi xodimlari</string>
+    <string name="launcher_staff">Mochi xodimlari</string>
     <string name="staff_accounts_action_ban_title">Hisobni bloklash</string>
     <string name="staff_accounts_action_suspend_title">Hisobni toʻxtatib qoʻyish</string>
     <string name="staff_accounts_action_unban_title">Taqiqni bekor qilish</string>
@@ -162,7 +162,7 @@
     <string name="staff_categories_type_digital">Raqamli</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">Jismoniy</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">Mochi xodimlari</string>
     <string name="staff_config_field_auto_approve">Avto-tasdiqlash chegarasi</string>
     <string name="staff_config_field_hold">Ushlash chegarasi</string>
     <string name="staff_config_field_platform_fee">Platforma toʻlovi</string>
@@ -251,7 +251,7 @@
     <string name="staff_disputes_resolve">Hal qilish</string>
     <string name="staff_disputes_resolved_toast">Bahs hal qilindi</string>
     <string name="staff_disputes_resolving">Yechilmoqda…</string>
-    <string name="staff_disputes_review">Sharh</string>
+    <string name="staff_disputes_review">Koʻrib chiqish</string>
     <string name="staff_disputes_status_escalated">Yuqori darajaga koʻtarildi</string>
     <string name="staff_disputes_status_open">Ochiq</string>
     <string name="staff_disputes_status_resolved_buyer">Hal qilindi (xaridor)</string>
@@ -281,7 +281,7 @@
     <string name="staff_listings_moderation_hold">Ushlash</string>
     <string name="staff_listings_moderation_manual">Qoʻlda</string>
     <string name="staff_listings_moderation_rejected">Rad etildi</string>
-    <string name="staff_listings_moderation_review">Sharh</string>
+    <string name="staff_listings_moderation_review">Tekshiruv</string>
     <string name="staff_listings_moderation_soft_approved">Yumshoq tasdiqlangan</string>
     <string name="staff_listings_notes_label">Eslatmalar</string>
     <string name="staff_listings_price_placeholder">—</string>
@@ -307,7 +307,7 @@
     <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Amal</string>
     <string name="staff_reports_action_ban">Foydalanuvchini bloklash</string>
-    <string name="staff_reports_action_dismiss">Bekor qilish</string>
+    <string name="staff_reports_action_dismiss">Rad etish</string>
     <string name="staff_reports_action_label">Amal</string>
     <string name="staff_reports_action_placeholder">Amalni tanlash</string>
     <string name="staff_reports_action_remove">Olib tashlash</string>
@@ -327,7 +327,7 @@
     <string name="staff_reports_meta_reason">Sabab</string>
     <string name="staff_reports_meta_reporter">Hisobotchi</string>
     <string name="staff_reports_meta_seller">Sotuvchi</string>
-    <string name="staff_reports_meta_target">Maqsad</string>
+    <string name="staff_reports_meta_target">Hisobot obyekti</string>
     <string name="staff_reports_meta_type">Tur</string>
     <string name="staff_reports_notes_label">Eslatmalar</string>
     <string name="staff_reports_reason_counterfeit">Soxta yoki oʻgʻirlangan</string>
@@ -397,7 +397,7 @@
     <string name="staff_status_resolved_buyer">Hal qilindi (xaridor)</string>
     <string name="staff_status_resolved_seller">Hal qilindi (sotuvchi)</string>
     <string name="staff_status_responded">Javob berildi</string>
-    <string name="staff_status_review">Sharh</string>
+    <string name="staff_status_review">Tekshiruv</string>
     <string name="staff_status_reviewed">Koʻrib chiqilgan</string>
     <string name="staff_status_reviewing">Koʻrib chiqilmoqda</string>
     <string name="staff_status_soft_approved">Yumshoq tasdiqlangan</string>

@@ -62,7 +62,7 @@
     <string name="people_profile_uploading">بارکردن…</string>
     <string name="people_profile_change_banner">گۆڕینی بانەر</string>
     <string name="people_profile_no_banner">هیچ بانەرێک دانەنراوە</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">ئایکۆنی ماڵپەڕ</string>
     <string name="people_profile_browser_icon">ئایکۆنی وێبگەڕ</string>
     <string name="people_profile_file_too_large">فایل گەلێک گەورەیە</string>
     <string name="people_profile_clear">پاککردنەوە</string>
@@ -72,11 +72,11 @@
     <string name="people_common_close">داخستن</string>
     <string name="people_common_save">پاشەکەوتکردن</string>
     <string name="people_welcome_dismiss">لابردن</string>
-    <string name="people_sidebar_header">کەسەکان</string>
+    <string name="people_sidebar_header">خەڵک</string>
     <string name="people_open_sidebar">کردنەوەی ڕێدۆزی</string>
     <string name="people_person_state_friend">هاوڕێکان</string>
     <string name="people_person_state_self">تۆ</string>
-    <string name="people_person_message">پەیام</string>
+    <string name="people_person_message">پەیام بنێرە</string>
     <string name="people_person_accept">وەرگرتن</string>
     <string name="people_person_decline">ڕەتکردنەوە</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">هەمووی قبوڵ بکە</string>
     <string name="people_invitations_decline_all">هەمووی ڕەت بکەوە</string>
     <string name="people_invitations_cancel_all">هەمووی هەڵوەشێنەوە</string>
+    <string name="people_invitations_cancel">هەڵوەشاندنەوە</string>
     <string name="people_invitations_all_accepted">هەموو بانگهێشتەکان قبوڵ کران</string>
     <string name="people_invitations_all_declined">هەموو بانگهێشتەکان ڕەتکرانەوە</string>
     <string name="people_invitations_all_cancelled">هەموو بانگهێشتەکان هەڵوەشێنرانەوە</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">گەڕان…</string>
     <string name="people_contacts_invited">بانگهێشتکراو</string>
     <string name="people_contacts_accept">وەرگرتن</string>
-    <string name="people_contacts_message">پەیام</string>
+    <string name="people_contacts_message">پەیام بنێرە</string>
     <string name="people_contacts_no_people_found">هیچ کەسێک نەدۆزرایەوە</string>
     <string name="people_contacts_try_adjusting">هەوڵبدە گەڕانەکەت ڕێکبخەیت</string>
     <string name="people_contact_section_address">ناونیشان</string>

@@ -78,7 +78,7 @@
     <string name="crm_design_or_upload_json">Vai augšupielādējiet failu</string>
     <string name="crm_design_upload_json">Augšupielādēt .json failu</string>
     <string name="crm_design_tab_classes">Klases</string>
-    <string name="crm_design_tab_views">Skatījumi</string>
+    <string name="crm_design_tab_views">Skati</string>
     <string name="crm_design_import_dialog_title">Importēt dizainu</string>
     <string name="crm_design_import_choose_template">Izvēlies veidni</string>
     <string name="crm_design_replace_title">Aizstāt dizainu?</string>
@@ -94,7 +94,7 @@
     <string name="crm_class_delete">Dzēst klasi</string>
     <string name="crm_class_delete_title">Dzēst klasi</string>
     <string name="crm_field_type_text">Teksts</string>
-    <string name="crm_field_type_number">Numurs</string>
+    <string name="crm_field_type_number">Skaitlis</string>
     <string name="crm_field_type_user">Lietotājs</string>
     <string name="crm_field_type_date">Datums</string>
     <string name="crm_field_type_checklist">Kontrolsaraksts</string>
@@ -117,7 +117,7 @@
     <string name="crm_views_edit_dialog_title">Rediģēt skatu</string>
     <string name="crm_views_delete_title">Dzēst skatu</string>
     <string name="crm_views_type">Tips</string>
-    <string name="crm_views_type_board">Galds</string>
+    <string name="crm_views_type_board">Dēlis</string>
     <string name="crm_views_type_list">Saraksts</string>
     <string name="crm_views_direction">Virziens</string>
     <string name="crm_views_sort_created">Izveidots</string>
@@ -126,7 +126,7 @@
     <string name="crm_not_found">Projekts nav atrasts</string>
     <string name="crm_more">Vairāk</string>
     <string name="crm_comment_send">Sūtīt</string>
-    <string name="crm_field_position_body">Teksts</string>
+    <string name="crm_field_position_body">Pamatdaļa</string>
     <string name="crm_sort_field">Kārtot pēc</string>
     <string name="crm_comment_remove_attachment">Noņemt pielikumu</string>
     <string name="crm_views_sort_by">Kārtot pēc</string>

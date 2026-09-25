@@ -13,7 +13,7 @@
     <string name="chess_new_title">新游戏</string>
     <string name="chess_new_pick_opponent">选择对手</string>
     <string name="chess_new_no_friends_title">暂无好友</string>
-    <string name="chess_new_no_friends_subtitle">在人脉应用中添加好友即可开始游戏</string>
+    <string name="chess_new_no_friends_subtitle">在联系人应用中添加好友即可开始游戏</string>
     <string name="chess_new_add_friends">添加好友</string>
     <string name="chess_new_start_button">开始游戏</string>
     <string name="chess_new_creating">创建中…</string>

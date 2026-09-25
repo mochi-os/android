@@ -67,7 +67,7 @@
     <string name="crm_board_rename">Byt namn</string>
     <string name="crm_board_rename_column">Byt namn på kolumn</string>
     <string name="crm_move_position">Position</string>
-    <string name="crm_move_position_top">Topp</string>
+    <string name="crm_move_position_top">Överst</string>
     <string name="crm_move_current">Aktuell</string>
     <string name="crm_design_title">Design</string>
     <string name="crm_design_export">Exportera design</string>
@@ -78,7 +78,7 @@
     <string name="crm_design_or_upload_json">Eller ladda upp en fil</string>
     <string name="crm_design_upload_json">Ladda upp .json-fil</string>
     <string name="crm_design_tab_classes">Klasser</string>
-    <string name="crm_design_tab_views">Visningar</string>
+    <string name="crm_design_tab_views">Vyer</string>
     <string name="crm_design_import_dialog_title">Importera design</string>
     <string name="crm_design_import_choose_template">Välj en mall</string>
     <string name="crm_design_replace_title">Ersätt design?</string>
@@ -94,7 +94,7 @@
     <string name="crm_class_delete">Ta bort klass</string>
     <string name="crm_class_delete_title">Ta bort klass</string>
     <string name="crm_field_type_text">Text</string>
-    <string name="crm_field_type_number">Nummer</string>
+    <string name="crm_field_type_number">Tal</string>
     <string name="crm_field_type_user">Användare</string>
     <string name="crm_field_type_date">Datum</string>
     <string name="crm_field_type_checklist">Checklista</string>
@@ -117,16 +117,16 @@
     <string name="crm_views_edit_dialog_title">Redigera vy</string>
     <string name="crm_views_delete_title">Ta bort vy</string>
     <string name="crm_views_type">Typ</string>
-    <string name="crm_views_type_board">Bräde</string>
+    <string name="crm_views_type_board">Tavla</string>
     <string name="crm_views_type_list">Lista</string>
     <string name="crm_views_direction">Riktning</string>
     <string name="crm_views_sort_created">Skapad</string>
     <string name="crm_views_sort_updated">Uppdaterad</string>
-    <string name="crm_views_sort_rank">Rank</string>
+    <string name="crm_views_sort_rank">Rang</string>
     <string name="crm_not_found">Projektet hittades inte</string>
     <string name="crm_more">Mer</string>
     <string name="crm_comment_send">Skicka</string>
-    <string name="crm_field_position_body">Innehåll</string>
+    <string name="crm_field_position_body">Huvuddel</string>
     <string name="crm_sort_field">Sortera efter</string>
     <string name="crm_comment_remove_attachment">Ta bort bilaga</string>
     <string name="crm_views_sort_by">Sortera efter</string>

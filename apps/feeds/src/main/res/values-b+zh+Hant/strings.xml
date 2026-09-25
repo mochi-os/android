@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="feeds_title">訊息來源</string>
+    <string name="feeds_title">訂閱來源</string>
     <string name="feeds_find_feeds">尋找訊息來源</string>
     <string name="feeds_create_feed">建立訊息來源</string>
     <string name="feeds_new_post">新貼文</string>
@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">尚無貼文</string>
     <string name="feeds_sort_label">排序</string>
     <string name="feeds_sort_interests">興趣</string>
-    <string name="feeds_sort_new">新增</string>
+    <string name="feeds_sort_new">最新</string>
     <string name="feeds_sort_hot">熱門</string>
-    <string name="feeds_sort_top">頂端</string>
+    <string name="feeds_sort_top">最佳</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">貼文</string>
     <string name="feeds_image_preview">預覽</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">取消回覆</string>
     <string name="feeds_edit_post">編輯貼文</string>
     <string name="feeds_save_label">儲存</string>
-    <string name="feeds_post_action">貼文</string>
+    <string name="feeds_post_action">發佈</string>
     <string name="feeds_feed_label">訊息來源</string>
     <string name="feeds_add_files">新增檔案</string>
     <string name="feeds_restore">還原</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">登出</string>
     <string name="feeds_ai_account_default">預設帳戶</string>
     <string name="feeds_ai_mode_off">已停用</string>
-    <string name="feeds_ai_mode_tag">標籤</string>
+    <string name="feeds_ai_mode_tag">加標籤</string>
     <string name="feeds_ai_mode_tag_deduplicate">標籤 + 去重</string>
     <string name="feeds_feed_not_found">找不到訊息來源</string>
     <string name="feeds_post_not_found">找不到貼文</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">興趣已降低</string>
     <string name="feeds_interest_removed">興趣已移除</string>
     <string name="feeds_interest_failed">調整興趣失敗</string>
-    <string name="feeds_saved_title">已儲存</string>
-    <string name="feeds_saved_menu">已儲存</string>
+    <string name="feeds_saved_title">已儲存項目</string>
+    <string name="feeds_saved_menu">已儲存項目</string>
     <string name="feeds_saved_save">稍後儲存</string>
     <string name="feeds_saved_remove">從已儲存中移除</string>
     <string name="feeds_saved_clear_all">全部清除</string>

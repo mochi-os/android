@@ -11,7 +11,7 @@
     <string name="market_account_seller_step_stripe_desc">เชื่อมต่อบัญชี Stripe เพื่อรับการชำระเงินจากผู้ซื้อ</string>
     <string name="market_account_seller_fees_heading">ค่าธรรมเนียม:</string>
     <string name="market_account_seller_fees_mochi">Mochi หัก %1$s%% จากการขายแต่ละครั้ง</string>
-    <string name="market_account_seller_fees_stripe">Stripe เรียกเก็บค่าธรรมเนียมการประมวลผลของตนเองต่อธุรกรรมและค่าธรรมเนียมคงที่ต่อการเรียกเงินคืน อัตราปัจจุบันสำหรับสกุลเงินและภูมิภาคของคุณแสดงอยู่ใน Stripe Dashboard ของคุณ</string>
+    <string name="market_account_seller_fees_stripe">Stripe เรียกเก็บค่าธรรมเนียมการประมวลผลของตนเองต่อธุรกรรมและค่าธรรมเนียมคงที่ต่อการเรียกเงินคืน อัตราปัจจุบันสำหรับสกุลเงินและภูมิภาคของคุณแสดงอยู่ในแดชบอร์ด Stripe ของคุณ</string>
     <string name="market_account_seller_connect">เชื่อมต่อ Stripe</string>
     <string name="market_account_seller_step_stripe_title">เชื่อมต่อ Stripe</string>
     <string name="market_account_seller_check_status">ตรวจสอบสถานะ</string>
@@ -107,7 +107,7 @@
     <string name="market_editor_asset_external_filename">ชื่อไฟล์</string>
     <string name="market_editor_back">ย้อนกลับ</string>
     <string name="market_editor_category">หมวดหมู่</string>
-    <string name="market_editor_condition">เงื่อนไข</string>
+    <string name="market_editor_condition">สภาพ</string>
     <string name="market_editor_condition_new">ใหม่</string>
     <string name="market_editor_condition_refurbished">ซ่อมแซมใหม่</string>
     <string name="market_editor_condition_used">มือสอง</string>
@@ -149,7 +149,7 @@
     <string name="market_filter_apply">ใช้งาน</string>
     <string name="market_filter_category">หมวดหมู่</string>
     <string name="market_filter_clear">ล้างตัวกรอง</string>
-    <string name="market_filter_condition">เงื่อนไข</string>
+    <string name="market_filter_condition">สภาพ</string>
     <string name="market_filter_condition_new">ใหม่</string>
     <string name="market_filter_condition_refurbished">ซ่อมแซมใหม่</string>
     <string name="market_filter_condition_used">มือสอง</string>
@@ -183,7 +183,7 @@
     <string name="market_listing_detail_load_failed">ไม่สามารถโหลดประกาศได้</string>
     <string name="market_listing_detail_listed">ลงประกาศเมื่อ %1$s</string>
     <string name="market_listing_detail_location_heading">ตำแหน่ง</string>
-    <string name="market_listing_detail_message">ข้อความ</string>
+    <string name="market_listing_detail_message">ส่งข้อความ</string>
     <string name="market_listing_detail_message_seller">ส่งข้อความถึงผู้ขาย</string>
     <string name="market_listing_detail_not_found">ไม่พบประกาศ</string>
     <string name="market_listing_detail_place_bid">ประมูล</string>
@@ -324,7 +324,7 @@
     <string name="market_sale_shipped_label">จัดส่งแล้ว</string>
     <string name="market_sale_title">การขาย</string>
     <string name="market_sale_tracking_label">หมายเลขติดตาม</string>
-    <string name="market_saved_title">บันทึกแล้ว</string>
+    <string name="market_saved_title">รายการที่บันทึก</string>
     <string name="market_search_clear">ล้างการค้นหา</string>
     <string name="market_section_categories">เรียกดูหมวดหมู่</string>
     <string name="market_section_listings">ประกาศล่าสุด</string>
@@ -348,7 +348,7 @@
     <string name="market_sidebar_purchases">การซื้อ</string>
     <string name="market_sidebar_reviews">รีวิว</string>
     <string name="market_sidebar_sales">ยอดขาย</string>
-    <string name="market_sidebar_saved">บันทึกแล้ว</string>
+    <string name="market_sidebar_saved">รายการที่บันทึก</string>
     <string name="market_sidebar_selling">กำลังขาย</string>
     <string name="market_sidebar_settings">การตั้งค่า</string>
     <string name="market_sidebar_subscribers">ผู้ติดตาม</string>
@@ -690,7 +690,7 @@
     <string name="market_seller_step_activate_title">เปิดใช้งานบัญชีผู้ขาย</string>
     <string name="market_seller_step_stripe_desc">เชื่อมโยงบัญชี Stripe เพื่อรับการชำระเงินจากผู้ซื้อ</string>
     <string name="market_seller_step_stripe_title">เชื่อมต่อ Stripe</string>
-    <string name="market_seller_stripe_more_info">Stripe ต้องการข้อมูลเพิ่มเติมก่อนที่คุณจะสามารถรับการชำระเงินได้ กรอกข้อมูลที่จำเป็นใน Stripe Dashboard ของคุณ จากนั้นคลิกตรวจสอบสถานะ</string>
+    <string name="market_seller_stripe_more_info">Stripe ต้องการข้อมูลเพิ่มเติมก่อนที่คุณจะสามารถรับการชำระเงินได้ กรอกข้อมูลที่จำเป็นในแดชบอร์ด Stripe ของคุณ จากนั้นคลิกตรวจสอบสถานะ</string>
     <string name="market_seller_summary_account_status">สถานะบัญชี</string>
     <string name="market_seller_summary_fees">ค่าธรรมเนียม</string>
     <string name="market_seller_summary_payments">การชำระเงิน</string>
@@ -751,9 +751,9 @@
     <string name="market_audit_listing_updated">แก้ไขประกาศแล้ว</string>
     <string name="market_audit_listing_warning">ออกคำเตือนแล้ว</string>
     <string name="market_audit_order_cancelled">ยกเลิกแล้ว</string>
-    <string name="market_audit_order_chargeback">ได้รับ chargeback แล้ว</string>
-    <string name="market_audit_order_chargeback_lost">ยืนยัน chargeback แล้ว</string>
-    <string name="market_audit_order_chargeback_won">ยกเลิกการ chargeback แล้ว</string>
+    <string name="market_audit_order_chargeback">ได้รับการเรียกเงินคืนแล้ว</string>
+    <string name="market_audit_order_chargeback_lost">ยืนยันการเรียกเงินคืนแล้ว</string>
+    <string name="market_audit_order_chargeback_won">ยกเลิกการเรียกเงินคืนแล้ว</string>
     <string name="market_audit_order_completed">เสร็จสมบูรณ์</string>
     <string name="market_audit_order_created">สั่งซื้อแล้ว</string>
     <string name="market_audit_order_paid">ได้รับการชำระเงินแล้ว</string>
@@ -771,9 +771,9 @@
     <string name="market_audit_subscription_activated">เปิดใช้งานการสมัครสมาชิกแล้ว</string>
     <string name="market_audit_subscription_cancel_scheduled">กำหนดการยกเลิกแล้ว</string>
     <string name="market_audit_subscription_cancelled">ยกเลิกแล้ว</string>
-    <string name="market_audit_subscription_chargeback">ได้รับ chargeback แล้ว</string>
-    <string name="market_audit_subscription_chargeback_lost">ยืนยัน chargeback แล้ว</string>
-    <string name="market_audit_subscription_chargeback_won">ยกเลิกการ chargeback แล้ว</string>
+    <string name="market_audit_subscription_chargeback">ได้รับการเรียกเงินคืนแล้ว</string>
+    <string name="market_audit_subscription_chargeback_lost">ยืนยันการเรียกเงินคืนแล้ว</string>
+    <string name="market_audit_subscription_chargeback_won">ยกเลิกการเรียกเงินคืนแล้ว</string>
     <string name="market_audit_subscription_created">สร้างการสมัครสมาชิกแล้ว</string>
     <string name="market_audit_subscription_past_due">เลยกำหนดชำระแล้ว</string>
     <string name="market_audit_subscription_paused">หยุดชั่วคราวแล้ว</string>

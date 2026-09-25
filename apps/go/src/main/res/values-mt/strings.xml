@@ -5,10 +5,10 @@
     <string name="go_action_more">Iftaħ azzjonijiet tal-logħba</string>
     <string name="go_action_offer_draw">Offri draw</string>
     <string name="go_action_open_chat">Iftaħ panel tal-chat</string>
-    <string name="go_action_pass">Pass</string>
+    <string name="go_action_pass">Għaddi</string>
     <string name="go_action_rematch">Logħba mill-ġdid</string>
     <string name="go_action_resign">Irriżenja</string>
-    <string name="go_app_title">Mur</string>
+    <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Qbid iswed</string>
     <string name="go_captures_white_sr">Qbid abjad</string>
     <string name="go_chat_title">Chat</string>
@@ -39,7 +39,7 @@
     <string name="go_new_game_komi_label">Komi</string>
     <string name="go_new_game_komi_range_error">Irid ikun bejn 0 u 10</string>
     <string name="go_new_game_start">Ibda l-logħba</string>
-    <string name="go_pass_confirm">Pass</string>
+    <string name="go_pass_confirm">Għaddi</string>
     <string name="go_pass_end_confirm">Temm il-logħba</string>
     <string name="go_pass_end_message">%1$s ukoll għadda. Konferma se jtemm il-logħba u jiskorja l-bord.</string>
     <string name="go_pass_end_title">Temm il-logħba?</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">Iftaħ il-bar tal-ġenb</string>
     <string name="go_sidebar_active">Logħob attiv</string>
     <string name="go_empty_active">Għad m’hemm l-ebda logħba attiva.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">Irriżenja</string>
     <string name="go_new_game_title">Logħba Go ġdida</string>
     <string name="go_new_game_no_friends">Trid iżżid ħabib qabel ma tkun tista’ tibda logħba.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="feeds_title">Feed</string>
+    <string name="feeds_title">Çavkanî</string>
     <string name="feeds_find_feeds">Feedan bibîne</string>
     <string name="feeds_create_feed">Feed çêbike</string>
     <string name="feeds_new_post">Posta nû</string>
@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Hêj tu poste tune</string>
     <string name="feeds_sort_label">Rêz bike</string>
     <string name="feeds_sort_interests">Balkêşî</string>
-    <string name="feeds_sort_new">Nû</string>
+    <string name="feeds_sort_new">Herî nû</string>
     <string name="feeds_sort_hot">Germ</string>
-    <string name="feeds_sort_top">Jor</string>
+    <string name="feeds_sort_top">Çêtirîn</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Poste</string>
     <string name="feeds_image_preview">Pêşbînî</string>
@@ -24,12 +24,12 @@
     <string name="feeds_comments">Şîrove</string>
     <string name="feeds_delete_post">Şandiyê jê bibe</string>
     <string name="feeds_delete_comment">Şîroveyê jê bibe</string>
-    <string name="feeds_tags">Tag</string>
+    <string name="feeds_tags">Nîşan</string>
     <string name="feeds_remove">Rake</string>
     <string name="feeds_cancel_reply">Bersivê betal bike</string>
     <string name="feeds_edit_post">Şandiyê sererast bike</string>
     <string name="feeds_save_label">Tomar bike</string>
-    <string name="feeds_post_action">Poste</string>
+    <string name="feeds_post_action">Biweşîne</string>
     <string name="feeds_feed_label">Feed</string>
     <string name="feeds_add_files">Pelan zêde bike</string>
     <string name="feeds_restore">Vegerîne</string>
@@ -42,7 +42,7 @@
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Navê feedê</string>
     <string name="feeds_save_name">Navê tomar bike</string>
-    <string name="feeds_banner">Banner</string>
+    <string name="feeds_banner">Pankart</string>
     <string name="feeds_banner_description">Bannera markdown a vebijarkî ku li serê pelê te tê nîşandan.</string>
     <string name="feeds_clear">Paqij bike</string>
     <string name="feeds_delete_feed">Feedê jê bibe</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Balkêşî hat kêmkirin</string>
     <string name="feeds_interest_removed">Balkêşî hat rakirin</string>
     <string name="feeds_interest_failed">Eyarkirina balkêşiyê neserkeftî bû</string>
-    <string name="feeds_saved_title">Hatiye tomarkirin</string>
-    <string name="feeds_saved_menu">Hatiye tomarkirin</string>
+    <string name="feeds_saved_title">Tomarkirî</string>
+    <string name="feeds_saved_menu">Tomarkirî</string>
     <string name="feeds_saved_save">Bo paşê tomar bike</string>
     <string name="feeds_saved_remove">Ji tomarkiriyan rake</string>
     <string name="feeds_saved_clear_all">Hemûyan paqij bike</string>

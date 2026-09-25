@@ -63,7 +63,7 @@
     <string name="notifprefs_name_label">Ime</string>
     <string name="notifprefs_destinations">Cilji</string>
     <string name="notifprefs_dest_web">Spletni brskalnik</string>
-    <string name="notifprefs_test">Test</string>
+    <string name="notifprefs_test">Preizkusi</string>
     <string name="notifprefs_edit">Uredi</string>
     <string name="notifprefs_delete">Izbriši</string>
     <string name="notifprefs_remove">Odstrani</string>
@@ -98,7 +98,7 @@
     <string name="accounts_status_verified">Preverjeno</string>
     <string name="accounts_status_connected">Povezano</string>
     <string name="accounts_default_for_ai">Privzeto za UI</string>
-    <string name="accounts_test">Test</string>
+    <string name="accounts_test">Preizkusi</string>
     <string name="accounts_settings">Nastavitve</string>
     <string name="accounts_verify">Preveri</string>
     <string name="accounts_remove">Odstrani</string>
@@ -362,7 +362,7 @@
     <string name="route_target_none">Ni razpoložljivih ciljev</string>
     <string name="login_invalid_code">Neveljavna koda</string>
     <string name="accounts_provider_browser">Obvestila brskalnika</string>
-    <string name="accounts_provider_fcm">Android push</string>
+    <string name="accounts_provider_fcm">Android push obvestila</string>
     <string name="accounts_provider_mcp">Strežnik MCP</string>
     <string name="accounts_provider_unifiedpush">Push obvestilo</string>
     <string name="accounts_provider_url">Zunanji URL</string>
@@ -380,10 +380,10 @@
     <string name="accounts_forget_message">S tem boste pozabili napravo \"%1$s\" in ustavili obvestila nanjo.</string>
     <string name="accounts_device_seen">Nazadnje viden %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplikacija</string>
-    <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_device_push">%1$s · push obvestila</string>
     <string name="notifprefs_test_partial">Test poslan na %1$d od %2$d ciljev</string>
     <string name="notifprefs_test_none">Ni nastavljenih ciljev</string>
-    <string name="notifprefs_transport_fcm">Android push</string>
+    <string name="notifprefs_transport_fcm">Android push obvestila</string>
     <string name="notifprefs_no_destinations">Brez ciljev</string>
     <string name="account_data_generate">Ustvari geslo</string>
     <string name="accounts_field_server">URL strežnika</string>

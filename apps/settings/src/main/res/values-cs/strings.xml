@@ -151,7 +151,7 @@
     <string name="system_setting_oauth_github_client_secret">Tajný klíč klienta GitHub</string>
     <string name="system_setting_oauth_microsoft_client_id">ID klienta Microsoft</string>
     <string name="system_setting_oauth_microsoft_client_secret">Tajný klíč klienta Microsoft</string>
-    <string name="system_setting_oauth_microsoft_tenant">Microsoft tenant</string>
+    <string name="system_setting_oauth_microsoft_tenant">Tenant Microsoft</string>
     <string name="system_setting_oauth_facebook_client_id">ID aplikace Facebook</string>
     <string name="system_setting_oauth_facebook_client_secret">Tajný klíč aplikace Facebook</string>
     <string name="system_setting_oauth_x_client_id">Klientské ID pro X</string>
@@ -361,7 +361,7 @@
     <string name="route_target_none">Nejsou dostupné žádné cíle</string>
     <string name="login_invalid_code">Neplatný kód</string>
     <string name="accounts_provider_browser">Oznámení prohlížeče</string>
-    <string name="accounts_provider_fcm">Android push</string>
+    <string name="accounts_provider_fcm">Push oznámení pro Android</string>
     <string name="accounts_provider_mcp">Server MCP</string>
     <string name="accounts_provider_unifiedpush">Push oznámení</string>
     <string name="accounts_provider_url">Externí URL</string>
@@ -382,7 +382,7 @@
     <string name="notifprefs_device_push">%1$s · push</string>
     <string name="notifprefs_test_partial">Test odeslán do %1$d z %2$d cílů</string>
     <string name="notifprefs_test_none">Žádné nakonfigurované cíle</string>
-    <string name="notifprefs_transport_fcm">Android push</string>
+    <string name="notifprefs_transport_fcm">Push oznámení pro Android</string>
     <string name="notifprefs_no_destinations">Žádná místa určení</string>
     <string name="account_data_generate">Vygenerovat přístupové heslo</string>
     <string name="accounts_field_server">URL serveru</string>

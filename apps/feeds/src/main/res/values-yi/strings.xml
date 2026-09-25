@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">נאָך קיין פּאָסטן</string>
     <string name="feeds_sort_label">סאָרטיר</string>
     <string name="feeds_sort_interests">אינטערעסן</string>
-    <string name="feeds_sort_new">נײַ</string>
+    <string name="feeds_sort_new">נײַסטע</string>
     <string name="feeds_sort_hot">הייס</string>
-    <string name="feeds_sort_top">אויבן</string>
+    <string name="feeds_sort_top">בעסטע</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">פּאָסט</string>
     <string name="feeds_image_preview">פֿאָרזע</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">אָפּזאָגן ענטפֿער</string>
     <string name="feeds_edit_post">רעדאַקטירן בײַטראָג</string>
     <string name="feeds_save_label">היט אויף</string>
-    <string name="feeds_post_action">פּאָסט</string>
+    <string name="feeds_post_action">פֿאַרעפֿנטלעך</string>
     <string name="feeds_feed_label">פֿיד</string>
     <string name="feeds_add_files">צולייגן פֿײַלן</string>
     <string name="feeds_restore">אויפֿשטעלן</string>
@@ -63,13 +63,13 @@
     <string name="feeds_logout">אַרויסקומען</string>
     <string name="feeds_ai_account_default">סטאַנדאַרד קאָנטע</string>
     <string name="feeds_ai_mode_off">אומדערלויבט</string>
-    <string name="feeds_ai_mode_tag">טאַג</string>
+    <string name="feeds_ai_mode_tag">טאַגירן</string>
     <string name="feeds_ai_mode_tag_deduplicate">טאַג + דעדופּליצירן</string>
     <string name="feeds_feed_not_found">פֿיד ניט געפֿונען</string>
     <string name="feeds_post_not_found">פּאָסט ניט געפֿונען</string>
     <string name="feeds_post_select_feed">זײט אזװי גוט קלײבט אן פיד</string>
     <string name="feeds_post_empty_content">זײט אזװי גוט ארײן עטלכע טעקסט אדער לױגט אן א פאיל</string>
-    <string name="feeds_settings_feed_renamed">פֿיד איבערגענומען</string>
+    <string name="feeds_settings_feed_renamed">פֿיד איבערגעטויפֿט</string>
     <string name="feeds_settings_banner_saved">באאנער געזיכערט</string>
     <string name="feeds_settings_source_added">מקור צוגעלייגט</string>
     <string name="feeds_settings_source_updated">מקור באַנײַט</string>

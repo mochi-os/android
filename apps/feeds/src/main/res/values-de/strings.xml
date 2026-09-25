@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Noch keine Beiträge</string>
     <string name="feeds_sort_label">Sortieren</string>
     <string name="feeds_sort_interests">Interessen</string>
-    <string name="feeds_sort_new">Neu</string>
+    <string name="feeds_sort_new">Neueste</string>
     <string name="feeds_sort_hot">Heiß</string>
-    <string name="feeds_sort_top">Oben</string>
+    <string name="feeds_sort_top">Top</string>
     <string name="feeds_sort_ai">KI</string>
     <string name="feeds_post_default_author">Beitrag</string>
     <string name="feeds_image_preview">Vorschau</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Antwort abbrechen</string>
     <string name="feeds_edit_post">Beitrag bearbeiten</string>
     <string name="feeds_save_label">Speichern</string>
-    <string name="feeds_post_action">Beitrag</string>
+    <string name="feeds_post_action">Posten</string>
     <string name="feeds_feed_label">Feed</string>
     <string name="feeds_add_files">Dateien hinzufügen</string>
     <string name="feeds_restore">Wiederherstellen</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Abmelden</string>
     <string name="feeds_ai_account_default">Standardkonto</string>
     <string name="feeds_ai_mode_off">Deaktiviert</string>
-    <string name="feeds_ai_mode_tag">Tag</string>
+    <string name="feeds_ai_mode_tag">Taggen</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + Duplikate entfernen</string>
     <string name="feeds_feed_not_found">Feed nicht gefunden</string>
     <string name="feeds_post_not_found">Beitrag nicht gefunden</string>

@@ -78,7 +78,7 @@
     <string name="crm_design_or_upload_json">أو ارفع ملفًا</string>
     <string name="crm_design_upload_json">رفع ملف .json</string>
     <string name="crm_design_tab_classes">الفئات</string>
-    <string name="crm_design_tab_views">المشاهدات</string>
+    <string name="crm_design_tab_views">طرق العرض</string>
     <string name="crm_design_import_dialog_title">استيراد التصميم</string>
     <string name="crm_design_import_choose_template">اختر قالباً</string>
     <string name="crm_design_replace_title">استبدال التصميم؟</string>

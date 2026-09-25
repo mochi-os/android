@@ -24,13 +24,13 @@
     <string name="forums_settings">設定</string>
     <string name="forums_load_more">載入更多</string>
     <string name="forums_sort_label">排序</string>
-    <string name="forums_sort_new">新增</string>
+    <string name="forums_sort_new">最新</string>
     <string name="forums_sort_hot">熱門</string>
-    <string name="forums_sort_top">頂端</string>
+    <string name="forums_sort_top">最佳</string>
     <string name="forums_sort_interests">興趣</string>
     <string name="forums_post_title_field">標題</string>
     <string name="forums_post_attach">附加檔案</string>
-    <string name="forums_post_create_action">貼文</string>
+    <string name="forums_post_create_action">發佈</string>
     <string name="forums_post_edit">編輯貼文</string>
     <string name="forums_post_edit_title">編輯貼文</string>
     <string name="forums_post_edit_title_field">標題</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">成員</string>
     <string name="forums_tab_banner">橫幅</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">目標</string>
+    <string name="forums_access_target">使用者或群組</string>
     <string name="forums_access_level_view">檢視</string>
     <string name="forums_access_level_vote">投票</string>
     <string name="forums_access_level_comment">留言</string>
-    <string name="forums_access_level_post">貼文</string>
+    <string name="forums_access_level_post">發佈</string>
     <string name="forums_access_level_none">無</string>
     <string name="forums_members_empty">無成員</string>
     <string name="forums_banner_dismiss">關閉橫幅</string>
-    <string name="forums_ai_mode_tag">標籤</string>
+    <string name="forums_ai_mode_tag">加標籤</string>
     <string name="forums_ai_account_default">預設帳戶</string>
     <string name="forums_ai_prompt_reset">重設為預設值</string>
     <string name="forums_settings_unsubscribe">取消訂閱</string>
@@ -80,7 +80,7 @@
     <string name="forums_moderation_reports_resolved">已解決</string>
     <string name="forums_moderation_reports_all">全部</string>
     <string name="forums_moderation_reports_empty">無報告</string>
-    <string name="forums_moderation_report_dismiss">關閉</string>
+    <string name="forums_moderation_report_dismiss">駁回</string>
     <string name="forums_moderation_restrictions_empty">無限制</string>
     <string name="forums_moderation_restriction_remove">移除</string>
     <string name="forums_moderation_restriction_type">類型</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_login_failed">登入失敗</string>
 
     <string name="notification_channel_forums">論壇通知</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi 論壇</string>
     <string name="forums_auth_create_identity_failed">無法建立身分</string>
     <string name="forums_auth_mfa_unsupported">行動應用程式尚未支援多重要素驗證</string>
     <string name="forums_auth_enter_code_sent">請輸入已傳送至 %1$s 的驗證碼</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">手動</string>
     <string name="forums_access_search_users">搜尋使用者</string>
     <string name="forums_access_no_groups">無可用的群組</string>
-    <string name="forums_saved_title">已儲存</string>
+    <string name="forums_saved_title">已儲存項目</string>
     <string name="forums_saved_save">稍後儲存</string>
     <string name="forums_saved_remove">從已儲存中移除</string>
     <string name="forums_saved_clear_all">全部清除</string>

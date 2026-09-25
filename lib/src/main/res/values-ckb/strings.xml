@@ -38,7 +38,7 @@
     <string name="access_add_rule">زیادکردنی یاسا</string>
     <string name="access_owner">خاوەن</string>
     <string name="access_revoke">ڕاگرتن</string>
-    <string name="access_level_comment">لێدوان</string>
+    <string name="access_level_comment">لێدوان نووسین</string>
     <string name="access_level_view">بینین</string>
     <string name="access_level_none">هیچ</string>
     <string name="reaction_like">بەدڵبوون</string>
@@ -95,7 +95,7 @@
     <string name="settings_week_sunday">یەکشەممە</string>
     <string name="settings_number_format">شێوازی ژمارە</string>
     <string name="settings_units">یەکەکان</string>
-    <string name="settings_units_metric">Metric</string>
+    <string name="settings_units_metric">مەتری</string>
     <string name="settings_units_imperial">ئیمپێریاڵ</string>
     <string name="settings_time_zone">هەرێمی کات</string>
     <string name="settings_reset_to_defaults">گەڕاندنەوە بۆ بنەڕەتەکان</string>

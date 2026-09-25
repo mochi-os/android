@@ -15,7 +15,7 @@
     <string name="people_common_delete">刪除</string>
     <string name="people_person_state_self">你</string>
     <string name="people_group_description">描述</string>
-    <string name="people_sidebar_header">用戶</string>
+    <string name="people_sidebar_header">聯絡人</string>
     <string name="people_group_members">成員</string>
     <string name="people_invitations_accept">接受</string>
     <string name="people_person_accept">接受</string>
@@ -89,7 +89,7 @@
     <string name="people_profile_accent_none">無</string>
     <string name="people_profile_clear">清除</string>
     <string name="people_profile_privacy_private_desc">只有共同朋友可檢視您的個人檔案</string>
-    <string name="people_welcome_title">歡迎使用 People</string>
+    <string name="people_welcome_title">歡迎使用聯絡人</string>
     <string name="people_open_sidebar">開啟導覽</string>
     <string name="people_person_banner_alt">%1$s 的橫額</string>
     <string name="people_person_private">此個人檔案為私人</string>

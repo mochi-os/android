@@ -24,9 +24,9 @@
     <string name="forums_settings">الإعدادات</string>
     <string name="forums_load_more">تحميل المزيد</string>
     <string name="forums_sort_label">ترتيب</string>
-    <string name="forums_sort_new">جديد</string>
+    <string name="forums_sort_new">الأحدث</string>
     <string name="forums_sort_hot">رائج</string>
-    <string name="forums_sort_top">الأعلى</string>
+    <string name="forums_sort_top">الأعلى تقييمًا</string>
     <string name="forums_sort_interests">الاهتمامات</string>
     <string name="forums_post_title_field">العنوان</string>
     <string name="forums_post_attach">إرفاق ملفات</string>
@@ -48,18 +48,18 @@
     <string name="forums_post_approve">موافقة</string>
     <string name="forums_post_remove">إزالة</string>
     <string name="forums_post_restore">استعادة</string>
-    <string name="forums_post_report">تقرير</string>
+    <string name="forums_post_report">إبلاغ</string>
     <string name="forums_comment_approve">موافقة</string>
     <string name="forums_comment_remove">إزالة</string>
     <string name="forums_comment_restore">استعادة</string>
-    <string name="forums_comment_report">تقرير</string>
+    <string name="forums_comment_report">إبلاغ</string>
     <string name="forums_post_tag_label">وسم</string>
     <string name="forums_tab_general">عام</string>
     <string name="forums_tab_access">الوصول</string>
     <string name="forums_tab_members">الأعضاء</string>
     <string name="forums_tab_banner">اللافتة</string>
     <string name="forums_tab_ai">الذكاء الاصطناعي</string>
-    <string name="forums_access_target">الهدف</string>
+    <string name="forums_access_target">صاحب الصلاحية</string>
     <string name="forums_access_level_view">عرض</string>
     <string name="forums_access_level_vote">تصويت</string>
     <string name="forums_access_level_comment">تعليق</string>
@@ -80,7 +80,7 @@
     <string name="forums_moderation_reports_resolved">تم الحل</string>
     <string name="forums_moderation_reports_all">الكل</string>
     <string name="forums_moderation_reports_empty">لا توجد تقارير</string>
-    <string name="forums_moderation_report_dismiss">تجاهل</string>
+    <string name="forums_moderation_report_dismiss">رفض</string>
     <string name="forums_moderation_restrictions_empty">لا توجد قيود</string>
     <string name="forums_moderation_restriction_remove">إزالة</string>
     <string name="forums_moderation_restriction_type">النوع</string>
@@ -124,7 +124,7 @@
     <string name="forums_comment_send">إرسال</string>
 
     <string name="notification_channel_forums">إشعارات المنتديات</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi المنتديات</string>
     <string name="forums_auth_login_failed">فشل تسجيل الدخول</string>
     <string name="forums_auth_create_identity_failed">فشل إنشاء الهوية</string>
     <string name="forums_auth_mfa_unsupported">المصادقة متعددة العوامل غير مدعومة بعد في تطبيق الجوال</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">يدوي</string>
     <string name="forums_access_search_users">البحث عن مستخدمين</string>
     <string name="forums_access_no_groups">لا توجد مجموعات متاحة</string>
-    <string name="forums_saved_title">تم الحفظ</string>
+    <string name="forums_saved_title">المحفوظات</string>
     <string name="forums_saved_save">حفظ لوقت لاحق</string>
     <string name="forums_saved_remove">إزالة من المحفوظات</string>
     <string name="forums_saved_clear_all">مسح الكل</string>
@@ -324,7 +324,7 @@
     <string name="forums_moderation_action_restrict">مقيد</string>
     <string name="forums_moderation_action_unrestrict">غير مقيد</string>
     <string name="forums_moderation_action_resolve">تقرير تم حله</string>
-    <string name="forums_moderation_target_post">نشر</string>
+    <string name="forums_moderation_target_post">منشور</string>
     <string name="forums_moderation_target_comment">تعليق</string>
     <string name="forums_moderation_target_user">المستخدم</string>
     <string name="forums_moderation_reason_spam">بريد عشوائي</string>

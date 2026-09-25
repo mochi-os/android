@@ -35,7 +35,7 @@
     <string name="projects_create_object_type">Uri</string>
     <string name="projects_create_object_parent">Magulang</string>
     <string name="projects_settings_title">Mga setting</string>
-    <string name="projects_settings_tab_general">General</string>
+    <string name="projects_settings_tab_general">Pangkalahatan</string>
     <string name="projects_settings_tab_access">Access</string>
     <string name="projects_settings_tab_people">Mga Tao</string>
     <string name="projects_option_icon">Icon</string>
@@ -152,7 +152,7 @@
     <string name="projects_views_sort_number">Numero</string>
     <string name="projects_views_sort_created">Nagawa</string>
     <string name="projects_views_sort_updated">Na-update</string>
-    <string name="projects_views_sort_rank">Rank</string>
+    <string name="projects_views_sort_rank">Ranggo</string>
     <string name="projects_project_not_found">Hindi nahanap ang proyekto</string>
     <string name="projects_list_more">Higit pa</string>
     <string name="projects_more">Higit pa</string>
@@ -160,7 +160,7 @@
     <string name="projects_comment_send">Ipadala</string>
     <string name="projects_field_position_body">Nilalaman</string>
     <string name="projects_sort_field">Pagbukud-bukurin ayon sa</string>
-    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_comment_remove_attachment">Alisin ang attachment</string>
     <string name="projects_views_sort_by">Pagbukud-bukurin ayon sa</string>
     <string name="projects_auth_login_failed">Hindi nag-login</string>
     <string name="projects_views_move_up">Ilipat pataas</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Maghanap ng mga bagay</string>
 
     <string name="notification_channel_projects">Mga abiso ng Projects</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Mga Proyekto</string>
     <string name="projects_auth_create_identity_failed">Nabigo sa paggawa ng identity</string>
     <string name="projects_auth_mfa_unsupported">Hindi pa suportado ang MFA sa mobile app</string>
     <string name="projects_auth_enter_code_sent">Ilagay ang code na ipinadala sa %1$s</string>
@@ -238,17 +238,17 @@
     <string name="projects_request_view_diff">Tingnan ang diff</string>
     <string name="projects_request_mark_ready">Markahan bilang handa</string>
     <string name="projects_request_merge_default_message">I-merge ang %1$s sa %2$s</string>
-    <string name="projects_request_commit_message">Commit message</string>
+    <string name="projects_request_commit_message">Mensahe ng commit</string>
     <string name="projects_request_method_squash">Squash</string>
     <string name="projects_request_method_rebase">Rebase</string>
     <string name="projects_request_create_title">Gumawa ng merge request</string>
     <string name="projects_request_field_target">Target branch</string>
-    <string name="projects_diff_title">Diff: %1$s -&gt; %2$s</string>
+    <string name="projects_diff_title">Pagkakaiba: %1$s -&gt; %2$s</string>
     <string name="projects_tree_collapse">Isara</string>
     <string name="projects_tree_expand">Buksan</string>
     <string name="projects_tree_move">Ilipat</string>
     <string name="projects_tree_move_to_parent">Ilipat sa parent</string>
-    <string name="projects_tree_root_level">(Root level)</string>
+    <string name="projects_tree_root_level">(Antas ng ugat)</string>
     <string name="projects_tree_empty">Walang objects</string>
     <string name="projects_board_no_columns">Walang nakatakdang columns para sa view na ito</string>
     <string name="projects_board_no_options">Walang mga opsyon na naka-configure para sa field ng kolum</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Pumili ng panuntunan</string>
     <string name="projects_access_authenticated_desc">Sinumang naka-log in</string>
     <string name="projects_access_anyone_desc">Kasama ang mga anonymous na user</string>
-    <string name="projects_access_target">Target</string>
+    <string name="projects_access_target">User o grupo</string>
     <string name="projects_access_target_hint">Entity ID, @group, * (lahat), o + (mga miyembro)</string>
     <string name="projects_access_selected">Napili: %1$s</string>
     <string name="projects_access_role_comment">Magkomento at tingnan</string>
@@ -381,5 +381,5 @@
     <string name="projects_option_delete_message">Sigurado ka bang gusto mong tanggalin ang option na \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Wala pang uri ng item na magagawa. Gumawa muna ng kinakailangang parent item.</string>
     <string name="projects_create_blocked_no_options">Hindi makagawa: kailangan ang %1$s ngunit walang mapagpipiliang opsyon. Magdagdag ng opsyon sa Disenyo.</string>
-    <string name="projects_attachment_remove">Remove attachment</string>
+    <string name="projects_attachment_remove">Alisin ang attachment</string>
 </resources>

@@ -78,7 +78,7 @@
     <string name="crm_design_or_upload_json">Կամ վերբեռնեք ֆայլ</string>
     <string name="crm_design_upload_json">Վերբեռնել .json ֆայլ</string>
     <string name="crm_design_tab_classes">Դասեր</string>
-    <string name="crm_design_tab_views">Դիտումներ</string>
+    <string name="crm_design_tab_views">Տեսքեր</string>
     <string name="crm_design_import_dialog_title">Ներմուծել ձևավորումը</string>
     <string name="crm_design_import_choose_template">Ընտրեք ձևանմուշ</string>
     <string name="crm_design_replace_title">Փոխարինե՞լ ձևավորումը։</string>
@@ -126,7 +126,7 @@
     <string name="crm_not_found">CRM-ը չի գտնվել</string>
     <string name="crm_more">Ավելին</string>
     <string name="crm_comment_send">Ուղարկել</string>
-    <string name="crm_field_position_body">Բովանդակություն</string>
+    <string name="crm_field_position_body">Հիմնական մաս</string>
     <string name="crm_list_add_to_home">Ավելացնել գլխավոր էկրանին</string>
     <string name="crm_sort_field">Տեսակավորել ըստ</string>
     <string name="crm_views_move_up">Տեղափոխել վերև</string>
@@ -217,7 +217,7 @@
     <string name="crm_field_min_length">Նվազագույն երկարություն</string>
     <string name="crm_field_max_length">Առավելագույն երկարություն</string>
     <string name="crm_field_pattern">Ձևանմուշ (regex)</string>
-    <string name="crm_field_rows">Տողեր (textarea-ի բարձրություն)</string>
+    <string name="crm_field_rows">Տողեր (տեքստային դաշտի բարձրություն)</string>
     <string name="crm_field_no_options">Ընտրանքներ սահմանված չեն</string>
     <string name="crm_field_delete_message">Վստա՞հ եք, որ ցանկանում եք ջնջել \"%1$s\" դաշտը։ Բոլոր ընտրանքները և արժեքները կկորչեն։</string>
     <string name="crm_option_color">Գույն</string>

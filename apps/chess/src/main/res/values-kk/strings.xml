@@ -13,7 +13,7 @@
     <string name="chess_new_title">Жаңа ойын</string>
     <string name="chess_new_pick_opponent">Қарсыласты таңдау</string>
     <string name="chess_new_no_friends_title">Достар әлі жоқ</string>
-    <string name="chess_new_no_friends_subtitle">Ойынды бастау үшін People қолданбасында дос қосыңыз</string>
+    <string name="chess_new_no_friends_subtitle">Ойынды бастау үшін Адамдар қолданбасында дос қосыңыз</string>
     <string name="chess_new_add_friends">Достар қосу</string>
     <string name="chess_new_start_button">Ойынды бастау</string>
     <string name="chess_new_creating">Құрылуда…</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">Staf Mochi</string>
+    <string name="launcher_staff">Mochi Staf</string>
     <string name="staff_accounts_action_ban_title">Blokir akun</string>
     <string name="staff_accounts_action_suspend_title">Setop akun</string>
     <string name="staff_accounts_action_unban_title">Mbukak larangan</string>
@@ -157,13 +157,13 @@
     <string name="staff_categories_type_digital">Digital</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">Fisik</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">Staf Mochi</string>
     <string name="staff_config_field_auto_approve">Ambang persetujuan otomatis</string>
     <string name="staff_config_field_hold">Watesan tahan</string>
     <string name="staff_config_field_platform_fee">Biaya platform</string>
     <string name="staff_config_field_review_window">Jendhéla review</string>
     <string name="staff_config_field_stripe_oauth_client">ID klien OAuth</string>
-    <string name="staff_config_field_stripe_publishable">Publishable key</string>
+    <string name="staff_config_field_stripe_publishable">Kunci publik</string>
     <string name="staff_config_field_stripe_secret">Kunci rahasia</string>
     <string name="staff_config_group_moderation">Moderasi</string>
     <string name="staff_config_group_payments">Pembayaran</string>
@@ -242,7 +242,7 @@
     <string name="staff_disputes_resolution_seller">Rampungaké kanggo penjual</string>
     <string name="staff_disputes_resolve">Rampungaké</string>
     <string name="staff_disputes_resolved_toast">Sengketa rampung</string>
-    <string name="staff_disputes_review">Review</string>
+    <string name="staff_disputes_review">Priksa</string>
     <string name="staff_disputes_status_escalated">Diundakaké</string>
     <string name="staff_disputes_status_open">Bukak</string>
     <string name="staff_disputes_status_resolved_buyer">Rampung (pembeli)</string>
@@ -272,7 +272,7 @@
     <string name="staff_listings_moderation_hold">Tahan</string>
     <string name="staff_listings_moderation_manual">Manual</string>
     <string name="staff_listings_moderation_rejected">Ditolak</string>
-    <string name="staff_listings_moderation_review">Review</string>
+    <string name="staff_listings_moderation_review">Pamriksan</string>
     <string name="staff_listings_moderation_soft_approved">Disetujoni alus</string>
     <string name="staff_listings_notes_label">Cathetan</string>
     <string name="staff_listings_price_placeholder">—</string>
@@ -284,7 +284,7 @@
     <string name="staff_listings_search_clear">Resiki panggolékan</string>
     <string name="staff_listings_search_placeholder">Goleki judul utawa katrangan</string>
     <string name="staff_listings_status_active">Aktif</string>
-    <string name="staff_listings_status_draft">Draft</string>
+    <string name="staff_listings_status_draft">Draf</string>
     <string name="staff_listings_status_expired">Wis kadaluwarsa</string>
     <string name="staff_listings_status_rejected">Ditolak</string>
     <string name="staff_listings_status_removed">Wis dicabut</string>
@@ -296,7 +296,7 @@
     <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Tindakan</string>
     <string name="staff_reports_action_ban">Blokir pangguna</string>
-    <string name="staff_reports_action_dismiss">Singkiraké</string>
+    <string name="staff_reports_action_dismiss">Tolak</string>
     <string name="staff_reports_action_label">Tindakan</string>
     <string name="staff_reports_action_placeholder">Pilih aksi</string>
     <string name="staff_reports_action_remove">Cabut</string>
@@ -316,7 +316,7 @@
     <string name="staff_reports_meta_reason">Alesan</string>
     <string name="staff_reports_meta_reporter">Sing nglaporaké</string>
     <string name="staff_reports_meta_seller">Sing dodol</string>
-    <string name="staff_reports_meta_target">Target</string>
+    <string name="staff_reports_meta_target">Sing dilaporaké</string>
     <string name="staff_reports_meta_type">Jenis</string>
     <string name="staff_reports_notes_label">Cathetan</string>
     <string name="staff_reports_reason_counterfeit">Palsu utawa colongan</string>
@@ -371,7 +371,7 @@
     <string name="staff_status_auto_approved">Disetujoni otomatis</string>
     <string name="staff_status_banned">Diblokir</string>
     <string name="staff_status_dismissed">Disingkiraké</string>
-    <string name="staff_status_draft">Draft</string>
+    <string name="staff_status_draft">Draf</string>
     <string name="staff_status_escalated">Diundakaké</string>
     <string name="staff_status_expired">Wis kadaluwarsa</string>
     <string name="staff_status_hidden">Disingidaké</string>
@@ -386,7 +386,7 @@
     <string name="staff_status_resolved_buyer">Rampung (pembeli)</string>
     <string name="staff_status_resolved_seller">Rampung (penjual)</string>
     <string name="staff_status_responded">Wis diwangsuli</string>
-    <string name="staff_status_review">Review</string>
+    <string name="staff_status_review">Pamriksan</string>
     <string name="staff_status_reviewed">Wis di-review</string>
     <string name="staff_status_reviewing">Lagi review</string>
     <string name="staff_status_soft_approved">Disetujoni alus</string>
@@ -414,7 +414,7 @@
     <string name="staff_team_toast_add_failed">Gagal nambah anggota</string>
     <string name="staff_team_toast_removed">Anggota dibusak</string>
     <string name="staff_team_toast_role_updated">Peran wis dianyari</string>
-    <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
+    <string name="staff_audit_action_auction_cancelled">Lelang dibatalaké</string>
     <string name="staff_dashboard_order_fallback">Pesenan #%1$s</string>
 
     <string name="staff_appeals_reason_label">Alesan banding penjual</string>

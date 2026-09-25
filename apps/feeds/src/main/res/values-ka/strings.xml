@@ -2,7 +2,7 @@
 <resources>
     <string name="feeds_title">არხები</string>
     <string name="feeds_find_feeds">არხების ძიება</string>
-    <string name="feeds_create_feed">feed-ის შექმნა</string>
+    <string name="feeds_create_feed">არხის შექმნა</string>
     <string name="feeds_new_post">ახალი პოსტი</string>
     <string name="feeds_all_feeds">ყველა feed</string>
     <string name="feeds_name">სახელი</string>
@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">პოსტები ჯერ არ არის</string>
     <string name="feeds_sort_label">დახარისხება</string>
     <string name="feeds_sort_interests">ინტერესები</string>
-    <string name="feeds_sort_new">ახალი</string>
+    <string name="feeds_sort_new">უახლესი</string>
     <string name="feeds_sort_hot">ცხელი</string>
-    <string name="feeds_sort_top">ზედა</string>
+    <string name="feeds_sort_top">საუკეთესო</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">პოსტი</string>
     <string name="feeds_image_preview">გადახედვა</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">პასუხის გაუქმება</string>
     <string name="feeds_edit_post">პოსტის რედაქტირება</string>
     <string name="feeds_save_label">შენახვა</string>
-    <string name="feeds_post_action">პოსტი</string>
+    <string name="feeds_post_action">გამოქვეყნება</string>
     <string name="feeds_feed_label">არხი</string>
     <string name="feeds_add_files">ფაილების დამატება</string>
     <string name="feeds_restore">აღდგენა</string>
@@ -45,7 +45,7 @@
     <string name="feeds_banner">ბანერი</string>
     <string name="feeds_banner_description">არასავალდებულო markdown ბანერი, რომელიც ნაჩვენებია თქვენი ფიდის თავში.</string>
     <string name="feeds_clear">გასუფთავება</string>
-    <string name="feeds_delete_feed">feed-ის წაშლა</string>
+    <string name="feeds_delete_feed">არხის წაშლა</string>
     <string name="feeds_no_members">წევრები არ არის</string>
     <string name="feeds_user">მომხმარებელი</string>
     <string name="feeds_access_no_groups">ხელმისაწვდომი ჯგუფები არ არის</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">გასვლა</string>
     <string name="feeds_ai_account_default">ნაგულისხმევი ანგარიში</string>
     <string name="feeds_ai_mode_off">გათიშულია</string>
-    <string name="feeds_ai_mode_tag">ტეგი</string>
+    <string name="feeds_ai_mode_tag">ტეგების მინიჭება</string>
     <string name="feeds_ai_mode_tag_deduplicate">ტეგი + დუბლიკატების მოცილება</string>
     <string name="feeds_feed_not_found">არხი ვერ მოიძებნა</string>
     <string name="feeds_post_not_found">პოსტი ვერ მოიძებნა</string>
@@ -169,7 +169,7 @@
     <string name="feeds_rss_mode_posts_comments">პოსტები და კომენტარები</string>
     <string name="feeds_access_add_title">წვდომის დამატება</string>
     <string name="feeds_permission_request_message">%1$s ითხოვს შემდეგ ნებართვას:</string>
-    <string name="feeds_allow_search">ნებისმიერს feed-ის ძიების ნება დართე</string>
+    <string name="feeds_allow_search">ნებისმიერს არხის ძიების ნება დართე</string>
     <string name="feeds_post_content">პოსტის შინაარსი</string>
     <string name="feeds_enable_memories">მეხსიერების ჩართვა</string>
     <string name="feeds_permission_request_title">ნებართვის მოთხოვნა</string>

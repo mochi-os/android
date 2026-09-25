@@ -39,7 +39,7 @@
     <string name="access_owner">オーナー</string>
     <string name="access_revoke">取り消し</string>
     <string name="access_level_comment">コメント</string>
-    <string name="access_level_view">ビュー</string>
+    <string name="access_level_view">表示</string>
     <string name="access_level_none">なし</string>
     <string name="reaction_like">いいね</string>
     <string name="reaction_dislike">イマイチ</string>

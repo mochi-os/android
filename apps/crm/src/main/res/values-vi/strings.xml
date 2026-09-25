@@ -78,7 +78,7 @@
     <string name="crm_design_or_upload_json">Hoặc tải lên một tệp</string>
     <string name="crm_design_upload_json">Tải lên tệp .json</string>
     <string name="crm_design_tab_classes">Class</string>
-    <string name="crm_design_tab_views">Lượt xem</string>
+    <string name="crm_design_tab_views">Chế độ xem</string>
     <string name="crm_design_import_dialog_title">Nhập thiết kế</string>
     <string name="crm_design_import_choose_template">Chọn một mẫu</string>
     <string name="crm_design_replace_title">Thay thế thiết kế?</string>
@@ -126,7 +126,7 @@
     <string name="crm_not_found">Không tìm thấy dự án</string>
     <string name="crm_more">Thêm</string>
     <string name="crm_comment_send">Gửi</string>
-    <string name="crm_field_position_body">Nội dung</string>
+    <string name="crm_field_position_body">Phần thân</string>
     <string name="crm_sort_field">Sắp xếp theo</string>
     <string name="crm_comment_remove_attachment">Xóa tệp đính kèm</string>
     <string name="crm_views_sort_by">Sắp xếp theo</string>

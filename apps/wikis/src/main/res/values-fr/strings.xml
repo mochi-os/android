@@ -109,7 +109,7 @@
     <string name="wikis_rename_page_failed">Échec du renommage de la page</string>
     <string name="wikis_history_title">Historique</string>
     <string name="wikis_history_empty">Aucune révision trouvée</string>
-    <string name="wikis_history_view_action">Vue</string>
+    <string name="wikis_history_view_action">Voir</string>
     <string name="wikis_history_revert_action">Revenir à cette version</string>
     <string name="wikis_revision_current_badge">Actuelle</string>
     <string name="wikis_revision_revert_to_this">Revenir à cette version</string>

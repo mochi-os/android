@@ -62,7 +62,7 @@
     <string name="people_profile_uploading">Yuklanmoqda…</string>
     <string name="people_profile_change_banner">Bannerni oʻzgartirish</string>
     <string name="people_profile_no_banner">Banner oʻrnatilmagan</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">Sayt belgisi</string>
     <string name="people_profile_browser_icon">Brauzer ikonkasi</string>
     <string name="people_profile_file_too_large">Fayl juda katta</string>
     <string name="people_profile_clear">Tozalash</string>
@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Navigatsiyani ochish</string>
     <string name="people_person_state_friend">Doʻstlar</string>
     <string name="people_person_state_self">Siz</string>
-    <string name="people_person_message">Xabar</string>
+    <string name="people_person_message">Xabar yuborish</string>
     <string name="people_person_accept">Qabul qilish</string>
     <string name="people_person_decline">Rad etish</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Hammasini qabul qilish</string>
     <string name="people_invitations_decline_all">Hammasini rad etish</string>
     <string name="people_invitations_cancel_all">Hammasini bekor qilish</string>
+    <string name="people_invitations_cancel">Bekor qilish</string>
     <string name="people_invitations_all_accepted">Barcha takliflar qabul qilindi</string>
     <string name="people_invitations_all_declined">Barcha takliflar rad etildi</string>
     <string name="people_invitations_all_cancelled">Barcha takliflar bekor qilindi</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Qidirish…</string>
     <string name="people_contacts_invited">Taklif qilingan</string>
     <string name="people_contacts_accept">Qabul qilish</string>
-    <string name="people_contacts_message">Xabar</string>
+    <string name="people_contacts_message">Xabar yuborish</string>
     <string name="people_contacts_no_people_found">Odamlar topilmadi</string>
     <string name="people_contacts_try_adjusting">Qidiruvingizni sozlashga harakat qiling</string>
     <string name="people_contact_section_address">Manzil</string>

@@ -38,8 +38,8 @@
     <string name="access_add_rule">Dodaj pravilo</string>
     <string name="access_owner">Lastnik</string>
     <string name="access_revoke">Prekliči</string>
-    <string name="access_level_comment">Komentar</string>
-    <string name="access_level_view">Pogled</string>
+    <string name="access_level_comment">Komentiraj</string>
+    <string name="access_level_view">Poglej</string>
     <string name="access_level_none">Brez</string>
     <string name="reaction_like">Všeč mi je</string>
     <string name="reaction_dislike">Ne maram</string>
@@ -74,7 +74,7 @@
     <string name="settings_radius_medium">Srednje</string>
     <string name="settings_radius_large">Veliko</string>
     <string name="settings_font">Pisava</string>
-    <string name="settings_font_system">Sistem</string>
+    <string name="settings_font_system">Sistemska</string>
     <string name="settings_font_serif">Serifna</string>
     <string name="settings_font_dyslexia">Prilagojeno disleksiji</string>
     <string name="settings_font_size">Velikost pisave</string>

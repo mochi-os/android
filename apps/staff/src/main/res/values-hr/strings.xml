@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">Osoblje</string>
+    <string name="launcher_staff">Mochi osoblje</string>
     <string name="staff_accounts_action_ban_title">Blokiraj račun</string>
     <string name="staff_accounts_action_suspend_title">Suspendiraj račun</string>
     <string name="staff_accounts_action_unban_title">Ukloni zabranu</string>
@@ -162,7 +162,7 @@
     <string name="staff_categories_type_digital">Digitalno</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">Fizičko</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">Osoblje</string>
     <string name="staff_config_field_auto_approve">Prag automatskog odobravanja</string>
     <string name="staff_config_field_hold">Prag zadržavanja</string>
     <string name="staff_config_field_platform_fee">Naknada platforme</string>
@@ -253,15 +253,15 @@
     <string name="staff_disputes_refund_help">Ostavite prazno za potpuni povrat %1$s. Unesite manji iznos za djelomični povrat.</string>
     <string name="staff_disputes_refund_must_be_positive">Iznos povrata mora biti veći od nule</string>
     <string name="staff_disputes_resolution_buyer">Riješi za kupca</string>
-    <string name="staff_disputes_resolution_label">Razlučivost</string>
+    <string name="staff_disputes_resolution_label">Rješenje</string>
     <string name="staff_disputes_resolution_placeholder">Odaberi rezoluciju</string>
     <string name="staff_disputes_resolution_seller">Riješi za prodavatelja</string>
     <string name="staff_disputes_resolve">Riješi</string>
     <string name="staff_disputes_resolved_toast">Spor riješen</string>
     <string name="staff_disputes_resolving">Rješavanje…</string>
-    <string name="staff_disputes_review">Recenzija</string>
+    <string name="staff_disputes_review">Pregledaj</string>
     <string name="staff_disputes_status_escalated">Eskalirano</string>
-    <string name="staff_disputes_status_open">Otvori</string>
+    <string name="staff_disputes_status_open">Otvoreno</string>
     <string name="staff_disputes_status_resolved_buyer">Riješeno (kupac)</string>
     <string name="staff_disputes_status_resolved_seller">Riješeno (prodavatelj)</string>
     <string name="staff_disputes_status_responded">Odgovoreno</string>
@@ -280,7 +280,7 @@
     <string name="staff_disputes_stripe_product_unacceptable">proizvod neprihvatljiv</string>
     <string name="staff_disputes_stripe_subscription_canceled">pretplata otkazana</string>
     <string name="staff_disputes_stripe_unrecognized">neprepoznato terećenje</string>
-    <string name="staff_disputes_view">Pogled</string>
+    <string name="staff_disputes_view">Prikaži</string>
     <string name="staff_filter_chip_remove">Ukloni filtar</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderiranje</string>
@@ -303,7 +303,7 @@
     <string name="staff_listings_moderation_hold">Zadrži</string>
     <string name="staff_listings_moderation_manual">Ručno</string>
     <string name="staff_listings_moderation_rejected">Odbijeno</string>
-    <string name="staff_listings_moderation_review">Recenzija</string>
+    <string name="staff_listings_moderation_review">Pregled</string>
     <string name="staff_listings_moderation_soft_approved">Uvjetno odobreno</string>
     <string name="staff_listings_notes_label">Bilješke</string>
     <string name="staff_listings_price_placeholder">—</string>
@@ -341,7 +341,7 @@
     <string name="staff_reports_cancel">Odustani</string>
     <string name="staff_reports_close">Zatvori</string>
     <string name="staff_reports_dialog_title_action">Poduzmi mjeru po prijavi</string>
-    <string name="staff_reports_dialog_title_view">Prijavi</string>
+    <string name="staff_reports_dialog_title_view">Prijava</string>
     <string name="staff_reports_empty">Nema prijava</string>
     <string name="staff_reports_filter_status_label">Status</string>
     <string name="staff_reports_filter_type_label">Tip</string>
@@ -351,7 +351,7 @@
     <string name="staff_reports_meta_reason">Razlog</string>
     <string name="staff_reports_meta_reporter">Prijavitelj</string>
     <string name="staff_reports_meta_seller">Prodavač</string>
-    <string name="staff_reports_meta_target">Cilj</string>
+    <string name="staff_reports_meta_target">Prijavljeni sadržaj</string>
     <string name="staff_reports_meta_type">Tip</string>
     <string name="staff_reports_notes_label">Bilješke</string>
     <string name="staff_reports_reason_counterfeit">Krivotvoreno ili ukradeno</string>
@@ -368,7 +368,7 @@
     <string name="staff_reports_submitting">Slanje…</string>
     <string name="staff_reports_type_listing">Oglas</string>
     <string name="staff_reports_type_user">Korisnik</string>
-    <string name="staff_reports_view">Pogled</string>
+    <string name="staff_reports_view">Prikaži</string>
     <string name="staff_reviews_action_remove">Ukloni</string>
     <string name="staff_reviews_action_restore">Vrati</string>
     <string name="staff_reviews_empty">Nema recenzija</string>
@@ -416,7 +416,7 @@
     <string name="staff_status_hold">Zadrži</string>
     <string name="staff_status_manual">Ručno</string>
     <string name="staff_status_moderator">Moderator</string>
-    <string name="staff_status_open">Otvori</string>
+    <string name="staff_status_open">Otvoreno</string>
     <string name="staff_status_pending">Na čekanju</string>
     <string name="staff_status_published">Objavljeno</string>
     <string name="staff_status_rejected">Odbijeno</string>
@@ -424,7 +424,7 @@
     <string name="staff_status_resolved_buyer">Riješeno (kupac)</string>
     <string name="staff_status_resolved_seller">Riješeno (prodavatelj)</string>
     <string name="staff_status_responded">Odgovoreno</string>
-    <string name="staff_status_review">Recenzija</string>
+    <string name="staff_status_review">Pregled</string>
     <string name="staff_status_reviewed">Pregledano</string>
     <string name="staff_status_reviewing">Pregled</string>
     <string name="staff_status_soft_approved">Uvjetno odobreno</string>

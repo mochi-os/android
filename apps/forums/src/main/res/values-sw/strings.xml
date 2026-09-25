@@ -24,13 +24,13 @@
     <string name="forums_settings">Mipangilio</string>
     <string name="forums_load_more">Pakia zaidi</string>
     <string name="forums_sort_label">Panga</string>
-    <string name="forums_sort_new">Mpya</string>
+    <string name="forums_sort_new">Mpya zaidi</string>
     <string name="forums_sort_hot">Moto</string>
-    <string name="forums_sort_top">Juu</string>
+    <string name="forums_sort_top">Bora zaidi</string>
     <string name="forums_sort_interests">Mivuto</string>
     <string name="forums_post_title_field">Kichwa</string>
     <string name="forums_post_attach">Ambatisha faili</string>
-    <string name="forums_post_create_action">Chapisho</string>
+    <string name="forums_post_create_action">Chapisha</string>
     <string name="forums_post_edit">Hariri chapisho</string>
     <string name="forums_post_edit_title">Hariri chapisho</string>
     <string name="forums_post_edit_title_field">Kichwa</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Wanachama</string>
     <string name="forums_tab_banner">Bango</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Lengo</string>
+    <string name="forums_access_target">Mtumiaji au kikundi</string>
     <string name="forums_access_level_view">Tazama</string>
     <string name="forums_access_level_vote">Piga kura</string>
-    <string name="forums_access_level_comment">Maoni</string>
-    <string name="forums_access_level_post">Chapisho</string>
+    <string name="forums_access_level_comment">Toa maoni</string>
+    <string name="forums_access_level_post">Chapisha</string>
     <string name="forums_access_level_none">Hakuna</string>
     <string name="forums_members_empty">Hakuna wanachama</string>
     <string name="forums_banner_dismiss">Ondoa bango</string>
-    <string name="forums_ai_mode_tag">Lebo</string>
+    <string name="forums_ai_mode_tag">Weka lebo</string>
     <string name="forums_ai_account_default">Akaunti chaguo-msingi</string>
     <string name="forums_ai_prompt_reset">Weka upya kwa chaguo-msingi</string>
     <string name="forums_settings_unsubscribe">Jiondoe</string>
@@ -80,7 +80,7 @@
     <string name="forums_moderation_reports_resolved">Imetatuliwa</string>
     <string name="forums_moderation_reports_all">Vyote</string>
     <string name="forums_moderation_reports_empty">Hakuna ripoti</string>
-    <string name="forums_moderation_report_dismiss">Ondoa</string>
+    <string name="forums_moderation_report_dismiss">Tupilia mbali</string>
     <string name="forums_moderation_restrictions_empty">Hakuna vizuizi</string>
     <string name="forums_moderation_restriction_remove">Ondoa</string>
     <string name="forums_moderation_restriction_type">Aina</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_login_failed">Kuingia kumeshindwa</string>
 
     <string name="notification_channel_forums">Arifa za majukwaa</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Majukwaa</string>
     <string name="forums_auth_create_identity_failed">Imeshindwa kuunda utambulisho</string>
     <string name="forums_auth_mfa_unsupported">MFA bado haitumiki katika programu ya simu</string>
     <string name="forums_auth_enter_code_sent">Weka msimbo uliotumwa kwa %1$s</string>
@@ -189,10 +189,10 @@
     <string name="forums_tag_interest_remove">Ondoa shauku</string>
     <string name="forums_access_tab_users">Watumiaji</string>
     <string name="forums_access_tab_groups">Vikundi</string>
-    <string name="forums_access_tab_manual">Mwongozo</string>
+    <string name="forums_access_tab_manual">Kwa mkono</string>
     <string name="forums_access_search_users">Tafuta watumiaji</string>
     <string name="forums_access_no_groups">Hakuna vikundi vinavyopatikana</string>
-    <string name="forums_saved_title">Imehifadhiwa</string>
+    <string name="forums_saved_title">Vilivyohifadhiwa</string>
     <string name="forums_saved_save">Hifadhi kwa baadaye</string>
     <string name="forums_saved_remove">Ondoa kwenye zilizohifadhiwa</string>
     <string name="forums_saved_clear_all">Futa vyote</string>

@@ -19,7 +19,7 @@
     <string name="common_close">Ýapmak</string>
     <string name="common_cancel">Ýatyrmak</string>
     <string name="common_confirm">Tassyklamak</string>
-    <string name="common_save">Saklaýyş</string>
+    <string name="common_save">Saklamak</string>
     <string name="common_saving">Saklanýar…</string>
     <string name="common_saved">Saklandy</string>
     <string name="common_edit">Düzet</string>
@@ -38,7 +38,7 @@
     <string name="access_add_rule">Düzgün goş</string>
     <string name="access_owner">Eýesi</string>
     <string name="access_revoke">Ýatyr</string>
-    <string name="access_level_comment">Teswir</string>
+    <string name="access_level_comment">Teswir ýaz</string>
     <string name="access_level_view">Görkez</string>
     <string name="access_level_none">Hiç biri</string>
     <string name="reaction_like">Halaýaryn</string>
@@ -191,7 +191,7 @@
     <string name="format_time_weeks_short">%1$dh</string>
     <string name="format_time_months_short">%1$day</string>
     <string name="reaction_add">Reaksiýa goş</string>
-    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel">Mochi bildirişleri</string>
     <string name="push_service_channel_description">Bildirişleri almak üçin Mochi-ni birikdirilen ýagdaýda saklaýar</string>
     <string name="push_service_group">Arka plan hyzmaty</string>
     <string name="push_service_title">Mochi bildirişlere garaşýar</string>

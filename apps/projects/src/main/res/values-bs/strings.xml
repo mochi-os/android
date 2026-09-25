@@ -68,7 +68,7 @@
     <string name="projects_links_no_matches">Nema odgovarajućih objekata</string>
     <string name="projects_field_yes">Da</string>
     <string name="projects_field_no">Ne</string>
-    <string name="projects_field_type_checkbox">Checkbox</string>
+    <string name="projects_field_type_checkbox">Potvrdni okvir</string>
     <string name="projects_comment_save">Sačuvaj</string>
     <string name="projects_comment_empty">Još nema komentara</string>
     <string name="projects_comment_attach">Priloži fajlove</string>
@@ -99,14 +99,14 @@
     <string name="projects_board_rename">Preimenuj</string>
     <string name="projects_board_rename_column">Preimenuj kolonu</string>
     <string name="projects_move_position">Pozicija</string>
-    <string name="projects_move_position_top">Vrh</string>
+    <string name="projects_move_position_top">Na vrh</string>
     <string name="projects_move_current">Trenutno</string>
     <string name="projects_design_title">Dizajn</string>
     <string name="projects_design_export">Izvezi dizajn</string>
     <string name="projects_design_import">Uvezi dizajn</string>
     <string name="projects_design_imported">Dizajn uvezen</string>
     <string name="projects_design_tab_classes">Klase</string>
-    <string name="projects_design_tab_views">Pregledi</string>
+    <string name="projects_design_tab_views">Prikazi</string>
     <string name="projects_design_import_dialog_title">Uvezi dizajn</string>
     <string name="projects_design_import_choose_template">Odaberite šablon</string>
     <string name="projects_design_replace_title">Zamijeniti dizajn?</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_mark_ready">Označi kao spremno</string>
     <string name="projects_request_merge_default_message">Spoji %1$s u %2$s</string>
     <string name="projects_request_commit_message">Poruka commita</string>
-    <string name="projects_request_method_squash">Squash</string>
+    <string name="projects_request_method_squash">Sažmi</string>
     <string name="projects_request_method_rebase">Rebase</string>
     <string name="projects_request_create_title">Kreiraj zahtjev za spajanje</string>
     <string name="projects_request_field_target">Ciljna grana</string>
@@ -285,7 +285,7 @@
     <string name="projects_field_multi">Višestruki odabir</string>
     <string name="projects_field_position">Pozicija prikaza</string>
     <string name="projects_field_position_header">Zaglavlje</string>
-    <string name="projects_field_position_body">Tijelo</string>
+    <string name="projects_field_position_body">Glavni dio</string>
     <string name="projects_field_validation">Validacija</string>
     <string name="projects_field_min_length">Minimalna dužina</string>
     <string name="projects_field_max_length">Maksimalna dužina</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Odaberite pravilo</string>
     <string name="projects_access_authenticated_desc">Svako ko je prijavljen</string>
     <string name="projects_access_anyone_desc">Uključujući anonimne korisnike</string>
-    <string name="projects_access_target">Cilj</string>
+    <string name="projects_access_target">Korisnik ili grupa</string>
     <string name="projects_access_target_hint">ID entiteta, @grupa, * (svi) ili + (članovi)</string>
     <string name="projects_access_selected">Odabrano: %1$s</string>
     <string name="projects_access_role_comment">Komentariši i pregledaj</string>

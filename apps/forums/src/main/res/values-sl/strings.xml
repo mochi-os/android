@@ -24,9 +24,9 @@
     <string name="forums_settings">Nastavitve</string>
     <string name="forums_load_more">Naloži več</string>
     <string name="forums_sort_label">Razvrsti</string>
-    <string name="forums_sort_new">Novo</string>
+    <string name="forums_sort_new">Najnovejše</string>
     <string name="forums_sort_hot">Vroče</string>
-    <string name="forums_sort_top">Vrh</string>
+    <string name="forums_sort_top">Najboljše</string>
     <string name="forums_sort_interests">Zanimanja</string>
     <string name="forums_post_title_field">Naslov</string>
     <string name="forums_post_attach">Priloži datoteke</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Člani</string>
     <string name="forums_tab_banner">Pasica</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Cilj</string>
-    <string name="forums_access_level_view">Pogled</string>
+    <string name="forums_access_target">Uporabnik ali skupina</string>
+    <string name="forums_access_level_view">Poglej</string>
     <string name="forums_access_level_vote">Glasuj</string>
-    <string name="forums_access_level_comment">Komentar</string>
+    <string name="forums_access_level_comment">Komentiraj</string>
     <string name="forums_access_level_post">Objavi</string>
     <string name="forums_access_level_none">Brez</string>
     <string name="forums_members_empty">Brez članov</string>
     <string name="forums_banner_dismiss">Opusti pasico</string>
-    <string name="forums_ai_mode_tag">Oznaka</string>
+    <string name="forums_ai_mode_tag">Označi</string>
     <string name="forums_ai_account_default">Privzeti račun</string>
     <string name="forums_ai_prompt_reset">Ponastavi na privzeto</string>
     <string name="forums_settings_unsubscribe">Odjavi se</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_login_failed">Prijava neuspešna</string>
 
     <string name="notification_channel_forums">Obvestila forumov</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Forumi</string>
     <string name="forums_auth_create_identity_failed">Ustvarjanje identitete ni uspelo</string>
     <string name="forums_auth_mfa_unsupported">Večstopenjsko preverjanje pristnosti še ni podprto v mobilni aplikaciji</string>
     <string name="forums_auth_enter_code_sent">Vnesite kodo, poslano na %1$s</string>
@@ -322,7 +322,7 @@
     <string name="forums_moderation_action_restrict">Omejeno</string>
     <string name="forums_moderation_action_unrestrict">Omejitev odstranjena</string>
     <string name="forums_moderation_action_resolve">Razrešena prijava</string>
-    <string name="forums_moderation_target_post">Objavi</string>
+    <string name="forums_moderation_target_post">Objava</string>
     <string name="forums_moderation_target_comment">Komentar</string>
     <string name="forums_moderation_target_user">Uporabnik</string>
     <string name="forums_moderation_reason_spam">Spam</string>

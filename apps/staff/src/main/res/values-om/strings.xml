@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">Hojjettoota</string>
+    <string name="launcher_staff">Mochi Hojjettoota</string>
     <string name="staff_accounts_action_ban_title">Akkaawuntii dhorki</string>
     <string name="staff_accounts_action_suspend_title">Akkaawuntii hidhi</string>
     <string name="staff_accounts_any_seller">Hunda</string>
@@ -153,7 +153,7 @@
     <string name="staff_categories_type_digital">Dijitaala</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">Qaamaan</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">Hojjettoota</string>
     <string name="staff_config_field_auto_approve">Hangii ofumaan mirkaneessuu</string>
     <string name="staff_config_field_hold">Daangaa qabachuu</string>
     <string name="staff_config_field_platform_fee">Kaffaltii pilaatformii</string>
@@ -240,7 +240,7 @@
     <string name="staff_disputes_resolved_toast">Mormiin furame</string>
     <string name="staff_disputes_review">Gamaaggami</string>
     <string name="staff_disputes_status_escalated">Ol guddifame</string>
-    <string name="staff_disputes_status_open">Bani</string>
+    <string name="staff_disputes_status_open">Banaa</string>
     <string name="staff_disputes_status_resolved_buyer">Furamee (bituu)</string>
     <string name="staff_disputes_status_resolved_seller">Furamee (gurguraa)</string>
     <string name="staff_disputes_status_responded">Deebii kennamee</string>
@@ -268,7 +268,7 @@
     <string name="staff_listings_moderation_hold">Qabi</string>
     <string name="staff_listings_moderation_manual">Harkaan</string>
     <string name="staff_listings_moderation_rejected">Didame</string>
-    <string name="staff_listings_moderation_review">Gamaaggami</string>
+    <string name="staff_listings_moderation_review">Gamaaggamaaf eegaa jira</string>
     <string name="staff_listings_moderation_soft_approved">Hayyamamtota laaffisaa</string>
     <string name="staff_listings_notes_label">Yaadannoo</string>
     <string name="staff_listings_price_placeholder">—</string>
@@ -313,7 +313,7 @@
     <string name="staff_reports_meta_reason">Sababa</string>
     <string name="staff_reports_meta_reporter">Gabaasaa</string>
     <string name="staff_reports_meta_seller">Gurguraa</string>
-    <string name="staff_reports_meta_target">Galma</string>
+    <string name="staff_reports_meta_target">Qabiyyee gabaafame</string>
     <string name="staff_reports_meta_type">Akaakuu</string>
     <string name="staff_reports_notes_label">Yaadannoo</string>
     <string name="staff_reports_reason_counterfeit">Sobaan ykn hatuu</string>
@@ -375,7 +375,7 @@
     <string name="staff_status_hold">Qabi</string>
     <string name="staff_status_manual">Harkaan</string>
     <string name="staff_status_moderator">Toattaachaa</string>
-    <string name="staff_status_open">Bani</string>
+    <string name="staff_status_open">Banaa</string>
     <string name="staff_status_pending">Eegaa jira</string>
     <string name="staff_status_published">Maxxansame</string>
     <string name="staff_status_rejected">Didame</string>
@@ -383,7 +383,7 @@
     <string name="staff_status_resolved_buyer">Furamee (bituu)</string>
     <string name="staff_status_resolved_seller">Furamee (gurguraa)</string>
     <string name="staff_status_responded">Deebii kennamee</string>
-    <string name="staff_status_review">Gamaaggami</string>
+    <string name="staff_status_review">Gamaaggamaaf eegaa jira</string>
     <string name="staff_status_reviewed">Gamaaggame</string>
     <string name="staff_status_reviewing">Gamaaggamaa jira</string>
     <string name="staff_status_soft_approved">Hayyamamtota laaffisaa</string>
@@ -410,7 +410,7 @@
     <string name="staff_team_toast_add_failed">Miseensa dabaluu hin dandeenye</string>
     <string name="staff_team_toast_removed">Miseensi haqame</string>
     <string name="staff_team_toast_role_updated">Gahee haaromfameera</string>
-    <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
+    <string name="staff_audit_action_auction_cancelled">Gurgurtaan caaltuu haqame</string>
     <string name="staff_dashboard_order_fallback">Aja\'a #%1$s</string>
 
     <string name="staff_accounts_action_unban_title">Dhorkaa kaasi</string>

@@ -29,7 +29,7 @@
     <string name="projects_sort_label">Urutkan</string>
     <string name="projects_sort_direction">Arah</string>
     <string name="projects_sort_rank">Manual</string>
-    <string name="projects_sort_number">Angka</string>
+    <string name="projects_sort_number">Nomor</string>
     <string name="projects_sort_created">Dibuat</string>
     <string name="projects_sort_updated">Diperbarui</string>
     <string name="projects_create_object_type">Tipe</string>
@@ -126,12 +126,12 @@
     <string name="projects_field_type_number">Angka</string>
     <string name="projects_field_type_user">Pengguna</string>
     <string name="projects_field_type_date">Tanggal</string>
-    <string name="projects_field_type_checklist">Checklist</string>
+    <string name="projects_field_type_checklist">Daftar periksa</string>
     <string name="projects_field_name">Nama</string>
     <string name="projects_field_type">Tipe</string>
     <string name="projects_field_flags">Bendera</string>
     <string name="projects_field_required">Wajib</string>
-    <string name="projects_field_position_default">Default</string>
+    <string name="projects_field_position_default">Bawaan</string>
     <string name="projects_field_position_sidebar">Bilah samping</string>
     <string name="projects_field_save">Simpan perubahan</string>
     <string name="projects_field_options">Opsi</string>
@@ -149,7 +149,7 @@
     <string name="projects_views_type_board">Papan</string>
     <string name="projects_views_type_list">Daftar</string>
     <string name="projects_views_direction">Arah</string>
-    <string name="projects_views_sort_number">Angka</string>
+    <string name="projects_views_sort_number">Nomor</string>
     <string name="projects_views_sort_created">Dibuat</string>
     <string name="projects_views_sort_updated">Diperbarui</string>
     <string name="projects_views_sort_rank">Peringkat</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Cari objek</string>
 
     <string name="notification_channel_projects">Notifikasi Projects</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Proyek</string>
     <string name="projects_auth_create_identity_failed">Gagal membuat identitas</string>
     <string name="projects_auth_mfa_unsupported">MFA belum didukung di aplikasi seluler</string>
     <string name="projects_auth_enter_code_sent">Masukkan kode yang dikirim ke %1$s</string>
@@ -327,7 +327,7 @@
     <string name="projects_settings_section_access">Manajemen Akses</string>
     <string name="projects_people_search">Cari orang</string>
     <string name="projects_settings_field_entity_id">ID entitas</string>
-    <string name="projects_settings_field_fingerprint">Fingerprint</string>
+    <string name="projects_settings_field_fingerprint">Sidik jari</string>
     <string name="projects_settings_field_server">Server</string>
     <string name="projects_access_subject_anyone">Siapa saja</string>
     <string name="projects_access_subject_authenticated">Pengguna terautentikasi</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Pilih aturan</string>
     <string name="projects_access_authenticated_desc">Siapa pun yang sudah masuk</string>
     <string name="projects_access_anyone_desc">Termasuk pengguna anonim</string>
-    <string name="projects_access_target">Target</string>
+    <string name="projects_access_target">Pengguna atau grup</string>
     <string name="projects_access_target_hint">ID entitas, @grup, * (semua orang), atau + (anggota)</string>
     <string name="projects_access_selected">Dipilih: %1$s</string>
     <string name="projects_access_role_comment">Komentar dan lihat</string>

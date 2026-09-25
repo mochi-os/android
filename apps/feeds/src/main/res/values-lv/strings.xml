@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Vēl nav ierakstu</string>
     <string name="feeds_sort_label">Kārtot</string>
     <string name="feeds_sort_interests">Intereses</string>
-    <string name="feeds_sort_new">Jauns</string>
+    <string name="feeds_sort_new">Jaunākie</string>
     <string name="feeds_sort_hot">Aktuāli</string>
-    <string name="feeds_sort_top">Augšā</string>
+    <string name="feeds_sort_top">Labākie</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Ieraksts</string>
     <string name="feeds_image_preview">Priekšskatījums</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Atcelt atbildi</string>
     <string name="feeds_edit_post">Rediģēt ierakstu</string>
     <string name="feeds_save_label">Saglabāt</string>
-    <string name="feeds_post_action">Ieraksts</string>
+    <string name="feeds_post_action">Publicēt</string>
     <string name="feeds_feed_label">Plūsma</string>
     <string name="feeds_add_files">Pievienot failus</string>
     <string name="feeds_restore">Atjaunot</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Izrakstīties</string>
     <string name="feeds_ai_account_default">Noklusētais konts</string>
     <string name="feeds_ai_mode_off">Atspējots</string>
-    <string name="feeds_ai_mode_tag">Tags</string>
+    <string name="feeds_ai_mode_tag">Tagot</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tags + dublikātu novēršana</string>
     <string name="feeds_feed_not_found">Plūsma nav atrasta</string>
     <string name="feeds_post_not_found">Ieraksts nav atrasts</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Interese samazināta</string>
     <string name="feeds_interest_removed">Interese noņemta</string>
     <string name="feeds_interest_failed">Neizdevās pielāgot interesi</string>
-    <string name="feeds_saved_title">Saglabāts</string>
-    <string name="feeds_saved_menu">Saglabāts</string>
+    <string name="feeds_saved_title">Saglabātie</string>
+    <string name="feeds_saved_menu">Saglabātie</string>
     <string name="feeds_saved_save">Saglabāt vēlākam laikam</string>
     <string name="feeds_saved_remove">Noņemt no saglabātajiem</string>
     <string name="feeds_saved_clear_all">Notīrīt visu</string>

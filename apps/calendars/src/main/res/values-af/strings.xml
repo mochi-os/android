@@ -10,7 +10,7 @@
     <string name="calendars_delete">Verwyder</string>
     <string name="calendars_previous">Vorige</string>
     <string name="calendars_next">Volgende</string>
-    <string name="calendars_view">Bekyk</string>
+    <string name="calendars_view">Aansig</string>
     <string name="calendars_view_list">Lys</string>
     <string name="calendars_list_search">Soek</string>
     <string name="calendars_event_untitled">Sonder titel</string>
@@ -169,7 +169,7 @@
     <string name="calendars_subscribe_server_url">Bedieneradres</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google Kalender</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google-rekeninge is nie op hierdie bediener geaktiveer nie. Aktiveer hulle onder Instellings, Stelselinstellings.</string>
     <string name="calendars_subscribe_google_connect">Jy het nog nie \'n Google-rekening verbind nie.</string>

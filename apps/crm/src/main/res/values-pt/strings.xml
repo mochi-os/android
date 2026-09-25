@@ -117,7 +117,7 @@
     <string name="crm_views_edit_dialog_title">Editar vista</string>
     <string name="crm_views_delete_title">Eliminar vista</string>
     <string name="crm_views_type">Tipo</string>
-    <string name="crm_views_type_board">Tabuleiro</string>
+    <string name="crm_views_type_board">Quadro</string>
     <string name="crm_views_type_list">Lista</string>
     <string name="crm_views_direction">Direção</string>
     <string name="crm_views_sort_created">Criado</string>

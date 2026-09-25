@@ -29,7 +29,7 @@
     <string name="projects_sort_label">Hlela</string>
     <string name="projects_sort_direction">Icala</string>
     <string name="projects_sort_rank">Ngesandla</string>
-    <string name="projects_sort_number">Inani</string>
+    <string name="projects_sort_number">Inombolo</string>
     <string name="projects_sort_created">Yenziwe</string>
     <string name="projects_sort_updated">Kuhlaziyiwe</string>
     <string name="projects_create_object_type">Uhlobo</string>
@@ -149,7 +149,7 @@
     <string name="projects_views_type_board">Ibhodi</string>
     <string name="projects_views_type_list">Uluhlu</string>
     <string name="projects_views_direction">Icala</string>
-    <string name="projects_views_sort_number">Inani</string>
+    <string name="projects_views_sort_number">Inombolo</string>
     <string name="projects_views_sort_created">Yenziwe</string>
     <string name="projects_views_sort_updated">Kuhlaziyiwe</string>
     <string name="projects_views_sort_rank">Inqanaba</string>
@@ -158,9 +158,9 @@
     <string name="projects_more">Okuninzi</string>
     <string name="projects_request_more">Okuninzi</string>
     <string name="projects_comment_send">Thumela</string>
-    <string name="projects_field_position_body">Umzimba</string>
+    <string name="projects_field_position_body">Umxholo</string>
     <string name="projects_sort_field">Hlela nge</string>
-    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_comment_remove_attachment">Susa isiqhotyoshelwa</string>
     <string name="projects_views_sort_by">Hlela nge</string>
     <string name="projects_auth_login_failed">Ungene engaphumelelanga</string>
     <string name="projects_views_move_up">Hambisa phezulu</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Khangela izinto</string>
 
     <string name="notification_channel_projects">Izaziso zeeprojekthi</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Iiprojekthi</string>
     <string name="projects_auth_create_identity_failed">Akuphumelelanga ukudala isazisi</string>
     <string name="projects_auth_mfa_unsupported">I-MFA ayikaxhaswa kusetyenziso lwefowuni</string>
     <string name="projects_auth_enter_code_sent">Faka ikhowudi ethunyelwe ku-%1$s</string>
@@ -240,7 +240,7 @@
     <string name="projects_request_merge_default_message">Dibanisa i-%1$s kwi-%2$s</string>
     <string name="projects_request_commit_message">Umyalezo wokuzibophelela</string>
     <string name="projects_request_method_squash">Cofa</string>
-    <string name="projects_request_method_rebase">Rebase</string>
+    <string name="projects_request_method_rebase">I-rebase</string>
     <string name="projects_request_create_title">Dala isicelo sokudibanisa</string>
     <string name="projects_request_field_target">Isebe ekujoliswe kulo</string>
     <string name="projects_diff_title">Umahluko: %1$s -&gt; %2$s</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Khetha umthetho</string>
     <string name="projects_access_authenticated_desc">Nabani na ongene ngemvume</string>
     <string name="projects_access_anyone_desc">Kuquka abasebenzisi abangaziwayo</string>
-    <string name="projects_access_target">Injongo</string>
+    <string name="projects_access_target">Umsebenzisi okanye iqela</string>
     <string name="projects_access_target_hint">I-ID yendawo, @qela, * (wonke ubani), okanye + (amalungu)</string>
     <string name="projects_access_selected">Ekhethiweyo: %1$s</string>
     <string name="projects_access_role_comment">Phawula ujonge</string>
@@ -381,5 +381,5 @@
     <string name="projects_option_delete_message">Uqinisekile ukuba ufuna ukucima ukhetho \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Akukho ntlobo zezinto ezinokwenziwa okwangoku. Yenza izinto zomzali ezifunekayo kuqala.</string>
     <string name="projects_create_blocked_no_options">Ayikwazi ukwenza: %1$s iyafuneka kodwa ayinakho ukhetho. Yongeza ukhetho kuYilo.</string>
-    <string name="projects_attachment_remove">Remove attachment</string>
+    <string name="projects_attachment_remove">Susa isiqhotyoshelwa</string>
 </resources>

@@ -24,13 +24,13 @@
     <string name="forums_settings">Configuració</string>
     <string name="forums_load_more">Carrega\'n més</string>
     <string name="forums_sort_label">Ordena</string>
-    <string name="forums_sort_new">Nou</string>
+    <string name="forums_sort_new">Recent</string>
     <string name="forums_sort_hot">Popular</string>
-    <string name="forums_sort_top">Amunt</string>
+    <string name="forums_sort_top">Millors</string>
     <string name="forums_sort_interests">Interessos</string>
     <string name="forums_post_title_field">Títol</string>
     <string name="forums_post_attach">Adjunta fitxers</string>
-    <string name="forums_post_create_action">Publicació</string>
+    <string name="forums_post_create_action">Publica</string>
     <string name="forums_post_edit">Edita la publicació</string>
     <string name="forums_post_edit_title">Edita la publicació</string>
     <string name="forums_post_edit_title_field">Títol</string>
@@ -59,11 +59,11 @@
     <string name="forums_tab_members">Membres</string>
     <string name="forums_tab_banner">Bàner</string>
     <string name="forums_tab_ai">IA</string>
-    <string name="forums_access_target">Destinació</string>
+    <string name="forums_access_target">Usuari o grup</string>
     <string name="forums_access_level_view">Visualitza</string>
     <string name="forums_access_level_vote">Vota</string>
-    <string name="forums_access_level_comment">Comentari</string>
-    <string name="forums_access_level_post">Publicació</string>
+    <string name="forums_access_level_comment">Comenta</string>
+    <string name="forums_access_level_post">Publica</string>
     <string name="forums_access_level_none">Cap</string>
     <string name="forums_members_empty">Sense membres</string>
     <string name="forums_banner_dismiss">Descarta el bàner</string>
@@ -124,7 +124,7 @@
     <string name="forums_comment_send">Envia</string>
 
     <string name="notification_channel_forums">Notificacions de fòrums</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Fòrums</string>
     <string name="forums_auth_login_failed">Ha fallat l\'inici de sessió</string>
     <string name="forums_auth_create_identity_failed">No s\'ha pogut crear la identitat</string>
     <string name="forums_auth_mfa_unsupported">L\'MFA encara no és compatible a l\'aplicació mòbil</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">Manual</string>
     <string name="forums_access_search_users">Cerca usuaris</string>
     <string name="forums_access_no_groups">No hi ha cap grup disponible</string>
-    <string name="forums_saved_title">Desat</string>
+    <string name="forums_saved_title">Desats</string>
     <string name="forums_saved_save">Desa per a més tard</string>
     <string name="forums_saved_remove">Elimina de desats</string>
     <string name="forums_saved_clear_all">Esborra-ho tot</string>

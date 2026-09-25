@@ -192,7 +192,7 @@
     <string name="format_time_weeks_short">%1$dշ</string>
     <string name="format_time_months_short">%1$dամս</string>
     <string name="reaction_add">Ավելացնել արձագանք</string>
-    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel">Mochi ծանուցումներ</string>
     <string name="push_service_channel_description">Պահպանում է Mochi-ի կապը՝ ծանուցումներ ստանալու համար</string>
     <string name="push_service_group">Ֆոնային ծառայություն</string>
     <string name="push_service_title">Mochi-ն լսում է ծանուցումները</string>

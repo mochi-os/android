@@ -78,7 +78,7 @@
     <string name="crm_design_or_upload_json">Eða hlaðið upp skrá</string>
     <string name="crm_design_upload_json">Hlaða upp .json-skrá</string>
     <string name="crm_design_tab_classes">Flokkar</string>
-    <string name="crm_design_tab_views">Áhorf</string>
+    <string name="crm_design_tab_views">Sýnir</string>
     <string name="crm_design_import_dialog_title">Flytja inn hönnun</string>
     <string name="crm_design_import_choose_template">Veldu sniðmát</string>
     <string name="crm_design_replace_title">Skipta út hönnun?</string>
@@ -117,7 +117,7 @@
     <string name="crm_views_edit_dialog_title">Breyta skoðun</string>
     <string name="crm_views_delete_title">Eyða sýn</string>
     <string name="crm_views_type">Tegund</string>
-    <string name="crm_views_type_board">Borð</string>
+    <string name="crm_views_type_board">Tafla</string>
     <string name="crm_views_type_list">Listi</string>
     <string name="crm_views_direction">Stefna</string>
     <string name="crm_views_sort_created">Búið til</string>
@@ -126,9 +126,9 @@
     <string name="crm_not_found">Verkefni fannst ekki</string>
     <string name="crm_more">Meira</string>
     <string name="crm_comment_send">Senda</string>
-    <string name="crm_field_position_body">Meginmál</string>
+    <string name="crm_field_position_body">Innihald</string>
     <string name="crm_sort_field">Raða eftir</string>
-    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_comment_remove_attachment">Fjarlægja viðhengi</string>
     <string name="crm_views_sort_by">Raða eftir</string>
     <string name="crm_views_move_up">Færa upp</string>
     <string name="crm_class_move_up">Færa upp</string>
@@ -241,7 +241,7 @@
     <string name="crm_access_no_groups">Engir hópar tiltækir</string>
     <string name="crm_access_tab_users">Notendur</string>
     <string name="crm_access_tab_groups">Hópar</string>
-    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_attachment_remove">Fjarlægja viðhengi</string>
     <string name="crm_board_add_column">Bæta við dálki</string>
     <string name="crm_settings_entity_id">Auðkenni einingar</string>
     <string name="crm_settings_fingerprint">Fingrafar</string>

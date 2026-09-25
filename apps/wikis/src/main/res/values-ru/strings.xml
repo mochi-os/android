@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="wikis_sidebar_header">Wiki</string>
+    <string name="wikis_sidebar_header">Вики</string>
     <string name="wikis_sidebar_all">Все вики</string>
     <string name="wikis_sidebar_find">Найти вики</string>
     <string name="wikis_sidebar_create">Создать вики</string>
@@ -23,7 +23,7 @@
     <string name="wikis_page_action_new_page">Новая страница</string>
     <string name="wikis_page_action_settings">Настройки</string>
     <string name="wikis_page_action_unsubscribe">Отписаться</string>
-    <string name="wikis_title">Wiki</string>
+    <string name="wikis_title">Вики</string>
     <string name="wikis_empty_title">Создайте свою первую wiki</string>
     <string name="wikis_empty_subtitle">Найдите вики для подписки или создайте свою, чтобы публиковать собственную документацию.</string>
     <string name="wikis_create_button">Создать вики</string>

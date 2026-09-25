@@ -9,13 +9,13 @@
     <string name="launcher_people">Mochi Mga Tao</string>
     <string name="launcher_settings">Mochi Mga setting</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Mga wiki</string>
     <string name="launcher_chess">Mochi Ahedres</string>
     <string name="launcher_go">Mochi Go</string>
-    <string name="launcher_words">Mochi Mga salita</string>
+    <string name="launcher_words">Mochi Salita</string>
     <string name="launcher_market">Mochi Market</string>
     <string name="launcher_calendars">Mochi Mga kalendaryo</string>
-    <string name="launcher_staff">Mochi Kawani</string>
+    <string name="launcher_staff">Mga Tauhan ng Mochi</string>
 
 
     <string name="app_name">Mochi</string>

@@ -37,7 +37,7 @@
     <string name="projects_settings_title">సెట్టింగ్‌లు</string>
     <string name="projects_settings_tab_general">సాధారణం</string>
     <string name="projects_settings_tab_access">యాక్సెస్</string>
-    <string name="projects_settings_tab_people">పీపుల్</string>
+    <string name="projects_settings_tab_people">వ్యక్తులు</string>
     <string name="projects_option_icon">ఐకాన్</string>
     <string name="projects_option_icon_placeholder">ఉదా. Check, Star, Flag</string>
     <string name="projects_settings_unsubscribe">చందా మానివేయండి</string>
@@ -93,7 +93,7 @@
     <string name="projects_request_create_action">సృష్టించండి</string>
     <string name="projects_diff_unified">ఏకీకృత</string>
     <string name="projects_diff_split">విభజించండి</string>
-    <string name="projects_diff_empty">diff అందుబాటులో లేదు</string>
+    <string name="projects_diff_empty">డిఫ్ అందుబాటులో లేదు</string>
     <string name="projects_board_unassigned">కేటాయించబడలేదు</string>
     <string name="projects_board_new">కొత్తది</string>
     <string name="projects_board_rename">పేరు మార్చండి</string>
@@ -158,9 +158,9 @@
     <string name="projects_more">మరిన్ని</string>
     <string name="projects_request_more">మరిన్ని</string>
     <string name="projects_comment_send">పంపండి</string>
-    <string name="projects_field_position_body">కంటెంట్</string>
+    <string name="projects_field_position_body">ప్రధాన భాగం</string>
     <string name="projects_sort_field">దీని ద్వారా క్రమబద్ధీకరించు</string>
-    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_comment_remove_attachment">జోడింపును తీసివేయండి</string>
     <string name="projects_views_sort_by">దీని ద్వారా క్రమబద్ధీకరించు</string>
     <string name="projects_auth_login_failed">లాగిన్ విఫలమైంది</string>
     <string name="projects_views_move_up">పైకి జరుపు</string>
@@ -293,7 +293,7 @@
     <string name="projects_field_min_length">కనిష్ట పొడవు</string>
     <string name="projects_field_max_length">గరిష్ట పొడవు</string>
     <string name="projects_field_pattern">నమూనా (regex)</string>
-    <string name="projects_field_rows">అడ్డు వరుసలు (textarea ఎత్తు)</string>
+    <string name="projects_field_rows">అడ్డు వరుసలు (టెక్స్ట్ ఫీల్డ్ ఎత్తు)</string>
     <string name="projects_field_no_options">ఏ ఎంపికలూ నిర్వచించబడలేదు</string>
     <string name="projects_field_delete_message">మీరు \"%1$s\" ఫీల్డ్‌ను తొలగించాలనుకుంటున్నారని నిజంగా అనుకుంటున్నారా? అన్ని ఎంపికలు మరియు విలువలు కోల్పోతాయి.</string>
     <string name="projects_option_color">రంగు</string>
@@ -343,8 +343,8 @@
     <string name="projects_access_select_rule">ఒక నియమాన్ని ఎంచుకోండి</string>
     <string name="projects_access_authenticated_desc">లాగిన్ అయిన ఎవరైనా</string>
     <string name="projects_access_anyone_desc">అనామక వినియోగదారులతో సహా</string>
-    <string name="projects_access_target">లక్ష్యం</string>
-    <string name="projects_access_target_hint">ఎంటిటీ ID, @group, * (అందరూ), లేదా + (సభ్యులు)</string>
+    <string name="projects_access_target">వినియోగదారు లేదా సమూహం</string>
+    <string name="projects_access_target_hint">ఎంటిటీ ID, @గ్రూప్, * (అందరూ), లేదా + (సభ్యులు)</string>
     <string name="projects_access_selected">ఎంచుకున్నవి: %1$s</string>
     <string name="projects_access_role_comment">వ్యాఖ్యానించండి మరియు చూడండి</string>
     <string name="projects_access_role_design">రూపకల్పన, సృష్టి, సవరణ, వ్యాఖ్య మరియు వీక్షణ</string>
@@ -381,5 +381,5 @@
     <string name="projects_option_delete_message">మీరు \"%1$s\" ఎంపికను తొలగించాలనుకుంటున్నారని ఖచ్చితంగా ఉన్నారా?</string>
     <string name="projects_create_object_no_types">ఇంకా ఏ ఐటెం రకాలను సృష్టించలేము. మొదట అవసరమైన పేరెంట్ ఐటెంలను సృష్టించండి.</string>
     <string name="projects_create_blocked_no_options">సృష్టించలేరు: %1$s అవసరం కానీ ఎంచుకోవడానికి ఎంపికలు లేవు. డిజైన్‌లో ఎంపికలను జోడించండి.</string>
-    <string name="projects_attachment_remove">Remove attachment</string>
+    <string name="projects_attachment_remove">జోడింపును తీసివేయండి</string>
 </resources>

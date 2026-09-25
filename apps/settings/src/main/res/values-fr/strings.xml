@@ -63,7 +63,7 @@
     <string name="notifprefs_name_label">Nom</string>
     <string name="notifprefs_destinations">Destinations</string>
     <string name="notifprefs_dest_web">Navigateur web</string>
-    <string name="notifprefs_test">Test</string>
+    <string name="notifprefs_test">Tester</string>
     <string name="notifprefs_edit">Modifier</string>
     <string name="notifprefs_delete">Supprimer</string>
     <string name="notifprefs_remove">Retirer</string>
@@ -98,7 +98,7 @@
     <string name="accounts_status_verified">Vérifié</string>
     <string name="accounts_status_connected">Connecté</string>
     <string name="accounts_default_for_ai">Par défaut pour l\'IA</string>
-    <string name="accounts_test">Test</string>
+    <string name="accounts_test">Tester</string>
     <string name="accounts_settings">Paramètres</string>
     <string name="accounts_verify">Vérifier</string>
     <string name="accounts_remove">Retirer</string>

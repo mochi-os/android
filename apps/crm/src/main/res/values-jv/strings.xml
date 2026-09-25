@@ -94,7 +94,7 @@
     <string name="crm_class_delete">Busak kelas</string>
     <string name="crm_class_delete_title">Busak kelas</string>
     <string name="crm_field_type_text">Teks</string>
-    <string name="crm_field_type_number">Nomer</string>
+    <string name="crm_field_type_number">Angka</string>
     <string name="crm_field_type_user">Panganggo</string>
     <string name="crm_field_type_date">Tanggal</string>
     <string name="crm_field_type_checklist">Checklist</string>
@@ -103,7 +103,7 @@
     <string name="crm_field_flags">Bendera</string>
     <string name="crm_field_required">Dibutuhaké</string>
     <string name="crm_field_position_default">Standar</string>
-    <string name="crm_field_position_sidebar">Sidebar</string>
+    <string name="crm_field_position_sidebar">Bilah sisih</string>
     <string name="crm_field_save">Simpen owahan</string>
     <string name="crm_field_options">Opsi</string>
     <string name="crm_field_add_option">Tambah pilihan</string>
@@ -128,7 +128,7 @@
     <string name="crm_comment_send">Kirim</string>
     <string name="crm_field_position_body">Isi</string>
     <string name="crm_sort_field">Urutake miturut</string>
-    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_comment_remove_attachment">Cabut lampiran</string>
     <string name="crm_views_sort_by">Urutake miturut</string>
     <string name="crm_views_move_up">Pindhah munggah</string>
     <string name="crm_class_move_up">Pindhah munggah</string>
@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Ora ana obyek</string>
     <string name="crm_board_no_columns">Ora ana kolom sing disetel kanggo tampilan iki</string>
     <string name="crm_board_no_options">Ora ana pilihan kang dikonfigurasi kanggo kolom</string>
-    <string name="crm_board_nested_count">+%1$d nested</string>
+    <string name="crm_board_nested_count">+%1$d sarang</string>
     <string name="crm_move_to_column">Pindhah menyang kolom</string>
     <string name="crm_move_to_row">Pindhah menyang larik</string>
     <string name="crm_move_after">Sawise %1$s</string>
@@ -241,10 +241,10 @@
     <string name="crm_access_no_groups">Ora ana grup kasedhiya</string>
     <string name="crm_access_tab_users">Panganggo</string>
     <string name="crm_access_tab_groups">Grup</string>
-    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_attachment_remove">Cabut lampiran</string>
     <string name="crm_board_add_column">Tambah kolom</string>
     <string name="crm_settings_entity_id">ID Entitas</string>
-    <string name="crm_settings_fingerprint">Fingerprint</string>
+    <string name="crm_settings_fingerprint">Sidik jari</string>
     <string name="crm_settings_server">Server</string>
     <string name="crm_untitled">Tanpa judul</string>
     <string name="crm_property_select">Pilih …</string>

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Mochi Feed</string>
-    <string name="launcher_chat">Mochi Chat</string>
+    <string name="launcher_feeds">Mochi Çavkanî</string>
+    <string name="launcher_chat">Mochi Sohbet</string>
     <string name="launcher_forums">Mochi Forum</string>
     <string name="launcher_projects">Mochi Proje</string>
     <string name="launcher_crm">Mochi CRM</string>
-    <string name="launcher_people">Mochi Kes</string>
+    <string name="launcher_people">Mochi Mirov</string>
     <string name="launcher_settings">Mochi Mîheng</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki</string>
     <string name="launcher_chess">Mochi Şetrenc</string>
     <string name="launcher_go">Mochi Go</string>
     <string name="launcher_words">Mochi Peyv</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi Bazar</string>
     <string name="launcher_calendars">Mochi Salname</string>
-    <string name="launcher_staff">Mochi Karmend</string>
+    <string name="launcher_staff">Karmendên Mochi</string>
 
 
     <string name="app_name">Mochi</string>

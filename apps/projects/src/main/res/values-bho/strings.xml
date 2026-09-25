@@ -29,7 +29,7 @@
     <string name="projects_sort_label">क्रमबद्ध करीं</string>
     <string name="projects_sort_direction">दिशा</string>
     <string name="projects_sort_rank">मैनुअल</string>
-    <string name="projects_sort_number">संख्या</string>
+    <string name="projects_sort_number">क्रमांक</string>
     <string name="projects_sort_created">बनावल गइल</string>
     <string name="projects_sort_updated">अपडेट भइल</string>
     <string name="projects_create_object_type">प्रकार</string>
@@ -68,7 +68,7 @@
     <string name="projects_links_no_matches">कौनो मेल खाए वाला ऑब्जेक्ट नइखे</string>
     <string name="projects_field_yes">हाँ</string>
     <string name="projects_field_no">नाहीं</string>
-    <string name="projects_field_type_checkbox">Checkbox</string>
+    <string name="projects_field_type_checkbox">चेकबॉक्स</string>
     <string name="projects_comment_save">सहेजीं</string>
     <string name="projects_comment_empty">अबहीं तक कौनो टिप्पणी नइखे</string>
     <string name="projects_comment_attach">फाइल संलग्न करीं</string>
@@ -93,7 +93,7 @@
     <string name="projects_request_create_action">बनाईं</string>
     <string name="projects_diff_unified">एकीकृत</string>
     <string name="projects_diff_split">विभाजित करीं</string>
-    <string name="projects_diff_empty">कौनो diff उपलब्ध नइखे</string>
+    <string name="projects_diff_empty">कौनो अंतर उपलब्ध नइखे</string>
     <string name="projects_board_unassigned">अनसौंपल</string>
     <string name="projects_board_new">नया</string>
     <string name="projects_board_rename">नाम बदलीं</string>
@@ -126,7 +126,7 @@
     <string name="projects_field_type_number">संख्या</string>
     <string name="projects_field_type_user">उपयोगकर्ता</string>
     <string name="projects_field_type_date">तारीख</string>
-    <string name="projects_field_type_checklist">Checklist</string>
+    <string name="projects_field_type_checklist">चेकलिस्ट</string>
     <string name="projects_field_name">नाम</string>
     <string name="projects_field_type">प्रकार</string>
     <string name="projects_field_flags">झंडा</string>
@@ -149,7 +149,7 @@
     <string name="projects_views_type_board">बोर्ड</string>
     <string name="projects_views_type_list">सूची</string>
     <string name="projects_views_direction">दिशा</string>
-    <string name="projects_views_sort_number">संख्या</string>
+    <string name="projects_views_sort_number">क्रमांक</string>
     <string name="projects_views_sort_created">बनावल गइल</string>
     <string name="projects_views_sort_updated">अपडेट भइल</string>
     <string name="projects_views_sort_rank">रैंक</string>
@@ -160,7 +160,7 @@
     <string name="projects_comment_send">भेजीं</string>
 
     <string name="notification_channel_projects">परियोजना सूचना</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi प्रोजेक्ट</string>
     <string name="projects_auth_login_failed">लॉगिन विफल भइल</string>
     <string name="projects_auth_create_identity_failed">पहिचान बनावे में विफल</string>
     <string name="projects_auth_mfa_unsupported">मोबाइल ऐप में MFA अबहीं समर्थित नइखे</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">एगो नियम चुनीं</string>
     <string name="projects_access_authenticated_desc">जे केहू लॉग इन बा</string>
     <string name="projects_access_anyone_desc">अनाम प्रयोगकर्ता लोग समेत</string>
-    <string name="projects_access_target">लक्ष्य</string>
+    <string name="projects_access_target">उपयोगकर्ता भा समूह</string>
     <string name="projects_access_target_hint">इकाई ID, @समूह, * (हर केहू), भा + (सदस्य लोग)</string>
     <string name="projects_access_selected">चुनल: %1$s</string>
     <string name="projects_access_role_comment">टिप्पणी आ देखीं</string>

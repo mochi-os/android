@@ -220,7 +220,7 @@
     <string name="account_totp_enabled">身份验证器已启用。</string>
     <string name="account_totp_setup_step1">在您的身份验证应用中扫描或输入此密钥。</string>
     <string name="account_totp_setup_step2">输入应用显示的 6 位代码。</string>
-    <string name="account_totp_code">代码</string>
+    <string name="account_totp_code">验证码</string>
     <string name="account_totp_disable_message">您将无法使用身份验证代码登录。</string>
     <string name="account_recovery_none">未生成任何恢复代码。</string>
     <string name="account_recovery_count">%1$d 个未使用的恢复代码。</string>
@@ -255,7 +255,7 @@
     <string name="accounts_field_api_key">API 密钥</string>
     <string name="accounts_field_url">服务器 URL</string>
     <string name="accounts_set_default_ai">设为默认 AI</string>
-    <string name="accounts_verify_code">代码</string>
+    <string name="accounts_verify_code">验证码</string>
     <string name="accounts_verify_resend">重新发送代码</string>
     <string name="accounts_verify_hint">输入发送到 %1$s 的代码。</string>
     <string name="accounts_remove_message">这将删除已连接的账户\"%1$s\"。</string>
@@ -341,7 +341,7 @@
     <string name="system_status_reachability_private">私有</string>
     <string name="system_status_reachability_unknown">未知</string>
     <string name="system_status_relay">经由中继</string>
-    <string name="system_status_mesh">广播 Mesh</string>
+    <string name="system_status_mesh">广播网状网络</string>
     <string name="system_status_broadcast">最后广播</string>
     <string name="system_status_queued_broadcasts">队列中的广播消息</string>
     <string name="system_setting_hostname_publish">向其他服务器通告主机名和域名</string>

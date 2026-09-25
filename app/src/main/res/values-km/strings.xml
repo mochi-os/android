@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Mochi ព័ត៌មានបង្ហាញ</string>
-    <string name="launcher_chat">Mochi ជជែក</string>
+    <string name="launcher_feeds">Mochi មតិព័ត៌មាន</string>
+    <string name="launcher_chat">Mochi ការសន្ទនា</string>
     <string name="launcher_forums">Mochi វេទិកា</string>
     <string name="launcher_projects">Mochi គម្រោង</string>
     <string name="launcher_crm">Mochi CRM</string>
     <string name="launcher_people">Mochi មនុស្ស</string>
     <string name="launcher_settings">Mochi ការកំណត់</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi វិគី</string>
     <string name="launcher_chess">Mochi អុកអន្តរជាតិ</string>
-    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_go">Mochi ហ្គេម Go</string>
     <string name="launcher_words">Mochi ពាក្យ</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi ផ្សារ</string>
     <string name="launcher_calendars">Mochi ប្រតិទិន</string>
     <string name="launcher_staff">Mochi បុគ្គលិក</string>
 

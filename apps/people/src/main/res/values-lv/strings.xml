@@ -62,7 +62,7 @@
     <string name="people_profile_uploading">Notiek augšupielāde…</string>
     <string name="people_profile_change_banner">Mainīt baneri</string>
     <string name="people_profile_no_banner">Baneris nav iestatīts</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">Vietnes ikona</string>
     <string name="people_profile_browser_icon">Pārlūka ikona</string>
     <string name="people_profile_file_too_large">Fails ir pārāk liels</string>
     <string name="people_profile_clear">Notīrīt</string>
@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Atvērt navigāciju</string>
     <string name="people_person_state_friend">Draugi</string>
     <string name="people_person_state_self">Jūs</string>
-    <string name="people_person_message">Ziņojums</string>
+    <string name="people_person_message">Sūtīt ziņu</string>
     <string name="people_person_accept">Pieņemt</string>
     <string name="people_person_decline">Noraidīt</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Pieņemt visus</string>
     <string name="people_invitations_decline_all">Noraidīt visus</string>
     <string name="people_invitations_cancel_all">Atcelt visus</string>
+    <string name="people_invitations_cancel">Atcelt</string>
     <string name="people_invitations_all_accepted">Visi ielūgumi pieņemti</string>
     <string name="people_invitations_all_declined">Visi ielūgumi noraidīti</string>
     <string name="people_invitations_all_cancelled">Visi ielūgumi atcelti</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Meklē…</string>
     <string name="people_contacts_invited">Uzaicināts</string>
     <string name="people_contacts_accept">Pieņemt</string>
-    <string name="people_contacts_message">Ziņojums</string>
+    <string name="people_contacts_message">Sūtīt ziņu</string>
     <string name="people_contacts_no_people_found">Cilvēki nav atrasti</string>
     <string name="people_contacts_try_adjusting">Mēģiniet pielāgot meklēšanu</string>
     <string name="people_contact_section_address">Adrese</string>

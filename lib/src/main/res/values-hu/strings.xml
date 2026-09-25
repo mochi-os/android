@@ -96,7 +96,7 @@
     <string name="settings_number_format">Számformátum</string>
     <string name="settings_units">Egységek</string>
     <string name="settings_units_metric">Metrika</string>
-    <string name="settings_units_imperial">Imperial</string>
+    <string name="settings_units_imperial">Angolszász</string>
     <string name="settings_time_zone">Időzóna</string>
     <string name="settings_reset_to_defaults">Visszaállítás alapértelmezettre</string>
     <string name="settings_reset_confirm_title">Visszaállítja a preferenciákat?</string>
@@ -191,7 +191,7 @@
     <string name="format_time_weeks_short">%1$d h</string>
     <string name="format_time_months_short">%1$d hó</string>
     <string name="reaction_add">Reakció hozzáadása</string>
-    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel">Mochi push értesítések</string>
     <string name="push_service_channel_description">Csatlakoztatva tartja a Mochit az értesítések fogadásához</string>
     <string name="push_service_group">Háttérszolgáltatás</string>
     <string name="push_service_title">A Mochi értesítésekre vár</string>

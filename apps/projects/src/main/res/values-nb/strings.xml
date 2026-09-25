@@ -29,7 +29,7 @@
     <string name="projects_sort_label">Sorter</string>
     <string name="projects_sort_direction">Retning</string>
     <string name="projects_sort_rank">Manuell</string>
-    <string name="projects_sort_number">Tall</string>
+    <string name="projects_sort_number">Nummer</string>
     <string name="projects_sort_created">Opprettet</string>
     <string name="projects_sort_updated">Oppdatert</string>
     <string name="projects_create_object_type">Type</string>
@@ -99,7 +99,7 @@
     <string name="projects_board_rename">Gi nytt navn</string>
     <string name="projects_board_rename_column">Gi kolonnen nytt navn</string>
     <string name="projects_move_position">Posisjon</string>
-    <string name="projects_move_position_top">Topp</string>
+    <string name="projects_move_position_top">Øverst</string>
     <string name="projects_move_current">Nåværende</string>
     <string name="projects_design_title">Design</string>
     <string name="projects_design_export">Eksporter design</string>
@@ -146,10 +146,10 @@
     <string name="projects_views_edit_dialog_title">Rediger visning</string>
     <string name="projects_views_delete_title">Slett visning</string>
     <string name="projects_views_type">Type</string>
-    <string name="projects_views_type_board">Board</string>
+    <string name="projects_views_type_board">Tavle</string>
     <string name="projects_views_type_list">Liste</string>
     <string name="projects_views_direction">Retning</string>
-    <string name="projects_views_sort_number">Tall</string>
+    <string name="projects_views_sort_number">Nummer</string>
     <string name="projects_views_sort_created">Opprettet</string>
     <string name="projects_views_sort_updated">Oppdatert</string>
     <string name="projects_views_sort_rank">Rang</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Søk objekter</string>
 
     <string name="notification_channel_projects">Prosjektvarsler</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Prosjekter</string>
     <string name="projects_auth_create_identity_failed">Kunne ikke opprette identitet</string>
     <string name="projects_auth_mfa_unsupported">MFA støttes ennå ikke i mobilappen</string>
     <string name="projects_auth_enter_code_sent">Skriv inn koden som ble sendt til %1$s</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Velg en regel</string>
     <string name="projects_access_authenticated_desc">Alle som er logget inn</string>
     <string name="projects_access_anyone_desc">Inkludert anonyme brukere</string>
-    <string name="projects_access_target">Mål</string>
+    <string name="projects_access_target">Bruker eller gruppe</string>
     <string name="projects_access_target_hint">Entitets-ID, @gruppe, * (alle), eller + (medlemmer)</string>
     <string name="projects_access_selected">Valgt: %1$s</string>
     <string name="projects_access_role_comment">Kommenter og se</string>

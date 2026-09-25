@@ -8,7 +8,7 @@
     <string name="go_action_pass">Saqi</string>
     <string name="go_action_rematch">Watiqmanta pukllay</string>
     <string name="go_action_resign">Saqirakapuy</string>
-    <string name="go_app_title">Kachkay</string>
+    <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Yana hap\'isqakuna</string>
     <string name="go_captures_white_sr">Yuraq hap\'isqakuna</string>
     <string name="go_chat_title">Chat</string>
@@ -66,13 +66,13 @@
     <string name="go_open_sidebar">Lado tarjeta kicharikuy</string>
     <string name="go_sidebar_active">Kawsachkan Pukllaykuna</string>
     <string name="go_empty_active">Manaraq kawsaq pukllaykuna kanchu.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">Saqirakapurqan</string>
     <string name="go_new_game_title">Musuq Go pukllay</string>
     <string name="go_new_game_no_friends">Pukllayta qallarinaykipaq ñawpaqta huk masita yapananki.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Yana ñawpaqta puriptin, Yuraqpa yupaynin yapasqa puntukuna</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go board</string>
+    <string name="go_board_a11y">%1$d×%1$d Go tablero</string>
     <string name="go_board_a11y_turn_black">%1$d×%1$d Go pata, yana rumita churanaykipaq</string>
     <string name="go_board_a11y_turn_white">%1$d×%1$d Go pata, yuraq rumita churanaykipaq</string>
     <string name="go_status_scoring">Yupay — puntajemanta huñunakuychik utaq pukllaspa kaychik</string>

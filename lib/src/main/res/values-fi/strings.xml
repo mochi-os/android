@@ -38,7 +38,7 @@
     <string name="access_add_rule">Lisää sääntö</string>
     <string name="access_owner">Omistaja</string>
     <string name="access_revoke">Peruuta</string>
-    <string name="access_level_comment">Kommentti</string>
+    <string name="access_level_comment">Kommentoi</string>
     <string name="access_level_view">Näytä</string>
     <string name="access_level_none">Ei mitään</string>
     <string name="reaction_like">Tykkää</string>

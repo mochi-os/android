@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">Mochi-Personal</string>
+    <string name="launcher_staff">Mochi-Personal</string>
     <string name="staff_accounts_action_ban_title">Konto sperren</string>
     <string name="staff_accounts_action_suspend_title">Konto sperren</string>
     <string name="staff_accounts_action_unban_title">Sperre aufheben</string>
@@ -162,7 +162,7 @@
     <string name="staff_categories_type_digital">Digital</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">Physisch</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">Mochi-Personal</string>
     <string name="staff_config_field_auto_approve">Schwelle für automatische Genehmigung</string>
     <string name="staff_config_field_hold">Schwelle für Halten</string>
     <string name="staff_config_field_platform_fee">Plattformgebühr</string>
@@ -253,15 +253,15 @@
     <string name="staff_disputes_refund_help">Leer lassen für eine vollständige Erstattung von %1$s. Geben Sie einen kleineren Betrag für eine Teilerstattung ein.</string>
     <string name="staff_disputes_refund_must_be_positive">Erstattungsbetrag muss größer als null sein</string>
     <string name="staff_disputes_resolution_buyer">Zugunsten des Käufers entscheiden</string>
-    <string name="staff_disputes_resolution_label">Auflösung</string>
+    <string name="staff_disputes_resolution_label">Lösung</string>
     <string name="staff_disputes_resolution_placeholder">Lösung auswählen</string>
     <string name="staff_disputes_resolution_seller">Zugunsten des Verkäufers entscheiden</string>
     <string name="staff_disputes_resolve">Lösen</string>
     <string name="staff_disputes_resolved_toast">Streitfall gelöst</string>
     <string name="staff_disputes_resolving">Wird gelöst…</string>
-    <string name="staff_disputes_review">Bewertung</string>
+    <string name="staff_disputes_review">Prüfen</string>
     <string name="staff_disputes_status_escalated">Eskaliert</string>
-    <string name="staff_disputes_status_open">Öffnen</string>
+    <string name="staff_disputes_status_open">Offen</string>
     <string name="staff_disputes_status_resolved_buyer">Gelöst (Käufer)</string>
     <string name="staff_disputes_status_resolved_seller">Gelöst (Verkäufer)</string>
     <string name="staff_disputes_status_responded">Beantwortet</string>
@@ -280,7 +280,7 @@
     <string name="staff_disputes_stripe_product_unacceptable">Produkt nicht akzeptabel</string>
     <string name="staff_disputes_stripe_subscription_canceled">Abonnement gekündigt</string>
     <string name="staff_disputes_stripe_unrecognized">unbekannte Abbuchung</string>
-    <string name="staff_disputes_view">Ansicht</string>
+    <string name="staff_disputes_view">Anzeigen</string>
     <string name="staff_filter_chip_remove">Filter entfernen</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderation</string>
@@ -303,7 +303,7 @@
     <string name="staff_listings_moderation_hold">Halten</string>
     <string name="staff_listings_moderation_manual">Manuell</string>
     <string name="staff_listings_moderation_rejected">Abgelehnt</string>
-    <string name="staff_listings_moderation_review">Bewertung</string>
+    <string name="staff_listings_moderation_review">In Prüfung</string>
     <string name="staff_listings_moderation_soft_approved">Vorläufig genehmigt</string>
     <string name="staff_listings_notes_label">Notizen</string>
     <string name="staff_listings_price_placeholder">—</string>
@@ -329,7 +329,7 @@
     <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Aktion</string>
     <string name="staff_reports_action_ban">Benutzer sperren</string>
-    <string name="staff_reports_action_dismiss">Schließen</string>
+    <string name="staff_reports_action_dismiss">Verwerfen</string>
     <string name="staff_reports_action_label">Aktion</string>
     <string name="staff_reports_action_placeholder">Aktion auswählen</string>
     <string name="staff_reports_action_remove">Entfernen</string>
@@ -341,7 +341,7 @@
     <string name="staff_reports_cancel">Abbrechen</string>
     <string name="staff_reports_close">Schließen</string>
     <string name="staff_reports_dialog_title_action">Maßnahme zu Meldung ergreifen</string>
-    <string name="staff_reports_dialog_title_view">Melden</string>
+    <string name="staff_reports_dialog_title_view">Meldung</string>
     <string name="staff_reports_empty">Keine Meldungen</string>
     <string name="staff_reports_filter_status_label">Status</string>
     <string name="staff_reports_filter_type_label">Typ</string>
@@ -351,7 +351,7 @@
     <string name="staff_reports_meta_reason">Grund</string>
     <string name="staff_reports_meta_reporter">Meldender</string>
     <string name="staff_reports_meta_seller">Verkäufer</string>
-    <string name="staff_reports_meta_target">Ziel</string>
+    <string name="staff_reports_meta_target">Gemeldetes Objekt</string>
     <string name="staff_reports_meta_type">Typ</string>
     <string name="staff_reports_notes_label">Notizen</string>
     <string name="staff_reports_reason_counterfeit">Gefälscht oder gestohlen</string>
@@ -368,7 +368,7 @@
     <string name="staff_reports_submitting">Wird gesendet…</string>
     <string name="staff_reports_type_listing">Angebot</string>
     <string name="staff_reports_type_user">Benutzer</string>
-    <string name="staff_reports_view">Ansicht</string>
+    <string name="staff_reports_view">Anzeigen</string>
     <string name="staff_reviews_action_remove">Entfernen</string>
     <string name="staff_reviews_action_restore">Wiederherstellen</string>
     <string name="staff_reviews_empty">Keine Bewertungen</string>
@@ -416,7 +416,7 @@
     <string name="staff_status_hold">Halten</string>
     <string name="staff_status_manual">Manuell</string>
     <string name="staff_status_moderator">Moderator</string>
-    <string name="staff_status_open">Öffnen</string>
+    <string name="staff_status_open">Offen</string>
     <string name="staff_status_pending">Ausstehend</string>
     <string name="staff_status_published">Veröffentlicht</string>
     <string name="staff_status_rejected">Abgelehnt</string>
@@ -424,7 +424,7 @@
     <string name="staff_status_resolved_buyer">Gelöst (Käufer)</string>
     <string name="staff_status_resolved_seller">Gelöst (Verkäufer)</string>
     <string name="staff_status_responded">Beantwortet</string>
-    <string name="staff_status_review">Bewertung</string>
+    <string name="staff_status_review">In Prüfung</string>
     <string name="staff_status_reviewed">Bewertet</string>
     <string name="staff_status_reviewing">Wird geprüft</string>
     <string name="staff_status_soft_approved">Vorläufig genehmigt</string>

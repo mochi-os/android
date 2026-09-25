@@ -10,11 +10,11 @@
     <string name="settings_home_accounts">حساب‌های متصل</string>
     <string name="settings_home_interests">علاقه‌مندی‌ها</string>
     <string name="account_section_passkeys">پسکی‌ها</string>
-    <string name="account_passkey_register">افزودن passkey</string>
-    <string name="account_passkey_delete_title">حذف passkey؟</string>
+    <string name="account_passkey_register">افزودن پسکی</string>
+    <string name="account_passkey_delete_title">حذف پسکی؟</string>
     <string name="account_section_totp">برنامهٔ احراز هویت</string>
-    <string name="account_totp_setup">راه‌اندازی authenticator</string>
-    <string name="account_totp_setup_title">راه‌اندازی authenticator</string>
+    <string name="account_totp_setup">راه‌اندازی احراز هویت</string>
+    <string name="account_totp_setup_title">راه‌اندازی احراز هویت</string>
     <string name="account_totp_verify">تأیید</string>
     <string name="account_totp_disable_title">غیرفعال کردن احراز هویت؟</string>
     <string name="account_section_recovery">کدهای بازیابی</string>
@@ -137,7 +137,7 @@
     <string name="system_settings_reset_title">بازنشانی به پیش‌فرض؟</string>
     <string name="system_setting_apps_install_user">اجازه به کاربران برای نصب برنامه‌ها</string>
     <string name="system_setting_auth_email">ورود با کد ایمیل</string>
-    <string name="system_setting_auth_passkey">ورود با passkey</string>
+    <string name="system_setting_auth_passkey">ورود با پسکی</string>
     <string name="system_setting_auth_totp">ورود با اپ احراز هویت TOTP</string>
     <string name="system_setting_auth_recovery">ورود با کد بازیابی</string>
     <string name="system_setting_auth_oauth">ورود با OAuth 2.0</string>
@@ -151,7 +151,7 @@
     <string name="system_setting_oauth_github_client_secret">رمز کلاینت GitHub</string>
     <string name="system_setting_oauth_microsoft_client_id">شناسه کلاینت Microsoft</string>
     <string name="system_setting_oauth_microsoft_client_secret">رمز کلاینت Microsoft</string>
-    <string name="system_setting_oauth_microsoft_tenant">Microsoft tenant</string>
+    <string name="system_setting_oauth_microsoft_tenant">مستأجر Microsoft</string>
     <string name="system_setting_oauth_facebook_client_id">شناسه برنامه Facebook</string>
     <string name="system_setting_oauth_facebook_client_secret">رمز برنامه Facebook</string>
     <string name="system_setting_oauth_x_client_id">شناسه کلاینت X</string>

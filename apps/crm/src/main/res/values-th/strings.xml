@@ -78,7 +78,7 @@
     <string name="crm_design_or_upload_json">หรืออัปโหลดไฟล์</string>
     <string name="crm_design_upload_json">อัปโหลดไฟล์ .json</string>
     <string name="crm_design_tab_classes">คลาส</string>
-    <string name="crm_design_tab_views">การดู</string>
+    <string name="crm_design_tab_views">มุมมอง</string>
     <string name="crm_design_import_dialog_title">นำเข้าการออกแบบ</string>
     <string name="crm_design_import_choose_template">เลือกเทมเพลต</string>
     <string name="crm_design_replace_title">แทนที่ดีไซน์?</string>
@@ -100,7 +100,7 @@
     <string name="crm_field_type_checklist">เช็คลิสต์</string>
     <string name="crm_field_name">ชื่อ</string>
     <string name="crm_field_type">ประเภท</string>
-    <string name="crm_field_flags">Flags</string>
+    <string name="crm_field_flags">แฟล็ก</string>
     <string name="crm_field_required">จำเป็น</string>
     <string name="crm_field_position_default">ค่าเริ่มต้น</string>
     <string name="crm_field_position_sidebar">แถบด้านข้าง</string>
@@ -243,8 +243,8 @@
     <string name="crm_access_tab_groups">กลุ่ม</string>
     <string name="crm_attachment_remove">ลบไฟล์แนบ</string>
     <string name="crm_board_add_column">เพิ่มคอลัมน์</string>
-    <string name="crm_settings_entity_id">Entity ID</string>
-    <string name="crm_settings_fingerprint">Fingerprint</string>
+    <string name="crm_settings_entity_id">รหัสเอนทิตี</string>
+    <string name="crm_settings_fingerprint">ลายนิ้วมือ</string>
     <string name="crm_settings_server">เซิร์ฟเวอร์</string>
     <string name="crm_untitled">ไม่มีชื่อ</string>
     <string name="crm_property_select">เลือก …</string>
@@ -253,7 +253,7 @@
     <string name="crm_filter_clear_all">ล้างทั้งหมด</string>
     <string name="crm_filter_all">ทั้งหมด</string>
     <string name="crm_filter_other">อื่น ๆ</string>
-    <string name="crm_settings_section_identity">Identity</string>
+    <string name="crm_settings_section_identity">ตัวตน</string>
     <string name="crm_settings_section_access">การจัดการการเข้าถึง</string>
     <string name="crm_settings_not_set">ยังไม่ได้ตั้งค่า</string>
     <string name="crm_settings_access_updated">อัปเดตการเข้าถึงแล้ว</string>

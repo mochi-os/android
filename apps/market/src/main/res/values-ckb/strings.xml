@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Market</string>
+    <string name="app_name">بازاڕ</string>
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_label">ژیاننامە</string>
     <string name="market_account_biography_placeholder">باسی خۆت بۆ کڕیاران بکە…</string>
@@ -26,7 +26,7 @@
     <string name="market_account_stripe_title">Stripe</string>
     <string name="market_account_title">هەژمار</string>
     <string name="market_appeal_dialog_cancel">هەڵوەشاندنەوە</string>
-    <string name="market_appeal_dialog_failed">ناردنی Appeal سەرکەوتوو نەبوو</string>
+    <string name="market_appeal_dialog_failed">ناردنی تانە سەرکەوتوو نەبوو</string>
     <string name="market_appeal_dialog_submit">تانە بنێرە</string>
     <string name="market_appeal_dialog_submitting">دەنێردرێت…</string>
     <string name="market_appeal_dialog_success">تانە نێردرا</string>
@@ -54,12 +54,12 @@
     <string name="market_bids_tab_won">براوە</string>
     <string name="market_bids_title">نرخەکان</string>
     <string name="market_carousel_main">وێنە %1$d لە %2$d</string>
-    <string name="market_channel_name">Market</string>
+    <string name="market_channel_name">بازاڕ</string>
     <string name="market_chargeback_reason_bank_cannot_process">بانک نەیتوانی پرۆسێس بکات</string>
     <string name="market_chargeback_reason_check_returned">چێک گەڕاوەتەوە</string>
     <string name="market_chargeback_reason_credit_not_processed">کرێدیت پرۆسێس نەکرا</string>
     <string name="market_chargeback_reason_customer_initiated">لەلایەن کڕیارەوە دەستپێکرا</string>
-    <string name="market_chargeback_reason_debit_not_authorized">Debit ڕێگەپێنەدراو</string>
+    <string name="market_chargeback_reason_debit_not_authorized">قەرز ڕێگەپێنەدراو</string>
     <string name="market_chargeback_reason_duplicate">بارکردنی دووبارە</string>
     <string name="market_chargeback_reason_fraudulent">گرفتکارانە</string>
     <string name="market_chargeback_reason_general">گشتی</string>
@@ -104,7 +104,7 @@
     <string name="market_checkout_subscribe_title">بەشداربە</string>
     <string name="market_checkout_subscription_start_failed">نەتوانرا بەشداریکردن دەست پێ بکات</string>
     <string name="market_checkout_summary">کورتەی داواکاری</string>
-    <string name="market_checkout_title">Checkout</string>
+    <string name="market_checkout_title">پارەدان</string>
     <string name="market_checkout_total">گشتی</string>
     <string name="market_checkout_winning_bid">داواکاری براوە</string>
     <string name="market_condition_new">نوێ</string>
@@ -127,7 +127,7 @@
     <string name="market_editor_back">گەڕانەوە</string>
     <string name="market_editor_category">هاوپۆل</string>
     <string name="market_editor_category_none">پۆلێن هەڵبژێرە</string>
-    <string name="market_editor_condition">مەرج</string>
+    <string name="market_editor_condition">دۆخ</string>
     <string name="market_editor_condition_new">نوێ</string>
     <string name="market_editor_condition_refurbished">نوێکراوە</string>
     <string name="market_editor_condition_used">بەکارهاتوو</string>
@@ -188,7 +188,7 @@
     <string name="market_filter_apply">جێبەجێکردن</string>
     <string name="market_filter_category">هاوپۆل</string>
     <string name="market_filter_clear">پاککردنەوەی پاڵێوەرەکان</string>
-    <string name="market_filter_condition">مەرج</string>
+    <string name="market_filter_condition">دۆخ</string>
     <string name="market_filter_condition_new">نوێ</string>
     <string name="market_filter_condition_refurbished">نوێکراوە</string>
     <string name="market_filter_condition_used">بەکارهاتوو</string>
@@ -197,8 +197,8 @@
     <string name="market_filter_delivery_pickup">وەرگرتن</string>
     <string name="market_filter_delivery_shipping">گەیاندن</string>
     <string name="market_filter_open">پاڵاوتنەکان</string>
-    <string name="market_filter_price_max">Max</string>
-    <string name="market_filter_price_min">Min</string>
+    <string name="market_filter_price_max">زۆرترین</string>
+    <string name="market_filter_price_min">کەمترین</string>
     <string name="market_filter_price_range">مەودای نرخ</string>
     <string name="market_filter_pricing">نرخدانان</string>
     <string name="market_filter_pricing_auction">مەزایدە</string>
@@ -225,7 +225,7 @@
     <string name="market_listing_detail_load_failed">بارکردنی ناونووسکراو سەرکەوتوو نەبوو</string>
     <string name="market_listing_detail_listed">بڵاوکرایەوە %1$s</string>
     <string name="market_listing_detail_location_heading">شوێن</string>
-    <string name="market_listing_detail_message">پەیام</string>
+    <string name="market_listing_detail_message">پەیام بنێرە</string>
     <string name="market_listing_detail_message_seller">پەیام بۆ فرۆشیار</string>
     <string name="market_listing_detail_not_found">ناونووسکراو نەدۆزرایەوە</string>
     <string name="market_listing_detail_place_bid">پێشنیار</string>
@@ -265,8 +265,8 @@
     <string name="market_messages_send">بنێرە</string>
     <string name="market_messages_thread_listing_chip">ناونووسکراو</string>
     <string name="market_messages_thread_title">گفتوگۆ</string>
-    <string name="market_onboarding_activate">Activate</string>
-    <string name="market_onboarding_activating">Activating…</string>
+    <string name="market_onboarding_activate">چالاککردن</string>
+    <string name="market_onboarding_activating">چالاک دەکرێت…</string>
     <string name="market_onboarding_body">هەژمارەکەت چالاک بکە بۆ دەستپێکردنی کڕین و فرۆشتن.</string>
     <string name="market_onboarding_dismiss">لابردن</string>
     <string name="market_onboarding_title">بەخێربێیت بۆ Market</string>
@@ -367,7 +367,7 @@
     <string name="market_sale_carrier_other">هیتر</string>
     <string name="market_sale_completed_label">تەواوبوو</string>
     <string name="market_sale_dispute_respond">وەڵامدانەوە</string>
-    <string name="market_sale_dispute_state_open">کردنەوە</string>
+    <string name="market_sale_dispute_state_open">کراوە</string>
     <string name="market_sale_dispute_state_resolved">چارەسەرکرا</string>
     <string name="market_sale_load_failed">بارکردنی داواکاری سەرکەوتوو نەبوو</string>
     <string name="market_sale_message_buyer">پەیام بۆ کڕیار</string>
@@ -389,7 +389,7 @@
     <string name="market_sale_title">فرۆش</string>
     <string name="market_sale_tracking_label">ژمارەی بەدوادابچوون</string>
     <string name="market_sales_title">فرۆشتنەکانم</string>
-    <string name="market_saved_title">پاشەکەوت کرا</string>
+    <string name="market_saved_title">پاشەکەوتکراوەکان</string>
     <string name="market_search_clear">پاککردنەوەی گەڕان</string>
     <string name="market_search_placeholder">لە بازاڕ بگەڕێ</string>
     <string name="market_section_categories">گەڕان بە هاوپۆلەکاندا</string>
@@ -408,13 +408,13 @@
     <string name="market_sidebar_browse">گەڕان</string>
     <string name="market_sidebar_buying">کڕین</string>
     <string name="market_sidebar_home">ماڵەوە</string>
-    <string name="market_sidebar_inbox">Inbox</string>
+    <string name="market_sidebar_inbox">نامە هاتووەکان</string>
     <string name="market_sidebar_listings">ناونووسکراوەکان</string>
     <string name="market_sidebar_messages">پەیامەکان</string>
     <string name="market_sidebar_purchases">کڕینەکان</string>
     <string name="market_sidebar_reviews">هەڵسەنگاندنەکان</string>
     <string name="market_sidebar_sales">فرۆشەکان</string>
-    <string name="market_sidebar_saved">پاشەکەوت کرا</string>
+    <string name="market_sidebar_saved">پاشەکەوتکراوەکان</string>
     <string name="market_sidebar_selling">فرۆشتن</string>
     <string name="market_sidebar_settings">ڕێکخستنەکان</string>
     <string name="market_sidebar_subscribers">بەشدارەکان</string>
@@ -433,18 +433,18 @@
     <string name="market_subscribers_interval_month">/ مانگ</string>
     <string name="market_subscribers_interval_year">/ ساڵ</string>
     <string name="market_subscribers_load_failed">بارکردنی بەشداربووان سەرکەوتوو نەبوو</string>
-    <string name="market_subscription_detail_billing_history">Billing history</string>
+    <string name="market_subscription_detail_billing_history">مێژووی پسوولەکردن</string>
     <string name="market_subscription_detail_billing_history_empty">هێشتا هیچ بڕە پارەیەک نییە.</string>
-    <string name="market_subscription_detail_billing_info">Billing</string>
-    <string name="market_subscription_detail_cancelled_on">Cancelled on %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Latest charge: %1$s</string>
+    <string name="market_subscription_detail_billing_info">پسوولەکردن</string>
+    <string name="market_subscription_detail_cancelled_on">لە %1$s هەڵوەشێنرایەوە</string>
+    <string name="market_subscription_detail_charge_amount">دوایین پارەدان: %1$s</string>
     <string name="market_subscription_detail_listing">ناونووسکراو</string>
     <string name="market_subscription_detail_load_failed">نەتوانرا بەشداریەکە بار بکرێت</string>
     <string name="market_subscription_detail_next_billing">ڕێکەوتی داهاتووی پسوولە: %1$s</string>
     <string name="market_subscription_detail_not_found">بەشداری نەدۆزرایەوە</string>
-    <string name="market_subscription_detail_pending_cancel">Cancellation pending</string>
+    <string name="market_subscription_detail_pending_cancel">هەڵوەشاندنەوە چاوەڕوانە</string>
     <string name="market_subscription_detail_seller">فرۆشیار</string>
-    <string name="market_subscription_detail_started">Started %1$s</string>
+    <string name="market_subscription_detail_started">دەستیپێکرد لە %1$s</string>
     <string name="market_subscription_detail_title">بەشداری</string>
     <string name="market_subscriptions_action_cancel">هەڵوەشاندنەوە</string>
     <string name="market_subscriptions_action_pause">وەستان</string>
@@ -466,7 +466,7 @@
     <string name="market_subscriptions_resume_failed">بەردەوامبوون سەرکەوتوو نەبوو</string>
     <string name="market_subscriptions_resumed">بەشداری دووبارە دەستپێکرایەوە</string>
     <string name="market_subscriptions_title">بەشدارییەکان</string>
-    <string name="market_title">Market</string>
+    <string name="market_title">بازاڕ</string>
     <string name="market_type_digital">دیجیتاڵ</string>
     <string name="market_type_physical">لەشی</string>
     <string name="market_warnings_title">ئاگادارکردنەوەکان</string>
@@ -751,9 +751,9 @@
     <string name="market_audit_listing_updated">ناونووسکراو دەستکاری کرا</string>
     <string name="market_audit_listing_warning">ئاگادارکردنەوە دەرکرا</string>
     <string name="market_audit_order_cancelled">هەڵوەشێنرایەوە</string>
-    <string name="market_audit_order_chargeback">Chargeback وەرگیرا</string>
-    <string name="market_audit_order_chargeback_lost">Chargeback پشتگیری کرا</string>
-    <string name="market_audit_order_chargeback_won">Chargeback ڕەتکرایەوە</string>
+    <string name="market_audit_order_chargeback">گەڕاندنەوەی پارە وەرگیرا</string>
+    <string name="market_audit_order_chargeback_lost">گەڕاندنەوەی پارە پشتگیری کرا</string>
+    <string name="market_audit_order_chargeback_won">گەڕاندنەوەی پارە ڕەتکرایەوە</string>
     <string name="market_audit_order_completed">تەواوبوو</string>
     <string name="market_audit_order_created">داواکاری دانرا</string>
     <string name="market_audit_order_paid">پارە وەرگیرا</string>
@@ -771,9 +771,9 @@
     <string name="market_audit_subscription_activated">بەشداری چالاککرا</string>
     <string name="market_audit_subscription_cancel_scheduled">هەڵوەشاندنەوە کاتدارکرا</string>
     <string name="market_audit_subscription_cancelled">هەڵوەشێنرایەوە</string>
-    <string name="market_audit_subscription_chargeback">Chargeback وەرگیرا</string>
-    <string name="market_audit_subscription_chargeback_lost">Chargeback پشتگیری کرا</string>
-    <string name="market_audit_subscription_chargeback_won">Chargeback ڕەتکرایەوە</string>
+    <string name="market_audit_subscription_chargeback">گەڕاندنەوەی پارە وەرگیرا</string>
+    <string name="market_audit_subscription_chargeback_lost">گەڕاندنەوەی پارە پشتگیری کرا</string>
+    <string name="market_audit_subscription_chargeback_won">گەڕاندنەوەی پارە ڕەتکرایەوە</string>
     <string name="market_audit_subscription_created">بەشداری دروستکرا</string>
     <string name="market_audit_subscription_past_due">پارەدان بە سەرچووە</string>
     <string name="market_audit_subscription_paused">وەستێنراو</string>

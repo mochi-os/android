@@ -10,7 +10,7 @@
     <string name="calendars_delete">Ta bort</string>
     <string name="calendars_previous">Föregående</string>
     <string name="calendars_next">Nästa</string>
-    <string name="calendars_view">Visa</string>
+    <string name="calendars_view">Vy</string>
     <string name="calendars_view_list">Lista</string>
     <string name="calendars_list_search">Sök</string>
     <string name="calendars_event_untitled">Namnlös</string>
@@ -169,7 +169,7 @@
     <string name="calendars_subscribe_server_url">Serveradress</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google Kalender</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google-konton är inte aktiverade på den här servern. Aktivera dem under Inställningar, Systeminställningar.</string>
     <string name="calendars_subscribe_google_connect">Du har inte anslutit något Google-konto.</string>

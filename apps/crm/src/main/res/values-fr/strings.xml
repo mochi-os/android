@@ -20,7 +20,7 @@
     <string name="crm_link">Lien</string>
     <string name="crm_design">Conception</string>
     <string name="crm_export_failed">Impossible d\'enregistrer l\'export</string>
-    <string name="crm_sort_direction">Direction</string>
+    <string name="crm_sort_direction">Sens</string>
     <string name="crm_sort_rank">Manuel</string>
     <string name="crm_sort_created">Créé</string>
     <string name="crm_sort_updated">Mis à jour</string>
@@ -67,7 +67,7 @@
     <string name="crm_board_rename">Renommer</string>
     <string name="crm_board_rename_column">Renommer la colonne</string>
     <string name="crm_move_position">Position</string>
-    <string name="crm_move_position_top">Meilleur</string>
+    <string name="crm_move_position_top">En haut</string>
     <string name="crm_move_current">Actuelle</string>
     <string name="crm_design_title">Conception</string>
     <string name="crm_design_export">Exporter la conception</string>
@@ -97,7 +97,7 @@
     <string name="crm_field_type_number">Nombre</string>
     <string name="crm_field_type_user">Utilisateur</string>
     <string name="crm_field_type_date">Date</string>
-    <string name="crm_field_type_checklist">Checklist</string>
+    <string name="crm_field_type_checklist">Liste de contrôle</string>
     <string name="crm_field_name">Nom</string>
     <string name="crm_field_type">Type</string>
     <string name="crm_field_flags">Indicateurs</string>
@@ -119,14 +119,14 @@
     <string name="crm_views_type">Type</string>
     <string name="crm_views_type_board">Tableau</string>
     <string name="crm_views_type_list">Liste</string>
-    <string name="crm_views_direction">Direction</string>
+    <string name="crm_views_direction">Sens</string>
     <string name="crm_views_sort_created">Créé</string>
     <string name="crm_views_sort_updated">Mis à jour</string>
     <string name="crm_views_sort_rank">Classement</string>
     <string name="crm_not_found">Projet introuvable</string>
     <string name="crm_more">Plus</string>
     <string name="crm_comment_send">Envoyer</string>
-    <string name="crm_field_position_body">Contenu</string>
+    <string name="crm_field_position_body">Corps</string>
     <string name="crm_list_add_to_home">Ajouter à l\'écran d\'accueil</string>
     <string name="crm_sort_field">Trier par</string>
     <string name="crm_views_move_up">Déplacer vers le haut</string>

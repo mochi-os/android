@@ -29,7 +29,7 @@
     <string name="projects_sort_label">並べ替え</string>
     <string name="projects_sort_direction">方向</string>
     <string name="projects_sort_rank">手動</string>
-    <string name="projects_sort_number">数値</string>
+    <string name="projects_sort_number">番号</string>
     <string name="projects_sort_created">作成日</string>
     <string name="projects_sort_updated">更新日</string>
     <string name="projects_create_object_type">タイプ</string>
@@ -81,7 +81,7 @@
     <string name="projects_request_status_open">オープン</string>
     <string name="projects_request_status_merged">マージ済み</string>
     <string name="projects_request_merge">マージ</string>
-    <string name="projects_request_close">閉じる</string>
+    <string name="projects_request_close">クローズ</string>
     <string name="projects_request_merge_dialog_title">マージ</string>
     <string name="projects_request_method">メソッド</string>
     <string name="projects_request_method_merge">マージ</string>
@@ -99,7 +99,7 @@
     <string name="projects_board_rename">名前を変更</string>
     <string name="projects_board_rename_column">列の名前を変更</string>
     <string name="projects_move_position">位置</string>
-    <string name="projects_move_position_top">トップ</string>
+    <string name="projects_move_position_top">先頭</string>
     <string name="projects_move_current">現在</string>
     <string name="projects_design_title">デザイン</string>
     <string name="projects_design_export">デザインをエクスポート</string>
@@ -149,7 +149,7 @@
     <string name="projects_views_type_board">ボード</string>
     <string name="projects_views_type_list">リスト</string>
     <string name="projects_views_direction">方向</string>
-    <string name="projects_views_sort_number">数値</string>
+    <string name="projects_views_sort_number">番号</string>
     <string name="projects_views_sort_created">作成日</string>
     <string name="projects_views_sort_updated">更新日</string>
     <string name="projects_views_sort_rank">ランク</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">オブジェクトを検索</string>
 
     <string name="notification_channel_projects">プロジェクト通知</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi プロジェクト</string>
     <string name="projects_auth_create_identity_failed">アイデンティティの作成に失敗しました</string>
     <string name="projects_auth_mfa_unsupported">MFAはモバイルアプリではまだサポートされていません</string>
     <string name="projects_auth_enter_code_sent">%1$s に送信されたコードを入力してください</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">ルールを選択</string>
     <string name="projects_access_authenticated_desc">ログインしているすべてのユーザー</string>
     <string name="projects_access_anyone_desc">匿名ユーザーを含む</string>
-    <string name="projects_access_target">ターゲット</string>
+    <string name="projects_access_target">対象</string>
     <string name="projects_access_target_hint">エンティティ ID、@グループ、*（全員）、または +（メンバー）</string>
     <string name="projects_access_selected">選択中: %1$s</string>
     <string name="projects_access_role_comment">コメントと閲覧</string>

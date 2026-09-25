@@ -56,7 +56,7 @@
     <string name="crm_links_no_matches">Nema odgovarajućih objekata</string>
     <string name="crm_field_yes">Da</string>
     <string name="crm_field_no">Ne</string>
-    <string name="crm_field_type_checkbox">Checkbox</string>
+    <string name="crm_field_type_checkbox">Potvrdni okvir</string>
     <string name="crm_comment_empty">Još nema komentara</string>
     <string name="crm_comment_attach">Priloži fajlove</string>
     <string name="crm_property_remove">Ukloni</string>
@@ -67,7 +67,7 @@
     <string name="crm_board_rename">Preimenuj</string>
     <string name="crm_board_rename_column">Preimenuj kolonu</string>
     <string name="crm_move_position">Pozicija</string>
-    <string name="crm_move_position_top">Vrh</string>
+    <string name="crm_move_position_top">Na vrh</string>
     <string name="crm_move_current">Trenutno</string>
     <string name="crm_design_title">Dizajn</string>
     <string name="crm_design_export">Izvezi dizajn</string>
@@ -78,7 +78,7 @@
     <string name="crm_design_or_upload_json">Ili otpremite datoteku</string>
     <string name="crm_design_upload_json">Otpremi .json fajl</string>
     <string name="crm_design_tab_classes">Klase</string>
-    <string name="crm_design_tab_views">Pregledi</string>
+    <string name="crm_design_tab_views">Prikazi</string>
     <string name="crm_design_import_dialog_title">Uvezi dizajn</string>
     <string name="crm_design_import_choose_template">Odaberite šablon</string>
     <string name="crm_design_replace_title">Zamijeniti dizajn?</string>
@@ -209,7 +209,7 @@
     <string name="crm_field_multi">Višestruki izbor</string>
     <string name="crm_field_position">Pozicija prikaza</string>
     <string name="crm_field_position_header">Zaglavlje</string>
-    <string name="crm_field_position_body">Tijelo</string>
+    <string name="crm_field_position_body">Glavni dio</string>
     <string name="crm_field_validation">Validacija</string>
     <string name="crm_field_min_length">Minimalna dužina</string>
     <string name="crm_field_max_length">Maksimalna dužina</string>

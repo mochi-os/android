@@ -201,7 +201,6 @@
     <string name="settings_number_format">Zahlenformat</string>
     <string name="settings_units">Einheiten</string>
     <string name="settings_units_metric">Metrisch</string>
-    <string name="settings_units_imperial">Imperial</string>
     <string name="settings_time_zone">Zeitzone</string>
     <string name="settings_reset_to_defaults">Auf Standard zurücksetzen</string>
     <string name="settings_reset_confirm_title">Einstellungen zurücksetzen?</string>

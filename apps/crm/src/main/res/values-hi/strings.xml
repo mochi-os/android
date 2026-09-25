@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="crm_list_title">CRMs</string>
+    <string name="crm_list_title">CRM</string>
     <string name="crm_list_search">खोजें</string>
     <string name="crm_list_find">CRMs खोजें</string>
     <string name="crm_list_logout">लॉग आउट</string>
@@ -67,7 +67,7 @@
     <string name="crm_board_rename">नाम बदलें</string>
     <string name="crm_board_rename_column">कॉलम का नाम बदलें</string>
     <string name="crm_move_position">स्थिति</string>
-    <string name="crm_move_position_top">टॉप</string>
+    <string name="crm_move_position_top">सबसे ऊपर</string>
     <string name="crm_move_current">वर्तमान</string>
     <string name="crm_design_title">डिज़ाइन</string>
     <string name="crm_design_export">डिज़ाइन एक्सपोर्ट करें</string>
@@ -126,7 +126,7 @@
     <string name="crm_not_found">प्रोजेक्ट नहीं मिला</string>
     <string name="crm_more">और</string>
     <string name="crm_comment_send">भेजें</string>
-    <string name="crm_field_position_body">मुख्य पाठ</string>
+    <string name="crm_field_position_body">सामग्री</string>
     <string name="crm_sort_field">क्रमित करें</string>
     <string name="crm_comment_remove_attachment">अनुलग्नक हटाएं</string>
     <string name="crm_views_sort_by">क्रमित करें</string>
@@ -167,7 +167,7 @@
     <string name="crm_comment_clear_reply">उत्तर साफ़ करें</string>
     <string name="crm_comment_placeholder">टिप्पणी जोड़ें</string>
     <string name="crm_property_pick_date">तिथि चुनें</string>
-    <string name="crm_property_ok">OK</string>
+    <string name="crm_property_ok">ठीक है</string>
     <string name="crm_property_add_item">आइटम जोड़ें</string>
     <string name="crm_property_required">%1$s आवश्यक है</string>
     <string name="crm_activity_empty">कोई गतिविधि नहीं</string>

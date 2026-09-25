@@ -8,7 +8,7 @@
     <string name="forums_list_logout">Αποσύνδεση</string>
     <string name="forums_list_unsubscribe">Διαγραφή εγγραφής</string>
     <string name="forums_list_unsubscribe_title">Διαγραφή εγγραφής</string>
-    <string name="forums_create_title">Δημιουργία forum</string>
+    <string name="forums_create_title">Δημιουργία φόρουμ</string>
     <string name="forums_create_name">Όνομα</string>
     <string name="forums_create_privacy">Ιδιωτικότητα</string>
     <string name="forums_create_private">Ιδιωτικό</string>
@@ -24,9 +24,9 @@
     <string name="forums_settings">Ρυθμίσεις</string>
     <string name="forums_load_more">Φόρτωση περισσότερων</string>
     <string name="forums_sort_label">Ταξινόμηση</string>
-    <string name="forums_sort_new">Νέο</string>
+    <string name="forums_sort_new">Νεότερα</string>
     <string name="forums_sort_hot">Δημοφιλή</string>
-    <string name="forums_sort_top">Κορυφή</string>
+    <string name="forums_sort_top">Κορυφαία</string>
     <string name="forums_sort_interests">Ενδιαφέροντα</string>
     <string name="forums_post_title_field">Τίτλος</string>
     <string name="forums_post_attach">Επισύναψη αρχείων</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Μέλη</string>
     <string name="forums_tab_banner">Μπάνερ</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Στόχος</string>
+    <string name="forums_access_target">Χρήστης ή ομάδα</string>
     <string name="forums_access_level_view">Προβολή</string>
     <string name="forums_access_level_vote">Ψήφος</string>
-    <string name="forums_access_level_comment">Σχόλιο</string>
+    <string name="forums_access_level_comment">Σχολιασμός</string>
     <string name="forums_access_level_post">Ανάρτηση</string>
     <string name="forums_access_level_none">Κανένα</string>
     <string name="forums_members_empty">Χωρίς μέλη</string>
     <string name="forums_banner_dismiss">Απόρριψη μπάνερ</string>
-    <string name="forums_ai_mode_tag">Ετικέτα</string>
+    <string name="forums_ai_mode_tag">Προσθήκη ετικετών</string>
     <string name="forums_ai_account_default">Προεπιλεγμένος λογαριασμός</string>
     <string name="forums_ai_prompt_reset">Επαναφορά στις προεπιλογές</string>
     <string name="forums_settings_unsubscribe">Διαγραφή εγγραφής</string>
@@ -116,15 +116,15 @@
     <string name="forums_comment_reply">Απάντηση</string>
     <string name="forums_settings_rename">Μετονομασία</string>
     <string name="forums_settings_save">Αποθήκευση</string>
-    <string name="forums_settings_delete">Διαγραφή forum</string>
-    <string name="forums_settings_delete_title">Διαγραφή forum</string>
+    <string name="forums_settings_delete">Διαγραφή φόρουμ</string>
+    <string name="forums_settings_delete_title">Διαγραφή φόρουμ</string>
     <string name="forums_forum_not_found">Το φόρουμ δεν βρέθηκε</string>
     <string name="forums_post_not_found">Η ανάρτηση δεν βρέθηκε</string>
 
     <string name="forums_comment_send">Αποστολή</string>
 
     <string name="notification_channel_forums">Ειδοποιήσεις φόρουμ</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Φόρουμ</string>
     <string name="forums_auth_login_failed">Η σύνδεση απέτυχε</string>
     <string name="forums_auth_create_identity_failed">Αποτυχία δημιουργίας ταυτότητας</string>
     <string name="forums_auth_mfa_unsupported">Το MFA δεν υποστηρίζεται ακόμη στην εφαρμογή για κινητά</string>
@@ -134,8 +134,8 @@
     <string name="forums_list_unsubscribe_message">Είστε βέβαιοι ότι θέλετε να καταργήσετε την εγγραφή σας από αυτό το φόρουμ;</string>
     <string name="forums_find_search_placeholder">Αναζήτηση φόρουμ ή επικόλληση URL</string>
     <string name="forums_find_search_hint">Αναζητήστε φόρουμ για εγγραφή</string>
-    <string name="forums_post_body_field">Σώμα</string>
-    <string name="forums_post_edit_body_field">Σώμα</string>
+    <string name="forums_post_body_field">Κείμενο</string>
+    <string name="forums_post_edit_body_field">Κείμενο</string>
     <string name="forums_post_delete_message">Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτή την ανάρτηση; Η ενέργεια αυτή δεν μπορεί να αναιρεθεί.</string>
     <string name="forums_post_vote_up">Θετική ψήφος</string>
     <string name="forums_post_vote_down">Αρνητική ψήφος</string>
@@ -169,13 +169,13 @@
     <string name="forums_moderation_log_meta">Από %1$s · Στόχος %2$s</string>
     <string name="forums_moderation_restriction_add">Προσθήκη περιορισμού</string>
     <string name="forums_moderation_restriction_user">Ταυτότητα χρήστη</string>
-    <string name="forums_moderation_restriction_type_shadowban">Shadowban</string>
+    <string name="forums_moderation_restriction_type_shadowban">Σκιώδης αποκλεισμός</string>
     <string name="forums_moderation_restriction_duration_seconds">Διάρκεια (δευτερόλεπτα, κενό για μόνιμο)</string>
     <string name="forums_moderation_restriction_expires">Λήγει %1$s</string>
     <string name="forums_moderation_restriction_permanent">Μόνιμο</string>
     <string name="forums_report_reason_hate">Μίσος</string>
     <string name="forums_write_comment">Γράψτε ένα σχόλιο…</string>
-    <string name="forums_comment_edit_body_field">Σώμα</string>
+    <string name="forums_comment_edit_body_field">Κείμενο</string>
     <string name="forums_comment_delete_message">Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτό το σχόλιο;</string>
     <string name="forums_comment_replying_to">Απάντηση στον/στην %1$s</string>
     <string name="forums_comment_clear_reply">Καθαρισμός απάντησης</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">Χειροκίνητο</string>
     <string name="forums_access_search_users">Αναζήτηση χρηστών</string>
     <string name="forums_access_no_groups">Δεν υπάρχουν διαθέσιμες ομάδες</string>
-    <string name="forums_saved_title">Αποθηκεύτηκε</string>
+    <string name="forums_saved_title">Αποθηκευμένα</string>
     <string name="forums_saved_save">Αποθήκευση για αργότερα</string>
     <string name="forums_saved_remove">Αφαίρεση από τα αποθηκευμένα</string>
     <string name="forums_saved_clear_all">Εκκαθάριση όλων</string>
@@ -239,7 +239,7 @@
     <string name="forums_settings_access_updated">Η πρόσβαση ενημερώθηκε</string>
     <string name="forums_settings_access_revoked">Η πρόσβαση ανακλήθηκε</string>
     <string name="forums_settings_member_removed">Το μέλος αφαιρέθηκε</string>
-    <string name="forums_settings_prompt_saved">Το prompt αποθηκεύτηκε</string>
+    <string name="forums_settings_prompt_saved">Η προτροπή αποθηκεύτηκε</string>
     <string name="forums_settings_section_identity">Ταυτότητα</string>
     <string name="forums_settings_field_name">Όνομα</string>
     <string name="forums_settings_field_entity_id">ID οντότητας</string>
@@ -257,8 +257,8 @@
     <string name="forums_access_select_rule">Επιλέξτε κανόνα</string>
     <string name="forums_ai_actions_label">Ενέργειες AI στις δημοσιεύσεις</string>
     <string name="forums_ai_prompt_custom">Προσαρμοσμένο</string>
-    <string name="forums_ai_prompt_score_label">Prompt βαθμολόγησης</string>
-    <string name="forums_ai_prompt_tag_label">Prompt ετικετών</string>
+    <string name="forums_ai_prompt_score_label">Προτροπή βαθμολόγησης</string>
+    <string name="forums_ai_prompt_tag_label">Προτροπή ετικετών</string>
     <string name="forums_ai_prompt_variables">Μεταβλητές: %1$s</string>
     <string name="forums_link">Σύνδεσμος</string>
     <string name="forums_moderation_ban_message">Χάνει την πρόσβαση στο φόρουμ μέχρι να αφαιρέσετε τον περιορισμό.</string>
@@ -280,7 +280,7 @@
     <string name="forums_moderation_restriction_state_shadowban">Κρυφός αποκλεισμός</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Κανένας χρήστης δεν έχει τεθεί σε σίγαση ή αποκλειστεί</string>
     <string name="forums_moderation_section_premoderation_description">Απαίτηση έγκρισης πριν γίνει ορατό το περιεχόμενο</string>
-    <string name="forums_moderation_section_ratelimiting_description">Αποτρέψτε το spam περιορίζοντας τη συχνότητα δημοσιεύσεων</string>
+    <string name="forums_moderation_section_ratelimiting_description">Αποτρέψτε το ανεπιθύμητο περιεχόμενο περιορίζοντας τη συχνότητα δημοσιεύσεων</string>
     <string name="forums_moderation_settings_updated">Οι ρυθμίσεις συντονισμού ενημερώθηκαν</string>
     <string name="forums_moderation_unit_posts">δημοσιεύσεις</string>
     <string name="forums_moderation_unit_replies">απαντήσεις</string>

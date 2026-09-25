@@ -108,7 +108,7 @@
     <string name="wikis_rename_page_failed">Neuspešno preimenovanje strani</string>
     <string name="wikis_history_title">Zgodovina</string>
     <string name="wikis_history_empty">Revizij ni mogoče najti</string>
-    <string name="wikis_history_view_action">Pogled</string>
+    <string name="wikis_history_view_action">Poglej</string>
     <string name="wikis_history_revert_action">Vrni na to različico</string>
     <string name="wikis_revision_current_badge">Trenutno</string>
     <string name="wikis_revision_revert_to_this">Vrni na to različico</string>

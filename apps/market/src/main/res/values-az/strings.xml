@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Market</string>
+    <string name="app_name">Bazar</string>
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_label">Bioqrafiya</string>
     <string name="market_account_biography_placeholder">Alıcılara özünüz haqqında danışın…</string>
@@ -74,7 +74,7 @@
     <string name="market_bids_your_bid">Sizin təklifiniz: %1$s</string>
     <string name="market_carousel_main">Foto %1$d / %2$d</string>
     <string name="market_carousel_thumbnail">Eskiz %1$d</string>
-    <string name="market_channel_name">Market</string>
+    <string name="market_channel_name">Bazar</string>
     <string name="market_chargeback_reason_bank_cannot_process">Bank emal edə bilmədi</string>
     <string name="market_chargeback_reason_check_returned">Çek qaytarıldı</string>
     <string name="market_chargeback_reason_credit_not_processed">Kredit emal edilmədi</string>
@@ -101,7 +101,7 @@
     <string name="market_checkout_browser_unavailable">Ödəniş səhifəsini açmaq üçün brauzer yoxdur</string>
     <string name="market_checkout_buy_it_now">İndi al</string>
     <string name="market_checkout_create_failed">Sifariş yaratmaq alınmadı</string>
-    <string name="market_checkout_delivery_download">Yüklə</string>
+    <string name="market_checkout_delivery_download">Yükləmə</string>
     <string name="market_checkout_delivery_method">Çatdırılma üsulu</string>
     <string name="market_checkout_delivery_pickup">Götürmə</string>
     <string name="market_checkout_delivery_shipping">Çatdırılma</string>
@@ -133,7 +133,7 @@
     <string name="market_checkout_winning_bid">Qalib təklif</string>
     <string name="market_condition_new">Yeni</string>
     <string name="market_condition_refurbished">Yenilənmiş</string>
-    <string name="market_condition_used">İstifadə olunub</string>
+    <string name="market_condition_used">İşlənmiş</string>
     <string name="market_dispute_dialog_attach">Sübut əlavə et</string>
     <string name="market_dispute_dialog_attach_count">%1$d fayl əlavə edildi</string>
     <string name="market_dispute_dialog_cancel">Ləğv et</string>
@@ -161,10 +161,10 @@
     <string name="market_editor_back">Geri</string>
     <string name="market_editor_category">Kateqoriya</string>
     <string name="market_editor_category_none">Kateqoriya seçin</string>
-    <string name="market_editor_condition">Şərt</string>
+    <string name="market_editor_condition">Vəziyyət</string>
     <string name="market_editor_condition_new">Yeni</string>
     <string name="market_editor_condition_refurbished">Yenilənmiş</string>
-    <string name="market_editor_condition_used">İstifadə olunub</string>
+    <string name="market_editor_condition_used">İşlənmiş</string>
     <string name="market_editor_currency">Valyuta</string>
     <string name="market_editor_days">%1$d gün</string>
     <string name="market_editor_delete">Elanı sil</string>
@@ -260,12 +260,12 @@
     <string name="market_filter_chip_max">Maks %1$s</string>
     <string name="market_filter_chip_min">Min %1$s</string>
     <string name="market_filter_clear">Filtrləri təmizlə</string>
-    <string name="market_filter_condition">Şərt</string>
+    <string name="market_filter_condition">Vəziyyət</string>
     <string name="market_filter_condition_new">Yeni</string>
     <string name="market_filter_condition_refurbished">Yenilənmiş</string>
-    <string name="market_filter_condition_used">İstifadə olunub</string>
+    <string name="market_filter_condition_used">İşlənmiş</string>
     <string name="market_filter_delivery">Çatdırılma</string>
-    <string name="market_filter_delivery_download">Yüklə</string>
+    <string name="market_filter_delivery_download">Yükləmə</string>
     <string name="market_filter_delivery_pickup">Götürmə</string>
     <string name="market_filter_delivery_shipping">Çatdırılma</string>
     <string name="market_filter_open">Filterlər</string>
@@ -304,7 +304,7 @@
     <string name="market_listing_detail_loading">Elan yüklənir</string>
     <string name="market_listing_detail_listed">Yerləşdirilib %1$s</string>
     <string name="market_listing_detail_location_heading">Yer</string>
-    <string name="market_listing_detail_message">Mesaj</string>
+    <string name="market_listing_detail_message">Mesaj göndər</string>
     <string name="market_listing_detail_message_seller">Satıcıya mesaj göndər</string>
     <string name="market_listing_detail_not_found">Elan tapılmadı</string>
     <string name="market_listing_detail_place_bid">Təklif ver</string>
@@ -505,7 +505,7 @@
     <string name="market_sale_completed_label">Tamamlandı</string>
     <string name="market_sale_dispute_evidence_due">Sübut tarixi %1$s</string>
     <string name="market_sale_dispute_respond">Cavab ver</string>
-    <string name="market_sale_dispute_state_open">Aç</string>
+    <string name="market_sale_dispute_state_open">Açıq</string>
     <string name="market_sale_dispute_state_resolved">Həll edildi</string>
     <string name="market_sale_dispute_state_responded">Qərar gözlənilir</string>
     <string name="market_sale_dispute_stripe_reason">Stripe geri çağırma səbəbi: %1$s</string>
@@ -547,7 +547,7 @@
     <string name="market_saved_clear">Bütün saxlanılanları təmizlə</string>
     <string name="market_saved_empty_subtitle">Hər hansı elanı sonradan saxlamaq üçün əlfəcin işarəsinə toxunun.</string>
     <string name="market_saved_empty_title">Saxlanılan elan yoxdur</string>
-    <string name="market_saved_title">Saxlanıldı</string>
+    <string name="market_saved_title">Saxlanılanlar</string>
     <string name="market_search_clear">Axtarışı təmizlə</string>
     <string name="market_search_placeholder">Bazarda axtarın</string>
     <string name="market_section_categories">Kateqoriyalara baxın</string>
@@ -565,14 +565,14 @@
     <string name="market_sidebar_bids">Təkliflər</string>
     <string name="market_sidebar_browse">Bax</string>
     <string name="market_sidebar_buying">Alış</string>
-    <string name="market_sidebar_home">Ev</string>
+    <string name="market_sidebar_home">Ana səhifə</string>
     <string name="market_sidebar_inbox">Gələnlər qutusu</string>
     <string name="market_sidebar_listings">Elanlar</string>
     <string name="market_sidebar_messages">Mesajlar</string>
     <string name="market_sidebar_purchases">Alışlar</string>
     <string name="market_sidebar_reviews">Rəylər</string>
     <string name="market_sidebar_sales">Satışlar</string>
-    <string name="market_sidebar_saved">Saxlanıldı</string>
+    <string name="market_sidebar_saved">Saxlanılanlar</string>
     <string name="market_sidebar_selling">Satılır</string>
     <string name="market_sidebar_settings">Parametrlər</string>
     <string name="market_sidebar_subscribers">Abunəçilər</string>
@@ -601,18 +601,18 @@
     <string name="market_subscribers_interval_year">/ il</string>
     <string name="market_subscribers_load_failed">Abunəçilər yüklənmədi</string>
     <string name="market_subscribers_title">Mənim abunəçilərim</string>
-    <string name="market_subscription_detail_billing_history">Billing history</string>
+    <string name="market_subscription_detail_billing_history">Ödəniş tarixçəsi</string>
     <string name="market_subscription_detail_billing_history_empty">Hələ heç bir ödəniş yoxdur.</string>
     <string name="market_subscription_detail_billing_info">Ödəniş</string>
-    <string name="market_subscription_detail_cancelled_on">Cancelled on %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Latest charge: %1$s</string>
+    <string name="market_subscription_detail_cancelled_on">%1$s tarixində ləğv edildi</string>
+    <string name="market_subscription_detail_charge_amount">Son ödəniş: %1$s</string>
     <string name="market_subscription_detail_listing">Elan</string>
     <string name="market_subscription_detail_load_failed">Abunəlik yüklənə bilmədi</string>
     <string name="market_subscription_detail_next_billing">Növbəti ödəniş tarixi: %1$s</string>
     <string name="market_subscription_detail_not_found">Abunəlik tapılmadı</string>
-    <string name="market_subscription_detail_pending_cancel">Cancellation pending</string>
+    <string name="market_subscription_detail_pending_cancel">Ləğv gözlənilir</string>
     <string name="market_subscription_detail_seller">Satıcı</string>
-    <string name="market_subscription_detail_started">Started %1$s</string>
+    <string name="market_subscription_detail_started">%1$s tarixində başladı</string>
     <string name="market_subscription_detail_title">Abunə</string>
     <string name="market_subscriptions_action_cancel">Ləğv et</string>
     <string name="market_subscriptions_action_pause">Pauza</string>
@@ -638,7 +638,7 @@
     <string name="market_subscriptions_resume_failed">Davam etdirmək alınmadı</string>
     <string name="market_subscriptions_resumed">Abunə bərpa edildi</string>
     <string name="market_subscriptions_title">Abunələr</string>
-    <string name="market_title">Market</string>
+    <string name="market_title">Bazar</string>
     <string name="market_type_digital">Rəqəmsal</string>
     <string name="market_type_physical">Fiziki</string>
     <string name="market_warnings_title">Xəbərdarlıqlar</string>

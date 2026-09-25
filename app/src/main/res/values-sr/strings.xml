@@ -6,16 +6,16 @@
     <string name="launcher_forums">Mochi Форуми</string>
     <string name="launcher_projects">Mochi Пројекти</string>
     <string name="launcher_crm">Mochi CRM</string>
-    <string name="launcher_people">Mochi Људи</string>
-    <string name="launcher_settings">Mochi Поставке</string>
+    <string name="launcher_people">Mochi Особе</string>
+    <string name="launcher_settings">Mochi Подешавања</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Викији</string>
     <string name="launcher_chess">Mochi Шах</string>
-    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_go">Mochi Го</string>
     <string name="launcher_words">Mochi Речи</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi Маркет</string>
     <string name="launcher_calendars">Mochi Календари</string>
-    <string name="launcher_staff">Mochi Особље</string>
+    <string name="launcher_staff">Mochi особље</string>
 
 
     <string name="app_name">Mochi</string>

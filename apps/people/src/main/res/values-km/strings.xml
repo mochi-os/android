@@ -62,7 +62,7 @@
     <string name="people_profile_uploading">កំពុងបង្ហោះ...</string>
     <string name="people_profile_change_banner">ប្ដូរបដា</string>
     <string name="people_profile_no_banner">មិនមានបដាដែលបានកំណត់</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">រូបតំណាងគេហទំព័រ</string>
     <string name="people_profile_browser_icon">រូបតំណាងកម្មវិធីរុករក</string>
     <string name="people_profile_file_too_large">ឯកសារធំពេក</string>
     <string name="people_profile_clear">សម្អាត</string>
@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">បើកការរុករក</string>
     <string name="people_person_state_friend">មិត្ត</string>
     <string name="people_person_state_self">អ្នក</string>
-    <string name="people_person_message">សារ</string>
+    <string name="people_person_message">ផ្ញើសារ</string>
     <string name="people_person_accept">ទទួលយក</string>
     <string name="people_person_decline">បដិសេធ</string>
 
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">បញ្ចូលលេខកូដពណ៌ hex ត្រឹមត្រូវ (ឧ. #a78bfa)</string>
     <string name="people_profile_accent_none">គ្មាន</string>
     <string name="people_profile_privacy_private_desc">មានតែមិត្តភក្តិទៅវិញទៅមកប៉ុណ្ណោះដែលអាចមើលប្រវត្តិរូបរបស់អ្នកបាន</string>
-    <string name="people_welcome_title">សូមស្វាគមន៍មកកាន់ People</string>
+    <string name="people_welcome_title">សូមស្វាគមន៍មកកាន់ «មនុស្ស»</string>
     <string name="people_person_banner_alt">បដាសម្រាប់ %1$s</string>
     <string name="people_person_private">ប្រវត្តិរូបនេះគឺឯកជន</string>
     <string name="people_person_state_invited">បានអញ្ជើញ</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">ទទួលយកទាំងអស់</string>
     <string name="people_invitations_decline_all">បដិសេធទាំងអស់</string>
     <string name="people_invitations_cancel_all">បោះបង់ទាំងអស់</string>
+    <string name="people_invitations_cancel">បោះបង់</string>
     <string name="people_invitations_all_accepted">ការអញ្ជើញទាំងអស់ត្រូវបានទទួលយក</string>
     <string name="people_invitations_all_declined">ការអញ្ជើញទាំងអស់ត្រូវបានបដិសេធ</string>
     <string name="people_invitations_all_cancelled">ការអញ្ជើញទាំងអស់ត្រូវបានបោះបង់</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">ស្វែងរក…</string>
     <string name="people_contacts_invited">បានអញ្ជើញ</string>
     <string name="people_contacts_accept">ទទួលយក</string>
-    <string name="people_contacts_message">សារ</string>
+    <string name="people_contacts_message">ផ្ញើសារ</string>
     <string name="people_contacts_no_people_found">រកមិនឃើញមនុស្ស</string>
     <string name="people_contacts_try_adjusting">សាកល្បងកែតម្រូវការស្វែងរករបស់អ្នក</string>
     <string name="people_contact_section_address">អាសយដ្ឋាន</string>

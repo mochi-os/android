@@ -35,24 +35,24 @@
     <string name="words_detail_resign_title">Ymddiswyddo o\'r gêm?</string>
     <string name="words_detail_resign_message">Ydych chi\'n siŵr eich bod am ymddiswyddo?</string>
 
-    <string name="words_channel_name">Words notifications</string>
+    <string name="words_channel_name">Hysbysiadau Geiriau</string>
     <string name="words_channel_description">Hysbysiadau am droeon Words, cyfnewidiadau a chanlyniadau gemau.</string>
     <string name="words_sidebar_active">Gemau gweithredol</string>
     <string name="words_sidebar_empty">Dim gemau eto.</string>
-    <string name="words_new_game_choose_opponents">Choose opponents</string>
+    <string name="words_new_game_choose_opponents">Dewiswch wrthwynebwyr</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$d players</string>
-    <string name="words_new_game_no_friends_subtitle">Ychwanegwch ffrindiau yn yr ap People i ddechrau chwarae.</string>
-    <string name="words_detail_title">Game</string>
+    <string name="words_new_game_player_count">%1$d chwaraewr</string>
+    <string name="words_new_game_no_friends_subtitle">Ychwanegwch ffrindiau yn yr ap Pobl i ddechrau chwarae.</string>
+    <string name="words_detail_title">Gêm</string>
     <string name="words_detail_status_opponent_move">Symudiad %1$s</string>
-    <string name="words_detail_status_winner_wins">%1$s wins</string>
-    <string name="words_detail_player_fallback">Player %1$d</string>
-    <string name="words_detail_player_count">%1$d players</string>
-    <string name="words_detail_label_tiles_left">%1$d tiles left</string>
-    <string name="words_detail_action_open_chat">Open chat</string>
-    <string name="words_detail_action_more">Game actions</string>
-    <string name="words_detail_exchange_count">Exchange (%1$d)</string>
-    <string name="words_detail_chat_you_played">You played %1$s</string>
+    <string name="words_detail_status_winner_wins">Mae %1$s yn ennill</string>
+    <string name="words_detail_player_fallback">Chwaraewr %1$d</string>
+    <string name="words_detail_player_count">%1$d chwaraewr</string>
+    <string name="words_detail_label_tiles_left">%1$d teilsen ar ôl</string>
+    <string name="words_detail_action_open_chat">Agor sgwrs</string>
+    <string name="words_detail_action_more">Camau gweithredu\'r gêm</string>
+    <string name="words_detail_exchange_count">Cyfnewid (%1$d)</string>
+    <string name="words_detail_chat_you_played">Chwaraeoch %1$s</string>
     <string name="words_detail_chat_player_played">Chwaraeodd %1$s %2$s</string>
 
     <string name="words_detail_delete_title">Dileu\'r gêm?</string>

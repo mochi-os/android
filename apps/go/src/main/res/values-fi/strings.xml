@@ -8,7 +8,7 @@
     <string name="go_action_pass">Passaa</string>
     <string name="go_action_rematch">Uusinta</string>
     <string name="go_action_resign">Luovuta</string>
-    <string name="go_app_title">Siirry</string>
+    <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Mustan vangit</string>
     <string name="go_captures_white_sr">Valkean vangit</string>
     <string name="go_chat_title">Chat</string>

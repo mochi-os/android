@@ -93,7 +93,7 @@
     <string name="market_checkout_title">結帳</string>
     <string name="market_checkout_total">總計</string>
     <string name="market_checkout_winning_bid">得標出價</string>
-    <string name="market_condition_new">新增</string>
+    <string name="market_condition_new">全新</string>
     <string name="market_condition_refurbished">整修品</string>
     <string name="market_condition_used">二手</string>
     <string name="market_dispute_dialog_cancel">取消</string>
@@ -107,8 +107,8 @@
     <string name="market_editor_asset_external_filename">檔案名稱</string>
     <string name="market_editor_back">返回</string>
     <string name="market_editor_category">類別</string>
-    <string name="market_editor_condition">條件</string>
-    <string name="market_editor_condition_new">新增</string>
+    <string name="market_editor_condition">狀況</string>
+    <string name="market_editor_condition_new">全新</string>
     <string name="market_editor_condition_refurbished">整修品</string>
     <string name="market_editor_condition_used">二手</string>
     <string name="market_editor_currency">貨幣</string>
@@ -149,8 +149,8 @@
     <string name="market_filter_apply">套用</string>
     <string name="market_filter_category">類別</string>
     <string name="market_filter_clear">清除篩選</string>
-    <string name="market_filter_condition">條件</string>
-    <string name="market_filter_condition_new">新增</string>
+    <string name="market_filter_condition">狀況</string>
+    <string name="market_filter_condition_new">全新</string>
     <string name="market_filter_condition_refurbished">整修品</string>
     <string name="market_filter_condition_used">二手</string>
     <string name="market_filter_delivery">運送</string>
@@ -183,13 +183,13 @@
     <string name="market_listing_detail_load_failed">載入刊登失敗</string>
     <string name="market_listing_detail_listed">刊登於 %1$s</string>
     <string name="market_listing_detail_location_heading">位置</string>
-    <string name="market_listing_detail_message">訊息</string>
+    <string name="market_listing_detail_message">傳送訊息</string>
     <string name="market_listing_detail_message_seller">傳訊給賣家</string>
     <string name="market_listing_detail_not_found">找不到刊登</string>
     <string name="market_listing_detail_place_bid">出價</string>
     <string name="market_listing_detail_relist">重新刊登</string>
     <string name="market_listing_detail_report">檢舉刊登</string>
-    <string name="market_listing_detail_save">儲存</string>
+    <string name="market_listing_detail_save">收藏</string>
     <string name="market_listing_detail_seller_heading">賣家</string>
     <string name="market_listing_detail_shipping_heading">運送</string>
     <string name="market_listing_detail_subscribe">訂閱</string>
@@ -305,7 +305,7 @@
     <string name="market_sale_carrier_other">其他</string>
     <string name="market_sale_completed_label">已完成</string>
     <string name="market_sale_dispute_respond">回覆</string>
-    <string name="market_sale_dispute_state_open">開啟</string>
+    <string name="market_sale_dispute_state_open">開放</string>
     <string name="market_sale_dispute_state_resolved">已解決</string>
     <string name="market_sale_load_failed">載入訂單失敗</string>
     <string name="market_sale_message_buyer">傳訊給買家</string>
@@ -324,7 +324,7 @@
     <string name="market_sale_shipped_label">已出貨</string>
     <string name="market_sale_title">銷售</string>
     <string name="market_sale_tracking_label">追蹤編號</string>
-    <string name="market_saved_title">已儲存</string>
+    <string name="market_saved_title">已儲存項目</string>
     <string name="market_search_clear">清除搜尋</string>
     <string name="market_section_categories">瀏覽類別</string>
     <string name="market_section_listings">最新刊登</string>
@@ -348,7 +348,7 @@
     <string name="market_sidebar_purchases">購買項目</string>
     <string name="market_sidebar_reviews">評論</string>
     <string name="market_sidebar_sales">銷售</string>
-    <string name="market_sidebar_saved">已儲存</string>
+    <string name="market_sidebar_saved">已儲存項目</string>
     <string name="market_sidebar_selling">販售中</string>
     <string name="market_sidebar_settings">設定</string>
     <string name="market_sidebar_subscribers">訂閱者</string>

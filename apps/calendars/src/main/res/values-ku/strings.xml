@@ -10,7 +10,7 @@
     <string name="calendars_delete">Jê bibe</string>
     <string name="calendars_previous">Pêştir</string>
     <string name="calendars_next">Pêş</string>
-    <string name="calendars_view">Bibîne</string>
+    <string name="calendars_view">Dîmen</string>
     <string name="calendars_view_list">Lîste</string>
     <string name="calendars_list_search">Lêger</string>
     <string name="calendars_event_untitled">Bê sernav</string>
@@ -169,7 +169,7 @@
     <string name="calendars_subscribe_server_url">Navnîşana pêşkêşkerê</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Salnameya Google</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Hesabên Google li ser vê serverê nehatine çalakkirin. Wan di Mîheng, Mîhengên pergalê de çalak bike.</string>
     <string name="calendars_subscribe_google_connect">Te tu hesabê Google girênedaye.</string>

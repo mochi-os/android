@@ -76,12 +76,12 @@
     <string name="people_open_sidebar">নেভিগেশন খুলুন</string>
     <string name="people_person_state_friend">বন্ধুরা</string>
     <string name="people_person_state_self">আপনি</string>
-    <string name="people_person_message">বার্তা</string>
+    <string name="people_person_message">বার্তা পাঠান</string>
     <string name="people_person_accept">গ্রহণ করুন</string>
     <string name="people_person_decline">প্রত্যাখ্যান করুন</string>
 
 
-    <string name="notification_channel_people">মানুষ সম্পর্কিত বিজ্ঞপ্তি</string>
+    <string name="notification_channel_people">ব্যক্তিরা অ্যাপের বিজ্ঞপ্তি</string>
     <string name="people_friends_searching">অনুসন্ধান করা হচ্ছে…</string>
     <string name="people_invitations_toast_accepted">%1$s এর কাছ থেকে আমন্ত্রণ গ্রহণ করা হয়েছে</string>
     <string name="people_invitations_toast_declined">%1$s এর কাছ থেকে আমন্ত্রণ প্রত্যাখ্যান করা হয়েছে</string>
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">একটি বৈধ হেক্স রং লিখুন (যেমন #a78bfa)</string>
     <string name="people_profile_accent_none">কোনোটি নয়</string>
     <string name="people_profile_privacy_private_desc">শুধুমাত্র পারস্পরিক বন্ধুরা আপনার প্রোফাইল দেখতে পারবে</string>
-    <string name="people_welcome_title">People-এ স্বাগতম</string>
+    <string name="people_welcome_title">“ব্যক্তিরা”-য় স্বাগতম</string>
     <string name="people_person_banner_alt">%1$s এর ব্যানার</string>
     <string name="people_person_private">এই প্রোফাইলটি ব্যক্তিগত</string>
     <string name="people_person_state_invited">আমন্ত্রিত</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">সব গ্রহণ করুন</string>
     <string name="people_invitations_decline_all">সব প্রত্যাখ্যান করুন</string>
     <string name="people_invitations_cancel_all">সব বাতিল করুন</string>
+    <string name="people_invitations_cancel">বাতিল করুন</string>
     <string name="people_invitations_all_accepted">সব আমন্ত্রণ গৃহীত হয়েছে</string>
     <string name="people_invitations_all_declined">সব আমন্ত্রণ প্রত্যাখ্যান করা হয়েছে</string>
     <string name="people_invitations_all_cancelled">সব আমন্ত্রণ বাতিল করা হয়েছে</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">অনুসন্ধান করুন…</string>
     <string name="people_contacts_invited">আমন্ত্রিত</string>
     <string name="people_contacts_accept">গ্রহণ করুন</string>
-    <string name="people_contacts_message">বার্তা</string>
+    <string name="people_contacts_message">বার্তা পাঠান</string>
     <string name="people_contacts_no_people_found">কোনো ব্যক্তি পাওয়া যায়নি</string>
     <string name="people_contacts_try_adjusting">আপনার অনুসন্ধান সমন্বয় করার চেষ্টা করুন</string>
     <string name="people_contact_section_address">ঠিকানা</string>

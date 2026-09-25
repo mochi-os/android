@@ -3,7 +3,7 @@
 
     <string name="forums_auth_display_name">प्रदर्शन नाम</string>
     <string name="forums_auth_verification_failed">वेरिफ़िकेशन विफल</string>
-    <string name="forums_list_title">फ़ोरम</string>
+    <string name="forums_list_title">फ़ोरम्स</string>
     <string name="forums_list_find">फ़ोरम खोजें</string>
     <string name="forums_list_logout">लॉग आउट</string>
     <string name="forums_list_unsubscribe">अनसब्सक्राइब करें</string>
@@ -24,13 +24,13 @@
     <string name="forums_settings">सेटिंग्स</string>
     <string name="forums_load_more">और लोड करें</string>
     <string name="forums_sort_label">सॉर्ट करें</string>
-    <string name="forums_sort_new">नया</string>
+    <string name="forums_sort_new">नवीनतम</string>
     <string name="forums_sort_hot">हॉट</string>
     <string name="forums_sort_top">टॉप</string>
     <string name="forums_sort_interests">रुचियाँ</string>
     <string name="forums_post_title_field">टाइटल</string>
     <string name="forums_post_attach">फ़ाइलें अटैच करें</string>
-    <string name="forums_post_create_action">पोस्ट</string>
+    <string name="forums_post_create_action">पोस्ट करें</string>
     <string name="forums_post_edit">पोस्ट संपादित करें</string>
     <string name="forums_post_edit_title">पोस्ट संपादित करें</string>
     <string name="forums_post_edit_title_field">टाइटल</string>
@@ -48,26 +48,26 @@
     <string name="forums_post_approve">स्वीकृत करें</string>
     <string name="forums_post_remove">हटाएँ</string>
     <string name="forums_post_restore">पुनर्स्थापित करें</string>
-    <string name="forums_post_report">रिपोर्ट</string>
+    <string name="forums_post_report">रिपोर्ट करें</string>
     <string name="forums_comment_approve">स्वीकृत करें</string>
     <string name="forums_comment_remove">हटाएँ</string>
     <string name="forums_comment_restore">पुनर्स्थापित करें</string>
-    <string name="forums_comment_report">रिपोर्ट</string>
+    <string name="forums_comment_report">रिपोर्ट करें</string>
     <string name="forums_post_tag_label">टैग</string>
     <string name="forums_tab_general">सामान्य</string>
     <string name="forums_tab_access">एक्सेस</string>
     <string name="forums_tab_members">सदस्य</string>
     <string name="forums_tab_banner">बैनर</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">टार्गेट</string>
+    <string name="forums_access_target">यूज़र या ग्रुप</string>
     <string name="forums_access_level_view">देखें</string>
     <string name="forums_access_level_vote">वोट दें</string>
-    <string name="forums_access_level_comment">टिप्पणी</string>
-    <string name="forums_access_level_post">पोस्ट</string>
+    <string name="forums_access_level_comment">टिप्पणी करें</string>
+    <string name="forums_access_level_post">पोस्ट करें</string>
     <string name="forums_access_level_none">कोई नहीं</string>
     <string name="forums_members_empty">कोई सदस्य नहीं</string>
     <string name="forums_banner_dismiss">बैनर खारिज करें</string>
-    <string name="forums_ai_mode_tag">टैग</string>
+    <string name="forums_ai_mode_tag">टैग करें</string>
     <string name="forums_ai_account_default">डिफ़ॉल्ट अकाउंट</string>
     <string name="forums_ai_prompt_reset">डिफ़ॉल्ट पर रीसेट करें</string>
     <string name="forums_settings_unsubscribe">अनसब्सक्राइब करें</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_login_failed">लॉगिन विफल</string>
 
     <string name="notification_channel_forums">फ़ोरम सूचनाएँ</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi फ़ोरम्स</string>
     <string name="forums_auth_create_identity_failed">पहचान बनाने में विफल</string>
     <string name="forums_auth_mfa_unsupported">मोबाइल ऐप में MFA अभी समर्थित नहीं है</string>
     <string name="forums_auth_enter_code_sent">%1$s पर भेजा गया कोड दर्ज करें</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">मैन्युअल</string>
     <string name="forums_access_search_users">यूज़र खोजें</string>
     <string name="forums_access_no_groups">कोई ग्रुप उपलब्ध नहीं</string>
-    <string name="forums_saved_title">सेव किया गया</string>
+    <string name="forums_saved_title">सेव किए गए</string>
     <string name="forums_saved_save">बाद के लिए सहेजें</string>
     <string name="forums_saved_remove">सहेजे गए से हटाएँ</string>
     <string name="forums_saved_clear_all">सब साफ़ करें</string>

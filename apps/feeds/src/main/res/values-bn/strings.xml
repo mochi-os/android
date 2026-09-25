@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">এখনও কোনো পোস্ট নেই</string>
     <string name="feeds_sort_label">সাজান</string>
     <string name="feeds_sort_interests">আগ্রহসমূহ</string>
-    <string name="feeds_sort_new">নতুন</string>
+    <string name="feeds_sort_new">নতুনতম</string>
     <string name="feeds_sort_hot">জনপ্রিয়</string>
-    <string name="feeds_sort_top">উপরে</string>
+    <string name="feeds_sort_top">সেরা</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">পোস্ট</string>
     <string name="feeds_image_preview">প্রিভিউ</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">উত্তর বাতিল করুন</string>
     <string name="feeds_edit_post">পোস্ট সম্পাদনা করুন</string>
     <string name="feeds_save_label">সংরক্ষণ করুন</string>
-    <string name="feeds_post_action">পোস্ট</string>
+    <string name="feeds_post_action">পোস্ট করুন</string>
     <string name="feeds_feed_label">ফিড</string>
     <string name="feeds_add_files">ফাইল যোগ করুন</string>
     <string name="feeds_restore">পুনরুদ্ধার করুন</string>

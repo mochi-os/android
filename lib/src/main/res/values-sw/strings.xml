@@ -38,7 +38,7 @@
     <string name="access_add_rule">Ongeza sheria</string>
     <string name="access_owner">Mmiliki</string>
     <string name="access_revoke">Batilisha</string>
-    <string name="access_level_comment">Maoni</string>
+    <string name="access_level_comment">Toa maoni</string>
     <string name="access_level_view">Tazama</string>
     <string name="access_level_none">Hakuna</string>
     <string name="reaction_like">Pendezwa</string>
@@ -96,7 +96,7 @@
     <string name="settings_number_format">Muundo wa nambari</string>
     <string name="settings_units">Vipimo</string>
     <string name="settings_units_metric">Metriki</string>
-    <string name="settings_units_imperial">Imperial</string>
+    <string name="settings_units_imperial">Kiimperia</string>
     <string name="settings_time_zone">Saa za eneo</string>
     <string name="settings_reset_to_defaults">Weka upya kwa chaguo-msingi</string>
     <string name="settings_reset_confirm_title">Weka upya mapendeleo?</string>
@@ -204,7 +204,7 @@
     <string name="oem_hint_allow">Ruhusu nyuma</string>
     <string name="oem_hint_dismiss">Usionyeshe tena</string>
     <string name="about_label">Kuhusu</string>
-    <string name="about_title">Mochi Client</string>
+    <string name="about_title">Mteja wa Mochi</string>
     <string name="about_version">Toleo %1$s</string>
     <string name="about_check_updates">Angalia masasisho</string>
     <string name="about_up_to_date">Imesasishwa</string>

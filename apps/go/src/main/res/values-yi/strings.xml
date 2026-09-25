@@ -8,7 +8,7 @@
     <string name="go_action_pass">פּאַס</string>
     <string name="go_action_rematch">ווידערמאַטש</string>
     <string name="go_action_resign">רעזיגנירן</string>
-    <string name="go_app_title">גיין</string>
+    <string name="go_app_title">גאָו</string>
     <string name="go_captures_black_sr">שווארצע פאַנגענישן</string>
     <string name="go_captures_white_sr">ווײַסע פאַנגענישן</string>
     <string name="go_chat_title">שמועס</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">עפֿן זייַטל</string>
     <string name="go_sidebar_active">אַקטיווע שפּילן</string>
     <string name="go_empty_active">נאָך קיין אַקטיווע שפּילן.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">רעזיגנירט</string>
     <string name="go_new_game_title">נײַע Go־שפּיל</string>
     <string name="go_new_game_no_friends">איר דאַרפֿט צולייגן אַ פֿרײַנד איידער איר קענט אָנהייבן אַ שפּיל.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

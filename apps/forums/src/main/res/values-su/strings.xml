@@ -24,13 +24,13 @@
     <string name="forums_settings">Setélan</string>
     <string name="forums_load_more">Muat leuwih loba</string>
     <string name="forums_sort_label">Sortir</string>
-    <string name="forums_sort_new">Anyar</string>
+    <string name="forums_sort_new">Panganyarna</string>
     <string name="forums_sort_hot">Panas</string>
-    <string name="forums_sort_top">Luhur</string>
+    <string name="forums_sort_top">Pangalusna</string>
     <string name="forums_sort_interests">Minat</string>
     <string name="forums_post_title_field">Judul</string>
     <string name="forums_post_attach">Lampirkeun file</string>
-    <string name="forums_post_create_action">Pos</string>
+    <string name="forums_post_create_action">Kirim</string>
     <string name="forums_post_edit">Édit pos</string>
     <string name="forums_post_edit_title">Édit pos</string>
     <string name="forums_post_edit_title_field">Judul</string>
@@ -41,7 +41,7 @@
     <string name="forums_post_pinned">Dipin</string>
     <string name="forums_post_removed">Dicabut</string>
     <string name="forums_post_pending">Antri</string>
-    <string name="forums_post_pin">Pin</string>
+    <string name="forums_post_pin">Semat</string>
     <string name="forums_post_unpin">Cabut pin</string>
     <string name="forums_post_lock">Konci</string>
     <string name="forums_post_unlock">Buka konci</string>
@@ -59,11 +59,11 @@
     <string name="forums_tab_members">Anggota</string>
     <string name="forums_tab_banner">Spanduk</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Target</string>
+    <string name="forums_access_target">Pamaké atawa grup</string>
     <string name="forums_access_level_view">Tingali</string>
     <string name="forums_access_level_vote">Milih</string>
-    <string name="forums_access_level_comment">Koméntar</string>
-    <string name="forums_access_level_post">Pos</string>
+    <string name="forums_access_level_comment">Koméntaran</string>
+    <string name="forums_access_level_post">Kirim</string>
     <string name="forums_access_level_none">Euweuh</string>
     <string name="forums_members_empty">Teu aya anggota</string>
     <string name="forums_banner_dismiss">Pasini banner</string>
@@ -80,7 +80,7 @@
     <string name="forums_moderation_reports_resolved">Direngsékeun</string>
     <string name="forums_moderation_reports_all">Sadaya</string>
     <string name="forums_moderation_reports_empty">Teu aya laporan</string>
-    <string name="forums_moderation_report_dismiss">Pasini</string>
+    <string name="forums_moderation_report_dismiss">Tolak</string>
     <string name="forums_moderation_restrictions_empty">Teu aya larangan</string>
     <string name="forums_moderation_restriction_remove">Pupus</string>
     <string name="forums_moderation_restriction_type">Tipe</string>
@@ -125,12 +125,12 @@
     <string name="forums_post_body_field">Eusi</string>
     <string name="forums_post_edit_body_field">Eusi</string>
     <string name="forums_comment_edit_body_field">Eusi</string>
-    <string name="forums_post_tag_add">Add tag</string>
+    <string name="forums_post_tag_add">Tambah tag</string>
     <string name="forums_write_comment">Tulis koméntar…</string>
     <string name="forums_auth_login_failed">Login gagal</string>
 
     <string name="notification_channel_forums">Béwara forum</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Forum</string>
     <string name="forums_auth_create_identity_failed">Gagal nyieun idéntitas</string>
     <string name="forums_auth_mfa_unsupported">MFA can acan didukung dina aplikasi mobile</string>
     <string name="forums_auth_enter_code_sent">Asupkeun kode anu dikirim ka %1$s</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">Manual</string>
     <string name="forums_access_search_users">Paluruh pamaké</string>
     <string name="forums_access_no_groups">Teu aya grup</string>
-    <string name="forums_saved_title">Disimpen</string>
+    <string name="forums_saved_title">Nu disimpen</string>
     <string name="forums_saved_save">Simpen kanggo engké</string>
     <string name="forums_saved_remove">Piceun tina nu disimpen</string>
     <string name="forums_saved_clear_all">Bersihkeun sadaya</string>

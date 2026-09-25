@@ -70,7 +70,7 @@
     <string name="market_checkout_back">Indietro</string>
     <string name="market_checkout_buy_it_now">Compralo subito</string>
     <string name="market_checkout_create_failed">Impossibile creare l\'ordine</string>
-    <string name="market_checkout_delivery_download">Scarica</string>
+    <string name="market_checkout_delivery_download">Download</string>
     <string name="market_checkout_delivery_method">Metodo di consegna</string>
     <string name="market_checkout_delivery_pickup">Ritiro</string>
     <string name="market_checkout_delivery_shipping">Spedizione</string>
@@ -90,7 +90,7 @@
     <string name="market_checkout_subscribe_title">Iscriviti</string>
     <string name="market_checkout_subscription_start_failed">Impossibile avviare l’abbonamento</string>
     <string name="market_checkout_summary">Riepilogo dell\'ordine</string>
-    <string name="market_checkout_title">Checkout</string>
+    <string name="market_checkout_title">Pagamento</string>
     <string name="market_checkout_total">Totale</string>
     <string name="market_checkout_winning_bid">Offerta vincente</string>
     <string name="market_condition_new">Nuovo</string>
@@ -154,7 +154,7 @@
     <string name="market_filter_condition_refurbished">Ricondizionato</string>
     <string name="market_filter_condition_used">Usato</string>
     <string name="market_filter_delivery">Consegna</string>
-    <string name="market_filter_delivery_download">Scarica</string>
+    <string name="market_filter_delivery_download">Download</string>
     <string name="market_filter_delivery_pickup">Ritiro</string>
     <string name="market_filter_delivery_shipping">Spedizione</string>
     <string name="market_filter_price_max">Max</string>
@@ -183,7 +183,7 @@
     <string name="market_listing_detail_load_failed">Impossibile caricare l\'annuncio</string>
     <string name="market_listing_detail_listed">Pubblicato il %1$s</string>
     <string name="market_listing_detail_location_heading">Posizione</string>
-    <string name="market_listing_detail_message">Messaggio</string>
+    <string name="market_listing_detail_message">Invia messaggio</string>
     <string name="market_listing_detail_message_seller">Invia messaggio al venditore</string>
     <string name="market_listing_detail_not_found">Annuncio non trovato</string>
     <string name="market_listing_detail_place_bid">Offri</string>
@@ -305,7 +305,7 @@
     <string name="market_sale_carrier_other">Altro</string>
     <string name="market_sale_completed_label">Completato</string>
     <string name="market_sale_dispute_respond">Rispondi</string>
-    <string name="market_sale_dispute_state_open">Apri</string>
+    <string name="market_sale_dispute_state_open">Aperto</string>
     <string name="market_sale_dispute_state_resolved">Risolto</string>
     <string name="market_sale_load_failed">Impossibile caricare l\'ordine</string>
     <string name="market_sale_message_buyer">Invia messaggio all\'acquirente</string>
@@ -324,7 +324,7 @@
     <string name="market_sale_shipped_label">Spedito</string>
     <string name="market_sale_title">Vendita</string>
     <string name="market_sale_tracking_label">Numero di tracciamento</string>
-    <string name="market_saved_title">Salvato</string>
+    <string name="market_saved_title">Salvati</string>
     <string name="market_search_clear">Cancella ricerca</string>
     <string name="market_section_categories">Sfoglia le categorie</string>
     <string name="market_section_listings">Annunci recenti</string>
@@ -348,7 +348,7 @@
     <string name="market_sidebar_purchases">Acquisti</string>
     <string name="market_sidebar_reviews">Recensioni</string>
     <string name="market_sidebar_sales">Vendite</string>
-    <string name="market_sidebar_saved">Salvato</string>
+    <string name="market_sidebar_saved">Salvati</string>
     <string name="market_sidebar_selling">In vendita</string>
     <string name="market_sidebar_settings">Impostazioni</string>
     <string name="market_sidebar_subscribers">Iscritti</string>

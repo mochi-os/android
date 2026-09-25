@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="feeds_title">Hírcsatornák</string>
+    <string name="feeds_title">Hírfolyamok</string>
     <string name="feeds_find_feeds">Hírcsatornák keresése</string>
     <string name="feeds_create_feed">Feed létrehozása</string>
     <string name="feeds_new_post">Új bejegyzés</string>
@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Még nincsenek bejegyzések</string>
     <string name="feeds_sort_label">Rendezés</string>
     <string name="feeds_sort_interests">Érdeklődések</string>
-    <string name="feeds_sort_new">Új</string>
+    <string name="feeds_sort_new">Legújabb</string>
     <string name="feeds_sort_hot">Forró</string>
-    <string name="feeds_sort_top">Eleje</string>
+    <string name="feeds_sort_top">Legjobbak</string>
     <string name="feeds_sort_ai">MI</string>
     <string name="feeds_post_default_author">Bejegyzés</string>
     <string name="feeds_image_preview">Előnézet</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Válasz elvetése</string>
     <string name="feeds_edit_post">Bejegyzés szerkesztése</string>
     <string name="feeds_save_label">Mentés</string>
-    <string name="feeds_post_action">Bejegyzés</string>
+    <string name="feeds_post_action">Közzététel</string>
     <string name="feeds_feed_label">Hírcsatorna</string>
     <string name="feeds_add_files">Fájlok hozzáadása</string>
     <string name="feeds_restore">Visszaállítás</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Kijelentkezés</string>
     <string name="feeds_ai_account_default">Alapértelmezett fiók</string>
     <string name="feeds_ai_mode_off">Letiltva</string>
-    <string name="feeds_ai_mode_tag">Címke</string>
+    <string name="feeds_ai_mode_tag">Címkézés</string>
     <string name="feeds_ai_mode_tag_deduplicate">Címkézés + duplikátumok eltávolítása</string>
     <string name="feeds_feed_not_found">Hírcsatorna nem található</string>
     <string name="feeds_post_not_found">A bejegyzés nem található</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Érdeklődés csökkentve</string>
     <string name="feeds_interest_removed">Érdeklődés eltávolítva</string>
     <string name="feeds_interest_failed">Nem sikerült módosítani az érdeklődést</string>
-    <string name="feeds_saved_title">Mentve</string>
-    <string name="feeds_saved_menu">Mentve</string>
+    <string name="feeds_saved_title">Mentett elemek</string>
+    <string name="feeds_saved_menu">Mentett elemek</string>
     <string name="feeds_saved_save">Mentés későbbre</string>
     <string name="feeds_saved_remove">Eltávolítás a mentettek közül</string>
     <string name="feeds_saved_clear_all">Összes törlése</string>

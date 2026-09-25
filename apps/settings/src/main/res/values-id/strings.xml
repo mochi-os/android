@@ -43,7 +43,7 @@
     <string name="route_save">Simpan</string>
     <string name="route_delete">Hapus rute</string>
     <string name="route_delete_title">Hapus rute?</string>
-    <string name="route_path">Path</string>
+    <string name="route_path">Jalur</string>
     <string name="route_method">Metode</string>
     <string name="route_method_app">Aplikasi</string>
     <string name="route_method_entity">Entitas</string>
@@ -132,7 +132,7 @@
     <string name="system_settings_configured">Terkonfigurasi</string>
     <string name="system_settings_save">Simpan</string>
     <string name="system_settings_clear">Bersihkan</string>
-    <string name="system_settings_reset">Reset</string>
+    <string name="system_settings_reset">Setel ulang</string>
     <string name="system_settings_reset_to_default">Reset ke default</string>
     <string name="system_settings_reset_title">Reset ke default?</string>
     <string name="system_setting_apps_install_user">Izinkan pengguna memasang aplikasi</string>
@@ -278,7 +278,7 @@
     <string name="account_identity_identity">Identitas</string>
     <string name="account_identity_username">Nama pengguna</string>
     <string name="account_identity_name">Nama</string>
-    <string name="account_identity_fingerprint">Fingerprint</string>
+    <string name="account_identity_fingerprint">Sidik jari</string>
     <string name="account_identity_directory_toggle">Izinkan orang lain menemukan Anda di direktori</string>
     <string name="domain_add">Tambah domain</string>
     <string name="domain_add_title">Tambah domain</string>
@@ -287,7 +287,7 @@
     <string name="domain_delegation_delete">Hapus delegasi</string>
     <string name="domain_delegation_delete_message">%1$s tidak akan lagi mengelola rute pada domain ini.</string>
     <string name="domain_delegation_delete_title">Hapus delegasi?</string>
-    <string name="domain_delegation_path">Path</string>
+    <string name="domain_delegation_path">Jalur</string>
     <string name="domain_delegation_user">ID pengguna</string>
     <string name="domain_delegations">Delegasi</string>
     <string name="domain_delegations_empty">Tidak ada delegasi yang dikonfigurasi.</string>

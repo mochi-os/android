@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">開啟側邊欄</string>
     <string name="go_sidebar_active">進行中的棋局</string>
     <string name="go_empty_active">暫無進行中的棋局。</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">已認輸</string>
     <string name="go_new_game_title">新圍棋棋局</string>
     <string name="go_new_game_no_friends">您需要先新增朋友,然後才能開始棋局。</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

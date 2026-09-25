@@ -107,7 +107,7 @@
     <string name="market_editor_asset_external_filename">Tên tệp</string>
     <string name="market_editor_back">Quay lại</string>
     <string name="market_editor_category">Danh mục</string>
-    <string name="market_editor_condition">Điều kiện</string>
+    <string name="market_editor_condition">Tình trạng</string>
     <string name="market_editor_condition_new">Mới</string>
     <string name="market_editor_condition_refurbished">Tân trang</string>
     <string name="market_editor_condition_used">Đã qua sử dụng</string>
@@ -149,7 +149,7 @@
     <string name="market_filter_apply">Áp dụng</string>
     <string name="market_filter_category">Danh mục</string>
     <string name="market_filter_clear">Xóa bộ lọc</string>
-    <string name="market_filter_condition">Điều kiện</string>
+    <string name="market_filter_condition">Tình trạng</string>
     <string name="market_filter_condition_new">Mới</string>
     <string name="market_filter_condition_refurbished">Tân trang</string>
     <string name="market_filter_condition_used">Đã qua sử dụng</string>
@@ -183,7 +183,7 @@
     <string name="market_listing_detail_load_failed">Không tải tin đăng được</string>
     <string name="market_listing_detail_listed">Đăng ngày %1$s</string>
     <string name="market_listing_detail_location_heading">Vị trí</string>
-    <string name="market_listing_detail_message">Tin nhắn</string>
+    <string name="market_listing_detail_message">Nhắn tin</string>
     <string name="market_listing_detail_message_seller">Nhắn tin cho người bán</string>
     <string name="market_listing_detail_not_found">Không tìm thấy tin đăng</string>
     <string name="market_listing_detail_place_bid">Đặt giá</string>
@@ -305,7 +305,7 @@
     <string name="market_sale_carrier_other">Khác</string>
     <string name="market_sale_completed_label">Hoàn tất</string>
     <string name="market_sale_dispute_respond">Phản hồi</string>
-    <string name="market_sale_dispute_state_open">Mở</string>
+    <string name="market_sale_dispute_state_open">Đang mở</string>
     <string name="market_sale_dispute_state_resolved">Đã giải quyết</string>
     <string name="market_sale_load_failed">Không tải đơn hàng được</string>
     <string name="market_sale_message_buyer">Nhắn tin cho người mua</string>

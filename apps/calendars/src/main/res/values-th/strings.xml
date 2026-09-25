@@ -10,7 +10,7 @@
     <string name="calendars_delete">ลบ</string>
     <string name="calendars_previous">ก่อนหน้า</string>
     <string name="calendars_next">ถัดไป</string>
-    <string name="calendars_view">ดู</string>
+    <string name="calendars_view">มุมมอง</string>
     <string name="calendars_view_list">รายการ</string>
     <string name="calendars_list_search">ค้นหา</string>
     <string name="calendars_event_untitled">ไม่มีชื่อ</string>
@@ -166,7 +166,7 @@
     <string name="calendars_subscribe_server_url">ที่อยู่เซิร์ฟเวอร์</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google ปฏิทิน</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">ยังไม่ได้เปิดใช้งานบัญชี Google บนเซิร์ฟเวอร์นี้ เปิดใช้งานได้ที่ การตั้งค่า, การตั้งค่าระบบ</string>
     <string name="calendars_subscribe_google_connect">คุณยังไม่ได้เชื่อมต่อบัญชี Google</string>

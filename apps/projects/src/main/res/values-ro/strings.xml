@@ -85,7 +85,7 @@
     <string name="projects_request_merge_dialog_title">Îmbină</string>
     <string name="projects_request_method">Metodă</string>
     <string name="projects_request_method_merge">Îmbină</string>
-    <string name="projects_request_field_repository">Repository</string>
+    <string name="projects_request_field_repository">Depozit</string>
     <string name="projects_request_field_source">Ramura sursă</string>
     <string name="projects_request_field_title">Titlu</string>
     <string name="projects_request_field_description">Descriere</string>
@@ -158,7 +158,7 @@
     <string name="projects_more">Mai mult</string>
     <string name="projects_request_more">Mai mult</string>
     <string name="projects_comment_send">Trimite</string>
-    <string name="projects_field_position_body">Conținut</string>
+    <string name="projects_field_position_body">Corp</string>
     <string name="projects_sort_field">Sortează după</string>
     <string name="projects_comment_remove_attachment">Elimină atașamentul</string>
     <string name="projects_views_sort_by">Sortează după</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Caută obiecte</string>
 
     <string name="notification_channel_projects">Notificări proiecte</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Proiecte</string>
     <string name="projects_auth_create_identity_failed">Crearea identității a eșuat</string>
     <string name="projects_auth_mfa_unsupported">MFA nu este încă acceptat în aplicația mobilă</string>
     <string name="projects_auth_enter_code_sent">Introduceți codul trimis la %1$s</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Selectează o regulă</string>
     <string name="projects_access_authenticated_desc">Oricine este autentificat</string>
     <string name="projects_access_anyone_desc">Inclusiv utilizatorii anonimi</string>
-    <string name="projects_access_target">Țintă</string>
+    <string name="projects_access_target">Utilizator sau grup</string>
     <string name="projects_access_target_hint">ID entitate, @grup, * (toți) sau + (membri)</string>
     <string name="projects_access_selected">Selectat: %1$s</string>
     <string name="projects_access_role_comment">Comentează și vezi</string>

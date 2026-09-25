@@ -78,7 +78,7 @@
     <string name="crm_design_or_upload_json">Або завантажте файл</string>
     <string name="crm_design_upload_json">Завантажити файл .json</string>
     <string name="crm_design_tab_classes">Класи</string>
-    <string name="crm_design_tab_views">Перегляди</string>
+    <string name="crm_design_tab_views">Подання</string>
     <string name="crm_design_import_dialog_title">Імпортувати дизайн</string>
     <string name="crm_design_import_choose_template">Виберіть шаблон</string>
     <string name="crm_design_replace_title">Замінити дизайн?</string>
@@ -126,7 +126,7 @@
     <string name="crm_not_found">Проєкт не знайдено</string>
     <string name="crm_more">Більше</string>
     <string name="crm_comment_send">Надіслати</string>
-    <string name="crm_field_position_body">Текст</string>
+    <string name="crm_field_position_body">Основна частина</string>
     <string name="crm_sort_field">Сортувати за</string>
     <string name="crm_comment_remove_attachment">Видалити вкладення</string>
     <string name="crm_views_sort_by">Сортувати за</string>

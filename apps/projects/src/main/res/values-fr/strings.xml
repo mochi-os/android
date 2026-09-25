@@ -27,9 +27,9 @@
     <string name="projects_settings">Paramètres</string>
     <string name="projects_design">Conception</string>
     <string name="projects_sort_label">Trier</string>
-    <string name="projects_sort_direction">Direction</string>
+    <string name="projects_sort_direction">Sens</string>
     <string name="projects_sort_rank">Manuel</string>
-    <string name="projects_sort_number">Nombre</string>
+    <string name="projects_sort_number">Numéro</string>
     <string name="projects_sort_created">Créé</string>
     <string name="projects_sort_updated">Mis à jour</string>
     <string name="projects_create_object_type">Type</string>
@@ -99,7 +99,7 @@
     <string name="projects_board_rename">Renommer</string>
     <string name="projects_board_rename_column">Renommer la colonne</string>
     <string name="projects_move_position">Position</string>
-    <string name="projects_move_position_top">Meilleur</string>
+    <string name="projects_move_position_top">En haut</string>
     <string name="projects_move_current">Actuelle</string>
     <string name="projects_design_title">Conception</string>
     <string name="projects_design_export">Exporter la conception</string>
@@ -126,7 +126,7 @@
     <string name="projects_field_type_number">Nombre</string>
     <string name="projects_field_type_user">Utilisateur</string>
     <string name="projects_field_type_date">Date</string>
-    <string name="projects_field_type_checklist">Checklist</string>
+    <string name="projects_field_type_checklist">Liste de contrôle</string>
     <string name="projects_field_name">Nom</string>
     <string name="projects_field_type">Type</string>
     <string name="projects_field_flags">Indicateurs</string>
@@ -148,8 +148,8 @@
     <string name="projects_views_type">Type</string>
     <string name="projects_views_type_board">Tableau</string>
     <string name="projects_views_type_list">Liste</string>
-    <string name="projects_views_direction">Direction</string>
-    <string name="projects_views_sort_number">Nombre</string>
+    <string name="projects_views_direction">Sens</string>
+    <string name="projects_views_sort_number">Numéro</string>
     <string name="projects_views_sort_created">Créé</string>
     <string name="projects_views_sort_updated">Mis à jour</string>
     <string name="projects_views_sort_rank">Classement</string>
@@ -158,7 +158,7 @@
     <string name="projects_more">Plus</string>
     <string name="projects_request_more">Plus</string>
     <string name="projects_comment_send">Envoyer</string>
-    <string name="projects_field_position_body">Contenu</string>
+    <string name="projects_field_position_body">Corps</string>
     <string name="projects_auth_login_failed">Échec de la connexion</string>
     <string name="projects_auth_create_identity_failed">Échec de la création de l\'identité</string>
     <string name="projects_auth_mfa_unsupported">L\'authentification multifacteur n\'est pas encore prise en charge dans l\'application mobile</string>
@@ -182,7 +182,7 @@
     <string name="projects_links_search_placeholder">Rechercher des objets</string>
 
     <string name="notification_channel_projects">Notifications des projets</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Projets</string>
     <string name="projects_list_search_placeholder">Rechercher des projets</string>
     <string name="projects_list_no_matching">Aucun projet correspondant</string>
     <string name="projects_list_empty">Aucun projet pour le moment</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Sélectionnez une règle</string>
     <string name="projects_access_authenticated_desc">Toute personne connectée</string>
     <string name="projects_access_anyone_desc">Y compris les utilisateurs anonymes</string>
-    <string name="projects_access_target">Cible</string>
+    <string name="projects_access_target">Utilisateur ou groupe</string>
     <string name="projects_access_target_hint">ID d\'entité, @groupe, * (tout le monde) ou + (membres)</string>
     <string name="projects_access_selected">Sélectionné : %1$s</string>
     <string name="projects_access_role_comment">Commenter et voir</string>

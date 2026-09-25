@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Рынак</string>
+    <string name="app_name">Кірмаш</string>
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_label">Біяграфія</string>
     <string name="market_account_biography_placeholder">Раскажыце пакупнікам пра сябе…</string>
@@ -74,7 +74,7 @@
     <string name="market_bids_your_bid">Ваша стаўка: %1$s</string>
     <string name="market_carousel_main">Фота %1$d з %2$d</string>
     <string name="market_carousel_thumbnail">Мініяцюра %1$d</string>
-    <string name="market_channel_name">Рынак</string>
+    <string name="market_channel_name">Кірмаш</string>
     <string name="market_chargeback_reason_bank_cannot_process">Банк не змог апрацаваць</string>
     <string name="market_chargeback_reason_check_returned">Чэк вернуты</string>
     <string name="market_chargeback_reason_credit_not_processed">Крэдыт не апрацаваны</string>
@@ -101,7 +101,7 @@
     <string name="market_checkout_browser_unavailable">Няма браўзера для адкрыцця старонкі аплаты</string>
     <string name="market_checkout_buy_it_now">Купіць зараз</string>
     <string name="market_checkout_create_failed">Не ўдалося стварыць заказ</string>
-    <string name="market_checkout_delivery_download">Спампаваць</string>
+    <string name="market_checkout_delivery_download">Спампоўка</string>
     <string name="market_checkout_delivery_method">Спосаб дастаўкі</string>
     <string name="market_checkout_delivery_pickup">Самавываз</string>
     <string name="market_checkout_delivery_shipping">Дастаўка</string>
@@ -133,7 +133,7 @@
     <string name="market_checkout_winning_bid">Пераможная стаўка</string>
     <string name="market_condition_new">Новы</string>
     <string name="market_condition_refurbished">Адноўлены</string>
-    <string name="market_condition_used">Выкарыстана</string>
+    <string name="market_condition_used">Ужываны</string>
     <string name="market_dispute_dialog_attach">Прымацаваць доказы</string>
     <string name="market_dispute_dialog_attach_count">Прымацавана файлаў: %1$d</string>
     <string name="market_dispute_dialog_cancel">Адмена</string>
@@ -164,7 +164,7 @@
     <string name="market_editor_condition">Стан</string>
     <string name="market_editor_condition_new">Новы</string>
     <string name="market_editor_condition_refurbished">Адноўлены</string>
-    <string name="market_editor_condition_used">Выкарыстана</string>
+    <string name="market_editor_condition_used">Ужываны</string>
     <string name="market_editor_currency">Валюта</string>
     <string name="market_editor_days">%1$d дзён</string>
     <string name="market_editor_delete">Выдаліць аб’яву</string>
@@ -263,9 +263,9 @@
     <string name="market_filter_condition">Стан</string>
     <string name="market_filter_condition_new">Новы</string>
     <string name="market_filter_condition_refurbished">Адноўлены</string>
-    <string name="market_filter_condition_used">Выкарыстана</string>
+    <string name="market_filter_condition_used">Ужываны</string>
     <string name="market_filter_delivery">Дастаўка</string>
-    <string name="market_filter_delivery_download">Спампаваць</string>
+    <string name="market_filter_delivery_download">Спампоўка</string>
     <string name="market_filter_delivery_pickup">Самавываз</string>
     <string name="market_filter_delivery_shipping">Дастаўка</string>
     <string name="market_filter_open">Фільтры</string>
@@ -304,7 +304,7 @@
     <string name="market_listing_detail_loading">Загрузка аб’явы</string>
     <string name="market_listing_detail_listed">Размешчана %1$s</string>
     <string name="market_listing_detail_location_heading">Месцазнаходжанне</string>
-    <string name="market_listing_detail_message">Паведамленне</string>
+    <string name="market_listing_detail_message">Напісаць</string>
     <string name="market_listing_detail_message_seller">Напісаць прадаўцу</string>
     <string name="market_listing_detail_not_found">Аб\'ява не знойдзена</string>
     <string name="market_listing_detail_place_bid">Зрабіць стаўку</string>
@@ -368,7 +368,7 @@
     <string name="market_onboarding_activate">Актываваць</string>
     <string name="market_onboarding_activating">Актывацыя…</string>
     <string name="market_onboarding_body">Актывуйце ўліковы запіс, каб пачаць купляць і прадаваць.</string>
-    <string name="market_onboarding_dismiss">Адхіліць</string>
+    <string name="market_onboarding_dismiss">Закрыць</string>
     <string name="market_onboarding_title">Сардэчна запрашаем на Рынак</string>
     <string name="market_open_sidebar">Адкрыць меню</string>
     <string name="market_price_from">ад %1$s</string>
@@ -416,7 +416,7 @@
     <string name="market_purchase_refunded">Сродкі вернуты</string>
     <string name="market_purchase_refunded_partial">Сродкі вернуты (часткова)</string>
     <string name="market_purchase_request_refund">Запатрабаваць вяртанне</string>
-    <string name="market_purchase_review_body">Праглядзець</string>
+    <string name="market_purchase_review_body">Водгук</string>
     <string name="market_purchase_review_failed">Не ўдалося адправіць водгук</string>
     <string name="market_purchase_review_from">Водгук ад %1$s</string>
     <string name="market_purchase_review_hidden">Схавана, пакуль прадавец не пакіне водгук пра вас, або праз 14 дзён.</string>
@@ -505,7 +505,7 @@
     <string name="market_sale_completed_label">Завершана</string>
     <string name="market_sale_dispute_evidence_due">Тэрмін падачы доказаў %1$s</string>
     <string name="market_sale_dispute_respond">Адказаць</string>
-    <string name="market_sale_dispute_state_open">Адкрыць</string>
+    <string name="market_sale_dispute_state_open">Адкрыта</string>
     <string name="market_sale_dispute_state_resolved">Вырашана</string>
     <string name="market_sale_dispute_state_responded">Чаканне рашэння</string>
     <string name="market_sale_dispute_stripe_reason">Прычына чарджбэку Stripe: %1$s</string>
@@ -547,7 +547,7 @@
     <string name="market_saved_clear">Ачысціць усе захаваныя</string>
     <string name="market_saved_empty_subtitle">Націсніце значок закладкі на любой аб’яве, каб захаваць яе на пазней.</string>
     <string name="market_saved_empty_title">Няма захаваных аб’яў</string>
-    <string name="market_saved_title">Захавана</string>
+    <string name="market_saved_title">Захаванае</string>
     <string name="market_search_clear">Ачысціць пошук</string>
     <string name="market_search_placeholder">Пошук на рынку</string>
     <string name="market_section_categories">Агляд катэгорый</string>
@@ -572,7 +572,7 @@
     <string name="market_sidebar_purchases">Пакупкі</string>
     <string name="market_sidebar_reviews">Водгукі</string>
     <string name="market_sidebar_sales">Продажы</string>
-    <string name="market_sidebar_saved">Захавана</string>
+    <string name="market_sidebar_saved">Захаванае</string>
     <string name="market_sidebar_selling">Продаж</string>
     <string name="market_sidebar_settings">Налады</string>
     <string name="market_sidebar_subscribers">Падпісчыкі</string>
@@ -614,7 +614,7 @@
     <string name="market_subscription_detail_seller">Прадавец</string>
     <string name="market_subscription_detail_started">Пачата %1$s</string>
     <string name="market_subscription_detail_title">Падпіска</string>
-    <string name="market_subscriptions_action_cancel">Адмена</string>
+    <string name="market_subscriptions_action_cancel">Адмяніць</string>
     <string name="market_subscriptions_action_pause">Паўза</string>
     <string name="market_subscriptions_action_reactivate">Рэактываваць</string>
     <string name="market_subscriptions_action_resubscribe">Падпісацца зноў</string>
@@ -638,7 +638,7 @@
     <string name="market_subscriptions_resume_failed">Не ўдалося аднавіць</string>
     <string name="market_subscriptions_resumed">Падпіска адноўлена</string>
     <string name="market_subscriptions_title">Падпіскі</string>
-    <string name="market_title">Рынак</string>
+    <string name="market_title">Кірмаш</string>
     <string name="market_type_digital">Лічбавы</string>
     <string name="market_type_physical">Фізічны</string>
     <string name="market_warnings_title">Папярэджанні</string>
@@ -689,7 +689,7 @@
     <string name="market_seller_step_activate_title">Актываваць рахунак прадаўца</string>
     <string name="market_seller_step_stripe_desc">Прывяжыце рахунак Stripe, каб прымаць плацяжы ад пакупнікоў</string>
     <string name="market_seller_step_stripe_title">Падключыць Stripe</string>
-    <string name="market_seller_stripe_more_info">Stripe патрабуе дадатковую інфармацыю, перш чым вы зможаце прымаць плацяжы. Выканайце патрабаванні ў панэлі Stripe Dashboard, затым націсніце «Праверыць статус».</string>
+    <string name="market_seller_stripe_more_info">Stripe патрабуе дадатковую інфармацыю, перш чым вы зможаце прымаць плацяжы. Выканайце патрабаванні ў панэлі Stripe, затым націсніце «Праверыць статус».</string>
     <string name="market_seller_summary_account_status">Статус уліковага запісу</string>
     <string name="market_seller_summary_fees">Камісіі</string>
     <string name="market_seller_summary_payments">Плацяжы</string>

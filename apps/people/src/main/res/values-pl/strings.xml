@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Otwórz nawigację</string>
     <string name="people_person_state_friend">Znajomi</string>
     <string name="people_person_state_self">Ty</string>
-    <string name="people_person_message">Wiadomość</string>
+    <string name="people_person_message">Wyślij wiadomość</string>
     <string name="people_person_accept">Akceptuj</string>
     <string name="people_person_decline">Odrzuć</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Zaakceptuj wszystkie</string>
     <string name="people_invitations_decline_all">Odrzuć wszystkie</string>
     <string name="people_invitations_cancel_all">Anuluj wszystkie</string>
+    <string name="people_invitations_cancel">Anuluj</string>
     <string name="people_invitations_all_accepted">Wszystkie zaproszenia zaakceptowane</string>
     <string name="people_invitations_all_declined">Wszystkie zaproszenia odrzucone</string>
     <string name="people_invitations_all_cancelled">Wszystkie zaproszenia anulowane</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Szukaj…</string>
     <string name="people_contacts_invited">Zaproszono</string>
     <string name="people_contacts_accept">Akceptuj</string>
-    <string name="people_contacts_message">Wiadomość</string>
+    <string name="people_contacts_message">Wyślij wiadomość</string>
     <string name="people_contacts_no_people_found">Nie znaleziono osób</string>
     <string name="people_contacts_try_adjusting">Spróbuj dostosować wyszukiwanie</string>
     <string name="people_contact_section_address">Adres</string>

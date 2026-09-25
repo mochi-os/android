@@ -62,7 +62,7 @@
     <string name="people_profile_uploading">اپلوډ کیږي…</string>
     <string name="people_profile_change_banner">بانر بدل کړه</string>
     <string name="people_profile_no_banner">هیڅ بینر نه دی ټاکل شوی</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">د براوزر آیکون</string>
     <string name="people_profile_browser_icon">د براوزر آیکون</string>
     <string name="people_profile_file_too_large">فایل ډیر لوی دی</string>
     <string name="people_profile_clear">پاک کړئ</string>
@@ -71,12 +71,12 @@
     <string name="people_common_cancel">لغوه کول</string>
     <string name="people_common_close">وتړئ</string>
     <string name="people_common_save">خوندي کول</string>
-    <string name="people_welcome_dismiss">وردکړه</string>
+    <string name="people_welcome_dismiss">وتړئ</string>
     <string name="people_sidebar_header">خلک</string>
     <string name="people_open_sidebar">نیویګیشن خلاص کړئ</string>
     <string name="people_person_state_friend">ملګري</string>
     <string name="people_person_state_self">تاسو</string>
-    <string name="people_person_message">پیغام</string>
+    <string name="people_person_message">پیغام ولېږئ</string>
     <string name="people_person_accept">ومنه</string>
     <string name="people_person_decline">رد کړئ</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">ټول ومنه</string>
     <string name="people_invitations_decline_all">ټول رد کړئ</string>
     <string name="people_invitations_cancel_all">ټول لغوه کړئ</string>
+    <string name="people_invitations_cancel">لغوه کول</string>
     <string name="people_invitations_all_accepted">ټول بلنې ومنل شوې</string>
     <string name="people_invitations_all_declined">ټول بلنې رد شوې</string>
     <string name="people_invitations_all_cancelled">ټول بلنې لغوه شوې</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">لټون…</string>
     <string name="people_contacts_invited">بلنه ورکړل شوه</string>
     <string name="people_contacts_accept">ومنه</string>
-    <string name="people_contacts_message">پیغام</string>
+    <string name="people_contacts_message">پیغام ولېږئ</string>
     <string name="people_contacts_no_people_found">هیڅ خلک ونه موندل شول</string>
     <string name="people_contacts_try_adjusting">خپل لټون سمول هڅه وکړئ</string>
     <string name="people_contact_section_address">پته</string>

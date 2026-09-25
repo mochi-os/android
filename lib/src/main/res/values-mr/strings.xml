@@ -38,7 +38,7 @@
     <string name="access_add_rule">नियम जोडा</string>
     <string name="access_owner">मालक</string>
     <string name="access_revoke">रद्द करा</string>
-    <string name="access_level_comment">टिप्पणी</string>
+    <string name="access_level_comment">टिप्पणी करा</string>
     <string name="access_level_view">पहा</string>
     <string name="access_level_none">काहीही नाही</string>
     <string name="reaction_like">आवडले</string>

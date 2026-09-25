@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ਮਾਰਕਿਟ</string>
+    <string name="app_name">ਮਾਰਕੀਟ</string>
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_label">ਜੀਵਨੀ</string>
     <string name="market_account_biography_placeholder">ਖਰੀਦਦਾਰਾਂ ਨੂੰ ਆਪਣੇ ਬਾਰੇ ਦੱਸੋ…</string>
@@ -31,7 +31,7 @@
     <string name="market_appeal_dialog_submitting">ਭੇਜਿਆ ਜਾ ਰਿਹਾ ਹੈ…</string>
     <string name="market_appeal_dialog_success">ਅਪੀਲ ਜਮ੍ਹਾਂ ਕੀਤੀ ਗਈ</string>
     <string name="market_appeal_dialog_title">ਹਟਾਉਣ ਦੀ ਅਪੀਲ</string>
-    <string name="market_asset_download">ਡਾਊਨਲੋਡ</string>
+    <string name="market_asset_download">ਡਾਊਨਲੋਡ ਕਰੋ</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
     <string name="market_back">ਵਾਪਸ</string>
     <string name="market_bid_dialog_amount_label">ਤੁਹਾਡੀ ਬੋਲੀ</string>
@@ -54,7 +54,7 @@
     <string name="market_bids_tab_won">ਜਿੱਤਿਆ</string>
     <string name="market_bids_title">ਬੋਲੀਆਂ</string>
     <string name="market_carousel_main">ਫੋਟੋ %1$d / %2$d</string>
-    <string name="market_channel_name">ਮਾਰਕਿਟ</string>
+    <string name="market_channel_name">ਮਾਰਕੀਟ</string>
     <string name="market_chargeback_reason_bank_cannot_process">ਬੈਂਕ ਪ੍ਰਕਿਰਿਆ ਨਹੀਂ ਕਰ ਸਕਿਆ</string>
     <string name="market_chargeback_reason_check_returned">ਚੈੱਕ ਵਾਪਸ ਆਇਆ</string>
     <string name="market_chargeback_reason_credit_not_processed">ਕ੍ਰੈਡਿਟ ਪ੍ਰਕਿਰਿਆ ਨਹੀਂ ਹੋਇਆ</string>
@@ -68,7 +68,7 @@
     <string name="market_chargeback_reason_product_not_received">ਉਤਪਾਦ ਨਹੀਂ ਮਿਲਿਆ</string>
     <string name="market_chargeback_reason_product_unacceptable">ਉਤਪਾਦ ਅਸਵੀਕਾਰਯੋਗ</string>
     <string name="market_chargeback_reason_subscription_canceled">ਮੈਂਬਰਸ਼ਿਪ ਰੱਦ ਕੀਤੀ ਗਈ</string>
-    <string name="market_chargeback_reason_unrecognized">ਅਣਪਛਾਤਾ charge</string>
+    <string name="market_chargeback_reason_unrecognized">ਅਣਪਛਾਤਾ ਚਾਰਜ</string>
     <string name="market_checkout_address_city">ਸ਼ਹਿਰ</string>
     <string name="market_checkout_address_country">ਦੇਸ਼</string>
     <string name="market_checkout_address_heading">ਸ਼ਿਪਿੰਗ ਪਤਾ</string>
@@ -127,7 +127,7 @@
     <string name="market_editor_back">ਵਾਪਸ</string>
     <string name="market_editor_category">ਸ਼੍ਰੇਣੀ</string>
     <string name="market_editor_category_none">ਸ਼੍ਰੇਣੀ ਚੁਣੋ</string>
-    <string name="market_editor_condition">ਸ਼ਰਤ</string>
+    <string name="market_editor_condition">ਹਾਲਤ</string>
     <string name="market_editor_condition_new">ਨਵਾਂ</string>
     <string name="market_editor_condition_refurbished">ਨਵਿਆਇਆ</string>
     <string name="market_editor_condition_used">ਵਰਤਿਆ</string>
@@ -188,7 +188,7 @@
     <string name="market_filter_apply">ਲਾਗੂ ਕਰੋ</string>
     <string name="market_filter_category">ਸ਼੍ਰੇਣੀ</string>
     <string name="market_filter_clear">ਫਿਲਟਰ ਸਾਫ਼ ਕਰੋ</string>
-    <string name="market_filter_condition">ਸ਼ਰਤ</string>
+    <string name="market_filter_condition">ਹਾਲਤ</string>
     <string name="market_filter_condition_new">ਨਵਾਂ</string>
     <string name="market_filter_condition_refurbished">ਨਵਿਆਇਆ</string>
     <string name="market_filter_condition_used">ਵਰਤਿਆ</string>
@@ -225,7 +225,7 @@
     <string name="market_listing_detail_load_failed">ਲਿਸਟਿੰਗ ਲੋਡ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="market_listing_detail_listed">ਸੂਚੀਬੱਧ %1$s</string>
     <string name="market_listing_detail_location_heading">ਟਿਕਾਣਾ</string>
-    <string name="market_listing_detail_message">ਸੁਨੇਹਾ</string>
+    <string name="market_listing_detail_message">ਸੁਨੇਹਾ ਭੇਜੋ</string>
     <string name="market_listing_detail_message_seller">ਵਿਕਰੇਤਾ ਨੂੰ ਸੁਨੇਹਾ ਭੇਜੋ</string>
     <string name="market_listing_detail_not_found">ਟੈਮਪਲੇਟ ਲੋਡ ਹੋ ਰਹੇ ਹਨ...</string>
     <string name="market_listing_detail_place_bid">ਬੋਲੀ ਲਗਾਓ</string>
@@ -367,7 +367,7 @@
     <string name="market_sale_carrier_other">ਹੋਰ</string>
     <string name="market_sale_completed_label">ਪੂਰਾ</string>
     <string name="market_sale_dispute_respond">ਜਵਾਬ ਦਿਓ</string>
-    <string name="market_sale_dispute_state_open">ਖੋਲ੍ਹੋ</string>
+    <string name="market_sale_dispute_state_open">ਖੁੱਲ੍ਹਾ</string>
     <string name="market_sale_dispute_state_resolved">ਹੱਲ ਹੋ ਗਿਆ</string>
     <string name="market_sale_load_failed">ਆਰਡਰ ਲੋਡ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="market_sale_message_buyer">ਖਰੀਦਦਾਰ ਨੂੰ ਸੁਨੇਹਾ ਭੇਜੋ</string>
@@ -389,7 +389,7 @@
     <string name="market_sale_title">ਵਿਕਰੀ</string>
     <string name="market_sale_tracking_label">ਟਰੈਕਿੰਗ ਨੰਬਰ</string>
     <string name="market_sales_title">ਮੇਰੀਆਂ ਵਿਕਰੀਆਂ</string>
-    <string name="market_saved_title">ਸੰਭਾਲਿਆ ਗਿਆ</string>
+    <string name="market_saved_title">ਸੰਭਾਲੇ ਗਏ</string>
     <string name="market_search_clear">ਖੋਜ ਸਾਫ਼ ਕਰੋ</string>
     <string name="market_search_placeholder">ਮਾਰਕੀਟ ਵਿੱਚ ਖੋਜੋ</string>
     <string name="market_section_categories">ਸ਼੍ਰੇਣੀਆਂ ਵੇਖੋ</string>
@@ -407,14 +407,14 @@
     <string name="market_sidebar_bids">ਬੋਲੀਆਂ</string>
     <string name="market_sidebar_browse">ਬ੍ਰਾਊਜ਼ ਕਰੋ</string>
     <string name="market_sidebar_buying">ਖਰੀਦ</string>
-    <string name="market_sidebar_home">ਮੁੱਖ</string>
+    <string name="market_sidebar_home">ਹੋਮ</string>
     <string name="market_sidebar_inbox">ਇਨਬਾਕਸ</string>
     <string name="market_sidebar_listings">ਲਿਸਟਿੰਗਾਂ</string>
     <string name="market_sidebar_messages">ਸੁਨੇਹੇ</string>
     <string name="market_sidebar_purchases">ਖਰੀਦਾਰੀਆਂ</string>
     <string name="market_sidebar_reviews">ਸਮੀਖਿਆਵਾਂ</string>
     <string name="market_sidebar_sales">ਵਿਕਰੀਆਂ</string>
-    <string name="market_sidebar_saved">ਸੰਭਾਲਿਆ ਗਿਆ</string>
+    <string name="market_sidebar_saved">ਸੰਭਾਲੇ ਗਏ</string>
     <string name="market_sidebar_selling">ਵੇਚ ਰਿਹਾ ਹੈ</string>
     <string name="market_sidebar_settings">ਸੈਟਿੰਗਾਂ</string>
     <string name="market_sidebar_subscribers">ਗਾਹਕ</string>
@@ -433,18 +433,18 @@
     <string name="market_subscribers_interval_month">/ ਮਹੀਨਾ</string>
     <string name="market_subscribers_interval_year">/ ਸਾਲ</string>
     <string name="market_subscribers_load_failed">ਗਾਹਕ ਲੋਡ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
-    <string name="market_subscription_detail_billing_history">Billing history</string>
+    <string name="market_subscription_detail_billing_history">ਬਿਲਿੰਗ ਇਤਿਹਾਸ</string>
     <string name="market_subscription_detail_billing_history_empty">ਹਾਲੇ ਕੋਈ ਚਾਰਜ ਨਹੀਂ।</string>
     <string name="market_subscription_detail_billing_info">ਬਿਲਿੰਗ</string>
-    <string name="market_subscription_detail_cancelled_on">Cancelled on %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Latest charge: %1$s</string>
+    <string name="market_subscription_detail_cancelled_on">%1$s ਨੂੰ ਰੱਦ ਕੀਤਾ ਗਿਆ</string>
+    <string name="market_subscription_detail_charge_amount">ਨਵੀਨਤਮ ਚਾਰਜ: %1$s</string>
     <string name="market_subscription_detail_listing">ਲਿਸਟਿੰਗ</string>
     <string name="market_subscription_detail_load_failed">ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਲੋਡ ਨਹੀਂ ਹੋ ਸਕੀ</string>
     <string name="market_subscription_detail_next_billing">ਅਗਲੀ ਬਿਲਿੰਗ ਤਾਰੀਖ: %1$s</string>
     <string name="market_subscription_detail_not_found">ਮੈਂਬਰਸ਼ਿਪ ਨਹੀਂ ਮਿਲੀ</string>
-    <string name="market_subscription_detail_pending_cancel">Cancellation pending</string>
+    <string name="market_subscription_detail_pending_cancel">ਰੱਦ ਕਰਨਾ ਬਕਾਇਆ</string>
     <string name="market_subscription_detail_seller">ਵੇਚਣ ਵਾਲਾ</string>
-    <string name="market_subscription_detail_started">Started %1$s</string>
+    <string name="market_subscription_detail_started">ਸ਼ੁਰੂ: %1$s</string>
     <string name="market_subscription_detail_title">ਗਾਹਕੀ</string>
     <string name="market_subscriptions_action_cancel">ਰੱਦ ਕਰੋ</string>
     <string name="market_subscriptions_action_pause">ਰੋਕੋ</string>
@@ -466,7 +466,7 @@
     <string name="market_subscriptions_resume_failed">ਮੁੜ ਸ਼ੁਰੂ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="market_subscriptions_resumed">ਮੈਂਬਰਸ਼ਿਪ ਮੁੜ ਸ਼ੁਰੂ ਕੀਤੀ ਗਈ</string>
     <string name="market_subscriptions_title">ਮੈਂਬਰਸ਼ਿਪਾਂ</string>
-    <string name="market_title">ਮਾਰਕਿਟ</string>
+    <string name="market_title">ਮਾਰਕੀਟ</string>
     <string name="market_type_digital">ਡਿਜੀਟਲ</string>
     <string name="market_type_physical">ਭੌਤਿਕ</string>
     <string name="market_warnings_title">ਚੇਤਾਵਨੀਆਂ</string>
@@ -690,7 +690,7 @@
     <string name="market_seller_step_activate_title">ਵਿਕਰੇਤਾ ਖਾਤਾ ਸਰਗਰਮ ਕਰੋ</string>
     <string name="market_seller_step_stripe_desc">ਖਰੀਦਦਾਰਾਂ ਤੋਂ ਭੁਗਤਾਨ ਸਵੀਕਾਰ ਕਰਨ ਲਈ ਇੱਕ Stripe ਖਾਤਾ ਜੋੜੋ</string>
     <string name="market_seller_step_stripe_title">Stripe ਜੋੜੋ</string>
-    <string name="market_seller_stripe_more_info">ਤੁਸੀਂ ਭੁਗਤਾਨ ਸਵੀਕਾਰ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ Stripe ਨੂੰ ਹੋਰ ਜਾਣਕਾਰੀ ਦੀ ਲੋੜ ਹੈ। ਆਪਣੇ Stripe Dashboard \'ਤੇ ਲੋੜਾਂ ਪੂਰੀਆਂ ਕਰੋ, ਫਿਰ ਸਥਿਤੀ ਜਾਂਚੋ \'ਤੇ ਕਲਿੱਕ ਕਰੋ।</string>
+    <string name="market_seller_stripe_more_info">ਤੁਸੀਂ ਭੁਗਤਾਨ ਸਵੀਕਾਰ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ Stripe ਨੂੰ ਹੋਰ ਜਾਣਕਾਰੀ ਦੀ ਲੋੜ ਹੈ। ਆਪਣੇ Stripe ਡੈਸ਼ਬੋਰਡ \'ਤੇ ਲੋੜਾਂ ਪੂਰੀਆਂ ਕਰੋ, ਫਿਰ ਸਥਿਤੀ ਜਾਂਚੋ \'ਤੇ ਕਲਿੱਕ ਕਰੋ।</string>
     <string name="market_seller_summary_account_status">ਖਾਤੇ ਦੀ ਸਥਿਤੀ</string>
     <string name="market_seller_summary_fees">ਫੀਸਾਂ</string>
     <string name="market_seller_summary_payments">ਭੁਗਤਾਨ</string>

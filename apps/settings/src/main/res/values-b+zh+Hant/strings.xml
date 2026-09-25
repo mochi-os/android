@@ -9,7 +9,7 @@
     <string name="settings_home_notification_prefs">通知偏好</string>
     <string name="settings_home_accounts">已連結帳戶</string>
     <string name="settings_home_interests">興趣</string>
-    <string name="account_section_passkeys">Passkey</string>
+    <string name="account_section_passkeys">通行密鑰</string>
     <string name="account_passkey_register">新增通行金鑰</string>
     <string name="account_passkey_delete_title">刪除通行金鑰?</string>
     <string name="account_section_totp">驗證器應用程式</string>
@@ -137,7 +137,7 @@
     <string name="system_settings_reset_title">重設為預設值?</string>
     <string name="system_setting_apps_install_user">允許使用者安裝應用程式</string>
     <string name="system_setting_auth_email">使用電子郵件代碼登入</string>
-    <string name="system_setting_auth_passkey">使用 Passkey 登入</string>
+    <string name="system_setting_auth_passkey">使用通行密鑰登入</string>
     <string name="system_setting_auth_totp">使用 TOTP 驗證器應用程式登入</string>
     <string name="system_setting_auth_recovery">使用復原代碼登入</string>
     <string name="system_setting_auth_oauth">使用 OAuth 2.0 登入</string>
@@ -332,7 +332,7 @@
     <string name="account_data_passphrase">密語</string>
     <string name="account_data_passphrase_hint">您的私鑰已包含在內，使用此密碼短語加密。請妥善保存。還原時將需要用到它。</string>
     <string name="system_status_peer_unreachable">無法到達</string>
-    <string name="system_status_peer_address">地址</string>
+    <string name="system_status_peer_address">位址</string>
     <string name="system_status_peer_seen">最後看到</string>
     <string name="system_status_users">使用者</string>
     <string name="system_status_entities">實體</string>
@@ -341,7 +341,7 @@
     <string name="system_status_reachability_private">私人</string>
     <string name="system_status_reachability_unknown">未知</string>
     <string name="system_status_relay">經由中繼</string>
-    <string name="system_status_mesh">廣播 Mesh</string>
+    <string name="system_status_mesh">廣播網狀網路</string>
     <string name="system_status_broadcast">最後廣播</string>
     <string name="system_status_queued_broadcasts">佇列中的廣播訊息</string>
     <string name="system_setting_hostname_publish">向其他伺服器公告主機名稱和網域</string>

@@ -2,7 +2,7 @@
 <resources>
     <string name="projects_auth_display_name">प्रदर्शन नाम</string>
     <string name="projects_auth_verification_failed">प्रमाणीकरण असफल भयो</string>
-    <string name="projects_list_title">प्रोजेक्टहरू</string>
+    <string name="projects_list_title">परियोजनाहरू</string>
     <string name="projects_list_close_search">खोजी बन्द गर्नुहोस्</string>
     <string name="projects_list_search">खोज्नुहोस्</string>
     <string name="projects_list_find">प्रोजेक्टहरू खोज्नुहोस्</string>
@@ -29,7 +29,7 @@
     <string name="projects_sort_label">क्रमबद्ध गर्नुहोस्</string>
     <string name="projects_sort_direction">दिशा</string>
     <string name="projects_sort_rank">म्यानुअल</string>
-    <string name="projects_sort_number">संख्या</string>
+    <string name="projects_sort_number">नम्बर</string>
     <string name="projects_sort_created">सिर्जना गरियो</string>
     <string name="projects_sort_updated">अद्यावधिक गरियो</string>
     <string name="projects_create_object_type">प्रकार</string>
@@ -93,13 +93,13 @@
     <string name="projects_request_create_action">सिर्जना गर्नुहोस्</string>
     <string name="projects_diff_unified">एकीकृत</string>
     <string name="projects_diff_split">विभाजन</string>
-    <string name="projects_diff_empty">कुनै diff उपलब्ध छैन</string>
+    <string name="projects_diff_empty">कुनै भिन्नता उपलब्ध छैन</string>
     <string name="projects_board_unassigned">नतोकिएको</string>
     <string name="projects_board_new">नयाँ</string>
     <string name="projects_board_rename">नाम परिवर्तन गर्नुहोस्</string>
     <string name="projects_board_rename_column">स्तम्भको नाम परिवर्तन गर्नुहोस्</string>
     <string name="projects_move_position">स्थिति</string>
-    <string name="projects_move_position_top">माथि</string>
+    <string name="projects_move_position_top">सबैभन्दा माथि</string>
     <string name="projects_move_current">हालको</string>
     <string name="projects_design_title">डिजाइन</string>
     <string name="projects_design_export">डिजाइन निर्यात गर्नुहोस्</string>
@@ -149,7 +149,7 @@
     <string name="projects_views_type_board">बोर्ड</string>
     <string name="projects_views_type_list">सूची</string>
     <string name="projects_views_direction">दिशा</string>
-    <string name="projects_views_sort_number">संख्या</string>
+    <string name="projects_views_sort_number">नम्बर</string>
     <string name="projects_views_sort_created">सिर्जना गरियो</string>
     <string name="projects_views_sort_updated">अद्यावधिक गरियो</string>
     <string name="projects_views_sort_rank">रैंक</string>
@@ -160,7 +160,7 @@
     <string name="projects_comment_send">पठाउनुहोस्</string>
     <string name="projects_field_position_body">मुख्य भाग</string>
     <string name="projects_sort_field">क्रमबद्ध गर्नुहोस्</string>
-    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_comment_remove_attachment">संलग्नक हटाउनुहोस्</string>
     <string name="projects_views_sort_by">क्रमबद्ध गर्नुहोस्</string>
     <string name="projects_auth_login_failed">लग इन असफल</string>
     <string name="projects_views_move_up">माथि सार्नुहोस्</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">वस्तुहरू खोज्नुहोस्</string>
 
     <string name="notification_channel_projects">परियोजना सूचनाहरू</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi परियोजनाहरू</string>
     <string name="projects_auth_create_identity_failed">पहिचान सिर्जना गर्न असफल</string>
     <string name="projects_auth_mfa_unsupported">मोबाइल एपमा MFA अहिलेसम्म समर्थित छैन</string>
     <string name="projects_auth_enter_code_sent">%1$s मा पठाइएको कोड प्रविष्ट गर्नुहोस्</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">नियम छान्नुहोस्</string>
     <string name="projects_access_authenticated_desc">लगइन गरेको जो कोही</string>
     <string name="projects_access_anyone_desc">बेनामी प्रयोगकर्ताहरू सहित</string>
-    <string name="projects_access_target">लक्ष्य</string>
+    <string name="projects_access_target">प्रयोगकर्ता वा समूह</string>
     <string name="projects_access_target_hint">एन्टिटी ID, @समूह, * (सबैजना), वा + (सदस्यहरू)</string>
     <string name="projects_access_selected">चयन गरिएको: %1$s</string>
     <string name="projects_access_role_comment">टिप्पणी र हेर्नुहोस्</string>
@@ -381,5 +381,5 @@
     <string name="projects_option_delete_message">के तपाईं \"%1$s\" विकल्प मेटाउन निश्चित हुनुहुन्छ?</string>
     <string name="projects_create_object_no_types">अहिले कुनै आइटम प्रकार सिर्जना गर्न सकिँदैन। पहिले आवश्यक अभिभावक आइटमहरू सिर्जना गर्नुहोस्।</string>
     <string name="projects_create_blocked_no_options">सिर्जना गर्न सकिँदैन: %1$s आवश्यक छ तर छनोट गर्न कुनै विकल्प छैन। डिजाइनमा विकल्पहरू थप्नुहोस्।</string>
-    <string name="projects_attachment_remove">Remove attachment</string>
+    <string name="projects_attachment_remove">संलग्नक हटाउनुहोस्</string>
 </resources>

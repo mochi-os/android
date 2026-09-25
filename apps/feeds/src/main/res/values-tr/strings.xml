@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Henüz gönderi yok</string>
     <string name="feeds_sort_label">Sırala</string>
     <string name="feeds_sort_interests">İlgi alanları</string>
-    <string name="feeds_sort_new">Yeni</string>
+    <string name="feeds_sort_new">En yeni</string>
     <string name="feeds_sort_hot">Popüler</string>
-    <string name="feeds_sort_top">Üst</string>
+    <string name="feeds_sort_top">En iyi</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Gönderi</string>
     <string name="feeds_image_preview">Önizleme</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Yanıtı iptal et</string>
     <string name="feeds_edit_post">Gönderiyi düzenle</string>
     <string name="feeds_save_label">Kaydet</string>
-    <string name="feeds_post_action">Gönderi</string>
+    <string name="feeds_post_action">Paylaş</string>
     <string name="feeds_feed_label">Akış</string>
     <string name="feeds_add_files">Dosya ekle</string>
     <string name="feeds_restore">Geri yükle</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Oturumu kapat</string>
     <string name="feeds_ai_account_default">Varsayılan hesap</string>
     <string name="feeds_ai_mode_off">Devre dışı</string>
-    <string name="feeds_ai_mode_tag">Etiket</string>
+    <string name="feeds_ai_mode_tag">Etiketle</string>
     <string name="feeds_ai_mode_tag_deduplicate">Etiketle + tekrarları kaldır</string>
     <string name="feeds_feed_not_found">Akış bulunamadı</string>
     <string name="feeds_post_not_found">Gönderi bulunamadı</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">İlgi alanı azaltıldı</string>
     <string name="feeds_interest_removed">İlgi alanı kaldırıldı</string>
     <string name="feeds_interest_failed">İlgi alanı ayarlanamadı</string>
-    <string name="feeds_saved_title">Kaydedildi</string>
-    <string name="feeds_saved_menu">Kaydedildi</string>
+    <string name="feeds_saved_title">Kaydedilenler</string>
+    <string name="feeds_saved_menu">Kaydedilenler</string>
     <string name="feeds_saved_save">Sonrası için kaydet</string>
     <string name="feeds_saved_remove">Kaydedilenlerden kaldır</string>
     <string name="feeds_saved_clear_all">Tümünü temizle</string>

@@ -10,7 +10,7 @@
     <string name="calendars_delete">Eyða</string>
     <string name="calendars_previous">Fyrri</string>
     <string name="calendars_next">Áfram</string>
-    <string name="calendars_view">Skoða</string>
+    <string name="calendars_view">Sýn</string>
     <string name="calendars_view_list">Listi</string>
     <string name="calendars_list_search">Leita</string>
     <string name="calendars_event_untitled">Án titils</string>
@@ -169,7 +169,7 @@
     <string name="calendars_subscribe_server_url">Vistfang þjóns</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google dagatal</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google-reikningar hafa ekki verið virkjaðir á þessum þjóni. Virkjaðu þá undir Stillingar, Kerfisstillingar.</string>
     <string name="calendars_subscribe_google_connect">Þú hefur ekki tengt Google-reikning.</string>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">Persunal</string>
+    <string name="launcher_staff">Persunal ta\' Mochi</string>
     <string name="staff_accounts_action_ban_title">Ipprojbixxi l-kont</string>
     <string name="staff_accounts_action_suspend_title">Issospendi kont</string>
     <string name="staff_accounts_action_unban_title">Neħħi l-projbizzjoni</string>
@@ -58,7 +58,7 @@
     <string name="staff_audit_action_account_seller_activated">Bejjiegħ attivat</string>
     <string name="staff_audit_action_account_stripe_connected">Stripe konness</string>
     <string name="staff_audit_action_account_stripe_disconnected">Stripe skonness</string>
-    <string name="staff_audit_action_account_stripe_onboarded">Stripe onboarded</string>
+    <string name="staff_audit_action_account_stripe_onboarded">Stripe ikkonfigurat</string>
     <string name="staff_audit_action_account_stripe_restricted">Stripe ristrett</string>
     <string name="staff_audit_action_account_suspended">Sospiż bħala bejjiegħ</string>
     <string name="staff_audit_action_account_unbanned">Projbizzjoni mneħħija</string>
@@ -159,17 +159,17 @@
     <string name="staff_categories_type_digital">Diġitali</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">Fiżiku</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">Persunal</string>
     <string name="staff_config_field_auto_approve">Limitu għall-approvazzjoni awtomatika</string>
     <string name="staff_config_field_hold">Limitu taż-żamma</string>
     <string name="staff_config_field_platform_fee">Tariffa tal-pjattaforma</string>
     <string name="staff_config_field_review_window">Window tar-review</string>
     <string name="staff_config_field_stripe_oauth_client">ID tal-klijent OAuth</string>
-    <string name="staff_config_field_stripe_publishable">Publishable key</string>
-    <string name="staff_config_field_stripe_secret">Secret key</string>
+    <string name="staff_config_field_stripe_publishable">Ċavetta pubblika</string>
+    <string name="staff_config_field_stripe_secret">Ċavetta sigrieta</string>
     <string name="staff_config_group_moderation">Moderazzjoni</string>
     <string name="staff_config_group_payments">Ħlasijiet</string>
-    <string name="staff_config_group_reviews">Reviews</string>
+    <string name="staff_config_group_reviews">Reċensjonijiet</string>
     <string name="staff_config_group_stripe">Stripe</string>
     <string name="staff_config_save">Issejvja</string>
     <string name="staff_config_saving">Qed jiġi ssejvjat…</string>
@@ -183,12 +183,12 @@
     <string name="staff_dashboard_col_buyer">Xerrej</string>
     <string name="staff_dashboard_col_date">Data</string>
     <string name="staff_dashboard_col_detail">Dettall</string>
-    <string name="staff_dashboard_col_listing">Listing</string>
+    <string name="staff_dashboard_col_listing">Elenku</string>
     <string name="staff_dashboard_col_moderation">Moderazzjoni</string>
     <string name="staff_dashboard_col_name">Isem</string>
     <string name="staff_dashboard_col_object">Oġġett</string>
     <string name="staff_dashboard_col_reason">Raġuni</string>
-    <string name="staff_dashboard_col_score">Score</string>
+    <string name="staff_dashboard_col_score">Punteġġ</string>
     <string name="staff_dashboard_col_seller">Bejjiegħ</string>
     <string name="staff_dashboard_col_status">Status</string>
     <string name="staff_dashboard_col_title">Titlu</string>
@@ -211,7 +211,7 @@
     <string name="staff_dashboard_open_sidebar">Iftaħ il-bar tal-ġenb</string>
     <string name="staff_dashboard_system">Sistema</string>
     <string name="staff_dashboard_tab_audit">Awditjar</string>
-    <string name="staff_dashboard_tab_listings">Listings</string>
+    <string name="staff_dashboard_tab_listings">Elenki</string>
     <string name="staff_dashboard_tab_moderation">Moderazzjoni</string>
     <string name="staff_dashboard_tab_orders">Ordnijiet</string>
     <string name="staff_dashboard_tab_signups">Reġistrazzjonijiet</string>
@@ -225,7 +225,7 @@
     <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_chargeback_fee">Tariffa tal-chargeback</string>
     <string name="staff_disputes_meta_evidence_due">Evidenza dovuta sa</string>
-    <string name="staff_disputes_meta_listing">Listing</string>
+    <string name="staff_disputes_meta_listing">Elenku</string>
     <string name="staff_disputes_meta_reason">Raġuni</string>
     <string name="staff_disputes_meta_refunded">Irrifondut</string>
     <string name="staff_disputes_meta_refunded_partial">Irrifondut (parzjali)</string>
@@ -247,7 +247,7 @@
     <string name="staff_disputes_resolving">Qed jiġi solvut…</string>
     <string name="staff_disputes_review">Irrevedi</string>
     <string name="staff_disputes_status_escalated">Eskalata</string>
-    <string name="staff_disputes_status_open">Iftaħ</string>
+    <string name="staff_disputes_status_open">Miftuħ</string>
     <string name="staff_disputes_status_resolved_buyer">Solvut (xerrej)</string>
     <string name="staff_disputes_status_resolved_seller">Solvut (bejjiegħ)</string>
     <string name="staff_disputes_status_responded">Wieġeb</string>
@@ -275,7 +275,7 @@
     <string name="staff_listings_moderation_hold">Żomm</string>
     <string name="staff_listings_moderation_manual">Manwali</string>
     <string name="staff_listings_moderation_rejected">Irrifjutat</string>
-    <string name="staff_listings_moderation_review">Irrevedi</string>
+    <string name="staff_listings_moderation_review">Rieżami</string>
     <string name="staff_listings_moderation_soft_approved">Approvat artab</string>
     <string name="staff_listings_notes_label">Noti</string>
     <string name="staff_listings_price_placeholder">—</string>
@@ -313,15 +313,15 @@
     <string name="staff_reports_cancel">Ikkanċella</string>
     <string name="staff_reports_close">Agħlaq</string>
     <string name="staff_reports_dialog_title_action">Ħu azzjoni fuq ir-rapport</string>
-    <string name="staff_reports_dialog_title_view">Irraporta</string>
+    <string name="staff_reports_dialog_title_view">Rapport</string>
     <string name="staff_reports_empty">L-ebda rapporti</string>
     <string name="staff_reports_filter_status_label">Status</string>
     <string name="staff_reports_filter_type_label">Tip</string>
     <string name="staff_reports_meta_price">Prezz</string>
     <string name="staff_reports_meta_reason">Raġuni</string>
-    <string name="staff_reports_meta_reporter">Reporter</string>
+    <string name="staff_reports_meta_reporter">Min irrapporta</string>
     <string name="staff_reports_meta_seller">Bejjiegħ</string>
-    <string name="staff_reports_meta_target">Mira</string>
+    <string name="staff_reports_meta_target">Kontenut irrappurtat</string>
     <string name="staff_reports_meta_type">Tip</string>
     <string name="staff_reports_notes_label">Noti</string>
     <string name="staff_reports_reason_counterfeit">Falsifikat jew misruq</string>
@@ -333,10 +333,10 @@
     <string name="staff_reports_status_actioned">Sar</string>
     <string name="staff_reports_status_dismissed">Mwarrab</string>
     <string name="staff_reports_status_pending">Pendenti</string>
-    <string name="staff_reports_status_reviewed">Reviewed</string>
+    <string name="staff_reports_status_reviewed">Rivedut</string>
     <string name="staff_reports_submit">Issottometti</string>
     <string name="staff_reports_submitting">Qed jintbagħat…</string>
-    <string name="staff_reports_type_listing">Listing</string>
+    <string name="staff_reports_type_listing">Elenku</string>
     <string name="staff_reports_type_user">Utent</string>
     <string name="staff_reports_view">Ara</string>
     <string name="staff_reviews_action_remove">Neħħi</string>
@@ -357,20 +357,20 @@
     <string name="staff_sidebar_appeals">Appelli</string>
     <string name="staff_sidebar_categories">Kategoriji</string>
     <string name="staff_sidebar_config">Konfigurazzjoni</string>
-    <string name="staff_sidebar_dashboard">Dashboard</string>
+    <string name="staff_sidebar_dashboard">Pannell ta\' kontroll</string>
     <string name="staff_sidebar_disputes">Tilwim</string>
-    <string name="staff_sidebar_listings">Listings</string>
+    <string name="staff_sidebar_listings">Elenki</string>
     <string name="staff_sidebar_management">Maniġġjar</string>
     <string name="staff_sidebar_market">Suq</string>
     <string name="staff_sidebar_moderation">Log tal-moderazzjoni</string>
     <string name="staff_sidebar_overview">Ħarsa ġenerali</string>
     <string name="staff_sidebar_reports">Rapporti</string>
-    <string name="staff_sidebar_reviews">Reviews</string>
-    <string name="staff_sidebar_settings">Settings</string>
+    <string name="staff_sidebar_reviews">Reċensjonijiet</string>
+    <string name="staff_sidebar_settings">Issettjar</string>
     <string name="staff_sidebar_team">Tim</string>
     <string name="staff_status_actioned">Sar</string>
     <string name="staff_status_active">Attiv</string>
-    <string name="staff_status_admin">Admin</string>
+    <string name="staff_status_admin">Amministratur</string>
     <string name="staff_status_appealed">Appellat</string>
     <string name="staff_status_approved">Approvat</string>
     <string name="staff_status_auto_approved">Approvat awtomatikament</string>
@@ -383,7 +383,7 @@
     <string name="staff_status_hold">Żomm</string>
     <string name="staff_status_manual">Manwali</string>
     <string name="staff_status_moderator">Moderatur</string>
-    <string name="staff_status_open">Iftaħ</string>
+    <string name="staff_status_open">Miftuħ</string>
     <string name="staff_status_pending">Pendenti</string>
     <string name="staff_status_published">Ippubblikat</string>
     <string name="staff_status_rejected">Irrifjutat</string>
@@ -391,8 +391,8 @@
     <string name="staff_status_resolved_buyer">Solvut (xerrej)</string>
     <string name="staff_status_resolved_seller">Solvut (bejjiegħ)</string>
     <string name="staff_status_responded">Wieġeb</string>
-    <string name="staff_status_review">Irrevedi</string>
-    <string name="staff_status_reviewed">Reviewed</string>
+    <string name="staff_status_review">Rieżami</string>
+    <string name="staff_status_reviewed">Rivedut</string>
     <string name="staff_status_reviewing">Qed jirrevedi</string>
     <string name="staff_status_soft_approved">Approvat artab</string>
     <string name="staff_status_sold">Mibjugħ</string>
@@ -413,19 +413,19 @@
     <string name="staff_team_remove_confirm">Neħħi</string>
     <string name="staff_team_remove_desc">Tneħħi dan il-membru mit-team tal-istaff?</string>
     <string name="staff_team_remove_title">Neħħi membru tat-team</string>
-    <string name="staff_team_role_admin">Admin</string>
+    <string name="staff_team_role_admin">Amministratur</string>
     <string name="staff_team_role_moderator">Moderatur</string>
     <string name="staff_team_role_support">Appoġġ</string>
     <string name="staff_team_toast_add_failed">Ma rnexxiex jiżdied il-membru</string>
     <string name="staff_team_toast_removed">Tneħħa l-membru</string>
     <string name="staff_team_toast_role_updated">Ir-rwol ġie aġġornat</string>
 
-    <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
+    <string name="staff_audit_action_auction_cancelled">Irkant ikkanċellat</string>
     <string name="staff_dashboard_order_fallback">Ordni #%1$s</string>
 
     <string name="staff_appeals_reason_label">Raġuni tal-appell tal-bejjiegħ</string>
     <string name="staff_audit_action_staff_team_role_changed">Rwol tal-istaff inbidel</string>
-    <string name="staff_disputes_dialog_title_chargeback">Chargeback: %1$s</string>
+    <string name="staff_disputes_dialog_title_chargeback">Rifużjoni imposta: %1$s</string>
     <string name="staff_disputes_dialog_title_view">Ara t-tilwima</string>
     <string name="staff_disputes_meta_buyer_details">Dettalji tax-xerrej</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">miżmum minn Stripe</string>

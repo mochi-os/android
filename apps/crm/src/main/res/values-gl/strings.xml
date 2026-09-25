@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="crm_list_title">CRMs</string>
+    <string name="crm_list_title">CRM</string>
     <string name="crm_list_search">Buscar</string>
     <string name="crm_list_find">Buscar CRMs</string>
     <string name="crm_list_logout">Pechar sesión</string>

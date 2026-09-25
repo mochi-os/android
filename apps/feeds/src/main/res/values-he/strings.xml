@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">עדיין אין פוסטים</string>
     <string name="feeds_sort_label">מיין</string>
     <string name="feeds_sort_interests">תחומי עניין</string>
-    <string name="feeds_sort_new">חדש</string>
+    <string name="feeds_sort_new">חדשים</string>
     <string name="feeds_sort_hot">חם</string>
-    <string name="feeds_sort_top">ראש</string>
+    <string name="feeds_sort_top">מובילים</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">פוסט</string>
     <string name="feeds_image_preview">תצוגה מקדימה</string>
@@ -29,11 +29,11 @@
     <string name="feeds_cancel_reply">בטל תשובה</string>
     <string name="feeds_edit_post">ערוך פוסט</string>
     <string name="feeds_save_label">שמור</string>
-    <string name="feeds_post_action">פוסט</string>
+    <string name="feeds_post_action">פרסם</string>
     <string name="feeds_feed_label">פיד</string>
     <string name="feeds_add_files">הוסף קבצים</string>
     <string name="feeds_restore">שחזר</string>
-    <string name="feeds_check_in">הירשמות</string>
+    <string name="feeds_check_in">צ\'ק-אין</string>
     <string name="feeds_travelling">בנסיעה</string>
     <string name="feeds_tab_sources">מקורות</string>
     <string name="feeds_sources_title">מקורות</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">התנתק</string>
     <string name="feeds_ai_account_default">חשבון ברירת מחדל</string>
     <string name="feeds_ai_mode_off">מושבת</string>
-    <string name="feeds_ai_mode_tag">תגית</string>
+    <string name="feeds_ai_mode_tag">תייג</string>
     <string name="feeds_ai_mode_tag_deduplicate">תייג + הסר כפילויות</string>
     <string name="feeds_feed_not_found">הפיד לא נמצא</string>
     <string name="feeds_post_not_found">הפוסט לא נמצא</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">תחום העניין הופחת</string>
     <string name="feeds_interest_removed">תחום העניין הוסר</string>
     <string name="feeds_interest_failed">התאמת תחום העניין נכשלה</string>
-    <string name="feeds_saved_title">נשמר</string>
-    <string name="feeds_saved_menu">נשמר</string>
+    <string name="feeds_saved_title">שמורים</string>
+    <string name="feeds_saved_menu">שמורים</string>
     <string name="feeds_saved_save">שמירה למועד מאוחר יותר</string>
     <string name="feeds_saved_remove">הסרה מהשמורים</string>
     <string name="feeds_saved_clear_all">נקה הכול</string>
@@ -167,7 +167,7 @@
     <string name="feeds_settings_section_identity">זהות</string>
     <string name="feeds_unsubscribe">בטל הרשמה</string>
     <string name="feeds_unsubscribed">ההרשמה בוטלה</string>
-    <string name="feeds_access_level_comment_full">הגב, הגב ב-react וצפה</string>
+    <string name="feeds_access_level_comment_full">הגב, הוסף ריאקציה וצפה</string>
     <string name="feeds_rss_mode_posts_comments">פוסטים ותגובות</string>
     <string name="feeds_access_add_title">הוסף גישה</string>
     <string name="feeds_permission_request_message">%1$s מבקש את ההרשאה הבאה:</string>

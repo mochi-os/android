@@ -107,7 +107,7 @@
     <string name="market_editor_asset_external_filename">اسم الملف</string>
     <string name="market_editor_back">رجوع</string>
     <string name="market_editor_category">الفئة</string>
-    <string name="market_editor_condition">الشرط</string>
+    <string name="market_editor_condition">الحالة</string>
     <string name="market_editor_condition_new">جديد</string>
     <string name="market_editor_condition_refurbished">مُجدَّد</string>
     <string name="market_editor_condition_used">مستعمل</string>
@@ -149,7 +149,7 @@
     <string name="market_filter_apply">تطبيق</string>
     <string name="market_filter_category">الفئة</string>
     <string name="market_filter_clear">مسح الفلاتر</string>
-    <string name="market_filter_condition">الشرط</string>
+    <string name="market_filter_condition">الحالة</string>
     <string name="market_filter_condition_new">جديد</string>
     <string name="market_filter_condition_refurbished">مُجدَّد</string>
     <string name="market_filter_condition_used">مستعمل</string>
@@ -183,7 +183,7 @@
     <string name="market_listing_detail_load_failed">فشل تحميل القائمة</string>
     <string name="market_listing_detail_listed">أُدرج %1$s</string>
     <string name="market_listing_detail_location_heading">الموقع</string>
-    <string name="market_listing_detail_message">رسالة</string>
+    <string name="market_listing_detail_message">مراسلة</string>
     <string name="market_listing_detail_message_seller">مراسلة البائع</string>
     <string name="market_listing_detail_not_found">القائمة غير موجودة</string>
     <string name="market_listing_detail_place_bid">تقديم مزايدة</string>
@@ -324,7 +324,7 @@
     <string name="market_sale_shipped_label">تم الشحن</string>
     <string name="market_sale_title">بيع</string>
     <string name="market_sale_tracking_label">رقم التتبع</string>
-    <string name="market_saved_title">تم الحفظ</string>
+    <string name="market_saved_title">المحفوظات</string>
     <string name="market_search_clear">مسح البحث</string>
     <string name="market_section_categories">تصفح الفئات</string>
     <string name="market_section_listings">أحدث الإعلانات</string>
@@ -348,7 +348,7 @@
     <string name="market_sidebar_purchases">المشتريات</string>
     <string name="market_sidebar_reviews">المراجعات</string>
     <string name="market_sidebar_sales">المبيعات</string>
-    <string name="market_sidebar_saved">تم الحفظ</string>
+    <string name="market_sidebar_saved">المحفوظات</string>
     <string name="market_sidebar_selling">البيع</string>
     <string name="market_sidebar_settings">الإعدادات</string>
     <string name="market_sidebar_subscribers">المشتركون</string>

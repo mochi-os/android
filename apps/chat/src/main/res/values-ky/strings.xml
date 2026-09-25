@@ -25,7 +25,7 @@
     <string name="chat_chat_not_found">Чат табылган жок</string>
 
     <string name="chat_message_send">Жөнөтүү</string>
-    <string name="chat_attachment_remove">Remove attachment</string>
+    <string name="chat_attachment_remove">Тиркемени алып салуу</string>
     <string name="chat_attachment_move_up">Жогору жылдыруу</string>
     <string name="chat_attachment_move_down">Төмөн жылдыруу</string>
 

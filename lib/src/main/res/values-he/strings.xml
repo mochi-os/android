@@ -38,7 +38,7 @@
     <string name="access_add_rule">הוסף כלל</string>
     <string name="access_owner">בעלים</string>
     <string name="access_revoke">בטל</string>
-    <string name="access_level_comment">תגובה</string>
+    <string name="access_level_comment">הגב</string>
     <string name="access_level_view">הצג</string>
     <string name="access_level_none">ללא</string>
     <string name="reaction_like">לייק</string>

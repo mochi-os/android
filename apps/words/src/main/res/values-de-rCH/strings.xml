@@ -20,7 +20,7 @@
     <string name="words_new_game_language_us">Englisch (US)</string>
     <string name="words_new_game_start">Spiel starten</string>
     <string name="words_new_game_no_friends_title">Noch keine Freundinnen und Freunde</string>
-    <string name="words_new_game_no_friends_subtitle">Fügen Sie in der App «Leute» Freundinnen und Freunde hinzu, um zu spielen.</string>
+    <string name="words_new_game_no_friends_subtitle">Fügen Sie in der App «Personen» Freundinnen und Freunde hinzu, um zu spielen.</string>
     <string name="words_new_game_add_friends">Freundinnen und Freunde hinzufügen</string>
     <string name="words_detail_title">Spiel</string>
     <string name="words_detail_status_your_move">Ihr Zug</string>

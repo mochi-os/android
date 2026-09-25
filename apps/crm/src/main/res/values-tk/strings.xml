@@ -67,7 +67,7 @@
     <string name="crm_board_rename">Adyny üýtget</string>
     <string name="crm_board_rename_column">Sütünüň adyny üýtget</string>
     <string name="crm_move_position">Pozisiýa</string>
-    <string name="crm_move_position_top">Ýokarky</string>
+    <string name="crm_move_position_top">Iň ýokary</string>
     <string name="crm_move_current">Häzirki</string>
     <string name="crm_design_title">Dizaýn</string>
     <string name="crm_design_export">Dizaýny eksport et</string>
@@ -126,9 +126,9 @@
     <string name="crm_not_found">Taslama tapylmady</string>
     <string name="crm_more">Has köp</string>
     <string name="crm_comment_send">Iber</string>
-    <string name="crm_field_position_body">Tekst</string>
+    <string name="crm_field_position_body">Esasy bölüm</string>
     <string name="crm_sort_field">Tertiplemek</string>
-    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_comment_remove_attachment">Goşundyny aýyr</string>
     <string name="crm_views_sort_by">Tertiplemek</string>
     <string name="crm_views_move_up">Ýokarlat</string>
     <string name="crm_class_move_up">Ýokarlat</string>
@@ -241,7 +241,7 @@
     <string name="crm_access_no_groups">Elýeterli toparlar ýok</string>
     <string name="crm_access_tab_users">Ulanyjylar</string>
     <string name="crm_access_tab_groups">Toparlar</string>
-    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_attachment_remove">Goşundyny aýyr</string>
     <string name="crm_board_add_column">Sütün goşmak</string>
     <string name="crm_settings_entity_id">Essas ID</string>
     <string name="crm_settings_fingerprint">Barmak yzy</string>

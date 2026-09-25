@@ -29,7 +29,7 @@
     <string name="projects_sort_label">Сортировка</string>
     <string name="projects_sort_direction">Направление</string>
     <string name="projects_sort_rank">Вручную</string>
-    <string name="projects_sort_number">Число</string>
+    <string name="projects_sort_number">Номер</string>
     <string name="projects_sort_created">Создано</string>
     <string name="projects_sort_updated">Обновлено</string>
     <string name="projects_create_object_type">Тип</string>
@@ -93,20 +93,20 @@
     <string name="projects_request_create_action">Создать</string>
     <string name="projects_diff_unified">Объединённый</string>
     <string name="projects_diff_split">Разделить</string>
-    <string name="projects_diff_empty">Diff недоступен</string>
+    <string name="projects_diff_empty">Различия недоступны</string>
     <string name="projects_board_unassigned">Не назначено</string>
     <string name="projects_board_new">Новый</string>
     <string name="projects_board_rename">Переименовать</string>
     <string name="projects_board_rename_column">Переименовать столбец</string>
     <string name="projects_move_position">Позиция</string>
-    <string name="projects_move_position_top">Верх</string>
+    <string name="projects_move_position_top">Наверх</string>
     <string name="projects_move_current">Текущая</string>
     <string name="projects_design_title">Дизайн</string>
     <string name="projects_design_export">Экспортировать макет</string>
     <string name="projects_design_import">Импортировать макет</string>
     <string name="projects_design_imported">Дизайн импортирован</string>
     <string name="projects_design_tab_classes">Классы</string>
-    <string name="projects_design_tab_views">Просмотры</string>
+    <string name="projects_design_tab_views">Виды</string>
     <string name="projects_design_import_dialog_title">Импортировать макет</string>
     <string name="projects_design_import_choose_template">Выберите шаблон</string>
     <string name="projects_design_replace_title">Заменить дизайн?</string>
@@ -149,7 +149,7 @@
     <string name="projects_views_type_board">Доска</string>
     <string name="projects_views_type_list">Список</string>
     <string name="projects_views_direction">Направление</string>
-    <string name="projects_views_sort_number">Число</string>
+    <string name="projects_views_sort_number">Номер</string>
     <string name="projects_views_sort_created">Создано</string>
     <string name="projects_views_sort_updated">Обновлено</string>
     <string name="projects_views_sort_rank">Ранг</string>
@@ -158,7 +158,7 @@
     <string name="projects_more">Ещё</string>
     <string name="projects_request_more">Ещё</string>
     <string name="projects_comment_send">Отправить</string>
-    <string name="projects_field_position_body">Текст</string>
+    <string name="projects_field_position_body">Основная часть</string>
     <string name="projects_sort_field">Сортировать по</string>
     <string name="projects_comment_remove_attachment">Удалить вложение</string>
     <string name="projects_views_sort_by">Сортировать по</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Поиск объектов</string>
 
     <string name="notification_channel_projects">Уведомления проектов</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Проекты</string>
     <string name="projects_auth_create_identity_failed">Не удалось создать личность</string>
     <string name="projects_auth_mfa_unsupported">MFA пока не поддерживается в мобильном приложении</string>
     <string name="projects_auth_enter_code_sent">Введите код, отправленный на %1$s</string>
@@ -239,8 +239,8 @@
     <string name="projects_request_mark_ready">Отметить как готовый</string>
     <string name="projects_request_merge_default_message">Слияние %1$s в %2$s</string>
     <string name="projects_request_commit_message">Сообщение коммита</string>
-    <string name="projects_request_method_squash">Squash</string>
-    <string name="projects_request_method_rebase">Rebase</string>
+    <string name="projects_request_method_squash">Объединить коммиты</string>
+    <string name="projects_request_method_rebase">Перебазировать</string>
     <string name="projects_request_create_title">Создать запрос на слияние</string>
     <string name="projects_request_field_target">Целевая ветка</string>
     <string name="projects_diff_title">Различия: %1$s -&gt; %2$s</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Выберите правило</string>
     <string name="projects_access_authenticated_desc">Все, кто вошёл в систему</string>
     <string name="projects_access_anyone_desc">Включая анонимных пользователей</string>
-    <string name="projects_access_target">Цель</string>
+    <string name="projects_access_target">Пользователь или группа</string>
     <string name="projects_access_target_hint">ID сущности, @группа, * (все) или + (участники)</string>
     <string name="projects_access_selected">Выбрано: %1$s</string>
     <string name="projects_access_role_comment">Комментировать и просматривать</string>

@@ -10,7 +10,7 @@
     <string name="calendars_delete">Efase</string>
     <string name="calendars_previous">Anvan</string>
     <string name="calendars_next">Pwochen</string>
-    <string name="calendars_view">Wè</string>
+    <string name="calendars_view">Vi</string>
     <string name="calendars_view_list">Lis</string>
     <string name="calendars_list_search">Chèche</string>
     <string name="calendars_event_untitled">San tit</string>
@@ -169,7 +169,7 @@
     <string name="calendars_subscribe_server_url">Adrès sèvè a</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google Kalandriye</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Kont Google yo pa aktive sou sèvè sa a. Aktive yo anba Paramèt, Paramèt sistèm.</string>
     <string name="calendars_subscribe_google_connect">Ou pa konekte okenn kont Google.</string>

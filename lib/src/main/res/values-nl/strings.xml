@@ -38,7 +38,7 @@
     <string name="access_add_rule">Regel toevoegen</string>
     <string name="access_owner">Eigenaar</string>
     <string name="access_revoke">Intrekken</string>
-    <string name="access_level_comment">Reactie</string>
+    <string name="access_level_comment">Reageren</string>
     <string name="access_level_view">Bekijken</string>
     <string name="access_level_none">Geen</string>
     <string name="reaction_like">Vind ik leuk</string>
@@ -190,7 +190,7 @@
     <string name="format_time_weeks_short">%1$dw</string>
     <string name="format_time_months_short">%1$dmnd</string>
     <string name="reaction_add">Reactie toevoegen</string>
-    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel">Mochi-pushmeldingen</string>
     <string name="push_service_channel_description">Houdt Mochi verbonden om meldingen te ontvangen</string>
     <string name="push_service_group">Achtergrondservice</string>
     <string name="push_service_title">Mochi luistert naar meldingen</string>
@@ -204,7 +204,7 @@
     <string name="oem_hint_allow">Achtergrond toestaan</string>
     <string name="oem_hint_dismiss">Niet meer tonen</string>
     <string name="about_label">Over</string>
-    <string name="about_title">Mochi Client</string>
+    <string name="about_title">Mochi-client</string>
     <string name="about_version">Versie %1$s</string>
     <string name="about_check_updates">Controleren op updates</string>
     <string name="about_up_to_date">Up-to-date</string>

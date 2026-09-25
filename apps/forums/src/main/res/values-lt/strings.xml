@@ -24,13 +24,13 @@
     <string name="forums_settings">Nustatymai</string>
     <string name="forums_load_more">Įkelti daugiau</string>
     <string name="forums_sort_label">Rūšiuoti</string>
-    <string name="forums_sort_new">Naujas</string>
+    <string name="forums_sort_new">Naujausi</string>
     <string name="forums_sort_hot">Karšta</string>
-    <string name="forums_sort_top">Viršus</string>
+    <string name="forums_sort_top">Geriausia</string>
     <string name="forums_sort_interests">Pomėgiai</string>
     <string name="forums_post_title_field">Pavadinimas</string>
     <string name="forums_post_attach">Pridėti failus</string>
-    <string name="forums_post_create_action">Įrašas</string>
+    <string name="forums_post_create_action">Skelbti</string>
     <string name="forums_post_edit">Redaguoti įrašą</string>
     <string name="forums_post_edit_title">Redaguoti įrašą</string>
     <string name="forums_post_edit_title_field">Pavadinimas</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Nariai</string>
     <string name="forums_tab_banner">Reklamjuostė</string>
     <string name="forums_tab_ai">DI</string>
-    <string name="forums_access_target">Tikslas</string>
+    <string name="forums_access_target">Vartotojas ar grupė</string>
     <string name="forums_access_level_view">Peržiūrėti</string>
     <string name="forums_access_level_vote">Balsuoti</string>
-    <string name="forums_access_level_comment">Komentaras</string>
-    <string name="forums_access_level_post">Įrašas</string>
+    <string name="forums_access_level_comment">Komentuoti</string>
+    <string name="forums_access_level_post">Skelbti</string>
     <string name="forums_access_level_none">Nėra</string>
     <string name="forums_members_empty">Narių nėra</string>
     <string name="forums_banner_dismiss">Atmesti reklamjuostę</string>
-    <string name="forums_ai_mode_tag">Žyma</string>
+    <string name="forums_ai_mode_tag">Žymėti</string>
     <string name="forums_ai_account_default">Numatytoji paskyra</string>
     <string name="forums_ai_prompt_reset">Atstatyti į numatytąjį</string>
     <string name="forums_settings_unsubscribe">Atšaukti prenumeratą</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_login_failed">Prisijungti nepavyko</string>
 
     <string name="notification_channel_forums">Forumų pranešimai</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Forumai</string>
     <string name="forums_auth_create_identity_failed">Nepavyko sukurti tapatybės</string>
     <string name="forums_auth_mfa_unsupported">MFA dar nepalaikomas mobiliojoje programėlėje</string>
     <string name="forums_auth_enter_code_sent">Įveskite kodą, išsiųstą į %1$s</string>

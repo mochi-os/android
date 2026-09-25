@@ -9,13 +9,13 @@
     <string name="launcher_people">Mochi מענטשן</string>
     <string name="launcher_settings">Mochi אײַנשטעלונגען</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
-    <string name="launcher_chess">Mochi שאַך</string>
-    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_wikis">Mochi וויקיס</string>
+    <string name="launcher_chess">Mochi שאָך</string>
+    <string name="launcher_go">Mochi גאָו</string>
     <string name="launcher_words">Mochi ווערטער</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi מאַרק</string>
     <string name="launcher_calendars">Mochi קאַלענדאַרן</string>
-    <string name="launcher_staff">Mochi שטאַב</string>
+    <string name="launcher_staff">Mochi פּערסאָנאַל</string>
 
 
     <string name="app_name">Mochi</string>

@@ -69,7 +69,7 @@
     <string name="market_checkout_back">Voltar</string>
     <string name="market_checkout_buy_it_now">Compre agora</string>
     <string name="market_checkout_create_failed">Falha ao criar pedido</string>
-    <string name="market_checkout_delivery_download">Baixar</string>
+    <string name="market_checkout_delivery_download">Download</string>
     <string name="market_checkout_delivery_method">Método de entrega</string>
     <string name="market_checkout_delivery_pickup">Retirada</string>
     <string name="market_checkout_delivery_shipping">Envio</string>
@@ -149,7 +149,7 @@
     <string name="market_filter_condition_refurbished">Recondicionado</string>
     <string name="market_filter_condition_used">Usado</string>
     <string name="market_filter_delivery">Entrega</string>
-    <string name="market_filter_delivery_download">Baixar</string>
+    <string name="market_filter_delivery_download">Download</string>
     <string name="market_filter_delivery_pickup">Retirada</string>
     <string name="market_filter_delivery_shipping">Envio</string>
     <string name="market_filter_price_max">Máx</string>
@@ -178,7 +178,7 @@
     <string name="market_listing_detail_load_failed">Falha ao carregar anúncio</string>
     <string name="market_listing_detail_listed">Anunciado em %1$s</string>
     <string name="market_listing_detail_location_heading">Localização</string>
-    <string name="market_listing_detail_message">Mensagem</string>
+    <string name="market_listing_detail_message">Enviar mensagem</string>
     <string name="market_listing_detail_message_seller">Enviar mensagem ao vendedor</string>
     <string name="market_listing_detail_not_found">Anúncio não encontrado</string>
     <string name="market_listing_detail_place_bid">Dar lance</string>
@@ -240,7 +240,7 @@
     <string name="market_purchase_refunded">Reembolsado</string>
     <string name="market_purchase_refunded_partial">Reembolsado (parcial)</string>
     <string name="market_purchase_request_refund">Solicitar reembolso</string>
-    <string name="market_purchase_review_body">Avaliar</string>
+    <string name="market_purchase_review_body">Avaliação</string>
     <string name="market_purchase_review_failed">Falha ao enviar avaliação</string>
     <string name="market_purchase_review_hidden">Oculto até que o vendedor avalie você, ou após 14 dias.</string>
     <string name="market_purchase_review_prompt_body">Ajude outros compradores — conte como foi este pedido.</string>
@@ -298,7 +298,7 @@
     <string name="market_sale_carrier_other">Outro</string>
     <string name="market_sale_completed_label">Concluído</string>
     <string name="market_sale_dispute_respond">Responder</string>
-    <string name="market_sale_dispute_state_open">Abrir</string>
+    <string name="market_sale_dispute_state_open">Aberto</string>
     <string name="market_sale_dispute_state_resolved">Resolvido</string>
     <string name="market_sale_load_failed">Falha ao carregar pedido</string>
     <string name="market_sale_message_buyer">Enviar mensagem ao comprador</string>
@@ -316,7 +316,7 @@
     <string name="market_sale_shipped_label">Enviado</string>
     <string name="market_sale_title">Venda</string>
     <string name="market_sale_tracking_label">Número de rastreamento</string>
-    <string name="market_saved_title">Salvo</string>
+    <string name="market_saved_title">Salvos</string>
     <string name="market_search_clear">Limpar pesquisa</string>
     <string name="market_section_categories">Explorar categorias</string>
     <string name="market_section_listings">Anúncios recentes</string>
@@ -340,7 +340,7 @@
     <string name="market_sidebar_purchases">Compras</string>
     <string name="market_sidebar_reviews">Avaliações</string>
     <string name="market_sidebar_sales">Vendas</string>
-    <string name="market_sidebar_saved">Salvo</string>
+    <string name="market_sidebar_saved">Salvos</string>
     <string name="market_sidebar_selling">Vendendo</string>
     <string name="market_sidebar_settings">Configurações</string>
     <string name="market_sidebar_subscribers">Inscritos</string>

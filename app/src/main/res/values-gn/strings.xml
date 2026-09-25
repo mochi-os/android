@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Mochi Feeds</string>
-    <string name="launcher_chat">Mochi Chat</string>
-    <string name="launcher_forums">Mochi Foros</string>
-    <string name="launcher_projects">Mochi Mba\'apokuéra</string>
+    <string name="launcher_feeds">Mochi Marandu syrykuéra</string>
+    <string name="launcher_chat">Mochi Ñomongeta</string>
+    <string name="launcher_forums">Mochi Forumkuéra</string>
+    <string name="launcher_projects">Mochi Proyectokuéra</string>
     <string name="launcher_crm">Mochi CRM</string>
     <string name="launcher_people">Mochi Tapichakuéra</string>
-    <string name="launcher_settings">Mochi Ñemboheko</string>
+    <string name="launcher_settings">Mochi Mbojahakuéra</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wikikuéra</string>
     <string name="launcher_chess">Mochi Ajedrez</string>
     <string name="launcher_go">Mochi Go</string>
     <string name="launcher_words">Mochi Ñe\'ẽkuéra</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi Mercado</string>
     <string name="launcher_calendars">Mochi Arapapahakuéra</string>
     <string name="launcher_staff">Mochi Mba\'apohára</string>
 

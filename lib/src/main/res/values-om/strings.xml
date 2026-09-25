@@ -38,7 +38,7 @@
     <string name="access_add_rule">Seera dabaluu</string>
     <string name="access_owner">Abbaa qabeenyaa</string>
     <string name="access_revoke">Haqi</string>
-    <string name="access_level_comment">Yaada</string>
+    <string name="access_level_comment">Yaada kenni</string>
     <string name="access_level_view">Daawwadhu</string>
     <string name="access_level_none">Tokko illee</string>
     <string name="reaction_like">Jaalladha</string>
@@ -66,7 +66,7 @@
     <string name="settings_appearance_light">Ifaa</string>
     <string name="settings_appearance_dark">Dukkanaa</string>
     <string name="settings_density">Tuuluma</string>
-    <string name="settings_density_compact">Compact</string>
+    <string name="settings_density_compact">Walitti qabame</string>
     <string name="settings_density_comfortable">Bal\'aa</string>
     <string name="settings_density_spacious">Bal\'aa</string>
     <string name="settings_radius_none">Tokko illee</string>
@@ -95,8 +95,8 @@
     <string name="settings_week_sunday">Dilbata</string>
     <string name="settings_number_format">Bifa lakkoofsaa</string>
     <string name="settings_units">Yunitoota</string>
-    <string name="settings_units_metric">Metric</string>
-    <string name="settings_units_imperial">Imperial</string>
+    <string name="settings_units_metric">Meetrikii</string>
+    <string name="settings_units_imperial">Imperiyaal</string>
     <string name="settings_time_zone">Naannoo yeroo</string>
     <string name="settings_reset_to_defaults">Gara durtiitti deebisi</string>
     <string name="settings_reset_confirm_title">Filannoowwan deebisuuf?</string>
@@ -185,11 +185,11 @@
     <string name="format_time_weeks_ago">%1$dw dura</string>
     <string name="format_time_months_ago">%1$dmo dura</string>
     <string name="format_time_years_ago">%1$dy dura</string>
-    <string name="format_time_minutes_short">%1$dm</string>
-    <string name="format_time_hours_short">%1$dh</string>
-    <string name="format_time_days_short">%1$dd</string>
-    <string name="format_time_weeks_short">%1$dw</string>
-    <string name="format_time_months_short">%1$dmo</string>
+    <string name="format_time_minutes_short">%1$d daq</string>
+    <string name="format_time_hours_short">%1$d sa\'a</string>
+    <string name="format_time_days_short">%1$d guy</string>
+    <string name="format_time_weeks_short">%1$d tor</string>
+    <string name="format_time_months_short">%1$d ji\'a</string>
     <string name="reaction_add">Deebii dabali</string>
     <string name="push_service_channel">Dhiibbaa Mochi</string>
     <string name="push_service_channel_description">Beeksisa fudhachuuf Mochi walitti hidhamee tursiisa</string>
@@ -293,7 +293,7 @@
     <string name="format_italic">Jallataa</string>
     <string name="format_link">Geessituu</string>
     <string name="format_heading">Mata duree</string>
-    <string name="format_code">Lakkoofsa</string>
+    <string name="format_code">Koodii</string>
     <string name="format_list">Tarree qabxii</string>
     <string name="common_preview">Dursanii ilaaluu</string>
     <string name="rss_revoke_confirm">Haqi</string>

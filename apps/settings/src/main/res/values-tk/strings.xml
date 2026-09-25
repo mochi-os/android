@@ -25,7 +25,7 @@
     <string name="account_oauth_link">Hasaby baglanyşdyr</string>
     <string name="account_unlink">Baglanyşdyrmany aýyr</string>
     <string name="account_cancel">Ýatyrmak</string>
-    <string name="account_save">Saklaýyş</string>
+    <string name="account_save">Saklamak</string>
     <string name="account_done">Taýýar</string>
     <string name="account_delete">Pozmak</string>
     <string name="account_rename">Adyny üýtget</string>
@@ -40,7 +40,7 @@
     <string name="route_add_title">Ýol goşmak</string>
     <string name="route_edit">Ugry düzet</string>
     <string name="route_edit_title">Ugry düzet</string>
-    <string name="route_save">Saklaýyş</string>
+    <string name="route_save">Saklamak</string>
     <string name="route_delete">Ýoly pozmak</string>
     <string name="route_delete_title">Ýoly pozmaly?</string>
     <string name="route_path">Ýol</string>
@@ -113,7 +113,7 @@
     <string name="system_documents_customised">Hususylaşdyryldy</string>
     <string name="system_documents_using_default">Toplumy esasyny ulanýar</string>
     <string name="system_documents_revert">Deslapky baha gaýtar</string>
-    <string name="system_documents_save">Saklaýyş</string>
+    <string name="system_documents_save">Saklamak</string>
     <string name="system_documents_saved">Resminama saklandy</string>
     <string name="system_documents_save_failed">Resminama saklanyp galynmady</string>
     <string name="settings_home_system_documents">Resminamalar</string>
@@ -130,7 +130,7 @@
     <string name="system_settings_state_required">Talap edilýär</string>
     <string name="system_settings_empty">(boş)</string>
     <string name="system_settings_configured">Sazlanan</string>
-    <string name="system_settings_save">Saklaýyş</string>
+    <string name="system_settings_save">Saklamak</string>
     <string name="system_settings_clear">Arassalamak</string>
     <string name="system_settings_reset">Täzeden başlat</string>
     <string name="system_settings_reset_to_default">Deslapky baha gaýtar</string>
@@ -358,7 +358,7 @@
     <string name="route_target_none">Elýeterli maksat ýok</string>
     <string name="login_invalid_code">Nädogry kod</string>
     <string name="accounts_provider_browser">Brauzer bildirişleri</string>
-    <string name="accounts_provider_fcm">Android push</string>
+    <string name="accounts_provider_fcm">Android push bildirişleri</string>
     <string name="accounts_provider_mcp">MCP serweri</string>
     <string name="accounts_provider_unifiedpush">Push bildirişi</string>
     <string name="accounts_provider_url">Daşarky URL</string>
@@ -376,10 +376,10 @@
     <string name="accounts_forget_message">Bu \"%1$s\" enjamyny unudar we oňa bildirişleri togtadar.</string>
     <string name="accounts_device_seen">Soňky gezek görüldi %1$s</string>
     <string name="notifprefs_device_app">%1$s · programma</string>
-    <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_device_push">%1$s · push bildirişleri</string>
     <string name="notifprefs_test_partial">Synag %2$d barjak ýerden %1$d-e iberildi</string>
     <string name="notifprefs_test_none">Mejburyýet ýerleri düzülmedi</string>
-    <string name="notifprefs_transport_fcm">Android push</string>
+    <string name="notifprefs_transport_fcm">Android push bildirişleri</string>
     <string name="notifprefs_no_destinations">Manzylsyz</string>
     <string name="account_data_generate">Parol söz düzümini dörediň</string>
     <string name="accounts_field_server">Server URL</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="wikis_sidebar_header">Wiki</string>
+    <string name="wikis_sidebar_header">Vikiai</string>
     <string name="wikis_sidebar_all">Visi wiki</string>
     <string name="wikis_sidebar_find">Rasti wiki</string>
     <string name="wikis_sidebar_create">Sukurti wiki</string>
@@ -23,7 +23,7 @@
     <string name="wikis_page_action_new_page">Naujas puslapis</string>
     <string name="wikis_page_action_settings">Nustatymai</string>
     <string name="wikis_page_action_unsubscribe">Atšaukti prenumeratą</string>
-    <string name="wikis_title">Wiki</string>
+    <string name="wikis_title">Vikiai</string>
     <string name="wikis_empty_title">Pradėkite savo pirmąjį wiki</string>
     <string name="wikis_empty_subtitle">Ieškokite wiki, kurio prenumeruoti, arba sukurkite savo dokumentacijai skelbti.</string>
     <string name="wikis_create_button">Sukurti wiki</string>

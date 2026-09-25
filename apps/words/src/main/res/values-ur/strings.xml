@@ -19,10 +19,10 @@
     <string name="words_detail_status_you_resigned">آپ نے دستبرداری اختیار کی</string>
     <string name="words_detail_label_you">آپ</string>
     <string name="words_detail_action_shuffle">ریک شفل کریں</string>
-    <string name="words_detail_action_pass">pass</string>
+    <string name="words_detail_action_pass">باری چھوڑیں</string>
     <string name="words_detail_action_exchange">ٹائلز تبدیل کریں</string>
     <string name="words_detail_action_cancel_exchange">تبادلہ منسوخ کریں</string>
-    <string name="words_detail_action_resign">resign کریں</string>
+    <string name="words_detail_action_resign">ہار مانیں</string>
     <string name="words_detail_action_rematch">دوبارہ میچ</string>
     <string name="words_detail_action_delete">گیم حذف کریں</string>
     <string name="words_detail_chat_title">چیٹ</string>
@@ -31,7 +31,7 @@
     <string name="words_detail_cancel">منسوخ کریں</string>
     <string name="words_detail_exchange">تبدیل کریں</string>
     <string name="words_detail_blank_title">ایک حرف منتخب کریں</string>
-    <string name="words_detail_resign_title">گیم سے resign کریں؟</string>
+    <string name="words_detail_resign_title">گیم میں ہار مانیں؟</string>
     <string name="words_detail_resign_message">کیا آپ واقعی ہار ماننا چاہتے ہیں؟</string>
     <string name="words_channel_name">الفاظ اطلاعات</string>
     <string name="words_channel_description">باریوں، تبادلوں، اور کھیل کے نتائج کے بارے میں اطلاعات۔</string>

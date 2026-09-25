@@ -38,7 +38,7 @@
     <string name="access_add_rule">Pievienot noteikumu</string>
     <string name="access_owner">Īpašnieks</string>
     <string name="access_revoke">Atsaukt</string>
-    <string name="access_level_comment">Komentārs</string>
+    <string name="access_level_comment">Komentēt</string>
     <string name="access_level_view">Skatīt</string>
     <string name="access_level_none">Nav</string>
     <string name="reaction_like">Patīk</string>

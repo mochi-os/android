@@ -2,7 +2,7 @@
 <resources>
     <string name="projects_auth_display_name">Uñacht\'awi suti</string>
     <string name="projects_auth_verification_failed">Verificata</string>
-    <string name="projects_list_title">Lurawinaka</string>
+    <string name="projects_list_title">Proyectonaka</string>
     <string name="projects_list_close_search">Thaqaña jist\'antaña</string>
     <string name="projects_list_search">Thaqhama</string>
     <string name="projects_list_find">Proyectonak jikxataña</string>
@@ -80,11 +80,11 @@
     <string name="projects_request_status_draft">Borrador</string>
     <string name="projects_request_status_open">Jist\'arata</string>
     <string name="projects_request_status_merged">Mergeado</string>
-    <string name="projects_request_merge">Merge</string>
+    <string name="projects_request_merge">Mayachaña</string>
     <string name="projects_request_close">Jist\'antaña</string>
-    <string name="projects_request_merge_dialog_title">Merge</string>
+    <string name="projects_request_merge_dialog_title">Mayachaña</string>
     <string name="projects_request_method">Método</string>
-    <string name="projects_request_method_merge">Merge</string>
+    <string name="projects_request_method_merge">Mayachaña</string>
     <string name="projects_request_field_repository">Repositorio</string>
     <string name="projects_request_field_source">Origen rama</string>
     <string name="projects_request_field_title">Título</string>
@@ -105,8 +105,8 @@
     <string name="projects_design_export">Diseño mistuyaña</string>
     <string name="projects_design_import">Diseño mantayaña</string>
     <string name="projects_design_imported">Diseño apanitata</string>
-    <string name="projects_design_tab_classes">Classes</string>
-    <string name="projects_design_tab_views">Uñjatanaka</string>
+    <string name="projects_design_tab_classes">Clasenaka</string>
+    <string name="projects_design_tab_views">Uñjäwinaka</string>
     <string name="projects_design_import_dialog_title">Diseño mantayaña</string>
     <string name="projects_design_import_choose_template">Mä template ajllxaña</string>
     <string name="projects_design_replace_title">¿Diseño turkama?</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Mä regla ajlliña</string>
     <string name="projects_access_authenticated_desc">Taqi khitinakatix mantatäpki ukanaka</string>
     <string name="projects_access_anyone_desc">Jan uñt\'ata apnaqirinakampi</string>
-    <string name="projects_access_target">Objetivo</string>
+    <string name="projects_access_target">Apnaqiri jan ukax grupo</string>
     <string name="projects_access_target_hint">Uñt\'awi ID, @tama, * (taqi), jan ukax + (uskutanaka)</string>
     <string name="projects_access_selected">Ajllita: %1$s</string>
     <string name="projects_access_role_comment">Comentaña ukat uñakipaña</string>

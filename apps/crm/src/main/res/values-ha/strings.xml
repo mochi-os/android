@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="crm_list_title">CRMs</string>
+    <string name="crm_list_title">CRM</string>
     <string name="crm_list_search">Bincika</string>
     <string name="crm_list_find">Nemo CRM</string>
     <string name="crm_list_logout">Fita</string>
@@ -28,10 +28,10 @@
     <string name="crm_create_object_type">Nau\'i</string>
     <string name="crm_create_object_parent">Iyaye</string>
     <string name="crm_settings_title">Saitunan</string>
-    <string name="crm_settings_tab_general">General</string>
+    <string name="crm_settings_tab_general">Gabaɗaya</string>
     <string name="crm_settings_tab_access">Damar shiga</string>
     <string name="crm_settings_tab_people">Mutane</string>
-    <string name="crm_option_icon">Icon</string>
+    <string name="crm_option_icon">Alama</string>
     <string name="crm_option_icon_placeholder">misali Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Cire subscribe</string>
     <string name="crm_settings_delete_crm">Goge CRM</string>
@@ -45,7 +45,7 @@
     <string name="crm_object_tab_activity">Aiki</string>
     <string name="crm_parent_label">Iyaye</string>
     <string name="crm_parent_search_placeholder">Bincika</string>
-    <string name="crm_links_title">Links</string>
+    <string name="crm_links_title">Hanyoyin haɗi</string>
     <string name="crm_links_add">Ƙara hanyar haɗi</string>
     <string name="crm_links_section_blocks">Yana toshe</string>
     <string name="crm_links_section_blocked_by">An toshe ta</string>
@@ -56,7 +56,7 @@
     <string name="crm_links_no_matches">Babu objects masu daidai</string>
     <string name="crm_field_yes">Ee</string>
     <string name="crm_field_no">A\'a</string>
-    <string name="crm_field_type_checkbox">Checkbox</string>
+    <string name="crm_field_type_checkbox">Akwatin zaɓi</string>
     <string name="crm_comment_empty">Babu sharhi tukuna</string>
     <string name="crm_comment_attach">Haɗa fayiloli</string>
     <string name="crm_property_remove">Cire</string>
@@ -77,8 +77,8 @@
     <string name="crm_design_import_failed">An kasa karanta wannan fayil ɗin</string>
     <string name="crm_design_or_upload_json">Ko kuma loda fayil</string>
     <string name="crm_design_upload_json">Loda fayil ɗin .json</string>
-    <string name="crm_design_tab_classes">Classes</string>
-    <string name="crm_design_tab_views">Views</string>
+    <string name="crm_design_tab_classes">Azuzuwa</string>
+    <string name="crm_design_tab_views">Kallo</string>
     <string name="crm_design_import_dialog_title">Shigar da design</string>
     <string name="crm_design_import_choose_template">Zaɓi samfuri</string>
     <string name="crm_design_replace_title">A maye gurbin design?</string>
@@ -89,7 +89,7 @@
     <string name="crm_class_name">Suna</string>
     <string name="crm_class_save_name">Adana suna</string>
     <string name="crm_class_title_field">Filin take</string>
-    <string name="crm_class_fields">Fields</string>
+    <string name="crm_class_fields">Filaye</string>
     <string name="crm_class_add_field">Ƙara fili</string>
     <string name="crm_class_delete">Goge class</string>
     <string name="crm_class_delete_title">Goge class</string>
@@ -97,13 +97,13 @@
     <string name="crm_field_type_number">Lamba</string>
     <string name="crm_field_type_user">Mai amfani</string>
     <string name="crm_field_type_date">Kwanan wata</string>
-    <string name="crm_field_type_checklist">Checklist</string>
+    <string name="crm_field_type_checklist">Jerin dubawa</string>
     <string name="crm_field_name">Suna</string>
     <string name="crm_field_type">Nau\'i</string>
     <string name="crm_field_flags">Tutoci</string>
     <string name="crm_field_required">Ana buƙata</string>
-    <string name="crm_field_position_default">Default</string>
-    <string name="crm_field_position_sidebar">Sidebar</string>
+    <string name="crm_field_position_default">Tsoho</string>
+    <string name="crm_field_position_sidebar">Sandar gefe</string>
     <string name="crm_field_save">Adana canje-canje</string>
     <string name="crm_field_options">Zaɓuɓɓuka</string>
     <string name="crm_field_add_option">Ƙara zaɓi</string>
@@ -118,15 +118,15 @@
     <string name="crm_views_delete_title">Goge view</string>
     <string name="crm_views_type">Nau\'i</string>
     <string name="crm_views_type_board">Allo</string>
-    <string name="crm_views_type_list">List</string>
+    <string name="crm_views_type_list">Jeri</string>
     <string name="crm_views_direction">Hanya</string>
     <string name="crm_views_sort_created">An ƙirƙira</string>
     <string name="crm_views_sort_updated">An sabunta</string>
-    <string name="crm_views_sort_rank">Rank</string>
+    <string name="crm_views_sort_rank">Matsayi</string>
     <string name="crm_not_found">Ba a sami CRM ba</string>
     <string name="crm_more">Ƙari</string>
     <string name="crm_comment_send">Aika</string>
-    <string name="crm_field_position_body">Jiki</string>
+    <string name="crm_field_position_body">Babban sashe</string>
     <string name="crm_list_add_to_home">Ƙara a allon gida</string>
     <string name="crm_sort_field">Tsara ta</string>
     <string name="crm_views_move_up">Matsa sama</string>
@@ -167,7 +167,7 @@
     <string name="crm_comment_clear_reply">Share amsa</string>
     <string name="crm_comment_placeholder">Ƙara sharhi</string>
     <string name="crm_property_pick_date">Zaɓi kwanan wata</string>
-    <string name="crm_property_ok">Yi</string>
+    <string name="crm_property_ok">To</string>
     <string name="crm_property_add_item">Ƙara abu</string>
     <string name="crm_property_required">Ana buƙatar %1$s</string>
     <string name="crm_activity_empty">Babu ayyuka</string>
@@ -240,15 +240,15 @@
     <string name="crm_access_search_users">Bincika masu amfani</string>
     <string name="crm_access_no_groups">Babu ƙungiyoyi</string>
     <string name="crm_access_tab_users">Masu amfani</string>
-    <string name="crm_access_tab_groups">Groups</string>
+    <string name="crm_access_tab_groups">Ƙungiyoyi</string>
     <string name="crm_attachment_remove">Cire haɗe</string>
     <string name="crm_board_add_column">Ƙara column</string>
-    <string name="crm_settings_entity_id">Entity ID</string>
+    <string name="crm_settings_entity_id">ID ɗin mahaɗi</string>
     <string name="crm_settings_fingerprint">Sawun yatsa</string>
     <string name="crm_settings_server">Server</string>
     <string name="crm_untitled">Ba shi da suna</string>
     <string name="crm_property_select">Zaɓi …</string>
-    <string name="crm_filter">Filter</string>
+    <string name="crm_filter">Tacewa</string>
     <string name="crm_sort_filter_title">Jera da tacewa</string>
     <string name="crm_filter_clear_all">Share duka</string>
     <string name="crm_filter_all">Duka</string>

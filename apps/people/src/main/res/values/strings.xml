@@ -98,6 +98,7 @@
     <string name="people_invitations_accept_all">Accept all</string>
     <string name="people_invitations_decline_all">Decline all</string>
     <string name="people_invitations_cancel_all">Cancel all</string>
+    <string name="people_invitations_cancel">Cancel</string>
     <string name="people_invitations_all_accepted">All invitations accepted</string>
     <string name="people_invitations_all_declined">All invitations declined</string>
     <string name="people_invitations_all_cancelled">All invitations cancelled</string>

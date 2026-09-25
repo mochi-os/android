@@ -24,13 +24,13 @@
     <string name="forums_settings">Mîheng</string>
     <string name="forums_load_more">Bêtir bar bike</string>
     <string name="forums_sort_label">Rêz bike</string>
-    <string name="forums_sort_new">Nû</string>
+    <string name="forums_sort_new">Herî nû</string>
     <string name="forums_sort_hot">Germ</string>
-    <string name="forums_sort_top">Jor</string>
+    <string name="forums_sort_top">Çêtirîn</string>
     <string name="forums_sort_interests">Balkêşî</string>
     <string name="forums_post_title_field">Sernav</string>
     <string name="forums_post_attach">Pelan pêve bike</string>
-    <string name="forums_post_create_action">Poste</string>
+    <string name="forums_post_create_action">Biweşîne</string>
     <string name="forums_post_edit">Şandiyê sererast bike</string>
     <string name="forums_post_edit_title">Şandiyê sererast bike</string>
     <string name="forums_post_edit_title_field">Sernav</string>
@@ -53,17 +53,17 @@
     <string name="forums_comment_remove">Rake</string>
     <string name="forums_comment_restore">Vegerîne</string>
     <string name="forums_comment_report">Rapor bike</string>
-    <string name="forums_post_tag_label">Tag</string>
+    <string name="forums_post_tag_label">Nîşan</string>
     <string name="forums_tab_general">Giştî</string>
     <string name="forums_tab_access">Gihîştin</string>
     <string name="forums_tab_members">Endam</string>
-    <string name="forums_tab_banner">Banner</string>
+    <string name="forums_tab_banner">Pankart</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Armanc</string>
+    <string name="forums_access_target">Bikarhêner an kom</string>
     <string name="forums_access_level_view">Bibîne</string>
     <string name="forums_access_level_vote">Deng bide</string>
-    <string name="forums_access_level_comment">Şîrove</string>
-    <string name="forums_access_level_post">Poste</string>
+    <string name="forums_access_level_comment">Şîrove bike</string>
+    <string name="forums_access_level_post">Biweşîne</string>
     <string name="forums_access_level_none">Tu</string>
     <string name="forums_members_empty">Tu endam tune</string>
     <string name="forums_banner_dismiss">Bannerê red bike</string>
@@ -126,7 +126,7 @@
     <string name="forums_post_edit_body_field">Naverok</string>
     <string name="forums_comment_edit_body_field">Naverok</string>
     <string name="forums_tag_clear">Parzûnê paqij bike</string>
-    <string name="forums_post_tag_add">Add tag</string>
+    <string name="forums_post_tag_add">Tag zêde bike</string>
     <string name="forums_write_comment">Şîroveyekê binivîse…</string>
     <string name="forums_auth_login_failed">Têketin têk çû</string>
 
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">Destî</string>
     <string name="forums_access_search_users">Li bikarhêneran bigere</string>
     <string name="forums_access_no_groups">Tu kom berdest nîn in</string>
-    <string name="forums_saved_title">Hatiye tomarkirin</string>
+    <string name="forums_saved_title">Tomarkirî</string>
     <string name="forums_saved_save">Bo paşê tomar bike</string>
     <string name="forums_saved_remove">Ji tomarkiriyan rake</string>
     <string name="forums_saved_clear_all">Hemûyan paqij bike</string>

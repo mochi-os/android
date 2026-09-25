@@ -2,7 +2,7 @@
 <resources>
     <string name="projects_auth_display_name">প্রদর্শনের নাম</string>
     <string name="projects_auth_verification_failed">যাচাইকরণ ব্যর্থ হয়েছে</string>
-    <string name="projects_list_title">প্রকল্প</string>
+    <string name="projects_list_title">প্রজেক্ট</string>
     <string name="projects_list_close_search">অনুসন্ধান বন্ধ করুন</string>
     <string name="projects_list_search">অনুসন্ধান</string>
     <string name="projects_list_find">প্রকল্প খুঁজুন</string>
@@ -29,7 +29,7 @@
     <string name="projects_sort_label">সাজান</string>
     <string name="projects_sort_direction">দিক</string>
     <string name="projects_sort_rank">ম্যানুয়াল</string>
-    <string name="projects_sort_number">সংখ্যা</string>
+    <string name="projects_sort_number">নম্বর</string>
     <string name="projects_sort_created">তৈরি হয়েছে</string>
     <string name="projects_sort_updated">আপডেট হয়েছে</string>
     <string name="projects_create_object_type">ধরন</string>
@@ -93,7 +93,7 @@
     <string name="projects_request_create_action">তৈরি করুন</string>
     <string name="projects_diff_unified">সমন্বিত</string>
     <string name="projects_diff_split">ভাগ করুন</string>
-    <string name="projects_diff_empty">কোনো diff উপলব্ধ নেই</string>
+    <string name="projects_diff_empty">কোনো ডিফ উপলব্ধ নেই</string>
     <string name="projects_board_unassigned">অ্যাসাইন করা হয়নি</string>
     <string name="projects_board_new">নতুন</string>
     <string name="projects_board_rename">পুনঃনামকরণ করুন</string>
@@ -149,7 +149,7 @@
     <string name="projects_views_type_board">বোর্ড</string>
     <string name="projects_views_type_list">তালিকা</string>
     <string name="projects_views_direction">দিক</string>
-    <string name="projects_views_sort_number">সংখ্যা</string>
+    <string name="projects_views_sort_number">নম্বর</string>
     <string name="projects_views_sort_created">তৈরি হয়েছে</string>
     <string name="projects_views_sort_updated">আপডেট হয়েছে</string>
     <string name="projects_views_sort_rank">র‍্যাঙ্ক</string>
@@ -160,7 +160,7 @@
     <string name="projects_comment_send">পাঠান</string>
 
     <string name="notification_channel_projects">প্রকল্প বিজ্ঞপ্তি</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi প্রজেক্ট</string>
     <string name="projects_auth_login_failed">লগইন ব্যর্থ হয়েছে</string>
     <string name="projects_auth_create_identity_failed">পরিচয় তৈরি করতে ব্যর্থ হয়েছে</string>
     <string name="projects_auth_mfa_unsupported">মোবাইল অ্যাপে MFA এখনও সমর্থিত নয়</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">একটি নিয়ম বেছে নিন</string>
     <string name="projects_access_authenticated_desc">লগ ইন করা যে কেউ</string>
     <string name="projects_access_anyone_desc">বেনামী ব্যবহারকারী সহ</string>
-    <string name="projects_access_target">টার্গেট</string>
+    <string name="projects_access_target">ব্যবহারকারী বা গ্রুপ</string>
     <string name="projects_access_target_hint">সত্তা আইডি, @group, * (সবাই), বা + (সদস্যরা)</string>
     <string name="projects_access_selected">নির্বাচিত: %1$s</string>
     <string name="projects_access_role_comment">মন্তব্য এবং দেখুন</string>

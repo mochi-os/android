@@ -38,7 +38,7 @@
     <string name="access_add_rule">નિયમ ઉમેરો</string>
     <string name="access_owner">માલિક</string>
     <string name="access_revoke">રદ કરો</string>
-    <string name="access_level_comment">ટિપ્પણી</string>
+    <string name="access_level_comment">ટિપ્પણી કરો</string>
     <string name="access_level_view">જુઓ</string>
     <string name="access_level_none">કોઈ નહીં</string>
     <string name="reaction_like">પસંદ</string>
@@ -202,7 +202,7 @@
     <string name="reauth_signin_text">તમે ફરી સાઇન ઇન ન કરો ત્યાં સુધી સૂચનાઓ થોભાવેલી છે</string>
     <string name="oem_hint_title">બેકગ્રાઉન્ડમાં પહોંચી શકાય તેવા રહો</string>
     <string name="oem_hint_body">સૂચનાઓ પહોંચાડવા માટે Mochi બેકગ્રાઉન્ડમાં ચાલવી જરૂરી છે. કૃપા કરીને આગલી સ્ક્રીન પર આની મંજૂરી આપો, નહીંતર સ્ક્રીન બંધ હોય ત્યારે તમારો ફોન સૂચનાઓ થોભાવી શકે છે.</string>
-    <string name="oem_hint_samsung_note">Samsung ફોન પર, Settings → Device care → Sleeping apps પણ તપાસો અને જો Mochi ત્યાં યાદીમાં હોય તો તેને દૂર કરો.</string>
+    <string name="oem_hint_samsung_note">Samsung ફોન પર, સેટિંગ્સ → ઉપકરણ સંભાળ → સૂતેલી એપ્સ પણ તપાસો અને જો Mochi ત્યાં યાદીમાં હોય તો તેને દૂર કરો.</string>
     <string name="oem_hint_allow">બેકગ્રાઉન્ડની મંજૂરી આપો</string>
     <string name="oem_hint_dismiss">ફરીથી બતાવશો નહીં</string>
     <string name="about_title">Mochi ક્લાયન્ટ</string>
@@ -225,7 +225,7 @@
     <string name="stepup_description">આ તમારા ખાતામાં સુરક્ષા સંબંધિત ફેરફાર છે. ચાલુ રાખવા માટે ખાતરી કરો કે આ તમે જ છો.</string>
     <string name="stepup_email_label">ઇમેઇલ કોડ</string>
     <string name="stepup_email_placeholder">તમારા ઈમેલમાંથી કોડ દાખલ કરો</string>
-    <string name="stepup_totp_label">Authenticator કોડ</string>
+    <string name="stepup_totp_label">ઑથેન્ટિકેટર કોડ</string>
     <string name="stepup_totp_placeholder">તમારો ઑથેન્ટિકેટર કોડ દાખલ કરો</string>
     <string name="stepup_use_passkey">તમારી પાસકીનો ઉપયોગ કરો</string>
     <string name="stepup_send_email">ઇમેઇલ મોકલો</string>

@@ -13,7 +13,7 @@
     <string name="chess_new_title">Neues Spiel</string>
     <string name="chess_new_pick_opponent">Gegner auswählen</string>
     <string name="chess_new_no_friends_title">Noch keine Freunde</string>
-    <string name="chess_new_no_friends_subtitle">Fügen Sie Freunde in der People-App hinzu, um zu spielen</string>
+    <string name="chess_new_no_friends_subtitle">Fügen Sie Freunde in der Personen-App hinzu, um zu spielen</string>
     <string name="chess_new_add_friends">Freunde hinzufügen</string>
     <string name="chess_new_start_button">Spiel starten</string>
     <string name="chess_new_creating">Wird erstellt …</string>

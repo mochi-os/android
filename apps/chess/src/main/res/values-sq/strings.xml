@@ -12,7 +12,7 @@
     <string name="chess_new_title">Lojë e re</string>
     <string name="chess_new_pick_opponent">Zgjidh kundërshtarin</string>
     <string name="chess_new_no_friends_title">Ende pa miq</string>
-    <string name="chess_new_no_friends_subtitle">Shto miq në aplikacionin People për të filluar të luash</string>
+    <string name="chess_new_no_friends_subtitle">Shto miq në aplikacionin Njerëz për të filluar të luash</string>
     <string name="chess_new_add_friends">Shto miq</string>
     <string name="chess_new_start_button">Fillo lojën</string>
     <string name="chess_new_creating">Po krijon…</string>

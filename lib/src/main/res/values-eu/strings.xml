@@ -38,7 +38,7 @@
     <string name="access_add_rule">Gehitu araua</string>
     <string name="access_owner">Jabea</string>
     <string name="access_revoke">Indargabetu</string>
-    <string name="access_level_comment">Iruzkina</string>
+    <string name="access_level_comment">Iruzkindu</string>
     <string name="access_level_view">Ikusi</string>
     <string name="access_level_none">Bat ere ez</string>
     <string name="reaction_like">Atsegin</string>
@@ -192,7 +192,7 @@
     <string name="format_time_weeks_short">%1$da</string>
     <string name="format_time_months_short">%1$dhi</string>
     <string name="reaction_add">Gehitu erreakzioa</string>
-    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel">Mochi jakinarazpenak</string>
     <string name="push_service_channel_description">Mochi konektatuta mantentzen du jakinarazpenak jasotzeko</string>
     <string name="push_service_group">Atzeko planoko zerbitzua</string>
     <string name="push_service_title">Mochi jakinarazpenen zain</string>

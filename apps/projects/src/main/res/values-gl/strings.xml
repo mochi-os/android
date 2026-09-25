@@ -180,7 +180,7 @@
     <string name="projects_links_search_placeholder">Buscar obxectos</string>
 
     <string name="notification_channel_projects">Notificacións de proxectos</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Proxectos</string>
     <string name="projects_list_search_placeholder">Buscar proxectos</string>
     <string name="projects_list_no_matching">Non hai proxectos coincidentes</string>
     <string name="projects_list_empty">Aínda non hai proxectos</string>
@@ -239,7 +239,7 @@
     <string name="projects_request_mark_ready">Marcar como listo</string>
     <string name="projects_request_merge_default_message">Fusionar %1$s en %2$s</string>
     <string name="projects_request_commit_message">Mensaxe do commit</string>
-    <string name="projects_request_method_squash">Squash</string>
+    <string name="projects_request_method_squash">Aplastar</string>
     <string name="projects_request_method_rebase">Rebase</string>
     <string name="projects_request_create_title">Crear solicitude de fusión</string>
     <string name="projects_request_field_target">Rama de destino</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Selecciona unha regra</string>
     <string name="projects_access_authenticated_desc">Calquera persoa con sesión iniciada</string>
     <string name="projects_access_anyone_desc">Incluídos os usuarios anónimos</string>
-    <string name="projects_access_target">Obxectivo</string>
+    <string name="projects_access_target">Usuario ou grupo</string>
     <string name="projects_access_target_hint">ID de entidade, @grupo, * (todos) ou + (membros)</string>
     <string name="projects_access_selected">Seleccionado: %1$s</string>
     <string name="projects_access_role_comment">Comentar e ver</string>

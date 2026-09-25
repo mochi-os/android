@@ -13,7 +13,7 @@
     <string name="chess_new_title">Νέο παιχνίδι</string>
     <string name="chess_new_pick_opponent">Επιλογή αντιπάλου</string>
     <string name="chess_new_no_friends_title">Δεν υπάρχουν ακόμη φίλοι</string>
-    <string name="chess_new_no_friends_subtitle">Προσθέστε φίλους στην εφαρμογή People για να ξεκινήσετε το παιχνίδι</string>
+    <string name="chess_new_no_friends_subtitle">Προσθέστε φίλους στην εφαρμογή Άτομα για να ξεκινήσετε το παιχνίδι</string>
     <string name="chess_new_add_friends">Προσθήκη φίλων</string>
     <string name="chess_new_start_button">Έναρξη παιχνιδιού</string>
     <string name="chess_new_creating">Δημιουργία…</string>

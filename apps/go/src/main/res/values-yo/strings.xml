@@ -8,7 +8,7 @@
     <string name="go_action_pass">Kọjá</string>
     <string name="go_action_rematch">Tún bá</string>
     <string name="go_action_resign">Fi sílẹ̀</string>
-    <string name="go_app_title">Lọ</string>
+    <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Idamu dudu</string>
     <string name="go_captures_white_sr">Idamu funfun</string>
     <string name="go_chat_title">Ìjíròrò</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">Ṣí akọtọ ẹgbẹ</string>
     <string name="go_sidebar_active">Àwọn Eré Tó Ń Lọ</string>
     <string name="go_empty_active">Kò sí eré tí ń lọ lọ́wọ́ síbẹ̀.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">Ti jọ̀wọ́</string>
     <string name="go_new_game_title">Eré Go tuntun</string>
     <string name="go_new_game_no_friends">O gbọ́dọ̀ fi ọ̀rẹ́ kún kí o tó lè bẹ̀rẹ̀ eré.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

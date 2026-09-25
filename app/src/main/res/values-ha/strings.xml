@@ -2,8 +2,8 @@
 <resources>
 
     <string name="launcher_feeds">Mochi Jerukan labarai</string>
-    <string name="launcher_chat">Mochi Chat</string>
-    <string name="launcher_forums">Mochi Forums</string>
+    <string name="launcher_chat">Mochi Tattaunawa</string>
+    <string name="launcher_forums">Mochi Tarurruka</string>
     <string name="launcher_projects">Mochi Ayyuka</string>
     <string name="launcher_crm">Mochi CRM</string>
     <string name="launcher_people">Mochi Mutane</string>
@@ -13,9 +13,9 @@
     <string name="launcher_chess">Mochi Dara</string>
     <string name="launcher_go">Mochi Go</string>
     <string name="launcher_words">Mochi Kalmomi</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi Kasuwa</string>
     <string name="launcher_calendars">Mochi Kalandoci</string>
-    <string name="launcher_staff">Mochi Ma\'aikata</string>
+    <string name="launcher_staff">Ma\'aikatan Mochi</string>
 
 
     <string name="app_name">Mochi</string>

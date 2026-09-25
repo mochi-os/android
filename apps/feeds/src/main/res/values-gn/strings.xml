@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="feeds_title">Feeds</string>
+    <string name="feeds_title">Marandu syrykuéra</string>
     <string name="feeds_find_feeds">Eheka feeds</string>
     <string name="feeds_create_feed">Embojeguáva feed</string>
     <string name="feeds_new_post">Marandu pyahu</string>
@@ -8,15 +8,15 @@
     <string name="feeds_name">Téra</string>
     <string name="feeds_create">Embojeguáva</string>
     <string name="feeds_no_feeds_found">Ndojejuhúi feeds</string>
-    <string name="feeds_feed_title_default">Feed</string>
+    <string name="feeds_feed_title_default">Marandu syry</string>
     <string name="feeds_mark_all_read">Ehecha pyre opavave</string>
     <string name="feeds_settings">Ñemboheko</string>
     <string name="feeds_no_posts_yet">Ndaipóri marandu gueteri</string>
     <string name="feeds_sort_label">Embojo\'a</string>
     <string name="feeds_sort_interests">Oikotevevakuéra</string>
-    <string name="feeds_sort_new">Pyahu</string>
+    <string name="feeds_sort_new">Ipyahuvéva</string>
     <string name="feeds_sort_hot">Akúva</string>
-    <string name="feeds_sort_top">Yvate</string>
+    <string name="feeds_sort_top">Iporãvéva</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Marandu</string>
     <string name="feeds_image_preview">Ehecha tenondete</string>
@@ -24,16 +24,16 @@
     <string name="feeds_comments">Comentariokuéra</string>
     <string name="feeds_delete_post">Hundi post</string>
     <string name="feeds_delete_comment">Hundi comentario</string>
-    <string name="feeds_tags">Tagskuéra</string>
+    <string name="feeds_tags">Etiquetakuéra</string>
     <string name="feeds_remove">Embogue</string>
     <string name="feeds_cancel_reply">Heja mbohovái</string>
     <string name="feeds_edit_post">Embojuruja publicación</string>
     <string name="feeds_save_label">Ñongatu</string>
-    <string name="feeds_post_action">Marandu</string>
-    <string name="feeds_feed_label">Feed</string>
+    <string name="feeds_post_action">Emoherakuã</string>
+    <string name="feeds_feed_label">Marandu syry</string>
     <string name="feeds_add_files">Embojuaju archivokuéra</string>
     <string name="feeds_restore">Embojevy</string>
-    <string name="feeds_check_in">Check in</string>
+    <string name="feeds_check_in">Emoĩ tenda</string>
     <string name="feeds_travelling">Ojeguatáva</string>
     <string name="feeds_tab_sources">Pyendarã</string>
     <string name="feeds_sources_title">Pyendarã</string>
@@ -55,7 +55,7 @@
     <string name="feeds_source_url">URL</string>
     <string name="feeds_source_type">Mba\'éichagua</string>
     <string name="feeds_source_type_rss">RSS</string>
-    <string name="feeds_source_type_feed_posts">Mochi feed</string>
+    <string name="feeds_source_type_feed_posts">Mochi marandu syry</string>
     <string name="feeds_source_type_feed_memories">Mandu\'a</string>
     <string name="feeds_remove_source">Eipe’a yvu</string>
     <string name="feeds_suggested_credibility_accept">Hekoite</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Esẽ</string>
     <string name="feeds_ai_account_default">Default tetãygua</string>
     <string name="feeds_ai_mode_off">Oñemboty</string>
-    <string name="feeds_ai_mode_tag">Tag</string>
+    <string name="feeds_ai_mode_tag">Etiquetado</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + ndojeguerojahéi</string>
     <string name="feeds_feed_not_found">Feed nojetopái</string>
     <string name="feeds_post_not_found">Marandu ndojejuhúi</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Oikoteveva oñembogue\'i</string>
     <string name="feeds_interest_removed">Oikoteveva oñembogue</string>
     <string name="feeds_interest_failed">Ndaikatúi oñemyatyrõ oikoteveva</string>
-    <string name="feeds_saved_title">Oñeñongatu</string>
-    <string name="feeds_saved_menu">Oñeñongatu</string>
+    <string name="feeds_saved_title">Ñongatupyre</string>
+    <string name="feeds_saved_menu">Ñongatupyre</string>
     <string name="feeds_saved_save">Eñongatu upe rireguarã</string>
     <string name="feeds_saved_remove">Eipe\'a ñongatupývagui</string>
     <string name="feeds_saved_clear_all">Embopotĩ opaite</string>
@@ -159,7 +159,7 @@
     <string name="feeds_permission_deny">Heja</string>
     <string name="feeds_rss_feed">Canal RSS</string>
     <string name="feeds_settings_field_entity_id">Entidad ID</string>
-    <string name="feeds_settings_field_fingerprint">Fingerprint</string>
+    <string name="feeds_settings_field_fingerprint">Kuãhũ</string>
     <string name="feeds_settings_field_server">Mohendaha</string>
     <string name="feeds_settings_name_edit_cd">Embojuruja téra</string>
     <string name="feeds_settings_section_identity">Identidad</string>

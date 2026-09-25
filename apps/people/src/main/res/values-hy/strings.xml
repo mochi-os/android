@@ -62,7 +62,7 @@
     <string name="people_profile_uploading">Վերբեռնվում է…</string>
     <string name="people_profile_change_banner">Փոխել բանները</string>
     <string name="people_profile_no_banner">Բաններ չի սահմանված</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">Ֆավիկոն</string>
     <string name="people_profile_browser_icon">Բրաուզերի պատկերակ</string>
     <string name="people_profile_file_too_large">Ֆայլը շատ մեծ է</string>
     <string name="people_profile_clear">Մաքրել</string>
@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Բացել նավիգացիան</string>
     <string name="people_person_state_friend">Ընկերներ</string>
     <string name="people_person_state_self">Դուք</string>
-    <string name="people_person_message">Հաղորդագրություն</string>
+    <string name="people_person_message">Ուղարկել հաղորդագրություն</string>
     <string name="people_person_accept">Ընդունել</string>
     <string name="people_person_decline">Մերժել</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Ընդունել բոլորը</string>
     <string name="people_invitations_decline_all">Մերժել բոլորը</string>
     <string name="people_invitations_cancel_all">Չեղարկել բոլորը</string>
+    <string name="people_invitations_cancel">Չեղարկել</string>
     <string name="people_invitations_all_accepted">Բոլոր հրավերներն ընդունված են</string>
     <string name="people_invitations_all_declined">Բոլոր հրավերները մերժված են</string>
     <string name="people_invitations_all_cancelled">Բոլոր հրավերները չեղարկված են</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Որոնել…</string>
     <string name="people_contacts_invited">Հրավիրված</string>
     <string name="people_contacts_accept">Ընդունել</string>
-    <string name="people_contacts_message">Հաղորդագրություն</string>
+    <string name="people_contacts_message">Ուղարկել հաղորդագրություն</string>
     <string name="people_contacts_no_people_found">Մարդիկ չեն գտնվել</string>
     <string name="people_contacts_try_adjusting">Փորձեք ճշգրտել ձեր որոնումը</string>
     <string name="people_contact_section_address">Հասցե</string>

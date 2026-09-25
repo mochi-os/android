@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Mở điều hướng</string>
     <string name="people_person_state_friend">Bạn bè</string>
     <string name="people_person_state_self">Bạn</string>
-    <string name="people_person_message">Tin nhắn</string>
+    <string name="people_person_message">Nhắn tin</string>
     <string name="people_person_accept">Chấp nhận</string>
     <string name="people_person_decline">Từ chối</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Chấp nhận tất cả</string>
     <string name="people_invitations_decline_all">Từ chối tất cả</string>
     <string name="people_invitations_cancel_all">Hủy tất cả</string>
+    <string name="people_invitations_cancel">Hủy</string>
     <string name="people_invitations_all_accepted">Đã chấp nhận tất cả lời mời</string>
     <string name="people_invitations_all_declined">Đã từ chối tất cả lời mời</string>
     <string name="people_invitations_all_cancelled">Đã hủy tất cả lời mời</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Tìm kiếm…</string>
     <string name="people_contacts_invited">Đã mời</string>
     <string name="people_contacts_accept">Chấp nhận</string>
-    <string name="people_contacts_message">Tin nhắn</string>
+    <string name="people_contacts_message">Nhắn tin</string>
     <string name="people_contacts_no_people_found">Không tìm thấy người nào</string>
     <string name="people_contacts_try_adjusting">Hãy thử điều chỉnh tìm kiếm</string>
     <string name="people_contact_section_address">Địa chỉ</string>

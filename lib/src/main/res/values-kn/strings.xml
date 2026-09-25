@@ -38,7 +38,7 @@
     <string name="access_add_rule">ನಿಯಮ ಸೇರಿಸಿ</string>
     <string name="access_owner">ಮಾಲೀಕ</string>
     <string name="access_revoke">ರದ್ದುಗೊಳಿಸಿ</string>
-    <string name="access_level_comment">ಕಾಮೆಂಟ್</string>
+    <string name="access_level_comment">ಕಾಮೆಂಟ್ ಮಾಡಿ</string>
     <string name="access_level_view">ವೀಕ್ಷಿಸಿ</string>
     <string name="access_level_none">ಯಾವುದೂ ಇಲ್ಲ</string>
     <string name="reaction_like">ಇಷ್ಟ</string>
@@ -225,8 +225,8 @@
     <string name="stepup_description">ಇದು ನಿಮ್ಮ ಖಾತೆಗೆ ಸಂಬಂಧಿಸಿದ ಸುರಕ್ಷತಾ ಬದಲಾವಣೆಯಾಗಿದೆ. ಮುಂದುವರಿಯಲು ಇದು ನೀವೇ ಎಂದು ಪರಿಶೀಲಿಸಿ.</string>
     <string name="stepup_email_label">ಇಮೇಲ್ ಕೋಡ್</string>
     <string name="stepup_email_placeholder">ನಿಮ್ಮ ಇಮೇಲ್‌ನಿಂದ ಕೋಡ್ ನಮೂದಿಸಿ</string>
-    <string name="stepup_totp_label">Authenticator ಕೋಡ್</string>
-    <string name="stepup_totp_placeholder">ನಿಮ್ಮ authenticator ಕೋಡ್ ನಮೂದಿಸಿ</string>
+    <string name="stepup_totp_label">ಅಥೆಂಟಿಕೇಟರ್ ಕೋಡ್</string>
+    <string name="stepup_totp_placeholder">ನಿಮ್ಮ ಅಥೆಂಟಿಕೇಟರ್ ಕೋಡ್ ನಮೂದಿಸಿ</string>
     <string name="stepup_use_passkey">ನಿಮ್ಮ ಪಾಸ್‌ಕೀ ಬಳಸಿ</string>
     <string name="stepup_send_email">ಇಮೇಲ್ ಕಳುಹಿಸಿ</string>
     <string name="stepup_resend_email">ಇಮೇಲ್ ಮತ್ತೆ ಕಳುಹಿಸಿ</string>

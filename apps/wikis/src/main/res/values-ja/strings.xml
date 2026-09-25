@@ -109,7 +109,7 @@
     <string name="wikis_rename_page_failed">ページの名前変更に失敗しました</string>
     <string name="wikis_history_title">履歴</string>
     <string name="wikis_history_empty">履歴は見つかりませんでした</string>
-    <string name="wikis_history_view_action">ビュー</string>
+    <string name="wikis_history_view_action">表示</string>
     <string name="wikis_history_revert_action">このバージョンに戻す</string>
     <string name="wikis_revision_current_badge">現在</string>
     <string name="wikis_revision_revert_to_this">このバージョンに戻す</string>

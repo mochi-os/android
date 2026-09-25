@@ -126,9 +126,9 @@
     <string name="crm_not_found">ಪ್ರಾಜೆಕ್ಟ್ ಸಿಗಲಿಲ್ಲ</string>
     <string name="crm_more">ಇನ್ನಷ್ಟು</string>
     <string name="crm_comment_send">ಕಳುಹಿಸಿ</string>
-    <string name="crm_field_position_body">ವಿಷಯ</string>
+    <string name="crm_field_position_body">ಮುಖ್ಯ ಭಾಗ</string>
     <string name="crm_sort_field">ವಿಂಗಡಿಸು</string>
-    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_comment_remove_attachment">ಲಗತ್ತು ತೆಗೆದುಹಾಕಿ</string>
     <string name="crm_views_sort_by">ವಿಂಗಡಿಸು</string>
     <string name="crm_views_move_up">ಮೇಲೆ ಸರಿಸಿ</string>
     <string name="crm_class_move_up">ಮೇಲೆ ಸರಿಸಿ</string>
@@ -241,7 +241,7 @@
     <string name="crm_access_no_groups">ಯಾವುದೇ ಗ್ರೂಪ್‌ಗಳು ಲಭ್ಯವಿಲ್ಲ</string>
     <string name="crm_access_tab_users">ಬಳಕೆದಾರರು</string>
     <string name="crm_access_tab_groups">ಗುಂಪುಗಳು</string>
-    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_attachment_remove">ಲಗತ್ತು ತೆಗೆದುಹಾಕಿ</string>
     <string name="crm_board_add_column">ಕಾಲಮ್ ಸೇರಿಸಿ</string>
     <string name="crm_settings_entity_id">ಎಂಟಿಟಿ ID</string>
     <string name="crm_settings_fingerprint">ಬೆರಳಚ್ಚು</string>

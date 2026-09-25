@@ -24,13 +24,13 @@
     <string name="forums_settings">Einstellungen</string>
     <string name="forums_load_more">Mehr laden</string>
     <string name="forums_sort_label">Sortieren</string>
-    <string name="forums_sort_new">Neu</string>
+    <string name="forums_sort_new">Neueste</string>
     <string name="forums_sort_hot">Heiß</string>
-    <string name="forums_sort_top">Oben</string>
+    <string name="forums_sort_top">Top</string>
     <string name="forums_sort_interests">Interessen</string>
     <string name="forums_post_title_field">Titel</string>
     <string name="forums_post_attach">Dateien anhängen</string>
-    <string name="forums_post_create_action">Beitrag</string>
+    <string name="forums_post_create_action">Posten</string>
     <string name="forums_post_edit">Beitrag bearbeiten</string>
     <string name="forums_post_edit_title">Beitrag bearbeiten</string>
     <string name="forums_post_edit_title_field">Titel</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Mitglieder</string>
     <string name="forums_tab_banner">Banner</string>
     <string name="forums_tab_ai">KI</string>
-    <string name="forums_access_target">Ziel</string>
-    <string name="forums_access_level_view">Ansicht</string>
+    <string name="forums_access_target">Benutzer oder Gruppe</string>
+    <string name="forums_access_level_view">Anzeigen</string>
     <string name="forums_access_level_vote">Abstimmen</string>
-    <string name="forums_access_level_comment">Kommentar</string>
-    <string name="forums_access_level_post">Beitrag</string>
+    <string name="forums_access_level_comment">Kommentieren</string>
+    <string name="forums_access_level_post">Posten</string>
     <string name="forums_access_level_none">Keine</string>
     <string name="forums_members_empty">Keine Mitglieder</string>
     <string name="forums_banner_dismiss">Banner schließen</string>
-    <string name="forums_ai_mode_tag">Tag</string>
+    <string name="forums_ai_mode_tag">Taggen</string>
     <string name="forums_ai_account_default">Standardkonto</string>
     <string name="forums_ai_prompt_reset">Auf Standard zurücksetzen</string>
     <string name="forums_settings_unsubscribe">Abbestellen</string>
@@ -80,7 +80,7 @@
     <string name="forums_moderation_reports_resolved">Gelöst</string>
     <string name="forums_moderation_reports_all">Alle</string>
     <string name="forums_moderation_reports_empty">Keine Meldungen</string>
-    <string name="forums_moderation_report_dismiss">Schließen</string>
+    <string name="forums_moderation_report_dismiss">Verwerfen</string>
     <string name="forums_moderation_restrictions_empty">Keine Einschränkungen</string>
     <string name="forums_moderation_restriction_remove">Entfernen</string>
     <string name="forums_moderation_restriction_type">Typ</string>
@@ -124,7 +124,7 @@
     <string name="forums_comment_send">Senden</string>
 
     <string name="notification_channel_forums">Forum-Benachrichtigungen</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Foren</string>
     <string name="forums_auth_login_failed">Anmeldung fehlgeschlagen</string>
     <string name="forums_auth_create_identity_failed">Identität konnte nicht erstellt werden</string>
     <string name="forums_auth_mfa_unsupported">MFA wird in der mobilen App noch nicht unterstützt</string>
@@ -169,7 +169,7 @@
     <string name="forums_moderation_log_meta">Von %1$s · Ziel %2$s</string>
     <string name="forums_moderation_restriction_add">Einschränkung hinzufügen</string>
     <string name="forums_moderation_restriction_user">Benutzeridentität</string>
-    <string name="forums_moderation_restriction_type_shadowban">Shadowban</string>
+    <string name="forums_moderation_restriction_type_shadowban">Heimlich sperren</string>
     <string name="forums_moderation_restriction_duration_seconds">Dauer (Sekunden, leer für permanent)</string>
     <string name="forums_moderation_restriction_expires">Läuft ab %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanent</string>

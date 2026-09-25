@@ -10,7 +10,7 @@
     <string name="calendars_delete">Odstrániť</string>
     <string name="calendars_previous">Predchádzajúci</string>
     <string name="calendars_next">Ďalej</string>
-    <string name="calendars_view">Zobraziť</string>
+    <string name="calendars_view">Zobrazenie</string>
     <string name="calendars_view_list">Zoznam</string>
     <string name="calendars_list_search">Hľadať</string>
     <string name="calendars_event_untitled">Bez názvu</string>
@@ -172,7 +172,7 @@
     <string name="calendars_subscribe_server_url">Adresa servera</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Kalendár Google</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Účty Google nie sú na tomto serveri povolené. Povoľte ich v Nastavenia, Systémové nastavenia.</string>
     <string name="calendars_subscribe_google_connect">Nepripojili ste žiadny účet Google.</string>

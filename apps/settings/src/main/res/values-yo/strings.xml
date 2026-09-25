@@ -34,7 +34,7 @@
     <string name="account_copy">Ṣe àdàkọ</string>
     <string name="account_copy_all">Ṣe àdàkọ gbogbo rẹ̀</string>
     <string name="sessions_current">(lọ́wọ́lọ́wọ́)</string>
-    <string name="settings_home_section_system">System</string>
+    <string name="settings_home_section_system">Sístẹ́mù</string>
     <string name="route_section">Àwọn routes</string>
     <string name="route_add">Fi ọ̀nà kún</string>
     <string name="route_add_title">Fi ọ̀nà kún</string>
@@ -47,7 +47,7 @@
     <string name="route_method">Ọ̀nà</string>
     <string name="route_method_app">App</string>
     <string name="route_method_entity">Ẹ̀ka</string>
-    <string name="route_method_redirect">Redirect</string>
+    <string name="route_method_redirect">Ìdarí</string>
     <string name="route_priority">Ohun pàtàkì</string>
     <string name="route_enabled">Tí a ti tànná</string>
     <string name="route_disabled">Tí a ti pa</string>
@@ -62,7 +62,7 @@
     <string name="notifprefs_edit_category">Ṣàtúnṣe ẹ̀ka</string>
     <string name="notifprefs_name_label">Orúkọ</string>
     <string name="notifprefs_destinations">Àwọn àfojúsùn</string>
-    <string name="notifprefs_dest_web">Web browser</string>
+    <string name="notifprefs_dest_web">Aṣàwákiri wẹ́ẹ̀bù</string>
     <string name="notifprefs_test">Ìdánwò</string>
     <string name="notifprefs_edit">Ṣàtúnṣe</string>
     <string name="notifprefs_delete">Pa rẹ́</string>
@@ -165,13 +165,13 @@
     <string name="system_setting_server_version">Ẹ̀dà server</string>
     <string name="system_setting_signup_enabled">Jẹ́ kí àwọn ìforúkọsílẹ̀ tuntun</string>
     <string name="system_users_title">Àwọn user</string>
-    <string name="system_users_col_user">User</string>
+    <string name="system_users_col_user">Olùmúlò</string>
     <string name="system_users_col_status">Ìpò</string>
     <string name="system_users_col_last">Ìwọlé tí ó kẹ́yìn</string>
     <string name="system_users_open_actions">Ṣí àwọn iṣẹ́ olùlò</string>
     <string name="system_users_role_label">Ipa</string>
     <string name="system_users_role_administrator">Alábòójútó</string>
-    <string name="system_users_role_user">User</string>
+    <string name="system_users_role_user">Olùmúlò</string>
     <string name="system_users_status_suspended">Ti dádúró</string>
     <string name="system_users_last_never">Láéláé</string>
     <string name="system_users_email_label">Ímẹ́ẹ̀lì</string>
@@ -357,7 +357,7 @@
     <string name="route_target_none">Kò sí ibi tí a lè fi sí</string>
     <string name="login_invalid_code">Kóòdù aláìdára</string>
     <string name="accounts_provider_browser">Àwọn ìfitónilétí browser</string>
-    <string name="accounts_provider_fcm">Android push</string>
+    <string name="accounts_provider_fcm">Ìfitónilétí push Android</string>
     <string name="accounts_provider_mcp">Sáà MCP</string>
     <string name="accounts_provider_unifiedpush">Ìfitónilétí push</string>
     <string name="accounts_provider_url">URL òde</string>
@@ -375,10 +375,10 @@
     <string name="accounts_forget_message">Èyí yóò gbàgbé ẹ̀rọ \"%1$s\" yóò sì dá àwọn ìfitónilétí sí i dúró.</string>
     <string name="accounts_device_seen">Tí a rí kẹ́yìn %1$s</string>
     <string name="notifprefs_device_app">%1$s · app</string>
-    <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_device_push">%1$s · ìfitónilétí push</string>
     <string name="notifprefs_test_partial">A fi ìdánwò ránṣẹ́ sí %1$d nínú %2$d àyè</string>
     <string name="notifprefs_test_none">A kò ṣètò àwọn ibi-àfojúsùn kankan</string>
-    <string name="notifprefs_transport_fcm">Android push</string>
+    <string name="notifprefs_transport_fcm">Ìfitónilétí push Android</string>
     <string name="notifprefs_no_destinations">Kò sí àyè dèsìnò</string>
     <string name="account_data_generate">Ṣẹda gbolohun ọrọ igbaniwọle</string>
     <string name="accounts_field_server">URL olùṣẹ́</string>

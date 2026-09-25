@@ -19,7 +19,7 @@
     <string name="words_detail_status_you_resigned">Predal si se</string>
     <string name="words_detail_label_you">Ti</string>
     <string name="words_detail_action_shuffle">Premešaj stojalo</string>
-    <string name="words_detail_action_pass">Pass</string>
+    <string name="words_detail_action_pass">Preskoči</string>
     <string name="words_detail_action_exchange">Zamenjaj ploščice</string>
     <string name="words_detail_action_cancel_exchange">Prekliči izmenjavo</string>
     <string name="words_detail_action_resign">Odstopi</string>

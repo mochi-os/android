@@ -24,9 +24,9 @@
     <string name="forums_settings">设置</string>
     <string name="forums_load_more">加载更多</string>
     <string name="forums_sort_label">排序</string>
-    <string name="forums_sort_new">新建</string>
+    <string name="forums_sort_new">最新</string>
     <string name="forums_sort_hot">热门</string>
-    <string name="forums_sort_top">顶部</string>
+    <string name="forums_sort_top">最佳</string>
     <string name="forums_sort_interests">兴趣</string>
     <string name="forums_post_title_field">标题</string>
     <string name="forums_post_attach">附加文件</string>
@@ -59,7 +59,7 @@
     <string name="forums_tab_members">成员</string>
     <string name="forums_tab_banner">横幅</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">目标</string>
+    <string name="forums_access_target">对象</string>
     <string name="forums_access_level_view">查看</string>
     <string name="forums_access_level_vote">投票</string>
     <string name="forums_access_level_comment">评论</string>
@@ -67,7 +67,7 @@
     <string name="forums_access_level_none">无</string>
     <string name="forums_members_empty">无成员</string>
     <string name="forums_banner_dismiss">关闭横幅</string>
-    <string name="forums_ai_mode_tag">标签</string>
+    <string name="forums_ai_mode_tag">标记</string>
     <string name="forums_ai_account_default">默认账户</string>
     <string name="forums_ai_prompt_reset">重置为默认</string>
     <string name="forums_settings_unsubscribe">取消订阅</string>
@@ -80,7 +80,7 @@
     <string name="forums_moderation_reports_resolved">已解决</string>
     <string name="forums_moderation_reports_all">全部</string>
     <string name="forums_moderation_reports_empty">无举报</string>
-    <string name="forums_moderation_report_dismiss">关闭</string>
+    <string name="forums_moderation_report_dismiss">驳回</string>
     <string name="forums_moderation_restrictions_empty">无限制</string>
     <string name="forums_moderation_restriction_remove">移除</string>
     <string name="forums_moderation_restriction_type">类型</string>
@@ -319,7 +319,7 @@
     <string name="forums_moderation_action_restrict">已受限</string>
     <string name="forums_moderation_action_unrestrict">已解除限制</string>
     <string name="forums_moderation_action_resolve">已解决的举报</string>
-    <string name="forums_moderation_target_post">发布</string>
+    <string name="forums_moderation_target_post">帖子</string>
     <string name="forums_moderation_target_comment">评论</string>
     <string name="forums_moderation_target_user">用户</string>
     <string name="forums_moderation_reason_spam">垃圾信息</string>

@@ -67,7 +67,7 @@
     <string name="crm_board_rename">Нэр өөрчлөх</string>
     <string name="crm_board_rename_column">Багана нэр өөрчлөх</string>
     <string name="crm_move_position">Байрлал</string>
-    <string name="crm_move_position_top">Дээд</string>
+    <string name="crm_move_position_top">Хамгийн дээр</string>
     <string name="crm_move_current">Одоогийн</string>
     <string name="crm_design_title">Дизайн</string>
     <string name="crm_design_export">Дизайн экспортлох</string>
@@ -78,7 +78,7 @@
     <string name="crm_design_or_upload_json">Эсвэл файл байршуулна уу</string>
     <string name="crm_design_upload_json">.json файл байршуулах</string>
     <string name="crm_design_tab_classes">Ангиуд</string>
-    <string name="crm_design_tab_views">Үзлэгүүд</string>
+    <string name="crm_design_tab_views">Харагдацууд</string>
     <string name="crm_design_import_dialog_title">Дизайн импортлох</string>
     <string name="crm_design_import_choose_template">Загвар сонгох</string>
     <string name="crm_design_replace_title">Загвар солих уу?</string>
@@ -126,9 +126,9 @@
     <string name="crm_not_found">Төсөл олдсонгүй</string>
     <string name="crm_more">Илүү</string>
     <string name="crm_comment_send">Илгээх</string>
-    <string name="crm_field_position_body">Агуулга</string>
+    <string name="crm_field_position_body">Үндсэн хэсэг</string>
     <string name="crm_sort_field">Эрэмбэлэх</string>
-    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_comment_remove_attachment">Хавсралт хасах</string>
     <string name="crm_views_sort_by">Эрэмбэлэх</string>
     <string name="crm_views_move_up">Дээш зөөх</string>
     <string name="crm_class_move_up">Дээш зөөх</string>
@@ -241,10 +241,10 @@
     <string name="crm_access_no_groups">Боломжит групп байхгүй</string>
     <string name="crm_access_tab_users">Хэрэглэгчид</string>
     <string name="crm_access_tab_groups">Бүлгүүд</string>
-    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_attachment_remove">Хавсралт хасах</string>
     <string name="crm_board_add_column">Багана нэмэх</string>
-    <string name="crm_settings_entity_id">Entity ID</string>
-    <string name="crm_settings_fingerprint">Fingerprint</string>
+    <string name="crm_settings_entity_id">Нэгжийн ID</string>
+    <string name="crm_settings_fingerprint">Хурууны хээ</string>
     <string name="crm_settings_server">Сервер</string>
     <string name="crm_untitled">Гарчиггүй</string>
     <string name="crm_property_select">Сонгоно уу …</string>
@@ -253,7 +253,7 @@
     <string name="crm_filter_clear_all">Бүгдийг цэвэрлэх</string>
     <string name="crm_filter_all">Бүгд</string>
     <string name="crm_filter_other">Бусад</string>
-    <string name="crm_settings_section_identity">Identity</string>
+    <string name="crm_settings_section_identity">Танилт</string>
     <string name="crm_settings_section_access">Хандалтын удирдлага</string>
     <string name="crm_settings_not_set">Тохируулаагүй</string>
     <string name="crm_settings_access_updated">Хандалт шинэчлэгдсэн</string>

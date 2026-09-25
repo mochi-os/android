@@ -10,7 +10,7 @@
     <string name="calendars_delete">Fshi</string>
     <string name="calendars_previous">I mëparshmi</string>
     <string name="calendars_next">Tjetra</string>
-    <string name="calendars_view">Shiko</string>
+    <string name="calendars_view">Pamja</string>
     <string name="calendars_view_list">Lista</string>
     <string name="calendars_list_search">Kërko</string>
     <string name="calendars_event_untitled">Pa titull</string>
@@ -53,9 +53,9 @@
     <string name="calendars_colour">Ngjyra</string>
     <string name="calendars_view_day">Ditë</string>
     <string name="calendars_event_start">Fillo</string>
-    <string name="notification_channel_calendars">Kalendarët</string>
+    <string name="notification_channel_calendars">Kalendarë</string>
     <string name="calendars_drawer_title">Kalendarët</string>
-    <string name="calendars_drawer_open">Kalendarët</string>
+    <string name="calendars_drawer_open">Kalendarë</string>
     <string name="calendars_calendar_menu">Opsionet e %1$s</string>
     <string name="calendars_only_this">Vetëm ky</string>
     <string name="calendars_create">Krijo kalendar</string>
@@ -169,7 +169,7 @@
     <string name="calendars_subscribe_server_url">Adresa e serverit</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Kalendari Google</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Llogaritë Google nuk janë aktivizuar në këtë server. Aktivizoji te Cilësimet, Cilësimet e sistemit.</string>
     <string name="calendars_subscribe_google_connect">Nuk ke lidhur asnjë llogari Google.</string>

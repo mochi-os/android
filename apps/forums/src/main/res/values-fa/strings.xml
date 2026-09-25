@@ -24,9 +24,9 @@
     <string name="forums_settings">تنظیمات</string>
     <string name="forums_load_more">بارگذاری بیشتر</string>
     <string name="forums_sort_label">مرتب‌سازی</string>
-    <string name="forums_sort_new">جدید</string>
+    <string name="forums_sort_new">جدیدترین</string>
     <string name="forums_sort_hot">داغ</string>
-    <string name="forums_sort_top">بالا</string>
+    <string name="forums_sort_top">برترین</string>
     <string name="forums_sort_interests">علاقه‌مندی‌ها</string>
     <string name="forums_post_title_field">عنوان</string>
     <string name="forums_post_attach">پیوست فایل‌ها</string>
@@ -59,7 +59,7 @@
     <string name="forums_tab_members">اعضا</string>
     <string name="forums_tab_banner">بنر</string>
     <string name="forums_tab_ai">هوش مصنوعی</string>
-    <string name="forums_access_target">هدف</string>
+    <string name="forums_access_target">کاربر یا گروه</string>
     <string name="forums_access_level_view">نمایش</string>
     <string name="forums_access_level_vote">رأی دادن</string>
     <string name="forums_access_level_comment">نظر</string>
@@ -67,7 +67,7 @@
     <string name="forums_access_level_none">هیچ‌کدام</string>
     <string name="forums_members_empty">هیچ عضوی وجود ندارد</string>
     <string name="forums_banner_dismiss">بستن بنر</string>
-    <string name="forums_ai_mode_tag">برچسب</string>
+    <string name="forums_ai_mode_tag">برچسب‌گذاری</string>
     <string name="forums_ai_account_default">حساب پیش‌فرض</string>
     <string name="forums_ai_prompt_reset">بازنشانی به پیش‌فرض</string>
     <string name="forums_settings_unsubscribe">لغو اشتراک</string>
@@ -80,7 +80,7 @@
     <string name="forums_moderation_reports_resolved">رفع شد</string>
     <string name="forums_moderation_reports_all">همه</string>
     <string name="forums_moderation_reports_empty">هیچ گزارشی وجود ندارد</string>
-    <string name="forums_moderation_report_dismiss">بستن</string>
+    <string name="forums_moderation_report_dismiss">رد کردن</string>
     <string name="forums_moderation_restrictions_empty">بدون محدودیت</string>
     <string name="forums_moderation_restriction_remove">حذف</string>
     <string name="forums_moderation_restriction_type">نوع</string>
@@ -124,7 +124,7 @@
     <string name="forums_comment_send">ارسال</string>
 
     <string name="notification_channel_forums">اعلان‌های انجمن‌ها</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">انجمن‌های Mochi</string>
     <string name="forums_auth_login_failed">ورود ناموفق بود</string>
     <string name="forums_auth_create_identity_failed">ایجاد هویت ناموفق بود</string>
     <string name="forums_auth_mfa_unsupported">احراز هویت چندعاملی هنوز در برنامه موبایل پشتیبانی نمی‌شود</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">دستی</string>
     <string name="forums_access_search_users">جست‌وجوی کاربران</string>
     <string name="forums_access_no_groups">هیچ گروهی در دسترس نیست</string>
-    <string name="forums_saved_title">ذخیره شد</string>
+    <string name="forums_saved_title">ذخیره‌شده‌ها</string>
     <string name="forums_saved_save">ذخیره برای بعد</string>
     <string name="forums_saved_remove">حذف از ذخیره‌شده‌ها</string>
     <string name="forums_saved_clear_all">پاک کردن همه</string>
@@ -239,7 +239,7 @@
     <string name="forums_settings_access_updated">دسترسی به‌روزرسانی شد</string>
     <string name="forums_settings_access_revoked">دسترسی لغو شد</string>
     <string name="forums_settings_member_removed">عضو حذف شد</string>
-    <string name="forums_settings_prompt_saved">Prompt ذخیره شد</string>
+    <string name="forums_settings_prompt_saved">پرامپت ذخیره شد</string>
     <string name="forums_settings_section_identity">هویت</string>
     <string name="forums_settings_field_name">نام</string>
     <string name="forums_settings_field_entity_id">شناسه موجودیت</string>
@@ -320,7 +320,7 @@
     <string name="forums_moderation_action_restrict">محدودشده</string>
     <string name="forums_moderation_action_unrestrict">محدودیت برداشته شد</string>
     <string name="forums_moderation_action_resolve">گزارش رفع‌شده</string>
-    <string name="forums_moderation_target_post">ارسال</string>
+    <string name="forums_moderation_target_post">پست</string>
     <string name="forums_moderation_target_comment">نظر</string>
     <string name="forums_moderation_target_user">کاربر</string>
     <string name="forums_moderation_reason_spam">هرزنامه</string>

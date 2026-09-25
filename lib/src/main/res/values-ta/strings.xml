@@ -38,7 +38,7 @@
     <string name="access_add_rule">விதியைச் சேர்</string>
     <string name="access_owner">உரிமையாளர்</string>
     <string name="access_revoke">திரும்பப் பெறு</string>
-    <string name="access_level_comment">கருத்து</string>
+    <string name="access_level_comment">கருத்திடு</string>
     <string name="access_level_view">காட்டு</string>
     <string name="access_level_none">ஒன்றுமில்லை</string>
     <string name="reaction_like">லைக்</string>
@@ -143,7 +143,7 @@
     <string name="auth_next">அடுத்து</string>
     <string name="auth_or_log_in_with">அல்லது இதன் மூலம் உள்நுழைக</string>
     <string name="auth_passkey">கடவுக்குறி</string>
-    <string name="auth_use_passkey">கடவுவிசையைப் பயன்படுத்தவும்</string>
+    <string name="auth_use_passkey">கடவுக்குறியைப் பயன்படுத்தவும்</string>
     <string name="auth_email_me_a_code">எனக்கு ஒரு குறியீட்டை மின்னஞ்சல் செய்யவும்</string>
     <string name="auth_or_enter_authenticator_code">அல்லது அங்கீகரிப்பு குறியீட்டை உள்ளிடவும்</string>
     <string name="auth_log_in">உள்நுழைக</string>
@@ -227,14 +227,14 @@
     <string name="stepup_email_placeholder">உங்கள் மின்னஞ்சலில் உள்ள குறியீட்டை உள்ளிடவும்</string>
     <string name="stepup_totp_label">அங்கீகரிப்பு குறியீடு</string>
     <string name="stepup_totp_placeholder">உங்கள் அங்கீகரிப்பான் குறியீட்டை உள்ளிடவும்</string>
-    <string name="stepup_use_passkey">உங்கள் கடவுவிசையைப் பயன்படுத்தவும்</string>
+    <string name="stepup_use_passkey">உங்கள் கடவுக்குறியைப் பயன்படுத்தவும்</string>
     <string name="stepup_send_email">மின்னஞ்சல் அனுப்பு</string>
     <string name="stepup_resend_email">மின்னஞ்சலை மீண்டும் அனுப்பு</string>
     <string name="stepup_verify">சரிபார்</string>
     <string name="stepup_continue_with">%1$s மூலம் தொடரவும்</string>
     <string name="stepup_error_start">மறுஅங்கீகாரத்தைத் தொடங்க முடியவில்லை. மீண்டும் முயற்சிக்கவும்.</string>
     <string name="stepup_error_code">அந்தக் குறியீடு தவறானது அல்லது காலாவதியாகிவிட்டது.</string>
-    <string name="stepup_error_passkey">கடவுவிசை சரிபார்ப்பு தோல்வியடைந்தது. மீண்டும் முயற்சிக்கவும்.</string>
+    <string name="stepup_error_passkey">கடவுக்குறி சரிபார்ப்பு தோல்வியடைந்தது. மீண்டும் முயற்சிக்கவும்.</string>
     <string name="stepup_error_oauth">அந்தக் கணக்கைச் சரிபார்க்க முடியவில்லை. மீண்டும் முயற்சிக்கவும்.</string>
     <string name="game_system_resign">%1$s விட்டுக்கொடுத்தார்</string>
     <string name="game_system_draw_offer">%1$s சமநிலையை முன்மொழிந்தார்</string>

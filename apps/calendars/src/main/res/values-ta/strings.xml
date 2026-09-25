@@ -10,7 +10,7 @@
     <string name="calendars_delete">நீக்கு</string>
     <string name="calendars_previous">முந்தையது</string>
     <string name="calendars_next">அடுத்து</string>
-    <string name="calendars_view">காட்டு</string>
+    <string name="calendars_view">காட்சி</string>
     <string name="calendars_view_list">பட்டியல்</string>
     <string name="calendars_list_search">தேடு</string>
     <string name="calendars_event_untitled">தலைப்பிடாதது</string>
@@ -53,9 +53,9 @@
     <string name="calendars_colour">நிறம்</string>
     <string name="calendars_view_day">நாள்</string>
     <string name="calendars_event_start">தொடங்கு</string>
-    <string name="notification_channel_calendars">நாட்காட்டிகள்</string>
-    <string name="calendars_drawer_title">நாட்காட்டிகள்</string>
-    <string name="calendars_drawer_open">நாட்காட்டிகள்</string>
+    <string name="notification_channel_calendars">நாள்காட்டிகள்</string>
+    <string name="calendars_drawer_title">நாள்காட்டிகள்</string>
+    <string name="calendars_drawer_open">நாள்காட்டிகள்</string>
     <string name="calendars_calendar_menu">%1$s விருப்பங்கள்</string>
     <string name="calendars_only_this">இதை மட்டும்</string>
     <string name="calendars_create">நாட்காட்டியை உருவாக்கு</string>
@@ -169,7 +169,7 @@
     <string name="calendars_subscribe_server_url">சேவையக முகவரி</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google கேலெண்டர்</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">இந்த சர்வரில் Google கணக்குகள் இயக்கப்படவில்லை. அவற்றை அமைப்புகள், சிஸ்டம் அமைப்புகள் இல் இயக்கவும்.</string>
     <string name="calendars_subscribe_google_connect">நீங்கள் Google கணக்கை இணைக்கவில்லை.</string>

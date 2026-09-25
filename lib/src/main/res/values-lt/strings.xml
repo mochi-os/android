@@ -38,7 +38,7 @@
     <string name="access_add_rule">Pridėti taisyklę</string>
     <string name="access_owner">Savininkas</string>
     <string name="access_revoke">Atšaukti</string>
-    <string name="access_level_comment">Komentaras</string>
+    <string name="access_level_comment">Komentuoti</string>
     <string name="access_level_view">Peržiūrėti</string>
     <string name="access_level_none">Nėra</string>
     <string name="reaction_like">Patinka</string>

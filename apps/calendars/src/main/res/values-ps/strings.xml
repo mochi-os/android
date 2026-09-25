@@ -10,7 +10,7 @@
     <string name="calendars_delete">ړنګ کړئ</string>
     <string name="calendars_previous">تېر</string>
     <string name="calendars_next">بل</string>
-    <string name="calendars_view">ولید</string>
+    <string name="calendars_view">لید</string>
     <string name="calendars_view_list">لیسټ</string>
     <string name="calendars_list_search">لټون</string>
     <string name="calendars_event_untitled">بې سرلیکه</string>
@@ -53,9 +53,9 @@
     <string name="calendars_colour">رنګ</string>
     <string name="calendars_view_day">ورځ</string>
     <string name="calendars_event_start">پیل</string>
-    <string name="notification_channel_calendars">کالنډرونه</string>
-    <string name="calendars_drawer_title">کالنډرونه</string>
-    <string name="calendars_drawer_open">کالنډرونه</string>
+    <string name="notification_channel_calendars">کلیزې</string>
+    <string name="calendars_drawer_title">کلیزې</string>
+    <string name="calendars_drawer_open">کلیزې</string>
     <string name="calendars_calendar_menu">د %1$s اختیارونه</string>
     <string name="calendars_only_this">یوازې دا</string>
     <string name="calendars_create">کالنډر جوړ کړئ</string>
@@ -169,7 +169,7 @@
     <string name="calendars_subscribe_server_url">د سرور پته</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google کلیز</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">د Google حسابونه پدې سرور کې نه دي فعال شوي. دوی په ترتیبات، د سیسټم ترتیبات کې فعال کړئ.</string>
     <string name="calendars_subscribe_google_connect">تاسو د Google حساب نه دی وصل کړی.</string>

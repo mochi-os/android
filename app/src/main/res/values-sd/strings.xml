@@ -3,19 +3,19 @@
 
     <string name="launcher_feeds">Mochi فيڊز</string>
     <string name="launcher_chat">Mochi چيٽ</string>
-    <string name="launcher_forums">Mochi فورمَ</string>
-    <string name="launcher_projects">Mochi پروجيڪٽ</string>
+    <string name="launcher_forums">Mochi فورمز</string>
+    <string name="launcher_projects">Mochi پروجيڪٽس</string>
     <string name="launcher_crm">Mochi CRM</string>
     <string name="launcher_people">Mochi ماڻهو</string>
     <string name="launcher_settings">Mochi سيٽنگون</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi وڪيز</string>
     <string name="launcher_chess">Mochi شطرنج</string>
-    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_go">Mochi گو</string>
     <string name="launcher_words">Mochi لفظ</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi مارڪيٽ</string>
     <string name="launcher_calendars">Mochi ڪئلينڊر</string>
-    <string name="launcher_staff">Mochi عملو</string>
+    <string name="launcher_staff">Mochi اسٽاف</string>
 
 
     <string name="app_name">Mochi</string>

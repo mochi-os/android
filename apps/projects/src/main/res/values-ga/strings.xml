@@ -106,7 +106,7 @@
     <string name="projects_design_import">Iompórtáil dearadh</string>
     <string name="projects_design_imported">Dearadh iompórtáilte</string>
     <string name="projects_design_tab_classes">Ranganna</string>
-    <string name="projects_design_tab_views">Radhairc</string>
+    <string name="projects_design_tab_views">Amhairc</string>
     <string name="projects_design_import_dialog_title">Iompórtáil dearadh</string>
     <string name="projects_design_import_choose_template">Roghnaigh teimpléad</string>
     <string name="projects_design_replace_title">Cuir dearadh in ionad?</string>
@@ -180,7 +180,7 @@
     <string name="projects_links_search_placeholder">Cuardaigh oibiachtaí</string>
 
     <string name="notification_channel_projects">Fógraí tionscadal</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Tionscadail</string>
     <string name="projects_list_search_placeholder">Cuardaigh tionscadail</string>
     <string name="projects_list_no_matching">Níl aon tionscadal comhoiriúnach ann</string>
     <string name="projects_list_empty">Níl aon tionscadal ann go fóill</string>
@@ -239,8 +239,8 @@
     <string name="projects_request_mark_ready">Marcáil mar réidh</string>
     <string name="projects_request_merge_default_message">Cumaisc %1$s isteach i %2$s</string>
     <string name="projects_request_commit_message">Teachtaireacht tiomanta</string>
-    <string name="projects_request_method_squash">Squash</string>
-    <string name="projects_request_method_rebase">Rebase</string>
+    <string name="projects_request_method_squash">Brúigh</string>
+    <string name="projects_request_method_rebase">Athbhonn</string>
     <string name="projects_request_create_title">Cruthaigh iarratas cumaisc</string>
     <string name="projects_request_field_target">Brainse sprice</string>
     <string name="projects_diff_title">Difríocht: %1$s -&gt; %2$s</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Roghnaigh riail</string>
     <string name="projects_access_authenticated_desc">Duine ar bith atá logáilte isteach</string>
     <string name="projects_access_anyone_desc">Úsáideoirí anaithnide san áireamh</string>
-    <string name="projects_access_target">Sprioc</string>
+    <string name="projects_access_target">Úsáideoir nó grúpa</string>
     <string name="projects_access_target_hint">Aitheantas aonáin, @grúpa, * (gach duine), nó + (baill)</string>
     <string name="projects_access_selected">Roghnaithe: %1$s</string>
     <string name="projects_access_role_comment">Nóta tráchta agus amharc</string>

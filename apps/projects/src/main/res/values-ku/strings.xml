@@ -52,12 +52,12 @@
     <string name="projects_object_tab_activity">Çalakî</string>
     <string name="projects_object_tab_requests">Daxwaz</string>
     <string name="projects_object_tab_attachments">Pêvek</string>
-    <string name="projects_object_tab_links">Lînka</string>
+    <string name="projects_object_tab_links">Girêdan</string>
     <string name="projects_watchers_watch">Temaşe bike</string>
     <string name="projects_watchers_unwatch">Temaşekirinê rawestîne</string>
     <string name="projects_parent_label">Dêûbav</string>
     <string name="projects_parent_search_placeholder">Lêger</string>
-    <string name="projects_links_title">Lînka</string>
+    <string name="projects_links_title">Girêdan</string>
     <string name="projects_links_add">Girêdan zêde bike</string>
     <string name="projects_links_section_blocks">Blok</string>
     <string name="projects_links_section_blocked_by">Hat astengkirin ji aliyê</string>
@@ -106,7 +106,7 @@
     <string name="projects_design_import">Sêwiranê bîne</string>
     <string name="projects_design_imported">Sêwiran hat îthal kirin</string>
     <string name="projects_design_tab_classes">Pol</string>
-    <string name="projects_design_tab_views">Dîtin</string>
+    <string name="projects_design_tab_views">Dîmen</string>
     <string name="projects_design_import_dialog_title">Sêwiranê bîne</string>
     <string name="projects_design_import_choose_template">Şabloneke hilbijêre</string>
     <string name="projects_design_replace_title">Dîzaynê biguhere?</string>
@@ -146,7 +146,7 @@
     <string name="projects_views_edit_dialog_title">Dîmenê sererast bike</string>
     <string name="projects_views_delete_title">Dîtinê jê bibe</string>
     <string name="projects_views_type">Cure</string>
-    <string name="projects_views_type_board">Tabloya</string>
+    <string name="projects_views_type_board">Tablo</string>
     <string name="projects_views_type_list">Lîste</string>
     <string name="projects_views_direction">Arasteyî</string>
     <string name="projects_views_sort_number">Hejmar</string>
@@ -160,7 +160,7 @@
     <string name="projects_comment_send">Bişîne</string>
     <string name="projects_field_position_body">Naverok</string>
     <string name="projects_sort_field">Rêz bike li gor</string>
-    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_comment_remove_attachment">Pêvekê rake</string>
     <string name="projects_views_sort_by">Rêz bike li gor</string>
     <string name="projects_auth_login_failed">Têketin têk çû</string>
     <string name="projects_views_move_up">Bibe jor</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Lê bigerin</string>
 
     <string name="notification_channel_projects">Agahdariyên projeyan</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Proje</string>
     <string name="projects_auth_create_identity_failed">Çêkirina nasnameyê bi ser neket</string>
     <string name="projects_auth_mfa_unsupported">MFA hîn di sepana mobîl de nayê piştgirîkirin</string>
     <string name="projects_auth_enter_code_sent">Koda ku ji %1$s re hat şandin binivîse</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Rêzikekê hilbijêre</string>
     <string name="projects_access_authenticated_desc">Her kesê ku têketî ye</string>
     <string name="projects_access_anyone_desc">Bikarhênerên nenas jî tê de</string>
-    <string name="projects_access_target">Armanc</string>
+    <string name="projects_access_target">Bikarhêner an kom</string>
     <string name="projects_access_target_hint">Nasnameya saziyê, @kom, * (her kes), an + (endam)</string>
     <string name="projects_access_selected">Hilbijartî: %1$s</string>
     <string name="projects_access_role_comment">Şîrove û dîtin</string>
@@ -381,5 +381,5 @@
     <string name="projects_option_delete_message">Ma tu pê ewle yî ku dixwazî vebijêrka \"%1$s\" jê bibî?</string>
     <string name="projects_create_object_no_types">Hêj tu cure babetan nikarin werin afirandin. Pêşî babetên dê yên pêwîst biafirîne.</string>
     <string name="projects_create_blocked_no_options">Nayê afirandin: %1$s pêwîst e lê vebijarkên wê tune ne. Di Sêwiranê de vebijarkan lê zêde bike.</string>
-    <string name="projects_attachment_remove">Remove attachment</string>
+    <string name="projects_attachment_remove">Pêvekê rake</string>
 </resources>

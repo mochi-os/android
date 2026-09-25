@@ -38,7 +38,7 @@
     <string name="access_add_rule">เพิ่มกฎ</string>
     <string name="access_owner">เจ้าของ</string>
     <string name="access_revoke">เพิกถอน</string>
-    <string name="access_level_comment">ความคิดเห็น</string>
+    <string name="access_level_comment">แสดงความคิดเห็น</string>
     <string name="access_level_view">ดู</string>
     <string name="access_level_none">ไม่มี</string>
     <string name="reaction_like">ถูกใจ</string>
@@ -96,7 +96,7 @@
     <string name="settings_number_format">รูปแบบตัวเลข</string>
     <string name="settings_units">หน่วย</string>
     <string name="settings_units_metric">เมตริก</string>
-    <string name="settings_units_imperial">Imperial</string>
+    <string name="settings_units_imperial">อิมพีเรียล</string>
     <string name="settings_time_zone">เขตเวลา</string>
     <string name="settings_reset_to_defaults">รีเซ็ตเป็นค่าเริ่มต้น</string>
     <string name="settings_reset_confirm_title">รีเซ็ตการตั้งค่า?</string>
@@ -143,7 +143,7 @@
     <string name="auth_passkey">พาสคีย์</string>
     <string name="auth_use_passkey">ใช้พาสคีย์</string>
     <string name="auth_email_me_a_code">ส่งรหัสทางอีเมลให้ฉัน</string>
-    <string name="auth_or_enter_authenticator_code">หรือป้อนรหัส Authenticator</string>
+    <string name="auth_or_enter_authenticator_code">หรือป้อนรหัสยืนยันตัวตน</string>
     <string name="auth_log_in">เข้าสู่ระบบ</string>
     <string name="auth_back">ย้อนกลับ</string>
     <string name="auth_lost_access_recovery">เข้าถึงไม่ได้ใช่ไหม ใช้รหัสกู้คืน</string>
@@ -190,7 +190,7 @@
     <string name="format_time_weeks_short">%1$d สป.</string>
     <string name="format_time_months_short">%1$d ด.</string>
     <string name="reaction_add">เพิ่มรีแอ็กชัน</string>
-    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel">การแจ้งเตือน Mochi</string>
     <string name="push_service_channel_description">ทำให้ Mochi เชื่อมต่ออยู่เพื่อรับการแจ้งเตือน</string>
     <string name="push_service_group">บริการเบื้องหลัง</string>
     <string name="push_service_title">Mochi กำลังรอรับการแจ้งเตือน</string>
@@ -204,7 +204,7 @@
     <string name="oem_hint_allow">อนุญาตให้ทำงานเบื้องหลัง</string>
     <string name="oem_hint_dismiss">ไม่ต้องแสดงอีก</string>
     <string name="about_label">เกี่ยวกับ</string>
-    <string name="about_title">Mochi Client</string>
+    <string name="about_title">ไคลเอ็นต์ Mochi</string>
     <string name="about_version">เวอร์ชัน %1$s</string>
     <string name="about_check_updates">ตรวจหาการอัปเดต</string>
     <string name="about_up_to_date">เป็นเวอร์ชันล่าสุดแล้ว</string>
@@ -225,7 +225,7 @@
     <string name="stepup_description">นี่คือการเปลี่ยนแปลงด้านความปลอดภัยของบัญชีคุณ ยืนยันว่าเป็นคุณเพื่อดำเนินการต่อ</string>
     <string name="stepup_email_label">รหัสอีเมล</string>
     <string name="stepup_email_placeholder">ป้อนรหัสจากอีเมลของคุณ</string>
-    <string name="stepup_totp_label">รหัส Authenticator</string>
+    <string name="stepup_totp_label">รหัสยืนยันตัวตน</string>
     <string name="stepup_totp_placeholder">ป้อนรหัสจากแอปยืนยันตัวตนของคุณ</string>
     <string name="stepup_use_passkey">ใช้พาสคีย์ของคุณ</string>
     <string name="stepup_send_email">ส่งอีเมล</string>
@@ -293,7 +293,7 @@
     <string name="format_italic">ตัวเอียง</string>
     <string name="format_link">ลิงก์</string>
     <string name="format_heading">หัวเรื่อง</string>
-    <string name="format_code">รหัส</string>
+    <string name="format_code">โค้ด</string>
     <string name="format_list">รายการหัวข้อย่อย</string>
     <string name="common_preview">ดูตัวอย่าง</string>
     <string name="rss_revoke_confirm">เพิกถอน</string>

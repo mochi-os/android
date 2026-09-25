@@ -13,7 +13,7 @@
     <string name="people_friends_received_tab">موصول ہوگیا</string>
     <string name="people_friends_sent_tab">بھیج دیا گیا</string>
     <string name="people_invitations_incoming">آنے والی دعوتیں</string>
-    <string name="people_invitations_empty">کوئی pending invitations نہیں</string>
+    <string name="people_invitations_empty">کوئی زیر التوا دعوتیں نہیں</string>
     <string name="people_invitations_empty_hint">نئی invitations یہاں ظاہر ہوں گی</string>
     <string name="people_invitations_accept">قبول کریں</string>
     <string name="people_invitations_decline">انکار کریں</string>
@@ -56,12 +56,12 @@
     <string name="people_profile_accent">ایکسنٹ</string>
     <string name="people_profile_directory_listing">دوسروں کو ڈائرکٹری میں آپ کو تلاش کرنے کی اجازت دیں</string>
     <string name="people_profile_markdown_supported">Markdown سپورٹڈ ہے</string>
-    <string name="people_profile_preview">preview</string>
+    <string name="people_profile_preview">پیش منظر</string>
     <string name="people_profile_upload_avatar">اواتار اپ لوڈ کریں</string>
     <string name="people_profile_upload">اپ لوڈ کریں</string>
     <string name="people_profile_uploading">اپ لوڈ ہو رہا ہے…</string>
     <string name="people_profile_change_banner">بینر تبدیل کریں</string>
-    <string name="people_profile_no_banner">کوئی banner سیٹ نہیں</string>
+    <string name="people_profile_no_banner">کوئی بینر سیٹ نہیں</string>
     <string name="people_profile_favicon">فیویکون</string>
     <string name="people_profile_browser_icon">براؤزر آئیکن</string>
     <string name="people_profile_file_too_large">فائل بہت بڑی ہے</string>
@@ -73,10 +73,10 @@
     <string name="people_common_save">محفوظ کریں</string>
     <string name="people_welcome_dismiss">برخاست کریں</string>
     <string name="people_sidebar_header">لوگ</string>
-    <string name="people_open_sidebar">navigation کھولیں</string>
+    <string name="people_open_sidebar">نیویگیشن کھولیں</string>
     <string name="people_person_state_friend">دوست</string>
     <string name="people_person_state_self">آپ</string>
-    <string name="people_person_message">پیغام</string>
+    <string name="people_person_message">پیغام بھیجیں</string>
     <string name="people_person_accept">قبول کریں</string>
     <string name="people_person_decline">انکار کریں</string>
 
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">درست ہیکس رنگ درج کریں (مثلاً #a78bfa)</string>
     <string name="people_profile_accent_none">کوئی نہیں</string>
     <string name="people_profile_privacy_private_desc">صرف باہمی دوست آپ کا پروفائل دیکھ سکتے ہیں</string>
-    <string name="people_welcome_title">People میں خوش آمدید</string>
+    <string name="people_welcome_title">لوگ میں خوش آمدید</string>
     <string name="people_person_banner_alt">%1$s کا بینر</string>
     <string name="people_person_private">یہ پروفائل نجی ہے</string>
     <string name="people_person_state_invited">مدعو</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">سب قبول کریں</string>
     <string name="people_invitations_decline_all">سب مسترد کریں</string>
     <string name="people_invitations_cancel_all">سب منسوخ کریں</string>
+    <string name="people_invitations_cancel">منسوخ کریں</string>
     <string name="people_invitations_all_accepted">تمام دعوتیں قبول کر لی گئیں</string>
     <string name="people_invitations_all_declined">تمام دعوتیں مسترد کر دی گئیں</string>
     <string name="people_invitations_all_cancelled">تمام دعوتیں منسوخ کر دی گئیں</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">تلاش کریں…</string>
     <string name="people_contacts_invited">مدعو</string>
     <string name="people_contacts_accept">قبول کریں</string>
-    <string name="people_contacts_message">پیغام</string>
+    <string name="people_contacts_message">پیغام بھیجیں</string>
     <string name="people_contacts_no_people_found">کوئی لوگ نہیں ملے</string>
     <string name="people_contacts_try_adjusting">اپنی تلاش کو تبدیل کرنے کی کوشش کریں</string>
     <string name="people_contact_section_address">پتہ</string>
@@ -127,7 +128,7 @@
     <string name="people_contact_email">ای میل</string>
     <string name="people_contact_city">شہر</string>
     <string name="people_contact_region">ریجن</string>
-    <string name="people_contact_postcode">postcode</string>
+    <string name="people_contact_postcode">پوسٹ کوڈ</string>
     <string name="people_contact_country">ملک</string>
     <string name="people_contact_type">قسم</string>
     <string name="people_contact_type_home">گھر</string>

@@ -31,10 +31,10 @@
     <string name="chess_delete_confirm">אויסמעקן שפּיל</string>
     <string name="chess_draw_accept">אָננעמען</string>
     <string name="chess_draw_decline">אָפּזאָגן</string>
-    <string name="chess_status_checkmate_you_win">Checkmate — איר געווינט!</string>
+    <string name="chess_status_checkmate_you_win">שאַך־מאַט — איר געווינט!</string>
     <string name="chess_status_stalemate">פּאַט — תּיקו</string>
     <string name="chess_status_draw">תּיקו</string>
-    <string name="chess_status_check_your_move">Check — אײַער גאַנג</string>
+    <string name="chess_status_check_your_move">שאַך — אײַער גאַנג</string>
     <string name="chess_status_your_move">אײַער צוג</string>
     <string name="chess_move_subject_you">איר</string>
     <string name="chess_promotion_title">פֿאַרהייב צו:</string>
@@ -42,10 +42,10 @@
     <string name="chess_resign_message">זענט איר זיכער איר ווילט רעזיגנירן? %1$s וועט געווינען די שפּיל.</string>
     <string name="chess_draw_offered">%1$s האָט פֿאָרגעלייגט אַ תּיקו</string>
     <string name="chess_draw_waiting">תּיקו פֿאָרגעלייגט — וואַרט אויף %1$s</string>
-    <string name="chess_status_checkmate_opponent_wins">Checkmate — %1$s געווינט</string>
+    <string name="chess_status_checkmate_opponent_wins">שאַך־מאַט — %1$s געווינט</string>
     <string name="chess_status_resigned_you">איר האָט רעזיגנירט — %1$s געווינט</string>
     <string name="chess_status_resigned_opponent">%1$s האָט רעזיגנירט — איר געווינט!</string>
-    <string name="chess_status_check_opponent_move">Check — %1$s\'ס גאַנג</string>
+    <string name="chess_status_check_opponent_move">שאַך — %1$s\'ס גאַנג</string>
     <string name="chess_status_opponent_move">%1$s׳ס צוג</string>
     <string name="chess_piece_king">מלך</string>
     <string name="chess_piece_queen">מלכּה</string>

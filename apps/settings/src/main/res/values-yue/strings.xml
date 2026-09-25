@@ -342,7 +342,7 @@
     <string name="system_status_reachability_private">私人</string>
     <string name="system_status_reachability_unknown">未知</string>
     <string name="system_status_relay">經中繼</string>
-    <string name="system_status_mesh">廣播 Mesh</string>
+    <string name="system_status_mesh">廣播網狀網絡</string>
     <string name="system_status_broadcast">最後廣播</string>
     <string name="system_status_queued_broadcasts">排隊嘅廣播訊息</string>
     <string name="system_setting_hostname_publish">向其他伺服器公告主機名稱和網域</string>

@@ -158,7 +158,7 @@
     <string name="projects_more">Më shumë</string>
     <string name="projects_request_more">Më shumë</string>
     <string name="projects_comment_send">Dërgo</string>
-    <string name="projects_field_position_body">Përmbajtja</string>
+    <string name="projects_field_position_body">Trupi</string>
     <string name="projects_sort_field">Rendit sipas</string>
     <string name="projects_comment_remove_attachment">Hiq bashkëngjitjen</string>
     <string name="projects_views_sort_by">Rendit sipas</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Kërko objekte</string>
 
     <string name="notification_channel_projects">Njoftime për projektet</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Projekte</string>
     <string name="projects_auth_create_identity_failed">Krijimi i identitetit dështoi</string>
     <string name="projects_auth_mfa_unsupported">MFA nuk mbështetet ende në aplikacionin celular</string>
     <string name="projects_auth_enter_code_sent">Shkruani kodin e dërguar te %1$s</string>
@@ -243,7 +243,7 @@
     <string name="projects_request_method_rebase">Rebase</string>
     <string name="projects_request_create_title">Krijo kërkesë bashkimi</string>
     <string name="projects_request_field_target">Dega cak</string>
-    <string name="projects_diff_title">Diff: %1$s -&gt; %2$s</string>
+    <string name="projects_diff_title">Dallimet: %1$s -&gt; %2$s</string>
     <string name="projects_tree_collapse">Mbylle</string>
     <string name="projects_tree_expand">Zgjeroje</string>
     <string name="projects_tree_move">Zhvendos</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Zgjidhni një rregull</string>
     <string name="projects_access_authenticated_desc">Kushdo që është i identifikuar</string>
     <string name="projects_access_anyone_desc">Duke përfshirë përdoruesit anonimë</string>
-    <string name="projects_access_target">Objektivi</string>
+    <string name="projects_access_target">Subjekti</string>
     <string name="projects_access_target_hint">ID entiteti, @grup, * (të gjithë), ose + (anëtarët)</string>
     <string name="projects_access_selected">E zgjedhur: %1$s</string>
     <string name="projects_access_role_comment">Komento dhe shih</string>

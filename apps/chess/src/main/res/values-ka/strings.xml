@@ -13,7 +13,7 @@
     <string name="chess_new_title">ახალი თამაში</string>
     <string name="chess_new_pick_opponent">აირჩიეთ ოპონენტი</string>
     <string name="chess_new_no_friends_title">მეგობრები ჯერ არ არის</string>
-    <string name="chess_new_no_friends_subtitle">დაამატეთ მეგობრები People აპში სათამაშოდ დასაწყებად</string>
+    <string name="chess_new_no_friends_subtitle">დაამატეთ მეგობრები „ადამიანები“ აპში სათამაშოდ დასაწყებად</string>
     <string name="chess_new_add_friends">მეგობრების დამატება</string>
     <string name="chess_new_start_button">თამაშის დაწყება</string>
     <string name="chess_new_creating">იქმნება…</string>

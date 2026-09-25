@@ -38,7 +38,7 @@
     <string name="access_add_rule">Додати правило</string>
     <string name="access_owner">Власник</string>
     <string name="access_revoke">Відкликати</string>
-    <string name="access_level_comment">Коментар</string>
+    <string name="access_level_comment">Коментувати</string>
     <string name="access_level_view">Переглянути</string>
     <string name="access_level_none">Немає</string>
     <string name="reaction_like">Подобається</string>

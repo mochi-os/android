@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">Wafanyakazi</string>
+    <string name="launcher_staff">Wafanyakazi wa Mochi</string>
     <string name="staff_accounts_action_ban_title">Piga akaunti marufuku</string>
     <string name="staff_accounts_action_suspend_title">Simamisha akaunti</string>
     <string name="staff_accounts_action_unban_title">Ondoa marufuku</string>
@@ -162,7 +162,7 @@
     <string name="staff_categories_type_digital">Kidijitali</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">Kimwili</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">Wafanyakazi</string>
     <string name="staff_config_field_auto_approve">Kizingiti cha kuidhinisha-otomatiki</string>
     <string name="staff_config_field_hold">Kizingiti cha kushikilia</string>
     <string name="staff_config_field_platform_fee">Ada ya jukwaa</string>
@@ -259,9 +259,9 @@
     <string name="staff_disputes_resolve">Tatua</string>
     <string name="staff_disputes_resolved_toast">Mgogoro umetatuliwa</string>
     <string name="staff_disputes_resolving">Inatatua…</string>
-    <string name="staff_disputes_review">Mapitio</string>
+    <string name="staff_disputes_review">Pitia</string>
     <string name="staff_disputes_status_escalated">Imepandishwa</string>
-    <string name="staff_disputes_status_open">Fungua</string>
+    <string name="staff_disputes_status_open">Wazi</string>
     <string name="staff_disputes_status_resolved_buyer">Imesuluhishwa (mnunuzi)</string>
     <string name="staff_disputes_status_resolved_seller">Imesuluhishwa (muuzaji)</string>
     <string name="staff_disputes_status_responded">Imejibiwa</string>
@@ -287,9 +287,9 @@
     <string name="staff_listings_filter_status_label">Hali</string>
     <string name="staff_listings_moderation_auto_approved">Imeidhinishwa kiotomatiki</string>
     <string name="staff_listings_moderation_hold">Shikilia</string>
-    <string name="staff_listings_moderation_manual">Mwongozo</string>
+    <string name="staff_listings_moderation_manual">Kwa mkono</string>
     <string name="staff_listings_moderation_rejected">Imekataliwa</string>
-    <string name="staff_listings_moderation_review">Mapitio</string>
+    <string name="staff_listings_moderation_review">Inasubiri mapitio</string>
     <string name="staff_listings_moderation_soft_approved">Imeidhinishwa kwa upole</string>
     <string name="staff_listings_notes_label">Maelezo</string>
     <string name="staff_listings_price_placeholder">—</string>
@@ -315,7 +315,7 @@
     <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Kitendo</string>
     <string name="staff_reports_action_ban">Piga mtumiaji marufuku</string>
-    <string name="staff_reports_action_dismiss">Ondoa</string>
+    <string name="staff_reports_action_dismiss">Tupilia mbali</string>
     <string name="staff_reports_action_label">Kitendo</string>
     <string name="staff_reports_action_placeholder">Chagua kitendo</string>
     <string name="staff_reports_action_remove">Ondoa</string>
@@ -337,7 +337,7 @@
     <string name="staff_reports_meta_reason">Sababu</string>
     <string name="staff_reports_meta_reporter">Mripotiji</string>
     <string name="staff_reports_meta_seller">Muuzaji</string>
-    <string name="staff_reports_meta_target">Lengo</string>
+    <string name="staff_reports_meta_target">Kilichoripotiwa</string>
     <string name="staff_reports_meta_type">Aina</string>
     <string name="staff_reports_notes_label">Maelezo</string>
     <string name="staff_reports_reason_counterfeit">Ya kughushi au iliyoibwa</string>
@@ -347,7 +347,7 @@
     <string name="staff_reports_reason_prohibited">Kipengele kilichokatazwa au haramu</string>
     <string name="staff_reports_reason_spam">Taka au utapeli</string>
     <string name="staff_reports_status_actioned">Imechukuliwa hatua</string>
-    <string name="staff_reports_status_dismissed">Imeondolewa</string>
+    <string name="staff_reports_status_dismissed">Imetupiliwa mbali</string>
     <string name="staff_reports_status_pending">Inasubiri</string>
     <string name="staff_reports_status_reviewed">Imepitiwa</string>
     <string name="staff_reports_submit">Wasilisha</string>
@@ -394,15 +394,15 @@
     <string name="staff_status_approved">Imeidhinishwa</string>
     <string name="staff_status_auto_approved">Imeidhinishwa kiotomatiki</string>
     <string name="staff_status_banned">Imepigwa marufuku</string>
-    <string name="staff_status_dismissed">Imeondolewa</string>
+    <string name="staff_status_dismissed">Imetupiliwa mbali</string>
     <string name="staff_status_draft">Rasimu</string>
     <string name="staff_status_escalated">Imepandishwa</string>
     <string name="staff_status_expired">Muda umeisha</string>
     <string name="staff_status_hidden">Imefichwa</string>
     <string name="staff_status_hold">Shikilia</string>
-    <string name="staff_status_manual">Mwongozo</string>
+    <string name="staff_status_manual">Kwa mkono</string>
     <string name="staff_status_moderator">Msimamizi</string>
-    <string name="staff_status_open">Fungua</string>
+    <string name="staff_status_open">Wazi</string>
     <string name="staff_status_pending">Inasubiri</string>
     <string name="staff_status_published">Imechapishwa</string>
     <string name="staff_status_rejected">Imekataliwa</string>
@@ -410,7 +410,7 @@
     <string name="staff_status_resolved_buyer">Imesuluhishwa (mnunuzi)</string>
     <string name="staff_status_resolved_seller">Imesuluhishwa (muuzaji)</string>
     <string name="staff_status_responded">Imejibiwa</string>
-    <string name="staff_status_review">Mapitio</string>
+    <string name="staff_status_review">Inasubiri mapitio</string>
     <string name="staff_status_reviewed">Imepitiwa</string>
     <string name="staff_status_reviewing">Inapitia</string>
     <string name="staff_status_soft_approved">Imeidhinishwa kwa upole</string>

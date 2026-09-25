@@ -8,7 +8,7 @@
     <string name="go_action_pass">Pass</string>
     <string name="go_action_rematch">Tandhing manèh</string>
     <string name="go_action_resign">Nyerah</string>
-    <string name="go_app_title">Lunga</string>
+    <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Tangkepan ireng</string>
     <string name="go_captures_white_sr">Tangkepan putih</string>
     <string name="go_chat_title">Chat</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">Mbukak sidebar</string>
     <string name="go_sidebar_active">Game Aktif</string>
     <string name="go_empty_active">Durung ana dolanan aktif.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">Nyerah</string>
     <string name="go_new_game_title">Dolanan Go anyar</string>
     <string name="go_new_game_no_friends">Sampeyan kudu nambah kanca sadurunge bisa miwiti dolanan.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Mochi Ленталар</string>
+    <string name="launcher_feeds">Mochi Тасмалар</string>
     <string name="launcher_chat">Mochi Чат</string>
     <string name="launcher_forums">Mochi Форумдар</string>
     <string name="launcher_projects">Mochi Долбоорлор</string>
@@ -9,13 +9,13 @@
     <string name="launcher_people">Mochi Адамдар</string>
     <string name="launcher_settings">Mochi Жөндөөлөр</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Викилер</string>
     <string name="launcher_chess">Mochi Шахмат</string>
-    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_go">Mochi Го</string>
     <string name="launcher_words">Mochi Сөздөр</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi Базар</string>
     <string name="launcher_calendars">Mochi Календарлар</string>
-    <string name="launcher_staff">Mochi Кызматкерлер</string>
+    <string name="launcher_staff">Mochi кызматкерлери</string>
 
 
     <string name="app_name">Mochi</string>

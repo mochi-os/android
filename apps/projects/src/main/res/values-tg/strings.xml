@@ -39,7 +39,7 @@
     <string name="projects_settings_tab_access">Дастрасӣ</string>
     <string name="projects_settings_tab_people">Шахсон</string>
     <string name="projects_option_icon">Нишона</string>
-    <string name="projects_option_icon_placeholder">мисол барои. Check, Star, Flag</string>
+    <string name="projects_option_icon_placeholder">масалан, Check, Star, Flag</string>
     <string name="projects_settings_unsubscribe">Аз обуна баромадан</string>
     <string name="projects_settings_delete_project">Нест кардани лоиҳа</string>
     <string name="projects_settings_delete_confirm_title">Нест кардани лоиҳа</string>
@@ -76,7 +76,7 @@
     <string name="projects_property_option_none">Ҳеҷ кадом</string>
     <string name="projects_attachments">Замимаҳо</string>
     <string name="projects_attachment_add">Иловаи замима</string>
-    <string name="projects_request_empty">Ягон дархости merge нест</string>
+    <string name="projects_request_empty">Ягон дархости муттаҳидсозӣ нест</string>
     <string name="projects_request_status_draft">Сиёҳнавис</string>
     <string name="projects_request_status_open">Кушода</string>
     <string name="projects_request_status_merged">Муттаҳид шуд</string>
@@ -93,7 +93,7 @@
     <string name="projects_request_create_action">Эҷод кардан</string>
     <string name="projects_diff_unified">Муттаҳид</string>
     <string name="projects_diff_split">Тақсим</string>
-    <string name="projects_diff_empty">Diff дастрас нест</string>
+    <string name="projects_diff_empty">Фарқият дастрас нест</string>
     <string name="projects_board_unassigned">Таъин нашудааст</string>
     <string name="projects_board_new">Нав</string>
     <string name="projects_board_rename">Тағйири ном</string>
@@ -106,7 +106,7 @@
     <string name="projects_design_import">Воридкунии тарроҳӣ</string>
     <string name="projects_design_imported">Дизайн ворид карда шуд</string>
     <string name="projects_design_tab_classes">Синфҳо</string>
-    <string name="projects_design_tab_views">Назарҳо</string>
+    <string name="projects_design_tab_views">Намудҳо</string>
     <string name="projects_design_import_dialog_title">Воридкунии тарроҳӣ</string>
     <string name="projects_design_import_choose_template">Шаблон интихоб кунед</string>
     <string name="projects_design_replace_title">Тарҳро иваз кардан?</string>
@@ -123,7 +123,7 @@
     <string name="projects_class_delete">Нест кардани синф</string>
     <string name="projects_class_delete_title">Нест кардани синф</string>
     <string name="projects_field_type_text">Матн</string>
-    <string name="projects_field_type_number">Рақам</string>
+    <string name="projects_field_type_number">Адад</string>
     <string name="projects_field_type_user">Корбар</string>
     <string name="projects_field_type_date">Сана</string>
     <string name="projects_field_type_checklist">Рӯйхат</string>
@@ -158,9 +158,9 @@
     <string name="projects_more">Бештар</string>
     <string name="projects_request_more">Бештар</string>
     <string name="projects_comment_send">Фиристодан</string>
-    <string name="projects_field_position_body">Матн</string>
+    <string name="projects_field_position_body">Қисми асосӣ</string>
     <string name="projects_sort_field">Мураттаб кардан</string>
-    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_comment_remove_attachment">Хориҷ кардани замима</string>
     <string name="projects_views_sort_by">Мураттаб кардан</string>
     <string name="projects_auth_login_failed">Воридшавӣ ноком шуд</string>
     <string name="projects_views_move_up">Боло баровардан</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Ҷустуҷӯи объектҳо</string>
 
     <string name="notification_channel_projects">Огоҳиномаҳои лоиҳаҳо</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Лоиҳаҳо</string>
     <string name="projects_auth_create_identity_failed">Эҷоди шахсият ноком шуд</string>
     <string name="projects_auth_mfa_unsupported">MFA дар барномаи мобилӣ ҳанӯз дастгирӣ намешавад</string>
     <string name="projects_auth_enter_code_sent">Рамзи ба %1$s фиристодашударо ворид кунед</string>
@@ -239,8 +239,8 @@
     <string name="projects_request_mark_ready">Ҳамчун тайёр қайд кунед</string>
     <string name="projects_request_merge_default_message">Муттаҳидсозии %1$s ба %2$s</string>
     <string name="projects_request_commit_message">Паёми коммит</string>
-    <string name="projects_request_method_squash">Squash</string>
-    <string name="projects_request_method_rebase">Rebase</string>
+    <string name="projects_request_method_squash">Фишурдан</string>
+    <string name="projects_request_method_rebase">Ребейс</string>
     <string name="projects_request_create_title">Эҷоди дархости муттаҳидсозӣ</string>
     <string name="projects_request_field_target">Шохаи ҳадаф</string>
     <string name="projects_diff_title">Фарқият: %1$s -&gt; %2$s</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Қоидаро интихоб кунед</string>
     <string name="projects_access_authenticated_desc">Ҳар касе, ки ворид шудааст</string>
     <string name="projects_access_anyone_desc">Аз ҷумла корбарони беном</string>
-    <string name="projects_access_target">Ҳадаф</string>
+    <string name="projects_access_target">Корбар ё гурӯҳ</string>
     <string name="projects_access_target_hint">Идентификатори обйект, @гурӯҳ, * (ҳама), ё + (аъзоён)</string>
     <string name="projects_access_selected">Интихобшуда: %1$s</string>
     <string name="projects_access_role_comment">Шарҳ ва дидан</string>
@@ -381,5 +381,5 @@
     <string name="projects_option_delete_message">Шумо мутмаин ҳастед, ки мехоҳед имкони \"%1$s\"-ро нест кунед?</string>
     <string name="projects_create_object_no_types">Ҳеҷ як намуди ашё ҳоло сохта намешавад. Аввал ашёҳои волидайни заруриро эҷод кунед.</string>
     <string name="projects_create_blocked_no_options">Эҷод кардан ғайриимкон: %1$s ҳатмист, аммо имконоти интихоб надорад. Дар Тарҳ имконот илова кунед.</string>
-    <string name="projects_attachment_remove">Remove attachment</string>
+    <string name="projects_attachment_remove">Хориҷ кардани замима</string>
 </resources>

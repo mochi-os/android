@@ -13,7 +13,7 @@
     <string name="chess_new_title">新遊戲</string>
     <string name="chess_new_pick_opponent">選擇對手</string>
     <string name="chess_new_no_friends_title">尚無朋友</string>
-    <string name="chess_new_no_friends_subtitle">在通訊錄應用程式中新增好友以開始遊玩</string>
+    <string name="chess_new_no_friends_subtitle">在聯絡人應用程式中新增好友以開始遊玩</string>
     <string name="chess_new_add_friends">新增好友</string>
     <string name="chess_new_start_button">開始遊戲</string>
     <string name="chess_new_creating">建立中…</string>

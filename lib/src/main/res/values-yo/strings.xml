@@ -38,7 +38,7 @@
     <string name="access_add_rule">Fi ofin kun</string>
     <string name="access_owner">Onílé</string>
     <string name="access_revoke">Fagi lé</string>
-    <string name="access_level_comment">Àlàyé</string>
+    <string name="access_level_comment">Fi àlàyé sílẹ̀</string>
     <string name="access_level_view">Wo</string>
     <string name="access_level_none">Kòsí</string>
     <string name="reaction_like">Fẹran</string>
@@ -74,7 +74,7 @@
     <string name="settings_radius_medium">Àárín</string>
     <string name="settings_radius_large">Tóbi</string>
     <string name="settings_font">Akọ̀ọkọ̀</string>
-    <string name="settings_font_system">System</string>
+    <string name="settings_font_system">Sístẹ́mù</string>
     <string name="settings_font_serif">Serif</string>
     <string name="settings_font_dyslexia">Ẹ̀dá lóàfin fún àìmoọ̀rọ̀</string>
     <string name="settings_font_size">Ìwọ̀n àmì</string>
@@ -96,7 +96,7 @@
     <string name="settings_number_format">Ọ̀nà nọ́mbà</string>
     <string name="settings_units">Àwọn ìpín</string>
     <string name="settings_units_metric">Òṣùwọ̀n</string>
-    <string name="settings_units_imperial">Imperial</string>
+    <string name="settings_units_imperial">Òṣùwọ̀n Gẹ̀ẹ́sì</string>
     <string name="settings_time_zone">Agbègbè àkókò</string>
     <string name="settings_reset_to_defaults">Pa padà sí àwọn àbùdá</string>
     <string name="settings_reset_confirm_title">Pa àwọn ìfẹ́ padà?</string>
@@ -185,11 +185,11 @@
     <string name="format_time_weeks_ago">%1$dw sẹ́yìn</string>
     <string name="format_time_months_ago">%1$dmo sẹ́yìn</string>
     <string name="format_time_years_ago">%1$dy sẹ́yìn</string>
-    <string name="format_time_minutes_short">%1$dm</string>
-    <string name="format_time_hours_short">%1$dh</string>
-    <string name="format_time_days_short">%1$dd</string>
-    <string name="format_time_weeks_short">%1$dw</string>
-    <string name="format_time_months_short">%1$dmo</string>
+    <string name="format_time_minutes_short">ìṣẹ́jú %1$d</string>
+    <string name="format_time_hours_short">wákàtí %1$d</string>
+    <string name="format_time_days_short">ọjọ́ %1$d</string>
+    <string name="format_time_weeks_short">ọ̀sẹ̀ %1$d</string>
+    <string name="format_time_months_short">oṣù %1$d</string>
     <string name="reaction_add">Fi ìfèsì kún</string>
     <string name="push_service_channel">Ìfitónilétí Mochi</string>
     <string name="push_service_channel_description">Ń jẹ́ kí Mochi wà ní àsopọ̀ láti gba àwọn ìfitónilétí</string>
@@ -253,7 +253,7 @@
     <string name="reaction_remove">Pa rẹ́</string>
     <string name="common_logout_confirm_message">Ṣé o dá ọ lójú pé o fẹ́ jáde? Ìwọ yóò ní láti tún wọlé láti lè wọ àkáǹtì rẹ.</string>
     <string name="comment_anonymous">Aláìní-orúkọ</string>
-    <string name="tags_label">Àwọn tag</string>
+    <string name="tags_label">Àwọn àmì</string>
     <string name="tags_add">Fi àmì kún</string>
     <string name="tags_interest_up">Fi irú èyí hàn sí i</string>
     <string name="tags_interest_down">Fi irú èyí hàn dín kù</string>

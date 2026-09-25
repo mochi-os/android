@@ -24,13 +24,13 @@
     <string name="forums_settings">Настройки</string>
     <string name="forums_load_more">Загрузить ещё</string>
     <string name="forums_sort_label">Сортировка</string>
-    <string name="forums_sort_new">Новый</string>
+    <string name="forums_sort_new">Новые</string>
     <string name="forums_sort_hot">Популярное</string>
-    <string name="forums_sort_top">Верх</string>
+    <string name="forums_sort_top">Лучшее</string>
     <string name="forums_sort_interests">Интересы</string>
     <string name="forums_post_title_field">Заголовок</string>
     <string name="forums_post_attach">Прикрепить файлы</string>
-    <string name="forums_post_create_action">Публикация</string>
+    <string name="forums_post_create_action">Опубликовать</string>
     <string name="forums_post_edit">Изменить публикацию</string>
     <string name="forums_post_edit_title">Изменить публикацию</string>
     <string name="forums_post_edit_title_field">Заголовок</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Участники</string>
     <string name="forums_tab_banner">Баннер</string>
     <string name="forums_tab_ai">ИИ</string>
-    <string name="forums_access_target">Цель</string>
+    <string name="forums_access_target">Пользователь или группа</string>
     <string name="forums_access_level_view">Просмотр</string>
     <string name="forums_access_level_vote">Голосовать</string>
-    <string name="forums_access_level_comment">Комментарий</string>
-    <string name="forums_access_level_post">Публикация</string>
+    <string name="forums_access_level_comment">Комментировать</string>
+    <string name="forums_access_level_post">Опубликовать</string>
     <string name="forums_access_level_none">Нет</string>
     <string name="forums_members_empty">Нет участников</string>
     <string name="forums_banner_dismiss">Закрыть баннер</string>
-    <string name="forums_ai_mode_tag">Тег</string>
+    <string name="forums_ai_mode_tag">Расстановка тегов</string>
     <string name="forums_ai_account_default">Аккаунт по умолчанию</string>
     <string name="forums_ai_prompt_reset">Сбросить к значениям по умолчанию</string>
     <string name="forums_settings_unsubscribe">Отписаться</string>
@@ -80,7 +80,7 @@
     <string name="forums_moderation_reports_resolved">Решено</string>
     <string name="forums_moderation_reports_all">Все</string>
     <string name="forums_moderation_reports_empty">Нет отчётов</string>
-    <string name="forums_moderation_report_dismiss">Закрыть</string>
+    <string name="forums_moderation_report_dismiss">Отклонить</string>
     <string name="forums_moderation_restrictions_empty">Нет ограничений</string>
     <string name="forums_moderation_restriction_remove">Удалить</string>
     <string name="forums_moderation_restriction_type">Тип</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_login_failed">Ошибка входа</string>
 
     <string name="notification_channel_forums">Уведомления форумов</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Форумы</string>
     <string name="forums_auth_create_identity_failed">Не удалось создать профиль</string>
     <string name="forums_auth_mfa_unsupported">MFA пока не поддерживается в мобильном приложении</string>
     <string name="forums_auth_enter_code_sent">Введите код, отправленный на %1$s</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">Вручную</string>
     <string name="forums_access_search_users">Поиск пользователей</string>
     <string name="forums_access_no_groups">Нет доступных групп</string>
-    <string name="forums_saved_title">Сохранено</string>
+    <string name="forums_saved_title">Сохранённое</string>
     <string name="forums_saved_save">Сохранить на потом</string>
     <string name="forums_saved_remove">Удалить из сохранённого</string>
     <string name="forums_saved_clear_all">Очистить всё</string>

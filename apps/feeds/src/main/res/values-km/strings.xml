@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="feeds_title">ព័ត៌មានបង្ហាញ</string>
+    <string name="feeds_title">មតិព័ត៌មាន</string>
     <string name="feeds_find_feeds">ស្វែងរកព័ត៌មានបង្ហាញ</string>
     <string name="feeds_create_feed">បង្កើតមតិព័ត៌មាន</string>
     <string name="feeds_new_post">ប្រកាសថ្មី</string>
@@ -14,13 +14,13 @@
     <string name="feeds_no_posts_yet">មិនទាន់មានប្រកាស</string>
     <string name="feeds_sort_label">តម្រៀប</string>
     <string name="feeds_sort_interests">ចំណាប់អារម្មណ៍</string>
-    <string name="feeds_sort_new">ថ្មី</string>
+    <string name="feeds_sort_new">ថ្មីបំផុត</string>
     <string name="feeds_sort_hot">ក្ដៅ</string>
     <string name="feeds_sort_top">កំពូល</string>
     <string name="feeds_sort_ai">AI</string>
-    <string name="feeds_post_default_author">ប្រកាស</string>
+    <string name="feeds_post_default_author">ការបង្ហោះ</string>
     <string name="feeds_image_preview">មើលជាមុន</string>
-    <string name="feeds_post">ប្រកាស</string>
+    <string name="feeds_post">ការបង្ហោះ</string>
     <string name="feeds_comments">មតិយោបល់</string>
     <string name="feeds_delete_post">លុបការបង្ហោះ</string>
     <string name="feeds_delete_comment">លុបមតិយោបល់</string>
@@ -43,7 +43,7 @@
     <string name="feeds_feed_name">ឈ្មោះព័ត៌មានបង្ហាញ</string>
     <string name="feeds_save_name">រក្សាទុកឈ្មោះ</string>
     <string name="feeds_banner">បដា</string>
-    <string name="feeds_banner_description">បដា markdown ស្រេចចិត្តដែលបង្ហាញនៅផ្នែកខាងលើនៃ feed របស់អ្នក។</string>
+    <string name="feeds_banner_description">បដា markdown ស្រេចចិត្តដែលបង្ហាញនៅផ្នែកខាងលើនៃមតិព័ត៌មានរបស់អ្នក។</string>
     <string name="feeds_clear">សម្អាត</string>
     <string name="feeds_delete_feed">លុបមតិព័ត៌មាន</string>
     <string name="feeds_no_members">មិនមានសមាជិក</string>
@@ -59,11 +59,11 @@
     <string name="feeds_source_type_feed_memories">ការចងចាំ</string>
     <string name="feeds_remove_source">លុបប្រភព</string>
     <string name="feeds_suggested_credibility_accept">ទទួលយក</string>
-    <string name="feeds_rss_url_copied">បានចម្លង RSS URL ទៅ clipboard</string>
+    <string name="feeds_rss_url_copied">បានចម្លង RSS URL ទៅ ក្ដារតម្បៀតខ្ទាស់</string>
     <string name="feeds_logout">ចាកចេញ</string>
     <string name="feeds_ai_account_default">គណនីលំនាំដើម</string>
     <string name="feeds_ai_mode_off">បិទ</string>
-    <string name="feeds_ai_mode_tag">ស្លាក</string>
+    <string name="feeds_ai_mode_tag">ដាក់ស្លាក</string>
     <string name="feeds_ai_mode_tag_deduplicate">ស្លាក + ដកស្ទួន</string>
     <string name="feeds_feed_not_found">រកមិនឃើញព័ត៌មានបង្ហាញ</string>
     <string name="feeds_post_not_found">រកមិនឃើញប្រកាស</string>
@@ -80,7 +80,7 @@
     <string name="feeds_settings_member_removed">បានដកសមាជិក</string>
     <string name="feeds_settings_ai_mode_updated">វិទី AI ទែររានបែរ</string>
     <string name="feeds_settings_ai_account_updated">គននៀ AI ទែររានបែរ</string>
-    <string name="feeds_settings_prompt_saved">បានរក្សាទុក prompt</string>
+    <string name="feeds_settings_prompt_saved">បានរក្សាទុកការសួរ</string>
     <string name="feeds_settings_prompt_reset">លានដែលដាកះបញ្ឈារូគិនបុនពែលួមពាវ</string>
     <string name="feeds_send">ផ្ញើ</string>
     <string name="feeds_move_up">ផ្លាស់ទីឡើងលើ</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">បានបន្ថយចំណាប់អារម្មណ៍</string>
     <string name="feeds_interest_removed">បានដកចំណាប់អារម្មណ៍</string>
     <string name="feeds_interest_failed">បរាជ័យក្នុងការកែតម្រូវចំណាប់អារម្មណ៍</string>
-    <string name="feeds_saved_title">បានរក្សាទុក</string>
-    <string name="feeds_saved_menu">បានរក្សាទុក</string>
+    <string name="feeds_saved_title">ធាតុដែលបានរក្សាទុក</string>
+    <string name="feeds_saved_menu">ធាតុដែលបានរក្សាទុក</string>
     <string name="feeds_saved_save">រក្សាទុកសម្រាប់ពេលក្រោយ</string>
     <string name="feeds_saved_remove">លុបចេញពីការរក្សាទុក</string>
     <string name="feeds_saved_clear_all">សម្អាតទាំងអស់</string>

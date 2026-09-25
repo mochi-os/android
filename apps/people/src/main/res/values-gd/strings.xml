@@ -62,7 +62,7 @@
     <string name="people_profile_uploading">A\' luchdadh suas…</string>
     <string name="people_profile_change_banner">Atharraich a\' bhratach</string>
     <string name="people_profile_no_banner">Cha deach bratach a shuidheachadh</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">Ìomhaigheag làraich</string>
     <string name="people_profile_browser_icon">Ìomhaigheag brabhsair</string>
     <string name="people_profile_file_too_large">Tha am faidhle ro mhòr</string>
     <string name="people_profile_clear">Falamhaich</string>
@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Fosgail seòladaireachd</string>
     <string name="people_person_state_friend">Caraidean</string>
     <string name="people_person_state_self">Thusa</string>
-    <string name="people_person_message">Teachdaireachd</string>
+    <string name="people_person_message">Cuir teachdaireachd</string>
     <string name="people_person_accept">Gabh ris</string>
     <string name="people_person_decline">Diùlt</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Gabh ris na h-uile</string>
     <string name="people_invitations_decline_all">Diùlt na h-uile</string>
     <string name="people_invitations_cancel_all">Sguir dhen a h-uile</string>
+    <string name="people_invitations_cancel">Sguir dheth</string>
     <string name="people_invitations_all_accepted">Chaidh gabhail ris a h-uile cuireadh</string>
     <string name="people_invitations_all_declined">Chaidh a h-uile cuireadh a dhiùltadh</string>
     <string name="people_invitations_all_cancelled">Chaidh a h-uile cuireadh a chur dheth</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Lorg…</string>
     <string name="people_contacts_invited">Air a chuireadh</string>
     <string name="people_contacts_accept">Gabh ris</string>
-    <string name="people_contacts_message">Teachdaireachd</string>
+    <string name="people_contacts_message">Cuir teachdaireachd</string>
     <string name="people_contacts_no_people_found">Cha deach daoine a lorg</string>
     <string name="people_contacts_try_adjusting">Feuch ri an lorg agad atharrachadh</string>
     <string name="people_contact_section_address">Seòladh</string>

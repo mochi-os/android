@@ -21,7 +21,7 @@
     <string name="common_confirm">Iyawsaña</string>
     <string name="common_save">Imaña</string>
     <string name="common_saving">Imaski…</string>
-    <string name="common_saved">Imaña</string>
+    <string name="common_saved">Imatawa</string>
     <string name="common_edit">Askichaña</string>
     <string name="common_delete">Chhaqtayaña</string>
     <string name="common_add">Yapxataña</string>
@@ -186,10 +186,10 @@
     <string name="format_time_minutes_short">%1$dm</string>
     <string name="format_time_hours_short">%1$dh</string>
     <string name="format_time_days_short">%1$dd</string>
-    <string name="format_time_weeks_short">%1$dw</string>
-    <string name="format_time_months_short">%1$dmo</string>
+    <string name="format_time_weeks_short">%1$d sem</string>
+    <string name="format_time_months_short">%1$d phaxsi</string>
     <string name="reaction_add">Reacción yapaña</string>
-    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel">Mochi yatiyawinaka</string>
     <string name="push_service_channel_description">Mochixa yatiyäwinaka katuqañataki mathapitäki</string>
     <string name="push_service_group">Qhipa irnaqäwi</string>
     <string name="push_service_title">Mochixa yatiyäwinaka ist\'askiwa</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="calendars_create_submit">ဖန်တီးမည်</string>
-    <string name="calendars_subscribe_submit">Subscribe လုပ်မည်</string>
+    <string name="calendars_subscribe_submit">စာရင်းသွင်းမည်</string>
     <string name="calendars_subscribe_url">လိပ်စာ</string>
     <string name="calendars_connect_device">ကိရိယာ ချိတ်ဆက်မည်</string>
     <string name="calendars_preferences">နှစ်သက်ရာများ</string>
@@ -10,7 +10,7 @@
     <string name="calendars_delete">ဖျက်မည်</string>
     <string name="calendars_previous">နောက်သို့</string>
     <string name="calendars_next">နောက်တစ်ခု</string>
-    <string name="calendars_view">ကြည့်ရှုမည်</string>
+    <string name="calendars_view">မြင်ကွင်း</string>
     <string name="calendars_view_list">စာရင်း</string>
     <string name="calendars_list_search">ရှာဖွေ</string>
     <string name="calendars_event_untitled">ခေါင်းစဉ်မရှိ</string>
@@ -59,7 +59,7 @@
     <string name="calendars_calendar_menu">%1$s ရွေးချယ်စရာများ</string>
     <string name="calendars_only_this">ဤတစ်ခုသာ</string>
     <string name="calendars_create">ပြက္ခဒိန် ဖန်တီးမည်</string>
-    <string name="calendars_subscribe">ပြက္ခဒိန်ကို Subscribe လုပ်မည်</string>
+    <string name="calendars_subscribe">ပြက္ခဒိန်ကို စာရင်းသွင်းမည်</string>
     <string name="calendars_poll">ယခု စစ်ဆေးမည်</string>
     <string name="calendars_delete_title">%1$s ကို ဖျက်မလား?</string>
     <string name="calendars_delete_message">၎င်း၏ အစီအစဉ်များကိုလည်း အတူတူ ဖျက်ပါမည်။</string>
@@ -166,7 +166,7 @@
     <string name="calendars_subscribe_server_url">ဆာဗာလိပ်စာ</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google ပြက္ခဒိန်</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">ဤဆာဗာတွင် Google အကောင့်များကို ဖွင့်ထားခြင်း မရှိပါ။ ၎င်းတို့ကို ဆက်တင်များ၊ စနစ် ဆက်တင်များ တွင် ဖွင့်ပါ။</string>
     <string name="calendars_subscribe_google_connect">သင် Google အကောင့် ချိတ်ဆက်ထားခြင်း မရှိပါ။</string>

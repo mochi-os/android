@@ -5,10 +5,10 @@
     <string name="go_action_more">Buɗe ayyukan wasa</string>
     <string name="go_action_offer_draw">Ba da tayin canjaras</string>
     <string name="go_action_open_chat">Buɗe panel ɗin chat</string>
-    <string name="go_action_pass">Pass</string>
+    <string name="go_action_pass">Wuce</string>
     <string name="go_action_rematch">Sake wasa</string>
     <string name="go_action_resign">Yi murabus</string>
-    <string name="go_app_title">Tafi</string>
+    <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Kamun baƙi</string>
     <string name="go_captures_white_sr">Kamun fari</string>
     <string name="go_chat_title">Chat</string>
@@ -39,12 +39,12 @@
     <string name="go_new_game_komi_label">Komi</string>
     <string name="go_new_game_komi_range_error">Dole ne ya kasance tsakanin 0 da 10</string>
     <string name="go_new_game_start">Fara wasa</string>
-    <string name="go_pass_confirm">Pass</string>
+    <string name="go_pass_confirm">Wuce</string>
     <string name="go_pass_end_confirm">Ƙare wasa</string>
     <string name="go_pass_end_message">%1$s ya kuma wuce. Tabbatarwa zai kawo karshen wasan kuma ya jera maki.</string>
     <string name="go_pass_end_title">A ƙare wasa?</string>
     <string name="go_pass_message">Tsallake juyinka kuma ka ba abokin hamayyarka.</string>
-    <string name="go_pass_title">Pass turn?</string>
+    <string name="go_pass_title">Wuce juyinka?</string>
     <string name="go_resign_confirm">Yi murabus</string>
     <string name="go_resign_message">Kana da tabbacin kana son mika wuya? %1$s zai lashe wasan.</string>
     <string name="go_resign_title">A yi murabus daga wasa?</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">Bude gefe</string>
     <string name="go_sidebar_active">Wasannin da ke kan ci gaba</string>
     <string name="go_empty_active">Babu wasanni masu aiki tukuna.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">An yi murabus</string>
     <string name="go_new_game_title">Sabon wasan Go</string>
     <string name="go_new_game_no_friends">Kana buƙatar ƙara aboki kafin ka fara wasa.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

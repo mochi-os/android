@@ -2,7 +2,6 @@
 <resources>
     <string name="projects_auth_display_name">Weergavenaam</string>
     <string name="projects_auth_verification_failed">Verificatie mislukt</string>
-    <string name="projects_list_title">Projecten</string>
     <string name="projects_list_close_search">Zoekopdracht sluiten</string>
     <string name="projects_list_search">Zoeken</string>
     <string name="projects_list_find">Projecten zoeken</string>
@@ -29,7 +28,7 @@
     <string name="projects_sort_label">Sorteren</string>
     <string name="projects_sort_direction">Richting</string>
     <string name="projects_sort_rank">Handmatig</string>
-    <string name="projects_sort_number">Getal</string>
+    <string name="projects_sort_number">Nummer</string>
     <string name="projects_sort_created">Aangemaakt</string>
     <string name="projects_sort_updated">Bijgewerkt</string>
     <string name="projects_create_object_type">Type</string>
@@ -94,7 +93,7 @@
     <string name="projects_board_rename">Hernoemen</string>
     <string name="projects_board_rename_column">Kolom hernoemen</string>
     <string name="projects_move_position">Positie</string>
-    <string name="projects_move_position_top">Boven</string>
+    <string name="projects_move_position_top">Bovenaan</string>
     <string name="projects_move_current">Huidig</string>
     <string name="projects_design_title">Ontwerp</string>
     <string name="projects_design_export">Ontwerp exporteren</string>
@@ -144,7 +143,7 @@
     <string name="projects_views_type_board">Bord</string>
     <string name="projects_views_type_list">Lijst</string>
     <string name="projects_views_direction">Richting</string>
-    <string name="projects_views_sort_number">Getal</string>
+    <string name="projects_views_sort_number">Nummer</string>
     <string name="projects_views_sort_created">Aangemaakt</string>
     <string name="projects_views_sort_updated">Bijgewerkt</string>
     <string name="projects_views_sort_rank">Rang</string>
@@ -170,7 +169,6 @@
     <string name="projects_views_sort_by">Sorteren op</string>
 
     <string name="notification_channel_projects">Projectmeldingen</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
     <string name="projects_auth_create_identity_failed">Aanmaken van identiteit mislukt</string>
     <string name="projects_auth_mfa_unsupported">MFA wordt nog niet ondersteund in de mobiele app</string>
     <string name="projects_auth_enter_code_sent">Voer de code in die naar %1$s is verzonden</string>
@@ -337,7 +335,7 @@
     <string name="projects_access_select_rule">Selecteer een regel</string>
     <string name="projects_access_authenticated_desc">Iedereen die aangemeld is</string>
     <string name="projects_access_anyone_desc">Inclusief anonieme gebruikers</string>
-    <string name="projects_access_target">Doel</string>
+    <string name="projects_access_target">Gebruiker of groep</string>
     <string name="projects_access_target_hint">Entiteits-ID, @groep, * (iedereen) of + (leden)</string>
     <string name="projects_access_selected">Geselecteerd: %1$s</string>
     <string name="projects_access_role_comment">Reageren en bekijken</string>

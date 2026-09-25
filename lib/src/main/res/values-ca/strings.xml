@@ -38,7 +38,7 @@
     <string name="access_add_rule">Afegeix una regla</string>
     <string name="access_owner">Propietari</string>
     <string name="access_revoke">Revoca</string>
-    <string name="access_level_comment">Comentari</string>
+    <string name="access_level_comment">Comenta</string>
     <string name="access_level_view">Visualitza</string>
     <string name="access_level_none">Cap</string>
     <string name="reaction_like">M\'agrada</string>

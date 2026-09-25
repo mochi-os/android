@@ -10,7 +10,7 @@
     <string name="calendars_delete">ሰርዝ</string>
     <string name="calendars_previous">ቀዳሚ</string>
     <string name="calendars_next">ቀጣይ</string>
-    <string name="calendars_view">ይመልከቱ</string>
+    <string name="calendars_view">እይታ</string>
     <string name="calendars_view_list">ዝርዝር</string>
     <string name="calendars_list_search">ይፈልጉ</string>
     <string name="calendars_event_untitled">ርዕስ የለሽ</string>
@@ -169,7 +169,7 @@
     <string name="calendars_subscribe_server_url">የአገልጋይ አድራሻ</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google ቀን መቁጠሪያ</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">የGoogle መለያዎች በዚህ ሰርቨር ላይ አልተነቁም። በቅንብሮች፣ የስርዓት ቅንብሮች ውስጥ ያንቁዋቸው።</string>
     <string name="calendars_subscribe_google_connect">የGoogle መለያ አላገናኙም።</string>

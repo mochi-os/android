@@ -38,7 +38,7 @@
     <string name="access_add_rule">Přidat pravidlo</string>
     <string name="access_owner">Vlastník</string>
     <string name="access_revoke">Odvolat</string>
-    <string name="access_level_comment">Komentář</string>
+    <string name="access_level_comment">Komentovat</string>
     <string name="access_level_view">Zobrazit</string>
     <string name="access_level_none">Žádné</string>
     <string name="reaction_like">Líbí se</string>
@@ -74,7 +74,7 @@
     <string name="settings_radius_medium">Střední</string>
     <string name="settings_radius_large">Velké</string>
     <string name="settings_font">Písmo</string>
-    <string name="settings_font_system">Systém</string>
+    <string name="settings_font_system">Podle systému</string>
     <string name="settings_font_serif">Patkové</string>
     <string name="settings_font_dyslexia">Vhodné pro dyslexii</string>
     <string name="settings_font_size">Velikost písma</string>

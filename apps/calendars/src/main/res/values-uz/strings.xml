@@ -10,7 +10,7 @@
     <string name="calendars_delete">Oʻchirish</string>
     <string name="calendars_previous">Oldingisi</string>
     <string name="calendars_next">Keyingi</string>
-    <string name="calendars_view">Koʻrish</string>
+    <string name="calendars_view">Koʻrinish</string>
     <string name="calendars_view_list">Roʻyxat</string>
     <string name="calendars_list_search">Qidirish</string>
     <string name="calendars_event_untitled">Sarlavhasiz</string>
@@ -169,7 +169,7 @@
     <string name="calendars_subscribe_server_url">Server manzili</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google Taqvim</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Bu serverda Google hisoblari yoqilmagan. Ularni Sozlamalar, Tizim sozlamalari boʻlimida yoqing.</string>
     <string name="calendars_subscribe_google_connect">Siz Google hisobini ulamagansiz.</string>

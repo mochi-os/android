@@ -35,24 +35,24 @@
     <string name="words_detail_resign_title">Éirigh as an gcluiche?</string>
     <string name="words_detail_resign_message">An bhfuil tú cinnte gur mian leat éirí as?</string>
 
-    <string name="words_channel_name">Words notifications</string>
+    <string name="words_channel_name">Fógraí Focail</string>
     <string name="words_channel_description">Fógraí faoi sheal Words, malartuithe agus torthaí cluichí.</string>
     <string name="words_sidebar_active">Cluichí Gníomhacha</string>
     <string name="words_sidebar_empty">Níl aon chluiche ann fós.</string>
-    <string name="words_new_game_choose_opponents">Choose opponents</string>
+    <string name="words_new_game_choose_opponents">Roghnaigh céilí comhraic</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$d players</string>
-    <string name="words_new_game_no_friends_subtitle">Cuir cairde leis san aip People chun tosú ag imirt.</string>
-    <string name="words_detail_title">Game</string>
+    <string name="words_new_game_player_count">Imreoirí: %1$d</string>
+    <string name="words_new_game_no_friends_subtitle">Cuir cairde leis san aip Daoine chun tosú ag imirt.</string>
+    <string name="words_detail_title">Cluiche</string>
     <string name="words_detail_status_opponent_move">Gluaiseacht %1$s</string>
-    <string name="words_detail_status_winner_wins">%1$s wins</string>
-    <string name="words_detail_player_fallback">Player %1$d</string>
-    <string name="words_detail_player_count">%1$d players</string>
-    <string name="words_detail_label_tiles_left">%1$d tiles left</string>
-    <string name="words_detail_action_open_chat">Open chat</string>
-    <string name="words_detail_action_more">Game actions</string>
-    <string name="words_detail_exchange_count">Exchange (%1$d)</string>
-    <string name="words_detail_chat_you_played">You played %1$s</string>
+    <string name="words_detail_status_winner_wins">Buann %1$s</string>
+    <string name="words_detail_player_fallback">Imreoir %1$d</string>
+    <string name="words_detail_player_count">Imreoirí: %1$d</string>
+    <string name="words_detail_label_tiles_left">Tíleanna fágtha: %1$d</string>
+    <string name="words_detail_action_open_chat">Oscail comhrá</string>
+    <string name="words_detail_action_more">Gníomhartha cluiche</string>
+    <string name="words_detail_exchange_count">Malartaigh (%1$d)</string>
+    <string name="words_detail_chat_you_played">D\'imir tú %1$s</string>
     <string name="words_detail_chat_player_played">Sheinn %1$s %2$s</string>
 
     <string name="words_detail_delete_title">Scrios an cluiche?</string>

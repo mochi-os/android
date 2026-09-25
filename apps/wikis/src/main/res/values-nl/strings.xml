@@ -117,7 +117,7 @@
     <string name="wikis_changes_subtitle">Recente bewerkingen op alle pagina\'s in deze wiki.</string>
     <string name="wikis_changes_empty">Nog geen wijzigingen</string>
     <string name="wikis_search_empty_query">Voer een zoekterm in</string>
-    <string name="wikis_redirects_title">Redirects</string>
+    <string name="wikis_redirects_title">Omleidingen</string>
     <string name="wikis_redirects_add">Toevoegen</string>
     <string name="wikis_redirects_empty">Geen redirects geconfigureerd</string>
     <string name="wikis_redirect_create_title">Omleiding aanmaken</string>
@@ -167,7 +167,7 @@
     <string name="wikis_attachments_no_results_description">Probeer een andere zoekterm of filter.</string>
     <string name="wikis_settings_title">Instellingen</string>
     <string name="wikis_settings_tab_settings">Instellingen</string>
-    <string name="wikis_settings_tab_redirects">Redirects</string>
+    <string name="wikis_settings_tab_redirects">Omleidingen</string>
     <string name="wikis_settings_tab_access">Toegang</string>
     <string name="wikis_settings_tab_replicas">Replica\'s</string>
     <string name="wikis_settings_section_identity">Identiteit</string>

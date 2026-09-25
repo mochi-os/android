@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">ನ್ಯಾವಿಗೇಶನ್ ತೆರೆಯಿರಿ</string>
     <string name="people_person_state_friend">ಸ್ನೇಹಿತರು</string>
     <string name="people_person_state_self">ನೀವು</string>
-    <string name="people_person_message">ಸಂದೇಶ</string>
+    <string name="people_person_message">ಸಂದೇಶ ಕಳುಹಿಸಿ</string>
     <string name="people_person_accept">ಸ್ವೀಕರಿಸಿ</string>
     <string name="people_person_decline">ತಿರಸ್ಕರಿಸಿ</string>
 
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">ಮಾನ್ಯವಾದ ಹೆಕ್ಸ್ ಬಣ್ಣವನ್ನು ನಮೂದಿಸಿ (ಉದಾ. #a78bfa)</string>
     <string name="people_profile_accent_none">ಯಾವುದೂ ಇಲ್ಲ</string>
     <string name="people_profile_privacy_private_desc">ಪರಸ್ಪರ ಸ್ನೇಹಿತರು ಮಾತ್ರ ನಿಮ್ಮ ಪ್ರೊಫೈಲ್ ಅನ್ನು ವೀಕ್ಷಿಸಬಹುದು</string>
-    <string name="people_welcome_title">People ಗೆ ಸುಸ್ವಾಗತ</string>
+    <string name="people_welcome_title">ಜನರಿಗೆ ಸುಸ್ವಾಗತ</string>
     <string name="people_person_banner_alt">%1$s ಗಾಗಿ ಬ್ಯಾನರ್</string>
     <string name="people_person_private">ಈ ಪ್ರೊಫೈಲ್ ಖಾಸಗಿಯಾಗಿದೆ</string>
     <string name="people_person_state_invited">ಆಮಂತ್ರಿಸಲಾಗಿದೆ</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">ಎಲ್ಲವನ್ನೂ ಸ್ವೀಕರಿಸಿ</string>
     <string name="people_invitations_decline_all">ಎಲ್ಲವನ್ನೂ ತಿರಸ್ಕರಿಸಿ</string>
     <string name="people_invitations_cancel_all">ಎಲ್ಲವನ್ನೂ ರದ್ದುಗೊಳಿಸಿ</string>
+    <string name="people_invitations_cancel">ರದ್ದುಮಾಡಿ</string>
     <string name="people_invitations_all_accepted">ಎಲ್ಲಾ ಆಹ್ವಾನಗಳನ್ನು ಸ್ವೀಕರಿಸಲಾಗಿದೆ</string>
     <string name="people_invitations_all_declined">ಎಲ್ಲಾ ಆಹ್ವಾನಗಳನ್ನು ತಿರಸ್ಕರಿಸಲಾಗಿದೆ</string>
     <string name="people_invitations_all_cancelled">ಎಲ್ಲಾ ಆಹ್ವಾನಗಳನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">ಹುಡುಕಿ…</string>
     <string name="people_contacts_invited">ಆಮಂತ್ರಿಸಲಾಗಿದೆ</string>
     <string name="people_contacts_accept">ಸ್ವೀಕರಿಸಿ</string>
-    <string name="people_contacts_message">ಸಂದೇಶ</string>
+    <string name="people_contacts_message">ಸಂದೇಶ ಕಳುಹಿಸಿ</string>
     <string name="people_contacts_no_people_found">ಯಾವುದೇ ಜನರು ಸಿಗಲಿಲ್ಲ</string>
     <string name="people_contacts_try_adjusting">ನಿಮ್ಮ ಹುಡುಕಾಟವನ್ನು ಸರಿಹೊಂದಿಸಲು ಪ್ರಯತ್ನಿಸಿ</string>
     <string name="people_contact_section_address">ವಿಳಾಸ</string>

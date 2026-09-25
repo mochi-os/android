@@ -13,7 +13,7 @@
     <string name="chess_new_title">بازی جدید</string>
     <string name="chess_new_pick_opponent">انتخاب حریف</string>
     <string name="chess_new_no_friends_title">هنوز دوستی وجود ندارد</string>
-    <string name="chess_new_no_friends_subtitle">برای شروع بازی، در برنامهٔ People دوست اضافه کنید</string>
+    <string name="chess_new_no_friends_subtitle">برای شروع بازی، در برنامهٔ «افراد» دوست اضافه کنید</string>
     <string name="chess_new_add_friends">افزودن دوستان</string>
     <string name="chess_new_start_button">شروع بازی</string>
     <string name="chess_new_creating">در حال ساخت…</string>

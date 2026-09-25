@@ -14,13 +14,13 @@
     <string name="feeds_no_posts_yet">暂无帖子</string>
     <string name="feeds_sort_label">排序</string>
     <string name="feeds_sort_interests">兴趣</string>
-    <string name="feeds_sort_new">新建</string>
+    <string name="feeds_sort_new">最新</string>
     <string name="feeds_sort_hot">热门</string>
-    <string name="feeds_sort_top">顶部</string>
+    <string name="feeds_sort_top">最佳</string>
     <string name="feeds_sort_ai">AI</string>
-    <string name="feeds_post_default_author">发布</string>
+    <string name="feeds_post_default_author">帖子</string>
     <string name="feeds_image_preview">预览</string>
-    <string name="feeds_post">发布</string>
+    <string name="feeds_post">帖子</string>
     <string name="feeds_comments">评论</string>
     <string name="feeds_delete_post">删除帖子</string>
     <string name="feeds_delete_comment">删除评论</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">退出登录</string>
     <string name="feeds_ai_account_default">默认账户</string>
     <string name="feeds_ai_mode_off">已禁用</string>
-    <string name="feeds_ai_mode_tag">标签</string>
+    <string name="feeds_ai_mode_tag">标记</string>
     <string name="feeds_ai_mode_tag_deduplicate">标记 + 去重</string>
     <string name="feeds_feed_not_found">信息流未找到</string>
     <string name="feeds_post_not_found">帖子未找到</string>

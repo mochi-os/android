@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Публикаций пока нет</string>
     <string name="feeds_sort_label">Сортировка</string>
     <string name="feeds_sort_interests">Интересы</string>
-    <string name="feeds_sort_new">Новый</string>
+    <string name="feeds_sort_new">Новые</string>
     <string name="feeds_sort_hot">Популярное</string>
-    <string name="feeds_sort_top">Верх</string>
+    <string name="feeds_sort_top">Лучшее</string>
     <string name="feeds_sort_ai">ИИ</string>
     <string name="feeds_post_default_author">Публикация</string>
     <string name="feeds_image_preview">Предпросмотр</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Отменить ответ</string>
     <string name="feeds_edit_post">Изменить публикацию</string>
     <string name="feeds_save_label">Сохранить</string>
-    <string name="feeds_post_action">Публикация</string>
+    <string name="feeds_post_action">Опубликовать</string>
     <string name="feeds_feed_label">Лента</string>
     <string name="feeds_add_files">Добавить файлы</string>
     <string name="feeds_restore">Восстановить</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Выйти</string>
     <string name="feeds_ai_account_default">Аккаунт по умолчанию</string>
     <string name="feeds_ai_mode_off">Отключено</string>
-    <string name="feeds_ai_mode_tag">Тег</string>
+    <string name="feeds_ai_mode_tag">Расстановка тегов</string>
     <string name="feeds_ai_mode_tag_deduplicate">Тег + удалить дубликаты</string>
     <string name="feeds_feed_not_found">Лента не найдена</string>
     <string name="feeds_post_not_found">Публикация не найдена</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Интерес снижен</string>
     <string name="feeds_interest_removed">Интерес удалён</string>
     <string name="feeds_interest_failed">Не удалось скорректировать интерес</string>
-    <string name="feeds_saved_title">Сохранено</string>
-    <string name="feeds_saved_menu">Сохранено</string>
+    <string name="feeds_saved_title">Сохранённое</string>
+    <string name="feeds_saved_menu">Сохранённое</string>
     <string name="feeds_saved_save">Сохранить на потом</string>
     <string name="feeds_saved_remove">Удалить из сохранённого</string>
     <string name="feeds_saved_clear_all">Очистить всё</string>

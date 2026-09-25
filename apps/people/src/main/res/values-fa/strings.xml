@@ -62,7 +62,7 @@
     <string name="people_profile_uploading">در حال بارگذاری…</string>
     <string name="people_profile_change_banner">تغییر بنر</string>
     <string name="people_profile_no_banner">بنری تنظیم نشده است</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">فاوآیکون</string>
     <string name="people_profile_browser_icon">آیکن مرورگر</string>
     <string name="people_profile_file_too_large">فایل بسیار بزرگ است</string>
     <string name="people_profile_clear">پاک کردن</string>
@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">باز کردن ناوبری</string>
     <string name="people_person_state_friend">دوستان</string>
     <string name="people_person_state_self">شما</string>
-    <string name="people_person_message">پیام</string>
+    <string name="people_person_message">ارسال پیام</string>
     <string name="people_person_accept">پذیرش</string>
     <string name="people_person_decline">رد</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">پذیرش همه</string>
     <string name="people_invitations_decline_all">رد همه</string>
     <string name="people_invitations_cancel_all">لغو همه</string>
+    <string name="people_invitations_cancel">لغو</string>
     <string name="people_invitations_all_accepted">همه دعوت‌ها پذیرفته شد</string>
     <string name="people_invitations_all_declined">همه دعوت‌ها رد شد</string>
     <string name="people_invitations_all_cancelled">همه دعوت‌ها لغو شد</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">جست‌وجو…</string>
     <string name="people_contacts_invited">دعوت‌شده</string>
     <string name="people_contacts_accept">پذیرش</string>
-    <string name="people_contacts_message">پیام</string>
+    <string name="people_contacts_message">ارسال پیام</string>
     <string name="people_contacts_no_people_found">شخصی یافت نشد</string>
     <string name="people_contacts_try_adjusting">جست‌وجوی خود را تنظیم کنید</string>
     <string name="people_contact_section_address">آدرس</string>

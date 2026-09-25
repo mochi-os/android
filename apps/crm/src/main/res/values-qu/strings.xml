@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="crm_list_title">CRMs</string>
+    <string name="crm_list_title">CRMkuna</string>
     <string name="crm_list_search">Maskay</string>
     <string name="crm_list_find">CRMkunata tariy</string>
     <string name="crm_list_logout">Lluqsiy</string>
@@ -56,7 +56,7 @@
     <string name="crm_links_no_matches">Mana tupaq objetokuna</string>
     <string name="crm_field_yes">Arí</string>
     <string name="crm_field_no">Manan</string>
-    <string name="crm_field_type_checkbox">Checkbox</string>
+    <string name="crm_field_type_checkbox">Casilla</string>
     <string name="crm_comment_empty">Manaraq comentariokuna</string>
     <string name="crm_comment_attach">Archivos churay</string>
     <string name="crm_property_remove">Qichuy</string>
@@ -102,8 +102,8 @@
     <string name="crm_field_type">Layan</string>
     <string name="crm_field_flags">Flagkuna</string>
     <string name="crm_field_required">Munasqa</string>
-    <string name="crm_field_position_default">Default</string>
-    <string name="crm_field_position_sidebar">Sidebar</string>
+    <string name="crm_field_position_default">Predeterminado</string>
+    <string name="crm_field_position_sidebar">Waqta barra</string>
     <string name="crm_field_save">Cambiokunata waqaychay</string>
     <string name="crm_field_options">Opcionkuna</string>
     <string name="crm_field_add_option">Akllana yapay</string>
@@ -122,13 +122,13 @@
     <string name="crm_views_direction">Imayna</string>
     <string name="crm_views_sort_created">Kamarisqa</string>
     <string name="crm_views_sort_updated">Musuqchasqa</string>
-    <string name="crm_views_sort_rank">Rank</string>
+    <string name="crm_views_sort_rank">Rango</string>
     <string name="crm_not_found">Proyecto mana tarisqachu</string>
     <string name="crm_more">Astawan</string>
     <string name="crm_comment_send">Apachiy</string>
     <string name="crm_field_position_body">Ukhu</string>
     <string name="crm_sort_field">Allichanapaq</string>
-    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_comment_remove_attachment">Adjuntota qichuy</string>
     <string name="crm_views_sort_by">Allichanapaq</string>
     <string name="crm_views_move_up">Patamanta apay</string>
     <string name="crm_class_move_up">Patamanta apay</string>
@@ -241,10 +241,10 @@
     <string name="crm_access_no_groups">Mana grupokuna atikuq</string>
     <string name="crm_access_tab_users">Apaykachaqkuna</string>
     <string name="crm_access_tab_groups">Huñukuna</string>
-    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_attachment_remove">Adjuntota qichuy</string>
     <string name="crm_board_add_column">Columna yapay</string>
-    <string name="crm_settings_entity_id">Entity ID</string>
-    <string name="crm_settings_fingerprint">Fingerprint</string>
+    <string name="crm_settings_entity_id">Entidad ID</string>
+    <string name="crm_settings_fingerprint">Ruk\'ana unancha</string>
     <string name="crm_settings_server">Server</string>
     <string name="crm_untitled">Mana sutinchayniyuq</string>
     <string name="crm_property_select">Akllay …</string>
@@ -253,7 +253,7 @@
     <string name="crm_filter_clear_all">Llapan pichay</string>
     <string name="crm_filter_all">Llapan</string>
     <string name="crm_filter_other">Huk</string>
-    <string name="crm_settings_section_identity">Identity</string>
+    <string name="crm_settings_section_identity">Kikinchakuy</string>
     <string name="crm_settings_section_access">Yaykuy Kamachiy</string>
     <string name="crm_settings_not_set">Mana churasqa</string>
     <string name="crm_settings_access_updated">Yaykuy musuqchasqa</string>

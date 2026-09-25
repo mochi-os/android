@@ -29,7 +29,7 @@
     <string name="projects_sort_label">Сорттоо</string>
     <string name="projects_sort_direction">Багыт</string>
     <string name="projects_sort_rank">Кол менен</string>
-    <string name="projects_sort_number">Сан</string>
+    <string name="projects_sort_number">Номер</string>
     <string name="projects_sort_created">Түзүлдү</string>
     <string name="projects_sort_updated">Жаңыланды</string>
     <string name="projects_create_object_type">Тип</string>
@@ -93,20 +93,20 @@
     <string name="projects_request_create_action">Түзүү</string>
     <string name="projects_diff_unified">Бирдиктештирилген</string>
     <string name="projects_diff_split">Бөлүү</string>
-    <string name="projects_diff_empty">Diff жеткиликсиз</string>
+    <string name="projects_diff_empty">Айырмачылык жеткиликсиз</string>
     <string name="projects_board_unassigned">Дайындалган эмес</string>
     <string name="projects_board_new">Жаңы</string>
     <string name="projects_board_rename">Атын өзгөртүү</string>
     <string name="projects_board_rename_column">Тилкенин атын өзгөртүү</string>
     <string name="projects_move_position">Позиция</string>
-    <string name="projects_move_position_top">Жогорку</string>
+    <string name="projects_move_position_top">Эң жогору</string>
     <string name="projects_move_current">Учурдагы</string>
     <string name="projects_design_title">Дизайн</string>
     <string name="projects_design_export">Дизайнды экспорттоо</string>
     <string name="projects_design_import">Дизайнды импорттоо</string>
     <string name="projects_design_imported">Дизайн импорттолду</string>
     <string name="projects_design_tab_classes">Класстар</string>
-    <string name="projects_design_tab_views">Көрүүлөр</string>
+    <string name="projects_design_tab_views">Көрүнүштөр</string>
     <string name="projects_design_import_dialog_title">Дизайнды импорттоо</string>
     <string name="projects_design_import_choose_template">Шаблонду тандоо</string>
     <string name="projects_design_replace_title">Дизайнды алмаштырасызбы?</string>
@@ -146,10 +146,10 @@
     <string name="projects_views_edit_dialog_title">Көрүнүштү түзөтүү</string>
     <string name="projects_views_delete_title">Көрүнүштү жок кылуу</string>
     <string name="projects_views_type">Тип</string>
-    <string name="projects_views_type_board">Тактай</string>
+    <string name="projects_views_type_board">Такта</string>
     <string name="projects_views_type_list">Тизме</string>
     <string name="projects_views_direction">Багыт</string>
-    <string name="projects_views_sort_number">Сан</string>
+    <string name="projects_views_sort_number">Номер</string>
     <string name="projects_views_sort_created">Түзүлдү</string>
     <string name="projects_views_sort_updated">Жаңыланды</string>
     <string name="projects_views_sort_rank">Орду</string>
@@ -158,9 +158,9 @@
     <string name="projects_more">Көбүрөөк</string>
     <string name="projects_request_more">Көбүрөөк</string>
     <string name="projects_comment_send">Жөнөтүү</string>
-    <string name="projects_field_position_body">Текст</string>
+    <string name="projects_field_position_body">Негизги бөлүк</string>
     <string name="projects_sort_field">Иреттөө</string>
-    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_comment_remove_attachment">Тиркемени алып салуу</string>
     <string name="projects_views_sort_by">Иреттөө</string>
     <string name="projects_auth_login_failed">Кирүү ишке ашпады</string>
     <string name="projects_views_move_up">Жогору жылдыруу</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Объекттерди издөө</string>
 
     <string name="notification_channel_projects">Долбоорлор боюнча билдирүүлөр</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Долбоорлор</string>
     <string name="projects_auth_create_identity_failed">Иденттүүлүк түзүү ишке ашкан жок</string>
     <string name="projects_auth_mfa_unsupported">MFA мобилдик колдонмодо азырынча колдоого алынбайт</string>
     <string name="projects_auth_enter_code_sent">%1$s дарегине жөнөтүлгөн кодду киргизиңиз</string>
@@ -207,7 +207,7 @@
     <string name="projects_comment_clear_reply">Жоопту тазалоо</string>
     <string name="projects_comment_placeholder">Комментарий кошуу</string>
     <string name="projects_property_pick_date">Күн тандоо</string>
-    <string name="projects_property_ok">OK</string>
+    <string name="projects_property_ok">ОК</string>
     <string name="projects_property_add_item">Элемент кошуу</string>
     <string name="projects_property_required">%1$s талап кылынат</string>
     <string name="projects_activity_empty">Активдүүлүк жок</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Эрежени тандаңыз</string>
     <string name="projects_access_authenticated_desc">Системага кирген ар бир адам</string>
     <string name="projects_access_anyone_desc">Анонимдүү колдонуучуларды кошкондо</string>
-    <string name="projects_access_target">Максат</string>
+    <string name="projects_access_target">Колдонуучу же топ</string>
     <string name="projects_access_target_hint">Объекттин ID, @топ, * (баары), же + (мүчөлөр)</string>
     <string name="projects_access_selected">Тандалды: %1$s</string>
     <string name="projects_access_role_comment">Комментарий жана көрүү</string>
@@ -381,5 +381,5 @@
     <string name="projects_option_delete_message">\"%1$s\" тандоосун чындап өчүргүңүз келеби?</string>
     <string name="projects_create_object_no_types">Азырынча эч кандай нерсе түрлөрүн түзүүгө болбойт. Адегенде керектүү ата-эне нерселерди түзүңүз.</string>
     <string name="projects_create_blocked_no_options">Түзүү мүмкүн эмес: %1$s милдеттүү, бирок тандоо варианттары жок. Дизайнда варианттарды кошуңуз.</string>
-    <string name="projects_attachment_remove">Remove attachment</string>
+    <string name="projects_attachment_remove">Тиркемени алып салуу</string>
 </resources>

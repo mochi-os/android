@@ -8,7 +8,7 @@
     <string name="go_action_pass">Гузар</string>
     <string name="go_action_rematch">Бозиҳои такрорӣ</string>
     <string name="go_action_resign">Таслим</string>
-    <string name="go_app_title">Рафтан</string>
+    <string name="go_app_title">Го</string>
     <string name="go_captures_black_sr">Сиёҳҳои гирифташуда</string>
     <string name="go_captures_white_sr">Сафедҳои гирифташуда</string>
     <string name="go_chat_title">Чат</string>
@@ -35,8 +35,8 @@
     <string name="go_new_game_add_friends">Иловаи дӯстон</string>
     <string name="go_new_game_board_size_label">Андозаи тахта</string>
     <string name="go_new_game_friend_label">Рақиб</string>
-    <string name="go_new_game_komi_field_label">Komi</string>
-    <string name="go_new_game_komi_label">Komi</string>
+    <string name="go_new_game_komi_field_label">Коми</string>
+    <string name="go_new_game_komi_label">Коми</string>
     <string name="go_new_game_komi_range_error">Бояд байни 0 ва 10 бошад</string>
     <string name="go_new_game_start">Бозӣ оғоз кунед</string>
     <string name="go_pass_confirm">Гузар</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">Панели канориро кушодан</string>
     <string name="go_sidebar_active">Бозиҳои фаъол</string>
     <string name="go_empty_active">Ҳанӯз бозиҳои фаъол нест.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">Таслим шуд</string>
     <string name="go_new_game_title">Бозии нави Go</string>
     <string name="go_new_game_no_friends">Пеш аз оғози бозӣ бояд дӯст илова кунед.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

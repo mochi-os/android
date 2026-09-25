@@ -38,8 +38,8 @@
     <string name="access_add_rule">Regel hinzufügen</string>
     <string name="access_owner">Eigentümer</string>
     <string name="access_revoke">Widerrufen</string>
-    <string name="access_level_comment">Kommentar</string>
-    <string name="access_level_view">Ansicht</string>
+    <string name="access_level_comment">Kommentieren</string>
+    <string name="access_level_view">Anzeigen</string>
     <string name="access_level_none">Keine</string>
     <string name="reaction_like">Gefällt mir</string>
     <string name="reaction_dislike">Mag nicht</string>
@@ -96,7 +96,7 @@
     <string name="settings_number_format">Zahlenformat</string>
     <string name="settings_units">Einheiten</string>
     <string name="settings_units_metric">Metrisch</string>
-    <string name="settings_units_imperial">Imperial</string>
+    <string name="settings_units_imperial">Angloamerikanisch</string>
     <string name="settings_time_zone">Zeitzone</string>
     <string name="settings_reset_to_defaults">Auf Standardwerte zurücksetzen</string>
     <string name="settings_reset_confirm_title">Präferenzen zurücksetzen?</string>
@@ -106,7 +106,7 @@
     <string name="settings_display_reset">Auf Standardwerte zurücksetzen</string>
     <string name="settings_display_reset_confirm_title">Anzeige zurücksetzen?</string>
     <string name="settings_display_reset_confirm_message">Dadurch werden die Anzeigeeinstellungen auf ihre Standardwerte zurückgesetzt.</string>
-    <string name="settings_theme_title">Theme</string>
+    <string name="settings_theme_title">Design</string>
     <string name="settings_theme_default">Standard</string>
     <string name="settings_background">Hintergrund</string>
     <string name="settings_background_theme">Vom Theme</string>
@@ -205,7 +205,7 @@
     <string name="oem_hint_allow">Hintergrund erlauben</string>
     <string name="oem_hint_dismiss">Nicht mehr anzeigen</string>
     <string name="about_label">Info</string>
-    <string name="about_title">Mochi Client</string>
+    <string name="about_title">Mochi-Client</string>
     <string name="about_version">Version %1$s</string>
     <string name="about_check_updates">Nach Updates suchen</string>
     <string name="about_up_to_date">Aktuell</string>

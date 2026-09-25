@@ -8,7 +8,7 @@
     <string name="go_action_pass">ຜ່ານ</string>
     <string name="go_action_rematch">ແຂ່ງຄືນ</string>
     <string name="go_action_resign">ຍອມແພ້</string>
-    <string name="go_app_title">ໄປ</string>
+    <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">ການຈັບດຳ</string>
     <string name="go_captures_white_sr">ການຈັບຂາວ</string>
     <string name="go_chat_title">ແຊັດ</string>
@@ -35,8 +35,8 @@
     <string name="go_new_game_add_friends">ເພີ່ມເພື່ອນ</string>
     <string name="go_new_game_board_size_label">ຂະໜາດກະດານ</string>
     <string name="go_new_game_friend_label">ຄູ່ຕໍ່ສູ້</string>
-    <string name="go_new_game_komi_field_label">Komi</string>
-    <string name="go_new_game_komi_label">Komi</string>
+    <string name="go_new_game_komi_field_label">ໂຄມິ</string>
+    <string name="go_new_game_komi_label">ໂຄມິ</string>
     <string name="go_new_game_komi_range_error">ຕ້ອງຢູ່ລະຫວ່າງ 0 ແລະ 10</string>
     <string name="go_new_game_start">ເລີ່ມເກມ</string>
     <string name="go_pass_confirm">ຜ່ານ</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">ເປີດແຖບຂ້າງ</string>
     <string name="go_sidebar_active">ເກມທີ່ໃຊ້ງານຢູ່</string>
     <string name="go_empty_active">ຍັງບໍ່ມີເກມທີ່ກຳລັງຫຼິ້ນ.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">ຍອມແພ້ແລ້ວ</string>
     <string name="go_new_game_title">ເກມ Go ໃໝ່</string>
     <string name="go_new_game_no_friends">ທ່ານຕ້ອງເພີ່ມໝູ່ກ່ອນຈຶ່ງຈະເລີ່ມເກມໄດ້.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

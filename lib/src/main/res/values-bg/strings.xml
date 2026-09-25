@@ -38,7 +38,7 @@
     <string name="access_add_rule">Добави правило</string>
     <string name="access_owner">Собственик</string>
     <string name="access_revoke">Оттегли</string>
-    <string name="access_level_comment">Коментар</string>
+    <string name="access_level_comment">Коментирай</string>
     <string name="access_level_view">Преглед</string>
     <string name="access_level_none">Няма</string>
     <string name="reaction_like">Харесвам</string>
@@ -141,7 +141,7 @@
     <string name="auth_passkey">Ключ за достъп</string>
     <string name="auth_use_passkey">Използвайте ключ за достъп</string>
     <string name="auth_email_me_a_code">Изпратете ми код по имейл</string>
-    <string name="auth_or_enter_authenticator_code">Или въведете код от authenticator</string>
+    <string name="auth_or_enter_authenticator_code">Или въведете код от удостоверител</string>
     <string name="auth_log_in">Вход</string>
     <string name="auth_back">Назад</string>
     <string name="auth_lost_access_recovery">Загубен достъп? Използвайте код за възстановяване</string>
@@ -189,7 +189,7 @@
     <string name="format_time_weeks_short">%1$d седм</string>
     <string name="format_time_months_short">%1$d мес</string>
     <string name="reaction_add">Добавяне на реакция</string>
-    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel">Пуш известия на Mochi</string>
     <string name="push_service_channel_description">Поддържа Mochi свързан за получаване на известия</string>
     <string name="push_service_group">Фонова услуга</string>
     <string name="push_service_title">Mochi слуша за известия</string>
@@ -225,7 +225,7 @@
     <string name="stepup_description">Това е промяна в сигурността на акаунта ви. Потвърдете, че сте вие, за да продължите.</string>
     <string name="stepup_email_label">Имейл код</string>
     <string name="stepup_email_placeholder">Въведете кода от имейла си</string>
-    <string name="stepup_totp_label">Код от authenticator</string>
+    <string name="stepup_totp_label">Код от удостоверител</string>
     <string name="stepup_totp_placeholder">Въведете кода от приложението за удостоверяване</string>
     <string name="stepup_use_passkey">Използвайте своя ключ за достъп</string>
     <string name="stepup_send_email">Изпрати имейл</string>

@@ -93,7 +93,7 @@
     <string name="projects_request_create_action">Δημιουργία</string>
     <string name="projects_diff_unified">Ενοποιημένο</string>
     <string name="projects_diff_split">Διαχωρισμός</string>
-    <string name="projects_diff_empty">Δεν υπάρχει διαθέσιμο diff</string>
+    <string name="projects_diff_empty">Δεν υπάρχουν διαθέσιμες διαφορές</string>
     <string name="projects_board_unassigned">Χωρίς ανάθεση</string>
     <string name="projects_board_new">Νέο</string>
     <string name="projects_board_rename">Μετονομασία</string>
@@ -182,7 +182,7 @@
     <string name="projects_links_search_placeholder">Αναζήτηση αντικειμένων</string>
 
     <string name="notification_channel_projects">Ειδοποιήσεις έργων</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Έργα</string>
     <string name="projects_list_search_placeholder">Αναζήτηση έργων</string>
     <string name="projects_list_no_matching">Δεν βρέθηκαν έργα</string>
     <string name="projects_list_empty">Δεν υπάρχουν έργα ακόμη</string>
@@ -293,7 +293,7 @@
     <string name="projects_field_min_length">Ελάχιστο μήκος</string>
     <string name="projects_field_max_length">Μέγιστο μήκος</string>
     <string name="projects_field_pattern">Μοτίβο (regex)</string>
-    <string name="projects_field_rows">Γραμμές (ύψος textarea)</string>
+    <string name="projects_field_rows">Γραμμές (ύψος πεδίου κειμένου)</string>
     <string name="projects_field_no_options">Δεν έχουν οριστεί επιλογές</string>
     <string name="projects_field_delete_message">Είστε βέβαιοι ότι θέλετε να διαγράψετε το πεδίο \"%1$s\"; Όλες οι επιλογές και οι τιμές θα χαθούν.</string>
     <string name="projects_option_color">Χρώμα</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Επιλέξτε κανόνα</string>
     <string name="projects_access_authenticated_desc">Οποιοσδήποτε είναι συνδεδεμένος</string>
     <string name="projects_access_anyone_desc">Συμπεριλαμβανομένων ανώνυμων χρηστών</string>
-    <string name="projects_access_target">Στόχος</string>
+    <string name="projects_access_target">Χρήστης ή ομάδα</string>
     <string name="projects_access_target_hint">Αναγνωριστικό οντότητας, @ομάδα, * (όλοι) ή + (μέλη)</string>
     <string name="projects_access_selected">Επιλεγμένο: %1$s</string>
     <string name="projects_access_role_comment">Σχόλιο και προβολή</string>

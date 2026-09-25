@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="wikis_sidebar_header">Wikid</string>
+    <string name="wikis_sidebar_header">Vikid</string>
     <string name="wikis_sidebar_all">Kõik wikid</string>
     <string name="wikis_sidebar_find">Otsi wikisid</string>
     <string name="wikis_sidebar_create">Loo wiki</string>
@@ -23,7 +23,7 @@
     <string name="wikis_page_action_new_page">Uus leht</string>
     <string name="wikis_page_action_settings">Seaded</string>
     <string name="wikis_page_action_unsubscribe">Tühista tellimus</string>
-    <string name="wikis_title">Wikid</string>
+    <string name="wikis_title">Vikid</string>
     <string name="wikis_empty_title">Alusta oma esimest wikit</string>
     <string name="wikis_empty_subtitle">Otsi vikit, et tellida, või loo uus, et avaldada oma dokumentatsioon.</string>
     <string name="wikis_create_button">Loo wiki</string>
@@ -225,7 +225,7 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Uuendatud %1$s</string>
     <string name="wikis_pageview_not_found_description">Lehte „%1$s\" ei ole veel olemas.</string>
-    <string name="wikis_pageview_share_chooser">Wiki link</string>
+    <string name="wikis_pageview_share_chooser">Viki link</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">Link</string>
     <string name="wikis_open_sidebar">Ava külgriba</string>

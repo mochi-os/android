@@ -3,7 +3,7 @@
 
     <string name="forums_auth_display_name">ຊື່ສະແດງ</string>
     <string name="forums_auth_verification_failed">ການຢືນຢັນລົ້ມເຫຼວ</string>
-    <string name="forums_list_title">ກະດານສົນທະນາ</string>
+    <string name="forums_list_title">ເວທີ</string>
     <string name="forums_list_find">ຄົ້ນຫາກະດານສົນທະນາ</string>
     <string name="forums_list_logout">ອອກຈາກລະບົບ</string>
     <string name="forums_list_unsubscribe">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
@@ -24,9 +24,9 @@
     <string name="forums_settings">ການຕັ້ງຄ່າ</string>
     <string name="forums_load_more">ໂຫຼດເພີ່ມ</string>
     <string name="forums_sort_label">ຈັດລຽງ</string>
-    <string name="forums_sort_new">ໃໝ່</string>
+    <string name="forums_sort_new">ໃໝ່ລ່າສຸດ</string>
     <string name="forums_sort_hot">ມາແຮງ</string>
-    <string name="forums_sort_top">ເທິງ</string>
+    <string name="forums_sort_top">ຍອດນິຍົມ</string>
     <string name="forums_sort_interests">ຄວາມສົນໃຈ</string>
     <string name="forums_post_title_field">ຊື່ເລື່ອງ</string>
     <string name="forums_post_attach">ແນບໄຟລ໌</string>
@@ -53,21 +53,21 @@
     <string name="forums_comment_remove">ລຶບອອກ</string>
     <string name="forums_comment_restore">ກູ້ຄືນ</string>
     <string name="forums_comment_report">ລາຍງານ</string>
-    <string name="forums_post_tag_label">Tag</string>
+    <string name="forums_post_tag_label">ແທັກ</string>
     <string name="forums_tab_general">ທົ່ວໄປ</string>
     <string name="forums_tab_access">ການເຂົ້າເຖິງ</string>
     <string name="forums_tab_members">ສະມາຊິກ</string>
     <string name="forums_tab_banner">ປ້າຍ</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">ເປົ້າໝາຍ</string>
+    <string name="forums_access_target">ຜູ້ໃຊ້ ຫຼື ກຸ່ມ</string>
     <string name="forums_access_level_view">ເບິ່ງ</string>
     <string name="forums_access_level_vote">ລົງຄະແນນ</string>
-    <string name="forums_access_level_comment">ຄຳເຫັນ</string>
+    <string name="forums_access_level_comment">ສະແດງຄຳເຫັນ</string>
     <string name="forums_access_level_post">ໂພສ</string>
     <string name="forums_access_level_none">ບໍ່ມີ</string>
     <string name="forums_members_empty">ບໍ່ມີສະມາຊິກ</string>
     <string name="forums_banner_dismiss">ປິດປ້າຍ</string>
-    <string name="forums_ai_mode_tag">Tag</string>
+    <string name="forums_ai_mode_tag">ຕິດແທັກ</string>
     <string name="forums_ai_account_default">ບັນຊີເລີ່ມຕົ້ນ</string>
     <string name="forums_ai_prompt_reset">ຣີເຊັດເປັນຄ່າເລີ່ມຕົ້ນ</string>
     <string name="forums_settings_unsubscribe">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
@@ -98,7 +98,7 @@
     <string name="forums_report_reason">ເຫດຜົນ</string>
     <string name="forums_report_details">ລາຍລະອຽດ</string>
     <string name="forums_report_submit">ສົ່ງລາຍງານ</string>
-    <string name="forums_report_reason_spam">Spam</string>
+    <string name="forums_report_reason_spam">ສະແປມ</string>
     <string name="forums_report_reason_harassment">ການຄຸກຄາມ</string>
     <string name="forums_report_reason_violence">ຄວາມຮຸນແຮງ</string>
     <string name="forums_report_reason_misinformation">ຂໍ້ມູນບໍ່ຖືກຕ້ອງ</string>
@@ -126,12 +126,12 @@
     <string name="forums_post_edit_body_field">ເນື້ອຫາ</string>
     <string name="forums_comment_edit_body_field">ເນື້ອຫາ</string>
     <string name="forums_tag_clear">ລ້າງຕົວກອງ</string>
-    <string name="forums_post_tag_add">Add tag</string>
+    <string name="forums_post_tag_add">ເພີ່ມແທັກ</string>
     <string name="forums_write_comment">ຂຽນຄຳເຫັນ…</string>
     <string name="forums_auth_login_failed">ເຂົ້າສູ່ລະບົບລົ້ມເຫລວ</string>
 
     <string name="notification_channel_forums">ການແຈ້ງເຕືອນຂອງກະດານສົນທະນາ</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi ເວທີ</string>
     <string name="forums_auth_create_identity_failed">ສ້າງຕົວຕົນບໍ່ສຳເລັດ</string>
     <string name="forums_auth_mfa_unsupported">ຍັງບໍ່ຮອງຮັບ MFA ໃນແອັບມືຖື</string>
     <string name="forums_auth_enter_code_sent">ປ້ອນລະຫັດທີ່ສົ່ງໄປຫາ %1$s</string>
@@ -148,7 +148,7 @@
     <string name="forums_post_tag_remove">ລຶບແທັກ</string>
     <string name="forums_access_add">ເພີ່ມກົດການເຂົ້າເຖິງ</string>
     <string name="forums_access_empty">ຍັງບໍ່ມີກົດ — ໃຊ້ຄ່າເລີ່ມຕົ້ນ</string>
-    <string name="forums_access_target_hint">ID ຕົວຕົນ, @ກຸ່ມ, * (ທຸກຄົນ), ຫຼື + (ສະມາຊິກ)</string>
+    <string name="forums_access_target_hint">ID ຕົວຕົນ, @group, * (ທຸກຄົນ), ຫຼື + (ສະມາຊິກ)</string>
     <string name="forums_access_level">ລະດັບ</string>
     <string name="forums_access_level_moderate">ກວດສອບ</string>
     <string name="forums_members_search">ກັ່ນຕອງສະມາຊິກ</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">ດ້ວຍຕົນເອງ</string>
     <string name="forums_access_search_users">ຄົ້ນຫາຜູ້ໃຊ້</string>
     <string name="forums_access_no_groups">ບໍ່ມີກຸ່ມທີ່ມີຢູ່</string>
-    <string name="forums_saved_title">ບັນທຶກແລ້ວ</string>
+    <string name="forums_saved_title">ທີ່ບັນທຶກໄວ້</string>
     <string name="forums_saved_save">ບັນທຶກໄວ້ສຳລັບພາຍຫຼັງ</string>
     <string name="forums_saved_remove">ລຶບອອກຈາກລາຍການທີ່ບັນທຶກ</string>
     <string name="forums_saved_clear_all">ລ້າງທັງໝົດ</string>
@@ -238,7 +238,7 @@
     <string name="forums_settings_access_updated">ອັບເດດການເຂົ້າເຖິງແລ້ວ</string>
     <string name="forums_settings_access_revoked">ການກ຺ົົາຣເສີບຖ້ມີໄດ້ຖືກຖ຾ກໂອ຺ກ</string>
     <string name="forums_settings_member_removed">ຍ້າຍສະມາຊິກແລ້ວ</string>
-    <string name="forums_settings_prompt_saved">ບັນທຶກ prompt ແລ້ວ</string>
+    <string name="forums_settings_prompt_saved">ບັນທຶກພຣອມທ໌ແລ້ວ</string>
     <string name="forums_settings_section_identity">ຕົວຕົນ</string>
     <string name="forums_settings_field_name">ຊື່</string>
     <string name="forums_settings_field_entity_id">ID ຂອງເອັນຕິຕີ້</string>
@@ -322,7 +322,7 @@
     <string name="forums_moderation_target_post">ໂພສ</string>
     <string name="forums_moderation_target_comment">ຄຳເຫັນ</string>
     <string name="forums_moderation_target_user">ຜູ້ໃຊ້</string>
-    <string name="forums_moderation_reason_spam">Spam</string>
+    <string name="forums_moderation_reason_spam">ສະແປມ</string>
     <string name="forums_moderation_reason_harassment">ການຄຸກຄາມ</string>
     <string name="forums_moderation_reason_hate">ຄຳເວົ້າທີ່ໃຫ້ຄວາມຊັງ</string>
     <string name="forums_moderation_reason_violence">ຄວາມຮຸນແຮງ</string>

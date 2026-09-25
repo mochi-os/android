@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">Buka sidebar</string>
     <string name="go_sidebar_active">Kaulinan Aktif</string>
     <string name="go_empty_active">Can aya kaulinan aktif.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">Nyerah</string>
     <string name="go_new_game_title">Kaulinan Go anyar</string>
     <string name="go_new_game_no_friends">Anjeun kudu nambahan babaturan saméméh bisa ngamimitian kaulinan.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

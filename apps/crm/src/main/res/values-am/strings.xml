@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="crm_list_title">CRMs</string>
+    <string name="crm_list_title">CRMዎች</string>
     <string name="crm_list_search">ይፈልጉ</string>
     <string name="crm_list_find">CRMዎችን ፈልግ</string>
     <string name="crm_list_logout">ውጣ</string>
@@ -273,14 +273,14 @@
     <string name="crm_access_role_comment">አስተያየት እና እይታ</string>
     <string name="crm_access_role_view">እይታ ብቻ</string>
     <string name="crm_access_role_none">ምንም ድረሳ የለም</string>
-    <string name="crm_all_crms">ሁሉም CRMs</string>
+    <string name="crm_all_crms">ሁሉም CRMዎች</string>
     <string name="crm_settings_unsubscribe_section">ከCRM ይውጡ</string>
     <string name="crm_settings_updated">CRM ተዘምኗል</string>
     <string name="crm_create_import_backup">ከመጠባበቂያ አስመጣ (አማራጭ)</string>
     <string name="crm_export">ውሂብ ላክ</string>
     <string name="crm_exporting">ወደ ውጪ መላክ በመዘጋጀት ላይ…</string>
     <string name="crm_create_allow_search">ማንኛውም ሰው CRM እንዲፈልግ ፍቀድ</string>
-    <string name="crm_no_crms_found">ምንም CRMs አልተገኙም</string>
+    <string name="crm_no_crms_found">ምንም CRMዎች አልተገኙም</string>
     <string name="crm_create_blocked_no_parents">እስካሁን ምንም የንጥል አይነቶች ሊፈጠሩ አይችሉም። መጀመሪያ የሚያስፈልጉትን የወላጅ ንጥሎች ይፍጠሩ።</string>
     <string name="crm_export_csv">CSV ላክ</string>
     <string name="crm_share_link_title">CRM አጋራ</string>

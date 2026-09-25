@@ -70,7 +70,7 @@
     <string name="market_checkout_back">Назад</string>
     <string name="market_checkout_buy_it_now">Купити зараз</string>
     <string name="market_checkout_create_failed">Не вдалося створити замовлення</string>
-    <string name="market_checkout_delivery_download">Завантажити</string>
+    <string name="market_checkout_delivery_download">Завантаження</string>
     <string name="market_checkout_delivery_method">Спосіб доставки</string>
     <string name="market_checkout_delivery_pickup">Самовивіз</string>
     <string name="market_checkout_delivery_shipping">Доставка</string>
@@ -107,7 +107,7 @@
     <string name="market_editor_asset_external_filename">Назва файлу</string>
     <string name="market_editor_back">Назад</string>
     <string name="market_editor_category">Категорія</string>
-    <string name="market_editor_condition">Умова</string>
+    <string name="market_editor_condition">Стан</string>
     <string name="market_editor_condition_new">Нове</string>
     <string name="market_editor_condition_refurbished">Відновлене</string>
     <string name="market_editor_condition_used">Вживане</string>
@@ -149,12 +149,12 @@
     <string name="market_filter_apply">Застосувати</string>
     <string name="market_filter_category">Категорія</string>
     <string name="market_filter_clear">Очистити фільтри</string>
-    <string name="market_filter_condition">Умова</string>
+    <string name="market_filter_condition">Стан</string>
     <string name="market_filter_condition_new">Нове</string>
     <string name="market_filter_condition_refurbished">Відновлене</string>
     <string name="market_filter_condition_used">Вживане</string>
     <string name="market_filter_delivery">Доставка</string>
-    <string name="market_filter_delivery_download">Завантажити</string>
+    <string name="market_filter_delivery_download">Завантаження</string>
     <string name="market_filter_delivery_pickup">Самовивіз</string>
     <string name="market_filter_delivery_shipping">Доставка</string>
     <string name="market_filter_price_max">Макс.</string>
@@ -183,7 +183,7 @@
     <string name="market_listing_detail_load_failed">Не вдалося завантажити оголошення</string>
     <string name="market_listing_detail_listed">Опубліковано %1$s</string>
     <string name="market_listing_detail_location_heading">Розташування</string>
-    <string name="market_listing_detail_message">Повідомлення</string>
+    <string name="market_listing_detail_message">Написати</string>
     <string name="market_listing_detail_message_seller">Написати продавцеві</string>
     <string name="market_listing_detail_not_found">Оголошення не знайдено</string>
     <string name="market_listing_detail_place_bid">Зробити ставку</string>
@@ -305,7 +305,7 @@
     <string name="market_sale_carrier_other">Інше</string>
     <string name="market_sale_completed_label">Завершено</string>
     <string name="market_sale_dispute_respond">Відповісти</string>
-    <string name="market_sale_dispute_state_open">Відкрити</string>
+    <string name="market_sale_dispute_state_open">Відкрито</string>
     <string name="market_sale_dispute_state_resolved">Вирішено</string>
     <string name="market_sale_load_failed">Не вдалося завантажити замовлення</string>
     <string name="market_sale_message_buyer">Написати покупцеві</string>
@@ -324,7 +324,7 @@
     <string name="market_sale_shipped_label">Відправлено</string>
     <string name="market_sale_title">Продаж</string>
     <string name="market_sale_tracking_label">Номер відстеження</string>
-    <string name="market_saved_title">Збережено</string>
+    <string name="market_saved_title">Збережене</string>
     <string name="market_search_clear">Очистити пошук</string>
     <string name="market_section_categories">Огляд категорій</string>
     <string name="market_section_listings">Останні оголошення</string>
@@ -348,7 +348,7 @@
     <string name="market_sidebar_purchases">Покупки</string>
     <string name="market_sidebar_reviews">Відгуки</string>
     <string name="market_sidebar_sales">Продажі</string>
-    <string name="market_sidebar_saved">Збережено</string>
+    <string name="market_sidebar_saved">Збережене</string>
     <string name="market_sidebar_selling">Продаж</string>
     <string name="market_sidebar_settings">Налаштування</string>
     <string name="market_sidebar_subscribers">Підписники</string>
@@ -690,7 +690,7 @@
     <string name="market_seller_step_activate_title">Активувати обліковий запис продавця</string>
     <string name="market_seller_step_stripe_desc">Підключіть обліковий запис Stripe, щоб приймати платежі від покупців</string>
     <string name="market_seller_step_stripe_title">Підключити Stripe</string>
-    <string name="market_seller_stripe_more_info">Stripe потребує додаткової інформації, перш ніж ви зможете приймати платежі. Виконайте вимоги у своєму Stripe Dashboard, а потім натисніть Перевірити статус.</string>
+    <string name="market_seller_stripe_more_info">Stripe потребує додаткової інформації, перш ніж ви зможете приймати платежі. Виконайте вимоги на своїй панелі Stripe, а потім натисніть Перевірити статус.</string>
     <string name="market_seller_summary_account_status">Статус облікового запису</string>
     <string name="market_seller_summary_fees">Комісії</string>
     <string name="market_seller_summary_payments">Платежі</string>

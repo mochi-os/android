@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Akukho miyalezo okwangoku</string>
     <string name="feeds_sort_label">Hlela</string>
     <string name="feeds_sort_interests">Imidla</string>
-    <string name="feeds_sort_new">Entsha</string>
+    <string name="feeds_sort_new">Ezintsha</string>
     <string name="feeds_sort_hot">Ishushu</string>
-    <string name="feeds_sort_top">Phezulu</string>
+    <string name="feeds_sort_top">Ezigqwesileyo</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Umpapasho</string>
     <string name="feeds_image_preview">Phicotha</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Rhoxisa impendulo</string>
     <string name="feeds_edit_post">Hlela umyalezo</string>
     <string name="feeds_save_label">Gcina</string>
-    <string name="feeds_post_action">Umpapasho</string>
+    <string name="feeds_post_action">Papasha</string>
     <string name="feeds_feed_label">Ifidi</string>
     <string name="feeds_add_files">Yongeza iifayile</string>
     <string name="feeds_restore">Buyisela</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Phuma</string>
     <string name="feeds_ai_account_default">I-akhawunti yoqobo</string>
     <string name="feeds_ai_mode_off">Icinyiwe</string>
-    <string name="feeds_ai_mode_tag">Iletile</string>
+    <string name="feeds_ai_mode_tag">Faka iithegi</string>
     <string name="feeds_ai_mode_tag_deduplicate">Ithegi + susa ezilukuhlanyo</string>
     <string name="feeds_feed_not_found">Ifidi ayifumanekanga</string>
     <string name="feeds_post_not_found">Umyalezo awufumaneki</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Umdla uncitshisiwe</string>
     <string name="feeds_interest_removed">Umdla ususiwe</string>
     <string name="feeds_interest_failed">Ayiphumelelanga ukulungisa umdla</string>
-    <string name="feeds_saved_title">Igciniwe</string>
-    <string name="feeds_saved_menu">Igciniwe</string>
+    <string name="feeds_saved_title">Ezigciniweyo</string>
+    <string name="feeds_saved_menu">Ezigciniweyo</string>
     <string name="feeds_saved_save">Gcina ukuze ujonge kamva</string>
     <string name="feeds_saved_remove">Susa kwezigciniweyo</string>
     <string name="feeds_saved_clear_all">Cima konke</string>

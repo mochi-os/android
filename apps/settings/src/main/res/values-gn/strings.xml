@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="settings_home_title">Ñemboheko</string>
+    <string name="settings_home_title">Mbojahakuéra</string>
     <string name="settings_home_logout">Esẽ</string>
     <string name="settings_home_account">Cuenta</string>
     <string name="settings_home_preferences">Jeporavo</string>
@@ -45,9 +45,9 @@
     <string name="route_delete_title">Hundi tape?</string>
     <string name="route_path">Tape</string>
     <string name="route_method">Método</string>
-    <string name="route_method_app">App</string>
+    <string name="route_method_app">Tembiporu\'i</string>
     <string name="route_method_entity">Entidad</string>
-    <string name="route_method_redirect">Redirect</string>
+    <string name="route_method_redirect">Redirección</string>
     <string name="route_priority">Tenondegua</string>
     <string name="route_enabled">Imyendy</string>
     <string name="route_disabled">Oñemboty</string>
@@ -62,7 +62,7 @@
     <string name="notifprefs_edit_category">Embojuruja categoría</string>
     <string name="notifprefs_name_label">Téra</string>
     <string name="notifprefs_destinations">Destinos</string>
-    <string name="notifprefs_dest_web">Web browser</string>
+    <string name="notifprefs_dest_web">Kundahára</string>
     <string name="notifprefs_test">Ehecha</string>
     <string name="notifprefs_edit">Embojuruja</string>
     <string name="notifprefs_delete">Hundi</string>
@@ -119,7 +119,7 @@
     <string name="settings_home_system_documents">Documentos</string>
     <string name="settings_home_system_settings">Sistema ñemboheko</string>
     <string name="system_settings_title">Sistema ñemboheko</string>
-    <string name="system_settings_section_login">Login</string>
+    <string name="system_settings_section_login">Jeike</string>
     <string name="system_settings_section_oauth">Ñepyrũ ambue rupive</string>
     <string name="system_settings_section_user_defaults">Mboapurevahára ypy</string>
     <string name="system_settings_section_operator">Operador</string>
@@ -151,8 +151,8 @@
     <string name="system_setting_oauth_github_client_secret">GitHub client secret-pe</string>
     <string name="system_setting_oauth_microsoft_client_id">Microsoft cliente ID</string>
     <string name="system_setting_oauth_microsoft_client_secret">Microsoft client secret-pe</string>
-    <string name="system_setting_oauth_microsoft_tenant">Microsoft tenant</string>
-    <string name="system_setting_oauth_facebook_client_id">Facebook App ID</string>
+    <string name="system_setting_oauth_microsoft_tenant">Microsoft inquilino</string>
+    <string name="system_setting_oauth_facebook_client_id">Facebook tembiporu\'i ID</string>
     <string name="system_setting_oauth_facebook_client_secret">Facebook App secret-pe</string>
     <string name="system_setting_oauth_x_client_id">X cliente ID</string>
     <string name="system_setting_oauth_x_client_secret">X cliente secreto</string>
@@ -278,7 +278,7 @@
     <string name="account_identity_identity">Identidad</string>
     <string name="account_identity_username">Puruhára réra</string>
     <string name="account_identity_name">Téra</string>
-    <string name="account_identity_fingerprint">Fingerprint</string>
+    <string name="account_identity_fingerprint">Kuãhũ</string>
     <string name="account_identity_directory_toggle">Eipysyrõ ambuekuéra ojuhu nde directorio-pe</string>
     <string name="domain_add">Embojuaju domain</string>
     <string name="domain_add_title">Embojuaju domain</string>
@@ -298,12 +298,12 @@
     <string name="domain_empty_admin">Ndaipori dominio oñembokuéva.</string>
     <string name="domain_empty_user">Ndereguerekói permiso domain mavavevevevehapere.</string>
     <string name="domain_https">HTTPS ijeheguivéva</string>
-    <string name="domain_name">Domain</string>
+    <string name="domain_name">Dominio</string>
     <string name="domain_status_pending">DNS verificación oñeha\'arõ hína</string>
     <string name="domain_status_verified">Verificadopyre</string>
-    <string name="domain_title">Domains</string>
+    <string name="domain_title">Dominiokuéra</string>
     <string name="domain_verify">Ehesa\'ỹijo DNS</string>
-    <string name="settings_home_domains">Domains</string>
+    <string name="settings_home_domains">Dominiokuéra</string>
     <plurals name="notifprefs_test_sent">
         <item quantity="one">Ha\'ãha oñemondo %1$d tenda</item>
         <item quantity="other">Ha\'ãha oñemondo %1$d tenda</item>
@@ -311,11 +311,11 @@
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">Oñembogue %1$d sesiónkuéra</item>
     </plurals>
-    <string name="login_title">Login</string>
+    <string name="login_title">Jeike</string>
     <string name="login_section_methods">Mba\'éichapa ñañepyrũ haguã</string>
     <string name="login_method_email">Código email</string>
     <string name="login_method_passkey">Jeike rape</string>
-    <string name="login_method_totp">Authenticator app</string>
+    <string name="login_method_totp">Tekorosã tembiporu\'i</string>
     <string name="login_method_oauth">Ñepyrũ ambue rupive</string>
     <string name="login_method_recovery">Recuperación papapykuéra</string>
     <string name="account_close_section">Emboty mba\'ete</string>
@@ -323,7 +323,7 @@
     <string name="account_close_confirm_title">¿Emboty nde mba\'ete?</string>
     <string name="account_close_confirm_body">Nde mba\'ete oñembosako\'íta oñemboguarã ha resẽta. Ikatu rejeheja jave reikese jeývo, oĩ aja gueteri ára oñemboguarã mboyve.</string>
     <string name="account_data_download">Emboguejy</string>
-    <string name="route_target_app">App</string>
+    <string name="route_target_app">Tembiporu\'i</string>
     <string name="route_target_entity">Entidad</string>
     <string name="route_target_url">URL</string>
     <string name="account_data_section">Ne mba\'ekuaarã</string>
@@ -346,8 +346,8 @@
     <string name="system_status_queued_broadcasts">Marandu sarambipyre aha’arõva</string>
     <string name="system_setting_hostname_publish">Emomarandu hostname ha dominio-kuéra ambue servidor-pe</string>
     <string name="system_setting_hostname">Hostname omomarandupyre ambue servidor-pe</string>
-    <string name="system_status_peer_id">Peer ID</string>
-    <string name="system_status_holepunch">Hole punch</string>
+    <string name="system_status_peer_id">Mboja ID</string>
+    <string name="system_status_holepunch">NAT ñembokua</string>
     <string name="system_status_holepunch_value">%1$d osẽ porã · %2$d ndaikatúi</string>
     <string name="system_status_awaiting_routing">Marandu oha’arõva tape</string>
     <string name="system_status_relay_service">Relay servicio</string>
@@ -357,11 +357,11 @@
     <string name="route_target_none">Ndaipóri tenda oĩva</string>
     <string name="login_invalid_code">Código ndoikóiva</string>
     <string name="accounts_provider_browser">Browser ñe\'ẽmondokuéra</string>
-    <string name="accounts_provider_fcm">Android push</string>
+    <string name="accounts_provider_fcm">Android momarandu</string>
     <string name="accounts_provider_mcp">MCP mohendaha</string>
     <string name="accounts_provider_unifiedpush">Push marandu</string>
     <string name="accounts_provider_url">URL okápe</string>
-    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_provider_web">Mochi ñanduti</string>
     <string name="accounts_verified">Tetãygua oñemoneĩma</string>
     <string name="accounts_verify_invalid">Verificación código ndoikóiva</string>
     <string name="accounts_verify_sent">Verificación código mondopyre</string>
@@ -374,11 +374,11 @@
     <string name="accounts_forget_title">Hesarái mba\'e rehe?</string>
     <string name="accounts_forget_message">Kóva ohesaráita \"%1$s\" mba\'égui ha omboykéta marandu chupe.</string>
     <string name="accounts_device_seen">Ojehechahague paha %1$s</string>
-    <string name="notifprefs_device_app">%1$s · app</string>
-    <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_device_app">%1$s · tembiporu\'i</string>
+    <string name="notifprefs_device_push">%1$s · momarandu</string>
     <string name="notifprefs_test_partial">Prueba oñemondo %1$d %2$d-gui</string>
     <string name="notifprefs_test_none">Ndaipóri henda destino oñembosako\'íva</string>
-    <string name="notifprefs_transport_fcm">Android push</string>
+    <string name="notifprefs_transport_fcm">Android momarandu</string>
     <string name="notifprefs_no_destinations">Mba\'eve mboheve</string>
     <string name="account_data_generate">Embosako\'i ñemi ñe\'ẽ</string>
     <string name="accounts_field_server">Servidor URL</string>

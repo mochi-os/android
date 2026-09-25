@@ -29,7 +29,7 @@
     <string name="projects_sort_label">Сортувати</string>
     <string name="projects_sort_direction">Напрямок</string>
     <string name="projects_sort_rank">Вручну</string>
-    <string name="projects_sort_number">Число</string>
+    <string name="projects_sort_number">Номер</string>
     <string name="projects_sort_created">Створено</string>
     <string name="projects_sort_updated">Оновлено</string>
     <string name="projects_create_object_type">Тип</string>
@@ -93,7 +93,7 @@
     <string name="projects_request_create_action">Створити</string>
     <string name="projects_diff_unified">Уніфіковано</string>
     <string name="projects_diff_split">Розділити</string>
-    <string name="projects_diff_empty">Diff недоступний</string>
+    <string name="projects_diff_empty">Порівняння недоступне</string>
     <string name="projects_board_unassigned">Не призначено</string>
     <string name="projects_board_new">Нове</string>
     <string name="projects_board_rename">Перейменувати</string>
@@ -106,7 +106,7 @@
     <string name="projects_design_import">Імпортувати дизайн</string>
     <string name="projects_design_imported">Дизайн імпортовано</string>
     <string name="projects_design_tab_classes">Класи</string>
-    <string name="projects_design_tab_views">Перегляди</string>
+    <string name="projects_design_tab_views">Подання</string>
     <string name="projects_design_import_dialog_title">Імпортувати дизайн</string>
     <string name="projects_design_import_choose_template">Виберіть шаблон</string>
     <string name="projects_design_replace_title">Замінити дизайн?</string>
@@ -149,7 +149,7 @@
     <string name="projects_views_type_board">Дошка</string>
     <string name="projects_views_type_list">Список</string>
     <string name="projects_views_direction">Напрямок</string>
-    <string name="projects_views_sort_number">Число</string>
+    <string name="projects_views_sort_number">Номер</string>
     <string name="projects_views_sort_created">Створено</string>
     <string name="projects_views_sort_updated">Оновлено</string>
     <string name="projects_views_sort_rank">Ранг</string>
@@ -158,7 +158,7 @@
     <string name="projects_more">Більше</string>
     <string name="projects_request_more">Більше</string>
     <string name="projects_comment_send">Надіслати</string>
-    <string name="projects_field_position_body">Текст</string>
+    <string name="projects_field_position_body">Основна частина</string>
     <string name="projects_sort_field">Сортувати за</string>
     <string name="projects_comment_remove_attachment">Видалити вкладення</string>
     <string name="projects_views_sort_by">Сортувати за</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Шукати об\'єкти</string>
 
     <string name="notification_channel_projects">Сповіщення проєктів</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Проєкти</string>
     <string name="projects_auth_create_identity_failed">Не вдалося створити особу</string>
     <string name="projects_auth_mfa_unsupported">MFA ще не підтримується в мобільному додатку</string>
     <string name="projects_auth_enter_code_sent">Введіть код, надісланий на %1$s</string>
@@ -239,8 +239,8 @@
     <string name="projects_request_mark_ready">Позначити як готове</string>
     <string name="projects_request_merge_default_message">Злити %1$s у %2$s</string>
     <string name="projects_request_commit_message">Повідомлення комміту</string>
-    <string name="projects_request_method_squash">Squash</string>
-    <string name="projects_request_method_rebase">Rebase</string>
+    <string name="projects_request_method_squash">Склеювання</string>
+    <string name="projects_request_method_rebase">Перебазування</string>
     <string name="projects_request_create_title">Створити запит на злиття</string>
     <string name="projects_request_field_target">Цільова гілка</string>
     <string name="projects_diff_title">Відмінності: %1$s -&gt; %2$s</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Виберіть правило</string>
     <string name="projects_access_authenticated_desc">Усі, хто увійшли в систему</string>
     <string name="projects_access_anyone_desc">Включно з анонімними користувачами</string>
-    <string name="projects_access_target">Ціль</string>
+    <string name="projects_access_target">Користувач або група</string>
     <string name="projects_access_target_hint">ID сутності, @група, * (всі) або + (учасники)</string>
     <string name="projects_access_selected">Вибрано: %1$s</string>
     <string name="projects_access_role_comment">Коментувати й переглядати</string>

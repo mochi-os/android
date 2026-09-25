@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="settings_home_title">Settings</string>
+    <string name="settings_home_title">Issettjar</string>
     <string name="settings_home_logout">Oħroġ</string>
     <string name="settings_home_account">Kont</string>
     <string name="settings_home_preferences">Preferenzi</string>
@@ -35,7 +35,7 @@
     <string name="account_copy_all">Ikkupja kollox</string>
     <string name="sessions_current">(attwali)</string>
     <string name="settings_home_section_system">Sistema</string>
-    <string name="route_section">Routes</string>
+    <string name="route_section">Rotot</string>
     <string name="route_add">Żid rotta</string>
     <string name="route_add_title">Żid rotta</string>
     <string name="route_edit">Editja r-rotta</string>
@@ -43,11 +43,11 @@
     <string name="route_save">Issejvja</string>
     <string name="route_delete">Ħassar rotta</string>
     <string name="route_delete_title">Tħassar rotta?</string>
-    <string name="route_path">Path</string>
+    <string name="route_path">Mogħdija</string>
     <string name="route_method">Metodu</string>
-    <string name="route_method_app">App</string>
+    <string name="route_method_app">Applikazzjoni</string>
     <string name="route_method_entity">Entità</string>
-    <string name="route_method_redirect">Redirect</string>
+    <string name="route_method_redirect">Ridirezzjoni</string>
     <string name="route_priority">Prijorità</string>
     <string name="route_enabled">Attivat</string>
     <string name="route_disabled">Diżabbiltat</string>
@@ -63,7 +63,7 @@
     <string name="notifprefs_name_label">Isem</string>
     <string name="notifprefs_destinations">Destinazzjonijiet</string>
     <string name="notifprefs_dest_web">Browser tal-web</string>
-    <string name="notifprefs_test">Test</string>
+    <string name="notifprefs_test">Ittestja</string>
     <string name="notifprefs_edit">Editja</string>
     <string name="notifprefs_delete">Ħassar</string>
     <string name="notifprefs_remove">Neħħi</string>
@@ -98,8 +98,8 @@
     <string name="accounts_status_verified">Ivverifikat</string>
     <string name="accounts_status_connected">Konness</string>
     <string name="accounts_default_for_ai">Default għall-AI</string>
-    <string name="accounts_test">Test</string>
-    <string name="accounts_settings">Settings</string>
+    <string name="accounts_test">Ittestja</string>
+    <string name="accounts_settings">Issettjar</string>
     <string name="accounts_verify">Ivverifika</string>
     <string name="accounts_remove">Neħħi</string>
     <string name="accounts_remove_title">Tneħħi l-kont?</string>
@@ -119,7 +119,7 @@
     <string name="settings_home_system_documents">Dokumenti</string>
     <string name="settings_home_system_settings">Settings tas-sistema</string>
     <string name="system_settings_title">Settings tas-sistema</string>
-    <string name="system_settings_section_login">Login</string>
+    <string name="system_settings_section_login">Dħul</string>
     <string name="system_settings_section_oauth">Login minn parti terza</string>
     <string name="system_settings_section_user_defaults">Defaults tal-utent</string>
     <string name="system_settings_section_operator">Operatur</string>
@@ -132,7 +132,7 @@
     <string name="system_settings_configured">Ikkonfigurat</string>
     <string name="system_settings_save">Issejvja</string>
     <string name="system_settings_clear">Naddaf</string>
-    <string name="system_settings_reset">Reset</string>
+    <string name="system_settings_reset">Irrisettja</string>
     <string name="system_settings_reset_to_default">Irriżetta għal default</string>
     <string name="system_settings_reset_title">Tirriżetta għal default?</string>
     <string name="system_setting_apps_install_user">Ippermetti utenti jinstallaw apps</string>
@@ -151,7 +151,7 @@
     <string name="system_setting_oauth_github_client_secret">Sigriet tal-klijent GitHub</string>
     <string name="system_setting_oauth_microsoft_client_id">ID tal-klijent Microsoft</string>
     <string name="system_setting_oauth_microsoft_client_secret">Sigriet tal-klijent Microsoft</string>
-    <string name="system_setting_oauth_microsoft_tenant">Microsoft tenant</string>
+    <string name="system_setting_oauth_microsoft_tenant">Kerrej ta\' Microsoft</string>
     <string name="system_setting_oauth_facebook_client_id">App ID ta\' Facebook</string>
     <string name="system_setting_oauth_facebook_client_secret">Sigriet tal-app ta\' Facebook</string>
     <string name="system_setting_oauth_x_client_id">ID tal-klijent X</string>
@@ -278,7 +278,7 @@
     <string name="account_identity_identity">Identità</string>
     <string name="account_identity_username">Isem tal-utent</string>
     <string name="account_identity_name">Isem</string>
-    <string name="account_identity_fingerprint">Fingerprint</string>
+    <string name="account_identity_fingerprint">Marka tas-swaba\'</string>
     <string name="account_identity_directory_toggle">Ippermetti lil oħrajn isibuk fid-direttorju</string>
     <string name="domain_add">Żid dominju</string>
     <string name="domain_add_title">Żid dominju</string>
@@ -287,7 +287,7 @@
     <string name="domain_delegation_delete">Ħassar delegazzjoni</string>
     <string name="domain_delegation_delete_message">%1$s ma jamministrax aktar rotot f\'dan id-domain.</string>
     <string name="domain_delegation_delete_title">Tħassar delegazzjoni?</string>
-    <string name="domain_delegation_path">Path</string>
+    <string name="domain_delegation_path">Mogħdija</string>
     <string name="domain_delegation_user">ID tal-utent</string>
     <string name="domain_delegations">Delegazzjonijiet</string>
     <string name="domain_delegations_empty">L-ebda delegazzjonijiet konfigurati.</string>
@@ -318,10 +318,10 @@
         <item quantity="other">Revokati %1$d sessjonijiet</item>
         <item quantity="two">Revokati %1$d sessjonijiet</item>
     </plurals>
-    <string name="login_title">Login</string>
+    <string name="login_title">Dħul</string>
     <string name="login_section_methods">Metodi tal-login</string>
     <string name="login_method_email">Kodiċi tal-email</string>
-    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_passkey">Ċavetta tal-aċċess</string>
     <string name="login_method_totp">App tal-awtentikazzjoni</string>
     <string name="login_method_oauth">Login minn parti terza</string>
     <string name="login_method_recovery">Kodiċi ta\' rkupru</string>
@@ -330,7 +330,7 @@
     <string name="account_close_confirm_title">Tagħlaq il-kont tiegħek?</string>
     <string name="account_close_confirm_body">Il-kont tiegħek se jiġi skedat biex jitħassar u tinħareġ mis-sistema. Tista\' tikkanċella f\'kull ħin qabel id-data tat-tħassir billi terġa\' tidħol.</string>
     <string name="account_data_download">Niżżel</string>
-    <string name="route_target_app">App</string>
+    <string name="route_target_app">Applikazzjoni</string>
     <string name="route_target_entity">Entità</string>
     <string name="route_target_url">URL</string>
     <string name="account_data_section">Id-data tiegħek</string>
@@ -368,7 +368,7 @@
     <string name="accounts_provider_mcp">Server MCP</string>
     <string name="accounts_provider_unifiedpush">Notifika push</string>
     <string name="accounts_provider_url">URL Estern</string>
-    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_provider_web">Web ta\' Mochi</string>
     <string name="accounts_verified">Kont ivverifikat</string>
     <string name="accounts_verify_invalid">Kodiċi tal-verifika invalidu</string>
     <string name="accounts_verify_sent">Kodiċi ta\' verifika mibgħut</string>
@@ -381,8 +381,8 @@
     <string name="accounts_forget_title">Tinsa l-apparat?</string>
     <string name="accounts_forget_message">Dan se jinsa l-apparat \"%1$s\" u jwaqqaf in-notifiki lilu.</string>
     <string name="accounts_device_seen">L-aħħar li deher %1$s</string>
-    <string name="notifprefs_device_app">%1$s · app</string>
-    <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_device_app">%1$s · applikazzjoni</string>
+    <string name="notifprefs_device_push">%1$s · notifika push</string>
     <string name="notifprefs_test_partial">It-test intbagħat lil %1$d minn %2$d destinazzjoni</string>
     <string name="notifprefs_test_none">L-ebda destinazzjonijiet ikkonfigurati</string>
     <string name="notifprefs_transport_fcm">Push Android</string>

@@ -91,7 +91,6 @@
     <string name="people_profile_accent_none">Ninguno</string>
     <string name="people_profile_clear">Quitar</string>
     <string name="people_profile_privacy_private_desc">Solo tus amigos mutuos pueden ver tu perfil</string>
-    <string name="people_welcome_title">Te damos la bienvenida a People</string>
     <string name="people_welcome_dismiss">Descartar</string>
     <string name="people_person_banner_alt">Banner de %1$s</string>
     <string name="people_person_private">Este perfil es privado</string>

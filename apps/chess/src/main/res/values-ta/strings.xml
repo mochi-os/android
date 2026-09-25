@@ -13,7 +13,7 @@
     <string name="chess_new_title">புதிய விளையாட்டு</string>
     <string name="chess_new_pick_opponent">எதிராளியைத் தேர்ந்தெடுக்கவும்</string>
     <string name="chess_new_no_friends_title">நண்பர்கள் இன்னும் இல்லை</string>
-    <string name="chess_new_no_friends_subtitle">விளையாட்டைத் தொடங்க People பயன்பாட்டில் நண்பர்களைச் சேர்க்கவும்</string>
+    <string name="chess_new_no_friends_subtitle">விளையாட்டைத் தொடங்க மக்கள் பயன்பாட்டில் நண்பர்களைச் சேர்க்கவும்</string>
     <string name="chess_new_add_friends">நண்பர்கள் சேர்</string>
     <string name="chess_new_start_button">கேமை தொடங்கு</string>
     <string name="chess_new_creating">உருவாக்குகிறது…</string>

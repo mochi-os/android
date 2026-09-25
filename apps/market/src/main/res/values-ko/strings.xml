@@ -93,8 +93,8 @@
     <string name="market_checkout_title">결제</string>
     <string name="market_checkout_total">총합</string>
     <string name="market_checkout_winning_bid">낙찰가</string>
-    <string name="market_condition_new">새로 만들기</string>
-    <string name="market_condition_refurbished">재정비됨</string>
+    <string name="market_condition_new">새 상품</string>
+    <string name="market_condition_refurbished">리퍼</string>
     <string name="market_condition_used">중고</string>
     <string name="market_dispute_dialog_cancel">취소</string>
     <string name="market_dispute_dialog_evidence_role_buyer">구매자</string>
@@ -107,9 +107,9 @@
     <string name="market_editor_asset_external_filename">파일명</string>
     <string name="market_editor_back">뒤로</string>
     <string name="market_editor_category">카테고리</string>
-    <string name="market_editor_condition">조건</string>
-    <string name="market_editor_condition_new">새로 만들기</string>
-    <string name="market_editor_condition_refurbished">재정비됨</string>
+    <string name="market_editor_condition">상태</string>
+    <string name="market_editor_condition_new">새 상품</string>
+    <string name="market_editor_condition_refurbished">리퍼</string>
     <string name="market_editor_condition_used">중고</string>
     <string name="market_editor_currency">통화</string>
     <string name="market_editor_description">설명</string>
@@ -149,9 +149,9 @@
     <string name="market_filter_apply">적용</string>
     <string name="market_filter_category">카테고리</string>
     <string name="market_filter_clear">필터 지우기</string>
-    <string name="market_filter_condition">조건</string>
-    <string name="market_filter_condition_new">새로 만들기</string>
-    <string name="market_filter_condition_refurbished">재정비됨</string>
+    <string name="market_filter_condition">상태</string>
+    <string name="market_filter_condition_new">새 상품</string>
+    <string name="market_filter_condition_refurbished">리퍼</string>
     <string name="market_filter_condition_used">중고</string>
     <string name="market_filter_delivery">배송</string>
     <string name="market_filter_delivery_download">다운로드</string>
@@ -183,7 +183,7 @@
     <string name="market_listing_detail_load_failed">목록 불러오기에 실패했어요</string>
     <string name="market_listing_detail_listed">등록일 %1$s</string>
     <string name="market_listing_detail_location_heading">위치</string>
-    <string name="market_listing_detail_message">메시지</string>
+    <string name="market_listing_detail_message">메시지 보내기</string>
     <string name="market_listing_detail_message_seller">판매자에게 메시지</string>
     <string name="market_listing_detail_not_found">목록을 찾을 수 없어요</string>
     <string name="market_listing_detail_place_bid">입찰</string>
@@ -305,7 +305,7 @@
     <string name="market_sale_carrier_other">기타</string>
     <string name="market_sale_completed_label">완료됨</string>
     <string name="market_sale_dispute_respond">응답</string>
-    <string name="market_sale_dispute_state_open">열기</string>
+    <string name="market_sale_dispute_state_open">열림</string>
     <string name="market_sale_dispute_state_resolved">해결됨</string>
     <string name="market_sale_load_failed">주문 불러오기에 실패했어요</string>
     <string name="market_sale_message_buyer">구매자에게 메시지</string>

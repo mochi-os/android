@@ -38,7 +38,7 @@
     <string name="access_add_rule">नियम जोड़ें</string>
     <string name="access_owner">स्वामी</string>
     <string name="access_revoke">रद्द करें</string>
-    <string name="access_level_comment">टिप्पणी</string>
+    <string name="access_level_comment">टिप्पणी करें</string>
     <string name="access_level_view">देखें</string>
     <string name="access_level_none">कोई नहीं</string>
     <string name="reaction_like">पसंद</string>
@@ -200,7 +200,7 @@
     <string name="reauth_signin_text">जब तक आप वापस साइन इन नहीं करते तब तक सूचनाएँ रोकी गई हैं</string>
     <string name="oem_hint_title">पृष्ठभूमि में पहुँच योग्य रहें</string>
     <string name="oem_hint_body">सूचनाएँ देने के लिए Mochi को पृष्ठभूमि में चलना आवश्यक है। कृपया अगली स्क्रीन पर इसकी अनुमति दें, अन्यथा स्क्रीन बंद होने पर आपका फ़ोन सूचनाएँ रोक सकता है।</string>
-    <string name="oem_hint_samsung_note">Samsung फ़ोन पर, Settings → Device care → Sleeping apps भी देखें और यदि Mochi सूचीबद्ध हो तो उसे हटा दें।</string>
+    <string name="oem_hint_samsung_note">Samsung फ़ोन पर, सेटिंग्स → डिवाइस केयर → स्लीपिंग ऐप्स भी देखें और यदि Mochi सूचीबद्ध हो तो उसे हटा दें।</string>
     <string name="oem_hint_allow">पृष्ठभूमि की अनुमति दें</string>
     <string name="oem_hint_dismiss">दोबारा न दिखाएँ</string>
     <string name="about_label">परिचय</string>

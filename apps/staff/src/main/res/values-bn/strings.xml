@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">স্টাফ</string>
+    <string name="launcher_staff">Mochi স্টাফ</string>
     <string name="staff_accounts_action_ban_title">অ্যাকাউন্ট নিষিদ্ধ করুন</string>
     <string name="staff_accounts_action_suspend_title">অ্যাকাউন্ট স্থগিত করুন</string>
     <string name="staff_accounts_action_unban_title">নিষেধাজ্ঞা তুলে নিন</string>
@@ -152,7 +152,7 @@
     <string name="staff_categories_dialog_position">অবস্থান</string>
     <string name="staff_categories_dialog_save">সংরক্ষণ করুন</string>
     <string name="staff_categories_dialog_saving">সংরক্ষণ করা হচ্ছে…</string>
-    <string name="staff_categories_dialog_slug">Slug</string>
+    <string name="staff_categories_dialog_slug">স্লাগ</string>
     <string name="staff_categories_empty">কোনো বিভাগ নেই</string>
     <string name="staff_categories_toast_created">ক্যাটেগরি তৈরি হয়েছে</string>
     <string name="staff_categories_toast_deleted">ক্যাটেগরি মুছে ফেলা হয়েছে</string>
@@ -162,7 +162,7 @@
     <string name="staff_categories_type_digital">ডিজিটাল</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">ভৌত</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">স্টাফ</string>
     <string name="staff_config_field_auto_approve">স্বয়ংক্রিয় অনুমোদন সীমা</string>
     <string name="staff_config_field_hold">হোল্ড সীমা</string>
     <string name="staff_config_field_platform_fee">প্ল্যাটফর্ম ফি</string>
@@ -253,15 +253,15 @@
     <string name="staff_disputes_refund_help">%1$s এর পূর্ণ ফেরতের জন্য খালি রাখুন। আংশিক ফেরতের জন্য ছোট পরিমাণ দিন।</string>
     <string name="staff_disputes_refund_must_be_positive">রিফান্ডের পরিমাণ অবশ্যই শূন্যের চেয়ে বেশি হতে হবে</string>
     <string name="staff_disputes_resolution_buyer">ক্রেতার পক্ষে সমাধান করুন</string>
-    <string name="staff_disputes_resolution_label">রেজোলিউশন</string>
+    <string name="staff_disputes_resolution_label">সমাধান</string>
     <string name="staff_disputes_resolution_placeholder">সমাধান নির্বাচন করুন</string>
     <string name="staff_disputes_resolution_seller">বিক্রেতার পক্ষে সমাধান করুন</string>
     <string name="staff_disputes_resolve">সমাধান করুন</string>
     <string name="staff_disputes_resolved_toast">বিরোধ সমাধান হয়েছে</string>
     <string name="staff_disputes_resolving">সমাধান হচ্ছে…</string>
-    <string name="staff_disputes_review">রিভিউ</string>
+    <string name="staff_disputes_review">পর্যালোচনা করুন</string>
     <string name="staff_disputes_status_escalated">এসকেলেট করা হয়েছে</string>
-    <string name="staff_disputes_status_open">খুলুন</string>
+    <string name="staff_disputes_status_open">খোলা</string>
     <string name="staff_disputes_status_resolved_buyer">সমাধান করা হয়েছে (ক্রেতা)</string>
     <string name="staff_disputes_status_resolved_seller">সমাধান হয়েছে (বিক্রেতা)</string>
     <string name="staff_disputes_status_responded">জবাব দেওয়া হয়েছে</string>
@@ -303,7 +303,7 @@
     <string name="staff_listings_moderation_hold">ধরে রাখুন</string>
     <string name="staff_listings_moderation_manual">ম্যানুয়াল</string>
     <string name="staff_listings_moderation_rejected">প্রত্যাখ্যাত</string>
-    <string name="staff_listings_moderation_review">রিভিউ</string>
+    <string name="staff_listings_moderation_review">পর্যালোচনা</string>
     <string name="staff_listings_moderation_soft_approved">নরমভাবে অনুমোদিত</string>
     <string name="staff_listings_notes_label">নোট</string>
     <string name="staff_listings_price_placeholder">—</string>
@@ -329,7 +329,7 @@
     <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">অ্যাকশন</string>
     <string name="staff_reports_action_ban">ব্যবহারকারীকে নিষিদ্ধ করুন</string>
-    <string name="staff_reports_action_dismiss">বাতিল করুন</string>
+    <string name="staff_reports_action_dismiss">খারিজ করুন</string>
     <string name="staff_reports_action_label">অ্যাকশন</string>
     <string name="staff_reports_action_placeholder">অ্যাকশন নির্বাচন করুন</string>
     <string name="staff_reports_action_remove">সরান</string>
@@ -351,7 +351,7 @@
     <string name="staff_reports_meta_reason">কারণ</string>
     <string name="staff_reports_meta_reporter">রিপোর্টকারী</string>
     <string name="staff_reports_meta_seller">বিক্রেতা</string>
-    <string name="staff_reports_meta_target">টার্গেট</string>
+    <string name="staff_reports_meta_target">রিপোর্ট করা আইটেম</string>
     <string name="staff_reports_meta_type">ধরন</string>
     <string name="staff_reports_notes_label">নোট</string>
     <string name="staff_reports_reason_counterfeit">নকল বা চোরাই</string>
@@ -416,7 +416,7 @@
     <string name="staff_status_hold">ধরে রাখুন</string>
     <string name="staff_status_manual">ম্যানুয়াল</string>
     <string name="staff_status_moderator">মডারেটর</string>
-    <string name="staff_status_open">খুলুন</string>
+    <string name="staff_status_open">খোলা</string>
     <string name="staff_status_pending">মুলতুবি</string>
     <string name="staff_status_published">প্রকাশিত</string>
     <string name="staff_status_rejected">প্রত্যাখ্যাত</string>
@@ -424,7 +424,7 @@
     <string name="staff_status_resolved_buyer">সমাধান করা হয়েছে (ক্রেতা)</string>
     <string name="staff_status_resolved_seller">সমাধান হয়েছে (বিক্রেতা)</string>
     <string name="staff_status_responded">জবাব দেওয়া হয়েছে</string>
-    <string name="staff_status_review">রিভিউ</string>
+    <string name="staff_status_review">পর্যালোচনা</string>
     <string name="staff_status_reviewed">রিভিউ করা হয়েছে</string>
     <string name="staff_status_reviewing">রিভিউ করা হচ্ছে</string>
     <string name="staff_status_soft_approved">নরমভাবে অনুমোদিত</string>

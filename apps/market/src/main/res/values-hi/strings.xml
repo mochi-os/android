@@ -25,7 +25,7 @@
     <string name="market_appeal_dialog_failed">अपील जमा करने में विफल</string>
     <string name="market_appeal_dialog_submit">अपील सबमिट करें</string>
     <string name="market_appeal_dialog_success">अपील सबमिट की गई</string>
-    <string name="market_asset_download">डाउनलोड</string>
+    <string name="market_asset_download">डाउनलोड करें</string>
     <string name="market_back">वापस</string>
     <string name="market_bid_dialog_cancel">रद्द करें</string>
     <string name="market_bid_dialog_ceiling_help">इस अधिकतम तक, आगे बने रहने के लिए आवश्यक सबसे छोटी राशि से हम आपकी बोली स्वचालित रूप से बढ़ाएंगे।</string>
@@ -95,7 +95,7 @@
     <string name="market_checkout_winning_bid">विजेता बोली</string>
     <string name="market_condition_new">नया</string>
     <string name="market_condition_refurbished">नवीनीकृत</string>
-    <string name="market_condition_used">उपयोगित</string>
+    <string name="market_condition_used">इस्तेमाल किया हुआ</string>
     <string name="market_dispute_dialog_cancel">रद्द करें</string>
     <string name="market_dispute_dialog_evidence_role_buyer">खरीदार</string>
     <string name="market_dispute_dialog_evidence_role_seller">विक्रेता</string>
@@ -107,10 +107,10 @@
     <string name="market_editor_asset_external_filename">फ़ाइलनाम</string>
     <string name="market_editor_back">वापस</string>
     <string name="market_editor_category">श्रेणी</string>
-    <string name="market_editor_condition">शर्त</string>
+    <string name="market_editor_condition">स्थिति</string>
     <string name="market_editor_condition_new">नया</string>
     <string name="market_editor_condition_refurbished">नवीनीकृत</string>
-    <string name="market_editor_condition_used">उपयोगित</string>
+    <string name="market_editor_condition_used">इस्तेमाल किया हुआ</string>
     <string name="market_editor_currency">मुद्रा</string>
     <string name="market_editor_description">विवरण</string>
     <string name="market_editor_interval_monthly">मासिक</string>
@@ -149,10 +149,10 @@
     <string name="market_filter_apply">लागू करें</string>
     <string name="market_filter_category">श्रेणी</string>
     <string name="market_filter_clear">फ़िल्टर साफ़ करें</string>
-    <string name="market_filter_condition">शर्त</string>
+    <string name="market_filter_condition">स्थिति</string>
     <string name="market_filter_condition_new">नया</string>
     <string name="market_filter_condition_refurbished">नवीनीकृत</string>
-    <string name="market_filter_condition_used">उपयोगित</string>
+    <string name="market_filter_condition_used">इस्तेमाल किया हुआ</string>
     <string name="market_filter_delivery">डिलीवरी</string>
     <string name="market_filter_delivery_download">डाउनलोड</string>
     <string name="market_filter_delivery_pickup">पिकअप</string>
@@ -183,7 +183,7 @@
     <string name="market_listing_detail_load_failed">लिस्टिंग लोड करने में विफल</string>
     <string name="market_listing_detail_listed">सूचीबद्ध %1$s</string>
     <string name="market_listing_detail_location_heading">स्थान</string>
-    <string name="market_listing_detail_message">संदेश</string>
+    <string name="market_listing_detail_message">संदेश भेजें</string>
     <string name="market_listing_detail_message_seller">विक्रेता को संदेश भेजें</string>
     <string name="market_listing_detail_not_found">लिस्टिंग नहीं मिली</string>
     <string name="market_listing_detail_place_bid">बोली लगाएँ</string>
@@ -305,7 +305,7 @@
     <string name="market_sale_carrier_other">अन्य</string>
     <string name="market_sale_completed_label">पूर्ण</string>
     <string name="market_sale_dispute_respond">जवाब दें</string>
-    <string name="market_sale_dispute_state_open">खोलें</string>
+    <string name="market_sale_dispute_state_open">खुला</string>
     <string name="market_sale_dispute_state_resolved">हल हो गया</string>
     <string name="market_sale_load_failed">ऑर्डर लोड करने में विफल</string>
     <string name="market_sale_message_buyer">खरीदार को संदेश भेजें</string>
@@ -324,7 +324,7 @@
     <string name="market_sale_shipped_label">शिप किया गया</string>
     <string name="market_sale_title">सेल</string>
     <string name="market_sale_tracking_label">ट्रैकिंग नंबर</string>
-    <string name="market_saved_title">सेव किया गया</string>
+    <string name="market_saved_title">सेव किए गए</string>
     <string name="market_search_clear">खोज साफ़ करें</string>
     <string name="market_section_categories">श्रेणियाँ ब्राउज़ करें</string>
     <string name="market_section_listings">हाल की लिस्टिंग</string>
@@ -348,7 +348,7 @@
     <string name="market_sidebar_purchases">खरीदारियाँ</string>
     <string name="market_sidebar_reviews">रिव्यू</string>
     <string name="market_sidebar_sales">सेल्स</string>
-    <string name="market_sidebar_saved">सेव किया गया</string>
+    <string name="market_sidebar_saved">सेव किए गए</string>
     <string name="market_sidebar_selling">बेच रहे हैं</string>
     <string name="market_sidebar_settings">सेटिंग्स</string>
     <string name="market_sidebar_subscribers">सब्सक्राइबर</string>
@@ -690,7 +690,7 @@
     <string name="market_seller_step_activate_title">विक्रेता खाता सक्रिय करें</string>
     <string name="market_seller_step_stripe_desc">खरीदारों से भुगतान स्वीकार करने के लिए एक Stripe खाता लिंक करें</string>
     <string name="market_seller_step_stripe_title">Stripe कनेक्ट करें</string>
-    <string name="market_seller_stripe_more_info">भुगतान स्वीकार करने से पहले Stripe को अधिक जानकारी की आवश्यकता है। अपने Stripe Dashboard पर आवश्यकताएं पूरी करें, फिर स्थिति जांचें पर क्लिक करें।</string>
+    <string name="market_seller_stripe_more_info">भुगतान स्वीकार करने से पहले Stripe को अधिक जानकारी की आवश्यकता है। अपने Stripe डैशबोर्ड पर आवश्यकताएं पूरी करें, फिर स्थिति जांचें पर क्लिक करें।</string>
     <string name="market_seller_summary_account_status">खाता स्थिति</string>
     <string name="market_seller_summary_fees">शुल्क</string>
     <string name="market_seller_summary_payments">भुगतान</string>

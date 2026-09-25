@@ -78,7 +78,7 @@
     <string name="crm_design_or_upload_json">Или качете файл</string>
     <string name="crm_design_upload_json">Качи .json файл</string>
     <string name="crm_design_tab_classes">Класове</string>
-    <string name="crm_design_tab_views">Прегледи</string>
+    <string name="crm_design_tab_views">Изгледи</string>
     <string name="crm_design_import_dialog_title">Импорт на дизайн</string>
     <string name="crm_design_import_choose_template">Изберете шаблон</string>
     <string name="crm_design_replace_title">Да заменя ли дизайна?</string>
@@ -94,7 +94,7 @@
     <string name="crm_class_delete">Изтрий класа</string>
     <string name="crm_class_delete_title">Изтрий класа</string>
     <string name="crm_field_type_text">Текст</string>
-    <string name="crm_field_type_number">Номер</string>
+    <string name="crm_field_type_number">Число</string>
     <string name="crm_field_type_user">Потребител</string>
     <string name="crm_field_type_date">Дата</string>
     <string name="crm_field_type_checklist">Чек-лист</string>
@@ -209,7 +209,7 @@
     <string name="crm_field_multi">Множествен избор</string>
     <string name="crm_field_position">Позиция на показване</string>
     <string name="crm_field_position_header">Заглавие</string>
-    <string name="crm_field_position_body">Тяло</string>
+    <string name="crm_field_position_body">Съдържание</string>
     <string name="crm_field_validation">Валидиране</string>
     <string name="crm_field_min_length">Минимална дължина</string>
     <string name="crm_field_max_length">Максимална дължина</string>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Market</string>
+    <string name="app_name">Gabaa</string>
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_label">Seenaa jireenyaa</string>
     <string name="market_account_biography_placeholder">Bittootaaf waa\'ee kee himi…</string>
@@ -54,7 +54,7 @@
     <string name="market_bids_tab_won">Mo\'ate</string>
     <string name="market_bids_title">Iyyannoolee</string>
     <string name="market_carousel_main">Suuraa %1$d / %2$d</string>
-    <string name="market_channel_name">Market</string>
+    <string name="market_channel_name">Gabaa</string>
     <string name="market_chargeback_reason_bank_cannot_process">Bankiin gurmuu fayyadamuu hin dandeenye</string>
     <string name="market_chargeback_reason_check_returned">Cheekkin deebi\'e</string>
     <string name="market_chargeback_reason_credit_not_processed">Kireedittin hin hojjetamne</string>
@@ -80,7 +80,7 @@
     <string name="market_checkout_back">Duuba</string>
     <string name="market_checkout_buy_it_now">Amma bitadhu</string>
     <string name="market_checkout_create_failed">Ajaja uumuu hin dandeenye</string>
-    <string name="market_checkout_delivery_download">Buufadhu</string>
+    <string name="market_checkout_delivery_download">Buufannaa</string>
     <string name="market_checkout_delivery_method">Mala geejjibaa</string>
     <string name="market_checkout_delivery_pickup">Fudhachuu</string>
     <string name="market_checkout_delivery_shipping">Geejjiba</string>
@@ -193,7 +193,7 @@
     <string name="market_filter_condition_refurbished">Haaromfame</string>
     <string name="market_filter_condition_used">Fayyadame</string>
     <string name="market_filter_delivery">Geejjiba</string>
-    <string name="market_filter_delivery_download">Buufadhu</string>
+    <string name="market_filter_delivery_download">Buufannaa</string>
     <string name="market_filter_delivery_pickup">Fudhachuu</string>
     <string name="market_filter_delivery_shipping">Geejjiba</string>
     <string name="market_filter_open">Calaltootaa</string>
@@ -225,7 +225,7 @@
     <string name="market_listing_detail_load_failed">Tarreeffama fe\'achuu hin dandeenye</string>
     <string name="market_listing_detail_listed">Tarreeffame %1$s</string>
     <string name="market_listing_detail_location_heading">Iddoo</string>
-    <string name="market_listing_detail_message">Ergaa</string>
+    <string name="market_listing_detail_message">Ergaa ergi</string>
     <string name="market_listing_detail_message_seller">Gurgurtaa ergaaf ergi</string>
     <string name="market_listing_detail_not_found">Tarreeffamni hin argamne</string>
     <string name="market_listing_detail_place_bid">Caasaa kennuu</string>
@@ -265,8 +265,8 @@
     <string name="market_messages_send">Ergi</string>
     <string name="market_messages_thread_listing_chip">Tarreeffama</string>
     <string name="market_messages_thread_title">Marii</string>
-    <string name="market_onboarding_activate">Activate</string>
-    <string name="market_onboarding_activating">Activating…</string>
+    <string name="market_onboarding_activate">Kaasi</string>
+    <string name="market_onboarding_activating">Kaasaa jira…</string>
     <string name="market_onboarding_body">Bittaa fi gurgurtaa jalqabuuf herrega kee kakaasi.</string>
     <string name="market_onboarding_dismiss">Dhiisi</string>
     <string name="market_onboarding_title">Baga gara Market dhuftan</string>
@@ -302,7 +302,7 @@
     <string name="market_purchase_refunded">Deebi\'e</string>
     <string name="market_purchase_refunded_partial">Deebi\'e (xiqqoo)</string>
     <string name="market_purchase_request_refund">Deebii kaffaltii gaafadhu</string>
-    <string name="market_purchase_review_body">Gamaaggami</string>
+    <string name="market_purchase_review_body">Gamaaggama</string>
     <string name="market_purchase_review_failed">Madaallii dhiyeessuu hin dandeenye</string>
     <string name="market_purchase_review_hidden">Hanga gurgurtaan si madaalutti yookiin guyyoota 14 booda hanga dhokse.</string>
     <string name="market_purchase_review_prompt_body">Bittootaaf gargaari — ajaajiin akkam akka deeme dubbadhu.</string>
@@ -367,7 +367,7 @@
     <string name="market_sale_carrier_other">Biraa</string>
     <string name="market_sale_completed_label">Xumurame</string>
     <string name="market_sale_dispute_respond">Deebii kenni</string>
-    <string name="market_sale_dispute_state_open">Bani</string>
+    <string name="market_sale_dispute_state_open">Banaa</string>
     <string name="market_sale_dispute_state_resolved">Furamee</string>
     <string name="market_sale_load_failed">Ajaja fe\'achuu hin dandeenye</string>
     <string name="market_sale_message_buyer">Bittaa ergaaf ergi</string>
@@ -389,7 +389,7 @@
     <string name="market_sale_title">Gurguraa</string>
     <string name="market_sale_tracking_label">Lakkoofsa hordoffii</string>
     <string name="market_sales_title">Gurgurtaa koo</string>
-    <string name="market_saved_title">Olkaa\'ame</string>
+    <string name="market_saved_title">Kan olkaa\'aman</string>
     <string name="market_search_clear">Barbaadii cilliisi</string>
     <string name="market_search_placeholder">Gabaa keessa barbaadi</string>
     <string name="market_section_categories">Ramaddilee Sakatta\'i</string>
@@ -414,7 +414,7 @@
     <string name="market_sidebar_purchases">Bittaa</string>
     <string name="market_sidebar_reviews">Gamaaggamoota</string>
     <string name="market_sidebar_sales">Gurguraawwan</string>
-    <string name="market_sidebar_saved">Olkaa\'ame</string>
+    <string name="market_sidebar_saved">Kan olkaa\'aman</string>
     <string name="market_sidebar_selling">Gurguraa</string>
     <string name="market_sidebar_settings">Qindaa\'inoota</string>
     <string name="market_sidebar_subscribers">Galaa\'aatota</string>
@@ -433,20 +433,20 @@
     <string name="market_subscribers_interval_month">/ ji\'a</string>
     <string name="market_subscribers_interval_year">/ waggaa</string>
     <string name="market_subscribers_load_failed">Garagaltoota fe\'achuu hin dandeenye</string>
-    <string name="market_subscription_detail_billing_history">Billing history</string>
+    <string name="market_subscription_detail_billing_history">Seenaa kaffaltii</string>
     <string name="market_subscription_detail_billing_history_empty">Amma kaffaltiin hin jiru.</string>
-    <string name="market_subscription_detail_billing_info">Billing</string>
-    <string name="market_subscription_detail_cancelled_on">Cancelled on %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Latest charge: %1$s</string>
+    <string name="market_subscription_detail_billing_info">Herrega kaffaltii</string>
+    <string name="market_subscription_detail_cancelled_on">%1$s irratti haqame</string>
+    <string name="market_subscription_detail_charge_amount">Kaffaltii dhumaa: %1$s</string>
     <string name="market_subscription_detail_listing">Tarreeffama</string>
     <string name="market_subscription_detail_load_failed">Galmee fe’uun hin danda’amne</string>
     <string name="market_subscription_detail_next_billing">Guyyaa kaffaltii itti aanu: %1$s</string>
     <string name="market_subscription_detail_not_found">Galmaaʼuun hin argamne</string>
-    <string name="market_subscription_detail_pending_cancel">Cancellation pending</string>
+    <string name="market_subscription_detail_pending_cancel">Haquun eegamaa jira</string>
     <string name="market_subscription_detail_seller">Gurguraa</string>
-    <string name="market_subscription_detail_started">Started %1$s</string>
+    <string name="market_subscription_detail_started">%1$s jalqabame</string>
     <string name="market_subscription_detail_title">Galaa\'iinsa</string>
-    <string name="market_subscriptions_action_cancel">Haquu</string>
+    <string name="market_subscriptions_action_cancel">Addaan kuti</string>
     <string name="market_subscriptions_action_pause">Dhaabsisi</string>
     <string name="market_subscriptions_action_reactivate">Deebisanii sochoosi</string>
     <string name="market_subscriptions_action_resubscribe">Deebi\'anii galmaa\'uu</string>
@@ -466,12 +466,12 @@
     <string name="market_subscriptions_resume_failed">Itti fufuu hin dandeenye</string>
     <string name="market_subscriptions_resumed">Galaa\'iinsi itti fufeera</string>
     <string name="market_subscriptions_title">Galaa\'iinsoota</string>
-    <string name="market_title">Market</string>
+    <string name="market_title">Gabaa</string>
     <string name="market_type_digital">Dijitaala</string>
     <string name="market_type_physical">Qaamaan</string>
     <string name="market_warnings_title">Akeekkachiisawwan</string>
     <string name="market_sale_review_response_submitting">Erguu jira…</string>
-    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_checkout_subscribing">Galmaa\'aa jira…</string>
     <string name="market_filter_remove">Calaltuu balleessuu</string>
     <string name="market_listings_action_appeal">Komii balleessuu</string>
     <string name="market_listings_share_chooser">Tarree qoodi</string>

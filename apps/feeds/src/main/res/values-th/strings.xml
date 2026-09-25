@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">ยังไม่มีโพสต์</string>
     <string name="feeds_sort_label">เรียงลำดับ</string>
     <string name="feeds_sort_interests">ความสนใจ</string>
-    <string name="feeds_sort_new">ใหม่</string>
+    <string name="feeds_sort_new">ใหม่ล่าสุด</string>
     <string name="feeds_sort_hot">ยอดนิยม</string>
-    <string name="feeds_sort_top">บนสุด</string>
+    <string name="feeds_sort_top">คะแนนสูงสุด</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">โพสต์</string>
     <string name="feeds_image_preview">ดูตัวอย่าง</string>
@@ -80,7 +80,7 @@
     <string name="feeds_settings_member_removed">ลบสมาชิกแล้ว</string>
     <string name="feeds_settings_ai_mode_updated">อัปเดตโหมด AI แล้ว</string>
     <string name="feeds_settings_ai_account_updated">อัปเดตบัญชี AI แล้ว</string>
-    <string name="feeds_settings_prompt_saved">บันทึก prompt แล้ว</string>
+    <string name="feeds_settings_prompt_saved">บันทึกพรอมต์แล้ว</string>
     <string name="feeds_settings_prompt_reset">รีเซ็ตคำถามเป็นค่าเริ่มต้นแล้ว</string>
     <string name="feeds_send">ส่ง</string>
     <string name="feeds_move_up">เลื่อนขึ้น</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">ลดความสนใจแล้ว</string>
     <string name="feeds_interest_removed">เอาความสนใจออกแล้ว</string>
     <string name="feeds_interest_failed">ไม่สามารถปรับความสนใจได้</string>
-    <string name="feeds_saved_title">บันทึกแล้ว</string>
-    <string name="feeds_saved_menu">บันทึกแล้ว</string>
+    <string name="feeds_saved_title">รายการที่บันทึก</string>
+    <string name="feeds_saved_menu">รายการที่บันทึก</string>
     <string name="feeds_saved_save">บันทึกไว้ดูภายหลัง</string>
     <string name="feeds_saved_remove">นำออกจากที่บันทึก</string>
     <string name="feeds_saved_clear_all">ล้างทั้งหมด</string>
@@ -157,11 +157,11 @@
     <string name="feeds_markdown_supported">รองรับ Markdown</string>
     <string name="feeds_permission_deny">ปฏิเสธ</string>
     <string name="feeds_rss_feed">ฟีด RSS</string>
-    <string name="feeds_settings_field_entity_id">Entity ID</string>
-    <string name="feeds_settings_field_fingerprint">Fingerprint</string>
+    <string name="feeds_settings_field_entity_id">รหัสเอนทิตี</string>
+    <string name="feeds_settings_field_fingerprint">ลายนิ้วมือ</string>
     <string name="feeds_settings_field_server">เซิร์ฟเวอร์</string>
     <string name="feeds_settings_name_edit_cd">แก้ไขชื่อ</string>
-    <string name="feeds_settings_section_identity">Identity</string>
+    <string name="feeds_settings_section_identity">ตัวตน</string>
     <string name="feeds_unsubscribe">ยกเลิกการติดตาม</string>
     <string name="feeds_unsubscribed">ยกเลิกการติดตามแล้ว</string>
     <string name="feeds_access_level_comment_full">แสดงความคิดเห็น ตอบสนอง และดู</string>

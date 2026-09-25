@@ -20,7 +20,7 @@
     <string name="words_detail_status_you_resigned">Подадохте оставка</string>
     <string name="words_detail_label_you">Вие</string>
     <string name="words_detail_action_shuffle">Разбъркай поставката</string>
-    <string name="words_detail_action_pass">Pass</string>
+    <string name="words_detail_action_pass">Пас</string>
     <string name="words_detail_action_exchange">Размяна на плочки</string>
     <string name="words_detail_action_cancel_exchange">Отказ от размяната</string>
     <string name="words_detail_action_resign">Предай се</string>

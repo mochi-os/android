@@ -14,13 +14,13 @@
     <string name="feeds_no_posts_yet">Brak postów</string>
     <string name="feeds_sort_label">Sortuj</string>
     <string name="feeds_sort_interests">Zainteresowania</string>
-    <string name="feeds_sort_new">Nowy</string>
+    <string name="feeds_sort_new">Najnowsze</string>
     <string name="feeds_sort_hot">Popularne</string>
-    <string name="feeds_sort_top">Góra</string>
+    <string name="feeds_sort_top">Najlepsze</string>
     <string name="feeds_sort_ai">AI</string>
-    <string name="feeds_post_default_author">Opublikuj</string>
+    <string name="feeds_post_default_author">Wpis</string>
     <string name="feeds_image_preview">Podgląd</string>
-    <string name="feeds_post">Opublikuj</string>
+    <string name="feeds_post">Wpis</string>
     <string name="feeds_comments">Komentarze</string>
     <string name="feeds_delete_post">Usuń post</string>
     <string name="feeds_delete_comment">Usuń komentarz</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Wyloguj się</string>
     <string name="feeds_ai_account_default">Domyślne konto</string>
     <string name="feeds_ai_mode_off">Wyłączone</string>
-    <string name="feeds_ai_mode_tag">Tag</string>
+    <string name="feeds_ai_mode_tag">Taguj</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + usuń duplikaty</string>
     <string name="feeds_feed_not_found">Nie znaleziono kanału</string>
     <string name="feeds_post_not_found">Nie znaleziono wpisu</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Zainteresowanie zmniejszone</string>
     <string name="feeds_interest_removed">Zainteresowanie usunięte</string>
     <string name="feeds_interest_failed">Nie udało się dostosować zainteresowania</string>
-    <string name="feeds_saved_title">Zapisano</string>
-    <string name="feeds_saved_menu">Zapisano</string>
+    <string name="feeds_saved_title">Zapisane</string>
+    <string name="feeds_saved_menu">Zapisane</string>
     <string name="feeds_saved_save">Zapisz na później</string>
     <string name="feeds_saved_remove">Usuń z zapisanych</string>
     <string name="feeds_saved_clear_all">Wyczyść wszystko</string>

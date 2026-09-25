@@ -8,7 +8,7 @@
     <string name="go_action_pass">Passar</string>
     <string name="go_action_rematch">Revanche</string>
     <string name="go_action_resign">Desistir</string>
-    <string name="go_app_title">Ir</string>
+    <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Capturas das pretas</string>
     <string name="go_captures_white_sr">Capturas das brancas</string>
     <string name="go_chat_title">Conversa</string>

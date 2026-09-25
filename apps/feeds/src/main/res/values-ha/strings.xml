@@ -13,10 +13,10 @@
     <string name="feeds_settings">Saitunan</string>
     <string name="feeds_no_posts_yet">Babu posts tukuna</string>
     <string name="feeds_sort_label">Jera</string>
-    <string name="feeds_sort_interests">Interests</string>
-    <string name="feeds_sort_new">Sabon</string>
+    <string name="feeds_sort_interests">Abubuwan sha\'awa</string>
+    <string name="feeds_sort_new">Mafi sabo</string>
     <string name="feeds_sort_hot">Mai zafi</string>
-    <string name="feeds_sort_top">Sama</string>
+    <string name="feeds_sort_top">Mafi kyau</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Sako</string>
     <string name="feeds_image_preview">Duba</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Soke amsa</string>
     <string name="feeds_edit_post">Gyara post</string>
     <string name="feeds_save_label">Adana</string>
-    <string name="feeds_post_action">Sako</string>
+    <string name="feeds_post_action">Wallafa</string>
     <string name="feeds_feed_label">Jerin labarai</string>
     <string name="feeds_add_files">Ƙara fayiloli</string>
     <string name="feeds_restore">Maidowa</string>
@@ -42,7 +42,7 @@
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Sunan feed</string>
     <string name="feeds_save_name">Adana suna</string>
-    <string name="feeds_banner">Banner</string>
+    <string name="feeds_banner">Tuta</string>
     <string name="feeds_banner_description">Banner na markdown na zaɓi da ake nunawa a saman feed ɗin ka.</string>
     <string name="feeds_clear">Share</string>
     <string name="feeds_delete_feed">Goge feed</string>
@@ -55,7 +55,7 @@
     <string name="feeds_source_url">URL</string>
     <string name="feeds_source_type">Nau\'i</string>
     <string name="feeds_source_type_rss">RSS</string>
-    <string name="feeds_source_type_feed_posts">Mochi feed</string>
+    <string name="feeds_source_type_feed_posts">Jerin labarai na Mochi</string>
     <string name="feeds_source_type_feed_memories">Tunawa</string>
     <string name="feeds_remove_source">Cire tushen</string>
     <string name="feeds_suggested_credibility_accept">Yarda</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Fita</string>
     <string name="feeds_ai_account_default">Asusun default</string>
     <string name="feeds_ai_mode_off">An kashe</string>
-    <string name="feeds_ai_mode_tag">Tag</string>
+    <string name="feeds_ai_mode_tag">Sanya alama</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + cire kwafi</string>
     <string name="feeds_feed_not_found">Ba a samu feed ba</string>
     <string name="feeds_post_not_found">Ba a sami post ba</string>
@@ -110,7 +110,7 @@
     <string name="feeds_delete_feed_confirm">Wannan zai share feed da duk posts ɗinsa har abada. Ba za a iya gyara wannan ba.</string>
     <string name="feeds_clipboard_label_rss">URL na RSS</string>
     <string name="feeds_source_never_fetched">Ba a taɓa ɗauko ba</string>
-    <string name="feeds_source_poll">Poll</string>
+    <string name="feeds_source_poll">Duba</string>
     <string name="feeds_source_transform">Canza</string>
     <string name="feeds_remove_source_confirm">A cire \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Haka kuma a share posts da aka shigo da su</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">An rage interest</string>
     <string name="feeds_interest_removed">An cire interest</string>
     <string name="feeds_interest_failed">An gaza daidaita interest</string>
-    <string name="feeds_saved_title">An adana</string>
-    <string name="feeds_saved_menu">An adana</string>
+    <string name="feeds_saved_title">Ajiyayyu</string>
+    <string name="feeds_saved_menu">Ajiyayyu</string>
     <string name="feeds_saved_save">Ajiye don baya</string>
     <string name="feeds_saved_remove">Cire daga ajiyayyu</string>
     <string name="feeds_saved_clear_all">Share duka</string>
@@ -149,7 +149,7 @@
     <string name="feeds_access_level_none_full">Babu damar shiga</string>
     <string name="feeds_access_level_view_full">Kalla kawai</string>
     <string name="feeds_access_search_users">Bincika masu amfani</string>
-    <string name="feeds_access_segment_group">Group</string>
+    <string name="feeds_access_segment_group">Ƙungiya</string>
     <string name="feeds_access_segment_other">Sauran</string>
     <string name="feeds_access_select_group">Zaɓi ƙungiya</string>
     <string name="feeds_access_selected">An zaɓa: %1$s</string>
@@ -158,7 +158,7 @@
     <string name="feeds_markdown_supported">Ana goyon bayan Markdown</string>
     <string name="feeds_permission_deny">Ƙi</string>
     <string name="feeds_rss_feed">Ciyarwar RSS</string>
-    <string name="feeds_settings_field_entity_id">Entity ID</string>
+    <string name="feeds_settings_field_entity_id">ID ɗin mahaɗi</string>
     <string name="feeds_settings_field_fingerprint">Sawun yatsa</string>
     <string name="feeds_settings_field_server">Server</string>
     <string name="feeds_settings_name_edit_cd">Gyara suna</string>

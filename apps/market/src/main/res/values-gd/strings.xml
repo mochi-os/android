@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Margaidh</string>
+    <string name="app_name">Margadh</string>
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_label">Beatha-eachdraidh</string>
     <string name="market_account_biography_placeholder">Innis do luchd-ceannach mu do dheidhinn…</string>
@@ -56,7 +56,7 @@
     <string name="market_bids_tab_won">Air a bhuannachadh</string>
     <string name="market_bids_title">Tairgsean</string>
     <string name="market_carousel_main">Dealbh %1$d às %2$d</string>
-    <string name="market_channel_name">Margaidh</string>
+    <string name="market_channel_name">Margadh</string>
     <string name="market_chargeback_reason_bank_cannot_process">Cha b\' urrainn don bhanca a phròiseasadh</string>
     <string name="market_chargeback_reason_check_returned">Seic air a thilleadh</string>
     <string name="market_chargeback_reason_credit_not_processed">Creideas gun phròiseasadh</string>
@@ -82,7 +82,7 @@
     <string name="market_checkout_back">Air ais</string>
     <string name="market_checkout_buy_it_now">Ceannaich a-nis</string>
     <string name="market_checkout_create_failed">Cha b\' urrainn òrdugh a chruthachadh</string>
-    <string name="market_checkout_delivery_download">Luchdaich a-nuas</string>
+    <string name="market_checkout_delivery_download">Luchdadh a-nuas</string>
     <string name="market_checkout_delivery_method">Dòigh lìbhrigidh</string>
     <string name="market_checkout_delivery_pickup">Togail</string>
     <string name="market_checkout_delivery_shipping">A\' lìbhrigeadh</string>
@@ -129,7 +129,7 @@
     <string name="market_editor_back">Air ais</string>
     <string name="market_editor_category">Roinn</string>
     <string name="market_editor_category_none">Tagh roinn</string>
-    <string name="market_editor_condition">Cumha</string>
+    <string name="market_editor_condition">Cor</string>
     <string name="market_editor_condition_new">Ùr</string>
     <string name="market_editor_condition_refurbished">Air ath-nuadhachadh</string>
     <string name="market_editor_condition_used">Air a chleachdadh</string>
@@ -189,12 +189,12 @@
     <string name="market_filter_apply">Cuir an sàs</string>
     <string name="market_filter_category">Roinn</string>
     <string name="market_filter_clear">Falamhaich criathragan</string>
-    <string name="market_filter_condition">Cumha</string>
+    <string name="market_filter_condition">Cor</string>
     <string name="market_filter_condition_new">Ùr</string>
     <string name="market_filter_condition_refurbished">Air ath-nuadhachadh</string>
     <string name="market_filter_condition_used">Air a chleachdadh</string>
     <string name="market_filter_delivery">Lìbhrigeadh</string>
-    <string name="market_filter_delivery_download">Luchdaich a-nuas</string>
+    <string name="market_filter_delivery_download">Luchdadh a-nuas</string>
     <string name="market_filter_delivery_pickup">Togail</string>
     <string name="market_filter_delivery_shipping">A\' lìbhrigeadh</string>
     <string name="market_filter_open">Criathran</string>
@@ -226,7 +226,7 @@
     <string name="market_listing_detail_load_failed">Cha b\' urrainn an liosta a luchdadh</string>
     <string name="market_listing_detail_listed">Air a liostadh %1$s</string>
     <string name="market_listing_detail_location_heading">Àite</string>
-    <string name="market_listing_detail_message">Teachdaireachd</string>
+    <string name="market_listing_detail_message">Cuir teachdaireachd</string>
     <string name="market_listing_detail_message_seller">Cuir teachdaireachd dhan reiceadair</string>
     <string name="market_listing_detail_not_found">Cha deach an liosta a lorg</string>
     <string name="market_listing_detail_place_bid">Cuir tairgse</string>
@@ -266,8 +266,8 @@
     <string name="market_messages_send">Cuir</string>
     <string name="market_messages_thread_listing_chip">Liosta</string>
     <string name="market_messages_thread_title">Còmhradh</string>
-    <string name="market_onboarding_activate">Activate</string>
-    <string name="market_onboarding_activating">Activating…</string>
+    <string name="market_onboarding_activate">Gnìomhaich</string>
+    <string name="market_onboarding_activating">A\' gnìomhachadh…</string>
     <string name="market_onboarding_body">Cuir an cunntas agad an gnìomh gus tòiseachadh a’ ceannach agus a’ reic.</string>
     <string name="market_onboarding_dismiss">Leig seachad</string>
     <string name="market_onboarding_title">Fàilte gu Market</string>
@@ -368,7 +368,7 @@
     <string name="market_sale_carrier_other">Eile</string>
     <string name="market_sale_completed_label">Crìochnaichte</string>
     <string name="market_sale_dispute_respond">Freagair</string>
-    <string name="market_sale_dispute_state_open">Fosgail</string>
+    <string name="market_sale_dispute_state_open">Fosgailte</string>
     <string name="market_sale_dispute_state_resolved">Air fhuasgladh</string>
     <string name="market_sale_load_failed">Cha b\' urrainn an t-òrdugh a luchdadh</string>
     <string name="market_sale_message_buyer">Cuir teachdaireachd dhan cheannaiche</string>
@@ -390,7 +390,7 @@
     <string name="market_sale_title">Reic</string>
     <string name="market_sale_tracking_label">Àireamh lorgaidh</string>
     <string name="market_sales_title">Mo reicean</string>
-    <string name="market_saved_title">Air a shàbhaladh</string>
+    <string name="market_saved_title">Air an sàbhaladh</string>
     <string name="market_search_clear">Falamhaich an lorg</string>
     <string name="market_search_placeholder">Lorg sa mhargaid</string>
     <string name="market_section_categories">Rùraich roinnean</string>
@@ -415,7 +415,7 @@
     <string name="market_sidebar_purchases">Ceannachdan</string>
     <string name="market_sidebar_reviews">Lèirmheasan</string>
     <string name="market_sidebar_sales">Reic</string>
-    <string name="market_sidebar_saved">Air a shàbhaladh</string>
+    <string name="market_sidebar_saved">Air an sàbhaladh</string>
     <string name="market_sidebar_selling">A\' reic</string>
     <string name="market_sidebar_settings">Roghainnean</string>
     <string name="market_sidebar_subscribers">Fo-sgrìobhaichean</string>
@@ -434,18 +434,18 @@
     <string name="market_subscribers_interval_month">/ mìos</string>
     <string name="market_subscribers_interval_year">/ bliadhna</string>
     <string name="market_subscribers_load_failed">Cha b\' urrainn an luchd-fo-sgrìobhaidh a luchdadh</string>
-    <string name="market_subscription_detail_billing_history">Billing history</string>
+    <string name="market_subscription_detail_billing_history">Eachdraidh a\' bhileachaidh</string>
     <string name="market_subscription_detail_billing_history_empty">Chan eil tàillean ann fhathast.</string>
-    <string name="market_subscription_detail_billing_info">Billing</string>
-    <string name="market_subscription_detail_cancelled_on">Cancelled on %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Latest charge: %1$s</string>
+    <string name="market_subscription_detail_billing_info">Bileachadh</string>
+    <string name="market_subscription_detail_cancelled_on">Chaidh sgur dheth %1$s</string>
+    <string name="market_subscription_detail_charge_amount">A\' chosgais mu dheireadh: %1$s</string>
     <string name="market_subscription_detail_listing">Liosta</string>
     <string name="market_subscription_detail_load_failed">Cha b’ urrainn am fo-sgrìobhadh a luchdachadh</string>
     <string name="market_subscription_detail_next_billing">An ath cheann-latha bileachaidh: %1$s</string>
     <string name="market_subscription_detail_not_found">Cha deach am fo-sgrìobhadh a lorg</string>
-    <string name="market_subscription_detail_pending_cancel">Cancellation pending</string>
+    <string name="market_subscription_detail_pending_cancel">A\' feitheamh ri sgur</string>
     <string name="market_subscription_detail_seller">Reiceadair</string>
-    <string name="market_subscription_detail_started">Started %1$s</string>
+    <string name="market_subscription_detail_started">Air tòiseachadh %1$s</string>
     <string name="market_subscription_detail_title">Fo-sgrìobhadh</string>
     <string name="market_subscriptions_action_cancel">Sguir dheth</string>
     <string name="market_subscriptions_action_pause">Stad</string>
@@ -467,12 +467,12 @@
     <string name="market_subscriptions_resume_failed">Cha b\' urrainn ath-thòiseachadh</string>
     <string name="market_subscriptions_resumed">Fo-sgrìobhadh air ath-thòiseachadh</string>
     <string name="market_subscriptions_title">Fo-sgrìobhaidhean</string>
-    <string name="market_title">Margaidh</string>
+    <string name="market_title">Margadh</string>
     <string name="market_type_digital">Didseatach</string>
     <string name="market_type_physical">Corporra</string>
     <string name="market_warnings_title">Rabhaidhean</string>
     <string name="market_sale_review_response_submitting">A\' cur a-null…</string>
-    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_checkout_subscribing">A\' fo-sgrìobhadh…</string>
     <string name="market_filter_remove">Thoir air falbh a\' chriathrag</string>
     <string name="market_listing_detail_sales_count">%1$d reic</string>
     <string name="market_listings_action_appeal">Tagradh thoirt air falbh</string>

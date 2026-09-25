@@ -376,7 +376,7 @@
     <string name="accounts_forget_message">Tämä unohtaa laitteen \"%1$s\" ja lopettaa ilmoitukset siihen.</string>
     <string name="accounts_device_seen">Viimeksi nähty %1$s</string>
     <string name="notifprefs_device_app">%1$s · sovellus</string>
-    <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_device_push">%1$s · push-ilmoitukset</string>
     <string name="notifprefs_test_partial">Testi lähetetty %1$d/%2$d kohteeseen</string>
     <string name="notifprefs_test_none">Kohteita ei ole määritetty</string>
     <string name="notifprefs_transport_fcm">Android-push</string>

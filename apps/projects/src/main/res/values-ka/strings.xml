@@ -76,7 +76,7 @@
     <string name="projects_property_option_none">არცერთი</string>
     <string name="projects_attachments">დანართები</string>
     <string name="projects_attachment_add">დანართის დამატება</string>
-    <string name="projects_request_empty">merge მოთხოვნები არ არის</string>
+    <string name="projects_request_empty">შერწყმის მოთხოვნები არ არის</string>
     <string name="projects_request_status_draft">მონახაზი</string>
     <string name="projects_request_status_open">ღია</string>
     <string name="projects_request_status_merged">შერწყმული</string>
@@ -93,20 +93,20 @@
     <string name="projects_request_create_action">შექმნა</string>
     <string name="projects_diff_unified">გაერთიანებული</string>
     <string name="projects_diff_split">გაყოფა</string>
-    <string name="projects_diff_empty">diff მიუწვდომელია</string>
+    <string name="projects_diff_empty">სხვაობა მიუწვდომელია</string>
     <string name="projects_board_unassigned">მიუნიჭებელი</string>
     <string name="projects_board_new">ახალი</string>
     <string name="projects_board_rename">სახელის შეცვლა</string>
     <string name="projects_board_rename_column">სვეტის სახელის შეცვლა</string>
     <string name="projects_move_position">პოზიცია</string>
-    <string name="projects_move_position_top">ზედა</string>
+    <string name="projects_move_position_top">ზემოთ</string>
     <string name="projects_move_current">მიმდინარე</string>
     <string name="projects_design_title">დიზაინი</string>
     <string name="projects_design_export">დიზაინის ექსპორტი</string>
     <string name="projects_design_import">დიზაინის იმპორტი</string>
     <string name="projects_design_imported">დიზაინი იმპორტირებულია</string>
     <string name="projects_design_tab_classes">კლასები</string>
-    <string name="projects_design_tab_views">ნახვები</string>
+    <string name="projects_design_tab_views">ხედები</string>
     <string name="projects_design_import_dialog_title">დიზაინის იმპორტი</string>
     <string name="projects_design_import_choose_template">აირჩიეთ შაბლონი</string>
     <string name="projects_design_replace_title">დიზაინის ჩანაცვლება?</string>
@@ -123,7 +123,7 @@
     <string name="projects_class_delete">კლასის წაშლა</string>
     <string name="projects_class_delete_title">კლასის წაშლა</string>
     <string name="projects_field_type_text">ტექსტი</string>
-    <string name="projects_field_type_number">ნომერი</string>
+    <string name="projects_field_type_number">რიცხვი</string>
     <string name="projects_field_type_user">მომხმარებელი</string>
     <string name="projects_field_type_date">თარიღი</string>
     <string name="projects_field_type_checklist">ჩამონათვალი</string>
@@ -158,9 +158,9 @@
     <string name="projects_more">მეტი</string>
     <string name="projects_request_more">მეტი</string>
     <string name="projects_comment_send">გაგზავნა</string>
-    <string name="projects_field_position_body">შინაარსი</string>
+    <string name="projects_field_position_body">ძირითადი ნაწილი</string>
     <string name="projects_sort_field">დაალაგე</string>
-    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_comment_remove_attachment">დანართის ამოღება</string>
     <string name="projects_views_sort_by">დაალაგე</string>
     <string name="projects_auth_login_failed">შესვლა ვერ მოხერხდა</string>
     <string name="projects_views_move_up">აწევა</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">ობიექტების ძიება</string>
 
     <string name="notification_channel_projects">პროექტების შეტყობინებები</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi პროექტები</string>
     <string name="projects_auth_create_identity_failed">იდენტობის შექმნა ვერ მოხერხდა</string>
     <string name="projects_auth_mfa_unsupported">MFA ჯერ არ არის მხარდაჭერილი მობილურ აპში</string>
     <string name="projects_auth_enter_code_sent">შეიყვანეთ %1$s-ზე გამოგზავნილი კოდი</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">აირჩიეთ წესი</string>
     <string name="projects_access_authenticated_desc">ნებისმიერი ავტორიზებული მომხმარებელი</string>
     <string name="projects_access_anyone_desc">ანონიმური მომხმარებლების ჩათვლით</string>
-    <string name="projects_access_target">სამიზნე</string>
+    <string name="projects_access_target">მომხმარებელი ან ჯგუფი</string>
     <string name="projects_access_target_hint">ერთეულის ID, @ჯგუფი, * (ყველა) ან + (წევრები)</string>
     <string name="projects_access_selected">არჩეული: %1$s</string>
     <string name="projects_access_role_comment">კომენტარი და ნახვა</string>
@@ -381,5 +381,5 @@
     <string name="projects_option_delete_message">ნამდვილად გსურთ ვარიანტის \"%1$s\" წაშლა?</string>
     <string name="projects_create_object_no_types">ნივთის ტიპების შექმნა ჯერ შეუძლებელია. ჯერ შექმენით საჭირო მშობელი ნივთები.</string>
     <string name="projects_create_blocked_no_options">შექმნა შეუძლებელია: %1$s სავალდებულოა, მაგრამ არჩევანი არ აქვს. დაამატეთ ვარიანტები დიზაინში.</string>
-    <string name="projects_attachment_remove">Remove attachment</string>
+    <string name="projects_attachment_remove">დანართის ამოღება</string>
 </resources>

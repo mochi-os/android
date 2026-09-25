@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="wikis_sidebar_header">Wiki</string>
+    <string name="wikis_sidebar_header">维基</string>
     <string name="wikis_sidebar_all">所有 Wiki</string>
     <string name="wikis_sidebar_find">查找 wiki</string>
     <string name="wikis_sidebar_create">创建 Wiki</string>
@@ -23,7 +23,7 @@
     <string name="wikis_page_action_new_page">新页面</string>
     <string name="wikis_page_action_settings">设置</string>
     <string name="wikis_page_action_unsubscribe">取消订阅</string>
-    <string name="wikis_title">Wiki</string>
+    <string name="wikis_title">维基</string>
     <string name="wikis_empty_title">创建您的第一个 Wiki</string>
     <string name="wikis_empty_subtitle">搜索 wiki 以订阅,或创建一个以发布你自己的文档。</string>
     <string name="wikis_create_button">创建 Wiki</string>

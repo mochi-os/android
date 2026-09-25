@@ -28,7 +28,7 @@
     <string name="projects_design">Dyluniad</string>
     <string name="projects_sort_label">Trefnu</string>
     <string name="projects_sort_direction">Cyfeiriad</string>
-    <string name="projects_sort_rank">Llawlyfr</string>
+    <string name="projects_sort_rank">Â llaw</string>
     <string name="projects_sort_number">Rhif</string>
     <string name="projects_sort_created">Wedi\'i greu</string>
     <string name="projects_sort_updated">Wedi\'i ddiweddaru</string>
@@ -106,7 +106,7 @@
     <string name="projects_design_import">Mewnforio dyluniad</string>
     <string name="projects_design_imported">Dyluniad wedi\'i fewnforio</string>
     <string name="projects_design_tab_classes">Dosbarthiadau</string>
-    <string name="projects_design_tab_views">Golygfeydd</string>
+    <string name="projects_design_tab_views">Golygon</string>
     <string name="projects_design_import_dialog_title">Mewnforio dyluniad</string>
     <string name="projects_design_import_choose_template">Dewiswch dempled</string>
     <string name="projects_design_replace_title">Ailosod dyluniad?</string>
@@ -160,7 +160,7 @@
     <string name="projects_comment_send">Anfon</string>
 
     <string name="notification_channel_projects">Hysbysiadau prosiectau</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Prosiectau</string>
     <string name="projects_auth_login_failed">Methodd y mewngofnodi</string>
     <string name="projects_auth_create_identity_failed">Methwyd â chreu hunaniaeth</string>
     <string name="projects_auth_mfa_unsupported">Nid yw MFA yn cael ei gefnogi eto yn yr ap symudol</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Dewiswch reol</string>
     <string name="projects_access_authenticated_desc">Unrhyw un sydd wedi mewngofnodi</string>
     <string name="projects_access_anyone_desc">Gan gynnwys defnyddwyr dienw</string>
-    <string name="projects_access_target">Targed</string>
+    <string name="projects_access_target">Defnyddiwr neu grŵp</string>
     <string name="projects_access_target_hint">ID endid, @grŵp, * (pawb), neu + (aelodau)</string>
     <string name="projects_access_selected">Wedi\'i ddewis: %1$s</string>
     <string name="projects_access_role_comment">Sylwi a gweld</string>

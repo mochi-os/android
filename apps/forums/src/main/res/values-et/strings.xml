@@ -24,9 +24,9 @@
     <string name="forums_settings">Seaded</string>
     <string name="forums_load_more">Lae rohkem</string>
     <string name="forums_sort_label">Sorteeri</string>
-    <string name="forums_sort_new">Uus</string>
+    <string name="forums_sort_new">Uusimad</string>
     <string name="forums_sort_hot">Kuum</string>
-    <string name="forums_sort_top">Üles</string>
+    <string name="forums_sort_top">Parimad</string>
     <string name="forums_sort_interests">Huvid</string>
     <string name="forums_post_title_field">Pealkiri</string>
     <string name="forums_post_attach">Lisa failid</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Liikmed</string>
     <string name="forums_tab_banner">Bänner</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Siht</string>
+    <string name="forums_access_target">Kasutaja või grupp</string>
     <string name="forums_access_level_view">Vaata</string>
     <string name="forums_access_level_vote">Hääleta</string>
-    <string name="forums_access_level_comment">Kommentaar</string>
+    <string name="forums_access_level_comment">Kommenteeri</string>
     <string name="forums_access_level_post">Postita</string>
     <string name="forums_access_level_none">Puudub</string>
     <string name="forums_members_empty">Liikmeid pole</string>
     <string name="forums_banner_dismiss">Sulge bänner</string>
-    <string name="forums_ai_mode_tag">Silt</string>
+    <string name="forums_ai_mode_tag">Sildi lisamine</string>
     <string name="forums_ai_account_default">Vaikimisi konto</string>
     <string name="forums_ai_prompt_reset">Lähtesta vaikeväärtusele</string>
     <string name="forums_settings_unsubscribe">Tühista tellimus</string>
@@ -80,7 +80,7 @@
     <string name="forums_moderation_reports_resolved">Lahendatud</string>
     <string name="forums_moderation_reports_all">Kõik</string>
     <string name="forums_moderation_reports_empty">Raporteid pole</string>
-    <string name="forums_moderation_report_dismiss">Sulge</string>
+    <string name="forums_moderation_report_dismiss">Lükka tagasi</string>
     <string name="forums_moderation_restrictions_empty">Piiranguid pole</string>
     <string name="forums_moderation_restriction_remove">Eemalda</string>
     <string name="forums_moderation_restriction_type">Tüüp</string>
@@ -124,7 +124,7 @@
     <string name="forums_comment_send">Saada</string>
 
     <string name="notification_channel_forums">Foorumite teavitused</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Foorumid</string>
     <string name="forums_auth_login_failed">Sisselogimine ebaõnnestus</string>
     <string name="forums_auth_create_identity_failed">Identiteedi loomine ebaõnnestus</string>
     <string name="forums_auth_mfa_unsupported">MFA pole mobiilirakenduses veel toetatud</string>
@@ -320,7 +320,7 @@
     <string name="forums_moderation_action_restrict">Piiratud</string>
     <string name="forums_moderation_action_unrestrict">Piirang eemaldatud</string>
     <string name="forums_moderation_action_resolve">Lahendatud raport</string>
-    <string name="forums_moderation_target_post">Postita</string>
+    <string name="forums_moderation_target_post">Postitus</string>
     <string name="forums_moderation_target_comment">Kommentaar</string>
     <string name="forums_moderation_target_user">Kasutaja</string>
     <string name="forums_moderation_reason_spam">Rämps</string>

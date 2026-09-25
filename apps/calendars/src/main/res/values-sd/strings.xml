@@ -10,7 +10,7 @@
     <string name="calendars_delete">ختم ڪريو</string>
     <string name="calendars_previous">پوئيون</string>
     <string name="calendars_next">اڳيون</string>
-    <string name="calendars_view">ڏسو</string>
+    <string name="calendars_view">منظر</string>
     <string name="calendars_view_list">لسٽ</string>
     <string name="calendars_list_search">ڳوليو</string>
     <string name="calendars_event_untitled">بي عنوان</string>
@@ -169,7 +169,7 @@
     <string name="calendars_subscribe_server_url">سرور جو پتو</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google ڪئلينڊر</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">هن سرور تي Google اڪائونٽ فعال نه ڪيا ويا آهن. انهن کي سيٽنگون، سسٽم سيٽنگون ۾ فعال ڪريو.</string>
     <string name="calendars_subscribe_google_connect">توهان ڪوبه Google اڪائونٽ نه ڳنڍيو آهي.</string>

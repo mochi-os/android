@@ -70,7 +70,7 @@
     <string name="market_checkout_back">Wstecz</string>
     <string name="market_checkout_buy_it_now">Kup teraz</string>
     <string name="market_checkout_create_failed">Nie udało się utworzyć zamówienia</string>
-    <string name="market_checkout_delivery_download">Pobierz</string>
+    <string name="market_checkout_delivery_download">Do pobrania</string>
     <string name="market_checkout_delivery_method">Metoda dostawy</string>
     <string name="market_checkout_delivery_pickup">Odbiór osobisty</string>
     <string name="market_checkout_delivery_shipping">Wysyłka</string>
@@ -93,7 +93,7 @@
     <string name="market_checkout_title">Zamówienie</string>
     <string name="market_checkout_total">Razem</string>
     <string name="market_checkout_winning_bid">Zwycięska oferta</string>
-    <string name="market_condition_new">Nowy</string>
+    <string name="market_condition_new">Nowe</string>
     <string name="market_condition_refurbished">Odnowione</string>
     <string name="market_condition_used">Używane</string>
     <string name="market_dispute_dialog_cancel">Anuluj</string>
@@ -107,8 +107,8 @@
     <string name="market_editor_asset_external_filename">Nazwa pliku</string>
     <string name="market_editor_back">Wstecz</string>
     <string name="market_editor_category">Kategoria</string>
-    <string name="market_editor_condition">Warunek</string>
-    <string name="market_editor_condition_new">Nowy</string>
+    <string name="market_editor_condition">Stan</string>
+    <string name="market_editor_condition_new">Nowe</string>
     <string name="market_editor_condition_refurbished">Odnowione</string>
     <string name="market_editor_condition_used">Używane</string>
     <string name="market_editor_currency">Waluta</string>
@@ -149,12 +149,12 @@
     <string name="market_filter_apply">Zastosuj</string>
     <string name="market_filter_category">Kategoria</string>
     <string name="market_filter_clear">Wyczyść filtry</string>
-    <string name="market_filter_condition">Warunek</string>
-    <string name="market_filter_condition_new">Nowy</string>
+    <string name="market_filter_condition">Stan</string>
+    <string name="market_filter_condition_new">Nowe</string>
     <string name="market_filter_condition_refurbished">Odnowione</string>
     <string name="market_filter_condition_used">Używane</string>
     <string name="market_filter_delivery">Dostawa</string>
-    <string name="market_filter_delivery_download">Pobierz</string>
+    <string name="market_filter_delivery_download">Do pobrania</string>
     <string name="market_filter_delivery_pickup">Odbiór osobisty</string>
     <string name="market_filter_delivery_shipping">Wysyłka</string>
     <string name="market_filter_price_max">Maks.</string>
@@ -183,7 +183,7 @@
     <string name="market_listing_detail_load_failed">Nie udało się załadować oferty</string>
     <string name="market_listing_detail_listed">Dodano %1$s</string>
     <string name="market_listing_detail_location_heading">Lokalizacja</string>
-    <string name="market_listing_detail_message">Wiadomość</string>
+    <string name="market_listing_detail_message">Wyślij wiadomość</string>
     <string name="market_listing_detail_message_seller">Wyślij wiadomość do sprzedającego</string>
     <string name="market_listing_detail_not_found">Nie znaleziono oferty</string>
     <string name="market_listing_detail_place_bid">Złóż ofertę</string>
@@ -305,7 +305,7 @@
     <string name="market_sale_carrier_other">Inne</string>
     <string name="market_sale_completed_label">Zakończone</string>
     <string name="market_sale_dispute_respond">Odpowiedz</string>
-    <string name="market_sale_dispute_state_open">Otwórz</string>
+    <string name="market_sale_dispute_state_open">Otwarte</string>
     <string name="market_sale_dispute_state_resolved">Rozwiązane</string>
     <string name="market_sale_load_failed">Nie udało się załadować zamówienia</string>
     <string name="market_sale_message_buyer">Wyślij wiadomość do kupującego</string>
@@ -324,7 +324,7 @@
     <string name="market_sale_shipped_label">Wysłano</string>
     <string name="market_sale_title">Sprzedaż</string>
     <string name="market_sale_tracking_label">Numer śledzenia</string>
-    <string name="market_saved_title">Zapisano</string>
+    <string name="market_saved_title">Zapisane</string>
     <string name="market_search_clear">Wyczyść wyszukiwanie</string>
     <string name="market_section_categories">Przeglądaj kategorie</string>
     <string name="market_section_listings">Najnowsze oferty</string>
@@ -348,7 +348,7 @@
     <string name="market_sidebar_purchases">Zakupy</string>
     <string name="market_sidebar_reviews">Recenzje</string>
     <string name="market_sidebar_sales">Sprzedaż</string>
-    <string name="market_sidebar_saved">Zapisano</string>
+    <string name="market_sidebar_saved">Zapisane</string>
     <string name="market_sidebar_selling">Sprzedaję</string>
     <string name="market_sidebar_settings">Ustawienia</string>
     <string name="market_sidebar_subscribers">Subskrybenci</string>

@@ -80,11 +80,11 @@
     <string name="projects_request_status_draft">پیش‌نویس</string>
     <string name="projects_request_status_open">باز</string>
     <string name="projects_request_status_merged">Merge شد</string>
-    <string name="projects_request_merge">Merge</string>
+    <string name="projects_request_merge">ادغام</string>
     <string name="projects_request_close">بستن</string>
-    <string name="projects_request_merge_dialog_title">Merge</string>
+    <string name="projects_request_merge_dialog_title">ادغام</string>
     <string name="projects_request_method">روش</string>
-    <string name="projects_request_method_merge">Merge</string>
+    <string name="projects_request_method_merge">ادغام</string>
     <string name="projects_request_field_repository">مخزن</string>
     <string name="projects_request_field_source">شاخه مبدأ</string>
     <string name="projects_request_field_title">عنوان</string>
@@ -117,13 +117,13 @@
     <string name="projects_class_name">نام</string>
     <string name="projects_class_save_name">ذخیره نام</string>
     <string name="projects_class_title_field">فیلد عنوان</string>
-    <string name="projects_class_merge_requests">Merge requests</string>
+    <string name="projects_class_merge_requests">درخواست‌های ادغام</string>
     <string name="projects_class_fields">فیلدها</string>
     <string name="projects_class_add_field">افزودن فیلد</string>
     <string name="projects_class_delete">حذف کلاس</string>
     <string name="projects_class_delete_title">حذف کلاس</string>
     <string name="projects_field_type_text">متن</string>
-    <string name="projects_field_type_number">شماره</string>
+    <string name="projects_field_type_number">عدد</string>
     <string name="projects_field_type_user">کاربر</string>
     <string name="projects_field_type_date">تاریخ</string>
     <string name="projects_field_type_checklist">چک‌لیست</string>
@@ -146,7 +146,7 @@
     <string name="projects_views_edit_dialog_title">ویرایش نما</string>
     <string name="projects_views_delete_title">حذف نما</string>
     <string name="projects_views_type">نوع</string>
-    <string name="projects_views_type_board">تخته</string>
+    <string name="projects_views_type_board">تابلو</string>
     <string name="projects_views_type_list">فهرست</string>
     <string name="projects_views_direction">جهت</string>
     <string name="projects_views_sort_number">شماره</string>
@@ -158,7 +158,7 @@
     <string name="projects_more">بیشتر</string>
     <string name="projects_request_more">بیشتر</string>
     <string name="projects_comment_send">ارسال</string>
-    <string name="projects_field_position_body">متن</string>
+    <string name="projects_field_position_body">بدنه</string>
     <string name="projects_auth_login_failed">ورود ناموفق بود</string>
     <string name="projects_auth_create_identity_failed">ایجاد هویت ناموفق بود</string>
     <string name="projects_auth_mfa_unsupported">احراز هویت چندعاملی هنوز در برنامه موبایل پشتیبانی نمی‌شود</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">یک قانون انتخاب کنید</string>
     <string name="projects_access_authenticated_desc">هر کسی که وارد شده باشد</string>
     <string name="projects_access_anyone_desc">شامل کاربران ناشناس</string>
-    <string name="projects_access_target">هدف</string>
+    <string name="projects_access_target">کاربر یا گروه</string>
     <string name="projects_access_target_hint">شناسه موجودیت، @گروه، * (همه)، یا + (اعضا)</string>
     <string name="projects_access_selected">انتخاب‌شده: %1$s</string>
     <string name="projects_access_role_comment">نظر دادن و دیدن</string>

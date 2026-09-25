@@ -38,7 +38,7 @@
     <string name="access_add_rule">Qayda əlavə et</string>
     <string name="access_owner">Sahibi</string>
     <string name="access_revoke">Geri çağır</string>
-    <string name="access_level_comment">Şərh</string>
+    <string name="access_level_comment">Şərh yaz</string>
     <string name="access_level_view">Bax</string>
     <string name="access_level_none">Heç biri</string>
     <string name="reaction_like">Bəyən</string>
@@ -189,7 +189,7 @@
     <string name="format_time_weeks_short">%1$d həftə</string>
     <string name="format_time_months_short">%1$d ay</string>
     <string name="reaction_add">Reaksiya əlavə et</string>
-    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel">Mochi push bildirişləri</string>
     <string name="push_service_channel_description">Bildirişləri almaq üçün Mochi-ni qoşulu saxlayır</string>
     <string name="push_service_group">Arxa fon xidməti</string>
     <string name="push_service_title">Mochi bildirişləri gözləyir</string>

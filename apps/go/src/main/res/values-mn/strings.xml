@@ -8,7 +8,7 @@
     <string name="go_action_pass">Алгасах</string>
     <string name="go_action_rematch">Дахин тоглох</string>
     <string name="go_action_resign">Тэрсэх</string>
-    <string name="go_app_title">Очих</string>
+    <string name="go_app_title">Го</string>
     <string name="go_captures_black_sr">Хар олзлогдсон</string>
     <string name="go_captures_white_sr">Цагаан олзлогдсон</string>
     <string name="go_chat_title">Чат</string>
@@ -35,8 +35,8 @@
     <string name="go_new_game_add_friends">Найзууд нэмэх</string>
     <string name="go_new_game_board_size_label">Самбарын хэмжээ</string>
     <string name="go_new_game_friend_label">Өрсөлдөгч</string>
-    <string name="go_new_game_komi_field_label">Komi</string>
-    <string name="go_new_game_komi_label">Komi</string>
+    <string name="go_new_game_komi_field_label">Коми</string>
+    <string name="go_new_game_komi_label">Коми</string>
     <string name="go_new_game_komi_range_error">0-ээс 10-ын хооронд байх ёстой</string>
     <string name="go_new_game_start">Тоглоом эхлүүлэх</string>
     <string name="go_pass_confirm">Алгасах</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">Хажуугийн самбарыг нээх</string>
     <string name="go_sidebar_active">Идэвхтэй тоглоомууд</string>
     <string name="go_empty_active">Одоогоор идэвхтэй тоглоом байхгүй.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">Бууж өгсөн</string>
     <string name="go_new_game_title">Шинэ Go тоглоом</string>
     <string name="go_new_game_no_friends">Тоглоом эхлүүлэхийн өмнө найз нэмэх шаардлагатай.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

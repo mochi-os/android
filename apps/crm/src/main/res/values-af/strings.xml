@@ -67,7 +67,7 @@
     <string name="crm_board_rename">Hernoem</string>
     <string name="crm_board_rename_column">Hernoem kolom</string>
     <string name="crm_move_position">Posisie</string>
-    <string name="crm_move_position_top">Bo</string>
+    <string name="crm_move_position_top">Boaan</string>
     <string name="crm_move_current">Huidig</string>
     <string name="crm_design_title">Ontwerp</string>
     <string name="crm_design_export">Voer ontwerp uit</string>
@@ -78,7 +78,7 @@
     <string name="crm_design_or_upload_json">Of laai \'n lêer op</string>
     <string name="crm_design_upload_json">Laai .json-lêer op</string>
     <string name="crm_design_tab_classes">Klasse</string>
-    <string name="crm_design_tab_views">Bekykings</string>
+    <string name="crm_design_tab_views">Aansigte</string>
     <string name="crm_design_import_dialog_title">Voer ontwerp in</string>
     <string name="crm_design_import_choose_template">Kies \'n sjabloon</string>
     <string name="crm_design_replace_title">Vervang ontwerp?</string>
@@ -94,7 +94,7 @@
     <string name="crm_class_delete">Verwyder klas</string>
     <string name="crm_class_delete_title">Verwyder klas</string>
     <string name="crm_field_type_text">Teks</string>
-    <string name="crm_field_type_number">Nommer</string>
+    <string name="crm_field_type_number">Getal</string>
     <string name="crm_field_type_user">Gebruiker</string>
     <string name="crm_field_type_date">Datum</string>
     <string name="crm_field_type_checklist">Kontrolelys</string>
@@ -209,7 +209,7 @@
     <string name="crm_field_multi">Multi-keuse</string>
     <string name="crm_field_position">Vertoonposisie</string>
     <string name="crm_field_position_header">Kop</string>
-    <string name="crm_field_position_body">Liggaam</string>
+    <string name="crm_field_position_body">Inhoud</string>
     <string name="crm_field_validation">Validering</string>
     <string name="crm_field_min_length">Min lengte</string>
     <string name="crm_field_max_length">Maks lengte</string>

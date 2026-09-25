@@ -38,7 +38,7 @@
     <string name="access_add_rule">Tambah aturan</string>
     <string name="access_owner">Pemilik</string>
     <string name="access_revoke">Cabut</string>
-    <string name="access_level_comment">Komentar</string>
+    <string name="access_level_comment">Komentari</string>
     <string name="access_level_view">Lihat</string>
     <string name="access_level_none">Tidak ada</string>
     <string name="reaction_like">Suka</string>
@@ -101,13 +101,13 @@
     <string name="settings_reset_to_defaults">Reset ke default</string>
     <string name="settings_reset_confirm_title">Reset preferensi?</string>
     <string name="settings_reset_confirm_message">Ini akan mengatur ulang semua preferensi ke nilai defaultnya.</string>
-    <string name="settings_reset">Reset</string>
+    <string name="settings_reset">Setel ulang</string>
     <string name="settings_display_title">Tampilan</string>
     <string name="settings_display_reset">Reset ke default</string>
     <string name="settings_display_reset_confirm_title">Setel ulang tampilan?</string>
     <string name="settings_display_reset_confirm_message">Ini akan menyetel ulang pengaturan tampilan ke nilai defaultnya.</string>
     <string name="settings_theme_title">Tema</string>
-    <string name="settings_theme_default">Default</string>
+    <string name="settings_theme_default">Bawaan</string>
     <string name="settings_background">Latar belakang</string>
     <string name="settings_background_theme">Dari tema</string>
     <string name="settings_background_off">Tidak ada</string>

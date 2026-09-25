@@ -62,7 +62,7 @@
     <string name="people_profile_uploading">Качване…</string>
     <string name="people_profile_change_banner">Смени банера</string>
     <string name="people_profile_no_banner">Няма зададен банер</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">Фавикон</string>
     <string name="people_profile_browser_icon">Икона на браузъра</string>
     <string name="people_profile_file_too_large">Файлът е твърде голям</string>
     <string name="people_profile_clear">Изчисти</string>
@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Отвори навигацията</string>
     <string name="people_person_state_friend">Приятели</string>
     <string name="people_person_state_self">Вие</string>
-    <string name="people_person_message">Съобщение</string>
+    <string name="people_person_message">Изпрати съобщение</string>
     <string name="people_person_accept">Приеми</string>
     <string name="people_person_decline">Откажи</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Приеми всички</string>
     <string name="people_invitations_decline_all">Отхвърли всички</string>
     <string name="people_invitations_cancel_all">Отмени всички</string>
+    <string name="people_invitations_cancel">Анулирай</string>
     <string name="people_invitations_all_accepted">Всички покани са приети</string>
     <string name="people_invitations_all_declined">Всички покани са отхвърлени</string>
     <string name="people_invitations_all_cancelled">Всички покани са отменени</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Търси…</string>
     <string name="people_contacts_invited">Поканен(а)</string>
     <string name="people_contacts_accept">Приеми</string>
-    <string name="people_contacts_message">Съобщение</string>
+    <string name="people_contacts_message">Изпрати съобщение</string>
     <string name="people_contacts_no_people_found">Не са намерени хора</string>
     <string name="people_contacts_try_adjusting">Опитайте да коригирате търсенето си</string>
     <string name="people_contact_section_address">Адрес</string>

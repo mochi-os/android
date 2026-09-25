@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Engar færslur ennþá</string>
     <string name="feeds_sort_label">Raða</string>
     <string name="feeds_sort_interests">Áhugaefni</string>
-    <string name="feeds_sort_new">Nýtt</string>
+    <string name="feeds_sort_new">Nýjast</string>
     <string name="feeds_sort_hot">Heitt</string>
-    <string name="feeds_sort_top">Efst</string>
+    <string name="feeds_sort_top">Hæst metið</string>
     <string name="feeds_sort_ai">Gervigreind</string>
     <string name="feeds_post_default_author">Færsla</string>
     <string name="feeds_image_preview">Forskoðun</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Hætta við svar</string>
     <string name="feeds_edit_post">Breyta færslu</string>
     <string name="feeds_save_label">Vista</string>
-    <string name="feeds_post_action">Færsla</string>
+    <string name="feeds_post_action">Birta</string>
     <string name="feeds_feed_label">Streymi</string>
     <string name="feeds_add_files">Bæta við skrám</string>
     <string name="feeds_restore">Endurheimta</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Skrá út</string>
     <string name="feeds_ai_account_default">Sjálfgefinn reikningur</string>
     <string name="feeds_ai_mode_off">Slökkt</string>
-    <string name="feeds_ai_mode_tag">Merki</string>
+    <string name="feeds_ai_mode_tag">Merkja</string>
     <string name="feeds_ai_mode_tag_deduplicate">Merkja + fjarlægja afrit</string>
     <string name="feeds_feed_not_found">Streymi fannst ekki</string>
     <string name="feeds_post_not_found">Færsla fannst ekki</string>

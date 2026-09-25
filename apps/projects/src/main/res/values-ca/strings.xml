@@ -99,7 +99,7 @@
     <string name="projects_board_rename">Canvia el nom</string>
     <string name="projects_board_rename_column">Canvia el nom de la columna</string>
     <string name="projects_move_position">Posició</string>
-    <string name="projects_move_position_top">Amunt</string>
+    <string name="projects_move_position_top">A dalt</string>
     <string name="projects_move_current">Actual</string>
     <string name="projects_design_title">Disseny</string>
     <string name="projects_design_export">Exporta el disseny</string>
@@ -160,7 +160,7 @@
     <string name="projects_comment_send">Envia</string>
 
     <string name="notification_channel_projects">Notificacions de Projectes</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Projectes</string>
     <string name="projects_auth_login_failed">Ha fallat l\'inici de sessió</string>
     <string name="projects_auth_create_identity_failed">No s\'ha pogut crear la identitat</string>
     <string name="projects_auth_mfa_unsupported">L\'MFA encara no és compatible amb l\'aplicació mòbil</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_mark_ready">Marca com a llest</string>
     <string name="projects_request_merge_default_message">Fusiona %1$s a %2$s</string>
     <string name="projects_request_commit_message">Missatge del commit</string>
-    <string name="projects_request_method_squash">Squash</string>
+    <string name="projects_request_method_squash">Aplana</string>
     <string name="projects_request_method_rebase">Rebase</string>
     <string name="projects_request_create_title">Crea sol·licitud de fusió</string>
     <string name="projects_request_field_target">Branca de destinació</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Selecciona una regla</string>
     <string name="projects_access_authenticated_desc">Qualsevol persona que hagi iniciat sessió</string>
     <string name="projects_access_anyone_desc">Inclosos els usuaris anònims</string>
-    <string name="projects_access_target">Destinació</string>
+    <string name="projects_access_target">Usuari o grup</string>
     <string name="projects_access_target_hint">ID d\'entitat, @grup, * (tothom) o + (membres)</string>
     <string name="projects_access_selected">Seleccionat: %1$s</string>
     <string name="projects_access_role_comment">Comentar i veure</string>

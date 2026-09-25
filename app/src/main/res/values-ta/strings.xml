@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Mochi ஊட்டங்கள்</string>
+    <string name="launcher_feeds">Mochi ஃபீட்கள்</string>
     <string name="launcher_chat">Mochi அரட்டை</string>
     <string name="launcher_forums">Mochi ஃபோரங்கள்</string>
-    <string name="launcher_projects">Mochi திட்டங்கள்</string>
+    <string name="launcher_projects">Mochi பிராஜெக்ட்கள்</string>
     <string name="launcher_crm">Mochi CRM</string>
     <string name="launcher_people">Mochi மக்கள்</string>
     <string name="launcher_settings">Mochi அமைப்புகள்</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki-கள்</string>
     <string name="launcher_chess">Mochi சதுரங்கம்</string>
-    <string name="launcher_go">Mochi Go</string>
-    <string name="launcher_words">Mochi வார்த்தைகள்</string>
-    <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">Mochi நாட்காட்டிகள்</string>
+    <string name="launcher_go">Mochi கோ</string>
+    <string name="launcher_words">Mochi சொற்கள்</string>
+    <string name="launcher_market">Mochi சந்தை</string>
+    <string name="launcher_calendars">Mochi நாள்காட்டிகள்</string>
     <string name="launcher_staff">Mochi பணியாளர்கள்</string>
 
 

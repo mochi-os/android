@@ -8,7 +8,7 @@
     <string name="go_action_pass">تېرول</string>
     <string name="go_action_rematch">بیا لوبه</string>
     <string name="go_action_resign">تسلیمیدل</string>
-    <string name="go_app_title">ولاړ شه</string>
+    <string name="go_app_title">ګو</string>
     <string name="go_captures_black_sr">تور نیولي</string>
     <string name="go_captures_white_sr">سپین نیولي</string>
     <string name="go_chat_title">چټ</string>
@@ -35,8 +35,8 @@
     <string name="go_new_game_add_friends">ملګري اضافه کړئ</string>
     <string name="go_new_game_board_size_label">د تختې اندازه</string>
     <string name="go_new_game_friend_label">حریف</string>
-    <string name="go_new_game_komi_field_label">Komi</string>
-    <string name="go_new_game_komi_label">Komi</string>
+    <string name="go_new_game_komi_field_label">کومي</string>
+    <string name="go_new_game_komi_label">کومي</string>
     <string name="go_new_game_komi_range_error">باید د ۰ او ۱۰ ترمنځ وي</string>
     <string name="go_new_game_start">لوبه پیل کړئ</string>
     <string name="go_pass_confirm">تېرول</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">د څنګ بار خلاص کړئ</string>
     <string name="go_sidebar_active">فعالې لوبې</string>
     <string name="go_empty_active">تر اوسه فعال لوبې نشته.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">تسلیم شو</string>
     <string name="go_new_game_title">نوې د Go لوبه</string>
     <string name="go_new_game_no_friends">د لوبې پیل کولو دمخه باید ملګری اضافه کړئ.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

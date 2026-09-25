@@ -76,7 +76,7 @@
     <string name="projects_property_option_none">Няма</string>
     <string name="projects_attachments">Прикачени файлове</string>
     <string name="projects_attachment_add">Добави прикачен файл</string>
-    <string name="projects_request_empty">Няма merge requests</string>
+    <string name="projects_request_empty">Няма заявки за сливане</string>
     <string name="projects_request_status_draft">Чернова</string>
     <string name="projects_request_status_open">Отворен</string>
     <string name="projects_request_status_merged">Слят</string>
@@ -93,7 +93,7 @@
     <string name="projects_request_create_action">Създай</string>
     <string name="projects_diff_unified">Унифицирано</string>
     <string name="projects_diff_split">Раздели</string>
-    <string name="projects_diff_empty">Няма наличен diff</string>
+    <string name="projects_diff_empty">Няма налична разлика</string>
     <string name="projects_board_unassigned">Неприсвоено</string>
     <string name="projects_board_new">Ново</string>
     <string name="projects_board_rename">Преименувай</string>
@@ -106,7 +106,7 @@
     <string name="projects_design_import">Импорт на дизайн</string>
     <string name="projects_design_imported">Дизайнът е импортиран</string>
     <string name="projects_design_tab_classes">Класове</string>
-    <string name="projects_design_tab_views">Прегледи</string>
+    <string name="projects_design_tab_views">Изгледи</string>
     <string name="projects_design_import_dialog_title">Импорт на дизайн</string>
     <string name="projects_design_import_choose_template">Изберете шаблон</string>
     <string name="projects_design_replace_title">Да заменя ли дизайна?</string>
@@ -123,7 +123,7 @@
     <string name="projects_class_delete">Изтрий класа</string>
     <string name="projects_class_delete_title">Изтрий класа</string>
     <string name="projects_field_type_text">Текст</string>
-    <string name="projects_field_type_number">Номер</string>
+    <string name="projects_field_type_number">Число</string>
     <string name="projects_field_type_user">Потребител</string>
     <string name="projects_field_type_date">Дата</string>
     <string name="projects_field_type_checklist">Чек-лист</string>
@@ -160,7 +160,7 @@
     <string name="projects_comment_send">Изпрати</string>
 
     <string name="notification_channel_projects">Известия за проекти</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Проекти</string>
     <string name="projects_auth_login_failed">Неуспешно влизане</string>
     <string name="projects_auth_create_identity_failed">Неуспешно създаване на самоличност</string>
     <string name="projects_auth_mfa_unsupported">MFA все още не се поддържа в мобилното приложение</string>
@@ -201,7 +201,7 @@
     <string name="projects_comment_placeholder">Добавяне на коментар</string>
     <string name="projects_comment_remove_attachment">Премахване на прикачения файл</string>
     <string name="projects_property_pick_date">Изберете дата</string>
-    <string name="projects_property_ok">OK</string>
+    <string name="projects_property_ok">ОК</string>
     <string name="projects_property_add_item">Добавяне на елемент</string>
     <string name="projects_property_required">%1$s е задължително</string>
     <string name="projects_activity_empty">Няма активност</string>
@@ -233,8 +233,8 @@
     <string name="projects_request_mark_ready">Маркиране като готова</string>
     <string name="projects_request_merge_default_message">Сливане на %1$s в %2$s</string>
     <string name="projects_request_commit_message">Съобщение за подаване</string>
-    <string name="projects_request_method_squash">Squash</string>
-    <string name="projects_request_method_rebase">Rebase</string>
+    <string name="projects_request_method_squash">Обединяване</string>
+    <string name="projects_request_method_rebase">Пребазиране</string>
     <string name="projects_request_create_title">Създаване на заявка за сливане</string>
     <string name="projects_request_field_target">Целеви клон</string>
     <string name="projects_diff_title">Разлика: %1$s -&gt; %2$s</string>
@@ -285,7 +285,7 @@
     <string name="projects_field_multi">Множествен избор</string>
     <string name="projects_field_position">Позиция на показване</string>
     <string name="projects_field_position_header">Заглавна част</string>
-    <string name="projects_field_position_body">Тяло</string>
+    <string name="projects_field_position_body">Съдържание</string>
     <string name="projects_field_validation">Валидация</string>
     <string name="projects_field_min_length">Мин. дължина</string>
     <string name="projects_field_max_length">Макс. дължина</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Изберете правило</string>
     <string name="projects_access_authenticated_desc">Всеки, който е влязъл в системата</string>
     <string name="projects_access_anyone_desc">Включително анонимни потребители</string>
-    <string name="projects_access_target">Цел</string>
+    <string name="projects_access_target">Потребител или група</string>
     <string name="projects_access_target_hint">ID на обект, @група, * (всички) или + (членове)</string>
     <string name="projects_access_selected">Избрано: %1$s</string>
     <string name="projects_access_role_comment">Коментирай и преглеждай</string>

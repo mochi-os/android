@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Mochi Fluxuri</string>
+    <string name="launcher_feeds">Mochi Feed-uri</string>
     <string name="launcher_chat">Mochi Chat</string>
     <string name="launcher_forums">Mochi Forumuri</string>
     <string name="launcher_projects">Mochi Proiecte</string>
@@ -9,11 +9,11 @@
     <string name="launcher_people">Mochi Persoane</string>
     <string name="launcher_settings">Mochi Setări</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki-uri</string>
     <string name="launcher_chess">Mochi Șah</string>
     <string name="launcher_go">Mochi Go</string>
     <string name="launcher_words">Mochi Cuvinte</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi Piață</string>
     <string name="launcher_calendars">Mochi Calendare</string>
     <string name="launcher_staff">Mochi Personal</string>
 

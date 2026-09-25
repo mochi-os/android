@@ -35,24 +35,24 @@
     <string name="words_detail_resign_title">Nyerah tina kaulinan?</string>
     <string name="words_detail_resign_message">Anjeun yakin hayang nyerah?</string>
 
-    <string name="words_channel_name">Words notifications</string>
+    <string name="words_channel_name">Béwara kecap</string>
     <string name="words_channel_description">Bewara ngeunaan giliran Words, tukeur, jeung hasil kaulinan.</string>
     <string name="words_sidebar_active">Kaulinan Aktif</string>
     <string name="words_sidebar_empty">Can aya kaulinan.</string>
-    <string name="words_new_game_choose_opponents">Choose opponents</string>
+    <string name="words_new_game_choose_opponents">Pilih lawan</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$d players</string>
-    <string name="words_new_game_no_friends_subtitle">Tambahkeun babaturan dina aplikasi People pikeun ngamimitian maén.</string>
-    <string name="words_detail_title">Game</string>
+    <string name="words_new_game_player_count">%1$d pamaén</string>
+    <string name="words_new_game_no_friends_subtitle">Tambahkeun babaturan dina aplikasi Jalma pikeun ngamimitian maén.</string>
+    <string name="words_detail_title">Kaulinan</string>
     <string name="words_detail_status_opponent_move">Lengkah %1$s</string>
-    <string name="words_detail_status_winner_wins">%1$s wins</string>
-    <string name="words_detail_player_fallback">Player %1$d</string>
-    <string name="words_detail_player_count">%1$d players</string>
-    <string name="words_detail_label_tiles_left">%1$d tiles left</string>
-    <string name="words_detail_action_open_chat">Open chat</string>
-    <string name="words_detail_action_more">Game actions</string>
-    <string name="words_detail_exchange_count">Exchange (%1$d)</string>
-    <string name="words_detail_chat_you_played">You played %1$s</string>
+    <string name="words_detail_status_winner_wins">%1$s meunang</string>
+    <string name="words_detail_player_fallback">Pamaén %1$d</string>
+    <string name="words_detail_player_count">%1$d pamaén</string>
+    <string name="words_detail_label_tiles_left">%1$d ubin sésa</string>
+    <string name="words_detail_action_open_chat">Buka obrolan</string>
+    <string name="words_detail_action_more">Tindakan kaulinan</string>
+    <string name="words_detail_exchange_count">Tukeur (%1$d)</string>
+    <string name="words_detail_chat_you_played">Anjeun maén %1$s</string>
     <string name="words_detail_chat_player_played">%1$s maén %2$s</string>
 
     <string name="words_detail_delete_title">Hapus kaulinan?</string>

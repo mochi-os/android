@@ -45,7 +45,7 @@
     <string name="route_delete_title">Busak rute?</string>
     <string name="route_path">Path</string>
     <string name="route_method">Metode</string>
-    <string name="route_method_app">App</string>
+    <string name="route_method_app">Aplikasi</string>
     <string name="route_method_entity">Entitas</string>
     <string name="route_method_redirect">Redirect</string>
     <string name="route_priority">Prioritas</string>
@@ -74,10 +74,10 @@
     <string name="system_status_title">Status</string>
     <string name="system_status_version">Versi</string>
     <string name="system_status_started">Wis miwiti</string>
-    <string name="system_status_update">Update</string>
-    <string name="system_status_refresh">Refresh</string>
+    <string name="system_status_update">Anyari</string>
+    <string name="system_status_refresh">Muat manèh</string>
     <string name="system_status_install_update">Instal update</string>
-    <string name="system_status_download_installer">Download installer</string>
+    <string name="system_status_download_installer">Undhuh pamasang</string>
     <string name="system_status_download_from_packages">Download saka packages.mochi-os.org</string>
     <string name="system_status_copy">Salin</string>
     <string name="system_status_peers">Kanca</string>
@@ -119,7 +119,7 @@
     <string name="settings_home_system_documents">Dokumen</string>
     <string name="settings_home_system_settings">Setelan sistem</string>
     <string name="system_settings_title">Setelan sistem</string>
-    <string name="system_settings_section_login">Login</string>
+    <string name="system_settings_section_login">Mlebu</string>
     <string name="system_settings_section_oauth">Login pihak katelu</string>
     <string name="system_settings_section_user_defaults">Default panganggo</string>
     <string name="system_settings_section_operator">Operator</string>
@@ -132,7 +132,7 @@
     <string name="system_settings_configured">Dikonfigurasi</string>
     <string name="system_settings_save">Simpen</string>
     <string name="system_settings_clear">Resiki</string>
-    <string name="system_settings_reset">Reset</string>
+    <string name="system_settings_reset">Setel maneh</string>
     <string name="system_settings_reset_to_default">Reset menyang default</string>
     <string name="system_settings_reset_title">Reset menyang default?</string>
     <string name="system_setting_apps_install_user">Idini pangguna nginstal app</string>
@@ -278,7 +278,7 @@
     <string name="account_identity_identity">Identitas</string>
     <string name="account_identity_username">Jeneng panganggo</string>
     <string name="account_identity_name">Jeneng</string>
-    <string name="account_identity_fingerprint">Fingerprint</string>
+    <string name="account_identity_fingerprint">Sidik jari</string>
     <string name="account_identity_directory_toggle">Idini wong liya nemokaké sampéyan ing direktori</string>
     <string name="domain_add">Tambah domain</string>
     <string name="domain_add_title">Tambah domain</string>
@@ -310,7 +310,7 @@
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">Mbatalaké %1$d sesi</item>
     </plurals>
-    <string name="login_title">Login</string>
+    <string name="login_title">Mlebu</string>
     <string name="login_section_methods">Cara mlebu</string>
     <string name="login_method_email">Kode email</string>
     <string name="login_method_passkey">Passkey</string>
@@ -321,8 +321,8 @@
     <string name="account_close_action">Tutup akun</string>
     <string name="account_close_confirm_title">Tutup akun panjenengan?</string>
     <string name="account_close_confirm_body">Akun panjenengan bakal dijadwalake kanggo dibusak lan panjenengan bakal metu. Panjenengan bisa mbatalake kapan wae sadurunge tanggal pambusakan kanthi mlebu maneh.</string>
-    <string name="account_data_download">Download</string>
-    <string name="route_target_app">App</string>
+    <string name="account_data_download">Undhuh</string>
+    <string name="route_target_app">Aplikasi</string>
     <string name="route_target_entity">Entitas</string>
     <string name="route_target_url">URL</string>
     <string name="account_data_section">Data sampeyan</string>

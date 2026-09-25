@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="feeds_title">ஊட்டங்கள்</string>
+    <string name="feeds_title">ஃபீட்கள்</string>
     <string name="feeds_find_feeds">ஃபீடுகளைக் கண்டுபிடி</string>
     <string name="feeds_create_feed">ஃபீட் உருவாக்கு</string>
     <string name="feeds_new_post">புதிய பதிவு</string>
@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">பதிவுகள் இன்னும் இல்லை</string>
     <string name="feeds_sort_label">வரிசைப்படுத்து</string>
     <string name="feeds_sort_interests">ஆர்வங்கள்</string>
-    <string name="feeds_sort_new">புதியது</string>
+    <string name="feeds_sort_new">சமீபத்தியவை</string>
     <string name="feeds_sort_hot">பிரபலமான</string>
-    <string name="feeds_sort_top">மேல்</string>
+    <string name="feeds_sort_top">சிறந்தவை</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">பதிவு</string>
     <string name="feeds_image_preview">முன்னோட்டம்</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">பதிலளிப்பை ரத்துசெய்</string>
     <string name="feeds_edit_post">பதிவைத் திருத்து</string>
     <string name="feeds_save_label">சேமி</string>
-    <string name="feeds_post_action">பதிவு</string>
+    <string name="feeds_post_action">பதிவிடு</string>
     <string name="feeds_feed_label">ஊட்டம்</string>
     <string name="feeds_add_files">கோப்புகள் சேர்</string>
     <string name="feeds_restore">மீட்டெடு</string>
@@ -59,11 +59,11 @@
     <string name="feeds_source_type_feed_memories">நினைவுகள்</string>
     <string name="feeds_remove_source">மூலத்தை அகற்று</string>
     <string name="feeds_suggested_credibility_accept">ஏற்றுக்கொள்</string>
-    <string name="feeds_rss_url_copied">RSS URL clipboard-க்கு நகலெடுக்கப்பட்டது</string>
+    <string name="feeds_rss_url_copied">RSS URL கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது</string>
     <string name="feeds_logout">வெளியேறு</string>
     <string name="feeds_ai_account_default">இயல்புநிலை கணக்கு</string>
     <string name="feeds_ai_mode_off">முடக்கப்பட்டது</string>
-    <string name="feeds_ai_mode_tag">டேக்</string>
+    <string name="feeds_ai_mode_tag">டேக் செய்</string>
     <string name="feeds_ai_mode_tag_deduplicate">டேக் + நகலகற்று</string>
     <string name="feeds_feed_not_found">ஃபீட் கிடைக்கவில்லை</string>
     <string name="feeds_post_not_found">பதிவு கிடைக்கவில்லை</string>
@@ -80,7 +80,7 @@
     <string name="feeds_settings_member_removed">உறுப்பினர் அகற்றப்பட்டார்</string>
     <string name="feeds_settings_ai_mode_updated">AI பளமீது முடிவுசீல்கீலுமு</string>
     <string name="feeds_settings_ai_account_updated">AI கணக்கு முடிவுசீல்கீலுமு</string>
-    <string name="feeds_settings_prompt_saved">Prompt சேமிக்கப்பட்டது</string>
+    <string name="feeds_settings_prompt_saved">தூண்டுதல் சேமிக்கப்பட்டது</string>
     <string name="feeds_settings_prompt_reset">வினாவை இயல்நிலைக்கு மீண்டம்மீடம்க்குமு</string>
     <string name="feeds_send">அனுப்பு</string>
     <string name="feeds_move_up">மேலே நகர்த்து</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">ஆர்வம் குறைக்கப்பட்டது</string>
     <string name="feeds_interest_removed">ஆர்வம் நீக்கப்பட்டது</string>
     <string name="feeds_interest_failed">ஆர்வத்தைச் சரிசெய்ய முடியவில்லை</string>
-    <string name="feeds_saved_title">சேமிக்கப்பட்டது</string>
-    <string name="feeds_saved_menu">சேமிக்கப்பட்டது</string>
+    <string name="feeds_saved_title">சேமித்தவை</string>
+    <string name="feeds_saved_menu">சேமித்தவை</string>
     <string name="feeds_saved_save">பின்னர் பார்க்க சேமி</string>
     <string name="feeds_saved_remove">சேமித்தவற்றிலிருந்து அகற்று</string>
     <string name="feeds_saved_clear_all">அனைத்தையும் அழி</string>

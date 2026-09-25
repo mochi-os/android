@@ -21,7 +21,7 @@
     <string name="crm_design">Tervezés</string>
     <string name="crm_export_failed">Az exportálást nem sikerült menteni</string>
     <string name="crm_sort_direction">Irány</string>
-    <string name="crm_sort_rank">Kézikönyv</string>
+    <string name="crm_sort_rank">Kézi</string>
     <string name="crm_sort_created">Létrehozva</string>
     <string name="crm_sort_updated">Frissítve</string>
     <string name="crm_create_object_title">Objektum létrehozása</string>
@@ -78,7 +78,7 @@
     <string name="crm_design_or_upload_json">Vagy töltsön fel egy fájlt</string>
     <string name="crm_design_upload_json">.json fájl feltöltése</string>
     <string name="crm_design_tab_classes">Osztályok</string>
-    <string name="crm_design_tab_views">Megtekintések</string>
+    <string name="crm_design_tab_views">Nézetek</string>
     <string name="crm_design_import_dialog_title">Terv importálása</string>
     <string name="crm_design_import_choose_template">Válassz egy sablont</string>
     <string name="crm_design_replace_title">Lecseréli a tervet?</string>
@@ -126,7 +126,7 @@
     <string name="crm_not_found">A projekt nem található</string>
     <string name="crm_more">Több</string>
     <string name="crm_comment_send">Küldés</string>
-    <string name="crm_field_position_body">Szöveg</string>
+    <string name="crm_field_position_body">Fő rész</string>
     <string name="crm_list_add_to_home">Hozzáadás a kezdőképernyőhöz</string>
     <string name="crm_sort_field">Rendezés</string>
     <string name="crm_views_move_up">Mozgatás felfelé</string>

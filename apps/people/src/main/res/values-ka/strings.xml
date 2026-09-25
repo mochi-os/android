@@ -62,7 +62,7 @@
     <string name="people_profile_uploading">იტვირთება...</string>
     <string name="people_profile_change_banner">ბანერის შეცვლა</string>
     <string name="people_profile_no_banner">ბანერი არ არის დაყენებული</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">ფავიკონი</string>
     <string name="people_profile_browser_icon">ბრაუზერის ხატულა</string>
     <string name="people_profile_file_too_large">ფაილი ძალიან დიდია</string>
     <string name="people_profile_clear">გასუფთავება</string>
@@ -71,17 +71,17 @@
     <string name="people_common_cancel">გაუქმება</string>
     <string name="people_common_close">დახურვა</string>
     <string name="people_common_save">შენახვა</string>
-    <string name="people_welcome_dismiss">უარყოფა</string>
-    <string name="people_sidebar_header">ხალხი</string>
+    <string name="people_welcome_dismiss">დახურვა</string>
+    <string name="people_sidebar_header">ადამიანები</string>
     <string name="people_open_sidebar">ნავიგაციის გახსნა</string>
     <string name="people_person_state_friend">მეგობრები</string>
     <string name="people_person_state_self">თქვენ</string>
-    <string name="people_person_message">შეტყობინება</string>
+    <string name="people_person_message">შეტყობინების გაგზავნა</string>
     <string name="people_person_accept">მიღება</string>
     <string name="people_person_decline">უარის თქმა</string>
 
 
-    <string name="notification_channel_people">ხალხის შეტყობინებები</string>
+    <string name="notification_channel_people">„ადამიანების“ შეტყობინებები</string>
     <string name="people_friends_searching">მიმდინარეობს ძიება…</string>
     <string name="people_invitations_toast_accepted">%1$s-ის მოწვევა მიღებულია</string>
     <string name="people_invitations_toast_declined">%1$s-ის მოწვევა უარყოფილია</string>
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">შეიყვანეთ სწორი hex-ფერი (მაგ. #a78bfa)</string>
     <string name="people_profile_accent_none">არცერთი</string>
     <string name="people_profile_privacy_private_desc">მხოლოდ ორმხრივ მეგობრებს შეუძლიათ თქვენი პროფილის ნახვა</string>
-    <string name="people_welcome_title">კეთილი იყოს თქვენი მობრძანება People-ში</string>
+    <string name="people_welcome_title">კეთილი იყოს თქვენი მობრძანება აპში „ადამიანები“</string>
     <string name="people_person_banner_alt">%1$s-ის ბანერი</string>
     <string name="people_person_private">ეს პროფილი დახურულია</string>
     <string name="people_person_state_invited">მოწვეული</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">ყველას მიღება</string>
     <string name="people_invitations_decline_all">ყველას უარყოფა</string>
     <string name="people_invitations_cancel_all">ყველას გაუქმება</string>
+    <string name="people_invitations_cancel">გაუქმება</string>
     <string name="people_invitations_all_accepted">ყველა მოწვევა მიღებულია</string>
     <string name="people_invitations_all_declined">ყველა მოწვევა უარყოფილია</string>
     <string name="people_invitations_all_cancelled">ყველა მოწვევა გაუქმებულია</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">ძიება…</string>
     <string name="people_contacts_invited">მოწვეული</string>
     <string name="people_contacts_accept">მიღება</string>
-    <string name="people_contacts_message">შეტყობინება</string>
+    <string name="people_contacts_message">შეტყობინების გაგზავნა</string>
     <string name="people_contacts_no_people_found">ხალხი ვერ მოიძებნა</string>
     <string name="people_contacts_try_adjusting">სცადეთ ფილტრების კორექტირება ან გასუფთავება</string>
     <string name="people_contact_section_address">მისამართი</string>

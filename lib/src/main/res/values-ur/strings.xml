@@ -6,7 +6,7 @@
     <string name="auth_continue">جاری رکھیں</string>
     <string name="auth_verification_code">تصدیقی کوڈ</string>
     <string name="auth_email_code">ای میل کوڈ</string>
-    <string name="auth_recovery_code">recovery کوڈ</string>
+    <string name="auth_recovery_code">ریکوری کوڈ</string>
     <string name="auth_name">نام</string>
     <string name="auth_create">بنائیں</string>
     <string name="auth_privacy_label">پرائیویسی</string>
@@ -29,7 +29,7 @@
     <string name="common_logout">لاگ آؤٹ</string>
     <string name="common_subscribe">سبسکرائب کریں</string>
     <string name="common_copy">کاپی کریں</string>
-    <string name="common_copied">Clipboard پر کاپی ہو گیا</string>
+    <string name="common_copied">کلپ بورڈ پر کاپی ہو گیا</string>
     <string name="comment_edited">(ترمیم شدہ)</string>
     <string name="comment_reply">جواب</string>
     <string name="person_picker_search">صارفین تلاش کریں</string>
@@ -38,7 +38,7 @@
     <string name="access_add_rule">قاعدہ شامل کریں</string>
     <string name="access_owner">مالک</string>
     <string name="access_revoke">منسوخ کریں</string>
-    <string name="access_level_comment">تبصرہ</string>
+    <string name="access_level_comment">تبصرہ کریں</string>
     <string name="access_level_view">دیکھیں</string>
     <string name="access_level_none">کوئی نہیں</string>
     <string name="reaction_like">پسند</string>
@@ -64,7 +64,7 @@
     <string name="settings_title">سیٹنگز</string>
     <string name="settings_appearance">ظاہری شکل</string>
     <string name="settings_appearance_light">لائٹ</string>
-    <string name="settings_appearance_dark">Dark</string>
+    <string name="settings_appearance_dark">ڈارک</string>
     <string name="settings_density">کثافت</string>
     <string name="settings_density_compact">کمپیکٹ</string>
     <string name="settings_density_comfortable">آرام دہ</string>
@@ -95,15 +95,15 @@
     <string name="settings_week_sunday">اتوار</string>
     <string name="settings_number_format">نمبر فارمیٹ</string>
     <string name="settings_units">یونٹس</string>
-    <string name="settings_units_metric">metric</string>
+    <string name="settings_units_metric">میٹرک</string>
     <string name="settings_units_imperial">امپیریل</string>
     <string name="settings_time_zone">ٹائم زون</string>
-    <string name="settings_reset_to_defaults">ڈیفالٹس پر reset کریں</string>
-    <string name="settings_reset_confirm_title">ترجیحات reset کریں؟</string>
+    <string name="settings_reset_to_defaults">ڈیفالٹس پر ری سیٹ کریں</string>
+    <string name="settings_reset_confirm_title">ترجیحات ری سیٹ کریں؟</string>
     <string name="settings_reset_confirm_message">یہ تمام ترجیحات کو ان کی ڈیفالٹ قدروں پر ری سیٹ کر دے گا۔</string>
-    <string name="settings_reset">reset کریں</string>
+    <string name="settings_reset">ری سیٹ کریں</string>
     <string name="settings_display_title">ڈسپلے</string>
-    <string name="settings_display_reset">ڈیفالٹس پر reset کریں</string>
+    <string name="settings_display_reset">ڈیفالٹس پر ری سیٹ کریں</string>
     <string name="settings_display_reset_confirm_title">ڈسپلے دوبارہ ترتیب دیں؟</string>
     <string name="settings_display_reset_confirm_message">یہ ڈسپلے کی ترتیبات کو ان کی پہلے سے طے شدہ اقدار پر دوبارہ ترتیب دے گا۔</string>
     <string name="settings_theme_title">تھیم</string>
@@ -143,7 +143,7 @@
     <string name="auth_passkey">پاس کی</string>
     <string name="auth_use_passkey">پاس کی استعمال کریں</string>
     <string name="auth_email_me_a_code">مجھے ای میل پر کوڈ بھیجیں</string>
-    <string name="auth_or_enter_authenticator_code">یا Authenticator کوڈ درج کریں</string>
+    <string name="auth_or_enter_authenticator_code">یا تصدیق کنندہ کوڈ درج کریں</string>
     <string name="auth_log_in">لاگ ان کریں</string>
     <string name="auth_back">واپس</string>
     <string name="auth_lost_access_recovery">رسائی کھو دی؟ ریکوری کوڈ استعمال کریں</string>
@@ -200,7 +200,7 @@
     <string name="reauth_signin_text">اطلاعات اس وقت تک روک دی گئی ہیں جب تک آپ دوبارہ سائن ان نہیں کرتے</string>
     <string name="oem_hint_title">پس منظر میں قابلِ رسائی رہیں</string>
     <string name="oem_hint_body">اطلاعات پہنچانے کے لیے Mochi کا پس منظر میں چلنا ضروری ہے۔ براہِ کرم اگلی سکرین پر اس کی اجازت دیں، ورنہ اسکرین بند ہونے پر آپ کا فون اطلاعات روک سکتا ہے۔</string>
-    <string name="oem_hint_samsung_note">Samsung فونز پر، Settings → Device care → Sleeping apps بھی دیکھیں اور اگر Mochi درج ہو تو اسے ہٹا دیں۔</string>
+    <string name="oem_hint_samsung_note">Samsung فونز پر، سیٹنگز → ڈیوائس کی دیکھ بھال → سوئی ہوئی ایپس بھی دیکھیں اور اگر Mochi درج ہو تو اسے ہٹا دیں۔</string>
     <string name="oem_hint_allow">پس منظر کی اجازت دیں</string>
     <string name="oem_hint_dismiss">دوبارہ نہ دکھائیں</string>
     <string name="about_label">متعلق</string>
@@ -225,7 +225,7 @@
     <string name="stepup_description">یہ آپ کے اکاؤنٹ میں ایک سکیورٹی تبدیلی ہے۔ جاری رکھنے کے لیے تصدیق کریں کہ یہ آپ ہیں۔</string>
     <string name="stepup_email_label">ای میل کوڈ</string>
     <string name="stepup_email_placeholder">اپنی ای میل میں موجود کوڈ درج کریں</string>
-    <string name="stepup_totp_label">Authenticator کوڈ</string>
+    <string name="stepup_totp_label">تصدیق کنندہ کوڈ</string>
     <string name="stepup_totp_placeholder">اپنا اتھینٹیکیٹر کوڈ درج کریں</string>
     <string name="stepup_use_passkey">اپنی پاس کی استعمال کریں</string>
     <string name="stepup_send_email">ای میل بھیجیں</string>
@@ -295,7 +295,7 @@
     <string name="format_heading">سرخی</string>
     <string name="format_code">کوڈ</string>
     <string name="format_list">نکاتی فہرست</string>
-    <string name="common_preview">preview</string>
+    <string name="common_preview">پیش منظر</string>
     <string name="rss_revoke_confirm">منسوخ کریں</string>
     <string name="rss_revoke">رسائی منسوخ کریں</string>
     <string name="rss_revoke_title">RSS رسائی منسوخ کریں؟</string>

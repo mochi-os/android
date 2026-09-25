@@ -8,7 +8,7 @@
     <string name="go_action_pass">تخطي</string>
     <string name="go_action_rematch">مباراة جديدة</string>
     <string name="go_action_resign">الاستسلام</string>
-    <string name="go_app_title">اذهب</string>
+    <string name="go_app_title">غو</string>
     <string name="go_captures_black_sr">القطع السوداء المأسورة</string>
     <string name="go_captures_white_sr">القطع البيضاء المأسورة</string>
     <string name="go_chat_title">الدردشة</string>

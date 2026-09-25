@@ -11,7 +11,7 @@
     <string name="chat_attachment_add">Faýllar goşmak</string>
     <string name="chat_settings_title">Söhbetdeşlik sazlamalary</string>
     <string name="chat_settings_rename_label">Söhbetdeşlik ady</string>
-    <string name="chat_settings_save">Saklaýyş</string>
+    <string name="chat_settings_save">Saklamak</string>
     <string name="chat_settings_members">Agzalar</string>
     <string name="chat_settings_add_member">Agza goşmak</string>
     <string name="chat_settings_add_member_search">Dostlary gözle</string>
@@ -25,7 +25,7 @@
     <string name="chat_chat_not_found">Söhbetdeşlik tapylmady</string>
 
     <string name="chat_message_send">Iber</string>
-    <string name="chat_attachment_remove">Remove attachment</string>
+    <string name="chat_attachment_remove">Goşundyny aýyr</string>
     <string name="chat_attachment_move_up">Ýokarlat</string>
     <string name="chat_attachment_move_down">Aşaklat</string>
 

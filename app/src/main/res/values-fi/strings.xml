@@ -2,20 +2,20 @@
 <resources>
 
     <string name="launcher_feeds">Mochi Syötteet</string>
-    <string name="launcher_chat">Mochi Chat</string>
+    <string name="launcher_chat">Mochi Keskustelu</string>
     <string name="launcher_forums">Mochi Foorumit</string>
     <string name="launcher_projects">Mochi Projektit</string>
     <string name="launcher_crm">Mochi CRM</string>
-    <string name="launcher_people">Mochi Henkilöt</string>
+    <string name="launcher_people">Mochi Ihmiset</string>
     <string name="launcher_settings">Mochi Asetukset</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wikit</string>
     <string name="launcher_chess">Mochi Shakki</string>
     <string name="launcher_go">Mochi Go</string>
     <string name="launcher_words">Mochi Sanat</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi Markkinapaikka</string>
     <string name="launcher_calendars">Mochi Kalenterit</string>
-    <string name="launcher_staff">Mochi Henkilökunta</string>
+    <string name="launcher_staff">Mochi-henkilöstö</string>
 
 
     <string name="app_name">Mochi</string>

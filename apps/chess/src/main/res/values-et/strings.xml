@@ -13,7 +13,7 @@
     <string name="chess_new_title">Uus mäng</string>
     <string name="chess_new_pick_opponent">Vali vastane</string>
     <string name="chess_new_no_friends_title">Sõpru veel pole</string>
-    <string name="chess_new_no_friends_subtitle">Lisa sõpru People rakenduses, et alustada mängimist</string>
+    <string name="chess_new_no_friends_subtitle">Lisa sõpru rakenduses Inimesed, et alustada mängimist</string>
     <string name="chess_new_add_friends">Lisa sõpru</string>
     <string name="chess_new_start_button">Alusta mängu</string>
     <string name="chess_new_creating">Loomine…</string>

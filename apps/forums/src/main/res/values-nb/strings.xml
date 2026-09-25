@@ -3,7 +3,7 @@
 
     <string name="forums_auth_display_name">Visningsnavn</string>
     <string name="forums_auth_verification_failed">Verifiseringen mislyktes</string>
-    <string name="forums_list_title">Forum</string>
+    <string name="forums_list_title">Forumer</string>
     <string name="forums_list_find">Finn forum</string>
     <string name="forums_list_logout">Logg ut</string>
     <string name="forums_list_unsubscribe">Avslutt abonnement</string>
@@ -24,13 +24,13 @@
     <string name="forums_settings">Innstillinger</string>
     <string name="forums_load_more">Last inn flere</string>
     <string name="forums_sort_label">Sorter</string>
-    <string name="forums_sort_new">Ny</string>
+    <string name="forums_sort_new">Nyeste</string>
     <string name="forums_sort_hot">Populært</string>
     <string name="forums_sort_top">Topp</string>
     <string name="forums_sort_interests">Interesser</string>
     <string name="forums_post_title_field">Tittel</string>
     <string name="forums_post_attach">Legg ved filer</string>
-    <string name="forums_post_create_action">Innlegg</string>
+    <string name="forums_post_create_action">Publiser</string>
     <string name="forums_post_edit">Rediger innlegg</string>
     <string name="forums_post_edit_title">Rediger innlegg</string>
     <string name="forums_post_edit_title_field">Tittel</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Medlemmer</string>
     <string name="forums_tab_banner">Banner</string>
     <string name="forums_tab_ai">KI</string>
-    <string name="forums_access_target">Mål</string>
+    <string name="forums_access_target">Bruker eller gruppe</string>
     <string name="forums_access_level_view">Vis</string>
     <string name="forums_access_level_vote">Stem</string>
-    <string name="forums_access_level_comment">Kommentar</string>
-    <string name="forums_access_level_post">Innlegg</string>
+    <string name="forums_access_level_comment">Kommenter</string>
+    <string name="forums_access_level_post">Publiser</string>
     <string name="forums_access_level_none">Ingen</string>
     <string name="forums_members_empty">Ingen medlemmer</string>
     <string name="forums_banner_dismiss">Lukk banner</string>
-    <string name="forums_ai_mode_tag">Etikett</string>
+    <string name="forums_ai_mode_tag">Merk</string>
     <string name="forums_ai_account_default">Standardkonto</string>
     <string name="forums_ai_prompt_reset">Tilbakestill til standard</string>
     <string name="forums_settings_unsubscribe">Avslutt abonnement</string>
@@ -80,7 +80,7 @@
     <string name="forums_moderation_reports_resolved">Løst</string>
     <string name="forums_moderation_reports_all">Alle</string>
     <string name="forums_moderation_reports_empty">Ingen rapporter</string>
-    <string name="forums_moderation_report_dismiss">Lukk</string>
+    <string name="forums_moderation_report_dismiss">Avvis</string>
     <string name="forums_moderation_restrictions_empty">Ingen begrensninger</string>
     <string name="forums_moderation_restriction_remove">Fjern</string>
     <string name="forums_moderation_restriction_type">Type</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_login_failed">Innlogging mislyktes</string>
 
     <string name="notification_channel_forums">Forum-varsler</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Forumer</string>
     <string name="forums_auth_create_identity_failed">Kunne ikke opprette identitet</string>
     <string name="forums_auth_mfa_unsupported">MFA støttes ikke ennå i mobilappen</string>
     <string name="forums_auth_enter_code_sent">Skriv inn koden som ble sendt til %1$s</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">Manuell</string>
     <string name="forums_access_search_users">Søk i brukere</string>
     <string name="forums_access_no_groups">Ingen grupper tilgjengelig</string>
-    <string name="forums_saved_title">Lagret</string>
+    <string name="forums_saved_title">Lagrede</string>
     <string name="forums_saved_save">Lagre til senere</string>
     <string name="forums_saved_remove">Fjern fra lagrede</string>
     <string name="forums_saved_clear_all">Tøm alt</string>

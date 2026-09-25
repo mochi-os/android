@@ -14,13 +14,13 @@
     <string name="feeds_no_posts_yet">Još nema objava</string>
     <string name="feeds_sort_label">Sortiraj</string>
     <string name="feeds_sort_interests">Interesi</string>
-    <string name="feeds_sort_new">Novo</string>
+    <string name="feeds_sort_new">Najnovije</string>
     <string name="feeds_sort_hot">Vruće</string>
-    <string name="feeds_sort_top">Vrh</string>
+    <string name="feeds_sort_top">Najbolje</string>
     <string name="feeds_sort_ai">AI</string>
-    <string name="feeds_post_default_author">Objavi</string>
+    <string name="feeds_post_default_author">Objava</string>
     <string name="feeds_image_preview">Pregled</string>
-    <string name="feeds_post">Objavi</string>
+    <string name="feeds_post">Objava</string>
     <string name="feeds_comments">Komentari</string>
     <string name="feeds_delete_post">Obriši objavu</string>
     <string name="feeds_delete_comment">Obriši komentar</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Odjavi se</string>
     <string name="feeds_ai_account_default">Zadani račun</string>
     <string name="feeds_ai_mode_off">Onemogućeno</string>
-    <string name="feeds_ai_mode_tag">Oznaka</string>
+    <string name="feeds_ai_mode_tag">Označi</string>
     <string name="feeds_ai_mode_tag_deduplicate">Označi + ukloni duplikate</string>
     <string name="feeds_feed_not_found">Feed nije pronađen</string>
     <string name="feeds_post_not_found">Objava nije pronađena</string>

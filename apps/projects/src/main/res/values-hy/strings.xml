@@ -29,7 +29,7 @@
     <string name="projects_sort_label">Տեսակավորել</string>
     <string name="projects_sort_direction">Ուղղություն</string>
     <string name="projects_sort_rank">Ձեռքով</string>
-    <string name="projects_sort_number">Թիվ</string>
+    <string name="projects_sort_number">Համար</string>
     <string name="projects_sort_created">Ստեղծված</string>
     <string name="projects_sort_updated">Թարմացված</string>
     <string name="projects_create_object_type">Տեսակ</string>
@@ -93,7 +93,7 @@
     <string name="projects_request_create_action">Ստեղծել</string>
     <string name="projects_diff_unified">Միասնական</string>
     <string name="projects_diff_split">Բաժանել</string>
-    <string name="projects_diff_empty">Diff հասանելի չէ</string>
+    <string name="projects_diff_empty">Տարբերություն հասանելի չէ</string>
     <string name="projects_board_unassigned">Չվերագրված</string>
     <string name="projects_board_new">Նոր</string>
     <string name="projects_board_rename">Վերանվանել</string>
@@ -106,7 +106,7 @@
     <string name="projects_design_import">Ներմուծել ձևավորումը</string>
     <string name="projects_design_imported">Դիզայնը ներմուծված է</string>
     <string name="projects_design_tab_classes">Դասեր</string>
-    <string name="projects_design_tab_views">Դիտումներ</string>
+    <string name="projects_design_tab_views">Տեսքեր</string>
     <string name="projects_design_import_dialog_title">Ներմուծել ձևավորումը</string>
     <string name="projects_design_import_choose_template">Ընտրեք ձևանմուշ</string>
     <string name="projects_design_replace_title">Փոխարինե՞լ ձևավորումը։</string>
@@ -149,7 +149,7 @@
     <string name="projects_views_type_board">Տախտակ</string>
     <string name="projects_views_type_list">Ցանկ</string>
     <string name="projects_views_direction">Ուղղություն</string>
-    <string name="projects_views_sort_number">Թիվ</string>
+    <string name="projects_views_sort_number">Համար</string>
     <string name="projects_views_sort_created">Ստեղծված</string>
     <string name="projects_views_sort_updated">Թարմացված</string>
     <string name="projects_views_sort_rank">Աստիճան</string>
@@ -158,7 +158,7 @@
     <string name="projects_more">Ավելին</string>
     <string name="projects_request_more">Ավելին</string>
     <string name="projects_comment_send">Ուղարկել</string>
-    <string name="projects_field_position_body">Բովանդակություն</string>
+    <string name="projects_field_position_body">Հիմնական մաս</string>
     <string name="projects_auth_login_failed">Մուտքը ձախողվեց</string>
     <string name="projects_auth_create_identity_failed">Չհաջողվեց ստեղծել ինքնություն</string>
     <string name="projects_auth_mfa_unsupported">MFA-ն դեռ չի աջակցվում բջջային հավելվածում</string>
@@ -180,7 +180,7 @@
     <string name="projects_links_search_placeholder">Որոնել օբյեկտները</string>
 
     <string name="notification_channel_projects">Ծրագրերի ծանուցումներ</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Նախագծեր</string>
     <string name="projects_list_search_placeholder">Փնտրել ծրագրեր</string>
     <string name="projects_list_no_matching">Համապատասխան ծրագրեր չկան</string>
     <string name="projects_list_empty">Դեռ ծրագրեր չկան</string>
@@ -238,9 +238,9 @@
     <string name="projects_request_view_diff">Դիտել տարբերությունը</string>
     <string name="projects_request_mark_ready">Նշել որպես պատրաստ</string>
     <string name="projects_request_merge_default_message">Ձուլել %1$s-ը %2$s-ի մեջ</string>
-    <string name="projects_request_commit_message">Commit հաղորդագրություն</string>
-    <string name="projects_request_method_squash">Squash</string>
-    <string name="projects_request_method_rebase">Rebase</string>
+    <string name="projects_request_commit_message">Կոմիտի հաղորդագրություն</string>
+    <string name="projects_request_method_squash">Միավորել կոմիտները</string>
+    <string name="projects_request_method_rebase">Վերաբազավորել</string>
     <string name="projects_request_create_title">Ստեղծել ձուլման հարցում</string>
     <string name="projects_request_field_target">Թիրախ ճյուղ</string>
     <string name="projects_diff_title">Տարբերություն՝ %1$s -&gt; %2$s</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Ընտրեք կանոն</string>
     <string name="projects_access_authenticated_desc">Ցանկացած մուտք գործած անձ</string>
     <string name="projects_access_anyone_desc">Ներառյալ անանուն օգտատերերը</string>
-    <string name="projects_access_target">Թիրախ</string>
+    <string name="projects_access_target">Օգտատեր կամ խումբ</string>
     <string name="projects_access_target_hint">Էության ID, @խումբ, * (բոլորը), կամ + (անդամներ)</string>
     <string name="projects_access_selected">Ընտրված է՝ %1$s</string>
     <string name="projects_access_role_comment">Մեկնաբանել և դիտել</string>

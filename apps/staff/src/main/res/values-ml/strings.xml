@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">സ്റ്റാഫ്</string>
+    <string name="launcher_staff">Mochi സ്റ്റാഫ്</string>
     <string name="staff_accounts_action_ban_title">അക്കൗണ്ട് വിലക്കുക</string>
     <string name="staff_accounts_action_suspend_title">അക്കൗണ്ട് സസ്പെൻഡ് ചെയ്യുക</string>
     <string name="staff_accounts_action_unban_title">നിരോധനം നീക്കം ചെയ്യുക</string>
@@ -70,7 +70,7 @@
     <string name="staff_audit_action_category_deleted">വിഭാഗം ഇല്ലാതാക്കി</string>
     <string name="staff_audit_action_category_updated">വിഭാഗം അപ്ഡേറ്റ് ചെയ്തു</string>
     <string name="staff_audit_action_config_thresholds_updated">മോഡറേഷൻ പരിധികൾ അപ്ഡേറ്റ് ചെയ്തു</string>
-    <string name="staff_audit_action_config_updated">Config അപ്ഡേറ്റ് ചെയ്തു</string>
+    <string name="staff_audit_action_config_updated">കോൺഫിഗ് അപ്ഡേറ്റ് ചെയ്തു</string>
     <string name="staff_audit_action_dispute_opened">റീഫണ്ട് നൽകി</string>
     <string name="staff_audit_action_dispute_resolved_buyer">റീഫണ്ട് നിരസിച്ചു</string>
     <string name="staff_audit_action_dispute_resolved_seller">റീഫണ്ട് നൽകി</string>
@@ -88,9 +88,9 @@
     <string name="staff_audit_action_listing_updated">ലിസ്റ്റിംഗ് എഡിറ്റ് ചെയ്തു</string>
     <string name="staff_audit_action_listing_warning">മുന്നറിയിപ്പ് നൽകി</string>
     <string name="staff_audit_action_order_cancelled">റദ്ദാക്കി</string>
-    <string name="staff_audit_action_order_chargeback">Chargeback ലഭിച്ചു</string>
-    <string name="staff_audit_action_order_chargeback_lost">Chargeback ശരിവച്ചു</string>
-    <string name="staff_audit_action_order_chargeback_won">Chargeback നിരസിച്ചു</string>
+    <string name="staff_audit_action_order_chargeback">ചാർജ്ബാക്ക് ലഭിച്ചു</string>
+    <string name="staff_audit_action_order_chargeback_lost">ചാർജ്ബാക്ക് ശരിവച്ചു</string>
+    <string name="staff_audit_action_order_chargeback_won">ചാർജ്ബാക്ക് നിരസിച്ചു</string>
     <string name="staff_audit_action_order_completed">പൂർത്തിയായി</string>
     <string name="staff_audit_action_order_created">ഓർഡർ നൽകി</string>
     <string name="staff_audit_action_order_paid">പേയ്മെന്റ് ലഭിച്ചു</string>
@@ -111,9 +111,9 @@
     <string name="staff_audit_action_subscription_active">സജീവത്തിലേക്ക് മടങ്ങി</string>
     <string name="staff_audit_action_subscription_cancel_scheduled">റദ്ദാക്കൽ ഷെഡ്യൂൾ ചെയ്തു</string>
     <string name="staff_audit_action_subscription_cancelled">റദ്ദാക്കി</string>
-    <string name="staff_audit_action_subscription_chargeback">Chargeback ലഭിച്ചു</string>
-    <string name="staff_audit_action_subscription_chargeback_lost">Chargeback ശരിവച്ചു</string>
-    <string name="staff_audit_action_subscription_chargeback_won">Chargeback നിരസിച്ചു</string>
+    <string name="staff_audit_action_subscription_chargeback">ചാർജ്ബാക്ക് ലഭിച്ചു</string>
+    <string name="staff_audit_action_subscription_chargeback_lost">ചാർജ്ബാക്ക് ശരിവച്ചു</string>
+    <string name="staff_audit_action_subscription_chargeback_won">ചാർജ്ബാക്ക് നിരസിച്ചു</string>
     <string name="staff_audit_action_subscription_created">സബ്സ്ക്രിപ്ഷൻ സൃഷ്ടിച്ചു</string>
     <string name="staff_audit_action_subscription_past_due">പേയ്മെന്റ് കാലാവധി കഴിഞ്ഞു</string>
     <string name="staff_audit_action_subscription_paused">താൽക്കാലികമായി നിർത്തി</string>
@@ -155,7 +155,7 @@
     <string name="staff_categories_type_digital">ഡിജിറ്റൽ</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">ഫിസിക്കൽ</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">സ്റ്റാഫ്</string>
     <string name="staff_config_field_auto_approve">സ്വയം-അംഗീകാര പരിധി</string>
     <string name="staff_config_field_hold">ഹോൾഡ് പരിധി</string>
     <string name="staff_config_field_platform_fee">പ്ലാറ്റ്ഫോം ഫീസ്</string>
@@ -219,7 +219,7 @@
     <string name="staff_disputes_empty">തർക്കങ്ങളൊന്നുമില്ല</string>
     <string name="staff_disputes_filter_status_label">സ്റ്റാറ്റസ്</string>
     <string name="staff_disputes_listing_label">#%1$s</string>
-    <string name="staff_disputes_meta_chargeback_fee">Chargeback ഫീസ്</string>
+    <string name="staff_disputes_meta_chargeback_fee">ചാർജ്ബാക്ക് ഫീസ്</string>
     <string name="staff_disputes_meta_evidence_due">തെളിവ് സമർപ്പിക്കേണ്ടത്</string>
     <string name="staff_disputes_meta_listing">ലിസ്റ്റിംഗ്</string>
     <string name="staff_disputes_meta_reason">കാരണം</string>
@@ -241,9 +241,9 @@
     <string name="staff_disputes_resolve">പരിഹരിക്കുക</string>
     <string name="staff_disputes_resolved_toast">തർക്കം പരിഹരിച്ചു</string>
     <string name="staff_disputes_resolving">പരിഹരിക്കുന്നു…</string>
-    <string name="staff_disputes_review">അവലോകനം</string>
+    <string name="staff_disputes_review">പരിശോധിക്കുക</string>
     <string name="staff_disputes_status_escalated">എസ്കലേറ്റ് ചെയ്തു</string>
-    <string name="staff_disputes_status_open">തുറക്കുക</string>
+    <string name="staff_disputes_status_open">തുറന്നത്</string>
     <string name="staff_disputes_status_resolved_buyer">പരിഹരിച്ചു (വാങ്ങുന്നയാൾ)</string>
     <string name="staff_disputes_status_resolved_seller">പരിഹരിച്ചു (വിൽപ്പനക്കാരൻ)</string>
     <string name="staff_disputes_status_responded">പ്രതികരിച്ചു</string>
@@ -296,7 +296,7 @@
     <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">പ്രവർത്തനം</string>
     <string name="staff_reports_action_ban">ഉപയോക്താവിനെ വിലക്കുക</string>
-    <string name="staff_reports_action_dismiss">ഒഴിവാക്കുക</string>
+    <string name="staff_reports_action_dismiss">തള്ളിക്കളയുക</string>
     <string name="staff_reports_action_label">പ്രവർത്തനം</string>
     <string name="staff_reports_action_placeholder">നടപടി തിരഞ്ഞെടുക്കുക</string>
     <string name="staff_reports_action_remove">നീക്കം ചെയ്യുക</string>
@@ -308,7 +308,7 @@
     <string name="staff_reports_cancel">റദ്ദാക്കുക</string>
     <string name="staff_reports_close">അടയ്ക്കുക</string>
     <string name="staff_reports_dialog_title_action">റിപ്പോർട്ടിൽ നടപടിയെടുക്കുക</string>
-    <string name="staff_reports_dialog_title_view">റിപ്പോർട്ട് ചെയ്യുക</string>
+    <string name="staff_reports_dialog_title_view">റിപ്പോർട്ട്</string>
     <string name="staff_reports_empty">റിപ്പോർട്ടുകളൊന്നുമില്ല</string>
     <string name="staff_reports_filter_status_label">സ്റ്റാറ്റസ്</string>
     <string name="staff_reports_filter_type_label">തരം</string>
@@ -316,7 +316,7 @@
     <string name="staff_reports_meta_reason">കാരണം</string>
     <string name="staff_reports_meta_reporter">റിപ്പോർട്ട് ചെയ്തയാൾ</string>
     <string name="staff_reports_meta_seller">വിൽപ്പനക്കാരൻ</string>
-    <string name="staff_reports_meta_target">ലക്ഷ്യം</string>
+    <string name="staff_reports_meta_target">റിപ്പോർട്ട് ചെയ്ത ഇനം</string>
     <string name="staff_reports_meta_type">തരം</string>
     <string name="staff_reports_notes_label">കുറിപ്പുകൾ</string>
     <string name="staff_reports_reason_counterfeit">വ്യാജം അല്ലെങ്കിൽ മോഷ്ടിച്ചത്</string>
@@ -378,7 +378,7 @@
     <string name="staff_status_hold">ഹോൾഡ്</string>
     <string name="staff_status_manual">മാനുവൽ</string>
     <string name="staff_status_moderator">മോഡറേറ്റർ</string>
-    <string name="staff_status_open">തുറക്കുക</string>
+    <string name="staff_status_open">തുറന്നത്</string>
     <string name="staff_status_pending">തീർപ്പുകൽപ്പിക്കാത്തത്</string>
     <string name="staff_status_published">പ്രസിദ്ധീകരിച്ചു</string>
     <string name="staff_status_rejected">നിരസിച്ചു</string>
@@ -414,7 +414,7 @@
     <string name="staff_team_toast_add_failed">അംഗത്തെ ചേർക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="staff_team_toast_removed">അംഗത്തെ നീക്കം ചെയ്തു</string>
     <string name="staff_team_toast_role_updated">റോൾ അപ്ഡേറ്റ് ചെയ്തു</string>
-    <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
+    <string name="staff_audit_action_auction_cancelled">ലേലം റദ്ദാക്കി</string>
     <string name="staff_dashboard_order_fallback">ഓർഡർ #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">കാരണം (നിർബന്ധമല്ല)</string>

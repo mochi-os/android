@@ -8,7 +8,7 @@
     <string name="go_action_pass">ಪಾಸ್</string>
     <string name="go_action_rematch">ಮರು-ಪಂದ್ಯ</string>
     <string name="go_action_resign">ರಾಜೀನಾಮೆ</string>
-    <string name="go_app_title">ಹೋಗಿ</string>
+    <string name="go_app_title">ಗೋ</string>
     <string name="go_captures_black_sr">ಕಪ್ಪು ಸೆರೆಗಳು</string>
     <string name="go_captures_white_sr">ಬಿಳಿ ಸೆರೆಗಳು</string>
     <string name="go_chat_title">ಚಾಟ್</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">ಸೈಡ್‌ಬಾರ್ ತೆರೆಯಿರಿ</string>
     <string name="go_sidebar_active">ಸಕ್ರಿಯ ಆಟಗಳು</string>
     <string name="go_empty_active">ಇನ್ನೂ ಸಕ್ರಿಯ ಆಟಗಳಿಲ್ಲ.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">ರಾಜೀನಾಮೆ ನೀಡಿದ್ದಾರೆ</string>
     <string name="go_new_game_title">ಹೊಸ Go ಆಟ</string>
     <string name="go_new_game_no_friends">ಆಟ ಪ್ರಾರಂಭಿಸುವ ಮೊದಲು ನೀವು ಸ್ನೇಹಿತರನ್ನು ಸೇರಿಸಬೇಕು.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

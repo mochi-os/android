@@ -21,7 +21,7 @@
     <string name="crm_design">Dyluniad</string>
     <string name="crm_export_failed">Methwyd cadw\'r allforio</string>
     <string name="crm_sort_direction">Cyfeiriad</string>
-    <string name="crm_sort_rank">Llawlyfr</string>
+    <string name="crm_sort_rank">Â llaw</string>
     <string name="crm_sort_created">Wedi\'i greu</string>
     <string name="crm_sort_updated">Wedi\'i ddiweddaru</string>
     <string name="crm_create_object_title">Creu gwrthrych</string>
@@ -78,7 +78,7 @@
     <string name="crm_design_or_upload_json">Neu uwchlwythwch ffeil</string>
     <string name="crm_design_upload_json">Llwytho ffeil .json i fyny</string>
     <string name="crm_design_tab_classes">Dosbarthiadau</string>
-    <string name="crm_design_tab_views">Golygfeydd</string>
+    <string name="crm_design_tab_views">Golygon</string>
     <string name="crm_design_import_dialog_title">Mewnforio dyluniad</string>
     <string name="crm_design_import_choose_template">Dewiswch dempled</string>
     <string name="crm_design_replace_title">Ailosod dyluniad?</string>

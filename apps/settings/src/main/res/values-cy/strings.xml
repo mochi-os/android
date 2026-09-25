@@ -45,7 +45,7 @@
     <string name="route_delete_title">Dileu llwybr?</string>
     <string name="route_path">Llwybr</string>
     <string name="route_method">Dull</string>
-    <string name="route_method_app">App</string>
+    <string name="route_method_app">Ap</string>
     <string name="route_method_entity">Endid</string>
     <string name="route_method_redirect">Ailgyfeirio</string>
     <string name="route_priority">Blaenoriaeth</string>
@@ -332,7 +332,7 @@
     <string name="account_close_confirm_title">Cau eich cyfrif?</string>
     <string name="account_close_confirm_body">Bydd eich cyfrif yn cael ei drefnu i\'w ddileu a byddwch yn cael eich allgofnodi. Gallwch ganslo unrhyw bryd cyn y dyddiad dileu drwy fewngofnodi\'n ôl.</string>
     <string name="account_data_download">Lawrlwytho</string>
-    <string name="route_target_app">App</string>
+    <string name="route_target_app">Ap</string>
     <string name="route_target_entity">Endid</string>
     <string name="route_target_url">URL</string>
     <string name="account_data_section">Eich data</string>

@@ -8,7 +8,7 @@
     <string name="go_action_pass">Soirbheachail</string>
     <string name="go_action_rematch">Geama ùr</string>
     <string name="go_action_resign">Leig seachad</string>
-    <string name="go_app_title">Falbh</string>
+    <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Glacaidhean dubha</string>
     <string name="go_captures_white_sr">Glacaidhean geala</string>
     <string name="go_chat_title">Còmhradh</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">Fosgail bàr-taoibh</string>
     <string name="go_sidebar_active">Geamannan gnìomhach</string>
     <string name="go_empty_active">Chan eil geamannan gnìomhach ann fhathast.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">Air leigeil seachad</string>
     <string name="go_new_game_title">Geama Go ùr</string>
     <string name="go_new_game_no_friends">Feumaidh tu caraid a chur ris mus urrainn dhut geama a thòiseachadh.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

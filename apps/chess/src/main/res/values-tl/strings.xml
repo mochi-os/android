@@ -13,7 +13,7 @@
     <string name="chess_new_title">Bagong Laro</string>
     <string name="chess_new_pick_opponent">Pumili ng kalaban</string>
     <string name="chess_new_no_friends_title">Wala pang kaibigan</string>
-    <string name="chess_new_no_friends_subtitle">Magdagdag ng mga kaibigan sa People app para magsimulang maglaro</string>
+    <string name="chess_new_no_friends_subtitle">Magdagdag ng mga kaibigan sa app na Mga Tao para magsimulang maglaro</string>
     <string name="chess_new_add_friends">Magdagdag ng mga kaibigan</string>
     <string name="chess_new_start_button">Simulan ang laro</string>
     <string name="chess_new_creating">Ginagawa…</string>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="crm_list_title">CRMs</string>
+    <string name="crm_list_title">CRMnaka</string>
     <string name="crm_list_search">Thaqhama</string>
     <string name="crm_list_find">CRMnak jikxataña</string>
     <string name="crm_list_logout">Mistuña</string>
@@ -77,8 +77,8 @@
     <string name="crm_design_import_failed">Uka qillqata ullañjamäkiti</string>
     <string name="crm_design_or_upload_json">Jan ukax mä qillqata apsuña</string>
     <string name="crm_design_upload_json">Machaq Versión Apayaña</string>
-    <string name="crm_design_tab_classes">Classes</string>
-    <string name="crm_design_tab_views">Uñjatanaka</string>
+    <string name="crm_design_tab_classes">Clasenaka</string>
+    <string name="crm_design_tab_views">Uñjäwinaka</string>
     <string name="crm_design_import_dialog_title">Diseño mantayaña</string>
     <string name="crm_design_import_choose_template">Mä template ajllxaña</string>
     <string name="crm_design_replace_title">¿Diseño turkama?</string>

@@ -12,11 +12,11 @@
     <string name="account_section_passkeys">Калидҳои дастрасӣ</string>
     <string name="account_passkey_register">Иловаи калиди гузар</string>
     <string name="account_passkey_delete_title">Калиди гузарро нест кунем?</string>
-    <string name="account_section_totp">Барномаи Authenticator</string>
+    <string name="account_section_totp">Барномаи аутентификатор</string>
     <string name="account_totp_setup">Аутентификаторро танзим кунед</string>
     <string name="account_totp_setup_title">Аутентификаторро танзим кунед</string>
     <string name="account_totp_verify">Тасдиқ кардан</string>
-    <string name="account_totp_disable_title">Authenticator-ро ғайрифаъол кунем?</string>
+    <string name="account_totp_disable_title">Аутентификаторро ғайрифаъол кунем?</string>
     <string name="account_section_recovery">Рамзҳои барқарорсозӣ</string>
     <string name="account_recovery_codes_title">Рамзҳои барқарорсозӣ</string>
     <string name="sessions_unknown_agent">Дастгоҳи номаълум</string>
@@ -123,7 +123,7 @@
     <string name="system_settings_section_oauth">Воридшавӣ аз тарафи сеюм</string>
     <string name="system_settings_section_user_defaults">Пешфарзҳои корбар</string>
     <string name="system_settings_section_operator">Оператор</string>
-    <string name="system_settings_section_push">Огоҳиҳои push</string>
+    <string name="system_settings_section_push">Огоҳиҳои пуш</string>
     <string name="system_settings_section_other">Танзимоти дигар</string>
     <string name="system_settings_state_disabled">Ғайрифаъолшуда</string>
     <string name="system_settings_state_allowed">Иҷозатдодашуда</string>
@@ -137,7 +137,7 @@
     <string name="system_settings_reset_title">Барқарорсозӣ ба нобаёнӣ?</string>
     <string name="system_setting_apps_install_user">Иҷозати насби барномаҳо ба корбарон</string>
     <string name="system_setting_auth_email">Воридшавӣ бо рамзи email</string>
-    <string name="system_setting_auth_passkey">Воридшавӣ бо passkey</string>
+    <string name="system_setting_auth_passkey">Воридшавӣ бо калиди дастрасӣ</string>
     <string name="system_setting_auth_totp">Воридшавӣ бо барномаи аутентификатори TOTP</string>
     <string name="system_setting_auth_recovery">Воридшавӣ бо рамзи барқароркунӣ</string>
     <string name="system_setting_auth_oauth">Воридшавӣ бо OAuth 2.0</string>
@@ -151,9 +151,9 @@
     <string name="system_setting_oauth_github_client_secret">Сирри муштарии GitHub</string>
     <string name="system_setting_oauth_microsoft_client_id">ID-и муштарии Microsoft</string>
     <string name="system_setting_oauth_microsoft_client_secret">Сирри муштарии Microsoft</string>
-    <string name="system_setting_oauth_microsoft_tenant">Tenant-и Microsoft</string>
-    <string name="system_setting_oauth_facebook_client_id">ID-и Facebook App</string>
-    <string name="system_setting_oauth_facebook_client_secret">Сирри Facebook App</string>
+    <string name="system_setting_oauth_microsoft_tenant">Тенанти Microsoft</string>
+    <string name="system_setting_oauth_facebook_client_id">ID-и барномаи Facebook</string>
+    <string name="system_setting_oauth_facebook_client_secret">Сирри барномаи Facebook</string>
     <string name="system_setting_oauth_x_client_id">ID-и муштарии X</string>
     <string name="system_setting_oauth_x_client_secret">Сирри муштарии X</string>
     <string name="system_setting_fcm_firebase_config">Файли Firebase google-services.json</string>
@@ -315,7 +315,7 @@
     <string name="login_section_methods">Усулҳои воридшавӣ</string>
     <string name="login_method_email">Рамзи email</string>
     <string name="login_method_passkey">Калиди дастрасӣ</string>
-    <string name="login_method_totp">Барномаи Authenticator</string>
+    <string name="login_method_totp">Барномаи аутентификатор</string>
     <string name="login_method_oauth">Воридшавӣ аз тарафи сеюм</string>
     <string name="login_method_recovery">Рамзҳои барқарорсозӣ</string>
     <string name="account_close_section">Ҳисобро бастан</string>
@@ -341,7 +341,7 @@
     <string name="system_status_reachability_private">Хусусӣ</string>
     <string name="system_status_reachability_unknown">Номаълум</string>
     <string name="system_status_relay">Тавассути реле</string>
-    <string name="system_status_mesh">Mesh-и пахш</string>
+    <string name="system_status_mesh">Меши пахш</string>
     <string name="system_status_broadcast">Пахши охирин</string>
     <string name="system_status_queued_broadcasts">Паёмҳои пахши навбатӣ</string>
     <string name="system_setting_hostname_publish">Эълони номи ҳост ва доменҳо ба серверҳои дигар</string>
@@ -357,9 +357,9 @@
     <string name="route_target_none">Ҳадафҳои дастрас нестанд</string>
     <string name="login_invalid_code">Рамзи нодуруст</string>
     <string name="accounts_provider_browser">Огоҳиномаҳои браузер</string>
-    <string name="accounts_provider_fcm">Push барои Android</string>
+    <string name="accounts_provider_fcm">Огоҳиҳои пуш барои Android</string>
     <string name="accounts_provider_mcp">Сервери MCP</string>
-    <string name="accounts_provider_unifiedpush">Огоҳиномаи push</string>
+    <string name="accounts_provider_unifiedpush">Огоҳиномаи пуш</string>
     <string name="accounts_provider_url">URL-и берунӣ</string>
     <string name="accounts_provider_web">Mochi веб</string>
     <string name="accounts_verified">Ҳисоб тасдиқ карда шуд</string>
@@ -378,7 +378,7 @@
     <string name="notifprefs_device_push">%1$s · пуш</string>
     <string name="notifprefs_test_partial">Тест ба %1$d аз %2$d ҷои таъинот фиристода шуд</string>
     <string name="notifprefs_test_none">Ягон ҷои таъинот танзим нашудааст</string>
-    <string name="notifprefs_transport_fcm">Push барои Android</string>
+    <string name="notifprefs_transport_fcm">Огоҳиҳои пуш барои Android</string>
     <string name="notifprefs_no_destinations">Бидуни таъинот</string>
     <string name="account_data_generate">Ибораи рамзиро тавлид кунед</string>
     <string name="accounts_field_server">URL сервер</string>

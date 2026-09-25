@@ -10,7 +10,7 @@
     <string name="calendars_delete">Избриши</string>
     <string name="calendars_previous">Претходно</string>
     <string name="calendars_next">Следно</string>
-    <string name="calendars_view">Прикажи</string>
+    <string name="calendars_view">Приказ</string>
     <string name="calendars_view_list">Листа</string>
     <string name="calendars_list_search">Барај</string>
     <string name="calendars_event_untitled">Без наслов</string>
@@ -169,7 +169,7 @@
     <string name="calendars_subscribe_server_url">Адреса на серверот</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google Календар</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Сметките на Google не се овозможени на овој сервер. Овозможи ги во Поставки, Системски поставки.</string>
     <string name="calendars_subscribe_google_connect">Не си поврзал сметка на Google.</string>

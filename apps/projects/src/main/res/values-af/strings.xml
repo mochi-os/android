@@ -99,14 +99,14 @@
     <string name="projects_board_rename">Hernoem</string>
     <string name="projects_board_rename_column">Hernoem kolom</string>
     <string name="projects_move_position">Posisie</string>
-    <string name="projects_move_position_top">Bo</string>
+    <string name="projects_move_position_top">Boaan</string>
     <string name="projects_move_current">Huidig</string>
     <string name="projects_design_title">Ontwerp</string>
     <string name="projects_design_export">Voer ontwerp uit</string>
     <string name="projects_design_import">Voer ontwerp in</string>
     <string name="projects_design_imported">Ontwerp ingevoer</string>
     <string name="projects_design_tab_classes">Klasse</string>
-    <string name="projects_design_tab_views">Bekykings</string>
+    <string name="projects_design_tab_views">Aansigte</string>
     <string name="projects_design_import_dialog_title">Voer ontwerp in</string>
     <string name="projects_design_import_choose_template">Kies \'n sjabloon</string>
     <string name="projects_design_replace_title">Vervang ontwerp?</string>
@@ -123,7 +123,7 @@
     <string name="projects_class_delete">Verwyder klas</string>
     <string name="projects_class_delete_title">Verwyder klas</string>
     <string name="projects_field_type_text">Teks</string>
-    <string name="projects_field_type_number">Nommer</string>
+    <string name="projects_field_type_number">Getal</string>
     <string name="projects_field_type_user">Gebruiker</string>
     <string name="projects_field_type_date">Datum</string>
     <string name="projects_field_type_checklist">Kontrolelys</string>
@@ -160,7 +160,7 @@
     <string name="projects_comment_send">Stuur</string>
 
     <string name="notification_channel_projects">Projekte-kennisgewings</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Projekte</string>
     <string name="projects_auth_login_failed">Aanmelding het misluk</string>
     <string name="projects_auth_create_identity_failed">Kon nie identiteit skep nie</string>
     <string name="projects_auth_mfa_unsupported">MFA word nog nie in die mobiele toepassing ondersteun nie</string>
@@ -285,7 +285,7 @@
     <string name="projects_field_multi">Multikeuse</string>
     <string name="projects_field_position">Vertoonposisie</string>
     <string name="projects_field_position_header">Kopstuk</string>
-    <string name="projects_field_position_body">Liggaam</string>
+    <string name="projects_field_position_body">Inhoud</string>
     <string name="projects_field_validation">Validering</string>
     <string name="projects_field_min_length">Min lengte</string>
     <string name="projects_field_max_length">Maks lengte</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Kies \'n reël</string>
     <string name="projects_access_authenticated_desc">Enigiemand wat aangemeld is</string>
     <string name="projects_access_anyone_desc">Insluitend anonieme gebruikers</string>
-    <string name="projects_access_target">Teiken</string>
+    <string name="projects_access_target">Gebruiker of groep</string>
     <string name="projects_access_target_hint">Entiteits-ID, @groep, * (almal) of + (lede)</string>
     <string name="projects_access_selected">Gekies: %1$s</string>
     <string name="projects_access_role_comment">Kommentaar lewer en bekyk</string>

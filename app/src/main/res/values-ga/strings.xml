@@ -5,15 +5,15 @@
     <string name="launcher_chat">Mochi Comhrá</string>
     <string name="launcher_forums">Mochi Fóraim</string>
     <string name="launcher_projects">Mochi Tionscadail</string>
-    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_crm">Mochi BCC</string>
     <string name="launcher_people">Mochi Daoine</string>
     <string name="launcher_settings">Mochi Socruithe</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Vicíonna</string>
     <string name="launcher_chess">Mochi Ficheall</string>
     <string name="launcher_go">Mochi Go</string>
     <string name="launcher_words">Mochi Focail</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi Margadh</string>
     <string name="launcher_calendars">Mochi Féilirí</string>
     <string name="launcher_staff">Mochi Foireann</string>
 

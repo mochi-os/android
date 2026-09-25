@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Marktplaats</string>
+    <string name="app_name">Markt</string>
     <string name="market_account_biography_label">Biografie</string>
     <string name="market_account_location_label">Locatie</string>
     <string name="market_account_save">Opslaan</string>
@@ -44,7 +44,7 @@
     <string name="market_bids_tab_outbid">Overboden</string>
     <string name="market_bids_tab_won">Gewonnen</string>
     <string name="market_bids_title">Biedingen</string>
-    <string name="market_channel_name">Marktplaats</string>
+    <string name="market_channel_name">Markt</string>
     <string name="market_chargeback_reason_bank_cannot_process">Bank kon niet verwerken</string>
     <string name="market_chargeback_reason_check_returned">Cheque geretourneerd</string>
     <string name="market_chargeback_reason_credit_not_processed">Credit niet verwerkt</string>
@@ -107,7 +107,7 @@
     <string name="market_editor_asset_external_filename">Bestandsnaam</string>
     <string name="market_editor_back">Terug</string>
     <string name="market_editor_category">Categorie</string>
-    <string name="market_editor_condition">Voorwaarde</string>
+    <string name="market_editor_condition">Conditie</string>
     <string name="market_editor_condition_new">Nieuw</string>
     <string name="market_editor_condition_refurbished">Gerefurbished</string>
     <string name="market_editor_condition_used">Gebruikt</string>
@@ -149,7 +149,7 @@
     <string name="market_filter_apply">Toepassen</string>
     <string name="market_filter_category">Categorie</string>
     <string name="market_filter_clear">Filters wissen</string>
-    <string name="market_filter_condition">Voorwaarde</string>
+    <string name="market_filter_condition">Conditie</string>
     <string name="market_filter_condition_new">Nieuw</string>
     <string name="market_filter_condition_refurbished">Gerefurbished</string>
     <string name="market_filter_condition_used">Gebruikt</string>
@@ -183,7 +183,7 @@
     <string name="market_listing_detail_load_failed">Aanbieding laden mislukt</string>
     <string name="market_listing_detail_listed">Geplaatst op %1$s</string>
     <string name="market_listing_detail_location_heading">Locatie</string>
-    <string name="market_listing_detail_message">Bericht</string>
+    <string name="market_listing_detail_message">Bericht sturen</string>
     <string name="market_listing_detail_message_seller">Bericht naar verkoper</string>
     <string name="market_listing_detail_not_found">Aanbieding niet gevonden</string>
     <string name="market_listing_detail_place_bid">Bod plaatsen</string>
@@ -400,7 +400,7 @@
     <string name="market_subscriptions_resume_failed">Hervatten mislukt</string>
     <string name="market_subscriptions_resumed">Abonnement hervat</string>
     <string name="market_subscriptions_title">Abonnementen</string>
-    <string name="market_title">Marktplaats</string>
+    <string name="market_title">Markt</string>
     <string name="market_type_digital">Digitaal</string>
     <string name="market_type_physical">Fysiek</string>
     <string name="market_messages_send">Verzenden</string>

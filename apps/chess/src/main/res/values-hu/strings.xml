@@ -13,7 +13,7 @@
     <string name="chess_new_title">Új játék</string>
     <string name="chess_new_pick_opponent">Ellenfél kiválasztása</string>
     <string name="chess_new_no_friends_title">Még nincsenek barátok</string>
-    <string name="chess_new_no_friends_subtitle">A játék megkezdéséhez vegyen fel barátokat az Emberek alkalmazásban</string>
+    <string name="chess_new_no_friends_subtitle">A játék megkezdéséhez vegyen fel barátokat a Személyek alkalmazásban</string>
     <string name="chess_new_add_friends">Barátok hozzáadása</string>
     <string name="chess_new_start_button">Játék indítása</string>
     <string name="chess_new_creating">Létrehozás…</string>

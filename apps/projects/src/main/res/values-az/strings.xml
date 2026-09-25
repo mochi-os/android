@@ -28,7 +28,7 @@
     <string name="projects_design">Dizayn</string>
     <string name="projects_sort_label">Sırala</string>
     <string name="projects_sort_direction">İstiqamət</string>
-    <string name="projects_sort_rank">Manual</string>
+    <string name="projects_sort_rank">Əl ilə</string>
     <string name="projects_sort_number">Nömrə</string>
     <string name="projects_sort_created">Yaradıldı</string>
     <string name="projects_sort_updated">Yeniləndi</string>
@@ -106,7 +106,7 @@
     <string name="projects_design_import">Dizaynı idxal et</string>
     <string name="projects_design_imported">Dizayn idxal edildi</string>
     <string name="projects_design_tab_classes">Siniflər</string>
-    <string name="projects_design_tab_views">Baxışlar</string>
+    <string name="projects_design_tab_views">Görünüşlər</string>
     <string name="projects_design_import_dialog_title">Dizaynı idxal et</string>
     <string name="projects_design_import_choose_template">Şablon seçin</string>
     <string name="projects_design_replace_title">Dizaynı əvəz edək?</string>
@@ -123,7 +123,7 @@
     <string name="projects_class_delete">Sinifi sil</string>
     <string name="projects_class_delete_title">Sinifi sil</string>
     <string name="projects_field_type_text">Mətn</string>
-    <string name="projects_field_type_number">Nömrə</string>
+    <string name="projects_field_type_number">Rəqəm</string>
     <string name="projects_field_type_user">İstifadəçi</string>
     <string name="projects_field_type_date">Tarix</string>
     <string name="projects_field_type_checklist">Yoxlama siyahısı</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Qayda seçin</string>
     <string name="projects_access_authenticated_desc">Daxil olmuş hər kəs</string>
     <string name="projects_access_anyone_desc">Anonim istifadəçilər daxil olmaqla</string>
-    <string name="projects_access_target">Hədəf</string>
+    <string name="projects_access_target">İstifadəçi və ya qrup</string>
     <string name="projects_access_target_hint">Subyekt ID, @qrup, * (hamı) və ya + (üzvlər)</string>
     <string name="projects_access_selected">Seçilmiş: %1$s</string>
     <string name="projects_access_role_comment">Şərh və bax</string>

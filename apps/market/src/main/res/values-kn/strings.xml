@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ಮಾರ್ಕೆಟ್</string>
+    <string name="app_name">ಮಾರುಕಟ್ಟೆ</string>
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_label">ಜೀವನಚರಿತ್ರೆ</string>
     <string name="market_account_biography_placeholder">ಖರೀದಿದಾರರಿಗೆ ನಿಮ್ಮ ಬಗ್ಗೆ ತಿಳಿಸಿ…</string>
@@ -31,7 +31,7 @@
     <string name="market_appeal_dialog_submitting">ಕಳುಹಿಸಲಾಗುತ್ತಿದೆ…</string>
     <string name="market_appeal_dialog_success">ಮನವಿ ಸಲ್ಲಿಸಲಾಗಿದೆ</string>
     <string name="market_appeal_dialog_title">ತೆಗೆಯುವಿಕೆ ಮನವಿ</string>
-    <string name="market_asset_download">ಡೌನ್‌ಲೋಡ್</string>
+    <string name="market_asset_download">ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
     <string name="market_back">ಹಿಂದೆ</string>
     <string name="market_bid_dialog_amount_label">ನಿಮ್ಮ ಬಿಡ್</string>
@@ -54,7 +54,7 @@
     <string name="market_bids_tab_won">ಗೆದ್ದಿತು</string>
     <string name="market_bids_title">ಬಿಡ್‌ಗಳು</string>
     <string name="market_carousel_main">ಫೋಟೋ %1$d / %2$d</string>
-    <string name="market_channel_name">ಮಾರ್ಕೆಟ್</string>
+    <string name="market_channel_name">ಮಾರುಕಟ್ಟೆ</string>
     <string name="market_chargeback_reason_bank_cannot_process">ಬ್ಯಾಂಕ್ ಪ್ರಕ್ರಿಯೆಗೊಳಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
     <string name="market_chargeback_reason_check_returned">ಚೆಕ್ ಹಿಂದಿರುಗಿಸಲಾಗಿದೆ</string>
     <string name="market_chargeback_reason_credit_not_processed">ಕ್ರೆಡಿಟ್ ಪ್ರಕ್ರಿಯೆಗೊಳಿಸಲಾಗಿಲ್ಲ</string>
@@ -225,7 +225,7 @@
     <string name="market_listing_detail_load_failed">ಲಿಸ್ಟಿಂಗ್ ಲೋಡ್ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ</string>
     <string name="market_listing_detail_listed">ಪಟ್ಟಿ ಮಾಡಲಾಗಿದೆ %1$s</string>
     <string name="market_listing_detail_location_heading">ಸ್ಥಳ</string>
-    <string name="market_listing_detail_message">ಸಂದೇಶ</string>
+    <string name="market_listing_detail_message">ಸಂದೇಶ ಕಳುಹಿಸಿ</string>
     <string name="market_listing_detail_message_seller">ಮಾರಾಟಗಾರರಿಗೆ ಸಂದೇಶ ಕಳುಹಿಸಿ</string>
     <string name="market_listing_detail_not_found">ಲಿಸ್ಟಿಂಗ್ ಸಿಗಲಿಲ್ಲ</string>
     <string name="market_listing_detail_place_bid">ಬಿಡ್ ಸಲ್ಲಿಸಿ</string>
@@ -265,8 +265,8 @@
     <string name="market_messages_send">ಕಳುಹಿಸಿ</string>
     <string name="market_messages_thread_listing_chip">ಲಿಸ್ಟಿಂಗ್</string>
     <string name="market_messages_thread_title">ಸಂಭಾಷಣೆ</string>
-    <string name="market_onboarding_activate">Activate</string>
-    <string name="market_onboarding_activating">Activating…</string>
+    <string name="market_onboarding_activate">ಸಕ್ರಿಯಗೊಳಿಸಿ</string>
+    <string name="market_onboarding_activating">ಸಕ್ರಿಯಗೊಳಿಸಲಾಗುತ್ತಿದೆ…</string>
     <string name="market_onboarding_body">ಖರೀದಿ ಮತ್ತು ಮಾರಾಟ ಪ್ರಾರಂಭಿಸಲು ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ.</string>
     <string name="market_onboarding_dismiss">ತಿರಸ್ಕರಿಸಿ</string>
     <string name="market_onboarding_title">Market ಗೆ ಸುಸ್ವಾಗತ</string>
@@ -367,7 +367,7 @@
     <string name="market_sale_carrier_other">ಇತರ</string>
     <string name="market_sale_completed_label">ಪೂರ್ಣಗೊಂಡಿದೆ</string>
     <string name="market_sale_dispute_respond">ಪ್ರತಿಕ್ರಿಯಿಸಿ</string>
-    <string name="market_sale_dispute_state_open">ತೆರೆಯಿರಿ</string>
+    <string name="market_sale_dispute_state_open">ತೆರೆದಿದೆ</string>
     <string name="market_sale_dispute_state_resolved">ಪರಿಹರಿಸಲಾಗಿದೆ</string>
     <string name="market_sale_load_failed">ಆರ್ಡರ್ ಲೋಡ್ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ</string>
     <string name="market_sale_message_buyer">ಖರೀದಿದಾರರಿಗೆ ಸಂದೇಶ ಕಳುಹಿಸಿ</string>
@@ -389,7 +389,7 @@
     <string name="market_sale_title">ಮಾರಾಟ</string>
     <string name="market_sale_tracking_label">ಟ್ರ್ಯಾಕಿಂಗ್ ಸಂಖ್ಯೆ</string>
     <string name="market_sales_title">ನನ್ನ ಮಾರಾಟಗಳು</string>
-    <string name="market_saved_title">ಉಳಿಸಲಾಗಿದೆ</string>
+    <string name="market_saved_title">ಉಳಿಸಿದವು</string>
     <string name="market_search_clear">ಹುಡುಕಾಟ ತೆರವುಗೊಳಿಸಿ</string>
     <string name="market_search_placeholder">ಮಾರ್ಕೆಟ್ ಹುಡುಕಿ</string>
     <string name="market_section_categories">ವರ್ಗಗಳನ್ನು ವೀಕ್ಷಿಸಿ</string>
@@ -414,7 +414,7 @@
     <string name="market_sidebar_purchases">ಖರೀದಿಗಳು</string>
     <string name="market_sidebar_reviews">ವಿಮರ್ಶೆಗಳು</string>
     <string name="market_sidebar_sales">ಮಾರಾಟಗಳು</string>
-    <string name="market_sidebar_saved">ಉಳಿಸಲಾಗಿದೆ</string>
+    <string name="market_sidebar_saved">ಉಳಿಸಿದವು</string>
     <string name="market_sidebar_selling">ಮಾರಾಟ ಮಾಡಲಾಗುತ್ತಿದೆ</string>
     <string name="market_sidebar_settings">ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
     <string name="market_sidebar_subscribers">ಚಂದಾದಾರರು</string>
@@ -433,18 +433,18 @@
     <string name="market_subscribers_interval_month">/ ತಿಂಗಳು</string>
     <string name="market_subscribers_interval_year">/ ವರ್ಷ</string>
     <string name="market_subscribers_load_failed">ಚಂದಾದಾರರನ್ನು ಲೋಡ್ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ</string>
-    <string name="market_subscription_detail_billing_history">Billing history</string>
+    <string name="market_subscription_detail_billing_history">ಬಿಲ್ಲಿಂಗ್ ಇತಿಹಾಸ</string>
     <string name="market_subscription_detail_billing_history_empty">ಇನ್ನೂ ಯಾವುದೇ ಶುಲ್ಕಗಳಿಲ್ಲ.</string>
-    <string name="market_subscription_detail_billing_info">Billing</string>
-    <string name="market_subscription_detail_cancelled_on">Cancelled on %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Latest charge: %1$s</string>
+    <string name="market_subscription_detail_billing_info">ಬಿಲ್ಲಿಂಗ್</string>
+    <string name="market_subscription_detail_cancelled_on">%1$s ರಂದು ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ</string>
+    <string name="market_subscription_detail_charge_amount">ಇತ್ತೀಚಿನ ಶುಲ್ಕ: %1$s</string>
     <string name="market_subscription_detail_listing">ಲಿಸ್ಟಿಂಗ್</string>
     <string name="market_subscription_detail_load_failed">ಚಂದಾದಾರಿಕೆಯನ್ನು ಲೋಡ್ ಮಾಡಲಾಗಲಿಲ್ಲ</string>
     <string name="market_subscription_detail_next_billing">ಮುಂದಿನ ಬಿಲ್ಲಿಂಗ್ ದಿನಾಂಕ: %1$s</string>
     <string name="market_subscription_detail_not_found">ಚಂದಾದಾರಿಕೆ ಸಿಗಲಿಲ್ಲ</string>
-    <string name="market_subscription_detail_pending_cancel">Cancellation pending</string>
+    <string name="market_subscription_detail_pending_cancel">ರದ್ದತಿ ಬಾಕಿ ಇದೆ</string>
     <string name="market_subscription_detail_seller">ಮಾರಾಟಗಾರ</string>
-    <string name="market_subscription_detail_started">Started %1$s</string>
+    <string name="market_subscription_detail_started">%1$s ರಂದು ಪ್ರಾರಂಭವಾಯಿತು</string>
     <string name="market_subscription_detail_title">ಚಂದಾ</string>
     <string name="market_subscriptions_action_cancel">ರದ್ದುಮಾಡಿ</string>
     <string name="market_subscriptions_action_pause">ಪಾಸ್</string>
@@ -466,12 +466,12 @@
     <string name="market_subscriptions_resume_failed">ಪುನರಾರಂಭಿಸಲು ವಿಫಲವಾಗಿದೆ</string>
     <string name="market_subscriptions_resumed">ಸಬ್‌ಸ್ಕ್ರಿಪ್ಶನ್ ಮುಂದುವರಿಸಲಾಗಿದೆ</string>
     <string name="market_subscriptions_title">ಸಬ್‌ಸ್ಕ್ರಿಪ್ಶನ್‌ಗಳು</string>
-    <string name="market_title">ಮಾರ್ಕೆಟ್</string>
+    <string name="market_title">ಮಾರುಕಟ್ಟೆ</string>
     <string name="market_type_digital">ಡಿಜಿಟಲ್</string>
     <string name="market_type_physical">ಭೌತಿಕ</string>
     <string name="market_warnings_title">ಎಚ್ಚರಿಕೆಗಳು</string>
     <string name="market_sale_review_response_submitting">ಸಲ್ಲಿಸಲಾಗುತ್ತಿದೆ…</string>
-    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_checkout_subscribing">ಚಂದಾದಾರರಾಗಲಾಗುತ್ತಿದೆ…</string>
     <string name="market_filter_remove">ಫಿಲ್ಟರ್ ತೆಗೆದುಹಾಕಿ</string>
     <string name="market_listings_action_appeal">ತೆಗೆಯುವಿಕೆ ಮನವಿ</string>
     <string name="market_listings_share_chooser">ಹಂಚಿಕೊಳ್ಳಿ</string>
@@ -690,7 +690,7 @@
     <string name="market_seller_step_activate_title">ಮಾರಾಟಗಾರ ಖಾತೆಯನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ</string>
     <string name="market_seller_step_stripe_desc">ಖರೀದಿದಾರರಿಂದ ಪಾವತಿಗಳನ್ನು ಸ್ವೀಕರಿಸಲು Stripe ಖಾತೆಯನ್ನು ಲಿಂಕ್ ಮಾಡಿ</string>
     <string name="market_seller_step_stripe_title">Stripe ಸಂಪರ್ಕಿಸಿ</string>
-    <string name="market_seller_stripe_more_info">ನೀವು ಪಾವತಿಗಳನ್ನು ಸ್ವೀಕರಿಸುವ ಮೊದಲು Stripe ಗೆ ಹೆಚ್ಚಿನ ಮಾಹಿತಿಯ ಅಗತ್ಯವಿದೆ. ನಿಮ್ಮ Stripe Dashboard ನಲ್ಲಿ ಅವಶ್ಯಕತೆಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ, ನಂತರ ಸ್ಥಿತಿ ಪರಿಶೀಲಿಸಿ ಕ್ಲಿಕ್ ಮಾಡಿ.</string>
+    <string name="market_seller_stripe_more_info">ನೀವು ಪಾವತಿಗಳನ್ನು ಸ್ವೀಕರಿಸುವ ಮೊದಲು Stripe ಗೆ ಹೆಚ್ಚಿನ ಮಾಹಿತಿಯ ಅಗತ್ಯವಿದೆ. ನಿಮ್ಮ Stripe ಡ್ಯಾಶ್‌ಬೋರ್ಡ್‌ನಲ್ಲಿ ಅವಶ್ಯಕತೆಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ, ನಂತರ ಸ್ಥಿತಿ ಪರಿಶೀಲಿಸಿ ಕ್ಲಿಕ್ ಮಾಡಿ.</string>
     <string name="market_seller_summary_account_status">ಖಾತೆಯ ಸ್ಥಿತಿ</string>
     <string name="market_seller_summary_fees">ಶುಲ್ಕಗಳು</string>
     <string name="market_seller_summary_payments">ಪಾವತಿಗಳು</string>

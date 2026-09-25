@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">मार्केट</string>
+    <string name="app_name">बाजार</string>
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_label">जीवनी</string>
     <string name="market_account_biography_placeholder">खरीददारन के अपना बारे में बताईं…</string>
@@ -16,7 +16,7 @@
     <string name="market_account_seller_step_stripe_desc">खरीददारन से भुगतान लेबे खातिर Stripe खाता जोड़ीं</string>
     <string name="market_account_seller_fees_heading">शुल्क:</string>
     <string name="market_account_seller_fees_mochi">Mochi हर बिक्री से %1$s%% लेला।</string>
-    <string name="market_account_seller_fees_stripe">Stripe हर लेनदेन पर आपन प्रोसेसिंग शुल्क आ हर चार्जबैक पर एगो तय शुल्क लेला। राउर मुद्रा आ क्षेत्र खातिर मौजूदा दर राउर Stripe Dashboard में देखाई दीहल जाला।</string>
+    <string name="market_account_seller_fees_stripe">Stripe हर लेनदेन पर आपन प्रोसेसिंग शुल्क आ हर चार्जबैक पर एगो तय शुल्क लेला। राउर मुद्रा आ क्षेत्र खातिर मौजूदा दर राउर Stripe डैशबोर्ड में देखाई दीहल जाला।</string>
     <string name="market_account_seller_connect">Stripe जोड़ीं</string>
     <string name="market_account_seller_step_stripe_title">Stripe जोड़ीं</string>
     <string name="market_account_seller_check_status">स्थिति देखीं</string>
@@ -32,7 +32,7 @@
     <string name="market_appeal_dialog_submitting">भेजल जा रहल बा…</string>
     <string name="market_appeal_dialog_success">अपील जमा कइल गइल</string>
     <string name="market_appeal_dialog_title">हटावे के अपील</string>
-    <string name="market_asset_download">डाउनलोड</string>
+    <string name="market_asset_download">डाउनलोड करीं</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
     <string name="market_back">वापस</string>
     <string name="market_bid_dialog_amount_label">रउआ के बोली</string>
@@ -55,12 +55,12 @@
     <string name="market_bids_tab_won">जीतल</string>
     <string name="market_bids_title">बोली</string>
     <string name="market_carousel_main">फोटो %1$d / %2$d</string>
-    <string name="market_channel_name">मार्केट</string>
+    <string name="market_channel_name">बाजार</string>
     <string name="market_chargeback_reason_bank_cannot_process">बैंक प्रक्रिया ना कर सकल</string>
     <string name="market_chargeback_reason_check_returned">चेक वापस आइल</string>
-    <string name="market_chargeback_reason_credit_not_processed">Credit संसाधित ना भइल</string>
+    <string name="market_chargeback_reason_credit_not_processed">क्रेडिट संसाधित ना भइल</string>
     <string name="market_chargeback_reason_customer_initiated">ग्राहक द्वारा शुरू कइल</string>
-    <string name="market_chargeback_reason_debit_not_authorized">Debit अधिकृत नइखे</string>
+    <string name="market_chargeback_reason_debit_not_authorized">डेबिट अधिकृत नइखे</string>
     <string name="market_chargeback_reason_duplicate">दोहरा चार्ज</string>
     <string name="market_chargeback_reason_fraudulent">धोखाधड़ी वाला</string>
     <string name="market_chargeback_reason_general">सामान्य</string>
@@ -105,7 +105,7 @@
     <string name="market_checkout_subscribe_title">सदस्यता लीं</string>
     <string name="market_checkout_subscription_start_failed">सब्सक्रिप्शन शुरू ना हो पावल</string>
     <string name="market_checkout_summary">ऑर्डर सारांश</string>
-    <string name="market_checkout_title">Checkout</string>
+    <string name="market_checkout_title">चेकआउट</string>
     <string name="market_checkout_total">कुल</string>
     <string name="market_checkout_winning_bid">जीते वाली बोली</string>
     <string name="market_condition_new">नया</string>
@@ -128,7 +128,7 @@
     <string name="market_editor_back">वापस</string>
     <string name="market_editor_category">श्रेणी</string>
     <string name="market_editor_category_none">श्रेणी चुनीं</string>
-    <string name="market_editor_condition">शर्त</string>
+    <string name="market_editor_condition">स्थिति</string>
     <string name="market_editor_condition_new">नया</string>
     <string name="market_editor_condition_refurbished">नवीनीकृत</string>
     <string name="market_editor_condition_used">उपयोग कइल गइल</string>
@@ -189,7 +189,7 @@
     <string name="market_filter_apply">लागू करीं</string>
     <string name="market_filter_category">श्रेणी</string>
     <string name="market_filter_clear">फिल्टर साफ करीं</string>
-    <string name="market_filter_condition">शर्त</string>
+    <string name="market_filter_condition">स्थिति</string>
     <string name="market_filter_condition_new">नया</string>
     <string name="market_filter_condition_refurbished">नवीनीकृत</string>
     <string name="market_filter_condition_used">उपयोग कइल गइल</string>
@@ -226,7 +226,7 @@
     <string name="market_listing_detail_load_failed">लिस्टिंग लोड करे में विफल</string>
     <string name="market_listing_detail_listed">सूचीबद्ध %1$s</string>
     <string name="market_listing_detail_location_heading">स्थान</string>
-    <string name="market_listing_detail_message">संदेश</string>
+    <string name="market_listing_detail_message">संदेश भेजीं</string>
     <string name="market_listing_detail_message_seller">विक्रेता के संदेश</string>
     <string name="market_listing_detail_not_found">लिस्टिंग नइखे मिलल</string>
     <string name="market_listing_detail_place_bid">बोली लगाईं</string>
@@ -266,8 +266,8 @@
     <string name="market_messages_send">भेजीं</string>
     <string name="market_messages_thread_listing_chip">लिस्टिंग</string>
     <string name="market_messages_thread_title">बातचीत</string>
-    <string name="market_onboarding_activate">Activate</string>
-    <string name="market_onboarding_activating">Activating…</string>
+    <string name="market_onboarding_activate">चालू करीं</string>
+    <string name="market_onboarding_activating">चालू कइल जा रहल बा…</string>
     <string name="market_onboarding_body">खरीदे आ बेचे खातिर आपन खाता चालू करीं।</string>
     <string name="market_onboarding_dismiss">खारिज करीं</string>
     <string name="market_onboarding_title">Market में स्वागत बा</string>
@@ -364,11 +364,11 @@
     <string name="market_reviews_tab_sent">भेजल गइल</string>
     <string name="market_reviews_title">समीक्षा</string>
     <string name="market_sale_buyer_label">खरीदार</string>
-    <string name="market_sale_carrier_label">Carrier</string>
+    <string name="market_sale_carrier_label">कैरियर</string>
     <string name="market_sale_carrier_other">दोसर</string>
     <string name="market_sale_completed_label">पूरा कइल गइल</string>
     <string name="market_sale_dispute_respond">जवाब दीं</string>
-    <string name="market_sale_dispute_state_open">खोलीं</string>
+    <string name="market_sale_dispute_state_open">खुलल</string>
     <string name="market_sale_dispute_state_resolved">सुलझल</string>
     <string name="market_sale_load_failed">ऑर्डर लोड करे में विफल</string>
     <string name="market_sale_message_buyer">खरीदार के संदेश</string>
@@ -390,7 +390,7 @@
     <string name="market_sale_title">बिक्री</string>
     <string name="market_sale_tracking_label">ट्रैकिंग संख्या</string>
     <string name="market_sales_title">हमार बिक्री</string>
-    <string name="market_saved_title">सहेजल गइल</string>
+    <string name="market_saved_title">सहेजल</string>
     <string name="market_search_clear">खोज साफ करीं</string>
     <string name="market_search_placeholder">बाजार में खोजीं</string>
     <string name="market_section_categories">श्रेणी देखीं</string>
@@ -415,7 +415,7 @@
     <string name="market_sidebar_purchases">खरीदारी</string>
     <string name="market_sidebar_reviews">समीक्षा</string>
     <string name="market_sidebar_sales">बिक्री</string>
-    <string name="market_sidebar_saved">सहेजल गइल</string>
+    <string name="market_sidebar_saved">सहेजल</string>
     <string name="market_sidebar_selling">बेचत बानीं</string>
     <string name="market_sidebar_settings">सेटिंग सब</string>
     <string name="market_sidebar_subscribers">सदस्य सब</string>
@@ -434,18 +434,18 @@
     <string name="market_subscribers_interval_month">/ महीना</string>
     <string name="market_subscribers_interval_year">/ साल</string>
     <string name="market_subscribers_load_failed">सब्सक्राइबर लोड करे में विफल</string>
-    <string name="market_subscription_detail_billing_history">Billing history</string>
+    <string name="market_subscription_detail_billing_history">बिलिंग इतिहास</string>
     <string name="market_subscription_detail_billing_history_empty">अबले कवनो चार्ज नइखे।</string>
-    <string name="market_subscription_detail_billing_info">Billing</string>
-    <string name="market_subscription_detail_cancelled_on">Cancelled on %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Latest charge: %1$s</string>
+    <string name="market_subscription_detail_billing_info">बिलिंग</string>
+    <string name="market_subscription_detail_cancelled_on">%1$s के रद्द भइल</string>
+    <string name="market_subscription_detail_charge_amount">हालिया शुल्क: %1$s</string>
     <string name="market_subscription_detail_listing">लिस्टिंग</string>
     <string name="market_subscription_detail_load_failed">सदस्यता लोड ना भइल</string>
     <string name="market_subscription_detail_next_billing">अगिला बिलिंग तारीख: %1$s</string>
     <string name="market_subscription_detail_not_found">सदस्यता ना मिलल</string>
-    <string name="market_subscription_detail_pending_cancel">Cancellation pending</string>
+    <string name="market_subscription_detail_pending_cancel">रद्दीकरण बाकी बा</string>
     <string name="market_subscription_detail_seller">विक्रेता</string>
-    <string name="market_subscription_detail_started">Started %1$s</string>
+    <string name="market_subscription_detail_started">%1$s के शुरू भइल</string>
     <string name="market_subscription_detail_title">सदस्यता</string>
     <string name="market_subscriptions_action_cancel">रद्द करीं</string>
     <string name="market_subscriptions_action_pause">रोकीं</string>
@@ -467,7 +467,7 @@
     <string name="market_subscriptions_resume_failed">फेर शुरू करे में विफल</string>
     <string name="market_subscriptions_resumed">सदस्यता फेर से शुरू भइल</string>
     <string name="market_subscriptions_title">सदस्यता सब</string>
-    <string name="market_title">मार्केट</string>
+    <string name="market_title">बाजार</string>
     <string name="market_type_digital">डिजिटल</string>
     <string name="market_type_physical">भौतिक</string>
     <string name="market_warnings_title">चेतावनी</string>
@@ -564,7 +564,7 @@
     <string name="market_subscriptions_per_month">%1$s प्रति महीना</string>
     <string name="market_subscriptions_per_year">%1$s प्रति साल</string>
 
-    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_checkout_subscribing">सदस्यता लिहल जा रहल बा…</string>
     <string name="market_editor_delete_confirm_title">लिस्टिंग मेटाईं?</string>
     <string name="market_fee_preview_mochi_fee">Mochi शुल्क</string>
     <string name="market_filter_remove">फिल्टर हटाईं</string>
@@ -692,7 +692,7 @@
     <string name="market_seller_step_activate_title">बेचेवाला खाता चालू करीं</string>
     <string name="market_seller_step_stripe_desc">खरीददारन से भुगतान स्वीकार करे खातिर Stripe खाता जोड़ीं</string>
     <string name="market_seller_step_stripe_title">Stripe जोड़ीं</string>
-    <string name="market_seller_stripe_more_info">भुगतान स्वीकार करे से पहिले Stripe के अउरी जानकारी चाहीं। आपन Stripe Dashboard पर आवश्यकता पूरा करीं, फिर स्थिति जाँच पर क्लिक करीं।</string>
+    <string name="market_seller_stripe_more_info">भुगतान स्वीकार करे से पहिले Stripe के अउरी जानकारी चाहीं। आपन Stripe डैशबोर्ड पर आवश्यकता पूरा करीं, फिर स्थिति जाँच पर क्लिक करीं।</string>
     <string name="market_seller_summary_account_status">खाता के स्थिति</string>
     <string name="market_seller_summary_fees">शुल्क</string>
     <string name="market_seller_summary_payments">भुगतान</string>
@@ -753,9 +753,9 @@
     <string name="market_audit_listing_updated">लिस्टिंग संपादित हो गइल</string>
     <string name="market_audit_listing_warning">चेतावनी जारी कइल गइल</string>
     <string name="market_audit_order_cancelled">रद्द कइल गइल</string>
-    <string name="market_audit_order_chargeback">Chargeback मिलल</string>
-    <string name="market_audit_order_chargeback_lost">Chargeback बरकरार</string>
-    <string name="market_audit_order_chargeback_won">Chargeback खारिज कइल गइल</string>
+    <string name="market_audit_order_chargeback">चार्जबैक मिलल</string>
+    <string name="market_audit_order_chargeback_lost">चार्जबैक बरकरार</string>
+    <string name="market_audit_order_chargeback_won">चार्जबैक खारिज कइल गइल</string>
     <string name="market_audit_order_completed">पूरा कइल गइल</string>
     <string name="market_audit_order_created">ऑर्डर दिहल गइल</string>
     <string name="market_audit_order_paid">भुगतान मिलल</string>
@@ -773,9 +773,9 @@
     <string name="market_audit_subscription_activated">सदस्यता सक्रिय भइल</string>
     <string name="market_audit_subscription_cancel_scheduled">रद्दकरण निर्धारित</string>
     <string name="market_audit_subscription_cancelled">रद्द कइल गइल</string>
-    <string name="market_audit_subscription_chargeback">Chargeback मिलल</string>
-    <string name="market_audit_subscription_chargeback_lost">Chargeback बरकरार</string>
-    <string name="market_audit_subscription_chargeback_won">Chargeback खारिज कइल गइल</string>
+    <string name="market_audit_subscription_chargeback">चार्जबैक मिलल</string>
+    <string name="market_audit_subscription_chargeback_lost">चार्जबैक बरकरार</string>
+    <string name="market_audit_subscription_chargeback_won">चार्जबैक खारिज कइल गइल</string>
     <string name="market_audit_subscription_created">सदस्यता बनल</string>
     <string name="market_audit_subscription_past_due">भुगतान के देय तिथि बीत गइल</string>
     <string name="market_audit_subscription_paused">रोकल बा</string>

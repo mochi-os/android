@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">Особље</string>
+    <string name="launcher_staff">Mochi особље</string>
     <string name="staff_accounts_action_ban_title">Забрани налог</string>
     <string name="staff_accounts_action_suspend_title">Суспендуј налог</string>
     <string name="staff_accounts_action_unban_title">Уклони забрану</string>
@@ -162,13 +162,13 @@
     <string name="staff_categories_type_digital">Дигитално</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">Физички</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">Особље</string>
     <string name="staff_config_field_auto_approve">Праг аутоматског одобрења</string>
     <string name="staff_config_field_hold">Праг задржавања</string>
     <string name="staff_config_field_platform_fee">Накнада платформе</string>
     <string name="staff_config_field_review_window">Прозор за рецензију</string>
     <string name="staff_config_field_stripe_oauth_client">ID клијента OAuth</string>
-    <string name="staff_config_field_stripe_publishable">Publishable key</string>
+    <string name="staff_config_field_stripe_publishable">Јавни кључ</string>
     <string name="staff_config_field_stripe_secret">Тајни кључ</string>
     <string name="staff_config_group_moderation">Модерација</string>
     <string name="staff_config_group_payments">Плаћања</string>
@@ -253,13 +253,13 @@
     <string name="staff_disputes_refund_help">Оставите празно за пун повраћај %1$s. Унесите мањи износ за делимични повраћај.</string>
     <string name="staff_disputes_refund_must_be_positive">Износ повраћаја мора бити већи од нуле</string>
     <string name="staff_disputes_resolution_buyer">Реши у корист купца</string>
-    <string name="staff_disputes_resolution_label">Резолуција</string>
+    <string name="staff_disputes_resolution_label">Решење</string>
     <string name="staff_disputes_resolution_placeholder">Изабери резолуцију</string>
     <string name="staff_disputes_resolution_seller">Реши у корист продавца</string>
     <string name="staff_disputes_resolve">Реши</string>
     <string name="staff_disputes_resolved_toast">Спор решен</string>
     <string name="staff_disputes_resolving">Решавање…</string>
-    <string name="staff_disputes_review">Преглед</string>
+    <string name="staff_disputes_review">Прегледај</string>
     <string name="staff_disputes_status_escalated">Ескалирано</string>
     <string name="staff_disputes_status_open">Отворено</string>
     <string name="staff_disputes_status_resolved_buyer">Решено (купац)</string>
@@ -341,7 +341,7 @@
     <string name="staff_reports_cancel">Откажи</string>
     <string name="staff_reports_close">Затвори</string>
     <string name="staff_reports_dialog_title_action">Предузми акцију на пријави</string>
-    <string name="staff_reports_dialog_title_view">Пријави</string>
+    <string name="staff_reports_dialog_title_view">Пријава</string>
     <string name="staff_reports_empty">Нема пријава</string>
     <string name="staff_reports_filter_status_label">Статус</string>
     <string name="staff_reports_filter_type_label">Тип</string>
@@ -351,7 +351,7 @@
     <string name="staff_reports_meta_reason">Разлог</string>
     <string name="staff_reports_meta_reporter">Пријавилац</string>
     <string name="staff_reports_meta_seller">Продавац</string>
-    <string name="staff_reports_meta_target">Циљ</string>
+    <string name="staff_reports_meta_target">Пријављена ставка</string>
     <string name="staff_reports_meta_type">Тип</string>
     <string name="staff_reports_notes_label">Белешке</string>
     <string name="staff_reports_reason_counterfeit">Фалсификовано или украдено</string>

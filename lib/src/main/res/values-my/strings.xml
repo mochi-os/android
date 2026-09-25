@@ -6,7 +6,7 @@
     <string name="auth_continue">ဆက်လက်လုပ်ဆောင်မည်</string>
     <string name="auth_verification_code">အတည်ပြု ကုဒ်</string>
     <string name="auth_email_code">အီးမေးလ် ကုဒ်</string>
-    <string name="auth_recovery_code">Recovery code</string>
+    <string name="auth_recovery_code">ပြန်လည်ရယူရေး ကုဒ်</string>
     <string name="auth_name">အမည်</string>
     <string name="auth_create">ဖန်တီးမည်</string>
     <string name="auth_privacy_label">ကိုယ်ရေးကိုယ်တာ</string>
@@ -27,7 +27,7 @@
     <string name="common_add">ထည့်မည်</string>
     <string name="common_notifications">အသိပေးချက်များ</string>
     <string name="common_logout">ထွက်</string>
-    <string name="common_subscribe">Subscribe လုပ်မည်</string>
+    <string name="common_subscribe">စာရင်းသွင်းမည်</string>
     <string name="common_copy">ကူးမည်</string>
     <string name="common_copied">ကလစ်ဘုတ်သို့ ကူးပြီး</string>
     <string name="comment_edited">(တည်းဖြတ်ပြီး)</string>
@@ -38,7 +38,7 @@
     <string name="access_add_rule">စည်းမျဉ်း ထည့်ပါ</string>
     <string name="access_owner">ပိုင်ရှင်</string>
     <string name="access_revoke">ရုပ်သိမ်း</string>
-    <string name="access_level_comment">မှတ်ချက်</string>
+    <string name="access_level_comment">မှတ်ချက်ပေးရန်</string>
     <string name="access_level_view">ကြည့်ရှုမည်</string>
     <string name="access_level_none">မရှိ</string>
     <string name="reaction_like">နှစ်သက်</string>
@@ -96,7 +96,7 @@
     <string name="settings_number_format">နံပါတ် ပုံစံ</string>
     <string name="settings_units">ယူနစ်များ</string>
     <string name="settings_units_metric">မက်ထရစ်</string>
-    <string name="settings_units_imperial">Imperial</string>
+    <string name="settings_units_imperial">အင်ပီးရီးယယ်</string>
     <string name="settings_time_zone">အချိန်ဇုန်</string>
     <string name="settings_reset_to_defaults">ပုံသေတန်ဖိုးများသို့ ပြန်ထား</string>
     <string name="settings_reset_confirm_title">ဦးစားပေးချက်များ ပြန်စမလား?</string>
@@ -136,16 +136,16 @@
     <string name="auth_connect">ချိတ်ဆက်ပါ</string>
     <string name="auth_sign_in">ဝင်ရောက်ပါ</string>
     <string name="auth_check_email">အတည်ပြုကုဒ်အတွက် သင်၏အီးမေးလ်ကိုစစ်ဆေးပါ</string>
-    <string name="auth_mfa_title">Multi-factor အထောက်အထားစိစစ်ခြင်း</string>
+    <string name="auth_mfa_title">အဆင့်များစွာ အထောက်အထားစိစစ်ခြင်း</string>
     <string name="auth_mfa_subtitle">ကျန်ရှိနေသောအတည်ပြုခြင်းအဆင့်များကိုဖြည့်စွက်ပါ</string>
     <string name="auth_recover_account">အကောင့်ပြန်လည်ရယူပါ</string>
     <string name="auth_login_title">Mochi သို့ဝင်ရောက်ပါ</string>
     <string name="auth_next">နောက်တစ်ခု</string>
     <string name="auth_or_log_in_with">သို့မဟုတ် ဤနည်းဖြင့်ဝင်ရောက်ပါ</string>
-    <string name="auth_passkey">Passkey</string>
-    <string name="auth_use_passkey">passkey ကိုသုံးပါ</string>
+    <string name="auth_passkey">ဝင်ရောက်ခွင့်သော့</string>
+    <string name="auth_use_passkey">ဝင်ရောက်ခွင့်သော့ ကိုသုံးပါ</string>
     <string name="auth_email_me_a_code">ကျွန်ုပ်ထံ ကုဒ်တစ်ခုကို အီးမေးလ်ပို့ပါ</string>
-    <string name="auth_or_enter_authenticator_code">သို့မဟုတ် authenticator ကုဒ်ကိုထည့်ပါ</string>
+    <string name="auth_or_enter_authenticator_code">သို့မဟုတ် အထောက်အထားစိစစ်ရေး ကုဒ်ကိုထည့်ပါ</string>
     <string name="auth_log_in">ဝင်ရောက်ပါ</string>
     <string name="auth_back">နောက်သို့</string>
     <string name="auth_lost_access_recovery">ဝင်ရောက်ခွင့်ဆုံးရှုံးသွားပါသလား။ ပြန်လည်ရယူရေးကုဒ်ကိုသုံးပါ</string>
@@ -176,7 +176,7 @@
     <string name="access_level_manage">စီမံပါ</string>
     <string name="access_level_react">တုံ့ပြန်ပါ</string>
     <string name="notifications_clear">အကြောင်းကြားချက်များရှင်းပါ</string>
-    <string name="entity_avatar_alt">%1$s အတွက် Avatar</string>
+    <string name="entity_avatar_alt">%1$s အတွက် အသွင်ပုံ</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="format_time_just_now">ယခုလေးတင်</string>
     <string name="format_time_minutes_ago">%1$dမိနစ်က</string>
@@ -191,7 +191,7 @@
     <string name="format_time_weeks_short">%1$dပတ်</string>
     <string name="format_time_months_short">%1$dလ</string>
     <string name="reaction_add">တုံ့ပြန်မှုထည့်ပါ</string>
-    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel">Mochi တွန်းပို့</string>
     <string name="push_service_channel_description">အကြောင်းကြားချက်များလက်ခံရန် Mochi ကိုဆက်သွယ်ထားသည်</string>
     <string name="push_service_group">နောက်ခံဝန်ဆောင်မှု</string>
     <string name="push_service_title">Mochi သည်အကြောင်းကြားချက်များကိုနားထောင်နေသည်</string>
@@ -201,10 +201,10 @@
     <string name="reauth_signin_text">ပြန်လည်ဝင်ရောက်သည်အထိ အကြောင်းကြားချက်များကို ခေတ္တရပ်ထားသည်</string>
     <string name="oem_hint_title">နောက်ခံတွင် ဆက်လက်ရရှိနိုင်အောင် ထားပါ</string>
     <string name="oem_hint_body">အကြောင်းကြားချက်များ ပို့ဆောင်ရန် Mochi ကို နောက်ခံတွင် လည်ပတ်ရပါမည်။ နောက်ဖန်သားပြင်တွင် ခွင့်ပြုပေးပါ၊ မဟုတ်ပါက ဖန်သားပြင်ပိတ်ထားစဉ် သင့်ဖုန်းသည် အကြောင်းကြားချက်များကို ခေတ္တရပ်ထားနိုင်သည်။</string>
-    <string name="oem_hint_samsung_note">Samsung ဖုန်းများတွင် Settings → Device care → Sleeping apps ကိုလည်း စစ်ဆေးပြီး Mochi ပါဝင်ပါက ဖယ်ရှားပါ။</string>
+    <string name="oem_hint_samsung_note">Samsung ဖုန်းများတွင် ဆက်တင်များ → ကိရိယာ ထိန်းသိမ်းမှု → အိပ်နေသော အက်ပ်များ ကိုလည်း စစ်ဆေးပြီး Mochi ပါဝင်ပါက ဖယ်ရှားပါ။</string>
     <string name="oem_hint_allow">နောက်ခံကို ခွင့်ပြုပါ</string>
     <string name="oem_hint_dismiss">ထပ်မပြပါနှင့်</string>
-    <string name="about_title">Mochi Client</string>
+    <string name="about_title">Mochi ကလိုင်းယင့်</string>
     <string name="about_version">ဗားရှင်း %1$s</string>
     <string name="about_check_updates">အပ်ဒိတ်များ စစ်ဆေးပါ</string>
     <string name="about_up_to_date">နောက်ဆုံးဗားရှင်းဖြစ်သည်</string>
@@ -225,7 +225,7 @@
     <string name="stepup_description">ဤသည်မှာ သင့်အကောင့်၏ လုံခြုံရေးပြောင်းလဲမှုဖြစ်သည်။ ဆက်လက်ဆောင်ရွက်ရန် သင်ဖြစ်ကြောင်း အတည်ပြုပါ။</string>
     <string name="stepup_email_label">အီးမေးလ် ကုဒ်</string>
     <string name="stepup_email_placeholder">သင့်အီးမေးလ်မှ ကုဒ်ကို ထည့်ပါ</string>
-    <string name="stepup_totp_label">Authenticator ကုဒ်</string>
+    <string name="stepup_totp_label">အထောက်အထားစိစစ်ရေး ကုဒ်</string>
     <string name="stepup_totp_placeholder">သင့်အထောက်အထားစိစစ်ရေးကုဒ်ကို ထည့်ပါ</string>
     <string name="stepup_use_passkey">သင့်ပတ်စ်ကီးကို သုံးပါ</string>
     <string name="stepup_send_email">အီးမေးလ်ပို့ရန်</string>

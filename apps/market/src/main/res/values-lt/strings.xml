@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Parduotuvė</string>
+    <string name="app_name">Turgus</string>
     <string name="market_account_biography_label">Biografija</string>
     <string name="market_account_location_label">Vieta</string>
     <string name="market_account_save">Išsaugoti</string>
@@ -44,7 +44,7 @@
     <string name="market_bids_tab_outbid">Pralenktas pasiūlymas</string>
     <string name="market_bids_tab_won">Laimėta</string>
     <string name="market_bids_title">Pasiūlymai</string>
-    <string name="market_channel_name">Parduotuvė</string>
+    <string name="market_channel_name">Turgus</string>
     <string name="market_chargeback_reason_bank_cannot_process">Bankas negalėjo apdoroti</string>
     <string name="market_chargeback_reason_check_returned">Patikrinimas grąžintas</string>
     <string name="market_chargeback_reason_credit_not_processed">Kreditas neapdorotas</string>
@@ -70,7 +70,7 @@
     <string name="market_checkout_back">Atgal</string>
     <string name="market_checkout_buy_it_now">Pirkti dabar</string>
     <string name="market_checkout_create_failed">Nepavyko sukurti užsakymo</string>
-    <string name="market_checkout_delivery_download">Atsisiųsti</string>
+    <string name="market_checkout_delivery_download">Atsisiuntimas</string>
     <string name="market_checkout_delivery_method">Pristatymo būdas</string>
     <string name="market_checkout_delivery_pickup">Atsiėmimas</string>
     <string name="market_checkout_delivery_shipping">Pristatymas</string>
@@ -93,7 +93,7 @@
     <string name="market_checkout_title">Atsiskaitymas</string>
     <string name="market_checkout_total">Iš viso</string>
     <string name="market_checkout_winning_bid">Laimėjęs pasiūlymas</string>
-    <string name="market_condition_new">Naujas</string>
+    <string name="market_condition_new">Nauja</string>
     <string name="market_condition_refurbished">Atnaujinta</string>
     <string name="market_condition_used">Naudota</string>
     <string name="market_dispute_dialog_cancel">Atšaukti</string>
@@ -107,8 +107,8 @@
     <string name="market_editor_asset_external_filename">Failo pavadinimas</string>
     <string name="market_editor_back">Atgal</string>
     <string name="market_editor_category">Kategorija</string>
-    <string name="market_editor_condition">Sąlyga</string>
-    <string name="market_editor_condition_new">Naujas</string>
+    <string name="market_editor_condition">Būklė</string>
+    <string name="market_editor_condition_new">Nauja</string>
     <string name="market_editor_condition_refurbished">Atnaujinta</string>
     <string name="market_editor_condition_used">Naudota</string>
     <string name="market_editor_currency">Valiuta</string>
@@ -149,12 +149,12 @@
     <string name="market_filter_apply">Taikyti</string>
     <string name="market_filter_category">Kategorija</string>
     <string name="market_filter_clear">Išvalyti filtrus</string>
-    <string name="market_filter_condition">Sąlyga</string>
-    <string name="market_filter_condition_new">Naujas</string>
+    <string name="market_filter_condition">Būklė</string>
+    <string name="market_filter_condition_new">Nauja</string>
     <string name="market_filter_condition_refurbished">Atnaujinta</string>
     <string name="market_filter_condition_used">Naudota</string>
     <string name="market_filter_delivery">Pristatymas</string>
-    <string name="market_filter_delivery_download">Atsisiųsti</string>
+    <string name="market_filter_delivery_download">Atsisiuntimas</string>
     <string name="market_filter_delivery_pickup">Atsiėmimas</string>
     <string name="market_filter_delivery_shipping">Pristatymas</string>
     <string name="market_filter_price_max">Maks.</string>
@@ -183,7 +183,7 @@
     <string name="market_listing_detail_load_failed">Nepavyko įkelti skelbimo</string>
     <string name="market_listing_detail_listed">Paskelbta %1$s</string>
     <string name="market_listing_detail_location_heading">Vieta</string>
-    <string name="market_listing_detail_message">Žinutė</string>
+    <string name="market_listing_detail_message">Rašyti žinutę</string>
     <string name="market_listing_detail_message_seller">Rašyti pardavėjui</string>
     <string name="market_listing_detail_not_found">Skelbimas nerastas</string>
     <string name="market_listing_detail_place_bid">Pateikti pasiūlymą</string>
@@ -215,8 +215,8 @@
     <string name="market_listings_title">Mano skelbimai</string>
     <string name="market_messages_inbox_title">Pranešimai</string>
     <string name="market_messages_thread_listing_chip">Skelbimas</string>
-    <string name="market_onboarding_activate">Activate</string>
-    <string name="market_onboarding_activating">Activating…</string>
+    <string name="market_onboarding_activate">Aktyvinti</string>
+    <string name="market_onboarding_activating">Aktyvinama…</string>
     <string name="market_onboarding_body">Suaktyvinkite paskyrą, kad pradėtumėte pirkti ir parduoti.</string>
     <string name="market_onboarding_dismiss">Atmesti</string>
     <string name="market_onboarding_title">Sveiki atvykę į Market</string>
@@ -305,7 +305,7 @@
     <string name="market_sale_carrier_other">Kita</string>
     <string name="market_sale_completed_label">Baigta</string>
     <string name="market_sale_dispute_respond">Atsakyti</string>
-    <string name="market_sale_dispute_state_open">Atidaryti</string>
+    <string name="market_sale_dispute_state_open">Atvira</string>
     <string name="market_sale_dispute_state_resolved">Išspręsta</string>
     <string name="market_sale_load_failed">Nepavyko įkelti užsakymo</string>
     <string name="market_sale_message_buyer">Rašyti pirkėjui</string>
@@ -367,18 +367,18 @@
     <string name="market_subscribers_interval_month">/ mėn.</string>
     <string name="market_subscribers_interval_year">/ metai</string>
     <string name="market_subscribers_load_failed">Nepavyko įkelti prenumeratorių</string>
-    <string name="market_subscription_detail_billing_history">Billing history</string>
+    <string name="market_subscription_detail_billing_history">Atsiskaitymų istorija</string>
     <string name="market_subscription_detail_billing_history_empty">Kol kas mokėjimų nėra.</string>
-    <string name="market_subscription_detail_billing_info">Billing</string>
-    <string name="market_subscription_detail_cancelled_on">Cancelled on %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Latest charge: %1$s</string>
+    <string name="market_subscription_detail_billing_info">Atsiskaitymas</string>
+    <string name="market_subscription_detail_cancelled_on">Atšaukta %1$s</string>
+    <string name="market_subscription_detail_charge_amount">Paskutinis mokėjimas: %1$s</string>
     <string name="market_subscription_detail_listing">Skelbimas</string>
     <string name="market_subscription_detail_load_failed">Nepavyko įkelti prenumeratos</string>
     <string name="market_subscription_detail_next_billing">Kita sąskaitos data: %1$s</string>
     <string name="market_subscription_detail_not_found">Prenumerata nerasta</string>
-    <string name="market_subscription_detail_pending_cancel">Cancellation pending</string>
+    <string name="market_subscription_detail_pending_cancel">Laukiama atšaukimo</string>
     <string name="market_subscription_detail_seller">Pardavėjas</string>
-    <string name="market_subscription_detail_started">Started %1$s</string>
+    <string name="market_subscription_detail_started">Pradėta %1$s</string>
     <string name="market_subscription_detail_title">Prenumerata</string>
     <string name="market_subscriptions_action_cancel">Atšaukti</string>
     <string name="market_subscriptions_action_pause">Pristabdyti</string>
@@ -400,7 +400,7 @@
     <string name="market_subscriptions_resume_failed">Nepavyko pratęsti</string>
     <string name="market_subscriptions_resumed">Prenumerata pratęsta</string>
     <string name="market_subscriptions_title">Prenumeratos</string>
-    <string name="market_title">Parduotuvė</string>
+    <string name="market_title">Turgus</string>
     <string name="market_type_digital">Skaitmeninis</string>
     <string name="market_type_physical">Fizinis</string>
     <string name="market_messages_send">Siųsti</string>

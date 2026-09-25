@@ -67,7 +67,7 @@
     <string name="crm_board_rename">Døyp om</string>
     <string name="crm_board_rename_column">Døyp om kolonne</string>
     <string name="crm_move_position">Posisjon</string>
-    <string name="crm_move_position_top">Topp</string>
+    <string name="crm_move_position_top">Øvst</string>
     <string name="crm_move_current">Noverande</string>
     <string name="crm_design_title">Design</string>
     <string name="crm_design_export">Eksporter design</string>
@@ -115,7 +115,7 @@
     <string name="crm_views_edit_dialog_title">Rediger vising</string>
     <string name="crm_views_delete_title">Slett visning</string>
     <string name="crm_views_type">Type</string>
-    <string name="crm_views_type_board">Brett</string>
+    <string name="crm_views_type_board">Tavle</string>
     <string name="crm_views_type_list">Liste</string>
     <string name="crm_views_direction">Retning</string>
     <string name="crm_views_sort_created">Oppretta</string>

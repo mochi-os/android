@@ -53,7 +53,7 @@
     <string name="people_profile_name_saved">Nume salvat</string>
     <string name="people_profile_edit_name">Editează numele</string>
     <string name="people_profile_identity">Identitate</string>
-    <string name="people_profile_accent">Accent</string>
+    <string name="people_profile_accent">Culoare de accent</string>
     <string name="people_profile_directory_listing">Permite altora să te găsească în director</string>
     <string name="people_profile_markdown_supported">Markdown acceptat</string>
     <string name="people_profile_preview">Previzualizare</string>
@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Deschide navigarea</string>
     <string name="people_person_state_friend">Prieteni</string>
     <string name="people_person_state_self">Tu</string>
-    <string name="people_person_message">Mesaj</string>
+    <string name="people_person_message">Trimite mesaj</string>
     <string name="people_person_accept">Acceptă</string>
     <string name="people_person_decline">Respinge</string>
 
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">Introduceți o culoare hex validă (de ex. #a78bfa)</string>
     <string name="people_profile_accent_none">Niciuna</string>
     <string name="people_profile_privacy_private_desc">Doar prietenii reciproci vă pot vedea profilul</string>
-    <string name="people_welcome_title">Bun venit în People</string>
+    <string name="people_welcome_title">Bun venit în Persoane</string>
     <string name="people_person_banner_alt">Banner pentru %1$s</string>
     <string name="people_person_private">Acest profil este privat</string>
     <string name="people_person_state_invited">Invitat</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Acceptă tot</string>
     <string name="people_invitations_decline_all">Refuză tot</string>
     <string name="people_invitations_cancel_all">Anulează tot</string>
+    <string name="people_invitations_cancel">Anulează</string>
     <string name="people_invitations_all_accepted">Toate invitațiile acceptate</string>
     <string name="people_invitations_all_declined">Toate invitațiile refuzate</string>
     <string name="people_invitations_all_cancelled">Toate invitațiile anulate</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Caută…</string>
     <string name="people_contacts_invited">Invitat</string>
     <string name="people_contacts_accept">Acceptă</string>
-    <string name="people_contacts_message">Mesaj</string>
+    <string name="people_contacts_message">Trimite mesaj</string>
     <string name="people_contacts_no_people_found">Nu s-au găsit persoane</string>
     <string name="people_contacts_try_adjusting">Încearcă să ajustezi căutarea</string>
     <string name="people_contact_section_address">Adresă</string>
@@ -130,7 +131,7 @@
     <string name="people_contact_postcode">Cod poștal</string>
     <string name="people_contact_country">Țară</string>
     <string name="people_contact_type">Tip</string>
-    <string name="people_contact_type_home">Acasă</string>
+    <string name="people_contact_type_home">Domiciliu</string>
     <string name="people_contact_type_other">Altele</string>
     <string name="people_contact_remove">Elimină</string>
     <string name="people_contact_pick_date_confirm">OK</string>

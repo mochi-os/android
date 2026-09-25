@@ -101,7 +101,7 @@
     <string name="market_checkout_browser_unavailable">Нема прелистувач за да се отвори страницата за плаќање</string>
     <string name="market_checkout_buy_it_now">Купи веднаш</string>
     <string name="market_checkout_create_failed">Неуспешно креирање на нарачка</string>
-    <string name="market_checkout_delivery_download">Преземи</string>
+    <string name="market_checkout_delivery_download">Преземање</string>
     <string name="market_checkout_delivery_method">Метод на испорака</string>
     <string name="market_checkout_delivery_pickup">Подигнување</string>
     <string name="market_checkout_delivery_shipping">Испорака</string>
@@ -161,7 +161,7 @@
     <string name="market_editor_back">Назад</string>
     <string name="market_editor_category">Категорија</string>
     <string name="market_editor_category_none">Изберете категорија</string>
-    <string name="market_editor_condition">Услов</string>
+    <string name="market_editor_condition">Состојба</string>
     <string name="market_editor_condition_new">Ново</string>
     <string name="market_editor_condition_refurbished">Реновирано</string>
     <string name="market_editor_condition_used">Користено</string>
@@ -260,12 +260,12 @@
     <string name="market_filter_chip_max">Макс %1$s</string>
     <string name="market_filter_chip_min">Мин %1$s</string>
     <string name="market_filter_clear">Исчисти филтри</string>
-    <string name="market_filter_condition">Услов</string>
+    <string name="market_filter_condition">Состојба</string>
     <string name="market_filter_condition_new">Ново</string>
     <string name="market_filter_condition_refurbished">Реновирано</string>
     <string name="market_filter_condition_used">Користено</string>
     <string name="market_filter_delivery">Испорака</string>
-    <string name="market_filter_delivery_download">Преземи</string>
+    <string name="market_filter_delivery_download">Преземање</string>
     <string name="market_filter_delivery_pickup">Подигнување</string>
     <string name="market_filter_delivery_shipping">Испорака</string>
     <string name="market_filter_open">Филтри</string>
@@ -304,7 +304,7 @@
     <string name="market_listing_detail_loading">Се вчитува огласот</string>
     <string name="market_listing_detail_listed">Објавено %1$s</string>
     <string name="market_listing_detail_location_heading">Локација</string>
-    <string name="market_listing_detail_message">Порака</string>
+    <string name="market_listing_detail_message">Испрати порака</string>
     <string name="market_listing_detail_message_seller">Порака до продавач</string>
     <string name="market_listing_detail_not_found">Огласот не е најден</string>
     <string name="market_listing_detail_place_bid">Поднеси понуда</string>
@@ -416,7 +416,7 @@
     <string name="market_purchase_refunded">Вратени средства</string>
     <string name="market_purchase_refunded_partial">Вратени средства (делумно)</string>
     <string name="market_purchase_request_refund">Побарај поврат</string>
-    <string name="market_purchase_review_body">Преглед</string>
+    <string name="market_purchase_review_body">Рецензија</string>
     <string name="market_purchase_review_failed">Неуспешно поднесување на оценка</string>
     <string name="market_purchase_review_from">Критика од %1$s</string>
     <string name="market_purchase_review_hidden">Скриено додека продавачот не ве оцени или по 14 дена.</string>
@@ -505,7 +505,7 @@
     <string name="market_sale_completed_label">Завршено</string>
     <string name="market_sale_dispute_evidence_due">Доказот пристигнува %1$s</string>
     <string name="market_sale_dispute_respond">Одговори</string>
-    <string name="market_sale_dispute_state_open">Отвори</string>
+    <string name="market_sale_dispute_state_open">Отворено</string>
     <string name="market_sale_dispute_state_resolved">Решено</string>
     <string name="market_sale_dispute_state_responded">Чека одлука</string>
     <string name="market_sale_dispute_stripe_reason">Причина за Stripe поврат: %1$s</string>
@@ -565,7 +565,7 @@
     <string name="market_sidebar_bids">Понуди</string>
     <string name="market_sidebar_browse">Прелистај</string>
     <string name="market_sidebar_buying">Купување</string>
-    <string name="market_sidebar_home">Дома</string>
+    <string name="market_sidebar_home">Почетна</string>
     <string name="market_sidebar_inbox">Сандаче</string>
     <string name="market_sidebar_listings">Огласи</string>
     <string name="market_sidebar_messages">Пораки</string>
@@ -689,7 +689,7 @@
     <string name="market_seller_step_activate_title">Активирај сметка на продавач</string>
     <string name="market_seller_step_stripe_desc">Поврзете Stripe сметка за да примате плаќања од купувачите</string>
     <string name="market_seller_step_stripe_title">Поврзи Stripe</string>
-    <string name="market_seller_stripe_more_info">Stripe бара повеќе информации пред да можете да прифаќате плаќања. Исполнете ги барањата на вашата Stripe Dashboard, потоа кликнете Провери статус.</string>
+    <string name="market_seller_stripe_more_info">Stripe бара повеќе информации пред да можете да прифаќате плаќања. Исполнете ги барањата на вашата контролна табла на Stripe, потоа кликнете Провери статус.</string>
     <string name="market_seller_summary_account_status">Статус на сметката</string>
     <string name="market_seller_summary_fees">Надоместоци</string>
     <string name="market_seller_summary_payments">Плаќања</string>

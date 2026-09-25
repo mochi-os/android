@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Tori</string>
+    <string name="app_name">Markkinapaikka</string>
     <string name="market_account_biography_label">Elämäkerta</string>
     <string name="market_account_location_label">Sijainti</string>
     <string name="market_account_save">Tallenna</string>
@@ -44,7 +44,7 @@
     <string name="market_bids_tab_outbid">Ohitettu</string>
     <string name="market_bids_tab_won">Voitettu</string>
     <string name="market_bids_title">Tarjoukset</string>
-    <string name="market_channel_name">Tori</string>
+    <string name="market_channel_name">Markkinapaikka</string>
     <string name="market_chargeback_reason_bank_cannot_process">Pankki ei voinut käsitellä</string>
     <string name="market_chargeback_reason_check_returned">Tarkistus palautettu</string>
     <string name="market_chargeback_reason_credit_not_processed">Hyvitystä ei käsitelty</string>
@@ -70,7 +70,7 @@
     <string name="market_checkout_back">Takaisin</string>
     <string name="market_checkout_buy_it_now">Osta heti</string>
     <string name="market_checkout_create_failed">Tilauksen luominen epäonnistui</string>
-    <string name="market_checkout_delivery_download">Lataa</string>
+    <string name="market_checkout_delivery_download">Lataus</string>
     <string name="market_checkout_delivery_method">Toimitustapa</string>
     <string name="market_checkout_delivery_pickup">Nouto</string>
     <string name="market_checkout_delivery_shipping">Toimitus</string>
@@ -107,7 +107,7 @@
     <string name="market_editor_asset_external_filename">Tiedoston nimi</string>
     <string name="market_editor_back">Takaisin</string>
     <string name="market_editor_category">Kategoria</string>
-    <string name="market_editor_condition">Ehto</string>
+    <string name="market_editor_condition">Kunto</string>
     <string name="market_editor_condition_new">Uusi</string>
     <string name="market_editor_condition_refurbished">Kunnostettu</string>
     <string name="market_editor_condition_used">Käytetty</string>
@@ -149,12 +149,12 @@
     <string name="market_filter_apply">Käytä</string>
     <string name="market_filter_category">Kategoria</string>
     <string name="market_filter_clear">Tyhjennä suodattimet</string>
-    <string name="market_filter_condition">Ehto</string>
+    <string name="market_filter_condition">Kunto</string>
     <string name="market_filter_condition_new">Uusi</string>
     <string name="market_filter_condition_refurbished">Kunnostettu</string>
     <string name="market_filter_condition_used">Käytetty</string>
     <string name="market_filter_delivery">Toimitus</string>
-    <string name="market_filter_delivery_download">Lataa</string>
+    <string name="market_filter_delivery_download">Lataus</string>
     <string name="market_filter_delivery_pickup">Nouto</string>
     <string name="market_filter_delivery_shipping">Toimitus</string>
     <string name="market_filter_price_max">Enint.</string>
@@ -183,7 +183,7 @@
     <string name="market_listing_detail_load_failed">Ilmoituksen lataus epäonnistui</string>
     <string name="market_listing_detail_listed">Lisätty %1$s</string>
     <string name="market_listing_detail_location_heading">Sijainti</string>
-    <string name="market_listing_detail_message">Viesti</string>
+    <string name="market_listing_detail_message">Lähetä viesti</string>
     <string name="market_listing_detail_message_seller">Lähetä viesti myyjälle</string>
     <string name="market_listing_detail_not_found">Ilmoitusta ei löytynyt</string>
     <string name="market_listing_detail_place_bid">Tee tarjous</string>
@@ -215,8 +215,8 @@
     <string name="market_listings_title">Omat ilmoitukset</string>
     <string name="market_messages_inbox_title">Viestit</string>
     <string name="market_messages_thread_listing_chip">Ilmoitus</string>
-    <string name="market_onboarding_activate">Activate</string>
-    <string name="market_onboarding_activating">Activating…</string>
+    <string name="market_onboarding_activate">Aktivoi</string>
+    <string name="market_onboarding_activating">Aktivoidaan…</string>
     <string name="market_onboarding_body">Aktivoi tilisi aloittaaksesi ostamisen ja myymisen.</string>
     <string name="market_onboarding_dismiss">Hylkää</string>
     <string name="market_onboarding_title">Tervetuloa Marketiin</string>
@@ -305,7 +305,7 @@
     <string name="market_sale_carrier_other">Muu</string>
     <string name="market_sale_completed_label">Valmis</string>
     <string name="market_sale_dispute_respond">Vastaa</string>
-    <string name="market_sale_dispute_state_open">Avaa</string>
+    <string name="market_sale_dispute_state_open">Avoin</string>
     <string name="market_sale_dispute_state_resolved">Ratkaistu</string>
     <string name="market_sale_load_failed">Tilauksen lataus epäonnistui</string>
     <string name="market_sale_message_buyer">Lähetä viesti ostajalle</string>
@@ -324,7 +324,7 @@
     <string name="market_sale_shipped_label">Lähetetty</string>
     <string name="market_sale_title">Myynti</string>
     <string name="market_sale_tracking_label">Seurantanumero</string>
-    <string name="market_saved_title">Tallennettu</string>
+    <string name="market_saved_title">Tallennetut</string>
     <string name="market_search_clear">Tyhjennä haku</string>
     <string name="market_section_categories">Selaa kategorioita</string>
     <string name="market_section_listings">Uusimmat ilmoitukset</string>
@@ -348,7 +348,7 @@
     <string name="market_sidebar_purchases">Ostokset</string>
     <string name="market_sidebar_reviews">Arvostelut</string>
     <string name="market_sidebar_sales">Myynnit</string>
-    <string name="market_sidebar_saved">Tallennettu</string>
+    <string name="market_sidebar_saved">Tallennetut</string>
     <string name="market_sidebar_selling">Myynnissä</string>
     <string name="market_sidebar_settings">Asetukset</string>
     <string name="market_sidebar_subscribers">Tilaajat</string>
@@ -367,18 +367,18 @@
     <string name="market_subscribers_interval_month">/ kk</string>
     <string name="market_subscribers_interval_year">/ vuosi</string>
     <string name="market_subscribers_load_failed">Tilaajien lataus epäonnistui</string>
-    <string name="market_subscription_detail_billing_history">Billing history</string>
+    <string name="market_subscription_detail_billing_history">Laskutushistoria</string>
     <string name="market_subscription_detail_billing_history_empty">Ei vielä veloituksia.</string>
-    <string name="market_subscription_detail_billing_info">Billing</string>
-    <string name="market_subscription_detail_cancelled_on">Cancelled on %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Latest charge: %1$s</string>
+    <string name="market_subscription_detail_billing_info">Laskutus</string>
+    <string name="market_subscription_detail_cancelled_on">Peruttu %1$s</string>
+    <string name="market_subscription_detail_charge_amount">Viimeisin veloitus: %1$s</string>
     <string name="market_subscription_detail_listing">Ilmoitus</string>
     <string name="market_subscription_detail_load_failed">Tilauksen lataaminen epäonnistui</string>
     <string name="market_subscription_detail_next_billing">Seuraava laskutuspäivä: %1$s</string>
     <string name="market_subscription_detail_not_found">Tilausta ei löytynyt</string>
-    <string name="market_subscription_detail_pending_cancel">Cancellation pending</string>
+    <string name="market_subscription_detail_pending_cancel">Peruutus odottaa</string>
     <string name="market_subscription_detail_seller">Myyjä</string>
-    <string name="market_subscription_detail_started">Started %1$s</string>
+    <string name="market_subscription_detail_started">Alkoi %1$s</string>
     <string name="market_subscription_detail_title">Tilaus</string>
     <string name="market_subscriptions_action_cancel">Peruuta</string>
     <string name="market_subscriptions_action_pause">Tauko</string>
@@ -400,7 +400,7 @@
     <string name="market_subscriptions_resume_failed">Jatkaminen epäonnistui</string>
     <string name="market_subscriptions_resumed">Tilausta jatkettu</string>
     <string name="market_subscriptions_title">Tilaukset</string>
-    <string name="market_title">Tori</string>
+    <string name="market_title">Markkinapaikka</string>
     <string name="market_type_digital">Digitaalinen</string>
     <string name="market_type_physical">Fyysinen</string>
     <string name="market_messages_send">Lähetä</string>

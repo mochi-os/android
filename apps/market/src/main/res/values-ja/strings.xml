@@ -93,7 +93,7 @@
     <string name="market_checkout_title">チェックアウト</string>
     <string name="market_checkout_total">合計</string>
     <string name="market_checkout_winning_bid">落札</string>
-    <string name="market_condition_new">新規</string>
+    <string name="market_condition_new">新品</string>
     <string name="market_condition_refurbished">整備済み</string>
     <string name="market_condition_used">中古</string>
     <string name="market_dispute_dialog_cancel">キャンセル</string>
@@ -108,7 +108,7 @@
     <string name="market_editor_back">戻る</string>
     <string name="market_editor_category">カテゴリ</string>
     <string name="market_editor_condition">コンディション</string>
-    <string name="market_editor_condition_new">新規</string>
+    <string name="market_editor_condition_new">新品</string>
     <string name="market_editor_condition_refurbished">整備済み</string>
     <string name="market_editor_condition_used">中古</string>
     <string name="market_editor_currency">通貨</string>
@@ -142,7 +142,7 @@
     <string name="market_editor_type_physical">物理的</string>
     <string name="market_editor_zone_cancel">キャンセル</string>
     <string name="market_editor_zone_country_us">アメリカ合衆国</string>
-    <string name="market_editor_zone_region">都道府県</string>
+    <string name="market_editor_zone_region">地域</string>
     <string name="market_fee_preview_item">商品</string>
     <string name="market_fee_preview_payout">あなたの支払い</string>
     <string name="market_filter_all">すべて</string>
@@ -150,7 +150,7 @@
     <string name="market_filter_category">カテゴリ</string>
     <string name="market_filter_clear">フィルターをクリア</string>
     <string name="market_filter_condition">コンディション</string>
-    <string name="market_filter_condition_new">新規</string>
+    <string name="market_filter_condition_new">新品</string>
     <string name="market_filter_condition_refurbished">整備済み</string>
     <string name="market_filter_condition_used">中古</string>
     <string name="market_filter_delivery">配送</string>
@@ -183,7 +183,7 @@
     <string name="market_listing_detail_load_failed">出品の読み込みに失敗しました</string>
     <string name="market_listing_detail_listed">出品日 %1$s</string>
     <string name="market_listing_detail_location_heading">場所</string>
-    <string name="market_listing_detail_message">メッセージ</string>
+    <string name="market_listing_detail_message">メッセージを送信</string>
     <string name="market_listing_detail_message_seller">販売者にメッセージ</string>
     <string name="market_listing_detail_not_found">リスティングが見つかりません</string>
     <string name="market_listing_detail_place_bid">入札する</string>
@@ -200,7 +200,7 @@
     <string name="market_listings_action_delete">削除</string>
     <string name="market_listings_action_edit">編集</string>
     <string name="market_listings_action_relist">再出品</string>
-    <string name="market_listings_action_view">ビュー</string>
+    <string name="market_listings_action_view">表示</string>
     <string name="market_listings_delete_confirm">削除</string>
     <string name="market_listings_empty_title">まだリスティングがありません</string>
     <string name="market_listings_filter_active">アクティブ</string>
@@ -305,7 +305,7 @@
     <string name="market_sale_carrier_other">その他</string>
     <string name="market_sale_completed_label">完了</string>
     <string name="market_sale_dispute_respond">返答</string>
-    <string name="market_sale_dispute_state_open">開く</string>
+    <string name="market_sale_dispute_state_open">オープン</string>
     <string name="market_sale_dispute_state_resolved">解決済み</string>
     <string name="market_sale_load_failed">注文の読み込みに失敗しました</string>
     <string name="market_sale_message_buyer">購入者にメッセージ</string>
@@ -324,7 +324,7 @@
     <string name="market_sale_shipped_label">発送済み</string>
     <string name="market_sale_title">販売</string>
     <string name="market_sale_tracking_label">追跡番号</string>
-    <string name="market_saved_title">保存しました</string>
+    <string name="market_saved_title">保存済み</string>
     <string name="market_search_clear">検索をクリア</string>
     <string name="market_section_categories">カテゴリを見る</string>
     <string name="market_section_listings">最近の出品</string>
@@ -336,7 +336,7 @@
     <string name="market_shipping_days_value">%1$s日</string>
     <string name="market_shipping_notes">メモ</string>
     <string name="market_shipping_price">価格</string>
-    <string name="market_shipping_region">都道府県</string>
+    <string name="market_shipping_region">地域</string>
     <string name="market_sidebar_account">アカウント</string>
     <string name="market_sidebar_bids">入札</string>
     <string name="market_sidebar_browse">ブラウズ</string>
@@ -348,7 +348,7 @@
     <string name="market_sidebar_purchases">購入</string>
     <string name="market_sidebar_reviews">レビュー</string>
     <string name="market_sidebar_sales">販売</string>
-    <string name="market_sidebar_saved">保存しました</string>
+    <string name="market_sidebar_saved">保存済み</string>
     <string name="market_sidebar_selling">販売</string>
     <string name="market_sidebar_settings">設定</string>
     <string name="market_sidebar_subscribers">購読者</string>

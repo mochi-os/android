@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">Personeel</string>
+    <string name="launcher_staff">Mochi-personeel</string>
     <string name="staff_accounts_action_ban_title">Verban rekening</string>
     <string name="staff_accounts_action_suspend_title">Skort rekening op</string>
     <string name="staff_accounts_action_unban_title">Hef verbod op</string>
@@ -162,7 +162,7 @@
     <string name="staff_categories_type_digital">Digitaal</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">Fisies</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">Personeel</string>
     <string name="staff_config_field_auto_approve">Outo-goedkeur drempel</string>
     <string name="staff_config_field_hold">Houdrempel</string>
     <string name="staff_config_field_platform_fee">Platformfooi</string>
@@ -253,13 +253,13 @@
     <string name="staff_disputes_refund_help">Laat leeg vir \'n volle terugbetaling van %1$s. Voer \'n kleiner bedrag in vir \'n gedeeltelike terugbetaling.</string>
     <string name="staff_disputes_refund_must_be_positive">Terugbetalingsbedrag moet groter as nul wees</string>
     <string name="staff_disputes_resolution_buyer">Los op vir koper</string>
-    <string name="staff_disputes_resolution_label">Resolusie</string>
+    <string name="staff_disputes_resolution_label">Oplossing</string>
     <string name="staff_disputes_resolution_placeholder">Kies resolusie</string>
     <string name="staff_disputes_resolution_seller">Los op vir verkoper</string>
     <string name="staff_disputes_resolve">Los op</string>
     <string name="staff_disputes_resolved_toast">Geskil opgelos</string>
     <string name="staff_disputes_resolving">Los op…</string>
-    <string name="staff_disputes_review">Resensie</string>
+    <string name="staff_disputes_review">Hersien</string>
     <string name="staff_disputes_status_escalated">Opgeskaleer</string>
     <string name="staff_disputes_status_open">Oop</string>
     <string name="staff_disputes_status_resolved_buyer">Opgelos (koper)</string>
@@ -303,7 +303,7 @@
     <string name="staff_listings_moderation_hold">Hou</string>
     <string name="staff_listings_moderation_manual">Handmatig</string>
     <string name="staff_listings_moderation_rejected">Afgewys</string>
-    <string name="staff_listings_moderation_review">Resensie</string>
+    <string name="staff_listings_moderation_review">Hersiening</string>
     <string name="staff_listings_moderation_soft_approved">Sag-goedgekeur</string>
     <string name="staff_listings_notes_label">Notas</string>
     <string name="staff_listings_price_placeholder">—</string>
@@ -329,7 +329,7 @@
     <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Aksie</string>
     <string name="staff_reports_action_ban">Verban gebruiker</string>
-    <string name="staff_reports_action_dismiss">Sluit</string>
+    <string name="staff_reports_action_dismiss">Wys af</string>
     <string name="staff_reports_action_label">Aksie</string>
     <string name="staff_reports_action_placeholder">Kies aksie</string>
     <string name="staff_reports_action_remove">Verwyder</string>
@@ -341,7 +341,7 @@
     <string name="staff_reports_cancel">Kanselleer</string>
     <string name="staff_reports_close">Sluit</string>
     <string name="staff_reports_dialog_title_action">Tree op oor verslag</string>
-    <string name="staff_reports_dialog_title_view">Rapporteer</string>
+    <string name="staff_reports_dialog_title_view">Rapport</string>
     <string name="staff_reports_empty">Geen verslae</string>
     <string name="staff_reports_filter_status_label">Status</string>
     <string name="staff_reports_filter_type_label">Tipe</string>
@@ -403,7 +403,7 @@
     <string name="staff_sidebar_team">Span</string>
     <string name="staff_status_actioned">Aksie geneem</string>
     <string name="staff_status_active">Aktief</string>
-    <string name="staff_status_admin">Admin</string>
+    <string name="staff_status_admin">Administrateur</string>
     <string name="staff_status_appealed">Geappelleer</string>
     <string name="staff_status_approved">Goedgekeur</string>
     <string name="staff_status_auto_approved">Outomaties goedgekeur</string>
@@ -424,7 +424,7 @@
     <string name="staff_status_resolved_buyer">Opgelos (koper)</string>
     <string name="staff_status_resolved_seller">Opgelos (verkoper)</string>
     <string name="staff_status_responded">Gereageer</string>
-    <string name="staff_status_review">Resensie</string>
+    <string name="staff_status_review">Hersiening</string>
     <string name="staff_status_reviewed">Geresensieer</string>
     <string name="staff_status_reviewing">Besig met resensie</string>
     <string name="staff_status_soft_approved">Sag-goedgekeur</string>
@@ -447,7 +447,7 @@
     <string name="staff_team_remove_confirm">Verwyder</string>
     <string name="staff_team_remove_desc">Verwyder hierdie lid uit die personeelspan?</string>
     <string name="staff_team_remove_title">Verwyder spanlid</string>
-    <string name="staff_team_role_admin">Admin</string>
+    <string name="staff_team_role_admin">Administrateur</string>
     <string name="staff_team_role_moderator">Moderator</string>
     <string name="staff_team_role_support">Ondersteuning</string>
     <string name="staff_team_toast_add_failed">Kon nie lid byvoeg nie</string>

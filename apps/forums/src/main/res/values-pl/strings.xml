@@ -24,9 +24,9 @@
     <string name="forums_settings">Ustawienia</string>
     <string name="forums_load_more">Załaduj więcej</string>
     <string name="forums_sort_label">Sortuj</string>
-    <string name="forums_sort_new">Nowy</string>
+    <string name="forums_sort_new">Najnowsze</string>
     <string name="forums_sort_hot">Popularne</string>
-    <string name="forums_sort_top">Góra</string>
+    <string name="forums_sort_top">Najlepsze</string>
     <string name="forums_sort_interests">Zainteresowania</string>
     <string name="forums_post_title_field">Tytuł</string>
     <string name="forums_post_attach">Dołącz pliki</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Członkowie</string>
     <string name="forums_tab_banner">Baner</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Cel</string>
+    <string name="forums_access_target">Użytkownik lub grupa</string>
     <string name="forums_access_level_view">Zobacz</string>
     <string name="forums_access_level_vote">Głosuj</string>
-    <string name="forums_access_level_comment">Komentarz</string>
+    <string name="forums_access_level_comment">Skomentuj</string>
     <string name="forums_access_level_post">Opublikuj</string>
     <string name="forums_access_level_none">Brak</string>
     <string name="forums_members_empty">Brak członków</string>
     <string name="forums_banner_dismiss">Odrzuć baner</string>
-    <string name="forums_ai_mode_tag">Tag</string>
+    <string name="forums_ai_mode_tag">Taguj</string>
     <string name="forums_ai_account_default">Domyślne konto</string>
     <string name="forums_ai_prompt_reset">Zresetuj do domyślnych</string>
     <string name="forums_settings_unsubscribe">Anuluj subskrypcję</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_login_failed">Logowanie nieudane</string>
 
     <string name="notification_channel_forums">Powiadomienia forów</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Fora</string>
     <string name="forums_auth_create_identity_failed">Nie udało się utworzyć tożsamości</string>
     <string name="forums_auth_mfa_unsupported">MFA nie jest jeszcze obsługiwane w aplikacji mobilnej</string>
     <string name="forums_auth_enter_code_sent">Wprowadź kod wysłany na %1$s</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">Ręczny</string>
     <string name="forums_access_search_users">Szukaj użytkowników</string>
     <string name="forums_access_no_groups">Brak dostępnych grup</string>
-    <string name="forums_saved_title">Zapisano</string>
+    <string name="forums_saved_title">Zapisane</string>
     <string name="forums_saved_save">Zapisz na później</string>
     <string name="forums_saved_remove">Usuń z zapisanych</string>
     <string name="forums_saved_clear_all">Wyczyść wszystko</string>
@@ -322,7 +322,7 @@
     <string name="forums_moderation_action_restrict">Ograniczony</string>
     <string name="forums_moderation_action_unrestrict">Ograniczenie zdjęte</string>
     <string name="forums_moderation_action_resolve">Rozwiązane zgłoszenie</string>
-    <string name="forums_moderation_target_post">Opublikuj</string>
+    <string name="forums_moderation_target_post">Wpis</string>
     <string name="forums_moderation_target_comment">Komentarz</string>
     <string name="forums_moderation_target_user">Użytkownik</string>
     <string name="forums_moderation_reason_spam">Spam</string>

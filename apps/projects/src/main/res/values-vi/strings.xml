@@ -106,7 +106,7 @@
     <string name="projects_design_import">Nhập thiết kế</string>
     <string name="projects_design_imported">Đã nhập thiết kế</string>
     <string name="projects_design_tab_classes">Class</string>
-    <string name="projects_design_tab_views">Lượt xem</string>
+    <string name="projects_design_tab_views">Chế độ xem</string>
     <string name="projects_design_import_dialog_title">Nhập thiết kế</string>
     <string name="projects_design_import_choose_template">Chọn một mẫu</string>
     <string name="projects_design_replace_title">Thay thế thiết kế?</string>
@@ -158,7 +158,7 @@
     <string name="projects_more">Thêm</string>
     <string name="projects_request_more">Thêm</string>
     <string name="projects_comment_send">Gửi</string>
-    <string name="projects_field_position_body">Nội dung</string>
+    <string name="projects_field_position_body">Phần thân</string>
     <string name="projects_sort_field">Sắp xếp theo</string>
     <string name="projects_comment_remove_attachment">Xóa tệp đính kèm</string>
     <string name="projects_views_sort_by">Sắp xếp theo</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Tìm kiếm đối tượng</string>
 
     <string name="notification_channel_projects">Thông báo dự án</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Dự án</string>
     <string name="projects_auth_create_identity_failed">Không thể tạo danh tính</string>
     <string name="projects_auth_mfa_unsupported">MFA chưa được hỗ trợ trong ứng dụng di động</string>
     <string name="projects_auth_enter_code_sent">Nhập mã đã gửi đến %1$s</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Chọn một quy tắc</string>
     <string name="projects_access_authenticated_desc">Bất kỳ ai đã đăng nhập</string>
     <string name="projects_access_anyone_desc">Bao gồm cả người dùng ẩn danh</string>
-    <string name="projects_access_target">Mục tiêu</string>
+    <string name="projects_access_target">Người dùng hoặc nhóm</string>
     <string name="projects_access_target_hint">ID thực thể, @group, * (mọi người), hoặc + (thành viên)</string>
     <string name="projects_access_selected">Đã chọn: %1$s</string>
     <string name="projects_access_role_comment">Bình luận và xem</string>

@@ -14,13 +14,13 @@
     <string name="feeds_no_posts_yet">Tiada hantaran lagi</string>
     <string name="feeds_sort_label">Susun</string>
     <string name="feeds_sort_interests">Minat</string>
-    <string name="feeds_sort_new">Baharu</string>
+    <string name="feeds_sort_new">Terbaharu</string>
     <string name="feeds_sort_hot">Panas</string>
-    <string name="feeds_sort_top">Atas</string>
+    <string name="feeds_sort_top">Teratas</string>
     <string name="feeds_sort_ai">AI</string>
-    <string name="feeds_post_default_author">Hantar</string>
+    <string name="feeds_post_default_author">Hantaran</string>
     <string name="feeds_image_preview">Pratonton</string>
-    <string name="feeds_post">Hantar</string>
+    <string name="feeds_post">Hantaran</string>
     <string name="feeds_comments">Komen</string>
     <string name="feeds_delete_post">Padam pos</string>
     <string name="feeds_delete_comment">Padam komen</string>

@@ -93,7 +93,7 @@
     <string name="projects_request_create_action">ರಚಿಸಿ</string>
     <string name="projects_diff_unified">ಏಕೀಕೃತ</string>
     <string name="projects_diff_split">ವಿಭಜಿಸಿ</string>
-    <string name="projects_diff_empty">ಯಾವುದೇ diff ಲಭ್ಯವಿಲ್ಲ</string>
+    <string name="projects_diff_empty">ಯಾವುದೇ ಡಿಫ್ ಲಭ್ಯವಿಲ್ಲ</string>
     <string name="projects_board_unassigned">ನಿಯೋಜಿಸದ</string>
     <string name="projects_board_new">ಹೊಸ</string>
     <string name="projects_board_rename">ಮರುಹೆಸರಿಸಿ</string>
@@ -158,9 +158,9 @@
     <string name="projects_more">ಇನ್ನಷ್ಟು</string>
     <string name="projects_request_more">ಇನ್ನಷ್ಟು</string>
     <string name="projects_comment_send">ಕಳುಹಿಸಿ</string>
-    <string name="projects_field_position_body">ವಿಷಯ</string>
+    <string name="projects_field_position_body">ಮುಖ್ಯ ಭಾಗ</string>
     <string name="projects_sort_field">ವಿಂಗಡಿಸು</string>
-    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_comment_remove_attachment">ಲಗತ್ತು ತೆಗೆದುಹಾಕಿ</string>
     <string name="projects_views_sort_by">ವಿಂಗಡಿಸು</string>
     <string name="projects_auth_login_failed">ಲಾಗಿನ್ ವಿಫಲವಾಗಿದೆ</string>
     <string name="projects_views_move_up">ಮೇಲೆ ಸರಿಸಿ</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">ವಸ್ತುಗಳನ್ನು ಹುಡುಕಿ</string>
 
     <string name="notification_channel_projects">ಯೋಜನೆಗಳ ಅಧಿಸೂಚನೆಗಳು</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi ಪ್ರಾಜೆಕ್ಟ್‌ಗಳು</string>
     <string name="projects_auth_create_identity_failed">ಗುರುತನ್ನು ರಚಿಸಲು ವಿಫಲವಾಗಿದೆ</string>
     <string name="projects_auth_mfa_unsupported">ಮೊಬೈಲ್ ಆ್ಯಪ್‌ನಲ್ಲಿ MFA ಇನ್ನೂ ಬೆಂಬಲಿತವಾಗಿಲ್ಲ</string>
     <string name="projects_auth_enter_code_sent">%1$s ಗೆ ಕಳುಹಿಸಿದ ಕೋಡ್ ನಮೂದಿಸಿ</string>
@@ -293,7 +293,7 @@
     <string name="projects_field_min_length">ಕನಿಷ್ಠ ಉದ್ದ</string>
     <string name="projects_field_max_length">ಗರಿಷ್ಠ ಉದ್ದ</string>
     <string name="projects_field_pattern">ಮಾದರಿ (regex)</string>
-    <string name="projects_field_rows">ಸಾಲುಗಳು (textarea ಎತ್ತರ)</string>
+    <string name="projects_field_rows">ಸಾಲುಗಳು (ಟೆಕ್ಸ್ಟ್‌ಏರಿಯಾ ಎತ್ತರ)</string>
     <string name="projects_field_no_options">ಯಾವುದೇ ಆಯ್ಕೆಗಳನ್ನು ವ್ಯಾಖ್ಯಾನಿಸಲಾಗಿಲ್ಲ</string>
     <string name="projects_field_delete_message">ನೀವು ನಿಜವಾಗಿಯೂ \"%1$s\" ಕ್ಷೇತ್ರವನ್ನು ಅಳಿಸಲು ಬಯಸುತ್ತೀರಾ? ಎಲ್ಲಾ ಆಯ್ಕೆಗಳು ಮತ್ತು ಮೌಲ್ಯಗಳು ಕಳೆದುಹೋಗುತ್ತವೆ.</string>
     <string name="projects_option_color">ಬಣ್ಣ</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">ನಿಯಮವನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="projects_access_authenticated_desc">ಲಾಗಿನ್ ಆಗಿರುವ ಯಾರಾದರೂ</string>
     <string name="projects_access_anyone_desc">ಅನಾಮಧೇಯ ಬಳಕೆದಾರರು ಸೇರಿದಂತೆ</string>
-    <string name="projects_access_target">ಗುರಿ</string>
+    <string name="projects_access_target">ಬಳಕೆದಾರ ಅಥವಾ ಗುಂಪು</string>
     <string name="projects_access_target_hint">ಎಂಟಿಟಿ ID, @group, * (ಎಲ್ಲರೂ), ಅಥವಾ + (ಸದಸ್ಯರು)</string>
     <string name="projects_access_selected">ಆಯ್ಕೆಮಾಡಲಾಗಿದೆ: %1$s</string>
     <string name="projects_access_role_comment">ಕಾಮೆಂಟ್ ಮಾಡಿ ಮತ್ತು ವೀಕ್ಷಿಸಿ</string>
@@ -381,5 +381,5 @@
     <string name="projects_option_delete_message">ನೀವು \"%1$s\" ಆಯ್ಕೆಯನ್ನು ಅಳಿಸಲು ಖಚಿತವಾಗಿರುವಿರಾ?</string>
     <string name="projects_create_object_no_types">ಇನ್ನೂ ಯಾವುದೇ ಐಟಂ ಪ್ರಕಾರಗಳನ್ನು ರಚಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ. ಮೊದಲು ಅಗತ್ಯವಿರುವ ಪೋಷಕ ಐಟಂಗಳನ್ನು ರಚಿಸಿ.</string>
     <string name="projects_create_blocked_no_options">ರಚಿಸಲಾಗುವುದಿಲ್ಲ: %1$s ಅಗತ್ಯವಿದೆ ಆದರೆ ಆಯ್ಕೆ ಮಾಡಲು ಯಾವುದೇ ಆಯ್ಕೆಗಳಿಲ್ಲ. ವಿನ್ಯಾಸದಲ್ಲಿ ಆಯ್ಕೆಗಳನ್ನು ಸೇರಿಸಿ.</string>
-    <string name="projects_attachment_remove">Remove attachment</string>
+    <string name="projects_attachment_remove">ಲಗತ್ತು ತೆಗೆದುಹಾಕಿ</string>
 </resources>

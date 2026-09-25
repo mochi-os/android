@@ -12,11 +12,11 @@
     <string name="account_section_passkeys">Անցաբանալիներ</string>
     <string name="account_passkey_register">Ավելացնել անցաբանալի</string>
     <string name="account_passkey_delete_title">Ջնջե՞լ անցաբառը։</string>
-    <string name="account_section_totp">Authenticator հավելված</string>
+    <string name="account_section_totp">Նույնականացման հավելված</string>
     <string name="account_totp_setup">Կարգավորել ստուգիչը</string>
     <string name="account_totp_setup_title">Կարգավորել ստուգիչը</string>
     <string name="account_totp_verify">Ստուգել</string>
-    <string name="account_totp_disable_title">Անջատե՞լ Authenticator-ը։</string>
+    <string name="account_totp_disable_title">Անջատե՞լ նույնականացուցիչը։</string>
     <string name="account_section_recovery">Վերականգնման կոդեր</string>
     <string name="account_recovery_codes_title">Վերականգնման կոդեր</string>
     <string name="sessions_unknown_agent">Անհայտ սարք</string>
@@ -123,7 +123,7 @@
     <string name="system_settings_section_oauth">Երրորդ կողմի մուտք</string>
     <string name="system_settings_section_user_defaults">Օգտատիրոջ կանխադրվածներ</string>
     <string name="system_settings_section_operator">Օպերատոր</string>
-    <string name="system_settings_section_push">Push ծանուցումներ</string>
+    <string name="system_settings_section_push">Պուշ-ծանուցումներ</string>
     <string name="system_settings_section_other">Այլ կարգավորումներ</string>
     <string name="system_settings_state_disabled">Անջատված է</string>
     <string name="system_settings_state_allowed">Թույլատրված է</string>
@@ -138,7 +138,7 @@
     <string name="system_setting_apps_install_user">Թույլատրել օգտատերերին տեղադրել հավելվածներ</string>
     <string name="system_setting_auth_email">Մուտք գործել էլփոստի կոդով</string>
     <string name="system_setting_auth_passkey">Մուտք անցաբանալիով</string>
-    <string name="system_setting_auth_totp">Մուտք TOTP authenticator հավելվածով</string>
+    <string name="system_setting_auth_totp">Մուտք TOTP նույնականացման հավելվածով</string>
     <string name="system_setting_auth_recovery">Մուտք գործել վերականգնման կոդով</string>
     <string name="system_setting_auth_oauth">Մուտք OAuth 2.0-ով</string>
     <string name="system_setting_default_theme">Լռելյայն թեմա</string>
@@ -316,7 +316,7 @@
     <string name="login_section_methods">Մուտքի եղանակներ</string>
     <string name="login_method_email">Էլ․ փոստի կոդ</string>
     <string name="login_method_passkey">Անցաբանալի</string>
-    <string name="login_method_totp">Authenticator հավելված</string>
+    <string name="login_method_totp">Նույնականացման հավելված</string>
     <string name="login_method_oauth">Երրորդ կողմի մուտք</string>
     <string name="login_method_recovery">Վերականգնման կոդեր</string>
     <string name="account_close_section">Փակել հաշիվը</string>
@@ -358,9 +358,9 @@
     <string name="route_target_none">Հասանելի նպատակակետեր չկան</string>
     <string name="login_invalid_code">Անվավեր կոդ</string>
     <string name="accounts_provider_browser">Բրաուզերի ծանուցումներ</string>
-    <string name="accounts_provider_fcm">Android push</string>
+    <string name="accounts_provider_fcm">Android պուշ-ծանուցումներ</string>
     <string name="accounts_provider_mcp">MCP սերվեր</string>
-    <string name="accounts_provider_unifiedpush">Push ծանուցում</string>
+    <string name="accounts_provider_unifiedpush">Պուշ-ծանուցում</string>
     <string name="accounts_provider_url">Արտաքին URL</string>
     <string name="accounts_provider_web">Mochi վեբ</string>
     <string name="accounts_verified">Հաշիվը ստուգված է</string>
@@ -376,10 +376,10 @@
     <string name="accounts_forget_message">Սա կմոռանա \"%1$s\" սարքը և կդադարեցնի ծանուցումները դրան:</string>
     <string name="accounts_device_seen">Վերջին անգամ տեսնված %1$s</string>
     <string name="notifprefs_device_app">%1$s · հավելված</string>
-    <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_device_push">%1$s · պուշ-ծանուցումներ</string>
     <string name="notifprefs_test_partial">Թեստն ուղարկվել է %1$d նպատակակետի՝ %2$d-ից</string>
     <string name="notifprefs_test_none">Կարգավորված ուղղություններ չկան</string>
-    <string name="notifprefs_transport_fcm">Android push</string>
+    <string name="notifprefs_transport_fcm">Android պուշ-ծանուցումներ</string>
     <string name="notifprefs_no_destinations">Նպատակակետեր չկան</string>
     <string name="account_data_generate">Ստեղծել գաղտնաբառ</string>
     <string name="accounts_field_server">Սերվերի URL</string>

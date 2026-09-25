@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">스태프</string>
+    <string name="launcher_staff">Mochi 스태프</string>
     <string name="staff_accounts_action_ban_title">계정 차단</string>
     <string name="staff_accounts_action_suspend_title">계정 정지</string>
     <string name="staff_accounts_action_unban_title">차단 해제</string>
@@ -162,7 +162,7 @@
     <string name="staff_categories_type_digital">디지털</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">실물</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">스태프</string>
     <string name="staff_config_field_auto_approve">자동 승인 임계값</string>
     <string name="staff_config_field_hold">보류 임계값</string>
     <string name="staff_config_field_platform_fee">플랫폼 수수료</string>
@@ -259,9 +259,9 @@
     <string name="staff_disputes_resolve">해결</string>
     <string name="staff_disputes_resolved_toast">분쟁이 해결되었어요</string>
     <string name="staff_disputes_resolving">해결 중…</string>
-    <string name="staff_disputes_review">리뷰</string>
+    <string name="staff_disputes_review">검토</string>
     <string name="staff_disputes_status_escalated">에스컬레이션됨</string>
-    <string name="staff_disputes_status_open">열기</string>
+    <string name="staff_disputes_status_open">열림</string>
     <string name="staff_disputes_status_resolved_buyer">해결됨 (구매자)</string>
     <string name="staff_disputes_status_resolved_seller">해결됨 (판매자)</string>
     <string name="staff_disputes_status_responded">응답함</string>
@@ -303,7 +303,7 @@
     <string name="staff_listings_moderation_hold">보류</string>
     <string name="staff_listings_moderation_manual">수동</string>
     <string name="staff_listings_moderation_rejected">거부됨</string>
-    <string name="staff_listings_moderation_review">리뷰</string>
+    <string name="staff_listings_moderation_review">검토 대기</string>
     <string name="staff_listings_moderation_soft_approved">임시 승인됨</string>
     <string name="staff_listings_notes_label">메모</string>
     <string name="staff_listings_price_placeholder">—</string>
@@ -329,7 +329,7 @@
     <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">작업</string>
     <string name="staff_reports_action_ban">사용자 차단</string>
-    <string name="staff_reports_action_dismiss">닫기</string>
+    <string name="staff_reports_action_dismiss">기각</string>
     <string name="staff_reports_action_label">작업</string>
     <string name="staff_reports_action_placeholder">동작 선택</string>
     <string name="staff_reports_action_remove">제거</string>
@@ -416,7 +416,7 @@
     <string name="staff_status_hold">보류</string>
     <string name="staff_status_manual">수동</string>
     <string name="staff_status_moderator">모더레이터</string>
-    <string name="staff_status_open">열기</string>
+    <string name="staff_status_open">열림</string>
     <string name="staff_status_pending">대기 중</string>
     <string name="staff_status_published">게시됨</string>
     <string name="staff_status_rejected">거부됨</string>
@@ -424,7 +424,7 @@
     <string name="staff_status_resolved_buyer">해결됨 (구매자)</string>
     <string name="staff_status_resolved_seller">해결됨 (판매자)</string>
     <string name="staff_status_responded">응답함</string>
-    <string name="staff_status_review">리뷰</string>
+    <string name="staff_status_review">검토 대기</string>
     <string name="staff_status_reviewed">검토됨</string>
     <string name="staff_status_reviewing">검토 중</string>
     <string name="staff_status_soft_approved">임시 승인됨</string>

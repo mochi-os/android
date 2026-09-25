@@ -96,7 +96,7 @@
     <string name="settings_number_format">Talformat</string>
     <string name="settings_units">Enheter</string>
     <string name="settings_units_metric">Metrisk</string>
-    <string name="settings_units_imperial">Imperial</string>
+    <string name="settings_units_imperial">Imperisk</string>
     <string name="settings_time_zone">Tidszon</string>
     <string name="settings_reset_to_defaults">Återställ till standardvärden</string>
     <string name="settings_reset_confirm_title">Återställ inställningar?</string>

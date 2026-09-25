@@ -10,8 +10,8 @@
     <string name="settings_home_accounts">Подключённые аккаунты</string>
     <string name="settings_home_interests">Интересы</string>
     <string name="account_section_passkeys">Ключи доступа</string>
-    <string name="account_passkey_register">Добавить passkey</string>
-    <string name="account_passkey_delete_title">Удалить passkey?</string>
+    <string name="account_passkey_register">Добавить ключ доступа</string>
+    <string name="account_passkey_delete_title">Удалить ключ доступа?</string>
     <string name="account_section_totp">Приложение-аутентификатор</string>
     <string name="account_totp_setup">Настроить аутентификатор</string>
     <string name="account_totp_setup_title">Настроить аутентификатор</string>
@@ -137,7 +137,7 @@
     <string name="system_settings_reset_title">Сбросить к значениям по умолчанию?</string>
     <string name="system_setting_apps_install_user">Разрешить пользователям устанавливать приложения</string>
     <string name="system_setting_auth_email">Вход с помощью кода по email</string>
-    <string name="system_setting_auth_passkey">Вход с помощью passkey</string>
+    <string name="system_setting_auth_passkey">Вход с помощью ключа доступа</string>
     <string name="system_setting_auth_totp">Вход через приложение-аутентификатор TOTP</string>
     <string name="system_setting_auth_recovery">Вход с помощью кода восстановления</string>
     <string name="system_setting_auth_oauth">Вход через OAuth 2.0</string>
@@ -151,7 +151,7 @@
     <string name="system_setting_oauth_github_client_secret">Секрет клиента GitHub</string>
     <string name="system_setting_oauth_microsoft_client_id">Идентификатор клиента Microsoft</string>
     <string name="system_setting_oauth_microsoft_client_secret">Секрет клиента Microsoft</string>
-    <string name="system_setting_oauth_microsoft_tenant">Microsoft tenant</string>
+    <string name="system_setting_oauth_microsoft_tenant">Тенант Microsoft</string>
     <string name="system_setting_oauth_facebook_client_id">Идентификатор приложения Facebook</string>
     <string name="system_setting_oauth_facebook_client_secret">Секрет приложения Facebook</string>
     <string name="system_setting_oauth_x_client_id">Идентификатор клиента X</string>
@@ -346,7 +346,7 @@
     <string name="system_status_reachability_private">Приватный</string>
     <string name="system_status_reachability_unknown">Неизвестно</string>
     <string name="system_status_relay">Через реле</string>
-    <string name="system_status_mesh">Mesh трансляции</string>
+    <string name="system_status_mesh">Ячеистая сеть трансляции</string>
     <string name="system_status_broadcast">Последняя трансляция</string>
     <string name="system_status_queued_broadcasts">Широковещательные сообщения в очереди</string>
     <string name="system_setting_hostname_publish">Объявлять имя хоста и домены другим серверам</string>

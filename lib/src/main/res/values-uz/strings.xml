@@ -38,7 +38,7 @@
     <string name="access_add_rule">Qoida qoʻshish</string>
     <string name="access_owner">Egasi</string>
     <string name="access_revoke">Bekor qilish</string>
-    <string name="access_level_comment">Izoh</string>
+    <string name="access_level_comment">Izoh qoldirish</string>
     <string name="access_level_view">Koʻrish</string>
     <string name="access_level_none">Hech qanday</string>
     <string name="reaction_like">Yoqdi</string>
@@ -191,7 +191,7 @@
     <string name="format_time_weeks_short">%1$d hafta</string>
     <string name="format_time_months_short">%1$d oy</string>
     <string name="reaction_add">Reaksiya qo\'shish</string>
-    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel">Mochi bildirishnomalari</string>
     <string name="push_service_channel_description">Bildirishnomalarni olish uchun Mochini ulangan holda saqlaydi</string>
     <string name="push_service_group">Fon xizmati</string>
     <string name="push_service_title">Mochi bildirishnomalarni tinglamoqda</string>

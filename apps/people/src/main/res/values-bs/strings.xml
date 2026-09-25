@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Otvori navigaciju</string>
     <string name="people_person_state_friend">Prijatelji</string>
     <string name="people_person_state_self">Vi</string>
-    <string name="people_person_message">Poruka</string>
+    <string name="people_person_message">Pošalji poruku</string>
     <string name="people_person_accept">Prihvati</string>
     <string name="people_person_decline">Odbij</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Prihvati sve</string>
     <string name="people_invitations_decline_all">Odbij sve</string>
     <string name="people_invitations_cancel_all">Otkaži sve</string>
+    <string name="people_invitations_cancel">Otkaži</string>
     <string name="people_invitations_all_accepted">Svi pozivi su prihvaćeni</string>
     <string name="people_invitations_all_declined">Svi pozivi su odbijeni</string>
     <string name="people_invitations_all_cancelled">Svi pozivi su otkazani</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Pretraži…</string>
     <string name="people_contacts_invited">Pozvan</string>
     <string name="people_contacts_accept">Prihvati</string>
-    <string name="people_contacts_message">Poruka</string>
+    <string name="people_contacts_message">Pošalji poruku</string>
     <string name="people_contacts_no_people_found">Nisu pronađeni ljudi</string>
     <string name="people_contacts_try_adjusting">Pokušaj prilagoditi pretragu</string>
     <string name="people_contact_section_address">Adresa</string>
@@ -126,11 +127,11 @@
     <string name="people_contact_name">Ime</string>
     <string name="people_contact_email">Email</string>
     <string name="people_contact_city">Grad</string>
-    <string name="people_contact_region">Region</string>
+    <string name="people_contact_region">Regija</string>
     <string name="people_contact_postcode">Poštanski broj</string>
     <string name="people_contact_country">Država</string>
     <string name="people_contact_type">Tip</string>
-    <string name="people_contact_type_home">Kuća</string>
+    <string name="people_contact_type_home">Kućni</string>
     <string name="people_contact_type_other">Drugo</string>
     <string name="people_contact_remove">Ukloni</string>
     <string name="people_contact_pick_date_confirm">U redu</string>

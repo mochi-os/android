@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="settings_home_title">सेटिंग सब</string>
+    <string name="settings_home_title">सेटिंग</string>
     <string name="settings_home_logout">लॉग आउट</string>
     <string name="settings_home_account">खाता</string>
     <string name="settings_home_preferences">वरीयता</string>
@@ -9,14 +9,14 @@
     <string name="settings_home_notification_prefs">सूचना पसंद</string>
     <string name="settings_home_accounts">जुड़ल खाता</string>
     <string name="settings_home_interests">रुचि</string>
-    <string name="account_section_passkeys">Passkey</string>
-    <string name="account_passkey_register">Passkey जोड़ीं</string>
-    <string name="account_passkey_delete_title">Passkey मेटाईं?</string>
-    <string name="account_section_totp">Authenticator ऐप</string>
+    <string name="account_section_passkeys">पासकी सब</string>
+    <string name="account_passkey_register">पासकी जोड़ीं</string>
+    <string name="account_passkey_delete_title">पासकी मेटाईं?</string>
+    <string name="account_section_totp">ऑथेंटिकेटर ऐप</string>
     <string name="account_totp_setup">ऑथेंटिकेटर सेट अप करीं</string>
     <string name="account_totp_setup_title">ऑथेंटिकेटर सेट अप करीं</string>
     <string name="account_totp_verify">सत्यापित करीं</string>
-    <string name="account_totp_disable_title">Authenticator अक्षम करीं?</string>
+    <string name="account_totp_disable_title">ऑथेंटिकेटर अक्षम करीं?</string>
     <string name="account_section_recovery">रिकवरी कोड</string>
     <string name="account_recovery_codes_title">रिकवरी कोड</string>
     <string name="sessions_unknown_agent">अनजान डिवाइस</string>
@@ -62,7 +62,7 @@
     <string name="notifprefs_edit_category">श्रेणी संपादित करीं</string>
     <string name="notifprefs_name_label">नाम</string>
     <string name="notifprefs_destinations">गंतव्य</string>
-    <string name="notifprefs_dest_web">Web browser</string>
+    <string name="notifprefs_dest_web">वेब ब्राउज़र</string>
     <string name="notifprefs_test">परीक्षण</string>
     <string name="notifprefs_edit">संपादित करीं</string>
     <string name="notifprefs_delete">मेटाईं</string>
@@ -143,7 +143,7 @@
     <string name="system_setting_auth_oauth">OAuth 2.0 के इस्तेमाल से लॉगिन</string>
     <string name="system_setting_default_theme">डिफ़ॉल्ट थीम</string>
     <string name="system_setting_domains_verification">डोमेन सत्यापन जरूरी करीं</string>
-    <string name="system_setting_email_from">सिस्टम ईमेल खातिर डिफ़ॉल्ट from पता</string>
+    <string name="system_setting_email_from">सिस्टम ईमेल खातिर डिफ़ॉल्ट प्रेषक पता</string>
     <string name="system_setting_oauth_public_url">OAuth रीडायरेक्ट खातिर सार्वजनिक URL</string>
     <string name="system_setting_oauth_google_client_id">Google क्लाइंट ID</string>
     <string name="system_setting_oauth_google_client_secret">Google क्लाइंट सीक्रेट</string>
@@ -316,14 +316,14 @@
     <string name="login_section_methods">लॉगिन के तरीका</string>
     <string name="login_method_email">ईमेल कोड</string>
     <string name="login_method_passkey">पासकी</string>
-    <string name="login_method_totp">Authenticator ऐप</string>
+    <string name="login_method_totp">ऑथेंटिकेटर ऐप</string>
     <string name="login_method_oauth">तीसरा-पक्ष लॉगिन</string>
     <string name="login_method_recovery">रिकवरी कोड</string>
     <string name="account_close_section">खाता बंद करीं</string>
     <string name="account_close_action">खाता बंद करीं</string>
     <string name="account_close_confirm_title">रउआ आपन खाता बंद करे के बानी?</string>
     <string name="account_close_confirm_body">रउआ के खाता मिटावे खातिर तय कइल जाई आ रउआ साइन आउट हो जाईं। मिटावे के तारीख से पहिले कवनो समय फेर से लॉग इन क के रउआ रद्द क सकेनी।</string>
-    <string name="account_data_download">डाउनलोड</string>
+    <string name="account_data_download">डाउनलोड करीं</string>
     <string name="route_target_app">ऐप</string>
     <string name="route_target_entity">एंटिटी</string>
     <string name="route_target_url">URL</string>
@@ -357,7 +357,7 @@
     <string name="account_data_description">पूरा बैकअप डाउनलोड करीं जेकरा के रउआ ई या कवनो दूसरा Mochi सर्वर पर रिस्टोर कर सकत बानी।</string>
     <string name="route_target_none">कवनो लक्ष्य उपलब्ध नइखे</string>
     <string name="login_invalid_code">अमान्य कोड</string>
-    <string name="accounts_provider_browser">Browser सूचना</string>
+    <string name="accounts_provider_browser">ब्राउज़र सूचना</string>
     <string name="accounts_provider_fcm">Android पुश</string>
     <string name="accounts_provider_mcp">MCP सर्वर</string>
     <string name="accounts_provider_unifiedpush">पुश सूचना</string>

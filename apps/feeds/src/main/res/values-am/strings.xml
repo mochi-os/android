@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="feeds_title">ምግቦች</string>
+    <string name="feeds_title">ፊዶች</string>
     <string name="feeds_find_feeds">ፊዶችን ፈልግ</string>
     <string name="feeds_create_feed">ፊድ ፍጠር</string>
     <string name="feeds_new_post">አዲስ ልጥፍ</string>
@@ -8,15 +8,15 @@
     <string name="feeds_name">ስም</string>
     <string name="feeds_create">ፍጠር</string>
     <string name="feeds_no_feeds_found">ምንም ፊዶች አልተገኙም</string>
-    <string name="feeds_feed_title_default">ምግብ</string>
+    <string name="feeds_feed_title_default">ፊድ</string>
     <string name="feeds_mark_all_read">ሁሉንም እንደተነበበ ምልክት አድርግ</string>
     <string name="feeds_settings">ቅንብሮች</string>
     <string name="feeds_no_posts_yet">እስካሁን ልጥፎች የሉም</string>
     <string name="feeds_sort_label">ይደርድሩ</string>
     <string name="feeds_sort_interests">ፍላጎቶች</string>
-    <string name="feeds_sort_new">አዲስ</string>
+    <string name="feeds_sort_new">አዳዲስ</string>
     <string name="feeds_sort_hot">ሞቅ ያለ</string>
-    <string name="feeds_sort_top">ላይ</string>
+    <string name="feeds_sort_top">ምርጥ</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">ልጥፍ</string>
     <string name="feeds_image_preview">ቅድመ ዕይታ</string>
@@ -29,8 +29,8 @@
     <string name="feeds_cancel_reply">ምላሽ ሰርዝ</string>
     <string name="feeds_edit_post">ልጥፍ አስተካክል</string>
     <string name="feeds_save_label">ያስቀምጡ</string>
-    <string name="feeds_post_action">ልጥፍ</string>
-    <string name="feeds_feed_label">ምግብ</string>
+    <string name="feeds_post_action">ለጥፍ</string>
+    <string name="feeds_feed_label">ፊድ</string>
     <string name="feeds_add_files">ፋይሎችን ጨምር</string>
     <string name="feeds_restore">ይመልሱ</string>
     <string name="feeds_check_in">ግባ</string>
@@ -55,7 +55,7 @@
     <string name="feeds_source_url">URL</string>
     <string name="feeds_source_type">አይነት</string>
     <string name="feeds_source_type_rss">RSS</string>
-    <string name="feeds_source_type_feed_posts">Mochi ምግብ</string>
+    <string name="feeds_source_type_feed_posts">Mochi ፊድ</string>
     <string name="feeds_source_type_feed_memories">ትዝታዎች</string>
     <string name="feeds_remove_source">ምንጭን አስወግድ</string>
     <string name="feeds_suggested_credibility_accept">ተቀበል</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">ውጣ</string>
     <string name="feeds_ai_account_default">ነባሪ መለያ</string>
     <string name="feeds_ai_mode_off">ተሰናክሏል</string>
-    <string name="feeds_ai_mode_tag">መለያ</string>
+    <string name="feeds_ai_mode_tag">መለያ መስጠት</string>
     <string name="feeds_ai_mode_tag_deduplicate">መለያ + ድግግሞሽን አስወግድ</string>
     <string name="feeds_feed_not_found">ፊድ አልተገኘም</string>
     <string name="feeds_post_not_found">ልጥፍ አልተገኘም</string>
@@ -84,8 +84,8 @@
     <string name="feeds_settings_prompt_reset">ሞብያ ወደ ነባብስታው ተመልሶአል</string>
     <string name="feeds_send">ላክ</string>
 
-    <string name="notification_channel_feeds">የምግቦች ማሳወቂያዎች</string>
-    <string name="feeds_search_placeholder">ምግቦችን ይፈልጉ ወይም URL ይለጥፉ…</string>
+    <string name="notification_channel_feeds">የፊዶች ማሳወቂያዎች</string>
+    <string name="feeds_search_placeholder">ፊዶችን ይፈልጉ ወይም URL ይለጥፉ…</string>
     <string name="feeds_url_result">የURL ውጤት</string>
     <string name="feeds_search_results">የፍለጋ ውጤቶች</string>
     <string name="feeds_unread_only">ያልተነበቡ ብቻ</string>
@@ -102,12 +102,12 @@
     <string name="feeds_replying_to_author">ለ%1$s መልስ በመስጠት ላይ</string>
     <string name="feeds_attach_file">ፋይል አያይዝ</string>
     <string name="feeds_file">ፋይል</string>
-    <string name="feeds_select_feed">ምግብ ይምረጡ</string>
-    <string name="feeds_loading_feeds">ምግቦች በመጫን ላይ…</string>
+    <string name="feeds_select_feed">ፊድ ይምረጡ</string>
+    <string name="feeds_loading_feeds">ፊዶች በመጫን ላይ…</string>
     <string name="feeds_move_up">ወደ ላይ ውሰድ</string>
     <string name="feeds_move_down">ወደ ታች ውሰድ</string>
     <string name="feeds_sources_title_named">የ%1$s ምንጮች</string>
-    <string name="feeds_delete_feed_confirm">ይህ ምግቡን እና ሁሉንም ልጥፎቹን በቋሚነት ይሰርዛል። ይህ መቀልበስ አይቻልም።</string>
+    <string name="feeds_delete_feed_confirm">ይህ ፊዱን እና ሁሉንም ልጥፎቹን በቋሚነት ይሰርዛል። ይህ መቀልበስ አይቻልም።</string>
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">ፈጽሞ አልተወሰደም</string>
     <string name="feeds_source_poll">ቅኝት</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">ፍላጎት ቀንሷል</string>
     <string name="feeds_interest_removed">ፍላጎት ተወግዷል</string>
     <string name="feeds_interest_failed">ፍላጎትን ማስተካከል አልተሳካም</string>
-    <string name="feeds_saved_title">ተቀምጧል</string>
-    <string name="feeds_saved_menu">ተቀምጧል</string>
+    <string name="feeds_saved_title">የተቀመጡ</string>
+    <string name="feeds_saved_menu">የተቀመጡ</string>
     <string name="feeds_saved_save">ለኋላ አስቀምጥ</string>
     <string name="feeds_saved_remove">ከተቀመጡ አስወግድ</string>
     <string name="feeds_saved_clear_all">ሁሉንም አጽዳ</string>
@@ -169,7 +169,7 @@
     <string name="feeds_rss_mode_posts_comments">ልጥፎች እና አስተያየቶች</string>
     <string name="feeds_access_add_title">መዳረሻ ጨምር</string>
     <string name="feeds_permission_request_message">%1$s የሚከተለውን ፈቃድ እየጠየቀ ነው፦</string>
-    <string name="feeds_allow_search">ማንኛውም ሰው ምግቡን እንዲፈልግ ፍቀድ</string>
+    <string name="feeds_allow_search">ማንኛውም ሰው ፊዱን እንዲፈልግ ፍቀድ</string>
     <string name="feeds_post_content">የልጥፍ ይዘት</string>
     <string name="feeds_enable_memories">ማስታወሻዎችን አንቃ</string>
     <string name="feeds_permission_request_title">የፈቃድ ጥያቄ</string>
@@ -186,7 +186,7 @@
     <string name="feeds_source_last_checked">መጨረሻ የተፈተሸው %1$s</string>
     <string name="feeds_settings_unsubscribe_section">ከፊድ ምዝገባ ያቋርጡ</string>
     <string name="feeds_source_transform_hint">ወደ እንግሊዝኛ ተርጉም፣ እና በነጥቦች አሳይ።</string>
-    <string name="feeds_source_url_hint_feed">የምግብ ኢንቲቲ መለያ ወይም የጣት አሻራ</string>
+    <string name="feeds_source_url_hint_feed">የፊድ ኢንቲቲ መለያ ወይም የጣት አሻራ</string>
     <string name="feeds_source_credibility_label">ታማኝነት</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d ሰዓት</item>
@@ -209,7 +209,7 @@
     <string name="feeds_ai_prompt_custom">ብጁ</string>
     <string name="feeds_ai_prompt_variables">ተለዋዋጮች፦ %1$s</string>
     <string name="feeds_link">አገናኝ</string>
-    <string name="feeds_share_link_title">የምግብ አገናኝ</string>
+    <string name="feeds_share_link_title">የፊድ አገናኝ</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$d አስተያየት</item>
         <item quantity="other">%1$d አስተያየቶች</item>

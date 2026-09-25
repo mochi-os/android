@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="feeds_title">Feeds</string>
+    <string name="feeds_title">Feed-et</string>
     <string name="feeds_find_feeds">Gjej feeds</string>
     <string name="feeds_create_feed">Krijo feed</string>
     <string name="feeds_new_post">Postim i ri</string>
@@ -14,13 +14,13 @@
     <string name="feeds_no_posts_yet">Ende pa postime</string>
     <string name="feeds_sort_label">Rendit</string>
     <string name="feeds_sort_interests">Interesat</string>
-    <string name="feeds_sort_new">I ri</string>
+    <string name="feeds_sort_new">Më të rejat</string>
     <string name="feeds_sort_hot">Të nxehta</string>
-    <string name="feeds_sort_top">Lart</string>
+    <string name="feeds_sort_top">Më të mirat</string>
     <string name="feeds_sort_ai">AI</string>
-    <string name="feeds_post_default_author">Posto</string>
+    <string name="feeds_post_default_author">Postim</string>
     <string name="feeds_image_preview">Pamja paraprake</string>
-    <string name="feeds_post">Posto</string>
+    <string name="feeds_post">Postim</string>
     <string name="feeds_comments">Komentet</string>
     <string name="feeds_delete_post">Fshi postimin</string>
     <string name="feeds_delete_comment">Fshi komentin</string>
@@ -55,7 +55,7 @@
     <string name="feeds_source_url">URL</string>
     <string name="feeds_source_type">Lloji</string>
     <string name="feeds_source_type_rss">RSS</string>
-    <string name="feeds_source_type_feed_posts">Mochi feed</string>
+    <string name="feeds_source_type_feed_posts">Feed Mochi</string>
     <string name="feeds_source_type_feed_memories">Kujtimet</string>
     <string name="feeds_remove_source">Hiq burimin</string>
     <string name="feeds_suggested_credibility_accept">Prano</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Dilni</string>
     <string name="feeds_ai_account_default">Llogaria e parazgjedhur</string>
     <string name="feeds_ai_mode_off">I çaktivizuar</string>
-    <string name="feeds_ai_mode_tag">Etiketa</string>
+    <string name="feeds_ai_mode_tag">Etiketo</string>
     <string name="feeds_ai_mode_tag_deduplicate">Etiketo + duplikatat</string>
     <string name="feeds_feed_not_found">Feed nuk u gjet</string>
     <string name="feeds_post_not_found">Postimi s\'u gjet</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Interesi u zvogëlua</string>
     <string name="feeds_interest_removed">Interesi u hoq</string>
     <string name="feeds_interest_failed">Rregullimi i interesit dështoi</string>
-    <string name="feeds_saved_title">I ruajtur</string>
-    <string name="feeds_saved_menu">I ruajtur</string>
+    <string name="feeds_saved_title">Të ruajturat</string>
+    <string name="feeds_saved_menu">Të ruajturat</string>
     <string name="feeds_saved_save">Ruaj për më vonë</string>
     <string name="feeds_saved_remove">Hiq nga të ruajturat</string>
     <string name="feeds_saved_clear_all">Pastro të gjitha</string>

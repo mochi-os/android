@@ -38,7 +38,7 @@
     <string name="access_add_rule">Kamachiyta yapay</string>
     <string name="access_owner">Apuq</string>
     <string name="access_revoke">Qichuy</string>
-    <string name="access_level_comment">Comentario</string>
+    <string name="access_level_comment">Rimariy</string>
     <string name="access_level_view">Qhaway</string>
     <string name="access_level_none">Mana</string>
     <string name="reaction_like">Munay</string>
@@ -107,7 +107,7 @@
     <string name="settings_display_reset_confirm_title">Rikuy tukuypiman kutiy?</string>
     <string name="settings_display_reset_confirm_message">Kayqa rikuy chimpunakuna tukuypiman kutiyanqa.</string>
     <string name="settings_theme_title">Tema</string>
-    <string name="settings_theme_default">Default</string>
+    <string name="settings_theme_default">Predeterminado</string>
     <string name="settings_background">Qhipa</string>
     <string name="settings_background_theme">Temamanta</string>
     <string name="settings_background_off">Mana</string>
@@ -188,10 +188,10 @@
     <string name="format_time_minutes_short">%1$dm</string>
     <string name="format_time_hours_short">%1$dh</string>
     <string name="format_time_days_short">%1$dd</string>
-    <string name="format_time_weeks_short">%1$dw</string>
-    <string name="format_time_months_short">%1$dmo</string>
+    <string name="format_time_weeks_short">%1$d sem</string>
+    <string name="format_time_months_short">%1$d killa</string>
     <string name="reaction_add">Kutichiyta yapay</string>
-    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel">Mochi willakuykuna</string>
     <string name="push_service_channel_description">Mochi-ta tinkichisqa hark\'an willaykunata chaskinapaq</string>
     <string name="push_service_group">Qhipa ñawpaq llamk\'ay</string>
     <string name="push_service_title">Mochi willaykunata uyarichkan</string>
@@ -204,7 +204,7 @@
     <string name="oem_hint_samsung_note">Samsung telefonokunapi, Settings → Device care → Sleeping apps nisqamanpas qhaway, hinaspa Mochita hurquy sichus rikhurin chayqa.</string>
     <string name="oem_hint_allow">Qhipanchaypi saqiy</string>
     <string name="oem_hint_dismiss">Ama yapamanta rikhurichunchu</string>
-    <string name="about_title">Mochi Client</string>
+    <string name="about_title">Mochi cliente</string>
     <string name="about_version">Versión %1$s</string>
     <string name="about_check_updates">Musuqyaykunata maskay</string>
     <string name="about_up_to_date">Musuqchasqaña</string>

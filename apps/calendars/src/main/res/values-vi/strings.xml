@@ -10,7 +10,7 @@
     <string name="calendars_delete">Xóa</string>
     <string name="calendars_previous">Trước</string>
     <string name="calendars_next">Tiếp theo</string>
-    <string name="calendars_view">Xem</string>
+    <string name="calendars_view">Chế độ xem</string>
     <string name="calendars_view_list">Danh sách</string>
     <string name="calendars_list_search">Tìm kiếm</string>
     <string name="calendars_event_untitled">Không có tiêu đề</string>
@@ -166,7 +166,7 @@
     <string name="calendars_subscribe_server_url">Địa chỉ máy chủ</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Lịch Google</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Tài khoản Google chưa được bật trên máy chủ này. Hãy bật trong Cài đặt, Cài đặt hệ thống.</string>
     <string name="calendars_subscribe_google_connect">Bạn chưa kết nối tài khoản Google nào.</string>

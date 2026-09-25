@@ -38,7 +38,7 @@
     <string name="access_add_rule">Yongeza umthetho</string>
     <string name="access_owner">Umnini</string>
     <string name="access_revoke">Rhoxisa</string>
-    <string name="access_level_comment">Isiphawuli</string>
+    <string name="access_level_comment">Phawula</string>
     <string name="access_level_view">Bonisa</string>
     <string name="access_level_none">Akukho nanye</string>
     <string name="reaction_like">Yithanda</string>
@@ -185,11 +185,11 @@
     <string name="format_time_weeks_ago">kwiiveki ezingu-%1$d ezadlulayo</string>
     <string name="format_time_months_ago">kwiinyanga ezingu-%1$d ezadlulayo</string>
     <string name="format_time_years_ago">kwiminyaka engu-%1$d eyadlulayo</string>
-    <string name="format_time_minutes_short">%1$dm</string>
-    <string name="format_time_hours_short">%1$dh</string>
-    <string name="format_time_days_short">%1$dd</string>
-    <string name="format_time_weeks_short">%1$dw</string>
-    <string name="format_time_months_short">%1$dmo</string>
+    <string name="format_time_minutes_short">imizuzu %1$d</string>
+    <string name="format_time_hours_short">iiyure %1$d</string>
+    <string name="format_time_days_short">iintsuku %1$d</string>
+    <string name="format_time_weeks_short">iiveki %1$d</string>
+    <string name="format_time_months_short">iinyanga %1$d</string>
     <string name="reaction_add">Yongeza impendulo</string>
     <string name="push_service_channel">Izaziso ze-Mochi</string>
     <string name="push_service_channel_description">Igcina i-Mochi inxibelelene ukuze ifumane izaziso</string>

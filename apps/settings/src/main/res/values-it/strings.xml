@@ -63,7 +63,7 @@
     <string name="notifprefs_name_label">Nome</string>
     <string name="notifprefs_destinations">Destinazioni</string>
     <string name="notifprefs_dest_web">Browser web</string>
-    <string name="notifprefs_test">Test</string>
+    <string name="notifprefs_test">Prova</string>
     <string name="notifprefs_edit">Modifica</string>
     <string name="notifprefs_delete">Elimina</string>
     <string name="notifprefs_remove">Rimuovi</string>
@@ -98,7 +98,7 @@
     <string name="accounts_status_verified">Verificato</string>
     <string name="accounts_status_connected">Connesso</string>
     <string name="accounts_default_for_ai">Predefinito per l\'IA</string>
-    <string name="accounts_test">Test</string>
+    <string name="accounts_test">Prova</string>
     <string name="accounts_settings">Impostazioni</string>
     <string name="accounts_verify">Verifica</string>
     <string name="accounts_remove">Rimuovi</string>
@@ -278,7 +278,7 @@
     <string name="account_identity_identity">Identità</string>
     <string name="account_identity_username">Nome utente</string>
     <string name="account_identity_name">Nome</string>
-    <string name="account_identity_fingerprint">Fingerprint</string>
+    <string name="account_identity_fingerprint">Impronta</string>
     <string name="account_identity_directory_toggle">Consenti ad altri di trovarti nella directory</string>
     <string name="domain_add">Aggiungi dominio</string>
     <string name="domain_add_title">Aggiungi dominio</string>

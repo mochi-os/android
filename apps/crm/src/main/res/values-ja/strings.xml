@@ -67,7 +67,7 @@
     <string name="crm_board_rename">名前を変更</string>
     <string name="crm_board_rename_column">列の名前を変更</string>
     <string name="crm_move_position">位置</string>
-    <string name="crm_move_position_top">トップ</string>
+    <string name="crm_move_position_top">先頭</string>
     <string name="crm_move_current">現在</string>
     <string name="crm_design_title">デザイン</string>
     <string name="crm_design_export">デザインをエクスポート</string>

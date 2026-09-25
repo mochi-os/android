@@ -24,13 +24,13 @@
     <string name="forums_settings">אײַנשטעלונגען</string>
     <string name="forums_load_more">לאָדן מער</string>
     <string name="forums_sort_label">סאָרטיר</string>
-    <string name="forums_sort_new">נײַ</string>
+    <string name="forums_sort_new">נײַסטע</string>
     <string name="forums_sort_hot">הייס</string>
-    <string name="forums_sort_top">אויבן</string>
+    <string name="forums_sort_top">בעסטע</string>
     <string name="forums_sort_interests">אינטערעסן</string>
     <string name="forums_post_title_field">קעפּל</string>
     <string name="forums_post_attach">צוהענקען פֿײַלן</string>
-    <string name="forums_post_create_action">פּאָסט</string>
+    <string name="forums_post_create_action">פֿאַרעפֿנטלעך</string>
     <string name="forums_post_edit">רעדאַקטירן בײַטראָג</string>
     <string name="forums_post_edit_title">רעדאַקטירן בײַטראָג</string>
     <string name="forums_post_edit_title_field">קעפּל</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">מיטגלידער</string>
     <string name="forums_tab_banner">באַנער</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">ציל</string>
-    <string name="forums_access_level_view">בליק</string>
+    <string name="forums_access_target">באַניצער אָדער גרופּע</string>
+    <string name="forums_access_level_view">באַקוקן</string>
     <string name="forums_access_level_vote">שטים</string>
-    <string name="forums_access_level_comment">קאָמענטאַר</string>
-    <string name="forums_access_level_post">פּאָסט</string>
+    <string name="forums_access_level_comment">קאָמענטיר</string>
+    <string name="forums_access_level_post">פֿאַרעפֿנטלעך</string>
     <string name="forums_access_level_none">קיינס</string>
     <string name="forums_members_empty">קיין מיטגלידער</string>
     <string name="forums_banner_dismiss">אַראָפּזאָגן באַנער</string>
-    <string name="forums_ai_mode_tag">טאַג</string>
+    <string name="forums_ai_mode_tag">טאַגירן</string>
     <string name="forums_ai_account_default">סטאַנדאַרד קאָנטע</string>
     <string name="forums_ai_prompt_reset">צוריקזעצן צו פֿאַרשטעלונג</string>
     <string name="forums_settings_unsubscribe">אַבאַבאָנירן</string>
@@ -80,7 +80,7 @@
     <string name="forums_moderation_reports_resolved">אויפֿגעלייזט</string>
     <string name="forums_moderation_reports_all">אַלע</string>
     <string name="forums_moderation_reports_empty">קיין באַריכטן</string>
-    <string name="forums_moderation_report_dismiss">אַראָפּזאָגן</string>
+    <string name="forums_moderation_report_dismiss">אָפּוואַרפֿן</string>
     <string name="forums_moderation_restrictions_empty">קיין באַגרענעצונגען</string>
     <string name="forums_moderation_restriction_remove">אַראָפּנעמען</string>
     <string name="forums_moderation_restriction_type">טיפּ</string>
@@ -125,7 +125,7 @@
     <string name="forums_post_body_field">גוף</string>
     <string name="forums_post_edit_body_field">גוף</string>
     <string name="forums_comment_edit_body_field">גוף</string>
-    <string name="forums_post_tag_add">Add tag</string>
+    <string name="forums_post_tag_add">צולייגן אַ טאַג</string>
     <string name="forums_write_comment">שרײַבט אַ קאָמענטאַר…</string>
     <string name="forums_auth_login_failed">לאָגין דורכגעפֿאַלן</string>
 
@@ -286,7 +286,7 @@
     <string name="forums_moderation_unit_replies">ענטפֿערס</string>
     <string name="forums_moderation_unit_seconds">סעקונדעס</string>
     <string name="forums_settings_ai_updated">AI אײַנשטעלונגען דערהײַנטיקט</string>
-    <string name="forums_settings_forum_renamed">פֿאָרום איבערגענומען אַ נײַעם נאָמען</string>
+    <string name="forums_settings_forum_renamed">פֿאָרום איבערגעטויפֿט</string>
     <string name="forums_settings_name_clear_cd">רייניקט דעם נאָמען</string>
     <string name="forums_settings_unsubscribe_section">אַבאָנירט זיך אָפּ פֿון פֿאָרום</string>
     <string name="forums_share_link_title">פֿאָרום לינק</string>

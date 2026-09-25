@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="crm_list_title">CRMs</string>
+    <string name="crm_list_title">CRM</string>
     <string name="crm_list_search">සොයන්න</string>
     <string name="crm_list_find">CRMs සොයන්න</string>
     <string name="crm_list_logout">ඉවත් වන්න</string>
@@ -18,7 +18,7 @@
     <string name="crm_search">සොයන්න</string>
     <string name="crm_settings">සැකසුම්</string>
     <string name="crm_link">සබැඳිය</string>
-    <string name="crm_design">Design</string>
+    <string name="crm_design">සැලසුම</string>
     <string name="crm_export_failed">නිර්යාතය සුරැකිය නොහැකි විය</string>
     <string name="crm_sort_direction">දිශාව</string>
     <string name="crm_sort_rank">අතින්</string>
@@ -32,7 +32,7 @@
     <string name="crm_settings_tab_access">ප්‍රවේශය</string>
     <string name="crm_settings_tab_people">පුද්ගලයන්</string>
     <string name="crm_option_icon">අයිකනය</string>
-    <string name="crm_option_icon_placeholder">වයදාහරණය ලෝෝස්. Check, Star, Flag</string>
+    <string name="crm_option_icon_placeholder">උදා. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">දායකත්වය ඉවත් කරන්න</string>
     <string name="crm_settings_delete_crm">CRM එක මකන්න</string>
     <string name="crm_settings_delete_confirm_title">CRM එක මකන්න</string>
@@ -53,7 +53,7 @@
     <string name="crm_links_type_blocks">අවහිර කරයි</string>
     <string name="crm_links_type_blocked_by">අවහිර කළ</string>
     <string name="crm_links_type_duplicates">අනුපිටපත්</string>
-    <string name="crm_links_no_matches">ගැලපෙන objects නැත</string>
+    <string name="crm_links_no_matches">ගැලපෙන වස්තු නැත</string>
     <string name="crm_field_yes">ඔව්</string>
     <string name="crm_field_no">නැත</string>
     <string name="crm_field_type_checkbox">පරීක්ෂා පෙට්ටිය</string>
@@ -69,10 +69,10 @@
     <string name="crm_move_position">ස්ථානය</string>
     <string name="crm_move_position_top">ඉහළ</string>
     <string name="crm_move_current">වත්මන්</string>
-    <string name="crm_design_title">Design</string>
+    <string name="crm_design_title">සැලසුම</string>
     <string name="crm_design_export">සැලසුම අපනයනය කරන්න</string>
     <string name="crm_design_import">සැලසුම ආයාත කරන්න</string>
-    <string name="crm_design_imported">Design ආයාත කරන ලදී</string>
+    <string name="crm_design_imported">සැලසුම ආයාත කරන ලදී</string>
     <string name="crm_design_export_saved">සැලසුම සුරකින ලදී</string>
     <string name="crm_design_import_failed">එම ගොනුව කියවිය නොහැකි විය</string>
     <string name="crm_design_or_upload_json">නැතහොත් ගොනුවක් උඩුගත කරන්න</string>
@@ -81,7 +81,7 @@
     <string name="crm_design_tab_views">දසුන්</string>
     <string name="crm_design_import_dialog_title">සැලසුම ආයාත කරන්න</string>
     <string name="crm_design_import_choose_template">අච්චුවක් තෝරන්න</string>
-    <string name="crm_design_replace_title">design ප්‍රතිස්ථාපනය කරන්නද?</string>
+    <string name="crm_design_replace_title">සැලසුම ප්‍රතිස්ථාපනය කරන්නද?</string>
     <string name="crm_design_replace">ප්‍රතිස්ථාපනය</string>
     <string name="crm_classes_add">පන්තියක් එක් කරන්න</string>
     <string name="crm_classes_add_dialog_title">පන්තියක් එක් කරන්න</string>
@@ -103,7 +103,7 @@
     <string name="crm_field_flags">කොඩි</string>
     <string name="crm_field_required">අවශ්‍යයි</string>
     <string name="crm_field_position_default">පෙරනිමි</string>
-    <string name="crm_field_position_sidebar">sidebar</string>
+    <string name="crm_field_position_sidebar">පැති තීරුව</string>
     <string name="crm_field_save">වෙනස්කම් සුරකින්න</string>
     <string name="crm_field_options">විකල්ප</string>
     <string name="crm_field_add_option">විකල්පයක් එක් කරන්න</string>
@@ -126,9 +126,9 @@
     <string name="crm_not_found">ව්‍යාපෘතිය හමු නොවීය</string>
     <string name="crm_more">තවත්</string>
     <string name="crm_comment_send">යවන්න</string>
-    <string name="crm_field_position_body">අන්තර්ගතය</string>
+    <string name="crm_field_position_body">ප්‍රධාන කොටස</string>
     <string name="crm_sort_field">අනුව වර්ග කරන්න</string>
-    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_comment_remove_attachment">ඇමුණුම ඉවත් කරන්න</string>
     <string name="crm_views_sort_by">අනුව වර්ග කරන්න</string>
     <string name="crm_views_move_up">ඉහළට ගෙනයන්න</string>
     <string name="crm_class_move_up">ඉහළට ගෙනයන්න</string>
@@ -241,7 +241,7 @@
     <string name="crm_access_no_groups">කණ්ඩායම් ලබා ගත නොහැක</string>
     <string name="crm_access_tab_users">පරිශීලකයන්</string>
     <string name="crm_access_tab_groups">කණ්ඩායම්</string>
-    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_attachment_remove">ඇමුණුම ඉවත් කරන්න</string>
     <string name="crm_board_add_column">තීරුවක් එක් කරන්න</string>
     <string name="crm_settings_entity_id">ආයතන හැඳුනුම</string>
     <string name="crm_settings_fingerprint">ඇඟිලි සලකුණ</string>
@@ -280,7 +280,7 @@
     <string name="crm_export">දත්ත නිර්යාත කරන්න</string>
     <string name="crm_exporting">නිර්යාතය සූදානම් කරමින්…</string>
     <string name="crm_create_allow_search">CRM සොයා ගැනීමට ඕනෑම කෙනෙකුට අවසර දෙන්න</string>
-    <string name="crm_no_crms_found">CRMs කිසිවක් හමු නොවීය</string>
+    <string name="crm_no_crms_found">CRM කිසිවක් හමු නොවීය</string>
     <string name="crm_create_blocked_no_parents">තවම අයිතම වර්ග සෑදිය නොහැක. අවශ්‍ය මූලික අයිතම පළමුව සාදන්න.</string>
     <string name="crm_export_csv">CSV අපනයනය කරන්න</string>
     <string name="crm_share_link_title">CRM බෙදාගන්න</string>

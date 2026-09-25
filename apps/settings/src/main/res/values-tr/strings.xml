@@ -63,7 +63,7 @@
     <string name="notifprefs_name_label">Ad</string>
     <string name="notifprefs_destinations">Hedefler</string>
     <string name="notifprefs_dest_web">Web tarayıcısı</string>
-    <string name="notifprefs_test">Test</string>
+    <string name="notifprefs_test">Test et</string>
     <string name="notifprefs_edit">Düzenle</string>
     <string name="notifprefs_delete">Sil</string>
     <string name="notifprefs_remove">Kaldır</string>
@@ -98,7 +98,7 @@
     <string name="accounts_status_verified">Doğrulandı</string>
     <string name="accounts_status_connected">Bağlandı</string>
     <string name="accounts_default_for_ai">Yapay zekâ için varsayılan</string>
-    <string name="accounts_test">Test</string>
+    <string name="accounts_test">Test et</string>
     <string name="accounts_settings">Ayarlar</string>
     <string name="accounts_verify">Doğrula</string>
     <string name="accounts_remove">Kaldır</string>
@@ -151,7 +151,7 @@
     <string name="system_setting_oauth_github_client_secret">GitHub istemci gizli anahtarı</string>
     <string name="system_setting_oauth_microsoft_client_id">Microsoft istemci kimliği</string>
     <string name="system_setting_oauth_microsoft_client_secret">Microsoft istemci gizli anahtarı</string>
-    <string name="system_setting_oauth_microsoft_tenant">Microsoft tenant</string>
+    <string name="system_setting_oauth_microsoft_tenant">Microsoft kiracısı</string>
     <string name="system_setting_oauth_facebook_client_id">Facebook uygulama kimliği</string>
     <string name="system_setting_oauth_facebook_client_secret">Facebook uygulama gizli anahtarı</string>
     <string name="system_setting_oauth_x_client_id">X istemci kimliği</string>
@@ -376,7 +376,7 @@
     <string name="accounts_forget_message">Bu, \"%1$s\" cihazını unutur ve ona bildirim gönderilmesini durdurur.</string>
     <string name="accounts_device_seen">Son görülme %1$s</string>
     <string name="notifprefs_device_app">%1$s · uygulama</string>
-    <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_device_push">%1$s · anlık bildirim</string>
     <string name="notifprefs_test_partial">Test %2$d hedeften %1$d tanesine gönderildi</string>
     <string name="notifprefs_test_none">Hedef yapılandırılmamış</string>
     <string name="notifprefs_transport_fcm">Android anlık bildirim</string>

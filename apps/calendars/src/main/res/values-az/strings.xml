@@ -10,7 +10,7 @@
     <string name="calendars_delete">Sil</string>
     <string name="calendars_previous">Əvvəlki</string>
     <string name="calendars_next">Növbəti</string>
-    <string name="calendars_view">Bax</string>
+    <string name="calendars_view">Görünüş</string>
     <string name="calendars_view_list">Siyahı</string>
     <string name="calendars_list_search">Axtar</string>
     <string name="calendars_event_untitled">Başlıqsız</string>
@@ -169,7 +169,7 @@
     <string name="calendars_subscribe_server_url">Server ünvanı</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google Təqvim</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Bu serverdə Google hesabları aktivləşdirilməyib. Onları Parametrlər, Sistem parametrləri bölməsində aktivləşdirin.</string>
     <string name="calendars_subscribe_google_connect">Google hesabı qoşmamısınız.</string>

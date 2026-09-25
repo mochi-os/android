@@ -29,7 +29,7 @@
     <string name="projects_sort_label">Raða</string>
     <string name="projects_sort_direction">Stefna</string>
     <string name="projects_sort_rank">Handvirkt</string>
-    <string name="projects_sort_number">Tala</string>
+    <string name="projects_sort_number">Númer</string>
     <string name="projects_sort_created">Búið til</string>
     <string name="projects_sort_updated">Uppfært</string>
     <string name="projects_create_object_type">Tegund</string>
@@ -106,7 +106,7 @@
     <string name="projects_design_import">Flytja inn hönnun</string>
     <string name="projects_design_imported">Hönnun innflutt</string>
     <string name="projects_design_tab_classes">Flokkar</string>
-    <string name="projects_design_tab_views">Áhorf</string>
+    <string name="projects_design_tab_views">Sýnir</string>
     <string name="projects_design_import_dialog_title">Flytja inn hönnun</string>
     <string name="projects_design_import_choose_template">Veldu sniðmát</string>
     <string name="projects_design_replace_title">Skipta út hönnun?</string>
@@ -146,10 +146,10 @@
     <string name="projects_views_edit_dialog_title">Breyta skoðun</string>
     <string name="projects_views_delete_title">Eyða sýn</string>
     <string name="projects_views_type">Tegund</string>
-    <string name="projects_views_type_board">Borð</string>
+    <string name="projects_views_type_board">Tafla</string>
     <string name="projects_views_type_list">Listi</string>
     <string name="projects_views_direction">Stefna</string>
-    <string name="projects_views_sort_number">Tala</string>
+    <string name="projects_views_sort_number">Númer</string>
     <string name="projects_views_sort_created">Búið til</string>
     <string name="projects_views_sort_updated">Uppfært</string>
     <string name="projects_views_sort_rank">Röð</string>
@@ -158,9 +158,9 @@
     <string name="projects_more">Meira</string>
     <string name="projects_request_more">Meira</string>
     <string name="projects_comment_send">Senda</string>
-    <string name="projects_field_position_body">Meginmál</string>
+    <string name="projects_field_position_body">Innihald</string>
     <string name="projects_sort_field">Raða eftir</string>
-    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_comment_remove_attachment">Fjarlægja viðhengi</string>
     <string name="projects_views_sort_by">Raða eftir</string>
     <string name="projects_auth_login_failed">Innskráning mistókst</string>
     <string name="projects_views_move_up">Færa upp</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Veldu reglu</string>
     <string name="projects_access_authenticated_desc">Allir sem eru innskráðir</string>
     <string name="projects_access_anyone_desc">Þar með taldir nafnlausir notendur</string>
-    <string name="projects_access_target">Markmið</string>
+    <string name="projects_access_target">Notandi eða hópur</string>
     <string name="projects_access_target_hint">Auðkenni einingar, @hópur, * (allir), eða + (meðlimir)</string>
     <string name="projects_access_selected">Valið: %1$s</string>
     <string name="projects_access_role_comment">Gera athugasemdir og skoða</string>
@@ -381,5 +381,5 @@
     <string name="projects_option_delete_message">Ertu viss um að þú viljir eyða valkostinum \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Ekki er enn hægt að búa til neinar tegundir atriða. Búðu fyrst til nauðsynleg foreldraatriði.</string>
     <string name="projects_create_blocked_no_options">Ekki hægt að búa til: %1$s er nauðsynlegt en hefur enga valkosti. Bættu við valkostum í Hönnun.</string>
-    <string name="projects_attachment_remove">Remove attachment</string>
+    <string name="projects_attachment_remove">Fjarlægja viðhengi</string>
 </resources>

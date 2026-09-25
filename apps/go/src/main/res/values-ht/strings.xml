@@ -8,7 +8,7 @@
     <string name="go_action_pass">Pase</string>
     <string name="go_action_rematch">Rejwèt</string>
     <string name="go_action_resign">Demisyone</string>
-    <string name="go_app_title">Ale</string>
+    <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Kaptire nwa</string>
     <string name="go_captures_white_sr">Kaptire blan</string>
     <string name="go_chat_title">Chat</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">Louvri ba bò a</string>
     <string name="go_sidebar_active">Jwèt Aktif</string>
     <string name="go_empty_active">Poko gen okenn jwèt aktif.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">Demisyone</string>
     <string name="go_new_game_title">Nouvo jwèt Go</string>
     <string name="go_new_game_no_friends">Ou dwe ajoute yon zanmi anvan ou ka kòmanse yon jwèt.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

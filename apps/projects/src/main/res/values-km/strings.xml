@@ -28,7 +28,7 @@
     <string name="projects_design">រចនា</string>
     <string name="projects_sort_label">តម្រៀប</string>
     <string name="projects_sort_direction">ទិស</string>
-    <string name="projects_sort_rank">សៀវភៅណែនាំ</string>
+    <string name="projects_sort_rank">ដោយដៃ</string>
     <string name="projects_sort_number">លេខ</string>
     <string name="projects_sort_created">បានបង្កើត</string>
     <string name="projects_sort_updated">បានធ្វើបច្ចុប្បន្នភាព</string>
@@ -39,7 +39,7 @@
     <string name="projects_settings_tab_access">ការចូលប្រើ</string>
     <string name="projects_settings_tab_people">មនុស្ស</string>
     <string name="projects_option_icon">រូបតំណាង</string>
-    <string name="projects_option_icon_placeholder">២.១. Check, Star, Flag</string>
+    <string name="projects_option_icon_placeholder">ឧ. Check, Star, Flag</string>
     <string name="projects_settings_unsubscribe">ឈប់ជាវ</string>
     <string name="projects_settings_delete_project">លុបគម្រោង</string>
     <string name="projects_settings_delete_confirm_title">លុបគម្រោង</string>
@@ -93,13 +93,13 @@
     <string name="projects_request_create_action">បង្កើត</string>
     <string name="projects_diff_unified">បំពេញ</string>
     <string name="projects_diff_split">បំបែក</string>
-    <string name="projects_diff_empty">មិនមាន diff</string>
+    <string name="projects_diff_empty">មិនមានភាពខុសគ្នា</string>
     <string name="projects_board_unassigned">មិនបានកំណត់</string>
     <string name="projects_board_new">ថ្មី</string>
     <string name="projects_board_rename">ប្តូរឈ្មោះ</string>
     <string name="projects_board_rename_column">ប្តូរឈ្មោះជួរឈរ</string>
     <string name="projects_move_position">ទីតាំង</string>
-    <string name="projects_move_position_top">កំពូល</string>
+    <string name="projects_move_position_top">ខាងលើបំផុត</string>
     <string name="projects_move_current">បច្ចុប្បន្ន</string>
     <string name="projects_design_title">រចនា</string>
     <string name="projects_design_export">នាំចេញការរចនា</string>
@@ -158,9 +158,9 @@
     <string name="projects_more">បន្ថែម</string>
     <string name="projects_request_more">បន្ថែម</string>
     <string name="projects_comment_send">ផ្ញើ</string>
-    <string name="projects_field_position_body">តួអត្ថបទ</string>
+    <string name="projects_field_position_body">ខ្លឹមសារ</string>
     <string name="projects_sort_field">តម្រៀបតាម</string>
-    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_comment_remove_attachment">ដកឯកសារភ្ជាប់ចេញ</string>
     <string name="projects_views_sort_by">តម្រៀបតាម</string>
     <string name="projects_auth_login_failed">ការចូលបានបរាជ័យ</string>
     <string name="projects_views_move_up">ផ្លាស់ទីឡើងលើ</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">ស្វែងរកវត្ថុ</string>
 
     <string name="notification_channel_projects">ការជូនដំណឹងគម្រោង</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi គម្រោង</string>
     <string name="projects_auth_create_identity_failed">បង្កើតអត្តសញ្ញាណមិនបានជោគជ័យ</string>
     <string name="projects_auth_mfa_unsupported">MFA មិនទាន់គាំទ្រនៅក្នុងកម្មវិធីទូរស័ព្ទចល័តទេ</string>
     <string name="projects_auth_enter_code_sent">បញ្ចូលលេខកូដដែលបានផ្ញើទៅ %1$s</string>
@@ -301,7 +301,7 @@
     <string name="projects_views_empty_subtitle">បង្កើតទិដ្ឋភាពក្ដារ ឬបញ្ជី ដើម្បីដាក់ជាក្រុមនូវវត្ថុ</string>
     <string name="projects_views_delete_message">តើអ្នកប្រាកដថាចង់លុបទិដ្ឋភាព \"%1$s\" ឬ?</string>
     <string name="projects_views_columns_field">វាលជួរឈរ</string>
-    <string name="projects_views_rows_field">វាលជួរដេក (swimlanes)</string>
+    <string name="projects_views_rows_field">វាលជួរដេក (ផ្លូវហែលទឹក)</string>
     <string name="projects_views_border_field">វាលពណ៌ស៊ុម</string>
     <string name="projects_views_filter_classes">ត្រងតាមថ្នាក់</string>
     <string name="projects_views_by">តាម %1$s</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">ជ្រើសរើសច្បាប់</string>
     <string name="projects_access_authenticated_desc">នរណាក៏ដោយដែលបានចូលគណនី</string>
     <string name="projects_access_anyone_desc">រួមទាំងអ្នកប្រើប្រាស់អនាមិកផងដែរ</string>
-    <string name="projects_access_target">គោលដៅ</string>
+    <string name="projects_access_target">អ្នកប្រើប្រាស់ ឬក្រុម</string>
     <string name="projects_access_target_hint">លេខសម្គាល់អង្គភាព, @group, * (មនុស្សគ្រប់គ្នា), ឬ + (សមាជិក)</string>
     <string name="projects_access_selected">បានជ្រើសរើស៖ %1$s</string>
     <string name="projects_access_role_comment">មតិយោបល់ និងមើល</string>
@@ -380,5 +380,5 @@
     <string name="projects_option_delete_message">តើអ្នកប្រាកដថាចង់លុបជម្រើស \"%1$s\" មែនទេ?</string>
     <string name="projects_create_object_no_types">មិនអាចបង្កើតប្រភេទធាតុបានទេ។ បង្កើតធាតុមេដែលត្រូវការជាមុនសិន។</string>
     <string name="projects_create_blocked_no_options">មិនអាចបង្កើតបានទេ៖ %1$s ត្រូវការ ប៉ុន្តែគ្មានជម្រើសឱ្យជ្រើសរើសទេ។ បន្ថែមជម្រើសក្នុងការរចនា។</string>
-    <string name="projects_attachment_remove">Remove attachment</string>
+    <string name="projects_attachment_remove">ដកឯកសារភ្ជាប់ចេញ</string>
 </resources>

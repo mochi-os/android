@@ -7,15 +7,15 @@
     <string name="launcher_projects">Mochi پروژې</string>
     <string name="launcher_crm">Mochi CRM</string>
     <string name="launcher_people">Mochi خلک</string>
-    <string name="launcher_settings">Mochi ترتیبات</string>
+    <string name="launcher_settings">Mochi تنظیمات</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi ویکي ګانې</string>
     <string name="launcher_chess">Mochi شطرنج</string>
-    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_go">Mochi ګو</string>
     <string name="launcher_words">Mochi کلمې</string>
-    <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">Mochi کالنډرونه</string>
-    <string name="launcher_staff">Mochi کارکوونکي</string>
+    <string name="launcher_market">Mochi بازار</string>
+    <string name="launcher_calendars">Mochi کلیزې</string>
+    <string name="launcher_staff">Mochi کارمندان</string>
 
 
     <string name="app_name">Mochi</string>

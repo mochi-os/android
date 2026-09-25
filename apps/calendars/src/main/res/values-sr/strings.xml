@@ -9,8 +9,8 @@
     <string name="calendars_rename">Преименуј</string>
     <string name="calendars_delete">Обриши</string>
     <string name="calendars_previous">Претходно</string>
-    <string name="calendars_next">Dalje</string>
-    <string name="calendars_view">Прикажи</string>
+    <string name="calendars_next">Даље</string>
+    <string name="calendars_view">Приказ</string>
     <string name="calendars_view_list">Листа</string>
     <string name="calendars_list_search">Претражи</string>
     <string name="calendars_event_untitled">Без наслова</string>
@@ -165,14 +165,14 @@
     <string name="calendars_poll_unauthorised">Сервер календара је одбио акредитиве налога</string>
     <string name="calendars_subscribe_username">Корисничко име</string>
     <string name="calendars_subscribe_password">Лозинка</string>
-    <string name="calendars_subscribe_connect">Poveži se</string>
+    <string name="calendars_subscribe_connect">Повежи се</string>
     <string name="calendars_subscribe_server">Други Mochi или CalDAV сервер</string>
     <string name="calendars_subscribe_address">Адреса објављеног календара (само за читање)</string>
     <string name="calendars_subscribe_password_apple">Лозинка за апликацију</string>
     <string name="calendars_subscribe_server_url">Адреса сервера</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google Календар</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google налози нису омогућени на овом серверу. Омогућите их у Поставке, Системске поставке.</string>
     <string name="calendars_subscribe_google_connect">Нисте повезали Google налог.</string>

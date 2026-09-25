@@ -14,7 +14,7 @@
     <string name="feeds_no_posts_yet">ಇನ್ನೂ ಯಾವುದೇ ಪೋಸ್ಟ್‌ಗಳಿಲ್ಲ</string>
     <string name="feeds_sort_label">ವಿಂಗಡಿಸಿ</string>
     <string name="feeds_sort_interests">ಆಸಕ್ತಿಗಳು</string>
-    <string name="feeds_sort_new">ಹೊಸ</string>
+    <string name="feeds_sort_new">ಇತ್ತೀಚಿನ</string>
     <string name="feeds_sort_hot">ಹಾಟ್</string>
     <string name="feeds_sort_top">ಅಗ್ರ</string>
     <string name="feeds_sort_ai">AI</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">ಪ್ರತ್ಯುತ್ತರ ರದ್ದುಮಾಡಿ</string>
     <string name="feeds_edit_post">ಪೋಸ್ಟ್ ಸಂಪಾದಿಸಿ</string>
     <string name="feeds_save_label">ಉಳಿಸಿ</string>
-    <string name="feeds_post_action">ಪೋಸ್ಟ್</string>
+    <string name="feeds_post_action">ಪೋಸ್ಟ್ ಮಾಡಿ</string>
     <string name="feeds_feed_label">ಫೀಡ್</string>
     <string name="feeds_add_files">ಫೈಲ್‌ಗಳನ್ನು ಸೇರಿಸಿ</string>
     <string name="feeds_restore">ಮರುಸ್ಥಾಪಿಸಿ</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">ಲಾಗ್ ಔಟ್</string>
     <string name="feeds_ai_account_default">ಡೀಫಾಲ್ಟ್ ಖಾತೆ</string>
     <string name="feeds_ai_mode_off">ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ</string>
-    <string name="feeds_ai_mode_tag">ಟ್ಯಾಗ್</string>
+    <string name="feeds_ai_mode_tag">ಟ್ಯಾಗ್ ಮಾಡಿ</string>
     <string name="feeds_ai_mode_tag_deduplicate">ಟ್ಯಾಗ್ + ನಕಲನ್ನು ತೆಗೆದುಹಾಕಿ</string>
     <string name="feeds_feed_not_found">ಫೀಡ್ ಸಿಗಲಿಲ್ಲ</string>
     <string name="feeds_post_not_found">ಪೋಸ್ಟ್ ಸಿಗಲಿಲ್ಲ</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">ಆಸಕ್ತಿ ಕಡಿಮೆ ಮಾಡಲಾಗಿದೆ</string>
     <string name="feeds_interest_removed">ಆಸಕ್ತಿ ತೆಗೆದುಹಾಕಲಾಗಿದೆ</string>
     <string name="feeds_interest_failed">ಆಸಕ್ತಿ ಹೊಂದಿಸಲು ವಿಫಲವಾಗಿದೆ</string>
-    <string name="feeds_saved_title">ಉಳಿಸಲಾಗಿದೆ</string>
-    <string name="feeds_saved_menu">ಉಳಿಸಲಾಗಿದೆ</string>
+    <string name="feeds_saved_title">ಉಳಿಸಿದವು</string>
+    <string name="feeds_saved_menu">ಉಳಿಸಿದವು</string>
     <string name="feeds_saved_save">ನಂತರಕ್ಕಾಗಿ ಉಳಿಸಿ</string>
     <string name="feeds_saved_remove">ಉಳಿಸಿದವುಗಳಿಂದ ತೆಗೆದುಹಾಕಿ</string>
     <string name="feeds_saved_clear_all">ಎಲ್ಲವನ್ನೂ ತೆರವುಗೊಳಿಸಿ</string>

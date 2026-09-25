@@ -13,14 +13,14 @@
     <string name="chess_new_title">නව ක්‍රීඩාව</string>
     <string name="chess_new_pick_opponent">ප්‍රතිවාදියා තෝරන්න</string>
     <string name="chess_new_no_friends_title">තවම මිතුරන් නැත</string>
-    <string name="chess_new_no_friends_subtitle">ක්‍රීඩා කිරීම ආරම්භ කිරීමට People app එකේ මිතුරන් එක් කරන්න</string>
+    <string name="chess_new_no_friends_subtitle">ක්‍රීඩා කිරීම ආරම්භ කිරීමට පුද්ගලයන් යෙදුමේ මිතුරන් එක් කරන්න</string>
     <string name="chess_new_add_friends">මිතුරන් එක් කරන්න</string>
     <string name="chess_new_start_button">ක්‍රීඩාව ආරම්භ කරන්න</string>
     <string name="chess_new_creating">නිර්මාණය කරමින්…</string>
     <string name="chess_chat_title">චැට්</string>
     <string name="chess_open_chat">චැට් පැනලය විවෘත කරන්න</string>
     <string name="chess_open_actions">ක්‍රීඩා ක්‍රියා විවෘත කරන්න</string>
-    <string name="chess_offer_draw">draw එකක් යෝජනා කරන්න</string>
+    <string name="chess_offer_draw">සමතය ඉදිරිපත් කරන්න</string>
     <string name="chess_resign">ඉල්ලා අස්වන්න</string>
     <string name="chess_rematch">නැවත ක්‍රීඩාව</string>
     <string name="chess_delete_game">ක්‍රීඩාව මකන්න</string>

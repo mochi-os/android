@@ -2,7 +2,7 @@
 <resources>
     <string name="projects_auth_display_name">Hechauka téra</string>
     <string name="projects_auth_verification_failed">Verificación ndoiporãi</string>
-    <string name="projects_list_title">Mba\'apokuéra</string>
+    <string name="projects_list_title">Proyectokuéra</string>
     <string name="projects_list_close_search">Mboty jeheka</string>
     <string name="projects_list_search">Eheka</string>
     <string name="projects_list_find">Eheka proyectos</string>
@@ -52,12 +52,12 @@
     <string name="projects_object_tab_activity">Tembiaporã</string>
     <string name="projects_object_tab_requests">Jerure</string>
     <string name="projects_object_tab_attachments">Archivokuéra</string>
-    <string name="projects_object_tab_links">Linkkuéra</string>
+    <string name="projects_object_tab_links">Joajukuéra</string>
     <string name="projects_watchers_watch">Ehecha</string>
     <string name="projects_watchers_unwatch">Ñehapykuere\'ỹ</string>
     <string name="projects_parent_label">Sy/ru</string>
     <string name="projects_parent_search_placeholder">Eheka</string>
-    <string name="projects_links_title">Linkkuéra</string>
+    <string name="projects_links_title">Joajukuéra</string>
     <string name="projects_links_add">Embojuaju link</string>
     <string name="projects_links_section_blocks">Bloques</string>
     <string name="projects_links_section_blocked_by">Ojejokóva</string>
@@ -68,7 +68,7 @@
     <string name="projects_links_no_matches">Ndaipóri mba\'e ojuajúva</string>
     <string name="projects_field_yes">Heẽ</string>
     <string name="projects_field_no">Nahániri</string>
-    <string name="projects_field_type_checkbox">Checkbox</string>
+    <string name="projects_field_type_checkbox">Casilla</string>
     <string name="projects_comment_save">Ñongatu</string>
     <string name="projects_comment_empty">Ndaipóri comentario gueteri</string>
     <string name="projects_comment_attach">Embojuaju archivokuéra</string>
@@ -80,11 +80,11 @@
     <string name="projects_request_status_draft">Borrador</string>
     <string name="projects_request_status_open">Ijurujáva</string>
     <string name="projects_request_status_merged">Merge</string>
-    <string name="projects_request_merge">Merge</string>
+    <string name="projects_request_merge">Embojuaju</string>
     <string name="projects_request_close">Mboty</string>
-    <string name="projects_request_merge_dialog_title">Merge</string>
+    <string name="projects_request_merge_dialog_title">Embojuaju</string>
     <string name="projects_request_method">Método</string>
-    <string name="projects_request_method_merge">Merge</string>
+    <string name="projects_request_method_merge">Embojuaju</string>
     <string name="projects_request_field_repository">Repositorio</string>
     <string name="projects_request_field_source">Pyendarã rama</string>
     <string name="projects_request_field_title">Téra</string>
@@ -105,7 +105,7 @@
     <string name="projects_design_export">Esẽ diseño</string>
     <string name="projects_design_import">Embojuaju diseño</string>
     <string name="projects_design_imported">Diseño oñembojuaju</string>
-    <string name="projects_design_tab_classes">Classes</string>
+    <string name="projects_design_tab_classes">Clasekuéra</string>
     <string name="projects_design_tab_views">Jehecha</string>
     <string name="projects_design_import_dialog_title">Embojuaju diseño</string>
     <string name="projects_design_import_choose_template">Eiporavo peteĩ template</string>
@@ -126,12 +126,12 @@
     <string name="projects_field_type_number">Papapy</string>
     <string name="projects_field_type_user">Mboapurevahára</string>
     <string name="projects_field_type_date">Ára</string>
-    <string name="projects_field_type_checklist">Checklist</string>
+    <string name="projects_field_type_checklist">Lista jehechajey</string>
     <string name="projects_field_name">Téra</string>
     <string name="projects_field_type">Mba\'éichagua</string>
     <string name="projects_field_flags">Banderakuéra</string>
     <string name="projects_field_required">Oñeikotevẽ</string>
-    <string name="projects_field_position_default">Default</string>
+    <string name="projects_field_position_default">Ypygua</string>
     <string name="projects_field_position_sidebar">Yke</string>
     <string name="projects_field_save">Ñongatu ñemoambue</string>
     <string name="projects_field_options">Opciones</string>
@@ -180,7 +180,7 @@
     <string name="projects_links_search_placeholder">Heka mba\'ekuéra</string>
 
     <string name="notification_channel_projects">Marandu proyécto rehegua</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Proyectokuéra</string>
     <string name="projects_list_search_placeholder">Eheka proyécto</string>
     <string name="projects_list_no_matching">Ndaipóri proyécto ojojoguáva</string>
     <string name="projects_list_empty">Ndaipóri gueteri proyécto</string>
@@ -327,7 +327,7 @@
     <string name="projects_settings_section_access">Jeike Sãmbyhy</string>
     <string name="projects_people_search">Eheka tapicha</string>
     <string name="projects_settings_field_entity_id">Entidad ID</string>
-    <string name="projects_settings_field_fingerprint">Fingerprint</string>
+    <string name="projects_settings_field_fingerprint">Kuãhũ</string>
     <string name="projects_settings_field_server">Mohendaha</string>
     <string name="projects_access_subject_anyone">Oimeraẽva</string>
     <string name="projects_access_subject_authenticated">Puruhára jeikuaapyre</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Eiporavo peteĩ tekome\'ẽ</string>
     <string name="projects_access_authenticated_desc">Oimeraẽva oike va\'ekue</string>
     <string name="projects_access_anyone_desc">Oike avei puruhára hérava\'ỹva</string>
-    <string name="projects_access_target">Apoukapy</string>
+    <string name="projects_access_target">Mboapurevahára térã atypy</string>
     <string name="projects_access_target_hint">Entidad ID, @atyguasu, * (opavave), térã + (mba\'apoharakuéra)</string>
     <string name="projects_access_selected">Oñeporavóva: %1$s</string>
     <string name="projects_access_role_comment">Comentario ha hecha</string>

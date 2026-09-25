@@ -151,7 +151,7 @@
     <string name="system_setting_oauth_github_client_secret">GitHub kliento paslaptis</string>
     <string name="system_setting_oauth_microsoft_client_id">Microsoft kliento ID</string>
     <string name="system_setting_oauth_microsoft_client_secret">Microsoft kliento paslaptis</string>
-    <string name="system_setting_oauth_microsoft_tenant">Microsoft tenant</string>
+    <string name="system_setting_oauth_microsoft_tenant">Microsoft nuomotojas</string>
     <string name="system_setting_oauth_facebook_client_id">Facebook programėlės ID</string>
     <string name="system_setting_oauth_facebook_client_secret">Facebook programėlės paslaptis</string>
     <string name="system_setting_oauth_x_client_id">X kliento ID</string>
@@ -362,7 +362,7 @@
     <string name="route_target_none">Nėra galimų tikslų</string>
     <string name="login_invalid_code">Netinkamas kodas</string>
     <string name="accounts_provider_browser">Naršyklės pranešimai</string>
-    <string name="accounts_provider_fcm">Android push</string>
+    <string name="accounts_provider_fcm">Android push pranešimai</string>
     <string name="accounts_provider_mcp">MCP serveris</string>
     <string name="accounts_provider_unifiedpush">Push pranešimas</string>
     <string name="accounts_provider_url">Išorinis URL</string>
@@ -380,10 +380,10 @@
     <string name="accounts_forget_message">Tai pamirš įrenginį \"%1$s\" ir sustabdys pranešimus į jį.</string>
     <string name="accounts_device_seen">Paskutinį kartą matytas %1$s</string>
     <string name="notifprefs_device_app">%1$s · programėlė</string>
-    <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_device_push">%1$s · push pranešimai</string>
     <string name="notifprefs_test_partial">Testas išsiųstas į %1$d iš %2$d paskirties vietų</string>
     <string name="notifprefs_test_none">Paskirties vietų nesukonfigūruota</string>
-    <string name="notifprefs_transport_fcm">Android push</string>
+    <string name="notifprefs_transport_fcm">Android push pranešimai</string>
     <string name="notifprefs_no_destinations">Tikslų nėra</string>
     <string name="account_data_generate">Sugeneruoti slaptafrazę</string>
     <string name="accounts_field_server">Serverio URL</string>

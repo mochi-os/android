@@ -4,10 +4,10 @@
     <string name="go_action_more">Odpri dejanja igre</string>
     <string name="go_action_offer_draw">Ponudi remi</string>
     <string name="go_action_open_chat">Odpri ploščo pogovora</string>
-    <string name="go_action_pass">Pass</string>
+    <string name="go_action_pass">Preskoči</string>
     <string name="go_action_rematch">Vrnitev</string>
     <string name="go_action_resign">Odstopi</string>
-    <string name="go_app_title">Pojdi</string>
+    <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Črne ujetnice</string>
     <string name="go_captures_white_sr">Bele ujetnice</string>
     <string name="go_chat_title">Klepet</string>
@@ -38,12 +38,12 @@
     <string name="go_new_game_komi_label">Komi</string>
     <string name="go_new_game_komi_range_error">Mora biti med 0 in 10</string>
     <string name="go_new_game_start">Začni igro</string>
-    <string name="go_pass_confirm">Pass</string>
+    <string name="go_pass_confirm">Preskoči</string>
     <string name="go_pass_end_confirm">Končaj igro</string>
     <string name="go_pass_end_message">%1$s je tudi predal. S potrditvijo se igra konča in se prešteje tabla.</string>
     <string name="go_pass_end_title">Končaj igro?</string>
     <string name="go_pass_message">Preskoči svojo potezo in jo predaj nasprotniku.</string>
-    <string name="go_pass_title">Pass turn?</string>
+    <string name="go_pass_title">Preskočite potezo?</string>
     <string name="go_resign_confirm">Odstopi</string>
     <string name="go_resign_message">Ali ste prepričani, da se želite predati? %1$s bo zmagal igro.</string>
     <string name="go_resign_title">Odstopi od igre?</string>

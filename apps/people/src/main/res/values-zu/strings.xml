@@ -62,7 +62,7 @@
     <string name="people_profile_uploading">Iyalayisha…</string>
     <string name="people_profile_change_banner">Shintsha ibhanela</string>
     <string name="people_profile_no_banner">Awukho ubhana osethiwe</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">Isithonjana sebhrawuza</string>
     <string name="people_profile_browser_icon">Isithonjana sebhrawuza</string>
     <string name="people_profile_file_too_large">Ifayela likhulu kakhulu</string>
     <string name="people_profile_clear">Sula</string>
@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Vula ukuzulazula</string>
     <string name="people_person_state_friend">Abangane</string>
     <string name="people_person_state_self">Wena</string>
-    <string name="people_person_message">Umyalezo</string>
+    <string name="people_person_message">Thumela umyalezo</string>
     <string name="people_person_accept">Yamukela</string>
     <string name="people_person_decline">Yenqaba</string>
 
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">Faka umbala we-hex osebenzayo (isb. #a78bfa)</string>
     <string name="people_profile_accent_none">Lutho</string>
     <string name="people_profile_privacy_private_desc">Abangani enibathandanayo kuphela abangabuka iphrofayela yakho</string>
-    <string name="people_welcome_title">Siyakwamukela ku-People</string>
+    <string name="people_welcome_title">Siyakwamukela ku-Abantu</string>
     <string name="people_person_banner_alt">Ibhena ka-%1$s</string>
     <string name="people_person_private">Le phrofayela iyimfihlo</string>
     <string name="people_person_state_invited">Umenyiwe</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Yamukela konke</string>
     <string name="people_invitations_decline_all">Yenqaba konke</string>
     <string name="people_invitations_cancel_all">Khansela konke</string>
+    <string name="people_invitations_cancel">Khansela</string>
     <string name="people_invitations_all_accepted">Zonke izimemo zamukelwe</string>
     <string name="people_invitations_all_declined">Zonke izimemo zenqatshwe</string>
     <string name="people_invitations_all_cancelled">Zonke izimemo zikhanseliwe</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Sesha…</string>
     <string name="people_contacts_invited">Umenyiwe</string>
     <string name="people_contacts_accept">Yamukela</string>
-    <string name="people_contacts_message">Umyalezo</string>
+    <string name="people_contacts_message">Thumela umyalezo</string>
     <string name="people_contacts_no_people_found">Abakho abantu abatholakele</string>
     <string name="people_contacts_try_adjusting">Zama ukulungisa ukusesha kwakho</string>
     <string name="people_contact_section_address">Ikheli</string>
@@ -133,7 +134,7 @@
     <string name="people_contact_type_home">Ekhaya</string>
     <string name="people_contact_type_other">Okunye</string>
     <string name="people_contact_remove">Khipha</string>
-    <string name="people_contact_pick_date_confirm">KULUNGILE</string>
+    <string name="people_contact_pick_date_confirm">Kulungile</string>
     <string name="people_books_name">Igama</string>
     <string name="people_books_rename">Qamba kabusha</string>
     <string name="people_contacts_sort_name">Igama</string>

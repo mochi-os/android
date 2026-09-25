@@ -38,7 +38,7 @@
     <string name="access_add_rule">Agregar regla</string>
     <string name="access_owner">Propietario</string>
     <string name="access_revoke">Revocar</string>
-    <string name="access_level_comment">Comentario</string>
+    <string name="access_level_comment">Comentar</string>
     <string name="access_level_view">Ver</string>
     <string name="access_level_none">Ninguno</string>
     <string name="reaction_like">Me gusta</string>

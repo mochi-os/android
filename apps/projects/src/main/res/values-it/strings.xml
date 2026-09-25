@@ -158,7 +158,7 @@
     <string name="projects_more">Altro</string>
     <string name="projects_request_more">Altro</string>
     <string name="projects_comment_send">Invia</string>
-    <string name="projects_field_position_body">Testo</string>
+    <string name="projects_field_position_body">Corpo</string>
     <string name="projects_sort_field">Ordina per</string>
     <string name="projects_comment_remove_attachment">Rimuovi allegato</string>
     <string name="projects_views_sort_by">Ordina per</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Cerca oggetti</string>
 
     <string name="notification_channel_projects">Notifiche progetti</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Progetti</string>
     <string name="projects_auth_create_identity_failed">Creazione dell\'identità non riuscita</string>
     <string name="projects_auth_mfa_unsupported">MFA non ancora supportata nell\'app mobile</string>
     <string name="projects_auth_enter_code_sent">Inserisci il codice inviato a %1$s</string>
@@ -327,7 +327,7 @@
     <string name="projects_settings_section_access">Gestione degli accessi</string>
     <string name="projects_people_search">Cerca persone</string>
     <string name="projects_settings_field_entity_id">ID entità</string>
-    <string name="projects_settings_field_fingerprint">Fingerprint</string>
+    <string name="projects_settings_field_fingerprint">Impronta</string>
     <string name="projects_settings_field_server">Server</string>
     <string name="projects_access_subject_anyone">Chiunque</string>
     <string name="projects_access_subject_authenticated">Utenti autenticati</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Seleziona una regola</string>
     <string name="projects_access_authenticated_desc">Chiunque abbia effettuato l\'accesso</string>
     <string name="projects_access_anyone_desc">Inclusi gli utenti anonimi</string>
-    <string name="projects_access_target">Destinazione</string>
+    <string name="projects_access_target">Soggetto</string>
     <string name="projects_access_target_hint">ID entità, @gruppo, * (tutti) o + (membri)</string>
     <string name="projects_access_selected">Selezionato: %1$s</string>
     <string name="projects_access_role_comment">Commenta e visualizza</string>

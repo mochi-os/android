@@ -3,7 +3,7 @@
 
     <string name="launcher_feeds">Mochi Feeds</string>
     <string name="launcher_chat">Mochi Chat</string>
-    <string name="launcher_forums">Mochi Forums</string>
+    <string name="launcher_forums">Mochi Fora</string>
     <string name="launcher_projects">Mochi Proġetti</string>
     <string name="launcher_crm">Mochi CRM</string>
     <string name="launcher_people">Mochi Nies</string>
@@ -13,9 +13,9 @@
     <string name="launcher_chess">Mochi Ċess</string>
     <string name="launcher_go">Mochi Go</string>
     <string name="launcher_words">Mochi Kliem</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi Suq</string>
     <string name="launcher_calendars">Mochi Kalendarji</string>
-    <string name="launcher_staff">Mochi Persunal</string>
+    <string name="launcher_staff">Persunal ta\' Mochi</string>
 
 
     <string name="app_name">Mochi</string>

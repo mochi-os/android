@@ -10,7 +10,7 @@
     <string name="calendars_delete">Busak</string>
     <string name="calendars_previous">Sadurungé</string>
     <string name="calendars_next">Sabanjure</string>
-    <string name="calendars_view">Deleng</string>
+    <string name="calendars_view">Tampilan</string>
     <string name="calendars_view_list">Daftar</string>
     <string name="calendars_list_search">Goleki</string>
     <string name="calendars_event_untitled">Tanpa judul</string>
@@ -53,9 +53,9 @@
     <string name="calendars_colour">Warna</string>
     <string name="calendars_view_day">Dina</string>
     <string name="calendars_event_start">Miwiti</string>
-    <string name="notification_channel_calendars">Kalender</string>
-    <string name="calendars_drawer_title">Kalender</string>
-    <string name="calendars_drawer_open">Kalender</string>
+    <string name="notification_channel_calendars">Kalèndher</string>
+    <string name="calendars_drawer_title">Kalèndher</string>
+    <string name="calendars_drawer_open">Kalèndher</string>
     <string name="calendars_calendar_menu">Opsi %1$s</string>
     <string name="calendars_only_this">Mung iki</string>
     <string name="calendars_create">Gawé kalender</string>
@@ -166,7 +166,7 @@
     <string name="calendars_subscribe_server_url">Alamat server</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google Kalender</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Akun Google durung diaktifaké ing server iki. Aktifaké ing Setelan, Setelan sistem.</string>
     <string name="calendars_subscribe_google_connect">Sampeyan durung nyambungaké akun Google.</string>

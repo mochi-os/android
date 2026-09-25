@@ -24,9 +24,9 @@
     <string name="forums_settings">Ajustes</string>
     <string name="forums_load_more">Cargar más</string>
     <string name="forums_sort_label">Ordenar</string>
-    <string name="forums_sort_new">Nuevo</string>
+    <string name="forums_sort_new">Recientes</string>
     <string name="forums_sort_hot">Popular</string>
-    <string name="forums_sort_top">Arriba</string>
+    <string name="forums_sort_top">Mejores</string>
     <string name="forums_sort_interests">Intereses</string>
     <string name="forums_post_title_field">Título</string>
     <string name="forums_post_attach">Adjuntar ficheros</string>
@@ -59,7 +59,7 @@
     <string name="forums_tab_members">Miembros</string>
     <string name="forums_tab_banner">Banner</string>
     <string name="forums_tab_ai">IA</string>
-    <string name="forums_access_target">Destino</string>
+    <string name="forums_access_target">Usuario o grupo</string>
     <string name="forums_access_level_view">Ver</string>
     <string name="forums_access_level_vote">Votar</string>
     <string name="forums_access_level_comment">Comentar</string>
@@ -67,7 +67,7 @@
     <string name="forums_access_level_none">Ninguno</string>
     <string name="forums_members_empty">No hay miembros</string>
     <string name="forums_banner_dismiss">Descartar banner</string>
-    <string name="forums_ai_mode_tag">Etiqueta</string>
+    <string name="forums_ai_mode_tag">Etiquetar</string>
     <string name="forums_ai_account_default">Cuenta predeterminada</string>
     <string name="forums_ai_prompt_reset">Restablecer al valor predeterminado</string>
     <string name="forums_settings_unsubscribe">Cancelar suscripción</string>
@@ -124,7 +124,7 @@
     <string name="forums_comment_send">Enviar</string>
 
     <string name="notification_channel_forums">Notificaciones de foros</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Foros</string>
     <string name="forums_auth_login_failed">Error al iniciar sesión</string>
     <string name="forums_auth_create_identity_failed">Error al crear la identidad</string>
     <string name="forums_auth_mfa_unsupported">La MFA aún no es compatible con la aplicación móvil</string>
@@ -169,7 +169,7 @@
     <string name="forums_moderation_log_meta">Por %1$s · Objetivo %2$s</string>
     <string name="forums_moderation_restriction_add">Añadir restricción</string>
     <string name="forums_moderation_restriction_user">Identidad del usuario</string>
-    <string name="forums_moderation_restriction_type_shadowban">Shadowban</string>
+    <string name="forums_moderation_restriction_type_shadowban">Vetar en secreto</string>
     <string name="forums_moderation_restriction_duration_seconds">Duración (segundos, vacío para permanente)</string>
     <string name="forums_moderation_restriction_expires">Expira %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanente</string>
@@ -320,8 +320,8 @@
     <string name="forums_moderation_action_restrict">Restringido</string>
     <string name="forums_moderation_action_unrestrict">Restricción retirada</string>
     <string name="forums_moderation_action_resolve">Informe resuelto</string>
-    <string name="forums_moderation_target_post">Publicar</string>
-    <string name="forums_moderation_target_comment">Comentar</string>
+    <string name="forums_moderation_target_post">Publicación</string>
+    <string name="forums_moderation_target_comment">Comentario</string>
     <string name="forums_moderation_target_user">Usuario</string>
     <string name="forums_moderation_reason_spam">Spam</string>
     <string name="forums_moderation_reason_harassment">Acoso</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="wikis_sidebar_header">Wiki-ји</string>
+    <string name="wikis_sidebar_header">Викији</string>
     <string name="wikis_sidebar_all">Сви wiki-ји</string>
     <string name="wikis_sidebar_find">Пронађи викије</string>
     <string name="wikis_sidebar_create">Креирај wiki</string>
@@ -23,7 +23,7 @@
     <string name="wikis_page_action_new_page">Нова страница</string>
     <string name="wikis_page_action_settings">Поставке</string>
     <string name="wikis_page_action_unsubscribe">Откажи претплату</string>
-    <string name="wikis_title">Wiki-ји</string>
+    <string name="wikis_title">Викији</string>
     <string name="wikis_empty_title">Започни први wiki</string>
     <string name="wikis_empty_subtitle">Претражи wiki за претплату или креирајте један за објављивање сопствене документације.</string>
     <string name="wikis_create_button">Креирај wiki</string>
@@ -205,7 +205,7 @@
     <string name="wikis_access_select_rule">Изаберите правило</string>
     <string name="wikis_access_authenticated_desc">Свако ко је пријављен</string>
     <string name="wikis_access_anyone_desc">Укључујући анонимне кориснике</string>
-    <string name="wikis_access_selected">Izabrano: %1$s</string>
+    <string name="wikis_access_selected">Изабрано: %1$s</string>
     <string name="wikis_access_no_groups">Нема доступних група</string>
     <string name="wikis_access_set_success">Приступ ажуриран</string>
     <string name="wikis_access_revoke_success">Приступ уклоњен</string>
@@ -286,7 +286,7 @@
     <string name="wikis_access_subject_authenticated">Аутентификовани корисници</string>
 
     <string name="wikis_revision_compare">Упореди измене</string>
-    <string name="wikis_revision_author">po %1$s</string>
+    <string name="wikis_revision_author">по %1$s</string>
     <string name="wikis_revision_show_page">Прикажи страницу</string>
     <string name="wikis_revision_compare_failed">Претходна верзија није могла да се учита ради поређења.</string>
     <string name="wikis_revision_changes_from">Измене из верзије %1$d → %2$d</string>

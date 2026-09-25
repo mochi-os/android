@@ -67,7 +67,7 @@
     <string name="crm_board_rename">नाम परिवर्तन गर्नुहोस्</string>
     <string name="crm_board_rename_column">स्तम्भको नाम परिवर्तन गर्नुहोस्</string>
     <string name="crm_move_position">स्थिति</string>
-    <string name="crm_move_position_top">माथि</string>
+    <string name="crm_move_position_top">सबैभन्दा माथि</string>
     <string name="crm_move_current">हालको</string>
     <string name="crm_design_title">डिजाइन</string>
     <string name="crm_design_export">डिजाइन निर्यात गर्नुहोस्</string>
@@ -128,7 +128,7 @@
     <string name="crm_comment_send">पठाउनुहोस्</string>
     <string name="crm_field_position_body">मुख्य भाग</string>
     <string name="crm_sort_field">क्रमबद्ध गर्नुहोस्</string>
-    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_comment_remove_attachment">संलग्नक हटाउनुहोस्</string>
     <string name="crm_views_sort_by">क्रमबद्ध गर्नुहोस्</string>
     <string name="crm_views_move_up">माथि सार्नुहोस्</string>
     <string name="crm_class_move_up">माथि सार्नुहोस्</string>
@@ -241,7 +241,7 @@
     <string name="crm_access_no_groups">कुनै समूह उपलब्ध छैन</string>
     <string name="crm_access_tab_users">प्रयोगकर्ताहरू</string>
     <string name="crm_access_tab_groups">समूहहरू</string>
-    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_attachment_remove">संलग्नक हटाउनुहोस्</string>
     <string name="crm_board_add_column">स्तम्भ थप्नुहोस्</string>
     <string name="crm_settings_entity_id">एन्टिटी आईडी</string>
     <string name="crm_settings_fingerprint">औंलाछाप</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="wikis_sidebar_header">विकि</string>
+    <string name="wikis_sidebar_header">विकीज़</string>
     <string name="wikis_sidebar_all">सभी wikis</string>
     <string name="wikis_sidebar_find">विकी खोजें</string>
     <string name="wikis_sidebar_create">wiki बनाएँ</string>
@@ -23,7 +23,7 @@
     <string name="wikis_page_action_new_page">नया पेज</string>
     <string name="wikis_page_action_settings">सेटिंग्स</string>
     <string name="wikis_page_action_unsubscribe">अनसब्सक्राइब करें</string>
-    <string name="wikis_title">विकि</string>
+    <string name="wikis_title">विकीज़</string>
     <string name="wikis_empty_title">अपनी पहली विकि शुरू करें</string>
     <string name="wikis_empty_subtitle">सब्सक्राइब करने के लिए विकि खोजें, या अपना दस्तावेज़ प्रकाशित करने के लिए नया विकि बनाएँ।</string>
     <string name="wikis_create_button">wiki बनाएँ</string>
@@ -157,7 +157,7 @@
     <string name="wikis_attachments_view_list">सूची व्यू</string>
     <string name="wikis_attachments_copy_embed">एम्बेड लिंक कॉपी करें</string>
     <string name="wikis_attachments_embed_copied">एम्बेड लिंक कॉपी किया गया</string>
-    <string name="wikis_attachments_download">डाउनलोड</string>
+    <string name="wikis_attachments_download">डाउनलोड करें</string>
     <string name="wikis_attachments_delete">हटाएँ</string>
     <string name="wikis_attachments_delete_confirm_title">अटैचमेंट हटाएँ</string>
     <string name="wikis_attachments_delete_success">अटैचमेंट हटाया गया</string>

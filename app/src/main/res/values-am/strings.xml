@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Mochi ምግቦች</string>
+    <string name="launcher_feeds">Mochi ፊዶች</string>
     <string name="launcher_chat">Mochi ውይይት</string>
-    <string name="launcher_forums">Mochi ፎረሞች</string>
+    <string name="launcher_forums">Mochi መድረኮች</string>
     <string name="launcher_projects">Mochi ፕሮጀክቶች</string>
     <string name="launcher_crm">Mochi CRM</string>
     <string name="launcher_people">Mochi ሰዎች</string>
     <string name="launcher_settings">Mochi ቅንብሮች</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi ዊኪዎች</string>
     <string name="launcher_chess">Mochi ቼዝ</string>
-    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_go">Mochi ጎ</string>
     <string name="launcher_words">Mochi ቃላት</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi ገበያ</string>
     <string name="launcher_calendars">Mochi የቀን መቁጠሪያዎች</string>
     <string name="launcher_staff">Mochi ሰራተኞች</string>
 

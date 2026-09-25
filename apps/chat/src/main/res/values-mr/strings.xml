@@ -25,7 +25,7 @@
     <string name="chat_chat_not_found">चॅट सापडला नाही</string>
 
     <string name="chat_message_send">पाठवा</string>
-    <string name="chat_attachment_remove">Remove attachment</string>
+    <string name="chat_attachment_remove">संलग्नक काढा</string>
     <string name="chat_attachment_move_up">वर हलवा</string>
     <string name="chat_attachment_move_down">खाली हलवा</string>
 

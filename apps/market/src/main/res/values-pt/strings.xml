@@ -70,7 +70,7 @@
     <string name="market_checkout_back">Voltar</string>
     <string name="market_checkout_buy_it_now">Comprar já</string>
     <string name="market_checkout_create_failed">Falha ao criar encomenda</string>
-    <string name="market_checkout_delivery_download">Transferir</string>
+    <string name="market_checkout_delivery_download">Transferência</string>
     <string name="market_checkout_delivery_method">Método de entrega</string>
     <string name="market_checkout_delivery_pickup">Recolha</string>
     <string name="market_checkout_delivery_shipping">Envio</string>
@@ -107,7 +107,7 @@
     <string name="market_editor_asset_external_filename">Nome do ficheiro</string>
     <string name="market_editor_back">Voltar</string>
     <string name="market_editor_category">Categoria</string>
-    <string name="market_editor_condition">Condição</string>
+    <string name="market_editor_condition">Estado</string>
     <string name="market_editor_condition_new">Novo</string>
     <string name="market_editor_condition_refurbished">Recondicionado</string>
     <string name="market_editor_condition_used">Usado</string>
@@ -149,12 +149,12 @@
     <string name="market_filter_apply">Aplicar</string>
     <string name="market_filter_category">Categoria</string>
     <string name="market_filter_clear">Limpar filtros</string>
-    <string name="market_filter_condition">Condição</string>
+    <string name="market_filter_condition">Estado</string>
     <string name="market_filter_condition_new">Novo</string>
     <string name="market_filter_condition_refurbished">Recondicionado</string>
     <string name="market_filter_condition_used">Usado</string>
     <string name="market_filter_delivery">Entrega</string>
-    <string name="market_filter_delivery_download">Transferir</string>
+    <string name="market_filter_delivery_download">Transferência</string>
     <string name="market_filter_delivery_pickup">Recolha</string>
     <string name="market_filter_delivery_shipping">Envio</string>
     <string name="market_filter_price_max">Máx.</string>
@@ -183,7 +183,7 @@
     <string name="market_listing_detail_load_failed">Falha ao carregar anúncio</string>
     <string name="market_listing_detail_listed">Publicado em %1$s</string>
     <string name="market_listing_detail_location_heading">Localização</string>
-    <string name="market_listing_detail_message">Mensagem</string>
+    <string name="market_listing_detail_message">Enviar mensagem</string>
     <string name="market_listing_detail_message_seller">Enviar mensagem ao vendedor</string>
     <string name="market_listing_detail_not_found">Anúncio não encontrado</string>
     <string name="market_listing_detail_place_bid">Licitar</string>
@@ -305,7 +305,7 @@
     <string name="market_sale_carrier_other">Outro</string>
     <string name="market_sale_completed_label">Concluído</string>
     <string name="market_sale_dispute_respond">Responder</string>
-    <string name="market_sale_dispute_state_open">Abrir</string>
+    <string name="market_sale_dispute_state_open">Aberto</string>
     <string name="market_sale_dispute_state_resolved">Resolvido</string>
     <string name="market_sale_load_failed">Falha ao carregar encomenda</string>
     <string name="market_sale_message_buyer">Enviar mensagem ao comprador</string>
@@ -324,7 +324,7 @@
     <string name="market_sale_shipped_label">Enviado</string>
     <string name="market_sale_title">Venda</string>
     <string name="market_sale_tracking_label">Número de seguimento</string>
-    <string name="market_saved_title">Guardado</string>
+    <string name="market_saved_title">Guardados</string>
     <string name="market_search_clear">Limpar pesquisa</string>
     <string name="market_section_categories">Explorar categorias</string>
     <string name="market_section_listings">Anúncios recentes</string>
@@ -348,7 +348,7 @@
     <string name="market_sidebar_purchases">Compras</string>
     <string name="market_sidebar_reviews">Avaliações</string>
     <string name="market_sidebar_sales">Vendas</string>
-    <string name="market_sidebar_saved">Guardado</string>
+    <string name="market_sidebar_saved">Guardados</string>
     <string name="market_sidebar_selling">A vender</string>
     <string name="market_sidebar_settings">Definições</string>
     <string name="market_sidebar_subscribers">Subscritores</string>

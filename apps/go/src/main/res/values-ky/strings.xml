@@ -8,7 +8,7 @@
     <string name="go_action_pass">Өткөрүп жиберүү</string>
     <string name="go_action_rematch">Кайра оюн</string>
     <string name="go_action_resign">Баш тартуу</string>
-    <string name="go_app_title">Өтүү</string>
+    <string name="go_app_title">Го</string>
     <string name="go_captures_black_sr">Кара туткундар</string>
     <string name="go_captures_white_sr">Ак туткундар</string>
     <string name="go_chat_title">Чат</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">Каптал тилкесин ачуу</string>
     <string name="go_sidebar_active">Активдүү оюндар</string>
     <string name="go_empty_active">Азырынча активдүү оюндар жок.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">Багынды</string>
     <string name="go_new_game_title">Жаңы Go оюну</string>
     <string name="go_new_game_no_friends">Оюнду баштоодон мурун дос кошуу керек.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

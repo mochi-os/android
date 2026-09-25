@@ -9,13 +9,13 @@
     <string name="launcher_people">Mochi Adamlar</string>
     <string name="launcher_settings">Mochi Sazlamalar</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wikiler</string>
     <string name="launcher_chess">Mochi Küşt</string>
     <string name="launcher_go">Mochi Go</string>
     <string name="launcher_words">Mochi Sözler</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi Bazar</string>
     <string name="launcher_calendars">Mochi Kalendarlar</string>
-    <string name="launcher_staff">Mochi Işgärler</string>
+    <string name="launcher_staff">Mochi Işgärleri</string>
 
 
     <string name="app_name">Mochi</string>

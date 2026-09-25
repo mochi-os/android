@@ -38,7 +38,7 @@
     <string name="access_add_rule">Ychwanegu rheol</string>
     <string name="access_owner">Perchennog</string>
     <string name="access_revoke">Dirymu</string>
-    <string name="access_level_comment">Sylw</string>
+    <string name="access_level_comment">Rhoi sylw</string>
     <string name="access_level_view">Gweld</string>
     <string name="access_level_none">Dim</string>
     <string name="reaction_like">Hoffi</string>
@@ -75,7 +75,7 @@
     <string name="settings_radius_large">Mawr</string>
     <string name="settings_font">Ffont</string>
     <string name="settings_font_system">System</string>
-    <string name="settings_font_serif">Serif</string>
+    <string name="settings_font_serif">Seriff</string>
     <string name="settings_font_dyslexia">Cyfeillgar i ddyslecsia</string>
     <string name="settings_font_size">Maint y ffont</string>
     <string name="settings_font_size_small">Bach</string>
@@ -96,7 +96,7 @@
     <string name="settings_number_format">Fformat rhifau</string>
     <string name="settings_units">Unedau</string>
     <string name="settings_units_metric">Metrig</string>
-    <string name="settings_units_imperial">Imperial</string>
+    <string name="settings_units_imperial">Imperialaidd</string>
     <string name="settings_time_zone">Cylchfa amser</string>
     <string name="settings_reset_to_defaults">Ailosod i\'r diofynnau</string>
     <string name="settings_reset_confirm_title">Ailosod dewisiadau?</string>
@@ -189,7 +189,7 @@
     <string name="format_time_weeks_short">%1$dw</string>
     <string name="format_time_months_short">%1$dmis</string>
     <string name="reaction_add">Ychwanegu ymateb</string>
-    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel">Hysbysiadau gwthio Mochi</string>
     <string name="push_service_channel_description">Cadw Mochi wedi\'i gysylltu i dderbyn hysbysiadau</string>
     <string name="push_service_group">Gwasanaeth cefndir</string>
     <string name="push_service_title">Mochi yn gwrando am hysbysiadau</string>

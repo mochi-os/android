@@ -24,13 +24,13 @@
     <string name="forums_settings">Asetukset</string>
     <string name="forums_load_more">Lataa lisää</string>
     <string name="forums_sort_label">Lajittele</string>
-    <string name="forums_sort_new">Uusi</string>
+    <string name="forums_sort_new">Uusimmat</string>
     <string name="forums_sort_hot">Kuuma</string>
-    <string name="forums_sort_top">Ylin</string>
+    <string name="forums_sort_top">Parhaat</string>
     <string name="forums_sort_interests">Kiinnostuksen kohteet</string>
     <string name="forums_post_title_field">Otsikko</string>
     <string name="forums_post_attach">Liitä tiedostoja</string>
-    <string name="forums_post_create_action">Julkaisu</string>
+    <string name="forums_post_create_action">Julkaise</string>
     <string name="forums_post_edit">Muokkaa julkaisua</string>
     <string name="forums_post_edit_title">Muokkaa julkaisua</string>
     <string name="forums_post_edit_title_field">Otsikko</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Jäsenet</string>
     <string name="forums_tab_banner">Banneri</string>
     <string name="forums_tab_ai">Tekoäly</string>
-    <string name="forums_access_target">Kohde</string>
+    <string name="forums_access_target">Käyttäjä tai ryhmä</string>
     <string name="forums_access_level_view">Näytä</string>
     <string name="forums_access_level_vote">Äänestä</string>
-    <string name="forums_access_level_comment">Kommentti</string>
-    <string name="forums_access_level_post">Julkaisu</string>
+    <string name="forums_access_level_comment">Kommentoi</string>
+    <string name="forums_access_level_post">Julkaise</string>
     <string name="forums_access_level_none">Ei mitään</string>
     <string name="forums_members_empty">Ei jäseniä</string>
     <string name="forums_banner_dismiss">Hylkää banneri</string>
-    <string name="forums_ai_mode_tag">Tunniste</string>
+    <string name="forums_ai_mode_tag">Lisää tunnisteet</string>
     <string name="forums_ai_account_default">Oletustili</string>
     <string name="forums_ai_prompt_reset">Palauta oletukseksi</string>
     <string name="forums_settings_unsubscribe">Peru tilaus</string>
@@ -124,7 +124,7 @@
     <string name="forums_comment_send">Lähetä</string>
 
     <string name="notification_channel_forums">Foorumi-ilmoitukset</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Foorumit</string>
     <string name="forums_auth_login_failed">Kirjautuminen epäonnistui</string>
     <string name="forums_auth_create_identity_failed">Identiteetin luominen epäonnistui</string>
     <string name="forums_auth_mfa_unsupported">MFA:ta ei vielä tueta mobiilisovelluksessa</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">Manuaalinen</string>
     <string name="forums_access_search_users">Hae käyttäjiä</string>
     <string name="forums_access_no_groups">Ei saatavilla olevia ryhmiä</string>
-    <string name="forums_saved_title">Tallennettu</string>
+    <string name="forums_saved_title">Tallennetut</string>
     <string name="forums_saved_save">Tallenna myöhemmäksi</string>
     <string name="forums_saved_remove">Poista tallennetuista</string>
     <string name="forums_saved_clear_all">Tyhjennä kaikki</string>

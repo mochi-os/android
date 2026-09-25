@@ -29,7 +29,7 @@
     <string name="projects_sort_label">เรียงลำดับ</string>
     <string name="projects_sort_direction">ทิศทาง</string>
     <string name="projects_sort_rank">ด้วยตนเอง</string>
-    <string name="projects_sort_number">ตัวเลข</string>
+    <string name="projects_sort_number">หมายเลข</string>
     <string name="projects_sort_created">สร้างแล้ว</string>
     <string name="projects_sort_updated">อัปเดตแล้ว</string>
     <string name="projects_create_object_type">ประเภท</string>
@@ -93,7 +93,7 @@
     <string name="projects_request_create_action">สร้าง</string>
     <string name="projects_diff_unified">รวม</string>
     <string name="projects_diff_split">แยก</string>
-    <string name="projects_diff_empty">ไม่มี diff ให้แสดง</string>
+    <string name="projects_diff_empty">ไม่มีความแตกต่างให้แสดง</string>
     <string name="projects_board_unassigned">ยังไม่กำหนด</string>
     <string name="projects_board_new">ใหม่</string>
     <string name="projects_board_rename">เปลี่ยนชื่อ</string>
@@ -106,7 +106,7 @@
     <string name="projects_design_import">นำเข้าการออกแบบ</string>
     <string name="projects_design_imported">นำเข้าการออกแบบแล้ว</string>
     <string name="projects_design_tab_classes">คลาส</string>
-    <string name="projects_design_tab_views">การดู</string>
+    <string name="projects_design_tab_views">มุมมอง</string>
     <string name="projects_design_import_dialog_title">นำเข้าการออกแบบ</string>
     <string name="projects_design_import_choose_template">เลือกเทมเพลต</string>
     <string name="projects_design_replace_title">แทนที่ดีไซน์?</string>
@@ -129,7 +129,7 @@
     <string name="projects_field_type_checklist">เช็คลิสต์</string>
     <string name="projects_field_name">ชื่อ</string>
     <string name="projects_field_type">ประเภท</string>
-    <string name="projects_field_flags">Flags</string>
+    <string name="projects_field_flags">แฟล็ก</string>
     <string name="projects_field_required">จำเป็น</string>
     <string name="projects_field_position_default">ค่าเริ่มต้น</string>
     <string name="projects_field_position_sidebar">แถบด้านข้าง</string>
@@ -149,7 +149,7 @@
     <string name="projects_views_type_board">กระดาน</string>
     <string name="projects_views_type_list">รายการ</string>
     <string name="projects_views_direction">ทิศทาง</string>
-    <string name="projects_views_sort_number">ตัวเลข</string>
+    <string name="projects_views_sort_number">หมายเลข</string>
     <string name="projects_views_sort_created">สร้างแล้ว</string>
     <string name="projects_views_sort_updated">อัปเดตแล้ว</string>
     <string name="projects_views_sort_rank">อันดับ</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">ค้นหาวัตถุ</string>
 
     <string name="notification_channel_projects">การแจ้งเตือนโปรเจกต์</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi โปรเจกต์</string>
     <string name="projects_auth_create_identity_failed">สร้างข้อมูลระบุตัวตนไม่สำเร็จ</string>
     <string name="projects_auth_mfa_unsupported">ยังไม่รองรับ MFA ในแอปมือถือ</string>
     <string name="projects_auth_enter_code_sent">กรอกรหัสที่ส่งไปยัง %1$s</string>
@@ -239,8 +239,8 @@
     <string name="projects_request_mark_ready">ทำเครื่องหมายว่าพร้อม</string>
     <string name="projects_request_merge_default_message">ผสาน %1$s เข้ากับ %2$s</string>
     <string name="projects_request_commit_message">ข้อความคอมมิต</string>
-    <string name="projects_request_method_squash">Squash</string>
-    <string name="projects_request_method_rebase">Rebase</string>
+    <string name="projects_request_method_squash">สควอช</string>
+    <string name="projects_request_method_rebase">รีเบส</string>
     <string name="projects_request_create_title">สร้างคำขอผสาน</string>
     <string name="projects_request_field_target">สาขาปลายทาง</string>
     <string name="projects_diff_title">ความแตกต่าง: %1$s -&gt; %2$s</string>
@@ -262,7 +262,7 @@
     <string name="projects_drag_column">ลากคอลัมน์</string>
     <string name="projects_drag_hint">กดค้างแล้วลากเพื่อย้าย</string>
     <string name="projects_design_more_options">ตัวเลือกเพิ่มเติม</string>
-    <string name="projects_design_clipboard_label">Design JSON</string>
+    <string name="projects_design_clipboard_label">JSON การออกแบบ</string>
     <string name="projects_design_export_subject">การออกแบบโครงการ</string>
     <string name="projects_design_share_chooser">แชร์การออกแบบ</string>
     <string name="projects_design_export_copied">คัดลอกการออกแบบไปยังคลิปบอร์ดแล้ว</string>
@@ -321,13 +321,13 @@
     <string name="projects_filter_all">ทั้งหมด</string>
     <string name="projects_filter_other">อื่น ๆ</string>
     <string name="projects_create_object_title">ใหม่</string>
-    <string name="projects_settings_section_identity">Identity</string>
+    <string name="projects_settings_section_identity">ตัวตน</string>
     <string name="projects_settings_access_updated">อัปเดตการเข้าถึงแล้ว</string>
     <string name="projects_settings_access_revoked">เพิกถอนการเข้าถึงแล้ว</string>
     <string name="projects_settings_section_access">การจัดการการเข้าถึง</string>
     <string name="projects_people_search">ค้นหาผู้คน</string>
-    <string name="projects_settings_field_entity_id">Entity ID</string>
-    <string name="projects_settings_field_fingerprint">Fingerprint</string>
+    <string name="projects_settings_field_entity_id">รหัสเอนทิตี</string>
+    <string name="projects_settings_field_fingerprint">ลายนิ้วมือ</string>
     <string name="projects_settings_field_server">เซิร์ฟเวอร์</string>
     <string name="projects_access_subject_anyone">ใครก็ได้</string>
     <string name="projects_access_subject_authenticated">ผู้ใช้ที่ยืนยันตัวตนแล้ว</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">เลือกกฎ</string>
     <string name="projects_access_authenticated_desc">ทุกคนที่เข้าสู่ระบบแล้ว</string>
     <string name="projects_access_anyone_desc">รวมถึงผู้ใช้ที่ไม่ระบุตัวตน</string>
-    <string name="projects_access_target">เป้าหมาย</string>
+    <string name="projects_access_target">ผู้ใช้หรือกลุ่ม</string>
     <string name="projects_access_target_hint">รหัสเอนทิตี, @กลุ่ม, * (ทุกคน), หรือ + (สมาชิก)</string>
     <string name="projects_access_selected">เลือกแล้ว: %1$s</string>
     <string name="projects_access_role_comment">แสดงความคิดเห็นและดู</string>

@@ -8,7 +8,7 @@
     <string name="go_action_pass">Pas</string>
     <string name="go_action_rematch">Yeniden eşleş</string>
     <string name="go_action_resign">Çekil</string>
-    <string name="go_app_title">Git</string>
+    <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Siyah yakalamalar</string>
     <string name="go_captures_white_sr">Beyaz yakalamalar</string>
     <string name="go_chat_title">Sohbet</string>

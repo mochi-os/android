@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">បុគ្គលិក Mochi</string>
+    <string name="launcher_staff">Mochi បុគ្គលិក</string>
     <string name="staff_accounts_action_ban_title">ហាមឃាត់គណនី</string>
     <string name="staff_accounts_action_suspend_title">ផ្អាកគណនី</string>
     <string name="staff_accounts_action_unban_title">ដោះការហាមឃាត់</string>
@@ -88,9 +88,9 @@
     <string name="staff_audit_action_listing_updated">បានកែសម្រួលការដាក់លក់</string>
     <string name="staff_audit_action_listing_warning">បានចេញការព្រមាន</string>
     <string name="staff_audit_action_order_cancelled">បានបោះបង់</string>
-    <string name="staff_audit_action_order_chargeback">បានទទួល Chargeback</string>
-    <string name="staff_audit_action_order_chargeback_lost">Chargeback ត្រូវបានទទួលស្គាល់</string>
-    <string name="staff_audit_action_order_chargeback_won">ការ Chargeback ត្រូវបានច្រានចោល</string>
+    <string name="staff_audit_action_order_chargeback">បានទទួលការទាមទារប្រាក់វិញ</string>
+    <string name="staff_audit_action_order_chargeback_lost">ការទាមទារប្រាក់វិញត្រូវបានទទួលស្គាល់</string>
+    <string name="staff_audit_action_order_chargeback_won">ការទាមទារប្រាក់វិញត្រូវបានច្រានចោល</string>
     <string name="staff_audit_action_order_completed">បានបញ្ចប់</string>
     <string name="staff_audit_action_order_created">បានដាក់ការបញ្ជាទិញ</string>
     <string name="staff_audit_action_order_paid">បានទទួលការទូទាត់</string>
@@ -111,9 +111,9 @@
     <string name="staff_audit_action_subscription_active">បានត្រឡប់ទៅសកម្ម</string>
     <string name="staff_audit_action_subscription_cancel_scheduled">បានកំណត់ពេលបោះបង់</string>
     <string name="staff_audit_action_subscription_cancelled">បានបោះបង់</string>
-    <string name="staff_audit_action_subscription_chargeback">បានទទួល Chargeback</string>
-    <string name="staff_audit_action_subscription_chargeback_lost">Chargeback ត្រូវបានទទួលស្គាល់</string>
-    <string name="staff_audit_action_subscription_chargeback_won">ការ Chargeback ត្រូវបានច្រានចោល</string>
+    <string name="staff_audit_action_subscription_chargeback">បានទទួលការទាមទារប្រាក់វិញ</string>
+    <string name="staff_audit_action_subscription_chargeback_lost">ការទាមទារប្រាក់វិញត្រូវបានទទួលស្គាល់</string>
+    <string name="staff_audit_action_subscription_chargeback_won">ការទាមទារប្រាក់វិញត្រូវបានច្រានចោល</string>
     <string name="staff_audit_action_subscription_created">បានបង្កើតការជាវ</string>
     <string name="staff_audit_action_subscription_past_due">ការទូទាត់ហួសកាលកំណត់</string>
     <string name="staff_audit_action_subscription_paused">បានផ្អាក</string>
@@ -145,7 +145,7 @@
     <string name="staff_categories_dialog_position">ទីតាំង</string>
     <string name="staff_categories_dialog_save">រក្សាទុក</string>
     <string name="staff_categories_dialog_saving">កំពុងរក្សាទុក…</string>
-    <string name="staff_categories_dialog_slug">Slug</string>
+    <string name="staff_categories_dialog_slug">ឈ្មោះ URL</string>
     <string name="staff_categories_empty">មិនមានប្រភេទ</string>
     <string name="staff_categories_toast_created">បានបង្កើតប្រភេទ</string>
     <string name="staff_categories_toast_deleted">បានលុបប្រភេទ</string>
@@ -155,14 +155,14 @@
     <string name="staff_categories_type_digital">ឌីជីថល</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">រូបវន្ត</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">បុគ្គលិក Mochi</string>
     <string name="staff_config_field_auto_approve">កម្រិតយល់ព្រមដោយស្វ័យប្រវត្តិ</string>
     <string name="staff_config_field_hold">កម្រិតកាន់</string>
     <string name="staff_config_field_platform_fee">កម្រៃវេទិកា</string>
     <string name="staff_config_field_review_window">បង្អួចពិនិត្យ</string>
     <string name="staff_config_field_stripe_oauth_client">លេខសម្គាល់អតិថិជន OAuth</string>
-    <string name="staff_config_field_stripe_publishable">Publishable key</string>
-    <string name="staff_config_field_stripe_secret">Secret key</string>
+    <string name="staff_config_field_stripe_publishable">សោសាធារណៈ</string>
+    <string name="staff_config_field_stripe_secret">សោសម្ងាត់</string>
     <string name="staff_config_group_moderation">ការសម្របសម្រួល</string>
     <string name="staff_config_group_payments">ការទូទាត់</string>
     <string name="staff_config_group_reviews">ការវាយតម្លៃ</string>
@@ -219,7 +219,7 @@
     <string name="staff_disputes_empty">មិនមានវិវាទ</string>
     <string name="staff_disputes_filter_status_label">ស្ថានភាព</string>
     <string name="staff_disputes_listing_label">#%1$s</string>
-    <string name="staff_disputes_meta_chargeback_fee">ថ្លៃ Chargeback</string>
+    <string name="staff_disputes_meta_chargeback_fee">ថ្លៃការទាមទារប្រាក់វិញ</string>
     <string name="staff_disputes_meta_evidence_due">ភស្តុតាងត្រូវផ្ដល់ត្រឹម</string>
     <string name="staff_disputes_meta_listing">ការដាក់លក់</string>
     <string name="staff_disputes_meta_reason">មូលហេតុ</string>
@@ -241,7 +241,7 @@
     <string name="staff_disputes_resolve">ដោះស្រាយ</string>
     <string name="staff_disputes_resolved_toast">បានដោះស្រាយវិវាទ</string>
     <string name="staff_disputes_resolving">កំពុងដោះស្រាយ…</string>
-    <string name="staff_disputes_review">ការវាយតម្លៃ</string>
+    <string name="staff_disputes_review">ពិនិត្យ</string>
     <string name="staff_disputes_status_escalated">បានបញ្ជូនបន្ត</string>
     <string name="staff_disputes_status_open">បើក</string>
     <string name="staff_disputes_status_resolved_buyer">បានដោះស្រាយ (អ្នកទិញ)</string>
@@ -269,9 +269,9 @@
     <string name="staff_listings_filter_status_label">ស្ថានភាព</string>
     <string name="staff_listings_moderation_auto_approved">បានយល់ព្រមដោយស្វ័យប្រវត្តិ</string>
     <string name="staff_listings_moderation_hold">កាន់</string>
-    <string name="staff_listings_moderation_manual">សៀវភៅណែនាំ</string>
+    <string name="staff_listings_moderation_manual">ដោយដៃ</string>
     <string name="staff_listings_moderation_rejected">បានបដិសេធ</string>
-    <string name="staff_listings_moderation_review">ការវាយតម្លៃ</string>
+    <string name="staff_listings_moderation_review">រង់ចាំការត្រួតពិនិត្យ</string>
     <string name="staff_listings_moderation_soft_approved">បានអនុម័តស្រាល</string>
     <string name="staff_listings_notes_label">កំណត់ចំណាំ</string>
     <string name="staff_listings_price_placeholder">—</string>
@@ -296,7 +296,7 @@
     <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">សកម្មភាព</string>
     <string name="staff_reports_action_ban">ហាមឃាត់អ្នកប្រើប្រាស់</string>
-    <string name="staff_reports_action_dismiss">បិទ</string>
+    <string name="staff_reports_action_dismiss">ច្រានចោល</string>
     <string name="staff_reports_action_label">សកម្មភាព</string>
     <string name="staff_reports_action_placeholder">ជ្រើសរើសសកម្មភាព</string>
     <string name="staff_reports_action_remove">យកចេញ</string>
@@ -308,7 +308,7 @@
     <string name="staff_reports_cancel">បោះបង់</string>
     <string name="staff_reports_close">បិទ</string>
     <string name="staff_reports_dialog_title_action">ធ្វើសកម្មភាពលើរបាយការណ៍</string>
-    <string name="staff_reports_dialog_title_view">រាយការណ៍</string>
+    <string name="staff_reports_dialog_title_view">របាយការណ៍</string>
     <string name="staff_reports_empty">មិនមានរបាយការណ៍</string>
     <string name="staff_reports_filter_status_label">ស្ថានភាព</string>
     <string name="staff_reports_filter_type_label">ប្រភេទ</string>
@@ -376,7 +376,7 @@
     <string name="staff_status_expired">បានផុតកំណត់</string>
     <string name="staff_status_hidden">លាក់</string>
     <string name="staff_status_hold">កាន់</string>
-    <string name="staff_status_manual">សៀវភៅណែនាំ</string>
+    <string name="staff_status_manual">ដោយដៃ</string>
     <string name="staff_status_moderator">អ្នកសម្របសម្រួល</string>
     <string name="staff_status_open">បើក</string>
     <string name="staff_status_pending">កំពុងរង់ចាំ</string>
@@ -386,7 +386,7 @@
     <string name="staff_status_resolved_buyer">បានដោះស្រាយ (អ្នកទិញ)</string>
     <string name="staff_status_resolved_seller">បានដោះស្រាយ (អ្នកលក់)</string>
     <string name="staff_status_responded">បានឆ្លើយតប</string>
-    <string name="staff_status_review">ការវាយតម្លៃ</string>
+    <string name="staff_status_review">រង់ចាំការត្រួតពិនិត្យ</string>
     <string name="staff_status_reviewed">បានពិនិត្យ</string>
     <string name="staff_status_reviewing">កំពុងពិនិត្យ</string>
     <string name="staff_status_soft_approved">បានអនុម័តស្រាល</string>
@@ -414,7 +414,7 @@
     <string name="staff_team_toast_add_failed">បរាជ័យក្នុងការបន្ថែមសមាជិក</string>
     <string name="staff_team_toast_removed">បានដកសមាជិក</string>
     <string name="staff_team_toast_role_updated">បានធ្វើបច្ចុប្បន្នភាពតួនាទី</string>
-    <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
+    <string name="staff_audit_action_auction_cancelled">បានបោះបង់ការដេញថ្លៃ</string>
     <string name="staff_dashboard_order_fallback">ការបញ្ជា #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">មូលហេតុ (ស្រេចចិត្ត)</string>
@@ -422,7 +422,7 @@
     <string name="staff_appeals_reason_label">មូលហេតុបណ្តឹងសាទុក្ខរបស់អ្នកលក់</string>
     <string name="staff_audit_action_staff_team_role_changed">តួនាទីបុគ្គលិកត្រូវបានផ្លាស់ប្តូរ</string>
     <string name="staff_categories_delete_desc">លុប “%1$s”? សកម្មភាពនេះមិនអាចត្រឡប់វិញបានទេ។</string>
-    <string name="staff_disputes_dialog_title_chargeback">ការដកប្រាក់ត្រឡប់៖ %1$s</string>
+    <string name="staff_disputes_dialog_title_chargeback">ការទាមទារប្រាក់វិញ៖ %1$s</string>
     <string name="staff_disputes_dialog_title_view">មើលវិវាទ</string>
     <string name="staff_disputes_meta_buyer_details">ព័ត៌មានលម្អិតរបស់អ្នកទិញ</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">រក្សាទុកដោយ Stripe</string>

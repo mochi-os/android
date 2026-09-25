@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">Staf</string>
+    <string name="launcher_staff">Mochi Staf</string>
     <string name="staff_accounts_action_ban_title">Blokir akun</string>
     <string name="staff_accounts_action_suspend_title">Tangguhkan akun</string>
     <string name="staff_accounts_action_unban_title">Buka blokir</string>
@@ -162,7 +162,7 @@
     <string name="staff_categories_type_digital">Digital</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">Fisik</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">Staf</string>
     <string name="staff_config_field_auto_approve">Ambang persetujuan otomatis</string>
     <string name="staff_config_field_hold">Ambang penahanan</string>
     <string name="staff_config_field_platform_fee">Biaya platform</string>
@@ -259,9 +259,9 @@
     <string name="staff_disputes_resolve">Selesaikan</string>
     <string name="staff_disputes_resolved_toast">Sengketa diselesaikan</string>
     <string name="staff_disputes_resolving">Menyelesaikan…</string>
-    <string name="staff_disputes_review">Ulasan</string>
+    <string name="staff_disputes_review">Tinjau</string>
     <string name="staff_disputes_status_escalated">Dieskalasi</string>
-    <string name="staff_disputes_status_open">Buka</string>
+    <string name="staff_disputes_status_open">Terbuka</string>
     <string name="staff_disputes_status_resolved_buyer">Diselesaikan (pembeli)</string>
     <string name="staff_disputes_status_resolved_seller">Diselesaikan (penjual)</string>
     <string name="staff_disputes_status_responded">Telah ditanggapi</string>
@@ -303,7 +303,7 @@
     <string name="staff_listings_moderation_hold">Tahan</string>
     <string name="staff_listings_moderation_manual">Manual</string>
     <string name="staff_listings_moderation_rejected">Ditolak</string>
-    <string name="staff_listings_moderation_review">Ulasan</string>
+    <string name="staff_listings_moderation_review">Peninjauan</string>
     <string name="staff_listings_moderation_soft_approved">Disetujui sementara</string>
     <string name="staff_listings_notes_label">Catatan</string>
     <string name="staff_listings_price_placeholder">—</string>
@@ -341,7 +341,7 @@
     <string name="staff_reports_cancel">Batal</string>
     <string name="staff_reports_close">Tutup</string>
     <string name="staff_reports_dialog_title_action">Ambil tindakan atas laporan</string>
-    <string name="staff_reports_dialog_title_view">Laporkan</string>
+    <string name="staff_reports_dialog_title_view">Laporan</string>
     <string name="staff_reports_empty">Tidak ada laporan</string>
     <string name="staff_reports_filter_status_label">Status</string>
     <string name="staff_reports_filter_type_label">Tipe</string>
@@ -390,7 +390,7 @@
     <string name="staff_sidebar_appeals">Banding</string>
     <string name="staff_sidebar_categories">Kategori</string>
     <string name="staff_sidebar_config">Konfigurasi</string>
-    <string name="staff_sidebar_dashboard">Dashboard</string>
+    <string name="staff_sidebar_dashboard">Dasbor</string>
     <string name="staff_sidebar_disputes">Sengketa</string>
     <string name="staff_sidebar_listings">Daftar</string>
     <string name="staff_sidebar_management">Manajemen</string>
@@ -416,7 +416,7 @@
     <string name="staff_status_hold">Tahan</string>
     <string name="staff_status_manual">Manual</string>
     <string name="staff_status_moderator">Moderator</string>
-    <string name="staff_status_open">Buka</string>
+    <string name="staff_status_open">Terbuka</string>
     <string name="staff_status_pending">Tertunda</string>
     <string name="staff_status_published">Diterbitkan</string>
     <string name="staff_status_rejected">Ditolak</string>
@@ -424,7 +424,7 @@
     <string name="staff_status_resolved_buyer">Diselesaikan (pembeli)</string>
     <string name="staff_status_resolved_seller">Diselesaikan (penjual)</string>
     <string name="staff_status_responded">Telah ditanggapi</string>
-    <string name="staff_status_review">Ulasan</string>
+    <string name="staff_status_review">Peninjauan</string>
     <string name="staff_status_reviewed">Telah diulas</string>
     <string name="staff_status_reviewing">Mengulas</string>
     <string name="staff_status_soft_approved">Disetujui sementara</string>

@@ -10,7 +10,7 @@
     <string name="calendars_delete">Pa rẹ́</string>
     <string name="calendars_previous">Tó kọjá</string>
     <string name="calendars_next">Tó kàn</string>
-    <string name="calendars_view">Wo</string>
+    <string name="calendars_view">Ìwòye</string>
     <string name="calendars_view_list">Àkójọ</string>
     <string name="calendars_list_search">Wá</string>
     <string name="calendars_event_untitled">Aláìlórúkọ</string>
@@ -51,7 +51,7 @@
     <string name="calendars_device_created">Ṣẹdá %1$s</string>
     <string name="calendars_device_delete">Pa rẹ́</string>
     <string name="calendars_colour">Àwọ̀</string>
-    <string name="calendars_view_day">Ọ̀sán</string>
+    <string name="calendars_view_day">Ọjọ́</string>
     <string name="calendars_event_start">Bẹ̀rẹ̀</string>
     <string name="notification_channel_calendars">Àwọn kàlẹ́ńdà</string>
     <string name="calendars_drawer_title">Àwọn kàlẹ́ńdà</string>
@@ -166,7 +166,7 @@
     <string name="calendars_subscribe_server_url">Àdírẹ́sì olùṣẹ́</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Kàlẹ́ńdà Google</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">A kò tíì mú àwọn àkáǹtì Google ṣiṣẹ́ lórí sáfà yìí. Mú wọn ṣiṣẹ́ ní Àwọn ìṣètò, Àwọn ìṣètò system.</string>
     <string name="calendars_subscribe_google_connect">O kò tíì so àkáǹtì Google kankan pọ̀.</string>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="crm_list_title">CRMs</string>
+    <string name="crm_list_title">CRMkuéra</string>
     <string name="crm_list_search">Eheka</string>
     <string name="crm_list_find">Eheka CRMs</string>
     <string name="crm_list_logout">Esẽ</string>
@@ -45,7 +45,7 @@
     <string name="crm_object_tab_activity">Tembiaporã</string>
     <string name="crm_parent_label">Sy/ru</string>
     <string name="crm_parent_search_placeholder">Eheka</string>
-    <string name="crm_links_title">Linkkuéra</string>
+    <string name="crm_links_title">Joajukuéra</string>
     <string name="crm_links_add">Embojuaju link</string>
     <string name="crm_links_section_blocks">Bloques</string>
     <string name="crm_links_section_blocked_by">Ojejokóva</string>
@@ -56,7 +56,7 @@
     <string name="crm_links_no_matches">Ndaipóri mba\'e ojuajúva</string>
     <string name="crm_field_yes">Heẽ</string>
     <string name="crm_field_no">Nahániri</string>
-    <string name="crm_field_type_checkbox">Checkbox</string>
+    <string name="crm_field_type_checkbox">Casilla</string>
     <string name="crm_comment_empty">Ndaipóri comentario gueteri</string>
     <string name="crm_comment_attach">Embojuaju archivokuéra</string>
     <string name="crm_property_remove">Embogue</string>
@@ -77,7 +77,7 @@
     <string name="crm_design_import_failed">Ndaikatúi oñemoñe\'ẽ upe ñongatupyre</string>
     <string name="crm_design_or_upload_json">Térãpa emyenyhe peteĩ ñongatupyre</string>
     <string name="crm_design_upload_json">Ehupi .json archivo</string>
-    <string name="crm_design_tab_classes">Classes</string>
+    <string name="crm_design_tab_classes">Clasekuéra</string>
     <string name="crm_design_tab_views">Jehecha</string>
     <string name="crm_design_import_dialog_title">Embojuaju diseño</string>
     <string name="crm_design_import_choose_template">Eiporavo peteĩ template</string>
@@ -97,12 +97,12 @@
     <string name="crm_field_type_number">Papapy</string>
     <string name="crm_field_type_user">Mboapurevahára</string>
     <string name="crm_field_type_date">Ára</string>
-    <string name="crm_field_type_checklist">Checklist</string>
+    <string name="crm_field_type_checklist">Lista jehechajey</string>
     <string name="crm_field_name">Téra</string>
     <string name="crm_field_type">Mba\'éichagua</string>
     <string name="crm_field_flags">Banderakuéra</string>
     <string name="crm_field_required">Oñeikotevẽ</string>
-    <string name="crm_field_position_default">Default</string>
+    <string name="crm_field_position_default">Ypygua</string>
     <string name="crm_field_position_sidebar">Yke</string>
     <string name="crm_field_save">Ñongatu ñemoambue</string>
     <string name="crm_field_options">Opciones</string>
@@ -167,7 +167,7 @@
     <string name="crm_comment_clear_reply">Embogue mbohovái</string>
     <string name="crm_comment_placeholder">Embojuaju ñe\'ẽmbyky</string>
     <string name="crm_property_pick_date">Eiporavo ára</string>
-    <string name="crm_property_ok">OK</string>
+    <string name="crm_property_ok">Iporã</string>
     <string name="crm_property_add_item">Embojuaju mba\'e</string>
     <string name="crm_property_required">%1$s ojeikotevẽ</string>
     <string name="crm_activity_empty">Ndaipóri tembiapo</string>
@@ -244,7 +244,7 @@
     <string name="crm_attachment_remove">Eipe\'a jeitypa</string>
     <string name="crm_board_add_column">Embojuaju columna</string>
     <string name="crm_settings_entity_id">Entidad ID</string>
-    <string name="crm_settings_fingerprint">Fingerprint</string>
+    <string name="crm_settings_fingerprint">Kuãhũ</string>
     <string name="crm_settings_server">Mohendaha</string>
     <string name="crm_untitled">Téra\'ỹva</string>
     <string name="crm_property_select">Eiporavo …</string>

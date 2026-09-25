@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">Mochi कर्मचारी</string>
+    <string name="launcher_staff">Mochi कर्मचारी</string>
     <string name="staff_accounts_action_ban_title">खाता प्रतिबन्ध गर्नुहोस्</string>
     <string name="staff_accounts_action_suspend_title">खाता निलम्बन गर्नुहोस्</string>
     <string name="staff_accounts_action_unban_title">प्रतिबन्ध हटाउनुहोस्</string>
@@ -155,7 +155,7 @@
     <string name="staff_categories_type_digital">डिजिटल</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">भौतिक</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">Mochi कर्मचारी</string>
     <string name="staff_config_field_auto_approve">स्वत:-स्वीकृति सीमा</string>
     <string name="staff_config_field_hold">होल्ड सीमा</string>
     <string name="staff_config_field_platform_fee">प्लेटफर्म शुल्क</string>
@@ -241,9 +241,9 @@
     <string name="staff_disputes_resolve">समाधान गर्नुहोस्</string>
     <string name="staff_disputes_resolved_toast">विवाद समाधान भयो</string>
     <string name="staff_disputes_resolving">समाधान गर्दै…</string>
-    <string name="staff_disputes_review">समीक्षा</string>
+    <string name="staff_disputes_review">समीक्षा गर्नुहोस्</string>
     <string name="staff_disputes_status_escalated">एस्केलेट गरियो</string>
-    <string name="staff_disputes_status_open">खोल्नुहोस्</string>
+    <string name="staff_disputes_status_open">खुला</string>
     <string name="staff_disputes_status_resolved_buyer">समाधान गरियो (क्रेता)</string>
     <string name="staff_disputes_status_resolved_seller">समाधान भयो (बिक्रेता)</string>
     <string name="staff_disputes_status_responded">प्रतिक्रिया दिइयो</string>
@@ -296,7 +296,7 @@
     <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">कार्य</string>
     <string name="staff_reports_action_ban">प्रयोगकर्तालाई प्रतिबन्ध गर्नुहोस्</string>
-    <string name="staff_reports_action_dismiss">हटाउनुहोस्</string>
+    <string name="staff_reports_action_dismiss">खारेज गर्नुहोस्</string>
     <string name="staff_reports_action_label">कार्य</string>
     <string name="staff_reports_action_placeholder">कार्य छान्नुहोस्</string>
     <string name="staff_reports_action_remove">हटाउनुहोस्</string>
@@ -316,7 +316,7 @@
     <string name="staff_reports_meta_reason">कारण</string>
     <string name="staff_reports_meta_reporter">रिपोर्टर</string>
     <string name="staff_reports_meta_seller">बिक्रेता</string>
-    <string name="staff_reports_meta_target">लक्ष्य</string>
+    <string name="staff_reports_meta_target">रिपोर्ट गरिएको वस्तु</string>
     <string name="staff_reports_meta_type">प्रकार</string>
     <string name="staff_reports_notes_label">नोटहरू</string>
     <string name="staff_reports_reason_counterfeit">नक्कली वा चोरी गरिएको</string>
@@ -326,7 +326,7 @@
     <string name="staff_reports_reason_prohibited">निषेधित वा अवैध वस्तु</string>
     <string name="staff_reports_reason_spam">स्प्याम वा घोटाला</string>
     <string name="staff_reports_status_actioned">कार्य गरिएको</string>
-    <string name="staff_reports_status_dismissed">हटाइयो</string>
+    <string name="staff_reports_status_dismissed">खारेज गरियो</string>
     <string name="staff_reports_status_pending">बाँकी</string>
     <string name="staff_reports_status_reviewed">समीक्षा गरियो</string>
     <string name="staff_reports_submit">पेस गर्नुहोस्</string>
@@ -370,7 +370,7 @@
     <string name="staff_status_approved">स्वीकृत</string>
     <string name="staff_status_auto_approved">स्वतः स्वीकृत</string>
     <string name="staff_status_banned">प्रतिबन्धित</string>
-    <string name="staff_status_dismissed">हटाइयो</string>
+    <string name="staff_status_dismissed">खारेज गरियो</string>
     <string name="staff_status_draft">मस्यौदा</string>
     <string name="staff_status_escalated">एस्केलेट गरियो</string>
     <string name="staff_status_expired">म्याद सकियो</string>
@@ -378,7 +378,7 @@
     <string name="staff_status_hold">होल्ड</string>
     <string name="staff_status_manual">म्यानुअल</string>
     <string name="staff_status_moderator">मोडरेटर</string>
-    <string name="staff_status_open">खोल्नुहोस्</string>
+    <string name="staff_status_open">खुला</string>
     <string name="staff_status_pending">बाँकी</string>
     <string name="staff_status_published">प्रकाशित</string>
     <string name="staff_status_rejected">अस्वीकृत</string>
@@ -414,7 +414,7 @@
     <string name="staff_team_toast_add_failed">सदस्य थप्न असफल</string>
     <string name="staff_team_toast_removed">सदस्य हटाइयो</string>
     <string name="staff_team_toast_role_updated">भूमिका अद्यावधिक गरियो</string>
-    <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
+    <string name="staff_audit_action_auction_cancelled">लिलामी रद्द गरियो</string>
     <string name="staff_dashboard_order_fallback">अर्डर #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">कारण (वैकल्पिक)</string>

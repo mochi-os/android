@@ -99,7 +99,7 @@
     <string name="projects_board_rename">Hernoemen</string>
     <string name="projects_board_rename_column">Kolom hernoemen</string>
     <string name="projects_move_position">Positie</string>
-    <string name="projects_move_position_top">Boven</string>
+    <string name="projects_move_position_top">Bovenaan</string>
     <string name="projects_move_current">Huidig</string>
     <string name="projects_design_title">Ontwerp</string>
     <string name="projects_design_export">Ontwerp exporteren</string>
@@ -123,7 +123,7 @@
     <string name="projects_class_delete">Klasse verwijderen</string>
     <string name="projects_class_delete_title">Klasse verwijderen</string>
     <string name="projects_field_type_text">Tekst</string>
-    <string name="projects_field_type_number">Nummer</string>
+    <string name="projects_field_type_number">Getal</string>
     <string name="projects_field_type_user">Gebruiker</string>
     <string name="projects_field_type_date">Datum</string>
     <string name="projects_field_type_checklist">Checklist</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Objecten zoeken</string>
 
     <string name="notification_channel_projects">Projectmeldingen</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Projecten</string>
     <string name="projects_auth_create_identity_failed">Aanmaken van identiteit mislukt</string>
     <string name="projects_auth_mfa_unsupported">MFA wordt nog niet ondersteund in de mobiele app</string>
     <string name="projects_auth_enter_code_sent">Voer de code in die naar %1$s is verzonden</string>
@@ -243,7 +243,7 @@
     <string name="projects_request_method_rebase">Rebase</string>
     <string name="projects_request_create_title">Merge-verzoek aanmaken</string>
     <string name="projects_request_field_target">Doel-branch</string>
-    <string name="projects_diff_title">Diff: %1$s -&gt; %2$s</string>
+    <string name="projects_diff_title">Verschil: %1$s -&gt; %2$s</string>
     <string name="projects_tree_collapse">Samenvouwen</string>
     <string name="projects_tree_expand">Uitvouwen</string>
     <string name="projects_tree_move">Verplaatsen</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Selecteer een regel</string>
     <string name="projects_access_authenticated_desc">Iedereen die is ingelogd</string>
     <string name="projects_access_anyone_desc">Inclusief anonieme gebruikers</string>
-    <string name="projects_access_target">Doel</string>
+    <string name="projects_access_target">Gebruiker of groep</string>
     <string name="projects_access_target_hint">Entiteits-ID, @groep, * (iedereen), of + (leden)</string>
     <string name="projects_access_selected">Geselecteerd: %1$s</string>
     <string name="projects_access_role_comment">Reageren en bekijken</string>

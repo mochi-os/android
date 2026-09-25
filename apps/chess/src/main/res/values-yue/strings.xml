@@ -19,7 +19,7 @@
     <string name="chess_new_title">新對局</string>
     <string name="chess_new_pick_opponent">選擇對手</string>
     <string name="chess_new_no_friends_title">未有朋友</string>
-    <string name="chess_new_no_friends_subtitle">喺「People」App 加朋友先可以開始捉棋</string>
+    <string name="chess_new_no_friends_subtitle">喺「聯絡人」App 加朋友先可以開始捉棋</string>
     <string name="chess_new_add_friends">加朋友</string>
     <string name="chess_new_start_button">開始對局</string>
     <string name="chess_new_creating">建立緊…</string>

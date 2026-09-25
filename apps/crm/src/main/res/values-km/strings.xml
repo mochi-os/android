@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="crm_list_title">CRMs</string>
+    <string name="crm_list_title">CRM</string>
     <string name="crm_list_search">ស្វែងរក</string>
     <string name="crm_list_find">ស្វែងរក CRMs</string>
     <string name="crm_list_logout">ចាកចេញ</string>
@@ -21,7 +21,7 @@
     <string name="crm_design">រចនា</string>
     <string name="crm_export_failed">មិនអាចរក្សាទុកការនាំចេញបានទេ</string>
     <string name="crm_sort_direction">ទិស</string>
-    <string name="crm_sort_rank">សៀវភៅណែនាំ</string>
+    <string name="crm_sort_rank">ដោយដៃ</string>
     <string name="crm_sort_created">បានបង្កើត</string>
     <string name="crm_sort_updated">បានធ្វើបច្ចុប្បន្នភាព</string>
     <string name="crm_create_object_title">បង្កើតវត្ថុ</string>
@@ -32,7 +32,7 @@
     <string name="crm_settings_tab_access">ការចូលប្រើ</string>
     <string name="crm_settings_tab_people">មនុស្ស</string>
     <string name="crm_option_icon">រូបតំណាង</string>
-    <string name="crm_option_icon_placeholder">២.១. Check, Star, Flag</string>
+    <string name="crm_option_icon_placeholder">ឧ. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">ឈប់ជាវ</string>
     <string name="crm_settings_delete_crm">លុបគម្រោង</string>
     <string name="crm_settings_delete_confirm_title">លុប CRM</string>
@@ -67,7 +67,7 @@
     <string name="crm_board_rename">ប្តូរឈ្មោះ</string>
     <string name="crm_board_rename_column">ប្តូរឈ្មោះជួរឈរ</string>
     <string name="crm_move_position">ទីតាំង</string>
-    <string name="crm_move_position_top">កំពូល</string>
+    <string name="crm_move_position_top">ខាងលើបំផុត</string>
     <string name="crm_move_current">បច្ចុប្បន្ន</string>
     <string name="crm_design_title">រចនា</string>
     <string name="crm_design_export">នាំចេញការរចនា</string>
@@ -126,9 +126,9 @@
     <string name="crm_not_found">រកមិនឃើញគម្រោង</string>
     <string name="crm_more">បន្ថែម</string>
     <string name="crm_comment_send">ផ្ញើ</string>
-    <string name="crm_field_position_body">តួអត្ថបទ</string>
+    <string name="crm_field_position_body">ខ្លឹមសារ</string>
     <string name="crm_sort_field">តម្រៀបតាម</string>
-    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_comment_remove_attachment">ដកឯកសារភ្ជាប់ចេញ</string>
     <string name="crm_views_sort_by">តម្រៀបតាម</string>
     <string name="crm_views_move_up">ផ្លាស់ទីឡើងលើ</string>
     <string name="crm_class_move_up">ផ្លាស់ទីឡើងលើ</string>
@@ -225,7 +225,7 @@
     <string name="crm_views_empty_subtitle">បង្កើតទិដ្ឋភាពក្ដារ ឬបញ្ជីដើម្បីដាក់ជាក្រុមវត្ថុ</string>
     <string name="crm_views_delete_message">តើអ្នកប្រាកដថាចង់លុបទិដ្ឋភាព \"%1$s\" មែនទេ?</string>
     <string name="crm_views_columns_field">វាលជួរឈរ</string>
-    <string name="crm_views_rows_field">វាលជួរ (swimlanes)</string>
+    <string name="crm_views_rows_field">វាលជួរ (ផ្លូវហែលទឹក)</string>
     <string name="crm_views_border_field">វាលពណ៌ស៊ុម</string>
     <string name="crm_views_filter_classes">ត្រងតាមថ្នាក់</string>
     <string name="crm_views_by">ដោយ %1$s</string>
@@ -241,7 +241,7 @@
     <string name="crm_access_no_groups">មិនមានក្រុម</string>
     <string name="crm_access_tab_users">អ្នកប្រើប្រាស់</string>
     <string name="crm_access_tab_groups">ក្រុម</string>
-    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_attachment_remove">ដកឯកសារភ្ជាប់ចេញ</string>
     <string name="crm_board_add_column">បន្ថែមជួរឈរ</string>
     <string name="crm_settings_entity_id">លេខសម្គាល់អង្គភាព</string>
     <string name="crm_settings_fingerprint">ស្នាមម្រាមដៃ</string>

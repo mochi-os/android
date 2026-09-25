@@ -65,7 +65,6 @@
     <string name="staff_status_active">Actif</string>
 
     <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
     <string name="staff_accounts_action_ban_title">Bannir le compte</string>
     <string name="staff_accounts_action_suspend_title">Suspendre le compte</string>
     <string name="staff_accounts_action_unban_title">Lever le bannissement</string>

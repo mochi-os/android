@@ -38,7 +38,7 @@
     <string name="access_add_rule">Cuir riaghailt ris</string>
     <string name="access_owner">Sealbhadair</string>
     <string name="access_revoke">Cùl-ghairm</string>
-    <string name="access_level_comment">Beachd</string>
+    <string name="access_level_comment">Thoir beachd</string>
     <string name="access_level_view">Seall</string>
     <string name="access_level_none">Chan eil gin</string>
     <string name="reaction_like">Toil</string>

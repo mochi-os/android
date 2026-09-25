@@ -29,7 +29,7 @@
     <string name="projects_sort_label">Сартаваць</string>
     <string name="projects_sort_direction">Напрамак</string>
     <string name="projects_sort_rank">Уручную</string>
-    <string name="projects_sort_number">Лік</string>
+    <string name="projects_sort_number">Нумар</string>
     <string name="projects_sort_created">Створана</string>
     <string name="projects_sort_updated">Абноўлена</string>
     <string name="projects_create_object_type">Тып</string>
@@ -86,27 +86,27 @@
     <string name="projects_request_method">Метад</string>
     <string name="projects_request_method_merge">Аб\'яднаць</string>
     <string name="projects_request_field_repository">Рэпазітарый</string>
-    <string name="projects_request_field_source">Зыходны branch</string>
+    <string name="projects_request_field_source">Зыходная галіна</string>
     <string name="projects_request_field_title">Назва</string>
     <string name="projects_request_field_description">Апісанне</string>
     <string name="projects_request_field_draft">Чарнавік</string>
     <string name="projects_request_create_action">Стварыць</string>
     <string name="projects_diff_unified">Аб\'яднаны</string>
     <string name="projects_diff_split">Падзяліць</string>
-    <string name="projects_diff_empty">Diff недаступны</string>
+    <string name="projects_diff_empty">Розніца недаступная</string>
     <string name="projects_board_unassigned">Не прызначана</string>
     <string name="projects_board_new">Новы</string>
     <string name="projects_board_rename">Перайменаваць</string>
     <string name="projects_board_rename_column">Перайменаваць слупок</string>
     <string name="projects_move_position">Пазіцыя</string>
-    <string name="projects_move_position_top">Верх</string>
+    <string name="projects_move_position_top">Наверх</string>
     <string name="projects_move_current">Бягучы</string>
     <string name="projects_design_title">Дызайн</string>
     <string name="projects_design_export">Экспартаваць дызайн</string>
     <string name="projects_design_import">Імпартаваць дызайн</string>
     <string name="projects_design_imported">Дызайн імпартаваны</string>
     <string name="projects_design_tab_classes">Класы</string>
-    <string name="projects_design_tab_views">Прагляды</string>
+    <string name="projects_design_tab_views">Выгляды</string>
     <string name="projects_design_import_dialog_title">Імпартаваць дызайн</string>
     <string name="projects_design_import_choose_template">Выберыце шаблон</string>
     <string name="projects_design_replace_title">Замяніць дызайн?</string>
@@ -149,7 +149,7 @@
     <string name="projects_views_type_board">Дошка</string>
     <string name="projects_views_type_list">Спіс</string>
     <string name="projects_views_direction">Напрамак</string>
-    <string name="projects_views_sort_number">Лік</string>
+    <string name="projects_views_sort_number">Нумар</string>
     <string name="projects_views_sort_created">Створана</string>
     <string name="projects_views_sort_updated">Абноўлена</string>
     <string name="projects_views_sort_rank">Ранг</string>
@@ -160,7 +160,7 @@
     <string name="projects_comment_send">Адправіць</string>
 
     <string name="notification_channel_projects">Апавяшчэнні праектаў</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Праекты</string>
     <string name="projects_auth_login_failed">Не ўдалося ўвайсці</string>
     <string name="projects_auth_create_identity_failed">Не ўдалося стварыць асобу</string>
     <string name="projects_auth_mfa_unsupported">MFA пакуль не падтрымліваецца ў мабільным дадатку</string>
@@ -233,8 +233,8 @@
     <string name="projects_request_mark_ready">Пазначыць як гатовы</string>
     <string name="projects_request_merge_default_message">Зліць %1$s у %2$s</string>
     <string name="projects_request_commit_message">Паведамленне камітa</string>
-    <string name="projects_request_method_squash">Squash</string>
-    <string name="projects_request_method_rebase">Rebase</string>
+    <string name="projects_request_method_squash">Сціснуць</string>
+    <string name="projects_request_method_rebase">Перабазаваць</string>
     <string name="projects_request_create_title">Стварыць запыт на зліццё</string>
     <string name="projects_request_field_target">Мэтавая галіна</string>
     <string name="projects_diff_title">Розніца: %1$s -&gt; %2$s</string>
@@ -285,7 +285,7 @@
     <string name="projects_field_multi">Множны выбар</string>
     <string name="projects_field_position">Пазіцыя адлюстравання</string>
     <string name="projects_field_position_header">Загаловак</string>
-    <string name="projects_field_position_body">Цела</string>
+    <string name="projects_field_position_body">Асноўная частка</string>
     <string name="projects_field_validation">Праверка</string>
     <string name="projects_field_min_length">Мінімальная даўжыня</string>
     <string name="projects_field_max_length">Максімальная даўжыня</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Выберыце правіла</string>
     <string name="projects_access_authenticated_desc">Усе, хто ўвайшоў у сістэму</string>
     <string name="projects_access_anyone_desc">Уключаючы ананімных карыстальнікаў</string>
-    <string name="projects_access_target">Мэта</string>
+    <string name="projects_access_target">Карыстальнік або група</string>
     <string name="projects_access_target_hint">ID сутнасці, @група, * (усе) ці + (удзельнікі)</string>
     <string name="projects_access_selected">Выбрана: %1$s</string>
     <string name="projects_access_role_comment">Каментаваць і праглядаць</string>

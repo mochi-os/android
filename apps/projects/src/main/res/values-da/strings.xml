@@ -85,7 +85,7 @@
     <string name="projects_request_merge_dialog_title">Flet</string>
     <string name="projects_request_method">Metode</string>
     <string name="projects_request_method_merge">Flet</string>
-    <string name="projects_request_field_repository">Repository</string>
+    <string name="projects_request_field_repository">Arkiv</string>
     <string name="projects_request_field_source">Kildegren</string>
     <string name="projects_request_field_title">Titel</string>
     <string name="projects_request_field_description">Beskrivelse</string>
@@ -99,7 +99,7 @@
     <string name="projects_board_rename">Omdøb</string>
     <string name="projects_board_rename_column">Omdøb kolonne</string>
     <string name="projects_move_position">Position</string>
-    <string name="projects_move_position_top">Top</string>
+    <string name="projects_move_position_top">Øverst</string>
     <string name="projects_move_current">Aktuel</string>
     <string name="projects_design_title">Design</string>
     <string name="projects_design_export">Eksportér design</string>
@@ -123,7 +123,7 @@
     <string name="projects_class_delete">Slet klasse</string>
     <string name="projects_class_delete_title">Slet klasse</string>
     <string name="projects_field_type_text">Tekst</string>
-    <string name="projects_field_type_number">Nummer</string>
+    <string name="projects_field_type_number">Tal</string>
     <string name="projects_field_type_user">Bruger</string>
     <string name="projects_field_type_date">Dato</string>
     <string name="projects_field_type_checklist">Tjekliste</string>
@@ -160,7 +160,7 @@
     <string name="projects_comment_send">Send</string>
 
     <string name="notification_channel_projects">Projektnotifikationer</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Projekter</string>
     <string name="projects_auth_login_failed">Login mislykkedes</string>
     <string name="projects_auth_create_identity_failed">Kunne ikke oprette identitet</string>
     <string name="projects_auth_mfa_unsupported">MFA understøttes endnu ikke i mobilappen</string>
@@ -285,7 +285,7 @@
     <string name="projects_field_multi">Flervalg</string>
     <string name="projects_field_position">Visningsposition</string>
     <string name="projects_field_position_header">Overskrift</string>
-    <string name="projects_field_position_body">Brødtekst</string>
+    <string name="projects_field_position_body">Hoveddel</string>
     <string name="projects_field_validation">Validering</string>
     <string name="projects_field_min_length">Min. længde</string>
     <string name="projects_field_max_length">Maks. længde</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Vælg en regel</string>
     <string name="projects_access_authenticated_desc">Alle, der er logget ind</string>
     <string name="projects_access_anyone_desc">Inklusive anonyme brugere</string>
-    <string name="projects_access_target">Mål</string>
+    <string name="projects_access_target">Bruger eller gruppe</string>
     <string name="projects_access_target_hint">Entitets-ID, @gruppe, * (alle) eller + (medlemmer)</string>
     <string name="projects_access_selected">Valgt: %1$s</string>
     <string name="projects_access_role_comment">Kommenter og se</string>

@@ -24,13 +24,13 @@
     <string name="forums_settings">Inställningar</string>
     <string name="forums_load_more">Läs in fler</string>
     <string name="forums_sort_label">Sortera</string>
-    <string name="forums_sort_new">Ny</string>
+    <string name="forums_sort_new">Nyast</string>
     <string name="forums_sort_hot">Het</string>
     <string name="forums_sort_top">Topp</string>
     <string name="forums_sort_interests">Intressen</string>
     <string name="forums_post_title_field">Titel</string>
     <string name="forums_post_attach">Bifoga filer</string>
-    <string name="forums_post_create_action">Inlägg</string>
+    <string name="forums_post_create_action">Publicera</string>
     <string name="forums_post_edit">Redigera inlägg</string>
     <string name="forums_post_edit_title">Redigera inlägg</string>
     <string name="forums_post_edit_title_field">Titel</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Medlemmar</string>
     <string name="forums_tab_banner">Banner</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Mål</string>
+    <string name="forums_access_target">Användare eller grupp</string>
     <string name="forums_access_level_view">Visa</string>
     <string name="forums_access_level_vote">Rösta</string>
     <string name="forums_access_level_comment">Kommentera</string>
-    <string name="forums_access_level_post">Inlägg</string>
+    <string name="forums_access_level_post">Publicera</string>
     <string name="forums_access_level_none">Ingen</string>
     <string name="forums_members_empty">Inga medlemmar</string>
     <string name="forums_banner_dismiss">Avfärda banner</string>
-    <string name="forums_ai_mode_tag">Tagg</string>
+    <string name="forums_ai_mode_tag">Tagga</string>
     <string name="forums_ai_account_default">Standardkonto</string>
     <string name="forums_ai_prompt_reset">Återställ till standard</string>
     <string name="forums_settings_unsubscribe">Avsluta prenumeration</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_login_failed">Inloggning misslyckades</string>
 
     <string name="notification_channel_forums">Forum-aviseringar</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Forum</string>
     <string name="forums_auth_create_identity_failed">Det gick inte att skapa identiteten</string>
     <string name="forums_auth_mfa_unsupported">MFA stöds inte ännu i mobilappen</string>
     <string name="forums_auth_enter_code_sent">Ange koden som skickats till %1$s</string>
@@ -171,7 +171,7 @@
     <string name="forums_moderation_log_meta">Av %1$s · Mål %2$s</string>
     <string name="forums_moderation_restriction_add">Lägg till begränsning</string>
     <string name="forums_moderation_restriction_user">Användaridentitet</string>
-    <string name="forums_moderation_restriction_type_shadowban">Shadowban</string>
+    <string name="forums_moderation_restriction_type_shadowban">Skuggbann</string>
     <string name="forums_moderation_restriction_duration_seconds">Varaktighet (sekunder, lämna tomt för permanent)</string>
     <string name="forums_moderation_restriction_expires">Upphör %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanent</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">Manuell</string>
     <string name="forums_access_search_users">Sök användare</string>
     <string name="forums_access_no_groups">Inga grupper tillgängliga</string>
-    <string name="forums_saved_title">Sparad</string>
+    <string name="forums_saved_title">Sparade</string>
     <string name="forums_saved_save">Spara till senare</string>
     <string name="forums_saved_remove">Ta bort från sparade</string>
     <string name="forums_saved_clear_all">Rensa allt</string>
@@ -321,7 +321,7 @@
     <string name="forums_moderation_action_unrestrict">Ej begränsad</string>
     <string name="forums_moderation_action_resolve">Löst rapport</string>
     <string name="forums_moderation_target_post">Inlägg</string>
-    <string name="forums_moderation_target_comment">Kommentera</string>
+    <string name="forums_moderation_target_comment">Kommentar</string>
     <string name="forums_moderation_target_user">Användare</string>
     <string name="forums_moderation_reason_spam">Skräppost</string>
     <string name="forums_moderation_reason_harassment">Trakasserier</string>

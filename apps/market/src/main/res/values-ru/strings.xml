@@ -70,7 +70,7 @@
     <string name="market_checkout_back">Назад</string>
     <string name="market_checkout_buy_it_now">Купить сейчас</string>
     <string name="market_checkout_create_failed">Не удалось создать заказ</string>
-    <string name="market_checkout_delivery_download">Скачать</string>
+    <string name="market_checkout_delivery_download">Скачивание</string>
     <string name="market_checkout_delivery_method">Способ доставки</string>
     <string name="market_checkout_delivery_pickup">Самовывоз</string>
     <string name="market_checkout_delivery_shipping">Доставка</string>
@@ -93,7 +93,7 @@
     <string name="market_checkout_title">Оформление</string>
     <string name="market_checkout_total">Всего</string>
     <string name="market_checkout_winning_bid">Выигрышная ставка</string>
-    <string name="market_condition_new">Новый</string>
+    <string name="market_condition_new">Новое</string>
     <string name="market_condition_refurbished">Восстановленное</string>
     <string name="market_condition_used">Б/у</string>
     <string name="market_dispute_dialog_cancel">Отмена</string>
@@ -107,8 +107,8 @@
     <string name="market_editor_asset_external_filename">Имя файла</string>
     <string name="market_editor_back">Назад</string>
     <string name="market_editor_category">Категория</string>
-    <string name="market_editor_condition">Условие</string>
-    <string name="market_editor_condition_new">Новый</string>
+    <string name="market_editor_condition">Состояние</string>
+    <string name="market_editor_condition_new">Новое</string>
     <string name="market_editor_condition_refurbished">Восстановленное</string>
     <string name="market_editor_condition_used">Б/у</string>
     <string name="market_editor_currency">Валюта</string>
@@ -149,12 +149,12 @@
     <string name="market_filter_apply">Применить</string>
     <string name="market_filter_category">Категория</string>
     <string name="market_filter_clear">Очистить фильтры</string>
-    <string name="market_filter_condition">Условие</string>
-    <string name="market_filter_condition_new">Новый</string>
+    <string name="market_filter_condition">Состояние</string>
+    <string name="market_filter_condition_new">Новое</string>
     <string name="market_filter_condition_refurbished">Восстановленное</string>
     <string name="market_filter_condition_used">Б/у</string>
     <string name="market_filter_delivery">Доставка</string>
-    <string name="market_filter_delivery_download">Скачать</string>
+    <string name="market_filter_delivery_download">Скачивание</string>
     <string name="market_filter_delivery_pickup">Самовывоз</string>
     <string name="market_filter_delivery_shipping">Доставка</string>
     <string name="market_filter_price_max">Макс.</string>
@@ -183,7 +183,7 @@
     <string name="market_listing_detail_load_failed">Не удалось загрузить объявление</string>
     <string name="market_listing_detail_listed">Опубликовано %1$s</string>
     <string name="market_listing_detail_location_heading">Местоположение</string>
-    <string name="market_listing_detail_message">Сообщение</string>
+    <string name="market_listing_detail_message">Написать</string>
     <string name="market_listing_detail_message_seller">Сообщение продавцу</string>
     <string name="market_listing_detail_not_found">Объявление не найдено</string>
     <string name="market_listing_detail_place_bid">Сделать ставку</string>
@@ -305,7 +305,7 @@
     <string name="market_sale_carrier_other">Другое</string>
     <string name="market_sale_completed_label">Завершено</string>
     <string name="market_sale_dispute_respond">Ответить</string>
-    <string name="market_sale_dispute_state_open">Открыть</string>
+    <string name="market_sale_dispute_state_open">Открыт</string>
     <string name="market_sale_dispute_state_resolved">Решено</string>
     <string name="market_sale_load_failed">Не удалось загрузить заказ</string>
     <string name="market_sale_message_buyer">Сообщение покупателю</string>
@@ -324,7 +324,7 @@
     <string name="market_sale_shipped_label">Отправлено</string>
     <string name="market_sale_title">Продажа</string>
     <string name="market_sale_tracking_label">Номер отслеживания</string>
-    <string name="market_saved_title">Сохранено</string>
+    <string name="market_saved_title">Сохранённое</string>
     <string name="market_search_clear">Очистить поиск</string>
     <string name="market_section_categories">Просмотр категорий</string>
     <string name="market_section_listings">Недавние объявления</string>
@@ -348,7 +348,7 @@
     <string name="market_sidebar_purchases">Покупки</string>
     <string name="market_sidebar_reviews">Отзывы</string>
     <string name="market_sidebar_sales">Продажи</string>
-    <string name="market_sidebar_saved">Сохранено</string>
+    <string name="market_sidebar_saved">Сохранённое</string>
     <string name="market_sidebar_selling">Продажа</string>
     <string name="market_sidebar_settings">Настройки</string>
     <string name="market_sidebar_subscribers">Подписчики</string>
@@ -380,7 +380,7 @@
     <string name="market_subscription_detail_seller">Продавец</string>
     <string name="market_subscription_detail_started">Начато %1$s</string>
     <string name="market_subscription_detail_title">Подписка</string>
-    <string name="market_subscriptions_action_cancel">Отмена</string>
+    <string name="market_subscriptions_action_cancel">Отменить</string>
     <string name="market_subscriptions_action_pause">Пауза</string>
     <string name="market_subscriptions_action_reactivate">Реактивировать</string>
     <string name="market_subscriptions_action_resubscribe">Повторно подписаться</string>
@@ -690,7 +690,7 @@
     <string name="market_seller_step_activate_title">Активировать аккаунт продавца</string>
     <string name="market_seller_step_stripe_desc">Привяжите аккаунт Stripe, чтобы принимать платежи от покупателей</string>
     <string name="market_seller_step_stripe_title">Подключить Stripe</string>
-    <string name="market_seller_stripe_more_info">Stripe требуется дополнительная информация, прежде чем вы сможете принимать платежи. Выполните требования в своем Stripe Dashboard, затем нажмите Проверить статус.</string>
+    <string name="market_seller_stripe_more_info">Stripe требуется дополнительная информация, прежде чем вы сможете принимать платежи. Выполните требования в своей панели Stripe, затем нажмите Проверить статус.</string>
     <string name="market_seller_summary_account_status">Статус аккаунта</string>
     <string name="market_seller_summary_fees">Комиссии</string>
     <string name="market_seller_summary_payments">Платежи</string>

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="launcher_feeds">Mochi Feeds</string>
-    <string name="launcher_chat">Mochi Bisedë</string>
-    <string name="launcher_forums">Mochi Forumet</string>
-    <string name="launcher_projects">Mochi Projektet</string>
+    <string name="launcher_feeds">Mochi Feed-et</string>
+    <string name="launcher_chat">Mochi Bisedimi</string>
+    <string name="launcher_forums">Mochi Forume</string>
+    <string name="launcher_projects">Mochi Projekte</string>
     <string name="launcher_crm">Mochi CRM</string>
-    <string name="launcher_people">Mochi Persona</string>
+    <string name="launcher_people">Mochi Njerëz</string>
     <string name="launcher_settings">Mochi Cilësimet</string>
-    <string name="launcher_wikis">Mochi Wikis</string>
-    <string name="launcher_chess">Mochi Shahu</string>
+    <string name="launcher_wikis">Mochi Wiki-t</string>
+    <string name="launcher_chess">Mochi Shah</string>
     <string name="launcher_go">Mochi Go</string>
     <string name="launcher_words">Mochi Fjalë</string>
-    <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">Mochi Kalendarët</string>
-    <string name="launcher_staff">Mochi Stafi</string>
+    <string name="launcher_market">Mochi Tregu</string>
+    <string name="launcher_calendars">Mochi Kalendarë</string>
+    <string name="launcher_staff">Stafi i Mochi</string>
 
     <string name="app_name">Mochi</string>
 

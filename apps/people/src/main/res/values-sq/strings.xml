@@ -72,16 +72,16 @@
     <string name="people_common_close">Mbyll</string>
     <string name="people_common_save">Ruaj</string>
     <string name="people_welcome_dismiss">Hidhe</string>
-    <string name="people_sidebar_header">Persona</string>
+    <string name="people_sidebar_header">Njerëz</string>
     <string name="people_open_sidebar">Hap navigimin</string>
     <string name="people_person_state_friend">Miqtë</string>
     <string name="people_person_state_self">Ti</string>
-    <string name="people_person_message">Mesazhi</string>
+    <string name="people_person_message">Dërgo mesazh</string>
     <string name="people_person_accept">Prano</string>
     <string name="people_person_decline">Refuzo</string>
 
 
-    <string name="notification_channel_people">Njoftime për personat</string>
+    <string name="notification_channel_people">Njoftimet e aplikacionit Njerëz</string>
     <string name="people_friends_searching">Po kërkohet…</string>
     <string name="people_invitations_toast_accepted">Ftesa nga %1$s u pranua</string>
     <string name="people_invitations_toast_declined">Ftesa nga %1$s u refuzua</string>
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">Vendosni një ngjyrë heks të vlefshme (p.sh. #a78bfa)</string>
     <string name="people_profile_accent_none">Asnjë</string>
     <string name="people_profile_privacy_private_desc">Vetëm miqtë e ndërsjellë mund ta shohin profilin tuaj</string>
-    <string name="people_welcome_title">Mirë se vini te People</string>
+    <string name="people_welcome_title">Mirë se vini te Njerëz</string>
     <string name="people_person_banner_alt">Banderolë për %1$s</string>
     <string name="people_person_private">Ky profil është privat</string>
     <string name="people_person_state_invited">I ftuar</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Prano të gjitha</string>
     <string name="people_invitations_decline_all">Refuzo të gjitha</string>
     <string name="people_invitations_cancel_all">Anulo të gjitha</string>
+    <string name="people_invitations_cancel">Anulo</string>
     <string name="people_invitations_all_accepted">Të gjitha ftesat u pranuan</string>
     <string name="people_invitations_all_declined">Të gjitha ftesat u refuzuan</string>
     <string name="people_invitations_all_cancelled">Të gjitha ftesat u anuluan</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Kërko…</string>
     <string name="people_contacts_invited">I ftuar</string>
     <string name="people_contacts_accept">Prano</string>
-    <string name="people_contacts_message">Mesazhi</string>
+    <string name="people_contacts_message">Dërgo mesazh</string>
     <string name="people_contacts_no_people_found">S\'u gjet asnjë person</string>
     <string name="people_contacts_try_adjusting">Provo të rregullosh kërkimin</string>
     <string name="people_contact_section_address">Adresa</string>

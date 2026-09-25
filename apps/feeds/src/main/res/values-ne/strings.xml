@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">अहिलेसम्म कुनै पोस्ट छैन</string>
     <string name="feeds_sort_label">क्रमबद्ध गर्नुहोस्</string>
     <string name="feeds_sort_interests">रुचिहरू</string>
-    <string name="feeds_sort_new">नयाँ</string>
+    <string name="feeds_sort_new">सबैभन्दा नयाँ</string>
     <string name="feeds_sort_hot">हट</string>
-    <string name="feeds_sort_top">माथि</string>
+    <string name="feeds_sort_top">शीर्ष</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">पोस्ट</string>
     <string name="feeds_image_preview">पूर्वावलोकन</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">जवाफ रद्द गर्नुहोस्</string>
     <string name="feeds_edit_post">पोस्ट सम्पादन गर्नुहोस्</string>
     <string name="feeds_save_label">सुरक्षित गर्नुहोस्</string>
-    <string name="feeds_post_action">पोस्ट</string>
+    <string name="feeds_post_action">पोस्ट गर्नुहोस्</string>
     <string name="feeds_feed_label">फिड</string>
     <string name="feeds_add_files">फाइलहरू थप्नुहोस्</string>
     <string name="feeds_restore">पुनर्स्थापना गर्नुहोस्</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">लग आउट</string>
     <string name="feeds_ai_account_default">पूर्वनिर्धारित खाता</string>
     <string name="feeds_ai_mode_off">निष्क्रिय</string>
-    <string name="feeds_ai_mode_tag">ट्याग</string>
+    <string name="feeds_ai_mode_tag">ट्याग गर्नुहोस्</string>
     <string name="feeds_ai_mode_tag_deduplicate">ट्याग + डुप्लिकेट हटाउनुहोस्</string>
     <string name="feeds_feed_not_found">फिड फेला परेन</string>
     <string name="feeds_post_not_found">पोस्ट भेटिएन</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">रुचि घटाइयो</string>
     <string name="feeds_interest_removed">रुचि हटाइयो</string>
     <string name="feeds_interest_failed">रुचि समायोजन गर्न असफल</string>
-    <string name="feeds_saved_title">सुरक्षित गरियो</string>
-    <string name="feeds_saved_menu">सुरक्षित गरियो</string>
+    <string name="feeds_saved_title">सुरक्षित गरिएका</string>
+    <string name="feeds_saved_menu">सुरक्षित गरिएका</string>
     <string name="feeds_saved_save">पछिको लागि सुरक्षित गर्नुहोस्</string>
     <string name="feeds_saved_remove">सुरक्षितबाट हटाउनुहोस्</string>
     <string name="feeds_saved_clear_all">सबै खाली गर्नुहोस्</string>

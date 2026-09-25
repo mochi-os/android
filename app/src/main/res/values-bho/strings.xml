@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Mochi फीड</string>
+    <string name="launcher_feeds">Mochi फ़ीड</string>
     <string name="launcher_chat">Mochi चैट</string>
     <string name="launcher_forums">Mochi फोरम</string>
     <string name="launcher_projects">Mochi प्रोजेक्ट</string>
     <string name="launcher_crm">Mochi CRM</string>
     <string name="launcher_people">Mochi लोग</string>
-    <string name="launcher_settings">Mochi सेटिंग सब</string>
+    <string name="launcher_settings">Mochi सेटिंग</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi विकी</string>
     <string name="launcher_chess">Mochi शतरंज</string>
-    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_go">Mochi गो</string>
     <string name="launcher_words">Mochi शब्द</string>
-    <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">Mochi कैलेंडर सब</string>
+    <string name="launcher_market">Mochi बाजार</string>
+    <string name="launcher_calendars">Mochi कैलेंडर</string>
     <string name="launcher_staff">Mochi स्टाफ</string>
 
 

@@ -67,7 +67,7 @@
     <string name="crm_board_rename">სახელის შეცვლა</string>
     <string name="crm_board_rename_column">სვეტის სახელის შეცვლა</string>
     <string name="crm_move_position">პოზიცია</string>
-    <string name="crm_move_position_top">ზედა</string>
+    <string name="crm_move_position_top">ზემოთ</string>
     <string name="crm_move_current">მიმდინარე</string>
     <string name="crm_design_title">დიზაინი</string>
     <string name="crm_design_export">დიზაინის ექსპორტი</string>
@@ -78,7 +78,7 @@
     <string name="crm_design_or_upload_json">ან ატვირთეთ ფაილი</string>
     <string name="crm_design_upload_json">ატვირთვა</string>
     <string name="crm_design_tab_classes">კლასები</string>
-    <string name="crm_design_tab_views">ნახვები</string>
+    <string name="crm_design_tab_views">ხედები</string>
     <string name="crm_design_import_dialog_title">დიზაინის იმპორტი</string>
     <string name="crm_design_import_choose_template">აირჩიეთ შაბლონი</string>
     <string name="crm_design_replace_title">დიზაინის ჩანაცვლება?</string>
@@ -94,7 +94,7 @@
     <string name="crm_class_delete">კლასის წაშლა</string>
     <string name="crm_class_delete_title">კლასის წაშლა</string>
     <string name="crm_field_type_text">ტექსტი</string>
-    <string name="crm_field_type_number">ნომერი</string>
+    <string name="crm_field_type_number">რიცხვი</string>
     <string name="crm_field_type_user">მომხმარებელი</string>
     <string name="crm_field_type_date">თარიღი</string>
     <string name="crm_field_type_checklist">ჩამონათვალი</string>
@@ -126,9 +126,9 @@
     <string name="crm_not_found">CRM ვერ მოიძებნა</string>
     <string name="crm_more">მეტი</string>
     <string name="crm_comment_send">გაგზავნა</string>
-    <string name="crm_field_position_body">შინაარსი</string>
+    <string name="crm_field_position_body">ძირითადი ნაწილი</string>
     <string name="crm_sort_field">დაალაგე</string>
-    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_comment_remove_attachment">დანართის ამოღება</string>
     <string name="crm_views_sort_by">დაალაგე</string>
     <string name="crm_views_move_up">აწევა</string>
     <string name="crm_class_move_up">აწევა</string>
@@ -241,7 +241,7 @@
     <string name="crm_access_no_groups">ხელმისაწვდომი ჯგუფები არ არის</string>
     <string name="crm_access_tab_users">მომხმარებლები</string>
     <string name="crm_access_tab_groups">ჯგუფები</string>
-    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_attachment_remove">დანართის ამოღება</string>
     <string name="crm_board_add_column">სვეტის დამატება</string>
     <string name="crm_settings_entity_id">ერთეულის ID</string>
     <string name="crm_settings_fingerprint">ანაბეჭდი</string>

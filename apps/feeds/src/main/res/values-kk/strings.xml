@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="feeds_title">Таспалар</string>
+    <string name="feeds_title">Арналар</string>
     <string name="feeds_find_feeds">Таспаларды табу</string>
     <string name="feeds_create_feed">Арна құру</string>
     <string name="feeds_new_post">Жаңа жазба</string>
@@ -14,13 +14,13 @@
     <string name="feeds_no_posts_yet">Жазбалар әлі жоқ</string>
     <string name="feeds_sort_label">Сұрыптау</string>
     <string name="feeds_sort_interests">Қызығушылықтар</string>
-    <string name="feeds_sort_new">Жаңа</string>
+    <string name="feeds_sort_new">Ең жаңа</string>
     <string name="feeds_sort_hot">Танымал</string>
-    <string name="feeds_sort_top">Жоғары</string>
+    <string name="feeds_sort_top">Үздіктер</string>
     <string name="feeds_sort_ai">AI</string>
-    <string name="feeds_post_default_author">Жариялау</string>
+    <string name="feeds_post_default_author">Жазба</string>
     <string name="feeds_image_preview">Алдын ала қарау</string>
-    <string name="feeds_post">Жариялау</string>
+    <string name="feeds_post">Жазба</string>
     <string name="feeds_comments">Пікірлер</string>
     <string name="feeds_delete_post">Жазбаны жою</string>
     <string name="feeds_delete_comment">Пікірді жою</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Шығу</string>
     <string name="feeds_ai_account_default">Әдепкі тіркелгі</string>
     <string name="feeds_ai_mode_off">Өшірілген</string>
-    <string name="feeds_ai_mode_tag">Тег</string>
+    <string name="feeds_ai_mode_tag">Тегтеу</string>
     <string name="feeds_ai_mode_tag_deduplicate">Тегтеу + қайталануды жою</string>
     <string name="feeds_feed_not_found">Таспа табылмады</string>
     <string name="feeds_post_not_found">Жазба табылмады</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Қызығушылық азайтылды</string>
     <string name="feeds_interest_removed">Қызығушылық жойылды</string>
     <string name="feeds_interest_failed">Қызығушылықты реттеу сәтсіз аяқталды</string>
-    <string name="feeds_saved_title">Сақталды</string>
-    <string name="feeds_saved_menu">Сақталды</string>
+    <string name="feeds_saved_title">Сақталғандар</string>
+    <string name="feeds_saved_menu">Сақталғандар</string>
     <string name="feeds_saved_save">Кейінге сақтау</string>
     <string name="feeds_saved_remove">Сақталғандардан жою</string>
     <string name="feeds_saved_clear_all">Барлығын тазалау</string>

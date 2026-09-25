@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="launcher_staff">Mochi-personeel</string>
     <string name="staff_accounts_action_ban_title">Account verbannen</string>
     <string name="staff_accounts_action_suspend_title">Account schorsen</string>
     <string name="staff_accounts_action_unban_title">Verbanning opheffen</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_refund_help">Laat leeg voor een volledige terugbetaling van %1$s. Voer een lager bedrag in voor een gedeeltelijke terugbetaling.</string>
     <string name="staff_disputes_refund_must_be_positive">Terugbetalingsbedrag moet groter zijn dan nul</string>
     <string name="staff_disputes_resolution_buyer">Oplossen ten gunste van koper</string>
-    <string name="staff_disputes_resolution_label">Resolutie</string>
+    <string name="staff_disputes_resolution_label">Oplossing</string>
     <string name="staff_disputes_resolution_placeholder">Selecteer oplossing</string>
     <string name="staff_disputes_resolution_seller">Oplossen ten gunste van verkoper</string>
     <string name="staff_disputes_resolve">Oplossen</string>
@@ -322,7 +322,7 @@
     <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Actie</string>
     <string name="staff_reports_action_ban">Gebruiker verbannen</string>
-    <string name="staff_reports_action_dismiss">Sluiten</string>
+    <string name="staff_reports_action_dismiss">Afwijzen</string>
     <string name="staff_reports_action_label">Actie</string>
     <string name="staff_reports_action_placeholder">Selecteer actie</string>
     <string name="staff_reports_action_remove">Verwijderen</string>
@@ -334,7 +334,7 @@
     <string name="staff_reports_cancel">Annuleren</string>
     <string name="staff_reports_close">Sluiten</string>
     <string name="staff_reports_dialog_title_action">Actie ondernemen op melding</string>
-    <string name="staff_reports_dialog_title_view">Rapporteren</string>
+    <string name="staff_reports_dialog_title_view">Rapport</string>
     <string name="staff_reports_empty">Geen rapporten</string>
     <string name="staff_reports_filter_status_label">Status</string>
     <string name="staff_reports_filter_type_label">Type</string>

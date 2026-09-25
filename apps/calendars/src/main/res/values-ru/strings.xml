@@ -10,7 +10,7 @@
     <string name="calendars_delete">Удалить</string>
     <string name="calendars_previous">Назад</string>
     <string name="calendars_next">Далее</string>
-    <string name="calendars_view">Просмотр</string>
+    <string name="calendars_view">Вид</string>
     <string name="calendars_view_list">Список</string>
     <string name="calendars_list_search">Поиск</string>
     <string name="calendars_event_untitled">Без названия</string>
@@ -175,7 +175,7 @@
     <string name="calendars_subscribe_server_url">Адрес сервера</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google Календарь</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Аккаунты Google не включены на этом сервере. Включите их в разделе Настройки, Системные настройки.</string>
     <string name="calendars_subscribe_google_connect">Вы не подключили аккаунт Google.</string>

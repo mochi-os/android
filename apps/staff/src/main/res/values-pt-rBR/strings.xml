@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="launcher_staff">Mochi Equipe</string>
     <string name="staff_accounts_action_ban_title">Banir conta</string>
     <string name="staff_accounts_action_suspend_title">Suspender conta</string>
     <string name="staff_accounts_action_unban_title">Remover banimento</string>
@@ -255,9 +255,9 @@
     <string name="staff_disputes_resolve">Resolver</string>
     <string name="staff_disputes_resolved_toast">Disputa resolvida</string>
     <string name="staff_disputes_resolving">Resolvendo…</string>
-    <string name="staff_disputes_review">Avaliar</string>
+    <string name="staff_disputes_review">Analisar</string>
     <string name="staff_disputes_status_escalated">Escalado</string>
-    <string name="staff_disputes_status_open">Abrir</string>
+    <string name="staff_disputes_status_open">Aberto</string>
     <string name="staff_disputes_status_resolved_buyer">Resolvido (comprador)</string>
     <string name="staff_disputes_status_resolved_seller">Resolvido (vendedor)</string>
     <string name="staff_disputes_status_responded">Respondido</string>
@@ -297,7 +297,7 @@
     <string name="staff_listings_moderation_hold">Reter</string>
     <string name="staff_listings_moderation_manual">Manual</string>
     <string name="staff_listings_moderation_rejected">Recusado</string>
-    <string name="staff_listings_moderation_review">Avaliar</string>
+    <string name="staff_listings_moderation_review">Aguardando revisão</string>
     <string name="staff_listings_moderation_soft_approved">Aprovado provisoriamente</string>
     <string name="staff_listings_notes_label">Notas</string>
     <string name="staff_listings_price_placeholder">—</string>
@@ -335,7 +335,7 @@
     <string name="staff_reports_cancel">Cancelar</string>
     <string name="staff_reports_close">Fechar</string>
     <string name="staff_reports_dialog_title_action">Tomar ação sobre a denúncia</string>
-    <string name="staff_reports_dialog_title_view">Denunciar</string>
+    <string name="staff_reports_dialog_title_view">Denúncia</string>
     <string name="staff_reports_empty">Nenhuma denúncia</string>
     <string name="staff_reports_filter_type_label">Tipo</string>
     <string name="staff_reports_listing_label">Anúncio nº %1$s</string>
@@ -344,7 +344,7 @@
     <string name="staff_reports_meta_reason">Motivo</string>
     <string name="staff_reports_meta_reporter">Denunciante</string>
     <string name="staff_reports_meta_seller">Vendedor</string>
-    <string name="staff_reports_meta_target">Destino</string>
+    <string name="staff_reports_meta_target">Alvo</string>
     <string name="staff_reports_meta_type">Tipo</string>
     <string name="staff_reports_notes_label">Notas</string>
     <string name="staff_reports_reason_counterfeit">Falsificado ou roubado</string>
@@ -408,7 +408,7 @@
     <string name="staff_status_hold">Reter</string>
     <string name="staff_status_manual">Manual</string>
     <string name="staff_status_moderator">Moderador</string>
-    <string name="staff_status_open">Abrir</string>
+    <string name="staff_status_open">Aberto</string>
     <string name="staff_status_pending">Pendente</string>
     <string name="staff_status_published">Publicado</string>
     <string name="staff_status_rejected">Recusado</string>
@@ -416,7 +416,7 @@
     <string name="staff_status_resolved_buyer">Resolvido (comprador)</string>
     <string name="staff_status_resolved_seller">Resolvido (vendedor)</string>
     <string name="staff_status_responded">Respondido</string>
-    <string name="staff_status_review">Avaliar</string>
+    <string name="staff_status_review">Aguardando revisão</string>
     <string name="staff_status_reviewed">Avaliado</string>
     <string name="staff_status_reviewing">Avaliando</string>
     <string name="staff_status_soft_approved">Aprovado provisoriamente</string>

@@ -10,7 +10,7 @@
     <string name="calendars_delete">Futa</string>
     <string name="calendars_previous">Iliyotangulia</string>
     <string name="calendars_next">Endelea</string>
-    <string name="calendars_view">Tazama</string>
+    <string name="calendars_view">Mwonekano</string>
     <string name="calendars_view_list">Orodha</string>
     <string name="calendars_list_search">Tafuta</string>
     <string name="calendars_event_untitled">Bila kichwa</string>
@@ -169,7 +169,7 @@
     <string name="calendars_subscribe_server_url">Anwani ya seva</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Kalenda ya Google</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Akaunti za Google hazijawashwa kwenye seva hii. Ziwashe katika Mipangilio, Mipangilio ya mfumo.</string>
     <string name="calendars_subscribe_google_connect">Hujaunganisha akaunti ya Google.</string>

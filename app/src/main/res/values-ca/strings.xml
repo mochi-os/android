@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Mochi Fonts</string>
+    <string name="launcher_feeds">Mochi Canals</string>
     <string name="launcher_chat">Mochi Xat</string>
     <string name="launcher_forums">Mochi Fòrums</string>
     <string name="launcher_projects">Mochi Projectes</string>
@@ -13,9 +13,9 @@
     <string name="launcher_chess">Mochi Escacs</string>
     <string name="launcher_go">Mochi Go</string>
     <string name="launcher_words">Mochi Paraules</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi Mercat</string>
     <string name="launcher_calendars">Mochi Calendaris</string>
-    <string name="launcher_staff">Mochi Personal</string>
+    <string name="launcher_staff">Personal de Mochi</string>
 
 
     <string name="app_name">Mochi</string>

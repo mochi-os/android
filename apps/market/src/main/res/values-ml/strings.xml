@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">മാർക്കറ്റ്</string>
+    <string name="app_name">വിപണി</string>
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_label">ജീവചരിത്രം</string>
     <string name="market_account_biography_placeholder">വാങ്ങുന്നവരോട് നിങ്ങളെക്കുറിച്ച് പറയൂ…</string>
@@ -31,7 +31,7 @@
     <string name="market_appeal_dialog_submitting">അയയ്ക്കുന്നു…</string>
     <string name="market_appeal_dialog_success">അപ്പീൽ സമർപ്പിച്ചു</string>
     <string name="market_appeal_dialog_title">നീക്കം ചെയ്യൽ അപ്പീൽ</string>
-    <string name="market_asset_download">ഡൗൺലോഡ്</string>
+    <string name="market_asset_download">ഡൗൺലോഡ് ചെയ്യുക</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
     <string name="market_back">തിരികെ</string>
     <string name="market_bid_dialog_amount_label">നിങ്ങളുടെ ബിഡ്</string>
@@ -54,7 +54,7 @@
     <string name="market_bids_tab_won">ജയിച്ചു</string>
     <string name="market_bids_title">ബിഡുകൾ</string>
     <string name="market_carousel_main">ഫോട്ടോ %1$d / %2$d</string>
-    <string name="market_channel_name">മാർക്കറ്റ്</string>
+    <string name="market_channel_name">വിപണി</string>
     <string name="market_chargeback_reason_bank_cannot_process">ബാങ്കിന് പ്രോസസ് ചെയ്യാൻ കഴിഞ്ഞില്ല</string>
     <string name="market_chargeback_reason_check_returned">ചെക്ക് മടങ്ങി</string>
     <string name="market_chargeback_reason_credit_not_processed">ക്രെഡിറ്റ് പ്രോസസ് ചെയ്തിട്ടില്ല</string>
@@ -88,7 +88,7 @@
     <string name="market_checkout_item">ഇനം</string>
     <string name="market_checkout_listing_not_found">ലിസ്റ്റിംഗ് കണ്ടെത്തിയില്ല</string>
     <string name="market_checkout_pay_button">Stripe ഉപയോഗിച്ച് നൽകുക</string>
-    <string name="market_checkout_payment_failed">പേയ്മെന്റ് checkout ആരംഭിക്കാൻ കഴിഞ്ഞില്ല — വിൽക്കുന്നയാൾ പേയ്മെന്റ് സജ്ജീകരണം പൂർത്തിയാക്കിയിട്ടില്ലായിരിക്കാം</string>
+    <string name="market_checkout_payment_failed">പേയ്മെന്റ് ചെക്ക്ഔട്ട് ആരംഭിക്കാൻ കഴിഞ്ഞില്ല — വിൽക്കുന്നയാൾ പേയ്മെന്റ് സജ്ജീകരണം പൂർത്തിയാക്കിയിട്ടില്ലായിരിക്കാം</string>
     <string name="market_checkout_processing">പ്രോസസ്സിംഗ്…</string>
     <string name="market_checkout_secure">Stripe വഴി സുരക്ഷിത പേയ്മെന്റ്</string>
     <string name="market_checkout_select_option">ഓപ്ഷൻ തിരഞ്ഞെടുക്കുക</string>
@@ -109,7 +109,7 @@
     <string name="market_checkout_winning_bid">വിജയിച്ച ബിഡ്</string>
     <string name="market_condition_new">പുതിയത്</string>
     <string name="market_condition_refurbished">പുതുക്കിയത്</string>
-    <string name="market_condition_used">ഉപയോഗിച്ച</string>
+    <string name="market_condition_used">ഉപയോഗിച്ചത്</string>
     <string name="market_dispute_dialog_attach">തെളിവ് ചേർക്കുക</string>
     <string name="market_dispute_dialog_cancel">റദ്ദാക്കുക</string>
     <string name="market_dispute_dialog_evidence_role_buyer">വാങ്ങുന്നയാൾ</string>
@@ -130,7 +130,7 @@
     <string name="market_editor_condition">അവസ്ഥ</string>
     <string name="market_editor_condition_new">പുതിയത്</string>
     <string name="market_editor_condition_refurbished">പുതുക്കിയത്</string>
-    <string name="market_editor_condition_used">ഉപയോഗിച്ച</string>
+    <string name="market_editor_condition_used">ഉപയോഗിച്ചത്</string>
     <string name="market_editor_currency">കറൻസി</string>
     <string name="market_editor_days">%1$d ദിവസം</string>
     <string name="market_editor_delete">ലിസ്റ്റിംഗ് ഇല്ലാതാക്കുക</string>
@@ -191,7 +191,7 @@
     <string name="market_filter_condition">അവസ്ഥ</string>
     <string name="market_filter_condition_new">പുതിയത്</string>
     <string name="market_filter_condition_refurbished">പുതുക്കിയത്</string>
-    <string name="market_filter_condition_used">ഉപയോഗിച്ച</string>
+    <string name="market_filter_condition_used">ഉപയോഗിച്ചത്</string>
     <string name="market_filter_delivery">ഡെലിവറി</string>
     <string name="market_filter_delivery_download">ഡൗൺലോഡ്</string>
     <string name="market_filter_delivery_pickup">പിക്കപ്പ്</string>
@@ -225,7 +225,7 @@
     <string name="market_listing_detail_load_failed">ലിസ്റ്റിംഗ് ലോഡുചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="market_listing_detail_listed">ലിസ്റ്റ് ചെയ്തു %1$s</string>
     <string name="market_listing_detail_location_heading">ലൊക്കേഷൻ</string>
-    <string name="market_listing_detail_message">സന്ദേശം</string>
+    <string name="market_listing_detail_message">സന്ദേശം അയയ്ക്കുക</string>
     <string name="market_listing_detail_message_seller">വിൽക്കുന്നയാൾക്ക് സന്ദേശം അയയ്ക്കുക</string>
     <string name="market_listing_detail_not_found">ലിസ്റ്റിംഗ് കണ്ടെത്തിയില്ല</string>
     <string name="market_listing_detail_place_bid">ബിഡ് ഇടുക</string>
@@ -367,7 +367,7 @@
     <string name="market_sale_carrier_other">മറ്റുള്ളവ</string>
     <string name="market_sale_completed_label">പൂർത്തിയായി</string>
     <string name="market_sale_dispute_respond">പ്രതികരിക്കുക</string>
-    <string name="market_sale_dispute_state_open">തുറക്കുക</string>
+    <string name="market_sale_dispute_state_open">തുറന്നത്</string>
     <string name="market_sale_dispute_state_resolved">പരിഹരിച്ചു</string>
     <string name="market_sale_load_failed">ഓർഡർ ലോഡുചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="market_sale_message_buyer">വാങ്ങുന്നയാൾക്ക് സന്ദേശം അയയ്ക്കുക</string>
@@ -389,7 +389,7 @@
     <string name="market_sale_title">വിൽപ്പന</string>
     <string name="market_sale_tracking_label">ട്രാക്കിംഗ് നമ്പർ</string>
     <string name="market_sales_title">എന്റെ വിൽപ്പന</string>
-    <string name="market_saved_title">സേവ് ചെയ്തു</string>
+    <string name="market_saved_title">സേവ് ചെയ്തവ</string>
     <string name="market_search_clear">തിരയൽ മായ്ക്കുക</string>
     <string name="market_search_placeholder">മാർക്കറ്റിൽ തിരയുക</string>
     <string name="market_section_categories">വിഭാഗങ്ങൾ ബ്രൗസ് ചെയ്യുക</string>
@@ -414,7 +414,7 @@
     <string name="market_sidebar_purchases">വാങ്ങലുകൾ</string>
     <string name="market_sidebar_reviews">അവലോകനങ്ങൾ</string>
     <string name="market_sidebar_sales">വിൽപ്പനകൾ</string>
-    <string name="market_sidebar_saved">സേവ് ചെയ്തു</string>
+    <string name="market_sidebar_saved">സേവ് ചെയ്തവ</string>
     <string name="market_sidebar_selling">വിൽക്കുന്നു</string>
     <string name="market_sidebar_settings">ക്രമീകരണങ്ങൾ</string>
     <string name="market_sidebar_subscribers">വരിക്കാർ</string>
@@ -433,18 +433,18 @@
     <string name="market_subscribers_interval_month">/ മാസം</string>
     <string name="market_subscribers_interval_year">/ വർഷം</string>
     <string name="market_subscribers_load_failed">വരിക്കാരെ ലോഡുചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു</string>
-    <string name="market_subscription_detail_billing_history">Billing history</string>
+    <string name="market_subscription_detail_billing_history">ബില്ലിംഗ് ചരിത്രം</string>
     <string name="market_subscription_detail_billing_history_empty">ഇതുവരെ ചാർജുകളൊന്നുമില്ല.</string>
     <string name="market_subscription_detail_billing_info">ബില്ലിംഗ്</string>
-    <string name="market_subscription_detail_cancelled_on">Cancelled on %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Latest charge: %1$s</string>
+    <string name="market_subscription_detail_cancelled_on">%1$s-ന് റദ്ദാക്കി</string>
+    <string name="market_subscription_detail_charge_amount">ഏറ്റവും പുതിയ ചാർജ്: %1$s</string>
     <string name="market_subscription_detail_listing">ലിസ്റ്റിംഗ്</string>
     <string name="market_subscription_detail_load_failed">സബ്സ്ക്രിപ്ഷൻ ലോഡ് ചെയ്യാനായില്ല</string>
     <string name="market_subscription_detail_next_billing">അടുത്ത ബില്ലിംഗ് തീയതി: %1$s</string>
     <string name="market_subscription_detail_not_found">സബ്സ്ക്രിപ്ഷൻ കണ്ടെത്തിയില്ല</string>
-    <string name="market_subscription_detail_pending_cancel">Cancellation pending</string>
+    <string name="market_subscription_detail_pending_cancel">റദ്ദാക്കൽ തീർപ്പാക്കാനുണ്ട്</string>
     <string name="market_subscription_detail_seller">വിൽപ്പനക്കാരൻ</string>
-    <string name="market_subscription_detail_started">Started %1$s</string>
+    <string name="market_subscription_detail_started">%1$s-ന് ആരംഭിച്ചു</string>
     <string name="market_subscription_detail_title">സബ്സ്ക്രിപ്ഷൻ</string>
     <string name="market_subscriptions_action_cancel">റദ്ദാക്കുക</string>
     <string name="market_subscriptions_action_pause">താൽക്കാലികമായി നിർത്തുക</string>
@@ -466,7 +466,7 @@
     <string name="market_subscriptions_resume_failed">പുനരാരംഭിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="market_subscriptions_resumed">സബ്സ്ക്രിപ്ഷൻ പുനരാരംഭിച്ചു</string>
     <string name="market_subscriptions_title">സബ്സ്ക്രിപ്ഷനുകൾ</string>
-    <string name="market_title">മാർക്കറ്റ്</string>
+    <string name="market_title">വിപണി</string>
     <string name="market_type_digital">ഡിജിറ്റൽ</string>
     <string name="market_type_physical">ഫിസിക്കൽ</string>
     <string name="market_warnings_title">മുന്നറിയിപ്പുകൾ</string>
@@ -690,7 +690,7 @@
     <string name="market_seller_step_activate_title">വിൽപ്പനക്കാരന്റെ അക്കൗണ്ട് സജീവമാക്കുക</string>
     <string name="market_seller_step_stripe_desc">വാങ്ങുന്നവരിൽ നിന്ന് പണമിടപാടുകൾ സ്വീകരിക്കാൻ ഒരു Stripe അക്കൗണ്ട് ലിങ്ക് ചെയ്യുക</string>
     <string name="market_seller_step_stripe_title">Stripe കണക്റ്റ് ചെയ്യുക</string>
-    <string name="market_seller_stripe_more_info">നിങ്ങൾക്ക് പേയ്‌മെന്റുകൾ സ്വീകരിക്കുന്നതിന് മുമ്പ് Stripe-ന് കൂടുതൽ വിവരങ്ങൾ ആവശ്യമാണ്. നിങ്ങളുടെ Stripe Dashboard-ലെ ആവശ്യകതകൾ പൂർത്തിയാക്കുക, തുടർന്ന് സ്റ്റാറ്റസ് പരിശോധിക്കുക ക്ലിക്കുചെയ്യുക.</string>
+    <string name="market_seller_stripe_more_info">നിങ്ങൾക്ക് പേയ്‌മെന്റുകൾ സ്വീകരിക്കുന്നതിന് മുമ്പ് Stripe-ന് കൂടുതൽ വിവരങ്ങൾ ആവശ്യമാണ്. നിങ്ങളുടെ Stripe ഡാഷ്‌ബോർഡിലെ ആവശ്യകതകൾ പൂർത്തിയാക്കുക, തുടർന്ന് സ്റ്റാറ്റസ് പരിശോധിക്കുക ക്ലിക്കുചെയ്യുക.</string>
     <string name="market_seller_summary_account_status">അക്കൗണ്ട് നില</string>
     <string name="market_seller_summary_fees">ഫീസുകൾ</string>
     <string name="market_seller_summary_payments">പേയ്മെന്റുകൾ</string>
@@ -751,9 +751,9 @@
     <string name="market_audit_listing_updated">ലിസ്റ്റിംഗ് എഡിറ്റ് ചെയ്തു</string>
     <string name="market_audit_listing_warning">മുന്നറിയിപ്പ് നൽകി</string>
     <string name="market_audit_order_cancelled">റദ്ദാക്കി</string>
-    <string name="market_audit_order_chargeback">Chargeback ലഭിച്ചു</string>
-    <string name="market_audit_order_chargeback_lost">Chargeback ശരിവച്ചു</string>
-    <string name="market_audit_order_chargeback_won">Chargeback നിരസിച്ചു</string>
+    <string name="market_audit_order_chargeback">ചാർജ്ബാക്ക് ലഭിച്ചു</string>
+    <string name="market_audit_order_chargeback_lost">ചാർജ്ബാക്ക് ശരിവച്ചു</string>
+    <string name="market_audit_order_chargeback_won">ചാർജ്ബാക്ക് നിരസിച്ചു</string>
     <string name="market_audit_order_completed">പൂർത്തിയായി</string>
     <string name="market_audit_order_created">ഓർഡർ നൽകി</string>
     <string name="market_audit_order_paid">പേയ്മെന്റ് ലഭിച്ചു</string>
@@ -771,9 +771,9 @@
     <string name="market_audit_subscription_activated">സബ്സ്ക്രിപ്ഷൻ സജീവമാക്കി</string>
     <string name="market_audit_subscription_cancel_scheduled">റദ്ദാക്കൽ ഷെഡ്യൂൾ ചെയ്തു</string>
     <string name="market_audit_subscription_cancelled">റദ്ദാക്കി</string>
-    <string name="market_audit_subscription_chargeback">Chargeback ലഭിച്ചു</string>
-    <string name="market_audit_subscription_chargeback_lost">Chargeback ശരിവച്ചു</string>
-    <string name="market_audit_subscription_chargeback_won">Chargeback നിരസിച്ചു</string>
+    <string name="market_audit_subscription_chargeback">ചാർജ്ബാക്ക് ലഭിച്ചു</string>
+    <string name="market_audit_subscription_chargeback_lost">ചാർജ്ബാക്ക് ശരിവച്ചു</string>
+    <string name="market_audit_subscription_chargeback_won">ചാർജ്ബാക്ക് നിരസിച്ചു</string>
     <string name="market_audit_subscription_created">സബ്സ്ക്രിപ്ഷൻ സൃഷ്ടിച്ചു</string>
     <string name="market_audit_subscription_past_due">പേയ്മെന്റ് കാലാവധി കഴിഞ്ഞു</string>
     <string name="market_audit_subscription_paused">താൽക്കാലികമായി നിർത്തി</string>

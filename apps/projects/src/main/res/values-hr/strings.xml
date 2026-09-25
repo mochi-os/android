@@ -158,7 +158,7 @@
     <string name="projects_more">Više</string>
     <string name="projects_request_more">Više</string>
     <string name="projects_comment_send">Pošalji</string>
-    <string name="projects_field_position_body">Tekst</string>
+    <string name="projects_field_position_body">Tijelo</string>
     <string name="projects_auth_login_failed">Prijava nije uspjela</string>
     <string name="projects_auth_create_identity_failed">Stvaranje identiteta nije uspjelo</string>
     <string name="projects_auth_mfa_unsupported">MFA još nije podržan u mobilnoj aplikaciji</string>
@@ -180,7 +180,7 @@
     <string name="projects_links_search_placeholder">Pretraži objekte</string>
 
     <string name="notification_channel_projects">Obavijesti projekata</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Projekti</string>
     <string name="projects_list_search_placeholder">Pretraži projekte</string>
     <string name="projects_list_no_matching">Nema podudarajućih projekata</string>
     <string name="projects_list_empty">Još nema projekata</string>
@@ -315,7 +315,7 @@
 
     <string name="projects_create_choose_template">Odaberite predložak</string>
     <string name="projects_create_next">Dalje</string>
-    <string name="projects_filter">Filter</string>
+    <string name="projects_filter">Filtar</string>
     <string name="projects_link">Poveznica</string>
     <string name="projects_filter_clear_all">Očisti sve</string>
     <string name="projects_filter_all">Sve</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Odaberite pravilo</string>
     <string name="projects_access_authenticated_desc">Svi koji su prijavljeni</string>
     <string name="projects_access_anyone_desc">Uključujući anonimne korisnike</string>
-    <string name="projects_access_target">Cilj</string>
+    <string name="projects_access_target">Korisnik ili grupa</string>
     <string name="projects_access_target_hint">ID entiteta, @grupa, * (svi) ili + (članovi)</string>
     <string name="projects_access_selected">Odabrano: %1$s</string>
     <string name="projects_access_role_comment">Komentar i pregled</string>

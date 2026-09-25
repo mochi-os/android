@@ -293,7 +293,7 @@
     <string name="format_italic">斜體</string>
     <string name="format_link">連結</string>
     <string name="format_heading">標題</string>
-    <string name="format_code">代碼</string>
+    <string name="format_code">程式碼</string>
     <string name="format_list">項目符號清單</string>
     <string name="common_preview">預覽</string>
     <string name="rss_revoke_confirm">撤銷</string>

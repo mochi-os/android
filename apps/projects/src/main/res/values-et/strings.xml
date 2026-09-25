@@ -99,14 +99,14 @@
     <string name="projects_board_rename">Nimeta ümber</string>
     <string name="projects_board_rename_column">Nimeta veerg ümber</string>
     <string name="projects_move_position">Positsioon</string>
-    <string name="projects_move_position_top">Üles</string>
+    <string name="projects_move_position_top">Algusesse</string>
     <string name="projects_move_current">Praegune</string>
     <string name="projects_design_title">Disain</string>
     <string name="projects_design_export">Ekspordi disain</string>
     <string name="projects_design_import">Impordi disain</string>
     <string name="projects_design_imported">Disain imporditud</string>
     <string name="projects_design_tab_classes">Klassid</string>
-    <string name="projects_design_tab_views">Vaatamised</string>
+    <string name="projects_design_tab_views">Vaated</string>
     <string name="projects_design_import_dialog_title">Impordi disain</string>
     <string name="projects_design_import_choose_template">Vali mall</string>
     <string name="projects_design_replace_title">Kas asendada kujundus?</string>
@@ -146,7 +146,7 @@
     <string name="projects_views_edit_dialog_title">Muuda vaadet</string>
     <string name="projects_views_delete_title">Kustuta vaade</string>
     <string name="projects_views_type">Tüüp</string>
-    <string name="projects_views_type_board">Laud</string>
+    <string name="projects_views_type_board">Tahvel</string>
     <string name="projects_views_type_list">Loend</string>
     <string name="projects_views_direction">Suund</string>
     <string name="projects_views_sort_number">Number</string>
@@ -182,7 +182,7 @@
     <string name="projects_links_search_placeholder">Otsi objekte</string>
 
     <string name="notification_channel_projects">Projektide teavitused</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Projektid</string>
     <string name="projects_list_search_placeholder">Otsi projekte</string>
     <string name="projects_list_no_matching">Sobivaid projekte ei leitud</string>
     <string name="projects_list_empty">Projekte pole veel</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Valige reegel</string>
     <string name="projects_access_authenticated_desc">Kõik sisselogitud kasutajad</string>
     <string name="projects_access_anyone_desc">Kaasa arvatud anonüümsed kasutajad</string>
-    <string name="projects_access_target">Siht</string>
+    <string name="projects_access_target">Kasutaja või grupp</string>
     <string name="projects_access_target_hint">Olemi ID, @grupp, * (kõik) või + (liikmed)</string>
     <string name="projects_access_selected">Valitud: %1$s</string>
     <string name="projects_access_role_comment">Kommenteeri ja vaata</string>

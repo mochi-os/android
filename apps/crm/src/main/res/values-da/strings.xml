@@ -67,7 +67,7 @@
     <string name="crm_board_rename">Omdøb</string>
     <string name="crm_board_rename_column">Omdøb kolonne</string>
     <string name="crm_move_position">Position</string>
-    <string name="crm_move_position_top">Top</string>
+    <string name="crm_move_position_top">Øverst</string>
     <string name="crm_move_current">Aktuel</string>
     <string name="crm_design_title">Design</string>
     <string name="crm_design_export">Eksportér design</string>
@@ -94,7 +94,7 @@
     <string name="crm_class_delete">Slet klasse</string>
     <string name="crm_class_delete_title">Slet klasse</string>
     <string name="crm_field_type_text">Tekst</string>
-    <string name="crm_field_type_number">Nummer</string>
+    <string name="crm_field_type_number">Tal</string>
     <string name="crm_field_type_user">Bruger</string>
     <string name="crm_field_type_date">Dato</string>
     <string name="crm_field_type_checklist">Tjekliste</string>
@@ -209,7 +209,7 @@
     <string name="crm_field_multi">Flervalg</string>
     <string name="crm_field_position">Visningsposition</string>
     <string name="crm_field_position_header">Sidehoved</string>
-    <string name="crm_field_position_body">Brødtekst</string>
+    <string name="crm_field_position_body">Hoveddel</string>
     <string name="crm_field_validation">Validering</string>
     <string name="crm_field_min_length">Minimumslængde</string>
     <string name="crm_field_max_length">Maksimumslængde</string>

@@ -160,7 +160,7 @@
     <string name="projects_comment_send">ላክ</string>
 
     <string name="notification_channel_projects">የፕሮጀክቶች ማሳወቂያዎች</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi ፕሮጀክቶች</string>
     <string name="projects_auth_login_failed">መግባት አልተሳካም</string>
     <string name="projects_auth_create_identity_failed">ማንነት መፍጠር አልተሳካም</string>
     <string name="projects_auth_mfa_unsupported">MFA በተንቀሳቃሽ መተግበሪያ ውስጥ እስካሁን አይደገፍም</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">ደንብ ይምረጡ</string>
     <string name="projects_access_authenticated_desc">የገባ ማንኛውም ሰው</string>
     <string name="projects_access_anyone_desc">ስም-አልባ ተጠቃሚዎችን ጨምሮ</string>
-    <string name="projects_access_target">ዒላማ</string>
+    <string name="projects_access_target">ተጠቃሚ ወይም ቡድን</string>
     <string name="projects_access_target_hint">የማንነት መታወቂያ፣ @ቡድን፣ * (ሁሉም)፣ ወይም + (አባላት)</string>
     <string name="projects_access_selected">የተመረጠ: %1$s</string>
     <string name="projects_access_role_comment">አስተያየት እና እይታ</string>

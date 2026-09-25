@@ -8,7 +8,7 @@
     <string name="go_action_pass">Pas</string>
     <string name="go_action_rematch">Returkamp</string>
     <string name="go_action_resign">Giv op</string>
-    <string name="go_app_title">Gå</string>
+    <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Sorte slag</string>
     <string name="go_captures_white_sr">Hvide slag</string>
     <string name="go_chat_title">Chat</string>

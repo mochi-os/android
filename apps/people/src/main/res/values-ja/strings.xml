@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">ナビゲーションを開く</string>
     <string name="people_person_state_friend">友だち</string>
     <string name="people_person_state_self">あなた</string>
-    <string name="people_person_message">メッセージ</string>
+    <string name="people_person_message">メッセージを送信</string>
     <string name="people_person_accept">承認</string>
     <string name="people_person_decline">拒否</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">すべて承認</string>
     <string name="people_invitations_decline_all">すべて辞退</string>
     <string name="people_invitations_cancel_all">すべてキャンセル</string>
+    <string name="people_invitations_cancel">キャンセル</string>
     <string name="people_invitations_all_accepted">すべての招待を承認しました</string>
     <string name="people_invitations_all_declined">すべての招待を辞退しました</string>
     <string name="people_invitations_all_cancelled">すべての招待をキャンセルしました</string>
@@ -118,10 +119,10 @@
     <string name="people_contacts_search_placeholder">検索…</string>
     <string name="people_contacts_invited">招待済み</string>
     <string name="people_contacts_accept">承認</string>
-    <string name="people_contacts_message">メッセージ</string>
+    <string name="people_contacts_message">メッセージを送信</string>
     <string name="people_contacts_no_people_found">人が見つかりません</string>
     <string name="people_contacts_try_adjusting">検索条件を変えてみてください</string>
-    <string name="people_contact_section_address">アドレス</string>
+    <string name="people_contact_section_address">住所</string>
     <string name="people_contact_section_detail">詳細</string>
     <string name="people_contact_name">名前</string>
     <string name="people_contact_email">メールアドレス</string>

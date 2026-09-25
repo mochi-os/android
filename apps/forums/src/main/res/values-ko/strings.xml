@@ -24,13 +24,13 @@
     <string name="forums_settings">설정</string>
     <string name="forums_load_more">더 보기</string>
     <string name="forums_sort_label">정렬</string>
-    <string name="forums_sort_new">새로 만들기</string>
+    <string name="forums_sort_new">최신순</string>
     <string name="forums_sort_hot">인기</string>
-    <string name="forums_sort_top">위</string>
+    <string name="forums_sort_top">최고</string>
     <string name="forums_sort_interests">관심사</string>
     <string name="forums_post_title_field">제목</string>
     <string name="forums_post_attach">파일 첨부</string>
-    <string name="forums_post_create_action">게시물</string>
+    <string name="forums_post_create_action">게시</string>
     <string name="forums_post_edit">게시물 편집</string>
     <string name="forums_post_edit_title">게시물 편집</string>
     <string name="forums_post_edit_title_field">제목</string>
@@ -62,8 +62,8 @@
     <string name="forums_access_target">대상</string>
     <string name="forums_access_level_view">보기</string>
     <string name="forums_access_level_vote">투표</string>
-    <string name="forums_access_level_comment">댓글</string>
-    <string name="forums_access_level_post">게시물</string>
+    <string name="forums_access_level_comment">댓글 달기</string>
+    <string name="forums_access_level_post">게시</string>
     <string name="forums_access_level_none">없음</string>
     <string name="forums_members_empty">멤버가 없어요</string>
     <string name="forums_banner_dismiss">배너 닫기</string>
@@ -80,7 +80,7 @@
     <string name="forums_moderation_reports_resolved">해결됨</string>
     <string name="forums_moderation_reports_all">전체</string>
     <string name="forums_moderation_reports_empty">신고가 없어요</string>
-    <string name="forums_moderation_report_dismiss">닫기</string>
+    <string name="forums_moderation_report_dismiss">기각</string>
     <string name="forums_moderation_restrictions_empty">제한 없음</string>
     <string name="forums_moderation_restriction_remove">제거</string>
     <string name="forums_moderation_restriction_type">유형</string>

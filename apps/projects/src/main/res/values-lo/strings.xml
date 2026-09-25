@@ -29,7 +29,7 @@
     <string name="projects_sort_label">ຈັດລຽງ</string>
     <string name="projects_sort_direction">ທິດທາງ</string>
     <string name="projects_sort_rank">ດ້ວຍຕົນເອງ</string>
-    <string name="projects_sort_number">ຕົວເລກ</string>
+    <string name="projects_sort_number">ໝາຍເລກ</string>
     <string name="projects_sort_created">ສ້າງແລ້ວ</string>
     <string name="projects_sort_updated">ອັບເດດແລ້ວ</string>
     <string name="projects_create_object_type">ປະເພດ</string>
@@ -39,7 +39,7 @@
     <string name="projects_settings_tab_access">ການເຂົ້າເຖິງ</string>
     <string name="projects_settings_tab_people">ຄົນ</string>
     <string name="projects_option_icon">ໄອຄອນ</string>
-    <string name="projects_option_icon_placeholder">ຕ຺ືັກ. Check, Star, Flag</string>
+    <string name="projects_option_icon_placeholder">ເຊັ່ນ Check, Star, Flag</string>
     <string name="projects_settings_unsubscribe">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
     <string name="projects_settings_delete_project">ລົບໂຄງການ</string>
     <string name="projects_settings_delete_confirm_title">ລົບໂຄງການ</string>
@@ -85,15 +85,15 @@
     <string name="projects_request_merge_dialog_title">ລວມ</string>
     <string name="projects_request_method">ວິທີ</string>
     <string name="projects_request_method_merge">ລວມ</string>
-    <string name="projects_request_field_repository">Repository</string>
-    <string name="projects_request_field_source">Branch ຕົ້ນທາງ</string>
+    <string name="projects_request_field_repository">ບ່ອນເກັບ</string>
+    <string name="projects_request_field_source">ສາຂາຕົ້ນທາງ</string>
     <string name="projects_request_field_title">ຊື່ເລື່ອງ</string>
     <string name="projects_request_field_description">ລາຍລະອຽດ</string>
     <string name="projects_request_field_draft">ສະບັບຮ່າງ</string>
     <string name="projects_request_create_action">ສ້າງ</string>
     <string name="projects_diff_unified">ລວມເປັນໜຶ່ງ</string>
     <string name="projects_diff_split">ແຍກ</string>
-    <string name="projects_diff_empty">ບໍ່ມີ diff</string>
+    <string name="projects_diff_empty">ບໍ່ມີຄວາມແຕກຕ່າງ</string>
     <string name="projects_board_unassigned">ບໍ່ໄດ້ມອບໝາຍ</string>
     <string name="projects_board_new">ໃໝ່</string>
     <string name="projects_board_rename">ປ່ຽນຊື່</string>
@@ -106,7 +106,7 @@
     <string name="projects_design_import">ນຳເຂົ້າການອອກແບບ</string>
     <string name="projects_design_imported">ນຳເຂົ້າການອອກແບບແລ້ວ</string>
     <string name="projects_design_tab_classes">ຄລາສ</string>
-    <string name="projects_design_tab_views">ການເບິ່ງ</string>
+    <string name="projects_design_tab_views">ມຸມມອງ</string>
     <string name="projects_design_import_dialog_title">ນຳເຂົ້າການອອກແບບ</string>
     <string name="projects_design_import_choose_template">ເລືອກແມ່ແບບ</string>
     <string name="projects_design_replace_title">ປ່ຽນແທນການອອກແບບ?</string>
@@ -149,7 +149,7 @@
     <string name="projects_views_type_board">ກະດານ</string>
     <string name="projects_views_type_list">ລາຍຊື່</string>
     <string name="projects_views_direction">ທິດທາງ</string>
-    <string name="projects_views_sort_number">ຕົວເລກ</string>
+    <string name="projects_views_sort_number">ໝາຍເລກ</string>
     <string name="projects_views_sort_created">ສ້າງແລ້ວ</string>
     <string name="projects_views_sort_updated">ອັບເດດແລ້ວ</string>
     <string name="projects_views_sort_rank">ອັນດັບ</string>
@@ -160,7 +160,7 @@
     <string name="projects_comment_send">ສົ່ງ</string>
     <string name="projects_field_position_body">ເນື້ອຫາ</string>
     <string name="projects_sort_field">ຈັດລຽງຕາມ</string>
-    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_comment_remove_attachment">ລຶບໄຟລ໌ແນບ</string>
     <string name="projects_views_sort_by">ຈັດລຽງຕາມ</string>
     <string name="projects_auth_login_failed">ເຂົ້າສູ່ລະບົບລົ້ມເຫລວ</string>
     <string name="projects_views_move_up">ຍ້າຍຂຶ້ນ</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">ຄົ້ນຫາວັດຖຸ</string>
 
     <string name="notification_channel_projects">ການແຈ້ງເຕືອນຂອງໂປຣເຈັກ</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi ໂຄງການ</string>
     <string name="projects_auth_create_identity_failed">ສ້າງຕົວຕົນບໍ່ສຳເລັດ</string>
     <string name="projects_auth_mfa_unsupported">MFA ຍັງບໍ່ຮອງຮັບໃນແອັບມືຖື</string>
     <string name="projects_auth_enter_code_sent">ປ້ອນລະຫັດທີ່ສົ່ງໄປຫາ %1$s</string>
@@ -238,9 +238,9 @@
     <string name="projects_request_view_diff">ເບິ່ງຄວາມແຕກຕ່າງ</string>
     <string name="projects_request_mark_ready">ໝາຍວ່າພ້ອມ</string>
     <string name="projects_request_merge_default_message">ລວມ %1$s ເຂົ້າໃນ %2$s</string>
-    <string name="projects_request_commit_message">ຂໍ້ຄວາມ commit</string>
-    <string name="projects_request_method_squash">Squash</string>
-    <string name="projects_request_method_rebase">Rebase</string>
+    <string name="projects_request_commit_message">ຂໍ້ຄວາມຄອມມິດ</string>
+    <string name="projects_request_method_squash">ລວມຄອມມິດ</string>
+    <string name="projects_request_method_rebase">ຣີເບສ</string>
     <string name="projects_request_create_title">ສ້າງຄຳຂໍລວມ</string>
     <string name="projects_request_field_target">ສາຂາປາຍທາງ</string>
     <string name="projects_diff_title">ຄວາມແຕກຕ່າງ: %1$s -&gt; %2$s</string>
@@ -293,7 +293,7 @@
     <string name="projects_field_min_length">ຄວາມຍາວຕ່ຳສຸດ</string>
     <string name="projects_field_max_length">ຄວາມຍາວສູງສຸດ</string>
     <string name="projects_field_pattern">ຮູບແບບ (regex)</string>
-    <string name="projects_field_rows">ແຖວ (ຄວາມສູງຂອງ textarea)</string>
+    <string name="projects_field_rows">ແຖວ (ຄວາມສູງຂອງກ່ອງຂໍ້ຄວາມ)</string>
     <string name="projects_field_no_options">ບໍ່ມີຕົວເລືອກທີ່ກຳນົດໄວ້</string>
     <string name="projects_field_delete_message">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການລຶບຊ່ອງ \"%1$s\"? ຕົວເລືອກແລະຄ່າທັງໝົດຈະສູນເສຍ.</string>
     <string name="projects_option_color">ສີ</string>
@@ -301,7 +301,7 @@
     <string name="projects_views_empty_subtitle">ສ້າງມຸມມອງກະດານຫຼືລາຍການເພື່ອຈັດກຸ່ມວັດຖຸ</string>
     <string name="projects_views_delete_message">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການລຶບມຸມມອງ \"%1$s\"?</string>
     <string name="projects_views_columns_field">ຊ່ອງຖັນ</string>
-    <string name="projects_views_rows_field">ຊ່ອງແຖວ (swimlanes)</string>
+    <string name="projects_views_rows_field">ຊ່ອງແຖວ (ແຖວແບ່ງກຸ່ມ)</string>
     <string name="projects_views_border_field">ຊ່ອງສີຂອບ</string>
     <string name="projects_views_filter_classes">ກັ່ນຕອງຕາມຄລາສ</string>
     <string name="projects_views_by">ໂດຍ %1$s</string>
@@ -343,8 +343,8 @@
     <string name="projects_access_select_rule">ເລືອກກົດ</string>
     <string name="projects_access_authenticated_desc">ທຸກຄົນທີ່ເຂົ້າສູ່ລະບົບແລ້ວ</string>
     <string name="projects_access_anyone_desc">ລວມທັງຜູ້ໃຊ້ບໍ່ລະບຸຊື່</string>
-    <string name="projects_access_target">ເປົ້າໝາຍ</string>
-    <string name="projects_access_target_hint">ID ຕົວຕົນ, @ກຸ່ມ, * (ທຸກຄົນ), ຫຼື + (ສະມາຊິກ)</string>
+    <string name="projects_access_target">ຜູ້ໃຊ້ ຫຼື ກຸ່ມ</string>
+    <string name="projects_access_target_hint">ID ຕົວຕົນ, @group, * (ທຸກຄົນ), ຫຼື + (ສະມາຊິກ)</string>
     <string name="projects_access_selected">ເລືອກແລ້ວ: %1$s</string>
     <string name="projects_access_role_comment">ຄຳເຫັນ ແລະ ເບິ່ງ</string>
     <string name="projects_access_role_design">ອອກແບບ, ສ້າງ, ແກ້ໄຂ, ໃຫ້ຄຳເຫັນ ແລະ ເບິ່ງ</string>
@@ -380,5 +380,5 @@
     <string name="projects_option_delete_message">ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບຕົວເລືອກ \"%1$s\"?</string>
     <string name="projects_create_object_no_types">ຍັງບໍ່ສາມາດສ້າງປະເພດລາຍການໄດ້. ສ້າງລາຍການແມ່ທີ່ຕ້ອງການກ່ອນ.</string>
     <string name="projects_create_blocked_no_options">ສ້າງບໍ່ໄດ້: %1$s ຈຳເປັນ ແຕ່ບໍ່ມີຕົວເລືອກໃຫ້ເລືອກ. ເພີ່ມຕົວເລືອກໃນການອອກແບບ.</string>
-    <string name="projects_attachment_remove">Remove attachment</string>
+    <string name="projects_attachment_remove">ລຶບໄຟລ໌ແນບ</string>
 </resources>

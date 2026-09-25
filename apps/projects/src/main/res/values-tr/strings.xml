@@ -29,7 +29,7 @@
     <string name="projects_sort_label">Sırala</string>
     <string name="projects_sort_direction">Yön</string>
     <string name="projects_sort_rank">Elle</string>
-    <string name="projects_sort_number">Sayı</string>
+    <string name="projects_sort_number">Numara</string>
     <string name="projects_sort_created">Oluşturuldu</string>
     <string name="projects_sort_updated">Güncellendi</string>
     <string name="projects_create_object_type">Tür</string>
@@ -99,7 +99,7 @@
     <string name="projects_board_rename">Yeniden adlandır</string>
     <string name="projects_board_rename_column">Sütunu yeniden adlandır</string>
     <string name="projects_move_position">Konum</string>
-    <string name="projects_move_position_top">Üst</string>
+    <string name="projects_move_position_top">En üst</string>
     <string name="projects_move_current">Mevcut</string>
     <string name="projects_design_title">Tasarım</string>
     <string name="projects_design_export">Tasarımı dışa aktar</string>
@@ -146,10 +146,10 @@
     <string name="projects_views_edit_dialog_title">Görünümü düzenle</string>
     <string name="projects_views_delete_title">Görünümü sil</string>
     <string name="projects_views_type">Tür</string>
-    <string name="projects_views_type_board">Tahta</string>
+    <string name="projects_views_type_board">Pano</string>
     <string name="projects_views_type_list">Liste</string>
     <string name="projects_views_direction">Yön</string>
-    <string name="projects_views_sort_number">Sayı</string>
+    <string name="projects_views_sort_number">Numara</string>
     <string name="projects_views_sort_created">Oluşturuldu</string>
     <string name="projects_views_sort_updated">Güncellendi</string>
     <string name="projects_views_sort_rank">Sıralama</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Nesneleri ara</string>
 
     <string name="notification_channel_projects">Proje bildirimleri</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Projeler</string>
     <string name="projects_auth_create_identity_failed">Kimlik oluşturulamadı</string>
     <string name="projects_auth_mfa_unsupported">MFA mobil uygulamada henüz desteklenmiyor</string>
     <string name="projects_auth_enter_code_sent">%1$s adresine gönderilen kodu girin</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Bir kural seçin</string>
     <string name="projects_access_authenticated_desc">Oturum açmış olan herkes</string>
     <string name="projects_access_anyone_desc">Anonim kullanıcılar dahil</string>
-    <string name="projects_access_target">Hedef</string>
+    <string name="projects_access_target">Kullanıcı veya grup</string>
     <string name="projects_access_target_hint">Varlık kimliği, @grup, * (herkes) veya + (üyeler)</string>
     <string name="projects_access_selected">Seçilen: %1$s</string>
     <string name="projects_access_role_comment">Yorum yap ve görüntüle</string>

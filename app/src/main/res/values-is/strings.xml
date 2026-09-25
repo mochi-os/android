@@ -9,13 +9,13 @@
     <string name="launcher_people">Mochi Fólk</string>
     <string name="launcher_settings">Mochi Stillingar</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki-síður</string>
     <string name="launcher_chess">Mochi Skák</string>
     <string name="launcher_go">Mochi Go</string>
     <string name="launcher_words">Mochi Orð</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi Markaður</string>
     <string name="launcher_calendars">Mochi Dagatöl</string>
-    <string name="launcher_staff">Mochi Starfsfólk</string>
+    <string name="launcher_staff">Mochi-starfsfólk</string>
 
 
     <string name="app_name">Mochi</string>

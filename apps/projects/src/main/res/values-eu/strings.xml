@@ -158,7 +158,7 @@
     <string name="projects_more">Gehiago</string>
     <string name="projects_request_more">Gehiago</string>
     <string name="projects_comment_send">Bidali</string>
-    <string name="projects_field_position_body">Edukia</string>
+    <string name="projects_field_position_body">Gorputza</string>
     <string name="projects_auth_login_failed">Saio-hasierak huts egin du</string>
     <string name="projects_auth_create_identity_failed">Ezin izan da identitatea sortu</string>
     <string name="projects_auth_mfa_unsupported">MFA ez da oraindik onartzen aplikazio mugikorrean</string>
@@ -182,7 +182,7 @@
     <string name="projects_links_search_placeholder">Bilatu objektuak</string>
 
     <string name="notification_channel_projects">Proiektuen jakinarazpenak</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Proiektuak</string>
     <string name="projects_list_search_placeholder">Bilatu proiektuak</string>
     <string name="projects_list_no_matching">Ez dago bat datorren proiekturik</string>
     <string name="projects_list_empty">Oraindik ez dago proiekturik</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Hautatu arau bat</string>
     <string name="projects_access_authenticated_desc">Saioa hasi duen edonor</string>
     <string name="projects_access_anyone_desc">Erabiltzaile anonimoak barne</string>
-    <string name="projects_access_target">Helburua</string>
+    <string name="projects_access_target">Erabiltzailea edo taldea</string>
     <string name="projects_access_target_hint">Entitate IDa, @taldea, * (denak), edo + (kideak)</string>
     <string name="projects_access_selected">Hautatuta: %1$s</string>
     <string name="projects_access_role_comment">Iruzkindu eta ikusi</string>

@@ -173,7 +173,7 @@
     <string name="wikis_settings_section_identity">Identità</string>
     <string name="wikis_settings_field_name">Nome</string>
     <string name="wikis_settings_field_entity_id">ID entità</string>
-    <string name="wikis_settings_field_fingerprint">Fingerprint</string>
+    <string name="wikis_settings_field_fingerprint">Impronta</string>
     <string name="wikis_settings_name_edit_cd">Modifica nome</string>
     <string name="wikis_settings_name_invalid_char">Il nome non può contenere i caratteri &lt; o &gt;</string>
     <string name="wikis_settings_name_too_long">Il nome deve contenere al massimo 100 caratteri</string>

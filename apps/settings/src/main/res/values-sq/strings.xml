@@ -362,7 +362,7 @@
     <string name="accounts_provider_mcp">Server MCP</string>
     <string name="accounts_provider_unifiedpush">Njoftim push</string>
     <string name="accounts_provider_url">URL e jashtme</string>
-    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_provider_web">Mochi në shfletues</string>
     <string name="accounts_verified">Llogaria u verifikua</string>
     <string name="accounts_verify_invalid">Kod verifikimi i pavlefshëm</string>
     <string name="accounts_verify_sent">Kodi i verifikimit u dërgua</string>
@@ -376,7 +376,7 @@
     <string name="accounts_forget_message">Kjo do ta harrojë pajisjen \"%1$s\" dhe do të ndalojë njoftimet drejt saj.</string>
     <string name="accounts_device_seen">Parë për herë të fundit %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplikacion</string>
-    <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_device_push">%1$s · njoftime push</string>
     <string name="notifprefs_test_partial">Testi u dërgua te %1$d nga %2$d destinacione</string>
     <string name="notifprefs_test_none">Asnjë destinacion i konfiguruar</string>
     <string name="notifprefs_transport_fcm">Push Android</string>

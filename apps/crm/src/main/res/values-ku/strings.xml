@@ -45,7 +45,7 @@
     <string name="crm_object_tab_activity">Çalakî</string>
     <string name="crm_parent_label">Dêûbav</string>
     <string name="crm_parent_search_placeholder">Lêger</string>
-    <string name="crm_links_title">Lînka</string>
+    <string name="crm_links_title">Girêdan</string>
     <string name="crm_links_add">Girêdan zêde bike</string>
     <string name="crm_links_section_blocks">Blok</string>
     <string name="crm_links_section_blocked_by">Hat astengkirin ji aliyê</string>
@@ -78,7 +78,7 @@
     <string name="crm_design_or_upload_json">An jî pelekê bar bike</string>
     <string name="crm_design_upload_json">Pelê .json bar bike</string>
     <string name="crm_design_tab_classes">Pol</string>
-    <string name="crm_design_tab_views">Dîtin</string>
+    <string name="crm_design_tab_views">Dîmen</string>
     <string name="crm_design_import_dialog_title">Sêwiranê bîne</string>
     <string name="crm_design_import_choose_template">Şabloneke hilbijêre</string>
     <string name="crm_design_replace_title">Dîzaynê biguhere?</string>
@@ -117,7 +117,7 @@
     <string name="crm_views_edit_dialog_title">Dîmenê sererast bike</string>
     <string name="crm_views_delete_title">Dîtinê jê bibe</string>
     <string name="crm_views_type">Cure</string>
-    <string name="crm_views_type_board">Tabloya</string>
+    <string name="crm_views_type_board">Tablo</string>
     <string name="crm_views_type_list">Lîste</string>
     <string name="crm_views_direction">Arasteyî</string>
     <string name="crm_views_sort_created">Hat çêkirin</string>
@@ -128,7 +128,7 @@
     <string name="crm_comment_send">Bişîne</string>
     <string name="crm_field_position_body">Naverok</string>
     <string name="crm_sort_field">Rêz bike li gor</string>
-    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_comment_remove_attachment">Pêvekê rake</string>
     <string name="crm_views_sort_by">Rêz bike li gor</string>
     <string name="crm_views_move_up">Bibe jor</string>
     <string name="crm_class_move_up">Bibe jor</string>
@@ -241,7 +241,7 @@
     <string name="crm_access_no_groups">Tu kom berdest nîn in</string>
     <string name="crm_access_tab_users">Bikarhêner</string>
     <string name="crm_access_tab_groups">Kom</string>
-    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_attachment_remove">Pêvekê rake</string>
     <string name="crm_board_add_column">Stûn zêde bike</string>
     <string name="crm_settings_entity_id">Nasnameya mîhengehê</string>
     <string name="crm_settings_fingerprint">Tilîya destan</string>

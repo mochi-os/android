@@ -24,13 +24,13 @@
     <string name="forums_settings">Indstillinger</string>
     <string name="forums_load_more">Indlæs flere</string>
     <string name="forums_sort_label">Sortér</string>
-    <string name="forums_sort_new">Ny</string>
+    <string name="forums_sort_new">Nyeste</string>
     <string name="forums_sort_hot">Populære</string>
     <string name="forums_sort_top">Top</string>
     <string name="forums_sort_interests">Interesser</string>
     <string name="forums_post_title_field">Titel</string>
     <string name="forums_post_attach">Vedhæft filer</string>
-    <string name="forums_post_create_action">Indlæg</string>
+    <string name="forums_post_create_action">Slå op</string>
     <string name="forums_post_edit">Redigér indlæg</string>
     <string name="forums_post_edit_title">Redigér indlæg</string>
     <string name="forums_post_edit_title_field">Titel</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Medlemmer</string>
     <string name="forums_tab_banner">Banner</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Mål</string>
+    <string name="forums_access_target">Bruger eller gruppe</string>
     <string name="forums_access_level_view">Vis</string>
     <string name="forums_access_level_vote">Stem</string>
-    <string name="forums_access_level_comment">Kommentar</string>
-    <string name="forums_access_level_post">Indlæg</string>
+    <string name="forums_access_level_comment">Kommentér</string>
+    <string name="forums_access_level_post">Slå op</string>
     <string name="forums_access_level_none">Ingen</string>
     <string name="forums_members_empty">Ingen medlemmer</string>
     <string name="forums_banner_dismiss">Afvis banner</string>
-    <string name="forums_ai_mode_tag">Tag</string>
+    <string name="forums_ai_mode_tag">Tilføj tags</string>
     <string name="forums_ai_account_default">Standardkonto</string>
     <string name="forums_ai_prompt_reset">Nulstil til standard</string>
     <string name="forums_settings_unsubscribe">Afmeld</string>
@@ -102,7 +102,7 @@
     <string name="forums_report_reason_harassment">Chikane</string>
     <string name="forums_report_reason_violence">Vold</string>
     <string name="forums_report_reason_misinformation">Misinformation</string>
-    <string name="forums_report_reason_offtopic">Off-topic</string>
+    <string name="forums_report_reason_offtopic">Uden for emnet</string>
     <string name="forums_report_reason_other">Andet</string>
     <string name="forums_post_default_author">Bruger</string>
     <string name="forums_comments">Kommentarer</string>
@@ -124,7 +124,7 @@
     <string name="forums_comment_send">Send</string>
 
     <string name="notification_channel_forums">Forum-notifikationer</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Fora</string>
     <string name="forums_auth_login_failed">Login mislykkedes</string>
     <string name="forums_auth_create_identity_failed">Kunne ikke oprette identitet</string>
     <string name="forums_auth_mfa_unsupported">MFA understøttes endnu ikke i mobilappen</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">Manuel</string>
     <string name="forums_access_search_users">Søg efter brugere</string>
     <string name="forums_access_no_groups">Ingen grupper tilgængelige</string>
-    <string name="forums_saved_title">Gemt</string>
+    <string name="forums_saved_title">Gemte</string>
     <string name="forums_saved_save">Gem til senere</string>
     <string name="forums_saved_remove">Fjern fra gemte</string>
     <string name="forums_saved_clear_all">Ryd alle</string>
@@ -328,7 +328,7 @@
     <string name="forums_moderation_reason_hate">Hadefuld tale</string>
     <string name="forums_moderation_reason_violence">Vold</string>
     <string name="forums_moderation_reason_misinformation">Misinformation</string>
-    <string name="forums_moderation_reason_offtopic">Off-topic</string>
+    <string name="forums_moderation_reason_offtopic">Uden for emnet</string>
     <string name="forums_moderation_reason_other">Andet</string>
     <string name="forums_block">Bloker</string>
     <string name="forums_removed_from_forum">Du blev fjernet fra dette forum</string>

@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Hanga ammaatti maxxansi hin jiru</string>
     <string name="feeds_sort_label">Sirreessi</string>
     <string name="feeds_sort_interests">Fedhota</string>
-    <string name="feeds_sort_new">Haaraa</string>
+    <string name="feeds_sort_new">Haaraa dura</string>
     <string name="feeds_sort_hot">Ho\'aa</string>
-    <string name="feeds_sort_top">Ol</string>
+    <string name="feeds_sort_top">Kan caalan</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Maxxansa</string>
     <string name="feeds_image_preview">Dursanii ilaaluu</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Deebii haquu</string>
     <string name="feeds_edit_post">Maxxansa sirreessi</string>
     <string name="feeds_save_label">Olkaa\'i</string>
-    <string name="feeds_post_action">Maxxansa</string>
+    <string name="feeds_post_action">Maxxansi</string>
     <string name="feeds_feed_label">Feed</string>
     <string name="feeds_add_files">Faayilii dabali</string>
     <string name="feeds_restore">Deebisi</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Ba\'i</string>
     <string name="feeds_ai_account_default">Akkaawuntii idilee</string>
     <string name="feeds_ai_mode_off">Cufame</string>
-    <string name="feeds_ai_mode_tag">Tag</string>
+    <string name="feeds_ai_mode_tag">Mallatteessi</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + dachaa haqi</string>
     <string name="feeds_feed_not_found">Feed hin argamne</string>
     <string name="feeds_post_not_found">Maxxansi hin argamne</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Fedha hir\'isame</string>
     <string name="feeds_interest_removed">Fedha haqame</string>
     <string name="feeds_interest_failed">Fedha sirreessuu hin dandeenye</string>
-    <string name="feeds_saved_title">Olkaa\'ame</string>
-    <string name="feeds_saved_menu">Olkaa\'ame</string>
+    <string name="feeds_saved_title">Kan olkaa\'aman</string>
+    <string name="feeds_saved_menu">Kan olkaa\'aman</string>
     <string name="feeds_saved_save">Booda eegoof olkaa\'i</string>
     <string name="feeds_saved_remove">Kan olkaa\'aman irraa balleessi</string>
     <string name="feeds_saved_clear_all">Hunda cilliisi</string>

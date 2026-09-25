@@ -10,7 +10,7 @@
     <string name="calendars_delete">Padam</string>
     <string name="calendars_previous">Sebelumnya</string>
     <string name="calendars_next">Seterusnya</string>
-    <string name="calendars_view">Lihat</string>
+    <string name="calendars_view">Paparan</string>
     <string name="calendars_view_list">Senarai</string>
     <string name="calendars_list_search">Cari</string>
     <string name="calendars_event_untitled">Tiada tajuk</string>
@@ -166,7 +166,7 @@
     <string name="calendars_subscribe_server_url">Alamat pelayan</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Kalendar Google</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Akaun Google belum didayakan pada pelayan ini. Dayakannya di Tetapan, Tetapan sistem.</string>
     <string name="calendars_subscribe_google_connect">Anda belum menyambungkan akaun Google.</string>

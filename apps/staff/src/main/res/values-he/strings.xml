@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">צוות Mochi</string>
+    <string name="launcher_staff">Mochi צוות</string>
     <string name="staff_accounts_action_ban_title">חסום חשבון</string>
     <string name="staff_accounts_action_suspend_title">השעה חשבון</string>
     <string name="staff_accounts_action_unban_title">ביטול חסימה</string>
@@ -93,9 +93,9 @@
     <string name="staff_audit_action_listing_updated">המודעה נערכה</string>
     <string name="staff_audit_action_listing_warning">הוצאה אזהרה</string>
     <string name="staff_audit_action_order_cancelled">בוטל</string>
-    <string name="staff_audit_action_order_chargeback">התקבל Chargeback</string>
-    <string name="staff_audit_action_order_chargeback_lost">ה-Chargeback התקבל</string>
-    <string name="staff_audit_action_order_chargeback_won">ה-Chargeback נדחה</string>
+    <string name="staff_audit_action_order_chargeback">התקבל ביטול חיוב</string>
+    <string name="staff_audit_action_order_chargeback_lost">ביטול החיוב התקבל</string>
+    <string name="staff_audit_action_order_chargeback_won">ביטול החיוב נדחה</string>
     <string name="staff_audit_action_order_completed">הושלם</string>
     <string name="staff_audit_action_order_created">ההזמנה בוצעה</string>
     <string name="staff_audit_action_order_paid">התשלום התקבל</string>
@@ -117,9 +117,9 @@
     <string name="staff_audit_action_subscription_active">הוחזר לפעיל</string>
     <string name="staff_audit_action_subscription_cancel_scheduled">ביטול תוזמן</string>
     <string name="staff_audit_action_subscription_cancelled">בוטל</string>
-    <string name="staff_audit_action_subscription_chargeback">התקבל Chargeback</string>
-    <string name="staff_audit_action_subscription_chargeback_lost">ה-Chargeback התקבל</string>
-    <string name="staff_audit_action_subscription_chargeback_won">ה-Chargeback נדחה</string>
+    <string name="staff_audit_action_subscription_chargeback">התקבל ביטול חיוב</string>
+    <string name="staff_audit_action_subscription_chargeback_lost">ביטול החיוב התקבל</string>
+    <string name="staff_audit_action_subscription_chargeback_won">ביטול החיוב נדחה</string>
     <string name="staff_audit_action_subscription_created">המנוי נוצר</string>
     <string name="staff_audit_action_subscription_past_due">התשלום בפיגור</string>
     <string name="staff_audit_action_subscription_paused">מושהה</string>
@@ -162,7 +162,7 @@
     <string name="staff_categories_type_digital">דיגיטלי</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">פיזי</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">צוות Mochi</string>
     <string name="staff_config_field_auto_approve">סף אישור אוטומטי</string>
     <string name="staff_config_field_hold">סף החזקה</string>
     <string name="staff_config_field_platform_fee">עמלת פלטפורמה</string>
@@ -230,7 +230,7 @@
     <string name="staff_disputes_filter_status_label">סטטוס</string>
     <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">פרטי הקונה</string>
-    <string name="staff_disputes_meta_chargeback_fee">עמלת Chargeback</string>
+    <string name="staff_disputes_meta_chargeback_fee">עמלת ביטול חיוב</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">נשמרו על ידי Stripe</string>
     <string name="staff_disputes_meta_chargeback_fee_partial">הוחזרו %1$s</string>
     <string name="staff_disputes_meta_chargeback_fee_refunded">הוחזרו</string>
@@ -259,7 +259,7 @@
     <string name="staff_disputes_resolve">פתור</string>
     <string name="staff_disputes_resolved_toast">המחלוקת נפתרה</string>
     <string name="staff_disputes_resolving">פתרון…</string>
-    <string name="staff_disputes_review">ביקורת</string>
+    <string name="staff_disputes_review">בדוק</string>
     <string name="staff_disputes_status_escalated">הוסלם</string>
     <string name="staff_disputes_status_open">פתוח</string>
     <string name="staff_disputes_status_resolved_buyer">נפתר (קונה)</string>
@@ -303,7 +303,7 @@
     <string name="staff_listings_moderation_hold">החזק</string>
     <string name="staff_listings_moderation_manual">ידני</string>
     <string name="staff_listings_moderation_rejected">נדחה</string>
-    <string name="staff_listings_moderation_review">ביקורת</string>
+    <string name="staff_listings_moderation_review">ממתין לבדיקה</string>
     <string name="staff_listings_moderation_soft_approved">אושר רך</string>
     <string name="staff_listings_notes_label">הערות</string>
     <string name="staff_listings_price_placeholder">—</string>
@@ -341,7 +341,7 @@
     <string name="staff_reports_cancel">ביטול</string>
     <string name="staff_reports_close">סגור</string>
     <string name="staff_reports_dialog_title_action">בצע פעולה על הדיווח</string>
-    <string name="staff_reports_dialog_title_view">דווח</string>
+    <string name="staff_reports_dialog_title_view">דיווח</string>
     <string name="staff_reports_empty">אין דיווחים</string>
     <string name="staff_reports_filter_status_label">סטטוס</string>
     <string name="staff_reports_filter_type_label">סוג</string>
@@ -351,7 +351,7 @@
     <string name="staff_reports_meta_reason">סיבה</string>
     <string name="staff_reports_meta_reporter">מדווח</string>
     <string name="staff_reports_meta_seller">מוכר</string>
-    <string name="staff_reports_meta_target">יעד</string>
+    <string name="staff_reports_meta_target">מושא הדיווח</string>
     <string name="staff_reports_meta_type">סוג</string>
     <string name="staff_reports_notes_label">הערות</string>
     <string name="staff_reports_reason_counterfeit">מזויף או גנוב</string>
@@ -424,7 +424,7 @@
     <string name="staff_status_resolved_buyer">נפתר (קונה)</string>
     <string name="staff_status_resolved_seller">נפתר (מוכר)</string>
     <string name="staff_status_responded">הושב</string>
-    <string name="staff_status_review">ביקורת</string>
+    <string name="staff_status_review">ממתין לבדיקה</string>
     <string name="staff_status_reviewed">נבדק</string>
     <string name="staff_status_reviewing">בבדיקה</string>
     <string name="staff_status_soft_approved">אושר רך</string>

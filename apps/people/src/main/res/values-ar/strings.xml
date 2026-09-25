@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">فتح التنقل</string>
     <string name="people_person_state_friend">الأصدقاء</string>
     <string name="people_person_state_self">أنت</string>
-    <string name="people_person_message">رسالة</string>
+    <string name="people_person_message">مراسلة</string>
     <string name="people_person_accept">قبول</string>
     <string name="people_person_decline">رفض</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">قبول الكل</string>
     <string name="people_invitations_decline_all">رفض الكل</string>
     <string name="people_invitations_cancel_all">إلغاء الكل</string>
+    <string name="people_invitations_cancel">إلغاء</string>
     <string name="people_invitations_all_accepted">تم قبول جميع الدعوات</string>
     <string name="people_invitations_all_declined">تم رفض جميع الدعوات</string>
     <string name="people_invitations_all_cancelled">تم إلغاء جميع الدعوات</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">بحث…</string>
     <string name="people_contacts_invited">تمت الدعوة</string>
     <string name="people_contacts_accept">قبول</string>
-    <string name="people_contacts_message">رسالة</string>
+    <string name="people_contacts_message">مراسلة</string>
     <string name="people_contacts_no_people_found">لم يتم العثور على أشخاص</string>
     <string name="people_contacts_try_adjusting">حاول تعديل البحث</string>
     <string name="people_contact_section_address">العنوان</string>

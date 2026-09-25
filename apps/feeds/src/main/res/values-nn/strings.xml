@@ -15,7 +15,7 @@
     <string name="feeds_no_posts_yet">Ingen innlegg enno</string>
     <string name="feeds_sort_label">Sorter</string>
     <string name="feeds_sort_interests">Interesser</string>
-    <string name="feeds_sort_new">Ny</string>
+    <string name="feeds_sort_new">Nyaste</string>
     <string name="feeds_sort_hot">Het</string>
     <string name="feeds_sort_top">Topp</string>
     <string name="feeds_sort_ai">KI</string>
@@ -30,7 +30,7 @@
     <string name="feeds_cancel_reply">Avbryt svar</string>
     <string name="feeds_edit_post">Rediger innlegg</string>
     <string name="feeds_save_label">Lagre</string>
-    <string name="feeds_post_action">Innlegg</string>
+    <string name="feeds_post_action">Publiser</string>
     <string name="feeds_feed_label">Straum</string>
     <string name="feeds_add_files">Legg til filer</string>
     <string name="feeds_restore">Gjenopprett</string>
@@ -62,7 +62,7 @@
     <string name="feeds_logout">Logg ut</string>
     <string name="feeds_ai_account_default">Standardkonto</string>
     <string name="feeds_ai_mode_off">Deaktivert</string>
-    <string name="feeds_ai_mode_tag">Etikett</string>
+    <string name="feeds_ai_mode_tag">Etiketter</string>
     <string name="feeds_ai_mode_tag_deduplicate">Etiketter + dedupliser</string>
     <string name="feeds_feed_not_found">Fann ikkje straumen</string>
     <string name="feeds_post_not_found">Innlegg ikkje funne</string>

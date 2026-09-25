@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Naviqasiyanı aç</string>
     <string name="people_person_state_friend">Dostlar</string>
     <string name="people_person_state_self">Siz</string>
-    <string name="people_person_message">Mesaj</string>
+    <string name="people_person_message">Mesaj göndər</string>
     <string name="people_person_accept">Qəbul et</string>
     <string name="people_person_decline">Rədd et</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Hamısını qəbul et</string>
     <string name="people_invitations_decline_all">Hamısını rədd et</string>
     <string name="people_invitations_cancel_all">Hamısını ləğv et</string>
+    <string name="people_invitations_cancel">Ləğv et</string>
     <string name="people_invitations_all_accepted">Bütün dəvətlər qəbul edildi</string>
     <string name="people_invitations_all_declined">Bütün dəvətlər rədd edildi</string>
     <string name="people_invitations_all_cancelled">Bütün dəvətlər ləğv edildi</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Axtar…</string>
     <string name="people_contacts_invited">Dəvət edilib</string>
     <string name="people_contacts_accept">Qəbul et</string>
-    <string name="people_contacts_message">Mesaj</string>
+    <string name="people_contacts_message">Mesaj göndər</string>
     <string name="people_contacts_no_people_found">İnsan tapılmadı</string>
     <string name="people_contacts_try_adjusting">Axtarış terminlərinizi tənzimləməyə cəhd edin</string>
     <string name="people_contact_section_address">Ünvan</string>

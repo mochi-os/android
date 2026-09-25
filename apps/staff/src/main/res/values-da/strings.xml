@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">Mochi-personale</string>
+    <string name="launcher_staff">Mochi-personale</string>
     <string name="staff_accounts_action_ban_title">Bortvis konto</string>
     <string name="staff_accounts_action_suspend_title">Suspender konto</string>
     <string name="staff_accounts_action_unban_title">Ophæv forbud</string>
@@ -162,7 +162,7 @@
     <string name="staff_categories_type_digital">Digital</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">Fysisk</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">Mochi-personale</string>
     <string name="staff_config_field_auto_approve">Tærskel for autogodkendelse</string>
     <string name="staff_config_field_hold">Tærskel for tilbageholdelse</string>
     <string name="staff_config_field_platform_fee">Platformsgebyr</string>
@@ -259,9 +259,9 @@
     <string name="staff_disputes_resolve">Løs</string>
     <string name="staff_disputes_resolved_toast">Tvist løst</string>
     <string name="staff_disputes_resolving">Løser…</string>
-    <string name="staff_disputes_review">Anmeldelse</string>
+    <string name="staff_disputes_review">Gennemgå</string>
     <string name="staff_disputes_status_escalated">Eskaleret</string>
-    <string name="staff_disputes_status_open">Åbn</string>
+    <string name="staff_disputes_status_open">Åben</string>
     <string name="staff_disputes_status_resolved_buyer">Løst (køber)</string>
     <string name="staff_disputes_status_resolved_seller">Løst (sælger)</string>
     <string name="staff_disputes_status_responded">Besvaret</string>
@@ -300,10 +300,10 @@
     <string name="staff_listings_filter_moderation_label">Moderation</string>
     <string name="staff_listings_filter_status_label">Status</string>
     <string name="staff_listings_moderation_auto_approved">Automatisk godkendt</string>
-    <string name="staff_listings_moderation_hold">Hold</string>
+    <string name="staff_listings_moderation_hold">I bero</string>
     <string name="staff_listings_moderation_manual">Manuel</string>
     <string name="staff_listings_moderation_rejected">Afvist</string>
-    <string name="staff_listings_moderation_review">Anmeldelse</string>
+    <string name="staff_listings_moderation_review">Til gennemgang</string>
     <string name="staff_listings_moderation_soft_approved">Blødt godkendt</string>
     <string name="staff_listings_notes_label">Noter</string>
     <string name="staff_listings_price_placeholder">—</string>
@@ -341,7 +341,7 @@
     <string name="staff_reports_cancel">Annuller</string>
     <string name="staff_reports_close">Luk</string>
     <string name="staff_reports_dialog_title_action">Udfør handling på rapport</string>
-    <string name="staff_reports_dialog_title_view">Rapportér</string>
+    <string name="staff_reports_dialog_title_view">Rapport</string>
     <string name="staff_reports_empty">Ingen rapporter</string>
     <string name="staff_reports_filter_status_label">Status</string>
     <string name="staff_reports_filter_type_label">Type</string>
@@ -351,7 +351,7 @@
     <string name="staff_reports_meta_reason">Årsag</string>
     <string name="staff_reports_meta_reporter">Anmelder</string>
     <string name="staff_reports_meta_seller">Sælger</string>
-    <string name="staff_reports_meta_target">Mål</string>
+    <string name="staff_reports_meta_target">Rapporteret element</string>
     <string name="staff_reports_meta_type">Type</string>
     <string name="staff_reports_notes_label">Noter</string>
     <string name="staff_reports_reason_counterfeit">Forfalsket eller stjålet</string>
@@ -413,10 +413,10 @@
     <string name="staff_status_escalated">Eskaleret</string>
     <string name="staff_status_expired">Udløbet</string>
     <string name="staff_status_hidden">Skjult</string>
-    <string name="staff_status_hold">Hold</string>
+    <string name="staff_status_hold">I bero</string>
     <string name="staff_status_manual">Manuel</string>
     <string name="staff_status_moderator">Moderator</string>
-    <string name="staff_status_open">Åbn</string>
+    <string name="staff_status_open">Åben</string>
     <string name="staff_status_pending">Afventer</string>
     <string name="staff_status_published">Udgivet</string>
     <string name="staff_status_rejected">Afvist</string>
@@ -424,7 +424,7 @@
     <string name="staff_status_resolved_buyer">Løst (køber)</string>
     <string name="staff_status_resolved_seller">Løst (sælger)</string>
     <string name="staff_status_responded">Besvaret</string>
-    <string name="staff_status_review">Anmeldelse</string>
+    <string name="staff_status_review">Til gennemgang</string>
     <string name="staff_status_reviewed">Gennemgået</string>
     <string name="staff_status_reviewing">Gennemgår</string>
     <string name="staff_status_soft_approved">Blødt godkendt</string>

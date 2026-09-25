@@ -32,7 +32,7 @@
     <string name="crm_settings_tab_access">Дастрасӣ</string>
     <string name="crm_settings_tab_people">Шахсон</string>
     <string name="crm_option_icon">Нишона</string>
-    <string name="crm_option_icon_placeholder">мисол барои. Check, Star, Flag</string>
+    <string name="crm_option_icon_placeholder">масалан, Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Аз обуна баромадан</string>
     <string name="crm_settings_delete_crm">Нест кардани лоиҳа</string>
     <string name="crm_settings_delete_confirm_title">Нест кардани CRM</string>
@@ -78,7 +78,7 @@
     <string name="crm_design_or_upload_json">Ё файл бор кунед</string>
     <string name="crm_design_upload_json">Бор кардани файли .json</string>
     <string name="crm_design_tab_classes">Синфҳо</string>
-    <string name="crm_design_tab_views">Назарҳо</string>
+    <string name="crm_design_tab_views">Намудҳо</string>
     <string name="crm_design_import_dialog_title">Воридкунии тарроҳӣ</string>
     <string name="crm_design_import_choose_template">Шаблон интихоб кунед</string>
     <string name="crm_design_replace_title">Тарҳро иваз кардан?</string>
@@ -94,7 +94,7 @@
     <string name="crm_class_delete">Нест кардани синф</string>
     <string name="crm_class_delete_title">Нест кардани синф</string>
     <string name="crm_field_type_text">Матн</string>
-    <string name="crm_field_type_number">Рақам</string>
+    <string name="crm_field_type_number">Адад</string>
     <string name="crm_field_type_user">Корбар</string>
     <string name="crm_field_type_date">Сана</string>
     <string name="crm_field_type_checklist">Рӯйхат</string>
@@ -126,9 +126,9 @@
     <string name="crm_not_found">Лоиҳа ёфт нашуд</string>
     <string name="crm_more">Бештар</string>
     <string name="crm_comment_send">Фиристодан</string>
-    <string name="crm_field_position_body">Матн</string>
+    <string name="crm_field_position_body">Қисми асосӣ</string>
     <string name="crm_sort_field">Мураттаб кардан</string>
-    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_comment_remove_attachment">Хориҷ кардани замима</string>
     <string name="crm_views_sort_by">Мураттаб кардан</string>
     <string name="crm_views_move_up">Боло баровардан</string>
     <string name="crm_class_move_up">Боло баровардан</string>
@@ -241,7 +241,7 @@
     <string name="crm_access_no_groups">Ягон гурӯҳ дастрас нест</string>
     <string name="crm_access_tab_users">Корбарон</string>
     <string name="crm_access_tab_groups">Гурӯҳҳо</string>
-    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_attachment_remove">Хориҷ кардани замима</string>
     <string name="crm_board_add_column">Иловаи сутун</string>
     <string name="crm_settings_entity_id">ID-и объект</string>
     <string name="crm_settings_fingerprint">Нақши ангушт</string>

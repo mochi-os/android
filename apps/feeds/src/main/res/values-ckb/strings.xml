@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="feeds_title">Feedەکان</string>
+    <string name="feeds_title">فیدەکان</string>
     <string name="feeds_find_feeds">دۆزینەوەی Feedەکان</string>
     <string name="feeds_create_feed">دروستکردنی فید</string>
     <string name="feeds_new_post">پۆستی نوێ</string>
@@ -8,15 +8,15 @@
     <string name="feeds_name">ناو</string>
     <string name="feeds_create">دروستکردن</string>
     <string name="feeds_no_feeds_found">هیچ فیدێک نەدۆزرایەوە</string>
-    <string name="feeds_feed_title_default">Feed</string>
+    <string name="feeds_feed_title_default">فید</string>
     <string name="feeds_mark_all_read">نیشانەکردنی هەمووان وەک خوێندراوە</string>
     <string name="feeds_settings">ڕێکخستنەکان</string>
     <string name="feeds_no_posts_yet">هێشتا هیچ پۆستێک نییە</string>
     <string name="feeds_sort_label">ڕیزکردن</string>
     <string name="feeds_sort_interests">ئارەزووەکان</string>
-    <string name="feeds_sort_new">نوێ</string>
+    <string name="feeds_sort_new">نوێترین</string>
     <string name="feeds_sort_hot">گەرم</string>
-    <string name="feeds_sort_top">سەرەوە</string>
+    <string name="feeds_sort_top">باشترین</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">پۆست</string>
     <string name="feeds_image_preview">پێشبینین</string>
@@ -29,8 +29,8 @@
     <string name="feeds_cancel_reply">هەڵوەشاندنەوەی وەڵام</string>
     <string name="feeds_edit_post">دەستکاری پۆست</string>
     <string name="feeds_save_label">پاشەکەوتکردن</string>
-    <string name="feeds_post_action">پۆست</string>
-    <string name="feeds_feed_label">Feed</string>
+    <string name="feeds_post_action">بڵاوکردنەوە</string>
+    <string name="feeds_feed_label">فید</string>
     <string name="feeds_add_files">زیادکردنی پەڕگە</string>
     <string name="feeds_restore">گەڕاندنەوە</string>
     <string name="feeds_check_in">تۆمارکردنی هاتن</string>
@@ -40,7 +40,7 @@
     <string name="feeds_tab_access">دەستڕاگەیشتن</string>
     <string name="feeds_tab_members">ئەندامەکان</string>
     <string name="feeds_tab_ai">AI</string>
-    <string name="feeds_feed_name">ناوی Feed</string>
+    <string name="feeds_feed_name">ناوی فید</string>
     <string name="feeds_save_name">پاشەکەوتکردنی ناو</string>
     <string name="feeds_banner">بانەر</string>
     <string name="feeds_banner_description">بانەری markdownی ئیختیاری کە لە سەرەوەی فیدەکەت پیشان دەدرێت.</string>
@@ -55,7 +55,7 @@
     <string name="feeds_source_url">URL</string>
     <string name="feeds_source_type">جۆر</string>
     <string name="feeds_source_type_rss">RSS</string>
-    <string name="feeds_source_type_feed_posts">Feedـی Mochi</string>
+    <string name="feeds_source_type_feed_posts">فیدی Mochi</string>
     <string name="feeds_source_type_feed_memories">یادەوەرییەکان</string>
     <string name="feeds_remove_source">لابردنی سەرچاوە</string>
     <string name="feeds_suggested_credibility_accept">وەرگرتن</string>
@@ -63,13 +63,13 @@
     <string name="feeds_logout">دەرچوون</string>
     <string name="feeds_ai_account_default">هەژماری بنەڕەت</string>
     <string name="feeds_ai_mode_off">ناچالاک</string>
-    <string name="feeds_ai_mode_tag">تاگ</string>
+    <string name="feeds_ai_mode_tag">تاگکردن</string>
     <string name="feeds_ai_mode_tag_deduplicate">تاگ + لابردنی دووبارە</string>
-    <string name="feeds_feed_not_found">Feed نەدۆزرایەوە</string>
+    <string name="feeds_feed_not_found">فید نەدۆزرایەوە</string>
     <string name="feeds_post_not_found">پۆست نەدۆزرایەوە</string>
     <string name="feeds_post_select_feed">تکایە خوارچێک هەڵبژێرە</string>
     <string name="feeds_post_empty_content">تکایە دەقیک بنوسە یان پەڕگەیەک پێوە بکە</string>
-    <string name="feeds_settings_feed_renamed">ناوی Feed گۆڕدرا</string>
+    <string name="feeds_settings_feed_renamed">ناوی فید گۆڕدرا</string>
     <string name="feeds_settings_banner_saved">بانەڕ پاشکەوتەکرا</string>
     <string name="feeds_settings_source_added">سەرچاوە زیادکرا</string>
     <string name="feeds_settings_source_updated">سەرچاوە نوێکرایەوە</string>
@@ -131,8 +131,8 @@
     <string name="feeds_interest_reduced">ئارەزوو کەمکرایەوە</string>
     <string name="feeds_interest_removed">ئارەزوو لابرا</string>
     <string name="feeds_interest_failed">ڕێکخستنی ئارەزوو سەرکەوتوو نەبوو</string>
-    <string name="feeds_saved_title">پاشەکەوت کرا</string>
-    <string name="feeds_saved_menu">پاشەکەوت کرا</string>
+    <string name="feeds_saved_title">پاشەکەوتکراوەکان</string>
+    <string name="feeds_saved_menu">پاشەکەوتکراوەکان</string>
     <string name="feeds_saved_save">پاشەکەوت بۆ دواتر</string>
     <string name="feeds_saved_remove">لابردن لە پاشەکەوتکراوەکان</string>
     <string name="feeds_saved_clear_all">پاککردنەوەی هەموو</string>
@@ -161,7 +161,7 @@
     <string name="feeds_permission_deny">ڕەتکردنەوە</string>
     <string name="feeds_rss_feed">فیدی RSS</string>
     <string name="feeds_settings_field_entity_id">ناسنامەی ئەنتیتی</string>
-    <string name="feeds_settings_field_fingerprint">Fingerprint</string>
+    <string name="feeds_settings_field_fingerprint">پەنجەمۆر</string>
     <string name="feeds_settings_field_server">ڕاژەکار</string>
     <string name="feeds_settings_name_edit_cd">دەستکاری ناو</string>
     <string name="feeds_settings_section_identity">ناسنامە</string>
@@ -188,7 +188,7 @@
     <string name="feeds_source_last_checked">دوایین پشکنین %1$s</string>
     <string name="feeds_settings_unsubscribe_section">بەشداری لە فید هەڵبوەشێنەوە</string>
     <string name="feeds_source_transform_hint">وەربگێڕە بۆ ئینگلیزی، و وەک خاڵی بچووک پیشانبدە.</string>
-    <string name="feeds_source_url_hint_feed">ناسنامەی ئەنتیتی یان فینگەرپرینتی Feed</string>
+    <string name="feeds_source_url_hint_feed">ناسنامەی ئەنتیتی یان فینگەرپرینتی فید</string>
     <string name="feeds_source_credibility_label">متمانە</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d کاتژمێر</item>

@@ -172,7 +172,7 @@
     <string name="projects_links_search_placeholder">Pesquisar objetos</string>
 
     <string name="notification_channel_projects">Notificações de projetos</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Projetos</string>
     <string name="projects_auth_create_identity_failed">Falha ao criar identidade</string>
     <string name="projects_auth_mfa_unsupported">MFA ainda não é compatível no aplicativo móvel</string>
     <string name="projects_auth_enter_code_sent">Digite o código enviado para %1$s</string>
@@ -339,7 +339,7 @@
     <string name="projects_access_select_rule">Selecione uma regra</string>
     <string name="projects_access_authenticated_desc">Qualquer pessoa conectada</string>
     <string name="projects_access_anyone_desc">Incluindo usuários anônimos</string>
-    <string name="projects_access_target">Destino</string>
+    <string name="projects_access_target">Usuário ou grupo</string>
     <string name="projects_access_target_hint">ID da entidade, @grupo, * (todos) ou + (membros)</string>
     <string name="projects_access_selected">Selecionado: %1$s</string>
     <string name="projects_access_role_comment">Comentar e visualizar</string>

@@ -38,7 +38,7 @@
     <string name="access_add_rule">Дүрэм нэмэх</string>
     <string name="access_owner">Эзэмшигч</string>
     <string name="access_revoke">Цуцлах</string>
-    <string name="access_level_comment">Сэтгэгдэл</string>
+    <string name="access_level_comment">Сэтгэгдэл бичих</string>
     <string name="access_level_view">Үзэх</string>
     <string name="access_level_none">Алга</string>
     <string name="reaction_like">Таалагдсан</string>
@@ -96,7 +96,7 @@
     <string name="settings_number_format">Тооны формат</string>
     <string name="settings_units">Нэгж</string>
     <string name="settings_units_metric">Метрик</string>
-    <string name="settings_units_imperial">Imperial</string>
+    <string name="settings_units_imperial">Империал</string>
     <string name="settings_time_zone">Цагийн бүс</string>
     <string name="settings_reset_to_defaults">Анхдагчид буцаах</string>
     <string name="settings_reset_confirm_title">Тохиргоог сэргээх үү?</string>
@@ -145,7 +145,7 @@
     <string name="auth_passkey">Нэвтрэх түлхүүр</string>
     <string name="auth_use_passkey">Нэвтрэх түлхүүр ашиглах</string>
     <string name="auth_email_me_a_code">Надад код имэйлээр илгээх</string>
-    <string name="auth_or_enter_authenticator_code">Эсвэл Authenticator код оруулах</string>
+    <string name="auth_or_enter_authenticator_code">Эсвэл баталгаажуулагчийн код оруулах</string>
     <string name="auth_log_in">Нэвтрэх</string>
     <string name="auth_back">Буцах</string>
     <string name="auth_lost_access_recovery">Хандалтаа алдсан уу? Сэргээх кодыг ашиглана уу</string>
@@ -191,7 +191,7 @@
     <string name="format_time_weeks_short">%1$d дол</string>
     <string name="format_time_months_short">%1$d сар</string>
     <string name="reaction_add">Хариу нэмэх</string>
-    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel">Mochi мэдэгдэл</string>
     <string name="push_service_channel_description">Mochi-г мэдэгдэл хүлээн авах боломжтой байлгана</string>
     <string name="push_service_group">Арын үйлчилгээ</string>
     <string name="push_service_title">Mochi мэдэгдэл сонсож байна</string>
@@ -225,7 +225,7 @@
     <string name="stepup_description">Энэ нь таны бүртгэлийн аюулгүй байдлын өөрчлөлт юм. Үргэлжлүүлэхийн тулд энэ та мөн эсэхийг баталгаажуулна уу.</string>
     <string name="stepup_email_label">Имэйл код</string>
     <string name="stepup_email_placeholder">Имэйлд ирсэн кодоо оруулна уу</string>
-    <string name="stepup_totp_label">Authenticator код</string>
+    <string name="stepup_totp_label">Баталгаажуулагчийн код</string>
     <string name="stepup_totp_placeholder">Баталгаажуулагчийн кодоо оруулна уу</string>
     <string name="stepup_use_passkey">Нэвтрэх түлхүүрээ ашиглах</string>
     <string name="stepup_send_email">Имэйл илгээх</string>

@@ -10,7 +10,7 @@
     <string name="calendars_delete">លុប</string>
     <string name="calendars_previous">មុន</string>
     <string name="calendars_next">បន្ទាប់</string>
-    <string name="calendars_view">មើល</string>
+    <string name="calendars_view">ទិដ្ឋភាព</string>
     <string name="calendars_view_list">បញ្ជី</string>
     <string name="calendars_list_search">ស្វែងរក</string>
     <string name="calendars_event_untitled">គ្មានចំណងជើង</string>
@@ -166,7 +166,7 @@
     <string name="calendars_subscribe_server_url">អាសយដ្ឋានម៉ាស៊ីនមេ</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google ប្រតិទិន</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">គណនី Google មិនត្រូវបានបើកនៅលើម៉ាស៊ីនមេនេះទេ។ សូមបើកវានៅក្នុង ការកំណត់, ការកំណត់ប្រព័ន្ធ។</string>
     <string name="calendars_subscribe_google_connect">អ្នកមិនទាន់បានភ្ជាប់គណនី Google ទេ។</string>

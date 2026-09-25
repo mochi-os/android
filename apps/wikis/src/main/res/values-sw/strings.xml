@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="wikis_sidebar_header">Wikis</string>
+    <string name="wikis_sidebar_header">Wiki</string>
     <string name="wikis_sidebar_all">Wiki zote</string>
     <string name="wikis_sidebar_find">Tafuta wikis</string>
     <string name="wikis_sidebar_create">Unda wiki</string>
@@ -22,7 +22,7 @@
     <string name="wikis_page_action_new_page">Ukurasa mpya</string>
     <string name="wikis_page_action_settings">Mipangilio</string>
     <string name="wikis_page_action_unsubscribe">Jiondoe</string>
-    <string name="wikis_title">Wikis</string>
+    <string name="wikis_title">Wiki</string>
     <string name="wikis_empty_title">Anza wiki yako ya kwanza</string>
     <string name="wikis_empty_subtitle">Tafuta wiki ya kujiandikisha, au tengeneza mpya ili kuchapisha hati zako mwenyewe.</string>
     <string name="wikis_create_button">Unda wiki</string>

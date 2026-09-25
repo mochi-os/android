@@ -12,7 +12,7 @@
     <string name="chess_new_title">Nytt spel</string>
     <string name="chess_new_pick_opponent">Vel motstandar</string>
     <string name="chess_new_no_friends_title">Ingen vener enno</string>
-    <string name="chess_new_no_friends_subtitle">Legg til vener i Folk-appen for å byrje å spele</string>
+    <string name="chess_new_no_friends_subtitle">Legg til vener i Personar-appen for å byrje å spele</string>
     <string name="chess_new_add_friends">Legg til vener</string>
     <string name="chess_new_start_button">Start spel</string>
     <string name="chess_new_creating">Opprettar…</string>

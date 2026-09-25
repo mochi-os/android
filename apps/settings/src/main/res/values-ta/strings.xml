@@ -10,8 +10,8 @@
     <string name="settings_home_accounts">இணைக்கப்பட்ட கணக்குகள்</string>
     <string name="settings_home_interests">ஆர்வங்கள்</string>
     <string name="account_section_passkeys">Passkeyக்கள்</string>
-    <string name="account_passkey_register">Passkey சேர்</string>
-    <string name="account_passkey_delete_title">Passkey-ஐ நீக்கவா?</string>
+    <string name="account_passkey_register">கடவுக்குறி சேர்</string>
+    <string name="account_passkey_delete_title">கடவுக்குறியை நீக்கவா?</string>
     <string name="account_section_totp">அங்கீகரிப்பு பயன்பாடு</string>
     <string name="account_totp_setup">அங்கீகாரியை அமைக்க</string>
     <string name="account_totp_setup_title">அங்கீகாரியை அமைக்க</string>
@@ -43,11 +43,11 @@
     <string name="route_save">சேமி</string>
     <string name="route_delete">வழித்தடத்தை நீக்கு</string>
     <string name="route_delete_title">வழித்தடத்தை நீக்கவா?</string>
-    <string name="route_path">Path</string>
+    <string name="route_path">பாதை</string>
     <string name="route_method">முறை</string>
     <string name="route_method_app">பயன்பாடு</string>
     <string name="route_method_entity">அமைப்பு</string>
-    <string name="route_method_redirect">Redirect</string>
+    <string name="route_method_redirect">திருப்பிவிடல்</string>
     <string name="route_priority">முன்னுரிமை</string>
     <string name="route_enabled">இயக்கப்பட்டது</string>
     <string name="route_disabled">முடக்கப்பட்டது</string>
@@ -151,7 +151,7 @@
     <string name="system_setting_oauth_github_client_secret">GitHub கிளையன்ட் ரகசியம்</string>
     <string name="system_setting_oauth_microsoft_client_id">Microsoft கிளையன்ட் ID</string>
     <string name="system_setting_oauth_microsoft_client_secret">Microsoft கிளையன்ட் ரகசியம்</string>
-    <string name="system_setting_oauth_microsoft_tenant">Microsoft tenant</string>
+    <string name="system_setting_oauth_microsoft_tenant">Microsoft டெனன்ட்</string>
     <string name="system_setting_oauth_facebook_client_id">Facebook ஆப் ID</string>
     <string name="system_setting_oauth_facebook_client_secret">Facebook ஆப் ரகசியம்</string>
     <string name="system_setting_oauth_x_client_id">X கிளையன்ட் ID</string>
@@ -287,7 +287,7 @@
     <string name="domain_delegation_delete">பிரதிநிதித்துவத்தை நீக்கு</string>
     <string name="domain_delegation_delete_message">%1$s இனி இந்த டொமைனில் வழிகளை நிர்வகிக்காது.</string>
     <string name="domain_delegation_delete_title">பிரதிநிதித்துவத்தை நீக்கவா?</string>
-    <string name="domain_delegation_path">Path</string>
+    <string name="domain_delegation_path">பாதை</string>
     <string name="domain_delegation_user">பயனர் ID</string>
     <string name="domain_delegations">பிரதிநிதித்துவங்கள்</string>
     <string name="domain_delegations_empty">கட்டமைக்கப்பட்ட வழங்கப்பட்டுள்ளவை இல்லை.</string>

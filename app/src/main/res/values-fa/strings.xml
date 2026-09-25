@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Mochi فیدها</string>
-    <string name="launcher_chat">Mochi گفت‌وگو</string>
+    <string name="launcher_feeds">Mochi خوراک‌ها</string>
+    <string name="launcher_chat">Mochi چت</string>
     <string name="launcher_forums">Mochi انجمن‌ها</string>
     <string name="launcher_projects">Mochi پروژه‌ها</string>
     <string name="launcher_crm">Mochi CRM</string>
     <string name="launcher_people">Mochi افراد</string>
     <string name="launcher_settings">Mochi تنظیمات</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi ویکی‌ها</string>
     <string name="launcher_chess">Mochi شطرنج</string>
-    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_go">Mochi گو</string>
     <string name="launcher_words">Mochi کلمات</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi بازار</string>
     <string name="launcher_calendars">Mochi تقویم‌ها</string>
     <string name="launcher_staff">Mochi کارکنان</string>
 

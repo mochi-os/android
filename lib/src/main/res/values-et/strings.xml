@@ -38,7 +38,7 @@
     <string name="access_add_rule">Lisa reegel</string>
     <string name="access_owner">Omanik</string>
     <string name="access_revoke">Tühista</string>
-    <string name="access_level_comment">Kommentaar</string>
+    <string name="access_level_comment">Kommenteeri</string>
     <string name="access_level_view">Vaata</string>
     <string name="access_level_none">Puudub</string>
     <string name="reaction_like">Meeldib</string>

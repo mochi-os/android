@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">کارکنان</string>
+    <string name="launcher_staff">Mochi کارکنان</string>
     <string name="staff_accounts_action_ban_title">مسدود کردن حساب</string>
     <string name="staff_accounts_action_suspend_title">تعلیق حساب</string>
     <string name="staff_accounts_action_unban_title">لغو ممنوعیت</string>
@@ -162,7 +162,7 @@
     <string name="staff_categories_type_digital">دیجیتال</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">فیزیکی</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">کارکنان</string>
     <string name="staff_config_field_auto_approve">آستانهٔ تأیید خودکار</string>
     <string name="staff_config_field_hold">آستانه نگه داشتن</string>
     <string name="staff_config_field_platform_fee">کارمزد پلتفرم</string>
@@ -261,7 +261,7 @@
     <string name="staff_disputes_resolving">در حال حل…</string>
     <string name="staff_disputes_review">بازبینی</string>
     <string name="staff_disputes_status_escalated">ارجاع داده شد</string>
-    <string name="staff_disputes_status_open">باز کردن</string>
+    <string name="staff_disputes_status_open">باز</string>
     <string name="staff_disputes_status_resolved_buyer">رفع شد (خریدار)</string>
     <string name="staff_disputes_status_resolved_seller">رفع شد (فروشنده)</string>
     <string name="staff_disputes_status_responded">پاسخ داده شد</string>
@@ -329,7 +329,7 @@
     <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">عملیات</string>
     <string name="staff_reports_action_ban">مسدود کردن کاربر</string>
-    <string name="staff_reports_action_dismiss">بستن</string>
+    <string name="staff_reports_action_dismiss">رد کردن</string>
     <string name="staff_reports_action_label">عملیات</string>
     <string name="staff_reports_action_placeholder">انتخاب اقدام</string>
     <string name="staff_reports_action_remove">حذف</string>
@@ -351,7 +351,7 @@
     <string name="staff_reports_meta_reason">دلیل</string>
     <string name="staff_reports_meta_reporter">گزارش‌دهنده</string>
     <string name="staff_reports_meta_seller">فروشنده</string>
-    <string name="staff_reports_meta_target">هدف</string>
+    <string name="staff_reports_meta_target">مورد گزارش‌شده</string>
     <string name="staff_reports_meta_type">نوع</string>
     <string name="staff_reports_notes_label">یادداشت‌ها</string>
     <string name="staff_reports_reason_counterfeit">تقلبی یا سرقتی</string>
@@ -416,7 +416,7 @@
     <string name="staff_status_hold">نگه داشتن</string>
     <string name="staff_status_manual">دستی</string>
     <string name="staff_status_moderator">ناظر</string>
-    <string name="staff_status_open">باز کردن</string>
+    <string name="staff_status_open">باز</string>
     <string name="staff_status_pending">در انتظار</string>
     <string name="staff_status_published">منتشر شد</string>
     <string name="staff_status_rejected">رد شد</string>

@@ -10,8 +10,8 @@
     <string name="settings_home_accounts">Συνδεδεμένοι λογαριασμοί</string>
     <string name="settings_home_interests">Ενδιαφέροντα</string>
     <string name="account_section_passkeys">Κλειδιά πρόσβασης</string>
-    <string name="account_passkey_register">Προσθήκη passkey</string>
-    <string name="account_passkey_delete_title">Διαγραφή passkey;</string>
+    <string name="account_passkey_register">Προσθήκη κλειδιού πρόσβασης</string>
+    <string name="account_passkey_delete_title">Διαγραφή κλειδιού πρόσβασης;</string>
     <string name="account_section_totp">Εφαρμογή ελέγχου ταυτότητας</string>
     <string name="account_totp_setup">Ρύθμιση εξακριβωτή</string>
     <string name="account_totp_setup_title">Ρύθμιση εξακριβωτή</string>
@@ -137,7 +137,7 @@
     <string name="system_settings_reset_title">Επαναφορά στις προεπιλογές;</string>
     <string name="system_setting_apps_install_user">Να επιτρέπεται στους χρήστες η εγκατάσταση εφαρμογών</string>
     <string name="system_setting_auth_email">Σύνδεση με κωδικό email</string>
-    <string name="system_setting_auth_passkey">Σύνδεση με passkey</string>
+    <string name="system_setting_auth_passkey">Σύνδεση με κλειδί πρόσβασης</string>
     <string name="system_setting_auth_totp">Σύνδεση με εφαρμογή ελέγχου ταυτότητας TOTP</string>
     <string name="system_setting_auth_recovery">Σύνδεση με κωδικό ανάκτησης</string>
     <string name="system_setting_auth_oauth">Σύνδεση με OAuth 2.0</string>
@@ -151,7 +151,7 @@
     <string name="system_setting_oauth_github_client_secret">Μυστικό πελάτη GitHub</string>
     <string name="system_setting_oauth_microsoft_client_id">Αναγνωριστικό πελάτη Microsoft</string>
     <string name="system_setting_oauth_microsoft_client_secret">Μυστικό πελάτη Microsoft</string>
-    <string name="system_setting_oauth_microsoft_tenant">Microsoft tenant</string>
+    <string name="system_setting_oauth_microsoft_tenant">Μισθωτής Microsoft</string>
     <string name="system_setting_oauth_facebook_client_id">ID εφαρμογής Facebook</string>
     <string name="system_setting_oauth_facebook_client_secret">Μυστικό εφαρμογής Facebook</string>
     <string name="system_setting_oauth_x_client_id">Αναγνωριστικό πελάτη X</string>
@@ -358,11 +358,11 @@
     <string name="route_target_none">Δεν υπάρχουν διαθέσιμοι προορισμοί</string>
     <string name="login_invalid_code">Μη έγκυρος κωδικός</string>
     <string name="accounts_provider_browser">Ειδοποιήσεις προγράμματος περιήγησης</string>
-    <string name="accounts_provider_fcm">Push Android</string>
+    <string name="accounts_provider_fcm">Ειδοποιήσεις push Android</string>
     <string name="accounts_provider_mcp">Διακομιστής MCP</string>
     <string name="accounts_provider_unifiedpush">Ειδοποίηση push</string>
     <string name="accounts_provider_url">Εξωτερικό URL</string>
-    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_provider_web">Mochi στον ιστό</string>
     <string name="accounts_verified">Ο λογαριασμός επαληθεύτηκε</string>
     <string name="accounts_verify_invalid">Μη έγκυρος κωδικός επαλήθευσης</string>
     <string name="accounts_verify_sent">Ο κωδικός επαλήθευσης στάλθηκε</string>
@@ -376,10 +376,10 @@
     <string name="accounts_forget_message">Αυτό θα αφαιρέσει τη συσκευή \"%1$s\" και θα σταματήσει τις ειδοποιήσεις προς αυτήν.</string>
     <string name="accounts_device_seen">Τελευταία εμφάνιση %1$s</string>
     <string name="notifprefs_device_app">%1$s · εφαρμογή</string>
-    <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_device_push">%1$s · ειδοποιήσεις push</string>
     <string name="notifprefs_test_partial">Το δοκιμαστικό στάλθηκε σε %1$d από %2$d προορισμούς</string>
     <string name="notifprefs_test_none">Δεν έχουν διαμορφωθεί προορισμοί</string>
-    <string name="notifprefs_transport_fcm">Push Android</string>
+    <string name="notifprefs_transport_fcm">Ειδοποιήσεις push Android</string>
     <string name="notifprefs_no_destinations">Δεν υπάρχουν προορισμοί</string>
     <string name="account_data_generate">Δημιουργία φράσης πρόσβασης</string>
     <string name="accounts_field_server">URL διακομιστή</string>

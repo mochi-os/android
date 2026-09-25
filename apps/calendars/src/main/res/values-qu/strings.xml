@@ -53,9 +53,9 @@
     <string name="calendars_colour">Llinp\'i</string>
     <string name="calendars_view_day">P\'unchay</string>
     <string name="calendars_event_start">Qallariy</string>
-    <string name="notification_channel_calendars">Kalendaryukuna</string>
-    <string name="calendars_drawer_title">Kalendaryukuna</string>
-    <string name="calendars_drawer_open">Kalendaryukuna</string>
+    <string name="notification_channel_calendars">Kalendariokuna</string>
+    <string name="calendars_drawer_title">Kalendariokuna</string>
+    <string name="calendars_drawer_open">Kalendariokuna</string>
     <string name="calendars_calendar_menu">%1$s akllanakuna</string>
     <string name="calendars_only_this">Kayllata</string>
     <string name="calendars_create">Kalendaryuta ruway</string>

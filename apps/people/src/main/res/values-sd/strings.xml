@@ -62,7 +62,7 @@
     <string name="people_profile_uploading">اپ لوڊ ٿي رهيو آھي…</string>
     <string name="people_profile_change_banner">بينر تبديل ڪريو</string>
     <string name="people_profile_no_banner">ڪو بينر سيٽ ٿيل نه آهي</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">فيوڪان</string>
     <string name="people_profile_browser_icon">براؤزر آئڪن</string>
     <string name="people_profile_file_too_large">فائل تمام وڏي آهي</string>
     <string name="people_profile_clear">صاف ڪريو</string>
@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">نيويگيشن کوليو</string>
     <string name="people_person_state_friend">دوست</string>
     <string name="people_person_state_self">توھان</string>
-    <string name="people_person_message">پيغام</string>
+    <string name="people_person_message">پيغام موڪليو</string>
     <string name="people_person_accept">قبول ڪريو</string>
     <string name="people_person_decline">رد ڪريو</string>
 
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">صحيح هيڪس رنگ داخل ڪريو (مثال طور #a78bfa)</string>
     <string name="people_profile_accent_none">ڪا به نه</string>
     <string name="people_profile_privacy_private_desc">صرف باهمي دوست توهان جو پروفائل ڏسي سگهن ٿا</string>
-    <string name="people_welcome_title">People ۾ ڀليڪار</string>
+    <string name="people_welcome_title">ماڻهو ايپ ۾ ڀليڪار</string>
     <string name="people_person_banner_alt">%1$s لاءِ بينر</string>
     <string name="people_person_private">هي پروفائل نجي آهي</string>
     <string name="people_person_state_invited">دعوت ڏنل</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">سڀ قبول ڪريو</string>
     <string name="people_invitations_decline_all">سڀ رد ڪريو</string>
     <string name="people_invitations_cancel_all">سڀ منسوخ ڪريو</string>
+    <string name="people_invitations_cancel">منسوخ ڪريو</string>
     <string name="people_invitations_all_accepted">سڀ دعوتون قبول ٿيون</string>
     <string name="people_invitations_all_declined">سڀ دعوتون رد ٿيون</string>
     <string name="people_invitations_all_cancelled">سڀ دعوتون منسوخ ٿيون</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">ڳوليو…</string>
     <string name="people_contacts_invited">دعوت ڏنل</string>
     <string name="people_contacts_accept">قبول ڪريو</string>
-    <string name="people_contacts_message">پيغام</string>
+    <string name="people_contacts_message">پيغام موڪليو</string>
     <string name="people_contacts_no_people_found">ڪو ماڻهو نه مليو</string>
     <string name="people_contacts_try_adjusting">پنھنجي ڳولا کي ترتيب ڏيڻ جي ڪوشش ڪريو</string>
     <string name="people_contact_section_address">پتو</string>

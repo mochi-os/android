@@ -70,7 +70,7 @@
     <string name="chat_new_search_placeholder">لوگ تلاش کریں</string>
     <string name="chat_new_no_matches">کوئی مماثل لوگ نہیں</string>
     <string name="chat_new_no_friends">چیٹ کرنے کے لیے لوگ تلاش کریں</string>
-    <string name="chat_pin">pin کریں</string>
+    <string name="chat_pin">پن کریں</string>
     <string name="chat_unpin">ان پن کریں</string>
     <string name="chat_settings_general">عمومی</string>
     <string name="chat_settings_screen_title">%1$s کی ترتیبات</string>

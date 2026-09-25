@@ -8,7 +8,7 @@
     <string name="go_action_pass">పాస్</string>
     <string name="go_action_rematch">రీమ్యాచ్</string>
     <string name="go_action_resign">రిజైన్</string>
-    <string name="go_app_title">వెళ్ళండి</string>
+    <string name="go_app_title">గో</string>
     <string name="go_captures_black_sr">నలుపు బందీలు</string>
     <string name="go_captures_white_sr">తెలుపు బందీలు</string>
     <string name="go_chat_title">చాట్</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">సైడ్‌బార్ తెరువు</string>
     <string name="go_sidebar_active">క్రియాశీల ఆటలు</string>
     <string name="go_empty_active">ఇంకా క్రియాశీల గేమ్‌లు లేవు.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">ఓటమిని అంగీకరించారు</string>
     <string name="go_new_game_title">కొత్త Go గేమ్</string>
     <string name="go_new_game_no_friends">గేమ్ ప్రారంభించే ముందు మీరు స్నేహితుడిని జోడించాలి.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

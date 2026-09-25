@@ -93,20 +93,20 @@
     <string name="projects_request_create_action">צור</string>
     <string name="projects_diff_unified">מאוחד</string>
     <string name="projects_diff_split">פצל</string>
-    <string name="projects_diff_empty">אין diff זמין</string>
+    <string name="projects_diff_empty">אין השוואה זמינה</string>
     <string name="projects_board_unassigned">לא משויך</string>
     <string name="projects_board_new">חדש</string>
     <string name="projects_board_rename">שנה שם</string>
     <string name="projects_board_rename_column">שנה שם עמודה</string>
     <string name="projects_move_position">עמדה</string>
-    <string name="projects_move_position_top">ראש</string>
+    <string name="projects_move_position_top">למעלה</string>
     <string name="projects_move_current">נוכחי</string>
     <string name="projects_design_title">עיצוב</string>
     <string name="projects_design_export">ייצוא עיצוב</string>
     <string name="projects_design_import">ייבוא עיצוב</string>
     <string name="projects_design_imported">העיצוב יובא</string>
     <string name="projects_design_tab_classes">מחלקות</string>
-    <string name="projects_design_tab_views">צפיות</string>
+    <string name="projects_design_tab_views">תצוגות</string>
     <string name="projects_design_import_dialog_title">ייבוא עיצוב</string>
     <string name="projects_design_import_choose_template">בחר תבנית</string>
     <string name="projects_design_replace_title">להחליף עיצוב?</string>
@@ -146,7 +146,7 @@
     <string name="projects_views_edit_dialog_title">ערוך תצוגה</string>
     <string name="projects_views_delete_title">מחק תצוגה</string>
     <string name="projects_views_type">סוג</string>
-    <string name="projects_views_type_board">Board</string>
+    <string name="projects_views_type_board">לוח</string>
     <string name="projects_views_type_list">רשימה</string>
     <string name="projects_views_direction">כיוון</string>
     <string name="projects_views_sort_number">מספר</string>
@@ -180,7 +180,7 @@
     <string name="projects_links_search_placeholder">חפש פריטים</string>
 
     <string name="notification_channel_projects">התראות פרויקטים</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi פרויקטים</string>
     <string name="projects_list_search_placeholder">חיפוש פרויקטים</string>
     <string name="projects_list_no_matching">לא נמצאו פרויקטים תואמים</string>
     <string name="projects_list_empty">אין עדיין פרויקטים</string>
@@ -239,8 +239,8 @@
     <string name="projects_request_mark_ready">סמן כמוכן</string>
     <string name="projects_request_merge_default_message">מזג את %1$s לתוך %2$s</string>
     <string name="projects_request_commit_message">הודעת קומיט</string>
-    <string name="projects_request_method_squash">Squash</string>
-    <string name="projects_request_method_rebase">Rebase</string>
+    <string name="projects_request_method_squash">סקווש</string>
+    <string name="projects_request_method_rebase">ריבייס</string>
     <string name="projects_request_create_title">צור בקשת מיזוג</string>
     <string name="projects_request_field_target">ענף יעד</string>
     <string name="projects_diff_title">הבדלים: %1$s -&gt; %2$s</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">בחר כלל</string>
     <string name="projects_access_authenticated_desc">כל מי שמחובר</string>
     <string name="projects_access_anyone_desc">כולל משתמשים אנונימיים</string>
-    <string name="projects_access_target">יעד</string>
+    <string name="projects_access_target">משתמש או קבוצה</string>
     <string name="projects_access_target_hint">מזהה ישות, @group, * (כולם), או + (חברים)</string>
     <string name="projects_access_selected">נבחר: %1$s</string>
     <string name="projects_access_role_comment">תגובה וצפייה</string>

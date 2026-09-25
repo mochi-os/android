@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_list_title">Chats</string>
+    <string name="chat_list_title">Conversas</string>
     <string name="chat_list_search">Buscar</string>
     <string name="chat_list_logout">Pechar sesión</string>
     <string name="chat_list_new">Novo chat</string>
@@ -62,7 +62,7 @@
     <string name="chat_delete_own_only">Só podes eliminar as túas propias mensaxes</string>
     <string name="chat_selection_title">%1$d seleccionadas</string>
     <string name="chat_forward_subtitle">Escolle un chat ou amigo ao que reenviar as mensaxes seleccionadas</string>
-    <string name="chat_forward_chats">Chats</string>
+    <string name="chat_forward_chats">Conversas</string>
     <string name="chat_forward_friends">Amigos</string>
     <string name="chat_policy_title">Chats entrantes</string>
     <string name="chat_policy_friends">Só amigos</string>

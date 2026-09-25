@@ -38,7 +38,7 @@
     <string name="access_add_rule">Legg til regel</string>
     <string name="access_owner">Eier</string>
     <string name="access_revoke">Tilbakekall</string>
-    <string name="access_level_comment">Kommentar</string>
+    <string name="access_level_comment">Kommenter</string>
     <string name="access_level_view">Vis</string>
     <string name="access_level_none">Ingen</string>
     <string name="reaction_like">Liker</string>

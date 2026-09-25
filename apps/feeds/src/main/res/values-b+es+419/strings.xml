@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Aún no hay publicaciones</string>
     <string name="feeds_sort_label">Ordenar</string>
     <string name="feeds_sort_interests">Intereses</string>
-    <string name="feeds_sort_new">Nuevo</string>
+    <string name="feeds_sort_new">Recientes</string>
     <string name="feeds_sort_hot">Popular</string>
-    <string name="feeds_sort_top">Arriba</string>
+    <string name="feeds_sort_top">Mejores</string>
     <string name="feeds_sort_ai">IA</string>
     <string name="feeds_post_default_author">Publicación</string>
     <string name="feeds_image_preview">Vista previa</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Cancelar respuesta</string>
     <string name="feeds_edit_post">Editar publicación</string>
     <string name="feeds_save_label">Guardar</string>
-    <string name="feeds_post_action">Publicación</string>
+    <string name="feeds_post_action">Publicar</string>
     <string name="feeds_feed_label">Feed</string>
     <string name="feeds_add_files">Añadir archivos</string>
     <string name="feeds_restore">Restaurar</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Cerrar sesión</string>
     <string name="feeds_ai_account_default">Cuenta predeterminada</string>
     <string name="feeds_ai_mode_off">Desactivado</string>
-    <string name="feeds_ai_mode_tag">Etiqueta</string>
+    <string name="feeds_ai_mode_tag">Etiquetar</string>
     <string name="feeds_ai_mode_tag_deduplicate">Etiquetar + quitar duplicados</string>
     <string name="feeds_feed_not_found">Feed no encontrado</string>
     <string name="feeds_post_not_found">Publicación no encontrada</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Interés reducido</string>
     <string name="feeds_interest_removed">Interés eliminado</string>
     <string name="feeds_interest_failed">Error al ajustar el interés</string>
-    <string name="feeds_saved_title">Guardado</string>
-    <string name="feeds_saved_menu">Guardado</string>
+    <string name="feeds_saved_title">Guardados</string>
+    <string name="feeds_saved_menu">Guardados</string>
     <string name="feeds_saved_save">Guardar para más tarde</string>
     <string name="feeds_saved_remove">Quitar de guardados</string>
     <string name="feeds_saved_clear_all">Borrar todo</string>

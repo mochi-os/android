@@ -14,13 +14,13 @@
     <string name="feeds_no_posts_yet">Aucun message pour le moment</string>
     <string name="feeds_sort_label">Trier</string>
     <string name="feeds_sort_interests">Centres d\'intérêt</string>
-    <string name="feeds_sort_new">Nouveau</string>
+    <string name="feeds_sort_new">Récent</string>
     <string name="feeds_sort_hot">Populaire</string>
     <string name="feeds_sort_top">Meilleur</string>
     <string name="feeds_sort_ai">IA</string>
-    <string name="feeds_post_default_author">Publier</string>
+    <string name="feeds_post_default_author">Publication</string>
     <string name="feeds_image_preview">Aperçu</string>
-    <string name="feeds_post">Publier</string>
+    <string name="feeds_post">Publication</string>
     <string name="feeds_comments">Commentaires</string>
     <string name="feeds_delete_post">Supprimer le post</string>
     <string name="feeds_delete_comment">Supprimer le commentaire</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Se déconnecter</string>
     <string name="feeds_ai_account_default">Compte par défaut</string>
     <string name="feeds_ai_mode_off">Désactivé</string>
-    <string name="feeds_ai_mode_tag">Étiquette</string>
+    <string name="feeds_ai_mode_tag">Étiqueter</string>
     <string name="feeds_ai_mode_tag_deduplicate">Étiqueter + dédupliquer</string>
     <string name="feeds_feed_not_found">Flux introuvable</string>
     <string name="feeds_post_not_found">Publication introuvable</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Centre d\'intérêt réduit</string>
     <string name="feeds_interest_removed">Centre d\'intérêt retiré</string>
     <string name="feeds_interest_failed">Échec de l\'ajustement du centre d\'intérêt</string>
-    <string name="feeds_saved_title">Enregistré</string>
-    <string name="feeds_saved_menu">Enregistré</string>
+    <string name="feeds_saved_title">Enregistrements</string>
+    <string name="feeds_saved_menu">Enregistrements</string>
     <string name="feeds_saved_save">Enregistrer pour plus tard</string>
     <string name="feeds_saved_remove">Retirer des enregistrés</string>
     <string name="feeds_saved_clear_all">Tout effacer</string>

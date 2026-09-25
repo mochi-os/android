@@ -3,18 +3,18 @@
 
     <string name="launcher_feeds">Mochi Feed-iiwwan</string>
     <string name="launcher_chat">Mochi Chaattii</string>
-    <string name="launcher_forums">Mochi Foramiiwwan</string>
-    <string name="launcher_projects">Mochi Pirojektota</string>
+    <string name="launcher_forums">Mochi Foorumiiwwan</string>
+    <string name="launcher_projects">Mochi Pirojektoota</string>
     <string name="launcher_crm">Mochi CRM</string>
     <string name="launcher_people">Mochi Namoota</string>
     <string name="launcher_settings">Mochi Qindaa\'inoota</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wikiwwan</string>
     <string name="launcher_chess">Mochi Tapha shaaxixii</string>
     <string name="launcher_go">Mochi Go</string>
     <string name="launcher_words">Mochi Jechoota</string>
-    <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">Mochi Kaalaandaroota</string>
+    <string name="launcher_market">Mochi Gabaa</string>
+    <string name="launcher_calendars">Mochi Kaalandariilee</string>
     <string name="launcher_staff">Mochi Hojjettoota</string>
 
 

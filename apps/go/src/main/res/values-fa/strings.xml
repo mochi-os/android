@@ -8,7 +8,7 @@
     <string name="go_action_pass">رد کردن</string>
     <string name="go_action_rematch">بازی مجدد</string>
     <string name="go_action_resign">تسلیم</string>
-    <string name="go_app_title">برو</string>
+    <string name="go_app_title">گو</string>
     <string name="go_captures_black_sr">اسیران سیاه</string>
     <string name="go_captures_white_sr">اسیران سفید</string>
     <string name="go_chat_title">گفت‌وگو</string>
@@ -35,8 +35,8 @@
     <string name="go_new_game_add_friends">افزودن دوستان</string>
     <string name="go_new_game_board_size_label">اندازهٔ تخته</string>
     <string name="go_new_game_friend_label">حریف</string>
-    <string name="go_new_game_komi_field_label">Komi</string>
-    <string name="go_new_game_komi_label">Komi</string>
+    <string name="go_new_game_komi_field_label">کومی</string>
+    <string name="go_new_game_komi_label">کومی</string>
     <string name="go_new_game_komi_range_error">باید بین ۰ و ۱۰ باشد</string>
     <string name="go_new_game_start">شروع بازی</string>
     <string name="go_pass_confirm">رد کردن</string>

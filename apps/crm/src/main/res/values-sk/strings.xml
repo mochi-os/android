@@ -67,7 +67,7 @@
     <string name="crm_board_rename">Premenovať</string>
     <string name="crm_board_rename_column">Premenovať stĺpec</string>
     <string name="crm_move_position">Pozícia</string>
-    <string name="crm_move_position_top">Hore</string>
+    <string name="crm_move_position_top">Navrch</string>
     <string name="crm_move_current">Aktuálne</string>
     <string name="crm_design_title">Dizajn</string>
     <string name="crm_design_export">Exportovať návrh</string>
@@ -117,7 +117,7 @@
     <string name="crm_views_edit_dialog_title">Upraviť pohľad</string>
     <string name="crm_views_delete_title">Odstrániť zobrazenie</string>
     <string name="crm_views_type">Typ</string>
-    <string name="crm_views_type_board">Doska</string>
+    <string name="crm_views_type_board">Tabuľa</string>
     <string name="crm_views_type_list">Zoznam</string>
     <string name="crm_views_direction">Smer</string>
     <string name="crm_views_sort_created">Vytvorené</string>
@@ -126,7 +126,7 @@
     <string name="crm_not_found">Projekt sa nenašiel</string>
     <string name="crm_more">Viac</string>
     <string name="crm_comment_send">Odoslať</string>
-    <string name="crm_field_position_body">Text</string>
+    <string name="crm_field_position_body">Obsah</string>
     <string name="crm_sort_field">Zoradiť podľa</string>
     <string name="crm_comment_remove_attachment">Odstrániť prílohu</string>
     <string name="crm_views_sort_by">Zoradiť podľa</string>

@@ -99,14 +99,14 @@
     <string name="projects_board_rename">Preimenuj</string>
     <string name="projects_board_rename_column">Preimenuj stolpec</string>
     <string name="projects_move_position">Položaj</string>
-    <string name="projects_move_position_top">Vrh</string>
+    <string name="projects_move_position_top">Na vrh</string>
     <string name="projects_move_current">Trenutno</string>
     <string name="projects_design_title">Oblikovanje</string>
     <string name="projects_design_export">Izvozi obliko</string>
     <string name="projects_design_import">Uvozi obliko</string>
     <string name="projects_design_imported">Oblikovanje uvoženo</string>
     <string name="projects_design_tab_classes">Razredi</string>
-    <string name="projects_design_tab_views">Ogledi</string>
+    <string name="projects_design_tab_views">Pogledi</string>
     <string name="projects_design_import_dialog_title">Uvozi obliko</string>
     <string name="projects_design_import_choose_template">Izberite predlogo</string>
     <string name="projects_design_replace_title">Zamenjaj zasnovo?</string>
@@ -123,7 +123,7 @@
     <string name="projects_class_delete">Izbriši razred</string>
     <string name="projects_class_delete_title">Izbriši razred</string>
     <string name="projects_field_type_text">Besedilo</string>
-    <string name="projects_field_type_number">Številka</string>
+    <string name="projects_field_type_number">Število</string>
     <string name="projects_field_type_user">Uporabnik</string>
     <string name="projects_field_type_date">Datum</string>
     <string name="projects_field_type_checklist">Kontrolni seznam</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Iskanje objektov</string>
 
     <string name="notification_channel_projects">Obvestila projektov</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Projekti</string>
     <string name="projects_auth_create_identity_failed">Identitete ni bilo mogoče ustvariti</string>
     <string name="projects_auth_mfa_unsupported">Večstopenjska avtentikacija v mobilni aplikaciji še ni podprta</string>
     <string name="projects_auth_enter_code_sent">Vnesite kodo, ki je bila poslana na %1$s</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Izberite pravilo</string>
     <string name="projects_access_authenticated_desc">Vsi, ki so prijavljeni</string>
     <string name="projects_access_anyone_desc">Vključno z anonimnimi uporabniki</string>
-    <string name="projects_access_target">Cilj</string>
+    <string name="projects_access_target">Uporabnik ali skupina</string>
     <string name="projects_access_target_hint">ID entitete, @skupina, * (vsi) ali + (člani)</string>
     <string name="projects_access_selected">Izbrano: %1$s</string>
     <string name="projects_access_role_comment">Komentiranje in ogled</string>

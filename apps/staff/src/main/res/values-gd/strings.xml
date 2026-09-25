@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">Luchd-obrach</string>
+    <string name="launcher_staff">Mochi Luchd-obrach</string>
     <string name="staff_accounts_action_ban_title">Toirmisg cunntas</string>
     <string name="staff_accounts_action_suspend_title">Cuir cunntas an cois</string>
     <string name="staff_accounts_action_unban_title">Tog an toirmeasg</string>
@@ -161,7 +161,7 @@
     <string name="staff_categories_type_digital">Didseatach</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">Corporra</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">Luchd-obrach</string>
     <string name="staff_config_field_auto_approve">Stairsneach fèin-aontachaidh</string>
     <string name="staff_config_field_hold">Stairsneach cumail</string>
     <string name="staff_config_field_platform_fee">Cìs an àrd-ùrlair</string>
@@ -243,15 +243,15 @@
     <string name="staff_disputes_reason_unauthorised">Gun chead</string>
     <string name="staff_disputes_refund_must_be_positive">Feumaidh suim an ath-dhìolaidh a bhith nas motha na neoini</string>
     <string name="staff_disputes_resolution_buyer">Fuasgail airson a\' cheannaiche</string>
-    <string name="staff_disputes_resolution_label">Rùn</string>
+    <string name="staff_disputes_resolution_label">Fuasgladh</string>
     <string name="staff_disputes_resolution_placeholder">Tagh fuasgladh</string>
     <string name="staff_disputes_resolution_seller">Fuasgail airson an reiceadair</string>
     <string name="staff_disputes_resolve">Fuasgail</string>
     <string name="staff_disputes_resolved_toast">Connspaid air a fuasgladh</string>
     <string name="staff_disputes_resolving">Ga fhuasgladh…</string>
-    <string name="staff_disputes_review">Lèirmheas</string>
+    <string name="staff_disputes_review">Sgrùd</string>
     <string name="staff_disputes_status_escalated">Air a thogail suas</string>
-    <string name="staff_disputes_status_open">Fosgail</string>
+    <string name="staff_disputes_status_open">Fosgailte</string>
     <string name="staff_disputes_status_resolved_buyer">Air fhuasgladh (ceannaiche)</string>
     <string name="staff_disputes_status_resolved_seller">Air fhuasgladh (reiceadair)</string>
     <string name="staff_disputes_status_responded">Air freagairt</string>
@@ -316,7 +316,7 @@
     <string name="staff_reports_cancel">Sguir dheth</string>
     <string name="staff_reports_close">Dùin</string>
     <string name="staff_reports_dialog_title_action">Gabh gnìomh air aithisg</string>
-    <string name="staff_reports_dialog_title_view">Aithris</string>
+    <string name="staff_reports_dialog_title_view">Aithisg</string>
     <string name="staff_reports_empty">Chan eil aithisgean</string>
     <string name="staff_reports_filter_status_label">Cor</string>
     <string name="staff_reports_filter_type_label">Seòrsa</string>
@@ -386,7 +386,7 @@
     <string name="staff_status_hold">Cùm</string>
     <string name="staff_status_manual">Le làimh</string>
     <string name="staff_status_moderator">Maor-ùghdarrais</string>
-    <string name="staff_status_open">Fosgail</string>
+    <string name="staff_status_open">Fosgailte</string>
     <string name="staff_status_pending">Ri làimhseachadh</string>
     <string name="staff_status_published">Foillsichte</string>
     <string name="staff_status_rejected">Air a dhiùltadh</string>

@@ -99,14 +99,14 @@
     <string name="projects_board_rename">بیا نومول</string>
     <string name="projects_board_rename_column">د کالم نوم بدل کړئ</string>
     <string name="projects_move_position">موقعیت</string>
-    <string name="projects_move_position_top">بره</string>
+    <string name="projects_move_position_top">تر ټولو پورته</string>
     <string name="projects_move_current">اوسنی</string>
     <string name="projects_design_title">ډیزاین</string>
     <string name="projects_design_export">ډیزاین صادر کړئ</string>
     <string name="projects_design_import">ډیزاین وارد کړئ</string>
     <string name="projects_design_imported">ډیزاین وارد شو</string>
     <string name="projects_design_tab_classes">ټولګي</string>
-    <string name="projects_design_tab_views">لیدنې</string>
+    <string name="projects_design_tab_views">لیدونه</string>
     <string name="projects_design_import_dialog_title">ډیزاین وارد کړئ</string>
     <string name="projects_design_import_choose_template">یو ټیمپلیټ وټاکئ</string>
     <string name="projects_design_replace_title">ډیزاین بدل کړو؟</string>
@@ -158,9 +158,9 @@
     <string name="projects_more">نور</string>
     <string name="projects_request_more">نور</string>
     <string name="projects_comment_send">لیږل</string>
-    <string name="projects_field_position_body">متن</string>
+    <string name="projects_field_position_body">اصلي برخه</string>
     <string name="projects_sort_field">ترتیب</string>
-    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_comment_remove_attachment">ضمیمه لرې کړئ</string>
     <string name="projects_views_sort_by">ترتیب</string>
     <string name="projects_auth_login_failed">ننوتل ناکام شو</string>
     <string name="projects_views_move_up">پورته یوسئ</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">اشیا لټول</string>
 
     <string name="notification_channel_projects">د پروژو خبرتیاوې</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi پروژې</string>
     <string name="projects_auth_create_identity_failed">د پېژندنې جوړول ناکام شول</string>
     <string name="projects_auth_mfa_unsupported">MFA لا د موبایل اپلیکیشن کې نه ملاتړ کیږي</string>
     <string name="projects_auth_enter_code_sent">هغه کوډ دننه کړئ چې %1$s ته لیږل شوی</string>
@@ -327,7 +327,7 @@
     <string name="projects_settings_section_access">د لاسرسي اداره</string>
     <string name="projects_people_search">خلک ولټوئ</string>
     <string name="projects_settings_field_entity_id">د موجودیت ID</string>
-    <string name="projects_settings_field_fingerprint">Fingerprint</string>
+    <string name="projects_settings_field_fingerprint">د ګوتو نښه</string>
     <string name="projects_settings_field_server">Server</string>
     <string name="projects_access_subject_anyone">هر څوک</string>
     <string name="projects_access_subject_authenticated">تصدیق شوي کاروونکي</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">یو قانون وټاکئ</string>
     <string name="projects_access_authenticated_desc">هر څوک چې ننوتلی وي</string>
     <string name="projects_access_anyone_desc">د بېنومو کاروونکو په ګډون</string>
-    <string name="projects_access_target">هدف</string>
+    <string name="projects_access_target">کاروونکی یا ګروپ</string>
     <string name="projects_access_target_hint">د موجودیت ID، @ګروپ، * (هرڅوک)، یا + (غړي)</string>
     <string name="projects_access_selected">ټاکل شوي: %1$s</string>
     <string name="projects_access_role_comment">تبصره او لیدنه</string>
@@ -381,5 +381,5 @@
     <string name="projects_option_delete_message">ایا تاسو ډاډه یاست چې غواړئ اختیار \"%1$s\" حذف کړئ؟</string>
     <string name="projects_create_object_no_types">تر اوسه د توکو ډولونه نشي جوړیدلی. لومړی اړین مور توکي جوړ کړئ.</string>
     <string name="projects_create_blocked_no_options">جوړول نشي کیدی: %1$s اړین دی خو د غوره کولو لپاره کوم انتخاب نلري. په ډیزاین کې انتخابونه اضافه کړئ.</string>
-    <string name="projects_attachment_remove">Remove attachment</string>
+    <string name="projects_attachment_remove">ضمیمه لرې کړئ</string>
 </resources>

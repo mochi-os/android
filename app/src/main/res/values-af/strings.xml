@@ -9,13 +9,13 @@
     <string name="launcher_people">Mochi Mense</string>
     <string name="launcher_settings">Mochi Instellings</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki\'s</string>
     <string name="launcher_chess">Mochi Skaak</string>
     <string name="launcher_go">Mochi Go</string>
     <string name="launcher_words">Mochi Woorde</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi Mark</string>
     <string name="launcher_calendars">Mochi Kalenders</string>
-    <string name="launcher_staff">Mochi Personeel</string>
+    <string name="launcher_staff">Mochi-personeel</string>
 
 
     <string name="app_name">Mochi</string>

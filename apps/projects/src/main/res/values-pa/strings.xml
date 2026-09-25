@@ -93,7 +93,7 @@
     <string name="projects_request_create_action">ਬਣਾਓ</string>
     <string name="projects_diff_unified">ਏਕੀਕ੍ਰਿਤ</string>
     <string name="projects_diff_split">ਵੰਡੋ</string>
-    <string name="projects_diff_empty">ਕੋਈ diff ਉਪਲਬਧ ਨਹੀਂ</string>
+    <string name="projects_diff_empty">ਕੋਈ ਅੰਤਰ ਉਪਲਬਧ ਨਹੀਂ</string>
     <string name="projects_board_unassigned">ਨਾ ਨਿਰਧਾਰਤ</string>
     <string name="projects_board_new">ਨਵਾਂ</string>
     <string name="projects_board_rename">ਨਾਮ ਬਦਲੋ</string>
@@ -160,7 +160,7 @@
     <string name="projects_comment_send">ਭੇਜੋ</string>
     <string name="projects_field_position_body">ਮੁੱਖ ਭਾਗ</string>
     <string name="projects_sort_field">ਅਨੁਸਾਰ ਛਾਂਟੋ</string>
-    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_comment_remove_attachment">ਅਟੈਚਮੈਂਟ ਹਟਾਓ</string>
     <string name="projects_views_sort_by">ਅਨੁਸਾਰ ਛਾਂਟੋ</string>
     <string name="projects_auth_login_failed">ਲਾਗਇਨ ਅਸਫਲ</string>
     <string name="projects_views_move_up">ਉੱਪਰ ਜਾਓ</string>
@@ -293,7 +293,7 @@
     <string name="projects_field_min_length">ਘੱਟੋ-ਘੱਟ ਲੰਬਾਈ</string>
     <string name="projects_field_max_length">ਵੱਧੋ-ਵੱਧ ਲੰਬਾਈ</string>
     <string name="projects_field_pattern">ਪੈਟਰਨ (regex)</string>
-    <string name="projects_field_rows">ਕਤਾਰਾਂ (textarea ਉਚਾਈ)</string>
+    <string name="projects_field_rows">ਕਤਾਰਾਂ (ਟੈਕਸਟ ਖੇਤਰ ਦੀ ਉਚਾਈ)</string>
     <string name="projects_field_no_options">ਕੋਈ ਵਿਕਲਪ ਪਰਿਭਾਸ਼ਿਤ ਨਹੀਂ</string>
     <string name="projects_field_delete_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਹੋ ਕਿ ਤੁਸੀਂ ਫੀਲਡ \"%1$s\" ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ? ਸਾਰੇ ਵਿਕਲਪ ਅਤੇ ਮੁੱਲ ਗੁੰਮ ਹੋ ਜਾਣਗੇ।</string>
     <string name="projects_option_color">ਰੰਗ</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">ਇੱਕ ਨਿਯਮ ਚੁਣੋ</string>
     <string name="projects_access_authenticated_desc">ਕੋਈ ਵੀ ਜੋ ਲਾਗਇਨ ਹੈ</string>
     <string name="projects_access_anyone_desc">ਅਗਿਆਤ ਵਰਤੋਂਕਾਰਾਂ ਸਮੇਤ</string>
-    <string name="projects_access_target">ਟੀਚਾ</string>
+    <string name="projects_access_target">ਉਪਭੋਗਤਾ ਜਾਂ ਗਰੁੱਪ</string>
     <string name="projects_access_target_hint">ਇਕਾਈ ID, @group, * (ਹਰ ਕੋਈ), ਜਾਂ + (ਮੈਂਬਰ)</string>
     <string name="projects_access_selected">ਚੁਣਿਆ ਗਿਆ: %1$s</string>
     <string name="projects_access_role_comment">ਟਿੱਪਣੀ ਅਤੇ ਵੇਖੋ</string>
@@ -381,5 +381,5 @@
     <string name="projects_option_delete_message">ਕੀ ਤੁਸੀਂ ਪੱਕਾ ਵਿਕਲਪ \"%1$s\" ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
     <string name="projects_create_object_no_types">ਅਜੇ ਕੋਈ ਆਈਟਮ ਕਿਸਮ ਨਹੀਂ ਬਣਾਈ ਜਾ ਸਕਦੀ। ਪਹਿਲਾਂ ਜ਼ਰੂਰੀ ਪੇਰੈਂਟ ਆਈਟਮਾਂ ਬਣਾਓ।</string>
     <string name="projects_create_blocked_no_options">ਬਣਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ: %1$s ਲੋੜੀਂਦਾ ਹੈ ਪਰ ਚੁਣਨ ਲਈ ਕੋਈ ਵਿਕਲਪ ਨਹੀਂ ਹੈ। ਡਿਜ਼ਾਈਨ ਵਿੱਚ ਵਿਕਲਪ ਸ਼ਾਮਲ ਕਰੋ।</string>
-    <string name="projects_attachment_remove">Remove attachment</string>
+    <string name="projects_attachment_remove">ਅਟੈਚਮੈਂਟ ਹਟਾਓ</string>
 </resources>

@@ -38,7 +38,7 @@
     <string name="access_add_rule">Bæta við reglu</string>
     <string name="access_owner">Eigandi</string>
     <string name="access_revoke">Afturkalla</string>
-    <string name="access_level_comment">Athugasemd</string>
+    <string name="access_level_comment">Skrifa athugasemd</string>
     <string name="access_level_view">Skoða</string>
     <string name="access_level_none">Ekkert</string>
     <string name="reaction_like">Líkar við</string>

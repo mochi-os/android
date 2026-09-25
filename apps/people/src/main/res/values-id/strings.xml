@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Buka navigasi</string>
     <string name="people_person_state_friend">Teman</string>
     <string name="people_person_state_self">Anda</string>
-    <string name="people_person_message">Pesan</string>
+    <string name="people_person_message">Kirim pesan</string>
     <string name="people_person_accept">Terima</string>
     <string name="people_person_decline">Tolak</string>
 
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">Masukkan warna heksa yang valid (mis. #a78bfa)</string>
     <string name="people_profile_accent_none">Tidak ada</string>
     <string name="people_profile_privacy_private_desc">Hanya teman bersama yang dapat melihat profil Anda</string>
-    <string name="people_welcome_title">Selamat datang di People</string>
+    <string name="people_welcome_title">Selamat datang di Orang</string>
     <string name="people_person_banner_alt">Spanduk untuk %1$s</string>
     <string name="people_person_private">Profil ini bersifat pribadi</string>
     <string name="people_person_state_invited">Diundang</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Terima semua</string>
     <string name="people_invitations_decline_all">Tolak semua</string>
     <string name="people_invitations_cancel_all">Batalkan semua</string>
+    <string name="people_invitations_cancel">Batalkan</string>
     <string name="people_invitations_all_accepted">Semua undangan diterima</string>
     <string name="people_invitations_all_declined">Semua undangan ditolak</string>
     <string name="people_invitations_all_cancelled">Semua undangan dibatalkan</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Cari…</string>
     <string name="people_contacts_invited">Diundang</string>
     <string name="people_contacts_accept">Terima</string>
-    <string name="people_contacts_message">Pesan</string>
+    <string name="people_contacts_message">Kirim pesan</string>
     <string name="people_contacts_no_people_found">Tidak ada orang yang ditemukan</string>
     <string name="people_contacts_try_adjusting">Coba sesuaikan pencarian Anda</string>
     <string name="people_contact_section_address">Alamat</string>

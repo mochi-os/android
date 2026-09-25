@@ -67,7 +67,7 @@
     <string name="crm_board_rename">Přejmenovat</string>
     <string name="crm_board_rename_column">Přejmenovat sloupec</string>
     <string name="crm_move_position">Pozice</string>
-    <string name="crm_move_position_top">Nahoru</string>
+    <string name="crm_move_position_top">Na začátek</string>
     <string name="crm_move_current">Aktuální</string>
     <string name="crm_design_title">Design</string>
     <string name="crm_design_export">Exportovat návrh</string>
@@ -117,7 +117,7 @@
     <string name="crm_views_edit_dialog_title">Upravit pohled</string>
     <string name="crm_views_delete_title">Smazat zobrazení</string>
     <string name="crm_views_type">Typ</string>
-    <string name="crm_views_type_board">Deska</string>
+    <string name="crm_views_type_board">Tabule</string>
     <string name="crm_views_type_list">Seznam</string>
     <string name="crm_views_direction">Směr</string>
     <string name="crm_views_sort_created">Vytvořeno</string>
@@ -209,7 +209,7 @@
     <string name="crm_field_multi">Vícenásobný výběr</string>
     <string name="crm_field_position">Pozice zobrazení</string>
     <string name="crm_field_position_header">Hlavička</string>
-    <string name="crm_field_position_body">Tělo</string>
+    <string name="crm_field_position_body">Obsah</string>
     <string name="crm_field_validation">Validace</string>
     <string name="crm_field_min_length">Minimální délka</string>
     <string name="crm_field_max_length">Maximální délka</string>

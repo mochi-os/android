@@ -39,7 +39,7 @@
     <string name="projects_settings_tab_access">צוטריט</string>
     <string name="projects_settings_tab_people">מענטשן</string>
     <string name="projects_option_icon">איקאָנע</string>
-    <string name="projects_option_icon_placeholder">גיט א בײשפיל. Check, Star, Flag</string>
+    <string name="projects_option_icon_placeholder">למשל Check, Star, Flag</string>
     <string name="projects_settings_unsubscribe">אַבאַבאָנירן</string>
     <string name="projects_settings_delete_project">אויסמעקן פּראָיעקט</string>
     <string name="projects_settings_delete_confirm_title">אויסמעקן פּראָיעקט</string>
@@ -59,10 +59,10 @@
     <string name="projects_parent_search_placeholder">זוך</string>
     <string name="projects_links_title">לינקס</string>
     <string name="projects_links_add">צולייגן לינק</string>
-    <string name="projects_links_section_blocks">Blocks</string>
+    <string name="projects_links_section_blocks">בלאָקירט</string>
     <string name="projects_links_section_blocked_by">געבלאָקירט פֿון</string>
     <string name="projects_links_section_duplicates">טאָפּלען</string>
-    <string name="projects_links_type_blocks">Blocks</string>
+    <string name="projects_links_type_blocks">בלאָקירט</string>
     <string name="projects_links_type_blocked_by">געבלאָקירט פֿון</string>
     <string name="projects_links_type_duplicates">טאָפּלען</string>
     <string name="projects_links_no_matches">קיין שטימענדיקע אָביעקטן</string>
@@ -79,12 +79,12 @@
     <string name="projects_request_empty">קיין מערדזש פֿאָדערונגען</string>
     <string name="projects_request_status_draft">אָנטוואָרף</string>
     <string name="projects_request_status_open">אָפֿן</string>
-    <string name="projects_request_status_merged">merged</string>
-    <string name="projects_request_merge">merge</string>
+    <string name="projects_request_status_merged">צונויפֿגעגאָסן</string>
+    <string name="projects_request_merge">צונויפֿגיסן</string>
     <string name="projects_request_close">פֿאַרמאַכן</string>
-    <string name="projects_request_merge_dialog_title">merge</string>
+    <string name="projects_request_merge_dialog_title">צונויפֿגיסן</string>
     <string name="projects_request_method">מעטאָד</string>
-    <string name="projects_request_method_merge">merge</string>
+    <string name="projects_request_method_merge">צונויפֿגיסן</string>
     <string name="projects_request_field_repository">ריפּאָזיטאָרי</string>
     <string name="projects_request_field_source">מקור־צווײַג</string>
     <string name="projects_request_field_title">קעפּל</string>
@@ -117,7 +117,7 @@
     <string name="projects_class_name">נאָמען</string>
     <string name="projects_class_save_name">אָפּהיטן נאָמען</string>
     <string name="projects_class_title_field">קעפּל־פֿעלד</string>
-    <string name="projects_class_merge_requests">merge־פֿאָדערונגען</string>
+    <string name="projects_class_merge_requests">צונויפֿגיס־פֿאָדערונגען</string>
     <string name="projects_class_fields">פֿעלדער</string>
     <string name="projects_class_add_field">צולייגן פֿעלד</string>
     <string name="projects_class_delete">אויסמעקן קלאַס</string>
@@ -158,9 +158,9 @@
     <string name="projects_more">מער</string>
     <string name="projects_request_more">מער</string>
     <string name="projects_comment_send">שיקן</string>
-    <string name="projects_field_position_body">גוף</string>
+    <string name="projects_field_position_body">אינהאַלט</string>
     <string name="projects_sort_field">סאָרטן לויט</string>
-    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_comment_remove_attachment">אַראָפּנעמען בײַלאַגע</string>
     <string name="projects_views_sort_by">סאָרטן לויט</string>
     <string name="projects_auth_login_failed">לאָגין דורכגעפֿאַלן</string>
     <string name="projects_views_move_up">באַוועגן אַרויף</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">זוכן אָביעקטן</string>
 
     <string name="notification_channel_projects">פּראָיעקטן באַנאָכריכטיקונגען</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi פּראָיעקטן</string>
     <string name="projects_auth_create_identity_failed">ניט געקענט שאַפֿן אידענטיטעט</string>
     <string name="projects_auth_mfa_unsupported">MFA איז נאָך נישט געשטיצט אין מאָבילער אַפּ</string>
     <string name="projects_auth_enter_code_sent">אַרײַנשרײַבן דעם קאָד געשיקט צו %1$s</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">קלייַבט אויס אַ כּלל</string>
     <string name="projects_access_authenticated_desc">יעדער וואָס איז אײַנגעלאָגט</string>
     <string name="projects_access_anyone_desc">אַרײַנגערעכנט אַנאָנימע באַניצער</string>
-    <string name="projects_access_target">ציל</string>
+    <string name="projects_access_target">באַניצער אָדער גרופּע</string>
     <string name="projects_access_target_hint">ענטיטעט־ID, @גרופּע, * (אַלעמען), אָדער + (מיטגלידער)</string>
     <string name="projects_access_selected">אויסגעקליבן: %1$s</string>
     <string name="projects_access_role_comment">קאָמענטירן און זען</string>
@@ -381,5 +381,5 @@
     <string name="projects_option_delete_message">זײַט איר זיכער איר ווילט אױסמעקן די אָפּציע \"%1$s\"?</string>
     <string name="projects_create_object_no_types">קיין עלעמענט טיפּן קענען נאָך ניט זײַן באַשאַפֿן. באַשאַף די נייטיקע עלטערן עלעמענטן ערשט.</string>
     <string name="projects_create_blocked_no_options">מ׳קען נישט שאַפֿן: %1$s איז נייטיק אָבער האָט נישט קיין אויסוואַלן. לייגט צו אויסוואַלן אין דיזײַן.</string>
-    <string name="projects_attachment_remove">Remove attachment</string>
+    <string name="projects_attachment_remove">אַראָפּנעמען בײַלאַגע</string>
 </resources>

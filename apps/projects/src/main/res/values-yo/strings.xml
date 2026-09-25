@@ -86,7 +86,7 @@
     <string name="projects_request_method">Ọ̀nà</string>
     <string name="projects_request_method_merge">Pa pọ̀</string>
     <string name="projects_request_field_repository">Ibi-ìpamọ́</string>
-    <string name="projects_request_field_source">Source branch</string>
+    <string name="projects_request_field_source">Ẹ̀ka orísun</string>
     <string name="projects_request_field_title">Àkọlé</string>
     <string name="projects_request_field_description">Àpèjúwe</string>
     <string name="projects_request_field_draft">Àkọsílẹ̀ àkọ́kọ́</string>
@@ -124,7 +124,7 @@
     <string name="projects_class_delete_title">Pa kíláàsì rẹ́</string>
     <string name="projects_field_type_text">Ọ̀rọ̀</string>
     <string name="projects_field_type_number">Nọ́mbà</string>
-    <string name="projects_field_type_user">User</string>
+    <string name="projects_field_type_user">Olùmúlò</string>
     <string name="projects_field_type_date">Ọjọ́</string>
     <string name="projects_field_type_checklist">Àkọsílẹ̀ àyẹ̀wò</string>
     <string name="projects_field_name">Orúkọ</string>
@@ -160,7 +160,7 @@
     <string name="projects_comment_send">Firanṣẹ</string>
     <string name="projects_field_position_body">Ara</string>
     <string name="projects_sort_field">To nípasẹ̀</string>
-    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_comment_remove_attachment">Yọ àsomọ́ kúrò</string>
     <string name="projects_views_sort_by">To nípasẹ̀</string>
     <string name="projects_auth_login_failed">Iwọle kuna</string>
     <string name="projects_views_move_up">Gbe soke</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Wa awọn ohun</string>
 
     <string name="notification_channel_projects">Ìfitóníléti Àwọn Ìṣẹ́ àkànṣe</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Àwọn iṣẹ́ àkànṣe</string>
     <string name="projects_auth_create_identity_failed">Ìdá ìdánimọ̀ kùnà</string>
     <string name="projects_auth_mfa_unsupported">A kò tíì ṣe àtìlẹyìn fún MFA nínú ohun èlò mòbáìlì</string>
     <string name="projects_auth_enter_code_sent">Tẹ koodu tí a fi ránṣẹ́ sí %1$s</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Yan òfin kan</string>
     <string name="projects_access_authenticated_desc">Ẹnikẹ́ni tí ó ti wọlé</string>
     <string name="projects_access_anyone_desc">Pẹ̀lú àwọn aṣàmúlò aláìlórúkọ</string>
-    <string name="projects_access_target">Ibi àfojúsùn</string>
+    <string name="projects_access_target">Olùmúlò tàbí ẹgbẹ́</string>
     <string name="projects_access_target_hint">ID ẹ̀ka, @ẹgbẹ́, * (gbogbo ènìyàn), tàbí + (àwọn ọmọ ẹgbẹ́)</string>
     <string name="projects_access_selected">Tí a yàn: %1$s</string>
     <string name="projects_access_role_comment">Ṣàlàyé àti wo</string>
@@ -381,5 +381,5 @@
     <string name="projects_option_delete_message">Ṣé o dájú pé o fẹ́ pa àṣàyàn \"%1$s\" rẹ́?</string>
     <string name="projects_create_object_no_types">A kò lè dá oríṣi item kankan sílẹ̀ síbẹ̀. Dá àwọn item òbí tí a nílò sílẹ̀ ní àkọ́kọ́.</string>
     <string name="projects_create_blocked_no_options">A kò lè ṣẹ̀dá: %1$s ni a nílò ṣùgbọ́n kò ní àṣàyàn kankan. Fi àṣàyàn kún ní Àpẹẹrẹ.</string>
-    <string name="projects_attachment_remove">Remove attachment</string>
+    <string name="projects_attachment_remove">Yọ àsomọ́ kúrò</string>
 </resources>

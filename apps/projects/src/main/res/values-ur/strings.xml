@@ -11,7 +11,7 @@
     <string name="projects_create_title">پروجیکٹ بنائیں</string>
     <string name="projects_create_name">نام</string>
     <string name="projects_create_description">تفصیل</string>
-    <string name="projects_create_prefix">prefix</string>
+    <string name="projects_create_prefix">سابقہ</string>
     <string name="projects_create_privacy">پرائیویسی</string>
     <string name="projects_create_private">نجی</string>
     <string name="projects_create_public">عوامی</string>
@@ -33,7 +33,7 @@
     <string name="projects_sort_created">بنایا گیا</string>
     <string name="projects_sort_updated">اپ ڈیٹ ہو گیا</string>
     <string name="projects_create_object_type">قسم</string>
-    <string name="projects_create_object_parent">parent</string>
+    <string name="projects_create_object_parent">پیرنٹ</string>
     <string name="projects_settings_title">سیٹنگز</string>
     <string name="projects_settings_tab_general">عمومی</string>
     <string name="projects_settings_tab_access">رسائی</string>
@@ -55,7 +55,7 @@
     <string name="projects_object_tab_links">لنکس</string>
     <string name="projects_watchers_watch">دیکھیں</string>
     <string name="projects_watchers_unwatch">دیکھنا بند کریں</string>
-    <string name="projects_parent_label">parent</string>
+    <string name="projects_parent_label">پیرنٹ</string>
     <string name="projects_parent_search_placeholder">تلاش کریں</string>
     <string name="projects_links_title">لنکس</string>
     <string name="projects_links_add">لنک شامل کریں</string>
@@ -65,7 +65,7 @@
     <string name="projects_links_type_blocks">بلاک کرتا ہے</string>
     <string name="projects_links_type_blocked_by">بلاک کردہ</string>
     <string name="projects_links_type_duplicates">نقل کرتا ہے</string>
-    <string name="projects_links_no_matches">کوئی matching objects نہیں</string>
+    <string name="projects_links_no_matches">کوئی مماثل آبجیکٹس نہیں</string>
     <string name="projects_field_yes">ہاں</string>
     <string name="projects_field_no">نہیں</string>
     <string name="projects_field_type_checkbox">چیک باکس</string>
@@ -76,15 +76,15 @@
     <string name="projects_property_option_none">کوئی نہیں</string>
     <string name="projects_attachments">اٹیچمنٹس</string>
     <string name="projects_attachment_add">اٹیچمنٹ شامل کریں</string>
-    <string name="projects_request_empty">کوئی merge requests نہیں</string>
+    <string name="projects_request_empty">ضم کرنے کی کوئی درخواستیں نہیں</string>
     <string name="projects_request_status_draft">ڈرافٹ</string>
     <string name="projects_request_status_open">کھلا</string>
     <string name="projects_request_status_merged">merge ہو گیا</string>
-    <string name="projects_request_merge">merge</string>
+    <string name="projects_request_merge">ضم کریں</string>
     <string name="projects_request_close">بند کریں</string>
-    <string name="projects_request_merge_dialog_title">merge</string>
+    <string name="projects_request_merge_dialog_title">ضم کریں</string>
     <string name="projects_request_method">طریقہ</string>
-    <string name="projects_request_method_merge">merge</string>
+    <string name="projects_request_method_merge">ضم کریں</string>
     <string name="projects_request_field_repository">ذخیرہ</string>
     <string name="projects_request_field_source">سورس برانچ</string>
     <string name="projects_request_field_title">عنوان</string>
@@ -93,7 +93,7 @@
     <string name="projects_request_create_action">بنائیں</string>
     <string name="projects_diff_unified">متحد</string>
     <string name="projects_diff_split">تقسیم کریں</string>
-    <string name="projects_diff_empty">کوئی diff دستیاب نہیں</string>
+    <string name="projects_diff_empty">کوئی فرق دستیاب نہیں</string>
     <string name="projects_board_unassigned">غیر تفویض شدہ</string>
     <string name="projects_board_new">نیا</string>
     <string name="projects_board_rename">نام تبدیل کریں</string>
@@ -109,7 +109,7 @@
     <string name="projects_design_tab_views">ویوز</string>
     <string name="projects_design_import_dialog_title">ڈیزائن امپورٹ کریں</string>
     <string name="projects_design_import_choose_template">ٹیمپلیٹ منتخب کریں</string>
-    <string name="projects_design_replace_title">design تبدیل کریں؟</string>
+    <string name="projects_design_replace_title">ڈیزائن تبدیل کریں؟</string>
     <string name="projects_design_replace">بدلیں</string>
     <string name="projects_classes_add">کلاس شامل کریں</string>
     <string name="projects_classes_add_dialog_title">کلاس شامل کریں</string>
@@ -117,7 +117,7 @@
     <string name="projects_class_name">نام</string>
     <string name="projects_class_save_name">نام محفوظ کریں</string>
     <string name="projects_class_title_field">عنوان فیلڈ</string>
-    <string name="projects_class_merge_requests">merge requests</string>
+    <string name="projects_class_merge_requests">ضم کرنے کی درخواستیں</string>
     <string name="projects_class_fields">فیلڈز</string>
     <string name="projects_class_add_field">فیلڈ شامل کریں</string>
     <string name="projects_class_delete">کلاس حذف کریں</string>
@@ -158,7 +158,7 @@
     <string name="projects_more">مزید</string>
     <string name="projects_request_more">مزید</string>
     <string name="projects_comment_send">بھیجیں</string>
-    <string name="projects_field_position_body">متن</string>
+    <string name="projects_field_position_body">مرکزی حصہ</string>
     <string name="projects_sort_field">ترتیب</string>
     <string name="projects_comment_remove_attachment">اٹیچمنٹ ہٹائیں</string>
     <string name="projects_views_sort_by">ترتیب</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">اشیاء تلاش کریں</string>
 
     <string name="notification_channel_projects">پراجیکٹس کی اطلاعات</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi پروجیکٹس</string>
     <string name="projects_auth_create_identity_failed">شناخت بنانے میں ناکامی</string>
     <string name="projects_auth_mfa_unsupported">موبائل ایپ میں MFA ابھی تک معاون نہیں ہے</string>
     <string name="projects_auth_enter_code_sent">%1$s پر بھیجا گیا کوڈ درج کریں</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">ایک اصول منتخب کریں</string>
     <string name="projects_access_authenticated_desc">کوئی بھی جو لاگ ان ہو</string>
     <string name="projects_access_anyone_desc">گمنام صارفین سمیت</string>
-    <string name="projects_access_target">ٹارگٹ</string>
+    <string name="projects_access_target">صارف یا گروپ</string>
     <string name="projects_access_target_hint">اینٹیٹی ID، @گروپ، * (سب)، یا + (ممبران)</string>
     <string name="projects_access_selected">منتخب شدہ: %1$s</string>
     <string name="projects_access_role_comment">تبصرہ اور دیکھیں</string>
@@ -363,7 +363,7 @@
     <string name="projects_settings_unsubscribe_section">پروجیکٹ کی رکنیت ختم کریں</string>
     <string name="projects_share_link_title">پروجیکٹ شیئر کریں</string>
     <string name="projects_sort_filter_title">ترتیب دیں اور فلٹر کریں</string>
-    <string name="projects_create_prefix_hint">%1$s-1، %1$s-2 جیسی پڑھنے کے قابل IDs کے لیے استعمال ہوتا ہے</string>
+    <string name="projects_create_prefix_hint">%1$s-1، %1$s-2 جیسی پڑھنے کے قابل آئی ڈیز کے لیے استعمال ہوتا ہے</string>
     <plurals name="projects_request_conflicts">
         <item quantity="one">%1$d متضاد فائل</item>
         <item quantity="other">%1$d متضاد فائلیں</item>
@@ -379,7 +379,7 @@
     <string name="projects_design_sample">نمونہ %1$d</string>
     <string name="projects_option_delete_title">آپشن حذف کریں</string>
     <string name="projects_option_delete_message">کیا آپ واقعی آپشن \"%1$s\" کو حذف کرنا چاہتے ہیں؟</string>
-    <string name="projects_create_object_no_types">ابھی کوئی item types نہیں بنائے جا سکتے۔ پہلے درکار parent items بنائیں۔</string>
+    <string name="projects_create_object_no_types">ابھی کوئی آئٹم اقسام نہیں بنائی جا سکتیں۔ پہلے درکار پیرنٹ آئٹمز بنائیں۔</string>
     <string name="projects_create_blocked_no_options">بنایا نہیں جا سکتا: %1$s درکار ہے مگر اس میں منتخب کرنے کے لیے کوئی اختیار نہیں۔ ڈیزائن میں اختیارات شامل کریں۔</string>
     <string name="projects_attachment_remove">اٹیچمنٹ ہٹائیں</string>
 </resources>

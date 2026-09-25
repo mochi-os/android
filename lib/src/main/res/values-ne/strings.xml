@@ -38,7 +38,7 @@
     <string name="access_add_rule">नियम थप्नुहोस्</string>
     <string name="access_owner">मालिक</string>
     <string name="access_revoke">रद्द गर्नुहोस्</string>
-    <string name="access_level_comment">टिप्पणी</string>
+    <string name="access_level_comment">टिप्पणी गर्नुहोस्</string>
     <string name="access_level_view">हेर्नुहोस्</string>
     <string name="access_level_none">कुनै पनि होइन</string>
     <string name="reaction_like">मन पर्यो</string>
@@ -201,7 +201,7 @@
     <string name="reauth_signin_text">तपाईं फेरि साइन इन नगरेसम्म सूचनाहरू रोकिएका छन्</string>
     <string name="oem_hint_title">पृष्ठभूमिमा पहुँचयोग्य रहनुहोस्</string>
     <string name="oem_hint_body">सूचनाहरू पुर्‍याउन मोची पृष्ठभूमिमा चल्नुपर्छ। कृपया अर्को स्क्रिनमा यो अनुमति दिनुहोस्, अन्यथा स्क्रिन निभेको बेला तपाईंको फोनले सूचनाहरू रोक्न सक्छ।</string>
-    <string name="oem_hint_samsung_note">स्यामसङ फोनहरूमा, Settings → Device care → Sleeping apps पनि जाँच गर्नुहोस् र सूचीमा भए मोचीलाई हटाउनुहोस्।</string>
+    <string name="oem_hint_samsung_note">स्यामसङ फोनहरूमा, सेटिङहरू → उपकरण हेरचाह → सुतिरहेका एपहरू पनि जाँच गर्नुहोस् र सूचीमा भए Mochi लाई हटाउनुहोस्।</string>
     <string name="oem_hint_allow">पृष्ठभूमि अनुमति दिनुहोस्</string>
     <string name="oem_hint_dismiss">फेरि नदेखाउनुहोस्</string>
     <string name="about_title">मोची क्लाइन्ट</string>
@@ -225,7 +225,7 @@
     <string name="stepup_description">यो तपाईंको खातामा सुरक्षा परिवर्तन हो। जारी राख्न तपाईं नै हो भनी पुष्टि गर्नुहोस्।</string>
     <string name="stepup_email_label">इमेल कोड</string>
     <string name="stepup_email_placeholder">तपाईंको इमेलमा आएको कोड प्रविष्ट गर्नुहोस्</string>
-    <string name="stepup_totp_label">Authenticator कोड</string>
+    <string name="stepup_totp_label">अथेन्टिकेटर कोड</string>
     <string name="stepup_totp_placeholder">आफ्नो प्रमाणक कोड हाल्नुहोस्</string>
     <string name="stepup_use_passkey">आफ्नो पासकी प्रयोग गर्नुहोस्</string>
     <string name="stepup_send_email">इमेल पठाउनुहोस्</string>

@@ -163,7 +163,6 @@
     <string name="staff_sidebar_categories">分類</string>
 
     <string name="app_name">員工</string>
-    <string name="launcher_staff">Mochi 員工</string>
     <string name="staff_accounts_action_unban_title">解除封禁</string>
     <string name="staff_accounts_action_unsuspend_title">解除停權</string>
     <string name="staff_accounts_ban">封禁</string>

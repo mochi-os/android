@@ -10,7 +10,7 @@
     <string name="calendars_delete">Susa</string>
     <string name="calendars_previous">Okwedlule</string>
     <string name="calendars_next">Okulandelayo</string>
-    <string name="calendars_view">Buka</string>
+    <string name="calendars_view">Umbukiso</string>
     <string name="calendars_view_list">Uhla</string>
     <string name="calendars_list_search">Sesha</string>
     <string name="calendars_event_untitled">Akunasihloko</string>
@@ -169,7 +169,7 @@
     <string name="calendars_subscribe_server_url">Ikheli leseva</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google Khalenda</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Ama-akhawunti e-Google awavuliwe kule seva. Wavule ku-Izilungiselelo, Izilungiselelo zesistimu.</string>
     <string name="calendars_subscribe_google_connect">Awukaxhumi i-akhawunti ye-Google.</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Маркет</string>
+    <string name="app_name">Зах зээл</string>
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_label">Намтар</string>
     <string name="market_account_biography_placeholder">Худалдан авагчдад өөрийнхөө тухай хэлээрэй…</string>
@@ -74,7 +74,7 @@
     <string name="market_bids_your_bid">Таны санал: %1$s</string>
     <string name="market_carousel_main">Зураг %1$d/%2$d</string>
     <string name="market_carousel_thumbnail">Жижиг зураг %1$d</string>
-    <string name="market_channel_name">Маркет</string>
+    <string name="market_channel_name">Зах зээл</string>
     <string name="market_chargeback_reason_bank_cannot_process">Банк боловсруулж чадсангүй</string>
     <string name="market_chargeback_reason_check_returned">Шалгалт буцсан</string>
     <string name="market_chargeback_reason_credit_not_processed">Кредит боловсруулагдаагүй</string>
@@ -101,7 +101,7 @@
     <string name="market_checkout_browser_unavailable">Төлбөрийн хуудас нээх хөтөч байхгүй</string>
     <string name="market_checkout_buy_it_now">Одоо худалдан авах</string>
     <string name="market_checkout_create_failed">Захиалга үүсгэж чадсангүй</string>
-    <string name="market_checkout_delivery_download">Татах</string>
+    <string name="market_checkout_delivery_download">Татан авалт</string>
     <string name="market_checkout_delivery_method">Хүргэлтийн арга</string>
     <string name="market_checkout_delivery_pickup">Авах</string>
     <string name="market_checkout_delivery_shipping">Хүргэлт</string>
@@ -109,7 +109,7 @@
     <string name="market_checkout_item">Зүйл</string>
     <string name="market_checkout_listing_not_found">Зар олдсонгүй</string>
     <string name="market_checkout_pay_button">Stripe-ээр төлөх</string>
-    <string name="market_checkout_payment_failed">Төлбөрийн checkout эхлээгүй — худалдагч төлбөрийн тохиргоог дуусгаагүй байж магадгүй</string>
+    <string name="market_checkout_payment_failed">Төлбөр төлөлт эхлээгүй — худалдагч төлбөрийн тохиргоог дуусгаагүй байж магадгүй</string>
     <string name="market_checkout_processing">Боловсруулж байна…</string>
     <string name="market_checkout_pwyw_label">Таны үнэ (доод тал нь %1$s)</string>
     <string name="market_checkout_pwyw_min_error">Дүн хамгийн багадаа %1$s байх ёстой</string>
@@ -161,7 +161,7 @@
     <string name="market_editor_back">Буцах</string>
     <string name="market_editor_category">Ангилал</string>
     <string name="market_editor_category_none">Ангилал сонгох</string>
-    <string name="market_editor_condition">Нөхцөл</string>
+    <string name="market_editor_condition">Байдал</string>
     <string name="market_editor_condition_new">Шинэ</string>
     <string name="market_editor_condition_refurbished">Сэргээгдсэн</string>
     <string name="market_editor_condition_used">Хэрэглэсэн</string>
@@ -260,12 +260,12 @@
     <string name="market_filter_chip_max">Дээд %1$s</string>
     <string name="market_filter_chip_min">Доод %1$s</string>
     <string name="market_filter_clear">Шүүлтүүрүүдийг арилгах</string>
-    <string name="market_filter_condition">Нөхцөл</string>
+    <string name="market_filter_condition">Байдал</string>
     <string name="market_filter_condition_new">Шинэ</string>
     <string name="market_filter_condition_refurbished">Сэргээгдсэн</string>
     <string name="market_filter_condition_used">Хэрэглэсэн</string>
     <string name="market_filter_delivery">Хүргэлт</string>
-    <string name="market_filter_delivery_download">Татах</string>
+    <string name="market_filter_delivery_download">Татан авалт</string>
     <string name="market_filter_delivery_pickup">Авах</string>
     <string name="market_filter_delivery_shipping">Хүргэлт</string>
     <string name="market_filter_open">Шүүлтүүр</string>
@@ -304,7 +304,7 @@
     <string name="market_listing_detail_loading">Зар ачааллаж байна</string>
     <string name="market_listing_detail_listed">Нийтэлсэн %1$s</string>
     <string name="market_listing_detail_location_heading">Байршил</string>
-    <string name="market_listing_detail_message">Зурвас</string>
+    <string name="market_listing_detail_message">Зурвас илгээх</string>
     <string name="market_listing_detail_message_seller">Худалдагчид мессеж</string>
     <string name="market_listing_detail_not_found">Зар олдсонгүй</string>
     <string name="market_listing_detail_place_bid">Санал гаргах</string>
@@ -365,8 +365,8 @@
     <string name="market_messages_thread_listing_chip">Зар</string>
     <string name="market_messages_thread_title">Яриа</string>
     <string name="market_messages_unread_badge">%1$d уншаагүй</string>
-    <string name="market_onboarding_activate">Activate</string>
-    <string name="market_onboarding_activating">Activating…</string>
+    <string name="market_onboarding_activate">Идэвхжүүлэх</string>
+    <string name="market_onboarding_activating">Идэвхжүүлж байна…</string>
     <string name="market_onboarding_body">Худалдан авалт, борлуулалтыг эхлүүлэхийн тулд бүртгэлээ идэвхжүүлнэ үү.</string>
     <string name="market_onboarding_dismiss">Болих</string>
     <string name="market_onboarding_title">Market-д тавтай морил</string>
@@ -505,7 +505,7 @@
     <string name="market_sale_completed_label">Гүйцэтгэсэн</string>
     <string name="market_sale_dispute_evidence_due">Нотлох баримтын хугацаа %1$s</string>
     <string name="market_sale_dispute_respond">Хариулах</string>
-    <string name="market_sale_dispute_state_open">Нээх</string>
+    <string name="market_sale_dispute_state_open">Нээлттэй</string>
     <string name="market_sale_dispute_state_resolved">Шийдвэрлэгдсэн</string>
     <string name="market_sale_dispute_state_responded">Шийдвэр хүлээж байна</string>
     <string name="market_sale_dispute_stripe_reason">Stripe буцаалтын шалтгаан: %1$s</string>
@@ -566,7 +566,7 @@
     <string name="market_sidebar_browse">Үзэх</string>
     <string name="market_sidebar_buying">Худалдан авах</string>
     <string name="market_sidebar_home">Нүүр</string>
-    <string name="market_sidebar_inbox">Inbox</string>
+    <string name="market_sidebar_inbox">Ирсэн захиа</string>
     <string name="market_sidebar_listings">Зарууд</string>
     <string name="market_sidebar_messages">Мессежүүд</string>
     <string name="market_sidebar_purchases">Худалдан авалтууд</string>
@@ -601,18 +601,18 @@
     <string name="market_subscribers_interval_year">/ жил</string>
     <string name="market_subscribers_load_failed">Захиалагчдыг ачаалж чадсангүй</string>
     <string name="market_subscribers_title">Миний бүртгэлчид</string>
-    <string name="market_subscription_detail_billing_history">Billing history</string>
+    <string name="market_subscription_detail_billing_history">Төлбөрийн түүх</string>
     <string name="market_subscription_detail_billing_history_empty">Одоогоор төлбөр байхгүй.</string>
-    <string name="market_subscription_detail_billing_info">Billing</string>
-    <string name="market_subscription_detail_cancelled_on">Cancelled on %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Latest charge: %1$s</string>
+    <string name="market_subscription_detail_billing_info">Төлбөр тооцоо</string>
+    <string name="market_subscription_detail_cancelled_on">Цуцалсан: %1$s</string>
+    <string name="market_subscription_detail_charge_amount">Сүүлийн төлбөр: %1$s</string>
     <string name="market_subscription_detail_listing">Зар</string>
     <string name="market_subscription_detail_load_failed">Захиалгыг ачаалж чадсангүй</string>
     <string name="market_subscription_detail_next_billing">Дараагийн төлбөрийн огноо: %1$s</string>
     <string name="market_subscription_detail_not_found">Захиалга олдсонгүй</string>
-    <string name="market_subscription_detail_pending_cancel">Cancellation pending</string>
+    <string name="market_subscription_detail_pending_cancel">Цуцлалт хүлээгдэж байна</string>
     <string name="market_subscription_detail_seller">Худалдагч</string>
-    <string name="market_subscription_detail_started">Started %1$s</string>
+    <string name="market_subscription_detail_started">Эхэлсэн: %1$s</string>
     <string name="market_subscription_detail_title">Захиалга</string>
     <string name="market_subscriptions_action_cancel">Цуцлах</string>
     <string name="market_subscriptions_action_pause">Түр зогсоох</string>
@@ -638,7 +638,7 @@
     <string name="market_subscriptions_resume_failed">Үргэлжлүүлж чадсангүй</string>
     <string name="market_subscriptions_resumed">Захиалга үргэлжилсэн</string>
     <string name="market_subscriptions_title">Захиалгууд</string>
-    <string name="market_title">Маркет</string>
+    <string name="market_title">Зах зээл</string>
     <string name="market_type_digital">Дижитал</string>
     <string name="market_type_physical">Бодит биет</string>
     <string name="market_warnings_title">Анхааруулга</string>
@@ -689,7 +689,7 @@
     <string name="market_seller_step_activate_title">Худалдагчийн бүртгэлийг идэвхжүүлэх</string>
     <string name="market_seller_step_stripe_desc">Худалдан авагчдаас төлбөр хүлээн авахын тулд Stripe бүртгэлийг холбоно уу</string>
     <string name="market_seller_step_stripe_title">Stripe-тай холбох</string>
-    <string name="market_seller_stripe_more_info">Stripe нь төлбөр хүлээн авахаас өмнө илүү мэдээлэл шаардаж байна. Stripe Dashboard дээр шаардлагуудыг хангаад дараа нь Төлөв шалгах товчийг дар.</string>
+    <string name="market_seller_stripe_more_info">Stripe нь төлбөр хүлээн авахаас өмнө илүү мэдээлэл шаардаж байна. Stripe-ийн хяналтын самбар дээр шаардлагуудыг хангаад дараа нь Төлөв шалгах товчийг дар.</string>
     <string name="market_seller_summary_account_status">Бүртгэлийн төлөв</string>
     <string name="market_seller_summary_fees">Хураамж</string>
     <string name="market_seller_summary_payments">Төлбөр</string>
@@ -750,9 +750,9 @@
     <string name="market_audit_listing_updated">Зар засагдсан</string>
     <string name="market_audit_listing_warning">Сануулга өгсөн</string>
     <string name="market_audit_order_cancelled">Цуцалсан</string>
-    <string name="market_audit_order_chargeback">Chargeback хүлээн авсан</string>
-    <string name="market_audit_order_chargeback_lost">Chargeback хүчинтэй</string>
-    <string name="market_audit_order_chargeback_won">Chargeback цуцлагдсан</string>
+    <string name="market_audit_order_chargeback">Төлбөр буцаалт хүлээн авсан</string>
+    <string name="market_audit_order_chargeback_lost">Төлбөр буцаалт хүчинтэй</string>
+    <string name="market_audit_order_chargeback_won">Төлбөр буцаалт цуцлагдсан</string>
     <string name="market_audit_order_completed">Гүйцэтгэсэн</string>
     <string name="market_audit_order_created">Захиалга өгөгдсөн</string>
     <string name="market_audit_order_paid">Төлбөр хүлээн авсан</string>
@@ -770,9 +770,9 @@
     <string name="market_audit_subscription_activated">Захиалга идэвхжсэн</string>
     <string name="market_audit_subscription_cancel_scheduled">Цуцлах төлөвлөгдсөн</string>
     <string name="market_audit_subscription_cancelled">Цуцалсан</string>
-    <string name="market_audit_subscription_chargeback">Chargeback хүлээн авсан</string>
-    <string name="market_audit_subscription_chargeback_lost">Chargeback хүчинтэй</string>
-    <string name="market_audit_subscription_chargeback_won">Chargeback цуцлагдсан</string>
+    <string name="market_audit_subscription_chargeback">Төлбөр буцаалт хүлээн авсан</string>
+    <string name="market_audit_subscription_chargeback_lost">Төлбөр буцаалт хүчинтэй</string>
+    <string name="market_audit_subscription_chargeback_won">Төлбөр буцаалт цуцлагдсан</string>
     <string name="market_audit_subscription_created">Захиалга үүсгэгдсэн</string>
     <string name="market_audit_subscription_past_due">Төлбөр хугацаа хэтэрсэн</string>
     <string name="market_audit_subscription_paused">Түр зогссон</string>

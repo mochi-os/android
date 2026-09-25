@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Открыть навигацию</string>
     <string name="people_person_state_friend">Друзья</string>
     <string name="people_person_state_self">Вы</string>
-    <string name="people_person_message">Сообщение</string>
+    <string name="people_person_message">Написать</string>
     <string name="people_person_accept">Принять</string>
     <string name="people_person_decline">Отклонить</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Принять все</string>
     <string name="people_invitations_decline_all">Отклонить все</string>
     <string name="people_invitations_cancel_all">Отменить все</string>
+    <string name="people_invitations_cancel">Отменить</string>
     <string name="people_invitations_all_accepted">Все приглашения приняты</string>
     <string name="people_invitations_all_declined">Все приглашения отклонены</string>
     <string name="people_invitations_all_cancelled">Все приглашения отменены</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Поиск…</string>
     <string name="people_contacts_invited">Приглашение отправлено</string>
     <string name="people_contacts_accept">Принять</string>
-    <string name="people_contacts_message">Сообщение</string>
+    <string name="people_contacts_message">Написать</string>
     <string name="people_contacts_no_people_found">Люди не найдены</string>
     <string name="people_contacts_try_adjusting">Попробуйте изменить параметры поиска</string>
     <string name="people_contact_section_address">Адрес</string>

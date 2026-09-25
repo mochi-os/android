@@ -52,13 +52,13 @@
     <string name="people_profile_name">Sutin</string>
     <string name="people_profile_name_saved">Sutin waqaychasqa</string>
     <string name="people_profile_edit_name">Sutita hukchay</string>
-    <string name="people_profile_identity">Identity</string>
+    <string name="people_profile_identity">Kikinchakuy</string>
     <string name="people_profile_accent">Llinp\'i</string>
     <string name="people_profile_directory_listing">Hukkuna directorio-pi tarisuchun saqiy</string>
     <string name="people_profile_markdown_supported">Markdown haypaqsi</string>
     <string name="people_profile_preview">Ñawpaq qhaway</string>
     <string name="people_profile_upload_avatar">Avatar upload</string>
-    <string name="people_profile_upload">Upload</string>
+    <string name="people_profile_upload">Wichachiy</string>
     <string name="people_profile_uploading">Uploadchkan…</string>
     <string name="people_profile_change_banner">Banner tikray</string>
     <string name="people_profile_no_banner">Mana banner churasqa</string>
@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Navegacionta kichay</string>
     <string name="people_person_state_friend">Masikuna</string>
     <string name="people_person_state_self">Qan</string>
-    <string name="people_person_message">Willakuy</string>
+    <string name="people_person_message">Willakuyta apachiy</string>
     <string name="people_person_accept">Chaskiy</string>
     <string name="people_person_decline">Mana chaskiy</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Llapanta chaskiy</string>
     <string name="people_invitations_decline_all">Llapanta mana chaskiy</string>
     <string name="people_invitations_cancel_all">Llapanta wikch\'uy</string>
+    <string name="people_invitations_cancel">Mana ruway</string>
     <string name="people_invitations_all_accepted">Llapan minkakuykuna chaskisqa</string>
     <string name="people_invitations_all_declined">Llapan minkakuykuna mana chaskisqa</string>
     <string name="people_invitations_all_cancelled">Llapan minkakuykuna wikch\'usqa</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Maskay…</string>
     <string name="people_contacts_invited">Mink\'asqa</string>
     <string name="people_contacts_accept">Chaskiy</string>
-    <string name="people_contacts_message">Willakuy</string>
+    <string name="people_contacts_message">Willakuyta apachiy</string>
     <string name="people_contacts_no_people_found">Mana runakuna tarisqachu</string>
     <string name="people_contacts_try_adjusting">Maskayniykita allichayta ruway</string>
     <string name="people_contact_section_address">Dirección</string>
@@ -127,7 +128,7 @@
     <string name="people_contact_email">Email</string>
     <string name="people_contact_city">Llaqta</string>
     <string name="people_contact_region">Suyu</string>
-    <string name="people_contact_postcode">Postcode</string>
+    <string name="people_contact_postcode">Código postal</string>
     <string name="people_contact_country">Llaqta</string>
     <string name="people_contact_type">Layan</string>
     <string name="people_contact_type_home">Wasi</string>

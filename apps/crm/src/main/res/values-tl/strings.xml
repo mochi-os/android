@@ -28,7 +28,7 @@
     <string name="crm_create_object_type">Uri</string>
     <string name="crm_create_object_parent">Magulang</string>
     <string name="crm_settings_title">Mga setting</string>
-    <string name="crm_settings_tab_general">General</string>
+    <string name="crm_settings_tab_general">Pangkalahatan</string>
     <string name="crm_settings_tab_access">Access</string>
     <string name="crm_settings_tab_people">Mga Tao</string>
     <string name="crm_option_icon">Icon</string>
@@ -122,13 +122,13 @@
     <string name="crm_views_direction">Direksyon</string>
     <string name="crm_views_sort_created">Nagawa</string>
     <string name="crm_views_sort_updated">Na-update</string>
-    <string name="crm_views_sort_rank">Rank</string>
+    <string name="crm_views_sort_rank">Ranggo</string>
     <string name="crm_not_found">Hindi nahanap ang proyekto</string>
     <string name="crm_more">Higit pa</string>
     <string name="crm_comment_send">Ipadala</string>
     <string name="crm_field_position_body">Nilalaman</string>
     <string name="crm_sort_field">Pagbukud-bukurin ayon sa</string>
-    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_comment_remove_attachment">Alisin ang attachment</string>
     <string name="crm_views_sort_by">Pagbukud-bukurin ayon sa</string>
     <string name="crm_views_move_up">Ilipat pataas</string>
     <string name="crm_class_move_up">Ilipat pataas</string>
@@ -224,7 +224,7 @@
     <string name="crm_views_empty">Walang naitakdang view</string>
     <string name="crm_views_empty_subtitle">Gumawa ng board o list view upang pagpangkatin ang mga object</string>
     <string name="crm_views_delete_message">Sigurado ka bang gusto mong tanggalin ang view na \"%1$s\"?</string>
-    <string name="crm_views_columns_field">Columns field</string>
+    <string name="crm_views_columns_field">Field ng mga column</string>
     <string name="crm_views_rows_field">Rows field (mga swimlane)</string>
     <string name="crm_views_border_field">Field ng kulay ng border</string>
     <string name="crm_views_filter_classes">I-filter ayon sa klase</string>
@@ -241,7 +241,7 @@
     <string name="crm_access_no_groups">Walang available na grupo</string>
     <string name="crm_access_tab_users">Mga user</string>
     <string name="crm_access_tab_groups">Mga group</string>
-    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_attachment_remove">Alisin ang attachment</string>
     <string name="crm_board_add_column">Magdagdag ng column</string>
     <string name="crm_settings_entity_id">Entity ID</string>
     <string name="crm_settings_fingerprint">Fingerprint</string>

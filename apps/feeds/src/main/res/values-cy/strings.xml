@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="feeds_title">Ffrydiau</string>
+    <string name="feeds_title">Llifoedd</string>
     <string name="feeds_find_feeds">Dod o hyd i ffrydiau</string>
     <string name="feeds_create_feed">Creu porthiant</string>
     <string name="feeds_new_post">Postiad newydd</string>
@@ -14,13 +14,13 @@
     <string name="feeds_no_posts_yet">Dim postiadau eto</string>
     <string name="feeds_sort_label">Trefnu</string>
     <string name="feeds_sort_interests">Diddordebau</string>
-    <string name="feeds_sort_new">Newydd</string>
+    <string name="feeds_sort_new">Diweddaraf</string>
     <string name="feeds_sort_hot">Poeth</string>
-    <string name="feeds_sort_top">Brig</string>
+    <string name="feeds_sort_top">Gorau</string>
     <string name="feeds_sort_ai">AI</string>
-    <string name="feeds_post_default_author">Postio</string>
+    <string name="feeds_post_default_author">Postiad</string>
     <string name="feeds_image_preview">Rhagolwg</string>
-    <string name="feeds_post">Postio</string>
+    <string name="feeds_post">Postiad</string>
     <string name="feeds_comments">Sylwadau</string>
     <string name="feeds_delete_post">Dileu postiad</string>
     <string name="feeds_delete_comment">Dileu sylw</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Allgofnodi</string>
     <string name="feeds_ai_account_default">Cyfrif diofyn</string>
     <string name="feeds_ai_mode_off">Wedi\'i analluogi</string>
-    <string name="feeds_ai_mode_tag">Tag</string>
+    <string name="feeds_ai_mode_tag">Tagio</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tagio + dad-ddyblygu</string>
     <string name="feeds_feed_not_found">Ni chanfuwyd y ffrwd</string>
     <string name="feeds_post_not_found">Heb ddod o hyd i\'r postiad</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Diddordeb wedi\'i leihau</string>
     <string name="feeds_interest_removed">Diddordeb wedi\'i ddileu</string>
     <string name="feeds_interest_failed">Methwyd addasu diddordeb</string>
-    <string name="feeds_saved_title">Wedi\'i gadw</string>
-    <string name="feeds_saved_menu">Wedi\'i gadw</string>
+    <string name="feeds_saved_title">Cadwedig</string>
+    <string name="feeds_saved_menu">Cadwedig</string>
     <string name="feeds_saved_save">Cadw at nes ymlaen</string>
     <string name="feeds_saved_remove">Tynnu o\'r cadwedig</string>
     <string name="feeds_saved_clear_all">Clirio popeth</string>

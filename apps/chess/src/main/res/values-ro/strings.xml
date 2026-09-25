@@ -13,7 +13,7 @@
     <string name="chess_new_title">Joc nou</string>
     <string name="chess_new_pick_opponent">Alege adversarul</string>
     <string name="chess_new_no_friends_title">Încă niciun prieten</string>
-    <string name="chess_new_no_friends_subtitle">Adaugă prieteni în aplicația People pentru a începe să joci</string>
+    <string name="chess_new_no_friends_subtitle">Adaugă prieteni în aplicația Persoane pentru a începe să joci</string>
     <string name="chess_new_add_friends">Adaugă prieteni</string>
     <string name="chess_new_start_button">Începe jocul</string>
     <string name="chess_new_creating">Se creează…</string>

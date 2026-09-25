@@ -62,7 +62,7 @@
     <string name="people_profile_uploading">Olfe\'aa jira…</string>
     <string name="people_profile_change_banner">Bannerii jijjiiri</string>
     <string name="people_profile_no_banner">Bannariin qabame hin jiru</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">Mallattoo marsariitii</string>
     <string name="people_profile_browser_icon">Mallattoo barreessaa</string>
     <string name="people_profile_file_too_large">Faayiliin guddaa</string>
     <string name="people_profile_clear">Cilliisi</string>
@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Naviigeeshinii bani</string>
     <string name="people_person_state_friend">Hiriyoota</string>
     <string name="people_person_state_self">Ati</string>
-    <string name="people_person_message">Ergaa</string>
+    <string name="people_person_message">Ergaa ergi</string>
     <string name="people_person_accept">Fudhadhu</string>
     <string name="people_person_decline">Dhiisi</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Hunda fudhadhu</string>
     <string name="people_invitations_decline_all">Hunda diddu</string>
     <string name="people_invitations_cancel_all">Hunda haqi</string>
+    <string name="people_invitations_cancel">Addaan kuti</string>
     <string name="people_invitations_all_accepted">Afeerraawwan hundi fudhataman</string>
     <string name="people_invitations_all_declined">Afeerraawwan hundi diidaman</string>
     <string name="people_invitations_all_cancelled">Afeerraawwan hundi haqaman</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Barbaadi…</string>
     <string name="people_contacts_invited">Afeerameera</string>
     <string name="people_contacts_accept">Fudhadhu</string>
-    <string name="people_contacts_message">Ergaa</string>
+    <string name="people_contacts_message">Ergaa ergi</string>
     <string name="people_contacts_no_people_found">Namoonni hin argamne</string>
     <string name="people_contacts_try_adjusting">Barbaacha kee sirreessuu yaali</string>
     <string name="people_contact_section_address">Teessoo</string>

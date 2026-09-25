@@ -13,7 +13,7 @@
     <string name="chess_new_title">Nytt spel</string>
     <string name="chess_new_pick_opponent">Välj motståndare</string>
     <string name="chess_new_no_friends_title">Inga vänner ännu</string>
-    <string name="chess_new_no_friends_subtitle">Lägg till vänner i People-appen för att börja spela</string>
+    <string name="chess_new_no_friends_subtitle">Lägg till vänner i appen Personer för att börja spela</string>
     <string name="chess_new_add_friends">Lägg till vänner</string>
     <string name="chess_new_start_button">Starta spel</string>
     <string name="chess_new_creating">Skapar…</string>

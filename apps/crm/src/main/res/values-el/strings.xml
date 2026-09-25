@@ -217,7 +217,7 @@
     <string name="crm_field_min_length">Ελάχιστο μήκος</string>
     <string name="crm_field_max_length">Μέγιστο μήκος</string>
     <string name="crm_field_pattern">Μοτίβο (regex)</string>
-    <string name="crm_field_rows">Γραμμές (ύψος textarea)</string>
+    <string name="crm_field_rows">Γραμμές (ύψος πεδίου κειμένου)</string>
     <string name="crm_field_no_options">Δεν έχουν οριστεί επιλογές</string>
     <string name="crm_field_delete_message">Είστε βέβαιοι ότι θέλετε να διαγράψετε το πεδίο \"%1$s\"; Όλες οι επιλογές και οι τιμές θα χαθούν.</string>
     <string name="crm_option_color">Χρώμα</string>

@@ -3,7 +3,7 @@
 
     <string name="forums_auth_display_name">የማሳያ ስም</string>
     <string name="forums_auth_verification_failed">ማረጋገጫ አልተሳካም</string>
-    <string name="forums_list_title">ፎረሞች</string>
+    <string name="forums_list_title">መድረኮች</string>
     <string name="forums_list_find">ፎረሞችን ፈልግ</string>
     <string name="forums_list_logout">ውጣ</string>
     <string name="forums_list_unsubscribe">ምዝገባ ያቋርጡ</string>
@@ -24,13 +24,13 @@
     <string name="forums_settings">ቅንብሮች</string>
     <string name="forums_load_more">ተጨማሪ ጫን</string>
     <string name="forums_sort_label">ይደርድሩ</string>
-    <string name="forums_sort_new">አዲስ</string>
+    <string name="forums_sort_new">አዳዲስ</string>
     <string name="forums_sort_hot">ሞቅ ያለ</string>
-    <string name="forums_sort_top">ላይ</string>
+    <string name="forums_sort_top">ምርጥ</string>
     <string name="forums_sort_interests">ፍላጎቶች</string>
     <string name="forums_post_title_field">ርዕስ</string>
     <string name="forums_post_attach">ፋይሎችን አያይዝ</string>
-    <string name="forums_post_create_action">ልጥፍ</string>
+    <string name="forums_post_create_action">ለጥፍ</string>
     <string name="forums_post_edit">ልጥፍ አስተካክል</string>
     <string name="forums_post_edit_title">ልጥፍ አስተካክል</string>
     <string name="forums_post_edit_title_field">ርዕስ</string>
@@ -48,26 +48,26 @@
     <string name="forums_post_approve">አጽድቅ</string>
     <string name="forums_post_remove">አስወግድ</string>
     <string name="forums_post_restore">ይመልሱ</string>
-    <string name="forums_post_report">ሪፖርት</string>
+    <string name="forums_post_report">ሪፖርት አድርግ</string>
     <string name="forums_comment_approve">አጽድቅ</string>
     <string name="forums_comment_remove">አስወግድ</string>
     <string name="forums_comment_restore">ይመልሱ</string>
-    <string name="forums_comment_report">ሪፖርት</string>
+    <string name="forums_comment_report">ሪፖርት አድርግ</string>
     <string name="forums_post_tag_label">መለያ</string>
     <string name="forums_tab_general">አጠቃላይ</string>
     <string name="forums_tab_access">መዳረሻ</string>
     <string name="forums_tab_members">አባላት</string>
     <string name="forums_tab_banner">ሰንደቅ</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">ዒላማ</string>
+    <string name="forums_access_target">ተጠቃሚ ወይም ቡድን</string>
     <string name="forums_access_level_view">ይመልከቱ</string>
     <string name="forums_access_level_vote">ድምፅ ይስጡ</string>
-    <string name="forums_access_level_comment">አስተያየት</string>
-    <string name="forums_access_level_post">ልጥፍ</string>
+    <string name="forums_access_level_comment">አስተያየት ስጥ</string>
+    <string name="forums_access_level_post">ለጥፍ</string>
     <string name="forums_access_level_none">ምንም</string>
     <string name="forums_members_empty">ምንም አባላት የሉም</string>
     <string name="forums_banner_dismiss">ባነሩን አጥፋ</string>
-    <string name="forums_ai_mode_tag">መለያ</string>
+    <string name="forums_ai_mode_tag">መለያ መስጠት</string>
     <string name="forums_ai_account_default">ነባሪ መለያ</string>
     <string name="forums_ai_prompt_reset">ወደ ነባሪ ዳግም አስጀምር</string>
     <string name="forums_settings_unsubscribe">ምዝገባ ያቋርጡ</string>
@@ -80,7 +80,7 @@
     <string name="forums_moderation_reports_resolved">ተፈትቷል</string>
     <string name="forums_moderation_reports_all">ሁሉም</string>
     <string name="forums_moderation_reports_empty">ምንም ሪፖርቶች የሉም</string>
-    <string name="forums_moderation_report_dismiss">አጥፋ</string>
+    <string name="forums_moderation_report_dismiss">ውድቅ ያድርጉ</string>
     <string name="forums_moderation_restrictions_empty">ምንም ገደቦች የሉም</string>
     <string name="forums_moderation_restriction_remove">አስወግድ</string>
     <string name="forums_moderation_restriction_type">አይነት</string>
@@ -124,7 +124,7 @@
     <string name="forums_comment_send">ላክ</string>
 
     <string name="notification_channel_forums">የመድረኮች ማሳወቂያዎች</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi መድረኮች</string>
     <string name="forums_auth_login_failed">መግባት አልተሳካም</string>
     <string name="forums_auth_create_identity_failed">ማንነት መፍጠር አልተሳካም</string>
     <string name="forums_auth_mfa_unsupported">MFA በሞባይል መተግበሪያ ላይ ገና አይደገፍም</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">በእጅ</string>
     <string name="forums_access_search_users">ተጠቃሚዎችን ይፈልጉ</string>
     <string name="forums_access_no_groups">ምንም ቡድኖች የሉም</string>
-    <string name="forums_saved_title">ተቀምጧል</string>
+    <string name="forums_saved_title">የተቀመጡ</string>
     <string name="forums_saved_save">ለኋላ አስቀምጥ</string>
     <string name="forums_saved_remove">ከተቀመጡ አስወግድ</string>
     <string name="forums_saved_clear_all">ሁሉንም አጽዳ</string>

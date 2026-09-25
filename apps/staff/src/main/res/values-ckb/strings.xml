@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">ستاف</string>
+    <string name="launcher_staff">ستافی Mochi</string>
     <string name="staff_accounts_action_ban_title">بلۆککردنی هەژمار</string>
     <string name="staff_accounts_action_suspend_title">هەژمار ڕابگرە</string>
     <string name="staff_accounts_action_unban_title">لابردنی قەدەغەکردن</string>
@@ -91,9 +91,9 @@
     <string name="staff_audit_action_listing_updated">ناونووسکراو دەستکاری کرا</string>
     <string name="staff_audit_action_listing_warning">ئاگادارکردنەوە دەرکرا</string>
     <string name="staff_audit_action_order_cancelled">هەڵوەشێنرایەوە</string>
-    <string name="staff_audit_action_order_chargeback">Chargeback وەرگیرا</string>
-    <string name="staff_audit_action_order_chargeback_lost">Chargeback پشتگیری کرا</string>
-    <string name="staff_audit_action_order_chargeback_won">Chargeback ڕەتکرایەوە</string>
+    <string name="staff_audit_action_order_chargeback">گەڕاندنەوەی پارە وەرگیرا</string>
+    <string name="staff_audit_action_order_chargeback_lost">گەڕاندنەوەی پارە پشتگیری کرا</string>
+    <string name="staff_audit_action_order_chargeback_won">گەڕاندنەوەی پارە ڕەتکرایەوە</string>
     <string name="staff_audit_action_order_completed">تەواوبوو</string>
     <string name="staff_audit_action_order_created">داواکاری دانرا</string>
     <string name="staff_audit_action_order_paid">پارە وەرگیرا</string>
@@ -114,9 +114,9 @@
     <string name="staff_audit_action_subscription_active">گەڕایەوە بۆ چالاک</string>
     <string name="staff_audit_action_subscription_cancel_scheduled">هەڵوەشاندنەوە کاتدارکرا</string>
     <string name="staff_audit_action_subscription_cancelled">هەڵوەشێنرایەوە</string>
-    <string name="staff_audit_action_subscription_chargeback">Chargeback وەرگیرا</string>
-    <string name="staff_audit_action_subscription_chargeback_lost">Chargeback پشتگیری کرا</string>
-    <string name="staff_audit_action_subscription_chargeback_won">Chargeback ڕەتکرایەوە</string>
+    <string name="staff_audit_action_subscription_chargeback">گەڕاندنەوەی پارە وەرگیرا</string>
+    <string name="staff_audit_action_subscription_chargeback_lost">گەڕاندنەوەی پارە پشتگیری کرا</string>
+    <string name="staff_audit_action_subscription_chargeback_won">گەڕاندنەوەی پارە ڕەتکرایەوە</string>
     <string name="staff_audit_action_subscription_created">بەشداری دروستکرا</string>
     <string name="staff_audit_action_subscription_past_due">پارەدان بە سەرچووە</string>
     <string name="staff_audit_action_subscription_paused">وەستێنراو</string>
@@ -158,7 +158,7 @@
     <string name="staff_categories_type_digital">دیجیتاڵ</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">لەشی</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">ستاف</string>
     <string name="staff_config_field_auto_approve">سنووری پەسەندکردنی خۆکار</string>
     <string name="staff_config_field_hold">سنووری ڕاگرتن</string>
     <string name="staff_config_field_platform_fee">کرێی پلاتفۆرم</string>
@@ -223,7 +223,7 @@
     <string name="staff_disputes_empty">هیچ کێشەیەک نییە</string>
     <string name="staff_disputes_filter_status_label">دۆخ</string>
     <string name="staff_disputes_listing_label">#%1$s</string>
-    <string name="staff_disputes_meta_chargeback_fee">کرێی Chargeback</string>
+    <string name="staff_disputes_meta_chargeback_fee">کرێی گەڕاندنەوەی پارە</string>
     <string name="staff_disputes_meta_evidence_due">بەڵگە دەبێت بگاتەدەست لەلایەن</string>
     <string name="staff_disputes_meta_listing">ناونووسکراو</string>
     <string name="staff_disputes_meta_reason">هۆکار</string>
@@ -247,7 +247,7 @@
     <string name="staff_disputes_resolving">چارەسەرکردن…</string>
     <string name="staff_disputes_review">هەڵسەنگاندن</string>
     <string name="staff_disputes_status_escalated">بەرزکراوەتەوە</string>
-    <string name="staff_disputes_status_open">کردنەوە</string>
+    <string name="staff_disputes_status_open">کراوە</string>
     <string name="staff_disputes_status_resolved_buyer">چارەسەرکرا (کڕیار)</string>
     <string name="staff_disputes_status_resolved_seller">چارەسەرکرا (فرۆشیار)</string>
     <string name="staff_disputes_status_responded">وەڵام درایەوە</string>
@@ -301,7 +301,7 @@
     <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">کردار</string>
     <string name="staff_reports_action_ban">بلۆککردنی بەکارهێنەر</string>
-    <string name="staff_reports_action_dismiss">لابردن</string>
+    <string name="staff_reports_action_dismiss">ڕەتکردنەوە</string>
     <string name="staff_reports_action_label">کردار</string>
     <string name="staff_reports_action_placeholder">کردار هەڵبژێرە</string>
     <string name="staff_reports_action_remove">لابردن</string>
@@ -321,7 +321,7 @@
     <string name="staff_reports_meta_reason">هۆکار</string>
     <string name="staff_reports_meta_reporter">ڕاپۆرتکار</string>
     <string name="staff_reports_meta_seller">فرۆشیار</string>
-    <string name="staff_reports_meta_target">ئامانج</string>
+    <string name="staff_reports_meta_target">بابەتی ڕاپۆرتکراو</string>
     <string name="staff_reports_meta_type">جۆر</string>
     <string name="staff_reports_notes_label">تێبینییەکان</string>
     <string name="staff_reports_reason_counterfeit">ساختە یان دزراو</string>
@@ -331,7 +331,7 @@
     <string name="staff_reports_reason_prohibited">بڕگەی قەدەغە یان نا یاسایی</string>
     <string name="staff_reports_reason_spam">سپام یان فێڵ</string>
     <string name="staff_reports_status_actioned">کردارکرا</string>
-    <string name="staff_reports_status_dismissed">لابرا</string>
+    <string name="staff_reports_status_dismissed">ڕەتکرایەوە</string>
     <string name="staff_reports_status_pending">چاوەڕوان</string>
     <string name="staff_reports_status_reviewed">هەڵسەنگێندرا</string>
     <string name="staff_reports_submit">ناردن</string>
@@ -375,7 +375,7 @@
     <string name="staff_status_approved">پەسەندکرا</string>
     <string name="staff_status_auto_approved">خۆکار پەسەند کرا</string>
     <string name="staff_status_banned">بلۆککراو</string>
-    <string name="staff_status_dismissed">لابرا</string>
+    <string name="staff_status_dismissed">ڕەتکرایەوە</string>
     <string name="staff_status_draft">ڕەشنووس</string>
     <string name="staff_status_escalated">بەرزکراوەتەوە</string>
     <string name="staff_status_expired">بەسەرچوو</string>
@@ -383,7 +383,7 @@
     <string name="staff_status_hold">ڕاگرتن</string>
     <string name="staff_status_manual">دەستی</string>
     <string name="staff_status_moderator">نەزمدەر</string>
-    <string name="staff_status_open">کردنەوە</string>
+    <string name="staff_status_open">کراوە</string>
     <string name="staff_status_pending">چاوەڕوان</string>
     <string name="staff_status_published">بڵاوکراوە</string>
     <string name="staff_status_rejected">ڕەتکراوەتەوە</string>
@@ -420,7 +420,7 @@
     <string name="staff_team_toast_removed">ئەندام لابرا</string>
     <string name="staff_team_toast_role_updated">ڕۆڵ نوێکرایەوە</string>
 
-    <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
+    <string name="staff_audit_action_auction_cancelled">مەزایدە هەڵوەشێنرایەوە</string>
     <string name="staff_dashboard_order_fallback">داواکاری #%1$s</string>
     <string name="staff_disputes_meta_seller_response">وەڵامی فرۆشیار</string>
 

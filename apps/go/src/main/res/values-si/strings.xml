@@ -3,12 +3,12 @@
 
     <string name="go_action_delete">ක්‍රීඩාව මකන්න</string>
     <string name="go_action_more">ක්‍රීඩා ක්‍රියා විවෘත කරන්න</string>
-    <string name="go_action_offer_draw">draw එකක් යෝජනා කරන්න</string>
+    <string name="go_action_offer_draw">සමතය ඉදිරිපත් කරන්න</string>
     <string name="go_action_open_chat">චැට් පැනලය විවෘත කරන්න</string>
-    <string name="go_action_pass">pass කරන්න</string>
+    <string name="go_action_pass">මඟහරින්න</string>
     <string name="go_action_rematch">නැවත ක්‍රීඩාව</string>
     <string name="go_action_resign">ඉල්ලා අස්වන්න</string>
-    <string name="go_app_title">යන්න</string>
+    <string name="go_app_title">ගෝ</string>
     <string name="go_captures_black_sr">කළු වැඩීම්</string>
     <string name="go_captures_white_sr">සුදු වැඩීම්</string>
     <string name="go_chat_title">චැට්</string>
@@ -39,12 +39,12 @@
     <string name="go_new_game_komi_label">කෝමි</string>
     <string name="go_new_game_komi_range_error">0 සහ 10 අතර විය යුතුය</string>
     <string name="go_new_game_start">ක්‍රීඩාව ආරම්භ කරන්න</string>
-    <string name="go_pass_confirm">pass කරන්න</string>
+    <string name="go_pass_confirm">මඟහරින්න</string>
     <string name="go_pass_end_confirm">ක්‍රීඩාව අවසන් කරන්න</string>
     <string name="go_pass_end_message">%1$s ද වාරය මඟහැරියා. තහවුරු කිරීමෙන් ක්‍රීඩාව අවසන් වන අතර පුවරුව ලකුණු කරයි.</string>
     <string name="go_pass_end_title">ක්‍රීඩාව අවසන් කරනවාද?</string>
     <string name="go_pass_message">ඔබේ වාරය මඟහරවා ඔබේ විරුද්ධවාදියාට පවරන්න.</string>
-    <string name="go_pass_title">වාරය pass කරන්නද?</string>
+    <string name="go_pass_title">වාරය මඟහරින්නද?</string>
     <string name="go_resign_confirm">ඉල්ලා අස්වන්න</string>
     <string name="go_resign_message">ඔබට ඉල්ලා අස්වීමට අවශ්‍ය බව ස්ථිරද? %1$s ක්‍රීඩාව ජයගන්නෙයි.</string>
     <string name="go_resign_title">ක්‍රීඩාවෙන් ඉල්ලා අස්වන්නද?</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">පැති තීරුව විවෘත කරන්න</string>
     <string name="go_sidebar_active">සක්‍රීය ක්‍රීඩා</string>
     <string name="go_empty_active">තවම ක්‍රියාකාරී ක්‍රීඩා නොමැත.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">පරාජය භාර ගත්තා</string>
     <string name="go_new_game_title">නව Go ක්‍රීඩාව</string>
     <string name="go_new_game_no_friends">ක්‍රීඩාවක් ආරම්භ කිරීමට පෙර ඔබට මිතුරෙකු එක් කළ යුතුය.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

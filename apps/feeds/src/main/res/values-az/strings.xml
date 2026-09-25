@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Hələ post yoxdur</string>
     <string name="feeds_sort_label">Sırala</string>
     <string name="feeds_sort_interests">Maraqlar</string>
-    <string name="feeds_sort_new">Yeni</string>
+    <string name="feeds_sort_new">Ən yeni</string>
     <string name="feeds_sort_hot">İsti</string>
-    <string name="feeds_sort_top">Yuxarı</string>
+    <string name="feeds_sort_top">Ən yaxşı</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Post</string>
     <string name="feeds_image_preview">Önbaxış</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Cavabı ləğv et</string>
     <string name="feeds_edit_post">Postu redaktə et</string>
     <string name="feeds_save_label">Saxla</string>
-    <string name="feeds_post_action">Post</string>
+    <string name="feeds_post_action">Paylaş</string>
     <string name="feeds_feed_label">Lent</string>
     <string name="feeds_add_files">Fayllar əlavə et</string>
     <string name="feeds_restore">Bərpa et</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Çıx</string>
     <string name="feeds_ai_account_default">Default hesab</string>
     <string name="feeds_ai_mode_off">Söndürülmüşdür</string>
-    <string name="feeds_ai_mode_tag">Etiket</string>
+    <string name="feeds_ai_mode_tag">Etiketlə</string>
     <string name="feeds_ai_mode_tag_deduplicate">Etiketlə + dublikatları sil</string>
     <string name="feeds_feed_not_found">Lent tapılmadı</string>
     <string name="feeds_post_not_found">Post tapılmadı</string>
@@ -131,8 +131,8 @@
     <string name="feeds_interest_reduced">Maraq azaldıldı</string>
     <string name="feeds_interest_removed">Maraq silindi</string>
     <string name="feeds_interest_failed">Marağı tənzimləmək alınmadı</string>
-    <string name="feeds_saved_title">Saxlanıldı</string>
-    <string name="feeds_saved_menu">Saxlanıldı</string>
+    <string name="feeds_saved_title">Saxlanılanlar</string>
+    <string name="feeds_saved_menu">Saxlanılanlar</string>
     <string name="feeds_saved_save">Sonra üçün saxla</string>
     <string name="feeds_saved_remove">Saxlanılanlardan sil</string>
     <string name="feeds_saved_clear_all">Hamısını təmizlə</string>

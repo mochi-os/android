@@ -128,7 +128,7 @@
     <string name="crm_comment_send">അയയ്ക്കുക</string>
     <string name="crm_field_position_body">ഉള്ളടക്കം</string>
     <string name="crm_sort_field">ഇതനുസരിച്ച് ക്രമീകരിക്കുക</string>
-    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_comment_remove_attachment">അറ്റാച്ച്മെന്റ് നീക്കം ചെയ്യുക</string>
     <string name="crm_views_sort_by">ഇതനുസരിച്ച് ക്രമീകരിക്കുക</string>
     <string name="crm_views_move_up">മുകളിലേക്ക് നീക്കുക</string>
     <string name="crm_class_move_up">മുകളിലേക്ക് നീക്കുക</string>
@@ -241,7 +241,7 @@
     <string name="crm_access_no_groups">ഗ്രൂപ്പുകളൊന്നും ലഭ്യമല്ല</string>
     <string name="crm_access_tab_users">ഉപയോക്താക്കൾ</string>
     <string name="crm_access_tab_groups">ഗ്രൂപ്പുകൾ</string>
-    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_attachment_remove">അറ്റാച്ച്മെന്റ് നീക്കം ചെയ്യുക</string>
     <string name="crm_board_add_column">കോളം ചേർക്കുക</string>
     <string name="crm_settings_entity_id">എന്റിറ്റി ID</string>
     <string name="crm_settings_fingerprint">വിരലടയാളം</string>
@@ -281,7 +281,7 @@
     <string name="crm_exporting">കയറ്റുമതി തയ്യാറാക്കുന്നു…</string>
     <string name="crm_create_allow_search">ആർക്കും CRM തിരയാൻ അനുവദിക്കുക</string>
     <string name="crm_no_crms_found">CRM-കളൊന്നും കണ്ടെത്തിയില്ല</string>
-    <string name="crm_create_blocked_no_parents">ഇതുവരെ ഒരു item type-ഉം സൃഷ്ടിക്കാൻ കഴിയില്ല. ആവശ്യമായ parent items ആദ്യം സൃഷ്ടിക്കുക.</string>
+    <string name="crm_create_blocked_no_parents">ഇതുവരെ ഒരു ഇന തരവും സൃഷ്ടിക്കാൻ കഴിയില്ല. ആവശ്യമായ പാരന്റ് ഇനങ്ങൾ ആദ്യം സൃഷ്ടിക്കുക.</string>
     <string name="crm_export_csv">CSV എക്‌സ്‌പോർട്ട് ചെയ്യുക</string>
     <string name="crm_share_link_title">CRM പങ്കിടുക</string>
     <string name="crm_export_saved">CRM ഡാറ്റ സംരക്ഷിച്ചു</string>

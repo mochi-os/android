@@ -94,7 +94,7 @@
     <string name="crm_class_delete">वर्ग हटवा</string>
     <string name="crm_class_delete_title">वर्ग हटवा</string>
     <string name="crm_field_type_text">मजकूर</string>
-    <string name="crm_field_type_number">क्रमांक</string>
+    <string name="crm_field_type_number">संख्या</string>
     <string name="crm_field_type_user">वापरकर्ता</string>
     <string name="crm_field_type_date">तारीख</string>
     <string name="crm_field_type_checklist">चेकलिस्ट</string>
@@ -128,7 +128,7 @@
     <string name="crm_comment_send">पाठवा</string>
     <string name="crm_field_position_body">मुख्य भाग</string>
     <string name="crm_sort_field">क्रमवारीत लावा</string>
-    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_comment_remove_attachment">संलग्नक काढा</string>
     <string name="crm_views_sort_by">क्रमवारीत लावा</string>
     <string name="crm_views_move_up">वर हलवा</string>
     <string name="crm_class_move_up">वर हलवा</string>
@@ -217,7 +217,7 @@
     <string name="crm_field_min_length">किमान लांबी</string>
     <string name="crm_field_max_length">कमाल लांबी</string>
     <string name="crm_field_pattern">नमुना (regex)</string>
-    <string name="crm_field_rows">पंक्ती (textarea उंची)</string>
+    <string name="crm_field_rows">पंक्ती (मजकूर क्षेत्र उंची)</string>
     <string name="crm_field_no_options">कोणतेही पर्याय परिभाषित केलेले नाहीत</string>
     <string name="crm_field_delete_message">तुम्हाला \"%1$s\" हे फील्ड हटवायचे आहे का? सर्व पर्याय आणि मूल्ये गमावली जातील.</string>
     <string name="crm_option_color">रंग</string>
@@ -241,7 +241,7 @@
     <string name="crm_access_no_groups">गट उपलब्ध नाहीत</string>
     <string name="crm_access_tab_users">वापरकर्ते</string>
     <string name="crm_access_tab_groups">गट</string>
-    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_attachment_remove">संलग्नक काढा</string>
     <string name="crm_board_add_column">कॉलम जोडा</string>
     <string name="crm_settings_entity_id">एंटिटी आयडी</string>
     <string name="crm_settings_fingerprint">बोटाचा ठसा</string>
@@ -280,7 +280,7 @@
     <string name="crm_export">डेटा निर्यात करा</string>
     <string name="crm_exporting">निर्यात तयार करत आहे…</string>
     <string name="crm_create_allow_search">कोणालाही CRM शोधण्याची परवानगी द्या</string>
-    <string name="crm_no_crms_found">CRMs सापडले नाहीत</string>
+    <string name="crm_no_crms_found">CRM सापडले नाहीत</string>
     <string name="crm_create_blocked_no_parents">अद्याप कोणतेही आयटम प्रकार तयार करता येणार नाहीत. आधी आवश्यक पॅरेंट आयटम्स तयार करा.</string>
     <string name="crm_export_csv">CSV एक्सपोर्ट करा</string>
     <string name="crm_share_link_title">CRM सामायिक करा</string>

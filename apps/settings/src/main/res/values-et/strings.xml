@@ -63,7 +63,7 @@
     <string name="notifprefs_name_label">Nimi</string>
     <string name="notifprefs_destinations">Sihtkohad</string>
     <string name="notifprefs_dest_web">Veebibrauser</string>
-    <string name="notifprefs_test">Test</string>
+    <string name="notifprefs_test">Testi</string>
     <string name="notifprefs_edit">Muuda</string>
     <string name="notifprefs_delete">Kustuta</string>
     <string name="notifprefs_remove">Eemalda</string>
@@ -98,7 +98,7 @@
     <string name="accounts_status_verified">Kontrollitud</string>
     <string name="accounts_status_connected">Ühendatud</string>
     <string name="accounts_default_for_ai">AI vaikeväärtus</string>
-    <string name="accounts_test">Test</string>
+    <string name="accounts_test">Testi</string>
     <string name="accounts_settings">Seaded</string>
     <string name="accounts_verify">Kontrolli</string>
     <string name="accounts_remove">Eemalda</string>
@@ -376,7 +376,7 @@
     <string name="accounts_forget_message">See unustab seadme \"%1$s\" ja lõpetab sellele teavituste saatmise.</string>
     <string name="accounts_device_seen">Viimati nähtud %1$s</string>
     <string name="notifprefs_device_app">%1$s · rakendus</string>
-    <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_device_push">%1$s · tõuketeade</string>
     <string name="notifprefs_test_partial">Test saadeti %1$d sihtkohta %2$d-st</string>
     <string name="notifprefs_test_none">Sihtkohti pole seadistatud</string>
     <string name="notifprefs_transport_fcm">Androidi tõuketeade</string>

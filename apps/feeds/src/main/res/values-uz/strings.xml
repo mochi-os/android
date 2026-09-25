@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Hozircha postlar yoʻq</string>
     <string name="feeds_sort_label">Saralash</string>
     <string name="feeds_sort_interests">Qiziqishlar</string>
-    <string name="feeds_sort_new">Yangi</string>
+    <string name="feeds_sort_new">Eng yangi</string>
     <string name="feeds_sort_hot">Qaynoq</string>
-    <string name="feeds_sort_top">Yuqori</string>
+    <string name="feeds_sort_top">Eng yaxshi</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Post</string>
     <string name="feeds_image_preview">Oldindan koʻrish</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Javobni bekor qilish</string>
     <string name="feeds_edit_post">Postni tahrirlash</string>
     <string name="feeds_save_label">Saqlash</string>
-    <string name="feeds_post_action">Post</string>
+    <string name="feeds_post_action">Joylash</string>
     <string name="feeds_feed_label">Tasma</string>
     <string name="feeds_add_files">Fayllar qoʻshish</string>
     <string name="feeds_restore">Tiklash</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Chiqish</string>
     <string name="feeds_ai_account_default">Standart hisob</string>
     <string name="feeds_ai_mode_off">Oʻchirilgan</string>
-    <string name="feeds_ai_mode_tag">Teg</string>
+    <string name="feeds_ai_mode_tag">Teglash</string>
     <string name="feeds_ai_mode_tag_deduplicate">Teglash + dublikatlarni olib tashlash</string>
     <string name="feeds_feed_not_found">Tasma topilmadi</string>
     <string name="feeds_post_not_found">Post topilmadi</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Qiziqish kamaytirildi</string>
     <string name="feeds_interest_removed">Qiziqish olib tashlandi</string>
     <string name="feeds_interest_failed">Qiziqishni sozlab boʻlmadi</string>
-    <string name="feeds_saved_title">Saqlandi</string>
-    <string name="feeds_saved_menu">Saqlandi</string>
+    <string name="feeds_saved_title">Saqlanganlar</string>
+    <string name="feeds_saved_menu">Saqlanganlar</string>
     <string name="feeds_saved_save">Keyinroq uchun saqlash</string>
     <string name="feeds_saved_remove">Saqlanganlardan olib tashlash</string>
     <string name="feeds_saved_clear_all">Hammasini tozalash</string>

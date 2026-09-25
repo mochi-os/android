@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chess_app_title">Şahmat</string>
-    <string name="chess_sidebar_header">Şahmat</string>
+    <string name="chess_app_title">Küşt</string>
+    <string name="chess_sidebar_header">Küşt</string>
     <string name="chess_sidebar_active">Aktiw oýunlar</string>
     <string name="chess_sidebar_completed">Tamamlandy</string>
     <string name="chess_sidebar_new_game">Täze oýun</string>
@@ -13,7 +13,7 @@
     <string name="chess_new_title">Täze oýun</string>
     <string name="chess_new_pick_opponent">Garşydaş saýlamak</string>
     <string name="chess_new_no_friends_title">Heniz dostlar ýok</string>
-    <string name="chess_new_no_friends_subtitle">Oýun başlamak üçin People programmasynda dostlar goşuň</string>
+    <string name="chess_new_no_friends_subtitle">Oýun başlamak üçin Adamlar programmasynda dostlar goşuň</string>
     <string name="chess_new_add_friends">Dost goşmak</string>
     <string name="chess_new_start_button">Oýny başla</string>
     <string name="chess_new_creating">Döredilýär…</string>

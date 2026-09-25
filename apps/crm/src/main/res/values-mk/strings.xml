@@ -45,7 +45,7 @@
     <string name="crm_object_tab_activity">Активност</string>
     <string name="crm_parent_label">Родител</string>
     <string name="crm_parent_search_placeholder">Барај</string>
-    <string name="crm_links_title">Линкови</string>
+    <string name="crm_links_title">Врски</string>
     <string name="crm_links_add">Додај врска</string>
     <string name="crm_links_section_blocks">Блокови</string>
     <string name="crm_links_section_blocked_by">Блокирано од</string>
@@ -67,7 +67,7 @@
     <string name="crm_board_rename">Преименувај</string>
     <string name="crm_board_rename_column">Преименувај колона</string>
     <string name="crm_move_position">Позиција</string>
-    <string name="crm_move_position_top">Врв</string>
+    <string name="crm_move_position_top">Најгоре</string>
     <string name="crm_move_current">Тековно</string>
     <string name="crm_design_title">Дизајн</string>
     <string name="crm_design_export">Извези дизајн</string>
@@ -126,7 +126,7 @@
     <string name="crm_not_found">Проектот не е пронајден</string>
     <string name="crm_more">Повеќе</string>
     <string name="crm_comment_send">Испрати</string>
-    <string name="crm_field_position_body">Содржина</string>
+    <string name="crm_field_position_body">Тело</string>
     <string name="crm_sort_field">Сортирај по</string>
     <string name="crm_comment_remove_attachment">Отстрани прилог</string>
     <string name="crm_views_sort_by">Сортирај по</string>

@@ -8,7 +8,7 @@
     <string name="go_action_pass">Πάσο</string>
     <string name="go_action_rematch">Ρεβάνς</string>
     <string name="go_action_resign">Παραίτηση</string>
-    <string name="go_app_title">Μετάβαση</string>
+    <string name="go_app_title">Γκο</string>
     <string name="go_captures_black_sr">Μαύρες αιχμαλωσίες</string>
     <string name="go_captures_white_sr">Λευκές αιχμαλωσίες</string>
     <string name="go_chat_title">Συνομιλία</string>

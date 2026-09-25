@@ -24,13 +24,13 @@
     <string name="forums_settings">Настройки</string>
     <string name="forums_load_more">Зареди още</string>
     <string name="forums_sort_label">Сортиране</string>
-    <string name="forums_sort_new">Ново</string>
+    <string name="forums_sort_new">Най-нови</string>
     <string name="forums_sort_hot">Горещо</string>
-    <string name="forums_sort_top">Най-горе</string>
+    <string name="forums_sort_top">Най-добри</string>
     <string name="forums_sort_interests">Интереси</string>
     <string name="forums_post_title_field">Заглавие</string>
     <string name="forums_post_attach">Прикачи файлове</string>
-    <string name="forums_post_create_action">Публикация</string>
+    <string name="forums_post_create_action">Публикувай</string>
     <string name="forums_post_edit">Редактиране на публикация</string>
     <string name="forums_post_edit_title">Редактиране на публикация</string>
     <string name="forums_post_edit_title_field">Заглавие</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Членове</string>
     <string name="forums_tab_banner">Банер</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Цел</string>
+    <string name="forums_access_target">Потребител или група</string>
     <string name="forums_access_level_view">Преглед</string>
     <string name="forums_access_level_vote">Гласувай</string>
-    <string name="forums_access_level_comment">Коментар</string>
-    <string name="forums_access_level_post">Публикация</string>
+    <string name="forums_access_level_comment">Коментирай</string>
+    <string name="forums_access_level_post">Публикувай</string>
     <string name="forums_access_level_none">Няма</string>
     <string name="forums_members_empty">Няма членове</string>
     <string name="forums_banner_dismiss">Отхвърли банера</string>
-    <string name="forums_ai_mode_tag">Етикет</string>
+    <string name="forums_ai_mode_tag">Етикетиране</string>
     <string name="forums_ai_account_default">Акаунт по подразбиране</string>
     <string name="forums_ai_prompt_reset">Върни към подразбиране</string>
     <string name="forums_settings_unsubscribe">Отпиши се</string>
@@ -87,7 +87,7 @@
     <string name="forums_moderation_restriction_type_muted">Заглуши</string>
     <string name="forums_moderation_restriction_type_banned">Блокирай</string>
     <string name="forums_moderation_section_premoderation">Предварителна модерация</string>
-    <string name="forums_moderation_section_ratelimiting">Rate Limiting</string>
+    <string name="forums_moderation_section_ratelimiting">Ограничаване на честотата</string>
     <string name="forums_moderation_require_posts">Изисквай одобрение за нови публикации</string>
     <string name="forums_moderation_require_comments">Изисквай одобрение за нови коментари</string>
     <string name="forums_moderation_require_new_users">Изисквай одобрение за нови потребители</string>
@@ -124,7 +124,7 @@
     <string name="forums_comment_send">Изпрати</string>
 
     <string name="notification_channel_forums">Известия от форуми</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Форуми</string>
     <string name="forums_auth_login_failed">Неуспешно влизане</string>
     <string name="forums_auth_create_identity_failed">Неуспешно създаване на самоличност</string>
     <string name="forums_auth_mfa_unsupported">MFA все още не се поддържа в мобилното приложение</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">Ръчно</string>
     <string name="forums_access_search_users">Търси потребители</string>
     <string name="forums_access_no_groups">Няма налични групи</string>
-    <string name="forums_saved_title">Запазено</string>
+    <string name="forums_saved_title">Запазени</string>
     <string name="forums_saved_save">Запази за по-късно</string>
     <string name="forums_saved_remove">Премахни от запазените</string>
     <string name="forums_saved_clear_all">Изчисти всички</string>

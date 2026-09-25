@@ -2,7 +2,7 @@
 <resources>
     <string name="projects_auth_display_name">प्रदर्शित नाव</string>
     <string name="projects_auth_verification_failed">पडताळणी अयशस्वी</string>
-    <string name="projects_list_title">प्रोजेक्ट्स</string>
+    <string name="projects_list_title">प्रकल्प</string>
     <string name="projects_list_close_search">शोध बंद करा</string>
     <string name="projects_list_search">शोधा</string>
     <string name="projects_list_find">प्रोजेक्ट्स शोधा</string>
@@ -123,7 +123,7 @@
     <string name="projects_class_delete">वर्ग हटवा</string>
     <string name="projects_class_delete_title">वर्ग हटवा</string>
     <string name="projects_field_type_text">मजकूर</string>
-    <string name="projects_field_type_number">क्रमांक</string>
+    <string name="projects_field_type_number">संख्या</string>
     <string name="projects_field_type_user">वापरकर्ता</string>
     <string name="projects_field_type_date">तारीख</string>
     <string name="projects_field_type_checklist">चेकलिस्ट</string>
@@ -160,7 +160,7 @@
     <string name="projects_comment_send">पाठवा</string>
     <string name="projects_field_position_body">मुख्य भाग</string>
     <string name="projects_sort_field">क्रमवारीत लावा</string>
-    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_comment_remove_attachment">संलग्नक काढा</string>
     <string name="projects_views_sort_by">क्रमवारीत लावा</string>
     <string name="projects_auth_login_failed">लॉगिन अयशस्वी</string>
     <string name="projects_views_move_up">वर हलवा</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">वस्तू शोधा</string>
 
     <string name="notification_channel_projects">प्रकल्प सूचना</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi प्रकल्प</string>
     <string name="projects_auth_create_identity_failed">ओळख तयार करण्यात अयशस्वी</string>
     <string name="projects_auth_mfa_unsupported">MFA अद्याप मोबाइल अॅपमध्ये समर्थित नाही</string>
     <string name="projects_auth_enter_code_sent">%1$s वर पाठवलेला कोड प्रविष्ट करा</string>
@@ -239,8 +239,8 @@
     <string name="projects_request_mark_ready">तयार म्हणून चिन्हांकित करा</string>
     <string name="projects_request_merge_default_message">%1$s ला %2$s मध्ये विलीन करा</string>
     <string name="projects_request_commit_message">कमिट संदेश</string>
-    <string name="projects_request_method_squash">Squash</string>
-    <string name="projects_request_method_rebase">Rebase</string>
+    <string name="projects_request_method_squash">स्क्वॉश</string>
+    <string name="projects_request_method_rebase">रिबेस</string>
     <string name="projects_request_create_title">विलीन विनंती तयार करा</string>
     <string name="projects_request_field_target">लक्ष्य शाखा</string>
     <string name="projects_diff_title">फरक: %1$s -&gt; %2$s</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">एक नियम निवडा</string>
     <string name="projects_access_authenticated_desc">लॉग इन केलेली कोणतीही व्यक्ती</string>
     <string name="projects_access_anyone_desc">अनामिक वापरकर्त्यांसह</string>
-    <string name="projects_access_target">लक्ष्य</string>
+    <string name="projects_access_target">वापरकर्ता किंवा गट</string>
     <string name="projects_access_target_hint">एंटिटी ID, @group, * (प्रत्येकजण), किंवा + (सदस्य)</string>
     <string name="projects_access_selected">निवडलेले: %1$s</string>
     <string name="projects_access_role_comment">टिप्पणी करा आणि पहा</string>
@@ -381,5 +381,5 @@
     <string name="projects_option_delete_message">तुम्हाला \"%1$s\" हा पर्याय हटवायचा आहे का?</string>
     <string name="projects_create_object_no_types">अद्याप कोणतेही आयटम प्रकार तयार करता येणार नाहीत. आधी आवश्यक पॅरेंट आयटम्स तयार करा.</string>
     <string name="projects_create_blocked_no_options">तयार करता येत नाही: %1$s आवश्यक आहे पण निवडण्यासाठी पर्याय नाहीत. डिझाइनमध्ये पर्याय जोडा.</string>
-    <string name="projects_attachment_remove">Remove attachment</string>
+    <string name="projects_attachment_remove">संलग्नक काढा</string>
 </resources>

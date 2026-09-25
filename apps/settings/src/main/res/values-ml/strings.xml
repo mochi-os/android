@@ -12,7 +12,7 @@
     <string name="account_section_passkeys">പാസ്കീകൾ</string>
     <string name="account_passkey_register">പാസ്കീ ചേർക്കുക</string>
     <string name="account_passkey_delete_title">പാസ്കീ ഇല്ലാതാക്കണോ?</string>
-    <string name="account_section_totp">Authenticator ആപ്പ്</string>
+    <string name="account_section_totp">ഓതന്റിക്കേറ്റർ ആപ്പ്</string>
     <string name="account_totp_setup">ഓതന്റിക്കേറ്റർ സജ്ജമാക്കുക</string>
     <string name="account_totp_setup_title">ഓതന്റിക്കേറ്റർ സജ്ജമാക്കുക</string>
     <string name="account_totp_verify">സ്ഥിരീകരിക്കുക</string>
@@ -143,7 +143,7 @@
     <string name="system_setting_auth_oauth">OAuth 2.0 ഉപയോഗിച്ച് ലോഗിൻ ചെയ്യുക</string>
     <string name="system_setting_default_theme">ഡിഫോൾട്ട് തീം</string>
     <string name="system_setting_domains_verification">ഡൊമെയ്ൻ പരിശോധന ആവശ്യമാണ്</string>
-    <string name="system_setting_email_from">സിസ്റ്റം ഇമെയിലുകൾക്കുള്ള ഡിഫോൾട്ട് from വിലാസം</string>
+    <string name="system_setting_email_from">സിസ്റ്റം ഇമെയിലുകൾക്കുള്ള ഡിഫോൾട്ട് അയച്ചയാളുടെ വിലാസം</string>
     <string name="system_setting_oauth_public_url">OAuth റീഡയറക്റ്റുകൾക്കുള്ള പൊതു URL</string>
     <string name="system_setting_oauth_google_client_id">Google ക്ലയന്റ് ID</string>
     <string name="system_setting_oauth_google_client_secret">Google ക്ലയന്റ് രഹസ്യം</string>
@@ -151,7 +151,7 @@
     <string name="system_setting_oauth_github_client_secret">GitHub ക്ലയന്റ് രഹസ്യം</string>
     <string name="system_setting_oauth_microsoft_client_id">Microsoft ക്ലയന്റ് ID</string>
     <string name="system_setting_oauth_microsoft_client_secret">Microsoft ക്ലയന്റ് സീക്രട്ട്</string>
-    <string name="system_setting_oauth_microsoft_tenant">Microsoft tenant</string>
+    <string name="system_setting_oauth_microsoft_tenant">Microsoft ടെനന്റ്</string>
     <string name="system_setting_oauth_facebook_client_id">Facebook ആപ്പ് ID</string>
     <string name="system_setting_oauth_facebook_client_secret">Facebook ആപ്പ് രഹസ്യം</string>
     <string name="system_setting_oauth_x_client_id">X ക്ലയന്റ് ID</string>
@@ -316,14 +316,14 @@
     <string name="login_section_methods">ലോഗിൻ രീതികൾ</string>
     <string name="login_method_email">ഇമെയിൽ കോഡ്</string>
     <string name="login_method_passkey">പാസ്കീ</string>
-    <string name="login_method_totp">Authenticator ആപ്പ്</string>
+    <string name="login_method_totp">ഓതന്റിക്കേറ്റർ ആപ്പ്</string>
     <string name="login_method_oauth">തേർഡ്-പാർട്ടി ലോഗിൻ</string>
     <string name="login_method_recovery">വീണ്ടെടുക്കൽ കോഡുകൾ</string>
     <string name="account_close_section">അക്കൗണ്ട് അടയ്ക്കുക</string>
     <string name="account_close_action">അക്കൗണ്ട് അടയ്ക്കുക</string>
     <string name="account_close_confirm_title">നിങ്ങളുടെ അക്കൗണ്ട് അടയ്ക്കണോ?</string>
     <string name="account_close_confirm_body">നിങ്ങളുടെ അക്കൗണ്ട് ഇല്ലാതാക്കാൻ ഷെഡ്യൂൾ ചെയ്യപ്പെടും, നിങ്ങൾ സൈൻ ഔട്ട് ചെയ്യപ്പെടും. ഇല്ലാതാക്കൽ തീയതിക്ക് മുമ്പ് എപ്പോൾ വേണമെങ്കിലും വീണ്ടും ലോഗിൻ ചെയ്ത് നിങ്ങൾക്ക് റദ്ദാക്കാം.</string>
-    <string name="account_data_download">ഡൗൺലോഡ്</string>
+    <string name="account_data_download">ഡൗൺലോഡ് ചെയ്യുക</string>
     <string name="route_target_app">ആപ്പ്</string>
     <string name="route_target_entity">എന്റിറ്റി</string>
     <string name="route_target_url">URL</string>
@@ -378,7 +378,7 @@
     <string name="notifprefs_device_app">%1$s · ആപ്പ്</string>
     <string name="notifprefs_device_push">%1$s · പുഷ്</string>
     <string name="notifprefs_test_partial">%2$dൽ %1$d ലക്ഷ്യങ്ങളിലേക്ക് പരീക്ഷണം അയച്ചു</string>
-    <string name="notifprefs_test_none">destinations-കൾ കോൺഫിഗർ ചെയ്തിട്ടില്ല</string>
+    <string name="notifprefs_test_none">ലക്ഷ്യസ്ഥാനങ്ങൾ കോൺഫിഗർ ചെയ്തിട്ടില്ല</string>
     <string name="notifprefs_transport_fcm">Android പുഷ്</string>
     <string name="notifprefs_no_destinations">ലക്ഷ്യസ്ഥാനങ്ങളില്ല</string>
     <string name="account_data_generate">രഹസ്യ വാക്യം സൃഷ്ടിക്കുക</string>

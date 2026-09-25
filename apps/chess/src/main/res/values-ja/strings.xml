@@ -13,7 +13,7 @@
     <string name="chess_new_title">新しいゲーム</string>
     <string name="chess_new_pick_opponent">対戦相手を選ぶ</string>
     <string name="chess_new_no_friends_title">まだ友だちがいません</string>
-    <string name="chess_new_no_friends_subtitle">プレイを始めるには、人物アプリで友だちを追加してください</string>
+    <string name="chess_new_no_friends_subtitle">プレイを始めるには、ピープルアプリで友だちを追加してください</string>
     <string name="chess_new_add_friends">友だちを追加</string>
     <string name="chess_new_start_button">ゲームを開始</string>
     <string name="chess_new_creating">作成中…</string>

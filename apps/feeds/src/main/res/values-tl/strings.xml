@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Wala pang post</string>
     <string name="feeds_sort_label">Ayusin</string>
     <string name="feeds_sort_interests">Mga interest</string>
-    <string name="feeds_sort_new">Bago</string>
-    <string name="feeds_sort_hot">Hot</string>
-    <string name="feeds_sort_top">Itaas</string>
+    <string name="feeds_sort_new">Pinakabago</string>
+    <string name="feeds_sort_hot">Sikat</string>
+    <string name="feeds_sort_top">Pinakamahusay</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Post</string>
     <string name="feeds_image_preview">Preview</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Kanselahin ang sagot</string>
     <string name="feeds_edit_post">I-edit ang post</string>
     <string name="feeds_save_label">I-save</string>
-    <string name="feeds_post_action">Post</string>
+    <string name="feeds_post_action">I-post</string>
     <string name="feeds_feed_label">Feed</string>
     <string name="feeds_add_files">Magdagdag ng files</string>
     <string name="feeds_restore">Ibalik</string>
@@ -55,7 +55,7 @@
     <string name="feeds_source_url">URL</string>
     <string name="feeds_source_type">Uri</string>
     <string name="feeds_source_type_rss">RSS</string>
-    <string name="feeds_source_type_feed_posts">Mochi feed</string>
+    <string name="feeds_source_type_feed_posts">Feed ng Mochi</string>
     <string name="feeds_source_type_feed_memories">Mga Alaala</string>
     <string name="feeds_remove_source">Tanggalin ang pinagmulan</string>
     <string name="feeds_suggested_credibility_accept">Tanggapin</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Mag-log out</string>
     <string name="feeds_ai_account_default">Default na account</string>
     <string name="feeds_ai_mode_off">Naka-disable</string>
-    <string name="feeds_ai_mode_tag">Tag</string>
+    <string name="feeds_ai_mode_tag">Mag-tag</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + alisin ang duplicate</string>
     <string name="feeds_feed_not_found">Hindi nahanap ang feed</string>
     <string name="feeds_post_not_found">Hindi nahanap ang post</string>
@@ -110,7 +110,7 @@
     <string name="feeds_delete_feed_confirm">Permanenteng tatanggalin nito ang feed at lahat ng post nito. Hindi na ito maibabalik.</string>
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">Hindi pa nakukuha</string>
-    <string name="feeds_source_poll">Poll</string>
+    <string name="feeds_source_poll">Kunin ngayon</string>
     <string name="feeds_source_transform">Transform</string>
     <string name="feeds_remove_source_confirm">Tanggalin ang \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Tanggalin din ang mga na-import na post</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Nabawasan ang interest</string>
     <string name="feeds_interest_removed">Natanggal ang interest</string>
     <string name="feeds_interest_failed">Nabigong i-adjust ang interest</string>
-    <string name="feeds_saved_title">Na-save</string>
-    <string name="feeds_saved_menu">Na-save</string>
+    <string name="feeds_saved_title">Mga na-save</string>
+    <string name="feeds_saved_menu">Mga na-save</string>
     <string name="feeds_saved_save">I-save para sa mamaya</string>
     <string name="feeds_saved_remove">Alisin sa mga naka-save</string>
     <string name="feeds_saved_clear_all">Burahin lahat</string>
@@ -149,7 +149,7 @@
     <string name="feeds_access_level_none_full">Walang access</string>
     <string name="feeds_access_level_view_full">Tingnan lamang</string>
     <string name="feeds_access_search_users">Maghanap ng user</string>
-    <string name="feeds_access_segment_group">Group</string>
+    <string name="feeds_access_segment_group">Grupo</string>
     <string name="feeds_access_segment_other">Iba pa</string>
     <string name="feeds_access_select_group">Pumili ng group</string>
     <string name="feeds_access_selected">Napili: %1$s</string>

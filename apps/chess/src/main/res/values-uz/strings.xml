@@ -13,7 +13,7 @@
     <string name="chess_new_title">Yangi oʻyin</string>
     <string name="chess_new_pick_opponent">Raqib tanlang</string>
     <string name="chess_new_no_friends_title">Hozircha doʻstlar yoʻq</string>
-    <string name="chess_new_no_friends_subtitle">Oʻyinni boshlash uchun People ilovasida doʻstlar qoʻshing</string>
+    <string name="chess_new_no_friends_subtitle">Oʻyinni boshlash uchun Odamlar ilovasida doʻstlar qoʻshing</string>
     <string name="chess_new_add_friends">Doʻstlar qoʻshish</string>
     <string name="chess_new_start_button">Oʻyinni boshlash</string>
     <string name="chess_new_creating">Yaratilmoqda…</string>

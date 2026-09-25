@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="crm_list_title">CRMs</string>
+    <string name="crm_list_title">CRM</string>
     <string name="crm_list_search">શોધો</string>
     <string name="crm_list_find">CRMs શોધો</string>
     <string name="crm_list_logout">લૉગ આઉટ કરો</string>
@@ -217,7 +217,7 @@
     <string name="crm_field_min_length">ન્યૂનતમ લંબાઈ</string>
     <string name="crm_field_max_length">મહત્તમ લંબાઈ</string>
     <string name="crm_field_pattern">પૅટર્ન (regex)</string>
-    <string name="crm_field_rows">પંક્તિઓ (textarea ઊંચાઈ)</string>
+    <string name="crm_field_rows">પંક્તિઓ (ટેક્સ્ટએરિયા ઊંચાઈ)</string>
     <string name="crm_field_no_options">કોઈ વિકલ્પ વ્યાખ્યાયિત નથી</string>
     <string name="crm_field_delete_message">શું તમે ખરેખર \"%1$s\" ક્ષેત્રને કાઢી નાખવા માગો છો? તમામ વિકલ્પો અને મૂલ્યો ગુમાવાશે.</string>
     <string name="crm_option_color">રંગ</string>
@@ -280,7 +280,7 @@
     <string name="crm_export">ડેટા નિકાસ કરો</string>
     <string name="crm_exporting">નિકાસ તૈયાર કરી રહ્યાં છીએ…</string>
     <string name="crm_create_allow_search">કોઈને પણ CRM શોધવાની મંજૂરી આપો</string>
-    <string name="crm_no_crms_found">કોઈ CRMs મળ્યા નથી</string>
+    <string name="crm_no_crms_found">કોઈ CRM મળ્યા નથી</string>
     <string name="crm_create_blocked_no_parents">હજુ સુધી કોઈ આઇટમ પ્રકારો બનાવી શકાતા નથી. પહેલા જરૂરી પેરન્ટ આઇટમ્સ બનાવો.</string>
     <string name="crm_export_csv">CSV એક્સપોર્ટ કરો</string>
     <string name="crm_share_link_title">CRM શેર કરો</string>

@@ -10,7 +10,7 @@
     <string name="calendars_delete">মুছুন</string>
     <string name="calendars_previous">পূর্ববর্তী</string>
     <string name="calendars_next">পরবর্তী</string>
-    <string name="calendars_view">দেখুন</string>
+    <string name="calendars_view">ভিউ</string>
     <string name="calendars_view_list">তালিকা</string>
     <string name="calendars_list_search">অনুসন্ধান</string>
     <string name="calendars_event_untitled">শিরোনামহীন</string>
@@ -53,9 +53,9 @@
     <string name="calendars_colour">রঙ</string>
     <string name="calendars_view_day">দিন</string>
     <string name="calendars_event_start">শুরু</string>
-    <string name="notification_channel_calendars">ক্যালেন্ডারগুলি</string>
-    <string name="calendars_drawer_title">ক্যালেন্ডারগুলি</string>
-    <string name="calendars_drawer_open">ক্যালেন্ডারগুলি</string>
+    <string name="notification_channel_calendars">ক্যালেন্ডার</string>
+    <string name="calendars_drawer_title">ক্যালেন্ডার</string>
+    <string name="calendars_drawer_open">ক্যালেন্ডার</string>
     <string name="calendars_calendar_menu">%1$s-এর বিকল্প</string>
     <string name="calendars_only_this">শুধু এটি</string>
     <string name="calendars_create">ক্যালেন্ডার তৈরি করুন</string>
@@ -169,7 +169,7 @@
     <string name="calendars_subscribe_server_url">সার্ভারের ঠিকানা</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google ক্যালেন্ডার</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">এই সার্ভারে Google অ্যাকাউন্ট সক্রিয় করা হয়নি। সেটিংস, সিস্টেম সেটিংস-এ গিয়ে সেগুলি সক্রিয় করুন।</string>
     <string name="calendars_subscribe_google_connect">আপনি কোনো Google অ্যাকাউন্ট সংযুক্ত করেননি।</string>

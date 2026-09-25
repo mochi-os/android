@@ -6,14 +6,14 @@
     <string name="launcher_forums">Mochi ఫోరమ్‌లు</string>
     <string name="launcher_projects">Mochi ప్రాజెక్ట్‌లు</string>
     <string name="launcher_crm">Mochi CRM</string>
-    <string name="launcher_people">Mochi పీపుల్</string>
+    <string name="launcher_people">Mochi వ్యక్తులు</string>
     <string name="launcher_settings">Mochi సెట్టింగ్‌లు</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wikiలు</string>
     <string name="launcher_chess">Mochi చెస్</string>
-    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_go">Mochi గో</string>
     <string name="launcher_words">Mochi పదాలు</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi మార్కెట్</string>
     <string name="launcher_calendars">Mochi క్యాలెండర్‌లు</string>
     <string name="launcher_staff">Mochi సిబ్బంది</string>
 

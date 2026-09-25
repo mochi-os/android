@@ -70,7 +70,7 @@
     <string name="market_checkout_back">Zurück</string>
     <string name="market_checkout_buy_it_now">Sofort kaufen</string>
     <string name="market_checkout_create_failed">Bestellung konnte nicht erstellt werden</string>
-    <string name="market_checkout_delivery_download">Herunterladen</string>
+    <string name="market_checkout_delivery_download">Download</string>
     <string name="market_checkout_delivery_method">Liefermethode</string>
     <string name="market_checkout_delivery_pickup">Abholung</string>
     <string name="market_checkout_delivery_shipping">Versand</string>
@@ -107,7 +107,7 @@
     <string name="market_editor_asset_external_filename">Dateiname</string>
     <string name="market_editor_back">Zurück</string>
     <string name="market_editor_category">Kategorie</string>
-    <string name="market_editor_condition">Bedingung</string>
+    <string name="market_editor_condition">Zustand</string>
     <string name="market_editor_condition_new">Neu</string>
     <string name="market_editor_condition_refurbished">Generalüberholt</string>
     <string name="market_editor_condition_used">Gebraucht</string>
@@ -149,12 +149,12 @@
     <string name="market_filter_apply">Anwenden</string>
     <string name="market_filter_category">Kategorie</string>
     <string name="market_filter_clear">Filter zurücksetzen</string>
-    <string name="market_filter_condition">Bedingung</string>
+    <string name="market_filter_condition">Zustand</string>
     <string name="market_filter_condition_new">Neu</string>
     <string name="market_filter_condition_refurbished">Generalüberholt</string>
     <string name="market_filter_condition_used">Gebraucht</string>
     <string name="market_filter_delivery">Lieferung</string>
-    <string name="market_filter_delivery_download">Herunterladen</string>
+    <string name="market_filter_delivery_download">Download</string>
     <string name="market_filter_delivery_pickup">Abholung</string>
     <string name="market_filter_delivery_shipping">Versand</string>
     <string name="market_filter_price_max">Max.</string>
@@ -183,7 +183,7 @@
     <string name="market_listing_detail_load_failed">Angebot konnte nicht geladen werden</string>
     <string name="market_listing_detail_listed">Eingestellt am %1$s</string>
     <string name="market_listing_detail_location_heading">Ort</string>
-    <string name="market_listing_detail_message">Nachricht</string>
+    <string name="market_listing_detail_message">Nachricht senden</string>
     <string name="market_listing_detail_message_seller">Verkäufer kontaktieren</string>
     <string name="market_listing_detail_not_found">Angebot nicht gefunden</string>
     <string name="market_listing_detail_place_bid">Bieten</string>
@@ -200,7 +200,7 @@
     <string name="market_listings_action_delete">Löschen</string>
     <string name="market_listings_action_edit">Bearbeiten</string>
     <string name="market_listings_action_relist">Erneut anbieten</string>
-    <string name="market_listings_action_view">Ansicht</string>
+    <string name="market_listings_action_view">Anzeigen</string>
     <string name="market_listings_delete_confirm">Löschen</string>
     <string name="market_listings_empty_title">Noch keine Angebote</string>
     <string name="market_listings_filter_active">Aktiv</string>
@@ -305,7 +305,7 @@
     <string name="market_sale_carrier_other">Sonstige</string>
     <string name="market_sale_completed_label">Abgeschlossen</string>
     <string name="market_sale_dispute_respond">Antworten</string>
-    <string name="market_sale_dispute_state_open">Öffnen</string>
+    <string name="market_sale_dispute_state_open">Offen</string>
     <string name="market_sale_dispute_state_resolved">Gelöst</string>
     <string name="market_sale_load_failed">Bestellung konnte nicht geladen werden</string>
     <string name="market_sale_message_buyer">Käufer kontaktieren</string>
@@ -380,7 +380,7 @@
     <string name="market_subscription_detail_seller">Verkäufer</string>
     <string name="market_subscription_detail_started">Begonnen %1$s</string>
     <string name="market_subscription_detail_title">Abonnement</string>
-    <string name="market_subscriptions_action_cancel">Abbrechen</string>
+    <string name="market_subscriptions_action_cancel">Kündigen</string>
     <string name="market_subscriptions_action_pause">Pausieren</string>
     <string name="market_subscriptions_action_reactivate">Reaktivieren</string>
     <string name="market_subscriptions_action_resubscribe">Erneut abonnieren</string>

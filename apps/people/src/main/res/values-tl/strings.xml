@@ -4,7 +4,7 @@
     <string name="people_invitations_title">Mga invitation</string>
     <string name="people_profile_title">Profile</string>
     <string name="people_groups_title">Mga group</string>
-    <string name="people_group_title">Group</string>
+    <string name="people_group_title">Grupo</string>
     <string name="people_person_title">Tao</string>
     <string name="people_friends_search_placeholder">Maghanap…</string>
     <string name="people_friends_no_people_found">Walang nakitang tao</string>
@@ -18,7 +18,7 @@
     <string name="people_invitations_accept">Tanggapin</string>
     <string name="people_invitations_decline">Tanggihan</string>
     <string name="people_invitations_toast_policy">Na-update ang invite policy</string>
-    <string name="people_invite_settings">Invite settings</string>
+    <string name="people_invite_settings">Mga setting ng imbitasyon</string>
     <string name="people_invite_settings_notify_me">Mag-notify sa akin</string>
     <string name="people_invite_settings_notify_description">Lalabas ang mga invite sa invitations at padadalhan ka ng notification (default).</string>
     <string name="people_invite_settings_store_silently">Itago nang tahimik</string>
@@ -45,7 +45,7 @@
     <string name="people_member_remove_title">Alisin ang Miyembro</string>
     <string name="people_member_search_hint">Maglagay ng pangalan upang makahanap ng mga taong gusto mong idagdag</string>
     <string name="people_member_type_user">User</string>
-    <string name="people_member_type_group">Group</string>
+    <string name="people_member_type_group">Grupo</string>
     <string name="people_profile_save">I-save</string>
     <string name="people_profile_saving">Nagse-save…</string>
     <string name="people_profile_save_failed">Nabigong i-save</string>
@@ -76,12 +76,12 @@
     <string name="people_open_sidebar">Buksan ang navigation</string>
     <string name="people_person_state_friend">Mga kaibigan</string>
     <string name="people_person_state_self">Ikaw</string>
-    <string name="people_person_message">Mensahe</string>
+    <string name="people_person_message">Magmensahe</string>
     <string name="people_person_accept">Tanggapin</string>
     <string name="people_person_decline">Tanggihan</string>
 
 
-    <string name="notification_channel_people">Mga abiso ng People</string>
+    <string name="notification_channel_people">Mga abiso ng Mga Tao</string>
     <string name="people_friends_searching">Naghahanap…</string>
     <string name="people_invitations_toast_accepted">Tinanggap ang imbitasyon mula kay %1$s</string>
     <string name="people_invitations_toast_declined">Tinanggihan ang imbitasyon mula kay %1$s</string>
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">Maglagay ng wastong hex na kulay (hal. #a78bfa)</string>
     <string name="people_profile_accent_none">Wala</string>
     <string name="people_profile_privacy_private_desc">Mga magkaibigan lamang ang makakatingin ng iyong profile</string>
-    <string name="people_welcome_title">Maligayang pagdating sa People</string>
+    <string name="people_welcome_title">Maligayang pagdating sa Mga Tao</string>
     <string name="people_person_banner_alt">Banner para kay %1$s</string>
     <string name="people_person_private">Pribado ang profile na ito</string>
     <string name="people_person_state_invited">Inimbitahan</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Tanggapin lahat</string>
     <string name="people_invitations_decline_all">Tanggihan lahat</string>
     <string name="people_invitations_cancel_all">Kanselahin lahat</string>
+    <string name="people_invitations_cancel">Kanselahin</string>
     <string name="people_invitations_all_accepted">Lahat ng imbitasyon ay tinanggap</string>
     <string name="people_invitations_all_declined">Lahat ng imbitasyon ay tinanggihan</string>
     <string name="people_invitations_all_cancelled">Lahat ng imbitasyon ay kinansela</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Maghanap…</string>
     <string name="people_contacts_invited">Inimbitahan</string>
     <string name="people_contacts_accept">Tanggapin</string>
-    <string name="people_contacts_message">Mensahe</string>
+    <string name="people_contacts_message">Magmensahe</string>
     <string name="people_contacts_no_people_found">Walang nakitang tao</string>
     <string name="people_contacts_try_adjusting">Subukang ayusin ang iyong paghahanap</string>
     <string name="people_contact_section_address">Address</string>

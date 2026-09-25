@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Gezinmeyi aç</string>
     <string name="people_person_state_friend">Arkadaşlar</string>
     <string name="people_person_state_self">Sen</string>
-    <string name="people_person_message">Mesaj</string>
+    <string name="people_person_message">Mesaj gönder</string>
     <string name="people_person_accept">Kabul et</string>
     <string name="people_person_decline">Reddet</string>
 
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">Geçerli bir hex renk girin (ör. #a78bfa)</string>
     <string name="people_profile_accent_none">Yok</string>
     <string name="people_profile_privacy_private_desc">Profilinizi yalnızca karşılıklı arkadaşlar görüntüleyebilir</string>
-    <string name="people_welcome_title">People uygulamasına hoş geldiniz</string>
+    <string name="people_welcome_title">Kişiler uygulamasına hoş geldiniz</string>
     <string name="people_person_banner_alt">%1$s için banner</string>
     <string name="people_person_private">Bu profil gizli</string>
     <string name="people_person_state_invited">Davet edildi</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Tümünü kabul et</string>
     <string name="people_invitations_decline_all">Tümünü reddet</string>
     <string name="people_invitations_cancel_all">Tümünü iptal et</string>
+    <string name="people_invitations_cancel">İptal et</string>
     <string name="people_invitations_all_accepted">Tüm davetler kabul edildi</string>
     <string name="people_invitations_all_declined">Tüm davetler reddedildi</string>
     <string name="people_invitations_all_cancelled">Tüm davetler iptal edildi</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Ara…</string>
     <string name="people_contacts_invited">Davet edildi</string>
     <string name="people_contacts_accept">Kabul et</string>
-    <string name="people_contacts_message">Mesaj</string>
+    <string name="people_contacts_message">Mesaj gönder</string>
     <string name="people_contacts_no_people_found">Kişi bulunamadı</string>
     <string name="people_contacts_try_adjusting">Aramanı ayarlamayı dene</string>
     <string name="people_contact_section_address">Adres</string>

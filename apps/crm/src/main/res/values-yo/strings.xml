@@ -95,7 +95,7 @@
     <string name="crm_class_delete_title">Pa kíláàsì rẹ́</string>
     <string name="crm_field_type_text">Ọ̀rọ̀</string>
     <string name="crm_field_type_number">Nọ́mbà</string>
-    <string name="crm_field_type_user">User</string>
+    <string name="crm_field_type_user">Olùmúlò</string>
     <string name="crm_field_type_date">Ọjọ́</string>
     <string name="crm_field_type_checklist">Àkọsílẹ̀ àyẹ̀wò</string>
     <string name="crm_field_name">Orúkọ</string>
@@ -128,7 +128,7 @@
     <string name="crm_comment_send">Firanṣẹ</string>
     <string name="crm_field_position_body">Ara</string>
     <string name="crm_sort_field">To nípasẹ̀</string>
-    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_comment_remove_attachment">Yọ àsomọ́ kúrò</string>
     <string name="crm_views_sort_by">To nípasẹ̀</string>
     <string name="crm_views_move_up">Gbe soke</string>
     <string name="crm_class_move_up">Gbe soke</string>
@@ -241,7 +241,7 @@
     <string name="crm_access_no_groups">Kò sí ẹgbẹ́ tó wà</string>
     <string name="crm_access_tab_users">Àwọn user</string>
     <string name="crm_access_tab_groups">Àwọn àwùjọ</string>
-    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_attachment_remove">Yọ àsomọ́ kúrò</string>
     <string name="crm_board_add_column">Fi ọ̀wọ́n kún</string>
     <string name="crm_settings_entity_id">ID Ẹ̀ka</string>
     <string name="crm_settings_fingerprint">Àmì-ìka</string>

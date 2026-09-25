@@ -62,7 +62,7 @@
     <string name="people_profile_uploading">Бор шуда истодааст…</string>
     <string name="people_profile_change_banner">Тағйири баннер</string>
     <string name="people_profile_no_banner">Ягон баннер танзим нашудааст</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">Фавикон</string>
     <string name="people_profile_browser_icon">Иконкаи браузер</string>
     <string name="people_profile_file_too_large">Файл хеле калон</string>
     <string name="people_profile_clear">Тоза кардан</string>
@@ -71,17 +71,17 @@
     <string name="people_common_cancel">Бекор кардан</string>
     <string name="people_common_close">Пӯшидан</string>
     <string name="people_common_save">Захира</string>
-    <string name="people_welcome_dismiss">Рад кардан</string>
-    <string name="people_sidebar_header">Шахсон</string>
+    <string name="people_welcome_dismiss">Пӯшидан</string>
+    <string name="people_sidebar_header">Одамон</string>
     <string name="people_open_sidebar">Кушодани навигатсия</string>
     <string name="people_person_state_friend">Дӯстон</string>
     <string name="people_person_state_self">Шумо</string>
-    <string name="people_person_message">Паём</string>
+    <string name="people_person_message">Паём фиристодан</string>
     <string name="people_person_accept">Қабул кардан</string>
     <string name="people_person_decline">Рад кардан</string>
 
 
-    <string name="notification_channel_people">Огоҳномаҳои одамон</string>
+    <string name="notification_channel_people">Огоҳномаҳои «Одамон»</string>
     <string name="people_friends_searching">Ҷустуҷӯ…</string>
     <string name="people_invitations_toast_accepted">Даъватнома аз %1$s қабул карда шуд</string>
     <string name="people_invitations_toast_declined">Даъватнома аз %1$s рад карда шуд</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Ҳамаро қабул кардан</string>
     <string name="people_invitations_decline_all">Ҳамаро рад кардан</string>
     <string name="people_invitations_cancel_all">Ҳамаро бекор кардан</string>
+    <string name="people_invitations_cancel">Бекор кардан</string>
     <string name="people_invitations_all_accepted">Ҳама даъватҳо қабул шуданд</string>
     <string name="people_invitations_all_declined">Ҳама даъватҳо рад шуданд</string>
     <string name="people_invitations_all_cancelled">Ҳама даъватҳо бекор шуданд</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Ҷустуҷӯ…</string>
     <string name="people_contacts_invited">Даъват шуд</string>
     <string name="people_contacts_accept">Қабул кардан</string>
-    <string name="people_contacts_message">Паём</string>
+    <string name="people_contacts_message">Паём фиристодан</string>
     <string name="people_contacts_no_people_found">Ягон шахс ёфт нашуд</string>
     <string name="people_contacts_try_adjusting">Ҷустуҷӯи худро танзим кунед</string>
     <string name="people_contact_section_address">Суроға</string>

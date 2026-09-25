@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">હજુ સુધી કોઈ પોસ્ટ્સ નથી</string>
     <string name="feeds_sort_label">સોર્ટ કરો</string>
     <string name="feeds_sort_interests">રુચિઓ</string>
-    <string name="feeds_sort_new">નવું</string>
+    <string name="feeds_sort_new">નવીનતમ</string>
     <string name="feeds_sort_hot">હૉટ</string>
-    <string name="feeds_sort_top">ટોચ</string>
+    <string name="feeds_sort_top">શ્રેષ્ઠ</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">પોસ્ટ</string>
     <string name="feeds_image_preview">પ્રિવ્યૂ</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">જવાબ રદ કરો</string>
     <string name="feeds_edit_post">પોસ્ટ એડિટ કરો</string>
     <string name="feeds_save_label">સાચવો</string>
-    <string name="feeds_post_action">પોસ્ટ</string>
+    <string name="feeds_post_action">પોસ્ટ કરો</string>
     <string name="feeds_feed_label">ફીડ</string>
     <string name="feeds_add_files">ફાઇલો ઉમેરો</string>
     <string name="feeds_restore">પુનઃસ્થાપિત કરો</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">લૉગ આઉટ કરો</string>
     <string name="feeds_ai_account_default">ડિફૉલ્ટ ખાતું</string>
     <string name="feeds_ai_mode_off">નિષ્ક્રિય</string>
-    <string name="feeds_ai_mode_tag">ટૅગ</string>
+    <string name="feeds_ai_mode_tag">ટૅગ કરો</string>
     <string name="feeds_ai_mode_tag_deduplicate">ટેગ + ડુપ્લિકેટ દૂર કરો</string>
     <string name="feeds_feed_not_found">ફીડ મળ્યું નહીં</string>
     <string name="feeds_post_not_found">પોસ્ટ મળી નથી</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">રુચિ ઘટાડી</string>
     <string name="feeds_interest_removed">રુચિ દૂર કરી</string>
     <string name="feeds_interest_failed">રુચિ ગોઠવવામાં નિષ્ફળ</string>
-    <string name="feeds_saved_title">સાચવ્યું</string>
-    <string name="feeds_saved_menu">સાચવ્યું</string>
+    <string name="feeds_saved_title">સાચવેલ</string>
+    <string name="feeds_saved_menu">સાચવેલ</string>
     <string name="feeds_saved_save">પછી માટે સાચવો</string>
     <string name="feeds_saved_remove">સાચવેલમાંથી દૂર કરો</string>
     <string name="feeds_saved_clear_all">બધું સાફ કરો</string>

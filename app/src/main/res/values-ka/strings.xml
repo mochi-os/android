@@ -6,16 +6,16 @@
     <string name="launcher_forums">Mochi ფორუმები</string>
     <string name="launcher_projects">Mochi პროექტები</string>
     <string name="launcher_crm">Mochi CRM</string>
-    <string name="launcher_people">Mochi ხალხი</string>
+    <string name="launcher_people">Mochi ადამიანები</string>
     <string name="launcher_settings">Mochi პარამეტრები</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi ვიკები</string>
     <string name="launcher_chess">Mochi ჭადრაკი</string>
-    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_go">Mochi გო</string>
     <string name="launcher_words">Mochi სიტყვები</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi ბაზარი</string>
     <string name="launcher_calendars">Mochi კალენდრები</string>
-    <string name="launcher_staff">Mochi პერსონალი</string>
+    <string name="launcher_staff">Mochi-ის პერსონალი</string>
 
 
     <string name="app_name">Mochi</string>

@@ -2,18 +2,18 @@
 <resources>
 
     <string name="launcher_feeds">Mochi Feednaka</string>
-    <string name="launcher_chat">Mochi Chat</string>
+    <string name="launcher_chat">Mochi Arust\'awi</string>
     <string name="launcher_forums">Mochi Foronaka</string>
-    <string name="launcher_projects">Mochi Lurawinaka</string>
+    <string name="launcher_projects">Mochi Proyectonaka</string>
     <string name="launcher_crm">Mochi CRM</string>
     <string name="launcher_people">Mochi Jaqinaka</string>
-    <string name="launcher_settings">Mochi Configuración</string>
+    <string name="launcher_settings">Mochi Wakichawinaka</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wikinaka</string>
     <string name="launcher_chess">Mochi Ajedrez</string>
     <string name="launcher_go">Mochi Go</string>
     <string name="launcher_words">Mochi Arunaka</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi Mercado</string>
     <string name="launcher_calendars">Mochi Calendarionaka</string>
     <string name="launcher_staff">Mochi Irnaqirinaka</string>
 

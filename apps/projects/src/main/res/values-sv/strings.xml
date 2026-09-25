@@ -85,7 +85,7 @@
     <string name="projects_request_merge_dialog_title">Sammanfoga</string>
     <string name="projects_request_method">Metod</string>
     <string name="projects_request_method_merge">Sammanfoga</string>
-    <string name="projects_request_field_repository">Repository</string>
+    <string name="projects_request_field_repository">Arkiv</string>
     <string name="projects_request_field_source">Källgren</string>
     <string name="projects_request_field_title">Titel</string>
     <string name="projects_request_field_description">Beskrivning</string>
@@ -99,14 +99,14 @@
     <string name="projects_board_rename">Byt namn</string>
     <string name="projects_board_rename_column">Byt namn på kolumn</string>
     <string name="projects_move_position">Position</string>
-    <string name="projects_move_position_top">Topp</string>
+    <string name="projects_move_position_top">Överst</string>
     <string name="projects_move_current">Aktuell</string>
     <string name="projects_design_title">Design</string>
     <string name="projects_design_export">Exportera design</string>
     <string name="projects_design_import">Importera design</string>
     <string name="projects_design_imported">Design importerad</string>
     <string name="projects_design_tab_classes">Klasser</string>
-    <string name="projects_design_tab_views">Visningar</string>
+    <string name="projects_design_tab_views">Vyer</string>
     <string name="projects_design_import_dialog_title">Importera design</string>
     <string name="projects_design_import_choose_template">Välj en mall</string>
     <string name="projects_design_replace_title">Ersätt design?</string>
@@ -123,7 +123,7 @@
     <string name="projects_class_delete">Ta bort klass</string>
     <string name="projects_class_delete_title">Ta bort klass</string>
     <string name="projects_field_type_text">Text</string>
-    <string name="projects_field_type_number">Nummer</string>
+    <string name="projects_field_type_number">Tal</string>
     <string name="projects_field_type_user">Användare</string>
     <string name="projects_field_type_date">Datum</string>
     <string name="projects_field_type_checklist">Checklista</string>
@@ -146,19 +146,19 @@
     <string name="projects_views_edit_dialog_title">Redigera vy</string>
     <string name="projects_views_delete_title">Ta bort vy</string>
     <string name="projects_views_type">Typ</string>
-    <string name="projects_views_type_board">Bräde</string>
+    <string name="projects_views_type_board">Tavla</string>
     <string name="projects_views_type_list">Lista</string>
     <string name="projects_views_direction">Riktning</string>
     <string name="projects_views_sort_number">Nummer</string>
     <string name="projects_views_sort_created">Skapad</string>
     <string name="projects_views_sort_updated">Uppdaterad</string>
-    <string name="projects_views_sort_rank">Rank</string>
+    <string name="projects_views_sort_rank">Rang</string>
     <string name="projects_project_not_found">Projektet hittades inte</string>
     <string name="projects_list_more">Mer</string>
     <string name="projects_more">Mer</string>
     <string name="projects_request_more">Mer</string>
     <string name="projects_comment_send">Skicka</string>
-    <string name="projects_field_position_body">Innehåll</string>
+    <string name="projects_field_position_body">Huvuddel</string>
     <string name="projects_sort_field">Sortera efter</string>
     <string name="projects_comment_remove_attachment">Ta bort bilaga</string>
     <string name="projects_views_sort_by">Sortera efter</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Sök objekt</string>
 
     <string name="notification_channel_projects">Projektaviseringar</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Projekt</string>
     <string name="projects_auth_create_identity_failed">Det gick inte att skapa identitet</string>
     <string name="projects_auth_mfa_unsupported">MFA stöds ännu inte i mobilappen</string>
     <string name="projects_auth_enter_code_sent">Ange koden som skickats till %1$s</string>
@@ -243,7 +243,7 @@
     <string name="projects_request_method_rebase">Rebase</string>
     <string name="projects_request_create_title">Skapa sammanslagningsbegäran</string>
     <string name="projects_request_field_target">Målgren</string>
-    <string name="projects_diff_title">Diff: %1$s -&gt; %2$s</string>
+    <string name="projects_diff_title">Skillnader: %1$s -&gt; %2$s</string>
     <string name="projects_tree_collapse">Fäll ihop</string>
     <string name="projects_tree_expand">Expandera</string>
     <string name="projects_tree_move">Flytta</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Välj en regel</string>
     <string name="projects_access_authenticated_desc">Alla som är inloggade</string>
     <string name="projects_access_anyone_desc">Inklusive anonyma användare</string>
-    <string name="projects_access_target">Mål</string>
+    <string name="projects_access_target">Användare eller grupp</string>
     <string name="projects_access_target_hint">Entitets-ID, @grupp, * (alla) eller + (medlemmar)</string>
     <string name="projects_access_selected">Valt: %1$s</string>
     <string name="projects_access_role_comment">Kommentera och visa</string>

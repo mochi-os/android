@@ -14,13 +14,13 @@
     <string name="feeds_no_posts_yet">Пакуль няма пастоў</string>
     <string name="feeds_sort_label">Сартаваць</string>
     <string name="feeds_sort_interests">Інтарэсы</string>
-    <string name="feeds_sort_new">Новы</string>
+    <string name="feeds_sort_new">Новае</string>
     <string name="feeds_sort_hot">Папулярнае</string>
-    <string name="feeds_sort_top">Верх</string>
+    <string name="feeds_sort_top">Лепшае</string>
     <string name="feeds_sort_ai">AI</string>
-    <string name="feeds_post_default_author">Апублікаваць</string>
+    <string name="feeds_post_default_author">Пост</string>
     <string name="feeds_image_preview">Перадагляд</string>
-    <string name="feeds_post">Апублікаваць</string>
+    <string name="feeds_post">Пост</string>
     <string name="feeds_comments">Каментарыі</string>
     <string name="feeds_delete_post">Выдаліць публікацыю</string>
     <string name="feeds_delete_comment">Выдаліць каментарый</string>
@@ -55,7 +55,7 @@
     <string name="feeds_source_url">URL</string>
     <string name="feeds_source_type">Тып</string>
     <string name="feeds_source_type_rss">RSS</string>
-    <string name="feeds_source_type_feed_posts">Mochi feed</string>
+    <string name="feeds_source_type_feed_posts">Стужка Mochi</string>
     <string name="feeds_source_type_feed_memories">Успаміны</string>
     <string name="feeds_remove_source">Выдаліць крыніцу</string>
     <string name="feeds_suggested_credibility_accept">Прыняць</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Выйсці</string>
     <string name="feeds_ai_account_default">Уліковы запіс па змаўчанні</string>
     <string name="feeds_ai_mode_off">Адключана</string>
-    <string name="feeds_ai_mode_tag">Тэг</string>
+    <string name="feeds_ai_mode_tag">Расстаноўка тэгаў</string>
     <string name="feeds_ai_mode_tag_deduplicate">Тэг + дэдуплікацыя</string>
     <string name="feeds_feed_not_found">Стужка не знойдзена</string>
     <string name="feeds_post_not_found">Пост не знойдзены</string>
@@ -131,8 +131,8 @@
     <string name="feeds_interest_reduced">Цікавасць зніжана</string>
     <string name="feeds_interest_removed">Цікавасць выдалена</string>
     <string name="feeds_interest_failed">Не ўдалося скарэктаваць інтарэс</string>
-    <string name="feeds_saved_title">Захавана</string>
-    <string name="feeds_saved_menu">Захавана</string>
+    <string name="feeds_saved_title">Захаванае</string>
+    <string name="feeds_saved_menu">Захаванае</string>
     <string name="feeds_saved_save">Захаваць на потым</string>
     <string name="feeds_saved_remove">Выдаліць са збярэжаных</string>
     <string name="feeds_saved_clear_all">Ачысціць усё</string>

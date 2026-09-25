@@ -10,13 +10,13 @@
     <string name="settings_home_accounts">บัญชีที่เชื่อมต่อ</string>
     <string name="settings_home_interests">ความสนใจ</string>
     <string name="account_section_passkeys">พาสคีย์</string>
-    <string name="account_passkey_register">เพิ่ม Passkey</string>
-    <string name="account_passkey_delete_title">ลบ Passkey หรือไม่?</string>
-    <string name="account_section_totp">แอป Authenticator</string>
+    <string name="account_passkey_register">เพิ่มพาสคีย์</string>
+    <string name="account_passkey_delete_title">ลบพาสคีย์หรือไม่?</string>
+    <string name="account_section_totp">แอปยืนยันตัวตน</string>
     <string name="account_totp_setup">ตั้งค่าแอปยืนยันตัวตน</string>
     <string name="account_totp_setup_title">ตั้งค่าแอปยืนยันตัวตน</string>
     <string name="account_totp_verify">ยืนยัน</string>
-    <string name="account_totp_disable_title">ปิดใช้งาน Authenticator?</string>
+    <string name="account_totp_disable_title">ปิดใช้งานตัวยืนยันตัวตน?</string>
     <string name="account_section_recovery">รหัสกู้คืน</string>
     <string name="account_recovery_codes_title">รหัสกู้คืน</string>
     <string name="sessions_unknown_agent">อุปกรณ์ที่ไม่รู้จัก</string>
@@ -43,10 +43,10 @@
     <string name="route_save">บันทึก</string>
     <string name="route_delete">ลบเส้นทาง</string>
     <string name="route_delete_title">ลบเส้นทางหรือไม่?</string>
-    <string name="route_path">Path</string>
+    <string name="route_path">เส้นทาง</string>
     <string name="route_method">วิธี</string>
     <string name="route_method_app">แอป</string>
-    <string name="route_method_entity">Entity</string>
+    <string name="route_method_entity">เอนทิตี</string>
     <string name="route_method_redirect">เปลี่ยนเส้นทาง</string>
     <string name="route_priority">ลำดับความสำคัญ</string>
     <string name="route_enabled">เปิดใช้งานแล้ว</string>
@@ -137,8 +137,8 @@
     <string name="system_settings_reset_title">รีเซ็ตเป็นค่าเริ่มต้น?</string>
     <string name="system_setting_apps_install_user">อนุญาตให้ผู้ใช้ติดตั้งแอป</string>
     <string name="system_setting_auth_email">เข้าสู่ระบบด้วยรหัสจากอีเมล</string>
-    <string name="system_setting_auth_passkey">เข้าสู่ระบบด้วย passkey</string>
-    <string name="system_setting_auth_totp">เข้าสู่ระบบด้วยแอป TOTP authenticator</string>
+    <string name="system_setting_auth_passkey">เข้าสู่ระบบด้วยพาสคีย์</string>
+    <string name="system_setting_auth_totp">เข้าสู่ระบบด้วยแอปยืนยันตัวตน TOTP</string>
     <string name="system_setting_auth_recovery">เข้าสู่ระบบด้วยรหัสกู้คืน</string>
     <string name="system_setting_auth_oauth">เข้าสู่ระบบด้วย OAuth 2.0</string>
     <string name="system_setting_default_theme">ธีมเริ่มต้น</string>
@@ -151,7 +151,7 @@
     <string name="system_setting_oauth_github_client_secret">ความลับไคลเอ็นต์ GitHub</string>
     <string name="system_setting_oauth_microsoft_client_id">ID ไคลเอ็นต์ Microsoft</string>
     <string name="system_setting_oauth_microsoft_client_secret">ความลับไคลเอ็นต์ Microsoft</string>
-    <string name="system_setting_oauth_microsoft_tenant">Microsoft tenant</string>
+    <string name="system_setting_oauth_microsoft_tenant">ผู้เช่า Microsoft</string>
     <string name="system_setting_oauth_facebook_client_id">ID แอป Facebook</string>
     <string name="system_setting_oauth_facebook_client_secret">ความลับแอป Facebook</string>
     <string name="system_setting_oauth_x_client_id">ID ไคลเอ็นต์ X</string>
@@ -205,7 +205,7 @@
     <string name="system_users_toast_update_failed">ไม่สามารถอัปเดตผู้ใช้ได้</string>
     <string name="system_users_toast_delete_failed">ไม่สามารถลบผู้ใช้ได้</string>
     <string name="system_users_toast_status_failed">ไม่สามารถอัปเดตสถานะผู้ใช้ได้</string>
-    <string name="system_users_toast_revoke_failed">ไม่สามารถเพิกถอน session ได้</string>
+    <string name="system_users_toast_revoke_failed">ไม่สามารถเพิกถอนเซสชันได้</string>
 
     <string name="settings_home_sessions">เซสชัน</string>
     <string name="settings_home_privacy">นโยบายความเป็นส่วนตัว</string>
@@ -274,11 +274,11 @@
     <string name="system_users_revoke_all_message">เซสชันที่ใช้งานอยู่ทั้งหมดของผู้ใช้นี้จะถูกออกจากระบบ</string>
     <string name="system_users_pagination_status">แสดง %1$d–%2$d จาก %3$d ผู้ใช้</string>
     <string name="account_title">บัญชี</string>
-    <string name="account_section_identity">Identity</string>
-    <string name="account_identity_identity">Identity</string>
+    <string name="account_section_identity">ตัวตน</string>
+    <string name="account_identity_identity">ตัวตน</string>
     <string name="account_identity_username">ชื่อผู้ใช้</string>
     <string name="account_identity_name">ชื่อ</string>
-    <string name="account_identity_fingerprint">Fingerprint</string>
+    <string name="account_identity_fingerprint">ลายนิ้วมือ</string>
     <string name="account_identity_directory_toggle">อนุญาตให้ผู้อื่นค้นหาคุณในไดเรกทอรี</string>
     <string name="domain_add">เพิ่มโดเมน</string>
     <string name="domain_add_title">เพิ่มโดเมน</string>
@@ -287,7 +287,7 @@
     <string name="domain_delegation_delete">ลบการมอบอำนาจ</string>
     <string name="domain_delegation_delete_message">%1$s จะไม่จัดการเส้นทางบนโดเมนนี้อีกต่อไป</string>
     <string name="domain_delegation_delete_title">ลบการมอบอำนาจหรือไม่?</string>
-    <string name="domain_delegation_path">Path</string>
+    <string name="domain_delegation_path">เส้นทาง</string>
     <string name="domain_delegation_user">ID ผู้ใช้</string>
     <string name="domain_delegations">การมอบอำนาจ</string>
     <string name="domain_delegations_empty">ไม่มีการมอบหมายที่กำหนดค่าไว้</string>
@@ -315,7 +315,7 @@
     <string name="login_section_methods">วิธีการเข้าสู่ระบบ</string>
     <string name="login_method_email">รหัสอีเมล</string>
     <string name="login_method_passkey">พาสคีย์</string>
-    <string name="login_method_totp">แอป Authenticator</string>
+    <string name="login_method_totp">แอปยืนยันตัวตน</string>
     <string name="login_method_oauth">เข้าสู่ระบบด้วยบุคคลที่สาม</string>
     <string name="login_method_recovery">รหัสกู้คืน</string>
     <string name="account_close_section">ปิดบัญชี</string>
@@ -324,7 +324,7 @@
     <string name="account_close_confirm_body">บัญชีของคุณจะถูกกำหนดให้ลบและคุณจะถูกออกจากระบบ คุณสามารถยกเลิกได้ทุกเมื่อก่อนถึงวันที่ลบโดยการเข้าสู่ระบบอีกครั้ง</string>
     <string name="account_data_download">ดาวน์โหลด</string>
     <string name="route_target_app">แอป</string>
-    <string name="route_target_entity">Entity</string>
+    <string name="route_target_entity">เอนทิตี</string>
     <string name="route_target_url">URL</string>
     <string name="account_data_section">ข้อมูลของคุณ</string>
     <string name="account_data_dialog_title">ดาวน์โหลดข้อมูลของคุณ</string>

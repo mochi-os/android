@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="launcher_staff">Staff Mochi</string>
     <string name="staff_accounts_action_ban_title">Bandisci account</string>
     <string name="staff_accounts_action_suspend_title">Sospendi account</string>
     <string name="staff_accounts_action_unban_title">Revoca il ban</string>
@@ -259,9 +259,9 @@
     <string name="staff_disputes_resolve">Risolvi</string>
     <string name="staff_disputes_resolved_toast">Contestazione risolta</string>
     <string name="staff_disputes_resolving">Risoluzione in corso…</string>
-    <string name="staff_disputes_review">Recensione</string>
+    <string name="staff_disputes_review">Esamina</string>
     <string name="staff_disputes_status_escalated">Inoltrato</string>
-    <string name="staff_disputes_status_open">Apri</string>
+    <string name="staff_disputes_status_open">Aperto</string>
     <string name="staff_disputes_status_resolved_buyer">Risolto (acquirente)</string>
     <string name="staff_disputes_status_resolved_seller">Risolto (venditore)</string>
     <string name="staff_disputes_status_responded">Risposto</string>
@@ -303,7 +303,7 @@
     <string name="staff_listings_moderation_hold">Tieni</string>
     <string name="staff_listings_moderation_manual">Manuale</string>
     <string name="staff_listings_moderation_rejected">Rifiutato</string>
-    <string name="staff_listings_moderation_review">Recensione</string>
+    <string name="staff_listings_moderation_review">In revisione</string>
     <string name="staff_listings_moderation_soft_approved">Approvato condizionalmente</string>
     <string name="staff_listings_notes_label">Note</string>
     <string name="staff_listings_price_placeholder">—</string>
@@ -329,7 +329,7 @@
     <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Azione</string>
     <string name="staff_reports_action_ban">Bandisci utente</string>
-    <string name="staff_reports_action_dismiss">Ignora</string>
+    <string name="staff_reports_action_dismiss">Archivia</string>
     <string name="staff_reports_action_label">Azione</string>
     <string name="staff_reports_action_placeholder">Seleziona azione</string>
     <string name="staff_reports_action_remove">Rimuovi</string>
@@ -341,7 +341,7 @@
     <string name="staff_reports_cancel">Annulla</string>
     <string name="staff_reports_close">Chiudi</string>
     <string name="staff_reports_dialog_title_action">Agisci sulla segnalazione</string>
-    <string name="staff_reports_dialog_title_view">Segnala</string>
+    <string name="staff_reports_dialog_title_view">Segnalazione</string>
     <string name="staff_reports_empty">Nessuna segnalazione</string>
     <string name="staff_reports_filter_status_label">Stato</string>
     <string name="staff_reports_filter_type_label">Tipo</string>
@@ -351,7 +351,7 @@
     <string name="staff_reports_meta_reason">Motivo</string>
     <string name="staff_reports_meta_reporter">Segnalatore</string>
     <string name="staff_reports_meta_seller">Venditore</string>
-    <string name="staff_reports_meta_target">Destinazione</string>
+    <string name="staff_reports_meta_target">Oggetto</string>
     <string name="staff_reports_meta_type">Tipo</string>
     <string name="staff_reports_notes_label">Note</string>
     <string name="staff_reports_reason_counterfeit">Contraffatto o rubato</string>
@@ -361,7 +361,7 @@
     <string name="staff_reports_reason_prohibited">Articolo proibito o illegale</string>
     <string name="staff_reports_reason_spam">Spam o truffa</string>
     <string name="staff_reports_status_actioned">Gestito</string>
-    <string name="staff_reports_status_dismissed">Ignorato</string>
+    <string name="staff_reports_status_dismissed">Archiviato</string>
     <string name="staff_reports_status_pending">In sospeso</string>
     <string name="staff_reports_status_reviewed">Recensito</string>
     <string name="staff_reports_submit">Invia</string>
@@ -403,12 +403,12 @@
     <string name="staff_sidebar_team">Team</string>
     <string name="staff_status_actioned">Gestito</string>
     <string name="staff_status_active">Attivo</string>
-    <string name="staff_status_admin">Admin</string>
+    <string name="staff_status_admin">Amministratore</string>
     <string name="staff_status_appealed">Oggetto di ricorso</string>
     <string name="staff_status_approved">Approvato</string>
     <string name="staff_status_auto_approved">Approvato automaticamente</string>
     <string name="staff_status_banned">Bandito</string>
-    <string name="staff_status_dismissed">Ignorato</string>
+    <string name="staff_status_dismissed">Archiviato</string>
     <string name="staff_status_draft">Bozza</string>
     <string name="staff_status_escalated">Inoltrato</string>
     <string name="staff_status_expired">Scaduto</string>
@@ -416,7 +416,7 @@
     <string name="staff_status_hold">Tieni</string>
     <string name="staff_status_manual">Manuale</string>
     <string name="staff_status_moderator">Moderatore</string>
-    <string name="staff_status_open">Apri</string>
+    <string name="staff_status_open">Aperto</string>
     <string name="staff_status_pending">In sospeso</string>
     <string name="staff_status_published">Pubblicato</string>
     <string name="staff_status_rejected">Rifiutato</string>
@@ -424,7 +424,7 @@
     <string name="staff_status_resolved_buyer">Risolto (acquirente)</string>
     <string name="staff_status_resolved_seller">Risolto (venditore)</string>
     <string name="staff_status_responded">Risposto</string>
-    <string name="staff_status_review">Recensione</string>
+    <string name="staff_status_review">In revisione</string>
     <string name="staff_status_reviewed">Recensito</string>
     <string name="staff_status_reviewing">In revisione</string>
     <string name="staff_status_soft_approved">Approvato condizionalmente</string>
@@ -447,7 +447,7 @@
     <string name="staff_team_remove_confirm">Rimuovi</string>
     <string name="staff_team_remove_desc">Rimuovere questo membro dal team dello staff?</string>
     <string name="staff_team_remove_title">Rimuovi membro del team</string>
-    <string name="staff_team_role_admin">Admin</string>
+    <string name="staff_team_role_admin">Amministratore</string>
     <string name="staff_team_role_moderator">Moderatore</string>
     <string name="staff_team_role_support">Assistenza</string>
     <string name="staff_team_toast_add_failed">Impossibile aggiungere il membro</string>

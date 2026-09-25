@@ -38,7 +38,7 @@
     <string name="access_add_rule">قاعدو شامل ڪريو</string>
     <string name="access_owner">مالڪ</string>
     <string name="access_revoke">رد ڪريو</string>
-    <string name="access_level_comment">تبصرو</string>
+    <string name="access_level_comment">تبصرو ڪريو</string>
     <string name="access_level_view">ڏسو</string>
     <string name="access_level_none">ڪا به نه</string>
     <string name="reaction_like">پسند</string>
@@ -145,7 +145,7 @@
     <string name="auth_passkey">پاس ڪيئي</string>
     <string name="auth_use_passkey">ھڪ پاس ڪي استعمال ڪريو</string>
     <string name="auth_email_me_a_code">مون کي اي ميل تي ڪوڊ موڪليو</string>
-    <string name="auth_or_enter_authenticator_code">يا authenticator ڪوڊ داخل ڪريو</string>
+    <string name="auth_or_enter_authenticator_code">يا تصديق ڪندڙ ڪوڊ داخل ڪريو</string>
     <string name="auth_log_in">لاگ ان ٿيو</string>
     <string name="auth_back">واپس</string>
     <string name="auth_lost_access_recovery">رسائي وڃائي؟ ھڪ بحالي ڪوڊ استعمال ڪريو</string>
@@ -189,7 +189,7 @@
     <string name="format_time_hours_short">%1$dh</string>
     <string name="format_time_days_short">%1$dd</string>
     <string name="format_time_weeks_short">%1$dw</string>
-    <string name="format_time_months_short">%1$dmo</string>
+    <string name="format_time_months_short">%1$d مهينا</string>
     <string name="reaction_add">ردِعمل شامل ڪريو</string>
     <string name="push_service_channel">Mochi پش</string>
     <string name="push_service_channel_description">Mochi کي اطلاع وصول ڪرڻ لاءِ ڳنڍيل رکي ٿو</string>
@@ -201,7 +201,7 @@
     <string name="reauth_signin_text">اطلاع روڪيا ويا آھن جيستائين توھان وري سائن ان نه ڪندا</string>
     <string name="oem_hint_title">پس منظر ۾ پھچ ۾ رھو</string>
     <string name="oem_hint_body">اطلاع پھچائڻ لاءِ Mochi کي پس منظر ۾ ھلڻو پوندو. مھرباني ڪري ايندڙ اسڪرين تي ھن جي اجازت ڏيو، نه ته اسڪرين بند ٿيڻ تي توھان جو فون اطلاع روڪي سگھي ٿو.</string>
-    <string name="oem_hint_samsung_note">Samsung فونن تي، Settings → Device care → Sleeping apps پڻ ڏسو ۽ جيڪڏھن Mochi لسٽ ٿيل آھي ته ان کي ھٽايو.</string>
+    <string name="oem_hint_samsung_note">Samsung فونن تي، سيٽنگون → ڊيوائس جي سنڀال → سمهيل ايپس پڻ ڏسو ۽ جيڪڏھن Mochi لسٽ ٿيل آھي ته ان کي ھٽايو.</string>
     <string name="oem_hint_allow">پس منظر جي اجازت ڏيو</string>
     <string name="oem_hint_dismiss">ٻيھر نه ڏيکاريو</string>
     <string name="about_title">Mochi ڪلائنٽ</string>
@@ -225,7 +225,7 @@
     <string name="stepup_description">هي توهان جي اڪائونٽ ۾ هڪ سيڪيورٽي تبديلي آهي. جاري رکڻ لاءِ تصديق ڪريو ته اهو توهان آهيو.</string>
     <string name="stepup_email_label">اي ميل ڪوڊ</string>
     <string name="stepup_email_placeholder">پنھنجي اِيميل مان ڪوڊ داخل ڪريو</string>
-    <string name="stepup_totp_label">Authenticator ڪوڊ</string>
+    <string name="stepup_totp_label">تصديق ڪندڙ ڪوڊ</string>
     <string name="stepup_totp_placeholder">پنهنجو تصديق ڪندڙ ڪوڊ داخل ڪريو</string>
     <string name="stepup_use_passkey">پنهنجي پاس ڪي استعمال ڪريو</string>
     <string name="stepup_send_email">اي ميل موڪليو</string>

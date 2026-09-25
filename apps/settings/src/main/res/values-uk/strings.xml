@@ -123,7 +123,7 @@
     <string name="system_settings_section_oauth">Вхід через сторонні сервіси</string>
     <string name="system_settings_section_user_defaults">Налаштування користувача за замовчуванням</string>
     <string name="system_settings_section_operator">Оператор</string>
-    <string name="system_settings_section_push">Push-сповіщення</string>
+    <string name="system_settings_section_push">Пуш-сповіщення</string>
     <string name="system_settings_section_other">Інші налаштування</string>
     <string name="system_settings_state_disabled">Вимкнено</string>
     <string name="system_settings_state_allowed">Дозволено</string>
@@ -151,9 +151,9 @@
     <string name="system_setting_oauth_github_client_secret">Секрет клієнта GitHub</string>
     <string name="system_setting_oauth_microsoft_client_id">Ідентифікатор клієнта Microsoft</string>
     <string name="system_setting_oauth_microsoft_client_secret">Секрет клієнта Microsoft</string>
-    <string name="system_setting_oauth_microsoft_tenant">Microsoft tenant</string>
+    <string name="system_setting_oauth_microsoft_tenant">Тенант Microsoft</string>
     <string name="system_setting_oauth_facebook_client_id">Ідентифікатор застосунку Facebook</string>
-    <string name="system_setting_oauth_facebook_client_secret">Секрет Facebook App</string>
+    <string name="system_setting_oauth_facebook_client_secret">Секрет застосунку Facebook</string>
     <string name="system_setting_oauth_x_client_id">ID клієнта X</string>
     <string name="system_setting_oauth_x_client_secret">Секрет клієнта X</string>
     <string name="system_setting_fcm_firebase_config">Файл Firebase google-services.json</string>
@@ -346,7 +346,7 @@
     <string name="system_status_reachability_private">Приватний</string>
     <string name="system_status_reachability_unknown">Невідомо</string>
     <string name="system_status_relay">Через ретранслятор</string>
-    <string name="system_status_mesh">Mesh трансляції</string>
+    <string name="system_status_mesh">Коміркова мережа трансляції</string>
     <string name="system_status_broadcast">Остання трансляція</string>
     <string name="system_status_queued_broadcasts">Широкомовні повідомлення в черзі</string>
     <string name="system_setting_hostname_publish">Оголошувати ім\'я хоста та домени іншим серверам</string>
@@ -362,9 +362,9 @@
     <string name="route_target_none">Немає доступних цілей</string>
     <string name="login_invalid_code">Недійсний код</string>
     <string name="accounts_provider_browser">Сповіщення браузера</string>
-    <string name="accounts_provider_fcm">Push для Android</string>
+    <string name="accounts_provider_fcm">Пуш для Android</string>
     <string name="accounts_provider_mcp">MCP-сервер</string>
-    <string name="accounts_provider_unifiedpush">Push-сповіщення</string>
+    <string name="accounts_provider_unifiedpush">Пуш-сповіщення</string>
     <string name="accounts_provider_url">Зовнішній URL</string>
     <string name="accounts_provider_web">Mochi веб</string>
     <string name="accounts_verified">Обліковий запис підтверджено</string>
@@ -383,7 +383,7 @@
     <string name="notifprefs_device_push">%1$s · пуш</string>
     <string name="notifprefs_test_partial">Тест надіслано до %1$d з %2$d призначень</string>
     <string name="notifprefs_test_none">Призначення не налаштовано</string>
-    <string name="notifprefs_transport_fcm">Push для Android</string>
+    <string name="notifprefs_transport_fcm">Пуш для Android</string>
     <string name="notifprefs_no_destinations">Немає призначень</string>
     <string name="account_data_generate">Згенерувати парольну фразу</string>
     <string name="accounts_field_server">URL сервера</string>

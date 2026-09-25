@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">Қызметкерлер</string>
+    <string name="launcher_staff">Mochi қызметкерлері</string>
     <string name="staff_accounts_action_ban_title">Тіркелгіге тыйым салу</string>
     <string name="staff_accounts_action_suspend_title">Есептік жазбаны тоқтату</string>
     <string name="staff_accounts_action_unban_title">Бұғаттан шығару</string>
@@ -93,9 +93,9 @@
     <string name="staff_audit_action_listing_updated">Хабарландыру өңделді</string>
     <string name="staff_audit_action_listing_warning">Ескерту берілді</string>
     <string name="staff_audit_action_order_cancelled">Болдырылмады</string>
-    <string name="staff_audit_action_order_chargeback">Chargeback алынды</string>
-    <string name="staff_audit_action_order_chargeback_lost">Chargeback қолдау табылды</string>
-    <string name="staff_audit_action_order_chargeback_won">Chargeback қабылданбады</string>
+    <string name="staff_audit_action_order_chargeback">Чарджбэк алынды</string>
+    <string name="staff_audit_action_order_chargeback_lost">Чарджбэк қолдау табылды</string>
+    <string name="staff_audit_action_order_chargeback_won">Чарджбэк қабылданбады</string>
     <string name="staff_audit_action_order_completed">Аяқталды</string>
     <string name="staff_audit_action_order_created">Тапсырыс орындалды</string>
     <string name="staff_audit_action_order_paid">Төлем алынды</string>
@@ -117,9 +117,9 @@
     <string name="staff_audit_action_subscription_active">Белсендіге қайтарылды</string>
     <string name="staff_audit_action_subscription_cancel_scheduled">Болдырмау жоспарланған</string>
     <string name="staff_audit_action_subscription_cancelled">Болдырылмады</string>
-    <string name="staff_audit_action_subscription_chargeback">Chargeback алынды</string>
-    <string name="staff_audit_action_subscription_chargeback_lost">Chargeback қолдау табылды</string>
-    <string name="staff_audit_action_subscription_chargeback_won">Chargeback қабылданбады</string>
+    <string name="staff_audit_action_subscription_chargeback">Чарджбэк алынды</string>
+    <string name="staff_audit_action_subscription_chargeback_lost">Чарджбэк қолдау табылды</string>
+    <string name="staff_audit_action_subscription_chargeback_won">Чарджбэк қабылданбады</string>
     <string name="staff_audit_action_subscription_created">Жазылым жасалды</string>
     <string name="staff_audit_action_subscription_past_due">Төлем мерзімі өтіп кетті</string>
     <string name="staff_audit_action_subscription_paused">Кідіртілген</string>
@@ -152,7 +152,7 @@
     <string name="staff_categories_dialog_position">Орны</string>
     <string name="staff_categories_dialog_save">Сақтау</string>
     <string name="staff_categories_dialog_saving">Сақталуда…</string>
-    <string name="staff_categories_dialog_slug">Slug</string>
+    <string name="staff_categories_dialog_slug">Слаг</string>
     <string name="staff_categories_empty">Санаттар жоқ</string>
     <string name="staff_categories_toast_created">Санат құрылды</string>
     <string name="staff_categories_toast_deleted">Санат жойылды</string>
@@ -162,7 +162,7 @@
     <string name="staff_categories_type_digital">Сандық</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">Физикалық</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">Қызметкерлер</string>
     <string name="staff_config_field_auto_approve">Авто-мақұлдау шегі</string>
     <string name="staff_config_field_hold">Ұстау шегі</string>
     <string name="staff_config_field_platform_fee">Платформа төлемі</string>
@@ -230,7 +230,7 @@
     <string name="staff_disputes_filter_status_label">Күй</string>
     <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Сатып алушы туралы</string>
-    <string name="staff_disputes_meta_chargeback_fee">Chargeback ақысы</string>
+    <string name="staff_disputes_meta_chargeback_fee">Чарджбэк ақысы</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">Stripe ұстап қалған</string>
     <string name="staff_disputes_meta_chargeback_fee_partial">%1$s қайтарылды</string>
     <string name="staff_disputes_meta_chargeback_fee_refunded">қайтарылды</string>
@@ -259,9 +259,9 @@
     <string name="staff_disputes_resolve">Шешу</string>
     <string name="staff_disputes_resolved_toast">Дау шешілді</string>
     <string name="staff_disputes_resolving">Шешілуде…</string>
-    <string name="staff_disputes_review">Шолу</string>
+    <string name="staff_disputes_review">Қарау</string>
     <string name="staff_disputes_status_escalated">Жоғары деңгейге шығарылды</string>
-    <string name="staff_disputes_status_open">Ашу</string>
+    <string name="staff_disputes_status_open">Ашық</string>
     <string name="staff_disputes_status_resolved_buyer">Шешілді (сатып алушы)</string>
     <string name="staff_disputes_status_resolved_seller">Шешілді (сатушы)</string>
     <string name="staff_disputes_status_responded">Жауап берді</string>
@@ -289,7 +289,7 @@
     <string name="staff_listings_moderation_hold">Ұстау</string>
     <string name="staff_listings_moderation_manual">Қолмен</string>
     <string name="staff_listings_moderation_rejected">Қабылданбады</string>
-    <string name="staff_listings_moderation_review">Шолу</string>
+    <string name="staff_listings_moderation_review">Қарауда</string>
     <string name="staff_listings_moderation_soft_approved">Жұмсақ-мақұлданды</string>
     <string name="staff_listings_notes_label">Жазбалар</string>
     <string name="staff_listings_price_placeholder">—</string>
@@ -337,7 +337,7 @@
     <string name="staff_reports_meta_reason">Себеп</string>
     <string name="staff_reports_meta_reporter">Шағымданушы</string>
     <string name="staff_reports_meta_seller">Сатушы</string>
-    <string name="staff_reports_meta_target">Мақсат</string>
+    <string name="staff_reports_meta_target">Шағым нысаны</string>
     <string name="staff_reports_meta_type">Түрі</string>
     <string name="staff_reports_notes_label">Жазбалар</string>
     <string name="staff_reports_reason_counterfeit">Жалған немесе ұрланған</string>
@@ -400,7 +400,7 @@
     <string name="staff_status_hold">Ұстау</string>
     <string name="staff_status_manual">Қолмен</string>
     <string name="staff_status_moderator">Модератор</string>
-    <string name="staff_status_open">Ашу</string>
+    <string name="staff_status_open">Ашық</string>
     <string name="staff_status_pending">Күтуде</string>
     <string name="staff_status_published">Жарияланды</string>
     <string name="staff_status_rejected">Қабылданбады</string>
@@ -408,7 +408,7 @@
     <string name="staff_status_resolved_buyer">Шешілді (сатып алушы)</string>
     <string name="staff_status_resolved_seller">Шешілді (сатушы)</string>
     <string name="staff_status_responded">Жауап берді</string>
-    <string name="staff_status_review">Шолу</string>
+    <string name="staff_status_review">Қарауда</string>
     <string name="staff_status_reviewed">Қаралды</string>
     <string name="staff_status_reviewing">Қарап жатыр</string>
     <string name="staff_status_soft_approved">Жұмсақ-мақұлданды</string>

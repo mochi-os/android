@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">ทีมงาน Mochi</string>
+    <string name="launcher_staff">ทีมงาน Mochi</string>
     <string name="staff_accounts_action_ban_title">แบนบัญชี</string>
     <string name="staff_accounts_action_suspend_title">ระงับบัญชี</string>
     <string name="staff_accounts_action_unban_title">ยกเลิกการแบน</string>
@@ -93,9 +93,9 @@
     <string name="staff_audit_action_listing_updated">แก้ไขประกาศแล้ว</string>
     <string name="staff_audit_action_listing_warning">ออกคำเตือนแล้ว</string>
     <string name="staff_audit_action_order_cancelled">ยกเลิกแล้ว</string>
-    <string name="staff_audit_action_order_chargeback">ได้รับ chargeback แล้ว</string>
-    <string name="staff_audit_action_order_chargeback_lost">ยืนยัน chargeback แล้ว</string>
-    <string name="staff_audit_action_order_chargeback_won">ยกเลิกการ chargeback แล้ว</string>
+    <string name="staff_audit_action_order_chargeback">ได้รับการเรียกเงินคืนแล้ว</string>
+    <string name="staff_audit_action_order_chargeback_lost">ยืนยันการเรียกเงินคืนแล้ว</string>
+    <string name="staff_audit_action_order_chargeback_won">ยกเลิกการเรียกเงินคืนแล้ว</string>
     <string name="staff_audit_action_order_completed">เสร็จสมบูรณ์</string>
     <string name="staff_audit_action_order_created">สั่งซื้อแล้ว</string>
     <string name="staff_audit_action_order_paid">ได้รับการชำระเงินแล้ว</string>
@@ -117,9 +117,9 @@
     <string name="staff_audit_action_subscription_active">กลับสู่สถานะใช้งาน</string>
     <string name="staff_audit_action_subscription_cancel_scheduled">กำหนดการยกเลิกแล้ว</string>
     <string name="staff_audit_action_subscription_cancelled">ยกเลิกแล้ว</string>
-    <string name="staff_audit_action_subscription_chargeback">ได้รับ chargeback แล้ว</string>
-    <string name="staff_audit_action_subscription_chargeback_lost">ยืนยัน chargeback แล้ว</string>
-    <string name="staff_audit_action_subscription_chargeback_won">ยกเลิกการ chargeback แล้ว</string>
+    <string name="staff_audit_action_subscription_chargeback">ได้รับการเรียกเงินคืนแล้ว</string>
+    <string name="staff_audit_action_subscription_chargeback_lost">ยืนยันการเรียกเงินคืนแล้ว</string>
+    <string name="staff_audit_action_subscription_chargeback_won">ยกเลิกการเรียกเงินคืนแล้ว</string>
     <string name="staff_audit_action_subscription_created">สร้างการสมัครสมาชิกแล้ว</string>
     <string name="staff_audit_action_subscription_past_due">เลยกำหนดชำระแล้ว</string>
     <string name="staff_audit_action_subscription_paused">หยุดชั่วคราวแล้ว</string>
@@ -152,7 +152,7 @@
     <string name="staff_categories_dialog_position">ตำแหน่ง</string>
     <string name="staff_categories_dialog_save">บันทึก</string>
     <string name="staff_categories_dialog_saving">กำลังบันทึก…</string>
-    <string name="staff_categories_dialog_slug">Slug</string>
+    <string name="staff_categories_dialog_slug">ชื่อ URL</string>
     <string name="staff_categories_empty">ไม่มีหมวดหมู่</string>
     <string name="staff_categories_toast_created">สร้างหมวดหมู่แล้ว</string>
     <string name="staff_categories_toast_deleted">ลบหมวดหมู่แล้ว</string>
@@ -162,7 +162,7 @@
     <string name="staff_categories_type_digital">ดิจิทัล</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">สินค้าจับต้องได้</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">ทีมงาน Mochi</string>
     <string name="staff_config_field_auto_approve">เกณฑ์อนุมัติอัตโนมัติ</string>
     <string name="staff_config_field_hold">เกณฑ์การระงับ</string>
     <string name="staff_config_field_platform_fee">ค่าธรรมเนียมแพลตฟอร์ม</string>
@@ -230,7 +230,7 @@
     <string name="staff_disputes_filter_status_label">สถานะ</string>
     <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">ข้อมูลผู้ซื้อ</string>
-    <string name="staff_disputes_meta_chargeback_fee">ค่าธรรมเนียม chargeback</string>
+    <string name="staff_disputes_meta_chargeback_fee">ค่าธรรมเนียมการเรียกเงินคืน</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">Stripe เก็บไว้</string>
     <string name="staff_disputes_meta_chargeback_fee_partial">คืนเงิน %1$s</string>
     <string name="staff_disputes_meta_chargeback_fee_refunded">คืนเงินแล้ว</string>
@@ -259,7 +259,7 @@
     <string name="staff_disputes_resolve">แก้ไข</string>
     <string name="staff_disputes_resolved_toast">แก้ไขข้อพิพาทแล้ว</string>
     <string name="staff_disputes_resolving">กำลังแก้ไข…</string>
-    <string name="staff_disputes_review">รีวิว</string>
+    <string name="staff_disputes_review">ตรวจสอบ</string>
     <string name="staff_disputes_status_escalated">ยกระดับแล้ว</string>
     <string name="staff_disputes_status_open">เปิด</string>
     <string name="staff_disputes_status_resolved_buyer">แก้ไขแล้ว (ผู้ซื้อ)</string>
@@ -303,7 +303,7 @@
     <string name="staff_listings_moderation_hold">ค้างไว้</string>
     <string name="staff_listings_moderation_manual">ด้วยตนเอง</string>
     <string name="staff_listings_moderation_rejected">ปฏิเสธแล้ว</string>
-    <string name="staff_listings_moderation_review">รีวิว</string>
+    <string name="staff_listings_moderation_review">รอตรวจสอบ</string>
     <string name="staff_listings_moderation_soft_approved">อนุมัติชั่วคราว</string>
     <string name="staff_listings_notes_label">บันทึก</string>
     <string name="staff_listings_price_placeholder">—</string>
@@ -329,7 +329,7 @@
     <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">การกระทำ</string>
     <string name="staff_reports_action_ban">แบนผู้ใช้</string>
-    <string name="staff_reports_action_dismiss">ปิด</string>
+    <string name="staff_reports_action_dismiss">ปัดตก</string>
     <string name="staff_reports_action_label">การกระทำ</string>
     <string name="staff_reports_action_placeholder">เลือกการกระทำ</string>
     <string name="staff_reports_action_remove">ลบ</string>
@@ -351,7 +351,7 @@
     <string name="staff_reports_meta_reason">เหตุผล</string>
     <string name="staff_reports_meta_reporter">ผู้รายงาน</string>
     <string name="staff_reports_meta_seller">ผู้ขาย</string>
-    <string name="staff_reports_meta_target">เป้าหมาย</string>
+    <string name="staff_reports_meta_target">รายการที่ถูกรายงาน</string>
     <string name="staff_reports_meta_type">ประเภท</string>
     <string name="staff_reports_notes_label">บันทึก</string>
     <string name="staff_reports_reason_counterfeit">ของปลอมหรือถูกขโมย</string>
@@ -424,7 +424,7 @@
     <string name="staff_status_resolved_buyer">แก้ไขแล้ว (ผู้ซื้อ)</string>
     <string name="staff_status_resolved_seller">แก้ไขแล้ว (ผู้ขาย)</string>
     <string name="staff_status_responded">ตอบกลับแล้ว</string>
-    <string name="staff_status_review">รีวิว</string>
+    <string name="staff_status_review">รอตรวจสอบ</string>
     <string name="staff_status_reviewed">รีวิวแล้ว</string>
     <string name="staff_status_reviewing">กำลังรีวิว</string>
     <string name="staff_status_soft_approved">อนุมัติชั่วคราว</string>

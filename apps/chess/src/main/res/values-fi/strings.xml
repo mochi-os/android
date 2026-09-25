@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chess_app_title">Šakki</string>
-    <string name="chess_sidebar_header">Šakki</string>
+    <string name="chess_app_title">Shakki</string>
+    <string name="chess_sidebar_header">Shakki</string>
     <string name="chess_sidebar_active">Aktiiviset pelit</string>
     <string name="chess_sidebar_completed">Valmis</string>
     <string name="chess_sidebar_new_game">Uusi peli</string>
@@ -13,7 +13,7 @@
     <string name="chess_new_title">Uusi peli</string>
     <string name="chess_new_pick_opponent">Valitse vastustaja</string>
     <string name="chess_new_no_friends_title">Ei vielä ystäviä</string>
-    <string name="chess_new_no_friends_subtitle">Lisää kavereita People-sovelluksessa aloittaaksesi pelin</string>
+    <string name="chess_new_no_friends_subtitle">Lisää kavereita Ihmiset-sovelluksessa aloittaaksesi pelin</string>
     <string name="chess_new_add_friends">Lisää kavereita</string>
     <string name="chess_new_start_button">Aloita peli</string>
     <string name="chess_new_creating">Luodaan…</string>

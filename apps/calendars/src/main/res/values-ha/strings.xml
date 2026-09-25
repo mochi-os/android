@@ -10,7 +10,7 @@
     <string name="calendars_delete">Goge</string>
     <string name="calendars_previous">Na baya</string>
     <string name="calendars_next">Na gaba</string>
-    <string name="calendars_view">Kalla</string>
+    <string name="calendars_view">Kallo</string>
     <string name="calendars_view_list">Jeri</string>
     <string name="calendars_list_search">Bincika</string>
     <string name="calendars_event_untitled">Ba shi da suna</string>
@@ -169,7 +169,7 @@
     <string name="calendars_subscribe_server_url">Adireshin uwar garke</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Kalandar Google</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Ba a kunna asusun Google a wannan sabar ba. Kunna su a Saitunan, Saitunan system.</string>
     <string name="calendars_subscribe_google_connect">Ba ka haɗa asusun Google ba.</string>

@@ -38,7 +38,7 @@
     <string name="access_add_rule">Embojuruja peteĩ tembiapouka</string>
     <string name="access_owner">Mburuvicha</string>
     <string name="access_revoke">Embogue</string>
-    <string name="access_level_comment">Comentario</string>
+    <string name="access_level_comment">Ekomenta</string>
     <string name="access_level_view">Ehecha</string>
     <string name="access_level_none">Mba\'eve</string>
     <string name="reaction_like">Aikose</string>
@@ -66,7 +66,7 @@
     <string name="settings_appearance_light">Hesakã</string>
     <string name="settings_appearance_dark">Yvotypaha</string>
     <string name="settings_density">Hetávapa</string>
-    <string name="settings_density_compact">Compact</string>
+    <string name="settings_density_compact">Mbyky</string>
     <string name="settings_density_comfortable">Hovyrõ</string>
     <string name="settings_density_spacious">Ipa\'ũva</string>
     <string name="settings_radius_none">Mba\'eve</string>
@@ -106,8 +106,8 @@
     <string name="settings_display_reset">Embojevy ypy peguávape</string>
     <string name="settings_display_reset_confirm_title">Embojevy techaha?</string>
     <string name="settings_display_reset_confirm_message">Ko mba\'e ombojevýta techaha mbohape iñepyrũmby teépe.</string>
-    <string name="settings_theme_title">Theme</string>
-    <string name="settings_theme_default">Default</string>
+    <string name="settings_theme_title">Téma</string>
+    <string name="settings_theme_default">Ypygua</string>
     <string name="settings_background">Tugua</string>
     <string name="settings_background_theme">Téma guive</string>
     <string name="settings_background_off">Mba\'eve</string>
@@ -186,13 +186,13 @@
     <string name="format_time_weeks_ago">%1$dw ohasa</string>
     <string name="format_time_months_ago">%1$dmo ohasa</string>
     <string name="format_time_years_ago">%1$dy ohasa</string>
-    <string name="format_time_minutes_short">%1$dm</string>
+    <string name="format_time_minutes_short">%1$d min</string>
     <string name="format_time_hours_short">%1$dh</string>
     <string name="format_time_days_short">%1$dd</string>
-    <string name="format_time_weeks_short">%1$dw</string>
-    <string name="format_time_months_short">%1$dmo</string>
+    <string name="format_time_weeks_short">%1$d sem</string>
+    <string name="format_time_months_short">%1$d jasy</string>
     <string name="reaction_add">Embojuaju mbohovái</string>
-    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel">Mochi momarandu</string>
     <string name="push_service_channel_description">Omombarete Mochi oñembojoaju hag̃ua marandu og̃uahẽvo</string>
     <string name="push_service_group">Tembiapo okára</string>
     <string name="push_service_title">Mochi ohendu marandu og̃uahẽvo</string>
@@ -205,7 +205,7 @@
     <string name="oem_hint_samsung_note">Samsung pumbyrýpe, ehecha avei Ñemboheko → Mba\'erepy ñangareko → Tembiporu oke → ha emboguete Mochi oĩramo upépe.</string>
     <string name="oem_hint_allow">Emoneĩ hapykuépe</string>
     <string name="oem_hint_dismiss">Ani ehechauka jey</string>
-    <string name="about_title">Mochi Client</string>
+    <string name="about_title">Mochi cliente</string>
     <string name="about_version">Pyahuve %1$s</string>
     <string name="about_check_updates">Eheka pyahuve</string>
     <string name="about_up_to_date">Ipyahúma</string>
@@ -253,7 +253,7 @@
     <string name="reaction_remove">Mopotĩ</string>
     <string name="common_logout_confirm_message">¿Añetehápe esẽse? Tekotevẽta eike jey eiporu hag̃ua ne mba\'ete.</string>
     <string name="comment_anonymous">Hérỹva</string>
-    <string name="tags_label">Tagskuéra</string>
+    <string name="tags_label">Etiquetakuéra</string>
     <string name="tags_add">Embojuaju tag</string>
     <string name="tags_interest_up">Ehechauka hetave kóicha</string>
     <string name="tags_interest_down">Ehechauka sa\'ive kóicha</string>

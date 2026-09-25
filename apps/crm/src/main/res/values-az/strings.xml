@@ -21,7 +21,7 @@
     <string name="crm_design">Dizayn</string>
     <string name="crm_export_failed">İxrac saxlanıla bilmədi</string>
     <string name="crm_sort_direction">İstiqamət</string>
-    <string name="crm_sort_rank">Manual</string>
+    <string name="crm_sort_rank">Əl ilə</string>
     <string name="crm_sort_created">Yaradıldı</string>
     <string name="crm_sort_updated">Yeniləndi</string>
     <string name="crm_create_object_title">Obyekt yarat</string>
@@ -78,7 +78,7 @@
     <string name="crm_design_or_upload_json">Yaxud fayl yükləyin</string>
     <string name="crm_design_upload_json">Versiyanı yüklə</string>
     <string name="crm_design_tab_classes">Siniflər</string>
-    <string name="crm_design_tab_views">Baxışlar</string>
+    <string name="crm_design_tab_views">Görünüşlər</string>
     <string name="crm_design_import_dialog_title">Dizaynı idxal et</string>
     <string name="crm_design_import_choose_template">Şablon seçin</string>
     <string name="crm_design_replace_title">Dizaynı əvəz edək?</string>
@@ -94,7 +94,7 @@
     <string name="crm_class_delete">Sinifi sil</string>
     <string name="crm_class_delete_title">Sinifi sil</string>
     <string name="crm_field_type_text">Mətn</string>
-    <string name="crm_field_type_number">Nömrə</string>
+    <string name="crm_field_type_number">Rəqəm</string>
     <string name="crm_field_type_user">İstifadəçi</string>
     <string name="crm_field_type_date">Tarix</string>
     <string name="crm_field_type_checklist">Yoxlama siyahısı</string>

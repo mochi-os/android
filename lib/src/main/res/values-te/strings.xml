@@ -38,7 +38,7 @@
     <string name="access_add_rule">నియమం జోడించండి</string>
     <string name="access_owner">ఓనర్</string>
     <string name="access_revoke">రద్దు చేయండి</string>
-    <string name="access_level_comment">వ్యాఖ్య</string>
+    <string name="access_level_comment">వ్యాఖ్యానించండి</string>
     <string name="access_level_view">వీక్షించండి</string>
     <string name="access_level_none">ఏదీ లేదు</string>
     <string name="reaction_like">ఇష్టం</string>
@@ -201,7 +201,7 @@
     <string name="reauth_signin_text">మీరు మళ్లీ సైన్ ఇన్ చేసే వరకు నోటిఫికేషన్‌లు నిలిపివేయబడ్డాయి</string>
     <string name="oem_hint_title">నేపథ్యంలో అందుబాటులో ఉండండి</string>
     <string name="oem_hint_body">నోటిఫికేషన్‌లను అందించడానికి Mochi తప్పనిసరిగా నేపథ్యంలో రన్ అవ్వాలి. దయచేసి తదుపరి స్క్రీన్‌లో దీన్ని అనుమతించండి, లేకుంటే స్క్రీన్ ఆఫ్ అయినప్పుడు మీ ఫోన్ నోటిఫికేషన్‌లను నిలిపివేయవచ్చు.</string>
-    <string name="oem_hint_samsung_note">Samsung ఫోన్‌లలో, Settings → Device care → Sleeping apps ను కూడా తనిఖీ చేయండి మరియు జాబితాలో ఉంటే Mochi ని తీసివేయండి.</string>
+    <string name="oem_hint_samsung_note">Samsung ఫోన్‌లలో, సెట్టింగ్‌లు → పరికర సంరక్షణ → నిద్రిస్తున్న యాప్‌లను కూడా తనిఖీ చేయండి మరియు జాబితాలో ఉంటే Mochi ని తీసివేయండి.</string>
     <string name="oem_hint_allow">నేపథ్యాన్ని అనుమతించండి</string>
     <string name="oem_hint_dismiss">మళ్లీ చూపించవద్దు</string>
     <string name="about_title">Mochi క్లయింట్</string>

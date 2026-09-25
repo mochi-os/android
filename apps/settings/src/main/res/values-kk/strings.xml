@@ -10,13 +10,13 @@
     <string name="settings_home_accounts">Қосылған тіркелгілер</string>
     <string name="settings_home_interests">Қызығушылықтар</string>
     <string name="account_section_passkeys">Passkey-лер</string>
-    <string name="account_passkey_register">Passkey қосу</string>
-    <string name="account_passkey_delete_title">Passkey жою керек пе?</string>
-    <string name="account_section_totp">Authenticator қолданбасы</string>
-    <string name="account_totp_setup">Authenticator орнату</string>
-    <string name="account_totp_setup_title">Authenticator орнату</string>
+    <string name="account_passkey_register">Кіру кілтін қосу</string>
+    <string name="account_passkey_delete_title">Кіру кілтін жою керек пе?</string>
+    <string name="account_section_totp">Аутентификатор қолданбасы</string>
+    <string name="account_totp_setup">Аутентификаторды орнату</string>
+    <string name="account_totp_setup_title">Аутентификаторды орнату</string>
     <string name="account_totp_verify">Тексеру</string>
-    <string name="account_totp_disable_title">Authenticator өшіру керек пе?</string>
+    <string name="account_totp_disable_title">Аутентификаторды өшіру керек пе?</string>
     <string name="account_section_recovery">Қалпына келтіру кодтары</string>
     <string name="account_recovery_codes_title">Қалпына келтіру кодтары</string>
     <string name="sessions_unknown_agent">Белгісіз құрылғы</string>
@@ -316,7 +316,7 @@
     <string name="login_section_methods">Кіру әдістері</string>
     <string name="login_method_email">Электрондық пошта коды</string>
     <string name="login_method_passkey">Кіру кілті</string>
-    <string name="login_method_totp">Authenticator қолданбасы</string>
+    <string name="login_method_totp">Аутентификатор қолданбасы</string>
     <string name="login_method_oauth">Үшінші тарап арқылы кіру</string>
     <string name="login_method_recovery">Қалпына келтіру кодтары</string>
     <string name="account_close_section">Тіркелгіні жабу</string>
@@ -342,7 +342,7 @@
     <string name="system_status_reachability_private">Жеке</string>
     <string name="system_status_reachability_unknown">Белгісіз</string>
     <string name="system_status_relay">Реле арқылы</string>
-    <string name="system_status_mesh">Тарату mesh</string>
+    <string name="system_status_mesh">Тарату торы</string>
     <string name="system_status_broadcast">Соңғы тарату</string>
     <string name="system_status_queued_broadcasts">Кезектегі тарату хабарлары</string>
     <string name="system_setting_hostname_publish">Хост атауы мен домендерді басқа серверлерге хабарлау</string>
@@ -376,7 +376,7 @@
     <string name="accounts_forget_message">Бұл \"%1$s\" құрылғысын ұмытады және оған хабарландыруларды тоқтатады.</string>
     <string name="accounts_device_seen">Соңғы рет көрінді %1$s</string>
     <string name="notifprefs_device_app">%1$s · қолданба</string>
-    <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_device_push">%1$s · Push хабарландырулары</string>
     <string name="notifprefs_test_partial">Тест %2$d межеден %1$d-іне жіберілді</string>
     <string name="notifprefs_test_none">Бағыттар реттелмеген</string>
     <string name="notifprefs_transport_fcm">Android push хабарландыруы</string>

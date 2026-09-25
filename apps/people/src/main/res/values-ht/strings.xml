@@ -62,7 +62,7 @@
     <string name="people_profile_uploading">Ap telechaje…</string>
     <string name="people_profile_change_banner">Chanje banyè</string>
     <string name="people_profile_no_banner">Pa gen banyè</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">Ikon navigatè</string>
     <string name="people_profile_browser_icon">Ikon navigatè</string>
     <string name="people_profile_file_too_large">Fichye twò gwo</string>
     <string name="people_profile_clear">Efase</string>
@@ -71,12 +71,12 @@
     <string name="people_common_cancel">Anile</string>
     <string name="people_common_close">Fèmen</string>
     <string name="people_common_save">Sove</string>
-    <string name="people_welcome_dismiss">Rejte</string>
+    <string name="people_welcome_dismiss">Fèmen</string>
     <string name="people_sidebar_header">Moun</string>
     <string name="people_open_sidebar">Ouvri navigasyon</string>
     <string name="people_person_state_friend">Zanmi</string>
     <string name="people_person_state_self">Ou</string>
-    <string name="people_person_message">Mesaj</string>
+    <string name="people_person_message">Voye mesaj</string>
     <string name="people_person_accept">Aksepte</string>
     <string name="people_person_decline">Refize</string>
 
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">Antre yon koulè eks valab (egzanp #a78bfa)</string>
     <string name="people_profile_accent_none">Okenn</string>
     <string name="people_profile_privacy_private_desc">Sèlman zanmi mityèl ka gade pwofil ou</string>
-    <string name="people_welcome_title">Byenvini nan People</string>
+    <string name="people_welcome_title">Byenvini nan Moun</string>
     <string name="people_person_banner_alt">Banyè pou %1$s</string>
     <string name="people_person_private">Pwofil sa a prive</string>
     <string name="people_person_state_invited">Envite</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Aksepte tout</string>
     <string name="people_invitations_decline_all">Refize tout</string>
     <string name="people_invitations_cancel_all">Anile tout</string>
+    <string name="people_invitations_cancel">Anile</string>
     <string name="people_invitations_all_accepted">Tout envitasyon aksepte</string>
     <string name="people_invitations_all_declined">Tout envitasyon refize</string>
     <string name="people_invitations_all_cancelled">Tout envitasyon anile</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Chèche…</string>
     <string name="people_contacts_invited">Envite</string>
     <string name="people_contacts_accept">Aksepte</string>
-    <string name="people_contacts_message">Mesaj</string>
+    <string name="people_contacts_message">Voye mesaj</string>
     <string name="people_contacts_no_people_found">Pa gen moun ki jwenn</string>
     <string name="people_contacts_try_adjusting">Eseye ajiste rechèch ou</string>
     <string name="people_contact_section_address">Adrès</string>
@@ -130,7 +131,7 @@
     <string name="people_contact_postcode">Kòd postal</string>
     <string name="people_contact_country">Peyi</string>
     <string name="people_contact_type">Tip</string>
-    <string name="people_contact_type_home">Kay</string>
+    <string name="people_contact_type_home">Lakay</string>
     <string name="people_contact_type_other">Lòt</string>
     <string name="people_contact_remove">Retire</string>
     <string name="people_contact_pick_date_confirm">OK</string>

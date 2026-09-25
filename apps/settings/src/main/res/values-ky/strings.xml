@@ -10,13 +10,13 @@
     <string name="settings_home_accounts">Байланышкан аккаунттар</string>
     <string name="settings_home_interests">Кызыкчылыктар</string>
     <string name="account_section_passkeys">Кирүү ачкычтары</string>
-    <string name="account_passkey_register">Passkey кошуу</string>
-    <string name="account_passkey_delete_title">Passkey жок кылабызбы?</string>
-    <string name="account_section_totp">Authenticator колдонмосу</string>
+    <string name="account_passkey_register">Кирүү ачкычын кошуу</string>
+    <string name="account_passkey_delete_title">Кирүү ачкычын жок кылабызбы?</string>
+    <string name="account_section_totp">Аутентификатор колдонмосу</string>
     <string name="account_totp_setup">Аутентификаторду орнотуу</string>
     <string name="account_totp_setup_title">Аутентификаторду орнотуу</string>
     <string name="account_totp_verify">Текшерүү</string>
-    <string name="account_totp_disable_title">Authenticatorду өчүрөбүзбү?</string>
+    <string name="account_totp_disable_title">Аутентификаторду өчүрөбүзбү?</string>
     <string name="account_section_recovery">Калыбына келтирүү коддору</string>
     <string name="account_recovery_codes_title">Калыбына келтирүү коддору</string>
     <string name="sessions_unknown_agent">Белгисиз түзмөк</string>
@@ -34,7 +34,7 @@
     <string name="account_copy">Көчүрүү</string>
     <string name="account_copy_all">Баарын көчүрүү</string>
     <string name="sessions_current">(учурдагы)</string>
-    <string name="settings_home_section_system">Системалык</string>
+    <string name="settings_home_section_system">Система</string>
     <string name="route_section">Маршруттар</string>
     <string name="route_add">Маршрут кошуу</string>
     <string name="route_add_title">Маршрут кошуу</string>
@@ -123,7 +123,7 @@
     <string name="system_settings_section_oauth">Үчүнчү жактын кирүүсү</string>
     <string name="system_settings_section_user_defaults">Колдонуучу демейкилери</string>
     <string name="system_settings_section_operator">Оператор</string>
-    <string name="system_settings_section_push">Push билдирмелери</string>
+    <string name="system_settings_section_push">Пуш билдирмелери</string>
     <string name="system_settings_section_other">Башка жөндөөлөр</string>
     <string name="system_settings_state_disabled">Өчүрүлгөн</string>
     <string name="system_settings_state_allowed">Уруксат берилген</string>
@@ -137,7 +137,7 @@
     <string name="system_settings_reset_title">Демейкиге кайтарасызбы?</string>
     <string name="system_setting_apps_install_user">Колдонуучуларга колдонмолорду орнотууга уруксат берүү</string>
     <string name="system_setting_auth_email">Электрондук почта коду менен кирүү</string>
-    <string name="system_setting_auth_passkey">Passkey менен кирүү</string>
+    <string name="system_setting_auth_passkey">Кирүү ачкычы менен кирүү</string>
     <string name="system_setting_auth_totp">TOTP аутентификатор колдонмосу менен кирүү</string>
     <string name="system_setting_auth_recovery">Калыбына келтирүү коду менен кирүү</string>
     <string name="system_setting_auth_oauth">OAuth 2.0 менен кирүү</string>
@@ -316,7 +316,7 @@
     <string name="login_section_methods">Кирүү ыкмалары</string>
     <string name="login_method_email">Электрондук почта коду</string>
     <string name="login_method_passkey">Мүмкүндүк ачкычы</string>
-    <string name="login_method_totp">Authenticator колдонмосу</string>
+    <string name="login_method_totp">Аутентификатор колдонмосу</string>
     <string name="login_method_oauth">Үчүнчү жактын кирүүсү</string>
     <string name="login_method_recovery">Калыбына келтирүү коддору</string>
     <string name="account_close_section">Эсепти жабуу</string>
@@ -342,7 +342,7 @@
     <string name="system_status_reachability_private">Купуя</string>
     <string name="system_status_reachability_unknown">Белгисиз</string>
     <string name="system_status_relay">Реле аркылуу</string>
-    <string name="system_status_mesh">Берүү mesh</string>
+    <string name="system_status_mesh">Берүү меш-тармагы</string>
     <string name="system_status_broadcast">Акыркы берүү</string>
     <string name="system_status_queued_broadcasts">Кезектеги жайылтуу билдирүүлөрү</string>
     <string name="system_setting_hostname_publish">Хост атын жана домендерди башка серверлерге жарыялоо</string>
@@ -358,9 +358,9 @@
     <string name="route_target_none">Жеткиликтүү багыттар жок</string>
     <string name="login_invalid_code">Жараксыз код</string>
     <string name="accounts_provider_browser">Браузер эскертүүлөрү</string>
-    <string name="accounts_provider_fcm">Android push билдирүүсү</string>
+    <string name="accounts_provider_fcm">Android пуш билдирүүсү</string>
     <string name="accounts_provider_mcp">MCP сервери</string>
-    <string name="accounts_provider_unifiedpush">Push билдирүүсү</string>
+    <string name="accounts_provider_unifiedpush">Пуш билдирүүсү</string>
     <string name="accounts_provider_url">Тышкы URL</string>
     <string name="accounts_provider_web">Mochi веб</string>
     <string name="accounts_verified">Аккаунт текшерилди</string>
@@ -376,10 +376,10 @@
     <string name="accounts_forget_message">Бул \"%1$s\" түзмөгүн унутат жана ага билдирмелерди токтотот.</string>
     <string name="accounts_device_seen">Акыркы жолу көрүлгөн %1$s</string>
     <string name="notifprefs_device_app">%1$s · колдонмо</string>
-    <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_device_push">%1$s · пуш</string>
     <string name="notifprefs_test_partial">Тест %2$d багыттан %1$d-ине жөнөтүлдү</string>
     <string name="notifprefs_test_none">Багыттар конфигурацияланган эмес</string>
-    <string name="notifprefs_transport_fcm">Android push билдирүүсү</string>
+    <string name="notifprefs_transport_fcm">Android пуш билдирүүсү</string>
     <string name="notifprefs_no_destinations">Багыттар жок</string>
     <string name="account_data_generate">Купуя сөз айкашын жаратуу</string>
     <string name="accounts_field_server">Сервер URL</string>

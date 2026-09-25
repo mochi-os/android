@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Oraindik argitalpenik ez</string>
     <string name="feeds_sort_label">Ordenatu</string>
     <string name="feeds_sort_interests">Interesak</string>
-    <string name="feeds_sort_new">Berria</string>
+    <string name="feeds_sort_new">Berrienak</string>
     <string name="feeds_sort_hot">Beroa</string>
-    <string name="feeds_sort_top">Goia</string>
+    <string name="feeds_sort_top">Onenak</string>
     <string name="feeds_sort_ai">AA</string>
     <string name="feeds_post_default_author">Argitalpena</string>
     <string name="feeds_image_preview">Aurrebista</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Utzi erantzuna</string>
     <string name="feeds_edit_post">Editatu argitalpena</string>
     <string name="feeds_save_label">Gorde</string>
-    <string name="feeds_post_action">Argitalpena</string>
+    <string name="feeds_post_action">Argitaratu</string>
     <string name="feeds_feed_label">Jarioa</string>
     <string name="feeds_add_files">Gehitu fitxategiak</string>
     <string name="feeds_restore">Berrezarri</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Amaitu saioa</string>
     <string name="feeds_ai_account_default">Lehenetsitako kontua</string>
     <string name="feeds_ai_mode_off">Desgaituta</string>
-    <string name="feeds_ai_mode_tag">Etiketa</string>
+    <string name="feeds_ai_mode_tag">Etiketatu</string>
     <string name="feeds_ai_mode_tag_deduplicate">Etiketatu eta deduplikatu</string>
     <string name="feeds_feed_not_found">Jarioa ez da aurkitu</string>
     <string name="feeds_post_not_found">Ez da argitalpena aurkitu</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Interesa murriztuta</string>
     <string name="feeds_interest_removed">Interesa kenduta</string>
     <string name="feeds_interest_failed">Ezin izan da interesa doitu</string>
-    <string name="feeds_saved_title">Gordeta</string>
-    <string name="feeds_saved_menu">Gordeta</string>
+    <string name="feeds_saved_title">Gordetakoak</string>
+    <string name="feeds_saved_menu">Gordetakoak</string>
     <string name="feeds_saved_save">Gorde geroko</string>
     <string name="feeds_saved_remove">Kendu gordeetatik</string>
     <string name="feeds_saved_clear_all">Garbitu dena</string>

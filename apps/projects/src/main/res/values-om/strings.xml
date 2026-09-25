@@ -2,7 +2,7 @@
 <resources>
     <string name="projects_auth_display_name">Maqaa mul\'atu</string>
     <string name="projects_auth_verification_failed">Mirkaneessuun hin milkoofne</string>
-    <string name="projects_list_title">Pirojektota</string>
+    <string name="projects_list_title">Pirojektoota</string>
     <string name="projects_list_close_search">Barbaadii cufi</string>
     <string name="projects_list_search">Barbaadi</string>
     <string name="projects_list_find">Pirojektota argi</string>
@@ -85,7 +85,7 @@
     <string name="projects_request_merge_dialog_title">Maki</string>
     <string name="projects_request_method">Mala</string>
     <string name="projects_request_method_merge">Maki</string>
-    <string name="projects_request_field_repository">Repository</string>
+    <string name="projects_request_field_repository">Kuusaa</string>
     <string name="projects_request_field_source">Damee madda</string>
     <string name="projects_request_field_title">Mata duree</string>
     <string name="projects_request_field_description">Ibsa</string>
@@ -99,7 +99,7 @@
     <string name="projects_board_rename">Maqaa jijjiiri</string>
     <string name="projects_board_rename_column">Maqaa tarjaa jijjiiri</string>
     <string name="projects_move_position">Bakka</string>
-    <string name="projects_move_position_top">Ol</string>
+    <string name="projects_move_position_top">Gubbaa</string>
     <string name="projects_move_current">Yeroo amma</string>
     <string name="projects_design_title">Boci</string>
     <string name="projects_design_export">Bocii ergi</string>
@@ -158,9 +158,9 @@
     <string name="projects_more">Caalaa</string>
     <string name="projects_request_more">Caalaa</string>
     <string name="projects_comment_send">Ergi</string>
-    <string name="projects_field_position_body">Qabiyyee</string>
+    <string name="projects_field_position_body">Qaama</string>
     <string name="projects_sort_field">Tartiibessuu</string>
-    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_comment_remove_attachment">Maxxansaa haqi</string>
     <string name="projects_views_sort_by">Tartiibessuu</string>
     <string name="projects_auth_login_failed">Galmaa\'uun hin milkoofne</string>
     <string name="projects_views_move_up">Gubbatti dabarsi</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Wantoota barbaadi</string>
 
     <string name="notification_channel_projects">Beeksisawwan Pirojektoota</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Pirojektoota</string>
     <string name="projects_auth_create_identity_failed">Eenyummaa uumuun hin milkoofne</string>
     <string name="projects_auth_mfa_unsupported">MFA ammaaf appii moobaayilii keessatti hin deggeramu</string>
     <string name="projects_auth_enter_code_sent">Koodii gara %1$s ergame galchi</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Seera filadhu</string>
     <string name="projects_access_authenticated_desc">Nama seenee jiru kamiyyuu</string>
     <string name="projects_access_anyone_desc">Fayyadamtoota maqaan isaanii hin beekamne dabalatee</string>
-    <string name="projects_access_target">Galma</string>
+    <string name="projects_access_target">Fayyadamaa ykn garee</string>
     <string name="projects_access_target_hint">Eenyummaa entiitii, @gareen, * (hunda), yookaan + (miseensota)</string>
     <string name="projects_access_selected">Filatame: %1$s</string>
     <string name="projects_access_role_comment">Yaada fi mul\'isi</string>
@@ -381,5 +381,5 @@
     <string name="projects_option_delete_message">Dhugumatti filannoo \"%1$s\" haquu barbaaddaa?</string>
     <string name="projects_create_object_no_types">Hanga ammaatti gosti meeshaalee uumamuu hin danda\'u. Jalqaba meeshaalee maatii barbaachisaa uumi.</string>
     <string name="projects_create_blocked_no_options">Uumuun hin danda\'amne: %1$s barbaachisaa dha garuu filannoo hin qabu. Dizaayinii keessatti filannoo dabali.</string>
-    <string name="projects_attachment_remove">Remove attachment</string>
+    <string name="projects_attachment_remove">Maxxansaa haqi</string>
 </resources>

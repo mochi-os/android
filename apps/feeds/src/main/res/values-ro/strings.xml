@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="feeds_title">Fluxuri</string>
+    <string name="feeds_title">Feed-uri</string>
     <string name="feeds_find_feeds">Găsește fluxuri</string>
     <string name="feeds_create_feed">Creează flux</string>
     <string name="feeds_new_post">Postare nouă</string>
@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Încă nicio postare</string>
     <string name="feeds_sort_label">Sortează</string>
     <string name="feeds_sort_interests">Interese</string>
-    <string name="feeds_sort_new">Nou</string>
+    <string name="feeds_sort_new">Cele mai noi</string>
     <string name="feeds_sort_hot">Popular</string>
-    <string name="feeds_sort_top">Sus</string>
+    <string name="feeds_sort_top">Cele mai bune</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Postare</string>
     <string name="feeds_image_preview">Previzualizare</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Anulează răspunsul</string>
     <string name="feeds_edit_post">Editează postarea</string>
     <string name="feeds_save_label">Salvează</string>
-    <string name="feeds_post_action">Postare</string>
+    <string name="feeds_post_action">Publică</string>
     <string name="feeds_feed_label">Flux</string>
     <string name="feeds_add_files">Adaugă fișiere</string>
     <string name="feeds_restore">Restaurează</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Deconectează-te</string>
     <string name="feeds_ai_account_default">Cont implicit</string>
     <string name="feeds_ai_mode_off">Dezactivat</string>
-    <string name="feeds_ai_mode_tag">Etichetă</string>
+    <string name="feeds_ai_mode_tag">Etichetează</string>
     <string name="feeds_ai_mode_tag_deduplicate">Etichetează + elimină duplicatele</string>
     <string name="feeds_feed_not_found">Flux negăsit</string>
     <string name="feeds_post_not_found">Postarea nu a fost găsită</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Interes redus</string>
     <string name="feeds_interest_removed">Interes eliminat</string>
     <string name="feeds_interest_failed">Ajustarea interesului a eșuat</string>
-    <string name="feeds_saved_title">Salvat</string>
-    <string name="feeds_saved_menu">Salvat</string>
+    <string name="feeds_saved_title">Salvate</string>
+    <string name="feeds_saved_menu">Salvate</string>
     <string name="feeds_saved_save">Salvează pentru mai târziu</string>
     <string name="feeds_saved_remove">Elimină din salvate</string>
     <string name="feeds_saved_clear_all">Golește tot</string>

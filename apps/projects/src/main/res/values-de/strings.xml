@@ -29,7 +29,7 @@
     <string name="projects_sort_label">Sortieren</string>
     <string name="projects_sort_direction">Richtung</string>
     <string name="projects_sort_rank">Manuell</string>
-    <string name="projects_sort_number">Zahl</string>
+    <string name="projects_sort_number">Nummer</string>
     <string name="projects_sort_created">Erstellt</string>
     <string name="projects_sort_updated">Aktualisiert</string>
     <string name="projects_create_object_type">Typ</string>
@@ -52,12 +52,12 @@
     <string name="projects_object_tab_activity">Aktivität</string>
     <string name="projects_object_tab_requests">Anfragen</string>
     <string name="projects_object_tab_attachments">Anhänge</string>
-    <string name="projects_object_tab_links">Links</string>
+    <string name="projects_object_tab_links">Verknüpfungen</string>
     <string name="projects_watchers_watch">Beobachten</string>
     <string name="projects_watchers_unwatch">Nicht mehr beobachten</string>
     <string name="projects_parent_label">Übergeordnet</string>
     <string name="projects_parent_search_placeholder">Suchen</string>
-    <string name="projects_links_title">Links</string>
+    <string name="projects_links_title">Verknüpfungen</string>
     <string name="projects_links_add">Link hinzufügen</string>
     <string name="projects_links_section_blocks">Blockiert</string>
     <string name="projects_links_section_blocked_by">Blockiert von</string>
@@ -106,7 +106,7 @@
     <string name="projects_design_import">Design importieren</string>
     <string name="projects_design_imported">Design importiert</string>
     <string name="projects_design_tab_classes">Klassen</string>
-    <string name="projects_design_tab_views">Aufrufe</string>
+    <string name="projects_design_tab_views">Ansichten</string>
     <string name="projects_design_import_dialog_title">Design importieren</string>
     <string name="projects_design_import_choose_template">Vorlage auswählen</string>
     <string name="projects_design_replace_title">Design ersetzen?</string>
@@ -146,10 +146,10 @@
     <string name="projects_views_edit_dialog_title">Ansicht bearbeiten</string>
     <string name="projects_views_delete_title">Ansicht löschen</string>
     <string name="projects_views_type">Typ</string>
-    <string name="projects_views_type_board">Brett</string>
+    <string name="projects_views_type_board">Board</string>
     <string name="projects_views_type_list">Liste</string>
     <string name="projects_views_direction">Richtung</string>
-    <string name="projects_views_sort_number">Zahl</string>
+    <string name="projects_views_sort_number">Nummer</string>
     <string name="projects_views_sort_created">Erstellt</string>
     <string name="projects_views_sort_updated">Aktualisiert</string>
     <string name="projects_views_sort_rank">Rang</string>
@@ -234,7 +234,7 @@
     <string name="projects_views_direction_desc">Absteigend</string>
 
     <string name="notification_channel_projects">Projekt-Benachrichtigungen</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Projekte</string>
     <string name="projects_list_search_placeholder">Projekte suchen</string>
     <string name="projects_list_no_matching">Keine passenden Projekte</string>
     <string name="projects_list_empty">Noch keine Projekte</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Regel auswählen</string>
     <string name="projects_access_authenticated_desc">Alle angemeldeten Benutzer</string>
     <string name="projects_access_anyone_desc">Einschließlich anonymer Benutzer</string>
-    <string name="projects_access_target">Ziel</string>
+    <string name="projects_access_target">Benutzer oder Gruppe</string>
     <string name="projects_access_target_hint">Entitäts-ID, @gruppe, * (alle) oder + (Mitglieder)</string>
     <string name="projects_access_selected">Ausgewählt: %1$s</string>
     <string name="projects_access_role_comment">Kommentieren und ansehen</string>

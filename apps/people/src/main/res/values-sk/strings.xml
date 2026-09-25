@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Otvoriť navigáciu</string>
     <string name="people_person_state_friend">Priatelia</string>
     <string name="people_person_state_self">Vy</string>
-    <string name="people_person_message">Správa</string>
+    <string name="people_person_message">Napísať správu</string>
     <string name="people_person_accept">Prijať</string>
     <string name="people_person_decline">Odmietnuť</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Prijať všetky</string>
     <string name="people_invitations_decline_all">Odmietnuť všetky</string>
     <string name="people_invitations_cancel_all">Zrušiť všetky</string>
+    <string name="people_invitations_cancel">Zrušiť</string>
     <string name="people_invitations_all_accepted">Všetky pozvánky prijaté</string>
     <string name="people_invitations_all_declined">Všetky pozvánky odmietnuté</string>
     <string name="people_invitations_all_cancelled">Všetky pozvánky zrušené</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Hľadať…</string>
     <string name="people_contacts_invited">Pozvaný</string>
     <string name="people_contacts_accept">Prijať</string>
-    <string name="people_contacts_message">Správa</string>
+    <string name="people_contacts_message">Napísať správu</string>
     <string name="people_contacts_no_people_found">Nenašli sa žiadni ľudia</string>
     <string name="people_contacts_try_adjusting">Skúste upraviť vyhľadávanie</string>
     <string name="people_contact_section_address">Adresa</string>

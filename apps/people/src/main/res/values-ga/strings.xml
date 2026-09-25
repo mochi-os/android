@@ -71,12 +71,12 @@
     <string name="people_common_cancel">Cealaigh</string>
     <string name="people_common_close">Dún</string>
     <string name="people_common_save">Sábháil</string>
-    <string name="people_welcome_dismiss">Dífhostaigh</string>
+    <string name="people_welcome_dismiss">Dún</string>
     <string name="people_sidebar_header">Daoine</string>
     <string name="people_open_sidebar">Oscail nascleanúint</string>
     <string name="people_person_state_friend">Cairde</string>
     <string name="people_person_state_self">Tusa</string>
-    <string name="people_person_message">Teachtaireacht</string>
+    <string name="people_person_message">Seol teachtaireacht</string>
     <string name="people_person_accept">Glac leis</string>
     <string name="people_person_decline">Diúltaigh</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Glac le gach ceann</string>
     <string name="people_invitations_decline_all">Diúltaigh do gach ceann</string>
     <string name="people_invitations_cancel_all">Cuir gach ceann ar ceal</string>
+    <string name="people_invitations_cancel">Cealaigh</string>
     <string name="people_invitations_all_accepted">Glacadh le gach cuireadh</string>
     <string name="people_invitations_all_declined">Diúltaíodh do gach cuireadh</string>
     <string name="people_invitations_all_cancelled">Cuireadh gach cuireadh ar ceal</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Cuardaigh…</string>
     <string name="people_contacts_invited">Tugadh cuireadh</string>
     <string name="people_contacts_accept">Glac leis</string>
-    <string name="people_contacts_message">Teachtaireacht</string>
+    <string name="people_contacts_message">Seol teachtaireacht</string>
     <string name="people_contacts_no_people_found">Níor aimsíodh aon duine</string>
     <string name="people_contacts_try_adjusting">Bain triail as do chuardach a choigeartú</string>
     <string name="people_contact_section_address">Seoladh</string>

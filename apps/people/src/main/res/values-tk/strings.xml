@@ -46,7 +46,7 @@
     <string name="people_member_search_hint">Goşmak isleýän adamlaryňyzy tapmak üçin at giriziň</string>
     <string name="people_member_type_user">Ulanyjy</string>
     <string name="people_member_type_group">Topar</string>
-    <string name="people_profile_save">Saklaýyş</string>
+    <string name="people_profile_save">Saklamak</string>
     <string name="people_profile_saving">Saklanýar…</string>
     <string name="people_profile_save_failed">Saklanyp galynmady</string>
     <string name="people_profile_name">At</string>
@@ -62,7 +62,7 @@
     <string name="people_profile_uploading">Ýüklenýär…</string>
     <string name="people_profile_change_banner">Banneri üýtgetmek</string>
     <string name="people_profile_no_banner">Banner goýulmady</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">Saýt nyşany</string>
     <string name="people_profile_browser_icon">Brauzer nyşany</string>
     <string name="people_profile_file_too_large">Faýl gaty uly</string>
     <string name="people_profile_clear">Arassalamak</string>
@@ -70,13 +70,13 @@
     <string name="people_common_delete">Pozmak</string>
     <string name="people_common_cancel">Ýatyrmak</string>
     <string name="people_common_close">Ýapmak</string>
-    <string name="people_common_save">Saklaýyş</string>
+    <string name="people_common_save">Saklamak</string>
     <string name="people_welcome_dismiss">Goýbermek</string>
     <string name="people_sidebar_header">Adamlar</string>
     <string name="people_open_sidebar">Nawigasiýany aç</string>
     <string name="people_person_state_friend">Dostlar</string>
     <string name="people_person_state_self">Sen</string>
-    <string name="people_person_message">Habar</string>
+    <string name="people_person_message">Habar iber</string>
     <string name="people_person_accept">Kabul etmek</string>
     <string name="people_person_decline">Ret etmek</string>
 
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">Dogry on altylyk reňk giriziň (mysal #a78bfa)</string>
     <string name="people_profile_accent_none">Hiç biri</string>
     <string name="people_profile_privacy_private_desc">Profiliňizi diňe özara dostlar görüp biler</string>
-    <string name="people_welcome_title">People-e hoş geldiňiz</string>
+    <string name="people_welcome_title">Adamlara hoş geldiňiz</string>
     <string name="people_person_banner_alt">%1$s üçin baner</string>
     <string name="people_person_private">Bu profil hususy</string>
     <string name="people_person_state_invited">Çakylyk iberildi</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Hemmesini kabul et</string>
     <string name="people_invitations_decline_all">Hemmesini ret et</string>
     <string name="people_invitations_cancel_all">Hemmesini ýatyr</string>
+    <string name="people_invitations_cancel">Ýatyrmak</string>
     <string name="people_invitations_all_accepted">Ähli çakylyklar kabul edildi</string>
     <string name="people_invitations_all_declined">Ähli çakylyklar ret edildi</string>
     <string name="people_invitations_all_cancelled">Ähli çakylyklar ýatyryldy</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Gözle…</string>
     <string name="people_contacts_invited">Çakylyk iberildi</string>
     <string name="people_contacts_accept">Kabul etmek</string>
-    <string name="people_contacts_message">Habar</string>
+    <string name="people_contacts_message">Habar iber</string>
     <string name="people_contacts_no_people_found">Adamlar tapylmady</string>
     <string name="people_contacts_try_adjusting">Gözlegiňi düzelt</string>
     <string name="people_contact_section_address">Salgy</string>
@@ -126,7 +127,7 @@
     <string name="people_contact_name">At</string>
     <string name="people_contact_email">E-poçta</string>
     <string name="people_contact_city">Şäher</string>
-    <string name="people_contact_region">Region</string>
+    <string name="people_contact_region">Sebit</string>
     <string name="people_contact_postcode">Poçta indeksi</string>
     <string name="people_contact_country">Ýurt</string>
     <string name="people_contact_type">Görnüş</string>

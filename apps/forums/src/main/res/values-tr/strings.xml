@@ -24,13 +24,13 @@
     <string name="forums_settings">Ayarlar</string>
     <string name="forums_load_more">Daha fazla yükle</string>
     <string name="forums_sort_label">Sırala</string>
-    <string name="forums_sort_new">Yeni</string>
+    <string name="forums_sort_new">En yeni</string>
     <string name="forums_sort_hot">Popüler</string>
-    <string name="forums_sort_top">Üst</string>
+    <string name="forums_sort_top">En iyi</string>
     <string name="forums_sort_interests">İlgi alanları</string>
     <string name="forums_post_title_field">Başlık</string>
     <string name="forums_post_attach">Dosya ekle</string>
-    <string name="forums_post_create_action">Gönderi</string>
+    <string name="forums_post_create_action">Paylaş</string>
     <string name="forums_post_edit">Gönderiyi düzenle</string>
     <string name="forums_post_edit_title">Gönderiyi düzenle</string>
     <string name="forums_post_edit_title_field">Başlık</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Üyeler</string>
     <string name="forums_tab_banner">Afiş</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Hedef</string>
+    <string name="forums_access_target">Kullanıcı veya grup</string>
     <string name="forums_access_level_view">Görüntüle</string>
     <string name="forums_access_level_vote">Oy ver</string>
-    <string name="forums_access_level_comment">Yorum</string>
-    <string name="forums_access_level_post">Gönderi</string>
+    <string name="forums_access_level_comment">Yorum yap</string>
+    <string name="forums_access_level_post">Paylaş</string>
     <string name="forums_access_level_none">Yok</string>
     <string name="forums_members_empty">Üye yok</string>
     <string name="forums_banner_dismiss">Banner\'ı kapat</string>
-    <string name="forums_ai_mode_tag">Etiket</string>
+    <string name="forums_ai_mode_tag">Etiketle</string>
     <string name="forums_ai_account_default">Varsayılan hesap</string>
     <string name="forums_ai_prompt_reset">Varsayılana sıfırla</string>
     <string name="forums_settings_unsubscribe">Aboneliği iptal et</string>
@@ -80,7 +80,7 @@
     <string name="forums_moderation_reports_resolved">Çözümlendi</string>
     <string name="forums_moderation_reports_all">Tümü</string>
     <string name="forums_moderation_reports_empty">Rapor yok</string>
-    <string name="forums_moderation_report_dismiss">Kapat</string>
+    <string name="forums_moderation_report_dismiss">Reddet</string>
     <string name="forums_moderation_restrictions_empty">Kısıtlama yok</string>
     <string name="forums_moderation_restriction_remove">Kaldır</string>
     <string name="forums_moderation_restriction_type">Tür</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_login_failed">Giriş başarısız</string>
 
     <string name="notification_channel_forums">Forum bildirimleri</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Forumlar</string>
     <string name="forums_auth_create_identity_failed">Kimlik oluşturulamadı</string>
     <string name="forums_auth_mfa_unsupported">MFA mobil uygulamada henüz desteklenmiyor</string>
     <string name="forums_auth_enter_code_sent">%1$s adresine gönderilen kodu girin</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">Elle</string>
     <string name="forums_access_search_users">Kullanıcılarda ara</string>
     <string name="forums_access_no_groups">Grup yok</string>
-    <string name="forums_saved_title">Kaydedildi</string>
+    <string name="forums_saved_title">Kaydedilenler</string>
     <string name="forums_saved_save">Sonrası için kaydet</string>
     <string name="forums_saved_remove">Kaydedilenlerden kaldır</string>
     <string name="forums_saved_clear_all">Tümünü temizle</string>

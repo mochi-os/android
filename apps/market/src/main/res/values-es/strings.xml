@@ -70,7 +70,7 @@
     <string name="market_checkout_back">Atrás</string>
     <string name="market_checkout_buy_it_now">Cómpralo ya</string>
     <string name="market_checkout_create_failed">Error al crear el pedido</string>
-    <string name="market_checkout_delivery_download">Descargar</string>
+    <string name="market_checkout_delivery_download">Descarga</string>
     <string name="market_checkout_delivery_method">Método de entrega</string>
     <string name="market_checkout_delivery_pickup">Recogida</string>
     <string name="market_checkout_delivery_shipping">Envío</string>
@@ -107,7 +107,7 @@
     <string name="market_editor_asset_external_filename">Nombre de archivo</string>
     <string name="market_editor_back">Atrás</string>
     <string name="market_editor_category">Categoría</string>
-    <string name="market_editor_condition">Condición</string>
+    <string name="market_editor_condition">Estado</string>
     <string name="market_editor_condition_new">Nuevo</string>
     <string name="market_editor_condition_refurbished">Reacondicionado</string>
     <string name="market_editor_condition_used">Usado</string>
@@ -149,12 +149,12 @@
     <string name="market_filter_apply">Aplicar</string>
     <string name="market_filter_category">Categoría</string>
     <string name="market_filter_clear">Borrar filtros</string>
-    <string name="market_filter_condition">Condición</string>
+    <string name="market_filter_condition">Estado</string>
     <string name="market_filter_condition_new">Nuevo</string>
     <string name="market_filter_condition_refurbished">Reacondicionado</string>
     <string name="market_filter_condition_used">Usado</string>
     <string name="market_filter_delivery">Entrega</string>
-    <string name="market_filter_delivery_download">Descargar</string>
+    <string name="market_filter_delivery_download">Descarga</string>
     <string name="market_filter_delivery_pickup">Recogida</string>
     <string name="market_filter_delivery_shipping">Envío</string>
     <string name="market_filter_price_max">Máx.</string>
@@ -183,7 +183,7 @@
     <string name="market_listing_detail_load_failed">Error al cargar el anuncio</string>
     <string name="market_listing_detail_listed">Publicado %1$s</string>
     <string name="market_listing_detail_location_heading">Ubicación</string>
-    <string name="market_listing_detail_message">Mensaje</string>
+    <string name="market_listing_detail_message">Enviar mensaje</string>
     <string name="market_listing_detail_message_seller">Enviar mensaje al vendedor</string>
     <string name="market_listing_detail_not_found">Anuncio no encontrado</string>
     <string name="market_listing_detail_place_bid">Pujar</string>
@@ -305,7 +305,7 @@
     <string name="market_sale_carrier_other">Otro</string>
     <string name="market_sale_completed_label">Completado</string>
     <string name="market_sale_dispute_respond">Responder</string>
-    <string name="market_sale_dispute_state_open">Abrir</string>
+    <string name="market_sale_dispute_state_open">Abierto</string>
     <string name="market_sale_dispute_state_resolved">Resuelto</string>
     <string name="market_sale_load_failed">Error al cargar el pedido</string>
     <string name="market_sale_message_buyer">Enviar mensaje al comprador</string>

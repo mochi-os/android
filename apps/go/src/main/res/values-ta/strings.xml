@@ -8,7 +8,7 @@
     <string name="go_action_pass">தவிர்</string>
     <string name="go_action_rematch">மறுபோட்டி</string>
     <string name="go_action_resign">விலகு</string>
-    <string name="go_app_title">செல்</string>
+    <string name="go_app_title">கோ</string>
     <string name="go_captures_black_sr">கருப்பு பிடிப்புகள்</string>
     <string name="go_captures_white_sr">வெள்ளை பிடிப்புகள்</string>
     <string name="go_chat_title">அரட்டை</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">பக்கப்பட்டியைத் திற</string>
     <string name="go_sidebar_active">செயலில் உள்ள விளையாட்டுகள்</string>
     <string name="go_empty_active">இதுவரை செயலில் உள்ள ஆட்டங்கள் இல்லை.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">விலகினார்</string>
     <string name="go_new_game_title">புதிய Go ஆட்டம்</string>
     <string name="go_new_game_no_friends">ஆட்டத்தைத் தொடங்கும் முன் நண்பரைச் சேர்க்க வேண்டும்.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

@@ -10,7 +10,7 @@
     <string name="calendars_delete">Suprimeix</string>
     <string name="calendars_previous">Anterior</string>
     <string name="calendars_next">Següent</string>
-    <string name="calendars_view">Visualitza</string>
+    <string name="calendars_view">Vista</string>
     <string name="calendars_view_list">Llista</string>
     <string name="calendars_list_search">Cerca</string>
     <string name="calendars_event_untitled">Sense títol</string>

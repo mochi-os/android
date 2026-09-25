@@ -21,7 +21,7 @@
     <string name="crm_design">Muundo</string>
     <string name="crm_export_failed">Uhamishaji haukuweza kuhifadhiwa</string>
     <string name="crm_sort_direction">Mwelekeo</string>
-    <string name="crm_sort_rank">Mwongozo</string>
+    <string name="crm_sort_rank">Kwa mkono</string>
     <string name="crm_sort_created">Imeundwa</string>
     <string name="crm_sort_updated">Imesasishwa</string>
     <string name="crm_create_object_title">Unda kitu</string>
@@ -126,7 +126,7 @@
     <string name="crm_not_found">Mradi haukupatikana</string>
     <string name="crm_more">Zaidi</string>
     <string name="crm_comment_send">Tuma</string>
-    <string name="crm_field_position_body">Mwili</string>
+    <string name="crm_field_position_body">Sehemu kuu</string>
     <string name="crm_sort_field">Panga kulingana na</string>
     <string name="crm_comment_remove_attachment">Ondoa kiambatisho</string>
     <string name="crm_views_sort_by">Panga kulingana na</string>

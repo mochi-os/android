@@ -10,7 +10,7 @@
     <string name="calendars_delete">Hapus</string>
     <string name="calendars_previous">Saméméhna</string>
     <string name="calendars_next">Salajengna</string>
-    <string name="calendars_view">Tingali</string>
+    <string name="calendars_view">Tampilan</string>
     <string name="calendars_view_list">Daptar</string>
     <string name="calendars_list_search">Paluruh</string>
     <string name="calendars_event_untitled">Tanpa judul</string>
@@ -166,7 +166,7 @@
     <string name="calendars_subscribe_server_url">Alamat server</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google Kalénder</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Akun Google tacan diaktipkeun dina server ieu. Aktipkeun dina Setélan, Setélan sistem.</string>
     <string name="calendars_subscribe_google_connect">Anjeun tacan nyambungkeun akun Google.</string>

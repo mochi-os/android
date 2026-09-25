@@ -12,7 +12,7 @@
     <string name="chess_new_title">Нова игра</string>
     <string name="chess_new_pick_opponent">Избери противник</string>
     <string name="chess_new_no_friends_title">Сè уште нема пријатели</string>
-    <string name="chess_new_no_friends_subtitle">Додај пријатели во апликацијата People за да започнеш да играш</string>
+    <string name="chess_new_no_friends_subtitle">Додај пријатели во апликацијата „Луѓе“ за да започнеш да играш</string>
     <string name="chess_new_add_friends">Додај пријатели</string>
     <string name="chess_new_start_button">Започнете игра</string>
     <string name="chess_new_creating">Создавање…</string>

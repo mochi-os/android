@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Mochi Srautai</string>
+    <string name="launcher_feeds">Mochi Sklaidos kanalai</string>
     <string name="launcher_chat">Mochi Pokalbis</string>
     <string name="launcher_forums">Mochi Forumai</string>
     <string name="launcher_projects">Mochi Projektai</string>
@@ -9,13 +9,13 @@
     <string name="launcher_people">Mochi Žmonės</string>
     <string name="launcher_settings">Mochi Nustatymai</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Vikiai</string>
     <string name="launcher_chess">Mochi Šachmatai</string>
     <string name="launcher_go">Mochi Go</string>
     <string name="launcher_words">Mochi Žodžiai</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi Turgus</string>
     <string name="launcher_calendars">Mochi Kalendoriai</string>
-    <string name="launcher_staff">Mochi Personalas</string>
+    <string name="launcher_staff">Mochi personalas</string>
 
 
     <string name="app_name">Mochi</string>

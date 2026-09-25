@@ -78,7 +78,7 @@
     <string name="crm_design_or_upload_json">或上傳檔案</string>
     <string name="crm_design_upload_json">上傳 .json 檔案</string>
     <string name="crm_design_tab_classes">類別</string>
-    <string name="crm_design_tab_views">檢視次數</string>
+    <string name="crm_design_tab_views">檢視</string>
     <string name="crm_design_import_dialog_title">匯入設計</string>
     <string name="crm_design_import_choose_template">選擇範本</string>
     <string name="crm_design_replace_title">取代設計?</string>
@@ -117,7 +117,7 @@
     <string name="crm_views_edit_dialog_title">編輯檢視</string>
     <string name="crm_views_delete_title">刪除檢視</string>
     <string name="crm_views_type">類型</string>
-    <string name="crm_views_type_board">棋盤</string>
+    <string name="crm_views_type_board">看板</string>
     <string name="crm_views_type_list">清單</string>
     <string name="crm_views_direction">方向</string>
     <string name="crm_views_sort_created">已建立</string>
@@ -126,7 +126,7 @@
     <string name="crm_not_found">找不到專案</string>
     <string name="crm_more">更多</string>
     <string name="crm_comment_send">傳送</string>
-    <string name="crm_field_position_body">內文</string>
+    <string name="crm_field_position_body">主體</string>
     <string name="crm_sort_field">排序依據</string>
     <string name="crm_comment_remove_attachment">移除附件</string>
     <string name="crm_views_sort_by">排序依據</string>

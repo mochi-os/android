@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">Mga Tauhan</string>
+    <string name="launcher_staff">Mga Tauhan ng Mochi</string>
     <string name="staff_accounts_action_ban_title">I-ban ang account</string>
     <string name="staff_accounts_action_suspend_title">Suspindihin ang account</string>
     <string name="staff_accounts_action_unban_title">Tanggalin ang ban</string>
@@ -162,7 +162,7 @@
     <string name="staff_categories_type_digital">Digital</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">Pisikal</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">Mga Tauhan</string>
     <string name="staff_config_field_auto_approve">Threshold ng auto-aprubado</string>
     <string name="staff_config_field_hold">Threshold ng pag-hold</string>
     <string name="staff_config_field_platform_fee">Bayad sa platform</string>
@@ -182,7 +182,7 @@
     <string name="staff_config_toast_save_failed">Nabigong i-save</string>
     <string name="staff_config_toast_saved">Na-save</string>
     <string name="staff_dashboard_col_action">Aksyon</string>
-    <string name="staff_dashboard_col_actor">Actor</string>
+    <string name="staff_dashboard_col_actor">Nagsagawa</string>
     <string name="staff_dashboard_col_buyer">Mamimili</string>
     <string name="staff_dashboard_col_date">Petsa</string>
     <string name="staff_dashboard_col_detail">Detalye</string>
@@ -230,7 +230,7 @@
     <string name="staff_disputes_filter_status_label">Status</string>
     <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Detalye ng mamimili</string>
-    <string name="staff_disputes_meta_chargeback_fee">Chargeback fee</string>
+    <string name="staff_disputes_meta_chargeback_fee">Bayad sa chargeback</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">pinanatili ng Stripe</string>
     <string name="staff_disputes_meta_chargeback_fee_partial">ibinalik ang %1$s</string>
     <string name="staff_disputes_meta_chargeback_fee_refunded">ibinalik</string>
@@ -259,9 +259,9 @@
     <string name="staff_disputes_resolve">Resolbahin</string>
     <string name="staff_disputes_resolved_toast">Naresolba ang dispute</string>
     <string name="staff_disputes_resolving">Niresolba…</string>
-    <string name="staff_disputes_review">Review</string>
+    <string name="staff_disputes_review">Suriin</string>
     <string name="staff_disputes_status_escalated">Na-escalate</string>
-    <string name="staff_disputes_status_open">Buksan</string>
+    <string name="staff_disputes_status_open">Bukas</string>
     <string name="staff_disputes_status_resolved_buyer">Naayos (mamimili)</string>
     <string name="staff_disputes_status_resolved_seller">Naayos (nagbebenta)</string>
     <string name="staff_disputes_status_responded">Tumugon</string>
@@ -310,7 +310,7 @@
     <string name="staff_listings_submitting">Ipinapadala…</string>
     <string name="staff_moderation_empty">Walang moderation entry</string>
     <string name="staff_moderation_filter_clear">Linisin ang filter</string>
-    <string name="staff_moderation_listing_filter_placeholder">Listing ID</string>
+    <string name="staff_moderation_listing_filter_placeholder">ID ng listing</string>
     <string name="staff_moderation_system">System</string>
     <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Aksyon</string>
@@ -327,7 +327,7 @@
     <string name="staff_reports_cancel">Kanselahin</string>
     <string name="staff_reports_close">Isara</string>
     <string name="staff_reports_dialog_title_action">Gumawa ng aksyon sa report</string>
-    <string name="staff_reports_dialog_title_view">I-report</string>
+    <string name="staff_reports_dialog_title_view">Ulat</string>
     <string name="staff_reports_empty">Walang ulat</string>
     <string name="staff_reports_filter_status_label">Status</string>
     <string name="staff_reports_filter_type_label">Uri</string>
@@ -335,7 +335,7 @@
     <string name="staff_reports_meta_details">Detalye ng nag-uulat</string>
     <string name="staff_reports_meta_price">Presyo</string>
     <string name="staff_reports_meta_reason">Dahilan</string>
-    <string name="staff_reports_meta_reporter">Reporter</string>
+    <string name="staff_reports_meta_reporter">Nag-ulat</string>
     <string name="staff_reports_meta_seller">Nagbebenta</string>
     <string name="staff_reports_meta_target">Target</string>
     <string name="staff_reports_meta_type">Uri</string>
@@ -381,7 +381,7 @@
     <string name="staff_sidebar_listings">Mga listing</string>
     <string name="staff_sidebar_management">Pamamahala</string>
     <string name="staff_sidebar_market">Market</string>
-    <string name="staff_sidebar_moderation">Moderation log</string>
+    <string name="staff_sidebar_moderation">Log ng moderasyon</string>
     <string name="staff_sidebar_overview">Pangkalahatang-ideya</string>
     <string name="staff_sidebar_reports">Mga Report</string>
     <string name="staff_sidebar_reviews">Mga review</string>
@@ -402,7 +402,7 @@
     <string name="staff_status_hold">I-hold</string>
     <string name="staff_status_manual">Manwal</string>
     <string name="staff_status_moderator">Moderator</string>
-    <string name="staff_status_open">Buksan</string>
+    <string name="staff_status_open">Bukas</string>
     <string name="staff_status_pending">Nakabinbin</string>
     <string name="staff_status_published">Na-publish</string>
     <string name="staff_status_rejected">Tinanggihan</string>

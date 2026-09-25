@@ -2,9 +2,9 @@
 <resources>
     <string name="feeds_title">Akymlar</string>
     <string name="feeds_find_feeds">Akymlary tap</string>
-    <string name="feeds_create_feed">Feed döretmek</string>
+    <string name="feeds_create_feed">Akym döretmek</string>
     <string name="feeds_new_post">Täze post</string>
-    <string name="feeds_all_feeds">Ähli feedler</string>
+    <string name="feeds_all_feeds">Ähli akymlar</string>
     <string name="feeds_name">At</string>
     <string name="feeds_create">Döretmek</string>
     <string name="feeds_no_feeds_found">Akymlar tapylmady</string>
@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Heniz postlar ýok</string>
     <string name="feeds_sort_label">Tertiple</string>
     <string name="feeds_sort_interests">Gyzyklanmalar</string>
-    <string name="feeds_sort_new">Täze</string>
+    <string name="feeds_sort_new">Iň täze</string>
     <string name="feeds_sort_hot">Gyzgyn</string>
-    <string name="feeds_sort_top">Ýokarky</string>
+    <string name="feeds_sort_top">Iň gowy</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Post</string>
     <string name="feeds_image_preview">Öňünden gör</string>
@@ -28,8 +28,8 @@
     <string name="feeds_remove">Aýyr</string>
     <string name="feeds_cancel_reply">Jogaby ýatyrmak</string>
     <string name="feeds_edit_post">Ýazgyny düzet</string>
-    <string name="feeds_save_label">Saklaýyş</string>
-    <string name="feeds_post_action">Post</string>
+    <string name="feeds_save_label">Saklamak</string>
+    <string name="feeds_post_action">Çap et</string>
     <string name="feeds_feed_label">Akym</string>
     <string name="feeds_add_files">Faýllar goşmak</string>
     <string name="feeds_restore">Dikeld</string>
@@ -45,7 +45,7 @@
     <string name="feeds_banner">Banner</string>
     <string name="feeds_banner_description">Akymyňyzyň ýokarsynda görkezilýän hökman däl markdown banner.</string>
     <string name="feeds_clear">Arassalamak</string>
-    <string name="feeds_delete_feed">Feed pozmak</string>
+    <string name="feeds_delete_feed">Akymy pozmak</string>
     <string name="feeds_no_members">Agzalar ýok</string>
     <string name="feeds_user">Ulanyjy</string>
     <string name="feeds_access_no_groups">Elýeterli toparlar ýok</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Çyk</string>
     <string name="feeds_ai_account_default">Adaty hasap</string>
     <string name="feeds_ai_mode_off">Öçürildi</string>
-    <string name="feeds_ai_mode_tag">Bellik</string>
+    <string name="feeds_ai_mode_tag">Bellik goý</string>
     <string name="feeds_ai_mode_tag_deduplicate">Bellik + dublikatlary aýyr</string>
     <string name="feeds_feed_not_found">Akym tapylmady</string>
     <string name="feeds_post_not_found">Post tapylmady</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Gyzyklanma azaldyldy</string>
     <string name="feeds_interest_removed">Gyzyklanma aýryldy</string>
     <string name="feeds_interest_failed">Gyzyklanma sazlanmady</string>
-    <string name="feeds_saved_title">Saklandy</string>
-    <string name="feeds_saved_menu">Saklandy</string>
+    <string name="feeds_saved_title">Saklananlar</string>
+    <string name="feeds_saved_menu">Saklananlar</string>
     <string name="feeds_saved_save">Soňra üçin ýatda sakla</string>
     <string name="feeds_saved_remove">Ýatda saklananlardan aýyr</string>
     <string name="feeds_saved_clear_all">Hemmesini arassalamak</string>
@@ -169,7 +169,7 @@
     <string name="feeds_rss_mode_posts_comments">Postlar we teswirler</string>
     <string name="feeds_access_add_title">Giriş goşmak</string>
     <string name="feeds_permission_request_message">%1$s aşakdaky rugsady soraýar:</string>
-    <string name="feeds_allow_search">Islendik adamyň feed gözlemegine rugsat bermek</string>
+    <string name="feeds_allow_search">Islendik adamyň akymy gözlemegine rugsat bermek</string>
     <string name="feeds_post_content">Postyň mazmuny</string>
     <string name="feeds_enable_memories">Ýatlamalary işjeňleşdir</string>
     <string name="feeds_permission_request_title">Rugsat haýyşy</string>

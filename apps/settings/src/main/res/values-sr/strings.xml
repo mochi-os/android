@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="settings_home_title">Поставке</string>
+    <string name="settings_home_title">Подешавања</string>
     <string name="settings_home_logout">Одјави се</string>
     <string name="settings_home_account">Налог</string>
     <string name="settings_home_preferences">Подешавања</string>
@@ -10,15 +10,15 @@
     <string name="settings_home_accounts">Повезани налози</string>
     <string name="settings_home_interests">Интересовања</string>
     <string name="account_section_passkeys">Passkey-еви</string>
-    <string name="account_passkey_register">Додај passkey</string>
-    <string name="account_passkey_delete_title">Обрисати passkey?</string>
-    <string name="account_section_totp">Authenticator апликација</string>
+    <string name="account_passkey_register">Додај приступни кључ</string>
+    <string name="account_passkey_delete_title">Обрисати приступни кључ?</string>
+    <string name="account_section_totp">Апликација за аутентификацију</string>
     <string name="account_totp_setup">Подеси аутентификатор</string>
     <string name="account_totp_setup_title">Подеси аутентификатор</string>
     <string name="account_totp_verify">Верификуј</string>
-    <string name="account_totp_disable_title">Онемогући Authenticator?</string>
-    <string name="account_section_recovery">Recovery кодови</string>
-    <string name="account_recovery_codes_title">Recovery кодови</string>
+    <string name="account_totp_disable_title">Онемогући аутентификатор?</string>
+    <string name="account_section_recovery">Кодови за опоравак</string>
+    <string name="account_recovery_codes_title">Кодови за опоравак</string>
     <string name="sessions_unknown_agent">Непознат уређај</string>
     <string name="sessions_revoke_title">Опозвати сесију?</string>
     <string name="account_section_oauth">Пријава трећег лица</string>
@@ -123,7 +123,7 @@
     <string name="system_settings_section_oauth">Пријава трећом страном</string>
     <string name="system_settings_section_user_defaults">Подразумеване вредности корисника</string>
     <string name="system_settings_section_operator">Оператер</string>
-    <string name="system_settings_section_push">Push обавештења</string>
+    <string name="system_settings_section_push">Пуш обавештења</string>
     <string name="system_settings_section_other">Друга подешавања</string>
     <string name="system_settings_state_disabled">Онемогућено</string>
     <string name="system_settings_state_allowed">Дозвољено</string>
@@ -151,9 +151,9 @@
     <string name="system_setting_oauth_github_client_secret">Тајна клијента GitHub</string>
     <string name="system_setting_oauth_microsoft_client_id">ID клијента Microsoft</string>
     <string name="system_setting_oauth_microsoft_client_secret">Тајна клијента Microsoft</string>
-    <string name="system_setting_oauth_microsoft_tenant">Microsoft tenant</string>
+    <string name="system_setting_oauth_microsoft_tenant">Microsoft закупац</string>
     <string name="system_setting_oauth_facebook_client_id">ID апликације Facebook</string>
-    <string name="system_setting_oauth_facebook_client_secret">Facebook App тајна</string>
+    <string name="system_setting_oauth_facebook_client_secret">Тајна апликације Facebook</string>
     <string name="system_setting_oauth_x_client_id">ID клијента X</string>
     <string name="system_setting_oauth_x_client_secret">Тајна клијента X</string>
     <string name="system_setting_fcm_firebase_config">Firebase google-services.json датотека</string>
@@ -318,9 +318,9 @@
     <string name="login_section_methods">Начини пријаве</string>
     <string name="login_method_email">Код е-поште</string>
     <string name="login_method_passkey">Приступни кључ</string>
-    <string name="login_method_totp">Authenticator апликација</string>
+    <string name="login_method_totp">Апликација за аутентификацију</string>
     <string name="login_method_oauth">Пријава трећом страном</string>
-    <string name="login_method_recovery">Recovery кодови</string>
+    <string name="login_method_recovery">Кодови за опоравак</string>
     <string name="account_close_section">Затвори налог</string>
     <string name="account_close_action">Затвори налог</string>
     <string name="account_close_confirm_title">Да затворите свој налог?</string>
@@ -344,7 +344,7 @@
     <string name="system_status_reachability_private">Приватно</string>
     <string name="system_status_reachability_unknown">Непознато</string>
     <string name="system_status_relay">Преко релеја</string>
-    <string name="system_status_mesh">Mesh за емитовање</string>
+    <string name="system_status_mesh">Меш мрежа за емитовање</string>
     <string name="system_status_broadcast">Последње емитовање</string>
     <string name="system_status_queued_broadcasts">Емитоване поруке на чекању</string>
     <string name="system_setting_hostname_publish">Објави име хоста и домене другим серверима</string>
@@ -360,9 +360,9 @@
     <string name="route_target_none">Нема доступних одредишта</string>
     <string name="login_invalid_code">Неважећи код</string>
     <string name="accounts_provider_browser">Обавештења прегледача</string>
-    <string name="accounts_provider_fcm">Push за Android</string>
+    <string name="accounts_provider_fcm">Пуш за Android</string>
     <string name="accounts_provider_mcp">MCP сервер</string>
-    <string name="accounts_provider_unifiedpush">Push обавештење</string>
+    <string name="accounts_provider_unifiedpush">Пуш обавештење</string>
     <string name="accounts_provider_url">Спољни URL</string>
     <string name="accounts_provider_web">Mochi веб</string>
     <string name="accounts_verified">Налог верификован</string>
@@ -381,7 +381,7 @@
     <string name="notifprefs_device_push">%1$s · пуш</string>
     <string name="notifprefs_test_partial">Тест је послат на %1$d од %2$d одредишта</string>
     <string name="notifprefs_test_none">Нема конфигурисаних одредишта</string>
-    <string name="notifprefs_transport_fcm">Push за Android</string>
+    <string name="notifprefs_transport_fcm">Пуш за Android</string>
     <string name="notifprefs_no_destinations">Нема одредишта</string>
     <string name="account_data_generate">Генериши приступну фразу</string>
     <string name="accounts_field_server">URL сервера</string>

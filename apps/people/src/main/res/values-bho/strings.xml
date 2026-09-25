@@ -60,10 +60,10 @@
     <string name="people_profile_upload_avatar">अवतार अपलोड करीं</string>
     <string name="people_profile_upload">अपलोड करीं</string>
     <string name="people_profile_uploading">अपलोड हो रहल बा…</string>
-    <string name="people_profile_change_banner">Banner बदलीं</string>
+    <string name="people_profile_change_banner">बैनर बदलीं</string>
     <string name="people_profile_no_banner">कौनो बैनर सेट नइखे</string>
     <string name="people_profile_favicon">फेविकॉन</string>
-    <string name="people_profile_browser_icon">Browser आइकन</string>
+    <string name="people_profile_browser_icon">ब्राउज़र आइकन</string>
     <string name="people_profile_file_too_large">फाइल बहुत बड़ बा</string>
     <string name="people_profile_clear">साफ करीं</string>
     <string name="people_common_edit">संपादित करीं</string>
@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">नेविगेशन खोलीं</string>
     <string name="people_person_state_friend">दोस्त</string>
     <string name="people_person_state_self">आप</string>
-    <string name="people_person_message">संदेश</string>
+    <string name="people_person_message">संदेश भेजीं</string>
     <string name="people_person_accept">स्वीकार करीं</string>
     <string name="people_person_decline">अस्वीकार करीं</string>
 
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">एगो वैध हेक्स रंग डालीं (जइसे #a78bfa)</string>
     <string name="people_profile_accent_none">कुछुओ ना</string>
     <string name="people_profile_privacy_private_desc">खाली आपसी दोस्त रउआ के प्रोफाइल देख सकेलें</string>
-    <string name="people_welcome_title">People में स्वागत बा</string>
+    <string name="people_welcome_title">लोग ऐप में स्वागत बा</string>
     <string name="people_person_banner_alt">%1$s खातिर बैनर</string>
     <string name="people_person_private">ई प्रोफाइल निजी बा</string>
     <string name="people_person_state_invited">निमंत्रित</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">सभे के स्वीकार करीं</string>
     <string name="people_invitations_decline_all">सभे के अस्वीकार करीं</string>
     <string name="people_invitations_cancel_all">सभे रद्द करीं</string>
+    <string name="people_invitations_cancel">रद्द करीं</string>
     <string name="people_invitations_all_accepted">सभ निमंत्रण स्वीकार भइल</string>
     <string name="people_invitations_all_declined">सभ निमंत्रण अस्वीकार भइल</string>
     <string name="people_invitations_all_cancelled">सभ निमंत्रण रद्द भइल</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">खोजीं…</string>
     <string name="people_contacts_invited">निमंत्रित</string>
     <string name="people_contacts_accept">स्वीकार करीं</string>
-    <string name="people_contacts_message">संदेश</string>
+    <string name="people_contacts_message">संदेश भेजीं</string>
     <string name="people_contacts_no_people_found">कौनो लोग ना मिलल</string>
     <string name="people_contacts_try_adjusting">अपना खोज समायोजित करे के कोशिश करीं</string>
     <string name="people_contact_section_address">पता</string>

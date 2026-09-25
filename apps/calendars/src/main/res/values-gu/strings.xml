@@ -10,7 +10,7 @@
     <string name="calendars_delete">કાઢી નાખો</string>
     <string name="calendars_previous">પાછળ</string>
     <string name="calendars_next">આગળ</string>
-    <string name="calendars_view">જુઓ</string>
+    <string name="calendars_view">દૃશ્ય</string>
     <string name="calendars_view_list">લિસ્ટ</string>
     <string name="calendars_list_search">શોધો</string>
     <string name="calendars_event_untitled">શીર્ષક વગરનું</string>
@@ -53,9 +53,9 @@
     <string name="calendars_colour">રંગ</string>
     <string name="calendars_view_day">દિવસ</string>
     <string name="calendars_event_start">શરૂ કરો</string>
-    <string name="notification_channel_calendars">કૅલેન્ડર્સ</string>
-    <string name="calendars_drawer_title">કૅલેન્ડર્સ</string>
-    <string name="calendars_drawer_open">કૅલેન્ડર્સ</string>
+    <string name="notification_channel_calendars">કૅલેન્ડર</string>
+    <string name="calendars_drawer_title">કૅલેન્ડર</string>
+    <string name="calendars_drawer_open">કૅલેન્ડર</string>
     <string name="calendars_calendar_menu">%1$s ના વિકલ્પો</string>
     <string name="calendars_only_this">ફક્ત આ</string>
     <string name="calendars_create">કૅલેન્ડર બનાવો</string>
@@ -169,7 +169,7 @@
     <string name="calendars_subscribe_server_url">સર્વરનું સરનામું</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google કૅલેન્ડર</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">આ સર્વર પર Google ખાતાં સક્ષમ કરવામાં આવ્યાં નથી. તેમને સેટિંગ્સ, સિસ્ટમ સેટિંગ્સ માં સક્ષમ કરો.</string>
     <string name="calendars_subscribe_google_connect">તમે કોઈ Google ખાતું જોડ્યું નથી.</string>

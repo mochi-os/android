@@ -62,7 +62,7 @@
     <string name="people_profile_uploading">Hleður upp…</string>
     <string name="people_profile_change_banner">Breyta borða</string>
     <string name="people_profile_no_banner">Enginn borði stilltur</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">Vefsíðutákn</string>
     <string name="people_profile_browser_icon">Táknmynd vafra</string>
     <string name="people_profile_file_too_large">Skrá of stór</string>
     <string name="people_profile_clear">Hreinsa</string>
@@ -71,12 +71,12 @@
     <string name="people_common_cancel">Hætta við</string>
     <string name="people_common_close">Loka</string>
     <string name="people_common_save">Vista</string>
-    <string name="people_welcome_dismiss">Hafna</string>
+    <string name="people_welcome_dismiss">Hunsa</string>
     <string name="people_sidebar_header">Fólk</string>
     <string name="people_open_sidebar">Opna leiðsögn</string>
     <string name="people_person_state_friend">Vinir</string>
     <string name="people_person_state_self">Þú</string>
-    <string name="people_person_message">Skilaboð</string>
+    <string name="people_person_message">Senda skilaboð</string>
     <string name="people_person_accept">Samþykkja</string>
     <string name="people_person_decline">Hafna</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Samþykkja allt</string>
     <string name="people_invitations_decline_all">Hafna öllu</string>
     <string name="people_invitations_cancel_all">Hætta við allt</string>
+    <string name="people_invitations_cancel">Hætta við</string>
     <string name="people_invitations_all_accepted">Öllum boðum samþykkt</string>
     <string name="people_invitations_all_declined">Öllum boðum hafnað</string>
     <string name="people_invitations_all_cancelled">Öllum boðum aflýst</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Leita…</string>
     <string name="people_contacts_invited">Boðið</string>
     <string name="people_contacts_accept">Samþykkja</string>
-    <string name="people_contacts_message">Skilaboð</string>
+    <string name="people_contacts_message">Senda skilaboð</string>
     <string name="people_contacts_no_people_found">Engir notendur fundust</string>
     <string name="people_contacts_try_adjusting">Reyndu að breyta leitinni þinni</string>
     <string name="people_contact_section_address">Vistfang</string>

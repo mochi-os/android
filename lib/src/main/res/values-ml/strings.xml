@@ -38,7 +38,7 @@
     <string name="access_add_rule">നിയമം ചേർക്കുക</string>
     <string name="access_owner">ഉടമ</string>
     <string name="access_revoke">റദ്ദാക്കുക</string>
-    <string name="access_level_comment">അഭിപ്രായം</string>
+    <string name="access_level_comment">അഭിപ്രായമിടുക</string>
     <string name="access_level_view">കാണുക</string>
     <string name="access_level_none">ഒന്നുമില്ല</string>
     <string name="reaction_like">ഇഷ്ടം</string>
@@ -201,7 +201,7 @@
     <string name="reauth_signin_text">നിങ്ങൾ വീണ്ടും സൈൻ ഇൻ ചെയ്യുന്നതുവരെ അറിയിപ്പുകൾ താൽക്കാലികമായി നിർത്തിയിരിക്കുന്നു</string>
     <string name="oem_hint_title">പശ്ചാത്തലത്തിൽ ലഭ്യമായി തുടരുക</string>
     <string name="oem_hint_body">അറിയിപ്പുകൾ എത്തിക്കാൻ Mochi പശ്ചാത്തലത്തിൽ പ്രവർത്തിക്കണം. അടുത്ത സ്ക്രീനിൽ ഇത് അനുവദിക്കുക, അല്ലെങ്കിൽ സ്ക്രീൻ ഓഫായിരിക്കുമ്പോൾ നിങ്ങളുടെ ഫോൺ അറിയിപ്പുകൾ താൽക്കാലികമായി നിർത്തിയേക്കാം.</string>
-    <string name="oem_hint_samsung_note">Samsung ഫോണുകളിൽ, Settings → Device care → Sleeping apps എന്നതും പരിശോധിച്ച് അവിടെ ലിസ്റ്റുചെയ്തിട്ടുണ്ടെങ്കിൽ Mochi നീക്കം ചെയ്യുക.</string>
+    <string name="oem_hint_samsung_note">Samsung ഫോണുകളിൽ, ക്രമീകരണങ്ങൾ → ഉപകരണ പരിചരണം → ഉറങ്ങുന്ന ആപ്പുകൾ എന്നതും പരിശോധിച്ച് അവിടെ ലിസ്റ്റുചെയ്തിട്ടുണ്ടെങ്കിൽ Mochi നീക്കം ചെയ്യുക.</string>
     <string name="oem_hint_allow">പശ്ചാത്തലം അനുവദിക്കുക</string>
     <string name="oem_hint_dismiss">ഇനി കാണിക്കരുത്</string>
     <string name="about_title">Mochi ക്ലയന്റ്</string>
@@ -225,7 +225,7 @@
     <string name="stepup_description">ഇത് നിങ്ങളുടെ അക്കൗണ്ടിലെ ഒരു സുരക്ഷാ മാറ്റമാണ്. തുടരാൻ നിങ്ങളാണെന്ന് സ്ഥിരീകരിക്കുക.</string>
     <string name="stepup_email_label">ഇമെയിൽ കോഡ്</string>
     <string name="stepup_email_placeholder">നിങ്ങളുടെ ഇമെയിലിലെ കോഡ് നൽകുക</string>
-    <string name="stepup_totp_label">Authenticator കോഡ്</string>
+    <string name="stepup_totp_label">ഓതന്റിക്കേറ്റർ കോഡ്</string>
     <string name="stepup_totp_placeholder">നിങ്ങളുടെ ഓതെന്റിക്കേറ്റർ കോഡ് നൽകുക</string>
     <string name="stepup_use_passkey">നിങ്ങളുടെ പാസ്‌കീ ഉപയോഗിക്കുക</string>
     <string name="stepup_send_email">ഇമെയിൽ അയയ്ക്കുക</string>

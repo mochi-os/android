@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">अद्याप पोस्ट्स नाहीत</string>
     <string name="feeds_sort_label">क्रमवारी</string>
     <string name="feeds_sort_interests">इंटरेस्ट्स</string>
-    <string name="feeds_sort_new">नवीन</string>
+    <string name="feeds_sort_new">नवीनतम</string>
     <string name="feeds_sort_hot">हॉट</string>
-    <string name="feeds_sort_top">वर</string>
+    <string name="feeds_sort_top">सर्वोत्तम</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">पोस्ट</string>
     <string name="feeds_image_preview">पूर्वावलोकन</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">उत्तर रद्द करा</string>
     <string name="feeds_edit_post">पोस्ट संपादित करा</string>
     <string name="feeds_save_label">जतन करा</string>
-    <string name="feeds_post_action">पोस्ट</string>
+    <string name="feeds_post_action">पोस्ट करा</string>
     <string name="feeds_feed_label">फीड</string>
     <string name="feeds_add_files">फाइल्स जोडा</string>
     <string name="feeds_restore">पुनर्संचयित करा</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">लॉग आउट करा</string>
     <string name="feeds_ai_account_default">डीफॉल्ट खाते</string>
     <string name="feeds_ai_mode_off">बंद</string>
-    <string name="feeds_ai_mode_tag">टॅग</string>
+    <string name="feeds_ai_mode_tag">टॅग करा</string>
     <string name="feeds_ai_mode_tag_deduplicate">टॅग + डुप्लिकेट काढा</string>
     <string name="feeds_feed_not_found">फीड सापडले नाही</string>
     <string name="feeds_post_not_found">पोस्ट सापडली नाही</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">इंटरेस्ट कमी केला</string>
     <string name="feeds_interest_removed">इंटरेस्ट काढला</string>
     <string name="feeds_interest_failed">इंटरेस्ट समायोजित करण्यात अयशस्वी</string>
-    <string name="feeds_saved_title">जतन केले</string>
-    <string name="feeds_saved_menu">जतन केले</string>
+    <string name="feeds_saved_title">जतन केलेले</string>
+    <string name="feeds_saved_menu">जतन केलेले</string>
     <string name="feeds_saved_save">नंतरसाठी जतन करा</string>
     <string name="feeds_saved_remove">जतन केलेल्यांमधून काढा</string>
     <string name="feeds_saved_clear_all">सर्व साफ करा</string>

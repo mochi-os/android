@@ -28,7 +28,7 @@
     <string name="projects_design">Muundo</string>
     <string name="projects_sort_label">Panga</string>
     <string name="projects_sort_direction">Mwelekeo</string>
-    <string name="projects_sort_rank">Mwongozo</string>
+    <string name="projects_sort_rank">Kwa mkono</string>
     <string name="projects_sort_number">Nambari</string>
     <string name="projects_sort_created">Imeundwa</string>
     <string name="projects_sort_updated">Imesasishwa</string>
@@ -158,7 +158,7 @@
     <string name="projects_more">Zaidi</string>
     <string name="projects_request_more">Zaidi</string>
     <string name="projects_comment_send">Tuma</string>
-    <string name="projects_field_position_body">Mwili</string>
+    <string name="projects_field_position_body">Sehemu kuu</string>
     <string name="projects_sort_field">Panga kulingana na</string>
     <string name="projects_comment_remove_attachment">Ondoa kiambatisho</string>
     <string name="projects_views_sort_by">Panga kulingana na</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Tafuta vitu</string>
 
     <string name="notification_channel_projects">Arifa za miradi</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Miradi</string>
     <string name="projects_auth_create_identity_failed">Imeshindwa kuunda utambulisho</string>
     <string name="projects_auth_mfa_unsupported">MFA bado haijatumika kwenye programu ya simu</string>
     <string name="projects_auth_enter_code_sent">Weka msimbo uliotumwa kwa %1$s</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Chagua sheria</string>
     <string name="projects_access_authenticated_desc">Mtu yeyote aliyeingia</string>
     <string name="projects_access_anyone_desc">Ikijumuisha watumiaji wasiojulikana</string>
-    <string name="projects_access_target">Lengo</string>
+    <string name="projects_access_target">Mtumiaji au kikundi</string>
     <string name="projects_access_target_hint">Kitambulisho cha huluki, @kikundi, * (kila mtu), au + (wanachama)</string>
     <string name="projects_access_selected">Imechaguliwa: %1$s</string>
     <string name="projects_access_role_comment">Toa maoni na uone</string>

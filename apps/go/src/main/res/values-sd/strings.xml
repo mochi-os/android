@@ -8,7 +8,7 @@
     <string name="go_action_pass">پاس</string>
     <string name="go_action_rematch">ٻيهر ميچ</string>
     <string name="go_action_resign">هار مڃيو</string>
-    <string name="go_app_title">وڃو</string>
+    <string name="go_app_title">گو</string>
     <string name="go_captures_black_sr">ڪارا قيدي</string>
     <string name="go_captures_white_sr">سفيد قيدي</string>
     <string name="go_chat_title">چيٽ</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">سائڊبار کوليو</string>
     <string name="go_sidebar_active">فعال رانديون</string>
     <string name="go_empty_active">اڃا ڪا فعال راند ناهي.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">هار مڃي</string>
     <string name="go_new_game_title">نئين Go راند</string>
     <string name="go_new_game_no_friends">راند شروع ڪرڻ کان اڳ اوھان کي دوست شامل ڪرڻو پوندو.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

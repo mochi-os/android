@@ -297,7 +297,7 @@
     <string name="format_italic">مائل</string>
     <string name="format_link">رابط</string>
     <string name="format_heading">عنوان</string>
-    <string name="format_code">الرمز</string>
+    <string name="format_code">تعليمات برمجية</string>
     <string name="format_list">قائمة نقطية</string>
     <string name="common_preview">معاينة</string>
     <string name="rss_revoke_confirm">إلغاء</string>

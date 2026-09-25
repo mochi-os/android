@@ -24,13 +24,13 @@
     <string name="forums_settings">Configurações</string>
     <string name="forums_load_more">Carregar mais</string>
     <string name="forums_sort_label">Ordenar</string>
-    <string name="forums_sort_new">Novo</string>
+    <string name="forums_sort_new">Recentes</string>
     <string name="forums_sort_hot">Em alta</string>
-    <string name="forums_sort_top">Topo</string>
+    <string name="forums_sort_top">Melhores</string>
     <string name="forums_sort_interests">Interesses</string>
     <string name="forums_post_title_field">Título</string>
     <string name="forums_post_attach">Anexar arquivos</string>
-    <string name="forums_post_create_action">Postagem</string>
+    <string name="forums_post_create_action">Publicar</string>
     <string name="forums_post_edit">Editar publicação</string>
     <string name="forums_post_edit_title">Editar publicação</string>
     <string name="forums_post_edit_title_field">Título</string>
@@ -58,11 +58,11 @@
     <string name="forums_tab_members">Membros</string>
     <string name="forums_tab_banner">Banner</string>
     <string name="forums_tab_ai">IA</string>
-    <string name="forums_access_target">Destino</string>
+    <string name="forums_access_target">Usuário ou grupo</string>
     <string name="forums_access_level_view">Visualizar</string>
     <string name="forums_access_level_vote">Votar</string>
-    <string name="forums_access_level_comment">Comentário</string>
-    <string name="forums_access_level_post">Postagem</string>
+    <string name="forums_access_level_comment">Comentar</string>
+    <string name="forums_access_level_post">Publicar</string>
     <string name="forums_access_level_none">Nenhum</string>
     <string name="forums_members_empty">Sem membros</string>
     <string name="forums_banner_dismiss">Dispensar banner</string>
@@ -129,7 +129,7 @@
     <string name="forums_auth_login_failed">Falha no login</string>
 
     <string name="notification_channel_forums">Notificações de fóruns</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Fóruns</string>
     <string name="forums_auth_create_identity_failed">Falha ao criar identidade</string>
     <string name="forums_auth_mfa_unsupported">MFA ainda não é compatível no aplicativo móvel</string>
     <string name="forums_auth_enter_code_sent">Digite o código enviado para %1$s</string>
@@ -190,7 +190,7 @@
     <string name="forums_access_tab_manual">Manual</string>
     <string name="forums_access_search_users">Pesquisar usuários</string>
     <string name="forums_access_no_groups">Nenhum grupo disponível</string>
-    <string name="forums_saved_title">Salvo</string>
+    <string name="forums_saved_title">Salvos</string>
     <string name="forums_saved_save">Salvar para mais tarde</string>
     <string name="forums_saved_remove">Remover dos salvos</string>
     <string name="forums_saved_clear_all">Limpar tudo</string>

@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Zatiaľ žiadne príspevky</string>
     <string name="feeds_sort_label">Zoradiť</string>
     <string name="feeds_sort_interests">Záujmy</string>
-    <string name="feeds_sort_new">Nový</string>
+    <string name="feeds_sort_new">Najnovšie</string>
     <string name="feeds_sort_hot">Populárne</string>
-    <string name="feeds_sort_top">Hore</string>
+    <string name="feeds_sort_top">Najlepšie</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Príspevok</string>
     <string name="feeds_image_preview">Náhľad</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Zrušiť odpoveď</string>
     <string name="feeds_edit_post">Upraviť príspevok</string>
     <string name="feeds_save_label">Uložiť</string>
-    <string name="feeds_post_action">Príspevok</string>
+    <string name="feeds_post_action">Zverejniť</string>
     <string name="feeds_feed_label">Kanál</string>
     <string name="feeds_add_files">Pridať súbory</string>
     <string name="feeds_restore">Obnoviť</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Odhlásiť sa</string>
     <string name="feeds_ai_account_default">Predvolený účet</string>
     <string name="feeds_ai_mode_off">Vypnuté</string>
-    <string name="feeds_ai_mode_tag">Tag</string>
+    <string name="feeds_ai_mode_tag">Tagovanie</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + odstrániť duplikáty</string>
     <string name="feeds_feed_not_found">Kanál sa nenašiel</string>
     <string name="feeds_post_not_found">Príspevok sa nenašiel</string>

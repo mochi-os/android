@@ -24,9 +24,9 @@
     <string name="forums_settings">การตั้งค่า</string>
     <string name="forums_load_more">โหลดเพิ่ม</string>
     <string name="forums_sort_label">เรียงลำดับ</string>
-    <string name="forums_sort_new">ใหม่</string>
+    <string name="forums_sort_new">ใหม่ล่าสุด</string>
     <string name="forums_sort_hot">ยอดนิยม</string>
-    <string name="forums_sort_top">บนสุด</string>
+    <string name="forums_sort_top">คะแนนสูงสุด</string>
     <string name="forums_sort_interests">ความสนใจ</string>
     <string name="forums_post_title_field">ชื่อ</string>
     <string name="forums_post_attach">แนบไฟล์</string>
@@ -59,10 +59,10 @@
     <string name="forums_tab_members">สมาชิก</string>
     <string name="forums_tab_banner">แบนเนอร์</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">เป้าหมาย</string>
+    <string name="forums_access_target">ผู้ใช้หรือกลุ่ม</string>
     <string name="forums_access_level_view">ดู</string>
     <string name="forums_access_level_vote">โหวต</string>
-    <string name="forums_access_level_comment">ความคิดเห็น</string>
+    <string name="forums_access_level_comment">แสดงความคิดเห็น</string>
     <string name="forums_access_level_post">โพสต์</string>
     <string name="forums_access_level_none">ไม่มี</string>
     <string name="forums_members_empty">ไม่มีสมาชิก</string>
@@ -80,7 +80,7 @@
     <string name="forums_moderation_reports_resolved">แก้ไขแล้ว</string>
     <string name="forums_moderation_reports_all">ทั้งหมด</string>
     <string name="forums_moderation_reports_empty">ไม่มีรายงาน</string>
-    <string name="forums_moderation_report_dismiss">ปิด</string>
+    <string name="forums_moderation_report_dismiss">ปัดตก</string>
     <string name="forums_moderation_restrictions_empty">ไม่มีข้อจำกัด</string>
     <string name="forums_moderation_restriction_remove">ลบ</string>
     <string name="forums_moderation_restriction_type">ประเภท</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_login_failed">เข้าสู่ระบบล้มเหลว</string>
 
     <string name="notification_channel_forums">การแจ้งเตือนฟอรัม</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi ฟอรัม</string>
     <string name="forums_auth_create_identity_failed">สร้างตัวตนไม่สำเร็จ</string>
     <string name="forums_auth_mfa_unsupported">ยังไม่รองรับ MFA ในแอปมือถือ</string>
     <string name="forums_auth_enter_code_sent">ป้อนรหัสที่ส่งไปยัง %1$s</string>
@@ -171,7 +171,7 @@
     <string name="forums_moderation_log_meta">โดย %1$s · เป้าหมาย %2$s</string>
     <string name="forums_moderation_restriction_add">เพิ่มข้อจำกัด</string>
     <string name="forums_moderation_restriction_user">ตัวตนผู้ใช้</string>
-    <string name="forums_moderation_restriction_type_shadowban">Shadowban</string>
+    <string name="forums_moderation_restriction_type_shadowban">แบนแบบเงียบ</string>
     <string name="forums_moderation_restriction_duration_seconds">ระยะเวลา (วินาที, เว้นว่างสำหรับถาวร)</string>
     <string name="forums_moderation_restriction_expires">หมดอายุ %1$s</string>
     <string name="forums_moderation_restriction_permanent">ถาวร</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">ด้วยตนเอง</string>
     <string name="forums_access_search_users">ค้นหาผู้ใช้</string>
     <string name="forums_access_no_groups">ไม่มีกลุ่มที่ใช้งานได้</string>
-    <string name="forums_saved_title">บันทึกแล้ว</string>
+    <string name="forums_saved_title">รายการที่บันทึก</string>
     <string name="forums_saved_save">บันทึกไว้ดูภายหลัง</string>
     <string name="forums_saved_remove">นำออกจากที่บันทึก</string>
     <string name="forums_saved_clear_all">ล้างทั้งหมด</string>
@@ -238,7 +238,7 @@
     <string name="forums_settings_access_updated">อัปเดตการเข้าถึงแล้ว</string>
     <string name="forums_settings_access_revoked">เพิกถอนการเข้าถึงแล้ว</string>
     <string name="forums_settings_member_removed">ลบสมาชิกแล้ว</string>
-    <string name="forums_settings_prompt_saved">บันทึก prompt แล้ว</string>
+    <string name="forums_settings_prompt_saved">บันทึกพรอมต์แล้ว</string>
     <string name="forums_settings_section_identity">ตัวตน</string>
     <string name="forums_settings_field_name">ชื่อ</string>
     <string name="forums_settings_field_entity_id">รหัสเอนทิตี</string>

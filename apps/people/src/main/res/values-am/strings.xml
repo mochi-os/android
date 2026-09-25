@@ -62,7 +62,7 @@
     <string name="people_profile_uploading">በመስቀል ላይ…</string>
     <string name="people_profile_change_banner">ባነር ቀይር</string>
     <string name="people_profile_no_banner">ምንም ባነር አልተዋቀረም</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">የአሳሽ አዶ</string>
     <string name="people_profile_browser_icon">የአሳሽ አዶ</string>
     <string name="people_profile_file_too_large">ፋይሉ በጣም ትልቅ ነው</string>
     <string name="people_profile_clear">አጽዳ</string>
@@ -71,12 +71,12 @@
     <string name="people_common_cancel">ይቅር</string>
     <string name="people_common_close">ዝጋ</string>
     <string name="people_common_save">ያስቀምጡ</string>
-    <string name="people_welcome_dismiss">አጥፋ</string>
+    <string name="people_welcome_dismiss">ዝጋ</string>
     <string name="people_sidebar_header">ሰዎች</string>
     <string name="people_open_sidebar">ዳሰሳ ክፈት</string>
     <string name="people_person_state_friend">ጓደኞች</string>
     <string name="people_person_state_self">እርስዎ</string>
-    <string name="people_person_message">መልዕክት</string>
+    <string name="people_person_message">መልዕክት ይላኩ</string>
     <string name="people_person_accept">ተቀበል</string>
     <string name="people_person_decline">አትቀበል</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">ሁሉንም ተቀበል</string>
     <string name="people_invitations_decline_all">ሁሉንም አትቀበል</string>
     <string name="people_invitations_cancel_all">ሁሉንም ሰርዝ</string>
+    <string name="people_invitations_cancel">ይሰርዙ</string>
     <string name="people_invitations_all_accepted">ሁሉም ግብዣዎች ተቀብለዋል</string>
     <string name="people_invitations_all_declined">ሁሉም ግብዣዎች ተቀባይነት አጥተዋል</string>
     <string name="people_invitations_all_cancelled">ሁሉም ግብዣዎች ተሰርዘዋል</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">ይፈልጉ…</string>
     <string name="people_contacts_invited">ተጋብዟል</string>
     <string name="people_contacts_accept">ተቀበል</string>
-    <string name="people_contacts_message">መልዕክት</string>
+    <string name="people_contacts_message">መልዕክት ይላኩ</string>
     <string name="people_contacts_no_people_found">ምንም ሰዎች አልተገኙም</string>
     <string name="people_contacts_try_adjusting">ፍለጋዎን ማስተካከል ይሞክሩ</string>
     <string name="people_contact_section_address">አድራሻ</string>

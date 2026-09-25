@@ -76,12 +76,12 @@
     <string name="people_open_sidebar">Navigatie openen</string>
     <string name="people_person_state_friend">Vrienden</string>
     <string name="people_person_state_self">U</string>
-    <string name="people_person_message">Bericht</string>
+    <string name="people_person_message">Bericht sturen</string>
     <string name="people_person_accept">Accepteren</string>
     <string name="people_person_decline">Weigeren</string>
 
 
-    <string name="notification_channel_people">Meldingen voor Mensen</string>
+    <string name="notification_channel_people">Meldingen voor Personen</string>
     <string name="people_friends_searching">Zoeken…</string>
     <string name="people_invitations_toast_accepted">Uitnodiging van %1$s aanvaard</string>
     <string name="people_invitations_toast_declined">Uitnodiging van %1$s geweigerd</string>
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">Voer een geldige hex-kleur in (bv. #a78bfa)</string>
     <string name="people_profile_accent_none">Geen</string>
     <string name="people_profile_privacy_private_desc">Enkel wederzijdse vrienden kunnen uw profiel bekijken</string>
-    <string name="people_welcome_title">Welkom bij Mensen</string>
+    <string name="people_welcome_title">Welkom bij Personen</string>
     <string name="people_person_banner_alt">Banner voor %1$s</string>
     <string name="people_person_private">Dit profiel is privé</string>
     <string name="people_person_state_invited">Uitgenodigd</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Alles aanvaarden</string>
     <string name="people_invitations_decline_all">Alles weigeren</string>
     <string name="people_invitations_cancel_all">Alles annuleren</string>
+    <string name="people_invitations_cancel">Annuleren</string>
     <string name="people_invitations_all_accepted">Alle uitnodigingen aanvaard</string>
     <string name="people_invitations_all_declined">Alle uitnodigingen geweigerd</string>
     <string name="people_invitations_all_cancelled">Alle uitnodigingen geannuleerd</string>
@@ -117,7 +118,7 @@
     <string name="people_contacts_search_placeholder">Zoeken…</string>
     <string name="people_contacts_invited">Uitgenodigd</string>
     <string name="people_contacts_accept">Accepteren</string>
-    <string name="people_contacts_message">Bericht</string>
+    <string name="people_contacts_message">Bericht sturen</string>
     <string name="people_contacts_no_people_found">Geen personen gevonden</string>
     <string name="people_contacts_try_adjusting">Probeer uw zoekopdracht aan te passen</string>
     <string name="people_contact_section_address">Adres</string>

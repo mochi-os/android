@@ -38,7 +38,7 @@
     <string name="access_add_rule">Дадаць правіла</string>
     <string name="access_owner">Уладальнік</string>
     <string name="access_revoke">Адклікаць</string>
-    <string name="access_level_comment">Каментарый</string>
+    <string name="access_level_comment">Каментаваць</string>
     <string name="access_level_view">Прагляд</string>
     <string name="access_level_none">Няма</string>
     <string name="reaction_like">Падабаецца</string>
@@ -189,7 +189,7 @@
     <string name="format_time_weeks_short">%1$d тыд</string>
     <string name="format_time_months_short">%1$d мес</string>
     <string name="reaction_add">Дадаць рэакцыю</string>
-    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel">Апавяшчэнні Mochi</string>
     <string name="push_service_channel_description">Падтрымлівае злучэнне Mochi для атрымання апавяшчэнняў</string>
     <string name="push_service_group">Фонавая служба</string>
     <string name="push_service_title">Mochi слухае апавяшчэнні</string>

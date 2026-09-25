@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="wikis_sidebar_header">Wiki</string>
+    <string name="wikis_sidebar_header">Уикита</string>
     <string name="wikis_sidebar_all">Всички wiki-та</string>
     <string name="wikis_sidebar_find">Намери wiki-та</string>
     <string name="wikis_sidebar_create">Създай wiki</string>
@@ -23,7 +23,7 @@
     <string name="wikis_page_action_new_page">Нова страница</string>
     <string name="wikis_page_action_settings">Настройки</string>
     <string name="wikis_page_action_unsubscribe">Отпиши се</string>
-    <string name="wikis_title">Wiki</string>
+    <string name="wikis_title">Уикита</string>
     <string name="wikis_empty_title">Стартирайте първото си wiki</string>
     <string name="wikis_empty_subtitle">Търсете wiki за абониране или създайте такава, за да публикувате собствена документация.</string>
     <string name="wikis_create_button">Създай wiki</string>

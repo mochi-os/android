@@ -69,7 +69,7 @@
     <string name="market_checkout_back">Terug</string>
     <string name="market_checkout_buy_it_now">Nu kopen</string>
     <string name="market_checkout_create_failed">Bestelling aanmaken mislukt</string>
-    <string name="market_checkout_delivery_download">Downloaden</string>
+    <string name="market_checkout_delivery_download">Download</string>
     <string name="market_checkout_delivery_method">Leveringsmethode</string>
     <string name="market_checkout_delivery_pickup">Afhalen</string>
     <string name="market_checkout_delivery_shipping">Verzending</string>
@@ -104,7 +104,7 @@
     <string name="market_editor_asset_external_filename">Bestandsnaam</string>
     <string name="market_editor_back">Terug</string>
     <string name="market_editor_category">Categorie</string>
-    <string name="market_editor_condition">Voorwaarde</string>
+    <string name="market_editor_condition">Conditie</string>
     <string name="market_editor_condition_new">Nieuw</string>
     <string name="market_editor_condition_refurbished">Gerefurbished</string>
     <string name="market_editor_condition_used">Gebruikt</string>
@@ -146,12 +146,12 @@
     <string name="market_filter_apply">Toepassen</string>
     <string name="market_filter_category">Categorie</string>
     <string name="market_filter_clear">Filters wissen</string>
-    <string name="market_filter_condition">Voorwaarde</string>
+    <string name="market_filter_condition">Conditie</string>
     <string name="market_filter_condition_new">Nieuw</string>
     <string name="market_filter_condition_refurbished">Gerefurbished</string>
     <string name="market_filter_condition_used">Gebruikt</string>
     <string name="market_filter_delivery">Levering</string>
-    <string name="market_filter_delivery_download">Downloaden</string>
+    <string name="market_filter_delivery_download">Download</string>
     <string name="market_filter_delivery_pickup">Afhalen</string>
     <string name="market_filter_delivery_shipping">Verzending</string>
     <string name="market_filter_price_max">Max</string>
@@ -180,7 +180,7 @@
     <string name="market_listing_detail_load_failed">Listing laden mislukt</string>
     <string name="market_listing_detail_listed">Geplaatst op %1$s</string>
     <string name="market_listing_detail_location_heading">Locatie</string>
-    <string name="market_listing_detail_message">Bericht</string>
+    <string name="market_listing_detail_message">Bericht sturen</string>
     <string name="market_listing_detail_message_seller">Bericht naar verkoper</string>
     <string name="market_listing_detail_not_found">Listing niet gevonden</string>
     <string name="market_listing_detail_place_bid">Bod plaatsen</string>

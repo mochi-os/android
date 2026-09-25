@@ -25,7 +25,7 @@
     <string name="chat_chat_not_found">စကားပြောခန်း မတွေ့ရှိပါ</string>
 
     <string name="chat_message_send">ပို့</string>
-    <string name="chat_attachment_remove">Remove attachment</string>
+    <string name="chat_attachment_remove">ပူးတွဲဖိုင် ဖယ်ရှားရန်</string>
     <string name="chat_attachment_move_up">အပေါ်သို့ ရွှေ့</string>
     <string name="chat_attachment_move_down">အောက်သို့ ရွှေ့</string>
 

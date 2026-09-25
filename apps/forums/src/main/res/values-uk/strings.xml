@@ -24,13 +24,13 @@
     <string name="forums_settings">Налаштування</string>
     <string name="forums_load_more">Завантажити більше</string>
     <string name="forums_sort_label">Сортувати</string>
-    <string name="forums_sort_new">Нове</string>
+    <string name="forums_sort_new">Нові</string>
     <string name="forums_sort_hot">Популярне</string>
-    <string name="forums_sort_top">Верх</string>
+    <string name="forums_sort_top">Найкращі</string>
     <string name="forums_sort_interests">Інтереси</string>
     <string name="forums_post_title_field">Заголовок</string>
     <string name="forums_post_attach">Додати файли</string>
-    <string name="forums_post_create_action">Допис</string>
+    <string name="forums_post_create_action">Опублікувати</string>
     <string name="forums_post_edit">Редагувати допис</string>
     <string name="forums_post_edit_title">Редагувати допис</string>
     <string name="forums_post_edit_title_field">Заголовок</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Учасники</string>
     <string name="forums_tab_banner">Банер</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Ціль</string>
+    <string name="forums_access_target">Користувач або група</string>
     <string name="forums_access_level_view">Переглянути</string>
     <string name="forums_access_level_vote">Голосувати</string>
-    <string name="forums_access_level_comment">Коментар</string>
-    <string name="forums_access_level_post">Допис</string>
+    <string name="forums_access_level_comment">Коментувати</string>
+    <string name="forums_access_level_post">Опублікувати</string>
     <string name="forums_access_level_none">Немає</string>
     <string name="forums_members_empty">Немає учасників</string>
     <string name="forums_banner_dismiss">Закрити банер</string>
-    <string name="forums_ai_mode_tag">Тег</string>
+    <string name="forums_ai_mode_tag">Тегувати</string>
     <string name="forums_ai_account_default">Обліковий запис за замовчуванням</string>
     <string name="forums_ai_prompt_reset">Скинути до значення за замовчуванням</string>
     <string name="forums_settings_unsubscribe">Відписатися</string>
@@ -80,7 +80,7 @@
     <string name="forums_moderation_reports_resolved">Вирішено</string>
     <string name="forums_moderation_reports_all">Усі</string>
     <string name="forums_moderation_reports_empty">Немає скарг</string>
-    <string name="forums_moderation_report_dismiss">Закрити</string>
+    <string name="forums_moderation_report_dismiss">Відхилити</string>
     <string name="forums_moderation_restrictions_empty">Без обмежень</string>
     <string name="forums_moderation_restriction_remove">Видалити</string>
     <string name="forums_moderation_restriction_type">Тип</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_login_failed">Не вдалося увійти</string>
 
     <string name="notification_channel_forums">Сповіщення форумів</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Форуми</string>
     <string name="forums_auth_create_identity_failed">Не вдалося створити особистість</string>
     <string name="forums_auth_mfa_unsupported">MFA ще не підтримується у мобільному застосунку</string>
     <string name="forums_auth_enter_code_sent">Введіть код, надісланий на %1$s</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">Вручну</string>
     <string name="forums_access_search_users">Пошук користувачів</string>
     <string name="forums_access_no_groups">Немає доступних груп</string>
-    <string name="forums_saved_title">Збережено</string>
+    <string name="forums_saved_title">Збережене</string>
     <string name="forums_saved_save">Зберегти на потім</string>
     <string name="forums_saved_remove">Видалити зі збережених</string>
     <string name="forums_saved_clear_all">Очистити все</string>

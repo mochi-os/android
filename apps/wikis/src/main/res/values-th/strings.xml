@@ -39,7 +39,7 @@
     <string name="wikis_rss_comments">ความคิดเห็น</string>
     <string name="wikis_rss_both">การเปลี่ยนแปลงและความคิดเห็น</string>
     <string name="wikis_rss_copied">คัดลอก URL RSS ไปยังคลิปบอร์ดแล้ว</string>
-    <string name="wikis_rss_failed">ไม่สามารถรับ RSS token ได้</string>
+    <string name="wikis_rss_failed">ไม่สามารถรับโทเคน RSS ได้</string>
     <string name="wikis_rss_revoke">เพิกถอนการเข้าถึง</string>
     <string name="wikis_rss_revoked">เพิกถอนการเข้าถึง RSS แล้ว</string>
     <string name="wikis_find_title">ค้นหาวิกิ</string>
@@ -127,8 +127,8 @@
     <string name="wikis_redirect_created_label">สร้างแล้ว</string>
     <string name="wikis_redirect_required_fields">ต้องระบุทั้งต้นทางและปลายทาง</string>
     <string name="wikis_redirect_created_success">สร้างการเปลี่ยนเส้นทางแล้ว</string>
-    <string name="wikis_redirect_create_failed">ไม่สามารถสร้าง redirect ได้</string>
-    <string name="wikis_redirect_delete_failed">ไม่สามารถลบ redirect ได้</string>
+    <string name="wikis_redirect_create_failed">ไม่สามารถสร้างการเปลี่ยนเส้นทางได้</string>
+    <string name="wikis_redirect_delete_failed">ไม่สามารถลบการเปลี่ยนเส้นทางได้</string>
     <string name="wikis_redirect_delete_confirm_title">ลบการเปลี่ยนเส้นทางหรือไม่?</string>
     <string name="wikis_tags_title">แท็กทั้งหมด</string>
     <string name="wikis_tags_empty_title">ไม่พบแท็ก</string>
@@ -169,11 +169,11 @@
     <string name="wikis_settings_tab_settings">การตั้งค่า</string>
     <string name="wikis_settings_tab_redirects">การเปลี่ยนเส้นทาง</string>
     <string name="wikis_settings_tab_access">การเข้าถึง</string>
-    <string name="wikis_settings_tab_replicas">Replicas</string>
-    <string name="wikis_settings_section_identity">Identity</string>
+    <string name="wikis_settings_tab_replicas">สำเนา</string>
+    <string name="wikis_settings_section_identity">ตัวตน</string>
     <string name="wikis_settings_field_name">ชื่อ</string>
-    <string name="wikis_settings_field_entity_id">Entity ID</string>
-    <string name="wikis_settings_field_fingerprint">Fingerprint</string>
+    <string name="wikis_settings_field_entity_id">รหัสเอนทิตี</string>
+    <string name="wikis_settings_field_fingerprint">ลายนิ้วมือ</string>
     <string name="wikis_settings_name_edit_cd">แก้ไขชื่อ</string>
     <string name="wikis_settings_name_invalid_char">ชื่อต้องไม่มีอักขระ &lt; หรือ &gt;</string>
     <string name="wikis_settings_name_too_long">ชื่อต้องไม่เกิน 100 ตัวอักษร</string>

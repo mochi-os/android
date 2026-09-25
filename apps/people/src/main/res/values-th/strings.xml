@@ -52,7 +52,7 @@
     <string name="people_profile_name">ชื่อ</string>
     <string name="people_profile_name_saved">บันทึกชื่อแล้ว</string>
     <string name="people_profile_edit_name">แก้ไขชื่อ</string>
-    <string name="people_profile_identity">Identity</string>
+    <string name="people_profile_identity">ตัวตน</string>
     <string name="people_profile_accent">สีเน้น</string>
     <string name="people_profile_directory_listing">อนุญาตให้ผู้อื่นค้นหาคุณในไดเรกทอรี</string>
     <string name="people_profile_markdown_supported">รองรับ Markdown</string>
@@ -62,7 +62,7 @@
     <string name="people_profile_uploading">กำลังอัปโหลด…</string>
     <string name="people_profile_change_banner">เปลี่ยนแบนเนอร์</string>
     <string name="people_profile_no_banner">ยังไม่ได้ตั้งแบนเนอร์</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">ไอคอนเว็บไซต์</string>
     <string name="people_profile_browser_icon">ไอคอนเบราว์เซอร์</string>
     <string name="people_profile_file_too_large">ไฟล์ใหญ่เกินไป</string>
     <string name="people_profile_clear">ล้าง</string>
@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">เปิดการนำทาง</string>
     <string name="people_person_state_friend">เพื่อน</string>
     <string name="people_person_state_self">คุณ</string>
-    <string name="people_person_message">ข้อความ</string>
+    <string name="people_person_message">ส่งข้อความ</string>
     <string name="people_person_accept">ยอมรับ</string>
     <string name="people_person_decline">ปฏิเสธ</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">ยอมรับทั้งหมด</string>
     <string name="people_invitations_decline_all">ปฏิเสธทั้งหมด</string>
     <string name="people_invitations_cancel_all">ยกเลิกทั้งหมด</string>
+    <string name="people_invitations_cancel">ยกเลิก</string>
     <string name="people_invitations_all_accepted">ยอมรับคำเชิญทั้งหมดแล้ว</string>
     <string name="people_invitations_all_declined">ปฏิเสธคำเชิญทั้งหมดแล้ว</string>
     <string name="people_invitations_all_cancelled">ยกเลิกคำเชิญทั้งหมดแล้ว</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">ค้นหา…</string>
     <string name="people_contacts_invited">เชิญแล้ว</string>
     <string name="people_contacts_accept">ยอมรับ</string>
-    <string name="people_contacts_message">ข้อความ</string>
+    <string name="people_contacts_message">ส่งข้อความ</string>
     <string name="people_contacts_no_people_found">ไม่พบผู้คน</string>
     <string name="people_contacts_try_adjusting">ลองปรับการค้นหาของคุณ</string>
     <string name="people_contact_section_address">ที่อยู่</string>

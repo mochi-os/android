@@ -62,7 +62,7 @@
     <string name="people_profile_uploading">Yn llwytho i fyny…</string>
     <string name="people_profile_change_banner">Newid baner</string>
     <string name="people_profile_no_banner">Dim baner wedi\'i gosod</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">Ffafeicon</string>
     <string name="people_profile_browser_icon">Eicon porwr</string>
     <string name="people_profile_file_too_large">Ffeil yn rhy fawr</string>
     <string name="people_profile_clear">Clirio</string>
@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Agor llywio</string>
     <string name="people_person_state_friend">Ffrindiau</string>
     <string name="people_person_state_self">Chi</string>
-    <string name="people_person_message">Neges</string>
+    <string name="people_person_message">Anfon neges</string>
     <string name="people_person_accept">Derbyn</string>
     <string name="people_person_decline">Gwrthod</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Derbyn popeth</string>
     <string name="people_invitations_decline_all">Gwrthod popeth</string>
     <string name="people_invitations_cancel_all">Canslo popeth</string>
+    <string name="people_invitations_cancel">Canslo</string>
     <string name="people_invitations_all_accepted">Derbyniwyd pob gwahoddiad</string>
     <string name="people_invitations_all_declined">Gwrthodwyd pob gwahoddiad</string>
     <string name="people_invitations_all_cancelled">Canslwyd pob gwahoddiad</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Chwilio…</string>
     <string name="people_contacts_invited">Wedi gwahodd</string>
     <string name="people_contacts_accept">Derbyn</string>
-    <string name="people_contacts_message">Neges</string>
+    <string name="people_contacts_message">Anfon neges</string>
     <string name="people_contacts_no_people_found">Heb ddod o hyd i bobl</string>
     <string name="people_contacts_try_adjusting">Ceisiwch addasu eich chwiliad</string>
     <string name="people_contact_section_address">Cyfeiriad</string>

@@ -24,9 +24,9 @@
     <string name="forums_settings">Axustes</string>
     <string name="forums_load_more">Cargar máis</string>
     <string name="forums_sort_label">Ordenar</string>
-    <string name="forums_sort_new">Novo</string>
+    <string name="forums_sort_new">Máis recentes</string>
     <string name="forums_sort_hot">Popular</string>
-    <string name="forums_sort_top">Arriba</string>
+    <string name="forums_sort_top">Mellores</string>
     <string name="forums_sort_interests">Intereses</string>
     <string name="forums_post_title_field">Título</string>
     <string name="forums_post_attach">Anexar ficheiros</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Membros</string>
     <string name="forums_tab_banner">Báner</string>
     <string name="forums_tab_ai">IA</string>
-    <string name="forums_access_target">Obxectivo</string>
+    <string name="forums_access_target">Usuario ou grupo</string>
     <string name="forums_access_level_view">Ver</string>
     <string name="forums_access_level_vote">Votar</string>
-    <string name="forums_access_level_comment">Comentario</string>
+    <string name="forums_access_level_comment">Comentar</string>
     <string name="forums_access_level_post">Publicar</string>
     <string name="forums_access_level_none">Ningún</string>
     <string name="forums_members_empty">Sen membros</string>
     <string name="forums_banner_dismiss">Descartar banner</string>
-    <string name="forums_ai_mode_tag">Etiqueta</string>
+    <string name="forums_ai_mode_tag">Etiquetar</string>
     <string name="forums_ai_account_default">Conta predeterminada</string>
     <string name="forums_ai_prompt_reset">Restablecer ao valor por defecto</string>
     <string name="forums_settings_unsubscribe">Cancelar subscrición</string>
@@ -135,7 +135,7 @@
     <string name="forums_write_comment">Escribe un comentario…</string>
 
     <string name="notification_channel_forums">Notificacións de foros</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Foros</string>
     <string name="forums_list_empty">Aínda non hai foros</string>
     <string name="forums_list_unsubscribe_message">Seguro que quere darse de baixa deste foro?</string>
     <string name="forums_find_search_placeholder">Buscar foros ou pegar URL</string>
@@ -171,7 +171,7 @@
     <string name="forums_moderation_log_meta">Por %1$s · Obxectivo %2$s</string>
     <string name="forums_moderation_restriction_add">Engadir restrición</string>
     <string name="forums_moderation_restriction_user">Identidade do usuario</string>
-    <string name="forums_moderation_restriction_type_shadowban">Shadowban</string>
+    <string name="forums_moderation_restriction_type_shadowban">Veto en segredo</string>
     <string name="forums_moderation_restriction_duration_seconds">Duración (segundos, en branco para permanente)</string>
     <string name="forums_moderation_restriction_expires">Caduca o %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanente</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">Manual</string>
     <string name="forums_access_search_users">Buscar usuarios</string>
     <string name="forums_access_no_groups">Non hai grupos dispoñibles</string>
-    <string name="forums_saved_title">Gardado</string>
+    <string name="forums_saved_title">Gardados</string>
     <string name="forums_saved_save">Gardar para máis tarde</string>
     <string name="forums_saved_remove">Quitar dos gardados</string>
     <string name="forums_saved_clear_all">Borrar todo</string>
@@ -320,7 +320,7 @@
     <string name="forums_moderation_action_restrict">Restrinxido</string>
     <string name="forums_moderation_action_unrestrict">Sen restricións</string>
     <string name="forums_moderation_action_resolve">Informe resolto</string>
-    <string name="forums_moderation_target_post">Publicar</string>
+    <string name="forums_moderation_target_post">Publicación</string>
     <string name="forums_moderation_target_comment">Comentario</string>
     <string name="forums_moderation_target_user">Usuario</string>
     <string name="forums_moderation_reason_spam">Spam</string>

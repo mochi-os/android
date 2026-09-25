@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">ਅਜੇ ਕੋਈ ਪੋਸਟ ਨਹੀਂ</string>
     <string name="feeds_sort_label">ਛਾਂਟੋ</string>
     <string name="feeds_sort_interests">ਦਿਲਚਸਪੀਆਂ</string>
-    <string name="feeds_sort_new">ਨਵਾਂ</string>
+    <string name="feeds_sort_new">ਸਭ ਤੋਂ ਨਵੇਂ</string>
     <string name="feeds_sort_hot">ਪ੍ਰਸਿੱਧ</string>
-    <string name="feeds_sort_top">ਉੱਪਰ</string>
+    <string name="feeds_sort_top">ਸਭ ਤੋਂ ਵਧੀਆ</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">ਪੋਸਟ</string>
     <string name="feeds_image_preview">ਪ੍ਰੀਵਿਊ</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">ਜਵਾਬ ਰੱਦ ਕਰੋ</string>
     <string name="feeds_edit_post">ਪੋਸਟ ਸੰਪਾਦਿਤ ਕਰੋ</string>
     <string name="feeds_save_label">ਸੰਭਾਲੋ</string>
-    <string name="feeds_post_action">ਪੋਸਟ</string>
+    <string name="feeds_post_action">ਪੋਸਟ ਕਰੋ</string>
     <string name="feeds_feed_label">ਫੀਡ</string>
     <string name="feeds_add_files">ਫਾਈਲਾਂ ਜੋੜੋ</string>
     <string name="feeds_restore">ਬਹਾਲ ਕਰੋ</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">ਦਿਲਚਸਪੀ ਘਟਾਈ ਗਈ</string>
     <string name="feeds_interest_removed">ਦਿਲਚਸਪੀ ਹਟਾਈ ਗਈ</string>
     <string name="feeds_interest_failed">ਦਿਲਚਸਪੀ ਨੂੰ ਅਡਜਸਟ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
-    <string name="feeds_saved_title">ਸੰਭਾਲਿਆ ਗਿਆ</string>
-    <string name="feeds_saved_menu">ਸੰਭਾਲਿਆ ਗਿਆ</string>
+    <string name="feeds_saved_title">ਸੰਭਾਲੇ ਗਏ</string>
+    <string name="feeds_saved_menu">ਸੰਭਾਲੇ ਗਏ</string>
     <string name="feeds_saved_save">ਬਾਅਦ ਲਈ ਸੰਭਾਲੋ</string>
     <string name="feeds_saved_remove">ਸੰਭਾਲੇ ਤੋਂ ਹਟਾਓ</string>
     <string name="feeds_saved_clear_all">ਸਭ ਸਾਫ਼ ਕਰੋ</string>

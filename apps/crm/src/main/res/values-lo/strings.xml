@@ -32,7 +32,7 @@
     <string name="crm_settings_tab_access">ການເຂົ້າເຖິງ</string>
     <string name="crm_settings_tab_people">ຄົນ</string>
     <string name="crm_option_icon">ໄອຄອນ</string>
-    <string name="crm_option_icon_placeholder">ຕ຺ືັກ. Check, Star, Flag</string>
+    <string name="crm_option_icon_placeholder">ເຊັ່ນ Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
     <string name="crm_settings_delete_crm">ລົບໂຄງການ</string>
     <string name="crm_settings_delete_confirm_title">ລົບ CRM</string>
@@ -78,7 +78,7 @@
     <string name="crm_design_or_upload_json">ຫຼືອັບໂຫຼດໄຟລ໌</string>
     <string name="crm_design_upload_json">ອັບໂຫຼດໄຟລ໌ .json</string>
     <string name="crm_design_tab_classes">ຄລາສ</string>
-    <string name="crm_design_tab_views">ການເບິ່ງ</string>
+    <string name="crm_design_tab_views">ມຸມມອງ</string>
     <string name="crm_design_import_dialog_title">ນຳເຂົ້າການອອກແບບ</string>
     <string name="crm_design_import_choose_template">ເລືອກແມ່ແບບ</string>
     <string name="crm_design_replace_title">ປ່ຽນແທນການອອກແບບ?</string>
@@ -128,7 +128,7 @@
     <string name="crm_comment_send">ສົ່ງ</string>
     <string name="crm_field_position_body">ເນື້ອຫາ</string>
     <string name="crm_sort_field">ຈັດລຽງຕາມ</string>
-    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_comment_remove_attachment">ລຶບໄຟລ໌ແນບ</string>
     <string name="crm_views_sort_by">ຈັດລຽງຕາມ</string>
     <string name="crm_views_move_up">ຍ້າຍຂຶ້ນ</string>
     <string name="crm_class_move_up">ຍ້າຍຂຶ້ນ</string>
@@ -225,7 +225,7 @@
     <string name="crm_views_empty_subtitle">ສ້າງມຸມມອງກະດານ ຫຼື ລາຍການເພື່ອຈັດກຸ່ມວັດຖຸ</string>
     <string name="crm_views_delete_message">ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບມຸມມອງ \"%1$s\"?</string>
     <string name="crm_views_columns_field">ຊ່ອງສຳລັບຖັນ</string>
-    <string name="crm_views_rows_field">ຊ່ອງສຳລັບແຖວ (swimlanes)</string>
+    <string name="crm_views_rows_field">ຊ່ອງສຳລັບແຖວ (ແຖວແບ່ງກຸ່ມ)</string>
     <string name="crm_views_border_field">ຊ່ອງສຳລັບສີຂອບ</string>
     <string name="crm_views_filter_classes">ກັ່ນຕອງຕາມຄລາສ</string>
     <string name="crm_views_by">ໂດຍ %1$s</string>
@@ -241,7 +241,7 @@
     <string name="crm_access_no_groups">ບໍ່ມີກຸ່ມທີ່ມີຢູ່</string>
     <string name="crm_access_tab_users">ຜູ້ໃຊ້</string>
     <string name="crm_access_tab_groups">ກຸ່ມ</string>
-    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_attachment_remove">ລຶບໄຟລ໌ແນບ</string>
     <string name="crm_board_add_column">ເພີ່ມຖັນ</string>
     <string name="crm_settings_entity_id">ID ຂອງເອັນຕິຕີ້</string>
     <string name="crm_settings_fingerprint">ລາຍນິ້ວມື</string>

@@ -38,7 +38,7 @@
     <string name="access_add_rule">Shto rregull</string>
     <string name="access_owner">Pronari</string>
     <string name="access_revoke">Revoko</string>
-    <string name="access_level_comment">Komenti</string>
+    <string name="access_level_comment">Komento</string>
     <string name="access_level_view">Shiko</string>
     <string name="access_level_none">Asnjë</string>
     <string name="reaction_like">Pëlqej</string>
@@ -217,8 +217,8 @@
     <string name="settings_value_theme">Sipas temës</string>
     <string name="settings_radius">Rrezja e qosheve</string>
     <string name="settings_timestamp_display">Shfaqja e kohës</string>
-    <string name="settings_timestamp_relative">Relative</string>
-    <string name="settings_timestamp_absolute">Absolute</string>
+    <string name="settings_timestamp_relative">Relativ</string>
+    <string name="settings_timestamp_absolute">Absolut</string>
     <string name="settings_units_usa">SHBA</string>
     <string name="game_chat_load_more">Ngarko mesazhet më të vjetra</string>
     <string name="stepup_title">Konfirmoni se jeni ju</string>

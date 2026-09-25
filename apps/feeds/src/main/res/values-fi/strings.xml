@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Ei vielä julkaisuja</string>
     <string name="feeds_sort_label">Lajittele</string>
     <string name="feeds_sort_interests">Kiinnostuksen kohteet</string>
-    <string name="feeds_sort_new">Uusi</string>
+    <string name="feeds_sort_new">Uusimmat</string>
     <string name="feeds_sort_hot">Kuuma</string>
-    <string name="feeds_sort_top">Ylin</string>
+    <string name="feeds_sort_top">Parhaat</string>
     <string name="feeds_sort_ai">Tekoäly</string>
     <string name="feeds_post_default_author">Julkaisu</string>
     <string name="feeds_image_preview">Esikatselu</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Peruuta vastaus</string>
     <string name="feeds_edit_post">Muokkaa julkaisua</string>
     <string name="feeds_save_label">Tallenna</string>
-    <string name="feeds_post_action">Julkaisu</string>
+    <string name="feeds_post_action">Julkaise</string>
     <string name="feeds_feed_label">Syöte</string>
     <string name="feeds_add_files">Lisää tiedostoja</string>
     <string name="feeds_restore">Palauta</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Kirjaudu ulos</string>
     <string name="feeds_ai_account_default">Oletustili</string>
     <string name="feeds_ai_mode_off">Pois käytöstä</string>
-    <string name="feeds_ai_mode_tag">Tunniste</string>
+    <string name="feeds_ai_mode_tag">Lisää tunnisteet</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tunniste + poista kaksoiskappaleet</string>
     <string name="feeds_feed_not_found">Syötettä ei löytynyt</string>
     <string name="feeds_post_not_found">Julkaisua ei löytynyt</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Kiinnostusta vähennetty</string>
     <string name="feeds_interest_removed">Kiinnostus poistettu</string>
     <string name="feeds_interest_failed">Kiinnostuksen kohteen säätäminen epäonnistui</string>
-    <string name="feeds_saved_title">Tallennettu</string>
-    <string name="feeds_saved_menu">Tallennettu</string>
+    <string name="feeds_saved_title">Tallennetut</string>
+    <string name="feeds_saved_menu">Tallennetut</string>
     <string name="feeds_saved_save">Tallenna myöhemmäksi</string>
     <string name="feeds_saved_remove">Poista tallennetuista</string>
     <string name="feeds_saved_clear_all">Tyhjennä kaikki</string>

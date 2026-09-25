@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Market</string>
+    <string name="app_name">بازار</string>
     <string name="market_account_biography_label">زندگی‌نامه</string>
     <string name="market_account_location_label">مکان</string>
     <string name="market_account_save">ذخیره</string>
@@ -44,7 +44,7 @@
     <string name="market_bids_tab_outbid">پیشنهاد بالاتر</string>
     <string name="market_bids_tab_won">برنده شد</string>
     <string name="market_bids_title">پیشنهادها</string>
-    <string name="market_channel_name">Market</string>
+    <string name="market_channel_name">بازار</string>
     <string name="market_chargeback_reason_bank_cannot_process">بانک نتوانست پردازش کند</string>
     <string name="market_chargeback_reason_check_returned">چک برگشت خورد</string>
     <string name="market_chargeback_reason_credit_not_processed">اعتبار پردازش نشد</string>
@@ -183,7 +183,7 @@
     <string name="market_listing_detail_load_failed">بارگذاری آگهی ناموفق بود</string>
     <string name="market_listing_detail_listed">ثبت‌شده %1$s</string>
     <string name="market_listing_detail_location_heading">مکان</string>
-    <string name="market_listing_detail_message">پیام</string>
+    <string name="market_listing_detail_message">ارسال پیام</string>
     <string name="market_listing_detail_message_seller">پیام به فروشنده</string>
     <string name="market_listing_detail_not_found">آگهی یافت نشد</string>
     <string name="market_listing_detail_place_bid">ثبت پیشنهاد</string>
@@ -215,8 +215,8 @@
     <string name="market_listings_title">آگهی‌های من</string>
     <string name="market_messages_inbox_title">پیام‌ها</string>
     <string name="market_messages_thread_listing_chip">آگهی</string>
-    <string name="market_onboarding_activate">Activate</string>
-    <string name="market_onboarding_activating">Activating…</string>
+    <string name="market_onboarding_activate">فعال‌سازی</string>
+    <string name="market_onboarding_activating">در حال فعال‌سازی…</string>
     <string name="market_onboarding_body">برای شروع خرید و فروش، حساب خود را فعال کنید.</string>
     <string name="market_onboarding_dismiss">بستن</string>
     <string name="market_onboarding_title">به Market خوش آمدید</string>
@@ -305,7 +305,7 @@
     <string name="market_sale_carrier_other">سایر</string>
     <string name="market_sale_completed_label">تکمیل شد</string>
     <string name="market_sale_dispute_respond">پاسخ دادن</string>
-    <string name="market_sale_dispute_state_open">باز کردن</string>
+    <string name="market_sale_dispute_state_open">باز</string>
     <string name="market_sale_dispute_state_resolved">رفع شد</string>
     <string name="market_sale_load_failed">بارگذاری سفارش ناموفق بود</string>
     <string name="market_sale_message_buyer">پیام به خریدار</string>
@@ -324,7 +324,7 @@
     <string name="market_sale_shipped_label">ارسال شد</string>
     <string name="market_sale_title">فروش</string>
     <string name="market_sale_tracking_label">شماره پیگیری</string>
-    <string name="market_saved_title">ذخیره شد</string>
+    <string name="market_saved_title">ذخیره‌شده‌ها</string>
     <string name="market_search_clear">پاک کردن جست‌وجو</string>
     <string name="market_section_categories">مرور دسته‌ها</string>
     <string name="market_section_listings">آگهی‌های اخیر</string>
@@ -348,7 +348,7 @@
     <string name="market_sidebar_purchases">خریدها</string>
     <string name="market_sidebar_reviews">بازبینی‌ها</string>
     <string name="market_sidebar_sales">فروش‌ها</string>
-    <string name="market_sidebar_saved">ذخیره شد</string>
+    <string name="market_sidebar_saved">ذخیره‌شده‌ها</string>
     <string name="market_sidebar_selling">در حال فروش</string>
     <string name="market_sidebar_settings">تنظیمات</string>
     <string name="market_sidebar_subscribers">مشترکان</string>
@@ -367,18 +367,18 @@
     <string name="market_subscribers_interval_month">/ ماه</string>
     <string name="market_subscribers_interval_year">/ سال</string>
     <string name="market_subscribers_load_failed">بارگذاری مشترکان ناموفق بود</string>
-    <string name="market_subscription_detail_billing_history">Billing history</string>
+    <string name="market_subscription_detail_billing_history">تاریخچه صورت‌حساب</string>
     <string name="market_subscription_detail_billing_history_empty">هنوز هیچ هزینه‌ای ثبت نشده است.</string>
-    <string name="market_subscription_detail_billing_info">Billing</string>
-    <string name="market_subscription_detail_cancelled_on">Cancelled on %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Latest charge: %1$s</string>
+    <string name="market_subscription_detail_billing_info">صورت‌حساب</string>
+    <string name="market_subscription_detail_cancelled_on">لغو شده در %1$s</string>
+    <string name="market_subscription_detail_charge_amount">آخرین پرداخت: %1$s</string>
     <string name="market_subscription_detail_listing">آگهی</string>
     <string name="market_subscription_detail_load_failed">اشتراک بارگیری نشد</string>
     <string name="market_subscription_detail_next_billing">تاریخ صورتحساب بعدی: %1$s</string>
     <string name="market_subscription_detail_not_found">اشتراک یافت نشد</string>
-    <string name="market_subscription_detail_pending_cancel">Cancellation pending</string>
+    <string name="market_subscription_detail_pending_cancel">در انتظار لغو</string>
     <string name="market_subscription_detail_seller">فروشنده</string>
-    <string name="market_subscription_detail_started">Started %1$s</string>
+    <string name="market_subscription_detail_started">آغاز شده در %1$s</string>
     <string name="market_subscription_detail_title">اشتراک</string>
     <string name="market_subscriptions_action_cancel">لغو</string>
     <string name="market_subscriptions_action_pause">توقف</string>
@@ -400,7 +400,7 @@
     <string name="market_subscriptions_resume_failed">ازسرگیری ناموفق بود</string>
     <string name="market_subscriptions_resumed">اشتراک از سر گرفته شد</string>
     <string name="market_subscriptions_title">اشتراک‌ها</string>
-    <string name="market_title">Market</string>
+    <string name="market_title">بازار</string>
     <string name="market_type_digital">دیجیتال</string>
     <string name="market_type_physical">فیزیکی</string>
     <string name="market_messages_send">ارسال</string>
@@ -690,7 +690,7 @@
     <string name="market_seller_step_activate_title">فعال‌سازی حساب فروشنده</string>
     <string name="market_seller_step_stripe_desc">یک حساب Stripe را پیوند دهید تا پرداخت‌های خریداران را بپذیرید</string>
     <string name="market_seller_step_stripe_title">اتصال Stripe</string>
-    <string name="market_seller_stripe_more_info">Stripe پیش از آنکه بتوانید پرداخت‌ها را بپذیرید به اطلاعات بیشتری نیاز دارد. الزامات را در Stripe Dashboard خود کامل کنید، سپس روی «بررسی وضعیت» کلیک کنید.</string>
+    <string name="market_seller_stripe_more_info">Stripe پیش از آنکه بتوانید پرداخت‌ها را بپذیرید به اطلاعات بیشتری نیاز دارد. الزامات را در داشبورد Stripe خود کامل کنید، سپس روی «بررسی وضعیت» کلیک کنید.</string>
     <string name="market_seller_summary_account_status">وضعیت حساب</string>
     <string name="market_seller_summary_fees">کارمزدها</string>
     <string name="market_seller_summary_payments">پرداخت‌ها</string>

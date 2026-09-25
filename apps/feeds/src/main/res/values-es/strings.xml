@@ -14,13 +14,13 @@
     <string name="feeds_no_posts_yet">Aún no hay publicaciones</string>
     <string name="feeds_sort_label">Ordenar</string>
     <string name="feeds_sort_interests">Intereses</string>
-    <string name="feeds_sort_new">Nuevo</string>
+    <string name="feeds_sort_new">Recientes</string>
     <string name="feeds_sort_hot">Popular</string>
-    <string name="feeds_sort_top">Arriba</string>
+    <string name="feeds_sort_top">Mejores</string>
     <string name="feeds_sort_ai">IA</string>
-    <string name="feeds_post_default_author">Publicar</string>
+    <string name="feeds_post_default_author">Publicación</string>
     <string name="feeds_image_preview">Vista previa</string>
-    <string name="feeds_post">Publicar</string>
+    <string name="feeds_post">Publicación</string>
     <string name="feeds_comments">Comentarios</string>
     <string name="feeds_delete_post">Eliminar publicación</string>
     <string name="feeds_delete_comment">Eliminar comentario</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Cerrar sesión</string>
     <string name="feeds_ai_account_default">Cuenta predeterminada</string>
     <string name="feeds_ai_mode_off">Desactivado</string>
-    <string name="feeds_ai_mode_tag">Etiqueta</string>
+    <string name="feeds_ai_mode_tag">Etiquetar</string>
     <string name="feeds_ai_mode_tag_deduplicate">Etiquetar + eliminar duplicados</string>
     <string name="feeds_feed_not_found">Feed no encontrado</string>
     <string name="feeds_post_not_found">Publicación no encontrada</string>

@@ -2,19 +2,19 @@
 <resources>
 
     <string name="launcher_feeds">Mochi Feed</string>
-    <string name="launcher_chat">Mochi Chat</string>
+    <string name="launcher_chat">Mochi Obrolan</string>
     <string name="launcher_forums">Mochi Forum</string>
     <string name="launcher_projects">Mochi Proyèk</string>
     <string name="launcher_crm">Mochi CRM</string>
     <string name="launcher_people">Mochi Wong</string>
     <string name="launcher_settings">Mochi Setelan</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki</string>
     <string name="launcher_chess">Mochi Catur</string>
     <string name="launcher_go">Mochi Go</string>
     <string name="launcher_words">Mochi Tembung</string>
-    <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">Mochi Kalender</string>
+    <string name="launcher_market">Mochi Pasar</string>
+    <string name="launcher_calendars">Mochi Kalèndher</string>
     <string name="launcher_staff">Mochi Staf</string>
 
 

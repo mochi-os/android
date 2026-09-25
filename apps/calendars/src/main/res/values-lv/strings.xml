@@ -10,7 +10,7 @@
     <string name="calendars_delete">Dzēst</string>
     <string name="calendars_previous">Iepriekšējais</string>
     <string name="calendars_next">Tālāk</string>
-    <string name="calendars_view">Skatīt</string>
+    <string name="calendars_view">Skats</string>
     <string name="calendars_view_list">Saraksts</string>
     <string name="calendars_list_search">Meklēt</string>
     <string name="calendars_event_untitled">Bez nosaukuma</string>
@@ -172,7 +172,7 @@
     <string name="calendars_subscribe_server_url">Servera adrese</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google kalendārs</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google konti šajā serverī nav iespējoti. Iespējo tos sadaļā Iestatījumi, Sistēmas iestatījumi.</string>
     <string name="calendars_subscribe_google_connect">Tu neesi savienojis Google kontu.</string>

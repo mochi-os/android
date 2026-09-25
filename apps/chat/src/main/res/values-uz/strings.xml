@@ -25,7 +25,7 @@
     <string name="chat_chat_not_found">Suhbat topilmadi</string>
 
     <string name="chat_message_send">Yuborish</string>
-    <string name="chat_attachment_remove">Remove attachment</string>
+    <string name="chat_attachment_remove">Biriktirmani olib tashlash</string>
     <string name="chat_attachment_move_up">Yuqoriga ko‘chirish</string>
     <string name="chat_attachment_move_down">Pastga ko‘chirish</string>
 

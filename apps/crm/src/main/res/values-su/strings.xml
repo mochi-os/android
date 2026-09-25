@@ -103,7 +103,7 @@
     <string name="crm_field_flags">Bandéra</string>
     <string name="crm_field_required">Peryogi</string>
     <string name="crm_field_position_default">Standar</string>
-    <string name="crm_field_position_sidebar">Sidebar</string>
+    <string name="crm_field_position_sidebar">Bar sisi</string>
     <string name="crm_field_save">Simpen parobahan</string>
     <string name="crm_field_options">Pilihan</string>
     <string name="crm_field_add_option">Tambah pilihan</string>
@@ -128,7 +128,7 @@
     <string name="crm_comment_send">Kirim</string>
     <string name="crm_field_position_body">Eusi</string>
     <string name="crm_sort_field">Sortir dumasar</string>
-    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_comment_remove_attachment">Cabut lampiran</string>
     <string name="crm_views_sort_by">Sortir dumasar</string>
     <string name="crm_views_move_up">Pindahkeun ka luhur</string>
     <string name="crm_class_move_up">Pindahkeun ka luhur</string>
@@ -241,10 +241,10 @@
     <string name="crm_access_no_groups">Teu aya grup</string>
     <string name="crm_access_tab_users">Pamaké</string>
     <string name="crm_access_tab_groups">Grup</string>
-    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_attachment_remove">Cabut lampiran</string>
     <string name="crm_board_add_column">Tambah kolom</string>
     <string name="crm_settings_entity_id">ID Éntitas</string>
-    <string name="crm_settings_fingerprint">Fingerprint</string>
+    <string name="crm_settings_fingerprint">Sidik ramo</string>
     <string name="crm_settings_server">Server</string>
     <string name="crm_untitled">Tanpa judul</string>
     <string name="crm_property_select">Pilih …</string>

@@ -72,16 +72,16 @@
     <string name="people_common_close">Bigire</string>
     <string name="people_common_save">Tomar bike</string>
     <string name="people_welcome_dismiss">Red bike</string>
-    <string name="people_sidebar_header">Kes</string>
+    <string name="people_sidebar_header">Mirov</string>
     <string name="people_open_sidebar">Navîgasyonê veke</string>
     <string name="people_person_state_friend">Heval</string>
     <string name="people_person_state_self">Tu</string>
-    <string name="people_person_message">Peyam</string>
+    <string name="people_person_message">Peyamê bişîne</string>
     <string name="people_person_accept">Qebûl bike</string>
     <string name="people_person_decline">Red bike</string>
 
 
-    <string name="notification_channel_people">Agahdarîyên kesan</string>
+    <string name="notification_channel_people">Agahdarîyên Mirovan</string>
     <string name="people_friends_searching">Lê digere…</string>
     <string name="people_invitations_toast_accepted">Vexwendina ji %1$s hate qebûlkirin</string>
     <string name="people_invitations_toast_declined">Vexwendina ji %1$s hate redkirin</string>
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">Rengekî hex yê derbasdar binivîse (mînak #a78bfa)</string>
     <string name="people_profile_accent_none">Tu</string>
     <string name="people_profile_privacy_private_desc">Tenê hevalên hevbeş dikarin profîla te bibînin</string>
-    <string name="people_welcome_title">Bi xêr hatî bo Kesan</string>
+    <string name="people_welcome_title">Bi xêr hatî bo Mirovan</string>
     <string name="people_person_banner_alt">Bannera %1$s</string>
     <string name="people_person_private">Ev profîl taybet e</string>
     <string name="people_person_state_invited">Vexwendî</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Hemûyan bipejirîne</string>
     <string name="people_invitations_decline_all">Hemûyan red bike</string>
     <string name="people_invitations_cancel_all">Hemûyan betal bike</string>
+    <string name="people_invitations_cancel">Betal bike</string>
     <string name="people_invitations_all_accepted">Hemû vexwendin hatin pejirandin</string>
     <string name="people_invitations_all_declined">Hemû vexwendin hatin redkirin</string>
     <string name="people_invitations_all_cancelled">Hemû vexwendin hatin betalkirin</string>
@@ -114,11 +115,11 @@
     <string name="people_profile_too_long">Profîl pir dirêj e</string>
     <string name="people_invite_settings_load_failed">Barkirina polîtîkaya vexwendina te neserkeftî bû</string>
     <string name="people_profile_avatar">Avatar</string>
-    <string name="people_profile_banner">Banner</string>
+    <string name="people_profile_banner">Pankart</string>
     <string name="people_contacts_search_placeholder">Bigere…</string>
     <string name="people_contacts_invited">Vexwendî</string>
     <string name="people_contacts_accept">Qebûl bike</string>
-    <string name="people_contacts_message">Peyam</string>
+    <string name="people_contacts_message">Peyamê bişîne</string>
     <string name="people_contacts_no_people_found">Tu kes nehatin dîtin</string>
     <string name="people_contacts_try_adjusting">Lêgerîna xwe eyar bike</string>
     <string name="people_contact_section_address">Navnîşan</string>

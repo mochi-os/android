@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">Mochi-staf</string>
+    <string name="launcher_staff">Mochi-staf</string>
     <string name="staff_accounts_action_ban_title">Account verbannen</string>
     <string name="staff_accounts_action_suspend_title">Account schorsen</string>
     <string name="staff_accounts_action_unban_title">Verbanning opheffen</string>
@@ -162,7 +162,7 @@
     <string name="staff_categories_type_digital">Digitaal</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">Fysiek</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">Mochi-staf</string>
     <string name="staff_config_field_auto_approve">Drempel automatisch goedkeuren</string>
     <string name="staff_config_field_hold">Drempel vasthouden</string>
     <string name="staff_config_field_platform_fee">Platformkosten</string>
@@ -182,7 +182,7 @@
     <string name="staff_config_toast_save_failed">Opslaan mislukt</string>
     <string name="staff_config_toast_saved">Opgeslagen</string>
     <string name="staff_dashboard_col_action">Actie</string>
-    <string name="staff_dashboard_col_actor">Actor</string>
+    <string name="staff_dashboard_col_actor">Uitvoerder</string>
     <string name="staff_dashboard_col_buyer">Koper</string>
     <string name="staff_dashboard_col_date">Datum</string>
     <string name="staff_dashboard_col_detail">Detail</string>
@@ -259,7 +259,7 @@
     <string name="staff_disputes_resolve">Oplossen</string>
     <string name="staff_disputes_resolved_toast">Geschil opgelost</string>
     <string name="staff_disputes_resolving">Oplossen…</string>
-    <string name="staff_disputes_review">Beoordeling</string>
+    <string name="staff_disputes_review">Beoordelen</string>
     <string name="staff_disputes_status_escalated">Geëscaleerd</string>
     <string name="staff_disputes_status_open">Open</string>
     <string name="staff_disputes_status_resolved_buyer">Opgelost (koper)</string>
@@ -341,7 +341,7 @@
     <string name="staff_reports_cancel">Annuleren</string>
     <string name="staff_reports_close">Sluiten</string>
     <string name="staff_reports_dialog_title_action">Actie ondernemen op melding</string>
-    <string name="staff_reports_dialog_title_view">Melden</string>
+    <string name="staff_reports_dialog_title_view">Melding</string>
     <string name="staff_reports_empty">Geen meldingen</string>
     <string name="staff_reports_filter_status_label">Status</string>
     <string name="staff_reports_filter_type_label">Type</string>

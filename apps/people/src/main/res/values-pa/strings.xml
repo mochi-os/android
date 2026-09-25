@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">ਨੈਵੀਗੇਸ਼ਨ ਖੋਲ੍ਹੋ</string>
     <string name="people_person_state_friend">ਦੋਸਤ</string>
     <string name="people_person_state_self">ਤੁਸੀਂ</string>
-    <string name="people_person_message">ਸੁਨੇਹਾ</string>
+    <string name="people_person_message">ਸੁਨੇਹਾ ਭੇਜੋ</string>
     <string name="people_person_accept">ਸਵੀਕਾਰ ਕਰੋ</string>
     <string name="people_person_decline">ਅਸਵੀਕਾਰ ਕਰੋ</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">ਸਭ ਸਵੀਕਾਰ ਕਰੋ</string>
     <string name="people_invitations_decline_all">ਸਭ ਅਸਵੀਕਾਰ ਕਰੋ</string>
     <string name="people_invitations_cancel_all">ਸਭ ਰੱਦ ਕਰੋ</string>
+    <string name="people_invitations_cancel">ਰੱਦ ਕਰੋ</string>
     <string name="people_invitations_all_accepted">ਸਾਰੇ ਸੱਦੇ ਸਵੀਕਾਰ ਕੀਤੇ ਗਏ</string>
     <string name="people_invitations_all_declined">ਸਾਰੇ ਸੱਦੇ ਅਸਵੀਕਾਰ ਕੀਤੇ ਗਏ</string>
     <string name="people_invitations_all_cancelled">ਸਾਰੇ ਸੱਦੇ ਰੱਦ ਕੀਤੇ ਗਏ</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">ਖੋਜੋ…</string>
     <string name="people_contacts_invited">ਸੱਦਾ ਭੇਜਿਆ</string>
     <string name="people_contacts_accept">ਸਵੀਕਾਰ ਕਰੋ</string>
-    <string name="people_contacts_message">ਸੁਨੇਹਾ</string>
+    <string name="people_contacts_message">ਸੁਨੇਹਾ ਭੇਜੋ</string>
     <string name="people_contacts_no_people_found">ਕੋਈ ਲੋਕ ਨਹੀਂ ਮਿਲੇ</string>
     <string name="people_contacts_try_adjusting">ਆਪਣੀ ਖੋਜ ਠੀਕ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ</string>
     <string name="people_contact_section_address">ਪਤਾ</string>

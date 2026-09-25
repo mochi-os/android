@@ -71,12 +71,12 @@
     <string name="people_common_cancel">Batalkeun</string>
     <string name="people_common_close">Tutup</string>
     <string name="people_common_save">Simpen</string>
-    <string name="people_welcome_dismiss">Pasini</string>
+    <string name="people_welcome_dismiss">Tutup</string>
     <string name="people_sidebar_header">Jalma</string>
     <string name="people_open_sidebar">Buka navigasi</string>
     <string name="people_person_state_friend">Babaturan</string>
     <string name="people_person_state_self">Anjeun</string>
-    <string name="people_person_message">Pesen</string>
+    <string name="people_person_message">Kirim pesen</string>
     <string name="people_person_accept">Tarima</string>
     <string name="people_person_decline">Tolak</string>
 
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">Asupkeun kode warna hex anu sah (cth. #a78bfa)</string>
     <string name="people_profile_accent_none">Euweuh</string>
     <string name="people_profile_privacy_private_desc">Ngan babaturan timbal balik anu tiasa ningali propil anjeun</string>
-    <string name="people_welcome_title">Wilujeng sumping di People</string>
+    <string name="people_welcome_title">Wilujeng sumping di Jalma</string>
     <string name="people_person_banner_alt">Spanduk pikeun %1$s</string>
     <string name="people_person_private">Propil ieu pribadi</string>
     <string name="people_person_state_invited">Diondang</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Tarima sadayana</string>
     <string name="people_invitations_decline_all">Tolak sadayana</string>
     <string name="people_invitations_cancel_all">Batalkeun sadayana</string>
+    <string name="people_invitations_cancel">Batalkeun</string>
     <string name="people_invitations_all_accepted">Sadaya ondangan ditarima</string>
     <string name="people_invitations_all_declined">Sadaya ondangan ditolak</string>
     <string name="people_invitations_all_cancelled">Sadaya ondangan dibatalkeun</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Paluruh…</string>
     <string name="people_contacts_invited">Diondang</string>
     <string name="people_contacts_accept">Tarima</string>
-    <string name="people_contacts_message">Pesen</string>
+    <string name="people_contacts_message">Kirim pesen</string>
     <string name="people_contacts_no_people_found">Teu manggih jalma</string>
     <string name="people_contacts_try_adjusting">Cobian luyukeun pamilarian anjeun</string>
     <string name="people_contact_section_address">Alamat</string>

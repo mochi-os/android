@@ -2,7 +2,7 @@
 <resources>
     <string name="projects_auth_display_name">ڏيکاري وارو نالو</string>
     <string name="projects_auth_verification_failed">تصديق ناڪام ٿي</string>
-    <string name="projects_list_title">پروجيڪٽ</string>
+    <string name="projects_list_title">پروجيڪٽس</string>
     <string name="projects_list_close_search">ڳولا بند ڪريو</string>
     <string name="projects_list_search">ڳوليو</string>
     <string name="projects_list_find">پروجيڪٽَ ڳوليو</string>
@@ -76,16 +76,16 @@
     <string name="projects_property_option_none">ڪا به نه</string>
     <string name="projects_attachments">ڳنڍيل فائلون</string>
     <string name="projects_attachment_add">ڳنڍيل فائل شامل ڪريو</string>
-    <string name="projects_request_empty">ڪا merge درخواست نه آهي</string>
+    <string name="projects_request_empty">ڪا مرج درخواست نه آهي</string>
     <string name="projects_request_status_draft">مسودو</string>
     <string name="projects_request_status_open">کھليل</string>
-    <string name="projects_request_status_merged">merged ٿيو</string>
-    <string name="projects_request_merge">merge</string>
+    <string name="projects_request_status_merged">مرج ٿيو</string>
+    <string name="projects_request_merge">مرج ڪريو</string>
     <string name="projects_request_close">بند ڪريو</string>
-    <string name="projects_request_merge_dialog_title">merge</string>
+    <string name="projects_request_merge_dialog_title">مرج ڪريو</string>
     <string name="projects_request_method">طريقو</string>
-    <string name="projects_request_method_merge">merge</string>
-    <string name="projects_request_field_repository">Repository</string>
+    <string name="projects_request_method_merge">مرج ڪريو</string>
+    <string name="projects_request_field_repository">ريپازيٽري</string>
     <string name="projects_request_field_source">ماخذ شاخ</string>
     <string name="projects_request_field_title">عنوان</string>
     <string name="projects_request_field_description">تفصيل</string>
@@ -93,7 +93,7 @@
     <string name="projects_request_create_action">ٺاهيو</string>
     <string name="projects_diff_unified">متحد</string>
     <string name="projects_diff_split">ورهايو</string>
-    <string name="projects_diff_empty">ڪو diff دستياب ناهي</string>
+    <string name="projects_diff_empty">ڪو فرق دستياب ناهي</string>
     <string name="projects_board_unassigned">غير تفويض ٿيل</string>
     <string name="projects_board_new">نئون</string>
     <string name="projects_board_rename">نالو تبديل ڪريو</string>
@@ -117,7 +117,7 @@
     <string name="projects_class_name">نالو</string>
     <string name="projects_class_save_name">نالو محفوظ ڪريو</string>
     <string name="projects_class_title_field">عنوان فيلڊ</string>
-    <string name="projects_class_merge_requests">merge درخواستون</string>
+    <string name="projects_class_merge_requests">مرج درخواستون</string>
     <string name="projects_class_fields">فيلڊز</string>
     <string name="projects_class_add_field">فيلڊ شامل ڪريو</string>
     <string name="projects_class_delete">ڪلاس ختم ڪريو</string>
@@ -160,7 +160,7 @@
     <string name="projects_comment_send">موڪليو</string>
     <string name="projects_field_position_body">مواد</string>
     <string name="projects_sort_field">ترتيب ڏيو</string>
-    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_comment_remove_attachment">اٽيچمينٽ هٽايو</string>
     <string name="projects_views_sort_by">ترتيب ڏيو</string>
     <string name="projects_auth_login_failed">لاگ ان ناڪام</string>
     <string name="projects_views_move_up">مٿي منتقل ڪريو</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">شيون ڳوليو</string>
 
     <string name="notification_channel_projects">پروجيڪٽ نوٽيفڪيشن</string>
-    <string name="projects_auth_brand">موچي پروجيڪٽس</string>
+    <string name="projects_auth_brand">Mochi پروجيڪٽس</string>
     <string name="projects_auth_create_identity_failed">سڃاڻپ ٺاهڻ ۾ ناڪامي</string>
     <string name="projects_auth_mfa_unsupported">MFA اڃا موبائل ايپ ۾ سپورٽ ناهي</string>
     <string name="projects_auth_enter_code_sent">%1$s تي موڪليل ڪوڊ داخل ڪريو</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">هڪ قاعدو چونڊيو</string>
     <string name="projects_access_authenticated_desc">ڪو به جيڪو لاگ ان ٿيل آهي</string>
     <string name="projects_access_anyone_desc">گمنام استعمال ڪندڙن سميت</string>
-    <string name="projects_access_target">ھدف</string>
+    <string name="projects_access_target">صارف يا گروپ</string>
     <string name="projects_access_target_hint">اينٽيٽي ID، @گروپ، * (هرڪو)، يا + (ميمبر)</string>
     <string name="projects_access_selected">چونڊيل: %1$s</string>
     <string name="projects_access_role_comment">تبصرو ۽ ڏسو</string>
@@ -381,5 +381,5 @@
     <string name="projects_option_delete_message">ڇا توھان واقعي اختيار \"%1$s\" حذف ڪرڻ چاھيو ٿا؟</string>
     <string name="projects_create_object_no_types">اڃا ڪي شيون قسم ٺاهي نٿا سگهجن. پهريائين گهربل والدين شيون ٺاهيو.</string>
     <string name="projects_create_blocked_no_options">ٺاهي نه ٿو سگهجي: %1$s گهربل آهي پر ان لاءِ ڪو اختيار ناهي. ڊيزائن ۾ اختيار شامل ڪريو.</string>
-    <string name="projects_attachment_remove">Remove attachment</string>
+    <string name="projects_attachment_remove">اٽيچمينٽ هٽايو</string>
 </resources>

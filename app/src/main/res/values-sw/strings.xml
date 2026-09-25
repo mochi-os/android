@@ -7,13 +7,13 @@
     <string name="launcher_crm">Mochi CRM</string>
     <string name="launcher_people">Mochi Watu</string>
     <string name="launcher_settings">Mochi Mipangilio</string>
-    <string name="launcher_wikis">Mochi Wikis</string>
-    <string name="launcher_chess">Mochi Sataranji</string>
+    <string name="launcher_wikis">Mochi Wiki</string>
+    <string name="launcher_chess">Mochi Chesi</string>
     <string name="launcher_go">Mochi Go</string>
     <string name="launcher_words">Mochi Maneno</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi Soko</string>
     <string name="launcher_calendars">Mochi Kalenda</string>
-    <string name="launcher_staff">Mochi Wafanyakazi</string>
+    <string name="launcher_staff">Wafanyakazi wa Mochi</string>
 
     <string name="app_name">Mochi</string>
 

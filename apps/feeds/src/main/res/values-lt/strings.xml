@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="feeds_title">Srautai</string>
+    <string name="feeds_title">Sklaidos kanalai</string>
     <string name="feeds_find_feeds">Rasti srautus</string>
     <string name="feeds_create_feed">Sukurti srautą</string>
     <string name="feeds_new_post">Naujas įrašas</string>
@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Dar nėra įrašų</string>
     <string name="feeds_sort_label">Rūšiuoti</string>
     <string name="feeds_sort_interests">Pomėgiai</string>
-    <string name="feeds_sort_new">Naujas</string>
+    <string name="feeds_sort_new">Naujausi</string>
     <string name="feeds_sort_hot">Karšta</string>
-    <string name="feeds_sort_top">Viršus</string>
+    <string name="feeds_sort_top">Geriausia</string>
     <string name="feeds_sort_ai">DI</string>
     <string name="feeds_post_default_author">Įrašas</string>
     <string name="feeds_image_preview">Peržiūra</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Atšaukti atsakymą</string>
     <string name="feeds_edit_post">Redaguoti įrašą</string>
     <string name="feeds_save_label">Išsaugoti</string>
-    <string name="feeds_post_action">Įrašas</string>
+    <string name="feeds_post_action">Skelbti</string>
     <string name="feeds_feed_label">Srautas</string>
     <string name="feeds_add_files">Pridėti failus</string>
     <string name="feeds_restore">Atkurti</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Atsijungti</string>
     <string name="feeds_ai_account_default">Numatytoji paskyra</string>
     <string name="feeds_ai_mode_off">Išjungta</string>
-    <string name="feeds_ai_mode_tag">Žyma</string>
+    <string name="feeds_ai_mode_tag">Žymėti</string>
     <string name="feeds_ai_mode_tag_deduplicate">Žymėti + pašalinti dublikatus</string>
     <string name="feeds_feed_not_found">Srautas nerastas</string>
     <string name="feeds_post_not_found">Įrašas nerastas</string>

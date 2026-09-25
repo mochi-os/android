@@ -10,8 +10,8 @@
     <string name="settings_home_accounts">חשבונות מחוברים</string>
     <string name="settings_home_interests">תחומי עניין</string>
     <string name="account_section_passkeys">מפתחות גישה</string>
-    <string name="account_passkey_register">הוסף Passkey</string>
-    <string name="account_passkey_delete_title">למחוק Passkey?</string>
+    <string name="account_passkey_register">הוסף מפתח גישה</string>
+    <string name="account_passkey_delete_title">למחוק מפתח גישה?</string>
     <string name="account_section_totp">אפליקציית אימות</string>
     <string name="account_totp_setup">הגדר מאמת</string>
     <string name="account_totp_setup_title">הגדר מאמת</string>
@@ -151,7 +151,7 @@
     <string name="system_setting_oauth_github_client_secret">סוד לקוח של GitHub</string>
     <string name="system_setting_oauth_microsoft_client_id">מזהה לקוח Microsoft</string>
     <string name="system_setting_oauth_microsoft_client_secret">סוד לקוח Microsoft</string>
-    <string name="system_setting_oauth_microsoft_tenant">Tenant של Microsoft</string>
+    <string name="system_setting_oauth_microsoft_tenant">דייר של Microsoft</string>
     <string name="system_setting_oauth_facebook_client_id">מזהה אפליקציית Facebook</string>
     <string name="system_setting_oauth_facebook_client_secret">סוד אפליקציית Facebook</string>
     <string name="system_setting_oauth_x_client_id">מזהה לקוח X</string>

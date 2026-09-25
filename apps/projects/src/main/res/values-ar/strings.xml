@@ -106,7 +106,7 @@
     <string name="projects_design_import">استيراد التصميم</string>
     <string name="projects_design_imported">تم استيراد التصميم</string>
     <string name="projects_design_tab_classes">الفئات</string>
-    <string name="projects_design_tab_views">المشاهدات</string>
+    <string name="projects_design_tab_views">طرق العرض</string>
     <string name="projects_design_import_dialog_title">استيراد التصميم</string>
     <string name="projects_design_import_choose_template">اختر قالباً</string>
     <string name="projects_design_replace_title">استبدال التصميم؟</string>
@@ -160,7 +160,7 @@
     <string name="projects_comment_send">إرسال</string>
 
     <string name="notification_channel_projects">إشعارات المشاريع</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi المشاريع</string>
     <string name="projects_auth_login_failed">فشل تسجيل الدخول</string>
     <string name="projects_auth_create_identity_failed">تعذّر إنشاء الهوية</string>
     <string name="projects_auth_mfa_unsupported">المصادقة متعددة العوامل غير مدعومة بعد في تطبيق الجوال</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">اختر قاعدة</string>
     <string name="projects_access_authenticated_desc">أي شخص مسجّل الدخول</string>
     <string name="projects_access_anyone_desc">بما في ذلك المستخدمون المجهولون</string>
-    <string name="projects_access_target">الهدف</string>
+    <string name="projects_access_target">صاحب الصلاحية</string>
     <string name="projects_access_target_hint">معرّف الكيان، @مجموعة، * (الجميع)، أو + (الأعضاء)</string>
     <string name="projects_access_selected">المحدد: %1$s</string>
     <string name="projects_access_role_comment">التعليق والعرض</string>

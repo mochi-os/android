@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Nog geen berichten</string>
     <string name="feeds_sort_label">Sorteren</string>
     <string name="feeds_sort_interests">Interesses</string>
-    <string name="feeds_sort_new">Nieuw</string>
+    <string name="feeds_sort_new">Nieuwste</string>
     <string name="feeds_sort_hot">Populair</string>
-    <string name="feeds_sort_top">Boven</string>
+    <string name="feeds_sort_top">Beste</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Bericht</string>
     <string name="feeds_image_preview">Voorbeeld</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Antwoord annuleren</string>
     <string name="feeds_edit_post">Bericht bewerken</string>
     <string name="feeds_save_label">Opslaan</string>
-    <string name="feeds_post_action">Bericht</string>
+    <string name="feeds_post_action">Plaatsen</string>
     <string name="feeds_feed_label">Feed</string>
     <string name="feeds_add_files">Bestanden toevoegen</string>
     <string name="feeds_restore">Herstellen</string>
@@ -62,7 +62,7 @@
     <string name="feeds_logout">Uitloggen</string>
     <string name="feeds_ai_account_default">Standaardaccount</string>
     <string name="feeds_ai_mode_off">Uitgeschakeld</string>
-    <string name="feeds_ai_mode_tag">Tag</string>
+    <string name="feeds_ai_mode_tag">Taggen</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + dedupliceren</string>
     <string name="feeds_feed_not_found">Feed niet gevonden</string>
     <string name="feeds_post_not_found">Bericht niet gevonden</string>

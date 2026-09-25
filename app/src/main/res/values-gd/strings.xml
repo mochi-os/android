@@ -9,11 +9,11 @@
     <string name="launcher_people">Mochi Daoine</string>
     <string name="launcher_settings">Mochi Roghainnean</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Uicipeidean</string>
     <string name="launcher_chess">Mochi Tàileasg</string>
     <string name="launcher_go">Mochi Go</string>
     <string name="launcher_words">Mochi Faclan</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi Margadh</string>
     <string name="launcher_calendars">Mochi Mìosachain</string>
     <string name="launcher_staff">Mochi Luchd-obrach</string>
 

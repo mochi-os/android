@@ -99,7 +99,7 @@
     <string name="projects_board_rename">Přejmenovat</string>
     <string name="projects_board_rename_column">Přejmenovat sloupec</string>
     <string name="projects_move_position">Pozice</string>
-    <string name="projects_move_position_top">Nahoru</string>
+    <string name="projects_move_position_top">Na začátek</string>
     <string name="projects_move_current">Aktuální</string>
     <string name="projects_design_title">Design</string>
     <string name="projects_design_export">Exportovat návrh</string>
@@ -146,7 +146,7 @@
     <string name="projects_views_edit_dialog_title">Upravit pohled</string>
     <string name="projects_views_delete_title">Smazat zobrazení</string>
     <string name="projects_views_type">Typ</string>
-    <string name="projects_views_type_board">Deska</string>
+    <string name="projects_views_type_board">Tabule</string>
     <string name="projects_views_type_list">Seznam</string>
     <string name="projects_views_direction">Směr</string>
     <string name="projects_views_sort_number">Číslo</string>
@@ -160,7 +160,7 @@
     <string name="projects_comment_send">Odeslat</string>
 
     <string name="notification_channel_projects">Oznámení projektů</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Projekty</string>
     <string name="projects_auth_login_failed">Přihlášení se nezdařilo</string>
     <string name="projects_auth_create_identity_failed">Vytvoření identity se nezdařilo</string>
     <string name="projects_auth_mfa_unsupported">MFA zatím není v mobilní aplikaci podporováno</string>
@@ -285,7 +285,7 @@
     <string name="projects_field_multi">Vícenásobný výběr</string>
     <string name="projects_field_position">Pozice zobrazení</string>
     <string name="projects_field_position_header">Záhlaví</string>
-    <string name="projects_field_position_body">Tělo</string>
+    <string name="projects_field_position_body">Obsah</string>
     <string name="projects_field_validation">Ověření</string>
     <string name="projects_field_min_length">Minimální délka</string>
     <string name="projects_field_max_length">Maximální délka</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Vyberte pravidlo</string>
     <string name="projects_access_authenticated_desc">Kdokoli, kdo je přihlášen</string>
     <string name="projects_access_anyone_desc">Včetně anonymních uživatelů</string>
-    <string name="projects_access_target">Cíl</string>
+    <string name="projects_access_target">Uživatel nebo skupina</string>
     <string name="projects_access_target_hint">ID entity, @skupina, * (všichni) nebo + (členové)</string>
     <string name="projects_access_selected">Vybráno: %1$s</string>
     <string name="projects_access_role_comment">Komentovat a zobrazit</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="wikis_sidebar_header">Wikis</string>
+    <string name="wikis_sidebar_header">ਵਿੱਕੀ</string>
     <string name="wikis_sidebar_all">ਸਾਰੀਆਂ ਵਿਕੀਆਂ</string>
     <string name="wikis_sidebar_find">ਵਿੱਕੀ ਲੱਭੋ</string>
     <string name="wikis_sidebar_create">ਵਿਕੀ ਬਣਾਓ</string>
@@ -23,7 +23,7 @@
     <string name="wikis_page_action_new_page">ਨਵਾਂ ਪੇਜ</string>
     <string name="wikis_page_action_settings">ਸੈਟਿੰਗਾਂ</string>
     <string name="wikis_page_action_unsubscribe">ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
-    <string name="wikis_title">Wikis</string>
+    <string name="wikis_title">ਵਿੱਕੀ</string>
     <string name="wikis_empty_title">ਆਪਣੀ ਪਹਿਲੀ wiki ਸ਼ੁਰੂ ਕਰੋ</string>
     <string name="wikis_empty_subtitle">ਸਬਸਕ੍ਰਾਈਬ ਕਰਨ ਲਈ ਵਿਕੀ ਖੋਜੋ, ਜਾਂ ਆਪਣੇ ਖੁਦ ਦੇ ਦਸਤਾਵੇਜ਼ ਪ੍ਰਕਾਸ਼ਿਤ ਕਰਨ ਲਈ ਨਵਾਂ ਬਣਾਓ।</string>
     <string name="wikis_create_button">ਵਿਕੀ ਬਣਾਓ</string>
@@ -157,7 +157,7 @@
     <string name="wikis_attachments_view_list">ਸੂਚੀ ਵਿਊ</string>
     <string name="wikis_attachments_copy_embed">ਐਮਬੈੱਡ ਲਿੰਕ ਕਾਪੀ ਕਰੋ</string>
     <string name="wikis_attachments_embed_copied">ਏਮਬੈੱਡ ਲਿੰਕ ਕਾਪੀ ਕੀਤਾ</string>
-    <string name="wikis_attachments_download">ਡਾਊਨਲੋਡ</string>
+    <string name="wikis_attachments_download">ਡਾਊਨਲੋਡ ਕਰੋ</string>
     <string name="wikis_attachments_delete">ਮਿਟਾਓ</string>
     <string name="wikis_attachments_delete_confirm_title">ਅਟੈਚਮੈਂਟ ਮਿਟਾਓ</string>
     <string name="wikis_attachments_delete_success">ਅਟੈਚਮੈਂਟ ਮਿਟਾਈ ਗਈ</string>
@@ -210,8 +210,8 @@
     <string name="wikis_access_set_success">ਪਹੁੰਚ ਅੱਪਡੇਟ ਕੀਤੀ ਗਈ</string>
     <string name="wikis_access_revoke_success">ਪਹੁੰਚ ਹਟਾਈ ਗਈ</string>
     <string name="wikis_access_revoke_failed">ਪਹੁੰਚ ਹਟਾਉਣ ਵਿੱਚ ਅਸਫਲ</string>
-    <string name="wikis_replicas_empty_title">ਅਜੇ ਕੋਈ replicas ਨਹੀਂ</string>
-    <string name="wikis_replicas_empty_message">ਜਦੋਂ ਹੋਰ wikis ਇਸ wiki ਦੀ replicate ਕਰਨਗੀਆਂ, ਉਹ ਇੱਥੇ ਦਿਖਾਈ ਦੇਣਗੀਆਂ।</string>
+    <string name="wikis_replicas_empty_title">ਅਜੇ ਕੋਈ ਰੈਪਲਿਕਾ ਨਹੀਂ</string>
+    <string name="wikis_replicas_empty_message">ਜਦੋਂ ਹੋਰ wikis ਇਸ wiki ਨੂੰ ਰੈਪਲੀਕੇਟ ਕਰਨਗੀਆਂ, ਉਹ ਇੱਥੇ ਦਿਖਾਈ ਦੇਣਗੀਆਂ।</string>
     <string name="wikis_replicas_never_synced">ਕਦੇ ਨਹੀਂ</string>
     <string name="wikis_replicas_remove_confirm_title">replica ਹਟਾਏ?</string>
     <string name="wikis_replicas_remove_confirm_action">ਹਟਾਓ</string>
@@ -223,7 +223,7 @@
     <string name="wikis_pageview_toc_expand">ਤਤਕਰਾ ਵਿਖਾਓ</string>
     <string name="wikis_pageview_toc_collapse">ਤਤਕਰਾ ਲੁਕਾਓ</string>
     <string name="wikis_pageview_version">v%1$d</string>
-    <string name="wikis_pageview_updated">Updated %1$s</string>
+    <string name="wikis_pageview_updated">ਅੱਪਡੇਟ ਕੀਤਾ %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” ਪੰਨਾ ਹਾਲੇ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।</string>
     <string name="wikis_pageview_share_chooser">ਵਿਕੀ ਲਿੰਕ</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
@@ -236,11 +236,11 @@
     <string name="wikis_join_search_button">wiki ਖੋਜੋ…</string>
     <string name="wikis_join_id_hint">abc123…</string>
     <string name="wikis_subscribe_502_retry">ਸੁਝਾਏ ਸਰਵਰ ਤੋਂ ਬਿਨਾਂ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ…</string>
-    <string name="wikis_comments_title_template">%1$s - Comments</string>
+    <string name="wikis_comments_title_template">%1$s - ਟਿੱਪਣੀਆਂ</string>
     <string name="wikis_comment_form_placeholder_new">ਟਿੱਪਣੀ ਲਿਖੋ…</string>
     <string name="wikis_comment_form_placeholder_reply">ਜਵਾਬ ਲਿਖੋ…</string>
     <string name="wikis_comment_form_send">ਭੇਜੋ</string>
-    <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
+    <string name="wikis_comment_form_remove_attachment">ਅਟੈਚਮੈਂਟ ਹਟਾਓ</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">ਆਪਣੀ ਸਮੱਗਰੀ ਇੱਥੇ Markdown ਵਰਤ ਕੇ ਲਿਖੋ…</string>
     <string name="wikis_insert_dialog_empty">ਹਾਲੇ ਕੋਈ ਅਟੈਚਮੈਂਟ ਨਹੀਂ। ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਫਾਈਲ ਅੱਪਲੋਡ ਕਰੋ।</string>
@@ -256,19 +256,19 @@
     <string name="wikis_revision_version_badge">Version %1$d</string>
     <string name="wikis_search_pages_placeholder">ਸਿਰਲੇਖ ਜਾਂ ਸਮੱਗਰੀ ਦੁਆਰਾ ਪੰਨੇ ਖੋਜੋ…</string>
     <string name="wikis_search_no_results">“%1$s” ਲਈ ਕੋਈ ਪੰਨਾ ਨਹੀਂ ਮਿਲਿਆ। ਵੱਖਰੇ ਖੋਜ ਸ਼ਬਦ ਅਜ਼ਮਾਓ।</string>
-    <string name="wikis_search_updated">Updated %1$s</string>
-    <string name="wikis_redirect_deleted_success">Redirect \"%1$s\" deleted</string>
+    <string name="wikis_search_updated">ਅੱਪਡੇਟ ਕੀਤਾ %1$s</string>
+    <string name="wikis_redirect_deleted_success">ਰੀਡਾਇਰੈਕਟ \"%1$s\" ਮਿਟਾਇਆ ਗਿਆ</string>
     <string name="wikis_redirect_delete_confirm_message">ਇਹ “%1$s” ਤੋਂ “%2$s” ਵੱਲ ਰੀਡਾਇਰੈਕਟ ਹਟਾ ਦੇਵੇਗਾ। ਸਰੋਤ URL ਉੱਤੇ ਆਉਣ ਵਾਲੇ ਵਰਤੋਂਕਾਰ ਹੁਣ ਰੀਡਾਇਰੈਕਟ ਨਹੀਂ ਹੋਣਗੇ।</string>
     <string name="wikis_tags_subtitle">ਟੈਗ ਦੁਆਰਾ ਪੰਨੇ ਵੇਖੋ। ਉਸ ਟੈਗ ਵਾਲੇ ਸਾਰੇ ਪੰਨੇ ਵੇਖਣ ਲਈ ਟੈਗ ਦਬਾਓ।</string>
-    <string name="wikis_tag_pages_title_template">Pages tagged \"%1$s\"</string>
+    <string name="wikis_tag_pages_title_template">\"%1$s\" ਟੈਗ ਵਾਲੇ ਪੰਨੇ</string>
     <string name="wikis_tag_manager_add_action">ਟੈਗ ਜੋੜੋ</string>
     <string name="wikis_tag_manager_remove_confirm_title">ਟੈਗ ਹਟਾਉਣਾ ਹੈ?</string>
     <string name="wikis_tag_manager_remove_confirm_message">ਇਸ ਪੰਨੇ ਤੋਂ “%1$s” ਟੈਗ ਹਟਾਉਣਾ ਹੈ?</string>
-    <string name="wikis_tag_manager_added">Tag \"%1$s\" added</string>
-    <string name="wikis_tag_manager_removed">Tag \"%1$s\" removed</string>
+    <string name="wikis_tag_manager_added">ਟੈਗ \"%1$s\" ਜੋੜਿਆ ਗਿਆ</string>
+    <string name="wikis_tag_manager_removed">ਟੈਗ \"%1$s\" ਹਟਾਇਆ ਗਿਆ</string>
     <string name="wikis_tag_dialog_title">ਟੈਗ ਜੋੜੋ</string>
     <string name="wikis_tag_dialog_empty">ਟੈਗ ਖਾਲੀ ਨਹੀਂ ਹੋ ਸਕਦਾ</string>
-    <string name="wikis_attachments_search_placeholder">Search attachments…</string>
+    <string name="wikis_attachments_search_placeholder">ਅਟੈਚਮੈਂਟ ਖੋਜੋ…</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” ਮਿਟਾਉਣਾ ਹੈ? ਇਹ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।</string>
     <string name="wikis_attachments_downloading">ਡਾਊਨਲੋਡ ਹੋ ਰਿਹਾ ਹੈ…</string>
     <string name="wikis_attachments_empty_description">ਇਸ ਪੰਨੇ ਵਿੱਚ ਫਾਈਲਾਂ ਜੋੜਨ ਲਈ ਅੱਪਲੋਡ ਦਬਾਓ।</string>
@@ -276,10 +276,10 @@
     <string name="wikis_settings_name_cancel_cd">ਸੋਧ ਰੱਦ ਕਰੋ</string>
     <string name="wikis_access_level_label">ਇਜਾਜ਼ਤ</string>
     <string name="wikis_access_set_failed">ਪਹੁੰਚ ਅੱਪਡੇਟ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
-    <string name="wikis_replicas_col_subscribed">Subscribed: %1$s</string>
-    <string name="wikis_replicas_col_synced">Last synced: %1$s</string>
+    <string name="wikis_replicas_col_subscribed">ਗਾਹਕੀ ਲਈ: %1$s</string>
+    <string name="wikis_replicas_col_synced">ਆਖਰੀ ਵਾਰ ਸਿੰਕ ਕੀਤਾ: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">ਇਹ “%1$s” ਨੂੰ ਅੱਪਡੇਟ ਭੇਜਣਾ ਬੰਦ ਕਰ ਦੇਵੇਗਾ। ਜੇ ਚਾਹੁਣ ਤਾਂ ਉਹ ਦੁਬਾਰਾ ਨਕਲ ਕਰ ਸਕਦੇ ਹਨ।</string>
-    <string name="wikis_replicas_removed_success">Replica removed</string>
+    <string name="wikis_replicas_removed_success">ਰੈਪਲੀਕਾ ਹਟਾਈ ਗਈ</string>
     <string name="wikis_load_more">ਹੋਰ ਲੋਡ ਕਰੋ</string>
     <string name="wikis_access_change_level">ਪਹੁੰਚ ਪੱਧਰ</string>
     <string name="wikis_access_subject_anyone">ਕੋਈ ਵੀ</string>

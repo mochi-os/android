@@ -13,7 +13,7 @@
     <string name="chess_new_title">Jauna spēle</string>
     <string name="chess_new_pick_opponent">Izvēlies pretinieku</string>
     <string name="chess_new_no_friends_title">Vēl nav draugu</string>
-    <string name="chess_new_no_friends_subtitle">Pievieno draugus People lietotnē, lai sāktu spēlēt</string>
+    <string name="chess_new_no_friends_subtitle">Pievieno draugus lietotnē „Cilvēki”, lai sāktu spēlēt</string>
     <string name="chess_new_add_friends">Pievienot draugus</string>
     <string name="chess_new_start_button">Sākt spēli</string>
     <string name="chess_new_creating">Izveido…</string>

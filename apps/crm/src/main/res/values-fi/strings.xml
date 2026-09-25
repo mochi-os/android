@@ -78,7 +78,7 @@
     <string name="crm_design_or_upload_json">Tai lataa tiedosto</string>
     <string name="crm_design_upload_json">Lähetä .json-tiedosto</string>
     <string name="crm_design_tab_classes">Luokat</string>
-    <string name="crm_design_tab_views">Katselukerrat</string>
+    <string name="crm_design_tab_views">Näkymät</string>
     <string name="crm_design_import_dialog_title">Tuo rakenne</string>
     <string name="crm_design_import_choose_template">Valitse malli</string>
     <string name="crm_design_replace_title">Korvataanko suunnittelu?</string>
@@ -94,7 +94,7 @@
     <string name="crm_class_delete">Poista luokka</string>
     <string name="crm_class_delete_title">Poista luokka</string>
     <string name="crm_field_type_text">Teksti</string>
-    <string name="crm_field_type_number">Numero</string>
+    <string name="crm_field_type_number">Luku</string>
     <string name="crm_field_type_user">Käyttäjä</string>
     <string name="crm_field_type_date">Päivämäärä</string>
     <string name="crm_field_type_checklist">Tarkistuslista</string>
@@ -117,7 +117,7 @@
     <string name="crm_views_edit_dialog_title">Muokkaa näkymää</string>
     <string name="crm_views_delete_title">Poista näkymä</string>
     <string name="crm_views_type">Tyyppi</string>
-    <string name="crm_views_type_board">Lauta</string>
+    <string name="crm_views_type_board">Taulu</string>
     <string name="crm_views_type_list">Luettelo</string>
     <string name="crm_views_direction">Suunta</string>
     <string name="crm_views_sort_created">Luotu</string>

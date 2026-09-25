@@ -38,8 +38,8 @@
     <string name="access_add_rule">Dodaj pravilo</string>
     <string name="access_owner">Vlasnik</string>
     <string name="access_revoke">Opozovi</string>
-    <string name="access_level_comment">Komentar</string>
-    <string name="access_level_view">Pogled</string>
+    <string name="access_level_comment">Komentiraj</string>
+    <string name="access_level_view">Prikaži</string>
     <string name="access_level_none">Ništa</string>
     <string name="reaction_like">Sviđa mi se</string>
     <string name="reaction_dislike">Ne sviđa mi se</string>

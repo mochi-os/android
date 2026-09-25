@@ -5,15 +5,15 @@
     <string name="launcher_forums">Mochi Foroak</string>
     <string name="launcher_projects">Mochi Proiektuak</string>
     <string name="launcher_crm">Mochi CRM</string>
-    <string name="launcher_people">Mochi Jendea</string>
+    <string name="launcher_people">Mochi Pertsonak</string>
     <string name="launcher_settings">Mochi Ezarpenak</string>
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wikiak</string>
     <string name="launcher_chess">Mochi Xakea</string>
     <string name="launcher_go">Mochi Go</string>
     <string name="launcher_words">Mochi Hitzak</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi Merkatua</string>
     <string name="launcher_calendars">Mochi Egutegiak</string>
-    <string name="launcher_staff">Mochi Langileak</string>
+    <string name="launcher_staff">Mochi langileak</string>
 
     <string name="app_name">Mochi</string>
 

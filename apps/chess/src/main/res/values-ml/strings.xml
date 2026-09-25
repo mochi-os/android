@@ -13,7 +13,7 @@
     <string name="chess_new_title">പുതിയ ഗെയിം</string>
     <string name="chess_new_pick_opponent">എതിരാളിയെ തിരഞ്ഞെടുക്കുക</string>
     <string name="chess_new_no_friends_title">സുഹൃത്തുക്കളാരും ഇതുവരെ ഇല്ല</string>
-    <string name="chess_new_no_friends_subtitle">കളി തുടങ്ങാൻ People ആപ്പിൽ സുഹൃത്തുക്കളെ ചേർക്കുക</string>
+    <string name="chess_new_no_friends_subtitle">കളി തുടങ്ങാൻ “ആളുകൾ” ആപ്പിൽ സുഹൃത്തുക്കളെ ചേർക്കുക</string>
     <string name="chess_new_add_friends">സുഹൃത്തുക്കളെ ചേർക്കുക</string>
     <string name="chess_new_start_button">ഗെയിം ആരംഭിക്കുക</string>
     <string name="chess_new_creating">സൃഷ്ടിക്കുന്നു…</string>
@@ -31,10 +31,10 @@
     <string name="chess_delete_confirm">ഗെയിം ഇല്ലാതാക്കുക</string>
     <string name="chess_draw_accept">സ്വീകരിക്കുക</string>
     <string name="chess_draw_decline">നിരസിക്കുക</string>
-    <string name="chess_status_checkmate_you_win">Checkmate — നിങ്ങൾ ജയിച്ചു!</string>
+    <string name="chess_status_checkmate_you_win">ചെക്ക്മേറ്റ് — നിങ്ങൾ ജയിച്ചു!</string>
     <string name="chess_status_stalemate">സ്റ്റേൽമേറ്റ് — സമനില</string>
     <string name="chess_status_draw">സമനില</string>
-    <string name="chess_status_check_your_move">Check — നിങ്ങളുടെ നീക്കം</string>
+    <string name="chess_status_check_your_move">ചെക്ക് — നിങ്ങളുടെ നീക്കം</string>
     <string name="chess_status_your_move">നിങ്ങളുടെ നീക്കം</string>
     <string name="chess_move_subject_you">നിങ്ങൾ</string>
     <string name="chess_promotion_title">ഉയർത്തുക:</string>
@@ -42,10 +42,10 @@
     <string name="chess_resign_message">നിങ്ങൾ കീഴടങ്ങാൻ തീർച്ചയാണോ? %1$s ഗെയിം ജയിക്കും.</string>
     <string name="chess_draw_offered">%1$s സമനില വാഗ്ദാനം ചെയ്തു</string>
     <string name="chess_draw_waiting">സമനില വാഗ്ദാനം ചെയ്തു — %1$s-നായി കാത്തിരിക്കുന്നു</string>
-    <string name="chess_status_checkmate_opponent_wins">Checkmate — %1$s ജയിച്ചു</string>
+    <string name="chess_status_checkmate_opponent_wins">ചെക്ക്മേറ്റ് — %1$s ജയിച്ചു</string>
     <string name="chess_status_resigned_you">നിങ്ങൾ രാജിവെച്ചു — %1$s വിജയിക്കുന്നു</string>
     <string name="chess_status_resigned_opponent">%1$s രാജിവെച്ചു — നിങ്ങൾ വിജയിച്ചു!</string>
-    <string name="chess_status_check_opponent_move">Check — %1$s-ന്റെ നീക്കം</string>
+    <string name="chess_status_check_opponent_move">ചെക്ക് — %1$s-ന്റെ നീക്കം</string>
     <string name="chess_status_opponent_move">%1$s-ന്റെ നീക്കം</string>
     <string name="chess_piece_king">രാജാവ്</string>
     <string name="chess_piece_queen">മന്ത്രി</string>

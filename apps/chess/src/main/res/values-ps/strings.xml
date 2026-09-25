@@ -31,8 +31,8 @@
     <string name="chess_delete_confirm">لوبه ړنګه کړئ</string>
     <string name="chess_draw_accept">ومنه</string>
     <string name="chess_draw_decline">رد کړئ</string>
-    <string name="chess_status_checkmate_you_win">Checkmate — تاسو وګټل!</string>
-    <string name="chess_status_stalemate">Stalemate — مساوي</string>
+    <string name="chess_status_checkmate_you_win">کِش مات — تاسو وګټل!</string>
+    <string name="chess_status_stalemate">پات — مساوي</string>
     <string name="chess_status_draw">مساوي</string>
     <string name="chess_status_check_your_move">چک — ستاسو حرکت</string>
     <string name="chess_status_your_move">ستاسو حرکت</string>
@@ -42,7 +42,7 @@
     <string name="chess_resign_message">ایا تاسو ډاډه یاست چې غواړئ استعفا ورکړئ؟ %1$s به لوبه وګټي.</string>
     <string name="chess_draw_offered">%1$s مساوي وړاندیز کړل</string>
     <string name="chess_draw_waiting">مساوي وړاندیز شو — د %1$s په تمه</string>
-    <string name="chess_status_checkmate_opponent_wins">Checkmate — %1$s وګټل</string>
+    <string name="chess_status_checkmate_opponent_wins">کِش مات — %1$s وګټل</string>
     <string name="chess_status_resigned_you">تاسو استعفا ورکړه — %1$s ګټي</string>
     <string name="chess_status_resigned_opponent">%1$s استعفا ورکړه — تاسو وګټل!</string>
     <string name="chess_status_check_opponent_move">چک — د %1$s حرکت</string>

@@ -54,16 +54,16 @@
     <string name="people_profile_edit_name">အမည် တည်းဖြတ်</string>
     <string name="people_profile_identity">ကိုယ်ပိုင်</string>
     <string name="people_profile_accent">အသားပေးအရောင်</string>
-    <string name="people_profile_directory_listing">directory တွင် သင့်ကို အခြားသူများ ရှာဖွေတွေ့ရှိရန် ခွင့်ပြုမည်</string>
+    <string name="people_profile_directory_listing">လမ်းညွှန် တွင် သင့်ကို အခြားသူများ ရှာဖွေတွေ့ရှိရန် ခွင့်ပြုမည်</string>
     <string name="people_profile_markdown_supported">Markdown ပံ့ပိုးသည်</string>
     <string name="people_profile_preview">ကြိုကြည့်ရန်</string>
-    <string name="people_profile_upload_avatar">Avatar Upload လုပ်မည်</string>
-    <string name="people_profile_upload">Upload လုပ်မည်</string>
+    <string name="people_profile_upload_avatar">အသွင်ပုံ အပ်လုဒ် လုပ်မည်</string>
+    <string name="people_profile_upload">အပ်လုဒ် လုပ်မည်</string>
     <string name="people_profile_uploading">Upload လုပ်နေသည်…</string>
     <string name="people_profile_change_banner">ပိုစတာ ပြောင်းမည်</string>
-    <string name="people_profile_no_banner">banner မသတ်မှတ်ထားပါ</string>
-    <string name="people_profile_favicon">Favicon</string>
-    <string name="people_profile_browser_icon">Browser အိုင်ကွန်</string>
+    <string name="people_profile_no_banner">ပိုစတာ မသတ်မှတ်ထားပါ</string>
+    <string name="people_profile_favicon">ဝဘ်ဆိုက် အိုင်ကွန်</string>
+    <string name="people_profile_browser_icon">ဘရောက်ဇာ အိုင်ကွန်</string>
     <string name="people_profile_file_too_large">ဖိုင် ကြီးလွန်းသည်</string>
     <string name="people_profile_clear">ရှင်းမည်</string>
     <string name="people_common_edit">တည်းဖြတ်</string>
@@ -71,12 +71,12 @@
     <string name="people_common_cancel">မလုပ်တော့ပါ</string>
     <string name="people_common_close">ပိတ်မည်</string>
     <string name="people_common_save">သိမ်းမည်</string>
-    <string name="people_welcome_dismiss">ပယ်မည်</string>
+    <string name="people_welcome_dismiss">ပိတ်မည်</string>
     <string name="people_sidebar_header">လူများ</string>
-    <string name="people_open_sidebar">navigation ကို ဖွင့်</string>
+    <string name="people_open_sidebar">လမ်းညွှန်မှု ကို ဖွင့်</string>
     <string name="people_person_state_friend">သူငယ်ချင်းများ</string>
     <string name="people_person_state_self">သင်</string>
-    <string name="people_person_message">မက်ဆေ့ဂျ်</string>
+    <string name="people_person_message">မက်ဆေ့ပို့မည်</string>
     <string name="people_person_accept">လက်ခံမည်</string>
     <string name="people_person_decline">ငြင်းပယ်မည်</string>
 
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">မှန်ကန်သော hex အရောင်ကို ထည့်ပါ (ဥပမာ #a78bfa)</string>
     <string name="people_profile_accent_none">မရှိ</string>
     <string name="people_profile_privacy_private_desc">နှစ်ဦးနှစ်ဖက် သူငယ်ချင်းများသာ သင်၏ ပရိုဖိုင်ကို ကြည့်ရှုနိုင်သည်</string>
-    <string name="people_welcome_title">People သို့ ကြိုဆိုပါသည်</string>
+    <string name="people_welcome_title">“လူများ” သို့ ကြိုဆိုပါသည်</string>
     <string name="people_person_banner_alt">%1$s အတွက် ဘန်နာ</string>
     <string name="people_person_private">ဤပရိုဖိုင်သည် သီးသန့်ဖြစ်သည်</string>
     <string name="people_person_state_invited">ဖိတ်ကြားထား</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">အားလုံးလက်ခံပါ</string>
     <string name="people_invitations_decline_all">အားလုံးငြင်းပယ်ပါ</string>
     <string name="people_invitations_cancel_all">အားလုံးပယ်ဖျက်ပါ</string>
+    <string name="people_invitations_cancel">ပယ်ဖျက်မည်</string>
     <string name="people_invitations_all_accepted">ဖိတ်ကြားချက်အားလုံးကို လက်ခံပြီးပါပြီ</string>
     <string name="people_invitations_all_declined">ဖိတ်ကြားချက်အားလုံးကို ငြင်းပယ်ပြီးပါပြီ</string>
     <string name="people_invitations_all_cancelled">ဖိတ်ကြားချက်အားလုံးကို ပယ်ဖျက်ပြီးပါပြီ</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">ရှာဖွေ…</string>
     <string name="people_contacts_invited">ဖိတ်ကြားထား</string>
     <string name="people_contacts_accept">လက်ခံမည်</string>
-    <string name="people_contacts_message">မက်ဆေ့ဂျ်</string>
+    <string name="people_contacts_message">မက်ဆေ့ပို့မည်</string>
     <string name="people_contacts_no_people_found">လူများ မတွေ့ပါ</string>
     <string name="people_contacts_try_adjusting">သင်၏ ရှာဖွေမှုကို ပြင်ဆင်ကြည့်ပါ</string>
     <string name="people_contact_section_address">လိပ်စာ</string>
@@ -127,10 +128,10 @@
     <string name="people_contact_email">အီးမေးလ်</string>
     <string name="people_contact_city">မြို့</string>
     <string name="people_contact_region">ဒေသ</string>
-    <string name="people_contact_postcode">Postcode</string>
+    <string name="people_contact_postcode">စာတိုက်သင်္ကေတ</string>
     <string name="people_contact_country">နိုင်ငံ</string>
     <string name="people_contact_type">အမျိုးအစား</string>
-    <string name="people_contact_type_home">နေအိမ်</string>
+    <string name="people_contact_type_home">အိမ်</string>
     <string name="people_contact_type_other">အခြား</string>
     <string name="people_contact_remove">ဖယ်ရှား</string>
     <string name="people_contact_pick_date_confirm">ကောင်းပြီ</string>

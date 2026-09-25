@@ -2,7 +2,7 @@
 <resources>
 
     <string name="people_invitations_title">Àwọn ìpè</string>
-    <string name="people_profile_title">Profile</string>
+    <string name="people_profile_title">Profáìlì</string>
     <string name="people_groups_title">Àwọn àwùjọ</string>
     <string name="people_group_title">Àwùjọ</string>
     <string name="people_person_title">Ènìyàn</string>
@@ -44,7 +44,7 @@
     <string name="people_member_remove">Yọ ọmọ ẹgbẹ́ kúrò</string>
     <string name="people_member_remove_title">Yọ Ọmọ Ẹgbẹ́ Kúrò</string>
     <string name="people_member_search_hint">Tẹ orúkọ kan láti rí àwọn ènìyàn tí o fẹ́ fi kún</string>
-    <string name="people_member_type_user">User</string>
+    <string name="people_member_type_user">Olùmúlò</string>
     <string name="people_member_type_group">Àwùjọ</string>
     <string name="people_profile_save">Fi pamọ́</string>
     <string name="people_profile_saving">Ń tọ́jú…</string>
@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Ṣí ìṣàkóso</string>
     <string name="people_person_state_friend">Àwọn ọ̀rẹ́</string>
     <string name="people_person_state_self">Ìwọ</string>
-    <string name="people_person_message">Ìránṣẹ́</string>
+    <string name="people_person_message">Fi ìránṣẹ́ ránṣẹ́</string>
     <string name="people_person_accept">Gbà</string>
     <string name="people_person_decline">Kọ̀</string>
 
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">Tẹ àwọ̀ hex tó tọ́ (fún àpẹẹrẹ #a78bfa)</string>
     <string name="people_profile_accent_none">Kòsí</string>
     <string name="people_profile_privacy_private_desc">Àwọn ọ̀rẹ́ apapọ̀ nìkan ló lè wo profaìlì rẹ</string>
-    <string name="people_welcome_title">Káàbọ̀ sí People</string>
+    <string name="people_welcome_title">Káàbọ̀ sí Àwọn ènìyàn</string>
     <string name="people_person_banner_alt">Bánà fún %1$s</string>
     <string name="people_person_private">Profaìlì yìí jẹ́ àdáni</string>
     <string name="people_person_state_invited">A ti pè</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Gba gbogbo rẹ̀</string>
     <string name="people_invitations_decline_all">Kọ gbogbo rẹ̀</string>
     <string name="people_invitations_cancel_all">Fagilé gbogbo rẹ̀</string>
+    <string name="people_invitations_cancel">Fagilé</string>
     <string name="people_invitations_all_accepted">Gbogbo ìpè ni a gbà</string>
     <string name="people_invitations_all_declined">Gbogbo ìpè ni a kọ̀</string>
     <string name="people_invitations_all_cancelled">Gbogbo ìpè ni a fagilé</string>
@@ -114,11 +115,11 @@
     <string name="people_profile_too_long">Profaili gùn ju</string>
     <string name="people_invite_settings_load_failed">Kò lè ṣí ìlànà ìpè rẹ lọ̀</string>
     <string name="people_profile_avatar">Àwòrán ìdánimọ̀</string>
-    <string name="people_profile_banner">Banner</string>
+    <string name="people_profile_banner">Àsíá</string>
     <string name="people_contacts_search_placeholder">Wá…</string>
     <string name="people_contacts_invited">A ti pè</string>
     <string name="people_contacts_accept">Gbà</string>
-    <string name="people_contacts_message">Ìránṣẹ́</string>
+    <string name="people_contacts_message">Fi ìránṣẹ́ ránṣẹ́</string>
     <string name="people_contacts_no_people_found">A kò rí ènìyàn kankan</string>
     <string name="people_contacts_try_adjusting">Gbìyànjú láti ṣàtúnṣe ìwákiri rẹ</string>
     <string name="people_contact_section_address">Àdírẹ́sì</string>
@@ -127,7 +128,7 @@
     <string name="people_contact_email">Ímẹ́ẹ̀lì</string>
     <string name="people_contact_city">Ìlú</string>
     <string name="people_contact_region">Àgbègbè</string>
-    <string name="people_contact_postcode">Postcode</string>
+    <string name="people_contact_postcode">Kóòdù ìfìwéránṣẹ́</string>
     <string name="people_contact_country">Orílẹ̀-èdè</string>
     <string name="people_contact_type">Irú</string>
     <string name="people_contact_type_home">Ilé</string>

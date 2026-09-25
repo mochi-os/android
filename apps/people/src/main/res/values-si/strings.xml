@@ -57,12 +57,12 @@
     <string name="people_profile_directory_listing">අන් අයට නාමාවලියෙන් ඔබව සොයා ගැනීමට අවසර දෙන්න</string>
     <string name="people_profile_markdown_supported">Markdown සහාය දක්වයි</string>
     <string name="people_profile_preview">පෙරදසුන</string>
-    <string name="people_profile_upload_avatar">avatar උඩුගත කරන්න</string>
+    <string name="people_profile_upload_avatar">අවතාරය උඩුගත කරන්න</string>
     <string name="people_profile_upload">උඩුගත කරන්න</string>
     <string name="people_profile_uploading">උඩුගත කරමින්…</string>
     <string name="people_profile_change_banner">බැනරය වෙනස් කරන්න</string>
     <string name="people_profile_no_banner">බැනරයක් සකසා නැත</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">වෙබ් අඩවි නිරූපකය</string>
     <string name="people_profile_browser_icon">බ්‍රවුසර අයිකනය</string>
     <string name="people_profile_file_too_large">ගොනුව ඉතා විශාලයි</string>
     <string name="people_profile_clear">හිස් කරන්න</string>
@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">සංචාලනය විවෘත කරන්න</string>
     <string name="people_person_state_friend">මිතුරන්</string>
     <string name="people_person_state_self">ඔබ</string>
-    <string name="people_person_message">පණිවිඩය</string>
+    <string name="people_person_message">පණිවිඩයක් යවන්න</string>
     <string name="people_person_accept">පිළිගන්න</string>
     <string name="people_person_decline">ප්‍රතික්ෂේප කරන්න</string>
 
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">වලංගු hex වර්ණයක් ඇතුළත් කරන්න (උදා. #a78bfa)</string>
     <string name="people_profile_accent_none">කිසිවක් නැත</string>
     <string name="people_profile_privacy_private_desc">අන්‍යෝන්‍ය මිතුරන්ට පමණක් ඔබේ පැතිකඩ බැලිය හැක</string>
-    <string name="people_welcome_title">People වෙත සාදරයෙන් පිළිගනිමු</string>
+    <string name="people_welcome_title">පුද්ගලයන් වෙත සාදරයෙන් පිළිගනිමු</string>
     <string name="people_person_banner_alt">%1$s සඳහා බැනරය</string>
     <string name="people_person_private">මෙම පැතිකඩ පෞද්ගලිකයි</string>
     <string name="people_person_state_invited">ආරාධිතයි</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">සියල්ල පිළිගන්න</string>
     <string name="people_invitations_decline_all">සියල්ල ප්‍රතික්ෂේප කරන්න</string>
     <string name="people_invitations_cancel_all">සියල්ල අවලංගු කරන්න</string>
+    <string name="people_invitations_cancel">අවලංගු කරන්න</string>
     <string name="people_invitations_all_accepted">සියලු ආරාධනා පිළිගත්තා</string>
     <string name="people_invitations_all_declined">සියලු ආරාධනා ප්‍රතික්ෂේප කළා</string>
     <string name="people_invitations_all_cancelled">සියලු ආරාධනා අවලංගු කළා</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">සොයන්න…</string>
     <string name="people_contacts_invited">ආරාධිතයි</string>
     <string name="people_contacts_accept">පිළිගන්න</string>
-    <string name="people_contacts_message">පණිවිඩය</string>
+    <string name="people_contacts_message">පණිවිඩයක් යවන්න</string>
     <string name="people_contacts_no_people_found">පුද්ගලයන් හමු නොවීය</string>
     <string name="people_contacts_try_adjusting">ඔබේ සෙවීම සකස් කිරීම උත්සාහ කරන්න</string>
     <string name="people_contact_section_address">ලිපිනය</string>

@@ -68,7 +68,7 @@
     <string name="market_checkout_back">Tilbake</string>
     <string name="market_checkout_buy_it_now">Kjøp no</string>
     <string name="market_checkout_create_failed">Klarte ikkje oppretta tinging</string>
-    <string name="market_checkout_delivery_download">Last ned</string>
+    <string name="market_checkout_delivery_download">Nedlasting</string>
     <string name="market_checkout_delivery_method">Leveringsmåte</string>
     <string name="market_checkout_delivery_pickup">Henting</string>
     <string name="market_checkout_delivery_shipping">Frakt</string>
@@ -151,7 +151,7 @@
     <string name="market_filter_condition_refurbished">Renovert</string>
     <string name="market_filter_condition_used">Brukt</string>
     <string name="market_filter_delivery">Levering</string>
-    <string name="market_filter_delivery_download">Last ned</string>
+    <string name="market_filter_delivery_download">Nedlasting</string>
     <string name="market_filter_delivery_pickup">Henting</string>
     <string name="market_filter_delivery_shipping">Frakt</string>
     <string name="market_filter_price_max">Maks</string>
@@ -180,7 +180,7 @@
     <string name="market_listing_detail_load_failed">Klarte ikkje lasta oppføring</string>
     <string name="market_listing_detail_listed">Lagt ut %1$s</string>
     <string name="market_listing_detail_location_heading">Stad</string>
-    <string name="market_listing_detail_message">Melding</string>
+    <string name="market_listing_detail_message">Send melding</string>
     <string name="market_listing_detail_message_seller">Send melding til seljar</string>
     <string name="market_listing_detail_not_found">Fann ikkje oppføringa</string>
     <string name="market_listing_detail_relist">Annonser på nytt</string>
@@ -239,7 +239,7 @@
     <string name="market_purchase_refunded">Refundert</string>
     <string name="market_purchase_refunded_partial">Refundert (delvis)</string>
     <string name="market_purchase_request_refund">Be om refusjon</string>
-    <string name="market_purchase_review_body">Vurder</string>
+    <string name="market_purchase_review_body">Vurdering</string>
     <string name="market_purchase_review_failed">Klarte ikkje senda inn vurdering</string>
     <string name="market_purchase_review_hidden">Skjult til seljaren vurderer deg, eller etter 14 dagar.</string>
     <string name="market_purchase_review_prompt_body">Hjelp framtidige kjøparar — del korleis denne tinginga gjekk.</string>
@@ -297,7 +297,7 @@
     <string name="market_sale_carrier_other">Anna</string>
     <string name="market_sale_completed_label">Fullført</string>
     <string name="market_sale_dispute_respond">Svar</string>
-    <string name="market_sale_dispute_state_open">Opna</string>
+    <string name="market_sale_dispute_state_open">Open</string>
     <string name="market_sale_dispute_state_resolved">Løyst</string>
     <string name="market_sale_load_failed">Klarte ikkje lasta tinging</string>
     <string name="market_sale_message_buyer">Send melding til kjøpar</string>
@@ -362,7 +362,7 @@
     <string name="market_subscription_detail_listing">Oppføring</string>
     <string name="market_subscription_detail_seller">Seljar</string>
     <string name="market_subscription_detail_title">Abonnement</string>
-    <string name="market_subscriptions_action_cancel">Avbryt</string>
+    <string name="market_subscriptions_action_cancel">Kanseller</string>
     <string name="market_subscriptions_action_pause">Pause</string>
     <string name="market_subscriptions_action_reactivate">Reaktiver</string>
     <string name="market_subscriptions_action_resubscribe">Abonner på nytt</string>
@@ -386,20 +386,20 @@
     <string name="market_type_digital">Digitalt</string>
     <string name="market_type_physical">Fysisk</string>
 
-    <string name="market_onboarding_activate">Activate</string>
-    <string name="market_onboarding_activating">Activating…</string>
+    <string name="market_onboarding_activate">Aktiver</string>
+    <string name="market_onboarding_activating">Aktiverer…</string>
     <string name="market_onboarding_body">Aktiver kontoen din for å byrje å kjøpe og selje.</string>
     <string name="market_onboarding_title">Velkomen til Market</string>
-    <string name="market_subscription_detail_billing_history">Billing history</string>
+    <string name="market_subscription_detail_billing_history">Faktureringshistorikk</string>
     <string name="market_subscription_detail_billing_history_empty">Ingen belastningar enno.</string>
-    <string name="market_subscription_detail_billing_info">Billing</string>
-    <string name="market_subscription_detail_cancelled_on">Cancelled on %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Latest charge: %1$s</string>
+    <string name="market_subscription_detail_billing_info">Fakturering</string>
+    <string name="market_subscription_detail_cancelled_on">Avslutta %1$s</string>
+    <string name="market_subscription_detail_charge_amount">Siste belasting: %1$s</string>
     <string name="market_subscription_detail_load_failed">Kunne ikkje laste abonnementet</string>
     <string name="market_subscription_detail_next_billing">Neste faktureringsdato: %1$s</string>
     <string name="market_subscription_detail_not_found">Fann ikkje abonnementet</string>
-    <string name="market_subscription_detail_pending_cancel">Cancellation pending</string>
-    <string name="market_subscription_detail_started">Started %1$s</string>
+    <string name="market_subscription_detail_pending_cancel">Oppseiing ventar</string>
+    <string name="market_subscription_detail_started">Starta %1$s</string>
     <string name="market_messages_send">Send</string>
     <string name="market_appeal_dialog_submitting">Sender…</string>
     <string name="market_dispute_dialog_submitting">Sender…</string>

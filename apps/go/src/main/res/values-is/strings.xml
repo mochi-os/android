@@ -8,7 +8,7 @@
     <string name="go_action_pass">Pass</string>
     <string name="go_action_rematch">Endurleikur</string>
     <string name="go_action_resign">Gefast upp</string>
-    <string name="go_app_title">Áfram</string>
+    <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Svört föng</string>
     <string name="go_captures_white_sr">Hvít föng</string>
     <string name="go_chat_title">Spjall</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">Opna hliðarstiku</string>
     <string name="go_sidebar_active">Virkir leikir</string>
     <string name="go_empty_active">Engir virkir leikir enn.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">Gafst upp</string>
     <string name="go_new_game_title">Nýr Go-leikur</string>
     <string name="go_new_game_no_friends">Þú þarft að bæta við vini áður en þú getur hafið leik.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="feeds_title">Ленталар</string>
+    <string name="feeds_title">Тасмалар</string>
     <string name="feeds_find_feeds">Ленталарды табуу</string>
     <string name="feeds_create_feed">Түрмөк түзүү</string>
     <string name="feeds_new_post">Жаңы пост</string>
@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Посттор азырынча жок</string>
     <string name="feeds_sort_label">Сорттоо</string>
     <string name="feeds_sort_interests">Кызыкчылыктар</string>
-    <string name="feeds_sort_new">Жаңы</string>
+    <string name="feeds_sort_new">Эң жаңы</string>
     <string name="feeds_sort_hot">Ысык</string>
-    <string name="feeds_sort_top">Жогорку</string>
+    <string name="feeds_sort_top">Эң мыктылар</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Пост</string>
     <string name="feeds_image_preview">Алдын ала көрүү</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Жоопту жокко чыгаруу</string>
     <string name="feeds_edit_post">Жазууну түзөтүү</string>
     <string name="feeds_save_label">Сактоо</string>
-    <string name="feeds_post_action">Пост</string>
+    <string name="feeds_post_action">Жарыялоо</string>
     <string name="feeds_feed_label">Лента</string>
     <string name="feeds_add_files">Файлдарды кошуу</string>
     <string name="feeds_restore">Калыбына келтирүү</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Чыгуу</string>
     <string name="feeds_ai_account_default">Демейки аккаунт</string>
     <string name="feeds_ai_mode_off">Өчүрүлгөн</string>
-    <string name="feeds_ai_mode_tag">Тег</string>
+    <string name="feeds_ai_mode_tag">Тегдөө</string>
     <string name="feeds_ai_mode_tag_deduplicate">Тег + кайталоону жокко чыгаруу</string>
     <string name="feeds_feed_not_found">Лента табылган жок</string>
     <string name="feeds_post_not_found">Пост табылган жок</string>
@@ -80,7 +80,7 @@
     <string name="feeds_settings_member_removed">Мүчө алынып салынды</string>
     <string name="feeds_settings_ai_mode_updated">AI режими жаңыртылды</string>
     <string name="feeds_settings_ai_account_updated">AI эсеби жаңыртылды</string>
-    <string name="feeds_settings_prompt_saved">Prompt сакталды</string>
+    <string name="feeds_settings_prompt_saved">Промпт сакталды</string>
     <string name="feeds_settings_prompt_reset">Суроо баштапкыга кайтарылды</string>
     <string name="feeds_send">Жөнөтүү</string>
     <string name="feeds_move_up">Жогору жылдыруу</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Кызыкчылык азайтылды</string>
     <string name="feeds_interest_removed">Кызыкчылык алынып салынды</string>
     <string name="feeds_interest_failed">Кызыкчылыкты тууралоо ишке ашкан жок</string>
-    <string name="feeds_saved_title">Сакталды</string>
-    <string name="feeds_saved_menu">Сакталды</string>
+    <string name="feeds_saved_title">Сакталгандар</string>
+    <string name="feeds_saved_menu">Сакталгандар</string>
     <string name="feeds_saved_save">Кийинкиге сактоо</string>
     <string name="feeds_saved_remove">Сакталгандардан өчүрүү</string>
     <string name="feeds_saved_clear_all">Баарын тазалоо</string>

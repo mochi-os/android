@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Mochi Feeder</string>
-    <string name="launcher_chat">Mochi Chat</string>
-    <string name="launcher_forums">Mochi Forum</string>
+    <string name="launcher_feeds">Mochi Strømmer</string>
+    <string name="launcher_chat">Mochi Samtale</string>
+    <string name="launcher_forums">Mochi Forumer</string>
     <string name="launcher_projects">Mochi Prosjekter</string>
     <string name="launcher_crm">Mochi CRM</string>
     <string name="launcher_people">Mochi Personer</string>
     <string name="launcher_settings">Mochi Innstillinger</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wikier</string>
     <string name="launcher_chess">Mochi Sjakk</string>
     <string name="launcher_go">Mochi Go</string>
     <string name="launcher_words">Mochi Ord</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi Marked</string>
     <string name="launcher_calendars">Mochi Kalendere</string>
-    <string name="launcher_staff">Mochi Personale</string>
+    <string name="launcher_staff">Mochi-personale</string>
 
 
     <string name="app_name">Mochi</string>

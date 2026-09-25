@@ -29,7 +29,7 @@
     <string name="projects_sort_label">Sortir</string>
     <string name="projects_sort_direction">Arah</string>
     <string name="projects_sort_rank">Manual</string>
-    <string name="projects_sort_number">Wilangan</string>
+    <string name="projects_sort_number">Nomer</string>
     <string name="projects_sort_created">Dijieun</string>
     <string name="projects_sort_updated">Diapdet</string>
     <string name="projects_create_object_type">Tipe</string>
@@ -78,13 +78,13 @@
     <string name="projects_attachment_add">Tambah lampiran</string>
     <string name="projects_request_empty">Teu aya merge request</string>
     <string name="projects_request_status_draft">Draf</string>
-    <string name="projects_request_status_open">Muka</string>
+    <string name="projects_request_status_open">Kabuka</string>
     <string name="projects_request_status_merged">Geus merge</string>
-    <string name="projects_request_merge">Merge</string>
+    <string name="projects_request_merge">Hijikeun</string>
     <string name="projects_request_close">Tutup</string>
-    <string name="projects_request_merge_dialog_title">Merge</string>
+    <string name="projects_request_merge_dialog_title">Hijikeun</string>
     <string name="projects_request_method">Métode</string>
-    <string name="projects_request_method_merge">Merge</string>
+    <string name="projects_request_method_merge">Hijikeun</string>
     <string name="projects_request_field_repository">Repositori</string>
     <string name="projects_request_field_source">Cabang sumber</string>
     <string name="projects_request_field_title">Judul</string>
@@ -132,7 +132,7 @@
     <string name="projects_field_flags">Bandéra</string>
     <string name="projects_field_required">Peryogi</string>
     <string name="projects_field_position_default">Standar</string>
-    <string name="projects_field_position_sidebar">Sidebar</string>
+    <string name="projects_field_position_sidebar">Bar sisi</string>
     <string name="projects_field_save">Simpen parobahan</string>
     <string name="projects_field_options">Pilihan</string>
     <string name="projects_field_add_option">Tambah pilihan</string>
@@ -149,7 +149,7 @@
     <string name="projects_views_type_board">Papan</string>
     <string name="projects_views_type_list">Daptar</string>
     <string name="projects_views_direction">Arah</string>
-    <string name="projects_views_sort_number">Wilangan</string>
+    <string name="projects_views_sort_number">Nomer</string>
     <string name="projects_views_sort_created">Dijieun</string>
     <string name="projects_views_sort_updated">Diapdet</string>
     <string name="projects_views_sort_rank">Pangkat</string>
@@ -160,7 +160,7 @@
     <string name="projects_comment_send">Kirim</string>
     <string name="projects_field_position_body">Eusi</string>
     <string name="projects_sort_field">Sortir dumasar</string>
-    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_comment_remove_attachment">Cabut lampiran</string>
     <string name="projects_views_sort_by">Sortir dumasar</string>
     <string name="projects_auth_login_failed">Login gagal</string>
     <string name="projects_views_move_up">Pindahkeun ka luhur</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Teangan obyek</string>
 
     <string name="notification_channel_projects">Béwara proyék</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Proyék</string>
     <string name="projects_auth_create_identity_failed">Gagal nyieun identitas</string>
     <string name="projects_auth_mfa_unsupported">MFA can acan dirojong dina aplikasi mobile</string>
     <string name="projects_auth_enter_code_sent">Lebetkeun kodeu nu dikintun ka %1$s</string>
@@ -327,7 +327,7 @@
     <string name="projects_settings_section_access">Manajemén Aksés</string>
     <string name="projects_people_search">Téangan jalma</string>
     <string name="projects_settings_field_entity_id">ID Éntitas</string>
-    <string name="projects_settings_field_fingerprint">Fingerprint</string>
+    <string name="projects_settings_field_fingerprint">Sidik ramo</string>
     <string name="projects_settings_field_server">Server</string>
     <string name="projects_access_subject_anyone">Saha waé</string>
     <string name="projects_access_subject_authenticated">Pangguna anu disahkeun</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Pilih aturan</string>
     <string name="projects_access_authenticated_desc">Saha waé anu parantos asup log</string>
     <string name="projects_access_anyone_desc">Kalebet pamaké anonim</string>
-    <string name="projects_access_target">Target</string>
+    <string name="projects_access_target">Pamaké atawa grup</string>
     <string name="projects_access_target_hint">ID éntitas, @grup, * (sadayana), atawa + (anggota)</string>
     <string name="projects_access_selected">Dipilih: %1$s</string>
     <string name="projects_access_role_comment">Koméntar jeung tempo</string>
@@ -381,5 +381,5 @@
     <string name="projects_option_delete_message">Yakin hayang mupus pilihan \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Teu aya jenis item nu bisa dijieun. Jieun heula item kolot nu diperlukeun.</string>
     <string name="projects_create_blocked_no_options">Teu bisa nyieun: %1$s diperlukeun tapi teu boga pilihan. Tambahkeun pilihan dina Desain.</string>
-    <string name="projects_attachment_remove">Remove attachment</string>
+    <string name="projects_attachment_remove">Cabut lampiran</string>
 </resources>

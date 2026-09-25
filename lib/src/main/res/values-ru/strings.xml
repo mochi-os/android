@@ -38,7 +38,7 @@
     <string name="access_add_rule">Добавить правило</string>
     <string name="access_owner">Владелец</string>
     <string name="access_revoke">Отозвать</string>
-    <string name="access_level_comment">Комментарий</string>
+    <string name="access_level_comment">Комментировать</string>
     <string name="access_level_view">Просмотр</string>
     <string name="access_level_none">Нет</string>
     <string name="reaction_like">Нравится</string>

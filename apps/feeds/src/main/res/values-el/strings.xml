@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Δεν υπάρχουν ακόμη αναρτήσεις</string>
     <string name="feeds_sort_label">Ταξινόμηση</string>
     <string name="feeds_sort_interests">Ενδιαφέροντα</string>
-    <string name="feeds_sort_new">Νέο</string>
+    <string name="feeds_sort_new">Νεότερα</string>
     <string name="feeds_sort_hot">Δημοφιλή</string>
-    <string name="feeds_sort_top">Κορυφή</string>
+    <string name="feeds_sort_top">Κορυφαία</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Ανάρτηση</string>
     <string name="feeds_image_preview">Προεπισκόπηση</string>
@@ -33,7 +33,7 @@
     <string name="feeds_feed_label">Ροή</string>
     <string name="feeds_add_files">Προσθήκη αρχείων</string>
     <string name="feeds_restore">Επαναφορά</string>
-    <string name="feeds_check_in">Είσοδος</string>
+    <string name="feeds_check_in">Check-in</string>
     <string name="feeds_travelling">Σε ταξίδι</string>
     <string name="feeds_tab_sources">Πηγές</string>
     <string name="feeds_sources_title">Πηγές</string>
@@ -43,7 +43,7 @@
     <string name="feeds_feed_name">Όνομα ροής</string>
     <string name="feeds_save_name">Αποθήκευση ονόματος</string>
     <string name="feeds_banner">Μπάνερ</string>
-    <string name="feeds_banner_description">Προαιρετικό banner markdown που εμφανίζεται στην κορυφή της ροής σας.</string>
+    <string name="feeds_banner_description">Προαιρετικό μπάνερ markdown που εμφανίζεται στην κορυφή της ροής σας.</string>
     <string name="feeds_clear">Εκκαθάριση</string>
     <string name="feeds_delete_feed">Διαγραφή ροής</string>
     <string name="feeds_no_members">Χωρίς μέλη</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Αποσύνδεση</string>
     <string name="feeds_ai_account_default">Προεπιλεγμένος λογαριασμός</string>
     <string name="feeds_ai_mode_off">Απενεργοποιημένο</string>
-    <string name="feeds_ai_mode_tag">Ετικέτα</string>
+    <string name="feeds_ai_mode_tag">Προσθήκη ετικετών</string>
     <string name="feeds_ai_mode_tag_deduplicate">Ετικέτα + απομάκρυνση διπλότυπων</string>
     <string name="feeds_feed_not_found">Η ροή δεν βρέθηκε</string>
     <string name="feeds_post_not_found">Η ανάρτηση δεν βρέθηκε</string>
@@ -80,7 +80,7 @@
     <string name="feeds_settings_member_removed">Το μέλος αφαιρέθηκε</string>
     <string name="feeds_settings_ai_mode_updated">Η λειτουργία AI ενημερώθηκε</string>
     <string name="feeds_settings_ai_account_updated">Ο λογαριασμός AI ενημερώθηκε</string>
-    <string name="feeds_settings_prompt_saved">Το prompt αποθηκεύτηκε</string>
+    <string name="feeds_settings_prompt_saved">Η προτροπή αποθηκεύτηκε</string>
     <string name="feeds_settings_prompt_reset">Η οδηγία επαναφέρθηκε στην προεπιλογή</string>
     <string name="feeds_send">Αποστολή</string>
     <string name="feeds_delete_post_confirm">Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτή την ανάρτηση; Η ενέργεια αυτή δεν μπορεί να αναιρεθεί.</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Το ενδιαφέρον μειώθηκε</string>
     <string name="feeds_interest_removed">Το ενδιαφέρον αφαιρέθηκε</string>
     <string name="feeds_interest_failed">Αποτυχία ρύθμισης ενδιαφέροντος</string>
-    <string name="feeds_saved_title">Αποθηκεύτηκε</string>
-    <string name="feeds_saved_menu">Αποθηκεύτηκε</string>
+    <string name="feeds_saved_title">Αποθηκευμένα</string>
+    <string name="feeds_saved_menu">Αποθηκευμένα</string>
     <string name="feeds_saved_save">Αποθήκευση για αργότερα</string>
     <string name="feeds_saved_remove">Αφαίρεση από τα αποθηκευμένα</string>
     <string name="feeds_saved_clear_all">Εκκαθάριση όλων</string>

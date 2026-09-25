@@ -38,7 +38,7 @@
     <string name="access_add_rule">Pridať pravidlo</string>
     <string name="access_owner">Vlastník</string>
     <string name="access_revoke">Odvolať</string>
-    <string name="access_level_comment">Komentár</string>
+    <string name="access_level_comment">Komentovať</string>
     <string name="access_level_view">Zobraziť</string>
     <string name="access_level_none">Žiadne</string>
     <string name="reaction_like">Páči sa mi</string>

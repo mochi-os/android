@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">Karmendên Mochi</string>
+    <string name="launcher_staff">Karmendên Mochi</string>
     <string name="staff_accounts_action_ban_title">Hesabê asteng bike</string>
     <string name="staff_accounts_action_suspend_title">Hesabê biseknîne</string>
     <string name="staff_accounts_action_unban_title">Qedexeyê rake</string>
@@ -154,7 +154,7 @@
     <string name="staff_categories_type_digital">Dîjîtal</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">Fizîkî</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">Karmendên Mochi</string>
     <string name="staff_config_field_auto_approve">Sînorê erêkirina bixweber</string>
     <string name="staff_config_field_hold">Asta girtinê</string>
     <string name="staff_config_field_platform_fee">Heqê platformê</string>
@@ -239,9 +239,9 @@
     <string name="staff_disputes_resolution_seller">Ji bo firoşkar çareser bike</string>
     <string name="staff_disputes_resolve">Çareser bike</string>
     <string name="staff_disputes_resolved_toast">Nakokî hat çareserkirin</string>
-    <string name="staff_disputes_review">Nirxandin</string>
+    <string name="staff_disputes_review">Lêkolîn bike</string>
     <string name="staff_disputes_status_escalated">Hatiye bilindkirin</string>
-    <string name="staff_disputes_status_open">Veke</string>
+    <string name="staff_disputes_status_open">Vekirî</string>
     <string name="staff_disputes_status_resolved_buyer">Hatiye çareserkirin (kirîer)</string>
     <string name="staff_disputes_status_resolved_seller">Hatiye çareserkirin (firoşkar)</string>
     <string name="staff_disputes_status_responded">Bersiv hate dayîn</string>
@@ -269,7 +269,7 @@
     <string name="staff_listings_moderation_hold">Bigire</string>
     <string name="staff_listings_moderation_manual">Destî</string>
     <string name="staff_listings_moderation_rejected">Hatiye redkirin</string>
-    <string name="staff_listings_moderation_review">Nirxandin</string>
+    <string name="staff_listings_moderation_review">Di nirxandinê de</string>
     <string name="staff_listings_moderation_soft_approved">Bi nermî pejirandî</string>
     <string name="staff_listings_notes_label">Têbînî</string>
     <string name="staff_listings_price_placeholder">—</string>
@@ -306,7 +306,7 @@
     <string name="staff_reports_cancel">Betal bike</string>
     <string name="staff_reports_close">Bigire</string>
     <string name="staff_reports_dialog_title_action">Li ser raporê tevbigere</string>
-    <string name="staff_reports_dialog_title_view">Rapor bike</string>
+    <string name="staff_reports_dialog_title_view">Rapor</string>
     <string name="staff_reports_empty">Tu rapor tune</string>
     <string name="staff_reports_filter_status_label">Rewş</string>
     <string name="staff_reports_filter_type_label">Cure</string>
@@ -314,7 +314,7 @@
     <string name="staff_reports_meta_reason">Sedem</string>
     <string name="staff_reports_meta_reporter">Raporkar</string>
     <string name="staff_reports_meta_seller">Firoşker</string>
-    <string name="staff_reports_meta_target">Armanc</string>
+    <string name="staff_reports_meta_target">Tiştê raporkirî</string>
     <string name="staff_reports_meta_type">Cure</string>
     <string name="staff_reports_notes_label">Têbînî</string>
     <string name="staff_reports_reason_counterfeit">Sexte an dizî</string>
@@ -350,7 +350,7 @@
     <string name="staff_sidebar_appeals">Îtîraz</string>
     <string name="staff_sidebar_categories">Kategorî</string>
     <string name="staff_sidebar_config">Mîheng</string>
-    <string name="staff_sidebar_dashboard">Dashboard</string>
+    <string name="staff_sidebar_dashboard">Daşbord</string>
     <string name="staff_sidebar_disputes">Nakokî</string>
     <string name="staff_sidebar_listings">Lîste</string>
     <string name="staff_sidebar_management">Birêvebirin</string>
@@ -376,7 +376,7 @@
     <string name="staff_status_hold">Bigire</string>
     <string name="staff_status_manual">Destî</string>
     <string name="staff_status_moderator">Modarator</string>
-    <string name="staff_status_open">Veke</string>
+    <string name="staff_status_open">Vekirî</string>
     <string name="staff_status_pending">Li bendê</string>
     <string name="staff_status_published">Hatiye weşandin</string>
     <string name="staff_status_rejected">Hatiye redkirin</string>
@@ -384,7 +384,7 @@
     <string name="staff_status_resolved_buyer">Hatiye çareserkirin (kirîer)</string>
     <string name="staff_status_resolved_seller">Hatiye çareserkirin (firoşkar)</string>
     <string name="staff_status_responded">Bersiv hate dayîn</string>
-    <string name="staff_status_review">Nirxandin</string>
+    <string name="staff_status_review">Di nirxandinê de</string>
     <string name="staff_status_reviewed">Hatiye nirxandin</string>
     <string name="staff_status_reviewing">Tê nirxandin</string>
     <string name="staff_status_soft_approved">Bi nermî pejirandî</string>
@@ -412,7 +412,7 @@
     <string name="staff_team_toast_add_failed">Zêdekirina endamê neserkeftî bû</string>
     <string name="staff_team_toast_removed">Endam hat rakirin</string>
     <string name="staff_team_toast_role_updated">Rol nûve bû</string>
-    <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
+    <string name="staff_audit_action_auction_cancelled">Mezad hat betalkirin</string>
     <string name="staff_dashboard_order_fallback">Fermandar #%1$s</string>
 
     <string name="staff_accounts_action_unsuspend_title">Rakirina sekinandinê</string>

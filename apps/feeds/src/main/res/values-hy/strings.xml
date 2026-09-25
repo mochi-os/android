@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Դեռ գրառումներ չկան</string>
     <string name="feeds_sort_label">Տեսակավորել</string>
     <string name="feeds_sort_interests">Հետաքրքրություններ</string>
-    <string name="feeds_sort_new">Նոր</string>
+    <string name="feeds_sort_new">Նորերը</string>
     <string name="feeds_sort_hot">Թեժ</string>
-    <string name="feeds_sort_top">Վերև</string>
+    <string name="feeds_sort_top">Լավագույն</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Գրառում</string>
     <string name="feeds_image_preview">Նախադիտում</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Չեղարկել պատասխանը</string>
     <string name="feeds_edit_post">Խմբագրել գրառումը</string>
     <string name="feeds_save_label">Պահպանել</string>
-    <string name="feeds_post_action">Գրառում</string>
+    <string name="feeds_post_action">Հրապարակել</string>
     <string name="feeds_feed_label">Հոսք</string>
     <string name="feeds_add_files">Ավելացնել ֆայլեր</string>
     <string name="feeds_restore">Վերականգնել</string>
@@ -59,11 +59,11 @@
     <string name="feeds_source_type_feed_memories">Հիշողություններ</string>
     <string name="feeds_remove_source">Հեռացնե՞լ աղբյուրը։</string>
     <string name="feeds_suggested_credibility_accept">Ընդունել</string>
-    <string name="feeds_rss_url_copied">RSS URL-ը պատճենվեց clipboard-ին</string>
+    <string name="feeds_rss_url_copied">RSS URL-ը պատճենվեց սեղմատախտակին</string>
     <string name="feeds_logout">Դուրս գալ</string>
     <string name="feeds_ai_account_default">Լռելյայն հաշիվ</string>
     <string name="feeds_ai_mode_off">Անջատված է</string>
-    <string name="feeds_ai_mode_tag">Թեգ</string>
+    <string name="feeds_ai_mode_tag">Թեգավորել</string>
     <string name="feeds_ai_mode_tag_deduplicate">Թեգավորել + չկրկնակել</string>
     <string name="feeds_feed_not_found">Հոսքը չի գտնվել</string>
     <string name="feeds_post_not_found">Գրառումը չի գտնվել</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Հետաքրքրությունը նվազեցվեց</string>
     <string name="feeds_interest_removed">Հետաքրքրությունը հեռացվեց</string>
     <string name="feeds_interest_failed">Չհաջողվեց կարգավորել հետաքրքրությունը</string>
-    <string name="feeds_saved_title">Պահպանված է</string>
-    <string name="feeds_saved_menu">Պահպանված է</string>
+    <string name="feeds_saved_title">Պահպանվածներ</string>
+    <string name="feeds_saved_menu">Պահպանվածներ</string>
     <string name="feeds_saved_save">Պահել ավելի ուշ համար</string>
     <string name="feeds_saved_remove">Հեռացնել պահվածներից</string>
     <string name="feeds_saved_clear_all">Մաքրել ամենը</string>

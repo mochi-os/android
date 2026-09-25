@@ -2,18 +2,18 @@
 <resources>
 
     <string name="launcher_feeds">Mochi Kanály</string>
-    <string name="launcher_chat">Mochi Chat</string>
+    <string name="launcher_chat">Mochi Konverzace</string>
     <string name="launcher_forums">Mochi Fóra</string>
     <string name="launcher_projects">Mochi Projekty</string>
     <string name="launcher_crm">Mochi CRM</string>
     <string name="launcher_people">Mochi Lidé</string>
     <string name="launcher_settings">Mochi Nastavení</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki</string>
     <string name="launcher_chess">Mochi Šachy</string>
     <string name="launcher_go">Mochi Go</string>
     <string name="launcher_words">Mochi Slova</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi Tržiště</string>
     <string name="launcher_calendars">Mochi Kalendáře</string>
     <string name="launcher_staff">Mochi Personál</string>
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">Stab</string>
+    <string name="launcher_staff">Mochi Stab</string>
     <string name="staff_accounts_action_ban_title">Utesteng konto</string>
     <string name="staff_accounts_action_suspend_title">Suspender konto</string>
     <string name="staff_accounts_action_unban_title">Opphev bann</string>
@@ -152,7 +152,7 @@
     <string name="staff_categories_dialog_position">Posisjon</string>
     <string name="staff_categories_dialog_save">Lagre</string>
     <string name="staff_categories_dialog_saving">Lagrar…</string>
-    <string name="staff_categories_dialog_slug">Slug</string>
+    <string name="staff_categories_dialog_slug">Identifikator</string>
     <string name="staff_categories_empty">Ingen kategoriar</string>
     <string name="staff_categories_toast_created">Kategori oppretta</string>
     <string name="staff_categories_toast_deleted">Kategori sletta</string>
@@ -162,7 +162,7 @@
     <string name="staff_categories_type_digital">Digitalt</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">Fysisk</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">Stab</string>
     <string name="staff_config_field_auto_approve">Terskel for autogodkjenning</string>
     <string name="staff_config_field_hold">Holdterskel</string>
     <string name="staff_config_field_platform_fee">Plattformavgift</string>
@@ -191,7 +191,7 @@
     <string name="staff_dashboard_col_name">Namn</string>
     <string name="staff_dashboard_col_object">Objekt</string>
     <string name="staff_dashboard_col_reason">Grunn</string>
-    <string name="staff_dashboard_col_score">Score</string>
+    <string name="staff_dashboard_col_score">Poengsum</string>
     <string name="staff_dashboard_col_seller">Seljar</string>
     <string name="staff_dashboard_col_status">Status</string>
     <string name="staff_dashboard_col_title">Tittel</string>
@@ -253,7 +253,7 @@
     <string name="staff_disputes_refund_help">Lat ho vere tom for full refusjon av %1$s. Skriv inn ein mindre sum for delvis refusjon.</string>
     <string name="staff_disputes_refund_must_be_positive">Refusjonsbeløp må vera større enn null</string>
     <string name="staff_disputes_resolution_buyer">Løys for kjøpar</string>
-    <string name="staff_disputes_resolution_label">Oppløysing</string>
+    <string name="staff_disputes_resolution_label">Løysing</string>
     <string name="staff_disputes_resolution_placeholder">Vel oppløysing</string>
     <string name="staff_disputes_resolution_seller">Løys for seljar</string>
     <string name="staff_disputes_resolve">Løys</string>
@@ -261,7 +261,7 @@
     <string name="staff_disputes_resolving">Løyser…</string>
     <string name="staff_disputes_review">Vurder</string>
     <string name="staff_disputes_status_escalated">Eskalert</string>
-    <string name="staff_disputes_status_open">Opna</string>
+    <string name="staff_disputes_status_open">Open</string>
     <string name="staff_disputes_status_resolved_buyer">Løyst (kjøpar)</string>
     <string name="staff_disputes_status_resolved_seller">Løyst (seljar)</string>
     <string name="staff_disputes_status_responded">Svart</string>
@@ -303,7 +303,7 @@
     <string name="staff_listings_moderation_hold">Hald</string>
     <string name="staff_listings_moderation_manual">Manuell</string>
     <string name="staff_listings_moderation_rejected">Avvist</string>
-    <string name="staff_listings_moderation_review">Vurder</string>
+    <string name="staff_listings_moderation_review">Til vurdering</string>
     <string name="staff_listings_moderation_soft_approved">Mjukt godkjend</string>
     <string name="staff_listings_notes_label">Merknader</string>
     <string name="staff_listings_price_placeholder">—</string>
@@ -341,7 +341,7 @@
     <string name="staff_reports_cancel">Avbryt</string>
     <string name="staff_reports_close">Lat att</string>
     <string name="staff_reports_dialog_title_action">Ta grep om rapporten</string>
-    <string name="staff_reports_dialog_title_view">Rapporter</string>
+    <string name="staff_reports_dialog_title_view">Rapport</string>
     <string name="staff_reports_empty">Ingen rapportar</string>
     <string name="staff_reports_filter_status_label">Status</string>
     <string name="staff_reports_filter_type_label">Type</string>
@@ -416,7 +416,7 @@
     <string name="staff_status_hold">Hald</string>
     <string name="staff_status_manual">Manuell</string>
     <string name="staff_status_moderator">Moderator</string>
-    <string name="staff_status_open">Opna</string>
+    <string name="staff_status_open">Open</string>
     <string name="staff_status_pending">Ventar</string>
     <string name="staff_status_published">Publisert</string>
     <string name="staff_status_rejected">Avvist</string>
@@ -424,7 +424,7 @@
     <string name="staff_status_resolved_buyer">Løyst (kjøpar)</string>
     <string name="staff_status_resolved_seller">Løyst (seljar)</string>
     <string name="staff_status_responded">Svart</string>
-    <string name="staff_status_review">Vurder</string>
+    <string name="staff_status_review">Til vurdering</string>
     <string name="staff_status_reviewed">Vurdert</string>
     <string name="staff_status_reviewing">Vurderar</string>
     <string name="staff_status_soft_approved">Mjukt godkjend</string>

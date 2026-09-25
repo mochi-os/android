@@ -24,13 +24,13 @@
     <string name="forums_settings">Կարգավորումներ</string>
     <string name="forums_load_more">Բեռնել ավելին</string>
     <string name="forums_sort_label">Տեսակավորել</string>
-    <string name="forums_sort_new">Նոր</string>
+    <string name="forums_sort_new">Նորերը</string>
     <string name="forums_sort_hot">Թեժ</string>
-    <string name="forums_sort_top">Վերև</string>
+    <string name="forums_sort_top">Լավագույն</string>
     <string name="forums_sort_interests">Հետաքրքրություններ</string>
     <string name="forums_post_title_field">Վերնագիր</string>
     <string name="forums_post_attach">Կցել պատասխանի ֆայլեր</string>
-    <string name="forums_post_create_action">Գրառում</string>
+    <string name="forums_post_create_action">Հրապարակել</string>
     <string name="forums_post_edit">Խմբագրել գրառումը</string>
     <string name="forums_post_edit_title">Խմբագրել գրառումը</string>
     <string name="forums_post_edit_title_field">Վերնագիր</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Անդամներ</string>
     <string name="forums_tab_banner">Բաններ</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Թիրախ</string>
+    <string name="forums_access_target">Օգտատեր կամ խումբ</string>
     <string name="forums_access_level_view">Դիտել</string>
     <string name="forums_access_level_vote">Քվեարկել</string>
     <string name="forums_access_level_comment">Մեկնաբանել</string>
-    <string name="forums_access_level_post">Գրառում</string>
+    <string name="forums_access_level_post">Հրապարակել</string>
     <string name="forums_access_level_none">Ոչ մեկը</string>
     <string name="forums_members_empty">Անդամներ չկան</string>
     <string name="forums_banner_dismiss">Հեռացնել բաններն</string>
-    <string name="forums_ai_mode_tag">Թեգ</string>
+    <string name="forums_ai_mode_tag">Թեգավորել</string>
     <string name="forums_ai_account_default">Լռելյայն հաշիվ</string>
     <string name="forums_ai_prompt_reset">Վերականգնել լռելյայնին</string>
     <string name="forums_settings_unsubscribe">Բաժանորդագրությունից հրաժարվել</string>
@@ -80,7 +80,7 @@
     <string name="forums_moderation_reports_resolved">Լուծվել է</string>
     <string name="forums_moderation_reports_all">Բոլորը</string>
     <string name="forums_moderation_reports_empty">Հաղորդումներ չկան</string>
-    <string name="forums_moderation_report_dismiss">Հեռացնել</string>
+    <string name="forums_moderation_report_dismiss">Մերժել</string>
     <string name="forums_moderation_restrictions_empty">Սահմանափակումներ չկան</string>
     <string name="forums_moderation_restriction_remove">Հեռացնել</string>
     <string name="forums_moderation_restriction_type">Տեսակ</string>
@@ -131,11 +131,11 @@
     <string name="forums_auth_enter_code_sent">Մուտքագրեք %1$s հասցեին ուղարկված կոդը</string>
     <string name="forums_auth_create_identity">Ստեղծեք ձեր ինքնությունը</string>
     <string name="forums_tag_clear">Մաքրել զտիչը</string>
-    <string name="forums_post_tag_add">Add tag</string>
+    <string name="forums_post_tag_add">Ավելացնել պիտակ</string>
     <string name="forums_write_comment">Գրեք մեկնաբանություն…</string>
 
     <string name="notification_channel_forums">Ֆորումների ծանուցումներ</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Ֆորումներ</string>
     <string name="forums_list_empty">Դեռ ֆորումներ չկան</string>
     <string name="forums_list_unsubscribe_message">Վստա՞հ եք, որ ցանկանում եք չեղարկել բաժանորդագրությունը այս ֆորումից:</string>
     <string name="forums_find_search_placeholder">Որոնել ֆորումներ կամ տեղադրել URL</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">Ձեռքով</string>
     <string name="forums_access_search_users">Որոնել օգտատերեր</string>
     <string name="forums_access_no_groups">Հասանելի խմբեր չկան</string>
-    <string name="forums_saved_title">Պահպանված է</string>
+    <string name="forums_saved_title">Պահպանվածներ</string>
     <string name="forums_saved_save">Պահել ավելի ուշ համար</string>
     <string name="forums_saved_remove">Հեռացնել պահվածներից</string>
     <string name="forums_saved_clear_all">Մաքրել ամենը</string>
@@ -208,7 +208,7 @@
     <string name="forums_rss_feed">RSS հոսք</string>
     <string name="forums_rss_mode_posts">Գրառումներ</string>
     <string name="forums_rss_mode_posts_comments">Գրառումներ և մեկնաբանություններ</string>
-    <string name="forums_rss_copied">RSS URL-ը պատճենվեց clipboard-ին</string>
+    <string name="forums_rss_copied">RSS URL-ը պատճենվեց սեղմատախտակին</string>
     <string name="forums_find_results">Որոնման արդյունքներ</string>
     <string name="forums_markdown_supported">Markdown-ը աջակցվում է</string>
     <string name="forums_attachment_file">Ֆայլ</string>
@@ -321,7 +321,7 @@
     <string name="forums_moderation_action_unrestrict">Առանց սահմանափակման</string>
     <string name="forums_moderation_action_resolve">Լուծված հաղորդում</string>
     <string name="forums_moderation_target_post">Գրառում</string>
-    <string name="forums_moderation_target_comment">Մեկնաբանել</string>
+    <string name="forums_moderation_target_comment">Մեկնաբանություն</string>
     <string name="forums_moderation_target_user">Օգտատեր</string>
     <string name="forums_moderation_reason_spam">Սպամ</string>
     <string name="forums_moderation_reason_harassment">Ոտնձգություն</string>

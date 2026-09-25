@@ -78,7 +78,7 @@
     <string name="crm_design_or_upload_json">或上传文件</string>
     <string name="crm_design_upload_json">上传 .json 文件</string>
     <string name="crm_design_tab_classes">类</string>
-    <string name="crm_design_tab_views">查看</string>
+    <string name="crm_design_tab_views">视图</string>
     <string name="crm_design_import_dialog_title">导入设计</string>
     <string name="crm_design_import_choose_template">选择模板</string>
     <string name="crm_design_replace_title">替换设计?</string>
@@ -117,7 +117,7 @@
     <string name="crm_views_edit_dialog_title">编辑视图</string>
     <string name="crm_views_delete_title">删除视图</string>
     <string name="crm_views_type">类型</string>
-    <string name="crm_views_type_board">棋盘</string>
+    <string name="crm_views_type_board">看板</string>
     <string name="crm_views_type_list">列表</string>
     <string name="crm_views_direction">方向</string>
     <string name="crm_views_sort_created">已创建</string>

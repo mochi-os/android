@@ -17,7 +17,7 @@
     <string name="market_account_seller_step_stripe_desc">ከገዢዎች ክፍያ ለመቀበል የStripe መለያ ያገናኙ</string>
     <string name="market_account_seller_fees_heading">ክፍያዎች፦</string>
     <string name="market_account_seller_fees_mochi">Mochi ከእያንዳንዱ ሽያጭ %1$s%% ይወስዳል።</string>
-    <string name="market_account_seller_fees_stripe">Stripe በእያንዳንዱ ግብይት የራሱን የማስኬጃ ክፍያ እና በተመላሽ ክፍያ ቋሚ ክፍያ ይጥላል። ለገንዘብዎ እና ለክልልዎ ወቅታዊ ዋጋዎች በStripe Dashboard ውስጥ ተዘርዝረዋል።</string>
+    <string name="market_account_seller_fees_stripe">Stripe በእያንዳንዱ ግብይት የራሱን የማስኬጃ ክፍያ እና በተመላሽ ክፍያ ቋሚ ክፍያ ይጥላል። ለገንዘብዎ እና ለክልልዎ ወቅታዊ ዋጋዎች በStripe ዳሽቦርድ ውስጥ ተዘርዝረዋል።</string>
     <string name="market_account_seller_connect">Stripe አገናኝ</string>
     <string name="market_account_seller_step_stripe_title">Stripe አገናኝ</string>
     <string name="market_account_seller_check_status">ሁኔታ ፈትሽ</string>
@@ -101,7 +101,7 @@
     <string name="market_checkout_browser_unavailable">የክፍያ ገጽን ለመክፈት ብራውዘር የለም</string>
     <string name="market_checkout_buy_it_now">አሁን ግዛው</string>
     <string name="market_checkout_create_failed">ትዕዛዝ መፍጠር አልተሳካም</string>
-    <string name="market_checkout_delivery_download">አውርድ</string>
+    <string name="market_checkout_delivery_download">ማውረድ</string>
     <string name="market_checkout_delivery_method">የመላኪያ ዘዴ</string>
     <string name="market_checkout_delivery_pickup">ማንሳት</string>
     <string name="market_checkout_delivery_shipping">መላኪያ</string>
@@ -265,7 +265,7 @@
     <string name="market_filter_condition_refurbished">የታደሰ</string>
     <string name="market_filter_condition_used">ጥቅም ላይ የዋለ</string>
     <string name="market_filter_delivery">መላኪያ</string>
-    <string name="market_filter_delivery_download">አውርድ</string>
+    <string name="market_filter_delivery_download">ማውረድ</string>
     <string name="market_filter_delivery_pickup">ማንሳት</string>
     <string name="market_filter_delivery_shipping">መላኪያ</string>
     <string name="market_filter_open">ማጣሪያዎች</string>
@@ -304,7 +304,7 @@
     <string name="market_listing_detail_loading">ዝርዝር በመጫን ላይ</string>
     <string name="market_listing_detail_listed">ተዘርዝሯል %1$s</string>
     <string name="market_listing_detail_location_heading">አካባቢ</string>
-    <string name="market_listing_detail_message">መልእክት</string>
+    <string name="market_listing_detail_message">መልዕክት ይላኩ</string>
     <string name="market_listing_detail_message_seller">ሻጭን አነጋግር</string>
     <string name="market_listing_detail_not_found">ዝርዝር አልተገኘም</string>
     <string name="market_listing_detail_place_bid">ጨረታ አቅርብ</string>
@@ -368,7 +368,7 @@
     <string name="market_onboarding_activate">አንቃ</string>
     <string name="market_onboarding_activating">በማንቃት ላይ…</string>
     <string name="market_onboarding_body">ለመግዛት እና ለመሸጥ መለያዎን ያንቁ።</string>
-    <string name="market_onboarding_dismiss">አጥፋ</string>
+    <string name="market_onboarding_dismiss">ዝጋ</string>
     <string name="market_onboarding_title">እንኳን ወደ ገበያ በደህና መጡ</string>
     <string name="market_open_sidebar">ምናሌ ክፈት</string>
     <string name="market_price_from">ከ%1$s</string>
@@ -505,7 +505,7 @@
     <string name="market_sale_completed_label">ተጠናቅቋል</string>
     <string name="market_sale_dispute_evidence_due">ማስረጃ የመጨረሻ ቀን %1$s</string>
     <string name="market_sale_dispute_respond">ምላሽ ይስጡ</string>
-    <string name="market_sale_dispute_state_open">ክፈት</string>
+    <string name="market_sale_dispute_state_open">ክፍት</string>
     <string name="market_sale_dispute_state_resolved">ተፈትቷል</string>
     <string name="market_sale_dispute_state_responded">ውሳኔ በመጠበቅ ላይ</string>
     <string name="market_sale_dispute_stripe_reason">የStripe ቻርጅባክ ምክንያት፦ %1$s</string>
@@ -547,7 +547,7 @@
     <string name="market_saved_clear">ሁሉንም የተቀመጡ አጽዳ</string>
     <string name="market_saved_empty_subtitle">በማንኛውም ዝርዝር ላይ ለማስቀመጥ የዕልባት አዶ ይጫኑ።</string>
     <string name="market_saved_empty_title">የተቀመጡ ዝርዝሮች የሉም</string>
-    <string name="market_saved_title">ተቀምጧል</string>
+    <string name="market_saved_title">የተቀመጡ</string>
     <string name="market_search_clear">ፍለጋ አጽዳ</string>
     <string name="market_search_placeholder">ገበያውን ይፈልጉ</string>
     <string name="market_section_categories">ምድቦችን ያስሱ</string>
@@ -572,7 +572,7 @@
     <string name="market_sidebar_purchases">ግዢዎች</string>
     <string name="market_sidebar_reviews">ግምገማዎች</string>
     <string name="market_sidebar_sales">ሽያጮች</string>
-    <string name="market_sidebar_saved">ተቀምጧል</string>
+    <string name="market_sidebar_saved">የተቀመጡ</string>
     <string name="market_sidebar_selling">ሽያጭ</string>
     <string name="market_sidebar_settings">ቅንብሮች</string>
     <string name="market_sidebar_subscribers">ተመዝጋቢዎች</string>
@@ -614,7 +614,7 @@
     <string name="market_subscription_detail_seller">ሻጭ</string>
     <string name="market_subscription_detail_started">ጀምሯል %1$s</string>
     <string name="market_subscription_detail_title">ምዝገባ</string>
-    <string name="market_subscriptions_action_cancel">ይቅር</string>
+    <string name="market_subscriptions_action_cancel">ይሰርዙ</string>
     <string name="market_subscriptions_action_pause">አቁም</string>
     <string name="market_subscriptions_action_reactivate">እንደገና አንቃ</string>
     <string name="market_subscriptions_action_resubscribe">እንደገና ተመዝገብ</string>
@@ -689,7 +689,7 @@
     <string name="market_seller_step_activate_title">የሻጭ መለያ ያንቁ</string>
     <string name="market_seller_step_stripe_desc">ከገዢዎች ክፍያ ለመቀበል የStripe መለያ ያገናኙ</string>
     <string name="market_seller_step_stripe_title">Stripe አገናኝ</string>
-    <string name="market_seller_stripe_more_info">ክፍያዎችን ከመቀበልዎ በፊት Stripe ተጨማሪ መረጃ ያስፈልገዋል። በStripe Dashboard ላይ መስፈርቶቹን ያጠናቅቁ፣ ከዚያም ሁኔታን ይፈትሹ የሚለውን ጠቅ ያድርጉ።</string>
+    <string name="market_seller_stripe_more_info">ክፍያዎችን ከመቀበልዎ በፊት Stripe ተጨማሪ መረጃ ያስፈልገዋል። በStripe ዳሽቦርድ ላይ መስፈርቶቹን ያጠናቅቁ፣ ከዚያም ሁኔታን ይፈትሹ የሚለውን ጠቅ ያድርጉ።</string>
     <string name="market_seller_summary_account_status">የመለያ ሁኔታ</string>
     <string name="market_seller_summary_fees">ክፍያዎች</string>
     <string name="market_seller_summary_payments">ክፍያዎች</string>

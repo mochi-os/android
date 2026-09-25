@@ -2,7 +2,7 @@
 <resources>
     <string name="projects_auth_display_name">Non afichaj</string>
     <string name="projects_auth_verification_failed">Verifikasyon echwe</string>
-    <string name="projects_list_title">Pwojè yo</string>
+    <string name="projects_list_title">Pwojè</string>
     <string name="projects_list_close_search">Fèmen rechèch</string>
     <string name="projects_list_search">Chèche</string>
     <string name="projects_list_find">Jwenn pwojè</string>
@@ -80,11 +80,11 @@
     <string name="projects_request_status_draft">Bouyon</string>
     <string name="projects_request_status_open">Ouvè</string>
     <string name="projects_request_status_merged">Merge</string>
-    <string name="projects_request_merge">Merge</string>
+    <string name="projects_request_merge">Fizyone</string>
     <string name="projects_request_close">Fèmen</string>
-    <string name="projects_request_merge_dialog_title">Merge</string>
+    <string name="projects_request_merge_dialog_title">Fizyone</string>
     <string name="projects_request_method">Metòd</string>
-    <string name="projects_request_method_merge">Merge</string>
+    <string name="projects_request_method_merge">Fizyone</string>
     <string name="projects_request_field_repository">Depo</string>
     <string name="projects_request_field_source">Branch sous</string>
     <string name="projects_request_field_title">Tit</string>
@@ -132,7 +132,7 @@
     <string name="projects_field_flags">Drapo</string>
     <string name="projects_field_required">Obligatwa</string>
     <string name="projects_field_position_default">Defo</string>
-    <string name="projects_field_position_sidebar">Sidebar</string>
+    <string name="projects_field_position_sidebar">Ba sou kote</string>
     <string name="projects_field_save">Sove chanjman</string>
     <string name="projects_field_options">Opsyon</string>
     <string name="projects_field_add_option">Ajoute opsyon</string>
@@ -158,7 +158,7 @@
     <string name="projects_more">Plis</string>
     <string name="projects_request_more">Plis</string>
     <string name="projects_comment_send">Voye</string>
-    <string name="projects_field_position_body">Kontni</string>
+    <string name="projects_field_position_body">Kò</string>
     <string name="projects_auth_login_failed">Koneksyon echwe</string>
     <string name="projects_auth_create_identity_failed">Kreyasyon idantite echwe</string>
     <string name="projects_auth_mfa_unsupported">MFA poko sipòte nan aplikasyon mobil la</string>
@@ -180,7 +180,7 @@
     <string name="projects_links_search_placeholder">Chèche objè</string>
 
     <string name="notification_channel_projects">Notifikasyon pwojè</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Pwojè</string>
     <string name="projects_list_search_placeholder">Chèche pwojè</string>
     <string name="projects_list_no_matching">Pa gen pwojè ki koresponn</string>
     <string name="projects_list_empty">Pa gen pwojè poko</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Chwazi yon règ</string>
     <string name="projects_access_authenticated_desc">Nenpòt moun ki konekte</string>
     <string name="projects_access_anyone_desc">Enkli itilizatè anonim yo</string>
-    <string name="projects_access_target">Sib</string>
+    <string name="projects_access_target">Itilizatè oswa gwoup</string>
     <string name="projects_access_target_hint">ID antite, @gwoup, * (tout moun), oswa + (manm)</string>
     <string name="projects_access_selected">Chwazi: %1$s</string>
     <string name="projects_access_role_comment">Kòmante ak gade</string>

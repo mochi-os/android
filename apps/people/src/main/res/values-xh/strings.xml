@@ -62,7 +62,7 @@
     <string name="people_profile_uploading">Iyalayisha…</string>
     <string name="people_profile_change_banner">Tshintsha ibhanela</string>
     <string name="people_profile_no_banner">Akukho banner emiselweyo</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">I-favicon</string>
     <string name="people_profile_browser_icon">I-akhoni yebhrawuza</string>
     <string name="people_profile_file_too_large">Ifayile inkulu kakhulu</string>
     <string name="people_profile_clear">Cima</string>
@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Vula ujikelo</string>
     <string name="people_person_state_friend">Abahlobo</string>
     <string name="people_person_state_self">Wena</string>
-    <string name="people_person_message">Umyalezo</string>
+    <string name="people_person_message">Thumela umyalezo</string>
     <string name="people_person_accept">Yamkela</string>
     <string name="people_person_decline">Yala</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Yamkela konke</string>
     <string name="people_invitations_decline_all">Yala konke</string>
     <string name="people_invitations_cancel_all">Rhoxisa konke</string>
+    <string name="people_invitations_cancel">Rhoxisa</string>
     <string name="people_invitations_all_accepted">Zonke izimemo zamkelwe</string>
     <string name="people_invitations_all_declined">Zonke izimemo zaliwe</string>
     <string name="people_invitations_all_cancelled">Zonke izimemo zirhoxisiwe</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Khangela…</string>
     <string name="people_contacts_invited">Umenyiwe</string>
     <string name="people_contacts_accept">Yamkela</string>
-    <string name="people_contacts_message">Umyalezo</string>
+    <string name="people_contacts_message">Thumela umyalezo</string>
     <string name="people_contacts_no_people_found">Akukho bantu bafumanekileyo</string>
     <string name="people_contacts_try_adjusting">Zama ukulungisa ukhangelo lwakho</string>
     <string name="people_contact_section_address">Idilesi</string>

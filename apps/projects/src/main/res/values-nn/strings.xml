@@ -12,7 +12,7 @@
     <string name="projects_create_name">Namn</string>
     <string name="projects_create_description">Skildring</string>
     <string name="projects_create_prefix">Prefiks</string>
-    <string name="projects_create_privacy">Privacy</string>
+    <string name="projects_create_privacy">Personvern</string>
     <string name="projects_create_private">Privat</string>
     <string name="projects_create_public">Offentleg</string>
     <string name="projects_create_template_none">Ingen</string>
@@ -29,7 +29,7 @@
     <string name="projects_sort_label">Sorter</string>
     <string name="projects_sort_direction">Retning</string>
     <string name="projects_sort_rank">Manuell</string>
-    <string name="projects_sort_number">Tal</string>
+    <string name="projects_sort_number">Nummer</string>
     <string name="projects_sort_created">Oppretta</string>
     <string name="projects_sort_updated">Oppdatert</string>
     <string name="projects_create_object_type">Type</string>
@@ -78,7 +78,7 @@
     <string name="projects_attachment_add">Legg til vedlegg</string>
     <string name="projects_request_empty">Ingen samanslåingsførespurnader</string>
     <string name="projects_request_status_draft">Utkast</string>
-    <string name="projects_request_status_open">Opna</string>
+    <string name="projects_request_status_open">Open</string>
     <string name="projects_request_status_merged">Samanslegen</string>
     <string name="projects_request_merge">Slå saman</string>
     <string name="projects_request_close">Lat att</string>
@@ -99,7 +99,7 @@
     <string name="projects_board_rename">Døyp om</string>
     <string name="projects_board_rename_column">Døyp om kolonne</string>
     <string name="projects_move_position">Posisjon</string>
-    <string name="projects_move_position_top">Topp</string>
+    <string name="projects_move_position_top">Øvst</string>
     <string name="projects_move_current">Noverande</string>
     <string name="projects_design_title">Design</string>
     <string name="projects_design_export">Eksporter design</string>
@@ -144,10 +144,10 @@
     <string name="projects_views_edit_dialog_title">Rediger vising</string>
     <string name="projects_views_delete_title">Slett visning</string>
     <string name="projects_views_type">Type</string>
-    <string name="projects_views_type_board">Brett</string>
+    <string name="projects_views_type_board">Tavle</string>
     <string name="projects_views_type_list">Liste</string>
     <string name="projects_views_direction">Retning</string>
-    <string name="projects_views_sort_number">Tal</string>
+    <string name="projects_views_sort_number">Nummer</string>
     <string name="projects_views_sort_created">Oppretta</string>
     <string name="projects_views_sort_updated">Oppdatert</string>
     <string name="projects_views_sort_rank">Rang</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Vel ein regel</string>
     <string name="projects_access_authenticated_desc">Alle som er innlogga</string>
     <string name="projects_access_anyone_desc">Inkludert anonyme brukarar</string>
-    <string name="projects_access_target">Mål</string>
+    <string name="projects_access_target">Brukar eller gruppe</string>
     <string name="projects_access_target_hint">Entitets-ID, @gruppe, * (alle), eller + (medlemer)</string>
     <string name="projects_access_selected">Vald: %1$s</string>
     <string name="projects_access_role_comment">Kommenter og sjå</string>

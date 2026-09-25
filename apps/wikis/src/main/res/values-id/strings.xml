@@ -173,7 +173,7 @@
     <string name="wikis_settings_section_identity">Identitas</string>
     <string name="wikis_settings_field_name">Nama</string>
     <string name="wikis_settings_field_entity_id">ID entitas</string>
-    <string name="wikis_settings_field_fingerprint">Fingerprint</string>
+    <string name="wikis_settings_field_fingerprint">Sidik jari</string>
     <string name="wikis_settings_name_edit_cd">Edit nama</string>
     <string name="wikis_settings_name_invalid_char">Nama tidak boleh mengandung karakter &lt; atau &gt;</string>
     <string name="wikis_settings_name_too_long">Nama harus 100 karakter atau kurang</string>

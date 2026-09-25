@@ -93,7 +93,7 @@
     <string name="market_checkout_title">结账</string>
     <string name="market_checkout_total">合计</string>
     <string name="market_checkout_winning_bid">中标出价</string>
-    <string name="market_condition_new">新建</string>
+    <string name="market_condition_new">全新</string>
     <string name="market_condition_refurbished">翻新</string>
     <string name="market_condition_used">二手</string>
     <string name="market_dispute_dialog_cancel">取消</string>
@@ -107,8 +107,8 @@
     <string name="market_editor_asset_external_filename">文件名</string>
     <string name="market_editor_back">返回</string>
     <string name="market_editor_category">分类</string>
-    <string name="market_editor_condition">条件</string>
-    <string name="market_editor_condition_new">新建</string>
+    <string name="market_editor_condition">成色</string>
+    <string name="market_editor_condition_new">全新</string>
     <string name="market_editor_condition_refurbished">翻新</string>
     <string name="market_editor_condition_used">二手</string>
     <string name="market_editor_currency">货币</string>
@@ -149,8 +149,8 @@
     <string name="market_filter_apply">应用</string>
     <string name="market_filter_category">分类</string>
     <string name="market_filter_clear">清除筛选</string>
-    <string name="market_filter_condition">条件</string>
-    <string name="market_filter_condition_new">新建</string>
+    <string name="market_filter_condition">成色</string>
+    <string name="market_filter_condition_new">全新</string>
     <string name="market_filter_condition_refurbished">翻新</string>
     <string name="market_filter_condition_used">二手</string>
     <string name="market_filter_delivery">配送</string>
@@ -183,13 +183,13 @@
     <string name="market_listing_detail_load_failed">加载商品失败</string>
     <string name="market_listing_detail_listed">发布于 %1$s</string>
     <string name="market_listing_detail_location_heading">位置</string>
-    <string name="market_listing_detail_message">消息</string>
+    <string name="market_listing_detail_message">发消息</string>
     <string name="market_listing_detail_message_seller">联系卖家</string>
     <string name="market_listing_detail_not_found">商品未找到</string>
     <string name="market_listing_detail_place_bid">出价</string>
     <string name="market_listing_detail_relist">重新上架</string>
     <string name="market_listing_detail_report">举报商品</string>
-    <string name="market_listing_detail_save">保存</string>
+    <string name="market_listing_detail_save">收藏</string>
     <string name="market_listing_detail_seller_heading">卖家</string>
     <string name="market_listing_detail_shipping_heading">配送</string>
     <string name="market_listing_detail_subscribe">订阅</string>
@@ -305,7 +305,7 @@
     <string name="market_sale_carrier_other">其他</string>
     <string name="market_sale_completed_label">已完成</string>
     <string name="market_sale_dispute_respond">回复</string>
-    <string name="market_sale_dispute_state_open">打开</string>
+    <string name="market_sale_dispute_state_open">开放</string>
     <string name="market_sale_dispute_state_resolved">已解决</string>
     <string name="market_sale_load_failed">加载订单失败</string>
     <string name="market_sale_message_buyer">联系买家</string>

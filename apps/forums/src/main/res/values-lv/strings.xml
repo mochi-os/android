@@ -24,13 +24,13 @@
     <string name="forums_settings">Iestatījumi</string>
     <string name="forums_load_more">Ielādēt vairāk</string>
     <string name="forums_sort_label">Kārtot</string>
-    <string name="forums_sort_new">Jauns</string>
+    <string name="forums_sort_new">Jaunākie</string>
     <string name="forums_sort_hot">Aktuāli</string>
-    <string name="forums_sort_top">Augšā</string>
+    <string name="forums_sort_top">Labākie</string>
     <string name="forums_sort_interests">Intereses</string>
     <string name="forums_post_title_field">Virsraksts</string>
     <string name="forums_post_attach">Pievienot failus</string>
-    <string name="forums_post_create_action">Ieraksts</string>
+    <string name="forums_post_create_action">Publicēt</string>
     <string name="forums_post_edit">Rediģēt ierakstu</string>
     <string name="forums_post_edit_title">Rediģēt ierakstu</string>
     <string name="forums_post_edit_title_field">Virsraksts</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Dalībnieki</string>
     <string name="forums_tab_banner">Baneris</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Mērķis</string>
+    <string name="forums_access_target">Lietotājs vai grupa</string>
     <string name="forums_access_level_view">Skatīt</string>
     <string name="forums_access_level_vote">Balsot</string>
-    <string name="forums_access_level_comment">Komentārs</string>
-    <string name="forums_access_level_post">Ieraksts</string>
+    <string name="forums_access_level_comment">Komentēt</string>
+    <string name="forums_access_level_post">Publicēt</string>
     <string name="forums_access_level_none">Nav</string>
     <string name="forums_members_empty">Nav dalībnieku</string>
     <string name="forums_banner_dismiss">Aizvērt baneri</string>
-    <string name="forums_ai_mode_tag">Tags</string>
+    <string name="forums_ai_mode_tag">Tagot</string>
     <string name="forums_ai_account_default">Noklusētais konts</string>
     <string name="forums_ai_prompt_reset">Atiestatīt uz noklusējumu</string>
     <string name="forums_settings_unsubscribe">Atrakstīties</string>
@@ -80,7 +80,7 @@
     <string name="forums_moderation_reports_resolved">Atrisināts</string>
     <string name="forums_moderation_reports_all">Visi</string>
     <string name="forums_moderation_reports_empty">Nav ziņojumu</string>
-    <string name="forums_moderation_report_dismiss">Aizvērt</string>
+    <string name="forums_moderation_report_dismiss">Noraidīt</string>
     <string name="forums_moderation_restrictions_empty">Nav ierobežojumu</string>
     <string name="forums_moderation_restriction_remove">Noņemt</string>
     <string name="forums_moderation_restriction_type">Tips</string>
@@ -98,7 +98,7 @@
     <string name="forums_report_reason">Iemesls</string>
     <string name="forums_report_details">Detaļas</string>
     <string name="forums_report_submit">Iesniegt ziņojumu</string>
-    <string name="forums_report_reason_spam">Spam</string>
+    <string name="forums_report_reason_spam">Surogātpasts</string>
     <string name="forums_report_reason_harassment">Aizskaršana</string>
     <string name="forums_report_reason_violence">Vardarbība</string>
     <string name="forums_report_reason_misinformation">Maldinoša informācija</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_login_failed">Pieteikšanās neizdevās</string>
 
     <string name="notification_channel_forums">Forumu paziņojumi</string>
-    <string name="forums_auth_brand">Mochi forumi</string>
+    <string name="forums_auth_brand">Mochi Forumi</string>
     <string name="forums_auth_create_identity_failed">Neizdevās izveidot identitāti</string>
     <string name="forums_auth_mfa_unsupported">MFA mobilajā lietotnē vēl netiek atbalstīta</string>
     <string name="forums_auth_enter_code_sent">Ievadiet kodu, kas nosūtīts uz %1$s</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">Manuāls</string>
     <string name="forums_access_search_users">Meklēt lietotājus</string>
     <string name="forums_access_no_groups">Nav pieejamu grupu</string>
-    <string name="forums_saved_title">Saglabāts</string>
+    <string name="forums_saved_title">Saglabātie</string>
     <string name="forums_saved_save">Saglabāt vēlākam laikam</string>
     <string name="forums_saved_remove">Noņemt no saglabātajiem</string>
     <string name="forums_saved_clear_all">Notīrīt visu</string>
@@ -324,7 +324,7 @@
     <string name="forums_moderation_target_post">Ieraksts</string>
     <string name="forums_moderation_target_comment">Komentārs</string>
     <string name="forums_moderation_target_user">Lietotājs</string>
-    <string name="forums_moderation_reason_spam">Spam</string>
+    <string name="forums_moderation_reason_spam">Surogātpasts</string>
     <string name="forums_moderation_reason_harassment">Aizskaršana</string>
     <string name="forums_moderation_reason_hate">Naida runa</string>
     <string name="forums_moderation_reason_violence">Vardarbība</string>

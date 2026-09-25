@@ -143,7 +143,7 @@
     <string name="auth_passkey">Калиди дастрасӣ</string>
     <string name="auth_use_passkey">Калиди дастрасиро истифода баред</string>
     <string name="auth_email_me_a_code">Ба ман рамз тавассути email фиристед</string>
-    <string name="auth_or_enter_authenticator_code">Ё коди Authenticator-ро ворид кунед</string>
+    <string name="auth_or_enter_authenticator_code">Ё коди аутентификаторро ворид кунед</string>
     <string name="auth_log_in">Ворид шудан</string>
     <string name="auth_back">Бозгашт</string>
     <string name="auth_lost_access_recovery">Дастрасиро гум кардед? Рамзи барқарорсозиро истифода баред</string>
@@ -200,11 +200,11 @@
     <string name="reauth_signin_text">Огоҳномаҳо то дубора ворид шуданатон боздошта мешаванд</string>
     <string name="oem_hint_title">Дар замина дастрас бимонед</string>
     <string name="oem_hint_body">Барои расондани огоҳномаҳо Mochi бояд дар замина кор кунад. Лутфан, дар экрани навбатӣ ба ин иҷозат диҳед, вагарна телефони шумо метавонад вақте ки экран хомӯш аст, огоҳномаҳоро боздорад.</string>
-    <string name="oem_hint_samsung_note">Дар телефонҳои Samsung инчунин Settings → Device care → Sleeping apps -ро санҷида, агар Mochi дар рӯйхат бошад, онро хориҷ кунед.</string>
+    <string name="oem_hint_samsung_note">Дар телефонҳои Samsung инчунин Танзимот → Нигоҳубини дастгоҳ → Барномаҳои хуфтаро санҷида, агар Mochi дар рӯйхат бошад, онро хориҷ кунед.</string>
     <string name="oem_hint_allow">Иҷозат додан ба замина</string>
     <string name="oem_hint_dismiss">Дигар нишон надиҳед</string>
     <string name="about_label">Дар бораи</string>
-    <string name="about_title">Mochi Client</string>
+    <string name="about_title">Муштарии Mochi</string>
     <string name="about_version">Версияи %1$s</string>
     <string name="about_check_updates">Санҷидани навсозиҳо</string>
     <string name="about_up_to_date">Навтарин нусха</string>
@@ -225,7 +225,7 @@
     <string name="stepup_description">Ин тағйироти амниятӣ ба ҳисоби шумост. Барои идома тасдиқ кунед, ки ин шумо ҳастед.</string>
     <string name="stepup_email_label">Рамзи email</string>
     <string name="stepup_email_placeholder">Рамзро аз почтаи электронии худ ворид кунед</string>
-    <string name="stepup_totp_label">Коди Authenticator</string>
+    <string name="stepup_totp_label">Коди аутентификатор</string>
     <string name="stepup_totp_placeholder">Рамзи аутентификатори худро ворид кунед</string>
     <string name="stepup_use_passkey">Калиди дастрасии худро истифода баред</string>
     <string name="stepup_send_email">Имейл фиристодан</string>

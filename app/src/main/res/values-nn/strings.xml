@@ -7,13 +7,13 @@
     <string name="launcher_crm">Mochi CRM</string>
     <string name="launcher_people">Mochi Personar</string>
     <string name="launcher_settings">Mochi Innstillingar</string>
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wikiar</string>
     <string name="launcher_chess">Mochi Sjakk</string>
     <string name="launcher_go">Mochi Go</string>
     <string name="launcher_words">Mochi Ord</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi Marknad</string>
     <string name="launcher_calendars">Mochi Kalendrar</string>
-    <string name="launcher_staff">Mochi Personale</string>
+    <string name="launcher_staff">Mochi Stab</string>
 
     <string name="app_name">Mochi</string>
 

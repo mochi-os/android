@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">Mochi スタッフ</string>
+    <string name="launcher_staff">Mochi スタッフ</string>
     <string name="staff_accounts_action_ban_title">アカウントを BAN</string>
     <string name="staff_accounts_action_suspend_title">アカウントを停止</string>
     <string name="staff_accounts_action_unban_title">BANを解除</string>
@@ -162,7 +162,7 @@
     <string name="staff_categories_type_digital">デジタル</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">物理的</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">Mochi スタッフ</string>
     <string name="staff_config_field_auto_approve">自動承認しきい値</string>
     <string name="staff_config_field_hold">保留しきい値</string>
     <string name="staff_config_field_platform_fee">プラットフォーム手数料</string>
@@ -261,7 +261,7 @@
     <string name="staff_disputes_resolving">解決中…</string>
     <string name="staff_disputes_review">レビュー</string>
     <string name="staff_disputes_status_escalated">エスカレート</string>
-    <string name="staff_disputes_status_open">開く</string>
+    <string name="staff_disputes_status_open">オープン</string>
     <string name="staff_disputes_status_resolved_buyer">解決済み（買い手）</string>
     <string name="staff_disputes_status_resolved_seller">解決済み（売り手）</string>
     <string name="staff_disputes_status_responded">応答済み</string>
@@ -280,7 +280,7 @@
     <string name="staff_disputes_stripe_product_unacceptable">商品が受け入れられない</string>
     <string name="staff_disputes_stripe_subscription_canceled">サブスクリプションをキャンセル</string>
     <string name="staff_disputes_stripe_unrecognized">心当たりのない請求</string>
-    <string name="staff_disputes_view">ビュー</string>
+    <string name="staff_disputes_view">表示</string>
     <string name="staff_filter_chip_remove">フィルターを削除</string>
     <string name="staff_filter_chip_template">%1$s:%2$s</string>
     <string name="staff_filter_label_moderation">モデレーション</string>
@@ -329,7 +329,7 @@
     <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">操作</string>
     <string name="staff_reports_action_ban">ユーザーをBAN</string>
-    <string name="staff_reports_action_dismiss">閉じる</string>
+    <string name="staff_reports_action_dismiss">却下</string>
     <string name="staff_reports_action_label">操作</string>
     <string name="staff_reports_action_placeholder">アクションを選択</string>
     <string name="staff_reports_action_remove">削除</string>
@@ -351,7 +351,7 @@
     <string name="staff_reports_meta_reason">理由</string>
     <string name="staff_reports_meta_reporter">報告者</string>
     <string name="staff_reports_meta_seller">販売者</string>
-    <string name="staff_reports_meta_target">ターゲット</string>
+    <string name="staff_reports_meta_target">報告対象</string>
     <string name="staff_reports_meta_type">タイプ</string>
     <string name="staff_reports_notes_label">メモ</string>
     <string name="staff_reports_reason_counterfeit">偽造品または盗難品</string>
@@ -368,7 +368,7 @@
     <string name="staff_reports_submitting">送信中…</string>
     <string name="staff_reports_type_listing">リスティング</string>
     <string name="staff_reports_type_user">ユーザー</string>
-    <string name="staff_reports_view">ビュー</string>
+    <string name="staff_reports_view">表示</string>
     <string name="staff_reviews_action_remove">削除</string>
     <string name="staff_reviews_action_restore">復元</string>
     <string name="staff_reviews_empty">レビューはありません</string>
@@ -416,7 +416,7 @@
     <string name="staff_status_hold">保留</string>
     <string name="staff_status_manual">手動</string>
     <string name="staff_status_moderator">モデレーター</string>
-    <string name="staff_status_open">開く</string>
+    <string name="staff_status_open">オープン</string>
     <string name="staff_status_pending">保留中</string>
     <string name="staff_status_published">公開済み</string>
     <string name="staff_status_rejected">却下</string>

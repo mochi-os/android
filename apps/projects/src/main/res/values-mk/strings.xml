@@ -52,12 +52,12 @@
     <string name="projects_object_tab_activity">Активност</string>
     <string name="projects_object_tab_requests">Барања</string>
     <string name="projects_object_tab_attachments">Прилози</string>
-    <string name="projects_object_tab_links">Линкови</string>
+    <string name="projects_object_tab_links">Врски</string>
     <string name="projects_watchers_watch">Следи</string>
     <string name="projects_watchers_unwatch">Престани со следење</string>
     <string name="projects_parent_label">Родител</string>
     <string name="projects_parent_search_placeholder">Барај</string>
-    <string name="projects_links_title">Линкови</string>
+    <string name="projects_links_title">Врски</string>
     <string name="projects_links_add">Додај врска</string>
     <string name="projects_links_section_blocks">Блокови</string>
     <string name="projects_links_section_blocked_by">Блокирано од</string>
@@ -93,13 +93,13 @@
     <string name="projects_request_create_action">Создај</string>
     <string name="projects_diff_unified">Обединето</string>
     <string name="projects_diff_split">Раздели</string>
-    <string name="projects_diff_empty">Нема достапен diff</string>
+    <string name="projects_diff_empty">Нема достапни разлики</string>
     <string name="projects_board_unassigned">Недоделено</string>
     <string name="projects_board_new">Ново</string>
     <string name="projects_board_rename">Преименувај</string>
     <string name="projects_board_rename_column">Преименувај колона</string>
     <string name="projects_move_position">Позиција</string>
-    <string name="projects_move_position_top">Врв</string>
+    <string name="projects_move_position_top">Најгоре</string>
     <string name="projects_move_current">Тековно</string>
     <string name="projects_design_title">Дизајн</string>
     <string name="projects_design_export">Извези дизајн</string>
@@ -158,7 +158,7 @@
     <string name="projects_more">Повеќе</string>
     <string name="projects_request_more">Повеќе</string>
     <string name="projects_comment_send">Испрати</string>
-    <string name="projects_field_position_body">Содржина</string>
+    <string name="projects_field_position_body">Тело</string>
     <string name="projects_sort_field">Сортирај по</string>
     <string name="projects_comment_remove_attachment">Отстрани прилог</string>
     <string name="projects_views_sort_by">Сортирај по</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Пребарај објекти</string>
 
     <string name="notification_channel_projects">Известувања за проекти</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Проекти</string>
     <string name="projects_auth_create_identity_failed">Неуспешно создавање идентитет</string>
     <string name="projects_auth_mfa_unsupported">MFA сè уште не е поддржана во мобилната апликација</string>
     <string name="projects_auth_enter_code_sent">Внесете го кодот испратен на %1$s</string>
@@ -238,9 +238,9 @@
     <string name="projects_request_view_diff">Прикажи разлики</string>
     <string name="projects_request_mark_ready">Означи како подготвено</string>
     <string name="projects_request_merge_default_message">Спој %1$s во %2$s</string>
-    <string name="projects_request_commit_message">Порака на commit</string>
-    <string name="projects_request_method_squash">Squash</string>
-    <string name="projects_request_method_rebase">Rebase</string>
+    <string name="projects_request_commit_message">Порака на комитот</string>
+    <string name="projects_request_method_squash">Збиј</string>
+    <string name="projects_request_method_rebase">Ребазирај</string>
     <string name="projects_request_create_title">Создај барање за спојување</string>
     <string name="projects_request_field_target">Целна гранка</string>
     <string name="projects_diff_title">Разлики: %1$s -&gt; %2$s</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Изберете правило</string>
     <string name="projects_access_authenticated_desc">Секој што е најавен</string>
     <string name="projects_access_anyone_desc">Вклучувајќи анонимни корисници</string>
-    <string name="projects_access_target">Цел</string>
+    <string name="projects_access_target">Корисник или група</string>
     <string name="projects_access_target_hint">ID на ентитет, @група, * (сите) или + (членови)</string>
     <string name="projects_access_selected">Избрано: %1$s</string>
     <string name="projects_access_role_comment">Коментирај и прегледај</string>

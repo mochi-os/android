@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="wikis_sidebar_header">Wikis</string>
+    <string name="wikis_sidebar_header">Wiki</string>
     <string name="wikis_sidebar_all">Všetky wiki</string>
     <string name="wikis_sidebar_find">Nájsť wiki</string>
     <string name="wikis_sidebar_create">Vytvoriť wiki</string>
@@ -23,7 +23,7 @@
     <string name="wikis_page_action_new_page">Nová stránka</string>
     <string name="wikis_page_action_settings">Nastavenia</string>
     <string name="wikis_page_action_unsubscribe">Odhlásiť odber</string>
-    <string name="wikis_title">Wikis</string>
+    <string name="wikis_title">Wiki</string>
     <string name="wikis_empty_title">Začnite svoju prvú wiki</string>
     <string name="wikis_empty_subtitle">Vyhľadajte wiki na odber alebo si vytvorte vlastnú na publikovanie dokumentácie.</string>
     <string name="wikis_create_button">Vytvoriť wiki</string>

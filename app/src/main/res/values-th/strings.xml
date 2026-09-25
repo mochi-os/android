@@ -9,13 +9,13 @@
     <string name="launcher_people">Mochi ผู้คน</string>
     <string name="launcher_settings">Mochi การตั้งค่า</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi วิกิ</string>
     <string name="launcher_chess">Mochi หมากรุก</string>
-    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_go">Mochi โกะ</string>
     <string name="launcher_words">Mochi คำศัพท์</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi ตลาด</string>
     <string name="launcher_calendars">Mochi ปฏิทิน</string>
-    <string name="launcher_staff">Mochi พนักงาน</string>
+    <string name="launcher_staff">ทีมงาน Mochi</string>
 
 
     <string name="app_name">Mochi</string>

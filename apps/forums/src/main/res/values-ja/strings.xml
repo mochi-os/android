@@ -24,7 +24,7 @@
     <string name="forums_settings">設定</string>
     <string name="forums_load_more">もっと読み込む</string>
     <string name="forums_sort_label">並べ替え</string>
-    <string name="forums_sort_new">新規</string>
+    <string name="forums_sort_new">新着</string>
     <string name="forums_sort_hot">人気</string>
     <string name="forums_sort_top">トップ</string>
     <string name="forums_sort_interests">興味</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">メンバー</string>
     <string name="forums_tab_banner">バナー</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">ターゲット</string>
-    <string name="forums_access_level_view">ビュー</string>
+    <string name="forums_access_target">対象</string>
+    <string name="forums_access_level_view">表示</string>
     <string name="forums_access_level_vote">投票</string>
     <string name="forums_access_level_comment">コメント</string>
     <string name="forums_access_level_post">投稿</string>
     <string name="forums_access_level_none">なし</string>
     <string name="forums_members_empty">メンバーがいません</string>
     <string name="forums_banner_dismiss">バナーを閉じる</string>
-    <string name="forums_ai_mode_tag">タグ</string>
+    <string name="forums_ai_mode_tag">タグ付け</string>
     <string name="forums_ai_account_default">デフォルトアカウント</string>
     <string name="forums_ai_prompt_reset">デフォルトに戻す</string>
     <string name="forums_settings_unsubscribe">購読解除</string>
@@ -80,7 +80,7 @@
     <string name="forums_moderation_reports_resolved">解決済み</string>
     <string name="forums_moderation_reports_all">すべて</string>
     <string name="forums_moderation_reports_empty">報告はありません</string>
-    <string name="forums_moderation_report_dismiss">閉じる</string>
+    <string name="forums_moderation_report_dismiss">却下</string>
     <string name="forums_moderation_restrictions_empty">制限なし</string>
     <string name="forums_moderation_restriction_remove">削除</string>
     <string name="forums_moderation_restriction_type">タイプ</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">手動</string>
     <string name="forums_access_search_users">ユーザーを検索</string>
     <string name="forums_access_no_groups">利用可能なグループがありません</string>
-    <string name="forums_saved_title">保存しました</string>
+    <string name="forums_saved_title">保存済み</string>
     <string name="forums_saved_save">後で見るために保存</string>
     <string name="forums_saved_remove">保存済みから削除</string>
     <string name="forums_saved_clear_all">すべてクリア</string>

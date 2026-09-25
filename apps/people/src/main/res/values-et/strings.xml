@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Ava navigatsioon</string>
     <string name="people_person_state_friend">Sõbrad</string>
     <string name="people_person_state_self">Sina</string>
-    <string name="people_person_message">Sõnum</string>
+    <string name="people_person_message">Saada sõnum</string>
     <string name="people_person_accept">Nõustu</string>
     <string name="people_person_decline">Keeldu</string>
 
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">Sisesta sobiv kuueteistkümnendvärv (nt #a78bfa)</string>
     <string name="people_profile_accent_none">Puudub</string>
     <string name="people_profile_privacy_private_desc">Profiili saavad vaadata ainult vastastikused sõbrad</string>
-    <string name="people_welcome_title">Tere tulemast rakendusse People</string>
+    <string name="people_welcome_title">Tere tulemast rakendusse Inimesed</string>
     <string name="people_person_banner_alt">Kasutaja %1$s bänner</string>
     <string name="people_person_private">See profiil on privaatne</string>
     <string name="people_person_state_invited">Kutsutud</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Nõustu kõigiga</string>
     <string name="people_invitations_decline_all">Lükka kõik tagasi</string>
     <string name="people_invitations_cancel_all">Tühista kõik</string>
+    <string name="people_invitations_cancel">Tühista</string>
     <string name="people_invitations_all_accepted">Kõik kutsed vastu võetud</string>
     <string name="people_invitations_all_declined">Kõik kutsed tagasi lükatud</string>
     <string name="people_invitations_all_cancelled">Kõik kutsed tühistatud</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Otsi…</string>
     <string name="people_contacts_invited">Kutsutud</string>
     <string name="people_contacts_accept">Nõustu</string>
-    <string name="people_contacts_message">Sõnum</string>
+    <string name="people_contacts_message">Saada sõnum</string>
     <string name="people_contacts_no_people_found">Inimesi ei leitud</string>
     <string name="people_contacts_try_adjusting">Proovi otsingut kohandada</string>
     <string name="people_contact_section_address">Aadress</string>

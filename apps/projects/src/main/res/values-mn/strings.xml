@@ -29,7 +29,7 @@
     <string name="projects_sort_label">Эрэмбэлэх</string>
     <string name="projects_sort_direction">Чиглэл</string>
     <string name="projects_sort_rank">Гар аргаар</string>
-    <string name="projects_sort_number">Тоо</string>
+    <string name="projects_sort_number">Дугаар</string>
     <string name="projects_sort_created">Үүсгэгдсэн</string>
     <string name="projects_sort_updated">Шинэчлэгдсэн</string>
     <string name="projects_create_object_type">Төрөл</string>
@@ -76,7 +76,7 @@
     <string name="projects_property_option_none">Алга</string>
     <string name="projects_attachments">Хавсралтууд</string>
     <string name="projects_attachment_add">Хавсралт нэмэх</string>
-    <string name="projects_request_empty">Merge хүсэлт алга</string>
+    <string name="projects_request_empty">Нэгтгэх хүсэлт алга</string>
     <string name="projects_request_status_draft">Ноорог</string>
     <string name="projects_request_status_open">Нээлттэй</string>
     <string name="projects_request_status_merged">Нэгтгэгдсэн</string>
@@ -93,20 +93,20 @@
     <string name="projects_request_create_action">Үүсгэх</string>
     <string name="projects_diff_unified">Нэгдсэн</string>
     <string name="projects_diff_split">Хуваах</string>
-    <string name="projects_diff_empty">Diff байхгүй</string>
+    <string name="projects_diff_empty">Зөрүү байхгүй</string>
     <string name="projects_board_unassigned">Хариуцсан хүн оноогоогүй</string>
     <string name="projects_board_new">Шинэ</string>
     <string name="projects_board_rename">Нэр өөрчлөх</string>
     <string name="projects_board_rename_column">Багана нэр өөрчлөх</string>
     <string name="projects_move_position">Байрлал</string>
-    <string name="projects_move_position_top">Дээд</string>
+    <string name="projects_move_position_top">Хамгийн дээр</string>
     <string name="projects_move_current">Одоогийн</string>
     <string name="projects_design_title">Дизайн</string>
     <string name="projects_design_export">Дизайн экспортлох</string>
     <string name="projects_design_import">Дизайн импортлох</string>
     <string name="projects_design_imported">Дизайн оруулсан</string>
     <string name="projects_design_tab_classes">Ангиуд</string>
-    <string name="projects_design_tab_views">Үзлэгүүд</string>
+    <string name="projects_design_tab_views">Харагдацууд</string>
     <string name="projects_design_import_dialog_title">Дизайн импортлох</string>
     <string name="projects_design_import_choose_template">Загвар сонгох</string>
     <string name="projects_design_replace_title">Загвар солих уу?</string>
@@ -149,7 +149,7 @@
     <string name="projects_views_type_board">Самбар</string>
     <string name="projects_views_type_list">Жагсаалт</string>
     <string name="projects_views_direction">Чиглэл</string>
-    <string name="projects_views_sort_number">Тоо</string>
+    <string name="projects_views_sort_number">Дугаар</string>
     <string name="projects_views_sort_created">Үүсгэгдсэн</string>
     <string name="projects_views_sort_updated">Шинэчлэгдсэн</string>
     <string name="projects_views_sort_rank">Зэрэг</string>
@@ -158,9 +158,9 @@
     <string name="projects_more">Илүү</string>
     <string name="projects_request_more">Илүү</string>
     <string name="projects_comment_send">Илгээх</string>
-    <string name="projects_field_position_body">Агуулга</string>
+    <string name="projects_field_position_body">Үндсэн хэсэг</string>
     <string name="projects_sort_field">Эрэмбэлэх</string>
-    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_comment_remove_attachment">Хавсралт хасах</string>
     <string name="projects_views_sort_by">Эрэмбэлэх</string>
     <string name="projects_auth_login_failed">Нэвтрэх амжилтгүй</string>
     <string name="projects_views_move_up">Дээш зөөх</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Объект хайх</string>
 
     <string name="notification_channel_projects">Төслүүдийн мэдэгдэл</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Төслүүд</string>
     <string name="projects_auth_create_identity_failed">Хувийн мэдээлэл үүсгэхэд алдаа гарлаа</string>
     <string name="projects_auth_mfa_unsupported">Гар утасны аппад MFA-г одоогоор дэмжихгүй</string>
     <string name="projects_auth_enter_code_sent">%1$s руу илгээсэн кодыг оруулна уу</string>
@@ -207,7 +207,7 @@
     <string name="projects_comment_clear_reply">Хариултыг арилгах</string>
     <string name="projects_comment_placeholder">Сэтгэгдэл нэмэх</string>
     <string name="projects_property_pick_date">Огноо сонгох</string>
-    <string name="projects_property_ok">OK</string>
+    <string name="projects_property_ok">За</string>
     <string name="projects_property_add_item">Зүйл нэмэх</string>
     <string name="projects_property_required">%1$s шаардлагатай</string>
     <string name="projects_activity_empty">Үйл явдал байхгүй</string>
@@ -238,9 +238,9 @@
     <string name="projects_request_view_diff">Зөрүүг харах</string>
     <string name="projects_request_mark_ready">Бэлэн гэж тэмдэглэх</string>
     <string name="projects_request_merge_default_message">%1$s-г %2$s руу нэгтгэх</string>
-    <string name="projects_request_commit_message">Commit мессеж</string>
-    <string name="projects_request_method_squash">Squash</string>
-    <string name="projects_request_method_rebase">Rebase</string>
+    <string name="projects_request_commit_message">Коммитын мессеж</string>
+    <string name="projects_request_method_squash">Шахах</string>
+    <string name="projects_request_method_rebase">Дахин суурилуулах</string>
     <string name="projects_request_create_title">Нэгтгэх хүсэлт үүсгэх</string>
     <string name="projects_request_field_target">Зорилтот салбар</string>
     <string name="projects_diff_title">Зөрүү: %1$s -&gt; %2$s</string>
@@ -321,13 +321,13 @@
     <string name="projects_filter_all">Бүгд</string>
     <string name="projects_filter_other">Бусад</string>
     <string name="projects_create_object_title">Шинэ</string>
-    <string name="projects_settings_section_identity">Identity</string>
+    <string name="projects_settings_section_identity">Танилт</string>
     <string name="projects_settings_access_updated">Хандалт шинэчлэгдсэн</string>
     <string name="projects_settings_access_revoked">Нэвтрэх эрхийг цуцалсан</string>
     <string name="projects_settings_section_access">Хандалтын удирдлага</string>
     <string name="projects_people_search">Хүмүүсийг хайх</string>
-    <string name="projects_settings_field_entity_id">Entity ID</string>
-    <string name="projects_settings_field_fingerprint">Fingerprint</string>
+    <string name="projects_settings_field_entity_id">Нэгжийн ID</string>
+    <string name="projects_settings_field_fingerprint">Хурууны хээ</string>
     <string name="projects_settings_field_server">Сервер</string>
     <string name="projects_access_subject_anyone">Хэн ч</string>
     <string name="projects_access_subject_authenticated">Баталгаажсан хэрэглэгчид</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Дүрэм сонгоно уу</string>
     <string name="projects_access_authenticated_desc">Нэвтэрсэн хэн ч</string>
     <string name="projects_access_anyone_desc">Нэргүй хэрэглэгчдийг оруулаад</string>
-    <string name="projects_access_target">Зорилт</string>
+    <string name="projects_access_target">Хэрэглэгч эсвэл бүлэг</string>
     <string name="projects_access_target_hint">Бүртгэлийн ID, @бүлэг, * (бүгд), эсвэл + (гишүүд)</string>
     <string name="projects_access_selected">Сонгосон: %1$s</string>
     <string name="projects_access_role_comment">Сэтгэгдэл болон харах</string>
@@ -381,5 +381,5 @@
     <string name="projects_option_delete_message">\"%1$s\" сонголтыг устгахдаа итгэлтэй байна уу?</string>
     <string name="projects_create_object_no_types">Одоогоор зүйл үүсгэх боломжгүй. Эхлээд шаардлагатай эх зүйлийг үүсгэнэ үү.</string>
     <string name="projects_create_blocked_no_options">Үүсгэх боломжгүй: %1$s шаардлагатай боловч сонгох сонголт байхгүй. Загварт сонголт нэмнэ үү.</string>
-    <string name="projects_attachment_remove">Remove attachment</string>
+    <string name="projects_attachment_remove">Хавсралт хасах</string>
 </resources>

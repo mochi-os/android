@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Cari objek</string>
 
     <string name="notification_channel_projects">Pemberitahuan projek</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Projek</string>
     <string name="projects_auth_create_identity_failed">Gagal mencipta identiti</string>
     <string name="projects_auth_mfa_unsupported">MFA belum disokong dalam aplikasi mudah alih</string>
     <string name="projects_auth_enter_code_sent">Masukkan kod yang dihantar ke %1$s</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Pilih peraturan</string>
     <string name="projects_access_authenticated_desc">Sesiapa sahaja yang telah log masuk</string>
     <string name="projects_access_anyone_desc">Termasuk pengguna tanpa nama</string>
-    <string name="projects_access_target">Sasaran</string>
+    <string name="projects_access_target">Pengguna atau kumpulan</string>
     <string name="projects_access_target_hint">ID entiti, @kumpulan, * (semua orang), atau + (ahli)</string>
     <string name="projects_access_selected">Dipilih: %1$s</string>
     <string name="projects_access_role_comment">Komen dan lihat</string>

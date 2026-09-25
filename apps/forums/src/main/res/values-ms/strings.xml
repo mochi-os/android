@@ -24,9 +24,9 @@
     <string name="forums_settings">Tetapan</string>
     <string name="forums_load_more">Muatkan lagi</string>
     <string name="forums_sort_label">Susun</string>
-    <string name="forums_sort_new">Baharu</string>
+    <string name="forums_sort_new">Terbaharu</string>
     <string name="forums_sort_hot">Panas</string>
-    <string name="forums_sort_top">Atas</string>
+    <string name="forums_sort_top">Teratas</string>
     <string name="forums_sort_interests">Minat</string>
     <string name="forums_post_title_field">Tajuk</string>
     <string name="forums_post_attach">Lampirkan fail</string>
@@ -59,7 +59,7 @@
     <string name="forums_tab_members">Ahli</string>
     <string name="forums_tab_banner">Sepanduk</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Sasaran</string>
+    <string name="forums_access_target">Pengguna atau kumpulan</string>
     <string name="forums_access_level_view">Lihat</string>
     <string name="forums_access_level_vote">Undi</string>
     <string name="forums_access_level_comment">Komen</string>
@@ -80,7 +80,7 @@
     <string name="forums_moderation_reports_resolved">Diselesaikan</string>
     <string name="forums_moderation_reports_all">Semua</string>
     <string name="forums_moderation_reports_empty">Tiada laporan</string>
-    <string name="forums_moderation_report_dismiss">Tutup</string>
+    <string name="forums_moderation_report_dismiss">Tolak</string>
     <string name="forums_moderation_restrictions_empty">Tiada sekatan</string>
     <string name="forums_moderation_restriction_remove">Alih keluar</string>
     <string name="forums_moderation_restriction_type">Jenis</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_login_failed">Log masuk gagal</string>
 
     <string name="notification_channel_forums">Pemberitahuan forum</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Forum</string>
     <string name="forums_auth_create_identity_failed">Gagal mencipta identiti</string>
     <string name="forums_auth_mfa_unsupported">MFA belum disokong dalam aplikasi mudah alih</string>
     <string name="forums_auth_enter_code_sent">Masukkan kod yang dihantar ke %1$s</string>
@@ -171,7 +171,7 @@
     <string name="forums_moderation_log_meta">Oleh %1$s · Sasaran %2$s</string>
     <string name="forums_moderation_restriction_add">Tambah sekatan</string>
     <string name="forums_moderation_restriction_user">Identiti pengguna</string>
-    <string name="forums_moderation_restriction_type_shadowban">Shadowban</string>
+    <string name="forums_moderation_restriction_type_shadowban">Sekatan bayangan</string>
     <string name="forums_moderation_restriction_duration_seconds">Tempoh (saat, kosongkan untuk kekal)</string>
     <string name="forums_moderation_restriction_expires">Tamat %1$s</string>
     <string name="forums_moderation_restriction_permanent">Kekal</string>
@@ -320,7 +320,7 @@
     <string name="forums_moderation_action_restrict">Terhad</string>
     <string name="forums_moderation_action_unrestrict">Tidak terhad</string>
     <string name="forums_moderation_action_resolve">Laporan diselesaikan</string>
-    <string name="forums_moderation_target_post">Hantar</string>
+    <string name="forums_moderation_target_post">Hantaran</string>
     <string name="forums_moderation_target_comment">Komen</string>
     <string name="forums_moderation_target_user">Pengguna</string>
     <string name="forums_moderation_reason_spam">Spam</string>

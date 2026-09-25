@@ -45,8 +45,8 @@
     <string name="route_delete_title">Ñan wischuy?</string>
     <string name="route_path">Ñan</string>
     <string name="route_method">Método</string>
-    <string name="route_method_app">App</string>
-    <string name="route_method_entity">Entity</string>
+    <string name="route_method_app">Aplicación</string>
+    <string name="route_method_entity">Entidad</string>
     <string name="route_method_redirect">Redirige</string>
     <string name="route_priority">Ñawpaqman</string>
     <string name="route_enabled">Kallpachasqa</string>
@@ -62,7 +62,7 @@
     <string name="notifprefs_edit_category">Categoríata hukchay</string>
     <string name="notifprefs_name_label">Sutin</string>
     <string name="notifprefs_destinations">Chayanakuna</string>
-    <string name="notifprefs_dest_web">Web browser</string>
+    <string name="notifprefs_dest_web">Web navegador</string>
     <string name="notifprefs_test">Pruebay</string>
     <string name="notifprefs_edit">Hukchay</string>
     <string name="notifprefs_delete">Wischuy</string>
@@ -151,7 +151,7 @@
     <string name="system_setting_oauth_github_client_secret">GitHub client pakasqa</string>
     <string name="system_setting_oauth_microsoft_client_id">Microsoft cliente ID</string>
     <string name="system_setting_oauth_microsoft_client_secret">Microsoft client pakasqa</string>
-    <string name="system_setting_oauth_microsoft_tenant">Microsoft tenant</string>
+    <string name="system_setting_oauth_microsoft_tenant">Microsoft inquilino</string>
     <string name="system_setting_oauth_facebook_client_id">Facebook App ID</string>
     <string name="system_setting_oauth_facebook_client_secret">Facebook App pakasqa</string>
     <string name="system_setting_oauth_x_client_id">X cliente ID</string>
@@ -274,11 +274,11 @@
     <string name="system_users_revoke_all_message">Kay apaykachaqpa llapan llamk\'aq sessionkunaqa lluqsiynqaku.</string>
     <string name="system_users_pagination_status">%3$d apaykachaqkunamanta %1$d–%2$d qhawachichkan</string>
     <string name="account_title">Cuenta</string>
-    <string name="account_section_identity">Identity</string>
-    <string name="account_identity_identity">Identity</string>
+    <string name="account_section_identity">Kikinchakuy</string>
+    <string name="account_identity_identity">Kikinchakuy</string>
     <string name="account_identity_username">Sutiyay</string>
     <string name="account_identity_name">Sutin</string>
-    <string name="account_identity_fingerprint">Fingerprint</string>
+    <string name="account_identity_fingerprint">Ruk\'ana unancha</string>
     <string name="account_identity_directory_toggle">Hukkuna directorio-pi tarisuchun saqiy</string>
     <string name="domain_add">Dominio yapay</string>
     <string name="domain_add_title">Dominio yapay</string>
@@ -315,7 +315,7 @@
     <string name="login_section_methods">Yaykuna ñankuna</string>
     <string name="login_method_email">Email código</string>
     <string name="login_method_passkey">Yaykuna llave</string>
-    <string name="login_method_totp">Authenticator app</string>
+    <string name="login_method_totp">Autenticador aplicación</string>
     <string name="login_method_oauth">Hukpaq yaykuy</string>
     <string name="login_method_recovery">Recuperación códigokuna</string>
     <string name="account_close_section">Cuentata wichqay</string>
@@ -323,8 +323,8 @@
     <string name="account_close_confirm_title">¿Cuentaykita wichqaytachu munanki?</string>
     <string name="account_close_confirm_body">Cuentaykitam pichanapaq churanqaku, hinaspa lluqsichisqa kanki. Pichana punchawmanta ñawpaqta mayqin pachapipas yapamanta yaykuspa sayachiyta atinki.</string>
     <string name="account_data_download">Uray chaskiy</string>
-    <string name="route_target_app">App</string>
-    <string name="route_target_entity">Entity</string>
+    <string name="route_target_app">Aplicación</string>
+    <string name="route_target_entity">Entidad</string>
     <string name="route_target_url">URL</string>
     <string name="account_data_section">Willayniyki</string>
     <string name="account_data_dialog_title">Willakuyniykita urquy</string>
@@ -347,7 +347,7 @@
     <string name="system_setting_hostname_publish">Hostname hinaspa dominiokunata huk servidorkunaman willay</string>
     <string name="system_setting_hostname">Huk servidorkunaman willasqa hostname</string>
     <string name="system_status_peer_id">Mast\'i ID</string>
-    <string name="system_status_holepunch">Hole punch</string>
+    <string name="system_status_holepunch">Perforación</string>
     <string name="system_status_holepunch_value">%1$d atipasqa · %2$d mana atipasqa</string>
     <string name="system_status_awaiting_routing">Ñanta suyaq willaykuna</string>
     <string name="system_status_relay_service">Relay servicio</string>
@@ -357,7 +357,7 @@
     <string name="route_target_none">Manam ima chayana kanchu</string>
     <string name="login_invalid_code">Mana allin código</string>
     <string name="accounts_provider_browser">Browser willaykuna</string>
-    <string name="accounts_provider_fcm">Android push</string>
+    <string name="accounts_provider_fcm">Android push willakuy</string>
     <string name="accounts_provider_mcp">MCP servidor</string>
     <string name="accounts_provider_unifiedpush">Push willakuy</string>
     <string name="accounts_provider_url">Hawa URL</string>
@@ -374,11 +374,11 @@
     <string name="accounts_forget_title">Mañanata qunqaychu?</string>
     <string name="accounts_forget_message">Kayqa \"%1$s\" mañanata qunqanqa, willakuykunatapas chayman mana apachinqachu.</string>
     <string name="accounts_device_seen">Qhipa kaq rikusqa %1$s</string>
-    <string name="notifprefs_device_app">%1$s · app</string>
-    <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_device_app">%1$s · aplicación</string>
+    <string name="notifprefs_device_push">%1$s · push willakuy</string>
     <string name="notifprefs_test_partial">Prueba apachisqa: %1$d/%2$d</string>
     <string name="notifprefs_test_none">Mana destinokuna churasqa</string>
-    <string name="notifprefs_transport_fcm">Android push</string>
+    <string name="notifprefs_transport_fcm">Android push willakuy</string>
     <string name="notifprefs_no_destinations">Mana destinokuna</string>
     <string name="account_data_generate">Fraseyta ruwachiy</string>
     <string name="accounts_field_server">Seridor URL</string>

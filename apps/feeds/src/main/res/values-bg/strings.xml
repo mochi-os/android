@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Все още няма публикации</string>
     <string name="feeds_sort_label">Сортиране</string>
     <string name="feeds_sort_interests">Интереси</string>
-    <string name="feeds_sort_new">Ново</string>
+    <string name="feeds_sort_new">Най-нови</string>
     <string name="feeds_sort_hot">Горещо</string>
-    <string name="feeds_sort_top">Най-горе</string>
+    <string name="feeds_sort_top">Най-добри</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Публикация</string>
     <string name="feeds_image_preview">Преглед</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Отказ от отговора</string>
     <string name="feeds_edit_post">Редактиране на публикация</string>
     <string name="feeds_save_label">Запази</string>
-    <string name="feeds_post_action">Публикация</string>
+    <string name="feeds_post_action">Публикувай</string>
     <string name="feeds_feed_label">Емисия</string>
     <string name="feeds_add_files">Добави файлове</string>
     <string name="feeds_restore">Възстанови</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Изход</string>
     <string name="feeds_ai_account_default">Акаунт по подразбиране</string>
     <string name="feeds_ai_mode_off">Изключено</string>
-    <string name="feeds_ai_mode_tag">Етикет</string>
+    <string name="feeds_ai_mode_tag">Етикетиране</string>
     <string name="feeds_ai_mode_tag_deduplicate">Етикет + дедупликация</string>
     <string name="feeds_feed_not_found">Емисията не е намерена</string>
     <string name="feeds_post_not_found">Публикацията не е намерена</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Интересът е намален</string>
     <string name="feeds_interest_removed">Интересът е премахнат</string>
     <string name="feeds_interest_failed">Неуспешна корекция на интерес</string>
-    <string name="feeds_saved_title">Запазено</string>
-    <string name="feeds_saved_menu">Запазено</string>
+    <string name="feeds_saved_title">Запазени</string>
+    <string name="feeds_saved_menu">Запазени</string>
     <string name="feeds_saved_save">Запази за по-късно</string>
     <string name="feeds_saved_remove">Премахни от запазените</string>
     <string name="feeds_saved_clear_all">Изчисти всички</string>

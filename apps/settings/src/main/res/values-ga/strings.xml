@@ -92,7 +92,7 @@
     <string name="accounts_empty">Níl aon chuntas nasctha</string>
     <string name="accounts_type_label">Cineál</string>
     <string name="accounts_field_email">Ríomhphost</string>
-    <string name="accounts_field_model">Múnla</string>
+    <string name="accounts_field_model">Samhail</string>
     <string name="accounts_field_name">Ainm</string>
     <string name="accounts_status_pending">Ar feitheamh</string>
     <string name="accounts_status_verified">Fíoraithe</string>

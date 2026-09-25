@@ -25,7 +25,7 @@
     <string name="chat_chat_not_found">Чат олдсонгүй</string>
 
     <string name="chat_message_send">Илгээх</string>
-    <string name="chat_attachment_remove">Remove attachment</string>
+    <string name="chat_attachment_remove">Хавсралт хасах</string>
     <string name="chat_attachment_move_up">Дээш зөөх</string>
     <string name="chat_attachment_move_down">Доош зөөх</string>
 

@@ -156,7 +156,7 @@
     <string name="wikis_attachments_view_list">তালিকা ভিউ</string>
     <string name="wikis_attachments_copy_embed">এম্বেড লিঙ্ক কপি করুন</string>
     <string name="wikis_attachments_embed_copied">এমবেড লিঙ্ক কপি করা হয়েছে</string>
-    <string name="wikis_attachments_download">ডাউনলোড</string>
+    <string name="wikis_attachments_download">ডাউনলোড করুন</string>
     <string name="wikis_attachments_delete">মুছুন</string>
     <string name="wikis_attachments_delete_confirm_title">অ্যাটাচমেন্ট মুছুন</string>
     <string name="wikis_attachments_delete_success">অ্যাটাচমেন্ট মুছে ফেলা হয়েছে</string>

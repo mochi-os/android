@@ -68,7 +68,7 @@
     <string name="projects_links_no_matches">Mana tupaq objetokuna</string>
     <string name="projects_field_yes">Arí</string>
     <string name="projects_field_no">Manan</string>
-    <string name="projects_field_type_checkbox">Checkbox</string>
+    <string name="projects_field_type_checkbox">Casilla</string>
     <string name="projects_comment_save">Waqaychay</string>
     <string name="projects_comment_empty">Manaraq comentariokuna</string>
     <string name="projects_comment_attach">Archivos churay</string>
@@ -80,11 +80,11 @@
     <string name="projects_request_status_draft">Wakichisqa</string>
     <string name="projects_request_status_open">Kicharisqa</string>
     <string name="projects_request_status_merged">Mergesqa</string>
-    <string name="projects_request_merge">Merge</string>
+    <string name="projects_request_merge">Hukllachay</string>
     <string name="projects_request_close">Wichq\'ay</string>
-    <string name="projects_request_merge_dialog_title">Merge</string>
+    <string name="projects_request_merge_dialog_title">Hukllachay</string>
     <string name="projects_request_method">Método</string>
-    <string name="projects_request_method_merge">Merge</string>
+    <string name="projects_request_method_merge">Hukllachay</string>
     <string name="projects_request_field_repository">Repositorio</string>
     <string name="projects_request_field_source">Pukyu branch</string>
     <string name="projects_request_field_title">Sutinchay</string>
@@ -131,8 +131,8 @@
     <string name="projects_field_type">Layan</string>
     <string name="projects_field_flags">Flagkuna</string>
     <string name="projects_field_required">Munasqa</string>
-    <string name="projects_field_position_default">Default</string>
-    <string name="projects_field_position_sidebar">Sidebar</string>
+    <string name="projects_field_position_default">Predeterminado</string>
+    <string name="projects_field_position_sidebar">Waqta barra</string>
     <string name="projects_field_save">Cambiokunata waqaychay</string>
     <string name="projects_field_options">Opcionkuna</string>
     <string name="projects_field_add_option">Akllana yapay</string>
@@ -152,7 +152,7 @@
     <string name="projects_views_sort_number">Yupay</string>
     <string name="projects_views_sort_created">Kamarisqa</string>
     <string name="projects_views_sort_updated">Musuqchasqa</string>
-    <string name="projects_views_sort_rank">Rank</string>
+    <string name="projects_views_sort_rank">Rango</string>
     <string name="projects_project_not_found">Proyecto mana tarisqachu</string>
     <string name="projects_list_more">Astawan</string>
     <string name="projects_more">Astawan</string>
@@ -160,7 +160,7 @@
     <string name="projects_comment_send">Apachiy</string>
     <string name="projects_field_position_body">Ukhu</string>
     <string name="projects_sort_field">Allichanapaq</string>
-    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_comment_remove_attachment">Adjuntota qichuy</string>
     <string name="projects_views_sort_by">Allichanapaq</string>
     <string name="projects_auth_login_failed">Mana yaykuyta atispachu</string>
     <string name="projects_views_move_up">Patamanta apay</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Imakunata maskhay</string>
 
     <string name="notification_channel_projects">Llamkay willakuykuna</string>
-    <string name="projects_auth_brand">Mochi Llamkaykuna</string>
+    <string name="projects_auth_brand">Mochi Proyectokuna</string>
     <string name="projects_auth_create_identity_failed">Kikinkayta kamariyqa mana atikurqachu</string>
     <string name="projects_auth_mfa_unsupported">MFA manaraqmi atikunchu chay antichaska aplikasyunpi</string>
     <string name="projects_auth_enter_code_sent">%1$s-man apachisqa kuwitata churay</string>
@@ -207,7 +207,7 @@
     <string name="projects_comment_clear_reply">Kutichiyta pichay</string>
     <string name="projects_comment_placeholder">Rimayta yapay</string>
     <string name="projects_property_pick_date">Pachata akllay</string>
-    <string name="projects_property_ok">OK</string>
+    <string name="projects_property_ok">Allinmi</string>
     <string name="projects_property_add_item">Yapayta yapay</string>
     <string name="projects_property_required">%1$s necesario kachkan</string>
     <string name="projects_activity_empty">Mana ruraykunachu</string>
@@ -321,13 +321,13 @@
     <string name="projects_filter_all">Llapan</string>
     <string name="projects_filter_other">Huk</string>
     <string name="projects_create_object_title">Musuq</string>
-    <string name="projects_settings_section_identity">Identity</string>
+    <string name="projects_settings_section_identity">Kikinchakuy</string>
     <string name="projects_settings_access_updated">Yaykuy musuqchasqa</string>
     <string name="projects_settings_access_revoked">Yaykuna anchurisqa</string>
     <string name="projects_settings_section_access">Yaykuy Kamachiy</string>
     <string name="projects_people_search">Runakunata maskay</string>
-    <string name="projects_settings_field_entity_id">Entity ID</string>
-    <string name="projects_settings_field_fingerprint">Fingerprint</string>
+    <string name="projects_settings_field_entity_id">Entidad ID</string>
+    <string name="projects_settings_field_fingerprint">Ruk\'ana unancha</string>
     <string name="projects_settings_field_server">Server</string>
     <string name="projects_access_subject_anyone">Pipas</string>
     <string name="projects_access_subject_authenticated">Riqsichisqa ruraqkuna</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Huk kamachiyta akllay</string>
     <string name="projects_access_authenticated_desc">Yaykusqa kaq pipas</string>
     <string name="projects_access_anyone_desc">Mana sutiyuq ruwaqkunapas</string>
-    <string name="projects_access_target">Chayana</string>
+    <string name="projects_access_target">Apaykachaq utaq huñu</string>
     <string name="projects_access_target_hint">Entity ID, @huñu, * (llapan), utaq + (yanapaqkuna)</string>
     <string name="projects_access_selected">Akllasqa: %1$s</string>
     <string name="projects_access_role_comment">Comentariy hinaspa qhaway</string>
@@ -381,5 +381,5 @@
     <string name="projects_option_delete_message">¿Cheqaqchu \"%1$s\" akllanata pichayta munanki?</string>
     <string name="projects_create_object_no_types">Manaraq item niraqkuna ruwakuyta atin. Ñawpaqta munasqa parent itemkunata ruway.</string>
     <string name="projects_create_blocked_no_options">Manam kamachiyta atinchu: %1$s necesitasqa ichaqa manam akllanan kanchu. Design nisqapi akllanakunata yapay.</string>
-    <string name="projects_attachment_remove">Remove attachment</string>
+    <string name="projects_attachment_remove">Adjuntota qichuy</string>
 </resources>

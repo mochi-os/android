@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">नेव्हिगेशन उघडा</string>
     <string name="people_person_state_friend">मित्र</string>
     <string name="people_person_state_self">तुम्ही</string>
-    <string name="people_person_message">मेसेज</string>
+    <string name="people_person_message">संदेश पाठवा</string>
     <string name="people_person_accept">स्वीकारा</string>
     <string name="people_person_decline">नाकारा</string>
 
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">वैध हेक्स रंग प्रविष्ट करा (उदा. #a78bfa)</string>
     <string name="people_profile_accent_none">काहीही नाही</string>
     <string name="people_profile_privacy_private_desc">फक्त परस्पर मित्रच तुमची प्रोफाइल पाहू शकतात</string>
-    <string name="people_welcome_title">People मध्ये स्वागत आहे</string>
+    <string name="people_welcome_title">“लोक” मध्ये स्वागत आहे</string>
     <string name="people_person_banner_alt">%1$s साठी बॅनर</string>
     <string name="people_person_private">ही प्रोफाइल खाजगी आहे</string>
     <string name="people_person_state_invited">निमंत्रित</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">सर्व स्वीकारा</string>
     <string name="people_invitations_decline_all">सर्व नाकारा</string>
     <string name="people_invitations_cancel_all">सर्व रद्द करा</string>
+    <string name="people_invitations_cancel">रद्द करा</string>
     <string name="people_invitations_all_accepted">सर्व आमंत्रणे स्वीकारली</string>
     <string name="people_invitations_all_declined">सर्व आमंत्रणे नाकारली</string>
     <string name="people_invitations_all_cancelled">सर्व आमंत्रणे रद्द केली</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">शोधा…</string>
     <string name="people_contacts_invited">निमंत्रित</string>
     <string name="people_contacts_accept">स्वीकारा</string>
-    <string name="people_contacts_message">मेसेज</string>
+    <string name="people_contacts_message">संदेश पाठवा</string>
     <string name="people_contacts_no_people_found">लोक सापडले नाहीत</string>
     <string name="people_contacts_try_adjusting">तुमचा शोध समायोजित करून पहा</string>
     <string name="people_contact_section_address">पत्ता</string>

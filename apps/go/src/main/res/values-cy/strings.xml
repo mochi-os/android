@@ -8,7 +8,7 @@
     <string name="go_action_pass">Pasio</string>
     <string name="go_action_rematch">Aildrefnu gêm</string>
     <string name="go_action_resign">Ymddiswyddo</string>
-    <string name="go_app_title">Mynd</string>
+    <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Cipiadau du</string>
     <string name="go_captures_white_sr">Cipiadau gwyn</string>
     <string name="go_chat_title">Sgwrs</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">Agor y bar ochr</string>
     <string name="go_sidebar_active">Gemau gweithredol</string>
     <string name="go_empty_active">Dim gemau gweithredol eto.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">Wedi ildio</string>
     <string name="go_new_game_title">Gêm Go newydd</string>
     <string name="go_new_game_no_friends">Mae angen i chi ychwanegu ffrind cyn i chi allu dechrau gêm.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

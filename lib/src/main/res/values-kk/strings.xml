@@ -38,7 +38,7 @@
     <string name="access_add_rule">Ереже қосу</string>
     <string name="access_owner">Иесі</string>
     <string name="access_revoke">Қайтарып алу</string>
-    <string name="access_level_comment">Пікір</string>
+    <string name="access_level_comment">Пікір қалдыру</string>
     <string name="access_level_view">Көру</string>
     <string name="access_level_none">Жоқ</string>
     <string name="reaction_like">Ұнайды</string>
@@ -143,7 +143,7 @@
     <string name="auth_next">Келесі</string>
     <string name="auth_or_log_in_with">Немесе мынамен кіріңіз</string>
     <string name="auth_passkey">Кіру кілті</string>
-    <string name="auth_use_passkey">Passkey пайдалану</string>
+    <string name="auth_use_passkey">Кіру кілтін пайдалану</string>
     <string name="auth_email_me_a_code">Маған код электрондық поштамен жіберіңіз</string>
     <string name="auth_or_enter_authenticator_code">Немесе аутентификатор кодын енгізіңіз</string>
     <string name="auth_log_in">Кіру</string>
@@ -191,7 +191,7 @@
     <string name="format_time_weeks_short">%1$d ап</string>
     <string name="format_time_months_short">%1$d ай</string>
     <string name="reaction_add">Реакция қосу</string>
-    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel">Mochi хабарландырулары</string>
     <string name="push_service_channel_description">Mochi хабарландыруларды алу үшін қосылып тұрады</string>
     <string name="push_service_group">Фондық қызмет</string>
     <string name="push_service_title">Mochi хабарландыруларды күтуде</string>
@@ -225,16 +225,16 @@
     <string name="stepup_description">Бұл — тіркелгіңіздің қауіпсіздік өзгерісі. Жалғастыру үшін бұл сіз екеніңізді растаңыз.</string>
     <string name="stepup_email_label">Электрондық пошта коды</string>
     <string name="stepup_email_placeholder">Электрондық поштаңыздағы кодты енгізіңіз</string>
-    <string name="stepup_totp_label">Authenticator коды</string>
-    <string name="stepup_totp_placeholder">Authenticator кодын енгізіңіз</string>
-    <string name="stepup_use_passkey">Passkey пайдаланыңыз</string>
+    <string name="stepup_totp_label">Аутентификатор коды</string>
+    <string name="stepup_totp_placeholder">Аутентификатор кодын енгізіңіз</string>
+    <string name="stepup_use_passkey">Кіру кілтін пайдаланыңыз</string>
     <string name="stepup_send_email">Электрондық пошта жіберу</string>
     <string name="stepup_resend_email">Хатты қайта жіберу</string>
     <string name="stepup_verify">Тексеру</string>
     <string name="stepup_continue_with">%1$s арқылы жалғастыру</string>
     <string name="stepup_error_start">Қайта аутентификацияны бастау мүмкін болмады. Қайталап көріңіз.</string>
     <string name="stepup_error_code">Бұл код қате немесе мерзімі өткен.</string>
-    <string name="stepup_error_passkey">Passkey тексеруі сәтсіз аяқталды. Қайталап көріңіз.</string>
+    <string name="stepup_error_passkey">Кіру кілтін тексеру сәтсіз аяқталды. Қайталап көріңіз.</string>
     <string name="stepup_error_oauth">Бұл тіркелгі арқылы тексеру мүмкін болмады. Қайталап көріңіз.</string>
     <string name="game_system_resign">%1$s берілді</string>
     <string name="game_system_draw_offer">%1$s тең ойынды ұсынды</string>

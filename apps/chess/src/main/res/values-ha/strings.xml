@@ -13,7 +13,7 @@
     <string name="chess_new_title">Sabon Wasa</string>
     <string name="chess_new_pick_opponent">Zaɓi abokin gaba</string>
     <string name="chess_new_no_friends_title">Babu abokai tukuna</string>
-    <string name="chess_new_no_friends_subtitle">Ƙara abokai a app ɗin People don fara wasa</string>
+    <string name="chess_new_no_friends_subtitle">Ƙara abokai a app ɗin Mutane don fara wasa</string>
     <string name="chess_new_add_friends">Ƙara abokai</string>
     <string name="chess_new_start_button">Fara wasa</string>
     <string name="chess_new_creating">Ana ƙirƙira…</string>
@@ -50,7 +50,7 @@
     <string name="chess_piece_king">Sarki</string>
     <string name="chess_piece_queen">Sarauniya</string>
     <string name="chess_piece_rook">Hasumiya</string>
-    <string name="chess_piece_bishop">Gajah</string>
+    <string name="chess_piece_bishop">Giwa</string>
     <string name="chess_piece_knight">Doki</string>
     <string name="chess_piece_pawn">Soja</string>
     <string name="chess_move_played">%1$s ya yi %2$s</string>

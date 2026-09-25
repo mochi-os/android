@@ -38,7 +38,7 @@
     <string name="access_add_rule">Προσθήκη κανόνα</string>
     <string name="access_owner">Ιδιοκτήτης</string>
     <string name="access_revoke">Ανάκληση</string>
-    <string name="access_level_comment">Σχόλιο</string>
+    <string name="access_level_comment">Σχολιασμός</string>
     <string name="access_level_view">Προβολή</string>
     <string name="access_level_none">Κανένα</string>
     <string name="reaction_like">Μου αρέσει</string>
@@ -175,7 +175,7 @@
     <string name="discovery_no_results_hint">Δοκιμάστε να προσαρμόσετε την αναζήτησή σας</string>
     <string name="access_no_rules">Δεν υπάρχουν κανόνες πρόσβασης</string>
     <string name="access_level_react">Αντίδραση</string>
-    <string name="entity_avatar_alt">Avatar για %1$s</string>
+    <string name="entity_avatar_alt">Άβαταρ για %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="lightbox_position">%1$d / %2$d</string>
     <string name="format_time_just_now">Μόλις τώρα</string>
@@ -293,7 +293,7 @@
     <string name="format_italic">Πλάγια</string>
     <string name="format_link">Σύνδεσμος</string>
     <string name="format_heading">Επικεφαλίδα</string>
-    <string name="format_code">Κωδικός</string>
+    <string name="format_code">Κώδικας</string>
     <string name="format_list">Λίστα κουκκίδων</string>
     <string name="common_preview">Προεπισκόπηση</string>
     <string name="rss_revoke_confirm">Ανάκληση</string>

@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">То ҳол ягон пост нест</string>
     <string name="feeds_sort_label">Мураттаб кардан</string>
     <string name="feeds_sort_interests">Шавқҳо</string>
-    <string name="feeds_sort_new">Нав</string>
+    <string name="feeds_sort_new">Навтарин</string>
     <string name="feeds_sort_hot">Доғ</string>
-    <string name="feeds_sort_top">Боло</string>
+    <string name="feeds_sort_top">Беҳтарин</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Пост</string>
     <string name="feeds_image_preview">Пешнамоиш</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Бекор кардани ҷавоб</string>
     <string name="feeds_edit_post">Таҳрири паём</string>
     <string name="feeds_save_label">Захира</string>
-    <string name="feeds_post_action">Пост</string>
+    <string name="feeds_post_action">Нашр кардан</string>
     <string name="feeds_feed_label">Фид</string>
     <string name="feeds_add_files">Иловаи файлҳо</string>
     <string name="feeds_restore">Барқарор кардан</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Баромадан</string>
     <string name="feeds_ai_account_default">Ҳисоби пешфарз</string>
     <string name="feeds_ai_mode_off">Ғайрифаъолшуда</string>
-    <string name="feeds_ai_mode_tag">Барчасп</string>
+    <string name="feeds_ai_mode_tag">Барчаспгузорӣ</string>
     <string name="feeds_ai_mode_tag_deduplicate">Барчасп + такрорзудоӣ</string>
     <string name="feeds_feed_not_found">Фид ёфт нашуд</string>
     <string name="feeds_post_not_found">Пост ёфт нашуд</string>

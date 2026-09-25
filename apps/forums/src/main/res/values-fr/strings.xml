@@ -24,7 +24,7 @@
     <string name="forums_settings">Paramètres</string>
     <string name="forums_load_more">Charger plus</string>
     <string name="forums_sort_label">Trier</string>
-    <string name="forums_sort_new">Nouveau</string>
+    <string name="forums_sort_new">Récent</string>
     <string name="forums_sort_hot">Populaire</string>
     <string name="forums_sort_top">Meilleur</string>
     <string name="forums_sort_interests">Centres d\'intérêt</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Membres</string>
     <string name="forums_tab_banner">Bannière</string>
     <string name="forums_tab_ai">IA</string>
-    <string name="forums_access_target">Cible</string>
-    <string name="forums_access_level_view">Vue</string>
+    <string name="forums_access_target">Utilisateur ou groupe</string>
+    <string name="forums_access_level_view">Voir</string>
     <string name="forums_access_level_vote">Voter</string>
-    <string name="forums_access_level_comment">Commentaire</string>
+    <string name="forums_access_level_comment">Commenter</string>
     <string name="forums_access_level_post">Publier</string>
     <string name="forums_access_level_none">Aucun</string>
     <string name="forums_members_empty">Aucun membre</string>
     <string name="forums_banner_dismiss">Masquer la bannière</string>
-    <string name="forums_ai_mode_tag">Étiquette</string>
+    <string name="forums_ai_mode_tag">Étiqueter</string>
     <string name="forums_ai_account_default">Compte par défaut</string>
     <string name="forums_ai_prompt_reset">Réinitialiser</string>
     <string name="forums_settings_unsubscribe">Se désabonner</string>
@@ -80,7 +80,7 @@
     <string name="forums_moderation_reports_resolved">Résolu</string>
     <string name="forums_moderation_reports_all">Tout</string>
     <string name="forums_moderation_reports_empty">Aucun signalement</string>
-    <string name="forums_moderation_report_dismiss">Ignorer</string>
+    <string name="forums_moderation_report_dismiss">Rejeter</string>
     <string name="forums_moderation_restrictions_empty">Aucune restriction</string>
     <string name="forums_moderation_restriction_remove">Retirer</string>
     <string name="forums_moderation_restriction_type">Type</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">Manuel</string>
     <string name="forums_access_search_users">Rechercher des utilisateurs</string>
     <string name="forums_access_no_groups">Aucun groupe disponible</string>
-    <string name="forums_saved_title">Enregistré</string>
+    <string name="forums_saved_title">Enregistrements</string>
     <string name="forums_saved_save">Enregistrer pour plus tard</string>
     <string name="forums_saved_remove">Retirer des enregistrés</string>
     <string name="forums_saved_clear_all">Tout effacer</string>
@@ -320,7 +320,7 @@
     <string name="forums_moderation_action_restrict">Restreint</string>
     <string name="forums_moderation_action_unrestrict">Restriction levée</string>
     <string name="forums_moderation_action_resolve">Signalement résolu</string>
-    <string name="forums_moderation_target_post">Publier</string>
+    <string name="forums_moderation_target_post">Publication</string>
     <string name="forums_moderation_target_comment">Commentaire</string>
     <string name="forums_moderation_target_user">Utilisateur</string>
     <string name="forums_moderation_reason_spam">Spam</string>

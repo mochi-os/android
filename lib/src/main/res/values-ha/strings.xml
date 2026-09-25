@@ -38,7 +38,7 @@
     <string name="access_add_rule">Ƙara doka</string>
     <string name="access_owner">Mai shi</string>
     <string name="access_revoke">Janyewa</string>
-    <string name="access_level_comment">Sharhi</string>
+    <string name="access_level_comment">Yi sharhi</string>
     <string name="access_level_view">Kalla</string>
     <string name="access_level_none">Babu</string>
     <string name="reaction_like">So</string>
@@ -73,8 +73,8 @@
     <string name="settings_radius_small">Karami</string>
     <string name="settings_radius_medium">Matsakaici</string>
     <string name="settings_radius_large">Babba</string>
-    <string name="settings_font">Font</string>
-    <string name="settings_font_system">System</string>
+    <string name="settings_font">Nau\'in rubutu</string>
+    <string name="settings_font_system">Tsari</string>
     <string name="settings_font_serif">Serif</string>
     <string name="settings_font_dyslexia">Mai dacewa da rashin karatu</string>
     <string name="settings_font_size">Girman font</string>
@@ -94,9 +94,9 @@
     <string name="settings_week_saturday">Asabar</string>
     <string name="settings_week_sunday">Lahadi</string>
     <string name="settings_number_format">Tsarin lamba</string>
-    <string name="settings_units">Units</string>
-    <string name="settings_units_metric">Metric</string>
-    <string name="settings_units_imperial">Imperial</string>
+    <string name="settings_units">Ma\'auni</string>
+    <string name="settings_units_metric">Tsarin metrik</string>
+    <string name="settings_units_imperial">Tsarin Birtaniya</string>
     <string name="settings_time_zone">Yankin lokaci</string>
     <string name="settings_reset_to_defaults">Mayar zuwa asali</string>
     <string name="settings_reset_confirm_title">A mayar da abubuwan da kake so?</string>
@@ -106,8 +106,8 @@
     <string name="settings_display_reset">Mayar zuwa asali</string>
     <string name="settings_display_reset_confirm_title">Sake saita nuni?</string>
     <string name="settings_display_reset_confirm_message">Wannan zai sake saita saitunan nuni zuwa tsohuwar darajojinsu.</string>
-    <string name="settings_theme_title">Theme</string>
-    <string name="settings_theme_default">Default</string>
+    <string name="settings_theme_title">Jigo</string>
+    <string name="settings_theme_default">Tsoho</string>
     <string name="settings_background">Bayan fage</string>
     <string name="settings_background_theme">Daga jigo</string>
     <string name="settings_background_off">Babu</string>
@@ -192,7 +192,7 @@
     <string name="format_time_weeks_short">%1$dm</string>
     <string name="format_time_months_short">%1$dw</string>
     <string name="reaction_add">Ƙara martani</string>
-    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel">Tura ta Mochi</string>
     <string name="push_service_channel_description">Yana ci gaba da haɗa Mochi don karɓar sanarwa</string>
     <string name="push_service_group">Sabis na baya</string>
     <string name="push_service_title">Mochi yana sauraron sanarwa</string>
@@ -205,7 +205,7 @@
     <string name="oem_hint_samsung_note">A wayoyin Samsung, kuma ka duba Saituna → Kulawar na\'ura → Manhajojin barci ka cire Mochi idan tana cikin jeri.</string>
     <string name="oem_hint_allow">Ba da izinin bayan fage</string>
     <string name="oem_hint_dismiss">Kada a sake nunawa</string>
-    <string name="about_title">Mochi Client</string>
+    <string name="about_title">Manhajar Mochi</string>
     <string name="about_version">Sigar %1$s</string>
     <string name="about_check_updates">Duba sabuntawa</string>
     <string name="about_up_to_date">Yana nan a kwanannan</string>
@@ -293,7 +293,7 @@
     <string name="format_italic">Rubutu mai karkata</string>
     <string name="format_link">Hanyar haɗi</string>
     <string name="format_heading">Kanun rubutu</string>
-    <string name="format_code">Lambar</string>
+    <string name="format_code">Code</string>
     <string name="format_list">Jerin ɗigo</string>
     <string name="common_preview">Duba</string>
     <string name="rss_revoke_confirm">Janyewa</string>

@@ -67,7 +67,7 @@
     <string name="crm_board_rename">Yeniden adlandır</string>
     <string name="crm_board_rename_column">Sütunu yeniden adlandır</string>
     <string name="crm_move_position">Konum</string>
-    <string name="crm_move_position_top">Üst</string>
+    <string name="crm_move_position_top">En üst</string>
     <string name="crm_move_current">Mevcut</string>
     <string name="crm_design_title">Tasarım</string>
     <string name="crm_design_export">Tasarımı dışa aktar</string>
@@ -117,7 +117,7 @@
     <string name="crm_views_edit_dialog_title">Görünümü düzenle</string>
     <string name="crm_views_delete_title">Görünümü sil</string>
     <string name="crm_views_type">Tür</string>
-    <string name="crm_views_type_board">Tahta</string>
+    <string name="crm_views_type_board">Pano</string>
     <string name="crm_views_type_list">Liste</string>
     <string name="crm_views_direction">Yön</string>
     <string name="crm_views_sort_created">Oluşturuldu</string>

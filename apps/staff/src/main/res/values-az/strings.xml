@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">İşçi Heyəti</string>
+    <string name="launcher_staff">Mochi İşçi Heyəti</string>
     <string name="staff_accounts_action_ban_title">Hesabı blokla</string>
     <string name="staff_accounts_action_suspend_title">Hesabı dayandır</string>
     <string name="staff_accounts_action_unban_title">Qadağanı qaldır</string>
@@ -162,13 +162,13 @@
     <string name="staff_categories_type_digital">Rəqəmsal</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">Fiziki</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">İşçi Heyəti</string>
     <string name="staff_config_field_auto_approve">Avtomatik təsdiq həddi</string>
     <string name="staff_config_field_hold">Saxlama həddi</string>
     <string name="staff_config_field_platform_fee">Platforma haqqı</string>
     <string name="staff_config_field_review_window">Rəy pəncərəsi</string>
     <string name="staff_config_field_stripe_oauth_client">OAuth müştəri ID</string>
-    <string name="staff_config_field_stripe_publishable">Publishable key</string>
+    <string name="staff_config_field_stripe_publishable">Açıq açar</string>
     <string name="staff_config_field_stripe_secret">Gizli açar</string>
     <string name="staff_config_group_moderation">Moderasiya</string>
     <string name="staff_config_group_payments">Ödənişlər</string>
@@ -253,15 +253,15 @@
     <string name="staff_disputes_refund_help">Tam %1$s geri qaytarmaq üçün boş buraxın. Qismən geri qaytarma üçün daha kiçik məbləğ daxil edin.</string>
     <string name="staff_disputes_refund_must_be_positive">Geri qaytarma məbləği sıfırdan böyük olmalıdır</string>
     <string name="staff_disputes_resolution_buyer">Alıcı üçün həll et</string>
-    <string name="staff_disputes_resolution_label">Çözüm</string>
+    <string name="staff_disputes_resolution_label">Həll</string>
     <string name="staff_disputes_resolution_placeholder">Həlli seçin</string>
     <string name="staff_disputes_resolution_seller">Satıcı üçün həll et</string>
     <string name="staff_disputes_resolve">Həll et</string>
     <string name="staff_disputes_resolved_toast">Mübahisə həll edildi</string>
     <string name="staff_disputes_resolving">Həll edilir…</string>
-    <string name="staff_disputes_review">Rəy</string>
+    <string name="staff_disputes_review">Nəzərdən keçir</string>
     <string name="staff_disputes_status_escalated">Eskalasiya edildi</string>
-    <string name="staff_disputes_status_open">Aç</string>
+    <string name="staff_disputes_status_open">Açıq</string>
     <string name="staff_disputes_status_resolved_buyer">Həll edildi (alıcı)</string>
     <string name="staff_disputes_status_resolved_seller">Həll edildi (satıcı)</string>
     <string name="staff_disputes_status_responded">Cavablandırıldı</string>
@@ -287,9 +287,9 @@
     <string name="staff_listings_filter_status_label">Status</string>
     <string name="staff_listings_moderation_auto_approved">Avtomatik təsdiqləndi</string>
     <string name="staff_listings_moderation_hold">Saxla</string>
-    <string name="staff_listings_moderation_manual">Manual</string>
+    <string name="staff_listings_moderation_manual">Əl ilə</string>
     <string name="staff_listings_moderation_rejected">Rədd edildi</string>
-    <string name="staff_listings_moderation_review">Rəy</string>
+    <string name="staff_listings_moderation_review">Yoxlama</string>
     <string name="staff_listings_moderation_soft_approved">Şərti təsdiqləndi</string>
     <string name="staff_listings_notes_label">Qeydlər</string>
     <string name="staff_listings_price_placeholder">—</string>
@@ -327,7 +327,7 @@
     <string name="staff_reports_cancel">Ləğv et</string>
     <string name="staff_reports_close">Bağla</string>
     <string name="staff_reports_dialog_title_action">Hesabat üzrə tədbir görün</string>
-    <string name="staff_reports_dialog_title_view">Şikayət et</string>
+    <string name="staff_reports_dialog_title_view">Şikayət</string>
     <string name="staff_reports_empty">Hesabat yoxdur</string>
     <string name="staff_reports_filter_status_label">Status</string>
     <string name="staff_reports_filter_type_label">Növ</string>
@@ -337,7 +337,7 @@
     <string name="staff_reports_meta_reason">Səbəb</string>
     <string name="staff_reports_meta_reporter">Hesabatçı</string>
     <string name="staff_reports_meta_seller">Satıcı</string>
-    <string name="staff_reports_meta_target">Hədəf</string>
+    <string name="staff_reports_meta_target">Şikayət obyekti</string>
     <string name="staff_reports_meta_type">Növ</string>
     <string name="staff_reports_notes_label">Qeydlər</string>
     <string name="staff_reports_reason_counterfeit">Saxta və ya oğurlanmış</string>
@@ -398,9 +398,9 @@
     <string name="staff_status_expired">Vaxtı keçmiş</string>
     <string name="staff_status_hidden">Gizli</string>
     <string name="staff_status_hold">Saxla</string>
-    <string name="staff_status_manual">Manual</string>
+    <string name="staff_status_manual">Əl ilə</string>
     <string name="staff_status_moderator">Moderator</string>
-    <string name="staff_status_open">Aç</string>
+    <string name="staff_status_open">Açıq</string>
     <string name="staff_status_pending">Gözləmədə</string>
     <string name="staff_status_published">Dərc edildi</string>
     <string name="staff_status_rejected">Rədd edildi</string>
@@ -408,7 +408,7 @@
     <string name="staff_status_resolved_buyer">Həll edildi (alıcı)</string>
     <string name="staff_status_resolved_seller">Həll edildi (satıcı)</string>
     <string name="staff_status_responded">Cavablandırıldı</string>
-    <string name="staff_status_review">Rəy</string>
+    <string name="staff_status_review">Yoxlama</string>
     <string name="staff_status_reviewed">Nəzərdən keçirildi</string>
     <string name="staff_status_reviewing">Nəzərdən keçirilir</string>
     <string name="staff_status_soft_approved">Şərti təsdiqləndi</string>

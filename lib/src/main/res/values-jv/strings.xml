@@ -38,7 +38,7 @@
     <string name="access_add_rule">Tambah aturan</string>
     <string name="access_owner">Sing duwé</string>
     <string name="access_revoke">Cabut</string>
-    <string name="access_level_comment">Komentar</string>
+    <string name="access_level_comment">Komentari</string>
     <string name="access_level_view">Deleng</string>
     <string name="access_level_none">Ora ana</string>
     <string name="reaction_like">Seneng</string>
@@ -73,7 +73,7 @@
     <string name="settings_radius_small">Cilik</string>
     <string name="settings_radius_medium">Sedheng</string>
     <string name="settings_radius_large">Gedhe</string>
-    <string name="settings_font">Font</string>
+    <string name="settings_font">Aksara</string>
     <string name="settings_font_system">Sistem</string>
     <string name="settings_font_serif">Serif</string>
     <string name="settings_font_dyslexia">Cocok kanggo disleksia</string>
@@ -101,7 +101,7 @@
     <string name="settings_reset_to_defaults">Reset menyang default</string>
     <string name="settings_reset_confirm_title">Reset preferensi?</string>
     <string name="settings_reset_confirm_message">Iki bakal nyetel ulang kabeh preferensi menyang nilai default-é.</string>
-    <string name="settings_reset">Reset</string>
+    <string name="settings_reset">Setel maneh</string>
     <string name="settings_display_title">Tampilan</string>
     <string name="settings_display_reset">Reset menyang default</string>
     <string name="settings_display_reset_confirm_title">Setel maneh tampilan?</string>

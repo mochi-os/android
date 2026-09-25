@@ -56,7 +56,7 @@
     <string name="crm_links_no_matches">कौनो मेल खाए वाला ऑब्जेक्ट नइखे</string>
     <string name="crm_field_yes">हाँ</string>
     <string name="crm_field_no">नाहीं</string>
-    <string name="crm_field_type_checkbox">Checkbox</string>
+    <string name="crm_field_type_checkbox">चेकबॉक्स</string>
     <string name="crm_comment_empty">अबहीं तक कौनो टिप्पणी नइखे</string>
     <string name="crm_comment_attach">फाइल संलग्न करीं</string>
     <string name="crm_property_remove">हटाईं</string>
@@ -97,7 +97,7 @@
     <string name="crm_field_type_number">संख्या</string>
     <string name="crm_field_type_user">उपयोगकर्ता</string>
     <string name="crm_field_type_date">तारीख</string>
-    <string name="crm_field_type_checklist">Checklist</string>
+    <string name="crm_field_type_checklist">चेकलिस्ट</string>
     <string name="crm_field_name">नाम</string>
     <string name="crm_field_type">प्रकार</string>
     <string name="crm_field_flags">झंडा</string>

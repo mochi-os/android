@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="feeds_title">Vood</string>
+    <string name="feeds_title">Uudisvood</string>
     <string name="feeds_find_feeds">Otsi voogusid</string>
     <string name="feeds_create_feed">Loo voog</string>
     <string name="feeds_new_post">Uus postitus</string>
@@ -14,13 +14,13 @@
     <string name="feeds_no_posts_yet">Postitusi veel pole</string>
     <string name="feeds_sort_label">Sorteeri</string>
     <string name="feeds_sort_interests">Huvid</string>
-    <string name="feeds_sort_new">Uus</string>
+    <string name="feeds_sort_new">Uusimad</string>
     <string name="feeds_sort_hot">Kuum</string>
-    <string name="feeds_sort_top">Üles</string>
+    <string name="feeds_sort_top">Parimad</string>
     <string name="feeds_sort_ai">AI</string>
-    <string name="feeds_post_default_author">Postita</string>
+    <string name="feeds_post_default_author">Postitus</string>
     <string name="feeds_image_preview">Eelvaade</string>
-    <string name="feeds_post">Postita</string>
+    <string name="feeds_post">Postitus</string>
     <string name="feeds_comments">Kommentaarid</string>
     <string name="feeds_delete_post">Kustuta postitus</string>
     <string name="feeds_delete_comment">Kustuta kommentaar</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Logi välja</string>
     <string name="feeds_ai_account_default">Vaikimisi konto</string>
     <string name="feeds_ai_mode_off">Keelatud</string>
-    <string name="feeds_ai_mode_tag">Silt</string>
+    <string name="feeds_ai_mode_tag">Sildi lisamine</string>
     <string name="feeds_ai_mode_tag_deduplicate">Sildi lisamine + dubleerimine eemaldamine</string>
     <string name="feeds_feed_not_found">Voogu ei leitud</string>
     <string name="feeds_post_not_found">Postitust ei leitud</string>

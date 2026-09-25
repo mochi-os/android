@@ -38,7 +38,7 @@
     <string name="access_add_rule">Voeg reël by</string>
     <string name="access_owner">Eienaar</string>
     <string name="access_revoke">Herroep</string>
-    <string name="access_level_comment">Kommentaar</string>
+    <string name="access_level_comment">Lewer kommentaar</string>
     <string name="access_level_view">Bekyk</string>
     <string name="access_level_none">Geen</string>
     <string name="reaction_like">Hou van</string>

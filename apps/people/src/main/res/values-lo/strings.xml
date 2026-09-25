@@ -57,12 +57,12 @@
     <string name="people_profile_directory_listing">ອະນຸຍາດໃຫ້ຄົນອື່ນຊອກຫາທ່ານໃນສາລະບານ</string>
     <string name="people_profile_markdown_supported">ຮອງຮັບ markdown</string>
     <string name="people_profile_preview">ຕົວຢ່າງ</string>
-    <string name="people_profile_upload_avatar">ອັບໂຫຼດ avatar</string>
+    <string name="people_profile_upload_avatar">ອັບໂຫຼດອະວາຕາ</string>
     <string name="people_profile_upload">ອັບໂຫຼດ</string>
     <string name="people_profile_uploading">ກຳລັງອັບໂຫຼດ…</string>
     <string name="people_profile_change_banner">ປ່ຽນປ້າຍ</string>
     <string name="people_profile_no_banner">ບໍ່ມີແບນເນີ</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">ໄອຄອນເວັບໄຊ</string>
     <string name="people_profile_browser_icon">ໄອຄອນຕົວທ່ອງເວັບ</string>
     <string name="people_profile_file_too_large">ໄຟລ໌ໃຫຍ່ເກີນໄປ</string>
     <string name="people_profile_clear">ລ້າງ</string>
@@ -72,16 +72,16 @@
     <string name="people_common_close">ປິດ</string>
     <string name="people_common_save">ບັນທຶກ</string>
     <string name="people_welcome_dismiss">ປິດ</string>
-    <string name="people_sidebar_header">ຄົນ</string>
+    <string name="people_sidebar_header">ບຸກຄົນ</string>
     <string name="people_open_sidebar">ເປີດການນຳທາງ</string>
     <string name="people_person_state_friend">ໝູ່</string>
     <string name="people_person_state_self">ທ່ານ</string>
-    <string name="people_person_message">ຂໍ້ຄວາມ</string>
+    <string name="people_person_message">ສົ່ງຂໍ້ຄວາມ</string>
     <string name="people_person_accept">ຍອມຮັບ</string>
     <string name="people_person_decline">ປະຕິເສດ</string>
 
 
-    <string name="notification_channel_people">ການແຈ້ງເຕືອນຄົນ</string>
+    <string name="notification_channel_people">ການແຈ້ງເຕືອນບຸກຄົນ</string>
     <string name="people_friends_searching">ກຳລັງຄົ້ນຫາ…</string>
     <string name="people_invitations_toast_accepted">ຮັບເອົາຄຳເຊີນຈາກ %1$s ແລ້ວ</string>
     <string name="people_invitations_toast_declined">ປະຕິເສດຄຳເຊີນຈາກ %1$s ແລ້ວ</string>
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">ໃສ່ລະຫັດສີ hex ທີ່ຖືກຕ້ອງ (ເຊັ່ນ #a78bfa)</string>
     <string name="people_profile_accent_none">ບໍ່ມີ</string>
     <string name="people_profile_privacy_private_desc">ສະເພາະໝູ່ຮ່ວມກັນເທົ່ານັ້ນທີ່ສາມາດເບິ່ງໂປຣໄຟລ໌ຂອງທ່ານໄດ້</string>
-    <string name="people_welcome_title">ຍິນດີຕ້ອນຮັບສູ່ People</string>
+    <string name="people_welcome_title">ຍິນດີຕ້ອນຮັບສູ່ແອັບ “ບຸກຄົນ”</string>
     <string name="people_person_banner_alt">ປ້າຍສຳລັບ %1$s</string>
     <string name="people_person_private">ໂປຣໄຟລ໌ນີ້ເປັນສ່ວນຕົວ</string>
     <string name="people_person_state_invited">ເຊີນແລ້ວ</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">ຍອມຮັບທັງໝົດ</string>
     <string name="people_invitations_decline_all">ປະຕິເສດທັງໝົດ</string>
     <string name="people_invitations_cancel_all">ຍົກເລີກທັງໝົດ</string>
+    <string name="people_invitations_cancel">ຍົກເລີກ</string>
     <string name="people_invitations_all_accepted">ຍອມຮັບຄຳເຊີນທັງໝົດແລ້ວ</string>
     <string name="people_invitations_all_declined">ປະຕິເສດຄຳເຊີນທັງໝົດແລ້ວ</string>
     <string name="people_invitations_all_cancelled">ຍົກເລີກຄຳເຊີນທັງໝົດແລ້ວ</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">ຄົ້ນຫາ…</string>
     <string name="people_contacts_invited">ເຊີນແລ້ວ</string>
     <string name="people_contacts_accept">ຍອມຮັບ</string>
-    <string name="people_contacts_message">ຂໍ້ຄວາມ</string>
+    <string name="people_contacts_message">ສົ່ງຂໍ້ຄວາມ</string>
     <string name="people_contacts_no_people_found">ບໍ່ພົບຄົນ</string>
     <string name="people_contacts_try_adjusting">ລອງປັບປ່ຽນການຄົ້ນຫາຂອງທ່ານ</string>
     <string name="people_contact_section_address">ທີ່ຢູ່</string>

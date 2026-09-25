@@ -10,7 +10,7 @@
     <string name="calendars_delete">Ջնջել</string>
     <string name="calendars_previous">Նախորդ</string>
     <string name="calendars_next">Հաջորդ</string>
-    <string name="calendars_view">Դիտել</string>
+    <string name="calendars_view">Տեսք</string>
     <string name="calendars_view_list">Ցանկ</string>
     <string name="calendars_list_search">Որոնել</string>
     <string name="calendars_event_untitled">Անվերնագիր</string>
@@ -169,7 +169,7 @@
     <string name="calendars_subscribe_server_url">Սերվերի հասցե</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google Օրացույց</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google հաշիվներն այս սերվերում միացված չեն։ Միացրեք դրանք Կարգավորումներ, Համակարգի կարգավորումներ բաժնում։</string>
     <string name="calendars_subscribe_google_connect">Դուք Google հաշիվ չեք միացրել։</string>

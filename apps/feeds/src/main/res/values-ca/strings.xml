@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="feeds_title">Fonts</string>
+    <string name="feeds_title">Canals</string>
     <string name="feeds_find_feeds">Cerca fonts</string>
     <string name="feeds_create_feed">Crea un canal</string>
     <string name="feeds_new_post">Publicació nova</string>
@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Encara no hi ha publicacions</string>
     <string name="feeds_sort_label">Ordena</string>
     <string name="feeds_sort_interests">Interessos</string>
-    <string name="feeds_sort_new">Nou</string>
+    <string name="feeds_sort_new">Recent</string>
     <string name="feeds_sort_hot">Popular</string>
-    <string name="feeds_sort_top">Amunt</string>
+    <string name="feeds_sort_top">Millors</string>
     <string name="feeds_sort_ai">IA</string>
     <string name="feeds_post_default_author">Publicació</string>
     <string name="feeds_image_preview">Vista prèvia</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Cancel·la la resposta</string>
     <string name="feeds_edit_post">Edita la publicació</string>
     <string name="feeds_save_label">Desa</string>
-    <string name="feeds_post_action">Publicació</string>
+    <string name="feeds_post_action">Publica</string>
     <string name="feeds_feed_label">Font</string>
     <string name="feeds_add_files">Afegeix fitxers</string>
     <string name="feeds_restore">Restaura</string>
@@ -131,8 +131,8 @@
     <string name="feeds_interest_reduced">Interès reduït</string>
     <string name="feeds_interest_removed">Interès retirat</string>
     <string name="feeds_interest_failed">No s\'ha pogut ajustar l\'interès</string>
-    <string name="feeds_saved_title">Desat</string>
-    <string name="feeds_saved_menu">Desat</string>
+    <string name="feeds_saved_title">Desats</string>
+    <string name="feeds_saved_menu">Desats</string>
     <string name="feeds_saved_save">Desa per a més tard</string>
     <string name="feeds_saved_remove">Elimina de desats</string>
     <string name="feeds_saved_clear_all">Esborra-ho tot</string>

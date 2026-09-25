@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Mochi Ffrydiau</string>
+    <string name="launcher_feeds">Mochi Llifoedd</string>
     <string name="launcher_chat">Mochi Sgwrs</string>
     <string name="launcher_forums">Mochi Fforymau</string>
     <string name="launcher_projects">Mochi Prosiectau</string>
@@ -9,13 +9,13 @@
     <string name="launcher_people">Mochi Pobl</string>
     <string name="launcher_settings">Mochi Gosodiadau</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wicis</string>
     <string name="launcher_chess">Mochi Gwyddbwyll</string>
     <string name="launcher_go">Mochi Go</string>
     <string name="launcher_words">Mochi Geiriau</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi Marchnad</string>
     <string name="launcher_calendars">Mochi Calendrau</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="launcher_staff">Staff Mochi</string>
 
 
     <string name="app_name">Mochi</string>

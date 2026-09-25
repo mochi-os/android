@@ -72,16 +72,16 @@
     <string name="people_common_close">关闭</string>
     <string name="people_common_save">保存</string>
     <string name="people_welcome_dismiss">关闭</string>
-    <string name="people_sidebar_header">人员</string>
+    <string name="people_sidebar_header">联系人</string>
     <string name="people_open_sidebar">打开导航</string>
     <string name="people_person_state_friend">好友</string>
     <string name="people_person_state_self">您</string>
-    <string name="people_person_message">消息</string>
+    <string name="people_person_message">发消息</string>
     <string name="people_person_accept">接受</string>
     <string name="people_person_decline">拒绝</string>
 
 
-    <string name="notification_channel_people">用户通知</string>
+    <string name="notification_channel_people">联系人通知</string>
     <string name="people_friends_searching">正在搜索…</string>
     <string name="people_invitations_toast_accepted">已接受来自 %1$s 的邀请</string>
     <string name="people_invitations_toast_declined">已拒绝来自 %1$s 的邀请</string>
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">请输入有效的十六进制颜色（例如 #a78bfa）</string>
     <string name="people_profile_accent_none">无</string>
     <string name="people_profile_privacy_private_desc">仅互为好友的用户可以查看你的个人资料</string>
-    <string name="people_welcome_title">欢迎使用用户</string>
+    <string name="people_welcome_title">欢迎使用联系人</string>
     <string name="people_person_banner_alt">%1$s 的横幅</string>
     <string name="people_person_private">此个人资料为私密</string>
     <string name="people_person_state_invited">已邀请</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">全部接受</string>
     <string name="people_invitations_decline_all">全部拒绝</string>
     <string name="people_invitations_cancel_all">全部取消</string>
+    <string name="people_invitations_cancel">取消</string>
     <string name="people_invitations_all_accepted">已接受所有邀请</string>
     <string name="people_invitations_all_declined">已拒绝所有邀请</string>
     <string name="people_invitations_all_cancelled">已取消所有邀请</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">搜索…</string>
     <string name="people_contacts_invited">已邀请</string>
     <string name="people_contacts_accept">接受</string>
-    <string name="people_contacts_message">消息</string>
+    <string name="people_contacts_message">发消息</string>
     <string name="people_contacts_no_people_found">未找到任何人</string>
     <string name="people_contacts_try_adjusting">尝试调整您的搜索</string>
     <string name="people_contact_section_address">地址</string>
@@ -130,7 +131,7 @@
     <string name="people_contact_postcode">邮政编码</string>
     <string name="people_contact_country">国家/地区</string>
     <string name="people_contact_type">类型</string>
-    <string name="people_contact_type_home">家庭</string>
+    <string name="people_contact_type_home">住宅</string>
     <string name="people_contact_type_other">其他</string>
     <string name="people_contact_remove">移除</string>
     <string name="people_contact_pick_date_confirm">确定</string>

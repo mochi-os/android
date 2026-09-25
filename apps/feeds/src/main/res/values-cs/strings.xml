@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Zatím žádné příspěvky</string>
     <string name="feeds_sort_label">Třídit</string>
     <string name="feeds_sort_interests">Zájmy</string>
-    <string name="feeds_sort_new">Nové</string>
+    <string name="feeds_sort_new">Nejnovější</string>
     <string name="feeds_sort_hot">Žhavé</string>
-    <string name="feeds_sort_top">Nahoru</string>
+    <string name="feeds_sort_top">Nejlepší</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Příspěvek</string>
     <string name="feeds_image_preview">Náhled</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Zrušit odpověď</string>
     <string name="feeds_edit_post">Upravit příspěvek</string>
     <string name="feeds_save_label">Uložit</string>
-    <string name="feeds_post_action">Příspěvek</string>
+    <string name="feeds_post_action">Zveřejnit</string>
     <string name="feeds_feed_label">Kanál</string>
     <string name="feeds_add_files">Přidat soubory</string>
     <string name="feeds_restore">Obnovit</string>
@@ -55,7 +55,7 @@
     <string name="feeds_source_url">URL</string>
     <string name="feeds_source_type">Typ</string>
     <string name="feeds_source_type_rss">RSS</string>
-    <string name="feeds_source_type_feed_posts">Mochi feed</string>
+    <string name="feeds_source_type_feed_posts">Kanál Mochi</string>
     <string name="feeds_source_type_feed_memories">Vzpomínky</string>
     <string name="feeds_remove_source">Odebrat zdroj</string>
     <string name="feeds_suggested_credibility_accept">Přijmout</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Odhlásit se</string>
     <string name="feeds_ai_account_default">Výchozí účet</string>
     <string name="feeds_ai_mode_off">Zakázáno</string>
-    <string name="feeds_ai_mode_tag">Štítek</string>
+    <string name="feeds_ai_mode_tag">Štítkování</string>
     <string name="feeds_ai_mode_tag_deduplicate">Štítek + odstranit duplicity</string>
     <string name="feeds_feed_not_found">Kanál nenalezen</string>
     <string name="feeds_post_not_found">Příspěvek nenalezen</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Zájem snížen</string>
     <string name="feeds_interest_removed">Zájem odebrán</string>
     <string name="feeds_interest_failed">Nepodařilo se upravit zájem</string>
-    <string name="feeds_saved_title">Uloženo</string>
-    <string name="feeds_saved_menu">Uloženo</string>
+    <string name="feeds_saved_title">Uložené</string>
+    <string name="feeds_saved_menu">Uložené</string>
     <string name="feeds_saved_save">Uložit na později</string>
     <string name="feeds_saved_remove">Odebrat z uložených</string>
     <string name="feeds_saved_clear_all">Vymazat vše</string>

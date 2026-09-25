@@ -2,20 +2,20 @@
 <resources>
 
     <string name="launcher_feeds">Mochi Feedovi</string>
-    <string name="launcher_chat">Mochi Chat</string>
+    <string name="launcher_chat">Mochi Razgovor</string>
     <string name="launcher_forums">Mochi Forumi</string>
     <string name="launcher_projects">Mochi Projekti</string>
     <string name="launcher_crm">Mochi CRM</string>
     <string name="launcher_people">Mochi Ljudi</string>
     <string name="launcher_settings">Mochi Postavke</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wikiji</string>
     <string name="launcher_chess">Mochi Šah</string>
     <string name="launcher_go">Mochi Go</string>
     <string name="launcher_words">Mochi Riječi</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi Tržište</string>
     <string name="launcher_calendars">Mochi Kalendari</string>
-    <string name="launcher_staff">Mochi Osoblje</string>
+    <string name="launcher_staff">Mochi osoblje</string>
 
 
     <string name="app_name">Mochi</string>

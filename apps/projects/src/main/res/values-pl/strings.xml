@@ -29,7 +29,7 @@
     <string name="projects_sort_label">Sortuj</string>
     <string name="projects_sort_direction">Kierunek</string>
     <string name="projects_sort_rank">Ręczny</string>
-    <string name="projects_sort_number">Liczba</string>
+    <string name="projects_sort_number">Numer</string>
     <string name="projects_sort_created">Utworzone</string>
     <string name="projects_sort_updated">Zaktualizowano</string>
     <string name="projects_create_object_type">Typ</string>
@@ -99,14 +99,14 @@
     <string name="projects_board_rename">Zmień nazwę</string>
     <string name="projects_board_rename_column">Zmień nazwę kolumny</string>
     <string name="projects_move_position">Pozycja</string>
-    <string name="projects_move_position_top">Góra</string>
+    <string name="projects_move_position_top">Na górę</string>
     <string name="projects_move_current">Bieżący</string>
     <string name="projects_design_title">Projekt</string>
     <string name="projects_design_export">Eksportuj projekt</string>
     <string name="projects_design_import">Importuj projekt</string>
     <string name="projects_design_imported">Projekt zaimportowany</string>
     <string name="projects_design_tab_classes">Klasy</string>
-    <string name="projects_design_tab_views">Wyświetlenia</string>
+    <string name="projects_design_tab_views">Widoki</string>
     <string name="projects_design_import_dialog_title">Importuj projekt</string>
     <string name="projects_design_import_choose_template">Wybierz szablon</string>
     <string name="projects_design_replace_title">Zastąpić projekt?</string>
@@ -149,7 +149,7 @@
     <string name="projects_views_type_board">Tablica</string>
     <string name="projects_views_type_list">Lista</string>
     <string name="projects_views_direction">Kierunek</string>
-    <string name="projects_views_sort_number">Liczba</string>
+    <string name="projects_views_sort_number">Numer</string>
     <string name="projects_views_sort_created">Utworzone</string>
     <string name="projects_views_sort_updated">Zaktualizowano</string>
     <string name="projects_views_sort_rank">Ranga</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Szukaj obiektów</string>
 
     <string name="notification_channel_projects">Powiadomienia z projektów</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Projekty</string>
     <string name="projects_auth_create_identity_failed">Nie udało się utworzyć tożsamości</string>
     <string name="projects_auth_mfa_unsupported">MFA nie jest jeszcze obsługiwane w aplikacji mobilnej</string>
     <string name="projects_auth_enter_code_sent">Wprowadź kod wysłany na %1$s</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Wybierz regułę</string>
     <string name="projects_access_authenticated_desc">Każdy, kto jest zalogowany</string>
     <string name="projects_access_anyone_desc">W tym użytkownicy anonimowi</string>
-    <string name="projects_access_target">Cel</string>
+    <string name="projects_access_target">Użytkownik lub grupa</string>
     <string name="projects_access_target_hint">Identyfikator encji, @grupa, * (wszyscy) lub + (członkowie)</string>
     <string name="projects_access_selected">Zaznaczone: %1$s</string>
     <string name="projects_access_role_comment">Komentuj i przeglądaj</string>

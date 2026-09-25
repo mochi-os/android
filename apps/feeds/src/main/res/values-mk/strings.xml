@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="feeds_title">Feed-ови</string>
+    <string name="feeds_title">Канали</string>
     <string name="feeds_find_feeds">Најди feed-ови</string>
     <string name="feeds_create_feed">Создај канал</string>
     <string name="feeds_new_post">Нова објава</string>
@@ -8,19 +8,19 @@
     <string name="feeds_name">Име</string>
     <string name="feeds_create">Создај</string>
     <string name="feeds_no_feeds_found">Не се пронајдени feed-ови</string>
-    <string name="feeds_feed_title_default">Feed</string>
+    <string name="feeds_feed_title_default">Канал</string>
     <string name="feeds_mark_all_read">Означи сè прочитано</string>
     <string name="feeds_settings">Поставки</string>
     <string name="feeds_no_posts_yet">Сè уште нема објави</string>
     <string name="feeds_sort_label">Подреди</string>
     <string name="feeds_sort_interests">Интереси</string>
-    <string name="feeds_sort_new">Ново</string>
+    <string name="feeds_sort_new">Најново</string>
     <string name="feeds_sort_hot">Жешко</string>
-    <string name="feeds_sort_top">Врв</string>
+    <string name="feeds_sort_top">Најдобри</string>
     <string name="feeds_sort_ai">AI</string>
-    <string name="feeds_post_default_author">Објави</string>
+    <string name="feeds_post_default_author">Објава</string>
     <string name="feeds_image_preview">Преглед</string>
-    <string name="feeds_post">Објави</string>
+    <string name="feeds_post">Објава</string>
     <string name="feeds_comments">Коментари</string>
     <string name="feeds_delete_post">Избриши објава</string>
     <string name="feeds_delete_comment">Избриши коментар</string>
@@ -30,7 +30,7 @@
     <string name="feeds_edit_post">Уреди објава</string>
     <string name="feeds_save_label">Зачувај</string>
     <string name="feeds_post_action">Објави</string>
-    <string name="feeds_feed_label">Feed</string>
+    <string name="feeds_feed_label">Канал</string>
     <string name="feeds_add_files">Додај датотеки</string>
     <string name="feeds_restore">Врати</string>
     <string name="feeds_check_in">Пријави доаѓање</string>
@@ -40,10 +40,10 @@
     <string name="feeds_tab_access">Пристап</string>
     <string name="feeds_tab_members">Членови</string>
     <string name="feeds_tab_ai">AI</string>
-    <string name="feeds_feed_name">Име на feed</string>
+    <string name="feeds_feed_name">Име на канал</string>
     <string name="feeds_save_name">Зачувај име</string>
     <string name="feeds_banner">Банер</string>
-    <string name="feeds_banner_description">Опционален markdown banner прикажан на врвот на вашиот feed.</string>
+    <string name="feeds_banner_description">Опционален markdown банер прикажан на врвот на вашиот канал.</string>
     <string name="feeds_clear">Исчисти</string>
     <string name="feeds_delete_feed">Избриши канал</string>
     <string name="feeds_no_members">Нема членови</string>
@@ -55,7 +55,7 @@
     <string name="feeds_source_url">URL</string>
     <string name="feeds_source_type">Тип</string>
     <string name="feeds_source_type_rss">RSS</string>
-    <string name="feeds_source_type_feed_posts">Mochi feed</string>
+    <string name="feeds_source_type_feed_posts">Mochi канал</string>
     <string name="feeds_source_type_feed_memories">Мемории</string>
     <string name="feeds_remove_source">Отстрани извор</string>
     <string name="feeds_suggested_credibility_accept">Прифати</string>
@@ -63,13 +63,13 @@
     <string name="feeds_logout">Одјави се</string>
     <string name="feeds_ai_account_default">Стандардна сметка</string>
     <string name="feeds_ai_mode_off">Оневозможено</string>
-    <string name="feeds_ai_mode_tag">Ознака</string>
+    <string name="feeds_ai_mode_tag">Означи</string>
     <string name="feeds_ai_mode_tag_deduplicate">Означи + отстрани дупликати</string>
-    <string name="feeds_feed_not_found">Feed не е најден</string>
+    <string name="feeds_feed_not_found">Каналот не е најден</string>
     <string name="feeds_post_not_found">Објавата не е пронајдена</string>
     <string name="feeds_post_select_feed">Ве молиме, изберете поток</string>
     <string name="feeds_post_empty_content">Ве молиме, внесете текст или прикачете датотека</string>
-    <string name="feeds_settings_feed_renamed">Feed е преименуван</string>
+    <string name="feeds_settings_feed_renamed">Каналот е преименуван</string>
     <string name="feeds_settings_banner_saved">Банерот е зачуван</string>
     <string name="feeds_settings_source_added">Изворот е додаден</string>
     <string name="feeds_settings_source_updated">Изворот е ажуриран</string>
@@ -186,7 +186,7 @@
     <string name="feeds_source_last_checked">Последна проверка %1$s</string>
     <string name="feeds_settings_unsubscribe_section">Откажи претплата од канал</string>
     <string name="feeds_source_transform_hint">Преведи на англиски и прикажи како точки.</string>
-    <string name="feeds_source_url_hint_feed">ID на ентитет на feed или отпечаток</string>
+    <string name="feeds_source_url_hint_feed">ID на ентитет на канал или отпечаток</string>
     <string name="feeds_source_credibility_label">Веродостојност</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d час</item>

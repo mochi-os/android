@@ -81,7 +81,7 @@
     <string name="projects_request_status_open">Atvērts</string>
     <string name="projects_request_status_merged">Apvienots</string>
     <string name="projects_request_merge">Apvienot</string>
-    <string name="projects_request_close">Aizvērt</string>
+    <string name="projects_request_close">Slēgt</string>
     <string name="projects_request_merge_dialog_title">Apvienot</string>
     <string name="projects_request_method">Metode</string>
     <string name="projects_request_method_merge">Apvienot</string>
@@ -106,7 +106,7 @@
     <string name="projects_design_import">Importēt dizainu</string>
     <string name="projects_design_imported">Dizains importēts</string>
     <string name="projects_design_tab_classes">Klases</string>
-    <string name="projects_design_tab_views">Skatījumi</string>
+    <string name="projects_design_tab_views">Skati</string>
     <string name="projects_design_import_dialog_title">Importēt dizainu</string>
     <string name="projects_design_import_choose_template">Izvēlies veidni</string>
     <string name="projects_design_replace_title">Aizstāt dizainu?</string>
@@ -123,7 +123,7 @@
     <string name="projects_class_delete">Dzēst klasi</string>
     <string name="projects_class_delete_title">Dzēst klasi</string>
     <string name="projects_field_type_text">Teksts</string>
-    <string name="projects_field_type_number">Numurs</string>
+    <string name="projects_field_type_number">Skaitlis</string>
     <string name="projects_field_type_user">Lietotājs</string>
     <string name="projects_field_type_date">Datums</string>
     <string name="projects_field_type_checklist">Kontrolsaraksts</string>
@@ -146,7 +146,7 @@
     <string name="projects_views_edit_dialog_title">Rediģēt skatu</string>
     <string name="projects_views_delete_title">Dzēst skatu</string>
     <string name="projects_views_type">Tips</string>
-    <string name="projects_views_type_board">Galds</string>
+    <string name="projects_views_type_board">Dēlis</string>
     <string name="projects_views_type_list">Saraksts</string>
     <string name="projects_views_direction">Virziens</string>
     <string name="projects_views_sort_number">Numurs</string>
@@ -158,7 +158,7 @@
     <string name="projects_more">Vairāk</string>
     <string name="projects_request_more">Vairāk</string>
     <string name="projects_comment_send">Sūtīt</string>
-    <string name="projects_field_position_body">Teksts</string>
+    <string name="projects_field_position_body">Pamatdaļa</string>
     <string name="projects_sort_field">Kārtot pēc</string>
     <string name="projects_comment_remove_attachment">Noņemt pielikumu</string>
     <string name="projects_views_sort_by">Kārtot pēc</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Meklēt objektus</string>
 
     <string name="notification_channel_projects">Projektu paziņojumi</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Projekti</string>
     <string name="projects_auth_create_identity_failed">Neizdevās izveidot identitāti</string>
     <string name="projects_auth_mfa_unsupported">MFA mobilajā lietotnē vēl netiek atbalstīts</string>
     <string name="projects_auth_enter_code_sent">Ievadiet kodu, kas nosūtīts uz %1$s</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Izvēlieties noteikumu</string>
     <string name="projects_access_authenticated_desc">Ikviens, kurš ir pierakstījies</string>
     <string name="projects_access_anyone_desc">Ieskaitot anonīmos lietotājus</string>
-    <string name="projects_access_target">Mērķis</string>
+    <string name="projects_access_target">Lietotājs vai grupa</string>
     <string name="projects_access_target_hint">Entītijas ID, @grupa, * (visi) vai + (dalībnieki)</string>
     <string name="projects_access_selected">Atlasīts: %1$s</string>
     <string name="projects_access_role_comment">Komentēt un skatīt</string>

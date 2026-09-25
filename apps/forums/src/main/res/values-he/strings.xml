@@ -24,13 +24,13 @@
     <string name="forums_settings">הגדרות</string>
     <string name="forums_load_more">טען עוד</string>
     <string name="forums_sort_label">מיין</string>
-    <string name="forums_sort_new">חדש</string>
+    <string name="forums_sort_new">חדשים</string>
     <string name="forums_sort_hot">חם</string>
-    <string name="forums_sort_top">ראש</string>
+    <string name="forums_sort_top">מובילים</string>
     <string name="forums_sort_interests">תחומי עניין</string>
     <string name="forums_post_title_field">כותרת</string>
     <string name="forums_post_attach">צרף קבצים</string>
-    <string name="forums_post_create_action">פוסט</string>
+    <string name="forums_post_create_action">פרסם</string>
     <string name="forums_post_edit">ערוך פוסט</string>
     <string name="forums_post_edit_title">ערוך פוסט</string>
     <string name="forums_post_edit_title_field">כותרת</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">חברים</string>
     <string name="forums_tab_banner">באנר</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">יעד</string>
+    <string name="forums_access_target">משתמש או קבוצה</string>
     <string name="forums_access_level_view">הצג</string>
     <string name="forums_access_level_vote">הצבע</string>
-    <string name="forums_access_level_comment">תגובה</string>
-    <string name="forums_access_level_post">פוסט</string>
+    <string name="forums_access_level_comment">הגב</string>
+    <string name="forums_access_level_post">פרסם</string>
     <string name="forums_access_level_none">ללא</string>
     <string name="forums_members_empty">אין חברים</string>
     <string name="forums_banner_dismiss">סגור באנר</string>
-    <string name="forums_ai_mode_tag">תגית</string>
+    <string name="forums_ai_mode_tag">תייג</string>
     <string name="forums_ai_account_default">חשבון ברירת מחדל</string>
     <string name="forums_ai_prompt_reset">אפס לברירת מחדל</string>
     <string name="forums_settings_unsubscribe">בטל הרשמה</string>
@@ -135,7 +135,7 @@
     <string name="forums_write_comment">כתוב תגובה…</string>
 
     <string name="notification_channel_forums">התראות פורומים</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi פורומים</string>
     <string name="forums_list_empty">אין עדיין פורומים</string>
     <string name="forums_list_unsubscribe_message">האם אתה בטוח שברצונך לבטל את ההרשמה לפורום זה?</string>
     <string name="forums_find_search_placeholder">חיפוש פורומים או הדבקת כתובת URL</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">ידני</string>
     <string name="forums_access_search_users">חפש משתמשים</string>
     <string name="forums_access_no_groups">אין קבוצות זמינות</string>
-    <string name="forums_saved_title">נשמר</string>
+    <string name="forums_saved_title">שמורים</string>
     <string name="forums_saved_save">שמירה למועד מאוחר יותר</string>
     <string name="forums_saved_remove">הסרה מהשמורים</string>
     <string name="forums_saved_clear_all">נקה הכול</string>

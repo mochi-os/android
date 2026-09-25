@@ -45,7 +45,7 @@
     <string name="route_delete_title">Efase wout?</string>
     <string name="route_path">Chemen</string>
     <string name="route_method">Metòd</string>
-    <string name="route_method_app">App</string>
+    <string name="route_method_app">Aplikasyon</string>
     <string name="route_method_entity">Antite</string>
     <string name="route_method_redirect">Redireksyon</string>
     <string name="route_priority">Priyorite</string>
@@ -119,7 +119,7 @@
     <string name="settings_home_system_documents">Dokiman</string>
     <string name="settings_home_system_settings">Paramèt sistèm</string>
     <string name="system_settings_title">Paramèt sistèm</string>
-    <string name="system_settings_section_login">Login</string>
+    <string name="system_settings_section_login">Koneksyon</string>
     <string name="system_settings_section_oauth">Koneksyon twazyèm pati</string>
     <string name="system_settings_section_user_defaults">Defo itilizatè</string>
     <string name="system_settings_section_operator">Operatè</string>
@@ -132,7 +132,7 @@
     <string name="system_settings_configured">Konfigire</string>
     <string name="system_settings_save">Sove</string>
     <string name="system_settings_clear">Efase</string>
-    <string name="system_settings_reset">Reset</string>
+    <string name="system_settings_reset">Reyinisyalize</string>
     <string name="system_settings_reset_to_default">Reset nan default</string>
     <string name="system_settings_reset_title">Reset nan default?</string>
     <string name="system_setting_apps_install_user">Pèmèt itilizatè enstale app</string>
@@ -311,7 +311,7 @@
         <item quantity="one">1 sesyon revoke</item>
         <item quantity="other">%1$d sesyon revoke</item>
     </plurals>
-    <string name="login_title">Login</string>
+    <string name="login_title">Koneksyon</string>
     <string name="login_section_methods">Metòd koneksyon</string>
     <string name="login_method_email">Kòd imèl</string>
     <string name="login_method_passkey">Kle aksè</string>
@@ -323,7 +323,7 @@
     <string name="account_close_confirm_title">Fèmen kont ou an?</string>
     <string name="account_close_confirm_body">Kont ou an pral pwograme pou efase epi y ap dekonekte ou. Ou kapab anile li nenpòt lè anvan dat efasman an lè ou rekonekte.</string>
     <string name="account_data_download">Telechaje</string>
-    <string name="route_target_app">App</string>
+    <string name="route_target_app">Aplikasyon</string>
     <string name="route_target_entity">Antite</string>
     <string name="route_target_url">URL</string>
     <string name="account_data_section">Done ou</string>
@@ -361,7 +361,7 @@
     <string name="accounts_provider_mcp">Sèvè MCP</string>
     <string name="accounts_provider_unifiedpush">Notifikasyon push</string>
     <string name="accounts_provider_url">URL Ekstèn</string>
-    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_provider_web">Mochi wèb</string>
     <string name="accounts_verified">Kont verifye</string>
     <string name="accounts_verify_invalid">Kòd verifikasyon envalid</string>
     <string name="accounts_verify_sent">Kòd verifikasyon voye</string>

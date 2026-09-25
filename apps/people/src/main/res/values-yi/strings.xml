@@ -62,7 +62,7 @@
     <string name="people_profile_uploading">אַרויפֿלאָדן…</string>
     <string name="people_profile_change_banner">ענדערן באַנער</string>
     <string name="people_profile_no_banner">קיין באַנער געשטעלט</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">בראָוזער ייקאָן</string>
     <string name="people_profile_browser_icon">בראָוזער ייקאָן</string>
     <string name="people_profile_file_too_large">פֿײַל צו גרויס</string>
     <string name="people_profile_clear">רייניקן</string>
@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">עפֿן נאַוויגאַציע</string>
     <string name="people_person_state_friend">חברים</string>
     <string name="people_person_state_self">איר</string>
-    <string name="people_person_message">בריוו</string>
+    <string name="people_person_message">שיקן אַ בריוו</string>
     <string name="people_person_accept">אָננעמען</string>
     <string name="people_person_decline">אָפּזאָגן</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">אָננעמען אַלע</string>
     <string name="people_invitations_decline_all">אָפּזאָגן אַלע</string>
     <string name="people_invitations_cancel_all">אַנולירן אַלע</string>
+    <string name="people_invitations_cancel">אָפּזאָגן</string>
     <string name="people_invitations_all_accepted">אַלע פֿאַרבעטונגען אָנגענומען</string>
     <string name="people_invitations_all_declined">אַלע פֿאַרבעטונגען אָפּגעזאָגט</string>
     <string name="people_invitations_all_cancelled">אַלע פֿאַרבעטונגען אַנולירט</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">זוך…</string>
     <string name="people_contacts_invited">פֿאַרבעטן</string>
     <string name="people_contacts_accept">אָננעמען</string>
-    <string name="people_contacts_message">בריוו</string>
+    <string name="people_contacts_message">שיקן אַ בריוו</string>
     <string name="people_contacts_no_people_found">קיין מענטשן ניט געפֿונען</string>
     <string name="people_contacts_try_adjusting">פּרוּווט באַאַרבעטן אײַער זוך</string>
     <string name="people_contact_section_address">אַדרעס</string>

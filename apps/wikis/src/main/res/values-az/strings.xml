@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="wikis_sidebar_header">Wikilər</string>
+    <string name="wikis_sidebar_header">Wiki-lər</string>
     <string name="wikis_sidebar_all">Bütün vikilər</string>
     <string name="wikis_sidebar_find">Wikiləri tap</string>
     <string name="wikis_sidebar_create">Viki yarat</string>
@@ -23,7 +23,7 @@
     <string name="wikis_page_action_new_page">Yeni səhifə</string>
     <string name="wikis_page_action_settings">Parametrlər</string>
     <string name="wikis_page_action_unsubscribe">Abunəlikdən çıx</string>
-    <string name="wikis_title">Wikilər</string>
+    <string name="wikis_title">Wiki-lər</string>
     <string name="wikis_empty_title">İlk wiki-nizə başlayın</string>
     <string name="wikis_empty_subtitle">Abunə olmaq üçün wiki axtarın və ya öz sənədlərinizi dərc etmək üçün yaradın.</string>
     <string name="wikis_create_button">Viki yarat</string>
@@ -223,7 +223,7 @@
     <string name="wikis_pageview_toc_expand">Mündəricatı göstər</string>
     <string name="wikis_pageview_toc_collapse">Mündəricatı gizlət</string>
     <string name="wikis_pageview_version">v%1$d</string>
-    <string name="wikis_pageview_updated">Updated %1$s</string>
+    <string name="wikis_pageview_updated">%1$s yeniləndi</string>
     <string name="wikis_pageview_not_found_description">“%1$s” səhifəsi hələ mövcud deyil.</string>
     <string name="wikis_pageview_share_chooser">Viki keçidi</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
@@ -236,7 +236,7 @@
     <string name="wikis_join_search_button">Wiki-ləri axtar…</string>
     <string name="wikis_join_id_hint">abc123…</string>
     <string name="wikis_subscribe_502_retry">Təklif olunan server olmadan yenidən cəhd edilir…</string>
-    <string name="wikis_comments_title_template">%1$s - Comments</string>
+    <string name="wikis_comments_title_template">%1$s - Şərhlər</string>
     <string name="wikis_comment_form_placeholder_new">Şərh yazın…</string>
     <string name="wikis_comment_form_placeholder_reply">Cavab yaz…</string>
     <string name="wikis_comment_form_send">Göndər</string>
@@ -256,19 +256,19 @@
     <string name="wikis_revision_version_badge">Version %1$d</string>
     <string name="wikis_search_pages_placeholder">Səhifələri başlıq və ya məzmuna görə axtar…</string>
     <string name="wikis_search_no_results">“%1$s” üçün səhifə tapılmadı. Başqa axtarış sözləri sınayın.</string>
-    <string name="wikis_search_updated">Updated %1$s</string>
-    <string name="wikis_redirect_deleted_success">Redirect \"%1$s\" deleted</string>
+    <string name="wikis_search_updated">%1$s yeniləndi</string>
+    <string name="wikis_redirect_deleted_success">\"%1$s\" yönləndirməsi silindi</string>
     <string name="wikis_redirect_delete_confirm_message">Bu, “%1$s” ünvanından “%2$s” ünvanına yönləndirməni siləcək. Mənbə URL-ə daxil olan istifadəçilər artıq yönləndirilməyəcək.</string>
     <string name="wikis_tags_subtitle">Səhifələri etiketə görə nəzərdən keçirin. Həmin etiketli bütün səhifələri görmək üçün etiketə toxunun.</string>
-    <string name="wikis_tag_pages_title_template">Pages tagged \"%1$s\"</string>
+    <string name="wikis_tag_pages_title_template">\"%1$s\" etiketi olan səhifələr</string>
     <string name="wikis_tag_manager_add_action">Etiket əlavə et</string>
     <string name="wikis_tag_manager_remove_confirm_title">Etiket silinsin?</string>
     <string name="wikis_tag_manager_remove_confirm_message">“%1$s” etiketi bu səhifədən silinsin?</string>
-    <string name="wikis_tag_manager_added">Tag \"%1$s\" added</string>
-    <string name="wikis_tag_manager_removed">Tag \"%1$s\" removed</string>
+    <string name="wikis_tag_manager_added">\"%1$s\" etiketi əlavə edildi</string>
+    <string name="wikis_tag_manager_removed">\"%1$s\" etiketi silindi</string>
     <string name="wikis_tag_dialog_title">Etiket əlavə et</string>
     <string name="wikis_tag_dialog_empty">Etiket boş ola bilməz</string>
-    <string name="wikis_attachments_search_placeholder">Search attachments…</string>
+    <string name="wikis_attachments_search_placeholder">Qoşmaları axtar…</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” silinsin? Bu geri qaytarıla bilməz.</string>
     <string name="wikis_attachments_downloading">Endirilir…</string>
     <string name="wikis_attachments_empty_description">Bu səhifəyə fayl əlavə etmək üçün Yüklə düyməsinə toxunun.</string>
@@ -276,10 +276,10 @@
     <string name="wikis_settings_name_cancel_cd">Redaktəni ləğv et</string>
     <string name="wikis_access_level_label">İcazə</string>
     <string name="wikis_access_set_failed">Giriş yenilənə bilmədi</string>
-    <string name="wikis_replicas_col_subscribed">Subscribed: %1$s</string>
-    <string name="wikis_replicas_col_synced">Last synced: %1$s</string>
+    <string name="wikis_replicas_col_subscribed">Abunə olundu: %1$s</string>
+    <string name="wikis_replicas_col_synced">Son sinxronlaşdırma: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Bu, “%1$s” ünvanına yeniləmə göndərilməsini dayandıracaq. İstəsələr yenidən replikasiya edə bilərlər.</string>
-    <string name="wikis_replicas_removed_success">Replica removed</string>
+    <string name="wikis_replicas_removed_success">Replika silindi</string>
     <string name="wikis_load_more">Daha çox yüklə</string>
     <string name="wikis_access_change_level">Giriş səviyyəsi</string>
     <string name="wikis_access_subject_anyone">İstənilən şəxs</string>

@@ -24,13 +24,13 @@
     <string name="forums_settings">პარამეტრები</string>
     <string name="forums_load_more">მეტის ჩატვირთვა</string>
     <string name="forums_sort_label">დახარისხება</string>
-    <string name="forums_sort_new">ახალი</string>
+    <string name="forums_sort_new">უახლესი</string>
     <string name="forums_sort_hot">ცხელი</string>
-    <string name="forums_sort_top">ზედა</string>
+    <string name="forums_sort_top">საუკეთესო</string>
     <string name="forums_sort_interests">ინტერესები</string>
     <string name="forums_post_title_field">სათაური</string>
     <string name="forums_post_attach">ფაილების მიმაგრება</string>
-    <string name="forums_post_create_action">პოსტი</string>
+    <string name="forums_post_create_action">გამოქვეყნება</string>
     <string name="forums_post_edit">პოსტის რედაქტირება</string>
     <string name="forums_post_edit_title">პოსტის რედაქტირება</string>
     <string name="forums_post_edit_title_field">სათაური</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">წევრები</string>
     <string name="forums_tab_banner">ბანერი</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">სამიზნე</string>
+    <string name="forums_access_target">მომხმარებელი ან ჯგუფი</string>
     <string name="forums_access_level_view">ნახვა</string>
     <string name="forums_access_level_vote">ხმის მიცემა</string>
-    <string name="forums_access_level_comment">კომენტარი</string>
-    <string name="forums_access_level_post">პოსტი</string>
+    <string name="forums_access_level_comment">კომენტირება</string>
+    <string name="forums_access_level_post">გამოქვეყნება</string>
     <string name="forums_access_level_none">არცერთი</string>
     <string name="forums_members_empty">წევრები არ არის</string>
     <string name="forums_banner_dismiss">ბანერის უარყოფა</string>
-    <string name="forums_ai_mode_tag">ტეგი</string>
+    <string name="forums_ai_mode_tag">ტეგების მინიჭება</string>
     <string name="forums_ai_account_default">ნაგულისხმევი ანგარიში</string>
     <string name="forums_ai_prompt_reset">ნაგულისხმევზე გადაყენება</string>
     <string name="forums_settings_unsubscribe">გამოწერის გაუქმება</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_login_failed">შესვლა ვერ მოხერხდა</string>
 
     <string name="notification_channel_forums">ფორუმის შეტყობინებები</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi ფორუმები</string>
     <string name="forums_auth_create_identity_failed">იდენტობის შექმნა ვერ მოხერხდა</string>
     <string name="forums_auth_mfa_unsupported">MFA ჯერ არ არის მხარდაჭერილი მობილურ აპში</string>
     <string name="forums_auth_enter_code_sent">შეიყვანეთ კოდი, რომელიც გაიგზავნა მისამართზე %1$s</string>

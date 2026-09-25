@@ -7,11 +7,11 @@
     <string name="launcher_crm">Mochi CRM</string>
     <string name="launcher_people">Mochi Ljudje</string>
     <string name="launcher_settings">Mochi Nastavitve</string>
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wikiji</string>
     <string name="launcher_chess">Mochi Šah</string>
     <string name="launcher_go">Mochi Go</string>
     <string name="launcher_words">Mochi Besede</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi Tržnica</string>
     <string name="launcher_calendars">Mochi Koledarji</string>
     <string name="launcher_staff">Mochi Osebje</string>
 

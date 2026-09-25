@@ -10,7 +10,7 @@
     <string name="calendars_delete">Törlés</string>
     <string name="calendars_previous">Előző</string>
     <string name="calendars_next">Tovább</string>
-    <string name="calendars_view">Megtekintés</string>
+    <string name="calendars_view">Nézet</string>
     <string name="calendars_view_list">Lista</string>
     <string name="calendars_list_search">Keresés</string>
     <string name="calendars_event_untitled">Cím nélküli</string>
@@ -169,7 +169,7 @@
     <string name="calendars_subscribe_server_url">Szerver címe</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google Naptár</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">A Google-fiókok nincsenek engedélyezve ezen a kiszolgálón. Engedélyezd őket a Beállítások, Rendszerbeállítások alatt.</string>
     <string name="calendars_subscribe_google_connect">Nem csatlakoztattál Google-fiókot.</string>

@@ -13,7 +13,7 @@
     <string name="chess_new_title">Жаңы оюн</string>
     <string name="chess_new_pick_opponent">Атаандашты тандоо</string>
     <string name="chess_new_no_friends_title">Достор азырынча жок</string>
-    <string name="chess_new_no_friends_subtitle">Ойноо үчүн People колдонмосунан дос кошуңуз</string>
+    <string name="chess_new_no_friends_subtitle">Ойноо үчүн «Адамдар» колдонмосунан дос кошуңуз</string>
     <string name="chess_new_add_friends">Достор кошуу</string>
     <string name="chess_new_start_button">Оюнду баштоо</string>
     <string name="chess_new_creating">Түзүлүүдө…</string>

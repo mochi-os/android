@@ -10,7 +10,7 @@
     <string name="calendars_delete">Ezabatu</string>
     <string name="calendars_previous">Aurrekoa</string>
     <string name="calendars_next">Hurrengoa</string>
-    <string name="calendars_view">Ikusi</string>
+    <string name="calendars_view">Ikuspegia</string>
     <string name="calendars_view_list">Zerrenda</string>
     <string name="calendars_list_search">Bilatu</string>
     <string name="calendars_event_untitled">Izengabea</string>
@@ -169,7 +169,7 @@
     <string name="calendars_subscribe_server_url">Zerbitzariaren helbidea</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google Egutegia</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google kontuak ez daude gaituta zerbitzari honetan. Gaitu itzazu Ezarpenak, Sistemako ezarpenak atalean.</string>
     <string name="calendars_subscribe_google_connect">Ez duzu Google konturik konektatu.</string>

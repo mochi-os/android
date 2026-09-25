@@ -97,12 +97,12 @@
     <string name="crm_field_type_number">Angka</string>
     <string name="crm_field_type_user">Pengguna</string>
     <string name="crm_field_type_date">Tanggal</string>
-    <string name="crm_field_type_checklist">Checklist</string>
+    <string name="crm_field_type_checklist">Daftar periksa</string>
     <string name="crm_field_name">Nama</string>
     <string name="crm_field_type">Tipe</string>
     <string name="crm_field_flags">Bendera</string>
     <string name="crm_field_required">Wajib</string>
-    <string name="crm_field_position_default">Default</string>
+    <string name="crm_field_position_default">Bawaan</string>
     <string name="crm_field_position_sidebar">Bilah samping</string>
     <string name="crm_field_save">Simpan perubahan</string>
     <string name="crm_field_options">Opsi</string>
@@ -244,7 +244,7 @@
     <string name="crm_attachment_remove">Hapus lampiran</string>
     <string name="crm_board_add_column">Tambah kolom</string>
     <string name="crm_settings_entity_id">ID entitas</string>
-    <string name="crm_settings_fingerprint">Fingerprint</string>
+    <string name="crm_settings_fingerprint">Sidik jari</string>
     <string name="crm_settings_server">Server</string>
     <string name="crm_untitled">Tanpa judul</string>
     <string name="crm_property_select">Pilih …</string>

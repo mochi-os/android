@@ -29,7 +29,7 @@
     <string name="projects_sort_label">સોર્ટ કરો</string>
     <string name="projects_sort_direction">દિશા</string>
     <string name="projects_sort_rank">મેન્યુઅલ</string>
-    <string name="projects_sort_number">સંખ્યા</string>
+    <string name="projects_sort_number">ક્રમાંક</string>
     <string name="projects_sort_created">બનાવ્યું</string>
     <string name="projects_sort_updated">અપડેટ કર્યું</string>
     <string name="projects_create_object_type">પ્રકાર</string>
@@ -93,7 +93,7 @@
     <string name="projects_request_create_action">બનાવો</string>
     <string name="projects_diff_unified">એકીકૃત</string>
     <string name="projects_diff_split">વિભાજિત કરો</string>
-    <string name="projects_diff_empty">કોઈ diff ઉપલબ્ધ નથી</string>
+    <string name="projects_diff_empty">કોઈ ડિફ ઉપલબ્ધ નથી</string>
     <string name="projects_board_unassigned">અસોંપાયેલ</string>
     <string name="projects_board_new">નવું</string>
     <string name="projects_board_rename">નામ બદલો</string>
@@ -149,7 +149,7 @@
     <string name="projects_views_type_board">બોર્ડ</string>
     <string name="projects_views_type_list">લિસ્ટ</string>
     <string name="projects_views_direction">દિશા</string>
-    <string name="projects_views_sort_number">સંખ્યા</string>
+    <string name="projects_views_sort_number">ક્રમાંક</string>
     <string name="projects_views_sort_created">બનાવ્યું</string>
     <string name="projects_views_sort_updated">અપડેટ કર્યું</string>
     <string name="projects_views_sort_rank">રેન્ક</string>
@@ -180,7 +180,7 @@
     <string name="projects_links_search_placeholder">વસ્તુઓ શોધો</string>
 
     <string name="notification_channel_projects">પ્રોજેક્ટ્સ સૂચનાઓ</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi પ્રોજેક્ટ્સ</string>
     <string name="projects_list_search_placeholder">પ્રોજેક્ટ્સ શોધો</string>
     <string name="projects_list_no_matching">કોઈ મેળ ખાતા પ્રોજેક્ટ્સ નથી</string>
     <string name="projects_list_empty">હજી સુધી કોઈ પ્રોજેક્ટ્સ નથી</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">એક નિયમ પસંદ કરો</string>
     <string name="projects_access_authenticated_desc">લૉગ ઇન કરેલ કોઈપણ વ્યક્તિ</string>
     <string name="projects_access_anyone_desc">અનામી વપરાશકર્તાઓ સહિત</string>
-    <string name="projects_access_target">લક્ષ્ય</string>
+    <string name="projects_access_target">વપરાશકર્તા અથવા ગ્રુપ</string>
     <string name="projects_access_target_hint">એન્ટિટી ID, @group, * (દરેક), અથવા + (સભ્યો)</string>
     <string name="projects_access_selected">પસંદ કરેલ: %1$s</string>
     <string name="projects_access_role_comment">ટિપ્પણી અને જુઓ</string>

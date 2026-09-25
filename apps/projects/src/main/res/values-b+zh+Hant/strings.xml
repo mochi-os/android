@@ -29,7 +29,7 @@
     <string name="projects_sort_label">排序</string>
     <string name="projects_sort_direction">方向</string>
     <string name="projects_sort_rank">手動</string>
-    <string name="projects_sort_number">數字</string>
+    <string name="projects_sort_number">編號</string>
     <string name="projects_sort_created">已建立</string>
     <string name="projects_sort_updated">已更新</string>
     <string name="projects_create_object_type">類型</string>
@@ -78,7 +78,7 @@
     <string name="projects_attachment_add">新增附件</string>
     <string name="projects_request_empty">無合併請求</string>
     <string name="projects_request_status_draft">草稿</string>
-    <string name="projects_request_status_open">開啟</string>
+    <string name="projects_request_status_open">開放</string>
     <string name="projects_request_status_merged">已合併</string>
     <string name="projects_request_merge">合併</string>
     <string name="projects_request_close">關閉</string>
@@ -106,7 +106,7 @@
     <string name="projects_design_import">匯入設計</string>
     <string name="projects_design_imported">設計已匯入</string>
     <string name="projects_design_tab_classes">類別</string>
-    <string name="projects_design_tab_views">檢視次數</string>
+    <string name="projects_design_tab_views">檢視</string>
     <string name="projects_design_import_dialog_title">匯入設計</string>
     <string name="projects_design_import_choose_template">選擇範本</string>
     <string name="projects_design_replace_title">取代設計?</string>
@@ -146,10 +146,10 @@
     <string name="projects_views_edit_dialog_title">編輯檢視</string>
     <string name="projects_views_delete_title">刪除檢視</string>
     <string name="projects_views_type">類型</string>
-    <string name="projects_views_type_board">棋盤</string>
+    <string name="projects_views_type_board">看板</string>
     <string name="projects_views_type_list">清單</string>
     <string name="projects_views_direction">方向</string>
-    <string name="projects_views_sort_number">數字</string>
+    <string name="projects_views_sort_number">編號</string>
     <string name="projects_views_sort_created">已建立</string>
     <string name="projects_views_sort_updated">已更新</string>
     <string name="projects_views_sort_rank">排名</string>
@@ -158,7 +158,7 @@
     <string name="projects_more">更多</string>
     <string name="projects_request_more">更多</string>
     <string name="projects_comment_send">傳送</string>
-    <string name="projects_field_position_body">內文</string>
+    <string name="projects_field_position_body">主體</string>
     <string name="projects_sort_field">排序依據</string>
     <string name="projects_comment_remove_attachment">移除附件</string>
     <string name="projects_views_sort_by">排序依據</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">搜尋對象</string>
 
     <string name="notification_channel_projects">專案通知</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi 專案</string>
     <string name="projects_auth_create_identity_failed">建立身分失敗</string>
     <string name="projects_auth_mfa_unsupported">行動應用程式尚未支援多重要素驗證</string>
     <string name="projects_auth_enter_code_sent">請輸入傳送至 %1$s 的驗證碼</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">選擇一條規則</string>
     <string name="projects_access_authenticated_desc">任何已登入的使用者</string>
     <string name="projects_access_anyone_desc">包括匿名使用者</string>
-    <string name="projects_access_target">目標</string>
+    <string name="projects_access_target">使用者或群組</string>
     <string name="projects_access_target_hint">實體 ID、@群組、*（所有人）或 +（成員）</string>
     <string name="projects_access_selected">已選取:%1$s</string>
     <string name="projects_access_role_comment">留言與檢視</string>

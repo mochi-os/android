@@ -13,7 +13,7 @@
     <string name="chess_new_title">Naujas Game</string>
     <string name="chess_new_pick_opponent">Pasirinkite priešininką</string>
     <string name="chess_new_no_friends_title">Dar nėra draugų</string>
-    <string name="chess_new_no_friends_subtitle">Pridėkite draugų programėlėje „People“, kad pradėtumėte žaisti</string>
+    <string name="chess_new_no_friends_subtitle">Pridėkite draugų programėlėje „Žmonės“, kad pradėtumėte žaisti</string>
     <string name="chess_new_add_friends">Pridėti draugų</string>
     <string name="chess_new_start_button">Pradėti žaidimą</string>
     <string name="chess_new_creating">Kuriama…</string>

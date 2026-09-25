@@ -29,7 +29,7 @@
     <string name="projects_sort_label">排序</string>
     <string name="projects_sort_direction">方向</string>
     <string name="projects_sort_rank">手动</string>
-    <string name="projects_sort_number">数字</string>
+    <string name="projects_sort_number">编号</string>
     <string name="projects_sort_created">已创建</string>
     <string name="projects_sort_updated">已更新</string>
     <string name="projects_create_object_type">类型</string>
@@ -106,7 +106,7 @@
     <string name="projects_design_import">导入设计</string>
     <string name="projects_design_imported">设计已导入</string>
     <string name="projects_design_tab_classes">类</string>
-    <string name="projects_design_tab_views">查看</string>
+    <string name="projects_design_tab_views">视图</string>
     <string name="projects_design_import_dialog_title">导入设计</string>
     <string name="projects_design_import_choose_template">选择模板</string>
     <string name="projects_design_replace_title">替换设计?</string>
@@ -146,10 +146,10 @@
     <string name="projects_views_edit_dialog_title">编辑视图</string>
     <string name="projects_views_delete_title">删除视图</string>
     <string name="projects_views_type">类型</string>
-    <string name="projects_views_type_board">棋盘</string>
+    <string name="projects_views_type_board">看板</string>
     <string name="projects_views_type_list">列表</string>
     <string name="projects_views_direction">方向</string>
-    <string name="projects_views_sort_number">数字</string>
+    <string name="projects_views_sort_number">编号</string>
     <string name="projects_views_sort_created">已创建</string>
     <string name="projects_views_sort_updated">已更新</string>
     <string name="projects_views_sort_rank">排名</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">搜索对象</string>
 
     <string name="notification_channel_projects">项目通知</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi 项目</string>
     <string name="projects_auth_create_identity_failed">创建身份失败</string>
     <string name="projects_auth_mfa_unsupported">移动应用暂不支持多重验证</string>
     <string name="projects_auth_enter_code_sent">请输入发送到 %1$s 的验证码</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">选择一条规则</string>
     <string name="projects_access_authenticated_desc">任何已登录的用户</string>
     <string name="projects_access_anyone_desc">包括匿名用户</string>
-    <string name="projects_access_target">目标</string>
+    <string name="projects_access_target">对象</string>
     <string name="projects_access_target_hint">实体 ID、@群组、*(所有人)或 +(成员)</string>
     <string name="projects_access_selected">已选择：%1$s</string>
     <string name="projects_access_role_comment">评论和查看</string>

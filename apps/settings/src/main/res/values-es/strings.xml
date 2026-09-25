@@ -363,7 +363,7 @@
     <string name="accounts_provider_mcp">Servidor MCP</string>
     <string name="accounts_provider_unifiedpush">Notificación push</string>
     <string name="accounts_provider_url">URL externa</string>
-    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_provider_web">Web de Mochi</string>
     <string name="accounts_verified">Cuenta verificada</string>
     <string name="accounts_verify_invalid">Código de verificación no válido</string>
     <string name="accounts_verify_sent">Código de verificación enviado</string>
@@ -376,7 +376,7 @@
     <string name="accounts_forget_title">¿Olvidar el dispositivo?</string>
     <string name="accounts_forget_message">Esto olvidará el dispositivo \"%1$s\" y dejará de enviarle notificaciones.</string>
     <string name="accounts_device_seen">Visto por última vez %1$s</string>
-    <string name="notifprefs_device_app">%1$s · app</string>
+    <string name="notifprefs_device_app">%1$s · aplicación</string>
     <string name="notifprefs_device_push">%1$s · push</string>
     <string name="notifprefs_test_partial">Prueba enviada a %1$d de %2$d destinos</string>
     <string name="notifprefs_test_none">No hay destinos configurados</string>

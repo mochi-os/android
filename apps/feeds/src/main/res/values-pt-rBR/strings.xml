@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Ainda não há postagens</string>
     <string name="feeds_sort_label">Ordenar</string>
     <string name="feeds_sort_interests">Interesses</string>
-    <string name="feeds_sort_new">Novo</string>
+    <string name="feeds_sort_new">Recentes</string>
     <string name="feeds_sort_hot">Em alta</string>
-    <string name="feeds_sort_top">Topo</string>
+    <string name="feeds_sort_top">Melhores</string>
     <string name="feeds_sort_ai">IA</string>
     <string name="feeds_post_default_author">Postagem</string>
     <string name="feeds_image_preview">Pré-visualizar</string>
@@ -28,7 +28,7 @@
     <string name="feeds_cancel_reply">Cancelar resposta</string>
     <string name="feeds_edit_post">Editar publicação</string>
     <string name="feeds_save_label">Salvar</string>
-    <string name="feeds_post_action">Postagem</string>
+    <string name="feeds_post_action">Publicar</string>
     <string name="feeds_feed_label">Feed</string>
     <string name="feeds_add_files">Adicionar arquivos</string>
     <string name="feeds_restore">Restaurar</string>
@@ -126,8 +126,8 @@
     <string name="feeds_interest_reduced">Interesse reduzido</string>
     <string name="feeds_interest_removed">Interesse removido</string>
     <string name="feeds_interest_failed">Falha ao ajustar interesse</string>
-    <string name="feeds_saved_title">Salvo</string>
-    <string name="feeds_saved_menu">Salvo</string>
+    <string name="feeds_saved_title">Salvos</string>
+    <string name="feeds_saved_menu">Salvos</string>
     <string name="feeds_saved_save">Salvar para mais tarde</string>
     <string name="feeds_saved_remove">Remover dos salvos</string>
     <string name="feeds_saved_clear_all">Limpar tudo</string>

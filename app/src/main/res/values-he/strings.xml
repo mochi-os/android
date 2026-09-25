@@ -9,12 +9,12 @@
     <string name="launcher_people">Mochi אנשים</string>
     <string name="launcher_settings">Mochi הגדרות</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi ויקי</string>
     <string name="launcher_chess">Mochi שחמט</string>
-    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_go">Mochi גו</string>
     <string name="launcher_words">Mochi מילים</string>
-    <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">Mochi יומנים</string>
+    <string name="launcher_market">Mochi שוק</string>
+    <string name="launcher_calendars">Mochi לוחות שנה</string>
     <string name="launcher_staff">Mochi צוות</string>
 
 

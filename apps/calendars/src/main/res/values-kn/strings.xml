@@ -10,7 +10,7 @@
     <string name="calendars_delete">ಅಳಿಸಿ</string>
     <string name="calendars_previous">ಹಿಂದಿನ</string>
     <string name="calendars_next">ಮುಂದೆ</string>
-    <string name="calendars_view">ವೀಕ್ಷಿಸಿ</string>
+    <string name="calendars_view">ವೀಕ್ಷಣೆ</string>
     <string name="calendars_view_list">ಪಟ್ಟಿ</string>
     <string name="calendars_list_search">ಹುಡುಕಿ</string>
     <string name="calendars_event_untitled">ಶೀರ್ಷಿಕೆರಹಿತ</string>
@@ -169,7 +169,7 @@
     <string name="calendars_subscribe_server_url">ಸರ್ವರ್ ವಿಳಾಸ</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google ಕ್ಯಾಲೆಂಡರ್</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">ಈ ಸರ್ವರ್‌ನಲ್ಲಿ Google ಖಾತೆಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿಲ್ಲ. ಅವುಗಳನ್ನು ಸೆಟ್ಟಿಂಗ್‌ಗಳು, ಸಿಸ್ಟಮ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳು ನಲ್ಲಿ ಸಕ್ರಿಯಗೊಳಿಸಿ.</string>
     <string name="calendars_subscribe_google_connect">ನೀವು Google ಖಾತೆಯನ್ನು ಸಂಪರ್ಕಿಸಿಲ್ಲ.</string>

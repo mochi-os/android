@@ -43,11 +43,11 @@
     <string name="route_save">Simpen</string>
     <string name="route_delete">Hapus ruté</string>
     <string name="route_delete_title">Hapus ruté?</string>
-    <string name="route_path">Path</string>
+    <string name="route_path">Jalur</string>
     <string name="route_method">Métode</string>
     <string name="route_method_app">Aplikasi</string>
     <string name="route_method_entity">Éntitas</string>
-    <string name="route_method_redirect">Redirect</string>
+    <string name="route_method_redirect">Pangalihan</string>
     <string name="route_priority">Prioritas</string>
     <string name="route_enabled">Aktip</string>
     <string name="route_disabled">Dipareuman</string>
@@ -132,7 +132,7 @@
     <string name="system_settings_configured">Dikonfigurasikeun</string>
     <string name="system_settings_save">Simpen</string>
     <string name="system_settings_clear">Bersihkeun</string>
-    <string name="system_settings_reset">Reset</string>
+    <string name="system_settings_reset">Atur ulang</string>
     <string name="system_settings_reset_to_default">Setel ulang ka baku</string>
     <string name="system_settings_reset_title">Setel ulang ka baku?</string>
     <string name="system_setting_apps_install_user">Idinkeun pamaké masang aplikasi</string>
@@ -278,7 +278,7 @@
     <string name="account_identity_identity">Identitas</string>
     <string name="account_identity_username">Ngaran pamaké</string>
     <string name="account_identity_name">Ngaran</string>
-    <string name="account_identity_fingerprint">Fingerprint</string>
+    <string name="account_identity_fingerprint">Sidik ramo</string>
     <string name="account_identity_directory_toggle">Idinkeun batur manggihan anjeun di diréktori</string>
     <string name="domain_add">Tambah doméin</string>
     <string name="domain_add_title">Tambah doméin</string>
@@ -287,7 +287,7 @@
     <string name="domain_delegation_delete">Hapus delegasi</string>
     <string name="domain_delegation_delete_message">%1$s moal ngatur jalan dina domain ieu deui.</string>
     <string name="domain_delegation_delete_title">Hapus delegasi?</string>
-    <string name="domain_delegation_path">Path</string>
+    <string name="domain_delegation_path">Jalur</string>
     <string name="domain_delegation_user">ID pamaké</string>
     <string name="domain_delegations">Delegasi</string>
     <string name="domain_delegations_empty">Henteu aya delegasi nu dikonfigurasi.</string>
@@ -375,7 +375,7 @@
     <string name="accounts_forget_message">Ieu bakal mopohokeun pakakas \"%1$s\" sarta ngeureunkeun béwara ka dinya.</string>
     <string name="accounts_device_seen">Pamungkas katémbong %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplikasi</string>
-    <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_device_push">%1$s · béwara</string>
     <string name="notifprefs_test_partial">Tés dikirim ka %1$d tina %2$d tujuan</string>
     <string name="notifprefs_test_none">Teu aya tujuan dikonfigurasi</string>
     <string name="notifprefs_transport_fcm">Push Android</string>

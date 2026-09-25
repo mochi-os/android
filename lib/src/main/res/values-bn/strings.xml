@@ -38,7 +38,7 @@
     <string name="access_add_rule">নিয়ম যোগ করুন</string>
     <string name="access_owner">মালিক</string>
     <string name="access_revoke">প্রত্যাহার করুন</string>
-    <string name="access_level_comment">মন্তব্য</string>
+    <string name="access_level_comment">মন্তব্য করুন</string>
     <string name="access_level_view">দেখুন</string>
     <string name="access_level_none">কোনোটি নয়</string>
     <string name="reaction_like">পছন্দ</string>
@@ -199,7 +199,7 @@
     <string name="reauth_signin_text">আপনি আবার সাইন ইন না করা পর্যন্ত বিজ্ঞপ্তিগুলি বিরতি দেওয়া হয়েছে</string>
     <string name="oem_hint_title">ব্যাকগ্রাউন্ডে সংযুক্ত থাকুন</string>
     <string name="oem_hint_body">বিজ্ঞপ্তি পৌঁছে দেওয়ার জন্য Mochi-কে অবশ্যই ব্যাকগ্রাউন্ডে চালু থাকতে হবে। অনুগ্রহ করে পরবর্তী স্ক্রিনে এটি অনুমোদন করুন, অন্যথায় স্ক্রিন বন্ধ থাকলে আপনার ফোন বিজ্ঞপ্তিগুলি বিরতি দিতে পারে।</string>
-    <string name="oem_hint_samsung_note">Samsung ফোনে, Settings → Device care → Sleeping apps-ও দেখুন এবং Mochi তালিকাভুক্ত থাকলে সরিয়ে দিন।</string>
+    <string name="oem_hint_samsung_note">Samsung ফোনে, সেটিংস → ডিভাইস কেয়ার → স্লিপিং অ্যাপস-ও দেখুন এবং Mochi তালিকাভুক্ত থাকলে সরিয়ে দিন।</string>
     <string name="oem_hint_allow">ব্যাকগ্রাউন্ড অনুমোদন করুন</string>
     <string name="oem_hint_dismiss">আর দেখাবেন না</string>
     <string name="about_label">সম্পর্কে</string>

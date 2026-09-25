@@ -38,7 +38,7 @@
     <string name="access_add_rule">Ajoute yon règ</string>
     <string name="access_owner">Pwopriyetè</string>
     <string name="access_revoke">Anile</string>
-    <string name="access_level_comment">Kòmantè</string>
+    <string name="access_level_comment">Kòmante</string>
     <string name="access_level_view">Wè</string>
     <string name="access_level_none">Okenn</string>
     <string name="reaction_like">Renmen</string>
@@ -73,7 +73,7 @@
     <string name="settings_radius_small">Piti</string>
     <string name="settings_radius_medium">Mwayen</string>
     <string name="settings_radius_large">Gwo</string>
-    <string name="settings_font">Font</string>
+    <string name="settings_font">Polis</string>
     <string name="settings_font_system">Sistèm</string>
     <string name="settings_font_serif">Serif</string>
     <string name="settings_font_dyslexia">Adapte pou disleksi</string>
@@ -101,7 +101,7 @@
     <string name="settings_reset_to_defaults">Reset nan default</string>
     <string name="settings_reset_confirm_title">Reset preferans?</string>
     <string name="settings_reset_confirm_message">Sa pral remete tout preferans nan valè defo yo.</string>
-    <string name="settings_reset">Reset</string>
+    <string name="settings_reset">Reyinisyalize</string>
     <string name="settings_display_title">Afichaj</string>
     <string name="settings_display_reset">Reset nan default</string>
     <string name="settings_display_reset_confirm_title">Reyinisyalize afichaj?</string>
@@ -192,7 +192,7 @@
     <string name="format_time_weeks_short">%1$dsm</string>
     <string name="format_time_months_short">%1$dmwa</string>
     <string name="reaction_add">Ajoute reyaksyon</string>
-    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel">Notifikasyon Mochi</string>
     <string name="push_service_channel_description">Kenbe Mochi konekte pou resevwa notifikasyon</string>
     <string name="push_service_group">Sèvis an aryè plan</string>
     <string name="push_service_title">Mochi ap koute pou notifikasyon</string>

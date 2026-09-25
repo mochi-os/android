@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="wikis_sidebar_header">ויקים</string>
+    <string name="wikis_sidebar_header">ויקי</string>
     <string name="wikis_sidebar_all">כל ה-wikis</string>
     <string name="wikis_sidebar_find">חפש ויקיים</string>
     <string name="wikis_sidebar_create">צור wiki</string>
@@ -23,7 +23,7 @@
     <string name="wikis_page_action_new_page">דף חדש</string>
     <string name="wikis_page_action_settings">הגדרות</string>
     <string name="wikis_page_action_unsubscribe">בטל הרשמה</string>
-    <string name="wikis_title">ויקים</string>
+    <string name="wikis_title">ויקי</string>
     <string name="wikis_empty_title">התחל את הוויקי הראשון שלך</string>
     <string name="wikis_empty_subtitle">חפש ויקי להירשם אליו, או צור ויקי כדי לפרסם תיעוד משלך.</string>
     <string name="wikis_create_button">צור wiki</string>

@@ -24,13 +24,13 @@
     <string name="forums_settings">Setări</string>
     <string name="forums_load_more">Încarcă mai multe</string>
     <string name="forums_sort_label">Sortează</string>
-    <string name="forums_sort_new">Nou</string>
+    <string name="forums_sort_new">Cele mai noi</string>
     <string name="forums_sort_hot">Popular</string>
-    <string name="forums_sort_top">Sus</string>
+    <string name="forums_sort_top">Cele mai bune</string>
     <string name="forums_sort_interests">Interese</string>
     <string name="forums_post_title_field">Titlu</string>
     <string name="forums_post_attach">Atașează fișiere</string>
-    <string name="forums_post_create_action">Postare</string>
+    <string name="forums_post_create_action">Publică</string>
     <string name="forums_post_edit">Editează postarea</string>
     <string name="forums_post_edit_title">Editează postarea</string>
     <string name="forums_post_edit_title_field">Titlu</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Membri</string>
     <string name="forums_tab_banner">Banner</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Țintă</string>
+    <string name="forums_access_target">Utilizator sau grup</string>
     <string name="forums_access_level_view">Vizualizează</string>
     <string name="forums_access_level_vote">Votează</string>
     <string name="forums_access_level_comment">Comentează</string>
-    <string name="forums_access_level_post">Postare</string>
+    <string name="forums_access_level_post">Publică</string>
     <string name="forums_access_level_none">Niciuna</string>
     <string name="forums_members_empty">Niciun membru</string>
     <string name="forums_banner_dismiss">Renunță la banner</string>
-    <string name="forums_ai_mode_tag">Etichetă</string>
+    <string name="forums_ai_mode_tag">Etichetează</string>
     <string name="forums_ai_account_default">Cont implicit</string>
     <string name="forums_ai_prompt_reset">Resetează la implicit</string>
     <string name="forums_settings_unsubscribe">Dezabonează-te</string>
@@ -80,7 +80,7 @@
     <string name="forums_moderation_reports_resolved">Rezolvat</string>
     <string name="forums_moderation_reports_all">Toate</string>
     <string name="forums_moderation_reports_empty">Niciun raport</string>
-    <string name="forums_moderation_report_dismiss">Renunță</string>
+    <string name="forums_moderation_report_dismiss">Respinge</string>
     <string name="forums_moderation_restrictions_empty">Nicio restricție</string>
     <string name="forums_moderation_restriction_remove">Elimină</string>
     <string name="forums_moderation_restriction_type">Tip</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_login_failed">Autentificare eșuată</string>
 
     <string name="notification_channel_forums">Notificări forumuri</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Forumuri</string>
     <string name="forums_auth_create_identity_failed">Crearea identității a eșuat</string>
     <string name="forums_auth_mfa_unsupported">MFA nu este încă acceptat în aplicația mobilă</string>
     <string name="forums_auth_enter_code_sent">Introduceți codul trimis la %1$s</string>
@@ -171,7 +171,7 @@
     <string name="forums_moderation_log_meta">De %1$s · Țintă %2$s</string>
     <string name="forums_moderation_restriction_add">Adăugați restricție</string>
     <string name="forums_moderation_restriction_user">Identitatea utilizatorului</string>
-    <string name="forums_moderation_restriction_type_shadowban">Shadowban</string>
+    <string name="forums_moderation_restriction_type_shadowban">Interdicție ascunsă</string>
     <string name="forums_moderation_restriction_duration_seconds">Durată (secunde, lăsați gol pentru permanent)</string>
     <string name="forums_moderation_restriction_expires">Expiră %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanent</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">Manual</string>
     <string name="forums_access_search_users">Caută utilizatori</string>
     <string name="forums_access_no_groups">Niciun grup disponibil</string>
-    <string name="forums_saved_title">Salvat</string>
+    <string name="forums_saved_title">Salvate</string>
     <string name="forums_saved_save">Salvează pentru mai târziu</string>
     <string name="forums_saved_remove">Elimină din salvate</string>
     <string name="forums_saved_clear_all">Golește tot</string>
@@ -322,7 +322,7 @@
     <string name="forums_moderation_action_unrestrict">Restricție ridicată</string>
     <string name="forums_moderation_action_resolve">Raport rezolvat</string>
     <string name="forums_moderation_target_post">Postare</string>
-    <string name="forums_moderation_target_comment">Comentează</string>
+    <string name="forums_moderation_target_comment">Comentariu</string>
     <string name="forums_moderation_target_user">Utilizator</string>
     <string name="forums_moderation_reason_spam">Spam</string>
     <string name="forums_moderation_reason_harassment">Hărțuire</string>

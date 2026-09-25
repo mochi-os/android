@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">Кормандони Mochi</string>
+    <string name="launcher_staff">Кормандони Mochi</string>
     <string name="staff_accounts_action_ban_title">Манъи ҳисоб</string>
     <string name="staff_accounts_action_suspend_title">Ҳисобро боздоштан</string>
     <string name="staff_accounts_action_unban_title">Манъро бекор кардан</string>
@@ -92,9 +92,9 @@
     <string name="staff_audit_action_listing_updated">Эълон таҳрир шуд</string>
     <string name="staff_audit_action_listing_warning">Огоҳӣ дода шуд</string>
     <string name="staff_audit_action_order_cancelled">Бекор карда шуд</string>
-    <string name="staff_audit_action_order_chargeback">Chargeback қабул шуд</string>
-    <string name="staff_audit_action_order_chargeback_lost">Chargeback қабул карда шуд</string>
-    <string name="staff_audit_action_order_chargeback_won">Chargeback рад карда шуд</string>
+    <string name="staff_audit_action_order_chargeback">Бозгашти пардохт қабул шуд</string>
+    <string name="staff_audit_action_order_chargeback_lost">Бозгашти пардохт қабул карда шуд</string>
+    <string name="staff_audit_action_order_chargeback_won">Бозгашти пардохт рад карда шуд</string>
     <string name="staff_audit_action_order_completed">Анҷомшуда</string>
     <string name="staff_audit_action_order_created">Фармоиш гузошта шуд</string>
     <string name="staff_audit_action_order_paid">Пардохт қабул шуд</string>
@@ -115,9 +115,9 @@
     <string name="staff_audit_action_subscription_active">Ба фаъол баргашт</string>
     <string name="staff_audit_action_subscription_cancel_scheduled">Бекоркунӣ ба нақша гирифта шуд</string>
     <string name="staff_audit_action_subscription_cancelled">Бекор карда шуд</string>
-    <string name="staff_audit_action_subscription_chargeback">Chargeback қабул шуд</string>
-    <string name="staff_audit_action_subscription_chargeback_lost">Chargeback қабул карда шуд</string>
-    <string name="staff_audit_action_subscription_chargeback_won">Chargeback рад карда шуд</string>
+    <string name="staff_audit_action_subscription_chargeback">Бозгашти пардохт қабул шуд</string>
+    <string name="staff_audit_action_subscription_chargeback_lost">Бозгашти пардохт қабул карда шуд</string>
+    <string name="staff_audit_action_subscription_chargeback_won">Бозгашти пардохт рад карда шуд</string>
     <string name="staff_audit_action_subscription_created">Обуна сохта шуд</string>
     <string name="staff_audit_action_subscription_past_due">Пардохт мӯҳлаташ гузаштааст</string>
     <string name="staff_audit_action_subscription_paused">Таваққуфшуда</string>
@@ -150,7 +150,7 @@
     <string name="staff_categories_dialog_position">Мавқеъ</string>
     <string name="staff_categories_dialog_save">Захира</string>
     <string name="staff_categories_dialog_saving">Захира кардан…</string>
-    <string name="staff_categories_dialog_slug">Slug</string>
+    <string name="staff_categories_dialog_slug">Нишона</string>
     <string name="staff_categories_empty">Ягон категория нест</string>
     <string name="staff_categories_toast_created">Категория эҷод шуд</string>
     <string name="staff_categories_toast_deleted">Категория нест карда шуд</string>
@@ -160,7 +160,7 @@
     <string name="staff_categories_type_digital">Рақамӣ</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">Ҷисмонӣ</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">Кормандони Mochi</string>
     <string name="staff_config_field_auto_approve">Ҳудуди тасдиқи худкор</string>
     <string name="staff_config_field_hold">Остонаи нигоҳдорӣ</string>
     <string name="staff_config_field_platform_fee">Ҳаққи платформа</string>
@@ -224,7 +224,7 @@
     <string name="staff_disputes_empty">Ягон баҳс нест</string>
     <string name="staff_disputes_filter_status_label">Ҳолат</string>
     <string name="staff_disputes_listing_label">#%1$s</string>
-    <string name="staff_disputes_meta_chargeback_fee">Пардохти chargeback</string>
+    <string name="staff_disputes_meta_chargeback_fee">Ҳаққи бозгашти пардохт</string>
     <string name="staff_disputes_meta_evidence_due">Далелҳо то</string>
     <string name="staff_disputes_meta_listing">Эълон</string>
     <string name="staff_disputes_meta_reason">Сабаб</string>
@@ -245,9 +245,9 @@
     <string name="staff_disputes_resolution_seller">Ҳал кардан барои фурӯшанда</string>
     <string name="staff_disputes_resolve">Ҳал кардан</string>
     <string name="staff_disputes_resolved_toast">Баҳс ҳал шуд</string>
-    <string name="staff_disputes_review">Шарҳ</string>
+    <string name="staff_disputes_review">Баррасӣ кардан</string>
     <string name="staff_disputes_status_escalated">Тезонидашуда</string>
-    <string name="staff_disputes_status_open">Кушодан</string>
+    <string name="staff_disputes_status_open">Кушода</string>
     <string name="staff_disputes_status_resolved_buyer">Ҳалшуда (харидор)</string>
     <string name="staff_disputes_status_resolved_seller">Ҳалшуда (фурӯшанда)</string>
     <string name="staff_disputes_status_responded">Ҷавоб дода шуд</string>
@@ -275,7 +275,7 @@
     <string name="staff_listings_moderation_hold">Нигоҳ доштан</string>
     <string name="staff_listings_moderation_manual">Дастӣ</string>
     <string name="staff_listings_moderation_rejected">Радшуда</string>
-    <string name="staff_listings_moderation_review">Шарҳ</string>
+    <string name="staff_listings_moderation_review">Интизори баррасӣ</string>
     <string name="staff_listings_moderation_soft_approved">Сабук тасдиқ карда шуд</string>
     <string name="staff_listings_notes_label">Қайдҳо</string>
     <string name="staff_listings_price_placeholder">—</string>
@@ -321,7 +321,7 @@
     <string name="staff_reports_meta_reason">Сабаб</string>
     <string name="staff_reports_meta_reporter">Гузоришдиҳанда</string>
     <string name="staff_reports_meta_seller">Фурӯшанда</string>
-    <string name="staff_reports_meta_target">Ҳадаф</string>
+    <string name="staff_reports_meta_target">Ашёи гузоришшуда</string>
     <string name="staff_reports_meta_type">Намуд</string>
     <string name="staff_reports_notes_label">Қайдҳо</string>
     <string name="staff_reports_reason_counterfeit">Қалбакӣ ё дуздидашуда</string>
@@ -357,7 +357,7 @@
     <string name="staff_sidebar_appeals">Шикоятҳо</string>
     <string name="staff_sidebar_categories">Категорияҳо</string>
     <string name="staff_sidebar_config">Конфигуратсия</string>
-    <string name="staff_sidebar_dashboard">Тахтаи натиҷа</string>
+    <string name="staff_sidebar_dashboard">Панели идоракунӣ</string>
     <string name="staff_sidebar_disputes">Баҳсҳо</string>
     <string name="staff_sidebar_listings">Эълонҳо</string>
     <string name="staff_sidebar_management">Идоракунӣ</string>
@@ -383,7 +383,7 @@
     <string name="staff_status_hold">Нигоҳ доштан</string>
     <string name="staff_status_manual">Дастӣ</string>
     <string name="staff_status_moderator">Модератор</string>
-    <string name="staff_status_open">Кушодан</string>
+    <string name="staff_status_open">Кушода</string>
     <string name="staff_status_pending">Дар интизор</string>
     <string name="staff_status_published">Нашршуда</string>
     <string name="staff_status_rejected">Радшуда</string>
@@ -391,7 +391,7 @@
     <string name="staff_status_resolved_buyer">Ҳалшуда (харидор)</string>
     <string name="staff_status_resolved_seller">Ҳалшуда (фурӯшанда)</string>
     <string name="staff_status_responded">Ҷавоб дода шуд</string>
-    <string name="staff_status_review">Шарҳ</string>
+    <string name="staff_status_review">Интизори баррасӣ</string>
     <string name="staff_status_reviewed">Шарҳ дода шуд</string>
     <string name="staff_status_reviewing">Шарҳ дар ҳоли иҷро</string>
     <string name="staff_status_soft_approved">Сабук тасдиқ карда шуд</string>
@@ -420,7 +420,7 @@
     <string name="staff_team_toast_removed">Узв бартараф шуд</string>
     <string name="staff_team_toast_role_updated">Нақш навсозӣ шуд</string>
 
-    <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
+    <string name="staff_audit_action_auction_cancelled">Музояда бекор карда шуд</string>
 
     <string name="staff_audit_action_staff_team_role_changed">Нақши кормандон тағйир ёфт</string>
     <string name="staff_dashboard_order_fallback">Фармоиш №%1$s</string>

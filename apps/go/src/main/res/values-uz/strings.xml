@@ -8,7 +8,7 @@
     <string name="go_action_pass">Oʻtish</string>
     <string name="go_action_rematch">Qayta oʻyin</string>
     <string name="go_action_resign">Taslim boʻlish</string>
-    <string name="go_app_title">Oʻtish</string>
+    <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Qora qo\'lga olishlar</string>
     <string name="go_captures_white_sr">Oq qo\'lga olishlar</string>
     <string name="go_chat_title">Suhbat</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">Yon panelni ochish</string>
     <string name="go_sidebar_active">Faol oʻyinlar</string>
     <string name="go_empty_active">Hozircha faol o‘yinlar yo‘q.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">Taslim boʻldi</string>
     <string name="go_new_game_title">Yangi Go o‘yini</string>
     <string name="go_new_game_no_friends">O‘yinni boshlashdan oldin do‘st qo‘shishingiz kerak.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

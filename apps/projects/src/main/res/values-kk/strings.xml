@@ -29,7 +29,7 @@
     <string name="projects_sort_label">Сұрыптау</string>
     <string name="projects_sort_direction">Бағыт</string>
     <string name="projects_sort_rank">Қолмен</string>
-    <string name="projects_sort_number">Сан</string>
+    <string name="projects_sort_number">Нөмір</string>
     <string name="projects_sort_created">Құрылды</string>
     <string name="projects_sort_updated">Жаңартылды</string>
     <string name="projects_create_object_type">Түрі</string>
@@ -59,10 +59,10 @@
     <string name="projects_parent_search_placeholder">Іздеу</string>
     <string name="projects_links_title">Сілтемелер</string>
     <string name="projects_links_add">Сілтеме қосу</string>
-    <string name="projects_links_section_blocks">Bloks</string>
+    <string name="projects_links_section_blocks">Бөгейді</string>
     <string name="projects_links_section_blocked_by">Бөгелді</string>
     <string name="projects_links_section_duplicates">Қайталанулар</string>
-    <string name="projects_links_type_blocks">Bloks</string>
+    <string name="projects_links_type_blocks">Бөгейді</string>
     <string name="projects_links_type_blocked_by">Бөгелді</string>
     <string name="projects_links_type_duplicates">Қайталанулар</string>
     <string name="projects_links_no_matches">Сәйкес нысандар жоқ</string>
@@ -93,20 +93,20 @@
     <string name="projects_request_create_action">Құру</string>
     <string name="projects_diff_unified">Біріктірілген</string>
     <string name="projects_diff_split">Бөлу</string>
-    <string name="projects_diff_empty">Diff қолжетімсіз</string>
+    <string name="projects_diff_empty">Айырма қолжетімсіз</string>
     <string name="projects_board_unassigned">Тағайындалмаған</string>
     <string name="projects_board_new">Жаңа</string>
     <string name="projects_board_rename">Атын өзгерту</string>
     <string name="projects_board_rename_column">Бағанның атын өзгерту</string>
     <string name="projects_move_position">Орны</string>
-    <string name="projects_move_position_top">Жоғары</string>
+    <string name="projects_move_position_top">Ең жоғарыға</string>
     <string name="projects_move_current">Ағымдағы</string>
     <string name="projects_design_title">Дизайн</string>
     <string name="projects_design_export">Дизайнды экспорттау</string>
     <string name="projects_design_import">Дизайнды импорттау</string>
     <string name="projects_design_imported">Дизайн импортталды</string>
     <string name="projects_design_tab_classes">Сыныптар</string>
-    <string name="projects_design_tab_views">Көрулер</string>
+    <string name="projects_design_tab_views">Көріністер</string>
     <string name="projects_design_import_dialog_title">Дизайнды импорттау</string>
     <string name="projects_design_import_choose_template">Үлгіні таңдаңыз</string>
     <string name="projects_design_replace_title">Дизайнды ауыстыру керек пе?</string>
@@ -149,7 +149,7 @@
     <string name="projects_views_type_board">Тақта</string>
     <string name="projects_views_type_list">Тізім</string>
     <string name="projects_views_direction">Бағыт</string>
-    <string name="projects_views_sort_number">Сан</string>
+    <string name="projects_views_sort_number">Нөмір</string>
     <string name="projects_views_sort_created">Құрылды</string>
     <string name="projects_views_sort_updated">Жаңартылды</string>
     <string name="projects_views_sort_rank">Дәреже</string>
@@ -158,9 +158,9 @@
     <string name="projects_more">Көбірек</string>
     <string name="projects_request_more">Көбірек</string>
     <string name="projects_comment_send">Жіберу</string>
-    <string name="projects_field_position_body">Мәтін</string>
+    <string name="projects_field_position_body">Негізгі бөлік</string>
     <string name="projects_sort_field">Сұрыптау</string>
-    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_comment_remove_attachment">Тіркемені алып тастау</string>
     <string name="projects_views_sort_by">Сұрыптау</string>
     <string name="projects_auth_login_failed">Кіру сәтсіз аяқталды</string>
     <string name="projects_views_move_up">Жоғары жылжыту</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">Объектілерді іздеу</string>
 
     <string name="notification_channel_projects">Жобалар хабарландырулары</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Жобалар</string>
     <string name="projects_auth_create_identity_failed">Сәйкестікті құру сәтсіз аяқталды</string>
     <string name="projects_auth_mfa_unsupported">MFA мобильді қолданбада әлі қолдау таппайды</string>
     <string name="projects_auth_enter_code_sent">%1$s мекенжайына жіберілген кодты енгізіңіз</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Ережені таңдаңыз</string>
     <string name="projects_access_authenticated_desc">Жүйеге кірген кез келген адам</string>
     <string name="projects_access_anyone_desc">Анонимді пайдаланушыларды қоса алғанда</string>
-    <string name="projects_access_target">Мақсат</string>
+    <string name="projects_access_target">Пайдаланушы немесе топ</string>
     <string name="projects_access_target_hint">Нысан идентификаторы, @топ, * (барлығы) немесе + (мүшелер)</string>
     <string name="projects_access_selected">Таңдалды: %1$s</string>
     <string name="projects_access_role_comment">Пікір қалдыру және көру</string>
@@ -381,5 +381,5 @@
     <string name="projects_option_delete_message">\"%1$s\" опциясын жойғыңыз келетініне сенімдісіз бе?</string>
     <string name="projects_create_object_no_types">Әлі бірде-бір элемент түрі жасалмайды. Алдымен қажетті ата-аналық элементтерді жасаңыз.</string>
     <string name="projects_create_blocked_no_options">Жасау мүмкін емес: %1$s міндетті, бірақ таңдау нұсқалары жоқ. Дизайнда нұсқалар қосыңыз.</string>
-    <string name="projects_attachment_remove">Remove attachment</string>
+    <string name="projects_attachment_remove">Тіркемені алып тастау</string>
 </resources>

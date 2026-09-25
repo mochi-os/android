@@ -12,11 +12,11 @@
     <string name="account_section_passkeys">កូនសោចូល</string>
     <string name="account_passkey_register">បន្ថែមកូនសោ</string>
     <string name="account_passkey_delete_title">លុបកូនសោ?</string>
-    <string name="account_section_totp">កម្មវិធី Authenticator</string>
+    <string name="account_section_totp">កម្មវិធីផ្ទៀងផ្ទាត់</string>
     <string name="account_totp_setup">រៀបចំកម្មវិធីផ្ទៀងផ្ទាត់</string>
     <string name="account_totp_setup_title">រៀបចំកម្មវិធីផ្ទៀងផ្ទាត់</string>
     <string name="account_totp_verify">ផ្ទៀងផ្ទាត់</string>
-    <string name="account_totp_disable_title">បិទ Authenticator?</string>
+    <string name="account_totp_disable_title">បិទកម្មវិធីផ្ទៀងផ្ទាត់?</string>
     <string name="account_section_recovery">កូដស្តារ</string>
     <string name="account_recovery_codes_title">កូដស្តារ</string>
     <string name="sessions_unknown_agent">ឧបករណ៍មិនស្គាល់</string>
@@ -47,7 +47,7 @@
     <string name="route_method">វិធីសាស្ត្រ</string>
     <string name="route_method_app">កម្មវិធី</string>
     <string name="route_method_entity">អង្គភាព</string>
-    <string name="route_method_redirect">Redirect</string>
+    <string name="route_method_redirect">ការបញ្ជូនបន្ត</string>
     <string name="route_priority">អាទិភាព</string>
     <string name="route_enabled">បានបើក</string>
     <string name="route_disabled">បិទ</string>
@@ -123,7 +123,7 @@
     <string name="system_settings_section_oauth">ការចូលពីភាគីទីបី</string>
     <string name="system_settings_section_user_defaults">លំនាំដើមរបស់អ្នកប្រើប្រាស់</string>
     <string name="system_settings_section_operator">ប្រតិបត្តិករ</string>
-    <string name="system_settings_section_push">ការជូនដំណឹង Push</string>
+    <string name="system_settings_section_push">ការជូនដំណឹងរុញ</string>
     <string name="system_settings_section_other">ការកំណត់ផ្សេងទៀត</string>
     <string name="system_settings_state_disabled">បិទ</string>
     <string name="system_settings_state_allowed">បានអនុញ្ញាត</string>
@@ -143,7 +143,7 @@
     <string name="system_setting_auth_oauth">ចូលដោយប្រើ OAuth 2.0</string>
     <string name="system_setting_default_theme">រូបរាងលំនាំដើម</string>
     <string name="system_setting_domains_verification">តម្រូវឱ្យមានការផ្ទៀងផ្ទាត់ដែន</string>
-    <string name="system_setting_email_from">អាសយដ្ឋាន From លំនាំដើមសម្រាប់អ៊ីមែលប្រព័ន្ធ</string>
+    <string name="system_setting_email_from">អាសយដ្ឋានអ្នកផ្ញើលំនាំដើមសម្រាប់អ៊ីមែលប្រព័ន្ធ</string>
     <string name="system_setting_oauth_public_url">URL សាធារណៈសម្រាប់ការបញ្ជូនបន្ត OAuth</string>
     <string name="system_setting_oauth_google_client_id">លេខសម្គាល់អតិថិជន Google</string>
     <string name="system_setting_oauth_google_client_secret">សម្ងាត់អតិថិជន Google</string>
@@ -151,7 +151,7 @@
     <string name="system_setting_oauth_github_client_secret">សម្ងាត់អតិថិជន GitHub</string>
     <string name="system_setting_oauth_microsoft_client_id">លេខសម្គាល់អតិថិជន Microsoft</string>
     <string name="system_setting_oauth_microsoft_client_secret">សម្ងាត់អតិថិជន Microsoft</string>
-    <string name="system_setting_oauth_microsoft_tenant">Microsoft tenant</string>
+    <string name="system_setting_oauth_microsoft_tenant">អ្នកជួល Microsoft</string>
     <string name="system_setting_oauth_facebook_client_id">លេខសម្គាល់កម្មវិធី Facebook</string>
     <string name="system_setting_oauth_facebook_client_secret">ការសម្ងាត់កម្មវិធី Facebook</string>
     <string name="system_setting_oauth_x_client_id">លេខសម្គាល់អតិថិជន X</string>
@@ -313,8 +313,8 @@
     <string name="login_title">ចូល</string>
     <string name="login_section_methods">វិធីសាស្ត្រចូល</string>
     <string name="login_method_email">កូដអ៊ីមែល</string>
-    <string name="login_method_passkey">សោសម្ងាត់</string>
-    <string name="login_method_totp">កម្មវិធី Authenticator</string>
+    <string name="login_method_passkey">កូនសោចូល</string>
+    <string name="login_method_totp">កម្មវិធីផ្ទៀងផ្ទាត់</string>
     <string name="login_method_oauth">ការចូលពីភាគីទីបី</string>
     <string name="login_method_recovery">កូដស្តារ</string>
     <string name="account_close_section">បិទគណនី</string>
@@ -339,8 +339,8 @@
     <string name="system_status_reachability_public">សាធារណៈ</string>
     <string name="system_status_reachability_private">ឯកជន</string>
     <string name="system_status_reachability_unknown">មិនស្គាល់</string>
-    <string name="system_status_relay">តាមរយៈ relay</string>
-    <string name="system_status_mesh">Mesh ផ្សាយ</string>
+    <string name="system_status_relay">តាមរយៈម៉ាស៊ីនបញ្ជូនបន្ត</string>
+    <string name="system_status_mesh">បណ្ដាញសំណាញ់ផ្សាយ</string>
     <string name="system_status_broadcast">ការផ្សាយចុងក្រោយ</string>
     <string name="system_status_queued_broadcasts">សារផ្សាយក្នុងជួរ</string>
     <string name="system_setting_hostname_publish">ប្រកាសឈ្មោះម៉ាស៊ីន និងដែនទៅម៉ាស៊ីនមេផ្សេងទៀត</string>
@@ -374,7 +374,7 @@
     <string name="accounts_forget_message">វានឹងបំភ្លេចឧបករណ៍ \"%1$s\" ហើយបញ្ឈប់ការជូនដំណឹងទៅវា។</string>
     <string name="accounts_device_seen">ឃើញចុងក្រោយ %1$s</string>
     <string name="notifprefs_device_app">%1$s · កម្មវិធី</string>
-    <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_device_push">%1$s · ការជូនដំណឹងរុញ</string>
     <string name="notifprefs_test_partial">បានផ្ញើការសាកល្បងទៅ %1$d ក្នុងចំណោម %2$d ទិសដៅ</string>
     <string name="notifprefs_test_none">មិនមានទិសដៅដែលបានកំណត់រចនាសម្ព័ន្ធ</string>
     <string name="notifprefs_transport_fcm">ការជូនដំណឹង Android</string>

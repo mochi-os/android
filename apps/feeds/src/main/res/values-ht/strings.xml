@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="feeds_title">Feed</string>
+    <string name="feeds_title">Fil</string>
     <string name="feeds_find_feeds">Jwenn feed</string>
     <string name="feeds_create_feed">Kreye fil</string>
     <string name="feeds_new_post">Nouvo pòs</string>
@@ -8,15 +8,15 @@
     <string name="feeds_name">Non</string>
     <string name="feeds_create">Kreye</string>
     <string name="feeds_no_feeds_found">Pa gen flux ki jwenn</string>
-    <string name="feeds_feed_title_default">Feed</string>
+    <string name="feeds_feed_title_default">Fil</string>
     <string name="feeds_mark_all_read">Make tout kòm li</string>
     <string name="feeds_settings">Paramèt</string>
     <string name="feeds_no_posts_yet">Poko gen pòs</string>
     <string name="feeds_sort_label">Klase</string>
     <string name="feeds_sort_interests">Enterè</string>
-    <string name="feeds_sort_new">Nouvo</string>
+    <string name="feeds_sort_new">Pi nouvo</string>
     <string name="feeds_sort_hot">Cho</string>
-    <string name="feeds_sort_top">Anwo</string>
+    <string name="feeds_sort_top">Pi bon</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Pòs</string>
     <string name="feeds_image_preview">Apèsi</string>
@@ -29,10 +29,10 @@
     <string name="feeds_cancel_reply">Anile repons</string>
     <string name="feeds_edit_post">Modifye piblikasyon</string>
     <string name="feeds_save_label">Sove</string>
-    <string name="feeds_post_action">Pòs</string>
-    <string name="feeds_feed_label">Feed</string>
+    <string name="feeds_post_action">Pibliye</string>
+    <string name="feeds_feed_label">Fil</string>
     <string name="feeds_add_files">Ajoute fichye</string>
-    <string name="feeds_restore">Restore</string>
+    <string name="feeds_restore">Retabli</string>
     <string name="feeds_check_in">Anrejistre</string>
     <string name="feeds_travelling">Vwayaje</string>
     <string name="feeds_tab_sources">Sous</string>
@@ -55,7 +55,7 @@
     <string name="feeds_source_url">URL</string>
     <string name="feeds_source_type">Tip</string>
     <string name="feeds_source_type_rss">RSS</string>
-    <string name="feeds_source_type_feed_posts">Mochi feed</string>
+    <string name="feeds_source_type_feed_posts">Fil Mochi</string>
     <string name="feeds_source_type_feed_memories">Memwa</string>
     <string name="feeds_remove_source">Retire sous</string>
     <string name="feeds_suggested_credibility_accept">Aksepte</string>

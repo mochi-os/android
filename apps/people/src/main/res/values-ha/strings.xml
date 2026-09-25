@@ -2,9 +2,9 @@
 <resources>
 
     <string name="people_invitations_title">Gayyata</string>
-    <string name="people_profile_title">Profile</string>
-    <string name="people_groups_title">Groups</string>
-    <string name="people_group_title">Group</string>
+    <string name="people_profile_title">Bayanin martaba</string>
+    <string name="people_groups_title">Ƙungiyoyi</string>
+    <string name="people_group_title">Ƙungiya</string>
     <string name="people_person_title">Mutum</string>
     <string name="people_friends_search_placeholder">Bincika…</string>
     <string name="people_friends_no_people_found">Babu mutane da aka samu</string>
@@ -45,7 +45,7 @@
     <string name="people_member_remove_title">Cire Memba</string>
     <string name="people_member_search_hint">Shigar da suna don nemo mutanen da kake son ƙarawa</string>
     <string name="people_member_type_user">Mai amfani</string>
-    <string name="people_member_type_group">Group</string>
+    <string name="people_member_type_group">Ƙungiya</string>
     <string name="people_profile_save">Adana</string>
     <string name="people_profile_saving">Ana ajiyewa…</string>
     <string name="people_profile_save_failed">An gaza ajiyewa</string>
@@ -62,7 +62,7 @@
     <string name="people_profile_uploading">Ana lodawa…</string>
     <string name="people_profile_change_banner">Canza tuta</string>
     <string name="people_profile_no_banner">Ba a saita banner ba</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">Alamar gidan yanar gizo</string>
     <string name="people_profile_browser_icon">Icon na browser</string>
     <string name="people_profile_file_too_large">Fayil ya yi yawa</string>
     <string name="people_profile_clear">Share</string>
@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Buɗe navigation</string>
     <string name="people_person_state_friend">Abokai</string>
     <string name="people_person_state_self">Kai</string>
-    <string name="people_person_message">Saƙo</string>
+    <string name="people_person_message">Aika saƙo</string>
     <string name="people_person_accept">Yarda</string>
     <string name="people_person_decline">Ƙi</string>
 
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">Shigar da ingantaccen launi na hex (misali #a78bfa)</string>
     <string name="people_profile_accent_none">Babu</string>
     <string name="people_profile_privacy_private_desc">Abokan juna kawai za su iya kallon martabarka</string>
-    <string name="people_welcome_title">Barka da zuwa People</string>
+    <string name="people_welcome_title">Barka da zuwa Mutane</string>
     <string name="people_person_banner_alt">Tutar %1$s</string>
     <string name="people_person_private">Wannan martabar tana sirri ce</string>
     <string name="people_person_state_invited">An gayyace shi</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Karɓi duka</string>
     <string name="people_invitations_decline_all">Ƙi duka</string>
     <string name="people_invitations_cancel_all">Soke duka</string>
+    <string name="people_invitations_cancel">Soke</string>
     <string name="people_invitations_all_accepted">An karɓi dukkan gayyace-gayyace</string>
     <string name="people_invitations_all_declined">An ƙi dukkan gayyace-gayyace</string>
     <string name="people_invitations_all_cancelled">An soke dukkan gayyace-gayyace</string>
@@ -113,12 +114,12 @@
     <string name="people_invitations_some_cancel_failed">An kasa soke wasu gayyace-gayyace</string>
     <string name="people_profile_too_long">Bayanin martaba ya yi tsawo sosai</string>
     <string name="people_invite_settings_load_failed">An gaza loading manufar gayyatarka</string>
-    <string name="people_profile_avatar">Avatar</string>
-    <string name="people_profile_banner">Banner</string>
+    <string name="people_profile_avatar">Hoton bayanin martaba</string>
+    <string name="people_profile_banner">Tuta</string>
     <string name="people_contacts_search_placeholder">Bincika…</string>
     <string name="people_contacts_invited">An gayyace shi</string>
     <string name="people_contacts_accept">Yarda</string>
-    <string name="people_contacts_message">Saƙo</string>
+    <string name="people_contacts_message">Aika saƙo</string>
     <string name="people_contacts_no_people_found">Babu mutane da aka samu</string>
     <string name="people_contacts_try_adjusting">Gwada gyara binciken ku</string>
     <string name="people_contact_section_address">Adireshi</string>
@@ -127,13 +128,13 @@
     <string name="people_contact_email">Email</string>
     <string name="people_contact_city">Birni</string>
     <string name="people_contact_region">Yanki</string>
-    <string name="people_contact_postcode">Postcode</string>
+    <string name="people_contact_postcode">Lambar gidan waya</string>
     <string name="people_contact_country">Ƙasa</string>
     <string name="people_contact_type">Nau\'i</string>
     <string name="people_contact_type_home">Gida</string>
     <string name="people_contact_type_other">Sauran</string>
     <string name="people_contact_remove">Cire</string>
-    <string name="people_contact_pick_date_confirm">Yi</string>
+    <string name="people_contact_pick_date_confirm">To</string>
     <string name="people_books_name">Suna</string>
     <string name="people_books_rename">Sake suna</string>
     <string name="people_contacts_sort_name">Suna</string>

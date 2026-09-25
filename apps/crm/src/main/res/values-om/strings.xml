@@ -67,7 +67,7 @@
     <string name="crm_board_rename">Maqaa jijjiiri</string>
     <string name="crm_board_rename_column">Maqaa tarjaa jijjiiri</string>
     <string name="crm_move_position">Bakka</string>
-    <string name="crm_move_position_top">Ol</string>
+    <string name="crm_move_position_top">Gubbaa</string>
     <string name="crm_move_current">Yeroo amma</string>
     <string name="crm_design_title">Boci</string>
     <string name="crm_design_export">Bocii ergi</string>
@@ -126,9 +126,9 @@
     <string name="crm_not_found">Pirojektiin hin argamne</string>
     <string name="crm_more">Caalaa</string>
     <string name="crm_comment_send">Ergi</string>
-    <string name="crm_field_position_body">Qabiyyee</string>
+    <string name="crm_field_position_body">Qaama</string>
     <string name="crm_sort_field">Tartiibessuu</string>
-    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_comment_remove_attachment">Maxxansaa haqi</string>
     <string name="crm_views_sort_by">Tartiibessuu</string>
     <string name="crm_views_move_up">Gubbatti dabarsi</string>
     <string name="crm_class_move_up">Gubbatti dabarsi</string>
@@ -241,7 +241,7 @@
     <string name="crm_access_no_groups">Garreen hin jiran</string>
     <string name="crm_access_tab_users">Fayyadamtoota</string>
     <string name="crm_access_tab_groups">Garee</string>
-    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_attachment_remove">Maxxansaa haqi</string>
     <string name="crm_board_add_column">Tarjaa dabali</string>
     <string name="crm_settings_entity_id">ID Iddoo</string>
     <string name="crm_settings_fingerprint">Maxxansa quba</string>

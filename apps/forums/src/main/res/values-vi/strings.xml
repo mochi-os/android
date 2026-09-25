@@ -24,13 +24,13 @@
     <string name="forums_settings">Cài đặt</string>
     <string name="forums_load_more">Tải thêm</string>
     <string name="forums_sort_label">Sắp xếp</string>
-    <string name="forums_sort_new">Mới</string>
+    <string name="forums_sort_new">Mới nhất</string>
     <string name="forums_sort_hot">Nóng</string>
-    <string name="forums_sort_top">Đầu</string>
+    <string name="forums_sort_top">Hàng đầu</string>
     <string name="forums_sort_interests">Sở thích</string>
     <string name="forums_post_title_field">Tiêu đề</string>
     <string name="forums_post_attach">Đính kèm tệp</string>
-    <string name="forums_post_create_action">Bài viết</string>
+    <string name="forums_post_create_action">Đăng</string>
     <string name="forums_post_edit">Sửa bài đăng</string>
     <string name="forums_post_edit_title">Sửa bài đăng</string>
     <string name="forums_post_edit_title_field">Tiêu đề</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Thành viên</string>
     <string name="forums_tab_banner">Biểu ngữ</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Mục tiêu</string>
+    <string name="forums_access_target">Người dùng hoặc nhóm</string>
     <string name="forums_access_level_view">Xem</string>
     <string name="forums_access_level_vote">Bình chọn</string>
     <string name="forums_access_level_comment">Bình luận</string>
-    <string name="forums_access_level_post">Bài viết</string>
+    <string name="forums_access_level_post">Đăng</string>
     <string name="forums_access_level_none">Không có</string>
     <string name="forums_members_empty">Không có thành viên</string>
     <string name="forums_banner_dismiss">Bỏ qua biểu ngữ</string>
-    <string name="forums_ai_mode_tag">Thẻ</string>
+    <string name="forums_ai_mode_tag">Gắn thẻ</string>
     <string name="forums_ai_account_default">Tài khoản mặc định</string>
     <string name="forums_ai_prompt_reset">Đặt lại về mặc định</string>
     <string name="forums_settings_unsubscribe">Hủy đăng ký</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_login_failed">Đăng nhập thất bại</string>
 
     <string name="notification_channel_forums">Thông báo diễn đàn</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Diễn đàn</string>
     <string name="forums_auth_create_identity_failed">Không thể tạo danh tính</string>
     <string name="forums_auth_mfa_unsupported">MFA chưa được hỗ trợ trong ứng dụng di động</string>
     <string name="forums_auth_enter_code_sent">Nhập mã đã gửi đến %1$s</string>

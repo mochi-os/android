@@ -342,7 +342,7 @@
     <string name="system_status_reachability_public">Público</string>
     <string name="system_status_reachability_private">Privado</string>
     <string name="system_status_reachability_unknown">Desconhecido</string>
-    <string name="system_status_relay">Via relay</string>
+    <string name="system_status_relay">Via retransmissor</string>
     <string name="system_status_mesh">Malha de difusão</string>
     <string name="system_status_broadcast">Última difusão</string>
     <string name="system_status_queued_broadcasts">Mensagens de difusão em fila</string>

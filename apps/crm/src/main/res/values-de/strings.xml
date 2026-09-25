@@ -45,7 +45,7 @@
     <string name="crm_object_tab_activity">Aktivität</string>
     <string name="crm_parent_label">Übergeordnet</string>
     <string name="crm_parent_search_placeholder">Suchen</string>
-    <string name="crm_links_title">Links</string>
+    <string name="crm_links_title">Verknüpfungen</string>
     <string name="crm_links_add">Link hinzufügen</string>
     <string name="crm_links_section_blocks">Blockiert</string>
     <string name="crm_links_section_blocked_by">Blockiert von</string>
@@ -78,7 +78,7 @@
     <string name="crm_design_or_upload_json">Oder eine Datei hochladen</string>
     <string name="crm_design_upload_json">.json-Datei hochladen</string>
     <string name="crm_design_tab_classes">Klassen</string>
-    <string name="crm_design_tab_views">Aufrufe</string>
+    <string name="crm_design_tab_views">Ansichten</string>
     <string name="crm_design_import_dialog_title">Design importieren</string>
     <string name="crm_design_import_choose_template">Vorlage auswählen</string>
     <string name="crm_design_replace_title">Design ersetzen?</string>
@@ -117,7 +117,7 @@
     <string name="crm_views_edit_dialog_title">Ansicht bearbeiten</string>
     <string name="crm_views_delete_title">Ansicht löschen</string>
     <string name="crm_views_type">Typ</string>
-    <string name="crm_views_type_board">Brett</string>
+    <string name="crm_views_type_board">Board</string>
     <string name="crm_views_type_list">Liste</string>
     <string name="crm_views_direction">Richtung</string>
     <string name="crm_views_sort_created">Erstellt</string>

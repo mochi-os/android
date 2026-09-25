@@ -182,7 +182,7 @@
     <string name="projects_links_search_placeholder">Buscar objetos</string>
 
     <string name="notification_channel_projects">Notificaciones de proyectos</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Proyectos</string>
     <string name="projects_list_search_placeholder">Buscar proyectos</string>
     <string name="projects_list_no_matching">No hay proyectos coincidentes</string>
     <string name="projects_list_empty">Aún no hay proyectos</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Selecciona una regla</string>
     <string name="projects_access_authenticated_desc">Cualquier persona que haya iniciado sesión</string>
     <string name="projects_access_anyone_desc">Incluidos los usuarios anónimos</string>
-    <string name="projects_access_target">Destino</string>
+    <string name="projects_access_target">Usuario o grupo</string>
     <string name="projects_access_target_hint">ID de entidad, @grupo, * (todos) o + (miembros)</string>
     <string name="projects_access_selected">Seleccionado: %1$s</string>
     <string name="projects_access_role_comment">Comentar y ver</string>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="go_action_delete">گیم حذف کریں</string>
-    <string name="go_action_more">گیم actions کھولیں</string>
+    <string name="go_action_more">گیم ایکشنز کھولیں</string>
     <string name="go_action_offer_draw">ڈرا کی پیشکش کریں</string>
-    <string name="go_action_open_chat">چیٹ panel کھولیں</string>
-    <string name="go_action_pass">pass</string>
+    <string name="go_action_open_chat">چیٹ پینل کھولیں</string>
+    <string name="go_action_pass">باری چھوڑیں</string>
     <string name="go_action_rematch">دوبارہ میچ</string>
-    <string name="go_action_resign">resign کریں</string>
-    <string name="go_app_title">جائیں</string>
+    <string name="go_action_resign">ہار مانیں</string>
+    <string name="go_app_title">گو</string>
     <string name="go_captures_black_sr">سیاہ پکڑے گئے</string>
     <string name="go_captures_white_sr">سفید پکڑے گئے</string>
     <string name="go_chat_title">چیٹ</string>
@@ -38,15 +38,15 @@
     <string name="go_new_game_komi_label">کومی</string>
     <string name="go_new_game_komi_range_error">0 اور 10 کے درمیان ہونا چاہیے</string>
     <string name="go_new_game_start">گیم شروع کریں</string>
-    <string name="go_pass_confirm">pass</string>
+    <string name="go_pass_confirm">باری چھوڑیں</string>
     <string name="go_pass_end_confirm">گیم ختم کریں</string>
     <string name="go_pass_end_message">%1$s نے بھی پاس کیا۔ تصدیق کرنے سے کھیل ختم ہو جائے گا اور بورڈ کا اسکور ہوگا۔</string>
     <string name="go_pass_end_title">گیم ختم کریں؟</string>
     <string name="go_pass_message">اپنی باری چھوڑیں اور اپنے حریف کو پاس کریں۔</string>
     <string name="go_pass_title">باری چھوڑیں؟</string>
-    <string name="go_resign_confirm">resign کریں</string>
+    <string name="go_resign_confirm">ہار مانیں</string>
     <string name="go_resign_message">کیا آپ واقعی ہار ماننا چاہتے ہیں؟ %1$s کھیل جیت جائے گا۔</string>
-    <string name="go_resign_title">گیم سے resign کریں؟</string>
+    <string name="go_resign_title">گیم میں ہار مانیں؟</string>
     <string name="go_sidebar_completed">مکمل</string>
     <string name="go_sidebar_new_game">نیا گیم</string>
     <string name="go_status_draw">برابر</string>

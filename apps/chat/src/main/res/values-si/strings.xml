@@ -25,7 +25,7 @@
     <string name="chat_chat_not_found">චැට් එක සොයාගත නොහැක</string>
 
     <string name="chat_message_send">යවන්න</string>
-    <string name="chat_attachment_remove">Remove attachment</string>
+    <string name="chat_attachment_remove">ඇමුණුම ඉවත් කරන්න</string>
     <string name="chat_attachment_move_up">ඉහළට ගෙනයන්න</string>
     <string name="chat_attachment_move_down">පහළට ගෙනයන්න</string>
 
@@ -70,8 +70,8 @@
     <string name="chat_new_search_placeholder">පුද්ගලයන් සොයන්න</string>
     <string name="chat_new_no_matches">ගැළපෙන පුද්ගලයන් නැත</string>
     <string name="chat_new_no_friends">කතාබස් කිරීමට පුද්ගලයන් සොයන්න</string>
-    <string name="chat_pin">pin කරන්න</string>
-    <string name="chat_unpin">unpin කරන්න</string>
+    <string name="chat_pin">අමුණන්න</string>
+    <string name="chat_unpin">ගලවන්න</string>
     <string name="chat_settings_general">සාමාන්‍ය</string>
     <string name="chat_settings_screen_title">%1$s සැකසුම්</string>
     <string name="chat_mark_read">කියවූ ලෙස ලකුණු කරන්න</string>

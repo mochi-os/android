@@ -2,7 +2,7 @@
 <resources>
     <string name="feeds_title">ဖိဒ်များ</string>
     <string name="feeds_find_feeds">ဖိဒ်များ ရှာ</string>
-    <string name="feeds_create_feed">feed ဖန်တီးမည်</string>
+    <string name="feeds_create_feed">ဖိဒ် ဖန်တီးမည်</string>
     <string name="feeds_new_post">ပို့စ်အသစ်</string>
     <string name="feeds_all_feeds">feed အားလုံး</string>
     <string name="feeds_name">အမည်</string>
@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">ပို့စ်များ မရှိသေးပါ</string>
     <string name="feeds_sort_label">စီမည်</string>
     <string name="feeds_sort_interests">စိတ်ဝင်စားမှုများ</string>
-    <string name="feeds_sort_new">အသစ်</string>
+    <string name="feeds_sort_new">အသစ်ဆုံး</string>
     <string name="feeds_sort_hot">လူကြိုက်များ</string>
-    <string name="feeds_sort_top">ထိပ်</string>
+    <string name="feeds_sort_top">ထိပ်တန်း</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">ပို့စ်</string>
     <string name="feeds_image_preview">ကြိုကြည့်ရန်</string>
@@ -29,11 +29,11 @@
     <string name="feeds_cancel_reply">အကြောင်းပြန်ချက် မလုပ်တော့ပါ</string>
     <string name="feeds_edit_post">ပို့စ် တည်းဖြတ်</string>
     <string name="feeds_save_label">သိမ်းမည်</string>
-    <string name="feeds_post_action">ပို့စ်</string>
+    <string name="feeds_post_action">ပို့စ်တင်ရန်</string>
     <string name="feeds_feed_label">ဖိဒ်</string>
     <string name="feeds_add_files">ဖိုင်များ ထည့်မည်</string>
     <string name="feeds_restore">ပြန်ဆယ်ယူ</string>
-    <string name="feeds_check_in">Check in</string>
+    <string name="feeds_check_in">ချက်အင် လုပ်ရန်</string>
     <string name="feeds_travelling">ခရီးသွားနေသည်</string>
     <string name="feeds_tab_sources">မူရင်းများ</string>
     <string name="feeds_sources_title">မူရင်းများ</string>
@@ -43,9 +43,9 @@
     <string name="feeds_feed_name">ဖိဒ် အမည်</string>
     <string name="feeds_save_name">အမည် သိမ်းပါ</string>
     <string name="feeds_banner">ပိုစတာ</string>
-    <string name="feeds_banner_description">သင့် feed ထိပ်တွင် ပြသမည့် ရွေးချယ်နိုင်သော markdown banner။</string>
+    <string name="feeds_banner_description">သင့် ဖိဒ် ထိပ်တွင် ပြသမည့် ရွေးချယ်နိုင်သော markdown ပိုစတာ။</string>
     <string name="feeds_clear">ရှင်းမည်</string>
-    <string name="feeds_delete_feed">feed ဖျက်မည်</string>
+    <string name="feeds_delete_feed">ဖိဒ် ဖျက်မည်</string>
     <string name="feeds_no_members">အဖွဲ့ဝင်များ မရှိပါ</string>
     <string name="feeds_user">သုံးစွဲသူ</string>
     <string name="feeds_access_no_groups">အုပ်စုများ မရရှိနိုင်ပါ</string>
@@ -59,12 +59,12 @@
     <string name="feeds_source_type_feed_memories">မှတ်ဉာဏ်များ</string>
     <string name="feeds_remove_source">ရင်းမြစ် ဖယ်ပါ</string>
     <string name="feeds_suggested_credibility_accept">လက်ခံမည်</string>
-    <string name="feeds_rss_url_copied">RSS URL ကို clipboard သို့ ကူးယူပြီးပါပြီ</string>
+    <string name="feeds_rss_url_copied">RSS URL ကို ကလစ်ဘုတ် သို့ ကူးယူပြီးပါပြီ</string>
     <string name="feeds_logout">ထွက်</string>
     <string name="feeds_ai_account_default">မူရင်း အကောင့်</string>
     <string name="feeds_ai_mode_off">ပိတ်ထားသည်</string>
-    <string name="feeds_ai_mode_tag">Tag</string>
-    <string name="feeds_ai_mode_tag_deduplicate">Tag + ထပ်တူဖျက်မည်</string>
+    <string name="feeds_ai_mode_tag">တက်ဂ်</string>
+    <string name="feeds_ai_mode_tag_deduplicate">တက်ဂ် + ထပ်တူဖျက်မည်</string>
     <string name="feeds_feed_not_found">ဖိဒ် မတွေ့ပါ</string>
     <string name="feeds_post_not_found">ပို့စ် မတွေ့ပါ</string>
     <string name="feeds_post_select_feed">ကျေးဇူးပြု၍ ဖီးတစ်ခုကို ရွေးပါ</string>
@@ -80,7 +80,7 @@
     <string name="feeds_settings_member_removed">အဖွဲ့ဝင် ဖယ်ရှားပြီးပါပြီ</string>
     <string name="feeds_settings_ai_mode_updated">AI မုဒ်ကို မှန်ထားနေနေသည်</string>
     <string name="feeds_settings_ai_account_updated">AI အကောင့်ကို မှန်ထားနေနေသည်</string>
-    <string name="feeds_settings_prompt_saved">Prompt သိမ်းပြီးပါပြီ</string>
+    <string name="feeds_settings_prompt_saved">ညွှန်ကြားချက် သိမ်းပြီးပါပြီ</string>
     <string name="feeds_settings_prompt_reset">လမ်းညွှန်မှုကို မူလပဝန်သို့ ပြန်ထားပါပြီ</string>
     <string name="feeds_send">ပို့</string>
     <string name="feeds_move_up">အပေါ်သို့ ရွှေ့</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">စိတ်ဝင်စားမှု လျှော့ပြီးပါပြီ</string>
     <string name="feeds_interest_removed">စိတ်ဝင်စားမှု ဖယ်ရှားပြီးပါပြီ</string>
     <string name="feeds_interest_failed">စိတ်ဝင်စားမှု ချိန်ညှိ၍ မရပါ</string>
-    <string name="feeds_saved_title">သိမ်းပြီး</string>
-    <string name="feeds_saved_menu">သိမ်းပြီး</string>
+    <string name="feeds_saved_title">သိမ်းထားသည်များ</string>
+    <string name="feeds_saved_menu">သိမ်းထားသည်များ</string>
     <string name="feeds_saved_save">နောက်မှကြည့်ရန် သိမ်းပါ</string>
     <string name="feeds_saved_remove">သိမ်းထားသည်မှ ဖယ်ရှားပါ</string>
     <string name="feeds_saved_clear_all">အားလုံး ရှင်းမည်</string>
@@ -164,11 +164,11 @@
     <string name="feeds_settings_section_identity">ကိုယ်ပိုင်</string>
     <string name="feeds_unsubscribe">Subscribe ဖြုတ်မည်</string>
     <string name="feeds_unsubscribed">Subscribe ဖြုတ်ပြီး</string>
-    <string name="feeds_access_level_comment_full">မှတ်ချက်၊ react၊ နှင့် ကြည့်ရှုခြင်း</string>
+    <string name="feeds_access_level_comment_full">မှတ်ချက်၊ တုံ့ပြန်မှုပေး၊ နှင့် ကြည့်ရှုခြင်း</string>
     <string name="feeds_rss_mode_posts_comments">ပို့စ်နှင့် comment များ</string>
     <string name="feeds_access_add_title">ဝင်ရောက်ခွင့် ထည့်မည်</string>
     <string name="feeds_permission_request_message">%1$s သည် အောက်ပါခွင့်ပြုချက်ကို တောင်းဆိုနေသည် -</string>
-    <string name="feeds_allow_search">မည်သူမဆို feed ကို ရှာဖွေခွင့်ပြုမည်</string>
+    <string name="feeds_allow_search">မည်သူမဆို ဖိဒ် ကို ရှာဖွေခွင့်ပြုမည်</string>
     <string name="feeds_post_content">ပို့စ် အကြောင်းအရာ</string>
     <string name="feeds_enable_memories">မှတ်ဉာဏ် ဖွင့်</string>
     <string name="feeds_permission_request_title">ခွင့်ပြုချက် တောင်းဆိုမှု</string>
@@ -183,8 +183,8 @@
     <string name="feeds_create_first_post">ပထမဆုံးပို့စ် ဖန်တီးမည်</string>
     <string name="feeds_rss_mode_posts">ပို့စ်များ</string>
     <string name="feeds_source_last_checked">နောက်ဆုံးစစ်ဆေးခဲ့သည်မှာ %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">Feed မှ subscribe ဖြုတ်မည်</string>
-    <string name="feeds_source_transform_hint">အင်္ဂလိပ်ဘာသာသို့ ဘာသာပြန်ပြီး bullet point များဖြင့် ပြသမည်။</string>
+    <string name="feeds_settings_unsubscribe_section">ဖိဒ် မှ စာရင်းသွင်းမှု ဖြုတ်မည်</string>
+    <string name="feeds_source_transform_hint">အင်္ဂလိပ်ဘာသာသို့ ဘာသာပြန်ပြီး အချက်ကောက်များဖြင့် ပြသမည်။</string>
     <string name="feeds_source_url_hint_feed">ဖိဒ် အကောင့် ID သို့မဟုတ် လက်ဗွေ</string>
     <string name="feeds_source_credibility_label">ယုံကြည်စိတ်ချရမှု</string>
     <plurals name="feeds_source_interval_hours">

@@ -72,11 +72,11 @@
     <string name="people_common_close">Sulje</string>
     <string name="people_common_save">Tallenna</string>
     <string name="people_welcome_dismiss">Hylkää</string>
-    <string name="people_sidebar_header">Henkilöt</string>
+    <string name="people_sidebar_header">Ihmiset</string>
     <string name="people_open_sidebar">Avaa navigointi</string>
     <string name="people_person_state_friend">Kaverit</string>
     <string name="people_person_state_self">Sinä</string>
-    <string name="people_person_message">Viesti</string>
+    <string name="people_person_message">Lähetä viesti</string>
     <string name="people_person_accept">Hyväksy</string>
     <string name="people_person_decline">Hylkää</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Hyväksy kaikki</string>
     <string name="people_invitations_decline_all">Hylkää kaikki</string>
     <string name="people_invitations_cancel_all">Peruuta kaikki</string>
+    <string name="people_invitations_cancel">Peruuta</string>
     <string name="people_invitations_all_accepted">Kaikki kutsut hyväksytty</string>
     <string name="people_invitations_all_declined">Kaikki kutsut hylätty</string>
     <string name="people_invitations_all_cancelled">Kaikki kutsut peruttu</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Hae…</string>
     <string name="people_contacts_invited">Kutsuttu</string>
     <string name="people_contacts_accept">Hyväksy</string>
-    <string name="people_contacts_message">Viesti</string>
+    <string name="people_contacts_message">Lähetä viesti</string>
     <string name="people_contacts_no_people_found">Henkilöitä ei löytynyt</string>
     <string name="people_contacts_try_adjusting">Kokeile muuttaa hakuasi</string>
     <string name="people_contact_section_address">Osoite</string>

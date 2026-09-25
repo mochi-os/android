@@ -9,11 +9,11 @@
     <string name="launcher_people">Mochi ピープル</string>
     <string name="launcher_settings">Mochi 設定</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi ウィキ</string>
     <string name="launcher_chess">Mochi チェス</string>
     <string name="launcher_go">Mochi 囲碁</string>
-    <string name="launcher_words">Mochi ワード</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_words">Mochi ワーズ</string>
+    <string name="launcher_market">Mochi マーケット</string>
     <string name="launcher_calendars">Mochi カレンダー</string>
     <string name="launcher_staff">Mochi スタッフ</string>
 

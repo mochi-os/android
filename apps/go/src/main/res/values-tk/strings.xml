@@ -8,7 +8,7 @@
     <string name="go_action_pass">Geç</string>
     <string name="go_action_rematch">Gaýtadan oýun</string>
     <string name="go_action_resign">Resign et</string>
-    <string name="go_app_title">Git</string>
+    <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Gara tutgunlary</string>
     <string name="go_captures_white_sr">Ak tutgunlary</string>
     <string name="go_chat_title">Söhbetdeşlik</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">Gapdal paneli aç</string>
     <string name="go_sidebar_active">Aktiw oýunlar</string>
     <string name="go_empty_active">Entek işjeň oýun ýok.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">Ýeňlişi boýun aldy</string>
     <string name="go_new_game_title">Täze Go oýny</string>
     <string name="go_new_game_no_friends">Oýny başlamazdan öň dost goşmaly.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

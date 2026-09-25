@@ -47,7 +47,7 @@
     <string name="route_method">Methode</string>
     <string name="route_method_app">App</string>
     <string name="route_method_entity">Entiteit</string>
-    <string name="route_method_redirect">Redirect</string>
+    <string name="route_method_redirect">Omleiding</string>
     <string name="route_priority">Prioriteit</string>
     <string name="route_enabled">Ingeschakeld</string>
     <string name="route_disabled">Uitgeschakeld</string>

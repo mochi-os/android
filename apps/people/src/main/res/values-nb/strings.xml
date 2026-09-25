@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Åpne navigasjon</string>
     <string name="people_person_state_friend">Venner</string>
     <string name="people_person_state_self">Du</string>
-    <string name="people_person_message">Melding</string>
+    <string name="people_person_message">Send melding</string>
     <string name="people_person_accept">Godta</string>
     <string name="people_person_decline">Avslå</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Godta alle</string>
     <string name="people_invitations_decline_all">Avslå alle</string>
     <string name="people_invitations_cancel_all">Avbryt alle</string>
+    <string name="people_invitations_cancel">Kanseller</string>
     <string name="people_invitations_all_accepted">Alle invitasjoner godtatt</string>
     <string name="people_invitations_all_declined">Alle invitasjoner avslått</string>
     <string name="people_invitations_all_cancelled">Alle invitasjoner avbrutt</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Søk …</string>
     <string name="people_contacts_invited">Invitert</string>
     <string name="people_contacts_accept">Godta</string>
-    <string name="people_contacts_message">Melding</string>
+    <string name="people_contacts_message">Send melding</string>
     <string name="people_contacts_no_people_found">Ingen personer funnet</string>
     <string name="people_contacts_try_adjusting">Prøv å justere søket</string>
     <string name="people_contact_section_address">Adresse</string>

@@ -104,7 +104,7 @@
     <string name="system_documents_description">Tenarreglar, vilkår og personvernerklæring vist til brukarane dine</string>
     <string name="system_documents_tab_rules">Tenarreglar</string>
     <string name="system_documents_tab_terms">Vilkår</string>
-    <string name="system_documents_tab_privacy">Privacy</string>
+    <string name="system_documents_tab_privacy">Personvern</string>
     <string name="system_documents_language">Språk</string>
     <string name="system_documents_no_language">Ingen dokument tilgjengeleg for dette språket.</string>
     <string name="system_documents_customised">Tilpassa</string>
@@ -146,7 +146,7 @@
     <string name="system_setting_oauth_github_client_secret">GitHub klient-løyndom</string>
     <string name="system_setting_oauth_microsoft_client_id">Microsoft klient-ID</string>
     <string name="system_setting_oauth_microsoft_client_secret">Microsoft klient-løyndom</string>
-    <string name="system_setting_oauth_microsoft_tenant">Microsoft tenant</string>
+    <string name="system_setting_oauth_microsoft_tenant">Microsoft-leigetakar</string>
     <string name="system_setting_oauth_facebook_client_id">Facebook-app-ID</string>
     <string name="system_setting_oauth_facebook_client_secret">Facebook App-løyndom</string>
     <string name="system_setting_oauth_x_client_id">X-klient-ID</string>
@@ -378,7 +378,7 @@
     <string name="accounts_forget_message">Dette vil gløyme eininga \"%1$s\" og stoppe varsel til henne.</string>
     <string name="accounts_device_seen">Sist sett %1$s</string>
     <string name="notifprefs_device_app">%1$s · app</string>
-    <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_device_push">%1$s · push-varsel</string>
     <string name="notifprefs_test_partial">Test send til %1$d av %2$d destinasjonar</string>
     <string name="notifprefs_test_none">Ingen mål er sette opp</string>
     <string name="notifprefs_transport_fcm">Android-push</string>

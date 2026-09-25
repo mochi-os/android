@@ -13,7 +13,7 @@
     <string name="chess_new_title">Trò chơi mới</string>
     <string name="chess_new_pick_opponent">Chọn đối thủ</string>
     <string name="chess_new_no_friends_title">Chưa có bạn bè</string>
-    <string name="chess_new_no_friends_subtitle">Thêm bạn trong ứng dụng People để bắt đầu chơi</string>
+    <string name="chess_new_no_friends_subtitle">Thêm bạn trong ứng dụng Mọi người để bắt đầu chơi</string>
     <string name="chess_new_add_friends">Thêm bạn</string>
     <string name="chess_new_start_button">Bắt đầu trò chơi</string>
     <string name="chess_new_creating">Đang tạo…</string>

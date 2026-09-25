@@ -24,13 +24,13 @@
     <string name="forums_settings">Impostazioni</string>
     <string name="forums_load_more">Carica altri</string>
     <string name="forums_sort_label">Ordina</string>
-    <string name="forums_sort_new">Nuovo</string>
+    <string name="forums_sort_new">Più recenti</string>
     <string name="forums_sort_hot">Popolare</string>
-    <string name="forums_sort_top">In alto</string>
+    <string name="forums_sort_top">Migliori</string>
     <string name="forums_sort_interests">Interessi</string>
     <string name="forums_post_title_field">Titolo</string>
     <string name="forums_post_attach">Allega file</string>
-    <string name="forums_post_create_action">Post</string>
+    <string name="forums_post_create_action">Pubblica</string>
     <string name="forums_post_edit">Modifica post</string>
     <string name="forums_post_edit_title">Modifica post</string>
     <string name="forums_post_edit_title_field">Titolo</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Membri</string>
     <string name="forums_tab_banner">Banner</string>
     <string name="forums_tab_ai">IA</string>
-    <string name="forums_access_target">Destinazione</string>
+    <string name="forums_access_target">Soggetto</string>
     <string name="forums_access_level_view">Visualizza</string>
     <string name="forums_access_level_vote">Vota</string>
-    <string name="forums_access_level_comment">Commento</string>
-    <string name="forums_access_level_post">Post</string>
+    <string name="forums_access_level_comment">Commenta</string>
+    <string name="forums_access_level_post">Pubblica</string>
     <string name="forums_access_level_none">Nessuno</string>
     <string name="forums_members_empty">Nessun membro</string>
     <string name="forums_banner_dismiss">Ignora banner</string>
-    <string name="forums_ai_mode_tag">Tag</string>
+    <string name="forums_ai_mode_tag">Assegna tag</string>
     <string name="forums_ai_account_default">Account predefinito</string>
     <string name="forums_ai_prompt_reset">Reimposta ai valori predefiniti</string>
     <string name="forums_settings_unsubscribe">Annulla iscrizione</string>
@@ -80,7 +80,7 @@
     <string name="forums_moderation_reports_resolved">Risolto</string>
     <string name="forums_moderation_reports_all">Tutti</string>
     <string name="forums_moderation_reports_empty">Nessuna segnalazione</string>
-    <string name="forums_moderation_report_dismiss">Ignora</string>
+    <string name="forums_moderation_report_dismiss">Archivia</string>
     <string name="forums_moderation_restrictions_empty">Nessuna restrizione</string>
     <string name="forums_moderation_restriction_remove">Rimuovi</string>
     <string name="forums_moderation_restriction_type">Tipo</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_login_failed">Accesso non riuscito</string>
 
     <string name="notification_channel_forums">Notifiche dei forum</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Forum</string>
     <string name="forums_auth_create_identity_failed">Creazione dell\'identità non riuscita</string>
     <string name="forums_auth_mfa_unsupported">MFA non ancora supportata nell\'app mobile</string>
     <string name="forums_auth_enter_code_sent">Inserisci il codice inviato a %1$s</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">Manuale</string>
     <string name="forums_access_search_users">Cerca utenti</string>
     <string name="forums_access_no_groups">Nessun gruppo disponibile</string>
-    <string name="forums_saved_title">Salvato</string>
+    <string name="forums_saved_title">Salvati</string>
     <string name="forums_saved_save">Salva per dopo</string>
     <string name="forums_saved_remove">Rimuovi dai salvati</string>
     <string name="forums_saved_clear_all">Cancella tutto</string>

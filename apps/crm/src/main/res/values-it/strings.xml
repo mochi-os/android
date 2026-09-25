@@ -126,7 +126,7 @@
     <string name="crm_not_found">Progetto non trovato</string>
     <string name="crm_more">Altro</string>
     <string name="crm_comment_send">Invia</string>
-    <string name="crm_field_position_body">Testo</string>
+    <string name="crm_field_position_body">Corpo</string>
     <string name="crm_sort_field">Ordina per</string>
     <string name="crm_comment_remove_attachment">Rimuovi allegato</string>
     <string name="crm_views_sort_by">Ordina per</string>
@@ -244,7 +244,7 @@
     <string name="crm_attachment_remove">Rimuovi allegato</string>
     <string name="crm_board_add_column">Aggiungi colonna</string>
     <string name="crm_settings_entity_id">ID entità</string>
-    <string name="crm_settings_fingerprint">Fingerprint</string>
+    <string name="crm_settings_fingerprint">Impronta</string>
     <string name="crm_settings_server">Server</string>
     <string name="crm_untitled">Senza titolo</string>
     <string name="crm_property_select">Seleziona …</string>

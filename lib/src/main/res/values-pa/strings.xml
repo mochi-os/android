@@ -38,7 +38,7 @@
     <string name="access_add_rule">ਨਿਯਮ ਜੋੜੋ</string>
     <string name="access_owner">ਮਾਲਕ</string>
     <string name="access_revoke">ਰੱਦ ਕਰੋ</string>
-    <string name="access_level_comment">ਟਿੱਪਣੀ</string>
+    <string name="access_level_comment">ਟਿੱਪਣੀ ਕਰੋ</string>
     <string name="access_level_view">ਦੇਖੋ</string>
     <string name="access_level_none">ਕੋਈ ਨਹੀਂ</string>
     <string name="reaction_like">ਪਸੰਦ</string>
@@ -201,7 +201,7 @@
     <string name="reauth_signin_text">ਜਦੋਂ ਤੱਕ ਤੁਸੀਂ ਵਾਪਸ ਸਾਈਨ ਇਨ ਨਹੀਂ ਕਰਦੇ, ਸੂਚਨਾਵਾਂ ਰੋਕ ਦਿੱਤੀਆਂ ਗਈਆਂ ਹਨ</string>
     <string name="oem_hint_title">ਬੈਕਗ੍ਰਾਊਂਡ ਵਿੱਚ ਪਹੁੰਚਯੋਗ ਰਹੋ</string>
     <string name="oem_hint_body">ਸੂਚਨਾਵਾਂ ਦੇਣ ਲਈ Mochi ਨੂੰ ਬੈਕਗ੍ਰਾਊਂਡ ਵਿੱਚ ਚੱਲਣਾ ਲਾਜ਼ਮੀ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਅਗਲੀ ਸਕ੍ਰੀਨ \'ਤੇ ਇਸਦੀ ਇਜਾਜ਼ਤ ਦਿਓ, ਨਹੀਂ ਤਾਂ ਜਦੋਂ ਸਕ੍ਰੀਨ ਬੰਦ ਹੋਵੇਗੀ ਤਾਂ ਤੁਹਾਡਾ ਫ਼ੋਨ ਸੂਚਨਾਵਾਂ ਰੋਕ ਸਕਦਾ ਹੈ।</string>
-    <string name="oem_hint_samsung_note">Samsung ਫ਼ੋਨਾਂ \'ਤੇ, Settings → Device care → Sleeping apps ਵੀ ਚੈੱਕ ਕਰੋ ਅਤੇ ਜੇ Mochi ਸੂਚੀਬੱਧ ਹੈ ਤਾਂ ਇਸਨੂੰ ਹਟਾਓ।</string>
+    <string name="oem_hint_samsung_note">Samsung ਫ਼ੋਨਾਂ \'ਤੇ, ਸੈਟਿੰਗਾਂ → ਡਿਵਾਈਸ ਕੇਅਰ → ਸਲੀਪਿੰਗ ਐਪਾਂ ਵੀ ਚੈੱਕ ਕਰੋ ਅਤੇ ਜੇ Mochi ਸੂਚੀਬੱਧ ਹੈ ਤਾਂ ਇਸਨੂੰ ਹਟਾਓ।</string>
     <string name="oem_hint_allow">ਬੈਕਗ੍ਰਾਊਂਡ ਦੀ ਇਜਾਜ਼ਤ ਦਿਓ</string>
     <string name="oem_hint_dismiss">ਦੁਬਾਰਾ ਨਾ ਦਿਖਾਓ</string>
     <string name="about_title">Mochi ਕਲਾਇੰਟ</string>

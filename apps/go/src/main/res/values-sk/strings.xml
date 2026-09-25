@@ -8,7 +8,7 @@
     <string name="go_action_pass">Prejsť</string>
     <string name="go_action_rematch">Odveta</string>
     <string name="go_action_resign">Vzdať</string>
-    <string name="go_app_title">Choď</string>
+    <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Čierne zajatia</string>
     <string name="go_captures_white_sr">Biele zajatia</string>
     <string name="go_chat_title">Chat</string>

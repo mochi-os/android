@@ -73,10 +73,10 @@
     <string name="people_common_save">സേവ് ചെയ്യുക</string>
     <string name="people_welcome_dismiss">ഒഴിവാക്കുക</string>
     <string name="people_sidebar_header">ആളുകൾ</string>
-    <string name="people_open_sidebar">navigation തുറക്കുക</string>
+    <string name="people_open_sidebar">നാവിഗേഷൻ തുറക്കുക</string>
     <string name="people_person_state_friend">സുഹൃത്തുക്കൾ</string>
     <string name="people_person_state_self">നിങ്ങൾ</string>
-    <string name="people_person_message">സന്ദേശം</string>
+    <string name="people_person_message">സന്ദേശം അയയ്ക്കുക</string>
     <string name="people_person_accept">സ്വീകരിക്കുക</string>
     <string name="people_person_decline">നിരസിക്കുക</string>
 
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">സാധുവായ ഹെക്സ് നിറം നൽകുക (ഉദാ. #a78bfa)</string>
     <string name="people_profile_accent_none">ഒന്നുമില്ല</string>
     <string name="people_profile_privacy_private_desc">പരസ്പര സുഹൃത്തുക്കൾക്ക് മാത്രമേ നിങ്ങളുടെ പ്രൊഫൈൽ കാണാൻ കഴിയൂ</string>
-    <string name="people_welcome_title">People ലേക്ക് സ്വാഗതം</string>
+    <string name="people_welcome_title">ആളുകളിലേക്ക് സ്വാഗതം</string>
     <string name="people_person_banner_alt">%1$s ന്റെ ബാനർ</string>
     <string name="people_person_private">ഈ പ്രൊഫൈൽ സ്വകാര്യമാണ്</string>
     <string name="people_person_state_invited">ക്ഷണിച്ചു</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">എല്ലാം സ്വീകരിക്കുക</string>
     <string name="people_invitations_decline_all">എല്ലാം നിരസിക്കുക</string>
     <string name="people_invitations_cancel_all">എല്ലാം റദ്ദാക്കുക</string>
+    <string name="people_invitations_cancel">റദ്ദാക്കുക</string>
     <string name="people_invitations_all_accepted">എല്ലാ ക്ഷണങ്ങളും സ്വീകരിച്ചു</string>
     <string name="people_invitations_all_declined">എല്ലാ ക്ഷണങ്ങളും നിരസിച്ചു</string>
     <string name="people_invitations_all_cancelled">എല്ലാ ക്ഷണങ്ങളും റദ്ദാക്കി</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">തിരയുക…</string>
     <string name="people_contacts_invited">ക്ഷണിച്ചു</string>
     <string name="people_contacts_accept">സ്വീകരിക്കുക</string>
-    <string name="people_contacts_message">സന്ദേശം</string>
+    <string name="people_contacts_message">സന്ദേശം അയയ്ക്കുക</string>
     <string name="people_contacts_no_people_found">ആളുകളെ കണ്ടെത്തിയില്ല</string>
     <string name="people_contacts_try_adjusting">നിങ്ങളുടെ തിരച്ചിൽ ക്രമീകരിക്കാൻ ശ്രമിക്കുക</string>
     <string name="people_contact_section_address">വിലാസം</string>

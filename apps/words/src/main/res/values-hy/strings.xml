@@ -35,24 +35,24 @@
     <string name="words_detail_resign_title">Հանձնվե՞լ խաղում։</string>
     <string name="words_detail_resign_message">Վստա՞հ եք, որ ուզում եք հանձնվել։</string>
 
-    <string name="words_channel_name">Words notifications</string>
-    <string name="words_channel_description">Ծանուցումներ Words-ի հերթերի, փոխանակումների և խաղի արդյունքների մասին։</string>
+    <string name="words_channel_name">Բառերի ծանուցումներ</string>
+    <string name="words_channel_description">Ծանուցումներ Բառերի հերթերի, փոխանակումների և խաղի արդյունքների մասին։</string>
     <string name="words_sidebar_active">Ակտիվ խաղեր</string>
     <string name="words_sidebar_empty">Դեռ խաղեր չկան։</string>
-    <string name="words_new_game_choose_opponents">Choose opponents</string>
+    <string name="words_new_game_choose_opponents">Ընտրել հակառակորդներ</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$d players</string>
-    <string name="words_new_game_no_friends_subtitle">Ավելացրեք ընկերներ People հավելվածում՝ խաղալ սկսելու համար։</string>
-    <string name="words_detail_title">Game</string>
+    <string name="words_new_game_player_count">%1$d խաղացող</string>
+    <string name="words_new_game_no_friends_subtitle">Ավելացրեք ընկերներ «Մարդիկ» հավելվածում՝ խաղալ սկսելու համար։</string>
+    <string name="words_detail_title">Խաղ</string>
     <string name="words_detail_status_opponent_move">%1$s-ի քայլը</string>
     <string name="words_detail_status_winner_wins">%1$s-ը հաղթում է</string>
-    <string name="words_detail_player_fallback">Player %1$d</string>
-    <string name="words_detail_player_count">%1$d players</string>
-    <string name="words_detail_label_tiles_left">%1$d tiles left</string>
-    <string name="words_detail_action_open_chat">Open chat</string>
-    <string name="words_detail_action_more">Game actions</string>
-    <string name="words_detail_exchange_count">Exchange (%1$d)</string>
-    <string name="words_detail_chat_you_played">You played %1$s</string>
+    <string name="words_detail_player_fallback">Խաղացող %1$d</string>
+    <string name="words_detail_player_count">%1$d խաղացող</string>
+    <string name="words_detail_label_tiles_left">Մնաց %1$d սալիկ</string>
+    <string name="words_detail_action_open_chat">Բացել զրույցը</string>
+    <string name="words_detail_action_more">Խաղի գործողություններ</string>
+    <string name="words_detail_exchange_count">Փոխանակում (%1$d)</string>
+    <string name="words_detail_chat_you_played">Դուք խաղացիք %1$s</string>
     <string name="words_detail_chat_player_played">%1$s-ը խաղաց %2$s</string>
 
     <string name="words_detail_delete_title">Ջնջե՞լ խաղը։</string>

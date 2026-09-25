@@ -66,13 +66,13 @@
     <string name="go_open_sidebar">Buksan ang sidebar</string>
     <string name="go_sidebar_active">Mga aktibong laro</string>
     <string name="go_empty_active">Wala pang aktibong laro.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">Sumuko</string>
     <string name="go_new_game_title">Bagong laro ng Go</string>
     <string name="go_new_game_no_friends">Kailangan mong magdagdag ng kaibigan bago ka makapagsimula ng laro.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Mga puntos na idinaragdag sa iskor ng Puti upang mabayaran ang pag-una ng Itim</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go board</string>
+    <string name="go_board_a11y">%1$d×%1$d na Go board</string>
     <string name="go_board_a11y_turn_black">%1$d×%1$d na Go board, iyong turno na maglagay ng itim na bato</string>
     <string name="go_board_a11y_turn_white">%1$d×%1$d na Go board, iyong turno na maglagay ng puting bato</string>
     <string name="go_status_scoring">Pagbibilang — magkasundo sa iskor o magpatuloy sa paglalaro</string>

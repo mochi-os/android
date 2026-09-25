@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">సిబ్బంది</string>
+    <string name="launcher_staff">Mochi సిబ్బంది</string>
     <string name="staff_accounts_action_ban_title">ఖాతాను నిషేధించండి</string>
     <string name="staff_accounts_action_suspend_title">ఖాతాను నిలిపివేయండి</string>
     <string name="staff_accounts_action_unban_title">నిషేధాన్ని తొలగించు</string>
@@ -155,7 +155,7 @@
     <string name="staff_categories_type_digital">డిజిటల్</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">ఫిజికల్</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">సిబ్బంది</string>
     <string name="staff_config_field_auto_approve">స్వీయ-ఆమోద పరిమితి</string>
     <string name="staff_config_field_hold">హోల్డ్ పరిమితి</string>
     <string name="staff_config_field_platform_fee">ప్లాట్‌ఫారమ్ ఫీజు</string>
@@ -235,15 +235,15 @@
     <string name="staff_disputes_reason_unauthorised">అనుమతి లేదు</string>
     <string name="staff_disputes_refund_must_be_positive">రీఫండ్ మొత్తం సున్నా కంటే ఎక్కువగా ఉండాలి</string>
     <string name="staff_disputes_resolution_buyer">కొనుగోలుదారు కోసం పరిష్కరించండి</string>
-    <string name="staff_disputes_resolution_label">రిజల్యూషన్</string>
+    <string name="staff_disputes_resolution_label">పరిష్కారం</string>
     <string name="staff_disputes_resolution_placeholder">పరిష్కారాన్ని ఎంచుకోండి</string>
     <string name="staff_disputes_resolution_seller">విక్రేత కోసం పరిష్కరించండి</string>
     <string name="staff_disputes_resolve">పరిష్కరించండి</string>
     <string name="staff_disputes_resolved_toast">వివాదం పరిష్కరించబడింది</string>
     <string name="staff_disputes_resolving">పరిష్కరిస్తోంది…</string>
-    <string name="staff_disputes_review">సమీక్ష</string>
+    <string name="staff_disputes_review">సమీక్షించండి</string>
     <string name="staff_disputes_status_escalated">ఎస్కలేట్ చేయబడింది</string>
-    <string name="staff_disputes_status_open">ఓపెన్</string>
+    <string name="staff_disputes_status_open">తెరిచి ఉంది</string>
     <string name="staff_disputes_status_resolved_buyer">పరిష్కరించబడింది (కొనుగోలుదారు)</string>
     <string name="staff_disputes_status_resolved_seller">పరిష్కరించబడింది (విక్రేత)</string>
     <string name="staff_disputes_status_responded">ప్రతిస్పందించారు</string>
@@ -316,7 +316,7 @@
     <string name="staff_reports_meta_reason">కారణం</string>
     <string name="staff_reports_meta_reporter">రిపోర్టర్</string>
     <string name="staff_reports_meta_seller">విక్రేత</string>
-    <string name="staff_reports_meta_target">లక్ష్యం</string>
+    <string name="staff_reports_meta_target">రిపోర్ట్ చేసిన అంశం</string>
     <string name="staff_reports_meta_type">రకం</string>
     <string name="staff_reports_notes_label">నోట్‌లు</string>
     <string name="staff_reports_reason_counterfeit">నకిలీ లేదా దొంగిలించబడింది</string>
@@ -378,7 +378,7 @@
     <string name="staff_status_hold">హోల్డ్</string>
     <string name="staff_status_manual">మాన్యువల్</string>
     <string name="staff_status_moderator">మోడరేటర్</string>
-    <string name="staff_status_open">ఓపెన్</string>
+    <string name="staff_status_open">తెరిచి ఉంది</string>
     <string name="staff_status_pending">పెండింగ్</string>
     <string name="staff_status_published">పబ్లిష్ చేయబడింది</string>
     <string name="staff_status_rejected">తిరస్కరించబడింది</string>
@@ -414,7 +414,7 @@
     <string name="staff_team_toast_add_failed">సభ్యుని జోడించడంలో విఫలమైంది</string>
     <string name="staff_team_toast_removed">సభ్యుడు తొలగించబడ్డారు</string>
     <string name="staff_team_toast_role_updated">పాత్ర నవీకరించబడింది</string>
-    <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
+    <string name="staff_audit_action_auction_cancelled">వేలం రద్దు చేయబడింది</string>
     <string name="staff_dashboard_order_fallback">ఆర్డర్ #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">కారణం (ఐచ్ఛికం)</string>

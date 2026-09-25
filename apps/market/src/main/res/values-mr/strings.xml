@@ -127,7 +127,7 @@
     <string name="market_editor_back">मागे</string>
     <string name="market_editor_category">श्रेणी</string>
     <string name="market_editor_category_none">श्रेणी निवडा</string>
-    <string name="market_editor_condition">अट</string>
+    <string name="market_editor_condition">स्थिती</string>
     <string name="market_editor_condition_new">नवीन</string>
     <string name="market_editor_condition_refurbished">नूतनीकृत</string>
     <string name="market_editor_condition_used">वापरलेले</string>
@@ -188,7 +188,7 @@
     <string name="market_filter_apply">लागू करा</string>
     <string name="market_filter_category">श्रेणी</string>
     <string name="market_filter_clear">फिल्टर्स साफ करा</string>
-    <string name="market_filter_condition">अट</string>
+    <string name="market_filter_condition">स्थिती</string>
     <string name="market_filter_condition_new">नवीन</string>
     <string name="market_filter_condition_refurbished">नूतनीकृत</string>
     <string name="market_filter_condition_used">वापरलेले</string>
@@ -225,7 +225,7 @@
     <string name="market_listing_detail_load_failed">लिस्टिंग लोड करण्यात अयशस्वी</string>
     <string name="market_listing_detail_listed">सूचीबद्ध %1$s</string>
     <string name="market_listing_detail_location_heading">स्थान</string>
-    <string name="market_listing_detail_message">संदेश</string>
+    <string name="market_listing_detail_message">संदेश पाठवा</string>
     <string name="market_listing_detail_message_seller">विक्रेत्याला मेसेज पाठवा</string>
     <string name="market_listing_detail_not_found">लिस्टिंग सापडले नाही</string>
     <string name="market_listing_detail_place_bid">बोली लावा</string>
@@ -265,8 +265,8 @@
     <string name="market_messages_send">पाठवा</string>
     <string name="market_messages_thread_listing_chip">लिस्टिंग</string>
     <string name="market_messages_thread_title">संभाषण</string>
-    <string name="market_onboarding_activate">Activate</string>
-    <string name="market_onboarding_activating">Activating…</string>
+    <string name="market_onboarding_activate">सक्रिय करा</string>
+    <string name="market_onboarding_activating">सक्रिय करत आहे…</string>
     <string name="market_onboarding_body">खरेदी आणि विक्री सुरू करण्यासाठी तुमचे खाते सक्रिय करा.</string>
     <string name="market_onboarding_dismiss">काढून टाका</string>
     <string name="market_onboarding_title">Market मध्ये आपले स्वागत आहे</string>
@@ -367,7 +367,7 @@
     <string name="market_sale_carrier_other">इतर</string>
     <string name="market_sale_completed_label">पूर्ण केले</string>
     <string name="market_sale_dispute_respond">प्रतिसाद द्या</string>
-    <string name="market_sale_dispute_state_open">उघडा</string>
+    <string name="market_sale_dispute_state_open">उघडे</string>
     <string name="market_sale_dispute_state_resolved">निराकरण झाले</string>
     <string name="market_sale_load_failed">ऑर्डर लोड करण्यात अयशस्वी</string>
     <string name="market_sale_message_buyer">खरेदीदाराला मेसेज पाठवा</string>
@@ -389,7 +389,7 @@
     <string name="market_sale_title">विक्री</string>
     <string name="market_sale_tracking_label">ट्रॅकिंग क्रमांक</string>
     <string name="market_sales_title">माझी विक्री</string>
-    <string name="market_saved_title">जतन केले</string>
+    <string name="market_saved_title">जतन केलेले</string>
     <string name="market_search_clear">शोध साफ करा</string>
     <string name="market_search_placeholder">बाजारात शोधा</string>
     <string name="market_section_categories">श्रेणी पाहा</string>
@@ -414,7 +414,7 @@
     <string name="market_sidebar_purchases">खरेदी</string>
     <string name="market_sidebar_reviews">पुनरावलोकने</string>
     <string name="market_sidebar_sales">विक्री</string>
-    <string name="market_sidebar_saved">जतन केले</string>
+    <string name="market_sidebar_saved">जतन केलेले</string>
     <string name="market_sidebar_selling">विक्री करत आहे</string>
     <string name="market_sidebar_settings">सेटिंग्ज</string>
     <string name="market_sidebar_subscribers">सदस्य</string>
@@ -433,18 +433,18 @@
     <string name="market_subscribers_interval_month">/ महिना</string>
     <string name="market_subscribers_interval_year">/ वर्ष</string>
     <string name="market_subscribers_load_failed">सबस्क्रायबर लोड करण्यात अयशस्वी</string>
-    <string name="market_subscription_detail_billing_history">Billing history</string>
+    <string name="market_subscription_detail_billing_history">बिलिंग इतिहास</string>
     <string name="market_subscription_detail_billing_history_empty">अद्याप कोणतेही शुल्क नाही.</string>
-    <string name="market_subscription_detail_billing_info">Billing</string>
-    <string name="market_subscription_detail_cancelled_on">Cancelled on %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Latest charge: %1$s</string>
+    <string name="market_subscription_detail_billing_info">बिलिंग</string>
+    <string name="market_subscription_detail_cancelled_on">%1$s रोजी रद्द केले</string>
+    <string name="market_subscription_detail_charge_amount">नवीनतम शुल्क: %1$s</string>
     <string name="market_subscription_detail_listing">लिस्टिंग</string>
     <string name="market_subscription_detail_load_failed">सदस्यता लोड करता आली नाही</string>
     <string name="market_subscription_detail_next_billing">पुढील बिलिंग तारीख: %1$s</string>
     <string name="market_subscription_detail_not_found">सदस्यता सापडली नाही</string>
-    <string name="market_subscription_detail_pending_cancel">Cancellation pending</string>
+    <string name="market_subscription_detail_pending_cancel">रद्दीकरण प्रलंबित</string>
     <string name="market_subscription_detail_seller">विक्रेता</string>
-    <string name="market_subscription_detail_started">Started %1$s</string>
+    <string name="market_subscription_detail_started">%1$s रोजी सुरू झाले</string>
     <string name="market_subscription_detail_title">सबस्क्रिप्शन</string>
     <string name="market_subscriptions_action_cancel">रद्द करा</string>
     <string name="market_subscriptions_action_pause">विराम</string>
@@ -471,7 +471,7 @@
     <string name="market_type_physical">भौतिक</string>
     <string name="market_warnings_title">इशारे</string>
     <string name="market_sale_review_response_submitting">सबमिट करत आहे…</string>
-    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_checkout_subscribing">सबस्क्राइब करत आहे…</string>
     <string name="market_filter_remove">फिल्टर काढा</string>
     <string name="market_listings_action_appeal">काढण्याची याचिका</string>
     <string name="market_listings_share_chooser">जाहिरात शेअर करा</string>
@@ -690,7 +690,7 @@
     <string name="market_seller_step_activate_title">विक्रेता खाते सक्रिय करा</string>
     <string name="market_seller_step_stripe_desc">खरेदीदारांकडून पेमेंट स्वीकारण्यासाठी Stripe खाते जोडा</string>
     <string name="market_seller_step_stripe_title">Stripe कनेक्ट करा</string>
-    <string name="market_seller_stripe_more_info">तुम्ही पेमेंट स्वीकारण्यापूर्वी Stripe ला अधिक माहितीची आवश्यकता आहे. तुमच्या Stripe Dashboard वर आवश्यकता पूर्ण करा, नंतर स्थिती तपासा क्लिक करा.</string>
+    <string name="market_seller_stripe_more_info">तुम्ही पेमेंट स्वीकारण्यापूर्वी Stripe ला अधिक माहितीची आवश्यकता आहे. तुमच्या Stripe डॅशबोर्डवर आवश्यकता पूर्ण करा, नंतर स्थिती तपासा क्लिक करा.</string>
     <string name="market_seller_summary_account_status">खात्याची स्थिती</string>
     <string name="market_seller_summary_fees">शुल्क</string>
     <string name="market_seller_summary_payments">पैसे</string>

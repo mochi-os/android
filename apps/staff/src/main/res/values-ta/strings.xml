@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">பணியாளர்கள்</string>
+    <string name="launcher_staff">Mochi பணியாளர்கள்</string>
     <string name="staff_accounts_action_ban_title">கணக்கைத் தடைசெய்</string>
     <string name="staff_accounts_action_suspend_title">கணக்கை இடைநிறுத்து</string>
     <string name="staff_accounts_action_unban_title">தடையை அகற்று</string>
@@ -88,9 +88,9 @@
     <string name="staff_audit_action_listing_updated">பட்டியல் திருத்தப்பட்டது</string>
     <string name="staff_audit_action_listing_warning">எச்சரிக்கை வழங்கப்பட்டது</string>
     <string name="staff_audit_action_order_cancelled">ரத்துசெய்யப்பட்டது</string>
-    <string name="staff_audit_action_order_chargeback">Chargeback பெறப்பட்டது</string>
-    <string name="staff_audit_action_order_chargeback_lost">Chargeback உறுதிசெய்யப்பட்டது</string>
-    <string name="staff_audit_action_order_chargeback_won">Chargeback தள்ளுபடி செய்யப்பட்டது</string>
+    <string name="staff_audit_action_order_chargeback">சார்ஜ்பேக் பெறப்பட்டது</string>
+    <string name="staff_audit_action_order_chargeback_lost">சார்ஜ்பேக் உறுதிசெய்யப்பட்டது</string>
+    <string name="staff_audit_action_order_chargeback_won">சார்ஜ்பேக் தள்ளுபடி செய்யப்பட்டது</string>
     <string name="staff_audit_action_order_completed">முடிந்தது</string>
     <string name="staff_audit_action_order_created">ஆர்டர் வைக்கப்பட்டது</string>
     <string name="staff_audit_action_order_paid">கட்டணம் பெறப்பட்டது</string>
@@ -111,9 +111,9 @@
     <string name="staff_audit_action_subscription_active">செயலில் திரும்பியது</string>
     <string name="staff_audit_action_subscription_cancel_scheduled">ரத்துசெய்தல் திட்டமிடப்பட்டது</string>
     <string name="staff_audit_action_subscription_cancelled">ரத்துசெய்யப்பட்டது</string>
-    <string name="staff_audit_action_subscription_chargeback">Chargeback பெறப்பட்டது</string>
-    <string name="staff_audit_action_subscription_chargeback_lost">Chargeback உறுதிசெய்யப்பட்டது</string>
-    <string name="staff_audit_action_subscription_chargeback_won">Chargeback தள்ளுபடி செய்யப்பட்டது</string>
+    <string name="staff_audit_action_subscription_chargeback">சார்ஜ்பேக் பெறப்பட்டது</string>
+    <string name="staff_audit_action_subscription_chargeback_lost">சார்ஜ்பேக் உறுதிசெய்யப்பட்டது</string>
+    <string name="staff_audit_action_subscription_chargeback_won">சார்ஜ்பேக் தள்ளுபடி செய்யப்பட்டது</string>
     <string name="staff_audit_action_subscription_created">சந்தா உருவாக்கப்பட்டது</string>
     <string name="staff_audit_action_subscription_past_due">கட்டண நாள் கடந்துவிட்டது</string>
     <string name="staff_audit_action_subscription_paused">இடைநிறுத்தப்பட்டது</string>
@@ -145,7 +145,7 @@
     <string name="staff_categories_dialog_position">நிலை</string>
     <string name="staff_categories_dialog_save">சேமி</string>
     <string name="staff_categories_dialog_saving">சேமிக்கிறது…</string>
-    <string name="staff_categories_dialog_slug">Slug</string>
+    <string name="staff_categories_dialog_slug">ஸ்லக்</string>
     <string name="staff_categories_empty">வகைகள் இல்லை</string>
     <string name="staff_categories_toast_created">வகை உருவாக்கப்பட்டது</string>
     <string name="staff_categories_toast_deleted">வகை நீக்கப்பட்டது</string>
@@ -155,7 +155,7 @@
     <string name="staff_categories_type_digital">டிஜிட்டல்</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">உடல்நலம்</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">பணியாளர்கள்</string>
     <string name="staff_config_field_auto_approve">தானியங்கி அங்கீகார வரம்பு</string>
     <string name="staff_config_field_hold">வைத்திருப்பு வரம்பு</string>
     <string name="staff_config_field_platform_fee">தளக் கட்டணம்</string>
@@ -219,7 +219,7 @@
     <string name="staff_disputes_empty">தகராறுகள் இல்லை</string>
     <string name="staff_disputes_filter_status_label">நிலை</string>
     <string name="staff_disputes_listing_label">#%1$s</string>
-    <string name="staff_disputes_meta_chargeback_fee">Chargeback கட்டணம்</string>
+    <string name="staff_disputes_meta_chargeback_fee">சார்ஜ்பேக் கட்டணம்</string>
     <string name="staff_disputes_meta_evidence_due">ஆதாரம் சமர்ப்பிக்க வேண்டிய தேதி</string>
     <string name="staff_disputes_meta_listing">பட்டியல்</string>
     <string name="staff_disputes_meta_reason">காரணம்</string>
@@ -241,9 +241,9 @@
     <string name="staff_disputes_resolve">தீர்க்கவும்</string>
     <string name="staff_disputes_resolved_toast">தகராறு தீர்க்கப்பட்டது</string>
     <string name="staff_disputes_resolving">தீர்க்கிறது…</string>
-    <string name="staff_disputes_review">மதிப்புரை</string>
+    <string name="staff_disputes_review">மதிப்பாய்வு செய்</string>
     <string name="staff_disputes_status_escalated">மேலதிகாரத்திற்கு அனுப்பப்பட்டது</string>
-    <string name="staff_disputes_status_open">திற</string>
+    <string name="staff_disputes_status_open">திறந்துள்ளது</string>
     <string name="staff_disputes_status_resolved_buyer">தீர்க்கப்பட்டது (வாங்குபவர்)</string>
     <string name="staff_disputes_status_resolved_seller">தீர்க்கப்பட்டது (விற்பனையாளர்)</string>
     <string name="staff_disputes_status_responded">பதிலளிக்கப்பட்டது</string>
@@ -271,7 +271,7 @@
     <string name="staff_listings_moderation_hold">வைத்திரு</string>
     <string name="staff_listings_moderation_manual">கைமுறை</string>
     <string name="staff_listings_moderation_rejected">நிராகரிக்கப்பட்டது</string>
-    <string name="staff_listings_moderation_review">மதிப்புரை</string>
+    <string name="staff_listings_moderation_review">மதிப்பாய்வில்</string>
     <string name="staff_listings_moderation_soft_approved">மென்மையாக அனுமதிக்கப்பட்டது</string>
     <string name="staff_listings_notes_label">குறிப்புகள்</string>
     <string name="staff_listings_price_placeholder">—</string>
@@ -378,7 +378,7 @@
     <string name="staff_status_hold">வைத்திரு</string>
     <string name="staff_status_manual">கைமுறை</string>
     <string name="staff_status_moderator">மிதப்படுத்துபவர்</string>
-    <string name="staff_status_open">திற</string>
+    <string name="staff_status_open">திறந்துள்ளது</string>
     <string name="staff_status_pending">நிலுவையில்</string>
     <string name="staff_status_published">வெளியிடப்பட்டது</string>
     <string name="staff_status_rejected">நிராகரிக்கப்பட்டது</string>
@@ -386,7 +386,7 @@
     <string name="staff_status_resolved_buyer">தீர்க்கப்பட்டது (வாங்குபவர்)</string>
     <string name="staff_status_resolved_seller">தீர்க்கப்பட்டது (விற்பனையாளர்)</string>
     <string name="staff_status_responded">பதிலளிக்கப்பட்டது</string>
-    <string name="staff_status_review">மதிப்புரை</string>
+    <string name="staff_status_review">மதிப்பாய்வில்</string>
     <string name="staff_status_reviewed">மதிப்பாய்வு செய்யப்பட்டது</string>
     <string name="staff_status_reviewing">மதிப்பாய்வு செய்கிறது</string>
     <string name="staff_status_soft_approved">மென்மையாக அனுமதிக்கப்பட்டது</string>
@@ -414,7 +414,7 @@
     <string name="staff_team_toast_add_failed">உறுப்பினரைச் சேர்க்க முடியவில்லை</string>
     <string name="staff_team_toast_removed">உறுப்பினர் அகற்றப்பட்டார்</string>
     <string name="staff_team_toast_role_updated">பணி புதுப்பிக்கப்பட்டது</string>
-    <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
+    <string name="staff_audit_action_auction_cancelled">ஏலம் ரத்து செய்யப்பட்டது</string>
     <string name="staff_dashboard_order_fallback">ஆர்டர் #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">காரணம் (விரும்பினால்)</string>

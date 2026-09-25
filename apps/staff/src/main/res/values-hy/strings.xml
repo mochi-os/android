@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">Mochi Անձնակազմ</string>
+    <string name="launcher_staff">Mochi Անձնակազմ</string>
     <string name="staff_accounts_action_ban_title">Արգելել հաշիվը</string>
     <string name="staff_accounts_action_suspend_title">Կասեցնել հաշիվը</string>
     <string name="staff_accounts_action_unban_title">Հանել արգելքը</string>
@@ -152,7 +152,7 @@
     <string name="staff_categories_dialog_position">Դիրք</string>
     <string name="staff_categories_dialog_save">Պահպանել</string>
     <string name="staff_categories_dialog_saving">Պահպանում…</string>
-    <string name="staff_categories_dialog_slug">Slug</string>
+    <string name="staff_categories_dialog_slug">Սլագ</string>
     <string name="staff_categories_empty">Կատեգորիաներ չկան</string>
     <string name="staff_categories_toast_created">Կատեգորիան ստեղծված է</string>
     <string name="staff_categories_toast_deleted">Կատեգորիան ջնջված է</string>
@@ -162,13 +162,13 @@
     <string name="staff_categories_type_digital">Թվային</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">Ֆիզիկական</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">Mochi Անձնակազմ</string>
     <string name="staff_config_field_auto_approve">Ինքնահաստատման շեմ</string>
     <string name="staff_config_field_hold">Պահման շեմ</string>
     <string name="staff_config_field_platform_fee">Հարթակի վճար</string>
     <string name="staff_config_field_review_window">Կարծիքի պատուհան</string>
     <string name="staff_config_field_stripe_oauth_client">OAuth հաճախորդի ID</string>
-    <string name="staff_config_field_stripe_publishable">Publishable key</string>
+    <string name="staff_config_field_stripe_publishable">Հրապարակային բանալի</string>
     <string name="staff_config_field_stripe_secret">Գաղտնի բանալի</string>
     <string name="staff_config_group_moderation">Մոդերացիայի բաժիններ</string>
     <string name="staff_config_group_payments">Վճարումներ</string>
@@ -253,13 +253,13 @@
     <string name="staff_disputes_refund_help">Թողեք դատարկ՝ %1$s-ի ամբողջական վերադարձի համար։ Մուտքագրեք ավելի փոքր գումար՝ մասնակի վերադարձի համար։</string>
     <string name="staff_disputes_refund_must_be_positive">Վերադարձի գումարը պետք է զրոյից մեծ լինի</string>
     <string name="staff_disputes_resolution_buyer">Լուծել գնորդի օգտին</string>
-    <string name="staff_disputes_resolution_label">Լուծաչափ</string>
+    <string name="staff_disputes_resolution_label">Լուծում</string>
     <string name="staff_disputes_resolution_placeholder">Ընտրել լուծումը</string>
     <string name="staff_disputes_resolution_seller">Լուծել վաճառողի օգտին</string>
     <string name="staff_disputes_resolve">Լուծել</string>
     <string name="staff_disputes_resolved_toast">Վեճը լուծված է</string>
     <string name="staff_disputes_resolving">Լուծում է…</string>
-    <string name="staff_disputes_review">Կարծիք</string>
+    <string name="staff_disputes_review">Վերանայել</string>
     <string name="staff_disputes_status_escalated">Սրընթաց</string>
     <string name="staff_disputes_status_open">Բաց</string>
     <string name="staff_disputes_status_resolved_buyer">Լուծվել է (գնորդ)</string>
@@ -289,7 +289,7 @@
     <string name="staff_listings_moderation_hold">Պահել</string>
     <string name="staff_listings_moderation_manual">Ձեռքով</string>
     <string name="staff_listings_moderation_rejected">Մերժված է</string>
-    <string name="staff_listings_moderation_review">Կարծիք</string>
+    <string name="staff_listings_moderation_review">Վերանայման մեջ</string>
     <string name="staff_listings_moderation_soft_approved">Փափուկ-հաստատված</string>
     <string name="staff_listings_notes_label">Նշումներ</string>
     <string name="staff_listings_price_placeholder">—</string>
@@ -315,7 +315,7 @@
     <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Գործողություն</string>
     <string name="staff_reports_action_ban">Արգելել օգտատիրոջը</string>
-    <string name="staff_reports_action_dismiss">Հեռացնել</string>
+    <string name="staff_reports_action_dismiss">Մերժել</string>
     <string name="staff_reports_action_label">Գործողություն</string>
     <string name="staff_reports_action_placeholder">Ընտրել գործողություն</string>
     <string name="staff_reports_action_remove">Հեռացնել</string>
@@ -327,7 +327,7 @@
     <string name="staff_reports_cancel">Չեղարկել</string>
     <string name="staff_reports_close">Փակել</string>
     <string name="staff_reports_dialog_title_action">Քայլ ձեռնարկել զեկույցի վերաբերյալ</string>
-    <string name="staff_reports_dialog_title_view">Հաղորդել</string>
+    <string name="staff_reports_dialog_title_view">Հաղորդում</string>
     <string name="staff_reports_empty">Հաղորդումներ չկան</string>
     <string name="staff_reports_filter_status_label">Կարգավիճակ</string>
     <string name="staff_reports_filter_type_label">Տեսակ</string>
@@ -337,7 +337,7 @@
     <string name="staff_reports_meta_reason">Պատճառ</string>
     <string name="staff_reports_meta_reporter">Հաղորդող</string>
     <string name="staff_reports_meta_seller">Վաճառող</string>
-    <string name="staff_reports_meta_target">Թիրախ</string>
+    <string name="staff_reports_meta_target">Հաղորդված տարր</string>
     <string name="staff_reports_meta_type">Տեսակ</string>
     <string name="staff_reports_notes_label">Նշումներ</string>
     <string name="staff_reports_reason_counterfeit">Կեղծ կամ գողացված</string>
@@ -347,7 +347,7 @@
     <string name="staff_reports_reason_prohibited">Արգելված կամ ապօրինի ապրանք</string>
     <string name="staff_reports_reason_spam">Սպամ կամ խաբեություն</string>
     <string name="staff_reports_status_actioned">Գործողություն կատարված է</string>
-    <string name="staff_reports_status_dismissed">Հեռացված է</string>
+    <string name="staff_reports_status_dismissed">Մերժված է</string>
     <string name="staff_reports_status_pending">Սպասվող</string>
     <string name="staff_reports_status_reviewed">Վերանայվել է</string>
     <string name="staff_reports_submit">Ներկայացնել</string>
@@ -392,7 +392,7 @@
     <string name="staff_status_approved">Հաստատված է</string>
     <string name="staff_status_auto_approved">Ինքնահաստատված</string>
     <string name="staff_status_banned">Արգելված</string>
-    <string name="staff_status_dismissed">Հեռացված է</string>
+    <string name="staff_status_dismissed">Մերժված է</string>
     <string name="staff_status_draft">Սևագիր</string>
     <string name="staff_status_escalated">Սրընթաց</string>
     <string name="staff_status_expired">Ժամկետանց է</string>
@@ -408,7 +408,7 @@
     <string name="staff_status_resolved_buyer">Լուծվել է (գնորդ)</string>
     <string name="staff_status_resolved_seller">Լուծվել է (վաճառող)</string>
     <string name="staff_status_responded">Արձագանքվել է</string>
-    <string name="staff_status_review">Կարծիք</string>
+    <string name="staff_status_review">Վերանայման մեջ</string>
     <string name="staff_status_reviewed">Վերանայվել է</string>
     <string name="staff_status_reviewing">Վերանայվում է</string>
     <string name="staff_status_soft_approved">Փափուկ-հաստատված</string>

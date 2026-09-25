@@ -26,7 +26,7 @@
     <string name="crm_sort_updated">اپ ڈیٹ ہو گیا</string>
     <string name="crm_create_object_title">آبجیکٹ بنائیں</string>
     <string name="crm_create_object_type">قسم</string>
-    <string name="crm_create_object_parent">parent</string>
+    <string name="crm_create_object_parent">پیرنٹ</string>
     <string name="crm_settings_title">سیٹنگز</string>
     <string name="crm_settings_tab_general">عمومی</string>
     <string name="crm_settings_tab_access">رسائی</string>
@@ -43,7 +43,7 @@
     <string name="crm_object_tab_properties">خصوصیات</string>
     <string name="crm_object_tab_comments">تبصرے</string>
     <string name="crm_object_tab_activity">سرگرمی</string>
-    <string name="crm_parent_label">parent</string>
+    <string name="crm_parent_label">پیرنٹ</string>
     <string name="crm_parent_search_placeholder">تلاش کریں</string>
     <string name="crm_links_title">لنکس</string>
     <string name="crm_links_add">لنک شامل کریں</string>
@@ -53,7 +53,7 @@
     <string name="crm_links_type_blocks">بلاک کرتا ہے</string>
     <string name="crm_links_type_blocked_by">بلاک کردہ</string>
     <string name="crm_links_type_duplicates">نقل کرتا ہے</string>
-    <string name="crm_links_no_matches">کوئی matching objects نہیں</string>
+    <string name="crm_links_no_matches">کوئی مماثل آبجیکٹس نہیں</string>
     <string name="crm_field_yes">ہاں</string>
     <string name="crm_field_no">نہیں</string>
     <string name="crm_field_type_checkbox">چیک باکس</string>
@@ -81,7 +81,7 @@
     <string name="crm_design_tab_views">ویوز</string>
     <string name="crm_design_import_dialog_title">ڈیزائن امپورٹ کریں</string>
     <string name="crm_design_import_choose_template">ٹیمپلیٹ منتخب کریں</string>
-    <string name="crm_design_replace_title">design تبدیل کریں؟</string>
+    <string name="crm_design_replace_title">ڈیزائن تبدیل کریں؟</string>
     <string name="crm_design_replace">بدلیں</string>
     <string name="crm_classes_add">کلاس شامل کریں</string>
     <string name="crm_classes_add_dialog_title">کلاس شامل کریں</string>
@@ -126,7 +126,7 @@
     <string name="crm_not_found">CRM نہیں ملا</string>
     <string name="crm_more">مزید</string>
     <string name="crm_comment_send">بھیجیں</string>
-    <string name="crm_field_position_body">متن</string>
+    <string name="crm_field_position_body">مرکزی حصہ</string>
     <string name="crm_sort_field">ترتیب</string>
     <string name="crm_comment_remove_attachment">اٹیچمنٹ ہٹائیں</string>
     <string name="crm_views_sort_by">ترتیب</string>
@@ -142,7 +142,7 @@
     <string name="crm_search_objects_placeholder">اشیاء تلاش کریں</string>
     <string name="crm_links_search_placeholder">اشیاء تلاش کریں</string>
 
-    <string name="notification_channel_crm">CRMs اطلاعات</string>
+    <string name="notification_channel_crm">CRM اطلاعات</string>
     <string name="crm_list_search_placeholder">CRM تلاش کریں</string>
     <string name="crm_list_no_matching">کوئی مماثل CRM نہیں</string>
     <string name="crm_list_empty">ابھی تک کوئی CRM نہیں</string>
@@ -280,8 +280,8 @@
     <string name="crm_export">ڈیٹا ایکسپورٹ کریں</string>
     <string name="crm_exporting">ایکسپورٹ تیار کیا جا رہا ہے…</string>
     <string name="crm_create_allow_search">کسی کو بھی CRM تلاش کرنے کی اجازت دیں</string>
-    <string name="crm_no_crms_found">کوئی CRMs نہیں ملے</string>
-    <string name="crm_create_blocked_no_parents">ابھی کوئی item types نہیں بنائے جا سکتے۔ پہلے درکار parent items بنائیں۔</string>
+    <string name="crm_no_crms_found">کوئی CRM نہیں ملے</string>
+    <string name="crm_create_blocked_no_parents">ابھی کوئی آئٹم اقسام نہیں بنائی جا سکتیں۔ پہلے درکار پیرنٹ آئٹمز بنائیں۔</string>
     <string name="crm_export_csv">CSV ایکسپورٹ کریں</string>
     <string name="crm_share_link_title">CRM شیئر کریں</string>
     <string name="crm_export_saved">CRM ڈیٹا محفوظ ہو گیا</string>

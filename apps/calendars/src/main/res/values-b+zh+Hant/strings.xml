@@ -2,7 +2,7 @@
 <resources>
     <string name="calendars_create_submit">建立</string>
     <string name="calendars_subscribe_submit">訂閱</string>
-    <string name="calendars_subscribe_url">地址</string>
+    <string name="calendars_subscribe_url">位址</string>
     <string name="calendars_connect_device">連接裝置</string>
     <string name="calendars_preferences">偏好設定</string>
     <string name="calendars_name">名稱</string>
@@ -43,7 +43,7 @@
     <string name="calendars_device_name">裝置名稱</string>
     <string name="calendars_device_create">建立</string>
     <string name="calendars_device_server">伺服器</string>
-    <string name="calendars_device_address">地址</string>
+    <string name="calendars_device_address">位址</string>
     <string name="calendars_device_username">使用者名稱</string>
     <string name="calendars_device_password">密碼</string>
     <string name="calendars_device_copy">複製%1$s</string>
@@ -94,7 +94,7 @@
     <string name="calendars_repeat_daily">每天</string>
     <string name="calendars_repeat_weekly">每週</string>
     <string name="calendars_repeat_interval">間隔</string>
-    <string name="calendars_repeat_days">天</string>
+    <string name="calendars_repeat_days">星期</string>
     <string name="calendars_repeat_count">次數</string>
     <string name="calendars_repeat_forever">永久</string>
     <string name="calendars_reminder_time">準時</string>
@@ -166,7 +166,7 @@
     <string name="calendars_subscribe_server_url">伺服器位址</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google 日曆</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">此伺服器尚未啟用 Google 帳戶。請在 設定、系統設定 中啟用。</string>
     <string name="calendars_subscribe_google_connect">您尚未連結 Google 帳戶。</string>

@@ -10,7 +10,7 @@
     <string name="calendars_delete">Dileu</string>
     <string name="calendars_previous">Blaenorol</string>
     <string name="calendars_next">Nesaf</string>
-    <string name="calendars_view">Gweld</string>
+    <string name="calendars_view">Golwg</string>
     <string name="calendars_view_list">Rhestr</string>
     <string name="calendars_list_search">Chwilio</string>
     <string name="calendars_event_untitled">Heb deitl</string>
@@ -181,7 +181,7 @@
     <string name="calendars_subscribe_server_url">Cyfeiriad y gweinydd</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Calendr Google</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Nid yw cyfrifon Google wedi\'u galluogi ar y gweinydd hwn. Galluogwch nhw o dan Gosodiadau, Gosodiadau system.</string>
     <string name="calendars_subscribe_google_connect">Nid ydych wedi cysylltu cyfrif Google.</string>

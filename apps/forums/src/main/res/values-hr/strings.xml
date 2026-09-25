@@ -24,9 +24,9 @@
     <string name="forums_settings">Postavke</string>
     <string name="forums_load_more">Učitaj više</string>
     <string name="forums_sort_label">Sortiraj</string>
-    <string name="forums_sort_new">Novo</string>
+    <string name="forums_sort_new">Najnovije</string>
     <string name="forums_sort_hot">Vruće</string>
-    <string name="forums_sort_top">Vrh</string>
+    <string name="forums_sort_top">Najbolje</string>
     <string name="forums_sort_interests">Interesi</string>
     <string name="forums_post_title_field">Naslov</string>
     <string name="forums_post_attach">Priloži datoteke</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Članovi</string>
     <string name="forums_tab_banner">Baner</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Cilj</string>
-    <string name="forums_access_level_view">Pogled</string>
+    <string name="forums_access_target">Korisnik ili grupa</string>
+    <string name="forums_access_level_view">Prikaži</string>
     <string name="forums_access_level_vote">Glasaj</string>
-    <string name="forums_access_level_comment">Komentar</string>
+    <string name="forums_access_level_comment">Komentiraj</string>
     <string name="forums_access_level_post">Objavi</string>
     <string name="forums_access_level_none">Ništa</string>
     <string name="forums_members_empty">Nema članova</string>
     <string name="forums_banner_dismiss">Odbaci banner</string>
-    <string name="forums_ai_mode_tag">Oznaka</string>
+    <string name="forums_ai_mode_tag">Označi</string>
     <string name="forums_ai_account_default">Zadani račun</string>
     <string name="forums_ai_prompt_reset">Resetiraj na zadano</string>
     <string name="forums_settings_unsubscribe">Otkaži pretplatu</string>
@@ -102,7 +102,7 @@
     <string name="forums_report_reason_harassment">Uznemiravanje</string>
     <string name="forums_report_reason_violence">Nasilje</string>
     <string name="forums_report_reason_misinformation">Dezinformacija</string>
-    <string name="forums_report_reason_offtopic">Off-topic</string>
+    <string name="forums_report_reason_offtopic">Izvan teme</string>
     <string name="forums_report_reason_other">Ostalo</string>
     <string name="forums_post_default_author">Korisnik</string>
     <string name="forums_comments">Komentari</string>
@@ -135,7 +135,7 @@
     <string name="forums_write_comment">Napišite komentar…</string>
 
     <string name="notification_channel_forums">Obavijesti foruma</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Forumi</string>
     <string name="forums_list_empty">Još nema foruma</string>
     <string name="forums_list_unsubscribe_message">Jeste li sigurni da se želite odjaviti s ovog foruma?</string>
     <string name="forums_find_search_placeholder">Pretražite forume ili zalijepite URL</string>
@@ -321,7 +321,7 @@
     <string name="forums_moderation_action_restrict">Ograničeno</string>
     <string name="forums_moderation_action_unrestrict">Bez ograničenja</string>
     <string name="forums_moderation_action_resolve">Riješena prijava</string>
-    <string name="forums_moderation_target_post">Objavi</string>
+    <string name="forums_moderation_target_post">Objava</string>
     <string name="forums_moderation_target_comment">Komentar</string>
     <string name="forums_moderation_target_user">Korisnik</string>
     <string name="forums_moderation_reason_spam">Spam</string>
@@ -329,7 +329,7 @@
     <string name="forums_moderation_reason_hate">Govor mržnje</string>
     <string name="forums_moderation_reason_violence">Nasilje</string>
     <string name="forums_moderation_reason_misinformation">Dezinformacija</string>
-    <string name="forums_moderation_reason_offtopic">Off-topic</string>
+    <string name="forums_moderation_reason_offtopic">Izvan teme</string>
     <string name="forums_moderation_reason_other">Ostalo</string>
     <string name="forums_block">Blokiraj</string>
     <string name="forums_removed_from_forum">Uklonjeni ste iz ovog foruma</string>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="feeds_title">Fontes</string>
+    <string name="feeds_title">Fíos</string>
     <string name="feeds_find_feeds">Buscar fontes</string>
     <string name="feeds_create_feed">Crear feed</string>
     <string name="feeds_new_post">Nova publicación</string>
@@ -14,13 +14,13 @@
     <string name="feeds_no_posts_yet">Aínda non hai publicacións</string>
     <string name="feeds_sort_label">Ordenar</string>
     <string name="feeds_sort_interests">Intereses</string>
-    <string name="feeds_sort_new">Novo</string>
+    <string name="feeds_sort_new">Máis recentes</string>
     <string name="feeds_sort_hot">Popular</string>
-    <string name="feeds_sort_top">Arriba</string>
+    <string name="feeds_sort_top">Mellores</string>
     <string name="feeds_sort_ai">IA</string>
-    <string name="feeds_post_default_author">Publicar</string>
+    <string name="feeds_post_default_author">Publicación</string>
     <string name="feeds_image_preview">Vista previa</string>
-    <string name="feeds_post">Publicar</string>
+    <string name="feeds_post">Publicación</string>
     <string name="feeds_comments">Comentarios</string>
     <string name="feeds_delete_post">Eliminar publicación</string>
     <string name="feeds_delete_comment">Eliminar comentario</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Pechar sesión</string>
     <string name="feeds_ai_account_default">Conta predeterminada</string>
     <string name="feeds_ai_mode_off">Desactivado</string>
-    <string name="feeds_ai_mode_tag">Etiqueta</string>
+    <string name="feeds_ai_mode_tag">Etiquetar</string>
     <string name="feeds_ai_mode_tag_deduplicate">Etiquetar + deduplicar</string>
     <string name="feeds_feed_not_found">Fonte non atopada</string>
     <string name="feeds_post_not_found">Publicación non atopada</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Interese reducido</string>
     <string name="feeds_interest_removed">Interese eliminado</string>
     <string name="feeds_interest_failed">Non se puido axustar o interese</string>
-    <string name="feeds_saved_title">Gardado</string>
-    <string name="feeds_saved_menu">Gardado</string>
+    <string name="feeds_saved_title">Gardados</string>
+    <string name="feeds_saved_menu">Gardados</string>
     <string name="feeds_saved_save">Gardar para máis tarde</string>
     <string name="feeds_saved_remove">Quitar dos gardados</string>
     <string name="feeds_saved_clear_all">Borrar todo</string>

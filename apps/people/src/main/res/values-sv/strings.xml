@@ -53,7 +53,7 @@
     <string name="people_profile_name_saved">Namn sparat</string>
     <string name="people_profile_edit_name">Redigera namn</string>
     <string name="people_profile_identity">Identitet</string>
-    <string name="people_profile_accent">Accent</string>
+    <string name="people_profile_accent">Accentfärg</string>
     <string name="people_profile_directory_listing">Tillåt andra att hitta dig i katalogen</string>
     <string name="people_profile_markdown_supported">Markdown stöds</string>
     <string name="people_profile_preview">Förhandsgranska</string>
@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Öppna navigering</string>
     <string name="people_person_state_friend">Vänner</string>
     <string name="people_person_state_self">Du</string>
-    <string name="people_person_message">Meddelande</string>
+    <string name="people_person_message">Skicka meddelande</string>
     <string name="people_person_accept">Acceptera</string>
     <string name="people_person_decline">Avböj</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Acceptera alla</string>
     <string name="people_invitations_decline_all">Avböj alla</string>
     <string name="people_invitations_cancel_all">Avbryt alla</string>
+    <string name="people_invitations_cancel">Avbryt</string>
     <string name="people_invitations_all_accepted">Alla inbjudningar accepterade</string>
     <string name="people_invitations_all_declined">Alla inbjudningar avböjda</string>
     <string name="people_invitations_all_cancelled">Alla inbjudningar avbrutna</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Sök…</string>
     <string name="people_contacts_invited">Inbjuden</string>
     <string name="people_contacts_accept">Acceptera</string>
-    <string name="people_contacts_message">Meddelande</string>
+    <string name="people_contacts_message">Skicka meddelande</string>
     <string name="people_contacts_no_people_found">Inga personer hittades</string>
     <string name="people_contacts_try_adjusting">Försök justera din sökning</string>
     <string name="people_contact_section_address">Adress</string>

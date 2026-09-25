@@ -175,7 +175,7 @@
     <string name="calendars_subscribe_server_url">Naslov strežnika</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google Koledar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Računi Google na tem strežniku niso omogočeni. Omogočite jih v Nastavitve, Sistemske nastavitve.</string>
     <string name="calendars_subscribe_google_connect">Niste povezali računa Google.</string>

@@ -13,9 +13,9 @@
     <string name="launcher_chess">Mochi Ajedrez</string>
     <string name="launcher_go">Mochi Go</string>
     <string name="launcher_words">Mochi Palabras</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Mochi Mercado</string>
     <string name="launcher_calendars">Mochi Calendarios</string>
-    <string name="launcher_staff">Mochi Personal</string>
+    <string name="launcher_staff">Personal de Mochi</string>
 
 
     <string name="app_name">Mochi</string>

@@ -13,7 +13,7 @@
     <string name="chess_new_title">Шинэ тоглоом</string>
     <string name="chess_new_pick_opponent">Өрсөлдөгчөө сонгох</string>
     <string name="chess_new_no_friends_title">Найз алга</string>
-    <string name="chess_new_no_friends_subtitle">Тоглоом эхлүүлэхийн тулд People апп дотор найз нэмнэ үү</string>
+    <string name="chess_new_no_friends_subtitle">Тоглоом эхлүүлэхийн тулд Хүмүүс апп дотор найз нэмнэ үү</string>
     <string name="chess_new_add_friends">Найзууд нэмэх</string>
     <string name="chess_new_start_button">Тоглоом эхлүүлэх</string>
     <string name="chess_new_creating">Үүсгэж байна…</string>

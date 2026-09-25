@@ -8,7 +8,7 @@
     <string name="go_action_pass">Yedlula</string>
     <string name="go_action_rematch">Phindela emdlalweni</string>
     <string name="go_action_resign">Yeka</string>
-    <string name="go_app_title">Hamba</string>
+    <string name="go_app_title">I-Go</string>
     <string name="go_captures_black_sr">Ukuthwetshulwa kwabamnyama</string>
     <string name="go_captures_white_sr">Ukuthwetshulwa kwabamhlophe</string>
     <string name="go_chat_title">Ingxoxo</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">Vula ibha eseceleni</string>
     <string name="go_sidebar_active">Imidlalo Esebenzayo</string>
     <string name="go_empty_active">Ayikho imidlalo esebenzayo okwamanje.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">Uyekile</string>
     <string name="go_new_game_title">Umdlalo omusha we-Go</string>
     <string name="go_new_game_no_friends">Kudingeka wengeze umngane ngaphambi kokuba uqale umdlalo.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

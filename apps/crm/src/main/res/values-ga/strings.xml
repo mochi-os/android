@@ -78,7 +78,7 @@
     <string name="crm_design_or_upload_json">Nó uaslódáil comhad</string>
     <string name="crm_design_upload_json">Uaslódáil comhad .json</string>
     <string name="crm_design_tab_classes">Ranganna</string>
-    <string name="crm_design_tab_views">Radhairc</string>
+    <string name="crm_design_tab_views">Amhairc</string>
     <string name="crm_design_import_dialog_title">Iompórtáil dearadh</string>
     <string name="crm_design_import_choose_template">Roghnaigh teimpléad</string>
     <string name="crm_design_replace_title">Cuir dearadh in ionad?</string>

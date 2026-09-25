@@ -413,7 +413,7 @@ private fun SentRow(
                 contentDescription = null,
                 modifier = Modifier.padding(end = 4.dp),
             )
-            Text(stringResource(R.string.people_common_cancel))
+            Text(stringResource(R.string.people_invitations_cancel))
         }
     }
 }

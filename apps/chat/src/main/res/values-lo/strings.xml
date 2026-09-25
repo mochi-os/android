@@ -25,7 +25,7 @@
     <string name="chat_chat_not_found">ບໍ່ພົບແຊັດ</string>
 
     <string name="chat_message_send">ສົ່ງ</string>
-    <string name="chat_attachment_remove">Remove attachment</string>
+    <string name="chat_attachment_remove">ລຶບໄຟລ໌ແນບ</string>
     <string name="chat_attachment_move_up">ຍ້າຍຂຶ້ນ</string>
     <string name="chat_attachment_move_down">ຍ້າຍລົງ</string>
 

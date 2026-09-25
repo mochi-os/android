@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">اڃا ڪا پوسٽ نه آهي</string>
     <string name="feeds_sort_label">ترتيب</string>
     <string name="feeds_sort_interests">دلچسپيون</string>
-    <string name="feeds_sort_new">نئون</string>
+    <string name="feeds_sort_new">سڀ کان نوان</string>
     <string name="feeds_sort_hot">گرم</string>
-    <string name="feeds_sort_top">مٿي</string>
+    <string name="feeds_sort_top">بهترين</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">پوسٽ</string>
     <string name="feeds_image_preview">پيش نظر</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">جواب منسوخ ڪريو</string>
     <string name="feeds_edit_post">پوسٽ ۾ ترميم ڪريو</string>
     <string name="feeds_save_label">محفوظ ڪريو</string>
-    <string name="feeds_post_action">پوسٽ</string>
+    <string name="feeds_post_action">پوسٽ ڪريو</string>
     <string name="feeds_feed_label">فيڊ</string>
     <string name="feeds_add_files">فائلون شامل ڪريو</string>
     <string name="feeds_restore">بحال ڪريو</string>
@@ -43,7 +43,7 @@
     <string name="feeds_feed_name">فيڊ نالو</string>
     <string name="feeds_save_name">نالو محفوظ ڪريو</string>
     <string name="feeds_banner">بينر</string>
-    <string name="feeds_banner_description">توهان جي feed جي مٿان ڏيکاريل اختياري markdown بينر.</string>
+    <string name="feeds_banner_description">توهان جي فيڊ جي مٿان ڏيکاريل اختياري markdown بينر.</string>
     <string name="feeds_clear">صاف ڪريو</string>
     <string name="feeds_delete_feed">فيڊ ختم ڪريو</string>
     <string name="feeds_no_members">ڪي ميمبر نه آهن</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">لاگ آئوٽ</string>
     <string name="feeds_ai_account_default">ڊفالٽ اڪائونٽ</string>
     <string name="feeds_ai_mode_off">غيرفعال</string>
-    <string name="feeds_ai_mode_tag">ٽيگ</string>
+    <string name="feeds_ai_mode_tag">ٽيگ ڪريو</string>
     <string name="feeds_ai_mode_tag_deduplicate">ٽيگ + نقل ختم ڪريو</string>
     <string name="feeds_feed_not_found">فيڊ نه ملي</string>
     <string name="feeds_post_not_found">پوسٽ نه ملي</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">دلچسپي گهٽ ٿي</string>
     <string name="feeds_interest_removed">دلچسپي هٽائي وئي</string>
     <string name="feeds_interest_failed">دلچسپي ترتيب ڏيڻ ۾ ناڪام</string>
-    <string name="feeds_saved_title">محفوظ ٿيو</string>
-    <string name="feeds_saved_menu">محفوظ ٿيو</string>
+    <string name="feeds_saved_title">محفوظ ٿيل</string>
+    <string name="feeds_saved_menu">محفوظ ٿيل</string>
     <string name="feeds_saved_save">پوءِ لاءِ محفوظ ڪريو</string>
     <string name="feeds_saved_remove">محفوظ ٿيلن مان هٽايو</string>
     <string name="feeds_saved_clear_all">سڀ صاف ڪريو</string>

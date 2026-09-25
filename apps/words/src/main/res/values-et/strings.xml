@@ -8,8 +8,8 @@
     <string name="words_sidebar_new_game">Uus mäng</string>
     <string name="words_new_game_title">Uus mäng</string>
     <string name="words_new_game_language">Keel</string>
-    <string name="words_new_game_language_uk">English (UK)</string>
-    <string name="words_new_game_language_us">English (US)</string>
+    <string name="words_new_game_language_uk">Briti inglise</string>
+    <string name="words_new_game_language_us">Ameerika inglise</string>
     <string name="words_new_game_start">Alusta mängu</string>
     <string name="words_new_game_no_friends_title">Sõpru veel pole</string>
     <string name="words_new_game_add_friends">Lisa sõpru</string>

@@ -70,7 +70,7 @@
     <string name="market_checkout_back">Geri</string>
     <string name="market_checkout_buy_it_now">Hemen al</string>
     <string name="market_checkout_create_failed">Sipariş oluşturulamadı</string>
-    <string name="market_checkout_delivery_download">İndir</string>
+    <string name="market_checkout_delivery_download">İndirme</string>
     <string name="market_checkout_delivery_method">Teslimat yöntemi</string>
     <string name="market_checkout_delivery_pickup">Teslim alma</string>
     <string name="market_checkout_delivery_shipping">Kargo</string>
@@ -95,7 +95,7 @@
     <string name="market_checkout_winning_bid">Kazanan teklif</string>
     <string name="market_condition_new">Yeni</string>
     <string name="market_condition_refurbished">Yenilenmiş</string>
-    <string name="market_condition_used">Kullanıldı</string>
+    <string name="market_condition_used">Kullanılmış</string>
     <string name="market_dispute_dialog_cancel">İptal</string>
     <string name="market_dispute_dialog_evidence_role_buyer">Alıcı</string>
     <string name="market_dispute_dialog_evidence_role_seller">Satıcı</string>
@@ -110,7 +110,7 @@
     <string name="market_editor_condition">Durum</string>
     <string name="market_editor_condition_new">Yeni</string>
     <string name="market_editor_condition_refurbished">Yenilenmiş</string>
-    <string name="market_editor_condition_used">Kullanıldı</string>
+    <string name="market_editor_condition_used">Kullanılmış</string>
     <string name="market_editor_currency">Para birimi</string>
     <string name="market_editor_description">Açıklama</string>
     <string name="market_editor_interval_monthly">Aylık</string>
@@ -152,9 +152,9 @@
     <string name="market_filter_condition">Durum</string>
     <string name="market_filter_condition_new">Yeni</string>
     <string name="market_filter_condition_refurbished">Yenilenmiş</string>
-    <string name="market_filter_condition_used">Kullanıldı</string>
+    <string name="market_filter_condition_used">Kullanılmış</string>
     <string name="market_filter_delivery">Teslimat</string>
-    <string name="market_filter_delivery_download">İndir</string>
+    <string name="market_filter_delivery_download">İndirme</string>
     <string name="market_filter_delivery_pickup">Teslim alma</string>
     <string name="market_filter_delivery_shipping">Kargo</string>
     <string name="market_filter_price_max">Maks</string>
@@ -183,7 +183,7 @@
     <string name="market_listing_detail_load_failed">İlan yüklenemedi</string>
     <string name="market_listing_detail_listed">Yayınlanma %1$s</string>
     <string name="market_listing_detail_location_heading">Konum</string>
-    <string name="market_listing_detail_message">Mesaj</string>
+    <string name="market_listing_detail_message">Mesaj gönder</string>
     <string name="market_listing_detail_message_seller">Satıcıya mesaj gönder</string>
     <string name="market_listing_detail_not_found">İlan bulunamadı</string>
     <string name="market_listing_detail_place_bid">Teklif ver</string>
@@ -305,7 +305,7 @@
     <string name="market_sale_carrier_other">Diğer</string>
     <string name="market_sale_completed_label">Tamamlandı</string>
     <string name="market_sale_dispute_respond">Yanıtla</string>
-    <string name="market_sale_dispute_state_open">Aç</string>
+    <string name="market_sale_dispute_state_open">Açık</string>
     <string name="market_sale_dispute_state_resolved">Çözümlendi</string>
     <string name="market_sale_load_failed">Sipariş yüklenemedi</string>
     <string name="market_sale_message_buyer">Alıcıya mesaj gönder</string>
@@ -324,7 +324,7 @@
     <string name="market_sale_shipped_label">Gönderildi</string>
     <string name="market_sale_title">Satış</string>
     <string name="market_sale_tracking_label">Takip numarası</string>
-    <string name="market_saved_title">Kaydedildi</string>
+    <string name="market_saved_title">Kaydedilenler</string>
     <string name="market_search_clear">Aramayı temizle</string>
     <string name="market_section_categories">Kategorilere göz at</string>
     <string name="market_section_listings">Son ilanlar</string>
@@ -348,7 +348,7 @@
     <string name="market_sidebar_purchases">Satın almalar</string>
     <string name="market_sidebar_reviews">Yorumlar</string>
     <string name="market_sidebar_sales">Satışlar</string>
-    <string name="market_sidebar_saved">Kaydedildi</string>
+    <string name="market_sidebar_saved">Kaydedilenler</string>
     <string name="market_sidebar_selling">Satışta</string>
     <string name="market_sidebar_settings">Ayarlar</string>
     <string name="market_sidebar_subscribers">Aboneler</string>
@@ -380,7 +380,7 @@
     <string name="market_subscription_detail_seller">Satıcı</string>
     <string name="market_subscription_detail_started">Başlama %1$s</string>
     <string name="market_subscription_detail_title">Abonelik</string>
-    <string name="market_subscriptions_action_cancel">İptal</string>
+    <string name="market_subscriptions_action_cancel">İptal et</string>
     <string name="market_subscriptions_action_pause">Duraklat</string>
     <string name="market_subscriptions_action_reactivate">Yeniden etkinleştir</string>
     <string name="market_subscriptions_action_resubscribe">Yeniden abone ol</string>

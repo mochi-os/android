@@ -10,7 +10,7 @@
     <string name="calendars_delete">Ištrinti</string>
     <string name="calendars_previous">Ankstesnis</string>
     <string name="calendars_next">Toliau</string>
-    <string name="calendars_view">Peržiūrėti</string>
+    <string name="calendars_view">Rodinys</string>
     <string name="calendars_view_list">Sąrašas</string>
     <string name="calendars_list_search">Ieškoti</string>
     <string name="calendars_event_untitled">Be pavadinimo</string>
@@ -172,7 +172,7 @@
     <string name="calendars_subscribe_server_url">Serverio adresas</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google kalendorius</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google paskyros šiame serveryje neįjungtos. Įjunkite jas skiltyje Nustatymai, Sistemos nustatymai.</string>
     <string name="calendars_subscribe_google_connect">Neprijungėte Google paskyros.</string>

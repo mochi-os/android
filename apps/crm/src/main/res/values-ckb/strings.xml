@@ -32,7 +32,7 @@
     <string name="crm_settings_tab_access">دەستڕاگەیشتن</string>
     <string name="crm_settings_tab_people">کەسەکان</string>
     <string name="crm_option_icon">ئایکۆن</string>
-    <string name="crm_option_icon_placeholder">وێنەی. Check, Star, Flag</string>
+    <string name="crm_option_icon_placeholder">بۆ نموونە Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">بەشداری هەڵبوەشێنەوە</string>
     <string name="crm_settings_delete_crm">سڕینەوەی پڕۆژە</string>
     <string name="crm_settings_delete_confirm_title">سڕینەوەی CRM</string>
@@ -78,7 +78,7 @@
     <string name="crm_design_or_upload_json">یان فایلێک بارکە</string>
     <string name="crm_design_upload_json">فایلی .json باربکە</string>
     <string name="crm_design_tab_classes">پۆلەکان</string>
-    <string name="crm_design_tab_views">بینینەکان</string>
+    <string name="crm_design_tab_views">دیمەنەکان</string>
     <string name="crm_design_import_dialog_title">هاوردەکردنی دیزاین</string>
     <string name="crm_design_import_choose_template">قاڵبێک هەڵبژێرە</string>
     <string name="crm_design_replace_title">دیزاین بگۆڕیت؟</string>
@@ -244,7 +244,7 @@
     <string name="crm_attachment_remove">لابردنی هاوپێچ</string>
     <string name="crm_board_add_column">زیادکردنی ستوون</string>
     <string name="crm_settings_entity_id">ناسنامەی ئەنتیتی</string>
-    <string name="crm_settings_fingerprint">Fingerprint</string>
+    <string name="crm_settings_fingerprint">پەنجەمۆر</string>
     <string name="crm_settings_server">ڕاژەکار</string>
     <string name="crm_untitled">بێ ناونیشان</string>
     <string name="crm_property_select">هەڵبژێرە …</string>

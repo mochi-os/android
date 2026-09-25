@@ -60,7 +60,7 @@
     <string name="market_bids_tab_lost">Atipt\'ayata</string>
     <string name="market_bids_tab_outbid">Superata</string>
     <string name="market_bids_tab_won">Ganatawa</string>
-    <string name="market_bids_title">Bids</string>
+    <string name="market_bids_title">Ofertanaka</string>
     <string name="market_carousel_main">Foto %1$d/%2$d</string>
     <string name="market_channel_name">Mercado</string>
     <string name="market_chargeback_reason_bank_cannot_process">Banco janiw lurañ atkiti</string>
@@ -93,7 +93,7 @@
     <string name="market_checkout_delivery_pickup">Apsuña</string>
     <string name="market_checkout_delivery_shipping">Apayañ</string>
     <string name="market_checkout_get_free">Inakitam apsuma</string>
-    <string name="market_checkout_item">Item</string>
+    <string name="market_checkout_item">Artículo</string>
     <string name="market_checkout_listing_not_found">Janiw listado jikxatkti</string>
     <string name="market_checkout_pay_button">Stripe ukäna pagaña</string>
     <string name="market_checkout_payment_failed">Phuqhayaña checkout jan qalltañ atititi — alxiri janir phuqhayaña configuración tukuyaspat</string>
@@ -166,7 +166,7 @@
     <string name="market_editor_reserve">Reserve chani</string>
     <string name="market_editor_save">Imaña</string>
     <string name="market_editor_save_failed">Jan imaña atipkanti</string>
-    <string name="market_editor_saved">Imaña</string>
+    <string name="market_editor_saved">Imatawa</string>
     <string name="market_editor_saving">Imaski…</string>
     <string name="market_editor_section_assets">Activos digitales</string>
     <string name="market_editor_section_basic">Wali yatiyawi</string>
@@ -199,7 +199,7 @@
     <string name="market_editor_zone_region">Región</string>
     <string name="market_editor_zone_worldwide">Aka pachpana</string>
     <string name="market_empty_title">Janiw resultadonakax utjkiti</string>
-    <string name="market_fee_preview_item">Item</string>
+    <string name="market_fee_preview_item">Artículo</string>
     <string name="market_fee_preview_payout">Pagoma</string>
     <string name="market_filter_all">Taqpach</string>
     <string name="market_filter_apply">Apnaqaña</string>
@@ -243,7 +243,7 @@
     <string name="market_listing_detail_load_failed">Janiw listado apaqaña atinkti</string>
     <string name="market_listing_detail_listed">Uskuta %1$s</string>
     <string name="market_listing_detail_location_heading">Cheqa</string>
-    <string name="market_listing_detail_message">Apaya</string>
+    <string name="market_listing_detail_message">Mensaje apayaña</string>
     <string name="market_listing_detail_message_seller">Alxiriri mensaje</string>
     <string name="market_listing_detail_not_found">Janiw listado jikxatkti</string>
     <string name="market_listing_detail_place_bid">Chanini uchaña</string>
@@ -256,7 +256,7 @@
     <string name="market_listing_detail_subscribe">Suscribiña</string>
     <string name="market_listing_detail_tags_heading">Chimpunaka</string>
     <string name="market_listing_detail_title">Listado</string>
-    <string name="market_listing_detail_unsave">Imaña</string>
+    <string name="market_listing_detail_unsave">Imatawa</string>
     <string name="market_listing_detail_verified">Verificaña</string>
     <string name="market_listing_no_photo">Janiw fotonïkiti</string>
     <string name="market_listing_save">Anuncio imaña</string>
@@ -312,7 +312,7 @@
     <string name="market_purchase_dispute_title">Refund mayisiwi</string>
     <string name="market_purchase_download_failed">Janiw apaqaña atinkti</string>
     <string name="market_purchase_download_section">Alatamax wakichtatawa</string>
-    <string name="market_purchase_item">Item</string>
+    <string name="market_purchase_item">Artículo</string>
     <string name="market_purchase_message_seller">Alxiriri mensaje</string>
     <string name="market_purchase_not_found">Orden jan jikxatasiti</string>
     <string name="market_purchase_order_label">Orden</string>
@@ -322,7 +322,7 @@
     <string name="market_purchase_refunded">Refundata</string>
     <string name="market_purchase_refunded_partial">Refundata (partial)</string>
     <string name="market_purchase_request_refund">Refund mayisima</string>
-    <string name="market_purchase_review_body">Review</string>
+    <string name="market_purchase_review_body">Reseña</string>
     <string name="market_purchase_review_failed">Janiw reseña apayaña atinkti</string>
     <string name="market_purchase_review_hidden">Alxiriri uñakipankamax imantatawa, jan ukax 14 urut qhipa.</string>
     <string name="market_purchase_review_prompt_body">Jutïr alirinakar yanapt\'aña — aka pedido kunjam sarakänx apkataña.</string>
@@ -387,7 +387,7 @@
     <string name="market_sale_carrier_other">Yaqha</string>
     <string name="market_sale_completed_label">Tukuyata</string>
     <string name="market_sale_dispute_respond">Aytma</string>
-    <string name="market_sale_dispute_state_open">Jist\'arma</string>
+    <string name="market_sale_dispute_state_open">Jist\'arata</string>
     <string name="market_sale_dispute_state_resolved">Resolvata</string>
     <string name="market_sale_fee_gross">Taqpacha</string>
     <string name="market_sale_fee_mochi">Mochi pagu</string>
@@ -413,7 +413,7 @@
     <string name="market_sale_title">Aljawi</string>
     <string name="market_sale_tracking_label">Uñakipañ jakhu</string>
     <string name="market_sales_title">Aljawinaka</string>
-    <string name="market_saved_title">Imaña</string>
+    <string name="market_saved_title">Imatanaka</string>
     <string name="market_search_clear">Thaqaña q\'umachaña</string>
     <string name="market_search_placeholder">Mercado thaqaña</string>
     <string name="market_section_categories">Kastanak thaqhaña</string>
@@ -428,7 +428,7 @@
     <string name="market_shipping_price">Chanipa</string>
     <string name="market_shipping_region">Región</string>
     <string name="market_sidebar_account">Cuenta</string>
-    <string name="market_sidebar_bids">Bids</string>
+    <string name="market_sidebar_bids">Ofertanaka</string>
     <string name="market_sidebar_browse">Uñakipaña</string>
     <string name="market_sidebar_buying">Alasi</string>
     <string name="market_sidebar_home">Uta</string>
@@ -438,7 +438,7 @@
     <string name="market_sidebar_purchases">Alasiwinaka</string>
     <string name="market_sidebar_reviews">Reviewanaka</string>
     <string name="market_sidebar_sales">Aljawinaka</string>
-    <string name="market_sidebar_saved">Imaña</string>
+    <string name="market_sidebar_saved">Imatanaka</string>
     <string name="market_sidebar_selling">Aljiña</string>
     <string name="market_sidebar_settings">Configuración</string>
     <string name="market_sidebar_subscribers">Suscriptoranaka</string>
@@ -458,18 +458,18 @@
     <string name="market_subscribers_interval_month">/ phaxsi</string>
     <string name="market_subscribers_interval_year">/ mara</string>
     <string name="market_subscribers_load_failed">Janiw suscriptornak apaqaña atinkti</string>
-    <string name="market_subscription_detail_billing_history">Billing history</string>
+    <string name="market_subscription_detail_billing_history">Facturación sarawi</string>
     <string name="market_subscription_detail_billing_history_empty">Janïr kuna cobrowsa utjkiti.</string>
     <string name="market_subscription_detail_billing_info">Facturación</string>
-    <string name="market_subscription_detail_cancelled_on">Cancelled on %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Latest charge: %1$s</string>
+    <string name="market_subscription_detail_cancelled_on">%1$s urun jaytata</string>
+    <string name="market_subscription_detail_charge_amount">Qhipïr cobro: %1$s</string>
     <string name="market_subscription_detail_listing">Listado</string>
     <string name="market_subscription_detail_load_failed">Suscripción jan uñstayksna</string>
     <string name="market_subscription_detail_next_billing">Jutïr pagañ uru: %1$s</string>
     <string name="market_subscription_detail_not_found">Inscripcionax jan jikxatatäki</string>
-    <string name="market_subscription_detail_pending_cancel">Cancellation pending</string>
+    <string name="market_subscription_detail_pending_cancel">Jaytaña suyt\'aski</string>
     <string name="market_subscription_detail_seller">Aljiri</string>
-    <string name="market_subscription_detail_started">Started %1$s</string>
+    <string name="market_subscription_detail_started">Qalltata %1$s</string>
     <string name="market_subscription_detail_title">Suscripción</string>
     <string name="market_subscriptions_action_cancel">Jaytaña</string>
     <string name="market_subscriptions_action_pause">Sayt\'aña</string>

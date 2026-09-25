@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Pasaran</string>
+    <string name="app_name">Pasar</string>
     <string name="market_account_biography_label">Biografi</string>
     <string name="market_account_location_label">Lokasi</string>
     <string name="market_account_save">Simpan</string>
@@ -44,7 +44,7 @@
     <string name="market_bids_tab_outbid">Tertawar</string>
     <string name="market_bids_tab_won">Menang</string>
     <string name="market_bids_title">Bida</string>
-    <string name="market_channel_name">Pasaran</string>
+    <string name="market_channel_name">Pasar</string>
     <string name="market_chargeback_reason_bank_cannot_process">Bank tidak dapat memproses</string>
     <string name="market_chargeback_reason_check_returned">Cek dikembalikan</string>
     <string name="market_chargeback_reason_credit_not_processed">Kredit tidak diproses</string>
@@ -107,7 +107,7 @@
     <string name="market_editor_asset_external_filename">Nama fail</string>
     <string name="market_editor_back">Kembali</string>
     <string name="market_editor_category">Kategori</string>
-    <string name="market_editor_condition">Syarat</string>
+    <string name="market_editor_condition">Keadaan</string>
     <string name="market_editor_condition_new">Baharu</string>
     <string name="market_editor_condition_refurbished">Direkondisi</string>
     <string name="market_editor_condition_used">Terpakai</string>
@@ -149,7 +149,7 @@
     <string name="market_filter_apply">Guna</string>
     <string name="market_filter_category">Kategori</string>
     <string name="market_filter_clear">Kosongkan penapis</string>
-    <string name="market_filter_condition">Syarat</string>
+    <string name="market_filter_condition">Keadaan</string>
     <string name="market_filter_condition_new">Baharu</string>
     <string name="market_filter_condition_refurbished">Direkondisi</string>
     <string name="market_filter_condition_used">Terpakai</string>
@@ -183,7 +183,7 @@
     <string name="market_listing_detail_load_failed">Gagal memuatkan penyenaraian</string>
     <string name="market_listing_detail_listed">Disenaraikan %1$s</string>
     <string name="market_listing_detail_location_heading">Lokasi</string>
-    <string name="market_listing_detail_message">Mesej</string>
+    <string name="market_listing_detail_message">Hantar mesej</string>
     <string name="market_listing_detail_message_seller">Mesej penjual</string>
     <string name="market_listing_detail_not_found">Penyenaraian tidak ditemui</string>
     <string name="market_listing_detail_place_bid">Letak bidaan</string>
@@ -215,8 +215,8 @@
     <string name="market_listings_title">Penyenaraian saya</string>
     <string name="market_messages_inbox_title">Mesej</string>
     <string name="market_messages_thread_listing_chip">Penyenaraian</string>
-    <string name="market_onboarding_activate">Activate</string>
-    <string name="market_onboarding_activating">Activating…</string>
+    <string name="market_onboarding_activate">Aktifkan</string>
+    <string name="market_onboarding_activating">Mengaktifkan…</string>
     <string name="market_onboarding_body">Aktifkan akaun anda untuk mula membeli dan menjual.</string>
     <string name="market_onboarding_dismiss">Tutup</string>
     <string name="market_onboarding_title">Selamat datang ke Market</string>
@@ -305,7 +305,7 @@
     <string name="market_sale_carrier_other">Lain-lain</string>
     <string name="market_sale_completed_label">Selesai</string>
     <string name="market_sale_dispute_respond">Balas</string>
-    <string name="market_sale_dispute_state_open">Buka</string>
+    <string name="market_sale_dispute_state_open">Terbuka</string>
     <string name="market_sale_dispute_state_resolved">Diselesaikan</string>
     <string name="market_sale_load_failed">Gagal memuatkan pesanan</string>
     <string name="market_sale_message_buyer">Mesej pembeli</string>
@@ -367,18 +367,18 @@
     <string name="market_subscribers_interval_month">/ bulan</string>
     <string name="market_subscribers_interval_year">/ tahun</string>
     <string name="market_subscribers_load_failed">Gagal memuatkan pelanggan</string>
-    <string name="market_subscription_detail_billing_history">Billing history</string>
+    <string name="market_subscription_detail_billing_history">Sejarah pengebilan</string>
     <string name="market_subscription_detail_billing_history_empty">Belum ada caj lagi.</string>
-    <string name="market_subscription_detail_billing_info">Billing</string>
-    <string name="market_subscription_detail_cancelled_on">Cancelled on %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Latest charge: %1$s</string>
+    <string name="market_subscription_detail_billing_info">Pengebilan</string>
+    <string name="market_subscription_detail_cancelled_on">Dibatalkan pada %1$s</string>
+    <string name="market_subscription_detail_charge_amount">Caj terkini: %1$s</string>
     <string name="market_subscription_detail_listing">Penyenaraian</string>
     <string name="market_subscription_detail_load_failed">Tidak dapat memuatkan langganan</string>
     <string name="market_subscription_detail_next_billing">Tarikh pengebilan seterusnya: %1$s</string>
     <string name="market_subscription_detail_not_found">Langganan tidak dijumpai</string>
-    <string name="market_subscription_detail_pending_cancel">Cancellation pending</string>
+    <string name="market_subscription_detail_pending_cancel">Pembatalan belum selesai</string>
     <string name="market_subscription_detail_seller">Penjual</string>
-    <string name="market_subscription_detail_started">Started %1$s</string>
+    <string name="market_subscription_detail_started">Dimulakan pada %1$s</string>
     <string name="market_subscription_detail_title">Langganan</string>
     <string name="market_subscriptions_action_cancel">Batal</string>
     <string name="market_subscriptions_action_pause">Jeda</string>
@@ -400,7 +400,7 @@
     <string name="market_subscriptions_resume_failed">Gagal menyambung semula</string>
     <string name="market_subscriptions_resumed">Langganan disambung semula</string>
     <string name="market_subscriptions_title">Langganan</string>
-    <string name="market_title">Pasaran</string>
+    <string name="market_title">Pasar</string>
     <string name="market_type_digital">Digital</string>
     <string name="market_type_physical">Fizikal</string>
     <string name="market_messages_send">Hantar</string>

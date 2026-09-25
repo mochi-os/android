@@ -38,7 +38,7 @@
     <string name="access_add_rule">Aggiungi regola</string>
     <string name="access_owner">Proprietario</string>
     <string name="access_revoke">Revoca</string>
-    <string name="access_level_comment">Commento</string>
+    <string name="access_level_comment">Commenta</string>
     <string name="access_level_view">Visualizza</string>
     <string name="access_level_none">Nessuno</string>
     <string name="reaction_like">Mi piace</string>
@@ -204,7 +204,7 @@
     <string name="oem_hint_allow">Consenti background</string>
     <string name="oem_hint_dismiss">Non mostrare più</string>
     <string name="about_label">Informazioni</string>
-    <string name="about_title">Mochi Client</string>
+    <string name="about_title">Client Mochi</string>
     <string name="about_version">Versione %1$s</string>
     <string name="about_check_updates">Verifica aggiornamenti</string>
     <string name="about_up_to_date">Aggiornato</string>

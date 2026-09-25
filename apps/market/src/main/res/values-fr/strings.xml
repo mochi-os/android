@@ -70,7 +70,7 @@
     <string name="market_checkout_back">Retour</string>
     <string name="market_checkout_buy_it_now">Achat immédiat</string>
     <string name="market_checkout_create_failed">Échec de la création de la commande</string>
-    <string name="market_checkout_delivery_download">Télécharger</string>
+    <string name="market_checkout_delivery_download">Téléchargement</string>
     <string name="market_checkout_delivery_method">Méthode de livraison</string>
     <string name="market_checkout_delivery_pickup">Retrait</string>
     <string name="market_checkout_delivery_shipping">Expédition</string>
@@ -93,7 +93,7 @@
     <string name="market_checkout_title">Paiement</string>
     <string name="market_checkout_total">Total</string>
     <string name="market_checkout_winning_bid">Enchère gagnante</string>
-    <string name="market_condition_new">Nouveau</string>
+    <string name="market_condition_new">Neuf</string>
     <string name="market_condition_refurbished">Reconditionné</string>
     <string name="market_condition_used">Occasion</string>
     <string name="market_dispute_dialog_cancel">Annuler</string>
@@ -108,7 +108,7 @@
     <string name="market_editor_back">Retour</string>
     <string name="market_editor_category">Catégorie</string>
     <string name="market_editor_condition">État</string>
-    <string name="market_editor_condition_new">Nouveau</string>
+    <string name="market_editor_condition_new">Neuf</string>
     <string name="market_editor_condition_refurbished">Reconditionné</string>
     <string name="market_editor_condition_used">Occasion</string>
     <string name="market_editor_currency">Devise</string>
@@ -150,11 +150,11 @@
     <string name="market_filter_category">Catégorie</string>
     <string name="market_filter_clear">Effacer les filtres</string>
     <string name="market_filter_condition">État</string>
-    <string name="market_filter_condition_new">Nouveau</string>
+    <string name="market_filter_condition_new">Neuf</string>
     <string name="market_filter_condition_refurbished">Reconditionné</string>
     <string name="market_filter_condition_used">Occasion</string>
     <string name="market_filter_delivery">Livraison</string>
-    <string name="market_filter_delivery_download">Télécharger</string>
+    <string name="market_filter_delivery_download">Téléchargement</string>
     <string name="market_filter_delivery_pickup">Retrait</string>
     <string name="market_filter_delivery_shipping">Expédition</string>
     <string name="market_filter_price_max">Max</string>
@@ -183,7 +183,7 @@
     <string name="market_listing_detail_load_failed">Échec du chargement de l\'annonce</string>
     <string name="market_listing_detail_listed">Publié le %1$s</string>
     <string name="market_listing_detail_location_heading">Lieu</string>
-    <string name="market_listing_detail_message">Message</string>
+    <string name="market_listing_detail_message">Envoyer un message</string>
     <string name="market_listing_detail_message_seller">Envoyer un message au vendeur</string>
     <string name="market_listing_detail_not_found">Annonce introuvable</string>
     <string name="market_listing_detail_place_bid">Enchérir</string>
@@ -200,7 +200,7 @@
     <string name="market_listings_action_delete">Supprimer</string>
     <string name="market_listings_action_edit">Modifier</string>
     <string name="market_listings_action_relist">Republier</string>
-    <string name="market_listings_action_view">Vue</string>
+    <string name="market_listings_action_view">Voir</string>
     <string name="market_listings_delete_confirm">Supprimer</string>
     <string name="market_listings_empty_title">Aucune annonce pour le moment</string>
     <string name="market_listings_filter_active">Actif</string>
@@ -305,7 +305,7 @@
     <string name="market_sale_carrier_other">Autre</string>
     <string name="market_sale_completed_label">Terminé</string>
     <string name="market_sale_dispute_respond">Répondre</string>
-    <string name="market_sale_dispute_state_open">Ouvrir</string>
+    <string name="market_sale_dispute_state_open">Ouvert</string>
     <string name="market_sale_dispute_state_resolved">Résolu</string>
     <string name="market_sale_load_failed">Échec du chargement de la commande</string>
     <string name="market_sale_message_buyer">Envoyer un message à l\'acheteur</string>
@@ -324,7 +324,7 @@
     <string name="market_sale_shipped_label">Expédié</string>
     <string name="market_sale_title">Vente</string>
     <string name="market_sale_tracking_label">Numéro de suivi</string>
-    <string name="market_saved_title">Enregistré</string>
+    <string name="market_saved_title">Enregistrements</string>
     <string name="market_search_clear">Effacer la recherche</string>
     <string name="market_section_categories">Parcourir les catégories</string>
     <string name="market_section_listings">Annonces récentes</string>
@@ -348,7 +348,7 @@
     <string name="market_sidebar_purchases">Achats</string>
     <string name="market_sidebar_reviews">Avis</string>
     <string name="market_sidebar_sales">Ventes</string>
-    <string name="market_sidebar_saved">Enregistré</string>
+    <string name="market_sidebar_saved">Enregistrements</string>
     <string name="market_sidebar_selling">Ventes</string>
     <string name="market_sidebar_settings">Paramètres</string>
     <string name="market_sidebar_subscribers">Abonnés</string>

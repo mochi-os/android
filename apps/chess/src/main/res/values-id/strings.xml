@@ -13,7 +13,7 @@
     <string name="chess_new_title">Permainan Baru</string>
     <string name="chess_new_pick_opponent">Pilih lawan</string>
     <string name="chess_new_no_friends_title">Belum ada teman</string>
-    <string name="chess_new_no_friends_subtitle">Tambahkan teman di aplikasi People untuk mulai bermain</string>
+    <string name="chess_new_no_friends_subtitle">Tambahkan teman di aplikasi Orang untuk mulai bermain</string>
     <string name="chess_new_add_friends">Tambah teman</string>
     <string name="chess_new_start_button">Mulai permainan</string>
     <string name="chess_new_creating">Membuat…</string>

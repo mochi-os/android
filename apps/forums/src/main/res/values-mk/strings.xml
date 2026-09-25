@@ -24,9 +24,9 @@
     <string name="forums_settings">Поставки</string>
     <string name="forums_load_more">Вчитај повеќе</string>
     <string name="forums_sort_label">Подреди</string>
-    <string name="forums_sort_new">Ново</string>
+    <string name="forums_sort_new">Најново</string>
     <string name="forums_sort_hot">Жешко</string>
-    <string name="forums_sort_top">Врв</string>
+    <string name="forums_sort_top">Најдобри</string>
     <string name="forums_sort_interests">Интереси</string>
     <string name="forums_post_title_field">Наслов</string>
     <string name="forums_post_attach">Прикачи датотеки</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Членови</string>
     <string name="forums_tab_banner">Банер</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Цел</string>
+    <string name="forums_access_target">Корисник или група</string>
     <string name="forums_access_level_view">Прикажи</string>
     <string name="forums_access_level_vote">Гласај</string>
-    <string name="forums_access_level_comment">Коментар</string>
+    <string name="forums_access_level_comment">Коментирај</string>
     <string name="forums_access_level_post">Објави</string>
     <string name="forums_access_level_none">Ништо</string>
     <string name="forums_members_empty">Нема членови</string>
     <string name="forums_banner_dismiss">Отфрли банер</string>
-    <string name="forums_ai_mode_tag">Ознака</string>
+    <string name="forums_ai_mode_tag">Означи</string>
     <string name="forums_ai_account_default">Стандардна сметка</string>
     <string name="forums_ai_prompt_reset">Ресетирај на стандардно</string>
     <string name="forums_settings_unsubscribe">Откажи претплата</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_login_failed">Најавата не успеа</string>
 
     <string name="notification_channel_forums">Известувања од форуми</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Форуми</string>
     <string name="forums_auth_create_identity_failed">Не успеа создавањето на идентитет</string>
     <string name="forums_auth_mfa_unsupported">MFA сè уште не е поддржано во мобилната апликација</string>
     <string name="forums_auth_enter_code_sent">Внесете го кодот испратен до %1$s</string>
@@ -320,7 +320,7 @@
     <string name="forums_moderation_action_restrict">Ограничено</string>
     <string name="forums_moderation_action_unrestrict">Ограничувањето е тргнато</string>
     <string name="forums_moderation_action_resolve">Решен извештај</string>
-    <string name="forums_moderation_target_post">Објави</string>
+    <string name="forums_moderation_target_post">Објава</string>
     <string name="forums_moderation_target_comment">Коментар</string>
     <string name="forums_moderation_target_user">Корисник</string>
     <string name="forums_moderation_reason_spam">Спам</string>

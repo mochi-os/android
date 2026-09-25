@@ -8,7 +8,7 @@
     <string name="go_action_pass">Slaag oor</string>
     <string name="go_action_rematch">Hernuwe wedstryd</string>
     <string name="go_action_resign">Bedank</string>
-    <string name="go_app_title">Gaan</string>
+    <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Swart vang</string>
     <string name="go_captures_white_sr">Wit vang</string>
     <string name="go_chat_title">Klets</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">Open sybalk</string>
     <string name="go_sidebar_active">Aktiewe speletjies</string>
     <string name="go_empty_active">Nog geen aktiewe speletjies nie.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">Oorgegee</string>
     <string name="go_new_game_title">Nuwe Go-speletjie</string>
     <string name="go_new_game_no_friends">Jy moet ’n vriend byvoeg voordat jy ’n speletjie kan begin.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

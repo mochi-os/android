@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Janira qillqatanaka</string>
     <string name="feeds_sort_label">Sumaña</string>
     <string name="feeds_sort_interests">Interesanaka</string>
-    <string name="feeds_sort_new">Machaqa</string>
+    <string name="feeds_sort_new">Machaqanaka</string>
     <string name="feeds_sort_hot">Junt\'u</string>
-    <string name="feeds_sort_top">Patxa</string>
+    <string name="feeds_sort_top">Wali suma</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Qillqata</string>
     <string name="feeds_image_preview">Nayrqat uñjawi</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Jaysawi jaytaña</string>
     <string name="feeds_edit_post">Post askichaña</string>
     <string name="feeds_save_label">Imaña</string>
-    <string name="feeds_post_action">Qillqata</string>
+    <string name="feeds_post_action">Qillqaña</string>
     <string name="feeds_feed_label">Feed</string>
     <string name="feeds_add_files">Archivonaka yapxataña</string>
     <string name="feeds_restore">Kutiyama</string>
@@ -63,8 +63,8 @@
     <string name="feeds_logout">Mistuña</string>
     <string name="feeds_ai_account_default">Default cuenta</string>
     <string name="feeds_ai_mode_off">Jark\'ata</string>
-    <string name="feeds_ai_mode_tag">Etiqueta</string>
-    <string name="feeds_ai_mode_tag_deduplicate">Tag + deduplicate</string>
+    <string name="feeds_ai_mode_tag">Chimpuña</string>
+    <string name="feeds_ai_mode_tag_deduplicate">Chimpuña + duplicadonak apsuña</string>
     <string name="feeds_feed_not_found">Janiw feed jikxatkti</string>
     <string name="feeds_post_not_found">Qillqata jan jikxatasiti</string>
     <string name="feeds_post_select_feed">Mayni feed ajllinim</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Interés jisk\'a</string>
     <string name="feeds_interest_removed">Interés apsuta</string>
     <string name="feeds_interest_failed">Janiw interés askichaña atinkti</string>
-    <string name="feeds_saved_title">Imaña</string>
-    <string name="feeds_saved_menu">Imaña</string>
+    <string name="feeds_saved_title">Imatanaka</string>
+    <string name="feeds_saved_menu">Imatanaka</string>
     <string name="feeds_saved_save">Qhipxarutaki imaña</string>
     <string name="feeds_saved_remove">Imatatat apsuña</string>
     <string name="feeds_saved_clear_all">Taqpach q\'umachaña</string>

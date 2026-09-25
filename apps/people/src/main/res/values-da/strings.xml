@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Åbn navigation</string>
     <string name="people_person_state_friend">Venner</string>
     <string name="people_person_state_self">Dig</string>
-    <string name="people_person_message">Besked</string>
+    <string name="people_person_message">Send besked</string>
     <string name="people_person_accept">Accepter</string>
     <string name="people_person_decline">Afvis</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Accepter alle</string>
     <string name="people_invitations_decline_all">Afvis alle</string>
     <string name="people_invitations_cancel_all">Annuller alle</string>
+    <string name="people_invitations_cancel">Annuller</string>
     <string name="people_invitations_all_accepted">Alle invitationer accepteret</string>
     <string name="people_invitations_all_declined">Alle invitationer afvist</string>
     <string name="people_invitations_all_cancelled">Alle invitationer annulleret</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Søg…</string>
     <string name="people_contacts_invited">Inviteret</string>
     <string name="people_contacts_accept">Accepter</string>
-    <string name="people_contacts_message">Besked</string>
+    <string name="people_contacts_message">Send besked</string>
     <string name="people_contacts_no_people_found">Ingen personer fundet</string>
     <string name="people_contacts_try_adjusting">Prøv at justere din søgning</string>
     <string name="people_contact_section_address">Adresse</string>
@@ -130,7 +131,7 @@
     <string name="people_contact_postcode">Postnummer</string>
     <string name="people_contact_country">Land</string>
     <string name="people_contact_type">Type</string>
-    <string name="people_contact_type_home">Hjem</string>
+    <string name="people_contact_type_home">Privat</string>
     <string name="people_contact_type_other">Andet</string>
     <string name="people_contact_remove">Fjern</string>
     <string name="people_contact_pick_date_confirm">OK</string>

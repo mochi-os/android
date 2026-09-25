@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Atidaryti naršymą</string>
     <string name="people_person_state_friend">Draugai</string>
     <string name="people_person_state_self">Jūs</string>
-    <string name="people_person_message">Pranešimas</string>
+    <string name="people_person_message">Rašyti žinutę</string>
     <string name="people_person_accept">Priimti</string>
     <string name="people_person_decline">Atmesti</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Priimti visus</string>
     <string name="people_invitations_decline_all">Atmesti visus</string>
     <string name="people_invitations_cancel_all">Atšaukti visus</string>
+    <string name="people_invitations_cancel">Atšaukti</string>
     <string name="people_invitations_all_accepted">Visi kvietimai priimti</string>
     <string name="people_invitations_all_declined">Visi kvietimai atmesti</string>
     <string name="people_invitations_all_cancelled">Visi kvietimai atšaukti</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Ieškoti…</string>
     <string name="people_contacts_invited">Pakviestas (-a)</string>
     <string name="people_contacts_accept">Priimti</string>
-    <string name="people_contacts_message">Pranešimas</string>
+    <string name="people_contacts_message">Rašyti žinutę</string>
     <string name="people_contacts_no_people_found">Žmonių nerasta</string>
     <string name="people_contacts_try_adjusting">Pabandykite koreguoti paiešką</string>
     <string name="people_contact_section_address">Adresas</string>

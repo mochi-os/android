@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">പോസ്റ്റുകളൊന്നും ഇതുവരെ ഇല്ല</string>
     <string name="feeds_sort_label">അടുക്കുക</string>
     <string name="feeds_sort_interests">താൽപ്പര്യങ്ങൾ</string>
-    <string name="feeds_sort_new">പുതിയത്</string>
+    <string name="feeds_sort_new">ഏറ്റവും പുതിയത്</string>
     <string name="feeds_sort_hot">ഹോട്ട്</string>
-    <string name="feeds_sort_top">മുകളിൽ</string>
+    <string name="feeds_sort_top">മികച്ചവ</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">പോസ്റ്റ്</string>
     <string name="feeds_image_preview">പ്രിവ്യൂ</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">മറുപടി റദ്ദാക്കുക</string>
     <string name="feeds_edit_post">പോസ്റ്റ് എഡിറ്റ് ചെയ്യുക</string>
     <string name="feeds_save_label">സേവ് ചെയ്യുക</string>
-    <string name="feeds_post_action">പോസ്റ്റ്</string>
+    <string name="feeds_post_action">പോസ്റ്റ് ചെയ്യുക</string>
     <string name="feeds_feed_label">ഫീഡ്</string>
     <string name="feeds_add_files">ഫയലുകൾ ചേർക്കുക</string>
     <string name="feeds_restore">പുനഃസ്ഥാപിക്കുക</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">ലോഗ് ഔട്ട്</string>
     <string name="feeds_ai_account_default">ഡിഫോൾട്ട് അക്കൗണ്ട്</string>
     <string name="feeds_ai_mode_off">പ്രവർത്തനരഹിതം</string>
-    <string name="feeds_ai_mode_tag">ടാഗ്</string>
+    <string name="feeds_ai_mode_tag">ടാഗ് ചെയ്യുക</string>
     <string name="feeds_ai_mode_tag_deduplicate">ടാഗ് + ഡുപ്ലിക്കേറ്റ് നീക്കം ചെയ്യുക</string>
     <string name="feeds_feed_not_found">ഫീഡ് കണ്ടെത്തിയില്ല</string>
     <string name="feeds_post_not_found">പോസ്റ്റ് കണ്ടെത്തിയില്ല</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">താൽപ്പര്യം കുറച്ചു</string>
     <string name="feeds_interest_removed">താൽപ്പര്യം നീക്കം ചെയ്തു</string>
     <string name="feeds_interest_failed">താൽപ്പര്യം ക്രമീകരിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
-    <string name="feeds_saved_title">സേവ് ചെയ്തു</string>
-    <string name="feeds_saved_menu">സേവ് ചെയ്തു</string>
+    <string name="feeds_saved_title">സേവ് ചെയ്തവ</string>
+    <string name="feeds_saved_menu">സേവ് ചെയ്തവ</string>
     <string name="feeds_saved_save">പിന്നീടേക്കായി സംരക്ഷിക്കുക</string>
     <string name="feeds_saved_remove">സംരക്ഷിച്ചവയിൽ നിന്ന് നീക്കം ചെയ്യുക</string>
     <string name="feeds_saved_clear_all">എല്ലാം മായ്ക്കുക</string>

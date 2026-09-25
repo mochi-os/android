@@ -10,8 +10,8 @@
     <string name="settings_home_accounts">هەژمارە پەیوەستکراوەکان</string>
     <string name="settings_home_interests">ئارەزووەکان</string>
     <string name="account_section_passkeys">پاسکییەکان</string>
-    <string name="account_passkey_register">زیادکردنی passkey</string>
-    <string name="account_passkey_delete_title">passkey بسڕەوە؟</string>
+    <string name="account_passkey_register">زیادکردنی پاسکی</string>
+    <string name="account_passkey_delete_title">پاسکی بسڕەوە؟</string>
     <string name="account_section_totp">ئەپی پشتڕاستکەرەوە</string>
     <string name="account_totp_setup">سیستەمی پشتڕاستکردنەوە ڕێکبخە</string>
     <string name="account_totp_setup_title">سیستەمی پشتڕاستکردنەوە ڕێکبخە</string>
@@ -137,8 +137,8 @@
     <string name="system_settings_reset_title">بگەڕێیتەوە بۆ بنەڕەت؟</string>
     <string name="system_setting_apps_install_user">ڕێگە بدە بە بەکارهێنەران ئەپ دامەزرێنن</string>
     <string name="system_setting_auth_email">چوونەژوورەوە بە کۆدی ئیمەیڵ</string>
-    <string name="system_setting_auth_passkey">چوونەژوورەوە بە Passkey</string>
-    <string name="system_setting_auth_totp">چوونەژوورەوە بە ئەپی Authenticatorـی TOTP</string>
+    <string name="system_setting_auth_passkey">چوونەژوورەوە بە پاسکی</string>
+    <string name="system_setting_auth_totp">چوونەژوورەوە بە ئەپی پشتڕاستکەرەوەی TOTP</string>
     <string name="system_setting_auth_recovery">چوونەژوورەوە بە کۆدی هێنانەوە</string>
     <string name="system_setting_auth_oauth">چوونەژوورەوە بە OAuth 2.0</string>
     <string name="system_setting_default_theme">ڕووکاری بنەڕەت</string>
@@ -151,7 +151,7 @@
     <string name="system_setting_oauth_github_client_secret">نهێنی کڵاینتی GitHub</string>
     <string name="system_setting_oauth_microsoft_client_id">ناسنامەی کڵاینتی Microsoft</string>
     <string name="system_setting_oauth_microsoft_client_secret">نهێنی کڵاینتی Microsoft</string>
-    <string name="system_setting_oauth_microsoft_tenant">Tenantـی Microsoft</string>
+    <string name="system_setting_oauth_microsoft_tenant">تێنەنتی Microsoft</string>
     <string name="system_setting_oauth_facebook_client_id">ناسنامەی ئەپی Facebook</string>
     <string name="system_setting_oauth_facebook_client_secret">نهێنی ئەپی Facebook</string>
     <string name="system_setting_oauth_x_client_id">ID ی کڵاینتی X</string>
@@ -278,7 +278,7 @@
     <string name="account_identity_identity">ناسنامە</string>
     <string name="account_identity_username">ناوی بەکارهێنەر</string>
     <string name="account_identity_name">ناو</string>
-    <string name="account_identity_fingerprint">Fingerprint</string>
+    <string name="account_identity_fingerprint">پەنجەمۆر</string>
     <string name="account_identity_directory_toggle">ڕێگە بدە بە کەسانی تر تۆ بدۆزنەوە لە ڕێبەردا</string>
     <string name="domain_add">زیادکردنی دۆمەین</string>
     <string name="domain_add_title">زیادکردنی دۆمەین</string>
@@ -341,7 +341,7 @@
     <string name="system_status_reachability_public">گشتی</string>
     <string name="system_status_reachability_private">تایبەت</string>
     <string name="system_status_reachability_unknown">نەناسراو</string>
-    <string name="system_status_relay">لە ڕێگەی relay</string>
+    <string name="system_status_relay">لە ڕێگەی گواستنەوە</string>
     <string name="system_status_mesh">تۆڕی بڵاوکردنەوە</string>
     <string name="system_status_broadcast">دوایین بڵاوکردنەوە</string>
     <string name="system_status_queued_broadcasts">نامە بڵاوکراوەکانی ڕیزکراو</string>

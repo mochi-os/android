@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Odpri navigacijo</string>
     <string name="people_person_state_friend">Prijatelji</string>
     <string name="people_person_state_self">Ti</string>
-    <string name="people_person_message">Sporočilo</string>
+    <string name="people_person_message">Pošlji sporočilo</string>
     <string name="people_person_accept">Sprejmi</string>
     <string name="people_person_decline">Zavrni</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Sprejmi vse</string>
     <string name="people_invitations_decline_all">Zavrni vse</string>
     <string name="people_invitations_cancel_all">Prekliči vse</string>
+    <string name="people_invitations_cancel">Prekliči</string>
     <string name="people_invitations_all_accepted">Vsa povabila sprejeta</string>
     <string name="people_invitations_all_declined">Vsa povabila zavrnjena</string>
     <string name="people_invitations_all_cancelled">Vsa povabila preklicana</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Iskanje…</string>
     <string name="people_contacts_invited">Povabljen(a)</string>
     <string name="people_contacts_accept">Sprejmi</string>
-    <string name="people_contacts_message">Sporočilo</string>
+    <string name="people_contacts_message">Pošlji sporočilo</string>
     <string name="people_contacts_no_people_found">Oseb ni mogoče najti</string>
     <string name="people_contacts_try_adjusting">Poskusi prilagoditi iskanje</string>
     <string name="people_contact_section_address">Naslov</string>

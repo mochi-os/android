@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="crm_list_title">CRMs</string>
+    <string name="crm_list_title">CRM</string>
     <string name="crm_list_search">ਖੋਜ</string>
     <string name="crm_list_find">CRM ਲੱਭੋ</string>
     <string name="crm_list_logout">ਲੌਗ ਆਊਟ</string>
@@ -128,7 +128,7 @@
     <string name="crm_comment_send">ਭੇਜੋ</string>
     <string name="crm_field_position_body">ਮੁੱਖ ਭਾਗ</string>
     <string name="crm_sort_field">ਅਨੁਸਾਰ ਛਾਂਟੋ</string>
-    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_comment_remove_attachment">ਅਟੈਚਮੈਂਟ ਹਟਾਓ</string>
     <string name="crm_views_sort_by">ਅਨੁਸਾਰ ਛਾਂਟੋ</string>
     <string name="crm_views_move_up">ਉੱਪਰ ਜਾਓ</string>
     <string name="crm_class_move_up">ਉੱਪਰ ਜਾਓ</string>
@@ -217,7 +217,7 @@
     <string name="crm_field_min_length">ਘੱਟੋ-ਘੱਟ ਲੰਬਾਈ</string>
     <string name="crm_field_max_length">ਵੱਧੋ-ਵੱਧ ਲੰਬਾਈ</string>
     <string name="crm_field_pattern">ਪੈਟਰਨ (regex)</string>
-    <string name="crm_field_rows">ਕਤਾਰਾਂ (textarea ਉਚਾਈ)</string>
+    <string name="crm_field_rows">ਕਤਾਰਾਂ (ਟੈਕਸਟ ਖੇਤਰ ਦੀ ਉਚਾਈ)</string>
     <string name="crm_field_no_options">ਕੋਈ ਵਿਕਲਪ ਪਰਿਭਾਸ਼ਿਤ ਨਹੀਂ</string>
     <string name="crm_field_delete_message">ਕੀ ਤੁਸੀਂ ਪੱਕਾ ਫੀਲਡ \"%1$s\" ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ? ਸਾਰੇ ਵਿਕਲਪ ਅਤੇ ਮੁੱਲ ਖੁੰਝ ਜਾਣਗੇ।</string>
     <string name="crm_option_color">ਰੰਗ</string>
@@ -241,7 +241,7 @@
     <string name="crm_access_no_groups">ਕੋਈ ਗਰੁੱਪ ਉਪਲਬਧ ਨਹੀਂ</string>
     <string name="crm_access_tab_users">ਉਪਭੋਗਤਾ</string>
     <string name="crm_access_tab_groups">ਗਰੁੱਪ</string>
-    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_attachment_remove">ਅਟੈਚਮੈਂਟ ਹਟਾਓ</string>
     <string name="crm_board_add_column">ਕਾਲਮ ਜੋੜੋ</string>
     <string name="crm_settings_entity_id">ਇਕਾਈ ID</string>
     <string name="crm_settings_fingerprint">ਫਿੰਗਰਪ੍ਰਿੰਟ</string>

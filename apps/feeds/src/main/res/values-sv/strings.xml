@@ -14,7 +14,7 @@
     <string name="feeds_no_posts_yet">Inga inlägg ännu</string>
     <string name="feeds_sort_label">Sortera</string>
     <string name="feeds_sort_interests">Intressen</string>
-    <string name="feeds_sort_new">Ny</string>
+    <string name="feeds_sort_new">Nyast</string>
     <string name="feeds_sort_hot">Het</string>
     <string name="feeds_sort_top">Topp</string>
     <string name="feeds_sort_ai">AI</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Avbryt svar</string>
     <string name="feeds_edit_post">Redigera inlägg</string>
     <string name="feeds_save_label">Spara</string>
-    <string name="feeds_post_action">Inlägg</string>
+    <string name="feeds_post_action">Publicera</string>
     <string name="feeds_feed_label">Flöde</string>
     <string name="feeds_add_files">Lägg till filer</string>
     <string name="feeds_restore">Återställ</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Logga ut</string>
     <string name="feeds_ai_account_default">Standardkonto</string>
     <string name="feeds_ai_mode_off">Inaktiverad</string>
-    <string name="feeds_ai_mode_tag">Tagg</string>
+    <string name="feeds_ai_mode_tag">Tagga</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tagg + ta bort dubbletter</string>
     <string name="feeds_feed_not_found">Flöde hittades inte</string>
     <string name="feeds_post_not_found">Inlägget hittades inte</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Intresse minskat</string>
     <string name="feeds_interest_removed">Intresse borttaget</string>
     <string name="feeds_interest_failed">Kunde inte justera intresse</string>
-    <string name="feeds_saved_title">Sparad</string>
-    <string name="feeds_saved_menu">Sparad</string>
+    <string name="feeds_saved_title">Sparade</string>
+    <string name="feeds_saved_menu">Sparade</string>
     <string name="feeds_saved_save">Spara till senare</string>
     <string name="feeds_saved_remove">Ta bort från sparade</string>
     <string name="feeds_saved_clear_all">Rensa allt</string>

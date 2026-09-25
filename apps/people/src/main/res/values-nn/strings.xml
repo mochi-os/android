@@ -62,7 +62,7 @@
     <string name="people_profile_uploading">Lastar opp…</string>
     <string name="people_profile_change_banner">Endre banner</string>
     <string name="people_profile_no_banner">Inga banner sett</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">Favikon</string>
     <string name="people_profile_browser_icon">Nettlesarikon</string>
     <string name="people_profile_file_too_large">Fila er for stor</string>
     <string name="people_profile_clear">Tøm</string>
@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Opna navigasjon</string>
     <string name="people_person_state_friend">Vener</string>
     <string name="people_person_state_self">Du</string>
-    <string name="people_person_message">Melding</string>
+    <string name="people_person_message">Send melding</string>
     <string name="people_person_accept">Godta</string>
     <string name="people_person_decline">Avslå</string>
 
@@ -107,6 +107,7 @@
     <string name="people_invitations_all_cancelled">Alle invitasjonar avbrotne</string>
     <string name="people_invitations_all_declined">Alle invitasjonar avviste</string>
     <string name="people_invitations_cancel_all">Avbryt alle</string>
+    <string name="people_invitations_cancel">Kanseller</string>
     <string name="people_invitations_decline_all">Avvis alle</string>
     <string name="people_invitations_some_accept_failed">Nokre invitasjonar kunne ikkje godtakast</string>
     <string name="people_invitations_some_cancel_failed">Nokre invitasjonar kunne ikkje avbrytast</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Søk…</string>
     <string name="people_contacts_invited">Invitert</string>
     <string name="people_contacts_accept">Godta</string>
-    <string name="people_contacts_message">Melding</string>
+    <string name="people_contacts_message">Send melding</string>
     <string name="people_contacts_no_people_found">Ingen personar funne</string>
     <string name="people_contacts_try_adjusting">Prøv å justere søket</string>
     <string name="people_contact_section_address">Adresse</string>
@@ -130,7 +131,7 @@
     <string name="people_contact_postcode">Postnummer</string>
     <string name="people_contact_country">Land</string>
     <string name="people_contact_type">Type</string>
-    <string name="people_contact_type_home">Privat</string>
+    <string name="people_contact_type_home">Heim</string>
     <string name="people_contact_type_other">Anna</string>
     <string name="people_contact_remove">Fjern</string>
     <string name="people_contact_pick_date_confirm">OK</string>

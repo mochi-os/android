@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_list_title">Chats</string>
+    <string name="chat_list_title">Arust\'awinaka</string>
     <string name="chat_list_search">Thaqhama</string>
     <string name="chat_list_logout">Mistuña</string>
     <string name="chat_list_new">Machaqa parla</string>
@@ -62,7 +62,7 @@
     <string name="chat_delete_own_only">Jumampi mensajenakamak chhaqtayañ atta</string>
     <string name="chat_selection_title">%1$d ajllita</string>
     <string name="chat_forward_subtitle">Mä aru lakʼa jan ukax mä masi ajllim, ajllita yatiyäwinak apañataki</string>
-    <string name="chat_forward_chats">Chats</string>
+    <string name="chat_forward_chats">Arust\'awinaka</string>
     <string name="chat_forward_friends">Masinaka</string>
     <string name="chat_policy_title">Puriri chatanaka</string>
     <string name="chat_policy_friends">Amigonakaki</string>

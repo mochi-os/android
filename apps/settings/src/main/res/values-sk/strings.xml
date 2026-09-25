@@ -151,7 +151,7 @@
     <string name="system_setting_oauth_github_client_secret">Tajný kľúč klienta GitHub</string>
     <string name="system_setting_oauth_microsoft_client_id">ID klienta Microsoft</string>
     <string name="system_setting_oauth_microsoft_client_secret">Tajný kľúč klienta Microsoft</string>
-    <string name="system_setting_oauth_microsoft_tenant">Microsoft tenant</string>
+    <string name="system_setting_oauth_microsoft_tenant">Tenant Microsoft</string>
     <string name="system_setting_oauth_facebook_client_id">ID aplikácie Facebook</string>
     <string name="system_setting_oauth_facebook_client_secret">Tajný kľúč aplikácie Facebook</string>
     <string name="system_setting_oauth_x_client_id">X klient ID</string>
@@ -362,11 +362,11 @@
     <string name="route_target_none">Nie sú dostupné žiadne cieľe</string>
     <string name="login_invalid_code">Neplatný kód</string>
     <string name="accounts_provider_browser">Notifikácie prehliadača</string>
-    <string name="accounts_provider_fcm">Android push</string>
+    <string name="accounts_provider_fcm">Push oznámenia pre Android</string>
     <string name="accounts_provider_mcp">Server MCP</string>
     <string name="accounts_provider_unifiedpush">Push oznámenie</string>
     <string name="accounts_provider_url">Externá URL</string>
-    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_provider_web">Mochi v prehliadači</string>
     <string name="accounts_verified">Účet overený</string>
     <string name="accounts_verify_invalid">Neplatný overovací kód</string>
     <string name="accounts_verify_sent">Overovací kód odoslaný</string>
@@ -383,7 +383,7 @@
     <string name="notifprefs_device_push">%1$s · push</string>
     <string name="notifprefs_test_partial">Test odoslaný do %1$d z %2$d cieľov</string>
     <string name="notifprefs_test_none">Nie sú nakonfigurované žiadne cieľové miesta</string>
-    <string name="notifprefs_transport_fcm">Android push</string>
+    <string name="notifprefs_transport_fcm">Push oznámenia pre Android</string>
     <string name="notifprefs_no_destinations">Žiadne ciele</string>
     <string name="account_data_generate">Vygenerovať heslovú frázu</string>
     <string name="accounts_field_server">URL servera</string>

@@ -29,7 +29,7 @@
     <string name="projects_sort_label">정렬</string>
     <string name="projects_sort_direction">방향</string>
     <string name="projects_sort_rank">수동</string>
-    <string name="projects_sort_number">숫자</string>
+    <string name="projects_sort_number">번호</string>
     <string name="projects_sort_created">생성됨</string>
     <string name="projects_sort_updated">업데이트됨</string>
     <string name="projects_create_object_type">유형</string>
@@ -93,20 +93,20 @@
     <string name="projects_request_create_action">생성</string>
     <string name="projects_diff_unified">통합됨</string>
     <string name="projects_diff_split">분할</string>
-    <string name="projects_diff_empty">이용 가능한 diff가 없어요</string>
+    <string name="projects_diff_empty">이용 가능한 차이가 없어요</string>
     <string name="projects_board_unassigned">할당되지 않음</string>
     <string name="projects_board_new">새로 만들기</string>
     <string name="projects_board_rename">이름 변경</string>
     <string name="projects_board_rename_column">열 이름 변경</string>
     <string name="projects_move_position">위치</string>
-    <string name="projects_move_position_top">위</string>
+    <string name="projects_move_position_top">맨 위</string>
     <string name="projects_move_current">현재</string>
     <string name="projects_design_title">디자인</string>
     <string name="projects_design_export">디자인 내보내기</string>
     <string name="projects_design_import">디자인 가져오기</string>
     <string name="projects_design_imported">디자인을 가져왔어요</string>
     <string name="projects_design_tab_classes">클래스</string>
-    <string name="projects_design_tab_views">조회수</string>
+    <string name="projects_design_tab_views">뷰</string>
     <string name="projects_design_import_dialog_title">디자인 가져오기</string>
     <string name="projects_design_import_choose_template">템플릿 선택</string>
     <string name="projects_design_replace_title">디자인을 교체할까요?</string>
@@ -149,7 +149,7 @@
     <string name="projects_views_type_board">보드</string>
     <string name="projects_views_type_list">목록</string>
     <string name="projects_views_direction">방향</string>
-    <string name="projects_views_sort_number">숫자</string>
+    <string name="projects_views_sort_number">번호</string>
     <string name="projects_views_sort_created">생성됨</string>
     <string name="projects_views_sort_updated">업데이트됨</string>
     <string name="projects_views_sort_rank">순위</string>
@@ -176,7 +176,7 @@
     <string name="projects_links_search_placeholder">개체 검색</string>
 
     <string name="notification_channel_projects">프로젝트 알림</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi 프로젝트</string>
     <string name="projects_auth_create_identity_failed">ID를 만들지 못했습니다</string>
     <string name="projects_auth_mfa_unsupported">MFA는 모바일 앱에서 아직 지원되지 않습니다</string>
     <string name="projects_auth_enter_code_sent">%1$s(으)로 전송된 코드를 입력하세요</string>

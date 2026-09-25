@@ -91,7 +91,6 @@
     <string name="people_profile_accent_none">Keine</string>
     <string name="people_profile_clear">Löschen</string>
     <string name="people_profile_privacy_private_desc">Nur gegenseitige Freunde können Ihr Profil ansehen</string>
-    <string name="people_welcome_title">Willkommen bei People</string>
     <string name="people_sidebar_header">Personen</string>
     <string name="people_open_sidebar">Navigation öffnen</string>
     <string name="people_person_banner_alt">Banner für %1$s</string>

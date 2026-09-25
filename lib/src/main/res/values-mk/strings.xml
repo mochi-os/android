@@ -38,7 +38,7 @@
     <string name="access_add_rule">Додај правило</string>
     <string name="access_owner">Сопственик</string>
     <string name="access_revoke">Отповикај</string>
-    <string name="access_level_comment">Коментар</string>
+    <string name="access_level_comment">Коментирај</string>
     <string name="access_level_view">Прикажи</string>
     <string name="access_level_none">Ништо</string>
     <string name="reaction_like">Допаѓа</string>
@@ -95,8 +95,8 @@
     <string name="settings_week_sunday">Недела</string>
     <string name="settings_number_format">Формат на број</string>
     <string name="settings_units">Единици</string>
-    <string name="settings_units_metric">Metric</string>
-    <string name="settings_units_imperial">Imperial</string>
+    <string name="settings_units_metric">Метрички</string>
+    <string name="settings_units_imperial">Имперски</string>
     <string name="settings_time_zone">Временска зона</string>
     <string name="settings_reset_to_defaults">Ресетирај на стандардни</string>
     <string name="settings_reset_confirm_title">Да ги ресетираме преференците?</string>
@@ -201,7 +201,7 @@
     <string name="reauth_signin_text">Известувањата се паузирани додека не се најавите повторно</string>
     <string name="oem_hint_title">Останете достапни во заднина</string>
     <string name="oem_hint_body">Mochi мора да работи во заднина за да испорачува известувања. Дозволете го ова на следниот екран, инаку телефонот може да ги паузира известувањата кога екранот е исклучен.</string>
-    <string name="oem_hint_samsung_note">На телефоните Samsung, проверете и Settings → Device care → Sleeping apps и отстранете го Mochi ако е наведен.</string>
+    <string name="oem_hint_samsung_note">На телефоните Samsung, проверете и Поставки → Грижа за уредот → Апликации во мирување и отстранете го Mochi ако е наведен.</string>
     <string name="oem_hint_allow">Дозволи во заднина</string>
     <string name="oem_hint_dismiss">Не прикажувај повторно</string>
     <string name="about_title">Mochi клиент</string>
@@ -226,15 +226,15 @@
     <string name="stepup_email_label">Код за е-пошта</string>
     <string name="stepup_email_placeholder">Внесете го кодот од вашата е-пошта</string>
     <string name="stepup_totp_label">Код за автентикација</string>
-    <string name="stepup_totp_placeholder">Внесете го кодот од authenticator</string>
-    <string name="stepup_use_passkey">Користете го вашиот passkey</string>
+    <string name="stepup_totp_placeholder">Внесете го кодот од автентикаторот</string>
+    <string name="stepup_use_passkey">Користете го вашиот клуч за пристап</string>
     <string name="stepup_send_email">Испрати е-пошта</string>
     <string name="stepup_resend_email">Испрати ја е-поштата повторно</string>
     <string name="stepup_verify">Потврди</string>
     <string name="stepup_continue_with">Продолжи со %1$s</string>
     <string name="stepup_error_start">Не може да се започне повторна автентикација. Обидете се повторно.</string>
     <string name="stepup_error_code">Тој код е неточен или е истечен.</string>
-    <string name="stepup_error_passkey">Потврдата на passkey не успеа. Обидете се повторно.</string>
+    <string name="stepup_error_passkey">Потврдата на клучот за пристап не успеа. Обидете се повторно.</string>
     <string name="stepup_error_oauth">Не успеа верификацијата со таа сметка. Обидете се повторно.</string>
     <string name="game_system_resign">%1$s се предаде</string>
     <string name="game_system_draw_offer">%1$s понуди реми</string>
