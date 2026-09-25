@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Не са намерени акаунти</string>
     <string name="staff_accounts_filter_seller_label">Продавач</string>
     <string name="staff_accounts_filter_status_label">Състояние</string>
-    <string name="staff_accounts_history">История</string>
     <string name="staff_accounts_history_title">История на акаунта</string>
     <string name="staff_accounts_notes_label">Бележки</string>
     <string name="staff_accounts_reason_label">Причина</string>

@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Keine Konten gefunden</string>
     <string name="staff_accounts_filter_seller_label">Verkäufer</string>
     <string name="staff_accounts_filter_status_label">Status</string>
-    <string name="staff_accounts_history">Verlauf</string>
     <string name="staff_accounts_history_title">Kontoverlauf</string>
     <string name="staff_accounts_notes_label">Notizen</string>
     <string name="staff_accounts_reason_label">Grund</string>

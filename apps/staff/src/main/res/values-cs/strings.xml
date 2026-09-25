@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Žádné účty nenalezeny</string>
     <string name="staff_accounts_filter_seller_label">Prodávající</string>
     <string name="staff_accounts_filter_status_label">Stav</string>
-    <string name="staff_accounts_history">Historie</string>
     <string name="staff_accounts_history_title">Historie účtu</string>
     <string name="staff_accounts_notes_label">Poznámky</string>
     <string name="staff_accounts_reason_label">Důvod</string>

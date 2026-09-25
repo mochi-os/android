@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Облікових записів не знайдено</string>
     <string name="staff_accounts_filter_seller_label">Продавець</string>
     <string name="staff_accounts_filter_status_label">Статус</string>
-    <string name="staff_accounts_history">Історія</string>
     <string name="staff_accounts_history_title">Історія облікового запису</string>
     <string name="staff_accounts_notes_label">Нотатки</string>
     <string name="staff_accounts_reason_label">Причина</string>

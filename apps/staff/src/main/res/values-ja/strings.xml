@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">アカウントが見つかりません</string>
     <string name="staff_accounts_filter_seller_label">販売者</string>
     <string name="staff_accounts_filter_status_label">ステータス</string>
-    <string name="staff_accounts_history">履歴</string>
     <string name="staff_accounts_history_title">アカウント履歴</string>
     <string name="staff_accounts_notes_label">メモ</string>
     <string name="staff_accounts_reason_label">理由</string>

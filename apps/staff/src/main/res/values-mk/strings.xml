@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Не се пронајдени сметки</string>
     <string name="staff_accounts_filter_seller_label">Продавач</string>
     <string name="staff_accounts_filter_status_label">Статус</string>
-    <string name="staff_accounts_history">Историја</string>
     <string name="staff_accounts_history_title">Историја на сметка</string>
     <string name="staff_accounts_notes_label">Белешки</string>
     <string name="staff_accounts_reason_label">Причина</string>

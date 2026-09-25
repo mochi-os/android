@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Ingen konti fundet</string>
     <string name="staff_accounts_filter_seller_label">Sælger</string>
     <string name="staff_accounts_filter_status_label">Status</string>
-    <string name="staff_accounts_history">Historik</string>
     <string name="staff_accounts_history_title">Kontohistorik</string>
     <string name="staff_accounts_notes_label">Noter</string>
     <string name="staff_accounts_reason_label">Årsag</string>

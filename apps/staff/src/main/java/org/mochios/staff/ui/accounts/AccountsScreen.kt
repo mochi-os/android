@@ -20,13 +20,15 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.History
 import androidx.compose.material.icons.filled.People
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.VerifiedUser
-import androidx.compose.material3.AssistChip
-import androidx.compose.material3.AssistChipDefaults
+import androidx.compose.material.icons.outlined.Block
+import androidx.compose.material.icons.outlined.PauseCircle
+import androidx.compose.material.icons.outlined.PlayCircle
+import androidx.compose.material.icons.outlined.Restore
+import androidx.compose.material.icons.outlined.Storefront
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -51,6 +53,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.delay
+import org.mochios.android.format.formatFingerprint
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EmptyState
@@ -58,14 +61,17 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.FilterDropdown
 import org.mochios.android.ui.components.InfiniteList
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
-import org.mochios.android.format.formatFingerprint
+import org.mochios.android.ui.components.StatusBadge
+import org.mochios.android.ui.components.StatusTone
 import org.mochios.staff.R
 import org.mochios.staff.model.Account
 import org.mochios.staff.ui.components.FilterChipSpec
 import org.mochios.staff.ui.components.FilterChipsRow
+import org.mochios.staff.ui.components.StaffCardAction
+import org.mochios.staff.ui.components.StaffCardMenu
 import org.mochios.staff.ui.components.StaffStatusBadge
 import org.mochios.staff.ui.dialog.AccountActionDialog
 import org.mochios.staff.ui.dialog.AccountAuditDialog
@@ -240,26 +246,22 @@ private fun AccountRow(
     val format = LocalFormat.current
     val displayName = account.name.ifBlank { stringResource(R.string.staff_accounts_unnamed) }
 
-    Column(
+    MochiCard(
+        onClick = onHistory,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 12.dp, vertical = 6.dp)
-            .clip(RoundedCornerShape(10.dp))
-            .background(MaterialTheme.colorScheme.surface)
-            .padding(12.dp),
+            .padding(horizontal = 16.dp, vertical = 6.dp),
+        shape = MaterialTheme.shapes.medium,
     ) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            EntityAvatar(
-                name = displayName,
-                seed = account.id,
-                size = 32.dp,
-            )
-            Spacer(Modifier.width(8.dp))
-            Column(modifier = Modifier.weight(1f)) {
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(6.dp),
-                ) {
+        Column(modifier = Modifier.padding(16.dp)) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                EntityAvatar(
+                    name = displayName,
+                    seed = account.id,
+                    size = 32.dp,
+                )
+                Spacer(Modifier.width(8.dp))
+                Column(modifier = Modifier.weight(1f)) {
                     Text(
                         text = displayName,
                         style = MaterialTheme.typography.titleSmall.copy(
@@ -267,84 +269,105 @@ private fun AccountRow(
                         ),
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis,
-                        modifier = Modifier.weight(1f, fill = false),
                     )
-                    if (account.seller != 0) {
-                        AssistChip(
-                            onClick = {},
-                            label = { Text(stringResource(R.string.staff_accounts_seller_chip)) },
-                            colors = AssistChipDefaults.assistChipColors(),
+                    val fingerprint = formatFingerprint(account.fingerprint)
+                    if (fingerprint.isNotBlank()) {
+                        Text(
+                            text = fingerprint,
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                     }
-                    VerifiedChip(level = account.verified)
                 }
+                StaffCardMenu(actions = accountActions(account, onAction))
+            }
+            Spacer(Modifier.height(8.dp))
+
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(6.dp),
+            ) {
+                StaffStatusBadge(status = account.status.ifBlank { "active" })
+                if (account.seller != 0) {
+                    StatusBadge(
+                        label = stringResource(R.string.staff_accounts_seller_chip),
+                        tone = StatusTone.Neutral,
+                        icon = Icons.Outlined.Storefront,
+                    )
+                }
+                VerifiedChip(level = account.verified)
+            }
+            Spacer(Modifier.height(6.dp))
+
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
                 Text(
-                    text = formatFingerprint(account.fingerprint),
+                    text = stringResource(R.string.staff_accounts_sales, account.sales),
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+                RatingMini(rating = account.rating, reviews = account.reviews)
+                Spacer(Modifier.weight(1f))
+                Text(
+                    text = format.formatTimestamp(account.created),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
         }
-        Spacer(Modifier.height(8.dp))
-
-        // Status / sales / rating / joined row.
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-        ) {
-            StaffStatusBadge(status = account.status.ifBlank { "active" })
-            Text(
-                text = stringResource(R.string.staff_accounts_sales, account.sales),
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-            RatingMini(rating = account.rating, reviews = account.reviews)
-            Spacer(Modifier.weight(1f))
-            Text(
-                text = format.formatTimestamp(account.created),
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-        }
-
-        Spacer(Modifier.height(8.dp))
-        AccountActionRow(account = account, onHistory = onHistory, onAction = onAction)
     }
 }
 
 @Composable
-private fun AccountActionRow(
+private fun accountActions(
     account: Account,
-    onHistory: () -> Unit,
     onAction: (AccountActionType) -> Unit,
-) {
+): List<StaffCardAction> {
     val status = account.status.ifBlank { "active" }
-    Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-        MochiIconButton(onClick = onHistory) {
-            Icon(
-                Icons.Default.History,
-                contentDescription = stringResource(R.string.staff_accounts_history),
-            )
-        }
+    val suspend = stringResource(R.string.staff_accounts_suspend)
+    val unsuspend = stringResource(R.string.staff_accounts_unsuspend)
+    val ban = stringResource(R.string.staff_accounts_ban)
+    val unban = stringResource(R.string.staff_accounts_unban)
+    return buildList {
         // Suspend appears only for active sellers (mirroring web).
         if (status == "active" && account.seller != 0) {
-            MochiOutlinedButton(onClick = { onAction(AccountActionType.SUSPEND) }) {
-                Text(stringResource(R.string.staff_accounts_suspend))
-            }
+            add(
+                StaffCardAction(
+                    label = suspend,
+                    icon = Icons.Outlined.PauseCircle,
+                    destructive = true,
+                    onClick = { onAction(AccountActionType.SUSPEND) },
+                ),
+            )
         }
         if (status == "suspended") {
-            MochiOutlinedButton(onClick = { onAction(AccountActionType.UNSUSPEND) }) {
-                Text(stringResource(R.string.staff_accounts_unsuspend))
-            }
+            add(
+                StaffCardAction(
+                    label = unsuspend,
+                    icon = Icons.Outlined.PlayCircle,
+                    onClick = { onAction(AccountActionType.UNSUSPEND) },
+                ),
+            )
         }
         if (status != "banned") {
-            MochiOutlinedButton(onClick = { onAction(AccountActionType.BAN) }) {
-                Text(stringResource(R.string.staff_accounts_ban))
-            }
+            add(
+                StaffCardAction(
+                    label = ban,
+                    icon = Icons.Outlined.Block,
+                    destructive = true,
+                    onClick = { onAction(AccountActionType.BAN) },
+                ),
+            )
         } else {
-            MochiOutlinedButton(onClick = { onAction(AccountActionType.UNBAN) }) {
-                Text(stringResource(R.string.staff_accounts_unban))
-            }
+            add(
+                StaffCardAction(
+                    label = unban,
+                    icon = Icons.Outlined.Restore,
+                    onClick = { onAction(AccountActionType.UNBAN) },
+                ),
+            )
         }
     }
 }

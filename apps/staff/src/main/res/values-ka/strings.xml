@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">ანგარიშები ვერ მოიძებნა</string>
     <string name="staff_accounts_filter_seller_label">გამყიდველი</string>
     <string name="staff_accounts_filter_status_label">სტატუსი</string>
-    <string name="staff_accounts_history">ისტორია</string>
     <string name="staff_accounts_history_title">ანგარიშის ისტორია</string>
     <string name="staff_accounts_notes_label">შენიშვნები</string>
     <string name="staff_accounts_reason_label">მიზეზი</string>

@@ -15,7 +15,6 @@
     <string name="staff_accounts_empty">கணக்குகள் எதுவும் கிடைக்கவில்லை</string>
     <string name="staff_accounts_filter_seller_label">விற்பனையாளர்</string>
     <string name="staff_accounts_filter_status_label">நிலை</string>
-    <string name="staff_accounts_history">வரலாறு</string>
     <string name="staff_accounts_history_title">கணக்கு வரலாறு</string>
     <string name="staff_accounts_notes_label">குறிப்புகள்</string>
     <string name="staff_accounts_reason_label">காரணம்</string>

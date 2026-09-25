@@ -77,7 +77,6 @@
     <string name="staff_accounts_banned_toast">Konto gesperrt</string>
     <string name="staff_accounts_empty">Keine Konten gefunden</string>
     <string name="staff_accounts_filter_seller_label">Verkäufer</string>
-    <string name="staff_accounts_history">Verlauf</string>
     <string name="staff_accounts_history_title">Kontoverlauf</string>
     <string name="staff_accounts_notes_label">Notizen</string>
     <string name="staff_accounts_reason_optional_label">Grund (optional)</string>

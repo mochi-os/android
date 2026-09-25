@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">계정을 찾을 수 없어요</string>
     <string name="staff_accounts_filter_seller_label">판매자</string>
     <string name="staff_accounts_filter_status_label">상태</string>
-    <string name="staff_accounts_history">기록</string>
     <string name="staff_accounts_history_title">계정 내역</string>
     <string name="staff_accounts_notes_label">메모</string>
     <string name="staff_accounts_reason_label">사유</string>

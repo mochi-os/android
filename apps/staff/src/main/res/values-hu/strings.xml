@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Nem található fiók</string>
     <string name="staff_accounts_filter_seller_label">Eladó</string>
     <string name="staff_accounts_filter_status_label">Állapot</string>
-    <string name="staff_accounts_history">Előzmények</string>
     <string name="staff_accounts_history_title">Fiókelőzmények</string>
     <string name="staff_accounts_notes_label">Jegyzetek</string>
     <string name="staff_accounts_reason_label">Indok</string>

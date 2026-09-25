@@ -15,7 +15,6 @@
     <string name="staff_accounts_empty">अकाउंट्स सापडले नाहीत</string>
     <string name="staff_accounts_filter_seller_label">विक्रेता</string>
     <string name="staff_accounts_filter_status_label">स्थिती</string>
-    <string name="staff_accounts_history">इतिहास</string>
     <string name="staff_accounts_history_title">खाते इतिहास</string>
     <string name="staff_accounts_notes_label">नोट्स</string>
     <string name="staff_accounts_reason_label">कारण</string>

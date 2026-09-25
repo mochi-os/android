@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Нема пронађених налога</string>
     <string name="staff_accounts_filter_seller_label">Продавац</string>
     <string name="staff_accounts_filter_status_label">Статус</string>
-    <string name="staff_accounts_history">Историја</string>
     <string name="staff_accounts_history_title">Историја налога</string>
     <string name="staff_accounts_notes_label">Белешке</string>
     <string name="staff_accounts_reason_label">Разлог</string>

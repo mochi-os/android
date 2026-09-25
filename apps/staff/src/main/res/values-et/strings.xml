@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Kontosid ei leitud</string>
     <string name="staff_accounts_filter_seller_label">Müüja</string>
     <string name="staff_accounts_filter_status_label">Olek</string>
-    <string name="staff_accounts_history">Ajalugu</string>
     <string name="staff_accounts_history_title">Konto ajalugu</string>
     <string name="staff_accounts_notes_label">Märkmed</string>
     <string name="staff_accounts_reason_label">Põhjus</string>

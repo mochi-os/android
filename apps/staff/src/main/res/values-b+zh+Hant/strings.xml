@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">找不到帳戶</string>
     <string name="staff_accounts_filter_seller_label">賣家</string>
     <string name="staff_accounts_filter_status_label">狀態</string>
-    <string name="staff_accounts_history">記錄</string>
     <string name="staff_accounts_history_title">帳戶歷史</string>
     <string name="staff_accounts_notes_label">備註</string>
     <string name="staff_accounts_reason_label">原因</string>

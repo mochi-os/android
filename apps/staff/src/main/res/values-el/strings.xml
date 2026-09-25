@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Δεν βρέθηκαν λογαριασμοί</string>
     <string name="staff_accounts_filter_seller_label">Πωλητής</string>
     <string name="staff_accounts_filter_status_label">Κατάσταση</string>
-    <string name="staff_accounts_history">Ιστορικό</string>
     <string name="staff_accounts_history_title">Ιστορικό λογαριασμού</string>
     <string name="staff_accounts_notes_label">Σημειώσεις</string>
     <string name="staff_accounts_reason_label">Αιτία</string>

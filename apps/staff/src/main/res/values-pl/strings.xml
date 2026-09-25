@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Nie znaleziono kont</string>
     <string name="staff_accounts_filter_seller_label">Sprzedający</string>
     <string name="staff_accounts_filter_status_label">Status</string>
-    <string name="staff_accounts_history">Historia</string>
     <string name="staff_accounts_history_title">Historia konta</string>
     <string name="staff_accounts_notes_label">Notatki</string>
     <string name="staff_accounts_reason_label">Powód</string>

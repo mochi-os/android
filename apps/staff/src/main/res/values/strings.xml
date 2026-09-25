@@ -15,7 +15,6 @@
     <string name="staff_accounts_empty">No accounts found</string>
     <string name="staff_accounts_filter_seller_label">Seller</string>
     <string name="staff_accounts_filter_status_label">Status</string>
-    <string name="staff_accounts_history">History</string>
     <string name="staff_accounts_history_title">Account history</string>
     <string name="staff_accounts_notes_label">Notes</string>
     <string name="staff_accounts_reason_label">Reason</string>

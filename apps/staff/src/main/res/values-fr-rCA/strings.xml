@@ -74,7 +74,6 @@
     <string name="staff_accounts_banned_toast">Compte banni</string>
     <string name="staff_accounts_empty">Aucun compte trouvé</string>
     <string name="staff_accounts_filter_seller_label">Vendeur</string>
-    <string name="staff_accounts_history">Historique</string>
     <string name="staff_accounts_history_title">Historique du compte</string>
     <string name="staff_accounts_notes_label">Notes</string>
     <string name="staff_accounts_reason_optional_label">Motif (facultatif)</string>

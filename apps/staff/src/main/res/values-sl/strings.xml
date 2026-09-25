@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Računov ni mogoče najti</string>
     <string name="staff_accounts_filter_seller_label">Prodajalec</string>
     <string name="staff_accounts_filter_status_label">Stanje</string>
-    <string name="staff_accounts_history">Zgodovina</string>
     <string name="staff_accounts_history_title">Zgodovina računa</string>
     <string name="staff_accounts_notes_label">Opombe</string>
     <string name="staff_accounts_reason_label">Razlog</string>

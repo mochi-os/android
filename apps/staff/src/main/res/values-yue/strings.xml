@@ -92,7 +92,6 @@
     <string name="staff_reports_type_listing">刊登</string>
     <string name="staff_dashboard_tab_listings">刊登</string>
     <string name="staff_sidebar_listings">刊登</string>
-    <string name="staff_accounts_history">歷史</string>
     <string name="staff_accounts_sales">%1$d 件售出</string>
     <string name="staff_accounts_search_clear">清除搜尋</string>
     <string name="staff_accounts_status_suspended">已暫停</string>

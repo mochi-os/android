@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Tidak ada akun yang ditemukan</string>
     <string name="staff_accounts_filter_seller_label">Penjual</string>
     <string name="staff_accounts_filter_status_label">Status</string>
-    <string name="staff_accounts_history">Riwayat</string>
     <string name="staff_accounts_history_title">Riwayat akun</string>
     <string name="staff_accounts_notes_label">Catatan</string>
     <string name="staff_accounts_reason_label">Alasan</string>

@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Հաշիվներ չեն գտնվել</string>
     <string name="staff_accounts_filter_seller_label">Վաճառող</string>
     <string name="staff_accounts_filter_status_label">Կարգավիճակ</string>
-    <string name="staff_accounts_history">Պատմություն</string>
     <string name="staff_accounts_history_title">Հաշվի պատմություն</string>
     <string name="staff_accounts_notes_label">Նշումներ</string>
     <string name="staff_accounts_reason_label">Պատճառ</string>

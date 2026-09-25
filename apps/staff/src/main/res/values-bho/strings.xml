@@ -13,7 +13,6 @@
     <string name="staff_accounts_empty">कौनो खाता ना मिलल</string>
     <string name="staff_accounts_filter_seller_label">विक्रेता</string>
     <string name="staff_accounts_filter_status_label">स्थिति</string>
-    <string name="staff_accounts_history">इतिहास</string>
     <string name="staff_accounts_history_title">खाता इतिहास</string>
     <string name="staff_accounts_notes_label">नोट</string>
     <string name="staff_accounts_reason_label">कारण</string>

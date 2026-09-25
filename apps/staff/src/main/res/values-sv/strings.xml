@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Inga konton hittades</string>
     <string name="staff_accounts_filter_seller_label">Säljare</string>
     <string name="staff_accounts_filter_status_label">Status</string>
-    <string name="staff_accounts_history">Historik</string>
     <string name="staff_accounts_history_title">Kontohistorik</string>
     <string name="staff_accounts_notes_label">Anteckningar</string>
     <string name="staff_accounts_reason_label">Anledning</string>

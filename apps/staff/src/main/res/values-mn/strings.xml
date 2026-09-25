@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Бүртгэл олдсонгүй</string>
     <string name="staff_accounts_filter_seller_label">Худалдагч</string>
     <string name="staff_accounts_filter_status_label">Төлөв</string>
-    <string name="staff_accounts_history">Түүх</string>
     <string name="staff_accounts_history_title">Бүртгэлийн түүх</string>
     <string name="staff_accounts_notes_label">Тэмдэглэл</string>
     <string name="staff_accounts_reason_label">Шалтгаан</string>

@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">ไม่พบบัญชี</string>
     <string name="staff_accounts_filter_seller_label">ผู้ขาย</string>
     <string name="staff_accounts_filter_status_label">สถานะ</string>
-    <string name="staff_accounts_history">ประวัติ</string>
     <string name="staff_accounts_history_title">ประวัติบัญชี</string>
     <string name="staff_accounts_notes_label">บันทึก</string>
     <string name="staff_accounts_reason_label">เหตุผล</string>

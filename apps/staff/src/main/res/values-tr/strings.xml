@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Hesap bulunamadı</string>
     <string name="staff_accounts_filter_seller_label">Satıcı</string>
     <string name="staff_accounts_filter_status_label">Durum</string>
-    <string name="staff_accounts_history">Geçmiş</string>
     <string name="staff_accounts_history_title">Hesap geçmişi</string>
     <string name="staff_accounts_notes_label">Notlar</string>
     <string name="staff_accounts_reason_label">Neden</string>

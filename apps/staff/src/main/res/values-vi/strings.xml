@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Không tìm thấy tài khoản nào</string>
     <string name="staff_accounts_filter_seller_label">Người bán</string>
     <string name="staff_accounts_filter_status_label">Trạng thái</string>
-    <string name="staff_accounts_history">Lịch sử</string>
     <string name="staff_accounts_history_title">Lịch sử tài khoản</string>
     <string name="staff_accounts_notes_label">Ghi chú</string>
     <string name="staff_accounts_reason_label">Lý do</string>

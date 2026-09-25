@@ -15,7 +15,6 @@
     <string name="staff_accounts_empty">അക്കൗണ്ടുകളൊന്നും കണ്ടെത്തിയില്ല</string>
     <string name="staff_accounts_filter_seller_label">വിൽപ്പനക്കാരൻ</string>
     <string name="staff_accounts_filter_status_label">സ്റ്റാറ്റസ്</string>
-    <string name="staff_accounts_history">ചരിത്രം</string>
     <string name="staff_accounts_history_title">അക്കൗണ്ട് ചരിത്രം</string>
     <string name="staff_accounts_notes_label">കുറിപ്പുകൾ</string>
     <string name="staff_accounts_reason_label">കാരണം</string>

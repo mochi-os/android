@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Tilejä ei löytynyt</string>
     <string name="staff_accounts_filter_seller_label">Myyjä</string>
     <string name="staff_accounts_filter_status_label">Tila</string>
-    <string name="staff_accounts_history">Historia</string>
     <string name="staff_accounts_history_title">Tilihistoria</string>
     <string name="staff_accounts_notes_label">Muistiinpanot</string>
     <string name="staff_accounts_reason_label">Syy</string>

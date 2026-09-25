@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Hisoblar topilmadi</string>
     <string name="staff_accounts_filter_seller_label">Sotuvchi</string>
     <string name="staff_accounts_filter_status_label">Holat</string>
-    <string name="staff_accounts_history">Tarix</string>
     <string name="staff_accounts_history_title">Hisob tarixi</string>
     <string name="staff_accounts_notes_label">Eslatmalar</string>
     <string name="staff_accounts_reason_label">Sabab</string>

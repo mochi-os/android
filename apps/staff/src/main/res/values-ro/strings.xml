@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Nu s-au găsit conturi</string>
     <string name="staff_accounts_filter_seller_label">Vânzător</string>
     <string name="staff_accounts_filter_status_label">Stare</string>
-    <string name="staff_accounts_history">Istoric</string>
     <string name="staff_accounts_history_title">Istoricul contului</string>
     <string name="staff_accounts_notes_label">Note</string>
     <string name="staff_accounts_reason_label">Motiv</string>
