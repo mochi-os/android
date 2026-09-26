@@ -13,9 +13,9 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.personAvatarPath
 
 /**
- * Avatar of the user [id] anywhere in the staff console. Tries the person's
- * People avatar first, then the staff app's copy, then seeded initials; a
- * blank [id] goes straight to the initials.
+ * Avatar of the user [id] anywhere in the staff console: the person's People
+ * avatar, or seeded initials when there is none; a blank [id] goes straight to
+ * the initials.
  */
 @Composable
 fun StaffUserAvatar(
@@ -27,12 +27,8 @@ fun StaffUserAvatar(
     EntityAvatar(
         name = name,
         src = personAvatarPath(id),
-        fallbackSrc = staffAvatarPath(id),
         seed = id.ifBlank { name },
         size = size,
         modifier = modifier,
     )
 }
-
-private fun staffAvatarPath(id: String): String? =
-    id.takeIf { value -> value.isNotBlank() }?.let { value -> "/staff/-/user/$value/asset/avatar" }
