@@ -5,13 +5,21 @@
 
 package org.mochios.market.ui.components
 
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.outlined.Undo
+import androidx.compose.material.icons.outlined.EventBusy
+import androidx.compose.material.icons.outlined.Gavel
+import androidx.compose.material.icons.outlined.ReportProblem
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import org.mochios.android.ui.components.StatusBadge
 import org.mochios.android.ui.components.StatusBadgeSize
 import org.mochios.android.ui.components.StatusTone
+import org.mochios.android.ui.components.defaultIcon
 import org.mochios.market.R
+import org.mochios.market.model.BidStatus
 
 /**
  * Badge for a market order, listing or subscription status, drawn with the
@@ -29,19 +37,53 @@ fun MarketStatusBadge(
     size: StatusBadgeSize = StatusBadgeSize.Compact,
 ) {
     val key = status.trim().lowercase()
+    val tone = statusTone(key)
     StatusBadge(
         label = localised ?: knownStatusLabel(key) ?: key,
-        tone = statusTone(key),
+        tone = tone,
+        icon = statusIcon(key) ?: tone.defaultIcon,
         modifier = modifier,
         size = size,
     )
 }
 
+/**
+ * Badge for one of the buyer's bids. A bid's `active` means the auction is
+ * still running, not a settled state, so bids keep their own tones.
+ *
+ * @param status the bid's status; null renders an empty neutral badge.
+ */
+@Composable
+fun BidStatusBadge(status: BidStatus?, modifier: Modifier = Modifier) {
+    val (label, tone) = when (status) {
+        BidStatus.ACTIVE -> stringResource(R.string.market_bids_tab_active) to StatusTone.Waiting
+        BidStatus.WON -> stringResource(R.string.market_bids_tab_won) to StatusTone.Positive
+        BidStatus.PURCHASED ->
+            stringResource(R.string.market_purchase_purchased) to StatusTone.Positive
+        BidStatus.OUTBID -> stringResource(R.string.market_bids_tab_outbid) to StatusTone.Neutral
+        BidStatus.LOST -> stringResource(R.string.market_bids_tab_lost) to StatusTone.Neutral
+        BidStatus.EXPIRED, null -> status?.name?.lowercase().orEmpty() to StatusTone.Neutral
+    }
+    StatusBadge(
+        label = label,
+        tone = tone,
+        icon = if (status == BidStatus.ACTIVE) Icons.Outlined.Gavel else tone.defaultIcon,
+        modifier = modifier,
+    )
+}
+
 internal fun statusTone(key: String): StatusTone = when (key) {
     "active", "paid", "shipped", "delivered", "completed" -> StatusTone.Positive
-    "pending", "paused", "refunded" -> StatusTone.Waiting
+    "pending", "paused" -> StatusTone.Waiting
     "disputed", "cancelled", "past_due" -> StatusTone.Negative
     else -> StatusTone.Neutral
+}
+
+private fun statusIcon(key: String): ImageVector? = when (key) {
+    "refunded" -> Icons.AutoMirrored.Outlined.Undo
+    "disputed" -> Icons.Outlined.ReportProblem
+    "past_due" -> Icons.Outlined.EventBusy
+    else -> null
 }
 
 @Composable

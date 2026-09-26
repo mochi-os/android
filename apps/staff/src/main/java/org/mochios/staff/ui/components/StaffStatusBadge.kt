@@ -6,9 +6,13 @@
 package org.mochios.staff.ui.components
 
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.outlined.Undo
+import androidx.compose.material.icons.outlined.EventBusy
 import androidx.compose.material.icons.outlined.PauseCircle
+import androidx.compose.material.icons.outlined.ReportProblem
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import org.mochios.android.ui.components.StatusBadge
 import org.mochios.android.ui.components.StatusTone
@@ -28,7 +32,7 @@ fun StaffStatusBadge(status: String, modifier: Modifier = Modifier) {
     StatusBadge(
         label = staffStatusLabel(key) ?: key,
         tone = tone,
-        icon = if (key == "inactive") Icons.Outlined.PauseCircle else tone.defaultIcon,
+        icon = staffStatusIcon(key) ?: tone.defaultIcon,
         modifier = modifier,
     )
 }
@@ -58,8 +62,7 @@ private fun staffStatusTone(key: String): StatusTone = when (key) {
     "responded",
     "reviewing",
     "appealed",
-    "paused",
-    "refunded" -> StatusTone.Waiting
+    "paused" -> StatusTone.Waiting
 
     "rejected",
     "removed",
@@ -73,7 +76,17 @@ private fun staffStatusTone(key: String): StatusTone = when (key) {
     "cancelled",
     "past_due" -> StatusTone.Negative
 
+    "admin" -> StatusTone.Accent
+
     else -> StatusTone.Neutral
+}
+
+private fun staffStatusIcon(key: String): ImageVector? = when (key) {
+    "inactive" -> Icons.Outlined.PauseCircle
+    "refunded" -> Icons.AutoMirrored.Outlined.Undo
+    "disputed" -> Icons.Outlined.ReportProblem
+    "past_due" -> Icons.Outlined.EventBusy
+    else -> null
 }
 
 @Composable

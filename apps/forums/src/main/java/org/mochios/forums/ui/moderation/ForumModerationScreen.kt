@@ -24,6 +24,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.outlined.VolumeOff
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Flag
 import androidx.compose.material.icons.filled.Group
@@ -78,6 +79,7 @@ import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.StatusBadge
 import org.mochios.android.ui.components.StatusTone
+import org.mochios.android.ui.components.defaultIcon
 import org.mochios.forums.R
 import org.mochios.forums.model.ModerationLogEntry
 import org.mochios.forums.model.ModerationReport
@@ -877,7 +879,8 @@ private fun RestrictionBadge(type: String) {
         "shadowban" -> stringResource(R.string.forums_moderation_restriction_state_shadowban)
         else -> type
     }
-    StatusBadge(label = label, tone = tone)
+    val icon = if (type == "muted") Icons.AutoMirrored.Outlined.VolumeOff else tone.defaultIcon
+    StatusBadge(label = label, tone = tone, icon = icon)
 }
 
 @OptIn(ExperimentalMaterial3Api::class)

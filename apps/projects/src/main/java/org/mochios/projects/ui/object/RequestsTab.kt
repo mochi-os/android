@@ -27,6 +27,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.MergeType
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CircularProgressIndicator
@@ -65,6 +66,7 @@ import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.StatusBadge
 import org.mochios.android.ui.components.StatusTone
+import org.mochios.android.ui.components.defaultIcon
 import org.mochios.projects.R
 import org.mochios.projects.model.Branch
 import org.mochios.projects.model.defaultTarget
@@ -205,12 +207,13 @@ private fun StatusChip(status: String, draft: Boolean) {
         status == "open" ->
             stringResource(R.string.projects_request_status_open) to StatusTone.Waiting
         status == "merged" ->
-            stringResource(R.string.projects_request_status_merged) to StatusTone.Positive
+            stringResource(R.string.projects_request_status_merged) to StatusTone.Accent
         status == "closed" ->
             stringResource(R.string.projects_request_status_closed) to StatusTone.Negative
         else -> status.replaceFirstChar { char -> char.uppercase() } to StatusTone.Neutral
     }
-    StatusBadge(label = label, tone = tone)
+    val icon = if (!draft && status == "merged") Icons.Outlined.MergeType else tone.defaultIcon
+    StatusBadge(label = label, tone = tone, icon = icon)
 }
 
 @Composable
