@@ -38,12 +38,17 @@ data class CategoryForm(
 /**
  * State of the category form screen.
  *
+ * @property isEdit Whether the route edits an existing category.
  * @property categories Every category, offered as a parent.
- * @property editing The category being edited, or null when creating one.
+ * @property editing The category being edited, or null when creating one or
+ *   while it loads.
+ * @property isLoading Whether the categories are still loading; the create form
+ *   stays usable meanwhile.
  * @property missing Whether the category to edit no longer exists.
  * @property saved The message to show on the list once a save succeeded.
  */
 data class CategoryFormUiState(
+    val isEdit: Boolean = false,
     val categories: List<Category> = emptyList(),
     val editing: Category? = null,
     val form: CategoryForm = CategoryForm(),
@@ -64,11 +69,26 @@ class CategoryFormViewModel @Inject constructor(
 
     private val categoryId: String? = savedStateHandle.get<String>("id")
 
-    private val _state = MutableStateFlow(CategoryFormUiState())
+    private val _state = MutableStateFlow(CategoryFormUiState(isEdit = categoryId != null))
     val state: StateFlow<CategoryFormUiState> = _state.asStateFlow()
 
-    init {
-        load()
+    private var started = false
+
+    /**
+     * Fills the form from [known], the categories the list already shows, and
+     * loads them only when the list has none or lacks the one being edited.
+     */
+    fun start(known: List<Category>) {
+        if (started) {
+            return
+        }
+        started = true
+        val hasEditing = categoryId == null || known.any { category -> category.id == categoryId }
+        if (known.isNotEmpty() && hasEditing) {
+            apply(known)
+        } else {
+            load()
+        }
     }
 
     /** Loads the parent options and, when editing, the category's current values. */
@@ -77,20 +97,30 @@ class CategoryFormViewModel @Inject constructor(
             _state.value = _state.value.copy(isLoading = true, loadError = null)
             try {
                 val categories = repo.listCategories()
-                val editing = categoryId?.let { id ->
-                    categories.firstOrNull { category -> category.id == id }
-                }
-                _state.value = _state.value.copy(
-                    categories = categories,
-                    editing = editing,
-                    form = editing?.toForm() ?: _state.value.form,
-                    missing = categoryId != null && editing == null,
-                    isLoading = false,
-                )
+                apply(categories)
             } catch (e: Exception) {
                 _state.value = _state.value.copy(isLoading = false, loadError = e.toMochiError())
             }
         }
+    }
+
+    private fun apply(categories: List<Category>) {
+        val current = _state.value
+        val editing = categoryId?.let { id ->
+            categories.firstOrNull { category -> category.id == id }
+        }
+        _state.value = current.copy(
+            categories = categories,
+            editing = editing,
+            form = if (current.editing == null && editing != null) {
+                editing.toForm()
+            } else {
+                current.form
+            },
+            missing = categoryId != null && editing == null,
+            isLoading = false,
+            loadError = null,
+        )
     }
 
     /** Replaces the form with the user's latest input. */
@@ -105,7 +135,8 @@ class CategoryFormViewModel @Inject constructor(
     fun submit() {
         val current = _state.value
         val form = current.form
-        if (form.name.isBlank() || form.slug.isBlank() || current.submitting) {
+        val blank = form.name.isBlank() || form.slug.isBlank()
+        if (blank || current.submitting || (current.isEdit && current.editing == null)) {
             return
         }
         viewModelScope.launch {

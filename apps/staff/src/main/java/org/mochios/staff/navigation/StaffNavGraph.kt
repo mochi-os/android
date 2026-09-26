@@ -77,7 +77,8 @@ object StaffApp {
 
 /**
  * Keys a form screen sets on the list below it before popping back, so the
- * list reloads only when something was saved.
+ * list reloads only when something changed: a save, or a category to edit
+ * that no longer exists.
  */
 private const val CATEGORY_SAVED = "category_saved"
 private const val TEAM_MEMBER_ADDED = "team_member_added"
@@ -302,9 +303,16 @@ fun NavGraphBuilder.staffNavGraph(
 
 @Composable
 private fun CategoryFormRoute(navController: NavController) {
+    val listEntry = remember(navController) {
+        runCatching { navController.getBackStackEntry(StaffApp.CATEGORIES) }.getOrNull()
+    }
+    val knownCategories = listEntry
+        ?.let { entry -> hiltViewModel<CategoriesViewModel>(entry).state.value.categories }
+        .orEmpty()
     CategoryFormScreen(
+        knownCategories = knownCategories,
         onBack = { navController.popBackStack() },
-        onSaved = { message ->
+        onDone = { message ->
             navController.previousBackStackEntry?.savedStateHandle?.set(CATEGORY_SAVED, message)
             navController.popBackStack()
         },

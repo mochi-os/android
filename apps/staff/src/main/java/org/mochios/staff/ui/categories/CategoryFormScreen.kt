@@ -5,6 +5,7 @@
 
 package org.mochios.staff.ui.categories
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -44,6 +45,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.R as MochiR
+import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LoadingState
@@ -52,6 +54,7 @@ import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
 import org.mochios.staff.model.Category
@@ -59,33 +62,43 @@ import org.mochios.staff.model.Category
 /**
  * Full-screen form that creates a category, or edits one when the route
  * carries its id. The parent dropdown excludes the category being edited.
+ * Back is blocked while a save is in flight so its result still reaches the list.
  *
+ * @param knownCategories The categories the list already shows, used instead of
+ *   loading them again.
  * @param onBack Leaves without saving.
- * @param onSaved Called with the message the list should show once the save succeeded.
+ * @param onDone Leaves with the message the list should show before it reloads:
+ *   after a save, or when the category to edit no longer exists.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CategoryFormScreen(
+    knownCategories: List<Category>,
     onBack: () -> Unit,
-    onSaved: (Int) -> Unit,
+    onDone: (Int) -> Unit,
     viewModel: CategoryFormViewModel = hiltViewModel(),
 ) {
     val state by viewModel.state.collectAsState()
-    val isEdit = state.editing != null
+    val isEdit = state.isEdit
     val form = state.form
-    val canSubmit = !state.isLoading && state.loadError == null &&
-        form.name.isNotBlank() && form.slug.isNotBlank() && !state.submitting
+    val canSubmit = form.name.isNotBlank() && form.slug.isNotBlank() && !state.submitting &&
+        (!isEdit || state.editing != null)
 
+    LaunchedEffect(viewModel) {
+        viewModel.start(knownCategories)
+    }
     LaunchedEffect(state.saved) {
         val saved = state.saved
         if (saved != null) {
-            onSaved(saved)
+            onDone(saved)
         }
     }
     LaunchedEffect(state.missing) {
         if (state.missing) {
-            onBack()
+            onDone(MochiR.string.common_not_found)
         }
+    }
+    BackHandler(enabled = state.submitting) {
     }
 
     Scaffold(
@@ -156,16 +169,19 @@ fun CategoryFormScreen(
         ) {
             val loadError = state.loadError
             when {
-                state.isLoading -> LoadingState()
-                loadError != null -> ErrorState(error = loadError, onRetry = viewModel::load)
-                else -> CategoryFields(
+                !isEdit || state.editing != null -> CategoryFields(
                     form = form,
                     categories = state.categories,
+                    categoriesLoading = state.isLoading,
+                    categoriesError = loadError,
                     editingId = state.editing?.id.orEmpty(),
                     isEdit = isEdit,
                     enabled = !state.submitting,
                     onFormChange = viewModel::setForm,
+                    onRetry = viewModel::load,
                 )
+                loadError != null -> ErrorState(error = loadError, onRetry = viewModel::load)
+                else -> LoadingState()
             }
         }
     }
@@ -175,10 +191,13 @@ fun CategoryFormScreen(
 private fun CategoryFields(
     form: CategoryForm,
     categories: List<Category>,
+    categoriesLoading: Boolean,
+    categoriesError: MochiError?,
     editingId: String,
     isEdit: Boolean,
     enabled: Boolean,
     onFormChange: (CategoryForm) -> Unit,
+    onRetry: () -> Unit,
 ) {
     Column(
         modifier = Modifier
@@ -207,9 +226,22 @@ private fun CategoryFields(
             current = form.parent,
             categories = categories,
             excludeId = editingId,
-            enabled = enabled,
+            enabled = enabled && !categoriesLoading,
             onChange = { parent -> onFormChange(form.copy(parent = parent)) },
         )
+        if (categoriesError != null) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    text = categoriesError.userMessage(),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.error,
+                    modifier = Modifier.weight(1f),
+                )
+                MochiTextButton(onClick = onRetry, enabled = !categoriesLoading) {
+                    Text(stringResource(MochiR.string.common_retry))
+                }
+            }
+        }
         MochiTextField(
             value = form.icon,
             onValueChange = { value -> onFormChange(form.copy(icon = value)) },
