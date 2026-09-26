@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Suapan Mochi</string>
     <string name="feeds_source_type_feed_memories">Memori</string>
-    <string name="feeds_remove_source">Buang sumber</string>
+    <string name="feeds_remove_source">Alih keluar sumber?</string>
     <string name="feeds_suggested_credibility_accept">Terima</string>
     <string name="feeds_rss_url_copied">URL RSS disalin ke papan keratan</string>
     <string name="feeds_logout">Log keluar</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">URL RSS</string>
     <string name="feeds_source_never_fetched">Tidak pernah diambil</string>
     <string name="feeds_source_poll">Tinjau</string>
-    <string name="feeds_source_transform">Transformasi</string>
+    <string name="feeds_source_transform">Transformasi AI</string>
     <string name="feeds_remove_source_confirm">Alih keluar \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Juga padamkan siaran yang diimport</string>
     <string name="feeds_suggested_credibility_title">Kredibiliti yang dicadangkan</string>
@@ -153,7 +153,7 @@
     <string name="feeds_access_segment_other">Lain-lain</string>
     <string name="feeds_access_select_group">Pilih kumpulan</string>
     <string name="feeds_access_selected">Dipilih: %1$s</string>
-    <string name="feeds_access_subject_anyone">Sesiapa</string>
+    <string name="feeds_access_subject_anyone">Sesiapa sahaja</string>
     <string name="feeds_access_subject_authenticated">Pengguna disahkan</string>
     <string name="feeds_markdown_supported">Markdown disokong</string>
     <string name="feeds_permission_deny">Tolak</string>

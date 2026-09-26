@@ -108,7 +108,7 @@
     <string name="settings_display_reset_confirm_message">Ev dê mîhengên pêşandanê vegerîne ji bo nirxên wan ên bingehîn.</string>
     <string name="settings_theme_title">Tema</string>
     <string name="settings_theme_default">Standard</string>
-    <string name="settings_background">Paşxan</string>
+    <string name="settings_background">Paşxane</string>
     <string name="settings_background_theme">Ji temayê</string>
     <string name="settings_background_off">Tu</string>
     <string name="game_chat_empty">Hêj tu peyam tune</string>
@@ -125,7 +125,7 @@
 
     <string name="app_brand">Mochi</string>
     <string name="error_network">Nikare girêbide. Girêdana înternetê kontrol bike û dîsa biceribîne.</string>
-    <string name="error_authentication_required">Pesendkirin pêwîst e</string>
+    <string name="error_authentication_required">Rastandin pêwîst e</string>
     <string name="error_not_found">Nehat dîtin</string>
     <string name="error_server">Çewtiya servera (%1$d). Ji kerema xwe paşê dîsa biceribîne.</string>
     <string name="error_unexpected">Çewtiyek nepayî qewimî</string>
@@ -133,14 +133,14 @@
     <string name="error_enter_email">Ji kerema xwe e-nameya xwe binivîse</string>
     <string name="error_enter_name">Ji kerema xwe navekî binivîse</string>
     <string name="auth_connect_to_server">Bi servera xwe re girêbide</string>
-    <string name="auth_connect">Girêbide</string>
+    <string name="auth_connect">Girê bide</string>
     <string name="auth_sign_in">Têkeve</string>
     <string name="auth_check_email">Ji bo koda piştrastkirinê e-nameya xwe kontrol bike</string>
     <string name="auth_mfa_title">Pesendkirina pir-faktorî</string>
     <string name="auth_mfa_subtitle">Gavên piştrastkirinê yên mayî temam bike</string>
     <string name="auth_recover_account">Hesabê vegerîne</string>
     <string name="auth_login_title">Têkeve Mochi</string>
-    <string name="auth_next">Pêş</string>
+    <string name="auth_next">Pêştir</string>
     <string name="auth_or_log_in_with">An jî bi vê têkeve</string>
     <string name="auth_passkey">Passkey</string>
     <string name="auth_use_passkey">Passkeyekê bikar bîne</string>
@@ -163,9 +163,9 @@
     <string name="bootstrap_choose_account">Hesabekî hilbijêre</string>
     <string name="bootstrap_sign_in_different_server">Têkeve servereke din</string>
     <string name="common_retry">Dîsa biceribîne</string>
-    <string name="common_more_options">Bijartên zêdetir</string>
-    <string name="common_collapse">Bigire</string>
-    <string name="common_expand">Veke</string>
+    <string name="common_more_options">Vebijarkên zêdetir</string>
+    <string name="common_collapse">Berhev bike</string>
+    <string name="common_expand">Fireh bike</string>
     <string name="common_play_video">Vîdyoyê lêxe</string>
     <string name="place_picker_name">Navê cihî</string>
     <string name="place_origin">Jêder</string>
@@ -178,7 +178,7 @@
     <string name="notifications_clear">Agahdariyan paqij bike</string>
     <string name="entity_avatar_alt">Avatara %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
-    <string name="format_time_just_now">Niha</string>
+    <string name="format_time_just_now">Nuha</string>
     <string name="format_time_minutes_ago">%1$dx berê</string>
     <string name="format_time_hours_ago">%1$dst berê</string>
     <string name="format_time_days_ago">%1$dr berê</string>
@@ -258,7 +258,7 @@
     <string name="tags_interest_up">Bêtir wek vê nîşan bide</string>
     <string name="tags_interest_down">Kêmtir wek vê nîşan bide</string>
     <string name="tags_interest_clear">Nîşan nede</string>
-    <string name="tags_none">Etîket tune</string>
+    <string name="tags_none">Tu etîket tune</string>
     <string name="tags_delete">Etîketê rake</string>
     <string name="person_picker_none">Tu</string>
     <string name="person_picker_clear">Hilbijartinê paqij bike</string>
@@ -310,7 +310,7 @@
     <string name="settings_card_flat">Tasî</string>
     <string name="settings_card_raised">Bilindkirî</string>
     <string name="error_server_https">Navnîşana rajekar divê bi https:// dest pê bike</string>
-    <string name="device_name_fallback">Amûra desta</string>
+    <string name="device_name_fallback">Cîhaza mobîl</string>
     <string name="account_error_token_type">Cureya nîşanê nayê piştgirî kirin</string>
     <string name="account_error_caller">Bangker nayê destûr kirin</string>
 </resources>

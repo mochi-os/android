@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s ya no gestionará rutas en este dominio.</string>
     <string name="domain_delegation_delete_title">¿Eliminar delegación?</string>
     <string name="domain_delegation_path">Ruta</string>
-    <string name="domain_delegation_user">ID de usuario</string>
+    <string name="domain_delegation_user">Usuario</string>
     <string name="domain_delegations">Delegaciones</string>
     <string name="domain_delegations_empty">No hay delegaciones configuradas.</string>
     <string name="domain_delete">Eliminar dominio</string>

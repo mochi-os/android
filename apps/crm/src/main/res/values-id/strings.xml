@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Ikon</string>
     <string name="crm_option_icon_placeholder">mis. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Berhenti berlangganan</string>
-    <string name="crm_settings_delete_crm">Hapus proyek</string>
+    <string name="crm_settings_delete_crm">Hapus CRM</string>
     <string name="crm_settings_delete_confirm_title">Hapus CRM</string>
     <string name="crm_settings_unsubscribe_title">Berhenti berlangganan</string>
     <string name="crm_settings_unsubscribe_message">Apakah Anda yakin ingin berhenti berlangganan CRM ini?</string>
@@ -156,12 +156,12 @@
     <string name="crm_object_unwatch">Berhenti memantau</string>
     <string name="crm_object_delete_title">Hapus objek</string>
     <string name="crm_object_delete_message">Apakah Anda yakin ingin menghapus objek ini? Tindakan ini tidak dapat dibatalkan.</string>
-    <string name="crm_parent_none">Tidak ada induk</string>
+    <string name="crm_parent_none">Tanpa induk</string>
     <string name="crm_links_empty">Tidak ada tautan</string>
-    <string name="crm_links_section_relates">Berkaitan dengan</string>
+    <string name="crm_links_section_relates">Terkait dengan</string>
     <string name="crm_links_section_duplicated_by">Diduplikasi oleh</string>
     <string name="crm_links_type">Jenis tautan</string>
-    <string name="crm_links_type_relates">Berkaitan dengan</string>
+    <string name="crm_links_type_relates">Terkait dengan</string>
     <string name="crm_links_remove">Hapus tautan</string>
     <string name="crm_comment_replying_to">Membalas %1$s</string>
     <string name="crm_comment_clear_reply">Hapus balasan</string>
@@ -210,7 +210,7 @@
     <string name="crm_field_sortable">Dapat diurutkan</string>
     <string name="crm_field_filterable">Dapat difilter</string>
     <string name="crm_field_show_on_card">Tampilkan di kartu</string>
-    <string name="crm_field_multi">Multi-pilih</string>
+    <string name="crm_field_multi">Pilihan ganda</string>
     <string name="crm_field_position">Posisi tampilan</string>
     <string name="crm_field_position_header">Header</string>
     <string name="crm_field_validation">Validasi</string>

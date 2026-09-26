@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Segnala annuncio</string>
     <string name="market_listing_detail_save">Salva</string>
     <string name="market_listing_detail_seller_heading">Venditore</string>
-    <string name="market_listing_detail_shipping_heading">Spedizione</string>
+    <string name="market_listing_detail_shipping_heading">Opzioni di spedizione</string>
     <string name="market_listing_detail_subscribe">Iscriviti</string>
     <string name="market_listing_detail_tags_heading">Tag</string>
     <string name="market_listing_detail_title">Annuncio</string>
@@ -444,7 +444,7 @@
     <string name="market_carousel_thumbnail">Miniatura %1$d</string>
     <string name="market_checkout_browser_unavailable">Nessun browser disponibile per aprire la pagina di pagamento</string>
     <string name="market_checkout_pay_button">Paga con Stripe</string>
-    <string name="market_checkout_processing">Elaborazione in corso…</string>
+    <string name="market_checkout_processing">Elaborazione…</string>
     <string name="market_checkout_pwyw_label">Il tuo prezzo (minimo %1$s)</string>
     <string name="market_checkout_pwyw_min_error">L\'importo deve essere almeno %1$s</string>
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
@@ -544,10 +544,10 @@
     <string name="market_listings_action_share">Condividi</string>
     <string name="market_listings_delete_failed">Impossibile eliminare l\'inserzione</string>
     <string name="market_listings_delete_message">Questa azione rimuove definitivamente la bozza dal tuo account.</string>
-    <string name="market_listings_delete_title">Eliminare l\'inserzione?</string>
+    <string name="market_listings_delete_title">Eliminare l\'annuncio?</string>
     <string name="market_listings_empty_subtitle">Tocca Nuova inserzione per creare il tuo primo articolo.</string>
     <string name="market_listings_load_failed">Impossibile caricare le tue inserzioni</string>
-    <string name="market_listings_new">Nuova inserzione</string>
+    <string name="market_listings_new">Nuovo annuncio</string>
     <string name="market_listings_search_placeholder">Cerca nelle tue inserzioni</string>
     <string name="market_listings_share_chooser">Condividi inserzione</string>
     <string name="market_messages_compose_placeholder">Scrivi un messaggio…</string>

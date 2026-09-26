@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Ikona</string>
     <string name="crm_option_icon_placeholder">npr. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Odjavi se</string>
-    <string name="crm_settings_delete_crm">Izbriši projekt</string>
+    <string name="crm_settings_delete_crm">Izbriši CRM</string>
     <string name="crm_settings_delete_confirm_title">Izbriši CRM</string>
     <string name="crm_settings_unsubscribe_title">Odjavi se</string>
     <string name="crm_settings_unsubscribe_message">Ali ste prepričani, da se želite odjaviti od tega CRM-a?</string>
@@ -158,10 +158,10 @@
     <string name="crm_object_delete_message">Ali ste prepričani, da želite izbrisati ta objekt? Tega dejanja ni mogoče razveljaviti.</string>
     <string name="crm_parent_none">Brez nadrejenega</string>
     <string name="crm_links_empty">Ni povezav</string>
-    <string name="crm_links_section_relates">Se nanaša na</string>
+    <string name="crm_links_section_relates">Povezano z</string>
     <string name="crm_links_section_duplicated_by">Podvojeno z</string>
     <string name="crm_links_type">Vrsta povezave</string>
-    <string name="crm_links_type_relates">Se nanaša na</string>
+    <string name="crm_links_type_relates">Povezano z</string>
     <string name="crm_links_remove">Odstrani povezavo</string>
     <string name="crm_comment_replying_to">Odgovor na %1$s</string>
     <string name="crm_comment_clear_reply">Počisti odgovor</string>
@@ -224,7 +224,7 @@
     <string name="crm_views_empty">Pogledi niso določeni</string>
     <string name="crm_views_empty_subtitle">Ustvarite pogled table ali seznama za razvrščanje objektov</string>
     <string name="crm_views_delete_message">Ali ste prepričani, da želite izbrisati pogled \"%1$s\"?</string>
-    <string name="crm_views_columns_field">Polje stolpcev</string>
+    <string name="crm_views_columns_field">Polje za stolpce</string>
     <string name="crm_views_rows_field">Polje vrstic (proge)</string>
     <string name="crm_views_border_field">Polje barve obrobe</string>
     <string name="crm_views_filter_classes">Filtriraj na razrede</string>
@@ -264,7 +264,7 @@
     <string name="crm_access_select_rule">Izberite pravilo</string>
     <string name="crm_access_select_role">Izberi vlogo</string>
     <string name="crm_access_selected">Izbrano: %1$s</string>
-    <string name="crm_access_subject_anyone">Kdorkoli</string>
+    <string name="crm_access_subject_anyone">Kdor koli</string>
     <string name="crm_access_subject_authenticated">Overjeni uporabniki</string>
     <string name="crm_access_authenticated_desc">Vsi, ki so prijavljeni</string>
     <string name="crm_access_anyone_desc">Vključno z anonimnimi uporabniki</string>
@@ -273,7 +273,7 @@
     <string name="crm_access_role_comment">Komentiranje in ogled</string>
     <string name="crm_access_role_view">Samo za branje</string>
     <string name="crm_access_role_none">Brez dostopa</string>
-    <string name="crm_all_crms">Vsi CRM</string>
+    <string name="crm_all_crms">Vsi CRM-ji</string>
     <string name="crm_settings_unsubscribe_section">Prekliči naročnino na CRM</string>
     <string name="crm_settings_updated">CRM posodobljen</string>
     <string name="crm_create_import_backup">Uvoz iz varnostne kopije (neobvezno)</string>

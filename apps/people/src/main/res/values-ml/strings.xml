@@ -158,8 +158,8 @@
     <string name="people_contacts_delete_confirm">%1$s നെ നിങ്ങളുടെ കോൺടാക്റ്റുകളിൽ നിന്ന് ഇല്ലാതാക്കണോ?</string>
     <string name="people_contacts_delete_friend_confirm">%1$s നെ നിങ്ങളുടെ കോൺടാക്റ്റുകളിൽ നിന്ന് ഇല്ലാതാക്കണോ? നിങ്ങളുടെ സൗഹൃദവും അവസാനിക്കും.</string>
     <string name="people_contact_new_title">പുതിയ കോൺടാക്റ്റ്</string>
-    <string name="people_contact_edit_title">കോൺടാക്റ്റ് തിരുത്തുക</string>
-    <string name="people_contact_given">പേര്</string>
+    <string name="people_contact_edit_title">കോൺടാക്റ്റ് എഡിറ്റ് ചെയ്യുക</string>
+    <string name="people_contact_given">ആദ്യനാമം</string>
     <string name="people_contact_family">കുടുംബപ്പേര്</string>
     <string name="people_contact_nickname">വിളിപ്പേര്</string>
     <string name="people_contact_add_email">ഇമെയിൽ ചേർക്കുക</string>
@@ -170,7 +170,7 @@
     <string name="people_contact_organisation">സ്ഥാപനം</string>
     <string name="people_contact_url">വെബ്സൈറ്റ്</string>
     <string name="people_contact_note">കുറിപ്പ്</string>
-    <string name="people_contact_book">വിലാസപുസ്തകം</string>
+    <string name="people_contact_book">വിലാസപ്പുസ്തകം</string>
     <string name="people_contact_type_work">ജോലി</string>
     <string name="people_contact_type_mobile">മൊബൈൽ</string>
     <string name="people_contact_pick_date">തീയതി തിരഞ്ഞെടുക്കുക</string>

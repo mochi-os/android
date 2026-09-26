@@ -2,7 +2,7 @@
 <resources>
 
     <string name="error_access_denied">An hana shiga</string>
-    <string name="auth_email">Email</string>
+    <string name="auth_email">Imel</string>
     <string name="auth_continue">Ci gaba</string>
     <string name="auth_verification_code">Lambar tabbatarwa</string>
     <string name="auth_email_code">Lambar imel</string>
@@ -56,9 +56,9 @@
     <string name="notifications_title">Sanarwa</string>
     <string name="notifications_empty">Babu sanarwa</string>
     <string name="notifications_empty_unread">Ka cim komai</string>
-    <string name="notifications_tab_unread">Wadanda ba a karanta ba</string>
+    <string name="notifications_tab_unread">Ba a karanta ba</string>
     <string name="notifications_tab_unread_count">Wadanda ba a karanta ba (%1$d)</string>
-    <string name="notifications_tab_all">Duka</string>
+    <string name="notifications_tab_all">Duk</string>
     <string name="notifications_mark_all_read">Alama duka karanta</string>
     <string name="notifications_clear_all">Share duka</string>
     <string name="settings_title">Saitunan</string>
@@ -165,7 +165,7 @@
     <string name="bootstrap_sign_in_different_server">Shiga zuwa wata sabar daban</string>
     <string name="common_retry">Sake gwadawa</string>
     <string name="common_more_options">Ƙarin zaɓuɓɓuka</string>
-    <string name="common_collapse">Naɗa</string>
+    <string name="common_collapse">Naɗe</string>
     <string name="common_expand">Faɗaɗa</string>
     <string name="common_play_video">Kunna bidiyo</string>
     <string name="place_picker_name">Sunan wuri</string>
@@ -179,7 +179,7 @@
     <string name="notifications_clear">Share sanarwa</string>
     <string name="entity_avatar_alt">Hoton bayanin martaba na %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
-    <string name="format_time_just_now">Yanzu nan</string>
+    <string name="format_time_just_now">Yanzu</string>
     <string name="format_time_minutes_ago">Min %1$d da suka wuce</string>
     <string name="format_time_hours_ago">Awa %1$d da suka wuce</string>
     <string name="format_time_days_ago">Kwana %1$d da suka wuce</string>
@@ -211,7 +211,7 @@
     <string name="about_up_to_date">Yana nan a kwanannan</string>
     <string name="about_check_downloading">Sigar %1$s na samuwa, ana sauke…</string>
     <string name="about_check_network_error">An kasa isa ga sabar sabuntawa</string>
-    <string name="about_check_download_failed">Sauke ya gaza</string>
+    <string name="about_check_download_failed">Saukarwa ta gaza</string>
     <string name="notifications_clear_all_title">A share dukkan sanarwa?</string>
     <string name="notifications_clear_all_message">Wannan zai cire kowace sanarwa. Ba za a iya dawo da su ba.</string>
     <string name="settings_value_auto">Ta kai tsaye</string>
@@ -258,12 +258,12 @@
     <string name="tags_interest_up">Nuna ƙari irin wannan</string>
     <string name="tags_interest_down">Nuna ƙasa da haka</string>
     <string name="tags_interest_clear">Daina nunawa</string>
-    <string name="tags_none">Babu tags</string>
+    <string name="tags_none">Babu alamomi</string>
     <string name="tags_delete">Cire alama</string>
     <string name="person_picker_none">Babu</string>
     <string name="person_picker_clear">Share zaɓi</string>
     <string name="person_picker_select">Zaɓi …</string>
-    <string name="person_picker_directory">Jagora</string>
+    <string name="person_picker_directory">Jerin suna</string>
     <string name="person_picker_no_people">Babu mutane</string>
     <string name="person_picker_project_members">Membobin aikin</string>
     <string name="account_token_label">Zaman Mochi</string>
@@ -310,7 +310,7 @@
     <string name="settings_card_flat">Lebur</string>
     <string name="settings_card_raised">Ɗagaggu</string>
     <string name="error_server_https">Adireshin sabar dole ne ya fara da https://</string>
-    <string name="device_name_fallback">Na\'urar hannu</string>
+    <string name="device_name_fallback">Na\'urar wayar hannu</string>
     <string name="account_error_token_type">Nau\'in alama da ba a tallafawa</string>
     <string name="account_error_caller">Ba a yarda mai kira ba</string>
 </resources>

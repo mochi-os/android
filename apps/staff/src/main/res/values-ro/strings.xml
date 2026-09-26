@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Personal</string>
-    <string name="launcher_staff">Mochi Personal</string>
+    <string name="launcher_staff">Personal Mochi</string>
     <string name="staff_accounts_action_ban_title">Blochează contul</string>
     <string name="staff_accounts_action_suspend_title">Suspendă contul</string>
     <string name="staff_accounts_action_unban_title">Anulează interdicția</string>
@@ -284,7 +284,7 @@
     <string name="staff_filter_chip_remove">Elimină filtrul</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderare</string>
-    <string name="staff_filter_label_query">Căutare</string>
+    <string name="staff_filter_label_query">Caută</string>
     <string name="staff_filter_label_seller">Vânzător</string>
     <string name="staff_filter_label_status">Stare</string>
     <string name="staff_filter_label_type">Tip</string>
@@ -394,7 +394,7 @@
     <string name="staff_sidebar_disputes">Dispute</string>
     <string name="staff_sidebar_listings">Anunțuri</string>
     <string name="staff_sidebar_management">Gestionare</string>
-    <string name="staff_sidebar_market">Magazin</string>
+    <string name="staff_sidebar_market">Piață</string>
     <string name="staff_sidebar_moderation">Jurnal de moderare</string>
     <string name="staff_sidebar_overview">Prezentare generală</string>
     <string name="staff_sidebar_reports">Rapoarte</string>

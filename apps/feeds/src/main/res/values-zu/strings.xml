@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Ifidi ye-Mochi</string>
     <string name="feeds_source_type_feed_memories">Izinkumbulo</string>
-    <string name="feeds_remove_source">Susa umthombo</string>
+    <string name="feeds_remove_source">Susa umthombo?</string>
     <string name="feeds_suggested_credibility_accept">Yamukela</string>
     <string name="feeds_rss_url_copied">I-URL ye-RSS ikopishelwe kubhodi</string>
     <string name="feeds_logout">Phuma</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">I-URL ye-RSS</string>
     <string name="feeds_source_never_fetched">Akukaze kulandwe</string>
     <string name="feeds_source_poll">Inhlolovo</string>
-    <string name="feeds_source_transform">Guqula</string>
+    <string name="feeds_source_transform">Ukuguqula nge-AI</string>
     <string name="feeds_remove_source_confirm">Susa \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Susa futhi okuthunyelwe okungeniswe</string>
     <string name="feeds_suggested_credibility_title">Ukwethenjwa okusikiselwayo</string>
@@ -206,7 +206,7 @@
     <string name="feeds_banner_dismiss">Cashisa ibhana</string>
     <string name="feeds_members_search">Hlunga amalungu</string>
     <string name="feeds_ai_prompt_default">Okuzenzakalelayo</string>
-    <string name="feeds_ai_prompt_custom">Okwezifiso</string>
+    <string name="feeds_ai_prompt_custom">Okuzenzelwe</string>
     <string name="feeds_ai_prompt_variables">Okuguqukayo: %1$s</string>
     <string name="feeds_link">Isixhumanisi</string>
     <string name="feeds_share_link_title">Isixhumanisi sefidi</string>

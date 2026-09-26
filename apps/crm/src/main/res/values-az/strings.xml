@@ -151,7 +151,7 @@
     <string name="crm_parent_none">Üst element yoxdur</string>
     <string name="crm_links_empty">Keçid yoxdur</string>
     <string name="crm_links_section_relates">Əlaqəlidir</string>
-    <string name="crm_links_section_duplicated_by">Dublikatdır</string>
+    <string name="crm_links_section_duplicated_by">Dublikatları</string>
     <string name="crm_links_type">Keçid növü</string>
     <string name="crm_links_type_relates">Əlaqəlidir</string>
     <string name="crm_links_search_placeholder">Obyektləri axtar</string>
@@ -177,7 +177,7 @@
     <string name="crm_attachment_delete_confirm_message">Bu qoşma həmişəlik silinəcək.</string>
     <string name="crm_tree_move">Köçür</string>
     <string name="crm_tree_move_to_parent">Valideynə köçür</string>
-    <string name="crm_tree_root_level">(Kök səviyyə)</string>
+    <string name="crm_tree_root_level">(Kök səviyyəsi)</string>
     <string name="crm_tree_empty">Obyekt yoxdur</string>
     <string name="crm_board_no_columns">Bu görünüş üçün sütun konfiqurasiya edilməyib</string>
     <string name="crm_board_no_options">Sütun sahəsi üçün seçim konfiqurasiya edilməyib</string>
@@ -185,10 +185,10 @@
     <string name="crm_move_to_column">Sütuna köçür</string>
     <string name="crm_move_to_row">Sətrə köçür</string>
     <string name="crm_move_after">%1$s sonra</string>
-    <string name="crm_drag_card">Kartı dartın</string>
-    <string name="crm_drag_row">Sətri dartın</string>
-    <string name="crm_drag_column">Sütunu dartın</string>
-    <string name="crm_design_more_options">Daha çox seçim</string>
+    <string name="crm_drag_card">Kartı sürüşdür</string>
+    <string name="crm_drag_row">Sıranı sürüşdür</string>
+    <string name="crm_drag_column">Sütunu sürüşdür</string>
+    <string name="crm_design_more_options">Digər seçimlər</string>
     <string name="crm_design_no_templates">Şablon mövcud deyil</string>
     <string name="crm_design_use">İstifadə et</string>
     <string name="crm_design_replace_message">Bu, cari dizaynı %1$s ilə əvəz edəcək. Bütün mövcud siniflər, sahələr, seçimlər və görünüşlər silinəcək. Mövcud obyektlər silinməyəcək, lakin görünüşlərdə artıq görünməyə bilər.</string>
@@ -241,7 +241,7 @@
     <string name="crm_access_no_groups">Mövcud qrup yoxdur</string>
     <string name="crm_access_tab_users">İstifadəçilər</string>
     <string name="crm_access_tab_groups">Qruplar</string>
-    <string name="crm_attachment_remove">Qoşmanı silin</string>
+    <string name="crm_attachment_remove">Qoşmanı sil</string>
     <string name="crm_board_add_column">Sütun əlavə et</string>
     <string name="crm_settings_entity_id">Qurum ID</string>
     <string name="crm_settings_fingerprint">Barmaq izi</string>
@@ -277,7 +277,7 @@
     <string name="crm_settings_unsubscribe_section">CRM-dən abunəlikdən çıx</string>
     <string name="crm_settings_updated">CRM yeniləndi</string>
     <string name="crm_create_import_backup">Ehtiyat nüsxədən idxal (istəyə bağlı)</string>
-    <string name="crm_export">Məlumatı ixrac et</string>
+    <string name="crm_export">Məlumatları ixrac et</string>
     <string name="crm_exporting">İxrac hazırlanır…</string>
     <string name="crm_create_allow_search">Hər kəsə CRM axtarmağa icazə ver</string>
     <string name="crm_no_crms_found">CRM tapılmadı</string>

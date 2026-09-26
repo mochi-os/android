@@ -25,7 +25,7 @@
     <string name="common_edit">संपादित करा</string>
     <string name="common_delete">हटवा</string>
     <string name="common_add">जोडा</string>
-    <string name="common_notifications">नोटिफिकेशन्स</string>
+    <string name="common_notifications">सूचना</string>
     <string name="common_logout">लॉग आउट करा</string>
     <string name="common_subscribe">सबस्क्राइब करा</string>
     <string name="common_copy">कॉपी करा</string>
@@ -52,9 +52,9 @@
     <string name="reaction_disagree">असहमत</string>
     <string name="push_service_action_hide">लपवा</string>
     <string name="about_close">बंद करा</string>
-    <string name="notifications_open">नोटिफिकेशन्स</string>
-    <string name="notifications_title">नोटिफिकेशन्स</string>
-    <string name="notifications_empty">नोटिफिकेशन्स नाहीत</string>
+    <string name="notifications_open">सूचना</string>
+    <string name="notifications_title">सूचना</string>
+    <string name="notifications_empty">सूचना नाहीत</string>
     <string name="notifications_empty_unread">सर्व पाहून झाले</string>
     <string name="notifications_tab_unread">न वाचलेले</string>
     <string name="notifications_tab_unread_count">न वाचलेले (%1$d)</string>
@@ -126,7 +126,7 @@
 
     <string name="error_network">कनेक्ट करता आले नाही. तुमचे इंटरनेट कनेक्शन तपासा आणि पुन्हा प्रयत्न करा.</string>
     <string name="error_authentication_required">प्रमाणीकरण आवश्यक</string>
-    <string name="error_not_found">सापडले नाही</string>
+    <string name="error_not_found">आढळले नाही</string>
     <string name="error_server">सर्व्हर त्रुटी (%1$d). कृपया नंतर पुन्हा प्रयत्न करा.</string>
     <string name="error_unexpected">एक अनपेक्षित त्रुटी आली</string>
     <string name="error_enter_server_url">कृपया सर्व्हर URL प्रविष्ट करा</string>
@@ -196,7 +196,7 @@
     <string name="push_service_group">पार्श्वभूमी सेवा</string>
     <string name="push_service_title">Mochi सूचनांसाठी ऐकत आहे</string>
     <string name="reauth_channel_name">Mochi साइन-इन आवश्यक</string>
-    <string name="reauth_channel_description">जेव्हा तुमचे सत्र अवैध झाल्यामुळे Mochi तुमच्या सर्व्हरपर्यंत पोहोचू शकत नाही तेव्हा दिसते</string>
+    <string name="reauth_channel_description">जेव्हा तुमचे सेशन अवैध झाल्यामुळे Mochi तुमच्या सर्व्हरपर्यंत पोहोचू शकत नाही तेव्हा दिसते</string>
     <string name="reauth_signin_title">Mochi: पुन्हा साइन इन करा</string>
     <string name="reauth_signin_text">तुम्ही पुन्हा साइन इन करेपर्यंत सूचना थांबवल्या आहेत</string>
     <string name="oem_hint_title">पार्श्वभूमीत पोहोचण्यायोग्य रहा</string>
@@ -237,7 +237,7 @@
     <string name="stepup_error_passkey">पासकी पडताळणी अयशस्वी झाली. कृपया पुन्हा प्रयत्न करा.</string>
     <string name="stepup_error_oauth">त्या खात्याने पडताळणी करता आली नाही. कृपया पुन्हा प्रयत्न करा.</string>
     <string name="game_system_resign">%1$s ने राजीनामा दिला</string>
-    <string name="game_system_draw_offer">%1$s ने बरोबरी देऊ केली</string>
+    <string name="game_system_draw_offer">%1$s ने बरोबरीचा प्रस्ताव दिला</string>
     <string name="game_system_draw_accept">बरोबरी मान्य झाली</string>
     <string name="game_system_draw_decline">%1$s ने बरोबरी नाकारली</string>
     <string name="reactivation_title">तुमचे खाते हटवण्यासाठी नियोजित आहे</string>
@@ -246,7 +246,7 @@
     <string name="reactivation_reactivate">माझे खाते पुन्हा सक्रिय करा</string>
     <string name="reactivation_sign_out">बंद करणे सुरू ठेवा आणि साइन आउट करा</string>
     <string name="common_play">चालवा</string>
-    <string name="common_pause">थांबवा</string>
+    <string name="common_pause">विराम</string>
     <string name="common_opening_file">फाइल उघडत आहे…</string>
     <string name="common_no_app_for_file">ही फाइल उघडू शकेल असे कोणतेही अॅप नाही</string>
     <string name="common_file_open_failed">फाइल उघडता आली नाही</string>
@@ -258,7 +258,7 @@
     <string name="tags_interest_up">यासारखे आणखी दाखवा</string>
     <string name="tags_interest_down">यासारखे कमी दाखवा</string>
     <string name="tags_interest_clear">दाखवणे थांबवा</string>
-    <string name="tags_none">टॅग्स नाहीत</string>
+    <string name="tags_none">टॅग नाहीत</string>
     <string name="tags_delete">टॅग काढा</string>
     <string name="person_picker_none">काहीही नाही</string>
     <string name="person_picker_clear">निवड साफ करा</string>
@@ -266,7 +266,7 @@
     <string name="person_picker_directory">निर्देशिका</string>
     <string name="person_picker_no_people">कोणीही नाही</string>
     <string name="person_picker_project_members">प्रकल्प सदस्य</string>
-    <string name="account_token_label">Mochi सत्र</string>
+    <string name="account_token_label">Mochi सेशन</string>
     <string name="attachment_caption">कॅप्शन</string>
     <string name="attachment_caption_add">कॅप्शन जोडा</string>
     <string name="attachment_caption_edit">कॅप्शन संपादित करा</string>
@@ -288,7 +288,7 @@
     <string name="lightbox_comments">टिप्पण्या</string>
     <string name="common_attachment_unavailable">संलग्नक तात्पुरते अनुपलब्ध आहे</string>
     <string name="common_unavailable">अनुपलब्ध</string>
-    <string name="common_not_found">सापडले नाही</string>
+    <string name="common_not_found">आढळले नाही</string>
     <string name="format_bold">ठळक</string>
     <string name="format_italic">तिरपे</string>
     <string name="format_link">दुवा</string>
@@ -310,7 +310,7 @@
     <string name="settings_card_flat">सपाट</string>
     <string name="settings_card_raised">उंचावलेले</string>
     <string name="error_server_https">सर्व्हर पत्ता https:// ने सुरू व्हावा</string>
-    <string name="device_name_fallback">मोबाइल उपकरण</string>
+    <string name="device_name_fallback">मोबाइल डिव्हाइस</string>
     <string name="account_error_token_type">असमर्थित टोकन प्रकार</string>
     <string name="account_error_caller">कॉल करणाऱ्यास परवानगी नाही</string>
 </resources>

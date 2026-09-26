@@ -202,13 +202,13 @@
     <string name="projects_links_section_duplicated_by">Zduplikowane przez</string>
     <string name="projects_links_type">Typ powiązania</string>
     <string name="projects_links_type_relates">Powiązane z</string>
-    <string name="projects_links_remove">Usuń powiązanie</string>
+    <string name="projects_links_remove">Usuń link</string>
     <string name="projects_comment_replying_to">Odpowiedź do %1$s</string>
     <string name="projects_comment_clear_reply">Wyczyść odpowiedź</string>
     <string name="projects_comment_placeholder">Dodaj komentarz</string>
     <string name="projects_property_pick_date">Wybierz datę</string>
     <string name="projects_property_ok">OK</string>
-    <string name="projects_property_add_item">Dodaj pozycję</string>
+    <string name="projects_property_add_item">Dodaj element</string>
     <string name="projects_property_required">%1$s jest wymagane</string>
     <string name="projects_activity_empty">Brak aktywności</string>
     <string name="projects_activity_created">utworzył ten obiekt</string>
@@ -290,8 +290,8 @@
     <string name="projects_field_position">Pozycja wyświetlania</string>
     <string name="projects_field_position_header">Nagłówek</string>
     <string name="projects_field_validation">Walidacja</string>
-    <string name="projects_field_min_length">Min. długość</string>
-    <string name="projects_field_max_length">Maks. długość</string>
+    <string name="projects_field_min_length">Minimalna długość</string>
+    <string name="projects_field_max_length">Maksymalna długość</string>
     <string name="projects_field_pattern">Wzorzec (wyrażenie regularne)</string>
     <string name="projects_field_rows">Wiersze (wysokość pola tekstowego)</string>
     <string name="projects_field_no_options">Nie zdefiniowano żadnych opcji</string>

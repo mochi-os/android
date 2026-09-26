@@ -65,7 +65,7 @@
     <string name="staff_audit_action_account_unbanned">ยกเลิกการแบนแล้ว</string>
     <string name="staff_audit_action_account_unsuspended">ยกเลิกการระงับแล้ว</string>
     <string name="staff_audit_action_auction_bid_placed">ประมูลแล้ว</string>
-    <string name="staff_audit_action_auction_cancelled">ยกเลิกการประมูล</string>
+    <string name="staff_audit_action_auction_cancelled">ยกเลิกการประมูลแล้ว</string>
     <string name="staff_audit_action_auction_created">สร้างการประมูลแล้ว</string>
     <string name="staff_audit_action_auction_ended_sold">ขายการประมูลแล้ว</string>
     <string name="staff_audit_action_auction_ended_unsold">การประมูลสิ้นสุดโดยไม่มีผู้ซื้อ</string>
@@ -170,7 +170,7 @@
     <string name="staff_config_field_stripe_oauth_client">ID ไคลเอ็นต์ OAuth</string>
     <string name="staff_config_field_stripe_publishable">คีย์ที่เผยแพร่ได้</string>
     <string name="staff_config_field_stripe_secret">คีย์ลับ</string>
-    <string name="staff_config_group_moderation">การดูแล</string>
+    <string name="staff_config_group_moderation">การกลั่นกรอง</string>
     <string name="staff_config_group_payments">การชำระเงิน</string>
     <string name="staff_config_group_reviews">รีวิว</string>
     <string name="staff_config_group_stripe">Stripe</string>
@@ -187,7 +187,7 @@
     <string name="staff_dashboard_col_date">วันที่</string>
     <string name="staff_dashboard_col_detail">รายละเอียด</string>
     <string name="staff_dashboard_col_listing">ประกาศ</string>
-    <string name="staff_dashboard_col_moderation">การดูแล</string>
+    <string name="staff_dashboard_col_moderation">การกลั่นกรอง</string>
     <string name="staff_dashboard_col_name">ชื่อ</string>
     <string name="staff_dashboard_col_object">ออบเจกต์</string>
     <string name="staff_dashboard_col_reason">เหตุผล</string>
@@ -216,7 +216,7 @@
     <string name="staff_dashboard_system">ระบบ</string>
     <string name="staff_dashboard_tab_audit">การตรวจสอบ</string>
     <string name="staff_dashboard_tab_listings">ประกาศ</string>
-    <string name="staff_dashboard_tab_moderation">การดูแล</string>
+    <string name="staff_dashboard_tab_moderation">การกลั่นกรอง</string>
     <string name="staff_dashboard_tab_orders">คำสั่งซื้อ</string>
     <string name="staff_dashboard_tab_signups">การลงทะเบียน</string>
     <string name="staff_dashboard_yes">ใช่</string>
@@ -283,7 +283,7 @@
     <string name="staff_disputes_view">ดู</string>
     <string name="staff_filter_chip_remove">ลบตัวกรอง</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
-    <string name="staff_filter_label_moderation">การตรวจสอบ</string>
+    <string name="staff_filter_label_moderation">การกลั่นกรอง</string>
     <string name="staff_filter_label_query">ค้นหา</string>
     <string name="staff_filter_label_seller">ผู้ขาย</string>
     <string name="staff_filter_label_status">สถานะ</string>
@@ -297,7 +297,7 @@
     <string name="staff_listings_approved_toast">อนุมัติประกาศแล้ว</string>
     <string name="staff_listings_cancel">ยกเลิก</string>
     <string name="staff_listings_empty">ไม่มีรายการ</string>
-    <string name="staff_listings_filter_moderation_label">การดูแล</string>
+    <string name="staff_listings_filter_moderation_label">การกลั่นกรอง</string>
     <string name="staff_listings_filter_status_label">สถานะ</string>
     <string name="staff_listings_moderation_auto_approved">อนุมัติอัตโนมัติ</string>
     <string name="staff_listings_moderation_hold">ค้างไว้</string>

@@ -15,7 +15,7 @@
     <string name="go_color_white">Бела</string>
     <string name="go_delete_confirm">Избриши</string>
     <string name="go_delete_message">Оваа игра ќе биде отстранета од вашата листа. Ова не може да се поништи.</string>
-    <string name="go_delete_title">Избриши игра?</string>
+    <string name="go_delete_title">Да се избрише играта?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">Прифати</string>
     <string name="go_draw_decline">Одбиј</string>
@@ -62,7 +62,7 @@
     <string name="go_channel_name">Go известувања</string>
     <string name="go_channel_description">Известувања за потези, прескокнувања, понуди за реми и резултати од партии.</string>
     <string name="go_open_sidebar">Отвори странична лента</string>
-    <string name="go_sidebar_active">Активни партии</string>
+    <string name="go_sidebar_active">Активни игри</string>
     <string name="go_empty_active">Сè уште нема активни партии.</string>
     <string name="go_status_resigned">Предадена</string>
     <string name="go_new_game_title">Нова Go партија</string>

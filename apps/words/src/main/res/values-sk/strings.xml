@@ -37,7 +37,7 @@
 
     <string name="words_channel_name">Oznámenia Slová</string>
     <string name="words_channel_description">Oznámenia o ťahoch, výmenách a výsledkoch partií.</string>
-    <string name="words_sidebar_active">Aktívne partie</string>
+    <string name="words_sidebar_active">Aktívne hry</string>
     <string name="words_sidebar_empty">Zatiaľ žiadne partie.</string>
     <string name="words_new_game_choose_opponents">Vyberte súperov</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
@@ -55,7 +55,7 @@
     <string name="words_detail_chat_you_played">Hral si %1$s</string>
     <string name="words_detail_chat_player_played">%1$s hral %2$s</string>
 
-    <string name="words_detail_delete_title">Zmazať partiu?</string>
+    <string name="words_detail_delete_title">Odstrániť hru?</string>
     <string name="words_detail_delete_confirm">Odstrániť</string>
     <string name="words_detail_delete_message">Týmto trvalo odstránite hru a jej chat. Túto akciu nemožno vrátiť späť.</string>
     <string name="words_detail_chat_passed">%1$s vynechal ťah</string>

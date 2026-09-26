@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Tynnu</string>
     <string name="wikis_replicas_remove_failed">Methwyd dileu\'r replica</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wicis</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">Hysbysiadau am olygiadau tudalennau wiki, sylwadau a gwahoddiadau.</string>
     <string name="wikis_pageview_toc_expand">Dangos y tabl cynnwys</string>
@@ -225,7 +225,7 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Diweddarwyd %1$s</string>
     <string name="wikis_pageview_not_found_description">Nid yw’r dudalen “%1$s” yn bodoli eto.</string>
-    <string name="wikis_pageview_share_chooser">Dolen y wici</string>
+    <string name="wikis_pageview_share_chooser">Dolen wici</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">Dolen</string>
     <string name="wikis_open_sidebar">Agor y bar ochr</string>
@@ -283,7 +283,7 @@
     <string name="wikis_load_more">Llwytho mwy</string>
     <string name="wikis_access_change_level">Lefel mynediad</string>
     <string name="wikis_access_subject_anyone">Unrhyw un</string>
-    <string name="wikis_access_subject_authenticated">Defnyddwyr dilys</string>
+    <string name="wikis_access_subject_authenticated">Defnyddwyr dilysedig</string>
 
     <string name="wikis_revision_compare">Cymharu newidiadau</string>
     <string name="wikis_revision_author">yn ôl %1$s</string>

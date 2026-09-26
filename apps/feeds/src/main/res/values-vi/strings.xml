@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Feed Mochi</string>
     <string name="feeds_source_type_feed_memories">Ký ức</string>
-    <string name="feeds_remove_source">Xoá nguồn</string>
+    <string name="feeds_remove_source">Xoá nguồn?</string>
     <string name="feeds_suggested_credibility_accept">Chấp nhận</string>
     <string name="feeds_rss_url_copied">Đã sao chép URL RSS vào clipboard</string>
     <string name="feeds_logout">Đăng xuất</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">URL RSS</string>
     <string name="feeds_source_never_fetched">Chưa từng lấy</string>
     <string name="feeds_source_poll">Thăm dò</string>
-    <string name="feeds_source_transform">Chuyển đổi</string>
+    <string name="feeds_source_transform">Chuyển đổi AI</string>
     <string name="feeds_remove_source_confirm">Xóa \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Đồng thời xóa các bài đăng đã nhập</string>
     <string name="feeds_suggested_credibility_title">Độ tin cậy đề xuất</string>
@@ -206,7 +206,7 @@
     <string name="feeds_ai_prompt_custom">Tùy chỉnh</string>
     <string name="feeds_ai_prompt_variables">Biến: %1$s</string>
     <string name="feeds_link">Liên kết</string>
-    <string name="feeds_share_link_title">Liên kết bảng tin</string>
+    <string name="feeds_share_link_title">Liên kết nguồn cấp</string>
     <plurals name="feeds_comment_count">
         <item quantity="other">%1$d bình luận</item>
     </plurals>

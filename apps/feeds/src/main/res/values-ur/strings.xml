@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi فیڈ</string>
     <string name="feeds_source_type_feed_memories">یادیں</string>
-    <string name="feeds_remove_source">ماخذ ہٹائیں</string>
+    <string name="feeds_remove_source">سورس ہٹائیں؟</string>
     <string name="feeds_suggested_credibility_accept">قبول کریں</string>
     <string name="feeds_rss_url_copied">RSS URL کلپ بورڈ پر کاپی ہو گیا</string>
     <string name="feeds_logout">لاگ آؤٹ</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">کبھی حاصل نہیں کیا گیا</string>
     <string name="feeds_source_poll">پول</string>
-    <string name="feeds_source_transform">تبدیلی</string>
+    <string name="feeds_source_transform">AI تبدیلی</string>
     <string name="feeds_remove_source_confirm">\"%1$s\" کو ہٹائیں؟</string>
     <string name="feeds_remove_also_delete_posts">درآمد شدہ پوسٹس بھی حذف کریں</string>
     <string name="feeds_suggested_credibility_title">تجویز کردہ اعتبار</string>
@@ -206,10 +206,10 @@
     <string name="feeds_banner_dismiss">بینر برخاست کریں</string>
     <string name="feeds_members_search">ممبران فلٹر کریں</string>
     <string name="feeds_ai_prompt_default">ڈیفالٹ</string>
-    <string name="feeds_ai_prompt_custom">حسبِ ضرورت</string>
+    <string name="feeds_ai_prompt_custom">اپنی مرضی کا</string>
     <string name="feeds_ai_prompt_variables">متغیرات: %1$s</string>
     <string name="feeds_link">لنک</string>
-    <string name="feeds_share_link_title">فیڈ کا لنک</string>
+    <string name="feeds_share_link_title">فیڈ لنک</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$d تبصرہ</item>
         <item quantity="other">%1$d تبصرے</item>

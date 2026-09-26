@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi არხი</string>
     <string name="feeds_source_type_feed_memories">მოგონებები</string>
-    <string name="feeds_remove_source">წყაროს წაშლა</string>
+    <string name="feeds_remove_source">წყაროს წაშლა?</string>
     <string name="feeds_suggested_credibility_accept">მიღება</string>
     <string name="feeds_rss_url_copied">RSS URL დაკოპირდა</string>
     <string name="feeds_logout">გასვლა</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">არასოდეს მოტანილა</string>
     <string name="feeds_source_poll">გამოკითხვა</string>
-    <string name="feeds_source_transform">ტრანსფორმაცია</string>
+    <string name="feeds_source_transform">AI ტრანსფორმაცია</string>
     <string name="feeds_remove_source_confirm">მოშორდეს \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">ასევე წაიშალოს იმპორტირებული პოსტები</string>
     <string name="feeds_suggested_credibility_title">შემოთავაზებული სანდოობა</string>
@@ -209,7 +209,7 @@
     <string name="feeds_ai_prompt_custom">მორგებული</string>
     <string name="feeds_ai_prompt_variables">ცვლადები: %1$s</string>
     <string name="feeds_link">ბმული</string>
-    <string name="feeds_share_link_title">ნაკადის ბმული</string>
+    <string name="feeds_share_link_title">არხის ბმული</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$d კომენტარი</item>
         <item quantity="other">%1$d კომენტარი</item>

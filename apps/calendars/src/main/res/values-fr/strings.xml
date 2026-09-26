@@ -154,7 +154,7 @@
     <string name="calendars_link_submit">Associer</string>
     <string name="calendars_link_sync">Synchroniser maintenant</string>
     <string name="calendars_link_grant">Autoriser l\'accès au calendrier</string>
-    <string name="calendars_link_linked">Associé</string>
+    <string name="calendars_link_linked">Lié</string>
     <string name="calendars_link_marker">Calendrier associé</string>
     <string name="calendars_link_remote_empty">Aucun calendrier</string>
     <string name="calendars_poll_conflict">Un événement a changé des deux côtés</string>
@@ -168,7 +168,7 @@
     <string name="calendars_subscribe_password_apple">Mot de passe spécifique à l\'application</string>
     <string name="calendars_subscribe_server_url">Adresse du serveur</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
-    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_apple_id">Identifiant Apple</string>
     <string name="calendars_subscribe_google">Google Agenda</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Les comptes Google ne sont pas activés sur ce serveur. Activez-les dans Paramètres, Paramètres système.</string>

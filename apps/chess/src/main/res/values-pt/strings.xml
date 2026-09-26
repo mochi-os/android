@@ -3,10 +3,10 @@
 
     <string name="chess_app_title">Xadrez</string>
     <string name="chess_sidebar_header">Xadrez</string>
-    <string name="chess_sidebar_active">Jogos Ativos</string>
+    <string name="chess_sidebar_active">Jogos ativos</string>
     <string name="chess_sidebar_completed">Concluído</string>
     <string name="chess_sidebar_new_game">Novo jogo</string>
-    <string name="chess_section_active">Jogos Ativos</string>
+    <string name="chess_section_active">Jogos ativos</string>
     <string name="chess_section_completed">Concluído</string>
     <string name="chess_new_game">Novo jogo</string>
     <string name="chess_empty_title">Ainda não há jogos</string>
@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">Aceitar</string>
     <string name="chess_draw_decline">Recusar</string>
     <string name="chess_status_checkmate_you_win">Xeque-mate — ganhou!</string>
-    <string name="chess_status_stalemate">Empate — empate</string>
+    <string name="chess_status_stalemate">Afogamento — empate</string>
     <string name="chess_status_draw">Empate</string>
     <string name="chess_status_check_your_move">Xeque — a sua jogada</string>
     <string name="chess_status_your_move">A sua jogada</string>
@@ -63,7 +63,7 @@
     <string name="chess_empty_start_button">Começar o primeiro jogo</string>
     <string name="chess_empty_subtitle">Comece o seu primeiro jogo para jogar xadrez com um amigo.</string>
     <string name="chess_move_capture">%1$s capturou %2$s</string>
-    <string name="chess_open_sidebar">Abrir menu</string>
+    <string name="chess_open_sidebar">Abrir barra lateral</string>
     <string name="chess_ws_connecting">A ligar…</string>
     <string name="chess_ws_disconnected">Sem ligação</string>
     <string name="chess_ws_failed">Falha na ligação</string>

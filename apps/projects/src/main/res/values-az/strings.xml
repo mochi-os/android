@@ -172,8 +172,8 @@
     <string name="projects_list_add_to_home">Ana ekrana əlavə et</string>
     <string name="projects_find_search_placeholder">Layihə axtarın və ya URL yapışdırın</string>
     <string name="projects_find_search_hint">Abunə olmaq üçün layihələri axtarın</string>
-    <string name="projects_search_objects_placeholder">Obyektlərdə axtar</string>
-    <string name="projects_sort_field">Çeşidləmə</string>
+    <string name="projects_search_objects_placeholder">Obyektləri axtar</string>
+    <string name="projects_sort_field">Sırala</string>
     <string name="projects_sort_direction_asc">Artan</string>
     <string name="projects_sort_direction_desc">Azalan</string>
     <string name="projects_create_object_parent_none">(yoxdur)</string>
@@ -188,18 +188,18 @@
     <string name="projects_watchers_empty">Hələ izləyici yoxdur</string>
     <string name="projects_object_delete_title">Obyekti sil</string>
     <string name="projects_object_delete_message">Bu obyekti silmək istədiyinizə əminsiniz? Bu əməliyyat geri qaytarıla bilməz.</string>
-    <string name="projects_parent_none">Ana element yoxdur</string>
+    <string name="projects_parent_none">Üst element yoxdur</string>
     <string name="projects_links_empty">Keçid yoxdur</string>
     <string name="projects_links_section_relates">Əlaqəlidir</string>
-    <string name="projects_links_section_duplicated_by">Bunun tərəfindən dublikatdır</string>
+    <string name="projects_links_section_duplicated_by">Dublikatları</string>
     <string name="projects_links_type">Keçid növü</string>
     <string name="projects_links_type_relates">Əlaqəlidir</string>
-    <string name="projects_links_search_placeholder">Obyektlərdə axtar</string>
+    <string name="projects_links_search_placeholder">Obyektləri axtar</string>
     <string name="projects_links_remove">Keçidi sil</string>
     <string name="projects_comment_replying_to">%1$s istifadəçisinə cavab verilir</string>
     <string name="projects_comment_clear_reply">Cavabı təmizlə</string>
     <string name="projects_comment_placeholder">Şərh əlavə edin</string>
-    <string name="projects_comment_remove_attachment">Əlavəni sil</string>
+    <string name="projects_comment_remove_attachment">Qoşmanı sil</string>
     <string name="projects_property_pick_date">Tarix seçin</string>
     <string name="projects_property_ok">OK</string>
     <string name="projects_property_add_item">Element əlavə et</string>
@@ -212,8 +212,8 @@
     <string name="projects_activity_cleared">%1$s təmizləndi</string>
     <string name="projects_activity_updated">%1$s yeniləndi</string>
     <string name="projects_activity_made_change">dəyişiklik etdi</string>
-    <string name="projects_attachment_empty">Əlavə yoxdur</string>
-    <string name="projects_attachment_default_name">əlavə</string>
+    <string name="projects_attachment_empty">Qoşma yoxdur</string>
+    <string name="projects_attachment_default_name">qoşma</string>
     <string name="projects_attachment_size_bytes">%1$d B</string>
     <string name="projects_attachment_size_kb">%1$d KB</string>
     <string name="projects_attachment_size_mb">%1$d MB</string>
@@ -238,8 +238,8 @@
     <string name="projects_request_create_title">Birləşdirmə sorğusu yaradın</string>
     <string name="projects_request_field_target">Hədəf budaq</string>
     <string name="projects_diff_title">Fərq: %1$s -&gt; %2$s</string>
-    <string name="projects_tree_collapse">Yığışdır</string>
-    <string name="projects_tree_expand">Genişləndir</string>
+    <string name="projects_tree_collapse">Yığ</string>
+    <string name="projects_tree_expand">Genişlət</string>
     <string name="projects_tree_move">Köçür</string>
     <string name="projects_tree_move_to_parent">Valideynə köçür</string>
     <string name="projects_tree_root_level">(Kök səviyyəsi)</string>
@@ -255,7 +255,7 @@
     <string name="projects_drag_row">Sıranı sürüşdür</string>
     <string name="projects_drag_column">Sütunu sürüşdür</string>
     <string name="projects_drag_hint">Köçürmək üçün uzun basıb sürüşdürün</string>
-    <string name="projects_design_more_options">Daha çox seçim</string>
+    <string name="projects_design_more_options">Digər seçimlər</string>
     <string name="projects_design_clipboard_label">Dizayn JSON</string>
     <string name="projects_design_export_subject">Layihə dizaynı</string>
     <string name="projects_design_share_chooser">Dizaynı paylaş</string>
@@ -283,7 +283,7 @@
     <string name="projects_field_filterable">Süzgəclənə bilən</string>
     <string name="projects_field_show_on_card">Kartda göstər</string>
     <string name="projects_field_multi">Çoxlu seçim</string>
-    <string name="projects_field_position">Ekran mövqeyi</string>
+    <string name="projects_field_position">Göstərmə mövqeyi</string>
     <string name="projects_field_position_header">Başlıq</string>
     <string name="projects_field_position_body">Gövdə</string>
     <string name="projects_field_validation">Doğrulama</string>
@@ -297,7 +297,7 @@
     <string name="projects_views_empty">Görünüş təyin edilməyib</string>
     <string name="projects_views_empty_subtitle">Obyektləri qruplaşdırmaq üçün lövhə və ya siyahı görünüşü yaradın</string>
     <string name="projects_views_delete_message">\"%1$s\" görünüşünü silmək istədiyinizə əminsinizmi?</string>
-    <string name="projects_views_columns_field">Sütunlar sahəsi</string>
+    <string name="projects_views_columns_field">Sütun sahəsi</string>
     <string name="projects_views_rows_field">Sıralar sahəsi (üzgüçülük zolaqları)</string>
     <string name="projects_views_border_field">Sərhəd rəngi sahəsi</string>
     <string name="projects_views_sort_by">Sırala</string>
@@ -371,7 +371,7 @@
     <string name="projects_design_export_saved">Dizayn saxlanıldı</string>
     <string name="projects_design_import_failed">Həmin fayl oxuna bilmədi</string>
     <string name="projects_design_or_upload_json">Yaxud fayl yükləyin</string>
-    <string name="projects_export">Məlumatı ixrac et</string>
+    <string name="projects_export">Məlumatları ixrac et</string>
     <string name="projects_export_failed">İxrac saxlanıla bilmədi</string>
     <string name="projects_export_saved">Layihə məlumatı saxlanıldı</string>
     <string name="projects_exporting">İxrac hazırlanır…</string>
@@ -381,5 +381,5 @@
     <string name="projects_option_delete_message">\"%1$s\" variantını silmək istədiyinizə əminsiniz?</string>
     <string name="projects_create_object_no_types">Hələ heç bir element növü yaradıla bilməz. Əvvəlcə tələb olunan əsas elementləri yaradın.</string>
     <string name="projects_create_blocked_no_options">Yaradıla bilmir: %1$s tələb olunur, lakin seçim üçün variantı yoxdur. Dizayn bölməsində variant əlavə edin.</string>
-    <string name="projects_attachment_remove">Qoşmanı silin</string>
+    <string name="projects_attachment_remove">Qoşmanı sil</string>
 </resources>

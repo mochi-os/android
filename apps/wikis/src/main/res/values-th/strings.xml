@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">ลบ</string>
     <string name="wikis_replicas_remove_failed">ไม่สามารถเอา replica ออกได้</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi วิกิ</string>
     <string name="wikis_channel_name">การแจ้งเตือน Wikis</string>
     <string name="wikis_channel_description">การแจ้งเตือนเกี่ยวกับการแก้ไขหน้า ความคิดเห็น และคำเชิญ</string>
     <string name="wikis_pageview_toc_expand">แสดงสารบัญ</string>

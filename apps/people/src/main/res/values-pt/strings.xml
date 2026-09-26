@@ -162,11 +162,11 @@
     <string name="people_contact_given">Nome próprio</string>
     <string name="people_contact_family">Apelido</string>
     <string name="people_contact_nickname">Alcunha</string>
-    <string name="people_contact_add_email">Adicionar e-mail</string>
+    <string name="people_contact_add_email">Adicionar email</string>
     <string name="people_contact_add_phone">Adicionar telefone</string>
-    <string name="people_contact_add_address">Adicionar endereço</string>
+    <string name="people_contact_add_address">Adicionar morada</string>
     <string name="people_contact_street">Rua</string>
-    <string name="people_contact_birthday">Aniversário</string>
+    <string name="people_contact_birthday">Data de nascimento</string>
     <string name="people_contact_organisation">Organização</string>
     <string name="people_contact_url">Site</string>
     <string name="people_contact_note">Nota</string>
@@ -188,7 +188,7 @@
     <string name="people_person_state_contact">Nos contactos</string>
     <string name="people_device_create">Criar</string>
     <string name="people_device_server">Servidor</string>
-    <string name="people_device_username">Nome de usuário</string>
+    <string name="people_device_username">Nome de utilizador</string>
     <string name="people_device_done">Concluído</string>
     <string name="people_device_list">Dispositivos</string>
     <string name="people_device_used">Último uso %1$s</string>

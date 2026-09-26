@@ -20,7 +20,7 @@
     <string name="people_invitations_toast_policy">A ti mú ìlànà ìpè dòde</string>
     <string name="people_invite_settings">Àwọn ètò ìpè</string>
     <string name="people_invite_settings_notify_me">Fìtọ́nisí mi</string>
-    <string name="people_invite_settings_notify_description">Àwọn ìpè máa ń farahàn nínú àwọn ìpè, a sì máa ń fi ìfitónilétí ránṣẹ́ sí ọ (àbáwọlé).</string>
+    <string name="people_invite_settings_notify_description">Àwọn ìpè máa ń farahàn nínú àwọn ìpè, a sì máa ń fi ìfitónilétí ránṣẹ́ sí ọ (àìyípadà).</string>
     <string name="people_invite_settings_store_silently">Tọjú láìpariwo</string>
     <string name="people_invite_settings_silent_description">Àwọn ìpè máa ń farahàn nínú àwọn ìpè. A kò firanṣẹ́ ìfitónilétí.</string>
     <string name="people_invite_settings_reject_all">Kọ̀ gbogbo</string>
@@ -146,7 +146,7 @@
     <string name="people_add_contact_search_start">Bẹ̀rẹ̀ síwá láti wá àwọn olùmúlò</string>
     <string name="people_contact_phone">Fóònù</string>
     <string name="people_contact_title">Àkọlé iṣẹ́</string>
-    <string name="people_contacts_title">Àwọn ẹnì kọ̀ọ̀kan</string>
+    <string name="people_contacts_title">Àwọn olùbásọ̀rọ̀</string>
     <string name="people_contacts_all">Gbogbo olùbásọ̀rọ̀</string>
     <string name="people_contacts_empty">Kò sí olùbásọ̀rọ̀ tí a rí</string>
     <string name="people_contacts_add_to_start">Fi àwọn olùbásọ̀rọ̀ kún láti bẹ̀rẹ̀ ìbáṣepọ̀</string>
@@ -159,13 +159,13 @@
     <string name="people_contacts_delete_friend_confirm">Pa %1$s rẹ́ kúrò nínú àwọn olùbásọ̀rọ̀ rẹ? Ìbáṣepọ̀ ọ̀rẹ́ yín yóò tún dópin.</string>
     <string name="people_contact_new_title">Olùbásọ̀rọ̀ tuntun</string>
     <string name="people_contact_edit_title">Ṣàtúnṣe olùbásọ̀rọ̀</string>
-    <string name="people_contact_given">Orúkọ</string>
+    <string name="people_contact_given">Orúkọ àkọ́kọ́</string>
     <string name="people_contact_family">Orúkọ ìdílé</string>
-    <string name="people_contact_nickname">Orúkọ ìnagijẹ</string>
-    <string name="people_contact_add_email">Fi ímeèlì kún</string>
+    <string name="people_contact_nickname">Ìnagijẹ</string>
+    <string name="people_contact_add_email">Fi ímẹ́ẹ̀lì kún</string>
     <string name="people_contact_add_phone">Fi fóònù kún</string>
     <string name="people_contact_add_address">Fi àdírẹ́sì kún</string>
-    <string name="people_contact_street">Ìgboro</string>
+    <string name="people_contact_street">Òpópónà</string>
     <string name="people_contact_birthday">Ọjọ́ ìbí</string>
     <string name="people_contact_organisation">Àjọ</string>
     <string name="people_contact_url">Ojúlé wẹ́ẹ̀bù</string>
@@ -186,8 +186,8 @@
     <string name="people_welcome_body">Wá àwọn ọ̀rẹ́ káàkiri Mochi kí o sì bá wọn ṣepọ̀. Tẹ Fi olùbásọ̀rọ̀ kún láti fi ìpè ránṣẹ́.</string>
     <string name="people_person_state_contact">Nínú àwọn olùbásọ̀rọ̀</string>
     <string name="people_device_create">Dá</string>
-    <string name="people_device_server">Server</string>
-    <string name="people_device_username">Orukọ olumulo</string>
+    <string name="people_device_server">Sáfà</string>
+    <string name="people_device_username">Orúkọ olùmúlò</string>
     <string name="people_device_done">Ti parí</string>
     <string name="people_device_list">Àwọn ẹ̀rọ</string>
     <string name="people_device_used">Lò gbẹyìn %1$s</string>

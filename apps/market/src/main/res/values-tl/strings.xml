@@ -34,19 +34,19 @@
     <string name="market_asset_download">I-download</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
     <string name="market_back">Bumalik</string>
-    <string name="market_bid_dialog_amount_label">Iyong alok</string>
+    <string name="market_bid_dialog_amount_label">Ang iyong bid</string>
     <string name="market_bid_dialog_cancel">Kanselahin</string>
     <string name="market_bid_dialog_ceiling_help">Awtomatiko naming itataas ang iyong alok sa pinakamaliit na halagang kailangan upang manatiling nangunguna, hanggang sa maximum na ito.</string>
     <string name="market_bid_dialog_instant_win">Nakumpirma ang pagbili — kumpletuhin ang pagbabayad</string>
     <string name="market_bid_dialog_invalid_ceiling">Ang maximum bid ay dapat hindi bababa sa iyong bid amount</string>
     <string name="market_bid_dialog_outbid">Naipasok ang iyong alok pero kaagad na nilampasan. May mas mataas na maximum ang ibang nag-aalok. Ang alok niya ngayon ay %1$s.</string>
-    <string name="market_bid_dialog_submit">Maglagay ng alok</string>
+    <string name="market_bid_dialog_submit">Mag-bid</string>
     <string name="market_bid_dialog_success">Nailagay ang bid</string>
-    <string name="market_bid_dialog_title">Maglagay ng alok</string>
-    <string name="market_bid_ended">Natapos ang auction</string>
+    <string name="market_bid_dialog_title">Mag-bid</string>
+    <string name="market_bid_ended">Tapos na ang auction</string>
     <string name="market_bid_high">Pinakamataas na alok</string>
     <string name="market_bids_empty">Walang bid</string>
-    <string name="market_bids_ended">Natapos ang auction</string>
+    <string name="market_bids_ended">Tapos na ang auction</string>
     <string name="market_bids_tab_active">Aktibo</string>
     <string name="market_bids_tab_all">Lahat</string>
     <string name="market_bids_tab_lost">Natalo</string>
@@ -75,7 +75,7 @@
     <string name="market_checkout_address_line1">Address linya 1</string>
     <string name="market_checkout_address_line2">Address linya 2</string>
     <string name="market_checkout_address_name">Pangalan</string>
-    <string name="market_checkout_address_postcode">Postcode</string>
+    <string name="market_checkout_address_postcode">Zip code</string>
     <string name="market_checkout_address_region">Rehiyon</string>
     <string name="market_checkout_back">Bumalik</string>
     <string name="market_checkout_buy_it_now">Bilhin ngayon</string>
@@ -221,7 +221,7 @@
     <string name="market_listing_detail_buy_now">Bilhin ngayon</string>
     <string name="market_listing_detail_description_heading">Paglalarawan</string>
     <string name="market_listing_detail_edit">I-edit</string>
-    <string name="market_listing_detail_information_heading">Impormasyon sa paghahatid</string>
+    <string name="market_listing_detail_information_heading">Impormasyon ng delivery</string>
     <string name="market_listing_detail_load_failed">Nabigong i-load ang listing</string>
     <string name="market_listing_detail_listed">Nakalista %1$s</string>
     <string name="market_listing_detail_location_heading">Lokasyon</string>
@@ -234,7 +234,7 @@
     <string name="market_listing_detail_save">I-save</string>
     <string name="market_listing_detail_seller_heading">Nagbebenta</string>
     <string name="market_listing_detail_share">Ibahagi ang listahan</string>
-    <string name="market_listing_detail_shipping_heading">Shipping</string>
+    <string name="market_listing_detail_shipping_heading">Mga shipping option</string>
     <string name="market_listing_detail_subscribe">Mag-subscribe</string>
     <string name="market_listing_detail_tags_heading">Mga tag</string>
     <string name="market_listing_detail_title">Listing</string>
@@ -393,7 +393,7 @@
     <string name="market_search_clear">Burahin ang paghahanap</string>
     <string name="market_search_placeholder">Maghanap sa pamilihan</string>
     <string name="market_section_categories">Mag-browse ng mga kategorya</string>
-    <string name="market_section_listings">Pinakabagong listing</string>
+    <string name="market_section_listings">Mga kamakailang listing</string>
     <string name="market_section_recent">Kamakailang tiningnan</string>
     <string name="market_ship_dialog_cancel">Kanselahin</string>
     <string name="market_ship_dialog_submit">Kumpirmahin</string>
@@ -470,7 +470,7 @@
     <string name="market_type_digital">Digital</string>
     <string name="market_type_physical">Pisikal</string>
     <string name="market_warnings_title">Mga babala</string>
-    <string name="market_sale_review_response_submitting">Isinusumite…</string>
+    <string name="market_sale_review_response_submitting">Ipinapadala…</string>
     <string name="market_checkout_subscribing">Nagsu-subscribe…</string>
     <string name="market_filter_remove">Tanggalin ang filter</string>
     <string name="market_listing_detail_sales_count">%1$d benta</string>
@@ -565,7 +565,7 @@
     <string name="market_listing_unsave">Alisin sa nai-save</string>
     <string name="market_listings_delete_failed">Hindi natanggal ang listing</string>
     <string name="market_listings_delete_message">Permanente nitong aalisin ang draft sa iyong account.</string>
-    <string name="market_listings_delete_title">Tanggalin ang listing?</string>
+    <string name="market_listings_delete_title">Burahin ang listing?</string>
     <string name="market_listings_empty_subtitle">I-tap ang Bagong listing para gumawa ng iyong unang item.</string>
     <string name="market_listings_load_failed">Hindi na-load ang iyong mga listing</string>
     <string name="market_listings_search_placeholder">Maghanap sa iyong mga listing</string>
@@ -612,7 +612,7 @@
     <string name="market_sale_dispute_state_responded">Naghihintay ng pasya</string>
     <string name="market_sale_dispute_stripe_reason">Dahilan ng Stripe chargeback: %1$s</string>
     <string name="market_sale_fee_gross">Kabuuan</string>
-    <string name="market_sale_fee_mochi">Bayad sa Mochi</string>
+    <string name="market_sale_fee_mochi">Bayarin ng Mochi</string>
     <string name="market_sale_fee_payout">Net na payout</string>
     <string name="market_sale_fee_stripe">Bayad sa Stripe processor</string>
     <string name="market_sale_fee_stripe_note">Ipinapakita ang mga bayad sa Stripe processor sa iyong Stripe dashboard.</string>
@@ -629,7 +629,7 @@
     <string name="market_saved_empty_subtitle">I-tap ang bookmark icon sa anumang listing para i-save ito para sa mamaya.</string>
     <string name="market_saved_empty_title">Walang nai-save na listing</string>
     <string name="market_status_past_due">Lampas na sa takdang panahon</string>
-    <string name="market_stripe_onboarding_action">Ituloy ang setup</string>
+    <string name="market_stripe_onboarding_action">Ipagpatuloy ang setup</string>
     <string name="market_stripe_onboarding_body">Tapusin ang iyong Stripe onboarding bago ka makatanggap ng payout.</string>
     <string name="market_stripe_onboarding_failed">Hindi nabuksan ang Stripe</string>
     <string name="market_stripe_onboarding_opening">Binubuksan ang Stripe…</string>
@@ -659,7 +659,7 @@
     <string name="market_account_seller_card_view">Tingnan ang mga setting ng seller</string>
     <string name="market_account_vat_label">VAT / ID ng buwis</string>
     <string name="market_seller_activate_action">Buhayin ang seller account</string>
-    <string name="market_seller_activating">Binubuhay...</string>
+    <string name="market_seller_activating">Ina-activate…</string>
     <string name="market_seller_become_heading">Maging seller</string>
     <string name="market_seller_become_title">Maging seller</string>
     <string name="market_seller_check_status">Tingnan ang status</string>

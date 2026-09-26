@@ -41,7 +41,7 @@
     <string name="feeds_tab_members">Удзельнікі</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Назва стужкі</string>
-    <string name="feeds_save_name">Захаваць імя</string>
+    <string name="feeds_save_name">Захаваць назву</string>
     <string name="feeds_banner">Банер</string>
     <string name="feeds_banner_description">Неабавязковы markdown-банер у верхняй частцы вашай стужкі.</string>
     <string name="feeds_clear">Ачысціць</string>
@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Стужка Mochi</string>
     <string name="feeds_source_type_feed_memories">Успаміны</string>
-    <string name="feeds_remove_source">Выдаліць крыніцу</string>
+    <string name="feeds_remove_source">Выдаліць крыніцу?</string>
     <string name="feeds_suggested_credibility_accept">Прыняць</string>
     <string name="feeds_rss_url_copied">URL RSS скапіраваны ў буфер абмену</string>
     <string name="feeds_logout">Выйсці</string>
@@ -85,7 +85,7 @@
     <string name="feeds_send">Адправіць</string>
 
     <string name="feeds_ai_processing_mode">Рэжым апрацоўкі ШІ</string>
-    <string name="feeds_ai_account">Уліковы запіс ШІ</string>
+    <string name="feeds_ai_account">Уліковы запіс AI</string>
     <string name="feeds_ai_prompt_new">Дадаць тэгі да новых допісаў</string>
     <string name="feeds_ai_prompt_batch">Пакетная апрацоўка</string>
     <string name="feeds_ai_prompt_rank">Ранжыраванне / ацэньванне</string>
@@ -119,7 +119,7 @@
     <string name="feeds_clipboard_label_rss">URL RSS</string>
     <string name="feeds_source_never_fetched">Ніколі не атрымлівалася</string>
     <string name="feeds_source_poll">Апытванне</string>
-    <string name="feeds_source_transform">Пераўтварэнне</string>
+    <string name="feeds_source_transform">Пераўтварэнне AI</string>
     <string name="feeds_remove_source_confirm">Выдаліць \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Таксама выдаліць імпартаваныя допісы</string>
     <string name="feeds_suggested_credibility_title">Прапанаваны ўзровень даверу</string>
@@ -157,15 +157,15 @@
     <string name="feeds_access_segment_other">Іншае</string>
     <string name="feeds_access_select_group">Выбраць групу</string>
     <string name="feeds_access_selected">Выбрана: %1$s</string>
-    <string name="feeds_access_subject_anyone">Любы</string>
-    <string name="feeds_access_subject_authenticated">Аўтэнтыфікаваныя карыстальнікі</string>
+    <string name="feeds_access_subject_anyone">Хто заўгодна</string>
+    <string name="feeds_access_subject_authenticated">Аўтарызаваныя карыстальнікі</string>
     <string name="feeds_markdown_supported">Падтрымліваецца Markdown</string>
     <string name="feeds_permission_deny">Адмовіць</string>
     <string name="feeds_rss_feed">RSS-стужка</string>
     <string name="feeds_settings_field_entity_id">ID сутнасці</string>
     <string name="feeds_settings_field_fingerprint">Адбітак пальца</string>
     <string name="feeds_settings_field_server">Сервер</string>
-    <string name="feeds_settings_name_edit_cd">Рэдагаваць імя</string>
+    <string name="feeds_settings_name_edit_cd">Рэдагаваць назву</string>
     <string name="feeds_settings_section_identity">Асоба</string>
     <string name="feeds_unsubscribe">Адпісацца</string>
     <string name="feeds_unsubscribed">Адпісана</string>

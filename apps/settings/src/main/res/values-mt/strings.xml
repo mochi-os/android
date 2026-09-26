@@ -242,7 +242,7 @@
     <string name="route_meta">Prijorità %1$d · %2$s</string>
     <string name="interests_search_placeholder">Fittex suġġetti biex iżżid…</string>
     <string name="interests_empty">Għadek l-ebda interessi.</string>
-    <string name="interests_summary_regenerate">Irriġenera s-sommarju</string>
+    <string name="interests_summary_regenerate">Iġġenera s-sommarju mill-ġdid</string>
     <string name="interests_summary_regenerating">Tirriġenera…</string>
     <string name="interests_summary_empty">Żid xi interessi biex toħloq sommarju ta\' dak li tħobb.</string>
     <string name="interests_search_failed">It-tfittxija falliet. Erġa\' pprova.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s ma jamministrax aktar rotot f\'dan id-domain.</string>
     <string name="domain_delegation_delete_title">Tħassar delegazzjoni?</string>
     <string name="domain_delegation_path">Mogħdija</string>
-    <string name="domain_delegation_user">ID tal-utent</string>
+    <string name="domain_delegation_user">Utent</string>
     <string name="domain_delegations">Delegazzjonijiet</string>
     <string name="domain_delegations_empty">L-ebda delegazzjonijiet konfigurati.</string>
     <string name="domain_delete">Ħassar dominju</string>

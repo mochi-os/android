@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">წაშლა</string>
     <string name="wikis_replicas_remove_failed">რეპლიკის წაშლა ვერ მოხერხდა</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi ვიკები</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">შეტყობინებები wiki გვერდის რედაქტირების, კომენტარებისა და მოწვევების შესახებ.</string>
     <string name="wikis_pageview_toc_expand">სარჩევის ჩვენება</string>

@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Abunəlikdən çıx</string>
     <string name="forums_list_unsubscribe_title">Abunəlikdən çıx</string>
     <string name="forums_create_title">Forum yarat</string>
-    <string name="forums_create_name">Ad</string>
+    <string name="forums_create_name">Forum adı</string>
     <string name="forums_create_privacy">Məxfilik</string>
     <string name="forums_create_private">Şəxsi</string>
     <string name="forums_create_public">Açıq</string>
-    <string name="forums_create_action">Yarat</string>
+    <string name="forums_create_action">Forum yarat</string>
     <string name="forums_find_title">Forumları tap</string>
     <string name="forums_find_recommended">Tövsiyə olunur</string>
     <string name="forums_find_subscribe">Abunə ol</string>
@@ -154,7 +154,7 @@
     <string name="forums_banner_placeholder">Bu foruma xoş gəlmisiniz…</string>
     <string name="forums_ai_mode_label">Rejim: %1$s</string>
     <string name="forums_ai_mode_heading">AI rejimi</string>
-    <string name="forums_ai_mode_off">Sönülü</string>
+    <string name="forums_ai_mode_off">Söndürülmüşdür</string>
     <string name="forums_ai_account">AI hesabı</string>
     <string name="forums_ai_prompt_tag">Etiketləmə üçün sorğu</string>
     <string name="forums_ai_prompt_score">Qiymətləndirmə üçün sorğu</string>
@@ -213,8 +213,8 @@
     <string name="forums_markdown_supported">Markdown dəstəklənir</string>
     <string name="forums_attachment_file">Fayl</string>
     <string name="forums_attachment_remove">Sil</string>
-    <string name="forums_attachment_move_up">Yuxarı köçürün</string>
-    <string name="forums_attachment_move_down">Aşağı köçürün</string>
+    <string name="forums_attachment_move_up">Yuxarı köçür</string>
+    <string name="forums_attachment_move_down">Aşağı köçür</string>
     <string name="forums_post_comments">Şərhlər</string>
     <string name="forums_all_forums">Bütün forumlar</string>
     <string name="forums_create_allow_search">Hər kəsə forumu axtarmağa icazə ver</string>
@@ -256,7 +256,7 @@
     <string name="forums_access_select_group">Qrup seçin</string>
     <string name="forums_access_select_rule">Qayda seçin</string>
     <string name="forums_ai_actions_label">Paylaşımlarda Sİ əməliyyatları</string>
-    <string name="forums_ai_prompt_custom">Fərdi</string>
+    <string name="forums_ai_prompt_custom">Xüsusi</string>
     <string name="forums_ai_prompt_score_label">Qiymətləndirmə promptu</string>
     <string name="forums_ai_prompt_tag_label">Etiket promptu</string>
     <string name="forums_ai_prompt_variables">Dəyişənlər: %1$s</string>
@@ -276,8 +276,8 @@
     <string name="forums_moderation_restriction_by">%1$s tərəfindən</string>
     <string name="forums_moderation_restriction_remove_message">Dərhal foruma tam girişi geri qazanır.</string>
     <string name="forums_moderation_restriction_remove_title">%1$s üçün məhdudiyyət götürülsün?</string>
-    <string name="forums_moderation_restriction_state_muted">Susdurulub</string>
-    <string name="forums_moderation_restriction_state_shadowban">Kölgə blok</string>
+    <string name="forums_moderation_restriction_state_muted">Səssizləşdirilib</string>
+    <string name="forums_moderation_restriction_state_shadowban">Gizli bloklanıb</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Heç bir istifadəçi susdurulmayıb və ya bloklanmayıb</string>
     <string name="forums_moderation_section_premoderation_description">Məzmun görünməzdən əvvəl təsdiq tələb edin</string>
     <string name="forums_moderation_section_ratelimiting_description">İstifadəçilərin nə qədər tez-tez paylaşa biləcəyini məhdudlaşdıraraq spamın qarşısını alın</string>

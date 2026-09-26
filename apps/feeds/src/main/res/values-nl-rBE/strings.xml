@@ -56,7 +56,7 @@
     <string name="feeds_source_type">Type</string>
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_memories">Herinneringen</string>
-    <string name="feeds_remove_source">Bron verwijderen</string>
+    <string name="feeds_remove_source">Bron verwijderen?</string>
     <string name="feeds_suggested_credibility_accept">Accepteren</string>
     <string name="feeds_rss_url_copied">RSS-URL gekopieerd naar klembord</string>
     <string name="feeds_logout">Uitloggen</string>
@@ -102,7 +102,7 @@
     <string name="feeds_clipboard_label_rss">RSS-URL</string>
     <string name="feeds_source_never_fetched">Nooit opgehaald</string>
     <string name="feeds_source_poll">Pollen</string>
-    <string name="feeds_source_transform">Transformeren</string>
+    <string name="feeds_source_transform">AI-transformatie</string>
     <string name="feeds_remove_source_confirm">\"%1$s\" verwijderen?</string>
     <string name="feeds_remove_also_delete_posts">Geïmporteerde berichten ook verwijderen</string>
     <string name="feeds_suggested_credibility_title">Voorgestelde geloofwaardigheid</string>
@@ -196,7 +196,7 @@
     </plurals>
     <string name="feeds_source_polling_interval">Elke %1$s opgehaald</string>
     <string name="feeds_access_level_react_full">React geven en bekijken</string>
-    <string name="feeds_permission_allow">Toestaan</string>
+    <string name="feeds_permission_allow">Toelaten</string>
     <string name="feeds_unsubscribe_confirm_message">Je ontvangt geen updates meer van deze feed. Je kan je op elk moment opnieuw abonneren.</string>
     <string name="feeds_access_select_rule">Selecteer toegangsregel</string>
     <string name="feeds_access_authenticated_desc">Iedereen die aangemeld is</string>
@@ -205,7 +205,7 @@
     <string name="feeds_members_search">Leden filteren</string>
     <string name="feeds_ai_prompt_default">Standaard</string>
     <string name="feeds_link">Link</string>
-    <string name="feeds_share_link_title">Feed-link</string>
+    <string name="feeds_share_link_title">Feedlink</string>
     <string name="feeds_ai_prompt_custom">Aangepast</string>
     <string name="feeds_ai_prompt_variables">Variabelen: %1$s</string>
     <string name="feeds_block">Blokkeren</string>

@@ -9,7 +9,7 @@
     <string name="calendars_rename">Suti machaqachama</string>
     <string name="calendars_delete">Chhaqtayaña</string>
     <string name="calendars_previous">Nayrïri</string>
-    <string name="calendars_next">Jutiri</string>
+    <string name="calendars_next">Arkiri</string>
     <string name="calendars_view">Uñjäwi</string>
     <string name="calendars_view_list">Lista</string>
     <string name="calendars_list_search">Thaqhama</string>
@@ -74,7 +74,7 @@
     <string name="calendars_workweek">Irnaqaña semana</string>
     <string name="calendars_range">%1$s uksata %2$s ukakama</string>
     <string name="calendars_truncated">Aka pachanxa yaqhip lurawinakaxa janiw uñstkiti.</string>
-    <string name="calendars_list_empty">Janiw lurawinakaki</string>
+    <string name="calendars_list_empty">Jan lurawinaka</string>
     <plurals name="calendars_more">
         <item quantity="one">+%1$d juk\'ampi</item>
         <item quantity="other">+%1$d juk\'ampi</item>
@@ -162,7 +162,7 @@
     <string name="calendars_poll_unauthorised">Calendario servidorax cuentan credencialanakapwa jan iyawsxiti</string>
     <string name="calendars_subscribe_username">Apnaqiri suti</string>
     <string name="calendars_subscribe_password">Contraseña</string>
-    <string name="calendars_subscribe_connect">Mayachthapiña</string>
+    <string name="calendars_subscribe_connect">Chikacht\'aña</string>
     <string name="calendars_subscribe_server">Yaqha Mochi jan ukax CalDAV servidor</string>
     <string name="calendars_subscribe_address">Uñacht\'ayata calendario dirección (liyiñataki sapa)</string>
     <string name="calendars_subscribe_password_apple">Aplicacionan contraseñapa</string>

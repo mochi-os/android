@@ -74,7 +74,7 @@
     <string name="calendars_workweek">የሥራ ሳምንት</string>
     <string name="calendars_range">ከ%1$s እስከ %2$s</string>
     <string name="calendars_truncated">በዚህ ክልል ውስጥ ያሉ አንዳንድ ክስተቶች አይታዩም።</string>
-    <string name="calendars_list_empty">ምንም ክስተት የለም</string>
+    <string name="calendars_list_empty">ምንም ክስተቶች የሉም</string>
     <plurals name="calendars_more">
         <item quantity="one">+%1$d ተጨማሪ</item>
         <item quantity="other">+%1$d ተጨማሪ</item>
@@ -162,7 +162,7 @@
     <string name="calendars_poll_unauthorised">የቀን መቁጠሪያው አገልጋይ የመለያውን መረጃዎች ውድቅ አደረገ</string>
     <string name="calendars_subscribe_username">የተጠቃሚ ስም</string>
     <string name="calendars_subscribe_password">የይለፍ ቃል</string>
-    <string name="calendars_subscribe_connect">ይገናኙ</string>
+    <string name="calendars_subscribe_connect">አገናኝ</string>
     <string name="calendars_subscribe_server">ሌላ Mochi ወይም CalDAV አገልጋይ</string>
     <string name="calendars_subscribe_address">የታተመ የቀን መቁጠሪያ አድራሻ (ለንባብ ብቻ)</string>
     <string name="calendars_subscribe_password_apple">ለመተግበሪያ የተወሰነ የይለፍ ቃል</string>

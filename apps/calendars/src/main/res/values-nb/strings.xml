@@ -4,7 +4,7 @@
     <string name="calendars_subscribe_submit">Abonner</string>
     <string name="calendars_subscribe_url">Adresse</string>
     <string name="calendars_connect_device">Koble til en enhet</string>
-    <string name="calendars_preferences">Innstillinger</string>
+    <string name="calendars_preferences">Preferanser</string>
     <string name="calendars_name">Navn</string>
     <string name="calendars_rename">Gi nytt navn</string>
     <string name="calendars_delete">Slett</string>
@@ -110,7 +110,7 @@
     <string name="calendars_multiweek_weeks">Uker som vises</string>
     <string name="calendars_multiweek_previous">Uker før</string>
     <string name="calendars_default_duration">Standard hendelseslengde</string>
-    <string name="calendars_default_reminder">Standard påminnelse</string>
+    <string name="calendars_default_reminder">Standardpåminnelse</string>
     <string name="calendars_link_title">Kalenderlenke</string>
     <string name="calendars_link_copy">Kopier lenke</string>
     <string name="calendars_link_once">Kopier den nå: den kan ikke vises igjen.</string>
@@ -168,7 +168,7 @@
     <string name="calendars_subscribe_password_apple">Appspesifikt passord</string>
     <string name="calendars_subscribe_server_url">Serveradresse</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
-    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_apple_id">Apple-ID</string>
     <string name="calendars_subscribe_google">Google Kalender</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google-kontoer er ikke aktivert på denne serveren. Aktiver dem under Innstillinger, Systeminnstillinger.</string>

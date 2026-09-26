@@ -323,7 +323,7 @@
     <string name="staff_listings_status_sold">Wedi\'i werthu</string>
     <string name="staff_listings_submitting">Yn cyflwyno…</string>
     <string name="staff_moderation_empty">Dim cofnodion cymedroli</string>
-    <string name="staff_moderation_filter_clear">Clirio hidlydd</string>
+    <string name="staff_moderation_filter_clear">Clirio\'r hidlydd</string>
     <string name="staff_moderation_listing_filter_placeholder">ID y rhestriad</string>
     <string name="staff_moderation_system">System</string>
     <string name="staff_moderation_unknown_listing">#%1$s</string>

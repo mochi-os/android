@@ -36,7 +36,7 @@
     <string name="market_asset_download">Luchdaich a-nuas</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
     <string name="market_back">Air ais</string>
-    <string name="market_bid_dialog_amount_label">Do thairgse</string>
+    <string name="market_bid_dialog_amount_label">An tairgse agad</string>
     <string name="market_bid_dialog_cancel">Sguir dheth</string>
     <string name="market_bid_dialog_ceiling_help">Togaidh sinn do thairgse gu fèin-ghluasadach leis a\' mhèid as lugha a tha riatanach gus fuireach air thoiseach, suas chun an tairgse as àirde seo.</string>
     <string name="market_bid_dialog_instant_win">Chaidh an ceannach a dhearbhadh — coileanaich am pàigheadh</string>
@@ -45,10 +45,10 @@
     <string name="market_bid_dialog_submit">Cuir tairgse</string>
     <string name="market_bid_dialog_success">Tairgse air a cur</string>
     <string name="market_bid_dialog_title">Cuir tairgse</string>
-    <string name="market_bid_ended">Reic-tairgse air thighinn gu crìch</string>
+    <string name="market_bid_ended">Thàinig an reic-tairgse gu crìch</string>
     <string name="market_bid_high">Tairgse as àirde</string>
     <string name="market_bids_empty">Gun thairgsean</string>
-    <string name="market_bids_ended">Reic-tairgse air thighinn gu crìch</string>
+    <string name="market_bids_ended">Thàinig an reic-tairgse gu crìch</string>
     <string name="market_bids_tab_active">Gnìomhach</string>
     <string name="market_bids_tab_all">Na h-uile</string>
     <string name="market_bids_tab_lost">Caillte</string>
@@ -91,7 +91,7 @@
     <string name="market_checkout_listing_not_found">Cha deach an liosta a lorg</string>
     <string name="market_checkout_pay_button">Pàigh le Stripe</string>
     <string name="market_checkout_payment_failed">Cha b\' urrainnear pàigheadh a thòiseachadh — dh\'fhaoidte nach do chuir an reiceadair an pàigheadh air dòigh</string>
-    <string name="market_checkout_processing">Ga phròiseasadh…</string>
+    <string name="market_checkout_processing">\'Ga phròiseasadh…</string>
     <string name="market_checkout_secure">Pàigheadh tèarainte tro Stripe</string>
     <string name="market_checkout_select_option">Tagh roghainn</string>
     <string name="market_checkout_shipping">A\' lìbhrigeadh</string>
@@ -139,7 +139,7 @@
     <string name="market_editor_description">Tuairisgeul</string>
     <string name="market_editor_interval_monthly">Mìosail</string>
     <string name="market_editor_interval_yearly">Bliadhnail</string>
-    <string name="market_editor_photo_delete">Sguab às dealbh</string>
+    <string name="market_editor_photo_delete">Sguab às an dealbh</string>
     <string name="market_editor_photo_uploading">A\' luchdadh suas…</string>
     <string name="market_editor_photos_add">Cuir dealbhan ris</string>
     <string name="market_editor_price">Prìs</string>
@@ -235,7 +235,7 @@
     <string name="market_listing_detail_save">Sàbhail</string>
     <string name="market_listing_detail_seller_heading">Reiceadair</string>
     <string name="market_listing_detail_share">Co-roinn liosta</string>
-    <string name="market_listing_detail_shipping_heading">A\' lìbhrigeadh</string>
+    <string name="market_listing_detail_shipping_heading">Roghainnean lìbhrigidh</string>
     <string name="market_listing_detail_subscribe">Fo-sgrìobh</string>
     <string name="market_listing_detail_tags_heading">Tagaichean</string>
     <string name="market_listing_detail_title">Liosta</string>
@@ -267,7 +267,7 @@
     <string name="market_messages_thread_listing_chip">Liosta</string>
     <string name="market_messages_thread_title">Còmhradh</string>
     <string name="market_onboarding_activate">Gnìomhaich</string>
-    <string name="market_onboarding_activating">A\' gnìomhachadh…</string>
+    <string name="market_onboarding_activating">Ga chur an gnìomh…</string>
     <string name="market_onboarding_body">Cuir an cunntas agad an gnìomh gus tòiseachadh a’ ceannach agus a’ reic.</string>
     <string name="market_onboarding_dismiss">Leig seachad</string>
     <string name="market_onboarding_title">Fàilte gu Market</string>
@@ -393,7 +393,7 @@
     <string name="market_saved_title">Air an sàbhaladh</string>
     <string name="market_search_clear">Falamhaich an lorg</string>
     <string name="market_search_placeholder">Lorg sa mhargaid</string>
-    <string name="market_section_categories">Rùraich roinnean</string>
+    <string name="market_section_categories">Brabhsaich roinnean</string>
     <string name="market_section_listings">Liostan o chionn ghoirid</string>
     <string name="market_section_recent">Air an coimhead o chionn ghoirid</string>
     <string name="market_ship_dialog_cancel">Sguir dheth</string>
@@ -448,7 +448,7 @@
     <string name="market_subscription_detail_started">Air tòiseachadh %1$s</string>
     <string name="market_subscription_detail_title">Fo-sgrìobhadh</string>
     <string name="market_subscriptions_action_cancel">Sguir dheth</string>
-    <string name="market_subscriptions_action_pause">Stad</string>
+    <string name="market_subscriptions_action_pause">Cuir \'na stad</string>
     <string name="market_subscriptions_action_reactivate">Ath-ghnìomhaich</string>
     <string name="market_subscriptions_action_resubscribe">Ath-fho-sgrìobh</string>
     <string name="market_subscriptions_action_resume">Lean ort</string>
@@ -471,7 +471,7 @@
     <string name="market_type_digital">Didseatach</string>
     <string name="market_type_physical">Corporra</string>
     <string name="market_warnings_title">Rabhaidhean</string>
-    <string name="market_sale_review_response_submitting">A\' cur a-null…</string>
+    <string name="market_sale_review_response_submitting">Ga chur…</string>
     <string name="market_checkout_subscribing">A\' fo-sgrìobhadh…</string>
     <string name="market_filter_remove">Thoir air falbh a\' chriathrag</string>
     <string name="market_listing_detail_sales_count">%1$d reic</string>
@@ -629,7 +629,7 @@
     <string name="market_saved_empty_subtitle">Thoir gnogag air ìomhaigh a\' chomharra-leabhair air liosta sam bith gus a shàbhaladh airson nas fhaide air adhart.</string>
     <string name="market_saved_empty_title">Chan eil liosta air a shàbhaladh</string>
     <string name="market_status_past_due">Thar na h-ùine</string>
-    <string name="market_stripe_onboarding_action">Lean ort leis an t-suidheachadh</string>
+    <string name="market_stripe_onboarding_action">Lean air adhart leis an t-suidheachadh</string>
     <string name="market_stripe_onboarding_body">Crìochnaich an obair-thòiseachaidh Stripe agad mus gabh thu pàighidhean.</string>
     <string name="market_stripe_onboarding_failed">Cha b\' urrainnear Stripe fhosgladh</string>
     <string name="market_stripe_onboarding_opening">A\' fosgladh Stripe…</string>
@@ -659,11 +659,11 @@
     <string name="market_account_seller_card_view">Seall roghainnean reiceadair</string>
     <string name="market_account_vat_label">Aithne VAT / cìse</string>
     <string name="market_seller_activate_action">Cuir an gnìomh cunntas reiceadair</string>
-    <string name="market_seller_activating">Ga chur an gnìomh...</string>
+    <string name="market_seller_activating">Ga chur an gnìomh…</string>
     <string name="market_seller_become_heading">Bi nad reiceadair</string>
     <string name="market_seller_become_title">Bi nad reiceadair</string>
     <string name="market_seller_check_status">Dèan sgrùdadh air a\' chor</string>
-    <string name="market_seller_checking">A\' sgrùdadh...</string>
+    <string name="market_seller_checking">A\' sgrùdadh…</string>
     <string name="market_seller_connect_stripe">Ceangail Stripe</string>
     <string name="market_seller_connecting">A\' luchdadh...</string>
     <string name="market_seller_fee_loading">A\' luchdadh mion-fhiosrachadh nan cìsean...</string>

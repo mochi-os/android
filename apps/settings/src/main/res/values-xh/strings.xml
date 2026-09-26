@@ -4,7 +4,7 @@
     <string name="settings_home_title">Iisetingi</string>
     <string name="settings_home_logout">Phuma</string>
     <string name="settings_home_account">I-akhawunti</string>
-    <string name="settings_home_preferences">Iziphakamiso</string>
+    <string name="settings_home_preferences">Izinto ozithandayo</string>
     <string name="settings_home_display">Bonisa</string>
     <string name="settings_home_notification_prefs">Iinkethelo zezaziso</string>
     <string name="settings_home_accounts">Ii-akhawunti ezidibeneyo</string>
@@ -191,7 +191,7 @@
     <string name="system_users_unknown_browser">Ibhrawuza engaziwayo</string>
     <string name="system_users_unknown">Akwaziwa</string>
     <string name="system_users_previous">Engaphambili</string>
-    <string name="system_users_next">Olandelayo</string>
+    <string name="system_users_next">Okulandelayo</string>
     <string name="system_users_empty">Akukho basebenzisi bafumanekileyo</string>
     <string name="system_users_empty_search">Akukho basebenzisi bafanela uphendliso lwakho</string>
     <string name="system_users_empty_search_hint">Zama ukulungisa imigaqo yakho yokukhangela</string>
@@ -207,7 +207,7 @@
     <string name="system_users_toast_status_failed">Ayiphumelelanga ukuhlaziya isimo somsebenzisi</string>
     <string name="system_users_toast_revoke_failed">Ayiphumelelanga ukurhoxisa iseshini</string>
 
-    <string name="settings_home_sessions">Iindibano</string>
+    <string name="settings_home_sessions">Iiseshoni</string>
     <string name="settings_home_privacy">Umgaqo-nkqubo wabucala</string>
     <string name="settings_home_rules">Imithetho</string>
     <string name="settings_home_terms">Imimiselo yenkonzo</string>
@@ -229,7 +229,7 @@
     <string name="account_recovery_regen_title">Yenza kwakhona iikhowudi zokubuyisela?</string>
     <string name="account_recovery_regen_message">Iikhowudi ezikhoyo ziya kuyeka ukusebenza ngokukhawuleza. Gcina ezintsha kwindawo ekhuselekileyo.</string>
     <string name="account_recovery_codes_warning">Gcina ezi khowudi — nganye ingasetyenziswa kanye kuphela. Aziyi kuphinda zibonakaliswe.</string>
-    <string name="sessions_title">Iindibano</string>
+    <string name="sessions_title">Iiseshoni</string>
     <string name="sessions_empty">Akukho seshoni isebenzayo.</string>
     <string name="sessions_revoke_message">Isixhobo esisebenzisa le seshoni siya kuphuma.</string>
     <string name="account_oauth_empty">Akukho ii-akhawunti ezidityanisiweyo</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">Okubalulekileyo %1$d · %2$s</string>
     <string name="interests_search_placeholder">Khangela izihloko ukuze ongezelele…</string>
     <string name="interests_empty">Akukho mdla okwangoku.</string>
-    <string name="interests_summary_regenerate">Yenza kwakhona isishwankathelo</string>
+    <string name="interests_summary_regenerate">Velisa isishwankathelo kwakhona</string>
     <string name="interests_summary_regenerating">Iyenza kwakhona…</string>
     <string name="interests_summary_empty">Yongeza eminye umdla ukuze yenze isishwankathelo sezinto ozithandayo.</string>
     <string name="interests_search_failed">Ukukhangela akuphumelelanga. Nceda uzame kwakhona.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s akusayi kulawula iindlela kule mimandla.</string>
     <string name="domain_delegation_delete_title">Cima ukuthunyelwa?</string>
     <string name="domain_delegation_path">Indlela</string>
-    <string name="domain_delegation_user">I-ID yomsebenzisi</string>
+    <string name="domain_delegation_user">Umsebenzisi</string>
     <string name="domain_delegations">Ukuthunyelwa</string>
     <string name="domain_delegations_empty">Akukho zinikezelweyo zicwangcisiweyo.</string>
     <string name="domain_delete">Cima idomeyini</string>

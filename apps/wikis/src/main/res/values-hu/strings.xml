@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Eltávolítás</string>
     <string name="wikis_replicas_remove_failed">Nem sikerült eltávolítani a replikát</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wikik</string>
     <string name="wikis_channel_name">Wikis értesítések</string>
     <string name="wikis_channel_description">Értesítések oldalszerkesztésekről, megjegyzésekről és meghívókról.</string>
     <string name="wikis_pageview_toc_expand">Tartalomjegyzék megjelenítése</string>
@@ -225,7 +225,7 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Frissítve %1$s</string>
     <string name="wikis_pageview_not_found_description">A „%1$s\" oldal még nem létezik.</string>
-    <string name="wikis_pageview_share_chooser">Wiki linkje</string>
+    <string name="wikis_pageview_share_chooser">Wiki-hivatkozás</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">Hivatkozás</string>
     <string name="wikis_open_sidebar">Oldalsáv megnyitása</string>
@@ -283,7 +283,7 @@
     <string name="wikis_load_more">Továbbiak betöltése</string>
     <string name="wikis_access_change_level">Hozzáférési szint</string>
     <string name="wikis_access_subject_anyone">Bárki</string>
-    <string name="wikis_access_subject_authenticated">Hitelesített felhasználók</string>
+    <string name="wikis_access_subject_authenticated">Bejelentkezett felhasználók</string>
 
     <string name="wikis_revision_compare">Változások összehasonlítása</string>
     <string name="wikis_revision_author">%1$s szerint</string>

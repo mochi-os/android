@@ -60,12 +60,12 @@
     <string name="chess_empty_subtitle">Pradėkite pirmą partiją, kad žaistumėte šachmatais su draugu.</string>
     <string name="chess_empty_start_button">Pradėti pirmą partiją</string>
     <string name="chess_detail_unavailable">Partija nepasiekiama</string>
-    <string name="chess_delete_title">Ištrinti partiją?</string>
+    <string name="chess_delete_title">Ištrinti žaidimą?</string>
     <string name="chess_delete_message">Tai pašalins partiją iš jūsų sąrašo.</string>
     <string name="chess_ws_connecting">Jungiamasi…</string>
     <string name="chess_ws_disconnected">Atjungta</string>
     <string name="chess_ws_reconnecting">Jungiamasi vėl…</string>
-    <string name="chess_ws_failed">Ryšys nepavyko</string>
+    <string name="chess_ws_failed">Prisijungti nepavyko</string>
     <string name="chess_move_capture">%1$s paėmė %2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 

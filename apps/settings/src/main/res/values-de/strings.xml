@@ -4,7 +4,7 @@
     <string name="settings_home_title">Einstellungen</string>
     <string name="settings_home_logout">Abmelden</string>
     <string name="settings_home_account">Konto</string>
-    <string name="settings_home_preferences">Einstellungen</string>
+    <string name="settings_home_preferences">Präferenzen</string>
     <string name="settings_home_display">Anzeige</string>
     <string name="settings_home_notification_prefs">Benachrichtigungseinstellungen</string>
     <string name="settings_home_accounts">Verbundene Konten</string>
@@ -119,7 +119,7 @@
     <string name="settings_home_system_documents">Dokumente</string>
     <string name="settings_home_system_settings">Systemeinstellungen</string>
     <string name="system_settings_title">Systemeinstellungen</string>
-    <string name="system_settings_section_login">Anmelden</string>
+    <string name="system_settings_section_login">Anmeldung</string>
     <string name="system_settings_section_oauth">Drittanbieter-Anmeldung</string>
     <string name="system_settings_section_user_defaults">Benutzerstandards</string>
     <string name="system_settings_section_operator">Betreiber</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">Priorität %1$d · %2$s</string>
     <string name="interests_search_placeholder">Themen zum Hinzufügen suchen…</string>
     <string name="interests_empty">Noch keine Interessen.</string>
-    <string name="interests_summary_regenerate">Zusammenfassung neu erstellen</string>
+    <string name="interests_summary_regenerate">Zusammenfassung neu generieren</string>
     <string name="interests_summary_regenerating">Wird neu erstellt…</string>
     <string name="interests_summary_empty">Füge einige Interessen hinzu, um eine Zusammenfassung dessen zu erstellen, was dich interessiert.</string>
     <string name="interests_search_failed">Suche fehlgeschlagen. Bitte versuche es erneut.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s wird keine Routen mehr auf dieser Domain verwalten.</string>
     <string name="domain_delegation_delete_title">Delegation löschen?</string>
     <string name="domain_delegation_path">Pfad</string>
-    <string name="domain_delegation_user">Benutzer-ID</string>
+    <string name="domain_delegation_user">Benutzer</string>
     <string name="domain_delegations">Delegationen</string>
     <string name="domain_delegations_empty">Keine Delegierungen konfiguriert.</string>
     <string name="domain_delete">Domain löschen</string>
@@ -312,7 +312,7 @@
         <item quantity="one">1 Sitzung widerrufen</item>
         <item quantity="other">%1$d Sitzungen widerrufen</item>
     </plurals>
-    <string name="login_title">Anmelden</string>
+    <string name="login_title">Anmeldung</string>
     <string name="login_section_methods">Anmeldemethoden</string>
     <string name="login_method_email">E-Mail-Code</string>
     <string name="login_method_passkey">Passkey</string>

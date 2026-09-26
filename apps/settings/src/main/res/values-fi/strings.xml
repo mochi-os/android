@@ -4,7 +4,7 @@
     <string name="settings_home_title">Asetukset</string>
     <string name="settings_home_logout">Kirjaudu ulos</string>
     <string name="settings_home_account">Tili</string>
-    <string name="settings_home_preferences">Asetukset</string>
+    <string name="settings_home_preferences">Mieltymykset</string>
     <string name="settings_home_display">Näyttö</string>
     <string name="settings_home_notification_prefs">Ilmoitusasetukset</string>
     <string name="settings_home_accounts">Yhdistetyt tilit</string>
@@ -276,7 +276,7 @@
     <string name="account_title">Tili</string>
     <string name="account_section_identity">Identiteetti</string>
     <string name="account_identity_identity">Identiteetti</string>
-    <string name="account_identity_username">Käyttäjänimi</string>
+    <string name="account_identity_username">Käyttäjätunnus</string>
     <string name="account_identity_name">Nimi</string>
     <string name="account_identity_fingerprint">Sormenjälki</string>
     <string name="account_identity_directory_toggle">Salli muiden löytää sinut hakemistosta</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s ei enää hallinnoi reittejä tällä verkkotunnuksella.</string>
     <string name="domain_delegation_delete_title">Poistetaanko delegointi?</string>
     <string name="domain_delegation_path">Polku</string>
-    <string name="domain_delegation_user">Käyttäjätunnus</string>
+    <string name="domain_delegation_user">Käyttäjä</string>
     <string name="domain_delegations">Delegoinnit</string>
     <string name="domain_delegations_empty">Delegointeja ei ole määritetty.</string>
     <string name="domain_delete">Poista verkkotunnus</string>

@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi tasmasi</string>
     <string name="feeds_source_type_feed_memories">Xotiralar</string>
-    <string name="feeds_remove_source">Manbani olib tashlash</string>
+    <string name="feeds_remove_source">Manba olib tashlansinmi?</string>
     <string name="feeds_suggested_credibility_accept">Qabul qilish</string>
     <string name="feeds_rss_url_copied">RSS URL klipboardga nusxalandi</string>
     <string name="feeds_logout">Chiqish</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">Hech qachon olinmagan</string>
     <string name="feeds_source_poll">So\'rov</string>
-    <string name="feeds_source_transform">O\'zgartirish</string>
+    <string name="feeds_source_transform">AI oʻzgartirish</string>
     <string name="feeds_remove_source_confirm">\"%1$s\" olib tashlansinmi?</string>
     <string name="feeds_remove_also_delete_posts">Import qilingan postlar ham o\'chirilsin</string>
     <string name="feeds_suggested_credibility_title">Tavsiya etilgan ishonchlilik</string>
@@ -154,7 +154,7 @@
     <string name="feeds_access_select_group">Guruhni tanlang</string>
     <string name="feeds_access_selected">Tanlangan: %1$s</string>
     <string name="feeds_access_subject_anyone">Har kim</string>
-    <string name="feeds_access_subject_authenticated">Tasdiqlangan foydalanuvchilar</string>
+    <string name="feeds_access_subject_authenticated">Autentifikatsiyadan oʻtgan foydalanuvchilar</string>
     <string name="feeds_markdown_supported">Markdown qoʻllanadi</string>
     <string name="feeds_permission_deny">Rad etish</string>
     <string name="feeds_rss_feed">RSS lentasi</string>
@@ -172,7 +172,7 @@
     <string name="feeds_allow_search">Hammaga feedni qidirishga ruxsat berish</string>
     <string name="feeds_post_content">Post mazmuni</string>
     <string name="feeds_enable_memories">Xotiralarni yoqish</string>
-    <string name="feeds_permission_request_title">Ruxsat so\'rovi</string>
+    <string name="feeds_permission_request_title">Ruxsat soʻrovi</string>
     <string name="feeds_unsubscribe_confirm">Lenta obunasini bekor qilasizmi?</string>
     <string name="feeds_settings_title">%1$s sozlamalari</string>
     <string name="feeds_source_transform_help">Oʻchirish uchun boʻsh qoldiring.</string>
@@ -206,7 +206,7 @@
     <string name="feeds_banner_dismiss">Bannerni bekor qilish</string>
     <string name="feeds_members_search">Aʼzolarni filtrlash</string>
     <string name="feeds_ai_prompt_default">Standart</string>
-    <string name="feeds_ai_prompt_custom">Moslashtirilgan</string>
+    <string name="feeds_ai_prompt_custom">Maxsus</string>
     <string name="feeds_ai_prompt_variables">O\'zgaruvchilar: %1$s</string>
     <string name="feeds_link">Havola</string>
     <string name="feeds_share_link_title">Tasma havolasi</string>

@@ -174,8 +174,8 @@
     <string name="projects_class_move_up">Liiguta üles</string>
     <string name="projects_class_move_down">Liiguta alla</string>
     <string name="projects_views_sort_by">Sorteeri</string>
-    <string name="projects_sort_direction_asc">Tõusev</string>
-    <string name="projects_views_direction_asc">Tõusev</string>
+    <string name="projects_sort_direction_asc">Kasvav</string>
+    <string name="projects_views_direction_asc">Kasvav</string>
     <string name="projects_sort_direction_desc">Kahanev</string>
     <string name="projects_views_direction_desc">Kahanev</string>
     <string name="projects_search_objects_placeholder">Otsi objekte</string>
@@ -201,14 +201,14 @@
     <string name="projects_parent_none">Ülemobjekt puudub</string>
     <string name="projects_links_empty">Linke pole</string>
     <string name="projects_links_section_relates">Seotud</string>
-    <string name="projects_links_section_duplicated_by">Dubleeritud</string>
+    <string name="projects_links_section_duplicated_by">Dubleeritud poolt</string>
     <string name="projects_links_type">Lingi tüüp</string>
     <string name="projects_links_type_relates">Seotud</string>
     <string name="projects_links_remove">Eemalda link</string>
     <string name="projects_comment_placeholder">Lisa kommentaar</string>
     <string name="projects_property_pick_date">Vali kuupäev</string>
     <string name="projects_property_ok">OK</string>
-    <string name="projects_property_add_item">Lisa kirje</string>
+    <string name="projects_property_add_item">Lisa üksus</string>
     <string name="projects_property_required">%1$s on kohustuslik</string>
     <string name="projects_activity_empty">Tegevust pole</string>
     <string name="projects_activity_created">lõi selle objekti</string>
@@ -257,7 +257,7 @@
     <string name="projects_move_to_column">Liiguta veergu</string>
     <string name="projects_move_to_row">Liiguta ritta</string>
     <string name="projects_move_after">Pärast %1$s</string>
-    <string name="projects_drag_card">Lohista kaart</string>
+    <string name="projects_drag_card">Lohista kaarti</string>
     <string name="projects_drag_row">Lohista rida</string>
     <string name="projects_drag_column">Lohista veerg</string>
     <string name="projects_drag_hint">Liigutamiseks vajuta pikalt ja lohista</string>
@@ -280,7 +280,7 @@
     <string name="projects_class_merge_requests_description">Luba selle klassi objektidel liitmispäringud.</string>
     <string name="projects_class_parents">Vanemklassid</string>
     <string name="projects_class_delete_message">Kas oled kindel, et soovid kustutada klassi \"%1$s\"? Kõik väljad ja nende valikud kustutatakse samuti.</string>
-    <string name="projects_field_type_enumerated">Loendatud</string>
+    <string name="projects_field_type_enumerated">Loetletud</string>
     <string name="projects_field_label">Väli: %1$s</string>
     <string name="projects_field_readonly">Kirjutuskaitstud</string>
     <string name="projects_field_sortable">Sorditav</string>
@@ -290,8 +290,8 @@
     <string name="projects_field_position">Kuvamise asukoht</string>
     <string name="projects_field_position_header">Päis</string>
     <string name="projects_field_validation">Valideerimine</string>
-    <string name="projects_field_min_length">Vähim pikkus</string>
-    <string name="projects_field_max_length">Suurim pikkus</string>
+    <string name="projects_field_min_length">Minimaalne pikkus</string>
+    <string name="projects_field_max_length">Maksimaalne pikkus</string>
     <string name="projects_field_pattern">Muster (regex)</string>
     <string name="projects_field_rows">Read (tekstiala kõrgus)</string>
     <string name="projects_field_no_options">Valikuid pole määratletud</string>

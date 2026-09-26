@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi フィード</string>
     <string name="feeds_source_type_feed_memories">メモリ</string>
-    <string name="feeds_remove_source">ソースを削除</string>
+    <string name="feeds_remove_source">ソースを削除しますか？</string>
     <string name="feeds_suggested_credibility_accept">承認</string>
     <string name="feeds_rss_url_copied">RSS URL をクリップボードにコピーしました</string>
     <string name="feeds_logout">ログアウト</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">未取得</string>
     <string name="feeds_source_poll">ポーリング</string>
-    <string name="feeds_source_transform">変換</string>
+    <string name="feeds_source_transform">AI 変換</string>
     <string name="feeds_remove_source_confirm">\"%1$s\" を削除しますか？</string>
     <string name="feeds_remove_also_delete_posts">インポートした投稿も削除する</string>
     <string name="feeds_suggested_credibility_title">おすすめの信頼度</string>
@@ -152,7 +152,7 @@
     <string name="feeds_access_segment_other">その他</string>
     <string name="feeds_access_select_group">グループを選択</string>
     <string name="feeds_access_selected">選択中: %1$s</string>
-    <string name="feeds_access_subject_anyone">全員</string>
+    <string name="feeds_access_subject_anyone">誰でも</string>
     <string name="feeds_access_subject_authenticated">認証済みユーザー</string>
     <string name="feeds_markdown_supported">Markdown対応</string>
     <string name="feeds_permission_deny">拒否</string>
@@ -171,7 +171,7 @@
     <string name="feeds_allow_search">誰でもフィードを検索できるようにする</string>
     <string name="feeds_post_content">投稿内容</string>
     <string name="feeds_enable_memories">メモリーを有効化</string>
-    <string name="feeds_permission_request_title">権限リクエスト</string>
+    <string name="feeds_permission_request_title">権限のリクエスト</string>
     <string name="feeds_unsubscribe_confirm">フィードの購読を解除しますか？</string>
     <string name="feeds_settings_title">%1$sの設定</string>
     <string name="feeds_source_transform_help">無効化するには空のままにしてください。</string>

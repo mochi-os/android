@@ -4,7 +4,7 @@
     <string name="settings_home_title">Налаштування</string>
     <string name="settings_home_logout">Вийти</string>
     <string name="settings_home_account">Обліковий запис</string>
-    <string name="settings_home_preferences">Налаштування</string>
+    <string name="settings_home_preferences">Параметри</string>
     <string name="settings_home_display">Відображення</string>
     <string name="settings_home_notification_prefs">Параметри сповіщень</string>
     <string name="settings_home_accounts">Підключені облікові записи</string>
@@ -60,7 +60,7 @@
     <string name="notifprefs_add_category">Додати категорію</string>
     <string name="notifprefs_new_category">Нова категорія</string>
     <string name="notifprefs_edit_category">Редагувати категорію</string>
-    <string name="notifprefs_name_label">Ім\'я</string>
+    <string name="notifprefs_name_label">Назва</string>
     <string name="notifprefs_destinations">Призначення</string>
     <string name="notifprefs_dest_web">Веббраузер</string>
     <string name="notifprefs_test">Тест</string>
@@ -93,7 +93,7 @@
     <string name="accounts_type_label">Тип</string>
     <string name="accounts_field_email">Електронна пошта</string>
     <string name="accounts_field_model">Модель</string>
-    <string name="accounts_field_name">Ім\'я</string>
+    <string name="accounts_field_name">Назва</string>
     <string name="accounts_status_pending">В очікуванні</string>
     <string name="accounts_status_verified">Перевірено</string>
     <string name="accounts_status_connected">Підключено</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">Пріоритет %1$d · %2$s</string>
     <string name="interests_search_placeholder">Шукати теми для додавання…</string>
     <string name="interests_empty">Поки немає інтересів.</string>
-    <string name="interests_summary_regenerate">Перегенерувати резюме</string>
+    <string name="interests_summary_regenerate">Згенерувати стислий виклад знову</string>
     <string name="interests_summary_regenerating">Перегенерація…</string>
     <string name="interests_summary_empty">Додайте кілька інтересів, щоб згенерувати резюме того, що вам подобається.</string>
     <string name="interests_search_failed">Пошук не вдався. Спробуйте ще раз.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s більше не керуватиме маршрутами на цьому домені.</string>
     <string name="domain_delegation_delete_title">Видалити делегування?</string>
     <string name="domain_delegation_path">Шлях</string>
-    <string name="domain_delegation_user">ID користувача</string>
+    <string name="domain_delegation_user">Користувач</string>
     <string name="domain_delegations">Делегування</string>
     <string name="domain_delegations_empty">Делегувань не налаштовано.</string>
     <string name="domain_delete">Видалити домен</string>

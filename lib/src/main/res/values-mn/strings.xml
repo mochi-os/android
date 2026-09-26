@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="error_access_denied">Хандалтыг татгалзсан</string>
+    <string name="error_access_denied">Хандалт хориглогдсон</string>
     <string name="auth_email">Имэйл</string>
     <string name="auth_continue">Үргэлжлүүлэх</string>
     <string name="auth_verification_code">Баталгаажуулах код</string>
@@ -25,13 +25,13 @@
     <string name="common_edit">Засах</string>
     <string name="common_delete">Устгах</string>
     <string name="common_add">Нэмэх</string>
-    <string name="common_notifications">Мэдэгдэл</string>
+    <string name="common_notifications">Мэдэгдлүүд</string>
     <string name="common_logout">Гарах</string>
     <string name="common_subscribe">Захиалах</string>
     <string name="common_copy">Хуулах</string>
     <string name="common_copied">Хуулбарласан</string>
     <string name="comment_edited">(засварласан)</string>
-    <string name="comment_reply">Хариу</string>
+    <string name="comment_reply">Хариулах</string>
     <string name="person_picker_search">Хэрэглэгчид хайх</string>
     <string name="place_picker_no_results">Газар олдсонгүй</string>
     <string name="discovery_recommended">Зөвлөмжтэй</string>
@@ -52,8 +52,8 @@
     <string name="reaction_disagree">Үл зөвшөөрөх</string>
     <string name="push_service_action_hide">Нуух</string>
     <string name="about_close">Хаах</string>
-    <string name="notifications_open">Мэдэгдэл</string>
-    <string name="notifications_title">Мэдэгдэл</string>
+    <string name="notifications_open">Мэдэгдлүүд</string>
+    <string name="notifications_title">Мэдэгдлүүд</string>
     <string name="notifications_empty">Мэдэгдэл алга</string>
     <string name="notifications_empty_unread">Бүгдийг үзсэн</string>
     <string name="notifications_tab_unread">Уншаагүй</string>
@@ -125,7 +125,7 @@
     <string name="game_chat_move_played">%1$s %2$s-г тоглосон</string>
 
     <string name="error_network">Холбогдох боломжгүй байна. Интернэт холболтоо шалгаад дахин оролдоно уу.</string>
-    <string name="error_authentication_required">Нэвтрэх шаардлагатай</string>
+    <string name="error_authentication_required">Нэвтрэлт шаардлагатай</string>
     <string name="error_not_found">Олдсонгүй</string>
     <string name="error_server">Серверийн алдаа (%1$d). Дараа дахин оролдоно уу.</string>
     <string name="error_unexpected">Гэнэтийн алдаа гарлаа</string>
@@ -164,7 +164,7 @@
     <string name="bootstrap_sign_in_different_server">Өөр серверт нэвтрэх</string>
     <string name="common_retry">Дахин оролдох</string>
     <string name="common_more_options">Бусад сонголтууд</string>
-    <string name="common_collapse">Хумих</string>
+    <string name="common_collapse">Хураах</string>
     <string name="common_expand">Дэлгэх</string>
     <string name="common_play_video">Бичлэг тоглуулах</string>
     <string name="place_picker_name">Газрын нэр</string>
@@ -190,7 +190,7 @@
     <string name="format_time_days_short">%1$d ө</string>
     <string name="format_time_weeks_short">%1$d дол</string>
     <string name="format_time_months_short">%1$d сар</string>
-    <string name="reaction_add">Хариу нэмэх</string>
+    <string name="reaction_add">Реакц нэмэх</string>
     <string name="push_service_channel">Mochi мэдэгдэл</string>
     <string name="push_service_channel_description">Mochi-г мэдэгдэл хүлээн авах боломжтой байлгана</string>
     <string name="push_service_group">Арын үйлчилгээ</string>
@@ -210,7 +210,7 @@
     <string name="about_up_to_date">Шинэчлэгдсэн</string>
     <string name="about_check_downloading">%1$s хувилбар боломжтой, татаж байна…</string>
     <string name="about_check_network_error">Шинэчлэлтийн серверт холбогдож чадсангүй</string>
-    <string name="about_check_download_failed">Татаж авч чадсангүй</string>
+    <string name="about_check_download_failed">Татаж чадсангүй</string>
     <string name="notifications_clear_all_title">Бүх мэдэгдлийг арилгах уу?</string>
     <string name="notifications_clear_all_message">Энэ нь бүх мэдэгдлийг устгана. Сэргээх боломжгүй.</string>
     <string name="settings_value_auto">Автомат</string>
@@ -258,7 +258,7 @@
     <string name="tags_interest_up">Иймэрхүү зүйлийг илүү харуулах</string>
     <string name="tags_interest_down">Иймэрхүү зүйлийг бага харуулах</string>
     <string name="tags_interest_clear">Харуулахаа болих</string>
-    <string name="tags_none">Шошго алга</string>
+    <string name="tags_none">Шошго байхгүй</string>
     <string name="tags_delete">Шошго хасах</string>
     <string name="person_picker_none">Алга</string>
     <string name="person_picker_clear">Сонголтыг цэвэрлэх</string>
@@ -310,7 +310,7 @@
     <string name="settings_card_flat">Хавтгай</string>
     <string name="settings_card_raised">Өргөгдсөн</string>
     <string name="error_server_https">Серверийн хаяг https:// -ээр эхлэх ёстой</string>
-    <string name="device_name_fallback">Гар утас</string>
+    <string name="device_name_fallback">Гар утасны төхөөрөмж</string>
     <string name="account_error_token_type">Дэмжигдээгүй токены төрөл</string>
     <string name="account_error_caller">Дуудагчид зөвшөөрөгдөөгүй</string>
 </resources>

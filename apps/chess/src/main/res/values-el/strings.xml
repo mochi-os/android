@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">Αποδοχή</string>
     <string name="chess_draw_decline">Απόρριψη</string>
     <string name="chess_status_checkmate_you_win">Ματ — κερδίζετε!</string>
-    <string name="chess_status_stalemate">Αδιέξοδο — ισοπαλία</string>
+    <string name="chess_status_stalemate">Πατ — ισοπαλία</string>
     <string name="chess_status_draw">Ισοπαλία</string>
     <string name="chess_status_check_your_move">Σαχ — η σειρά σας</string>
     <string name="chess_status_your_move">Η σειρά σας</string>
@@ -60,7 +60,7 @@
     <string name="chess_empty_subtitle">Ξεκινήστε την πρώτη παρτίδα σας για να παίξετε σκάκι με έναν φίλο.</string>
     <string name="chess_empty_start_button">Ξεκινήστε την πρώτη σας παρτίδα</string>
     <string name="chess_detail_unavailable">Παρτίδα μη διαθέσιμη</string>
-    <string name="chess_delete_title">Διαγραφή παρτίδας;</string>
+    <string name="chess_delete_title">Διαγραφή παιχνιδιού;</string>
     <string name="chess_delete_message">Αυτό αφαιρεί την παρτίδα από τη λίστα σας.</string>
     <string name="chess_ws_connecting">Σύνδεση…</string>
     <string name="chess_ws_disconnected">Εκτός σύνδεσης</string>

@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">আনসাবস্ক্রাইব করুন</string>
     <string name="forums_list_unsubscribe_title">আনসাবস্ক্রাইব করুন</string>
     <string name="forums_create_title">ফোরাম তৈরি করুন</string>
-    <string name="forums_create_name">নাম</string>
+    <string name="forums_create_name">ফোরামের নাম</string>
     <string name="forums_create_privacy">গোপনীয়তা</string>
     <string name="forums_create_private">প্রাইভেট</string>
     <string name="forums_create_public">সর্বজনীন</string>
-    <string name="forums_create_action">তৈরি করুন</string>
+    <string name="forums_create_action">ফোরাম তৈরি করুন</string>
     <string name="forums_find_title">ফোরাম খুঁজুন</string>
     <string name="forums_find_recommended">সুপারিশকৃত</string>
     <string name="forums_find_subscribe">সাবস্ক্রাইব করুন</string>
@@ -154,7 +154,7 @@
     <string name="forums_banner_placeholder">এই ফোরামে স্বাগতম…</string>
     <string name="forums_ai_mode_label">মোড: %1$s</string>
     <string name="forums_ai_mode_heading">AI মোড</string>
-    <string name="forums_ai_mode_off">বন্ধ</string>
+    <string name="forums_ai_mode_off">নিষ্ক্রিয়</string>
     <string name="forums_ai_account">AI অ্যাকাউন্ট</string>
     <string name="forums_ai_prompt_tag">ট্যাগিং প্রম্পট</string>
     <string name="forums_ai_prompt_score">স্কোরিং প্রম্পট</string>
@@ -178,7 +178,7 @@
     <string name="forums_comment_edit_body_field">বিষয়বস্তু</string>
     <string name="forums_comment_delete_message">আপনি কি নিশ্চিতভাবে এই মন্তব্যটি মুছে ফেলতে চান?</string>
     <string name="forums_comment_replying_to">%1$s-কে উত্তর দেওয়া হচ্ছে</string>
-    <string name="forums_comment_clear_reply">উত্তর পরিষ্কার করুন</string>
+    <string name="forums_comment_clear_reply">উত্তর সরান</string>
     <string name="forums_settings_title">%1$s সেটিংস</string>
     <string name="forums_settings_rename_label">ফোরামের নাম</string>
     <string name="forums_settings_danger_zone">ঝুঁকিপূর্ণ এলাকা</string>
@@ -213,8 +213,8 @@
     <string name="forums_markdown_supported">Markdown সমর্থিত</string>
     <string name="forums_attachment_file">ফাইল</string>
     <string name="forums_attachment_remove">সরান</string>
-    <string name="forums_attachment_move_up">উপরে নিন</string>
-    <string name="forums_attachment_move_down">নিচে নিন</string>
+    <string name="forums_attachment_move_up">উপরে সরান</string>
+    <string name="forums_attachment_move_down">নিচে সরান</string>
     <string name="forums_post_comments">মন্তব্য</string>
     <string name="forums_all_forums">সব ফোরাম</string>
     <string name="forums_create_allow_search">যে কাউকে ফোরাম অনুসন্ধান করার অনুমতি দিন</string>
@@ -276,8 +276,8 @@
     <string name="forums_moderation_restriction_by">%1$s দ্বারা</string>
     <string name="forums_moderation_restriction_remove_message">সঙ্গে সঙ্গে ফোরামে পূর্ণ প্রবেশাধিকার ফিরে পাবে।</string>
     <string name="forums_moderation_restriction_remove_title">%1$s-এর বিধিনিষেধ সরাবেন?</string>
-    <string name="forums_moderation_restriction_state_muted">নিঃশব্দ</string>
-    <string name="forums_moderation_restriction_state_shadowban">ছায়া নিষেধাজ্ঞা</string>
+    <string name="forums_moderation_restriction_state_muted">মিউট করা</string>
+    <string name="forums_moderation_restriction_state_shadowban">গোপনে নিষিদ্ধ</string>
     <string name="forums_moderation_restrictions_empty_subtitle">কোনো ব্যবহারকারীকে নিঃশব্দ বা নিষিদ্ধ করা হয়নি</string>
     <string name="forums_moderation_section_premoderation_description">বিষয়বস্তু দৃশ্যমান হওয়ার আগে অনুমোদন বাধ্যতামূলক করুন</string>
     <string name="forums_moderation_section_ratelimiting_description">ব্যবহারকারীরা কত ঘন ঘন পোস্ট করতে পারবে তা সীমিত করে স্প্যাম ঠেকান</string>
@@ -286,10 +286,10 @@
     <string name="forums_moderation_unit_replies">উত্তর</string>
     <string name="forums_moderation_unit_seconds">সেকেন্ড</string>
     <string name="forums_settings_ai_updated">AI সেটিংস আপডেট হয়েছে</string>
-    <string name="forums_settings_forum_renamed">ফোরামের নাম পরিবর্তিত হয়েছে</string>
+    <string name="forums_settings_forum_renamed">ফোরামের নাম পরিবর্তন করা হয়েছে</string>
     <string name="forums_settings_name_clear_cd">নাম মুছুন</string>
     <string name="forums_settings_unsubscribe_section">ফোরামের সদস্যতা বাতিল করুন</string>
-    <string name="forums_share_link_title">ফোরামের লিঙ্ক</string>
+    <string name="forums_share_link_title">ফোরাম লিঙ্ক</string>
     <string name="forums_find_found_by_url">URL দিয়ে পাওয়া গেছে</string>
     <string name="forums_moderation_pending_posts">অপেক্ষমাণ পোস্ট (%1$d)</string>
     <string name="forums_moderation_pending_comments">অপেক্ষমাণ মন্তব্য (%1$d)</string>

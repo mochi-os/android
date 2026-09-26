@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="error_access_denied">Yaykuy mana saqisqa</string>
+    <string name="error_access_denied">Yaykuy mana saqisqachu</string>
     <string name="auth_email">Email</string>
     <string name="auth_continue">Qatiy</string>
     <string name="auth_verification_code">Qhawariy codigo</string>
@@ -56,7 +56,7 @@
     <string name="notifications_title">Notificacionkuna</string>
     <string name="notifications_empty">Mana willaykuna</string>
     <string name="notifications_empty_unread">Llapanta ñawinchashkañam</string>
-    <string name="notifications_tab_unread">Mana ñawinchashka</string>
+    <string name="notifications_tab_unread">Mana ñawinchasqa</string>
     <string name="notifications_tab_unread_count">Mana ñawinchashka (%1$d)</string>
     <string name="notifications_tab_all">Llapan</string>
     <string name="notifications_mark_all_read">Llapanta ñawinchasqaman churay</string>
@@ -108,7 +108,7 @@
     <string name="settings_display_reset_confirm_message">Kayqa rikuy chimpunakuna tukuypiman kutiyanqa.</string>
     <string name="settings_theme_title">Tema</string>
     <string name="settings_theme_default">Predeterminado</string>
-    <string name="settings_background">Qhipa</string>
+    <string name="settings_background">Qhipa rikch\'ay</string>
     <string name="settings_background_theme">Temamanta</string>
     <string name="settings_background_off">Mana</string>
     <string name="game_chat_empty">Manaraq mensajekuna</string>
@@ -125,21 +125,21 @@
 
     <string name="error_network">Mana tinkichiyta atipanichu. Internet tinkichiyniykita qhaway, hinaspa hukmanta ruway.</string>
     <string name="error_authentication_required">Riqsichikuy munasqa</string>
-    <string name="error_not_found">Mana tarisqachu</string>
+    <string name="error_not_found">Mana tarikunchu</string>
     <string name="error_server">Servidorpi pantay (%1$d). Aswan qhipaman hukmanta ruway.</string>
     <string name="error_unexpected">Mana suyasqa pantay rikhurirqan</string>
     <string name="error_enter_server_url">Ama hina kaspa, servidor URL churay</string>
     <string name="error_enter_email">Ama hina kaspa, email-niykita churay</string>
     <string name="error_enter_name">Ama hina kaspa, huk sutita churay</string>
     <string name="auth_connect_to_server">Servidorniykiman tinkichiy</string>
-    <string name="auth_connect">Tinkichiy</string>
+    <string name="auth_connect">Tinkiy</string>
     <string name="auth_sign_in">Yaykuy</string>
     <string name="auth_check_email">Email-niykita qhaway riqsichiy código-paq</string>
     <string name="auth_mfa_title">Achkha-rikch\'aq riqsichikuy</string>
     <string name="auth_mfa_subtitle">Puchuq riqsichikuy ruwaykunata tukuchiy</string>
     <string name="auth_recover_account">Cuenta-ta kutichiy</string>
     <string name="auth_login_title">Mochi-man yaykuy</string>
-    <string name="auth_next">Qatiq</string>
+    <string name="auth_next">Qatiqnin</string>
     <string name="auth_or_log_in_with">Icha kaywan yaykuy</string>
     <string name="auth_passkey">Yaykuna llave</string>
     <string name="auth_use_passkey">Passkey-ta apaykachay</string>
@@ -162,10 +162,10 @@
     <string name="bootstrap_choose_account">Huk cuenta-ta akllay</string>
     <string name="bootstrap_sign_in_different_server">Huk servidor-man yaykuy</string>
     <string name="common_not_saved">Mana waqaychasqa</string>
-    <string name="common_retry">Hukmanta ruway</string>
-    <string name="common_more_options">Aswan akllanakuna</string>
-    <string name="common_collapse">Wisq\'ay</string>
-    <string name="common_expand">Kichay</string>
+    <string name="common_retry">Wakmanta ruway</string>
+    <string name="common_more_options">Astawan akllaykuna</string>
+    <string name="common_collapse">Wisqʼay</string>
+    <string name="common_expand">Mastʼariy</string>
     <string name="common_play_video">Video-ta tukachiy</string>
     <string name="place_picker_name">Cheqaq suti</string>
     <string name="place_origin">Paqarisqan</string>
@@ -175,10 +175,10 @@
     <string name="access_add_rule_title">Yaykuy kamachikuyta yapay</string>
     <string name="access_level_manage">Kamachiy</string>
     <string name="access_level_react">Kutichiy</string>
-    <string name="notifications_clear">Willaykunata pichay</string>
+    <string name="notifications_clear">Willakuykunata pichay</string>
     <string name="entity_avatar_alt">%1$s-paq Avatar</string>
     <string name="media_grid_more_count">+%1$d</string>
-    <string name="format_time_just_now">Kunallan</string>
+    <string name="format_time_just_now">Kunanlla</string>
     <string name="format_time_minutes_ago">%1$dm ñawpaq</string>
     <string name="format_time_hours_ago">%1$dh ñawpaq</string>
     <string name="format_time_days_ago">%1$dd ñawpaq</string>
@@ -190,7 +190,7 @@
     <string name="format_time_days_short">%1$dd</string>
     <string name="format_time_weeks_short">%1$d sem</string>
     <string name="format_time_months_short">%1$d killa</string>
-    <string name="reaction_add">Kutichiyta yapay</string>
+    <string name="reaction_add">Reaccionta yapay</string>
     <string name="push_service_channel">Mochi willakuykuna</string>
     <string name="push_service_channel_description">Mochi-ta tinkichisqa hark\'an willaykunata chaskinapaq</string>
     <string name="push_service_group">Qhipa ñawpaq llamk\'ay</string>
@@ -210,7 +210,7 @@
     <string name="about_up_to_date">Musuqchasqaña</string>
     <string name="about_check_downloading">Versión %1$s kachkan, urquchkan…</string>
     <string name="about_check_network_error">Musuqchay servidorman mana chayayta atikunchu</string>
-    <string name="about_check_download_failed">Uraykachiy mana atikunchu</string>
+    <string name="about_check_download_failed">Urayachiy mana atikurqanchu</string>
     <string name="notifications_clear_all_title">Llapan willaykunata pichanachu?</string>
     <string name="notifications_clear_all_message">Kayqa llapan willaykunata pichanqa. Manañam kutirichiyta atinmanchu.</string>
     <string name="settings_value_auto">Kikinmanta</string>
@@ -238,7 +238,7 @@
     <string name="stepup_error_oauth">Chay cuentawanqa mana takyachiyta atikurqachu. Ama hina kaspa watiqmanta llamk\'apuy.</string>
     <string name="game_system_resign">%1$s haykurqa</string>
     <string name="game_system_draw_offer">%1$s kikllachakuyta rikuchirqa</string>
-    <string name="game_system_draw_accept">Kikllachakuy ari nisqa</string>
+    <string name="game_system_draw_accept">Empate rimasqa</string>
     <string name="game_system_draw_decline">%1$s kikllachakuyta mana munarqachu</string>
     <string name="reactivation_title">Cuentaykita pichanapaq churasqaña</string>
     <string name="reactivation_body">Cuentaykita pichanapaq churasqaña. Kunanmi sayachiyta hinaspa llapan yaykuyta kutichiyta atinki.</string>
@@ -254,7 +254,7 @@
     <string name="common_logout_confirm_message">¿Chiqaptapunichu lluqsiyta munanki? Cuentaykiman kutimunaykipaqqa, musuqmanta yaykunayki kanqa.</string>
     <string name="comment_anonymous">Mana sutiyuq</string>
     <string name="tags_label">Chimpukuna</string>
-    <string name="tags_add">Tag yapay</string>
+    <string name="tags_add">Unanchata yapay</string>
     <string name="tags_interest_up">Kayman rikch\'akuqkunata aswan rikuchiy</string>
     <string name="tags_interest_down">Kayman rikch\'akuqkunata pisi rikuchiy</string>
     <string name="tags_interest_clear">Ama rikuchiychu</string>
@@ -263,7 +263,7 @@
     <string name="person_picker_none">Mana</string>
     <string name="person_picker_clear">Akllasqa pichay</string>
     <string name="person_picker_select">Akllay …</string>
-    <string name="person_picker_directory">Directorio</string>
+    <string name="person_picker_directory">Katalogo</string>
     <string name="person_picker_no_people">Mana runakuna kanchu</string>
     <string name="person_picker_project_members">Proyectopi ruraqkuna</string>
     <string name="account_token_label">Mochi sesión</string>
@@ -288,7 +288,7 @@
     <string name="lightbox_comments">Comentarios</string>
     <string name="common_attachment_unavailable">Ratapasqa kunanpaq mana tarikunchu</string>
     <string name="common_unavailable">Mana atikuq</string>
-    <string name="common_not_found">Mana tarisqachu</string>
+    <string name="common_not_found">Mana tarikunchu</string>
     <string name="format_bold">Rakhu qillqa</string>
     <string name="format_italic">Kinray qillqa</string>
     <string name="format_link">T\'inki</string>
@@ -310,7 +310,7 @@
     <string name="settings_card_flat">Pampa</string>
     <string name="settings_card_raised">Hoqarisqa</string>
     <string name="error_server_https">Servidor kaynin https:// wan qallarinan</string>
-    <string name="device_name_fallback">Puriq antawa</string>
+    <string name="device_name_fallback">Celular</string>
     <string name="account_error_token_type">Mana yanapasqa token laya</string>
     <string name="account_error_caller">Waqyaqqa mana saqisqachu</string>
 </resources>

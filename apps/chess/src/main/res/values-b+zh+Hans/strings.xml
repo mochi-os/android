@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">接受</string>
     <string name="chess_draw_decline">拒绝</string>
     <string name="chess_status_checkmate_you_win">将死 — 你赢了!</string>
-    <string name="chess_status_stalemate">僵局 — 平局</string>
+    <string name="chess_status_stalemate">逼和 — 和棋</string>
     <string name="chess_status_draw">和棋</string>
     <string name="chess_status_check_your_move">将军 — 轮到你了</string>
     <string name="chess_status_your_move">轮到您</string>

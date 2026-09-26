@@ -74,7 +74,7 @@
     <string name="calendars_workweek">هفته کاری</string>
     <string name="calendars_range">%1$s تا %2$s</string>
     <string name="calendars_truncated">برخی از رویدادهای این بازه نمایش داده نمی‌شوند.</string>
-    <string name="calendars_list_empty">رویدادی وجود ندارد</string>
+    <string name="calendars_list_empty">هیچ رویدادی وجود ندارد</string>
     <plurals name="calendars_more">
         <item quantity="one">+%1$d بیشتر</item>
         <item quantity="other">+%1$d بیشتر</item>
@@ -154,7 +154,7 @@
     <string name="calendars_link_submit">پیوند دادن</string>
     <string name="calendars_link_sync">همگام‌سازی اکنون</string>
     <string name="calendars_link_grant">اجازهٔ دسترسی به تقویم</string>
-    <string name="calendars_link_linked">پیوندشده</string>
+    <string name="calendars_link_linked">پیوند داده شده</string>
     <string name="calendars_link_marker">تقویم پیوندشده</string>
     <string name="calendars_link_remote_empty">هیچ تقویمی وجود ندارد</string>
     <string name="calendars_poll_conflict">یک رویداد در هر دو سو تغییر کرده است</string>

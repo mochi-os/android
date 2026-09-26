@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Dezabonează-te</string>
     <string name="forums_list_unsubscribe_title">Dezabonează-te</string>
     <string name="forums_create_title">Creează forum</string>
-    <string name="forums_create_name">Nume</string>
+    <string name="forums_create_name">Numele forumului</string>
     <string name="forums_create_privacy">Confidențialitate</string>
     <string name="forums_create_private">Privat</string>
     <string name="forums_create_public">Public</string>
-    <string name="forums_create_action">Creează</string>
+    <string name="forums_create_action">Creează forum</string>
     <string name="forums_find_title">Găsește forumuri</string>
     <string name="forums_find_recommended">Recomandat</string>
     <string name="forums_find_subscribe">Abonează-te</string>
@@ -145,7 +145,7 @@
     <string name="forums_post_vote_down">Vot negativ</string>
     <string name="forums_post_quote">Citează în răspuns</string>
     <string name="forums_comment_quote">Citează în răspuns</string>
-    <string name="forums_post_tag_remove">Eliminați eticheta</string>
+    <string name="forums_post_tag_remove">Elimină eticheta</string>
     <string name="forums_access_add">Adăugați regulă de acces</string>
     <string name="forums_access_empty">Încă nicio regulă — se aplică valorile implicite</string>
     <string name="forums_access_target_hint">ID entitate, @grup, * (toți) sau + (membri)</string>
@@ -163,7 +163,7 @@
     <string name="forums_ai_post_prompt_label">Prompt pentru etichetele postărilor</string>
     <string name="forums_ai_comment_prompt_label">Prompt pentru etichetele comentariilor</string>
     <string name="forums_settings_fingerprint">Amprentă: %1$s</string>
-    <string name="forums_settings_clear_notifications">Ștergeți notificările</string>
+    <string name="forums_settings_clear_notifications">Șterge notificările</string>
     <string name="forums_moderation_queue_empty">Nimic în așteptare</string>
     <string name="forums_moderation_report_details">Detalii: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Rezolvat de %1$s — %2$s</string>
@@ -278,7 +278,7 @@
     <string name="forums_moderation_restriction_remove_message">Recapătă imediat accesul complet la forum.</string>
     <string name="forums_moderation_restriction_remove_title">Elimini restricția pentru %1$s?</string>
     <string name="forums_moderation_restriction_state_muted">Amuțit</string>
-    <string name="forums_moderation_restriction_state_shadowban">Interdicție ascunsă</string>
+    <string name="forums_moderation_restriction_state_shadowban">Blocat pe ascuns</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Niciun utilizator nu a fost amuțit sau interzis</string>
     <string name="forums_moderation_section_premoderation_description">Solicită aprobare înainte ca un conținut să devină vizibil</string>
     <string name="forums_moderation_section_ratelimiting_description">Previi spamul limitând cât de des pot posta utilizatorii</string>

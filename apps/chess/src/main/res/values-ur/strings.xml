@@ -31,7 +31,7 @@
     <string name="chess_draw_accept">قبول کریں</string>
     <string name="chess_draw_decline">انکار کریں</string>
     <string name="chess_status_checkmate_you_win">چیک میٹ — آپ جیت گئے!</string>
-    <string name="chess_status_stalemate">تعطل — ڈرا</string>
+    <string name="chess_status_stalemate">پاٹ — برابر</string>
     <string name="chess_status_draw">برابر</string>
     <string name="chess_status_check_your_move">چیک — آپ کی چال</string>
     <string name="chess_status_your_move">آپ کی چال</string>
@@ -58,12 +58,12 @@
     <string name="chess_empty_subtitle">دوست کے ساتھ شطرنج کھیلنے کے لیے اپنا پہلا کھیل شروع کریں۔</string>
     <string name="chess_empty_start_button">اپنا پہلا کھیل شروع کریں</string>
     <string name="chess_detail_unavailable">کھیل دستیاب نہیں</string>
-    <string name="chess_delete_title">کھیل حذف کریں؟</string>
+    <string name="chess_delete_title">گیم حذف کریں؟</string>
     <string name="chess_delete_message">یہ آپ کی فہرست سے کھیل کو ہٹا دیتا ہے۔</string>
-    <string name="chess_ws_connecting">جوڑ رہے ہیں…</string>
+    <string name="chess_ws_connecting">منسلک ہو رہا ہے…</string>
     <string name="chess_ws_disconnected">آف لائن</string>
     <string name="chess_ws_reconnecting">دوبارہ جوڑ رہے ہیں…</string>
-    <string name="chess_ws_failed">کنیکشن ناکام</string>
+    <string name="chess_ws_failed">کنکشن ناکام ہوا</string>
     <string name="chess_move_capture">%1$s نے %2$s کو لیا</string>
     <string name="chess_captured_multiplier">×%1$d</string>
     <string name="chess_piece_white">سفید %1$s</string>

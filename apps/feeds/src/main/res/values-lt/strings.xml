@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi srautas</string>
     <string name="feeds_source_type_feed_memories">Atmintys</string>
-    <string name="feeds_remove_source">Pašalinti šaltinį</string>
+    <string name="feeds_remove_source">Šalinti šaltinį?</string>
     <string name="feeds_suggested_credibility_accept">Priimti</string>
     <string name="feeds_rss_url_copied">RSS URL nukopijuotas į iškarpinę</string>
     <string name="feeds_logout">Atsijungti</string>
@@ -100,7 +100,7 @@
     <string name="feeds_unable_to_load">Nepavyko įkelti puslapio</string>
     <string name="feeds_delete_post_confirm">Ar tikrai norite ištrinti šį įrašą? Šio veiksmo atšaukti negalima.</string>
     <string name="feeds_delete_comment_confirm">Ar tikrai norite ištrinti šį komentarą?</string>
-    <string name="feeds_anonymous">Anoniminis</string>
+    <string name="feeds_anonymous">Anonimas</string>
     <string name="feeds_replying_to_author">Atsakoma %1$s</string>
     <string name="feeds_attach_file">Pridėti failą</string>
     <string name="feeds_file">Failas</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">Niekada negauta</string>
     <string name="feeds_source_poll">Apklausa</string>
-    <string name="feeds_source_transform">Transformuoti</string>
+    <string name="feeds_source_transform">DI transformacija</string>
     <string name="feeds_remove_source_confirm">Pašalinti \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Taip pat ištrinti importuotus įrašus</string>
     <string name="feeds_suggested_credibility_title">Siūlomas patikimumas</string>

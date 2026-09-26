@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Qichuy</string>
     <string name="wikis_replicas_remove_failed">Mana replicata pichayta atinchu</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wikikuna</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">Wiki panqa allichaykuna, rimaykuna, waqyaykunamanta willakuykuna.</string>
     <string name="wikis_pageview_toc_expand">Yachay qillqa rikuchiy</string>
@@ -225,7 +225,7 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Musuqchasqa %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” panqaqa manaraqmi kanchu.</string>
-    <string name="wikis_pageview_share_chooser">Wiki t’inki</string>
+    <string name="wikis_pageview_share_chooser">Wiki t\'inki</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">T\'inki</string>
     <string name="wikis_open_sidebar">Lado tarjeta kicharikuy</string>
@@ -261,12 +261,12 @@
     <string name="wikis_redirect_delete_confirm_message">Kayqa “%1$s” nisqamanta “%2$s” nisqaman pusaqta hurqunqa. Ñawpaq URL nisqaman yaykuqkunaqa manaña pusasqachu kanqaku.</string>
     <string name="wikis_tags_subtitle">Panqakunata sutichaywan qhaway. Chay sutichaypa llapa panqankunata rikunaykipaq sutichayta ñit’iy.</string>
     <string name="wikis_tag_pages_title_template">\"%1$s\" unanchayuq páginakuna</string>
-    <string name="wikis_tag_manager_add_action">Unancha yapay</string>
+    <string name="wikis_tag_manager_add_action">Unanchata yapay</string>
     <string name="wikis_tag_manager_remove_confirm_title">Unanchata qichuy?</string>
     <string name="wikis_tag_manager_remove_confirm_message">¿“%1$s” sutichayta kay panqamanta hurquy?</string>
     <string name="wikis_tag_manager_added">Unancha \"%1$s\" yapasqa</string>
     <string name="wikis_tag_manager_removed">Unancha \"%1$s\" qichusqa</string>
-    <string name="wikis_tag_dialog_title">Unancha yapay</string>
+    <string name="wikis_tag_dialog_title">Unanchata yapay</string>
     <string name="wikis_tag_dialog_empty">Ch’usaq sutichay mana atikunchu</string>
     <string name="wikis_attachments_search_placeholder">Adjuntokunata maskay…</string>
     <string name="wikis_attachments_delete_confirm_message">¿“%1$s” qulluy? Kayqa mana kutichiy atinachu.</string>
@@ -283,7 +283,7 @@
     <string name="wikis_load_more">Aswan wichachiy</string>
     <string name="wikis_access_change_level">Yaykuy patachan</string>
     <string name="wikis_access_subject_anyone">Pipas</string>
-    <string name="wikis_access_subject_authenticated">Riqsichisqa ruraqkuna</string>
+    <string name="wikis_access_subject_authenticated">Chiqanchasqa ruraqkuna</string>
 
     <string name="wikis_revision_compare">Hukchasqakunata tupachiy</string>
     <string name="wikis_revision_author">%1$s-rayku</string>

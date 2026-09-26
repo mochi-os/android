@@ -41,7 +41,7 @@
     <string name="market_bids_tab_active">Активно</string>
     <string name="market_bids_tab_all">Все</string>
     <string name="market_bids_tab_lost">Проигран</string>
-    <string name="market_bids_tab_outbid">Перебита</string>
+    <string name="market_bids_tab_outbid">Ставка перебита</string>
     <string name="market_bids_tab_won">Выиграна</string>
     <string name="market_bids_title">Ставки</string>
     <string name="market_channel_name">Маркет</string>
@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Пожаловаться на объявление</string>
     <string name="market_listing_detail_save">Сохранить</string>
     <string name="market_listing_detail_seller_heading">Продавец</string>
-    <string name="market_listing_detail_shipping_heading">Доставка</string>
+    <string name="market_listing_detail_shipping_heading">Варианты доставки</string>
     <string name="market_listing_detail_subscribe">Подписаться</string>
     <string name="market_listing_detail_tags_heading">Теги</string>
     <string name="market_listing_detail_title">Объявление</string>
@@ -512,7 +512,7 @@
     <string name="market_editor_zone_worldwide">Весь мир</string>
     <string name="market_editor_zones_empty">Зоны ещё не добавлены</string>
     <string name="market_empty_subtitle">Попробуйте изменить или сбросить фильтры.</string>
-    <string name="market_empty_title">Ничего не найдено</string>
+    <string name="market_empty_title">Нет результатов</string>
     <string name="market_fee_disclosure_body">Комиссия платформы: %1$s%%. Комиссии платёжной системы смотрите в панели Stripe.</string>
     <string name="market_fee_disclosure_title">Комиссии платформы</string>
     <string name="market_fee_preview_failed">Не удалось рассчитать комиссии</string>

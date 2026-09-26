@@ -244,7 +244,7 @@
     <string name="projects_request_create_title">Opprett flettforespørsel</string>
     <string name="projects_request_field_target">Målgren</string>
     <string name="projects_diff_title">Diff: %1$s -&gt; %2$s</string>
-    <string name="projects_tree_collapse">Slå sammen</string>
+    <string name="projects_tree_collapse">Skjul</string>
     <string name="projects_tree_expand">Utvid</string>
     <string name="projects_tree_move">Flytt</string>
     <string name="projects_tree_move_to_parent">Flytt til overordnet</string>
@@ -288,7 +288,7 @@
     <string name="projects_field_show_on_card">Vis på kort</string>
     <string name="projects_field_multi">Flervalg</string>
     <string name="projects_field_position">Visningsposisjon</string>
-    <string name="projects_field_position_header">Overskrift</string>
+    <string name="projects_field_position_header">Topptekst</string>
     <string name="projects_field_validation">Validering</string>
     <string name="projects_field_min_length">Min. lengde</string>
     <string name="projects_field_max_length">Maks. lengde</string>

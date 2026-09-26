@@ -7,7 +7,7 @@
     <string name="auth_verification_code">驗證碼</string>
     <string name="auth_email_code">電子郵件代碼</string>
     <string name="auth_recovery_code">復原代碼</string>
-    <string name="auth_name">名稱</string>
+    <string name="auth_name">姓名</string>
     <string name="auth_create">建立</string>
     <string name="auth_privacy_label">隱私</string>
     <string name="auth_privacy_public">公開</string>
@@ -123,7 +123,7 @@
 
     <string name="app_brand">Mochi</string>
     <string name="error_network">無法連線。請檢查您的網際網路連線後再試一次。</string>
-    <string name="error_authentication_required">需要驗證身分</string>
+    <string name="error_authentication_required">需要驗證</string>
     <string name="error_not_found">找不到</string>
     <string name="error_server">伺服器錯誤 (%1$d)。請稍後再試。</string>
     <string name="error_unexpected">發生未預期的錯誤</string>
@@ -138,7 +138,7 @@
     <string name="auth_mfa_subtitle">完成其餘的驗證步驟</string>
     <string name="auth_recover_account">復原帳戶</string>
     <string name="auth_login_title">登入 Mochi</string>
-    <string name="auth_next">下一步</string>
+    <string name="auth_next">下一個</string>
     <string name="auth_or_log_in_with">或使用以下方式登入</string>
     <string name="auth_passkey">通行密鑰</string>
     <string name="auth_use_passkey">使用通行金鑰</string>
@@ -238,7 +238,7 @@
     <string name="stepup_error_oauth">無法使用該帳戶進行驗證。請重試。</string>
     <string name="game_system_resign">%1$s 認輸</string>
     <string name="game_system_draw_offer">%1$s 提出和棋</string>
-    <string name="game_system_draw_accept">同意和棋</string>
+    <string name="game_system_draw_accept">已同意和棋</string>
     <string name="game_system_draw_decline">%1$s 拒絕和棋</string>
     <string name="reactivation_title">你的帳戶已排定刪除</string>
     <string name="reactivation_body">你的帳戶已排定刪除。你現在可以取消並還原完整存取權限。</string>

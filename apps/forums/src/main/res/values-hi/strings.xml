@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">अनसब्सक्राइब करें</string>
     <string name="forums_list_unsubscribe_title">अनसब्सक्राइब करें</string>
     <string name="forums_create_title">फ़ोरम बनाएँ</string>
-    <string name="forums_create_name">नाम</string>
+    <string name="forums_create_name">फ़ोरम का नाम</string>
     <string name="forums_create_privacy">गोपनीयता</string>
     <string name="forums_create_private">निजी</string>
     <string name="forums_create_public">सार्वजनिक</string>
-    <string name="forums_create_action">बनाएँ</string>
+    <string name="forums_create_action">फ़ोरम बनाएँ</string>
     <string name="forums_find_title">फ़ोरम खोजें</string>
     <string name="forums_find_recommended">सुझाया गया</string>
     <string name="forums_find_subscribe">सब्सक्राइब करें</string>
@@ -156,7 +156,7 @@
     <string name="forums_banner_placeholder">इस फ़ोरम में आपका स्वागत है…</string>
     <string name="forums_ai_mode_label">मोड: %1$s</string>
     <string name="forums_ai_mode_heading">AI मोड</string>
-    <string name="forums_ai_mode_off">बंद</string>
+    <string name="forums_ai_mode_off">अक्षम</string>
     <string name="forums_ai_account">AI खाता</string>
     <string name="forums_ai_prompt_tag">टैगिंग प्रॉम्प्ट</string>
     <string name="forums_ai_prompt_score">स्कोरिंग प्रॉम्प्ट</string>
@@ -276,8 +276,8 @@
     <string name="forums_moderation_restriction_by">%1$s द्वारा</string>
     <string name="forums_moderation_restriction_remove_message">उन्हें तुरंत फ़ोरम तक पूरी पहुँच वापस मिल जाएगी।</string>
     <string name="forums_moderation_restriction_remove_title">%1$s पर लगा प्रतिबंध हटाएँ?</string>
-    <string name="forums_moderation_restriction_state_muted">म्यूट</string>
-    <string name="forums_moderation_restriction_state_shadowban">शैडोबैन</string>
+    <string name="forums_moderation_restriction_state_muted">म्यूट किया गया</string>
+    <string name="forums_moderation_restriction_state_shadowban">छिपकर बैन किया गया</string>
     <string name="forums_moderation_restrictions_empty_subtitle">किसी उपयोगकर्ता को म्यूट या प्रतिबंधित नहीं किया गया</string>
     <string name="forums_moderation_section_premoderation_description">सामग्री दिखने से पहले स्वीकृति अनिवार्य करें</string>
     <string name="forums_moderation_section_ratelimiting_description">उपयोगकर्ताओं के पोस्ट करने की आवृत्ति सीमित करके स्पैम रोकें</string>
@@ -286,7 +286,7 @@
     <string name="forums_moderation_unit_replies">उत्तर</string>
     <string name="forums_moderation_unit_seconds">सेकंड</string>
     <string name="forums_settings_ai_updated">AI सेटिंग्स अपडेट हो गईं</string>
-    <string name="forums_settings_forum_renamed">फ़ोरम का नाम बदल गया</string>
+    <string name="forums_settings_forum_renamed">फ़ोरम का नाम बदला गया</string>
     <string name="forums_settings_name_clear_cd">नाम साफ़ करें</string>
     <string name="forums_settings_unsubscribe_section">फ़ोरम की सदस्यता छोड़ें</string>
     <string name="forums_share_link_title">फ़ोरम लिंक</string>

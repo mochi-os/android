@@ -242,7 +242,7 @@
     <string name="route_meta">עדיפות %1$d · %2$s</string>
     <string name="interests_search_placeholder">חפש נושאים להוספה…</string>
     <string name="interests_empty">עדיין אין תחומי עניין.</string>
-    <string name="interests_summary_regenerate">צור מחדש סיכום</string>
+    <string name="interests_summary_regenerate">צור סיכום מחדש</string>
     <string name="interests_summary_regenerating">יוצר מחדש…</string>
     <string name="interests_summary_empty">הוסף תחומי עניין כדי לייצר סיכום של מה שאתה אוהב.</string>
     <string name="interests_search_failed">החיפוש נכשל. נסה שוב.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s כבר לא ינהל מסלולים בדומיין זה.</string>
     <string name="domain_delegation_delete_title">למחוק האצלת סמכויות?</string>
     <string name="domain_delegation_path">נתיב</string>
-    <string name="domain_delegation_user">מזהה משתמש</string>
+    <string name="domain_delegation_user">משתמש</string>
     <string name="domain_delegations">האצלות סמכויות</string>
     <string name="domain_delegations_empty">לא הוגדרו האצלות.</string>
     <string name="domain_delete">מחק דומיין</string>
@@ -395,7 +395,7 @@
     <string name="accounts_capability_calendar">יומן</string>
     <string name="accounts_capability_notify">התראות</string>
     <string name="accounts_capability_ai">AI</string>
-    <string name="accounts_capability_login">כניסה</string>
+    <string name="accounts_capability_login">התחברות</string>
     <string name="accounts_provider_caldav">שרת יומנים</string>
     <string name="accounts_revoke_confirm">פעולה זו תבטל את גישת היומן של %1$s. הכניסה עם %2$s תישאר עד שתנתק אותה בדף הכניסה.</string>
     <string name="accounts_capability_mcp">MCP</string>

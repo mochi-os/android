@@ -193,7 +193,7 @@
     <string name="projects_views_filter">فیلتر (ذخیره شد، هنوز اعمال نشده)</string>
     <string name="projects_people_empty">هنوز هیچ‌کس دسترسی ندارد</string>
     <string name="projects_settings_delete_confirm_message">آیا مطمئن هستید که می‌خواهید این پروژه را حذف کنید؟ همه اشیاء، نظرات و تنظیمات برای همیشه حذف خواهند شد.</string>
-    <string name="projects_object_unwatch">لغو پایش</string>
+    <string name="projects_object_unwatch">لغو دنبال کردن</string>
     <string name="projects_object_tab_watchers">پایشگران</string>
     <string name="projects_watchers_empty">هنوز پایشگری وجود ندارد</string>
     <string name="projects_object_delete_title">حذف شیء</string>
@@ -246,7 +246,7 @@
     <string name="projects_diff_title">تفاوت: %1$s -&gt; %2$s</string>
     <string name="projects_tree_collapse">جمع کردن</string>
     <string name="projects_tree_expand">گسترش</string>
-    <string name="projects_tree_move">جابجایی</string>
+    <string name="projects_tree_move">انتقال</string>
     <string name="projects_tree_move_to_parent">انتقال به والد</string>
     <string name="projects_tree_root_level">(سطح ریشه)</string>
     <string name="projects_tree_empty">بدون شیء</string>
@@ -371,7 +371,7 @@
     <string name="projects_design_export_saved">طرح ذخیره شد</string>
     <string name="projects_design_import_failed">خواندن آن فایل ممکن نشد</string>
     <string name="projects_design_or_upload_json">یا یک فایل بارگذاری کنید</string>
-    <string name="projects_export">خروجی گرفتن از داده‌ها</string>
+    <string name="projects_export">خروجی داده‌ها</string>
     <string name="projects_export_failed">ذخیره خروجی ممکن نشد</string>
     <string name="projects_export_saved">داده‌های پروژه ذخیره شد</string>
     <string name="projects_exporting">در حال آماده‌سازی خروجی…</string>

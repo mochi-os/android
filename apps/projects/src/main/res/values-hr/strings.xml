@@ -261,7 +261,7 @@
     <string name="projects_drag_row">Povuci redak</string>
     <string name="projects_drag_column">Povuci stupac</string>
     <string name="projects_drag_hint">Dugo pritisni i povuci za premještanje</string>
-    <string name="projects_design_more_options">Više mogućnosti</string>
+    <string name="projects_design_more_options">Više opcija</string>
     <string name="projects_design_clipboard_label">JSON dizajna</string>
     <string name="projects_design_export_subject">Dizajn projekta</string>
     <string name="projects_design_share_chooser">Podijeli dizajn</string>
@@ -270,7 +270,7 @@
     <string name="projects_design_or_paste_json">Ili zalijepi JSON</string>
     <string name="projects_design_paste_placeholder">Zalijepi izvezeni JSON dizajna</string>
     <string name="projects_design_import_json">Uvezi JSON</string>
-    <string name="projects_design_use">Koristi</string>
+    <string name="projects_design_use">Upotrijebi</string>
     <string name="projects_design_replace_message">Ovo će zamijeniti trenutni dizajn s %1$s. Sve postojeće klase, polja, mogućnosti i prikazi bit će izbrisani. Postojeći objekti neće biti izbrisani, ali se možda više neće prikazivati u prikazima.</string>
     <string name="projects_design_pasted_json_label">zalijepljeni JSON</string>
     <string name="projects_classes_empty">Nema definiranih klasa</string>
@@ -278,7 +278,7 @@
     <string name="projects_class_title_field_description">Koje polje koristiti kao prikazni naslov za objekte ove klase.</string>
     <string name="projects_class_title_field_default">Zadano (čitljivo)</string>
     <string name="projects_class_merge_requests_description">Dopusti zahtjeve za spajanje na objektima ove klase.</string>
-    <string name="projects_class_parents">Roditeljske klase</string>
+    <string name="projects_class_parents">Nadređene klase</string>
     <string name="projects_class_delete_message">Jeste li sigurni da želite izbrisati klasu \"%1$s\"? Sva polja i njihove mogućnosti također će biti izbrisani.</string>
     <string name="projects_field_type_enumerated">Nabrojeno</string>
     <string name="projects_field_label">Polje: %1$s</string>
@@ -290,8 +290,8 @@
     <string name="projects_field_position">Položaj prikaza</string>
     <string name="projects_field_position_header">Zaglavlje</string>
     <string name="projects_field_validation">Provjera valjanosti</string>
-    <string name="projects_field_min_length">Min. duljina</string>
-    <string name="projects_field_max_length">Maks. duljina</string>
+    <string name="projects_field_min_length">Najmanja duljina</string>
+    <string name="projects_field_max_length">Najveća duljina</string>
     <string name="projects_field_pattern">Uzorak (regex)</string>
     <string name="projects_field_rows">Redci (visina tekstualnog polja)</string>
     <string name="projects_field_no_options">Nema definiranih mogućnosti</string>
@@ -314,7 +314,7 @@
     <string name="projects_design_preview_empty">Ništa za prikaz</string>
 
     <string name="projects_create_choose_template">Odaberite predložak</string>
-    <string name="projects_create_next">Dalje</string>
+    <string name="projects_create_next">Sljedeće</string>
     <string name="projects_filter">Filtar</string>
     <string name="projects_link">Poveznica</string>
     <string name="projects_filter_clear_all">Očisti sve</string>
@@ -330,7 +330,7 @@
     <string name="projects_settings_field_fingerprint">Otisak</string>
     <string name="projects_settings_field_server">Poslužitelj</string>
     <string name="projects_access_subject_anyone">Bilo tko</string>
-    <string name="projects_access_subject_authenticated">Autenticirani korisnici</string>
+    <string name="projects_access_subject_authenticated">Prijavljeni korisnici</string>
     <string name="projects_access_select_role">Odaberi ulogu</string>
     <string name="projects_access_role_view">Samo pregled</string>
     <string name="projects_access_role_none">Nema pristupa</string>

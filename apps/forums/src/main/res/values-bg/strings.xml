@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Отпиши се</string>
     <string name="forums_list_unsubscribe_title">Отпиши се</string>
     <string name="forums_create_title">Създай форум</string>
-    <string name="forums_create_name">Име</string>
+    <string name="forums_create_name">Име на форума</string>
     <string name="forums_create_privacy">Поверителност</string>
     <string name="forums_create_private">Частен</string>
     <string name="forums_create_public">Публичен</string>
-    <string name="forums_create_action">Създай</string>
+    <string name="forums_create_action">Създай форум</string>
     <string name="forums_find_title">Намери форуми</string>
     <string name="forums_find_recommended">Препоръчано</string>
     <string name="forums_find_subscribe">Абонирай се</string>
@@ -155,7 +155,7 @@
     <string name="forums_ai_mode_label">Режим: %1$s</string>
     <string name="forums_ai_mode_heading">Режим на ИИ</string>
     <string name="forums_ai_mode_off">Изключено</string>
-    <string name="forums_ai_account">Профил за ИИ</string>
+    <string name="forums_ai_account">Акаунт за AI</string>
     <string name="forums_ai_prompt_tag">Подкана за етикетиране</string>
     <string name="forums_ai_prompt_score">Подкана за оценяване</string>
     <string name="forums_ai_post_prompt_label">Подкана за етикети на публикации</string>
@@ -256,7 +256,7 @@
     <string name="forums_access_select_group">Изберете група</string>
     <string name="forums_access_select_rule">Изберете правило</string>
     <string name="forums_ai_actions_label">ИИ действия върху публикациите</string>
-    <string name="forums_ai_prompt_custom">Персонализиран</string>
+    <string name="forums_ai_prompt_custom">Персонализирано</string>
     <string name="forums_ai_prompt_score_label">Промпт за оценяване</string>
     <string name="forums_ai_prompt_tag_label">Промпт за етикети</string>
     <string name="forums_ai_prompt_variables">Променливи: %1$s</string>
@@ -277,7 +277,7 @@
     <string name="forums_moderation_restriction_remove_message">Веднага си възвръща пълния достъп до форума.</string>
     <string name="forums_moderation_restriction_remove_title">Да се премахне ли ограничението за %1$s?</string>
     <string name="forums_moderation_restriction_state_muted">Заглушен</string>
-    <string name="forums_moderation_restriction_state_shadowban">Сенчесто блокиране</string>
+    <string name="forums_moderation_restriction_state_shadowban">Скрито блокиран</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Няма заглушени или блокирани потребители</string>
     <string name="forums_moderation_section_premoderation_description">Изисквайте одобрение, преди съдържанието да стане видимо</string>
     <string name="forums_moderation_section_ratelimiting_description">Предотвратете спама, като ограничите колко често потребителите могат да публикуват</string>

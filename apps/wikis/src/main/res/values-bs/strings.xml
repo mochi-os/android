@@ -50,7 +50,7 @@
     <string name="wikis_join_id_label">ID wiki entiteta</string>
     <string name="wikis_join_submit">Repliciraj wiki</string>
     <string name="wikis_create_title">Kreiraj wiki</string>
-    <string name="wikis_create_name_label">Ime</string>
+    <string name="wikis_create_name_label">Naziv</string>
     <string name="wikis_create_privacy_label">Dozvoli svima da pretražuju wiki</string>
     <string name="wikis_create_submit">Kreiraj</string>
     <string name="wikis_comments_empty_title">Još nema komentara</string>
@@ -151,7 +151,7 @@
     <string name="wikis_attachments_filter_images">Slike</string>
     <string name="wikis_attachments_filter_documents">Dokumenti</string>
     <string name="wikis_attachments_sort_date">Datum</string>
-    <string name="wikis_attachments_sort_name">Ime</string>
+    <string name="wikis_attachments_sort_name">Naziv</string>
     <string name="wikis_attachments_sort_size">Veličina</string>
     <string name="wikis_attachments_view_grid">Pregled mreže</string>
     <string name="wikis_attachments_view_list">Pregled liste</string>
@@ -171,12 +171,12 @@
     <string name="wikis_settings_tab_access">Pristup</string>
     <string name="wikis_settings_tab_replicas">Replike</string>
     <string name="wikis_settings_section_identity">Identitet</string>
-    <string name="wikis_settings_field_name">Ime</string>
+    <string name="wikis_settings_field_name">Naziv</string>
     <string name="wikis_settings_field_entity_id">ID entiteta</string>
     <string name="wikis_settings_field_fingerprint">Otisak</string>
     <string name="wikis_settings_name_edit_cd">Uredi naziv</string>
-    <string name="wikis_settings_name_invalid_char">Ime ne smije sadržavati znakove &lt; ili &gt;</string>
-    <string name="wikis_settings_name_too_long">Ime mora imati 100 ili manje znakova</string>
+    <string name="wikis_settings_name_invalid_char">Naziv ne smije sadržavati znakove &amp;lt; ili &amp;gt;</string>
+    <string name="wikis_settings_name_too_long">Naziv mora imati 100 ili manje znakova</string>
     <string name="wikis_settings_name_required">Naziv wikija je obavezan</string>
     <string name="wikis_settings_name_saved">Wiki preimenovan</string>
     <string name="wikis_settings_name_save_failed">Preimenovanje wikija nije uspjelo</string>
@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Ukloni</string>
     <string name="wikis_replicas_remove_failed">Uklanjanje replike nije uspjelo</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wikiji</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">Obavještenja o uređivanju wiki stranica, komentarima i pozivnicama.</string>
     <string name="wikis_pageview_toc_expand">Prikaži sadržaj</string>
@@ -225,14 +225,14 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Ažurirano %1$s</string>
     <string name="wikis_pageview_not_found_description">Stranica “%1$s” još ne postoji.</string>
-    <string name="wikis_pageview_share_chooser">Link wikija</string>
+    <string name="wikis_pageview_share_chooser">Veza wikija</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">Veza</string>
     <string name="wikis_open_sidebar">Otvori bočnu traku</string>
     <string name="wikis_search_placeholder">Traži wiki…</string>
     <string name="wikis_unsubscribe_confirm_message">Jeste li sigurni da se želite odjaviti s %1$s?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_find_search_placeholder">Traži po imenu, ID-u, otisku ili URL-u…</string>
+    <string name="wikis_find_search_placeholder">Traži po nazivu, ID-u, otisku ili URL-u…</string>
     <string name="wikis_join_search_button">Traži wikije…</string>
     <string name="wikis_join_id_hint">abc123…</string>
     <string name="wikis_subscribe_502_retry">Pokušavamo ponovo bez predloženog servera…</string>
@@ -283,7 +283,7 @@
     <string name="wikis_load_more">Učitaj više</string>
     <string name="wikis_access_change_level">Nivo pristupa</string>
     <string name="wikis_access_subject_anyone">Bilo ko</string>
-    <string name="wikis_access_subject_authenticated">Autentificirani korisnici</string>
+    <string name="wikis_access_subject_authenticated">Prijavljeni korisnici</string>
 
     <string name="wikis_revision_compare">Usporedi promjene</string>
     <string name="wikis_revision_author">po %1$s</string>

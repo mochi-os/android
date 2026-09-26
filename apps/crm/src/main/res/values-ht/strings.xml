@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Ikon</string>
     <string name="crm_option_icon_placeholder">egz. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Dezabòne</string>
-    <string name="crm_settings_delete_crm">Efase pwojè</string>
+    <string name="crm_settings_delete_crm">Efase CRM</string>
     <string name="crm_settings_delete_confirm_title">Efase CRM</string>
     <string name="crm_settings_unsubscribe_title">Dezabòne</string>
     <string name="crm_settings_unsubscribe_message">Èske ou sèten ou vle dezabòne nan CRM sa a?</string>
@@ -160,7 +160,7 @@
     <string name="crm_links_empty">Pa gen lyen</string>
     <string name="crm_links_section_relates">Gen rapò ak</string>
     <string name="crm_links_section_duplicated_by">Duplike pa</string>
-    <string name="crm_links_type">Tip lyen</string>
+    <string name="crm_links_type">Kalite lyen</string>
     <string name="crm_links_type_relates">Gen rapò ak</string>
     <string name="crm_links_remove">Retire lyen</string>
     <string name="crm_comment_replying_to">Reponn %1$s</string>
@@ -168,7 +168,7 @@
     <string name="crm_comment_placeholder">Ajoute yon kòmantè</string>
     <string name="crm_property_pick_date">Chwazi dat</string>
     <string name="crm_property_ok">OK</string>
-    <string name="crm_property_add_item">Ajoute atik</string>
+    <string name="crm_property_add_item">Ajoute eleman</string>
     <string name="crm_property_required">%1$s obligatwa</string>
     <string name="crm_activity_empty">Pa gen aktivite</string>
     <string name="crm_activity_created">kreye objè sa a</string>
@@ -204,7 +204,7 @@
     <string name="crm_class_title_field_default">Default (lizib)</string>
     <string name="crm_class_parents">Klas paran</string>
     <string name="crm_class_delete_message">Èske ou sèten ou vle efase klas \"%1$s\"? Tout chan ak opsyon yo pral efase tou.</string>
-    <string name="crm_field_type_enumerated">Enumere</string>
+    <string name="crm_field_type_enumerated">Enimere</string>
     <string name="crm_field_label">Chan: %1$s</string>
     <string name="crm_field_readonly">Lekti sèlman</string>
     <string name="crm_field_sortable">Kapab triye</string>
@@ -230,7 +230,7 @@
     <string name="crm_views_filter_classes">Filtre selon klas</string>
     <string name="crm_views_by">pa %1$s</string>
     <string name="crm_views_sorted">triye %1$s</string>
-    <string name="crm_design_preview_label">Aperçu:</string>
+    <string name="crm_design_preview_label">Apèsi:</string>
     <string name="crm_design_preview_no_view">Pa gen vi pou apèsi</string>
     <string name="crm_design_preview_no_class">Pa gen klas pou vi sa a</string>
     <string name="crm_design_preview_pick_columns">Chwazi yon chan kolòn</string>
@@ -265,7 +265,7 @@
     <string name="crm_access_select_role">Chwazi wòl</string>
     <string name="crm_access_selected">Chwazi: %1$s</string>
     <string name="crm_access_subject_anyone">Nenpòt moun</string>
-    <string name="crm_access_subject_authenticated">Itilizatè otantifye</string>
+    <string name="crm_access_subject_authenticated">Itilizatè ki otantifye</string>
     <string name="crm_access_authenticated_desc">Nenpòt moun ki konekte</string>
     <string name="crm_access_anyone_desc">Enkli itilizatè anonim yo</string>
     <string name="crm_access_role_design">Konsevwa, kreye, modifye, kòmante, epi gade</string>
@@ -273,7 +273,7 @@
     <string name="crm_access_role_comment">Kòmante ak gade</string>
     <string name="crm_access_role_view">Wè sèlman</string>
     <string name="crm_access_role_none">Pa gen aksè</string>
-    <string name="crm_all_crms">Tout CRM</string>
+    <string name="crm_all_crms">Tout CRM yo</string>
     <string name="crm_settings_unsubscribe_section">Dezabòne nan CRM</string>
     <string name="crm_settings_updated">CRM mete ajou</string>
     <string name="crm_create_import_backup">Enpòte soti nan backup (opsyonèl)</string>

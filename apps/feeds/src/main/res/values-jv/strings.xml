@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Feed Mochi</string>
     <string name="feeds_source_type_feed_memories">Memori</string>
-    <string name="feeds_remove_source">Busak sumber</string>
+    <string name="feeds_remove_source">Cabut sumber?</string>
     <string name="feeds_suggested_credibility_accept">Trima</string>
     <string name="feeds_rss_url_copied">URL RSS disalin menyang clipboard</string>
     <string name="feeds_logout">Metu</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">URL RSS</string>
     <string name="feeds_source_never_fetched">Durung tau dijupuk</string>
     <string name="feeds_source_poll">Jajak</string>
-    <string name="feeds_source_transform">Owahi</string>
+    <string name="feeds_source_transform">Transformasi AI</string>
     <string name="feeds_remove_source_confirm">Busak \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Uga busak kiriman sing diimpor</string>
     <string name="feeds_suggested_credibility_title">Kredibilitas sing disaranake</string>
@@ -154,7 +154,7 @@
     <string name="feeds_access_select_group">Pilih grup</string>
     <string name="feeds_access_selected">Dipilih: %1$s</string>
     <string name="feeds_access_subject_anyone">Sapa wae</string>
-    <string name="feeds_access_subject_authenticated">Pangguna sing wis dipriksa</string>
+    <string name="feeds_access_subject_authenticated">Panganggo sing wis diverifikasi</string>
     <string name="feeds_markdown_supported">Markdown didukung</string>
     <string name="feeds_permission_deny">Tolak</string>
     <string name="feeds_rss_feed">Feed RSS</string>
@@ -172,7 +172,7 @@
     <string name="feeds_allow_search">Idini sapa waé nggolèki feed</string>
     <string name="feeds_post_content">Isi postingan</string>
     <string name="feeds_enable_memories">Aktifaké memori</string>
-    <string name="feeds_permission_request_title">Panjalukan idin</string>
+    <string name="feeds_permission_request_title">Panyuwunan ijin</string>
     <string name="feeds_unsubscribe_confirm">Mandheg langganan feed?</string>
     <string name="feeds_settings_title">Setelan %1$s</string>
     <string name="feeds_source_transform_help">Kosongna kanggo nonaktifaké.</string>
@@ -204,7 +204,7 @@
     <string name="feeds_banner_dismiss">Singkiraké banner</string>
     <string name="feeds_members_search">Saring anggota</string>
     <string name="feeds_ai_prompt_default">Standar</string>
-    <string name="feeds_ai_prompt_custom">Kustom</string>
+    <string name="feeds_ai_prompt_custom">Khusus</string>
     <string name="feeds_ai_prompt_variables">Variabel: %1$s</string>
     <string name="feeds_link">Tautan</string>
     <string name="feeds_share_link_title">Tautan feed</string>

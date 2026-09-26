@@ -20,7 +20,7 @@
     <string name="calendars_repeat_never">Gonkumaa</string>
     <string name="calendars_repeat_monthly">Ji\'aan</string>
     <string name="calendars_repeat_yearly">Waggaa</string>
-    <string name="calendars_repeat_custom">Dhuunfaa</string>
+    <string name="calendars_repeat_custom">Mataa keetiin</string>
     <string name="calendars_reminder_none">Tokko illee</string>
     <string name="calendars_day_sunday">Dilbata</string>
     <string name="calendars_day_monday">Wiixata</string>
@@ -42,7 +42,7 @@
     <string name="calendars_device_title">Meeshaa walqabsiisi</string>
     <string name="calendars_device_name">Maqaa meeshaa</string>
     <string name="calendars_device_create">Uumi</string>
-    <string name="calendars_device_server">Server</string>
+    <string name="calendars_device_server">Sarvarii</string>
     <string name="calendars_device_address">Teessoo</string>
     <string name="calendars_device_username">Maqaa fayyadamaa</string>
     <string name="calendars_device_password">Jecha darbii</string>
@@ -74,7 +74,7 @@
     <string name="calendars_workweek">Torbee hojii</string>
     <string name="calendars_range">%1$s hanga %2$s</string>
     <string name="calendars_truncated">Taateewwan yeroo kana keessaa tokko tokko hin agarsiifamne.</string>
-    <string name="calendars_list_empty">Taateen hin jiru</string>
+    <string name="calendars_list_empty">Taateewwan hin jiran</string>
     <plurals name="calendars_more">
         <item quantity="one">+%1$d dabalataa</item>
         <item quantity="other">+%1$d dabalataa</item>
@@ -154,7 +154,7 @@
     <string name="calendars_link_submit">Walqabsiisi</string>
     <string name="calendars_link_sync">Amma walsimsiisi</string>
     <string name="calendars_link_grant">Seensa kaalaandarii hayyami</string>
-    <string name="calendars_link_linked">Walqabsiifame</string>
+    <string name="calendars_link_linked">Walitti hidhame</string>
     <string name="calendars_link_marker">Kaalaandarii walqabsiifame</string>
     <string name="calendars_link_remote_empty">Kaalaandaroonni hin jiran</string>
     <string name="calendars_poll_conflict">Taateen tokko gama lamaanuu jijjiirame</string>
@@ -162,11 +162,11 @@
     <string name="calendars_poll_unauthorised">Saarvariin kaalaandarii ragaa seensa akkaawuntichaa didee</string>
     <string name="calendars_subscribe_username">Maqaa fayyadamaa</string>
     <string name="calendars_subscribe_password">Jecha darbii</string>
-    <string name="calendars_subscribe_connect">Walitti hidhi</string>
+    <string name="calendars_subscribe_connect">Wal qunnamsiisi</string>
     <string name="calendars_subscribe_server">Seerverii Mochi ykn CalDAV biraa</string>
     <string name="calendars_subscribe_address">Teessoo kaalaandarii maxxanfamee (dubbisaa qofa)</string>
     <string name="calendars_subscribe_password_apple">Jecha darbii addaa appiif</string>
-    <string name="calendars_subscribe_server_url">Teessoo seerverii</string>
+    <string name="calendars_subscribe_server_url">Teessoo sarvarii</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Kaalandarii Google</string>

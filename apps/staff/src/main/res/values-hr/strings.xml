@@ -170,7 +170,7 @@
     <string name="staff_config_field_stripe_oauth_client">OAuth ID klijenta</string>
     <string name="staff_config_field_stripe_publishable">Publishable ključ</string>
     <string name="staff_config_field_stripe_secret">Tajni ključ</string>
-    <string name="staff_config_group_moderation">Moderacija</string>
+    <string name="staff_config_group_moderation">Moderiranje</string>
     <string name="staff_config_group_payments">Plaćanja</string>
     <string name="staff_config_group_reviews">Recenzije</string>
     <string name="staff_config_group_stripe">Stripe</string>
@@ -187,7 +187,7 @@
     <string name="staff_dashboard_col_date">Datum</string>
     <string name="staff_dashboard_col_detail">Detalj</string>
     <string name="staff_dashboard_col_listing">Oglas</string>
-    <string name="staff_dashboard_col_moderation">Moderacija</string>
+    <string name="staff_dashboard_col_moderation">Moderiranje</string>
     <string name="staff_dashboard_col_name">Naziv</string>
     <string name="staff_dashboard_col_object">Objekt</string>
     <string name="staff_dashboard_col_reason">Razlog</string>
@@ -216,7 +216,7 @@
     <string name="staff_dashboard_system">Sustav</string>
     <string name="staff_dashboard_tab_audit">Revizija</string>
     <string name="staff_dashboard_tab_listings">Oglasi</string>
-    <string name="staff_dashboard_tab_moderation">Moderacija</string>
+    <string name="staff_dashboard_tab_moderation">Moderiranje</string>
     <string name="staff_dashboard_tab_orders">Narudžbe</string>
     <string name="staff_dashboard_tab_signups">Registracije</string>
     <string name="staff_dashboard_yes">Da</string>
@@ -284,10 +284,10 @@
     <string name="staff_filter_chip_remove">Ukloni filtar</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderiranje</string>
-    <string name="staff_filter_label_query">Pretraga</string>
+    <string name="staff_filter_label_query">Pretraži</string>
     <string name="staff_filter_label_seller">Prodavač</string>
     <string name="staff_filter_label_status">Status</string>
-    <string name="staff_filter_label_type">Vrsta</string>
+    <string name="staff_filter_label_type">Tip</string>
     <string name="staff_listings_action_approve_title">Odobri oglas</string>
     <string name="staff_listings_action_reject_title">Odbij oglas</string>
     <string name="staff_listings_action_remove_title">Ukloni oglas</string>
@@ -297,7 +297,7 @@
     <string name="staff_listings_approved_toast">Oglas odobren</string>
     <string name="staff_listings_cancel">Odustani</string>
     <string name="staff_listings_empty">Nema oglasa</string>
-    <string name="staff_listings_filter_moderation_label">Moderacija</string>
+    <string name="staff_listings_filter_moderation_label">Moderiranje</string>
     <string name="staff_listings_filter_status_label">Status</string>
     <string name="staff_listings_moderation_auto_approved">Automatski odobreno</string>
     <string name="staff_listings_moderation_hold">Zadrži</string>

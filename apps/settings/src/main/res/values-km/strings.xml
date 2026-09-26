@@ -207,7 +207,7 @@
     <string name="system_users_toast_status_failed">បរាជ័យក្នុងការធ្វើបច្ចុប្បន្នភាពស្ថានភាពអ្នកប្រើ</string>
     <string name="system_users_toast_revoke_failed">បរាជ័យក្នុងការដកហូតវគ្គ</string>
 
-    <string name="settings_home_sessions">សម័យ</string>
+    <string name="settings_home_sessions">វគ្គ</string>
     <string name="settings_home_privacy">គោលនយោបាយឯកជន</string>
     <string name="settings_home_rules">ច្បាប់</string>
     <string name="settings_home_terms">លក្ខខណ្ឌសេវាកម្ម</string>
@@ -229,7 +229,7 @@
     <string name="account_recovery_regen_title">បង្កើតកូដស្ដារឡើងវិញ?</string>
     <string name="account_recovery_regen_message">កូដដែលមានស្រាប់នឹងឈប់ដំណើរការភ្លាមៗ។ រក្សាទុកថ្មីៗនៅកន្លែងសុវត្ថិភាព។</string>
     <string name="account_recovery_codes_warning">រក្សាទុកកូដទាំងនេះ — ម្នាក់ៗអាចប្រើបានតែម្ដងប៉ុណ្ណោះ។ នឹងមិនបង្ហាញម្ដងទៀតទេ។</string>
-    <string name="sessions_title">សម័យ</string>
+    <string name="sessions_title">វគ្គ</string>
     <string name="sessions_empty">គ្មានវគ្គដែលដំណើរការទេ។</string>
     <string name="sessions_revoke_message">ឧបករណ៍ដែលប្រើវគ្គនេះនឹងចេញ។</string>
     <string name="account_oauth_empty">គ្មានគណនីភ្ជាប់ទេ</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">អាទិភាព %1$d · %2$s</string>
     <string name="interests_search_placeholder">ស្វែងរកប្រធានបទដើម្បីបន្ថែម…</string>
     <string name="interests_empty">មិនទាន់មានចំណាប់អារម្មណ៍ទេ។</string>
-    <string name="interests_summary_regenerate">បង្កើតសេចក្ដីសង្ខេបឡើងវិញ</string>
+    <string name="interests_summary_regenerate">បង្កើតសង្ខេបឡើងវិញ</string>
     <string name="interests_summary_regenerating">កំពុងបង្កើតឡើងវិញ…</string>
     <string name="interests_summary_empty">បន្ថែមចំណាប់អារម្មណ៍មួយចំនួនដើម្បីបង្កើតសេចក្ដីសង្ខេបនៃអ្វីដែលអ្នកចូលចិត្ត។</string>
     <string name="interests_search_failed">ការស្វែងរកបានបរាជ័យ។ សូមព្យាយាមម្ដងទៀត។</string>
@@ -276,7 +276,7 @@
     <string name="account_title">គណនី</string>
     <string name="account_section_identity">អត្តសញ្ញាណ</string>
     <string name="account_identity_identity">អត្តសញ្ញាណ</string>
-    <string name="account_identity_username">ឈ្មោះអ្នកប្រើ</string>
+    <string name="account_identity_username">ឈ្មោះអ្នកប្រើប្រាស់</string>
     <string name="account_identity_name">ឈ្មោះ</string>
     <string name="account_identity_fingerprint">ស្នាមម្រាមដៃ</string>
     <string name="account_identity_directory_toggle">អនុញ្ញាតឱ្យអ្នកដទៃរកអ្នកនៅក្នុងថត</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s នឹងលែងគ្រប់គ្រងផ្លូវនៅលើដែននេះទេ។</string>
     <string name="domain_delegation_delete_title">លុបការផ្ទេរសិទ្ធិ?</string>
     <string name="domain_delegation_path">ផ្លូវ</string>
-    <string name="domain_delegation_user">អ្នកប្រើ</string>
+    <string name="domain_delegation_user">អ្នកប្រើប្រាស់</string>
     <string name="domain_delegations">ការផ្ទេរសិទ្ធិ</string>
     <string name="domain_delegations_empty">គ្មានការផ្ទេរសិទ្ធិដែលបានកំណត់ទេ។</string>
     <string name="domain_delete">លុបដែន</string>
@@ -389,7 +389,7 @@
     <string name="accounts_capability_calendar">ប្រតិទិន</string>
     <string name="accounts_capability_notify">ការជូនដំណឹង</string>
     <string name="accounts_capability_ai">AI</string>
-    <string name="accounts_capability_login">ចូលគណនី</string>
+    <string name="accounts_capability_login">ការចូល</string>
     <string name="accounts_provider_caldav">ម៉ាស៊ីនមេប្រតិទិន</string>
     <string name="accounts_revoke_confirm">នេះនឹងដកសិទ្ធិចូលប្រើប្រតិទិនរបស់ %1$s។ ការចូលដោយ %2$s នៅតែមានរហូតដល់អ្នកផ្តាច់វានៅលើទំព័រចូល។</string>
     <string name="accounts_capability_mcp">MCP</string>

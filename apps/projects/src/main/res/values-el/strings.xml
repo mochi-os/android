@@ -283,8 +283,8 @@
     <string name="projects_field_type_enumerated">Απαριθμημένο</string>
     <string name="projects_field_label">Πεδίο: %1$s</string>
     <string name="projects_field_readonly">Μόνο για ανάγνωση</string>
-    <string name="projects_field_sortable">Ταξινομήσιμο</string>
-    <string name="projects_field_filterable">Φιλτράρισμα</string>
+    <string name="projects_field_sortable">Με δυνατότητα ταξινόμησης</string>
+    <string name="projects_field_filterable">Με δυνατότητα φιλτραρίσματος</string>
     <string name="projects_field_show_on_card">Εμφάνιση στην κάρτα</string>
     <string name="projects_field_multi">Πολλαπλή επιλογή</string>
     <string name="projects_field_position">Θέση εμφάνισης</string>

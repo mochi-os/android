@@ -36,7 +36,7 @@
     <string name="market_asset_download">Ներբեռնել</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
     <string name="market_back">Հետ</string>
-    <string name="market_bid_dialog_amount_label">Ձեր առաջարկը</string>
+    <string name="market_bid_dialog_amount_label">Ձեր հայտը</string>
     <string name="market_bid_dialog_cancel">Չեղարկել</string>
     <string name="market_bid_dialog_ceiling_help">Մենք ավտոմատ կերպով կբարձրացնենք ձեր առաջարկը հնարավորինս փոքր գումարով՝ առջևում մնալու համար, մինչև այս առավելագույնը։</string>
     <string name="market_bid_dialog_instant_win">Գնումը հաստատված է — ավարտեք վճարումը</string>
@@ -45,10 +45,10 @@
     <string name="market_bid_dialog_submit">Ներկայացնել առաջարկ</string>
     <string name="market_bid_dialog_success">Հայտը ներկայացվեց</string>
     <string name="market_bid_dialog_title">Ներկայացնել առաջարկ</string>
-    <string name="market_bid_ended">Աճուրդն ավարտվեց</string>
+    <string name="market_bid_ended">Աճուրդն ավարտված է</string>
     <string name="market_bid_high">Բարձր առաջարկ</string>
     <string name="market_bids_empty">Հայտեր չկան</string>
-    <string name="market_bids_ended">Աճուրդն ավարտվեց</string>
+    <string name="market_bids_ended">Աճուրդն ավարտված է</string>
     <string name="market_bids_tab_active">Ակտիվ</string>
     <string name="market_bids_tab_all">Բոլորը</string>
     <string name="market_bids_tab_lost">Պարտված</string>
@@ -565,7 +565,7 @@
     <string name="market_listing_unsave">Հեռացնել պահպանվածներից</string>
     <string name="market_listings_delete_failed">Չհաջողվեց ջնջել ցուցակը</string>
     <string name="market_listings_delete_message">Սա ընդմիշտ կհեռացնի սևագիրը ձեր հաշվից։</string>
-    <string name="market_listings_delete_title">Ջնջե՞լ ցուցակը:</string>
+    <string name="market_listings_delete_title">Ջնջե՞լ հայտարարությունը:</string>
     <string name="market_listings_empty_subtitle">Հպեք Նոր ցուցակ՝ ձեր առաջին տարրը ստեղծելու համար։</string>
     <string name="market_listings_load_failed">Չհաջողվեց բեռնել ձեր ցուցակները</string>
     <string name="market_listings_search_placeholder">Որոնել ձեր ցուցակներում</string>
@@ -665,7 +665,7 @@
     <string name="market_seller_check_status">Ստուգել կարգավիճակը</string>
     <string name="market_seller_checking">Ստուգվում է…</string>
     <string name="market_seller_connect_stripe">Միանալ Stripe-ին</string>
-    <string name="market_seller_connecting">Կողպել</string>
+    <string name="market_seller_connecting">Բեռնվում է…</string>
     <string name="market_seller_fee_loading">Բեռնվում են տարրի մանրամասները</string>
     <string name="market_seller_fee_value">%1$s%% յուրաքանչյուր վաճառքից</string>
     <string name="market_seller_future_controls_body">Վաճառողի հաշվի լրացուցիչ կառավարման տարրերը կհայտնվեն այստեղ, երբ դրանք հասանելի դառնան։</string>

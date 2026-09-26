@@ -102,7 +102,7 @@
     <string name="staff_audit_action_order_payment_failed">გადახდა ვერ მოხერხდა</string>
     <string name="staff_audit_action_order_refunded">დაბრუნებული</string>
     <string name="staff_audit_action_order_shipped">გაგზავნილია</string>
-    <string name="staff_audit_action_report_actioned">ანგარიშზე მოქმედება შესრულდა</string>
+    <string name="staff_audit_action_report_actioned">საჩივარზე მოქმედება შესრულდა</string>
     <string name="staff_audit_action_report_created">გაცხადებული</string>
     <string name="staff_audit_action_review_created">მიმოხილვა გაგზავნილია</string>
     <string name="staff_audit_action_review_hide">მიმოხილვა დამალულია</string>
@@ -428,7 +428,7 @@
     <string name="staff_team_toast_role_updated">როლი განახლდა</string>
 
 
-    <string name="staff_disputes_dialog_title_chargeback">თანხის დაბრუნება: %1$s</string>
+    <string name="staff_disputes_dialog_title_chargeback">გადახდის გასაჩივრება: %1$s</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">Stripe-ის მიერ შენახული</string>
     <string name="staff_disputes_meta_chargeback_fee_partial">%1$s დაბრუნებული</string>
     <string name="staff_disputes_meta_chargeback_fee_refunded">დაბრუნებული</string>

@@ -28,7 +28,7 @@
     <string name="market_appeal_dialog_cancel">ರದ್ದುಮಾಡಿ</string>
     <string name="market_appeal_dialog_failed">ಮನವಿ ಸಲ್ಲಿಸಲು ವಿಫಲವಾಗಿದೆ</string>
     <string name="market_appeal_dialog_submit">ಮನವಿ ಸಲ್ಲಿಸಿ</string>
-    <string name="market_appeal_dialog_submitting">ಕಳುಹಿಸಲಾಗುತ್ತಿದೆ…</string>
+    <string name="market_appeal_dialog_submitting">ಸಲ್ಲಿಸಲಾಗುತ್ತಿದೆ…</string>
     <string name="market_appeal_dialog_success">ಮನವಿ ಸಲ್ಲಿಸಲಾಗಿದೆ</string>
     <string name="market_appeal_dialog_title">ತೆಗೆಯುವಿಕೆ ಮನವಿ</string>
     <string name="market_asset_download">ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ</string>
@@ -40,9 +40,9 @@
     <string name="market_bid_dialog_instant_win">ಖರೀದಿ ದೃಢೀಕೃತ — ಪಾವತಿ ಪೂರ್ಣಗೊಳಿಸಿ</string>
     <string name="market_bid_dialog_invalid_ceiling">ಗರಿಷ್ಠ ಬಿಡ್ ಕನಿಷ್ಠ ನಿಮ್ಮ ಬಿಡ್ ಮೊತ್ತದಷ್ಟಿರಬೇಕು</string>
     <string name="market_bid_dialog_outbid">ನಿಮ್ಮ ಬಿಡ್ ಸಲ್ಲಿಸಲಾಯಿತು ಆದರೆ ತಕ್ಷಣವೇ ಮೀರಿಸಲಾಯಿತು. ಮತ್ತೊಬ್ಬ ಬಿಡ್ದಾರನ ಗರಿಷ್ಠವು ಹೆಚ್ಚಿದೆ. ಅವರ ಬಿಡ್ ಈಗ %1$s.</string>
-    <string name="market_bid_dialog_submit">ಬಿಡ್ ಇಡಿ</string>
+    <string name="market_bid_dialog_submit">ಬಿಡ್ ಸಲ್ಲಿಸಿ</string>
     <string name="market_bid_dialog_success">ಬಿಡ್ ಇಡಲಾಗಿದೆ</string>
-    <string name="market_bid_dialog_title">ಬಿಡ್ ಇಡಿ</string>
+    <string name="market_bid_dialog_title">ಬಿಡ್ ಸಲ್ಲಿಸಿ</string>
     <string name="market_bid_ended">ಹರಾಜು ಮುಗಿದಿದೆ</string>
     <string name="market_bid_high">ಎತ್ತರದ ಬಿಡ್</string>
     <string name="market_bids_empty">ಯಾವುದೇ ಬಿಡ್‌ಗಳಿಲ್ಲ</string>
@@ -89,7 +89,7 @@
     <string name="market_checkout_listing_not_found">ಲಿಸ್ಟಿಂಗ್ ಸಿಗಲಿಲ್ಲ</string>
     <string name="market_checkout_pay_button">Stripe ಮೂಲಕ ಪಾವತಿಸಿ</string>
     <string name="market_checkout_payment_failed">ಪಾವತಿ ಚೆಕ್‌ಔಟ್ ಪ್ರಾರಂಭಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ — ಮಾರಾಟಗಾರ ಪಾವತಿ ಸೆಟಪ್ ಅನ್ನು ಪೂರ್ಣಗೊಳಿಸಿರದಿರಬಹುದು</string>
-    <string name="market_checkout_processing">ಪ್ರಕ್ರಿಯೆ…</string>
+    <string name="market_checkout_processing">ಪ್ರಕ್ರಿಯೆಗೊಳಿಸಲಾಗುತ್ತಿದೆ…</string>
     <string name="market_checkout_secure">Stripe ಮೂಲಕ ಸುರಕ್ಷಿತ ಪಾವತಿ</string>
     <string name="market_checkout_select_option">ಆಯ್ಕೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="market_checkout_shipping">ಶಿಪ್ಪಿಂಗ್</string>
@@ -118,7 +118,7 @@
     <string name="market_dispute_dialog_failed">ಪ್ರತಿಕ್ರಿಯೆ ಸಲ್ಲಿಸಲು ವಿಫಲವಾಗಿದೆ</string>
     <string name="market_dispute_dialog_response_label">ನಿಮ್ಮ ಪ್ರತಿಕ್ರಿಯೆ</string>
     <string name="market_dispute_dialog_submit">ಸಲ್ಲಿಸಿ</string>
-    <string name="market_dispute_dialog_submitting">ಕಳುಹಿಸಲಾಗುತ್ತಿದೆ…</string>
+    <string name="market_dispute_dialog_submitting">ಸಲ್ಲಿಸಲಾಗುತ್ತಿದೆ…</string>
     <string name="market_dispute_dialog_title">ವಿವಾದಕ್ಕೆ ಪ್ರತಿಕ್ರಿಯಿಸಿ</string>
     <string name="market_editor_appeal_submit">ಮನವಿ ಸಲ್ಲಿಸಿ</string>
     <string name="market_editor_asset_add">ಫೈಲ್ ಸೇರಿಸಿ</string>
@@ -221,7 +221,7 @@
     <string name="market_listing_detail_buy_now">ಈಗಲೇ ಖರೀದಿಸಿ</string>
     <string name="market_listing_detail_description_heading">ವಿವರಣೆ</string>
     <string name="market_listing_detail_edit">ಸಂಪಾದಿಸಿ</string>
-    <string name="market_listing_detail_information_heading">ವಿತರಣಾ ಮಾಹಿತಿ</string>
+    <string name="market_listing_detail_information_heading">ಡೆಲಿವರಿ ಮಾಹಿತಿ</string>
     <string name="market_listing_detail_load_failed">ಲಿಸ್ಟಿಂಗ್ ಲೋಡ್ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ</string>
     <string name="market_listing_detail_listed">ಪಟ್ಟಿ ಮಾಡಲಾಗಿದೆ %1$s</string>
     <string name="market_listing_detail_location_heading">ಸ್ಥಳ</string>
@@ -234,7 +234,7 @@
     <string name="market_listing_detail_save">ಉಳಿಸಿ</string>
     <string name="market_listing_detail_seller_heading">ಮಾರಾಟಗಾರ</string>
     <string name="market_listing_detail_share">ಹಂಚಿಕೊಳ್ಳಿ</string>
-    <string name="market_listing_detail_shipping_heading">ಶಿಪ್ಪಿಂಗ್</string>
+    <string name="market_listing_detail_shipping_heading">ಶಿಪ್ಪಿಂಗ್ ಆಯ್ಕೆಗಳು</string>
     <string name="market_listing_detail_subscribe">ಚಂದಾದಾರರಾಗಿ</string>
     <string name="market_listing_detail_tags_heading">ಟ್ಯಾಗ್‌ಗಳು</string>
     <string name="market_listing_detail_title">ಲಿಸ್ಟಿಂಗ್</string>
@@ -392,7 +392,7 @@
     <string name="market_saved_title">ಉಳಿಸಿದವು</string>
     <string name="market_search_clear">ಹುಡುಕಾಟ ತೆರವುಗೊಳಿಸಿ</string>
     <string name="market_search_placeholder">ಮಾರ್ಕೆಟ್ ಹುಡುಕಿ</string>
-    <string name="market_section_categories">ವರ್ಗಗಳನ್ನು ವೀಕ್ಷಿಸಿ</string>
+    <string name="market_section_categories">ವರ್ಗಗಳನ್ನು ಬ್ರೌಸ್ ಮಾಡಿ</string>
     <string name="market_section_listings">ಇತ್ತೀಚಿನ ಲಿಸ್ಟಿಂಗ್‌ಗಳು</string>
     <string name="market_section_recent">ಇತ್ತೀಚೆಗೆ ವೀಕ್ಷಿಸಲಾಗಿದೆ</string>
     <string name="market_ship_dialog_cancel">ರದ್ದುಮಾಡಿ</string>
@@ -447,7 +447,7 @@
     <string name="market_subscription_detail_started">%1$s ರಂದು ಪ್ರಾರಂಭವಾಯಿತು</string>
     <string name="market_subscription_detail_title">ಚಂದಾ</string>
     <string name="market_subscriptions_action_cancel">ರದ್ದುಮಾಡಿ</string>
-    <string name="market_subscriptions_action_pause">ಪಾಸ್</string>
+    <string name="market_subscriptions_action_pause">ವಿರಾಮಗೊಳಿಸಿ</string>
     <string name="market_subscriptions_action_reactivate">ಮರುಸಕ್ರಿಯಗೊಳಿಸಿ</string>
     <string name="market_subscriptions_action_resubscribe">ಮರು-ಚಂದಾದಾರರಾಗಿ</string>
     <string name="market_subscriptions_action_resume">ಮುಂದುವರಿಸಿ</string>

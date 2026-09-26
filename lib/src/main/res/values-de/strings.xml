@@ -310,7 +310,7 @@
     <string name="settings_card_flat">Flach</string>
     <string name="settings_card_raised">Erhöht</string>
     <string name="error_server_https">Die Serveradresse muss mit https:// beginnen</string>
-    <string name="device_name_fallback">Mobilgerät</string>
+    <string name="device_name_fallback">Mobiles Gerät</string>
     <string name="account_error_token_type">Nicht unterstützter Tokentyp</string>
     <string name="account_error_caller">Aufrufer nicht zugelassen</string>
 </resources>

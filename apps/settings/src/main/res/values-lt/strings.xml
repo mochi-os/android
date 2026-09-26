@@ -207,7 +207,7 @@
     <string name="system_users_toast_status_failed">Nepavyko atnaujinti naudotojo būsenos</string>
     <string name="system_users_toast_revoke_failed">Nepavyko atšaukti seanso</string>
 
-    <string name="settings_home_sessions">Seansai</string>
+    <string name="settings_home_sessions">Sesijos</string>
     <string name="settings_home_privacy">Privatumo politika</string>
     <string name="settings_home_rules">Taisyklės</string>
     <string name="settings_home_terms">Paslaugos sąlygos</string>
@@ -229,7 +229,7 @@
     <string name="account_recovery_regen_title">Regeneruoti atkūrimo kodus?</string>
     <string name="account_recovery_regen_message">Esami kodai iškart nustos veikti. Saugokite naujus saugioje vietoje.</string>
     <string name="account_recovery_codes_warning">Išsaugokite šiuos kodus — kiekvienas gali būti naudojamas tik kartą. Jie nebus rodomi dar kartą.</string>
-    <string name="sessions_title">Seansai</string>
+    <string name="sessions_title">Sesijos</string>
     <string name="sessions_empty">Nėra aktyvių seansų.</string>
     <string name="sessions_revoke_message">Šį seansą naudojantis įrenginys bus atjungtas.</string>
     <string name="account_oauth_empty">Nėra susietų paskyrų</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">Prioritetas %1$d · %2$s</string>
     <string name="interests_search_placeholder">Ieškoti temų pridėti…</string>
     <string name="interests_empty">Pomėgių dar nėra.</string>
-    <string name="interests_summary_regenerate">Regeneruoti santrauką</string>
+    <string name="interests_summary_regenerate">Atnaujinti santrauką</string>
     <string name="interests_summary_regenerating">Regeneruojama…</string>
     <string name="interests_summary_empty">Pridėkite kelias pomėgius, kad sugeneruotumėte to, kas jums patinka, santrauką.</string>
     <string name="interests_search_failed">Paieška nepavyko. Bandykite dar kartą.</string>
@@ -263,7 +263,7 @@
     <string name="system_settings_reset_message">Tai atstatys \"%1$s\" į numatytąją vertę (%2$s).</string>
     <string name="system_settings_reset_message_empty">Tai atstatys \"%1$s\" į numatytąją (tuščia).</string>
     <string name="settings_home_system_users">Naudotojai (serveris)</string>
-    <string name="system_users_add_user">Pridėti naudotoją</string>
+    <string name="system_users_add_user">Pridėti vartotoją</string>
     <string name="system_users_search_placeholder">Ieškoti naudotojų…</string>
     <string name="system_users_sort_by">Rūšiuoti pagal</string>
     <string name="system_users_last_login">Paskutinis prisijungimas: %1$s</string>
@@ -277,7 +277,7 @@
     <string name="account_section_identity">Tapatybė</string>
     <string name="account_identity_identity">Tapatybė</string>
     <string name="account_identity_username">Vartotojo vardas</string>
-    <string name="account_identity_name">Pavadinimas</string>
+    <string name="account_identity_name">Vardas</string>
     <string name="account_identity_fingerprint">Pirštų atspaudas</string>
     <string name="account_identity_directory_toggle">Leisti kitiems rasti jus kataloge</string>
     <string name="domain_add">Pridėti domeną</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s nebevaldys maršrutų šiame domene.</string>
     <string name="domain_delegation_delete_title">Ištrinti delegavimą?</string>
     <string name="domain_delegation_path">Kelias</string>
-    <string name="domain_delegation_user">Naudotojo ID</string>
+    <string name="domain_delegation_user">Vartotojas</string>
     <string name="domain_delegations">Delegavimai</string>
     <string name="domain_delegations_empty">Nesukonfigūruota delegacijų.</string>
     <string name="domain_delete">Ištrinti domeną</string>

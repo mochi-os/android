@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Alisin</string>
     <string name="wikis_replicas_remove_failed">Nabigong tanggalin ang replica</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Mga wiki</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">Mga notipikasyon tungkol sa pag-edit ng wiki page, komento, at imbitasyon.</string>
     <string name="wikis_pageview_toc_expand">Ipakita ang talaan ng nilalaman</string>
@@ -282,8 +282,8 @@
     <string name="wikis_replicas_removed_success">Inalis ang replica</string>
     <string name="wikis_load_more">Mag-load ng higit pa</string>
     <string name="wikis_access_change_level">Antas ng access</string>
-    <string name="wikis_access_subject_anyone">Sinuman</string>
-    <string name="wikis_access_subject_authenticated">Mga napatotohanang user</string>
+    <string name="wikis_access_subject_anyone">Kahit sino</string>
+    <string name="wikis_access_subject_authenticated">Mga naka-authenticate na user</string>
 
     <string name="wikis_revision_compare">Ihambing ang mga pagbabago</string>
     <string name="wikis_revision_author">ayon kay %1$s</string>

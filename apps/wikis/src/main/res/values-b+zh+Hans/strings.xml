@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">移除</string>
     <string name="wikis_replicas_remove_failed">移除副本失败</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi 维基</string>
     <string name="wikis_channel_name">Wikis 通知</string>
     <string name="wikis_channel_description">关于 wiki 页面编辑、评论和邀请的通知。</string>
     <string name="wikis_pageview_toc_expand">显示目录</string>
@@ -225,7 +225,7 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">更新于 %1$s</string>
     <string name="wikis_pageview_not_found_description">页面\"%1$s\"尚不存在。</string>
-    <string name="wikis_pageview_share_chooser">Wiki 链接</string>
+    <string name="wikis_pageview_share_chooser">维基链接</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">链接</string>
     <string name="wikis_open_sidebar">打开侧边栏</string>

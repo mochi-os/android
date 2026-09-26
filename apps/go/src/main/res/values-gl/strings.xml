@@ -10,7 +10,7 @@
     <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Capturas de negras</string>
     <string name="go_captures_white_sr">Capturas de brancas</string>
-    <string name="go_chat_title">Chat</string>
+    <string name="go_chat_title">Conversa</string>
     <string name="go_color_black">Negras</string>
     <string name="go_color_white">Branco</string>
     <string name="go_delete_confirm">Eliminar</string>
@@ -48,7 +48,7 @@
     <string name="go_resign_message">Seguro que queres renderte? %1$s gañará a partida.</string>
     <string name="go_resign_title">Abandonar a partida?</string>
     <string name="go_sidebar_completed">Completado</string>
-    <string name="go_sidebar_new_game">Novo xogo</string>
+    <string name="go_sidebar_new_game">Nova partida</string>
     <string name="go_status_draw">Empate</string>
     <string name="go_status_draw_text">Empate</string>
     <string name="go_status_game_over">Fin da partida</string>

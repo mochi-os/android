@@ -7,7 +7,7 @@
     <string name="auth_verification_code">Код праверкі</string>
     <string name="auth_email_code">Код па эл. пошце</string>
     <string name="auth_recovery_code">Код аднаўлення</string>
-    <string name="auth_name">Назва</string>
+    <string name="auth_name">Імя</string>
     <string name="auth_create">Стварыць</string>
     <string name="auth_privacy_label">Канфідэнцыяльнасць</string>
     <string name="auth_privacy_public">Публічны</string>
@@ -129,7 +129,7 @@
     <string name="error_enter_name">Калі ласка, увядзіце імя</string>
     <string name="auth_connect_to_server">Падключыцца да сервера</string>
     <string name="auth_server_url">URL сервера</string>
-    <string name="auth_connect">Падключыцца</string>
+    <string name="auth_connect">Злучыцца</string>
     <string name="auth_sign_in">Увайсці</string>
     <string name="auth_check_email">Праверце электронную пошту, каб атрымаць код пацверджання</string>
     <string name="auth_mfa_title">Шматфактарная аўтэнтыфікацыя</string>
@@ -160,7 +160,7 @@
     <string name="bootstrap_choose_account">Выберыце ўліковы запіс</string>
     <string name="bootstrap_sign_in_different_server">Увайсці на іншы сервер</string>
     <string name="common_retry">Паўтарыць</string>
-    <string name="common_more_options">Больш опцый</string>
+    <string name="common_more_options">Больш параметраў</string>
     <string name="common_collapse">Згарнуць</string>
     <string name="common_expand">Разгарнуць</string>
     <string name="common_play_video">Прайграць відэа</string>
@@ -209,7 +209,7 @@
     <string name="about_up_to_date">Усё актуальнае</string>
     <string name="about_check_downloading">Версія %1$s даступная, спампоўванне…</string>
     <string name="about_check_network_error">Не ўдалося звязацца з серверам абнаўленняў</string>
-    <string name="about_check_download_failed">Памылка спампоўвання</string>
+    <string name="about_check_download_failed">Не ўдалося спампаваць</string>
     <string name="notifications_clear_all_title">Ачысціць усе апавяшчэнні?</string>
     <string name="notifications_clear_all_message">Гэта выдаліць усе апавяшчэнні. Іх немагчыма будзе аднавіць.</string>
     <string name="settings_value_auto">Аўтаматычна</string>
@@ -238,7 +238,7 @@
     <string name="stepup_error_oauth">Не ўдалося пацвердзіць з гэтым уліковым запісам. Калі ласка, паспрабуйце яшчэ раз.</string>
     <string name="game_system_resign">%1$s здаўся</string>
     <string name="game_system_draw_offer">%1$s прапанаваў нічыю</string>
-    <string name="game_system_draw_accept">Нічыя пагоджана</string>
+    <string name="game_system_draw_accept">Нічыя прынята</string>
     <string name="game_system_draw_decline">%1$s адхіліў нічыю</string>
     <string name="reactivation_title">Ваш рахунак запланаваны да выдалення</string>
     <string name="reactivation_body">Ваш рахунак запланаваны да выдалення. Вы можаце скасаваць і аднавіць поўны доступ зараз.</string>
@@ -258,7 +258,7 @@
     <string name="tags_interest_up">Паказваць больш падобнага</string>
     <string name="tags_interest_down">Паказваць менш падобнага</string>
     <string name="tags_interest_clear">Спыніць паказ</string>
-    <string name="tags_none">Тэгаў няма</string>
+    <string name="tags_none">Няма тэгаў</string>
     <string name="tags_delete">Выдаліць тэг</string>
     <string name="person_picker_none">Няма</string>
     <string name="person_picker_clear">Ачысціць выбар</string>

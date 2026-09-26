@@ -108,7 +108,7 @@
     <string name="settings_display_reset_confirm_message">Це скине налаштування відображення до значень за замовчуванням.</string>
     <string name="settings_theme_title">Тема</string>
     <string name="settings_theme_default">За замовчуванням</string>
-    <string name="settings_background">Фон</string>
+    <string name="settings_background">Тло</string>
     <string name="settings_background_theme">З теми</string>
     <string name="settings_background_off">Немає</string>
     <string name="game_chat_empty">Повідомлень ще немає</string>

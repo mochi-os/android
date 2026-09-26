@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Feed ta\' Mochi</string>
     <string name="feeds_source_type_feed_memories">Memorji</string>
-    <string name="feeds_remove_source">Neħħi s-sors</string>
+    <string name="feeds_remove_source">Tneħħi s-sors?</string>
     <string name="feeds_suggested_credibility_accept">Aċċetta</string>
     <string name="feeds_rss_url_copied">URL ta\' RSS ikkupjat fil-clipboard</string>
     <string name="feeds_logout">Oħroġ</string>
@@ -117,7 +117,7 @@
     <string name="feeds_clipboard_label_rss">URL RSS</string>
     <string name="feeds_source_never_fetched">Qatt ma nġieb</string>
     <string name="feeds_source_poll">Stħarriġ</string>
-    <string name="feeds_source_transform">Trasforma</string>
+    <string name="feeds_source_transform">Trasformazzjoni AI</string>
     <string name="feeds_remove_source_confirm">Tneħħi \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Ħassar ukoll il-posts importati</string>
     <string name="feeds_suggested_credibility_title">Kredibbiltà suġġerita</string>

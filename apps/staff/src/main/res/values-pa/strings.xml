@@ -163,7 +163,7 @@
     <string name="staff_config_field_stripe_oauth_client">OAuth ਕਲਾਇੰਟ ID</string>
     <string name="staff_config_field_stripe_publishable">ਪ੍ਰਕਾਸ਼ਯੋਗ ਕੁੰਜੀ</string>
     <string name="staff_config_field_stripe_secret">ਗੁਪਤ ਕੁੰਜੀ</string>
-    <string name="staff_config_group_moderation">ਮਾਡਰੇਸ਼ਨ</string>
+    <string name="staff_config_group_moderation">ਸੰਚਾਲਨ</string>
     <string name="staff_config_group_payments">ਭੁਗਤਾਨ</string>
     <string name="staff_config_group_reviews">ਸਮੀਖਿਆਵਾਂ</string>
     <string name="staff_config_group_stripe">Stripe</string>
@@ -180,7 +180,7 @@
     <string name="staff_dashboard_col_date">ਮਿਤੀ</string>
     <string name="staff_dashboard_col_detail">ਵੇਰਵਾ</string>
     <string name="staff_dashboard_col_listing">ਲਿਸਟਿੰਗ</string>
-    <string name="staff_dashboard_col_moderation">ਮਾਡਰੇਸ਼ਨ</string>
+    <string name="staff_dashboard_col_moderation">ਸੰਚਾਲਨ</string>
     <string name="staff_dashboard_col_name">ਨਾਮ</string>
     <string name="staff_dashboard_col_object">ਆਬਜੈਕਟ</string>
     <string name="staff_dashboard_col_reason">ਕਾਰਨ</string>
@@ -208,7 +208,7 @@
     <string name="staff_dashboard_system">ਸਿਸਟਮ</string>
     <string name="staff_dashboard_tab_audit">ਆਡਿਟ</string>
     <string name="staff_dashboard_tab_listings">ਲਿਸਟਿੰਗਾਂ</string>
-    <string name="staff_dashboard_tab_moderation">ਮਾਡਰੇਸ਼ਨ</string>
+    <string name="staff_dashboard_tab_moderation">ਸੰਚਾਲਨ</string>
     <string name="staff_dashboard_tab_orders">ਆਰਡਰ</string>
     <string name="staff_dashboard_tab_signups">ਸਾਈਨਅਪ</string>
     <string name="staff_dashboard_yes">ਹਾਂ</string>
@@ -251,9 +251,9 @@
     <string name="staff_disputes_view">ਦੇਖੋ</string>
     <string name="staff_filter_chip_remove">ਫਿਲਟਰ ਹਟਾਓ</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
-    <string name="staff_filter_label_moderation">ਮਾਡਰੇਸ਼ਨ</string>
-    <string name="staff_filter_label_query">ਖੋਜੋ</string>
-    <string name="staff_filter_label_seller">ਵਿਕਰੇਤਾ</string>
+    <string name="staff_filter_label_moderation">ਸੰਚਾਲਨ</string>
+    <string name="staff_filter_label_query">ਖੋਜ</string>
+    <string name="staff_filter_label_seller">ਵੇਚਣ ਵਾਲਾ</string>
     <string name="staff_filter_label_status">ਸਥਿਤੀ</string>
     <string name="staff_filter_label_type">ਕਿਸਮ</string>
     <string name="staff_listings_action_approve_title">ਸੂਚੀ ਮਨਜ਼ੂਰ ਕਰੋ</string>
@@ -265,7 +265,7 @@
     <string name="staff_listings_approved_toast">ਐਪ ਲੋਡ ਹੋ ਰਹੀ ਹੈ...</string>
     <string name="staff_listings_cancel">ਰੱਦ ਕਰੋ</string>
     <string name="staff_listings_empty">ਕੋਈ ਲਿਸਟਿੰਗ ਨਹੀਂ</string>
-    <string name="staff_listings_filter_moderation_label">ਮਾਡਰੇਸ਼ਨ</string>
+    <string name="staff_listings_filter_moderation_label">ਸੰਚਾਲਨ</string>
     <string name="staff_listings_filter_status_label">ਸਥਿਤੀ</string>
     <string name="staff_listings_moderation_auto_approved">ਆਪਣੇ ਆਪ ਮਨਜ਼ੂਰ</string>
     <string name="staff_listings_moderation_hold">ਰੋਕੋ</string>
@@ -356,7 +356,7 @@
     <string name="staff_sidebar_disputes">ਵਿਵਾਦ</string>
     <string name="staff_sidebar_listings">ਲਿਸਟਿੰਗਾਂ</string>
     <string name="staff_sidebar_management">ਮੈਨੇਜਮੈਂਟ</string>
-    <string name="staff_sidebar_market">ਮਾਰਕਿਟ</string>
+    <string name="staff_sidebar_market">ਮਾਰਕੀਟ</string>
     <string name="staff_sidebar_moderation">ਮਾਡਰੇਸ਼ਨ ਲੌਗ</string>
     <string name="staff_sidebar_overview">ਸੰਖੇਪ</string>
     <string name="staff_sidebar_reports">ਰਿਪੋਰਟਾਂ</string>

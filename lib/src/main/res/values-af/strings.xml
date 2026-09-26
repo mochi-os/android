@@ -58,7 +58,7 @@
     <string name="notifications_empty_unread">Jy\'s heeltemal op datum</string>
     <string name="notifications_tab_unread">Ongelees</string>
     <string name="notifications_tab_unread_count">Ongelees (%1$d)</string>
-    <string name="notifications_tab_all">Almal</string>
+    <string name="notifications_tab_all">Alle</string>
     <string name="notifications_mark_all_read">Merk alles gelees</string>
     <string name="notifications_clear_all">Maak alles skoon</string>
     <string name="settings_title">Instellings</string>
@@ -130,7 +130,7 @@
     <string name="oem_hint_samsung_note">Op Samsung-fone, kyk ook na Instellings → Toestelsorg → Slapende programme en verwyder Mochi as dit gelys is.</string>
     <string name="oem_hint_allow">Laat agtergrond toe</string>
     <string name="oem_hint_dismiss">Moenie weer wys nie</string>
-    <string name="about_label">Aangaande</string>
+    <string name="about_label">Oor</string>
     <string name="about_title">Mochi-kliënt</string>
     <string name="about_version">Weergawe %1$s</string>
     <string name="about_check_updates">Kyk vir opdaterings</string>
@@ -162,7 +162,7 @@
     <string name="access_level_manage">Bestuur</string>
     <string name="notifications_clear">Vee kennisgewings uit</string>
     <string name="lightbox_position">%1$d / %2$d</string>
-    <string name="format_time_just_now">Sopas</string>
+    <string name="format_time_just_now">Nou net</string>
     <string name="format_time_minutes_ago">%1$dm gelede</string>
     <string name="format_time_hours_ago">%1$du gelede</string>
     <string name="format_time_days_ago">%1$dd gelede</string>

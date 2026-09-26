@@ -2,7 +2,7 @@
 <resources>
 
     <string name="words_list_title">ਸ਼ਬਦ</string>
-    <string name="words_list_menu">ਮੇਨੂ</string>
+    <string name="words_list_menu">ਮੀਨੂ</string>
     <string name="words_list_logout">ਲੌਗ ਆਊਟ</string>
     <string name="words_sidebar_completed">ਪੂਰਾ</string>
     <string name="words_sidebar_new_game">ਨਵੀਂ ਗੇਮ</string>

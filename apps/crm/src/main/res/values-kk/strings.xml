@@ -6,7 +6,7 @@
     <string name="crm_list_logout">Шығу</string>
     <string name="crm_list_create">CRM құру</string>
     <string name="crm_create_title">CRM құру</string>
-    <string name="crm_create_name">Аты</string>
+    <string name="crm_create_name">Атау</string>
     <string name="crm_create_description">Сипаттама</string>
     <string name="crm_create_template_none">Жоқ</string>
     <string name="crm_create_action">Құру</string>
@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Белгіше</string>
     <string name="crm_option_icon_placeholder">мыс. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Жазылудан бас тарту</string>
-    <string name="crm_settings_delete_crm">Жобаны жою</string>
+    <string name="crm_settings_delete_crm">CRM жою</string>
     <string name="crm_settings_delete_confirm_title">CRM жою</string>
     <string name="crm_settings_unsubscribe_title">Жазылудан бас тарту</string>
     <string name="crm_settings_unsubscribe_message">Осы CRM-нен жазылудан бас тартқыңыз келетініне сенімдісіз бе?</string>
@@ -86,7 +86,7 @@
     <string name="crm_classes_add">Сынып қосу</string>
     <string name="crm_classes_add_dialog_title">Сынып қосу</string>
     <string name="crm_classes_create">Құру</string>
-    <string name="crm_class_name">Аты</string>
+    <string name="crm_class_name">Атау</string>
     <string name="crm_class_save_name">Атауды сақтау</string>
     <string name="crm_class_title_field">Тақырып өрісі</string>
     <string name="crm_class_fields">Өрістер</string>
@@ -98,7 +98,7 @@
     <string name="crm_field_type_user">Пайдаланушы</string>
     <string name="crm_field_type_date">Күн</string>
     <string name="crm_field_type_checklist">Тапсырмалар тізімі</string>
-    <string name="crm_field_name">Аты</string>
+    <string name="crm_field_name">Атау</string>
     <string name="crm_field_type">Түрі</string>
     <string name="crm_field_flags">Жалаушалар</string>
     <string name="crm_field_required">Міндетті</string>
@@ -134,10 +134,10 @@
     <string name="crm_class_move_up">Жоғары жылжыту</string>
     <string name="crm_views_move_down">Төмен жылжыту</string>
     <string name="crm_class_move_down">Төмен жылжыту</string>
-    <string name="crm_sort_direction_asc">Өсу</string>
-    <string name="crm_views_direction_asc">Өсу</string>
-    <string name="crm_sort_direction_desc">Төмен</string>
-    <string name="crm_views_direction_desc">Төмен</string>
+    <string name="crm_sort_direction_asc">Өсу реті</string>
+    <string name="crm_views_direction_asc">Өсу реті</string>
+    <string name="crm_sort_direction_desc">Кему реті</string>
+    <string name="crm_views_direction_desc">Кему реті</string>
     <string name="crm_list_add_to_home">Негізгі экранға қосу</string>
     <string name="crm_search_objects_placeholder">Объектілерді іздеу</string>
     <string name="crm_links_search_placeholder">Объектілерді іздеу</string>
@@ -158,10 +158,10 @@
     <string name="crm_object_delete_message">Осы нысанды жойғыңыз келетініне сенімдісіз бе? Бұл әрекетті қайтару мүмкін емес.</string>
     <string name="crm_parent_none">Аталық нысан жоқ</string>
     <string name="crm_links_empty">Сілтемелер жоқ</string>
-    <string name="crm_links_section_relates">Қатысы бар</string>
+    <string name="crm_links_section_relates">Қатысты</string>
     <string name="crm_links_section_duplicated_by">Көшірмесі бар</string>
     <string name="crm_links_type">Сілтеме түрі</string>
-    <string name="crm_links_type_relates">Қатысы бар</string>
+    <string name="crm_links_type_relates">Қатысты</string>
     <string name="crm_links_remove">Сілтемені жою</string>
     <string name="crm_comment_replying_to">%1$s пайдаланушысына жауап беру</string>
     <string name="crm_comment_clear_reply">Жауапты тазалау</string>
@@ -201,7 +201,7 @@
     <string name="crm_classes_empty">Анықталған сыныптар жоқ</string>
     <string name="crm_class_label">Сынып: %1$s</string>
     <string name="crm_class_title_field_description">Осы сыныптың нысандарына көрсетілетін атау ретінде қай өрісті пайдалану.</string>
-    <string name="crm_class_title_field_default">Әдепкі (оқуға жарамды)</string>
+    <string name="crm_class_title_field_default">Әдепкі (оқылатын)</string>
     <string name="crm_class_parents">Аталық сыныптар</string>
     <string name="crm_class_delete_message">\"%1$s\" сыныбын жойғыңыз келетініне сенімдісіз бе? Барлық өрістер мен олардың опциялары да жойылады.</string>
     <string name="crm_field_type_enumerated">Санамаланған</string>
@@ -244,7 +244,7 @@
     <string name="crm_attachment_remove">Тіркемені алып тастау</string>
     <string name="crm_board_add_column">Баған қосу</string>
     <string name="crm_settings_entity_id">Нысан идентификаторы</string>
-    <string name="crm_settings_fingerprint">Саусақ ізі</string>
+    <string name="crm_settings_fingerprint">Қысқа идентификатор</string>
     <string name="crm_settings_server">Сервер</string>
     <string name="crm_untitled">Атаусыз</string>
     <string name="crm_property_select">Таңдаңыз …</string>

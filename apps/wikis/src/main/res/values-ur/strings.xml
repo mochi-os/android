@@ -15,7 +15,7 @@
     <string name="wikis_page_action_rename">نام تبدیل کریں</string>
     <string name="wikis_page_action_history">تاریخ</string>
     <string name="wikis_page_action_delete">حذف کریں</string>
-    <string name="wikis_page_action_section_wiki">وکی</string>
+    <string name="wikis_page_action_section_wiki">ویکی</string>
     <string name="wikis_page_action_search">تلاش کریں</string>
     <string name="wikis_page_action_tags">ٹیگز</string>
     <string name="wikis_page_action_recent_changes">حالیہ تبدیلیاں</string>
@@ -215,7 +215,7 @@
     <string name="wikis_replicas_remove_confirm_title">replica ہٹائیں؟</string>
     <string name="wikis_replicas_remove_confirm_action">ہٹائیں</string>
     <string name="wikis_replicas_remove_failed">ریپلیکا ہٹانے میں ناکامی</string>
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi ویکیز</string>
     <string name="wikis_channel_name">Wikis اطلاعات</string>
     <string name="wikis_channel_description">صفحہ ترامیم، تبصرے اور دعوت ناموں کے بارے میں اطلاعات۔</string>
     <string name="wikis_pageview_toc_expand">فہرست مضامین دکھائیں</string>
@@ -244,7 +244,7 @@
     <string name="wikis_insert_dialog_empty">ابھی کوئی اٹیچمنٹ نہیں ہے۔ شروع کرنے کے لیے فائل اپ لوڈ کریں۔</string>
     <string name="wikis_delete_page_message">آپ صفحہ „%1$s\" (%2$s) حذف کرنے والے ہیں۔ یہ عمل ہسٹری سے بحال کر کے کالعدم کیا جا سکتا ہے۔</string>
     <string name="wikis_delete_page_success">صفحہ حذف کر دیا گیا</string>
-    <string name="wikis_revert_page_title">صفحہ واپس کریں</string>
+    <string name="wikis_revert_page_title">صفحہ واپس لائیں</string>
     <string name="wikis_revert_page_message">آپ %1$s کو ورژن %2$d پر واپس کرنے والے ہیں۔ یہ ورژن %2$d کے مواد کے ساتھ نئی ریویژن بنائے گا۔</string>
     <string name="wikis_revert_page_default_comment">ورژن %1$d پر واپس کیا</string>
     <string name="wikis_revert_page_success">ورژن %1$d پر واپس کیا</string>

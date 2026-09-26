@@ -32,8 +32,8 @@
     <string name="chess_draw_accept">Hekoite</string>
     <string name="chess_draw_decline">Joha</string>
     <string name="chess_status_checkmate_you_win">Checkmate — eganáma!</string>
-    <string name="chess_status_stalemate">Mate ija\'ỹi — empate</string>
-    <string name="chess_status_draw">Pyhuỹi</string>
+    <string name="chess_status_stalemate">Ahogado — peteĩcha</string>
+    <string name="chess_status_draw">Peteĩcha</string>
     <string name="chess_status_check_your_move">Check — ne mba\'e japo</string>
     <string name="chess_status_your_move">Ne pyenda</string>
     <string name="chess_move_subject_you">Nde</string>
@@ -54,13 +54,13 @@
     <string name="chess_piece_knight">Caballo</string>
     <string name="chess_piece_pawn">Peón</string>
     <string name="chess_move_played">%1$s ojapo %2$s</string>
-    <string name="chess_channel_name">Chess notifications</string>
-    <string name="chess_channel_description">Marandu ajedrez jeku’e, empate ñemoĩ ha ñembosarái resultado rehegua.</string>
+    <string name="chess_channel_name">Ajedrez momarandu</string>
+    <string name="chess_channel_description">Momarandu ajedrez jeku’e, empate ñemoĩ ha ñembosarái resultado rehegua.</string>
     <string name="chess_open_sidebar">Embovy yke pe</string>
     <string name="chess_empty_subtitle">Eñepyrũ ne ñembosarái peteĩha eñembosarái ajedrez peteĩ angirũ ndive.</string>
     <string name="chess_empty_start_button">Eñepyrũ ne ñembosarái peteĩha</string>
     <string name="chess_detail_unavailable">Ñembosarái ndaipóri</string>
-    <string name="chess_delete_title">Eheja ñembosarái?</string>
+    <string name="chess_delete_title">Ehundi ñembosarái?</string>
     <string name="chess_delete_message">Kóva oipe’a ñembosarái ne listagui.</string>
     <string name="chess_ws_connecting">Ojoajuhína…</string>
     <string name="chess_ws_disconnected">Offline</string>

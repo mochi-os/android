@@ -162,7 +162,7 @@
     <string name="staff_config_field_stripe_oauth_client">Nasnameya muşteriya OAuth</string>
     <string name="staff_config_field_stripe_publishable">Mifteya weşandinê</string>
     <string name="staff_config_field_stripe_secret">Mifteya veşartî</string>
-    <string name="staff_config_group_moderation">Modarasyon</string>
+    <string name="staff_config_group_moderation">Moderasyon</string>
     <string name="staff_config_group_payments">Dayîn</string>
     <string name="staff_config_group_reviews">Nirxandin</string>
     <string name="staff_config_group_stripe">Stripe</string>
@@ -179,7 +179,7 @@
     <string name="staff_dashboard_col_date">Dîrok</string>
     <string name="staff_dashboard_col_detail">Hûragahî</string>
     <string name="staff_dashboard_col_listing">Lîste</string>
-    <string name="staff_dashboard_col_moderation">Modarasyon</string>
+    <string name="staff_dashboard_col_moderation">Moderasyon</string>
     <string name="staff_dashboard_col_name">Nav</string>
     <string name="staff_dashboard_col_object">Obje</string>
     <string name="staff_dashboard_col_reason">Sedem</string>
@@ -207,7 +207,7 @@
     <string name="staff_dashboard_system">Pergal</string>
     <string name="staff_dashboard_tab_audit">Vekolîn</string>
     <string name="staff_dashboard_tab_listings">Lîste</string>
-    <string name="staff_dashboard_tab_moderation">Modarasyon</string>
+    <string name="staff_dashboard_tab_moderation">Moderasyon</string>
     <string name="staff_dashboard_tab_orders">Ferman</string>
     <string name="staff_dashboard_tab_signups">Tomarbûn</string>
     <string name="staff_dashboard_yes">Erê</string>
@@ -249,9 +249,9 @@
     <string name="staff_disputes_view">Bibîne</string>
     <string name="staff_filter_chip_remove">Parzûnê rake</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
-    <string name="staff_filter_label_moderation">Modarasyon</string>
-    <string name="staff_filter_label_query">Lêgerîn</string>
-    <string name="staff_filter_label_seller">Firoşkar</string>
+    <string name="staff_filter_label_moderation">Moderasyon</string>
+    <string name="staff_filter_label_query">Lêger</string>
+    <string name="staff_filter_label_seller">Firoşker</string>
     <string name="staff_filter_label_status">Rewş</string>
     <string name="staff_filter_label_type">Cure</string>
     <string name="staff_listings_action_approve_title">Lîsteyê erê bike</string>
@@ -263,7 +263,7 @@
     <string name="staff_listings_approved_toast">Lîste hat pejirandin</string>
     <string name="staff_listings_cancel">Betal bike</string>
     <string name="staff_listings_empty">Tu lîste tune</string>
-    <string name="staff_listings_filter_moderation_label">Modarasyon</string>
+    <string name="staff_listings_filter_moderation_label">Moderasyon</string>
     <string name="staff_listings_filter_status_label">Rewş</string>
     <string name="staff_listings_moderation_auto_approved">Bixweber hat erêkirin</string>
     <string name="staff_listings_moderation_hold">Bigire</string>
@@ -354,7 +354,7 @@
     <string name="staff_sidebar_disputes">Nakokî</string>
     <string name="staff_sidebar_listings">Lîste</string>
     <string name="staff_sidebar_management">Birêvebirin</string>
-    <string name="staff_sidebar_market">Market</string>
+    <string name="staff_sidebar_market">Bazar</string>
     <string name="staff_sidebar_moderation">Têketina modarasyonê</string>
     <string name="staff_sidebar_overview">Nêrîna giştî</string>
     <string name="staff_sidebar_reports">Rapor</string>

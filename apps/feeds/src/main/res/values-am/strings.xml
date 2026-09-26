@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi ፊድ</string>
     <string name="feeds_source_type_feed_memories">ትዝታዎች</string>
-    <string name="feeds_remove_source">ምንጭን አስወግድ</string>
+    <string name="feeds_remove_source">ምንጭ ይወገድ?</string>
     <string name="feeds_suggested_credibility_accept">ተቀበል</string>
     <string name="feeds_rss_url_copied">RSS ዩአርኤል ወደ ቅንጥብ ሰሌዳ ተቀድቷል</string>
     <string name="feeds_logout">ውጣ</string>
@@ -104,14 +104,14 @@
     <string name="feeds_file">ፋይል</string>
     <string name="feeds_select_feed">ፊድ ይምረጡ</string>
     <string name="feeds_loading_feeds">ፊዶች በመጫን ላይ…</string>
-    <string name="feeds_move_up">ወደ ላይ ውሰድ</string>
-    <string name="feeds_move_down">ወደ ታች ውሰድ</string>
+    <string name="feeds_move_up">ወደ ላይ አንቀሳቅስ</string>
+    <string name="feeds_move_down">ወደ ታች አንቀሳቅስ</string>
     <string name="feeds_sources_title_named">የ%1$s ምንጮች</string>
     <string name="feeds_delete_feed_confirm">ይህ ፊዱን እና ሁሉንም ልጥፎቹን በቋሚነት ይሰርዛል። ይህ መቀልበስ አይቻልም።</string>
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">ፈጽሞ አልተወሰደም</string>
     <string name="feeds_source_poll">ቅኝት</string>
-    <string name="feeds_source_transform">ለውጥ</string>
+    <string name="feeds_source_transform">AI ለውጥ</string>
     <string name="feeds_remove_source_confirm">\"%1$s\" ይወገድ?</string>
     <string name="feeds_remove_also_delete_posts">የተመጡ ልጥፎችን ደግሞ ሰርዝ</string>
     <string name="feeds_suggested_credibility_title">የተጠቆመ ታማኝነት</string>

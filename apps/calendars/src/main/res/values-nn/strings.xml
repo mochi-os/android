@@ -4,7 +4,7 @@
     <string name="calendars_subscribe_submit">Abonner</string>
     <string name="calendars_subscribe_url">Adresse</string>
     <string name="calendars_connect_device">Kople til ei eining</string>
-    <string name="calendars_preferences">Innstillinger</string>
+    <string name="calendars_preferences">Innstillingar</string>
     <string name="calendars_name">Namn</string>
     <string name="calendars_rename">Døyp om</string>
     <string name="calendars_delete">Slett</string>
@@ -29,7 +29,7 @@
     <string name="calendars_day_thursday">Torsdag</string>
     <string name="calendars_day_friday">Fredag</string>
     <string name="calendars_day_saturday">Laurdag</string>
-    <string name="calendars_link_replace">Erstatt</string>
+    <string name="calendars_link_replace">Byt ut</string>
     <string name="calendars_link_revoke">Trekk tilbake</string>
     <string name="calendars_permission_allow">Tillat</string>
     <string name="calendars_permission_deny">Nekt</string>
@@ -110,7 +110,7 @@
     <string name="calendars_multiweek_weeks">Veker som blir viste</string>
     <string name="calendars_multiweek_previous">Veker før</string>
     <string name="calendars_default_duration">Standard lengd på hending</string>
-    <string name="calendars_default_reminder">Standard påminning</string>
+    <string name="calendars_default_reminder">Standardpåminning</string>
     <string name="calendars_link_title">Kalenderlenkje</string>
     <string name="calendars_link_copy">Kopier lenkje</string>
     <string name="calendars_link_once">Kopier henne no: ho kan ikkje visast igjen.</string>
@@ -154,7 +154,7 @@
     <string name="calendars_link_submit">Kople til</string>
     <string name="calendars_link_sync">Synkroniser no</string>
     <string name="calendars_link_grant">Tillat kalendertilgang</string>
-    <string name="calendars_link_linked">Tilkopla</string>
+    <string name="calendars_link_linked">Kopla</string>
     <string name="calendars_link_marker">Tilkopla kalender</string>
     <string name="calendars_link_remote_empty">Ingen kalendrar</string>
     <string name="calendars_poll_conflict">Ei hending vart endra på begge sider</string>
@@ -162,13 +162,13 @@
     <string name="calendars_poll_unauthorised">Tenaren til kalenderen avviste påloggingsopplysningane til kontoen</string>
     <string name="calendars_subscribe_username">Brukarnamn</string>
     <string name="calendars_subscribe_password">Passord</string>
-    <string name="calendars_subscribe_connect">Kopla til</string>
+    <string name="calendars_subscribe_connect">Kople til</string>
     <string name="calendars_subscribe_server">Ein annan Mochi- eller CalDAV-tenar</string>
     <string name="calendars_subscribe_address">Publisert kalenderadresse (skriveverna)</string>
     <string name="calendars_subscribe_password_apple">Appspesifikt passord</string>
     <string name="calendars_subscribe_server_url">Tenaradresse</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
-    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_apple_id">Apple-ID</string>
     <string name="calendars_subscribe_google">Google Kalender</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google-kontoar er ikkje aktiverte på denne tenaren. Aktiver dei under Innstillingar, Systeminnstillingar.</string>

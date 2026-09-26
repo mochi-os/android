@@ -250,7 +250,7 @@
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">मॉडरेशन</string>
     <string name="staff_filter_label_query">खोजीं</string>
-    <string name="staff_filter_label_seller">बेचवइया</string>
+    <string name="staff_filter_label_seller">विक्रेता</string>
     <string name="staff_filter_label_status">स्थिति</string>
     <string name="staff_filter_label_type">प्रकार</string>
     <string name="staff_listings_action_approve_title">लिस्टिंग स्वीकृत करीं</string>
@@ -352,7 +352,7 @@
     <string name="staff_sidebar_disputes">विवाद</string>
     <string name="staff_sidebar_listings">लिस्टिंग</string>
     <string name="staff_sidebar_management">प्रबंधन</string>
-    <string name="staff_sidebar_market">मार्केट</string>
+    <string name="staff_sidebar_market">बाजार</string>
     <string name="staff_sidebar_moderation">मॉडरेशन लॉग</string>
     <string name="staff_sidebar_overview">सिंहावलोकन</string>
     <string name="staff_sidebar_reports">रिपोर्ट</string>

@@ -16,7 +16,7 @@
     <string name="go_color_white">Vit</string>
     <string name="go_delete_confirm">Ta bort</string>
     <string name="go_delete_message">Detta spel kommer att tas bort från din lista. Detta kan inte ångras.</string>
-    <string name="go_delete_title">Ta bort spelet?</string>
+    <string name="go_delete_title">Ta bort partiet?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">Acceptera</string>
     <string name="go_draw_decline">Avböj</string>

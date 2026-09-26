@@ -49,9 +49,9 @@
     <string name="people_profile_save">Spremi</string>
     <string name="people_profile_saving">Spremam…</string>
     <string name="people_profile_save_failed">Spremanje nije uspjelo</string>
-    <string name="people_profile_name">Naziv</string>
-    <string name="people_profile_name_saved">Naziv spremljen</string>
-    <string name="people_profile_edit_name">Uredi naziv</string>
+    <string name="people_profile_name">Ime</string>
+    <string name="people_profile_name_saved">Ime spremljeno</string>
+    <string name="people_profile_edit_name">Uredi ime</string>
     <string name="people_profile_identity">Identitet</string>
     <string name="people_profile_accent">Akcent</string>
     <string name="people_profile_directory_listing">Dopusti drugima da vas pronađu u imeniku</string>
@@ -124,7 +124,7 @@
     <string name="people_contacts_try_adjusting">Pokušajte prilagoditi pretragu</string>
     <string name="people_contact_section_address">Adresa</string>
     <string name="people_contact_section_detail">Detalji</string>
-    <string name="people_contact_name">Naziv</string>
+    <string name="people_contact_name">Ime</string>
     <string name="people_contact_email">E-pošta</string>
     <string name="people_contact_city">Grad</string>
     <string name="people_contact_region">Regija</string>
@@ -137,7 +137,7 @@
     <string name="people_contact_pick_date_confirm">U redu</string>
     <string name="people_books_name">Naziv</string>
     <string name="people_books_rename">Preimenuj</string>
-    <string name="people_contacts_sort_name">Naziv</string>
+    <string name="people_contacts_sort_name">Ime</string>
     <string name="people_contacts_sort_recent">Nedavno dodano</string>
     <string name="people_contacts_thats_you">To si ti</string>
     <string name="people_contacts_try_different_search">Pokušajte s drugim pojmom za pretragu</string>
@@ -154,7 +154,7 @@
     <string name="people_contacts_friend">Prijatelj</string>
     <string name="people_contacts_invite">Pozovi</string>
     <string name="people_contacts_unfriend_confirm">%1$s više neće biti vaš prijatelj. Kontakt ostaje u vašem adresaru.</string>
-    <string name="people_contacts_delete">Izbriši kontakt</string>
+    <string name="people_contacts_delete">Obriši kontakt</string>
     <string name="people_contacts_delete_confirm">Izbrisati %1$s iz vaših kontakata?</string>
     <string name="people_contacts_delete_friend_confirm">Izbrisati %1$s iz vaših kontakata? I vaše prijateljstvo prestaje.</string>
     <string name="people_contact_new_title">Novi kontakt</string>

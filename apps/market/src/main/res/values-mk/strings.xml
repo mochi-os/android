@@ -38,7 +38,7 @@
     <string name="market_appeal_dialog_failed">Неуспешно поднесување на жалба</string>
     <string name="market_appeal_dialog_reason_label">Зошто поднесувате жалба?</string>
     <string name="market_appeal_dialog_submit">Поднеси жалба</string>
-    <string name="market_appeal_dialog_submitting">Се поднесува…</string>
+    <string name="market_appeal_dialog_submitting">Се испраќа…</string>
     <string name="market_appeal_dialog_success">Жалбата е поднесена</string>
     <string name="market_appeal_dialog_title">Жалба за отстранување</string>
     <string name="market_asset_download">Преземи</string>
@@ -145,7 +145,7 @@
     <string name="market_dispute_dialog_failed">Неуспешно поднесување на одговор</string>
     <string name="market_dispute_dialog_response_label">Вашиот одговор</string>
     <string name="market_dispute_dialog_submit">Поднеси</string>
-    <string name="market_dispute_dialog_submitting">Се поднесува…</string>
+    <string name="market_dispute_dialog_submitting">Се испраќа…</string>
     <string name="market_dispute_dialog_title">Одговори на спор</string>
     <string name="market_editor_appeal">Жалба против модерација</string>
     <string name="market_editor_appeal_reason">Зошто поднесувате жалба?</string>
@@ -299,7 +299,7 @@
     <string name="market_listing_detail_buy_now">Купи сега</string>
     <string name="market_listing_detail_description_heading">Опис</string>
     <string name="market_listing_detail_edit">Уреди</string>
-    <string name="market_listing_detail_information_heading">Информации за достава</string>
+    <string name="market_listing_detail_information_heading">Информации за испорака</string>
     <string name="market_listing_detail_load_failed">Неуспешно вчитување на оглас</string>
     <string name="market_listing_detail_loading">Се вчитува огласот</string>
     <string name="market_listing_detail_listed">Објавено %1$s</string>
@@ -319,7 +319,7 @@
     <string name="market_listing_detail_seller_suspended_banner">Овој продавач е суспендиран. Новите нарачки се паузирани додека сметката не се обнови.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">Купувањето е оневозможено додека сметката на продавачот е ограничена.</string>
     <string name="market_listing_detail_share">Сподели оглас</string>
-    <string name="market_listing_detail_shipping_heading">Испорака</string>
+    <string name="market_listing_detail_shipping_heading">Опции за испорака</string>
     <string name="market_listing_detail_subscribe">Претплати се</string>
     <string name="market_listing_detail_tags_heading">Ознаки</string>
     <string name="market_listing_detail_title">Оглас</string>
@@ -525,7 +525,7 @@
     <string name="market_sale_review_response_failed">Неуспешно поднесување на одговор</string>
     <string name="market_sale_review_response_label">Вашиот одговор</string>
     <string name="market_sale_review_response_submit">Поднеси одговор</string>
-    <string name="market_sale_review_response_submitting">Се поднесува…</string>
+    <string name="market_sale_review_response_submitting">Се испраќа…</string>
     <string name="market_sale_section_audit">Активност</string>
     <string name="market_sale_section_dispute">Спор</string>
     <string name="market_sale_section_fees">Распределба на надоместоци</string>
@@ -588,7 +588,7 @@
     <string name="market_status_pending">На чекање</string>
     <string name="market_status_refunded">Вратени средства</string>
     <string name="market_status_shipped">Испратено</string>
-    <string name="market_stripe_onboarding_action">Продолжи поставување</string>
+    <string name="market_stripe_onboarding_action">Продолжи со поставувањето</string>
     <string name="market_stripe_onboarding_body">Завршете го Stripe регистрирањето пред да можете да примате исплати.</string>
     <string name="market_stripe_onboarding_check">Провери статус</string>
     <string name="market_stripe_onboarding_failed">Не може да се отвори Stripe</string>
@@ -662,7 +662,7 @@
     <string name="market_seller_become_heading">Стани продавач</string>
     <string name="market_seller_become_title">Стани продавач</string>
     <string name="market_seller_check_status">Провери статус</string>
-    <string name="market_seller_checking">Проверка...</string>
+    <string name="market_seller_checking">Проверување…</string>
     <string name="market_seller_connect_stripe">Поврзи Stripe</string>
     <string name="market_seller_connecting">Се вчитува...</string>
     <string name="market_seller_fee_loading">Се вчитуваат детали за надомест...</string>

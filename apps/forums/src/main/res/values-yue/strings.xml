@@ -3,8 +3,8 @@
 
     <string name="forums_create_privacy">隱私</string>
 
-    <string name="forums_create_name">名稱</string>
-    <string name="forums_create_action">建立</string>
+    <string name="forums_create_name">論壇名稱</string>
+    <string name="forums_create_action">建立論壇</string>
     <string name="forums_post_save">儲存</string>
     <string name="forums_comment_save">儲存</string>
     <string name="forums_reject_post_access">你冇喺呢個論壇發文嘅權限</string>
@@ -138,7 +138,7 @@
     <string name="forums_banner_dismiss">關閉橫額</string>
     <string name="forums_ai_mode_label">模式:%1$s</string>
     <string name="forums_ai_mode_heading">AI 模式</string>
-    <string name="forums_ai_mode_off">關閉</string>
+    <string name="forums_ai_mode_off">已停用</string>
     <string name="forums_ai_account">AI 帳戶</string>
     <string name="forums_ai_account_default">預設帳戶</string>
     <string name="forums_ai_prompt_tag">標籤提示語</string>
@@ -152,7 +152,7 @@
     <string name="forums_moderation_tab_log">紀錄</string>
     <string name="forums_moderation_tab_restrictions">限制</string>
     <string name="forums_moderation_queue_empty">冇待處理項目</string>
-    <string name="forums_moderation_reports_resolved">已處理</string>
+    <string name="forums_moderation_reports_resolved">已解決</string>
     <string name="forums_moderation_reports_empty">冇舉報</string>
     <string name="forums_moderation_report_details">詳情:%1$s</string>
     <string name="forums_moderation_report_resolved_by">由 %1$s 處理 — %2$s</string>
@@ -190,7 +190,7 @@
     <string name="forums_comment_replying_to">回覆 %1$s</string>
     <string name="forums_comment_clear_reply">清除回覆</string>
     <string name="forums_settings_title">%1$s 設定</string>
-    <string name="forums_settings_rename_label">討論區名稱</string>
+    <string name="forums_settings_rename_label">論壇名稱</string>
     <string name="forums_settings_danger_zone">危險操作</string>
     <string name="forums_settings_delete">刪除討論區</string>
     <string name="forums_settings_delete_title">刪除討論區</string>
@@ -209,7 +209,7 @@
     <string name="forums_saved_title">已儲存</string>
     <string name="forums_saved_remove">由已儲存中移除</string>
     <string name="forums_saved_clear_all">全部清除</string>
-    <string name="forums_rss_feed">RSS 訂閱源</string>
+    <string name="forums_rss_feed">RSS 訊息來源</string>
     <string name="forums_rss_mode_posts">帖文</string>
     <string name="forums_rss_mode_posts_comments">帖文同留言</string>
     <string name="forums_rss_copied">RSS 網址已複製到剪貼簿</string>
@@ -311,22 +311,22 @@
     <string name="forums_post_edited">%1$s（已編輯）</string>
     <string name="forums_moderation_action_remove">已移除</string>
     <string name="forums_moderation_action_restore">已還原</string>
-    <string name="forums_moderation_action_approve">已核准</string>
+    <string name="forums_moderation_action_approve">已批准</string>
     <string name="forums_moderation_action_lock">已鎖定</string>
     <string name="forums_moderation_action_unlock">已解鎖</string>
-    <string name="forums_moderation_action_pin">已釘選</string>
+    <string name="forums_moderation_action_pin">已置頂</string>
     <string name="forums_moderation_action_unpin">已取消釘選</string>
     <string name="forums_moderation_action_restrict">受限</string>
     <string name="forums_moderation_action_unrestrict">已解除限制</string>
     <string name="forums_moderation_action_resolve">已解決的檢舉</string>
     <string name="forums_moderation_target_post">貼文</string>
     <string name="forums_moderation_target_comment">留言</string>
-    <string name="forums_moderation_target_user">使用者</string>
+    <string name="forums_moderation_target_user">用戶</string>
     <string name="forums_moderation_reason_spam">垃圾訊息</string>
     <string name="forums_moderation_reason_harassment">騷擾</string>
     <string name="forums_moderation_reason_hate">仇恨言論</string>
     <string name="forums_moderation_reason_violence">暴力</string>
-    <string name="forums_moderation_reason_misinformation">錯誤資訊</string>
+    <string name="forums_moderation_reason_misinformation">虛假資訊</string>
     <string name="forums_moderation_reason_offtopic">離題</string>
     <string name="forums_moderation_reason_other">其他</string>
     <string name="forums_block">封鎖</string>

@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">ګډون لغوه کول</string>
     <string name="forums_list_unsubscribe_title">ګډون لغوه کول</string>
     <string name="forums_create_title">فورم جوړ کړئ</string>
-    <string name="forums_create_name">نوم</string>
+    <string name="forums_create_name">د فورم نوم</string>
     <string name="forums_create_privacy">محرمیت</string>
     <string name="forums_create_private">خصوصي</string>
     <string name="forums_create_public">عامه</string>
-    <string name="forums_create_action">جوړ کړئ</string>
+    <string name="forums_create_action">فورم جوړ کړئ</string>
     <string name="forums_find_title">فورمونه ومومئ</string>
     <string name="forums_find_recommended">سپارښتل شوی</string>
     <string name="forums_find_subscribe">ګډون وکړئ</string>
@@ -21,7 +21,7 @@
     <string name="forums_loading">بار کیږي…</string>
     <string name="forums_no_posts">تر اوسه هیڅ لیکنې نشته</string>
     <string name="forums_new_post">نوې لیکنه</string>
-    <string name="forums_settings">ترتیبات</string>
+    <string name="forums_settings">تنظیمات</string>
     <string name="forums_load_more">نور بار کړئ</string>
     <string name="forums_sort_label">ترتیب</string>
     <string name="forums_sort_new">تر ټولو نوي</string>
@@ -71,7 +71,7 @@
     <string name="forums_ai_account_default">ډیفالټ حساب</string>
     <string name="forums_ai_prompt_reset">ډیفالټ ته بیرته تنظیم کړئ</string>
     <string name="forums_settings_unsubscribe">ګډون لغوه کول</string>
-    <string name="forums_moderation_title">اعتدال</string>
+    <string name="forums_moderation_title">څارنه</string>
     <string name="forums_moderation_tab_queue">کتار</string>
     <string name="forums_moderation_tab_reports">راپورونه</string>
     <string name="forums_moderation_tab_log">لاګ</string>
@@ -156,7 +156,7 @@
     <string name="forums_banner_placeholder">دې فورم ته ښه راغلاست…</string>
     <string name="forums_ai_mode_label">حالت: %1$s</string>
     <string name="forums_ai_mode_heading">د AI حالت</string>
-    <string name="forums_ai_mode_off">بند</string>
+    <string name="forums_ai_mode_off">غیرفعال شوی</string>
     <string name="forums_ai_account">د AI حساب</string>
     <string name="forums_ai_prompt_tag">د ټګ کولو پرامپټ</string>
     <string name="forums_ai_prompt_score">د نمرې ورکولو پرامپټ</string>
@@ -219,11 +219,11 @@
     <string name="forums_all_forums">ټول فورمونه</string>
     <string name="forums_create_allow_search">هرچا ته اجازه ورکړئ چې فورم ولټوي</string>
     <string name="forums_rss_clipboard_label">د فورم RSS پته</string>
-    <string name="forums_tab_moderation">اعتدال</string>
+    <string name="forums_tab_moderation">څارنه</string>
     <string name="forums_access_level_view_full">یوازې لیدل</string>
     <string name="forums_access_level_none_full">د لاسرسي اجازه نشته</string>
     <string name="forums_access_subject_anyone">هر څوک</string>
-    <string name="forums_access_subject_authenticated">تصدیق شوي کاروونکي</string>
+    <string name="forums_access_subject_authenticated">تصدیق شوي کارنان</string>
     <string name="forums_access_tab_other">نور</string>
     <string name="forums_access_authenticated_desc">هر څوک چې ننوتلی وي</string>
     <string name="forums_access_anyone_desc">د بېنومو کاروونکو په ګډون</string>
@@ -257,7 +257,7 @@
     <string name="forums_access_select_rule">یو قانون وټاکئ</string>
     <string name="forums_ai_actions_label">په لیکنو کې د AI کړنې</string>
     <string name="forums_ai_prompt_custom">دودیز</string>
-    <string name="forums_ai_prompt_score_label">د نمرې پرامپټ</string>
+    <string name="forums_ai_prompt_score_label">د سکور پرامپټ</string>
     <string name="forums_ai_prompt_tag_label">د ټګ پرامپټ</string>
     <string name="forums_ai_prompt_variables">متغیرونه: %1$s</string>
     <string name="forums_link">لینک</string>
@@ -276,8 +276,8 @@
     <string name="forums_moderation_restriction_by">د %1$s لخوا</string>
     <string name="forums_moderation_restriction_remove_message">سمدلاسه به فورم ته بشپړ لاسرسی بیرته ترلاسه کړي.</string>
     <string name="forums_moderation_restriction_remove_title">په %1$s باندې محدودیت لرې کړئ؟</string>
-    <string name="forums_moderation_restriction_state_muted">غلی شوی</string>
-    <string name="forums_moderation_restriction_state_shadowban">پټ بندیز</string>
+    <string name="forums_moderation_restriction_state_muted">بې غږه شوی</string>
+    <string name="forums_moderation_restriction_state_shadowban">پټ بند شوی</string>
     <string name="forums_moderation_restrictions_empty_subtitle">هیڅ کاروونکی غلی یا بند شوی نه دی</string>
     <string name="forums_moderation_section_premoderation_description">د محتوا له ښکاره کیدو دمخه تصویب وغواړئ</string>
     <string name="forums_moderation_section_ratelimiting_description">د دې محدودولو سره چې کاروونکي څومره ځله لیکلی شي، سپیم مخنیوی وکړئ</string>

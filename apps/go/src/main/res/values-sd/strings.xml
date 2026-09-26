@@ -16,7 +16,7 @@
     <string name="go_color_white">اڇو</string>
     <string name="go_delete_confirm">ختم ڪريو</string>
     <string name="go_delete_message">هي راند توهان جي فهرست مان هٽائي ويندي. ان کي واپس نٿو ڪري سگهجي.</string>
-    <string name="go_delete_title">راند ختم ڪجي؟</string>
+    <string name="go_delete_title">گيم ختم ڪجي؟</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">قبول ڪريو</string>
     <string name="go_draw_decline">رد ڪريو</string>

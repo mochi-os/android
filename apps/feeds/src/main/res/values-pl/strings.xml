@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Kanał Mochi</string>
     <string name="feeds_source_type_feed_memories">Wspomnienia</string>
-    <string name="feeds_remove_source">Usuń źródło</string>
+    <string name="feeds_remove_source">Usunąć źródło?</string>
     <string name="feeds_suggested_credibility_accept">Akceptuj</string>
     <string name="feeds_rss_url_copied">Skopiowano adres URL RSS do schowka</string>
     <string name="feeds_logout">Wyloguj się</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">URL RSS</string>
     <string name="feeds_source_never_fetched">Nigdy nie pobrano</string>
     <string name="feeds_source_poll">Odpytywanie</string>
-    <string name="feeds_source_transform">Przekształć</string>
+    <string name="feeds_source_transform">Transformacja AI</string>
     <string name="feeds_remove_source_confirm">Usunąć \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Usuń także zaimportowane posty</string>
     <string name="feeds_suggested_credibility_title">Sugerowana wiarygodność</string>

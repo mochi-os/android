@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Suscripción jaytaña</string>
     <string name="forums_list_unsubscribe_title">Suscripción jaytaña</string>
     <string name="forums_create_title">Forum luraña</string>
-    <string name="forums_create_name">Suti</string>
+    <string name="forums_create_name">Foron sutipa</string>
     <string name="forums_create_privacy">Imantawi</string>
     <string name="forums_create_private">Imantata</string>
     <string name="forums_create_public">Taqiniru</string>
-    <string name="forums_create_action">Luraña</string>
+    <string name="forums_create_action">Forum luraña</string>
     <string name="forums_find_title">Foronak jikxataña</string>
     <string name="forums_find_recommended">Recomendata</string>
     <string name="forums_find_subscribe">Suscribiña</string>
@@ -21,7 +21,7 @@
     <string name="forums_loading">Apaqaskiwa…</string>
     <string name="forums_no_posts">Janira qillqatanaka</string>
     <string name="forums_new_post">Machaqa qillqata</string>
-    <string name="forums_settings">Configuración</string>
+    <string name="forums_settings">Wakichawinaka</string>
     <string name="forums_load_more">Jukamp apaqaña</string>
     <string name="forums_sort_label">Sumaña</string>
     <string name="forums_sort_new">Machaqanaka</string>
@@ -125,7 +125,7 @@
 
     <string name="notification_channel_forums">Foros yatiyawinaka</string>
     <string name="forums_auth_brand">Mochi Foronaka</string>
-    <string name="forums_auth_login_failed">Mantañ jan walt\'kiti</string>
+    <string name="forums_auth_login_failed">Mantañax jan walikiti</string>
     <string name="forums_auth_create_identity_failed">Janiw uñt\'awi luraña atkti</string>
     <string name="forums_auth_mfa_unsupported">MFA janiw celular app ukan yanapt\'atäkiti</string>
     <string name="forums_auth_enter_code_sent">%1$s ukar apayatat código uka mantayam</string>
@@ -141,7 +141,7 @@
     <string name="forums_post_vote_down">Jan aski sasa votaña</string>
     <string name="forums_post_quote">Jaysaña qillqatat aytaña</string>
     <string name="forums_comment_quote">Jaysaña qillqatat aytaña</string>
-    <string name="forums_tag_clear">Chhijllata chhaqtayaña</string>
+    <string name="forums_tag_clear">Filtro q\'umachaña</string>
     <string name="forums_post_tag_add">Etiqueta yapxataña</string>
     <string name="forums_post_tag_remove">Etiqueta apsuña</string>
     <string name="forums_access_add">Mantañ kamachi yapxataña</string>
@@ -154,7 +154,7 @@
     <string name="forums_banner_placeholder">Aka foror suma jutawa…</string>
     <string name="forums_ai_mode_label">Tuqi: %1$s</string>
     <string name="forums_ai_mode_heading">AI tuqi</string>
-    <string name="forums_ai_mode_off">Jan apnaqata</string>
+    <string name="forums_ai_mode_off">Jark\'ata</string>
     <string name="forums_ai_account">AI cuenta</string>
     <string name="forums_ai_prompt_tag">Etiqueta apsuñ prompt</string>
     <string name="forums_ai_prompt_score">Jakhuñ prompt</string>
@@ -205,7 +205,7 @@
         <item quantity="one">%d machaqa yatiyäwi</item>
         <item quantity="other">%d machaqa yatiyäwinaka</item>
     </plurals>
-    <string name="forums_rss_feed">RSS yatiyäwi</string>
+    <string name="forums_rss_feed">Canal RSS</string>
     <string name="forums_rss_mode_posts">Qillqatanaka</string>
     <string name="forums_rss_mode_posts_comments">Qillqatanak comentarionakampi</string>
     <string name="forums_rss_copied">RSS URL clipboard ukar copiata</string>
@@ -216,14 +216,14 @@
     <string name="forums_attachment_move_up">Alaxar apaña</string>
     <string name="forums_attachment_move_down">Aynachar apaña</string>
     <string name="forums_post_comments">Comentarionaka</string>
-    <string name="forums_all_forums">Taqi foronaka</string>
+    <string name="forums_all_forums">Taqpach forum</string>
     <string name="forums_create_allow_search">Khitisa forox thaqhañapataki iyawsaña</string>
     <string name="forums_rss_clipboard_label">Foro RSS URL</string>
     <string name="forums_tab_moderation">Moderación</string>
     <string name="forums_access_level_view_full">Uñjañaki</string>
     <string name="forums_access_level_none_full">Jan mantañ</string>
     <string name="forums_access_subject_anyone">Khitisa</string>
-    <string name="forums_access_subject_authenticated">Yatiyat apnaqirinaka</string>
+    <string name="forums_access_subject_authenticated">Chiqanchata apnaqirinaka</string>
     <string name="forums_access_tab_other">Yaqha</string>
     <string name="forums_access_authenticated_desc">Taqi khitinakatix mantatäpki ukanaka</string>
     <string name="forums_access_anyone_desc">Jan uñt\'ata apnaqirinakampi</string>
@@ -278,19 +278,19 @@
     <string name="forums_moderation_restriction_remove_message">Jupanakax jank\'akiw forumar taqpach mantaña katuqxapxani.</string>
     <string name="forums_moderation_restriction_remove_title">%1$s jark\'awi apsuña?</string>
     <string name="forums_moderation_restriction_state_muted">Amukt\'ayata</string>
-    <string name="forums_moderation_restriction_state_shadowban">Ch\'iwit jark\'ata</string>
+    <string name="forums_moderation_restriction_state_shadowban">Ch\'amakat jark\'ata</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Janiw kuna apnaqirits amukt\'ayatäkiti ni jark\'atäkiti</string>
     <string name="forums_moderation_section_premoderation_description">Contenido uñstañ nayrax aprobación mayiña</string>
     <string name="forums_moderation_section_ratelimiting_description">Apnaqirinakax qawqha kutis qillqatapxaspa uk limitasa spam jark\'aña</string>
     <string name="forums_moderation_settings_updated">Apnaqañ wakichäwinakax machaqachatawa</string>
     <string name="forums_moderation_unit_posts">qillqatanaka</string>
-    <string name="forums_moderation_unit_replies">jaysäwinaka</string>
+    <string name="forums_moderation_unit_replies">jaysawinaka</string>
     <string name="forums_moderation_unit_seconds">segundonaka</string>
     <string name="forums_settings_ai_updated">AI wakichäwinakax machaqachatawa</string>
-    <string name="forums_settings_forum_renamed">Forum sutix mayjt\'ayatawa</string>
+    <string name="forums_settings_forum_renamed">Foro suti turkatawa</string>
     <string name="forums_settings_name_clear_cd">Suti q\'umachaña</string>
     <string name="forums_settings_unsubscribe_section">Forumat mistuña</string>
-    <string name="forums_share_link_title">Forum enlace</string>
+    <string name="forums_share_link_title">Foro chimpu</string>
     <string name="forums_moderation_pending_posts">Suyt\'iri publicacionanaka (%1$d)</string>
     <string name="forums_moderation_pending_comments">Suyt\'iri arsuwinaka (%1$d)</string>
     <string name="forums_moderation_on_image">Jamuqan: %1$s</string>

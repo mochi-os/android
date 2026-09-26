@@ -50,8 +50,8 @@
     <string name="go_resign_title">Rhoxa kumdlalo?</string>
     <string name="go_sidebar_completed">Kugqityiwe</string>
     <string name="go_sidebar_new_game">Umdlalo omtsha</string>
-    <string name="go_status_draw">Zoba</string>
-    <string name="go_status_draw_text">Zoba</string>
+    <string name="go_status_draw">Ukulingana</string>
+    <string name="go_status_draw_text">Ukulingana</string>
     <string name="go_status_game_over">Umdlalo uphelile</string>
     <string name="go_status_opponent_move">Umqhubo ka-%1$s</string>
     <string name="go_status_opponent_wins">%1$s uphumelele</string>

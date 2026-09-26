@@ -251,7 +251,7 @@
     <string name="staff_filter_chip_remove">אַראָפּנעמען פֿילטער</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">מאָדעראַציע</string>
-    <string name="staff_filter_label_query">זוכן</string>
+    <string name="staff_filter_label_query">זוך</string>
     <string name="staff_filter_label_seller">פֿאַרקויפֿער</string>
     <string name="staff_filter_label_status">סטאַטוס</string>
     <string name="staff_filter_label_type">טיפּ</string>
@@ -445,7 +445,7 @@
     <string name="staff_disputes_stripe_subscription_canceled">אַבאָנעמענט אָפּגעזאָגט</string>
     <string name="staff_disputes_stripe_unrecognized">אומדערקענטע באַלאַסטונג</string>
     <string name="staff_listings_seller_verified">באַשטעטיקטער פֿאַרקויפֿער</string>
-    <string name="staff_moderation_filter_clear">רייניק פֿילטער</string>
+    <string name="staff_moderation_filter_clear">רייניקן פֿילטער</string>
     <string name="staff_reports_listing_label">ליסטינג #%1$s</string>
     <string name="staff_reports_meta_details">פּרטים פֿון באַריכטער</string>
     <string name="staff_reviews_order_label">באַשטעלונג #%1$s</string>

@@ -107,9 +107,9 @@
     <string name="wikis_comment_form_remove_attachment">移除附件</string>
     <string name="wikis_comment_expand">(展開)</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_new">建立新頁面</string>
+    <string name="wikis_editor_title_new">新頁面</string>
     <string name="wikis_editor_preview">預覽</string>
-    <string name="wikis_editor_preview_untitled">冇標題</string>
+    <string name="wikis_editor_preview_untitled">未命名</string>
     <string name="wikis_editor_insert">插入</string>
     <string name="wikis_editor_attachments">附件</string>
     <string name="wikis_editor_delete">刪除頁面</string>
@@ -154,7 +154,7 @@
     <string name="wikis_rename_page_must_differ">新網址必須同目前嘅網址唔同</string>
     <string name="wikis_rename_page_success">頁面已重新命名</string>
     <string name="wikis_rename_page_failed">無法重新命名頁面</string>
-    <string name="wikis_history_title">歷史記錄</string>
+    <string name="wikis_history_title">歷史</string>
     <string name="wikis_history_viewing">查看緊 %1$s 嘅歷史記錄,目前版本 %2$d</string>
     <string name="wikis_history_empty">搵唔到任何修訂</string>
     <string name="wikis_history_revert_action">還原到呢個版本</string>

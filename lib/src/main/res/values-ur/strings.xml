@@ -25,7 +25,7 @@
     <string name="common_edit">ترمیم</string>
     <string name="common_delete">حذف کریں</string>
     <string name="common_add">شامل کریں</string>
-    <string name="common_notifications">notifications</string>
+    <string name="common_notifications">نوٹیفکیشنز</string>
     <string name="common_logout">لاگ آؤٹ</string>
     <string name="common_subscribe">سبسکرائب کریں</string>
     <string name="common_copy">کاپی کریں</string>
@@ -52,13 +52,13 @@
     <string name="reaction_disagree">اختلاف</string>
     <string name="push_service_action_hide">چھپائیں</string>
     <string name="about_close">بند کریں</string>
-    <string name="notifications_open">اطلاعات</string>
-    <string name="notifications_title">اطلاعات</string>
-    <string name="notifications_empty">کوئی notifications نہیں</string>
+    <string name="notifications_open">نوٹیفکیشنز</string>
+    <string name="notifications_title">نوٹیفکیشنز</string>
+    <string name="notifications_empty">کوئی اطلاعات نہیں</string>
     <string name="notifications_empty_unread">آپ سب دیکھ چکے ہیں</string>
     <string name="notifications_tab_unread">غیر پڑھی</string>
     <string name="notifications_tab_unread_count">غیر پڑھی (%1$d)</string>
-    <string name="notifications_tab_all">سب</string>
+    <string name="notifications_tab_all">تمام</string>
     <string name="notifications_mark_all_read">سب کو پڑھا ہوا نشان زد کریں</string>
     <string name="notifications_clear_all">سب صاف کریں</string>
     <string name="settings_title">سیٹنگز</string>
@@ -123,7 +123,7 @@
 
     <string name="app_brand">Mochi</string>
     <string name="error_network">منسلک ہونے سے قاصر۔ اپنا انٹرنیٹ کنکشن چیک کریں اور دوبارہ کوشش کریں۔</string>
-    <string name="error_authentication_required">تصدیق درکار ہے</string>
+    <string name="error_authentication_required">تصدیق درکار</string>
     <string name="error_not_found">نہیں ملا</string>
     <string name="error_server">سرور کی خرابی (%1$d)۔ براہ کرم بعد میں دوبارہ کوشش کریں۔</string>
     <string name="error_unexpected">ایک غیر متوقع خرابی پیش آئی</string>
@@ -144,7 +144,7 @@
     <string name="auth_use_passkey">پاس کی استعمال کریں</string>
     <string name="auth_email_me_a_code">مجھے ای میل پر کوڈ بھیجیں</string>
     <string name="auth_or_enter_authenticator_code">یا تصدیق کنندہ کوڈ درج کریں</string>
-    <string name="auth_log_in">لاگ ان کریں</string>
+    <string name="auth_log_in">لاگ ان</string>
     <string name="auth_back">واپس</string>
     <string name="auth_lost_access_recovery">رسائی کھو دی؟ ریکوری کوڈ استعمال کریں</string>
     <string name="auth_create_identity_title">اپنی شناخت بنائیں</string>
@@ -189,7 +189,7 @@
     <string name="format_time_days_short">%1$dد</string>
     <string name="format_time_weeks_short">%1$dہ</string>
     <string name="format_time_months_short">%1$dماہ</string>
-    <string name="reaction_add">ردعمل شامل کریں</string>
+    <string name="reaction_add">ری ایکشن شامل کریں</string>
     <string name="push_service_channel">Mochi پش</string>
     <string name="push_service_channel_description">اطلاعات وصول کرنے کے لیے Mochi کو منسلک رکھتا ہے</string>
     <string name="push_service_group">پس منظر کی سروس</string>
@@ -210,7 +210,7 @@
     <string name="about_up_to_date">تازہ ترین ہے</string>
     <string name="about_check_downloading">ورژن %1$s دستیاب ہے، ڈاؤن لوڈ ہو رہا ہے…</string>
     <string name="about_check_network_error">اپڈیٹ سرور تک پہنچنا ممکن نہ ہوا</string>
-    <string name="about_check_download_failed">ڈاؤن لوڈ ناکام ہوا</string>
+    <string name="about_check_download_failed">ڈاؤن لوڈ ناکام</string>
     <string name="notifications_clear_all_title">تمام اطلاعات صاف کریں؟</string>
     <string name="notifications_clear_all_message">اس سے ہر اطلاع ہٹ جائے گی۔ انہیں بحال نہیں کیا جا سکتا۔</string>
     <string name="settings_value_auto">خودکار</string>
@@ -310,7 +310,7 @@
     <string name="settings_card_flat">ہموار</string>
     <string name="settings_card_raised">ابھرا ہوا</string>
     <string name="error_server_https">سرور کا پتہ https:// سے شروع ہونا چاہیے</string>
-    <string name="device_name_fallback">موبائل آلہ</string>
+    <string name="device_name_fallback">موبائل ڈیوائس</string>
     <string name="account_error_token_type">غیر تعاون یافتہ ٹوکن کی قسم</string>
     <string name="account_error_caller">کال کرنے والے کو اجازت نہیں</string>
 </resources>

@@ -146,8 +146,8 @@
     <string name="people_add_contact_search_start">Qala ukuthayipha ukuze useshe abasebenzisi</string>
     <string name="people_contact_phone">Ifoni</string>
     <string name="people_contact_title">Isihloko somsebenzi</string>
-    <string name="people_contacts_title">Abathintwayo</string>
-    <string name="people_contacts_all">Bonke othintana nabo</string>
+    <string name="people_contacts_title">Oxhumana nabo</string>
+    <string name="people_contacts_all">Bonke oxhumana nabo</string>
     <string name="people_contacts_empty">Abekho othintana nabo abatholakele</string>
     <string name="people_contacts_add_to_start">Engeza othintana nabo ukuze uqalise</string>
     <string name="people_contacts_actions">Izenzo zoxhumana naye</string>
@@ -163,7 +163,7 @@
     <string name="people_contact_family">Isibongo</string>
     <string name="people_contact_nickname">Isidlaliso</string>
     <string name="people_contact_add_email">Engeza i-imeyili</string>
-    <string name="people_contact_add_phone">Engeza ifoni</string>
+    <string name="people_contact_add_phone">Engeza ucingo</string>
     <string name="people_contact_add_address">Engeza ikheli</string>
     <string name="people_contact_street">Isitaladi</string>
     <string name="people_contact_birthday">Usuku lokuzalwa</string>
@@ -177,7 +177,7 @@
     <string name="people_contact_conflict">Oxhumana naye ushintshile</string>
     <string name="people_add_contact_title">Engeza oxhumana naye</string>
     <string name="people_add_contact_add">Engeza kothintana nabo</string>
-    <string name="people_add_contact_in_contacts">Kothintana nabo</string>
+    <string name="people_add_contact_in_contacts">Koxhumana nabo</string>
     <string name="people_books_create">Dala incwadi yamakheli</string>
     <string name="people_books_delete">Susa incwadi yamakheli</string>
     <plurals name="people_books_delete_confirm">
@@ -185,7 +185,7 @@
         <item quantity="other">Susa %1$s nabo %2$d abaxhumana nabo abakuyo?</item>
     </plurals>
     <string name="people_welcome_body">Thola abangane kuyo yonke i-Mochi bese uxhumana nabo. Thepha u-Engeza oxhumana naye ukuze uthumele isimemo.</string>
-    <string name="people_person_state_contact">Kothintana nabo</string>
+    <string name="people_person_state_contact">Koxhumana nabo</string>
     <string name="people_device_create">Dala</string>
     <string name="people_device_server">Iseva</string>
     <string name="people_device_username">Igama lomsebenzisi</string>

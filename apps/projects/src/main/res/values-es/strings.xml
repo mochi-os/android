@@ -198,13 +198,13 @@
     <string name="projects_watchers_empty">Aún no hay seguidores</string>
     <string name="projects_object_delete_title">Eliminar objeto</string>
     <string name="projects_object_delete_message">¿Está seguro de que desea eliminar este objeto? Esta acción no se puede deshacer.</string>
-    <string name="projects_parent_none">Sin padre</string>
+    <string name="projects_parent_none">Sin elemento principal</string>
     <string name="projects_links_empty">Sin enlaces</string>
     <string name="projects_links_section_relates">Relacionado con</string>
     <string name="projects_links_section_duplicated_by">Duplicado por</string>
     <string name="projects_links_type">Tipo de enlace</string>
     <string name="projects_links_type_relates">Relacionado con</string>
-    <string name="projects_links_remove">Eliminar enlace</string>
+    <string name="projects_links_remove">Quitar enlace</string>
     <string name="projects_comment_placeholder">Añadir un comentario</string>
     <string name="projects_property_pick_date">Elegir fecha</string>
     <string name="projects_property_ok">Aceptar</string>
@@ -218,8 +218,8 @@
     <string name="projects_activity_cleared">borró %1$s</string>
     <string name="projects_activity_updated">actualizó %1$s</string>
     <string name="projects_activity_made_change">realizó un cambio</string>
-    <string name="projects_attachment_empty">Sin adjuntos</string>
-    <string name="projects_attachment_default_name">adjunto</string>
+    <string name="projects_attachment_empty">Sin archivos adjuntos</string>
+    <string name="projects_attachment_default_name">archivo adjunto</string>
     <string name="projects_attachment_size_bytes">%1$d B</string>
     <string name="projects_attachment_size_kb">%1$d KB</string>
     <string name="projects_attachment_size_mb">%1$d MB</string>

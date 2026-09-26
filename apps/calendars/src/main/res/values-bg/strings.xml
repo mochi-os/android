@@ -20,7 +20,7 @@
     <string name="calendars_repeat_never">Никога</string>
     <string name="calendars_repeat_monthly">Месечно</string>
     <string name="calendars_repeat_yearly">Годишно</string>
-    <string name="calendars_repeat_custom">Персонализиран</string>
+    <string name="calendars_repeat_custom">Персонализирано</string>
     <string name="calendars_reminder_none">Няма</string>
     <string name="calendars_day_sunday">Неделя</string>
     <string name="calendars_day_monday">Понеделник</string>

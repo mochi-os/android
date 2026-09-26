@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Susa</string>
     <string name="wikis_replicas_remove_failed">Ayiphumelelanga ukususa ikopi</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Iiwiki</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">Izaziso ngokuhlelwa kwamaphepha e-wiki, amagqabantshintshi nezimemo.</string>
     <string name="wikis_pageview_toc_expand">Bonisa itheyibhile yeziqulatho</string>

@@ -60,7 +60,7 @@
     <string name="notifprefs_add_category">Dodaj kategoriju</string>
     <string name="notifprefs_new_category">Nova kategorija</string>
     <string name="notifprefs_edit_category">Uredi kategoriju</string>
-    <string name="notifprefs_name_label">Ime</string>
+    <string name="notifprefs_name_label">Naziv</string>
     <string name="notifprefs_destinations">Odredišta</string>
     <string name="notifprefs_dest_web">Web preglednik</string>
     <string name="notifprefs_test">Testiraj</string>
@@ -91,9 +91,9 @@
     <string name="accounts_add_title">Dodaj račun</string>
     <string name="accounts_empty">Nema povezanih naloga</string>
     <string name="accounts_type_label">Tip</string>
-    <string name="accounts_field_email">Email</string>
+    <string name="accounts_field_email">E-pošta</string>
     <string name="accounts_field_model">Model</string>
-    <string name="accounts_field_name">Ime</string>
+    <string name="accounts_field_name">Naziv</string>
     <string name="accounts_status_pending">Na čekanju</string>
     <string name="accounts_status_verified">Verifikovano</string>
     <string name="accounts_status_connected">Povezano</string>
@@ -174,7 +174,7 @@
     <string name="system_users_role_user">Korisnik</string>
     <string name="system_users_status_suspended">Suspendovano</string>
     <string name="system_users_last_never">Nikad</string>
-    <string name="system_users_email_label">Email</string>
+    <string name="system_users_email_label">E-pošta</string>
     <string name="system_users_edit">Uredi korisnika</string>
     <string name="system_users_edit_title">Uredi korisnika</string>
     <string name="system_users_create_title">Kreiraj korisnika</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s više neće upravljati putanjama na ovoj domeni.</string>
     <string name="domain_delegation_delete_title">Obrisati delegaciju?</string>
     <string name="domain_delegation_path">Putanja</string>
-    <string name="domain_delegation_user">ID korisnika</string>
+    <string name="domain_delegation_user">Korisnik</string>
     <string name="domain_delegations">Delegacije</string>
     <string name="domain_delegations_empty">Nema konfigurisanih delegacija.</string>
     <string name="domain_delete">Obriši domenu</string>
@@ -394,7 +394,7 @@
     <string name="accounts_capability_notify">Obavještenja</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Prijava</string>
-    <string name="accounts_provider_caldav">Server kalendara</string>
+    <string name="accounts_provider_caldav">Kalendarski server</string>
     <string name="accounts_revoke_confirm">Ovo će opozvati pristup kalendaru za %1$s. Prijava putem %2$s ostaje dok je ne prekinete na stranici za prijavu.</string>
     <string name="accounts_capability_mcp">MCP</string>
 </resources>

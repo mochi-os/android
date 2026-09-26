@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Kanál Mochi</string>
     <string name="feeds_source_type_feed_memories">Vzpomínky</string>
-    <string name="feeds_remove_source">Odebrat zdroj</string>
+    <string name="feeds_remove_source">Odebrat zdroj?</string>
     <string name="feeds_suggested_credibility_accept">Přijmout</string>
     <string name="feeds_rss_url_copied">URL RSS zkopírována do schránky</string>
     <string name="feeds_logout">Odhlásit se</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">URL RSS</string>
     <string name="feeds_source_never_fetched">Nikdy nenačteno</string>
     <string name="feeds_source_poll">Dotaz</string>
-    <string name="feeds_source_transform">Transformace</string>
+    <string name="feeds_source_transform">Transformace AI</string>
     <string name="feeds_remove_source_confirm">Odebrat \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Smazat také importované příspěvky</string>
     <string name="feeds_suggested_credibility_title">Navrhovaná důvěryhodnost</string>
@@ -156,7 +156,7 @@
     <string name="feeds_access_select_group">Vyberte skupinu</string>
     <string name="feeds_access_selected">Vybráno: %1$s</string>
     <string name="feeds_access_subject_anyone">Kdokoli</string>
-    <string name="feeds_access_subject_authenticated">Ověření uživatelé</string>
+    <string name="feeds_access_subject_authenticated">Přihlášení uživatelé</string>
     <string name="feeds_markdown_supported">Markdown podporován</string>
     <string name="feeds_permission_deny">Zamítnout</string>
     <string name="feeds_rss_feed">RSS kanál</string>

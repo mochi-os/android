@@ -242,7 +242,7 @@
     <string name="route_meta">Tosaíocht %1$d · %2$s</string>
     <string name="interests_search_placeholder">Cuardaigh topaicí le cur leis…</string>
     <string name="interests_empty">Níl aon spéiseanna fós.</string>
-    <string name="interests_summary_regenerate">Athgin achoimre</string>
+    <string name="interests_summary_regenerate">Athghin an achoimre</string>
     <string name="interests_summary_regenerating">Ag athghiniúint…</string>
     <string name="interests_summary_empty">Cuir roinnt spéiseanna leis chun achoimre a chruthú ar an méid is maith leat.</string>
     <string name="interests_search_failed">Theip ar an gcuardach. Bain triail eile as.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">Ní bhainisteoidh %1$s cosáin ar an bhfearann ​​seo a thuilleadh.</string>
     <string name="domain_delegation_delete_title">Scrios tarmligean?</string>
     <string name="domain_delegation_path">Cosán</string>
-    <string name="domain_delegation_user">ID an úsáideora</string>
+    <string name="domain_delegation_user">Úsáideoir</string>
     <string name="domain_delegations">Tarmligin</string>
     <string name="domain_delegations_empty">Níl aon tarmligean cumraithe.</string>
     <string name="domain_delete">Scrios fearann</string>
@@ -397,7 +397,7 @@
     <string name="accounts_capability_calendar">Féilire</string>
     <string name="accounts_capability_notify">Fógraí</string>
     <string name="accounts_capability_ai">AI</string>
-    <string name="accounts_capability_login">Síniú isteach</string>
+    <string name="accounts_capability_login">Logáil isteach</string>
     <string name="accounts_provider_caldav">Freastalaí féilire</string>
     <string name="accounts_revoke_confirm">Cuirfidh sé seo rochtain %1$s ar an bhféilire ar ceal. Fanfaidh síniú isteach le %2$s go dtí go ndínascfaidh tú é ar an leathanach sínithe isteach.</string>
     <string name="accounts_capability_mcp">MCP</string>

@@ -242,7 +242,7 @@
     <string name="route_meta">Kipaumbele %1$d · %2$s</string>
     <string name="interests_search_placeholder">Tafuta mada za kuongeza…</string>
     <string name="interests_empty">Bado hakuna maslahi.</string>
-    <string name="interests_summary_regenerate">Zalisha tena muhtasari</string>
+    <string name="interests_summary_regenerate">Zalisha muhtasari upya</string>
     <string name="interests_summary_regenerating">Inazalisha tena…</string>
     <string name="interests_summary_empty">Ongeza baadhi ya maslahi ili kuzalisha muhtasari wa unachopenda.</string>
     <string name="interests_search_failed">Utafutaji umeshindwa. Tafadhali jaribu tena.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s haitasimamia tena njia kwenye kikoa hiki.</string>
     <string name="domain_delegation_delete_title">Futa ukabidhi?</string>
     <string name="domain_delegation_path">Njia</string>
-    <string name="domain_delegation_user">Kitambulisho cha mtumiaji</string>
+    <string name="domain_delegation_user">Mtumiaji</string>
     <string name="domain_delegations">Ukabidhi</string>
     <string name="domain_delegations_empty">Hakuna utowezi uliowekwa.</string>
     <string name="domain_delete">Futa kikoa</string>

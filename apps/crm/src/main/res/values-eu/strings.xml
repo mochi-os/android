@@ -30,11 +30,11 @@
     <string name="crm_settings_title">Ezarpenak</string>
     <string name="crm_settings_tab_general">Orokorra</string>
     <string name="crm_settings_tab_access">Sarbidea</string>
-    <string name="crm_settings_tab_people">Jendea</string>
+    <string name="crm_settings_tab_people">Pertsonak</string>
     <string name="crm_option_icon">Ikonoa</string>
     <string name="crm_option_icon_placeholder">adib. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Harpidetza kendu</string>
-    <string name="crm_settings_delete_crm">Ezabatu proiektua</string>
+    <string name="crm_settings_delete_crm">Ezabatu CRMa</string>
     <string name="crm_settings_delete_confirm_title">Ezabatu CRMa</string>
     <string name="crm_settings_unsubscribe_title">Harpidetza kendu</string>
     <string name="crm_settings_unsubscribe_message">Ziur al zaude CRM honetatik harpidetza kendu nahi duzula?</string>
@@ -137,10 +137,10 @@
     <string name="crm_class_move_up">Eraman gora</string>
     <string name="crm_class_move_down">Eraman behera</string>
     <string name="crm_views_sort_by">Ordenatu honen arabera</string>
-    <string name="crm_sort_direction_asc">Goranzkoa</string>
-    <string name="crm_views_direction_asc">Goranzkoa</string>
-    <string name="crm_sort_direction_desc">Beheranzkoa</string>
-    <string name="crm_views_direction_desc">Beheranzkoa</string>
+    <string name="crm_sort_direction_asc">Gorakorra</string>
+    <string name="crm_views_direction_asc">Gorakorra</string>
+    <string name="crm_sort_direction_desc">Beherakorra</string>
+    <string name="crm_views_direction_desc">Beherakorra</string>
     <string name="crm_search_objects_placeholder">Bilatu objektuak</string>
     <string name="crm_links_search_placeholder">Bilatu objektuak</string>
 
@@ -155,7 +155,7 @@
     <string name="crm_views_filter">Iragazkia (gordeta, oraindik aplikatu gabe)</string>
     <string name="crm_people_empty">Oraindik inork ez du sarbiderik</string>
     <string name="crm_settings_delete_confirm_message">Ziur zaude CRM hau ezabatu nahi duzula? Objektu, iruzkin eta ezarpen guztiak betiko kenduko dira.</string>
-    <string name="crm_object_unwatch">Utzi behatzeari</string>
+    <string name="crm_object_unwatch">Utzi jarraitzeari</string>
     <string name="crm_object_delete_title">Ezabatu objektua</string>
     <string name="crm_object_delete_message">Ziur zaude objektu hau ezabatu nahi duzula? Ekintza hau ezin da desegin.</string>
     <string name="crm_parent_none">Gurasorik ez</string>
@@ -275,7 +275,7 @@
     <string name="crm_access_role_none">Sarbiderik ez</string>
     <string name="crm_all_crms">CRM guztiak</string>
     <string name="crm_settings_unsubscribe_section">Utzi CRM-a harpidetzeari</string>
-    <string name="crm_settings_updated">CRM eguneratuta</string>
+    <string name="crm_settings_updated">CRM eguneratu da</string>
     <string name="crm_create_import_backup">Inportatu babeskopiatik (aukerakoa)</string>
     <string name="crm_export">Esportatu datuak</string>
     <string name="crm_exporting">Esportazioa prestatzen…</string>

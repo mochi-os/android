@@ -16,7 +16,7 @@
     <string name="go_color_white">Hvid</string>
     <string name="go_delete_confirm">Slet</string>
     <string name="go_delete_message">Dette spil fjernes fra din liste. Dette kan ikke fortrydes.</string>
-    <string name="go_delete_title">Slet spil?</string>
+    <string name="go_delete_title">Slet spillet?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">Accepter</string>
     <string name="go_draw_decline">Afvis</string>
@@ -64,7 +64,7 @@
     <string name="go_channel_name">Go-notifikationer</string>
     <string name="go_channel_description">Notifikationer om træk, pas, remistilbud og partiresultater.</string>
     <string name="go_open_sidebar">Åbn sidebjælke</string>
-    <string name="go_sidebar_active">Aktive partier</string>
+    <string name="go_sidebar_active">Aktive spil</string>
     <string name="go_empty_active">Ingen aktive partier endnu.</string>
     <string name="go_status_resigned">Opgivet</string>
     <string name="go_new_game_title">Nyt Go-parti</string>

@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Eicon</string>
     <string name="crm_option_icon_placeholder">e.e. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Dad-danysgrifio</string>
-    <string name="crm_settings_delete_crm">Dileu prosiect</string>
+    <string name="crm_settings_delete_crm">Dileu CRM</string>
     <string name="crm_settings_delete_confirm_title">Dileu CRM</string>
     <string name="crm_settings_unsubscribe_title">Dad-danysgrifio</string>
     <string name="crm_settings_unsubscribe_message">Ydych chi\'n siŵr eich bod am ddad-danysgrifio o\'r CRM hwn?</string>
@@ -157,7 +157,7 @@
     <string name="crm_links_search_placeholder">Chwilio gwrthrychau</string>
     <string name="crm_links_remove">Tynnu dolen</string>
     <string name="crm_comment_replying_to">Yn ateb %1$s</string>
-    <string name="crm_comment_clear_reply">Clirio\'r ateb</string>
+    <string name="crm_comment_clear_reply">Clirio\'r ymateb</string>
     <string name="crm_comment_placeholder">Ychwanegu sylw</string>
     <string name="crm_comment_remove_attachment">Tynnu atodiad</string>
     <string name="crm_property_pick_date">Dewis dyddiad</string>
@@ -188,7 +188,7 @@
     <string name="crm_drag_card">Llusgo cerdyn</string>
     <string name="crm_drag_row">Llusgo rhes</string>
     <string name="crm_drag_column">Llusgo colofn</string>
-    <string name="crm_design_more_options">Mwy o opsiynau</string>
+    <string name="crm_design_more_options">Rhagor o opsiynau</string>
     <string name="crm_design_no_templates">Dim templedi ar gael</string>
     <string name="crm_design_use">Defnyddio</string>
     <string name="crm_design_replace_message">Bydd hyn yn disodli\'r dyluniad presennol gyda %1$s. Bydd yr holl ddosbarthiadau, meysydd, opsiynau a golygfeydd presennol yn cael eu dileu. Ni fydd gwrthrychau presennol yn cael eu dileu ond efallai na fyddant yn ymddangos mewn golygfeydd mwyach.</string>
@@ -251,7 +251,7 @@
     <string name="crm_filter">Hidlo</string>
     <string name="crm_sort_filter_title">Trefnu a hidlo</string>
     <string name="crm_filter_clear_all">Clirio popeth</string>
-    <string name="crm_filter_all">Popeth</string>
+    <string name="crm_filter_all">Pob un</string>
     <string name="crm_filter_other">Arall</string>
     <string name="crm_settings_section_identity">Hunaniaeth</string>
     <string name="crm_settings_section_access">Rheoli mynediad</string>
@@ -265,7 +265,7 @@
     <string name="crm_access_select_role">Dewis rôl</string>
     <string name="crm_access_selected">Wedi\'i ddewis: %1$s</string>
     <string name="crm_access_subject_anyone">Unrhyw un</string>
-    <string name="crm_access_subject_authenticated">Defnyddwyr dilys</string>
+    <string name="crm_access_subject_authenticated">Defnyddwyr dilysedig</string>
     <string name="crm_access_authenticated_desc">Unrhyw un sydd wedi mewngofnodi</string>
     <string name="crm_access_anyone_desc">Gan gynnwys defnyddwyr dienw</string>
     <string name="crm_access_role_design">Dylunio, creu, golygu, gwneud sylwadau, a gweld</string>

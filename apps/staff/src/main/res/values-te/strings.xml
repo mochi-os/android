@@ -252,7 +252,7 @@
     <string name="staff_filter_chip_remove">ఫిల్టర్ తొలగించు</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">మోడరేషన్</string>
-    <string name="staff_filter_label_query">శోధించు</string>
+    <string name="staff_filter_label_query">శోధన</string>
     <string name="staff_filter_label_seller">విక్రేత</string>
     <string name="staff_filter_label_status">స్థితి</string>
     <string name="staff_filter_label_type">రకం</string>

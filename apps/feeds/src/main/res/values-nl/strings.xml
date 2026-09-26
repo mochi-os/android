@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi-feed</string>
     <string name="feeds_source_type_feed_memories">Herinneringen</string>
-    <string name="feeds_remove_source">Bron verwijderen</string>
+    <string name="feeds_remove_source">Bron verwijderen?</string>
     <string name="feeds_suggested_credibility_accept">Accepteren</string>
     <string name="feeds_rss_url_copied">RSS-URL gekopieerd naar het klembord</string>
     <string name="feeds_logout">Uitloggen</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS-URL</string>
     <string name="feeds_source_never_fetched">Nooit opgehaald</string>
     <string name="feeds_source_poll">Ophalen</string>
-    <string name="feeds_source_transform">Transformeren</string>
+    <string name="feeds_source_transform">AI-transformatie</string>
     <string name="feeds_remove_source_confirm">\"%1$s\" verwijderen?</string>
     <string name="feeds_remove_also_delete_posts">Ook geïmporteerde berichten verwijderen</string>
     <string name="feeds_suggested_credibility_title">Voorgestelde geloofwaardigheid</string>
@@ -209,7 +209,7 @@
     <string name="feeds_ai_prompt_custom">Aangepast</string>
     <string name="feeds_ai_prompt_variables">Variabelen: %1$s</string>
     <string name="feeds_link">Link</string>
-    <string name="feeds_share_link_title">Feed-link</string>
+    <string name="feeds_share_link_title">Feedlink</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$d reactie</item>
         <item quantity="other">%1$d reacties</item>

@@ -154,7 +154,7 @@
     <string name="people_contacts_friend">साथी</string>
     <string name="people_contacts_invite">निमन्त्रणा दिनुहोस्</string>
     <string name="people_contacts_unfriend_confirm">%1$s अब तपाईंको साथी हुनुहुने छैन। सम्पर्क तपाईंको ठेगाना पुस्तिकामा रहनेछ।</string>
-    <string name="people_contacts_delete">सम्पर्क मेट्नुहोस्</string>
+    <string name="people_contacts_delete">सम्पर्क मेटाउनुहोस्</string>
     <string name="people_contacts_delete_confirm">%1$s लाई तपाईंका सम्पर्कहरूबाट मेट्ने?</string>
     <string name="people_contacts_delete_friend_confirm">%1$s लाई तपाईंका सम्पर्कहरूबाट मेट्ने? तपाईंको मित्रता पनि समाप्त हुनेछ।</string>
     <string name="people_contact_new_title">नयाँ सम्पर्क</string>

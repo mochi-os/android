@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Abbestellen</string>
     <string name="forums_list_unsubscribe_title">Abbestellen</string>
     <string name="forums_create_title">Forum erstellen</string>
-    <string name="forums_create_name">Name</string>
+    <string name="forums_create_name">Forumsname</string>
     <string name="forums_create_privacy">Datenschutz</string>
     <string name="forums_create_private">Privat</string>
     <string name="forums_create_public">Öffentlich</string>
-    <string name="forums_create_action">Erstellen</string>
+    <string name="forums_create_action">Forum erstellen</string>
     <string name="forums_find_title">Foren finden</string>
     <string name="forums_find_recommended">Empfohlen</string>
     <string name="forums_find_subscribe">Abonnieren</string>
@@ -87,7 +87,7 @@
     <string name="forums_moderation_restriction_type_muted">Stummschalten</string>
     <string name="forums_moderation_restriction_type_banned">Sperren</string>
     <string name="forums_moderation_section_premoderation">Vorabmoderation</string>
-    <string name="forums_moderation_section_ratelimiting">Rate Limiting</string>
+    <string name="forums_moderation_section_ratelimiting">Ratenbegrenzung</string>
     <string name="forums_moderation_require_posts">Genehmigung für neue Beiträge erforderlich</string>
     <string name="forums_moderation_require_comments">Genehmigung für neue Kommentare erforderlich</string>
     <string name="forums_moderation_require_new_users">Genehmigung für neue Nutzer erforderlich</string>
@@ -154,7 +154,7 @@
     <string name="forums_banner_placeholder">Willkommen in diesem Forum…</string>
     <string name="forums_ai_mode_label">Modus: %1$s</string>
     <string name="forums_ai_mode_heading">KI-Modus</string>
-    <string name="forums_ai_mode_off">Aus</string>
+    <string name="forums_ai_mode_off">Deaktiviert</string>
     <string name="forums_ai_account">KI-Konto</string>
     <string name="forums_ai_prompt_tag">Tagging-Prompt</string>
     <string name="forums_ai_prompt_score">Bewertungs-Prompt</string>
@@ -180,7 +180,7 @@
     <string name="forums_comment_replying_to">Antwort an %1$s</string>
     <string name="forums_comment_clear_reply">Antwort verwerfen</string>
     <string name="forums_settings_title">Einstellungen für %1$s</string>
-    <string name="forums_settings_rename_label">Forumname</string>
+    <string name="forums_settings_rename_label">Forumsname</string>
     <string name="forums_settings_danger_zone">Gefahrenzone</string>
     <string name="forums_settings_delete_message">Dies löscht das Forum und alle seine Beiträge dauerhaft. Dies kann nicht rückgängig gemacht werden.</string>
 
@@ -223,7 +223,7 @@
     <string name="forums_access_level_view_full">Nur Ansicht</string>
     <string name="forums_access_level_none_full">Kein Zugriff</string>
     <string name="forums_access_subject_anyone">Jeder</string>
-    <string name="forums_access_subject_authenticated">Authentifizierte Benutzer</string>
+    <string name="forums_access_subject_authenticated">Angemeldete Benutzer</string>
     <string name="forums_access_tab_other">Sonstige</string>
     <string name="forums_access_authenticated_desc">Alle angemeldeten Benutzer</string>
     <string name="forums_access_anyone_desc">Einschließlich anonymer Benutzer</string>
@@ -277,7 +277,7 @@
     <string name="forums_moderation_restriction_remove_message">Die Person erhält sofort wieder vollen Zugang zum Forum.</string>
     <string name="forums_moderation_restriction_remove_title">Beschränkung für %1$s aufheben?</string>
     <string name="forums_moderation_restriction_state_muted">Stummgeschaltet</string>
-    <string name="forums_moderation_restriction_state_shadowban">Shadowban</string>
+    <string name="forums_moderation_restriction_state_shadowban">Schattengesperrt</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Es wurden keine Nutzer stummgeschaltet oder gesperrt</string>
     <string name="forums_moderation_section_premoderation_description">Freigabe verlangen, bevor Inhalte sichtbar werden</string>
     <string name="forums_moderation_section_ratelimiting_description">Spam verhindern, indem du begrenzt, wie oft Nutzer posten können</string>

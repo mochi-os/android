@@ -11,12 +11,12 @@
     <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Tangkapan hideung</string>
     <string name="go_captures_white_sr">Tangkapan bodas</string>
-    <string name="go_chat_title">Chat</string>
+    <string name="go_chat_title">Obrolan</string>
     <string name="go_color_black">Hideung</string>
     <string name="go_color_white">Bodas</string>
     <string name="go_delete_confirm">Hapus</string>
     <string name="go_delete_message">Pertandingan ieu bakal dipupus tina daptar anjeun. Henteu tiasa dibatalkeun.</string>
-    <string name="go_delete_title">Hapus pertandingan?</string>
+    <string name="go_delete_title">Hapus kaulinan?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">Tarima</string>
     <string name="go_draw_decline">Tolak</string>

@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Cancel·la la subscripció</string>
     <string name="forums_list_unsubscribe_title">Cancel·la la subscripció</string>
     <string name="forums_create_title">Crea un fòrum</string>
-    <string name="forums_create_name">Nom</string>
+    <string name="forums_create_name">Nom del fòrum</string>
     <string name="forums_create_privacy">Privadesa</string>
     <string name="forums_create_private">Privat</string>
     <string name="forums_create_public">Públic</string>
-    <string name="forums_create_action">Crea</string>
+    <string name="forums_create_action">Crea un fòrum</string>
     <string name="forums_find_title">Cerca fòrums</string>
     <string name="forums_find_recommended">Recomanat</string>
     <string name="forums_find_subscribe">Subscriu-te</string>
@@ -142,8 +142,8 @@
     <string name="forums_post_quote">Cita a la resposta</string>
     <string name="forums_comment_quote">Cita a la resposta</string>
     <string name="forums_tag_clear">Esborra el filtre</string>
-    <string name="forums_post_tag_add">Afegeix etiqueta</string>
-    <string name="forums_post_tag_remove">Elimina etiqueta</string>
+    <string name="forums_post_tag_add">Afegeix una etiqueta</string>
+    <string name="forums_post_tag_remove">Elimina l\'etiqueta</string>
     <string name="forums_access_add">Afegeix una regla d\'accés</string>
     <string name="forums_access_empty">Encara no hi ha cap regla — s\'apliquen els valors predeterminats</string>
     <string name="forums_access_target_hint">ID d\'entitat, @grup, * (tothom) o + (membres)</string>
@@ -258,7 +258,7 @@
     <string name="forums_ai_actions_label">Accions d\'IA a les publicacions</string>
     <string name="forums_ai_prompt_custom">Personalitzat</string>
     <string name="forums_ai_prompt_score_label">Indicació de puntuació</string>
-    <string name="forums_ai_prompt_tag_label">Indicació d\'etiquetes</string>
+    <string name="forums_ai_prompt_tag_label">Indicació d\'etiqueta</string>
     <string name="forums_ai_prompt_variables">Variables: %1$s</string>
     <string name="forums_link">Enllaç</string>
     <string name="forums_moderation_ban_message">Perd l\'accés al fòrum fins que no elimineu la restricció.</string>
@@ -277,7 +277,7 @@
     <string name="forums_moderation_restriction_remove_message">Recupera immediatament l\'accés complet al fòrum.</string>
     <string name="forums_moderation_restriction_remove_title">Voleu eliminar la restricció de %1$s?</string>
     <string name="forums_moderation_restriction_state_muted">Silenciat</string>
-    <string name="forums_moderation_restriction_state_shadowban">Bandejat en secret</string>
+    <string name="forums_moderation_restriction_state_shadowban">Vetat en secret</string>
     <string name="forums_moderation_restrictions_empty_subtitle">No hi ha cap usuari silenciat ni bandejat</string>
     <string name="forums_moderation_section_premoderation_description">Requereix aprovació abans que el contingut sigui visible</string>
     <string name="forums_moderation_section_ratelimiting_description">Eviteu el correu brossa limitant la freqüència de publicació</string>

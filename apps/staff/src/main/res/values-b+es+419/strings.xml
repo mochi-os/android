@@ -323,7 +323,7 @@
     <string name="staff_listings_status_sold">Vendido</string>
     <string name="staff_listings_submitting">Enviando…</string>
     <string name="staff_moderation_empty">No hay entradas de moderación</string>
-    <string name="staff_moderation_filter_clear">Limpiar filtro</string>
+    <string name="staff_moderation_filter_clear">Borrar filtro</string>
     <string name="staff_moderation_listing_filter_placeholder">ID de publicación</string>
     <string name="staff_moderation_system">Sistema</string>
     <string name="staff_moderation_unknown_listing">#%1$s</string>

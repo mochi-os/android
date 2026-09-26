@@ -37,7 +37,7 @@
 
     <string name="words_channel_name">字詞通知</string>
     <string name="words_channel_description">關於回合、交換和棋局結果的通知。</string>
-    <string name="words_sidebar_active">進行中的棋局</string>
+    <string name="words_sidebar_active">進行中的遊戲</string>
     <string name="words_sidebar_empty">暫無棋局。</string>
     <string name="words_new_game_choose_opponents">選擇對手</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>

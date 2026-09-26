@@ -100,7 +100,7 @@
     <string name="people_welcome_title">Fàilte gu Daoine</string>
     <string name="people_person_banner_alt">Bratach airson %1$s</string>
     <string name="people_person_private">Tha a\' phròifil seo prìobhaideach</string>
-    <string name="people_person_state_invited">Air a chuireadh</string>
+    <string name="people_person_state_invited">Chaidh cuireadh a thoirt</string>
 
     <string name="people_invitations_accept_all">Gabh ris na h-uile</string>
     <string name="people_invitations_decline_all">Diùlt na h-uile</string>
@@ -117,7 +117,7 @@
     <string name="people_profile_avatar">Avatar</string>
     <string name="people_profile_banner">Bratach</string>
     <string name="people_contacts_search_placeholder">Lorg…</string>
-    <string name="people_contacts_invited">Air a chuireadh</string>
+    <string name="people_contacts_invited">Chaidh cuireadh a thoirt</string>
     <string name="people_contacts_accept">Gabh ris</string>
     <string name="people_contacts_message">Cuir teachdaireachd</string>
     <string name="people_contacts_no_people_found">Cha deach daoine a lorg</string>
@@ -170,7 +170,7 @@
     <string name="people_contact_organisation">Buidheann</string>
     <string name="people_contact_url">Làrach-lìn</string>
     <string name="people_contact_note">Nòta</string>
-    <string name="people_contact_book">Leabhar sheòlaidhean</string>
+    <string name="people_contact_book">Leabhar-sheòlaidhean</string>
     <string name="people_contact_type_work">Obair</string>
     <string name="people_contact_type_mobile">Fòn-làimhe</string>
     <string name="people_contact_pick_date">Tagh ceann-latha</string>

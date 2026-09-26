@@ -50,8 +50,8 @@
     <string name="go_resign_title">Éirigh as an gcluiche?</string>
     <string name="go_sidebar_completed">Críochnaithe</string>
     <string name="go_sidebar_new_game">Cluiche nua</string>
-    <string name="go_status_draw">Tarraing</string>
-    <string name="go_status_draw_text">Tarraing</string>
+    <string name="go_status_draw">Cluiche cothrom</string>
+    <string name="go_status_draw_text">Cluiche cothrom</string>
     <string name="go_status_game_over">Cluiche thart</string>
     <string name="go_status_opponent_move">Gluaiseacht %1$s</string>
     <string name="go_status_opponent_wins">Buann %1$s</string>

@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Kakitangan</string>
-    <string name="launcher_staff">Mochi Kakitangan</string>
+    <string name="launcher_staff">Kakitangan Mochi</string>
     <string name="staff_accounts_action_ban_title">Haramkan akaun</string>
     <string name="staff_accounts_action_suspend_title">Gantung akaun</string>
     <string name="staff_accounts_action_unban_title">Buka sekatan</string>
@@ -170,7 +170,7 @@
     <string name="staff_config_field_stripe_oauth_client">ID pelanggan OAuth</string>
     <string name="staff_config_field_stripe_publishable">Kunci boleh terbit</string>
     <string name="staff_config_field_stripe_secret">Kunci rahsia</string>
-    <string name="staff_config_group_moderation">Penyederhanaan</string>
+    <string name="staff_config_group_moderation">Moderasi</string>
     <string name="staff_config_group_payments">Pembayaran</string>
     <string name="staff_config_group_reviews">Ulasan</string>
     <string name="staff_config_group_stripe">Stripe</string>
@@ -187,7 +187,7 @@
     <string name="staff_dashboard_col_date">Tarikh</string>
     <string name="staff_dashboard_col_detail">Butiran</string>
     <string name="staff_dashboard_col_listing">Penyenaraian</string>
-    <string name="staff_dashboard_col_moderation">Penyederhanaan</string>
+    <string name="staff_dashboard_col_moderation">Moderasi</string>
     <string name="staff_dashboard_col_name">Nama</string>
     <string name="staff_dashboard_col_object">Objek</string>
     <string name="staff_dashboard_col_reason">Sebab</string>
@@ -216,7 +216,7 @@
     <string name="staff_dashboard_system">Sistem</string>
     <string name="staff_dashboard_tab_audit">Audit</string>
     <string name="staff_dashboard_tab_listings">Penyenaraian</string>
-    <string name="staff_dashboard_tab_moderation">Penyederhanaan</string>
+    <string name="staff_dashboard_tab_moderation">Moderasi</string>
     <string name="staff_dashboard_tab_orders">Pesanan</string>
     <string name="staff_dashboard_tab_signups">Pendaftaran</string>
     <string name="staff_dashboard_yes">Ya</string>
@@ -283,7 +283,7 @@
     <string name="staff_disputes_view">Lihat</string>
     <string name="staff_filter_chip_remove">Buang penapis</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
-    <string name="staff_filter_label_moderation">Penyederhanaan</string>
+    <string name="staff_filter_label_moderation">Moderasi</string>
     <string name="staff_filter_label_query">Cari</string>
     <string name="staff_filter_label_seller">Penjual</string>
     <string name="staff_filter_label_status">Status</string>
@@ -297,7 +297,7 @@
     <string name="staff_listings_approved_toast">Penyenaraian diluluskan</string>
     <string name="staff_listings_cancel">Batal</string>
     <string name="staff_listings_empty">Tiada penyenaraian</string>
-    <string name="staff_listings_filter_moderation_label">Penyederhanaan</string>
+    <string name="staff_listings_filter_moderation_label">Moderasi</string>
     <string name="staff_listings_filter_status_label">Status</string>
     <string name="staff_listings_moderation_auto_approved">Diluluskan secara automatik</string>
     <string name="staff_listings_moderation_hold">Tahan</string>
@@ -394,7 +394,7 @@
     <string name="staff_sidebar_disputes">Pertikaian</string>
     <string name="staff_sidebar_listings">Penyenaraian</string>
     <string name="staff_sidebar_management">Pengurusan</string>
-    <string name="staff_sidebar_market">Pasaran</string>
+    <string name="staff_sidebar_market">Pasar</string>
     <string name="staff_sidebar_moderation">Log penyederhanaan</string>
     <string name="staff_sidebar_overview">Gambaran keseluruhan</string>
     <string name="staff_sidebar_reports">Laporan</string>

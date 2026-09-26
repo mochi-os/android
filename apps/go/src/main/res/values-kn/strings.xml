@@ -16,7 +16,7 @@
     <string name="go_color_white">ಬಿಳಿ</string>
     <string name="go_delete_confirm">ಅಳಿಸಿ</string>
     <string name="go_delete_message">ಈ ಆಟವನ್ನು ನಿಮ್ಮ ಪಟ್ಟಿಯಿಂದ ತೆಗೆದುಹಾಕಲಾಗುತ್ತದೆ. ಇದನ್ನು ರದ್ದು ಮಾಡಲಾಗುವುದಿಲ್ಲ.</string>
-    <string name="go_delete_title">ಆಟವನ್ನು ಅಳಿಸುವುದೇ?</string>
+    <string name="go_delete_title">ಆಟವನ್ನು ಅಳಿಸಬೇಕೆ?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">ಸ್ವೀಕರಿಸಿ</string>
     <string name="go_draw_decline">ತಿರಸ್ಕರಿಸಿ</string>

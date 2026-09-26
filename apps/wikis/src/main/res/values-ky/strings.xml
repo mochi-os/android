@@ -16,7 +16,7 @@
     <string name="wikis_page_action_rename">Атын өзгөртүү</string>
     <string name="wikis_page_action_history">Тарых</string>
     <string name="wikis_page_action_delete">Жок кылуу</string>
-    <string name="wikis_page_action_section_wiki">Wiki</string>
+    <string name="wikis_page_action_section_wiki">Вики</string>
     <string name="wikis_page_action_search">Издөө</string>
     <string name="wikis_page_action_tags">Тегдер</string>
     <string name="wikis_page_action_recent_changes">Акыркы өзгөрүүлөр</string>
@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Алуу</string>
     <string name="wikis_replicas_remove_failed">Реплика алып салуу ишке ашкан жок</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Викилер</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">Wiki барак өзгөртүүлөрү, пикирлер жана чакыруулар жөнүндө билдирүүлөр.</string>
     <string name="wikis_pageview_toc_expand">Мазмунду көрсөтүү</string>
@@ -283,7 +283,7 @@
     <string name="wikis_load_more">Дагы жүктөө</string>
     <string name="wikis_access_change_level">Жетки деңгээли</string>
     <string name="wikis_access_subject_anyone">Каалаган адам</string>
-    <string name="wikis_access_subject_authenticated">Аныкталган колдонуучулар</string>
+    <string name="wikis_access_subject_authenticated">Аутентификацияланган колдонуучулар</string>
 
     <string name="wikis_revision_compare">Өзгөртүүлөрдү салыштыруу</string>
     <string name="wikis_revision_author">%1$s боюнча</string>

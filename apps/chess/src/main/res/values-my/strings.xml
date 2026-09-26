@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">လက်ခံမည်</string>
     <string name="chess_draw_decline">ငြင်းပယ်မည်</string>
     <string name="chess_status_checkmate_you_win">ရှက်မိတ် — သင် နိုင်သည်!</string>
-    <string name="chess_status_stalemate">ပြိုင်ဆိုင်ရာ မအောင်မြင်ပါ — တစ်ဖက်နှင့်တစ်ဖက် တူ</string>
+    <string name="chess_status_stalemate">ရပ်တန့် — သရေ</string>
     <string name="chess_status_draw">သရေ</string>
     <string name="chess_status_check_your_move">ချက် — သင့်အလှည့်</string>
     <string name="chess_status_your_move">သင်၏ အလှည့်</string>

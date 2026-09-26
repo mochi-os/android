@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Informa de l\'anunci</string>
     <string name="market_listing_detail_save">Desa</string>
     <string name="market_listing_detail_seller_heading">Venedor</string>
-    <string name="market_listing_detail_shipping_heading">Enviament</string>
+    <string name="market_listing_detail_shipping_heading">Opcions d\'enviament</string>
     <string name="market_listing_detail_subscribe">Subscriu-te</string>
     <string name="market_listing_detail_tags_heading">Etiquetes</string>
     <string name="market_listing_detail_title">Anunci</string>
@@ -461,7 +461,7 @@
     <string name="market_editor_days">%1$d dies</string>
     <string name="market_editor_delete">Elimina la publicació</string>
     <string name="market_editor_delete_confirm_message">Això eliminarà permanentment la publicació.</string>
-    <string name="market_editor_delete_confirm_title">Voleu eliminar la publicació?</string>
+    <string name="market_editor_delete_confirm_title">Vols suprimir l\'anunci?</string>
     <string name="market_editor_download">Descàrrega directa</string>
     <string name="market_editor_duration">Durada de la subhasta</string>
     <string name="market_editor_fee_preview_pending">S\'està desant l\'esborrany…</string>
@@ -482,7 +482,7 @@
     <string name="market_editor_stripe_banner_description">Connecteu un compte d\'Stripe per rebre pagaments d\'aquesta publicació.</string>
     <string name="market_editor_stripe_banner_title">Completeu la configuració d\'Stripe</string>
     <string name="market_editor_tags_field">Etiquetes (separades per comes)</string>
-    <string name="market_editor_title_new">Nova publicació</string>
+    <string name="market_editor_title_new">Anunci nou</string>
     <string name="market_editor_title_required">Introduïu un títol abans d\'afegir fotos o fitxers</string>
     <string name="market_editor_type">Tipus de publicació</string>
     <string name="market_editor_zone_add">Afegeix una zona</string>
@@ -506,7 +506,7 @@
     <string name="market_editor_zone_worldwide">A tot el món</string>
     <string name="market_editor_zones_empty">Encara no hi ha zones</string>
     <string name="market_empty_subtitle">Proveu d\'ajustar o esborrar els filtres.</string>
-    <string name="market_empty_title">Cap resultat</string>
+    <string name="market_empty_title">Sense resultats</string>
     <string name="market_fee_disclosure_body">Comissió de la plataforma: %1$s%%. Consulteu el vostre tauler de Stripe per a les comissions del processador.</string>
     <string name="market_fee_disclosure_title">Comissions de la plataforma</string>
     <string name="market_fee_preview_failed">No s\'han pogut calcular les comissions</string>
@@ -540,7 +540,7 @@
     <string name="market_listings_action_share">Comparteix</string>
     <string name="market_listings_delete_failed">No s\'ha pogut suprimir l\'anunci</string>
     <string name="market_listings_delete_message">Això elimina l\'esborrany del vostre compte de manera permanent.</string>
-    <string name="market_listings_delete_title">Voleu suprimir l\'anunci?</string>
+    <string name="market_listings_delete_title">Vols suprimir l\'anunci?</string>
     <string name="market_listings_empty_subtitle">Toqueu Anunci nou per crear el vostre primer article.</string>
     <string name="market_listings_load_failed">No s\'han pogut carregar els vostres anuncis</string>
     <string name="market_listings_new">Anunci nou</string>
@@ -606,14 +606,14 @@
     <string name="market_sale_dispute_state_responded">Esperant decisió</string>
     <string name="market_sale_dispute_stripe_reason">Motiu de la devolució de càrrec de Stripe: %1$s</string>
     <string name="market_sale_fee_gross">Brut</string>
-    <string name="market_sale_fee_mochi">Tarifa de Mochi</string>
+    <string name="market_sale_fee_mochi">Comissió de Mochi</string>
     <string name="market_sale_fee_payout">Pagament net</string>
     <string name="market_sale_fee_stripe">Tarifa de processament de Stripe</string>
     <string name="market_sale_fee_stripe_note">Les tarifes de processament de Stripe es mostren al vostre tauler de Stripe.</string>
     <string name="market_sale_order_id_label">ID de la comanda</string>
     <string name="market_sale_ordered_label">Demanada</string>
     <string name="market_sale_review_no_response_yet">Podeu respondre una vegada. Les respostes són públiques.</string>
-    <string name="market_sale_review_response_submitting">Enviant…</string>
+    <string name="market_sale_review_response_submitting">S\'està enviant…</string>
     <string name="market_sale_section_dispute">Disputa</string>
     <string name="market_sale_section_fees">Desglossament de tarifes</string>
     <string name="market_sale_section_refund">Reemborsament</string>
@@ -663,7 +663,7 @@
     <string name="market_seller_become_heading">Fes-te venedor</string>
     <string name="market_seller_become_title">Fes-te venedor</string>
     <string name="market_seller_check_status">Comprova l\'estat</string>
-    <string name="market_seller_checking">S\'està comprovant...</string>
+    <string name="market_seller_checking">S\'està comprovant…</string>
     <string name="market_seller_connect_stripe">Connecta Stripe</string>
     <string name="market_seller_connecting">S\'està carregant...</string>
     <string name="market_seller_fee_loading">S\'estan carregant els detalls de la comissió...</string>

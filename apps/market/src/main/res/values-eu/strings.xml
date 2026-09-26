@@ -15,7 +15,7 @@
     <string name="market_account_seller_step_activate_title">Aktibatu saltzaile-kontua</string>
     <string name="market_account_seller_step_activate_desc">Sortu zure saltzaile-profila artikuluak zerrendatzen hasteko</string>
     <string name="market_account_seller_step_stripe_desc">Lotu Stripe kontu bat erosleen ordainketak onartzeko</string>
-    <string name="market_account_seller_fees_heading">Tarifak:</string>
+    <string name="market_account_seller_fees_heading">Tasak:</string>
     <string name="market_account_seller_fees_mochi">Mochik salmenta bakoitzaren %1$s%% hartzen du.</string>
     <string name="market_account_seller_fees_stripe">Stripek bere prozesatze-tarifa kobratzen du transakzio bakoitzeko eta tarifa finko bat ordainketa-itzulketa bakoitzeko. Zure moneta eta eskualderako uneko tarifak zure Stripe arbelean ageri dira.</string>
     <string name="market_account_seller_connect">Konektatu Stripe</string>
@@ -152,7 +152,7 @@
     <string name="market_editor_appeal_submit">Bidali helegitea</string>
     <string name="market_editor_asset_add">Gehitu fitxategia</string>
     <string name="market_editor_asset_delete">Kendu baliabidea</string>
-    <string name="market_editor_asset_external">Kanpoko URL-a</string>
+    <string name="market_editor_asset_external">Kanpoko URLa</string>
     <string name="market_editor_asset_external_add">Gehitu kanpoko esteka</string>
     <string name="market_editor_asset_external_filename">Fitxategi-izena</string>
     <string name="market_editor_asset_external_mime">MIME mota</string>
@@ -319,7 +319,7 @@
     <string name="market_listing_detail_seller_suspended_banner">Saltzaile hau eseki da. Kontua leheneratu arte eskaera berriak gelditu dira.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">Erosketa desgaituta dago saltzailearen kontua mugatuta dagoenean.</string>
     <string name="market_listing_detail_share">Partekatu zerrenda</string>
-    <string name="market_listing_detail_shipping_heading">Bidalketa</string>
+    <string name="market_listing_detail_shipping_heading">Bidalketa aukerak</string>
     <string name="market_listing_detail_subscribe">Harpidetu</string>
     <string name="market_listing_detail_tags_heading">Etiketak</string>
     <string name="market_listing_detail_title">Zerrendapena</string>
@@ -588,7 +588,7 @@
     <string name="market_status_pending">Zain</string>
     <string name="market_status_refunded">Itzulia</string>
     <string name="market_status_shipped">Bidalita</string>
-    <string name="market_stripe_onboarding_action">Jarraitu konfigurazioa</string>
+    <string name="market_stripe_onboarding_action">Jarraitu konfigurazioarekin</string>
     <string name="market_stripe_onboarding_body">Amaitu Stripe konfigurazioa ordainketak onartu aurretik.</string>
     <string name="market_stripe_onboarding_check">Egiaztatu egoera</string>
     <string name="market_stripe_onboarding_failed">Ezin izan da Stripe ireki</string>

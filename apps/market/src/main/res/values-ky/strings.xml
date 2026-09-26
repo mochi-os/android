@@ -14,7 +14,7 @@
     <string name="market_account_seller_step_activate_title">Сатуучу аккаунтун жандыруу</string>
     <string name="market_account_seller_step_activate_desc">Товарларды жарыялоону баштоо үчүн сатуучу профилиңизди түзүңүз</string>
     <string name="market_account_seller_step_stripe_desc">Сатып алуучулардан төлөм кабыл алуу үчүн Stripe аккаунтун туташтырыңыз</string>
-    <string name="market_account_seller_fees_heading">Төлөмдөр:</string>
+    <string name="market_account_seller_fees_heading">Жыйымдар:</string>
     <string name="market_account_seller_fees_mochi">Mochi ар бир сатуудан %1$s%% алат.</string>
     <string name="market_account_seller_fees_stripe">Stripe ар бир транзакция үчүн өзүнүн иштетүү төлөмүн жана ар бир кайтарым үчүн туруктуу төлөм алат. Валютаңыз жана аймагыңыз үчүн учурдагы тарифтер Stripe башкаруу панелинде көрсөтүлгөн.</string>
     <string name="market_account_seller_connect">Stripe туташтыруу</string>
@@ -182,7 +182,7 @@
     <string name="market_editor_zone_european_union">Европалык Биримдик</string>
     <string name="market_editor_zone_region">Регион</string>
     <string name="market_editor_zone_worldwide">Дүйнө жүзү боюнча</string>
-    <string name="market_empty_title">Натыйжалар жок</string>
+    <string name="market_empty_title">Натыйжа жок</string>
     <string name="market_fee_preview_item">Нерсе</string>
     <string name="market_fee_preview_payout">Сиздин төлөмүңүз</string>
     <string name="market_filter_all">Баары</string>
@@ -235,7 +235,7 @@
     <string name="market_listing_detail_save">Сактоо</string>
     <string name="market_listing_detail_seller_heading">Сатуучу</string>
     <string name="market_listing_detail_share">Жарнаманы бөлүшүү</string>
-    <string name="market_listing_detail_shipping_heading">Жеткирүү</string>
+    <string name="market_listing_detail_shipping_heading">Жеткирүү опциялары</string>
     <string name="market_listing_detail_subscribe">Жазылуу</string>
     <string name="market_listing_detail_tags_heading">Тегдер</string>
     <string name="market_listing_detail_title">Жарнама</string>
@@ -393,7 +393,7 @@
     <string name="market_saved_title">Сакталгандар</string>
     <string name="market_search_clear">Издөөнү тазалоо</string>
     <string name="market_search_placeholder">Базардан издөө</string>
-    <string name="market_section_categories">Категорияларды кароо</string>
+    <string name="market_section_categories">Категорияларды карап чыгуу</string>
     <string name="market_section_listings">Акыркы жарнамалар</string>
     <string name="market_section_recent">Жакында көрүлгөн</string>
     <string name="market_ship_dialog_cancel">Жокко чыгаруу</string>
@@ -512,7 +512,7 @@
     <string name="market_editor_asset_external_url">Шилтеме URL</string>
     <string name="market_editor_assets_empty">Азырынча активдер жок</string>
     <string name="market_editor_delete_confirm_message">Бул тизмени биротоло өчүрөт.</string>
-    <string name="market_editor_delete_confirm_title">Тизмени өчүрөсүзбү?</string>
+    <string name="market_editor_delete_confirm_title">Жарнама өчүрүлсүнбү?</string>
     <string name="market_editor_download">Түз жүктөп алуу</string>
     <string name="market_editor_duration">Аукциондун узактыгы</string>
     <string name="market_editor_fee_preview_pending">Долбоор сакталууда…</string>
@@ -663,7 +663,7 @@
     <string name="market_seller_become_heading">Сатуучу болуу</string>
     <string name="market_seller_become_title">Сатуучу болуу</string>
     <string name="market_seller_check_status">Абалын текшерүү</string>
-    <string name="market_seller_checking">Текшерүүдө...</string>
+    <string name="market_seller_checking">Текшерилүүдө…</string>
     <string name="market_seller_connect_stripe">Stripe туташтыруу</string>
     <string name="market_seller_connecting">Жүктөлүүдө...</string>
     <string name="market_seller_fee_loading">Жыйым чоо-жайы жүктөлүүдө...</string>
@@ -691,7 +691,7 @@
     <string name="market_seller_step_stripe_desc">Сатып алуучулардан төлөмдөрдү кабыл алуу үчүн Stripe аккаунтун байланыштырыңыз</string>
     <string name="market_seller_step_stripe_title">Stripe туташтыруу</string>
     <string name="market_seller_stripe_more_info">Төлөмдөрдү алууга чейин Stripe көбүрөөк маалыматты талап кылат. Stripe башкаруу панелиңиздеги талаптарды аткарыңыз, андан кийин Абалын текшерүү баскычын басыңыз.</string>
-    <string name="market_seller_summary_account_status">Эсептин абалы</string>
+    <string name="market_seller_summary_account_status">Аккаунттун абалы</string>
     <string name="market_seller_summary_fees">Жыйымдар</string>
     <string name="market_seller_summary_payments">Төлөмдөр</string>
     <string name="market_sidebar_become_seller">Сатуучу болуу</string>

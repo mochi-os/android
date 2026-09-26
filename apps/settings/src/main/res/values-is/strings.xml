@@ -4,7 +4,7 @@
     <string name="settings_home_title">Stillingar</string>
     <string name="settings_home_logout">Skrá út</string>
     <string name="settings_home_account">Reikningur</string>
-    <string name="settings_home_preferences">Stillingar</string>
+    <string name="settings_home_preferences">Kjörstillingar</string>
     <string name="settings_home_display">Birting</string>
     <string name="settings_home_notification_prefs">Tilkynningarvalkostir</string>
     <string name="settings_home_accounts">Tengdir reikningar</string>
@@ -191,7 +191,7 @@
     <string name="system_users_unknown_browser">Óþekktur vafri</string>
     <string name="system_users_unknown">Óþekkt</string>
     <string name="system_users_previous">Fyrri</string>
-    <string name="system_users_next">Næst</string>
+    <string name="system_users_next">Áfram</string>
     <string name="system_users_empty">Engir notendur fundust</string>
     <string name="system_users_empty_search">Engir notendur passa við leitina þína</string>
     <string name="system_users_empty_search_hint">Reyndu að aðlaga leitarforsendur þínar</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">Forgangur %1$d · %2$s</string>
     <string name="interests_search_placeholder">Leita að efni til að bæta við…</string>
     <string name="interests_empty">Engin áhugamál enn.</string>
-    <string name="interests_summary_regenerate">Endurnýja samantekt</string>
+    <string name="interests_summary_regenerate">Endurgera yfirlit</string>
     <string name="interests_summary_regenerating">Endurnýja…</string>
     <string name="interests_summary_empty">Bættu við áhugamálum til að búa til samantekt af því sem þér líkar.</string>
     <string name="interests_search_failed">Leit mistókst. Reyndu aftur.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s mun ekki lengur stjórna slóðum á þessu léni.</string>
     <string name="domain_delegation_delete_title">Eyða umboði?</string>
     <string name="domain_delegation_path">Slóð</string>
-    <string name="domain_delegation_user">Notandi auðkenni</string>
+    <string name="domain_delegation_user">Notandi</string>
     <string name="domain_delegations">Umboð</string>
     <string name="domain_delegations_empty">Engar úthlutanir stilltar.</string>
     <string name="domain_delete">Eyða léni</string>

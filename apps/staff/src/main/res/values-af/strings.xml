@@ -30,7 +30,7 @@
     <string name="staff_accounts_status_active">Aktief</string>
     <string name="staff_accounts_status_banned">Verban</string>
     <string name="staff_accounts_status_suspended">Opgeskort</string>
-    <string name="staff_accounts_submitting">Stuur…</string>
+    <string name="staff_accounts_submitting">Indien…</string>
     <string name="staff_accounts_suspend">Skort op</string>
     <string name="staff_accounts_suspended_toast">Rekening opgeskort</string>
     <string name="staff_accounts_unban">Hef verbod op</string>
@@ -53,7 +53,7 @@
     <string name="staff_appeals_notes_label">Notas</string>
     <string name="staff_appeals_reason_label">Rede vir verkoper se appèl</string>
     <string name="staff_appeals_submit">Dien in</string>
-    <string name="staff_appeals_submitting">Stuur…</string>
+    <string name="staff_appeals_submitting">Indien…</string>
     <string name="staff_appeals_upheld_toast">Appèl gehandhaaf</string>
     <string name="staff_audit_action_account_banned">Verban</string>
     <string name="staff_audit_action_account_seller_activated">Verkoper geaktiveer</string>
@@ -170,7 +170,7 @@
     <string name="staff_config_field_stripe_oauth_client">OAuth-kliënt-ID</string>
     <string name="staff_config_field_stripe_publishable">Publiseerbare sleutel</string>
     <string name="staff_config_field_stripe_secret">Geheime sleutel</string>
-    <string name="staff_config_group_moderation">Moderasie</string>
+    <string name="staff_config_group_moderation">Moderering</string>
     <string name="staff_config_group_payments">Betalings</string>
     <string name="staff_config_group_reviews">Resensies</string>
     <string name="staff_config_group_stripe">Stripe</string>
@@ -187,7 +187,7 @@
     <string name="staff_dashboard_col_date">Datum</string>
     <string name="staff_dashboard_col_detail">Besonderheid</string>
     <string name="staff_dashboard_col_listing">Lys</string>
-    <string name="staff_dashboard_col_moderation">Moderasie</string>
+    <string name="staff_dashboard_col_moderation">Moderering</string>
     <string name="staff_dashboard_col_name">Naam</string>
     <string name="staff_dashboard_col_object">Objek</string>
     <string name="staff_dashboard_col_reason">Rede</string>
@@ -216,7 +216,7 @@
     <string name="staff_dashboard_system">Stelsel</string>
     <string name="staff_dashboard_tab_audit">Oudit</string>
     <string name="staff_dashboard_tab_listings">Lyste</string>
-    <string name="staff_dashboard_tab_moderation">Moderasie</string>
+    <string name="staff_dashboard_tab_moderation">Moderering</string>
     <string name="staff_dashboard_tab_orders">Bestellings</string>
     <string name="staff_dashboard_tab_signups">Registrasies</string>
     <string name="staff_dashboard_yes">Ja</string>
@@ -283,7 +283,7 @@
     <string name="staff_disputes_view">Bekyk</string>
     <string name="staff_filter_chip_remove">Verwyder filter</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
-    <string name="staff_filter_label_moderation">Moderasie</string>
+    <string name="staff_filter_label_moderation">Moderering</string>
     <string name="staff_filter_label_query">Soek</string>
     <string name="staff_filter_label_seller">Verkoper</string>
     <string name="staff_filter_label_status">Status</string>
@@ -297,7 +297,7 @@
     <string name="staff_listings_approved_toast">Lys goedgekeur</string>
     <string name="staff_listings_cancel">Kanselleer</string>
     <string name="staff_listings_empty">Geen lyste</string>
-    <string name="staff_listings_filter_moderation_label">Moderasie</string>
+    <string name="staff_listings_filter_moderation_label">Moderering</string>
     <string name="staff_listings_filter_status_label">Status</string>
     <string name="staff_listings_moderation_auto_approved">Outomaties goedgekeur</string>
     <string name="staff_listings_moderation_hold">Hou</string>
@@ -321,7 +321,7 @@
     <string name="staff_listings_status_rejected">Afgewys</string>
     <string name="staff_listings_status_removed">Verwyder</string>
     <string name="staff_listings_status_sold">Verkoop</string>
-    <string name="staff_listings_submitting">Stuur…</string>
+    <string name="staff_listings_submitting">Indien…</string>
     <string name="staff_moderation_empty">Geen moderasie-inskrywings nie</string>
     <string name="staff_moderation_filter_clear">Maak filter skoon</string>
     <string name="staff_moderation_listing_filter_placeholder">Lys-ID</string>
@@ -365,7 +365,7 @@
     <string name="staff_reports_status_pending">Hangend</string>
     <string name="staff_reports_status_reviewed">Geresensieer</string>
     <string name="staff_reports_submit">Dien in</string>
-    <string name="staff_reports_submitting">Stuur…</string>
+    <string name="staff_reports_submitting">Indien…</string>
     <string name="staff_reports_type_listing">Lys</string>
     <string name="staff_reports_type_user">Gebruiker</string>
     <string name="staff_reports_view">Bekyk</string>

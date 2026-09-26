@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Ikoon</string>
     <string name="crm_option_icon_placeholder">näiteks Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Tühista tellimus</string>
-    <string name="crm_settings_delete_crm">Kustuta projekt</string>
+    <string name="crm_settings_delete_crm">Kustuta CRM</string>
     <string name="crm_settings_delete_confirm_title">Kustuta CRM</string>
     <string name="crm_settings_unsubscribe_title">Tühista tellimus</string>
     <string name="crm_settings_unsubscribe_message">Kas oled kindel, et soovid sellest CRM-ist lahti tellida?</string>
@@ -137,8 +137,8 @@
     <string name="crm_class_move_up">Liiguta üles</string>
     <string name="crm_class_move_down">Liiguta alla</string>
     <string name="crm_views_sort_by">Sorteeri</string>
-    <string name="crm_sort_direction_asc">Tõusev</string>
-    <string name="crm_views_direction_asc">Tõusev</string>
+    <string name="crm_sort_direction_asc">Kasvav</string>
+    <string name="crm_views_direction_asc">Kasvav</string>
     <string name="crm_sort_direction_desc">Kahanev</string>
     <string name="crm_views_direction_desc">Kahanev</string>
     <string name="crm_search_objects_placeholder">Otsi objekte</string>

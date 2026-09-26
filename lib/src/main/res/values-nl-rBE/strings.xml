@@ -143,7 +143,7 @@
     <string name="auth_use_passkey">Een passkey gebruiken</string>
     <string name="auth_email_me_a_code">Stuur me een code per e-mail</string>
     <string name="auth_or_enter_authenticator_code">Of voer een authenticatorcode in</string>
-    <string name="auth_log_in">Aanmelden</string>
+    <string name="auth_log_in">Inloggen</string>
     <string name="auth_back">Terug</string>
     <string name="auth_lost_access_recovery">Geen toegang meer? Gebruik een herstelcode</string>
     <string name="auth_create_identity_title">Maak uw identiteit aan</string>
@@ -176,7 +176,7 @@
     <string name="entity_avatar_alt">Avatar voor %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="lightbox_position">%1$d / %2$d</string>
-    <string name="format_time_just_now">Zonet</string>
+    <string name="format_time_just_now">Zojuist</string>
     <string name="format_time_minutes_ago">%1$dm geleden</string>
     <string name="format_time_hours_ago">%1$du geleden</string>
     <string name="format_time_days_ago">%1$dd geleden</string>
@@ -209,7 +209,7 @@
     <string name="about_up_to_date">Up-to-date</string>
     <string name="about_check_downloading">Versie %1$s beschikbaar, downloaden…</string>
     <string name="about_check_network_error">Updateserver kon niet worden bereikt</string>
-    <string name="about_check_download_failed">Downloaden mislukt</string>
+    <string name="about_check_download_failed">Download mislukt</string>
     <string name="notifications_clear_all_title">Alle meldingen wissen?</string>
     <string name="notifications_clear_all_message">Hiermee worden alle meldingen verwijderd. Ze kunnen niet worden hersteld.</string>
     <string name="settings_value_auto">Automatisch</string>
@@ -257,7 +257,7 @@
     <string name="tags_interest_up">Meer zoals dit tonen</string>
     <string name="tags_interest_down">Minder zoals dit tonen</string>
     <string name="tags_interest_clear">Niet meer tonen</string>
-    <string name="tags_none">Geen labels</string>
+    <string name="tags_none">Geen tags</string>
     <string name="tags_delete">Tag verwijderen</string>
     <string name="person_picker_none">Geen</string>
     <string name="person_picker_clear">Selectie wissen</string>

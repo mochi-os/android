@@ -16,7 +16,7 @@
     <string name="wikis_page_action_rename">重新命名</string>
     <string name="wikis_page_action_history">記錄</string>
     <string name="wikis_page_action_delete">刪除</string>
-    <string name="wikis_page_action_section_wiki">維基</string>
+    <string name="wikis_page_action_section_wiki">Wiki</string>
     <string name="wikis_page_action_search">搜尋</string>
     <string name="wikis_page_action_tags">標籤</string>
     <string name="wikis_page_action_recent_changes">近期變更</string>
@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">移除</string>
     <string name="wikis_replicas_remove_failed">移除複本失敗</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki</string>
     <string name="wikis_channel_name">Wikis 通知</string>
     <string name="wikis_channel_description">關於 wiki 頁面編輯、評論和邀請的通知。</string>
     <string name="wikis_pageview_toc_expand">顯示目錄</string>

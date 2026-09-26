@@ -56,7 +56,7 @@
     <string name="notifications_title">Izaziso</string>
     <string name="notifications_empty">Azikho izaziso</string>
     <string name="notifications_empty_unread">Usuzifundile zonke</string>
-    <string name="notifications_tab_unread">Ezingafundiwe</string>
+    <string name="notifications_tab_unread">Okungafundwanga</string>
     <string name="notifications_tab_unread_count">Ezingafundiwe (%1$d)</string>
     <string name="notifications_tab_all">Konke</string>
     <string name="notifications_mark_all_read">Maka konke njengokufundiwe</string>
@@ -126,14 +126,14 @@
     <string name="app_brand">Mochi</string>
     <string name="error_network">Ayikwazi ukuxhumeka. Hlola uxhumano lwakho lwe-inthanethi bese uzama futhi.</string>
     <string name="error_authentication_required">Kudingeka ukuqinisekiswa</string>
-    <string name="error_not_found">Akutholakali</string>
+    <string name="error_not_found">Ayitholakalanga</string>
     <string name="error_server">Iphutha leseva (%1$d). Sicela uzame futhi kamuva.</string>
     <string name="error_unexpected">Kwenzeke iphutha elingalindelekile</string>
     <string name="error_enter_server_url">Sicela ufake i-URL yeseva</string>
     <string name="error_enter_email">Sicela ufake i-imeyili yakho</string>
     <string name="error_enter_name">Sicela ufake igama</string>
     <string name="auth_connect_to_server">Xhumeka eseveni yakho</string>
-    <string name="auth_connect">Xhumeka</string>
+    <string name="auth_connect">Xhuma</string>
     <string name="auth_sign_in">Ngena ngemvume</string>
     <string name="auth_check_email">Hlola i-imeyili yakho ukuze uthole ikhodi yokuqinisekisa</string>
     <string name="auth_mfa_title">Ukuqinisekiswa kwezici eziningi</string>
@@ -142,11 +142,11 @@
     <string name="auth_login_title">Ngena ku-Mochi</string>
     <string name="auth_next">Okulandelayo</string>
     <string name="auth_or_log_in_with">Noma ngena ngemvume nge</string>
-    <string name="auth_passkey">I-passkey</string>
+    <string name="auth_passkey">Ukhiye wokungena</string>
     <string name="auth_use_passkey">Sebenzisa i-passkey</string>
     <string name="auth_email_me_a_code">Ngithumelele ikhodi nge-imeyili</string>
     <string name="auth_or_enter_authenticator_code">Noma faka ikhodi yesiqinisekisi</string>
-    <string name="auth_log_in">Ngena ngemvume</string>
+    <string name="auth_log_in">Ngena</string>
     <string name="auth_back">Emuva</string>
     <string name="auth_lost_access_recovery">Ulahlekelwe ukufinyelela? Sebenzisa ikhodi yokutakula</string>
     <string name="auth_create_identity_title">Dala ubunikazi bakho</string>
@@ -163,7 +163,7 @@
     <string name="bootstrap_choose_account">Khetha i-akhawunti</string>
     <string name="bootstrap_sign_in_different_server">Ngena ngemvume eseveni ehlukile</string>
     <string name="common_retry">Zama futhi</string>
-    <string name="common_more_options">Ezinye izinketho</string>
+    <string name="common_more_options">Eziningi izinketho</string>
     <string name="common_collapse">Goqa</string>
     <string name="common_expand">Nweba</string>
     <string name="common_play_video">Dlala ividiyo</string>
@@ -178,7 +178,7 @@
     <string name="notifications_clear">Sula izaziso</string>
     <string name="entity_avatar_alt">I-avatar ka-%1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
-    <string name="format_time_just_now">Khona manje</string>
+    <string name="format_time_just_now">Manje nje</string>
     <string name="format_time_minutes_ago">%1$dm edlule</string>
     <string name="format_time_hours_ago">%1$dh edlule</string>
     <string name="format_time_days_ago">%1$dd edlule</string>
@@ -246,7 +246,7 @@
     <string name="reactivation_reactivate">Phinda uvuselele i-akhawunti yami</string>
     <string name="reactivation_sign_out">Qhubeka uvale uphinde uphume</string>
     <string name="common_play">Dlala</string>
-    <string name="common_pause">Misa</string>
+    <string name="common_pause">Misa okwesikhashana</string>
     <string name="common_opening_file">Kuvulwa ifayela…</string>
     <string name="common_no_app_for_file">Alikho i-app elingavula leli fayela</string>
     <string name="common_file_open_failed">Ayikwazanga ukuvula ifayela</string>
@@ -288,7 +288,7 @@
     <string name="lightbox_comments">Imibono</string>
     <string name="common_attachment_unavailable">Isinamathiselo asitholakali okwesikhashana</string>
     <string name="common_unavailable">Akutholakali</string>
-    <string name="common_not_found">Akutholakali</string>
+    <string name="common_not_found">Ayitholakalanga</string>
     <string name="format_bold">Okugqamile</string>
     <string name="format_italic">Okutshekile</string>
     <string name="format_link">Isixhumanisi</string>
@@ -310,7 +310,7 @@
     <string name="settings_card_flat">Isicaba</string>
     <string name="settings_card_raised">Iphakanyisiwe</string>
     <string name="error_server_https">Ikheli leseva kumele liqale nge-https://</string>
-    <string name="device_name_fallback">Idivayisi ephathwayo</string>
+    <string name="device_name_fallback">Idivayisi yeselula</string>
     <string name="account_error_token_type">Uhlobo lwethokheni olungasekelwe</string>
     <string name="account_error_caller">Umshayeli akavunyelwe</string>
 </resources>

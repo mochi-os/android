@@ -16,7 +16,7 @@
     <string name="crm_watched">Vixiado</string>
     <string name="crm_create_object">Crear obxecto</string>
     <string name="crm_search">Buscar</string>
-    <string name="crm_settings">Axustes</string>
+    <string name="crm_settings">Configuración</string>
     <string name="crm_link">Ligazón</string>
     <string name="crm_design">Deseño</string>
     <string name="crm_export_failed">Non se puido gardar a exportación</string>
@@ -27,14 +27,14 @@
     <string name="crm_create_object_title">Crear obxecto</string>
     <string name="crm_create_object_type">Tipo</string>
     <string name="crm_create_object_parent">Pai</string>
-    <string name="crm_settings_title">Axustes</string>
+    <string name="crm_settings_title">Configuración</string>
     <string name="crm_settings_tab_general">Xeral</string>
     <string name="crm_settings_tab_access">Acceso</string>
     <string name="crm_settings_tab_people">Persoas</string>
     <string name="crm_option_icon">Icona</string>
     <string name="crm_option_icon_placeholder">p.ex. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Cancelar subscrición</string>
-    <string name="crm_settings_delete_crm">Eliminar proxecto</string>
+    <string name="crm_settings_delete_crm">Eliminar CRM</string>
     <string name="crm_settings_delete_confirm_title">Eliminar CRM</string>
     <string name="crm_settings_unsubscribe_title">Cancelar subscrición</string>
     <string name="crm_settings_unsubscribe_message">Seguro que queres cancelar a subscrición a este CRM?</string>
@@ -153,7 +153,7 @@
     <string name="crm_views_filter">Filtro (gardado, aínda non aplicado)</string>
     <string name="crm_people_empty">Aínda ninguén ten acceso</string>
     <string name="crm_settings_delete_confirm_message">Seguro que queres eliminar este CRM? Todos os obxectos, comentarios e axustes eliminaranse permanentemente.</string>
-    <string name="crm_object_unwatch">Deixar de seguir</string>
+    <string name="crm_object_unwatch">Deixar de observar</string>
     <string name="crm_object_delete_title">Eliminar obxecto</string>
     <string name="crm_object_delete_message">Seguro que queres eliminar este obxecto? Esta acción non se pode desfacer.</string>
     <string name="crm_parent_none">Sen pai</string>
@@ -162,7 +162,7 @@
     <string name="crm_links_section_duplicated_by">Duplicado por</string>
     <string name="crm_links_type">Tipo de ligazón</string>
     <string name="crm_links_type_relates">Relaciónase con</string>
-    <string name="crm_links_remove">Quitar ligazón</string>
+    <string name="crm_links_remove">Quitar a ligazón</string>
     <string name="crm_comment_replying_to">Respondendo a %1$s</string>
     <string name="crm_comment_clear_reply">Borrar resposta</string>
     <string name="crm_comment_placeholder">Engadir un comentario</string>

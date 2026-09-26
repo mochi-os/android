@@ -16,7 +16,7 @@
     <string name="go_color_white">Geal</string>
     <string name="go_delete_confirm">Sguab às</string>
     <string name="go_delete_message">Thèid an geama seo a thoirt air falbh bhon liosta agad. Cha ghabh seo a thilleadh.</string>
-    <string name="go_delete_title">Sguab às an geama?</string>
+    <string name="go_delete_title">A bheil thu airson an geama a sguabadh às?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">Gabh ris</string>
     <string name="go_draw_decline">Diùlt</string>
@@ -50,8 +50,8 @@
     <string name="go_resign_title">An leig thu seachad an geama?</string>
     <string name="go_sidebar_completed">Crìochnaichte</string>
     <string name="go_sidebar_new_game">Geama ùr</string>
-    <string name="go_status_draw">Tarraing</string>
-    <string name="go_status_draw_text">Tarraing</string>
+    <string name="go_status_draw">Geama ionann</string>
+    <string name="go_status_draw_text">Geama ionann</string>
     <string name="go_status_game_over">Tha an geama seachad</string>
     <string name="go_status_opponent_move">Gluasad aig %1$s</string>
     <string name="go_status_opponent_wins">Bhuannaich %1$s</string>

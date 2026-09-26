@@ -99,7 +99,7 @@
     <string name="accounts_status_connected">وصل شو</string>
     <string name="accounts_default_for_ai">د AI لپاره ډیفالټ</string>
     <string name="accounts_test">ازموینه</string>
-    <string name="accounts_settings">ترتیبات</string>
+    <string name="accounts_settings">تنظیمات</string>
     <string name="accounts_verify">تصدیق</string>
     <string name="accounts_remove">لرې کول</string>
     <string name="accounts_remove_title">حساب لرې کړو؟</string>
@@ -119,7 +119,7 @@
     <string name="settings_home_system_documents">سندونه</string>
     <string name="settings_home_system_settings">د سیسټم ترتیبات</string>
     <string name="system_settings_title">د سیسټم ترتیبات</string>
-    <string name="system_settings_section_login">لاګ ان</string>
+    <string name="system_settings_section_login">ننوتل</string>
     <string name="system_settings_section_oauth">د دریمې اړخ ننوتل</string>
     <string name="system_settings_section_user_defaults">د کاروونکي اصلي تنظیمات</string>
     <string name="system_settings_section_operator">چلوونکی</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">لومړیتوب %1$d · %2$s</string>
     <string name="interests_search_placeholder">د اضافه کولو لپاره موضوعات لټوئ…</string>
     <string name="interests_empty">تر اوسه هیڅ علاقې نشته.</string>
-    <string name="interests_summary_regenerate">لنډیز بیا جوړ کړئ</string>
+    <string name="interests_summary_regenerate">لنډیز بیا جوړول</string>
     <string name="interests_summary_regenerating">بیا جوړیږي…</string>
     <string name="interests_summary_empty">د هغه څه چې تاسو یې خوښوئ د لنډیز جوړولو لپاره ځینې علاقې اضافه کړئ.</string>
     <string name="interests_search_failed">لټون پاتې راغی. بیا هڅه وکړئ.</string>
@@ -263,7 +263,7 @@
     <string name="system_settings_reset_message">دا به \"%1$s\" د ډیفالټ ارزښت (%2$s) ته بیرته راولي.</string>
     <string name="system_settings_reset_message_empty">دا به \"%1$s\" د ډیفالټ (خالي) ته بیرته راولي.</string>
     <string name="settings_home_system_users">کاروونکي (سرور)</string>
-    <string name="system_users_add_user">کارن اضافه کړئ</string>
+    <string name="system_users_add_user">کاروونکی اضافه کړئ</string>
     <string name="system_users_search_placeholder">کاروونکي ولټوئ…</string>
     <string name="system_users_sort_by">ترتیب</string>
     <string name="system_users_last_login">وروستی ننوتل: %1$s</string>
@@ -276,7 +276,7 @@
     <string name="account_title">حساب</string>
     <string name="account_section_identity">هویت</string>
     <string name="account_identity_identity">هویت</string>
-    <string name="account_identity_username">د کارن نوم</string>
+    <string name="account_identity_username">د کاروونکي نوم</string>
     <string name="account_identity_name">نوم</string>
     <string name="account_identity_fingerprint">د ګوتو نښه</string>
     <string name="account_identity_directory_toggle">نورو ته اجازه ورکړه چې تاسو په ډایرکټرۍ کې ومومي</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s به نور په دې ډومین کې لارې اداره نکړي.</string>
     <string name="domain_delegation_delete_title">وکالت ړنګ کړئ؟</string>
     <string name="domain_delegation_path">لاره</string>
-    <string name="domain_delegation_user">کارن ID</string>
+    <string name="domain_delegation_user">کاروونکی</string>
     <string name="domain_delegations">وکالتونه</string>
     <string name="domain_delegations_empty">هیڅ استازي تنظیم شوي نه دي.</string>
     <string name="domain_delete">ډومین ړنګ کړئ</string>
@@ -312,7 +312,7 @@
         <item quantity="one">1 ناسته لغوه شوه</item>
         <item quantity="other">%1$d ناستې لغوه شوې</item>
     </plurals>
-    <string name="login_title">لاګ ان</string>
+    <string name="login_title">ننوتل</string>
     <string name="login_section_methods">د ننوتلو لارې</string>
     <string name="login_method_email">د بریښنالیک کوډ</string>
     <string name="login_method_passkey">پاسکي</string>
@@ -388,11 +388,11 @@
     <string name="accounts_field_secret">د لاسلیک راز</string>
     <string name="account_totp_open">په تصدیق کوونکي اپ کې خلاص کړئ</string>
     <string name="accounts_revoke">لاسرسی لغوه کړئ</string>
-    <string name="accounts_capability_calendar">کالنډر</string>
+    <string name="accounts_capability_calendar">کليز</string>
     <string name="accounts_capability_notify">خبرتیاوې</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">ننوتل</string>
-    <string name="accounts_provider_caldav">د کالنډر سرور</string>
-    <string name="accounts_revoke_confirm">دا به د %1$s کالنډر لاسرسی لغوه کړي. د %2$s سره ننوتل به تر هغه پاتې وي چې تاسو یې د ننوتلو پاڼه کې جلا نه کړئ.</string>
+    <string name="accounts_provider_caldav">د کليز سرور</string>
+    <string name="accounts_revoke_confirm">دا به د %1$s کليز لاسرسی لغوه کړي. د %2$s سره ننوتل به تر هغه پاتې وي چې تاسو یې د ننوتلو پاڼه کې جلا نه کړئ.</string>
     <string name="accounts_capability_mcp">MCP</string>
 </resources>

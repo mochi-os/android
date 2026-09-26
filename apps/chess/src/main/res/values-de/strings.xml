@@ -58,12 +58,12 @@
     <string name="chess_channel_description">Benachrichtigungen zu Schachzügen, Remisangeboten und Spielausgängen.</string>
     <string name="chess_channel_name">Schach-Benachrichtigungen</string>
     <string name="chess_delete_message">Entfernt die Partie aus Ihrer Liste.</string>
-    <string name="chess_delete_title">Partie löschen?</string>
+    <string name="chess_delete_title">Spiel löschen?</string>
     <string name="chess_detail_unavailable">Partie nicht verfügbar</string>
     <string name="chess_empty_start_button">Erste Partie starten</string>
     <string name="chess_empty_subtitle">Starten Sie Ihre erste Partie, um Schach mit einem Freund zu spielen.</string>
     <string name="chess_move_capture">%1$s schlug %2$s</string>
-    <string name="chess_open_sidebar">Menü öffnen</string>
+    <string name="chess_open_sidebar">Seitenleiste öffnen</string>
     <string name="chess_ws_connecting">Verbindung wird hergestellt…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_failed">Verbindung fehlgeschlagen</string>

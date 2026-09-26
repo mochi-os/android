@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi 訊息來源</string>
     <string name="feeds_source_type_feed_memories">回憶</string>
-    <string name="feeds_remove_source">移除來源</string>
+    <string name="feeds_remove_source">移除來源?</string>
     <string name="feeds_suggested_credibility_accept">接受</string>
     <string name="feeds_rss_url_copied">已複製 RSS URL 至剪貼簿</string>
     <string name="feeds_logout">登出</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS 網址</string>
     <string name="feeds_source_never_fetched">從未擷取</string>
     <string name="feeds_source_poll">輪詢</string>
-    <string name="feeds_source_transform">轉換</string>
+    <string name="feeds_source_transform">AI 轉換</string>
     <string name="feeds_remove_source_confirm">要移除「%1$s」嗎?</string>
     <string name="feeds_remove_also_delete_posts">同時刪除已匯入的貼文</string>
     <string name="feeds_suggested_credibility_title">建議可信度</string>

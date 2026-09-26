@@ -2,7 +2,7 @@
 <resources>
 
     <string name="words_list_title">Simikuna</string>
-    <string name="words_list_menu">Menu</string>
+    <string name="words_list_menu">Menú</string>
     <string name="words_list_logout">Lluqsiy</string>
     <string name="words_sidebar_completed">Tukusqa</string>
     <string name="words_sidebar_new_game">Musuq pukllay</string>
@@ -26,7 +26,7 @@
     <string name="words_detail_action_resign">Saqirakapuy</string>
     <string name="words_detail_action_rematch">Watiqmanta pukllay</string>
     <string name="words_detail_action_delete">Pukllay wischuy</string>
-    <string name="words_detail_chat_title">Chat</string>
+    <string name="words_detail_chat_title">Rimanakuy</string>
     <string name="words_detail_recall">Kutichiy</string>
     <string name="words_detail_submit">Apachiy</string>
     <string name="words_detail_cancel">Mana ruway</string>

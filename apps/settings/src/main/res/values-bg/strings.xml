@@ -13,8 +13,8 @@
     <string name="account_passkey_register">Добави ключ за достъп</string>
     <string name="account_passkey_delete_title">Изтриване на ключа за достъп?</string>
     <string name="account_section_totp">Приложение за удостоверяване</string>
-    <string name="account_totp_setup">Настройка на автентикатор</string>
-    <string name="account_totp_setup_title">Настройка на автентикатор</string>
+    <string name="account_totp_setup">Настройка на удостоверител</string>
+    <string name="account_totp_setup_title">Настройка на удостоверител</string>
     <string name="account_totp_verify">Потвърди</string>
     <string name="account_totp_disable_title">Изключване на удостоверителя?</string>
     <string name="account_section_recovery">Кодове за възстановяване</string>
@@ -221,7 +221,7 @@
     <string name="account_totp_setup_step1">Сканирайте или въведете тази тайна в приложението си за удостоверяване.</string>
     <string name="account_totp_setup_step2">Въведете 6-цифрения код, показан от приложението.</string>
     <string name="account_totp_code">Код</string>
-    <string name="account_totp_disable_message">Вече няма да можете да влизате с код за удостоверяване.</string>
+    <string name="account_totp_disable_message">Вече няма да можете да влизате с код от удостоверител.</string>
     <string name="account_recovery_none">Не са генерирани кодове за възстановяване.</string>
     <string name="account_recovery_count">%1$d неизползвани кода за възстановяване.</string>
     <string name="account_recovery_generate">Генериране на кодове</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">Приоритет %1$d · %2$s</string>
     <string name="interests_search_placeholder">Търсене на теми за добавяне…</string>
     <string name="interests_empty">Все още няма интереси.</string>
-    <string name="interests_summary_regenerate">Регенериране на резюме</string>
+    <string name="interests_summary_regenerate">Регенерирай резюмето</string>
     <string name="interests_summary_regenerating">Регенериране…</string>
     <string name="interests_summary_empty">Добавете интереси, за да генерирате резюме на това, което харесвате.</string>
     <string name="interests_search_failed">Търсенето не успя. Опитайте отново.</string>
@@ -263,9 +263,9 @@
     <string name="system_settings_reset_message">Това ще нулира „%1$s\" до стойността по подразбиране (%2$s).</string>
     <string name="system_settings_reset_message_empty">Това ще нулира „%1$s\" до стойността по подразбиране (празно).</string>
     <string name="settings_home_system_users">Потребители (сървър)</string>
-    <string name="system_users_add_user">Добавяне на потребител</string>
+    <string name="system_users_add_user">Добави потребител</string>
     <string name="system_users_search_placeholder">Търсене на потребители…</string>
-    <string name="system_users_sort_by">Подреди по</string>
+    <string name="system_users_sort_by">Сортиране по</string>
     <string name="system_users_last_login">Последен вход: %1$s</string>
     <string name="system_users_delete_message">Това ще изтрие завинаги потребителя „%1$s\". Това действие не може да бъде отменено.</string>
     <string name="system_users_sessions_title">Сесии на %1$s</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s вече няма да управлява маршрутите на този домейн.</string>
     <string name="domain_delegation_delete_title">Изтриване на делегирането?</string>
     <string name="domain_delegation_path">Път</string>
-    <string name="domain_delegation_user">Потребителски ID</string>
+    <string name="domain_delegation_user">Потребител</string>
     <string name="domain_delegations">Делегирания</string>
     <string name="domain_delegations_empty">Няма конфигурирани делегации.</string>
     <string name="domain_delete">Изтрий домейна</string>

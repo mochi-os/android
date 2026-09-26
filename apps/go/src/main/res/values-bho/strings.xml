@@ -16,7 +16,7 @@
     <string name="go_color_white">सफेद</string>
     <string name="go_delete_confirm">मेटाईं</string>
     <string name="go_delete_message">ई खेल तोहार सूची से हटा दिहल जाई। एकरा वापस ना कइल जा सके।</string>
-    <string name="go_delete_title">खेल हटाईं?</string>
+    <string name="go_delete_title">खेल मेटाईं?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">स्वीकार करीं</string>
     <string name="go_draw_decline">अस्वीकार करीं</string>

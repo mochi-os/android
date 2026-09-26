@@ -129,7 +129,7 @@
     <string name="game_chat_move_played">%1$s mängis %2$s</string>
 
     <string name="error_network">Ühendamine ebaõnnestus. Kontrollige internetiühendust ja proovige uuesti.</string>
-    <string name="error_authentication_required">Autentimine on nõutav</string>
+    <string name="error_authentication_required">Vajalik on autentimine</string>
     <string name="error_not_found">Ei leitud</string>
     <string name="error_server">Serveri viga (%1$d). Palun proovige hiljem uuesti.</string>
     <string name="error_unexpected">Tekkis ootamatu viga</string>
@@ -178,7 +178,7 @@
     <string name="entity_avatar_alt">Kasutaja %1$s avatar</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="lightbox_position">%1$d / %2$d</string>
-    <string name="format_time_just_now">Just nüüd</string>
+    <string name="format_time_just_now">Just praegu</string>
     <string name="format_time_minutes_ago">%1$d min tagasi</string>
     <string name="format_time_hours_ago">%1$d t tagasi</string>
     <string name="format_time_days_ago">%1$d p tagasi</string>
@@ -238,7 +238,7 @@
     <string name="stepup_error_oauth">Selle kontoga ei õnnestunud kinnitada. Palun proovi uuesti.</string>
     <string name="game_system_resign">%1$s alistus</string>
     <string name="game_system_draw_offer">%1$s pakkus viiki</string>
-    <string name="game_system_draw_accept">Viik kokku lepitud</string>
+    <string name="game_system_draw_accept">Viigis kokku lepitud</string>
     <string name="game_system_draw_decline">%1$s keeldus viigist</string>
     <string name="reactivation_title">Teie konto on kavandatud kustutamiseks</string>
     <string name="reactivation_body">Teie konto on kavandatud kustutamiseks. Saate selle nüüd tühistada ja täieliku juurdepääsu taastada.</string>

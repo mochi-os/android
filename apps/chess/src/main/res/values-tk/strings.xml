@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">Kabul etmek</string>
     <string name="chess_draw_decline">Ret etmek</string>
     <string name="chess_status_checkmate_you_win">Mat — siz utdyňyz!</string>
-    <string name="chess_status_stalemate">Stalemate — deňme-deň</string>
+    <string name="chess_status_stalemate">Pat — deňme-deň</string>
     <string name="chess_status_draw">Deňme-deň</string>
     <string name="chess_status_check_your_move">Şah — siziň hereketiňiz</string>
     <string name="chess_status_your_move">Hereketiň</string>
@@ -60,7 +60,7 @@
     <string name="chess_empty_subtitle">Dostuň bilen küşt oýnamak üçin ilkinji oýnuňy başla.</string>
     <string name="chess_empty_start_button">Ilkinji oýnuňy başla</string>
     <string name="chess_detail_unavailable">Oýun elýeterli däl</string>
-    <string name="chess_delete_title">Oýny pozmaly?</string>
+    <string name="chess_delete_title">Oýun pozulsynmy?</string>
     <string name="chess_delete_message">Bu oýny sanawyňdan aýyrýar.</string>
     <string name="chess_ws_connecting">Birikdirilýär…</string>
     <string name="chess_ws_disconnected">Offline</string>

@@ -131,7 +131,7 @@
     <string name="staff_categories_action_delete">Удалить</string>
     <string name="staff_categories_action_edit">Изменить</string>
     <string name="staff_categories_add">Добавить</string>
-    <string name="staff_categories_col_name">Имя</string>
+    <string name="staff_categories_col_name">Название</string>
     <string name="staff_categories_col_status">Статус</string>
     <string name="staff_categories_col_types">Типы</string>
     <string name="staff_categories_create">Создать</string>
@@ -145,7 +145,7 @@
     <string name="staff_categories_dialog_digital">Цифровой</string>
     <string name="staff_categories_dialog_edit_title">Изменить категорию</string>
     <string name="staff_categories_dialog_icon">Значок</string>
-    <string name="staff_categories_dialog_name">Имя</string>
+    <string name="staff_categories_dialog_name">Название</string>
     <string name="staff_categories_dialog_parent">Родитель</string>
     <string name="staff_categories_dialog_parent_none">Нет</string>
     <string name="staff_categories_dialog_physical">Физический</string>
@@ -188,7 +188,7 @@
     <string name="staff_dashboard_col_detail">Деталь</string>
     <string name="staff_dashboard_col_listing">Объявление</string>
     <string name="staff_dashboard_col_moderation">Модерация</string>
-    <string name="staff_dashboard_col_name">Имя</string>
+    <string name="staff_dashboard_col_name">Название</string>
     <string name="staff_dashboard_col_object">Объект</string>
     <string name="staff_dashboard_col_reason">Причина</string>
     <string name="staff_dashboard_col_score">Счёт</string>

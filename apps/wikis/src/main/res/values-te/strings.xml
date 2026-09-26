@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">తొలగించండి</string>
     <string name="wikis_replicas_remove_failed">రెప్లికాను తీసివేయడంలో విఫలమైంది</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wikiలు</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">wiki పేజీ సవరణలు, వ్యాఖ్యలు మరియు ఆహ్వానాల గురించి నోటిఫికేషన్‌లు.</string>
     <string name="wikis_pageview_toc_expand">విషయ సూచికను చూపు</string>

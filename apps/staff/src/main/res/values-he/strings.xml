@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">צוות Mochi</string>
-    <string name="launcher_staff">Mochi צוות</string>
+    <string name="launcher_staff">צוות Mochi</string>
     <string name="staff_accounts_action_ban_title">חסום חשבון</string>
     <string name="staff_accounts_action_suspend_title">השעה חשבון</string>
     <string name="staff_accounts_action_unban_title">ביטול חסימה</string>
@@ -211,7 +211,7 @@
     <string name="staff_dashboard_kpi_total_orders">סה\"כ הזמנות</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">לא</string>
-    <string name="staff_dashboard_open_sidebar">פתיחת סרגל הצד</string>
+    <string name="staff_dashboard_open_sidebar">פתח סרגל צד</string>
     <string name="staff_dashboard_order_fallback">הזמנה #%1$s</string>
     <string name="staff_dashboard_system">מערכת</string>
     <string name="staff_dashboard_tab_audit">ביקורת</string>
@@ -283,10 +283,10 @@
     <string name="staff_disputes_view">הצג</string>
     <string name="staff_filter_chip_remove">הסרת מסנן</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
-    <string name="staff_filter_label_moderation">ניהול</string>
+    <string name="staff_filter_label_moderation">ניהול תוכן</string>
     <string name="staff_filter_label_query">חיפוש</string>
     <string name="staff_filter_label_seller">מוכר</string>
-    <string name="staff_filter_label_status">מצב</string>
+    <string name="staff_filter_label_status">סטטוס</string>
     <string name="staff_filter_label_type">סוג</string>
     <string name="staff_listings_action_approve_title">אשר רישום</string>
     <string name="staff_listings_action_reject_title">דחה רישום</string>

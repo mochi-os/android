@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">ತೆಗೆದುಹಾಕಿ</string>
     <string name="wikis_replicas_remove_failed">ರೆಪ್ಲಿಕಾ ತೆಗೆದುಹಾಕಲು ವಿಫಲವಾಗಿದೆ</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi ವಿಕಿಗಳು</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">wiki ಪುಟ ಸಂಪಾದನೆಗಳು, ಕಾಮೆಂಟ್‌ಗಳು ಮತ್ತು ಆಹ್ವಾನಗಳ ಕುರಿತ ಅಧಿಸೂಚನೆಗಳು.</string>
     <string name="wikis_pageview_toc_expand">ಪರಿವಿಡಿ ತೋರಿಸಿ</string>
@@ -283,7 +283,7 @@
     <string name="wikis_load_more">ಇನ್ನಷ್ಟು ಲೋಡ್ ಮಾಡಿ</string>
     <string name="wikis_access_change_level">ಪ್ರವೇಶ ಮಟ್ಟ</string>
     <string name="wikis_access_subject_anyone">ಯಾರಾದರೂ</string>
-    <string name="wikis_access_subject_authenticated">ದೃಢೀಕರಿಸಿದ ಬಳಕೆದಾರರು</string>
+    <string name="wikis_access_subject_authenticated">ದೃಢೀಕೃತ ಬಳಕೆದಾರರು</string>
 
     <string name="wikis_revision_compare">ಬದಲಾವಣೆಗಳನ್ನು ಹೋಲಿಸಿ</string>
     <string name="wikis_revision_author">%1$s ಮೂಲಕ</string>

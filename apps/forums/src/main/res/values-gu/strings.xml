@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">અનસબ્સ્ક્રાઇબ કરો</string>
     <string name="forums_list_unsubscribe_title">અનસબ્સ્ક્રાઇબ કરો</string>
     <string name="forums_create_title">ફોરમ બનાવો</string>
-    <string name="forums_create_name">નામ</string>
+    <string name="forums_create_name">ફોરમ નામ</string>
     <string name="forums_create_privacy">ગોપનીયતા</string>
     <string name="forums_create_private">ખાનગી</string>
     <string name="forums_create_public">જાહેર</string>
-    <string name="forums_create_action">બનાવો</string>
+    <string name="forums_create_action">ફોરમ બનાવો</string>
     <string name="forums_find_title">ફોરમ્સ શોધો</string>
     <string name="forums_find_recommended">ભલામણ કરેલ</string>
     <string name="forums_find_subscribe">સબ્સ્ક્રાઇબ કરો</string>
@@ -156,7 +156,7 @@
     <string name="forums_banner_placeholder">આ ફોરમમાં આપનું સ્વાગત છે…</string>
     <string name="forums_ai_mode_label">મોડ: %1$s</string>
     <string name="forums_ai_mode_heading">AI મોડ</string>
-    <string name="forums_ai_mode_off">બંધ</string>
+    <string name="forums_ai_mode_off">નિષ્ક્રિય</string>
     <string name="forums_ai_account">AI ખાતું</string>
     <string name="forums_ai_prompt_tag">ટૅગિંગ પ્રોમ્પ્ટ</string>
     <string name="forums_ai_prompt_score">સ્કોરિંગ પ્રોમ્પ્ટ</string>
@@ -277,7 +277,7 @@
     <string name="forums_moderation_restriction_remove_message">તેમને તરત જ ફોરમમાં સંપૂર્ણ પ્રવેશ પાછો મળશે.</string>
     <string name="forums_moderation_restriction_remove_title">%1$s પરનો પ્રતિબંધ દૂર કરવો?</string>
     <string name="forums_moderation_restriction_state_muted">મ્યૂટ કરેલ</string>
-    <string name="forums_moderation_restriction_state_shadowban">છાયા પ્રતિબંધ</string>
+    <string name="forums_moderation_restriction_state_shadowban">છૂપી રીતે પ્રતિબંધિત</string>
     <string name="forums_moderation_restrictions_empty_subtitle">કોઈ વપરાશકર્તાને મ્યૂટ કે પ્રતિબંધિત કરાયા નથી</string>
     <string name="forums_moderation_section_premoderation_description">સામગ્રી દેખાય તે પહેલાં મંજૂરી ફરજિયાત કરો</string>
     <string name="forums_moderation_section_ratelimiting_description">વપરાશકર્તાઓ કેટલી વાર પોસ્ટ કરી શકે તે મર્યાદિત કરીને સ્પામ અટકાવો</string>
@@ -286,7 +286,7 @@
     <string name="forums_moderation_unit_replies">જવાબો</string>
     <string name="forums_moderation_unit_seconds">સેકન્ડ</string>
     <string name="forums_settings_ai_updated">AI સેટિંગ્સ અપડેટ થઈ</string>
-    <string name="forums_settings_forum_renamed">ફોરમનું નામ બદલાયું</string>
+    <string name="forums_settings_forum_renamed">ફોરમનું નામ બદલ્યું</string>
     <string name="forums_settings_name_clear_cd">નામ સાફ કરો</string>
     <string name="forums_settings_unsubscribe_section">ફોરમમાંથી અનસબસ્ક્રાઇબ કરો</string>
     <string name="forums_share_link_title">ફોરમ લિંક</string>

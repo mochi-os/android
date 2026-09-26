@@ -32,8 +32,8 @@
     <string name="chess_draw_accept">Қабул кардан</string>
     <string name="chess_draw_decline">Рад кардан</string>
     <string name="chess_status_checkmate_you_win">Шоҳмот — шумо бурдед!</string>
-    <string name="chess_status_stalemate">Бозӣ баробар</string>
-    <string name="chess_status_draw">Кашидан</string>
+    <string name="chess_status_stalemate">Пат — баробар</string>
+    <string name="chess_status_draw">Баробар</string>
     <string name="chess_status_check_your_move">Чек — навбати шумо</string>
     <string name="chess_status_your_move">Ҳаракати шумо</string>
     <string name="chess_move_subject_you">Шумо</string>
@@ -60,7 +60,7 @@
     <string name="chess_empty_subtitle">Барои бо дӯст шоҳмот бозӣ кардан бозии аввалини худро оғоз кунед.</string>
     <string name="chess_empty_start_button">Бозии аввалини худро оғоз кунед</string>
     <string name="chess_detail_unavailable">Бозӣ дастрас нест</string>
-    <string name="chess_delete_title">Бозиро нест кардан?</string>
+    <string name="chess_delete_title">Бозӣ нест карда шавад?</string>
     <string name="chess_delete_message">Ин бозиро аз рӯйхати шумо нест мекунад.</string>
     <string name="chess_ws_connecting">Пайвастшавӣ…</string>
     <string name="chess_ws_disconnected">Offline</string>

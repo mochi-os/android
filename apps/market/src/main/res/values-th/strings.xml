@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">รายงานรายการ</string>
     <string name="market_listing_detail_save">บันทึก</string>
     <string name="market_listing_detail_seller_heading">ผู้ขาย</string>
-    <string name="market_listing_detail_shipping_heading">การจัดส่ง</string>
+    <string name="market_listing_detail_shipping_heading">ตัวเลือกการจัดส่ง</string>
     <string name="market_listing_detail_subscribe">ติดตาม</string>
     <string name="market_listing_detail_tags_heading">แท็ก</string>
     <string name="market_listing_detail_title">ประกาศ</string>
@@ -326,7 +326,7 @@
     <string name="market_sale_tracking_label">หมายเลขติดตาม</string>
     <string name="market_saved_title">รายการที่บันทึก</string>
     <string name="market_search_clear">ล้างการค้นหา</string>
-    <string name="market_section_categories">เรียกดูหมวดหมู่</string>
+    <string name="market_section_categories">เลือกดูหมวดหมู่</string>
     <string name="market_section_listings">ประกาศล่าสุด</string>
     <string name="market_section_recent">ดูล่าสุด</string>
     <string name="market_ship_dialog_cancel">ยกเลิก</string>
@@ -444,7 +444,7 @@
     <string name="market_carousel_thumbnail">ภาพย่อ %1$d</string>
     <string name="market_checkout_browser_unavailable">ไม่มีเบราว์เซอร์ที่จะเปิดหน้าชำระเงิน</string>
     <string name="market_checkout_pay_button">ชำระเงินด้วย Stripe</string>
-    <string name="market_checkout_processing">กำลังดำเนินการ…</string>
+    <string name="market_checkout_processing">กำลังประมวลผล…</string>
     <string name="market_checkout_pwyw_label">ราคาของคุณ (ขั้นต่ำ %1$s)</string>
     <string name="market_checkout_pwyw_min_error">จำนวนต้องไม่น้อยกว่า %1$s</string>
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
@@ -467,7 +467,7 @@
     <string name="market_editor_days">%1$d วัน</string>
     <string name="market_editor_delete">ลบรายการประกาศ</string>
     <string name="market_editor_delete_confirm_message">การดำเนินการนี้จะลบรายการประกาศอย่างถาวร</string>
-    <string name="market_editor_delete_confirm_title">ลบรายการประกาศ?</string>
+    <string name="market_editor_delete_confirm_title">ลบประกาศ?</string>
     <string name="market_editor_download">ดาวน์โหลดโดยตรง</string>
     <string name="market_editor_duration">ระยะเวลาประมูล</string>
     <string name="market_editor_fee_preview_pending">กำลังบันทึกฉบับร่าง…</string>
@@ -488,7 +488,7 @@
     <string name="market_editor_stripe_banner_description">เชื่อมต่อบัญชี Stripe เพื่อรับการจ่ายเงินจากรายการประกาศนี้</string>
     <string name="market_editor_stripe_banner_title">ดำเนินการตั้งค่า Stripe ให้เสร็จสิ้น</string>
     <string name="market_editor_tags_field">แท็ก (คั่นด้วยเครื่องหมายจุลภาค)</string>
-    <string name="market_editor_title_new">รายการประกาศใหม่</string>
+    <string name="market_editor_title_new">ประกาศใหม่</string>
     <string name="market_editor_title_required">ป้อนชื่อก่อนเพิ่มรูปภาพหรือไฟล์</string>
     <string name="market_editor_type">ประเภทรายการประกาศ</string>
     <string name="market_editor_zone_add">เพิ่มเขต</string>
@@ -544,10 +544,10 @@
     <string name="market_listings_action_share">แชร์</string>
     <string name="market_listings_delete_failed">ลบรายการไม่สำเร็จ</string>
     <string name="market_listings_delete_message">การดำเนินการนี้จะลบฉบับร่างออกจากบัญชีของคุณอย่างถาวร</string>
-    <string name="market_listings_delete_title">ลบรายการหรือไม่?</string>
+    <string name="market_listings_delete_title">ลบประกาศ?</string>
     <string name="market_listings_empty_subtitle">แตะ รายการใหม่ เพื่อสร้างสินค้าชิ้นแรกของคุณ</string>
     <string name="market_listings_load_failed">โหลดรายการของคุณไม่สำเร็จ</string>
-    <string name="market_listings_new">รายการใหม่</string>
+    <string name="market_listings_new">ประกาศใหม่</string>
     <string name="market_listings_search_placeholder">ค้นหารายการของคุณ</string>
     <string name="market_listings_share_chooser">แชร์รายการ</string>
     <string name="market_messages_compose_placeholder">เขียนข้อความ…</string>

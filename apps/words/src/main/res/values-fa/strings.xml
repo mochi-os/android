@@ -26,7 +26,7 @@
     <string name="words_detail_action_resign">تسلیم</string>
     <string name="words_detail_action_rematch">بازی مجدد</string>
     <string name="words_detail_action_delete">حذف بازی</string>
-    <string name="words_detail_chat_title">گفت‌وگو</string>
+    <string name="words_detail_chat_title">چت</string>
     <string name="words_detail_recall">فراخوانی</string>
     <string name="words_detail_submit">ثبت</string>
     <string name="words_detail_cancel">لغو</string>

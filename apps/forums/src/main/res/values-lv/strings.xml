@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Parādāmais vārds</string>
+    <string name="forums_auth_display_name">Parādāmais nosaukums</string>
     <string name="forums_auth_verification_failed">Verifikācija neizdevās</string>
     <string name="forums_list_title">Forumi</string>
     <string name="forums_list_find">Atrast forumus</string>
@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Atrakstīties</string>
     <string name="forums_list_unsubscribe_title">Atrakstīties</string>
     <string name="forums_create_title">Izveidot forumu</string>
-    <string name="forums_create_name">Nosaukums</string>
+    <string name="forums_create_name">Foruma nosaukums</string>
     <string name="forums_create_privacy">Privātums</string>
     <string name="forums_create_private">Privāts</string>
     <string name="forums_create_public">Publisks</string>
-    <string name="forums_create_action">Izveidot</string>
+    <string name="forums_create_action">Izveidot forumu</string>
     <string name="forums_find_title">Atrast forumus</string>
     <string name="forums_find_recommended">Ieteikts</string>
     <string name="forums_find_subscribe">Abonēt</string>
@@ -71,7 +71,7 @@
     <string name="forums_ai_account_default">Noklusētais konts</string>
     <string name="forums_ai_prompt_reset">Atiestatīt uz noklusējumu</string>
     <string name="forums_settings_unsubscribe">Atrakstīties</string>
-    <string name="forums_moderation_title">Moderācija</string>
+    <string name="forums_moderation_title">Moderēšana</string>
     <string name="forums_moderation_tab_queue">Rinda</string>
     <string name="forums_moderation_tab_reports">Ziņojumi</string>
     <string name="forums_moderation_tab_log">Žurnāls</string>
@@ -156,7 +156,7 @@
     <string name="forums_banner_placeholder">Laipni lūdzam šajā forumā…</string>
     <string name="forums_ai_mode_label">Režīms: %1$s</string>
     <string name="forums_ai_mode_heading">AI režīms</string>
-    <string name="forums_ai_mode_off">Izslēgts</string>
+    <string name="forums_ai_mode_off">Atspējots</string>
     <string name="forums_ai_account">AI konts</string>
     <string name="forums_ai_prompt_tag">Tagu uzvedne</string>
     <string name="forums_ai_prompt_score">Vērtēšanas uzvedne</string>
@@ -220,7 +220,7 @@
     <string name="forums_all_forums">Visi forumi</string>
     <string name="forums_create_allow_search">Atļaut ikvienam meklēt forumu</string>
     <string name="forums_rss_clipboard_label">Foruma RSS URL</string>
-    <string name="forums_tab_moderation">Moderācija</string>
+    <string name="forums_tab_moderation">Moderēšana</string>
     <string name="forums_access_level_view_full">Tikai skatīt</string>
     <string name="forums_access_level_none_full">Nav piekļuves</string>
     <string name="forums_access_subject_anyone">Jebkurš</string>
@@ -278,7 +278,7 @@
     <string name="forums_moderation_restriction_remove_message">Nekavējoties atgūst pilnu piekļuvi forumam.</string>
     <string name="forums_moderation_restriction_remove_title">Noņemt ierobežojumu lietotājam %1$s?</string>
     <string name="forums_moderation_restriction_state_muted">Apklusināts</string>
-    <string name="forums_moderation_restriction_state_shadowban">Ēnu bloķēšana</string>
+    <string name="forums_moderation_restriction_state_shadowban">Slēpti bloķēts</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Neviens lietotājs nav apklusināts vai bloķēts</string>
     <string name="forums_moderation_section_premoderation_description">Pieprasīt apstiprinājumu, pirms saturs kļūst redzams</string>
     <string name="forums_moderation_section_ratelimiting_description">Novērsiet mēstules, ierobežojot, cik bieži lietotāji var publicēt</string>

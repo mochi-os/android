@@ -158,13 +158,13 @@
     <string name="people_contacts_delete_confirm">%1$s ከእውቂያዎችዎ ይሰረዝ?</string>
     <string name="people_contacts_delete_friend_confirm">%1$s ከእውቂያዎችዎ ይሰረዝ? ጓደኝነታችሁም ያበቃል።</string>
     <string name="people_contact_new_title">አዲስ እውቂያ</string>
-    <string name="people_contact_edit_title">እውቂያ አርትዕ</string>
-    <string name="people_contact_given">የመጀመሪያ ስም</string>
+    <string name="people_contact_edit_title">እውቂያ አስተካክል</string>
+    <string name="people_contact_given">የመጠሪያ ስም</string>
     <string name="people_contact_family">የአባት ስም</string>
     <string name="people_contact_nickname">ቅጽል ስም</string>
-    <string name="people_contact_add_email">ኢሜይል አክል</string>
-    <string name="people_contact_add_phone">ስልክ አክል</string>
-    <string name="people_contact_add_address">አድራሻ አክል</string>
+    <string name="people_contact_add_email">ኢሜይል ጨምር</string>
+    <string name="people_contact_add_phone">ስልክ ጨምር</string>
+    <string name="people_contact_add_address">አድራሻ ጨምር</string>
     <string name="people_contact_street">መንገድ</string>
     <string name="people_contact_birthday">የልደት ቀን</string>
     <string name="people_contact_organisation">ድርጅት</string>
@@ -175,7 +175,7 @@
     <string name="people_contact_type_mobile">ተንቀሳቃሽ</string>
     <string name="people_contact_pick_date">ቀን ይምረጡ</string>
     <string name="people_contact_conflict">እውቂያ ተቀይሯል</string>
-    <string name="people_add_contact_title">እውቂያ አክል</string>
+    <string name="people_add_contact_title">እውቂያ ጨምር</string>
     <string name="people_add_contact_add">ወደ እውቂያዎች አክል</string>
     <string name="people_add_contact_in_contacts">በእውቂያዎች ውስጥ</string>
     <string name="people_books_create">የአድራሻ ደብተር ፍጠር</string>

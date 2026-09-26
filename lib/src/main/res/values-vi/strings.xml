@@ -138,7 +138,7 @@
     <string name="auth_mfa_subtitle">Hoàn tất các bước xác minh còn lại</string>
     <string name="auth_recover_account">Khôi phục tài khoản</string>
     <string name="auth_login_title">Đăng nhập vào Mochi</string>
-    <string name="auth_next">Tiếp theo</string>
+    <string name="auth_next">Tiếp</string>
     <string name="auth_or_log_in_with">Hoặc đăng nhập bằng</string>
     <string name="auth_passkey">Mã khóa</string>
     <string name="auth_use_passkey">Dùng passkey</string>
@@ -189,7 +189,7 @@
     <string name="format_time_days_short">%1$d ngày</string>
     <string name="format_time_weeks_short">%1$d tuần</string>
     <string name="format_time_months_short">%1$d tháng</string>
-    <string name="reaction_add">Thêm phản ứng</string>
+    <string name="reaction_add">Thêm cảm xúc</string>
     <string name="push_service_channel">Thông báo Mochi</string>
     <string name="push_service_channel_description">Giữ kết nối Mochi để nhận thông báo</string>
     <string name="push_service_group">Dịch vụ nền</string>
@@ -238,7 +238,7 @@
     <string name="stepup_error_oauth">Không thể xác minh bằng tài khoản đó. Vui lòng thử lại.</string>
     <string name="game_system_resign">%1$s đã xin thua</string>
     <string name="game_system_draw_offer">%1$s đã đề nghị hòa</string>
-    <string name="game_system_draw_accept">Đã đồng ý hòa</string>
+    <string name="game_system_draw_accept">Đã chấp nhận hòa</string>
     <string name="game_system_draw_decline">%1$s đã từ chối hòa</string>
     <string name="reactivation_title">Tài khoản của bạn được lên lịch xóa</string>
     <string name="reactivation_body">Tài khoản của bạn được lên lịch xóa. Bạn có thể hủy và khôi phục toàn bộ quyền truy cập ngay bây giờ.</string>

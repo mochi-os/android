@@ -24,7 +24,7 @@
     <string name="chat_members_you">Ìwọ</string>
     <string name="chat_chat_not_found">A kò rí ìjíròrò</string>
 
-    <string name="chat_message_send">Firanṣẹ</string>
+    <string name="chat_message_send">Firánṣẹ́</string>
     <string name="chat_attachment_remove">Yọ àsomọ́ kúrò</string>
     <string name="chat_attachment_move_up">Gbe soke</string>
     <string name="chat_attachment_move_down">Gbe sokale</string>
@@ -55,7 +55,7 @@
     <string name="chat_forward_success">A ti fi ránṣẹ́ síwájú</string>
     <string name="chat_message_reply">Dáhùn</string>
     <string name="chat_message_select">Yàn</string>
-    <string name="chat_reply_attachment">Fáìlì àsopọ̀</string>
+    <string name="chat_reply_attachment">Àsomọ́</string>
     <string name="chat_replying_to">Ń dáhùn sí %1$s</string>
     <string name="chat_delete_confirm_title">Pa ìránṣẹ́ rẹ́?</string>
     <string name="chat_delete_confirm_body">Èyí yóò pa ìránṣẹ́ náà rẹ́ fún gbogbo ènìyàn, kò sì ṣeé yí padà.</string>
@@ -80,5 +80,5 @@
     <string name="chat_search_prev">Ìbáramu tó ṣáájú</string>
     <string name="chat_settings_id">ID ìfọ̀rọ̀wérọ̀</string>
     <string name="chat_message_edited">(a tunṣe)</string>
-    <string name="chat_new_fallback_name">Ìjíròrò</string>
+    <string name="chat_new_fallback_name">Ìfọ̀rọ̀wérọ̀</string>
 </resources>

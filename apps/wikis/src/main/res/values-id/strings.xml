@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Hapus</string>
     <string name="wikis_replicas_remove_failed">Gagal menghapus replika</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki</string>
     <string name="wikis_channel_name">Notifikasi Wikis</string>
     <string name="wikis_channel_description">Notifikasi tentang pengeditan halaman, komentar, dan undangan.</string>
     <string name="wikis_pageview_toc_expand">Tampilkan daftar isi</string>
@@ -273,7 +273,7 @@
     <string name="wikis_attachments_downloading">Mengunduh…</string>
     <string name="wikis_attachments_empty_description">Ketuk Unggah untuk menambahkan file ke halaman ini.</string>
     <string name="wikis_settings_name_save_cd">Simpan nama</string>
-    <string name="wikis_settings_name_cancel_cd">Batalkan edit</string>
+    <string name="wikis_settings_name_cancel_cd">Batalkan suntingan</string>
     <string name="wikis_access_level_label">Izin</string>
     <string name="wikis_access_set_failed">Gagal memperbarui akses</string>
     <string name="wikis_replicas_col_subscribed">Berlangganan: %1$s</string>

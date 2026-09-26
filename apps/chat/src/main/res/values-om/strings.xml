@@ -55,7 +55,7 @@
     <string name="chat_forward_success">Dabarfame</string>
     <string name="chat_message_reply">Deebii</string>
     <string name="chat_message_select">Filadhu</string>
-    <string name="chat_reply_attachment">Faayilii</string>
+    <string name="chat_reply_attachment">Miiltoo</string>
     <string name="chat_replying_to">%1$s\'f deebisaa jirta</string>
     <string name="chat_delete_confirm_title">Ergaa haquu?</string>
     <string name="chat_delete_confirm_body">Kun ergaa nama hundaaf haqa; deebisanii argachuun hin danda\'amu.</string>
@@ -78,7 +78,7 @@
     <string name="chat_marked_read">Akka dubbifametti mallattoo godhame</string>
     <string name="chat_search_next">Walsimsiisa itti aanu</string>
     <string name="chat_search_prev">Walsimsiisa duraa</string>
-    <string name="chat_settings_id">ID haasawaa</string>
+    <string name="chat_settings_id">ID Chaattii</string>
     <string name="chat_message_edited">(gulaalame)</string>
     <string name="chat_new_fallback_name">Chaattii</string>
 </resources>

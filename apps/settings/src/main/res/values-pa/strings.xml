@@ -263,7 +263,7 @@
     <string name="system_settings_reset_message">ਇਹ \"%1$s\" ਨੂੰ ਡਿਫੌਲਟ ਮੁੱਲ (%2$s) \'ਤੇ ਮੁੜ-ਸੈਟ ਕਰੇਗਾ।</string>
     <string name="system_settings_reset_message_empty">ਇਹ \"%1$s\" ਨੂੰ ਡਿਫੌਲਟ (ਖਾਲੀ) \'ਤੇ ਮੁੜ-ਸੈਟ ਕਰੇਗਾ।</string>
     <string name="settings_home_system_users">ਉਪਭੋਗਤਾ (ਸਰਵਰ)</string>
-    <string name="system_users_add_user">ਉਪਭੋਗਤਾ ਸ਼ਾਮਲ ਕਰੋ</string>
+    <string name="system_users_add_user">ਵਰਤੋਂਕਾਰ ਜੋੜੋ</string>
     <string name="system_users_search_placeholder">ਉਪਭੋਗਤਾ ਖੋਜੋ…</string>
     <string name="system_users_sort_by">ਅਨੁਸਾਰ ਛਾਂਟੋ</string>
     <string name="system_users_last_login">ਆਖਰੀ ਲੌਗਇਨ: %1$s</string>
@@ -356,7 +356,7 @@
     <string name="route_target_select">ਚੁਣੋ</string>
     <string name="account_data_description">ਪੂਰਾ ਬੈਕਅੱਪ ਡਾਊਨਲੋਡ ਕਰੋ ਜਿਸਨੂੰ ਤੁਸੀਂ ਇਸ ਜਾਂ ਕਿਸੇ ਹੋਰ Mochi ਸਰਵਰ ਉੱਤੇ ਬਹਾਲ ਕਰ ਸਕਦੇ ਹੋ।</string>
     <string name="route_target_none">ਕੋਈ ਟਿਕਾਣਾ ਉਪਲਬਧ ਨਹੀਂ</string>
-    <string name="login_invalid_code">ਅਯੋਗ ਕੋਡ</string>
+    <string name="login_invalid_code">ਅਵੈਧ ਕੋਡ</string>
     <string name="accounts_provider_browser">ਬ੍ਰਾਊਜ਼ਰ ਨੋਟੀਫਿਕੇਸ਼ਨਾਂ</string>
     <string name="accounts_provider_fcm">Android ਪੁਸ਼</string>
     <string name="accounts_provider_mcp">MCP ਸਰਵਰ</string>
@@ -389,7 +389,7 @@
     <string name="account_totp_open">ਪ੍ਰਮਾਣਕ ਐਪ ਵਿੱਚ ਖੋਲ੍ਹੋ</string>
     <string name="accounts_revoke">ਪਹੁੰਚ ਰੱਦ ਕਰੋ</string>
     <string name="accounts_capability_calendar">ਕੈਲੰਡਰ</string>
-    <string name="accounts_capability_notify">ਨੋਟੀਫਿਕੇਸ਼ਨ</string>
+    <string name="accounts_capability_notify">ਸੂਚਨਾਵਾਂ</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">ਸਾਈਨ-ਇਨ</string>
     <string name="accounts_provider_caldav">ਕੈਲੰਡਰ ਸਰਵਰ</string>

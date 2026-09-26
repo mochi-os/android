@@ -9,7 +9,7 @@
     <string name="calendars_rename">重新命名</string>
     <string name="calendars_delete">刪除</string>
     <string name="calendars_previous">上一個</string>
-    <string name="calendars_next">下一步</string>
+    <string name="calendars_next">下一個</string>
     <string name="calendars_view">檢視</string>
     <string name="calendars_view_list">清單</string>
     <string name="calendars_list_search">搜尋</string>
@@ -73,7 +73,7 @@
     <string name="calendars_workweek">工作週</string>
     <string name="calendars_range">%1$s 至 %2$s</string>
     <string name="calendars_truncated">此範圍內的部分活動未顯示。</string>
-    <string name="calendars_list_empty">沒有活動</string>
+    <string name="calendars_list_empty">無活動</string>
     <plurals name="calendars_more">
         <item quantity="other">+%1$d 個</item>
     </plurals>

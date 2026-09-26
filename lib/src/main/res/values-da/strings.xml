@@ -120,7 +120,7 @@
 
     <string name="app_brand">Mochi</string>
     <string name="error_network">Kan ikke oprette forbindelse. Tjek din internetforbindelse, og prøv igen.</string>
-    <string name="error_authentication_required">Godkendelse påkrævet</string>
+    <string name="error_authentication_required">Godkendelse kræves</string>
     <string name="error_not_found">Ikke fundet</string>
     <string name="error_server">Serverfejl (%1$d). Prøv venligst igen senere.</string>
     <string name="error_unexpected">Der opstod en uventet fejl</string>
@@ -160,7 +160,7 @@
     <string name="bootstrap_choose_account">Vælg en konto</string>
     <string name="bootstrap_sign_in_different_server">Log ind på en anden server</string>
     <string name="common_retry">Prøv igen</string>
-    <string name="common_more_options">Flere indstillinger</string>
+    <string name="common_more_options">Flere muligheder</string>
     <string name="common_collapse">Skjul</string>
     <string name="common_expand">Udvid</string>
     <string name="common_play_video">Afspil video</string>
@@ -265,7 +265,7 @@
     <string name="person_picker_none">Ingen</string>
     <string name="person_picker_clear">Ryd valg</string>
     <string name="person_picker_select">Vælg …</string>
-    <string name="person_picker_directory">Katalog</string>
+    <string name="person_picker_directory">Kartotek</string>
     <string name="person_picker_no_people">Ingen personer</string>
     <string name="person_picker_project_members">Projektmedlemmer</string>
     <string name="account_token_label">Mochi-session</string>
@@ -312,7 +312,7 @@
     <string name="settings_card_flat">Flad</string>
     <string name="settings_card_raised">Hævet</string>
     <string name="error_server_https">Serveradressen skal begynde med https://</string>
-    <string name="device_name_fallback">Mobil enhed</string>
+    <string name="device_name_fallback">Mobilenhed</string>
     <string name="account_error_token_type">Ikke-understøttet tokentype</string>
     <string name="account_error_caller">Kalderen har ikke tilladelse</string>
 </resources>

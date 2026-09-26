@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">చందా మానివేయండి</string>
     <string name="forums_list_unsubscribe_title">చందా మానివేయండి</string>
     <string name="forums_create_title">ఫోరమ్‌ను సృష్టించండి</string>
-    <string name="forums_create_name">పేరు</string>
+    <string name="forums_create_name">ఫోరమ్ పేరు</string>
     <string name="forums_create_privacy">గోప్యత</string>
     <string name="forums_create_private">ప్రైవేట్</string>
     <string name="forums_create_public">పబ్లిక్</string>
-    <string name="forums_create_action">సృష్టించండి</string>
+    <string name="forums_create_action">ఫోరమ్‌ను సృష్టించండి</string>
     <string name="forums_find_title">ఫోరమ్‌లను కనుగొనండి</string>
     <string name="forums_find_recommended">రికమెండ్ చేయబడింది</string>
     <string name="forums_find_subscribe">చందా చేరండి</string>
@@ -156,7 +156,7 @@
     <string name="forums_banner_placeholder">ఈ ఫోరమ్‌కు స్వాగతం…</string>
     <string name="forums_ai_mode_label">మోడ్: %1$s</string>
     <string name="forums_ai_mode_heading">AI మోడ్</string>
-    <string name="forums_ai_mode_off">ఆఫ్</string>
+    <string name="forums_ai_mode_off">నిలిపివేయబడింది</string>
     <string name="forums_ai_account">AI ఖాతా</string>
     <string name="forums_ai_prompt_tag">ట్యాగింగ్ ప్రాంప్ట్</string>
     <string name="forums_ai_prompt_score">స్కోరింగ్ ప్రాంప్ట్</string>
@@ -247,7 +247,7 @@
     <string name="forums_settings_field_server">సర్వర్</string>
     <string name="forums_settings_name_edit_cd">పేరును సవరించండి</string>
     <string name="forums_settings_name_cancel_cd">సవరణను రద్దు చేయండి</string>
-    <string name="forums_settings_save_name">పేరు సేవ్ చేయండి</string>
+    <string name="forums_settings_save_name">పేరును భద్రపరచండి</string>
     <string name="forums_access_management">యాక్సెస్ నిర్వహణ</string>
     <string name="forums_access_level_comment_full">వ్యాఖ్యానించడం, ఓటు వేయడం మరియు చూడటం</string>
     <string name="forums_access_level_moderate_full">పర్యవేక్షణ, పోస్ట్, వ్యాఖ్య, ఓటు మరియు చూడటం</string>
@@ -256,7 +256,7 @@
     <string name="forums_access_select_group">ఒక సమూహాన్ని ఎంచుకోండి</string>
     <string name="forums_access_select_rule">ఒక నియమాన్ని ఎంచుకోండి</string>
     <string name="forums_ai_actions_label">పోస్ట్‌లపై AI చర్యలు</string>
-    <string name="forums_ai_prompt_custom">అనుకూలం</string>
+    <string name="forums_ai_prompt_custom">అనుకూల</string>
     <string name="forums_ai_prompt_score_label">స్కోర్ ప్రాంప్ట్</string>
     <string name="forums_ai_prompt_tag_label">ట్యాగ్ ప్రాంప్ట్</string>
     <string name="forums_ai_prompt_variables">వేరియబుల్స్: %1$s</string>
@@ -277,13 +277,13 @@
     <string name="forums_moderation_restriction_remove_message">వెంటనే ఫోరమ్‌కు పూర్తి ప్రాప్యత తిరిగి పొందుతారు.</string>
     <string name="forums_moderation_restriction_remove_title">%1$sపై పరిమితిని తీసివేయాలా?</string>
     <string name="forums_moderation_restriction_state_muted">మ్యూట్ చేయబడింది</string>
-    <string name="forums_moderation_restriction_state_shadowban">నీడ నిషేధం</string>
+    <string name="forums_moderation_restriction_state_shadowban">రహస్యంగా నిషేధించబడింది</string>
     <string name="forums_moderation_restrictions_empty_subtitle">ఏ వినియోగదారునీ మ్యూట్ చేయలేదు లేదా నిషేధించలేదు</string>
     <string name="forums_moderation_section_premoderation_description">కంటెంట్ కనిపించే ముందు ఆమోదం అవసరం</string>
     <string name="forums_moderation_section_ratelimiting_description">వినియోగదారులు ఎంత తరచుగా పోస్ట్ చేయగలరో పరిమితం చేసి స్పామ్‌ను నివారించండి</string>
     <string name="forums_moderation_settings_updated">పర్యవేక్షణ సెట్టింగ్‌లు నవీకరించబడ్డాయి</string>
     <string name="forums_moderation_unit_posts">పోస్ట్‌లు</string>
-    <string name="forums_moderation_unit_replies">సమాధానాలు</string>
+    <string name="forums_moderation_unit_replies">ప్రత్యుత్తరాలు</string>
     <string name="forums_moderation_unit_seconds">సెకన్లు</string>
     <string name="forums_settings_ai_updated">AI సెట్టింగ్‌లు నవీకరించబడ్డాయి</string>
     <string name="forums_settings_forum_renamed">ఫోరమ్ పేరు మార్చబడింది</string>

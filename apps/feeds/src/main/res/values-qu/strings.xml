@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi feed</string>
     <string name="feeds_source_type_feed_memories">Yuyaykuna</string>
-    <string name="feeds_remove_source">Pukyuta hurquy</string>
+    <string name="feeds_remove_source">Fuenteta qichuy?</string>
     <string name="feeds_suggested_credibility_accept">Chaskiy</string>
     <string name="feeds_rss_url_copied">RSS URL clipboardman copiasqa</string>
     <string name="feeds_logout">Lluqsiy</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">Manaraq chaskisqachu</string>
     <string name="feeds_source_poll">Tapuy</string>
-    <string name="feeds_source_transform">Tikray</string>
+    <string name="feeds_source_transform">AI tikray</string>
     <string name="feeds_remove_source_confirm">¿\"%1$s\" hurquychu?</string>
     <string name="feeds_remove_also_delete_posts">Apaykachasqa qillqasqakunatapas pichay</string>
     <string name="feeds_suggested_credibility_title">Yuyaychasqa iñiy atiy</string>
@@ -154,13 +154,13 @@
     <string name="feeds_access_select_group">Huñuyta akllay</string>
     <string name="feeds_access_selected">Akllasqa: %1$s</string>
     <string name="feeds_access_subject_anyone">Pipas</string>
-    <string name="feeds_access_subject_authenticated">Riqsichisqa ruraqkuna</string>
+    <string name="feeds_access_subject_authenticated">Chiqanchasqa ruraqkuna</string>
     <string name="feeds_markdown_supported">Markdown haypaqsi</string>
     <string name="feeds_permission_deny">Mana saqiy</string>
     <string name="feeds_rss_feed">Canal RSS</string>
     <string name="feeds_settings_field_entity_id">Entidad ID</string>
     <string name="feeds_settings_field_fingerprint">Ruk\'ana unancha</string>
-    <string name="feeds_settings_field_server">Server</string>
+    <string name="feeds_settings_field_server">Servidor</string>
     <string name="feeds_settings_name_edit_cd">Sutita hukchay</string>
     <string name="feeds_settings_section_identity">Kikinchakuy</string>
     <string name="feeds_unsubscribe">Suscripcionta saqiy</string>
@@ -203,8 +203,8 @@
     <string name="feeds_banner_hint">Kay forum-man allin hamusqayki…</string>
     <string name="feeds_banner_dismiss">Banner wischuy</string>
     <string name="feeds_members_search">Yanapaqkunata suskuy</string>
-    <string name="feeds_ai_prompt_default">Por defecto</string>
-    <string name="feeds_ai_prompt_custom">Personalizasqa</string>
+    <string name="feeds_ai_prompt_default">Predeterminado</string>
+    <string name="feeds_ai_prompt_custom">Sapankuq</string>
     <string name="feeds_ai_prompt_variables">Variablekuna: %1$s</string>
     <string name="feeds_link">T\'inki</string>
     <string name="feeds_share_link_title">Feed t\'inki</string>

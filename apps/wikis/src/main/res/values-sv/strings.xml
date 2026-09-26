@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Ta bort</string>
     <string name="wikis_replicas_remove_failed">Kunde inte ta bort replik</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wikier</string>
     <string name="wikis_channel_name">Wikis-aviseringar</string>
     <string name="wikis_channel_description">Aviseringar om sidredigeringar, kommentarer och inbjudningar.</string>
     <string name="wikis_pageview_toc_expand">Visa innehållsförteckning</string>

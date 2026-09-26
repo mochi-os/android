@@ -35,7 +35,7 @@
     <string name="words_detail_resign_message">Er du sikker på at du vil gje opp?</string>
     <string name="words_channel_name">Ord-varsel</string>
     <string name="words_channel_description">Varsel om trekk, byter og partiresultat.</string>
-    <string name="words_sidebar_active">Aktive parti</string>
+    <string name="words_sidebar_active">Aktive spel</string>
     <string name="words_sidebar_empty">Ingen parti enno.</string>
     <string name="words_new_game_choose_opponents">Vel motstandarar</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
@@ -52,7 +52,7 @@
     <string name="words_detail_exchange_count">Byt (%1$d)</string>
     <string name="words_detail_chat_you_played">Du spela %1$s</string>
     <string name="words_detail_chat_player_played">%1$s spela %2$s</string>
-    <string name="words_detail_delete_title">Slette parti?</string>
+    <string name="words_detail_delete_title">Slette spelet?</string>
     <string name="words_detail_delete_confirm">Slett</string>
     <string name="words_detail_delete_message">Dette slettar spelet og praten permanent. Denne handlinga kan ikkje angrast.</string>
     <string name="words_detail_chat_passed">%1$s melde pass</string>

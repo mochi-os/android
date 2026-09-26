@@ -167,7 +167,7 @@
     <string name="staff_config_field_stripe_oauth_client">ID kliyan OAuth</string>
     <string name="staff_config_field_stripe_publishable">Kle piblikab</string>
     <string name="staff_config_field_stripe_secret">Kle sekrè</string>
-    <string name="staff_config_group_moderation">Modérasyon</string>
+    <string name="staff_config_group_moderation">Moderasyon</string>
     <string name="staff_config_group_payments">Peman yo</string>
     <string name="staff_config_group_reviews">Revizyon</string>
     <string name="staff_config_group_stripe">Stripe</string>
@@ -184,7 +184,7 @@
     <string name="staff_dashboard_col_date">Dat</string>
     <string name="staff_dashboard_col_detail">Detay</string>
     <string name="staff_dashboard_col_listing">Lis</string>
-    <string name="staff_dashboard_col_moderation">Modérasyon</string>
+    <string name="staff_dashboard_col_moderation">Moderasyon</string>
     <string name="staff_dashboard_col_name">Non</string>
     <string name="staff_dashboard_col_object">Objè</string>
     <string name="staff_dashboard_col_reason">Rezon</string>
@@ -212,7 +212,7 @@
     <string name="staff_dashboard_system">Sistèm</string>
     <string name="staff_dashboard_tab_audit">Odit</string>
     <string name="staff_dashboard_tab_listings">Lis</string>
-    <string name="staff_dashboard_tab_moderation">Modérasyon</string>
+    <string name="staff_dashboard_tab_moderation">Moderasyon</string>
     <string name="staff_dashboard_tab_orders">Kòmand yo</string>
     <string name="staff_dashboard_tab_signups">Enskripsyon</string>
     <string name="staff_dashboard_yes">Wi</string>
@@ -256,7 +256,7 @@
     <string name="staff_filter_chip_remove">Retire filt la</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderasyon</string>
-    <string name="staff_filter_label_query">Rechèch</string>
+    <string name="staff_filter_label_query">Chèche</string>
     <string name="staff_filter_label_seller">Vandè</string>
     <string name="staff_filter_label_status">Estati</string>
     <string name="staff_filter_label_type">Tip</string>
@@ -269,7 +269,7 @@
     <string name="staff_listings_approved_toast">Lis apwouve</string>
     <string name="staff_listings_cancel">Anile</string>
     <string name="staff_listings_empty">Pa gen lis</string>
-    <string name="staff_listings_filter_moderation_label">Modérasyon</string>
+    <string name="staff_listings_filter_moderation_label">Moderasyon</string>
     <string name="staff_listings_filter_status_label">Estati</string>
     <string name="staff_listings_moderation_auto_approved">Oto-apwouve</string>
     <string name="staff_listings_moderation_hold">Kenbe</string>

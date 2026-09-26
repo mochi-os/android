@@ -35,7 +35,7 @@
     <string name="people_group_name_required">Namn er påkravd</string>
     <string name="people_group_actions">Gruppehandlingar</string>
     <string name="people_group_members">Medlemer</string>
-    <string name="people_group_members_count">Medlemstal</string>
+    <string name="people_group_members_count">Talet på medlemmer</string>
     <string name="people_group_members_description">Brukarar og grupper som høyrer til denne gruppa</string>
     <string name="people_group_no_members">Ingen medlemmer</string>
     <string name="people_group_delete">Slett gruppe</string>
@@ -166,7 +166,7 @@
     <string name="people_contact_add_phone">Legg til telefon</string>
     <string name="people_contact_add_address">Legg til adresse</string>
     <string name="people_contact_street">Gate</string>
-    <string name="people_contact_birthday">Bursdag</string>
+    <string name="people_contact_birthday">Fødselsdag</string>
     <string name="people_contact_organisation">Organisasjon</string>
     <string name="people_contact_url">Nettstad</string>
     <string name="people_contact_note">Notat</string>

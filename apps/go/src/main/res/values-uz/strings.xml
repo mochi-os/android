@@ -16,7 +16,7 @@
     <string name="go_color_white">Oq</string>
     <string name="go_delete_confirm">Oʻchirish</string>
     <string name="go_delete_message">Ushbu o\'yin ro\'yxatingizdan olib tashlanadi. Buni qaytarib bo\'lmaydi.</string>
-    <string name="go_delete_title">O\'yinni o\'chirish?</string>
+    <string name="go_delete_title">Oʻyin oʻchirilsinmi?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">Qabul qilish</string>
     <string name="go_draw_decline">Rad etish</string>
@@ -50,8 +50,8 @@
     <string name="go_resign_title">Oʻyindan voz kechilsinmi?</string>
     <string name="go_sidebar_completed">Yakunlandi</string>
     <string name="go_sidebar_new_game">Yangi oʻyin</string>
-    <string name="go_status_draw">Chizish</string>
-    <string name="go_status_draw_text">Chizish</string>
+    <string name="go_status_draw">Durang</string>
+    <string name="go_status_draw_text">Durang</string>
     <string name="go_status_game_over">Oʻyin tugadi</string>
     <string name="go_status_opponent_move">%1$s ning yurishi</string>
     <string name="go_status_opponent_wins">%1$s gʻalaba qildi</string>

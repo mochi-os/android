@@ -76,7 +76,7 @@
     <string name="calendars_workweek">Seachdain obrach</string>
     <string name="calendars_range">%1$s gu %2$s</string>
     <string name="calendars_truncated">Chan eil cuid de na tachartasan san rainse seo gan sealltainn.</string>
-    <string name="calendars_list_empty">Gun tachartas</string>
+    <string name="calendars_list_empty">Gun tachartasan</string>
     <plurals name="calendars_more">
         <item quantity="one">+%1$d a bharrachd</item>
         <item quantity="two">+%1$d a bharrachd</item>

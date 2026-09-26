@@ -4,7 +4,7 @@
     <string name="settings_home_title">Cài đặt</string>
     <string name="settings_home_logout">Đăng xuất</string>
     <string name="settings_home_account">Tài khoản</string>
-    <string name="settings_home_preferences">Tùy chỉnh</string>
+    <string name="settings_home_preferences">Tuỳ chọn</string>
     <string name="settings_home_display">Hiển thị</string>
     <string name="settings_home_notification_prefs">Tùy chọn thông báo</string>
     <string name="settings_home_accounts">Tài khoản đã kết nối</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s sẽ không còn quản lý các tuyến trên miền này.</string>
     <string name="domain_delegation_delete_title">Xóa ủy quyền?</string>
     <string name="domain_delegation_path">Đường dẫn</string>
-    <string name="domain_delegation_user">ID người dùng</string>
+    <string name="domain_delegation_user">Người dùng</string>
     <string name="domain_delegations">Ủy quyền</string>
     <string name="domain_delegations_empty">Không có ủy quyền nào được cấu hình.</string>
     <string name="domain_delete">Xóa tên miền</string>

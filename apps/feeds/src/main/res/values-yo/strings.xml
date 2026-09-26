@@ -57,11 +57,11 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Feed Mochi</string>
     <string name="feeds_source_type_feed_memories">Ìrántí</string>
-    <string name="feeds_remove_source">Yọ orísun kúrò</string>
+    <string name="feeds_remove_source">Yọ orísun kúrò?</string>
     <string name="feeds_suggested_credibility_accept">Gbà</string>
     <string name="feeds_rss_url_copied">A ti ṣàdàkọ URL RSS sí clipboard</string>
     <string name="feeds_logout">Jáde</string>
-    <string name="feeds_ai_account_default">Àkáǹtì àìpé</string>
+    <string name="feeds_ai_account_default">Àkáǹtì àìyípadà</string>
     <string name="feeds_ai_mode_off">Tí a ti pa</string>
     <string name="feeds_ai_mode_tag">Fi àmì sí</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + yọ ẹda kuro</string>
@@ -81,8 +81,8 @@
     <string name="feeds_settings_ai_mode_updated">Àpọn AI ti se imudoju</string>
     <string name="feeds_settings_ai_account_updated">Akàntí AI ti se imudoju</string>
     <string name="feeds_settings_prompt_saved">A ti tọ́jú prompt</string>
-    <string name="feeds_settings_prompt_reset">Prọmptì ti tun rinlè si tíò jṣ</string>
-    <string name="feeds_send">Firanṣẹ</string>
+    <string name="feeds_settings_prompt_reset">Prọmptì ti padà sí àìyípadà</string>
+    <string name="feeds_send">Firánṣẹ́</string>
     <string name="feeds_move_up">Gbe soke</string>
     <string name="feeds_move_down">Gbe sokale</string>
 
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">URL RSS</string>
     <string name="feeds_source_never_fetched">Kò gbé wọlé rí</string>
     <string name="feeds_source_poll">Ìbéèrè</string>
-    <string name="feeds_source_transform">Yípadà</string>
+    <string name="feeds_source_transform">Ìyípadà AI</string>
     <string name="feeds_remove_source_confirm">Yọ \"%1$s\" kúrò?</string>
     <string name="feeds_remove_also_delete_posts">Pa àwọn ìfìwéránṣẹ́ tí a kó wọlé pẹ̀lú</string>
     <string name="feeds_suggested_credibility_title">Ìgbẹ́kẹ̀lé tí a dámọ̀ràn</string>
@@ -160,7 +160,7 @@
     <string name="feeds_rss_feed">Feed RSS</string>
     <string name="feeds_settings_field_entity_id">ID Ẹ̀ka</string>
     <string name="feeds_settings_field_fingerprint">Àmì-ìka</string>
-    <string name="feeds_settings_field_server">Server</string>
+    <string name="feeds_settings_field_server">Sáfà</string>
     <string name="feeds_settings_name_edit_cd">Ṣàtúnṣe orúkọ</string>
     <string name="feeds_settings_section_identity">Ìdánimọ̀</string>
     <string name="feeds_unsubscribe">Yọ ìforúkọsílẹ̀ kúrò</string>
@@ -203,11 +203,11 @@
     <string name="feeds_banner_hint">Káàbọ̀ sí àpérò yìí…</string>
     <string name="feeds_banner_dismiss">Mú banner kúrò</string>
     <string name="feeds_members_search">Yẹ àwọn ọmọ ẹgbẹ́ wò</string>
-    <string name="feeds_ai_prompt_default">Àìpé</string>
+    <string name="feeds_ai_prompt_default">Àìyípadà</string>
     <string name="feeds_ai_prompt_custom">Àdáni</string>
     <string name="feeds_ai_prompt_variables">Àwọn ìyípadà: %1$s</string>
     <string name="feeds_link">Ọ̀nà àsopọ̀</string>
-    <string name="feeds_share_link_title">Ọ̀nà àsopọ̀ fídì</string>
+    <string name="feeds_share_link_title">Ọ̀nà àsopọ̀ fíìdì</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">àsọyé %1$d</item>
         <item quantity="other">àsọyé %1$d</item>

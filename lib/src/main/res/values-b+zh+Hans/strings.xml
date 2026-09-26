@@ -7,7 +7,7 @@
     <string name="auth_verification_code">验证码</string>
     <string name="auth_email_code">邮箱验证码</string>
     <string name="auth_recovery_code">恢复码</string>
-    <string name="auth_name">名称</string>
+    <string name="auth_name">姓名</string>
     <string name="auth_create">创建</string>
     <string name="auth_privacy_label">隐私</string>
     <string name="auth_privacy_public">公开</string>
@@ -189,7 +189,7 @@
     <string name="format_time_days_short">%1$d 天</string>
     <string name="format_time_weeks_short">%1$d 周</string>
     <string name="format_time_months_short">%1$d 个月</string>
-    <string name="reaction_add">添加回应</string>
+    <string name="reaction_add">添加表情回应</string>
     <string name="push_service_channel">Mochi 推送</string>
     <string name="push_service_channel_description">保持 Mochi 连接以接收通知</string>
     <string name="push_service_group">后台服务</string>
@@ -238,7 +238,7 @@
     <string name="stepup_error_oauth">无法使用该账户进行验证。请重试。</string>
     <string name="game_system_resign">%1$s 认输</string>
     <string name="game_system_draw_offer">%1$s 提出和棋</string>
-    <string name="game_system_draw_accept">同意和棋</string>
+    <string name="game_system_draw_accept">已同意和棋</string>
     <string name="game_system_draw_decline">%1$s 拒绝和棋</string>
     <string name="reactivation_title">你的账户已计划删除</string>
     <string name="reactivation_body">你的账户已计划删除。你现在可以取消并恢复完整访问权限。</string>

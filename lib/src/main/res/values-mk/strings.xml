@@ -133,7 +133,7 @@
     <string name="error_enter_email">Внесете ја вашата е-пошта</string>
     <string name="error_enter_name">Внесете име</string>
     <string name="auth_connect_to_server">Поврзете се со вашиот сервер</string>
-    <string name="auth_connect">Поврзи се</string>
+    <string name="auth_connect">Поврзи</string>
     <string name="auth_sign_in">Најави се</string>
     <string name="auth_check_email">Проверете ја вашата е-пошта за код за потврда</string>
     <string name="auth_mfa_title">Повеќефакторска автентикација</string>
@@ -178,7 +178,7 @@
     <string name="notifications_clear">Исчисти известувања</string>
     <string name="entity_avatar_alt">Аватар за %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
-    <string name="format_time_just_now">Сега</string>
+    <string name="format_time_just_now">Штотуку</string>
     <string name="format_time_minutes_ago">пред %1$dм</string>
     <string name="format_time_hours_ago">пред %1$dч</string>
     <string name="format_time_days_ago">пред %1$dд</string>
@@ -238,7 +238,7 @@
     <string name="stepup_error_oauth">Не успеа верификацијата со таа сметка. Обидете се повторно.</string>
     <string name="game_system_resign">%1$s се предаде</string>
     <string name="game_system_draw_offer">%1$s понуди реми</string>
-    <string name="game_system_draw_accept">Договорено реми</string>
+    <string name="game_system_draw_accept">Реми е договорено</string>
     <string name="game_system_draw_decline">%1$s го одби ремито</string>
     <string name="reactivation_title">Вашата сметка е закажана за бришење</string>
     <string name="reactivation_body">Вашата сметка е закажана за бришење. Можете да откажете и да го вратите целосниот пристап сега.</string>
@@ -246,13 +246,13 @@
     <string name="reactivation_reactivate">Повторно активирај ја мојата сметка</string>
     <string name="reactivation_sign_out">Продолжи со затворање и одјави се</string>
     <string name="common_play">Пушти</string>
-    <string name="common_pause">Паузирај</string>
+    <string name="common_pause">Пауза</string>
     <string name="common_opening_file">Се отвора датотека…</string>
     <string name="common_no_app_for_file">Ниедна апликација не може да ја отвори оваа датотека</string>
     <string name="common_file_open_failed">Датотеката не може да се отвори</string>
     <string name="reaction_remove">Исчисти</string>
     <string name="common_logout_confirm_message">Дали сте сигурни дека сакате да се одјавите? Ќе треба повторно да се најавите за да пристапите до вашата сметка.</string>
-    <string name="comment_anonymous">Анонимно</string>
+    <string name="comment_anonymous">Анонимен</string>
     <string name="tags_label">Ознаки</string>
     <string name="tags_add">Додај ознака</string>
     <string name="tags_interest_up">Прикажи повеќе вакви</string>

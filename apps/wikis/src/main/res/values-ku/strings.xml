@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Rake</string>
     <string name="wikis_replicas_remove_failed">Rakirina replicayê neserkeftî bû</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">Agahdarî derbarê guhertinên rûpela wiki, şîrove û vexwendinan.</string>
     <string name="wikis_pageview_toc_expand">Naverokê nîşan bide</string>
@@ -225,7 +225,7 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Hate nûkirin %1$s</string>
     <string name="wikis_pageview_not_found_description">Rûpela “%1$s” hîn tune ye.</string>
-    <string name="wikis_pageview_share_chooser">Girêdana wîkî</string>
+    <string name="wikis_pageview_share_chooser">Girêdana wîkiyê</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">Girêdan</string>
     <string name="wikis_open_sidebar">Refê kêlekê veke</string>
@@ -261,12 +261,12 @@
     <string name="wikis_redirect_delete_confirm_message">Ev ê beralîkirina ji “%1$s” bo “%2$s” rake. Bikarhênerên ku serdana URL-a çavkaniyê dikin êdî nayên beralîkirin.</string>
     <string name="wikis_tags_subtitle">Rûpelan bi nîşanê bigere. Pêl nîşanekê bike da ku hemû rûpelên bi wê nîşanê bibînî.</string>
     <string name="wikis_tag_pages_title_template">Rûpelên bi taga \"%1$s\"</string>
-    <string name="wikis_tag_manager_add_action">Tag zêde bike</string>
+    <string name="wikis_tag_manager_add_action">Etîketê zêde bike</string>
     <string name="wikis_tag_manager_remove_confirm_title">Tagê rake?</string>
     <string name="wikis_tag_manager_remove_confirm_message">Nîşana “%1$s” ji vê rûpelê were rakirin?</string>
     <string name="wikis_tag_manager_added">Tag \"%1$s\" hat zêdekirin</string>
     <string name="wikis_tag_manager_removed">Tag \"%1$s\" hat rakirin</string>
-    <string name="wikis_tag_dialog_title">Tag zêde bike</string>
+    <string name="wikis_tag_dialog_title">Etîketê zêde bike</string>
     <string name="wikis_tag_dialog_empty">Nîşan nikare vala be</string>
     <string name="wikis_attachments_search_placeholder">Li pêvekan bigere…</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” were jêbirin? Ev nayê vegerandin.</string>
@@ -283,7 +283,7 @@
     <string name="wikis_load_more">Bêtir bar bike</string>
     <string name="wikis_access_change_level">Asta gihîştinê</string>
     <string name="wikis_access_subject_anyone">Her kes</string>
-    <string name="wikis_access_subject_authenticated">Bikarhênerên erêkirî</string>
+    <string name="wikis_access_subject_authenticated">Bikarhênerên pejirandî</string>
 
     <string name="wikis_revision_compare">Guhertinan bidin ber hev</string>
     <string name="wikis_revision_author">ji aliyê %1$s</string>

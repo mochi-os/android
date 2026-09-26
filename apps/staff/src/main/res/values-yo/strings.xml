@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Òṣìṣẹ́</string>
-    <string name="launcher_staff">Mochi Òṣìṣẹ́</string>
+    <string name="launcher_staff">Òṣìṣẹ́ Mochi</string>
     <string name="staff_accounts_action_ban_title">Fòfin de àkáǹtì</string>
     <string name="staff_accounts_action_suspend_title">Dá àkáǹtì dúró</string>
     <string name="staff_accounts_any_seller">Gbogbo</string>
@@ -25,7 +25,7 @@
     <string name="staff_accounts_status_active">Ó ń ṣiṣẹ́</string>
     <string name="staff_accounts_status_banned">Tí a ti fòfin de</string>
     <string name="staff_accounts_status_suspended">Ti dádúró</string>
-    <string name="staff_accounts_submitting">N fi ránṣẹ́…</string>
+    <string name="staff_accounts_submitting">Ń fi ránṣẹ́…</string>
     <string name="staff_accounts_suspend">Dádúró</string>
     <string name="staff_accounts_suspended_toast">A ti dádúró àkáǹtì</string>
     <string name="staff_accounts_unban">Yọ ìfòfindè kúrò</string>
@@ -47,7 +47,7 @@
     <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Àkọsílẹ̀</string>
     <string name="staff_appeals_submit">Fi sí ilẹ̀</string>
-    <string name="staff_appeals_submitting">N fi ránṣẹ́…</string>
+    <string name="staff_appeals_submitting">Ń fi ránṣẹ́…</string>
     <string name="staff_appeals_upheld_toast">A ti tẹ́wọ́gbà ẹjọ́ àfilọ̀</string>
     <string name="staff_audit_action_account_banned">Tí a ti fòfin de</string>
     <string name="staff_audit_action_account_seller_activated">Olùtà ti múṣiṣẹ́</string>
@@ -251,7 +251,7 @@
     <string name="staff_filter_label_moderation">Ìṣàkóso</string>
     <string name="staff_filter_label_query">Wá</string>
     <string name="staff_filter_label_seller">Olùtà</string>
-    <string name="staff_filter_label_status">Ipo</string>
+    <string name="staff_filter_label_status">Ìpò</string>
     <string name="staff_filter_label_type">Irú</string>
     <string name="staff_listings_action_approve_title">Fọwọ́sí àkójọpọ̀</string>
     <string name="staff_listings_action_reject_title">Kọ̀ ìtòlẹ́</string>
@@ -285,7 +285,7 @@
     <string name="staff_listings_status_rejected">Ti kọ̀</string>
     <string name="staff_listings_status_removed">Ti yọ kúrò</string>
     <string name="staff_listings_status_sold">Ti tà</string>
-    <string name="staff_listings_submitting">N fi ránṣẹ́…</string>
+    <string name="staff_listings_submitting">Ń fi ránṣẹ́…</string>
     <string name="staff_moderation_empty">Kò sí ìwọlé ìṣàkóso</string>
     <string name="staff_moderation_listing_filter_placeholder">ID Listing</string>
     <string name="staff_moderation_system">Sístẹ́mù</string>
@@ -326,7 +326,7 @@
     <string name="staff_reports_status_pending">Ń dúró</string>
     <string name="staff_reports_status_reviewed">Ti yẹ̀wò</string>
     <string name="staff_reports_submit">Fi sí ilẹ̀</string>
-    <string name="staff_reports_submitting">N fi ránṣẹ́…</string>
+    <string name="staff_reports_submitting">Ń fi ránṣẹ́…</string>
     <string name="staff_reports_type_listing">Àkójọ</string>
     <string name="staff_reports_type_user">Olùmúlò</string>
     <string name="staff_reports_view">Wo</string>

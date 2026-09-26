@@ -264,7 +264,7 @@
     <string name="projects_design_or_paste_json">O enganxa JSON</string>
     <string name="projects_design_paste_placeholder">Enganxa el JSON del disseny exportat</string>
     <string name="projects_design_import_json">Importa JSON</string>
-    <string name="projects_design_use">Usa</string>
+    <string name="projects_design_use">Utilitza</string>
     <string name="projects_design_replace_message">Això reemplaçarà el disseny actual per %1$s. Totes les classes, camps, opcions i vistes existents seran suprimits. Els objectes existents no se suprimiran però potser ja no apareixeran a les vistes.</string>
     <string name="projects_design_pasted_json_label">JSON enganxat</string>
     <string name="projects_classes_empty">Cap classe definida</string>

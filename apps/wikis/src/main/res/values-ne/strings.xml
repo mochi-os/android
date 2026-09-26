@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">हटाउनुहोस्</string>
     <string name="wikis_replicas_remove_failed">रेप्लिका हटाउन असफल</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi विकिहरू</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">wiki पृष्ठ सम्पादन, टिप्पणी र निमन्त्रणाबारे सूचनाहरू।</string>
     <string name="wikis_pageview_toc_expand">विषयसूची देखाउनुहोस्</string>
@@ -282,8 +282,8 @@
     <string name="wikis_replicas_removed_success">रेप्लिका हटाइयो</string>
     <string name="wikis_load_more">थप लोड गर्नुहोस्</string>
     <string name="wikis_access_change_level">पहुँच स्तर</string>
-    <string name="wikis_access_subject_anyone">जो कोही</string>
-    <string name="wikis_access_subject_authenticated">प्रमाणित प्रयोगकर्ता</string>
+    <string name="wikis_access_subject_anyone">जोसुकै</string>
+    <string name="wikis_access_subject_authenticated">प्रमाणित प्रयोगकर्ताहरू</string>
 
     <string name="wikis_revision_compare">परिवर्तनहरू तुलना गर्नुहोस्</string>
     <string name="wikis_revision_author">%1$s द्वारा</string>

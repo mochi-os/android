@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s beheert geen routes meer op dit domein.</string>
     <string name="domain_delegation_delete_title">Delegatie verwijderen?</string>
     <string name="domain_delegation_path">Pad</string>
-    <string name="domain_delegation_user">Gebruikers-ID</string>
+    <string name="domain_delegation_user">Gebruiker</string>
     <string name="domain_delegations">Delegaties</string>
     <string name="domain_delegations_empty">Geen delegaties geconfigureerd.</string>
     <string name="domain_delete">Domein verwijderen</string>
@@ -391,7 +391,7 @@
     <string name="accounts_capability_calendar">Agenda</string>
     <string name="accounts_capability_notify">Meldingen</string>
     <string name="accounts_capability_ai">AI</string>
-    <string name="accounts_capability_login">Aanmelden</string>
+    <string name="accounts_capability_login">Inloggen</string>
     <string name="accounts_provider_caldav">Agendaserver</string>
     <string name="accounts_revoke_confirm">Hiermee wordt de agendatoegang van %1$s ingetrokken. Aanmelden met %2$s blijft bestaan totdat je het ontkoppelt op de inlogpagina.</string>
     <string name="accounts_capability_mcp">MCP</string>

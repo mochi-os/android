@@ -20,7 +20,7 @@
     <string name="chess_chat_title">चॅट</string>
     <string name="chess_open_chat">चॅट पॅनेल उघडा</string>
     <string name="chess_open_actions">गेम क्रिया उघडा</string>
-    <string name="chess_offer_draw">ड्रॉ ऑफर करा</string>
+    <string name="chess_offer_draw">बरोबरीचा प्रस्ताव द्या</string>
     <string name="chess_resign">राजीनामा द्या</string>
     <string name="chess_rematch">रीमॅच</string>
     <string name="chess_delete_game">खेळ हटवा</string>
@@ -32,8 +32,8 @@
     <string name="chess_draw_accept">स्वीकारा</string>
     <string name="chess_draw_decline">नाकारा</string>
     <string name="chess_status_checkmate_you_win">चेकमेट — तुम्ही जिंकलात!</string>
-    <string name="chess_status_stalemate">स्टेलमेट — बरोबरी</string>
-    <string name="chess_status_draw">ड्रॉ</string>
+    <string name="chess_status_stalemate">कोंडी — बरोबरी</string>
+    <string name="chess_status_draw">बरोबरी</string>
     <string name="chess_status_check_your_move">चेक — तुमची चाल</string>
     <string name="chess_status_your_move">तुमची चाल</string>
     <string name="chess_move_subject_you">तुम्ही</string>
@@ -55,12 +55,12 @@
     <string name="chess_piece_pawn">प्यादा</string>
     <string name="chess_move_played">%1$s ने %2$s खेळले</string>
     <string name="chess_channel_name">Chess notifications</string>
-    <string name="chess_channel_description">बुद्धिबळाच्या चाली, बरोबरीच्या प्रस्ताव आणि खेळाच्या निकालांबद्दल सूचना.</string>
+    <string name="chess_channel_description">बुद्धिबळाच्या चाली, बरोबरीचे प्रस्ताव आणि खेळाच्या निकालांबद्दल सूचना.</string>
     <string name="chess_open_sidebar">साइडबार उघडा</string>
     <string name="chess_empty_subtitle">मित्रासोबत बुद्धिबळ खेळण्यासाठी तुमचा पहिला खेळ सुरू करा.</string>
     <string name="chess_empty_start_button">तुमचा पहिला खेळ सुरू करा</string>
     <string name="chess_detail_unavailable">खेळ उपलब्ध नाही</string>
-    <string name="chess_delete_title">खेळ हटवायचा?</string>
+    <string name="chess_delete_title">गेम हटवायचा?</string>
     <string name="chess_delete_message">हे खेळ तुमच्या यादीतून काढून टाकते.</string>
     <string name="chess_ws_connecting">कनेक्ट होत आहे…</string>
     <string name="chess_ws_disconnected">Offline</string>

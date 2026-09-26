@@ -24,9 +24,9 @@
     <string name="words_new_game_no_friends_subtitle">喺聯絡人應用程式加朋友先可以開始玩。</string>
     <string name="words_new_game_add_friends">加朋友</string>
     <string name="words_detail_title">對局</string>
-    <string name="words_detail_status_your_move">輪到你出手</string>
+    <string name="words_detail_status_your_move">輪到你行</string>
     <string name="words_detail_status_opponent_move">輪到 %1$s 出手</string>
-    <string name="words_detail_status_you_win">你贏咗!</string>
+    <string name="words_detail_status_you_win">你贏咗！</string>
     <string name="words_detail_status_winner_wins">%1$s 贏咗</string>
     <string name="words_detail_status_game_over">對局結束</string>
     <string name="words_detail_status_opponent_resigned">對手認輸 — 你贏咗!</string>
@@ -43,7 +43,7 @@
     <string name="words_detail_action_delete">刪除對局</string>
     <string name="words_detail_action_open_chat">打開傾偈</string>
     <string name="words_detail_action_more">對局動作</string>
-    <string name="words_detail_chat_title">傾偈</string>
+    <string name="words_detail_chat_title">聊天</string>
     <string name="words_detail_recall">收回</string>
     <string name="words_detail_submit">提交</string>
     <string name="words_detail_exchange">換字母</string>
@@ -54,7 +54,7 @@
     <string name="words_detail_chat_you_played">你出咗 %1$s</string>
     <string name="words_detail_chat_player_played">%1$s 出咗 %2$s</string>
 
-    <string name="words_detail_delete_title">刪除對局?</string>
+    <string name="words_detail_delete_title">刪除對局？</string>
     <string name="words_detail_delete_message">此操作將永久刪除對局及其聊天記錄，且無法復原。</string>
     <string name="words_detail_delete_confirm">刪除</string>
     <string name="words_detail_chat_passed">%1$s飛咗一圈</string>

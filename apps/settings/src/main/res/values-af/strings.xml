@@ -74,7 +74,7 @@
     <string name="system_status_title">Status</string>
     <string name="system_status_version">Weergawe</string>
     <string name="system_status_started">Begin</string>
-    <string name="system_status_update">Opdateer</string>
+    <string name="system_status_update">Opdatering</string>
     <string name="system_status_refresh">Verfris</string>
     <string name="system_status_install_update">Installeer opdatering</string>
     <string name="system_status_download_installer">Laai installeerder af</string>
@@ -119,7 +119,7 @@
     <string name="settings_home_system_documents">Dokumente</string>
     <string name="settings_home_system_settings">Stelselinstellings</string>
     <string name="system_settings_title">Stelselinstellings</string>
-    <string name="system_settings_section_login">Meld aan</string>
+    <string name="system_settings_section_login">Aanmelding</string>
     <string name="system_settings_section_oauth">Derde-party aanmelding</string>
     <string name="system_settings_section_user_defaults">Gebruiker-verstekke</string>
     <string name="system_settings_section_operator">Operateur</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s sal nie meer roetes op hierdie domein bestuur nie.</string>
     <string name="domain_delegation_delete_title">Verwyder delegasie?</string>
     <string name="domain_delegation_path">Pad</string>
-    <string name="domain_delegation_user">Gebruiker-ID</string>
+    <string name="domain_delegation_user">Gebruiker</string>
     <string name="domain_delegations">Delegasies</string>
     <string name="domain_delegations_empty">Geen delegasies gekonfigureer nie.</string>
     <string name="domain_delete">Verwyder domein</string>
@@ -312,7 +312,7 @@
         <item quantity="one">1 sessie herroep</item>
         <item quantity="other">%1$d sessies herroep</item>
     </plurals>
-    <string name="login_title">Meld aan</string>
+    <string name="login_title">Aanmelding</string>
     <string name="login_section_methods">Aanmeldmetodes</string>
     <string name="login_method_email">E-poskode</string>
     <string name="login_method_passkey">Toegangsleutel</string>

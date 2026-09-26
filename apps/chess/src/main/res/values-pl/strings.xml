@@ -58,7 +58,7 @@
     <string name="chess_channel_description">Powiadomienia o ruchach szachowych, propozycjach remisu i wynikach gier.</string>
     <string name="chess_channel_name">Powiadomienia szachowe</string>
     <string name="chess_delete_message">Usuwa partię z twojej listy.</string>
-    <string name="chess_delete_title">Usunąć partię?</string>
+    <string name="chess_delete_title">Usunąć grę?</string>
     <string name="chess_detail_unavailable">Partia niedostępna</string>
     <string name="chess_empty_start_button">Rozpocznij pierwszą partię</string>
     <string name="chess_empty_subtitle">Rozpocznij pierwszą partię, aby zagrać w szachy z przyjacielem.</string>
@@ -66,7 +66,7 @@
     <string name="chess_open_sidebar">Otwórz panel boczny</string>
     <string name="chess_ws_connecting">Łączenie…</string>
     <string name="chess_ws_disconnected">Offline</string>
-    <string name="chess_ws_failed">Połączenie nieudane</string>
+    <string name="chess_ws_failed">Połączenie nie powiodło się</string>
     <string name="chess_ws_reconnecting">Ponowne łączenie…</string>
     <string name="chess_piece_white">Biały %1$s</string>
     <string name="chess_piece_black">Czarny %1$s</string>

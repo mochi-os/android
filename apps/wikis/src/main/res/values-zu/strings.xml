@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Khipha</string>
     <string name="wikis_replicas_remove_failed">Kuhlulekile ukususa ikhophi</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Ama-wiki</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">Izaziso mayelana nokuhlelwa kwamakhasi e-wiki, amazwana nezimemo.</string>
     <string name="wikis_pageview_toc_expand">Bonisa uhlu lwesiqukathi</string>
@@ -225,7 +225,7 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Kubuyekeziwe %1$s</string>
     <string name="wikis_pageview_not_found_description">Ikhasi “%1$s” alikho okwamanje.</string>
-    <string name="wikis_pageview_share_chooser">Isixhumanisi se-wiki</string>
+    <string name="wikis_pageview_share_chooser">Isixhumanisi sewiki</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">Isixhumanisi</string>
     <string name="wikis_open_sidebar">Vula ibha eseceleni</string>

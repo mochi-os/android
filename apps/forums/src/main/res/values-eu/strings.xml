@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Harpidetza kendu</string>
     <string name="forums_list_unsubscribe_title">Harpidetza kendu</string>
     <string name="forums_create_title">Sortu foroa</string>
-    <string name="forums_create_name">Izena</string>
+    <string name="forums_create_name">Foroaren izena</string>
     <string name="forums_create_privacy">Pribatutasuna</string>
     <string name="forums_create_private">Pribatua</string>
     <string name="forums_create_public">Publikoa</string>
-    <string name="forums_create_action">Sortu</string>
+    <string name="forums_create_action">Sortu foroa</string>
     <string name="forums_find_title">Aurkitu foroak</string>
     <string name="forums_find_recommended">Gomendatua</string>
     <string name="forums_find_subscribe">Harpidetu</string>
@@ -154,7 +154,7 @@
     <string name="forums_banner_placeholder">Ongi etorri foro honetara…</string>
     <string name="forums_ai_mode_label">Modua: %1$s</string>
     <string name="forums_ai_mode_heading">IA modua</string>
-    <string name="forums_ai_mode_off">Itzalita</string>
+    <string name="forums_ai_mode_off">Desgaituta</string>
     <string name="forums_ai_account">IA kontua</string>
     <string name="forums_ai_prompt_tag">Etiketatze prompta</string>
     <string name="forums_ai_prompt_score">Puntuazio prompta</string>
@@ -257,8 +257,8 @@
     <string name="forums_access_select_rule">Hautatu arau bat</string>
     <string name="forums_ai_actions_label">AAren ekintzak argitalpenetan</string>
     <string name="forums_ai_prompt_custom">Pertsonalizatua</string>
-    <string name="forums_ai_prompt_score_label">Puntuazio-gonbita</string>
-    <string name="forums_ai_prompt_tag_label">Etiketa-gonbita</string>
+    <string name="forums_ai_prompt_score_label">Puntuazio-galdera</string>
+    <string name="forums_ai_prompt_tag_label">Etiketa-galdera</string>
     <string name="forums_ai_prompt_variables">Aldagaiak: %1$s</string>
     <string name="forums_link">Esteka</string>
     <string name="forums_moderation_ban_message">Forora sartzeko aukera galtzen du murrizketa kendu arte.</string>
@@ -277,7 +277,7 @@
     <string name="forums_moderation_restriction_remove_message">Berehala berreskuratuko du fororako sarbide osoa.</string>
     <string name="forums_moderation_restriction_remove_title">%1$s(r)en murrizketa kendu?</string>
     <string name="forums_moderation_restriction_state_muted">Isilarazita</string>
-    <string name="forums_moderation_restriction_state_shadowban">Itzalpeko debekua</string>
+    <string name="forums_moderation_restriction_state_shadowban">Ezkutuan debekatua</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Ez dago erabiltzailerik isilarazita edo debekatuta</string>
     <string name="forums_moderation_section_premoderation_description">Eskatu onarpena edukia ikusgai jarri aurretik</string>
     <string name="forums_moderation_section_ratelimiting_description">Saihestu spama erabiltzaileek zenbatero argitara dezaketen mugatuz</string>
@@ -286,7 +286,7 @@
     <string name="forums_moderation_unit_replies">erantzun</string>
     <string name="forums_moderation_unit_seconds">segundo</string>
     <string name="forums_settings_ai_updated">AAren ezarpenak eguneratu dira</string>
-    <string name="forums_settings_forum_renamed">Foroa izenez aldatu da</string>
+    <string name="forums_settings_forum_renamed">Foroa berrizendatuta</string>
     <string name="forums_settings_name_clear_cd">Garbitu izena</string>
     <string name="forums_settings_unsubscribe_section">Utzi foroaren harpidetza</string>
     <string name="forums_share_link_title">Foroaren esteka</string>

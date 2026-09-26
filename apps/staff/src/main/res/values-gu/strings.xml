@@ -253,7 +253,7 @@
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">મોડરેશન</string>
     <string name="staff_filter_label_query">શોધો</string>
-    <string name="staff_filter_label_seller">વેચનાર</string>
+    <string name="staff_filter_label_seller">વિક્રેતા</string>
     <string name="staff_filter_label_status">સ્થિતિ</string>
     <string name="staff_filter_label_type">પ્રકાર</string>
     <string name="staff_listings_action_approve_title">સૂચિ મંજૂર કરો</string>
@@ -414,7 +414,7 @@
     <string name="staff_team_toast_add_failed">સભ્ય ઉમેરવામાં નિષ્ફળ</string>
     <string name="staff_team_toast_removed">સભ્ય દૂર કર્યા</string>
     <string name="staff_team_toast_role_updated">ભૂમિકા અપડેટ થઈ</string>
-    <string name="staff_audit_action_auction_cancelled">હરાજી રદ કરી</string>
+    <string name="staff_audit_action_auction_cancelled">હરાજી રદ કરાઈ</string>
     <string name="staff_dashboard_order_fallback">ઓર્ડર #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">કારણ (વૈકલ્પિક)</string>

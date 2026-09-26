@@ -4,7 +4,7 @@
     <string name="calendars_subscribe_submit">சந்தாதாராக</string>
     <string name="calendars_subscribe_url">முகவரி</string>
     <string name="calendars_connect_device">சாதனத்தை இணைக்கவும்</string>
-    <string name="calendars_preferences">விருப்பங்கள்</string>
+    <string name="calendars_preferences">விருப்பத்தேர்வுகள்</string>
     <string name="calendars_name">பெயர்</string>
     <string name="calendars_rename">பெயர் மாற்று</string>
     <string name="calendars_delete">நீக்கு</string>
@@ -57,10 +57,10 @@
     <string name="calendars_drawer_title">நாள்காட்டிகள்</string>
     <string name="calendars_drawer_open">நாள்காட்டிகள்</string>
     <string name="calendars_calendar_menu">%1$s விருப்பங்கள்</string>
-    <string name="calendars_only_this">இதை மட்டும்</string>
-    <string name="calendars_create">நாட்காட்டியை உருவாக்கு</string>
+    <string name="calendars_only_this">இது மட்டும்</string>
+    <string name="calendars_create">நாட்காட்டி உருவாக்கு</string>
     <string name="calendars_subscribe">நாட்காட்டிக்கு சந்தா சேர்</string>
-    <string name="calendars_poll">இப்போது பெறு</string>
+    <string name="calendars_poll">இப்போது சரிபார்</string>
     <string name="calendars_delete_title">%1$s ஐ நீக்கவா?</string>
     <string name="calendars_delete_message">அதன் நிகழ்வுகளும் அதனுடன் நீக்கப்படும்.</string>
     <string name="calendars_today">இன்று</string>
@@ -76,7 +76,7 @@
     <string name="calendars_event_calendar">நாட்காட்டி</string>
     <string name="calendars_event_allday">நாள் முழுவதும்</string>
     <string name="calendars_event_finish">முடிவு</string>
-    <string name="calendars_event_repeat">மீண்டும் நிகழ்வது</string>
+    <string name="calendars_event_repeat">மீண்டும் நிகழ்தல்</string>
     <string name="calendars_event_reminder">நினைவூட்டல்</string>
     <string name="calendars_event_recurring">மீண்டும் நிகழ்கிறது</string>
     <string name="calendars_event_delete_title">%1$s ஐ நீக்கவா?</string>
@@ -84,9 +84,9 @@
     <string name="calendars_scope_edit">இந்த நிகழ்வை மாற்றவா அல்லது அனைத்து நிகழ்வுகளையும் மாற்றவா?</string>
     <string name="calendars_scope_delete">இந்த நிகழ்வை நீக்கவா அல்லது அனைத்து நிகழ்வுகளையும் நீக்கவா?</string>
     <string name="calendars_scope_one">இந்த நிகழ்வு</string>
-    <string name="calendars_scope_all">அனைத்து நிகழ்வுகளும்</string>
-    <string name="calendars_repeat_daily">தினமும்</string>
-    <string name="calendars_repeat_weekly">வாரந்தோறும்</string>
+    <string name="calendars_scope_all">அனைத்து நிகழ்வுகள்</string>
+    <string name="calendars_repeat_daily">தினசரி</string>
+    <string name="calendars_repeat_weekly">வாராந்திர</string>
     <string name="calendars_repeat_interval">ஒவ்வொரு</string>
     <string name="calendars_repeat_days">நாட்கள்</string>
     <string name="calendars_repeat_count">நிகழ்வுகளின் எண்ணிக்கை</string>
@@ -162,7 +162,7 @@
     <string name="calendars_poll_unauthorised">நாட்காட்டியின் சேவையகம் கணக்கின் சான்றுகளை நிராகரித்தது</string>
     <string name="calendars_subscribe_username">பயனர்பெயர்</string>
     <string name="calendars_subscribe_password">கடவுச்சொல்</string>
-    <string name="calendars_subscribe_connect">இணைக்கவும்</string>
+    <string name="calendars_subscribe_connect">இணை</string>
     <string name="calendars_subscribe_server">வேறு Mochi அல்லது CalDAV சேவையகம்</string>
     <string name="calendars_subscribe_address">வெளியிடப்பட்ட நாட்காட்டி முகவரி (படிக்க மட்டும்)</string>
     <string name="calendars_subscribe_password_apple">செயலிக்கான தனிக் கடவுச்சொல்</string>

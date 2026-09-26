@@ -34,7 +34,7 @@
     <string name="market_appeal_dialog_cancel">Anile</string>
     <string name="market_appeal_dialog_failed">Echwe pou soumèt apèl</string>
     <string name="market_appeal_dialog_submit">Soumèt apèl</string>
-    <string name="market_appeal_dialog_submitting">Voye…</string>
+    <string name="market_appeal_dialog_submitting">Ap voye…</string>
     <string name="market_appeal_dialog_success">Apèl soumèt</string>
     <string name="market_appeal_dialog_title">Apèl pou retire</string>
     <string name="market_asset_download">Telechaje</string>
@@ -46,13 +46,13 @@
     <string name="market_bid_dialog_instant_win">Acha konfime — fini peman</string>
     <string name="market_bid_dialog_invalid_ceiling">Òf maksimòm dwe omwen kantite òf ou a</string>
     <string name="market_bid_dialog_outbid">Òf ou a te plase men li te depase imedyatman. Yon lòt mizè gen yon maksimòm pi wo. Òf li kounye a se %1$s.</string>
-    <string name="market_bid_dialog_submit">Fè òf</string>
+    <string name="market_bid_dialog_submit">Mete yon òf</string>
     <string name="market_bid_dialog_success">Enchè plase</string>
-    <string name="market_bid_dialog_title">Fè òf</string>
-    <string name="market_bid_ended">Lavant fini</string>
+    <string name="market_bid_dialog_title">Mete yon òf</string>
+    <string name="market_bid_ended">Vann piblik fini</string>
     <string name="market_bid_high">Pi gwo òf</string>
     <string name="market_bids_empty">Pa gen òf</string>
-    <string name="market_bids_ended">Lavant fini</string>
+    <string name="market_bids_ended">Vann piblik fini</string>
     <string name="market_bids_tab_active">Aktif</string>
     <string name="market_bids_tab_all">Tout</string>
     <string name="market_bids_tab_lost">Pèdi</string>
@@ -95,7 +95,7 @@
     <string name="market_checkout_listing_not_found">Lis pa jwenn</string>
     <string name="market_checkout_pay_button">Peye ak Stripe</string>
     <string name="market_checkout_payment_failed">Checkout peman pa kapab kòmanse — vandè a ka pa fini konfigirasyon peman</string>
-    <string name="market_checkout_processing">Trete…</string>
+    <string name="market_checkout_processing">Ap trete…</string>
     <string name="market_checkout_secure">Peman sekirize via Stripe</string>
     <string name="market_checkout_select_option">Chwazi opsyon</string>
     <string name="market_checkout_shipping">Livrezon</string>
@@ -124,7 +124,7 @@
     <string name="market_dispute_dialog_failed">Echwe pou soumèt repons</string>
     <string name="market_dispute_dialog_response_label">Repons ou</string>
     <string name="market_dispute_dialog_submit">Soumèt</string>
-    <string name="market_dispute_dialog_submitting">Voye…</string>
+    <string name="market_dispute_dialog_submitting">Ap voye…</string>
     <string name="market_dispute_dialog_title">Reponn dispit la</string>
     <string name="market_editor_appeal_submit">Soumèt apèl</string>
     <string name="market_editor_asset_add">Ajoute fichye</string>
@@ -247,7 +247,7 @@
     <string name="market_listing_detail_save">Sove</string>
     <string name="market_listing_detail_seller_heading">Vandè</string>
     <string name="market_listing_detail_share">Pataje lis la</string>
-    <string name="market_listing_detail_shipping_heading">Livrezon</string>
+    <string name="market_listing_detail_shipping_heading">Opsyon livrezon</string>
     <string name="market_listing_detail_subscribe">Abone</string>
     <string name="market_listing_detail_tags_heading">Tag yo</string>
     <string name="market_listing_detail_title">Lis</string>
@@ -405,7 +405,7 @@
     <string name="market_saved_title">Sove</string>
     <string name="market_search_clear">Efase rechèch</string>
     <string name="market_search_placeholder">Chèche mache a</string>
-    <string name="market_section_categories">Gade kategori</string>
+    <string name="market_section_categories">Navige kategori</string>
     <string name="market_section_listings">Dènye anons yo</string>
     <string name="market_section_recent">Wè dènyèman</string>
     <string name="market_ship_dialog_cancel">Anile</string>
@@ -483,7 +483,7 @@
     <string name="market_type_digital">Dijital</string>
     <string name="market_type_physical">Fizik</string>
     <string name="market_warnings_title">Avètisman</string>
-    <string name="market_sale_review_response_submitting">K ap voye…</string>
+    <string name="market_sale_review_response_submitting">Ap voye…</string>
     <string name="market_checkout_subscribing">Ap abone…</string>
     <string name="market_filter_remove">Retire filt la</string>
     <string name="market_listing_detail_sales_count">%1$d vant</string>
@@ -629,7 +629,7 @@
     <string name="market_saved_empty_subtitle">Tape ikòn make liv la sou nenpòt piblikasyon pou sere l pou pita.</string>
     <string name="market_saved_empty_title">Pa gen okenn piblikasyon ki sere</string>
     <string name="market_status_past_due">An reta</string>
-    <string name="market_stripe_onboarding_action">Kontinye konfigirasyon</string>
+    <string name="market_stripe_onboarding_action">Kontinye konfigirasyon an</string>
     <string name="market_stripe_onboarding_body">Fini konfigirasyon Stripe ou anvan ou kapab aksepte pèman.</string>
     <string name="market_stripe_onboarding_failed">Pa t kapab ouvri Stripe</string>
     <string name="market_stripe_onboarding_opening">Ap ouvri Stripe…</string>
@@ -663,7 +663,7 @@
     <string name="market_seller_become_heading">Vin yon vandè</string>
     <string name="market_seller_become_title">Vin yon vandè</string>
     <string name="market_seller_check_status">Tcheke estati</string>
-    <string name="market_seller_checking">Ap tcheke...</string>
+    <string name="market_seller_checking">Ap verifye…</string>
     <string name="market_seller_connect_stripe">Konekte Stripe</string>
     <string name="market_seller_connecting">Ap chaje...</string>
     <string name="market_seller_fee_loading">Ap chaje detay frè...</string>

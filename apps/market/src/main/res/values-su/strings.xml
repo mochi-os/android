@@ -13,7 +13,7 @@
     <string name="market_account_seller_step_activate_title">Aktipkeun akun penjual</string>
     <string name="market_account_seller_step_activate_desc">Jieun profil penjual anjeun pikeun ngamimitian ngadaptar barang</string>
     <string name="market_account_seller_step_stripe_desc">Sambungkeun akun Stripe pikeun nampi pamayaran ti nu meuli</string>
-    <string name="market_account_seller_fees_heading">Waragad:</string>
+    <string name="market_account_seller_fees_heading">Bea:</string>
     <string name="market_account_seller_fees_mochi">Mochi nyandak %1$s%% tina unggal penjualan.</string>
     <string name="market_account_seller_fees_stripe">Stripe ngecas waragad ngolahna sorangan per transaksi sareng waragad tetep per chargeback. Tarif ayeuna pikeun mata uang sareng wewengkon anjeun didaptarkeun dina Dashboard Stripe anjeun.</string>
     <string name="market_account_seller_connect">Sambungkeun Stripe</string>
@@ -43,10 +43,10 @@
     <string name="market_bid_dialog_submit">Pasang tawaran</string>
     <string name="market_bid_dialog_success">Bid disimpen</string>
     <string name="market_bid_dialog_title">Pasang tawaran</string>
-    <string name="market_bid_ended">Léléang réngsé</string>
+    <string name="market_bid_ended">Lélang réngsé</string>
     <string name="market_bid_high">Tawaran pangluhurna</string>
     <string name="market_bids_empty">Teu aya tawaran</string>
-    <string name="market_bids_ended">Léléang réngsé</string>
+    <string name="market_bids_ended">Lélang réngsé</string>
     <string name="market_bids_tab_active">Aktif</string>
     <string name="market_bids_tab_all">Sadaya</string>
     <string name="market_bids_tab_lost">Éléh</string>
@@ -89,7 +89,7 @@
     <string name="market_checkout_listing_not_found">Listing teu kapanggih</string>
     <string name="market_checkout_pay_button">Bayar nganggo Stripe</string>
     <string name="market_checkout_payment_failed">Checkout pembayaran teu bisa dimimitian — penjual mungkin can ngarengsekeun setélan pembayaran</string>
-    <string name="market_checkout_processing">Diolah…</string>
+    <string name="market_checkout_processing">Ngolah…</string>
     <string name="market_checkout_secure">Pembayaran aman ngaliwatan Stripe</string>
     <string name="market_checkout_select_option">Pilih pilihan</string>
     <string name="market_checkout_shipping">Pangiriman</string>
@@ -137,7 +137,7 @@
     <string name="market_editor_description">Pedaran</string>
     <string name="market_editor_interval_monthly">Bulanan</string>
     <string name="market_editor_interval_yearly">Taunan</string>
-    <string name="market_editor_photo_delete">Hapus foto</string>
+    <string name="market_editor_photo_delete">Pupus foto</string>
     <string name="market_editor_photo_uploading">Ngunggah…</string>
     <string name="market_editor_photos_add">Tambihan foto</string>
     <string name="market_editor_price">Harga</string>
@@ -221,20 +221,20 @@
     <string name="market_listing_detail_buy_now">Beli ayeuna</string>
     <string name="market_listing_detail_description_heading">Pedaran</string>
     <string name="market_listing_detail_edit">Édit</string>
-    <string name="market_listing_detail_information_heading">Émbaran pangiriman</string>
+    <string name="market_listing_detail_information_heading">Inpormasi pangiriman</string>
     <string name="market_listing_detail_load_failed">Gagal mungkahan listing</string>
     <string name="market_listing_detail_listed">Didaptarkeun %1$s</string>
     <string name="market_listing_detail_location_heading">Lokasi</string>
     <string name="market_listing_detail_message">Kirim pesen</string>
     <string name="market_listing_detail_message_seller">Pesen ka nu ngajual</string>
     <string name="market_listing_detail_not_found">Listing teu kapanggih</string>
-    <string name="market_listing_detail_place_bid">Tawar harga</string>
+    <string name="market_listing_detail_place_bid">Pasang tawaran</string>
     <string name="market_listing_detail_relist">Daptarkeun deui</string>
     <string name="market_listing_detail_report">Laporkeun daptaran</string>
     <string name="market_listing_detail_save">Simpen</string>
     <string name="market_listing_detail_seller_heading">Penjual</string>
     <string name="market_listing_detail_share">Bagikeun iklan</string>
-    <string name="market_listing_detail_shipping_heading">Pangiriman</string>
+    <string name="market_listing_detail_shipping_heading">Pilihan pangiriman</string>
     <string name="market_listing_detail_subscribe">Langgan</string>
     <string name="market_listing_detail_tags_heading">Tag</string>
     <string name="market_listing_detail_title">Daptar</string>
@@ -393,7 +393,7 @@
     <string name="market_search_clear">Bersihkeun panéangan</string>
     <string name="market_search_placeholder">Téangan di pasar</string>
     <string name="market_section_categories">Telusur Katégori</string>
-    <string name="market_section_listings">Listing Anyar</string>
+    <string name="market_section_listings">Daptaran panganyarna</string>
     <string name="market_section_recent">Anu kakara ditempo</string>
     <string name="market_ship_dialog_cancel">Batalkeun</string>
     <string name="market_ship_dialog_submit">Konfirmasi</string>
@@ -510,7 +510,7 @@
     <string name="market_editor_asset_external_url">URL rujukan</string>
     <string name="market_editor_assets_empty">Teu acan aya aset</string>
     <string name="market_editor_delete_confirm_message">Ieu bakal mupus listing salamina.</string>
-    <string name="market_editor_delete_confirm_title">Hapus listing?</string>
+    <string name="market_editor_delete_confirm_title">Pupus daptaran?</string>
     <string name="market_editor_download">Unduh langsung</string>
     <string name="market_editor_duration">Lilana lélang</string>
     <string name="market_editor_fee_preview_pending">Nyimpen draf…</string>
@@ -612,7 +612,7 @@
     <string name="market_sale_dispute_state_responded">Ngantosan kaputusan</string>
     <string name="market_sale_dispute_stripe_reason">Alesan chargeback Stripe: %1$s</string>
     <string name="market_sale_fee_gross">Bruto</string>
-    <string name="market_sale_fee_mochi">Béaya Mochi</string>
+    <string name="market_sale_fee_mochi">Biaya Mochi</string>
     <string name="market_sale_fee_payout">Bayaran bersih</string>
     <string name="market_sale_fee_stripe">Béaya prosésor Stripe</string>
     <string name="market_sale_fee_stripe_note">Béaya prosésor Stripe ditingalikeun di dasbor Stripe anjeun.</string>
@@ -629,7 +629,7 @@
     <string name="market_saved_empty_subtitle">Toél ikon panandaan dina daptaran mana waé pikeun nyimpen pikeun engké.</string>
     <string name="market_saved_empty_title">Teu aya daptaran nu disimpen</string>
     <string name="market_status_past_due">Tos liwat tanggal</string>
-    <string name="market_stripe_onboarding_action">Lajengkeun setélan</string>
+    <string name="market_stripe_onboarding_action">Teraskeun setélan</string>
     <string name="market_stripe_onboarding_body">Réngsékeun onboarding Stripe anjeun saméméh tiasa nampi bayaran.</string>
     <string name="market_stripe_onboarding_failed">Henteu tiasa muka Stripe</string>
     <string name="market_stripe_onboarding_opening">Muka Stripe…</string>
@@ -651,7 +651,7 @@
     <string name="market_account_company_label">Perusahaan</string>
     <string name="market_account_seller_card_active_body">Stripe parantos disambungkeun.</string>
     <string name="market_account_seller_card_active_title">Akun penjual aktip</string>
-    <string name="market_account_seller_card_continue">Teraskeun setelan</string>
+    <string name="market_account_seller_card_continue">Teraskeun setélan</string>
     <string name="market_account_seller_card_incomplete_body">Sambungkeun Stripe pikeun ngamimitian ngadaptarkeun barang sareng nampi pamayaran.</string>
     <string name="market_account_seller_card_incomplete_title">Setelan penjual teu acan réngsé</string>
     <string name="market_account_seller_card_start_body">Jieun akun penjual pikeun ngadaptarkeun barang sareng ngahontal pameser.</string>
@@ -659,7 +659,7 @@
     <string name="market_account_seller_card_view">Tingali setelan penjual</string>
     <string name="market_account_vat_label">NPWP / nomer pajeg</string>
     <string name="market_seller_activate_action">Aktipkeun akun penjual</string>
-    <string name="market_seller_activating">Ngaaktipkeun...</string>
+    <string name="market_seller_activating">Nuju ngaktipkeun…</string>
     <string name="market_seller_become_heading">Jadi penjual</string>
     <string name="market_seller_become_title">Jadi penjual</string>
     <string name="market_seller_check_status">Cek status</string>

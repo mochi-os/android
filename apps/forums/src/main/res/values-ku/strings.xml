@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Abone yî nebe</string>
     <string name="forums_list_unsubscribe_title">Abone yî nebe</string>
     <string name="forums_create_title">Forum çêbike</string>
-    <string name="forums_create_name">Nav</string>
+    <string name="forums_create_name">Navê forumê</string>
     <string name="forums_create_privacy">Nepenî</string>
     <string name="forums_create_private">Taybet</string>
     <string name="forums_create_public">Giştî</string>
-    <string name="forums_create_action">Çêbike</string>
+    <string name="forums_create_action">Forum çêbike</string>
     <string name="forums_find_title">Foruman bibîne</string>
     <string name="forums_find_recommended">Pêşniyarkirî</string>
     <string name="forums_find_subscribe">Abone bibe</string>
@@ -71,10 +71,10 @@
     <string name="forums_ai_account_default">Hesabê standard</string>
     <string name="forums_ai_prompt_reset">Ber bi standard ve veguhêze</string>
     <string name="forums_settings_unsubscribe">Abone yî nebe</string>
-    <string name="forums_moderation_title">Modarasyon</string>
+    <string name="forums_moderation_title">Moderasyon</string>
     <string name="forums_moderation_tab_queue">Rêz</string>
     <string name="forums_moderation_tab_reports">Rapor</string>
-    <string name="forums_moderation_tab_log">Têketin</string>
+    <string name="forums_moderation_tab_log">Defter</string>
     <string name="forums_moderation_tab_restrictions">Sînorkirin</string>
     <string name="forums_moderation_reports_pending">Li bendê</string>
     <string name="forums_moderation_reports_resolved">Hatiye çareserkirin</string>
@@ -126,7 +126,7 @@
     <string name="forums_post_edit_body_field">Naverok</string>
     <string name="forums_comment_edit_body_field">Naverok</string>
     <string name="forums_tag_clear">Parzûnê paqij bike</string>
-    <string name="forums_post_tag_add">Tag zêde bike</string>
+    <string name="forums_post_tag_add">Etîketê zêde bike</string>
     <string name="forums_write_comment">Şîroveyekê binivîse…</string>
     <string name="forums_auth_login_failed">Têketin têk çû</string>
 
@@ -156,7 +156,7 @@
     <string name="forums_banner_placeholder">Bi xêr hatî vê forumê…</string>
     <string name="forums_ai_mode_label">Mod: %1$s</string>
     <string name="forums_ai_mode_heading">Moda AI</string>
-    <string name="forums_ai_mode_off">Girtî</string>
+    <string name="forums_ai_mode_off">Neçalak</string>
     <string name="forums_ai_account">Hesabê AI</string>
     <string name="forums_ai_prompt_tag">Promta etîketkirinê</string>
     <string name="forums_ai_prompt_score">Promta nirxandinê</string>
@@ -211,7 +211,7 @@
     <string name="forums_rss_copied">URL ya RSS hate kopîkirin</string>
     <string name="forums_find_results">Encamên lêgerînê</string>
     <string name="forums_markdown_supported">Markdown tê piştgirîkirin</string>
-    <string name="forums_attachment_file">Dosye</string>
+    <string name="forums_attachment_file">Pel</string>
     <string name="forums_attachment_remove">Rake</string>
     <string name="forums_attachment_move_up">Bibe jor</string>
     <string name="forums_attachment_move_down">Bibe jêr</string>
@@ -219,11 +219,11 @@
     <string name="forums_all_forums">Hemû forum</string>
     <string name="forums_create_allow_search">Destûr bide her kesî ku li forumê bigere</string>
     <string name="forums_rss_clipboard_label">URL-ya RSS ya forumê</string>
-    <string name="forums_tab_moderation">Modarasyon</string>
+    <string name="forums_tab_moderation">Moderasyon</string>
     <string name="forums_access_level_view_full">Tenê dîtin</string>
     <string name="forums_access_level_none_full">Bê destpêkirin</string>
     <string name="forums_access_subject_anyone">Her kes</string>
-    <string name="forums_access_subject_authenticated">Bikarhênerên erêkirî</string>
+    <string name="forums_access_subject_authenticated">Bikarhênerên pejirandî</string>
     <string name="forums_access_tab_other">Yên din</string>
     <string name="forums_access_authenticated_desc">Her kesê ku têketî ye</string>
     <string name="forums_access_anyone_desc">Bikarhênerên nenas jî tê de</string>
@@ -247,7 +247,7 @@
     <string name="forums_settings_field_server">Server</string>
     <string name="forums_settings_name_edit_cd">Navê sererast bike</string>
     <string name="forums_settings_name_cancel_cd">Sererastkirinê betal bike</string>
-    <string name="forums_settings_save_name">Navî tomar bike</string>
+    <string name="forums_settings_save_name">Navê tomar bike</string>
     <string name="forums_access_management">Birêvebirina gihîştinê</string>
     <string name="forums_access_level_comment_full">Şîrove, deng bide û bibîne</string>
     <string name="forums_access_level_moderate_full">Rêvebirin, poste, şîrove, deng bide û bibîne</string>
@@ -278,7 +278,7 @@
     <string name="forums_moderation_restriction_remove_message">Ew tavilê dîsa bi tevahî digihîjin forumê.</string>
     <string name="forums_moderation_restriction_remove_title">Astengiya li ser %1$s rake?</string>
     <string name="forums_moderation_restriction_state_muted">Bêdengkirî</string>
-    <string name="forums_moderation_restriction_state_shadowban">Bi sî astengkirî</string>
+    <string name="forums_moderation_restriction_state_shadowban">Bi dizî astengkirî</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Tu bikarhêner nehatine bêdengkirin an astengkirin</string>
     <string name="forums_moderation_section_premoderation_description">Berî ku naverok xuya bibe pejirandinê hewce bike</string>
     <string name="forums_moderation_section_ratelimiting_description">Bi sînorkirina ka bikarhêner çend caran dikarin poste bikin spamê asteng bike</string>
@@ -287,7 +287,7 @@
     <string name="forums_moderation_unit_replies">bersiv</string>
     <string name="forums_moderation_unit_seconds">çirke</string>
     <string name="forums_settings_ai_updated">Mîhengên AI hatin nûkirin</string>
-    <string name="forums_settings_forum_renamed">Navê forumê hate guhertin</string>
+    <string name="forums_settings_forum_renamed">Forum ji nû ve hat navlêkirin</string>
     <string name="forums_settings_name_clear_cd">Navî paqij bike</string>
     <string name="forums_settings_unsubscribe_section">Ji forumê derkeve</string>
     <string name="forums_share_link_title">Girêdana forumê</string>

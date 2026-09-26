@@ -166,7 +166,7 @@
     <string name="common_retry">Կրկին փորձել</string>
     <string name="common_more_options">Լրացուցիչ ընտրանքներ</string>
     <string name="common_collapse">Ծալել</string>
-    <string name="common_expand">Ընդարձակել</string>
+    <string name="common_expand">Ծավալել</string>
     <string name="common_play_video">Նվագարկել տեսանյութը</string>
     <string name="place_picker_name">Վայրի անվանումը</string>
     <string name="place_origin">Մեկնակետ</string>
@@ -191,7 +191,7 @@
     <string name="format_time_days_short">%1$dօր</string>
     <string name="format_time_weeks_short">%1$dշ</string>
     <string name="format_time_months_short">%1$dամս</string>
-    <string name="reaction_add">Ավելացնել արձագանք</string>
+    <string name="reaction_add">Ավելացնել ռեակցիա</string>
     <string name="push_service_channel">Mochi ծանուցումներ</string>
     <string name="push_service_channel_description">Պահպանում է Mochi-ի կապը՝ ծանուցումներ ստանալու համար</string>
     <string name="push_service_group">Ֆոնային ծառայություն</string>
@@ -225,7 +225,7 @@
     <string name="stepup_description">Սա ձեր հաշվի անվտանգության փոփոխություն է։ Շարունակելու համար հաստատեք, որ դա դուք եք։</string>
     <string name="stepup_email_label">Էլ․ փոստի կոդ</string>
     <string name="stepup_email_placeholder">Մուտքագրեք ձեր էլ. փոստից ստացած կոդը</string>
-    <string name="stepup_totp_label">Հեղինակ</string>
+    <string name="stepup_totp_label">Նույնականացուցիչի կոդ</string>
     <string name="stepup_totp_placeholder">Մուտքագրեք ձեր նույնականացուցիչի կոդը</string>
     <string name="stepup_use_passkey">Օգտագործեք ձեր անցաբանալին</string>
     <string name="stepup_send_email">Ուղարկել էլ. փոստ</string>
@@ -238,7 +238,7 @@
     <string name="stepup_error_oauth">Չհաջողվեց ստուգել այդ հաշվով։ Խնդրում ենք նորից փորձել։</string>
     <string name="game_system_resign">%1$s-ը հանձնվեց</string>
     <string name="game_system_draw_offer">%1$s-ը ոչ-ոքի առաջարկեց</string>
-    <string name="game_system_draw_accept">Ոչ-ոքի համաձայնեցվեց</string>
+    <string name="game_system_draw_accept">Համաձայնված ոչ-ոքի</string>
     <string name="game_system_draw_decline">%1$s-ը մերժեց ոչ-ոքին</string>
     <string name="reactivation_title">Ձեր հաշիվը նախատեսված է ջնջման</string>
     <string name="reactivation_body">Ձեր հաշիվը նախատեսված է ջնջման։ Կարող եք հիմա չեղարկել և վերականգնել ամբողջ մուտքը։</string>
@@ -263,7 +263,7 @@
     <string name="person_picker_none">Ոչ մեկը</string>
     <string name="person_picker_clear">Մաքրել ընտրությունը (Escape)</string>
     <string name="person_picker_select">Ընտրեք …</string>
-    <string name="person_picker_directory">Տեղեկատու</string>
+    <string name="person_picker_directory">Տեղեկագիրք</string>
     <string name="person_picker_no_people">Մարդիկ չկան</string>
     <string name="person_picker_project_members">Նախագծի անդամներ</string>
     <string name="account_token_label">Mochi նստաշրջան</string>

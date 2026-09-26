@@ -163,7 +163,7 @@
     <string name="staff_config_field_stripe_oauth_client">OAuth සේවාලාභී ID</string>
     <string name="staff_config_field_stripe_publishable">ප්‍රකාශන යතුර</string>
     <string name="staff_config_field_stripe_secret">රහස් යතුර</string>
-    <string name="staff_config_group_moderation">මෝඩරේෂන්</string>
+    <string name="staff_config_group_moderation">පාලනය</string>
     <string name="staff_config_group_payments">ගෙවීම්</string>
     <string name="staff_config_group_reviews">සමාලෝචන</string>
     <string name="staff_config_group_stripe">Stripe</string>
@@ -180,7 +180,7 @@
     <string name="staff_dashboard_col_date">දිනය</string>
     <string name="staff_dashboard_col_detail">විස්තරය</string>
     <string name="staff_dashboard_col_listing">ලැයිස්තුගත කිරීම</string>
-    <string name="staff_dashboard_col_moderation">මෝඩරේෂන්</string>
+    <string name="staff_dashboard_col_moderation">පාලනය</string>
     <string name="staff_dashboard_col_name">නම</string>
     <string name="staff_dashboard_col_object">වස්තුව</string>
     <string name="staff_dashboard_col_reason">හේතුව</string>
@@ -208,7 +208,7 @@
     <string name="staff_dashboard_system">පද්ධතිය</string>
     <string name="staff_dashboard_tab_audit">විගණනය</string>
     <string name="staff_dashboard_tab_listings">ලැයිස්තුගත කිරීම්</string>
-    <string name="staff_dashboard_tab_moderation">මෝඩරේෂන්</string>
+    <string name="staff_dashboard_tab_moderation">පාලනය</string>
     <string name="staff_dashboard_tab_orders">ඇණවුම්</string>
     <string name="staff_dashboard_tab_signups">ලියාපදිංචි කිරීම්</string>
     <string name="staff_dashboard_yes">ඔව්</string>
@@ -251,7 +251,7 @@
     <string name="staff_disputes_view">බලන්න</string>
     <string name="staff_filter_chip_remove">පෙරහන ඉවත් කරන්න</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
-    <string name="staff_filter_label_moderation">මෝඩරේෂන්</string>
+    <string name="staff_filter_label_moderation">පාලනය</string>
     <string name="staff_filter_label_query">සොයන්න</string>
     <string name="staff_filter_label_seller">විකුණුම්කරු</string>
     <string name="staff_filter_label_status">තත්ත්වය</string>
@@ -265,7 +265,7 @@
     <string name="staff_listings_approved_toast">ලැයිස්තුගත කිරීම අනුමත කරන ලදී</string>
     <string name="staff_listings_cancel">අවලංගු කරන්න</string>
     <string name="staff_listings_empty">ලැයිස්තුගත කිරීම් නැත</string>
-    <string name="staff_listings_filter_moderation_label">මෝඩරේෂන්</string>
+    <string name="staff_listings_filter_moderation_label">පාලනය</string>
     <string name="staff_listings_filter_status_label">තත්ත්වය</string>
     <string name="staff_listings_moderation_auto_approved">ස්වයංක්‍රීයව අනුමත</string>
     <string name="staff_listings_moderation_hold">රඳවන්න</string>
@@ -327,7 +327,7 @@
     <string name="staff_reports_reason_spam">අයාචිත හෝ වංචාව</string>
     <string name="staff_reports_status_actioned">ක්‍රියාත්මක කරන ලදී</string>
     <string name="staff_reports_status_dismissed">ඉවත ලන ලදී</string>
-    <string name="staff_reports_status_pending">සැලකිල්ලට පැමිණි</string>
+    <string name="staff_reports_status_pending">පොරොත්තුවෙන්</string>
     <string name="staff_reports_status_reviewed">සමාලෝචනය කරන ලදී</string>
     <string name="staff_reports_submit">ඉදිරිපත් කරන්න</string>
     <string name="staff_reports_submitting">යවමින්…</string>
@@ -379,7 +379,7 @@
     <string name="staff_status_manual">අතින්</string>
     <string name="staff_status_moderator">මෝඩරේටර්</string>
     <string name="staff_status_open">විවෘතයි</string>
-    <string name="staff_status_pending">සැලකිල්ලට පැමිණි</string>
+    <string name="staff_status_pending">පොරොත්තුවෙන්</string>
     <string name="staff_status_published">ප්‍රකාශයට පත් කරන ලදී</string>
     <string name="staff_status_rejected">ප්‍රතික්ෂේප කරන ලදී</string>
     <string name="staff_status_removed">ඉවත් කරන ලදී</string>

@@ -16,7 +16,7 @@
     <string name="go_color_white">Сафед</string>
     <string name="go_delete_confirm">Нест кардан</string>
     <string name="go_delete_message">Ин бозӣ аз рӯйхати шумо хориҷ карда мешавад. Инро бекор кардан мумкин нест.</string>
-    <string name="go_delete_title">Бозиро нест кардан?</string>
+    <string name="go_delete_title">Бозӣ нест карда шавад?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">Қабул кардан</string>
     <string name="go_draw_decline">Рад кардан</string>
@@ -50,8 +50,8 @@
     <string name="go_resign_title">Аз бозӣ таслим шудан?</string>
     <string name="go_sidebar_completed">Анҷомшуда</string>
     <string name="go_sidebar_new_game">Бозии нав</string>
-    <string name="go_status_draw">Кашидан</string>
-    <string name="go_status_draw_text">Кашидан</string>
+    <string name="go_status_draw">Баробар</string>
+    <string name="go_status_draw_text">Баробар</string>
     <string name="go_status_game_over">Бозӣ ба охир расид</string>
     <string name="go_status_opponent_move">Ҳаракати %1$s</string>
     <string name="go_status_opponent_wins">%1$s мебарад</string>

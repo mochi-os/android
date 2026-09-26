@@ -242,7 +242,7 @@
     <string name="route_meta">Prioritate %1$d · %2$s</string>
     <string name="interests_search_placeholder">Căutați subiecte de adăugat…</string>
     <string name="interests_empty">Niciun interes încă.</string>
-    <string name="interests_summary_regenerate">Regenerează rezumatul</string>
+    <string name="interests_summary_regenerate">Regenerează sumarul</string>
     <string name="interests_summary_regenerating">Se regenerează…</string>
     <string name="interests_summary_empty">Adăugați câteva interese pentru a genera un rezumat al lucrurilor care vă plac.</string>
     <string name="interests_search_failed">Căutarea a eșuat. Încercați din nou.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s nu va mai gestiona rute pe acest domeniu.</string>
     <string name="domain_delegation_delete_title">Ștergi delegarea?</string>
     <string name="domain_delegation_path">Cale</string>
-    <string name="domain_delegation_user">ID utilizator</string>
+    <string name="domain_delegation_user">Utilizator</string>
     <string name="domain_delegations">Delegări</string>
     <string name="domain_delegations_empty">Nicio delegare configurată.</string>
     <string name="domain_delete">Șterge domeniul</string>

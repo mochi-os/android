@@ -89,7 +89,7 @@
     <string name="market_checkout_listing_not_found">Il-listing ma nstabx</string>
     <string name="market_checkout_pay_button">Ħallas bi Stripe</string>
     <string name="market_checkout_payment_failed">Il-checkout tal-ħlas ma setgħetx tinbeda — il-bejjiegħ jista\' jkun li ma lestiex is-setup tal-ħlas</string>
-    <string name="market_checkout_processing">Qed jiġi proċessat…</string>
+    <string name="market_checkout_processing">Qed jiġi pproċessat…</string>
     <string name="market_checkout_secure">Ħlas sigur permezz ta\' Stripe</string>
     <string name="market_checkout_select_option">Agħżel għażla</string>
     <string name="market_checkout_shipping">Tbaħħir</string>
@@ -181,7 +181,7 @@
     <string name="market_editor_zone_european_union">L-Unjoni Ewropea</string>
     <string name="market_editor_zone_region">Reġjun</string>
     <string name="market_editor_zone_worldwide">Madwar id-dinja</string>
-    <string name="market_empty_title">L-ebda riżultati</string>
+    <string name="market_empty_title">L-ebda riżultat</string>
     <string name="market_fee_preview_item">Oġġett</string>
     <string name="market_fee_preview_payout">Il-payout tiegħek</string>
     <string name="market_filter_all">Kollha</string>
@@ -234,7 +234,7 @@
     <string name="market_listing_detail_save">Issejvja</string>
     <string name="market_listing_detail_seller_heading">Bejjiegħ</string>
     <string name="market_listing_detail_share">Aqsam l-elenku</string>
-    <string name="market_listing_detail_shipping_heading">Tbaħħir</string>
+    <string name="market_listing_detail_shipping_heading">Għażliet tat-tbaħħir</string>
     <string name="market_listing_detail_subscribe">Abbona</string>
     <string name="market_listing_detail_tags_heading">Tikketti</string>
     <string name="market_listing_detail_title">Elenku</string>
@@ -392,8 +392,8 @@
     <string name="market_saved_title">Issejvjati</string>
     <string name="market_search_clear">Naddaf it-tiftix</string>
     <string name="market_search_placeholder">Fittex fis-suq</string>
-    <string name="market_section_categories">Esplora l-Kategoriji</string>
-    <string name="market_section_listings">Elenki Riċenti</string>
+    <string name="market_section_categories">Sfoħħ il-kategoriji</string>
+    <string name="market_section_listings">Elenki reċenti</string>
     <string name="market_section_recent">Li rajt dan l-aħħar</string>
     <string name="market_ship_dialog_cancel">Ikkanċella</string>
     <string name="market_ship_dialog_submit">Ikkonferma</string>
@@ -512,7 +512,7 @@
     <string name="market_editor_asset_external_url">URL ta\' referenza</string>
     <string name="market_editor_assets_empty">L-ebda assets s\'issa</string>
     <string name="market_editor_delete_confirm_message">Dan jħassar il-listing b\'mod permanenti.</string>
-    <string name="market_editor_delete_confirm_title">Tħassar il-listing?</string>
+    <string name="market_editor_delete_confirm_title">Ħassar l-elenku?</string>
     <string name="market_editor_download">Download dirett</string>
     <string name="market_editor_duration">Tul tal-irkant</string>
     <string name="market_editor_fee_preview_pending">Qed jiġi salvat l-abbozz…</string>
@@ -545,7 +545,7 @@
     <string name="market_fee_disclosure_title">Tariffi tal-pjattaforma</string>
     <string name="market_fee_preview_failed">Ma setgħux jiġu kkalkulati t-tariffi</string>
     <string name="market_fee_preview_loading">Qed jiġu kkalkulati t-tariffi…</string>
-    <string name="market_fee_preview_mochi_fee">Tariffa Mochi</string>
+    <string name="market_fee_preview_mochi_fee">Tariffa ta\' Mochi</string>
     <string name="market_fee_preview_processor_fee">Tariffa tal-processor</string>
     <string name="market_filter_chip_max">Massimu %1$s</string>
     <string name="market_filter_chip_min">Minimu %1$s</string>
@@ -629,7 +629,7 @@
     <string name="market_saved_empty_subtitle">Tektek l-ikona tal-bookmark fuq xi elenku biex tissalvah għal aktar tard.</string>
     <string name="market_saved_empty_title">L-ebda elenku salvat</string>
     <string name="market_status_past_due">Skadut</string>
-    <string name="market_stripe_onboarding_action">Kompli s-setup</string>
+    <string name="market_stripe_onboarding_action">Kompli l-konfigurazzjoni</string>
     <string name="market_stripe_onboarding_body">Lesti l-onboarding ta\' Stripe tiegħek qabel tkun tista\' taċċetta ħlasijiet.</string>
     <string name="market_stripe_onboarding_failed">Ma setax jinfetaħ Stripe</string>
     <string name="market_stripe_onboarding_opening">Qed jinfetaħ Stripe…</string>
@@ -663,7 +663,7 @@
     <string name="market_seller_become_heading">Sir bejjiegħ</string>
     <string name="market_seller_become_title">Sir bejjiegħ</string>
     <string name="market_seller_check_status">Iċċekkja l-istatus</string>
-    <string name="market_seller_checking">Qed jiċċekkja...</string>
+    <string name="market_seller_checking">Qiegħed jivverifika…</string>
     <string name="market_seller_connect_stripe">Ikkonnettja Stripe</string>
     <string name="market_seller_connecting">Qed jitgħabba...</string>
     <string name="market_seller_fee_loading">Qed jitgħabbew id-dettalji tat-tariffi...</string>

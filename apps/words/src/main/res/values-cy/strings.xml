@@ -17,7 +17,7 @@
     <string name="words_detail_status_you_win">Rydych yn ennill!</string>
     <string name="words_detail_status_game_over">Diwedd y gêm</string>
     <string name="words_detail_status_opponent_resigned">Mae\'r gwrthwynebydd wedi ymddiswyddo — rydych chi\'n ennill!</string>
-    <string name="words_detail_status_you_resigned">Cawsoch eich tynnu o\'r sgwrs hon</string>
+    <string name="words_detail_status_you_resigned">Rydych wedi ildio</string>
     <string name="words_detail_label_you">Chi</string>
     <string name="words_detail_action_shuffle">Cymysgu rhesel</string>
     <string name="words_detail_action_pass">Pasio</string>

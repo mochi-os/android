@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi akymy</string>
     <string name="feeds_source_type_feed_memories">Ýatlamalar</string>
-    <string name="feeds_remove_source">Çeşmäni aýyr</string>
+    <string name="feeds_remove_source">Çeşmäni aýyrmak?</string>
     <string name="feeds_suggested_credibility_accept">Kabul etmek</string>
     <string name="feeds_rss_url_copied">RSS URL bufer ýadyna göçürildi</string>
     <string name="feeds_logout">Çyk</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">Hiç haçan alynmady</string>
     <string name="feeds_source_poll">Sorag</string>
-    <string name="feeds_source_transform">Öwürmek</string>
+    <string name="feeds_source_transform">AI öwürmek</string>
     <string name="feeds_remove_source_confirm">\"%1$s\" aýrylsynmy?</string>
     <string name="feeds_remove_also_delete_posts">Import edilen ýazgylary hem poz</string>
     <string name="feeds_suggested_credibility_title">Teklip edilýän ynamlylyk</string>
@@ -153,14 +153,14 @@
     <string name="feeds_access_segment_other">Beýleki</string>
     <string name="feeds_access_select_group">Topary saýla</string>
     <string name="feeds_access_selected">Saýlanan: %1$s</string>
-    <string name="feeds_access_subject_anyone">Islendik</string>
+    <string name="feeds_access_subject_anyone">Islendik adam</string>
     <string name="feeds_access_subject_authenticated">Tassyklanan ulanyjylar</string>
     <string name="feeds_markdown_supported">Markdown goldanýar</string>
     <string name="feeds_permission_deny">Ret etmek</string>
     <string name="feeds_rss_feed">RSS akymy</string>
     <string name="feeds_settings_field_entity_id">Essas ID</string>
     <string name="feeds_settings_field_fingerprint">Barmak yzy</string>
-    <string name="feeds_settings_field_server">Server</string>
+    <string name="feeds_settings_field_server">Serwer</string>
     <string name="feeds_settings_name_edit_cd">Ady düzet</string>
     <string name="feeds_settings_section_identity">Şahsyýet</string>
     <string name="feeds_unsubscribe">Abunadan çyk</string>
@@ -206,10 +206,10 @@
     <string name="feeds_banner_dismiss">Banneri goýbermek</string>
     <string name="feeds_members_search">Agzalary süzmek</string>
     <string name="feeds_ai_prompt_default">Adaty</string>
-    <string name="feeds_ai_prompt_custom">Şahsy</string>
+    <string name="feeds_ai_prompt_custom">Hususy</string>
     <string name="feeds_ai_prompt_variables">Üýtgeýänler: %1$s</string>
     <string name="feeds_link">Salgy</string>
-    <string name="feeds_share_link_title">Lenta salgysy</string>
+    <string name="feeds_share_link_title">Akym salgysy</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$d teswir</item>
         <item quantity="other">%1$d teswir</item>

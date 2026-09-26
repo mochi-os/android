@@ -160,13 +160,13 @@
     <string name="people_contact_new_title">Kontak baru</string>
     <string name="people_contact_edit_title">Edit kontak</string>
     <string name="people_contact_given">Nama depan</string>
-    <string name="people_contact_family">Nama belakang</string>
+    <string name="people_contact_family">Nama keluarga</string>
     <string name="people_contact_nickname">Nama panggilan</string>
     <string name="people_contact_add_email">Tambah email</string>
     <string name="people_contact_add_phone">Tambah telepon</string>
     <string name="people_contact_add_address">Tambah alamat</string>
     <string name="people_contact_street">Jalan</string>
-    <string name="people_contact_birthday">Ulang tahun</string>
+    <string name="people_contact_birthday">Tanggal lahir</string>
     <string name="people_contact_organisation">Organisasi</string>
     <string name="people_contact_url">Situs web</string>
     <string name="people_contact_note">Catatan</string>

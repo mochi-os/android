@@ -162,7 +162,7 @@
     <string name="staff_config_field_stripe_oauth_client">OAuth ڪلائنٽ ID</string>
     <string name="staff_config_field_stripe_publishable">شايع ٿيڻ جوڳو ڪي</string>
     <string name="staff_config_field_stripe_secret">ڳجهي ڪي</string>
-    <string name="staff_config_group_moderation">اعتدال</string>
+    <string name="staff_config_group_moderation">نگراني</string>
     <string name="staff_config_group_payments">ادائيگيون</string>
     <string name="staff_config_group_reviews">جائزا</string>
     <string name="staff_config_group_stripe">Stripe</string>
@@ -179,7 +179,7 @@
     <string name="staff_dashboard_col_date">تاريخ</string>
     <string name="staff_dashboard_col_detail">تفصيل</string>
     <string name="staff_dashboard_col_listing">لسٽنگ</string>
-    <string name="staff_dashboard_col_moderation">اعتدال</string>
+    <string name="staff_dashboard_col_moderation">نگراني</string>
     <string name="staff_dashboard_col_name">نالو</string>
     <string name="staff_dashboard_col_object">اعتراض</string>
     <string name="staff_dashboard_col_reason">سبب</string>
@@ -207,7 +207,7 @@
     <string name="staff_dashboard_system">سسٽم</string>
     <string name="staff_dashboard_tab_audit">آڊٽ</string>
     <string name="staff_dashboard_tab_listings">لسٽنگون</string>
-    <string name="staff_dashboard_tab_moderation">اعتدال</string>
+    <string name="staff_dashboard_tab_moderation">نگراني</string>
     <string name="staff_dashboard_tab_orders">آرڊر</string>
     <string name="staff_dashboard_tab_signups">سائن اپس</string>
     <string name="staff_dashboard_yes">ها</string>
@@ -249,8 +249,8 @@
     <string name="staff_disputes_view">ڏسو</string>
     <string name="staff_filter_chip_remove">فلٽر ختم ڪريو</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
-    <string name="staff_filter_label_moderation">اعتدال</string>
-    <string name="staff_filter_label_query">ڳولها</string>
+    <string name="staff_filter_label_moderation">نگراني</string>
+    <string name="staff_filter_label_query">ڳوليو</string>
     <string name="staff_filter_label_seller">وڪرو ڪندڙ</string>
     <string name="staff_filter_label_status">حالت</string>
     <string name="staff_filter_label_type">قسم</string>
@@ -263,7 +263,7 @@
     <string name="staff_listings_approved_toast">لسٽنگ منظور ٿي وئي</string>
     <string name="staff_listings_cancel">منسوخ ڪريو</string>
     <string name="staff_listings_empty">ڪي فهرستون نه آهن</string>
-    <string name="staff_listings_filter_moderation_label">اعتدال</string>
+    <string name="staff_listings_filter_moderation_label">نگراني</string>
     <string name="staff_listings_filter_status_label">حالت</string>
     <string name="staff_listings_moderation_auto_approved">خودڪار منظور</string>
     <string name="staff_listings_moderation_hold">روڪيو</string>
@@ -412,7 +412,7 @@
     <string name="staff_team_toast_add_failed">ميمبر شامل ڪرڻ ۾ ناڪام</string>
     <string name="staff_team_toast_removed">ميمبر هٽايو ويو</string>
     <string name="staff_team_toast_role_updated">ڪردار اپڊيٽ ٿيو</string>
-    <string name="staff_audit_action_auction_cancelled">نيلامي منسوخ ٿي</string>
+    <string name="staff_audit_action_auction_cancelled">نيلامي منسوخ ڪئي وئي</string>
     <string name="staff_dashboard_order_fallback">آرڊر #%1$s</string>
 
     <string name="staff_accounts_action_unsuspend_title">معطلي ختم ڪريو</string>

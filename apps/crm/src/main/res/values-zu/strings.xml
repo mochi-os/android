@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Isithonjana</string>
     <string name="crm_option_icon_placeholder">isib. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Susa ukubhalisa</string>
-    <string name="crm_settings_delete_crm">Susa iprojekthi</string>
+    <string name="crm_settings_delete_crm">Susa i-CRM</string>
     <string name="crm_settings_delete_confirm_title">Susa i-CRM</string>
     <string name="crm_settings_unsubscribe_title">Susa ukubhalisa</string>
     <string name="crm_settings_unsubscribe_message">Uqinisekile ufuna ukukhansela ukubhalisa kule CRM?</string>
@@ -134,10 +134,10 @@
     <string name="crm_class_move_up">Hambisa phezulu</string>
     <string name="crm_views_move_down">Hambisa phansi</string>
     <string name="crm_class_move_down">Hambisa phansi</string>
-    <string name="crm_sort_direction_asc">Iyenyuka</string>
-    <string name="crm_views_direction_asc">Iyenyuka</string>
-    <string name="crm_sort_direction_desc">Iyehla</string>
-    <string name="crm_views_direction_desc">Iyehla</string>
+    <string name="crm_sort_direction_asc">Ukukhuphuka</string>
+    <string name="crm_views_direction_asc">Ukukhuphuka</string>
+    <string name="crm_sort_direction_desc">Ukwehla</string>
+    <string name="crm_views_direction_desc">Ukwehla</string>
     <string name="crm_list_add_to_home">Engeza kwisikrini sasekhaya</string>
     <string name="crm_search_objects_placeholder">Sesha izinto</string>
     <string name="crm_links_search_placeholder">Sesha izinto</string>
@@ -156,10 +156,10 @@
     <string name="crm_object_unwatch">Yeka ukubuka</string>
     <string name="crm_object_delete_title">Susa into</string>
     <string name="crm_object_delete_message">Uqinisekile ukuthi ufuna ukususa le nto? Lesi senzo asinakubuyiselwa emuva.</string>
-    <string name="crm_parent_none">Awukho umzali</string>
+    <string name="crm_parent_none">Akukho mzali</string>
     <string name="crm_links_empty">Azikho izixhumanisi</string>
     <string name="crm_links_section_relates">Kuhlobene ne</string>
-    <string name="crm_links_section_duplicated_by">Kuphindiwe ngu</string>
+    <string name="crm_links_section_duplicated_by">Kuphindwe ngu</string>
     <string name="crm_links_type">Uhlobo lwesixhumanisi</string>
     <string name="crm_links_type_relates">Kuhlobene ne</string>
     <string name="crm_links_remove">Susa isixhumanisi</string>
@@ -194,7 +194,7 @@
     <string name="crm_drag_card">Hudula ikhadi</string>
     <string name="crm_drag_row">Hudula umugqa</string>
     <string name="crm_drag_column">Hudula ikholomu</string>
-    <string name="crm_design_more_options">Ezinye izinketho</string>
+    <string name="crm_design_more_options">Eziningi izinketho</string>
     <string name="crm_design_no_templates">Awekho amathempulethi atholakalayo</string>
     <string name="crm_design_use">Sebenzisa</string>
     <string name="crm_design_replace_message">Lokhu kuzothatha indawo yedizayini yamanje nge-%1$s. Onke amakilasi akhona, izinkambu, izinketho, nezibuko kuzosulwa. Izinto ezikhona ngeke zisulwe kodwa kungenzeka zingabe zisabonakala ezibukweni.</string>
@@ -277,7 +277,7 @@
     <string name="crm_settings_unsubscribe_section">Yeka ukubhalisa ku-CRM</string>
     <string name="crm_settings_updated">I-CRM ibuyekeziwe</string>
     <string name="crm_create_import_backup">Ngenisa kusukela kwisipele (okuzikhethelayo)</string>
-    <string name="crm_export">Thumela idatha</string>
+    <string name="crm_export">Khipha idatha</string>
     <string name="crm_exporting">Ilungiselela okuthunyelwayo…</string>
     <string name="crm_create_allow_search">Vumela noma ngubani ukuthi asesheshe i-CRM</string>
     <string name="crm_no_crms_found">Awekho ama-CRM atholakele</string>

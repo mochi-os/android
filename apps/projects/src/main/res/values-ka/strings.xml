@@ -37,7 +37,7 @@
     <string name="projects_settings_title">პარამეტრები</string>
     <string name="projects_settings_tab_general">ზოგადი</string>
     <string name="projects_settings_tab_access">წვდომა</string>
-    <string name="projects_settings_tab_people">ხალხი</string>
+    <string name="projects_settings_tab_people">ადამიანები</string>
     <string name="projects_option_icon">ხატულა</string>
     <string name="projects_option_icon_placeholder">მაგალითად. Check, Star, Flag</string>
     <string name="projects_settings_unsubscribe">გამოწერის გაუქმება</string>
@@ -191,7 +191,7 @@
     <string name="projects_views_filter">ფილტრი (შენახულია, ჯერ არ გამოყენებულა)</string>
     <string name="projects_people_empty">წვდომა ჯერ არავის აქვს</string>
     <string name="projects_settings_delete_confirm_message">ნამდვილად გსურთ ამ პროექტის წაშლა? ყველა ობიექტი, კომენტარი და პარამეტრი სამუდამოდ წაიშლება.</string>
-    <string name="projects_object_unwatch">თვალყურის გადატანა</string>
+    <string name="projects_object_unwatch">თვალყურის დევნების შეწყვეტა</string>
     <string name="projects_object_tab_watchers">მაყურებლები</string>
     <string name="projects_watchers_empty">მაყურებლები ჯერ არ არიან</string>
     <string name="projects_object_delete_title">ობიექტის წაშლა</string>
@@ -257,9 +257,9 @@
     <string name="projects_move_to_column">სვეტში გადატანა</string>
     <string name="projects_move_to_row">მწკრივში გადატანა</string>
     <string name="projects_move_after">%1$s-ის შემდეგ</string>
-    <string name="projects_drag_card">ბარათის გადათრევა</string>
-    <string name="projects_drag_row">მწკრივის გადათრევა</string>
-    <string name="projects_drag_column">სვეტის გადათრევა</string>
+    <string name="projects_drag_card">ბარათის გადატანა</string>
+    <string name="projects_drag_row">მწკრივის გადატანა</string>
+    <string name="projects_drag_column">სვეტის გადატანა</string>
     <string name="projects_drag_hint">გადასატანად დააჭირეთ ხანგრძლივად და გადაათრიეთ</string>
     <string name="projects_design_more_options">მეტი ვარიანტი</string>
     <string name="projects_design_clipboard_label">დიზაინის JSON</string>
@@ -282,7 +282,7 @@
     <string name="projects_class_delete_message">ნამდვილად გსურთ კლასის \"%1$s\" წაშლა? ყველა ველი და მათი ვარიანტებიც წაიშლება.</string>
     <string name="projects_field_type_enumerated">ჩამოთვლადი</string>
     <string name="projects_field_label">ველი: %1$s</string>
-    <string name="projects_field_readonly">მხოლოდ წასაკითხი</string>
+    <string name="projects_field_readonly">მხოლოდ წაკითხვადი</string>
     <string name="projects_field_sortable">დახარისხებადი</string>
     <string name="projects_field_filterable">ფილტრირებადი</string>
     <string name="projects_field_show_on_card">ბარათზე ჩვენება</string>

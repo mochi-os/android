@@ -22,7 +22,7 @@
     <string name="feeds_image_preview">Aperçu</string>
     <string name="feeds_post">Publication</string>
     <string name="feeds_comments">Commentaires</string>
-    <string name="feeds_delete_post">Supprimer le post</string>
+    <string name="feeds_delete_post">Supprimer la publication</string>
     <string name="feeds_delete_comment">Supprimer le commentaire</string>
     <string name="feeds_tags">Étiquettes</string>
     <string name="feeds_remove">Retirer</string>
@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Flux Mochi</string>
     <string name="feeds_source_type_feed_memories">Souvenirs</string>
-    <string name="feeds_remove_source">Supprimer la source</string>
+    <string name="feeds_remove_source">Retirer cette source ?</string>
     <string name="feeds_suggested_credibility_accept">Accepter</string>
     <string name="feeds_rss_url_copied">URL RSS copiée dans le presse-papiers</string>
     <string name="feeds_logout">Se déconnecter</string>
@@ -112,7 +112,7 @@
     <string name="feeds_clipboard_label_rss">URL RSS</string>
     <string name="feeds_source_never_fetched">Jamais récupéré</string>
     <string name="feeds_source_poll">Interroger</string>
-    <string name="feeds_source_transform">Transformer</string>
+    <string name="feeds_source_transform">Transformation par l\'IA</string>
     <string name="feeds_remove_source_confirm">Supprimer \"%1$s\" ?</string>
     <string name="feeds_remove_also_delete_posts">Supprimer aussi les publications importées</string>
     <string name="feeds_suggested_credibility_title">Crédibilité suggérée</string>
@@ -153,7 +153,7 @@
     <string name="feeds_access_segment_other">Autre</string>
     <string name="feeds_access_select_group">Sélectionner un groupe</string>
     <string name="feeds_access_selected">Sélectionné : %1$s</string>
-    <string name="feeds_access_subject_anyone">Tout le monde</string>
+    <string name="feeds_access_subject_anyone">N\'importe qui</string>
     <string name="feeds_access_subject_authenticated">Utilisateurs authentifiés</string>
     <string name="feeds_markdown_supported">Markdown pris en charge</string>
     <string name="feeds_permission_deny">Refuser</string>

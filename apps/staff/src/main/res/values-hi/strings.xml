@@ -65,7 +65,7 @@
     <string name="staff_audit_action_account_unbanned">अनबैन किया गया</string>
     <string name="staff_audit_action_account_unsuspended">अनसस्पेंड किया गया</string>
     <string name="staff_audit_action_auction_bid_placed">बोली लगाई गई</string>
-    <string name="staff_audit_action_auction_cancelled">नीलामी रद्द की गई</string>
+    <string name="staff_audit_action_auction_cancelled">नीलामी रद्द कर दी गई</string>
     <string name="staff_audit_action_auction_created">नीलामी बनाई गई</string>
     <string name="staff_audit_action_auction_ended_sold">नीलामी बिक गई</string>
     <string name="staff_audit_action_auction_ended_unsold">नीलामी बिना बिके समाप्त हुई</string>
@@ -284,9 +284,9 @@
     <string name="staff_filter_chip_remove">फ़िल्टर हटाएं</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">मॉडरेशन</string>
-    <string name="staff_filter_label_query">खोज</string>
+    <string name="staff_filter_label_query">खोजें</string>
     <string name="staff_filter_label_seller">विक्रेता</string>
-    <string name="staff_filter_label_status">स्थिति</string>
+    <string name="staff_filter_label_status">स्टेटस</string>
     <string name="staff_filter_label_type">प्रकार</string>
     <string name="staff_listings_action_approve_title">लिस्टिंग स्वीकृत करें</string>
     <string name="staff_listings_action_reject_title">लिस्टिंग अस्वीकार करें</string>

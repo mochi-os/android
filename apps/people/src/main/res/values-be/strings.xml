@@ -49,8 +49,8 @@
     <string name="people_profile_save">Захаваць</string>
     <string name="people_profile_saving">Захаванне…</string>
     <string name="people_profile_save_failed">Не ўдалося захаваць</string>
-    <string name="people_profile_name">Назва</string>
-    <string name="people_profile_name_saved">Назва захавана</string>
+    <string name="people_profile_name">Імя</string>
+    <string name="people_profile_name_saved">Імя захавана</string>
     <string name="people_profile_edit_name">Рэдагаваць імя</string>
     <string name="people_profile_identity">Асоба</string>
     <string name="people_profile_accent">Акцэнт</string>
@@ -124,7 +124,7 @@
     <string name="people_contacts_try_adjusting">Паспрабуйце наладзіць пошук</string>
     <string name="people_contact_section_address">Адрас</string>
     <string name="people_contact_section_detail">Дэталі</string>
-    <string name="people_contact_name">Назва</string>
+    <string name="people_contact_name">Імя</string>
     <string name="people_contact_email">Эл. пошта</string>
     <string name="people_contact_city">Горад</string>
     <string name="people_contact_region">Рэгіён</string>
@@ -137,7 +137,7 @@
     <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Назва</string>
     <string name="people_books_rename">Перайменаваць</string>
-    <string name="people_contacts_sort_name">Назва</string>
+    <string name="people_contacts_sort_name">Імя</string>
     <string name="people_contacts_sort_recent">Нядаўна дададзена</string>
     <string name="people_contacts_thats_you">Гэта вы</string>
     <string name="people_contacts_try_different_search">Паспрабуйце іншы пошукавы запыт</string>
@@ -162,7 +162,7 @@
     <string name="people_contact_given">Імя</string>
     <string name="people_contact_family">Прозвішча</string>
     <string name="people_contact_nickname">Мянушка</string>
-    <string name="people_contact_add_email">Дадаць электронную пошту</string>
+    <string name="people_contact_add_email">Дадаць эл. пошту</string>
     <string name="people_contact_add_phone">Дадаць тэлефон</string>
     <string name="people_contact_add_address">Дадаць адрас</string>
     <string name="people_contact_street">Вуліца</string>

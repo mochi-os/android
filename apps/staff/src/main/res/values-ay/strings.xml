@@ -245,10 +245,10 @@
     <string name="staff_disputes_status_responded">Aytata</string>
     <string name="staff_disputes_status_reviewing">Reviewaski</string>
     <string name="staff_disputes_view">Uñjaña</string>
-    <string name="staff_filter_chip_remove">Filtruxa apsuña</string>
+    <string name="staff_filter_chip_remove">Filtro apaqaña</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderación</string>
-    <string name="staff_filter_label_query">Thaqaña</string>
+    <string name="staff_filter_label_query">Thaqhama</string>
     <string name="staff_filter_label_seller">Aljiri</string>
     <string name="staff_filter_label_status">Estado</string>
     <string name="staff_filter_label_type">Kasta</string>
@@ -356,7 +356,7 @@
     <string name="staff_sidebar_overview">Uñakipawi</string>
     <string name="staff_sidebar_reports">Reportenaka</string>
     <string name="staff_sidebar_reviews">Reviewanaka</string>
-    <string name="staff_sidebar_settings">Configuración</string>
+    <string name="staff_sidebar_settings">Wakichawinaka</string>
     <string name="staff_sidebar_team">Equipo</string>
     <string name="staff_status_actioned">Luratawa</string>
     <string name="staff_status_active">Lurkaski</string>
@@ -414,7 +414,7 @@
     <string name="staff_accounts_reason_optional_label">Laykuwi (jan wakiskirina)</string>
     <string name="staff_accounts_sales">%1$d aljäwinaka</string>
     <string name="staff_appeals_reason_label">Aljirin mayisiwipa laykupa</string>
-    <string name="staff_audit_action_auction_cancelled">Aljäwi jarq\'ata</string>
+    <string name="staff_audit_action_auction_cancelled">Remate jaytatawa</string>
     <string name="staff_audit_action_staff_team_role_changed">Irnaqirin lurawipa mayjt\'ayata</string>
     <string name="staff_audit_empty">Janiwa uñakipäwi sarnaqäwipäkiti</string>
     <string name="staff_categories_delete_desc">“%1$s” chhaqtayañati? Janiwa kuttayañjamäkiti.</string>
@@ -445,7 +445,7 @@
     <string name="staff_disputes_stripe_subscription_canceled">qillqantasiwi jarq\'ata</string>
     <string name="staff_disputes_stripe_unrecognized">jan uñt\'ata qhitäwi</string>
     <string name="staff_listings_seller_verified">Uñakipata aljiri</string>
-    <string name="staff_moderation_filter_clear">Suxta chhaqtayaña</string>
+    <string name="staff_moderation_filter_clear">Filtro q\'umachaña</string>
     <string name="staff_reports_listing_label">Aljaña #%1$s</string>
     <string name="staff_reports_meta_details">Yatiyirin yatiyawinakapa</string>
     <string name="staff_reviews_order_label">mayiwi #%1$s</string>

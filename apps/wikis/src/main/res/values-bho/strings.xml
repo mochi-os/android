@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">हटाईं</string>
     <string name="wikis_replicas_remove_failed">प्रतिकृति हटावे में विफल</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi विकी</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">wiki पन्ना के संपादन, टिप्पणी आ निमंत्रण के बारे में सूचना।</string>
     <string name="wikis_pageview_toc_expand">विषय-सूची देखाईं</string>
@@ -240,7 +240,7 @@
     <string name="wikis_comment_form_placeholder_new">एगो टिप्पणी लिखीं…</string>
     <string name="wikis_comment_form_placeholder_reply">जवाब लिखीं…</string>
     <string name="wikis_comment_form_send">भेजीं</string>
-    <string name="wikis_comment_form_remove_attachment">अटैचमेंट हटाईं</string>
+    <string name="wikis_comment_form_remove_attachment">संलग्नक हटाईं</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">आपन सामग्री इहाँ Markdown से लिखीं…</string>
     <string name="wikis_insert_dialog_empty">अबले कवनो संलग्नक नइखे। शुरू करे खातिर फाइल अपलोड करीं।</string>
@@ -282,7 +282,7 @@
     <string name="wikis_replicas_removed_success">प्रतिकृति हटावल गइल</string>
     <string name="wikis_load_more">अउरी लोड करीं</string>
     <string name="wikis_access_change_level">पहुंच स्तर</string>
-    <string name="wikis_access_subject_anyone">केहू</string>
+    <string name="wikis_access_subject_anyone">केहू भी</string>
     <string name="wikis_access_subject_authenticated">प्रमाणित प्रयोगकर्ता</string>
 
     <string name="wikis_revision_compare">बदलाव के तुलना करीं</string>

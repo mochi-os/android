@@ -65,7 +65,7 @@
     <string name="staff_audit_action_account_unbanned">BAN解除</string>
     <string name="staff_audit_action_account_unsuspended">停止解除</string>
     <string name="staff_audit_action_auction_bid_placed">入札しました</string>
-    <string name="staff_audit_action_auction_cancelled">オークションをキャンセル</string>
+    <string name="staff_audit_action_auction_cancelled">オークションがキャンセルされました</string>
     <string name="staff_audit_action_auction_created">オークション作成</string>
     <string name="staff_audit_action_auction_ended_sold">オークション落札</string>
     <string name="staff_audit_action_auction_ended_unsold">オークション終了（未売却）</string>
@@ -285,9 +285,9 @@
     <string name="staff_filter_chip_template">%1$s:%2$s</string>
     <string name="staff_filter_label_moderation">モデレーション</string>
     <string name="staff_filter_label_query">検索</string>
-    <string name="staff_filter_label_seller">出品者</string>
+    <string name="staff_filter_label_seller">販売者</string>
     <string name="staff_filter_label_status">ステータス</string>
-    <string name="staff_filter_label_type">種類</string>
+    <string name="staff_filter_label_type">タイプ</string>
     <string name="staff_listings_action_approve_title">出品を承認</string>
     <string name="staff_listings_action_reject_title">リスティングを拒否</string>
     <string name="staff_listings_action_remove_title">リスティングを削除</string>

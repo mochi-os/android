@@ -135,10 +135,10 @@
     <string name="crm_class_move_up">Matsa sama</string>
     <string name="crm_class_move_down">Matsa ƙasa</string>
     <string name="crm_views_sort_by">Tsara ta</string>
-    <string name="crm_sort_direction_asc">Hawan</string>
-    <string name="crm_views_direction_asc">Hawan</string>
-    <string name="crm_sort_direction_desc">Saukar</string>
-    <string name="crm_views_direction_desc">Saukar</string>
+    <string name="crm_sort_direction_asc">Hawa sama</string>
+    <string name="crm_views_direction_asc">Hawa sama</string>
+    <string name="crm_sort_direction_desc">Sauka ƙasa</string>
+    <string name="crm_views_direction_desc">Sauka ƙasa</string>
     <string name="crm_search_objects_placeholder">Bincika abubuwa</string>
     <string name="crm_links_search_placeholder">Bincika abubuwa</string>
 
@@ -158,11 +158,11 @@
     <string name="crm_object_delete_message">Ka tabbata kana son share wannan abu? Ba za a iya soke wannan aikin ba.</string>
     <string name="crm_parent_none">Babu iyaye</string>
     <string name="crm_links_empty">Babu hanyoyin haɗi</string>
-    <string name="crm_links_section_relates">Ya shafi</string>
+    <string name="crm_links_section_relates">Yana da alaƙa da</string>
     <string name="crm_links_section_duplicated_by">An kwafe ta</string>
     <string name="crm_links_type">Nau\'in haɗi</string>
-    <string name="crm_links_type_relates">Ya shafi</string>
-    <string name="crm_links_remove">Cire haɗi</string>
+    <string name="crm_links_type_relates">Yana da alaƙa da</string>
+    <string name="crm_links_remove">Cire mahaɗi</string>
     <string name="crm_comment_replying_to">Ana amsa wa %1$s</string>
     <string name="crm_comment_clear_reply">Share amsa</string>
     <string name="crm_comment_placeholder">Ƙara sharhi</string>
@@ -211,7 +211,7 @@
     <string name="crm_field_filterable">Mai tacewa</string>
     <string name="crm_field_show_on_card">Nuna a kan kati</string>
     <string name="crm_field_multi">Zaɓi-da-yawa</string>
-    <string name="crm_field_position">Wurin nuni</string>
+    <string name="crm_field_position">Matsayin nuni</string>
     <string name="crm_field_position_header">Kanun labari</string>
     <string name="crm_field_validation">Tabbatarwa</string>
     <string name="crm_field_min_length">Mafi ƙarancin tsawo</string>
@@ -245,13 +245,13 @@
     <string name="crm_board_add_column">Ƙara column</string>
     <string name="crm_settings_entity_id">ID ɗin mahaɗi</string>
     <string name="crm_settings_fingerprint">Sawun yatsa</string>
-    <string name="crm_settings_server">Server</string>
+    <string name="crm_settings_server">Sabar</string>
     <string name="crm_untitled">Ba shi da suna</string>
     <string name="crm_property_select">Zaɓi …</string>
     <string name="crm_filter">Tacewa</string>
     <string name="crm_sort_filter_title">Jera da tacewa</string>
     <string name="crm_filter_clear_all">Share duka</string>
-    <string name="crm_filter_all">Duka</string>
+    <string name="crm_filter_all">Duk</string>
     <string name="crm_filter_other">Sauran</string>
     <string name="crm_settings_section_identity">Asali</string>
     <string name="crm_settings_section_access">Sarrafa damar shiga</string>
@@ -265,7 +265,7 @@
     <string name="crm_access_select_role">Zaɓi matsayi</string>
     <string name="crm_access_selected">An zaɓa: %1$s</string>
     <string name="crm_access_subject_anyone">Kowa</string>
-    <string name="crm_access_subject_authenticated">Masu amfani da aka tabbatar</string>
+    <string name="crm_access_subject_authenticated">Masu amfani da aka tantance</string>
     <string name="crm_access_authenticated_desc">Duk wanda ya shiga</string>
     <string name="crm_access_anyone_desc">Har da masu amfani da ba a san su ba</string>
     <string name="crm_access_role_design">Tsara, ƙirƙira, gyara, sharhi, da kallo</string>

@@ -2,7 +2,7 @@
 <resources>
 
     <string name="error_access_denied">Дастрасӣ рад карда шуд</string>
-    <string name="auth_email">Email</string>
+    <string name="auth_email">Имейл</string>
     <string name="auth_continue">Идома</string>
     <string name="auth_verification_code">Рамзи тасдиқ</string>
     <string name="auth_email_code">Рамзи email</string>
@@ -25,7 +25,7 @@
     <string name="common_edit">Таҳрир</string>
     <string name="common_delete">Нест кардан</string>
     <string name="common_add">Илова кардан</string>
-    <string name="common_notifications">Огоҳиномаҳо</string>
+    <string name="common_notifications">Огоҳиҳо</string>
     <string name="common_logout">Баромадан</string>
     <string name="common_subscribe">Обуна шудан</string>
     <string name="common_copy">Нусхабардорӣ</string>
@@ -52,8 +52,8 @@
     <string name="reaction_disagree">Розӣ нестам</string>
     <string name="push_service_action_hide">Пинҳон кардан</string>
     <string name="about_close">Пӯшидан</string>
-    <string name="notifications_open">Огоҳиномаҳо</string>
-    <string name="notifications_title">Огоҳиномаҳо</string>
+    <string name="notifications_open">Огоҳиҳо</string>
+    <string name="notifications_title">Огоҳиҳо</string>
     <string name="notifications_empty">Ягон огоҳинома нест</string>
     <string name="notifications_empty_unread">Шумо ҳамаро дидед</string>
     <string name="notifications_tab_unread">Хонданашуда</string>
@@ -123,7 +123,7 @@
     <string name="game_chat_move_played">%1$s %2$s бозӣ кард</string>
 
     <string name="error_network">Пайвастшавӣ имконнопазир аст. Пайвасти интернетро санҷида, аз нав кӯшиш кунед.</string>
-    <string name="error_authentication_required">Тасдиқи ҳаққоният лозим аст</string>
+    <string name="error_authentication_required">Тасдиқкунӣ лозим аст</string>
     <string name="error_not_found">Ёфт нашуд</string>
     <string name="error_server">Хатои сервер (%1$d). Лутфан баъдтар аз нав кӯшиш кунед.</string>
     <string name="error_unexpected">Хатои ғайричашмдошт рух дод</string>
@@ -144,7 +144,7 @@
     <string name="auth_use_passkey">Калиди дастрасиро истифода баред</string>
     <string name="auth_email_me_a_code">Ба ман рамз тавассути email фиристед</string>
     <string name="auth_or_enter_authenticator_code">Ё коди аутентификаторро ворид кунед</string>
-    <string name="auth_log_in">Ворид шудан</string>
+    <string name="auth_log_in">Воридшавӣ</string>
     <string name="auth_back">Бозгашт</string>
     <string name="auth_lost_access_recovery">Дастрасиро гум кардед? Рамзи барқарорсозиро истифода баред</string>
     <string name="auth_create_identity_title">Шахсияти худро эҷод кунед</string>
@@ -162,8 +162,8 @@
     <string name="bootstrap_sign_in_different_server">Ба сервери дигар ворид шавед</string>
     <string name="common_retry">Аз нав кӯшиш кунед</string>
     <string name="common_more_options">Имконоти бештар</string>
-    <string name="common_collapse">Печонидан</string>
-    <string name="common_expand">Кушодан</string>
+    <string name="common_collapse">Печондан</string>
+    <string name="common_expand">Васеъ кардан</string>
     <string name="common_play_video">Пахши видео</string>
     <string name="place_picker_name">Номи макон</string>
     <string name="place_origin">Маншаъ</string>
@@ -177,7 +177,7 @@
     <string name="entity_avatar_alt">Аватар барои %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="lightbox_position">%1$d / %2$d</string>
-    <string name="format_time_just_now">Ҳозиракак</string>
+    <string name="format_time_just_now">Ҳозир</string>
     <string name="format_time_minutes_ago">%1$d дақ. пеш</string>
     <string name="format_time_hours_ago">%1$d соат пеш</string>
     <string name="format_time_days_ago">%1$d рӯз пеш</string>
@@ -189,7 +189,7 @@
     <string name="format_time_days_short">%1$d р</string>
     <string name="format_time_weeks_short">%1$d ҳаф</string>
     <string name="format_time_months_short">%1$d моҳ</string>
-    <string name="reaction_add">Илова кардани аксуламал</string>
+    <string name="reaction_add">Илова кардани реаксия</string>
     <string name="push_service_channel">Огоҳиномаҳои Mochi</string>
     <string name="push_service_channel_description">Mochi-ро барои гирифтани огоҳиномаҳо пайваст нигоҳ медорад</string>
     <string name="push_service_group">Хидмати замина</string>
@@ -254,11 +254,11 @@
     <string name="common_logout_confirm_message">Шумо мутмаин ҳастед, ки мехоҳед аз система бароед? Барои дастрасӣ ба ҳисоби худ ба шумо лозим меояд, ки дубора ворид шавед.</string>
     <string name="comment_anonymous">Беном</string>
     <string name="tags_label">Барчаспҳо</string>
-    <string name="tags_add">Тег илова кардан</string>
+    <string name="tags_add">Илова кардани барчасп</string>
     <string name="tags_interest_up">Бештар монандашро нишон диҳед</string>
     <string name="tags_interest_down">Камтар монандашро нишон диҳед</string>
     <string name="tags_interest_clear">Нишон надиҳед</string>
-    <string name="tags_none">Барчасп нест</string>
+    <string name="tags_none">Барчаспҳо нестанд</string>
     <string name="tags_delete">Тегро нест кунед</string>
     <string name="person_picker_none">Ҳеҷ кадом</string>
     <string name="person_picker_clear">Тоза кардани интихоб</string>

@@ -146,13 +146,13 @@
     <string name="people_add_contact_search_start">ব্যবহারকারীদের খুঁজতে টাইপ শুরু করুন</string>
     <string name="people_contact_phone">ফোন</string>
     <string name="people_contact_title">পদের নাম</string>
-    <string name="people_contacts_title">যোগাযোগসমূহ</string>
+    <string name="people_contacts_title">পরিচিতি</string>
     <string name="people_contacts_all">সব পরিচিতি</string>
     <string name="people_contacts_empty">কোনো পরিচিতি পাওয়া যায়নি</string>
     <string name="people_contacts_add_to_start">যোগাযোগ শুরু করতে পরিচিতি যোগ করুন</string>
     <string name="people_contacts_actions">পরিচিতির কাজ</string>
     <string name="people_contacts_friend">বন্ধু</string>
-    <string name="people_contacts_invite">আমন্ত্রণ</string>
+    <string name="people_contacts_invite">আমন্ত্রণ জানান</string>
     <string name="people_contacts_unfriend_confirm">%1$s আর আপনার বন্ধু থাকবেন না। পরিচিতিটি আপনার ঠিকানা বইয়ে থেকে যাবে।</string>
     <string name="people_contacts_delete">পরিচিতি মুছুন</string>
     <string name="people_contacts_delete_confirm">%1$s কে আপনার পরিচিতি থেকে মুছবেন?</string>
@@ -162,7 +162,7 @@
     <string name="people_contact_given">নামের প্রথম অংশ</string>
     <string name="people_contact_family">পদবি</string>
     <string name="people_contact_nickname">ডাকনাম</string>
-    <string name="people_contact_add_email">ইমেল যোগ করুন</string>
+    <string name="people_contact_add_email">ইমেইল যোগ করুন</string>
     <string name="people_contact_add_phone">ফোন যোগ করুন</string>
     <string name="people_contact_add_address">ঠিকানা যোগ করুন</string>
     <string name="people_contact_street">রাস্তা</string>

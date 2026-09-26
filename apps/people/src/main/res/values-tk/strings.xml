@@ -146,7 +146,7 @@
     <string name="people_add_contact_search_start">Ulanyjylary gözlemek üçin ýazyp başla</string>
     <string name="people_contact_phone">Telefon</string>
     <string name="people_contact_title">Iş ady</string>
-    <string name="people_contacts_title">Aragatnaşyklar</string>
+    <string name="people_contacts_title">Kontaktlar</string>
     <string name="people_contacts_all">Ähli kontaktlar</string>
     <string name="people_contacts_empty">Kontakt tapylmady</string>
     <string name="people_contacts_add_to_start">Aragatnaşyga başlamak üçin kontakt goşuň</string>
@@ -158,9 +158,9 @@
     <string name="people_contacts_delete_confirm">%1$s kontaktlaryňyzdan pozulsynmy?</string>
     <string name="people_contacts_delete_friend_confirm">%1$s kontaktlaryňyzdan pozulsynmy? Dostlugyňyz hem gutarar.</string>
     <string name="people_contact_new_title">Täze kontakt</string>
-    <string name="people_contact_edit_title">Kontakty üýtget</string>
-    <string name="people_contact_given">At</string>
-    <string name="people_contact_family">Familiýa</string>
+    <string name="people_contact_edit_title">Kontakty düzet</string>
+    <string name="people_contact_given">Ady</string>
+    <string name="people_contact_family">Familiýasy</string>
     <string name="people_contact_nickname">Lakam</string>
     <string name="people_contact_add_email">E-poçta goş</string>
     <string name="people_contact_add_phone">Telefon goş</string>
@@ -187,7 +187,7 @@
     <string name="people_welcome_body">Mochi boýunça dostlary tapyň we aragatnaşyk guruň. Çakylyk ibermek üçin Kontakt goş düwmesine basyň.</string>
     <string name="people_person_state_contact">Kontaktlarda</string>
     <string name="people_device_create">Döretmek</string>
-    <string name="people_device_server">Server</string>
+    <string name="people_device_server">Serwer</string>
     <string name="people_device_username">Ulanyjy ady</string>
     <string name="people_device_done">Taýýar</string>
     <string name="people_device_list">Enjamlar</string>

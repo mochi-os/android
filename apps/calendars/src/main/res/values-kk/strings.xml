@@ -5,7 +5,7 @@
     <string name="calendars_subscribe_url">Мекенжай</string>
     <string name="calendars_connect_device">Құрылғыны қосу</string>
     <string name="calendars_preferences">Параметрлер</string>
-    <string name="calendars_name">Аты</string>
+    <string name="calendars_name">Атау</string>
     <string name="calendars_rename">Атын өзгерту</string>
     <string name="calendars_delete">Жою</string>
     <string name="calendars_previous">Алдыңғы</string>
@@ -20,7 +20,7 @@
     <string name="calendars_repeat_never">Ешқашан</string>
     <string name="calendars_repeat_monthly">Ай сайын</string>
     <string name="calendars_repeat_yearly">Жыл сайын</string>
-    <string name="calendars_repeat_custom">Теңшелетін</string>
+    <string name="calendars_repeat_custom">Реттелетін</string>
     <string name="calendars_reminder_none">Жоқ</string>
     <string name="calendars_day_sunday">Жексенбі</string>
     <string name="calendars_day_monday">Дүйсенбі</string>
@@ -154,7 +154,7 @@
     <string name="calendars_link_submit">Байланыстыру</string>
     <string name="calendars_link_sync">Қазір синхрондау</string>
     <string name="calendars_link_grant">Күнтізбеге қол жеткізуге рұқсат беру</string>
-    <string name="calendars_link_linked">Байланысқан</string>
+    <string name="calendars_link_linked">Байланыстырылған</string>
     <string name="calendars_link_marker">Байланысқан күнтізбе</string>
     <string name="calendars_link_remote_empty">Күнтізбелер жоқ</string>
     <string name="calendars_poll_conflict">Оқиға екі жақта да өзгерді</string>

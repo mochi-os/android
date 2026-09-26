@@ -7,7 +7,7 @@
     <string name="auth_verification_code">Tasdiqlash kodi</string>
     <string name="auth_email_code">Email kodi</string>
     <string name="auth_recovery_code">Tiklash kodi</string>
-    <string name="auth_name">Nomi</string>
+    <string name="auth_name">Ism</string>
     <string name="auth_create">Yaratish</string>
     <string name="auth_privacy_label">Maxfiylik</string>
     <string name="auth_privacy_public">Ommaviy</string>
@@ -58,7 +58,7 @@
     <string name="notifications_empty_unread">Hammasini koʻrib chiqdingiz</string>
     <string name="notifications_tab_unread">Oʻqilmagan</string>
     <string name="notifications_tab_unread_count">Oʻqilmagan (%1$d)</string>
-    <string name="notifications_tab_all">Barchasi</string>
+    <string name="notifications_tab_all">Hammasi</string>
     <string name="notifications_mark_all_read">Hammasini oʻqilgan deb belgilash</string>
     <string name="notifications_clear_all">Hammasini tozalash</string>
     <string name="settings_title">Sozlamalar</string>
@@ -163,8 +163,8 @@
     <string name="bootstrap_choose_account">Hisobni tanlang</string>
     <string name="bootstrap_sign_in_different_server">Boshqa serverga kirish</string>
     <string name="common_retry">Qayta urinish</string>
-    <string name="common_more_options">Ko\'proq imkoniyatlar</string>
-    <string name="common_collapse">Yig\'ish</string>
+    <string name="common_more_options">Boshqa variantlar</string>
+    <string name="common_collapse">Yigʻish</string>
     <string name="common_expand">Yoyish</string>
     <string name="common_play_video">Videoni ijro etish</string>
     <string name="place_picker_name">Joy nomi</string>
@@ -190,7 +190,7 @@
     <string name="format_time_days_short">%1$d kun</string>
     <string name="format_time_weeks_short">%1$d hafta</string>
     <string name="format_time_months_short">%1$d oy</string>
-    <string name="reaction_add">Reaksiya qo\'shish</string>
+    <string name="reaction_add">Reaksiya qoʻshish</string>
     <string name="push_service_channel">Mochi bildirishnomalari</string>
     <string name="push_service_channel_description">Bildirishnomalarni olish uchun Mochini ulangan holda saqlaydi</string>
     <string name="push_service_group">Fon xizmati</string>
@@ -210,7 +210,7 @@
     <string name="about_up_to_date">Yangilangan</string>
     <string name="about_check_downloading">%1$s versiyasi mavjud, yuklab olinmoqda…</string>
     <string name="about_check_network_error">Yangilanish serveriga ulanib bo\'lmadi</string>
-    <string name="about_check_download_failed">Yuklab olish amalga oshmadi</string>
+    <string name="about_check_download_failed">Yuklab olib boʻlmadi</string>
     <string name="notifications_clear_all_title">Barcha bildirishnomalar tozalansinmi?</string>
     <string name="notifications_clear_all_message">Bu har bir bildirishnomani o\'chiradi. Ularni tiklab bo\'lmaydi.</string>
     <string name="settings_value_auto">Avtomatik</string>
@@ -255,11 +255,11 @@
     <string name="common_logout_confirm_message">Haqiqatan ham hisobdan chiqmoqchimisiz? Hisobingizga kirish uchun qaytadan tizimga kirishingiz kerak bo\'ladi.</string>
     <string name="comment_anonymous">Anonim</string>
     <string name="tags_label">Teglar</string>
-    <string name="tags_add">Teg qo\'shish</string>
+    <string name="tags_add">Teg qoʻshish</string>
     <string name="tags_interest_up">Shunga o\'xshashlarni ko\'proq ko\'rsatish</string>
     <string name="tags_interest_down">Shunga o\'xshashlarni kamroq ko\'rsatish</string>
     <string name="tags_interest_clear">Ko\'rsatishni to\'xtatish</string>
-    <string name="tags_none">Teglar yo\'q</string>
+    <string name="tags_none">Teglar yoʻq</string>
     <string name="tags_delete">Tegni olib tashlash</string>
     <string name="person_picker_none">Hech qanday</string>
     <string name="person_picker_clear">Tanlovni tozalash</string>

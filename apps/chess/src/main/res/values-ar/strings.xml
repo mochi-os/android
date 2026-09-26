@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">قبول</string>
     <string name="chess_draw_decline">رفض</string>
     <string name="chess_status_checkmate_you_win">كش ملك — لقد فزت!</string>
-    <string name="chess_status_stalemate">تعادل — مسدود</string>
+    <string name="chess_status_stalemate">طريق مسدود — تعادل</string>
     <string name="chess_status_draw">تعادل</string>
     <string name="chess_status_check_your_move">كش — دورك</string>
     <string name="chess_status_your_move">دورك</string>

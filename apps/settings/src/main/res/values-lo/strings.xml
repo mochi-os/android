@@ -188,7 +188,7 @@
     <string name="system_users_sessions_empty">ຜູ້ໃຊ້ນີ້ບໍ່ມີເຊດຊັນທີ່ໃຊ້ງານຢູ່.</string>
     <string name="system_users_revoke">ຖອນ</string>
     <string name="system_users_revoke_all">ຖອນເຊດຊັນທັງໝົດ</string>
-    <string name="system_users_unknown_browser">ໂປຣແກຣມທ່ອງເວັບບໍ່ຮູ້ຈັກ</string>
+    <string name="system_users_unknown_browser">ຕົວທ່ອງເວັບບໍ່ຮູ້ຈັກ</string>
     <string name="system_users_unknown">ບໍ່ຮູ້ຈັກ</string>
     <string name="system_users_previous">ກ່ອນໜ້າ</string>
     <string name="system_users_next">ຕໍ່ໄປ</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s ຈະບໍ່ຈັດການເສັ້ນທາງໃນໂດເມນນີ້ອີກ.</string>
     <string name="domain_delegation_delete_title">ລົບການມອບສິດບໍ?</string>
     <string name="domain_delegation_path">ເສັ້ນທາງ</string>
-    <string name="domain_delegation_user">ID ຜູ້ໃຊ້</string>
+    <string name="domain_delegation_user">ຜູ້ໃຊ້</string>
     <string name="domain_delegations">ການມອບສິດ</string>
     <string name="domain_delegations_empty">ບໍ່ມີການມອບໝາຍຖືກກໍານົດ.</string>
     <string name="domain_delete">ລົບໂດເມນ</string>
@@ -356,7 +356,7 @@
     <string name="route_target_none">ບໍ່ມີເປົ້າໝາຍທີ່ໃຊ້ໄດ້</string>
     <string name="login_invalid_code">ລະຫັດບໍ່ຖືກຕ້ອງ</string>
     <string name="accounts_provider_browser">ການແຈ້ງເຕືອນຕົວທ່ອງເວັບ</string>
-    <string name="accounts_provider_fcm">ການແຈ້ງເຕືອນ Android</string>
+    <string name="accounts_provider_fcm">ການແຈ້ງເຕືອນແບບພຸຊ Android</string>
     <string name="accounts_provider_mcp">ເຊີບເວີ MCP</string>
     <string name="accounts_provider_unifiedpush">ການແຈ້ງເຕືອນແບບພຸຊ</string>
     <string name="accounts_provider_url">URL ພາຍນອກ</string>
@@ -374,14 +374,14 @@
     <string name="accounts_forget_message">ນີ້ຈະລືມອຸປະກອນ \"%1$s\" ແລະຢຸດການແຈ້ງເຕືອນໄປຫາມັນ.</string>
     <string name="accounts_device_seen">ເຫັນຫຼ້າສຸດ %1$s</string>
     <string name="notifprefs_device_app">%1$s · ແອັບ</string>
-    <string name="notifprefs_device_push">%1$s · ການແຈ້ງເຕືອນ</string>
+    <string name="notifprefs_device_push">%1$s · ການແຈ້ງເຕືອນແບບພຸຊ</string>
     <string name="notifprefs_test_partial">ສົ່ງການທົດສອບໄປ %1$d ຈາກ %2$d ປາຍທາງ</string>
     <string name="notifprefs_test_none">ບໍ່ມີປາຍທາງທີ່ຕັ້ງຄ່າໄວ້</string>
-    <string name="notifprefs_transport_fcm">ການແຈ້ງເຕືອນ Android</string>
+    <string name="notifprefs_transport_fcm">ການແຈ້ງເຕືອນແບບພຸຊ Android</string>
     <string name="notifprefs_no_destinations">ບໍ່ມີຈຸດໝາຍ</string>
     <string name="account_data_generate">ສ້າງລະຫັດຜ່ານ</string>
     <string name="accounts_field_server">URL ເຊີບເວີ</string>
-    <string name="accounts_field_token">ໂທເຄນເຂົ້າເຖິງ</string>
+    <string name="accounts_field_token">ໂທເຄັນເຂົ້າເຖິງ</string>
     <string name="accounts_field_topic">ຫົວຂໍ້</string>
     <string name="accounts_field_secret">ຄວາມລັບການເຊັນ</string>
     <string name="account_totp_open">ເປີດໃນແອັບຢືນຢັນຕົວຕົນ</string>

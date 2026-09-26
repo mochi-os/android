@@ -64,7 +64,7 @@
     <string name="market_checkout_address_heading">Adresa za dostavu</string>
     <string name="market_checkout_address_line1">Adresa, redak 1</string>
     <string name="market_checkout_address_line2">Adresa, redak 2</string>
-    <string name="market_checkout_address_name">Naziv</string>
+    <string name="market_checkout_address_name">Ime</string>
     <string name="market_checkout_address_postcode">Poštanski broj</string>
     <string name="market_checkout_address_region">Regija</string>
     <string name="market_checkout_back">Natrag</string>
@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Prijavi oglas</string>
     <string name="market_listing_detail_save">Spremi</string>
     <string name="market_listing_detail_seller_heading">Prodavač</string>
-    <string name="market_listing_detail_shipping_heading">Dostava</string>
+    <string name="market_listing_detail_shipping_heading">Opcije dostave</string>
     <string name="market_listing_detail_subscribe">Pretplati se</string>
     <string name="market_listing_detail_tags_heading">Oznake</string>
     <string name="market_listing_detail_title">Oglas</string>
@@ -704,7 +704,7 @@
     <string name="market_editor_stock_unlimited">Neograničeno</string>
     <string name="market_editor_start_time">Vrijeme početka</string>
     <string name="market_editor_start_time_help">Ostavite prazno za pokretanje pri objavi.</string>
-    <string name="market_editor_start_time_next">Dalje</string>
+    <string name="market_editor_start_time_next">Sljedeće</string>
     <string name="market_editor_start_time_clear">Očisti</string>
     <string name="market_listing_detail_buy_now_label">Kupi odmah</string>
     <string name="market_section_recently_viewed">Nedavno pregledano</string>

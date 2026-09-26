@@ -163,7 +163,7 @@
     <string name="common_retry">再試行</string>
     <string name="common_more_options">その他のオプション</string>
     <string name="common_collapse">折りたたむ</string>
-    <string name="common_expand">展開</string>
+    <string name="common_expand">展開する</string>
     <string name="common_play_video">動画を再生</string>
     <string name="place_picker_name">場所の名前</string>
     <string name="place_origin">出発地</string>
@@ -310,7 +310,7 @@
     <string name="settings_card_flat">フラット</string>
     <string name="settings_card_raised">浮き出し</string>
     <string name="error_server_https">サーバーアドレスは https:// で始まる必要があります</string>
-    <string name="device_name_fallback">モバイル端末</string>
+    <string name="device_name_fallback">モバイルデバイス</string>
     <string name="account_error_token_type">サポートされていないトークンの種類</string>
     <string name="account_error_caller">この呼び出し元は許可されていません</string>
 </resources>

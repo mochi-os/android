@@ -17,7 +17,7 @@
     <string name="chess_new_add_friends">Tambah kanca-kanca</string>
     <string name="chess_new_start_button">Miwiti game</string>
     <string name="chess_new_creating">Nggawé…</string>
-    <string name="chess_chat_title">Chat</string>
+    <string name="chess_chat_title">Obrolan</string>
     <string name="chess_open_chat">Bukak panel chat</string>
     <string name="chess_open_actions">Bukak aksi game</string>
     <string name="chess_offer_draw">Tawaran remis</string>
@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">Trima</string>
     <string name="chess_draw_decline">Tolak</string>
     <string name="chess_status_checkmate_you_win">Skakmat — sampéyan menang!</string>
-    <string name="chess_status_stalemate">Stalemate — imbang</string>
+    <string name="chess_status_stalemate">Pat — imbang</string>
     <string name="chess_status_draw">Imbang</string>
     <string name="chess_status_check_your_move">Skak — gilirané sampéyan</string>
     <string name="chess_status_your_move">Langkahmu</string>

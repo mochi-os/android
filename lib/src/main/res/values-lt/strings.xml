@@ -7,7 +7,7 @@
     <string name="auth_verification_code">Patvirtinimo kodas</string>
     <string name="auth_email_code">El. pašto kodas</string>
     <string name="auth_recovery_code">Atkūrimo kodas</string>
-    <string name="auth_name">Pavadinimas</string>
+    <string name="auth_name">Vardas</string>
     <string name="auth_create">Sukurti</string>
     <string name="auth_privacy_label">Privatumas</string>
     <string name="auth_privacy_public">Viešas</string>
@@ -56,7 +56,7 @@
     <string name="notifications_title">Pranešimai</string>
     <string name="notifications_empty">Pranešimų nėra</string>
     <string name="notifications_empty_unread">Viskas perskaityta</string>
-    <string name="notifications_tab_unread">Neperskaityti</string>
+    <string name="notifications_tab_unread">Neperskaityta</string>
     <string name="notifications_tab_unread_count">Neperskaityti (%1$d)</string>
     <string name="notifications_tab_all">Visi</string>
     <string name="notifications_mark_all_read">Pažymėti visus skaitytais</string>
@@ -123,7 +123,7 @@
     <string name="game_chat_move_played">%1$s sužaidė %2$s</string>
 
     <string name="error_network">Nepavyko prisijungti. Patikrinkite interneto ryšį ir bandykite dar kartą.</string>
-    <string name="error_authentication_required">Reikia autentifikacijos</string>
+    <string name="error_authentication_required">Reikia autentifikavimo</string>
     <string name="error_not_found">Nerasta</string>
     <string name="error_server">Serverio klaida (%1$d). Bandykite dar kartą vėliau.</string>
     <string name="error_unexpected">Įvyko netikėta klaida</string>
@@ -210,7 +210,7 @@
     <string name="about_up_to_date">Naujausia versija</string>
     <string name="about_check_downloading">Versija %1$s prieinama, atsisiunčiama…</string>
     <string name="about_check_network_error">Nepavyko pasiekti naujinių serverio</string>
-    <string name="about_check_download_failed">Nepavyko atsisiųsti</string>
+    <string name="about_check_download_failed">Atsisiųsti nepavyko</string>
     <string name="notifications_clear_all_title">Išvalyti visus pranešimus?</string>
     <string name="notifications_clear_all_message">Bus pašalinti visi pranešimai. Jų nebus galima atkurti.</string>
     <string name="settings_value_auto">Automatiškai</string>
@@ -238,7 +238,7 @@
     <string name="stepup_error_oauth">Nepavyko patvirtinti su ta paskyra. Bandykite dar kartą.</string>
     <string name="game_system_resign">%1$s pasidavė</string>
     <string name="game_system_draw_offer">%1$s pasiūlė lygiąsias</string>
-    <string name="game_system_draw_accept">Sutarta dėl lygiųjų</string>
+    <string name="game_system_draw_accept">Dėl lygiųjų susitarta</string>
     <string name="game_system_draw_decline">%1$s atmetė lygiąsias</string>
     <string name="reactivation_title">Jūsų paskyrą numatyta ištrinti</string>
     <string name="reactivation_body">Jūsų paskyrą numatyta ištrinti. Galite atšaukti ir dabar atkurti visą prieigą.</string>
@@ -252,7 +252,7 @@
     <string name="common_file_open_failed">Nepavyko atidaryti failo</string>
     <string name="reaction_remove">Išvalyti</string>
     <string name="common_logout_confirm_message">Ar tikrai norite atsijungti? Norėdami pasiekti savo paskyrą, turėsite prisijungti iš naujo.</string>
-    <string name="comment_anonymous">Anoniminis</string>
+    <string name="comment_anonymous">Anonimas</string>
     <string name="tags_label">Žymos</string>
     <string name="tags_add">Pridėti žymą</string>
     <string name="tags_interest_up">Rodyti daugiau panašių</string>

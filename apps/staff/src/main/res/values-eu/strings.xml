@@ -211,7 +211,7 @@
     <string name="staff_dashboard_kpi_total_orders">Eskaerak guztira</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Ez</string>
-    <string name="staff_dashboard_open_sidebar">Albo-barra ireki</string>
+    <string name="staff_dashboard_open_sidebar">Ireki alboko barra</string>
     <string name="staff_dashboard_order_fallback">%1$s eskaria</string>
     <string name="staff_dashboard_system">Sistema</string>
     <string name="staff_dashboard_tab_audit">Auditoria</string>
@@ -281,7 +281,7 @@
     <string name="staff_disputes_stripe_subscription_canceled">harpidetza bertan behera utzi da</string>
     <string name="staff_disputes_stripe_unrecognized">ezagutzen ez den ordainketa</string>
     <string name="staff_disputes_view">Ikusi</string>
-    <string name="staff_filter_chip_remove">Iragazkia kendu</string>
+    <string name="staff_filter_chip_remove">Kendu iragazkia</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderazioa</string>
     <string name="staff_filter_label_query">Bilatu</string>
@@ -323,7 +323,7 @@
     <string name="staff_listings_status_sold">Salduta</string>
     <string name="staff_listings_submitting">Bidaltzen…</string>
     <string name="staff_moderation_empty">Moderazio-sarrerarik ez</string>
-    <string name="staff_moderation_filter_clear">Iragazkia garbitu</string>
+    <string name="staff_moderation_filter_clear">Garbitu iragazkia</string>
     <string name="staff_moderation_listing_filter_placeholder">Zerrendapenaren IDa</string>
     <string name="staff_moderation_system">Sistema</string>
     <string name="staff_moderation_unknown_listing">#%1$s</string>

@@ -188,7 +188,7 @@
     <string name="projects_views_filter">Filtro (armazenado, ainda não aplicado)</string>
     <string name="projects_people_empty">Nenhuma pessoa tem acesso ainda</string>
     <string name="projects_settings_delete_confirm_message">Tem certeza de que deseja excluir este projeto? Todos os objetos, comentários e configurações serão removidos permanentemente.</string>
-    <string name="projects_object_unwatch">Parar de observar</string>
+    <string name="projects_object_unwatch">Deixar de observar</string>
     <string name="projects_object_tab_watchers">Observadores</string>
     <string name="projects_watchers_empty">Nenhum observador ainda</string>
     <string name="projects_object_delete_title">Excluir objeto</string>
@@ -199,7 +199,7 @@
     <string name="projects_links_section_duplicated_by">Duplicado por</string>
     <string name="projects_links_type">Tipo de vínculo</string>
     <string name="projects_links_type_relates">Relaciona-se com</string>
-    <string name="projects_links_remove">Remover vínculo</string>
+    <string name="projects_links_remove">Remover link</string>
     <string name="projects_comment_replying_to">Respondendo a %1$s</string>
     <string name="projects_comment_clear_reply">Limpar resposta</string>
     <string name="projects_comment_placeholder">Adicionar um comentário</string>
@@ -287,8 +287,8 @@
     <string name="projects_field_position">Posição de exibição</string>
     <string name="projects_field_position_header">Cabeçalho</string>
     <string name="projects_field_validation">Validação</string>
-    <string name="projects_field_min_length">Comprimento mínimo</string>
-    <string name="projects_field_max_length">Comprimento máximo</string>
+    <string name="projects_field_min_length">Tamanho mínimo</string>
+    <string name="projects_field_max_length">Tamanho máximo</string>
     <string name="projects_field_pattern">Padrão (regex)</string>
     <string name="projects_field_rows">Linhas (altura da área de texto)</string>
     <string name="projects_field_no_options">Nenhuma opção definida</string>

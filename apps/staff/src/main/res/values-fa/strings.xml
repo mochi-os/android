@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">کارکنان</string>
-    <string name="launcher_staff">Mochi کارکنان</string>
+    <string name="launcher_staff">کارکنان Mochi</string>
     <string name="staff_accounts_action_ban_title">مسدود کردن حساب</string>
     <string name="staff_accounts_action_suspend_title">تعلیق حساب</string>
     <string name="staff_accounts_action_unban_title">لغو ممنوعیت</string>
@@ -284,7 +284,7 @@
     <string name="staff_filter_chip_remove">حذف فیلتر</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">نظارت</string>
-    <string name="staff_filter_label_query">جستجو</string>
+    <string name="staff_filter_label_query">جست‌وجو</string>
     <string name="staff_filter_label_seller">فروشنده</string>
     <string name="staff_filter_label_status">وضعیت</string>
     <string name="staff_filter_label_type">نوع</string>
@@ -394,7 +394,7 @@
     <string name="staff_sidebar_disputes">اختلافات</string>
     <string name="staff_sidebar_listings">آگهی‌ها</string>
     <string name="staff_sidebar_management">مدیریت</string>
-    <string name="staff_sidebar_market">Market</string>
+    <string name="staff_sidebar_market">بازار</string>
     <string name="staff_sidebar_moderation">گزارش نظارت</string>
     <string name="staff_sidebar_overview">نمای کلی</string>
     <string name="staff_sidebar_reports">گزارش‌ها</string>

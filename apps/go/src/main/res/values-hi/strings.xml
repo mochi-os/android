@@ -16,7 +16,7 @@
     <string name="go_color_white">सफ़ेद</string>
     <string name="go_delete_confirm">हटाएँ</string>
     <string name="go_delete_message">यह गेम आपकी सूची से हटा दिया जाएगा। इसे पूर्ववत नहीं किया जा सकता।</string>
-    <string name="go_delete_title">गेम हटाएं?</string>
+    <string name="go_delete_title">गेम हटाएँ?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">स्वीकार करें</string>
     <string name="go_draw_decline">अस्वीकार करें</string>
@@ -64,7 +64,7 @@
     <string name="go_channel_name">Go सूचनाएं</string>
     <string name="go_channel_description">चालों, पास, ड्रॉ प्रस्तावों और खेल परिणामों के बारे में सूचनाएं।</string>
     <string name="go_open_sidebar">साइडबार खोलें</string>
-    <string name="go_sidebar_active">सक्रिय खेल</string>
+    <string name="go_sidebar_active">सक्रिय गेम्स</string>
     <string name="go_empty_active">अभी तक कोई सक्रिय खेल नहीं।</string>
     <string name="go_status_resigned">त्याग</string>
     <string name="go_new_game_title">नया Go खेल</string>

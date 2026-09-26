@@ -4,7 +4,7 @@
     <string name="settings_home_title">Настройки</string>
     <string name="settings_home_logout">Выйти</string>
     <string name="settings_home_account">Аккаунт</string>
-    <string name="settings_home_preferences">Настройки</string>
+    <string name="settings_home_preferences">Предпочтения</string>
     <string name="settings_home_display">Отображение</string>
     <string name="settings_home_notification_prefs">Параметры уведомлений</string>
     <string name="settings_home_accounts">Подключённые аккаунты</string>
@@ -60,7 +60,7 @@
     <string name="notifprefs_add_category">Добавить категорию</string>
     <string name="notifprefs_new_category">Новая категория</string>
     <string name="notifprefs_edit_category">Изменить категорию</string>
-    <string name="notifprefs_name_label">Имя</string>
+    <string name="notifprefs_name_label">Название</string>
     <string name="notifprefs_destinations">Назначения</string>
     <string name="notifprefs_dest_web">Веб-браузер</string>
     <string name="notifprefs_test">Тест</string>
@@ -93,7 +93,7 @@
     <string name="accounts_type_label">Тип</string>
     <string name="accounts_field_email">Электронная почта</string>
     <string name="accounts_field_model">Модель</string>
-    <string name="accounts_field_name">Имя</string>
+    <string name="accounts_field_name">Название</string>
     <string name="accounts_status_pending">Ожидание</string>
     <string name="accounts_status_verified">Подтверждено</string>
     <string name="accounts_status_connected">Подключено</string>
@@ -207,14 +207,14 @@
     <string name="system_users_toast_status_failed">Не удалось обновить статус пользователя</string>
     <string name="system_users_toast_revoke_failed">Не удалось отозвать сеанс</string>
 
-    <string name="settings_home_sessions">Сессии</string>
+    <string name="settings_home_sessions">Сеансы</string>
     <string name="settings_home_privacy">Политика конфиденциальности</string>
     <string name="settings_home_rules">Правила</string>
     <string name="settings_home_terms">Условия использования</string>
     <string name="account_passkeys_empty">Ключи доступа не зарегистрированы.</string>
     <string name="account_passkey_register_title">Добавить ключ доступа</string>
     <string name="account_passkey_register_message">Устройство попросит подтвердить. Ключ доступа привязан к этому устройству и будет использоваться для будущих входов.</string>
-    <string name="account_passkey_name_label">Имя (необязательно)</string>
+    <string name="account_passkey_name_label">Название (необязательно)</string>
     <string name="account_passkey_delete_message">«%1$s» больше не сможет выполнять вход.</string>
     <string name="account_totp_description">Войдите с помощью 6-значного кода из приложения-аутентификатора.</string>
     <string name="account_totp_enabled">Аутентификатор включён.</string>
@@ -229,7 +229,7 @@
     <string name="account_recovery_regen_title">Пересоздать коды восстановления?</string>
     <string name="account_recovery_regen_message">Существующие коды перестанут работать немедленно. Сохраните новые в надёжном месте.</string>
     <string name="account_recovery_codes_warning">Сохраните эти коды — каждый можно использовать только один раз. Они больше не будут показаны.</string>
-    <string name="sessions_title">Сессии</string>
+    <string name="sessions_title">Сеансы</string>
     <string name="sessions_empty">Нет активных сеансов.</string>
     <string name="sessions_revoke_message">Устройство, использующее этот сеанс, будет выведено из системы.</string>
     <string name="account_oauth_empty">Нет связанных аккаунтов</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">Приоритет %1$d · %2$s</string>
     <string name="interests_search_placeholder">Поиск тем для добавления…</string>
     <string name="interests_empty">Пока нет интересов.</string>
-    <string name="interests_summary_regenerate">Пересоздать резюме</string>
+    <string name="interests_summary_regenerate">Перегенерировать сводку</string>
     <string name="interests_summary_regenerating">Пересоздание…</string>
     <string name="interests_summary_empty">Добавьте интересы, чтобы сгенерировать резюме того, что вас увлекает.</string>
     <string name="interests_search_failed">Поиск не удался. Попробуйте ещё раз.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s больше не будет управлять маршрутами на этом домене.</string>
     <string name="domain_delegation_delete_title">Удалить делегирование?</string>
     <string name="domain_delegation_path">Путь</string>
-    <string name="domain_delegation_user">ID пользователя</string>
+    <string name="domain_delegation_user">Пользователь</string>
     <string name="domain_delegations">Делегирования</string>
     <string name="domain_delegations_empty">Делегирования не настроены.</string>
     <string name="domain_delete">Удалить домен</string>

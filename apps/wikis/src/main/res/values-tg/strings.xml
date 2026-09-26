@@ -16,7 +16,7 @@
     <string name="wikis_page_action_rename">Тағйири ном</string>
     <string name="wikis_page_action_history">Таърих</string>
     <string name="wikis_page_action_delete">Нест кардан</string>
-    <string name="wikis_page_action_section_wiki">Wiki</string>
+    <string name="wikis_page_action_section_wiki">Вики</string>
     <string name="wikis_page_action_search">Ҷустуҷӯ</string>
     <string name="wikis_page_action_tags">Барчаспҳо</string>
     <string name="wikis_page_action_recent_changes">Тағйиротҳои охирин</string>
@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Хориҷ кардан</string>
     <string name="wikis_replicas_remove_failed">Бартараф кардани нусха ба анҷом нарасид</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Викиҳо</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">Огоҳиҳо дар бораи таҳрири саҳифаи wiki, шарҳҳо ва даъватҳо.</string>
     <string name="wikis_pageview_toc_expand">Мундариҷаро нишон диҳед</string>
@@ -273,7 +273,7 @@
     <string name="wikis_attachments_downloading">Боргирӣ…</string>
     <string name="wikis_attachments_empty_description">Барои илова кардани файлҳо ба ин саҳифа Бор кардан-ро пахш кунед.</string>
     <string name="wikis_settings_name_save_cd">Номро нигоҳ доштан</string>
-    <string name="wikis_settings_name_cancel_cd">Бекор кардани таҳрир</string>
+    <string name="wikis_settings_name_cancel_cd">Таҳрирро бекор кардан</string>
     <string name="wikis_access_level_label">Иҷозат</string>
     <string name="wikis_access_set_failed">Навсозии дастрасӣ ноком шуд</string>
     <string name="wikis_replicas_col_subscribed">Обуна шуд: %1$s</string>

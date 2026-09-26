@@ -17,7 +17,7 @@
     <string name="chess_new_add_friends">បន្ថែមមិត្តភក្តិ</string>
     <string name="chess_new_start_button">ចាប់ផ្តើមហ្គេម</string>
     <string name="chess_new_creating">កំពុងបង្កើត…</string>
-    <string name="chess_chat_title">ជជែក</string>
+    <string name="chess_chat_title">ការសន្ទនា</string>
     <string name="chess_open_chat">បើកបន្ទះសន្ទនា</string>
     <string name="chess_open_actions">បើកសកម្មភាពហ្គេម</string>
     <string name="chess_offer_draw">ផ្តល់ជូនការស្មើ</string>
@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">ទទួលយក</string>
     <string name="chess_draw_decline">បដិសេធ</string>
     <string name="chess_status_checkmate_you_win">ឈ្ឆេកម៉ាត — អ្នកឈ្នះ!</string>
-    <string name="chess_status_stalemate">ស្មើ — ស្មើគ្នា</string>
+    <string name="chess_status_stalemate">ជាប់គាំង — ស្មើ</string>
     <string name="chess_status_draw">ស្មើ</string>
     <string name="chess_status_check_your_move">ឈ្ឆេក — វេនរបស់អ្នក</string>
     <string name="chess_status_your_move">វេនរបស់អ្នក</string>

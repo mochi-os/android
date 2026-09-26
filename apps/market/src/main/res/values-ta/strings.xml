@@ -28,7 +28,7 @@
     <string name="market_appeal_dialog_cancel">ரத்துசெய்</string>
     <string name="market_appeal_dialog_failed">மேல்முறையீட்டைச் சமர்ப்பிக்க முடியவில்லை</string>
     <string name="market_appeal_dialog_submit">மேல்முறையீட்டை சமர்ப்பி</string>
-    <string name="market_appeal_dialog_submitting">அனுப்பப்படுகிறது…</string>
+    <string name="market_appeal_dialog_submitting">சமர்ப்பிக்கிறது…</string>
     <string name="market_appeal_dialog_success">மேல்முறையீடு சமர்ப்பிக்கப்பட்டது</string>
     <string name="market_appeal_dialog_title">நீக்கம் மேல்முறையீடு</string>
     <string name="market_asset_download">பதிவிறக்கு</string>
@@ -40,9 +40,9 @@
     <string name="market_bid_dialog_instant_win">வாங்குதல் உறுதிப்படுத்தப்பட்டது — கட்டணத்தை முடிக்கவும்</string>
     <string name="market_bid_dialog_invalid_ceiling">அதிகபட்ச ஏலம் உங்கள் ஏலத் தொகையை விட குறைவாக இருக்கக்கூடாது</string>
     <string name="market_bid_dialog_outbid">உங்கள் ஏலம் வைக்கப்பட்டது ஆனால் உடனடியாக மிஞ்சப்பட்டது. மற்றொரு ஏலதாரருக்கு அதிக அதிகபட்சம் உள்ளது. அவர்களின் ஏலம் இப்போது %1$s.</string>
-    <string name="market_bid_dialog_submit">ஏலம் வை</string>
+    <string name="market_bid_dialog_submit">ஏலம் கொடு</string>
     <string name="market_bid_dialog_success">ஏலம் வைக்கப்பட்டது</string>
-    <string name="market_bid_dialog_title">ஏலம் வை</string>
+    <string name="market_bid_dialog_title">ஏலம் கொடு</string>
     <string name="market_bid_ended">ஏலம் முடிந்தது</string>
     <string name="market_bid_high">உயர்ந்த ஏலம்</string>
     <string name="market_bids_empty">ஏலங்கள் இல்லை</string>
@@ -118,7 +118,7 @@
     <string name="market_dispute_dialog_failed">பதிலைச் சமர்ப்பிக்க முடியவில்லை</string>
     <string name="market_dispute_dialog_response_label">உங்கள் பதில்</string>
     <string name="market_dispute_dialog_submit">சமர்ப்பி</string>
-    <string name="market_dispute_dialog_submitting">அனுப்பப்படுகிறது…</string>
+    <string name="market_dispute_dialog_submitting">சமர்ப்பிக்கிறது…</string>
     <string name="market_dispute_dialog_title">சர்ச்சைக்கு பதிலளி</string>
     <string name="market_editor_appeal_submit">மேல்முறையீட்டை சமர்ப்பி</string>
     <string name="market_editor_asset_add">கோப்பு சேர்</string>
@@ -221,7 +221,7 @@
     <string name="market_listing_detail_buy_now">இப்போதே வாங்கு</string>
     <string name="market_listing_detail_description_heading">விளக்கம்</string>
     <string name="market_listing_detail_edit">திருத்து</string>
-    <string name="market_listing_detail_information_heading">டெலிவரி தகவல்</string>
+    <string name="market_listing_detail_information_heading">விநியோக தகவல்</string>
     <string name="market_listing_detail_load_failed">பட்டியலை ஏற்ற முடியவில்லை</string>
     <string name="market_listing_detail_listed">பட்டியலிடப்பட்டது %1$s</string>
     <string name="market_listing_detail_location_heading">இடம்</string>
@@ -234,7 +234,7 @@
     <string name="market_listing_detail_save">சேமி</string>
     <string name="market_listing_detail_seller_heading">விற்பனையாளர்</string>
     <string name="market_listing_detail_share">பட்டியலை பகிர்</string>
-    <string name="market_listing_detail_shipping_heading">அனுப்புதல்</string>
+    <string name="market_listing_detail_shipping_heading">அனுப்பும் விருப்பங்கள்</string>
     <string name="market_listing_detail_subscribe">சந்தாதாராக</string>
     <string name="market_listing_detail_tags_heading">டேக்குகள்</string>
     <string name="market_listing_detail_title">பட்டியல்</string>
@@ -392,7 +392,7 @@
     <string name="market_saved_title">சேமித்தவை</string>
     <string name="market_search_clear">தேடலை அழி</string>
     <string name="market_search_placeholder">சந்தையில் தேடு</string>
-    <string name="market_section_categories">வகைகளை உலாவுக</string>
+    <string name="market_section_categories">வகைகளை உலாவு</string>
     <string name="market_section_listings">சமீபத்திய பட்டியல்கள்</string>
     <string name="market_section_recent">சமீபத்தில் பார்க்கப்பட்டவை</string>
     <string name="market_ship_dialog_cancel">ரத்துசெய்</string>
@@ -663,7 +663,7 @@
     <string name="market_seller_become_heading">விற்பனையாளராகுங்கள்</string>
     <string name="market_seller_become_title">விற்பனையாளராகுங்கள்</string>
     <string name="market_seller_check_status">நிலையைச் சரிபார்</string>
-    <string name="market_seller_checking">சரிபார்க்கிறது...</string>
+    <string name="market_seller_checking">சரிபார்க்கப்படுகிறது…</string>
     <string name="market_seller_connect_stripe">Stripe-ஐ இணை</string>
     <string name="market_seller_connecting">ஏற்றுகிறது...</string>
     <string name="market_seller_fee_loading">கட்டண விவரங்களை ஏற்றுகிறது...</string>

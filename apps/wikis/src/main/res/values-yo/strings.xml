@@ -182,7 +182,7 @@
     <string name="wikis_settings_name_save_failed">Kò lè tún sọ wiki lórúkọ</string>
     <string name="wikis_settings_section_subscription">Ìforúkọsílẹ̀</string>
     <string name="wikis_settings_field_source">Orísun</string>
-    <string name="wikis_settings_action_sync">Sync báyìí</string>
+    <string name="wikis_settings_action_sync">Ṣe àmúṣiṣẹ́pọ̀ báyìí</string>
     <string name="wikis_settings_sync_success">Wiki ti sync</string>
     <string name="wikis_settings_sync_failed">Kò lè ṣe sync wiki</string>
     <string name="wikis_settings_section_home">Ojú-ewé ilé</string>
@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Yọ kúrò</string>
     <string name="wikis_replicas_remove_failed">Kò lè mú replica kúrò</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Àwọn Wiki</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">Àwọn ìfitónilétí nípa àtúnṣe ojú-ìwé wiki, àsọyé àti ìpè.</string>
     <string name="wikis_pageview_toc_expand">Fi àtòjọ àkóónú hàn</string>
@@ -225,7 +225,7 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">A ṣe àtúnṣe ní %1$s</string>
     <string name="wikis_pageview_not_found_description">Ojú-ìwé “%1$s” kò tíì sí.</string>
-    <string name="wikis_pageview_share_chooser">Ọ̀nà wiki</string>
+    <string name="wikis_pageview_share_chooser">Ọ̀nà àsopọ̀ wiki</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">Ọ̀nà àsopọ̀</string>
     <string name="wikis_open_sidebar">Ṣí akọtọ ẹgbẹ</string>
@@ -239,7 +239,7 @@
     <string name="wikis_comments_title_template">%1$s - Àwọn àlàyé</string>
     <string name="wikis_comment_form_placeholder_new">Kọ àsọyé…</string>
     <string name="wikis_comment_form_placeholder_reply">Kọ ìdáhùn…</string>
-    <string name="wikis_comment_form_send">Firanṣẹ</string>
+    <string name="wikis_comment_form_send">Firánṣẹ́</string>
     <string name="wikis_comment_form_remove_attachment">Yọ àsomọ́ kúrò</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Kọ àkóónú rẹ níbí pẹ̀lú Markdown…</string>

@@ -3,17 +3,17 @@
 
     <string name="forums_auth_display_name">Emri i shfaqur</string>
     <string name="forums_auth_verification_failed">Verifikimi dështoi</string>
-    <string name="forums_list_title">Forumet</string>
+    <string name="forums_list_title">Forume</string>
     <string name="forums_list_find">Gjej forume</string>
     <string name="forums_list_logout">Dilni</string>
     <string name="forums_list_unsubscribe">Çabonohu</string>
     <string name="forums_list_unsubscribe_title">Çabonohu</string>
     <string name="forums_create_title">Krijo forum</string>
-    <string name="forums_create_name">Emri</string>
+    <string name="forums_create_name">Emri i forumit</string>
     <string name="forums_create_privacy">Privatësia</string>
     <string name="forums_create_private">Privat</string>
     <string name="forums_create_public">Publik</string>
-    <string name="forums_create_action">Krijo</string>
+    <string name="forums_create_action">Krijo forum</string>
     <string name="forums_find_title">Gjej forume</string>
     <string name="forums_find_recommended">I rekomanduar</string>
     <string name="forums_find_subscribe">Abonohu</string>
@@ -156,8 +156,8 @@
     <string name="forums_banner_placeholder">Mirë se vini në këtë forum…</string>
     <string name="forums_ai_mode_label">Mënyra: %1$s</string>
     <string name="forums_ai_mode_heading">Mënyra e AI-së</string>
-    <string name="forums_ai_mode_off">Joaktive</string>
-    <string name="forums_ai_account">Llogaria e AI-së</string>
+    <string name="forums_ai_mode_off">I çaktivizuar</string>
+    <string name="forums_ai_account">Llogaria AI</string>
     <string name="forums_ai_prompt_tag">Kërkesa për etiketim</string>
     <string name="forums_ai_prompt_score">Kërkesa për vlerësim</string>
     <string name="forums_ai_post_prompt_label">Kërkesë për etiketat e postimeve</string>
@@ -205,7 +205,7 @@
         <item quantity="one">%d postim i ri</item>
         <item quantity="other">%d postime të reja</item>
     </plurals>
-    <string name="forums_rss_feed">Burimi RSS</string>
+    <string name="forums_rss_feed">Prurje RSS</string>
     <string name="forums_rss_mode_posts">Postimet</string>
     <string name="forums_rss_mode_posts_comments">Postimet dhe komentet</string>
     <string name="forums_rss_copied">URL e RSS u kopjua në clipboard</string>
@@ -256,7 +256,7 @@
     <string name="forums_access_select_group">Zgjidhni një grup</string>
     <string name="forums_access_select_rule">Zgjidhni një rregull</string>
     <string name="forums_ai_actions_label">Veprimet e IA-së në postime</string>
-    <string name="forums_ai_prompt_custom">I personalizuar</string>
+    <string name="forums_ai_prompt_custom">Personalizuar</string>
     <string name="forums_ai_prompt_score_label">Prompti i vlerësimit</string>
     <string name="forums_ai_prompt_tag_label">Prompti i etiketave</string>
     <string name="forums_ai_prompt_variables">Variablat: %1$s</string>
@@ -277,7 +277,7 @@
     <string name="forums_moderation_restriction_remove_message">Rifiton menjëherë aksesin e plotë në forum.</string>
     <string name="forums_moderation_restriction_remove_title">Të hiqet kufizimi për %1$s?</string>
     <string name="forums_moderation_restriction_state_muted">I heshtur</string>
-    <string name="forums_moderation_restriction_state_shadowban">Bllokim i fshehtë</string>
+    <string name="forums_moderation_restriction_state_shadowban">I përjashtuar fshehurazi</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Asnjë përdorues nuk është heshtur ose bllokuar</string>
     <string name="forums_moderation_section_premoderation_description">Kërko miratim përpara se përmbajtja të bëhet e dukshme</string>
     <string name="forums_moderation_section_ratelimiting_description">Parandaloni spamin duke kufizuar sa shpesh përdoruesit mund të postojnë</string>

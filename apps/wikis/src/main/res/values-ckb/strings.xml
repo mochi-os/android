@@ -16,7 +16,7 @@
     <string name="wikis_page_action_rename">ناوگۆڕکردن</string>
     <string name="wikis_page_action_history">مێژوو</string>
     <string name="wikis_page_action_delete">سڕینەوە</string>
-    <string name="wikis_page_action_section_wiki">Wiki</string>
+    <string name="wikis_page_action_section_wiki">ویکی</string>
     <string name="wikis_page_action_search">گەڕان</string>
     <string name="wikis_page_action_tags">تاگەکان</string>
     <string name="wikis_page_action_recent_changes">گۆڕانکارییە نوێیەکان</string>
@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">لابردن</string>
     <string name="wikis_replicas_remove_failed">لابردنی Replica سەرکەوتوو نەبوو</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki-یەکان</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">ئاگادارکردنەوە دەربارەی دەستکاری لاپەڕەی wiki، لێدوان و بانگهێشتنامەکان.</string>
     <string name="wikis_pageview_toc_expand">پێڕستی ناوەڕۆک پیشان بدە</string>
@@ -282,7 +282,7 @@
     <string name="wikis_replicas_removed_success">کۆپی لابرا</string>
     <string name="wikis_load_more">زیاتر باربکە</string>
     <string name="wikis_access_change_level">ئاستی دەستڕاگەیشتن</string>
-    <string name="wikis_access_subject_anyone">هەرکەسێک</string>
+    <string name="wikis_access_subject_anyone">هەر کەسێک</string>
     <string name="wikis_access_subject_authenticated">بەکارهێنەرە پشتڕاستکراوەکان</string>
 
     <string name="wikis_revision_compare">بەراوردکردنی گۆڕانکارییەکان</string>

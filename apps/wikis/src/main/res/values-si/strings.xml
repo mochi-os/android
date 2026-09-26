@@ -16,7 +16,7 @@
     <string name="wikis_page_action_rename">නැවත නම් කරන්න</string>
     <string name="wikis_page_action_history">ඉතිහාසය</string>
     <string name="wikis_page_action_delete">මකන්න</string>
-    <string name="wikis_page_action_section_wiki">wiki</string>
+    <string name="wikis_page_action_section_wiki">විකි</string>
     <string name="wikis_page_action_search">සොයන්න</string>
     <string name="wikis_page_action_tags">ටැග</string>
     <string name="wikis_page_action_recent_changes">මෑත වෙනස්කම්</string>
@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">ඉවත් කරන්න</string>
     <string name="wikis_replicas_remove_failed">අනුරූ ඉවත් කිරීමට අසමත් විය</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi විකි</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">wiki පිටු සංස්කරණ, අදහස් සහ ආරාධනා පිළිබඳ දැනුම්දීම්.</string>
     <string name="wikis_pageview_toc_expand">අන්තර්ගත වගුව පෙන්වන්න</string>
@@ -283,7 +283,7 @@
     <string name="wikis_load_more">තවත් පූරණය කරන්න</string>
     <string name="wikis_access_change_level">ප්‍රවේශ මට්ටම</string>
     <string name="wikis_access_subject_anyone">ඕනෑම කෙනෙක්</string>
-    <string name="wikis_access_subject_authenticated">සත්‍යාපිත පරිශීලකයින්</string>
+    <string name="wikis_access_subject_authenticated">සත්‍යාපිත පරිශීලකයන්</string>
 
     <string name="wikis_revision_compare">වෙනස්කම් සංසන්දනය කරන්න</string>
     <string name="wikis_revision_author">%1$s අනුව</string>

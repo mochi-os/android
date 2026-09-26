@@ -6,7 +6,7 @@
     <string name="crm_list_logout">Одјави се</string>
     <string name="crm_list_create">Креирај CRM</string>
     <string name="crm_create_title">Креирај CRM</string>
-    <string name="crm_create_name">Име</string>
+    <string name="crm_create_name">Назив</string>
     <string name="crm_create_description">Опис</string>
     <string name="crm_create_template_none">Ништа</string>
     <string name="crm_create_action">Креирај</string>
@@ -16,7 +16,7 @@
     <string name="crm_watched">Праћено</string>
     <string name="crm_create_object">Креирај објекат</string>
     <string name="crm_search">Претражи</string>
-    <string name="crm_settings">Поставке</string>
+    <string name="crm_settings">Подешавања</string>
     <string name="crm_link">Веза</string>
     <string name="crm_design">Дизајн</string>
     <string name="crm_export_failed">Извоз није могуће сачувати</string>
@@ -27,14 +27,14 @@
     <string name="crm_create_object_title">Креирај објекат</string>
     <string name="crm_create_object_type">Тип</string>
     <string name="crm_create_object_parent">Родитељ</string>
-    <string name="crm_settings_title">Поставке</string>
+    <string name="crm_settings_title">Подешавања</string>
     <string name="crm_settings_tab_general">Опште</string>
     <string name="crm_settings_tab_access">Приступ</string>
     <string name="crm_settings_tab_people">Људи</string>
     <string name="crm_option_icon">Икона</string>
     <string name="crm_option_icon_placeholder">нпр. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Откажи претплату</string>
-    <string name="crm_settings_delete_crm">Обриши пројекат</string>
+    <string name="crm_settings_delete_crm">Обриши CRM</string>
     <string name="crm_settings_delete_confirm_title">Обриши CRM</string>
     <string name="crm_settings_unsubscribe_title">Откажи претплату</string>
     <string name="crm_settings_unsubscribe_message">Да ли сте сигурни да желите да се одјавите са овог CRM-а?</string>
@@ -86,7 +86,7 @@
     <string name="crm_classes_add">Додај класу</string>
     <string name="crm_classes_add_dialog_title">Додај класу</string>
     <string name="crm_classes_create">Креирај</string>
-    <string name="crm_class_name">Име</string>
+    <string name="crm_class_name">Назив</string>
     <string name="crm_class_save_name">Сачувај назив</string>
     <string name="crm_class_title_field">Поље наслова</string>
     <string name="crm_class_fields">Поља</string>
@@ -98,7 +98,7 @@
     <string name="crm_field_type_user">Корисник</string>
     <string name="crm_field_type_date">Датум</string>
     <string name="crm_field_type_checklist">Чек-листа</string>
-    <string name="crm_field_name">Име</string>
+    <string name="crm_field_name">Назив</string>
     <string name="crm_field_type">Тип</string>
     <string name="crm_field_flags">Заставице</string>
     <string name="crm_field_required">Обавезно</string>
@@ -166,7 +166,7 @@
     <string name="crm_comment_replying_to">Одговор за %1$s</string>
     <string name="crm_comment_clear_reply">Откажи одговор</string>
     <string name="crm_comment_placeholder">Додај коментар</string>
-    <string name="crm_property_pick_date">Изаберите датум</string>
+    <string name="crm_property_pick_date">Изабери датум</string>
     <string name="crm_property_ok">У реду</string>
     <string name="crm_property_add_item">Додај ставку</string>
     <string name="crm_property_required">%1$s је обавезно</string>
@@ -191,10 +191,10 @@
     <string name="crm_move_to_column">Премести у колону</string>
     <string name="crm_move_to_row">Премести у ред</string>
     <string name="crm_move_after">После %1$s</string>
-    <string name="crm_drag_card">Превуците картицу</string>
-    <string name="crm_drag_row">Превуците ред</string>
-    <string name="crm_drag_column">Превуците колону</string>
-    <string name="crm_design_more_options">Више опција</string>
+    <string name="crm_drag_card">Превуци картицу</string>
+    <string name="crm_drag_row">Превуци ред</string>
+    <string name="crm_drag_column">Превуци колону</string>
+    <string name="crm_design_more_options">Још опција</string>
     <string name="crm_design_no_templates">Нема доступних шаблона</string>
     <string name="crm_design_use">Користи</string>
     <string name="crm_design_replace_message">Ово ће заменити тренутни дизајн са %1$s. Све постојеће класе, поља, опције и прикази биће обрисани. Постојећи објекти неће бити обрисани, али се можда више неће појављивати у приказима.</string>

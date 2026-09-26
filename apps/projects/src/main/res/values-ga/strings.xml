@@ -186,7 +186,7 @@
     <string name="projects_list_empty">Níl aon tionscadal ann go fóill</string>
     <string name="projects_find_search_placeholder">Cuardaigh tionscadail nó greamaigh URL</string>
     <string name="projects_find_search_hint">Cuardaigh tionscadail le liostáil leo</string>
-    <string name="projects_create_object_parent_none">(gan tuismitheoir)</string>
+    <string name="projects_create_object_parent_none">(faic)</string>
     <string name="projects_add_child">Cuir leanbh leis</string>
     <string name="projects_views_filter">Scagaire (stóráilte, gan a chur i bhfeidhm fós)</string>
     <string name="projects_people_empty">Níl rochtain ag aon duine go fóill</string>
@@ -199,10 +199,10 @@
     <string name="projects_parent_none">Gan tuismitheoir</string>
     <string name="projects_links_empty">Gan naisc</string>
     <string name="projects_links_section_relates">Bainteach le</string>
-    <string name="projects_links_section_duplicated_by">Dúblach ag</string>
+    <string name="projects_links_section_duplicated_by">Dúbailte ag</string>
     <string name="projects_links_type">Cineál naisc</string>
     <string name="projects_links_type_relates">Bainteach le</string>
-    <string name="projects_links_remove">Bain nasc</string>
+    <string name="projects_links_remove">Bain an nasc</string>
     <string name="projects_comment_replying_to">Ag freagairt do %1$s</string>
     <string name="projects_comment_clear_reply">Glan freagra</string>
     <string name="projects_comment_placeholder">Cuir nóta tráchta leis</string>
@@ -283,8 +283,8 @@
     <string name="projects_field_type_enumerated">Áirithe</string>
     <string name="projects_field_label">Réimse: %1$s</string>
     <string name="projects_field_readonly">Inléite amháin</string>
-    <string name="projects_field_sortable">Sórtáilte</string>
-    <string name="projects_field_filterable">Infhiltrithe</string>
+    <string name="projects_field_sortable">In-shórtáilte</string>
+    <string name="projects_field_filterable">In-scagtha</string>
     <string name="projects_field_show_on_card">Taispeáin ar an gcárta</string>
     <string name="projects_field_multi">Ilroghnú</string>
     <string name="projects_field_position">Suíomh taispeána</string>

@@ -215,7 +215,7 @@
     <string name="wikis_replicas_remove_confirm_title">Alih keluar replika?</string>
     <string name="wikis_replicas_remove_confirm_action">Alih keluar</string>
     <string name="wikis_replicas_remove_failed">Gagal mengalih keluar replika</string>
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki</string>
     <string name="wikis_channel_name">Pemberitahuan Wikis</string>
     <string name="wikis_channel_description">Pemberitahuan tentang suntingan halaman, komen dan jemputan.</string>
     <string name="wikis_pageview_toc_expand">Tunjukkan kandungan</string>
@@ -271,7 +271,7 @@
     <string name="wikis_attachments_downloading">Memuat turun…</string>
     <string name="wikis_attachments_empty_description">Ketik Muat Naik untuk menambah fail ke halaman ini.</string>
     <string name="wikis_settings_name_save_cd">Simpan nama</string>
-    <string name="wikis_settings_name_cancel_cd">Batalkan suntingan</string>
+    <string name="wikis_settings_name_cancel_cd">Batal suntingan</string>
     <string name="wikis_access_level_label">Kebenaran</string>
     <string name="wikis_access_set_failed">Gagal mengemas kini akses</string>
     <string name="wikis_replicas_col_subscribed">Dilanggan: %1$s</string>
@@ -280,7 +280,7 @@
     <string name="wikis_replicas_removed_success">Replika dibuang</string>
     <string name="wikis_load_more">Muatkan lagi</string>
     <string name="wikis_access_change_level">Tahap akses</string>
-    <string name="wikis_access_subject_anyone">Sesiapa</string>
+    <string name="wikis_access_subject_anyone">Sesiapa sahaja</string>
     <string name="wikis_access_subject_authenticated">Pengguna disahkan</string>
     <string name="wikis_revision_compare">Bandingkan perubahan</string>
     <string name="wikis_revision_author">mengikut %1$s</string>

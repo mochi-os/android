@@ -125,7 +125,7 @@
     <string name="game_chat_move_played">%1$s %2$s oýnady</string>
 
     <string name="error_network">Birikdirip bolmady. Internet birikmäňizi barlap, ýene synanyşyň.</string>
-    <string name="error_authentication_required">Tanamaklyk talap edilýär</string>
+    <string name="error_authentication_required">Tassyklamak gerek</string>
     <string name="error_not_found">Tapylmady</string>
     <string name="error_server">Server ýalňyşlygy (%1$d). Soňra ýene synanyşyň.</string>
     <string name="error_unexpected">Garaşylmadyk ýalňyşlyk ýüze çykdy</string>
@@ -133,7 +133,7 @@
     <string name="error_enter_email">E-poçtaňyzy giriziň</string>
     <string name="error_enter_name">At giriziň</string>
     <string name="auth_connect_to_server">Serweriňize birikiň</string>
-    <string name="auth_connect">Birik</string>
+    <string name="auth_connect">Birikdir</string>
     <string name="auth_sign_in">Girmek</string>
     <string name="auth_check_email">Tassyklama kody üçin e-poçtaňyzy barlaň</string>
     <string name="auth_mfa_title">Köp faktorly tanamaklyk</string>
@@ -146,7 +146,7 @@
     <string name="auth_use_passkey">Passkey ulanyň</string>
     <string name="auth_email_me_a_code">Maňa e-poçta arkaly kod iberiň</string>
     <string name="auth_or_enter_authenticator_code">Ýa-da Authenticator kodyny giriziň</string>
-    <string name="auth_log_in">Girmek</string>
+    <string name="auth_log_in">Gir</string>
     <string name="auth_back">Yza</string>
     <string name="auth_lost_access_recovery">Giriş ýitirdiňizmi? Dikeldiş kodyny ulanyň</string>
     <string name="auth_create_identity_title">Şahsyýetiňizi dörediň</string>
@@ -162,10 +162,10 @@
     <string name="bootstrap_sign_in_differently">Başgaça girmek</string>
     <string name="bootstrap_choose_account">Hasap saýlaň</string>
     <string name="bootstrap_sign_in_different_server">Başga serwere girmek</string>
-    <string name="common_retry">Gaýtala</string>
-    <string name="common_more_options">Beýleki saýlawlar</string>
-    <string name="common_collapse">Ýyg</string>
-    <string name="common_expand">Aç</string>
+    <string name="common_retry">Gaýtadan synanyş</string>
+    <string name="common_more_options">Goşmaça opsiýalar</string>
+    <string name="common_collapse">Ýygnamak</string>
+    <string name="common_expand">Giňeltmek</string>
     <string name="common_play_video">Wideony oýnat</string>
     <string name="place_picker_name">Ýeriň ady</string>
     <string name="place_origin">Çykyş ýeri</string>
@@ -310,7 +310,7 @@
     <string name="settings_card_flat">Tekiz</string>
     <string name="settings_card_raised">Galdyrylan</string>
     <string name="error_server_https">Serweriň salgysy https:// bilen başlamaly</string>
-    <string name="device_name_fallback">Ykjam enjam</string>
+    <string name="device_name_fallback">Mobil enjam</string>
     <string name="account_error_token_type">Goldanylmaýan token görnüşi</string>
     <string name="account_error_caller">Çagyryja rugsat berilmeýär</string>
 </resources>

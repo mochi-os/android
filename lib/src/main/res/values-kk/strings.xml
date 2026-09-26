@@ -162,7 +162,7 @@
     <string name="bootstrap_sign_in_differently">Басқаша кіру</string>
     <string name="bootstrap_choose_account">Тіркелгіні таңдау</string>
     <string name="bootstrap_sign_in_different_server">Басқа серверге кіру</string>
-    <string name="common_retry">Қайталау</string>
+    <string name="common_retry">Қайталап көру</string>
     <string name="common_more_options">Қосымша опциялар</string>
     <string name="common_collapse">Жию</string>
     <string name="common_expand">Жаю</string>
@@ -210,7 +210,7 @@
     <string name="about_up_to_date">Соңғы нұсқа</string>
     <string name="about_check_downloading">%1$s нұсқасы қолжетімді, жүктелуде…</string>
     <string name="about_check_network_error">Жаңарту серверіне қосыла алмады</string>
-    <string name="about_check_download_failed">Жүктеу сәтсіз аяқталды</string>
+    <string name="about_check_download_failed">Жүктеп алу сәтсіз аяқталды</string>
     <string name="notifications_clear_all_title">Барлық хабарландырулар тазалансын ба?</string>
     <string name="notifications_clear_all_message">Бұл әрбір хабарландыруды жояды. Оларды қалпына келтіру мүмкін емес.</string>
     <string name="settings_value_auto">Автоматты</string>
@@ -238,7 +238,7 @@
     <string name="stepup_error_oauth">Бұл тіркелгі арқылы тексеру мүмкін болмады. Қайталап көріңіз.</string>
     <string name="game_system_resign">%1$s берілді</string>
     <string name="game_system_draw_offer">%1$s тең ойынды ұсынды</string>
-    <string name="game_system_draw_accept">Тең ойын келісілді</string>
+    <string name="game_system_draw_accept">Тең ойынға келісілді</string>
     <string name="game_system_draw_decline">%1$s тең ойыннан бас тартты</string>
     <string name="reactivation_title">Тіркелгіңіз жойылуға жоспарланған</string>
     <string name="reactivation_body">Тіркелгіңіз жойылуға жоспарланған. Қазір бас тартып, толық қол жеткізуді қалпына келтіре аласыз.</string>
@@ -264,7 +264,7 @@
     <string name="person_picker_none">Жоқ</string>
     <string name="person_picker_clear">Таңдауды тазалау</string>
     <string name="person_picker_select">Таңдаңыз …</string>
-    <string name="person_picker_directory">Анықтамалық</string>
+    <string name="person_picker_directory">Каталог</string>
     <string name="person_picker_no_people">Адамдар жоқ</string>
     <string name="person_picker_project_members">Жоба мүшелері</string>
     <string name="account_token_label">Mochi сеансы</string>

@@ -30,7 +30,7 @@
     <string name="staff_accounts_status_active">چالاک</string>
     <string name="staff_accounts_status_banned">بلۆککراو</string>
     <string name="staff_accounts_status_suspended">ڕاگیراوە</string>
-    <string name="staff_accounts_submitting">ناردن…</string>
+    <string name="staff_accounts_submitting">دەنێردرێت…</string>
     <string name="staff_accounts_suspend">ڕاگرتن</string>
     <string name="staff_accounts_suspended_toast">هەژمار ڕاگیراوە</string>
     <string name="staff_accounts_unban">هەڵوەشاندنەوەی قەدەغە</string>
@@ -52,7 +52,7 @@
     <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">تێبینییەکان</string>
     <string name="staff_appeals_submit">ناردن</string>
-    <string name="staff_appeals_submitting">ناردن…</string>
+    <string name="staff_appeals_submitting">دەنێردرێت…</string>
     <string name="staff_appeals_upheld_toast">تانە پشتگیری کرا</string>
     <string name="staff_audit_action_account_banned">بلۆککراو</string>
     <string name="staff_audit_action_account_seller_activated">فرۆشیار چالاککرا</string>
@@ -166,7 +166,7 @@
     <string name="staff_config_field_stripe_oauth_client">ناسنامەی کڵاینتی OAuth</string>
     <string name="staff_config_field_stripe_publishable">کلیلی بڵاوکراوە</string>
     <string name="staff_config_field_stripe_secret">کلیلی نهێنی</string>
-    <string name="staff_config_group_moderation">نەزمی</string>
+    <string name="staff_config_group_moderation">چاودێری</string>
     <string name="staff_config_group_payments">پارەدانەکان</string>
     <string name="staff_config_group_reviews">هەڵسەنگاندنەکان</string>
     <string name="staff_config_group_stripe">Stripe</string>
@@ -183,7 +183,7 @@
     <string name="staff_dashboard_col_date">بەروار</string>
     <string name="staff_dashboard_col_detail">وردەکاری</string>
     <string name="staff_dashboard_col_listing">ناونووسکراو</string>
-    <string name="staff_dashboard_col_moderation">نەزمی</string>
+    <string name="staff_dashboard_col_moderation">چاودێری</string>
     <string name="staff_dashboard_col_name">ناو</string>
     <string name="staff_dashboard_col_object">تەن</string>
     <string name="staff_dashboard_col_reason">هۆکار</string>
@@ -211,7 +211,7 @@
     <string name="staff_dashboard_system">سیستەم</string>
     <string name="staff_dashboard_tab_audit">پشکنین</string>
     <string name="staff_dashboard_tab_listings">ناونووسکراوەکان</string>
-    <string name="staff_dashboard_tab_moderation">نەزمی</string>
+    <string name="staff_dashboard_tab_moderation">چاودێری</string>
     <string name="staff_dashboard_tab_orders">داواکارییەکان</string>
     <string name="staff_dashboard_tab_signups">تۆمارکردنەکان</string>
     <string name="staff_dashboard_yes">بەڵێ</string>
@@ -255,10 +255,10 @@
     <string name="staff_disputes_view">بینین</string>
     <string name="staff_filter_chip_remove">لابردنی فلتەر</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
-    <string name="staff_filter_label_moderation">مۆدێراسیۆن</string>
+    <string name="staff_filter_label_moderation">چاودێری</string>
     <string name="staff_filter_label_query">گەڕان</string>
     <string name="staff_filter_label_seller">فرۆشیار</string>
-    <string name="staff_filter_label_status">بار</string>
+    <string name="staff_filter_label_status">دۆخ</string>
     <string name="staff_filter_label_type">جۆر</string>
     <string name="staff_listings_action_approve_title">پەسەندکردنی لیستە</string>
     <string name="staff_listings_action_reject_title">ڕەتکردنەوەی لیست</string>
@@ -269,7 +269,7 @@
     <string name="staff_listings_approved_toast">ناونووسکراو پەسەند کرا</string>
     <string name="staff_listings_cancel">هەڵوەشاندنەوە</string>
     <string name="staff_listings_empty">هیچ لیستێک نییە</string>
-    <string name="staff_listings_filter_moderation_label">نەزمی</string>
+    <string name="staff_listings_filter_moderation_label">چاودێری</string>
     <string name="staff_listings_filter_status_label">دۆخ</string>
     <string name="staff_listings_moderation_auto_approved">خۆکار پەسەند کرا</string>
     <string name="staff_listings_moderation_hold">ڕاگرتن</string>
@@ -293,7 +293,7 @@
     <string name="staff_listings_status_rejected">ڕەتکراوەتەوە</string>
     <string name="staff_listings_status_removed">لابرا</string>
     <string name="staff_listings_status_sold">فرۆشرا</string>
-    <string name="staff_listings_submitting">ناردن…</string>
+    <string name="staff_listings_submitting">دەنێردرێت…</string>
     <string name="staff_moderation_empty">هیچ تۆمارێکی ڕێکخستن نییە</string>
     <string name="staff_moderation_filter_clear">پاککردنەوەی فلتەر</string>
     <string name="staff_moderation_listing_filter_placeholder">ناسنامەی ناونووسکراو</string>
@@ -335,7 +335,7 @@
     <string name="staff_reports_status_pending">چاوەڕوان</string>
     <string name="staff_reports_status_reviewed">هەڵسەنگێندرا</string>
     <string name="staff_reports_submit">ناردن</string>
-    <string name="staff_reports_submitting">ناردن…</string>
+    <string name="staff_reports_submitting">دەنێردرێت…</string>
     <string name="staff_reports_type_listing">ناونووسکراو</string>
     <string name="staff_reports_type_user">بەکارهێنەر</string>
     <string name="staff_reports_view">بینین</string>
@@ -361,7 +361,7 @@
     <string name="staff_sidebar_disputes">ناکۆکییەکان</string>
     <string name="staff_sidebar_listings">ناونووسکراوەکان</string>
     <string name="staff_sidebar_management">بەڕێوەبردن</string>
-    <string name="staff_sidebar_market">Market</string>
+    <string name="staff_sidebar_market">بازاڕ</string>
     <string name="staff_sidebar_moderation">لۆگی نەزمی</string>
     <string name="staff_sidebar_overview">گشتی</string>
     <string name="staff_sidebar_reports">ڕاپۆرتەکان</string>
@@ -420,7 +420,7 @@
     <string name="staff_team_toast_removed">ئەندام لابرا</string>
     <string name="staff_team_toast_role_updated">ڕۆڵ نوێکرایەوە</string>
 
-    <string name="staff_audit_action_auction_cancelled">مەزایدە هەڵوەشێنرایەوە</string>
+    <string name="staff_audit_action_auction_cancelled">مەزاد هەڵوەشایەوە</string>
     <string name="staff_dashboard_order_fallback">داواکاری #%1$s</string>
     <string name="staff_disputes_meta_seller_response">وەڵامی فرۆشیار</string>
 

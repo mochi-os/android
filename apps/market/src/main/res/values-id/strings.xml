@@ -41,7 +41,7 @@
     <string name="market_bids_tab_active">Aktif</string>
     <string name="market_bids_tab_all">Semua</string>
     <string name="market_bids_tab_lost">Kalah</string>
-    <string name="market_bids_tab_outbid">Tertawar</string>
+    <string name="market_bids_tab_outbid">Tawaran dilampaui</string>
     <string name="market_bids_tab_won">Menang</string>
     <string name="market_bids_title">Penawaran</string>
     <string name="market_channel_name">Pasar</string>
@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Laporkan listing</string>
     <string name="market_listing_detail_save">Simpan</string>
     <string name="market_listing_detail_seller_heading">Penjual</string>
-    <string name="market_listing_detail_shipping_heading">Pengiriman</string>
+    <string name="market_listing_detail_shipping_heading">Opsi pengiriman</string>
     <string name="market_listing_detail_subscribe">Berlangganan</string>
     <string name="market_listing_detail_tags_heading">Tag</string>
     <string name="market_listing_detail_title">Daftar</string>
@@ -327,7 +327,7 @@
     <string name="market_saved_title">Tersimpan</string>
     <string name="market_search_clear">Bersihkan pencarian</string>
     <string name="market_section_categories">Jelajahi Kategori</string>
-    <string name="market_section_listings">Daftar Terbaru</string>
+    <string name="market_section_listings">Daftar terbaru</string>
     <string name="market_section_recent">Baru dilihat</string>
     <string name="market_ship_dialog_cancel">Batal</string>
     <string name="market_ship_dialog_submit">Konfirmasi</string>
@@ -544,10 +544,10 @@
     <string name="market_listings_action_share">Bagikan</string>
     <string name="market_listings_delete_failed">Gagal menghapus listing</string>
     <string name="market_listings_delete_message">Ini menghapus draf secara permanen dari akun Anda.</string>
-    <string name="market_listings_delete_title">Hapus listing?</string>
+    <string name="market_listings_delete_title">Hapus daftar?</string>
     <string name="market_listings_empty_subtitle">Ketuk Listing baru untuk membuat item pertama Anda.</string>
     <string name="market_listings_load_failed">Gagal memuat listing Anda</string>
-    <string name="market_listings_new">Listing baru</string>
+    <string name="market_listings_new">Daftar baru</string>
     <string name="market_listings_search_placeholder">Cari listing Anda</string>
     <string name="market_listings_share_chooser">Bagikan listing</string>
     <string name="market_messages_compose_placeholder">Tulis pesan…</string>

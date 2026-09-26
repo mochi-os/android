@@ -163,11 +163,11 @@
     <string name="people_contact_family">성</string>
     <string name="people_contact_nickname">별명</string>
     <string name="people_contact_add_email">이메일 추가</string>
-    <string name="people_contact_add_phone">전화 추가</string>
+    <string name="people_contact_add_phone">전화번호 추가</string>
     <string name="people_contact_add_address">주소 추가</string>
-    <string name="people_contact_street">도로명</string>
+    <string name="people_contact_street">도로명 주소</string>
     <string name="people_contact_birthday">생일</string>
-    <string name="people_contact_organisation">조직</string>
+    <string name="people_contact_organisation">회사</string>
     <string name="people_contact_url">웹사이트</string>
     <string name="people_contact_note">메모</string>
     <string name="people_contact_book">주소록</string>

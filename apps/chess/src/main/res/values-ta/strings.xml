@@ -32,8 +32,8 @@
     <string name="chess_draw_accept">ஏற்றுக்கொள்</string>
     <string name="chess_draw_decline">மறு</string>
     <string name="chess_status_checkmate_you_win">செக்மேட் — நீங்கள் வென்றீர்கள்!</string>
-    <string name="chess_status_stalemate">முட்டுச் சந்து — டிரா</string>
-    <string name="chess_status_draw">டிரா</string>
+    <string name="chess_status_stalemate">முட்டுக்கட்டை — சமநிலை</string>
+    <string name="chess_status_draw">சமநிலை</string>
     <string name="chess_status_check_your_move">செக் — உங்கள் நகர்வு</string>
     <string name="chess_status_your_move">உங்கள் நகர்வு</string>
     <string name="chess_move_subject_you">நீங்கள்</string>

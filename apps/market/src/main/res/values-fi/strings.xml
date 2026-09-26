@@ -41,7 +41,7 @@
     <string name="market_bids_tab_active">Aktiivinen</string>
     <string name="market_bids_tab_all">Kaikki</string>
     <string name="market_bids_tab_lost">Hävitty</string>
-    <string name="market_bids_tab_outbid">Ohitettu</string>
+    <string name="market_bids_tab_outbid">Ylitarjottu</string>
     <string name="market_bids_tab_won">Voitettu</string>
     <string name="market_bids_title">Tarjoukset</string>
     <string name="market_channel_name">Markkinapaikka</string>
@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Ilmoita ilmoituksesta</string>
     <string name="market_listing_detail_save">Tallenna</string>
     <string name="market_listing_detail_seller_heading">Myyjä</string>
-    <string name="market_listing_detail_shipping_heading">Toimitus</string>
+    <string name="market_listing_detail_shipping_heading">Toimitustavat</string>
     <string name="market_listing_detail_subscribe">Tilaa</string>
     <string name="market_listing_detail_tags_heading">Tunnisteet</string>
     <string name="market_listing_detail_title">Ilmoitus</string>
@@ -327,7 +327,7 @@
     <string name="market_saved_title">Tallennetut</string>
     <string name="market_search_clear">Tyhjennä haku</string>
     <string name="market_section_categories">Selaa kategorioita</string>
-    <string name="market_section_listings">Uusimmat ilmoitukset</string>
+    <string name="market_section_listings">Viimeaikaiset ilmoitukset</string>
     <string name="market_section_recent">Viimeksi katsotut</string>
     <string name="market_ship_dialog_cancel">Peruuta</string>
     <string name="market_ship_dialog_submit">Vahvista</string>
@@ -381,7 +381,7 @@
     <string name="market_subscription_detail_started">Alkoi %1$s</string>
     <string name="market_subscription_detail_title">Tilaus</string>
     <string name="market_subscriptions_action_cancel">Peruuta</string>
-    <string name="market_subscriptions_action_pause">Tauko</string>
+    <string name="market_subscriptions_action_pause">Keskeytä</string>
     <string name="market_subscriptions_action_reactivate">Aktivoi uudelleen</string>
     <string name="market_subscriptions_action_resubscribe">Tilaa uudelleen</string>
     <string name="market_subscriptions_action_resume">Jatka</string>
@@ -607,7 +607,7 @@
     <string name="market_sale_dispute_state_responded">Odottaa päätöstä</string>
     <string name="market_sale_dispute_stripe_reason">Stripe-takaisinveloituksen syy: %1$s</string>
     <string name="market_sale_fee_gross">Brutto</string>
-    <string name="market_sale_fee_mochi">Mochi-palkkio</string>
+    <string name="market_sale_fee_mochi">Mochi-maksu</string>
     <string name="market_sale_fee_payout">Nettotilitys</string>
     <string name="market_sale_fee_stripe">Stripen käsittelymaksu</string>
     <string name="market_sale_fee_stripe_note">Stripen käsittelymaksut näkyvät Stripe-hallintapaneelissasi.</string>
@@ -628,7 +628,7 @@
     <string name="market_saved_empty_title">Ei tallennettuja ilmoituksia</string>
     <string name="market_search_placeholder">Hae torilta</string>
     <string name="market_status_past_due">Erääntynyt</string>
-    <string name="market_stripe_onboarding_action">Jatka käyttöönottoa</string>
+    <string name="market_stripe_onboarding_action">Jatka määritystä</string>
     <string name="market_stripe_onboarding_body">Viimeistele Stripen käyttöönotto ennen kuin voit vastaanottaa tilityksiä.</string>
     <string name="market_stripe_onboarding_failed">Stripen avaaminen epäonnistui</string>
     <string name="market_stripe_onboarding_opening">Avataan Stripea…</string>

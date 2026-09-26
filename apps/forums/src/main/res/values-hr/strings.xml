@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Otkaži pretplatu</string>
     <string name="forums_list_unsubscribe_title">Otkaži pretplatu</string>
     <string name="forums_create_title">Stvori forum</string>
-    <string name="forums_create_name">Naziv</string>
+    <string name="forums_create_name">Naziv foruma</string>
     <string name="forums_create_privacy">Privatnost</string>
     <string name="forums_create_private">Privatno</string>
     <string name="forums_create_public">Javno</string>
-    <string name="forums_create_action">Stvori</string>
+    <string name="forums_create_action">Stvori forum</string>
     <string name="forums_find_title">Pronađi forume</string>
     <string name="forums_find_recommended">Preporučeno</string>
     <string name="forums_find_subscribe">Pretplati se</string>
@@ -71,7 +71,7 @@
     <string name="forums_ai_account_default">Zadani račun</string>
     <string name="forums_ai_prompt_reset">Resetiraj na zadano</string>
     <string name="forums_settings_unsubscribe">Otkaži pretplatu</string>
-    <string name="forums_moderation_title">Moderacija</string>
+    <string name="forums_moderation_title">Moderiranje</string>
     <string name="forums_moderation_tab_queue">Red</string>
     <string name="forums_moderation_tab_reports">Prijave</string>
     <string name="forums_moderation_tab_log">Zapisnik</string>
@@ -156,7 +156,7 @@
     <string name="forums_banner_placeholder">Dobro došli na ovaj forum…</string>
     <string name="forums_ai_mode_label">Način: %1$s</string>
     <string name="forums_ai_mode_heading">AI način</string>
-    <string name="forums_ai_mode_off">Isključeno</string>
+    <string name="forums_ai_mode_off">Onemogućeno</string>
     <string name="forums_ai_account">AI račun</string>
     <string name="forums_ai_prompt_tag">Upit za označavanje</string>
     <string name="forums_ai_prompt_score">Upit za ocjenjivanje</string>
@@ -206,7 +206,7 @@
         <item quantity="few">%d nove objave</item>
         <item quantity="other">%d novih objava</item>
     </plurals>
-    <string name="forums_rss_feed">RSS izvor</string>
+    <string name="forums_rss_feed">RSS kanal</string>
     <string name="forums_rss_mode_posts">Objave</string>
     <string name="forums_rss_mode_posts_comments">Objave i komentari</string>
     <string name="forums_rss_copied">RSS URL kopiran u međuspremnik</string>
@@ -220,11 +220,11 @@
     <string name="forums_all_forums">Svi forumi</string>
     <string name="forums_create_allow_search">Dopusti svima pretraživanje foruma</string>
     <string name="forums_rss_clipboard_label">RSS URL foruma</string>
-    <string name="forums_tab_moderation">Moderacija</string>
+    <string name="forums_tab_moderation">Moderiranje</string>
     <string name="forums_access_level_view_full">Samo pregled</string>
     <string name="forums_access_level_none_full">Nema pristupa</string>
     <string name="forums_access_subject_anyone">Bilo tko</string>
-    <string name="forums_access_subject_authenticated">Autenticirani korisnici</string>
+    <string name="forums_access_subject_authenticated">Prijavljeni korisnici</string>
     <string name="forums_access_tab_other">Ostalo</string>
     <string name="forums_access_authenticated_desc">Svi koji su prijavljeni</string>
     <string name="forums_access_anyone_desc">Uključujući anonimne korisnike</string>
@@ -248,7 +248,7 @@
     <string name="forums_settings_field_server">Poslužitelj</string>
     <string name="forums_settings_name_edit_cd">Uredi naziv</string>
     <string name="forums_settings_name_cancel_cd">Odustani od uređivanja</string>
-    <string name="forums_settings_save_name">Spremi ime</string>
+    <string name="forums_settings_save_name">Spremi naziv</string>
     <string name="forums_access_management">Upravljanje pristupom</string>
     <string name="forums_access_level_comment_full">Komentiranje, glasovanje i pregled</string>
     <string name="forums_access_level_moderate_full">Moderiranje, objavljivanje, komentiranje, glasovanje i pregled</string>
@@ -278,7 +278,7 @@
     <string name="forums_moderation_restriction_remove_message">Odmah ponovno dobiva puni pristup forumu.</string>
     <string name="forums_moderation_restriction_remove_title">Ukloniti ograničenje za %1$s?</string>
     <string name="forums_moderation_restriction_state_muted">Utišan</string>
-    <string name="forums_moderation_restriction_state_shadowban">Sjenovita zabrana</string>
+    <string name="forums_moderation_restriction_state_shadowban">Skriveno blokiran</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Nijedan korisnik nije utišan ni blokiran</string>
     <string name="forums_moderation_section_premoderation_description">Zahtijevaj odobrenje prije nego sadržaj postane vidljiv</string>
     <string name="forums_moderation_section_ratelimiting_description">Spriječite neželjeni sadržaj ograničavanjem učestalosti objava</string>

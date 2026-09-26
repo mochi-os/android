@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Raportează anunțul</string>
     <string name="market_listing_detail_save">Salvează</string>
     <string name="market_listing_detail_seller_heading">Vânzător</string>
-    <string name="market_listing_detail_shipping_heading">Expediere</string>
+    <string name="market_listing_detail_shipping_heading">Opțiuni de expediere</string>
     <string name="market_listing_detail_subscribe">Abonează-te</string>
     <string name="market_listing_detail_tags_heading">Etichete</string>
     <string name="market_listing_detail_title">Anunț</string>
@@ -427,7 +427,7 @@
     <string name="market_account_stripe_refresh">Reîmprospătează starea</string>
     <string name="market_account_stripe_refresh_failed">Starea Stripe nu a putut fi reîmprospătată</string>
     <string name="market_appeal_dialog_reason_label">De ce contestați?</string>
-    <string name="market_appeal_dialog_title">Contestați eliminarea</string>
+    <string name="market_appeal_dialog_title">Contestă eliminarea</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
     <string name="market_bid_dialog_amount_label">Oferta dvs.</string>
     <string name="market_bid_dialog_current_high">Cea mai mare ofertă curentă: %1$s</string>
@@ -467,7 +467,7 @@
     <string name="market_editor_days">%1$d zile</string>
     <string name="market_editor_delete">Ștergeți anunțul</string>
     <string name="market_editor_delete_confirm_message">Aceasta va șterge definitiv anunțul.</string>
-    <string name="market_editor_delete_confirm_title">Ștergeți anunțul?</string>
+    <string name="market_editor_delete_confirm_title">Ștergi anunțul?</string>
     <string name="market_editor_download">Descărcare directă</string>
     <string name="market_editor_duration">Durata licitației</string>
     <string name="market_editor_fee_preview_pending">Se salvează ciorna…</string>
@@ -704,7 +704,7 @@
     <string name="market_editor_stock_unlimited">Nelimitat</string>
     <string name="market_editor_start_time">Ora de început</string>
     <string name="market_editor_start_time_help">Lasă necompletat pentru a începe la publicare.</string>
-    <string name="market_editor_start_time_next">Înainte</string>
+    <string name="market_editor_start_time_next">Următor</string>
     <string name="market_editor_start_time_clear">Golește</string>
     <string name="market_listing_detail_buy_now_label">Cumpără acum</string>
     <string name="market_section_recently_viewed">Vizualizate recent</string>

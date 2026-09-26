@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi فيڊ</string>
     <string name="feeds_source_type_feed_memories">يادون</string>
-    <string name="feeds_remove_source">ذريعو هٽايو</string>
+    <string name="feeds_remove_source">ذريعو هٽائجي؟</string>
     <string name="feeds_suggested_credibility_accept">قبول ڪريو</string>
     <string name="feeds_rss_url_copied">RSS URL ڪلپ بورڊ تي ڪاپي ٿيو</string>
     <string name="feeds_logout">لاگ آئوٽ</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">ڪڏهن به حاصل نه ڪيو</string>
     <string name="feeds_source_poll">پول</string>
-    <string name="feeds_source_transform">تبديل ڪريو</string>
+    <string name="feeds_source_transform">AI تبديلي</string>
     <string name="feeds_remove_source_confirm">\"%1$s\" هٽايو؟</string>
     <string name="feeds_remove_also_delete_posts">درآمد ڪيل پوسٽون پڻ ڊاهيو</string>
     <string name="feeds_suggested_credibility_title">تجويز ڪيل اعتبار</string>
@@ -154,7 +154,7 @@
     <string name="feeds_access_select_group">گروپ چونڊيو</string>
     <string name="feeds_access_selected">چونڊيل: %1$s</string>
     <string name="feeds_access_subject_anyone">ڪوبه</string>
-    <string name="feeds_access_subject_authenticated">تصديق ٿيل استعمال ڪندڙ</string>
+    <string name="feeds_access_subject_authenticated">تصديق ٿيل صارف</string>
     <string name="feeds_markdown_supported">Markdown سپورٽ ٿيل</string>
     <string name="feeds_permission_deny">رد ڪريو</string>
     <string name="feeds_rss_feed">RSS فيڊ</string>
@@ -209,7 +209,7 @@
     <string name="feeds_ai_prompt_custom">ڪسٽم</string>
     <string name="feeds_ai_prompt_variables">متغير: %1$s</string>
     <string name="feeds_link">لنڪ</string>
-    <string name="feeds_share_link_title">فيڊ جو لنڪ</string>
+    <string name="feeds_share_link_title">فيڊ لنڪ</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$d تبصرو</item>
         <item quantity="other">%1$d تبصرا</item>

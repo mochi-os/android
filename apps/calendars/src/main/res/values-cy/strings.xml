@@ -20,7 +20,7 @@
     <string name="calendars_repeat_never">Byth</string>
     <string name="calendars_repeat_monthly">Misol</string>
     <string name="calendars_repeat_yearly">Yn flynyddol</string>
-    <string name="calendars_repeat_custom">Personol</string>
+    <string name="calendars_repeat_custom">Wedi\'i addasu</string>
     <string name="calendars_reminder_none">Dim</string>
     <string name="calendars_day_sunday">Dydd Sul</string>
     <string name="calendars_day_monday">Dydd Llun</string>
@@ -118,7 +118,7 @@
     <string name="calendars_multiweek_weeks">Wythnosau i\'w dangos</string>
     <string name="calendars_multiweek_previous">Wythnosau blaenorol</string>
     <string name="calendars_default_duration">Hyd rhagosodedig digwyddiad</string>
-    <string name="calendars_default_reminder">Nodyn atgoffa rhagosodedig</string>
+    <string name="calendars_default_reminder">Nodyn atgoffa diofyn</string>
     <string name="calendars_link_title">Dolen y calendr</string>
     <string name="calendars_link_copy">Copïo\'r ddolen</string>
     <string name="calendars_link_once">Copïwch hi nawr: ni ellir ei dangos eto.</string>

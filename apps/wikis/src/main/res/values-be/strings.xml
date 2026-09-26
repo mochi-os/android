@@ -173,7 +173,7 @@
     <string name="wikis_settings_field_name">Назва</string>
     <string name="wikis_settings_field_entity_id">ID сутнасці</string>
     <string name="wikis_settings_field_fingerprint">Адбітак пальца</string>
-    <string name="wikis_settings_name_edit_cd">Рэдагаваць імя</string>
+    <string name="wikis_settings_name_edit_cd">Рэдагаваць назву</string>
     <string name="wikis_settings_name_invalid_char">Назва не можа змяшчаць сімвалы &lt; або &gt;</string>
     <string name="wikis_settings_name_too_long">Назва павінна быць не больш за 100 сімвалаў</string>
     <string name="wikis_settings_name_required">Назва вікі абавязковая</string>
@@ -215,7 +215,7 @@
     <string name="wikis_replicas_remove_confirm_title">Выдаліць рэпліку?</string>
     <string name="wikis_replicas_remove_confirm_action">Выдаліць</string>
     <string name="wikis_replicas_remove_failed">Не ўдалося выдаліць рэпліку</string>
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Вікі</string>
     <string name="wikis_channel_name">Апавяшчэнні Wikis</string>
     <string name="wikis_channel_description">Апавяшчэнні аб рэдагаваннях старонак, каментарыях і запрашэннях.</string>
     <string name="wikis_pageview_toc_expand">Паказаць змест</string>
@@ -230,7 +230,7 @@
     <string name="wikis_search_placeholder">Пошук wiki…</string>
     <string name="wikis_unsubscribe_confirm_message">Вы ўпэўнены, што хочаце адпісацца ад %1$s?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_find_search_placeholder">Пошук па імені, ID, адбітку або URL…</string>
+    <string name="wikis_find_search_placeholder">Пошук па назве, ID, адбітку або URL…</string>
     <string name="wikis_join_search_button">Пошук wiki…</string>
     <string name="wikis_join_id_hint">abc123…</string>
     <string name="wikis_subscribe_502_retry">Паўторная спроба без прапанаванага сервера…</string>
@@ -270,8 +270,8 @@
     <string name="wikis_attachments_delete_confirm_message">Выдаліць „%1$s\"? Гэта нельга адмяніць.</string>
     <string name="wikis_attachments_downloading">Загрузка…</string>
     <string name="wikis_attachments_empty_description">Дакраніцеся да Загрузіць, каб дадаць файлы на гэту старонку.</string>
-    <string name="wikis_settings_name_save_cd">Захаваць імя</string>
-    <string name="wikis_settings_name_cancel_cd">Адмяніць рэдагаванне</string>
+    <string name="wikis_settings_name_save_cd">Захаваць назву</string>
+    <string name="wikis_settings_name_cancel_cd">Скасаваць рэдагаванне</string>
     <string name="wikis_access_level_label">Дазвол</string>
     <string name="wikis_access_set_failed">Не атрымалася абнавіць доступ</string>
     <string name="wikis_replicas_col_subscribed">Падпісаны: %1$s</string>
@@ -280,8 +280,8 @@
     <string name="wikis_replicas_removed_success">Рэпліка выдалена</string>
     <string name="wikis_load_more">Загрузіць больш</string>
     <string name="wikis_access_change_level">Узровень доступу</string>
-    <string name="wikis_access_subject_anyone">Любы</string>
-    <string name="wikis_access_subject_authenticated">Аўтэнтыфікаваныя карыстальнікі</string>
+    <string name="wikis_access_subject_anyone">Хто заўгодна</string>
+    <string name="wikis_access_subject_authenticated">Аўтарызаваныя карыстальнікі</string>
     <string name="wikis_revision_compare">Параўнаць змены</string>
     <string name="wikis_revision_author">па %1$s</string>
     <string name="wikis_revision_show_page">Паказаць старонку</string>

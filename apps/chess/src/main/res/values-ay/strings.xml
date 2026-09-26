@@ -32,8 +32,8 @@
     <string name="chess_draw_accept">Iyawsaña</string>
     <string name="chess_draw_decline">Jark\'aña</string>
     <string name="chess_status_checkmate_you_win">Mat — jumaw atipta!</string>
-    <string name="chess_status_stalemate">Inakacht\'ata — empate</string>
-    <string name="chess_status_draw">Sallqa</string>
+    <string name="chess_status_stalemate">Ahogado — kikpacha</string>
+    <string name="chess_status_draw">Kikpacha</string>
     <string name="chess_status_check_your_move">Shaq — jumam saraña</string>
     <string name="chess_status_your_move">Jumankiwa</string>
     <string name="chess_move_subject_you">Juma</string>
@@ -60,7 +60,7 @@
     <string name="chess_empty_subtitle">Mä masimampi ajedrez anatañataki nayrïr anatawima qalltam.</string>
     <string name="chess_empty_start_button">Nayrïr anatawima qalltam</string>
     <string name="chess_detail_unavailable">Anatawix janiw utjkiti</string>
-    <string name="chess_delete_title">¿Anataw chhaqtayañati?</string>
+    <string name="chess_delete_title">¿Anatawi chhaqtayaña?</string>
     <string name="chess_delete_message">Akax anatawi listamat apsuwa.</string>
     <string name="chess_ws_connecting">Mayacht\'asiski…</string>
     <string name="chess_ws_disconnected">Jan conectata</string>

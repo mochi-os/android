@@ -4,7 +4,7 @@
     <string name="settings_home_title">Innstillinger</string>
     <string name="settings_home_logout">Logg ut</string>
     <string name="settings_home_account">Konto</string>
-    <string name="settings_home_preferences">Innstillinger</string>
+    <string name="settings_home_preferences">Preferanser</string>
     <string name="settings_home_display">Visning</string>
     <string name="settings_home_notification_prefs">Varselinnstillinger</string>
     <string name="settings_home_accounts">Tilkoblede kontoer</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">Prioritet %1$d · %2$s</string>
     <string name="interests_search_placeholder">Søk etter emner å legge til…</string>
     <string name="interests_empty">Ingen interesser ennå.</string>
-    <string name="interests_summary_regenerate">Regenerer sammendrag</string>
+    <string name="interests_summary_regenerate">Generer sammendrag på nytt</string>
     <string name="interests_summary_regenerating">Regenererer…</string>
     <string name="interests_summary_empty">Legg til interesser for å generere et sammendrag av hva du liker.</string>
     <string name="interests_search_failed">Søket mislyktes. Vennligst prøv igjen.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s vil ikke lenger administrere ruter på dette domenet.</string>
     <string name="domain_delegation_delete_title">Slette delegering?</string>
     <string name="domain_delegation_path">Sti</string>
-    <string name="domain_delegation_user">Bruker-ID</string>
+    <string name="domain_delegation_user">Bruker</string>
     <string name="domain_delegations">Delegeringer</string>
     <string name="domain_delegations_empty">Ingen delegeringer konfigurert.</string>
     <string name="domain_delete">Slett domene</string>
@@ -391,8 +391,8 @@
     <string name="accounts_capability_calendar">Kalender</string>
     <string name="accounts_capability_notify">Varsler</string>
     <string name="accounts_capability_ai">KI</string>
-    <string name="accounts_capability_login">Pålogging</string>
-    <string name="accounts_provider_caldav">Kalendertjener</string>
+    <string name="accounts_capability_login">Innlogging</string>
+    <string name="accounts_provider_caldav">Kalenderserver</string>
     <string name="accounts_revoke_confirm">Dette tilbakekaller kalendertilgangen til %1$s. Pålogging med %2$s består til du kobler den fra på påloggingssiden.</string>
     <string name="accounts_capability_mcp">MCP</string>
 </resources>

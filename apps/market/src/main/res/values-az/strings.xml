@@ -58,12 +58,12 @@
     <string name="market_bid_dialog_submitting">Təklif verilir</string>
     <string name="market_bid_dialog_success">Təklif verildi</string>
     <string name="market_bid_dialog_title">Təklif ver</string>
-    <string name="market_bid_ended">Auksion bitdi</string>
+    <string name="market_bid_ended">Hərrac başa çatdı</string>
     <string name="market_bid_ends_in">%1$s-də bitir</string>
     <string name="market_bid_high">Ən yüksək təklif</string>
     <string name="market_bids_current_bid">Hazırkı: %1$s</string>
     <string name="market_bids_empty">Təklif yoxdur</string>
-    <string name="market_bids_ended">Auksion bitdi</string>
+    <string name="market_bids_ended">Hərrac başa çatdı</string>
     <string name="market_bids_ends_in">%1$s-də bitir</string>
     <string name="market_bids_tab_active">Aktiv</string>
     <string name="market_bids_tab_all">Hamısı</string>
@@ -110,7 +110,7 @@
     <string name="market_checkout_listing_not_found">Elan tapılmadı</string>
     <string name="market_checkout_pay_button">Stripe ilə ödə</string>
     <string name="market_checkout_payment_failed">Ödəniş başladıla bilmədi — satıcı ödəniş quraşdırmasını tamamlamamış ola bilər</string>
-    <string name="market_checkout_processing">İşlənir…</string>
+    <string name="market_checkout_processing">Emal olunur…</string>
     <string name="market_checkout_pwyw_label">Sizin qiymətiniz (minimum %1$s)</string>
     <string name="market_checkout_pwyw_min_error">Məbləğ ən azı %1$s olmalıdır</string>
     <string name="market_checkout_secure">Stripe vasitəsilə təhlükəsiz ödəniş</string>
@@ -179,7 +179,7 @@
     <string name="market_editor_interval">Hesablama intervalı</string>
     <string name="market_editor_interval_monthly">Aylıq</string>
     <string name="market_editor_interval_yearly">İllik</string>
-    <string name="market_editor_photo_delete">Fotonu sil</string>
+    <string name="market_editor_photo_delete">Fotoşəkili sil</string>
     <string name="market_editor_photo_upload_failed">Foto yüklənə bilmədi</string>
     <string name="market_editor_photo_uploading">Yüklənir…</string>
     <string name="market_editor_photos_add">Foto əlavə et</string>
@@ -277,7 +277,7 @@
     <string name="market_filter_pricing_fixed">Sabit qiymət</string>
     <string name="market_filter_pricing_pwyw">İstədiyiniz qədər ödəyin</string>
     <string name="market_filter_pricing_subscription">Abunə</string>
-    <string name="market_filter_remove">Filteri sil</string>
+    <string name="market_filter_remove">Filtri sil</string>
     <string name="market_filter_sort">Sırala</string>
     <string name="market_filter_sort_default">Standart</string>
     <string name="market_filter_sort_price_high">Qiymət: yüksəkdən aşağı</string>
@@ -319,7 +319,7 @@
     <string name="market_listing_detail_seller_suspended_banner">Bu satıcı dayandırılıb. Hesab bərpa edilənə qədər yeni sifarişlər dayandırılıb.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">Satıcının hesabı məhdudlaşdırılarkən alış söndürülüb.</string>
     <string name="market_listing_detail_share">Elanı paylaş</string>
-    <string name="market_listing_detail_shipping_heading">Çatdırılma</string>
+    <string name="market_listing_detail_shipping_heading">Çatdırılma seçimləri</string>
     <string name="market_listing_detail_subscribe">Abunə ol</string>
     <string name="market_listing_detail_tags_heading">Etiketlər</string>
     <string name="market_listing_detail_title">Elan</string>
@@ -550,7 +550,7 @@
     <string name="market_saved_title">Saxlanılanlar</string>
     <string name="market_search_clear">Axtarışı təmizlə</string>
     <string name="market_search_placeholder">Bazarda axtarın</string>
-    <string name="market_section_categories">Kateqoriyalara baxın</string>
+    <string name="market_section_categories">Kateqoriyalara bax</string>
     <string name="market_section_listings">Son elanlar</string>
     <string name="market_section_recent">Bu yaxınlarda baxılan</string>
     <string name="market_ship_dialog_cancel">Ləğv et</string>
@@ -588,7 +588,7 @@
     <string name="market_status_pending">Gözləmədə</string>
     <string name="market_status_refunded">Geri qaytarıldı</string>
     <string name="market_status_shipped">Göndərildi</string>
-    <string name="market_stripe_onboarding_action">Quraşdırmanı davam et</string>
+    <string name="market_stripe_onboarding_action">Quraşdırmaya davam et</string>
     <string name="market_stripe_onboarding_body">Ödənişlər qəbul etmədən əvvəl Stripe qeydiyyatını tamamlayın.</string>
     <string name="market_stripe_onboarding_check">Statusu yoxla</string>
     <string name="market_stripe_onboarding_failed">Stripe açılmadı</string>

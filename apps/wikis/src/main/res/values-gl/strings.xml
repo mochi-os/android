@@ -20,7 +20,7 @@
     <string name="wikis_page_action_tags">Etiquetas</string>
     <string name="wikis_page_action_recent_changes">Cambios recentes</string>
     <string name="wikis_page_action_new_page">Nova páxina</string>
-    <string name="wikis_page_action_settings">Axustes</string>
+    <string name="wikis_page_action_settings">Configuración</string>
     <string name="wikis_page_action_unsubscribe">Cancelar subscrición</string>
     <string name="wikis_title">Wikis</string>
     <string name="wikis_empty_title">Comeza a túa primeira wiki</string>
@@ -164,8 +164,8 @@
     <string name="wikis_attachments_empty_title">Aínda non hai anexos</string>
     <string name="wikis_attachments_no_results_title">Ningún anexo coincide coa túa busca</string>
     <string name="wikis_attachments_no_results_description">Tenta un termo de busca ou filtro diferente.</string>
-    <string name="wikis_settings_title">Axustes</string>
-    <string name="wikis_settings_tab_settings">Axustes</string>
+    <string name="wikis_settings_title">Configuración</string>
+    <string name="wikis_settings_tab_settings">Configuración</string>
     <string name="wikis_settings_tab_redirects">Redireccións</string>
     <string name="wikis_settings_tab_access">Acceso</string>
     <string name="wikis_settings_tab_replicas">Réplicas</string>
@@ -270,8 +270,8 @@
     <string name="wikis_attachments_delete_confirm_message">Eliminar «%1$s»? Isto non se pode desfacer.</string>
     <string name="wikis_attachments_downloading">Descargando…</string>
     <string name="wikis_attachments_empty_description">Toca Cargar para engadir ficheiros a esta páxina.</string>
-    <string name="wikis_settings_name_save_cd">Gardar nome</string>
-    <string name="wikis_settings_name_cancel_cd">Cancelar edición</string>
+    <string name="wikis_settings_name_save_cd">Gardar o nome</string>
+    <string name="wikis_settings_name_cancel_cd">Cancelar a edición</string>
     <string name="wikis_access_level_label">Permiso</string>
     <string name="wikis_access_set_failed">Erro ao actualizar o acceso</string>
     <string name="wikis_replicas_col_subscribed">Subscrito: %1$s</string>

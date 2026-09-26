@@ -7,8 +7,8 @@
     <string name="staff_accounts_action_suspend_title">Cuir cuntas ar fionraí</string>
     <string name="staff_accounts_action_unban_title">Bain cosc</string>
     <string name="staff_accounts_action_unsuspend_title">Bain fionraí</string>
-    <string name="staff_accounts_any_seller">Iomlán</string>
-    <string name="staff_accounts_any_status">Iomlán</string>
+    <string name="staff_accounts_any_seller">Uile</string>
+    <string name="staff_accounts_any_status">Uile</string>
     <string name="staff_accounts_ban">Cosc</string>
     <string name="staff_accounts_banned_toast">Cuntas coiscthe</string>
     <string name="staff_accounts_cancel">Cealaigh</string>
@@ -65,7 +65,7 @@
     <string name="staff_audit_action_account_unbanned">Cosc bainte</string>
     <string name="staff_audit_action_account_unsuspended">Fionraí bainte</string>
     <string name="staff_audit_action_auction_bid_placed">Tairiscint déanta</string>
-    <string name="staff_audit_action_auction_cancelled">Ceant curtha ar ceal</string>
+    <string name="staff_audit_action_auction_cancelled">Ceant cealaithe</string>
     <string name="staff_audit_action_auction_created">Ceant cruthaithe</string>
     <string name="staff_audit_action_auction_ended_sold">Ceant díolta</string>
     <string name="staff_audit_action_auction_ended_unsold">Ceant críochnaithe gan díol</string>
@@ -269,7 +269,7 @@
     <string name="staff_disputes_view">Féach</string>
     <string name="staff_filter_chip_remove">Bain scagaire</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
-    <string name="staff_filter_label_moderation">Modhnú</string>
+    <string name="staff_filter_label_moderation">Modhnóireacht</string>
     <string name="staff_filter_label_query">Cuardach</string>
     <string name="staff_filter_label_seller">Díoltóir</string>
     <string name="staff_filter_label_status">Stádas</string>

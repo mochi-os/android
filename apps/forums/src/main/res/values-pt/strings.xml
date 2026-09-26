@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Cancelar subscrição</string>
     <string name="forums_list_unsubscribe_title">Cancelar subscrição</string>
     <string name="forums_create_title">Criar fórum</string>
-    <string name="forums_create_name">Nome</string>
+    <string name="forums_create_name">Nome do fórum</string>
     <string name="forums_create_privacy">Privacidade</string>
     <string name="forums_create_private">Privado</string>
     <string name="forums_create_public">Público</string>
-    <string name="forums_create_action">Criar</string>
+    <string name="forums_create_action">Criar fórum</string>
     <string name="forums_find_title">Encontrar fóruns</string>
     <string name="forums_find_recommended">Recomendado</string>
     <string name="forums_find_subscribe">Subscrever</string>
@@ -258,7 +258,7 @@
     <string name="forums_ai_actions_label">Ações de IA nas publicações</string>
     <string name="forums_ai_prompt_custom">Personalizado</string>
     <string name="forums_ai_prompt_score_label">Prompt de pontuação</string>
-    <string name="forums_ai_prompt_tag_label">Prompt de etiquetas</string>
+    <string name="forums_ai_prompt_tag_label">Prompt de etiqueta</string>
     <string name="forums_ai_prompt_variables">Variáveis: %1$s</string>
     <string name="forums_link">Ligação</string>
     <string name="forums_moderation_ban_message">Perde o acesso ao fórum até que remova a restrição.</string>
@@ -277,7 +277,7 @@
     <string name="forums_moderation_restriction_remove_message">Recupera de imediato o acesso total ao fórum.</string>
     <string name="forums_moderation_restriction_remove_title">Remover a restrição a %1$s?</string>
     <string name="forums_moderation_restriction_state_muted">Silenciado</string>
-    <string name="forums_moderation_restriction_state_shadowban">Banido em segredo</string>
+    <string name="forums_moderation_restriction_state_shadowban">Banido em silêncio</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Não há utilizadores silenciados nem banidos</string>
     <string name="forums_moderation_section_premoderation_description">Exigir aprovação antes de o conteúdo ficar visível</string>
     <string name="forums_moderation_section_ratelimiting_description">Evite spam limitando a frequência com que os utilizadores podem publicar</string>
@@ -286,7 +286,7 @@
     <string name="forums_moderation_unit_replies">respostas</string>
     <string name="forums_moderation_unit_seconds">segundos</string>
     <string name="forums_settings_ai_updated">Definições de IA atualizadas</string>
-    <string name="forums_settings_forum_renamed">Fórum renomeado</string>
+    <string name="forums_settings_forum_renamed">Nome do fórum alterado</string>
     <string name="forums_settings_name_clear_cd">Limpar nome</string>
     <string name="forums_settings_unsubscribe_section">Cancelar a subscrição do fórum</string>
     <string name="forums_share_link_title">Ligação do fórum</string>

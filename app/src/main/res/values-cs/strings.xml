@@ -2,7 +2,7 @@
 <resources>
 
     <string name="launcher_feeds">Mochi Kanály</string>
-    <string name="launcher_chat">Mochi Konverzace</string>
+    <string name="launcher_chat">Mochi Chat</string>
     <string name="launcher_forums">Mochi Fóra</string>
     <string name="launcher_projects">Mochi Projekty</string>
     <string name="launcher_crm">Mochi CRM</string>

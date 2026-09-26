@@ -4,7 +4,7 @@
     <string name="error_access_denied">წვდომა უარყოფილია</string>
     <string name="auth_email">ელფოსტა</string>
     <string name="auth_continue">გაგრძელება</string>
-    <string name="auth_verification_code">შემოწმება</string>
+    <string name="auth_verification_code">დადასტურების კოდი</string>
     <string name="auth_email_code">ელფოსტის კოდი</string>
     <string name="auth_recovery_code">აღდგენის კოდი</string>
     <string name="auth_name">სახელი</string>
@@ -142,7 +142,7 @@
     <string name="auth_login_title">შედით Mochi-ში</string>
     <string name="auth_next">შემდეგი</string>
     <string name="auth_or_log_in_with">ან შედით</string>
-    <string name="auth_passkey">გასაღები</string>
+    <string name="auth_passkey">წვდომის გასაღები</string>
     <string name="auth_use_passkey">გამოიყენეთ გასაღები</string>
     <string name="auth_email_me_a_code">გამომიგზავნეთ კოდი ელფოსტით</string>
     <string name="auth_or_enter_authenticator_code">ან შეიყვანეთ ავთენტიფიკატორის კოდი</string>
@@ -191,7 +191,7 @@
     <string name="format_time_weeks_short">%1$d კვ</string>
     <string name="format_time_months_short">%1$d თვ</string>
     <string name="reaction_add">რეაქციის დამატება</string>
-    <string name="push_service_channel">Mochi-ის შეტყობინებები</string>
+    <string name="push_service_channel">Mochi-ის პუშ-შეტყობინებები</string>
     <string name="push_service_channel_description">უზრუნველყოფს Mochi-ის კავშირს შეტყობინებების მისაღებად</string>
     <string name="push_service_group">ფონური სერვისი</string>
     <string name="push_service_title">Mochi უსმენს შეტყობინებებს</string>
@@ -238,7 +238,7 @@
     <string name="stepup_error_oauth">ამ ანგარიშით ვერ მოხერხდა გადამოწმება. გთხოვთ, სცადოთ თავიდან.</string>
     <string name="game_system_resign">%1$s-მა დანებდა</string>
     <string name="game_system_draw_offer">%1$s-მა ფრე შესთავაზა</string>
-    <string name="game_system_draw_accept">ფრე შეთანხმდა</string>
+    <string name="game_system_draw_accept">ფრე შეთანხმებულია</string>
     <string name="game_system_draw_decline">%1$s-მა ფრე უარყო</string>
     <string name="reactivation_title">თქვენი ანგარიში დაგეგმილია წასაშლელად</string>
     <string name="reactivation_body">თქვენი ანგარიში დაგეგმილია წასაშლელად. ახლა შეგიძლიათ გააუქმოთ და სრულად აღადგინოთ წვდომა.</string>
@@ -246,7 +246,7 @@
     <string name="reactivation_reactivate">ჩემი ანგარიშის ხელახლა გააქტიურება</string>
     <string name="reactivation_sign_out">დახურვის გაგრძელება და გასვლა</string>
     <string name="common_play">დაკვრა</string>
-    <string name="common_pause">პაუზა</string>
+    <string name="common_pause">შეჩერება</string>
     <string name="common_opening_file">ფაილის გახსნა…</string>
     <string name="common_no_app_for_file">ამ ფაილის გასახსნელი აპი არ არის</string>
     <string name="common_file_open_failed">ფაილის გახსნა ვერ მოხერხდა</string>
@@ -258,12 +258,12 @@
     <string name="tags_interest_up">მეტი ამის მსგავსი</string>
     <string name="tags_interest_down">ნაკლები ამის მსგავსი</string>
     <string name="tags_interest_clear">აღარ მაჩვენო</string>
-    <string name="tags_none">ტეგები არ არის</string>
+    <string name="tags_none">ტეგების გარეშე</string>
     <string name="tags_delete">ტეგის წაშლა</string>
     <string name="person_picker_none">არცერთი</string>
     <string name="person_picker_clear">არჩევის გასუფთავება</string>
     <string name="person_picker_select">აირჩიეთ …</string>
-    <string name="person_picker_directory">ცნობარი</string>
+    <string name="person_picker_directory">კატალოგი</string>
     <string name="person_picker_no_people">ადამიანები არ არის</string>
     <string name="person_picker_project_members">პროექტის წევრები</string>
     <string name="account_token_label">Mochi სესია</string>

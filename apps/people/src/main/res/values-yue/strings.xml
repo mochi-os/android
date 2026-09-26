@@ -3,7 +3,7 @@
 
     <string name="people_person_message">訊息</string>
 
-    <string name="people_profile_name">名稱</string>
+    <string name="people_profile_name">姓名</string>
     <string name="people_common_close">關閉</string>
     <string name="people_common_cancel">取消</string>
     <string name="people_profile_save">儲存</string>
@@ -21,7 +21,7 @@
     <string name="people_friends_pending">待處理</string>
     <string name="people_invitations_decline">拒絕</string>
     <string name="people_profile_saving">儲存緊…</string>
-    <string name="people_profile_edit_name">編輯名稱</string>
+    <string name="people_profile_edit_name">編輯姓名</string>
     <string name="people_profile_identity">身分</string>
     <string name="people_profile_preview">預覽</string>
     <string name="people_profile_uploading">上載緊…</string>
@@ -124,7 +124,7 @@
     <string name="people_contacts_try_adjusting">試吓調整搜尋條件</string>
     <string name="people_contact_section_address">地址</string>
     <string name="people_contact_section_detail">詳情</string>
-    <string name="people_contact_name">名稱</string>
+    <string name="people_contact_name">姓名</string>
     <string name="people_contact_email">電郵</string>
     <string name="people_contact_city">城市</string>
     <string name="people_contact_region">地區</string>
@@ -180,7 +180,7 @@
     </plurals>
     <string name="people_welcome_body">喺 Mochi 各處搵朋友並聯繫。㩒「加聯絡人」就可以發出邀請。</string>
     <string name="people_person_state_contact">喺聯絡人中</string>
-    <string name="people_contacts_sort_name">名稱</string>
+    <string name="people_contacts_sort_name">姓名</string>
     <string name="people_contacts_sort_recent">最近加入</string>
     <string name="people_contacts_thats_you">呢個係你</string>
     <string name="people_contacts_try_different_search">試下第個搜尋字詞</string>

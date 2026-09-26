@@ -3,8 +3,8 @@
 
     <string name="settings_home_title">אײַנשטעלונגען</string>
     <string name="settings_home_logout">אַרויסקומען</string>
-    <string name="settings_home_account">חשבון</string>
-    <string name="settings_home_preferences">פּרעפֿערענצן</string>
+    <string name="settings_home_account">קאָנטע</string>
+    <string name="settings_home_preferences">פֿאָרצוגן</string>
     <string name="settings_home_display">ווײַזן</string>
     <string name="settings_home_notification_prefs">באשטעטיקונג בעטעלעכץ</string>
     <string name="settings_home_accounts">פֿאַרבונדענע קאָנטעס</string>
@@ -119,7 +119,7 @@
     <string name="settings_home_system_documents">דאָקומענטן</string>
     <string name="settings_home_system_settings">סיסטעם־אײַנשטעלונגען</string>
     <string name="system_settings_title">סיסטעם־אײַנשטעלונגען</string>
-    <string name="system_settings_section_login">אַרײַנקום</string>
+    <string name="system_settings_section_login">אַרײַנלאָג</string>
     <string name="system_settings_section_oauth">דריט־פּאַרטיי אַרײַנמעלדונג</string>
     <string name="system_settings_section_user_defaults">באַניצער־פֿאָרויסבאַשטימטן</string>
     <string name="system_settings_section_operator">אָפּעראַטאָר</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">פּריאָריטעט %1$d · %2$s</string>
     <string name="interests_search_placeholder">זוך טעמעס צוצולײגן…</string>
     <string name="interests_empty">קײנע אינטערעסן ביז איצט.</string>
-    <string name="interests_summary_regenerate">רעגענערירן צוזאמענפֿאַסונג</string>
+    <string name="interests_summary_regenerate">סך־הכּל אויסשאַפֿן ווידער</string>
     <string name="interests_summary_regenerating">רעגענערירט…</string>
     <string name="interests_summary_empty">לייגט עטלעכע אינטערעסן צו שאַפֿן אַ צוזאמענפֿאַסונג פֿון וואָס איר ליבט.</string>
     <string name="interests_search_failed">זוכן איז אומגעראָטן. אפשר ווידער פּרובירן.</string>
@@ -273,10 +273,10 @@
     <string name="system_users_revoke_all_title">רעוואָקירן אַלע סעסיעס?</string>
     <string name="system_users_revoke_all_message">אַלע אַקטיווע סעסיעס פֿון דעם באַניצער וועלן אַרויסגיין.</string>
     <string name="system_users_pagination_status">וואָס ווייזט %1$d–%2$d פֿון %3$d באַניצערס</string>
-    <string name="account_title">חשבון</string>
+    <string name="account_title">קאָנטע</string>
     <string name="account_section_identity">אידענטיטעט</string>
     <string name="account_identity_identity">אידענטיטעט</string>
-    <string name="account_identity_username">באַניצער נאָמען</string>
+    <string name="account_identity_username">באַניצער־נאָמען</string>
     <string name="account_identity_name">נאָמען</string>
     <string name="account_identity_fingerprint">פֿינגער־אָפּדרוק</string>
     <string name="account_identity_directory_toggle">דערלויבן אַנדערע צו געפֿינען אײַך אין פֿירערשאַפֿט</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s וועט מער ניט פֿאַרוואַלטן רעטעס אױף דעם דאָמייַן.</string>
     <string name="domain_delegation_delete_title">אויסמעקן דעלעגאַציע?</string>
     <string name="domain_delegation_path">וועג</string>
-    <string name="domain_delegation_user">באַניצער ID</string>
+    <string name="domain_delegation_user">באַניצער</string>
     <string name="domain_delegations">דעלעגאַציעס</string>
     <string name="domain_delegations_empty">קײנע דעלעגאַציעס פֿאַרקאָנפֿיגירט.</string>
     <string name="domain_delete">אויסמעקן דאָמיין</string>
@@ -312,7 +312,7 @@
         <item quantity="one">אָפּגערופֿן 1 סעסיע</item>
         <item quantity="other">אָפּגערופֿן %1$d סעסיעס</item>
     </plurals>
-    <string name="login_title">אַרײַנקום</string>
+    <string name="login_title">אַרײַנלאָג</string>
     <string name="login_section_methods">אַרײַנגאַנג מעטאָדן</string>
     <string name="login_method_email">בליצפּאָסט־קאָד</string>
     <string name="login_method_passkey">פּאַסקיי</string>
@@ -391,7 +391,7 @@
     <string name="accounts_capability_calendar">קאַלענדאַר</string>
     <string name="accounts_capability_notify">מעלדונגען</string>
     <string name="accounts_capability_ai">AI</string>
-    <string name="accounts_capability_login">אײַנלאָגירן</string>
+    <string name="accounts_capability_login">אַרײַנקום</string>
     <string name="accounts_provider_caldav">קאַלענדאַר־סערווער</string>
     <string name="accounts_revoke_confirm">דאָס וועט אָפּרופֿן דעם קאַלענדאַר־צוטריט פֿון %1$s. אײַנלאָגירן מיט %2$s בלײַבט ביז איר וועט עס אָפּבינדן אויף דער אײַנלאָג־זײַט.</string>
     <string name="accounts_capability_mcp">MCP</string>

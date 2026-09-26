@@ -64,7 +64,7 @@
     <string name="go_channel_name">Go-varsler</string>
     <string name="go_channel_description">Varsler om trekk, pass, remistilbud og partiresultater.</string>
     <string name="go_open_sidebar">Åpne sidefelt</string>
-    <string name="go_sidebar_active">Aktive partier</string>
+    <string name="go_sidebar_active">Aktive spill</string>
     <string name="go_empty_active">Ingen aktive partier ennå.</string>
     <string name="go_status_resigned">Lagt ned</string>
     <string name="go_new_game_title">Nytt Go-parti</string>

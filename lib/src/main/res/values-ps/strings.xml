@@ -56,12 +56,12 @@
     <string name="notifications_title">خبرتیاوې</string>
     <string name="notifications_empty">هیڅ خبرتیاوې نشته</string>
     <string name="notifications_empty_unread">هرڅه دې ولوستل</string>
-    <string name="notifications_tab_unread">نالوستل شوي</string>
+    <string name="notifications_tab_unread">نه لوستل شوی</string>
     <string name="notifications_tab_unread_count">نالوستل شوي (%1$d)</string>
     <string name="notifications_tab_all">ټول</string>
     <string name="notifications_mark_all_read">ټول د لوستل شویو په توګه نښه کړئ</string>
     <string name="notifications_clear_all">ټول پاک کړئ</string>
-    <string name="settings_title">ترتیبات</string>
+    <string name="settings_title">تنظیمات</string>
     <string name="settings_appearance">بڼه</string>
     <string name="settings_appearance_light">روښانه</string>
     <string name="settings_appearance_dark">تیاره</string>
@@ -108,7 +108,7 @@
     <string name="settings_display_reset_confirm_message">دا به د ښکارندوی تنظیمات د هغوی ډیفالټ ارزښتونو ته بیا تنظیم کړي.</string>
     <string name="settings_theme_title">ښکارندوی</string>
     <string name="settings_theme_default">ډیفالټ</string>
-    <string name="settings_background">پس منظر</string>
+    <string name="settings_background">شاليد</string>
     <string name="settings_background_theme">د ښکارندوی څخه</string>
     <string name="settings_background_off">هیڅوک</string>
     <string name="game_chat_empty">تر اوسه هیڅ پیغامونه نشته</string>
@@ -162,9 +162,9 @@
     <string name="bootstrap_sign_in_differently">په بل ډول ننوتل</string>
     <string name="bootstrap_choose_account">یو حساب وټاکئ</string>
     <string name="bootstrap_sign_in_different_server">بل سرور ته ننوتل</string>
-    <string name="common_retry">بیا هڅه</string>
+    <string name="common_retry">بیا هڅه وکړئ</string>
     <string name="common_more_options">نور انتخابونه</string>
-    <string name="common_collapse">ټولول</string>
+    <string name="common_collapse">راټولول</string>
     <string name="common_expand">غځول</string>
     <string name="common_play_video">ویډیو پرانیستل</string>
     <string name="place_picker_name">د ځای نوم</string>
@@ -190,7 +190,7 @@
     <string name="format_time_days_short">%1$dd</string>
     <string name="format_time_weeks_short">%1$dw</string>
     <string name="format_time_months_short">%1$d میاشتې</string>
-    <string name="reaction_add">غبرګون ورزیات کړئ</string>
+    <string name="reaction_add">غبرګون اضافه کړئ</string>
     <string name="push_service_channel">Mochi پوش</string>
     <string name="push_service_channel_description">Mochi د خبرتیاوو ترلاسه کولو لپاره وصل ساتي</string>
     <string name="push_service_group">د شالید خدمت</string>
@@ -238,7 +238,7 @@
     <string name="stepup_error_oauth">د دغه حساب سره تصدیق ونشو. مهرباني وکړئ بیا هڅه وکړئ.</string>
     <string name="game_system_resign">%1$s ماتې ومنله</string>
     <string name="game_system_draw_offer">%1$s د مساوي وړاندیز وکړ</string>
-    <string name="game_system_draw_accept">په مساوي موافقه وشوه</string>
+    <string name="game_system_draw_accept">مساوي ومنل شو</string>
     <string name="game_system_draw_decline">%1$s مساوي رد کړ</string>
     <string name="reactivation_title">ستاسو حساب د حذف لپاره ټاکل شوی دی</string>
     <string name="reactivation_body">ستاسو حساب د حذف لپاره ټاکل شوی دی. تاسو کولی شئ اوس دا لغوه کړئ او بشپړ لاسرسی بیرته ترلاسه کړئ.</string>
@@ -246,7 +246,7 @@
     <string name="reactivation_reactivate">زما حساب بیا فعال کړئ</string>
     <string name="reactivation_sign_out">تړل دوام ورکړئ او ووځئ</string>
     <string name="common_play">پلې کړئ</string>
-    <string name="common_pause">ودروئ</string>
+    <string name="common_pause">ودرول</string>
     <string name="common_opening_file">فایل پرانیستل کیږي…</string>
     <string name="common_no_app_for_file">هیڅ اپلیکیشن دا فایل نه شي پرانیستلی</string>
     <string name="common_file_open_failed">فایل پرانیستل ونشول</string>
@@ -254,7 +254,7 @@
     <string name="common_logout_confirm_message">ایا تاسو ډاډه یاست چې غواړئ ووځئ؟ خپل حساب ته د لاسرسي لپاره به اړ یاست چې بیا ننوځئ.</string>
     <string name="comment_anonymous">ناپېژندل شوی</string>
     <string name="tags_label">ټاګونه</string>
-    <string name="tags_add">ټګ اضافه کړئ</string>
+    <string name="tags_add">ټاګ اضافه کړئ</string>
     <string name="tags_interest_up">د دې په څیر نور وښیه</string>
     <string name="tags_interest_down">د دې په څیر لږ وښیه</string>
     <string name="tags_interest_clear">ښودل ودروه</string>

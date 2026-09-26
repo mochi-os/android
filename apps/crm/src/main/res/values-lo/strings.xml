@@ -30,11 +30,11 @@
     <string name="crm_settings_title">ການຕັ້ງຄ່າ</string>
     <string name="crm_settings_tab_general">ທົ່ວໄປ</string>
     <string name="crm_settings_tab_access">ການເຂົ້າເຖິງ</string>
-    <string name="crm_settings_tab_people">ຄົນ</string>
+    <string name="crm_settings_tab_people">ບຸກຄົນ</string>
     <string name="crm_option_icon">ໄອຄອນ</string>
     <string name="crm_option_icon_placeholder">ເຊັ່ນ Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
-    <string name="crm_settings_delete_crm">ລົບໂຄງການ</string>
+    <string name="crm_settings_delete_crm">ລົບ CRM</string>
     <string name="crm_settings_delete_confirm_title">ລົບ CRM</string>
     <string name="crm_settings_unsubscribe_title">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
     <string name="crm_settings_unsubscribe_message">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການຍົກເລີກການສະໝັກສະມາຊິກຈາກ CRM ນີ້?</string>
@@ -134,10 +134,10 @@
     <string name="crm_class_move_up">ຍ້າຍຂຶ້ນ</string>
     <string name="crm_views_move_down">ຍ້າຍລົງ</string>
     <string name="crm_class_move_down">ຍ້າຍລົງ</string>
-    <string name="crm_sort_direction_asc">ຈາກນ້ອຍຫາໃຫຍ່</string>
-    <string name="crm_views_direction_asc">ຈາກນ້ອຍຫາໃຫຍ່</string>
-    <string name="crm_sort_direction_desc">ຈາກໃຫຍ່ຫານ້ອຍ</string>
-    <string name="crm_views_direction_desc">ຈາກໃຫຍ່ຫານ້ອຍ</string>
+    <string name="crm_sort_direction_asc">ຈາກໜ້ອຍຫາຫຼາຍ</string>
+    <string name="crm_views_direction_asc">ຈາກໜ້ອຍຫາຫຼາຍ</string>
+    <string name="crm_sort_direction_desc">ຈາກຫຼາຍຫາໜ້ອຍ</string>
+    <string name="crm_views_direction_desc">ຈາກຫຼາຍຫາໜ້ອຍ</string>
     <string name="crm_list_add_to_home">ເພີ່ມເຂົ້າໃນໜ້າຈໍຫຼັກ</string>
     <string name="crm_search_objects_placeholder">ຄົ້ນຫາວັດຖຸ</string>
     <string name="crm_links_search_placeholder">ຄົ້ນຫາວັດຖຸ</string>
@@ -159,7 +159,7 @@
     <string name="crm_parent_none">ບໍ່ມີລາຍການແມ່</string>
     <string name="crm_links_empty">ບໍ່ມີລິ້ງ</string>
     <string name="crm_links_section_relates">ກ່ຽວຂ້ອງກັບ</string>
-    <string name="crm_links_section_duplicated_by">ຊໍ້າກັນໂດຍ</string>
+    <string name="crm_links_section_duplicated_by">ຖືກເຮັດຊໍ້າໂດຍ</string>
     <string name="crm_links_type">ປະເພດລິ້ງ</string>
     <string name="crm_links_type_relates">ກ່ຽວຂ້ອງກັບ</string>
     <string name="crm_links_remove">ລຶບລິ້ງ</string>
@@ -224,7 +224,7 @@
     <string name="crm_views_empty">ບໍ່ມີມຸມມອງທີ່ກຳນົດໄວ້</string>
     <string name="crm_views_empty_subtitle">ສ້າງມຸມມອງກະດານ ຫຼື ລາຍການເພື່ອຈັດກຸ່ມວັດຖຸ</string>
     <string name="crm_views_delete_message">ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບມຸມມອງ \"%1$s\"?</string>
-    <string name="crm_views_columns_field">ຊ່ອງສຳລັບຖັນ</string>
+    <string name="crm_views_columns_field">ຊ່ອງຖັນ</string>
     <string name="crm_views_rows_field">ຊ່ອງສຳລັບແຖວ (ແຖວແບ່ງກຸ່ມ)</string>
     <string name="crm_views_border_field">ຊ່ອງສຳລັບສີຂອບ</string>
     <string name="crm_views_filter_classes">ກັ່ນຕອງຕາມຄລາສ</string>

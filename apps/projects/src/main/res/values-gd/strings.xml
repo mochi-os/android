@@ -180,7 +180,7 @@
     <string name="projects_links_search_placeholder">Lorg nithean</string>
 
     <string name="notification_channel_projects">Brathan phròiseactan</string>
-    <string name="projects_auth_brand">Pròiseactan Mochi</string>
+    <string name="projects_auth_brand">Mochi Pròiseactan</string>
     <string name="projects_list_search_placeholder">Lorg pròiseactan</string>
     <string name="projects_list_no_matching">Chan eil pròiseact a\' freagairt</string>
     <string name="projects_list_empty">Chan eil pròiseact ann fhathast</string>
@@ -191,26 +191,26 @@
     <string name="projects_views_filter">Criathraich (air a stòradh, gun chur an sàs fhathast)</string>
     <string name="projects_people_empty">Chan eil cothrom aig duine fhathast</string>
     <string name="projects_settings_delete_confirm_message">A bheil thu cinnteach gu bheil thu airson am pròiseact seo a sguabadh às? Thèid a h-uile nì, beachd, agus roghainn a thoirt air falbh gu buan.</string>
-    <string name="projects_object_unwatch">Sguir de choimhead</string>
+    <string name="projects_object_unwatch">Sguir de chumail sùil</string>
     <string name="projects_object_tab_watchers">Luchd-coimhid</string>
     <string name="projects_watchers_empty">Chan eil neach-coimhid ann fhathast</string>
     <string name="projects_object_delete_title">Sguab às an nì</string>
     <string name="projects_object_delete_message">A bheil thu cinnteach gu bheil thu airson an nì seo a sguabadh às? Cha ghabh seo a thilleadh.</string>
     <string name="projects_parent_none">Gun phàrant</string>
-    <string name="projects_links_empty">Chan eil ceanglaichean ann</string>
+    <string name="projects_links_empty">Gun cheanglaichean</string>
     <string name="projects_links_section_relates">A\' buntainn ri</string>
     <string name="projects_links_section_duplicated_by">Air a dhùblachadh le</string>
     <string name="projects_links_type">Seòrsa ceangail</string>
     <string name="projects_links_type_relates">A\' buntainn ri</string>
     <string name="projects_links_remove">Thoir an ceangal air falbh</string>
     <string name="projects_comment_replying_to">A\' freagairt %1$s</string>
-    <string name="projects_comment_clear_reply">Glan am freagairt</string>
+    <string name="projects_comment_clear_reply">Falamhaich am freagairt</string>
     <string name="projects_comment_placeholder">Cuir beachd ris</string>
     <string name="projects_property_pick_date">Tagh ceann-latha</string>
     <string name="projects_property_ok">Ceart</string>
     <string name="projects_property_add_item">Cuir nì ris</string>
     <string name="projects_property_required">Tha %1$s a dhìth</string>
-    <string name="projects_activity_empty">Chan eil gnìomhachd ann</string>
+    <string name="projects_activity_empty">Gun ghnìomhachd</string>
     <string name="projects_activity_created">chruthaich an nì seo</string>
     <string name="projects_activity_deleted">sguab às an nì seo</string>
     <string name="projects_activity_changed">dh\'atharraich %1$s: %2$s → %3$s</string>
@@ -218,7 +218,7 @@
     <string name="projects_activity_cleared">ghlan %1$s</string>
     <string name="projects_activity_updated">dh\'ùraich %1$s</string>
     <string name="projects_activity_made_change">rinn atharrachadh</string>
-    <string name="projects_attachment_empty">Chan eil ceanglachan ann</string>
+    <string name="projects_attachment_empty">Chan eil ceanglachain ann</string>
     <string name="projects_attachment_default_name">ceanglachan</string>
     <string name="projects_attachment_size_bytes">%1$d B</string>
     <string name="projects_attachment_size_kb">%1$d KB</string>
@@ -289,7 +289,7 @@
     <string name="projects_field_multi">Ioma-thaghadh</string>
     <string name="projects_field_position">Suidheachadh taisbeanaidh</string>
     <string name="projects_field_position_header">Bann-cinn</string>
-    <string name="projects_field_validation">Dearbhachadh</string>
+    <string name="projects_field_validation">Dearbhadh</string>
     <string name="projects_field_min_length">Faid as lugha</string>
     <string name="projects_field_max_length">Faid as motha</string>
     <string name="projects_field_pattern">Pàtran (regex)</string>
@@ -373,7 +373,7 @@
     <string name="projects_design_export_saved">Chaidh an dealbhachd a shàbhaladh</string>
     <string name="projects_design_import_failed">Cha b\' urrainn am faidhle sin a leughadh</string>
     <string name="projects_design_or_upload_json">No luchdaich faidhle suas</string>
-    <string name="projects_export">Às-phortaich dàta</string>
+    <string name="projects_export">Às-phortaich an dàta</string>
     <string name="projects_export_failed">Cha b\' urrainn an t-às-phortadh a shàbhaladh</string>
     <string name="projects_export_saved">Chaidh dàta a\' phròiseict a shàbhaladh</string>
     <string name="projects_exporting">A\' deasachadh an às-phortaidh…</string>

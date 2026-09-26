@@ -65,7 +65,7 @@
     <string name="staff_audit_action_account_unbanned">Tiltás feloldva</string>
     <string name="staff_audit_action_account_unsuspended">Felfüggesztés feloldva</string>
     <string name="staff_audit_action_auction_bid_placed">Licit leadva</string>
-    <string name="staff_audit_action_auction_cancelled">Aukció lemondva</string>
+    <string name="staff_audit_action_auction_cancelled">Aukció megszakítva</string>
     <string name="staff_audit_action_auction_created">Aukció létrehozva</string>
     <string name="staff_audit_action_auction_ended_sold">Aukción eladva</string>
     <string name="staff_audit_action_auction_ended_unsold">Aukció eladás nélkül zárult</string>

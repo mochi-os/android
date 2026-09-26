@@ -4,12 +4,12 @@
     <string name="calendars_subscribe_submit">Претплати се</string>
     <string name="calendars_subscribe_url">Адреса</string>
     <string name="calendars_connect_device">Повежи уређај</string>
-    <string name="calendars_preferences">Подешавања</string>
-    <string name="calendars_name">Име</string>
+    <string name="calendars_preferences">Поставке</string>
+    <string name="calendars_name">Назив</string>
     <string name="calendars_rename">Преименуј</string>
     <string name="calendars_delete">Обриши</string>
     <string name="calendars_previous">Претходно</string>
-    <string name="calendars_next">Даље</string>
+    <string name="calendars_next">Следеће</string>
     <string name="calendars_view">Приказ</string>
     <string name="calendars_view_list">Листа</string>
     <string name="calendars_list_search">Претражи</string>
@@ -58,9 +58,9 @@
     <string name="calendars_drawer_open">Календари</string>
     <string name="calendars_calendar_menu">Опције: %1$s</string>
     <string name="calendars_only_this">Само овај</string>
-    <string name="calendars_create">Направи календар</string>
+    <string name="calendars_create">Креирај календар</string>
     <string name="calendars_subscribe">Претплати се на календар</string>
-    <string name="calendars_poll">Освежи одмах</string>
+    <string name="calendars_poll">Провери сада</string>
     <string name="calendars_delete_title">Обрисати %1$s?</string>
     <string name="calendars_delete_message">Његови догађаји се бришу заједно са њим.</string>
     <string name="calendars_today">Данас</string>
@@ -99,8 +99,8 @@
     <string name="calendars_hours_finish">Крај радног времена</string>
     <string name="calendars_hours_invalid">Радно време мора да се заврши након свог почетка.</string>
     <string name="calendars_work_days">Радни дани</string>
-    <string name="calendars_multiweek_weeks">Приказане седмице</string>
-    <string name="calendars_multiweek_previous">Седмице уназад</string>
+    <string name="calendars_multiweek_weeks">Приказаних седмица</string>
+    <string name="calendars_multiweek_previous">Седмица пре</string>
     <string name="calendars_default_duration">Подразумевано трајање догађаја</string>
     <string name="calendars_default_reminder">Подразумевани подсетник</string>
     <string name="calendars_link_title">Веза ка календару</string>
@@ -165,7 +165,7 @@
     <string name="calendars_poll_unauthorised">Сервер календара је одбио акредитиве налога</string>
     <string name="calendars_subscribe_username">Корисничко име</string>
     <string name="calendars_subscribe_password">Лозинка</string>
-    <string name="calendars_subscribe_connect">Повежи се</string>
+    <string name="calendars_subscribe_connect">Повежи</string>
     <string name="calendars_subscribe_server">Други Mochi или CalDAV сервер</string>
     <string name="calendars_subscribe_address">Адреса објављеног календара (само за читање)</string>
     <string name="calendars_subscribe_password_apple">Лозинка за апликацију</string>

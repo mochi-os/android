@@ -259,10 +259,10 @@
     <string name="staff_disputes_status_responded">Хариулсан</string>
     <string name="staff_disputes_status_reviewing">Шүүмжилж байна</string>
     <string name="staff_disputes_view">Үзэх</string>
-    <string name="staff_filter_chip_remove">Шүүлтүүр устгах</string>
+    <string name="staff_filter_chip_remove">Шүүлтүүр арилгах</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
-    <string name="staff_filter_label_moderation">Зохицуулалт</string>
-    <string name="staff_filter_label_query">Хайлт</string>
+    <string name="staff_filter_label_moderation">Хяналт</string>
+    <string name="staff_filter_label_query">Хайх</string>
     <string name="staff_filter_label_seller">Худалдагч</string>
     <string name="staff_filter_label_status">Төлөв</string>
     <string name="staff_filter_label_type">Төрөл</string>
@@ -367,7 +367,7 @@
     <string name="staff_sidebar_disputes">Маргаанууд</string>
     <string name="staff_sidebar_listings">Зарууд</string>
     <string name="staff_sidebar_management">Удирдлага</string>
-    <string name="staff_sidebar_market">Маркет</string>
+    <string name="staff_sidebar_market">Зах зээл</string>
     <string name="staff_sidebar_moderation">Хяналтын лог</string>
     <string name="staff_sidebar_overview">Тойм</string>
     <string name="staff_sidebar_reports">Гомдол</string>

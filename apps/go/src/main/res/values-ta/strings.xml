@@ -50,8 +50,8 @@
     <string name="go_resign_title">விளையாட்டிலிருந்து விலகவா?</string>
     <string name="go_sidebar_completed">முடிந்தது</string>
     <string name="go_sidebar_new_game">புதிய விளையாட்டு</string>
-    <string name="go_status_draw">டிரா</string>
-    <string name="go_status_draw_text">டிரா</string>
+    <string name="go_status_draw">சமநிலை</string>
+    <string name="go_status_draw_text">சமநிலை</string>
     <string name="go_status_game_over">ஆட்டம் முடிந்தது</string>
     <string name="go_status_opponent_move">%1$s-ன் நகர்வு</string>
     <string name="go_status_opponent_wins">%1$s வெற்றி பெற்றார்</string>

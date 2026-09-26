@@ -242,7 +242,7 @@
     <string name="route_meta">ترجیح %1$d · %2$s</string>
     <string name="interests_search_placeholder">شامل کرنے کے لیے موضوعات تلاش کریں…</string>
     <string name="interests_empty">ابھی تک کوئی دلچسپیاں نہیں۔</string>
-    <string name="interests_summary_regenerate">خلاصہ دوبارہ پیدا کریں</string>
+    <string name="interests_summary_regenerate">خلاصہ دوبارہ بنائیں</string>
     <string name="interests_summary_regenerating">دوبارہ پیدا ہو رہا ہے…</string>
     <string name="interests_summary_empty">اپنی پسند کی چیزوں کا خلاصہ بنانے کے لیے کچھ دلچسپیاں شامل کریں۔</string>
     <string name="interests_search_failed">تلاش ناکام۔ براہ کرم دوبارہ کوشش کریں۔</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s اب اس ڈومین پر راستوں کا انتظام نہیں کرے گا۔</string>
     <string name="domain_delegation_delete_title">تفویض حذف کریں؟</string>
     <string name="domain_delegation_path">پاتھ</string>
-    <string name="domain_delegation_user">صارف کی ID</string>
+    <string name="domain_delegation_user">صارف</string>
     <string name="domain_delegations">تفویضات</string>
     <string name="domain_delegations_empty">کوئی تفویض کنفیگر نہیں ہیں۔</string>
     <string name="domain_delete">ڈومین حذف کریں</string>
@@ -389,9 +389,9 @@
     <string name="account_totp_open">تصدیق کنندہ ایپ میں کھولیں</string>
     <string name="accounts_revoke">رسائی منسوخ کریں</string>
     <string name="accounts_capability_calendar">کیلنڈر</string>
-    <string name="accounts_capability_notify">notifications</string>
+    <string name="accounts_capability_notify">نوٹیفکیشنز</string>
     <string name="accounts_capability_ai">AI</string>
-    <string name="accounts_capability_login">سائن-ان</string>
+    <string name="accounts_capability_login">لاگ ان</string>
     <string name="accounts_provider_caldav">کیلنڈر سرور</string>
     <string name="accounts_revoke_confirm">اس سے %1$s کی کیلنڈر رسائی منسوخ ہو جائے گی۔ %2$s کے ساتھ سائن-ان اس وقت تک رہے گا جب تک آپ لاگ ان صفحے پر اسے ان لنک نہ کریں۔</string>
     <string name="accounts_capability_mcp">MCP</string>

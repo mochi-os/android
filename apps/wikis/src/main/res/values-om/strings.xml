@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Haqi</string>
     <string name="wikis_replicas_remove_failed">Garagaltoota haquu hin dandeenye</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wikiwwan</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">Beeksisa waa\'ee gulaallii fuula wiki, yaada fi afeerraa.</string>
     <string name="wikis_pageview_toc_expand">Baafata agarsiisi</string>
@@ -272,7 +272,7 @@
     <string name="wikis_attachments_delete_confirm_message">“%1$s” haqi? Kun deebi\'uu hin danda\'u.</string>
     <string name="wikis_attachments_downloading">Buufachaa jira…</string>
     <string name="wikis_attachments_empty_description">Fuula kanatti faayilii dabaluuf Ol kaa\'uu tuqi.</string>
-    <string name="wikis_settings_name_save_cd">Maqaa kuusuu</string>
+    <string name="wikis_settings_name_save_cd">Maqaa olkaa\'i</string>
     <string name="wikis_settings_name_cancel_cd">Sirreessa dhiisuu</string>
     <string name="wikis_access_level_label">Hayyama</string>
     <string name="wikis_access_set_failed">Argannoo haaromsuun hin milkoofne</string>

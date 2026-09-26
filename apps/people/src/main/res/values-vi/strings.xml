@@ -163,10 +163,10 @@
     <string name="people_contact_family">Họ</string>
     <string name="people_contact_nickname">Biệt danh</string>
     <string name="people_contact_add_email">Thêm email</string>
-    <string name="people_contact_add_phone">Thêm điện thoại</string>
+    <string name="people_contact_add_phone">Thêm số điện thoại</string>
     <string name="people_contact_add_address">Thêm địa chỉ</string>
     <string name="people_contact_street">Đường</string>
-    <string name="people_contact_birthday">Sinh nhật</string>
+    <string name="people_contact_birthday">Ngày sinh</string>
     <string name="people_contact_organisation">Tổ chức</string>
     <string name="people_contact_url">Trang web</string>
     <string name="people_contact_note">Ghi chú</string>

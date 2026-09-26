@@ -6,7 +6,7 @@
     <string name="crm_list_logout">Вийти</string>
     <string name="crm_list_create">Створити CRM</string>
     <string name="crm_create_title">Створити CRM</string>
-    <string name="crm_create_name">Ім\'я</string>
+    <string name="crm_create_name">Назва</string>
     <string name="crm_create_description">Опис</string>
     <string name="crm_create_template_none">Немає</string>
     <string name="crm_create_action">Створити</string>
@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Піктограма</string>
     <string name="crm_option_icon_placeholder">напр. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Відписатися</string>
-    <string name="crm_settings_delete_crm">Видалити проєкт</string>
+    <string name="crm_settings_delete_crm">Видалити CRM</string>
     <string name="crm_settings_delete_confirm_title">Видалити CRM</string>
     <string name="crm_settings_unsubscribe_title">Відписатися</string>
     <string name="crm_settings_unsubscribe_message">Ви впевнені, що хочете відписатися від цієї CRM?</string>
@@ -86,8 +86,8 @@
     <string name="crm_classes_add">Додати клас</string>
     <string name="crm_classes_add_dialog_title">Додати клас</string>
     <string name="crm_classes_create">Створити</string>
-    <string name="crm_class_name">Ім\'я</string>
-    <string name="crm_class_save_name">Зберегти ім’я</string>
+    <string name="crm_class_name">Назва</string>
+    <string name="crm_class_save_name">Зберегти назву</string>
     <string name="crm_class_title_field">Поле заголовка</string>
     <string name="crm_class_fields">Поля</string>
     <string name="crm_class_add_field">Додати поле</string>
@@ -98,7 +98,7 @@
     <string name="crm_field_type_user">Користувач</string>
     <string name="crm_field_type_date">Дата</string>
     <string name="crm_field_type_checklist">Контрольний список</string>
-    <string name="crm_field_name">Ім\'я</string>
+    <string name="crm_field_name">Назва</string>
     <string name="crm_field_type">Тип</string>
     <string name="crm_field_flags">Прапорці</string>
     <string name="crm_field_required">Обов\'язково</string>
@@ -166,7 +166,7 @@
     <string name="crm_comment_replying_to">Відповідь користувачу %1$s</string>
     <string name="crm_comment_clear_reply">Очистити відповідь</string>
     <string name="crm_comment_placeholder">Додати коментар</string>
-    <string name="crm_property_pick_date">Виберіть дату</string>
+    <string name="crm_property_pick_date">Вибрати дату</string>
     <string name="crm_property_ok">OK</string>
     <string name="crm_property_add_item">Додати елемент</string>
     <string name="crm_property_required">%1$s є обов\'язковим</string>
@@ -210,7 +210,7 @@
     <string name="crm_field_sortable">Можна сортувати</string>
     <string name="crm_field_filterable">Можна фільтрувати</string>
     <string name="crm_field_show_on_card">Показувати на картці</string>
-    <string name="crm_field_multi">Кілька значень</string>
+    <string name="crm_field_multi">Множинний вибір</string>
     <string name="crm_field_position">Позиція відображення</string>
     <string name="crm_field_position_header">Заголовок</string>
     <string name="crm_field_validation">Перевірка</string>

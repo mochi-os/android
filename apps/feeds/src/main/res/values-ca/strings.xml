@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Font de Mochi</string>
     <string name="feeds_source_type_feed_memories">Records</string>
-    <string name="feeds_remove_source">Suprimeix la font</string>
+    <string name="feeds_remove_source">Vols eliminar la font?</string>
     <string name="feeds_suggested_credibility_accept">Accepta</string>
     <string name="feeds_rss_url_copied">URL RSS copiat al porta-retalls</string>
     <string name="feeds_logout">Tanca la sessió</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">URL RSS</string>
     <string name="feeds_source_never_fetched">Mai obtingut</string>
     <string name="feeds_source_poll">Sondeig</string>
-    <string name="feeds_source_transform">Transforma</string>
+    <string name="feeds_source_transform">Transformació amb IA</string>
     <string name="feeds_remove_source_confirm">Voleu eliminar \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Suprimeix també les publicacions importades</string>
     <string name="feeds_suggested_credibility_title">Credibilitat suggerida</string>

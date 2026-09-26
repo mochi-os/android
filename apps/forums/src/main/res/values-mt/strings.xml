@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Iddiżabbona</string>
     <string name="forums_list_unsubscribe_title">Iddiżabbona</string>
     <string name="forums_create_title">Oħloq forum</string>
-    <string name="forums_create_name">Isem</string>
+    <string name="forums_create_name">Isem tal-forum</string>
     <string name="forums_create_privacy">Privatezza</string>
     <string name="forums_create_private">Privat</string>
     <string name="forums_create_public">Pubbliku</string>
-    <string name="forums_create_action">Oħloq</string>
+    <string name="forums_create_action">Oħloq forum</string>
     <string name="forums_find_title">Sib forums</string>
     <string name="forums_find_recommended">Rakkomandat</string>
     <string name="forums_find_subscribe">Abbona</string>
@@ -87,7 +87,7 @@
     <string name="forums_moderation_restriction_type_muted">Skiet</string>
     <string name="forums_moderation_restriction_type_banned">Ipprojbixxi</string>
     <string name="forums_moderation_section_premoderation">Pre-moderazzjoni</string>
-    <string name="forums_moderation_section_ratelimiting">Rate Limiting</string>
+    <string name="forums_moderation_section_ratelimiting">Limitazzjoni tar-rata</string>
     <string name="forums_moderation_require_posts">Eħtieġ approvazzjoni għal posts ġodda</string>
     <string name="forums_moderation_require_comments">Eħtieġ approvazzjoni għal kummenti ġodda</string>
     <string name="forums_moderation_require_new_users">Eħtieġ approvazzjoni għal utenti ġodda</string>
@@ -156,7 +156,7 @@
     <string name="forums_banner_placeholder">Merħba f\'dan il-forum…</string>
     <string name="forums_ai_mode_label">Modalità: %1$s</string>
     <string name="forums_ai_mode_heading">Modalità tal-AI</string>
-    <string name="forums_ai_mode_off">Mitfi</string>
+    <string name="forums_ai_mode_off">Diżabbiltat</string>
     <string name="forums_ai_account">Kont tal-AI</string>
     <string name="forums_ai_prompt_tag">Prompt għat-tikkettar</string>
     <string name="forums_ai_prompt_score">Prompt għall-iskorjar</string>
@@ -209,7 +209,7 @@
         <item quantity="other">%d post ġdid</item>
     </plurals>
     <string name="forums_rss_feed">Feed RSS</string>
-    <string name="forums_rss_mode_posts">Postijiet</string>
+    <string name="forums_rss_mode_posts">Posts</string>
     <string name="forums_rss_mode_posts_comments">Posts u kummenti</string>
     <string name="forums_rss_copied">URL ta\' RSS ikkupjat fil-clipboard</string>
     <string name="forums_find_results">Riżultati tat-tfittxija</string>
@@ -261,7 +261,7 @@
     <string name="forums_ai_actions_label">Azzjonijiet tal-IA fuq il-posts</string>
     <string name="forums_ai_prompt_custom">Personalizzat</string>
     <string name="forums_ai_prompt_score_label">Prompt tal-punteġġ</string>
-    <string name="forums_ai_prompt_tag_label">Prompt tat-tikketti</string>
+    <string name="forums_ai_prompt_tag_label">Prompt għat-tikketti</string>
     <string name="forums_ai_prompt_variables">Varjabbli: %1$s</string>
     <string name="forums_link">Ħolqa</string>
     <string name="forums_moderation_ban_message">Jitilfu l-aċċess għall-forum sakemm tneħħi r-restrizzjoni.</string>
@@ -280,16 +280,16 @@
     <string name="forums_moderation_restriction_remove_message">Jerġgħu jiksbu aċċess sħiħ għall-forum minnufih.</string>
     <string name="forums_moderation_restriction_remove_title">Tneħħi r-restrizzjoni fuq %1$s?</string>
     <string name="forums_moderation_restriction_state_muted">Imsikket</string>
-    <string name="forums_moderation_restriction_state_shadowban">Projbizzjoni moħbija</string>
+    <string name="forums_moderation_restriction_state_shadowban">Ipprojbit bil-moħbi</string>
     <string name="forums_moderation_restrictions_empty_subtitle">L-ebda utent ma ġie msikket jew ipprojbit</string>
     <string name="forums_moderation_section_premoderation_description">Itlob approvazzjoni qabel ma l-kontenut isir viżibbli</string>
     <string name="forums_moderation_section_ratelimiting_description">Evita l-ispam billi tillimita kemm-il darba l-utenti jistgħu jippubblikaw</string>
     <string name="forums_moderation_settings_updated">L-issettjar tal-moderazzjoni ġie aġġornat</string>
-    <string name="forums_moderation_unit_posts">postijiet</string>
+    <string name="forums_moderation_unit_posts">posts</string>
     <string name="forums_moderation_unit_replies">tweġibiet</string>
     <string name="forums_moderation_unit_seconds">sekondi</string>
     <string name="forums_settings_ai_updated">L-issettjar tal-IA ġie aġġornat</string>
-    <string name="forums_settings_forum_renamed">Il-forum issemma mill-ġdid</string>
+    <string name="forums_settings_forum_renamed">Il-forum ġie msemmi mill-ġdid</string>
     <string name="forums_settings_name_clear_cd">Naddaf l-isem</string>
     <string name="forums_settings_unsubscribe_section">Ħassar l-abbonament mill-forum</string>
     <string name="forums_share_link_title">Ħolqa tal-forum</string>

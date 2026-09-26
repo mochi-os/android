@@ -3,7 +3,7 @@
 
     <string name="settings_home_title">સેટિંગ્સ</string>
     <string name="settings_home_logout">લૉગ આઉટ કરો</string>
-    <string name="settings_home_account">એકાઉન્ટ</string>
+    <string name="settings_home_account">ખાતું</string>
     <string name="settings_home_preferences">પસંદગીઓ</string>
     <string name="settings_home_display">દર્શાવો</string>
     <string name="settings_home_notification_prefs">સૂચના પસંદગીઓ</string>
@@ -119,7 +119,7 @@
     <string name="settings_home_system_documents">દસ્તાવેજો</string>
     <string name="settings_home_system_settings">સિસ્ટમ સેટિંગ્સ</string>
     <string name="system_settings_title">સિસ્ટમ સેટિંગ્સ</string>
-    <string name="system_settings_section_login">લૉગિન</string>
+    <string name="system_settings_section_login">લોગિન</string>
     <string name="system_settings_section_oauth">તૃતીય-પક્ષ લૉગિન</string>
     <string name="system_settings_section_user_defaults">વપરાશકર્તા ડિફોલ્ટ</string>
     <string name="system_settings_section_operator">ઑપરેટર</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">પ્રાથમિકતા %1$d · %2$s</string>
     <string name="interests_search_placeholder">ઉમેરવા માટેના વિષયો શોધો…</string>
     <string name="interests_empty">હજુ સુધી કોઈ રસ નથી.</string>
-    <string name="interests_summary_regenerate">સારાંશ ફરીથી બનાવો</string>
+    <string name="interests_summary_regenerate">સારાંશ ફરી જનરેટ કરો</string>
     <string name="interests_summary_regenerating">ફરીથી બનાવી રહ્યું છે…</string>
     <string name="interests_summary_empty">તમને ગમે છે તે વસ્તુઓનો સારાંશ બનાવવા માટે કેટલાક રસ ઉમેરો.</string>
     <string name="interests_search_failed">શોધ નિષ્ફળ થઈ. કૃપા કરીને ફરીથી પ્રયાસ કરો.</string>
@@ -273,10 +273,10 @@
     <string name="system_users_revoke_all_title">બધા સત્રો રદ કરવા?</string>
     <string name="system_users_revoke_all_message">આ વપરાશકર્તાના તમામ સક્રિય સત્રો સાઇન આઉટ થશે.</string>
     <string name="system_users_pagination_status">%3$d વપરાશકર્તાઓમાંથી %1$d–%2$d દર્શાવી રહ્યું છે</string>
-    <string name="account_title">એકાઉન્ટ</string>
+    <string name="account_title">ખાતું</string>
     <string name="account_section_identity">ઓળખ</string>
     <string name="account_identity_identity">ઓળખ</string>
-    <string name="account_identity_username">વપરાશકર્તાનામ</string>
+    <string name="account_identity_username">વપરાશકર્તા નામ</string>
     <string name="account_identity_name">નામ</string>
     <string name="account_identity_fingerprint">આંગળાની છાપ</string>
     <string name="account_identity_directory_toggle">બીજાને તમને ડિરેક્ટરીમાં શોધવાની મંજૂરી આપો</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s હવે આ ડોમેન પરના માર્ગોનું સંચાલન કરશે નહીં.</string>
     <string name="domain_delegation_delete_title">ડેલિગેશન કાઢી નાખવું છે?</string>
     <string name="domain_delegation_path">પાથ</string>
-    <string name="domain_delegation_user">વપરાશકર્તા ID</string>
+    <string name="domain_delegation_user">વપરાશકર્તા</string>
     <string name="domain_delegations">ડેલિગેશન</string>
     <string name="domain_delegations_empty">કોઈ પ્રતિનિધિ રૂપરેખાંકિત નથી.</string>
     <string name="domain_delete">ડોમેન કાઢી નાખો</string>
@@ -312,7 +312,7 @@
         <item quantity="one">%1$d સત્ર રદ કર્યું</item>
         <item quantity="other">%1$d સત્રો રદ કર્યા</item>
     </plurals>
-    <string name="login_title">લૉગિન</string>
+    <string name="login_title">લોગિન</string>
     <string name="login_section_methods">લૉગિન પદ્ધતિઓ</string>
     <string name="login_method_email">ઇમેઇલ કોડ</string>
     <string name="login_method_passkey">પાસકી</string>

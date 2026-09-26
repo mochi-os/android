@@ -260,8 +260,8 @@
     <string name="staff_filter_label_moderation">Модерация</string>
     <string name="staff_filter_label_query">Издөө</string>
     <string name="staff_filter_label_seller">Сатуучу</string>
-    <string name="staff_filter_label_status">Абал</string>
-    <string name="staff_filter_label_type">Түрү</string>
+    <string name="staff_filter_label_status">Абалы</string>
+    <string name="staff_filter_label_type">Тип</string>
     <string name="staff_listings_action_approve_title">Жарыялоону жактыруу</string>
     <string name="staff_listings_action_reject_title">Жарнаманы четке кагуу</string>
     <string name="staff_listings_action_remove_title">Жарнаманы алуу</string>

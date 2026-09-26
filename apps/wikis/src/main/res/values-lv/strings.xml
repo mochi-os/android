@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Noņemt</string>
     <string name="wikis_replicas_remove_failed">Neizdevās noņemt repliku</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki</string>
     <string name="wikis_channel_name">Wikis paziņojumi</string>
     <string name="wikis_channel_description">Paziņojumi par lapu rediģēšanu, komentāriem un ielūgumiem.</string>
     <string name="wikis_pageview_toc_expand">Rādīt satura rādītāju</string>
@@ -246,7 +246,7 @@
     <string name="wikis_insert_dialog_empty">Vēl nav pielikumu. Augšupielādējiet failu, lai sāktu.</string>
     <string name="wikis_delete_page_message">Jūs gatavojaties dzēst lapu „%1$s\" (%2$s). Šo darbību var atsaukt, atjaunojot no vēstures.</string>
     <string name="wikis_delete_page_success">Lapa dzēsta</string>
-    <string name="wikis_revert_page_title">Atjaunot lapu</string>
+    <string name="wikis_revert_page_title">Atsaukt lapu</string>
     <string name="wikis_revert_page_message">Jūs gatavojaties atjaunot %1$s uz versiju %2$d. Tas izveidos jaunu redakciju ar versijas %2$d saturu.</string>
     <string name="wikis_revert_page_default_comment">Atjaunots uz versiju %1$d</string>
     <string name="wikis_revert_page_success">Atjaunots uz versiju %1$d</string>

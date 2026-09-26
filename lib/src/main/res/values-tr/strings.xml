@@ -144,7 +144,7 @@
     <string name="auth_use_passkey">Geçiş anahtarı kullan</string>
     <string name="auth_email_me_a_code">Bana e-posta ile kod gönder</string>
     <string name="auth_or_enter_authenticator_code">Ya da authenticator kodunu gir</string>
-    <string name="auth_log_in">Giriş yap</string>
+    <string name="auth_log_in">Oturum aç</string>
     <string name="auth_back">Geri</string>
     <string name="auth_lost_access_recovery">Erişimi mi kaybettiniz? Kurtarma kodu kullanın</string>
     <string name="auth_create_identity_title">Kimliğinizi oluşturun</string>
@@ -161,7 +161,7 @@
     <string name="bootstrap_choose_account">Bir hesap seçin</string>
     <string name="bootstrap_sign_in_different_server">Farklı bir sunucuda oturum aç</string>
     <string name="common_retry">Yeniden dene</string>
-    <string name="common_more_options">Daha fazla seçenek</string>
+    <string name="common_more_options">Diğer seçenekler</string>
     <string name="common_collapse">Daralt</string>
     <string name="common_expand">Genişlet</string>
     <string name="common_play_video">Videoyu oynat</string>
@@ -263,7 +263,7 @@
     <string name="person_picker_none">Yok</string>
     <string name="person_picker_clear">Seçimi temizle</string>
     <string name="person_picker_select">Seçin …</string>
-    <string name="person_picker_directory">Rehber</string>
+    <string name="person_picker_directory">Dizin</string>
     <string name="person_picker_no_people">Kişi yok</string>
     <string name="person_picker_project_members">Proje üyeleri</string>
     <string name="account_token_label">Mochi oturumu</string>

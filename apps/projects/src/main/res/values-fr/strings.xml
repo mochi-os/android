@@ -200,10 +200,10 @@
     <string name="projects_object_delete_message">Êtes-vous sûr de vouloir supprimer cet objet ? Cette action est irréversible.</string>
     <string name="projects_parent_none">Aucun parent</string>
     <string name="projects_links_empty">Aucun lien</string>
-    <string name="projects_links_section_relates">En rapport avec</string>
+    <string name="projects_links_section_relates">En relation avec</string>
     <string name="projects_links_section_duplicated_by">Dupliqué par</string>
     <string name="projects_links_type">Type de lien</string>
-    <string name="projects_links_type_relates">En rapport avec</string>
+    <string name="projects_links_type_relates">En relation avec</string>
     <string name="projects_links_remove">Supprimer le lien</string>
     <string name="projects_comment_placeholder">Ajouter un commentaire</string>
     <string name="projects_property_pick_date">Choisir une date</string>
@@ -258,8 +258,8 @@
     <string name="projects_move_to_row">Déplacer vers la ligne</string>
     <string name="projects_move_after">Après %1$s</string>
     <string name="projects_drag_card">Faire glisser la carte</string>
-    <string name="projects_drag_row">Déplacer la ligne</string>
-    <string name="projects_drag_column">Déplacer la colonne</string>
+    <string name="projects_drag_row">Faire glisser la ligne</string>
+    <string name="projects_drag_column">Faire glisser la colonne</string>
     <string name="projects_drag_hint">Appuyez longuement et faites glisser pour déplacer</string>
     <string name="projects_design_more_options">Plus d\'options</string>
     <string name="projects_design_clipboard_label">JSON de conception</string>
@@ -318,7 +318,7 @@
     <string name="projects_filter">Filtrer</string>
     <string name="projects_link">Lien</string>
     <string name="projects_filter_clear_all">Tout effacer</string>
-    <string name="projects_filter_all">Toutes</string>
+    <string name="projects_filter_all">Tout</string>
     <string name="projects_filter_other">Autre</string>
     <string name="projects_create_object_title">Nouveau</string>
     <string name="projects_settings_section_identity">Identité</string>

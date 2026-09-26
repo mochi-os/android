@@ -119,7 +119,7 @@
     <string name="settings_home_system_documents">Sənədlər</string>
     <string name="settings_home_system_settings">Sistem parametrləri</string>
     <string name="system_settings_title">Sistem parametrləri</string>
-    <string name="system_settings_section_login">Daxil ol</string>
+    <string name="system_settings_section_login">Giriş</string>
     <string name="system_settings_section_oauth">Üçüncü tərəf girişi</string>
     <string name="system_settings_section_user_defaults">İstifadəçi standartları</string>
     <string name="system_settings_section_operator">Operator</string>
@@ -265,7 +265,7 @@
     <string name="settings_home_system_users">İstifadəçilər (server)</string>
     <string name="system_users_add_user">İstifadəçi əlavə et</string>
     <string name="system_users_search_placeholder">İstifadəçilər axtarın…</string>
-    <string name="system_users_sort_by">Çeşidlə</string>
+    <string name="system_users_sort_by">Sırala</string>
     <string name="system_users_last_login">Son giriş: %1$s</string>
     <string name="system_users_delete_message">Bu qalıcı olaraq istifadəçi \"%1$s\"-i siləcək. Bu əməliyyat geri qaytarıla bilməz.</string>
     <string name="system_users_sessions_title">%1$s-in sessiyaları</string>
@@ -312,7 +312,7 @@
         <item quantity="one">1 sessiya ləğv edildi</item>
         <item quantity="other">%1$d sessiya ləğv edildi</item>
     </plurals>
-    <string name="login_title">Daxil ol</string>
+    <string name="login_title">Giriş</string>
     <string name="login_section_methods">Giriş üsulları</string>
     <string name="login_method_email">E-poçt kodu</string>
     <string name="login_method_passkey">Giriş açarı</string>

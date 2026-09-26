@@ -5,12 +5,12 @@
     <string name="feeds_create_feed">Креирај фид</string>
     <string name="feeds_new_post">Нови пост</string>
     <string name="feeds_all_feeds">Сви фидови</string>
-    <string name="feeds_name">Име</string>
+    <string name="feeds_name">Назив</string>
     <string name="feeds_create">Креирај</string>
     <string name="feeds_no_feeds_found">Нема пронађених извора</string>
     <string name="feeds_feed_title_default">Фид</string>
     <string name="feeds_mark_all_read">Означи све прочитаним</string>
-    <string name="feeds_settings">Поставке</string>
+    <string name="feeds_settings">Подешавања</string>
     <string name="feeds_no_posts_yet">Још нема постова</string>
     <string name="feeds_sort_label">Сортирај</string>
     <string name="feeds_sort_interests">Интересовања</string>
@@ -40,7 +40,7 @@
     <string name="feeds_tab_access">Приступ</string>
     <string name="feeds_tab_members">Чланови</string>
     <string name="feeds_tab_ai">AI</string>
-    <string name="feeds_feed_name">Име фида</string>
+    <string name="feeds_feed_name">Назив фида</string>
     <string name="feeds_save_name">Сачувај назив</string>
     <string name="feeds_banner">Банер</string>
     <string name="feeds_banner_description">Опциони markdown банер приказан на врху вашег фида.</string>
@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi фид</string>
     <string name="feeds_source_type_feed_memories">Успомене</string>
-    <string name="feeds_remove_source">Уклони извор</string>
+    <string name="feeds_remove_source">Уклонити извор?</string>
     <string name="feeds_suggested_credibility_accept">Прихвати</string>
     <string name="feeds_rss_url_copied">RSS URL копиран у клипборд</string>
     <string name="feeds_logout">Одјави се</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">Никада преузето</string>
     <string name="feeds_source_poll">Провера</string>
-    <string name="feeds_source_transform">Трансформација</string>
+    <string name="feeds_source_transform">AI трансформација</string>
     <string name="feeds_remove_source_confirm">Уклонити \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Обриши и увезене објаве</string>
     <string name="feeds_suggested_credibility_title">Предложена веродостојност</string>
@@ -162,7 +162,7 @@
     <string name="feeds_settings_field_entity_id">ID ентитета</string>
     <string name="feeds_settings_field_fingerprint">Отисак прста</string>
     <string name="feeds_settings_field_server">Сервер</string>
-    <string name="feeds_settings_name_edit_cd">Уреди име</string>
+    <string name="feeds_settings_name_edit_cd">Уреди назив</string>
     <string name="feeds_settings_section_identity">Идентитет</string>
     <string name="feeds_unsubscribe">Откажи претплату</string>
     <string name="feeds_unsubscribed">Претплата отказана</string>
@@ -212,7 +212,7 @@
     <string name="feeds_ai_prompt_custom">Прилагођено</string>
     <string name="feeds_ai_prompt_variables">Променљиве: %1$s</string>
     <string name="feeds_link">Веза</string>
-    <string name="feeds_share_link_title">Веза ка каналу</string>
+    <string name="feeds_share_link_title">Веза фида</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$d коментар</item>
         <item quantity="few">%1$d коментара</item>

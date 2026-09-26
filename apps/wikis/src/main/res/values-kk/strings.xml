@@ -50,7 +50,7 @@
     <string name="wikis_join_id_label">Wiki мән ID-сі</string>
     <string name="wikis_join_submit">Wiki репликасын жасау</string>
     <string name="wikis_create_title">Wiki құру</string>
-    <string name="wikis_create_name_label">Аты</string>
+    <string name="wikis_create_name_label">Атау</string>
     <string name="wikis_create_privacy_label">Кез келгенге wiki іздеуге рұқсат ету</string>
     <string name="wikis_create_submit">Құру</string>
     <string name="wikis_comments_empty_title">Әлі пікірлер жоқ</string>
@@ -151,7 +151,7 @@
     <string name="wikis_attachments_filter_images">Суреттер</string>
     <string name="wikis_attachments_filter_documents">Құжаттар</string>
     <string name="wikis_attachments_sort_date">Күн</string>
-    <string name="wikis_attachments_sort_name">Аты</string>
+    <string name="wikis_attachments_sort_name">Атау</string>
     <string name="wikis_attachments_sort_size">Өлшем</string>
     <string name="wikis_attachments_view_grid">Тор көрінісі</string>
     <string name="wikis_attachments_view_list">Тізім көрінісі</string>
@@ -171,9 +171,9 @@
     <string name="wikis_settings_tab_access">Қол жеткізу</string>
     <string name="wikis_settings_tab_replicas">Реплика</string>
     <string name="wikis_settings_section_identity">Жеке басы</string>
-    <string name="wikis_settings_field_name">Аты</string>
+    <string name="wikis_settings_field_name">Атау</string>
     <string name="wikis_settings_field_entity_id">Нысан идентификаторы</string>
-    <string name="wikis_settings_field_fingerprint">Саусақ ізі</string>
+    <string name="wikis_settings_field_fingerprint">Қысқа идентификатор</string>
     <string name="wikis_settings_name_edit_cd">Атауды өңдеу</string>
     <string name="wikis_settings_name_invalid_char">Атта &lt; немесе &gt; таңбалары болмауы керек</string>
     <string name="wikis_settings_name_too_long">Аты 100 таңбадан аспауы керек</string>
@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Жою</string>
     <string name="wikis_replicas_remove_failed">Репликаны жою сәтсіз аяқталды</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki-лер</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">Wiki бет өңдеулері, пікірлер және шақырулар туралы хабарламалар.</string>
     <string name="wikis_pageview_toc_expand">Мазмұнды көрсету</string>
@@ -232,7 +232,7 @@
     <string name="wikis_search_placeholder">Wiki іздеу…</string>
     <string name="wikis_unsubscribe_confirm_message">%1$s жазылымынан бас тартқыңыз келетініне сенімдісіз бе?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_find_search_placeholder">Аты, ID, саусақ ізі немесе URL бойынша іздеу…</string>
+    <string name="wikis_find_search_placeholder">Аты, ID, қысқа идентификатор немесе URL бойынша іздеу…</string>
     <string name="wikis_join_search_button">Wiki іздеу…</string>
     <string name="wikis_join_id_hint">abc123…</string>
     <string name="wikis_subscribe_502_retry">Ұсынылған серверсіз қайталап көру…</string>
@@ -282,7 +282,7 @@
     <string name="wikis_replicas_removed_success">Реплика жойылды</string>
     <string name="wikis_load_more">Көбірек жүктеу</string>
     <string name="wikis_access_change_level">Қол жеткізу деңгейі</string>
-    <string name="wikis_access_subject_anyone">Кез келген</string>
+    <string name="wikis_access_subject_anyone">Кез келген адам</string>
     <string name="wikis_access_subject_authenticated">Аутентификацияланған пайдаланушылар</string>
 
     <string name="wikis_revision_compare">Өзгерістерді салыстыру</string>

@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Ikon</string>
     <string name="crm_option_icon_placeholder">f.eks. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Avslutt abonnement</string>
-    <string name="crm_settings_delete_crm">Slett prosjekt</string>
+    <string name="crm_settings_delete_crm">Slett CRM</string>
     <string name="crm_settings_delete_confirm_title">Slett CRM</string>
     <string name="crm_settings_unsubscribe_title">Avslutt abonnement</string>
     <string name="crm_settings_unsubscribe_message">Er du sikker på at du vil avslutte abonnementet på denne CRM-en?</string>

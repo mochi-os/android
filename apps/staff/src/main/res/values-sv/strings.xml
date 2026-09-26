@@ -211,7 +211,7 @@
     <string name="staff_dashboard_kpi_total_orders">Totalt antal beställningar</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Nej</string>
-    <string name="staff_dashboard_open_sidebar">Öppna sidofältet</string>
+    <string name="staff_dashboard_open_sidebar">Öppna sidofält</string>
     <string name="staff_dashboard_order_fallback">Beställning #%1$s</string>
     <string name="staff_dashboard_system">System</string>
     <string name="staff_dashboard_tab_audit">Granskning</string>

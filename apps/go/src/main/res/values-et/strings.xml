@@ -16,7 +16,7 @@
     <string name="go_color_white">Valge</string>
     <string name="go_delete_confirm">Kustuta</string>
     <string name="go_delete_message">See mäng eemaldatakse teie loendist. Seda ei saa tagasi võtta.</string>
-    <string name="go_delete_title">Kustutada mäng?</string>
+    <string name="go_delete_title">Kas kustutada mäng?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">Nõustu</string>
     <string name="go_draw_decline">Keeldu</string>
@@ -50,8 +50,8 @@
     <string name="go_resign_title">Kas anda mäng alla?</string>
     <string name="go_sidebar_completed">Lõpetatud</string>
     <string name="go_sidebar_new_game">Uus mäng</string>
-    <string name="go_status_draw">Joonista</string>
-    <string name="go_status_draw_text">Joonista</string>
+    <string name="go_status_draw">Viik</string>
+    <string name="go_status_draw_text">Viik</string>
     <string name="go_status_game_over">Mäng on lõppenud</string>
     <string name="go_status_opponent_move">%1$s käik</string>
     <string name="go_status_opponent_wins">%1$s võidab</string>
@@ -64,7 +64,7 @@
     <string name="go_channel_name">Go teavitused</string>
     <string name="go_channel_description">Teavitused käikude, vahelejätmiste, viigipakkumiste ja partii tulemuste kohta.</string>
     <string name="go_open_sidebar">Ava külgriba</string>
-    <string name="go_sidebar_active">Aktiivsed partiid</string>
+    <string name="go_sidebar_active">Aktiivsed mängud</string>
     <string name="go_empty_active">Veel pole aktiivseid partiisid.</string>
     <string name="go_status_resigned">Andis alla</string>
     <string name="go_new_game_title">Uus Go partii</string>

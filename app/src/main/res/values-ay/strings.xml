@@ -2,7 +2,7 @@
 <resources>
 
     <string name="launcher_feeds">Mochi Feednaka</string>
-    <string name="launcher_chat">Mochi Arust\'awi</string>
+    <string name="launcher_chat">Mochi Chat</string>
     <string name="launcher_forums">Mochi Foronaka</string>
     <string name="launcher_projects">Mochi Proyectonaka</string>
     <string name="launcher_crm">Mochi CRM</string>

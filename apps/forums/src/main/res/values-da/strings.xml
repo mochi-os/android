@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Afmeld</string>
     <string name="forums_list_unsubscribe_title">Afmeld</string>
     <string name="forums_create_title">Opret forum</string>
-    <string name="forums_create_name">Navn</string>
+    <string name="forums_create_name">Forumnavn</string>
     <string name="forums_create_privacy">Privatliv</string>
     <string name="forums_create_private">Privat</string>
     <string name="forums_create_public">Offentlig</string>
-    <string name="forums_create_action">Opret</string>
+    <string name="forums_create_action">Opret forum</string>
     <string name="forums_find_title">Find fora</string>
     <string name="forums_find_recommended">Anbefalet</string>
     <string name="forums_find_subscribe">Abonnér</string>
@@ -154,7 +154,7 @@
     <string name="forums_banner_placeholder">Velkommen til dette forum…</string>
     <string name="forums_ai_mode_label">Tilstand: %1$s</string>
     <string name="forums_ai_mode_heading">AI-tilstand</string>
-    <string name="forums_ai_mode_off">Fra</string>
+    <string name="forums_ai_mode_off">Deaktiveret</string>
     <string name="forums_ai_account">AI-konto</string>
     <string name="forums_ai_prompt_tag">Prompt til tagging</string>
     <string name="forums_ai_prompt_score">Prompt til scoring</string>
@@ -256,7 +256,7 @@
     <string name="forums_access_select_group">Vælg en gruppe</string>
     <string name="forums_access_select_rule">Vælg en regel</string>
     <string name="forums_ai_actions_label">AI-handlinger på opslag</string>
-    <string name="forums_ai_prompt_custom">Tilpasset</string>
+    <string name="forums_ai_prompt_custom">Brugerdefineret</string>
     <string name="forums_ai_prompt_score_label">Score-prompt</string>
     <string name="forums_ai_prompt_tag_label">Tag-prompt</string>
     <string name="forums_ai_prompt_variables">Variabler: %1$s</string>
@@ -286,7 +286,7 @@
     <string name="forums_moderation_unit_replies">svar</string>
     <string name="forums_moderation_unit_seconds">sekunder</string>
     <string name="forums_settings_ai_updated">AI-indstillinger opdateret</string>
-    <string name="forums_settings_forum_renamed">Forummet er omdøbt</string>
+    <string name="forums_settings_forum_renamed">Forum omdøbt</string>
     <string name="forums_settings_name_clear_cd">Ryd navn</string>
     <string name="forums_settings_unsubscribe_section">Afmeld forummet</string>
     <string name="forums_share_link_title">Forumlink</string>

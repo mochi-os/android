@@ -44,7 +44,7 @@
     <string name="calendars_device_create">Түзүү</string>
     <string name="calendars_device_server">Сервер</string>
     <string name="calendars_device_address">Дарек</string>
-    <string name="calendars_device_username">Колдонуучу аты</string>
+    <string name="calendars_device_username">Колдонуучунун аты</string>
     <string name="calendars_device_password">Сырсөз</string>
     <string name="calendars_device_copy">%1$s көчүрүү</string>
     <string name="calendars_device_done">Бүттү</string>
@@ -154,13 +154,13 @@
     <string name="calendars_link_submit">Байланыштыруу</string>
     <string name="calendars_link_sync">Азыр синхрондоштуруу</string>
     <string name="calendars_link_grant">Календарга жетүүгө уруксат берүү</string>
-    <string name="calendars_link_linked">Байланышкан</string>
+    <string name="calendars_link_linked">Байланыштырылган</string>
     <string name="calendars_link_marker">Байланышкан календар</string>
     <string name="calendars_link_remote_empty">Календарлар жок</string>
     <string name="calendars_poll_conflict">Окуя эки жакта тең өзгөрдү</string>
     <string name="calendars_poll_missing">Календар өз серверинде жок</string>
     <string name="calendars_poll_unauthorised">Календардын сервери аккаунттун маалыматтарын четке какты</string>
-    <string name="calendars_subscribe_username">Колдонуучу аты</string>
+    <string name="calendars_subscribe_username">Колдонуучунун аты</string>
     <string name="calendars_subscribe_password">Сырсөз</string>
     <string name="calendars_subscribe_connect">Туташуу</string>
     <string name="calendars_subscribe_server">Башка Mochi же CalDAV сервери</string>

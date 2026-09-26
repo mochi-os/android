@@ -21,7 +21,7 @@
     <string name="wikis_page_action_tags">Chimpunaka</string>
     <string name="wikis_page_action_recent_changes">Jichhüru mayjt\'awinaka</string>
     <string name="wikis_page_action_new_page">Machaqa página</string>
-    <string name="wikis_page_action_settings">Configuración</string>
+    <string name="wikis_page_action_settings">Wakichawinaka</string>
     <string name="wikis_page_action_unsubscribe">Suscripción jaytaña</string>
     <string name="wikis_title">Wikinaka</string>
     <string name="wikis_empty_title">Nayrïr wikim qalltaña</string>
@@ -165,8 +165,8 @@
     <string name="wikis_attachments_empty_title">Janira attachmentanaka</string>
     <string name="wikis_attachments_no_results_title">Jan attachmentanak thaqhawi taypi</string>
     <string name="wikis_attachments_no_results_description">Yaqha tag yant\'am.</string>
-    <string name="wikis_settings_title">Configuración</string>
-    <string name="wikis_settings_tab_settings">Configuración</string>
+    <string name="wikis_settings_title">Wakichawinaka</string>
+    <string name="wikis_settings_tab_settings">Wakichawinaka</string>
     <string name="wikis_settings_tab_redirects">Redirectanaka</string>
     <string name="wikis_settings_tab_access">Mantaña</string>
     <string name="wikis_settings_tab_replicas">Replicanaka</string>
@@ -182,7 +182,7 @@
     <string name="wikis_settings_name_save_failed">Janiw wiki suti turkaña atinkti</string>
     <string name="wikis_settings_section_subscription">Suscripción</string>
     <string name="wikis_settings_field_source">Origen</string>
-    <string name="wikis_settings_action_sync">Jichha sync luram</string>
+    <string name="wikis_settings_action_sync">Jichha sincronizaña</string>
     <string name="wikis_settings_sync_success">Wiki sincronizata</string>
     <string name="wikis_settings_sync_failed">Janiw wiki sincronizaña atinkti</string>
     <string name="wikis_settings_section_home">Uta página</string>
@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Aparma</string>
     <string name="wikis_replicas_remove_failed">Janiw replica apsuña atinkti</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wikinaka</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">Wiki laphi askichawinakat, amuyunakat ukat jawsawinakat yatiyawinaka.</string>
     <string name="wikis_pageview_toc_expand">Uñacht’ayaña qillqa mayjt’a</string>
@@ -225,7 +225,7 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Machaqachata %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” laphix janïr utjkiti.</string>
-    <string name="wikis_pageview_share_chooser">Wiki chinu</string>
+    <string name="wikis_pageview_share_chooser">Wiki chimpu</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">Enlace</string>
     <string name="wikis_open_sidebar">Lado paneluxa jist\'arasiña</string>
@@ -261,19 +261,19 @@
     <string name="wikis_redirect_delete_confirm_message">Akax “%1$s” ukat “%2$s” ukar sarayaña apsuni. Fuente URL ukar sarirenakax janiw sarayatäxapxaniti.</string>
     <string name="wikis_tags_subtitle">Laphinaka ch’ukuñampi thaqaña. Mä ch’ukuña limt’aña taqi laphinaka uñjañataki.</string>
     <string name="wikis_tag_pages_title_template">\"%1$s\" chimpuni laphinaka</string>
-    <string name="wikis_tag_manager_add_action">Etiqueta yapaña</string>
+    <string name="wikis_tag_manager_add_action">Etiqueta yapxataña</string>
     <string name="wikis_tag_manager_remove_confirm_title">¿Etiqueta apaqañati?</string>
     <string name="wikis_tag_manager_remove_confirm_message">¿“%1$s” ch’ukuña aka laphit apsuña?</string>
     <string name="wikis_tag_manager_added">Chimpu \"%1$s\" yapxatata</string>
     <string name="wikis_tag_manager_removed">Chimpu \"%1$s\" apaqata</string>
-    <string name="wikis_tag_dialog_title">Etiqueta yapaña</string>
+    <string name="wikis_tag_dialog_title">Etiqueta yapxataña</string>
     <string name="wikis_tag_dialog_empty">Ch’ukuñax jan ch’usäkiti</string>
     <string name="wikis_attachments_search_placeholder">Apkatatanak thaqaña…</string>
     <string name="wikis_attachments_delete_confirm_message">¿“%1$s” chhaqtayaña? Akax jan kutt’ayaskaspati.</string>
     <string name="wikis_attachments_downloading">Apaqasa…</string>
     <string name="wikis_attachments_empty_description">Aka laphir archivonaka yapxattañataki Apayaña ukar limt’aña.</string>
     <string name="wikis_settings_name_save_cd">Suti imaña</string>
-    <string name="wikis_settings_name_cancel_cd">Edición jaytaña</string>
+    <string name="wikis_settings_name_cancel_cd">Askichawi jaytaña</string>
     <string name="wikis_access_level_label">Permiso</string>
     <string name="wikis_access_set_failed">Mantañ jan machaqachksna</string>
     <string name="wikis_replicas_col_subscribed">Suscribita: %1$s</string>
@@ -283,7 +283,7 @@
     <string name="wikis_load_more">Jukamp apaqaña</string>
     <string name="wikis_access_change_level">Mantañ tama</string>
     <string name="wikis_access_subject_anyone">Khitisa</string>
-    <string name="wikis_access_subject_authenticated">Yatiyat apnaqirinaka</string>
+    <string name="wikis_access_subject_authenticated">Chiqanchata apnaqirinaka</string>
 
     <string name="wikis_revision_compare">Mayjt\'awinaka uñakipt\'aña</string>
     <string name="wikis_revision_author">%1$s ukampi</string>

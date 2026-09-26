@@ -74,7 +74,7 @@
     <string name="system_status_title">තත්ත්වය</string>
     <string name="system_status_version">අනුවාදය</string>
     <string name="system_status_started">ආරම්භ විය</string>
-    <string name="system_status_update">යාවත්කාලීන කරන්න</string>
+    <string name="system_status_update">යාවත්කාලීන</string>
     <string name="system_status_refresh">අලුත් කරන්න</string>
     <string name="system_status_install_update">යාවත්කාලීනය ස්ථාපනය කරන්න</string>
     <string name="system_status_download_installer">ස්ථාපකය බාගන්න</string>
@@ -94,7 +94,7 @@
     <string name="accounts_field_email">ඊමේල්</string>
     <string name="accounts_field_model">ආකෘතිය</string>
     <string name="accounts_field_name">නම</string>
-    <string name="accounts_status_pending">සැලකිල්ලට පැමිණි</string>
+    <string name="accounts_status_pending">පොරොත්තුවෙන්</string>
     <string name="accounts_status_verified">සත්‍යාපිතයි</string>
     <string name="accounts_status_connected">සම්බන්ධිතයි</string>
     <string name="accounts_default_for_ai">AI සඳහා පෙරනිමි</string>
@@ -119,7 +119,7 @@
     <string name="settings_home_system_documents">ලේඛන</string>
     <string name="settings_home_system_settings">පද්ධති සැකසුම්</string>
     <string name="system_settings_title">පද්ධති සැකසුම්</string>
-    <string name="system_settings_section_login">පිවිසුම</string>
+    <string name="system_settings_section_login">පුරනය වීම</string>
     <string name="system_settings_section_oauth">තෙවන පාර්ශවීය පුරනය වීම</string>
     <string name="system_settings_section_user_defaults">පරිශීලක පෙරනිමි</string>
     <string name="system_settings_section_operator">ක්‍රියාකරු</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">ප්‍රමුඛතාව %1$d · %2$s</string>
     <string name="interests_search_placeholder">එකතු කිරීමට මාතෘකා සොයන්න…</string>
     <string name="interests_empty">තවම රුචිකම් නැත.</string>
-    <string name="interests_summary_regenerate">සාරාංශය නැවත නිර්මාණය කරන්න</string>
+    <string name="interests_summary_regenerate">සාරාංශය නැවත ජනනය කරන්න</string>
     <string name="interests_summary_regenerating">නැවත නිර්මාණය වෙමින්…</string>
     <string name="interests_summary_empty">ඔබ කැමති දේවල සාරාංශයක් නිර්මාණය කිරීමට රුචිකම් කිහිපයක් එක් කරන්න.</string>
     <string name="interests_search_failed">සෙවීම අසාර්ථකයි. කරුණාකර නැවත උත්සාහ කරන්න.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s තවදුරටත් මෙම වසමේ මාර්ග කළමනාකරණය නොකරයි.</string>
     <string name="domain_delegation_delete_title">පැවරුම මකන්නද?</string>
     <string name="domain_delegation_path">මාර්ගය</string>
-    <string name="domain_delegation_user">පරිශීලක ID</string>
+    <string name="domain_delegation_user">පරිශීලකයා</string>
     <string name="domain_delegations">පැවරුම්</string>
     <string name="domain_delegations_empty">වින්‍යාසගත නියෝජනයන් නැත.</string>
     <string name="domain_delete">ඩොමේනය මකන්න</string>
@@ -312,7 +312,7 @@
         <item quantity="one">සැසි %1$d අවලංගු කළා</item>
         <item quantity="other">සැසි %1$d ක් අවලංගු කළා</item>
     </plurals>
-    <string name="login_title">පිවිසුම</string>
+    <string name="login_title">පුරනය වීම</string>
     <string name="login_section_methods">පිවිසුම් ක්‍රම</string>
     <string name="login_method_email">ඊමේල් කේතය</string>
     <string name="login_method_passkey">ප්‍රවේශ යතුර</string>

@@ -2,7 +2,7 @@
 <resources>
 
     <string name="words_list_title">Բառեր</string>
-    <string name="words_list_menu">Ընտրացանկ</string>
+    <string name="words_list_menu">Մենյու</string>
     <string name="words_list_logout">Դուրս գալ</string>
     <string name="words_sidebar_completed">Ավարտված</string>
     <string name="words_sidebar_new_game">Նոր խաղ</string>

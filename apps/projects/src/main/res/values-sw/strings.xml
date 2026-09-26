@@ -208,7 +208,7 @@
     <string name="projects_comment_placeholder">Ongeza maoni</string>
     <string name="projects_property_pick_date">Chagua tarehe</string>
     <string name="projects_property_ok">Sawa</string>
-    <string name="projects_property_add_item">Ongeza kipengele</string>
+    <string name="projects_property_add_item">Ongeza kipengee</string>
     <string name="projects_property_required">%1$s inahitajika</string>
     <string name="projects_activity_empty">Hakuna shughuli</string>
     <string name="projects_activity_created">ameunda kitu hiki</string>
@@ -261,7 +261,7 @@
     <string name="projects_drag_row">Buruta safumlalo</string>
     <string name="projects_drag_column">Buruta safuwima</string>
     <string name="projects_drag_hint">Bonyeza kwa muda mrefu na uburute ili kuhamisha</string>
-    <string name="projects_design_more_options">Chaguzi zaidi</string>
+    <string name="projects_design_more_options">Chaguo zaidi</string>
     <string name="projects_design_clipboard_label">JSON ya muundo</string>
     <string name="projects_design_export_subject">Muundo wa mradi</string>
     <string name="projects_design_share_chooser">Shiriki muundo</string>
@@ -276,9 +276,9 @@
     <string name="projects_classes_empty">Hakuna madarasa yaliyofafanuliwa</string>
     <string name="projects_class_label">Darasa: %1$s</string>
     <string name="projects_class_title_field_description">Ni uga gani wa kutumia kama kichwa cha kuonyesha kwa vitu vya darasa hili.</string>
-    <string name="projects_class_title_field_default">Chaguomsingi (kinachosomeka)</string>
+    <string name="projects_class_title_field_default">Chaguo-msingi (linaloweza kusomeka)</string>
     <string name="projects_class_merge_requests_description">Ruhusu maombi ya kuunganisha kwenye vitu vya darasa hili.</string>
-    <string name="projects_class_parents">Madarasa wazazi</string>
+    <string name="projects_class_parents">Madarasa ya mzazi</string>
     <string name="projects_class_delete_message">Una uhakika unataka kufuta darasa \"%1$s\"? Nyuga zote na chaguzi zake pia zitafutwa.</string>
     <string name="projects_field_type_enumerated">Iliyoorodheshwa</string>
     <string name="projects_field_label">Uga: %1$s</string>
@@ -292,7 +292,7 @@
     <string name="projects_field_validation">Uthibitishaji</string>
     <string name="projects_field_min_length">Urefu wa chini</string>
     <string name="projects_field_max_length">Urefu wa juu</string>
-    <string name="projects_field_pattern">Mchoro (regex)</string>
+    <string name="projects_field_pattern">Muundo (regex)</string>
     <string name="projects_field_rows">Safumlalo (urefu wa eneo la maandishi)</string>
     <string name="projects_field_no_options">Hakuna chaguzi zilizofafanuliwa</string>
     <string name="projects_field_delete_message">Una uhakika unataka kufuta uga \"%1$s\"? Chaguzi zote na thamani zitapotea.</string>
@@ -314,11 +314,11 @@
     <string name="projects_design_preview_empty">Hakuna cha kuonyesha</string>
 
     <string name="projects_create_choose_template">Chagua kiolezo</string>
-    <string name="projects_create_next">Endelea</string>
+    <string name="projects_create_next">Inayofuata</string>
     <string name="projects_filter">Chuja</string>
     <string name="projects_link">Kiungo</string>
     <string name="projects_filter_clear_all">Futa vyote</string>
-    <string name="projects_filter_all">Zote</string>
+    <string name="projects_filter_all">Vyote</string>
     <string name="projects_filter_other">Nyingine</string>
     <string name="projects_create_object_title">Mpya</string>
     <string name="projects_settings_section_identity">Utambulisho</string>

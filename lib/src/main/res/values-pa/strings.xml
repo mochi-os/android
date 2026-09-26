@@ -25,7 +25,7 @@
     <string name="common_edit">ਸੰਪਾਦਿਤ ਕਰੋ</string>
     <string name="common_delete">ਮਿਟਾਓ</string>
     <string name="common_add">ਜੋੜੋ</string>
-    <string name="common_notifications">ਨੋਟੀਫਿਕੇਸ਼ਨ</string>
+    <string name="common_notifications">ਸੂਚਨਾਵਾਂ</string>
     <string name="common_logout">ਲੌਗ ਆਊਟ</string>
     <string name="common_subscribe">ਗਾਹਕ ਬਣੋ</string>
     <string name="common_copy">ਕਾਪੀ ਕਰੋ</string>
@@ -52,11 +52,11 @@
     <string name="reaction_disagree">ਅਸਹਿਮਤ</string>
     <string name="push_service_action_hide">ਲੁਕਾਓ</string>
     <string name="about_close">ਬੰਦ ਕਰੋ</string>
-    <string name="notifications_open">ਨੋਟੀਫਿਕੇਸ਼ਨ</string>
-    <string name="notifications_title">ਨੋਟੀਫਿਕੇਸ਼ਨ</string>
-    <string name="notifications_empty">ਕੋਈ ਨੋਟੀਫਿਕੇਸ਼ਨ ਨਹੀਂ</string>
+    <string name="notifications_open">ਸੂਚਨਾਵਾਂ</string>
+    <string name="notifications_title">ਸੂਚਨਾਵਾਂ</string>
+    <string name="notifications_empty">ਕੋਈ ਸੂਚਨਾ ਨਹੀਂ</string>
     <string name="notifications_empty_unread">ਸਭ ਕੁਝ ਪੜ੍ਹ ਲਿਆ</string>
-    <string name="notifications_tab_unread">ਅਣਪੜ੍ਹੇ</string>
+    <string name="notifications_tab_unread">ਅਣ-ਪੜ੍ਹਿਆ</string>
     <string name="notifications_tab_unread_count">ਅਣਪੜ੍ਹੇ (%1$d)</string>
     <string name="notifications_tab_all">ਸਾਰੇ</string>
     <string name="notifications_mark_all_read">ਸਾਰੇ ਪੜ੍ਹੇ ਮਾਰਕ ਕਰੋ</string>
@@ -133,14 +133,14 @@
     <string name="error_enter_email">ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੀ ਈਮੇਲ ਦਰਜ ਕਰੋ</string>
     <string name="error_enter_name">ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਨਾਮ ਦਰਜ ਕਰੋ</string>
     <string name="auth_connect_to_server">ਆਪਣੇ ਸਰਵਰ ਨਾਲ ਕਨੈਕਟ ਕਰੋ</string>
-    <string name="auth_connect">ਕਨੈਕਟ ਕਰੋ</string>
+    <string name="auth_connect">ਜੁੜੋ</string>
     <string name="auth_sign_in">ਸਾਈਨ ਇਨ ਕਰੋ</string>
     <string name="auth_check_email">ਤਸਦੀਕੀ ਕੋਡ ਲਈ ਆਪਣੀ ਈਮੇਲ ਜਾਂਚੋ</string>
     <string name="auth_mfa_title">ਮਲਟੀ-ਫੈਕਟਰ ਪ੍ਰਮਾਣੀਕਰਨ</string>
     <string name="auth_mfa_subtitle">ਬਾਕੀ ਤਸਦੀਕੀ ਪੜਾਅ ਪੂਰੇ ਕਰੋ</string>
     <string name="auth_recover_account">ਖਾਤਾ ਮੁੜ-ਪ੍ਰਾਪਤ ਕਰੋ</string>
     <string name="auth_login_title">Mochi ਵਿੱਚ ਲੌਗ ਇਨ ਕਰੋ</string>
-    <string name="auth_next">ਅੱਗੇ</string>
+    <string name="auth_next">ਅਗਲਾ</string>
     <string name="auth_or_log_in_with">ਜਾਂ ਇਸ ਨਾਲ ਲੌਗ ਇਨ ਕਰੋ</string>
     <string name="auth_passkey">ਪਾਸਕੀ</string>
     <string name="auth_use_passkey">ਪਾਸਕੀ ਵਰਤੋ</string>
@@ -162,7 +162,7 @@
     <string name="bootstrap_sign_in_differently">ਵੱਖਰੇ ਢੰਗ ਨਾਲ ਸਾਈਨ ਇਨ ਕਰੋ</string>
     <string name="bootstrap_choose_account">ਇੱਕ ਖਾਤਾ ਚੁਣੋ</string>
     <string name="bootstrap_sign_in_different_server">ਕਿਸੇ ਵੱਖਰੇ ਸਰਵਰ ਉੱਤੇ ਸਾਈਨ ਇਨ ਕਰੋ</string>
-    <string name="common_retry">ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ</string>
+    <string name="common_retry">ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ</string>
     <string name="common_more_options">ਹੋਰ ਵਿਕਲਪ</string>
     <string name="common_collapse">ਸਮੇਟੋ</string>
     <string name="common_expand">ਫੈਲਾਓ</string>
@@ -190,7 +190,7 @@
     <string name="format_time_days_short">%1$dਦਿਨ</string>
     <string name="format_time_weeks_short">%1$dਹ</string>
     <string name="format_time_months_short">%1$dਮਹੀ</string>
-    <string name="reaction_add">ਪ੍ਰਤੀਕਿਰਿਆ ਜੋੜੋ</string>
+    <string name="reaction_add">ਰਿਐਕਸ਼ਨ ਜੋੜੋ</string>
     <string name="push_service_channel">Mochi ਪੁਸ਼</string>
     <string name="push_service_channel_description">ਸੂਚਨਾਵਾਂ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ Mochi ਨੂੰ ਕਨੈਕਟ ਰੱਖਦਾ ਹੈ</string>
     <string name="push_service_group">ਬੈਕਗਰਾਊਂਡ ਸੇਵਾ</string>
@@ -238,7 +238,7 @@
     <string name="stepup_error_oauth">ਉਸ ਖਾਤੇ ਨਾਲ ਪੁਸ਼ਟੀ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕੀ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
     <string name="game_system_resign">%1$s ਨੇ ਹਾਰ ਮੰਨ ਲਈ</string>
     <string name="game_system_draw_offer">%1$s ਨੇ ਡਰਾਅ ਦੀ ਪੇਸ਼ਕਸ਼ ਕੀਤੀ</string>
-    <string name="game_system_draw_accept">ਡਰਾਅ ਤੇ ਸਹਿਮਤੀ ਹੋਈ</string>
+    <string name="game_system_draw_accept">ਡਰਾਅ \'ਤੇ ਸਹਿਮਤੀ ਹੋਈ</string>
     <string name="game_system_draw_decline">%1$s ਨੇ ਡਰਾਅ ਠੁਕਰਾ ਦਿੱਤਾ</string>
     <string name="reactivation_title">ਤੁਹਾਡਾ ਖਾਤਾ ਮਿਟਾਉਣ ਲਈ ਤੈਅ ਹੈ</string>
     <string name="reactivation_body">ਤੁਹਾਡਾ ਖਾਤਾ ਮਿਟਾਉਣ ਲਈ ਤੈਅ ਹੈ। ਤੁਸੀਂ ਹੁਣ ਇਸ ਨੂੰ ਰੱਦ ਕਰ ਸਕਦੇ ਹੋ ਅਤੇ ਪੂਰੀ ਪਹੁੰਚ ਬਹਾਲ ਕਰ ਸਕਦੇ ਹੋ।</string>
@@ -254,7 +254,7 @@
     <string name="common_logout_confirm_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨਨ ਲੌਗ ਆਊਟ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ? ਆਪਣੇ ਖਾਤੇ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ ਦੁਬਾਰਾ ਲੌਗ ਇਨ ਕਰਨਾ ਪਵੇਗਾ।</string>
     <string name="comment_anonymous">ਅਗਿਆਤ</string>
     <string name="tags_label">ਟੈਗ</string>
-    <string name="tags_add">ਟੈਗ ਸ਼ਾਮਲ ਕਰੋ</string>
+    <string name="tags_add">ਟੈਗ ਜੋੜੋ</string>
     <string name="tags_interest_up">ਇਸ ਵਰਗਾ ਹੋਰ ਦਿਖਾਓ</string>
     <string name="tags_interest_down">ਇਸ ਵਰਗਾ ਘੱਟ ਦਿਖਾਓ</string>
     <string name="tags_interest_clear">ਦਿਖਾਉਣਾ ਬੰਦ ਕਰੋ</string>

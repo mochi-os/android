@@ -16,7 +16,7 @@
     <string name="go_color_white">Biely</string>
     <string name="go_delete_confirm">Odstrániť</string>
     <string name="go_delete_message">Táto hra bude odstránená z vášho zoznamu. Túto akciu nemožno vrátiť späť.</string>
-    <string name="go_delete_title">Vymazať hru?</string>
+    <string name="go_delete_title">Odstrániť hru?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">Prijať</string>
     <string name="go_draw_decline">Odmietnuť</string>
@@ -64,7 +64,7 @@
     <string name="go_channel_name">Oznámenia Go</string>
     <string name="go_channel_description">Oznámenia o ťahoch, vynechaniach, ponukách remízy a výsledkoch partií.</string>
     <string name="go_open_sidebar">Otvoriť bočný panel</string>
-    <string name="go_sidebar_active">Aktívne partie</string>
+    <string name="go_sidebar_active">Aktívne hry</string>
     <string name="go_empty_active">Zatiaľ žiadne aktívne partie.</string>
     <string name="go_status_resigned">Vzdaná</string>
     <string name="go_new_game_title">Nová partia Go</string>

@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Ikon</string>
     <string name="crm_option_icon_placeholder">t.ex. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Avsluta prenumeration</string>
-    <string name="crm_settings_delete_crm">Ta bort projekt</string>
+    <string name="crm_settings_delete_crm">Ta bort CRM</string>
     <string name="crm_settings_delete_confirm_title">Ta bort CRM</string>
     <string name="crm_settings_unsubscribe_title">Avsluta prenumeration</string>
     <string name="crm_settings_unsubscribe_message">Är du säker på att du vill avprenumerera från detta CRM?</string>
@@ -149,14 +149,14 @@
     <string name="crm_create_template">Mall</string>
     <string name="crm_find_search_placeholder">Sök CRM eller klistra in URL</string>
     <string name="crm_find_search_hint">Sök efter CRM att prenumerera på</string>
-    <string name="crm_create_object_parent_none">(inget)</string>
+    <string name="crm_create_object_parent_none">(ingen)</string>
     <string name="crm_views_filter">Filter (sparat, inte tillämpat ännu)</string>
     <string name="crm_people_empty">Ingen har åtkomst ännu</string>
     <string name="crm_settings_delete_confirm_message">Är du säker på att du vill ta bort denna CRM? Alla objekt, kommentarer och inställningar tas bort permanent.</string>
     <string name="crm_object_unwatch">Sluta bevaka</string>
     <string name="crm_object_delete_title">Ta bort objekt</string>
     <string name="crm_object_delete_message">Är du säker på att du vill ta bort detta objekt? Åtgärden kan inte ångras.</string>
-    <string name="crm_parent_none">Inget överordnat</string>
+    <string name="crm_parent_none">Ingen överordnad</string>
     <string name="crm_links_empty">Inga länkar</string>
     <string name="crm_links_section_relates">Relaterar till</string>
     <string name="crm_links_section_duplicated_by">Duplicerad av</string>
@@ -201,7 +201,7 @@
     <string name="crm_classes_empty">Inga klasser definierade</string>
     <string name="crm_class_label">Klass: %1$s</string>
     <string name="crm_class_title_field_description">Vilket fält som ska användas som visningstitel för objekt av denna klass.</string>
-    <string name="crm_class_title_field_default">Standard (läsbart)</string>
+    <string name="crm_class_title_field_default">Standard (läsbar)</string>
     <string name="crm_class_parents">Föräldraklasser</string>
     <string name="crm_class_delete_message">Är du säker på att du vill radera klassen \"%1$s\"? Alla fält och deras alternativ kommer också att raderas.</string>
     <string name="crm_field_type_enumerated">Uppräknad</string>
@@ -273,9 +273,9 @@
     <string name="crm_access_role_comment">Kommentera och visa</string>
     <string name="crm_access_role_view">Endast visning</string>
     <string name="crm_access_role_none">Ingen åtkomst</string>
-    <string name="crm_all_crms">Alla CRM</string>
+    <string name="crm_all_crms">Alla CRM:er</string>
     <string name="crm_settings_unsubscribe_section">Avsluta prenumeration på CRM</string>
-    <string name="crm_settings_updated">CRM uppdaterat</string>
+    <string name="crm_settings_updated">CRM uppdaterad</string>
     <string name="crm_create_import_backup">Importera från säkerhetskopia (valfritt)</string>
     <string name="crm_export">Exportera data</string>
     <string name="crm_exporting">Förbereder export…</string>

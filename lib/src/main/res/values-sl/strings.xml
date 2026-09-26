@@ -123,7 +123,7 @@
     <string name="game_chat_move_played">%1$s odigral %2$s</string>
 
     <string name="error_network">Povezave ni mogoče vzpostaviti. Preverite internetno povezavo in poskusite znova.</string>
-    <string name="error_authentication_required">Zahtevana je avtentikacija</string>
+    <string name="error_authentication_required">Potrebna je avtentikacija</string>
     <string name="error_not_found">Ni najdeno</string>
     <string name="error_server">Napaka strežnika (%1$d). Poskusite znova pozneje.</string>
     <string name="error_unexpected">Prišlo je do nepričakovane napake</string>
@@ -238,7 +238,7 @@
     <string name="stepup_error_oauth">S tem računom ni bilo mogoče preveriti. Poskusite znova.</string>
     <string name="game_system_resign">%1$s se je predal</string>
     <string name="game_system_draw_offer">%1$s je ponudil remi</string>
-    <string name="game_system_draw_accept">Remi sprejet</string>
+    <string name="game_system_draw_accept">Neodločeno sprejeto</string>
     <string name="game_system_draw_decline">%1$s je zavrnil remi</string>
     <string name="reactivation_title">Vaš račun je predviden za izbris</string>
     <string name="reactivation_body">Vaš račun je predviden za izbris. Zdaj lahko prekličete in obnovite poln dostop.</string>
@@ -258,7 +258,7 @@
     <string name="tags_interest_up">Prikaži več podobnega</string>
     <string name="tags_interest_down">Prikaži manj podobnega</string>
     <string name="tags_interest_clear">Ne prikazuj več</string>
-    <string name="tags_none">Ni oznak</string>
+    <string name="tags_none">Brez oznak</string>
     <string name="tags_delete">Odstrani oznako</string>
     <string name="person_picker_none">Brez</string>
     <string name="person_picker_clear">Počisti izbor</string>

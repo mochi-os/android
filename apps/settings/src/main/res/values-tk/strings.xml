@@ -4,7 +4,7 @@
     <string name="settings_home_title">Sazlamalar</string>
     <string name="settings_home_logout">Çyk</string>
     <string name="settings_home_account">Hasap</string>
-    <string name="settings_home_preferences">Sazlamalar</string>
+    <string name="settings_home_preferences">Saýlamalar</string>
     <string name="settings_home_display">Görkezmek</string>
     <string name="settings_home_notification_prefs">Habarnama saýlamalary</string>
     <string name="settings_home_accounts">Baglanan hasaplar</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">Ileri tutulma %1$d · %2$s</string>
     <string name="interests_search_placeholder">Goşmak üçin temalary gözläň…</string>
     <string name="interests_empty">Heniz gyzyklanmalar ýok.</string>
-    <string name="interests_summary_regenerate">Sözmüni täzeden döret</string>
+    <string name="interests_summary_regenerate">Gysgaça beýany gaýtadan döret</string>
     <string name="interests_summary_regenerating">Täzeden döredilýär…</string>
     <string name="interests_summary_empty">Halaýan zatlaryňyzyň jemini döretmek üçin käbir gyzyklanmalary goşuň.</string>
     <string name="interests_search_failed">Gözleg şowsuz boldy. Täzeden synanyşyň.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s indi bu domende ýollary dolandyrmaz.</string>
     <string name="domain_delegation_delete_title">Wekilçiligi pozmaly?</string>
     <string name="domain_delegation_path">Ýol</string>
-    <string name="domain_delegation_user">Ulanyjy ID</string>
+    <string name="domain_delegation_user">Ulanyjy</string>
     <string name="domain_delegations">Wekilçilikler</string>
     <string name="domain_delegations_empty">Sazlanan delegasiýalar ýok.</string>
     <string name="domain_delete">Domeni pozmak</string>
@@ -388,11 +388,11 @@
     <string name="accounts_field_secret">Gol çekiş syry</string>
     <string name="account_totp_open">Autentifikator programmasynda aç</string>
     <string name="accounts_revoke">Elýeterliligi ýatyr</string>
-    <string name="accounts_capability_calendar">Kalendar</string>
+    <string name="accounts_capability_calendar">Senenama</string>
     <string name="accounts_capability_notify">Bildirişler</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Giriş</string>
-    <string name="accounts_provider_caldav">Kalendar serweri</string>
+    <string name="accounts_provider_caldav">Senenama serweri</string>
     <string name="accounts_revoke_confirm">Bu %1$s kalendaryna girişi ýatyrar. %2$s bilen giriş, Giriş sahypasynda baglanyşygy aýyrýançaňyz galar.</string>
     <string name="accounts_capability_mcp">MCP</string>
 </resources>

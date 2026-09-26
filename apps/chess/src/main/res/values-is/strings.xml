@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">Samþykkja</string>
     <string name="chess_draw_decline">Hafna</string>
     <string name="chess_status_checkmate_you_win">Mát — þú vinnur!</string>
-    <string name="chess_status_stalemate">Pattstaða — jafntefli</string>
+    <string name="chess_status_stalemate">Patt — jafntefli</string>
     <string name="chess_status_draw">Jafntefli</string>
     <string name="chess_status_check_your_move">Skák — þín hreyfing</string>
     <string name="chess_status_your_move">Þinn leikur</string>

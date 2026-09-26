@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Obunadan chiqish</string>
     <string name="forums_list_unsubscribe_title">Obunadan chiqish</string>
     <string name="forums_create_title">Forum yaratish</string>
-    <string name="forums_create_name">Nomi</string>
+    <string name="forums_create_name">Forum nomi</string>
     <string name="forums_create_privacy">Maxfiylik</string>
     <string name="forums_create_private">Shaxsiy</string>
     <string name="forums_create_public">Ommaviy</string>
-    <string name="forums_create_action">Yaratish</string>
+    <string name="forums_create_action">Forum yaratish</string>
     <string name="forums_find_title">Forumlarni topish</string>
     <string name="forums_find_recommended">Tavsiya etiladi</string>
     <string name="forums_find_subscribe">Obuna boʻlish</string>
@@ -223,7 +223,7 @@
     <string name="forums_access_level_view_full">Faqat koʻrish</string>
     <string name="forums_access_level_none_full">Ruxsat yoʻq</string>
     <string name="forums_access_subject_anyone">Har kim</string>
-    <string name="forums_access_subject_authenticated">Tasdiqlangan foydalanuvchilar</string>
+    <string name="forums_access_subject_authenticated">Autentifikatsiyadan oʻtgan foydalanuvchilar</string>
     <string name="forums_access_tab_other">Boshqa</string>
     <string name="forums_access_authenticated_desc">Tizimga kirgan har qanday foydalanuvchi</string>
     <string name="forums_access_anyone_desc">Shu jumladan anonim foydalanuvchilar</string>
@@ -256,9 +256,9 @@
     <string name="forums_access_select_group">Guruhni tanlang</string>
     <string name="forums_access_select_rule">Qoidani tanlang</string>
     <string name="forums_ai_actions_label">Postlarda SI amallari</string>
-    <string name="forums_ai_prompt_custom">Moslashtirilgan</string>
-    <string name="forums_ai_prompt_score_label">Baholash prompti</string>
-    <string name="forums_ai_prompt_tag_label">Teg prompti</string>
+    <string name="forums_ai_prompt_custom">Maxsus</string>
+    <string name="forums_ai_prompt_score_label">Baholash soʻrovi</string>
+    <string name="forums_ai_prompt_tag_label">Teg soʻrovi</string>
     <string name="forums_ai_prompt_variables">O\'zgaruvchilar: %1$s</string>
     <string name="forums_link">Havola</string>
     <string name="forums_moderation_ban_message">Siz cheklovni olib tashlamaguningizcha forumga kirish huquqini yo\'qotadi.</string>
@@ -276,8 +276,8 @@
     <string name="forums_moderation_restriction_by">%1$s tomonidan</string>
     <string name="forums_moderation_restriction_remove_message">Darhol forumga to\'liq kirish huquqini qaytarib oladi.</string>
     <string name="forums_moderation_restriction_remove_title">%1$s uchun cheklov olib tashlansinmi?</string>
-    <string name="forums_moderation_restriction_state_muted">Ovozsiz</string>
-    <string name="forums_moderation_restriction_state_shadowban">Soya blok</string>
+    <string name="forums_moderation_restriction_state_muted">Jim qilingan</string>
+    <string name="forums_moderation_restriction_state_shadowban">Yashirin bloklangan</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Hech bir foydalanuvchi ovozsiz qilinmagan yoki bloklanmagan</string>
     <string name="forums_moderation_section_premoderation_description">Kontent ko\'rinishidan oldin tasdiqlashni talab qiling</string>
     <string name="forums_moderation_section_ratelimiting_description">Foydalanuvchilar qanchalik tez-tez post yozishini cheklab spamning oldini oling</string>
@@ -286,7 +286,7 @@
     <string name="forums_moderation_unit_replies">javob</string>
     <string name="forums_moderation_unit_seconds">soniya</string>
     <string name="forums_settings_ai_updated">SI sozlamalari yangilandi</string>
-    <string name="forums_settings_forum_renamed">Forum nomi o\'zgartirildi</string>
+    <string name="forums_settings_forum_renamed">Forum nomi oʻzgartirildi</string>
     <string name="forums_settings_name_clear_cd">Nomni tozalash</string>
     <string name="forums_settings_unsubscribe_section">Forumdan obunani bekor qilish</string>
     <string name="forums_share_link_title">Forum havolasi</string>

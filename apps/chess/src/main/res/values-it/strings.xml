@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">Accetta</string>
     <string name="chess_draw_decline">Rifiuta</string>
     <string name="chess_status_checkmate_you_win">Scacco matto — hai vinto!</string>
-    <string name="chess_status_stalemate">Stallo — pareggio</string>
+    <string name="chess_status_stalemate">Stallo — patta</string>
     <string name="chess_status_draw">Patta</string>
     <string name="chess_status_check_your_move">Scacco — la tua mossa</string>
     <string name="chess_status_your_move">La tua mossa</string>
@@ -63,10 +63,10 @@
     <string name="chess_empty_start_button">Inizia la tua prima partita</string>
     <string name="chess_empty_subtitle">Inizia la tua prima partita per giocare a scacchi con un amico.</string>
     <string name="chess_move_capture">%1$s ha preso %2$s</string>
-    <string name="chess_open_sidebar">Apri menu</string>
-    <string name="chess_ws_connecting">Connessione…</string>
+    <string name="chess_open_sidebar">Apri barra laterale</string>
+    <string name="chess_ws_connecting">Connessione in corso…</string>
     <string name="chess_ws_disconnected">Offline</string>
-    <string name="chess_ws_failed">Connessione fallita</string>
+    <string name="chess_ws_failed">Connessione non riuscita</string>
     <string name="chess_ws_reconnecting">Riconnessione…</string>
     <string name="chess_piece_white">%1$s bianco</string>
     <string name="chess_piece_black">%1$s nero</string>

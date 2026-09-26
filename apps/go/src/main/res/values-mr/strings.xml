@@ -3,7 +3,7 @@
 
     <string name="go_action_delete">खेळ हटवा</string>
     <string name="go_action_more">गेम क्रिया उघडा</string>
-    <string name="go_action_offer_draw">ड्रॉ ऑफर करा</string>
+    <string name="go_action_offer_draw">बरोबरीचा प्रस्ताव द्या</string>
     <string name="go_action_open_chat">चॅट पॅनेल उघडा</string>
     <string name="go_action_pass">पास</string>
     <string name="go_action_rematch">रीमॅच</string>
@@ -16,16 +16,16 @@
     <string name="go_color_white">पांढरा</string>
     <string name="go_delete_confirm">हटवा</string>
     <string name="go_delete_message">हा खेळ आपल्या यादीतून काढून टाकला जाईल. हे पूर्ववत करता येणार नाही.</string>
-    <string name="go_delete_title">खेळ हटवायचा?</string>
+    <string name="go_delete_title">गेम हटवायचा?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">स्वीकारा</string>
     <string name="go_draw_decline">नाकारा</string>
     <string name="go_draw_offered_received">%1$s ने बरोबरीचा प्रस्ताव दिला</string>
     <string name="go_draw_offered_waiting">बरोबरी प्रस्तावित — %1$s ची वाट पाहत आहे</string>
     <string name="go_error_delete_failed">गेम हटवण्यात अयशस्वी</string>
-    <string name="go_error_draw_accept_failed">ड्रॉ स्वीकारण्यात अयशस्वी</string>
-    <string name="go_error_draw_decline_failed">ड्रॉ नाकारण्यात अयशस्वी</string>
-    <string name="go_error_draw_offer_failed">ड्रॉ ऑफर करण्यात अयशस्वी</string>
+    <string name="go_error_draw_accept_failed">बरोबरी स्वीकारण्यात अयशस्वी</string>
+    <string name="go_error_draw_decline_failed">बरोबरी नाकारण्यात अयशस्वी</string>
+    <string name="go_error_draw_offer_failed">बरोबरीचा प्रस्ताव देण्यात अयशस्वी</string>
     <string name="go_error_move_failed">चाल करण्यात अयशस्वी</string>
     <string name="go_error_pass_failed">पास करण्यात अयशस्वी</string>
     <string name="go_error_rematch_failed">रीमॅच तयार करण्यात अयशस्वी</string>
@@ -50,8 +50,8 @@
     <string name="go_resign_title">गेमचा राजीनामा द्यायचा?</string>
     <string name="go_sidebar_completed">पूर्ण केले</string>
     <string name="go_sidebar_new_game">नवीन गेम</string>
-    <string name="go_status_draw">ड्रॉ</string>
-    <string name="go_status_draw_text">ड्रॉ</string>
+    <string name="go_status_draw">बरोबरी</string>
+    <string name="go_status_draw_text">बरोबरी</string>
     <string name="go_status_game_over">गेम संपला</string>
     <string name="go_status_opponent_move">%1$s ची चाल</string>
     <string name="go_status_opponent_wins">%1$s जिंकले</string>
@@ -62,7 +62,7 @@
     <string name="go_status_your_move">तुमची चाल</string>
 
     <string name="go_channel_name">Go notifications</string>
-    <string name="go_channel_description">Go चाली, पास, बरोबरी प्रस्ताव आणि खेळाच्या निकालांबद्दल सूचना.</string>
+    <string name="go_channel_description">Go चाली, पास, बरोबरीचे प्रस्ताव आणि खेळाच्या निकालांबद्दल सूचना.</string>
     <string name="go_open_sidebar">साइडबार उघडा</string>
     <string name="go_sidebar_active">सक्रिय खेळ</string>
     <string name="go_empty_active">अद्याप कोणतेही सक्रिय खेळ नाहीत.</string>

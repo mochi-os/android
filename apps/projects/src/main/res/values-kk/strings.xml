@@ -9,7 +9,7 @@
     <string name="projects_list_logout">Шығу</string>
     <string name="projects_list_create">Жоба құру</string>
     <string name="projects_create_title">Жоба құру</string>
-    <string name="projects_create_name">Аты</string>
+    <string name="projects_create_name">Атау</string>
     <string name="projects_create_description">Сипаттама</string>
     <string name="projects_create_prefix">Префикс</string>
     <string name="projects_create_privacy">Құпиялылық</string>
@@ -114,7 +114,7 @@
     <string name="projects_classes_add">Сынып қосу</string>
     <string name="projects_classes_add_dialog_title">Сынып қосу</string>
     <string name="projects_classes_create">Құру</string>
-    <string name="projects_class_name">Аты</string>
+    <string name="projects_class_name">Атау</string>
     <string name="projects_class_save_name">Атауды сақтау</string>
     <string name="projects_class_title_field">Тақырып өрісі</string>
     <string name="projects_class_merge_requests">Біріктіру сұраныстары</string>
@@ -127,7 +127,7 @@
     <string name="projects_field_type_user">Пайдаланушы</string>
     <string name="projects_field_type_date">Күн</string>
     <string name="projects_field_type_checklist">Тапсырмалар тізімі</string>
-    <string name="projects_field_name">Аты</string>
+    <string name="projects_field_name">Атау</string>
     <string name="projects_field_type">Түрі</string>
     <string name="projects_field_flags">Жалаушалар</string>
     <string name="projects_field_required">Міндетті</string>
@@ -167,10 +167,10 @@
     <string name="projects_class_move_up">Жоғары жылжыту</string>
     <string name="projects_views_move_down">Төмен жылжыту</string>
     <string name="projects_class_move_down">Төмен жылжыту</string>
-    <string name="projects_sort_direction_asc">Өсу</string>
-    <string name="projects_views_direction_asc">Өсу</string>
-    <string name="projects_sort_direction_desc">Төмен</string>
-    <string name="projects_views_direction_desc">Төмен</string>
+    <string name="projects_sort_direction_asc">Өсу реті</string>
+    <string name="projects_views_direction_asc">Өсу реті</string>
+    <string name="projects_sort_direction_desc">Кему реті</string>
+    <string name="projects_views_direction_desc">Кему реті</string>
     <string name="projects_list_add_to_home">Негізгі экранға қосу</string>
     <string name="projects_search_objects_placeholder">Объектілерді іздеу</string>
     <string name="projects_links_search_placeholder">Объектілерді іздеу</string>
@@ -196,10 +196,10 @@
     <string name="projects_watchers_empty">Әзірге бақылаушылар жоқ</string>
     <string name="projects_object_delete_title">Нысанды жою</string>
     <string name="projects_object_delete_message">Осы нысанды жойғыңыз келетініне сенімдісіз бе? Бұл әрекетті қайтару мүмкін емес.</string>
-    <string name="projects_parent_none">Аталық жоқ</string>
+    <string name="projects_parent_none">Аталық нысан жоқ</string>
     <string name="projects_links_empty">Сілтемелер жоқ</string>
     <string name="projects_links_section_relates">Қатысты</string>
-    <string name="projects_links_section_duplicated_by">Көшірмесі жасалған</string>
+    <string name="projects_links_section_duplicated_by">Көшірмесі бар</string>
     <string name="projects_links_type">Сілтеме түрі</string>
     <string name="projects_links_type_relates">Қатысты</string>
     <string name="projects_links_remove">Сілтемені жою</string>
@@ -288,7 +288,7 @@
     <string name="projects_field_show_on_card">Картада көрсету</string>
     <string name="projects_field_multi">Көп таңдау</string>
     <string name="projects_field_position">Көрсету орны</string>
-    <string name="projects_field_position_header">Тақырып</string>
+    <string name="projects_field_position_header">Тақырыпша</string>
     <string name="projects_field_validation">Тексеру</string>
     <string name="projects_field_min_length">Ең аз ұзындық</string>
     <string name="projects_field_max_length">Ең көп ұзындық</string>
@@ -327,7 +327,7 @@
     <string name="projects_settings_section_access">Қол жеткізуді басқару</string>
     <string name="projects_people_search">Адамдарды іздеу</string>
     <string name="projects_settings_field_entity_id">Нысан идентификаторы</string>
-    <string name="projects_settings_field_fingerprint">Саусақ ізі</string>
+    <string name="projects_settings_field_fingerprint">Қысқа идентификатор</string>
     <string name="projects_settings_field_server">Сервер</string>
     <string name="projects_access_subject_anyone">Кез келген адам</string>
     <string name="projects_access_subject_authenticated">Аутентификацияланған пайдаланушылар</string>

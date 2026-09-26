@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Προσωπικό Mochi</string>
-    <string name="launcher_staff">Mochi Προσωπικό</string>
+    <string name="launcher_staff">Προσωπικό Mochi</string>
     <string name="staff_accounts_action_ban_title">Αποκλεισμός λογαριασμού</string>
     <string name="staff_accounts_action_suspend_title">Αναστολή λογαριασμού</string>
     <string name="staff_accounts_action_unban_title">Άρση αποκλεισμού</string>

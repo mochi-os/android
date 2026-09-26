@@ -83,14 +83,14 @@
     <string name="staff_audit_action_listing_appeal_decided">Bezwaar besloten</string>
     <string name="staff_audit_action_listing_appeal_submitted">Bezwaar ingediend</string>
     <string name="staff_audit_action_listing_approved">Goedgekeurd door medewerkers</string>
-    <string name="staff_audit_action_listing_created">Aanbieding aangemaakt</string>
-    <string name="staff_audit_action_listing_deleted">Aanbieding verwijderd</string>
+    <string name="staff_audit_action_listing_created">Advertentie aangemaakt</string>
+    <string name="staff_audit_action_listing_deleted">Advertentie verwijderd</string>
     <string name="staff_audit_action_listing_expired">Verlopen</string>
-    <string name="staff_audit_action_listing_published">Aanbieding gepubliceerd</string>
+    <string name="staff_audit_action_listing_published">Advertentie gepubliceerd</string>
     <string name="staff_audit_action_listing_rejected">Afgewezen door staf</string>
     <string name="staff_audit_action_listing_relisted">Opnieuw geplaatst</string>
     <string name="staff_audit_action_listing_removed">Verwijderd</string>
-    <string name="staff_audit_action_listing_updated">Aanbieding bewerkt</string>
+    <string name="staff_audit_action_listing_updated">Advertentie bewerkt</string>
     <string name="staff_audit_action_listing_warning">Waarschuwing afgegeven</string>
     <string name="staff_audit_action_order_cancelled">Geannuleerd</string>
     <string name="staff_audit_action_order_chargeback">Chargeback ontvangen</string>
@@ -186,7 +186,7 @@
     <string name="staff_dashboard_col_buyer">Koper</string>
     <string name="staff_dashboard_col_date">Datum</string>
     <string name="staff_dashboard_col_detail">Detail</string>
-    <string name="staff_dashboard_col_listing">Aanbieding</string>
+    <string name="staff_dashboard_col_listing">Advertentie</string>
     <string name="staff_dashboard_col_moderation">Moderatie</string>
     <string name="staff_dashboard_col_name">Naam</string>
     <string name="staff_dashboard_col_object">Object</string>
@@ -215,7 +215,7 @@
     <string name="staff_dashboard_order_fallback">Bestelling nr. %1$s</string>
     <string name="staff_dashboard_system">Systeem</string>
     <string name="staff_dashboard_tab_audit">Audit</string>
-    <string name="staff_dashboard_tab_listings">Aanbiedingen</string>
+    <string name="staff_dashboard_tab_listings">Advertenties</string>
     <string name="staff_dashboard_tab_moderation">Moderatie</string>
     <string name="staff_dashboard_tab_orders">Bestellingen</string>
     <string name="staff_dashboard_tab_signups">Aanmeldingen</string>
@@ -235,7 +235,7 @@
     <string name="staff_disputes_meta_chargeback_fee_partial">%1$s terugbetaald</string>
     <string name="staff_disputes_meta_chargeback_fee_refunded">terugbetaald</string>
     <string name="staff_disputes_meta_evidence_due">Bewijs in te leveren vóór</string>
-    <string name="staff_disputes_meta_listing">Aanbieding</string>
+    <string name="staff_disputes_meta_listing">Advertentie</string>
     <string name="staff_disputes_meta_reason">Reden</string>
     <string name="staff_disputes_meta_refunded">Terugbetaald</string>
     <string name="staff_disputes_meta_refunded_of">van %1$s</string>
@@ -294,7 +294,7 @@
     <string name="staff_listings_any_moderation">Elke moderatie</string>
     <string name="staff_listings_any_status">Elke status</string>
     <string name="staff_listings_approve">Goedkeuren</string>
-    <string name="staff_listings_approved_toast">Aanbieding goedgekeurd</string>
+    <string name="staff_listings_approved_toast">Advertentie goedgekeurd</string>
     <string name="staff_listings_cancel">Annuleren</string>
     <string name="staff_listings_empty">Geen advertenties</string>
     <string name="staff_listings_filter_moderation_label">Moderatie</string>
@@ -309,9 +309,9 @@
     <string name="staff_listings_price_placeholder">—</string>
     <string name="staff_listings_reason_label">Reden</string>
     <string name="staff_listings_reject">Afwijzen</string>
-    <string name="staff_listings_rejected_toast">Aanbieding afgewezen</string>
+    <string name="staff_listings_rejected_toast">Advertentie afgewezen</string>
     <string name="staff_listings_remove">Verwijderen</string>
-    <string name="staff_listings_removed_toast">Aanbieding verwijderd</string>
+    <string name="staff_listings_removed_toast">Advertentie verwijderd</string>
     <string name="staff_listings_search_clear">Zoekopdracht wissen</string>
     <string name="staff_listings_search_placeholder">Zoek titel of beschrijving</string>
     <string name="staff_listings_seller_verified">Geverifieerde verkoper</string>
@@ -324,7 +324,7 @@
     <string name="staff_listings_submitting">Versturen…</string>
     <string name="staff_moderation_empty">Geen moderatie-items</string>
     <string name="staff_moderation_filter_clear">Filter wissen</string>
-    <string name="staff_moderation_listing_filter_placeholder">Aanbieding-ID</string>
+    <string name="staff_moderation_listing_filter_placeholder">Advertentie-ID</string>
     <string name="staff_moderation_system">Systeem</string>
     <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Actie</string>
@@ -366,7 +366,7 @@
     <string name="staff_reports_status_reviewed">Beoordeeld</string>
     <string name="staff_reports_submit">Verzenden</string>
     <string name="staff_reports_submitting">Versturen…</string>
-    <string name="staff_reports_type_listing">Aanbieding</string>
+    <string name="staff_reports_type_listing">Advertentie</string>
     <string name="staff_reports_type_user">Gebruiker</string>
     <string name="staff_reports_view">Bekijken</string>
     <string name="staff_reviews_action_remove">Verwijderen</string>
@@ -392,9 +392,9 @@
     <string name="staff_sidebar_config">Configuratie</string>
     <string name="staff_sidebar_dashboard">Dashboard</string>
     <string name="staff_sidebar_disputes">Geschillen</string>
-    <string name="staff_sidebar_listings">Aanbiedingen</string>
+    <string name="staff_sidebar_listings">Advertenties</string>
     <string name="staff_sidebar_management">Beheer</string>
-    <string name="staff_sidebar_market">Marktplaats</string>
+    <string name="staff_sidebar_market">Markt</string>
     <string name="staff_sidebar_moderation">Moderatielogboek</string>
     <string name="staff_sidebar_overview">Overzicht</string>
     <string name="staff_sidebar_reports">Meldingen</string>

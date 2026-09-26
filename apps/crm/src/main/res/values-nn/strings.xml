@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Ikon</string>
     <string name="crm_option_icon_placeholder">t.d. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Sei opp abonnement</string>
-    <string name="crm_settings_delete_crm">Slett prosjekt</string>
+    <string name="crm_settings_delete_crm">Slett CRM</string>
     <string name="crm_settings_delete_confirm_title">Slett CRM</string>
     <string name="crm_settings_unsubscribe_title">Sei opp abonnement</string>
     <string name="crm_settings_unsubscribe_message">Er du sikker på at du vil seie opp abonnementet på denne CRM-en?</string>
@@ -135,8 +135,8 @@
     <string name="crm_class_move_down">Flytt ned</string>
     <string name="crm_sort_direction_asc">Stigande</string>
     <string name="crm_views_direction_asc">Stigande</string>
-    <string name="crm_sort_direction_desc">Synkande</string>
-    <string name="crm_views_direction_desc">Synkande</string>
+    <string name="crm_sort_direction_desc">Fallande</string>
+    <string name="crm_views_direction_desc">Fallande</string>
     <string name="crm_list_add_to_home">Legg til på startskjermen</string>
     <string name="crm_search_objects_placeholder">Søk objekt</string>
     <string name="crm_links_search_placeholder">Søk objekt</string>
@@ -161,7 +161,7 @@
     <string name="crm_links_section_duplicated_by">Duplisert av</string>
     <string name="crm_links_type">Lenkjetype</string>
     <string name="crm_links_type_relates">Relaterer til</string>
-    <string name="crm_links_remove">Fjern lenkje</string>
+    <string name="crm_links_remove">Fjern lenkja</string>
     <string name="crm_comment_replying_to">Svarar til %1$s</string>
     <string name="crm_comment_clear_reply">Fjern svar</string>
     <string name="crm_comment_placeholder">Legg til ein kommentar</string>
@@ -193,11 +193,11 @@
     <string name="crm_drag_card">Dra kort</string>
     <string name="crm_drag_row">Dra rad</string>
     <string name="crm_drag_column">Dra kolonne</string>
-    <string name="crm_design_more_options">Fleire alternativ</string>
+    <string name="crm_design_more_options">Fleire val</string>
     <string name="crm_design_no_templates">Ingen malar tilgjengelege</string>
     <string name="crm_design_use">Bruk</string>
     <string name="crm_design_replace_message">Dette vil erstatte det noverande designet med %1$s. Alle eksisterande klassar, felt, alternativ og visingar vil bli sletta. Eksisterande objekt vil ikkje bli sletta, men kan hende ikkje lenger viser i visingar.</string>
-    <string name="crm_design_replace">Erstatt</string>
+    <string name="crm_design_replace">Byt ut</string>
     <string name="crm_classes_empty">Ingen klassar er definerte</string>
     <string name="crm_class_label">Klasse: %1$s</string>
     <string name="crm_class_title_field_description">Kva felt som skal brukast som visingstittel for objekt i denne klassen.</string>
@@ -207,8 +207,8 @@
     <string name="crm_field_type_enumerated">Oppramsa</string>
     <string name="crm_field_label">Felt: %1$s</string>
     <string name="crm_field_readonly">Skriveverna</string>
-    <string name="crm_field_sortable">Sorterbart</string>
-    <string name="crm_field_filterable">Filtrerbart</string>
+    <string name="crm_field_sortable">Sorterbar</string>
+    <string name="crm_field_filterable">Filtrerbar</string>
     <string name="crm_field_show_on_card">Vis på kort</string>
     <string name="crm_field_multi">Fleirval</string>
     <string name="crm_field_position">Visingsposisjon</string>
@@ -254,7 +254,7 @@
     <string name="crm_filter_all">Alle</string>
     <string name="crm_filter_other">Anna</string>
     <string name="crm_settings_section_identity">Identitet</string>
-    <string name="crm_settings_section_access">Tilgangshandsaming</string>
+    <string name="crm_settings_section_access">Tilgangsstyring</string>
     <string name="crm_settings_not_set">Ikkje sett</string>
     <string name="crm_settings_access_updated">Tilgang oppdatert</string>
     <string name="crm_settings_access_revoked">Tilgang oppheva</string>
@@ -275,7 +275,7 @@
     <string name="crm_access_role_none">Ingen tilgang</string>
     <string name="crm_all_crms">Alle CRM-ar</string>
     <string name="crm_settings_unsubscribe_section">Avslutt abonnement på CRM</string>
-    <string name="crm_settings_updated">CRM oppdatert</string>
+    <string name="crm_settings_updated">CRM-en vart oppdatert</string>
     <string name="crm_create_import_backup">Importer fra sikkerhetskopi (valgfritt)</string>
     <string name="crm_export">Eksporter data</string>
     <string name="crm_exporting">Førebur eksport…</string>

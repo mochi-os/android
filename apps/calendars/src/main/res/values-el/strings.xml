@@ -74,7 +74,7 @@
     <string name="calendars_workweek">Εργάσιμη εβδομάδα</string>
     <string name="calendars_range">%1$s έως %2$s</string>
     <string name="calendars_truncated">Ορισμένα συμβάντα σε αυτό το εύρος δεν εμφανίζονται.</string>
-    <string name="calendars_list_empty">Κανένα συμβάν</string>
+    <string name="calendars_list_empty">Δεν υπάρχουν συμβάντα</string>
     <plurals name="calendars_more">
         <item quantity="one">+%1$d ακόμη</item>
         <item quantity="other">+%1$d ακόμη</item>

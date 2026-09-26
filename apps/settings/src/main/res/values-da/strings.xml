@@ -4,7 +4,7 @@
     <string name="settings_home_title">Indstillinger</string>
     <string name="settings_home_logout">Log ud</string>
     <string name="settings_home_account">Konto</string>
-    <string name="settings_home_preferences">Indstillinger</string>
+    <string name="settings_home_preferences">Præferencer</string>
     <string name="settings_home_display">Vis</string>
     <string name="settings_home_notification_prefs">Notifikationsindstillinger</string>
     <string name="settings_home_accounts">Forbundne konti</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s vil ikke længere administrere ruter på dette domæne.</string>
     <string name="domain_delegation_delete_title">Slet delegering?</string>
     <string name="domain_delegation_path">Sti</string>
-    <string name="domain_delegation_user">Bruger-ID</string>
+    <string name="domain_delegation_user">Bruger</string>
     <string name="domain_delegations">Delegeringer</string>
     <string name="domain_delegations_empty">Ingen delegeringer konfigureret.</string>
     <string name="domain_delete">Slet domæne</string>
@@ -391,7 +391,7 @@
     <string name="accounts_capability_calendar">Kalender</string>
     <string name="accounts_capability_notify">Notifikationer</string>
     <string name="accounts_capability_ai">AI</string>
-    <string name="accounts_capability_login">Log ind</string>
+    <string name="accounts_capability_login">Login</string>
     <string name="accounts_provider_caldav">Kalenderserver</string>
     <string name="accounts_revoke_confirm">Dette tilbagekalder kalenderadgangen for %1$s. Login med %2$s forbliver, indtil du fjerner det på loginsiden.</string>
     <string name="accounts_capability_mcp">MCP</string>

@@ -60,12 +60,12 @@
     <string name="chess_empty_subtitle">Розпочніть першу партію, щоб грати в шахи з другом.</string>
     <string name="chess_empty_start_button">Розпочати першу партію</string>
     <string name="chess_detail_unavailable">Партія недоступна</string>
-    <string name="chess_delete_title">Видалити партію?</string>
+    <string name="chess_delete_title">Видалити гру?</string>
     <string name="chess_delete_message">Це видаляє партію з вашого списку.</string>
     <string name="chess_ws_connecting">Підключення…</string>
     <string name="chess_ws_disconnected">Офлайн</string>
     <string name="chess_ws_reconnecting">Перепідключення…</string>
-    <string name="chess_ws_failed">Підключення невдале</string>
+    <string name="chess_ws_failed">Не вдалося підключитися</string>
     <string name="chess_move_capture">%1$s взяв %2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 

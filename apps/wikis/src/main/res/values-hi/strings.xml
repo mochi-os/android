@@ -16,7 +16,7 @@
     <string name="wikis_page_action_rename">नाम बदलें</string>
     <string name="wikis_page_action_history">इतिहास</string>
     <string name="wikis_page_action_delete">हटाएँ</string>
-    <string name="wikis_page_action_section_wiki">विकि</string>
+    <string name="wikis_page_action_section_wiki">विकी</string>
     <string name="wikis_page_action_search">खोजें</string>
     <string name="wikis_page_action_tags">टैग</string>
     <string name="wikis_page_action_recent_changes">हाल के परिवर्तन</string>
@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">हटाएँ</string>
     <string name="wikis_replicas_remove_failed">रेप्लिका हटाने में विफल</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi विकीज़</string>
     <string name="wikis_channel_name">Wikis सूचनाएं</string>
     <string name="wikis_channel_description">पृष्ठ संपादनों, टिप्पणियों और निमंत्रणों के बारे में सूचनाएं।</string>
     <string name="wikis_pageview_toc_expand">विषय-सूची दिखाएं</string>
@@ -225,7 +225,7 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">अद्यतन %1$s</string>
     <string name="wikis_pageview_not_found_description">पृष्ठ \"%1$s\" अभी मौजूद नहीं है।</string>
-    <string name="wikis_pageview_share_chooser">विकि लिंक</string>
+    <string name="wikis_pageview_share_chooser">विकी लिंक</string>
     <string name="wikis_pageview_clipboard_label_rss">विकि RSS URL</string>
     <string name="wikis_page_action_share">लिंक</string>
     <string name="wikis_open_sidebar">साइडबार खोलें</string>
@@ -246,7 +246,7 @@
     <string name="wikis_insert_dialog_empty">अभी तक कोई अनुलग्नक नहीं। शुरू करने के लिए एक फ़ाइल अपलोड करें।</string>
     <string name="wikis_delete_page_message">आप पृष्ठ \"%1$s\" (%2$s) हटाने वाले हैं। इस क्रिया को इतिहास से पुनर्स्थापित करके पूर्ववत किया जा सकता है।</string>
     <string name="wikis_delete_page_success">पृष्ठ हटाया गया</string>
-    <string name="wikis_revert_page_title">पृष्ठ वापस करें</string>
+    <string name="wikis_revert_page_title">पेज वापस लें</string>
     <string name="wikis_revert_page_message">आप %1$s को संस्करण %2$d पर वापस ले जाने वाले हैं। यह संस्करण %2$d की सामग्री के साथ एक नया संशोधन बनाएगा।</string>
     <string name="wikis_revert_page_default_comment">संस्करण %1$d पर वापस किया गया</string>
     <string name="wikis_revert_page_success">संस्करण %1$d पर वापस किया गया</string>

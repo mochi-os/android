@@ -14,9 +14,9 @@
     <string name="market_account_seller_step_activate_title">გამყიდველის ანგარიშის გააქტიურება</string>
     <string name="market_account_seller_step_activate_desc">შექმენი გამყიდველის პროფილი, რომ დაიწყო ნივთების განთავსება</string>
     <string name="market_account_seller_step_stripe_desc">დააკავშირე Stripe ანგარიში მყიდველებისგან გადახდების მისაღებად</string>
-    <string name="market_account_seller_fees_heading">საფასური:</string>
+    <string name="market_account_seller_fees_heading">საკომისიო:</string>
     <string name="market_account_seller_fees_mochi">Mochi იღებს თითოეული გაყიდვის %1$s%%-ს.</string>
-    <string name="market_account_seller_fees_stripe">Stripe ახდენს საკუთარ დამუშავების საფასურს თითოეულ ტრანზაქციაზე და ფიქსირებულ საფასურს თითოეულ თანხის დაბრუნებაზე. შენი ვალუტისა და რეგიონის მიმდინარე ტარიფები მითითებულია შენს Stripe-ის დაფაზე.</string>
+    <string name="market_account_seller_fees_stripe">Stripe ახდენს საკუთარ დამუშავების საფასურს თითოეულ ტრანზაქციაზე და ფიქსირებულ საფასურს თითოეულ გადახდის გასაჩივრებაზე. შენი ვალუტისა და რეგიონის მიმდინარე ტარიფები მითითებულია შენს Stripe-ის დაფაზე.</string>
     <string name="market_account_seller_connect">Stripe-ის დაკავშირება</string>
     <string name="market_account_seller_step_stripe_title">Stripe-ის დაკავშირება</string>
     <string name="market_account_seller_check_status">სტატუსის შემოწმება</string>
@@ -236,7 +236,7 @@
     <string name="market_listing_detail_save">შენახვა</string>
     <string name="market_listing_detail_seller_heading">გამყიდველი</string>
     <string name="market_listing_detail_share">გაზიარება</string>
-    <string name="market_listing_detail_shipping_heading">მიწოდება</string>
+    <string name="market_listing_detail_shipping_heading">მიწოდების ვარიანტები</string>
     <string name="market_listing_detail_subscribe">გამოწერა</string>
     <string name="market_listing_detail_tags_heading">ტეგები</string>
     <string name="market_listing_detail_title">განცხადება</string>
@@ -350,7 +350,7 @@
     <string name="market_report_dialog_failed">მოხსენების გაგზავნა ვერ მოხერხდა</string>
     <string name="market_report_dialog_reason_label">მიზეზი</string>
     <string name="market_report_dialog_submit">გაგზავნა</string>
-    <string name="market_report_dialog_success">ანგარიში გაგზავნილია</string>
+    <string name="market_report_dialog_success">საჩივარი გაგზავნილია</string>
     <string name="market_report_dialog_title">განცხადების გასაჩივრება</string>
     <string name="market_report_reason_counterfeit">ფალსიფიკაცია</string>
     <string name="market_report_reason_inappropriate">შეუსაბამო შინაარსი</string>
@@ -541,7 +541,7 @@
     <string name="market_editor_zone_save">ზონის შენახვა</string>
     <string name="market_editor_zones_empty">ზონები ჯერ არ არის</string>
     <string name="market_empty_subtitle">სცადეთ ფილტრების შეცვლა ან გასუფთავება.</string>
-    <string name="market_fee_disclosure_body">პლატფორმის საკომისიო: %1$s%%. დამმუშავებლის საკომისიოებისთვის იხილეთ თქვენი Stripe-ის პანელი.</string>
+    <string name="market_fee_disclosure_body">პლატფორმის საკომისიო: %1$s%%. დამმუშავებლის საკომისიოებისთვის იხილეთ თქვენი Stripe-ის დაფა.</string>
     <string name="market_fee_disclosure_title">პლატფორმის საკომისიოები</string>
     <string name="market_fee_preview_failed">საკომისიოების გამოთვლა ვერ მოხერხდა</string>
     <string name="market_fee_preview_loading">საკომისიოების გამოთვლა…</string>
@@ -581,8 +581,8 @@
     <string name="market_profile_joined">შემოუერთდა %1$s</string>
     <string name="market_profile_rating_breakdown">შეფასებების დეტალები</string>
     <string name="market_profile_stars_value">%1$d ვარსკვლავი</string>
-    <string name="market_purchase_dispute_chargeback">თანხის დაბრუნება %1$s</string>
-    <string name="market_purchase_dispute_chargeback_body">თქვენმა ბანკმა ამ შეკვეთაზე თანხის დაბრუნება მოითხოვა. Stripe განიხილავს დავას გამყიდველთან; შედეგი აქ გამოჩნდება გადაწყვეტილების მიღების შემდეგ.</string>
+    <string name="market_purchase_dispute_chargeback">გადახდის გასაჩივრება %1$s</string>
+    <string name="market_purchase_dispute_chargeback_body">თქვენმა ბანკმა ამ შეკვეთაზე გადახდის გასაჩივრება წარადგინა. Stripe განიხილავს დავას გამყიდველთან; შედეგი აქ გამოჩნდება გადაწყვეტილების მიღების შემდეგ.</string>
     <string name="market_purchase_dispute_response">გამყიდველის პასუხი</string>
     <string name="market_purchase_download_many">ჩამოტვირთეთ თქვენი %1$d ფაილი ქვემოთ.</string>
     <string name="market_purchase_download_one">ჩამოტვირთეთ თქვენი ფაილი ქვემოთ.</string>
@@ -610,12 +610,12 @@
     <string name="market_sale_carrier_custom_label">გადამზიდის სახელი</string>
     <string name="market_sale_dispute_evidence_due">მტკიცებულების ვადა %1$s</string>
     <string name="market_sale_dispute_state_responded">გადაწყვეტილების მოლოდინში</string>
-    <string name="market_sale_dispute_stripe_reason">Stripe-ის თანხის დაბრუნების მიზეზი: %1$s</string>
+    <string name="market_sale_dispute_stripe_reason">Stripe-ის გადახდის გასაჩივრების მიზეზი: %1$s</string>
     <string name="market_sale_fee_gross">მთლიანი</string>
     <string name="market_sale_fee_mochi">Mochi-ის საკომისიო</string>
     <string name="market_sale_fee_payout">წმინდა გადარიცხვა</string>
     <string name="market_sale_fee_stripe">Stripe-ის დამუშავების საკომისიო</string>
-    <string name="market_sale_fee_stripe_note">Stripe-ის დამუშავების საკომისიოები ნაჩვენებია თქვენს Stripe-ის პანელში.</string>
+    <string name="market_sale_fee_stripe_note">Stripe-ის დამუშავების საკომისიოები ნაჩვენებია თქვენს Stripe-ის დაფაზე.</string>
     <string name="market_sale_order_id_label">შეკვეთის ID</string>
     <string name="market_sale_ordered_label">შეკვეთილია</string>
     <string name="market_sale_review_no_response_yet">შეგიძლიათ უპასუხოთ ერთხელ. პასუხები საჯაროა.</string>
@@ -629,7 +629,7 @@
     <string name="market_saved_empty_subtitle">შეეხეთ სანიშნის ხატულას ნებისმიერ განცხადებაზე მოგვიანებისთვის შესანახად.</string>
     <string name="market_saved_empty_title">შენახული განცხადებები არ არის</string>
     <string name="market_status_past_due">ვადაგადაცილებული</string>
-    <string name="market_stripe_onboarding_action">გაგრძელება</string>
+    <string name="market_stripe_onboarding_action">დაყენების გაგრძელება</string>
     <string name="market_stripe_onboarding_body">დაასრულეთ Stripe-ის რეგისტრაცია გადარიცხვების მისაღებად.</string>
     <string name="market_stripe_onboarding_failed">Stripe-ის გახსნა ვერ მოხერხდა</string>
     <string name="market_stripe_onboarding_opening">მიმდინარეობს Stripe-ის გახსნა…</string>
@@ -663,7 +663,7 @@
     <string name="market_seller_become_heading">გახდი გამყიდველი</string>
     <string name="market_seller_become_title">გახდი გამყიდველი</string>
     <string name="market_seller_check_status">სტატუსის შემოწმება</string>
-    <string name="market_seller_checking">მოწმდება...</string>
+    <string name="market_seller_checking">შემოწმება…</string>
     <string name="market_seller_connect_stripe">Stripe-ის დაკავშირება</string>
     <string name="market_seller_connecting">იტვირთება...</string>
     <string name="market_seller_fee_loading">საკომისიოს დეტალების ჩატვირთვა...</string>
@@ -760,7 +760,7 @@
     <string name="market_audit_order_payment_failed">გადახდა ვერ მოხერხდა</string>
     <string name="market_audit_order_refunded">დაბრუნებული</string>
     <string name="market_audit_order_shipped">გაგზავნილია</string>
-    <string name="market_audit_report_actioned">ანგარიშზე მოქმედება შესრულდა</string>
+    <string name="market_audit_report_actioned">საჩივარზე მოქმედება შესრულდა</string>
     <string name="market_audit_report_created">გაცხადებული</string>
     <string name="market_audit_review_created">მიმოხილვა გაგზავნილია</string>
     <string name="market_audit_review_hide">მიმოხილვა დამალულია</string>

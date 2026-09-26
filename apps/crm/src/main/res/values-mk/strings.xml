@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Икона</string>
     <string name="crm_option_icon_placeholder">напр. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Откажи претплата</string>
-    <string name="crm_settings_delete_crm">Избриши проект</string>
+    <string name="crm_settings_delete_crm">Избриши CRM</string>
     <string name="crm_settings_delete_confirm_title">Избриши CRM</string>
     <string name="crm_settings_unsubscribe_title">Откажи претплата</string>
     <string name="crm_settings_unsubscribe_message">Сигурен ли си дека сакаш да се одјавиш од овој CRM?</string>
@@ -196,7 +196,7 @@
     <string name="crm_drag_column">Повлечи колона</string>
     <string name="crm_design_more_options">Повеќе опции</string>
     <string name="crm_design_no_templates">Нема достапни шаблони</string>
-    <string name="crm_design_use">Употреби</string>
+    <string name="crm_design_use">Користи</string>
     <string name="crm_design_replace_message">Ова ќе го замени тековниот дизајн со %1$s. Сите постојни класи, полиња, опции и прегледи ќе бидат избришани. Постојните објекти нема да бидат избришани, но можеби нема повеќе да се појавуваат во прегледите.</string>
     <string name="crm_classes_empty">Нема дефинирани класи</string>
     <string name="crm_class_label">Класа: %1$s</string>

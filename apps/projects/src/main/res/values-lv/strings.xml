@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="projects_auth_display_name">Parādāmais vārds</string>
+    <string name="projects_auth_display_name">Parādāmais nosaukums</string>
     <string name="projects_auth_verification_failed">Verifikācija neizdevās</string>
     <string name="projects_list_title">Projekti</string>
     <string name="projects_list_close_search">Aizvērt meklēšanu</string>
@@ -167,10 +167,10 @@
     <string name="projects_class_move_up">Pārvietot uz augšu</string>
     <string name="projects_views_move_down">Pārvietot uz leju</string>
     <string name="projects_class_move_down">Pārvietot uz leju</string>
-    <string name="projects_sort_direction_asc">Augoši</string>
-    <string name="projects_views_direction_asc">Augoši</string>
-    <string name="projects_sort_direction_desc">Dilstoši</string>
-    <string name="projects_views_direction_desc">Dilstoši</string>
+    <string name="projects_sort_direction_asc">Augošā secībā</string>
+    <string name="projects_views_direction_asc">Augošā secībā</string>
+    <string name="projects_sort_direction_desc">Dilstošā secībā</string>
+    <string name="projects_views_direction_desc">Dilstošā secībā</string>
     <string name="projects_list_add_to_home">Pievienot sākuma ekrānam</string>
     <string name="projects_search_objects_placeholder">Meklēt objektus</string>
     <string name="projects_links_search_placeholder">Meklēt objektus</string>
@@ -196,7 +196,7 @@
     <string name="projects_watchers_empty">Vēl nav vērotāju</string>
     <string name="projects_object_delete_title">Dzēst objektu</string>
     <string name="projects_object_delete_message">Vai tiešām vēlaties dzēst šo objektu? Šo darbību nevar atsaukt.</string>
-    <string name="projects_parent_none">Nav vecāka</string>
+    <string name="projects_parent_none">Nav vecākobjekta</string>
     <string name="projects_links_empty">Nav saišu</string>
     <string name="projects_links_section_relates">Saistīts ar</string>
     <string name="projects_links_section_duplicated_by">Dublēts ar</string>
@@ -270,7 +270,7 @@
     <string name="projects_design_or_paste_json">Vai ielīmēt JSON</string>
     <string name="projects_design_paste_placeholder">Ielīmējiet eksportēto dizaina JSON</string>
     <string name="projects_design_import_json">Importēt JSON</string>
-    <string name="projects_design_use">Lietot</string>
+    <string name="projects_design_use">Izmantot</string>
     <string name="projects_design_replace_message">Tas aizstās pašreizējo dizainu ar %1$s. Visas esošās klases, lauki, opcijas un skati tiks dzēsti. Esošie objekti netiks dzēsti, bet, iespējams, vairs neparādīsies skatos.</string>
     <string name="projects_design_pasted_json_label">ielīmētais JSON</string>
     <string name="projects_classes_empty">Nav definētu klašu</string>
@@ -280,14 +280,14 @@
     <string name="projects_class_merge_requests_description">Atļaut sapludināšanas pieprasījumus šīs klases objektiem.</string>
     <string name="projects_class_parents">Vecākklases</string>
     <string name="projects_class_delete_message">Vai tiešām vēlaties dzēst klasi \"%1$s\"? Visi lauki un to opcijas arī tiks dzēsti.</string>
-    <string name="projects_field_type_enumerated">Uzskaitīts</string>
+    <string name="projects_field_type_enumerated">Uzskaitījums</string>
     <string name="projects_field_label">Lauks: %1$s</string>
     <string name="projects_field_readonly">Tikai lasāms</string>
     <string name="projects_field_sortable">Kārtojams</string>
     <string name="projects_field_filterable">Filtrējams</string>
     <string name="projects_field_show_on_card">Rādīt uz kartītes</string>
     <string name="projects_field_multi">Vairākizvēle</string>
-    <string name="projects_field_position">Attēlojuma pozīcija</string>
+    <string name="projects_field_position">Attēlošanas pozīcija</string>
     <string name="projects_field_position_header">Galvene</string>
     <string name="projects_field_validation">Validācija</string>
     <string name="projects_field_min_length">Minimālais garums</string>

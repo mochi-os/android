@@ -242,7 +242,7 @@
     <string name="route_meta">Pêşîn %1$d · %2$s</string>
     <string name="interests_search_placeholder">Mijar ji bo zêdekirinê bigere…</string>
     <string name="interests_empty">Hîn tu eleqe nin.</string>
-    <string name="interests_summary_regenerate">Kurtek ji nû ve biafirîne</string>
+    <string name="interests_summary_regenerate">Kurteyê ji nû ve biafirîne</string>
     <string name="interests_summary_regenerating">Ji nû ve diafirîne…</string>
     <string name="interests_summary_empty">Hin eleqeyan zêde bike ji bo afirandina kurteyek li ser tiştên ku tu jê hez dikî.</string>
     <string name="interests_search_failed">Lêgerîn têk çû. Ji kerema xwe dîsa biceribîne.</string>
@@ -392,7 +392,7 @@
     <string name="accounts_capability_notify">Agahdarî</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Têketin</string>
-    <string name="accounts_provider_caldav">Rajekera salnameyê</string>
+    <string name="accounts_provider_caldav">Servera salnameyê</string>
     <string name="accounts_revoke_confirm">Ev ê gihîştina salnameya %1$s betal bike. Têketina bi %2$s heta ku tu wê di rûpela Têketinê de venegirêdî dimîne.</string>
     <string name="accounts_capability_mcp">MCP</string>
 </resources>

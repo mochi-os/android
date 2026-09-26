@@ -5,7 +5,7 @@
     <string name="feeds_create_feed">Створити стрічку</string>
     <string name="feeds_new_post">Новий допис</string>
     <string name="feeds_all_feeds">Усі стрічки</string>
-    <string name="feeds_name">Ім\'я</string>
+    <string name="feeds_name">Назва</string>
     <string name="feeds_create">Створити</string>
     <string name="feeds_no_feeds_found">Стрічок не знайдено</string>
     <string name="feeds_feed_title_default">Стрічка</string>
@@ -41,7 +41,7 @@
     <string name="feeds_tab_members">Учасники</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Назва стрічки</string>
-    <string name="feeds_save_name">Зберегти ім’я</string>
+    <string name="feeds_save_name">Зберегти назву</string>
     <string name="feeds_banner">Банер</string>
     <string name="feeds_banner_description">Необов\'язковий markdown-банер, що відображається у верхній частині вашої стрічки.</string>
     <string name="feeds_clear">Очистити</string>
@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Стрічка Mochi</string>
     <string name="feeds_source_type_feed_memories">Спогади</string>
-    <string name="feeds_remove_source">Видалити джерело</string>
+    <string name="feeds_remove_source">Видалити джерело?</string>
     <string name="feeds_suggested_credibility_accept">Прийняти</string>
     <string name="feeds_rss_url_copied">RSS URL скопійовано в буфер обміну</string>
     <string name="feeds_logout">Вийти</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">URL RSS</string>
     <string name="feeds_source_never_fetched">Ніколи не отримувалося</string>
     <string name="feeds_source_poll">Опитування</string>
-    <string name="feeds_source_transform">Перетворити</string>
+    <string name="feeds_source_transform">AI-перетворення</string>
     <string name="feeds_remove_source_confirm">Видалити \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Також видалити імпортовані дописи</string>
     <string name="feeds_suggested_credibility_title">Запропонована достовірність</string>
@@ -163,7 +163,7 @@
     <string name="feeds_settings_field_entity_id">ID сутності</string>
     <string name="feeds_settings_field_fingerprint">Відбиток</string>
     <string name="feeds_settings_field_server">Сервер</string>
-    <string name="feeds_settings_name_edit_cd">Редагувати ім\'я</string>
+    <string name="feeds_settings_name_edit_cd">Редагувати назву</string>
     <string name="feeds_settings_section_identity">Ідентичність</string>
     <string name="feeds_unsubscribe">Відписатися</string>
     <string name="feeds_unsubscribed">Відписано</string>
@@ -174,7 +174,7 @@
     <string name="feeds_allow_search">Дозволити будь-кому шукати стрічку</string>
     <string name="feeds_post_content">Вміст допису</string>
     <string name="feeds_enable_memories">Увімкнути спогади</string>
-    <string name="feeds_permission_request_title">Запит дозволу</string>
+    <string name="feeds_permission_request_title">Запит на дозвіл</string>
     <string name="feeds_unsubscribe_confirm">Відписатися від стрічки?</string>
     <string name="feeds_settings_title">Налаштування %1$s</string>
     <string name="feeds_source_transform_help">Залиште порожнім, щоб вимкнути.</string>

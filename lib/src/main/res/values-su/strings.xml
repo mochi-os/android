@@ -56,7 +56,7 @@
     <string name="notifications_title">Bewara</string>
     <string name="notifications_empty">Teu aya bewara</string>
     <string name="notifications_empty_unread">Sadayana parantos kabaca</string>
-    <string name="notifications_tab_unread">Teu acan dibaca</string>
+    <string name="notifications_tab_unread">Tacan dibaca</string>
     <string name="notifications_tab_unread_count">Teu acan dibaca (%1$d)</string>
     <string name="notifications_tab_all">Sadaya</string>
     <string name="notifications_mark_all_read">Tandaan sadayana dibaca</string>
@@ -108,7 +108,7 @@
     <string name="settings_display_reset_confirm_message">Ieu bakal nyetél deui setélan tampilan ka nilai standarna.</string>
     <string name="settings_theme_title">Téma</string>
     <string name="settings_theme_default">Standar</string>
-    <string name="settings_background">Latar tukang</string>
+    <string name="settings_background">Latar</string>
     <string name="settings_background_theme">Tina téma</string>
     <string name="settings_background_off">Euweuh</string>
     <string name="game_chat_empty">Tacan aya pesen</string>
@@ -125,15 +125,15 @@
     <string name="game_chat_move_played">%1$s maén %2$s</string>
 
     <string name="error_network">Teu tiasa nyambungkeun. Pariksa sambungan internet anjeun teras cobian deui.</string>
-    <string name="error_authentication_required">Peryogi auténtikasi</string>
-    <string name="error_not_found">Teu kapendak</string>
+    <string name="error_authentication_required">Butuh otentikasi</string>
+    <string name="error_not_found">Teu kapanggih</string>
     <string name="error_server">Kalepatan server (%1$d). Mangga cobian deui engké.</string>
     <string name="error_unexpected">Aya kalepatan anu teu disangka-sangka</string>
     <string name="error_enter_server_url">Mangga lebetkeun URL server</string>
     <string name="error_enter_email">Mangga lebetkeun surélék anjeun</string>
     <string name="error_enter_name">Mangga lebetkeun nami</string>
     <string name="auth_connect_to_server">Nyambung ka server anjeun</string>
-    <string name="auth_connect">Nyambung</string>
+    <string name="auth_connect">Sambungkeun</string>
     <string name="auth_sign_in">Lebet</string>
     <string name="auth_check_email">Pariksa surélék anjeun pikeun kodeu vérifikasi</string>
     <string name="auth_mfa_title">Auténtikasi multi-faktor</string>
@@ -146,7 +146,7 @@
     <string name="auth_use_passkey">Anggo passkey</string>
     <string name="auth_email_me_a_code">Kintunkeun kuring kodeu ngaliwatan surélék</string>
     <string name="auth_or_enter_authenticator_code">Atawa lebetkeun kodeu authenticator</string>
-    <string name="auth_log_in">Lebet</string>
+    <string name="auth_log_in">Asup</string>
     <string name="auth_back">Tukang</string>
     <string name="auth_lost_access_recovery">Leungit aksésna? Anggo kodeu pamulihan</string>
     <string name="auth_create_identity_title">Jieun identitas anjeun</string>
@@ -164,7 +164,7 @@
     <string name="bootstrap_sign_in_different_server">Lebet ka server anu béda</string>
     <string name="common_retry">Cobian deui</string>
     <string name="common_more_options">Pilihan séjén</string>
-    <string name="common_collapse">Tutup</string>
+    <string name="common_collapse">Lipet</string>
     <string name="common_expand">Buka</string>
     <string name="common_play_video">Puter pidéo</string>
     <string name="place_picker_name">Nami tempat</string>
@@ -175,7 +175,7 @@
     <string name="access_add_rule_title">Tambah aturan aksés</string>
     <string name="access_level_manage">Kelola</string>
     <string name="access_level_react">Réaksi</string>
-    <string name="notifications_clear">Hapus pemberitahuan</string>
+    <string name="notifications_clear">Hapus béwara</string>
     <string name="entity_avatar_alt">Avatar pikeun %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="format_time_just_now">Nembé</string>
@@ -190,7 +190,7 @@
     <string name="format_time_days_short">%1$dp</string>
     <string name="format_time_weeks_short">%1$dm</string>
     <string name="format_time_months_short">%1$dbl</string>
-    <string name="reaction_add">Tambah réaksi</string>
+    <string name="reaction_add">Tambahkeun réaksi</string>
     <string name="push_service_channel">Pemberitahuan Mochi</string>
     <string name="push_service_channel_description">Ngajaga Mochi nyambung pikeun nampi pemberitahuan</string>
     <string name="push_service_group">Layanan latar tukang</string>
@@ -210,7 +210,7 @@
     <string name="about_up_to_date">Énggal kénéh</string>
     <string name="about_check_downloading">Vérsi %1$s sayagi, ngundeur…</string>
     <string name="about_check_network_error">Teu tiasa nyambung ka server apdet</string>
-    <string name="about_check_download_failed">Unduhan gagal</string>
+    <string name="about_check_download_failed">Gagal ngunduh</string>
     <string name="notifications_clear_all_title">Bersihan sadaya béwara?</string>
     <string name="notifications_clear_all_message">Ieu bakal ngahapus sadaya béwara. Teu tiasa dipulihkeun deui.</string>
     <string name="settings_value_auto">Otomatis</string>
@@ -246,7 +246,7 @@
     <string name="reactivation_reactivate">Aktipkeun deui akun abdi</string>
     <string name="reactivation_sign_out">Teraskeun nutup sareng kaluar</string>
     <string name="common_play">Puter</string>
-    <string name="common_pause">Eureun</string>
+    <string name="common_pause">Eureunkeun</string>
     <string name="common_opening_file">Muka berkas…</string>
     <string name="common_no_app_for_file">Teu aya aplikasi anu tiasa muka berkas ieu</string>
     <string name="common_file_open_failed">Teu tiasa muka berkas</string>
@@ -258,7 +258,7 @@
     <string name="tags_interest_up">Témbongkeun nu sarupa deui</string>
     <string name="tags_interest_down">Kurangan nu sarupa kieu</string>
     <string name="tags_interest_clear">Eureunan nembongkeun</string>
-    <string name="tags_none">Taya tag</string>
+    <string name="tags_none">Teu aya tag</string>
     <string name="tags_delete">Hapus tag</string>
     <string name="person_picker_none">Euweuh</string>
     <string name="person_picker_clear">Bersihkeun pilihan</string>
@@ -288,7 +288,7 @@
     <string name="lightbox_comments">Koméntar</string>
     <string name="common_attachment_unavailable">Lampiran samentawis teu sayogi</string>
     <string name="common_unavailable">Teu sayogi</string>
-    <string name="common_not_found">Teu kapendak</string>
+    <string name="common_not_found">Teu kapanggih</string>
     <string name="format_bold">Kandel</string>
     <string name="format_italic">Dengdek</string>
     <string name="format_link">Tumbu</string>
@@ -310,7 +310,7 @@
     <string name="settings_card_flat">Datar</string>
     <string name="settings_card_raised">Diangkat</string>
     <string name="error_server_https">Alamat server kudu dimimitian ku https://</string>
-    <string name="device_name_fallback">Parangkat mobil</string>
+    <string name="device_name_fallback">Alat sélulér</string>
     <string name="account_error_token_type">Jinis token teu dirojong</string>
     <string name="account_error_caller">Nu nelepon teu diidinan</string>
 </resources>

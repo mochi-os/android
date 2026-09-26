@@ -4,7 +4,7 @@
     <string name="settings_home_title">Beállítások</string>
     <string name="settings_home_logout">Kijelentkezés</string>
     <string name="settings_home_account">Fiók</string>
-    <string name="settings_home_preferences">Beállítások</string>
+    <string name="settings_home_preferences">Preferenciák</string>
     <string name="settings_home_display">Megjelenítés</string>
     <string name="settings_home_notification_prefs">Értesítési beállítások</string>
     <string name="settings_home_accounts">Csatlakoztatott fiókok</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">Prioritás %1$d · %2$s</string>
     <string name="interests_search_placeholder">Hozzáadandó témák keresése…</string>
     <string name="interests_empty">Még nincsenek érdeklődési körök.</string>
-    <string name="interests_summary_regenerate">Összefoglaló újragenerálása</string>
+    <string name="interests_summary_regenerate">Összegzés újragenerálása</string>
     <string name="interests_summary_regenerating">Újragenerálás…</string>
     <string name="interests_summary_empty">Adjon hozzá érdeklődési köröket az érdeklődésének összefoglalójához.</string>
     <string name="interests_search_failed">A keresés sikertelen. Próbálja újra.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s többé nem fog útvonalakat kezelni ezen a tartományon.</string>
     <string name="domain_delegation_delete_title">Törli a delegálást?</string>
     <string name="domain_delegation_path">Útvonal</string>
-    <string name="domain_delegation_user">Felhasználói azonosító</string>
+    <string name="domain_delegation_user">Felhasználó</string>
     <string name="domain_delegations">Delegálások</string>
     <string name="domain_delegations_empty">Nincsenek beállított delegálások.</string>
     <string name="domain_delete">Tartomány törlése</string>

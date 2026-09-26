@@ -121,15 +121,15 @@
     <string name="auth_server_url">URL an fhreastalaí</string>
     <string name="auth_create_identity_title">Cruthaigh do chéannacht</string>
     <string name="auth_link_rules">Rialacha</string>
-    <string name="common_retry">Atriail</string>
+    <string name="common_retry">Bain triail eile as</string>
     <string name="lightbox_position">%1$d / %2$d</string>
     <string name="about_label">Faoi</string>
     <string name="game_chat_load_more">Lódáil teachtaireachtaí níos sine</string>
     <string name="game_chat_move_played">Sheinn %1$s %2$s</string>
 
     <string name="error_network">Ní féidir ceangal. Seiceáil do nasc idirlín agus bain triail eile as.</string>
-    <string name="error_authentication_required">Fíordheimhniú riachtanach</string>
-    <string name="error_not_found">Gan aimsiú</string>
+    <string name="error_authentication_required">Fíordheimhniú ag teastáil</string>
+    <string name="error_not_found">Níor aimsíodh</string>
     <string name="error_server">Earráid freastalaí (%1$d). Bain triail eile as ar ball.</string>
     <string name="error_unexpected">Tharla earráid gan choinne</string>
     <string name="error_enter_server_url">Cuir isteach URL an fhreastalaí</string>
@@ -179,7 +179,7 @@
     <string name="notifications_clear">Glan fógraí</string>
     <string name="entity_avatar_alt">Abhatár do %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
-    <string name="format_time_just_now">Anois díreach</string>
+    <string name="format_time_just_now">Anois beag</string>
     <string name="format_time_minutes_ago">%1$dn ó shin</string>
     <string name="format_time_hours_ago">%1$du ó shin</string>
     <string name="format_time_days_ago">%1$dl ó shin</string>
@@ -238,7 +238,7 @@
     <string name="stepup_error_oauth">Níorbh fhéidir fíorú leis an gcuntas sin. Bain triail eile as le do thoil.</string>
     <string name="game_system_resign">Ghéill %1$s</string>
     <string name="game_system_draw_offer">Thairg %1$s cothrom</string>
-    <string name="game_system_draw_accept">Cothrom comhaontaithe</string>
+    <string name="game_system_draw_accept">Aontaíodh ar chomhscór</string>
     <string name="game_system_draw_decline">Dhiúltaigh %1$s an cothrom</string>
     <string name="reactivation_title">Tá do chuntas sceidealaithe lena scriosadh</string>
     <string name="reactivation_body">Tá do chuntas sceidealaithe lena scriosadh. Is féidir leat é a chealú agus rochtain iomlán a athbhunú anois.</string>
@@ -291,7 +291,7 @@
     <string name="lightbox_comments">Nótaí tráchta</string>
     <string name="common_attachment_unavailable">Ceangaltán níl ar fáil go sealadach</string>
     <string name="common_unavailable">Níl ar fáil</string>
-    <string name="common_not_found">Gan aimsiú</string>
+    <string name="common_not_found">Níor aimsíodh</string>
     <string name="format_bold">Trom</string>
     <string name="format_italic">Iodálach</string>
     <string name="format_link">Nasc</string>

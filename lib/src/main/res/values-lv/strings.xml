@@ -7,7 +7,7 @@
     <string name="auth_verification_code">Verifikācijas kods</string>
     <string name="auth_email_code">E-pasta kods</string>
     <string name="auth_recovery_code">Atjaunošanas kods</string>
-    <string name="auth_name">Nosaukums</string>
+    <string name="auth_name">Vārds</string>
     <string name="auth_create">Izveidot</string>
     <string name="auth_privacy_label">Privātums</string>
     <string name="auth_privacy_public">Publisks</string>
@@ -131,7 +131,7 @@
     <string name="error_enter_email">Lūdzu, ievadiet savu e-pastu</string>
     <string name="error_enter_name">Lūdzu, ievadiet vārdu</string>
     <string name="auth_connect_to_server">Pieslēgties serverim</string>
-    <string name="auth_connect">Pieslēgties</string>
+    <string name="auth_connect">Savienot</string>
     <string name="auth_sign_in">Pieteikties</string>
     <string name="auth_check_email">Pārbaudiet savu e-pastu, vai ir saņemts verifikācijas kods</string>
     <string name="auth_mfa_title">Daudzfaktoru autentifikācija</string>
@@ -144,7 +144,7 @@
     <string name="auth_use_passkey">Izmantot piekļuves atslēgu</string>
     <string name="auth_email_me_a_code">Nosūtīt man kodu e-pastā</string>
     <string name="auth_or_enter_authenticator_code">Vai ievadiet autentifikatora kodu</string>
-    <string name="auth_log_in">Pieteikties</string>
+    <string name="auth_log_in">Pierakstīties</string>
     <string name="auth_back">Atpakaļ</string>
     <string name="auth_lost_access_recovery">Zaudējāt piekļuvi? Izmantojiet atjaunošanas kodu</string>
     <string name="auth_create_identity_title">Izveidojiet savu identitāti</string>
@@ -161,7 +161,7 @@
     <string name="bootstrap_choose_account">Izvēlieties kontu</string>
     <string name="bootstrap_sign_in_different_server">Pieteikties citā serverī</string>
     <string name="common_retry">Mēģināt vēlreiz</string>
-    <string name="common_more_options">Vairāk iespēju</string>
+    <string name="common_more_options">Vairāk opciju</string>
     <string name="common_collapse">Sakļaut</string>
     <string name="common_expand">Izvērst</string>
     <string name="common_play_video">Atskaņot video</string>
@@ -238,7 +238,7 @@
     <string name="stepup_error_oauth">Neizdevās verificēt ar šo kontu. Lūdzu, mēģiniet vēlreiz.</string>
     <string name="game_system_resign">%1$s padevās</string>
     <string name="game_system_draw_offer">%1$s piedāvāja neizšķirtu</string>
-    <string name="game_system_draw_accept">Neizšķirts pieņemts</string>
+    <string name="game_system_draw_accept">Neizšķirts panākts</string>
     <string name="game_system_draw_decline">%1$s noraidīja neizšķirtu</string>
     <string name="reactivation_title">Jūsu kontu paredzēts dzēst</string>
     <string name="reactivation_body">Jūsu kontu paredzēts dzēst. Jūs varat atcelt un atjaunot pilnu piekļuvi tagad.</string>
@@ -246,7 +246,7 @@
     <string name="reactivation_reactivate">Atkārtoti aktivizēt manu kontu</string>
     <string name="reactivation_sign_out">Turpināt slēgšanu un izrakstīties</string>
     <string name="common_play">Atskaņot</string>
-    <string name="common_pause">Pauzēt</string>
+    <string name="common_pause">Apturēt</string>
     <string name="common_opening_file">Atver failu…</string>
     <string name="common_no_app_for_file">Neviena lietotne nevar atvērt šo failu</string>
     <string name="common_file_open_failed">Neizdevās atvērt failu</string>
@@ -258,7 +258,7 @@
     <string name="tags_interest_up">Rādīt vairāk līdzīga</string>
     <string name="tags_interest_down">Rādīt mazāk līdzīga</string>
     <string name="tags_interest_clear">Pārtraukt rādīt</string>
-    <string name="tags_none">Nav birku</string>
+    <string name="tags_none">Nav tagu</string>
     <string name="tags_delete">Noņemt tagu</string>
     <string name="person_picker_none">Nav</string>
     <string name="person_picker_clear">Notīrīt atlasi</string>

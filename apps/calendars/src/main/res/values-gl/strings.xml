@@ -74,7 +74,7 @@
     <string name="calendars_workweek">Semana laboral</string>
     <string name="calendars_range">%1$s a %2$s</string>
     <string name="calendars_truncated">Algúns eventos deste intervalo non se mostran.</string>
-    <string name="calendars_list_empty">Sen eventos</string>
+    <string name="calendars_list_empty">Non hai eventos</string>
     <plurals name="calendars_more">
         <item quantity="one">+%1$d máis</item>
         <item quantity="other">+%1$d máis</item>
@@ -154,7 +154,7 @@
     <string name="calendars_link_submit">Ligar</string>
     <string name="calendars_link_sync">Sincronizar agora</string>
     <string name="calendars_link_grant">Permitir o acceso ao calendario</string>
-    <string name="calendars_link_linked">Ligado</string>
+    <string name="calendars_link_linked">Vinculado</string>
     <string name="calendars_link_marker">Calendario ligado</string>
     <string name="calendars_link_remote_empty">Non hai calendarios</string>
     <string name="calendars_poll_conflict">Un evento cambiou nos dous lados</string>
@@ -168,7 +168,7 @@
     <string name="calendars_subscribe_password_apple">Contrasinal específico da aplicación</string>
     <string name="calendars_subscribe_server_url">Enderezo do servidor</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
-    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_apple_id">ID de Apple</string>
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">As contas de Google non están activadas neste servidor. Actívaas en Axustes, Axustes do sistema.</string>

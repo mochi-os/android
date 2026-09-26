@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Ikon</string>
     <string name="crm_option_icon_placeholder">tuladha Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Mbatalaké langganan</string>
-    <string name="crm_settings_delete_crm">Busak proyek</string>
+    <string name="crm_settings_delete_crm">Busak CRM</string>
     <string name="crm_settings_delete_confirm_title">Busak CRM</string>
     <string name="crm_settings_unsubscribe_title">Mbatalaké langganan</string>
     <string name="crm_settings_unsubscribe_message">Sampéyan yakin arep mbatalaké langganan saka CRM iki?</string>
@@ -154,7 +154,7 @@
     <string name="crm_people_empty">Durung ana wong sing duwe akses</string>
     <string name="crm_settings_delete_confirm_message">Apa panjenengan yakin arep mbusak CRM iki? Kabeh obyek, komentar, lan setelan bakal dibusak kanthi permanen.</string>
     <string name="crm_object_unwatch">Mandheg nonton</string>
-    <string name="crm_object_delete_title">Busak obyek</string>
+    <string name="crm_object_delete_title">Busak objek</string>
     <string name="crm_object_delete_message">Apa panjenengan yakin arep mbusak obyek iki? Tindakan iki ora bisa dibatalake.</string>
     <string name="crm_parent_none">Ora ana induk</string>
     <string name="crm_links_empty">Ora ana pranala</string>
@@ -170,7 +170,7 @@
     <string name="crm_property_ok">OK</string>
     <string name="crm_property_add_item">Tambah item</string>
     <string name="crm_property_required">%1$s kudu diisi</string>
-    <string name="crm_activity_empty">Ora ana kagiyatan</string>
+    <string name="crm_activity_empty">Ora ana aktivitas</string>
     <string name="crm_activity_created">nggawe obyek iki</string>
     <string name="crm_activity_deleted">mbusak obyek iki</string>
     <string name="crm_activity_updated">nganyari %1$s</string>
@@ -184,7 +184,7 @@
     <string name="crm_tree_move">Pindhah</string>
     <string name="crm_tree_move_to_parent">Pindhah menyang induk</string>
     <string name="crm_tree_root_level">(Tingkat ROOT)</string>
-    <string name="crm_tree_empty">Ora ana obyek</string>
+    <string name="crm_tree_empty">Ora ana objek</string>
     <string name="crm_board_no_columns">Ora ana kolom sing disetel kanggo tampilan iki</string>
     <string name="crm_board_no_options">Ora ana pilihan kang dikonfigurasi kanggo kolom</string>
     <string name="crm_board_nested_count">+%1$d sarang</string>
@@ -192,16 +192,16 @@
     <string name="crm_move_to_row">Pindhah menyang larik</string>
     <string name="crm_move_after">Sawise %1$s</string>
     <string name="crm_drag_card">Seret kertu</string>
-    <string name="crm_drag_row">Seret larik</string>
+    <string name="crm_drag_row">Seret baris</string>
     <string name="crm_drag_column">Seret kolom</string>
     <string name="crm_design_more_options">Pilihan liyane</string>
     <string name="crm_design_no_templates">Ora ana cithakan kang kasedhiya</string>
-    <string name="crm_design_use">Gunakna</string>
+    <string name="crm_design_use">Gunakake</string>
     <string name="crm_design_replace_message">Iki bakal ngganti desain saiki kanthi %1$s. Kabeh kelas, ruas, pilihan, lan tampilan kang ana bakal dibusak. Objek kang ana ora bakal dibusak nanging bisa uga ora ditampilake maneh ing tampilan.</string>
     <string name="crm_classes_empty">Ora ana kelas kang ditetepake</string>
     <string name="crm_class_label">Kelas: %1$s</string>
     <string name="crm_class_title_field_description">Ruas endi kang digunakake minangka judhul tampilan kanggo objek saka kelas iki.</string>
-    <string name="crm_class_title_field_default">Standar (kang bisa diwaca)</string>
+    <string name="crm_class_title_field_default">Standar (bisa diwaca)</string>
     <string name="crm_class_parents">Kelas induk</string>
     <string name="crm_class_delete_message">Apa sampeyan yakin arep mbusak kelas \"%1$s\"? Kabeh ruas lan pilihane uga bakal dibusak.</string>
     <string name="crm_field_type_enumerated">Kacacah</string>
@@ -265,7 +265,7 @@
     <string name="crm_access_select_role">Pilih peran</string>
     <string name="crm_access_selected">Dipilih: %1$s</string>
     <string name="crm_access_subject_anyone">Sapa wae</string>
-    <string name="crm_access_subject_authenticated">Pangguna sing wis dipriksa</string>
+    <string name="crm_access_subject_authenticated">Panganggo sing wis diverifikasi</string>
     <string name="crm_access_authenticated_desc">Sapa wae sing wis mlebu</string>
     <string name="crm_access_anyone_desc">Kalebu pangguna anonim</string>
     <string name="crm_access_role_design">Ngrancang, nggawe, nyunting, menehi komentar, lan ndeleng</string>
@@ -273,7 +273,7 @@
     <string name="crm_access_role_comment">Komentar lan ndelok</string>
     <string name="crm_access_role_view">Mung deleng</string>
     <string name="crm_access_role_none">Ora ana akses</string>
-    <string name="crm_all_crms">Kabeh CRM</string>
+    <string name="crm_all_crms">Kabèh CRM</string>
     <string name="crm_settings_unsubscribe_section">Mandheg langganan CRM</string>
     <string name="crm_settings_updated">CRM dianyari</string>
     <string name="crm_create_import_backup">Impor saka backup (opsional)</string>

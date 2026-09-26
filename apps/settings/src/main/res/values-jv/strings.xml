@@ -242,7 +242,7 @@
     <string name="route_meta">Prioritas %1$d · %2$s</string>
     <string name="interests_search_placeholder">Goleki topik kanggo ditambahake…</string>
     <string name="interests_empty">Durung ana minat.</string>
-    <string name="interests_summary_regenerate">Gawe ulang ringkesan</string>
+    <string name="interests_summary_regenerate">Gawé manèh ringkesan</string>
     <string name="interests_summary_regenerating">Nggawe ulang…</string>
     <string name="interests_summary_empty">Tambahake sawetara minat kanggo gawe ringkesan apa sing disenengi.</string>
     <string name="interests_search_failed">Panelusuran gagal. Coba maneh.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s ora bakal ngatur rute ing domain iki menèh.</string>
     <string name="domain_delegation_delete_title">Busak delegasi?</string>
     <string name="domain_delegation_path">Path</string>
-    <string name="domain_delegation_user">ID pangguna</string>
+    <string name="domain_delegation_user">Panganggo</string>
     <string name="domain_delegations">Delegasi</string>
     <string name="domain_delegations_empty">Ora ana delegasi sing dikonfigurasi.</string>
     <string name="domain_delete">Busak domain</string>

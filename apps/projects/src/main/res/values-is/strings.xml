@@ -283,8 +283,8 @@
     <string name="projects_field_type_enumerated">Upptalning</string>
     <string name="projects_field_label">Reitur: %1$s</string>
     <string name="projects_field_readonly">Skrifvarið</string>
-    <string name="projects_field_sortable">Raðanlegt</string>
-    <string name="projects_field_filterable">Síanlegt</string>
+    <string name="projects_field_sortable">Hægt að raða</string>
+    <string name="projects_field_filterable">Hægt að sía</string>
     <string name="projects_field_show_on_card">Sýna á spjaldi</string>
     <string name="projects_field_multi">Margval</string>
     <string name="projects_field_position">Birtingarstaður</string>
@@ -300,7 +300,7 @@
     <string name="projects_views_empty">Engar skoðanir skilgreindar</string>
     <string name="projects_views_empty_subtitle">Búðu til borða- eða listaskoðun til að hópa hluti</string>
     <string name="projects_views_delete_message">Ertu viss um að þú viljir eyða skoðuninni \"%1$s\"?</string>
-    <string name="projects_views_columns_field">Dálkareitur</string>
+    <string name="projects_views_columns_field">Reitur fyrir dálka</string>
     <string name="projects_views_rows_field">Raðareitur (sundlaugar)</string>
     <string name="projects_views_border_field">Reitur fyrir rammalit</string>
     <string name="projects_views_filter_classes">Sía eftir flokkum</string>

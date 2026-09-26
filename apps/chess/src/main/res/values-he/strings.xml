@@ -60,7 +60,7 @@
     <string name="chess_empty_subtitle">התחל את המשחק הראשון שלך כדי לשחק שחמט עם חבר.</string>
     <string name="chess_empty_start_button">התחל את המשחק הראשון שלך</string>
     <string name="chess_detail_unavailable">המשחק לא זמין</string>
-    <string name="chess_delete_title">מחק משחק?</string>
+    <string name="chess_delete_title">למחוק את המשחק?</string>
     <string name="chess_delete_message">פעולה זו מסירה את המשחק מהרשימה שלך.</string>
     <string name="chess_ws_connecting">מתחבר…</string>
     <string name="chess_ws_disconnected">לא מקוון</string>

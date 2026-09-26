@@ -12,7 +12,7 @@
     <string name="account_section_passkeys">Mga Passkey</string>
     <string name="account_passkey_register">Magdagdag ng passkey</string>
     <string name="account_passkey_delete_title">I-delete ang passkey?</string>
-    <string name="account_section_totp">App ng authenticator</string>
+    <string name="account_section_totp">Authenticator app</string>
     <string name="account_totp_setup">Mag-set up ng authenticator</string>
     <string name="account_totp_setup_title">Mag-set up ng authenticator</string>
     <string name="account_totp_verify">Beripikahin</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">Prayoridad %1$d · %2$s</string>
     <string name="interests_search_placeholder">Maghanap ng mga paksa na idadagdag…</string>
     <string name="interests_empty">Wala pang mga interes.</string>
-    <string name="interests_summary_regenerate">Bumuo muli ng buod</string>
+    <string name="interests_summary_regenerate">Muling buoin ang buod</string>
     <string name="interests_summary_regenerating">Bumubuo muli…</string>
     <string name="interests_summary_empty">Magdagdag ng ilang interes upang makabuo ng buod ng iyong mga gusto.</string>
     <string name="interests_search_failed">Nabigo ang paghahanap. Mangyaring subukan ulit.</string>
@@ -276,7 +276,7 @@
     <string name="account_title">Account</string>
     <string name="account_section_identity">Identity</string>
     <string name="account_identity_identity">Identity</string>
-    <string name="account_identity_username">Pangalan ng user</string>
+    <string name="account_identity_username">Username</string>
     <string name="account_identity_name">Pangalan</string>
     <string name="account_identity_fingerprint">Fingerprint</string>
     <string name="account_identity_directory_toggle">Payagan ang iba na hanapin ka sa directory</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">Hindi na pa-mamahala ng %1$s ang mga ruta sa domain na ito.</string>
     <string name="domain_delegation_delete_title">I-delete ang delegation?</string>
     <string name="domain_delegation_path">Path</string>
-    <string name="domain_delegation_user">User ID</string>
+    <string name="domain_delegation_user">User</string>
     <string name="domain_delegations">Mga delegation</string>
     <string name="domain_delegations_empty">Walang mga naka-configure na delegation.</string>
     <string name="domain_delete">I-delete ang domain</string>
@@ -391,7 +391,7 @@
     <string name="accounts_capability_calendar">Kalendaryo</string>
     <string name="accounts_capability_notify">Mga Notification</string>
     <string name="accounts_capability_ai">AI</string>
-    <string name="accounts_capability_login">Pag-sign in</string>
+    <string name="accounts_capability_login">Pag-login</string>
     <string name="accounts_provider_caldav">Server ng kalendaryo</string>
     <string name="accounts_revoke_confirm">Aalisin nito ang access sa kalendaryo ng %1$s. Mananatili ang pag-sign in gamit ang %2$s hanggang sa i-unlink mo ito sa pahina ng Login.</string>
     <string name="accounts_capability_mcp">MCP</string>

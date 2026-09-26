@@ -108,7 +108,7 @@
     <string name="settings_display_reset_confirm_message">Oku kuya kubuyisela iisetingi zemboniso kumaxabiso azo amiselweyo.</string>
     <string name="settings_theme_title">Itimu</string>
     <string name="settings_theme_default">Eyoqobo</string>
-    <string name="settings_background">Imvelaphi</string>
+    <string name="settings_background">Okungasemva</string>
     <string name="settings_background_theme">Kwitimu</string>
     <string name="settings_background_off">Akukho nanye</string>
     <string name="game_chat_empty">Akukho miyalezo okwangoku</string>
@@ -125,15 +125,15 @@
 
     <string name="app_brand">Mochi</string>
     <string name="error_network">Akukwazeki ukunxibelelana. Khangela uqhagamshelwano lwakho lwe-intanethi uze uzame kwakhona.</string>
-    <string name="error_authentication_required">Kufuneka ungqinwe</string>
-    <string name="error_not_found">Akufumanekanga</string>
+    <string name="error_authentication_required">Kufuneka uqinisekiso</string>
+    <string name="error_not_found">Ayifumanekanga</string>
     <string name="error_server">Impazamo yeseva (%1$d). Nceda uzame kwakhona kamva.</string>
     <string name="error_unexpected">Kwenzeke impazamo engalindelekanga</string>
     <string name="error_enter_server_url">Nceda ufake i-URL yeseva</string>
     <string name="error_enter_email">Nceda ufake i-imeyile yakho</string>
     <string name="error_enter_name">Nceda ufake igama</string>
     <string name="auth_connect_to_server">Nxibelelana neseva yakho</string>
-    <string name="auth_connect">Nxibelelanisa</string>
+    <string name="auth_connect">Qhagamshela</string>
     <string name="auth_sign_in">Ngena</string>
     <string name="auth_check_email">Khangela i-imeyile yakho ufumane ikhowudi yokuqinisekisa</string>
     <string name="auth_mfa_title">Uqinisekiso lwamanqanaba amaninzi</string>
@@ -142,7 +142,7 @@
     <string name="auth_login_title">Ngena kwa-Mochi</string>
     <string name="auth_next">Okulandelayo</string>
     <string name="auth_or_log_in_with">Okanye ngena nge</string>
-    <string name="auth_passkey">I-passkey</string>
+    <string name="auth_passkey">Isitshixo sokungena</string>
     <string name="auth_use_passkey">Sebenzisa i-passkey</string>
     <string name="auth_email_me_a_code">Ndithumelele ikhowudi nge-imeyile</string>
     <string name="auth_or_enter_authenticator_code">Okanye faka ikhowudi yokuqinisekisa</string>
@@ -164,8 +164,8 @@
     <string name="bootstrap_sign_in_different_server">Ngena kwiseva eyahlukileyo</string>
     <string name="common_retry">Zama kwakhona</string>
     <string name="common_more_options">Ezinye iinketho</string>
-    <string name="common_collapse">Songa</string>
-    <string name="common_expand">Vula</string>
+    <string name="common_collapse">Goqa</string>
+    <string name="common_expand">Yandisa</string>
     <string name="common_play_video">Dlala ividiyo</string>
     <string name="place_picker_name">Igama lendawo</string>
     <string name="place_origin">Indawo yokuqala</string>
@@ -175,7 +175,7 @@
     <string name="access_add_rule_title">Yongeza umthetho wokufikelela</string>
     <string name="access_level_manage">Lawula</string>
     <string name="access_level_react">Sabela</string>
-    <string name="notifications_clear">Sula izaziso</string>
+    <string name="notifications_clear">Cima izaziso</string>
     <string name="entity_avatar_alt">I-avatar ka-%1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="format_time_just_now">Kwangoku</string>
@@ -190,7 +190,7 @@
     <string name="format_time_days_short">iintsuku %1$d</string>
     <string name="format_time_weeks_short">iiveki %1$d</string>
     <string name="format_time_months_short">iinyanga %1$d</string>
-    <string name="reaction_add">Yongeza impendulo</string>
+    <string name="reaction_add">Yongeza uvakalelo</string>
     <string name="push_service_channel">Izaziso ze-Mochi</string>
     <string name="push_service_channel_description">Igcina i-Mochi inxibelelene ukuze ifumane izaziso</string>
     <string name="push_service_group">Inkonzo yangasemva</string>
@@ -254,11 +254,11 @@
     <string name="common_logout_confirm_message">Uqinisekile ukuba ufuna ukuphuma? Kuya kufuneka ungene kwakhona ukuze ufikelele kwiakhawunti yakho.</string>
     <string name="comment_anonymous">Ongaziwayo</string>
     <string name="tags_label">Iiletile</string>
-    <string name="tags_add">Yongeza itheki</string>
+    <string name="tags_add">Yongeza ithegi</string>
     <string name="tags_interest_up">Bonisa ezininzi ezinjengale</string>
     <string name="tags_interest_down">Bonisa ezimbalwa ezinjengale</string>
     <string name="tags_interest_clear">Yeka ukubonisa</string>
-    <string name="tags_none">Akukho maphawu</string>
+    <string name="tags_none">Akukho mathegi</string>
     <string name="tags_delete">Susa ithegi</string>
     <string name="person_picker_none">Akukho nanye</string>
     <string name="person_picker_clear">Cima ukukhetha</string>
@@ -288,7 +288,7 @@
     <string name="lightbox_comments">Izimvo</string>
     <string name="common_attachment_unavailable">Isincamathiselo asifumaneki okwethutyana</string>
     <string name="common_unavailable">Ayifumaneki</string>
-    <string name="common_not_found">Akufumanekanga</string>
+    <string name="common_not_found">Ayifumanekanga</string>
     <string name="format_bold">Ngqindilili</string>
     <string name="format_italic">Ekekele</string>
     <string name="format_link">Ikhonkco</string>

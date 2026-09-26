@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s دیگر مسیرها را در این دامنه مدیریت نخواهد کرد.</string>
     <string name="domain_delegation_delete_title">حذف واگذاری؟</string>
     <string name="domain_delegation_path">مسیر</string>
-    <string name="domain_delegation_user">شناسه کاربر</string>
+    <string name="domain_delegation_user">کاربر</string>
     <string name="domain_delegations">واگذاری‌ها</string>
     <string name="domain_delegations_empty">هیچ واگذاری پیکربندی نشده است.</string>
     <string name="domain_delete">حذف دامنه</string>
@@ -389,7 +389,7 @@
     <string name="account_totp_open">باز کردن در برنامه احراز هویت</string>
     <string name="accounts_revoke">لغو دسترسی</string>
     <string name="accounts_capability_calendar">تقویم</string>
-    <string name="accounts_capability_notify">اعلان‌ها</string>
+    <string name="accounts_capability_notify">اطلاعیه‌ها</string>
     <string name="accounts_capability_ai">هوش مصنوعی</string>
     <string name="accounts_capability_login">ورود</string>
     <string name="accounts_provider_caldav">سرور تقویم</string>

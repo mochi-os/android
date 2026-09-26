@@ -37,7 +37,7 @@
     <string name="projects_settings_title">Ezarpenak</string>
     <string name="projects_settings_tab_general">Orokorra</string>
     <string name="projects_settings_tab_access">Sarbidea</string>
-    <string name="projects_settings_tab_people">Jendea</string>
+    <string name="projects_settings_tab_people">Pertsonak</string>
     <string name="projects_option_icon">Ikonoa</string>
     <string name="projects_option_icon_placeholder">adib. Check, Star, Flag</string>
     <string name="projects_settings_unsubscribe">Harpidetza kendu</string>
@@ -174,10 +174,10 @@
     <string name="projects_class_move_up">Eraman gora</string>
     <string name="projects_class_move_down">Eraman behera</string>
     <string name="projects_views_sort_by">Ordenatu honen arabera</string>
-    <string name="projects_sort_direction_asc">Goranzkoa</string>
-    <string name="projects_views_direction_asc">Goranzkoa</string>
-    <string name="projects_sort_direction_desc">Beheranzkoa</string>
-    <string name="projects_views_direction_desc">Beheranzkoa</string>
+    <string name="projects_sort_direction_asc">Gorakorra</string>
+    <string name="projects_views_direction_asc">Gorakorra</string>
+    <string name="projects_sort_direction_desc">Beherakorra</string>
+    <string name="projects_views_direction_desc">Beherakorra</string>
     <string name="projects_search_objects_placeholder">Bilatu objektuak</string>
     <string name="projects_links_search_placeholder">Bilatu objektuak</string>
 
@@ -200,10 +200,10 @@
     <string name="projects_object_delete_message">Ziur zaude objektu hau ezabatu nahi duzula? Ekintza hau ezin da desegin.</string>
     <string name="projects_parent_none">Gurasorik ez</string>
     <string name="projects_links_empty">Estekarik ez</string>
-    <string name="projects_links_section_relates">Hauekin lotuta</string>
+    <string name="projects_links_section_relates">Honekin lotuta</string>
     <string name="projects_links_section_duplicated_by">Honek bikoiztua</string>
     <string name="projects_links_type">Esteka mota</string>
-    <string name="projects_links_type_relates">Hauekin lotuta</string>
+    <string name="projects_links_type_relates">Honekin lotuta</string>
     <string name="projects_links_remove">Kendu esteka</string>
     <string name="projects_comment_placeholder">Gehitu iruzkin bat</string>
     <string name="projects_property_pick_date">Aukeratu data</string>
@@ -248,7 +248,7 @@
     <string name="projects_tree_expand">Zabaldu</string>
     <string name="projects_tree_move">Mugitu</string>
     <string name="projects_tree_move_to_parent">Mugitu gurasora</string>
-    <string name="projects_tree_root_level">(Erro maila)</string>
+    <string name="projects_tree_root_level">(Erro-maila)</string>
     <string name="projects_tree_empty">Objekturik ez</string>
     <string name="projects_board_no_columns">Ez dago zutaberik konfiguratuta ikuspegi honetarako</string>
     <string name="projects_board_no_options">Ez dago aukerarik konfiguratuta zutabe-eremurako</string>
@@ -286,8 +286,8 @@
     <string name="projects_field_sortable">Ordenagarria</string>
     <string name="projects_field_filterable">Iragazgarria</string>
     <string name="projects_field_show_on_card">Erakutsi txartelean</string>
-    <string name="projects_field_multi">Aukera anizkoitza</string>
-    <string name="projects_field_position">Bistaratze-posizioa</string>
+    <string name="projects_field_multi">Hautaketa anitza</string>
+    <string name="projects_field_position">Bistaratze-kokapena</string>
     <string name="projects_field_position_header">Goiburua</string>
     <string name="projects_field_validation">Balidazioa</string>
     <string name="projects_field_min_length">Gutxieneko luzera</string>

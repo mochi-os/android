@@ -32,8 +32,8 @@
     <string name="chess_draw_accept">Qabul qilish</string>
     <string name="chess_draw_decline">Rad etish</string>
     <string name="chess_status_checkmate_you_win">Mat — siz yutdingiz!</string>
-    <string name="chess_status_stalemate">Tikilib qoldi — durang</string>
-    <string name="chess_status_draw">Chizish</string>
+    <string name="chess_status_stalemate">Pat — durang</string>
+    <string name="chess_status_draw">Durang</string>
     <string name="chess_status_check_your_move">Shoh — sizning yurishingiz</string>
     <string name="chess_status_your_move">Sizning yurishingiz</string>
     <string name="chess_move_subject_you">Siz</string>
@@ -60,7 +60,7 @@
     <string name="chess_empty_subtitle">Doʻstingiz bilan shaxmat oʻynash uchun birinchi oʻyiningizni boshlang.</string>
     <string name="chess_empty_start_button">Birinchi oʻyiningizni boshlang</string>
     <string name="chess_detail_unavailable">Oʻyin mavjud emas</string>
-    <string name="chess_delete_title">O\'yinni o\'chirish?</string>
+    <string name="chess_delete_title">Oʻyin oʻchirilsinmi?</string>
     <string name="chess_delete_message">Bu oʻyinni roʻyxatingizdan oʻchiradi.</string>
     <string name="chess_ws_connecting">Ulanmoqda…</string>
     <string name="chess_ws_disconnected">Offline</string>

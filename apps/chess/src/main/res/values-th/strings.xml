@@ -3,10 +3,10 @@
 
     <string name="chess_app_title">หมากรุก</string>
     <string name="chess_sidebar_header">หมากรุก</string>
-    <string name="chess_sidebar_active">เกมที่ใช้งานอยู่</string>
+    <string name="chess_sidebar_active">เกมที่กำลังเล่น</string>
     <string name="chess_sidebar_completed">เสร็จสมบูรณ์</string>
     <string name="chess_sidebar_new_game">เกมใหม่</string>
-    <string name="chess_section_active">เกมที่ใช้งานอยู่</string>
+    <string name="chess_section_active">เกมที่กำลังเล่น</string>
     <string name="chess_section_completed">เสร็จสมบูรณ์</string>
     <string name="chess_new_game">เกมใหม่</string>
     <string name="chess_empty_title">ยังไม่มีเกม</string>
@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">ยอมรับ</string>
     <string name="chess_draw_decline">ปฏิเสธ</string>
     <string name="chess_status_checkmate_you_win">รุกจน — คุณชนะ!</string>
-    <string name="chess_status_stalemate">ตันกัน — เสมอ</string>
+    <string name="chess_status_stalemate">อับ — เสมอ</string>
     <string name="chess_status_draw">เสมอ</string>
     <string name="chess_status_check_your_move">รุก — ตาของคุณ</string>
     <string name="chess_status_your_move">ตาของคุณ</string>
@@ -65,7 +65,7 @@
     <string name="chess_ws_connecting">กำลังเชื่อมต่อ…</string>
     <string name="chess_ws_disconnected">ออฟไลน์</string>
     <string name="chess_ws_reconnecting">กำลังเชื่อมต่อใหม่…</string>
-    <string name="chess_ws_failed">การเชื่อมต่อล้มเหลว</string>
+    <string name="chess_ws_failed">เชื่อมต่อไม่สำเร็จ</string>
     <string name="chess_move_capture">%1$s กิน %2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 

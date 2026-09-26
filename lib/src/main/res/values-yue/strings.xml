@@ -10,7 +10,7 @@
     <string name="common_saving">儲存緊…</string>
     <string name="common_saved">已儲存</string>
     <string name="common_not_saved">未儲存</string>
-    <string name="auth_name">名稱</string>
+    <string name="auth_name">姓名</string>
     <string name="auth_create">建立</string>
     <string name="common_back">返回</string>
     <string name="common_close">關閉</string>
@@ -88,7 +88,7 @@
     <string name="auth_privacy_private_description">唔會喺用戶目錄中顯示。</string>
     <string name="auth_link_terms">條款</string>
     <string name="auth_use_different_account">使用另一個帳戶</string>
-    <string name="auth_error_suspended_title">帳戶已停用</string>
+    <string name="auth_error_suspended_title">帳戶已暫停</string>
     <string name="auth_error_suspended_body">你嘅帳戶已被停用。如你認為呢個係錯誤，請聯絡伺服器管理員。</string>
     <string name="auth_error_signup_disabled_title">已停用註冊</string>
     <string name="auth_error_signup_disabled_body">呢個伺服器暫時唔接受新註冊。</string>
@@ -242,7 +242,7 @@
     <string name="game_system_draw_offer">%1$s 提出和棋</string>
     <string name="game_system_draw_accept">同意和棋</string>
     <string name="game_system_draw_decline">%1$s 拒絕和棋</string>
-    <string name="stepup_email_label">電子郵件代碼</string>
+    <string name="stepup_email_label">電郵驗證碼</string>
     <string name="stepup_email_placeholder">輸入電子郵件中的驗證碼</string>
     <string name="stepup_totp_label">驗證器代碼</string>
     <string name="stepup_send_email">傳送郵件</string>

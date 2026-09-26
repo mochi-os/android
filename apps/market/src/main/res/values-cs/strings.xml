@@ -35,9 +35,9 @@
     <string name="market_bid_dialog_submit">Přihodit</string>
     <string name="market_bid_dialog_success">Nabídka podána</string>
     <string name="market_bid_dialog_title">Přihodit</string>
-    <string name="market_bid_ended">Aukce ukončena</string>
+    <string name="market_bid_ended">Aukce skončila</string>
     <string name="market_bids_empty">Žádné nabídky</string>
-    <string name="market_bids_ended">Aukce ukončena</string>
+    <string name="market_bids_ended">Aukce skončila</string>
     <string name="market_bids_tab_active">Aktivní</string>
     <string name="market_bids_tab_all">Vše</string>
     <string name="market_bids_tab_lost">Prohraná</string>
@@ -64,7 +64,7 @@
     <string name="market_checkout_address_heading">Doručovací adresa</string>
     <string name="market_checkout_address_line1">Adresa řádek 1</string>
     <string name="market_checkout_address_line2">Adresa řádek 2</string>
-    <string name="market_checkout_address_name">Název</string>
+    <string name="market_checkout_address_name">Jméno</string>
     <string name="market_checkout_address_postcode">PSČ</string>
     <string name="market_checkout_address_region">Kraj</string>
     <string name="market_checkout_back">Zpět</string>
@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Nahlásit inzerát</string>
     <string name="market_listing_detail_save">Uložit</string>
     <string name="market_listing_detail_seller_heading">Prodávající</string>
-    <string name="market_listing_detail_shipping_heading">Doprava</string>
+    <string name="market_listing_detail_shipping_heading">Možnosti dopravy</string>
     <string name="market_listing_detail_subscribe">Odebírat</string>
     <string name="market_listing_detail_tags_heading">Štítky</string>
     <string name="market_listing_detail_title">Nabídka</string>
@@ -418,8 +418,8 @@
     <string name="market_account_stripe_refresh">Obnovit stav</string>
     <string name="market_account_stripe_refresh_failed">Stav Stripe se nepodařilo obnovit</string>
     <string name="market_appeal_dialog_reason_label">Proč se odvoláváte?</string>
-    <string name="market_appeal_dialog_submitting">Odesílá se…</string>
-    <string name="market_appeal_dialog_title">Odvolat odstranění</string>
+    <string name="market_appeal_dialog_submitting">Odesílání…</string>
+    <string name="market_appeal_dialog_title">Odvolat se proti odstranění</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
     <string name="market_bid_dialog_amount_label">Vaše nabídka</string>
     <string name="market_bid_dialog_current_high">Aktuální nejvyšší nabídka: %1$s</string>
@@ -447,7 +447,7 @@
     <string name="market_dispute_dialog_evidence_role_staff">Tým Mochi</string>
     <string name="market_dispute_dialog_evidence_section_title">Odeslané důkazy</string>
     <string name="market_dispute_dialog_evidence_submitter_line">odeslal(a) %1$s</string>
-    <string name="market_dispute_dialog_submitting">Odesílá se…</string>
+    <string name="market_dispute_dialog_submitting">Odesílání…</string>
     <string name="market_dispute_dialog_title">Reagovat na spor</string>
     <string name="market_editor_appeal">Odvolat se proti moderaci</string>
     <string name="market_editor_appeal_reason">Proč se odvoláváte?</string>
@@ -659,11 +659,11 @@
     <string name="market_account_seller_card_view">Zobrazit nastavení prodejce</string>
     <string name="market_account_vat_label">DIČ / IČO</string>
     <string name="market_seller_activate_action">Aktivovat prodejní účet</string>
-    <string name="market_seller_activating">Aktivuje se...</string>
+    <string name="market_seller_activating">Aktivace…</string>
     <string name="market_seller_become_heading">Staňte se prodejcem</string>
     <string name="market_seller_become_title">Staňte se prodejcem</string>
     <string name="market_seller_check_status">Zkontrolovat stav</string>
-    <string name="market_seller_checking">Kontrola...</string>
+    <string name="market_seller_checking">Probíhá kontrola…</string>
     <string name="market_seller_connect_stripe">Připojit Stripe</string>
     <string name="market_seller_connecting">Načítám...</string>
     <string name="market_seller_fee_loading">Načítám podrobnosti o poplatku...</string>

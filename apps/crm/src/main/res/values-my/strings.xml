@@ -134,10 +134,10 @@
     <string name="crm_class_move_up">အပေါ်သို့ ရွှေ့</string>
     <string name="crm_views_move_down">အောက်သို့ ရွှေ့</string>
     <string name="crm_class_move_down">အောက်သို့ ရွှေ့</string>
-    <string name="crm_sort_direction_asc">တိုးတက်</string>
-    <string name="crm_views_direction_asc">တိုးတက်</string>
-    <string name="crm_sort_direction_desc">လျော့ကျ</string>
-    <string name="crm_views_direction_desc">လျော့ကျ</string>
+    <string name="crm_sort_direction_asc">ငယ်စဉ်ကြီးလိုက်</string>
+    <string name="crm_views_direction_asc">ငယ်စဉ်ကြီးလိုက်</string>
+    <string name="crm_sort_direction_desc">ကြီးစဉ်ငယ်လိုက်</string>
+    <string name="crm_views_direction_desc">ကြီးစဉ်ငယ်လိုက်</string>
     <string name="crm_list_add_to_home">ပင်မစခရင် သို့ ထည့်</string>
     <string name="crm_search_objects_placeholder">အရာဝတ္ထု ရှာ</string>
     <string name="crm_links_search_placeholder">အရာဝတ္ထု ရှာ</string>
@@ -162,9 +162,9 @@
     <string name="crm_links_section_duplicated_by">မိတ္တူပွားထားသူ</string>
     <string name="crm_links_type">လင့်ခ်အမျိုးအစား</string>
     <string name="crm_links_type_relates">ဆက်စပ်သည်</string>
-    <string name="crm_links_remove">လင့်ခ်ကို ဖယ်ရှားပါ</string>
+    <string name="crm_links_remove">လင့်ခ် ဖယ်ရှားရန်</string>
     <string name="crm_comment_replying_to">%1$s ကို ပြန်ဖြေနေသည်</string>
-    <string name="crm_comment_clear_reply">ပြန်ဖြေချက်ကို ဖျက်ပါ</string>
+    <string name="crm_comment_clear_reply">ပြန်ဖြေကြားမှုကို ရှင်းလင်းပါ</string>
     <string name="crm_comment_placeholder">မှတ်ချက် ထည့်ပါ</string>
     <string name="crm_property_pick_date">ရက်စွဲ ရွေးပါ</string>
     <string name="crm_property_ok">ကောင်းပြီ</string>
@@ -210,10 +210,10 @@
     <string name="crm_field_sortable">စီစဉ်နိုင်သော</string>
     <string name="crm_field_filterable">စစ်ထုတ်နိုင်သော</string>
     <string name="crm_field_show_on_card">ကတ်ပေါ်တွင် ပြသရန်</string>
-    <string name="crm_field_multi">ရွေးချယ်စရာ အများအပြား</string>
+    <string name="crm_field_multi">အများရွေး</string>
     <string name="crm_field_position">ပြသမှု တည်နေရာ</string>
     <string name="crm_field_position_header">ခေါင်းစီး</string>
-    <string name="crm_field_validation">မှန်ကန်မှု စိစစ်ခြင်း</string>
+    <string name="crm_field_validation">မှန်ကန်မှု စစ်ဆေးခြင်း</string>
     <string name="crm_field_min_length">အနည်းဆုံး အရှည်</string>
     <string name="crm_field_max_length">အများဆုံး အရှည်</string>
     <string name="crm_field_pattern">ပုံစံ (regex)</string>
@@ -230,7 +230,7 @@
     <string name="crm_views_filter_classes">အတန်းအစားများသို့ စစ်ထုတ်ရန်</string>
     <string name="crm_views_by">%1$s ဖြင့်</string>
     <string name="crm_views_sorted">%1$s စီစဉ်ထားသည်</string>
-    <string name="crm_design_preview_label">ကြိုတင်ကြည့်ရန်-</string>
+    <string name="crm_design_preview_label">ကြိုကြည့်ရှုခြင်း -</string>
     <string name="crm_design_preview_no_view">ကြိုတင်ကြည့်ရန် မြင်ကွင်း မရှိပါ</string>
     <string name="crm_design_preview_no_class">ဤမြင်ကွင်းအတွက် အတန်းအစား မရှိပါ</string>
     <string name="crm_design_preview_pick_columns">ကော်လံများ အကွက်တစ်ခု ရွေးချယ်ပါ</string>
@@ -243,7 +243,7 @@
     <string name="crm_access_tab_groups">အုပ်စုများ</string>
     <string name="crm_attachment_remove">ပူးတွဲဖိုင် ဖယ်ရှားရန်</string>
     <string name="crm_board_add_column">ကော်လံ ထည့်မည်</string>
-    <string name="crm_settings_entity_id">အကောင့် ID</string>
+    <string name="crm_settings_entity_id">အရာ ID</string>
     <string name="crm_settings_fingerprint">လက်ဗွေ</string>
     <string name="crm_settings_server">ဆာဗာ</string>
     <string name="crm_untitled">ခေါင်းစဉ်မရှိ</string>
@@ -265,7 +265,7 @@
     <string name="crm_access_select_role">အခန်းကဏ္ဍကို ရွေးပါ</string>
     <string name="crm_access_selected">ရွေးချယ်ထား: %1$s</string>
     <string name="crm_access_subject_anyone">မည်သူမဆို</string>
-    <string name="crm_access_subject_authenticated">အတည်ပြုထားသော အသုံးပြုသူများ</string>
+    <string name="crm_access_subject_authenticated">အတည်ပြုပြီး အသုံးပြုသူများ</string>
     <string name="crm_access_authenticated_desc">အကောင့်ဝင်ထားသူ မည်သူမဆို</string>
     <string name="crm_access_anyone_desc">အမည်မသိ အသုံးပြုသူများ အပါအဝင်</string>
     <string name="crm_access_role_design">ဒီဇိုင်းဆွဲ၊ ဖန်တီး၊ တည်းဖြတ်၊ မှတ်ချက်ပေး၊ ကြည့်ရှု</string>
@@ -277,7 +277,7 @@
     <string name="crm_settings_unsubscribe_section">CRM မှ စာရင်းသွင်းမှု ရုပ်သိမ်းရန်</string>
     <string name="crm_settings_updated">CRM ကို အပ်ဒိတ်လုပ်ပြီးပါပြီ</string>
     <string name="crm_create_import_backup">အရန်မှ တင်သွင်းရန် (မရွေးချယ်လည်းရသည်)</string>
-    <string name="crm_export">ဒေတာ တင်ပို့ရန်</string>
+    <string name="crm_export">ဒေတာ ထုတ်ယူရန်</string>
     <string name="crm_exporting">တင်ပို့မှု ပြင်ဆင်နေသည်…</string>
     <string name="crm_create_allow_search">မည်သူမဆို CRM ကို ရှာဖွေခွင့်ပြုမည်</string>
     <string name="crm_no_crms_found">CRM များ မတွေ့ပါ</string>

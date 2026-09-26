@@ -53,7 +53,7 @@
     <string name="chat_forward_search">කතාබස් සොයන්න…</string>
     <string name="chat_forward_empty">ඉදිරියට යැවීමට කතාබස් නැත</string>
     <string name="chat_forward_success">ඉදිරියට යවන ලදී</string>
-    <string name="chat_message_reply">පිළිතුරු දෙන්න</string>
+    <string name="chat_message_reply">පිළිතුර</string>
     <string name="chat_message_select">තෝරන්න</string>
     <string name="chat_reply_attachment">ඇමුණුම</string>
     <string name="chat_replying_to">%1$s ට පිළිතුරු දෙමින්</string>
@@ -80,5 +80,5 @@
     <string name="chat_search_prev">පෙර ගැළපීම</string>
     <string name="chat_settings_id">කතාබස් හැඳුනුම</string>
     <string name="chat_message_edited">(සංස්කරණය කළා)</string>
-    <string name="chat_new_fallback_name">චැට්</string>
+    <string name="chat_new_fallback_name">සංවාදය</string>
 </resources>

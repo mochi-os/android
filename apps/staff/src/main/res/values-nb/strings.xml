@@ -65,7 +65,7 @@
     <string name="staff_audit_action_account_unbanned">Utestengelse opphevet</string>
     <string name="staff_audit_action_account_unsuspended">Suspensjon opphevet</string>
     <string name="staff_audit_action_auction_bid_placed">Bud lagt inn</string>
-    <string name="staff_audit_action_auction_cancelled">Auksjon avbrutt</string>
+    <string name="staff_audit_action_auction_cancelled">Auksjon avlyst</string>
     <string name="staff_audit_action_auction_created">Auksjon opprettet</string>
     <string name="staff_audit_action_auction_ended_sold">Auksjon solgt</string>
     <string name="staff_audit_action_auction_ended_unsold">Auksjon avsluttet usolgt</string>
@@ -211,7 +211,7 @@
     <string name="staff_dashboard_kpi_total_orders">Totale ordrer</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Nei</string>
-    <string name="staff_dashboard_open_sidebar">Åpne sidepanelet</string>
+    <string name="staff_dashboard_open_sidebar">Åpne sidefelt</string>
     <string name="staff_dashboard_order_fallback">Ordre #%1$s</string>
     <string name="staff_dashboard_system">System</string>
     <string name="staff_dashboard_tab_audit">Revisjon</string>
@@ -283,7 +283,7 @@
     <string name="staff_disputes_view">Vis</string>
     <string name="staff_filter_chip_remove">Fjern filter</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
-    <string name="staff_filter_label_moderation">Moderasjon</string>
+    <string name="staff_filter_label_moderation">Moderering</string>
     <string name="staff_filter_label_query">Søk</string>
     <string name="staff_filter_label_seller">Selger</string>
     <string name="staff_filter_label_status">Status</string>

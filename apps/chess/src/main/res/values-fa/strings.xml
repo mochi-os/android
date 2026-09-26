@@ -17,7 +17,7 @@
     <string name="chess_new_add_friends">افزودن دوستان</string>
     <string name="chess_new_start_button">شروع بازی</string>
     <string name="chess_new_creating">در حال ساخت…</string>
-    <string name="chess_chat_title">گفت‌وگو</string>
+    <string name="chess_chat_title">چت</string>
     <string name="chess_open_chat">باز کردن پنل گفت‌وگو</string>
     <string name="chess_open_actions">باز کردن اقدامات بازی</string>
     <string name="chess_offer_draw">پیشنهاد تساوی</string>
@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">پذیرش</string>
     <string name="chess_draw_decline">رد</string>
     <string name="chess_status_checkmate_you_win">مات — شما بردید!</string>
-    <string name="chess_status_stalemate">بن‌بست — مساوی</string>
+    <string name="chess_status_stalemate">پات — تساوی</string>
     <string name="chess_status_draw">تساوی</string>
     <string name="chess_status_check_your_move">کیش — نوبت شماست</string>
     <string name="chess_status_your_move">نوبت شما</string>
@@ -65,7 +65,7 @@
     <string name="chess_ws_connecting">در حال اتصال…</string>
     <string name="chess_ws_disconnected">آفلاین</string>
     <string name="chess_ws_reconnecting">در حال اتصال مجدد…</string>
-    <string name="chess_ws_failed">اتصال شکست خورد</string>
+    <string name="chess_ws_failed">اتصال ناموفق بود</string>
     <string name="chess_move_capture">%1$s مهره %2$s را گرفت</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 

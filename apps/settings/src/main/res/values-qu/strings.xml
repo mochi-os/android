@@ -4,7 +4,7 @@
     <string name="settings_home_title">Wakichiykuna</string>
     <string name="settings_home_logout">Lluqsiy</string>
     <string name="settings_home_account">Cuenta</string>
-    <string name="settings_home_preferences">Akllinakuna</string>
+    <string name="settings_home_preferences">Munaykuna</string>
     <string name="settings_home_display">Qhaway</string>
     <string name="settings_home_notification_prefs">Willay akllakuna</string>
     <string name="settings_home_accounts">Tinkichisqa cuentas</string>
@@ -12,7 +12,7 @@
     <string name="account_section_passkeys">Passkeykuna</string>
     <string name="account_passkey_register">Passkey yapay</string>
     <string name="account_passkey_delete_title">Passkey wischuy?</string>
-    <string name="account_section_totp">Autenticador app</string>
+    <string name="account_section_totp">Autenticador aplicación</string>
     <string name="account_totp_setup">Autenticadorta wakichiy</string>
     <string name="account_totp_setup_title">Autenticadorta wakichiy</string>
     <string name="account_totp_verify">Qhaway</string>
@@ -207,7 +207,7 @@
     <string name="system_users_toast_status_failed">Mana llamkaq estadota musuqyachiyta atinchu</string>
     <string name="system_users_toast_revoke_failed">Mana sesionta qichuyta atinchu</string>
 
-    <string name="settings_home_sessions">Tariykuna</string>
+    <string name="settings_home_sessions">Sesionkuna</string>
     <string name="settings_home_privacy">Pakana kamachiy</string>
     <string name="settings_home_rules">Kamachiykuna</string>
     <string name="settings_home_terms">Yanapay rimaykuna</string>
@@ -229,7 +229,7 @@
     <string name="account_recovery_regen_title">Codigo recuperacion huk kutillata ruwakuy?</string>
     <string name="account_recovery_regen_message">Kaq codigokuna chaylla ruway tukunqa. Musuqkunata waqaychay hark\'aypi.</string>
     <string name="account_recovery_codes_warning">Kay codigokunata waqaychay — sapanka huk kutilla apaykachay atin. Manaña qhawachisqaqa kanqa.</string>
-    <string name="sessions_title">Tariykuna</string>
+    <string name="sessions_title">Sesionkuna</string>
     <string name="sessions_empty">Mana llamk\'ay sessions.</string>
     <string name="sessions_revoke_message">Antaq kay sessionta apaykachasqa lluqsiynqa.</string>
     <string name="account_oauth_empty">Mana cuentakuna kanchu</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">Ñawpaq %1$d · %2$s</string>
     <string name="interests_search_placeholder">Yapanapaq qhawanakunata maskhay…</string>
     <string name="interests_empty">Kunankama mana munaykuna.</string>
-    <string name="interests_summary_regenerate">Pisilla huk kutillata ruway</string>
+    <string name="interests_summary_regenerate">Pisilla willakuyta watiqmanta kamariy</string>
     <string name="interests_summary_regenerating">Huk kutillata ruwachkan…</string>
     <string name="interests_summary_empty">Wakin munaykunata yapay maypichus munasqaykimanta pisilla ruwachinaykipaq.</string>
     <string name="interests_search_failed">Maskhay mana atisqachu. Allillamanta huk kutillata ruway.</string>
@@ -263,7 +263,7 @@
     <string name="system_settings_reset_message">Kayqa \"%1$s\" kikin chaninman (%2$s) kutichinqa.</string>
     <string name="system_settings_reset_message_empty">Kayqa \"%1$s\" kikinman (ch\'usaq) kutichinqa.</string>
     <string name="settings_home_system_users">Apaykachaqkuna (seridor)</string>
-    <string name="system_users_add_user">Apaykachaq yapay</string>
+    <string name="system_users_add_user">Apaykachaqta yapay</string>
     <string name="system_users_search_placeholder">Apaykachaqkunata maskhay…</string>
     <string name="system_users_sort_by">Allichanapaq</string>
     <string name="system_users_last_login">Tukukuy yaykuy: %1$s</string>
@@ -276,7 +276,7 @@
     <string name="account_title">Cuenta</string>
     <string name="account_section_identity">Kikinchakuy</string>
     <string name="account_identity_identity">Kikinchakuy</string>
-    <string name="account_identity_username">Sutiyay</string>
+    <string name="account_identity_username">Apaykachaq suti</string>
     <string name="account_identity_name">Sutin</string>
     <string name="account_identity_fingerprint">Ruk\'ana unancha</string>
     <string name="account_identity_directory_toggle">Hukkuna directorio-pi tarisuchun saqiy</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s manaña ñankunata kay domainpi kamachiyqa.</string>
     <string name="domain_delegation_delete_title">Delegación wischuy?</string>
     <string name="domain_delegation_path">Ñan</string>
-    <string name="domain_delegation_user">Apaykachaq ID</string>
+    <string name="domain_delegation_user">Apaykachaq</string>
     <string name="domain_delegations">Delegaciones</string>
     <string name="domain_delegations_empty">Mana ima kachasqa churasqachu.</string>
     <string name="domain_delete">Dominio wischuy</string>
@@ -387,11 +387,11 @@
     <string name="accounts_field_secret">Firma pakasqa</string>
     <string name="account_totp_open">Autenticador aplicacionpi kichay</string>
     <string name="accounts_revoke">Yaykuyta chinkachiy</string>
-    <string name="accounts_capability_calendar">Kalendaryu</string>
+    <string name="accounts_capability_calendar">Calendario</string>
     <string name="accounts_capability_notify">Notificacionkuna</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Yaykuy</string>
-    <string name="accounts_provider_caldav">Kalendaryu servidor</string>
+    <string name="accounts_provider_caldav">Calendario servidor</string>
     <string name="accounts_revoke_confirm">Kayqa %1$s kalendaryuman yaykuyninta qichunqa. %2$s nisqawan yaykuyqa Yaykuy p\'anqapi mana t\'inkita paskaspaykiqa qhipakunqa.</string>
     <string name="accounts_capability_mcp">MCP</string>
 </resources>

@@ -11,12 +11,12 @@
     <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">ການຈັບດຳ</string>
     <string name="go_captures_white_sr">ການຈັບຂາວ</string>
-    <string name="go_chat_title">ແຊັດ</string>
+    <string name="go_chat_title">ສົນທະນາ</string>
     <string name="go_color_black">ດຳ</string>
     <string name="go_color_white">ຂາວ</string>
     <string name="go_delete_confirm">ລົບ</string>
     <string name="go_delete_message">ເກມນີ້ຈະຖືກລຶບອອກຈາກບັນຊີຂອງທ່ານ. ບໍ່ສາມາດກັບຄືນຄືນໄດ້.</string>
-    <string name="go_delete_title">ລຶບເກມ?</string>
+    <string name="go_delete_title">ລົບເກມ?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">ຍອມຮັບ</string>
     <string name="go_draw_decline">ປະຕິເສດ</string>
@@ -50,8 +50,8 @@
     <string name="go_resign_title">ຍອມແພ້ເກມ?</string>
     <string name="go_sidebar_completed">ສຳເລັດແລ້ວ</string>
     <string name="go_sidebar_new_game">ເກມໃໝ່</string>
-    <string name="go_status_draw">ແຕ້ມ</string>
-    <string name="go_status_draw_text">ແຕ້ມ</string>
+    <string name="go_status_draw">ເສມີ</string>
+    <string name="go_status_draw_text">ເສມີ</string>
     <string name="go_status_game_over">ເກມຈົບແລ້ວ</string>
     <string name="go_status_opponent_move">ການເຄື່ອນໄຫວຂອງ %1$s</string>
     <string name="go_status_opponent_wins">%1$s ຊະນະ</string>

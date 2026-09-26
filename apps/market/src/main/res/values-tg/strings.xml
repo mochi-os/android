@@ -9,9 +9,9 @@
     <string name="market_account_seller_step_activate_title">Фаъол кардани ҳисоби фурӯшанда</string>
     <string name="market_account_seller_step_activate_desc">Барои оғози рӯйхати молҳо профили фурӯшандаи худро созед</string>
     <string name="market_account_seller_step_stripe_desc">Барои қабули пардохт аз харидорон ҳисоби Stripe-ро пайваст кунед</string>
-    <string name="market_account_seller_fees_heading">Пардохтҳо:</string>
+    <string name="market_account_seller_fees_heading">Хароҷот:</string>
     <string name="market_account_seller_fees_mochi">Mochi аз ҳар фурӯш %1$s%% мегирад.</string>
-    <string name="market_account_seller_fees_stripe">Stripe барои ҳар муомила пардохти коркарди худ ва барои ҳар бозгашти пардохт пардохти муқарраршуда мегирад. Нархҳои ҷории асъор ва минтақаи шумо дар лавҳаи идоракунии Stripe нишон дода шудаанд.</string>
+    <string name="market_account_seller_fees_stripe">Stripe барои ҳар муомила пардохти коркарди худ ва барои ҳар бозгашти пардохт ҳаққи собит мегирад. Нархҳои ҷории асъор ва минтақаи шумо дар панели Stripe нишон дода шудаанд.</string>
     <string name="market_account_seller_connect">Пайвастшавӣ ба Stripe</string>
     <string name="market_account_seller_step_stripe_title">Пайвастшавӣ ба Stripe</string>
     <string name="market_account_seller_check_status">Санҷиши ҳолат</string>
@@ -35,9 +35,9 @@
     <string name="market_bid_dialog_submit">Пешниҳод кардан</string>
     <string name="market_bid_dialog_success">Нарх гузошта шуд</string>
     <string name="market_bid_dialog_title">Пешниҳод кардан</string>
-    <string name="market_bid_ended">Музояда ба охир расид</string>
+    <string name="market_bid_ended">Музояда хотима ёфт</string>
     <string name="market_bids_empty">Ягон пешниҳод нест</string>
-    <string name="market_bids_ended">Музояда ба охир расид</string>
+    <string name="market_bids_ended">Музояда хотима ёфт</string>
     <string name="market_bids_tab_active">Фаъол</string>
     <string name="market_bids_tab_all">Ҳама</string>
     <string name="market_bids_tab_lost">Бой дода шуд</string>
@@ -179,7 +179,7 @@
     <string name="market_listing_detail_buy_now">Ҳозир харидан</string>
     <string name="market_listing_detail_description_heading">Тавсиф</string>
     <string name="market_listing_detail_edit">Таҳрир</string>
-    <string name="market_listing_detail_information_heading">Маълумоти расонидан</string>
+    <string name="market_listing_detail_information_heading">Маълумоти расонӣ</string>
     <string name="market_listing_detail_load_failed">Боркунии эълон ба анҷом нарасид</string>
     <string name="market_listing_detail_listed">Нашр шуд %1$s</string>
     <string name="market_listing_detail_location_heading">Маҳал</string>
@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Гузориш дар бораи эълон</string>
     <string name="market_listing_detail_save">Захира</string>
     <string name="market_listing_detail_seller_heading">Фурӯшанда</string>
-    <string name="market_listing_detail_shipping_heading">Расондан</string>
+    <string name="market_listing_detail_shipping_heading">Имконҳои расондан</string>
     <string name="market_listing_detail_subscribe">Обуна шудан</string>
     <string name="market_listing_detail_tags_heading">Барчаспҳо</string>
     <string name="market_listing_detail_title">Эълон</string>
@@ -326,7 +326,7 @@
     <string name="market_sale_tracking_label">Рақами пайгирӣ</string>
     <string name="market_saved_title">Захирашуда</string>
     <string name="market_search_clear">Тоза кардани ҷустуҷӯ</string>
-    <string name="market_section_categories">Категорияҳоро тамошо кунед</string>
+    <string name="market_section_categories">Тамошои категорияҳо</string>
     <string name="market_section_listings">Эълонҳои охирин</string>
     <string name="market_section_recent">Ба наздикӣ дидашуда</string>
     <string name="market_ship_dialog_cancel">Бекор кардан</string>
@@ -425,7 +425,7 @@
     <string name="market_account_stripe_refresh">Навсозии ҳолат</string>
     <string name="market_account_stripe_refresh_failed">Ҳолати Stripe-ро навсозӣ кардан натавонист</string>
     <string name="market_appeal_dialog_reason_label">Чаро шикоят мекунед?</string>
-    <string name="market_appeal_dialog_title">Шикоят оид ба ҳазф</string>
+    <string name="market_appeal_dialog_title">Шикоят аз ҳазф</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
     <string name="market_bid_dialog_amount_label">Пешниҳоди шумо</string>
     <string name="market_bid_dialog_current_high">Пешниҳоди баландтарини ҷорӣ: %1$s</string>
@@ -465,7 +465,7 @@
     <string name="market_editor_days">%1$d рӯз</string>
     <string name="market_editor_delete">Нест кардани рӯйхат</string>
     <string name="market_editor_delete_confirm_message">Ин рӯйхатро ба таври доимӣ нест мекунад.</string>
-    <string name="market_editor_delete_confirm_title">Рӯйхатро нест мекунед?</string>
+    <string name="market_editor_delete_confirm_title">Эълонро ҳазф кунем?</string>
     <string name="market_editor_download">Боргирии мустақим</string>
     <string name="market_editor_duration">Давомнокии музояда</string>
     <string name="market_editor_fee_preview_pending">Сиёҳнавис захира карда мешавад…</string>
@@ -486,7 +486,7 @@
     <string name="market_editor_stripe_banner_description">Барои гирифтани интиқолҳо дар ин рӯйхат, ҳисоби Stripe-ро пайваст кунед.</string>
     <string name="market_editor_stripe_banner_title">Танзимоти Stripe-ро ба анҷом расонед</string>
     <string name="market_editor_tags_field">Барчаспҳо (бо вергул ҷудо карда шудаанд)</string>
-    <string name="market_editor_title_new">Рӯйхати нав</string>
+    <string name="market_editor_title_new">Эълони нав</string>
     <string name="market_editor_title_required">Пеш аз илова кардани суратҳо ё файлҳо сарлавҳа ворид кунед</string>
     <string name="market_editor_type">Навъи рӯйхат</string>
     <string name="market_editor_zone_add">Илова кардани минтақа</string>
@@ -510,7 +510,7 @@
     <string name="market_editor_zone_worldwide">Тамоми ҷаҳон</string>
     <string name="market_editor_zones_empty">Ҳанӯз минтақаҳо нестанд</string>
     <string name="market_empty_subtitle">Кӯшиш кунед, ки полоиш­ҳоро танзим ё тоза кунед.</string>
-    <string name="market_empty_title">Натиҷаҳо нестанд</string>
+    <string name="market_empty_title">Натиҷае нест</string>
     <string name="market_fee_disclosure_body">Ҳаққи платформа: %1$s%%. Барои ҳаққи коркард ба панели Stripe-и худ нигаред.</string>
     <string name="market_fee_disclosure_title">Ҳаққи платформа</string>
     <string name="market_fee_preview_failed">Ҳисоб кардани ҳақҳо имкон надошт</string>
@@ -568,8 +568,8 @@
     <string name="market_profile_no_reviews">Ҳанӯз баррасиҳо нестанд.</string>
     <string name="market_profile_rating_breakdown">Тақсимоти рейтинг</string>
     <string name="market_profile_stars_value">%1$d ситора</string>
-    <string name="market_purchase_dispute_chargeback">Бозгардонии пардохт %1$s</string>
-    <string name="market_purchase_dispute_chargeback_body">Бонки шумо барои ин фармоиш бозгардонии пардохтро пешниҳод кардааст. Stripe баҳсро бо фурӯшанда ҳал мекунад; натиҷа пас аз қабули қарор дар ин ҷо пайдо мешавад.</string>
+    <string name="market_purchase_dispute_chargeback">Бозгашти пардохт %1$s</string>
+    <string name="market_purchase_dispute_chargeback_body">Бонки шумо барои ин фармоиш бозгашти пардохтро пешниҳод кардааст. Stripe баҳсро бо фурӯшанда ҳал мекунад; натиҷа пас аз қабули қарор дар ин ҷо пайдо мешавад.</string>
     <string name="market_purchase_dispute_response">Ҷавоби фурӯшанда</string>
     <string name="market_purchase_download_many">%1$d файли худро дар поён зеркашӣ кунед.</string>
     <string name="market_purchase_download_one">Файли худро дар поён зеркашӣ кунед.</string>
@@ -605,12 +605,12 @@
     <string name="market_sale_carrier_custom_label">Номи интиқолдиҳанда</string>
     <string name="market_sale_dispute_evidence_due">Далелҳо то %1$s</string>
     <string name="market_sale_dispute_state_responded">Интизори қарор</string>
-    <string name="market_sale_dispute_stripe_reason">Сабаби бозхости Stripe: %1$s</string>
+    <string name="market_sale_dispute_stripe_reason">Сабаби бозгашти пардохти Stripe: %1$s</string>
     <string name="market_sale_fee_gross">Умумӣ</string>
-    <string name="market_sale_fee_mochi">Хизматпулии Mochi</string>
+    <string name="market_sale_fee_mochi">Ҳаққи Mochi</string>
     <string name="market_sale_fee_payout">Пардохти соф</string>
     <string name="market_sale_fee_stripe">Хизматпулии коркарди Stripe</string>
-    <string name="market_sale_fee_stripe_note">Хизматпулиҳои коркарди Stripe дар лавҳаи идоракунии Stripe-и шумо нишон дода мешаванд.</string>
+    <string name="market_sale_fee_stripe_note">Хизматпулиҳои коркарди Stripe дар панели Stripe-и шумо нишон дода мешаванд.</string>
     <string name="market_sale_order_id_label">ID-и фармоиш</string>
     <string name="market_sale_ordered_label">Фармоиш дода шуд</string>
     <string name="market_sale_review_no_response_yet">Шумо метавонед як маротиба ҷавоб диҳед. Ҷавобҳо ошкоранд.</string>
@@ -663,7 +663,7 @@
     <string name="market_seller_become_heading">Фурӯшанда шавед</string>
     <string name="market_seller_become_title">Фурӯшанда шавед</string>
     <string name="market_seller_check_status">Санҷиши ҳолат</string>
-    <string name="market_seller_checking">Санҷида истодааст...</string>
+    <string name="market_seller_checking">Санҷида мешавад…</string>
     <string name="market_seller_connect_stripe">Пайвастшавӣ ба Stripe</string>
     <string name="market_seller_connecting">Бор карда мешавад...</string>
     <string name="market_seller_fee_loading">Тафсилоти хароҷот бор карда мешавад...</string>

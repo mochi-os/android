@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s повеќе нема да управува со патеки на овој домен.</string>
     <string name="domain_delegation_delete_title">Да се избрише делегацијата?</string>
     <string name="domain_delegation_path">Патека</string>
-    <string name="domain_delegation_user">ID на корисник</string>
+    <string name="domain_delegation_user">Корисник</string>
     <string name="domain_delegations">Делегации</string>
     <string name="domain_delegations_empty">Нема конфигурирани делегации.</string>
     <string name="domain_delete">Избриши домен</string>

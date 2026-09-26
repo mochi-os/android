@@ -2,7 +2,7 @@
 <resources>
 
     <string name="launcher_feeds">Mochi Strømmer</string>
-    <string name="launcher_chat">Mochi Samtale</string>
+    <string name="launcher_chat">Mochi Chat</string>
     <string name="launcher_forums">Mochi Forumer</string>
     <string name="launcher_projects">Mochi Prosjekter</string>
     <string name="launcher_crm">Mochi CRM</string>

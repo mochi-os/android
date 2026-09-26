@@ -65,7 +65,7 @@
     <string name="staff_audit_action_account_unbanned">Na-unban</string>
     <string name="staff_audit_action_account_unsuspended">Na-unsuspend</string>
     <string name="staff_audit_action_auction_bid_placed">Nailagay ang bid</string>
-    <string name="staff_audit_action_auction_cancelled">Kinansela ang subasta</string>
+    <string name="staff_audit_action_auction_cancelled">Kanselado ang auction</string>
     <string name="staff_audit_action_auction_created">Nagawa ang auction</string>
     <string name="staff_audit_action_auction_ended_sold">Nabenta ang auction</string>
     <string name="staff_audit_action_auction_ended_unsold">Natapos ang auction nang hindi nabenta</string>
@@ -269,10 +269,10 @@
     <string name="staff_disputes_view">Tingnan</string>
     <string name="staff_filter_chip_remove">Tanggalin ang filter</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
-    <string name="staff_filter_label_moderation">Pagmodera</string>
+    <string name="staff_filter_label_moderation">Moderasyon</string>
     <string name="staff_filter_label_query">Maghanap</string>
     <string name="staff_filter_label_seller">Nagbebenta</string>
-    <string name="staff_filter_label_status">Katayuan</string>
+    <string name="staff_filter_label_status">Status</string>
     <string name="staff_filter_label_type">Uri</string>
     <string name="staff_listings_action_approve_title">Aprubahan ang listahan</string>
     <string name="staff_listings_action_reject_title">Tanggihan ang listing</string>

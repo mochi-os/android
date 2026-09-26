@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Anuluj subskrypcję</string>
     <string name="forums_list_unsubscribe_title">Anuluj subskrypcję</string>
     <string name="forums_create_title">Utwórz forum</string>
-    <string name="forums_create_name">Nazwa</string>
+    <string name="forums_create_name">Nazwa forum</string>
     <string name="forums_create_privacy">Prywatność</string>
     <string name="forums_create_private">Prywatny</string>
     <string name="forums_create_public">Publiczny</string>
-    <string name="forums_create_action">Utwórz</string>
+    <string name="forums_create_action">Utwórz forum</string>
     <string name="forums_find_title">Znajdź fora</string>
     <string name="forums_find_recommended">Polecane</string>
     <string name="forums_find_subscribe">Subskrybuj</string>
@@ -279,7 +279,7 @@
     <string name="forums_moderation_restriction_remove_message">Ta osoba natychmiast odzyska pełny dostęp do forum.</string>
     <string name="forums_moderation_restriction_remove_title">Usunąć ograniczenie dla %1$s?</string>
     <string name="forums_moderation_restriction_state_muted">Wyciszony</string>
-    <string name="forums_moderation_restriction_state_shadowban">Shadowban</string>
+    <string name="forums_moderation_restriction_state_shadowban">Zbanowany po cichu</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Żaden użytkownik nie został wyciszony ani zbanowany</string>
     <string name="forums_moderation_section_premoderation_description">Wymagaj zatwierdzenia, zanim treść stanie się widoczna</string>
     <string name="forums_moderation_section_ratelimiting_description">Zapobiegaj spamowi, ograniczając częstotliwość publikowania</string>

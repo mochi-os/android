@@ -13,8 +13,8 @@
     <string name="account_passkey_register">წვდომის გასაღების დამატება</string>
     <string name="account_passkey_delete_title">წვდომის გასაღების წაშლა?</string>
     <string name="account_section_totp">ავთენტიფიკატორის აპი</string>
-    <string name="account_totp_setup">დააყენეთ ავტენტიფიკატორი</string>
-    <string name="account_totp_setup_title">დააყენეთ ავტენტიფიკატორი</string>
+    <string name="account_totp_setup">დააყენეთ ავთენტიფიკატორი</string>
+    <string name="account_totp_setup_title">დააყენეთ ავთენტიფიკატორი</string>
     <string name="account_totp_verify">შემოწმება</string>
     <string name="account_totp_disable_title">ავთენტიფიკატორის გათიშვა?</string>
     <string name="account_section_recovery">აღდგენის კოდები</string>
@@ -216,12 +216,12 @@
     <string name="account_passkey_register_message">თქვენი მოწყობილობა მოგთხოვთ დადასტურებას. საშვი დაკავშირებულია ამ მოწყობილობასთან და გამოიყენება მომავალი შესვლებისთვის.</string>
     <string name="account_passkey_name_label">სახელი (არასავალდებულო)</string>
     <string name="account_passkey_delete_message">\"%1$s\" აღარ შემოგიყვანთ.</string>
-    <string name="account_totp_description">შედით ავტორიზაციის აპლიკაციიდან 6-ნიშნა კოდით.</string>
-    <string name="account_totp_enabled">ავტორიზატორი ჩართულია.</string>
-    <string name="account_totp_setup_step1">დაასკანერეთ ან შეიყვანეთ ეს საიდუმლო თქვენს ავტორიზაციის აპლიკაციაში.</string>
+    <string name="account_totp_description">შედით ავთენტიფიკატორის აპლიკაციიდან 6-ნიშნა კოდით.</string>
+    <string name="account_totp_enabled">ავთენტიფიკატორი ჩართულია.</string>
+    <string name="account_totp_setup_step1">დაასკანერეთ ან შეიყვანეთ ეს საიდუმლო თქვენს ავთენტიფიკატორის აპლიკაციაში.</string>
     <string name="account_totp_setup_step2">შეიყვანეთ თქვენი აპლიკაციის მიერ ნაჩვენები 6-ნიშნა კოდი.</string>
     <string name="account_totp_code">კოდი</string>
-    <string name="account_totp_disable_message">ვეღარ შეძლებთ ავტორიზატორის კოდით შესვლას.</string>
+    <string name="account_totp_disable_message">ვეღარ შეძლებთ ავთენტიფიკატორის კოდით შესვლას.</string>
     <string name="account_recovery_none">აღდგენის კოდები არ შექმნილა.</string>
     <string name="account_recovery_count">%1$d გამოუყენებელი აღდგენის კოდი.</string>
     <string name="account_recovery_generate">კოდების შექმნა</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">პრიორიტეტი %1$d · %2$s</string>
     <string name="interests_search_placeholder">მოძებნეთ თემები დასამატებლად…</string>
     <string name="interests_empty">ჯერ ინტერესები არ არის.</string>
-    <string name="interests_summary_regenerate">შემაჯამებლის ხელახლა შექმნა</string>
+    <string name="interests_summary_regenerate">შემაჯამებლის ხელახალი გენერაცია</string>
     <string name="interests_summary_regenerating">ხელახლა შექმნა…</string>
     <string name="interests_summary_empty">დაამატეთ რამდენიმე ინტერესი თქვენი მოწონებების შემაჯამებლის შესაქმნელად.</string>
     <string name="interests_search_failed">ძიება ვერ მოხერხდა. გთხოვთ კიდევ სცადოთ.</string>

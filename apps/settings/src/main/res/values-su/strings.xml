@@ -242,7 +242,7 @@
     <string name="route_meta">Prioritas %1$d · %2$s</string>
     <string name="interests_search_placeholder">Téangan topik pikeun ditambihkeun…</string>
     <string name="interests_empty">Tacan aya kapentingan.</string>
-    <string name="interests_summary_regenerate">Jieun ringkesan deui</string>
+    <string name="interests_summary_regenerate">Jieun deui ringkesan</string>
     <string name="interests_summary_regenerating">Nuju ngajieun deui…</string>
     <string name="interests_summary_empty">Tambihkeun sababaraha kapentingan pikeun ngajieun ringkesan tina nu anjeun pikaresep.</string>
     <string name="interests_search_failed">Pengaranan gagal. Mangga coba deui.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s moal ngatur jalan dina domain ieu deui.</string>
     <string name="domain_delegation_delete_title">Hapus delegasi?</string>
     <string name="domain_delegation_path">Jalur</string>
-    <string name="domain_delegation_user">ID pamaké</string>
+    <string name="domain_delegation_user">Pamaké</string>
     <string name="domain_delegations">Delegasi</string>
     <string name="domain_delegations_empty">Henteu aya delegasi nu dikonfigurasi.</string>
     <string name="domain_delete">Hapus doméin</string>

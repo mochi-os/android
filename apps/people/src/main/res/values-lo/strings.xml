@@ -163,13 +163,13 @@
     <string name="people_contact_family">ນາມສະກຸນ</string>
     <string name="people_contact_nickname">ຊື່ຫຼິ້ນ</string>
     <string name="people_contact_add_email">ເພີ່ມອີເມວ</string>
-    <string name="people_contact_add_phone">ເພີ່ມໂທລະສັບ</string>
+    <string name="people_contact_add_phone">ເພີ່ມເບີໂທ</string>
     <string name="people_contact_add_address">ເພີ່ມທີ່ຢູ່</string>
     <string name="people_contact_street">ຖະໜົນ</string>
     <string name="people_contact_birthday">ວັນເກີດ</string>
     <string name="people_contact_organisation">ອົງກອນ</string>
     <string name="people_contact_url">ເວັບໄຊ</string>
-    <string name="people_contact_note">ບັນທຶກ</string>
+    <string name="people_contact_note">ໝາຍເຫດ</string>
     <string name="people_contact_book">ປຶ້ມທີ່ຢູ່</string>
     <string name="people_contact_type_work">ບ່ອນເຮັດວຽກ</string>
     <string name="people_contact_type_mobile">ມືຖື</string>

@@ -16,7 +16,7 @@
     <string name="go_color_white">Ağ</string>
     <string name="go_delete_confirm">Sil</string>
     <string name="go_delete_message">Bu oyun sizin siyahınızdan silinəcək. Bunu geri qaytarmaq mümkün deyil.</string>
-    <string name="go_delete_title">Oyunu silmək?</string>
+    <string name="go_delete_title">Oyun silinsin?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">Qəbul et</string>
     <string name="go_draw_decline">Rədd et</string>

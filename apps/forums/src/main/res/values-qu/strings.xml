@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Suscripcionta saqiy</string>
     <string name="forums_list_unsubscribe_title">Suscripcionta saqiy</string>
     <string name="forums_create_title">Forum kamariy</string>
-    <string name="forums_create_name">Sutin</string>
+    <string name="forums_create_name">Forum suti</string>
     <string name="forums_create_privacy">Pakaynin</string>
     <string name="forums_create_private">Pakasqa</string>
     <string name="forums_create_public">Público</string>
-    <string name="forums_create_action">Kamariy</string>
+    <string name="forums_create_action">Forum kamariy</string>
     <string name="forums_find_title">Forokunata tariy</string>
     <string name="forums_find_recommended">Munasqa</string>
     <string name="forums_find_subscribe">Suscribiy</string>
@@ -71,7 +71,7 @@
     <string name="forums_ai_account_default">Default cuenta</string>
     <string name="forums_ai_prompt_reset">Por defectoman kutichiy</string>
     <string name="forums_settings_unsubscribe">Suscripcionta saqiy</string>
-    <string name="forums_moderation_title">Moderacion</string>
+    <string name="forums_moderation_title">Qhawakipay</string>
     <string name="forums_moderation_tab_queue">Línea</string>
     <string name="forums_moderation_tab_reports">Reportekuna</string>
     <string name="forums_moderation_tab_log">Registro</string>
@@ -87,7 +87,7 @@
     <string name="forums_moderation_restriction_type_muted">Ch\'inyachiy</string>
     <string name="forums_moderation_restriction_type_banned">Hark\'ay</string>
     <string name="forums_moderation_section_premoderation">Ñawpaq moderación</string>
-    <string name="forums_moderation_section_ratelimiting">Rate Limiting</string>
+    <string name="forums_moderation_section_ratelimiting">Frecuencia limitay</string>
     <string name="forums_moderation_require_posts">Musuq qillqakunapaq aprobacionta munay</string>
     <string name="forums_moderation_require_comments">Musuq comentariokunapaq aprobacionta munay</string>
     <string name="forums_moderation_require_new_users">Musuq usuariokunapaq aprobacionta munay</string>
@@ -125,7 +125,7 @@
     <string name="forums_post_body_field">Qillqa</string>
     <string name="forums_post_edit_body_field">Qillqa</string>
     <string name="forums_comment_edit_body_field">Qillqa</string>
-    <string name="forums_post_tag_add">Unancha yapay</string>
+    <string name="forums_post_tag_add">Unanchata yapay</string>
     <string name="forums_write_comment">Huk rimayta qillqay…</string>
     <string name="forums_auth_login_failed">Mana yaykuyta atispachu</string>
 
@@ -205,7 +205,7 @@
         <item quantity="one">%d musuq willakuy</item>
         <item quantity="other">%d musuq willakuykuna</item>
     </plurals>
-    <string name="forums_rss_feed">RSS willakuy</string>
+    <string name="forums_rss_feed">Canal RSS</string>
     <string name="forums_rss_mode_posts">Qillqakuna</string>
     <string name="forums_rss_mode_posts_comments">Qillqakuna comentariokunawan</string>
     <string name="forums_rss_copied">RSS URL clipboardman copiasqa</string>
@@ -216,21 +216,21 @@
     <string name="forums_attachment_move_up">Patamanta apay</string>
     <string name="forums_attachment_move_down">Uramanta apay</string>
     <string name="forums_post_comments">Comentarios</string>
-    <string name="forums_all_forums">Llapan forokuna</string>
+    <string name="forums_all_forums">Llapan forumkuna</string>
     <string name="forums_create_allow_search">Pipas forota maskananpaq saqiy</string>
     <string name="forums_rss_clipboard_label">Foro RSS URL</string>
-    <string name="forums_tab_moderation">Moderacion</string>
+    <string name="forums_tab_moderation">Qhawakipay</string>
     <string name="forums_access_level_view_full">Qhawayllapaq</string>
     <string name="forums_access_level_none_full">Mana yaykuy</string>
     <string name="forums_access_subject_anyone">Pipas</string>
-    <string name="forums_access_subject_authenticated">Riqsichisqa ruraqkuna</string>
+    <string name="forums_access_subject_authenticated">Chiqanchasqa ruraqkuna</string>
     <string name="forums_access_tab_other">Huk</string>
     <string name="forums_access_authenticated_desc">Yaykusqa kaq pipas</string>
     <string name="forums_access_anyone_desc">Mana sutiyuq ruwaqkunapas</string>
     <string name="forums_access_selected">Akllasqa: %1$s</string>
     <string name="forums_clear">Pichay</string>
     <string name="forums_ai_account_label">Cuenta</string>
-    <string name="forums_ai_prompt_default">Por defecto</string>
+    <string name="forums_ai_prompt_default">Predeterminado</string>
     <string name="forums_moderation_reject">Mana munay</string>
     <string name="forums_moderation_report_by">%1$s-wan</string>
     <string name="forums_moderation_restriction_state_banned">Hark\'asqa</string>
@@ -244,7 +244,7 @@
     <string name="forums_settings_field_name">Sutin</string>
     <string name="forums_settings_field_entity_id">Entidad ID</string>
     <string name="forums_settings_field_fingerprint_label">Ruk\'ana unancha</string>
-    <string name="forums_settings_field_server">Server</string>
+    <string name="forums_settings_field_server">Servidor</string>
     <string name="forums_settings_name_edit_cd">Sutita hukchay</string>
     <string name="forums_settings_name_cancel_cd">Allinchayta saqiy</string>
     <string name="forums_settings_save_name">Sutita waqaychay</string>
@@ -256,9 +256,9 @@
     <string name="forums_access_select_group">Huk huñuta akllay</string>
     <string name="forums_access_select_rule">Huk kamachiyta akllay</string>
     <string name="forums_ai_actions_label">AI ruwaykuna qillqakunapi</string>
-    <string name="forums_ai_prompt_custom">Personalizasqa</string>
-    <string name="forums_ai_prompt_score_label">Tupunapaq prompt</string>
-    <string name="forums_ai_prompt_tag_label">Unanchanapaq prompt</string>
+    <string name="forums_ai_prompt_custom">Sapankuq</string>
+    <string name="forums_ai_prompt_score_label">Puntaje prompt</string>
+    <string name="forums_ai_prompt_tag_label">Unancha prompt</string>
     <string name="forums_ai_prompt_variables">Variablekuna: %1$s</string>
     <string name="forums_find_found_by_url">URL-wan tarisqa</string>
     <string name="forums_link">T\'inki</string>
@@ -277,8 +277,8 @@
     <string name="forums_moderation_restriction_by">%1$s-wan</string>
     <string name="forums_moderation_restriction_remove_message">Chayllapi hunt\'asqa yaykuyta forumman kutichipunqaku.</string>
     <string name="forums_moderation_restriction_remove_title">%1$s-manta hark\'ayta qichuy?</string>
-    <string name="forums_moderation_restriction_state_muted">Upallachisqa</string>
-    <string name="forums_moderation_restriction_state_shadowban">Llanthuwan hark\'asqa</string>
+    <string name="forums_moderation_restriction_state_muted">Ch\'inyachisqa</string>
+    <string name="forums_moderation_restriction_state_shadowban">Pakallapi hark\'asqa</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Mana ima apaykachaqpas upallachisqachu nitaq hark\'asqachu</string>
     <string name="forums_moderation_section_premoderation_description">Contenido rikuchikunan manaraq arinita mañay</string>
     <string name="forums_moderation_section_ratelimiting_description">Apaykachaqkuna hayk\'a kutis qillqayta atisqankuta hark\'aspa spam-ta hark\'ay</string>

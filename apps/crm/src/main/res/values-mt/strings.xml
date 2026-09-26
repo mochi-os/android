@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Ikona</string>
     <string name="crm_option_icon_placeholder">ez. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Iddiżabbona</string>
-    <string name="crm_settings_delete_crm">Ħassar proġett</string>
+    <string name="crm_settings_delete_crm">Ħassar CRM</string>
     <string name="crm_settings_delete_confirm_title">Ħassar CRM</string>
     <string name="crm_settings_unsubscribe_title">Iddiżabbona</string>
     <string name="crm_settings_unsubscribe_message">Żgur trid tikkanċella s-sottoskrizzjoni tiegħek minn dan is-CRM?</string>
@@ -134,10 +134,10 @@
     <string name="crm_class_move_up">Mexxi \'l fuq</string>
     <string name="crm_views_move_down">Mexxi \'l isfel</string>
     <string name="crm_class_move_down">Mexxi \'l isfel</string>
-    <string name="crm_sort_direction_asc">Tielgħu</string>
-    <string name="crm_views_direction_asc">Tielgħu</string>
-    <string name="crm_sort_direction_desc">Nieżel</string>
-    <string name="crm_views_direction_desc">Nieżel</string>
+    <string name="crm_sort_direction_asc">Axxendenti</string>
+    <string name="crm_views_direction_asc">Axxendenti</string>
+    <string name="crm_sort_direction_desc">Dixxendenti</string>
+    <string name="crm_views_direction_desc">Dixxendenti</string>
     <string name="crm_list_add_to_home">Żid mal-iskrin tad-dar</string>
     <string name="crm_search_objects_placeholder">Fittex oġġetti</string>
     <string name="crm_links_search_placeholder">Fittex oġġetti</string>
@@ -153,7 +153,7 @@
     <string name="crm_views_filter">Filtru (maħżun, għadu mhux applikat)</string>
     <string name="crm_people_empty">Għad m\'hemm l-ebda persuna b\'aċċess</string>
     <string name="crm_settings_delete_confirm_message">Żgur li trid tħassar din is-CRM? L-oġġetti, il-kummenti u s-settings kollha jitneħħew għal dejjem.</string>
-    <string name="crm_object_unwatch">Tara aktar</string>
+    <string name="crm_object_unwatch">Tibqax tosserva</string>
     <string name="crm_object_delete_title">Ħassar l-oġġett</string>
     <string name="crm_object_delete_message">Żgur li trid tħassar dan l-oġġett? Din l-azzjoni ma tistax titreġġa\' lura.</string>
     <string name="crm_parent_none">L-ebda ġenitur</string>
@@ -164,7 +164,7 @@
     <string name="crm_links_type_relates">Jirrelata ma\'</string>
     <string name="crm_links_remove">Neħħi l-link</string>
     <string name="crm_comment_replying_to">Twieġeb lil %1$s</string>
-    <string name="crm_comment_clear_reply">Naddaf ir-risposta</string>
+    <string name="crm_comment_clear_reply">Neħħi t-tweġiba</string>
     <string name="crm_comment_placeholder">Żid kumment</string>
     <string name="crm_property_pick_date">Agħżel data</string>
     <string name="crm_property_ok">OK</string>
@@ -177,8 +177,8 @@
     <string name="crm_activity_made_change">għamel bidla</string>
     <string name="crm_activity_attached">hemeż</string>
     <string name="crm_activity_commented">ikkummenta</string>
-    <string name="crm_attachment_empty">L-ebda mehmuża</string>
-    <string name="crm_attachment_default_name">mehmuża</string>
+    <string name="crm_attachment_empty">L-ebda mehmuż</string>
+    <string name="crm_attachment_default_name">mehmuż</string>
     <string name="crm_attachment_delete_confirm_title">Tħassar l-anness?</string>
     <string name="crm_attachment_delete_confirm_message">Dan l-anness se jitħassar għal dejjem.</string>
     <string name="crm_tree_move">Mexxi</string>
@@ -273,7 +273,7 @@
     <string name="crm_access_role_comment">Ikkummenta u ara</string>
     <string name="crm_access_role_view">Ara biss</string>
     <string name="crm_access_role_none">L-ebda aċċess</string>
-    <string name="crm_all_crms">Il-CRMs kollha</string>
+    <string name="crm_all_crms">Is-CRMs kollha</string>
     <string name="crm_settings_unsubscribe_section">Ħassar l-abbonament tas-CRM</string>
     <string name="crm_settings_updated">CRM aġġornat</string>
     <string name="crm_create_import_backup">Importa mill-backup (mhux obbligatorju)</string>

@@ -28,7 +28,7 @@
     <string name="market_appeal_dialog_cancel">റദ്ദാക്കുക</string>
     <string name="market_appeal_dialog_failed">അപ്പീൽ സമർപ്പിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="market_appeal_dialog_submit">അപ്പീൽ സമർപ്പിക്കുക</string>
-    <string name="market_appeal_dialog_submitting">അയയ്ക്കുന്നു…</string>
+    <string name="market_appeal_dialog_submitting">സമർപ്പിക്കുന്നു…</string>
     <string name="market_appeal_dialog_success">അപ്പീൽ സമർപ്പിച്ചു</string>
     <string name="market_appeal_dialog_title">നീക്കം ചെയ്യൽ അപ്പീൽ</string>
     <string name="market_asset_download">ഡൗൺലോഡ് ചെയ്യുക</string>
@@ -40,9 +40,9 @@
     <string name="market_bid_dialog_instant_win">വാങ്ങൽ സ്ഥിരീകരിച്ചു — പേയ്‌മെന്റ് പൂർത്തിയാക്കുക</string>
     <string name="market_bid_dialog_invalid_ceiling">പരമാവധി ബിഡ് കുറഞ്ഞത് നിങ്ങളുടെ ബിഡ് തുകയെങ്കിലും ആയിരിക്കണം</string>
     <string name="market_bid_dialog_outbid">നിങ്ങളുടെ ബിഡ് സമർപ്പിച്ചു, പക്ഷേ ഉടനെ മറികടന്നു. മറ്റൊരു ബിഡ്ഡർക്ക് ഉയർന്ന പരമാവധി ഉണ്ട്. അവരുടെ ബിഡ് ഇപ്പോൾ %1$s ആണ്.</string>
-    <string name="market_bid_dialog_submit">ബിഡ് ചെയ്യുക</string>
+    <string name="market_bid_dialog_submit">ബിഡ് ഇടുക</string>
     <string name="market_bid_dialog_success">ബിഡ് നൽകി</string>
-    <string name="market_bid_dialog_title">ബിഡ് ചെയ്യുക</string>
+    <string name="market_bid_dialog_title">ബിഡ് ഇടുക</string>
     <string name="market_bid_ended">ലേലം അവസാനിച്ചു</string>
     <string name="market_bid_high">ഉയർന്ന ബിഡ്</string>
     <string name="market_bids_empty">ബിഡുകളൊന്നുമില്ല</string>
@@ -89,7 +89,7 @@
     <string name="market_checkout_listing_not_found">ലിസ്റ്റിംഗ് കണ്ടെത്തിയില്ല</string>
     <string name="market_checkout_pay_button">Stripe ഉപയോഗിച്ച് നൽകുക</string>
     <string name="market_checkout_payment_failed">പേയ്മെന്റ് ചെക്ക്ഔട്ട് ആരംഭിക്കാൻ കഴിഞ്ഞില്ല — വിൽക്കുന്നയാൾ പേയ്മെന്റ് സജ്ജീകരണം പൂർത്തിയാക്കിയിട്ടില്ലായിരിക്കാം</string>
-    <string name="market_checkout_processing">പ്രോസസ്സിംഗ്…</string>
+    <string name="market_checkout_processing">പ്രോസസ്സ് ചെയ്യുന്നു…</string>
     <string name="market_checkout_secure">Stripe വഴി സുരക്ഷിത പേയ്മെന്റ്</string>
     <string name="market_checkout_select_option">ഓപ്ഷൻ തിരഞ്ഞെടുക്കുക</string>
     <string name="market_checkout_shipping">ഷിപ്പിംഗ്</string>
@@ -118,7 +118,7 @@
     <string name="market_dispute_dialog_failed">പ്രതികരണം സമർപ്പിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="market_dispute_dialog_response_label">നിങ്ങളുടെ പ്രതികരണം</string>
     <string name="market_dispute_dialog_submit">സമർപ്പിക്കുക</string>
-    <string name="market_dispute_dialog_submitting">അയയ്ക്കുന്നു…</string>
+    <string name="market_dispute_dialog_submitting">സമർപ്പിക്കുന്നു…</string>
     <string name="market_dispute_dialog_title">തർക്കത്തിന് മറുപടി</string>
     <string name="market_editor_appeal_submit">അപ്പീൽ സമർപ്പിക്കുക</string>
     <string name="market_editor_asset_add">ഫയൽ ചേർക്കുക</string>
@@ -137,7 +137,7 @@
     <string name="market_editor_description">വിവരണം</string>
     <string name="market_editor_interval_monthly">പ്രതിമാസ</string>
     <string name="market_editor_interval_yearly">വാർഷിക</string>
-    <string name="market_editor_photo_delete">ഫോട്ടോ നീക്കം ചെയ്യുക</string>
+    <string name="market_editor_photo_delete">ഫോട്ടോ ഇല്ലാതാക്കുക</string>
     <string name="market_editor_photo_uploading">അപ്‌ലോഡ് ചെയ്യുന്നു…</string>
     <string name="market_editor_photos_add">ഫോട്ടോകൾ ചേർക്കുക</string>
     <string name="market_editor_price">വില</string>
@@ -181,7 +181,7 @@
     <string name="market_editor_zone_european_union">യൂറോപ്യൻ യൂണിയൻ</string>
     <string name="market_editor_zone_region">പ്രദേശം</string>
     <string name="market_editor_zone_worldwide">ലോകമെമ്പാടും</string>
-    <string name="market_empty_title">ഫലങ്ങളില്ല</string>
+    <string name="market_empty_title">ഫലങ്ങളൊന്നുമില്ല</string>
     <string name="market_fee_preview_item">ഇനം</string>
     <string name="market_fee_preview_payout">നിങ്ങളുടെ പേഔട്ട്</string>
     <string name="market_filter_all">എല്ലാം</string>
@@ -234,7 +234,7 @@
     <string name="market_listing_detail_save">സേവ് ചെയ്യുക</string>
     <string name="market_listing_detail_seller_heading">വിൽപ്പനക്കാരൻ</string>
     <string name="market_listing_detail_share">ലിസ്റ്റിംഗ് പങ്കിടുക</string>
-    <string name="market_listing_detail_shipping_heading">ഷിപ്പിംഗ്</string>
+    <string name="market_listing_detail_shipping_heading">ഷിപ്പിംഗ് ഓപ്ഷനുകൾ</string>
     <string name="market_listing_detail_subscribe">സബ്സ്ക്രൈബ് ചെയ്യുക</string>
     <string name="market_listing_detail_tags_heading">ടാഗുകൾ</string>
     <string name="market_listing_detail_title">ലിസ്റ്റിംഗ്</string>
@@ -543,7 +543,7 @@
     <string name="market_fee_disclosure_title">പ്ലാറ്റ്ഫോം ഫീകൾ</string>
     <string name="market_fee_preview_failed">ഫീകൾ കണക്കാക്കാൻ കഴിഞ്ഞില്ല</string>
     <string name="market_fee_preview_loading">ഫീകൾ കണക്കാക്കുന്നു…</string>
-    <string name="market_fee_preview_mochi_fee">Mochi ഫീ</string>
+    <string name="market_fee_preview_mochi_fee">Mochi ഫീസ്</string>
     <string name="market_fee_preview_processor_fee">പ്രോസസർ ഫീ</string>
     <string name="market_filter_chip_max">പരമാവധി %1$s</string>
     <string name="market_filter_chip_min">കുറഞ്ഞത് %1$s</string>

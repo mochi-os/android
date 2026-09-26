@@ -16,7 +16,7 @@
     <string name="go_color_white">Trắng</string>
     <string name="go_delete_confirm">Xóa</string>
     <string name="go_delete_message">Trận đấu này sẽ bị xoá khỏi danh sách của bạn. Không thể hoàn tác.</string>
-    <string name="go_delete_title">Xoá trận đấu?</string>
+    <string name="go_delete_title">Xóa trận đấu?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">Chấp nhận</string>
     <string name="go_draw_decline">Từ chối</string>
@@ -50,8 +50,8 @@
     <string name="go_resign_title">Đầu hàng trận đấu?</string>
     <string name="go_sidebar_completed">Hoàn tất</string>
     <string name="go_sidebar_new_game">Trò chơi mới</string>
-    <string name="go_status_draw">Hoà</string>
-    <string name="go_status_draw_text">Hoà</string>
+    <string name="go_status_draw">Hòa</string>
+    <string name="go_status_draw_text">Hòa</string>
     <string name="go_status_game_over">Hết trò chơi</string>
     <string name="go_status_opponent_move">Lượt của %1$s</string>
     <string name="go_status_opponent_wins">%1$s thắng</string>
@@ -64,7 +64,7 @@
     <string name="go_channel_name">Thông báo Cờ vây</string>
     <string name="go_channel_description">Thông báo về nước đi, bỏ lượt, đề nghị hòa và kết quả ván cờ.</string>
     <string name="go_open_sidebar">Mở thanh bên</string>
-    <string name="go_sidebar_active">Ván cờ đang chơi</string>
+    <string name="go_sidebar_active">Ván đang chơi</string>
     <string name="go_empty_active">Chưa có ván cờ đang chơi.</string>
     <string name="go_status_resigned">Đã đầu hàng</string>
     <string name="go_new_game_title">Ván cờ vây mới</string>

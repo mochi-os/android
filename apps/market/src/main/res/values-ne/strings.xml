@@ -13,7 +13,7 @@
     <string name="market_account_seller_step_activate_title">विक्रेता खाता सक्रिय गर्नुहोस्</string>
     <string name="market_account_seller_step_activate_desc">सामानहरू सूचीबद्ध गर्न सुरु गर्न आफ्नो विक्रेता प्रोफाइल बनाउनुहोस्</string>
     <string name="market_account_seller_step_stripe_desc">खरिदकर्ताहरूबाट भुक्तानी स्वीकार गर्न Stripe खाता जडान गर्नुहोस्</string>
-    <string name="market_account_seller_fees_heading">शुल्कहरू:</string>
+    <string name="market_account_seller_fees_heading">शुल्क:</string>
     <string name="market_account_seller_fees_mochi">Mochi ले प्रत्येक बिक्रीबाट %1$s%% लिन्छ।</string>
     <string name="market_account_seller_fees_stripe">Stripe ले प्रत्येक कारोबारमा आफ्नै प्रशोधन शुल्क र प्रत्येक चार्जब्याकमा निश्चित शुल्क लिन्छ। तपाईंको मुद्रा र क्षेत्रका लागि हालका दरहरू तपाईंको Stripe ड्यासबोर्डमा सूचीबद्ध छन्।</string>
     <string name="market_account_seller_connect">Stripe जडान गर्नुहोस्</string>
@@ -28,7 +28,7 @@
     <string name="market_appeal_dialog_cancel">रद्द गर्नुहोस्</string>
     <string name="market_appeal_dialog_failed">अपील पेश गर्न असफल</string>
     <string name="market_appeal_dialog_submit">अपिल पेस गर्नुहोस्</string>
-    <string name="market_appeal_dialog_submitting">पठाउँदै…</string>
+    <string name="market_appeal_dialog_submitting">पठाइँदै…</string>
     <string name="market_appeal_dialog_success">अपील पेस गरियो</string>
     <string name="market_appeal_dialog_title">हटाउने अपील</string>
     <string name="market_asset_download">डाउनलोड गर्नुहोस्</string>
@@ -43,14 +43,14 @@
     <string name="market_bid_dialog_submit">बोली राख्नुहोस्</string>
     <string name="market_bid_dialog_success">बोली राखियो</string>
     <string name="market_bid_dialog_title">बोली राख्नुहोस्</string>
-    <string name="market_bid_ended">लिलामी समाप्त भयो</string>
+    <string name="market_bid_ended">लिलाम समाप्त भयो</string>
     <string name="market_bid_high">उच्च बोली</string>
     <string name="market_bids_empty">कुनै बोली छैन</string>
-    <string name="market_bids_ended">लिलामी समाप्त भयो</string>
+    <string name="market_bids_ended">लिलाम समाप्त भयो</string>
     <string name="market_bids_tab_active">सक्रिय</string>
     <string name="market_bids_tab_all">सबै</string>
     <string name="market_bids_tab_lost">हारे</string>
-    <string name="market_bids_tab_outbid">बोली मागे</string>
+    <string name="market_bids_tab_outbid">बढी बोली</string>
     <string name="market_bids_tab_won">जित्यो</string>
     <string name="market_bids_title">बोलीहरू</string>
     <string name="market_carousel_main">फोटो %1$d / %2$d</string>
@@ -89,7 +89,7 @@
     <string name="market_checkout_listing_not_found">सूची फेला परेन</string>
     <string name="market_checkout_pay_button">Stripe मा भुक्तानी</string>
     <string name="market_checkout_payment_failed">भुक्तानी चेकआउट सुरु गर्न सकिएन — विक्रेताले भुक्तानी सेटअप पूरा नगरेका हुन सक्छन्</string>
-    <string name="market_checkout_processing">प्रशोधन हुँदै…</string>
+    <string name="market_checkout_processing">प्रशोधन गर्दै…</string>
     <string name="market_checkout_secure">Stripe मार्फत सुरक्षित भुक्तानी</string>
     <string name="market_checkout_select_option">विकल्प छान्नुहोस्</string>
     <string name="market_checkout_shipping">शिपिङ</string>
@@ -118,7 +118,7 @@
     <string name="market_dispute_dialog_failed">प्रतिक्रिया पेश गर्न असफल</string>
     <string name="market_dispute_dialog_response_label">तपाईंको प्रतिक्रिया</string>
     <string name="market_dispute_dialog_submit">पेस गर्नुहोस्</string>
-    <string name="market_dispute_dialog_submitting">पठाउँदै…</string>
+    <string name="market_dispute_dialog_submitting">पठाइँदै…</string>
     <string name="market_dispute_dialog_title">विवादको जवाफ</string>
     <string name="market_editor_appeal_submit">अपिल पेस गर्नुहोस्</string>
     <string name="market_editor_asset_add">फाइल थप्नुहोस्</string>
@@ -137,7 +137,7 @@
     <string name="market_editor_description">विवरण</string>
     <string name="market_editor_interval_monthly">मासिक</string>
     <string name="market_editor_interval_yearly">वार्षिक</string>
-    <string name="market_editor_photo_delete">फोटो हटाउनुहोस्</string>
+    <string name="market_editor_photo_delete">फोटो मेट्नुहोस्</string>
     <string name="market_editor_photo_uploading">अपलोड गर्दै…</string>
     <string name="market_editor_photos_add">फोटोहरू थप्नुहोस्</string>
     <string name="market_editor_price">मूल्य</string>
@@ -181,7 +181,7 @@
     <string name="market_editor_zone_european_union">युरोपेली संघ</string>
     <string name="market_editor_zone_region">क्षेत्र</string>
     <string name="market_editor_zone_worldwide">विश्वव्यापी</string>
-    <string name="market_empty_title">नतिजा छैन</string>
+    <string name="market_empty_title">कुनै नतिजा छैन</string>
     <string name="market_fee_preview_item">वस्तु</string>
     <string name="market_fee_preview_payout">तपाईंको भुक्तानी</string>
     <string name="market_filter_all">सबै</string>
@@ -234,7 +234,7 @@
     <string name="market_listing_detail_save">सुरक्षित गर्नुहोस्</string>
     <string name="market_listing_detail_seller_heading">बिक्रेता</string>
     <string name="market_listing_detail_share">विज्ञापन साझेदारी</string>
-    <string name="market_listing_detail_shipping_heading">शिपिङ</string>
+    <string name="market_listing_detail_shipping_heading">शिपिङ विकल्पहरू</string>
     <string name="market_listing_detail_subscribe">सदस्यता लिनुहोस्</string>
     <string name="market_listing_detail_tags_heading">ट्यागहरू</string>
     <string name="market_listing_detail_title">सूची</string>
@@ -392,7 +392,7 @@
     <string name="market_saved_title">सुरक्षित गरिएका</string>
     <string name="market_search_clear">खोजी खाली गर्नुहोस्</string>
     <string name="market_search_placeholder">बजारमा खोज्नुहोस्</string>
-    <string name="market_section_categories">श्रेणीहरू हेर्नुहोस्</string>
+    <string name="market_section_categories">श्रेणीहरू ब्राउज गर्नुहोस्</string>
     <string name="market_section_listings">हालका सूचीहरू</string>
     <string name="market_section_recent">हालै हेरिएका</string>
     <string name="market_ship_dialog_cancel">रद्द गर्नुहोस्</string>
@@ -470,7 +470,7 @@
     <string name="market_type_digital">डिजिटल</string>
     <string name="market_type_physical">भौतिक</string>
     <string name="market_warnings_title">चेतावनी</string>
-    <string name="market_sale_review_response_submitting">पठाउँदै…</string>
+    <string name="market_sale_review_response_submitting">पठाइँदै…</string>
     <string name="market_checkout_subscribing">सदस्यता लिँदै…</string>
     <string name="market_filter_remove">फिल्टर हटाउनुहोस्</string>
     <string name="market_listings_action_appeal">हटाउने अपील</string>
@@ -563,7 +563,7 @@
     <string name="market_listing_unsave">सुरक्षित गरिएकोबाट हटाउनुहोस्</string>
     <string name="market_listings_delete_failed">लिस्टिङ मेटाउन असफल</string>
     <string name="market_listings_delete_message">यसले तपाईंको खाताबाट मस्यौदालाई स्थायी रूपमा हटाउँछ।</string>
-    <string name="market_listings_delete_title">लिस्टिङ मेटाउने?</string>
+    <string name="market_listings_delete_title">सूची मेटाउने हो?</string>
     <string name="market_listings_empty_subtitle">तपाईंको पहिलो वस्तु सिर्जना गर्न नयाँ लिस्टिङमा ट्याप गर्नुहोस्।</string>
     <string name="market_listings_load_failed">तपाईंका लिस्टिङहरू लोड गर्न असफल</string>
     <string name="market_listings_search_placeholder">तपाईंका लिस्टिङहरू खोज्नुहोस्</string>
@@ -663,7 +663,7 @@
     <string name="market_seller_become_heading">विक्रेता बन्नुहोस्</string>
     <string name="market_seller_become_title">विक्रेता बन्नुहोस्</string>
     <string name="market_seller_check_status">स्थिति जाँच गर्नुहोस्</string>
-    <string name="market_seller_checking">जाँच गर्दै...</string>
+    <string name="market_seller_checking">जाँच गरिँदैछ…</string>
     <string name="market_seller_connect_stripe">Stripe जडान गर्नुहोस्</string>
     <string name="market_seller_connecting">लोड हुँदै...</string>
     <string name="market_seller_fee_loading">शुल्क विवरण लोड हुँदै...</string>

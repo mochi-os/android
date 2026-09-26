@@ -162,11 +162,11 @@
     <string name="people_contact_given">Prenume</string>
     <string name="people_contact_family">Nume de familie</string>
     <string name="people_contact_nickname">Poreclă</string>
-    <string name="people_contact_add_email">Adaugă e-mail</string>
+    <string name="people_contact_add_email">Adaugă email</string>
     <string name="people_contact_add_phone">Adaugă telefon</string>
     <string name="people_contact_add_address">Adaugă adresă</string>
     <string name="people_contact_street">Stradă</string>
-    <string name="people_contact_birthday">Zi de naștere</string>
+    <string name="people_contact_birthday">Data nașterii</string>
     <string name="people_contact_organisation">Organizație</string>
     <string name="people_contact_url">Site web</string>
     <string name="people_contact_note">Notă</string>

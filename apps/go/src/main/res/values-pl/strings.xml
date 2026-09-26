@@ -64,7 +64,7 @@
     <string name="go_channel_name">Powiadomienia Go</string>
     <string name="go_channel_description">Powiadomienia o ruchach, pasach, propozycjach remisu i wynikach partii.</string>
     <string name="go_open_sidebar">Otwórz panel boczny</string>
-    <string name="go_sidebar_active">Aktywne partie</string>
+    <string name="go_sidebar_active">Aktywne gry</string>
     <string name="go_empty_active">Brak aktywnych partii.</string>
     <string name="go_status_resigned">Poddana</string>
     <string name="go_new_game_title">Nowa partia Go</string>

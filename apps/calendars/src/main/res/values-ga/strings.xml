@@ -77,7 +77,7 @@
     <string name="calendars_workweek">Seachtain oibre</string>
     <string name="calendars_range">%1$s go %2$s</string>
     <string name="calendars_truncated">Níl roinnt imeachtaí sa raon seo á dtaispeáint.</string>
-    <string name="calendars_list_empty">Gan imeachtaí</string>
+    <string name="calendars_list_empty">Níl aon imeacht</string>
     <plurals name="calendars_more">
         <item quantity="one">+%1$d eile</item>
         <item quantity="two">+%1$d eile</item>

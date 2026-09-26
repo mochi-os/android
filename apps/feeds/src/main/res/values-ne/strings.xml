@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi फिड</string>
     <string name="feeds_source_type_feed_memories">स्मृतिहरू</string>
-    <string name="feeds_remove_source">स्रोत हटाउनुहोस्</string>
+    <string name="feeds_remove_source">स्रोत हटाउने?</string>
     <string name="feeds_suggested_credibility_accept">स्वीकार गर्नुहोस्</string>
     <string name="feeds_rss_url_copied">RSS URL क्लिपबोर्डमा प्रतिलिपि गरियो</string>
     <string name="feeds_logout">लग आउट</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">कहिल्यै प्राप्त गरिएको छैन</string>
     <string name="feeds_source_poll">पोल</string>
-    <string name="feeds_source_transform">रूपान्तरण</string>
+    <string name="feeds_source_transform">AI रूपान्तरण</string>
     <string name="feeds_remove_source_confirm">\"%1$s\" हटाउने?</string>
     <string name="feeds_remove_also_delete_posts">आयात गरिएका पोस्टहरू पनि मेटाउनुहोस्</string>
     <string name="feeds_suggested_credibility_title">सुझाव गरिएको विश्वसनीयता</string>
@@ -153,8 +153,8 @@
     <string name="feeds_access_segment_other">अन्य</string>
     <string name="feeds_access_select_group">समूह छान्नुहोस्</string>
     <string name="feeds_access_selected">चयन गरिएको: %1$s</string>
-    <string name="feeds_access_subject_anyone">जो कोही</string>
-    <string name="feeds_access_subject_authenticated">प्रमाणित प्रयोगकर्ता</string>
+    <string name="feeds_access_subject_anyone">जोसुकै</string>
+    <string name="feeds_access_subject_authenticated">प्रमाणित प्रयोगकर्ताहरू</string>
     <string name="feeds_markdown_supported">Markdown समर्थित</string>
     <string name="feeds_permission_deny">अस्वीकार गर्नुहोस्</string>
     <string name="feeds_rss_feed">RSS फिड</string>
@@ -206,7 +206,7 @@
     <string name="feeds_banner_dismiss">ब्यानर हटाउनुहोस्</string>
     <string name="feeds_members_search">सदस्यहरू फिल्टर गर्नुहोस्</string>
     <string name="feeds_ai_prompt_default">पूर्वनिर्धारित</string>
-    <string name="feeds_ai_prompt_custom">अनुकूलित</string>
+    <string name="feeds_ai_prompt_custom">अनुकूलन</string>
     <string name="feeds_ai_prompt_variables">चलहरू: %1$s</string>
     <string name="feeds_link">लिङ्क</string>
     <string name="feeds_share_link_title">फिड लिङ्क</string>

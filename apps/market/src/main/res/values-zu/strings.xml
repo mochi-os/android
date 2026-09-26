@@ -34,7 +34,7 @@
     <string name="market_asset_download">Landa</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
     <string name="market_back">Emuva</string>
-    <string name="market_bid_dialog_amount_label">Isipho sakho</string>
+    <string name="market_bid_dialog_amount_label">Ibhidi yakho</string>
     <string name="market_bid_dialog_cancel">Khansela</string>
     <string name="market_bid_dialog_ceiling_help">Sizokwenyusa inzuzo yakho ngokuzenzakalelayo ngenani elincane elidingekayo ukuze uhlale phambili, kuze kufike kuleli nani eliphezulu.</string>
     <string name="market_bid_dialog_instant_win">Ukuthenga kuqinisekisiwe — qedela inkokhelo</string>
@@ -50,7 +50,7 @@
     <string name="market_bids_tab_active">Iyasebenza</string>
     <string name="market_bids_tab_all">Konke</string>
     <string name="market_bids_tab_lost">Iphulukene</string>
-    <string name="market_bids_tab_outbid">Idluliselwe</string>
+    <string name="market_bids_tab_outbid">Idluliwe</string>
     <string name="market_bids_tab_won">Inqobile</string>
     <string name="market_bids_title">Ukuncintisana</string>
     <string name="market_carousel_main">Isithombe %1$d kwesi %2$d</string>
@@ -234,7 +234,7 @@
     <string name="market_listing_detail_save">Londoloza</string>
     <string name="market_listing_detail_seller_heading">Umthengisi</string>
     <string name="market_listing_detail_share">Yabelana ngohlu</string>
-    <string name="market_listing_detail_shipping_heading">Ukuthumela</string>
+    <string name="market_listing_detail_shipping_heading">Izinketho zokuthumela</string>
     <string name="market_listing_detail_subscribe">Bhalisa</string>
     <string name="market_listing_detail_tags_heading">Amathegi</string>
     <string name="market_listing_detail_title">Uhlu</string>
@@ -393,7 +393,7 @@
     <string name="market_search_clear">Sula usesho</string>
     <string name="market_search_placeholder">Sesha emakethe</string>
     <string name="market_section_categories">Bheka izigaba</string>
-    <string name="market_section_listings">Uhlu lwakamuva</string>
+    <string name="market_section_listings">Okufakiwe kwakamuva</string>
     <string name="market_section_recent">Okubukwe muva</string>
     <string name="market_ship_dialog_cancel">Khansela</string>
     <string name="market_ship_dialog_submit">Qinisekisa</string>
@@ -447,7 +447,7 @@
     <string name="market_subscription_detail_started">Kuqale ngo-%1$s</string>
     <string name="market_subscription_detail_title">Ukubhalisa</string>
     <string name="market_subscriptions_action_cancel">Khansela</string>
-    <string name="market_subscriptions_action_pause">Misa</string>
+    <string name="market_subscriptions_action_pause">Misa okwesikhashana</string>
     <string name="market_subscriptions_action_reactivate">Vuselela</string>
     <string name="market_subscriptions_action_resubscribe">Bhalisa kabusha</string>
     <string name="market_subscriptions_action_resume">Qhubeka</string>
@@ -612,7 +612,7 @@
     <string name="market_sale_dispute_state_responded">Kulindelwe isinqumo</string>
     <string name="market_sale_dispute_stripe_reason">Isizathu sokubuyiselwa kwemali kwe-Stripe: %1$s</string>
     <string name="market_sale_fee_gross">Isamba</string>
-    <string name="market_sale_fee_mochi">Imali yenkokhelo yeMochi</string>
+    <string name="market_sale_fee_mochi">Imali ye-Mochi</string>
     <string name="market_sale_fee_payout">Inkokhelo eyinhloko</string>
     <string name="market_sale_fee_stripe">Imali yokucubungula ye-Stripe</string>
     <string name="market_sale_fee_stripe_note">Izimali zokucubungula ze-Stripe zikhonjiswa kudeshibhodi yakho ye-Stripe.</string>
@@ -663,7 +663,7 @@
     <string name="market_seller_become_heading">Yiba ngumthengisi</string>
     <string name="market_seller_become_title">Yiba ngumthengisi</string>
     <string name="market_seller_check_status">Hlola isimo</string>
-    <string name="market_seller_checking">Kuyahlolwa...</string>
+    <string name="market_seller_checking">Iyahlola…</string>
     <string name="market_seller_connect_stripe">Xhuma i-Stripe</string>
     <string name="market_seller_connecting">Kulayishwa...</string>
     <string name="market_seller_fee_loading">Kulayishwa imininingwane yemali...</string>

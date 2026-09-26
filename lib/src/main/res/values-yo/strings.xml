@@ -98,17 +98,17 @@
     <string name="settings_units_metric">Òṣùwọ̀n</string>
     <string name="settings_units_imperial">Òṣùwọ̀n Gẹ̀ẹ́sì</string>
     <string name="settings_time_zone">Agbègbè àkókò</string>
-    <string name="settings_reset_to_defaults">Pa padà sí àwọn àbùdá</string>
+    <string name="settings_reset_to_defaults">Pa padà sí àwọn àìyípadà</string>
     <string name="settings_reset_confirm_title">Pa àwọn ìfẹ́ padà?</string>
-    <string name="settings_reset_confirm_message">Èyí yóò tún gbogbo àwọn àfẹ́nilọ́kàn sí àwọn iye ìpilẹ̀ wọn.</string>
+    <string name="settings_reset_confirm_message">Èyí yóò tún gbogbo àwọn àfẹ́nilọ́kàn sí àwọn iye àìyípadà wọn.</string>
     <string name="settings_reset">Pa padà</string>
     <string name="settings_display_title">Àfihàn</string>
-    <string name="settings_display_reset">Pa padà sí àwọn àbùdá</string>
+    <string name="settings_display_reset">Pa padà sí àwọn àìyípadà</string>
     <string name="settings_display_reset_confirm_title">Tun ifihan ṣeto?</string>
-    <string name="settings_display_reset_confirm_message">Eyi yoo tun awọn eto ifihan ṣeto si awọn iye aṣaaju wọn.</string>
+    <string name="settings_display_reset_confirm_message">Èyí yóò tún àwọn ètò ìfihàn ṣètò sí àwọn iye àìyípadà wọn.</string>
     <string name="settings_theme_title">Theme</string>
-    <string name="settings_theme_default">Àìpé</string>
-    <string name="settings_background">Ẹ̀hìn</string>
+    <string name="settings_theme_default">Àìyípadà</string>
+    <string name="settings_background">Ẹ̀yìn</string>
     <string name="settings_background_theme">Lát\'ọ̀dọ̀ Theme</string>
     <string name="settings_background_off">Kòsí</string>
     <string name="game_chat_empty">Kò sí ìránṣẹ́ síbẹ̀</string>
@@ -125,15 +125,15 @@
 
     <string name="app_brand">Mochi</string>
     <string name="error_network">Kò lè sopọ̀. Yẹ àsopọ̀ íntánẹ́ẹ̀tì rẹ wò, kí o sì gbìyànjú lẹ́ẹ̀kan sí i.</string>
-    <string name="error_authentication_required">A nílò ìfọwọ́sí ìdánimọ̀</string>
-    <string name="error_not_found">Kò sí</string>
+    <string name="error_authentication_required">Ìjẹ́rìí ni a nílò</string>
+    <string name="error_not_found">A kò rí i</string>
     <string name="error_server">Àṣìṣe sáfà (%1$d). Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i lẹ́yìn náà.</string>
     <string name="error_unexpected">Àṣìṣe àìròtẹ́lẹ̀ kan ṣẹlẹ̀</string>
     <string name="error_enter_server_url">Jọ̀wọ́ tẹ URL sáfà sí</string>
     <string name="error_enter_email">Jọ̀wọ́ tẹ ímeèlì rẹ sí</string>
     <string name="error_enter_name">Jọ̀wọ́ tẹ orúkọ kan sí</string>
     <string name="auth_connect_to_server">Sopọ̀ sí sáfà rẹ</string>
-    <string name="auth_connect">Sopọ̀</string>
+    <string name="auth_connect">So pọ̀</string>
     <string name="auth_sign_in">Wọlé</string>
     <string name="auth_check_email">Yẹ ímeèlì rẹ wò fún kóòdù ìfìdímúlẹ̀</string>
     <string name="auth_mfa_title">Ìfọwọ́sí oníṣe-púpọ̀</string>
@@ -163,8 +163,8 @@
     <string name="bootstrap_choose_account">Yan àkáǹtì kan</string>
     <string name="bootstrap_sign_in_different_server">Wọlé sí sáfà mìíràn</string>
     <string name="common_retry">Gbìyànjú lẹ́ẹ̀kan sí i</string>
-    <string name="common_more_options">Àwọn àṣàyàn mìíràn</string>
-    <string name="common_collapse">Já wálẹ̀</string>
+    <string name="common_more_options">Àwọn àṣàyàn síwájú sí i</string>
+    <string name="common_collapse">Ká jọ</string>
     <string name="common_expand">Gbòòrò</string>
     <string name="common_play_video">Mú fídíò ṣiṣẹ́</string>
     <string name="place_picker_name">Orúkọ ibi</string>
@@ -178,7 +178,7 @@
     <string name="notifications_clear">Pa àwọn ìfitónilétí rẹ́</string>
     <string name="entity_avatar_alt">Àwòrán fún %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
-    <string name="format_time_just_now">Lọ́ọ́lọ́ọ́</string>
+    <string name="format_time_just_now">Ní báyìí</string>
     <string name="format_time_minutes_ago">%1$dm sẹ́yìn</string>
     <string name="format_time_hours_ago">%1$dh sẹ́yìn</string>
     <string name="format_time_days_ago">%1$dd sẹ́yìn</string>
@@ -190,7 +190,7 @@
     <string name="format_time_days_short">ọjọ́ %1$d</string>
     <string name="format_time_weeks_short">ọ̀sẹ̀ %1$d</string>
     <string name="format_time_months_short">oṣù %1$d</string>
-    <string name="reaction_add">Fi ìfèsì kún</string>
+    <string name="reaction_add">Fi ìhùwàpadà kún</string>
     <string name="push_service_channel">Ìfitónilétí Mochi</string>
     <string name="push_service_channel_description">Ń jẹ́ kí Mochi wà ní àsopọ̀ láti gba àwọn ìfitónilétí</string>
     <string name="push_service_group">Iṣẹ́ ẹ̀hìn</string>
@@ -214,7 +214,7 @@
     <string name="notifications_clear_all_title">Pa gbogbo àwọn ìfitónilétí rẹ́?</string>
     <string name="notifications_clear_all_message">Èyí yóò pa gbogbo ìfitónilétí rẹ́. A kò lè gbà wọ́n padà.</string>
     <string name="settings_value_auto">Aládàáṣe</string>
-    <string name="settings_value_theme">Bí ìpìlẹ̀ àkọ́sílẹ̀</string>
+    <string name="settings_value_theme">Àìyípadà theme</string>
     <string name="settings_radius">Ìgúnrégé igun</string>
     <string name="settings_timestamp_display">Ìfihàn àkókò</string>
     <string name="settings_timestamp_relative">Ìbátan</string>
@@ -238,7 +238,7 @@
     <string name="stepup_error_oauth">A kò lè fọwọ́sí pẹ̀lú àkàùntì yẹn. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kansí.</string>
     <string name="game_system_resign">%1$s jọwọ́ ara rẹ̀</string>
     <string name="game_system_draw_offer">%1$s dábàá ìfòyebánilọ́pọ̀</string>
-    <string name="game_system_draw_accept">Ìfòyebánilọ́pọ̀ ti gbà</string>
+    <string name="game_system_draw_accept">A fohùnṣọ̀kan lórí ìdọ́gba</string>
     <string name="game_system_draw_decline">%1$s kọ ìfòyebánilọ́pọ̀</string>
     <string name="reactivation_title">A ti ṣètò àkáǹtì rẹ láti pa rẹ́</string>
     <string name="reactivation_body">A ti ṣètò àkáǹtì rẹ láti pa rẹ́. O lè fagilé e kí o sì mú ìráyèsí kíkún padà báyìí.</string>
@@ -263,7 +263,7 @@
     <string name="person_picker_none">Kòsí</string>
     <string name="person_picker_clear">Pa ìyàn rẹ́</string>
     <string name="person_picker_select">Yan …</string>
-    <string name="person_picker_directory">Ìwé àkọsílẹ̀</string>
+    <string name="person_picker_directory">Àtòjọ</string>
     <string name="person_picker_no_people">Kò sí ènìyàn</string>
     <string name="person_picker_project_members">Àwọn ọmọ ẹgbẹ́ iṣẹ́ àkanṣe</string>
     <string name="account_token_label">Ìpàdé Mochi</string>
@@ -288,7 +288,7 @@
     <string name="lightbox_comments">Àwọn àlàyé</string>
     <string name="common_attachment_unavailable">Àmúso kò sí fún ìgbà díẹ̀</string>
     <string name="common_unavailable">Kò sí</string>
-    <string name="common_not_found">Kò sí</string>
+    <string name="common_not_found">A kò rí i</string>
     <string name="format_bold">Nípọn</string>
     <string name="format_italic">Wíwọ́</string>
     <string name="format_link">Ọ̀nà àsopọ̀</string>

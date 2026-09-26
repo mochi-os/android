@@ -4,7 +4,7 @@
     <string name="settings_home_title">Тохиргоо</string>
     <string name="settings_home_logout">Гарах</string>
     <string name="settings_home_account">Бүртгэл</string>
-    <string name="settings_home_preferences">Тохиргоо</string>
+    <string name="settings_home_preferences">Тохиргоонууд</string>
     <string name="settings_home_display">Дэлгэц</string>
     <string name="settings_home_notification_prefs">Мэдэгдлийн тохиргоо</string>
     <string name="settings_home_accounts">Холбогдсон бүртгэлүүд</string>
@@ -207,7 +207,7 @@
     <string name="system_users_toast_status_failed">Хэрэглэгчийн төлвийг шинэчилж чадсангүй</string>
     <string name="system_users_toast_revoke_failed">Сешн хүчингүй болгож чадсангүй</string>
 
-    <string name="settings_home_sessions">Сешн</string>
+    <string name="settings_home_sessions">Сессүүд</string>
     <string name="settings_home_privacy">Нууцлалын бодлого</string>
     <string name="settings_home_rules">Дүрэм</string>
     <string name="settings_home_terms">Үйлчилгээний нөхцөл</string>
@@ -229,7 +229,7 @@
     <string name="account_recovery_regen_title">Сэргээх кодуудыг дахин үүсгэх үү?</string>
     <string name="account_recovery_regen_message">Одоо байгаа кодууд тэр даруй ажиллахаа болино. Шинээр гаргасан кодуудыг аюулгүй газар хадгална уу.</string>
     <string name="account_recovery_codes_warning">Эдгээр кодыг хадгалаарай — тус бүрийг зөвхөн нэг удаа ашиглаж болно. Тэдгээр дахин харагдахгүй.</string>
-    <string name="sessions_title">Сешн</string>
+    <string name="sessions_title">Сессүүд</string>
     <string name="sessions_empty">Идэвхтэй сесс байхгүй.</string>
     <string name="sessions_revoke_message">Энэ сессийг ашиглаж буй төхөөрөмж гарах болно.</string>
     <string name="account_oauth_empty">Холбосон бүртгэл алга</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s цаашид энэ домэйн дээрх замыг удирдахгүй.</string>
     <string name="domain_delegation_delete_title">Делегаци устгах уу?</string>
     <string name="domain_delegation_path">Зам</string>
-    <string name="domain_delegation_user">Хэрэглэгчийн ID</string>
+    <string name="domain_delegation_user">Хэрэглэгч</string>
     <string name="domain_delegations">Делегациуд</string>
     <string name="domain_delegations_empty">Тохируулсан төлөөлөл алга.</string>
     <string name="domain_delete">Домэйн устгах</string>
@@ -389,9 +389,9 @@
     <string name="account_totp_open">Баталгаажуулагч аппад нээх</string>
     <string name="accounts_revoke">Хандалтыг цуцлах</string>
     <string name="accounts_capability_calendar">Хуанли</string>
-    <string name="accounts_capability_notify">Мэдэгдэл</string>
+    <string name="accounts_capability_notify">Мэдэгдлүүд</string>
     <string name="accounts_capability_ai">AI</string>
-    <string name="accounts_capability_login">Нэвтрэлт</string>
+    <string name="accounts_capability_login">Нэвтрэх</string>
     <string name="accounts_provider_caldav">Хуанлийн сервер</string>
     <string name="accounts_revoke_confirm">Энэ нь %1$s-ийн хуанлийн хандалтыг цуцална. %2$s-ээр нэвтрэх нь Нэвтрэх хуудсан дээр салгах хүртэл хэвээр байна.</string>
     <string name="accounts_capability_mcp">MCP</string>

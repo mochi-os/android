@@ -74,7 +74,7 @@
     <string name="system_status_title">ሁኔታ</string>
     <string name="system_status_version">ስሪት</string>
     <string name="system_status_started">ጀምሯል</string>
-    <string name="system_status_update">ይዘምኑ</string>
+    <string name="system_status_update">አዘምን</string>
     <string name="system_status_refresh">አድስ</string>
     <string name="system_status_install_update">ማዘምን ጫን</string>
     <string name="system_status_download_installer">ጫኝ አውርድ</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">ቅድሚያ %1$d · %2$s</string>
     <string name="interests_search_placeholder">ለመጨመር ርዕሶችን ይፈልጉ…</string>
     <string name="interests_empty">እስካሁን ምንም ፍላጎቶች የሉም።</string>
-    <string name="interests_summary_regenerate">ማጠቃለያን ዳግም ይፍጠሩ</string>
+    <string name="interests_summary_regenerate">ማጠቃለያውን እንደገና ፍጠር</string>
     <string name="interests_summary_regenerating">እንደገና በመፍጠር ላይ…</string>
     <string name="interests_summary_empty">የሚወዱትን ማጠቃለያ ለመፍጠር አንዳንድ ፍላጎቶችን ያክሉ።</string>
     <string name="interests_search_failed">ፍለጋ አልተሳካም። እባክዎ እንደገና ይሞክሩ።</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s ከአሁን በኋላ በዚህ ጎራ ላይ መንገዶችን አያስተዳድርም።</string>
     <string name="domain_delegation_delete_title">ውክልና ይሰረዝ?</string>
     <string name="domain_delegation_path">መንገድ</string>
-    <string name="domain_delegation_user">የተጠቃሚ መታወቂያ</string>
+    <string name="domain_delegation_user">ተጠቃሚ</string>
     <string name="domain_delegations">ውክልናዎች</string>
     <string name="domain_delegations_empty">የተዋቀሩ ውክልናዎች የሉም።</string>
     <string name="domain_delete">ጎራ ሰርዝ</string>

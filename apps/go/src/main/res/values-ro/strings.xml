@@ -16,7 +16,7 @@
     <string name="go_color_white">Alb</string>
     <string name="go_delete_confirm">Șterge</string>
     <string name="go_delete_message">Acest joc va fi eliminat din lista dvs. Această acțiune nu poate fi anulată.</string>
-    <string name="go_delete_title">Ștergeți jocul?</string>
+    <string name="go_delete_title">Ștergi jocul?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">Acceptă</string>
     <string name="go_draw_decline">Respinge</string>
@@ -64,7 +64,7 @@
     <string name="go_channel_name">Notificări Go</string>
     <string name="go_channel_description">Notificări despre mutări, pase, oferte de remiză și rezultate de partidă.</string>
     <string name="go_open_sidebar">Deschide bara laterală</string>
-    <string name="go_sidebar_active">Partide active</string>
+    <string name="go_sidebar_active">Jocuri active</string>
     <string name="go_empty_active">Încă nu există partide active.</string>
     <string name="go_status_resigned">Abandonată</string>
     <string name="go_new_game_title">Partidă nouă de Go</string>

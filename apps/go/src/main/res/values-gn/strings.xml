@@ -16,7 +16,7 @@
     <string name="go_color_white">Morotĩ</string>
     <string name="go_delete_confirm">Hundi</string>
     <string name="go_delete_message">Ko ñembosarái okesa ne tysýigui. Ndaikatumo\'ãi ñembyaty.</string>
-    <string name="go_delete_title">Eheja ñembosarái?</string>
+    <string name="go_delete_title">Ehundi ñembosarái?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">Hekoite</string>
     <string name="go_draw_decline">Joha</string>
@@ -28,7 +28,7 @@
     <string name="go_error_draw_offer_failed">Ndaikatúi oñeñe\'ẽ pyhuỹire</string>
     <string name="go_error_move_failed">Ndaikatúi ojeku\'e</string>
     <string name="go_error_pass_failed">Ndaikatúi oñehasa</string>
-    <string name="go_error_rematch_failed">Ndaikatúi oñembojuaju ñembosarai jey</string>
+    <string name="go_error_rematch_failed">Ndaikatúi oñemoheñói ñembosarai jey</string>
     <string name="go_error_resign_failed">Ndaikatúi oñerrendi</string>
     <string name="go_error_send_failed">Ndaikatúi oñemondo</string>
     <string name="go_game_deleted">Oñembogue mbosaraita</string>
@@ -50,8 +50,8 @@
     <string name="go_resign_title">Ehasa ñembosarái?</string>
     <string name="go_sidebar_completed">Oñembokuapy</string>
     <string name="go_sidebar_new_game">Ñembosarái pyahu</string>
-    <string name="go_status_draw">Pyhuỹi</string>
-    <string name="go_status_draw_text">Pyhuỹi</string>
+    <string name="go_status_draw">Peteĩcha</string>
+    <string name="go_status_draw_text">Peteĩcha</string>
     <string name="go_status_game_over">Mbosaraita opa</string>
     <string name="go_status_opponent_move">%1$s pa\'ũ</string>
     <string name="go_status_opponent_wins">%1$s ipu\'aka</string>
@@ -61,8 +61,8 @@
     <string name="go_status_you_win">Repu\'aka!</string>
     <string name="go_status_your_move">Ne pyenda</string>
 
-    <string name="go_channel_name">Go notifications</string>
-    <string name="go_channel_description">Marandu Go jeku’e, jeasa, joja jerure ha ñembosarái resultado rehegua.</string>
+    <string name="go_channel_name">Go momarandu</string>
+    <string name="go_channel_description">Momarandu Go jeku’e, jeasa, joja jerure ha ñembosarái resultado rehegua.</string>
     <string name="go_open_sidebar">Embovy yke pe</string>
     <string name="go_sidebar_active">Ñembosarái Oikóva</string>
     <string name="go_empty_active">Ndaipóri gueteri ñembosarái oikóva.</string>

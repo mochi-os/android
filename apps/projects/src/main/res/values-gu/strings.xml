@@ -172,10 +172,10 @@
     <string name="projects_class_move_up">ઉપર ખસેડો</string>
     <string name="projects_class_move_down">નીચે ખસેડો</string>
     <string name="projects_views_sort_by">દ્વારા સૉર્ટ કરો</string>
-    <string name="projects_sort_direction_asc">ઊભરતું</string>
-    <string name="projects_views_direction_asc">ઊભરતું</string>
-    <string name="projects_sort_direction_desc">ઊતરતું</string>
-    <string name="projects_views_direction_desc">ઊતરતું</string>
+    <string name="projects_sort_direction_asc">ચઢતો ક્રમ</string>
+    <string name="projects_views_direction_asc">ચઢતો ક્રમ</string>
+    <string name="projects_sort_direction_desc">ઊતરતો ક્રમ</string>
+    <string name="projects_views_direction_desc">ઊતરતો ક્રમ</string>
     <string name="projects_search_objects_placeholder">વસ્તુઓ શોધો</string>
     <string name="projects_links_search_placeholder">વસ્તુઓ શોધો</string>
 
@@ -199,7 +199,7 @@
     <string name="projects_parent_none">કોઈ પેરન્ટ નથી</string>
     <string name="projects_links_empty">કોઈ લિંક નથી</string>
     <string name="projects_links_section_relates">સંબંધિત છે</string>
-    <string name="projects_links_section_duplicated_by">આના દ્વારા ડુપ્લિકેટ કરેલ</string>
+    <string name="projects_links_section_duplicated_by">દ્વારા ડુપ્લિકેટ</string>
     <string name="projects_links_type">લિંક પ્રકાર</string>
     <string name="projects_links_type_relates">સંબંધિત છે</string>
     <string name="projects_links_remove">લિંક દૂર કરો</string>
@@ -218,7 +218,7 @@
     <string name="projects_activity_cleared">%1$s સાફ કર્યું</string>
     <string name="projects_activity_updated">%1$s અપડેટ કર્યું</string>
     <string name="projects_activity_made_change">ફેરફાર કર્યો</string>
-    <string name="projects_attachment_empty">કોઈ જોડાણો નથી</string>
+    <string name="projects_attachment_empty">કોઈ જોડાણ નથી</string>
     <string name="projects_attachment_default_name">જોડાણ</string>
     <string name="projects_attachment_size_bytes">%1$d B</string>
     <string name="projects_attachment_size_kb">%1$d KB</string>
@@ -244,8 +244,8 @@
     <string name="projects_request_create_title">મર્જ વિનંતી બનાવો</string>
     <string name="projects_request_field_target">લક્ષ્ય શાખા</string>
     <string name="projects_diff_title">ડિફ: %1$s -&gt; %2$s</string>
-    <string name="projects_tree_collapse">સંકુચિત કરો</string>
-    <string name="projects_tree_expand">વિસ્તૃત કરો</string>
+    <string name="projects_tree_collapse">સંકોચો</string>
+    <string name="projects_tree_expand">વિસ્તારો</string>
     <string name="projects_tree_move">ખસેડો</string>
     <string name="projects_tree_move_to_parent">પેરન્ટ પર ખસેડો</string>
     <string name="projects_tree_root_level">(રૂટ સ્તર)</string>
@@ -278,7 +278,7 @@
     <string name="projects_class_title_field_description">આ વર્ગના ઓબ્જેક્ટ્સ માટે પ્રદર્શન શીર્ષક તરીકે કયું ફીલ્ડ વાપરવું.</string>
     <string name="projects_class_title_field_default">મૂળભૂત (વાંચી શકાય તેવું)</string>
     <string name="projects_class_merge_requests_description">આ વર્ગના ઓબ્જેક્ટ્સ પર મર્જ વિનંતીઓને મંજૂરી આપો.</string>
-    <string name="projects_class_parents">પિતૃ વર્ગો</string>
+    <string name="projects_class_parents">પેરન્ટ વર્ગો</string>
     <string name="projects_class_delete_message">શું તમે ખરેખર વર્ગ \"%1$s\" કાઢી નાખવા માંગો છો? તમામ ફીલ્ડ્સ અને તેમના વિકલ્પો પણ કાઢી નાખવામાં આવશે.</string>
     <string name="projects_field_type_enumerated">ગણતરી કરેલ</string>
     <string name="projects_field_label">ફીલ્ડ: %1$s</string>
@@ -290,9 +290,9 @@
     <string name="projects_field_position">પ્રદર્શન સ્થાન</string>
     <string name="projects_field_position_header">હેડર</string>
     <string name="projects_field_validation">માન્યતા</string>
-    <string name="projects_field_min_length">લઘુત્તમ લંબાઈ</string>
+    <string name="projects_field_min_length">ન્યૂનતમ લંબાઈ</string>
     <string name="projects_field_max_length">મહત્તમ લંબાઈ</string>
-    <string name="projects_field_pattern">પેટર્ન (રેજેક્સ)</string>
+    <string name="projects_field_pattern">પૅટર્ન (regex)</string>
     <string name="projects_field_rows">પંક્તિઓ (ટેક્સ્ટએરિયા ઊંચાઈ)</string>
     <string name="projects_field_no_options">કોઈ વિકલ્પો વ્યાખ્યાયિત નથી</string>
     <string name="projects_field_delete_message">શું તમે ખરેખર ફીલ્ડ \"%1$s\" કાઢી નાખવા માંગો છો? તમામ વિકલ્પો અને મૂલ્યો ખોવાઈ જશે.</string>
@@ -371,7 +371,7 @@
     <string name="projects_design_export_saved">ડિઝાઇન સાચવી</string>
     <string name="projects_design_import_failed">તે ફાઇલ વાંચી શકાઈ નથી</string>
     <string name="projects_design_or_upload_json">અથવા ફાઇલ અપલોડ કરો</string>
-    <string name="projects_export">ડેટા નિકાસ કરો</string>
+    <string name="projects_export">ડેટા એક્સપોર્ટ કરો</string>
     <string name="projects_export_failed">નિકાસ સાચવી શકાઈ નથી</string>
     <string name="projects_export_saved">પ્રોજેક્ટ ડેટા સાચવ્યો</string>
     <string name="projects_exporting">નિકાસ તૈયાર કરી રહ્યાં છીએ…</string>

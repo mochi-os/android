@@ -162,7 +162,7 @@
     <string name="bootstrap_sign_in_differently">ចូលប្រើដោយរបៀបផ្សេង</string>
     <string name="bootstrap_choose_account">ជ្រើសរើសគណនី</string>
     <string name="bootstrap_sign_in_different_server">ចូលប្រើម៉ាស៊ីនមេផ្សេង</string>
-    <string name="common_retry">ព្យាយាមម្តងទៀត</string>
+    <string name="common_retry">ព្យាយាមម្ដងទៀត</string>
     <string name="common_more_options">ជម្រើសច្រើនទៀត</string>
     <string name="common_collapse">បង្រួម</string>
     <string name="common_expand">ពង្រីក</string>

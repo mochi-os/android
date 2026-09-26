@@ -16,7 +16,7 @@
     <string name="wikis_page_action_rename">名前を変更</string>
     <string name="wikis_page_action_history">履歴</string>
     <string name="wikis_page_action_delete">削除</string>
-    <string name="wikis_page_action_section_wiki">Wiki</string>
+    <string name="wikis_page_action_section_wiki">ウィキ</string>
     <string name="wikis_page_action_search">検索</string>
     <string name="wikis_page_action_tags">タグ</string>
     <string name="wikis_page_action_recent_changes">最近の変更</string>
@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">削除</string>
     <string name="wikis_replicas_remove_failed">レプリカの削除に失敗しました</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi ウィキ</string>
     <string name="wikis_channel_name">Wikisの通知</string>
     <string name="wikis_channel_description">ページ編集、コメント、招待に関する通知。</string>
     <string name="wikis_pageview_toc_expand">目次を表示</string>
@@ -246,7 +246,7 @@
     <string name="wikis_insert_dialog_empty">まだ添付はありません。ファイルをアップロードして始めましょう。</string>
     <string name="wikis_delete_page_message">ページ「%1$s」(%2$s)を削除しようとしています。この操作は履歴から復元して取り消すことができます。</string>
     <string name="wikis_delete_page_success">ページを削除しました</string>
-    <string name="wikis_revert_page_title">ページを元に戻す</string>
+    <string name="wikis_revert_page_title">ページを差し戻し</string>
     <string name="wikis_revert_page_message">%1$sをバージョン%2$dに戻そうとしています。これによりバージョン%2$dの内容で新しい版が作成されます。</string>
     <string name="wikis_revert_page_default_comment">バージョン%1$dに戻しました</string>
     <string name="wikis_revert_page_success">バージョン%1$dに戻しました</string>
@@ -282,7 +282,7 @@
     <string name="wikis_replicas_removed_success">レプリカを削除しました</string>
     <string name="wikis_load_more">もっと読み込む</string>
     <string name="wikis_access_change_level">アクセスレベル</string>
-    <string name="wikis_access_subject_anyone">全員</string>
+    <string name="wikis_access_subject_anyone">誰でも</string>
     <string name="wikis_access_subject_authenticated">認証済みユーザー</string>
 
     <string name="wikis_revision_compare">変更点を比較</string>

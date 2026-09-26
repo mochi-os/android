@@ -208,7 +208,7 @@
     <string name="staff_dashboard_kpi_total_orders">Total de pedidos</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Não</string>
-    <string name="staff_dashboard_open_sidebar">Abrir menu lateral</string>
+    <string name="staff_dashboard_open_sidebar">Abrir barra lateral</string>
     <string name="staff_dashboard_order_fallback">Pedido nº %1$s</string>
     <string name="staff_dashboard_system">Sistema</string>
     <string name="staff_dashboard_tab_audit">Auditoria</string>
@@ -280,7 +280,7 @@
     <string name="staff_filter_chip_remove">Remover filtro</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderação</string>
-    <string name="staff_filter_label_query">Pesquisa</string>
+    <string name="staff_filter_label_query">Pesquisar</string>
     <string name="staff_filter_label_seller">Vendedor</string>
     <string name="staff_filter_label_type">Tipo</string>
     <string name="staff_listings_action_approve_title">Aprovar anúncio</string>

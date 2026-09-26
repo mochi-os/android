@@ -24,16 +24,16 @@
     <string name="chat_members_you">Nde</string>
     <string name="chat_chat_not_found">Chat ndojejuhúi</string>
 
-    <string name="chat_message_send">Mondo</string>
+    <string name="chat_message_send">Emondo</string>
 
-    <string name="notification_channel_chat">Marandu ñomongeta</string>
+    <string name="notification_channel_chat">Chat momarandu</string>
     <string name="chat_list_empty">Ndaipóri gueteri ñomongeta</string>
     <string name="chat_new_existing_chat">Embojuruja ñomongeta oĩmava</string>
     <string name="chat_new_start">Eñepyrũ ñomongeta</string>
     <string name="chat_new_start_group">Eñepyrũ ñomongeta aty</string>
-    <string name="chat_messages_loading">Ohenduka marandu…</string>
+    <string name="chat_messages_loading">Oñemyanyhẽhína marandu…</string>
     <string name="chat_messages_empty">Ndaipóri gueteri marandu — eñe\'ẽmína!</string>
-    <string name="chat_messages_load_more">Ehenduka marandu yma</string>
+    <string name="chat_messages_load_more">Emyanyhẽ marandu yma</string>
     <string name="chat_attachment_remove">Eipe\'a jeitypa</string>
     <string name="chat_attachment_move_up">Emonge\'e yvate</string>
     <string name="chat_attachment_move_down">Emonge\'e yvy gotyo</string>
@@ -55,7 +55,7 @@
     <string name="chat_forward_success">Oñembohasa</string>
     <string name="chat_message_reply">Embohovái</string>
     <string name="chat_message_select">Eiporavo</string>
-    <string name="chat_reply_attachment">Marandurenda</string>
+    <string name="chat_reply_attachment">Adjunto</string>
     <string name="chat_replying_to">Embohovái %1$s-pe</string>
     <string name="chat_delete_confirm_title">¿Emboguete ñe\'ẽmondo?</string>
     <string name="chat_delete_confirm_body">Kóva omboguete ñe\'ẽmondo opavavépe g̃uarã ha ndaikatumo\'ãi ojejevy.</string>
@@ -78,7 +78,7 @@
     <string name="chat_marked_read">Marcado moñe\'ẽmbyréramo</string>
     <string name="chat_search_next">Ojoja upeigua</string>
     <string name="chat_search_prev">Ojoja ymaguare</string>
-    <string name="chat_settings_id">Ñemongeta ID</string>
+    <string name="chat_settings_id">Chat ID</string>
     <string name="chat_message_edited">(oñembojeguáva)</string>
     <string name="chat_new_fallback_name">Chat</string>
 </resources>

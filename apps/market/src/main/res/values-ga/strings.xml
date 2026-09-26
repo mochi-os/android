@@ -44,15 +44,15 @@
     <string name="market_bid_dialog_instant_win">Ceannach deimhnithe — críochnaigh an íocaíocht</string>
     <string name="market_bid_dialog_invalid_ceiling">Caithfidh an t-uastairiscint a bheith ar a laghad méid do thairisceana</string>
     <string name="market_bid_dialog_outbid">Cuireadh do thairiscint isteach ach sáraíodh láithreach í. Tá uasmhéid níos airde ag tairgeoir eile. Is é %1$s a thairiscint anois.</string>
-    <string name="market_bid_dialog_submit">Cuir tairiscint</string>
+    <string name="market_bid_dialog_submit">Déan tairiscint</string>
     <string name="market_bid_dialog_success">Tairiscint déanta</string>
-    <string name="market_bid_dialog_title">Cuir tairiscint</string>
+    <string name="market_bid_dialog_title">Déan tairiscint</string>
     <string name="market_bid_ended">Ceant críochnaithe</string>
     <string name="market_bid_high">Tairiscint is airde</string>
     <string name="market_bids_empty">Níl aon tairiscint</string>
     <string name="market_bids_ended">Ceant críochnaithe</string>
     <string name="market_bids_tab_active">Gníomhach</string>
-    <string name="market_bids_tab_all">Iomlán</string>
+    <string name="market_bids_tab_all">Uile</string>
     <string name="market_bids_tab_lost">Caillte</string>
     <string name="market_bids_tab_outbid">Sáraithe ag tairiscint</string>
     <string name="market_bids_tab_won">Buaite</string>
@@ -188,7 +188,7 @@
     <string name="market_empty_title">Gan torthaí</string>
     <string name="market_fee_preview_item">Mír</string>
     <string name="market_fee_preview_payout">D\'íocaíocht amach</string>
-    <string name="market_filter_all">Iomlán</string>
+    <string name="market_filter_all">Uile</string>
     <string name="market_filter_apply">Cuir i bhfeidhm</string>
     <string name="market_filter_category">Catagóir</string>
     <string name="market_filter_clear">Glan scagairí</string>
@@ -238,7 +238,7 @@
     <string name="market_listing_detail_save">Sábháil</string>
     <string name="market_listing_detail_seller_heading">Díoltóir</string>
     <string name="market_listing_detail_share">Roinn liosta</string>
-    <string name="market_listing_detail_shipping_heading">Seoladh</string>
+    <string name="market_listing_detail_shipping_heading">Roghanna seolta</string>
     <string name="market_listing_detail_subscribe">Liostáil</string>
     <string name="market_listing_detail_tags_heading">Clibeanna</string>
     <string name="market_listing_detail_title">Liostú</string>
@@ -254,7 +254,7 @@
     <string name="market_listings_delete_confirm">Scrios</string>
     <string name="market_listings_empty_title">Níl aon liostáil fós</string>
     <string name="market_listings_filter_active">Gníomhach</string>
-    <string name="market_listings_filter_all">Iomlán</string>
+    <string name="market_listings_filter_all">Uile</string>
     <string name="market_listings_filter_draft">Dréacht</string>
     <string name="market_listings_filter_expired">Imithe in éag</string>
     <string name="market_listings_filter_rejected">Diúltaithe</string>

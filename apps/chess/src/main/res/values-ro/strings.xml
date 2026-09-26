@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">Acceptă</string>
     <string name="chess_draw_decline">Respinge</string>
     <string name="chess_status_checkmate_you_win">Șah-mat — ai câștigat!</string>
-    <string name="chess_status_stalemate">Pat — egalitate</string>
+    <string name="chess_status_stalemate">Pat — remiză</string>
     <string name="chess_status_draw">Remiză</string>
     <string name="chess_status_check_your_move">Șah — e rândul tău</string>
     <string name="chess_status_your_move">Mutarea ta</string>
@@ -60,7 +60,7 @@
     <string name="chess_empty_subtitle">Începeți prima partidă pentru a juca șah cu un prieten.</string>
     <string name="chess_empty_start_button">Începeți prima partidă</string>
     <string name="chess_detail_unavailable">Partidă indisponibilă</string>
-    <string name="chess_delete_title">Ștergeți partida?</string>
+    <string name="chess_delete_title">Ștergi jocul?</string>
     <string name="chess_delete_message">Aceasta elimină partida din lista dumneavoastră.</string>
     <string name="chess_ws_connecting">Se conectează…</string>
     <string name="chess_ws_disconnected">Offline</string>

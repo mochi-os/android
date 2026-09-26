@@ -179,7 +179,7 @@
     <string name="market_listing_detail_buy_now">Αγορά τώρα</string>
     <string name="market_listing_detail_description_heading">Περιγραφή</string>
     <string name="market_listing_detail_edit">Επεξεργασία</string>
-    <string name="market_listing_detail_information_heading">Στοιχεία παράδοσης</string>
+    <string name="market_listing_detail_information_heading">Πληροφορίες παράδοσης</string>
     <string name="market_listing_detail_load_failed">Αποτυχία φόρτωσης καταχώρισης</string>
     <string name="market_listing_detail_listed">Καταχωρήθηκε %1$s</string>
     <string name="market_listing_detail_location_heading">Τοποθεσία</string>
@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Αναφορά αγγελίας</string>
     <string name="market_listing_detail_save">Αποθήκευση</string>
     <string name="market_listing_detail_seller_heading">Πωλητής</string>
-    <string name="market_listing_detail_shipping_heading">Αποστολή</string>
+    <string name="market_listing_detail_shipping_heading">Επιλογές αποστολής</string>
     <string name="market_listing_detail_subscribe">Εγγραφή</string>
     <string name="market_listing_detail_tags_heading">Ετικέτες</string>
     <string name="market_listing_detail_title">Καταχώριση</string>
@@ -427,7 +427,7 @@
     <string name="market_account_stripe_refresh">Ανανέωση κατάστασης</string>
     <string name="market_account_stripe_refresh_failed">Δεν ήταν δυνατή η ανανέωση της κατάστασης Stripe</string>
     <string name="market_appeal_dialog_reason_label">Γιατί ασκείτε προσφυγή;</string>
-    <string name="market_appeal_dialog_title">Προσφυγή κατά αφαίρεσης</string>
+    <string name="market_appeal_dialog_title">Προσφυγή κατά της αφαίρεσης</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
     <string name="market_bid_dialog_amount_label">Η προσφορά σας</string>
     <string name="market_bid_dialog_current_high">Τρέχουσα υψηλότερη προσφορά: %1$s</string>
@@ -444,7 +444,7 @@
     <string name="market_carousel_thumbnail">Μικρογραφία %1$d</string>
     <string name="market_checkout_browser_unavailable">Δεν υπάρχει διαθέσιμο πρόγραμμα περιήγησης για το άνοιγμα της σελίδας πληρωμής</string>
     <string name="market_checkout_pay_button">Πληρωμή με Stripe</string>
-    <string name="market_checkout_processing">Επεξεργασία…</string>
+    <string name="market_checkout_processing">Γίνεται επεξεργασία…</string>
     <string name="market_checkout_pwyw_label">Η τιμή σας (ελάχιστο %1$s)</string>
     <string name="market_checkout_pwyw_min_error">Το ποσό πρέπει να είναι τουλάχιστον %1$s</string>
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
@@ -517,7 +517,7 @@
     <string name="market_fee_disclosure_title">Χρεώσεις πλατφόρμας</string>
     <string name="market_fee_preview_failed">Δεν ήταν δυνατός ο υπολογισμός των χρεώσεων</string>
     <string name="market_fee_preview_loading">Υπολογισμός χρεώσεων…</string>
-    <string name="market_fee_preview_mochi_fee">Χρέωση Mochi</string>
+    <string name="market_fee_preview_mochi_fee">Προμήθεια Mochi</string>
     <string name="market_fee_preview_processor_fee">Χρέωση επεξεργαστή</string>
     <string name="market_filter_chip_max">Έως %1$s</string>
     <string name="market_filter_chip_min">Από %1$s</string>
@@ -630,7 +630,7 @@
     <string name="market_saved_empty_title">Καμία αποθηκευμένη αγγελία</string>
     <string name="market_search_placeholder">Αναζήτηση στην αγορά</string>
     <string name="market_status_past_due">Εκπρόθεσμο</string>
-    <string name="market_stripe_onboarding_action">Συνέχεια ρύθμισης</string>
+    <string name="market_stripe_onboarding_action">Συνέχιση ρύθμισης</string>
     <string name="market_stripe_onboarding_body">Ολοκληρώστε τη ρύθμιση Stripe για να μπορείτε να λαμβάνετε πληρωμές.</string>
     <string name="market_stripe_onboarding_failed">Δεν ήταν δυνατό το άνοιγμα του Stripe</string>
     <string name="market_stripe_onboarding_opening">Άνοιγμα Stripe…</string>

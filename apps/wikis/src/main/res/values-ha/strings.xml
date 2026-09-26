@@ -273,7 +273,7 @@
     <string name="wikis_attachments_downloading">Ana saukewa…</string>
     <string name="wikis_attachments_empty_description">Danna Loda don ƙara fayiloli a wannan shafin.</string>
     <string name="wikis_settings_name_save_cd">Adana suna</string>
-    <string name="wikis_settings_name_cancel_cd">Soke gyara</string>
+    <string name="wikis_settings_name_cancel_cd">Soke gyaran</string>
     <string name="wikis_access_level_label">Izini</string>
     <string name="wikis_access_set_failed">An kasa sabunta damar shiga</string>
     <string name="wikis_replicas_col_subscribed">An yi rajista: %1$s</string>
@@ -283,7 +283,7 @@
     <string name="wikis_load_more">Saukar da ƙari</string>
     <string name="wikis_access_change_level">Matakin shiga</string>
     <string name="wikis_access_subject_anyone">Kowa</string>
-    <string name="wikis_access_subject_authenticated">Masu amfani da aka tabbatar</string>
+    <string name="wikis_access_subject_authenticated">Masu amfani da aka tantance</string>
 
     <string name="wikis_revision_compare">Kwatanta canje-canje</string>
     <string name="wikis_revision_author">ta %1$s</string>

@@ -34,7 +34,7 @@
     <string name="crm_option_icon">ไอคอน</string>
     <string name="crm_option_icon_placeholder">เช่น Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">ยกเลิกการติดตาม</string>
-    <string name="crm_settings_delete_crm">ลบโครงการ</string>
+    <string name="crm_settings_delete_crm">ลบ CRM</string>
     <string name="crm_settings_delete_confirm_title">ลบ CRM</string>
     <string name="crm_settings_unsubscribe_title">ยกเลิกการติดตาม</string>
     <string name="crm_settings_unsubscribe_message">คุณแน่ใจหรือไม่ว่าต้องการยกเลิกการสมัครสมาชิก CRM นี้?</string>
@@ -204,7 +204,7 @@
     <string name="crm_class_title_field_default">ค่าเริ่มต้น (อ่านได้)</string>
     <string name="crm_class_parents">คลาสแม่</string>
     <string name="crm_class_delete_message">คุณแน่ใจหรือไม่ว่าต้องการลบคลาส \"%1$s\" ฟิลด์และตัวเลือกทั้งหมดของฟิลด์จะถูกลบด้วย</string>
-    <string name="crm_field_type_enumerated">ระบุค่า</string>
+    <string name="crm_field_type_enumerated">แบบแจกแจง</string>
     <string name="crm_field_label">ฟิลด์: %1$s</string>
     <string name="crm_field_readonly">อ่านอย่างเดียว</string>
     <string name="crm_field_sortable">เรียงลำดับได้</string>

@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Aýyr</string>
     <string name="wikis_replicas_remove_failed">Replika aýrylmady</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wikiler</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">Wiki sahypa üýtgeşmeleri, teswirler we çakylyklar barada habarlar.</string>
     <string name="wikis_pageview_toc_expand">Mazmuny görkez</string>
@@ -282,7 +282,7 @@
     <string name="wikis_replicas_removed_success">Replika aýryldy</string>
     <string name="wikis_load_more">Has köp ýükle</string>
     <string name="wikis_access_change_level">Giriş derejesi</string>
-    <string name="wikis_access_subject_anyone">Islendik</string>
+    <string name="wikis_access_subject_anyone">Islendik adam</string>
     <string name="wikis_access_subject_authenticated">Tassyklanan ulanyjylar</string>
 
     <string name="wikis_revision_compare">Üýtgeşmeleri deňeşdir</string>

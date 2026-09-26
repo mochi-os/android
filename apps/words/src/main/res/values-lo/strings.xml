@@ -26,7 +26,7 @@
     <string name="words_detail_action_resign">ຍອມແພ້</string>
     <string name="words_detail_action_rematch">ແຂ່ງຄືນ</string>
     <string name="words_detail_action_delete">ລົບເກມ</string>
-    <string name="words_detail_chat_title">ແຊັດ</string>
+    <string name="words_detail_chat_title">ສົນທະນາ</string>
     <string name="words_detail_recall">ຮຽກຄືນ</string>
     <string name="words_detail_submit">ສົ່ງ</string>
     <string name="words_detail_cancel">ຍົກເລີກ</string>
@@ -71,5 +71,5 @@
     <string name="words_move_error_not_connected">ແຜ່ນປ້າຍຕ້ອງຕໍ່ກັບແຜ່ນປ້າຍທີ່ມີຢູ່ໃນກະດານ</string>
     <string name="words_move_error_no_words">ບໍ່ມີຄຳທີ່ຖືກຕ້ອງເກີດຂຶ້ນ</string>
     <string name="words_validation_offline">ການກວດສອບອອບລາຍ — ທ່ານຍັງສາມາດສົ່ງໄດ້.</string>
-    <string name="words_validation_unknown_words">ມີຄຳສັບທີ່ບໍ່ຮູ້ຈັກ. ທ່ານຍັງສາມາດສົ່ງໄດ້.</string>
+    <string name="words_validation_unknown_words">ມີຄຳທີ່ບໍ່ຮູ້ຈັກ. ທ່ານຍັງສາມາດສົ່ງໄດ້.</string>
 </resources>

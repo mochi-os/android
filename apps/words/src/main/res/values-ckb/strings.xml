@@ -2,7 +2,7 @@
 <resources>
 
     <string name="words_list_title">وشەکان</string>
-    <string name="words_list_menu">Menu</string>
+    <string name="words_list_menu">مێنیو</string>
     <string name="words_list_logout">دەرچوون</string>
     <string name="words_sidebar_completed">تەواوبوو</string>
     <string name="words_sidebar_new_game">یاری نوێ</string>
@@ -26,7 +26,7 @@
     <string name="words_detail_action_resign">دەستلەکارکێشانەوە</string>
     <string name="words_detail_action_rematch">یاری دووبارە</string>
     <string name="words_detail_action_delete">سڕینەوەی یاری</string>
-    <string name="words_detail_chat_title">گفتوگۆ</string>
+    <string name="words_detail_chat_title">چات</string>
     <string name="words_detail_recall">بانگکردنەوە</string>
     <string name="words_detail_submit">ناردن</string>
     <string name="words_detail_cancel">هەڵوەشاندنەوە</string>

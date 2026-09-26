@@ -60,7 +60,7 @@
     <string name="chess_empty_subtitle">મિત્ર સાથે ચેસ રમવા માટે તમારી પ્રથમ રમત શરૂ કરો.</string>
     <string name="chess_empty_start_button">તમારી પ્રથમ રમત શરૂ કરો</string>
     <string name="chess_detail_unavailable">રમત ઉપલબ્ધ નથી</string>
-    <string name="chess_delete_title">રમત કાઢી નાખવી?</string>
+    <string name="chess_delete_title">ગેમ કાઢી નાખવી છે?</string>
     <string name="chess_delete_message">આ રમતને તમારી સૂચિમાંથી દૂર કરે છે.</string>
     <string name="chess_ws_connecting">કનેક્ટ થઈ રહ્યું છે…</string>
     <string name="chess_ws_disconnected">Offline</string>

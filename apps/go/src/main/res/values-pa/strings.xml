@@ -16,7 +16,7 @@
     <string name="go_color_white">ਚਿੱਟਾ</string>
     <string name="go_delete_confirm">ਮਿਟਾਓ</string>
     <string name="go_delete_message">ਇਹ ਖੇਡ ਤੁਹਾਡੀ ਸੂਚੀ ਵਿੱਚੋਂ ਹਟਾ ਦਿੱਤੀ ਜਾਵੇਗੀ। ਇਸ ਨੂੰ ਅਣਡੂ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।</string>
-    <string name="go_delete_title">ਖੇਡ ਮਿਟਾਉਣੀ ਹੈ?</string>
+    <string name="go_delete_title">ਗੇਮ ਮਿਟਾਈਏ?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">ਸਵੀਕਾਰ ਕਰੋ</string>
     <string name="go_draw_decline">ਅਸਵੀਕਾਰ ਕਰੋ</string>
@@ -50,8 +50,8 @@
     <string name="go_resign_title">ਗੇਮ ਤੋਂ ਅਸਤੀਫ਼ਾ ਦੇਈਏ?</string>
     <string name="go_sidebar_completed">ਪੂਰਾ</string>
     <string name="go_sidebar_new_game">ਨਵੀਂ ਗੇਮ</string>
-    <string name="go_status_draw">ਡ੍ਰਾਅ</string>
-    <string name="go_status_draw_text">ਡ੍ਰਾਅ</string>
+    <string name="go_status_draw">ਡਰਾਅ</string>
+    <string name="go_status_draw_text">ਡਰਾਅ</string>
     <string name="go_status_game_over">ਗੇਮ ਖ਼ਤਮ</string>
     <string name="go_status_opponent_move">%1$s ਦੀ ਚਾਲ</string>
     <string name="go_status_opponent_wins">%1$s ਜਿੱਤ ਗਿਆ</string>

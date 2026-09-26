@@ -60,7 +60,7 @@
     <string name="calendars_only_this">Samo ta</string>
     <string name="calendars_create">Ustvari koledar</string>
     <string name="calendars_subscribe">Naroči se na koledar</string>
-    <string name="calendars_poll">Osveži zdaj</string>
+    <string name="calendars_poll">Preveri zdaj</string>
     <string name="calendars_delete_title">Izbrišem %1$s?</string>
     <string name="calendars_delete_message">Njegovi dogodki bodo izbrisani z njim.</string>
     <string name="calendars_today">Danes</string>
@@ -70,7 +70,7 @@
     <string name="calendars_workweek">Delovni teden</string>
     <string name="calendars_range">Od %1$s do %2$s</string>
     <string name="calendars_truncated">Nekateri dogodki v tem obsegu niso prikazani.</string>
-    <string name="calendars_list_empty">Ni dogodkov</string>
+    <string name="calendars_list_empty">Brez dogodkov</string>
     <string name="calendars_event_new">Nov dogodek</string>
     <string name="calendars_event_edit">Uredi dogodek</string>
     <string name="calendars_event_calendar">Koledar</string>
@@ -100,7 +100,7 @@
     <string name="calendars_hours_invalid">Delovni čas se mora končati po svojem začetku.</string>
     <string name="calendars_work_days">Delovni dnevi</string>
     <string name="calendars_multiweek_weeks">Prikazani tedni</string>
-    <string name="calendars_multiweek_previous">Tedni pred tem</string>
+    <string name="calendars_multiweek_previous">Tednov prej</string>
     <string name="calendars_default_duration">Privzeta dolžina dogodka</string>
     <string name="calendars_default_reminder">Privzeti opomnik</string>
     <string name="calendars_link_title">Povezava do koledarja</string>

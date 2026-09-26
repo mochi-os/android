@@ -16,7 +16,7 @@
     <string name="wikis_page_action_rename">Pervadinti</string>
     <string name="wikis_page_action_history">Istorija</string>
     <string name="wikis_page_action_delete">Ištrinti</string>
-    <string name="wikis_page_action_section_wiki">Wiki</string>
+    <string name="wikis_page_action_section_wiki">Vikis</string>
     <string name="wikis_page_action_search">Ieškoti</string>
     <string name="wikis_page_action_tags">Žymos</string>
     <string name="wikis_page_action_recent_changes">Naujausi pakeitimai</string>
@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Šalinti</string>
     <string name="wikis_replicas_remove_failed">Nepavyko pašalinti replikos</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Vikiai</string>
     <string name="wikis_channel_name">Wikis pranešimai</string>
     <string name="wikis_channel_description">Pranešimai apie puslapių redagavimus, komentarus ir kvietimus.</string>
     <string name="wikis_pageview_toc_expand">Rodyti turinį</string>
@@ -272,7 +272,7 @@
     <string name="wikis_attachments_delete_confirm_message">Ištrinti „%1$s\"? Tai negali būti atšaukta.</string>
     <string name="wikis_attachments_downloading">Atsisiunčiama…</string>
     <string name="wikis_attachments_empty_description">Bakstelėkite Įkelti, kad pridėtumėte failus į šį puslapį.</string>
-    <string name="wikis_settings_name_save_cd">Išsaugoti vardą</string>
+    <string name="wikis_settings_name_save_cd">Išsaugoti pavadinimą</string>
     <string name="wikis_settings_name_cancel_cd">Atšaukti redagavimą</string>
     <string name="wikis_access_level_label">Leidimas</string>
     <string name="wikis_access_set_failed">Nepavyko atnaujinti prieigos</string>

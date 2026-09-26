@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">അൺസബ്സ്ക്രൈബ് ചെയ്യുക</string>
     <string name="forums_list_unsubscribe_title">അൺസബ്സ്ക്രൈബ് ചെയ്യുക</string>
     <string name="forums_create_title">ഫോറം സൃഷ്ടിക്കുക</string>
-    <string name="forums_create_name">പേര്</string>
+    <string name="forums_create_name">ഫോറത്തിന്റെ പേര്</string>
     <string name="forums_create_privacy">സ്വകാര്യത</string>
     <string name="forums_create_private">സ്വകാര്യം</string>
     <string name="forums_create_public">പൊതു</string>
-    <string name="forums_create_action">സൃഷ്ടിക്കുക</string>
+    <string name="forums_create_action">ഫോറം സൃഷ്ടിക്കുക</string>
     <string name="forums_find_title">ഫോറങ്ങൾ കണ്ടെത്തുക</string>
     <string name="forums_find_recommended">ശുപാർശ ചെയ്തത്</string>
     <string name="forums_find_subscribe">സബ്സ്ക്രൈബ് ചെയ്യുക</string>
@@ -247,7 +247,7 @@
     <string name="forums_settings_field_server">സെർവർ</string>
     <string name="forums_settings_name_edit_cd">പേര് എഡിറ്റ് ചെയ്യുക</string>
     <string name="forums_settings_name_cancel_cd">തിരുത്തൽ റദ്ദാക്കുക</string>
-    <string name="forums_settings_save_name">പേര് സേവ് ചെയ്യുക</string>
+    <string name="forums_settings_save_name">പേര് സംരക്ഷിക്കുക</string>
     <string name="forums_access_management">ആക്സസ് മാനേജ്മെന്റ്</string>
     <string name="forums_access_level_comment_full">അഭിപ്രായം, വോട്ട്, കാഴ്ച</string>
     <string name="forums_access_level_moderate_full">മോഡറേഷൻ, പോസ്റ്റ്, അഭിപ്രായം, വോട്ട്, കാഴ്ച</string>
@@ -276,8 +276,8 @@
     <string name="forums_moderation_restriction_by">%1$s മുഖേന</string>
     <string name="forums_moderation_restriction_remove_message">ഉടൻ തന്നെ ഫോറത്തിലേക്ക് പൂർണ്ണ പ്രവേശനം തിരികെ ലഭിക്കും.</string>
     <string name="forums_moderation_restriction_remove_title">%1$s-ന്റെ നിയന്ത്രണം നീക്കണോ?</string>
-    <string name="forums_moderation_restriction_state_muted">നിശ്ശബ്ദമാക്കി</string>
-    <string name="forums_moderation_restriction_state_shadowban">നിഴൽ വിലക്ക്</string>
+    <string name="forums_moderation_restriction_state_muted">മ്യൂട്ട് ചെയ്തു</string>
+    <string name="forums_moderation_restriction_state_shadowban">രഹസ്യമായി വിലക്കി</string>
     <string name="forums_moderation_restrictions_empty_subtitle">ആരെയും നിശ്ശബ്ദമാക്കുകയോ വിലക്കുകയോ ചെയ്തിട്ടില്ല</string>
     <string name="forums_moderation_section_premoderation_description">ഉള്ളടക്കം ദൃശ്യമാകുന്നതിന് മുമ്പ് അംഗീകാരം ആവശ്യപ്പെടുക</string>
     <string name="forums_moderation_section_ratelimiting_description">ഉപയോക്താക്കൾക്ക് എത്ര തവണ പോസ്റ്റ് ചെയ്യാമെന്ന് പരിമിതപ്പെടുത്തി സ്പാം തടയുക</string>

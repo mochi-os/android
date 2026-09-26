@@ -73,7 +73,7 @@
     <string name="calendars_workweek">주중</string>
     <string name="calendars_range">%1$s ~ %2$s</string>
     <string name="calendars_truncated">이 기간의 일부 일정은 표시되지 않았어요.</string>
-    <string name="calendars_list_empty">일정 없음</string>
+    <string name="calendars_list_empty">일정이 없어요</string>
     <plurals name="calendars_more">
         <item quantity="other">+%1$d개 더</item>
     </plurals>

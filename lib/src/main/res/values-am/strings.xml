@@ -56,7 +56,7 @@
     <string name="notifications_title">ማሳወቂያዎች</string>
     <string name="notifications_empty">ምንም ማሳወቂያዎች የሉም</string>
     <string name="notifications_empty_unread">ሁሉንም አንብበዋል</string>
-    <string name="notifications_tab_unread">ያልተነበቡ</string>
+    <string name="notifications_tab_unread">ያልተነበበ</string>
     <string name="notifications_tab_unread_count">ያልተነበቡ (%1$d)</string>
     <string name="notifications_tab_all">ሁሉም</string>
     <string name="notifications_mark_all_read">ሁሉንም እንደተነበበ ምልክት አድርግ</string>
@@ -120,7 +120,7 @@
 
     <string name="app_brand">Mochi</string>
     <string name="error_network">መገናኘት አልተቻለም። የበይነመረብ ግንኙነትዎን ይፈትሹ እና እንደገና ይሞክሩ።</string>
-    <string name="error_authentication_required">ማረጋገጫ ያስፈልጋል</string>
+    <string name="error_authentication_required">ማረጋገጥ ያስፈልጋል</string>
     <string name="error_not_found">አልተገኘም</string>
     <string name="error_server">የአገልጋይ ስህተት (%1$d)። እባክዎ ቆይተው እንደገና ይሞክሩ።</string>
     <string name="error_unexpected">ያልተጠበቀ ስህተት ተከስቷል</string>
@@ -129,7 +129,7 @@
     <string name="error_enter_name">እባክዎ ስም ያስገቡ</string>
     <string name="auth_connect_to_server">ከአገልጋይዎ ጋር ይገናኙ</string>
     <string name="auth_server_url">የአገልጋይ URL</string>
-    <string name="auth_connect">ይገናኙ</string>
+    <string name="auth_connect">አገናኝ</string>
     <string name="auth_sign_in">ይግቡ</string>
     <string name="auth_check_email">የማረጋገጫ ኮድ ለማግኘት ኢሜይልዎን ይፈትሹ</string>
     <string name="auth_mfa_title">ባለብዙ-ደረጃ ማረጋገጫ</string>
@@ -142,14 +142,14 @@
     <string name="auth_use_passkey">ፓስኪ ይጠቀሙ</string>
     <string name="auth_email_me_a_code">ኮድ በኢሜይል ይላኩልኝ</string>
     <string name="auth_or_enter_authenticator_code">ወይም የአረጋጋጭ ኮድ ያስገቡ</string>
-    <string name="auth_log_in">ይግቡ</string>
+    <string name="auth_log_in">ግባ</string>
     <string name="auth_back">ተመለስ</string>
     <string name="auth_lost_access_recovery">መዳረሻ አጥተዋል? የመልሶ ማግኛ ኮድ ይጠቀሙ</string>
     <string name="auth_create_identity_title">ማንነትዎን ይፍጠሩ</string>
     <string name="auth_create_identity_subtitle">በዚህ አገልጋይ ላይ ለማንነትዎ ስም ይምረጡ</string>
     <string name="auth_privacy_public_description">ሌሎች እንዲያገኙዎት በተጠቃሚ ማውጫ ውስጥ ተዘርዝሯል።</string>
     <string name="auth_privacy_private_description">ከተጠቃሚ ማውጫ ተደብቋል።</string>
-    <string name="auth_link_rules">ደንቦች</string>
+    <string name="auth_link_rules">ህጎች</string>
     <string name="auth_link_terms">ውሎች</string>
     <string name="auth_error_suspended_body">መለያዎ ታግዷል። ይህ ስህተት ነው ብለው ካሰቡ የአገልጋዩን አስተዳዳሪ ያነጋግሩ።</string>
     <string name="auth_error_signup_disabled_title">የመመዝገቢያ አገልግሎት ተሰናክሏል</string>
@@ -161,8 +161,8 @@
     <string name="bootstrap_sign_in_different_server">ወደ ሌላ አገልጋይ ይግቡ</string>
     <string name="common_retry">እንደገና ሞክር</string>
     <string name="common_more_options">ተጨማሪ አማራጮች</string>
-    <string name="common_collapse">አሳጥር</string>
-    <string name="common_expand">አስፋ</string>
+    <string name="common_collapse">ሰብስብ</string>
+    <string name="common_expand">ዘርጋ</string>
     <string name="common_play_video">ቪዲዮ አጫውት</string>
     <string name="place_picker_name">የቦታ ስም</string>
     <string name="place_origin">መነሻ</string>
@@ -310,7 +310,7 @@
     <string name="settings_card_flat">ጠፍጣፋ</string>
     <string name="settings_card_raised">ከፍ ያለ</string>
     <string name="error_server_https">የአገልጋዩ አድራሻ በhttps:// መጀመር አለበት</string>
-    <string name="device_name_fallback">ተንቀሳቃሽ መሣሪያ</string>
+    <string name="device_name_fallback">ሞባይል መሣሪያ</string>
     <string name="account_error_token_type">ያልተደገፈ የቶከን ዓይነት</string>
     <string name="account_error_caller">ጠሪው አይፈቀድም</string>
 </resources>

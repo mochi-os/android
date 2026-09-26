@@ -13,9 +13,9 @@
     <string name="market_account_seller_step_activate_title">ເປີດໃຊ້ບັນຊີຜູ້ຂາຍ</string>
     <string name="market_account_seller_step_activate_desc">ສ້າງໂປຣໄຟລ໌ຜູ້ຂາຍຂອງທ່ານເພື່ອເລີ່ມລົງລາຍການສິນຄ້າ</string>
     <string name="market_account_seller_step_stripe_desc">ເຊື່ອມຕໍ່ບັນຊີ Stripe ເພື່ອຮັບການຊໍາລະຈາກຜູ້ຊື້</string>
-    <string name="market_account_seller_fees_heading">ຄ່າທໍານຽມ:</string>
+    <string name="market_account_seller_fees_heading">ຄ່າທຳນຽມ:</string>
     <string name="market_account_seller_fees_mochi">Mochi ເອົາ %1$s%% ຂອງແຕ່ລະການຂາຍ.</string>
-    <string name="market_account_seller_fees_stripe">Stripe ຄິດຄ່າດໍາເນີນການຂອງຕົນເອງຕໍ່ການເຮັດທຸລະກໍາ ແລະ ຄ່າທໍານຽມຄົງທີ່ຕໍ່ການຄືນເງິນ. ອັດຕາປັດຈຸບັນສໍາລັບສະກຸນເງິນ ແລະ ພາກພື້ນຂອງທ່ານຖືກສະແດງຢູ່ໃນແຜງຄວບຄຸມ Stripe ຂອງທ່ານ.</string>
+    <string name="market_account_seller_fees_stripe">Stripe ຄິດຄ່າດໍາເນີນການຂອງຕົນເອງຕໍ່ການເຮັດທຸລະກໍາ ແລະ ຄ່າທໍານຽມຄົງທີ່ຕໍ່ການຮຽກເງິນຄືນ. ອັດຕາປັດຈຸບັນສໍາລັບສະກຸນເງິນ ແລະ ພາກພື້ນຂອງທ່ານຖືກສະແດງຢູ່ໃນແຜງຄວບຄຸມ Stripe ຂອງທ່ານ.</string>
     <string name="market_account_seller_connect">ເຊື່ອມຕໍ່ Stripe</string>
     <string name="market_account_seller_step_stripe_title">ເຊື່ອມຕໍ່ Stripe</string>
     <string name="market_account_seller_check_status">ກວດສອບສະຖານະ</string>
@@ -40,9 +40,9 @@
     <string name="market_bid_dialog_instant_win">ຢືນຢັນການຊື້ — ຊຳລະເງິນສຳເລັດ</string>
     <string name="market_bid_dialog_invalid_ceiling">ການປະມູນສູງສຸດຕ້ອງເທົ່າກັບຫຼືສູງກວ່າຈຳນວນການປະມູນຂອງທ່ານ</string>
     <string name="market_bid_dialog_outbid">ການປະມູນຂອງທ່ານໄດ້ຮັບການວາງແຕ່ໄດ້ຮັບການເກີນທັນທີ. ຜູ້ປະມູນຄົນອື່ນມີຈໍານວນສູງສຸດທີ່ສູງກວ່າ. ການປະມູນຂອງເຂົາເຈົ້າຕອນນີ້ແມ່ນ %1$s.</string>
-    <string name="market_bid_dialog_submit">ປະມູນ</string>
+    <string name="market_bid_dialog_submit">ສະເໜີລາຄາ</string>
     <string name="market_bid_dialog_success">ປະມູນແລ້ວ</string>
-    <string name="market_bid_dialog_title">ປະມູນ</string>
+    <string name="market_bid_dialog_title">ສະເໜີລາຄາ</string>
     <string name="market_bid_ended">ການປະມູນສິ້ນສຸດ</string>
     <string name="market_bid_high">ການປະມູນສູງ</string>
     <string name="market_bids_empty">ບໍ່ມີການປະມູນ</string>
@@ -89,7 +89,7 @@
     <string name="market_checkout_listing_not_found">ບໍ່ພົບການລົງປະກາດຂາຍ</string>
     <string name="market_checkout_pay_button">ຊຳລະດ້ວຍ Stripe</string>
     <string name="market_checkout_payment_failed">ບໍ່ສາມາດເລີ່ມການຊຳລະເງິນ — ຜູ້ຂາຍອາດຍັງບໍ່ໄດ້ຕັ້ງຄ່າການຊຳລະເງິນ</string>
-    <string name="market_checkout_processing">ກຳລັງດຳເນີນການ…</string>
+    <string name="market_checkout_processing">ກຳລັງປະມວນຜົນ…</string>
     <string name="market_checkout_secure">ການຊຳລະເງິນທີ່ປອດໄພຜ່ານ Stripe</string>
     <string name="market_checkout_select_option">ເລືອກຕົວເລືອກ</string>
     <string name="market_checkout_shipping">ການສົ່ງ</string>
@@ -181,7 +181,7 @@
     <string name="market_editor_zone_european_union">ສະຫະພາບເອີຣົບ</string>
     <string name="market_editor_zone_region">ພາກພື້ນ</string>
     <string name="market_editor_zone_worldwide">ທົ່ວໂລກ</string>
-    <string name="market_empty_title">ບໍ່ມີຜົນ</string>
+    <string name="market_empty_title">ບໍ່ມີຜົນການຊອກຫາ</string>
     <string name="market_fee_preview_item">ລາຍການ</string>
     <string name="market_fee_preview_payout">ການຈ່າຍເງິນຂອງທ່ານ</string>
     <string name="market_filter_all">ທັງໝົດ</string>
@@ -234,7 +234,7 @@
     <string name="market_listing_detail_save">ບັນທຶກ</string>
     <string name="market_listing_detail_seller_heading">ຜູ້ຂາຍ</string>
     <string name="market_listing_detail_share">ແບ່ງປັນ</string>
-    <string name="market_listing_detail_shipping_heading">ການສົ່ງ</string>
+    <string name="market_listing_detail_shipping_heading">ຕົວເລືອກການສົ່ງ</string>
     <string name="market_listing_detail_subscribe">ສະໝັກສະມາຊິກ</string>
     <string name="market_listing_detail_tags_heading">ແທັກ</string>
     <string name="market_listing_detail_title">ການລົງປະກາດຂາຍ</string>
@@ -392,7 +392,7 @@
     <string name="market_saved_title">ທີ່ບັນທຶກໄວ້</string>
     <string name="market_search_clear">ລ້າງການຄົ້ນຫາ</string>
     <string name="market_search_placeholder">ຄົ້ນຫາໃນຕະຫຼາດ</string>
-    <string name="market_section_categories">ເບິ່ງໝວດໝູ່</string>
+    <string name="market_section_categories">ເຂົ້າເບິ່ງໝວດໝູ່</string>
     <string name="market_section_listings">ການລົງປະກາດຂາຍຫຼ້າສຸດ</string>
     <string name="market_section_recent">ເບິ່ງລ່າສຸດ</string>
     <string name="market_ship_dialog_cancel">ຍົກເລີກ</string>
@@ -563,7 +563,7 @@
     <string name="market_listing_unsave">ລຶບອອກຈາກລາຍການທີ່ບັນທຶກໄວ້</string>
     <string name="market_listings_delete_failed">ລຶບລາຍການບໍ່ສຳເລັດ</string>
     <string name="market_listings_delete_message">ການນີ້ຈະລຶບແບບຮ່າງອອກຈາກບັນຊີຂອງທ່ານຢ່າງຖາວອນ.</string>
-    <string name="market_listings_delete_title">ລຶບລາຍການບໍ?</string>
+    <string name="market_listings_delete_title">ລຶບລາຍການຂາຍບໍ?</string>
     <string name="market_listings_empty_subtitle">ແຕະ ລາຍການໃໝ່ ເພື່ອສ້າງສິນຄ້າທຳອິດຂອງທ່ານ.</string>
     <string name="market_listings_load_failed">ໂຫຼດລາຍການຂອງທ່ານບໍ່ສຳເລັດ</string>
     <string name="market_listings_search_placeholder">ຄົ້ນຫາລາຍການຂອງທ່ານ</string>
@@ -581,8 +581,8 @@
     <string name="market_profile_rating_breakdown">ລາຍລະອຽດການຈັດອັນດັບ</string>
     <string name="market_profile_sales_count">%1$d ການຂາຍ</string>
     <string name="market_profile_stars_value">%1$d ດາວ</string>
-    <string name="market_purchase_dispute_chargeback">ການຄືນເງິນ %1$s</string>
-    <string name="market_purchase_dispute_chargeback_body">ທະນາຄານຂອງທ່ານໄດ້ຍື່ນຄຳຮ້ອງຄືນເງິນສຳລັບການສັ່ງຊື້ນີ້. Stripe ກຳລັງຈັດການຂໍ້ຂັດແຍ່ງກັບຜູ້ຂາຍ; ຜົນຮັບຈະປາກົດຢູ່ນີ້ເມື່ອມີການຕັດສິນ.</string>
+    <string name="market_purchase_dispute_chargeback">ການຮຽກເງິນຄືນ %1$s</string>
+    <string name="market_purchase_dispute_chargeback_body">ທະນາຄານຂອງທ່ານໄດ້ຍື່ນການຮຽກເງິນຄືນສຳລັບການສັ່ງຊື້ນີ້. Stripe ກຳລັງຈັດການຂໍ້ຂັດແຍ່ງກັບຜູ້ຂາຍ; ຜົນຮັບຈະປາກົດຢູ່ນີ້ເມື່ອມີການຕັດສິນ.</string>
     <string name="market_purchase_dispute_response">ການຕອບກັບຂອງຜູ້ຂາຍ</string>
     <string name="market_purchase_download_many">ດາວໂຫຼດໄຟລ໌ %1$d ໄຟລ໌ຂອງທ່ານຢູ່ດ້ານລຸ່ມ.</string>
     <string name="market_purchase_download_one">ດາວໂຫຼດໄຟລ໌ຂອງທ່ານຢູ່ດ້ານລຸ່ມ.</string>
@@ -610,7 +610,7 @@
     <string name="market_sale_carrier_custom_label">ຊື່ຜູ້ຂົນສົ່ງ</string>
     <string name="market_sale_dispute_evidence_due">ຫຼັກຖານຄົບກຳນົດ %1$s</string>
     <string name="market_sale_dispute_state_responded">ກຳລັງລໍຖ້າການຕັດສິນ</string>
-    <string name="market_sale_dispute_stripe_reason">ເຫດຜົນການຄືນເງິນຂອງ Stripe: %1$s</string>
+    <string name="market_sale_dispute_stripe_reason">ເຫດຜົນການຮຽກເງິນຄືນຂອງ Stripe: %1$s</string>
     <string name="market_sale_fee_gross">ຈຳນວນລວມ</string>
     <string name="market_sale_fee_mochi">ຄ່າທຳນຽມ Mochi</string>
     <string name="market_sale_fee_payout">ການຈ່າຍສຸດທິ</string>
@@ -629,7 +629,7 @@
     <string name="market_saved_empty_subtitle">ແຕະໄອຄອນບຸກມາກໃນລາຍການໃດກໍໄດ້ເພື່ອບັນທຶກໄວ້ສຳລັບພາຍຫຼັງ.</string>
     <string name="market_saved_empty_title">ບໍ່ມີລາຍການທີ່ບັນທຶກໄວ້</string>
     <string name="market_status_past_due">ເກີນກຳນົດ</string>
-    <string name="market_stripe_onboarding_action">ສືບຕໍ່ການຕັ້ງຄ່າ</string>
+    <string name="market_stripe_onboarding_action">ຕັ້ງຄ່າຕໍ່</string>
     <string name="market_stripe_onboarding_body">ສຳເລັດການຕັ້ງຄ່າ Stripe ຂອງທ່ານກ່ອນທີ່ທ່ານຈະສາມາດຮັບການຈ່າຍເງິນໄດ້.</string>
     <string name="market_stripe_onboarding_failed">ບໍ່ສາມາດເປີດ Stripe ໄດ້</string>
     <string name="market_stripe_onboarding_opening">ກຳລັງເປີດ Stripe…</string>
@@ -659,11 +659,11 @@
     <string name="market_account_seller_card_view">ເບິ່ງການຕັ້ງຄ່າຜູ້ຂາຍ</string>
     <string name="market_account_vat_label">VAT / ເລກປະຈຳຕົວຜູ້ເສຍພາສີ</string>
     <string name="market_seller_activate_action">ເປີດໃຊ້ບັນຊີຜູ້ຂາຍ</string>
-    <string name="market_seller_activating">ກຳລັງເປີດໃຊ້...</string>
+    <string name="market_seller_activating">ກຳລັງເປີດໃຊ້ງານ…</string>
     <string name="market_seller_become_heading">ກາຍເປັນຜູ້ຂາຍ</string>
     <string name="market_seller_become_title">ກາຍເປັນຜູ້ຂາຍ</string>
     <string name="market_seller_check_status">ກວດສອບສະຖານະ</string>
-    <string name="market_seller_checking">ກຳລັງກວດສອບ...</string>
+    <string name="market_seller_checking">ກຳລັງກວດສອບ…</string>
     <string name="market_seller_connect_stripe">ເຊື່ອມຕໍ່ Stripe</string>
     <string name="market_seller_connecting">ກຳລັງໂຫຼດ...</string>
     <string name="market_seller_fee_loading">ກຳລັງໂຫຼດລາຍລະອຽດຄ່າທຳນຽມ...</string>

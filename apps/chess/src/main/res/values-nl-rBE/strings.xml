@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">Accepteren</string>
     <string name="chess_draw_decline">Weigeren</string>
     <string name="chess_status_checkmate_you_win">Schaakmat — u wint!</string>
-    <string name="chess_status_stalemate">Pat — gelijkspel</string>
+    <string name="chess_status_stalemate">Pat — remise</string>
     <string name="chess_status_draw">Remise</string>
     <string name="chess_status_check_your_move">Schaak — uw zet</string>
     <string name="chess_status_your_move">Uw zet</string>

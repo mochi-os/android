@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">Godta</string>
     <string name="chess_draw_decline">Avslå</string>
     <string name="chess_status_checkmate_you_win">Sjakkmatt — du vinner!</string>
-    <string name="chess_status_stalemate">Patt – uavgjort</string>
+    <string name="chess_status_stalemate">Patt — remis</string>
     <string name="chess_status_draw">Remis</string>
     <string name="chess_status_check_your_move">Sjakk — din tur</string>
     <string name="chess_status_your_move">Ditt trekk</string>
@@ -60,7 +60,7 @@
     <string name="chess_empty_subtitle">Start ditt første parti for å spille sjakk med en venn.</string>
     <string name="chess_empty_start_button">Start ditt første parti</string>
     <string name="chess_detail_unavailable">Parti utilgjengelig</string>
-    <string name="chess_delete_title">Slette parti?</string>
+    <string name="chess_delete_title">Slette spillet?</string>
     <string name="chess_delete_message">Dette fjerner partiet fra listen din.</string>
     <string name="chess_ws_connecting">Kobler til…</string>
     <string name="chess_ws_disconnected">Frakoblet</string>

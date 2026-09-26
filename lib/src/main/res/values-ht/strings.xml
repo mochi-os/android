@@ -56,7 +56,7 @@
     <string name="notifications_title">Notifikasyon</string>
     <string name="notifications_empty">Pa gen notifikasyon</string>
     <string name="notifications_empty_unread">Ou wè tout bagay deja</string>
-    <string name="notifications_tab_unread">Poko li</string>
+    <string name="notifications_tab_unread">Pa li</string>
     <string name="notifications_tab_unread_count">Poko li (%1$d)</string>
     <string name="notifications_tab_all">Tout</string>
     <string name="notifications_mark_all_read">Make tout kòm li</string>
@@ -127,7 +127,7 @@
     <string name="game_chat_move_played">%1$s jwe %2$s</string>
 
     <string name="error_network">Pa ka konekte. Verifye koneksyon entènèt ou epi eseye ankò.</string>
-    <string name="error_authentication_required">Otantifikasyon obligatwa</string>
+    <string name="error_authentication_required">Bezwen otantifikasyon</string>
     <string name="error_not_found">Pa jwenn</string>
     <string name="error_server">Erè sèvè (%1$d). Tanpri eseye ankò pita.</string>
     <string name="error_unexpected">Yon erè inatandi te rive</string>
@@ -165,7 +165,7 @@
     <string name="bootstrap_sign_in_different_server">Konekte ak yon lòt sèvè</string>
     <string name="common_retry">Eseye ankò</string>
     <string name="common_more_options">Plis opsyon</string>
-    <string name="common_collapse">Ratresi</string>
+    <string name="common_collapse">Pliye</string>
     <string name="common_expand">Elaji</string>
     <string name="common_play_video">Jwe videyo</string>
     <string name="place_picker_name">Non kote a</string>
@@ -211,7 +211,7 @@
     <string name="about_up_to_date">Ajou</string>
     <string name="about_check_downloading">Vèsyon %1$s disponib, l ap telechaje…</string>
     <string name="about_check_network_error">Pa t kapab jwenn sèvè mizajou a</string>
-    <string name="about_check_download_failed">Telechajman echwe</string>
+    <string name="about_check_download_failed">Telechajman an echwe</string>
     <string name="notifications_clear_all_title">Efase tout notifikasyon?</string>
     <string name="notifications_clear_all_message">Sa pral retire chak notifikasyon. Yo pa ka rekipere.</string>
     <string name="settings_value_auto">Otomatik</string>
@@ -246,7 +246,7 @@
     <string name="reactivation_reactivate">Reaktive kont mwen an</string>
     <string name="reactivation_sign_out">Kontinye fèmen an epi dekonekte</string>
     <string name="common_play">Jwe</string>
-    <string name="common_pause">Kanpe</string>
+    <string name="common_pause">Pòz</string>
     <string name="common_opening_file">Ap ouvri fichye…</string>
     <string name="common_no_app_for_file">Pa gen okenn app ki ka ouvri fichye sa a</string>
     <string name="common_file_open_failed">Nou pa t ka ouvri fichye a</string>

@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">Ni fydd %1$s yn rheoli llwybrau ar y parth hwn mwyach.</string>
     <string name="domain_delegation_delete_title">Dileu dirprwyaeth?</string>
     <string name="domain_delegation_path">Llwybr</string>
-    <string name="domain_delegation_user">ID defnyddiwr</string>
+    <string name="domain_delegation_user">Defnyddiwr</string>
     <string name="domain_delegations">Dirprwyaethau</string>
     <string name="domain_delegations_empty">Dim dirprwyaethau wedi\'u ffurfweddu.</string>
     <string name="domain_delete">Dileu parth</string>

@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">सदस्यता रद्द करीं</string>
     <string name="forums_list_unsubscribe_title">सदस्यता रद्द करीं</string>
     <string name="forums_create_title">फोरम बनाईं</string>
-    <string name="forums_create_name">नाम</string>
+    <string name="forums_create_name">फोरम के नाम</string>
     <string name="forums_create_privacy">गोपनीयता</string>
     <string name="forums_create_private">निजी</string>
     <string name="forums_create_public">सार्वजनिक</string>
-    <string name="forums_create_action">बनाईं</string>
+    <string name="forums_create_action">फोरम बनाईं</string>
     <string name="forums_find_title">फोरम खोजीं</string>
     <string name="forums_find_recommended">सिफारिश कइल</string>
     <string name="forums_find_subscribe">सदस्यता लीं</string>
@@ -125,13 +125,13 @@
     <string name="forums_post_body_field">मूल पाठ</string>
     <string name="forums_post_edit_body_field">मूल पाठ</string>
     <string name="forums_comment_edit_body_field">मूल पाठ</string>
-    <string name="forums_auth_login_failed">लॉगिन फेल हो गइल</string>
+    <string name="forums_auth_login_failed">लॉगिन विफल भइल</string>
     <string name="forums_auth_create_identity_failed">पहचान बनावे में फेल</string>
     <string name="forums_auth_mfa_unsupported">मोबाइल ऐप में MFA अबहीं ना समर्थित बा</string>
     <string name="forums_auth_enter_code_sent">%1$s पर भेजल कोड डालीं</string>
     <string name="forums_auth_create_identity">आपन पहचान बनाईं</string>
     <string name="forums_post_delete_message">का रउआ निश्चित बानी कि ई पोस्ट के मिटावे के बा? ई वापस ना आ सकी।</string>
-    <string name="forums_tag_clear">फिल्टर हटाईं</string>
+    <string name="forums_tag_clear">फिल्टर साफ करीं</string>
     <string name="forums_post_tag_add">टैग जोड़ीं</string>
     <string name="forums_access_add">पहुँच नियम जोड़ीं</string>
     <string name="forums_ai_account">AI खाता</string>
@@ -163,7 +163,7 @@
     <string name="forums_banner_placeholder">ए फोरम में रउआ के स्वागत बा…</string>
     <string name="forums_ai_mode_label">मोड: %1$s</string>
     <string name="forums_ai_mode_heading">AI मोड</string>
-    <string name="forums_ai_mode_off">बंद</string>
+    <string name="forums_ai_mode_off">अक्षम</string>
     <string name="forums_ai_prompt_tag">टैगिंग प्रॉम्प्ट</string>
     <string name="forums_ai_prompt_score">स्कोरिंग प्रॉम्प्ट</string>
     <string name="forums_ai_post_prompt_label">पोस्ट टैग खातिर प्रॉम्प्ट</string>
@@ -213,8 +213,8 @@
     <string name="forums_markdown_supported">Markdown समर्थित</string>
     <string name="forums_attachment_file">फाइल</string>
     <string name="forums_attachment_remove">हटाईं</string>
-    <string name="forums_attachment_move_up">ऊपर करीं</string>
-    <string name="forums_attachment_move_down">नीचे करीं</string>
+    <string name="forums_attachment_move_up">ऊपर ले जाईं</string>
+    <string name="forums_attachment_move_down">नीचे ले जाईं</string>
     <string name="forums_post_comments">टिप्पणी</string>
     <string name="forums_all_forums">सब फोरम</string>
     <string name="forums_create_allow_search">केहू के फोरम खोजे के अनुमति दीं</string>
@@ -222,7 +222,7 @@
     <string name="forums_tab_moderation">मॉडरेशन</string>
     <string name="forums_access_level_view_full">खाली देखीं</string>
     <string name="forums_access_level_none_full">पहुँच नइखे</string>
-    <string name="forums_access_subject_anyone">केहू</string>
+    <string name="forums_access_subject_anyone">केहू भी</string>
     <string name="forums_access_subject_authenticated">प्रमाणित प्रयोगकर्ता</string>
     <string name="forums_access_tab_other">दोसर</string>
     <string name="forums_access_authenticated_desc">जे केहू लॉग इन बा</string>
@@ -256,7 +256,7 @@
     <string name="forums_access_select_group">एगो समूह चुनीं</string>
     <string name="forums_access_select_rule">एगो नियम चुनीं</string>
     <string name="forums_ai_actions_label">पोस्ट पर AI कार्रवाई</string>
-    <string name="forums_ai_prompt_custom">कस्टम</string>
+    <string name="forums_ai_prompt_custom">अनुकूलित</string>
     <string name="forums_ai_prompt_score_label">स्कोर प्रॉम्प्ट</string>
     <string name="forums_ai_prompt_tag_label">टैग प्रॉम्प्ट</string>
     <string name="forums_ai_prompt_variables">चर: %1$s</string>
@@ -277,8 +277,8 @@
     <string name="forums_moderation_restriction_by">%1$s के द्वारा</string>
     <string name="forums_moderation_restriction_remove_message">ओकरा तुरंत फोरम के पूरा पहुँच वापस मिल जाई।</string>
     <string name="forums_moderation_restriction_remove_title">%1$s पर से प्रतिबंध हटाईं?</string>
-    <string name="forums_moderation_restriction_state_muted">मौन</string>
-    <string name="forums_moderation_restriction_state_shadowban">छाया प्रतिबंधित</string>
+    <string name="forums_moderation_restriction_state_muted">म्यूट कइल गइल</string>
+    <string name="forums_moderation_restriction_state_shadowban">छिपके प्रतिबंधित</string>
     <string name="forums_moderation_restrictions_empty_subtitle">कवनो उपयोगकर्ता के मौन भा प्रतिबंधित नइखे कइल गइल</string>
     <string name="forums_moderation_section_premoderation_description">सामग्री देखाए से पहिले मंजूरी जरूरी करीं</string>
     <string name="forums_moderation_section_ratelimiting_description">उपयोगकर्ता केतना बेर पोस्ट कर सकेलें ओकरा सीमित क के स्पैम रोकीं</string>
@@ -287,7 +287,7 @@
     <string name="forums_moderation_unit_replies">जवाब</string>
     <string name="forums_moderation_unit_seconds">सेकंड</string>
     <string name="forums_settings_ai_updated">AI सेटिंग अपडेट भइल</string>
-    <string name="forums_settings_forum_renamed">फोरम के नाम बदलल</string>
+    <string name="forums_settings_forum_renamed">फोरम के नाम बदल गइल</string>
     <string name="forums_settings_name_clear_cd">नाम साफ करीं</string>
     <string name="forums_settings_unsubscribe_section">फोरम से सदस्यता छोड़ीं</string>
     <string name="forums_share_link_title">फोरम लिंक</string>

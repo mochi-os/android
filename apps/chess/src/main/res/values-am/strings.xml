@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">ተቀበል</string>
     <string name="chess_draw_decline">አትቀበል</string>
     <string name="chess_status_checkmate_you_win">ቼክሜት — አሸንፈሃል!</string>
-    <string name="chess_status_stalemate">የማይነቃነቅ — አቻ</string>
+    <string name="chess_status_stalemate">ስቴልሜት — አቻ</string>
     <string name="chess_status_draw">አቻ</string>
     <string name="chess_status_check_your_move">ቼክ — የአንተ ተራ</string>
     <string name="chess_status_your_move">የእርስዎ እንቅስቃሴ</string>

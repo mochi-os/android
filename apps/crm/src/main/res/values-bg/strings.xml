@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Икона</string>
     <string name="crm_option_icon_placeholder">напр. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Отпиши се</string>
-    <string name="crm_settings_delete_crm">Изтрий проекта</string>
+    <string name="crm_settings_delete_crm">Изтрий CRM</string>
     <string name="crm_settings_delete_confirm_title">Изтрий CRM</string>
     <string name="crm_settings_unsubscribe_title">Отпиши се</string>
     <string name="crm_settings_unsubscribe_message">Сигурни ли сте, че искате да се отпишете от този CRM?</string>
@@ -140,8 +140,8 @@
     <string name="crm_sort_direction_asc">Възходящ</string>
     <string name="crm_sort_direction_desc">Низходящ</string>
     <string name="crm_create_object_parent_none">(няма)</string>
-    <string name="crm_views_move_up">Премести нагоре</string>
-    <string name="crm_views_move_down">Премести надолу</string>
+    <string name="crm_views_move_up">Преместване нагоре</string>
+    <string name="crm_views_move_down">Преместване надолу</string>
     <string name="crm_views_filter">Филтър (запазен, все още не е приложен)</string>
     <string name="crm_people_empty">Все още няма хора с достъп</string>
     <string name="crm_settings_delete_confirm_message">Сигурни ли сте, че искате да изтриете този CRM? Всички обекти, коментари и настройки ще бъдат премахнати завинаги.</string>
@@ -155,11 +155,11 @@
     <string name="crm_links_type">Тип на връзката</string>
     <string name="crm_links_type_relates">Свързано с</string>
     <string name="crm_links_search_placeholder">Търсене на обекти</string>
-    <string name="crm_links_remove">Премахни връзката</string>
+    <string name="crm_links_remove">Премахване на връзката</string>
     <string name="crm_comment_replying_to">Отговор на %1$s</string>
-    <string name="crm_comment_clear_reply">Изчисти отговора</string>
+    <string name="crm_comment_clear_reply">Изчистване на отговора</string>
     <string name="crm_comment_placeholder">Добавете коментар</string>
-    <string name="crm_comment_remove_attachment">Премахни прикачения файл</string>
+    <string name="crm_comment_remove_attachment">Премахване на прикачения файл</string>
     <string name="crm_property_pick_date">Избор на дата</string>
     <string name="crm_property_ok">ОК</string>
     <string name="crm_property_add_item">Добави елемент</string>
@@ -208,7 +208,7 @@
     <string name="crm_field_show_on_card">Показване на картата</string>
     <string name="crm_field_multi">Множествен избор</string>
     <string name="crm_field_position">Позиция на показване</string>
-    <string name="crm_field_position_header">Заглавие</string>
+    <string name="crm_field_position_header">Заглавна част</string>
     <string name="crm_field_position_body">Съдържание</string>
     <string name="crm_field_validation">Валидиране</string>
     <string name="crm_field_min_length">Минимална дължина</string>
@@ -225,8 +225,8 @@
     <string name="crm_views_rows_field">Поле за редове (пътеки)</string>
     <string name="crm_views_border_field">Поле за цвят на границата</string>
     <string name="crm_views_sort_by">Сортиране по</string>
-    <string name="crm_views_direction_asc">Възходящо</string>
-    <string name="crm_views_direction_desc">Низходящо</string>
+    <string name="crm_views_direction_asc">Възходящ</string>
+    <string name="crm_views_direction_desc">Низходящ</string>
     <string name="crm_views_filter_classes">Филтриране по класове</string>
     <string name="crm_views_by">по %1$s</string>
     <string name="crm_views_sorted">сортирано %1$s</string>
@@ -275,7 +275,7 @@
     <string name="crm_access_role_none">Няма достъп</string>
     <string name="crm_all_crms">Всички CRM</string>
     <string name="crm_settings_unsubscribe_section">Отписване от CRM</string>
-    <string name="crm_settings_updated">CRM е актуализиран</string>
+    <string name="crm_settings_updated">CRM е обновен</string>
     <string name="crm_create_import_backup">Импортиране от резервно копие (по избор)</string>
     <string name="crm_export">Експортиране на данни</string>
     <string name="crm_exporting">Подготвяне на експорта…</string>

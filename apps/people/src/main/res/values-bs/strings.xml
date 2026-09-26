@@ -32,7 +32,7 @@
     <string name="people_group_name">Naziv grupe</string>
     <string name="people_group_description">Opis</string>
     <string name="people_group_description_optional">Opcionalni opis</string>
-    <string name="people_group_name_required">Ime je obavezno</string>
+    <string name="people_group_name_required">Naziv je obavezan</string>
     <string name="people_group_actions">Akcije grupe</string>
     <string name="people_group_members">Članovi</string>
     <string name="people_group_members_count">Broj članova</string>
@@ -51,7 +51,7 @@
     <string name="people_profile_save_failed">Spremanje nije uspjelo</string>
     <string name="people_profile_name">Ime</string>
     <string name="people_profile_name_saved">Ime sačuvano</string>
-    <string name="people_profile_edit_name">Uredi naziv</string>
+    <string name="people_profile_edit_name">Uredi ime</string>
     <string name="people_profile_identity">Identitet</string>
     <string name="people_profile_accent">Akcent</string>
     <string name="people_profile_directory_listing">Dozvoli drugima da vas pronađu u direktoriju</string>
@@ -125,7 +125,7 @@
     <string name="people_contact_section_address">Adresa</string>
     <string name="people_contact_section_detail">Detalji</string>
     <string name="people_contact_name">Ime</string>
-    <string name="people_contact_email">Email</string>
+    <string name="people_contact_email">E-pošta</string>
     <string name="people_contact_city">Grad</string>
     <string name="people_contact_region">Regija</string>
     <string name="people_contact_postcode">Poštanski broj</string>

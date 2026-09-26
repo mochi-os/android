@@ -34,7 +34,7 @@
     <string name="crm_option_icon">아이콘</string>
     <string name="crm_option_icon_placeholder">예: Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">구독 취소</string>
-    <string name="crm_settings_delete_crm">프로젝트 삭제</string>
+    <string name="crm_settings_delete_crm">CRM 삭제</string>
     <string name="crm_settings_delete_confirm_title">CRM 삭제</string>
     <string name="crm_settings_unsubscribe_title">구독 취소</string>
     <string name="crm_settings_unsubscribe_message">이 CRM 구독을 취소할까요?</string>
@@ -183,7 +183,7 @@
     <string name="crm_attachment_delete_confirm_message">이 첨부 파일은 영구적으로 삭제됩니다.</string>
     <string name="crm_tree_move">이동</string>
     <string name="crm_tree_move_to_parent">상위 항목으로 이동</string>
-    <string name="crm_tree_root_level">(루트 레벨)</string>
+    <string name="crm_tree_root_level">(최상위)</string>
     <string name="crm_tree_empty">개체 없음</string>
     <string name="crm_board_no_columns">이 보기에 구성된 열이 없습니다</string>
     <string name="crm_board_no_options">열 필드에 구성된 옵션이 없습니다</string>
@@ -275,7 +275,7 @@
     <string name="crm_access_role_none">접근 권한 없음</string>
     <string name="crm_all_crms">모든 CRM</string>
     <string name="crm_settings_unsubscribe_section">CRM 구독 취소</string>
-    <string name="crm_settings_updated">CRM이 업데이트됨</string>
+    <string name="crm_settings_updated">CRM이 업데이트되었습니다</string>
     <string name="crm_create_import_backup">백업에서 가져오기 (선택 사항)</string>
     <string name="crm_export">데이터 내보내기</string>
     <string name="crm_exporting">내보내기 준비 중…</string>

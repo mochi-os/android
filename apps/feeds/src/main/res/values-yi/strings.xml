@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi־פֿיד</string>
     <string name="feeds_source_type_feed_memories">זכרונות</string>
-    <string name="feeds_remove_source">אַראָפּנעמען מקור</string>
+    <string name="feeds_remove_source">אַראָפּנעמען מקור?</string>
     <string name="feeds_suggested_credibility_accept">אָננעמען</string>
     <string name="feeds_rss_url_copied">RSS URL קאָפּירט צו קלעמברעט</string>
     <string name="feeds_logout">אַרויסקומען</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">קײן מאָל נישט געהאָלט</string>
     <string name="feeds_source_poll">פֿרעגן</string>
-    <string name="feeds_source_transform">פֿאַרװאַנדלען</string>
+    <string name="feeds_source_transform">AI טראַנספֿאָרמירן</string>
     <string name="feeds_remove_source_confirm">אַראָפּנעמען \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">אױך אױסמעקן אַרײַנגעבראַכטע פּאָסטן</string>
     <string name="feeds_suggested_credibility_title">פֿאָרגעלײגטע גלױבװירדיקײט</string>
@@ -154,7 +154,7 @@
     <string name="feeds_access_select_group">קלײַב גרופּע</string>
     <string name="feeds_access_selected">אויסגעקליבן: %1$s</string>
     <string name="feeds_access_subject_anyone">ווער עס איז</string>
-    <string name="feeds_access_subject_authenticated">אַטענטיפֿיצירטע באַניצער</string>
+    <string name="feeds_access_subject_authenticated">אױטענטיפֿיצירטע באַניצער</string>
     <string name="feeds_markdown_supported">Markdown געשטיצט</string>
     <string name="feeds_permission_deny">אָפּזאָגן</string>
     <string name="feeds_rss_feed">RSS פֿיד</string>
@@ -172,7 +172,7 @@
     <string name="feeds_allow_search">דערלויבן עמעצן צו זוכן פֿאַר פֿיד</string>
     <string name="feeds_post_content">פּאָסט אינהאַלט</string>
     <string name="feeds_enable_memories">אַקטיווירן זכרונות</string>
-    <string name="feeds_permission_request_title">בקשה פֿאַר דערלויבעניש</string>
+    <string name="feeds_permission_request_title">דערלויבעניש פֿאָדערונג</string>
     <string name="feeds_unsubscribe_confirm">זיך אָפּשרײַבן פֿונעם פֿיד?</string>
     <string name="feeds_settings_title">%1$s איינשטעלונגען</string>
     <string name="feeds_source_transform_help">לאָזט ליידיק צו דעאַקטיווירן.</string>

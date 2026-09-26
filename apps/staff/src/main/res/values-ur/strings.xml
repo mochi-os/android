@@ -170,7 +170,7 @@
     <string name="staff_config_field_stripe_oauth_client">OAuth کلائنٹ ID</string>
     <string name="staff_config_field_stripe_publishable">اشاعت پذیر کلید</string>
     <string name="staff_config_field_stripe_secret">خفیہ کلید</string>
-    <string name="staff_config_group_moderation">moderation</string>
+    <string name="staff_config_group_moderation">نگرانی</string>
     <string name="staff_config_group_payments">ادائیگیاں</string>
     <string name="staff_config_group_reviews">ریویوز</string>
     <string name="staff_config_group_stripe">Stripe</string>
@@ -187,7 +187,7 @@
     <string name="staff_dashboard_col_date">تاریخ</string>
     <string name="staff_dashboard_col_detail">تفصیل</string>
     <string name="staff_dashboard_col_listing">لسٹنگ</string>
-    <string name="staff_dashboard_col_moderation">moderation</string>
+    <string name="staff_dashboard_col_moderation">نگرانی</string>
     <string name="staff_dashboard_col_name">نام</string>
     <string name="staff_dashboard_col_object">آبجیکٹ</string>
     <string name="staff_dashboard_col_reason">وجہ</string>
@@ -216,7 +216,7 @@
     <string name="staff_dashboard_system">سسٹم</string>
     <string name="staff_dashboard_tab_audit">آڈٹ</string>
     <string name="staff_dashboard_tab_listings">لسٹنگز</string>
-    <string name="staff_dashboard_tab_moderation">moderation</string>
+    <string name="staff_dashboard_tab_moderation">نگرانی</string>
     <string name="staff_dashboard_tab_orders">آرڈرز</string>
     <string name="staff_dashboard_tab_signups">سائن اپس</string>
     <string name="staff_dashboard_yes">ہاں</string>
@@ -284,9 +284,9 @@
     <string name="staff_filter_chip_remove">فلٹر ہٹائیں</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">نگرانی</string>
-    <string name="staff_filter_label_query">تلاش</string>
-    <string name="staff_filter_label_seller">فروخت کنندہ</string>
-    <string name="staff_filter_label_status">حالت</string>
+    <string name="staff_filter_label_query">تلاش کریں</string>
+    <string name="staff_filter_label_seller">بیچنے والا</string>
+    <string name="staff_filter_label_status">اسٹیٹس</string>
     <string name="staff_filter_label_type">قسم</string>
     <string name="staff_listings_action_approve_title">فہرست کی منظوری</string>
     <string name="staff_listings_action_reject_title">لسٹنگ مسترد کریں</string>
@@ -297,7 +297,7 @@
     <string name="staff_listings_approved_toast">لسٹنگ منظور</string>
     <string name="staff_listings_cancel">منسوخ کریں</string>
     <string name="staff_listings_empty">کوئی لسٹنگز نہیں</string>
-    <string name="staff_listings_filter_moderation_label">moderation</string>
+    <string name="staff_listings_filter_moderation_label">نگرانی</string>
     <string name="staff_listings_filter_status_label">اسٹیٹس</string>
     <string name="staff_listings_moderation_auto_approved">خودکار منظور</string>
     <string name="staff_listings_moderation_hold">ہولڈ</string>

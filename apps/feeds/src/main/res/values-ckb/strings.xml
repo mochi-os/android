@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">فیدی Mochi</string>
     <string name="feeds_source_type_feed_memories">یادەوەرییەکان</string>
-    <string name="feeds_remove_source">لابردنی سەرچاوە</string>
+    <string name="feeds_remove_source">سەرچاوە لاببەیت؟</string>
     <string name="feeds_suggested_credibility_accept">وەرگرتن</string>
     <string name="feeds_rss_url_copied">URLی RSS لەبەر کرایەوە بۆ کلیپ بۆرد</string>
     <string name="feeds_logout">دەرچوون</string>
@@ -119,7 +119,7 @@
     <string name="feeds_clipboard_label_rss">URLی RSS</string>
     <string name="feeds_source_never_fetched">هەرگیز نەهێنراوە</string>
     <string name="feeds_source_poll">ڕاپرسی</string>
-    <string name="feeds_source_transform">گۆڕانکاری</string>
+    <string name="feeds_source_transform">گۆڕانی AI</string>
     <string name="feeds_remove_source_confirm">لابردنی \"%1$s\"؟</string>
     <string name="feeds_remove_also_delete_posts">هەروەها بابەتە هاوردەکراوەکانیش بسڕەوە</string>
     <string name="feeds_suggested_credibility_title">متمانەی پێشنیارکراو</string>
@@ -155,7 +155,7 @@
     <string name="feeds_access_segment_other">هیتر</string>
     <string name="feeds_access_select_group">گرووپێک هەڵبژێرە</string>
     <string name="feeds_access_selected">هەڵبژێردراو: %1$s</string>
-    <string name="feeds_access_subject_anyone">هەرکەسێک</string>
+    <string name="feeds_access_subject_anyone">هەر کەسێک</string>
     <string name="feeds_access_subject_authenticated">بەکارهێنەرە پشتڕاستکراوەکان</string>
     <string name="feeds_markdown_supported">Markdown پشتیوانی دەکرێت</string>
     <string name="feeds_permission_deny">ڕەتکردنەوە</string>
@@ -174,7 +174,7 @@
     <string name="feeds_allow_search">ڕێگە بدە بە هەرکەسێک بگەڕێت بۆ فید</string>
     <string name="feeds_post_content">ناوەڕۆکی پۆست</string>
     <string name="feeds_enable_memories">چالاککردنی یادەوەرییەکان</string>
-    <string name="feeds_permission_request_title">داواکاری ڕێگەپێدان</string>
+    <string name="feeds_permission_request_title">داواکاری مۆڵەت</string>
     <string name="feeds_unsubscribe_confirm">بەشداریت لە فیدەکە هەڵبوەشێنیتەوە؟</string>
     <string name="feeds_settings_title">ڕێکخستنەکانی %1$s</string>
     <string name="feeds_source_transform_help">بۆ ناچالاککردن بەتاڵی بهێڵە.</string>
@@ -208,7 +208,7 @@
     <string name="feeds_banner_dismiss">لابردنی بانەر</string>
     <string name="feeds_members_search">فلتەرکردنی ئەندامان</string>
     <string name="feeds_ai_prompt_default">بنەڕەت</string>
-    <string name="feeds_ai_prompt_custom">دڵخواز</string>
+    <string name="feeds_ai_prompt_custom">تایبەت</string>
     <string name="feeds_ai_prompt_variables">گۆڕاوەکان: %1$s</string>
     <string name="feeds_link">بەستەر</string>
     <string name="feeds_share_link_title">بەستەری فید</string>

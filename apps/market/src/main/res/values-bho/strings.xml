@@ -31,7 +31,7 @@
     <string name="market_appeal_dialog_submit">अपील जमा करीं</string>
     <string name="market_appeal_dialog_submitting">भेजल जा रहल बा…</string>
     <string name="market_appeal_dialog_success">अपील जमा कइल गइल</string>
-    <string name="market_appeal_dialog_title">हटावे के अपील</string>
+    <string name="market_appeal_dialog_title">हटावे के खिलाफ अपील</string>
     <string name="market_asset_download">डाउनलोड करीं</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
     <string name="market_back">वापस</string>
@@ -44,14 +44,14 @@
     <string name="market_bid_dialog_submit">बोली लगाईं</string>
     <string name="market_bid_dialog_success">बोली लगावल गइल</string>
     <string name="market_bid_dialog_title">बोली लगाईं</string>
-    <string name="market_bid_ended">नीलामी समाप्त</string>
+    <string name="market_bid_ended">नीलामी खतम भइल</string>
     <string name="market_bid_high">सबसे बढ़िया बोली</string>
     <string name="market_bids_empty">कौनो बोली नइखे</string>
-    <string name="market_bids_ended">नीलामी समाप्त</string>
+    <string name="market_bids_ended">नीलामी खतम भइल</string>
     <string name="market_bids_tab_active">सक्रिय</string>
     <string name="market_bids_tab_all">सब</string>
     <string name="market_bids_tab_lost">हार गइल</string>
-    <string name="market_bids_tab_outbid">बढ़ल बोली</string>
+    <string name="market_bids_tab_outbid">अधिक बोली लागल</string>
     <string name="market_bids_tab_won">जीतल</string>
     <string name="market_bids_title">बोली</string>
     <string name="market_carousel_main">फोटो %1$d / %2$d</string>
@@ -90,7 +90,7 @@
     <string name="market_checkout_listing_not_found">लिस्टिंग नइखे मिलल</string>
     <string name="market_checkout_pay_button">Stripe से भुगतान करीं</string>
     <string name="market_checkout_payment_failed">भुगतान चेकआउट शुरू ना हो सकल — बिक्रेता भुगतान सेटअप पूरा ना कइले होइहें</string>
-    <string name="market_checkout_processing">प्रक्रिया जारी…</string>
+    <string name="market_checkout_processing">प्रोसेस हो रहल बा…</string>
     <string name="market_checkout_secure">Stripe के जरिए सुरक्षित भुगतान</string>
     <string name="market_checkout_select_option">विकल्प चुनीं</string>
     <string name="market_checkout_shipping">शिपिंग</string>
@@ -138,7 +138,7 @@
     <string name="market_editor_description">विवरण</string>
     <string name="market_editor_interval_monthly">मासिक</string>
     <string name="market_editor_interval_yearly">वार्षिक</string>
-    <string name="market_editor_photo_delete">फोटो हटाईं</string>
+    <string name="market_editor_photo_delete">फ़ोटो हटाईं</string>
     <string name="market_editor_photo_uploading">अपलोड हो रहल बा…</string>
     <string name="market_editor_photos_add">फोटो जोड़ीं</string>
     <string name="market_editor_price">दाम</string>
@@ -182,7 +182,7 @@
     <string name="market_editor_zone_european_union">यूरोपीय संघ</string>
     <string name="market_editor_zone_region">क्षेत्र</string>
     <string name="market_editor_zone_worldwide">दुनिया भर में</string>
-    <string name="market_empty_title">कौनो परिणाम नइखे</string>
+    <string name="market_empty_title">कवनो नतीजा नइखे</string>
     <string name="market_fee_preview_item">आइटम</string>
     <string name="market_fee_preview_payout">आपके भुगतान</string>
     <string name="market_filter_all">सब</string>
@@ -234,8 +234,8 @@
     <string name="market_listing_detail_report">लिस्टिंग रिपोर्ट करीं</string>
     <string name="market_listing_detail_save">सहेजीं</string>
     <string name="market_listing_detail_seller_heading">विक्रेता</string>
-    <string name="market_listing_detail_share">विज्ञापन साझा करीं</string>
-    <string name="market_listing_detail_shipping_heading">शिपिंग</string>
+    <string name="market_listing_detail_share">लिस्टिंग साझा करीं</string>
+    <string name="market_listing_detail_shipping_heading">शिपिंग विकल्प सब</string>
     <string name="market_listing_detail_subscribe">सदस्यता लीं</string>
     <string name="market_listing_detail_tags_heading">टैग सब</string>
     <string name="market_listing_detail_title">लिस्टिंग</string>
@@ -510,7 +510,7 @@
     <string name="market_purchases_refunded_partial">−%1$s वापसी कइल गइल</string>
     <string name="market_purchases_won_for">%1$s में जीतल</string>
     <string name="market_refund_dialog_amount_help">पूरा ऑर्डर के पइसा वापस करे खातिर खाली छोड़ीं।</string>
-    <string name="market_refund_dialog_amount_label">रकम</string>
+    <string name="market_refund_dialog_amount_label">राशि</string>
     <string name="market_refund_dialog_prior_kind_full">पूरा</string>
     <string name="market_refund_dialog_prior_kind_partial">आंशिक</string>
     <string name="market_refund_dialog_prior_section_title">पहिले के वापसी</string>
@@ -539,7 +539,7 @@
     <string name="market_sale_order_id_label">ऑर्डर ID</string>
     <string name="market_sale_ordered_label">ऑर्डर कइल</string>
     <string name="market_sale_review_no_response_yet">रउरा एक बेर जवाब दे सकीलें। जवाब सार्वजनिक होला।</string>
-    <string name="market_sale_review_response_submitting">जमा कइल जा रहल बा…</string>
+    <string name="market_sale_review_response_submitting">भेजल जा रहल बा…</string>
     <string name="market_sale_section_fees">शुल्क के विवरण</string>
     <string name="market_sale_ship_submitting">चिन्हित कइल जा रहल बा…</string>
     <string name="market_sale_tracking_url_label">ट्रैकिंग URL (वैकल्पिक)</string>
@@ -665,7 +665,7 @@
     <string name="market_seller_become_heading">बेचेवाला बनीं</string>
     <string name="market_seller_become_title">बेचेवाला बनीं</string>
     <string name="market_seller_check_status">स्थिति देखीं</string>
-    <string name="market_seller_checking">देखल जा रहल बा...</string>
+    <string name="market_seller_checking">जाँच हो रहल बा…</string>
     <string name="market_seller_connect_stripe">Stripe जोड़ीं</string>
     <string name="market_seller_connecting">लोड हो रहल बा...</string>
     <string name="market_seller_fee_loading">शुल्क विवरण लोड हो रहल बा...</string>

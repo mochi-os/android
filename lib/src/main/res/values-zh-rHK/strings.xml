@@ -8,7 +8,7 @@
     <string name="common_saving">正在儲存…</string>
     <string name="common_saved">已儲存</string>
     <string name="common_not_saved">未儲存</string>
-    <string name="auth_name">名稱</string>
+    <string name="auth_name">姓名</string>
     <string name="auth_create">建立</string>
     <string name="common_back">返回</string>
     <string name="common_close">關閉</string>

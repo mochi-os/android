@@ -162,7 +162,7 @@
     <string name="staff_config_field_stripe_oauth_client">ID na abokin ciniki na OAuth</string>
     <string name="staff_config_field_stripe_publishable">Maɓallin da za a iya bugawa</string>
     <string name="staff_config_field_stripe_secret">Maɓallin sirri</string>
-    <string name="staff_config_group_moderation">Moderation</string>
+    <string name="staff_config_group_moderation">Daidaitawa</string>
     <string name="staff_config_group_payments">Biyan kuɗi</string>
     <string name="staff_config_group_reviews">Bitoci</string>
     <string name="staff_config_group_stripe">Stripe</string>
@@ -179,7 +179,7 @@
     <string name="staff_dashboard_col_date">Kwanan wata</string>
     <string name="staff_dashboard_col_detail">Cikakken bayani</string>
     <string name="staff_dashboard_col_listing">Tallace</string>
-    <string name="staff_dashboard_col_moderation">Moderation</string>
+    <string name="staff_dashboard_col_moderation">Daidaitawa</string>
     <string name="staff_dashboard_col_name">Suna</string>
     <string name="staff_dashboard_col_object">Abu</string>
     <string name="staff_dashboard_col_reason">Dalili</string>
@@ -207,7 +207,7 @@
     <string name="staff_dashboard_system">Tsari</string>
     <string name="staff_dashboard_tab_audit">Bincike</string>
     <string name="staff_dashboard_tab_listings">Tallace-tallace</string>
-    <string name="staff_dashboard_tab_moderation">Moderation</string>
+    <string name="staff_dashboard_tab_moderation">Daidaitawa</string>
     <string name="staff_dashboard_tab_orders">Odoji</string>
     <string name="staff_dashboard_tab_signups">Sa hannu</string>
     <string name="staff_dashboard_yes">Ee</string>
@@ -249,8 +249,8 @@
     <string name="staff_disputes_view">Kalla</string>
     <string name="staff_filter_chip_remove">Cire matatar</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
-    <string name="staff_filter_label_moderation">Moderation</string>
-    <string name="staff_filter_label_query">Bincike</string>
+    <string name="staff_filter_label_moderation">Daidaitawa</string>
+    <string name="staff_filter_label_query">Bincika</string>
     <string name="staff_filter_label_seller">Mai sayarwa</string>
     <string name="staff_filter_label_status">Matsayi</string>
     <string name="staff_filter_label_type">Nau\'i</string>
@@ -263,7 +263,7 @@
     <string name="staff_listings_approved_toast">An yarda da listing</string>
     <string name="staff_listings_cancel">Soke</string>
     <string name="staff_listings_empty">Babu listings</string>
-    <string name="staff_listings_filter_moderation_label">Moderation</string>
+    <string name="staff_listings_filter_moderation_label">Daidaitawa</string>
     <string name="staff_listings_filter_status_label">Matsayi</string>
     <string name="staff_listings_moderation_auto_approved">An amince kai tsaye</string>
     <string name="staff_listings_moderation_hold">Riƙe</string>
@@ -412,7 +412,7 @@
     <string name="staff_team_toast_add_failed">An gaza ƙara memba</string>
     <string name="staff_team_toast_removed">An cire memba</string>
     <string name="staff_team_toast_role_updated">An sabunta matsayi</string>
-    <string name="staff_audit_action_auction_cancelled">An soke gwanjo</string>
+    <string name="staff_audit_action_auction_cancelled">An soke gwanjon</string>
     <string name="staff_dashboard_order_fallback">Oda #%1$s</string>
 
     <string name="staff_accounts_action_unsuspend_title">Ɗage dakatarwa</string>

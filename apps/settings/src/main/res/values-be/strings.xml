@@ -3,7 +3,7 @@
 
     <string name="settings_home_title">Налады</string>
     <string name="settings_home_logout">Выйсці</string>
-    <string name="settings_home_account">Акаўнт</string>
+    <string name="settings_home_account">Уліковы запіс</string>
     <string name="settings_home_preferences">Налады</string>
     <string name="settings_home_display">Адлюстраванне</string>
     <string name="settings_home_notification_prefs">Параметры паведамленняў</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">Прыярытэт %1$d · %2$s</string>
     <string name="interests_search_placeholder">Шукаць тэмы для дабаўлення…</string>
     <string name="interests_empty">Пакуль няма цікавасцяў.</string>
-    <string name="interests_summary_regenerate">Перастварыць рэзюмэ</string>
+    <string name="interests_summary_regenerate">Перагенераваць зводку</string>
     <string name="interests_summary_regenerating">Стварэнне…</string>
     <string name="interests_summary_empty">Дадайце некалькі цікавасцяў, каб згенераваць рэзюмэ таго, што вам падабаецца.</string>
     <string name="interests_search_failed">Пошук не атрымаўся. Паспрабуйце яшчэ.</string>
@@ -273,11 +273,11 @@
     <string name="system_users_revoke_all_title">Адклікаць усе сеансы?</string>
     <string name="system_users_revoke_all_message">Усе актыўныя сеансы гэтага карыстальніка будуць выйсці.</string>
     <string name="system_users_pagination_status">Паказана %1$d–%2$d з %3$d карыстальнікаў</string>
-    <string name="account_title">Акаўнт</string>
+    <string name="account_title">Уліковы запіс</string>
     <string name="account_section_identity">Асоба</string>
     <string name="account_identity_identity">Асоба</string>
     <string name="account_identity_username">Імя карыстальніка</string>
-    <string name="account_identity_name">Назва</string>
+    <string name="account_identity_name">Імя</string>
     <string name="account_identity_fingerprint">Адбітак пальца</string>
     <string name="account_identity_directory_toggle">Дазволіць іншым знаходзіць вас у каталозе</string>
     <string name="domain_add">Дадаць дамен</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s больш не будзе кіраваць маршрутамі на гэтым дамене.</string>
     <string name="domain_delegation_delete_title">Выдаліць дэлегаванне?</string>
     <string name="domain_delegation_path">Шлях</string>
-    <string name="domain_delegation_user">ID карыстальніка</string>
+    <string name="domain_delegation_user">Карыстальнік</string>
     <string name="domain_delegations">Дэлегаванні</string>
     <string name="domain_delegations_empty">Дэлегаванні не настроены.</string>
     <string name="domain_delete">Выдаліць дамен</string>
@@ -396,7 +396,7 @@
     <string name="accounts_capability_notify">Апавяшчэнні</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Уваход</string>
-    <string name="accounts_provider_caldav">Сервер календара</string>
+    <string name="accounts_provider_caldav">Сервер календароў</string>
     <string name="accounts_revoke_confirm">Гэта адкліча доступ да календара для %1$s. Уваход праз %2$s застанецца, пакуль вы не адвяжаце яго на старонцы ўваходу.</string>
     <string name="accounts_capability_mcp">MCP</string>
 </resources>

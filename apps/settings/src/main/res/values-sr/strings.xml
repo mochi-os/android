@@ -4,7 +4,7 @@
     <string name="settings_home_title">Подешавања</string>
     <string name="settings_home_logout">Одјави се</string>
     <string name="settings_home_account">Налог</string>
-    <string name="settings_home_preferences">Подешавања</string>
+    <string name="settings_home_preferences">Поставке</string>
     <string name="settings_home_display">Приказ</string>
     <string name="settings_home_notification_prefs">Подешавања обавештења</string>
     <string name="settings_home_accounts">Повезани налози</string>
@@ -60,7 +60,7 @@
     <string name="notifprefs_add_category">Додај категорију</string>
     <string name="notifprefs_new_category">Нова категорија</string>
     <string name="notifprefs_edit_category">Уреди категорију</string>
-    <string name="notifprefs_name_label">Име</string>
+    <string name="notifprefs_name_label">Назив</string>
     <string name="notifprefs_destinations">Одредишта</string>
     <string name="notifprefs_dest_web">Веб прегледач</string>
     <string name="notifprefs_test">Тест</string>
@@ -93,13 +93,13 @@
     <string name="accounts_type_label">Тип</string>
     <string name="accounts_field_email">Е-пошта</string>
     <string name="accounts_field_model">Модел</string>
-    <string name="accounts_field_name">Име</string>
+    <string name="accounts_field_name">Назив</string>
     <string name="accounts_status_pending">На чекању</string>
     <string name="accounts_status_verified">Верификовано</string>
     <string name="accounts_status_connected">Повезано</string>
     <string name="accounts_default_for_ai">Подразумевано за вештачку интелигенцију</string>
     <string name="accounts_test">Тест</string>
-    <string name="accounts_settings">Поставке</string>
+    <string name="accounts_settings">Подешавања</string>
     <string name="accounts_verify">Верификуј</string>
     <string name="accounts_remove">Уклони</string>
     <string name="accounts_remove_title">Уклонити налог?</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">Приоритет %1$d · %2$s</string>
     <string name="interests_search_placeholder">Тражи теме за додавање…</string>
     <string name="interests_empty">Још нема интересовања.</string>
-    <string name="interests_summary_regenerate">Регенериши резиме</string>
+    <string name="interests_summary_regenerate">Регенериши сажетак</string>
     <string name="interests_summary_regenerating">Регенерисање…</string>
     <string name="interests_summary_empty">Додајте нека интересовања да бисте генерисали резиме онога што волите.</string>
     <string name="interests_search_failed">Претрага није успела. Покушајте поново.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s више неће управљати рутама на овом домену.</string>
     <string name="domain_delegation_delete_title">Обрисати делегацију?</string>
     <string name="domain_delegation_path">Путања</string>
-    <string name="domain_delegation_user">ID корисника</string>
+    <string name="domain_delegation_user">Корисник</string>
     <string name="domain_delegations">Делегације</string>
     <string name="domain_delegations_empty">Нема конфигурисаних делегација.</string>
     <string name="domain_delete">Обриши домен</string>

@@ -119,7 +119,7 @@
     <string name="settings_home_system_documents">कागजातहरू</string>
     <string name="settings_home_system_settings">प्रणाली सेटिङहरू</string>
     <string name="system_settings_title">प्रणाली सेटिङहरू</string>
-    <string name="system_settings_section_login">लगइन</string>
+    <string name="system_settings_section_login">लग इन</string>
     <string name="system_settings_section_oauth">तेस्रो-पक्ष लगइन</string>
     <string name="system_settings_section_user_defaults">प्रयोगकर्ता पूर्वनिर्धारितहरू</string>
     <string name="system_settings_section_operator">सञ्चालक</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">प्राथमिकता %1$d · %2$s</string>
     <string name="interests_search_placeholder">थप्न विषयहरू खोज्नुहोस्…</string>
     <string name="interests_empty">अहिलेसम्म कुनै रुचिहरू छैनन्।</string>
-    <string name="interests_summary_regenerate">सारांश पुनः सिर्जना गर्नुहोस्</string>
+    <string name="interests_summary_regenerate">सारांश पुन: उत्पन्न गर्नुहोस्</string>
     <string name="interests_summary_regenerating">पुनः सिर्जना गर्दै…</string>
     <string name="interests_summary_empty">तपाईंलाई मनपर्ने कुराहरूको सारांश सिर्जना गर्न केही रुचिहरू थप्नुहोस्।</string>
     <string name="interests_search_failed">खोज असफल। कृपया फेरि प्रयास गर्नुहोस्।</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s ले अब यो डोमेनमा मार्गहरू व्यवस्थापन गर्नेछैन।</string>
     <string name="domain_delegation_delete_title">प्रतिनिधित्व मेटाउने?</string>
     <string name="domain_delegation_path">पथ</string>
-    <string name="domain_delegation_user">प्रयोगकर्ता ID</string>
+    <string name="domain_delegation_user">प्रयोगकर्ता</string>
     <string name="domain_delegations">प्रतिनिधित्वहरू</string>
     <string name="domain_delegations_empty">कुनै प्रतिनिधित्वहरू कन्फिगर गरिएका छैनन्।</string>
     <string name="domain_delete">डोमेन मेटाउनुहोस्</string>
@@ -312,7 +312,7 @@
         <item quantity="one">1 सत्र खारेज गरियो</item>
         <item quantity="other">%1$d सत्रहरू खारेज गरियो</item>
     </plurals>
-    <string name="login_title">लगइन</string>
+    <string name="login_title">लग इन</string>
     <string name="login_section_methods">लगइन विधिहरू</string>
     <string name="login_method_email">इमेल कोड</string>
     <string name="login_method_passkey">पासकी</string>
@@ -391,7 +391,7 @@
     <string name="accounts_capability_calendar">क्यालेन्डर</string>
     <string name="accounts_capability_notify">सूचनाहरू</string>
     <string name="accounts_capability_ai">AI</string>
-    <string name="accounts_capability_login">साइन-इन</string>
+    <string name="accounts_capability_login">लग इन</string>
     <string name="accounts_provider_caldav">क्यालेन्डर सर्भर</string>
     <string name="accounts_revoke_confirm">यसले %1$s को क्यालेन्डर पहुँच खारेज गर्नेछ। लगइन पृष्ठमा अनलिङ्क नगरेसम्म %2$s मार्फत साइन-इन रहनेछ।</string>
     <string name="accounts_capability_mcp">MCP</string>

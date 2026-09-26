@@ -46,7 +46,7 @@
     <string name="route_path">पथ</string>
     <string name="route_method">पद्धत</string>
     <string name="route_method_app">अॅप</string>
-    <string name="route_method_entity">संस्था</string>
+    <string name="route_method_entity">एंटिटी</string>
     <string name="route_method_redirect">रीडायरेक्ट</string>
     <string name="route_priority">प्राधान्यक्रम</string>
     <string name="route_enabled">चालू</string>
@@ -185,9 +185,9 @@
     <string name="system_users_delete_title">वापरकर्ता हटवायचा?</string>
     <string name="system_users_manage_sessions">सेशन्स व्यवस्थापित करा</string>
     <string name="system_users_sessions_description">या वापरकर्त्यासाठी सक्रिय सेशन्स पहा आणि रद्द करा.</string>
-    <string name="system_users_sessions_empty">या वापरकर्त्याकडे कोणतेही सक्रिय सेशन नाहीत.</string>
+    <string name="system_users_sessions_empty">या वापरकर्त्याकडे कोणतेही सक्रिय सेशन्स नाहीत.</string>
     <string name="system_users_revoke">रद्द करा</string>
-    <string name="system_users_revoke_all">सर्व सत्रे रद्द करा</string>
+    <string name="system_users_revoke_all">सर्व सेशन्स रद्द करा</string>
     <string name="system_users_unknown_browser">अज्ञात ब्राउझर</string>
     <string name="system_users_unknown">अज्ञात</string>
     <string name="system_users_previous">मागील</string>
@@ -207,7 +207,7 @@
     <string name="system_users_toast_status_failed">वापरकर्त्याची स्थिती अद्यतनित करण्यात अयशस्वी</string>
     <string name="system_users_toast_revoke_failed">सेशन रद्द करण्यात अयशस्वी</string>
 
-    <string name="settings_home_sessions">सत्रे</string>
+    <string name="settings_home_sessions">सेशन्स</string>
     <string name="settings_home_privacy">गोपनीयता धोरण</string>
     <string name="settings_home_rules">नियम</string>
     <string name="settings_home_terms">सेवा अटी</string>
@@ -229,9 +229,9 @@
     <string name="account_recovery_regen_title">पुनर्प्राप्ती कोड पुन्हा तयार करायचे?</string>
     <string name="account_recovery_regen_message">विद्यमान कोड त्वरित काम करणे थांबवतील. नवीन सुरक्षित ठिकाणी जतन करा.</string>
     <string name="account_recovery_codes_warning">हे कोड जतन करा — प्रत्येकाचा वापर फक्त एकदाच केला जाऊ शकतो. ते पुन्हा दर्शविले जाणार नाहीत.</string>
-    <string name="sessions_title">सत्रे</string>
-    <string name="sessions_empty">सक्रिय सत्रे नाहीत.</string>
-    <string name="sessions_revoke_message">हे सत्र वापरणारे डिव्हाइस साइन आउट होईल.</string>
+    <string name="sessions_title">सेशन्स</string>
+    <string name="sessions_empty">सक्रिय सेशन्स नाहीत.</string>
+    <string name="sessions_revoke_message">हे सेशन वापरणारे डिव्हाइस साइन आउट होईल.</string>
     <string name="account_oauth_empty">कोणतेही खाते लिंक केलेले नाही</string>
     <string name="account_oauth_link_title">प्रदाता लिंक करा</string>
     <string name="account_oauth_unlink_title">खाते अनलिंक करायचे?</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">प्राधान्य %1$d · %2$s</string>
     <string name="interests_search_placeholder">जोडण्यासाठी विषय शोधा…</string>
     <string name="interests_empty">अद्याप कोणत्याही आवडी नाहीत.</string>
-    <string name="interests_summary_regenerate">सारांश पुन्हा तयार करा</string>
+    <string name="interests_summary_regenerate">सारांश पुन्हा निर्माण करा</string>
     <string name="interests_summary_regenerating">पुन्हा तयार होत आहे…</string>
     <string name="interests_summary_empty">तुम्हाला आवडत असलेल्या गोष्टींचा सारांश तयार करण्यासाठी काही आवडी जोडा.</string>
     <string name="interests_search_failed">शोध अयशस्वी. कृपया पुन्हा प्रयत्न करा.</string>
@@ -268,10 +268,10 @@
     <string name="system_users_sort_by">क्रमवारीत लावा</string>
     <string name="system_users_last_login">शेवटचे लॉगिन: %1$s</string>
     <string name="system_users_delete_message">हे कायमस्वरूपी वापरकर्ता \"%1$s\" हटवेल. ही क्रिया पूर्ववत केली जाऊ शकत नाही.</string>
-    <string name="system_users_sessions_title">%1$s ची सत्रे</string>
+    <string name="system_users_sessions_title">%1$s चे सेशन्स</string>
     <string name="system_users_session_last_accessed">शेवटचा प्रवेश: %1$s</string>
-    <string name="system_users_revoke_all_title">सर्व सत्रे रद्द करायची?</string>
-    <string name="system_users_revoke_all_message">या वापरकर्त्याची सर्व सक्रिय सत्रे साइन आउट होतील.</string>
+    <string name="system_users_revoke_all_title">सर्व सेशन्स रद्द करायचे?</string>
+    <string name="system_users_revoke_all_message">या वापरकर्त्याचे सर्व सक्रिय सेशन्स साइन आउट होतील.</string>
     <string name="system_users_pagination_status">%3$d वापरकर्त्यांपैकी %1$d–%2$d दर्शवित आहे</string>
     <string name="account_title">खाते</string>
     <string name="account_section_identity">ओळख</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s यापुढे या डोमेनवरील मार्ग व्यवस्थापित करणार नाही.</string>
     <string name="domain_delegation_delete_title">प्रतिनिधीत्व हटवायचे?</string>
     <string name="domain_delegation_path">पथ</string>
-    <string name="domain_delegation_user">वापरकर्ता ID</string>
+    <string name="domain_delegation_user">वापरकर्ता</string>
     <string name="domain_delegations">प्रतिनिधीत्व</string>
     <string name="domain_delegations_empty">प्रतिनिधीत्व कॉन्फिगर केलेले नाहीत.</string>
     <string name="domain_delete">डोमेन हटवा</string>
@@ -325,7 +325,7 @@
     <string name="account_close_confirm_body">तुमचे खाते हटवण्यासाठी नियोजित केले जाईल आणि तुम्हाला साइन आउट केले जाईल. हटवण्याच्या तारखेपूर्वी पुन्हा लॉग इन करून तुम्ही केव्हाही रद्द करू शकता.</string>
     <string name="account_data_download">डाउनलोड</string>
     <string name="route_target_app">अॅप</string>
-    <string name="route_target_entity">संस्था</string>
+    <string name="route_target_entity">एंटिटी</string>
     <string name="route_target_url">URL</string>
     <string name="account_data_section">तुमचा डेटा</string>
     <string name="account_data_dialog_title">तुमचा डेटा डाउनलोड करा</string>
@@ -389,9 +389,9 @@
     <string name="account_totp_open">ऑथेंटिकेटर ॲपमध्ये उघडा</string>
     <string name="accounts_revoke">प्रवेश रद्द करा</string>
     <string name="accounts_capability_calendar">कॅलेंडर</string>
-    <string name="accounts_capability_notify">नोटिफिकेशन्स</string>
+    <string name="accounts_capability_notify">सूचना</string>
     <string name="accounts_capability_ai">AI</string>
-    <string name="accounts_capability_login">साइन-इन</string>
+    <string name="accounts_capability_login">लॉगिन</string>
     <string name="accounts_provider_caldav">कॅलेंडर सर्व्हर</string>
     <string name="accounts_revoke_confirm">यामुळे %1$s चा कॅलेंडर प्रवेश रद्द होईल. लॉगिन पृष्ठावर अनलिंक करेपर्यंत %2$s सह साइन-इन राहील.</string>
     <string name="accounts_capability_mcp">MCP</string>

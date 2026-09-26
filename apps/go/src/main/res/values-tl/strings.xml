@@ -16,7 +16,7 @@
     <string name="go_color_white">Puti</string>
     <string name="go_delete_confirm">I-delete</string>
     <string name="go_delete_message">Tatanggalin ang larong ito sa iyong listahan. Hindi ito mababawi.</string>
-    <string name="go_delete_title">Tanggalin ang laro?</string>
+    <string name="go_delete_title">I-delete ang laro?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">Tanggapin</string>
     <string name="go_draw_decline">Tanggihan</string>

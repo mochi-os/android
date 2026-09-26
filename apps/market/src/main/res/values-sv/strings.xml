@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Rapportera annons</string>
     <string name="market_listing_detail_save">Spara</string>
     <string name="market_listing_detail_seller_heading">Säljare</string>
-    <string name="market_listing_detail_shipping_heading">Frakt</string>
+    <string name="market_listing_detail_shipping_heading">Fraktalternativ</string>
     <string name="market_listing_detail_subscribe">Prenumerera</string>
     <string name="market_listing_detail_tags_heading">Taggar</string>
     <string name="market_listing_detail_title">Annons</string>
@@ -467,7 +467,7 @@
     <string name="market_editor_days">%1$d dagar</string>
     <string name="market_editor_delete">Ta bort annons</string>
     <string name="market_editor_delete_confirm_message">Detta tar bort annonsen permanent.</string>
-    <string name="market_editor_delete_confirm_title">Ta bort annons?</string>
+    <string name="market_editor_delete_confirm_title">Ta bort annonsen?</string>
     <string name="market_editor_download">Direkt nedladdning</string>
     <string name="market_editor_duration">Auktionens varaktighet</string>
     <string name="market_editor_fee_preview_pending">Sparar utkast…</string>
@@ -628,7 +628,7 @@
     <string name="market_saved_empty_title">Inga sparade annonser</string>
     <string name="market_search_placeholder">Sök på marknaden</string>
     <string name="market_status_past_due">Förfallen</string>
-    <string name="market_stripe_onboarding_action">Fortsätt installationen</string>
+    <string name="market_stripe_onboarding_action">Fortsätt konfigurationen</string>
     <string name="market_stripe_onboarding_body">Slutför din Stripe-introduktion innan du kan ta emot utbetalningar.</string>
     <string name="market_stripe_onboarding_failed">Kunde inte öppna Stripe</string>
     <string name="market_stripe_onboarding_opening">Öppnar Stripe…</string>

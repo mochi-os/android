@@ -119,7 +119,7 @@
     <string name="settings_home_system_documents">Documents</string>
     <string name="settings_home_system_settings">Configuració del sistema</string>
     <string name="system_settings_title">Configuració del sistema</string>
-    <string name="system_settings_section_login">Inicia la sessió</string>
+    <string name="system_settings_section_login">Inici de sessió</string>
     <string name="system_settings_section_oauth">Inici de sessió de tercers</string>
     <string name="system_settings_section_user_defaults">Valors per defecte de l\'usuari</string>
     <string name="system_settings_section_operator">Operador</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">Prioritat %1$d · %2$s</string>
     <string name="interests_search_placeholder">Cercar temes per afegir…</string>
     <string name="interests_empty">Encara no hi ha interessos.</string>
-    <string name="interests_summary_regenerate">Regenerar resum</string>
+    <string name="interests_summary_regenerate">Regenera el resum</string>
     <string name="interests_summary_regenerating">Regenerant…</string>
     <string name="interests_summary_empty">Afegiu alguns interessos per generar un resum d\'allò que us agrada.</string>
     <string name="interests_search_failed">La cerca ha fallat. Si us plau, torneu-ho a provar.</string>
@@ -263,9 +263,9 @@
     <string name="system_settings_reset_message">Això restablirà «%1$s» al valor predeterminat (%2$s).</string>
     <string name="system_settings_reset_message_empty">Això restablirà «%1$s» al valor predeterminat (buit).</string>
     <string name="settings_home_system_users">Usuaris (servidor)</string>
-    <string name="system_users_add_user">Afegir usuari</string>
+    <string name="system_users_add_user">Afegeix un usuari</string>
     <string name="system_users_search_placeholder">Cercar usuaris…</string>
-    <string name="system_users_sort_by">Ordenar per</string>
+    <string name="system_users_sort_by">Ordena per</string>
     <string name="system_users_last_login">Darrer inici de sessió: %1$s</string>
     <string name="system_users_delete_message">Això suprimirà permanentment l\'usuari «%1$s». No es pot desfer aquesta acció.</string>
     <string name="system_users_sessions_title">Sessions de %1$s</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s ja no gestionarà rutes en aquest domini.</string>
     <string name="domain_delegation_delete_title">Vols suprimir la delegació?</string>
     <string name="domain_delegation_path">Ruta</string>
-    <string name="domain_delegation_user">ID d\'usuari</string>
+    <string name="domain_delegation_user">Usuari</string>
     <string name="domain_delegations">Delegacions</string>
     <string name="domain_delegations_empty">No hi ha delegacions configurades.</string>
     <string name="domain_delete">Suprimeix el domini</string>
@@ -313,7 +313,7 @@
         <item quantity="one">S\'ha revocat 1 sessió</item>
         <item quantity="other">S\'han revocat %1$d sessions</item>
     </plurals>
-    <string name="login_title">Inicia la sessió</string>
+    <string name="login_title">Inici de sessió</string>
     <string name="login_section_methods">Mètodes d\'inici de sessió</string>
     <string name="login_method_email">Codi per correu</string>
     <string name="login_method_passkey">Clau d\'accés</string>

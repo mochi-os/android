@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Yọ ìforúkọsílẹ̀ kúrò</string>
     <string name="forums_list_unsubscribe_title">Yọ ìforúkọsílẹ̀ kúrò</string>
     <string name="forums_create_title">Dá forum</string>
-    <string name="forums_create_name">Orúkọ</string>
+    <string name="forums_create_name">Orúkọ forum</string>
     <string name="forums_create_privacy">Aṣírí</string>
     <string name="forums_create_private">Aṣírí</string>
     <string name="forums_create_public">Gbangba</string>
-    <string name="forums_create_action">Dá</string>
+    <string name="forums_create_action">Dá forum</string>
     <string name="forums_find_title">Wa àwọn forum</string>
     <string name="forums_find_recommended">Tí a dábàá</string>
     <string name="forums_find_subscribe">Forúkọsílẹ̀</string>
@@ -68,8 +68,8 @@
     <string name="forums_members_empty">Kò sí ọmọ ẹgbẹ́</string>
     <string name="forums_banner_dismiss">Mú banner kúrò</string>
     <string name="forums_ai_mode_tag">Fi àmì sí</string>
-    <string name="forums_ai_account_default">Àkáǹtì àìpé</string>
-    <string name="forums_ai_prompt_reset">Pa padà sí àbùdá</string>
+    <string name="forums_ai_account_default">Àkáǹtì àìyípadà</string>
+    <string name="forums_ai_prompt_reset">Pa padà sí àìyípadà</string>
     <string name="forums_settings_unsubscribe">Yọ ìforúkọsílẹ̀ kúrò</string>
     <string name="forums_moderation_title">Ìṣàkóso</string>
     <string name="forums_moderation_tab_queue">Ìlà</string>
@@ -121,7 +121,7 @@
     <string name="forums_forum_not_found">A kò rí forum</string>
     <string name="forums_post_not_found">A kò rí ìfìránṣẹ́</string>
 
-    <string name="forums_comment_send">Firanṣẹ</string>
+    <string name="forums_comment_send">Firánṣẹ́</string>
     <string name="forums_post_body_field">Àkóónú</string>
     <string name="forums_post_edit_body_field">Àkóónú</string>
     <string name="forums_comment_edit_body_field">Àkóónú</string>
@@ -147,7 +147,7 @@
     <string name="forums_tag_clear">Pa àyẹ̀wò rẹ́</string>
     <string name="forums_post_tag_remove">Yọ àmì kúrò</string>
     <string name="forums_access_add">Ṣàfikún òfin ìwọlé</string>
-    <string name="forums_access_empty">Kò sí òfin síbẹ̀ — àwọn ìpilẹ̀ṣẹ̀ wúlò</string>
+    <string name="forums_access_empty">Kò sí òfin síbẹ̀ — àwọn àìyípadà wúlò</string>
     <string name="forums_access_target_hint">ID ẹ̀ka, @ẹgbẹ́, * (gbogbo ènìyàn), tàbí + (àwọn ọmọ ẹgbẹ́)</string>
     <string name="forums_access_level">Ipele</string>
     <string name="forums_access_level_moderate">Ṣàkóso</string>
@@ -156,7 +156,7 @@
     <string name="forums_banner_placeholder">Káàbọ̀ sí àpérò yìí…</string>
     <string name="forums_ai_mode_label">Ipo: %1$s</string>
     <string name="forums_ai_mode_heading">Ipo AI</string>
-    <string name="forums_ai_mode_off">Pa</string>
+    <string name="forums_ai_mode_off">Tí a ti pa</string>
     <string name="forums_ai_account">Àkáǹtì AI</string>
     <string name="forums_ai_prompt_tag">Ìtọ́ni fún àmì</string>
     <string name="forums_ai_prompt_score">Ìtọ́ni fún àmì-ìdíwọ̀n</string>
@@ -180,7 +180,7 @@
     <string name="forums_comment_replying_to">Ń dáhùn sí %1$s</string>
     <string name="forums_comment_clear_reply">Pa ìdáhùn rẹ́</string>
     <string name="forums_settings_title">Àwọn ètò %1$s</string>
-    <string name="forums_settings_rename_label">Orúkọ àpérò</string>
+    <string name="forums_settings_rename_label">Orúkọ forum</string>
     <string name="forums_settings_danger_zone">Agbègbè ewu</string>
     <string name="forums_settings_delete_message">Èyí yóò pa àpérò àti gbogbo àwọn àkọsílẹ̀ rẹ̀ rẹ́ pátápátá. Èyí kò ṣeé yí padà.</string>
 
@@ -216,7 +216,7 @@
     <string name="forums_attachment_move_up">Gbe soke</string>
     <string name="forums_attachment_move_down">Gbe sokale</string>
     <string name="forums_post_comments">Àwọn àlàyé</string>
-    <string name="forums_all_forums">Gbogbo àwọn àpéjọ</string>
+    <string name="forums_all_forums">Gbogbo àwọn forum</string>
     <string name="forums_create_allow_search">Gba ẹnikẹ́ni láàyè láti wá àpéjọ</string>
     <string name="forums_rss_clipboard_label">RSS URL àpéjọ</string>
     <string name="forums_tab_moderation">Ìṣàkóso</string>
@@ -230,7 +230,7 @@
     <string name="forums_access_selected">Tí a yàn: %1$s</string>
     <string name="forums_clear">Pa rẹ́</string>
     <string name="forums_ai_account_label">Àkáǹtì</string>
-    <string name="forums_ai_prompt_default">Àìpé</string>
+    <string name="forums_ai_prompt_default">Àìyípadà</string>
     <string name="forums_moderation_reject">Kọ̀</string>
     <string name="forums_moderation_report_by">láti ọwọ́ %1$s</string>
     <string name="forums_moderation_restriction_state_banned">Tí a ti fòfin de</string>
@@ -244,7 +244,7 @@
     <string name="forums_settings_field_name">Orúkọ</string>
     <string name="forums_settings_field_entity_id">ID Ẹ̀ka</string>
     <string name="forums_settings_field_fingerprint_label">Àmì-ìka</string>
-    <string name="forums_settings_field_server">Server</string>
+    <string name="forums_settings_field_server">Sáfà</string>
     <string name="forums_settings_name_edit_cd">Ṣàtúnṣe orúkọ</string>
     <string name="forums_settings_name_cancel_cd">Fagilé àtúnṣe</string>
     <string name="forums_settings_save_name">Fi orúkọ pamọ́</string>
@@ -276,20 +276,20 @@
     <string name="forums_moderation_restriction_by">Láti ọwọ́ %1$s</string>
     <string name="forums_moderation_restriction_remove_message">Wọn yóò tún gba ìwọlé kíkún sí àpéjọ lẹ́sẹ̀kẹsẹ̀.</string>
     <string name="forums_moderation_restriction_remove_title">Ṣé kí a yọ ìdínà lórí %1$s kúrò?</string>
-    <string name="forums_moderation_restriction_state_muted">A ti pa lẹ́nu mọ́</string>
-    <string name="forums_moderation_restriction_state_shadowban">Ìdínà òjìji</string>
+    <string name="forums_moderation_restriction_state_muted">A ti pa ohùn mọ́</string>
+    <string name="forums_moderation_restriction_state_shadowban">A fòfin de ní ìkọ̀kọ̀</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Kò sí olùmúlò tí a ti pa lẹ́nu mọ́ tàbí kí a fi ọ̀dá bò</string>
     <string name="forums_moderation_section_premoderation_description">Béèrè ìfọwọ́sí kí àkóónú tó hàn</string>
     <string name="forums_moderation_section_ratelimiting_description">Dènà spam nípa dídín iye ìgbà tí àwọn olùmúlò lè fi ránṣẹ́ kù</string>
     <string name="forums_moderation_settings_updated">A ti ṣàtúnṣe àwọn ètò ìṣàkóso</string>
     <string name="forums_moderation_unit_posts">ìfìwéránṣẹ́</string>
     <string name="forums_moderation_unit_replies">ìdáhùn</string>
-    <string name="forums_moderation_unit_seconds">ìṣẹ́jú àáyá</string>
+    <string name="forums_moderation_unit_seconds">ìṣẹ́jú-àáyá</string>
     <string name="forums_settings_ai_updated">A ti ṣàtúnṣe àwọn ètò AI</string>
-    <string name="forums_settings_forum_renamed">A ti sọ àpéjọ ní orúkọ tuntun</string>
+    <string name="forums_settings_forum_renamed">A ti tún forum sọ lórúkọ</string>
     <string name="forums_settings_name_clear_cd">Pa orúkọ rẹ́</string>
     <string name="forums_settings_unsubscribe_section">Yọ ara rẹ kúrò nínú àpéjọ</string>
-    <string name="forums_share_link_title">Ọ̀nà àsopọ̀ àpéjọ</string>
+    <string name="forums_share_link_title">Ọ̀nà àsopọ̀ forum</string>
     <string name="forums_find_found_by_url">A rí i nípasẹ̀ URL</string>
     <string name="forums_moderation_pending_posts">Àwọn ìfìwéránṣẹ́ tí ń dúró (%1$d)</string>
     <string name="forums_moderation_pending_comments">Àwọn àsọyé tí ń dúró (%1$d)</string>

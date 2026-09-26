@@ -34,7 +34,7 @@
     <string name="crm_option_icon">آیکون</string>
     <string name="crm_option_icon_placeholder">مثلاً Check، Star، Flag</string>
     <string name="crm_settings_unsubscribe">لغو اشتراک</string>
-    <string name="crm_settings_delete_crm">حذف پروژه</string>
+    <string name="crm_settings_delete_crm">حذف CRM</string>
     <string name="crm_settings_delete_confirm_title">حذف CRM</string>
     <string name="crm_settings_unsubscribe_title">لغو اشتراک</string>
     <string name="crm_settings_unsubscribe_message">آیا از لغو اشتراک این CRM مطمئن هستید؟</string>
@@ -160,10 +160,10 @@
     <string name="crm_object_delete_message">آیا مطمئن هستید که می‌خواهید این شیء را حذف کنید؟ این عمل قابل بازگشت نیست.</string>
     <string name="crm_parent_none">بدون والد</string>
     <string name="crm_links_empty">بدون پیوند</string>
-    <string name="crm_links_section_relates">مربوط است به</string>
+    <string name="crm_links_section_relates">مرتبط با</string>
     <string name="crm_links_section_duplicated_by">تکراری توسط</string>
     <string name="crm_links_type">نوع پیوند</string>
-    <string name="crm_links_type_relates">مربوط است به</string>
+    <string name="crm_links_type_relates">مرتبط با</string>
     <string name="crm_links_remove">حذف پیوند</string>
     <string name="crm_comment_placeholder">افزودن نظر</string>
     <string name="crm_property_pick_date">انتخاب تاریخ</string>
@@ -210,7 +210,7 @@
     <string name="crm_field_sortable">قابل مرتب‌سازی</string>
     <string name="crm_field_filterable">قابل فیلتر کردن</string>
     <string name="crm_field_show_on_card">نمایش روی کارت</string>
-    <string name="crm_field_multi">چند انتخابی</string>
+    <string name="crm_field_multi">چندانتخابی</string>
     <string name="crm_field_position">موقعیت نمایش</string>
     <string name="crm_field_position_header">سرصفحه</string>
     <string name="crm_field_validation">اعتبارسنجی</string>
@@ -273,11 +273,11 @@
     <string name="crm_access_role_comment">نظر دادن و دیدن</string>
     <string name="crm_access_role_view">فقط نمایش</string>
     <string name="crm_access_role_none">بدون دسترسی</string>
-    <string name="crm_all_crms">همه CRMها</string>
+    <string name="crm_all_crms">همهٔ CRMها</string>
     <string name="crm_settings_unsubscribe_section">لغو اشتراک از CRM</string>
     <string name="crm_settings_updated">CRM به‌روزرسانی شد</string>
     <string name="crm_create_import_backup">وارد کردن از پشتیبان (اختیاری)</string>
-    <string name="crm_export">خروجی گرفتن از داده‌ها</string>
+    <string name="crm_export">خروجی داده‌ها</string>
     <string name="crm_exporting">در حال آماده‌سازی خروجی…</string>
     <string name="crm_create_allow_search">همه بتوانند CRM را جست‌وجو کنند</string>
     <string name="crm_no_crms_found">هیچ CRMی یافت نشد</string>

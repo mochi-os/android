@@ -16,7 +16,7 @@
     <string name="go_color_white">Weiß</string>
     <string name="go_delete_confirm">Löschen</string>
     <string name="go_delete_message">Diese Partie wird aus deiner Liste entfernt. Dies kann nicht rückgängig gemacht werden.</string>
-    <string name="go_delete_title">Partie löschen?</string>
+    <string name="go_delete_title">Spiel löschen?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">Annehmen</string>
     <string name="go_draw_decline">Ablehnen</string>
@@ -64,7 +64,7 @@
     <string name="go_channel_name">Go-Benachrichtigungen</string>
     <string name="go_channel_description">Benachrichtigungen über Züge, Passes, Remisangebote und Partieergebnisse.</string>
     <string name="go_open_sidebar">Seitenleiste öffnen</string>
-    <string name="go_sidebar_active">Aktive Partien</string>
+    <string name="go_sidebar_active">Aktive Spiele</string>
     <string name="go_empty_active">Noch keine aktiven Partien.</string>
     <string name="go_status_resigned">Aufgegeben</string>
     <string name="go_new_game_title">Neue Go-Partie</string>

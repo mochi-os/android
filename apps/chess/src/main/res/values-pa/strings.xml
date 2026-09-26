@@ -22,7 +22,7 @@
     <string name="chess_open_actions">ਗੇਮ ਐਕਸ਼ਨ ਖੋਲ੍ਹੋ</string>
     <string name="chess_offer_draw">ਡਰਾਅ ਦੀ ਪੇਸ਼ਕਸ਼</string>
     <string name="chess_resign">ਅਸਤੀਫ਼ਾ ਦਿਓ</string>
-    <string name="chess_rematch">ਦੁਬਾਰਾ ਖੇਡੋ</string>
+    <string name="chess_rematch">ਦੁਬਾਰਾ ਮੈਚ</string>
     <string name="chess_delete_game">ਖੇਡ ਮਿਟਾਓ</string>
     <string name="chess_side_white">ਚਿੱਟਾ</string>
     <string name="chess_side_black">ਕਾਲਾ</string>
@@ -32,8 +32,8 @@
     <string name="chess_draw_accept">ਸਵੀਕਾਰ ਕਰੋ</string>
     <string name="chess_draw_decline">ਅਸਵੀਕਾਰ ਕਰੋ</string>
     <string name="chess_status_checkmate_you_win">ਚੈੱਕਮੇਟ — ਤੁਸੀਂ ਜਿੱਤ ਗਏ!</string>
-    <string name="chess_status_stalemate">ਡੈੱਡਲਾਕ — ਡਰਾਅ</string>
-    <string name="chess_status_draw">ਡ੍ਰਾਅ</string>
+    <string name="chess_status_stalemate">ਖੜੋਤ — ਡਰਾਅ</string>
+    <string name="chess_status_draw">ਡਰਾਅ</string>
     <string name="chess_status_check_your_move">ਚੈੱਕ — ਤੁਹਾਡੀ ਚਾਲ</string>
     <string name="chess_status_your_move">ਤੁਹਾਡੀ ਚਾਲ</string>
     <string name="chess_move_subject_you">ਤੁਸੀਂ</string>
@@ -60,7 +60,7 @@
     <string name="chess_empty_subtitle">ਕਿਸੇ ਦੋਸਤ ਨਾਲ ਸ਼ਤਰੰਜ ਖੇਡਣ ਲਈ ਆਪਣੀ ਪਹਿਲੀ ਖੇਡ ਸ਼ੁਰੂ ਕਰੋ।</string>
     <string name="chess_empty_start_button">ਆਪਣੀ ਪਹਿਲੀ ਖੇਡ ਸ਼ੁਰੂ ਕਰੋ</string>
     <string name="chess_detail_unavailable">ਖੇਡ ਉਪਲਬਧ ਨਹੀਂ</string>
-    <string name="chess_delete_title">ਖੇਡ ਮਿਟਾਉਣੀ ਹੈ?</string>
+    <string name="chess_delete_title">ਗੇਮ ਮਿਟਾਈਏ?</string>
     <string name="chess_delete_message">ਇਹ ਖੇਡ ਨੂੰ ਤੁਹਾਡੀ ਸੂਚੀ ਵਿੱਚੋਂ ਹਟਾ ਦਿੰਦਾ ਹੈ।</string>
     <string name="chess_ws_connecting">ਕਨੈਕਟ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…</string>
     <string name="chess_ws_disconnected">ਔਫਲਾਈਨ</string>

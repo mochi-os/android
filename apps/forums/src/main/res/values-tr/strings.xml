@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Aboneliği iptal et</string>
     <string name="forums_list_unsubscribe_title">Aboneliği iptal et</string>
     <string name="forums_create_title">Forum oluştur</string>
-    <string name="forums_create_name">Ad</string>
+    <string name="forums_create_name">Forum adı</string>
     <string name="forums_create_privacy">Gizlilik</string>
     <string name="forums_create_private">Özel</string>
     <string name="forums_create_public">Herkese açık</string>
-    <string name="forums_create_action">Oluştur</string>
+    <string name="forums_create_action">Forum oluştur</string>
     <string name="forums_find_title">Forum bul</string>
     <string name="forums_find_recommended">Önerilen</string>
     <string name="forums_find_subscribe">Abone ol</string>
@@ -71,7 +71,7 @@
     <string name="forums_ai_account_default">Varsayılan hesap</string>
     <string name="forums_ai_prompt_reset">Varsayılana sıfırla</string>
     <string name="forums_settings_unsubscribe">Aboneliği iptal et</string>
-    <string name="forums_moderation_title">Moderasyon</string>
+    <string name="forums_moderation_title">Denetim</string>
     <string name="forums_moderation_tab_queue">Kuyruk</string>
     <string name="forums_moderation_tab_reports">Raporlar</string>
     <string name="forums_moderation_tab_log">Günlük</string>
@@ -156,8 +156,8 @@
     <string name="forums_banner_placeholder">Bu foruma hoş geldiniz…</string>
     <string name="forums_ai_mode_label">Mod: %1$s</string>
     <string name="forums_ai_mode_heading">Yapay zekâ modu</string>
-    <string name="forums_ai_mode_off">Kapalı</string>
-    <string name="forums_ai_account">Yapay zekâ hesabı</string>
+    <string name="forums_ai_mode_off">Devre dışı</string>
+    <string name="forums_ai_account">AI hesabı</string>
     <string name="forums_ai_prompt_tag">Etiketleme istemi</string>
     <string name="forums_ai_prompt_score">Puanlama istemi</string>
     <string name="forums_ai_post_prompt_label">Gönderi etiketleri istemi</string>
@@ -219,7 +219,7 @@
     <string name="forums_all_forums">Tüm forumlar</string>
     <string name="forums_create_allow_search">Herkesin forumu aramasına izin ver</string>
     <string name="forums_rss_clipboard_label">Forum RSS URL adresi</string>
-    <string name="forums_tab_moderation">Moderasyon</string>
+    <string name="forums_tab_moderation">Denetim</string>
     <string name="forums_access_level_view_full">Yalnızca görüntüleme</string>
     <string name="forums_access_level_none_full">Erişim yok</string>
     <string name="forums_access_subject_anyone">Herkes</string>
@@ -257,7 +257,7 @@
     <string name="forums_access_select_rule">Bir kural seçin</string>
     <string name="forums_ai_actions_label">Gönderilerde yapay zekâ işlemleri</string>
     <string name="forums_ai_prompt_custom">Özel</string>
-    <string name="forums_ai_prompt_score_label">Puanlama istemi</string>
+    <string name="forums_ai_prompt_score_label">Skor istemi</string>
     <string name="forums_ai_prompt_tag_label">Etiket istemi</string>
     <string name="forums_ai_prompt_variables">Değişkenler: %1$s</string>
     <string name="forums_link">Bağlantı</string>
@@ -277,7 +277,7 @@
     <string name="forums_moderation_restriction_remove_message">Foruma tam erişimi hemen geri kazanır.</string>
     <string name="forums_moderation_restriction_remove_title">%1$s üzerindeki kısıtlama kaldırılsın mı?</string>
     <string name="forums_moderation_restriction_state_muted">Susturuldu</string>
-    <string name="forums_moderation_restriction_state_shadowban">Gölge yasak</string>
+    <string name="forums_moderation_restriction_state_shadowban">Gizlice yasaklandı</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Susturulan veya yasaklanan kullanıcı yok</string>
     <string name="forums_moderation_section_premoderation_description">İçerik görünür olmadan önce onay iste</string>
     <string name="forums_moderation_section_ratelimiting_description">Kullanıcıların gönderi sıklığını sınırlayarak spam\'i önleyin</string>

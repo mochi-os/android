@@ -13,7 +13,7 @@
     <string name="market_account_seller_step_activate_title">وڪرو ڪندڙ اڪائونٽ فعال ڪريو</string>
     <string name="market_account_seller_step_activate_desc">سامان فهرست ڪرڻ شروع ڪرڻ لاءِ پنهنجو وڪرو ڪندڙ پروفائل ٺاهيو</string>
     <string name="market_account_seller_step_stripe_desc">خريدارن کان ادائگيون قبول ڪرڻ لاءِ Stripe اڪائونٽ ڳنڍيو</string>
-    <string name="market_account_seller_fees_heading">فيون:</string>
+    <string name="market_account_seller_fees_heading">فيس:</string>
     <string name="market_account_seller_fees_mochi">Mochi هر وڪري مان %1$s%% وٺندو آهي.</string>
     <string name="market_account_seller_fees_stripe">Stripe هر ٽرانزيڪشن تي پنهنجي پروسيسنگ فيس ۽ هر چارج بيڪ تي هڪ مقرر فيس وصول ڪندو آهي. توهان جي ڪرنسي ۽ علائقي لاءِ موجوده اگهه توهان جي Stripe ڊيش بورڊ ۾ ڏنل آهن.</string>
     <string name="market_account_seller_connect">Stripe سان ڳنڍيو</string>
@@ -28,7 +28,7 @@
     <string name="market_appeal_dialog_cancel">منسوخ ڪريو</string>
     <string name="market_appeal_dialog_failed">اپيل جمع ڪرائڻ ۾ ناڪام</string>
     <string name="market_appeal_dialog_submit">اپيل جمع ڪريو</string>
-    <string name="market_appeal_dialog_submitting">موڪليندي…</string>
+    <string name="market_appeal_dialog_submitting">موڪليو پيو وڃي…</string>
     <string name="market_appeal_dialog_success">اپيل جمع ڪرائي وئي</string>
     <string name="market_appeal_dialog_title">هٽائڻ خلاف اپيل</string>
     <string name="market_asset_download">ڊائون لوڊ</string>
@@ -43,10 +43,10 @@
     <string name="market_bid_dialog_submit">بولي ڏيو</string>
     <string name="market_bid_dialog_success">بولي ڏني وئي</string>
     <string name="market_bid_dialog_title">بولي ڏيو</string>
-    <string name="market_bid_ended">نيلامي ختم</string>
+    <string name="market_bid_ended">نيلامي ختم ٿي</string>
     <string name="market_bid_high">وڌيڪ بولي</string>
     <string name="market_bids_empty">ڪي به بولي نه</string>
-    <string name="market_bids_ended">نيلامي ختم</string>
+    <string name="market_bids_ended">نيلامي ختم ٿي</string>
     <string name="market_bids_tab_active">فعال</string>
     <string name="market_bids_tab_all">سڀ</string>
     <string name="market_bids_tab_lost">هاريو</string>
@@ -89,7 +89,7 @@
     <string name="market_checkout_listing_not_found">لسٽنگ نه ملي</string>
     <string name="market_checkout_pay_button">Stripe سان ادا ڪريو</string>
     <string name="market_checkout_payment_failed">ادائيگي چيڪ آئوٽ شروع نه ٿي سگهي — وڪرو ڪندڙ ادائيگي سيٽ اپ مڪمل نه ڪئي هوندي</string>
-    <string name="market_checkout_processing">عمل ٿي رهيو آهي…</string>
+    <string name="market_checkout_processing">پروسيس ٿي رهيو آهي…</string>
     <string name="market_checkout_secure">Stripe ذريعي محفوظ ادائيگي</string>
     <string name="market_checkout_select_option">اختيار چونڊيو</string>
     <string name="market_checkout_shipping">شپنگ</string>
@@ -118,7 +118,7 @@
     <string name="market_dispute_dialog_failed">جواب جمع ڪرائڻ ۾ ناڪام</string>
     <string name="market_dispute_dialog_response_label">توهان جو جواب</string>
     <string name="market_dispute_dialog_submit">جمع ڪريو</string>
-    <string name="market_dispute_dialog_submitting">موڪليندي…</string>
+    <string name="market_dispute_dialog_submitting">موڪليو پيو وڃي…</string>
     <string name="market_dispute_dialog_title">تڪرار جو جواب</string>
     <string name="market_editor_appeal_submit">اپيل جمع ڪريو</string>
     <string name="market_editor_asset_add">فائل شامل ڪريو</string>
@@ -228,13 +228,13 @@
     <string name="market_listing_detail_message">پيغام موڪليو</string>
     <string name="market_listing_detail_message_seller">وڪرو ڪندڙ کي پيغام</string>
     <string name="market_listing_detail_not_found">لسٽنگ نه ملي</string>
-    <string name="market_listing_detail_place_bid">بِڊ پيش ڪريو</string>
+    <string name="market_listing_detail_place_bid">بولي ڏيو</string>
     <string name="market_listing_detail_relist">ٻيهر فهرست ڪريو</string>
     <string name="market_listing_detail_report">فهرست رپورٽ ڪريو</string>
     <string name="market_listing_detail_save">محفوظ ڪريو</string>
     <string name="market_listing_detail_seller_heading">وڪرو ڪندڙ</string>
     <string name="market_listing_detail_share">اشتهار حصيداري ڪريو</string>
-    <string name="market_listing_detail_shipping_heading">شپنگ</string>
+    <string name="market_listing_detail_shipping_heading">شپنگ اختيار</string>
     <string name="market_listing_detail_subscribe">سبسڪرائب ڪريو</string>
     <string name="market_listing_detail_tags_heading">ٽيگ</string>
     <string name="market_listing_detail_title">لسٽنگ</string>
@@ -392,7 +392,7 @@
     <string name="market_saved_title">محفوظ ٿيل</string>
     <string name="market_search_clear">ڳولا صاف ڪريو</string>
     <string name="market_search_placeholder">مارڪيٽ ۾ ڳوليو</string>
-    <string name="market_section_categories">زمرا ڏسو</string>
+    <string name="market_section_categories">زمرا براؤز ڪريو</string>
     <string name="market_section_listings">تازيون لسٽنگون</string>
     <string name="market_section_recent">تازو ڏٺل</string>
     <string name="market_ship_dialog_cancel">منسوخ ڪريو</string>
@@ -470,7 +470,7 @@
     <string name="market_type_digital">ڊجيٽل</string>
     <string name="market_type_physical">جسماني</string>
     <string name="market_warnings_title">خبردارون</string>
-    <string name="market_sale_review_response_submitting">موڪليندي…</string>
+    <string name="market_sale_review_response_submitting">موڪليو پيو وڃي…</string>
     <string name="market_checkout_subscribing">سبسڪرائب ٿي رهيو آهي…</string>
     <string name="market_filter_remove">فلٽر ختم ڪريو</string>
     <string name="market_listings_action_appeal">هٽائڻ خلاف اپيل</string>
@@ -563,7 +563,7 @@
     <string name="market_listing_unsave">محفوظ مان هٽايو</string>
     <string name="market_listings_delete_failed">لسٽنگ ڊاهڻ ۾ ناڪامي</string>
     <string name="market_listings_delete_message">هي توهان جي اڪائونٽ مان مسودو هميشه لاءِ هٽائي ٿو.</string>
-    <string name="market_listings_delete_title">لسٽنگ ڊاهيو؟</string>
+    <string name="market_listings_delete_title">لسٽنگ ختم ڪجي؟</string>
     <string name="market_listings_empty_subtitle">پنهنجي پهرين شيءِ ٺاهڻ لاءِ نئين لسٽنگ تي ٽيپ ڪريو.</string>
     <string name="market_listings_load_failed">توهان جون لسٽنگون لوڊ ڪرڻ ۾ ناڪامي</string>
     <string name="market_listings_search_placeholder">پنهنجين لسٽنگن ۾ ڳوليو</string>
@@ -663,7 +663,7 @@
     <string name="market_seller_become_heading">وڪرو ڪندڙ ٿيو</string>
     <string name="market_seller_become_title">وڪرو ڪندڙ ٿيو</string>
     <string name="market_seller_check_status">حالت چيڪ ڪريو</string>
-    <string name="market_seller_checking">چيڪ ڪري رهيو آهي...</string>
+    <string name="market_seller_checking">جانچ پڙتال ٿي رهي آهي…</string>
     <string name="market_seller_connect_stripe">Stripe سان ڳنڍيو</string>
     <string name="market_seller_connecting">لوڊ ٿي رهيو آهي...</string>
     <string name="market_seller_fee_loading">فيس جا تفصيل لوڊ ٿي رهيا آهن...</string>

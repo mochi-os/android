@@ -9,7 +9,7 @@
     <string name="calendars_rename">Badilisha jina</string>
     <string name="calendars_delete">Futa</string>
     <string name="calendars_previous">Iliyotangulia</string>
-    <string name="calendars_next">Endelea</string>
+    <string name="calendars_next">Inayofuata</string>
     <string name="calendars_view">Mwonekano</string>
     <string name="calendars_view_list">Orodha</string>
     <string name="calendars_list_search">Tafuta</string>
@@ -57,10 +57,10 @@
     <string name="calendars_drawer_title">Kalenda</string>
     <string name="calendars_drawer_open">Kalenda</string>
     <string name="calendars_calendar_menu">Chaguo za %1$s</string>
-    <string name="calendars_only_this">Hii pekee</string>
+    <string name="calendars_only_this">Hii tu</string>
     <string name="calendars_create">Unda kalenda</string>
     <string name="calendars_subscribe">Jiandikishe kwenye kalenda</string>
-    <string name="calendars_poll">Pakua sasa</string>
+    <string name="calendars_poll">Angalia sasa</string>
     <string name="calendars_delete_title">Ufute %1$s?</string>
     <string name="calendars_delete_message">Matukio yake yatafutwa pamoja nayo.</string>
     <string name="calendars_today">Leo</string>
@@ -78,7 +78,7 @@
     <string name="calendars_event_finish">Mwisho</string>
     <string name="calendars_event_repeat">Kurudia</string>
     <string name="calendars_event_reminder">Kikumbusho</string>
-    <string name="calendars_event_recurring">Hujirudia</string>
+    <string name="calendars_event_recurring">Hurudiwa</string>
     <string name="calendars_event_delete_title">Ufute %1$s?</string>
     <string name="calendars_event_delete_message">Hatua hii haiwezi kutenduliwa.</string>
     <string name="calendars_scope_edit">Ubadilishe tukio hili au matukio yote?</string>
@@ -89,7 +89,7 @@
     <string name="calendars_repeat_weekly">Kila wiki</string>
     <string name="calendars_repeat_interval">Kila</string>
     <string name="calendars_repeat_days">Siku</string>
-    <string name="calendars_repeat_count">Mara za kujirudia</string>
+    <string name="calendars_repeat_count">Idadi ya marudio</string>
     <string name="calendars_repeat_forever">Milele</string>
     <string name="calendars_reminder_time">Wakati wa tukio</string>
     <string name="calendars_reminder_minutes">Dakika %1$d kabla</string>
@@ -100,9 +100,9 @@
     <string name="calendars_hours_invalid">Saa za kazi lazima ziishe baada ya kuanza.</string>
     <string name="calendars_work_days">Siku za kazi</string>
     <string name="calendars_multiweek_weeks">Wiki zinazoonyeshwa</string>
-    <string name="calendars_multiweek_previous">Wiki zilizopita</string>
+    <string name="calendars_multiweek_previous">Wiki zilizotangulia</string>
     <string name="calendars_default_duration">Urefu chaguomsingi wa tukio</string>
-    <string name="calendars_default_reminder">Kikumbusho chaguomsingi</string>
+    <string name="calendars_default_reminder">Kikumbusho chaguo-msingi</string>
     <string name="calendars_link_title">Kiungo cha kalenda</string>
     <string name="calendars_link_copy">Nakili kiungo</string>
     <string name="calendars_link_once">Nakili sasa: hakiwezi kuonyeshwa tena.</string>

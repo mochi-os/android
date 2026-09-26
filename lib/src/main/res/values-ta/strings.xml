@@ -56,7 +56,7 @@
     <string name="notifications_title">அறிவிப்புகள்</string>
     <string name="notifications_empty">அறிவிப்புகள் இல்லை</string>
     <string name="notifications_empty_unread">அனைத்தையும் பார்த்துவிட்டீர்கள்</string>
-    <string name="notifications_tab_unread">படிக்காதவை</string>
+    <string name="notifications_tab_unread">படிக்கப்படாதது</string>
     <string name="notifications_tab_unread_count">படிக்காதவை (%1$d)</string>
     <string name="notifications_tab_all">அனைத்தும்</string>
     <string name="notifications_mark_all_read">அனைத்தையும் படித்ததாகக் குறிக்கவும்</string>
@@ -126,14 +126,14 @@
 
     <string name="error_network">இணைக்க முடியவில்லை. உங்கள் இணைய இணைப்பைச் சரிபார்த்து மீண்டும் முயற்சிக்கவும்.</string>
     <string name="error_authentication_required">அங்கீகாரம் தேவை</string>
-    <string name="error_not_found">காணப்படவில்லை</string>
+    <string name="error_not_found">கிடைக்கவில்லை</string>
     <string name="error_server">சேவையக பிழை (%1$d). பின்னர் மீண்டும் முயற்சிக்கவும்.</string>
     <string name="error_unexpected">எதிர்பாராத பிழை ஏற்பட்டது</string>
     <string name="error_enter_server_url">சேவையக URL ஐ உள்ளிடவும்</string>
     <string name="error_enter_email">உங்கள் மின்னஞ்சலை உள்ளிடவும்</string>
     <string name="error_enter_name">ஒரு பெயரை உள்ளிடவும்</string>
     <string name="auth_connect_to_server">உங்கள் சேவையகத்துடன் இணைக்கவும்</string>
-    <string name="auth_connect">இணைக்கவும்</string>
+    <string name="auth_connect">இணை</string>
     <string name="auth_sign_in">உள்நுழைக</string>
     <string name="auth_check_email">சரிபார்ப்பு குறியீட்டிற்காக உங்கள் மின்னஞ்சலைச் சரிபார்க்கவும்</string>
     <string name="auth_mfa_title">பல-காரணி அங்கீகாரம்</string>
@@ -146,7 +146,7 @@
     <string name="auth_use_passkey">கடவுக்குறியைப் பயன்படுத்தவும்</string>
     <string name="auth_email_me_a_code">எனக்கு ஒரு குறியீட்டை மின்னஞ்சல் செய்யவும்</string>
     <string name="auth_or_enter_authenticator_code">அல்லது அங்கீகரிப்பு குறியீட்டை உள்ளிடவும்</string>
-    <string name="auth_log_in">உள்நுழைக</string>
+    <string name="auth_log_in">உள்நுழை</string>
     <string name="auth_back">பின்</string>
     <string name="auth_lost_access_recovery">அணுகலை இழந்தீர்களா? மீட்பு குறியீட்டைப் பயன்படுத்தவும்</string>
     <string name="auth_create_identity_title">உங்கள் அடையாளத்தை உருவாக்கவும்</string>
@@ -178,7 +178,7 @@
     <string name="notifications_clear">அறிவிப்புகளை அழி</string>
     <string name="entity_avatar_alt">%1$s க்கான அவதார்</string>
     <string name="media_grid_more_count">+%1$d</string>
-    <string name="format_time_just_now">இப்போதே</string>
+    <string name="format_time_just_now">இப்போதுதான்</string>
     <string name="format_time_minutes_ago">%1$dநி முன்</string>
     <string name="format_time_hours_ago">%1$dம முன்</string>
     <string name="format_time_days_ago">%1$dநா முன்</string>
@@ -190,7 +190,7 @@
     <string name="format_time_days_short">%1$dநா</string>
     <string name="format_time_weeks_short">%1$dவா</string>
     <string name="format_time_months_short">%1$dமா</string>
-    <string name="reaction_add">எதிர்வினையைச் சேர்</string>
+    <string name="reaction_add">ரியாக்ஷன் சேர்</string>
     <string name="push_service_channel">Mochi புஷ்</string>
     <string name="push_service_channel_description">அறிவிப்புகளைப் பெற Mochi ஐ இணைப்பில் வைத்திருக்கிறது</string>
     <string name="push_service_group">பின்னணி சேவை</string>
@@ -238,7 +238,7 @@
     <string name="stepup_error_oauth">அந்தக் கணக்கைச் சரிபார்க்க முடியவில்லை. மீண்டும் முயற்சிக்கவும்.</string>
     <string name="game_system_resign">%1$s விட்டுக்கொடுத்தார்</string>
     <string name="game_system_draw_offer">%1$s சமநிலையை முன்மொழிந்தார்</string>
-    <string name="game_system_draw_accept">சமநிலை ஒப்புக்கொள்ளப்பட்டது</string>
+    <string name="game_system_draw_accept">சமநிலை ஏற்கப்பட்டது</string>
     <string name="game_system_draw_decline">%1$s சமநிலையை மறுத்தார்</string>
     <string name="reactivation_title">உங்கள் கணக்கு நீக்குவதற்குத் திட்டமிடப்பட்டுள்ளது</string>
     <string name="reactivation_body">உங்கள் கணக்கு நீக்குவதற்குத் திட்டமிடப்பட்டுள்ளது. இப்போது ரத்து செய்து முழு அணுகலை மீட்டெடுக்கலாம்.</string>
@@ -288,7 +288,7 @@
     <string name="lightbox_comments">கருத்துகள்</string>
     <string name="common_attachment_unavailable">இணைப்பு தற்காலிகமாக கிடைக்கவில்லை</string>
     <string name="common_unavailable">கிடைக்கவில்லை</string>
-    <string name="common_not_found">காணப்படவில்லை</string>
+    <string name="common_not_found">கிடைக்கவில்லை</string>
     <string name="format_bold">தடித்த</string>
     <string name="format_italic">சாய்வு</string>
     <string name="format_link">இணைப்பு</string>
@@ -310,7 +310,7 @@
     <string name="settings_card_flat">தட்டையானது</string>
     <string name="settings_card_raised">உயர்த்தப்பட்டது</string>
     <string name="error_server_https">சேவையக முகவரி https:// என்று தொடங்க வேண்டும்</string>
-    <string name="device_name_fallback">கைபேசி சாதனம்</string>
+    <string name="device_name_fallback">மொபைல் சாதனம்</string>
     <string name="account_error_token_type">ஆதரிக்கப்படாத டோக்கன் வகை</string>
     <string name="account_error_caller">அழைப்பாளருக்கு அனுமதி இல்லை</string>
 </resources>

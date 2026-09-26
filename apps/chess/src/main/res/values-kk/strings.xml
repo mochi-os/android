@@ -32,8 +32,8 @@
     <string name="chess_draw_accept">Қабылдау</string>
     <string name="chess_draw_decline">Қабылдамау</string>
     <string name="chess_status_checkmate_you_win">Шахмат — сіз жеңдіңіз!</string>
-    <string name="chess_status_stalemate">Тығырық — тең ойын</string>
-    <string name="chess_status_draw">Сызу</string>
+    <string name="chess_status_stalemate">Пат — тең ойын</string>
+    <string name="chess_status_draw">Тең ойын</string>
     <string name="chess_status_check_your_move">Шах — сіздің жүрісіңіз</string>
     <string name="chess_status_your_move">Сіздің жүрісіңіз</string>
     <string name="chess_move_subject_you">Сіз</string>
@@ -60,7 +60,7 @@
     <string name="chess_empty_subtitle">Досыңызбен шахмат ойнау үшін бірінші ойыныңызды бастаңыз.</string>
     <string name="chess_empty_start_button">Бірінші ойыныңызды бастаңыз</string>
     <string name="chess_detail_unavailable">Ойын қолжетімсіз</string>
-    <string name="chess_delete_title">Ойынды жою керек пе?</string>
+    <string name="chess_delete_title">Ойын жойылсын ба?</string>
     <string name="chess_delete_message">Бұл ойынды тізіміңізден жояды.</string>
     <string name="chess_ws_connecting">Қосылуда…</string>
     <string name="chess_ws_disconnected">Offline</string>

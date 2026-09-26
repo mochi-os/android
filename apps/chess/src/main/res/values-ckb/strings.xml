@@ -17,7 +17,7 @@
     <string name="chess_new_add_friends">زیادکردنی هاوڕێیان</string>
     <string name="chess_new_start_button">یاری دەستپێبکە</string>
     <string name="chess_new_creating">دروستکردن…</string>
-    <string name="chess_chat_title">گفتوگۆ</string>
+    <string name="chess_chat_title">چات</string>
     <string name="chess_open_chat">کردنەوەی پانێڵی گفتوگۆ</string>
     <string name="chess_open_actions">کردنەوەی کردارەکانی یاری</string>
     <string name="chess_offer_draw">پێشنیاری وەکیەکی</string>
@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">وەرگرتن</string>
     <string name="chess_draw_decline">ڕەتکردنەوە</string>
     <string name="chess_status_checkmate_you_win">کش مات — تۆ بردتەوە!</string>
-    <string name="chess_status_stalemate">گیرکردن — یەکسانی</string>
+    <string name="chess_status_stalemate">پات — یەکسانی</string>
     <string name="chess_status_draw">یەکسانی</string>
     <string name="chess_status_check_your_move">کش — جوڵانی تۆ</string>
     <string name="chess_status_your_move">نۆرەی تۆ</string>
@@ -60,7 +60,7 @@
     <string name="chess_empty_subtitle">یاریی یەکەمت دەست پێبکە بۆ یاریکردنی شەترەنج لەگەڵ هاوڕێیەک.</string>
     <string name="chess_empty_start_button">یاریی یەکەمت دەست پێبکە</string>
     <string name="chess_detail_unavailable">یاری بەردەست نییە</string>
-    <string name="chess_delete_title">یارییەکە بسڕەوە؟</string>
+    <string name="chess_delete_title">یارییەکە بسڕدرێتەوە؟</string>
     <string name="chess_delete_message">ئەمە یارییەکە لە لیستەکەت لادەبات.</string>
     <string name="chess_ws_connecting">پەیوەست دەبێت…</string>
     <string name="chess_ws_disconnected">Offline</string>

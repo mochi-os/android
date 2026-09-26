@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="calendars_create_submit">Embojeguáva</string>
+    <string name="calendars_create_submit">Emoheñói</string>
     <string name="calendars_subscribe_submit">Eñemboaty</string>
     <string name="calendars_subscribe_url">Dirección</string>
     <string name="calendars_connect_device">Embojoaju peteĩ mba\'e</string>
@@ -9,7 +9,7 @@
     <string name="calendars_rename">Embohera jey</string>
     <string name="calendars_delete">Hundi</string>
     <string name="calendars_previous">Tenondete</string>
-    <string name="calendars_next">Tenonde</string>
+    <string name="calendars_next">Tenondeve</string>
     <string name="calendars_view">Jehecha</string>
     <string name="calendars_view_list">Tysýi</string>
     <string name="calendars_list_search">Eheka</string>
@@ -20,7 +20,7 @@
     <string name="calendars_repeat_never">Araka\'eve</string>
     <string name="calendars_repeat_monthly">Mes-pe</string>
     <string name="calendars_repeat_yearly">Ary mante</string>
-    <string name="calendars_repeat_custom">Personalizado</string>
+    <string name="calendars_repeat_custom">Ñemomba\'e</string>
     <string name="calendars_reminder_none">Mba\'eve</string>
     <string name="calendars_day_sunday">Arateĩ</string>
     <string name="calendars_day_monday">Arakõi</string>
@@ -41,14 +41,14 @@
     <string name="calendars_sync_transport">Ndaikatúi og̃uahẽ mohendahápe</string>
     <string name="calendars_device_title">Embojoaju peteĩ mba\'e</string>
     <string name="calendars_device_name">Mba\'e réra</string>
-    <string name="calendars_device_create">Embojeguáva</string>
+    <string name="calendars_device_create">Emoheñói</string>
     <string name="calendars_device_server">Mohendaha</string>
     <string name="calendars_device_address">Dirección</string>
     <string name="calendars_device_username">Puruhára réra</string>
     <string name="calendars_device_password">Ñe\'ẽñemi</string>
     <string name="calendars_device_copy">Kopia %1$s</string>
     <string name="calendars_device_done">Apopyre</string>
-    <string name="calendars_device_created">Oñembojeguáma %1$s</string>
+    <string name="calendars_device_created">Oñemoheñói %1$s</string>
     <string name="calendars_device_delete">Hundi</string>
     <string name="calendars_colour">Sa\'y</string>
     <string name="calendars_view_day">Ára</string>
@@ -58,7 +58,7 @@
     <string name="calendars_drawer_open">Arapapahakuéra</string>
     <string name="calendars_calendar_menu">%1$s opcionkuéra</string>
     <string name="calendars_only_this">Kóva añónte</string>
-    <string name="calendars_create">Embojeguáva arapapaha</string>
+    <string name="calendars_create">Emoheñói arapapaha</string>
     <string name="calendars_subscribe">Eñemboaty arapapaha ndive</string>
     <string name="calendars_poll">Ehecha ko\'ágã</string>
     <string name="calendars_delete_title">Ehundíta %1$s?</string>
@@ -154,25 +154,25 @@
     <string name="calendars_link_submit">Embojuaju</string>
     <string name="calendars_link_sync">Embojoja ko\'ág̃a</string>
     <string name="calendars_link_grant">Emoneĩ jeike arapapahápe</string>
-    <string name="calendars_link_linked">Ojuaju</string>
+    <string name="calendars_link_linked">Ojejuaju</string>
     <string name="calendars_link_marker">Arapapaha ojuajúva</string>
     <string name="calendars_link_remote_empty">Ndaipóri arapapaha</string>
     <string name="calendars_poll_conflict">Peteĩ mba\'e oikóva iñambue mokõive hendápe</string>
     <string name="calendars_poll_missing">Arapapaha ndaipóri véima imohendahápe</string>
-    <string name="calendars_poll_unauthorised">Arapapaha mohendaha nomoneĩri cuenta credencial</string>
+    <string name="calendars_poll_unauthorised">Arapapaha mohendaha nomoneĩri mba\'ete credencial</string>
     <string name="calendars_subscribe_username">Puruhára réra</string>
     <string name="calendars_subscribe_password">Ñe\'ẽñemi</string>
     <string name="calendars_subscribe_connect">Embojoaju</string>
     <string name="calendars_subscribe_server">Ambue Mochi térã CalDAV servidor</string>
     <string name="calendars_subscribe_address">Arapapaha dirección ojepublicáva (moñe\'ẽrã añónte)</string>
     <string name="calendars_subscribe_password_apple">Aplicación ñe\'ẽñemi</string>
-    <string name="calendars_subscribe_server_url">Servidor dirección</string>
+    <string name="calendars_subscribe_server_url">Mohendaha dirección</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Arapapaha</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
-    <string name="calendars_subscribe_google_enable">Google cuentakuéra ndoñemyendýi ko mohendahápe. Emyendy Ñemboheko, Sistema ñemboheko-pe.</string>
-    <string name="calendars_subscribe_google_connect">Ndembojuajúi peteĩ Google cuenta.</string>
+    <string name="calendars_subscribe_google_enable">Google mba\'etekuéra ndoñemyendýi ko mohendahápe. Emyendy Ñemboheko, Sistema ñemboheko-pe.</string>
+    <string name="calendars_subscribe_google_connect">Ndembojuajúi peteĩ Google mba\'ete.</string>
     <string name="calendars_subscribe_google_connect_action">Embojoaju Google</string>
     <string name="calendars_grant_failed">Ndoje\'ẽi jeike arapapahápe</string>
 </resources>

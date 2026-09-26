@@ -196,7 +196,7 @@
     <string name="projects_watchers_empty">ยังไม่มีผู้ติดตาม</string>
     <string name="projects_object_delete_title">ลบวัตถุ</string>
     <string name="projects_object_delete_message">คุณแน่ใจหรือไม่ว่าต้องการลบวัตถุนี้ การดำเนินการนี้ไม่สามารถยกเลิกได้</string>
-    <string name="projects_parent_none">ไม่มีรายการหลัก</string>
+    <string name="projects_parent_none">ไม่มีรายการแม่</string>
     <string name="projects_links_empty">ไม่มีลิงก์</string>
     <string name="projects_links_section_relates">เกี่ยวข้องกับ</string>
     <string name="projects_links_section_duplicated_by">ถูกทำซ้ำโดย</string>
@@ -290,7 +290,7 @@
     <string name="projects_field_position">ตำแหน่งการแสดงผล</string>
     <string name="projects_field_position_header">ส่วนหัว</string>
     <string name="projects_field_validation">การตรวจสอบ</string>
-    <string name="projects_field_min_length">ความยาวต่ำสุด</string>
+    <string name="projects_field_min_length">ความยาวขั้นต่ำ</string>
     <string name="projects_field_max_length">ความยาวสูงสุด</string>
     <string name="projects_field_pattern">รูปแบบ (regex)</string>
     <string name="projects_field_rows">จำนวนแถว (ความสูงกล่องข้อความ)</string>

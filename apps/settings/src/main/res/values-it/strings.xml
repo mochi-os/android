@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s non gestirà più i percorsi su questo dominio.</string>
     <string name="domain_delegation_delete_title">Eliminare la delega?</string>
     <string name="domain_delegation_path">Percorso</string>
-    <string name="domain_delegation_user">ID utente</string>
+    <string name="domain_delegation_user">Utente</string>
     <string name="domain_delegations">Deleghe</string>
     <string name="domain_delegations_empty">Nessuna delega configurata.</string>
     <string name="domain_delete">Elimina dominio</string>

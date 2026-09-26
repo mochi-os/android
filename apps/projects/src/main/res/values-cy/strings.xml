@@ -195,16 +195,16 @@
     <string name="projects_links_type">Math o ddolen</string>
     <string name="projects_links_type_relates">Yn ymwneud â</string>
     <string name="projects_links_search_placeholder">Chwilio gwrthrychau</string>
-    <string name="projects_links_remove">Tynnu\'r ddolen</string>
+    <string name="projects_links_remove">Tynnu dolen</string>
     <string name="projects_comment_replying_to">Ymateb i %1$s</string>
     <string name="projects_comment_clear_reply">Clirio\'r ymateb</string>
     <string name="projects_comment_placeholder">Ychwanegu sylw</string>
-    <string name="projects_comment_remove_attachment">Tynnu\'r atodiad</string>
+    <string name="projects_comment_remove_attachment">Tynnu atodiad</string>
     <string name="projects_property_pick_date">Dewis dyddiad</string>
     <string name="projects_property_ok">Iawn</string>
     <string name="projects_property_add_item">Ychwanegu eitem</string>
     <string name="projects_property_required">Mae angen %1$s</string>
-    <string name="projects_activity_empty">Dim gweithgaredd</string>
+    <string name="projects_activity_empty">Dim gweithgarwch</string>
     <string name="projects_activity_created">wedi creu\'r gwrthrych hwn</string>
     <string name="projects_activity_deleted">wedi dileu\'r gwrthrych hwn</string>
     <string name="projects_activity_changed">wedi newid %1$s: %2$s → %3$s</string>
@@ -242,7 +242,7 @@
     <string name="projects_tree_expand">Ehangu</string>
     <string name="projects_tree_move">Symud</string>
     <string name="projects_tree_move_to_parent">Symud i\'r rhiant</string>
-    <string name="projects_tree_root_level">(Lefel gwraidd)</string>
+    <string name="projects_tree_root_level">(Lefel wraidd)</string>
     <string name="projects_tree_empty">Dim gwrthrychau</string>
     <string name="projects_board_no_columns">Dim colofnau wedi\'u ffurfweddu ar gyfer y golwg hwn</string>
     <string name="projects_board_no_options">Dim opsiynau wedi\'u ffurfweddu ar gyfer maes y golofn</string>
@@ -276,7 +276,7 @@
     <string name="projects_class_move_up">Symud i fyny</string>
     <string name="projects_class_move_down">Symud i lawr</string>
     <string name="projects_class_delete_message">Ydych chi\'n siŵr eich bod am ddileu\'r dosbarth \"%1$s\"? Bydd pob maes a\'u hopsiynau hefyd yn cael eu dileu.</string>
-    <string name="projects_field_type_enumerated">Rhifedig</string>
+    <string name="projects_field_type_enumerated">Rhestrol</string>
     <string name="projects_field_label">Maes: %1$s</string>
     <string name="projects_field_readonly">Darllen yn unig</string>
     <string name="projects_field_sortable">Trefnadwy</string>
@@ -318,7 +318,7 @@
     <string name="projects_filter">Hidlo</string>
     <string name="projects_link">Dolen</string>
     <string name="projects_filter_clear_all">Clirio popeth</string>
-    <string name="projects_filter_all">Popeth</string>
+    <string name="projects_filter_all">Pob un</string>
     <string name="projects_filter_other">Arall</string>
     <string name="projects_create_object_title">Newydd</string>
     <string name="projects_settings_section_identity">Hunaniaeth</string>
@@ -330,7 +330,7 @@
     <string name="projects_settings_field_fingerprint">Olion bysedd</string>
     <string name="projects_settings_field_server">Gweinydd</string>
     <string name="projects_access_subject_anyone">Unrhyw un</string>
-    <string name="projects_access_subject_authenticated">Defnyddwyr dilys</string>
+    <string name="projects_access_subject_authenticated">Defnyddwyr dilysedig</string>
     <string name="projects_access_select_role">Dewis rôl</string>
     <string name="projects_access_role_view">Gweld yn unig</string>
     <string name="projects_access_role_none">Dim mynediad</string>

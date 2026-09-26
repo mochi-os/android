@@ -4,7 +4,7 @@
     <string name="calendars_subscribe_submit">Tilaa</string>
     <string name="calendars_subscribe_url">Osoite</string>
     <string name="calendars_connect_device">Yhdistä laite</string>
-    <string name="calendars_preferences">Asetukset</string>
+    <string name="calendars_preferences">Mieltymykset</string>
     <string name="calendars_name">Nimi</string>
     <string name="calendars_rename">Nimeä uudelleen</string>
     <string name="calendars_delete">Poista</string>
@@ -44,7 +44,7 @@
     <string name="calendars_device_create">Luo</string>
     <string name="calendars_device_server">Palvelin</string>
     <string name="calendars_device_address">Osoite</string>
-    <string name="calendars_device_username">Käyttäjänimi</string>
+    <string name="calendars_device_username">Käyttäjätunnus</string>
     <string name="calendars_device_password">Salasana</string>
     <string name="calendars_device_copy">Kopioi %1$s</string>
     <string name="calendars_device_done">Valmis</string>
@@ -160,7 +160,7 @@
     <string name="calendars_poll_conflict">Tapahtuma muuttui molemmilla puolilla</string>
     <string name="calendars_poll_missing">Kalenteria ei ole enää palvelimellaan</string>
     <string name="calendars_poll_unauthorised">Kalenterin palvelin hylkäsi tilin tunnistetiedot</string>
-    <string name="calendars_subscribe_username">Käyttäjänimi</string>
+    <string name="calendars_subscribe_username">Käyttäjätunnus</string>
     <string name="calendars_subscribe_password">Salasana</string>
     <string name="calendars_subscribe_connect">Yhdistä</string>
     <string name="calendars_subscribe_server">Toinen Mochi- tai CalDAV-palvelin</string>

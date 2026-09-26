@@ -60,7 +60,7 @@
     <string name="notifprefs_add_category">Санат қосу</string>
     <string name="notifprefs_new_category">Жаңа санат</string>
     <string name="notifprefs_edit_category">Санатты өңдеу</string>
-    <string name="notifprefs_name_label">Аты</string>
+    <string name="notifprefs_name_label">Атау</string>
     <string name="notifprefs_destinations">Бағыттар</string>
     <string name="notifprefs_dest_web">Веб-браузер</string>
     <string name="notifprefs_test">Тест</string>
@@ -93,7 +93,7 @@
     <string name="accounts_type_label">Түрі</string>
     <string name="accounts_field_email">Электрондық пошта</string>
     <string name="accounts_field_model">Үлгі</string>
-    <string name="accounts_field_name">Аты</string>
+    <string name="accounts_field_name">Атау</string>
     <string name="accounts_status_pending">Күтуде</string>
     <string name="accounts_status_verified">Тексерілді</string>
     <string name="accounts_status_connected">Қосылды</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">Басымдылық %1$d · %2$s</string>
     <string name="interests_search_placeholder">Қосу үшін тақырыптарды іздеу…</string>
     <string name="interests_empty">Әзірше қызығушылықтар жоқ.</string>
-    <string name="interests_summary_regenerate">Қорытындыны қайта жасау</string>
+    <string name="interests_summary_regenerate">Қысқаша мазмұнды қайта жасау</string>
     <string name="interests_summary_regenerating">Қайта жасалуда…</string>
     <string name="interests_summary_empty">Сізге ұнайтын нәрсенің қорытындысын жасау үшін кейбір қызығушылықтарды қосыңыз.</string>
     <string name="interests_search_failed">Іздеу сәтсіз аяқталды. Қайтадан көріңіз.</string>
@@ -278,7 +278,7 @@
     <string name="account_identity_identity">Жеке басы</string>
     <string name="account_identity_username">Пайдаланушы аты</string>
     <string name="account_identity_name">Аты</string>
-    <string name="account_identity_fingerprint">Саусақ ізі</string>
+    <string name="account_identity_fingerprint">Қысқа идентификатор</string>
     <string name="account_identity_directory_toggle">Сізді каталогтан табуға басқаларға рұқсат ету</string>
     <string name="domain_add">Домен қосу</string>
     <string name="domain_add_title">Домен қосу</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s енді осы доменде маршруттарды басқармайды.</string>
     <string name="domain_delegation_delete_title">Делегацияны жою керек пе?</string>
     <string name="domain_delegation_path">Жол</string>
-    <string name="domain_delegation_user">Пайдаланушы ID</string>
+    <string name="domain_delegation_user">Пайдаланушы</string>
     <string name="domain_delegations">Делегациялар</string>
     <string name="domain_delegations_empty">Конфигурацияланған өкілдіктер жоқ.</string>
     <string name="domain_delete">Доменді жою</string>

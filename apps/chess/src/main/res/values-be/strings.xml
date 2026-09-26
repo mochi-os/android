@@ -32,7 +32,7 @@
     <string name="chess_draw_decline">Адхіліць</string>
     <string name="chess_status_checkmate_you_win">Мат — вы перамаглі!</string>
     <string name="chess_status_stalemate">Пат — нічыя</string>
-    <string name="chess_status_draw">Маляваць</string>
+    <string name="chess_status_draw">Нічыя</string>
     <string name="chess_status_check_your_move">Шах — ваш ход</string>
     <string name="chess_status_your_move">Ваш ход</string>
     <string name="chess_move_subject_you">Вы</string>
@@ -58,12 +58,12 @@
     <string name="chess_empty_subtitle">Пачніце сваю першую партыю, каб згуляць у шахматы з сябрам.</string>
     <string name="chess_empty_start_button">Пачаць першую партыю</string>
     <string name="chess_detail_unavailable">Партыя недаступная</string>
-    <string name="chess_delete_title">Выдаліць партыю?</string>
+    <string name="chess_delete_title">Выдаліць гульню?</string>
     <string name="chess_delete_message">Гэта выдаліць партыю з вашага спіса.</string>
     <string name="chess_ws_connecting">Падключэнне…</string>
     <string name="chess_ws_disconnected">Не ў сетцы</string>
     <string name="chess_ws_reconnecting">Паўторнае падключэнне…</string>
-    <string name="chess_ws_failed">Падключэнне не атрымалася</string>
+    <string name="chess_ws_failed">Не ўдалося падключыцца</string>
     <string name="chess_move_capture">%1$s узяў %2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
     <string name="chess_piece_white">Белы %1$s</string>

@@ -60,7 +60,7 @@
     <string name="chess_empty_subtitle">הייבט אָן אײַער ערשט שפּיל צו שפּילן שאָך מיט אַ פֿרײַנד.</string>
     <string name="chess_empty_start_button">הייבט אָן אײַער ערשט שפּיל</string>
     <string name="chess_detail_unavailable">שפּיל נישט פֿאַראַן</string>
-    <string name="chess_delete_title">אויסמעקן שפּיל?</string>
+    <string name="chess_delete_title">אויסמעקן דעם שפּיל?</string>
     <string name="chess_delete_message">דאָס נעמט אַרויס דאָס שפּיל פֿון אײַער רשימה.</string>
     <string name="chess_ws_connecting">פֿאַרבינדט זיך…</string>
     <string name="chess_ws_disconnected">Offline</string>

@@ -123,7 +123,7 @@
     <string name="game_chat_move_played">%1$s이(가) %2$s을(를) 두었습니다</string>
 
     <string name="error_network">연결할 수 없습니다. 인터넷 연결을 확인하고 다시 시도하세요.</string>
-    <string name="error_authentication_required">인증이 필요합니다</string>
+    <string name="error_authentication_required">인증이 필요해요</string>
     <string name="error_not_found">찾을 수 없음</string>
     <string name="error_server">서버 오류 (%1$d). 잠시 후 다시 시도하세요.</string>
     <string name="error_unexpected">예상치 못한 오류가 발생했습니다</string>
@@ -161,7 +161,7 @@
     <string name="bootstrap_choose_account">계정 선택</string>
     <string name="bootstrap_sign_in_different_server">다른 서버에 로그인</string>
     <string name="common_retry">다시 시도</string>
-    <string name="common_more_options">더 보기</string>
+    <string name="common_more_options">추가 옵션</string>
     <string name="common_collapse">접기</string>
     <string name="common_expand">펼치기</string>
     <string name="common_play_video">동영상 재생</string>
@@ -177,7 +177,7 @@
     <string name="entity_avatar_alt">%1$s의 아바타</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="lightbox_position">%1$d / %2$d</string>
-    <string name="format_time_just_now">방금 전</string>
+    <string name="format_time_just_now">방금</string>
     <string name="format_time_minutes_ago">%1$d분 전</string>
     <string name="format_time_hours_ago">%1$d시간 전</string>
     <string name="format_time_days_ago">%1$d일 전</string>

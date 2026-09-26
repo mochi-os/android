@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi-strøm</string>
     <string name="feeds_source_type_feed_memories">Minner</string>
-    <string name="feeds_remove_source">Fjern kilde</string>
+    <string name="feeds_remove_source">Fjerne kilde?</string>
     <string name="feeds_suggested_credibility_accept">Godta</string>
     <string name="feeds_rss_url_copied">RSS-URL kopiert til utklippstavlen</string>
     <string name="feeds_logout">Logg ut</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS-URL</string>
     <string name="feeds_source_never_fetched">Aldri hentet</string>
     <string name="feeds_source_poll">Spør</string>
-    <string name="feeds_source_transform">Transformer</string>
+    <string name="feeds_source_transform">KI-transformering</string>
     <string name="feeds_remove_source_confirm">Fjerne \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Slett også importerte innlegg</string>
     <string name="feeds_suggested_credibility_title">Foreslått troverdighet</string>

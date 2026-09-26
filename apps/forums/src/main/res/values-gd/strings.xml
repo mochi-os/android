@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Dì-fho-sgrìobh</string>
     <string name="forums_list_unsubscribe_title">Dì-fho-sgrìobh</string>
     <string name="forums_create_title">Cruthaich fòram</string>
-    <string name="forums_create_name">Ainm</string>
+    <string name="forums_create_name">Ainm an fhòraim</string>
     <string name="forums_create_privacy">Prìobhaideachd</string>
     <string name="forums_create_private">Prìobhaideach</string>
     <string name="forums_create_public">Poblach</string>
-    <string name="forums_create_action">Cruthaich</string>
+    <string name="forums_create_action">Cruthaich fòram</string>
     <string name="forums_find_title">Lorg fòraman</string>
     <string name="forums_find_recommended">Air a mholadh</string>
     <string name="forums_find_subscribe">Fo-sgrìobh</string>
@@ -71,7 +71,7 @@
     <string name="forums_ai_account_default">Cunntas bunaiteach</string>
     <string name="forums_ai_prompt_reset">Ath-shuidhich chun a\' bhun-tuiteamais</string>
     <string name="forums_settings_unsubscribe">Dì-fho-sgrìobh</string>
-    <string name="forums_moderation_title">Maoir-ùghdarrais</string>
+    <string name="forums_moderation_title">Modarataireachd</string>
     <string name="forums_moderation_tab_queue">Ciudha</string>
     <string name="forums_moderation_tab_reports">Aithisgean</string>
     <string name="forums_moderation_tab_log">Loga</string>
@@ -135,7 +135,7 @@
     <string name="forums_write_comment">Sgrìobh beachd…</string>
 
     <string name="notification_channel_forums">Brathan nam fòraman</string>
-    <string name="forums_auth_brand">Fòraman Mochi</string>
+    <string name="forums_auth_brand">Mochi Fòraman</string>
     <string name="forums_list_empty">Chan eil fòram ann fhathast</string>
     <string name="forums_list_unsubscribe_message">A bheil thu cinnteach gu bheil thu airson sgur a fho-sgrìobhadh ris an fhòram seo?</string>
     <string name="forums_find_search_placeholder">Lorg fòraman no cuir URL ann</string>
@@ -156,7 +156,7 @@
     <string name="forums_banner_placeholder">Fàilte gun fhòram seo…</string>
     <string name="forums_ai_mode_label">Modh: %1$s</string>
     <string name="forums_ai_mode_heading">Modh IF</string>
-    <string name="forums_ai_mode_off">Dheth</string>
+    <string name="forums_ai_mode_off">À comas</string>
     <string name="forums_ai_account">Cunntas IF</string>
     <string name="forums_ai_prompt_tag">Brodadh tagaidh</string>
     <string name="forums_ai_prompt_score">Brodadh sgòraidh</string>
@@ -218,10 +218,10 @@
     <string name="forums_attachment_move_up">Gluais suas</string>
     <string name="forums_attachment_move_down">Gluais sìos</string>
     <string name="forums_post_comments">Beachdan</string>
-    <string name="forums_all_forums">A h-uile fòram</string>
+    <string name="forums_all_forums">Na fòraman uile</string>
     <string name="forums_create_allow_search">Leig le duine sam bith am fòram a lorg</string>
     <string name="forums_rss_clipboard_label">URL RSS an fhòraim</string>
-    <string name="forums_tab_moderation">Maoir-ùghdarrais</string>
+    <string name="forums_tab_moderation">Modarataireachd</string>
     <string name="forums_access_level_view_full">Seall a-mhàin</string>
     <string name="forums_access_level_none_full">Gun chothrom</string>
     <string name="forums_access_subject_anyone">Duine sam bith</string>
@@ -260,7 +260,7 @@
     <string name="forums_ai_actions_label">Gnìomhan IF air postaichean</string>
     <string name="forums_ai_prompt_custom">Gnàthaichte</string>
     <string name="forums_ai_prompt_score_label">Brodadh sgòraidh</string>
-    <string name="forums_ai_prompt_tag_label">Brodadh thagaichean</string>
+    <string name="forums_ai_prompt_tag_label">Brodadh taga</string>
     <string name="forums_ai_prompt_variables">Caochladairean: %1$s</string>
     <string name="forums_link">Ceangal</string>
     <string name="forums_moderation_ban_message">Caillidh iad inntrigeadh don fhòram gus an toir thu air falbh an cuingealachadh.</string>
@@ -278,15 +278,15 @@
     <string name="forums_moderation_restriction_by">Le %1$s</string>
     <string name="forums_moderation_restriction_remove_message">Gheibh iad làn inntrigeadh don fhòram air ais sa bhad.</string>
     <string name="forums_moderation_restriction_remove_title">Thoir air falbh an cuingealachadh air %1$s?</string>
-    <string name="forums_moderation_restriction_state_muted">Air a mhùchadh</string>
-    <string name="forums_moderation_restriction_state_shadowban">Toirmeasg falaichte</string>
+    <string name="forums_moderation_restriction_state_muted">Air a thostachadh</string>
+    <string name="forums_moderation_restriction_state_shadowban">Toirmisgte gu dìomhair</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Cha deach cleachdaiche sam bith a mhùchadh no a thoirmeasg</string>
     <string name="forums_moderation_section_premoderation_description">Iarr aontachadh mus bi susbaint ri fhaicinn</string>
     <string name="forums_moderation_section_ratelimiting_description">Cuir casg air spama le bhith a\' cuingealachadh cho tric \'s a gheibh cleachdaichean postadh</string>
     <string name="forums_moderation_settings_updated">Chaidh roghainnean modaireachd ùrachadh</string>
-    <string name="forums_moderation_unit_posts">post</string>
-    <string name="forums_moderation_unit_replies">freagairt</string>
-    <string name="forums_moderation_unit_seconds">diog</string>
+    <string name="forums_moderation_unit_posts">postaichean</string>
+    <string name="forums_moderation_unit_replies">freagairtean</string>
+    <string name="forums_moderation_unit_seconds">diogan</string>
     <string name="forums_settings_ai_updated">Chaidh roghainnean IF ùrachadh</string>
     <string name="forums_settings_forum_renamed">Chaidh am fòram ath-ainmeachadh</string>
     <string name="forums_settings_name_clear_cd">Falamhaich an t-ainm</string>

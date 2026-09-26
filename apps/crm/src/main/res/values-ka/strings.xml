@@ -30,7 +30,7 @@
     <string name="crm_settings_title">პარამეტრები</string>
     <string name="crm_settings_tab_general">ზოგადი</string>
     <string name="crm_settings_tab_access">წვდომა</string>
-    <string name="crm_settings_tab_people">ხალხი</string>
+    <string name="crm_settings_tab_people">ადამიანები</string>
     <string name="crm_option_icon">ხატულა</string>
     <string name="crm_option_icon_placeholder">მაგალითად. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">გამოწერის გაუქმება</string>
@@ -153,7 +153,7 @@
     <string name="crm_views_filter">ფილტრი (შენახულია, ჯერ არ არის გამოყენებული)</string>
     <string name="crm_people_empty">ჯერ არავის აქვს წვდომა</string>
     <string name="crm_settings_delete_confirm_message">დარწმუნებული ხართ, რომ გსურთ ამ CRM-ის წაშლა? ყველა ობიექტი, კომენტარი და პარამეტრი სამუდამოდ წაიშლება.</string>
-    <string name="crm_object_unwatch">თვალთვალის შეწყვეტა</string>
+    <string name="crm_object_unwatch">თვალყურის დევნების შეწყვეტა</string>
     <string name="crm_object_delete_title">ობიექტის წაშლა</string>
     <string name="crm_object_delete_message">დარწმუნებული ხართ, რომ გსურთ ამ ობიექტის წაშლა? ამ მოქმედების გაუქმება შეუძლებელია.</string>
     <string name="crm_parent_none">მშობელი არ არის</string>
@@ -207,10 +207,10 @@
     <string name="crm_field_type_enumerated">ჩამოთვლადი</string>
     <string name="crm_field_label">ველი: %1$s</string>
     <string name="crm_field_readonly">მხოლოდ წაკითხვადი</string>
-    <string name="crm_field_sortable">დასალაგებელი</string>
-    <string name="crm_field_filterable">გასაფილტრი</string>
+    <string name="crm_field_sortable">დახარისხებადი</string>
+    <string name="crm_field_filterable">ფილტრირებადი</string>
     <string name="crm_field_show_on_card">ბარათზე ჩვენება</string>
-    <string name="crm_field_multi">მრავალარჩევანი</string>
+    <string name="crm_field_multi">მრავლობითი არჩევანი</string>
     <string name="crm_field_position">ჩვენების პოზიცია</string>
     <string name="crm_field_position_header">სათაური</string>
     <string name="crm_field_validation">ვალიდაცია</string>

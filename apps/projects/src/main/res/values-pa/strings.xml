@@ -167,10 +167,10 @@
     <string name="projects_class_move_up">ਉੱਪਰ ਜਾਓ</string>
     <string name="projects_views_move_down">ਹੇਠਾਂ ਜਾਓ</string>
     <string name="projects_class_move_down">ਹੇਠਾਂ ਜਾਓ</string>
-    <string name="projects_sort_direction_asc">ਚੜ੍ਹਦਾ</string>
-    <string name="projects_views_direction_asc">ਚੜ੍ਹਦਾ</string>
-    <string name="projects_sort_direction_desc">ਘਟਦਾ</string>
-    <string name="projects_views_direction_desc">ਘਟਦਾ</string>
+    <string name="projects_sort_direction_asc">ਵਧਦੇ ਕ੍ਰਮ ਵਿੱਚ</string>
+    <string name="projects_views_direction_asc">ਵਧਦੇ ਕ੍ਰਮ ਵਿੱਚ</string>
+    <string name="projects_sort_direction_desc">ਘਟਦੇ ਕ੍ਰਮ ਵਿੱਚ</string>
+    <string name="projects_views_direction_desc">ਘਟਦੇ ਕ੍ਰਮ ਵਿੱਚ</string>
     <string name="projects_list_add_to_home">ਹੋਮ ਸਕਰੀਨ ਵਿੱਚ ਜੋੜੋ</string>
     <string name="projects_search_objects_placeholder">ਆਬਜੈਕਟ ਖੋਜੋ</string>
     <string name="projects_links_search_placeholder">ਆਬਜੈਕਟ ਖੋਜੋ</string>
@@ -191,17 +191,17 @@
     <string name="projects_views_filter">ਫਿਲਟਰ (ਸਟੋਰ ਕੀਤਾ, ਅਜੇ ਲਾਗੂ ਨਹੀਂ)</string>
     <string name="projects_people_empty">ਅਜੇ ਕਿਸੇ ਵਿਅਕਤੀ ਕੋਲ ਪਹੁੰਚ ਨਹੀਂ ਹੈ</string>
     <string name="projects_settings_delete_confirm_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਤੌਰ \'ਤੇ ਇਸ ਪ੍ਰੋਜੈਕਟ ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ? ਸਾਰੇ ਆਬਜੈਕਟ, ਟਿੱਪਣੀਆਂ ਅਤੇ ਸੈਟਿੰਗਾਂ ਪੱਕੇ ਤੌਰ \'ਤੇ ਹਟਾ ਦਿੱਤੀਆਂ ਜਾਣਗੀਆਂ।</string>
-    <string name="projects_object_unwatch">ਅਣ-ਦੇਖੋ</string>
+    <string name="projects_object_unwatch">ਨਿਗਰਾਨੀ ਬੰਦ ਕਰੋ</string>
     <string name="projects_object_tab_watchers">ਦੇਖਣ ਵਾਲੇ</string>
     <string name="projects_watchers_empty">ਅਜੇ ਕੋਈ ਦੇਖਣ ਵਾਲਾ ਨਹੀਂ</string>
     <string name="projects_object_delete_title">ਆਬਜੈਕਟ ਮਿਟਾਓ</string>
     <string name="projects_object_delete_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਤੌਰ \'ਤੇ ਇਸ ਆਬਜੈਕਟ ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ? ਇਹ ਕਾਰਵਾਈ ਵਾਪਸ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ।</string>
-    <string name="projects_parent_none">ਕੋਈ ਮਾਪਾ ਨਹੀਂ</string>
+    <string name="projects_parent_none">ਕੋਈ ਮੂਲ ਨਹੀਂ</string>
     <string name="projects_links_empty">ਕੋਈ ਲਿੰਕ ਨਹੀਂ</string>
-    <string name="projects_links_section_relates">ਸਬੰਧਿਤ ਹੈ</string>
-    <string name="projects_links_section_duplicated_by">ਇਸ ਦੁਆਰਾ ਡੁਪਲੀਕੇਟ ਕੀਤਾ ਗਿਆ</string>
+    <string name="projects_links_section_relates">ਨਾਲ ਸਬੰਧਤ ਹੈ</string>
+    <string name="projects_links_section_duplicated_by">ਦੁਆਰਾ ਡੁਪਲੀਕੇਟ ਕੀਤਾ ਗਿਆ</string>
     <string name="projects_links_type">ਲਿੰਕ ਕਿਸਮ</string>
-    <string name="projects_links_type_relates">ਸਬੰਧਿਤ ਹੈ</string>
+    <string name="projects_links_type_relates">ਨਾਲ ਸਬੰਧਤ ਹੈ</string>
     <string name="projects_links_remove">ਲਿੰਕ ਹਟਾਓ</string>
     <string name="projects_comment_replying_to">%1$s ਨੂੰ ਜਵਾਬ ਦੇ ਰਹੇ ਹੋ</string>
     <string name="projects_comment_clear_reply">ਜਵਾਬ ਸਾਫ਼ ਕਰੋ</string>
@@ -280,7 +280,7 @@
     <string name="projects_class_merge_requests_description">ਇਸ ਕਲਾਸ ਦੇ ਆਬਜੈਕਟਾਂ ਉੱਤੇ ਮਰਜ ਬੇਨਤੀਆਂ ਦੀ ਆਗਿਆ ਦਿਓ।</string>
     <string name="projects_class_parents">ਮੂਲ ਕਲਾਸਾਂ</string>
     <string name="projects_class_delete_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਹੋ ਕਿ ਤੁਸੀਂ ਕਲਾਸ \"%1$s\" ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ? ਸਾਰੀਆਂ ਫੀਲਡਾਂ ਅਤੇ ਉਨ੍ਹਾਂ ਦੇ ਵਿਕਲਪ ਵੀ ਮਿਟਾ ਦਿੱਤੇ ਜਾਣਗੇ।</string>
-    <string name="projects_field_type_enumerated">ਗਣਨਾਯੋਗ</string>
+    <string name="projects_field_type_enumerated">ਗਿਣਿਆ ਹੋਇਆ</string>
     <string name="projects_field_label">ਫੀਲਡ: %1$s</string>
     <string name="projects_field_readonly">ਸਿਰਫ਼-ਪੜ੍ਹਨਯੋਗ</string>
     <string name="projects_field_sortable">ਛਾਂਟਣਯੋਗ</string>
@@ -314,7 +314,7 @@
     <string name="projects_design_preview_empty">ਦਿਖਾਉਣ ਲਈ ਕੁਝ ਨਹੀਂ</string>
 
     <string name="projects_create_choose_template">ਟੈਮਪਲੇਟ ਚੁਣੋ</string>
-    <string name="projects_create_next">ਅੱਗੇ</string>
+    <string name="projects_create_next">ਅਗਲਾ</string>
     <string name="projects_filter">ਫਿਲਟਰ</string>
     <string name="projects_link">ਲਿੰਕ</string>
     <string name="projects_filter_clear_all">ਸਭ ਸਾਫ਼ ਕਰੋ</string>

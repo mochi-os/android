@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s tidak akan lagi mengelola rute pada domain ini.</string>
     <string name="domain_delegation_delete_title">Hapus delegasi?</string>
     <string name="domain_delegation_path">Jalur</string>
-    <string name="domain_delegation_user">ID pengguna</string>
+    <string name="domain_delegation_user">Pengguna</string>
     <string name="domain_delegations">Delegasi</string>
     <string name="domain_delegations_empty">Tidak ada delegasi yang dikonfigurasi.</string>
     <string name="domain_delete">Hapus domain</string>

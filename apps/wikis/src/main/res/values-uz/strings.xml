@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Olib tashlash</string>
     <string name="wikis_replicas_remove_failed">Replikani olib tashlab boʻlmadi</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki’lar</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">wiki sahifa tahrirlari, izohlar va takliflar haqidagi bildirishnomalar.</string>
     <string name="wikis_pageview_toc_expand">Mundarijani ko‘rsatish</string>
@@ -283,7 +283,7 @@
     <string name="wikis_load_more">Koʻproq yuklash</string>
     <string name="wikis_access_change_level">Kirish darajasi</string>
     <string name="wikis_access_subject_anyone">Har kim</string>
-    <string name="wikis_access_subject_authenticated">Tasdiqlangan foydalanuvchilar</string>
+    <string name="wikis_access_subject_authenticated">Autentifikatsiyadan oʻtgan foydalanuvchilar</string>
 
     <string name="wikis_revision_compare">O‘zgarishlarni solishtirish</string>
     <string name="wikis_revision_author">%1$s bo\'yicha</string>

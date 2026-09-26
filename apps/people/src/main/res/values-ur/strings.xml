@@ -146,7 +146,7 @@
     <string name="people_add_contact_search_start">صارفین کو تلاش کرنے کے لیے ٹائپ کریں</string>
     <string name="people_contact_phone">فون</string>
     <string name="people_contact_title">عہدہ</string>
-    <string name="people_contacts_title">روابط</string>
+    <string name="people_contacts_title">رابطے</string>
     <string name="people_contacts_all">تمام رابطے</string>
     <string name="people_contacts_empty">کوئی رابطہ نہیں ملا</string>
     <string name="people_contacts_add_to_start">رابطہ شروع کرنے کے لیے رابطے شامل کریں</string>
@@ -158,8 +158,8 @@
     <string name="people_contacts_delete_confirm">%1$s کو آپ کے رابطوں سے حذف کریں؟</string>
     <string name="people_contacts_delete_friend_confirm">%1$s کو آپ کے رابطوں سے حذف کریں؟ آپ کی دوستی بھی ختم ہو جائے گی۔</string>
     <string name="people_contact_new_title">نیا رابطہ</string>
-    <string name="people_contact_edit_title">رابطہ ترمیم کریں</string>
-    <string name="people_contact_given">نام</string>
+    <string name="people_contact_edit_title">رابطے میں ترمیم کریں</string>
+    <string name="people_contact_given">پہلا نام</string>
     <string name="people_contact_family">خاندانی نام</string>
     <string name="people_contact_nickname">عرفی نام</string>
     <string name="people_contact_add_email">ای میل شامل کریں</string>
@@ -167,7 +167,7 @@
     <string name="people_contact_add_address">پتہ شامل کریں</string>
     <string name="people_contact_street">گلی</string>
     <string name="people_contact_birthday">سالگرہ</string>
-    <string name="people_contact_organisation">تنظیم</string>
+    <string name="people_contact_organisation">ادارہ</string>
     <string name="people_contact_url">ویب سائٹ</string>
     <string name="people_contact_note">نوٹ</string>
     <string name="people_contact_book">ایڈریس بک</string>

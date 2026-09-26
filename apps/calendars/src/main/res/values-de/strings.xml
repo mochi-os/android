@@ -4,7 +4,7 @@
     <string name="calendars_subscribe_submit">Abonnieren</string>
     <string name="calendars_subscribe_url">Adresse</string>
     <string name="calendars_connect_device">Gerät verbinden</string>
-    <string name="calendars_preferences">Einstellungen</string>
+    <string name="calendars_preferences">Präferenzen</string>
     <string name="calendars_name">Name</string>
     <string name="calendars_rename">Umbenennen</string>
     <string name="calendars_delete">Löschen</string>
@@ -110,7 +110,7 @@
     <string name="calendars_multiweek_weeks">Angezeigte Wochen</string>
     <string name="calendars_multiweek_previous">Wochen davor</string>
     <string name="calendars_default_duration">Standarddauer für Termine</string>
-    <string name="calendars_default_reminder">Standarderinnerung</string>
+    <string name="calendars_default_reminder">Standard-Erinnerung</string>
     <string name="calendars_link_title">Kalenderlink</string>
     <string name="calendars_link_copy">Link kopieren</string>
     <string name="calendars_link_once">Kopiere ihn jetzt: er kann nicht erneut angezeigt werden.</string>
@@ -168,7 +168,7 @@
     <string name="calendars_subscribe_password_apple">App-spezifisches Passwort</string>
     <string name="calendars_subscribe_server_url">Serveradresse</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
-    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_apple_id">Apple-ID</string>
     <string name="calendars_subscribe_google">Google Kalender</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google-Konten sind auf diesem Server nicht aktiviert. Aktivieren Sie sie unter Einstellungen, Systemeinstellungen.</string>

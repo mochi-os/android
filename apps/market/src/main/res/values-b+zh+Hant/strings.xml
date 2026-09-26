@@ -41,7 +41,7 @@
     <string name="market_bids_tab_active">啟用中</string>
     <string name="market_bids_tab_all">全部</string>
     <string name="market_bids_tab_lost">未中標</string>
-    <string name="market_bids_tab_outbid">已被超越</string>
+    <string name="market_bids_tab_outbid">已被出價超越</string>
     <string name="market_bids_tab_won">中標</string>
     <string name="market_bids_title">競標</string>
     <string name="market_channel_name">市集</string>
@@ -64,7 +64,7 @@
     <string name="market_checkout_address_heading">運送地址</string>
     <string name="market_checkout_address_line1">地址第1行</string>
     <string name="market_checkout_address_line2">地址第2行</string>
-    <string name="market_checkout_address_name">名稱</string>
+    <string name="market_checkout_address_name">姓名</string>
     <string name="market_checkout_address_postcode">郵遞區號</string>
     <string name="market_checkout_address_region">區域</string>
     <string name="market_checkout_back">返回</string>
@@ -179,7 +179,7 @@
     <string name="market_listing_detail_buy_now">立即購買</string>
     <string name="market_listing_detail_description_heading">說明</string>
     <string name="market_listing_detail_edit">編輯</string>
-    <string name="market_listing_detail_information_heading">送貨資訊</string>
+    <string name="market_listing_detail_information_heading">運送資訊</string>
     <string name="market_listing_detail_load_failed">載入刊登失敗</string>
     <string name="market_listing_detail_listed">刊登於 %1$s</string>
     <string name="market_listing_detail_location_heading">位置</string>
@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">檢舉刊登</string>
     <string name="market_listing_detail_save">收藏</string>
     <string name="market_listing_detail_seller_heading">賣家</string>
-    <string name="market_listing_detail_shipping_heading">運送</string>
+    <string name="market_listing_detail_shipping_heading">運送選項</string>
     <string name="market_listing_detail_subscribe">訂閱</string>
     <string name="market_listing_detail_tags_heading">標籤</string>
     <string name="market_listing_detail_title">刊登</string>
@@ -216,7 +216,7 @@
     <string name="market_messages_inbox_title">訊息</string>
     <string name="market_messages_thread_listing_chip">刊登</string>
     <string name="market_onboarding_activate">激活</string>
-    <string name="market_onboarding_activating">正在激活…</string>
+    <string name="market_onboarding_activating">正在啟用…</string>
     <string name="market_onboarding_body">激活您的账户开始买卖。</string>
     <string name="market_onboarding_dismiss">關閉</string>
     <string name="market_onboarding_title">欢迎使用市场</string>
@@ -326,8 +326,8 @@
     <string name="market_sale_tracking_label">追蹤編號</string>
     <string name="market_saved_title">已儲存項目</string>
     <string name="market_search_clear">清除搜尋</string>
-    <string name="market_section_categories">瀏覽類別</string>
-    <string name="market_section_listings">最新刊登</string>
+    <string name="market_section_categories">瀏覽分類</string>
+    <string name="market_section_listings">近期刊登</string>
     <string name="market_section_recent">最近瀏覽</string>
     <string name="market_ship_dialog_cancel">取消</string>
     <string name="market_ship_dialog_submit">確認</string>
@@ -374,7 +374,7 @@
     <string name="market_subscription_detail_charge_amount">最近扣费:%1$s</string>
     <string name="market_subscription_detail_listing">刊登</string>
     <string name="market_subscription_detail_load_failed">无法加载订阅</string>
-    <string name="market_subscription_detail_next_billing">下一次账单日期:%1$s</string>
+    <string name="market_subscription_detail_next_billing">下次帳單日期:%1$s</string>
     <string name="market_subscription_detail_not_found">未找到订阅</string>
     <string name="market_subscription_detail_pending_cancel">待取消</string>
     <string name="market_subscription_detail_seller">賣家</string>
@@ -404,9 +404,9 @@
     <string name="market_type_digital">數位</string>
     <string name="market_type_physical">實體</string>
     <string name="market_messages_send">傳送</string>
-    <string name="market_appeal_dialog_submitting">傳送中…</string>
-    <string name="market_dispute_dialog_submitting">傳送中…</string>
-    <string name="market_sale_review_response_submitting">傳送中…</string>
+    <string name="market_appeal_dialog_submitting">送出中…</string>
+    <string name="market_dispute_dialog_submitting">送出中…</string>
+    <string name="market_sale_review_response_submitting">送出中…</string>
     <string name="market_checkout_subscribing">正在訂閱…</string>
     <string name="market_filter_remove">移除篩選</string>
     <string name="market_listing_detail_sales_count">%1$d 筆銷售</string>
@@ -427,7 +427,7 @@
     <string name="market_account_stripe_refresh">重新整理狀態</string>
     <string name="market_account_stripe_refresh_failed">無法重新整理 Stripe 狀態</string>
     <string name="market_appeal_dialog_reason_label">您為何提出申訴?</string>
-    <string name="market_appeal_dialog_title">申訴移除</string>
+    <string name="market_appeal_dialog_title">申訴下架</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
     <string name="market_bid_dialog_amount_label">您的出價</string>
     <string name="market_bid_dialog_current_high">目前最高出價:%1$s</string>
@@ -517,7 +517,7 @@
     <string name="market_fee_disclosure_title">平台費用</string>
     <string name="market_fee_preview_failed">無法計算費用</string>
     <string name="market_fee_preview_loading">正在計算費用…</string>
-    <string name="market_fee_preview_mochi_fee">Mochi 費用</string>
+    <string name="market_fee_preview_mochi_fee">Mochi 手續費</string>
     <string name="market_fee_preview_processor_fee">處理器費用</string>
     <string name="market_filter_chip_max">最高 %1$s</string>
     <string name="market_filter_chip_min">最低 %1$s</string>
@@ -544,10 +544,10 @@
     <string name="market_listings_action_share">分享</string>
     <string name="market_listings_delete_failed">刪除商品失敗</string>
     <string name="market_listings_delete_message">這將會從您的帳號永久移除此草稿。</string>
-    <string name="market_listings_delete_title">要刪除商品嗎？</string>
+    <string name="market_listings_delete_title">刪除刊登項目?</string>
     <string name="market_listings_empty_subtitle">點選「新增商品」以建立您的第一個項目。</string>
     <string name="market_listings_load_failed">無法載入您的商品</string>
-    <string name="market_listings_new">新增商品</string>
+    <string name="market_listings_new">新刊登項目</string>
     <string name="market_listings_search_placeholder">搜尋您的商品</string>
     <string name="market_listings_share_chooser">分享商品</string>
     <string name="market_messages_compose_placeholder">撰寫訊息…</string>
@@ -659,7 +659,7 @@
     <string name="market_account_seller_card_view">查看賣家設定</string>
     <string name="market_account_vat_label">增值稅／稅務編號</string>
     <string name="market_seller_activate_action">啟用賣家帳戶</string>
-    <string name="market_seller_activating">正在啟用...</string>
+    <string name="market_seller_activating">正在啟用…</string>
     <string name="market_seller_become_heading">成為賣家</string>
     <string name="market_seller_become_title">成為賣家</string>
     <string name="market_seller_check_status">檢查狀態</string>
@@ -704,7 +704,7 @@
     <string name="market_editor_stock_unlimited">無限制</string>
     <string name="market_editor_start_time">開始時間</string>
     <string name="market_editor_start_time_help">留空表示在發佈時開始。</string>
-    <string name="market_editor_start_time_next">下一步</string>
+    <string name="market_editor_start_time_next">下一個</string>
     <string name="market_editor_start_time_clear">清除</string>
     <string name="market_listing_detail_buy_now_label">立即購買</string>
     <string name="market_section_recently_viewed">最近瀏覽</string>

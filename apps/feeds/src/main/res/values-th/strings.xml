@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">ฟีด Mochi</string>
     <string name="feeds_source_type_feed_memories">ความทรงจำ</string>
-    <string name="feeds_remove_source">ลบแหล่งที่มา</string>
+    <string name="feeds_remove_source">ลบแหล่งที่มา?</string>
     <string name="feeds_suggested_credibility_accept">ยอมรับ</string>
     <string name="feeds_rss_url_copied">คัดลอก URL RSS ไปยังคลิปบอร์ดแล้ว</string>
     <string name="feeds_logout">ออกจากระบบ</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">URL ของ RSS</string>
     <string name="feeds_source_never_fetched">ยังไม่เคยดึงข้อมูล</string>
     <string name="feeds_source_poll">ตรวจสอบ</string>
-    <string name="feeds_source_transform">แปลง</string>
+    <string name="feeds_source_transform">การแปลงโดย AI</string>
     <string name="feeds_remove_source_confirm">ลบ \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">ลบโพสต์ที่นำเข้ามาด้วย</string>
     <string name="feeds_suggested_credibility_title">ความน่าเชื่อถือที่แนะนำ</string>

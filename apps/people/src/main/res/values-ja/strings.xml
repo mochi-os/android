@@ -162,8 +162,8 @@
     <string name="people_contact_given">名</string>
     <string name="people_contact_family">姓</string>
     <string name="people_contact_nickname">ニックネーム</string>
-    <string name="people_contact_add_email">メールを追加</string>
-    <string name="people_contact_add_phone">電話を追加</string>
+    <string name="people_contact_add_email">メールアドレスを追加</string>
+    <string name="people_contact_add_phone">電話番号を追加</string>
     <string name="people_contact_add_address">住所を追加</string>
     <string name="people_contact_street">番地</string>
     <string name="people_contact_birthday">誕生日</string>
@@ -177,14 +177,14 @@
     <string name="people_contact_conflict">連絡先が変更されました</string>
     <string name="people_add_contact_title">連絡先を追加</string>
     <string name="people_add_contact_add">連絡先に追加</string>
-    <string name="people_add_contact_in_contacts">連絡先にあり</string>
+    <string name="people_add_contact_in_contacts">連絡先に登録済み</string>
     <string name="people_books_create">アドレス帳を作成</string>
     <string name="people_books_delete">アドレス帳を削除</string>
     <plurals name="people_books_delete_confirm">
         <item quantity="other">%1$s とその %2$d 件の連絡先を削除しますか？</item>
     </plurals>
     <string name="people_welcome_body">Mochi 全体で友達を見つけてつながりましょう。招待を送るには連絡先を追加をタップします。</string>
-    <string name="people_person_state_contact">連絡先にあり</string>
+    <string name="people_person_state_contact">連絡先に登録済み</string>
     <string name="people_device_create">作成</string>
     <string name="people_device_server">サーバー</string>
     <string name="people_device_username">ユーザー名</string>

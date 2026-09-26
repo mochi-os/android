@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">გამოწერის გაუქმება</string>
     <string name="forums_list_unsubscribe_title">გამოწერის გაუქმება</string>
     <string name="forums_create_title">ფორუმის შექმნა</string>
-    <string name="forums_create_name">სახელი</string>
+    <string name="forums_create_name">ფორუმის სახელი</string>
     <string name="forums_create_privacy">კონფიდენციალურობა</string>
     <string name="forums_create_private">პირადი</string>
     <string name="forums_create_public">საჯარო</string>
-    <string name="forums_create_action">შექმნა</string>
+    <string name="forums_create_action">ფორუმის შექმნა</string>
     <string name="forums_find_title">ფორუმების ძიება</string>
     <string name="forums_find_recommended">რეკომენდებული</string>
     <string name="forums_find_subscribe">გამოწერა</string>
@@ -156,7 +156,7 @@
     <string name="forums_banner_placeholder">კეთილი იყოს თქვენი მობრძანება ამ ფორუმზე…</string>
     <string name="forums_ai_mode_label">რეჟიმი: %1$s</string>
     <string name="forums_ai_mode_heading">AI რეჟიმი</string>
-    <string name="forums_ai_mode_off">გამორთული</string>
+    <string name="forums_ai_mode_off">გათიშულია</string>
     <string name="forums_ai_account">AI ანგარიში</string>
     <string name="forums_ai_prompt_tag">ტეგირების მოთხოვნა</string>
     <string name="forums_ai_prompt_score">შეფასების მოთხოვნა</string>
@@ -233,7 +233,7 @@
     <string name="forums_ai_prompt_default">ნაგულისხმევი</string>
     <string name="forums_moderation_reject">უარყოფა</string>
     <string name="forums_moderation_report_by">%1$s-ის მიხედვით</string>
-    <string name="forums_moderation_restriction_state_banned">დაბლოკილი</string>
+    <string name="forums_moderation_restriction_state_banned">აკრძალული</string>
     <string name="forums_moderation_unit_days">დღე</string>
     <string name="forums_settings_banner_saved">ბანერი შენახულია</string>
     <string name="forums_settings_access_updated">წვდომა განახლდა</string>
@@ -257,8 +257,8 @@
     <string name="forums_access_select_rule">აირჩიეთ წესი</string>
     <string name="forums_ai_actions_label">AI მოქმედებები პოსტებზე</string>
     <string name="forums_ai_prompt_custom">მორგებული</string>
-    <string name="forums_ai_prompt_score_label">შეფასების პრომპტი</string>
-    <string name="forums_ai_prompt_tag_label">ტეგის პრომპტი</string>
+    <string name="forums_ai_prompt_score_label">ქულის მოთხოვნა</string>
+    <string name="forums_ai_prompt_tag_label">ტეგის მოთხოვნა</string>
     <string name="forums_ai_prompt_variables">ცვლადები: %1$s</string>
     <string name="forums_link">ბმული</string>
     <string name="forums_moderation_ban_message">დაკარგავს ფორუმზე წვდომას, სანამ შეზღუდvას არ მოხსნით.</string>
@@ -276,8 +276,8 @@
     <string name="forums_moderation_restriction_by">%1$s-ის მიერ</string>
     <string name="forums_moderation_restriction_remove_message">დაუყოვნებლივ დაიბრუნებს ფორუმზე სრულ წვდომას.</string>
     <string name="forums_moderation_restriction_remove_title">მოიხსნას შეზღუდვა %1$s-ისთვის?</string>
-    <string name="forums_moderation_restriction_state_muted">დაჩუმებული</string>
-    <string name="forums_moderation_restriction_state_shadowban">ჩრდილოვანი ბანი</string>
+    <string name="forums_moderation_restriction_state_muted">დადუმებული</string>
+    <string name="forums_moderation_restriction_state_shadowban">ფარულად დაბლოკილი</string>
     <string name="forums_moderation_restrictions_empty_subtitle">არცერთი მომხმარებელი არ არის დაჩუმებული ან დაბლოკილი</string>
     <string name="forums_moderation_section_premoderation_description">მოითხოვეთ დამტკიცება, სანამ კონტენტი გამოჩნდება</string>
     <string name="forums_moderation_section_ratelimiting_description">აღკვეთეთ სპამი პოსტების სიხშირის შეზღუდვით</string>
@@ -286,7 +286,7 @@
     <string name="forums_moderation_unit_replies">პასუხი</string>
     <string name="forums_moderation_unit_seconds">წამი</string>
     <string name="forums_settings_ai_updated">AI პარამეტრები განახლდა</string>
-    <string name="forums_settings_forum_renamed">ფორუმს სახელი შეეცვალა</string>
+    <string name="forums_settings_forum_renamed">ფორუმს გადაერქვა სახელი</string>
     <string name="forums_settings_name_clear_cd">სახელის გასუფთავება</string>
     <string name="forums_settings_unsubscribe_section">ფორუმიდან გამოწერის გაუქმება</string>
     <string name="forums_share_link_title">ფორუმის ბმული</string>

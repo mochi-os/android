@@ -35,9 +35,9 @@
     <string name="market_bid_dialog_submit">Понуди</string>
     <string name="market_bid_dialog_success">Понуда дата</string>
     <string name="market_bid_dialog_title">Понуди</string>
-    <string name="market_bid_ended">Аукција завршена</string>
+    <string name="market_bid_ended">Аукција је завршена</string>
     <string name="market_bids_empty">Нема понуда</string>
-    <string name="market_bids_ended">Аукција завршена</string>
+    <string name="market_bids_ended">Аукција је завршена</string>
     <string name="market_bids_tab_active">Активно</string>
     <string name="market_bids_tab_all">Све</string>
     <string name="market_bids_tab_lost">Изгубљено</string>
@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Пријави оглас</string>
     <string name="market_listing_detail_save">Сачувај</string>
     <string name="market_listing_detail_seller_heading">Продавац</string>
-    <string name="market_listing_detail_shipping_heading">Слање</string>
+    <string name="market_listing_detail_shipping_heading">Опције слања</string>
     <string name="market_listing_detail_subscribe">Претплати се</string>
     <string name="market_listing_detail_tags_heading">Ознаке</string>
     <string name="market_listing_detail_title">Оглас</string>
@@ -350,7 +350,7 @@
     <string name="market_sidebar_sales">Продаје</string>
     <string name="market_sidebar_saved">Сачувано</string>
     <string name="market_sidebar_selling">Продаја</string>
-    <string name="market_sidebar_settings">Поставке</string>
+    <string name="market_sidebar_settings">Подешавања</string>
     <string name="market_sidebar_subscribers">Претплатници</string>
     <string name="market_sidebar_subscriptions">Претплате</string>
     <string name="market_status_active">Активно</string>
@@ -540,7 +540,7 @@
     <string name="market_listing_photo">Фотографија огласа</string>
     <string name="market_listing_save">Сачувај оглас</string>
     <string name="market_listing_unsave">Уклони из сачуваних</string>
-    <string name="market_listings_action_appeal">Уложи жалбу на уклањање</string>
+    <string name="market_listings_action_appeal">Жалба на уклањање</string>
     <string name="market_listings_action_share">Подели</string>
     <string name="market_listings_delete_failed">Брисање огласа није успело</string>
     <string name="market_listings_delete_message">Ово трајно уклања нацрт са вашег налога.</string>
@@ -663,7 +663,7 @@
     <string name="market_seller_become_heading">Постаните продавац</string>
     <string name="market_seller_become_title">Постаните продавац</string>
     <string name="market_seller_check_status">Провери статус</string>
-    <string name="market_seller_checking">Провера...</string>
+    <string name="market_seller_checking">Проверавање…</string>
     <string name="market_seller_connect_stripe">Повежи Stripe</string>
     <string name="market_seller_connecting">Учитавање...</string>
     <string name="market_seller_fee_loading">Учитавање детаља накнаде...</string>
@@ -704,7 +704,7 @@
     <string name="market_editor_stock_unlimited">Неограничено</string>
     <string name="market_editor_start_time">Време почетка</string>
     <string name="market_editor_start_time_help">Оставите празно да започне при објављивању.</string>
-    <string name="market_editor_start_time_next">Даље</string>
+    <string name="market_editor_start_time_next">Следеће</string>
     <string name="market_editor_start_time_clear">Очисти</string>
     <string name="market_listing_detail_buy_now_label">Купи одмах</string>
     <string name="market_section_recently_viewed">Недавно прегледано</string>

@@ -47,7 +47,7 @@
     <string name="wikis_find_recommended_section">शिफारस केलेले विकीज</string>
     <string name="wikis_join_title">विकी रेप्लिकेट करा</string>
     <string name="wikis_join_or_id">किंवा थेट ID प्रविष्ट करा</string>
-    <string name="wikis_join_id_label">Wiki अस्तित्व ID</string>
+    <string name="wikis_join_id_label">Wiki एंटिटी ID</string>
     <string name="wikis_join_submit">विकी रेप्लिकेट करा</string>
     <string name="wikis_create_title">विकी तयार करा</string>
     <string name="wikis_create_name_label">नाव</string>
@@ -88,7 +88,7 @@
     <string name="wikis_editor_created">पेज तयार केले</string>
     <string name="wikis_editor_save_failed">पान सेव्ह करण्यात अयशस्वी</string>
     <string name="wikis_editor_create_failed">पान तयार करण्यात अयशस्वी</string>
-    <string name="wikis_insert_dialog_title">अटॅचमेंट घाला</string>
+    <string name="wikis_insert_dialog_title">संलग्नक घाला</string>
     <string name="wikis_insert_dialog_subtitle">तुमच्या पृष्ठात समाविष्ट करण्यासाठी संलग्नक निवडा, किंवा नवीन फाइल अपलोड करा.</string>
     <string name="wikis_insert_dialog_upload_new">नवीन अपलोड करा</string>
     <string name="wikis_insert_dialog_error">फायली अपलोड करण्यात अयशस्वी</string>
@@ -122,7 +122,7 @@
     <string name="wikis_redirects_empty">रीडायरेक्ट्स कॉन्फिगर केलेले नाहीत</string>
     <string name="wikis_redirect_create_title">रीडायरेक्ट तयार करा</string>
     <string name="wikis_redirect_create_action">तयार करा</string>
-    <string name="wikis_redirect_source_label">स्त्रोत</string>
+    <string name="wikis_redirect_source_label">स्रोत</string>
     <string name="wikis_redirect_target_label">लक्ष्य</string>
     <string name="wikis_redirect_created_label">तयार केले</string>
     <string name="wikis_redirect_required_fields">स्रोत आणि लक्ष्य दोन्ही आवश्यक आहेत</string>
@@ -161,9 +161,9 @@
     <string name="wikis_attachments_delete">हटवा</string>
     <string name="wikis_attachments_delete_confirm_title">संलग्नक हटवा</string>
     <string name="wikis_attachments_delete_success">संलग्नक हटवले</string>
-    <string name="wikis_attachments_delete_failed">अटॅचमेंट हटवण्यात अयशस्वी</string>
-    <string name="wikis_attachments_empty_title">अद्याप अटॅचमेंट्स नाहीत</string>
-    <string name="wikis_attachments_no_results_title">तुमच्या शोधाशी जुळणारे कोणतेही जोडलेले फाइल्स नाहीत</string>
+    <string name="wikis_attachments_delete_failed">संलग्नक हटवण्यात अयशस्वी</string>
+    <string name="wikis_attachments_empty_title">अद्याप संलग्नके नाहीत</string>
+    <string name="wikis_attachments_no_results_title">तुमच्या शोधाशी जुळणारी कोणतीही संलग्नके नाहीत</string>
     <string name="wikis_attachments_no_results_description">वेगळा शोध शब्द किंवा फिल्टर वापरून पहा.</string>
     <string name="wikis_settings_title">सेटिंग्ज</string>
     <string name="wikis_settings_tab_settings">सेटिंग्ज</string>
@@ -181,7 +181,7 @@
     <string name="wikis_settings_name_saved">Wiki चे नाव बदलले</string>
     <string name="wikis_settings_name_save_failed">विकीचे नाव बदलण्यात अयशस्वी</string>
     <string name="wikis_settings_section_subscription">सबस्क्रिप्शन</string>
-    <string name="wikis_settings_field_source">स्त्रोत</string>
+    <string name="wikis_settings_field_source">स्रोत</string>
     <string name="wikis_settings_action_sync">आता सिंक करा</string>
     <string name="wikis_settings_sync_success">Wiki सिंक केले</string>
     <string name="wikis_settings_sync_failed">विकी सिंक करण्यात अयशस्वी</string>
@@ -196,7 +196,7 @@
     <string name="wikis_settings_delete_success">Wiki हटवला</string>
     <string name="wikis_settings_delete_failed">विकी हटवण्यात अयशस्वी</string>
     <string name="wikis_access_add_subject_label">वापरकर्ता</string>
-    <string name="wikis_access_level_edit">संपादित आणि पाहा</string>
+    <string name="wikis_access_level_edit">संपादित करा आणि पहा</string>
     <string name="wikis_access_level_view">फक्त पहा</string>
     <string name="wikis_access_level_none">प्रवेश नाही</string>
     <string name="wikis_access_tab_users">वापरकर्ते</string>
@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">काढा</string>
     <string name="wikis_replicas_remove_failed">रेप्लिका काढण्यात अयशस्वी</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi विकीज</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">wiki पृष्ठ संपादने, टिप्पण्या आणि आमंत्रणांबद्दल सूचना.</string>
     <string name="wikis_pageview_toc_expand">अनुक्रमणिका दाखवा</string>

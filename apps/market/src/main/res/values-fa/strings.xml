@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">گزارش آگهی</string>
     <string name="market_listing_detail_save">ذخیره</string>
     <string name="market_listing_detail_seller_heading">فروشنده</string>
-    <string name="market_listing_detail_shipping_heading">حمل و نقل</string>
+    <string name="market_listing_detail_shipping_heading">گزینه‌های حمل و نقل</string>
     <string name="market_listing_detail_subscribe">اشتراک</string>
     <string name="market_listing_detail_tags_heading">برچسب‌ها</string>
     <string name="market_listing_detail_title">آگهی</string>
@@ -540,7 +540,7 @@
     <string name="market_listing_photo">عکس آگهی</string>
     <string name="market_listing_save">ذخیره آگهی</string>
     <string name="market_listing_unsave">حذف از ذخیره‌شده‌ها</string>
-    <string name="market_listings_action_appeal">درخواست بررسی مجدد حذف</string>
+    <string name="market_listings_action_appeal">اعتراض به حذف</string>
     <string name="market_listings_action_share">اشتراک‌گذاری</string>
     <string name="market_listings_delete_failed">حذف آگهی ناموفق بود</string>
     <string name="market_listings_delete_message">این کار پیش‌نویس را برای همیشه از حساب شما حذف می‌کند.</string>

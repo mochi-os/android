@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Ikon</string>
     <string name="crm_option_icon_placeholder">pl. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Leiratkozás</string>
-    <string name="crm_settings_delete_crm">Projekt törlése</string>
+    <string name="crm_settings_delete_crm">CRM törlése</string>
     <string name="crm_settings_delete_confirm_title">CRM törlése</string>
     <string name="crm_settings_unsubscribe_title">Leiratkozás</string>
     <string name="crm_settings_unsubscribe_message">Biztosan leiratkozik erről a CRM-ről?</string>
@@ -158,10 +158,10 @@
     <string name="crm_object_delete_message">Biztosan törölni szeretné ezt az objektumot? Ez a művelet nem vonható vissza.</string>
     <string name="crm_parent_none">Nincs szülő</string>
     <string name="crm_links_empty">Nincsenek hivatkozások</string>
-    <string name="crm_links_section_relates">Kapcsolódik ehhez</string>
+    <string name="crm_links_section_relates">Kapcsolódik</string>
     <string name="crm_links_section_duplicated_by">Duplikálja</string>
     <string name="crm_links_type">Hivatkozás típusa</string>
-    <string name="crm_links_type_relates">Kapcsolódik ehhez</string>
+    <string name="crm_links_type_relates">Kapcsolódik</string>
     <string name="crm_links_remove">Hivatkozás eltávolítása</string>
     <string name="crm_comment_replying_to">Válasz erre: %1$s</string>
     <string name="crm_comment_clear_reply">Válasz törlése</string>
@@ -194,7 +194,7 @@
     <string name="crm_drag_card">Kártya húzása</string>
     <string name="crm_drag_row">Sor húzása</string>
     <string name="crm_drag_column">Oszlop húzása</string>
-    <string name="crm_design_more_options">További beállítások</string>
+    <string name="crm_design_more_options">További lehetőségek</string>
     <string name="crm_design_no_templates">Nincs elérhető sablon</string>
     <string name="crm_design_use">Használat</string>
     <string name="crm_design_replace_message">Ez lecseréli a jelenlegi designt erre: %1$s. Minden meglévő osztály, mező, opció és nézet törölve lesz. A meglévő objektumok nem lesznek törölve, de előfordulhat, hogy többé nem jelennek meg a nézetekben.</string>
@@ -202,7 +202,7 @@
     <string name="crm_class_label">Osztály: %1$s</string>
     <string name="crm_class_title_field_description">Melyik mezőt használja az ebbe az osztályba tartozó objektumok megjelenítési címeként.</string>
     <string name="crm_class_title_field_default">Alapértelmezett (olvasható)</string>
-    <string name="crm_class_parents">Szülő osztályok</string>
+    <string name="crm_class_parents">Szülőosztályok</string>
     <string name="crm_class_delete_message">Biztosan törli a(z) \"%1$s\" osztályt? Az összes mező és azok opciói is törlésre kerülnek.</string>
     <string name="crm_field_type_enumerated">Felsorolt</string>
     <string name="crm_field_label">Mező: %1$s</string>
@@ -213,7 +213,7 @@
     <string name="crm_field_multi">Többszörös választás</string>
     <string name="crm_field_position">Megjelenítési pozíció</string>
     <string name="crm_field_position_header">Fejléc</string>
-    <string name="crm_field_validation">Ellenőrzés</string>
+    <string name="crm_field_validation">Érvényesítés</string>
     <string name="crm_field_min_length">Minimális hossz</string>
     <string name="crm_field_max_length">Maximális hossz</string>
     <string name="crm_field_pattern">Minta (regex)</string>
@@ -265,7 +265,7 @@
     <string name="crm_access_select_role">Szerep kiválasztása</string>
     <string name="crm_access_selected">Kiválasztva: %1$s</string>
     <string name="crm_access_subject_anyone">Bárki</string>
-    <string name="crm_access_subject_authenticated">Hitelesített felhasználók</string>
+    <string name="crm_access_subject_authenticated">Bejelentkezett felhasználók</string>
     <string name="crm_access_authenticated_desc">Bárki, aki be van jelentkezve</string>
     <string name="crm_access_anyone_desc">Beleértve a névtelen felhasználókat is</string>
     <string name="crm_access_role_design">Tervezés, létrehozás, szerkesztés, hozzászólás és megtekintés</string>

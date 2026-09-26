@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi kanál</string>
     <string name="feeds_source_type_feed_memories">Spomienky</string>
-    <string name="feeds_remove_source">Odstrániť zdroj</string>
+    <string name="feeds_remove_source">Odstrániť zdroj?</string>
     <string name="feeds_suggested_credibility_accept">Prijať</string>
     <string name="feeds_rss_url_copied">URL RSS skopírovaná do schránky</string>
     <string name="feeds_logout">Odhlásiť sa</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">URL RSS</string>
     <string name="feeds_source_never_fetched">Nikdy nenačítané</string>
     <string name="feeds_source_poll">Dopyt</string>
-    <string name="feeds_source_transform">Transformovať</string>
+    <string name="feeds_source_transform">Transformácia pomocou AI</string>
     <string name="feeds_remove_source_confirm">Odstrániť \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Odstrániť aj importované príspevky</string>
     <string name="feeds_suggested_credibility_title">Navrhovaná dôveryhodnosť</string>
@@ -156,7 +156,7 @@
     <string name="feeds_access_select_group">Vybrať skupinu</string>
     <string name="feeds_access_selected">Vybraté: %1$s</string>
     <string name="feeds_access_subject_anyone">Ktokoľvek</string>
-    <string name="feeds_access_subject_authenticated">Overení používatelia</string>
+    <string name="feeds_access_subject_authenticated">Prihlásení používatelia</string>
     <string name="feeds_markdown_supported">Markdown podporovaný</string>
     <string name="feeds_permission_deny">Zamietnuť</string>
     <string name="feeds_rss_feed">RSS kanál</string>

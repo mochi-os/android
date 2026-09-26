@@ -78,7 +78,7 @@
     <string name="chat_marked_read">ಓದಿದಂತೆ ಗುರುತಿಸಲಾಗಿದೆ</string>
     <string name="chat_search_next">ಮುಂದಿನ ಹೊಂದಾಣಿಕೆ</string>
     <string name="chat_search_prev">ಹಿಂದಿನ ಹೊಂದಾಣಿಕೆ</string>
-    <string name="chat_settings_id">ಚಾಟ್ ಐಡಿ</string>
+    <string name="chat_settings_id">ಚಾಟ್ ID</string>
     <string name="chat_message_edited">(ಸಂಪಾದಿಸಲಾಗಿದೆ)</string>
     <string name="chat_new_fallback_name">ಚಾಟ್</string>
 </resources>

@@ -100,7 +100,7 @@
     <string name="people_welcome_title">ברוך-הבא צו מענטשן</string>
     <string name="people_person_banner_alt">באַנער פֿאַר %1$s</string>
     <string name="people_person_private">דער פּראָפֿיל איז פּריוואַט</string>
-    <string name="people_person_state_invited">פֿאַרבעטן</string>
+    <string name="people_person_state_invited">אײַנגעלאַדן</string>
 
     <string name="people_invitations_accept_all">אָננעמען אַלע</string>
     <string name="people_invitations_decline_all">אָפּזאָגן אַלע</string>
@@ -117,7 +117,7 @@
     <string name="people_profile_avatar">אַװאַטאַר</string>
     <string name="people_profile_banner">באַנער</string>
     <string name="people_contacts_search_placeholder">זוך…</string>
-    <string name="people_contacts_invited">פֿאַרבעטן</string>
+    <string name="people_contacts_invited">אײַנגעלאַדן</string>
     <string name="people_contacts_accept">אָננעמען</string>
     <string name="people_contacts_message">שיקן אַ בריוו</string>
     <string name="people_contacts_no_people_found">קיין מענטשן ניט געפֿונען</string>
@@ -152,7 +152,7 @@
     <string name="people_contacts_add_to_start">צולייגן קאָנטאַקטן כּדי אָנצוהייבן</string>
     <string name="people_contacts_actions">קאָנטאַקט אַקציעס</string>
     <string name="people_contacts_friend">פֿרײַנד</string>
-    <string name="people_contacts_invite">פֿאַרבעטן</string>
+    <string name="people_contacts_invite">אײַנלאַדן</string>
     <string name="people_contacts_unfriend_confirm">%1$s וועט מער נישט זײַן אײַער פֿרײַנד. דער קאָנטאַקט בלײַבט אין אײַער אַדרעס־בוך.</string>
     <string name="people_contacts_delete">אויסמעקן קאָנטאַקט</string>
     <string name="people_contacts_delete_confirm">אויסמעקן %1$s פֿון אײַערע קאָנטאַקטן?</string>
@@ -162,7 +162,7 @@
     <string name="people_contact_given">פֿאָרנאָמען</string>
     <string name="people_contact_family">פֿאַמיליע־נאָמען</string>
     <string name="people_contact_nickname">צונאָמען</string>
-    <string name="people_contact_add_email">צולייגן ע־פּאָסט</string>
+    <string name="people_contact_add_email">צולייגן בליצפּאָסט</string>
     <string name="people_contact_add_phone">צולייגן טעלעפֿאָן</string>
     <string name="people_contact_add_address">צולייגן אַדרעס</string>
     <string name="people_contact_street">גאַס</string>
@@ -188,7 +188,7 @@
     <string name="people_person_state_contact">אין די קאָנטאַקטן</string>
     <string name="people_device_create">באַשאַפֿן</string>
     <string name="people_device_server">סערווער</string>
-    <string name="people_device_username">באַניצער נאָמען</string>
+    <string name="people_device_username">באַניצער־נאָמען</string>
     <string name="people_device_done">געטאָן</string>
     <string name="people_device_list">מיטלען</string>
     <string name="people_device_used">לעצטע מאָל גענוצט %1$s</string>

@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi vir</string>
     <string name="feeds_source_type_feed_memories">Spomini</string>
-    <string name="feeds_remove_source">Odstrani vir</string>
+    <string name="feeds_remove_source">Odstrani vir?</string>
     <string name="feeds_suggested_credibility_accept">Sprejmi</string>
     <string name="feeds_rss_url_copied">RSS URL kopiran v odložišče</string>
     <string name="feeds_logout">Odjava</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">URL RSS</string>
     <string name="feeds_source_never_fetched">Nikoli preneseno</string>
     <string name="feeds_source_poll">Anketa</string>
-    <string name="feeds_source_transform">Preoblikuj</string>
+    <string name="feeds_source_transform">AI preoblikovanje</string>
     <string name="feeds_remove_source_confirm">Odstrani \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Izbriši tudi uvožene objave</string>
     <string name="feeds_suggested_credibility_title">Predlagana verodostojnost</string>

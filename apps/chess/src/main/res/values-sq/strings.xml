@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="chess_app_title">Shahu</string>
-    <string name="chess_sidebar_header">Shahu</string>
+    <string name="chess_app_title">Shah</string>
+    <string name="chess_sidebar_header">Shah</string>
     <string name="chess_sidebar_active">Lojëra aktive</string>
     <string name="chess_sidebar_completed">I përfunduar</string>
     <string name="chess_sidebar_new_game">Lojë e re</string>
@@ -16,7 +16,7 @@
     <string name="chess_new_add_friends">Shto miq</string>
     <string name="chess_new_start_button">Fillo lojën</string>
     <string name="chess_new_creating">Po krijon…</string>
-    <string name="chess_chat_title">Bisedë</string>
+    <string name="chess_chat_title">Bisedimi</string>
     <string name="chess_open_chat">Hap panelin e bisedës</string>
     <string name="chess_open_actions">Hap veprimet e lojës</string>
     <string name="chess_offer_draw">Ofro barazim</string>
@@ -31,7 +31,7 @@
     <string name="chess_draw_accept">Prano</string>
     <string name="chess_draw_decline">Refuzo</string>
     <string name="chess_status_checkmate_you_win">Mat — fitove!</string>
-    <string name="chess_status_stalemate">Stalemate — barazim</string>
+    <string name="chess_status_stalemate">Pat — barazim</string>
     <string name="chess_status_draw">Barazim</string>
     <string name="chess_status_check_your_move">Shahu — radha jote</string>
     <string name="chess_status_your_move">Lëvizja jote</string>
@@ -58,7 +58,7 @@
     <string name="chess_empty_subtitle">Fillo ndeshjen e parë për të luajtur shah me një mik.</string>
     <string name="chess_empty_start_button">Fillo ndeshjen e parë</string>
     <string name="chess_detail_unavailable">Ndeshja nuk është e disponueshme</string>
-    <string name="chess_delete_title">Fshi ndeshjen?</string>
+    <string name="chess_delete_title">Të fshihet loja?</string>
     <string name="chess_delete_message">Kjo heq ndeshjen nga lista jote.</string>
     <string name="chess_ws_connecting">Duke u lidhur…</string>
     <string name="chess_ws_disconnected">Jashtë linje</string>

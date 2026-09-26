@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Ikona</string>
     <string name="crm_option_icon_placeholder">np. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Anuluj subskrypcję</string>
-    <string name="crm_settings_delete_crm">Usuń projekt</string>
+    <string name="crm_settings_delete_crm">Usuń CRM</string>
     <string name="crm_settings_delete_confirm_title">Usuń CRM</string>
     <string name="crm_settings_unsubscribe_title">Anuluj subskrypcję</string>
     <string name="crm_settings_unsubscribe_message">Czy na pewno chcesz anulować subskrypcję tego CRM?</string>
@@ -162,7 +162,7 @@
     <string name="crm_links_section_duplicated_by">Zduplikowane przez</string>
     <string name="crm_links_type">Typ powiązania</string>
     <string name="crm_links_type_relates">Powiązane z</string>
-    <string name="crm_links_remove">Usuń powiązanie</string>
+    <string name="crm_links_remove">Usuń link</string>
     <string name="crm_comment_replying_to">Odpowiedź do %1$s</string>
     <string name="crm_comment_clear_reply">Wyczyść odpowiedź</string>
     <string name="crm_comment_placeholder">Dodaj komentarz</string>
@@ -275,7 +275,7 @@
     <string name="crm_access_role_none">Brak dostępu</string>
     <string name="crm_all_crms">Wszystkie CRM</string>
     <string name="crm_settings_unsubscribe_section">Anuluj subskrypcję CRM</string>
-    <string name="crm_settings_updated">CRM zaktualizowany</string>
+    <string name="crm_settings_updated">Zaktualizowano CRM</string>
     <string name="crm_create_import_backup">Importuj z kopii zapasowej (opcjonalnie)</string>
     <string name="crm_export">Eksportuj dane</string>
     <string name="crm_exporting">Przygotowywanie eksportu…</string>

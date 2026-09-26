@@ -50,8 +50,8 @@
     <string name="go_resign_title">Ymddiswyddo o\'r gêm?</string>
     <string name="go_sidebar_completed">Wedi cwblhau</string>
     <string name="go_sidebar_new_game">Gêm newydd</string>
-    <string name="go_status_draw">Cyfartal</string>
-    <string name="go_status_draw_text">Cyfartal</string>
+    <string name="go_status_draw">Gêm gyfartal</string>
+    <string name="go_status_draw_text">Gêm gyfartal</string>
     <string name="go_status_game_over">Diwedd y gêm</string>
     <string name="go_status_opponent_move">Symudiad %1$s</string>
     <string name="go_status_opponent_wins">Mae %1$s yn ennill</string>

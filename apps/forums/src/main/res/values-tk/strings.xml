@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Abunadan çyk</string>
     <string name="forums_list_unsubscribe_title">Abunadan çyk</string>
     <string name="forums_create_title">Forum döretmek</string>
-    <string name="forums_create_name">At</string>
+    <string name="forums_create_name">Forumyň ady</string>
     <string name="forums_create_privacy">Gizlinlik</string>
     <string name="forums_create_private">Şahsy</string>
     <string name="forums_create_public">Köpçülige açyk</string>
-    <string name="forums_create_action">Döretmek</string>
+    <string name="forums_create_action">Forum döretmek</string>
     <string name="forums_find_title">Forumlary tap</string>
     <string name="forums_find_recommended">Maslahat berilýän</string>
     <string name="forums_find_subscribe">Abuna ýaz</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_login_failed">Girmek başartmady</string>
 
     <string name="notification_channel_forums">Forum bildirişleri</string>
-    <string name="forums_auth_brand">Mochi Forumlary</string>
+    <string name="forums_auth_brand">Mochi Forumlar</string>
     <string name="forums_auth_create_identity_failed">Şahsyýet döretmek başartmady</string>
     <string name="forums_auth_mfa_unsupported">MFA henizem mobil programmada goldanylanok</string>
     <string name="forums_auth_enter_code_sent">%1$s salgysyna iberilen kody giriziň</string>
@@ -156,14 +156,14 @@
     <string name="forums_banner_placeholder">Bu foruma hoş geldiňiz…</string>
     <string name="forums_ai_mode_label">Režim: %1$s</string>
     <string name="forums_ai_mode_heading">AI režimi</string>
-    <string name="forums_ai_mode_off">Öçük</string>
+    <string name="forums_ai_mode_off">Öçürildi</string>
     <string name="forums_ai_account">AI hasaby</string>
     <string name="forums_ai_prompt_tag">Belliklemek üçin görkezme</string>
     <string name="forums_ai_prompt_score">Bahalandyrmak üçin görkezme</string>
     <string name="forums_ai_post_prompt_label">Ýazgy bellikleri üçin görkezme</string>
     <string name="forums_ai_comment_prompt_label">Teswir bellikleri üçin görkezme</string>
     <string name="forums_settings_fingerprint">Barmak yzy: %1$s</string>
-    <string name="forums_settings_clear_notifications">Bildirişleri arassalamak</string>
+    <string name="forums_settings_clear_notifications">Bildirişleri arassala</string>
     <string name="forums_moderation_queue_empty">Garaşylýan zat ýok</string>
     <string name="forums_moderation_report_details">Jikme-jiklikler: %1$s</string>
     <string name="forums_moderation_report_resolved_by">%1$s tarapyndan çözüldi — %2$s</string>
@@ -222,7 +222,7 @@
     <string name="forums_tab_moderation">Moderasiýa</string>
     <string name="forums_access_level_view_full">Diňe görkez</string>
     <string name="forums_access_level_none_full">Girip bolmaýar</string>
-    <string name="forums_access_subject_anyone">Islendik</string>
+    <string name="forums_access_subject_anyone">Islendik adam</string>
     <string name="forums_access_subject_authenticated">Tassyklanan ulanyjylar</string>
     <string name="forums_access_tab_other">Beýleki</string>
     <string name="forums_access_authenticated_desc">Ulgama giren islendik adam</string>
@@ -244,10 +244,10 @@
     <string name="forums_settings_field_name">At</string>
     <string name="forums_settings_field_entity_id">Essas ID</string>
     <string name="forums_settings_field_fingerprint_label">Barmak yzy</string>
-    <string name="forums_settings_field_server">Server</string>
+    <string name="forums_settings_field_server">Serwer</string>
     <string name="forums_settings_name_edit_cd">Ady düzet</string>
     <string name="forums_settings_name_cancel_cd">Redaktirlemegi ýatyr</string>
-    <string name="forums_settings_save_name">Ady saklamak</string>
+    <string name="forums_settings_save_name">Ady ýatda sakla</string>
     <string name="forums_access_management">Giriş dolandyryşy</string>
     <string name="forums_access_level_comment_full">Teswir, ses bermek we görmek</string>
     <string name="forums_access_level_moderate_full">Moderasiýa, ýerleşdirmek, teswir, ses bermek we görmek</string>
@@ -256,9 +256,9 @@
     <string name="forums_access_select_group">Topar saýlaň</string>
     <string name="forums_access_select_rule">Düzgün saýlaň</string>
     <string name="forums_ai_actions_label">Ýazgylarda SI hereketleri</string>
-    <string name="forums_ai_prompt_custom">Şahsy</string>
-    <string name="forums_ai_prompt_score_label">Baha prompty</string>
-    <string name="forums_ai_prompt_tag_label">Bellik prompty</string>
+    <string name="forums_ai_prompt_custom">Hususy</string>
+    <string name="forums_ai_prompt_score_label">Bal soragy</string>
+    <string name="forums_ai_prompt_tag_label">Bellik soragy</string>
     <string name="forums_ai_prompt_variables">Üýtgeýänler: %1$s</string>
     <string name="forums_link">Salgy</string>
     <string name="forums_moderation_ban_message">Siz çäklendirmäni aýyrýançaňyz foruma girip bilmez.</string>
@@ -276,8 +276,8 @@
     <string name="forums_moderation_restriction_by">%1$s tarapyndan</string>
     <string name="forums_moderation_restriction_remove_message">Foruma doly girişi derrew yzyna alýar.</string>
     <string name="forums_moderation_restriction_remove_title">%1$s üçin çäklendirme aýrylsynmy?</string>
-    <string name="forums_moderation_restriction_state_muted">Dymdyrylan</string>
-    <string name="forums_moderation_restriction_state_shadowban">Kölege gadaganlygy</string>
+    <string name="forums_moderation_restriction_state_muted">Sessiz edildi</string>
+    <string name="forums_moderation_restriction_state_shadowban">Gizlin gadagan edildi</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Hiç bir ulanyjy dymdyrylmady ýa-da gadagan edilmedi</string>
     <string name="forums_moderation_section_premoderation_description">Mazmun görünmezden öň tassyklamany talap ediň</string>
     <string name="forums_moderation_section_ratelimiting_description">Ulanyjylaryň näçe ýygy ýazyp biljekdigini çäklendirip spamyň öňüni alyň</string>

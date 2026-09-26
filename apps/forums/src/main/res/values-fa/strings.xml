@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">لغو اشتراک</string>
     <string name="forums_list_unsubscribe_title">لغو اشتراک</string>
     <string name="forums_create_title">ساخت انجمن</string>
-    <string name="forums_create_name">نام</string>
+    <string name="forums_create_name">نام انجمن</string>
     <string name="forums_create_privacy">حریم خصوصی</string>
     <string name="forums_create_private">خصوصی</string>
     <string name="forums_create_public">عمومی</string>
-    <string name="forums_create_action">ساختن</string>
+    <string name="forums_create_action">ساخت انجمن</string>
     <string name="forums_find_title">یافتن انجمن‌ها</string>
     <string name="forums_find_recommended">توصیه‌شده</string>
     <string name="forums_find_subscribe">اشتراک</string>
@@ -154,7 +154,7 @@
     <string name="forums_banner_placeholder">به این انجمن خوش آمدید…</string>
     <string name="forums_ai_mode_label">حالت: %1$s</string>
     <string name="forums_ai_mode_heading">حالت هوش مصنوعی</string>
-    <string name="forums_ai_mode_off">خاموش</string>
+    <string name="forums_ai_mode_off">غیرفعال</string>
     <string name="forums_ai_account">حساب هوش مصنوعی</string>
     <string name="forums_ai_prompt_tag">پرامپت برچسب‌گذاری</string>
     <string name="forums_ai_prompt_score">پرامپت امتیازدهی</string>
@@ -216,7 +216,7 @@
     <string name="forums_attachment_move_up">انتقال به بالا</string>
     <string name="forums_attachment_move_down">انتقال به پایین</string>
     <string name="forums_post_comments">نظرها</string>
-    <string name="forums_all_forums">همه انجمن‌ها</string>
+    <string name="forums_all_forums">همهٔ انجمن‌ها</string>
     <string name="forums_create_allow_search">اجازه دهید هر کسی انجمن را جستجو کند</string>
     <string name="forums_rss_clipboard_label">نشانی RSS انجمن</string>
     <string name="forums_tab_moderation">نظارت</string>
@@ -257,7 +257,7 @@
     <string name="forums_access_select_rule">یک قانون انتخاب کنید</string>
     <string name="forums_ai_actions_label">اقدامات هوش مصنوعی روی نوشته‌ها</string>
     <string name="forums_ai_prompt_custom">سفارشی</string>
-    <string name="forums_ai_prompt_score_label">پرامپت امتیازدهی</string>
+    <string name="forums_ai_prompt_score_label">پرامپت امتیاز</string>
     <string name="forums_ai_prompt_tag_label">پرامپت برچسب</string>
     <string name="forums_ai_prompt_variables">متغیرها: %1$s</string>
     <string name="forums_link">پیوند</string>
@@ -277,7 +277,7 @@
     <string name="forums_moderation_restriction_remove_message">بی‌درنگ دسترسی کامل به انجمن را دوباره به دست می‌آورد.</string>
     <string name="forums_moderation_restriction_remove_title">محدودیت %1$s برداشته شود؟</string>
     <string name="forums_moderation_restriction_state_muted">بی‌صدا</string>
-    <string name="forums_moderation_restriction_state_shadowban">مسدودسازی پنهان</string>
+    <string name="forums_moderation_restriction_state_shadowban">مسدود پنهان</string>
     <string name="forums_moderation_restrictions_empty_subtitle">هیچ کاربری بی‌صدا یا مسدود نشده است</string>
     <string name="forums_moderation_section_premoderation_description">پیش از نمایش محتوا، تأیید لازم باشد</string>
     <string name="forums_moderation_section_ratelimiting_description">با محدود کردن دفعات ارسال، از هرزنامه جلوگیری کنید</string>

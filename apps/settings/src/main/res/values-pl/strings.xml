@@ -119,7 +119,7 @@
     <string name="settings_home_system_documents">Dokumenty</string>
     <string name="settings_home_system_settings">Ustawienia systemu</string>
     <string name="system_settings_title">Ustawienia systemu</string>
-    <string name="system_settings_section_login">Zaloguj się</string>
+    <string name="system_settings_section_login">Logowanie</string>
     <string name="system_settings_section_oauth">Logowanie zewnętrzne</string>
     <string name="system_settings_section_user_defaults">Domyślne użytkownika</string>
     <string name="system_settings_section_operator">Operator</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">Priorytet %1$d · %2$s</string>
     <string name="interests_search_placeholder">Szukaj tematów do dodania…</string>
     <string name="interests_empty">Brak zainteresowań.</string>
-    <string name="interests_summary_regenerate">Wygeneruj nowe podsumowanie</string>
+    <string name="interests_summary_regenerate">Wygeneruj podsumowanie ponownie</string>
     <string name="interests_summary_regenerating">Generowanie…</string>
     <string name="interests_summary_empty">Dodaj zainteresowania, by wygenerować podsumowanie tego, co lubisz.</string>
     <string name="interests_search_failed">Wyszukiwanie nie powiodło się. Spróbuj ponownie.</string>
@@ -277,7 +277,7 @@
     <string name="account_section_identity">Tożsamość</string>
     <string name="account_identity_identity">Tożsamość</string>
     <string name="account_identity_username">Nazwa użytkownika</string>
-    <string name="account_identity_name">Nazwa</string>
+    <string name="account_identity_name">Imię i nazwisko</string>
     <string name="account_identity_fingerprint">Odcisk palca</string>
     <string name="account_identity_directory_toggle">Zezwól innym znaleźć cię w katalogu</string>
     <string name="domain_add">Dodaj domenę</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s nie będzie już zarządzać trasami w tej domenie.</string>
     <string name="domain_delegation_delete_title">Usunąć delegację?</string>
     <string name="domain_delegation_path">Ścieżka</string>
-    <string name="domain_delegation_user">ID użytkownika</string>
+    <string name="domain_delegation_user">Użytkownik</string>
     <string name="domain_delegations">Delegacje</string>
     <string name="domain_delegations_empty">Brak skonfigurowanych delegacji.</string>
     <string name="domain_delete">Usuń domenę</string>
@@ -316,7 +316,7 @@
         <item quantity="one">Unieważniono 1 sesję</item>
         <item quantity="other">Unieważniono %1$d sesji</item>
     </plurals>
-    <string name="login_title">Zaloguj się</string>
+    <string name="login_title">Logowanie</string>
     <string name="login_section_methods">Metody logowania</string>
     <string name="login_method_email">Kod e-mail</string>
     <string name="login_method_passkey">Klucz dostępu</string>

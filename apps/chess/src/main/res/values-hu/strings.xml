@@ -17,7 +17,7 @@
     <string name="chess_new_add_friends">Barátok hozzáadása</string>
     <string name="chess_new_start_button">Játék indítása</string>
     <string name="chess_new_creating">Létrehozás…</string>
-    <string name="chess_chat_title">Chat</string>
+    <string name="chess_chat_title">Csevegés</string>
     <string name="chess_open_chat">Csevegőpanel megnyitása</string>
     <string name="chess_open_actions">Játékműveletek megnyitása</string>
     <string name="chess_offer_draw">Döntetlen felajánlása</string>
@@ -60,12 +60,12 @@
     <string name="chess_empty_subtitle">Kezdje el első játszmáját, hogy sakkozhasson egy baráttal.</string>
     <string name="chess_empty_start_button">Első játszma indítása</string>
     <string name="chess_detail_unavailable">A játszma nem érhető el</string>
-    <string name="chess_delete_title">Játszma törlése?</string>
+    <string name="chess_delete_title">Törli a játékot?</string>
     <string name="chess_delete_message">Ez eltávolítja a játszmát a listájáról.</string>
-    <string name="chess_ws_connecting">Csatlakozás…</string>
+    <string name="chess_ws_connecting">Kapcsolódás…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_reconnecting">Újracsatlakozás…</string>
-    <string name="chess_ws_failed">Csatlakozás sikertelen</string>
+    <string name="chess_ws_failed">A kapcsolódás sikertelen</string>
     <string name="chess_move_capture">%1$s elvette: %2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 

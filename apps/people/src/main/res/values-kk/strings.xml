@@ -32,7 +32,7 @@
     <string name="people_group_name">Топ атауы</string>
     <string name="people_group_description">Сипаттама</string>
     <string name="people_group_description_optional">Қосымша сипаттама</string>
-    <string name="people_group_name_required">Аты міндетті</string>
+    <string name="people_group_name_required">Атау міндетті</string>
     <string name="people_group_actions">Топ әрекеттері</string>
     <string name="people_group_members">Мүшелер</string>
     <string name="people_group_members_count">Мүшелер саны</string>
@@ -51,7 +51,7 @@
     <string name="people_profile_save_failed">Сақтау сәтсіз аяқталды</string>
     <string name="people_profile_name">Аты</string>
     <string name="people_profile_name_saved">Аты сақталды</string>
-    <string name="people_profile_edit_name">Атауды өңдеу</string>
+    <string name="people_profile_edit_name">Атын өңдеу</string>
     <string name="people_profile_identity">Жеке басы</string>
     <string name="people_profile_accent">Акцент</string>
     <string name="people_profile_directory_listing">Сізді каталогтан табуға басқаларға рұқсат ету</string>
@@ -135,7 +135,7 @@
     <string name="people_contact_type_other">Басқа</string>
     <string name="people_contact_remove">Жою</string>
     <string name="people_contact_pick_date_confirm">OK</string>
-    <string name="people_books_name">Аты</string>
+    <string name="people_books_name">Атау</string>
     <string name="people_books_rename">Атын өзгерту</string>
     <string name="people_contacts_sort_name">Аты</string>
     <string name="people_contacts_sort_recent">Жақында қосылды</string>
@@ -162,7 +162,7 @@
     <string name="people_contact_given">Аты</string>
     <string name="people_contact_family">Тегі</string>
     <string name="people_contact_nickname">Лақап аты</string>
-    <string name="people_contact_add_email">Эл. пошта қосу</string>
+    <string name="people_contact_add_email">Электрондық пошта қосу</string>
     <string name="people_contact_add_phone">Телефон қосу</string>
     <string name="people_contact_add_address">Мекенжай қосу</string>
     <string name="people_contact_street">Көше</string>

@@ -242,7 +242,7 @@
     <string name="route_meta">優先度 %1$d · %2$s</string>
     <string name="interests_search_placeholder">追加するトピックを検索…</string>
     <string name="interests_empty">まだ興味がありません。</string>
-    <string name="interests_summary_regenerate">概要を再生成</string>
+    <string name="interests_summary_regenerate">要約を再生成</string>
     <string name="interests_summary_regenerating">再生成中…</string>
     <string name="interests_summary_empty">興味を追加して、あなたが関心を持っていることの概要を生成してください。</string>
     <string name="interests_search_failed">検索に失敗しました。もう一度お試しください。</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s はこのドメインのルートを管理できなくなります。</string>
     <string name="domain_delegation_delete_title">委任を削除しますか？</string>
     <string name="domain_delegation_path">パス</string>
-    <string name="domain_delegation_user">ユーザー ID</string>
+    <string name="domain_delegation_user">ユーザー</string>
     <string name="domain_delegations">委任</string>
     <string name="domain_delegations_empty">委任は設定されていません。</string>
     <string name="domain_delete">ドメインを削除</string>
@@ -390,7 +390,7 @@
     <string name="accounts_capability_calendar">カレンダー</string>
     <string name="accounts_capability_notify">通知</string>
     <string name="accounts_capability_ai">AI</string>
-    <string name="accounts_capability_login">サインイン</string>
+    <string name="accounts_capability_login">ログイン</string>
     <string name="accounts_provider_caldav">カレンダーサーバー</string>
     <string name="accounts_revoke_confirm">%1$s のカレンダーへのアクセスを取り消します。%2$s でのサインインは、ログインページでリンクを解除するまで有効です。</string>
     <string name="accounts_capability_mcp">MCP</string>

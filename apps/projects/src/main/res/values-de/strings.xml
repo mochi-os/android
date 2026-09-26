@@ -187,7 +187,7 @@
     <string name="projects_links_type">Verknüpfungstyp</string>
     <string name="projects_links_type_relates">Bezieht sich auf</string>
     <string name="projects_links_search_placeholder">Objekte suchen</string>
-    <string name="projects_links_remove">Verknüpfung entfernen</string>
+    <string name="projects_links_remove">Link entfernen</string>
     <string name="projects_comment_replying_to">Antwort an %1$s</string>
     <string name="projects_comment_clear_reply">Antwort verwerfen</string>
     <string name="projects_comment_placeholder">Kommentar hinzufügen</string>
@@ -288,7 +288,7 @@
     <string name="projects_field_show_on_card">Auf Karte anzeigen</string>
     <string name="projects_field_multi">Mehrfachauswahl</string>
     <string name="projects_field_position">Anzeigeposition</string>
-    <string name="projects_field_position_header">Kopfzeile</string>
+    <string name="projects_field_position_header">Kopfbereich</string>
     <string name="projects_field_validation">Validierung</string>
     <string name="projects_field_min_length">Mindestlänge</string>
     <string name="projects_field_max_length">Maximale Länge</string>
@@ -330,7 +330,7 @@
     <string name="projects_settings_field_fingerprint">Fingerabdruck</string>
     <string name="projects_settings_field_server">Server</string>
     <string name="projects_access_subject_anyone">Jeder</string>
-    <string name="projects_access_subject_authenticated">Authentifizierte Benutzer</string>
+    <string name="projects_access_subject_authenticated">Angemeldete Benutzer</string>
     <string name="projects_access_select_role">Rolle auswählen</string>
     <string name="projects_access_role_view">Nur Ansicht</string>
     <string name="projects_access_role_none">Kein Zugriff</string>

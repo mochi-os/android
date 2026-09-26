@@ -100,7 +100,7 @@
     <string name="people_welcome_title">ಜನರಿಗೆ ಸುಸ್ವಾಗತ</string>
     <string name="people_person_banner_alt">%1$s ಗಾಗಿ ಬ್ಯಾನರ್</string>
     <string name="people_person_private">ಈ ಪ್ರೊಫೈಲ್ ಖಾಸಗಿಯಾಗಿದೆ</string>
-    <string name="people_person_state_invited">ಆಮಂತ್ರಿಸಲಾಗಿದೆ</string>
+    <string name="people_person_state_invited">ಆಹ್ವಾನಿಸಲಾಗಿದೆ</string>
 
     <string name="people_invitations_accept_all">ಎಲ್ಲವನ್ನೂ ಸ್ವೀಕರಿಸಿ</string>
     <string name="people_invitations_decline_all">ಎಲ್ಲವನ್ನೂ ತಿರಸ್ಕರಿಸಿ</string>
@@ -117,7 +117,7 @@
     <string name="people_profile_avatar">ಅವತಾರ್</string>
     <string name="people_profile_banner">ಬ್ಯಾನರ್</string>
     <string name="people_contacts_search_placeholder">ಹುಡುಕಿ…</string>
-    <string name="people_contacts_invited">ಆಮಂತ್ರಿಸಲಾಗಿದೆ</string>
+    <string name="people_contacts_invited">ಆಹ್ವಾನಿಸಲಾಗಿದೆ</string>
     <string name="people_contacts_accept">ಸ್ವೀಕರಿಸಿ</string>
     <string name="people_contacts_message">ಸಂದೇಶ ಕಳುಹಿಸಿ</string>
     <string name="people_contacts_no_people_found">ಯಾವುದೇ ಜನರು ಸಿಗಲಿಲ್ಲ</string>
@@ -160,7 +160,7 @@
     <string name="people_contact_new_title">ಹೊಸ ಸಂಪರ್ಕ</string>
     <string name="people_contact_edit_title">ಸಂಪರ್ಕ ಸಂಪಾದಿಸಿ</string>
     <string name="people_contact_given">ಮೊದಲ ಹೆಸರು</string>
-    <string name="people_contact_family">ಕೊನೆಯ ಹೆಸರು</string>
+    <string name="people_contact_family">ಕುಟುಂಬದ ಹೆಸರು</string>
     <string name="people_contact_nickname">ಅಡ್ಡಹೆಸರು</string>
     <string name="people_contact_add_email">ಇಮೇಲ್ ಸೇರಿಸಿ</string>
     <string name="people_contact_add_phone">ಫೋನ್ ಸೇರಿಸಿ</string>

@@ -146,7 +146,7 @@
     <string name="people_add_contact_search_start">Aloita kirjoittaminen etsiäksesi käyttäjiä</string>
     <string name="people_contact_phone">Puhelin</string>
     <string name="people_contact_title">Tehtävänimike</string>
-    <string name="people_contacts_title">Yhteyshenkilöt</string>
+    <string name="people_contacts_title">Yhteystiedot</string>
     <string name="people_contacts_all">Kaikki yhteystiedot</string>
     <string name="people_contacts_empty">Yhteystietoja ei löytynyt</string>
     <string name="people_contacts_add_to_start">Lisää yhteystietoja päästäksesi alkuun</string>
@@ -161,11 +161,11 @@
     <string name="people_contact_edit_title">Muokkaa yhteystietoa</string>
     <string name="people_contact_given">Etunimi</string>
     <string name="people_contact_family">Sukunimi</string>
-    <string name="people_contact_nickname">Kutsumanimi</string>
+    <string name="people_contact_nickname">Lempinimi</string>
     <string name="people_contact_add_email">Lisää sähköposti</string>
     <string name="people_contact_add_phone">Lisää puhelin</string>
     <string name="people_contact_add_address">Lisää osoite</string>
-    <string name="people_contact_street">Katu</string>
+    <string name="people_contact_street">Katuosoite</string>
     <string name="people_contact_birthday">Syntymäpäivä</string>
     <string name="people_contact_organisation">Organisaatio</string>
     <string name="people_contact_url">Verkkosivusto</string>
@@ -188,7 +188,7 @@
     <string name="people_person_state_contact">Yhteystiedoissa</string>
     <string name="people_device_create">Luo</string>
     <string name="people_device_server">Palvelin</string>
-    <string name="people_device_username">Käyttäjänimi</string>
+    <string name="people_device_username">Käyttäjätunnus</string>
     <string name="people_device_done">Valmis</string>
     <string name="people_device_list">Laitteet</string>
     <string name="people_device_used">Viimeksi käytetty %1$s</string>

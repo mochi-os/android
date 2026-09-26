@@ -77,7 +77,7 @@
     <string name="calendars_workweek">Ġimgħa tax-xogħol</string>
     <string name="calendars_range">minn %1$s sa %2$s</string>
     <string name="calendars_truncated">Xi avvenimenti f\'din il-firxa mhumiex murija.</string>
-    <string name="calendars_list_empty">L-ebda avveniment</string>
+    <string name="calendars_list_empty">L-ebda avvenimenti</string>
     <plurals name="calendars_more">
         <item quantity="one">+%1$d ieħor</item>
         <item quantity="two">+%1$d oħra</item>
@@ -163,7 +163,7 @@
     <string name="calendars_link_submit">Orbot</string>
     <string name="calendars_link_sync">Sinkronizza issa</string>
     <string name="calendars_link_grant">Ippermetti l-aċċess għall-kalendarju</string>
-    <string name="calendars_link_linked">Marbut</string>
+    <string name="calendars_link_linked">Illinkjat</string>
     <string name="calendars_link_marker">Kalendarju marbut</string>
     <string name="calendars_link_remote_empty">L-ebda kalendarji</string>
     <string name="calendars_poll_conflict">Avveniment inbidel fuq iż-żewġ naħat</string>

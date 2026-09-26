@@ -41,7 +41,7 @@
     <string name="feeds_tab_members">Miseensota</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Maqaa feed</string>
-    <string name="feeds_save_name">Maqaa kuusuu</string>
+    <string name="feeds_save_name">Maqaa olkaa\'i</string>
     <string name="feeds_banner">Bannerii</string>
     <string name="feeds_banner_description">Bannarii markdown filannoo gubbaa feed kee irratti mul\'atu.</string>
     <string name="feeds_clear">Cilliisi</string>
@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">feed Mochi</string>
     <string name="feeds_source_type_feed_memories">Yaadannoo</string>
-    <string name="feeds_remove_source">Madda haquu</string>
+    <string name="feeds_remove_source">Madda haquuf?</string>
     <string name="feeds_suggested_credibility_accept">Fudhadhu</string>
     <string name="feeds_rss_url_copied">URL RSS kilipboordiitti garagalfame</string>
     <string name="feeds_logout">Ba\'i</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">URL RSS</string>
     <string name="feeds_source_never_fetched">Takkaa hin fudhatamne</string>
     <string name="feeds_source_poll">Sakatta\'i</string>
-    <string name="feeds_source_transform">Jijjiiri</string>
+    <string name="feeds_source_transform">Jijjiirraa AI</string>
     <string name="feeds_remove_source_confirm">\"%1$s\" haquu?</string>
     <string name="feeds_remove_also_delete_posts">Barreeffamoota galchamanis haqi</string>
     <string name="feeds_suggested_credibility_title">Amanamummaa yaadame</string>
@@ -160,7 +160,7 @@
     <string name="feeds_rss_feed">Fiidii RSS</string>
     <string name="feeds_settings_field_entity_id">ID Iddoo</string>
     <string name="feeds_settings_field_fingerprint">Maxxansa quba</string>
-    <string name="feeds_settings_field_server">Server</string>
+    <string name="feeds_settings_field_server">Sarvarii</string>
     <string name="feeds_settings_name_edit_cd">Maqaa sirreessi</string>
     <string name="feeds_settings_section_identity">Eenyummaa</string>
     <string name="feeds_unsubscribe">Galaa\'uu kaasi</string>
@@ -172,7 +172,7 @@
     <string name="feeds_allow_search">Eenyu iyyuu sora barbaaduu hayyami</string>
     <string name="feeds_post_content">Qabiyyee maxxansaa</string>
     <string name="feeds_enable_memories">Yaadannoo dandeessisi</string>
-    <string name="feeds_permission_request_title">Gaaffii hayyamaa</string>
+    <string name="feeds_permission_request_title">Iyyannoo hayyamaa</string>
     <string name="feeds_unsubscribe_confirm">Feedii hordofuu dhiisuu?</string>
     <string name="feeds_settings_title">Qindaa\'ina %1$s</string>
     <string name="feeds_source_transform_help">Dhaamsuuf duwwaa kaa\'i.</string>
@@ -206,10 +206,10 @@
     <string name="feeds_banner_dismiss">Bannerii dhiisi</string>
     <string name="feeds_members_search">Miseensota gulaali</string>
     <string name="feeds_ai_prompt_default">Idilee</string>
-    <string name="feeds_ai_prompt_custom">Dhuunfaa</string>
+    <string name="feeds_ai_prompt_custom">Mataa keetiin</string>
     <string name="feeds_ai_prompt_variables">Jijjiiramoo: %1$s</string>
     <string name="feeds_link">Geessituu</string>
-    <string name="feeds_share_link_title">Geessituu feed</string>
+    <string name="feeds_share_link_title">Hidhaa feed</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">yaada %1$d</item>
         <item quantity="other">yaadota %1$d</item>

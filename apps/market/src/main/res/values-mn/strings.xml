@@ -179,7 +179,7 @@
     <string name="market_editor_interval">Төлбөрийн давтамж</string>
     <string name="market_editor_interval_monthly">Сар бүр</string>
     <string name="market_editor_interval_yearly">Жилийн</string>
-    <string name="market_editor_photo_delete">Зураг устгах</string>
+    <string name="market_editor_photo_delete">Зургийг устгах</string>
     <string name="market_editor_photo_upload_failed">Зураг ачааллаж чадсангүй</string>
     <string name="market_editor_photo_uploading">Байршуулж байна…</string>
     <string name="market_editor_photos_add">Зураг нэмэх</string>
@@ -245,7 +245,7 @@
     <string name="market_editor_zone_worldwide">Дэлхийн хэмжээнд</string>
     <string name="market_editor_zones_empty">Одоогоор бүс алга</string>
     <string name="market_empty_subtitle">Шүүлтүүрээ тохируулах эсвэл цэвэрлэхийг оролдоно уу.</string>
-    <string name="market_empty_title">Үр дүн алга</string>
+    <string name="market_empty_title">Илэрц олдсонгүй</string>
     <string name="market_fee_disclosure_body">Платформын шимтгэл: %1$s%%. Боловсруулагчийн шимтгэлийг Stripe удирдлагын самбараас үзнэ үү.</string>
     <string name="market_fee_disclosure_title">Платформын шимтгэл</string>
     <string name="market_fee_preview_failed">Шимтгэл тооцоолж чадсангүй</string>
@@ -551,7 +551,7 @@
     <string name="market_search_clear">Хайлтыг цэвэрлэх</string>
     <string name="market_search_placeholder">Зах зээлд хайх</string>
     <string name="market_section_categories">Ангилал үзэх</string>
-    <string name="market_section_listings">Сүүлийн зарууд</string>
+    <string name="market_section_listings">Сүүлийн зар</string>
     <string name="market_section_recent">Сүүлд үзсэн</string>
     <string name="market_ship_dialog_cancel">Цуцлах</string>
     <string name="market_ship_dialog_submit">Баталгаажуулах</string>

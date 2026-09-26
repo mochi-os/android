@@ -26,7 +26,7 @@
     <string name="words_detail_action_resign">Abandonner</string>
     <string name="words_detail_action_rematch">Revanche</string>
     <string name="words_detail_action_delete">Supprimer la partie</string>
-    <string name="words_detail_chat_title">Chat</string>
+    <string name="words_detail_chat_title">Messagerie</string>
     <string name="words_detail_recall">Récupérer</string>
     <string name="words_detail_submit">Envoyer</string>
     <string name="words_detail_cancel">Annuler</string>

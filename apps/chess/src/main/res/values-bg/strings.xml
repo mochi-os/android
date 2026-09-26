@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">Приеми</string>
     <string name="chess_draw_decline">Откажи</string>
     <string name="chess_status_checkmate_you_win">Шах и мат — печелите!</string>
-    <string name="chess_status_stalemate">Пат — равенство</string>
+    <string name="chess_status_stalemate">Пат — реми</string>
     <string name="chess_status_draw">Реми</string>
     <string name="chess_status_check_your_move">Шах — вашият ход</string>
     <string name="chess_status_your_move">Вашият ход</string>
@@ -60,12 +60,12 @@
     <string name="chess_empty_subtitle">Започнете първата си партия, за да играете шах с приятел.</string>
     <string name="chess_empty_start_button">Започни първата си партия</string>
     <string name="chess_detail_unavailable">Партията е недостъпна</string>
-    <string name="chess_delete_title">Изтрий партия?</string>
+    <string name="chess_delete_title">Да се изтрие ли играта?</string>
     <string name="chess_delete_message">Това премахва партията от вашия списък.</string>
     <string name="chess_ws_connecting">Свързване…</string>
     <string name="chess_ws_disconnected">Офлайн</string>
     <string name="chess_ws_reconnecting">Повторно свързване…</string>
-    <string name="chess_ws_failed">Връзката е неуспешна</string>
+    <string name="chess_ws_failed">Връзката не бе осъществена</string>
     <string name="chess_move_capture">%1$s взе %2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 

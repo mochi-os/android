@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Icona</string>
     <string name="crm_option_icon_placeholder">p. ex. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Cancel·la la subscripció</string>
-    <string name="crm_settings_delete_crm">Suprimeix el projecte</string>
+    <string name="crm_settings_delete_crm">Suprimeix el CRM</string>
     <string name="crm_settings_delete_confirm_title">Suprimeix el CRM</string>
     <string name="crm_settings_unsubscribe_title">Cancel·la la subscripció</string>
     <string name="crm_settings_unsubscribe_message">Segur que vols cancel·lar la subscripció a aquest CRM?</string>
@@ -277,7 +277,7 @@
     <string name="crm_access_role_none">Sense accés</string>
     <string name="crm_all_crms">Tots els CRM</string>
     <string name="crm_settings_unsubscribe_section">Cancel·la la subscripció al CRM</string>
-    <string name="crm_settings_updated">CRM actualitzat</string>
+    <string name="crm_settings_updated">S\'ha actualitzat el CRM</string>
     <string name="crm_create_import_backup">Importa des d\'una còpia de seguretat (opcional)</string>
     <string name="crm_export">Exporta les dades</string>
     <string name="crm_exporting">S\'està preparant l\'exportació…</string>

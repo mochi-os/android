@@ -16,7 +16,7 @@
     <string name="wikis_page_action_rename">Cuir ainm ùr air</string>
     <string name="wikis_page_action_history">Eachdraidh</string>
     <string name="wikis_page_action_delete">Sguab às</string>
-    <string name="wikis_page_action_section_wiki">Wiki</string>
+    <string name="wikis_page_action_section_wiki">Uicipeid</string>
     <string name="wikis_page_action_search">Lorg</string>
     <string name="wikis_page_action_tags">Tagaichean</string>
     <string name="wikis_page_action_recent_changes">Atharrachaidhean o chionn ghoirid</string>
@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Thoir air falbh</string>
     <string name="wikis_replicas_remove_failed">Cha b\' urrainn riochdaire a thoirt air falbh</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Uicipeidean</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">Brathan mu dheasachaidhean duilleagan wiki, beachdan agus cuiridhean.</string>
     <string name="wikis_pageview_toc_expand">Seall clàr-innse</string>
@@ -225,7 +225,7 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Air ùrachadh %1$s</string>
     <string name="wikis_pageview_not_found_description">Chan eil an duilleag “%1$s” ann fhathast.</string>
-    <string name="wikis_pageview_share_chooser">Ceangal na wiki</string>
+    <string name="wikis_pageview_share_chooser">Ceangal na h-uicipeid</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">Ceangal</string>
     <string name="wikis_open_sidebar">Fosgail bàr-taoibh</string>

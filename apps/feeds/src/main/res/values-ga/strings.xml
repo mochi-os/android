@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Fotha Mochi</string>
     <string name="feeds_source_type_feed_memories">Cuimhní</string>
-    <string name="feeds_remove_source">Bain foinse</string>
+    <string name="feeds_remove_source">Bain foinse?</string>
     <string name="feeds_suggested_credibility_accept">Glac leis</string>
     <string name="feeds_rss_url_copied">Cóipeáladh URL RSS chuig an ngearrthaisce</string>
     <string name="feeds_logout">Logáil amach</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">URL RSS</string>
     <string name="feeds_source_never_fetched">Riamh faighte</string>
     <string name="feeds_source_poll">Vótáil</string>
-    <string name="feeds_source_transform">Athraigh</string>
+    <string name="feeds_source_transform">Trasfhoirmiú AI</string>
     <string name="feeds_remove_source_confirm">Bain \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Scrios postálacha iompórtáilte freisin</string>
     <string name="feeds_suggested_credibility_title">Inchreidteacht mholta</string>
@@ -218,7 +218,7 @@
     <string name="feeds_ai_prompt_custom">Saincheaptha</string>
     <string name="feeds_ai_prompt_variables">Athróga: %1$s</string>
     <string name="feeds_link">Nasc</string>
-    <string name="feeds_share_link_title">Nasc an fhotha</string>
+    <string name="feeds_share_link_title">Nasc fotha</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$d nóta tráchta</item>
         <item quantity="two">%1$d nóta tráchta</item>

@@ -65,7 +65,7 @@
     <string name="staff_audit_action_account_unbanned">تم إلغاء الحظر</string>
     <string name="staff_audit_action_account_unsuspended">تم إلغاء التعليق</string>
     <string name="staff_audit_action_auction_bid_placed">تم تقديم المزايدة</string>
-    <string name="staff_audit_action_auction_cancelled">أُلغي المزاد</string>
+    <string name="staff_audit_action_auction_cancelled">تم إلغاء المزاد</string>
     <string name="staff_audit_action_auction_created">تم إنشاء المزاد</string>
     <string name="staff_audit_action_auction_ended_sold">تم بيع المزاد</string>
     <string name="staff_audit_action_auction_ended_unsold">انتهى المزاد دون بيع</string>
@@ -281,10 +281,10 @@
     <string name="staff_disputes_stripe_subscription_canceled">تم إلغاء الاشتراك</string>
     <string name="staff_disputes_stripe_unrecognized">خصم غير معروف</string>
     <string name="staff_disputes_view">عرض</string>
-    <string name="staff_filter_chip_remove">إزالة الفلتر</string>
+    <string name="staff_filter_chip_remove">إزالة عامل التصفية</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">الإشراف</string>
-    <string name="staff_filter_label_query">البحث</string>
+    <string name="staff_filter_label_query">بحث</string>
     <string name="staff_filter_label_seller">البائع</string>
     <string name="staff_filter_label_status">الحالة</string>
     <string name="staff_filter_label_type">النوع</string>
@@ -323,7 +323,7 @@
     <string name="staff_listings_status_sold">تم البيع</string>
     <string name="staff_listings_submitting">جارٍ الإرسال…</string>
     <string name="staff_moderation_empty">لا توجد إدخالات إشراف</string>
-    <string name="staff_moderation_filter_clear">مسح الفلتر</string>
+    <string name="staff_moderation_filter_clear">مسح عامل التصفية</string>
     <string name="staff_moderation_listing_filter_placeholder">معرّف القائمة</string>
     <string name="staff_moderation_system">النظام</string>
     <string name="staff_moderation_unknown_listing">#%1$s</string>

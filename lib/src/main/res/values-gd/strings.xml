@@ -121,7 +121,7 @@
     <string name="auth_server_url">URL frithealaiche</string>
     <string name="auth_create_identity_title">Cruthaich do dhearbh-aithne</string>
     <string name="auth_link_rules">Riaghailtean</string>
-    <string name="common_retry">Feuch a-rithist</string>
+    <string name="common_retry">Feuch ris a-rithist</string>
     <string name="lightbox_position">%1$d / %2$d</string>
     <string name="about_label">Mu dheidhinn</string>
     <string name="game_chat_load_more">Luchdaich teachdaireachdan as sine</string>
@@ -165,7 +165,7 @@
     <string name="bootstrap_choose_account">Tagh cunntas</string>
     <string name="bootstrap_sign_in_different_server">Clàraich a-steach ri frithealaiche eile</string>
     <string name="common_more_options">Barrachd roghainnean</string>
-    <string name="common_collapse">Co-theannaich</string>
+    <string name="common_collapse">Lùb a-steach</string>
     <string name="common_expand">Leudaich</string>
     <string name="common_play_video">Cluich a\' bhidio</string>
     <string name="place_picker_name">Ainm an àite</string>
@@ -176,7 +176,7 @@
     <string name="access_add_rule_title">Cuir ris riaghailt inntrigidh</string>
     <string name="access_level_manage">Stiùirich</string>
     <string name="access_level_react">Dèan freagairt</string>
-    <string name="notifications_clear">Glan na brathan</string>
+    <string name="notifications_clear">Falamhaich na brathan</string>
     <string name="entity_avatar_alt">Avatar airson %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="format_time_just_now">An-dràsta fhèin</string>
@@ -211,7 +211,7 @@
     <string name="about_up_to_date">Cho ùr \'s a ghabhas</string>
     <string name="about_check_downloading">Tha tionndadh %1$s ri làimh, ’ga luchdadh a-nuas…</string>
     <string name="about_check_network_error">Cha b\' urrainn ruigsinn air an fhrithealaiche ùrachaidh</string>
-    <string name="about_check_download_failed">Dh\'fhàillig an luchdadh a-nuas</string>
+    <string name="about_check_download_failed">Dh’fhàillig an luchdadh a-nuas</string>
     <string name="notifications_clear_all_title">A bheil thu airson gach brath fhalmhachadh?</string>
     <string name="notifications_clear_all_message">Bheir seo air falbh a h-uile brath. Chan urrainnear an aiseag.</string>
     <string name="settings_value_auto">Fèin-obrachail</string>
@@ -238,7 +238,7 @@
     <string name="stepup_error_oauth">Cha b\' urrainn dearbhadh leis a\' chunntas sin. Feuch ris a-rithist.</string>
     <string name="game_system_resign">Ghèill %1$s</string>
     <string name="game_system_draw_offer">Thairg %1$s geall-cothrom</string>
-    <string name="game_system_draw_accept">Geall-cothrom aontaichte</string>
+    <string name="game_system_draw_accept">Chaidh aontachadh air geama ionann</string>
     <string name="game_system_draw_decline">Dhiùlt %1$s an geall-cothrom</string>
     <string name="reactivation_title">Tha do chunntas clàraichte airson a sguabadh às</string>
     <string name="reactivation_body">Tha do chunntas clàraichte airson a sguabadh às. \'S urrainn dhut a chur dheth agus làn-inntrigeadh ath-shuidheachadh a-nis.</string>
@@ -312,7 +312,7 @@
     <string name="settings_card_flat">Còmhnard</string>
     <string name="settings_card_raised">Togte</string>
     <string name="error_server_https">Feumaidh seòladh an fhrithealaiche tòiseachadh le https://</string>
-    <string name="device_name_fallback">Uidheam-làimhe</string>
+    <string name="device_name_fallback">Inneal-làimhe</string>
     <string name="account_error_token_type">Seòrsa tòcain gun taic</string>
     <string name="account_error_caller">Chan eil cead aig an neach-gairm</string>
 </resources>

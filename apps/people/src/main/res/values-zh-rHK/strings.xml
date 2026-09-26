@@ -6,7 +6,7 @@
     <string name="people_member_add_hint">新增用戶或群組以開始</string>
     <string name="people_member_type_user">用戶</string>
 
-    <string name="people_profile_name">名稱</string>
+    <string name="people_profile_name">姓名</string>
     <string name="people_common_close">關閉</string>
     <string name="people_common_cancel">取消</string>
     <string name="people_profile_save">儲存</string>
@@ -104,7 +104,7 @@
     <string name="people_contacts_try_adjusting">請嘗試調整你的搜尋</string>
     <string name="people_contact_section_address">地址</string>
     <string name="people_contact_section_detail">詳情</string>
-    <string name="people_contact_name">名稱</string>
+    <string name="people_contact_name">姓名</string>
     <string name="people_contact_email">電郵</string>
     <string name="people_contact_city">城市</string>
     <string name="people_contact_region">地區</string>

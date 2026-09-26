@@ -73,7 +73,7 @@
     <string name="calendars_workweek">工作周</string>
     <string name="calendars_range">%1$s 至 %2$s</string>
     <string name="calendars_truncated">此范围内的部分活动未显示。</string>
-    <string name="calendars_list_empty">没有活动</string>
+    <string name="calendars_list_empty">无活动</string>
     <plurals name="calendars_more">
         <item quantity="other">+%1$d 个</item>
     </plurals>

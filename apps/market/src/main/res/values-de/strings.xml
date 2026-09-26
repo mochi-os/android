@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Angebot melden</string>
     <string name="market_listing_detail_save">Speichern</string>
     <string name="market_listing_detail_seller_heading">Verkäufer</string>
-    <string name="market_listing_detail_shipping_heading">Versand</string>
+    <string name="market_listing_detail_shipping_heading">Versandoptionen</string>
     <string name="market_listing_detail_subscribe">Abonnieren</string>
     <string name="market_listing_detail_tags_heading">Tags</string>
     <string name="market_listing_detail_title">Angebot</string>
@@ -327,7 +327,7 @@
     <string name="market_saved_title">Gespeichert</string>
     <string name="market_search_clear">Suche leeren</string>
     <string name="market_section_categories">Kategorien durchsuchen</string>
-    <string name="market_section_listings">Neueste Anzeigen</string>
+    <string name="market_section_listings">Aktuelle Angebote</string>
     <string name="market_section_recent">Zuletzt angesehen</string>
     <string name="market_ship_dialog_cancel">Abbrechen</string>
     <string name="market_ship_dialog_submit">Bestätigen</string>
@@ -608,7 +608,7 @@
     <string name="market_listing_photo">Angebotsfoto</string>
     <string name="market_listing_save">Angebot speichern</string>
     <string name="market_listing_unsave">Aus Gespeichertem entfernen</string>
-    <string name="market_listings_action_appeal">Entfernung anfechten</string>
+    <string name="market_listings_action_appeal">Einspruch gegen Entfernung</string>
     <string name="market_listings_action_share">Teilen</string>
     <string name="market_listings_delete_failed">Angebot konnte nicht gelöscht werden</string>
     <string name="market_listings_delete_message">Dadurch wird der Entwurf dauerhaft aus Ihrem Konto entfernt.</string>
@@ -631,7 +631,7 @@
     <string name="market_price_per_month">%1$s / Monat</string>
     <string name="market_price_per_year">%1$s / Jahr</string>
     <string name="market_price_starting_bid">Startgebot: %1$s</string>
-    <string name="market_profile_biography">Über</string>
+    <string name="market_profile_biography">Info</string>
     <string name="market_profile_load_failed">Profil konnte nicht geladen werden</string>
     <string name="market_profile_member_since">Mitglied seit %1$s</string>
     <string name="market_profile_joined">Beigetreten %1$s</string>
@@ -665,7 +665,7 @@
     <string name="market_seller_become_heading">Verkäufer werden</string>
     <string name="market_seller_become_title">Verkäufer werden</string>
     <string name="market_seller_check_status">Status prüfen</string>
-    <string name="market_seller_checking">Wird geprüft ...</string>
+    <string name="market_seller_checking">Wird geprüft…</string>
     <string name="market_seller_connect_stripe">Stripe verbinden</string>
     <string name="market_seller_connecting">Wird geladen...</string>
     <string name="market_seller_fee_loading">Gebührendetails werden geladen...</string>

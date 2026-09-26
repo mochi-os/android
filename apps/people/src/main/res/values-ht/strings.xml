@@ -160,13 +160,13 @@
     <string name="people_contact_new_title">Nouvo kontak</string>
     <string name="people_contact_edit_title">Modifye kontak</string>
     <string name="people_contact_given">Prenon</string>
-    <string name="people_contact_family">Siyati</string>
+    <string name="people_contact_family">Non fanmi</string>
     <string name="people_contact_nickname">Ti non</string>
     <string name="people_contact_add_email">Ajoute imèl</string>
     <string name="people_contact_add_phone">Ajoute telefòn</string>
     <string name="people_contact_add_address">Ajoute adrès</string>
     <string name="people_contact_street">Ri</string>
-    <string name="people_contact_birthday">Dat fèt</string>
+    <string name="people_contact_birthday">Dat nesans</string>
     <string name="people_contact_organisation">Òganizasyon</string>
     <string name="people_contact_url">Sit entènèt</string>
     <string name="people_contact_note">Nòt</string>

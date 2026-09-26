@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s ಇನ್ನು ಮುಂದೆ ಈ ಡೊಮೇನ್‌ನಲ್ಲಿ ಮಾರ್ಗಗಳನ್ನು ನಿರ್ವಹಿಸುವುದಿಲ್ಲ.</string>
     <string name="domain_delegation_delete_title">ಡೆಲಿಗೇಶನ್ ಅಳಿಸಬೇಕೆ?</string>
     <string name="domain_delegation_path">ಪಥ</string>
-    <string name="domain_delegation_user">ಬಳಕೆದಾರ ID</string>
+    <string name="domain_delegation_user">ಬಳಕೆದಾರ</string>
     <string name="domain_delegations">ಡೆಲಿಗೇಶನ್‌ಗಳು</string>
     <string name="domain_delegations_empty">ಯಾವುದೇ ಪ್ರತಿನಿಧಿಗಳನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಲಾಗಿಲ್ಲ.</string>
     <string name="domain_delete">ಡೊಮೇನ್ ಅಳಿಸಿ</string>
@@ -389,7 +389,7 @@
     <string name="account_totp_open">ದೃಢೀಕರಣ ಆ್ಯಪ್‌ನಲ್ಲಿ ತೆರೆಯಿರಿ</string>
     <string name="accounts_revoke">ಪ್ರವೇಶವನ್ನು ಹಿಂಪಡೆಯಿರಿ</string>
     <string name="accounts_capability_calendar">ಕ್ಯಾಲೆಂಡರ್</string>
-    <string name="accounts_capability_notify">ನೋಟಿಫಿಕೇಶನ್‌ಗಳು</string>
+    <string name="accounts_capability_notify">ಅಧಿಸೂಚನೆಗಳು</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">ಸೈನ್-ಇನ್</string>
     <string name="accounts_provider_caldav">ಕ್ಯಾಲೆಂಡರ್ ಸರ್ವರ್</string>

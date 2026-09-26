@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Simge</string>
     <string name="crm_option_icon_placeholder">ör. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Aboneliği iptal et</string>
-    <string name="crm_settings_delete_crm">Projeyi sil</string>
+    <string name="crm_settings_delete_crm">CRM\'i sil</string>
     <string name="crm_settings_delete_confirm_title">CRM\'i sil</string>
     <string name="crm_settings_unsubscribe_title">Aboneliği iptal et</string>
     <string name="crm_settings_unsubscribe_message">Bu CRM aboneliğini iptal etmek istediğinizden emin misiniz?</string>
@@ -153,7 +153,7 @@
     <string name="crm_views_filter">Filtre (kaydedildi, henüz uygulanmadı)</string>
     <string name="crm_people_empty">Henüz kimsenin erişimi yok</string>
     <string name="crm_settings_delete_confirm_message">Bu CRM\'yi silmek istediğinizden emin misiniz? Tüm nesneler, yorumlar ve ayarlar kalıcı olarak kaldırılacaktır.</string>
-    <string name="crm_object_unwatch">Takibi bırak</string>
+    <string name="crm_object_unwatch">İzlemeyi bırak</string>
     <string name="crm_object_delete_title">Nesneyi sil</string>
     <string name="crm_object_delete_message">Bu nesneyi silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.</string>
     <string name="crm_parent_none">Üst öğe yok</string>
@@ -183,7 +183,7 @@
     <string name="crm_attachment_delete_confirm_message">Bu ek kalıcı olarak silinecek.</string>
     <string name="crm_tree_move">Taşı</string>
     <string name="crm_tree_move_to_parent">Üst öğeye taşı</string>
-    <string name="crm_tree_root_level">(Kök düzey)</string>
+    <string name="crm_tree_root_level">(Kök seviyesi)</string>
     <string name="crm_tree_empty">Nesne yok</string>
     <string name="crm_board_no_columns">Bu görünüm için sütun yapılandırılmamış</string>
     <string name="crm_board_no_options">Sütun alanı için seçenek yapılandırılmamış</string>

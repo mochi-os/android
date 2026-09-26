@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Elimină</string>
     <string name="wikis_replicas_remove_failed">Eliminarea replicii a eșuat</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki-uri</string>
     <string name="wikis_channel_name">Notificări Wikis</string>
     <string name="wikis_channel_description">Notificări despre modificări de pagini, comentarii și invitații.</string>
     <string name="wikis_pageview_toc_expand">Afișează cuprinsul</string>
@@ -225,7 +225,7 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Actualizat %1$s</string>
     <string name="wikis_pageview_not_found_description">Pagina „%1$s\" încă nu există.</string>
-    <string name="wikis_pageview_share_chooser">Link-ul wiki</string>
+    <string name="wikis_pageview_share_chooser">Link către wiki</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS wiki</string>
     <string name="wikis_page_action_share">Link</string>
     <string name="wikis_open_sidebar">Deschide bara laterală</string>
@@ -246,7 +246,7 @@
     <string name="wikis_insert_dialog_empty">Încă nu există atașamente. Încarcă un fișier pentru a începe.</string>
     <string name="wikis_delete_page_message">Sunteți pe cale să ștergeți pagina „%1$s\" (%2$s). Această acțiune poate fi anulată prin restaurare din istoric.</string>
     <string name="wikis_delete_page_success">Pagină ștearsă</string>
-    <string name="wikis_revert_page_title">Restaurează pagina</string>
+    <string name="wikis_revert_page_title">Anulează modificarea paginii</string>
     <string name="wikis_revert_page_message">Sunteți pe cale să restaurați %1$s la versiunea %2$d. Aceasta va crea o nouă revizie cu conținutul versiunii %2$d.</string>
     <string name="wikis_revert_page_default_comment">Restaurat la versiunea %1$d</string>
     <string name="wikis_revert_page_success">Restaurat la versiunea %1$d</string>

@@ -34,7 +34,7 @@
     <string name="crm_option_icon">ಐಕಾನ್</string>
     <string name="crm_option_icon_placeholder">ಉದಾ. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">ಚಂದಾದಾರಿಕೆ ರದ್ದುಗೊಳಿಸಿ</string>
-    <string name="crm_settings_delete_crm">ಪ್ರಾಜೆಕ್ಟ್ ಅಳಿಸಿ</string>
+    <string name="crm_settings_delete_crm">CRM ಅಳಿಸಿ</string>
     <string name="crm_settings_delete_confirm_title">CRM ಅಳಿಸಿ</string>
     <string name="crm_settings_unsubscribe_title">ಚಂದಾದಾರಿಕೆ ರದ್ದುಗೊಳಿಸಿ</string>
     <string name="crm_settings_unsubscribe_message">ಈ CRM ನಿಂದ ಅನ್‌ಸಬ್‌ಸ್ಕ್ರೈಬ್ ಮಾಡಲು ನೀವು ಖಚಿತವಾಗಿದ್ದೀರಾ?</string>
@@ -153,10 +153,10 @@
     <string name="crm_views_filter">ಫಿಲ್ಟರ್ (ಸಂಗ್ರಹಿಸಲಾಗಿದೆ, ಇನ್ನೂ ಅನ್ವಯಿಸಲಾಗಿಲ್ಲ)</string>
     <string name="crm_people_empty">ಯಾವುದೇ ವ್ಯಕ್ತಿಗಳಿಗೂ ಇನ್ನೂ ಪ್ರವೇಶವಿಲ್ಲ</string>
     <string name="crm_settings_delete_confirm_message">ನೀವು ಈ CRM ಅನ್ನು ಅಳಿಸಲು ಖಚಿತವಾಗಿದ್ದೀರಾ? ಎಲ್ಲಾ ಆಬ್ಜೆಕ್ಟ್‌ಗಳು, ಪ್ರತಿಕ್ರಿಯೆಗಳು ಮತ್ತು ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಶಾಶ್ವತವಾಗಿ ತೆಗೆದುಹಾಕಲಾಗುತ್ತದೆ.</string>
-    <string name="crm_object_unwatch">ವೀಕ್ಷಣೆ ತೆಗೆಯಿರಿ</string>
+    <string name="crm_object_unwatch">ವೀಕ್ಷಣೆ ತೆಗೆದುಹಾಕಿ</string>
     <string name="crm_object_delete_title">ಆಬ್ಜೆಕ್ಟ್ ಅಳಿಸಿ</string>
     <string name="crm_object_delete_message">ನೀವು ಈ ಆಬ್ಜೆಕ್ಟ್ ಅನ್ನು ಅಳಿಸಲು ಖಚಿತವಾಗಿದ್ದೀರಾ? ಈ ಕ್ರಿಯೆಯನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗುವುದಿಲ್ಲ.</string>
-    <string name="crm_parent_none">ಪೋಷಕರಿಲ್ಲ</string>
+    <string name="crm_parent_none">ಪೋಷಕ ಇಲ್ಲ</string>
     <string name="crm_links_empty">ಯಾವುದೇ ಲಿಂಕ್‌ಗಳಿಲ್ಲ</string>
     <string name="crm_links_section_relates">ಸಂಬಂಧಿಸಿದೆ</string>
     <string name="crm_links_section_duplicated_by">ಇದರಿಂದ ನಕಲಿಸಲಾಗಿದೆ</string>
@@ -164,7 +164,7 @@
     <string name="crm_links_type_relates">ಸಂಬಂಧಿಸಿದೆ</string>
     <string name="crm_links_remove">ಲಿಂಕ್ ತೆಗೆದುಹಾಕಿ</string>
     <string name="crm_comment_replying_to">%1$s ಗೆ ಉತ್ತರಿಸಲಾಗುತ್ತಿದೆ</string>
-    <string name="crm_comment_clear_reply">ಉತ್ತರ ತೆರವುಗೊಳಿಸಿ</string>
+    <string name="crm_comment_clear_reply">ಪ್ರತ್ಯುತ್ತರವನ್ನು ತೆರವುಗೊಳಿಸಿ</string>
     <string name="crm_comment_placeholder">ಪ್ರತಿಕ್ರಿಯೆ ಸೇರಿಸಿ</string>
     <string name="crm_property_pick_date">ದಿನಾಂಕ ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="crm_property_ok">ಸರಿ</string>
@@ -194,7 +194,7 @@
     <string name="crm_drag_card">ಕಾರ್ಡ್ ಎಳೆಯಿರಿ</string>
     <string name="crm_drag_row">ಸಾಲನ್ನು ಎಳೆಯಿರಿ</string>
     <string name="crm_drag_column">ಕಾಲಮ್ ಎಳೆಯಿರಿ</string>
-    <string name="crm_design_more_options">ಇನ್ನಷ್ಟು ಆಯ್ಕೆಗಳು</string>
+    <string name="crm_design_more_options">ಹೆಚ್ಚಿನ ಆಯ್ಕೆಗಳು</string>
     <string name="crm_design_no_templates">ಯಾವುದೇ ಟೆಂಪ್ಲೇಟ್‌ಗಳು ಲಭ್ಯವಿಲ್ಲ</string>
     <string name="crm_design_use">ಬಳಸಿ</string>
     <string name="crm_design_replace_message">ಇದು ಪ್ರಸ್ತುತ ಡಿಸೈನ್ ಅನ್ನು %1$s ನೊಂದಿಗೆ ಬದಲಾಯಿಸುತ್ತದೆ. ಎಲ್ಲಾ ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಕ್ಲಾಸ್‌ಗಳು, ಕ್ಷೇತ್ರಗಳು, ಆಯ್ಕೆಗಳು ಮತ್ತು ವೀಕ್ಷಣೆಗಳನ್ನು ಅಳಿಸಲಾಗುತ್ತದೆ. ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಆಬ್ಜೆಕ್ಟ್‌ಗಳನ್ನು ಅಳಿಸಲಾಗುವುದಿಲ್ಲ ಆದರೆ ವೀಕ್ಷಣೆಗಳಲ್ಲಿ ಇನ್ನು ಮುಂದೆ ಗೋಚರಿಸದಿರಬಹುದು.</string>
@@ -265,7 +265,7 @@
     <string name="crm_access_select_role">ಪಾತ್ರ ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="crm_access_selected">ಆಯ್ಕೆಮಾಡಲಾಗಿದೆ: %1$s</string>
     <string name="crm_access_subject_anyone">ಯಾರಾದರೂ</string>
-    <string name="crm_access_subject_authenticated">ದೃಢೀಕರಿಸಿದ ಬಳಕೆದಾರರು</string>
+    <string name="crm_access_subject_authenticated">ದೃಢೀಕೃತ ಬಳಕೆದಾರರು</string>
     <string name="crm_access_authenticated_desc">ಲಾಗಿನ್ ಆಗಿರುವ ಯಾರಾದರೂ</string>
     <string name="crm_access_anyone_desc">ಅನಾಮಧೇಯ ಬಳಕೆದಾರರು ಸೇರಿದಂತೆ</string>
     <string name="crm_access_role_design">ವಿನ್ಯಾಸ, ರಚನೆ, ಸಂಪಾದನೆ, ಕಾಮೆಂಟ್ ಮತ್ತು ವೀಕ್ಷಣೆ</string>
@@ -273,7 +273,7 @@
     <string name="crm_access_role_comment">ಕಾಮೆಂಟ್ ಮಾಡಿ ಮತ್ತು ವೀಕ್ಷಿಸಿ</string>
     <string name="crm_access_role_view">ನೋಡುವುದು ಮಾತ್ರ</string>
     <string name="crm_access_role_none">ಪ್ರವೇಶವಿಲ್ಲ</string>
-    <string name="crm_all_crms">ಎಲ್ಲಾ CRM</string>
+    <string name="crm_all_crms">ಎಲ್ಲಾ CRMಗಳು</string>
     <string name="crm_settings_unsubscribe_section">CRM ಅನ್ನು ಅನ್‌ಸಬ್‌ಸ್ಕ್ರೈಬ್ ಮಾಡಿ</string>
     <string name="crm_settings_updated">CRM ನವೀಕರಿಸಲಾಗಿದೆ</string>
     <string name="crm_create_import_backup">ಬ್ಯಾಕಪ್‌ನಿಂದ ಆಮದು ಮಾಡಿ (ಐಚ್ಛಿಕ)</string>

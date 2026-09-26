@@ -49,9 +49,9 @@
     <string name="people_profile_save">儲存</string>
     <string name="people_profile_saving">儲存中…</string>
     <string name="people_profile_save_failed">儲存失敗</string>
-    <string name="people_profile_name">名稱</string>
+    <string name="people_profile_name">姓名</string>
     <string name="people_profile_name_saved">名稱已儲存</string>
-    <string name="people_profile_edit_name">編輯名稱</string>
+    <string name="people_profile_edit_name">編輯姓名</string>
     <string name="people_profile_identity">身分</string>
     <string name="people_profile_accent">強調色</string>
     <string name="people_profile_directory_listing">允許其他人在目錄中找到您</string>
@@ -124,7 +124,7 @@
     <string name="people_contacts_try_adjusting">請嘗試調整您的搜尋</string>
     <string name="people_contact_section_address">地址</string>
     <string name="people_contact_section_detail">詳細資料</string>
-    <string name="people_contact_name">名稱</string>
+    <string name="people_contact_name">姓名</string>
     <string name="people_contact_email">電子郵件</string>
     <string name="people_contact_city">城市</string>
     <string name="people_contact_region">區域</string>
@@ -137,7 +137,7 @@
     <string name="people_contact_pick_date_confirm">確定</string>
     <string name="people_books_name">名稱</string>
     <string name="people_books_rename">重新命名</string>
-    <string name="people_contacts_sort_name">名稱</string>
+    <string name="people_contacts_sort_name">姓名</string>
     <string name="people_contacts_sort_recent">最近新增</string>
     <string name="people_contacts_thats_you">那是您</string>
     <string name="people_contacts_try_different_search">嘗試其他搜尋字詞</string>
@@ -157,7 +157,7 @@
     <string name="people_contacts_delete">刪除聯絡人</string>
     <string name="people_contacts_delete_confirm">要從聯絡人中刪除 %1$s 嗎？</string>
     <string name="people_contacts_delete_friend_confirm">要從聯絡人中刪除 %1$s 嗎？你們的好友關係也會結束。</string>
-    <string name="people_contact_new_title">新增聯絡人</string>
+    <string name="people_contact_new_title">新聯絡人</string>
     <string name="people_contact_edit_title">編輯聯絡人</string>
     <string name="people_contact_given">名字</string>
     <string name="people_contact_family">姓氏</string>

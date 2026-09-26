@@ -162,9 +162,9 @@
     <string name="people_contact_given">Име</string>
     <string name="people_contact_family">Фамилия</string>
     <string name="people_contact_nickname">Прякор</string>
-    <string name="people_contact_add_email">Добавяне на имейл</string>
-    <string name="people_contact_add_phone">Добавяне на телефон</string>
-    <string name="people_contact_add_address">Добавяне на адрес</string>
+    <string name="people_contact_add_email">Добави имейл</string>
+    <string name="people_contact_add_phone">Добави телефон</string>
+    <string name="people_contact_add_address">Добави адрес</string>
     <string name="people_contact_street">Улица</string>
     <string name="people_contact_birthday">Рожден ден</string>
     <string name="people_contact_organisation">Организация</string>
@@ -175,7 +175,7 @@
     <string name="people_contact_type_mobile">Мобилен</string>
     <string name="people_contact_pick_date">Изберете дата</string>
     <string name="people_contact_conflict">Контактът е променен</string>
-    <string name="people_add_contact_title">Добавяне на контакт</string>
+    <string name="people_add_contact_title">Добави контакт</string>
     <string name="people_add_contact_add">Добавяне към контактите</string>
     <string name="people_add_contact_in_contacts">В контактите</string>
     <string name="people_books_create">Създаване на адресна книга</string>

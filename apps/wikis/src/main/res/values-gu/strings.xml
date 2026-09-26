@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">દૂર કરો</string>
     <string name="wikis_replicas_remove_failed">રિપ્લિકા દૂર કરવામાં નિષ્ફળ</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi વિકિઓ</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">wiki પૃષ્ઠ સંપાદન, ટિપ્પણીઓ અને આમંત્રણો વિશે સૂચનાઓ.</string>
     <string name="wikis_pageview_toc_expand">અનુક્રમણિકા બતાવો</string>
@@ -246,7 +246,7 @@
     <string name="wikis_insert_dialog_empty">હજી સુધી કોઈ જોડાણ નથી. શરૂ કરવા ફાઇલ અપલોડ કરો.</string>
     <string name="wikis_delete_page_message">તમે “%1$s” (%2$s) પૃષ્ઠ કાઢી નાખવા જઈ રહ્યા છો. ઇતિહાસમાંથી પુનઃસ્થાપિત કરીને આ ક્રિયા પાછી લાવી શકાય છે.</string>
     <string name="wikis_delete_page_success">પેજ કાઢી નાખ્યું</string>
-    <string name="wikis_revert_page_title">પેજ પાછું લાવો</string>
+    <string name="wikis_revert_page_title">પૃષ્ઠ પાછું લાવો</string>
     <string name="wikis_revert_page_message">તમે %1$s ને સંસ્કરણ %2$d પર પાછું ફેરવવા જઈ રહ્યા છો. આનાથી સંસ્કરણ %2$d ની સામગ્રી સાથે નવું પુનરાવર્તન બનશે.</string>
     <string name="wikis_revert_page_default_comment">સંસ્કરણ %1$d પર પાછું ફેરવ્યું</string>
     <string name="wikis_revert_page_success">સંસ્કરણ %1$d પર પાછું ફેરવ્યું</string>

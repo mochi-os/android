@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi ફીડ</string>
     <string name="feeds_source_type_feed_memories">સ્મૃતિઓ</string>
-    <string name="feeds_remove_source">સ્રોત દૂર કરો</string>
+    <string name="feeds_remove_source">સ્ત્રોત દૂર કરો?</string>
     <string name="feeds_suggested_credibility_accept">સ્વીકારો</string>
     <string name="feeds_rss_url_copied">RSS URL ક્લિપબોર્ડ પર કૉપિ થઈ</string>
     <string name="feeds_logout">લૉગ આઉટ કરો</string>
@@ -111,14 +111,14 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">ક્યારેય મેળવ્યું નથી</string>
     <string name="feeds_source_poll">પોલ</string>
-    <string name="feeds_source_transform">રૂપાંતર</string>
+    <string name="feeds_source_transform">AI પરિવર્તન</string>
     <string name="feeds_remove_source_confirm">\"%1$s\" દૂર કરવું છે?</string>
     <string name="feeds_remove_also_delete_posts">આયાત કરેલી પોસ્ટ પણ કાઢી નાખો</string>
     <string name="feeds_suggested_credibility_title">સૂચવેલી વિશ્વસનીયતા</string>
     <string name="feeds_suggested_credibility_body">Mochi %1$d ની વિશ્વસનીયતા સૂચવે છે. સ્વીકારશો?</string>
     <string name="feeds_suggested_credibility_keep">વર્તમાન રાખો</string>
     <string name="feeds_ai_processing_mode">AI પ્રક્રિયા મોડ</string>
-    <string name="feeds_ai_account">AI એકાઉન્ટ</string>
+    <string name="feeds_ai_account">AI ખાતું</string>
     <string name="feeds_ai_prompt_new">નવી પોસ્ટને ટૅગ કરો</string>
     <string name="feeds_ai_prompt_batch">બેચ પ્રક્રિયા</string>
     <string name="feeds_ai_prompt_rank">ક્રમાંકન / સ્કોરિંગ</string>

@@ -34,7 +34,7 @@
     <string name="crm_option_icon">איקאָנע</string>
     <string name="crm_option_icon_placeholder">למשל Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">אַבאַבאָנירן</string>
-    <string name="crm_settings_delete_crm">אויסמעקן פּראָיעקט</string>
+    <string name="crm_settings_delete_crm">אויסמעקן CRM</string>
     <string name="crm_settings_delete_confirm_title">אויסמעקן CRM</string>
     <string name="crm_settings_unsubscribe_title">אַבאַבאָנירן</string>
     <string name="crm_settings_unsubscribe_message">זענט איר זיכער איר ווילט אַראָפּשרײַבן פֿון דעם CRM?</string>
@@ -134,10 +134,10 @@
     <string name="crm_class_move_up">באַוועגן אַרויף</string>
     <string name="crm_views_move_down">באַוועגן אַראָפּ</string>
     <string name="crm_class_move_down">באַוועגן אַראָפּ</string>
-    <string name="crm_sort_direction_asc">שטייגן</string>
-    <string name="crm_views_direction_asc">שטייגן</string>
-    <string name="crm_sort_direction_desc">אַראָפּגיין</string>
-    <string name="crm_views_direction_desc">אַראָפּגיין</string>
+    <string name="crm_sort_direction_asc">אַרויפֿגייענדיק</string>
+    <string name="crm_views_direction_asc">אַרויפֿגייענדיק</string>
+    <string name="crm_sort_direction_desc">אַראָפּגייענדיק</string>
+    <string name="crm_views_direction_desc">אַראָפּגייענדיק</string>
     <string name="crm_list_add_to_home">לייגן צו היים עקראַן</string>
     <string name="crm_search_objects_placeholder">זוכן אָביעקטן</string>
     <string name="crm_links_search_placeholder">זוכן אָביעקטן</string>
@@ -153,7 +153,7 @@
     <string name="crm_views_filter">פֿילטער (אױפֿגעהיט, נישט נאָך אָנגעווענדט)</string>
     <string name="crm_people_empty">נאָך קײנער האָט נישט קײן צוטריט</string>
     <string name="crm_settings_delete_confirm_message">זײַט איר זיכער איר ווילט אױסמעקן דעם CRM? אַלע אָביעקטן, קאָמענטאַרן און אײַנשטעלונגען וועלן ווערן פֿאַר אײביק אַראָפּגענומען.</string>
-    <string name="crm_object_unwatch">ניט וואַכן</string>
+    <string name="crm_object_unwatch">אױפֿהערן באַאױגן</string>
     <string name="crm_object_delete_title">אױסמעקן אָביעקט</string>
     <string name="crm_object_delete_message">זײַט איר זיכער איר ווילט אױסמעקן דעם אָביעקט? די אַקציע קען נישט אומגעקערט ווערן.</string>
     <string name="crm_parent_none">קײן עלטערן</string>
@@ -162,9 +162,9 @@
     <string name="crm_links_section_duplicated_by">פֿאַרטאָפּלט דורך</string>
     <string name="crm_links_type">טיפּ פֿון פֿאַרבינדונג</string>
     <string name="crm_links_type_relates">האָט אַ שײַכות צו</string>
-    <string name="crm_links_remove">אַראָפּנעמען פֿאַרבינדונג</string>
+    <string name="crm_links_remove">אַראָפּנעמען לינק</string>
     <string name="crm_comment_replying_to">ענטפֿערן %1$s</string>
-    <string name="crm_comment_clear_reply">רײניקן ענטפֿער</string>
+    <string name="crm_comment_clear_reply">רייניקן ענטפֿער</string>
     <string name="crm_comment_placeholder">צולײגן אַ קאָמענטאַר</string>
     <string name="crm_property_pick_date">אױסקלײַבן דאַטע</string>
     <string name="crm_property_ok">גוט</string>
@@ -192,7 +192,7 @@
     <string name="crm_move_to_row">באַוועגן צו רײ</string>
     <string name="crm_move_after">נאָך %1$s</string>
     <string name="crm_drag_card">שלעפּ קאַרטל</string>
-    <string name="crm_drag_row">שלעפּ רײ</string>
+    <string name="crm_drag_row">שלעפּ ריי</string>
     <string name="crm_drag_column">שלעפּ זײַל</string>
     <string name="crm_design_more_options">מער אָפּציעס</string>
     <string name="crm_design_no_templates">קיין מוסטערס פֿאַראַנען</string>
@@ -204,7 +204,7 @@
     <string name="crm_class_title_field_default">פֿאָרױסגעשטעלט (לײענעוודיק)</string>
     <string name="crm_class_parents">עלטערן־קלאַסן</string>
     <string name="crm_class_delete_message">זײַט איר זיכער איר ווילט אױסמעקן דעם קלאַס \"%1$s\"? אַלע פֿעלדער און זײערע אָפּציעס װעלן אױך אױסגעמעקט װערן.</string>
-    <string name="crm_field_type_enumerated">אױסגערעכנט</string>
+    <string name="crm_field_type_enumerated">אויסגערעכנט</string>
     <string name="crm_field_label">פֿעלד: %1$s</string>
     <string name="crm_field_readonly">נאָר־לײענען</string>
     <string name="crm_field_sortable">סאָרטירעוודיק</string>
@@ -264,8 +264,8 @@
     <string name="crm_access_select_rule">קלייַבט אויס אַ כּלל</string>
     <string name="crm_access_select_role">קלײַב ראָלע</string>
     <string name="crm_access_selected">אויסגעקליבן: %1$s</string>
-    <string name="crm_access_subject_anyone">עמעצער</string>
-    <string name="crm_access_subject_authenticated">אַטענטיפֿיצירטע באַניצער</string>
+    <string name="crm_access_subject_anyone">ווער עס איז</string>
+    <string name="crm_access_subject_authenticated">אױטענטיפֿיצירטע באַניצער</string>
     <string name="crm_access_authenticated_desc">יעדער וואָס איז אײַנגעלאָגט</string>
     <string name="crm_access_anyone_desc">אַרײַנגערעכנט אַנאָנימע באַניצער</string>
     <string name="crm_access_role_design">פּלאַנירן, שאַפֿן, רעדאַקטירן, קאָמענטירן, און באַקוקן</string>

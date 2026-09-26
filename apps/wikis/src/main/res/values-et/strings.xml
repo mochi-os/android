@@ -16,7 +16,7 @@
     <string name="wikis_page_action_rename">Nimeta ümber</string>
     <string name="wikis_page_action_history">Ajalugu</string>
     <string name="wikis_page_action_delete">Kustuta</string>
-    <string name="wikis_page_action_section_wiki">Wiki</string>
+    <string name="wikis_page_action_section_wiki">Viki</string>
     <string name="wikis_page_action_search">Otsi</string>
     <string name="wikis_page_action_tags">Sildid</string>
     <string name="wikis_page_action_recent_changes">Hiljutised muudatused</string>
@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Eemalda</string>
     <string name="wikis_replicas_remove_failed">Replika eemaldamine ebaõnnestus</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Vikid</string>
     <string name="wikis_channel_name">Wikis teavitused</string>
     <string name="wikis_channel_description">Teavitused lehe muudatuste, kommentaaride ja kutsete kohta.</string>
     <string name="wikis_pageview_toc_expand">Näita sisukorda</string>

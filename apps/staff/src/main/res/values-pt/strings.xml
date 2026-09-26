@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Equipa Mochi</string>
-    <string name="launcher_staff">Mochi Equipa</string>
+    <string name="launcher_staff">Equipa Mochi</string>
     <string name="staff_accounts_action_ban_title">Banir conta</string>
     <string name="staff_accounts_action_suspend_title">Suspender conta</string>
     <string name="staff_accounts_action_unban_title">Levantar banimento</string>
@@ -284,7 +284,7 @@
     <string name="staff_filter_chip_remove">Remover filtro</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderação</string>
-    <string name="staff_filter_label_query">Pesquisa</string>
+    <string name="staff_filter_label_query">Pesquisar</string>
     <string name="staff_filter_label_seller">Vendedor</string>
     <string name="staff_filter_label_status">Estado</string>
     <string name="staff_filter_label_type">Tipo</string>

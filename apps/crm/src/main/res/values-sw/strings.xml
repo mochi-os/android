@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Aikoni</string>
     <string name="crm_option_icon_placeholder">mfano. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Jiondoe</string>
-    <string name="crm_settings_delete_crm">Futa mradi</string>
+    <string name="crm_settings_delete_crm">Futa CRM</string>
     <string name="crm_settings_delete_confirm_title">Futa CRM</string>
     <string name="crm_settings_unsubscribe_title">Jiondoe</string>
     <string name="crm_settings_unsubscribe_message">Una uhakika unataka kujiondoa kutoka kwa CRM hii?</string>
@@ -159,7 +159,7 @@
     <string name="crm_parent_none">Hakuna mzazi</string>
     <string name="crm_links_empty">Hakuna viungo</string>
     <string name="crm_links_section_relates">Inahusiana na</string>
-    <string name="crm_links_section_duplicated_by">Imerudiwa na</string>
+    <string name="crm_links_section_duplicated_by">Imerudufiwa na</string>
     <string name="crm_links_type">Aina ya kiungo</string>
     <string name="crm_links_type_relates">Inahusiana na</string>
     <string name="crm_links_remove">Ondoa kiungo</string>
@@ -192,8 +192,8 @@
     <string name="crm_move_to_row">Hamishia kwenye mstari</string>
     <string name="crm_move_after">Baada ya %1$s</string>
     <string name="crm_drag_card">Buruta kadi</string>
-    <string name="crm_drag_row">Buruta mstari</string>
-    <string name="crm_drag_column">Buruta safu</string>
+    <string name="crm_drag_row">Buruta safumlalo</string>
+    <string name="crm_drag_column">Buruta safuwima</string>
     <string name="crm_design_more_options">Chaguo zaidi</string>
     <string name="crm_design_no_templates">Hakuna violezo vinavyopatikana</string>
     <string name="crm_design_use">Tumia</string>
@@ -206,11 +206,11 @@
     <string name="crm_class_delete_message">Una uhakika unataka kufuta darasa \"%1$s\"? Uga zote na chaguo zake pia zitafutwa.</string>
     <string name="crm_field_type_enumerated">Iliyoorodheshwa</string>
     <string name="crm_field_label">Uga: %1$s</string>
-    <string name="crm_field_readonly">Soma-tu</string>
+    <string name="crm_field_readonly">Kusoma tu</string>
     <string name="crm_field_sortable">Inayoweza kupangwa</string>
     <string name="crm_field_filterable">Inayoweza kuchujwa</string>
     <string name="crm_field_show_on_card">Onyesha kwenye kadi</string>
-    <string name="crm_field_multi">Chagua-nyingi</string>
+    <string name="crm_field_multi">Chagua nyingi</string>
     <string name="crm_field_position">Nafasi ya kuonyesha</string>
     <string name="crm_field_position_header">Kichwa</string>
     <string name="crm_field_validation">Uthibitishaji</string>
@@ -224,7 +224,7 @@
     <string name="crm_views_empty">Hakuna mwonekano uliofafanuliwa</string>
     <string name="crm_views_empty_subtitle">Tengeneza mwonekano wa ubao au orodha ili kupanga vitu</string>
     <string name="crm_views_delete_message">Una uhakika unataka kufuta mwonekano \"%1$s\"?</string>
-    <string name="crm_views_columns_field">Uga wa safu</string>
+    <string name="crm_views_columns_field">Uga wa safuwima</string>
     <string name="crm_views_rows_field">Uga wa mistari (swimlanes)</string>
     <string name="crm_views_border_field">Uga wa rangi ya mpaka</string>
     <string name="crm_views_filter_classes">Chuja kwa madarasa</string>
@@ -251,7 +251,7 @@
     <string name="crm_filter">Chuja</string>
     <string name="crm_sort_filter_title">Panga na chuja</string>
     <string name="crm_filter_clear_all">Futa vyote</string>
-    <string name="crm_filter_all">Zote</string>
+    <string name="crm_filter_all">Vyote</string>
     <string name="crm_filter_other">Nyingine</string>
     <string name="crm_settings_section_identity">Utambulisho</string>
     <string name="crm_settings_section_access">Usimamizi wa Ufikiaji</string>

@@ -152,7 +152,7 @@
     <string name="people_contacts_add_to_start">הוסיפו אנשי קשר כדי להתחיל</string>
     <string name="people_contacts_actions">פעולות איש קשר</string>
     <string name="people_contacts_friend">חבר</string>
-    <string name="people_contacts_invite">הזמנה</string>
+    <string name="people_contacts_invite">הזמן</string>
     <string name="people_contacts_unfriend_confirm">%1$s לא יהיה עוד חבר שלך. איש הקשר נשאר בפנקס הכתובות שלך.</string>
     <string name="people_contacts_delete">מחיקת איש קשר</string>
     <string name="people_contacts_delete_confirm">למחוק את %1$s מאנשי הקשר שלך?</string>
@@ -162,7 +162,7 @@
     <string name="people_contact_given">שם פרטי</string>
     <string name="people_contact_family">שם משפחה</string>
     <string name="people_contact_nickname">כינוי</string>
-    <string name="people_contact_add_email">הוספת דוא\"ל</string>
+    <string name="people_contact_add_email">הוספת אימייל</string>
     <string name="people_contact_add_phone">הוספת טלפון</string>
     <string name="people_contact_add_address">הוספת כתובת</string>
     <string name="people_contact_street">רחוב</string>

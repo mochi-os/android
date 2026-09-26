@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Персонал</string>
-    <string name="launcher_staff">Mochi Персонал</string>
+    <string name="launcher_staff">Персонал Mochi</string>
     <string name="staff_accounts_action_ban_title">Заблокувати обліковий запис</string>
     <string name="staff_accounts_action_suspend_title">Призупинити обліковий запис</string>
     <string name="staff_accounts_action_unban_title">Зняти бан</string>
@@ -131,7 +131,7 @@
     <string name="staff_categories_action_delete">Видалити</string>
     <string name="staff_categories_action_edit">Редагувати</string>
     <string name="staff_categories_add">Додати</string>
-    <string name="staff_categories_col_name">Ім\'я</string>
+    <string name="staff_categories_col_name">Назва</string>
     <string name="staff_categories_col_status">Статус</string>
     <string name="staff_categories_col_types">Типи</string>
     <string name="staff_categories_create">Створити</string>
@@ -145,7 +145,7 @@
     <string name="staff_categories_dialog_digital">Цифровий</string>
     <string name="staff_categories_dialog_edit_title">Редагувати категорію</string>
     <string name="staff_categories_dialog_icon">Піктограма</string>
-    <string name="staff_categories_dialog_name">Ім\'я</string>
+    <string name="staff_categories_dialog_name">Назва</string>
     <string name="staff_categories_dialog_parent">Батьківський</string>
     <string name="staff_categories_dialog_parent_none">Немає</string>
     <string name="staff_categories_dialog_physical">Фізичний</string>
@@ -188,7 +188,7 @@
     <string name="staff_dashboard_col_detail">Деталь</string>
     <string name="staff_dashboard_col_listing">Оголошення</string>
     <string name="staff_dashboard_col_moderation">Модерація</string>
-    <string name="staff_dashboard_col_name">Ім\'я</string>
+    <string name="staff_dashboard_col_name">Назва</string>
     <string name="staff_dashboard_col_object">Об\'єкт</string>
     <string name="staff_dashboard_col_reason">Причина</string>
     <string name="staff_dashboard_col_score">Оцінка</string>

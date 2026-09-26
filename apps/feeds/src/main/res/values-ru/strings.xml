@@ -5,7 +5,7 @@
     <string name="feeds_create_feed">Создать ленту</string>
     <string name="feeds_new_post">Новая публикация</string>
     <string name="feeds_all_feeds">Все ленты</string>
-    <string name="feeds_name">Имя</string>
+    <string name="feeds_name">Название</string>
     <string name="feeds_create">Создать</string>
     <string name="feeds_no_feeds_found">Ленты не найдены</string>
     <string name="feeds_feed_title_default">Лента</string>
@@ -41,7 +41,7 @@
     <string name="feeds_tab_members">Участники</string>
     <string name="feeds_tab_ai">ИИ</string>
     <string name="feeds_feed_name">Название ленты</string>
-    <string name="feeds_save_name">Сохранить имя</string>
+    <string name="feeds_save_name">Сохранить название</string>
     <string name="feeds_banner">Баннер</string>
     <string name="feeds_banner_description">Необязательный markdown-баннер, отображаемый вверху вашей ленты.</string>
     <string name="feeds_clear">Очистить</string>
@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Лента Mochi</string>
     <string name="feeds_source_type_feed_memories">Воспоминания</string>
-    <string name="feeds_remove_source">Удалить источник</string>
+    <string name="feeds_remove_source">Удалить источник?</string>
     <string name="feeds_suggested_credibility_accept">Принять</string>
     <string name="feeds_rss_url_copied">URL RSS скопирован в буфер обмена</string>
     <string name="feeds_logout">Выйти</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS-ссылка</string>
     <string name="feeds_source_never_fetched">Никогда не обновлялось</string>
     <string name="feeds_source_poll">Опрос</string>
-    <string name="feeds_source_transform">Преобразование</string>
+    <string name="feeds_source_transform">Преобразование ИИ</string>
     <string name="feeds_remove_source_confirm">Удалить \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Также удалить импортированные публикации</string>
     <string name="feeds_suggested_credibility_title">Предлагаемая достоверность</string>
@@ -155,7 +155,7 @@
     <string name="feeds_access_segment_other">Другое</string>
     <string name="feeds_access_select_group">Выберите группу</string>
     <string name="feeds_access_selected">Выбрано: %1$s</string>
-    <string name="feeds_access_subject_anyone">Любой</string>
+    <string name="feeds_access_subject_anyone">Кто угодно</string>
     <string name="feeds_access_subject_authenticated">Аутентифицированные пользователи</string>
     <string name="feeds_markdown_supported">Поддерживается Markdown</string>
     <string name="feeds_permission_deny">Отклонить</string>
@@ -163,7 +163,7 @@
     <string name="feeds_settings_field_entity_id">Идентификатор сущности</string>
     <string name="feeds_settings_field_fingerprint">Отпечаток</string>
     <string name="feeds_settings_field_server">Сервер</string>
-    <string name="feeds_settings_name_edit_cd">Изменить имя</string>
+    <string name="feeds_settings_name_edit_cd">Изменить название</string>
     <string name="feeds_settings_section_identity">Личность</string>
     <string name="feeds_unsubscribe">Отписаться</string>
     <string name="feeds_unsubscribed">Отписан</string>

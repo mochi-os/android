@@ -242,7 +242,7 @@
     <string name="route_meta">Okubaluleke kakhulu %1$d · %2$s</string>
     <string name="interests_search_placeholder">Sesha izihloko ozozengeza…</string>
     <string name="interests_empty">Azikho izithakazelo okwamanje.</string>
-    <string name="interests_summary_regenerate">Khiqiza kabusha isifinyezo</string>
+    <string name="interests_summary_regenerate">Phinda ukhiqize isifinyezo</string>
     <string name="interests_summary_regenerating">Iyakhiqiza kabusha…</string>
     <string name="interests_summary_empty">Engeza izithakazelo ezithile ukukhiqiza isifinyezo sezinto ozithandayo.</string>
     <string name="interests_search_failed">Ukusesha kwehlulekile. Sicela uzame futhi.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s ngeke isaphatha izindlela kulesi sizinda.</string>
     <string name="domain_delegation_delete_title">Susa ukuthunywa?</string>
     <string name="domain_delegation_path">Indlela</string>
-    <string name="domain_delegation_user">I-ID yomsebenzisi</string>
+    <string name="domain_delegation_user">Umsebenzisi</string>
     <string name="domain_delegations">Ukuthunywa</string>
     <string name="domain_delegations_empty">Akukho okuvumelekile okulungisiwe.</string>
     <string name="domain_delete">Susa isizinda</string>

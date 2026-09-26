@@ -10,14 +10,14 @@
     <string name="chess_section_completed">සම්පූර්ණයි</string>
     <string name="chess_new_game">නව ක්‍රීඩාවක්</string>
     <string name="chess_empty_title">තවම ක්‍රීඩා නැත</string>
-    <string name="chess_new_title">නව ක්‍රීඩාව</string>
+    <string name="chess_new_title">නව ක්‍රීඩාවක්</string>
     <string name="chess_new_pick_opponent">ප්‍රතිවාදියා තෝරන්න</string>
     <string name="chess_new_no_friends_title">තවම මිතුරන් නැත</string>
     <string name="chess_new_no_friends_subtitle">ක්‍රීඩා කිරීම ආරම්භ කිරීමට පුද්ගලයන් යෙදුමේ මිතුරන් එක් කරන්න</string>
     <string name="chess_new_add_friends">මිතුරන් එක් කරන්න</string>
     <string name="chess_new_start_button">ක්‍රීඩාව ආරම්භ කරන්න</string>
     <string name="chess_new_creating">නිර්මාණය කරමින්…</string>
-    <string name="chess_chat_title">චැට්</string>
+    <string name="chess_chat_title">සංවාදය</string>
     <string name="chess_open_chat">චැට් පැනලය විවෘත කරන්න</string>
     <string name="chess_open_actions">ක්‍රීඩා ක්‍රියා විවෘත කරන්න</string>
     <string name="chess_offer_draw">සමතය ඉදිරිපත් කරන්න</string>
@@ -32,8 +32,8 @@
     <string name="chess_draw_accept">පිළිගන්න</string>
     <string name="chess_draw_decline">ප්‍රතික්ෂේප කරන්න</string>
     <string name="chess_status_checkmate_you_win">චෙක්මේට් — ඔබ ජයග්‍රහණය කරයි!</string>
-    <string name="chess_status_stalemate">අවලංගු තත්ත්වය — සම ජයක්</string>
-    <string name="chess_status_draw">සමතය</string>
+    <string name="chess_status_stalemate">ගමන් නැත — සම</string>
+    <string name="chess_status_draw">සම</string>
     <string name="chess_status_check_your_move">චෙක් — ඔබේ වාරයයි</string>
     <string name="chess_status_your_move">ඔබේ ගමන</string>
     <string name="chess_move_subject_you">ඔබ</string>

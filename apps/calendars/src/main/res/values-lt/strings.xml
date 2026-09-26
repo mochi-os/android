@@ -157,7 +157,7 @@
     <string name="calendars_link_submit">Susieti</string>
     <string name="calendars_link_sync">Sinchronizuoti dabar</string>
     <string name="calendars_link_grant">Leisti prieigą prie kalendoriaus</string>
-    <string name="calendars_link_linked">Susieta</string>
+    <string name="calendars_link_linked">Susietas</string>
     <string name="calendars_link_marker">Susietas kalendorius</string>
     <string name="calendars_link_remote_empty">Nėra kalendorių</string>
     <string name="calendars_poll_conflict">Įvykis pakeistas abiejose pusėse</string>

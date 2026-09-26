@@ -64,7 +64,7 @@
     <string name="go_channel_name">Go obavijesti</string>
     <string name="go_channel_description">Obavijesti o potezima, preskakanjima, ponudama za remi i rezultatima partija.</string>
     <string name="go_open_sidebar">Otvori bočnu traku</string>
-    <string name="go_sidebar_active">Aktivne partije</string>
+    <string name="go_sidebar_active">Aktivne igre</string>
     <string name="go_empty_active">Još nema aktivnih partija.</string>
     <string name="go_status_resigned">Predana</string>
     <string name="go_new_game_title">Nova Go partija</string>

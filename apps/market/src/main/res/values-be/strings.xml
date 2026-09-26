@@ -17,7 +17,7 @@
     <string name="market_account_seller_step_stripe_desc">Падключыце рахунак Stripe, каб прымаць плацяжы ад пакупнікоў</string>
     <string name="market_account_seller_fees_heading">Камісіі:</string>
     <string name="market_account_seller_fees_mochi">Mochi бярэ %1$s%% з кожнага продажу.</string>
-    <string name="market_account_seller_fees_stripe">Stripe спаганяе ўласную камісію за апрацоўку кожнай транзакцыі і фіксаваную плату за зварот плацяжу. Бягучыя тарыфы для вашай валюты і рэгіёна паказаны ў панэлі Stripe.</string>
+    <string name="market_account_seller_fees_stripe">Stripe спаганяе ўласную камісію за апрацоўку кожнай транзакцыі і фіксаваную плату за кожны запыт на вяртанне плацяжу. Бягучыя тарыфы для вашай валюты і рэгіёна паказаны ў панэлі Stripe.</string>
     <string name="market_account_seller_connect">Падключыць Stripe</string>
     <string name="market_account_seller_step_stripe_title">Падключыць Stripe</string>
     <string name="market_account_seller_check_status">Праверыць статус</string>
@@ -38,7 +38,7 @@
     <string name="market_appeal_dialog_failed">Не ўдалося падаць апеляцыю</string>
     <string name="market_appeal_dialog_reason_label">Чаму вы падаяце апеляцыю?</string>
     <string name="market_appeal_dialog_submit">Падаць апеляцыю</string>
-    <string name="market_appeal_dialog_submitting">Падача…</string>
+    <string name="market_appeal_dialog_submitting">Адпраўка…</string>
     <string name="market_appeal_dialog_success">Апеляцыя пададзена</string>
     <string name="market_appeal_dialog_title">Апеляцыя на выдаленне</string>
     <string name="market_asset_download">Спампаваць</string>
@@ -94,7 +94,7 @@
     <string name="market_checkout_address_heading">Адрас дастаўкі</string>
     <string name="market_checkout_address_line1">Адрас, радок 1</string>
     <string name="market_checkout_address_line2">Адрас, радок 2</string>
-    <string name="market_checkout_address_name">Назва</string>
+    <string name="market_checkout_address_name">Імя</string>
     <string name="market_checkout_address_postcode">Паштовы індэкс</string>
     <string name="market_checkout_address_region">Рэгіён</string>
     <string name="market_checkout_back">Назад</string>
@@ -145,7 +145,7 @@
     <string name="market_dispute_dialog_failed">Не ўдалося адправіць адказ</string>
     <string name="market_dispute_dialog_response_label">Ваш адказ</string>
     <string name="market_dispute_dialog_submit">Адправіць</string>
-    <string name="market_dispute_dialog_submitting">Падача…</string>
+    <string name="market_dispute_dialog_submitting">Адпраўка…</string>
     <string name="market_dispute_dialog_title">Адказ на спрэчку</string>
     <string name="market_editor_appeal">Апеляваць рашэнне мадэрацыі</string>
     <string name="market_editor_appeal_reason">Чаму вы падаяце апеляцыю?</string>
@@ -245,7 +245,7 @@
     <string name="market_editor_zone_worldwide">Увесь свет</string>
     <string name="market_editor_zones_empty">Пакуль няма зон</string>
     <string name="market_empty_subtitle">Паспрабуйце змяніць або ачысціць фільтры.</string>
-    <string name="market_empty_title">Няма вынікаў</string>
+    <string name="market_empty_title">Нічога не знойдзена</string>
     <string name="market_fee_disclosure_body">Камісія платформы: %1$s%%. Камісіі працэсінгу глядзіце ў панэлі Stripe.</string>
     <string name="market_fee_disclosure_title">Камісіі платформы</string>
     <string name="market_fee_preview_failed">Не ўдалося разлічыць камісіі</string>
@@ -277,7 +277,7 @@
     <string name="market_filter_pricing_fixed">Фіксаваная цана</string>
     <string name="market_filter_pricing_pwyw">Заплаціць колькі хочаце</string>
     <string name="market_filter_pricing_subscription">Падпіска</string>
-    <string name="market_filter_remove">Выдаліць фільтр</string>
+    <string name="market_filter_remove">Прыбраць фільтр</string>
     <string name="market_filter_sort">Сартаваць</string>
     <string name="market_filter_sort_default">Па змаўчанні</string>
     <string name="market_filter_sort_price_high">Цана: ад высокай да нізкай</string>
@@ -319,7 +319,7 @@
     <string name="market_listing_detail_seller_suspended_banner">Гэты прадавец прыпынены. Новыя заказы прыпыненыя да аднаўлення ўліковага запісу.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">Купля адключана, пакуль уліковы запіс прадаўца абмежаваны.</string>
     <string name="market_listing_detail_share">Падзяліцца аб’явай</string>
-    <string name="market_listing_detail_shipping_heading">Дастаўка</string>
+    <string name="market_listing_detail_shipping_heading">Варыянты дастаўкі</string>
     <string name="market_listing_detail_subscribe">Падпісацца</string>
     <string name="market_listing_detail_tags_heading">Тэгі</string>
     <string name="market_listing_detail_title">Аб\'ява</string>
@@ -329,7 +329,7 @@
     <string name="market_listing_photo">Фота аб’явы</string>
     <string name="market_listing_save">Захаваць аб’яву</string>
     <string name="market_listing_unsave">Прыбраць з захаваных</string>
-    <string name="market_listings_action_appeal">Апеляваць выдаленне</string>
+    <string name="market_listings_action_appeal">Апеляцыя на выдаленне</string>
     <string name="market_listings_action_delete">Выдаліць</string>
     <string name="market_listings_action_edit">Рэдагаваць</string>
     <string name="market_listings_action_relist">Перавыставіць</string>
@@ -395,8 +395,8 @@
     <string name="market_purchase_confirm_failed">Не ўдалося пацвердзіць</string>
     <string name="market_purchase_continue_payment">Працягнуць аплату</string>
     <string name="market_purchase_delivery">Дастаўка</string>
-    <string name="market_purchase_dispute_chargeback">Чарджбэк %1$s</string>
-    <string name="market_purchase_dispute_chargeback_body">Ваш банк падаў чарджбэк па гэтым заказе. Stripe вядзе спрэчку з прадаўцом; вынік з’явіцца тут, калі будзе прыняты.</string>
+    <string name="market_purchase_dispute_chargeback">Запыт на вяртанне плацяжу %1$s</string>
+    <string name="market_purchase_dispute_chargeback_body">Ваш банк падаў запыт на вяртанне плацяжу па гэтым заказе. Stripe вядзе спрэчку з прадаўцом; вынік з’явіцца тут, калі будзе прыняты.</string>
     <string name="market_purchase_dispute_details">Вашы звесткі</string>
     <string name="market_purchase_dispute_reason">Прычына</string>
     <string name="market_purchase_dispute_resolution">Рашэнне супрацоўніка</string>
@@ -508,7 +508,7 @@
     <string name="market_sale_dispute_state_open">Адкрыта</string>
     <string name="market_sale_dispute_state_resolved">Вырашана</string>
     <string name="market_sale_dispute_state_responded">Чаканне рашэння</string>
-    <string name="market_sale_dispute_stripe_reason">Прычына чарджбэку Stripe: %1$s</string>
+    <string name="market_sale_dispute_stripe_reason">Прычына запыту на вяртанне плацяжу Stripe: %1$s</string>
     <string name="market_sale_fee_gross">Сума</string>
     <string name="market_sale_fee_mochi">Камісія Mochi</string>
     <string name="market_sale_fee_payout">Чыстая выплата</string>
@@ -525,7 +525,7 @@
     <string name="market_sale_review_response_failed">Не ўдалося адправіць адказ</string>
     <string name="market_sale_review_response_label">Ваш адказ</string>
     <string name="market_sale_review_response_submit">Адправіць адказ</string>
-    <string name="market_sale_review_response_submitting">Падача…</string>
+    <string name="market_sale_review_response_submitting">Адпраўка…</string>
     <string name="market_sale_section_audit">Актыўнасць</string>
     <string name="market_sale_section_dispute">Спрэчка</string>
     <string name="market_sale_section_fees">Разбіўка камісій</string>
@@ -551,7 +551,7 @@
     <string name="market_search_clear">Ачысціць пошук</string>
     <string name="market_search_placeholder">Пошук на рынку</string>
     <string name="market_section_categories">Агляд катэгорый</string>
-    <string name="market_section_listings">Апошнія аб\'явы</string>
+    <string name="market_section_listings">Нядаўнія аб\'явы</string>
     <string name="market_section_recent">Нядаўна прагледжана</string>
     <string name="market_ship_dialog_cancel">Адмена</string>
     <string name="market_ship_dialog_submit">Пацвердзіць</string>
@@ -588,7 +588,7 @@
     <string name="market_status_pending">У чаканні</string>
     <string name="market_status_refunded">Сродкі вернуты</string>
     <string name="market_status_shipped">Адпраўлена</string>
-    <string name="market_stripe_onboarding_action">Працягнуць настройку</string>
+    <string name="market_stripe_onboarding_action">Працягнуць наладку</string>
     <string name="market_stripe_onboarding_body">Завяршыце настройку Stripe, каб прымаць выплаты.</string>
     <string name="market_stripe_onboarding_check">Праверыць статус</string>
     <string name="market_stripe_onboarding_failed">Не ўдалося адкрыць Stripe</string>
@@ -615,7 +615,7 @@
     <string name="market_subscription_detail_started">Пачата %1$s</string>
     <string name="market_subscription_detail_title">Падпіска</string>
     <string name="market_subscriptions_action_cancel">Адмяніць</string>
-    <string name="market_subscriptions_action_pause">Паўза</string>
+    <string name="market_subscriptions_action_pause">Прыпыніць</string>
     <string name="market_subscriptions_action_reactivate">Рэактываваць</string>
     <string name="market_subscriptions_action_resubscribe">Падпісацца зноў</string>
     <string name="market_subscriptions_action_resume">Працягнуць</string>
@@ -750,9 +750,9 @@
     <string name="market_audit_listing_updated">Аб\'ява адрэдагавана</string>
     <string name="market_audit_listing_warning">Папярэджанне выдадзена</string>
     <string name="market_audit_order_cancelled">Адменена</string>
-    <string name="market_audit_order_chargeback">Атрыманы запыт на вяртанне сродкаў</string>
-    <string name="market_audit_order_chargeback_lost">Запыт на вяртанне сродкаў падтрыманы</string>
-    <string name="market_audit_order_chargeback_won">Адмена платы адхілена</string>
+    <string name="market_audit_order_chargeback">Атрыманы запыт на вяртанне плацяжу</string>
+    <string name="market_audit_order_chargeback_lost">Запыт на вяртанне плацяжу падтрыманы</string>
+    <string name="market_audit_order_chargeback_won">Запыт на вяртанне плацяжу адхілены</string>
     <string name="market_audit_order_completed">Завершана</string>
     <string name="market_audit_order_created">Заказ размешчаны</string>
     <string name="market_audit_order_paid">Аплата атрымана</string>
@@ -770,9 +770,9 @@
     <string name="market_audit_subscription_activated">Падпіска актывавана</string>
     <string name="market_audit_subscription_cancel_scheduled">Адмена запланавана</string>
     <string name="market_audit_subscription_cancelled">Адменена</string>
-    <string name="market_audit_subscription_chargeback">Атрыманы запыт на вяртанне сродкаў</string>
-    <string name="market_audit_subscription_chargeback_lost">Запыт на вяртанне сродкаў падтрыманы</string>
-    <string name="market_audit_subscription_chargeback_won">Адмена платы адхілена</string>
+    <string name="market_audit_subscription_chargeback">Атрыманы запыт на вяртанне плацяжу</string>
+    <string name="market_audit_subscription_chargeback_lost">Запыт на вяртанне плацяжу падтрыманы</string>
+    <string name="market_audit_subscription_chargeback_won">Запыт на вяртанне плацяжу адхілены</string>
     <string name="market_audit_subscription_created">Падпіска створана</string>
     <string name="market_audit_subscription_past_due">Аплата пратэрмінавана</string>
     <string name="market_audit_subscription_paused">Прыпынена</string>

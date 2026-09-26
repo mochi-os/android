@@ -29,10 +29,10 @@
     <string name="people_invite_settings_accept_description">Све позивнице се прихватају без ваше сагласности.</string>
     <string name="people_groups_create">Креирај групу</string>
     <string name="people_groups_not_found">Група није пронађена</string>
-    <string name="people_group_name">Име групе</string>
+    <string name="people_group_name">Назив групе</string>
     <string name="people_group_description">Опис</string>
     <string name="people_group_description_optional">Опциони опис</string>
-    <string name="people_group_name_required">Име је обавезно</string>
+    <string name="people_group_name_required">Назив је обавезан</string>
     <string name="people_group_actions">Радње групе</string>
     <string name="people_group_members">Чланови</string>
     <string name="people_group_members_count">Број чланова</string>
@@ -170,7 +170,7 @@
     <string name="people_contact_organisation">Организација</string>
     <string name="people_contact_url">Веб-сајт</string>
     <string name="people_contact_note">Белешка</string>
-    <string name="people_contact_book">Именик</string>
+    <string name="people_contact_book">Адресар</string>
     <string name="people_contact_type_work">Посао</string>
     <string name="people_contact_type_mobile">Мобилни</string>
     <string name="people_contact_pick_date">Изаберите датум</string>

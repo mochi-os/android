@@ -125,7 +125,7 @@
     <string name="game_chat_move_played">%1$s ຫຼິ້ນ %2$s</string>
 
     <string name="error_network">ບໍ່ສາມາດເຊື່ອມຕໍ່ໄດ້. ກວດສອບການເຊື່ອມຕໍ່ອິນເຕີເນັດຂອງທ່ານ ແລະລອງໃໝ່.</string>
-    <string name="error_authentication_required">ຕ້ອງການການພິສູດຢືນຢັນຕົວຕົນ</string>
+    <string name="error_authentication_required">ຕ້ອງການການຢືນຢັນຕົວຕົນ</string>
     <string name="error_not_found">ບໍ່ພົບ</string>
     <string name="error_server">ຂໍ້ຜິດພາດເຊີບເວີ (%1$d). ກະລຸນາລອງໃໝ່ພາຍຫຼັງ.</string>
     <string name="error_unexpected">ເກີດຂໍ້ຜິດພາດທີ່ບໍ່ຄາດຄິດ</string>
@@ -164,7 +164,7 @@
     <string name="bootstrap_sign_in_different_server">ເຂົ້າສູ່ລະບົບໃນເຊີບເວີອື່ນ</string>
     <string name="common_retry">ລອງໃໝ່</string>
     <string name="common_more_options">ຕົວເລືອກເພີ່ມເຕີມ</string>
-    <string name="common_collapse">ຫຍໍ້</string>
+    <string name="common_collapse">ຍຸບ</string>
     <string name="common_expand">ຂະຫຍາຍ</string>
     <string name="common_play_video">ຫຼິ້ນວິດີໂອ</string>
     <string name="place_picker_name">ຊື່ສະຖານທີ່</string>
@@ -190,8 +190,8 @@
     <string name="format_time_days_short">%1$d ມື້</string>
     <string name="format_time_weeks_short">%1$d ອທ</string>
     <string name="format_time_months_short">%1$d ດ</string>
-    <string name="reaction_add">ເພີ່ມການຕອບສະໜອງ</string>
-    <string name="push_service_channel">ການແຈ້ງເຕືອນ Mochi</string>
+    <string name="reaction_add">ເພີ່ມປະຕິກິລິຍາ</string>
+    <string name="push_service_channel">ການແຈ້ງເຕືອນແບບພຸຊ Mochi</string>
     <string name="push_service_channel_description">ຮັກສາ Mochi ໃຫ້ເຊື່ອມຕໍ່ເພື່ອຮັບການແຈ້ງເຕືອນ</string>
     <string name="push_service_group">ບໍລິການເບື້ອງຫຼັງ</string>
     <string name="push_service_title">Mochi ກຳລັງຟັງການແຈ້ງເຕືອນ</string>
@@ -210,7 +210,7 @@
     <string name="about_up_to_date">ເປັນເວີຊັນລ່າສຸດແລ້ວ</string>
     <string name="about_check_downloading">ເວີຊັນ %1$s ມີໃຫ້, ກຳລັງດາວໂຫລດ…</string>
     <string name="about_check_network_error">ບໍ່ສາມາດເຂົ້າເຖິງເຊີບເວີອັບເດດໄດ້</string>
-    <string name="about_check_download_failed">ການດາວໂຫຼດລົ້ມເຫຼວ</string>
+    <string name="about_check_download_failed">ດາວໂຫຼດບໍ່ສຳເລັດ</string>
     <string name="notifications_clear_all_title">ລ້າງການແຈ້ງເຕືອນທັງໝົດບໍ?</string>
     <string name="notifications_clear_all_message">ການນີ້ຈະລົບການແຈ້ງເຕືອນທັງໝົດ. ບໍ່ສາມາດກູ້ຄືນໄດ້.</string>
     <string name="settings_value_auto">ອັດຕະໂນມັດ</string>
@@ -238,7 +238,7 @@
     <string name="stepup_error_oauth">ບໍ່ສາມາດຢືນຢັນດ້ວຍບັນຊີນັ້ນໄດ້. ກະລຸນາລອງໃໝ່ອີກຄັ້ງ.</string>
     <string name="game_system_resign">%1$s ຍອມແພ້</string>
     <string name="game_system_draw_offer">%1$s ສະເໜີເສມີ</string>
-    <string name="game_system_draw_accept">ຕົກລົງເສມີ</string>
+    <string name="game_system_draw_accept">ຕົກລົງເສມີກັນ</string>
     <string name="game_system_draw_decline">%1$s ປະຕິເສດການເສມີ</string>
     <string name="reactivation_title">ບັນຊີຂອງທ່ານຖືກກຳນົດໃຫ້ລຶບ</string>
     <string name="reactivation_body">ບັນຊີຂອງທ່ານຖືກກຳນົດໃຫ້ລຶບ. ທ່ານສາມາດຍົກເລີກ ແລະ ກູ້ຄືນການເຂົ້າເຖິງເຕັມຮູບແບບໄດ້ດຽວນີ້.</string>
@@ -263,7 +263,7 @@
     <string name="person_picker_none">ບໍ່ມີ</string>
     <string name="person_picker_clear">ລ້າງການເລືອກ</string>
     <string name="person_picker_select">ເລືອກ …</string>
-    <string name="person_picker_directory">ໄດເຣັກທໍຣີ</string>
+    <string name="person_picker_directory">ໄດເລກທໍຣີ</string>
     <string name="person_picker_no_people">ບໍ່ມີຄົນ</string>
     <string name="person_picker_project_members">ສະມາຊິກໂຄງການ</string>
     <string name="account_token_label">ເຊດຊັນ Mochi</string>
@@ -310,7 +310,7 @@
     <string name="settings_card_flat">ຮາບພຽງ</string>
     <string name="settings_card_raised">ຍົກສູງ</string>
     <string name="error_server_https">ທີ່ຢູ່ເຊີບເວີຕ້ອງເລີ່ມດ້ວຍ https://</string>
-    <string name="device_name_fallback">ອຸປະກອນມືຖື</string>
+    <string name="device_name_fallback">ອຸປະກອນເຄື່ອນທີ່</string>
     <string name="account_error_token_type">ປະເພດໂທເຄັນທີ່ບໍ່ຮອງຮັບ</string>
     <string name="account_error_caller">ບໍ່ອະນຸຍາດຜູ້ເອີ້ນ</string>
 </resources>

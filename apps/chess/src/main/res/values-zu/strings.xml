@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">Yamukela</string>
     <string name="chess_draw_decline">Yenqaba</string>
     <string name="chess_status_checkmate_you_win">Checkmate — uphumelele!</string>
-    <string name="chess_status_stalemate">Akekho ophumelelayo — ukulingana</string>
+    <string name="chess_status_stalemate">Ukuvimbeka — ukulingana</string>
     <string name="chess_status_draw">Ukulingana</string>
     <string name="chess_status_check_your_move">Hlola — kuyahanjwa wena</string>
     <string name="chess_status_your_move">Ukunyakaza kwakho</string>

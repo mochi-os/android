@@ -163,14 +163,14 @@
     <string name="people_contact_family">Eftirnafn</string>
     <string name="people_contact_nickname">Gælunafn</string>
     <string name="people_contact_add_email">Bæta við netfangi</string>
-    <string name="people_contact_add_phone">Bæta við síma</string>
+    <string name="people_contact_add_phone">Bæta við símanúmeri</string>
     <string name="people_contact_add_address">Bæta við heimilisfangi</string>
     <string name="people_contact_street">Gata</string>
     <string name="people_contact_birthday">Afmælisdagur</string>
     <string name="people_contact_organisation">Fyrirtæki</string>
     <string name="people_contact_url">Vefsvæði</string>
     <string name="people_contact_note">Athugasemd</string>
-    <string name="people_contact_book">Heimilisfangaskrá</string>
+    <string name="people_contact_book">Tengiliðaskrá</string>
     <string name="people_contact_type_work">Vinna</string>
     <string name="people_contact_type_mobile">Farsími</string>
     <string name="people_contact_pick_date">Veldu dagsetningu</string>

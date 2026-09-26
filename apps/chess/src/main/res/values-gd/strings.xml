@@ -32,8 +32,8 @@
     <string name="chess_draw_accept">Gabh ris</string>
     <string name="chess_draw_decline">Diùlt</string>
     <string name="chess_status_checkmate_you_win">Tul-chunnart — bhuannaich thu!</string>
-    <string name="chess_status_stalemate">Stalemate — co-ionann</string>
-    <string name="chess_status_draw">Tarraing</string>
+    <string name="chess_status_stalemate">Sàs — geama ionann</string>
+    <string name="chess_status_draw">Geama ionann</string>
     <string name="chess_status_check_your_move">Cunnart — do ghluasad</string>
     <string name="chess_status_your_move">Do ghluasad</string>
     <string name="chess_move_subject_you">Thusa</string>
@@ -60,7 +60,7 @@
     <string name="chess_empty_subtitle">Tòisich a’ chiad gheama agad airson tàileasg a chluich le caraid.</string>
     <string name="chess_empty_start_button">Tòisich a’ chiad gheama agad</string>
     <string name="chess_detail_unavailable">Chan eil an geama ri làimh</string>
-    <string name="chess_delete_title">Sguab às an geama?</string>
+    <string name="chess_delete_title">A bheil thu airson an geama a sguabadh às?</string>
     <string name="chess_delete_message">Bheir seo an geama far do liosta.</string>
     <string name="chess_ws_connecting">A\' ceangal…</string>
     <string name="chess_ws_disconnected">Offline</string>

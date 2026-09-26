@@ -37,7 +37,7 @@
 
     <string name="words_channel_name">शब्द सूचनाएं</string>
     <string name="words_channel_description">बारी, आदान-प्रदान और खेल परिणामों के बारे में सूचनाएं।</string>
-    <string name="words_sidebar_active">सक्रिय खेल</string>
+    <string name="words_sidebar_active">सक्रिय गेम्स</string>
     <string name="words_sidebar_empty">अभी तक कोई खेल नहीं।</string>
     <string name="words_new_game_choose_opponents">प्रतिद्वंद्वी चुनें</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
@@ -55,7 +55,7 @@
     <string name="words_detail_chat_you_played">आपने %1$s खेला</string>
     <string name="words_detail_chat_player_played">%1$s ने %2$s खेला</string>
 
-    <string name="words_detail_delete_title">खेल हटाएँ?</string>
+    <string name="words_detail_delete_title">गेम हटाएँ?</string>
     <string name="words_detail_delete_confirm">हटाएँ</string>
     <string name="words_detail_delete_message">यह गेम और उसकी चैट को स्थायी रूप से हटा देगा। इसे वापस नहीं लाया जा सकता।</string>
     <string name="words_detail_chat_passed">%1$s ने पास किया</string>

@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Sei opp abonnement</string>
     <string name="forums_list_unsubscribe_title">Sei opp abonnement</string>
     <string name="forums_create_title">Opprett forum</string>
-    <string name="forums_create_name">Namn</string>
+    <string name="forums_create_name">Forumnamn</string>
     <string name="forums_create_privacy">Personvern</string>
     <string name="forums_create_private">Privat</string>
     <string name="forums_create_public">Offentleg</string>
-    <string name="forums_create_action">Opprett</string>
+    <string name="forums_create_action">Opprett forum</string>
     <string name="forums_find_title">Finn forum</string>
     <string name="forums_find_recommended">Tilrådd</string>
     <string name="forums_find_subscribe">Abonner</string>
@@ -71,7 +71,7 @@
     <string name="forums_ai_account_default">Standardkonto</string>
     <string name="forums_ai_prompt_reset">Tilbakestill til standard</string>
     <string name="forums_settings_unsubscribe">Sei opp abonnement</string>
-    <string name="forums_moderation_title">Moderasjon</string>
+    <string name="forums_moderation_title">Moderering</string>
     <string name="forums_moderation_tab_queue">Kø</string>
     <string name="forums_moderation_tab_reports">Rapportar</string>
     <string name="forums_moderation_tab_log">Logg</string>
@@ -156,7 +156,7 @@
     <string name="forums_banner_placeholder">Velkomen til dette forumet…</string>
     <string name="forums_ai_mode_label">Modus: %1$s</string>
     <string name="forums_ai_mode_heading">AI-modus</string>
-    <string name="forums_ai_mode_off">Av</string>
+    <string name="forums_ai_mode_off">Deaktivert</string>
     <string name="forums_ai_account">AI-konto</string>
     <string name="forums_ai_prompt_tag">Merkelapp-prompt</string>
     <string name="forums_ai_prompt_score">Skåringsprompt</string>
@@ -178,7 +178,7 @@
     <string name="forums_report_reason_hate">Hat</string>
     <string name="forums_comment_delete_message">Er du sikker på at du vil slette denne kommentaren?</string>
     <string name="forums_comment_replying_to">Svarar til %1$s</string>
-    <string name="forums_comment_clear_reply">Tøm svar</string>
+    <string name="forums_comment_clear_reply">Fjern svar</string>
     <string name="forums_settings_title">Innstillingar for %1$s</string>
     <string name="forums_settings_rename_label">Forumnamn</string>
     <string name="forums_settings_danger_zone">Faresone</string>
@@ -209,7 +209,7 @@
     <string name="forums_all_forums">Alle forum</string>
     <string name="forums_create_allow_search">La alle søkje etter forumet</string>
     <string name="forums_rss_clipboard_label">RSS-URL for forumet</string>
-    <string name="forums_tab_moderation">Moderasjon</string>
+    <string name="forums_tab_moderation">Moderering</string>
     <string name="forums_access_level_view_full">Berre lese</string>
     <string name="forums_access_level_none_full">Ingen tilgang</string>
     <string name="forums_access_subject_anyone">Alle</string>
@@ -238,7 +238,7 @@
     <string name="forums_settings_name_edit_cd">Rediger namn</string>
     <string name="forums_settings_name_cancel_cd">Avbryt redigering</string>
     <string name="forums_settings_save_name">Lagre namn</string>
-    <string name="forums_access_management">Tilgangshandsaming</string>
+    <string name="forums_access_management">Tilgangsstyring</string>
     <string name="forums_access_level_comment_full">Kommentere, stemme og sjå</string>
     <string name="forums_access_level_moderate_full">Moderere, poste, kommentere, stemme og sjå</string>
     <string name="forums_access_level_post_full">Poste, kommentere, stemme og sjå</string>
@@ -247,8 +247,8 @@
     <string name="forums_access_select_rule">Vel ein regel</string>
     <string name="forums_ai_actions_label">KI-handlingar på innlegg</string>
     <string name="forums_ai_prompt_custom">Tilpassa</string>
-    <string name="forums_ai_prompt_score_label">Poengprompt</string>
-    <string name="forums_ai_prompt_tag_label">Taggprompt</string>
+    <string name="forums_ai_prompt_score_label">Poeng-leietekst</string>
+    <string name="forums_ai_prompt_tag_label">Etikett-leietekst</string>
     <string name="forums_ai_prompt_variables">Variablar: %1$s</string>
     <string name="forums_link">Lenkje</string>
     <string name="forums_moderation_ban_message">Personen mistar tilgang til forumet til du fjernar avgrensinga.</string>
@@ -276,7 +276,7 @@
     <string name="forums_moderation_unit_replies">svar</string>
     <string name="forums_moderation_unit_seconds">sekund</string>
     <string name="forums_settings_ai_updated">KI-innstillingar oppdaterte</string>
-    <string name="forums_settings_forum_renamed">Forumet har fått nytt namn</string>
+    <string name="forums_settings_forum_renamed">Forumet fekk nytt namn</string>
     <string name="forums_settings_name_clear_cd">Tøm namn</string>
     <string name="forums_settings_unsubscribe_section">Meld deg av forumet</string>
     <string name="forums_share_link_title">Forumlenkje</string>

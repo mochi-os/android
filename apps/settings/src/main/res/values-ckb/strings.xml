@@ -4,7 +4,7 @@
     <string name="settings_home_title">ڕێکخستنەکان</string>
     <string name="settings_home_logout">دەرچوون</string>
     <string name="settings_home_account">هەژمار</string>
-    <string name="settings_home_preferences">هەڵبژاردەکان</string>
+    <string name="settings_home_preferences">پەسەندییەکان</string>
     <string name="settings_home_display">پیشاندان</string>
     <string name="settings_home_notification_prefs">ھەڵبژاردنەکانی ئاگاداری</string>
     <string name="settings_home_accounts">هەژمارە پەیوەستکراوەکان</string>
@@ -209,7 +209,7 @@
 
     <string name="settings_home_sessions">دانیشتنەکان</string>
     <string name="settings_home_privacy">ڕێنماییەکانی پاراستنی نهێنی</string>
-    <string name="settings_home_rules">یاساکان</string>
+    <string name="settings_home_rules">ڕێساکان</string>
     <string name="settings_home_terms">مەرجەکانی خزمەتگوزاری</string>
     <string name="account_passkeys_empty">ھیچ کلیلێکی چوونەژوورەوە تۆمار نەکراوە.</string>
     <string name="account_passkey_register_title">کلیلی چوونەژوورەوە زیاد بکە</string>
@@ -242,18 +242,18 @@
     <string name="route_meta">پێشینەیی %1$d · %2$s</string>
     <string name="interests_search_placeholder">بابەت بگەڕێ بۆ زیادکردن…</string>
     <string name="interests_empty">ھێشتا ھیچ ئارەزوویەک نییە.</string>
-    <string name="interests_summary_regenerate">کورتە دوبارە دروست بکە</string>
+    <string name="interests_summary_regenerate">دروستکردنەوەی پوختە</string>
     <string name="interests_summary_regenerating">دوبارە دروست دەکرێت…</string>
     <string name="interests_summary_empty">چەند ئارەزوویەک زیاد بکە بۆ دروستکردنی کورتەی ئەو شتانەی پێت خۆشە.</string>
     <string name="interests_search_failed">گەڕان شکستی هێنا. تکایە دوبارە ھەوڵ بدە.</string>
     <string name="document_privacy_title">ڕێنماییەکانی پاراستنی نهێنی</string>
-    <string name="document_rules_title">یاساکان</string>
+    <string name="document_rules_title">ڕێساکان</string>
     <string name="document_terms_title">مەرجەکانی خزمەتگوزاری</string>
     <string name="notifprefs_delete_title">\"%1$s\" بسڕێتەوە؟</string>
     <string name="system_status_update_available">Mochi %1$s بەردەستە</string>
     <string name="system_status_installing">%1$s دادەمەزرێت…</string>
     <string name="accounts_field_api_key">کلیلی API</string>
-    <string name="accounts_field_url">URLی سێرڤەر</string>
+    <string name="accounts_field_url">URLی ڕاژەکار</string>
     <string name="accounts_set_default_ai">وەک AI ی بنەڕەتی دایبنێ</string>
     <string name="accounts_verify_code">کۆد</string>
     <string name="accounts_verify_resend">کۆد دوبارە بنێرە</string>
@@ -263,9 +263,9 @@
     <string name="system_settings_reset_message">ئەمە \"%1$s\" بۆ نرخی بنەڕەتی (%2$s) ڕێکدەخاتەوە.</string>
     <string name="system_settings_reset_message_empty">ئەمە \"%1$s\" بۆ بنەڕەتی (بەتاڵ) ڕێکدەخاتەوە.</string>
     <string name="settings_home_system_users">بەکارھێنەران (سێرڤەر)</string>
-    <string name="system_users_add_user">بەکارھێنەر زیاد بکە</string>
+    <string name="system_users_add_user">زیادکردنی بەکارهێنەر</string>
     <string name="system_users_search_placeholder">بەکارھێنەران بگەڕێ…</string>
-    <string name="system_users_sort_by">ڕیز بکە بەپێی</string>
+    <string name="system_users_sort_by">ڕیزکردن بەپێی</string>
     <string name="system_users_last_login">کۆتا چوونەژوورەوە: %1$s</string>
     <string name="system_users_delete_message">ئەمە بۆ ھەمیشە بەکارھێنەری \"%1$s\" دەسڕێتەوە. ئەم کردارە ناتوانرێ بگەڕێندرێتەوە.</string>
     <string name="system_users_sessions_title">دانیشتنەکانی %1$s</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s چیتر ڕێگاکانی لەسەر ئەم دۆمەینە بەڕێوە نابات.</string>
     <string name="domain_delegation_delete_title">نوێنەرایەتی بسڕەوە؟</string>
     <string name="domain_delegation_path">ڕێگا</string>
-    <string name="domain_delegation_user">ناسنامەی بەکارھێنەر</string>
+    <string name="domain_delegation_user">بەکارهێنەر</string>
     <string name="domain_delegations">نوێنەرایەتییەکان</string>
     <string name="domain_delegations_empty">وەکالەتێک ڕێکخراو نییە.</string>
     <string name="domain_delete">سڕینەوەی دۆمەین</string>
@@ -382,7 +382,7 @@
     <string name="notifprefs_transport_fcm">پاڵنانی Android</string>
     <string name="notifprefs_no_destinations">هیچ ئامانجێک نییە</string>
     <string name="account_data_generate">دەستەواژەی نهێنی درووست بکە</string>
-    <string name="accounts_field_server">URLی سێرڤەر</string>
+    <string name="accounts_field_server">URLی ڕاژەکار</string>
     <string name="accounts_field_token">تۆکنی دەستپێگەیشتن</string>
     <string name="accounts_field_topic">بابەت</string>
     <string name="accounts_field_secret">نهێنی واژۆ</string>
@@ -392,7 +392,7 @@
     <string name="accounts_capability_notify">ئاگادارکردنەوەکان</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">چوونەژوورەوە</string>
-    <string name="accounts_provider_caldav">ڕاژەی ڕۆژژمێر</string>
+    <string name="accounts_provider_caldav">ڕاژەکاری ڕۆژژمێر</string>
     <string name="accounts_revoke_confirm">ئەمە دەستڕاگەیشتنی ڕۆژژمێری %1$s هەڵدەوەشێنێتەوە. چوونەژوورەوە بە %2$s دەمێنێتەوە تا لە پەڕەی چوونەژوورەوە لێی جیا دەکەیتەوە.</string>
     <string name="accounts_capability_mcp">MCP</string>
 </resources>

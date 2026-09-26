@@ -211,7 +211,7 @@
     <string name="staff_dashboard_kpi_total_orders">Celkem objednávek</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Ne</string>
-    <string name="staff_dashboard_open_sidebar">Otevřít postranní panel</string>
+    <string name="staff_dashboard_open_sidebar">Otevřít boční panel</string>
     <string name="staff_dashboard_order_fallback">Objednávka č. %1$s</string>
     <string name="staff_dashboard_system">Systém</string>
     <string name="staff_dashboard_tab_audit">Audit</string>
@@ -283,9 +283,9 @@
     <string name="staff_disputes_view">Zobrazit</string>
     <string name="staff_filter_chip_remove">Odebrat filtr</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
-    <string name="staff_filter_label_moderation">Moderace</string>
+    <string name="staff_filter_label_moderation">Moderování</string>
     <string name="staff_filter_label_query">Hledat</string>
-    <string name="staff_filter_label_seller">Prodejce</string>
+    <string name="staff_filter_label_seller">Prodávající</string>
     <string name="staff_filter_label_status">Stav</string>
     <string name="staff_filter_label_type">Typ</string>
     <string name="staff_listings_action_approve_title">Schválit nabídku</string>

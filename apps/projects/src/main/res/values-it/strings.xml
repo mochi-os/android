@@ -191,7 +191,7 @@
     <string name="projects_views_filter">Filtro (memorizzato, non ancora applicato)</string>
     <string name="projects_people_empty">Nessuna persona ha ancora accesso</string>
     <string name="projects_settings_delete_confirm_message">Vuoi davvero eliminare questo progetto? Tutti gli oggetti, i commenti e le impostazioni saranno rimossi in modo permanente.</string>
-    <string name="projects_object_unwatch">Non seguire più</string>
+    <string name="projects_object_unwatch">Smetti di seguire</string>
     <string name="projects_object_tab_watchers">Osservatori</string>
     <string name="projects_watchers_empty">Nessun osservatore ancora</string>
     <string name="projects_object_delete_title">Elimina oggetto</string>
@@ -278,7 +278,7 @@
     <string name="projects_class_title_field_description">Quale campo usare come titolo visualizzato per gli oggetti di questa classe.</string>
     <string name="projects_class_title_field_default">Predefinito (leggibile)</string>
     <string name="projects_class_merge_requests_description">Consenti richieste di unione sugli oggetti di questa classe.</string>
-    <string name="projects_class_parents">Classi genitore</string>
+    <string name="projects_class_parents">Classi superiori</string>
     <string name="projects_class_delete_message">Sei sicuro di voler eliminare la classe \"%1$s\"? Verranno eliminati anche tutti i campi e le relative opzioni.</string>
     <string name="projects_field_type_enumerated">Enumerato</string>
     <string name="projects_field_label">Campo: %1$s</string>

@@ -215,7 +215,7 @@
     <string name="wikis_replicas_remove_confirm_title">Odstrani repliko?</string>
     <string name="wikis_replicas_remove_confirm_action">Odstrani</string>
     <string name="wikis_replicas_remove_failed">Neuspešna odstranitev replike</string>
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wikiji</string>
     <string name="wikis_channel_name">Obvestila Wikis</string>
     <string name="wikis_channel_description">Obvestila o urejanjih strani, komentarjih in povabilih.</string>
     <string name="wikis_pageview_toc_expand">Pokaži kazalo</string>
@@ -244,7 +244,7 @@
     <string name="wikis_insert_dialog_empty">Še ni prilog. Naložite datoteko za začetek.</string>
     <string name="wikis_delete_page_message">Pripravljate se izbrisati stran „%1$s\" (%2$s). To dejanje lahko razveljavite z obnavljanjem iz zgodovine.</string>
     <string name="wikis_delete_page_success">Stran izbrisana</string>
-    <string name="wikis_revert_page_title">Povrni stran</string>
+    <string name="wikis_revert_page_title">Razveljavi stran</string>
     <string name="wikis_revert_page_message">Pripravljate se povrniti %1$s na različico %2$d. To bo ustvarilo novo različico z vsebino različice %2$d.</string>
     <string name="wikis_revert_page_default_comment">Povrnjeno na različico %1$d</string>
     <string name="wikis_revert_page_success">Povrnjeno na različico %1$d</string>

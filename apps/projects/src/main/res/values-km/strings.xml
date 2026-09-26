@@ -167,10 +167,10 @@
     <string name="projects_class_move_up">ផ្លាស់ទីឡើងលើ</string>
     <string name="projects_views_move_down">ផ្លាស់ទីចុះក្រោម</string>
     <string name="projects_class_move_down">ផ្លាស់ទីចុះក្រោម</string>
-    <string name="projects_sort_direction_asc">តាមលំដាប់ឡើង</string>
-    <string name="projects_views_direction_asc">តាមលំដាប់ឡើង</string>
-    <string name="projects_sort_direction_desc">តាមលំដាប់ចុះ</string>
-    <string name="projects_views_direction_desc">តាមលំដាប់ចុះ</string>
+    <string name="projects_sort_direction_asc">តាមលំដាប់កើន</string>
+    <string name="projects_views_direction_asc">តាមលំដាប់កើន</string>
+    <string name="projects_sort_direction_desc">តាមលំដាប់ថយ</string>
+    <string name="projects_views_direction_desc">តាមលំដាប់ថយ</string>
     <string name="projects_list_add_to_home">បន្ថែមទៅអេក្រង់ដើម</string>
     <string name="projects_search_objects_placeholder">ស្វែងរកវត្ថុ</string>
     <string name="projects_links_search_placeholder">ស្វែងរកវត្ថុ</string>
@@ -258,7 +258,7 @@
     <string name="projects_move_to_row">ផ្លាស់ទីទៅជួរដេក</string>
     <string name="projects_move_after">បន្ទាប់ពី %1$s</string>
     <string name="projects_drag_card">អូសកាត</string>
-    <string name="projects_drag_row">អូសជួរដេក</string>
+    <string name="projects_drag_row">អូសជួរ</string>
     <string name="projects_drag_column">អូសជួរឈរ</string>
     <string name="projects_drag_hint">ចុចឱ្យជាប់ហើយអូសដើម្បីផ្លាស់ទី</string>
     <string name="projects_design_more_options">ជម្រើសច្រើនទៀត</string>
@@ -276,7 +276,7 @@
     <string name="projects_classes_empty">មិនមានថ្នាក់ត្រូវបានកំណត់ទេ</string>
     <string name="projects_class_label">ថ្នាក់៖ %1$s</string>
     <string name="projects_class_title_field_description">វាលណាដែលត្រូវប្រើជាចំណងជើងបង្ហាញសម្រាប់វត្ថុនៃថ្នាក់នេះ។</string>
-    <string name="projects_class_title_field_default">លំនាំដើម (អាចអាន)</string>
+    <string name="projects_class_title_field_default">លំនាំដើម (អានបាន)</string>
     <string name="projects_class_merge_requests_description">អនុញ្ញាតការស្នើបញ្ចូលគ្នាលើវត្ថុនៃថ្នាក់នេះ។</string>
     <string name="projects_class_parents">ថ្នាក់មេ</string>
     <string name="projects_class_delete_message">តើអ្នកប្រាកដថាចង់លុបថ្នាក់ \"%1$s\" ឬ? វាល និងជម្រើសរបស់វាទាំងអស់ក៏នឹងត្រូវលុបដែរ។</string>
@@ -288,7 +288,7 @@
     <string name="projects_field_show_on_card">បង្ហាញលើកាត</string>
     <string name="projects_field_multi">ជ្រើសរើសច្រើន</string>
     <string name="projects_field_position">ទីតាំងបង្ហាញ</string>
-    <string name="projects_field_position_header">ក្បាល</string>
+    <string name="projects_field_position_header">បឋមកថា</string>
     <string name="projects_field_validation">ការផ្ទៀងផ្ទាត់</string>
     <string name="projects_field_min_length">ប្រវែងអប្បបរមា</string>
     <string name="projects_field_max_length">ប្រវែងអតិបរមា</string>
@@ -329,7 +329,7 @@
     <string name="projects_settings_field_entity_id">លេខសម្គាល់អង្គភាព</string>
     <string name="projects_settings_field_fingerprint">ស្នាមម្រាមដៃ</string>
     <string name="projects_settings_field_server">ម៉ាស៊ីនមេ</string>
-    <string name="projects_access_subject_anyone">នរណាម្នាក់</string>
+    <string name="projects_access_subject_anyone">អ្នកណាក៏បាន</string>
     <string name="projects_access_subject_authenticated">អ្នកប្រើដែលបានផ្ទៀងផ្ទាត់</string>
     <string name="projects_access_select_role">ជ្រើសរើសតួនាទី</string>
     <string name="projects_access_role_view">មើលតែប៉ុណ្ណោះ</string>

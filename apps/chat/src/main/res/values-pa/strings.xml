@@ -53,7 +53,7 @@
     <string name="chat_forward_search">ਚੈਟਾਂ ਖੋਜੋ…</string>
     <string name="chat_forward_empty">ਫਾਰਵਰਡ ਕਰਨ ਲਈ ਕੋਈ ਚੈਟ ਨਹੀਂ</string>
     <string name="chat_forward_success">ਫਾਰਵਰਡ ਕੀਤਾ ਗਿਆ</string>
-    <string name="chat_message_reply">ਜਵਾਬ ਦਿਓ</string>
+    <string name="chat_message_reply">ਜਵਾਬ</string>
     <string name="chat_message_select">ਚੁਣੋ</string>
     <string name="chat_reply_attachment">ਅਟੈਚਮੈਂਟ</string>
     <string name="chat_replying_to">%1$s ਨੂੰ ਜਵਾਬ ਦੇ ਰਹੇ ਹੋ</string>

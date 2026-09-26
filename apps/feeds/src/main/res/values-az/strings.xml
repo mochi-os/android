@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi lenti</string>
     <string name="feeds_source_type_feed_memories">Yaddaşlar</string>
-    <string name="feeds_remove_source">Mənbəni sil</string>
+    <string name="feeds_remove_source">Mənbəni silək?</string>
     <string name="feeds_suggested_credibility_accept">Qəbul et</string>
     <string name="feeds_rss_url_copied">RSS URL panelə kopyalandı</string>
     <string name="feeds_logout">Çıx</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">Heç vaxt alınmayıb</string>
     <string name="feeds_source_poll">Sorğu</string>
-    <string name="feeds_source_transform">Çevirmə</string>
+    <string name="feeds_source_transform">AI çevrilməsi</string>
     <string name="feeds_remove_source_confirm">\"%1$s\" silinsin?</string>
     <string name="feeds_remove_also_delete_posts">İdxal edilmiş yazılar da silinsin</string>
     <string name="feeds_suggested_credibility_title">Təklif olunan etibarlılıq</string>
@@ -208,7 +208,7 @@
     <string name="feeds_banner_dismiss">Banneri rədd et</string>
     <string name="feeds_members_search">Üzvləri filtrlə</string>
     <string name="feeds_ai_prompt_default">Standart</string>
-    <string name="feeds_ai_prompt_custom">Fərdi</string>
+    <string name="feeds_ai_prompt_custom">Xüsusi</string>
     <string name="feeds_ai_prompt_variables">Dəyişənlər: %1$s</string>
     <string name="feeds_link">Keçid</string>
     <string name="feeds_share_link_title">Lent keçidi</string>

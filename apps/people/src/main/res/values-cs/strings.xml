@@ -49,9 +49,9 @@
     <string name="people_profile_save">Uložit</string>
     <string name="people_profile_saving">Ukládá se…</string>
     <string name="people_profile_save_failed">Nepodařilo se uložit</string>
-    <string name="people_profile_name">Název</string>
-    <string name="people_profile_name_saved">Název uložen</string>
-    <string name="people_profile_edit_name">Upravit název</string>
+    <string name="people_profile_name">Jméno</string>
+    <string name="people_profile_name_saved">Jméno uloženo</string>
+    <string name="people_profile_edit_name">Upravit jméno</string>
     <string name="people_profile_identity">Identita</string>
     <string name="people_profile_accent">Zvýraznění</string>
     <string name="people_profile_directory_listing">Povolit ostatním najít vás v adresáři</string>
@@ -124,7 +124,7 @@
     <string name="people_contacts_try_adjusting">Zkuste upravit hledaný výraz</string>
     <string name="people_contact_section_address">Adresa</string>
     <string name="people_contact_section_detail">Podrobnosti</string>
-    <string name="people_contact_name">Název</string>
+    <string name="people_contact_name">Jméno</string>
     <string name="people_contact_email">E-mail</string>
     <string name="people_contact_city">Město</string>
     <string name="people_contact_region">Kraj</string>
@@ -137,7 +137,7 @@
     <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Název</string>
     <string name="people_books_rename">Přejmenovat</string>
-    <string name="people_contacts_sort_name">Název</string>
+    <string name="people_contacts_sort_name">Jméno</string>
     <string name="people_contacts_sort_recent">Nedávno přidáno</string>
     <string name="people_contacts_thats_you">To jste vy</string>
     <string name="people_contacts_try_different_search">Zkuste jiný vyhledávací výraz</string>

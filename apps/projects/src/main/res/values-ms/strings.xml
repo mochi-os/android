@@ -248,7 +248,7 @@
     <string name="projects_tree_expand">Kembangkan</string>
     <string name="projects_tree_move">Alih</string>
     <string name="projects_tree_move_to_parent">Alih ke induk</string>
-    <string name="projects_tree_root_level">(Aras akar)</string>
+    <string name="projects_tree_root_level">(Tahap akar)</string>
     <string name="projects_tree_empty">Tiada objek</string>
     <string name="projects_board_no_columns">Tiada lajur dikonfigurasikan untuk paparan ini</string>
     <string name="projects_board_no_options">Tiada pilihan dikonfigurasikan untuk medan lajur</string>
@@ -286,7 +286,7 @@
     <string name="projects_field_sortable">Boleh diisih</string>
     <string name="projects_field_filterable">Boleh ditapis</string>
     <string name="projects_field_show_on_card">Tunjukkan pada kad</string>
-    <string name="projects_field_multi">Berbilang pilihan</string>
+    <string name="projects_field_multi">Pilihan berbilang</string>
     <string name="projects_field_position">Kedudukan paparan</string>
     <string name="projects_field_position_header">Pengepala</string>
     <string name="projects_field_validation">Pengesahan</string>

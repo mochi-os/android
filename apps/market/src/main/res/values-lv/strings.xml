@@ -9,7 +9,7 @@
     <string name="market_account_seller_step_activate_title">Aktivizēt pārdevēja kontu</string>
     <string name="market_account_seller_step_activate_desc">Izveidojiet pārdevēja profilu, lai sāktu pievienot preces</string>
     <string name="market_account_seller_step_stripe_desc">Savienojiet Stripe kontu, lai pieņemtu maksājumus no pircējiem</string>
-    <string name="market_account_seller_fees_heading">Maksas:</string>
+    <string name="market_account_seller_fees_heading">Komisijas:</string>
     <string name="market_account_seller_fees_mochi">Mochi ņem %1$s%% no katra pārdošanas darījuma.</string>
     <string name="market_account_seller_fees_stripe">Stripe iekasē savu apstrādes maksu par katru darījumu un fiksētu maksu par katru maksājuma atgriešanu. Pašreizējās likmes jūsu valūtai un reģionam ir norādītas jūsu Stripe vadības panelī.</string>
     <string name="market_account_seller_connect">Savienot Stripe</string>
@@ -64,7 +64,7 @@
     <string name="market_checkout_address_heading">Piegādes adrese</string>
     <string name="market_checkout_address_line1">Adreses 1. rinda</string>
     <string name="market_checkout_address_line2">Adreses 2. rinda</string>
-    <string name="market_checkout_address_name">Nosaukums</string>
+    <string name="market_checkout_address_name">Vārds</string>
     <string name="market_checkout_address_postcode">Pasta indekss</string>
     <string name="market_checkout_address_region">Reģions</string>
     <string name="market_checkout_back">Atpakaļ</string>
@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Ziņot par sludinājumu</string>
     <string name="market_listing_detail_save">Saglabāt</string>
     <string name="market_listing_detail_seller_heading">Pārdevējs</string>
-    <string name="market_listing_detail_shipping_heading">Piegāde</string>
+    <string name="market_listing_detail_shipping_heading">Piegādes opcijas</string>
     <string name="market_listing_detail_subscribe">Abonēt</string>
     <string name="market_listing_detail_tags_heading">Tagi</string>
     <string name="market_listing_detail_title">Sludinājums</string>
@@ -429,7 +429,7 @@
     <string name="market_appeal_dialog_reason_label">Kāpēc jūs iesniedzat apelāciju?</string>
     <string name="market_appeal_dialog_title">Pārsūdzēt noņemšanu</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
-    <string name="market_bid_dialog_amount_label">Jūsu piedāvājums</string>
+    <string name="market_bid_dialog_amount_label">Jūsu solījums</string>
     <string name="market_bid_dialog_current_high">Pašreizējais augstākais piedāvājums: %1$s</string>
     <string name="market_bid_dialog_failed">Neizdevās iesniegt piedāvājumu</string>
     <string name="market_bid_dialog_invalid_amount">Ievadiet summu, kas pārsniedz pašreizējo piedāvājumu</string>

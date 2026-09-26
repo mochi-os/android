@@ -74,7 +74,7 @@
     <string name="system_status_title">Statut</string>
     <string name="system_status_version">Version</string>
     <string name="system_status_started">Démarré</string>
-    <string name="system_status_update">Mettre à jour</string>
+    <string name="system_status_update">Mise à jour</string>
     <string name="system_status_refresh">Actualiser</string>
     <string name="system_status_install_update">Installer la mise à jour</string>
     <string name="system_status_download_installer">Télécharger l\'installeur</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">Priorité %1$d · %2$s</string>
     <string name="interests_search_placeholder">Rechercher des sujets à ajouter…</string>
     <string name="interests_empty">Aucun centre d\'intérêt pour le moment.</string>
-    <string name="interests_summary_regenerate">Regénérer le résumé</string>
+    <string name="interests_summary_regenerate">Régénérer le résumé</string>
     <string name="interests_summary_regenerating">Regénération…</string>
     <string name="interests_summary_empty">Ajoutez des centres d\'intérêt pour générer un résumé de ce qui vous passionne.</string>
     <string name="interests_search_failed">La recherche a échoué. Veuillez réessayer.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s ne gérera plus les routes sur ce domaine.</string>
     <string name="domain_delegation_delete_title">Supprimer la délégation ?</string>
     <string name="domain_delegation_path">Chemin</string>
-    <string name="domain_delegation_user">ID utilisateur</string>
+    <string name="domain_delegation_user">Utilisateur</string>
     <string name="domain_delegations">Délégations</string>
     <string name="domain_delegations_empty">Aucune délégation configurée.</string>
     <string name="domain_delete">Supprimer le domaine</string>

@@ -50,8 +50,8 @@
     <string name="go_resign_title">Тоглоомоос тэрсэх үү?</string>
     <string name="go_sidebar_completed">Гүйцэтгэсэн</string>
     <string name="go_sidebar_new_game">Шинэ тоглоом</string>
-    <string name="go_status_draw">Зурах</string>
-    <string name="go_status_draw_text">Зурах</string>
+    <string name="go_status_draw">Тэнцээ</string>
+    <string name="go_status_draw_text">Тэнцээ</string>
     <string name="go_status_game_over">Тоглоом дууссан</string>
     <string name="go_status_opponent_move">%1$s-н нүүдэл</string>
     <string name="go_status_opponent_wins">%1$s хождог</string>

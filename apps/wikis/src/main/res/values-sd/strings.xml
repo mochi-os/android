@@ -16,7 +16,7 @@
     <string name="wikis_page_action_rename">نالو تبديل ڪريو</string>
     <string name="wikis_page_action_history">تاريخ</string>
     <string name="wikis_page_action_delete">ختم ڪريو</string>
-    <string name="wikis_page_action_section_wiki">Wiki</string>
+    <string name="wikis_page_action_section_wiki">وڪي</string>
     <string name="wikis_page_action_search">ڳوليو</string>
     <string name="wikis_page_action_tags">ٽيگ</string>
     <string name="wikis_page_action_recent_changes">تازيون تبديليون</string>
@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">هٽايو</string>
     <string name="wikis_replicas_remove_failed">ريپليڪا هٽائڻ ۾ ناڪام</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi وڪيز</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">wiki صفحي جي ترميمن، تبصرن ۽ دعوتن بابت اطلاعون.</string>
     <string name="wikis_pageview_toc_expand">فهرست ڏيکاريو</string>
@@ -225,7 +225,7 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">اپڊيٽ ٿيو %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” صفحو اڃا موجود ناهي.</string>
-    <string name="wikis_pageview_share_chooser">وڪي جو لنڪ</string>
+    <string name="wikis_pageview_share_chooser">وڪي لنڪ</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">لنڪ</string>
     <string name="wikis_open_sidebar">سائڊبار کوليو</string>
@@ -283,7 +283,7 @@
     <string name="wikis_load_more">وڌيڪ لوڊ ڪريو</string>
     <string name="wikis_access_change_level">رسائي جي سطح</string>
     <string name="wikis_access_subject_anyone">ڪوبه</string>
-    <string name="wikis_access_subject_authenticated">تصديق ٿيل استعمال ڪندڙ</string>
+    <string name="wikis_access_subject_authenticated">تصديق ٿيل صارف</string>
 
     <string name="wikis_revision_compare">تبديليون ڀيٽيو</string>
     <string name="wikis_revision_author">%1$s جي ذريعي</string>

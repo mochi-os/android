@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">አስወግድ</string>
     <string name="wikis_replicas_remove_failed">ቅጅን ማስወገድ አልተሳካም</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi ዊኪዎች</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">ስለ wiki ገጽ አርትዖቶች፣ አስተያየቶች እና ግብዣዎች ማሳወቂያዎች።</string>
     <string name="wikis_pageview_toc_expand">ማውጫ አሳይ</string>

@@ -37,7 +37,7 @@
 
     <string name="words_channel_name">Wörter-Benachrichtigungen</string>
     <string name="words_channel_description">Benachrichtigungen über Züge, Austausche und Partieergebnisse.</string>
-    <string name="words_sidebar_active">Aktive Partien</string>
+    <string name="words_sidebar_active">Aktive Spiele</string>
     <string name="words_sidebar_empty">Noch keine Partien.</string>
     <string name="words_new_game_choose_opponents">Gegner auswählen</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
@@ -55,7 +55,7 @@
     <string name="words_detail_chat_you_played">Du hast %1$s gespielt</string>
     <string name="words_detail_chat_player_played">%1$s hat %2$s gespielt</string>
 
-    <string name="words_detail_delete_title">Partie löschen?</string>
+    <string name="words_detail_delete_title">Spiel löschen?</string>
     <string name="words_detail_delete_confirm">Löschen</string>
     <string name="words_detail_delete_message">Dadurch werden das Spiel und sein Chat dauerhaft gelöscht. Dies kann nicht rückgängig gemacht werden.</string>
     <string name="words_detail_chat_passed">%1$s hat gepasst</string>

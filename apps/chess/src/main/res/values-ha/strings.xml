@@ -17,7 +17,7 @@
     <string name="chess_new_add_friends">Ƙara abokai</string>
     <string name="chess_new_start_button">Fara wasa</string>
     <string name="chess_new_creating">Ana ƙirƙira…</string>
-    <string name="chess_chat_title">Chat</string>
+    <string name="chess_chat_title">Tattaunawa</string>
     <string name="chess_open_chat">Buɗe panel ɗin chat</string>
     <string name="chess_open_actions">Buɗe ayyukan wasa</string>
     <string name="chess_offer_draw">Ba da tayin canjaras</string>
@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">Yarda</string>
     <string name="chess_draw_decline">Ƙi</string>
     <string name="chess_status_checkmate_you_win">Checkmate — ka yi nasara!</string>
-    <string name="chess_status_stalemate">Stalemate — kunnen doki</string>
+    <string name="chess_status_stalemate">Tsayawa — canjaras</string>
     <string name="chess_status_draw">Canjaras</string>
     <string name="chess_status_check_your_move">Check — motsinka</string>
     <string name="chess_status_your_move">Move ɗinku</string>

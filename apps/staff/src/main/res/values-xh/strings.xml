@@ -252,7 +252,7 @@
     <string name="staff_filter_label_moderation">Ulungelelwaniso</string>
     <string name="staff_filter_label_query">Khangela</string>
     <string name="staff_filter_label_seller">Umthengisi</string>
-    <string name="staff_filter_label_status">Imo</string>
+    <string name="staff_filter_label_status">Imeko</string>
     <string name="staff_filter_label_type">Uhlobo</string>
     <string name="staff_listings_action_approve_title">Vumela uluhlu</string>
     <string name="staff_listings_action_reject_title">Khaba uluhlu</string>

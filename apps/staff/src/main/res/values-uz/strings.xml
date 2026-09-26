@@ -265,7 +265,7 @@
     <string name="staff_filter_label_query">Qidirish</string>
     <string name="staff_filter_label_seller">Sotuvchi</string>
     <string name="staff_filter_label_status">Holat</string>
-    <string name="staff_filter_label_type">Turi</string>
+    <string name="staff_filter_label_type">Tur</string>
     <string name="staff_listings_action_approve_title">Eʼlonni tasdiqlash</string>
     <string name="staff_listings_action_reject_title">Eʼlonni rad etish</string>
     <string name="staff_listings_action_remove_title">Eʼlonni olib tashlash</string>

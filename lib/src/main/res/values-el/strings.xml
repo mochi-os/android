@@ -121,7 +121,7 @@
     <string name="auth_server_url">URL διακομιστή</string>
     <string name="auth_create_identity_title">Δημιουργήστε την ταυτότητά σας</string>
     <string name="auth_link_rules">Κανόνες</string>
-    <string name="common_retry">Επανάληψη</string>
+    <string name="common_retry">Δοκιμή ξανά</string>
     <string name="access_add_rule_title">Προσθήκη κανόνα πρόσβασης</string>
     <string name="access_level_manage">Διαχείριση</string>
     <string name="notifications_clear">Εκκαθάριση ειδοποιήσεων</string>
@@ -129,7 +129,7 @@
     <string name="game_chat_move_played">Ο/Η %1$s έπαιξε %2$s</string>
 
     <string name="error_network">Δεν είναι δυνατή η σύνδεση. Ελέγξτε τη σύνδεσή σας στο διαδίκτυο και δοκιμάστε ξανά.</string>
-    <string name="error_authentication_required">Απαιτείται έλεγχος ταυτότητας</string>
+    <string name="error_authentication_required">Απαιτείται ταυτοποίηση</string>
     <string name="error_not_found">Δεν βρέθηκε</string>
     <string name="error_server">Σφάλμα διακομιστή (%1$d). Δοκιμάστε ξανά αργότερα.</string>
     <string name="error_unexpected">Παρουσιάστηκε μη αναμενόμενο σφάλμα</string>
@@ -167,7 +167,7 @@
     <string name="bootstrap_sign_in_different_server">Σύνδεση σε διαφορετικό διακομιστή</string>
     <string name="common_more_options">Περισσότερες επιλογές</string>
     <string name="common_collapse">Σύμπτυξη</string>
-    <string name="common_expand">Επέκταση</string>
+    <string name="common_expand">Ανάπτυξη</string>
     <string name="common_play_video">Αναπαραγωγή βίντεο</string>
     <string name="place_picker_name">Όνομα τοποθεσίας</string>
     <string name="place_origin">Αφετηρία</string>

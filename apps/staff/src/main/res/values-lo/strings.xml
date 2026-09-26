@@ -27,7 +27,7 @@
     <string name="staff_accounts_status_active">ໃຊ້ງານຢູ່</string>
     <string name="staff_accounts_status_banned">ຖືກແບນ</string>
     <string name="staff_accounts_status_suspended">ໂຈະແລ້ວ</string>
-    <string name="staff_accounts_submitting">ກໍາລັງສົ່ງ…</string>
+    <string name="staff_accounts_submitting">ກຳລັງສົ່ງ…</string>
     <string name="staff_accounts_suspend">ໂຈະ</string>
     <string name="staff_accounts_suspended_toast">ບັນຊີຖືກລະງັບ</string>
     <string name="staff_accounts_unban">ຍົກເລີກການແບນ</string>
@@ -49,7 +49,7 @@
     <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">ບັນທຶກ</string>
     <string name="staff_appeals_submit">ສົ່ງ</string>
-    <string name="staff_appeals_submitting">ກໍາລັງສົ່ງ…</string>
+    <string name="staff_appeals_submitting">ກຳລັງສົ່ງ…</string>
     <string name="staff_appeals_upheld_toast">ຍຶດໝັ້ນອຸທອນ</string>
     <string name="staff_audit_action_account_banned">ຖືກແບນ</string>
     <string name="staff_audit_action_account_seller_activated">ຜູ້ຂາຍຖືກເປີດໃຊ້ງານ</string>
@@ -288,7 +288,7 @@
     <string name="staff_listings_status_rejected">ປະຕິເສດແລ້ວ</string>
     <string name="staff_listings_status_removed">ລຶບແລ້ວ</string>
     <string name="staff_listings_status_sold">ຂາຍແລ້ວ</string>
-    <string name="staff_listings_submitting">ກໍາລັງສົ່ງ…</string>
+    <string name="staff_listings_submitting">ກຳລັງສົ່ງ…</string>
     <string name="staff_moderation_empty">ບໍ່ມີລາຍການການກວດກາ</string>
     <string name="staff_moderation_filter_clear">ລ້າງຕົວກອງ</string>
     <string name="staff_moderation_listing_filter_placeholder">ID ການລົງປະກາດຂາຍ</string>
@@ -330,7 +330,7 @@
     <string name="staff_reports_status_pending">ກຳລັງລໍຖ້າ</string>
     <string name="staff_reports_status_reviewed">ກວດສອບແລ້ວ</string>
     <string name="staff_reports_submit">ສົ່ງ</string>
-    <string name="staff_reports_submitting">ກໍາລັງສົ່ງ…</string>
+    <string name="staff_reports_submitting">ກຳລັງສົ່ງ…</string>
     <string name="staff_reports_type_listing">ການລົງປະກາດຂາຍ</string>
     <string name="staff_reports_type_user">ຜູ້ໃຊ້</string>
     <string name="staff_reports_view">ເບິ່ງ</string>
@@ -414,7 +414,7 @@
     <string name="staff_team_toast_add_failed">ເພີ່ມສະມາຊິກລົ້ມເຫຼວ</string>
     <string name="staff_team_toast_removed">ຍ້າຍສະມາຊິກແລ້ວ</string>
     <string name="staff_team_toast_role_updated">ປັບປຸງບົດບາດແລ້ວ</string>
-    <string name="staff_audit_action_auction_cancelled">ຍົກເລີກການປະມູນແລ້ວ</string>
+    <string name="staff_audit_action_auction_cancelled">ການປະມູນຖືກຍົກເລີກ</string>
     <string name="staff_dashboard_order_fallback">ສັ່ງຊື້ #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">ເຫດຜົນ (ບໍ່ບັງຄັບ)</string>
@@ -422,7 +422,7 @@
     <string name="staff_appeals_reason_label">ເຫດຜົນການອຸທອນຂອງຜູ້ຂາຍ</string>
     <string name="staff_audit_action_staff_team_role_changed">ປ່ຽນບົດບາດພະນັກງານແລ້ວ</string>
     <string name="staff_categories_delete_desc">ລຶບ \"%1$s\"? ການກະທຳນີ້ບໍ່ສາມາດຍົກເລີກໄດ້.</string>
-    <string name="staff_disputes_dialog_title_chargeback">ການເອີ້ນເງິນຄືນ: %1$s</string>
+    <string name="staff_disputes_dialog_title_chargeback">ການຮຽກເງິນຄືນ: %1$s</string>
     <string name="staff_disputes_dialog_title_view">ເບິ່ງຂໍ້ຂັດແຍ່ງ</string>
     <string name="staff_disputes_meta_buyer_details">ລາຍລະອຽດຂອງຜູ້ຊື້</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">ຖືກຮັກສາໄວ້ໂດຍ Stripe</string>

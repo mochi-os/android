@@ -211,7 +211,7 @@
     <string name="staff_dashboard_kpi_total_orders">Iš viso užsakymų</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Ne</string>
-    <string name="staff_dashboard_open_sidebar">Atverti šoninę juostą</string>
+    <string name="staff_dashboard_open_sidebar">Atidaryti šoninę juostą</string>
     <string name="staff_dashboard_order_fallback">Užsakymas Nr. %1$s</string>
     <string name="staff_dashboard_system">Sistema</string>
     <string name="staff_dashboard_tab_audit">Auditas</string>
@@ -284,7 +284,7 @@
     <string name="staff_filter_chip_remove">Pašalinti filtrą</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderavimas</string>
-    <string name="staff_filter_label_query">Paieška</string>
+    <string name="staff_filter_label_query">Ieškoti</string>
     <string name="staff_filter_label_seller">Pardavėjas</string>
     <string name="staff_filter_label_status">Būsena</string>
     <string name="staff_filter_label_type">Tipas</string>
@@ -394,7 +394,7 @@
     <string name="staff_sidebar_disputes">Ginčai</string>
     <string name="staff_sidebar_listings">Skelbimai</string>
     <string name="staff_sidebar_management">Valdymas</string>
-    <string name="staff_sidebar_market">Parduotuvė</string>
+    <string name="staff_sidebar_market">Turgus</string>
     <string name="staff_sidebar_moderation">Moderavimo žurnalas</string>
     <string name="staff_sidebar_overview">Apžvalga</string>
     <string name="staff_sidebar_reports">Pranešimai</string>

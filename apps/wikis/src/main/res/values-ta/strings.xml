@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">அகற்று</string>
     <string name="wikis_replicas_remove_failed">ரெப்ளிகாவை நீக்க முடியவில்லை</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki-கள்</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">wiki பக்கத் திருத்தங்கள், கருத்துகள் மற்றும் அழைப்புகள் குறித்த அறிவிப்புகள்.</string>
     <string name="wikis_pageview_toc_expand">பொருளடக்கத்தைக் காட்டு</string>
@@ -282,7 +282,7 @@
     <string name="wikis_replicas_removed_success">நகல் அகற்றப்பட்டது</string>
     <string name="wikis_load_more">மேலும் ஏற்று</string>
     <string name="wikis_access_change_level">அணுகல் நிலை</string>
-    <string name="wikis_access_subject_anyone">யாரும்</string>
+    <string name="wikis_access_subject_anyone">எவரும்</string>
     <string name="wikis_access_subject_authenticated">அங்கீகரிக்கப்பட்ட பயனர்கள்</string>
 
     <string name="wikis_revision_compare">மாற்றங்களை ஒப்பிடுக</string>

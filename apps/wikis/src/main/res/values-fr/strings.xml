@@ -240,7 +240,7 @@
     <string name="wikis_comment_form_placeholder_new">Écrire un commentaire…</string>
     <string name="wikis_comment_form_placeholder_reply">Écrire une réponse…</string>
     <string name="wikis_comment_form_send">Envoyer</string>
-    <string name="wikis_comment_form_remove_attachment">Retirer la pièce jointe</string>
+    <string name="wikis_comment_form_remove_attachment">Supprimer la pièce jointe</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Écrivez votre contenu ici en Markdown…</string>
     <string name="wikis_insert_dialog_empty">Aucune pièce jointe pour le moment. Téléversez un fichier pour commencer.</string>
@@ -282,7 +282,7 @@
     <string name="wikis_replicas_removed_success">Réplique supprimée</string>
     <string name="wikis_load_more">Charger plus</string>
     <string name="wikis_access_change_level">Niveau d\'accès</string>
-    <string name="wikis_access_subject_anyone">Tout le monde</string>
+    <string name="wikis_access_subject_anyone">N\'importe qui</string>
     <string name="wikis_access_subject_authenticated">Utilisateurs authentifiés</string>
 
     <string name="wikis_revision_compare">Comparer les modifications</string>

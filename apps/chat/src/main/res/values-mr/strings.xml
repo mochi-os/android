@@ -55,7 +55,7 @@
     <string name="chat_forward_success">फॉरवर्ड केले</string>
     <string name="chat_message_reply">प्रत्युत्तर द्या</string>
     <string name="chat_message_select">निवडा</string>
-    <string name="chat_reply_attachment">जोडलेली फाइल</string>
+    <string name="chat_reply_attachment">संलग्नक</string>
     <string name="chat_replying_to">%1$s ला प्रत्युत्तर देत आहे</string>
     <string name="chat_delete_confirm_title">संदेश हटवायचा?</string>
     <string name="chat_delete_confirm_body">यामुळे संदेश सर्वांसाठी हटवला जातो आणि तो परत मिळवता येणार नाही.</string>
@@ -78,7 +78,7 @@
     <string name="chat_marked_read">वाचले म्हणून चिन्हांकित केले</string>
     <string name="chat_search_next">पुढील जुळणी</string>
     <string name="chat_search_prev">मागील जुळणी</string>
-    <string name="chat_settings_id">चॅट आयडी</string>
+    <string name="chat_settings_id">चॅट ID</string>
     <string name="chat_message_edited">(संपादित)</string>
     <string name="chat_new_fallback_name">चॅट</string>
 </resources>

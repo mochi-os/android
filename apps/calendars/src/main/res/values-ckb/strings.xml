@@ -4,7 +4,7 @@
     <string name="calendars_subscribe_submit">بەشداربە</string>
     <string name="calendars_subscribe_url">ناونیشان</string>
     <string name="calendars_connect_device">ئامێرێک بەستنەوە</string>
-    <string name="calendars_preferences">هەڵبژاردەکان</string>
+    <string name="calendars_preferences">پەسەندییەکان</string>
     <string name="calendars_name">ناو</string>
     <string name="calendars_rename">ناوگۆڕکردن</string>
     <string name="calendars_delete">سڕینەوە</string>
@@ -20,7 +20,7 @@
     <string name="calendars_repeat_never">هەرگیز</string>
     <string name="calendars_repeat_monthly">مانگانە</string>
     <string name="calendars_repeat_yearly">ساڵانە</string>
-    <string name="calendars_repeat_custom">دڵخواز</string>
+    <string name="calendars_repeat_custom">تایبەت</string>
     <string name="calendars_reminder_none">هیچ</string>
     <string name="calendars_day_sunday">یەکشەممە</string>
     <string name="calendars_day_monday">دووشەممە</string>
@@ -166,7 +166,7 @@
     <string name="calendars_subscribe_server">سێرڤەرێکی تری Mochi یان CalDAV</string>
     <string name="calendars_subscribe_address">ناونیشانی ڕۆژژمێری بڵاوکراوە (تەنیا خوێندنەوە)</string>
     <string name="calendars_subscribe_password_apple">وشەی نهێنی تایبەت بە ئەپ</string>
-    <string name="calendars_subscribe_server_url">ناونیشانی سێرڤەر</string>
+    <string name="calendars_subscribe_server_url">ناونیشانی ڕاژەکار</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">ڕۆژژمێری Google</string>

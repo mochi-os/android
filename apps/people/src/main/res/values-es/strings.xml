@@ -162,7 +162,7 @@
     <string name="people_contact_given">Nombre</string>
     <string name="people_contact_family">Apellidos</string>
     <string name="people_contact_nickname">Apodo</string>
-    <string name="people_contact_add_email">Añadir correo</string>
+    <string name="people_contact_add_email">Añadir correo electrónico</string>
     <string name="people_contact_add_phone">Añadir teléfono</string>
     <string name="people_contact_add_address">Añadir dirección</string>
     <string name="people_contact_street">Calle</string>

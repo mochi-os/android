@@ -61,7 +61,7 @@
     <string name="notifications_tab_all">Све</string>
     <string name="notifications_mark_all_read">Означи све прочитаним</string>
     <string name="notifications_clear_all">Очисти све</string>
-    <string name="settings_title">Поставке</string>
+    <string name="settings_title">Подешавања</string>
     <string name="settings_appearance">Изглед</string>
     <string name="settings_appearance_light">Светло</string>
     <string name="settings_appearance_dark">Тамно</string>
@@ -131,14 +131,14 @@
     <string name="error_enter_email">Унесите своју е-пошту</string>
     <string name="error_enter_name">Унесите име</string>
     <string name="auth_connect_to_server">Повежите се са сервером</string>
-    <string name="auth_connect">Повежи се</string>
+    <string name="auth_connect">Повежи</string>
     <string name="auth_sign_in">Пријави се</string>
     <string name="auth_check_email">Проверите е-пошту за верификациони код</string>
     <string name="auth_mfa_title">Вишефакторска аутентификација</string>
     <string name="auth_mfa_subtitle">Завршите преостале кораке верификације</string>
     <string name="auth_recover_account">Опорави налог</string>
     <string name="auth_login_title">Пријавите се на Mochi</string>
-    <string name="auth_next">Даље</string>
+    <string name="auth_next">Следеће</string>
     <string name="auth_or_log_in_with">Или се пријавите помоћу</string>
     <string name="auth_passkey">Приступни кључ</string>
     <string name="auth_use_passkey">Користите приступни кључ</string>
@@ -161,7 +161,7 @@
     <string name="bootstrap_choose_account">Изаберите налог</string>
     <string name="bootstrap_sign_in_different_server">Пријави се на други сервер</string>
     <string name="common_retry">Покушај поново</string>
-    <string name="common_more_options">Више опција</string>
+    <string name="common_more_options">Још опција</string>
     <string name="common_collapse">Скупи</string>
     <string name="common_expand">Прошири</string>
     <string name="common_play_video">Пусти видео</string>
@@ -238,7 +238,7 @@
     <string name="stepup_error_oauth">Није било могуће извршити проверу са тим налогом. Покушајте поново.</string>
     <string name="game_system_resign">%1$s се предао</string>
     <string name="game_system_draw_offer">%1$s понудио реми</string>
-    <string name="game_system_draw_accept">Реми прихваћен</string>
+    <string name="game_system_draw_accept">Реми је прихваћен</string>
     <string name="game_system_draw_decline">%1$s одбио реми</string>
     <string name="reactivation_title">Ваш налог је заказан за брисање</string>
     <string name="reactivation_body">Ваш налог је заказан за брисање. Сада можете отказати и вратити пун приступ.</string>

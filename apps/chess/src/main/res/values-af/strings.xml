@@ -60,7 +60,7 @@
     <string name="chess_empty_subtitle">Begin jou eerste spel om skaak met ’n vriend te speel.</string>
     <string name="chess_empty_start_button">Begin jou eerste spel</string>
     <string name="chess_detail_unavailable">Spel nie beskikbaar nie</string>
-    <string name="chess_delete_title">Verwyder speletjie?</string>
+    <string name="chess_delete_title">Verwyder spel?</string>
     <string name="chess_delete_message">Dit verwyder die spel uit jou lys.</string>
     <string name="chess_ws_connecting">Verbind tans…</string>
     <string name="chess_ws_disconnected">Offline</string>

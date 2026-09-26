@@ -160,7 +160,7 @@
     <string name="crm_links_empty">Geen koppelingen</string>
     <string name="crm_links_section_relates">Heeft betrekking op</string>
     <string name="crm_links_section_duplicated_by">Gedupliceerd door</string>
-    <string name="crm_links_type">Type koppeling</string>
+    <string name="crm_links_type">Koppelingstype</string>
     <string name="crm_links_type_relates">Heeft betrekking op</string>
     <string name="crm_links_remove">Koppeling verwijderen</string>
     <string name="crm_comment_replying_to">Antwoord op %1$s</string>
@@ -214,8 +214,8 @@
     <string name="crm_field_position">Weergavepositie</string>
     <string name="crm_field_position_header">Koptekst</string>
     <string name="crm_field_validation">Validatie</string>
-    <string name="crm_field_min_length">Min. lengte</string>
-    <string name="crm_field_max_length">Max. lengte</string>
+    <string name="crm_field_min_length">Minimale lengte</string>
+    <string name="crm_field_max_length">Maximale lengte</string>
     <string name="crm_field_pattern">Patroon (regex)</string>
     <string name="crm_field_rows">Rijen (hoogte tekstvak)</string>
     <string name="crm_field_no_options">Geen opties gedefinieerd</string>
@@ -251,7 +251,7 @@
     <string name="crm_filter">Filter</string>
     <string name="crm_sort_filter_title">Sorteren en filteren</string>
     <string name="crm_filter_clear_all">Alles wissen</string>
-    <string name="crm_filter_all">Alle</string>
+    <string name="crm_filter_all">Alles</string>
     <string name="crm_filter_other">Overig</string>
     <string name="crm_settings_section_identity">Identiteit</string>
     <string name="crm_settings_section_access">Toegangsbeheer</string>

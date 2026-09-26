@@ -65,7 +65,7 @@
     <string name="staff_audit_action_account_unbanned">Zabrana ukinuta</string>
     <string name="staff_audit_action_account_unsuspended">Suspenzija ukinuta</string>
     <string name="staff_audit_action_auction_bid_placed">Ponuda postavljena</string>
-    <string name="staff_audit_action_auction_cancelled">Aukcija otkazana</string>
+    <string name="staff_audit_action_auction_cancelled">Aukcija je otkazana</string>
     <string name="staff_audit_action_auction_created">Aukcija kreirana</string>
     <string name="staff_audit_action_auction_ended_sold">Aukcija prodata</string>
     <string name="staff_audit_action_auction_ended_unsold">Aukcija završena neprodatom</string>
@@ -131,7 +131,7 @@
     <string name="staff_categories_action_delete">Obriši</string>
     <string name="staff_categories_action_edit">Uredi</string>
     <string name="staff_categories_add">Dodaj</string>
-    <string name="staff_categories_col_name">Ime</string>
+    <string name="staff_categories_col_name">Naziv</string>
     <string name="staff_categories_col_status">Status</string>
     <string name="staff_categories_col_types">Tipovi</string>
     <string name="staff_categories_create">Kreiraj</string>
@@ -145,7 +145,7 @@
     <string name="staff_categories_dialog_digital">Digitalno</string>
     <string name="staff_categories_dialog_edit_title">Uredi kategoriju</string>
     <string name="staff_categories_dialog_icon">Ikona</string>
-    <string name="staff_categories_dialog_name">Ime</string>
+    <string name="staff_categories_dialog_name">Naziv</string>
     <string name="staff_categories_dialog_parent">Nadređeni</string>
     <string name="staff_categories_dialog_parent_none">Ništa</string>
     <string name="staff_categories_dialog_physical">Fizičko</string>
@@ -188,7 +188,7 @@
     <string name="staff_dashboard_col_detail">Detalj</string>
     <string name="staff_dashboard_col_listing">Oglas</string>
     <string name="staff_dashboard_col_moderation">Moderacija</string>
-    <string name="staff_dashboard_col_name">Ime</string>
+    <string name="staff_dashboard_col_name">Naziv</string>
     <string name="staff_dashboard_col_object">Objekat</string>
     <string name="staff_dashboard_col_reason">Razlog</string>
     <string name="staff_dashboard_col_score">Rezultat</string>
@@ -283,11 +283,11 @@
     <string name="staff_disputes_view">Pregledaj</string>
     <string name="staff_filter_chip_remove">Ukloni filter</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
-    <string name="staff_filter_label_moderation">Moderiranje</string>
-    <string name="staff_filter_label_query">Pretraga</string>
-    <string name="staff_filter_label_seller">Prodavac</string>
+    <string name="staff_filter_label_moderation">Moderacija</string>
+    <string name="staff_filter_label_query">Pretraži</string>
+    <string name="staff_filter_label_seller">Prodavač</string>
     <string name="staff_filter_label_status">Status</string>
-    <string name="staff_filter_label_type">Vrsta</string>
+    <string name="staff_filter_label_type">Tip</string>
     <string name="staff_listings_action_approve_title">Odobri oglas</string>
     <string name="staff_listings_action_reject_title">Odbij oglas</string>
     <string name="staff_listings_action_remove_title">Ukloni oglas</string>

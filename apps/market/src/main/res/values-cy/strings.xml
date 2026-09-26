@@ -38,7 +38,7 @@
     <string name="market_appeal_dialog_failed">Methwyd cyflwyno apêl</string>
     <string name="market_appeal_dialog_reason_label">Pam ydych chi\'n apelio?</string>
     <string name="market_appeal_dialog_submit">Cyflwyno apêl</string>
-    <string name="market_appeal_dialog_submitting">Cyflwyno…</string>
+    <string name="market_appeal_dialog_submitting">Yn cyflwyno…</string>
     <string name="market_appeal_dialog_success">Apêl wedi\'i chyflwyno</string>
     <string name="market_appeal_dialog_title">Apelio tynnu</string>
     <string name="market_asset_download">Lawrlwytho</string>
@@ -110,7 +110,7 @@
     <string name="market_checkout_listing_not_found">Ni chanfuwyd y rhestriad</string>
     <string name="market_checkout_pay_button">Talu gyda Stripe</string>
     <string name="market_checkout_payment_failed">Ni ellid cychwyn talu — efallai nad yw\'r gwerthwr wedi cwblhau gosod taliadau</string>
-    <string name="market_checkout_processing">Yn prosesu…</string>
+    <string name="market_checkout_processing">Wrthi\'n prosesu…</string>
     <string name="market_checkout_pwyw_label">Eich pris (isafswm %1$s)</string>
     <string name="market_checkout_pwyw_min_error">Rhaid i\'r swm fod o leiaf %1$s</string>
     <string name="market_checkout_secure">Taliad diogel trwy Stripe</string>
@@ -145,7 +145,7 @@
     <string name="market_dispute_dialog_failed">Methwyd cyflwyno ymateb</string>
     <string name="market_dispute_dialog_response_label">Eich ymateb</string>
     <string name="market_dispute_dialog_submit">Cyflwyno</string>
-    <string name="market_dispute_dialog_submitting">Cyflwyno…</string>
+    <string name="market_dispute_dialog_submitting">Yn cyflwyno…</string>
     <string name="market_dispute_dialog_title">Ymateb i anghydfod</string>
     <string name="market_editor_appeal">Apelio cymedroli</string>
     <string name="market_editor_appeal_reason">Pam ydych chi\'n apelio?</string>
@@ -179,7 +179,7 @@
     <string name="market_editor_interval">Cyfwng bilio</string>
     <string name="market_editor_interval_monthly">Misol</string>
     <string name="market_editor_interval_yearly">Yn flynyddol</string>
-    <string name="market_editor_photo_delete">Dileu llun</string>
+    <string name="market_editor_photo_delete">Dileu’r llun</string>
     <string name="market_editor_photo_upload_failed">Methwyd uwchlwytho llun</string>
     <string name="market_editor_photo_uploading">Yn llwytho i fyny…</string>
     <string name="market_editor_photos_add">Ychwanegu lluniau</string>
@@ -299,7 +299,7 @@
     <string name="market_listing_detail_buy_now">Prynu nawr</string>
     <string name="market_listing_detail_description_heading">Disgrifiad</string>
     <string name="market_listing_detail_edit">Golygu</string>
-    <string name="market_listing_detail_information_heading">Gwybodaeth dosbarthu</string>
+    <string name="market_listing_detail_information_heading">Gwybodaeth danfon</string>
     <string name="market_listing_detail_load_failed">Methwyd llwytho\'r rhestriad</string>
     <string name="market_listing_detail_loading">Yn llwytho\'r rhestriad</string>
     <string name="market_listing_detail_listed">Rhestrwyd %1$s</string>
@@ -319,7 +319,7 @@
     <string name="market_listing_detail_seller_suspended_banner">Mae\'r gwerthwr hwn wedi\'i atal. Mae archebion newydd wedi\'u hoedi nes adfer y cyfrif.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">Mae prynu wedi\'i analluogi tra bod cyfrif y gwerthwr yn gyfyngedig.</string>
     <string name="market_listing_detail_share">Rhannu rhestriad</string>
-    <string name="market_listing_detail_shipping_heading">Cludo</string>
+    <string name="market_listing_detail_shipping_heading">Opsiynau cludo</string>
     <string name="market_listing_detail_subscribe">Tanysgrifio</string>
     <string name="market_listing_detail_tags_heading">Tagiau</string>
     <string name="market_listing_detail_title">Rhestriad</string>
@@ -377,7 +377,7 @@
     <string name="market_price_per_month">%1$s / mis</string>
     <string name="market_price_per_year">%1$s / blwyddyn</string>
     <string name="market_price_starting_bid">Cynnig cychwynnol: %1$s</string>
-    <string name="market_profile_biography">Amdano</string>
+    <string name="market_profile_biography">Ynghylch</string>
     <string name="market_profile_load_failed">Methwyd llwytho\'r proffil</string>
     <string name="market_profile_member_since">Aelod ers %1$s</string>
     <string name="market_profile_joined">Ymunodd %1$s</string>
@@ -525,7 +525,7 @@
     <string name="market_sale_review_response_failed">Methwyd cyflwyno ymateb</string>
     <string name="market_sale_review_response_label">Eich ymateb</string>
     <string name="market_sale_review_response_submit">Cyflwyno ymateb</string>
-    <string name="market_sale_review_response_submitting">Cyflwyno…</string>
+    <string name="market_sale_review_response_submitting">Yn cyflwyno…</string>
     <string name="market_sale_section_audit">Gweithgaredd</string>
     <string name="market_sale_section_dispute">Anghydfod</string>
     <string name="market_sale_section_fees">Dadansoddiad ffioedd</string>
@@ -588,7 +588,7 @@
     <string name="market_status_pending">Ar y gweill</string>
     <string name="market_status_refunded">Wedi\'i ad-dalu</string>
     <string name="market_status_shipped">Wedi\'i anfon</string>
-    <string name="market_stripe_onboarding_action">Parhau gosod</string>
+    <string name="market_stripe_onboarding_action">Parhewch â\'r gosodiad</string>
     <string name="market_stripe_onboarding_body">Gorffennwch ymgartrefu Stripe cyn i chi allu derbyn taliadau allan.</string>
     <string name="market_stripe_onboarding_check">Gwirio statws</string>
     <string name="market_stripe_onboarding_failed">Methwyd agor Stripe</string>
@@ -658,7 +658,7 @@
     <string name="market_account_seller_card_view">Gweld gosodiadau gwerthwr</string>
     <string name="market_account_vat_label">Rhif TAW / treth</string>
     <string name="market_seller_activate_action">Actifadu cyfrif gwerthwr</string>
-    <string name="market_seller_activating">Yn actifadu...</string>
+    <string name="market_seller_activating">Wrthi\'n actifadu…</string>
     <string name="market_seller_become_heading">Dod yn werthwr</string>
     <string name="market_seller_become_title">Dod yn werthwr</string>
     <string name="market_seller_check_status">Gwirio statws</string>

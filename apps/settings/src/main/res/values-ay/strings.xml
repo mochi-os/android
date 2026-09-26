@@ -12,7 +12,7 @@
     <string name="account_section_passkeys">Passkeyanaka</string>
     <string name="account_passkey_register">Passkey yapxataña</string>
     <string name="account_passkey_delete_title">Passkey chhaqtayaña?</string>
-    <string name="account_section_totp">Autenticador app</string>
+    <string name="account_section_totp">Autenticador aplicación</string>
     <string name="account_totp_setup">Autenticador wakichaña</string>
     <string name="account_totp_setup_title">Autenticador wakichaña</string>
     <string name="account_totp_verify">Verificaña</string>
@@ -99,7 +99,7 @@
     <string name="accounts_status_connected">Chinjata</string>
     <string name="accounts_default_for_ai">Inteligencia artificial qhatxata</string>
     <string name="accounts_test">Yant\'aña</string>
-    <string name="accounts_settings">Configuración</string>
+    <string name="accounts_settings">Wakichawinaka</string>
     <string name="accounts_verify">Verificaña</string>
     <string name="accounts_remove">Aparma</string>
     <string name="accounts_remove_title">¿Cuenta aparma?</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">Nayraqat %1$d · %2$s</string>
     <string name="interests_search_placeholder">Yapxatañ tematakana thakhsuña…</string>
     <string name="interests_empty">Janiraki munañanaksa.</string>
-    <string name="interests_summary_regenerate">Ch\'umt\'awi mä kutillarjama lurañ</string>
+    <string name="interests_summary_regenerate">Tantachawi mayamp generama</string>
     <string name="interests_summary_regenerating">Mä kutillarjam lurasiski…</string>
     <string name="interests_summary_empty">Munt\'añama amtañataki yaqha munañanaka yapxatama.</string>
     <string name="interests_search_failed">Thakhsuñ jan atxiti. Wasitat ukajamta.</string>
@@ -265,7 +265,7 @@
     <string name="settings_home_system_users">Apnaqirinaka (servidor)</string>
     <string name="system_users_add_user">Apnaqiri yapxataña</string>
     <string name="system_users_search_placeholder">Apnaqirinaka thakhsuña…</string>
-    <string name="system_users_sort_by">Mayjt\'ayañ ñataki</string>
+    <string name="system_users_sort_by">Sumaña</string>
     <string name="system_users_last_login">Qhipa mantantaña: %1$s</string>
     <string name="system_users_delete_message">Akax apnaqiri \"%1$s\" wiñayar q\'awintani. Aka lurawi jan kutilkasinkaspati.</string>
     <string name="system_users_sessions_title">%1$s sesiones</string>
@@ -276,7 +276,7 @@
     <string name="account_title">Cuenta</string>
     <string name="account_section_identity">Identidad</string>
     <string name="account_identity_identity">Identidad</string>
-    <string name="account_identity_username">Sutiyaña</string>
+    <string name="account_identity_username">Apnaqiri suti</string>
     <string name="account_identity_name">Suti</string>
     <string name="account_identity_fingerprint">Luk\'ana unancha</string>
     <string name="account_identity_directory_toggle">Yaqha jaqinak directoriona jikxataña iyawsaña</string>

@@ -11,12 +11,12 @@
     <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Sötét elfogások</string>
     <string name="go_captures_white_sr">Világos elfogások</string>
-    <string name="go_chat_title">Chat</string>
+    <string name="go_chat_title">Csevegés</string>
     <string name="go_color_black">Fekete</string>
     <string name="go_color_white">Fehér</string>
     <string name="go_delete_confirm">Törlés</string>
     <string name="go_delete_message">Ez a játszma eltávolításra kerül a listáról. Ez nem vonható vissza.</string>
-    <string name="go_delete_title">Játszma törlése?</string>
+    <string name="go_delete_title">Törli a játékot?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">Elfogadás</string>
     <string name="go_draw_decline">Elutasítás</string>
@@ -64,7 +64,7 @@
     <string name="go_channel_name">Go értesítések</string>
     <string name="go_channel_description">Értesítések lépésekről, kihagyásokról, döntetlen ajánlatokról és játszma-eredményekről.</string>
     <string name="go_open_sidebar">Oldalsáv megnyitása</string>
-    <string name="go_sidebar_active">Aktív játszmák</string>
+    <string name="go_sidebar_active">Aktív játékok</string>
     <string name="go_empty_active">Még nincsenek aktív játszmák.</string>
     <string name="go_status_resigned">Feladva</string>
     <string name="go_new_game_title">Új Go játszma</string>

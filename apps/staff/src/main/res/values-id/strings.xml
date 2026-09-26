@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Staf</string>
-    <string name="launcher_staff">Mochi Staf</string>
+    <string name="launcher_staff">Staf Mochi</string>
     <string name="staff_accounts_action_ban_title">Blokir akun</string>
     <string name="staff_accounts_action_suspend_title">Tangguhkan akun</string>
     <string name="staff_accounts_action_unban_title">Buka blokir</string>
@@ -211,7 +211,7 @@
     <string name="staff_dashboard_kpi_total_orders">Total pesanan</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Tidak</string>
-    <string name="staff_dashboard_open_sidebar">Buka bilah sisi</string>
+    <string name="staff_dashboard_open_sidebar">Buka bilah samping</string>
     <string name="staff_dashboard_order_fallback">Pesanan #%1$s</string>
     <string name="staff_dashboard_system">Sistem</string>
     <string name="staff_dashboard_tab_audit">Audit</string>
@@ -287,7 +287,7 @@
     <string name="staff_filter_label_query">Cari</string>
     <string name="staff_filter_label_seller">Penjual</string>
     <string name="staff_filter_label_status">Status</string>
-    <string name="staff_filter_label_type">Jenis</string>
+    <string name="staff_filter_label_type">Tipe</string>
     <string name="staff_listings_action_approve_title">Setujui daftar</string>
     <string name="staff_listings_action_reject_title">Tolak listing</string>
     <string name="staff_listings_action_remove_title">Hapus listing</string>

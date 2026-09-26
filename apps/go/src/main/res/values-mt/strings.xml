@@ -16,7 +16,7 @@
     <string name="go_color_white">Abjad</string>
     <string name="go_delete_confirm">Ħassar</string>
     <string name="go_delete_message">Din il-logħba se titneħħa mil-lista tiegħek. Dan ma jistax jiġi annullat.</string>
-    <string name="go_delete_title">Tneħħi l-logħba?</string>
+    <string name="go_delete_title">Ħassar il-logħba?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">Aċċetta</string>
     <string name="go_draw_decline">Irrifjuta</string>
@@ -50,8 +50,8 @@
     <string name="go_resign_title">Tirriżenja l-logħba?</string>
     <string name="go_sidebar_completed">Lest</string>
     <string name="go_sidebar_new_game">Logħba ġdida</string>
-    <string name="go_status_draw">Pinġi</string>
-    <string name="go_status_draw_text">Pinġi</string>
+    <string name="go_status_draw">Patta</string>
+    <string name="go_status_draw_text">Patta</string>
     <string name="go_status_game_over">Il-logħba ntemmet</string>
     <string name="go_status_opponent_move">Il-mossa ta\' %1$s</string>
     <string name="go_status_opponent_wins">%1$s jirbaħ</string>

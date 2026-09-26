@@ -44,7 +44,7 @@
     <string name="calendars_device_create">ٺاهيو</string>
     <string name="calendars_device_server">سرور</string>
     <string name="calendars_device_address">پتو</string>
-    <string name="calendars_device_username">صارف جو نالو</string>
+    <string name="calendars_device_username">صارف نالو</string>
     <string name="calendars_device_password">پاسورڊ</string>
     <string name="calendars_device_copy">%1$s ڪاپي ڪريو</string>
     <string name="calendars_device_done">مڪمل</string>
@@ -60,7 +60,7 @@
     <string name="calendars_only_this">رڳو هي</string>
     <string name="calendars_create">ڪئلينڊر ٺاهيو</string>
     <string name="calendars_subscribe">ڪئلينڊر سبسڪرائب ڪريو</string>
-    <string name="calendars_poll">هاڻي تازو ڪريو</string>
+    <string name="calendars_poll">هينئر جانچيو</string>
     <string name="calendars_delete_title">%1$s ختم ڪجي؟</string>
     <string name="calendars_delete_message">ان جا واقعا به ان سان گڏ ختم ٿي ويندا.</string>
     <string name="calendars_today">اڄ</string>
@@ -70,14 +70,14 @@
     <string name="calendars_workweek">ڪم جو هفتو</string>
     <string name="calendars_range">%1$s کان %2$s تائين</string>
     <string name="calendars_truncated">هن حد ۾ ڪجهه واقعا نه ڏيکاريا ويا آهن.</string>
-    <string name="calendars_list_empty">ڪوبه واقعو ناهي</string>
+    <string name="calendars_list_empty">ڪو واقعو نه آهي</string>
     <string name="calendars_event_new">نئون واقعو</string>
     <string name="calendars_event_edit">واقعي ۾ ترميم ڪريو</string>
     <string name="calendars_event_calendar">ڪئلينڊر</string>
     <string name="calendars_event_allday">سڄو ڏينهن</string>
-    <string name="calendars_event_finish">خاتمو</string>
+    <string name="calendars_event_finish">پڄاڻي</string>
     <string name="calendars_event_repeat">ورجاءُ</string>
-    <string name="calendars_event_reminder">يادگيري</string>
+    <string name="calendars_event_reminder">ياددهاني</string>
     <string name="calendars_event_recurring">ورجائي ٿو</string>
     <string name="calendars_event_delete_title">%1$s ختم ڪجي؟</string>
     <string name="calendars_event_delete_message">هي واپس نه ٿي سگهندو.</string>
@@ -89,7 +89,7 @@
     <string name="calendars_repeat_weekly">هفتيوار</string>
     <string name="calendars_repeat_interval">هر</string>
     <string name="calendars_repeat_days">ڏينهن</string>
-    <string name="calendars_repeat_count">ورجاءَ جو تعداد</string>
+    <string name="calendars_repeat_count">واقعن جو تعداد</string>
     <string name="calendars_repeat_forever">هميشه</string>
     <string name="calendars_reminder_time">وقت تي</string>
     <string name="calendars_reminder_minutes">%1$d منٽ اڳ</string>
@@ -100,9 +100,9 @@
     <string name="calendars_hours_invalid">ڪم جا ڪلاڪ شروع ٿيڻ کان پوءِ ختم ٿيڻ گهرجن.</string>
     <string name="calendars_work_days">ڪم جا ڏينهن</string>
     <string name="calendars_multiweek_weeks">ڏيکاريل هفتا</string>
-    <string name="calendars_multiweek_previous">پوئين هفتا</string>
+    <string name="calendars_multiweek_previous">اڳوڻا هفتا</string>
     <string name="calendars_default_duration">واقعي جي ڊفالٽ ڊيگهه</string>
-    <string name="calendars_default_reminder">ڊفالٽ يادگيري</string>
+    <string name="calendars_default_reminder">ڊفالٽ ياددهاني</string>
     <string name="calendars_link_title">ڪئلينڊر جو لنڪ</string>
     <string name="calendars_link_copy">لنڪ ڪاپي ڪريو</string>
     <string name="calendars_link_once">ان کي هاڻي ڪاپي ڪريو: هي وري نه ڏيکاريو ويندو.</string>
@@ -160,7 +160,7 @@
     <string name="calendars_poll_conflict">هڪ واقعو ٻنهي پاسن کان بدلجي ويو</string>
     <string name="calendars_poll_missing">ڪئلينڊر پنهنجي سرور تي نه رهيو</string>
     <string name="calendars_poll_unauthorised">ڪئلينڊر جي سرور اڪائونٽ جا سند رد ڪري ڇڏيا</string>
-    <string name="calendars_subscribe_username">صارف جو نالو</string>
+    <string name="calendars_subscribe_username">صارف نالو</string>
     <string name="calendars_subscribe_password">پاسورڊ</string>
     <string name="calendars_subscribe_connect">ڳنڍيو</string>
     <string name="calendars_subscribe_server">ٻيو Mochi يا CalDAV سرور</string>

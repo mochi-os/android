@@ -6,7 +6,7 @@
     <string name="crm_list_logout">Выйти</string>
     <string name="crm_list_create">Создать CRM</string>
     <string name="crm_create_title">Создать CRM</string>
-    <string name="crm_create_name">Имя</string>
+    <string name="crm_create_name">Название</string>
     <string name="crm_create_description">Описание</string>
     <string name="crm_create_template_none">Нет</string>
     <string name="crm_create_action">Создать</string>
@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Значок</string>
     <string name="crm_option_icon_placeholder">напр. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Отписаться</string>
-    <string name="crm_settings_delete_crm">Удалить проект</string>
+    <string name="crm_settings_delete_crm">Удалить CRM</string>
     <string name="crm_settings_delete_confirm_title">Удалить CRM</string>
     <string name="crm_settings_unsubscribe_title">Отписаться</string>
     <string name="crm_settings_unsubscribe_message">Вы уверены, что хотите отписаться от этой CRM?</string>
@@ -86,8 +86,8 @@
     <string name="crm_classes_add">Добавить класс</string>
     <string name="crm_classes_add_dialog_title">Добавить класс</string>
     <string name="crm_classes_create">Создать</string>
-    <string name="crm_class_name">Имя</string>
-    <string name="crm_class_save_name">Сохранить имя</string>
+    <string name="crm_class_name">Название</string>
+    <string name="crm_class_save_name">Сохранить название</string>
     <string name="crm_class_title_field">Поле заголовка</string>
     <string name="crm_class_fields">Поля</string>
     <string name="crm_class_add_field">Добавить поле</string>
@@ -98,7 +98,7 @@
     <string name="crm_field_type_user">Пользователь</string>
     <string name="crm_field_type_date">Дата</string>
     <string name="crm_field_type_checklist">Чек-лист</string>
-    <string name="crm_field_name">Имя</string>
+    <string name="crm_field_name">Название</string>
     <string name="crm_field_type">Тип</string>
     <string name="crm_field_flags">Флаги</string>
     <string name="crm_field_required">Обязательно</string>
@@ -194,7 +194,7 @@
     <string name="crm_drag_card">Перетащить карточку</string>
     <string name="crm_drag_row">Перетащить строку</string>
     <string name="crm_drag_column">Перетащить столбец</string>
-    <string name="crm_design_more_options">Дополнительные параметры</string>
+    <string name="crm_design_more_options">Больше параметров</string>
     <string name="crm_design_no_templates">Шаблоны недоступны</string>
     <string name="crm_design_use">Использовать</string>
     <string name="crm_design_replace_message">Текущий дизайн будет заменён на %1$s. Все существующие классы, поля, варианты и виды будут удалены. Существующие объекты не будут удалены, но могут перестать отображаться в видах.</string>
@@ -211,7 +211,7 @@
     <string name="crm_field_filterable">Фильтруемое</string>
     <string name="crm_field_show_on_card">Показывать на карточке</string>
     <string name="crm_field_multi">Множественный выбор</string>
-    <string name="crm_field_position">Положение при отображении</string>
+    <string name="crm_field_position">Положение отображения</string>
     <string name="crm_field_position_header">Заголовок</string>
     <string name="crm_field_validation">Проверка</string>
     <string name="crm_field_min_length">Минимальная длина</string>
@@ -275,9 +275,9 @@
     <string name="crm_access_role_none">Нет доступа</string>
     <string name="crm_all_crms">Все CRM</string>
     <string name="crm_settings_unsubscribe_section">Отписаться от CRM</string>
-    <string name="crm_settings_updated">CRM обновлён</string>
+    <string name="crm_settings_updated">CRM обновлена</string>
     <string name="crm_create_import_backup">Импорт из резервной копии (необязательно)</string>
-    <string name="crm_export">Экспорт данных</string>
+    <string name="crm_export">Экспортировать данные</string>
     <string name="crm_exporting">Подготовка экспорта…</string>
     <string name="crm_create_allow_search">Разрешить всем искать CRM</string>
     <string name="crm_no_crms_found">CRM не найдены</string>

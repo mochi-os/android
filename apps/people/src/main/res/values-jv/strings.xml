@@ -100,7 +100,7 @@
     <string name="people_welcome_title">Sugeng rawuh ing Wong</string>
     <string name="people_person_banner_alt">Spanduk kangge %1$s</string>
     <string name="people_person_private">Profil punika privat</string>
-    <string name="people_person_state_invited">Sampun diulemi</string>
+    <string name="people_person_state_invited">Wis diundang</string>
 
     <string name="people_invitations_accept_all">Tampa kabeh</string>
     <string name="people_invitations_decline_all">Tolak kabeh</string>
@@ -117,7 +117,7 @@
     <string name="people_profile_avatar">Avatar</string>
     <string name="people_profile_banner">Spanduk</string>
     <string name="people_contacts_search_placeholder">Goleki…</string>
-    <string name="people_contacts_invited">Sampun diulemi</string>
+    <string name="people_contacts_invited">Wis diundang</string>
     <string name="people_contacts_accept">Trima</string>
     <string name="people_contacts_message">Kirim pesen</string>
     <string name="people_contacts_no_people_found">Ora ana wong ditemokaké</string>
@@ -147,18 +147,18 @@
     <string name="people_contact_phone">Telpon</string>
     <string name="people_contact_title">Jabatan</string>
     <string name="people_contacts_title">Kontak</string>
-    <string name="people_contacts_all">Kabeh kontak</string>
+    <string name="people_contacts_all">Kabèh kontak</string>
     <string name="people_contacts_empty">Ora ana kontak sing ditemokake</string>
     <string name="people_contacts_add_to_start">Tambahake kontak kanggo wiwit sesambungan</string>
     <string name="people_contacts_actions">Tumindak kontak</string>
     <string name="people_contacts_friend">Kanca</string>
-    <string name="people_contacts_invite">Ngundang</string>
+    <string name="people_contacts_invite">Undang</string>
     <string name="people_contacts_unfriend_confirm">%1$s ora bakal dadi kancamu maneh. Kontak tetep ana ing buku alamatmu.</string>
     <string name="people_contacts_delete">Busak kontak</string>
     <string name="people_contacts_delete_confirm">Busak %1$s saka kontakmu?</string>
     <string name="people_contacts_delete_friend_confirm">Busak %1$s saka kontakmu? Kekancanmu uga bakal rampung.</string>
     <string name="people_contact_new_title">Kontak anyar</string>
-    <string name="people_contact_edit_title">Sunting kontak</string>
+    <string name="people_contact_edit_title">Owahi kontak</string>
     <string name="people_contact_given">Jeneng ngarep</string>
     <string name="people_contact_family">Jeneng kulawarga</string>
     <string name="people_contact_nickname">Jeneng paraban</string>

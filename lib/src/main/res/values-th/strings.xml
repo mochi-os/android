@@ -56,7 +56,7 @@
     <string name="notifications_title">การแจ้งเตือน</string>
     <string name="notifications_empty">ไม่มีการแจ้งเตือน</string>
     <string name="notifications_empty_unread">คุณอ่านครบทั้งหมดแล้ว</string>
-    <string name="notifications_tab_unread">ยังไม่อ่าน</string>
+    <string name="notifications_tab_unread">ยังไม่ได้อ่าน</string>
     <string name="notifications_tab_unread_count">ยังไม่อ่าน (%1$d)</string>
     <string name="notifications_tab_all">ทั้งหมด</string>
     <string name="notifications_mark_all_read">ทำเครื่องหมายว่าอ่านแล้วทั้งหมด</string>
@@ -123,7 +123,7 @@
     <string name="game_chat_move_played">%1$s เดิน %2$s</string>
 
     <string name="error_network">ไม่สามารถเชื่อมต่อได้ โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณแล้วลองอีกครั้ง</string>
-    <string name="error_authentication_required">ต้องมีการยืนยันตัวตน</string>
+    <string name="error_authentication_required">ต้องยืนยันตัวตน</string>
     <string name="error_not_found">ไม่พบ</string>
     <string name="error_server">ข้อผิดพลาดของเซิร์ฟเวอร์ (%1$d) โปรดลองอีกครั้งในภายหลัง</string>
     <string name="error_unexpected">เกิดข้อผิดพลาดที่ไม่คาดคิด</string>
@@ -210,7 +210,7 @@
     <string name="about_up_to_date">เป็นเวอร์ชันล่าสุดแล้ว</string>
     <string name="about_check_downloading">เวอร์ชัน %1$s พร้อมใช้งาน กำลังดาวน์โหลด…</string>
     <string name="about_check_network_error">ไม่สามารถเชื่อมต่อเซิร์ฟเวอร์อัปเดตได้</string>
-    <string name="about_check_download_failed">ดาวน์โหลดล้มเหลว</string>
+    <string name="about_check_download_failed">ดาวน์โหลดไม่สำเร็จ</string>
     <string name="notifications_clear_all_title">ล้างการแจ้งเตือนทั้งหมด?</string>
     <string name="notifications_clear_all_message">การดำเนินการนี้จะลบการแจ้งเตือนทั้งหมด และไม่สามารถกู้คืนได้</string>
     <string name="settings_value_auto">อัตโนมัติ</string>
@@ -310,7 +310,7 @@
     <string name="settings_card_flat">แบน</string>
     <string name="settings_card_raised">ยกขึ้น</string>
     <string name="error_server_https">ที่อยู่เซิร์ฟเวอร์ต้องขึ้นต้นด้วย https://</string>
-    <string name="device_name_fallback">อุปกรณ์เคลื่อนที่</string>
+    <string name="device_name_fallback">อุปกรณ์มือถือ</string>
     <string name="account_error_token_type">ไม่รองรับประเภทโทเค็นนี้</string>
     <string name="account_error_caller">ไม่อนุญาตผู้เรียก</string>
 </resources>

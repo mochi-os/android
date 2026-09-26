@@ -34,7 +34,7 @@
     <string name="crm_option_icon">आइकन</string>
     <string name="crm_option_icon_placeholder">उदा. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">सदस्यता हटाउनुहोस्</string>
-    <string name="crm_settings_delete_crm">परियोजना मेटाउनुहोस्</string>
+    <string name="crm_settings_delete_crm">CRM मेटाउनुहोस्</string>
     <string name="crm_settings_delete_confirm_title">CRM मेटाउनुहोस्</string>
     <string name="crm_settings_unsubscribe_title">सदस्यता हटाउनुहोस्</string>
     <string name="crm_settings_unsubscribe_message">के तपाईं यो CRM बाट सदस्यता रद्द गर्न निश्चित हुनुहुन्छ?</string>
@@ -134,10 +134,10 @@
     <string name="crm_class_move_up">माथि सार्नुहोस्</string>
     <string name="crm_views_move_down">तल सार्नुहोस्</string>
     <string name="crm_class_move_down">तल सार्नुहोस्</string>
-    <string name="crm_sort_direction_asc">बढ्दो</string>
-    <string name="crm_views_direction_asc">बढ्दो</string>
-    <string name="crm_sort_direction_desc">घट्दो</string>
-    <string name="crm_views_direction_desc">घट्दो</string>
+    <string name="crm_sort_direction_asc">बढ्दो क्रम</string>
+    <string name="crm_views_direction_asc">बढ्दो क्रम</string>
+    <string name="crm_sort_direction_desc">घट्दो क्रम</string>
+    <string name="crm_views_direction_desc">घट्दो क्रम</string>
     <string name="crm_list_add_to_home">गृह स्क्रिनमा थप्नुहोस्</string>
     <string name="crm_search_objects_placeholder">वस्तुहरू खोज्नुहोस्</string>
     <string name="crm_links_search_placeholder">वस्तुहरू खोज्नुहोस्</string>
@@ -204,7 +204,7 @@
     <string name="crm_class_title_field_default">पूर्वनिर्धारित (पठनीय)</string>
     <string name="crm_class_parents">अभिभावक क्लासहरू</string>
     <string name="crm_class_delete_message">के तपाईं \"%1$s\" क्लास मेटाउन निश्चित हुनुहुन्छ? सबै क्षेत्रहरू र तिनका विकल्पहरू पनि मेटिनेछन्।</string>
-    <string name="crm_field_type_enumerated">इनुमेरेटेड</string>
+    <string name="crm_field_type_enumerated">सूचीबद्ध</string>
     <string name="crm_field_label">क्षेत्र: %1$s</string>
     <string name="crm_field_readonly">पढ्ने मात्र</string>
     <string name="crm_field_sortable">क्रमबद्ध गर्न मिल्ने</string>
@@ -224,7 +224,7 @@
     <string name="crm_views_empty">कुनै दृश्य परिभाषित गरिएको छैन</string>
     <string name="crm_views_empty_subtitle">वस्तुहरूलाई समूहबद्ध गर्न बोर्ड वा सूची दृश्य सिर्जना गर्नुहोस्</string>
     <string name="crm_views_delete_message">के तपाईं \"%1$s\" दृश्य मेटाउन निश्चित हुनुहुन्छ?</string>
-    <string name="crm_views_columns_field">स्तम्भ क्षेत्र</string>
+    <string name="crm_views_columns_field">स्तम्भ फिल्ड</string>
     <string name="crm_views_rows_field">पङ्क्ति क्षेत्र (स्विमलेन)</string>
     <string name="crm_views_border_field">किनारा रङ क्षेत्र</string>
     <string name="crm_views_filter_classes">क्लासहरूमा फिल्टर गर्नुहोस्</string>
@@ -265,7 +265,7 @@
     <string name="crm_access_select_role">भूमिका छान्नुहोस्</string>
     <string name="crm_access_selected">चयन गरिएको: %1$s</string>
     <string name="crm_access_subject_anyone">जोसुकै</string>
-    <string name="crm_access_subject_authenticated">प्रमाणित प्रयोगकर्ता</string>
+    <string name="crm_access_subject_authenticated">प्रमाणित प्रयोगकर्ताहरू</string>
     <string name="crm_access_authenticated_desc">लगइन गरेको जो कोही</string>
     <string name="crm_access_anyone_desc">बेनामी प्रयोगकर्ताहरू सहित</string>
     <string name="crm_access_role_design">डिजाइन गर्नुहोस्, सिर्जना गर्नुहोस्, सम्पादन गर्नुहोस्, टिप्पणी गर्नुहोस् र हेर्नुहोस्</string>

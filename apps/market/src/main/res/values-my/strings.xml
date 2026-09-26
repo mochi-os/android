@@ -13,7 +13,7 @@
     <string name="market_account_seller_step_activate_title">ရောင်းသူအကောင့်ကို စဖွင့်ပါ</string>
     <string name="market_account_seller_step_activate_desc">ပစ္စည်းများ စာရင်းသွင်းရန် သင့်ရောင်းသူ ပရိုဖိုင်ကို ဖန်တီးပါ</string>
     <string name="market_account_seller_step_stripe_desc">ဝယ်သူများထံမှ ငွေပေးချေမှုများ လက်ခံရန် Stripe အကောင့်ကို ချိတ်ဆက်ပါ</string>
-    <string name="market_account_seller_fees_heading">အခကြေးငွေများ:</string>
+    <string name="market_account_seller_fees_heading">အခကြေးငွေများ -</string>
     <string name="market_account_seller_fees_mochi">Mochi သည် ရောင်းချမှုတိုင်း၏ %1$s%% ကို ယူသည်။</string>
     <string name="market_account_seller_fees_stripe">Stripe သည် ငွေပေးချေမှုတစ်ခုစီအတွက် ၎င်း၏ကိုယ်ပိုင် လုပ်ဆောင်မှုခနှင့် ပြန်အမ်းငွေတောင်းခံမှု တစ်ခုစီအတွက် တိကျသောအခကြေးငွေ ကောက်ခံသည်။ သင့်ငွေကြေးနှင့် ဒေသအတွက် လက်ရှိနှုန်းထားများကို သင့် Stripe ဒက်ရှ်ဘုတ် တွင် ဖော်ပြထားသည်။</string>
     <string name="market_account_seller_connect">Stripe ချိတ်ဆက်မည်</string>
@@ -34,19 +34,19 @@
     <string name="market_asset_download">ဒေါင်းလုဒ်</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
     <string name="market_back">နောက်သို့</string>
-    <string name="market_bid_dialog_amount_label">သင်၏ ဈေးပြုခြင်း</string>
+    <string name="market_bid_dialog_amount_label">သင့်လေလံ</string>
     <string name="market_bid_dialog_cancel">မလုပ်တော့ပါ</string>
     <string name="market_bid_dialog_ceiling_help">ဤအမြင့်ဆုံးပမာဏအထိ၊ ရှေ့ဆုံးတွင်ဆက်လက်ရှိနေရန် လိုအပ်သော အနည်းဆုံးပမာဏဖြင့် သင်၏လေလံစျေးကို အလိုအလျောက် တိုးပေးပါမည်။</string>
     <string name="market_bid_dialog_instant_win">ဝယ်ယူမှု အတည်ပြုပြီး — ငွေပေးချေမှု ပြီးအောင် လုပ်ဆောင်ပါ</string>
     <string name="market_bid_dialog_invalid_ceiling">အများဆုံး လေလံသည် သင်၏ လေလံပမာဏအနည်းဆုံး ဖြစ်ရမည်</string>
     <string name="market_bid_dialog_outbid">သင်၏လေလံစျေးကိုပေးခဲ့သော်လည်း ချက်ချင်းကျော်လွန်ခံရသည်။ အခြားလေလံဆွဲသူတွင် ပိုမြင့်သော အမြင့်ဆုံးပမာဏရှိသည်။ သူ၏လေလံစျေးမှာ ယခု %1$s ဖြစ်သည်။</string>
-    <string name="market_bid_dialog_submit">ဈေးပြုပါ</string>
+    <string name="market_bid_dialog_submit">ဈေးပေးခြင်း</string>
     <string name="market_bid_dialog_success">လေလံ တင်ပြီး</string>
-    <string name="market_bid_dialog_title">ဈေးပြုပါ</string>
-    <string name="market_bid_ended">လေလံ ပြီးဆုံးပြီး</string>
+    <string name="market_bid_dialog_title">ဈေးပေးခြင်း</string>
+    <string name="market_bid_ended">လေလံ ပြီးဆုံးပါပြီ</string>
     <string name="market_bid_high">ဈေးအမြင့်ဆုံး</string>
     <string name="market_bids_empty">ဈေးဆွဲမှု မရှိ</string>
-    <string name="market_bids_ended">လေလံ ပြီးဆုံးပြီး</string>
+    <string name="market_bids_ended">လေလံ ပြီးဆုံးပါပြီ</string>
     <string name="market_bids_tab_active">လက်ရှိ</string>
     <string name="market_bids_tab_all">အားလုံး</string>
     <string name="market_bids_tab_lost">ရှုံးပြီး</string>
@@ -137,7 +137,7 @@
     <string name="market_editor_description">ဖော်ပြချက်</string>
     <string name="market_editor_interval_monthly">လစဉ်</string>
     <string name="market_editor_interval_yearly">နှစ်စဉ်</string>
-    <string name="market_editor_photo_delete">ဓာတ်ပုံကို ဖျက်ပါ</string>
+    <string name="market_editor_photo_delete">ဓာတ်ပုံ ဖျက်ပါ</string>
     <string name="market_editor_photo_uploading">Upload လုပ်နေသည်…</string>
     <string name="market_editor_photos_add">ဓာတ်ပုံများ ထည့်ပါ</string>
     <string name="market_editor_price">စျေးနှုန်း</string>
@@ -181,7 +181,7 @@
     <string name="market_editor_zone_european_union">ဥရောပသမဂ္ဂ</string>
     <string name="market_editor_zone_region">ဒေသ</string>
     <string name="market_editor_zone_worldwide">ကမ္ဘာတဝန်း</string>
-    <string name="market_empty_title">ရလဒ်များ မရှိပါ</string>
+    <string name="market_empty_title">ရလဒ် မရှိပါ</string>
     <string name="market_fee_preview_item">ပစ္စည်း</string>
     <string name="market_fee_preview_payout">သင်၏ ပေးချေမှု</string>
     <string name="market_filter_all">အားလုံး</string>
@@ -234,7 +234,7 @@
     <string name="market_listing_detail_save">သိမ်းမည်</string>
     <string name="market_listing_detail_seller_heading">ရောင်းသူ</string>
     <string name="market_listing_detail_share">ကြော်ငြာ မျှဝေ</string>
-    <string name="market_listing_detail_shipping_heading">ပို့ဆောင်ခြင်း</string>
+    <string name="market_listing_detail_shipping_heading">ပို့ဆောင်ရွေးချယ်စရာများ</string>
     <string name="market_listing_detail_subscribe">စာရင်းသွင်းမည်</string>
     <string name="market_listing_detail_tags_heading">တက်ဂ်များ</string>
     <string name="market_listing_detail_title">စာရင်း</string>
@@ -262,7 +262,7 @@
     <string name="market_listings_title">ကျွန်ုပ်၏ စာရင်းများ</string>
     <string name="market_messages_compose_placeholder">စာ ရေးပါ…</string>
     <string name="market_messages_inbox_title">မက်ဆေ့ဂျ်များ</string>
-    <string name="market_messages_send">ပို့ပါ</string>
+    <string name="market_messages_send">ပို့</string>
     <string name="market_messages_thread_listing_chip">စာရင်း</string>
     <string name="market_messages_thread_title">စကားဝိုင်း</string>
     <string name="market_onboarding_activate">အသက်သွင်းမည်</string>
@@ -392,8 +392,8 @@
     <string name="market_saved_title">သိမ်းထားသည်များ</string>
     <string name="market_search_clear">ရှာဖွေမှု ရှင်းမည်</string>
     <string name="market_search_placeholder">ဈေးကွက်တွင် ရှာ</string>
-    <string name="market_section_categories">အမျိုးအစားများ ကြည့်ရှုရန်</string>
-    <string name="market_section_listings">မကြာသေးမီက ကြော်ငြာများ</string>
+    <string name="market_section_categories">အမျိုးအစားများ ရှာဖွေကြည့်မည်</string>
+    <string name="market_section_listings">လတ်တလော စာရင်းများ</string>
     <string name="market_section_recent">လတ်တလော ကြည့်ရှုခဲ့</string>
     <string name="market_ship_dialog_cancel">မလုပ်တော့ပါ</string>
     <string name="market_ship_dialog_submit">အတည်ပြုမည်</string>
@@ -470,7 +470,7 @@
     <string name="market_type_digital">ဒစ်ဂျစ်တယ်</string>
     <string name="market_type_physical">ရုပ်ပိုင်း</string>
     <string name="market_warnings_title">သတိပေးချက်များ</string>
-    <string name="market_sale_review_response_submitting">တင်ပြနေသည်…</string>
+    <string name="market_sale_review_response_submitting">ပို့နေသည်…</string>
     <string name="market_checkout_subscribing">စာရင်းသွင်းနေသည်…</string>
     <string name="market_filter_remove">စစ်ထုတ်မှု ဖယ်ပါ</string>
     <string name="market_listings_action_appeal">ဖျက်ခြင်းကို အယူခံ</string>
@@ -510,7 +510,7 @@
     <string name="market_editor_asset_external_url">ကိုးကား URL</string>
     <string name="market_editor_assets_empty">ပစ္စည်းများ မရှိသေးပါ</string>
     <string name="market_editor_delete_confirm_message">ဤလုပ်ဆောင်ချက်သည် စာရင်းသွင်းမှုကို အပြီးတိုင် ဖျက်ပစ်ပါမည်။</string>
-    <string name="market_editor_delete_confirm_title">စာရင်းသွင်းမှုကို ဖျက်မလား။</string>
+    <string name="market_editor_delete_confirm_title">ပစ္စည်းစာရင်းကို ဖျက်မလား။</string>
     <string name="market_editor_download">တိုက်ရိုက် ဒေါင်းလုဒ်</string>
     <string name="market_editor_duration">လေလံကြာချိန်</string>
     <string name="market_editor_fee_preview_pending">မူကြမ်းသိမ်းနေသည်…</string>
@@ -612,7 +612,7 @@
     <string name="market_sale_dispute_state_responded">ဆုံးဖြတ်ချက်ကို စောင့်နေသည်</string>
     <string name="market_sale_dispute_stripe_reason">Stripe ပြန်အမ်းငွေတောင်းခံမှု အကြောင်းရင်း: %1$s</string>
     <string name="market_sale_fee_gross">စုစုပေါင်း</string>
-    <string name="market_sale_fee_mochi">Mochi ဝန်ဆောင်ခ</string>
+    <string name="market_sale_fee_mochi">Mochi အခကြေးငွေ</string>
     <string name="market_sale_fee_payout">ပေးချေရမည့် အသားတင်</string>
     <string name="market_sale_fee_stripe">Stripe လုပ်ဆောင်ခ</string>
     <string name="market_sale_fee_stripe_note">Stripe လုပ်ဆောင်ခများကို သင်၏ Stripe ဒက်ရှ်ဘုတ်တွင် ပြသထားသည်။</string>
@@ -629,7 +629,7 @@
     <string name="market_saved_empty_subtitle">နောက်မှ ပြန်ဖတ်ရန် ပစ္စည်းစာရင်းတစ်ခုခုရှိ စာမှတ်အိုင်ကွန်ကို တို့ပါ။</string>
     <string name="market_saved_empty_title">သိမ်းဆည်းထားသော ပစ္စည်းစာရင်း မရှိပါ</string>
     <string name="market_status_past_due">သတ်မှတ်ရက် ကျော်လွန်</string>
-    <string name="market_stripe_onboarding_action">ဆက်လက်စတင်ရန်</string>
+    <string name="market_stripe_onboarding_action">စနစ်ထည့်သွင်းမှု ဆက်လုပ်ပါ</string>
     <string name="market_stripe_onboarding_body">ငွေပေးချေမှုများ လက်ခံနိုင်ရန် Stripe စတင်ခြင်းကို အပြီးသတ်ပါ။</string>
     <string name="market_stripe_onboarding_failed">Stripe ကို ဖွင့်၍ မရပါ</string>
     <string name="market_stripe_onboarding_opening">Stripe ကို ဖွင့်နေသည်…</string>
@@ -704,7 +704,7 @@
     <string name="market_editor_stock_unlimited">အကန့်အသတ်မဲ့</string>
     <string name="market_editor_start_time">စတင်ချိန်</string>
     <string name="market_editor_start_time_help">ထုတ်ဝေချိန်တွင် စတင်ရန် ဗလာထားပါ။</string>
-    <string name="market_editor_start_time_next">နောက်တစ်ခု</string>
+    <string name="market_editor_start_time_next">ရှေ့သို့</string>
     <string name="market_editor_start_time_clear">ရှင်းမည်</string>
     <string name="market_listing_detail_buy_now_label">ယခုပင် ဝယ်မည်</string>
     <string name="market_section_recently_viewed">လတ်တလော ကြည့်ရှုခဲ့</string>

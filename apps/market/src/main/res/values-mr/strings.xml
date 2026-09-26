@@ -221,7 +221,7 @@
     <string name="market_listing_detail_buy_now">आत्ताच खरेदी करा</string>
     <string name="market_listing_detail_description_heading">वर्णन</string>
     <string name="market_listing_detail_edit">संपादित करा</string>
-    <string name="market_listing_detail_information_heading">वितरण माहिती</string>
+    <string name="market_listing_detail_information_heading">डिलिव्हरी माहिती</string>
     <string name="market_listing_detail_load_failed">लिस्टिंग लोड करण्यात अयशस्वी</string>
     <string name="market_listing_detail_listed">सूचीबद्ध %1$s</string>
     <string name="market_listing_detail_location_heading">स्थान</string>
@@ -234,7 +234,7 @@
     <string name="market_listing_detail_save">जतन करा</string>
     <string name="market_listing_detail_seller_heading">विक्रेता</string>
     <string name="market_listing_detail_share">जाहिरात शेअर करा</string>
-    <string name="market_listing_detail_shipping_heading">शिपिंग</string>
+    <string name="market_listing_detail_shipping_heading">शिपिंग पर्याय</string>
     <string name="market_listing_detail_subscribe">सबस्क्राइब करा</string>
     <string name="market_listing_detail_tags_heading">टॅग्स</string>
     <string name="market_listing_detail_title">लिस्टिंग</string>
@@ -261,7 +261,7 @@
     <string name="market_listings_relist_failed">पुन्हा लिस्ट करण्यात अयशस्वी</string>
     <string name="market_listings_title">माझ्या लिस्टिंग्स</string>
     <string name="market_messages_compose_placeholder">संदेश लिहा…</string>
-    <string name="market_messages_inbox_title">मेसेजेस</string>
+    <string name="market_messages_inbox_title">संदेश</string>
     <string name="market_messages_send">पाठवा</string>
     <string name="market_messages_thread_listing_chip">लिस्टिंग</string>
     <string name="market_messages_thread_title">संभाषण</string>
@@ -392,8 +392,8 @@
     <string name="market_saved_title">जतन केलेले</string>
     <string name="market_search_clear">शोध साफ करा</string>
     <string name="market_search_placeholder">बाजारात शोधा</string>
-    <string name="market_section_categories">श्रेणी पाहा</string>
-    <string name="market_section_listings">अलीकडील जाहिराती</string>
+    <string name="market_section_categories">श्रेणी ब्राउझ करा</string>
+    <string name="market_section_listings">अलीकडील लिस्टिंग्स</string>
     <string name="market_section_recent">अलीकडे पाहिलेले</string>
     <string name="market_ship_dialog_cancel">रद्द करा</string>
     <string name="market_ship_dialog_submit">पुष्टी करा</string>
@@ -410,7 +410,7 @@
     <string name="market_sidebar_home">मुख्यपृष्ठ</string>
     <string name="market_sidebar_inbox">इनबॉक्स</string>
     <string name="market_sidebar_listings">लिस्टिंग्ज</string>
-    <string name="market_sidebar_messages">मेसेजेस</string>
+    <string name="market_sidebar_messages">संदेश</string>
     <string name="market_sidebar_purchases">खरेदी</string>
     <string name="market_sidebar_reviews">पुनरावलोकने</string>
     <string name="market_sidebar_sales">विक्री</string>
@@ -470,7 +470,7 @@
     <string name="market_type_digital">डिजिटल</string>
     <string name="market_type_physical">भौतिक</string>
     <string name="market_warnings_title">इशारे</string>
-    <string name="market_sale_review_response_submitting">सबमिट करत आहे…</string>
+    <string name="market_sale_review_response_submitting">पाठवत आहे…</string>
     <string name="market_checkout_subscribing">सबस्क्राइब करत आहे…</string>
     <string name="market_filter_remove">फिल्टर काढा</string>
     <string name="market_listings_action_appeal">काढण्याची याचिका</string>
@@ -510,7 +510,7 @@
     <string name="market_editor_asset_external_url">संदर्भ URL</string>
     <string name="market_editor_assets_empty">अद्याप मालमत्ता नाहीत</string>
     <string name="market_editor_delete_confirm_message">यामुळे सूची कायमची हटवली जाईल.</string>
-    <string name="market_editor_delete_confirm_title">सूची हटवायची?</string>
+    <string name="market_editor_delete_confirm_title">लिस्टिंग हटवायचे?</string>
     <string name="market_editor_download">थेट डाउनलोड</string>
     <string name="market_editor_duration">लिलावाचा कालावधी</string>
     <string name="market_editor_fee_preview_pending">मसुदा जतन करत आहे…</string>

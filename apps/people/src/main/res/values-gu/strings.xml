@@ -152,7 +152,7 @@
     <string name="people_contacts_add_to_start">જોડાવા માટે સંપર્કો ઉમેરો</string>
     <string name="people_contacts_actions">સંપર્ક ક્રિયાઓ</string>
     <string name="people_contacts_friend">મિત્ર</string>
-    <string name="people_contacts_invite">આમંત્રણ</string>
+    <string name="people_contacts_invite">આમંત્રણ આપો</string>
     <string name="people_contacts_unfriend_confirm">%1$s હવે તમારા મિત્ર રહેશે નહીં. સંપર્ક તમારી સરનામાં પુસ્તિકામાં રહેશે.</string>
     <string name="people_contacts_delete">સંપર્ક કાઢી નાખો</string>
     <string name="people_contacts_delete_confirm">%1$s ને તમારા સંપર્કોમાંથી કાઢી નાખવા છે?</string>
@@ -161,7 +161,7 @@
     <string name="people_contact_edit_title">સંપર્ક સંપાદિત કરો</string>
     <string name="people_contact_given">પ્રથમ નામ</string>
     <string name="people_contact_family">અટક</string>
-    <string name="people_contact_nickname">ઉપનામ</string>
+    <string name="people_contact_nickname">હુલામણું નામ</string>
     <string name="people_contact_add_email">ઇમેઇલ ઉમેરો</string>
     <string name="people_contact_add_phone">ફોન ઉમેરો</string>
     <string name="people_contact_add_address">સરનામું ઉમેરો</string>
@@ -188,7 +188,7 @@
     <string name="people_person_state_contact">સંપર્કોમાં</string>
     <string name="people_device_create">બનાવો</string>
     <string name="people_device_server">સર્વર</string>
-    <string name="people_device_username">વપરાશકર્તાનામ</string>
+    <string name="people_device_username">વપરાશકર્તા નામ</string>
     <string name="people_device_done">થઈ ગયું</string>
     <string name="people_device_list">ઉપકરણો</string>
     <string name="people_device_used">છેલ્લે ઉપયોગ કર્યો %1$s</string>

@@ -215,7 +215,7 @@
     <string name="wikis_replicas_remove_confirm_title">Да ја отстраниме репликата?</string>
     <string name="wikis_replicas_remove_confirm_action">Отстрани</string>
     <string name="wikis_replicas_remove_failed">Неуспешно отстранување на реплика</string>
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Викија</string>
     <string name="wikis_channel_name">Известувања за Wikis</string>
     <string name="wikis_channel_description">Известувања за уредувања на страници, коментари и покани.</string>
     <string name="wikis_pageview_toc_expand">Прикажи содржина</string>
@@ -223,7 +223,7 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Ажурирано %1$s</string>
     <string name="wikis_pageview_not_found_description">Страницата „%1$s\" сè уште не постои.</string>
-    <string name="wikis_pageview_share_chooser">Врска до викито</string>
+    <string name="wikis_pageview_share_chooser">Врска на викито</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">Врска</string>
     <string name="wikis_open_sidebar">Отвори странична лента</string>

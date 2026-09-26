@@ -2,12 +2,12 @@
 <resources>
 
     <string name="launcher_feeds">Mochi Marandu syrykuéra</string>
-    <string name="launcher_chat">Mochi Ñomongeta</string>
+    <string name="launcher_chat">Mochi Chat</string>
     <string name="launcher_forums">Mochi Forumkuéra</string>
     <string name="launcher_projects">Mochi Proyectokuéra</string>
     <string name="launcher_crm">Mochi CRM</string>
     <string name="launcher_people">Mochi Tapichakuéra</string>
-    <string name="launcher_settings">Mochi Mbojahakuéra</string>
+    <string name="launcher_settings">Mochi Ñemboheko</string>
 
     <string name="launcher_wikis">Mochi Wikikuéra</string>
     <string name="launcher_chess">Mochi Ajedrez</string>

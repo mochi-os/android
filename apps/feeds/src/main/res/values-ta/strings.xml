@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi ஃபீட்</string>
     <string name="feeds_source_type_feed_memories">நினைவுகள்</string>
-    <string name="feeds_remove_source">மூலத்தை அகற்று</string>
+    <string name="feeds_remove_source">மூலத்தை அகற்றவா?</string>
     <string name="feeds_suggested_credibility_accept">ஏற்றுக்கொள்</string>
     <string name="feeds_rss_url_copied">RSS URL கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது</string>
     <string name="feeds_logout">வெளியேறு</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">ஒருபோதும் பெறப்படவில்லை</string>
     <string name="feeds_source_poll">வாக்கெடுப்பு</string>
-    <string name="feeds_source_transform">மாற்றம்</string>
+    <string name="feeds_source_transform">AI மாற்றம்</string>
     <string name="feeds_remove_source_confirm">\"%1$s\" ஐ அகற்றவா?</string>
     <string name="feeds_remove_also_delete_posts">இறக்குமதி செய்யப்பட்ட இடுகைகளையும் நீக்கு</string>
     <string name="feeds_suggested_credibility_title">பரிந்துரைக்கப்பட்ட நம்பகத்தன்மை</string>
@@ -153,7 +153,7 @@
     <string name="feeds_access_segment_other">மற்றவை</string>
     <string name="feeds_access_select_group">குழுவை தேர்ந்தெடு</string>
     <string name="feeds_access_selected">தேர்ந்தெடுக்கப்பட்டவை: %1$s</string>
-    <string name="feeds_access_subject_anyone">யாரும்</string>
+    <string name="feeds_access_subject_anyone">எவரும்</string>
     <string name="feeds_access_subject_authenticated">அங்கீகரிக்கப்பட்ட பயனர்கள்</string>
     <string name="feeds_markdown_supported">Markdown ஆதரிக்கப்படுகிறது</string>
     <string name="feeds_permission_deny">மறு</string>

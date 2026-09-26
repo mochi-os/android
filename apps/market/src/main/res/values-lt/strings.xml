@@ -35,9 +35,9 @@
     <string name="market_bid_dialog_submit">Pateikti pasiūlymą</string>
     <string name="market_bid_dialog_success">Pasiūlymas pateiktas</string>
     <string name="market_bid_dialog_title">Pateikti pasiūlymą</string>
-    <string name="market_bid_ended">Aukcionas pasibaigė</string>
+    <string name="market_bid_ended">Aukcionas baigėsi</string>
     <string name="market_bids_empty">Pasiūlymų nėra</string>
-    <string name="market_bids_ended">Aukcionas pasibaigė</string>
+    <string name="market_bids_ended">Aukcionas baigėsi</string>
     <string name="market_bids_tab_active">Aktyvus</string>
     <string name="market_bids_tab_all">Visi</string>
     <string name="market_bids_tab_lost">Pralaimėta</string>
@@ -64,7 +64,7 @@
     <string name="market_checkout_address_heading">Pristatymo adresas</string>
     <string name="market_checkout_address_line1">Adreso 1 eilutė</string>
     <string name="market_checkout_address_line2">Adreso 2 eilutė</string>
-    <string name="market_checkout_address_name">Pavadinimas</string>
+    <string name="market_checkout_address_name">Vardas</string>
     <string name="market_checkout_address_postcode">Pašto kodas</string>
     <string name="market_checkout_address_region">Regionas</string>
     <string name="market_checkout_back">Atgal</string>
@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Pranešti apie skelbimą</string>
     <string name="market_listing_detail_save">Išsaugoti</string>
     <string name="market_listing_detail_seller_heading">Pardavėjas</string>
-    <string name="market_listing_detail_shipping_heading">Pristatymas</string>
+    <string name="market_listing_detail_shipping_heading">Pristatymo parinktys</string>
     <string name="market_listing_detail_subscribe">Prenumeruoti</string>
     <string name="market_listing_detail_tags_heading">Žymos</string>
     <string name="market_listing_detail_title">Skelbimas</string>
@@ -213,7 +213,7 @@
     <string name="market_listings_filter_status">Būsena</string>
     <string name="market_listings_relist_failed">Nepavyko skelbti iš naujo</string>
     <string name="market_listings_title">Mano skelbimai</string>
-    <string name="market_messages_inbox_title">Pranešimai</string>
+    <string name="market_messages_inbox_title">Žinutės</string>
     <string name="market_messages_thread_listing_chip">Skelbimas</string>
     <string name="market_onboarding_activate">Aktyvinti</string>
     <string name="market_onboarding_activating">Aktyvinama…</string>
@@ -344,7 +344,7 @@
     <string name="market_sidebar_home">Pradžia</string>
     <string name="market_sidebar_inbox">Gautieji</string>
     <string name="market_sidebar_listings">Skelbimai</string>
-    <string name="market_sidebar_messages">Pranešimai</string>
+    <string name="market_sidebar_messages">Žinutės</string>
     <string name="market_sidebar_purchases">Pirkiniai</string>
     <string name="market_sidebar_reviews">Atsiliepimai</string>
     <string name="market_sidebar_sales">Pardavimai</string>
@@ -404,9 +404,9 @@
     <string name="market_type_digital">Skaitmeninis</string>
     <string name="market_type_physical">Fizinis</string>
     <string name="market_messages_send">Siųsti</string>
-    <string name="market_appeal_dialog_submitting">Pateikiama…</string>
-    <string name="market_dispute_dialog_submitting">Pateikiama…</string>
-    <string name="market_sale_review_response_submitting">Pateikiama…</string>
+    <string name="market_appeal_dialog_submitting">Siunčiama…</string>
+    <string name="market_dispute_dialog_submitting">Siunčiama…</string>
+    <string name="market_sale_review_response_submitting">Siunčiama…</string>
     <string name="market_checkout_subscribing">Prenumeruojama…</string>
     <string name="market_filter_remove">Pašalinti filtrą</string>
     <string name="market_listing_detail_sales_count">%1$d pardavimų</string>

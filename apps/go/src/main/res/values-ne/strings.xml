@@ -50,8 +50,8 @@
     <string name="go_resign_title">खेल छोड्ने?</string>
     <string name="go_sidebar_completed">पूरा भयो</string>
     <string name="go_sidebar_new_game">नयाँ खेल</string>
-    <string name="go_status_draw">ड्र</string>
-    <string name="go_status_draw_text">ड्र</string>
+    <string name="go_status_draw">बराबरी</string>
+    <string name="go_status_draw_text">बराबरी</string>
     <string name="go_status_game_over">खेल समाप्त</string>
     <string name="go_status_opponent_move">%1$s को चाल</string>
     <string name="go_status_opponent_wins">%1$s जित्यो</string>

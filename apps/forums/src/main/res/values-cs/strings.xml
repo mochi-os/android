@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Zrušit odběr</string>
     <string name="forums_list_unsubscribe_title">Zrušit odběr</string>
     <string name="forums_create_title">Vytvořit fórum</string>
-    <string name="forums_create_name">Název</string>
+    <string name="forums_create_name">Název fóra</string>
     <string name="forums_create_privacy">Soukromí</string>
     <string name="forums_create_private">Soukromé</string>
     <string name="forums_create_public">Veřejné</string>
-    <string name="forums_create_action">Vytvořit</string>
+    <string name="forums_create_action">Vytvořit fórum</string>
     <string name="forums_find_title">Najít fóra</string>
     <string name="forums_find_recommended">Doporučené</string>
     <string name="forums_find_subscribe">Odebírat</string>
@@ -142,8 +142,8 @@
     <string name="forums_post_quote">Citovat v odpovědi</string>
     <string name="forums_comment_quote">Citovat v odpovědi</string>
     <string name="forums_tag_clear">Vymazat filtr</string>
-    <string name="forums_post_tag_add">Přidat značku</string>
-    <string name="forums_post_tag_remove">Odebrat značku</string>
+    <string name="forums_post_tag_add">Přidat štítek</string>
+    <string name="forums_post_tag_remove">Odebrat štítek</string>
     <string name="forums_access_add">Přidat pravidlo přístupu</string>
     <string name="forums_access_empty">Zatím žádná pravidla — platí výchozí</string>
     <string name="forums_access_target_hint">ID entity, @skupina, * (všichni) nebo + (členové)</string>
@@ -154,7 +154,7 @@
     <string name="forums_banner_placeholder">Vítejte na tomto fóru…</string>
     <string name="forums_ai_mode_label">Režim: %1$s</string>
     <string name="forums_ai_mode_heading">Režim AI</string>
-    <string name="forums_ai_mode_off">Vypnuto</string>
+    <string name="forums_ai_mode_off">Zakázáno</string>
     <string name="forums_ai_account">Účet AI</string>
     <string name="forums_ai_prompt_tag">Prompt pro značkování</string>
     <string name="forums_ai_prompt_score">Prompt pro hodnocení</string>
@@ -225,7 +225,7 @@
     <string name="forums_access_level_view_full">Pouze pro čtení</string>
     <string name="forums_access_level_none_full">Žádný přístup</string>
     <string name="forums_access_subject_anyone">Kdokoli</string>
-    <string name="forums_access_subject_authenticated">Ověření uživatelé</string>
+    <string name="forums_access_subject_authenticated">Přihlášení uživatelé</string>
     <string name="forums_access_tab_other">Ostatní</string>
     <string name="forums_access_authenticated_desc">Kdokoli, kdo je přihlášen</string>
     <string name="forums_access_anyone_desc">Včetně anonymních uživatelů</string>
@@ -278,8 +278,8 @@
     <string name="forums_moderation_restriction_by">Od %1$s</string>
     <string name="forums_moderation_restriction_remove_message">Okamžitě získá zpět plný přístup k fóru.</string>
     <string name="forums_moderation_restriction_remove_title">Odstranit omezení pro %1$s?</string>
-    <string name="forums_moderation_restriction_state_muted">Ztlumen</string>
-    <string name="forums_moderation_restriction_state_shadowban">Stínový ban</string>
+    <string name="forums_moderation_restriction_state_muted">Ztišeno</string>
+    <string name="forums_moderation_restriction_state_shadowban">Skrytě zablokováno</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Žádní uživatelé nebyli ztlumeni ani zablokováni</string>
     <string name="forums_moderation_section_premoderation_description">Vyžadovat schválení, než se obsah zobrazí</string>
     <string name="forums_moderation_section_ratelimiting_description">Zabraňte spamu omezením, jak často mohou uživatelé přispívat</string>

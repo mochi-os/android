@@ -35,13 +35,13 @@
     <string name="market_bid_dialog_submit">Daj ponudu</string>
     <string name="market_bid_dialog_success">Ponuda postavljena</string>
     <string name="market_bid_dialog_title">Daj ponudu</string>
-    <string name="market_bid_ended">Aukcija završena</string>
+    <string name="market_bid_ended">Aukcija je završena</string>
     <string name="market_bids_empty">Nema ponuda</string>
-    <string name="market_bids_ended">Aukcija završena</string>
+    <string name="market_bids_ended">Aukcija je završena</string>
     <string name="market_bids_tab_active">Aktivno</string>
     <string name="market_bids_tab_all">Sve</string>
     <string name="market_bids_tab_lost">Izgubljeno</string>
-    <string name="market_bids_tab_outbid">Nadmašen</string>
+    <string name="market_bids_tab_outbid">Nadlicitiran</string>
     <string name="market_bids_tab_won">Pobijeđeno</string>
     <string name="market_bids_title">Ponude</string>
     <string name="market_channel_name">Tržište</string>
@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Prijavi oglas</string>
     <string name="market_listing_detail_save">Sačuvaj</string>
     <string name="market_listing_detail_seller_heading">Prodavač</string>
-    <string name="market_listing_detail_shipping_heading">Dostava</string>
+    <string name="market_listing_detail_shipping_heading">Opcije dostave</string>
     <string name="market_listing_detail_subscribe">Pretplati se</string>
     <string name="market_listing_detail_tags_heading">Tagovi</string>
     <string name="market_listing_detail_title">Oglas</string>
@@ -704,7 +704,7 @@
     <string name="market_editor_stock_unlimited">Neograničeno</string>
     <string name="market_editor_start_time">Vrijeme početka</string>
     <string name="market_editor_start_time_help">Ostavite prazno da počne na objavi.</string>
-    <string name="market_editor_start_time_next">Dalje</string>
+    <string name="market_editor_start_time_next">Sljedeće</string>
     <string name="market_editor_start_time_clear">Očisti</string>
     <string name="market_listing_detail_buy_now_label">Kupi odmah</string>
     <string name="market_section_recently_viewed">Nedavno pregledano</string>

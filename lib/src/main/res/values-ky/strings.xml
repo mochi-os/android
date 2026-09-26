@@ -25,7 +25,7 @@
     <string name="common_edit">Түзөтүү</string>
     <string name="common_delete">Жок кылуу</string>
     <string name="common_add">Кошуу</string>
-    <string name="common_notifications">Билдирмелер</string>
+    <string name="common_notifications">Эскертмелер</string>
     <string name="common_logout">Чыгуу</string>
     <string name="common_subscribe">Жазылуу</string>
     <string name="common_copy">Көчүрүү</string>
@@ -52,9 +52,9 @@
     <string name="reaction_disagree">Макул эмес</string>
     <string name="push_service_action_hide">Жашыруу</string>
     <string name="about_close">Жабуу</string>
-    <string name="notifications_open">Билдирмелер</string>
-    <string name="notifications_title">Билдирмелер</string>
-    <string name="notifications_empty">Билдирмелер жок</string>
+    <string name="notifications_open">Эскертмелер</string>
+    <string name="notifications_title">Эскертмелер</string>
+    <string name="notifications_empty">Эскертмелер жок</string>
     <string name="notifications_empty_unread">Баары окулду</string>
     <string name="notifications_tab_unread">Окулбаган</string>
     <string name="notifications_tab_unread_count">Окулбаган (%1$d)</string>
@@ -125,7 +125,7 @@
     <string name="game_chat_move_played">%1$s ойноду %2$s</string>
 
     <string name="error_network">Туташуу мүмкүн эмес. Интернет байланышыңызды текшерип, кайра аракет кылыңыз.</string>
-    <string name="error_authentication_required">Аутентификация талап кылынат</string>
+    <string name="error_authentication_required">Аутентификация керек</string>
     <string name="error_not_found">Табылган жок</string>
     <string name="error_server">Сервер катасы (%1$d). Сураныч, кийинчерээк кайра аракет кылыңыз.</string>
     <string name="error_unexpected">Күтүлбөгөн ката кетти</string>
@@ -162,9 +162,9 @@
     <string name="bootstrap_sign_in_differently">Башкача кирүү</string>
     <string name="bootstrap_choose_account">Аккаунт тандаңыз</string>
     <string name="bootstrap_sign_in_different_server">Башка серверге кирүү</string>
-    <string name="common_retry">Кайталоо</string>
-    <string name="common_more_options">Дагы параметрлер</string>
-    <string name="common_collapse">Жыйноо</string>
+    <string name="common_retry">Кайра аракет кылуу</string>
+    <string name="common_more_options">Кошумча параметрлер</string>
+    <string name="common_collapse">Жыйыштыруу</string>
     <string name="common_expand">Жайып көрсөтүү</string>
     <string name="common_play_video">Видеону ойнотуу</string>
     <string name="place_picker_name">Жердин аты</string>
@@ -178,7 +178,7 @@
     <string name="notifications_clear">Эскертмелерди тазалоо</string>
     <string name="entity_avatar_alt">%1$s үчүн аватар</string>
     <string name="media_grid_more_count">+%1$d</string>
-    <string name="format_time_just_now">Жаңы эле</string>
+    <string name="format_time_just_now">Азыр эле</string>
     <string name="format_time_minutes_ago">%1$dм мурун</string>
     <string name="format_time_hours_ago">%1$dс мурун</string>
     <string name="format_time_days_ago">%1$dк мурун</string>

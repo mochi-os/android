@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Raporteeri kuulutus</string>
     <string name="market_listing_detail_save">Salvesta</string>
     <string name="market_listing_detail_seller_heading">Müüja</string>
-    <string name="market_listing_detail_shipping_heading">Tarne</string>
+    <string name="market_listing_detail_shipping_heading">Tarnevõimalused</string>
     <string name="market_listing_detail_subscribe">Telli</string>
     <string name="market_listing_detail_tags_heading">Sildid</string>
     <string name="market_listing_detail_title">Kuulutus</string>
@@ -429,7 +429,7 @@
     <string name="market_appeal_dialog_reason_label">Miks te kaebate?</string>
     <string name="market_appeal_dialog_title">Vaidlusta eemaldamine</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
-    <string name="market_bid_dialog_amount_label">Teie pakkumine</string>
+    <string name="market_bid_dialog_amount_label">Sinu pakkumine</string>
     <string name="market_bid_dialog_current_high">Praegune kõrgeim pakkumine: %1$s</string>
     <string name="market_bid_dialog_failed">Pakkumise tegemine ebaõnnestus</string>
     <string name="market_bid_dialog_invalid_amount">Sisestage praegusest pakkumisest suurem summa</string>
@@ -444,7 +444,7 @@
     <string name="market_carousel_thumbnail">Pisipilt %1$d</string>
     <string name="market_checkout_browser_unavailable">Makselehe avamiseks pole brauserit saadaval</string>
     <string name="market_checkout_pay_button">Maksa Stripe\'iga</string>
-    <string name="market_checkout_processing">Töötlen…</string>
+    <string name="market_checkout_processing">Töötlemine…</string>
     <string name="market_checkout_pwyw_label">Teie hind (vähemalt %1$s)</string>
     <string name="market_checkout_pwyw_min_error">Summa peab olema vähemalt %1$s</string>
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
@@ -544,7 +544,7 @@
     <string name="market_listings_action_share">Jaga</string>
     <string name="market_listings_delete_failed">Kuulutuse kustutamine ebaõnnestus</string>
     <string name="market_listings_delete_message">See eemaldab mustandi sinu kontolt jäädavalt.</string>
-    <string name="market_listings_delete_title">Kustutada kuulutus?</string>
+    <string name="market_listings_delete_title">Kas kustutada kuulutus?</string>
     <string name="market_listings_empty_subtitle">Esimese kuulutuse loomiseks puuduta Uus kuulutus.</string>
     <string name="market_listings_load_failed">Sinu kuulutuste laadimine ebaõnnestus</string>
     <string name="market_listings_new">Uus kuulutus</string>
@@ -628,7 +628,7 @@
     <string name="market_saved_empty_title">Salvestatud kuulutusi pole</string>
     <string name="market_search_placeholder">Otsi turult</string>
     <string name="market_status_past_due">Tähtaeg möödunud</string>
-    <string name="market_stripe_onboarding_action">Jätka seadistust</string>
+    <string name="market_stripe_onboarding_action">Jätka seadistamist</string>
     <string name="market_stripe_onboarding_body">Enne väljamaksete vastuvõtmist lõpetage Stripe\'i seadistamine.</string>
     <string name="market_stripe_onboarding_failed">Stripe\'i ei õnnestunud avada</string>
     <string name="market_stripe_onboarding_opening">Stripe\'i avamine…</string>

@@ -179,7 +179,7 @@
     <string name="market_editor_interval">Төлем аралығы</string>
     <string name="market_editor_interval_monthly">Ай сайын</string>
     <string name="market_editor_interval_yearly">Жыл сайын</string>
-    <string name="market_editor_photo_delete">Фотоны жою</string>
+    <string name="market_editor_photo_delete">Фотосуретті жою</string>
     <string name="market_editor_photo_upload_failed">Фотоны жүктеу мүмкін болмады</string>
     <string name="market_editor_photo_uploading">Жүктеп салынуда…</string>
     <string name="market_editor_photos_add">Фото қосу</string>
@@ -299,7 +299,7 @@
     <string name="market_listing_detail_buy_now">Қазір сатып алу</string>
     <string name="market_listing_detail_description_heading">Сипаттама</string>
     <string name="market_listing_detail_edit">Өңдеу</string>
-    <string name="market_listing_detail_information_heading">Жеткізу туралы ақпарат</string>
+    <string name="market_listing_detail_information_heading">Жеткізу ақпараты</string>
     <string name="market_listing_detail_load_failed">Хабарландыруды жүктеу сәтсіз аяқталды</string>
     <string name="market_listing_detail_loading">Хабарландыру жүктелуде</string>
     <string name="market_listing_detail_listed">Жарияланды %1$s</string>
@@ -319,7 +319,7 @@
     <string name="market_listing_detail_seller_suspended_banner">Бұл сатушы тоқтатылған. Аккаунт қалпына келтірілгенше жаңа тапсырыстар кідіртілген.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">Сатушы аккаунты шектелгенде сатып алу өшірілген.</string>
     <string name="market_listing_detail_share">Хабарландырумен бөлісу</string>
-    <string name="market_listing_detail_shipping_heading">Жеткізу</string>
+    <string name="market_listing_detail_shipping_heading">Жеткізу нұсқалары</string>
     <string name="market_listing_detail_subscribe">Жазылу</string>
     <string name="market_listing_detail_tags_heading">Тегтер</string>
     <string name="market_listing_detail_title">Хабарландыру</string>
@@ -588,7 +588,7 @@
     <string name="market_status_pending">Күтуде</string>
     <string name="market_status_refunded">Қайтарылды</string>
     <string name="market_status_shipped">Жөнелтілді</string>
-    <string name="market_stripe_onboarding_action">Баптауды жалғастыру</string>
+    <string name="market_stripe_onboarding_action">Орнатуды жалғастыру</string>
     <string name="market_stripe_onboarding_body">Төлемдер қабылдамас бұрын Stripe тіркеуін аяқтаңыз.</string>
     <string name="market_stripe_onboarding_check">Күйді тексеру</string>
     <string name="market_stripe_onboarding_failed">Stripe ашу мүмкін болмады</string>

@@ -32,7 +32,7 @@
     <string name="people_group_name">Название группы</string>
     <string name="people_group_description">Описание</string>
     <string name="people_group_description_optional">Необязательное описание</string>
-    <string name="people_group_name_required">Требуется имя</string>
+    <string name="people_group_name_required">Требуется название</string>
     <string name="people_group_actions">Групповые действия</string>
     <string name="people_group_members">Участники</string>
     <string name="people_group_members_count">Количество участников</string>
@@ -161,7 +161,7 @@
     <string name="people_contact_edit_title">Изменить контакт</string>
     <string name="people_contact_given">Имя</string>
     <string name="people_contact_family">Фамилия</string>
-    <string name="people_contact_nickname">Прозвище</string>
+    <string name="people_contact_nickname">Псевдоним</string>
     <string name="people_contact_add_email">Добавить эл. почту</string>
     <string name="people_contact_add_phone">Добавить телефон</string>
     <string name="people_contact_add_address">Добавить адрес</string>

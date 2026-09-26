@@ -64,7 +64,7 @@
     <string name="go_channel_name">إشعارات Go</string>
     <string name="go_channel_description">إشعارات حول النقلات والتمريرات وعروض التعادل ونتائج المباريات.</string>
     <string name="go_open_sidebar">فتح الشريط الجانبي</string>
-    <string name="go_sidebar_active">المباريات النشطة</string>
+    <string name="go_sidebar_active">الألعاب النشطة</string>
     <string name="go_empty_active">لا توجد مباريات نشطة بعد.</string>
     <string name="go_status_resigned">تم الاستسلام</string>
     <string name="go_new_game_title">مباراة Go جديدة</string>

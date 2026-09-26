@@ -162,8 +162,8 @@
     <string name="people_contact_given">Voornaam</string>
     <string name="people_contact_family">Achternaam</string>
     <string name="people_contact_nickname">Bijnaam</string>
-    <string name="people_contact_add_email">E-mail toevoegen</string>
-    <string name="people_contact_add_phone">Telefoon toevoegen</string>
+    <string name="people_contact_add_email">E-mailadres toevoegen</string>
+    <string name="people_contact_add_phone">Telefoonnummer toevoegen</string>
     <string name="people_contact_add_address">Adres toevoegen</string>
     <string name="people_contact_street">Straat</string>
     <string name="people_contact_birthday">Verjaardag</string>

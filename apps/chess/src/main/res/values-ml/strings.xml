@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">സ്വീകരിക്കുക</string>
     <string name="chess_draw_decline">നിരസിക്കുക</string>
     <string name="chess_status_checkmate_you_win">ചെക്ക്മേറ്റ് — നിങ്ങൾ ജയിച്ചു!</string>
-    <string name="chess_status_stalemate">സ്റ്റേൽമേറ്റ് — സമനില</string>
+    <string name="chess_status_stalemate">സ്റ്റെയിൽമേറ്റ് — സമനില</string>
     <string name="chess_status_draw">സമനില</string>
     <string name="chess_status_check_your_move">ചെക്ക് — നിങ്ങളുടെ നീക്കം</string>
     <string name="chess_status_your_move">നിങ്ങളുടെ നീക്കം</string>

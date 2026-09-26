@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Verwijderen</string>
     <string name="wikis_replicas_remove_failed">Replica verwijderen mislukt</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki\'s</string>
     <string name="wikis_channel_name">Wikis-meldingen</string>
     <string name="wikis_channel_description">Meldingen over paginabewerkingen, opmerkingen en uitnodigingen.</string>
     <string name="wikis_pageview_toc_expand">Inhoudsopgave tonen</string>
@@ -246,7 +246,7 @@
     <string name="wikis_insert_dialog_empty">Nog geen bijlagen. Upload een bestand om te beginnen.</string>
     <string name="wikis_delete_page_message">Je staat op het punt de pagina \"%1$s\" (%2$s) te verwijderen. Deze actie kan ongedaan worden gemaakt door te herstellen uit de geschiedenis.</string>
     <string name="wikis_delete_page_success">Pagina verwijderd</string>
-    <string name="wikis_revert_page_title">Pagina herstellen</string>
+    <string name="wikis_revert_page_title">Pagina terugdraaien</string>
     <string name="wikis_revert_page_message">Je staat op het punt %1$s te herstellen naar versie %2$d. Dit creëert een nieuwe revisie met de inhoud van versie %2$d.</string>
     <string name="wikis_revert_page_default_comment">Hersteld naar versie %1$d</string>
     <string name="wikis_revert_page_success">Hersteld naar versie %1$d</string>
@@ -273,7 +273,7 @@
     <string name="wikis_attachments_downloading">Downloaden…</string>
     <string name="wikis_attachments_empty_description">Tik op Uploaden om bestanden aan deze pagina toe te voegen.</string>
     <string name="wikis_settings_name_save_cd">Naam opslaan</string>
-    <string name="wikis_settings_name_cancel_cd">Bewerken annuleren</string>
+    <string name="wikis_settings_name_cancel_cd">Bewerking annuleren</string>
     <string name="wikis_access_level_label">Toestemming</string>
     <string name="wikis_access_set_failed">Toegang bijwerken mislukt</string>
     <string name="wikis_replicas_col_subscribed">Geabonneerd: %1$s</string>

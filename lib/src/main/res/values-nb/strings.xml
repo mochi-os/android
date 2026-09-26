@@ -161,7 +161,7 @@
     <string name="bootstrap_choose_account">Velg en konto</string>
     <string name="bootstrap_sign_in_different_server">Logg inn på en annen tjener</string>
     <string name="common_retry">Prøv igjen</string>
-    <string name="common_more_options">Flere valg</string>
+    <string name="common_more_options">Flere alternativer</string>
     <string name="common_collapse">Skjul</string>
     <string name="common_expand">Utvid</string>
     <string name="common_play_video">Spill av video</string>
@@ -173,7 +173,7 @@
     <string name="access_add_rule_title">Legg til tilgangsregel</string>
     <string name="access_level_manage">Administrer</string>
     <string name="access_level_react">Reager</string>
-    <string name="notifications_clear">Tøm varsler</string>
+    <string name="notifications_clear">Fjern varsler</string>
     <string name="entity_avatar_alt">Avatar for %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="lightbox_position">%1$d / %2$d</string>
@@ -210,7 +210,7 @@
     <string name="about_up_to_date">Oppdatert</string>
     <string name="about_check_downloading">Versjon %1$s er tilgjengelig, laster ned…</string>
     <string name="about_check_network_error">Kunne ikke nå oppdateringsserveren</string>
-    <string name="about_check_download_failed">Nedlasting mislyktes</string>
+    <string name="about_check_download_failed">Nedlastingen mislyktes</string>
     <string name="notifications_clear_all_title">Fjern alle varsler?</string>
     <string name="notifications_clear_all_message">Dette fjerner alle varsler. De kan ikke gjenopprettes.</string>
     <string name="settings_value_auto">Automatisk</string>
@@ -310,7 +310,7 @@
     <string name="settings_card_flat">Flat</string>
     <string name="settings_card_raised">Hevet</string>
     <string name="error_server_https">Serveradressen må begynne med https://</string>
-    <string name="device_name_fallback">Mobilenhet</string>
+    <string name="device_name_fallback">Mobil enhet</string>
     <string name="account_error_token_type">Tokentypen støttes ikke</string>
     <string name="account_error_caller">Kalleren har ikke tillatelse</string>
 </resources>

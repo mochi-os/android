@@ -25,7 +25,7 @@
     <string name="common_edit">ویرایش</string>
     <string name="common_delete">حذف</string>
     <string name="common_add">افزودن</string>
-    <string name="common_notifications">اعلان‌ها</string>
+    <string name="common_notifications">اطلاعیه‌ها</string>
     <string name="common_logout">خروج</string>
     <string name="common_subscribe">اشتراک</string>
     <string name="common_copy">کپی</string>
@@ -52,8 +52,8 @@
     <string name="reaction_disagree">مخالفم</string>
     <string name="push_service_action_hide">پنهان کردن</string>
     <string name="about_close">بستن</string>
-    <string name="notifications_open">اعلان‌ها</string>
-    <string name="notifications_title">اعلان‌ها</string>
+    <string name="notifications_open">اطلاعیه‌ها</string>
+    <string name="notifications_title">اطلاعیه‌ها</string>
     <string name="notifications_empty">اعلانی وجود ندارد</string>
     <string name="notifications_empty_unread">همه‌چیز را دیده‌اید</string>
     <string name="notifications_tab_unread">خوانده‌نشده</string>
@@ -121,7 +121,7 @@
     <string name="auth_server_url">آدرس سرور</string>
     <string name="auth_create_identity_title">هویت خود را ایجاد کنید</string>
     <string name="auth_link_rules">قوانین</string>
-    <string name="common_retry">تلاش مجدد</string>
+    <string name="common_retry">تلاش دوباره</string>
     <string name="access_add_rule_title">افزودن قاعده دسترسی</string>
     <string name="access_level_manage">مدیریت</string>
     <string name="notifications_clear">پاک کردن اعلان‌ها</string>
@@ -146,7 +146,7 @@
     <string name="auth_login_title">ورود به Mochi</string>
     <string name="auth_next">بعدی</string>
     <string name="auth_or_log_in_with">یا ورود با</string>
-    <string name="auth_passkey">کلید عبور</string>
+    <string name="auth_passkey">پسکی</string>
     <string name="auth_use_passkey">استفاده از کلید عبور</string>
     <string name="auth_email_me_a_code">یک کد برایم ایمیل کن</string>
     <string name="auth_or_enter_authenticator_code">یا کد احرازکننده هویت را وارد کنید</string>
@@ -167,7 +167,7 @@
     <string name="bootstrap_sign_in_different_server">ورود به سرور دیگر</string>
     <string name="common_more_options">گزینه‌های بیشتر</string>
     <string name="common_collapse">جمع کردن</string>
-    <string name="common_expand">گسترش دادن</string>
+    <string name="common_expand">گسترش</string>
     <string name="common_play_video">پخش ویدیو</string>
     <string name="place_picker_name">نام مکان</string>
     <string name="place_origin">مبدأ</string>
@@ -178,7 +178,7 @@
     <string name="entity_avatar_alt">آواتار برای %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="lightbox_position">%1$d / %2$d</string>
-    <string name="format_time_just_now">هم‌اکنون</string>
+    <string name="format_time_just_now">همین حالا</string>
     <string name="format_time_minutes_ago">%1$d دقیقه پیش</string>
     <string name="format_time_hours_ago">%1$d ساعت پیش</string>
     <string name="format_time_days_ago">%1$d روز پیش</string>
@@ -263,7 +263,7 @@
     <string name="person_picker_none">هیچ‌کدام</string>
     <string name="person_picker_clear">پاک کردن انتخاب</string>
     <string name="person_picker_select">انتخاب کنید …</string>
-    <string name="person_picker_directory">دفترچه</string>
+    <string name="person_picker_directory">فهرست</string>
     <string name="person_picker_no_people">کسی نیست</string>
     <string name="person_picker_project_members">اعضای پروژه</string>
     <string name="account_token_label">نشست Mochi</string>

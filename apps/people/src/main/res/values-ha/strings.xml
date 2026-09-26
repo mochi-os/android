@@ -100,7 +100,7 @@
     <string name="people_welcome_title">Barka da zuwa Mutane</string>
     <string name="people_person_banner_alt">Tutar %1$s</string>
     <string name="people_person_private">Wannan martabar tana sirri ce</string>
-    <string name="people_person_state_invited">An gayyace shi</string>
+    <string name="people_person_state_invited">An gayyata</string>
 
     <string name="people_invitations_accept_all">Karɓi duka</string>
     <string name="people_invitations_decline_all">Ƙi duka</string>
@@ -117,7 +117,7 @@
     <string name="people_profile_avatar">Hoton bayanin martaba</string>
     <string name="people_profile_banner">Tuta</string>
     <string name="people_contacts_search_placeholder">Bincika…</string>
-    <string name="people_contacts_invited">An gayyace shi</string>
+    <string name="people_contacts_invited">An gayyata</string>
     <string name="people_contacts_accept">Yarda</string>
     <string name="people_contacts_message">Aika saƙo</string>
     <string name="people_contacts_no_people_found">Babu mutane da aka samu</string>
@@ -125,7 +125,7 @@
     <string name="people_contact_section_address">Adireshi</string>
     <string name="people_contact_section_detail">Cikakkun bayanai</string>
     <string name="people_contact_name">Suna</string>
-    <string name="people_contact_email">Email</string>
+    <string name="people_contact_email">Imel</string>
     <string name="people_contact_city">Birni</string>
     <string name="people_contact_region">Yanki</string>
     <string name="people_contact_postcode">Lambar gidan waya</string>
@@ -146,19 +146,19 @@
     <string name="people_add_contact_search_start">Fara rubutu don neman masu amfani</string>
     <string name="people_contact_phone">Waya</string>
     <string name="people_contact_title">Take aiki</string>
-    <string name="people_contacts_title">Tuntuɓai</string>
-    <string name="people_contacts_all">Duk lambobin sadarwa</string>
+    <string name="people_contacts_title">Lambobin sadarwa</string>
+    <string name="people_contacts_all">Dukkan lambobin sadarwa</string>
     <string name="people_contacts_empty">Ba a sami wata lamba ba</string>
     <string name="people_contacts_add_to_start">Ƙara lambobin sadarwa don fara haɗuwa</string>
     <string name="people_contacts_actions">Ayyukan lamba</string>
     <string name="people_contacts_friend">Aboki</string>
     <string name="people_contacts_invite">Gayyata</string>
     <string name="people_contacts_unfriend_confirm">%1$s ba zai ƙara zama abokinka ba. Lambar za ta kasance a littafin adireshinka.</string>
-    <string name="people_contacts_delete">Share lamba</string>
+    <string name="people_contacts_delete">Goge lambar sadarwa</string>
     <string name="people_contacts_delete_confirm">A share %1$s daga lambobin sadarwarka?</string>
     <string name="people_contacts_delete_friend_confirm">A share %1$s daga lambobin sadarwarka? Abotarku ma za ta ƙare.</string>
-    <string name="people_contact_new_title">Sabuwar lamba</string>
-    <string name="people_contact_edit_title">Gyara lamba</string>
+    <string name="people_contact_new_title">Sabuwar lambar sadarwa</string>
+    <string name="people_contact_edit_title">Gyara lambar sadarwa</string>
     <string name="people_contact_given">Sunan farko</string>
     <string name="people_contact_family">Sunan iyali</string>
     <string name="people_contact_nickname">Laƙabi</string>
@@ -169,13 +169,13 @@
     <string name="people_contact_birthday">Ranar haihuwa</string>
     <string name="people_contact_organisation">Ƙungiya</string>
     <string name="people_contact_url">Gidan yanar gizo</string>
-    <string name="people_contact_note">Bayani</string>
+    <string name="people_contact_note">Bayanin kula</string>
     <string name="people_contact_book">Littafin adireshi</string>
     <string name="people_contact_type_work">Aiki</string>
     <string name="people_contact_type_mobile">Wayar hannu</string>
     <string name="people_contact_pick_date">Zaɓi kwanan wata</string>
     <string name="people_contact_conflict">Lambar ta canza</string>
-    <string name="people_add_contact_title">Ƙara lamba</string>
+    <string name="people_add_contact_title">Ƙara lambar sadarwa</string>
     <string name="people_add_contact_add">Ƙara cikin lambobin sadarwa</string>
     <string name="people_add_contact_in_contacts">Cikin lambobin sadarwa</string>
     <string name="people_books_create">Ƙirƙiri littafin adireshi</string>
@@ -187,7 +187,7 @@
     <string name="people_welcome_body">Nemo abokai a duk faɗin Mochi ka haɗu da su. Danna Ƙara lamba don aika gayyata.</string>
     <string name="people_person_state_contact">Cikin lambobin sadarwa</string>
     <string name="people_device_create">Ƙirƙira</string>
-    <string name="people_device_server">Server</string>
+    <string name="people_device_server">Sabar</string>
     <string name="people_device_username">Sunan mai amfani</string>
     <string name="people_device_done">An gama</string>
     <string name="people_device_list">Na\'urori</string>

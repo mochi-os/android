@@ -30,7 +30,7 @@
     <string name="calendars_day_friday">Vandredi</string>
     <string name="calendars_day_saturday">Samdi</string>
     <string name="calendars_link_replace">Ranplase</string>
-    <string name="calendars_link_revoke">Retire</string>
+    <string name="calendars_link_revoke">Anile</string>
     <string name="calendars_permission_allow">Pèmèt</string>
     <string name="calendars_permission_deny">Refize</string>
     <string name="calendars_sync_title">Senkronize ak telefòn sa a</string>
@@ -154,7 +154,7 @@
     <string name="calendars_link_submit">Konekte</string>
     <string name="calendars_link_sync">Sinkronize kounye a</string>
     <string name="calendars_link_grant">Pèmèt aksè kalandriye</string>
-    <string name="calendars_link_linked">Konekte</string>
+    <string name="calendars_link_linked">Lye</string>
     <string name="calendars_link_marker">Kalandriye konekte</string>
     <string name="calendars_link_remote_empty">Pa gen kalandriye</string>
     <string name="calendars_poll_conflict">Yon evènman chanje toude bò yo</string>

@@ -191,7 +191,7 @@
     <string name="projects_views_filter">Szűrő (mentve, még nincs alkalmazva)</string>
     <string name="projects_people_empty">Még senkinek sincs hozzáférése</string>
     <string name="projects_settings_delete_confirm_message">Biztosan törli ezt a projektet? Minden objektum, hozzászólás és beállítás véglegesen eltávolításra kerül.</string>
-    <string name="projects_object_unwatch">Figyelés leállítása</string>
+    <string name="projects_object_unwatch">Figyelés megszüntetése</string>
     <string name="projects_object_tab_watchers">Figyelők</string>
     <string name="projects_watchers_empty">Még nincsenek figyelők</string>
     <string name="projects_object_delete_title">Objektum törlése</string>
@@ -199,7 +199,7 @@
     <string name="projects_parent_none">Nincs szülő</string>
     <string name="projects_links_empty">Nincsenek hivatkozások</string>
     <string name="projects_links_section_relates">Kapcsolódik</string>
-    <string name="projects_links_section_duplicated_by">Duplikálva</string>
+    <string name="projects_links_section_duplicated_by">Duplikálja</string>
     <string name="projects_links_type">Hivatkozás típusa</string>
     <string name="projects_links_type_relates">Kapcsolódik</string>
     <string name="projects_links_remove">Hivatkozás eltávolítása</string>
@@ -261,7 +261,7 @@
     <string name="projects_drag_row">Sor húzása</string>
     <string name="projects_drag_column">Oszlop húzása</string>
     <string name="projects_drag_hint">Áthelyezéshez tartsa lenyomva és húzza</string>
-    <string name="projects_design_more_options">További beállítások</string>
+    <string name="projects_design_more_options">További lehetőségek</string>
     <string name="projects_design_clipboard_label">Terv JSON</string>
     <string name="projects_design_export_subject">Projektterv</string>
     <string name="projects_design_share_chooser">Terv megosztása</string>
@@ -286,7 +286,7 @@
     <string name="projects_field_sortable">Rendezhető</string>
     <string name="projects_field_filterable">Szűrhető</string>
     <string name="projects_field_show_on_card">Megjelenítés a kártyán</string>
-    <string name="projects_field_multi">Többválasztós</string>
+    <string name="projects_field_multi">Többszörös választás</string>
     <string name="projects_field_position">Megjelenítési pozíció</string>
     <string name="projects_field_position_header">Fejléc</string>
     <string name="projects_field_validation">Érvényesítés</string>
@@ -314,7 +314,7 @@
     <string name="projects_design_preview_empty">Nincs megjeleníthető tartalom</string>
 
     <string name="projects_create_choose_template">Válassz egy sablont</string>
-    <string name="projects_create_next">Tovább</string>
+    <string name="projects_create_next">Következő</string>
     <string name="projects_filter">Szűrő</string>
     <string name="projects_link">Hivatkozás</string>
     <string name="projects_filter_clear_all">Összes törlése</string>
@@ -330,7 +330,7 @@
     <string name="projects_settings_field_fingerprint">Ujjlenyomat</string>
     <string name="projects_settings_field_server">Kiszolgáló</string>
     <string name="projects_access_subject_anyone">Bárki</string>
-    <string name="projects_access_subject_authenticated">Hitelesített felhasználók</string>
+    <string name="projects_access_subject_authenticated">Bejelentkezett felhasználók</string>
     <string name="projects_access_select_role">Szerep kiválasztása</string>
     <string name="projects_access_role_view">Csak megtekintés</string>
     <string name="projects_access_role_none">Nincs hozzáférés</string>

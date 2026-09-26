@@ -9,7 +9,7 @@
     <string name="calendars_rename">Preimenuj</string>
     <string name="calendars_delete">Obriši</string>
     <string name="calendars_previous">Prethodno</string>
-    <string name="calendars_next">Dalje</string>
+    <string name="calendars_next">Sljedeće</string>
     <string name="calendars_view">Pogled</string>
     <string name="calendars_view_list">Popis</string>
     <string name="calendars_list_search">Pretraži</string>
@@ -157,7 +157,7 @@
     <string name="calendars_link_submit">Poveži</string>
     <string name="calendars_link_sync">Sinkroniziraj sada</string>
     <string name="calendars_link_grant">Dopusti pristup kalendaru</string>
-    <string name="calendars_link_linked">Povezano</string>
+    <string name="calendars_link_linked">Povezan</string>
     <string name="calendars_link_marker">Povezani kalendar</string>
     <string name="calendars_link_remote_empty">Nema kalendara</string>
     <string name="calendars_poll_conflict">Događaj je promijenjen s obje strane</string>
@@ -165,7 +165,7 @@
     <string name="calendars_poll_unauthorised">Poslužitelj kalendara odbio je vjerodajnice računa</string>
     <string name="calendars_subscribe_username">Korisničko ime</string>
     <string name="calendars_subscribe_password">Lozinka</string>
-    <string name="calendars_subscribe_connect">Poveži se</string>
+    <string name="calendars_subscribe_connect">Poveži</string>
     <string name="calendars_subscribe_server">Drugi Mochi ili CalDAV poslužitelj</string>
     <string name="calendars_subscribe_address">Objavljena adresa kalendara (samo za čitanje)</string>
     <string name="calendars_subscribe_password_apple">Lozinka za aplikaciju</string>

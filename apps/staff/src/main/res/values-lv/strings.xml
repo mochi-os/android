@@ -30,7 +30,7 @@
     <string name="staff_accounts_status_active">Aktīvs</string>
     <string name="staff_accounts_status_banned">Bloķēts</string>
     <string name="staff_accounts_status_suspended">Apturēts</string>
-    <string name="staff_accounts_submitting">Sūta…</string>
+    <string name="staff_accounts_submitting">Iesniedz…</string>
     <string name="staff_accounts_suspend">Apturēt</string>
     <string name="staff_accounts_suspended_toast">Konts apturēts</string>
     <string name="staff_accounts_unban">Atbloķēt</string>
@@ -53,7 +53,7 @@
     <string name="staff_appeals_notes_label">Piezīmes</string>
     <string name="staff_appeals_reason_label">Pārdevēja apelācijas iemesls</string>
     <string name="staff_appeals_submit">Iesniegt</string>
-    <string name="staff_appeals_submitting">Sūta…</string>
+    <string name="staff_appeals_submitting">Iesniedz…</string>
     <string name="staff_appeals_upheld_toast">Apelācija atbalstīta</string>
     <string name="staff_audit_action_account_banned">Bloķēts</string>
     <string name="staff_audit_action_account_seller_activated">Pārdevējs aktivizēts</string>
@@ -170,7 +170,7 @@
     <string name="staff_config_field_stripe_oauth_client">OAuth klienta ID</string>
     <string name="staff_config_field_stripe_publishable">Publicējamā atslēga</string>
     <string name="staff_config_field_stripe_secret">Slepenā atslēga</string>
-    <string name="staff_config_group_moderation">Moderācija</string>
+    <string name="staff_config_group_moderation">Moderēšana</string>
     <string name="staff_config_group_payments">Maksājumi</string>
     <string name="staff_config_group_reviews">Atsauksmes</string>
     <string name="staff_config_group_stripe">Stripe</string>
@@ -187,7 +187,7 @@
     <string name="staff_dashboard_col_date">Datums</string>
     <string name="staff_dashboard_col_detail">Detaļa</string>
     <string name="staff_dashboard_col_listing">Sludinājums</string>
-    <string name="staff_dashboard_col_moderation">Moderācija</string>
+    <string name="staff_dashboard_col_moderation">Moderēšana</string>
     <string name="staff_dashboard_col_name">Nosaukums</string>
     <string name="staff_dashboard_col_object">Objekts</string>
     <string name="staff_dashboard_col_reason">Iemesls</string>
@@ -211,12 +211,12 @@
     <string name="staff_dashboard_kpi_total_orders">Pasūtījumi kopā</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Nē</string>
-    <string name="staff_dashboard_open_sidebar">Atvērt sānjoslu</string>
+    <string name="staff_dashboard_open_sidebar">Atvērt sānu joslu</string>
     <string name="staff_dashboard_order_fallback">Pasūtījums Nr. %1$s</string>
     <string name="staff_dashboard_system">Sistēma</string>
     <string name="staff_dashboard_tab_audit">Audits</string>
     <string name="staff_dashboard_tab_listings">Sludinājumi</string>
-    <string name="staff_dashboard_tab_moderation">Moderācija</string>
+    <string name="staff_dashboard_tab_moderation">Moderēšana</string>
     <string name="staff_dashboard_tab_orders">Pasūtījumi</string>
     <string name="staff_dashboard_tab_signups">Reģistrācijas</string>
     <string name="staff_dashboard_yes">Jā</string>
@@ -284,10 +284,10 @@
     <string name="staff_filter_chip_remove">Noņemt filtru</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderēšana</string>
-    <string name="staff_filter_label_query">Meklēšana</string>
+    <string name="staff_filter_label_query">Meklēt</string>
     <string name="staff_filter_label_seller">Pārdevējs</string>
     <string name="staff_filter_label_status">Statuss</string>
-    <string name="staff_filter_label_type">Veids</string>
+    <string name="staff_filter_label_type">Tips</string>
     <string name="staff_listings_action_approve_title">Apstiprināt sludinājumu</string>
     <string name="staff_listings_action_reject_title">Noraidīt sludinājumu</string>
     <string name="staff_listings_action_remove_title">Noņemt sludinājumu</string>
@@ -297,7 +297,7 @@
     <string name="staff_listings_approved_toast">Sludinājums apstiprināts</string>
     <string name="staff_listings_cancel">Atcelt</string>
     <string name="staff_listings_empty">Nav sludinājumu</string>
-    <string name="staff_listings_filter_moderation_label">Moderācija</string>
+    <string name="staff_listings_filter_moderation_label">Moderēšana</string>
     <string name="staff_listings_filter_status_label">Statuss</string>
     <string name="staff_listings_moderation_auto_approved">Automātiski apstiprināts</string>
     <string name="staff_listings_moderation_hold">Aizturēt</string>
@@ -321,7 +321,7 @@
     <string name="staff_listings_status_rejected">Noraidīts</string>
     <string name="staff_listings_status_removed">Noņemts</string>
     <string name="staff_listings_status_sold">Pārdots</string>
-    <string name="staff_listings_submitting">Sūta…</string>
+    <string name="staff_listings_submitting">Iesniedz…</string>
     <string name="staff_moderation_empty">Nav moderācijas ierakstu</string>
     <string name="staff_moderation_filter_clear">Notīrīt filtru</string>
     <string name="staff_moderation_listing_filter_placeholder">Sludinājuma ID</string>
@@ -365,7 +365,7 @@
     <string name="staff_reports_status_pending">Gaida</string>
     <string name="staff_reports_status_reviewed">Pārskatīts</string>
     <string name="staff_reports_submit">Iesniegt</string>
-    <string name="staff_reports_submitting">Sūta…</string>
+    <string name="staff_reports_submitting">Iesniedz…</string>
     <string name="staff_reports_type_listing">Sludinājums</string>
     <string name="staff_reports_type_user">Lietotājs</string>
     <string name="staff_reports_view">Skatīt</string>

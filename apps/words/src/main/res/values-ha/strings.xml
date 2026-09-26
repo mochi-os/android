@@ -2,7 +2,7 @@
 <resources>
 
     <string name="words_list_title">Kalmomi</string>
-    <string name="words_list_menu">Menu</string>
+    <string name="words_list_menu">Jeri</string>
     <string name="words_list_logout">Fita</string>
     <string name="words_sidebar_completed">An kammala</string>
     <string name="words_sidebar_new_game">Sabon wasa</string>
@@ -26,7 +26,7 @@
     <string name="words_detail_action_resign">Yi murabus</string>
     <string name="words_detail_action_rematch">Sake wasa</string>
     <string name="words_detail_action_delete">Goge wasa</string>
-    <string name="words_detail_chat_title">Chat</string>
+    <string name="words_detail_chat_title">Tattaunawa</string>
     <string name="words_detail_recall">Tuna</string>
     <string name="words_detail_submit">Aikawa</string>
     <string name="words_detail_cancel">Soke</string>

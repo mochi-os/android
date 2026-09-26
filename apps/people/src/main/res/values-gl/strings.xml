@@ -100,7 +100,7 @@
     <string name="people_welcome_title">Benvido a Persoas</string>
     <string name="people_person_banner_alt">Cabeceira de %1$s</string>
     <string name="people_person_private">Este perfil é privado</string>
-    <string name="people_person_state_invited">Invitado</string>
+    <string name="people_person_state_invited">Convidado</string>
 
     <string name="people_invitations_accept_all">Aceptar todo</string>
     <string name="people_invitations_decline_all">Rexeitar todo</string>
@@ -117,7 +117,7 @@
     <string name="people_profile_avatar">Avatar</string>
     <string name="people_profile_banner">Báner</string>
     <string name="people_contacts_search_placeholder">Buscar…</string>
-    <string name="people_contacts_invited">Invitado</string>
+    <string name="people_contacts_invited">Convidado</string>
     <string name="people_contacts_accept">Aceptar</string>
     <string name="people_contacts_message">Enviar mensaxe</string>
     <string name="people_contacts_no_people_found">Non se atoparon persoas</string>
@@ -154,15 +154,15 @@
     <string name="people_contacts_friend">Amigo</string>
     <string name="people_contacts_invite">Convidar</string>
     <string name="people_contacts_unfriend_confirm">%1$s deixará de ser o teu amigo. O contacto permanece na túa axenda de enderezos.</string>
-    <string name="people_contacts_delete">Eliminar contacto</string>
+    <string name="people_contacts_delete">Eliminar o contacto</string>
     <string name="people_contacts_delete_confirm">Queres eliminar a %1$s dos teus contactos?</string>
     <string name="people_contacts_delete_friend_confirm">Queres eliminar a %1$s dos teus contactos? A vosa amizade tamén remata.</string>
     <string name="people_contact_new_title">Novo contacto</string>
-    <string name="people_contact_edit_title">Editar contacto</string>
+    <string name="people_contact_edit_title">Editar o contacto</string>
     <string name="people_contact_given">Nome</string>
     <string name="people_contact_family">Apelidos</string>
     <string name="people_contact_nickname">Alcume</string>
-    <string name="people_contact_add_email">Engadir correo</string>
+    <string name="people_contact_add_email">Engadir correo electrónico</string>
     <string name="people_contact_add_phone">Engadir teléfono</string>
     <string name="people_contact_add_address">Engadir enderezo</string>
     <string name="people_contact_street">Rúa</string>
@@ -170,7 +170,7 @@
     <string name="people_contact_organisation">Organización</string>
     <string name="people_contact_url">Sitio web</string>
     <string name="people_contact_note">Nota</string>
-    <string name="people_contact_book">Axenda de enderezos</string>
+    <string name="people_contact_book">Caderno de enderezos</string>
     <string name="people_contact_type_work">Traballo</string>
     <string name="people_contact_type_mobile">Móbil</string>
     <string name="people_contact_pick_date">Escolle unha data</string>

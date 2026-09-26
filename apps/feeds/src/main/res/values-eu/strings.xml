@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi jarioa</string>
     <string name="feeds_source_type_feed_memories">Oroitzapenak</string>
-    <string name="feeds_remove_source">Kendu iturria</string>
+    <string name="feeds_remove_source">Iturria kendu?</string>
     <string name="feeds_suggested_credibility_accept">Onartu</string>
     <string name="feeds_rss_url_copied">RSS URLa arbelera kopiatu da</string>
     <string name="feeds_logout">Amaitu saioa</string>
@@ -112,7 +112,7 @@
     <string name="feeds_clipboard_label_rss">RSS URLa</string>
     <string name="feeds_source_never_fetched">Inoiz ez eskuratua</string>
     <string name="feeds_source_poll">Galdetu</string>
-    <string name="feeds_source_transform">Eraldatu</string>
+    <string name="feeds_source_transform">AA bihurketa</string>
     <string name="feeds_remove_source_confirm">Kendu \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Ezabatu inportatutako argitalpenak ere</string>
     <string name="feeds_suggested_credibility_title">Iradokitako sinesgarritasuna</string>

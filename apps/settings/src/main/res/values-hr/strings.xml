@@ -277,7 +277,7 @@
     <string name="account_section_identity">Identitet</string>
     <string name="account_identity_identity">Identitet</string>
     <string name="account_identity_username">Korisničko ime</string>
-    <string name="account_identity_name">Naziv</string>
+    <string name="account_identity_name">Ime</string>
     <string name="account_identity_fingerprint">Otisak</string>
     <string name="account_identity_directory_toggle">Dopusti drugima da vas pronađu u imeniku</string>
     <string name="domain_add">Dodaj domenu</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s više neće upravljati rutama na ovoj domeni.</string>
     <string name="domain_delegation_delete_title">Obrisati delegaciju?</string>
     <string name="domain_delegation_path">Putanja</string>
-    <string name="domain_delegation_user">ID korisnika</string>
+    <string name="domain_delegation_user">Korisnik</string>
     <string name="domain_delegations">Delegacije</string>
     <string name="domain_delegations_empty">Nema konfiguriranih delegacija.</string>
     <string name="domain_delete">Obriši domenu</string>

@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi ಫೀಡ್</string>
     <string name="feeds_source_type_feed_memories">ಸ್ಮೃತಿಗಳು</string>
-    <string name="feeds_remove_source">ಮೂಲವನ್ನು ತೆಗೆದುಹಾಕಿ</string>
+    <string name="feeds_remove_source">ಮೂಲ ತೆಗೆದುಹಾಕಬೇಕೆ?</string>
     <string name="feeds_suggested_credibility_accept">ಸ್ವೀಕರಿಸಿ</string>
     <string name="feeds_rss_url_copied">RSS URL ಅನ್ನು ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ಕಾಪಿ ಮಾಡಲಾಗಿದೆ</string>
     <string name="feeds_logout">ಲಾಗ್ ಔಟ್</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">ಎಂದಿಗೂ ತರಲಾಗಿಲ್ಲ</string>
     <string name="feeds_source_poll">ಪೋಲ್</string>
-    <string name="feeds_source_transform">ಪರಿವರ್ತಿಸಿ</string>
+    <string name="feeds_source_transform">AI ರೂಪಾಂತರ</string>
     <string name="feeds_remove_source_confirm">\"%1$s\" ಅನ್ನು ತೆಗೆದುಹಾಕಬೇಕೆ?</string>
     <string name="feeds_remove_also_delete_posts">ಆಮದು ಮಾಡಿದ ಪೋಸ್ಟ್‌ಗಳನ್ನು ಸಹ ಅಳಿಸಿ</string>
     <string name="feeds_suggested_credibility_title">ಸೂಚಿಸಲಾದ ವಿಶ್ವಾಸಾರ್ಹತೆ</string>
@@ -154,7 +154,7 @@
     <string name="feeds_access_select_group">ಗುಂಪು ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="feeds_access_selected">ಆಯ್ಕೆಮಾಡಲಾಗಿದೆ: %1$s</string>
     <string name="feeds_access_subject_anyone">ಯಾರಾದರೂ</string>
-    <string name="feeds_access_subject_authenticated">ದೃಢೀಕರಿಸಿದ ಬಳಕೆದಾರರು</string>
+    <string name="feeds_access_subject_authenticated">ದೃಢೀಕೃತ ಬಳಕೆದಾರರು</string>
     <string name="feeds_markdown_supported">Markdown ಬೆಂಬಲಿತ</string>
     <string name="feeds_permission_deny">ನಿರಾಕರಿಸಿ</string>
     <string name="feeds_rss_feed">RSS ಫೀಡ್</string>

@@ -7,7 +7,7 @@
     <string name="auth_verification_code">Ověřovací kód</string>
     <string name="auth_email_code">E-mailový kód</string>
     <string name="auth_recovery_code">Obnovovací kód</string>
-    <string name="auth_name">Název</string>
+    <string name="auth_name">Jméno</string>
     <string name="auth_create">Vytvořit</string>
     <string name="auth_privacy_label">Soukromí</string>
     <string name="auth_privacy_public">Veřejné</string>
@@ -128,7 +128,7 @@
     <string name="error_enter_email">Zadejte prosím svůj e-mail</string>
     <string name="error_enter_name">Zadejte prosím jméno</string>
     <string name="auth_connect_to_server">Připojit se k serveru</string>
-    <string name="auth_server_url">Adresa URL serveru</string>
+    <string name="auth_server_url">URL serveru</string>
     <string name="auth_connect">Připojit</string>
     <string name="auth_sign_in">Přihlásit se</string>
     <string name="auth_check_email">Zkontrolujte si e-mail s ověřovacím kódem</string>
@@ -209,7 +209,7 @@
     <string name="about_up_to_date">Aktuální</string>
     <string name="about_check_downloading">Verze %1$s je dostupná, stahování…</string>
     <string name="about_check_network_error">Server aktualizací nelze kontaktovat</string>
-    <string name="about_check_download_failed">Stažení se nezdařilo</string>
+    <string name="about_check_download_failed">Stahování se nezdařilo</string>
     <string name="notifications_clear_all_title">Vymazat všechna oznámení?</string>
     <string name="notifications_clear_all_message">Tím se odstraní všechna oznámení. Nelze je obnovit.</string>
     <string name="settings_value_auto">Automaticky</string>
@@ -259,7 +259,7 @@
     <string name="tags_interest_down">Zobrazit méně podobného</string>
     <string name="tags_interest_clear">Přestat zobrazovat</string>
     <string name="tags_none">Žádné štítky</string>
-    <string name="tags_delete">Odebrat značku</string>
+    <string name="tags_delete">Odebrat štítek</string>
     <string name="person_picker_none">Žádné</string>
     <string name="person_picker_clear">Zrušit výběr</string>
     <string name="person_picker_select">Vyberte …</string>

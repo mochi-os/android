@@ -6,7 +6,7 @@
     <string name="settings_home_display">Vis</string>
     <string name="settings_home_accounts">Tilkopla kontoar</string>
     <string name="settings_home_interests">Interesser</string>
-    <string name="account_section_passkeys">Nyklar</string>
+    <string name="account_section_passkeys">Tilgangsnøklar</string>
     <string name="account_passkey_register">Legg til passnøkkel</string>
     <string name="account_passkey_delete_title">Slette passnøkkel?</string>
     <string name="account_section_totp">Autentiseringsapp</string>
@@ -208,7 +208,7 @@
     <string name="account_identity_fingerprint">Fingeravtrykk</string>
     <string name="account_identity_directory_toggle">Tillat andre å finne deg i katalogen</string>
 
-    <string name="settings_home_notification_prefs">Varslingsinnstillingar</string>
+    <string name="settings_home_notification_prefs">Varselinnstillingar</string>
     <string name="settings_home_privacy">Personvernerklæring</string>
     <string name="settings_home_rules">Reglar</string>
     <string name="settings_home_terms">Brukarvilkår</string>
@@ -241,7 +241,7 @@
     <string name="route_meta">Prioritet %1$d · %2$s</string>
     <string name="interests_search_placeholder">Søk etter emne å leggje til…</string>
     <string name="interests_empty">Ingen interesser enno.</string>
-    <string name="interests_summary_regenerate">Lag samandrag på nytt</string>
+    <string name="interests_summary_regenerate">Generer samandrag på nytt</string>
     <string name="interests_summary_regenerating">Lagar på nytt…</string>
     <string name="interests_summary_empty">Legg til nokre interesser for å laga eit samandrag av kva du er oppteken av.</string>
     <string name="interests_search_failed">Søket feila. Prøv igjen.</string>
@@ -280,7 +280,7 @@
 
     <string name="sessions_title">Økter</string>
     <string name="settings_home_account">Konto</string>
-    <string name="settings_home_preferences">Innstillinger</string>
+    <string name="settings_home_preferences">Innstillingar</string>
     <string name="settings_home_sessions">Økter</string>
     <string name="domain_add">Legg til domene</string>
     <string name="domain_add_title">Legg til domene</string>
@@ -290,7 +290,7 @@
     <string name="domain_delegation_delete_message">%1$s vil ikkje lenger handsame ruter på dette domenet.</string>
     <string name="domain_delegation_delete_title">Slette delegering?</string>
     <string name="domain_delegation_path">Sti</string>
-    <string name="domain_delegation_user">Brukar-ID</string>
+    <string name="domain_delegation_user">Brukar</string>
     <string name="domain_delegations">Delegeringar</string>
     <string name="domain_delegations_empty">Ingen delegeringar er sette opp.</string>
     <string name="domain_delete">Slett domene</string>
@@ -316,7 +316,7 @@
     </plurals>
     <string name="login_title">Innlogging</string>
     <string name="login_method_email">E-postkode</string>
-    <string name="login_method_passkey">Nykel</string>
+    <string name="login_method_passkey">Tilgangsnøkkel</string>
     <string name="login_method_totp">Autentiseringsapp</string>
     <string name="login_method_oauth">Tredjeparts-innlogging</string>
     <string name="login_method_recovery">Gjenopprettingskodar</string>
@@ -347,10 +347,10 @@
     <string name="system_setting_hostname_publish">Annonser vertsnavn og domener til andre servere</string>
     <string name="system_setting_hostname">Vertsnavn annonsert til andre servere</string>
     <string name="system_status_peer_id">Peer-ID</string>
-    <string name="system_status_holepunch">Hullslag</string>
+    <string name="system_status_holepunch">Holslag</string>
     <string name="system_status_holepunch_value">%1$d vellykket · %2$d mislyktes</string>
     <string name="system_status_awaiting_routing">Meldinger som venter på ruting</string>
-    <string name="system_status_relay_service">Relétjeneste</string>
+    <string name="system_status_relay_service">Reléteneste</string>
     <string name="system_status_relay_service_value">%1$d / %2$d reservasjoner · %3$d kretser · %4$d avvist</string>
     <string name="login_section_methods">Innloggingsmetodar</string>
     <string name="route_target_select">Vel</string>
@@ -393,7 +393,7 @@
     <string name="accounts_capability_calendar">Kalender</string>
     <string name="accounts_capability_notify">Varsel</string>
     <string name="accounts_capability_ai">KI</string>
-    <string name="accounts_capability_login">Pålogging</string>
+    <string name="accounts_capability_login">Innlogging</string>
     <string name="accounts_provider_caldav">Kalendertenar</string>
     <string name="accounts_revoke_confirm">Dette tilbakekallar kalendertilgangen til %1$s. Pålogging med %2$s står ved lag til du koplar henne frå på påloggingssida.</string>
     <string name="accounts_capability_mcp">MCP</string>

@@ -37,7 +37,7 @@
 
     <string name="words_channel_name">Ord-varsler</string>
     <string name="words_channel_description">Varsler om trekk, bytter og partiresultater.</string>
-    <string name="words_sidebar_active">Aktive partier</string>
+    <string name="words_sidebar_active">Aktive spill</string>
     <string name="words_sidebar_empty">Ingen partier ennå.</string>
     <string name="words_new_game_choose_opponents">Velg motstandere</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
@@ -55,7 +55,7 @@
     <string name="words_detail_chat_you_played">Du spilte %1$s</string>
     <string name="words_detail_chat_player_played">%1$s spilte %2$s</string>
 
-    <string name="words_detail_delete_title">Slette parti?</string>
+    <string name="words_detail_delete_title">Slette spillet?</string>
     <string name="words_detail_delete_confirm">Slett</string>
     <string name="words_detail_delete_message">Dette sletter spillet og chatten permanent. Dette kan ikke angres.</string>
     <string name="words_detail_chat_passed">%1$s meldte pass</string>

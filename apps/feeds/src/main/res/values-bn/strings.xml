@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi ফিড</string>
     <string name="feeds_source_type_feed_memories">স্মৃতি</string>
-    <string name="feeds_remove_source">উৎস সরান</string>
+    <string name="feeds_remove_source">উৎস সরাবেন?</string>
     <string name="feeds_suggested_credibility_accept">গ্রহণ করুন</string>
     <string name="feeds_rss_url_copied">RSS URL ক্লিপবোর্ডে কপি করা হয়েছে</string>
     <string name="feeds_logout">লগ আউট করুন</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">কখনো আনা হয়নি</string>
     <string name="feeds_source_poll">পোল</string>
-    <string name="feeds_source_transform">রূপান্তর</string>
+    <string name="feeds_source_transform">AI রূপান্তর</string>
     <string name="feeds_remove_source_confirm">\"%1$s\" সরাবেন?</string>
     <string name="feeds_remove_also_delete_posts">আমদানি করা পোস্টগুলিও মুছুন</string>
     <string name="feeds_suggested_credibility_title">প্রস্তাবিত বিশ্বাসযোগ্যতা</string>
@@ -209,7 +209,7 @@
     <string name="feeds_ai_prompt_custom">কাস্টম</string>
     <string name="feeds_ai_prompt_variables">ভেরিয়েবল: %1$s</string>
     <string name="feeds_link">লিঙ্ক</string>
-    <string name="feeds_share_link_title">ফিডের লিঙ্ক</string>
+    <string name="feeds_share_link_title">ফিড লিঙ্ক</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$dটি মন্তব্য</item>
         <item quantity="other">%1$dটি মন্তব্য</item>

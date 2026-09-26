@@ -64,7 +64,7 @@
     <string name="market_checkout_address_heading">收货地址</string>
     <string name="market_checkout_address_line1">地址行1</string>
     <string name="market_checkout_address_line2">地址行2</string>
-    <string name="market_checkout_address_name">名称</string>
+    <string name="market_checkout_address_name">姓名</string>
     <string name="market_checkout_address_postcode">邮政编码</string>
     <string name="market_checkout_address_region">地区</string>
     <string name="market_checkout_back">返回</string>
@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">举报商品</string>
     <string name="market_listing_detail_save">收藏</string>
     <string name="market_listing_detail_seller_heading">卖家</string>
-    <string name="market_listing_detail_shipping_heading">配送</string>
+    <string name="market_listing_detail_shipping_heading">配送选项</string>
     <string name="market_listing_detail_subscribe">订阅</string>
     <string name="market_listing_detail_tags_heading">标签</string>
     <string name="market_listing_detail_title">商品</string>
@@ -327,7 +327,7 @@
     <string name="market_saved_title">已保存</string>
     <string name="market_search_clear">清除搜索</string>
     <string name="market_section_categories">浏览分类</string>
-    <string name="market_section_listings">最新发布</string>
+    <string name="market_section_listings">最近商品</string>
     <string name="market_section_recent">最近浏览</string>
     <string name="market_ship_dialog_cancel">取消</string>
     <string name="market_ship_dialog_submit">确认</string>
@@ -404,9 +404,9 @@
     <string name="market_type_digital">数字</string>
     <string name="market_type_physical">实体</string>
     <string name="market_messages_send">发送</string>
-    <string name="market_appeal_dialog_submitting">发送中…</string>
-    <string name="market_dispute_dialog_submitting">发送中…</string>
-    <string name="market_sale_review_response_submitting">发送中…</string>
+    <string name="market_appeal_dialog_submitting">提交中…</string>
+    <string name="market_dispute_dialog_submitting">提交中…</string>
+    <string name="market_sale_review_response_submitting">提交中…</string>
     <string name="market_checkout_subscribing">正在订阅…</string>
     <string name="market_filter_remove">移除筛选</string>
     <string name="market_listing_detail_sales_count">%1$d 笔销售</string>
@@ -513,7 +513,7 @@
     <string name="market_editor_zones_empty">暂无区域</string>
     <string name="market_empty_subtitle">请尝试调整或清除筛选条件。</string>
     <string name="market_empty_title">无结果</string>
-    <string name="market_fee_disclosure_body">平台费用:%1$s%%。处理器费用请查看您的 Stripe 控制面板。</string>
+    <string name="market_fee_disclosure_body">平台费用:%1$s%%。处理器费用请查看您的 Stripe 控制台。</string>
     <string name="market_fee_disclosure_title">平台费用</string>
     <string name="market_fee_preview_failed">无法计算费用</string>
     <string name="market_fee_preview_loading">正在计算费用…</string>
@@ -607,7 +607,7 @@
     <string name="market_sale_dispute_state_responded">等待裁决</string>
     <string name="market_sale_dispute_stripe_reason">Stripe 拒付原因:%1$s</string>
     <string name="market_sale_fee_gross">总额</string>
-    <string name="market_sale_fee_mochi">Mochi 手续费</string>
+    <string name="market_sale_fee_mochi">Mochi 费用</string>
     <string name="market_sale_fee_payout">净到账</string>
     <string name="market_sale_fee_stripe">Stripe 处理费</string>
     <string name="market_sale_fee_stripe_note">Stripe 处理费在你的 Stripe 控制台中显示。</string>

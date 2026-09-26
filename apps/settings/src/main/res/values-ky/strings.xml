@@ -3,7 +3,7 @@
 
     <string name="settings_home_title">Жөндөөлөр</string>
     <string name="settings_home_logout">Чыгуу</string>
-    <string name="settings_home_account">Эсеп</string>
+    <string name="settings_home_account">Аккаунт</string>
     <string name="settings_home_preferences">Жөндөөлөр</string>
     <string name="settings_home_display">Көрсөтүү</string>
     <string name="settings_home_notification_prefs">Билдирүү жөндөөлөрү</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">Артыкчылык %1$d · %2$s</string>
     <string name="interests_search_placeholder">Кошуу үчүн темаларды издөө…</string>
     <string name="interests_empty">Азырынча кызыгуулар жок.</string>
-    <string name="interests_summary_regenerate">Корутундуну кайра түзүү</string>
+    <string name="interests_summary_regenerate">Жыйынтыкты кайра түзүү</string>
     <string name="interests_summary_regenerating">Кайра түзүлүүдө…</string>
     <string name="interests_summary_empty">Жактырган нерсеңиздин корутундусун түзүү үчүн кээ бир кызыгууларды кошуңуз.</string>
     <string name="interests_search_failed">Издөө ийгиликсиз болду. Кайра аракет кылыңыз.</string>
@@ -273,10 +273,10 @@
     <string name="system_users_revoke_all_title">Бардык сессияларды жокко чыгарууну каалайсызбы?</string>
     <string name="system_users_revoke_all_message">Бул колдонуучунун бардык активдүү сессиялары чыгат.</string>
     <string name="system_users_pagination_status">%3$d колдонуучудан %1$d–%2$d көрсөтүлүүдө</string>
-    <string name="account_title">Эсеп</string>
+    <string name="account_title">Аккаунт</string>
     <string name="account_section_identity">Идентификация</string>
     <string name="account_identity_identity">Идентификация</string>
-    <string name="account_identity_username">Колдонуучу аты</string>
+    <string name="account_identity_username">Колдонуучунун аты</string>
     <string name="account_identity_name">Аты</string>
     <string name="account_identity_fingerprint">Манжа изи</string>
     <string name="account_identity_directory_toggle">Башкаларга сизди каталогдон табууга уруксат берүү</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s эми бул доменде жолдорду башкарбайт.</string>
     <string name="domain_delegation_delete_title">Делегациялоону жок кылабызбы?</string>
     <string name="domain_delegation_path">Жол</string>
-    <string name="domain_delegation_user">Колдонуучу ID</string>
+    <string name="domain_delegation_user">Колдонуучу</string>
     <string name="domain_delegations">Делегациялоолор</string>
     <string name="domain_delegations_empty">Конфигурацияланган өкүлдөр жок.</string>
     <string name="domain_delete">Доменди жок кылуу</string>
@@ -389,10 +389,10 @@
     <string name="account_totp_open">Аутентификатор колдонмосунда ачуу</string>
     <string name="accounts_revoke">Мүмкүнчүлүктү кайтарып алуу</string>
     <string name="accounts_capability_calendar">Календарь</string>
-    <string name="accounts_capability_notify">Билдирмелер</string>
+    <string name="accounts_capability_notify">Эскертмелер</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Кирүү</string>
-    <string name="accounts_provider_caldav">Календар сервери</string>
+    <string name="accounts_provider_caldav">Календарь сервери</string>
     <string name="accounts_revoke_confirm">Бул %1$s календарына кирүүнү жокко чыгарат. %2$s аркылуу кирүү, аны Кирүү барагында ажыратмайынча сакталат.</string>
     <string name="accounts_capability_mcp">MCP</string>
 </resources>

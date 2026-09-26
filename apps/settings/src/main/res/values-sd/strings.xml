@@ -263,7 +263,7 @@
     <string name="system_settings_reset_message">هي \"%1$s\" کي ڊفالٽ قيمت (%2$s) تي ريسيٽ ڪندو.</string>
     <string name="system_settings_reset_message_empty">هي \"%1$s\" کي ڊفالٽ (خالي) تي ريسيٽ ڪندو.</string>
     <string name="settings_home_system_users">يوزرز (سرور)</string>
-    <string name="system_users_add_user">يوزر شامل ڪريو</string>
+    <string name="system_users_add_user">صارف شامل ڪريو</string>
     <string name="system_users_search_placeholder">يوزرز ڳوليو…</string>
     <string name="system_users_sort_by">ترتيب ڏيو</string>
     <string name="system_users_last_login">آخري لاگ ان: %1$s</string>
@@ -276,7 +276,7 @@
     <string name="account_title">اڪائونٽ</string>
     <string name="account_section_identity">سڃاڻپ</string>
     <string name="account_identity_identity">سڃاڻپ</string>
-    <string name="account_identity_username">صارف جو نالو</string>
+    <string name="account_identity_username">صارف نالو</string>
     <string name="account_identity_name">نالو</string>
     <string name="account_identity_fingerprint">فنگر پرنٽ</string>
     <string name="account_identity_directory_toggle">ٻين کي توهان کي ڊائريڪٽري ۾ ڳولڻ جي اجازت ڏيو</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s هاڻي هن ڊومين تي رستن جو انتظام نه ڪندو.</string>
     <string name="domain_delegation_delete_title">نمائندگي ختم ڪجي؟</string>
     <string name="domain_delegation_path">رستو</string>
-    <string name="domain_delegation_user">يوزر ID</string>
+    <string name="domain_delegation_user">صارف</string>
     <string name="domain_delegations">نمائندگيون</string>
     <string name="domain_delegations_empty">ڪي به ڊيليگيشن ترتيب ڏنل نه آهن.</string>
     <string name="domain_delete">ڊومين ختم ڪريو</string>
@@ -389,9 +389,9 @@
     <string name="account_totp_open">تصديق ڪندڙ ايپ ۾ کوليو</string>
     <string name="accounts_revoke">رسائي واپس وٺو</string>
     <string name="accounts_capability_calendar">ڪئلينڊر</string>
-    <string name="accounts_capability_notify">اطلاعون</string>
+    <string name="accounts_capability_notify">اطلاعات</string>
     <string name="accounts_capability_ai">AI</string>
-    <string name="accounts_capability_login">سائن-اِن</string>
+    <string name="accounts_capability_login">لاگ ان</string>
     <string name="accounts_provider_caldav">ڪئلينڊر سرور</string>
     <string name="accounts_revoke_confirm">هي %1$s جي ڪئلينڊر رسائي منسوخ ڪندو. %2$s سان سائن-اِن تيستائين رهندو جيستائين توهان لاگ اِن صفحي تي ان کي الڳ نه ڪريو.</string>
     <string name="accounts_capability_mcp">MCP</string>

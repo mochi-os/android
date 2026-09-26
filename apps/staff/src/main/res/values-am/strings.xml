@@ -166,7 +166,7 @@
     <string name="staff_config_field_stripe_oauth_client">OAuth የደንበኛ መታወቂያ</string>
     <string name="staff_config_field_stripe_publishable">የሚታተም ቁልፍ</string>
     <string name="staff_config_field_stripe_secret">ሚስጥራዊ ቁልፍ</string>
-    <string name="staff_config_group_moderation">ማስተካከያ</string>
+    <string name="staff_config_group_moderation">ቁጥጥር</string>
     <string name="staff_config_group_payments">ክፍያዎች</string>
     <string name="staff_config_group_reviews">ግምገማዎች</string>
     <string name="staff_config_group_stripe">Stripe</string>
@@ -183,7 +183,7 @@
     <string name="staff_dashboard_col_date">ቀን</string>
     <string name="staff_dashboard_col_detail">ዝርዝር</string>
     <string name="staff_dashboard_col_listing">ዝርዝር</string>
-    <string name="staff_dashboard_col_moderation">ማስተካከያ</string>
+    <string name="staff_dashboard_col_moderation">ቁጥጥር</string>
     <string name="staff_dashboard_col_name">ስም</string>
     <string name="staff_dashboard_col_object">ነገር</string>
     <string name="staff_dashboard_col_reason">ምክንያት</string>
@@ -211,7 +211,7 @@
     <string name="staff_dashboard_system">ስርዓት</string>
     <string name="staff_dashboard_tab_audit">ኦዲት</string>
     <string name="staff_dashboard_tab_listings">ዝርዝሮች</string>
-    <string name="staff_dashboard_tab_moderation">ማስተካከያ</string>
+    <string name="staff_dashboard_tab_moderation">ቁጥጥር</string>
     <string name="staff_dashboard_tab_orders">ትዕዛዞች</string>
     <string name="staff_dashboard_tab_signups">ምዝገባዎች</string>
     <string name="staff_dashboard_yes">አዎ</string>
@@ -254,8 +254,8 @@
     <string name="staff_disputes_view">ይመልከቱ</string>
     <string name="staff_filter_chip_remove">ማጣሪያ አስወግድ</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
-    <string name="staff_filter_label_moderation">ማስተካከያ</string>
-    <string name="staff_filter_label_query">ፍለጋ</string>
+    <string name="staff_filter_label_moderation">ቁጥጥር</string>
+    <string name="staff_filter_label_query">ይፈልጉ</string>
     <string name="staff_filter_label_seller">ሻጭ</string>
     <string name="staff_filter_label_status">ሁኔታ</string>
     <string name="staff_filter_label_type">አይነት</string>
@@ -268,7 +268,7 @@
     <string name="staff_listings_approved_toast">ዝርዝር ጸድቋል</string>
     <string name="staff_listings_cancel">ይቅር</string>
     <string name="staff_listings_empty">ምንም ዝርዝሮች የሉም</string>
-    <string name="staff_listings_filter_moderation_label">ማስተካከያ</string>
+    <string name="staff_listings_filter_moderation_label">ቁጥጥር</string>
     <string name="staff_listings_filter_status_label">ሁኔታ</string>
     <string name="staff_listings_moderation_auto_approved">በራስ-ሰር ጸድቋል</string>
     <string name="staff_listings_moderation_hold">ያዝ</string>

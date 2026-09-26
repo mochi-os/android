@@ -26,7 +26,7 @@
     <string name="words_detail_action_resign">ඉල්ලා අස්වන්න</string>
     <string name="words_detail_action_rematch">නැවත ක්‍රීඩාව</string>
     <string name="words_detail_action_delete">ක්‍රීඩාව මකන්න</string>
-    <string name="words_detail_chat_title">චැට්</string>
+    <string name="words_detail_chat_title">සංවාදය</string>
     <string name="words_detail_recall">ආපසු ගන්න</string>
     <string name="words_detail_submit">ඉදිරිපත් කරන්න</string>
     <string name="words_detail_cancel">අවලංගු කරන්න</string>

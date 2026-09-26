@@ -50,7 +50,7 @@
     <string name="wikis_join_id_label">ID сущности wiki</string>
     <string name="wikis_join_submit">Реплицировать wiki</string>
     <string name="wikis_create_title">Создать вики</string>
-    <string name="wikis_create_name_label">Имя</string>
+    <string name="wikis_create_name_label">Название</string>
     <string name="wikis_create_privacy_label">Разрешить всем искать вики</string>
     <string name="wikis_create_submit">Создать</string>
     <string name="wikis_comments_empty_title">Комментариев пока нет</string>
@@ -77,7 +77,7 @@
     <string name="wikis_editor_creating">Создание…</string>
     <string name="wikis_editor_title_label">Заголовок</string>
     <string name="wikis_editor_slug_label">URL страницы</string>
-    <string name="wikis_editor_slug_hint">имя-моей-страницы</string>
+    <string name="wikis_editor_slug_hint">название-моей-страницы</string>
     <string name="wikis_editor_slug_help">Это будет путь к странице. Используйте строчные буквы, цифры и дефисы.</string>
     <string name="wikis_editor_content_label">Содержимое</string>
     <string name="wikis_editor_summary_label">Описание правки (необязательно)</string>
@@ -151,7 +151,7 @@
     <string name="wikis_attachments_filter_images">Изображения</string>
     <string name="wikis_attachments_filter_documents">Документы</string>
     <string name="wikis_attachments_sort_date">Дата</string>
-    <string name="wikis_attachments_sort_name">Имя</string>
+    <string name="wikis_attachments_sort_name">Название</string>
     <string name="wikis_attachments_sort_size">Размер</string>
     <string name="wikis_attachments_view_grid">Вид сеткой</string>
     <string name="wikis_attachments_view_list">Вид списком</string>
@@ -171,12 +171,12 @@
     <string name="wikis_settings_tab_access">Доступ</string>
     <string name="wikis_settings_tab_replicas">Реплики</string>
     <string name="wikis_settings_section_identity">Личность</string>
-    <string name="wikis_settings_field_name">Имя</string>
+    <string name="wikis_settings_field_name">Название</string>
     <string name="wikis_settings_field_entity_id">Идентификатор сущности</string>
     <string name="wikis_settings_field_fingerprint">Отпечаток</string>
-    <string name="wikis_settings_name_edit_cd">Изменить имя</string>
-    <string name="wikis_settings_name_invalid_char">Имя не может содержать символы &lt; или &gt;</string>
-    <string name="wikis_settings_name_too_long">Имя должно быть не длиннее 100 символов</string>
+    <string name="wikis_settings_name_edit_cd">Изменить название</string>
+    <string name="wikis_settings_name_invalid_char">Название не может содержать символы &lt; или &gt;</string>
+    <string name="wikis_settings_name_too_long">Название должно быть не длиннее 100 символов</string>
     <string name="wikis_settings_name_required">Необходимо указать название вики</string>
     <string name="wikis_settings_name_saved">Wiki переименована</string>
     <string name="wikis_settings_name_save_failed">Не удалось переименовать вики</string>
@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Удалить</string>
     <string name="wikis_replicas_remove_failed">Не удалось удалить реплику</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Вики</string>
     <string name="wikis_channel_name">Уведомления Wikis</string>
     <string name="wikis_channel_description">Уведомления о правках страниц, комментариях и приглашениях.</string>
     <string name="wikis_pageview_toc_expand">Показать оглавление</string>
@@ -232,7 +232,7 @@
     <string name="wikis_search_placeholder">Поиск вики…</string>
     <string name="wikis_unsubscribe_confirm_message">Вы уверены, что хотите отписаться от %1$s?</string>
     <string name="wikis_clipboard_label_rss">URL RSS вики</string>
-    <string name="wikis_find_search_placeholder">Поиск по имени, ID, отпечатку или URL…</string>
+    <string name="wikis_find_search_placeholder">Поиск по названию, ID, отпечатку или URL…</string>
     <string name="wikis_join_search_button">Искать вики…</string>
     <string name="wikis_join_id_hint">abc123…</string>
     <string name="wikis_subscribe_502_retry">Повторная попытка без предложенного сервера…</string>
@@ -272,7 +272,7 @@
     <string name="wikis_attachments_delete_confirm_message">Удалить «%1$s»? Это действие нельзя отменить.</string>
     <string name="wikis_attachments_downloading">Загрузка…</string>
     <string name="wikis_attachments_empty_description">Нажмите Загрузить, чтобы добавить файлы на эту страницу.</string>
-    <string name="wikis_settings_name_save_cd">Сохранить имя</string>
+    <string name="wikis_settings_name_save_cd">Сохранить название</string>
     <string name="wikis_settings_name_cancel_cd">Отменить редактирование</string>
     <string name="wikis_access_level_label">Разрешение</string>
     <string name="wikis_access_set_failed">Не удалось обновить доступ</string>
@@ -282,7 +282,7 @@
     <string name="wikis_replicas_removed_success">Реплика удалена</string>
     <string name="wikis_load_more">Загрузить ещё</string>
     <string name="wikis_access_change_level">Уровень доступа</string>
-    <string name="wikis_access_subject_anyone">Любой</string>
+    <string name="wikis_access_subject_anyone">Кто угодно</string>
     <string name="wikis_access_subject_authenticated">Аутентифицированные пользователи</string>
 
     <string name="wikis_revision_compare">Сравнить изменения</string>

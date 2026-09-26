@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi plūsma</string>
     <string name="feeds_source_type_feed_memories">Atmiņas</string>
-    <string name="feeds_remove_source">Noņemt avotu</string>
+    <string name="feeds_remove_source">Noņemt avotu?</string>
     <string name="feeds_suggested_credibility_accept">Pieņemt</string>
     <string name="feeds_rss_url_copied">RSS URL nokopēts starpliktuvē</string>
     <string name="feeds_logout">Izrakstīties</string>
@@ -111,14 +111,14 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">Nekad nav iegūts</string>
     <string name="feeds_source_poll">Aptaujāt</string>
-    <string name="feeds_source_transform">Pārveidot</string>
+    <string name="feeds_source_transform">AI transformācija</string>
     <string name="feeds_remove_source_confirm">Noņemt \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Arī dzēst importētos ierakstus</string>
     <string name="feeds_suggested_credibility_title">Ieteiktā uzticamība</string>
     <string name="feeds_suggested_credibility_body">Mochi iesaka uzticamību %1$d. Pieņemt?</string>
     <string name="feeds_suggested_credibility_keep">Paturēt pašreizējo</string>
     <string name="feeds_ai_processing_mode">MI apstrādes režīms</string>
-    <string name="feeds_ai_account">MI konts</string>
+    <string name="feeds_ai_account">AI konts</string>
     <string name="feeds_ai_prompt_new">Atzīmēt jaunus ierakstus</string>
     <string name="feeds_ai_prompt_batch">Pakešapstrāde</string>
     <string name="feeds_ai_prompt_rank">Ranžēšana / vērtēšana</string>

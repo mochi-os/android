@@ -40,9 +40,9 @@
     <string name="market_bid_dialog_instant_win">මිලදී ගැනීම තහවුරු කරන ලදී — ගෙවීම සම්පූර්ණ කරන්න</string>
     <string name="market_bid_dialog_invalid_ceiling">උපරිම ලංසුව අවම වශයෙන් ඔබේ ලංසු මුදල විය යුතුය</string>
     <string name="market_bid_dialog_outbid">ඔබේ ලංසුව තැබුවද වහාම පසුකරගෙන ගියේය. තවත් ලංසුකරුවෙකුට ඉහළ උපරිමයක් ඇත. ඔවුන්ගේ ලංසුව දැන් %1$s වේ.</string>
-    <string name="market_bid_dialog_submit">ලංසුව තබන්න</string>
+    <string name="market_bid_dialog_submit">ලංසුවක් තබන්න</string>
     <string name="market_bid_dialog_success">ලංසුව තබන ලදී</string>
-    <string name="market_bid_dialog_title">ලංසුව තබන්න</string>
+    <string name="market_bid_dialog_title">ලංසුවක් තබන්න</string>
     <string name="market_bid_ended">වෙන්දේසිය අවසන් විය</string>
     <string name="market_bid_high">උසස් ලංසුව</string>
     <string name="market_bids_empty">ලංසු නොමැත</string>
@@ -89,7 +89,7 @@
     <string name="market_checkout_listing_not_found">ලැයිස්තුගත කිරීම හමු නොවීය</string>
     <string name="market_checkout_pay_button">Stripe මගින් ගෙවන්න</string>
     <string name="market_checkout_payment_failed">ගෙවීම ආරම්භ කළ නොහැකි විය — විකුණුම්කරු ගෙවීම් සැකසුම සම්පූර්ණ කර නොතිබිය හැකිය</string>
-    <string name="market_checkout_processing">සැකසෙමින්…</string>
+    <string name="market_checkout_processing">සකසමින්…</string>
     <string name="market_checkout_secure">Stripe හරහා ආරක්ෂිත ගෙවීම</string>
     <string name="market_checkout_select_option">විකල්පය තෝරන්න</string>
     <string name="market_checkout_shipping">යැවීම</string>
@@ -234,7 +234,7 @@
     <string name="market_listing_detail_save">සුරකින්න</string>
     <string name="market_listing_detail_seller_heading">විකුණුම්කරු</string>
     <string name="market_listing_detail_share">ලැයිස්තුව බෙදා ගන්න</string>
-    <string name="market_listing_detail_shipping_heading">යැවීම</string>
+    <string name="market_listing_detail_shipping_heading">යැවීමේ විකල්ප</string>
     <string name="market_listing_detail_subscribe">දායක වන්න</string>
     <string name="market_listing_detail_tags_heading">ටැග</string>
     <string name="market_listing_detail_title">ලැයිස්තුගත කිරීම</string>
@@ -393,7 +393,7 @@
     <string name="market_search_clear">සෙවුම හිස් කරන්න</string>
     <string name="market_search_placeholder">වෙළඳපොළ සොයන්න</string>
     <string name="market_section_categories">ප්‍රවර්ග පිරික්සන්න</string>
-    <string name="market_section_listings">මෑත ලැයිස්තු</string>
+    <string name="market_section_listings">මෑත ලැයිස්තුගත කිරීම්</string>
     <string name="market_section_recent">මෑත දී බැලූ</string>
     <string name="market_ship_dialog_cancel">අවලංගු කරන්න</string>
     <string name="market_ship_dialog_submit">තහවුරු කරන්න</string>
@@ -426,7 +426,7 @@
     <string name="market_status_disputed">ආරවුල්කාරී</string>
     <string name="market_status_paid">ගෙවා ඇත</string>
     <string name="market_status_paused">විරාම කර ඇත</string>
-    <string name="market_status_pending">සැලකිල්ලට පැමිණි</string>
+    <string name="market_status_pending">පොරොත්තුවෙන්</string>
     <string name="market_status_refunded">refund කරන ලදී</string>
     <string name="market_status_shipped">යවන ලදී</string>
     <string name="market_stripe_onboarding_check">තත්ත්වය පරීක්ෂා කරන්න</string>
@@ -447,7 +447,7 @@
     <string name="market_subscription_detail_started">ආරම්භය: %1$s</string>
     <string name="market_subscription_detail_title">දායකත්වය</string>
     <string name="market_subscriptions_action_cancel">අවලංගු කරන්න</string>
-    <string name="market_subscriptions_action_pause">විරාමය</string>
+    <string name="market_subscriptions_action_pause">විරාම කරන්න</string>
     <string name="market_subscriptions_action_reactivate">නැවත සක්‍රිය කරන්න</string>
     <string name="market_subscriptions_action_resubscribe">නැවත දායක වන්න</string>
     <string name="market_subscriptions_action_resume">නැවත ආරම්භ කරන්න</string>
@@ -470,7 +470,7 @@
     <string name="market_type_digital">ඩිජිටල්</string>
     <string name="market_type_physical">භෞතික</string>
     <string name="market_warnings_title">අනතුරු ඇඟවීම්</string>
-    <string name="market_sale_review_response_submitting">ඉදිරිපත් කරයි…</string>
+    <string name="market_sale_review_response_submitting">යවමින්…</string>
     <string name="market_checkout_subscribing">දායක වෙමින්…</string>
     <string name="market_filter_remove">පෙරහන ඉවත් කරන්න</string>
     <string name="market_listings_action_appeal">ඉවත් කිරීමේ අභියාචනය</string>

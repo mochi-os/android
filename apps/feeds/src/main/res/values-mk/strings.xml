@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi канал</string>
     <string name="feeds_source_type_feed_memories">Мемории</string>
-    <string name="feeds_remove_source">Отстрани извор</string>
+    <string name="feeds_remove_source">Да го отстраниме изворот?</string>
     <string name="feeds_suggested_credibility_accept">Прифати</string>
     <string name="feeds_rss_url_copied">RSS URL е копиран во клипборд</string>
     <string name="feeds_logout">Одјави се</string>
@@ -100,7 +100,7 @@
     <string name="feeds_unable_to_load">Не може да се вчита страницата</string>
     <string name="feeds_delete_post_confirm">Дали сте сигурни дека сакате да ја избришете оваа објава? Ова не може да се врати.</string>
     <string name="feeds_delete_comment_confirm">Дали сте сигурни дека сакате да го избришете овој коментар?</string>
-    <string name="feeds_anonymous">Анонимно</string>
+    <string name="feeds_anonymous">Анонимен</string>
     <string name="feeds_replying_to_author">Одговор до %1$s</string>
     <string name="feeds_attach_file">Прикачи датотека</string>
     <string name="feeds_file">Датотека</string>
@@ -111,14 +111,14 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">Никогаш не е преземено</string>
     <string name="feeds_source_poll">Анкета</string>
-    <string name="feeds_source_transform">Трансформирај</string>
+    <string name="feeds_source_transform">AI трансформација</string>
     <string name="feeds_remove_source_confirm">Да се отстрани \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Избриши ги и увезените објави</string>
     <string name="feeds_suggested_credibility_title">Предложена веродостојност</string>
     <string name="feeds_suggested_credibility_body">Mochi предлага веродостојност од %1$d. Прифаќате?</string>
     <string name="feeds_suggested_credibility_keep">Задржи моментална</string>
     <string name="feeds_ai_processing_mode">Режим на обработка со ВИ</string>
-    <string name="feeds_ai_account">Сметка за ВИ</string>
+    <string name="feeds_ai_account">AI сметка</string>
     <string name="feeds_ai_prompt_new">Означи нови објави</string>
     <string name="feeds_ai_prompt_batch">Сериска обработка</string>
     <string name="feeds_ai_prompt_rank">Рангирање / оценување</string>
@@ -209,7 +209,7 @@
     <string name="feeds_ai_prompt_custom">Прилагодено</string>
     <string name="feeds_ai_prompt_variables">Променливи: %1$s</string>
     <string name="feeds_link">Врска</string>
-    <string name="feeds_share_link_title">Врска до каналот</string>
+    <string name="feeds_share_link_title">Врска на каналот</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$d коментар</item>
         <item quantity="other">%1$d коментари</item>

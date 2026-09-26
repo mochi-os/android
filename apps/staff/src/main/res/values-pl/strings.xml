@@ -284,8 +284,8 @@
     <string name="staff_filter_chip_remove">Usuń filtr</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderacja</string>
-    <string name="staff_filter_label_query">Wyszukiwanie</string>
-    <string name="staff_filter_label_seller">Sprzedawca</string>
+    <string name="staff_filter_label_query">Szukaj</string>
+    <string name="staff_filter_label_seller">Sprzedający</string>
     <string name="staff_filter_label_status">Status</string>
     <string name="staff_filter_label_type">Typ</string>
     <string name="staff_listings_action_approve_title">Zatwierdź ogłoszenie</string>
@@ -442,7 +442,7 @@
     <string name="staff_team_dialog_person">Osoba</string>
     <string name="staff_team_dialog_role">Rola</string>
     <string name="staff_team_dialog_role_placeholder">Wybierz rolę</string>
-    <string name="staff_team_dialog_search_placeholder">Szukaj według nazwy, odcisku lub ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Szukaj według imienia, odcisku lub ID…</string>
     <string name="staff_team_empty">Brak członków zespołu</string>
     <string name="staff_team_remove_confirm">Usuń</string>
     <string name="staff_team_remove_desc">Usunąć tego członka z zespołu personelu?</string>

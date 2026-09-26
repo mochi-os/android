@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Feed Mochi</string>
     <string name="feeds_source_type_feed_memories">Kujtimet</string>
-    <string name="feeds_remove_source">Hiq burimin</string>
+    <string name="feeds_remove_source">Të hiqet burimi?</string>
     <string name="feeds_suggested_credibility_accept">Prano</string>
     <string name="feeds_rss_url_copied">URL e RSS u kopjua në clipboard</string>
     <string name="feeds_logout">Dilni</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">URL RSS</string>
     <string name="feeds_source_never_fetched">Asnjëherë e marrë</string>
     <string name="feeds_source_poll">Sondazh</string>
-    <string name="feeds_source_transform">Transformim</string>
+    <string name="feeds_source_transform">Transformim AI</string>
     <string name="feeds_remove_source_confirm">Të hiqet \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Fshi gjithashtu postimet e importuara</string>
     <string name="feeds_suggested_credibility_title">Besueshmëri e sugjeruar</string>
@@ -206,10 +206,10 @@
     <string name="feeds_banner_dismiss">Hidhe banner-in</string>
     <string name="feeds_members_search">Filtroni anëtarët</string>
     <string name="feeds_ai_prompt_default">I parazgjedhur</string>
-    <string name="feeds_ai_prompt_custom">I personalizuar</string>
+    <string name="feeds_ai_prompt_custom">Personalizuar</string>
     <string name="feeds_ai_prompt_variables">Variablat: %1$s</string>
     <string name="feeds_link">Lidhje</string>
-    <string name="feeds_share_link_title">Lidhja e burimit</string>
+    <string name="feeds_share_link_title">Lidhja e feed-it</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$d koment</item>
         <item quantity="other">%1$d komente</item>

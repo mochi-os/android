@@ -34,7 +34,7 @@
     <string name="crm_option_icon">ஐகான்</string>
     <string name="crm_option_icon_placeholder">உதா. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">சந்தா நீக்கு</string>
-    <string name="crm_settings_delete_crm">திட்டத்தை நீக்கு</string>
+    <string name="crm_settings_delete_crm">CRM-ஐ நீக்கு</string>
     <string name="crm_settings_delete_confirm_title">CRM-ஐ நீக்கு</string>
     <string name="crm_settings_unsubscribe_title">சந்தா நீக்கு</string>
     <string name="crm_settings_unsubscribe_message">இந்த CRM-இலிருந்து சந்தா நீக்க விரும்புகிறீர்களா?</string>
@@ -191,9 +191,9 @@
     <string name="crm_move_to_column">நெடுவரிசைக்கு நகர்த்து</string>
     <string name="crm_move_to_row">வரிசைக்கு நகர்த்து</string>
     <string name="crm_move_after">%1$s க்குப் பிறகு</string>
-    <string name="crm_drag_card">அட்டையை இழுக்கவும்</string>
-    <string name="crm_drag_row">வரிசையை இழுக்கவும்</string>
-    <string name="crm_drag_column">நெடுவரிசையை இழுக்கவும்</string>
+    <string name="crm_drag_card">அட்டையை இழு</string>
+    <string name="crm_drag_row">வரிசையை இழு</string>
+    <string name="crm_drag_column">நெடுவரிசையை இழு</string>
     <string name="crm_design_more_options">மேலும் விருப்பங்கள்</string>
     <string name="crm_design_no_templates">வார்ப்புருக்கள் எதுவும் கிடைக்கவில்லை</string>
     <string name="crm_design_use">பயன்படுத்து</string>
@@ -273,7 +273,7 @@
     <string name="crm_access_role_comment">கருத்து தெரிவித்து பார்</string>
     <string name="crm_access_role_view">காட்சி மட்டும்</string>
     <string name="crm_access_role_none">அணுகல் இல்லை</string>
-    <string name="crm_all_crms">அனைத்து CRM</string>
+    <string name="crm_all_crms">அனைத்து CRM-கள்</string>
     <string name="crm_settings_unsubscribe_section">CRM இலிருந்து குழுவிலகு</string>
     <string name="crm_settings_updated">CRM புதுப்பிக்கப்பட்டது</string>
     <string name="crm_create_import_backup">காப்புப்பிரதியிலிருந்து இறக்குமதி (விருப்பம்)</string>

@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Rapportér annonce</string>
     <string name="market_listing_detail_save">Gem</string>
     <string name="market_listing_detail_seller_heading">Sælger</string>
-    <string name="market_listing_detail_shipping_heading">Forsendelse</string>
+    <string name="market_listing_detail_shipping_heading">Forsendelsesvalg</string>
     <string name="market_listing_detail_subscribe">Abonnér</string>
     <string name="market_listing_detail_tags_heading">Tags</string>
     <string name="market_listing_detail_title">Annonce</string>
@@ -327,7 +327,7 @@
     <string name="market_saved_title">Gemte</string>
     <string name="market_search_clear">Ryd søgning</string>
     <string name="market_section_categories">Gennemse kategorier</string>
-    <string name="market_section_listings">Seneste annoncer</string>
+    <string name="market_section_listings">Nylige annoncer</string>
     <string name="market_section_recent">Senest set</string>
     <string name="market_ship_dialog_cancel">Annuller</string>
     <string name="market_ship_dialog_submit">Bekræft</string>

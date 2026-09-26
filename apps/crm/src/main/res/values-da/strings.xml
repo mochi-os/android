@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Ikon</string>
     <string name="crm_option_icon_placeholder">f.eks. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Afmeld</string>
-    <string name="crm_settings_delete_crm">Slet projekt</string>
+    <string name="crm_settings_delete_crm">Slet CRM</string>
     <string name="crm_settings_delete_confirm_title">Slet CRM</string>
     <string name="crm_settings_unsubscribe_title">Afmeld</string>
     <string name="crm_settings_unsubscribe_message">Er du sikker på, at du vil afmelde denne CRM?</string>
@@ -151,7 +151,7 @@
     <string name="crm_parent_none">Ingen overordnet</string>
     <string name="crm_links_empty">Ingen links</string>
     <string name="crm_links_section_relates">Relaterer til</string>
-    <string name="crm_links_section_duplicated_by">Dubleret af</string>
+    <string name="crm_links_section_duplicated_by">Duplikeret af</string>
     <string name="crm_links_type">Linktype</string>
     <string name="crm_links_type_relates">Relaterer til</string>
     <string name="crm_links_search_placeholder">Søg i objekter</string>
@@ -188,7 +188,7 @@
     <string name="crm_drag_card">Træk kort</string>
     <string name="crm_drag_row">Træk række</string>
     <string name="crm_drag_column">Træk kolonne</string>
-    <string name="crm_design_more_options">Flere indstillinger</string>
+    <string name="crm_design_more_options">Flere muligheder</string>
     <string name="crm_design_no_templates">Ingen skabeloner tilgængelige</string>
     <string name="crm_design_use">Brug</string>
     <string name="crm_design_replace_message">Dette vil erstatte det nuværende design med %1$s. Alle eksisterende klasser, felter, indstillinger og visninger vil blive slettet. Eksisterende objekter slettes ikke, men vil muligvis ikke længere blive vist i visninger.</string>

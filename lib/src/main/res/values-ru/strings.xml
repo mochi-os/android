@@ -161,7 +161,7 @@
     <string name="bootstrap_choose_account">Выберите аккаунт</string>
     <string name="bootstrap_sign_in_different_server">Войти на другой сервер</string>
     <string name="common_retry">Повторить</string>
-    <string name="common_more_options">Дополнительные параметры</string>
+    <string name="common_more_options">Больше параметров</string>
     <string name="common_collapse">Свернуть</string>
     <string name="common_expand">Развернуть</string>
     <string name="common_play_video">Воспроизвести видео</string>
@@ -210,7 +210,7 @@
     <string name="about_up_to_date">Актуальная версия</string>
     <string name="about_check_downloading">Версия %1$s доступна, загрузка…</string>
     <string name="about_check_network_error">Не удалось связаться с сервером обновлений</string>
-    <string name="about_check_download_failed">Не удалось загрузить</string>
+    <string name="about_check_download_failed">Не удалось скачать</string>
     <string name="notifications_clear_all_title">Очистить все уведомления?</string>
     <string name="notifications_clear_all_message">Это удалит все уведомления. Восстановить их будет невозможно.</string>
     <string name="settings_value_auto">Автоматически</string>
@@ -238,7 +238,7 @@
     <string name="stepup_error_oauth">Не удалось выполнить проверку с этой учётной записью. Пожалуйста, попробуйте ещё раз.</string>
     <string name="game_system_resign">%1$s сдался</string>
     <string name="game_system_draw_offer">%1$s предложил ничью</string>
-    <string name="game_system_draw_accept">Ничья согласована</string>
+    <string name="game_system_draw_accept">Ничья принята</string>
     <string name="game_system_draw_decline">%1$s отклонил ничью</string>
     <string name="reactivation_title">Ваш аккаунт запланирован к удалению</string>
     <string name="reactivation_body">Ваш аккаунт запланирован к удалению. Вы можете отменить это и восстановить полный доступ прямо сейчас.</string>

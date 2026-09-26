@@ -162,11 +162,11 @@
     <string name="people_contact_given">نام</string>
     <string name="people_contact_family">نام خانوادگی</string>
     <string name="people_contact_nickname">نام مستعار</string>
-    <string name="people_contact_add_email">افزودن رایانامه</string>
+    <string name="people_contact_add_email">افزودن ایمیل</string>
     <string name="people_contact_add_phone">افزودن تلفن</string>
     <string name="people_contact_add_address">افزودن نشانی</string>
     <string name="people_contact_street">خیابان</string>
-    <string name="people_contact_birthday">زادروز</string>
+    <string name="people_contact_birthday">تاریخ تولد</string>
     <string name="people_contact_organisation">سازمان</string>
     <string name="people_contact_url">وب‌گاه</string>
     <string name="people_contact_note">یادداشت</string>

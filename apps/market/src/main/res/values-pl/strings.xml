@@ -64,7 +64,7 @@
     <string name="market_checkout_address_heading">Adres wysyłki</string>
     <string name="market_checkout_address_line1">Adres linia 1</string>
     <string name="market_checkout_address_line2">Adres linia 2</string>
-    <string name="market_checkout_address_name">Nazwa</string>
+    <string name="market_checkout_address_name">Imię i nazwisko</string>
     <string name="market_checkout_address_postcode">Kod pocztowy</string>
     <string name="market_checkout_address_region">Region</string>
     <string name="market_checkout_back">Wstecz</string>
@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Zgłoś ofertę</string>
     <string name="market_listing_detail_save">Zapisz</string>
     <string name="market_listing_detail_seller_heading">Sprzedający</string>
-    <string name="market_listing_detail_shipping_heading">Wysyłka</string>
+    <string name="market_listing_detail_shipping_heading">Opcje wysyłki</string>
     <string name="market_listing_detail_subscribe">Subskrybuj</string>
     <string name="market_listing_detail_tags_heading">Tagi</string>
     <string name="market_listing_detail_title">Oferta</string>
@@ -327,7 +327,7 @@
     <string name="market_saved_title">Zapisane</string>
     <string name="market_search_clear">Wyczyść wyszukiwanie</string>
     <string name="market_section_categories">Przeglądaj kategorie</string>
-    <string name="market_section_listings">Najnowsze oferty</string>
+    <string name="market_section_listings">Ostatnie oferty</string>
     <string name="market_section_recent">Ostatnio oglądane</string>
     <string name="market_ship_dialog_cancel">Anuluj</string>
     <string name="market_ship_dialog_submit">Potwierdź</string>
@@ -563,7 +563,7 @@
     <string name="market_price_per_month">%1$s / miesiąc</string>
     <string name="market_price_per_year">%1$s / rok</string>
     <string name="market_price_starting_bid">Oferta wywoławcza: %1$s</string>
-    <string name="market_profile_biography">O użytkowniku</string>
+    <string name="market_profile_biography">Informacje</string>
     <string name="market_profile_load_failed">Nie udało się wczytać profilu</string>
     <string name="market_profile_member_since">Członek od %1$s</string>
     <string name="market_profile_joined">Dołączył(a) %1$s</string>

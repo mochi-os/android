@@ -15,7 +15,7 @@
     <string name="market_account_seller_step_activate_title">የሻጭ መለያ ያንቁ</string>
     <string name="market_account_seller_step_activate_desc">እቃዎችን መዘርዘር ለመጀመር የሻጭ መገለጫዎን ይፍጠሩ</string>
     <string name="market_account_seller_step_stripe_desc">ከገዢዎች ክፍያ ለመቀበል የStripe መለያ ያገናኙ</string>
-    <string name="market_account_seller_fees_heading">ክፍያዎች፦</string>
+    <string name="market_account_seller_fees_heading">ክፍያዎች:</string>
     <string name="market_account_seller_fees_mochi">Mochi ከእያንዳንዱ ሽያጭ %1$s%% ይወስዳል።</string>
     <string name="market_account_seller_fees_stripe">Stripe በእያንዳንዱ ግብይት የራሱን የማስኬጃ ክፍያ እና በተመላሽ ክፍያ ቋሚ ክፍያ ይጥላል። ለገንዘብዎ እና ለክልልዎ ወቅታዊ ዋጋዎች በStripe ዳሽቦርድ ውስጥ ተዘርዝረዋል።</string>
     <string name="market_account_seller_connect">Stripe አገናኝ</string>
@@ -58,17 +58,17 @@
     <string name="market_bid_dialog_submitting">ጨረታ በማቅረብ ላይ</string>
     <string name="market_bid_dialog_success">ጨረታ ተጠይቋል</string>
     <string name="market_bid_dialog_title">ጨረታ አቅርብ</string>
-    <string name="market_bid_ended">ጨረታ አብቅቷል</string>
+    <string name="market_bid_ended">ጨረታ ተጠናቋል</string>
     <string name="market_bid_ends_in">ያበቃል በ%1$s</string>
     <string name="market_bid_high">ከፍተኛ ጨረታ</string>
     <string name="market_bids_current_bid">የአሁኑ፦ %1$s</string>
     <string name="market_bids_empty">ምንም ጨረታዎች የሉም</string>
-    <string name="market_bids_ended">ጨረታ አብቅቷል</string>
+    <string name="market_bids_ended">ጨረታ ተጠናቋል</string>
     <string name="market_bids_ends_in">ያበቃል በ%1$s</string>
     <string name="market_bids_tab_active">ንቁ</string>
     <string name="market_bids_tab_all">ሁሉም</string>
     <string name="market_bids_tab_lost">ተሸንፏል</string>
-    <string name="market_bids_tab_outbid">ጨረታ ተሸንፏል</string>
+    <string name="market_bids_tab_outbid">በላቀ ጨረታ ተበልጧል</string>
     <string name="market_bids_tab_won">አሸንፏል</string>
     <string name="market_bids_title">ጨረታዎች</string>
     <string name="market_bids_your_bid">የእርስዎ ጨረታ፦ %1$s</string>
@@ -110,7 +110,7 @@
     <string name="market_checkout_listing_not_found">ዝርዝር አልተገኘም</string>
     <string name="market_checkout_pay_button">በStripe ይክፈሉ</string>
     <string name="market_checkout_payment_failed">የክፍያ ቼክአውት ሊጀመር አልቻለም — ሻጩ የክፍያ ማዋቀርን አላጠናቀቀ ይሆናል</string>
-    <string name="market_checkout_processing">በማስኬድ ላይ…</string>
+    <string name="market_checkout_processing">በሂደት ላይ…</string>
     <string name="market_checkout_pwyw_label">የእርስዎ ዋጋ (ቢያንስ %1$s)</string>
     <string name="market_checkout_pwyw_min_error">መጠኑ ቢያንስ %1$s መሆን አለበት</string>
     <string name="market_checkout_secure">በStripe በኩል አስተማማኝ ክፍያ</string>
@@ -245,7 +245,7 @@
     <string name="market_editor_zone_worldwide">በዓለም አቀፍ</string>
     <string name="market_editor_zones_empty">ገና ዞኖች የሉም</string>
     <string name="market_empty_subtitle">ማጣሪያዎችዎን ለማስተካከል ወይም ለማጽዳት ይሞክሩ።</string>
-    <string name="market_empty_title">ምንም ውጤቶች የሉም</string>
+    <string name="market_empty_title">ውጤት የለም</string>
     <string name="market_fee_disclosure_body">የመድረክ ክፍያ፦ %1$s%%። ለአስፈጻሚ ክፍያዎች የStripe ዳሽቦርድ ይመልከቱ።</string>
     <string name="market_fee_disclosure_title">የመድረክ ክፍያዎች</string>
     <string name="market_fee_preview_failed">ክፍያዎችን ማስላት አልተቻለም</string>
@@ -299,7 +299,7 @@
     <string name="market_listing_detail_buy_now">አሁን ግዛ</string>
     <string name="market_listing_detail_description_heading">መግለጫ</string>
     <string name="market_listing_detail_edit">አስተካክል</string>
-    <string name="market_listing_detail_information_heading">የማድረስ መረጃ</string>
+    <string name="market_listing_detail_information_heading">የመላኪያ መረጃ</string>
     <string name="market_listing_detail_load_failed">ዝርዝርን መጫን አልተሳካም</string>
     <string name="market_listing_detail_loading">ዝርዝር በመጫን ላይ</string>
     <string name="market_listing_detail_listed">ተዘርዝሯል %1$s</string>
@@ -319,7 +319,7 @@
     <string name="market_listing_detail_seller_suspended_banner">ይህ ሻጭ ተግዷል። መለያው እስኪመለስ ድረስ አዲስ ትዕዛዞች ቆሟል።</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">የሻጩ መለያ በተገደበበት ጊዜ መግዛት ተሰናክሏል።</string>
     <string name="market_listing_detail_share">ዝርዝር አጋራ</string>
-    <string name="market_listing_detail_shipping_heading">መላኪያ</string>
+    <string name="market_listing_detail_shipping_heading">የመላኪያ አማራጮች</string>
     <string name="market_listing_detail_subscribe">ይመዝገቡ</string>
     <string name="market_listing_detail_tags_heading">መለያዎች</string>
     <string name="market_listing_detail_title">ዝርዝር</string>
@@ -550,7 +550,7 @@
     <string name="market_saved_title">የተቀመጡ</string>
     <string name="market_search_clear">ፍለጋ አጽዳ</string>
     <string name="market_search_placeholder">ገበያውን ይፈልጉ</string>
-    <string name="market_section_categories">ምድቦችን ያስሱ</string>
+    <string name="market_section_categories">ምድቦችን ይመልከቱ</string>
     <string name="market_section_listings">የቅርብ ጊዜ ዝርዝሮች</string>
     <string name="market_section_recent">በቅርቡ የታዩ</string>
     <string name="market_ship_dialog_cancel">ይቅር</string>
@@ -662,7 +662,7 @@
     <string name="market_seller_become_heading">ሻጭ ይሁኑ</string>
     <string name="market_seller_become_title">ሻጭ ይሁኑ</string>
     <string name="market_seller_check_status">ሁኔታ ፈትሽ</string>
-    <string name="market_seller_checking">በመፈተሽ ላይ...</string>
+    <string name="market_seller_checking">በማረጋገጥ ላይ…</string>
     <string name="market_seller_connect_stripe">Stripe አገናኝ</string>
     <string name="market_seller_connecting">በመጫን ላይ...</string>
     <string name="market_seller_fee_loading">የክፍያ ዝርዝሮች በመጫን ላይ...</string>

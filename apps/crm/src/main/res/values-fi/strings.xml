@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Kuvake</string>
     <string name="crm_option_icon_placeholder">esim. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Peru tilaus</string>
-    <string name="crm_settings_delete_crm">Poista projekti</string>
+    <string name="crm_settings_delete_crm">Poista CRM</string>
     <string name="crm_settings_delete_confirm_title">Poista CRM</string>
     <string name="crm_settings_unsubscribe_title">Peru tilaus</string>
     <string name="crm_settings_unsubscribe_message">Haluatko varmasti peruuttaa tämän CRM:n tilauksen?</string>
@@ -156,12 +156,12 @@
     <string name="crm_people_empty">Kenelläkään ei ole vielä käyttöoikeutta</string>
     <string name="crm_settings_delete_confirm_message">Haluatko varmasti poistaa tämän CRM:n? Kaikki objektit, kommentit ja asetukset poistetaan pysyvästi.</string>
     <string name="crm_object_unwatch">Lopeta seuraaminen</string>
-    <string name="crm_object_delete_title">Poista objekti</string>
+    <string name="crm_object_delete_title">Poista kohde</string>
     <string name="crm_object_delete_message">Haluatko varmasti poistaa tämän objektin? Tätä toimintoa ei voi peruuttaa.</string>
     <string name="crm_parent_none">Ei yläkohdetta</string>
     <string name="crm_links_empty">Ei linkkejä</string>
     <string name="crm_links_section_relates">Liittyy</string>
-    <string name="crm_links_section_duplicated_by">Kaksoiskappale kohteesta</string>
+    <string name="crm_links_section_duplicated_by">Kaksoiskappaleet</string>
     <string name="crm_links_type">Linkin tyyppi</string>
     <string name="crm_links_type_relates">Liittyy</string>
     <string name="crm_links_remove">Poista linkki</string>
@@ -184,7 +184,7 @@
     <string name="crm_tree_move">Siirrä</string>
     <string name="crm_tree_move_to_parent">Siirrä yläkohteeseen</string>
     <string name="crm_tree_root_level">(Juuritaso)</string>
-    <string name="crm_tree_empty">Ei objekteja</string>
+    <string name="crm_tree_empty">Ei kohteita</string>
     <string name="crm_board_no_columns">Tälle näkymälle ei ole määritetty sarakkeita</string>
     <string name="crm_board_no_options">Sarakekentälle ei ole määritetty vaihtoehtoja</string>
     <string name="crm_board_nested_count">+%1$d sisäkkäistä</string>
@@ -192,8 +192,8 @@
     <string name="crm_move_to_row">Siirrä riville</string>
     <string name="crm_move_after">Kohteen %1$s jälkeen</string>
     <string name="crm_drag_card">Vedä korttia</string>
-    <string name="crm_drag_row">Vedä rivi</string>
-    <string name="crm_drag_column">Vedä sarake</string>
+    <string name="crm_drag_row">Vedä riviä</string>
+    <string name="crm_drag_column">Vedä saraketta</string>
     <string name="crm_design_more_options">Lisää vaihtoehtoja</string>
     <string name="crm_design_no_templates">Ei saatavilla olevia malleja</string>
     <string name="crm_design_use">Käytä</string>
@@ -212,8 +212,8 @@
     <string name="crm_field_show_on_card">Näytä kortilla</string>
     <string name="crm_field_multi">Monivalinta</string>
     <string name="crm_field_position">Näyttösijainti</string>
-    <string name="crm_field_position_header">Otsikko</string>
-    <string name="crm_field_validation">Vahvistus</string>
+    <string name="crm_field_position_header">Otsake</string>
+    <string name="crm_field_validation">Validointi</string>
     <string name="crm_field_min_length">Vähimmäispituus</string>
     <string name="crm_field_max_length">Enimmäispituus</string>
     <string name="crm_field_pattern">Kuvio (regex)</string>
@@ -265,7 +265,7 @@
     <string name="crm_access_select_role">Valitse rooli</string>
     <string name="crm_access_selected">Valittu: %1$s</string>
     <string name="crm_access_subject_anyone">Kuka tahansa</string>
-    <string name="crm_access_subject_authenticated">Todennetut käyttäjät</string>
+    <string name="crm_access_subject_authenticated">Kirjautuneet käyttäjät</string>
     <string name="crm_access_authenticated_desc">Kaikki kirjautuneet käyttäjät</string>
     <string name="crm_access_anyone_desc">Mukaan lukien anonyymit käyttäjät</string>
     <string name="crm_access_role_design">Suunnittele, luo, muokkaa, kommentoi ja katsele</string>

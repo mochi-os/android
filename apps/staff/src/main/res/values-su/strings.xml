@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Staf Mochi</string>
-    <string name="launcher_staff">Mochi Staf</string>
+    <string name="launcher_staff">Staf Mochi</string>
     <string name="staff_accounts_action_ban_title">Blokir akun</string>
     <string name="staff_accounts_action_suspend_title">Tunda akun</string>
     <string name="staff_accounts_action_unban_title">Cabut larangan</string>
@@ -162,7 +162,7 @@
     <string name="staff_config_field_stripe_oauth_client">ID klien OAuth</string>
     <string name="staff_config_field_stripe_publishable">Konci anu bisa dipasarkeun</string>
     <string name="staff_config_field_stripe_secret">Konci rusiah</string>
-    <string name="staff_config_group_moderation">Modérasi</string>
+    <string name="staff_config_group_moderation">Moderasi</string>
     <string name="staff_config_group_payments">Pembayaran</string>
     <string name="staff_config_group_reviews">Ulasan</string>
     <string name="staff_config_group_stripe">Stripe</string>
@@ -179,7 +179,7 @@
     <string name="staff_dashboard_col_date">Tanggal</string>
     <string name="staff_dashboard_col_detail">Détil</string>
     <string name="staff_dashboard_col_listing">Daptar</string>
-    <string name="staff_dashboard_col_moderation">Modérasi</string>
+    <string name="staff_dashboard_col_moderation">Moderasi</string>
     <string name="staff_dashboard_col_name">Ngaran</string>
     <string name="staff_dashboard_col_object">Objék</string>
     <string name="staff_dashboard_col_reason">Alesan</string>
@@ -207,7 +207,7 @@
     <string name="staff_dashboard_system">Sistem</string>
     <string name="staff_dashboard_tab_audit">Audit</string>
     <string name="staff_dashboard_tab_listings">Listing</string>
-    <string name="staff_dashboard_tab_moderation">Modérasi</string>
+    <string name="staff_dashboard_tab_moderation">Moderasi</string>
     <string name="staff_dashboard_tab_orders">Pesenan</string>
     <string name="staff_dashboard_tab_signups">Pendaptaran</string>
     <string name="staff_dashboard_yes">Enya</string>
@@ -249,11 +249,11 @@
     <string name="staff_disputes_view">Tingali</string>
     <string name="staff_filter_chip_remove">Hapus saringan</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
-    <string name="staff_filter_label_moderation">Modérasi</string>
-    <string name="staff_filter_label_query">Téangan</string>
-    <string name="staff_filter_label_seller">Anu nyade</string>
+    <string name="staff_filter_label_moderation">Moderasi</string>
+    <string name="staff_filter_label_query">Paluruh</string>
+    <string name="staff_filter_label_seller">Penjual</string>
     <string name="staff_filter_label_status">Status</string>
-    <string name="staff_filter_label_type">Jenis</string>
+    <string name="staff_filter_label_type">Tipe</string>
     <string name="staff_listings_action_approve_title">Satujuan listing</string>
     <string name="staff_listings_action_reject_title">Tolak daptaran</string>
     <string name="staff_listings_action_remove_title">Cabut daptaran</string>
@@ -263,7 +263,7 @@
     <string name="staff_listings_approved_toast">Listing disatujuan</string>
     <string name="staff_listings_cancel">Batalkeun</string>
     <string name="staff_listings_empty">Teu aya daptaran</string>
-    <string name="staff_listings_filter_moderation_label">Modérasi</string>
+    <string name="staff_listings_filter_moderation_label">Moderasi</string>
     <string name="staff_listings_filter_status_label">Status</string>
     <string name="staff_listings_moderation_auto_approved">Otomatis disatujuan</string>
     <string name="staff_listings_moderation_hold">Tahan</string>
@@ -411,7 +411,7 @@
     <string name="staff_team_toast_add_failed">Gagal nambahkeun anggota</string>
     <string name="staff_team_toast_removed">Anggota dipupus</string>
     <string name="staff_team_toast_role_updated">Pancén diropéa</string>
-    <string name="staff_audit_action_auction_cancelled">Léléang dibatalkeun</string>
+    <string name="staff_audit_action_auction_cancelled">Lélang dibatalkeun</string>
     <string name="staff_dashboard_order_fallback">Pesenan #%1$s</string>
 
     <string name="staff_accounts_action_unsuspend_title">Cabut panyepenan</string>
@@ -446,7 +446,7 @@
     <string name="staff_disputes_stripe_subscription_canceled">langganan dibatalkeun</string>
     <string name="staff_disputes_stripe_unrecognized">muatan teu dikenal</string>
     <string name="staff_listings_seller_verified">Penjual diverifikasi</string>
-    <string name="staff_moderation_filter_clear">Kosongkeun saringan</string>
+    <string name="staff_moderation_filter_clear">Hapus saringan</string>
     <string name="staff_reports_listing_label">Daptaran #%1$s</string>
     <string name="staff_reports_meta_details">Detil palapor</string>
     <string name="staff_reviews_order_label">pesenan #%1$s</string>

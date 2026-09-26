@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Fil Mochi</string>
     <string name="feeds_source_type_feed_memories">Memwa</string>
-    <string name="feeds_remove_source">Retire sous</string>
+    <string name="feeds_remove_source">Retire sous?</string>
     <string name="feeds_suggested_credibility_accept">Aksepte</string>
     <string name="feeds_rss_url_copied">URL RSS kopye nan clipboard</string>
     <string name="feeds_logout">Dekonekte</string>
@@ -111,14 +111,14 @@
     <string name="feeds_clipboard_label_rss">URL RSS</string>
     <string name="feeds_source_never_fetched">Pa janm chaje</string>
     <string name="feeds_source_poll">Sondaj</string>
-    <string name="feeds_source_transform">Transfòme</string>
+    <string name="feeds_source_transform">Transfòme AI</string>
     <string name="feeds_remove_source_confirm">Retire \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Efase tou piblikasyon ki enpòte yo</string>
     <string name="feeds_suggested_credibility_title">Kredibilite sijere</string>
     <string name="feeds_suggested_credibility_body">Mochi sijere yon kredibilite %1$d. Aksepte?</string>
     <string name="feeds_suggested_credibility_keep">Kenbe sa ki la a</string>
     <string name="feeds_ai_processing_mode">Mòd tretman IA</string>
-    <string name="feeds_ai_account">Kont IA</string>
+    <string name="feeds_ai_account">Kont AI</string>
     <string name="feeds_ai_prompt_new">Mete etikèt sou nouvo piblikasyon</string>
     <string name="feeds_ai_prompt_batch">Tretman an gwoup</string>
     <string name="feeds_ai_prompt_rank">Klasman / nòt</string>
@@ -154,7 +154,7 @@
     <string name="feeds_access_select_group">Chwazi gwoup</string>
     <string name="feeds_access_selected">Chwazi: %1$s</string>
     <string name="feeds_access_subject_anyone">Nenpòt moun</string>
-    <string name="feeds_access_subject_authenticated">Itilizatè otantifye</string>
+    <string name="feeds_access_subject_authenticated">Itilizatè ki otantifye</string>
     <string name="feeds_markdown_supported">Markdown sipòte</string>
     <string name="feeds_permission_deny">Refize</string>
     <string name="feeds_rss_feed">Flux RSS</string>
@@ -209,7 +209,7 @@
     <string name="feeds_ai_prompt_custom">Pèsonalize</string>
     <string name="feeds_ai_prompt_variables">Varyab: %1$s</string>
     <string name="feeds_link">Lyen</string>
-    <string name="feeds_share_link_title">Lyen fil la</string>
+    <string name="feeds_share_link_title">Lyen fil</string>
     <plurals name="feeds_comment_count">
         <item quantity="other">%1$d kòmantè</item>
     </plurals>

@@ -55,7 +55,7 @@
     <string name="chat_forward_success">Reenviasqa</string>
     <string name="chat_message_reply">Kutichiy</string>
     <string name="chat_message_select">Akllay</string>
-    <string name="chat_reply_attachment">Kawsay</string>
+    <string name="chat_reply_attachment">Adjunto</string>
     <string name="chat_replying_to">%1$s runaman kutichichkan</string>
     <string name="chat_delete_confirm_title">¿Willayta pichay?</string>
     <string name="chat_delete_confirm_body">Kayqa willayta llapanpaq pichan, manañam kutichiy atikunchu.</string>
@@ -80,5 +80,5 @@
     <string name="chat_search_prev">Ñawpaq tupay</string>
     <string name="chat_settings_id">Rimanakuy ID</string>
     <string name="chat_message_edited">(hukchasqa)</string>
-    <string name="chat_new_fallback_name">Chat</string>
+    <string name="chat_new_fallback_name">Rimanakuy</string>
 </resources>

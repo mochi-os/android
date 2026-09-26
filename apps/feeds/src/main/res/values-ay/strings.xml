@@ -10,7 +10,7 @@
     <string name="feeds_no_feeds_found">Feedanak jan jikxatasiti</string>
     <string name="feeds_feed_title_default">Feed</string>
     <string name="feeds_mark_all_read">Taqpach ullt\'ata uñacht\'ayaña</string>
-    <string name="feeds_settings">Configuración</string>
+    <string name="feeds_settings">Wakichawinaka</string>
     <string name="feeds_no_posts_yet">Janira qillqatanaka</string>
     <string name="feeds_sort_label">Sumaña</string>
     <string name="feeds_sort_interests">Interesanaka</string>
@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi feed</string>
     <string name="feeds_source_type_feed_memories">Memorianaka</string>
-    <string name="feeds_remove_source">Jutirinakapa apsuña</string>
+    <string name="feeds_remove_source">¿Fuente aparma?</string>
     <string name="feeds_suggested_credibility_accept">Iyawsaña</string>
     <string name="feeds_rss_url_copied">RSS URL clipboard ukar copiata</string>
     <string name="feeds_logout">Mistuña</string>
@@ -101,17 +101,17 @@
     <string name="feeds_anonymous">Jan sutini</string>
     <string name="feeds_replying_to_author">%1$s tuqir kutiyaski</string>
     <string name="feeds_attach_file">Qillqa apxataña</string>
-    <string name="feeds_file">Qillqa</string>
+    <string name="feeds_file">Archivo</string>
     <string name="feeds_select_feed">Mä yatiyäwi ajlliña</string>
     <string name="feeds_loading_feeds">Yatiyäwinak khuskachasa…</string>
-    <string name="feeds_move_up">Alayar apaña</string>
+    <string name="feeds_move_up">Alaxar apaña</string>
     <string name="feeds_move_down">Aynachar apaña</string>
     <string name="feeds_sources_title_named">%1$s jalsuwinakapa</string>
     <string name="feeds_delete_feed_confirm">Akax wiñayatakiw yatiyäwi ukhamarak taqi qillqatanakap chhaqtayani. Janiw kutiykaspati.</string>
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">Janiw kunapachas apaqatakiti</string>
     <string name="feeds_source_poll">Jisktʼa</string>
-    <string name="feeds_source_transform">Mayjt\'ayaña</string>
+    <string name="feeds_source_transform">AI mayjt\'ayaña</string>
     <string name="feeds_remove_source_confirm">¿\"%1$s\" apaqaña?</string>
     <string name="feeds_remove_also_delete_posts">Apkatat qillqatanaks chhaqtayaña</string>
     <string name="feeds_suggested_credibility_title">Iwxat\'at iyawsayaña</string>
@@ -154,7 +154,7 @@
     <string name="feeds_access_select_group">Tama ajlliña</string>
     <string name="feeds_access_selected">Ajllita: %1$s</string>
     <string name="feeds_access_subject_anyone">Khitisa</string>
-    <string name="feeds_access_subject_authenticated">Yatiyat apnaqirinaka</string>
+    <string name="feeds_access_subject_authenticated">Chiqanchata apnaqirinaka</string>
     <string name="feeds_markdown_supported">Markdown wakisi</string>
     <string name="feeds_permission_deny">Jark\'aña</string>
     <string name="feeds_rss_feed">Canal RSS</string>
@@ -172,7 +172,7 @@
     <string name="feeds_allow_search">Khitirus feed thaqaña iyawsaña</string>
     <string name="feeds_post_content">Qillqata contenido</string>
     <string name="feeds_enable_memories">Memorianak yatichaña</string>
-    <string name="feeds_permission_request_title">Iyaw säwi mayiwi</string>
+    <string name="feeds_permission_request_title">Permiso mayisiwi</string>
     <string name="feeds_unsubscribe_confirm">Feedat suscripción apsuñati?</string>
     <string name="feeds_settings_title">%1$s wakichäwinaka</string>
     <string name="feeds_source_transform_help">Jaytañataki wakischa jaytaña.</string>
@@ -207,7 +207,7 @@
     <string name="feeds_ai_prompt_custom">Sapa</string>
     <string name="feeds_ai_prompt_variables">Variablenaka: %1$s</string>
     <string name="feeds_link">Enlace</string>
-    <string name="feeds_share_link_title">Feed enlace</string>
+    <string name="feeds_share_link_title">Feed chimpu</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$d qhanañchawi</item>
         <item quantity="other">%1$d qhanañchawinaka</item>

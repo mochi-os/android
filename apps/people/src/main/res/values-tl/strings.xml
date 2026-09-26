@@ -128,7 +128,7 @@
     <string name="people_contact_email">Email</string>
     <string name="people_contact_city">Lungsod</string>
     <string name="people_contact_region">Rehiyon</string>
-    <string name="people_contact_postcode">Postcode</string>
+    <string name="people_contact_postcode">Zip code</string>
     <string name="people_contact_country">Bansa</string>
     <string name="people_contact_type">Uri</string>
     <string name="people_contact_type_home">Bahay</string>
@@ -152,9 +152,9 @@
     <string name="people_contacts_add_to_start">Magdagdag ng contact para makipag-ugnayan</string>
     <string name="people_contacts_actions">Mga aksyon sa contact</string>
     <string name="people_contacts_friend">Kaibigan</string>
-    <string name="people_contacts_invite">Mag-imbita</string>
+    <string name="people_contacts_invite">Imbitahan</string>
     <string name="people_contacts_unfriend_confirm">Hindi na magiging kaibigan mo si %1$s. Mananatili ang contact sa iyong address book.</string>
-    <string name="people_contacts_delete">Tanggalin ang contact</string>
+    <string name="people_contacts_delete">I-delete ang contact</string>
     <string name="people_contacts_delete_confirm">Tanggalin si %1$s sa iyong mga contact?</string>
     <string name="people_contacts_delete_friend_confirm">Tanggalin si %1$s sa iyong mga contact? Matatapos din ang inyong pagkakaibigan.</string>
     <string name="people_contact_new_title">Bagong contact</string>
@@ -188,7 +188,7 @@
     <string name="people_person_state_contact">Nasa mga contact</string>
     <string name="people_device_create">Gumawa</string>
     <string name="people_device_server">Server</string>
-    <string name="people_device_username">Pangalan ng user</string>
+    <string name="people_device_username">Username</string>
     <string name="people_device_done">Tapos na</string>
     <string name="people_device_list">Mga device</string>
     <string name="people_device_used">Huling ginamit %1$s</string>

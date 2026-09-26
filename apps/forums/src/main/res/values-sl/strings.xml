@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Odjavi se</string>
     <string name="forums_list_unsubscribe_title">Odjavi se</string>
     <string name="forums_create_title">Ustvari forum</string>
-    <string name="forums_create_name">Ime</string>
+    <string name="forums_create_name">Ime foruma</string>
     <string name="forums_create_privacy">Zasebnost</string>
     <string name="forums_create_private">Zasebno</string>
     <string name="forums_create_public">Javno</string>
-    <string name="forums_create_action">Ustvari</string>
+    <string name="forums_create_action">Ustvari forum</string>
     <string name="forums_find_title">Najdi forume</string>
     <string name="forums_find_recommended">Priporočeno</string>
     <string name="forums_find_subscribe">Naroči se</string>
@@ -156,7 +156,7 @@
     <string name="forums_banner_placeholder">Dobrodošli na tem forumu…</string>
     <string name="forums_ai_mode_label">Način: %1$s</string>
     <string name="forums_ai_mode_heading">Način UI</string>
-    <string name="forums_ai_mode_off">Izklopljeno</string>
+    <string name="forums_ai_mode_off">Onemogočeno</string>
     <string name="forums_ai_account">Račun UI</string>
     <string name="forums_ai_prompt_tag">Poziv za oznake</string>
     <string name="forums_ai_prompt_score">Poziv za ocenjevanje</string>
@@ -279,7 +279,7 @@
     <string name="forums_moderation_restriction_remove_message">Takoj znova pridobi poln dostop do foruma.</string>
     <string name="forums_moderation_restriction_remove_title">Ali želite odstraniti omejitev za %1$s?</string>
     <string name="forums_moderation_restriction_state_muted">Utišan</string>
-    <string name="forums_moderation_restriction_state_shadowban">Senčna prepoved</string>
+    <string name="forums_moderation_restriction_state_shadowban">Skrito prepovedan</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Noben uporabnik ni utišan ali blokiran</string>
     <string name="forums_moderation_section_premoderation_description">Zahtevaj odobritev, preden vsebina postane vidna</string>
     <string name="forums_moderation_section_ratelimiting_description">Preprečite neželeno vsebino z omejevanjem pogostosti objav</string>

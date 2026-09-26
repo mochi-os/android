@@ -16,7 +16,7 @@
     <string name="go_color_white">Blanques</string>
     <string name="go_delete_confirm">Suprimeix</string>
     <string name="go_delete_message">Aquesta partida s\'eliminarà de la teva llista. Aquesta acció no es pot desfer.</string>
-    <string name="go_delete_title">Suprimir la partida?</string>
+    <string name="go_delete_title">Vols suprimir la partida?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">Accepta</string>
     <string name="go_draw_decline">Rebutja</string>

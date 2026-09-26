@@ -234,7 +234,7 @@
     <string name="market_listing_detail_save">Ruaj</string>
     <string name="market_listing_detail_seller_heading">Shitësi</string>
     <string name="market_listing_detail_share">Ndaj listimin</string>
-    <string name="market_listing_detail_shipping_heading">Dërgesa</string>
+    <string name="market_listing_detail_shipping_heading">Opsionet e dërgesës</string>
     <string name="market_listing_detail_subscribe">Abonohu</string>
     <string name="market_listing_detail_tags_heading">Etiketat</string>
     <string name="market_listing_detail_title">Shpallja</string>
@@ -470,7 +470,7 @@
     <string name="market_type_digital">Dixhitale</string>
     <string name="market_type_physical">Fizik</string>
     <string name="market_warnings_title">Paralajmërime</string>
-    <string name="market_sale_review_response_submitting">Po dërgon…</string>
+    <string name="market_sale_review_response_submitting">Po dërgohet…</string>
     <string name="market_checkout_subscribing">Duke u pajtuar…</string>
     <string name="market_filter_remove">Hiq filtrin</string>
     <string name="market_listing_detail_sales_count">%1$d shitje</string>
@@ -651,7 +651,7 @@
     <string name="market_account_company_label">Kompania</string>
     <string name="market_account_seller_card_active_body">Stripe i lidhur.</string>
     <string name="market_account_seller_card_active_title">Llogaria e shitësit aktive</string>
-    <string name="market_account_seller_card_continue">Vazhdoni konfigurimin</string>
+    <string name="market_account_seller_card_continue">Vazhdo konfigurimin</string>
     <string name="market_account_seller_card_incomplete_body">Lidhni Stripe për të filluar listimin e artikujve dhe marrjen e pagesave.</string>
     <string name="market_account_seller_card_incomplete_title">Konfigurimi i shitësit i papërfunduar</string>
     <string name="market_account_seller_card_start_body">Krijoni një llogari shitësi për të listuar artikuj dhe për të arritur blerësit.</string>
@@ -663,7 +663,7 @@
     <string name="market_seller_become_heading">Bëhu shitës</string>
     <string name="market_seller_become_title">Bëhu shitës</string>
     <string name="market_seller_check_status">Kontrollo statusin</string>
-    <string name="market_seller_checking">Po kontrollohet...</string>
+    <string name="market_seller_checking">Duke kontrolluar…</string>
     <string name="market_seller_connect_stripe">Lidh Stripe</string>
     <string name="market_seller_connecting">Duke ngarkuar...</string>
     <string name="market_seller_fee_loading">Duke ngarkuar detajet e tarifave...</string>
@@ -704,7 +704,7 @@
     <string name="market_editor_stock_unlimited">Pa kufi</string>
     <string name="market_editor_start_time">Koha e fillimit</string>
     <string name="market_editor_start_time_help">Lini bosh për të filluar në publikim.</string>
-    <string name="market_editor_start_time_next">Tjetra</string>
+    <string name="market_editor_start_time_next">Tjetri</string>
     <string name="market_editor_start_time_clear">Pastro</string>
     <string name="market_listing_detail_buy_now_label">Blije tani</string>
     <string name="market_section_recently_viewed">Të parët së fundmi</string>

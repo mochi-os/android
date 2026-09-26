@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Annulla iscrizione</string>
     <string name="forums_list_unsubscribe_title">Annulla iscrizione</string>
     <string name="forums_create_title">Crea forum</string>
-    <string name="forums_create_name">Nome</string>
+    <string name="forums_create_name">Nome del forum</string>
     <string name="forums_create_privacy">Privacy</string>
     <string name="forums_create_private">Privato</string>
     <string name="forums_create_public">Pubblico</string>
-    <string name="forums_create_action">Crea</string>
+    <string name="forums_create_action">Crea forum</string>
     <string name="forums_find_title">Trova forum</string>
     <string name="forums_find_recommended">Consigliato</string>
     <string name="forums_find_subscribe">Iscriviti</string>
@@ -257,8 +257,8 @@
     <string name="forums_access_select_rule">Seleziona una regola</string>
     <string name="forums_ai_actions_label">Azioni IA sui post</string>
     <string name="forums_ai_prompt_custom">Personalizzato</string>
-    <string name="forums_ai_prompt_score_label">Prompt di punteggio</string>
-    <string name="forums_ai_prompt_tag_label">Prompt dei tag</string>
+    <string name="forums_ai_prompt_score_label">Prompt punteggio</string>
+    <string name="forums_ai_prompt_tag_label">Prompt tag</string>
     <string name="forums_ai_prompt_variables">Variabili: %1$s</string>
     <string name="forums_link">Link</string>
     <string name="forums_moderation_ban_message">Perde l\'accesso al forum finché non rimuovi la restrizione.</string>
@@ -277,7 +277,7 @@
     <string name="forums_moderation_restriction_remove_message">Riottiene subito l\'accesso completo al forum.</string>
     <string name="forums_moderation_restriction_remove_title">Rimuovere la restrizione su %1$s?</string>
     <string name="forums_moderation_restriction_state_muted">Silenziato</string>
-    <string name="forums_moderation_restriction_state_shadowban">Shadowban</string>
+    <string name="forums_moderation_restriction_state_shadowban">Bandito in segreto</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Nessun utente è stato silenziato o bannato</string>
     <string name="forums_moderation_section_premoderation_description">Richiedi l\'approvazione prima che il contenuto diventi visibile</string>
     <string name="forums_moderation_section_ratelimiting_description">Previeni lo spam limitando la frequenza con cui gli utenti possono pubblicare</string>

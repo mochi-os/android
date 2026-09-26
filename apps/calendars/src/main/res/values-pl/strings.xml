@@ -59,12 +59,12 @@
     <string name="calendars_only_this">Tylko ten</string>
     <string name="calendars_create">Utwórz kalendarz</string>
     <string name="calendars_subscribe">Subskrybuj kalendarz</string>
-    <string name="calendars_poll">Pobierz teraz</string>
+    <string name="calendars_poll">Sprawdź teraz</string>
     <string name="calendars_delete_title">Usunąć %1$s?</string>
     <string name="calendars_delete_message">Jego wydarzenia zostaną usunięte razem z nim.</string>
     <string name="calendars_today">Dzisiaj</string>
     <string name="calendars_view_week">Tydzień</string>
-    <string name="calendars_view_multiweek">Wiele tygodni</string>
+    <string name="calendars_view_multiweek">Kilka tygodni</string>
     <string name="calendars_view_month">Miesiąc</string>
     <string name="calendars_workweek">Tydzień roboczy</string>
     <string name="calendars_range">Od %1$s do %2$s</string>
@@ -99,8 +99,8 @@
     <string name="calendars_hours_finish">Koniec godzin pracy</string>
     <string name="calendars_hours_invalid">Godziny pracy muszą kończyć się po ich rozpoczęciu.</string>
     <string name="calendars_work_days">Dni robocze</string>
-    <string name="calendars_multiweek_weeks">Widoczne tygodnie</string>
-    <string name="calendars_multiweek_previous">Tygodnie wstecz</string>
+    <string name="calendars_multiweek_weeks">Pokazywane tygodnie</string>
+    <string name="calendars_multiweek_previous">Tygodnie przed</string>
     <string name="calendars_default_duration">Domyślna długość wydarzenia</string>
     <string name="calendars_default_reminder">Domyślne przypomnienie</string>
     <string name="calendars_link_title">Link do kalendarza</string>

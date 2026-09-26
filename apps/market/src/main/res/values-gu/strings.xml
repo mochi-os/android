@@ -28,7 +28,7 @@
     <string name="market_appeal_dialog_cancel">રદ કરો</string>
     <string name="market_appeal_dialog_failed">અપીલ સબમિટ કરવામાં નિષ્ફળ</string>
     <string name="market_appeal_dialog_submit">અપીલ સબમિટ કરો</string>
-    <string name="market_appeal_dialog_submitting">મોકલી રહ્યાં છીએ…</string>
+    <string name="market_appeal_dialog_submitting">મોકલી રહ્યું છે…</string>
     <string name="market_appeal_dialog_success">અપીલ સબમિટ કરી</string>
     <string name="market_appeal_dialog_title">દૂર કરવાની અપીલ</string>
     <string name="market_asset_download">ડાઉનલોડ કરો</string>
@@ -43,14 +43,14 @@
     <string name="market_bid_dialog_submit">બોલી લગાવો</string>
     <string name="market_bid_dialog_success">બોલી મૂકી</string>
     <string name="market_bid_dialog_title">બોલી લગાવો</string>
-    <string name="market_bid_ended">હરાજી પૂરી થઈ</string>
+    <string name="market_bid_ended">હરાજી સમાપ્ત થઈ</string>
     <string name="market_bid_high">ઊંચી બોલી</string>
     <string name="market_bids_empty">કોઈ બિડ્સ નથી</string>
-    <string name="market_bids_ended">હરાજી પૂરી થઈ</string>
+    <string name="market_bids_ended">હરાજી સમાપ્ત થઈ</string>
     <string name="market_bids_tab_active">સક્રિય</string>
     <string name="market_bids_tab_all">બધા</string>
     <string name="market_bids_tab_lost">હારેલ</string>
-    <string name="market_bids_tab_outbid">બોલી પાછળ</string>
+    <string name="market_bids_tab_outbid">વધુ બોલી લાગી</string>
     <string name="market_bids_tab_won">જીતેલ</string>
     <string name="market_bids_title">બોલીઓ</string>
     <string name="market_carousel_main">ફોટો %1$d / %2$d</string>
@@ -118,7 +118,7 @@
     <string name="market_dispute_dialog_failed">પ્રતિસાદ સબમિટ કરવામાં નિષ્ફળ</string>
     <string name="market_dispute_dialog_response_label">તમારો પ્રતિસાદ</string>
     <string name="market_dispute_dialog_submit">સબમિટ કરો</string>
-    <string name="market_dispute_dialog_submitting">મોકલી રહ્યાં છીએ…</string>
+    <string name="market_dispute_dialog_submitting">મોકલી રહ્યું છે…</string>
     <string name="market_dispute_dialog_title">વિવાદનો જવાબ</string>
     <string name="market_editor_appeal_submit">અપીલ સબમિટ કરો</string>
     <string name="market_editor_asset_add">ફાઇલ ઉમેરો</string>
@@ -137,7 +137,7 @@
     <string name="market_editor_description">વર્ણન</string>
     <string name="market_editor_interval_monthly">માસિક</string>
     <string name="market_editor_interval_yearly">વાર્ષિક</string>
-    <string name="market_editor_photo_delete">ફોટો કાઢો</string>
+    <string name="market_editor_photo_delete">ફોટો કાઢી નાખો</string>
     <string name="market_editor_photo_uploading">અપલોડ કરી રહ્યાં છે…</string>
     <string name="market_editor_photos_add">ફોટા ઉમેરો</string>
     <string name="market_editor_price">કિંમત</string>
@@ -181,7 +181,7 @@
     <string name="market_editor_zone_european_union">યુરોપીય સંઘ</string>
     <string name="market_editor_zone_region">પ્રદેશ</string>
     <string name="market_editor_zone_worldwide">વિશ્વભરમાં</string>
-    <string name="market_empty_title">કોઈ પરિણામો નથી</string>
+    <string name="market_empty_title">કોઈ પરિણામ નથી</string>
     <string name="market_fee_preview_item">આઇટમ</string>
     <string name="market_fee_preview_payout">તમારું પેઆઉટ</string>
     <string name="market_filter_all">બધા</string>
@@ -228,13 +228,13 @@
     <string name="market_listing_detail_message">સંદેશ મોકલો</string>
     <string name="market_listing_detail_message_seller">વેચનારને સંદેશ મોકલો</string>
     <string name="market_listing_detail_not_found">લિસ્ટિંગ મળી નહીં</string>
-    <string name="market_listing_detail_place_bid">બોલી મૂકો</string>
+    <string name="market_listing_detail_place_bid">બોલી લગાવો</string>
     <string name="market_listing_detail_relist">ફરી લિસ્ટ કરો</string>
     <string name="market_listing_detail_report">લિસ્ટિંગ રિપોર્ટ કરો</string>
     <string name="market_listing_detail_save">સાચવો</string>
     <string name="market_listing_detail_seller_heading">વિક્રેતા</string>
     <string name="market_listing_detail_share">જાહેરાત શેર કરો</string>
-    <string name="market_listing_detail_shipping_heading">શિપિંગ</string>
+    <string name="market_listing_detail_shipping_heading">શિપિંગ વિકલ્પો</string>
     <string name="market_listing_detail_subscribe">સબ્સ્ક્રાઇબ કરો</string>
     <string name="market_listing_detail_tags_heading">ટૅગ્સ</string>
     <string name="market_listing_detail_title">લિસ્ટિંગ</string>
@@ -261,7 +261,7 @@
     <string name="market_listings_relist_failed">ફરી લિસ્ટ કરવામાં નિષ્ફળ</string>
     <string name="market_listings_title">મારી લિસ્ટિંગ્સ</string>
     <string name="market_messages_compose_placeholder">સંદેશ લખો…</string>
-    <string name="market_messages_inbox_title">સંદેશા</string>
+    <string name="market_messages_inbox_title">સંદેશાઓ</string>
     <string name="market_messages_send">મોકલો</string>
     <string name="market_messages_thread_listing_chip">લિસ્ટિંગ</string>
     <string name="market_messages_thread_title">વાતચીત</string>
@@ -392,7 +392,7 @@
     <string name="market_search_clear">શોધ સાફ કરો</string>
     <string name="market_search_placeholder">બજારમાં શોધો</string>
     <string name="market_section_categories">શ્રેણીઓ બ્રાઉઝ કરો</string>
-    <string name="market_section_listings">તાજેતરની યાદીઓ</string>
+    <string name="market_section_listings">તાજેતરની લિસ્ટિંગ્સ</string>
     <string name="market_section_recent">તાજેતરમાં જોયેલા</string>
     <string name="market_ship_dialog_cancel">રદ કરો</string>
     <string name="market_ship_dialog_submit">પુષ્ટિ કરો</string>
@@ -409,7 +409,7 @@
     <string name="market_sidebar_home">હોમ</string>
     <string name="market_sidebar_inbox">ઇનબૉક્સ</string>
     <string name="market_sidebar_listings">લિસ્ટિંગ્સ</string>
-    <string name="market_sidebar_messages">સંદેશા</string>
+    <string name="market_sidebar_messages">સંદેશાઓ</string>
     <string name="market_sidebar_purchases">ખરીદીઓ</string>
     <string name="market_sidebar_reviews">સમીક્ષાઓ</string>
     <string name="market_sidebar_sales">વેચાણો</string>
@@ -446,7 +446,7 @@
     <string name="market_subscription_detail_started">%1$s ના રોજ શરૂ થયું</string>
     <string name="market_subscription_detail_title">સબ્સ્ક્રિપ્શન</string>
     <string name="market_subscriptions_action_cancel">રદ કરો</string>
-    <string name="market_subscriptions_action_pause">પોઝ</string>
+    <string name="market_subscriptions_action_pause">થોભાવો</string>
     <string name="market_subscriptions_action_reactivate">ફરી સક્રિય કરો</string>
     <string name="market_subscriptions_action_resubscribe">ફરીથી સબ્સ્ક્રાઇબ કરો</string>
     <string name="market_subscriptions_action_resume">ફરી શરૂ કરો</string>
@@ -469,7 +469,7 @@
     <string name="market_type_digital">ડિજિટલ</string>
     <string name="market_type_physical">ભૌતિક</string>
     <string name="market_warnings_title">ચેતવણીઓ</string>
-    <string name="market_sale_review_response_submitting">સબમિટ થઈ રહ્યું છે…</string>
+    <string name="market_sale_review_response_submitting">મોકલી રહ્યું છે…</string>
     <string name="market_checkout_subscribing">સબ્સ્ક્રાઇબ કરી રહ્યા છીએ…</string>
     <string name="market_filter_remove">ફિલ્ટર દૂર કરો</string>
     <string name="market_listings_action_appeal">દૂર કરવાની અપીલ</string>
@@ -509,7 +509,7 @@
     <string name="market_editor_asset_external_url">સંદર્ભ URL</string>
     <string name="market_editor_assets_empty">હજુ સુધી કોઈ સંપત્તિઓ નથી</string>
     <string name="market_editor_delete_confirm_message">આ યાદીને કાયમ માટે કાઢી નાખશે.</string>
-    <string name="market_editor_delete_confirm_title">યાદી કાઢી નાખવી?</string>
+    <string name="market_editor_delete_confirm_title">લિસ્ટિંગ કાઢી નાખવું છે?</string>
     <string name="market_editor_download">સીધો ડાઉનલોડ</string>
     <string name="market_editor_duration">હરાજીનો સમયગાળો</string>
     <string name="market_editor_fee_preview_pending">ડ્રાફ્ટ સાચવાઈ રહ્યો છે…</string>
@@ -659,11 +659,11 @@
     <string name="market_account_seller_card_view">વિક્રેતા સેટિંગ્સ જુઓ</string>
     <string name="market_account_vat_label">GST / કર ઓળખ નંબર</string>
     <string name="market_seller_activate_action">વિક્રેતા ખાતું સક્રિય કરો</string>
-    <string name="market_seller_activating">સક્રિય થઈ રહ્યું છે...</string>
+    <string name="market_seller_activating">સક્રિય કરી રહ્યા છીએ…</string>
     <string name="market_seller_become_heading">વિક્રેતા બનો</string>
     <string name="market_seller_become_title">વિક્રેતા બનો</string>
     <string name="market_seller_check_status">સ્થિતિ તપાસો</string>
-    <string name="market_seller_checking">તપાસી રહ્યું છે...</string>
+    <string name="market_seller_checking">તપાસ કરી રહ્યાં છીએ…</string>
     <string name="market_seller_connect_stripe">Stripe કનેક્ટ કરો</string>
     <string name="market_seller_connecting">લોડ થઈ રહ્યું છે...</string>
     <string name="market_seller_fee_loading">ફી વિગતો લોડ થઈ રહી છે...</string>

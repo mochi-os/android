@@ -179,7 +179,7 @@
     <string name="market_listing_detail_buy_now">Comprar agora</string>
     <string name="market_listing_detail_description_heading">Descrição</string>
     <string name="market_listing_detail_edit">Editar</string>
-    <string name="market_listing_detail_information_heading">Informações de entrega</string>
+    <string name="market_listing_detail_information_heading">Informação de entrega</string>
     <string name="market_listing_detail_load_failed">Falha ao carregar anúncio</string>
     <string name="market_listing_detail_listed">Publicado em %1$s</string>
     <string name="market_listing_detail_location_heading">Localização</string>
@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Denunciar anúncio</string>
     <string name="market_listing_detail_save">Guardar</string>
     <string name="market_listing_detail_seller_heading">Vendedor</string>
-    <string name="market_listing_detail_shipping_heading">Envio</string>
+    <string name="market_listing_detail_shipping_heading">Opções de envio</string>
     <string name="market_listing_detail_subscribe">Subscrever</string>
     <string name="market_listing_detail_tags_heading">Etiquetas</string>
     <string name="market_listing_detail_title">Anúncio</string>
@@ -216,7 +216,7 @@
     <string name="market_messages_inbox_title">Mensagens</string>
     <string name="market_messages_thread_listing_chip">Anúncio</string>
     <string name="market_onboarding_activate">Ativar</string>
-    <string name="market_onboarding_activating">Ativando…</string>
+    <string name="market_onboarding_activating">A ativar…</string>
     <string name="market_onboarding_body">Ative sua conta para começar a comprar e vender.</string>
     <string name="market_onboarding_dismiss">Dispensar</string>
     <string name="market_onboarding_title">Bem-vindo ao Market</string>
@@ -326,7 +326,7 @@
     <string name="market_sale_tracking_label">Número de seguimento</string>
     <string name="market_saved_title">Guardados</string>
     <string name="market_search_clear">Limpar pesquisa</string>
-    <string name="market_section_categories">Explorar categorias</string>
+    <string name="market_section_categories">Ver categorias</string>
     <string name="market_section_listings">Anúncios recentes</string>
     <string name="market_section_recent">Vistos recentemente</string>
     <string name="market_ship_dialog_cancel">Cancelar</string>
@@ -429,7 +429,7 @@
     <string name="market_appeal_dialog_reason_label">Porque está a recorrer?</string>
     <string name="market_appeal_dialog_title">Recorrer da remoção</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
-    <string name="market_bid_dialog_amount_label">A sua oferta</string>
+    <string name="market_bid_dialog_amount_label">A sua licitação</string>
     <string name="market_bid_dialog_current_high">Oferta máxima atual: %1$s</string>
     <string name="market_bid_dialog_failed">Não foi possível registar a oferta</string>
     <string name="market_bid_dialog_invalid_amount">Introduza um valor superior à oferta atual</string>
@@ -607,7 +607,7 @@
     <string name="market_sale_dispute_state_responded">Aguardando decisão</string>
     <string name="market_sale_dispute_stripe_reason">Motivo do estorno da Stripe: %1$s</string>
     <string name="market_sale_fee_gross">Bruto</string>
-    <string name="market_sale_fee_mochi">Taxa do Mochi</string>
+    <string name="market_sale_fee_mochi">Taxa Mochi</string>
     <string name="market_sale_fee_payout">Pagamento líquido</string>
     <string name="market_sale_fee_stripe">Taxa de processamento da Stripe</string>
     <string name="market_sale_fee_stripe_note">As taxas de processamento da Stripe são mostradas no seu painel da Stripe.</string>
@@ -628,7 +628,7 @@
     <string name="market_saved_empty_title">Nenhuma listagem salva</string>
     <string name="market_search_placeholder">Pesquisar no mercado</string>
     <string name="market_status_past_due">Atrasado</string>
-    <string name="market_stripe_onboarding_action">Continuar configuração</string>
+    <string name="market_stripe_onboarding_action">Continuar a configuração</string>
     <string name="market_stripe_onboarding_body">Conclua a configuração da Stripe antes de aceitar pagamentos.</string>
     <string name="market_stripe_onboarding_failed">Não foi possível abrir a Stripe</string>
     <string name="market_stripe_onboarding_opening">Abrindo a Stripe…</string>
@@ -659,7 +659,7 @@
     <string name="market_account_seller_card_view">Ver definições de vendedor</string>
     <string name="market_account_vat_label">IVA / NIF</string>
     <string name="market_seller_activate_action">Ativar conta de vendedor</string>
-    <string name="market_seller_activating">A ativar...</string>
+    <string name="market_seller_activating">A ativar…</string>
     <string name="market_seller_become_heading">Torne-se vendedor</string>
     <string name="market_seller_become_title">Torne-se vendedor</string>
     <string name="market_seller_check_status">Verificar estado</string>

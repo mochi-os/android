@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Odhlásiť odber</string>
     <string name="forums_list_unsubscribe_title">Odhlásiť odber</string>
     <string name="forums_create_title">Vytvoriť fórum</string>
-    <string name="forums_create_name">Názov</string>
+    <string name="forums_create_name">Názov fóra</string>
     <string name="forums_create_privacy">Súkromie</string>
     <string name="forums_create_private">Súkromné</string>
     <string name="forums_create_public">Verejné</string>
-    <string name="forums_create_action">Vytvoriť</string>
+    <string name="forums_create_action">Vytvoriť fórum</string>
     <string name="forums_find_title">Nájsť fóra</string>
     <string name="forums_find_recommended">Odporúčané</string>
     <string name="forums_find_subscribe">Prihlásiť na odber</string>
@@ -71,7 +71,7 @@
     <string name="forums_ai_account_default">Predvolený účet</string>
     <string name="forums_ai_prompt_reset">Obnoviť na predvolené</string>
     <string name="forums_settings_unsubscribe">Odhlásiť odber</string>
-    <string name="forums_moderation_title">Moderácia</string>
+    <string name="forums_moderation_title">Moderovanie</string>
     <string name="forums_moderation_tab_queue">Fronta</string>
     <string name="forums_moderation_tab_reports">Hlásenia</string>
     <string name="forums_moderation_tab_log">Protokol</string>
@@ -163,7 +163,7 @@
     <string name="forums_ai_post_prompt_label">Pokyn pre značky príspevkov</string>
     <string name="forums_ai_comment_prompt_label">Pokyn pre značky komentárov</string>
     <string name="forums_settings_fingerprint">Odtlačok: %1$s</string>
-    <string name="forums_settings_clear_notifications">Vymazať upozornenia</string>
+    <string name="forums_settings_clear_notifications">Vymazať oznámenia</string>
     <string name="forums_moderation_queue_empty">Nič nečaká</string>
     <string name="forums_moderation_report_details">Podrobnosti: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Vyriešil %1$s — %2$s</string>
@@ -221,11 +221,11 @@
     <string name="forums_all_forums">Všetky fóra</string>
     <string name="forums_create_allow_search">Povoliť komukoľvek vyhľadať fórum</string>
     <string name="forums_rss_clipboard_label">RSS URL fóra</string>
-    <string name="forums_tab_moderation">Moderácia</string>
+    <string name="forums_tab_moderation">Moderovanie</string>
     <string name="forums_access_level_view_full">Iba zobrazenie</string>
     <string name="forums_access_level_none_full">Žiadny prístup</string>
     <string name="forums_access_subject_anyone">Ktokoľvek</string>
-    <string name="forums_access_subject_authenticated">Overení používatelia</string>
+    <string name="forums_access_subject_authenticated">Prihlásení používatelia</string>
     <string name="forums_access_tab_other">Iné</string>
     <string name="forums_access_authenticated_desc">Ktokoľvek, kto je prihlásený</string>
     <string name="forums_access_anyone_desc">Vrátane anonymných používateľov</string>
@@ -279,7 +279,7 @@
     <string name="forums_moderation_restriction_remove_message">Okamžite získa späť plný prístup k fóru.</string>
     <string name="forums_moderation_restriction_remove_title">Odstrániť obmedzenie pre %1$s?</string>
     <string name="forums_moderation_restriction_state_muted">Stlmený</string>
-    <string name="forums_moderation_restriction_state_shadowban">Tieňový ban</string>
+    <string name="forums_moderation_restriction_state_shadowban">Skryto zablokovaný</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Žiadni používatelia neboli stlmení ani zablokovaní</string>
     <string name="forums_moderation_section_premoderation_description">Vyžadovať schválenie predtým, ako sa obsah zobrazí</string>
     <string name="forums_moderation_section_ratelimiting_description">Zabráňte spamu obmedzením, ako často môžu používatelia prispievať</string>

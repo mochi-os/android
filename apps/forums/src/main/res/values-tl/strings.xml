@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Mag-unsubscribe</string>
     <string name="forums_list_unsubscribe_title">Mag-unsubscribe</string>
     <string name="forums_create_title">Gumawa ng forum</string>
-    <string name="forums_create_name">Pangalan</string>
+    <string name="forums_create_name">Pangalan ng forum</string>
     <string name="forums_create_privacy">Pagkapribado</string>
     <string name="forums_create_private">Pribado</string>
     <string name="forums_create_public">Pampubliko</string>
-    <string name="forums_create_action">Gumawa</string>
+    <string name="forums_create_action">Gumawa ng forum</string>
     <string name="forums_find_title">Maghanap ng mga forum</string>
     <string name="forums_find_recommended">Inirerekomenda</string>
     <string name="forums_find_subscribe">Mag-subscribe</string>
@@ -87,7 +87,7 @@
     <string name="forums_moderation_restriction_type_muted">I-mute</string>
     <string name="forums_moderation_restriction_type_banned">I-ban</string>
     <string name="forums_moderation_section_premoderation">Paunang moderasyon</string>
-    <string name="forums_moderation_section_ratelimiting">Rate Limiting</string>
+    <string name="forums_moderation_section_ratelimiting">Paglilimita ng dalas</string>
     <string name="forums_moderation_require_posts">Kailanganin ang pag-apruba para sa mga bagong post</string>
     <string name="forums_moderation_require_comments">Kailanganin ang pag-apruba para sa mga bagong komento</string>
     <string name="forums_moderation_require_new_users">Kailanganin ang pag-apruba para sa mga bagong user</string>
@@ -156,7 +156,7 @@
     <string name="forums_banner_placeholder">Maligayang pagdating sa forum na ito…</string>
     <string name="forums_ai_mode_label">Mode: %1$s</string>
     <string name="forums_ai_mode_heading">AI mode</string>
-    <string name="forums_ai_mode_off">Naka-off</string>
+    <string name="forums_ai_mode_off">Naka-disable</string>
     <string name="forums_ai_account">AI account</string>
     <string name="forums_ai_prompt_tag">Prompt para sa pag-tag</string>
     <string name="forums_ai_prompt_score">Prompt para sa pagmamarka</string>
@@ -178,7 +178,7 @@
     <string name="forums_report_reason_hate">Pagkamuhi</string>
     <string name="forums_comment_delete_message">Sigurado ka bang gusto mong tanggalin ang komentong ito?</string>
     <string name="forums_comment_replying_to">Tumutugon kay %1$s</string>
-    <string name="forums_comment_clear_reply">I-clear ang tugon</string>
+    <string name="forums_comment_clear_reply">Burahin ang tugon</string>
     <string name="forums_settings_title">Mga setting ng %1$s</string>
     <string name="forums_settings_rename_label">Pangalan ng forum</string>
     <string name="forums_settings_danger_zone">Mapanganib na bahagi</string>
@@ -222,8 +222,8 @@
     <string name="forums_tab_moderation">Moderasyon</string>
     <string name="forums_access_level_view_full">Tingnan lamang</string>
     <string name="forums_access_level_none_full">Walang access</string>
-    <string name="forums_access_subject_anyone">Sinuman</string>
-    <string name="forums_access_subject_authenticated">Mga napatotohanang user</string>
+    <string name="forums_access_subject_anyone">Kahit sino</string>
+    <string name="forums_access_subject_authenticated">Mga naka-authenticate na user</string>
     <string name="forums_access_tab_other">Iba pa</string>
     <string name="forums_access_authenticated_desc">Sinumang naka-log in</string>
     <string name="forums_access_anyone_desc">Kasama ang mga anonymous na user</string>
@@ -240,7 +240,7 @@
     <string name="forums_settings_access_revoked">Binawi ang access</string>
     <string name="forums_settings_member_removed">Naalis ang miyembro</string>
     <string name="forums_settings_prompt_saved">Na-save ang prompt</string>
-    <string name="forums_settings_section_identity">Pagkakakilanlan</string>
+    <string name="forums_settings_section_identity">Identity</string>
     <string name="forums_settings_field_name">Pangalan</string>
     <string name="forums_settings_field_entity_id">Entity ID</string>
     <string name="forums_settings_field_fingerprint_label">Fingerprint</string>
@@ -257,8 +257,8 @@
     <string name="forums_access_select_rule">Pumili ng panuntunan</string>
     <string name="forums_ai_actions_label">Mga aksyon ng AI sa mga post</string>
     <string name="forums_ai_prompt_custom">Pasadya</string>
-    <string name="forums_ai_prompt_score_label">Prompt sa pagpuntos</string>
-    <string name="forums_ai_prompt_tag_label">Prompt sa tag</string>
+    <string name="forums_ai_prompt_score_label">Prompt ng score</string>
+    <string name="forums_ai_prompt_tag_label">Prompt ng tag</string>
     <string name="forums_ai_prompt_variables">Mga variable: %1$s</string>
     <string name="forums_link">Link</string>
     <string name="forums_moderation_ban_message">Mawawalan sila ng access sa forum hangga\'t hindi mo inaalis ang paghihigpit.</string>
@@ -277,7 +277,7 @@
     <string name="forums_moderation_restriction_remove_message">Agad nilang mababawi ang buong access sa forum.</string>
     <string name="forums_moderation_restriction_remove_title">Alisin ang paghihigpit kay %1$s?</string>
     <string name="forums_moderation_restriction_state_muted">Naka-mute</string>
-    <string name="forums_moderation_restriction_state_shadowban">Shadowban</string>
+    <string name="forums_moderation_restriction_state_shadowban">Tahimik na na-ban</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Walang user na na-mute o na-ban</string>
     <string name="forums_moderation_section_premoderation_description">Mag-atas ng pag-apruba bago maging nakikita ang nilalaman</string>
     <string name="forums_moderation_section_ratelimiting_description">Pigilan ang spam sa pamamagitan ng paglilimita kung gaano kadalas makakapag-post ang mga user</string>
@@ -286,7 +286,7 @@
     <string name="forums_moderation_unit_replies">tugon</string>
     <string name="forums_moderation_unit_seconds">segundo</string>
     <string name="forums_settings_ai_updated">Na-update ang mga setting ng AI</string>
-    <string name="forums_settings_forum_renamed">Napalitan ang pangalan ng forum</string>
+    <string name="forums_settings_forum_renamed">Na-rename ang forum</string>
     <string name="forums_settings_name_clear_cd">I-clear ang pangalan</string>
     <string name="forums_settings_unsubscribe_section">Mag-unsubscribe sa forum</string>
     <string name="forums_share_link_title">Link ng forum</string>

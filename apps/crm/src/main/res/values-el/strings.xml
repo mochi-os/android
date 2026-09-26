@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Εικονίδιο</string>
     <string name="crm_option_icon_placeholder">π.χ. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Διαγραφή εγγραφής</string>
-    <string name="crm_settings_delete_crm">Διαγραφή έργου</string>
+    <string name="crm_settings_delete_crm">Διαγραφή CRM</string>
     <string name="crm_settings_delete_confirm_title">Διαγραφή CRM</string>
     <string name="crm_settings_unsubscribe_title">Διαγραφή εγγραφής</string>
     <string name="crm_settings_unsubscribe_message">Είστε βέβαιοι ότι θέλετε να καταργήσετε τη συνδρομή σας από αυτό το CRM;</string>
@@ -161,7 +161,7 @@
     <string name="crm_parent_none">Χωρίς γονέα</string>
     <string name="crm_links_empty">Δεν υπάρχουν σύνδεσμοι</string>
     <string name="crm_links_section_relates">Σχετίζεται με</string>
-    <string name="crm_links_section_duplicated_by">Διπλασιάζεται από</string>
+    <string name="crm_links_section_duplicated_by">Διπλότυπο από</string>
     <string name="crm_links_type">Τύπος συνδέσμου</string>
     <string name="crm_links_type_relates">Σχετίζεται με</string>
     <string name="crm_links_remove">Αφαίρεση συνδέσμου</string>

@@ -4,8 +4,8 @@
     <string name="calendars_subscribe_submit">Підписатися</string>
     <string name="calendars_subscribe_url">Адреса</string>
     <string name="calendars_connect_device">Підключити пристрій</string>
-    <string name="calendars_preferences">Налаштування</string>
-    <string name="calendars_name">Ім\'я</string>
+    <string name="calendars_preferences">Параметри</string>
+    <string name="calendars_name">Назва</string>
     <string name="calendars_rename">Перейменувати</string>
     <string name="calendars_delete">Видалити</string>
     <string name="calendars_previous">Попередній</string>
@@ -57,10 +57,10 @@
     <string name="calendars_drawer_title">Календарі</string>
     <string name="calendars_drawer_open">Календарі</string>
     <string name="calendars_calendar_menu">Параметри: %1$s</string>
-    <string name="calendars_only_this">Лише цей</string>
+    <string name="calendars_only_this">Лише цю</string>
     <string name="calendars_create">Створити календар</string>
     <string name="calendars_subscribe">Підписатися на календар</string>
-    <string name="calendars_poll">Оновити зараз</string>
+    <string name="calendars_poll">Перевірити зараз</string>
     <string name="calendars_delete_title">Видалити %1$s?</string>
     <string name="calendars_delete_message">Його події буде видалено разом із ним.</string>
     <string name="calendars_today">Сьогодні</string>
@@ -74,9 +74,9 @@
     <string name="calendars_event_new">Нова подія</string>
     <string name="calendars_event_edit">Редагувати подію</string>
     <string name="calendars_event_calendar">Календар</string>
-    <string name="calendars_event_allday">Цілий день</string>
+    <string name="calendars_event_allday">Увесь день</string>
     <string name="calendars_event_finish">Кінець</string>
-    <string name="calendars_event_repeat">Повторення</string>
+    <string name="calendars_event_repeat">Повтор</string>
     <string name="calendars_event_reminder">Нагадування</string>
     <string name="calendars_event_recurring">Повторюється</string>
     <string name="calendars_event_delete_title">Видалити %1$s?</string>
@@ -100,9 +100,9 @@
     <string name="calendars_hours_invalid">Робочий час має закінчуватися після його початку.</string>
     <string name="calendars_work_days">Робочі дні</string>
     <string name="calendars_multiweek_weeks">Показані тижні</string>
-    <string name="calendars_multiweek_previous">Тижнів до поточного</string>
+    <string name="calendars_multiweek_previous">Попередні тижні</string>
     <string name="calendars_default_duration">Типова тривалість події</string>
-    <string name="calendars_default_reminder">Типове нагадування</string>
+    <string name="calendars_default_reminder">Нагадування за замовчуванням</string>
     <string name="calendars_link_title">Посилання на календар</string>
     <string name="calendars_link_copy">Копіювати посилання</string>
     <string name="calendars_link_once">Скопіюйте його зараз: воно більше не відображатиметься.</string>
@@ -160,7 +160,7 @@
     <string name="calendars_link_submit">Зв\'язати</string>
     <string name="calendars_link_sync">Синхронізувати зараз</string>
     <string name="calendars_link_grant">Дозволити доступ до календаря</string>
-    <string name="calendars_link_linked">Зв\'язаний</string>
+    <string name="calendars_link_linked">Пов\'язано</string>
     <string name="calendars_link_marker">Зв\'язаний календар</string>
     <string name="calendars_link_remote_empty">Немає календарів</string>
     <string name="calendars_poll_conflict">Подію змінено з обох боків</string>

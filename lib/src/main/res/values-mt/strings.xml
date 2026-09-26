@@ -56,7 +56,7 @@
     <string name="notifications_title">Notifiki</string>
     <string name="notifications_empty">L-ebda notifiki</string>
     <string name="notifications_empty_unread">Aġġornat kollox</string>
-    <string name="notifications_tab_unread">Mhux maqru</string>
+    <string name="notifications_tab_unread">Mhux moqri</string>
     <string name="notifications_tab_unread_count">Mhux maqru (%1$d)</string>
     <string name="notifications_tab_all">Kollha</string>
     <string name="notifications_mark_all_read">Immarka kollox maqru</string>
@@ -125,7 +125,7 @@
     <string name="game_chat_move_played">%1$s laqat %2$s</string>
 
     <string name="error_network">Ma jistax jaqbad. Iċċekkja l-konnessjoni tal-internet u erġa\' pprova.</string>
-    <string name="error_authentication_required">Awtentikazzjoni meħtieġa</string>
+    <string name="error_authentication_required">Meħtieġa awtentikazzjoni</string>
     <string name="error_not_found">Ma nstabx</string>
     <string name="error_server">Żball tas-server (%1$d). Jekk jogħġbok erġa\' pprova aktar tard.</string>
     <string name="error_unexpected">Seħħ żball mhux mistenni</string>
@@ -164,7 +164,7 @@
     <string name="bootstrap_sign_in_different_server">Idħol f\'server differenti</string>
     <string name="common_retry">Erġa\' pprova</string>
     <string name="common_more_options">Aktar għażliet</string>
-    <string name="common_collapse">Naqqas</string>
+    <string name="common_collapse">Aġbor</string>
     <string name="common_expand">Espandi</string>
     <string name="common_play_video">Daqq il-video</string>
     <string name="place_picker_name">Isem tal-post</string>
@@ -178,7 +178,7 @@
     <string name="notifications_clear">Neħħi n-notifiki</string>
     <string name="entity_avatar_alt">Avatar għal %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
-    <string name="format_time_just_now">Issa stess</string>
+    <string name="format_time_just_now">Issa</string>
     <string name="format_time_minutes_ago">%1$dm ilu</string>
     <string name="format_time_hours_ago">%1$ds ilu</string>
     <string name="format_time_days_ago">%1$dj ilu</string>

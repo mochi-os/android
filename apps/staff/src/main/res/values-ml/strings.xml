@@ -254,7 +254,7 @@
     <string name="staff_filter_label_moderation">മോഡറേഷൻ</string>
     <string name="staff_filter_label_query">തിരയുക</string>
     <string name="staff_filter_label_seller">വിൽപ്പനക്കാരൻ</string>
-    <string name="staff_filter_label_status">സ്ഥിതി</string>
+    <string name="staff_filter_label_status">സ്റ്റാറ്റസ്</string>
     <string name="staff_filter_label_type">തരം</string>
     <string name="staff_listings_action_approve_title">ലിസ്റ്റിംഗ് അംഗീകരിക്കുക</string>
     <string name="staff_listings_action_reject_title">ലിസ്റ്റിംഗ് നിരസിക്കുക</string>
@@ -356,7 +356,7 @@
     <string name="staff_sidebar_disputes">തർക്കങ്ങൾ</string>
     <string name="staff_sidebar_listings">ലിസ്റ്റിംഗുകൾ</string>
     <string name="staff_sidebar_management">മാനേജ്മെന്റ്</string>
-    <string name="staff_sidebar_market">മാർക്കറ്റ്</string>
+    <string name="staff_sidebar_market">വിപണി</string>
     <string name="staff_sidebar_moderation">മോഡറേഷൻ ലോഗ്</string>
     <string name="staff_sidebar_overview">അവലോകനം</string>
     <string name="staff_sidebar_reports">റിപ്പോർട്ടുകൾ</string>

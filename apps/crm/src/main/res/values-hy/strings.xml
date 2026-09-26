@@ -12,7 +12,7 @@
     <string name="crm_create_action">Ստեղծել</string>
     <string name="crm_find_title">Գտնել CRM-ներ</string>
     <string name="crm_find_recommended">Առաջարկվող</string>
-    <string name="crm_loading">Կողպված է</string>
+    <string name="crm_loading">Բեռնվում է…</string>
     <string name="crm_watched">Հետևված</string>
     <string name="crm_create_object">Ստեղծել օբյեկտ</string>
     <string name="crm_search">Որոնել</string>
@@ -159,7 +159,7 @@
     <string name="crm_parent_none">Ծնող չկա</string>
     <string name="crm_links_empty">Կապեր չկան</string>
     <string name="crm_links_section_relates">Կապված է</string>
-    <string name="crm_links_section_duplicated_by">Կրկնօրինակված է ըստ</string>
+    <string name="crm_links_section_duplicated_by">Կրկնօրինակված է</string>
     <string name="crm_links_type">Կապի տեսակ</string>
     <string name="crm_links_type_relates">Կապված է</string>
     <string name="crm_links_remove">Հեռացնել հղումը</string>
@@ -201,12 +201,12 @@
     <string name="crm_classes_empty">Դասեր սահմանված չեն</string>
     <string name="crm_class_label">Դաս՝ %1$s</string>
     <string name="crm_class_title_field_description">Որ դաշտն օգտագործել որպես այս դասի օբյեկտների ցուցադրման վերնագիր։</string>
-    <string name="crm_class_title_field_default">Կանխադրված (ընթեռնելի)</string>
+    <string name="crm_class_title_field_default">Լռելյայն (ընթեռնելի)</string>
     <string name="crm_class_parents">Ծնող դասեր</string>
     <string name="crm_class_delete_message">Վստա՞հ եք, որ ցանկանում եք ջնջել \"%1$s\" դասը։ Բոլոր դաշտերը և դրանց ընտրանքները նույնպես կջնջվեն։</string>
     <string name="crm_field_type_enumerated">Թվարկված</string>
     <string name="crm_field_label">Դաշտ՝ %1$s</string>
-    <string name="crm_field_readonly">Միայն կարդալու</string>
+    <string name="crm_field_readonly">Միայն կարդալու համար</string>
     <string name="crm_field_sortable">Տեսակավորելի</string>
     <string name="crm_field_filterable">Զտելի</string>
     <string name="crm_field_show_on_card">Ցույց տալ քարտի վրա</string>

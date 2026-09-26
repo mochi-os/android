@@ -9,7 +9,7 @@
     <string name="projects_list_logout">Odjavi se</string>
     <string name="projects_list_create">Kreiraj projekt</string>
     <string name="projects_create_title">Kreiraj projekt</string>
-    <string name="projects_create_name">Ime</string>
+    <string name="projects_create_name">Naziv</string>
     <string name="projects_create_description">Opis</string>
     <string name="projects_create_prefix">Prefiks</string>
     <string name="projects_create_privacy">Privatnost</string>
@@ -114,7 +114,7 @@
     <string name="projects_classes_add">Dodaj klasu</string>
     <string name="projects_classes_add_dialog_title">Dodaj klasu</string>
     <string name="projects_classes_create">Kreiraj</string>
-    <string name="projects_class_name">Ime</string>
+    <string name="projects_class_name">Naziv</string>
     <string name="projects_class_save_name">Sačuvaj naziv</string>
     <string name="projects_class_title_field">Polje naslova</string>
     <string name="projects_class_merge_requests">Zahtjevi za spajanje</string>
@@ -127,7 +127,7 @@
     <string name="projects_field_type_user">Korisnik</string>
     <string name="projects_field_type_date">Datum</string>
     <string name="projects_field_type_checklist">Lista</string>
-    <string name="projects_field_name">Ime</string>
+    <string name="projects_field_name">Naziv</string>
     <string name="projects_field_type">Tip</string>
     <string name="projects_field_flags">Zastave</string>
     <string name="projects_field_required">Obavezno</string>
@@ -186,9 +186,9 @@
     <string name="projects_object_unwatch">Prestani pratiti</string>
     <string name="projects_object_tab_watchers">Pratioci</string>
     <string name="projects_watchers_empty">Još nema pratilaca</string>
-    <string name="projects_object_delete_title">Izbriši objekat</string>
+    <string name="projects_object_delete_title">Obriši objekat</string>
     <string name="projects_object_delete_message">Jeste li sigurni da želite izbrisati ovaj objekat? Ova radnja se ne može poništiti.</string>
-    <string name="projects_parent_none">Nema roditelja</string>
+    <string name="projects_parent_none">Bez nadređenog</string>
     <string name="projects_links_empty">Nema veza</string>
     <string name="projects_links_section_relates">Povezano sa</string>
     <string name="projects_links_section_duplicated_by">Duplicirano od</string>
@@ -197,9 +197,9 @@
     <string name="projects_links_search_placeholder">Pretraži objekte</string>
     <string name="projects_links_remove">Ukloni vezu</string>
     <string name="projects_comment_replying_to">Odgovor na %1$s</string>
-    <string name="projects_comment_clear_reply">Poništi odgovor</string>
+    <string name="projects_comment_clear_reply">Otkaži odgovor</string>
     <string name="projects_comment_placeholder">Dodaj komentar</string>
-    <string name="projects_comment_remove_attachment">Ukloni privitak</string>
+    <string name="projects_comment_remove_attachment">Ukloni prilog</string>
     <string name="projects_property_pick_date">Odaberi datum</string>
     <string name="projects_property_ok">U redu</string>
     <string name="projects_property_add_item">Dodaj stavku</string>
@@ -212,8 +212,8 @@
     <string name="projects_activity_cleared">obrisao/la %1$s</string>
     <string name="projects_activity_updated">ažurirao/la %1$s</string>
     <string name="projects_activity_made_change">napravio/la promjenu</string>
-    <string name="projects_attachment_empty">Nema privitaka</string>
-    <string name="projects_attachment_default_name">privitak</string>
+    <string name="projects_attachment_empty">Nema priloga</string>
+    <string name="projects_attachment_default_name">prilog</string>
     <string name="projects_attachment_size_bytes">%1$d B</string>
     <string name="projects_attachment_size_kb">%1$d KB</string>
     <string name="projects_attachment_size_mb">%1$d MB</string>
@@ -238,7 +238,7 @@
     <string name="projects_request_create_title">Kreiraj zahtjev za spajanje</string>
     <string name="projects_request_field_target">Ciljna grana</string>
     <string name="projects_diff_title">Razlika: %1$s -&gt; %2$s</string>
-    <string name="projects_tree_collapse">Skupi</string>
+    <string name="projects_tree_collapse">Sklopi</string>
     <string name="projects_tree_expand">Proširi</string>
     <string name="projects_tree_move">Premjesti</string>
     <string name="projects_tree_move_to_parent">Premjesti u nadređeni</string>
@@ -274,7 +274,7 @@
     <string name="projects_class_merge_requests_description">Dozvoli zahtjeve za spajanje na objektima ove klase.</string>
     <string name="projects_class_parents">Nadređene klase</string>
     <string name="projects_class_move_up">Pomjeri gore</string>
-    <string name="projects_class_move_down">Pomjeri dole</string>
+    <string name="projects_class_move_down">Pomjeri dolje</string>
     <string name="projects_class_delete_message">Jeste li sigurni da želite obrisati klasu \"%1$s\"? Sva polja i njihove opcije također će biti obrisani.</string>
     <string name="projects_field_type_enumerated">Nabrojano</string>
     <string name="projects_field_label">Polje: %1$s</string>
@@ -289,7 +289,7 @@
     <string name="projects_field_validation">Validacija</string>
     <string name="projects_field_min_length">Minimalna dužina</string>
     <string name="projects_field_max_length">Maksimalna dužina</string>
-    <string name="projects_field_pattern">Uzorak (regex)</string>
+    <string name="projects_field_pattern">Obrazac (regex)</string>
     <string name="projects_field_rows">Redovi (visina tekstualnog polja)</string>
     <string name="projects_field_no_options">Nema definisanih opcija</string>
     <string name="projects_field_delete_message">Jeste li sigurni da želite obrisati polje \"%1$s\"? Sve opcije i vrijednosti će biti izgubljene.</string>
@@ -314,7 +314,7 @@
     <string name="projects_design_preview_empty">Nema ništa za prikazati</string>
 
     <string name="projects_create_choose_template">Odaberite šablon</string>
-    <string name="projects_create_next">Dalje</string>
+    <string name="projects_create_next">Sljedeće</string>
     <string name="projects_filter">Filter</string>
     <string name="projects_link">Veza</string>
     <string name="projects_filter_clear_all">Očisti sve</string>
@@ -330,7 +330,7 @@
     <string name="projects_settings_field_fingerprint">Otisak</string>
     <string name="projects_settings_field_server">Server</string>
     <string name="projects_access_subject_anyone">Bilo ko</string>
-    <string name="projects_access_subject_authenticated">Autentificirani korisnici</string>
+    <string name="projects_access_subject_authenticated">Prijavljeni korisnici</string>
     <string name="projects_access_select_role">Odaberi ulogu</string>
     <string name="projects_access_role_view">Samo pregled</string>
     <string name="projects_access_role_none">Nema pristupa</string>

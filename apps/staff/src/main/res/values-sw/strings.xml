@@ -211,7 +211,7 @@
     <string name="staff_dashboard_kpi_total_orders">Jumla ya maagizo</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Hapana</string>
-    <string name="staff_dashboard_open_sidebar">Fungua upau wa kando</string>
+    <string name="staff_dashboard_open_sidebar">Fungua upau wa pembeni</string>
     <string name="staff_dashboard_order_fallback">Agizo #%1$s</string>
     <string name="staff_dashboard_system">Mfumo</string>
     <string name="staff_dashboard_tab_audit">Ukaguzi</string>

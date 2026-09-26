@@ -8,12 +8,12 @@
     <string name="forums_list_logout">Phuma</string>
     <string name="forums_list_unsubscribe">Yeka ukurhuma</string>
     <string name="forums_list_unsubscribe_title">Yeka ukurhuma</string>
-    <string name="forums_create_title">Yenza iforam</string>
-    <string name="forums_create_name">Igama</string>
+    <string name="forums_create_title">Yenza iforamu</string>
+    <string name="forums_create_name">Igama leforamu</string>
     <string name="forums_create_privacy">Ubumfihlo</string>
     <string name="forums_create_private">Yangasese</string>
     <string name="forums_create_public">Esidlangalaleni</string>
-    <string name="forums_create_action">Yenza</string>
+    <string name="forums_create_action">Yenza iforamu</string>
     <string name="forums_find_title">Fumana iiforamu</string>
     <string name="forums_find_recommended">Iyacetyiswa</string>
     <string name="forums_find_subscribe">Rhuma</string>
@@ -156,7 +156,7 @@
     <string name="forums_banner_placeholder">Wamkelekile kule nkundla…</string>
     <string name="forums_ai_mode_label">Imodi: %1$s</string>
     <string name="forums_ai_mode_heading">Imodi ye-AI</string>
-    <string name="forums_ai_mode_off">Cima</string>
+    <string name="forums_ai_mode_off">Icinyiwe</string>
     <string name="forums_ai_account">Iakhawunti ye-AI</string>
     <string name="forums_ai_prompt_tag">Isikhokelo sokuthegisha</string>
     <string name="forums_ai_prompt_score">Isikhokelo sokunika amanqaku</string>
@@ -180,7 +180,7 @@
     <string name="forums_comment_replying_to">Uphendula ku-%1$s</string>
     <string name="forums_comment_clear_reply">Cima impendulo</string>
     <string name="forums_settings_title">Izicwangciso ze-%1$s</string>
-    <string name="forums_settings_rename_label">Igama lenkundla</string>
+    <string name="forums_settings_rename_label">Igama leforamu</string>
     <string name="forums_settings_danger_zone">Indawo eyingozi</string>
     <string name="forums_settings_delete_message">Oku kuya kuyicima ngonaphakade inkundla nazo zonke izithuba zayo. Oku akunakubuyiselwa.</string>
 
@@ -216,7 +216,7 @@
     <string name="forums_attachment_move_up">Hambisa phezulu</string>
     <string name="forums_attachment_move_down">Hambisa ezantsi</string>
     <string name="forums_post_comments">Izimvo</string>
-    <string name="forums_all_forums">Onke amaqonga</string>
+    <string name="forums_all_forums">Zonke iiforamu</string>
     <string name="forums_create_allow_search">Vumela nabani na ukuba akhangele iqonga</string>
     <string name="forums_rss_clipboard_label">I-URL ye-RSS yeqonga</string>
     <string name="forums_tab_moderation">Ulungelelwaniso</string>
@@ -276,8 +276,8 @@
     <string name="forums_moderation_restriction_by">Ngu-%1$s</string>
     <string name="forums_moderation_restriction_remove_message">Bafumana ufikelelo olupheleleyo kweli qonga ngoko nangoko.</string>
     <string name="forums_moderation_restriction_remove_title">Susa isithintelo ku-%1$s?</string>
-    <string name="forums_moderation_restriction_state_muted">Kuthuliswe</string>
-    <string name="forums_moderation_restriction_state_shadowban">Ukuvimbela okufihlakeleyo</string>
+    <string name="forums_moderation_restriction_state_muted">Uthuliswe</string>
+    <string name="forums_moderation_restriction_state_shadowban">Uvalelwe ngasese</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Akukho basebenzisi bathuliswayo okanye bavinjelweyo</string>
     <string name="forums_moderation_section_premoderation_description">Funa imvume phambi kokuba umxholo ubonakale</string>
     <string name="forums_moderation_section_ratelimiting_description">Thintela ugaxekile ngokunciphisa ukuba abasebenzisi banokuposa kangakanani</string>
@@ -286,10 +286,10 @@
     <string name="forums_moderation_unit_replies">iimpendulo</string>
     <string name="forums_moderation_unit_seconds">imizuzwana</string>
     <string name="forums_settings_ai_updated">Useto lwe-AI luhlaziyiwe</string>
-    <string name="forums_settings_forum_renamed">Iqonga liphinde lathiywa</string>
+    <string name="forums_settings_forum_renamed">Iforamu inikwe igama elitsha</string>
     <string name="forums_settings_name_clear_cd">Cima igama</string>
     <string name="forums_settings_unsubscribe_section">Rhoxisa ukubhalisa kweli qonga</string>
-    <string name="forums_share_link_title">Ikhonkco leqonga</string>
+    <string name="forums_share_link_title">Ikhonkco leforamu</string>
     <string name="forums_find_found_by_url">Ifunyenwe nge-URL</string>
     <string name="forums_moderation_pending_posts">Izithuba ezilindileyo (%1$d)</string>
     <string name="forums_moderation_pending_comments">Izimvo ezilindileyo (%1$d)</string>

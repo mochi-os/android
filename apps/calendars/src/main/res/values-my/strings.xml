@@ -4,12 +4,12 @@
     <string name="calendars_subscribe_submit">စာရင်းသွင်းမည်</string>
     <string name="calendars_subscribe_url">လိပ်စာ</string>
     <string name="calendars_connect_device">ကိရိယာ ချိတ်ဆက်မည်</string>
-    <string name="calendars_preferences">နှစ်သက်ရာများ</string>
+    <string name="calendars_preferences">ဦးစားပေးချက်များ</string>
     <string name="calendars_name">အမည်</string>
     <string name="calendars_rename">အမည်ပြောင်း</string>
     <string name="calendars_delete">ဖျက်မည်</string>
     <string name="calendars_previous">နောက်သို့</string>
-    <string name="calendars_next">နောက်တစ်ခု</string>
+    <string name="calendars_next">ရှေ့သို့</string>
     <string name="calendars_view">မြင်ကွင်း</string>
     <string name="calendars_view_list">စာရင်း</string>
     <string name="calendars_list_search">ရှာဖွေ</string>
@@ -73,7 +73,7 @@
     <string name="calendars_workweek">အလုပ်ပတ်</string>
     <string name="calendars_range">%1$s မှ %2$s</string>
     <string name="calendars_truncated">ဤကာလအတွင်း အစီအစဉ် အချို့ကို မပြထားပါ။</string>
-    <string name="calendars_list_empty">အစီအစဉ် မရှိပါ</string>
+    <string name="calendars_list_empty">အစီအစဉ်များ မရှိပါ</string>
     <plurals name="calendars_more">
         <item quantity="other">+%1$d ခု ထပ်မံ</item>
     </plurals>
@@ -151,7 +151,7 @@
     <string name="calendars_link_submit">ချိတ်ဆက်</string>
     <string name="calendars_link_sync">ယခု ထပ်တူပြုမည်</string>
     <string name="calendars_link_grant">ပြက္ခဒိန် ဝင်ရောက်ခွင့် ခွင့်ပြုမည်</string>
-    <string name="calendars_link_linked">ချိတ်ဆက်ပြီး</string>
+    <string name="calendars_link_linked">ချိတ်ဆက်ထား</string>
     <string name="calendars_link_marker">ချိတ်ဆက်ထားသော ပြက္ခဒိန်</string>
     <string name="calendars_link_remote_empty">ပြက္ခဒိန်များ မရှိပါ</string>
     <string name="calendars_poll_conflict">အစီအစဉ်တစ်ခု နှစ်ဖက်စလုံးတွင် ပြောင်းလဲသွားသည်</string>
@@ -159,11 +159,11 @@
     <string name="calendars_poll_unauthorised">ပြက္ခဒိန်၏ ဆာဗာက အကောင့်၏ အထောက်အထားများကို ငြင်းပယ်လိုက်သည်</string>
     <string name="calendars_subscribe_username">သုံးစွဲသူအမည်</string>
     <string name="calendars_subscribe_password">စကားဝှက်</string>
-    <string name="calendars_subscribe_connect">ချိတ်ဆက်ပါ</string>
+    <string name="calendars_subscribe_connect">ချိတ်ဆက်</string>
     <string name="calendars_subscribe_server">အခြား Mochi သို့မဟုတ် CalDAV ဆာဗာ</string>
     <string name="calendars_subscribe_address">ထုတ်ဝေထားသော ပြက္ခဒိန်လိပ်စာ (ဖတ်ရန်သာ)</string>
     <string name="calendars_subscribe_password_apple">အက်ပ်အတွက် သီးသန့်စကားဝှက်</string>
-    <string name="calendars_subscribe_server_url">ဆာဗာလိပ်စာ</string>
+    <string name="calendars_subscribe_server_url">ဆာဗာ လိပ်စာ</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google ပြက္ခဒိန်</string>

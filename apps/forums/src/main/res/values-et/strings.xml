@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Tühista tellimus</string>
     <string name="forums_list_unsubscribe_title">Tühista tellimus</string>
     <string name="forums_create_title">Loo foorum</string>
-    <string name="forums_create_name">Nimi</string>
+    <string name="forums_create_name">Foorumi nimi</string>
     <string name="forums_create_privacy">Privaatsus</string>
     <string name="forums_create_private">Privaatne</string>
     <string name="forums_create_public">Avalik</string>
-    <string name="forums_create_action">Loo</string>
+    <string name="forums_create_action">Loo foorum</string>
     <string name="forums_find_title">Otsi foorumeid</string>
     <string name="forums_find_recommended">Soovitatud</string>
     <string name="forums_find_subscribe">Telli</string>
@@ -154,7 +154,7 @@
     <string name="forums_banner_placeholder">Tere tulemast sellesse foorumisse…</string>
     <string name="forums_ai_mode_label">Režiim: %1$s</string>
     <string name="forums_ai_mode_heading">AI režiim</string>
-    <string name="forums_ai_mode_off">Väljas</string>
+    <string name="forums_ai_mode_off">Keelatud</string>
     <string name="forums_ai_account">AI konto</string>
     <string name="forums_ai_prompt_tag">Sildistamise viip</string>
     <string name="forums_ai_prompt_score">Hindamise viip</string>
@@ -257,8 +257,8 @@
     <string name="forums_access_select_rule">Valige reegel</string>
     <string name="forums_ai_actions_label">TI toimingud postitustega</string>
     <string name="forums_ai_prompt_custom">Kohandatud</string>
-    <string name="forums_ai_prompt_score_label">Hindamisviip</string>
-    <string name="forums_ai_prompt_tag_label">Siltide viip</string>
+    <string name="forums_ai_prompt_score_label">Skoori viip</string>
+    <string name="forums_ai_prompt_tag_label">Sildi viip</string>
     <string name="forums_ai_prompt_variables">Muutujad: %1$s</string>
     <string name="forums_link">Link</string>
     <string name="forums_moderation_ban_message">Kaotab juurdepääsu foorumile, kuni piirangu eemaldate.</string>
@@ -277,7 +277,7 @@
     <string name="forums_moderation_restriction_remove_message">Saab kohe foorumile täieliku juurdepääsu tagasi.</string>
     <string name="forums_moderation_restriction_remove_title">Kas eemaldada kasutaja %1$s piirang?</string>
     <string name="forums_moderation_restriction_state_muted">Vaigistatud</string>
-    <string name="forums_moderation_restriction_state_shadowban">Varjukeeld</string>
+    <string name="forums_moderation_restriction_state_shadowban">Varjatult blokeeritud</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Ühtegi kasutajat pole vaigistatud ega keelatud</string>
     <string name="forums_moderation_section_premoderation_description">Nõua kinnitust, enne kui sisu muutub nähtavaks</string>
     <string name="forums_moderation_section_ratelimiting_description">Vältige rämpsposti, piirates postitamise sagedust</string>

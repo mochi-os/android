@@ -154,11 +154,11 @@
     <string name="people_contacts_friend">Vriend</string>
     <string name="people_contacts_invite">Nooi uit</string>
     <string name="people_contacts_unfriend_confirm">%1$s sal nie meer jou vriend wees nie. Die kontak bly in jou adresboek.</string>
-    <string name="people_contacts_delete">Vee kontak uit</string>
+    <string name="people_contacts_delete">Verwyder kontak</string>
     <string name="people_contacts_delete_confirm">Vee %1$s uit jou kontakte uit?</string>
     <string name="people_contacts_delete_friend_confirm">Vee %1$s uit jou kontakte uit? Julle vriendskap eindig ook.</string>
     <string name="people_contact_new_title">Nuwe kontak</string>
-    <string name="people_contact_edit_title">Redigeer kontak</string>
+    <string name="people_contact_edit_title">Wysig kontak</string>
     <string name="people_contact_given">Voornaam</string>
     <string name="people_contact_family">Van</string>
     <string name="people_contact_nickname">Bynaam</string>
@@ -166,7 +166,7 @@
     <string name="people_contact_add_phone">Voeg telefoon by</string>
     <string name="people_contact_add_address">Voeg adres by</string>
     <string name="people_contact_street">Straat</string>
-    <string name="people_contact_birthday">Verjaarsdag</string>
+    <string name="people_contact_birthday">Verjaardag</string>
     <string name="people_contact_organisation">Organisasie</string>
     <string name="people_contact_url">Webwerf</string>
     <string name="people_contact_note">Nota</string>

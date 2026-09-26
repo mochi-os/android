@@ -284,7 +284,7 @@
     <string name="staff_filter_chip_remove">Rimuovi filtro</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderazione</string>
-    <string name="staff_filter_label_query">Ricerca</string>
+    <string name="staff_filter_label_query">Cerca</string>
     <string name="staff_filter_label_seller">Venditore</string>
     <string name="staff_filter_label_status">Stato</string>
     <string name="staff_filter_label_type">Tipo</string>

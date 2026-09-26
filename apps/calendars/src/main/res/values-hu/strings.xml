@@ -4,12 +4,12 @@
     <string name="calendars_subscribe_submit">Feliratkozás</string>
     <string name="calendars_subscribe_url">Cím</string>
     <string name="calendars_connect_device">Eszköz csatlakoztatása</string>
-    <string name="calendars_preferences">Beállítások</string>
+    <string name="calendars_preferences">Preferenciák</string>
     <string name="calendars_name">Név</string>
     <string name="calendars_rename">Átnevezés</string>
     <string name="calendars_delete">Törlés</string>
     <string name="calendars_previous">Előző</string>
-    <string name="calendars_next">Tovább</string>
+    <string name="calendars_next">Következő</string>
     <string name="calendars_view">Nézet</string>
     <string name="calendars_view_list">Lista</string>
     <string name="calendars_list_search">Keresés</string>
@@ -74,7 +74,7 @@
     <string name="calendars_workweek">Munkahét</string>
     <string name="calendars_range">%1$s – %2$s</string>
     <string name="calendars_truncated">Ebben a tartományban néhány esemény nem jelenik meg.</string>
-    <string name="calendars_list_empty">Nincs esemény</string>
+    <string name="calendars_list_empty">Nincsenek események</string>
     <plurals name="calendars_more">
         <item quantity="one">+%1$d további</item>
         <item quantity="other">+%1$d további</item>
@@ -166,7 +166,7 @@
     <string name="calendars_subscribe_server">Másik Mochi vagy CalDAV szerver</string>
     <string name="calendars_subscribe_address">Közzétett naptár címe (csak olvasható)</string>
     <string name="calendars_subscribe_password_apple">Alkalmazásspecifikus jelszó</string>
-    <string name="calendars_subscribe_server_url">Szerver címe</string>
+    <string name="calendars_subscribe_server_url">Kiszolgáló címe</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Naptár</string>

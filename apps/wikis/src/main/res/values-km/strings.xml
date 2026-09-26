@@ -16,7 +16,7 @@
     <string name="wikis_page_action_rename">ប្តូរឈ្មោះ</string>
     <string name="wikis_page_action_history">ប្រវត្តិ</string>
     <string name="wikis_page_action_delete">លុប</string>
-    <string name="wikis_page_action_section_wiki">Wiki</string>
+    <string name="wikis_page_action_section_wiki">វិគី</string>
     <string name="wikis_page_action_search">ស្វែងរក</string>
     <string name="wikis_page_action_tags">ស្លាក</string>
     <string name="wikis_page_action_recent_changes">ការផ្លាស់ប្តូរថ្មីៗ</string>
@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">យកចេញ</string>
     <string name="wikis_replicas_remove_failed">បរាជ័យក្នុងការដក replica</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi វិគី</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">ការជូនដំណឹងអំពីការកែសម្រួលទំព័រ wiki មតិយោបល់ និងការអញ្ជើញ។</string>
     <string name="wikis_pageview_toc_expand">បង្ហាញមាតិកា</string>

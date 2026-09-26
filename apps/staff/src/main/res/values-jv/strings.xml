@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Staf Mochi</string>
-    <string name="launcher_staff">Mochi Staf</string>
+    <string name="launcher_staff">Staf Mochi</string>
     <string name="staff_accounts_action_ban_title">Blokir akun</string>
     <string name="staff_accounts_action_suspend_title">Setop akun</string>
     <string name="staff_accounts_action_unban_title">Mbukak larangan</string>
@@ -254,9 +254,9 @@
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderasi</string>
     <string name="staff_filter_label_query">Goleki</string>
-    <string name="staff_filter_label_seller">Sing nyade</string>
+    <string name="staff_filter_label_seller">Sing dodol</string>
     <string name="staff_filter_label_status">Status</string>
-    <string name="staff_filter_label_type">Jinis</string>
+    <string name="staff_filter_label_type">Jenis</string>
     <string name="staff_listings_action_approve_title">Setujoni listing</string>
     <string name="staff_listings_action_reject_title">Tolak listing</string>
     <string name="staff_listings_action_remove_title">Cabut listing</string>
@@ -356,7 +356,7 @@
     <string name="staff_sidebar_disputes">Sengketa</string>
     <string name="staff_sidebar_listings">Listing</string>
     <string name="staff_sidebar_management">Manajemèn</string>
-    <string name="staff_sidebar_market">Market</string>
+    <string name="staff_sidebar_market">Pasar</string>
     <string name="staff_sidebar_moderation">Log moderasi</string>
     <string name="staff_sidebar_overview">Tinjauan</string>
     <string name="staff_sidebar_reports">Laporan</string>
@@ -446,7 +446,7 @@
     <string name="staff_disputes_stripe_subscription_canceled">langganan dibatalake</string>
     <string name="staff_disputes_stripe_unrecognized">tagihan ora dikenali</string>
     <string name="staff_listings_seller_verified">Penjual kaverifikasi</string>
-    <string name="staff_moderation_filter_clear">Busak saringan</string>
+    <string name="staff_moderation_filter_clear">Resiki saringan</string>
     <string name="staff_reports_listing_label">Daftar #%1$s</string>
     <string name="staff_reports_meta_details">Rincian pelapor</string>
     <string name="staff_reviews_order_label">pesenan #%1$s</string>

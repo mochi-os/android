@@ -34,15 +34,15 @@
     <string name="market_asset_download">Buufadhu</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
     <string name="market_back">Duuba</string>
-    <string name="market_bid_dialog_amount_label">Caasaan kee</string>
+    <string name="market_bid_dialog_amount_label">Caalbaasii kee</string>
     <string name="market_bid_dialog_cancel">Haquu</string>
     <string name="market_bid_dialog_ceiling_help">Hanga olaanaa kanaatti, fuula duraa turuuf hangi gadi aanaa barbaachisu tarsiifannaa kee ofumaan ol kaasna.</string>
     <string name="market_bid_dialog_instant_win">Bittaan mirkanaa\'e — kaffaltii xumuri</string>
     <string name="market_bid_dialog_invalid_ceiling">Bittaan olaanaa yoo xiqqaate hanga bittaa kee ta\'uu qaba</string>
     <string name="market_bid_dialog_outbid">Tarsiifannaan kee galmaa\'eera garuu yeruma sana ol darbameera. Tarsiisaan biraa hanga olaanaa kan caalu qaba. Tarsiifannaan isaanii amma %1$s dha.</string>
-    <string name="market_bid_dialog_submit">Caasaa fudhadhu</string>
+    <string name="market_bid_dialog_submit">Caalbaasii kenni</string>
     <string name="market_bid_dialog_success">Iyyannoon kaa\'ame</string>
-    <string name="market_bid_dialog_title">Caasaa fudhadhu</string>
+    <string name="market_bid_dialog_title">Caalbaasii kenni</string>
     <string name="market_bid_ended">Gurgurtaan caaltuu xumurame</string>
     <string name="market_bid_high">Caasaa ol aanu</string>
     <string name="market_bids_empty">Murtii gatii hin jiru</string>
@@ -50,7 +50,7 @@
     <string name="market_bids_tab_active">Hojii irra jira</string>
     <string name="market_bids_tab_all">Hunda</string>
     <string name="market_bids_tab_lost">Mo\'atame</string>
-    <string name="market_bids_tab_outbid">Murtii gatii caalu</string>
+    <string name="market_bids_tab_outbid">Caalbaasiin caalame</string>
     <string name="market_bids_tab_won">Mo\'ate</string>
     <string name="market_bids_title">Iyyannoolee</string>
     <string name="market_carousel_main">Suuraa %1$d / %2$d</string>
@@ -89,7 +89,7 @@
     <string name="market_checkout_listing_not_found">Tarreeffamni hin argamne</string>
     <string name="market_checkout_pay_button">Stripe tin kaffalaa</string>
     <string name="market_checkout_payment_failed">Kaffaltiin jalqabamuu hin dandeenye — gurguraan qindaa\'ina kaffaltii xumuruu dhiisuu danda\'a</string>
-    <string name="market_checkout_processing">Hojjetamaa jira…</string>
+    <string name="market_checkout_processing">Adeemsifamaa jira…</string>
     <string name="market_checkout_secure">Kaffaltii nageenyaa Stripe tiin</string>
     <string name="market_checkout_select_option">Filannoo filadhu</string>
     <string name="market_checkout_shipping">Geejjiba</string>
@@ -137,7 +137,7 @@
     <string name="market_editor_description">Ibsa</string>
     <string name="market_editor_interval_monthly">Ji\'aan</string>
     <string name="market_editor_interval_yearly">Waggaa</string>
-    <string name="market_editor_photo_delete">Suuraa haqi</string>
+    <string name="market_editor_photo_delete">Suuraa haquu</string>
     <string name="market_editor_photo_uploading">Olfe\'aa jira…</string>
     <string name="market_editor_photos_add">Suuraawwan dabaluu</string>
     <string name="market_editor_price">Gatii</string>
@@ -181,7 +181,7 @@
     <string name="market_editor_zone_european_union">Gamtaa Awurooppaa</string>
     <string name="market_editor_zone_region">Naannoo</string>
     <string name="market_editor_zone_worldwide">Addunyaa irraa</string>
-    <string name="market_empty_title">Bu\'aa hin jiru</string>
+    <string name="market_empty_title">Bu\'aan hin jiru</string>
     <string name="market_fee_preview_item">Iddoo</string>
     <string name="market_fee_preview_payout">Kaffaltii kee</string>
     <string name="market_filter_all">Hunda</string>
@@ -228,13 +228,13 @@
     <string name="market_listing_detail_message">Ergaa ergi</string>
     <string name="market_listing_detail_message_seller">Gurgurtaa ergaaf ergi</string>
     <string name="market_listing_detail_not_found">Tarreeffamni hin argamne</string>
-    <string name="market_listing_detail_place_bid">Caasaa kennuu</string>
+    <string name="market_listing_detail_place_bid">Caalbaasii kenni</string>
     <string name="market_listing_detail_relist">Deebisanii tarreessi</string>
     <string name="market_listing_detail_report">Tarreeffama gabaasi</string>
     <string name="market_listing_detail_save">Olkaa\'i</string>
     <string name="market_listing_detail_seller_heading">Gurguraa</string>
     <string name="market_listing_detail_share">Tarree qoodi</string>
-    <string name="market_listing_detail_shipping_heading">Geejjiba</string>
+    <string name="market_listing_detail_shipping_heading">Filannoowwan geejjibaa</string>
     <string name="market_listing_detail_subscribe">Galaa\'i</string>
     <string name="market_listing_detail_tags_heading">Tagoota</string>
     <string name="market_listing_detail_title">Tarreeffama</string>
@@ -261,7 +261,7 @@
     <string name="market_listings_relist_failed">Deebi\'ee tarreessuu hin dandeenye</string>
     <string name="market_listings_title">Tarreeffamoota koo</string>
     <string name="market_messages_compose_placeholder">Ergaa barreessaa…</string>
-    <string name="market_messages_inbox_title">Ergaa</string>
+    <string name="market_messages_inbox_title">Ergaalee</string>
     <string name="market_messages_send">Ergi</string>
     <string name="market_messages_thread_listing_chip">Tarreeffama</string>
     <string name="market_messages_thread_title">Marii</string>
@@ -392,8 +392,8 @@
     <string name="market_saved_title">Kan olkaa\'aman</string>
     <string name="market_search_clear">Barbaadii cilliisi</string>
     <string name="market_search_placeholder">Gabaa keessa barbaadi</string>
-    <string name="market_section_categories">Ramaddilee Sakatta\'i</string>
-    <string name="market_section_listings">Tarreeffamtoota Dhiyoo</string>
+    <string name="market_section_categories">Ramaddilee daawwadhu</string>
+    <string name="market_section_listings">Tarreeffamoota dhiyeenyaa</string>
     <string name="market_section_recent">Dhiyeenya ilaalame</string>
     <string name="market_ship_dialog_cancel">Haquu</string>
     <string name="market_ship_dialog_submit">Mirkaneessi</string>
@@ -410,7 +410,7 @@
     <string name="market_sidebar_home">Mana</string>
     <string name="market_sidebar_inbox">Sanduuqa galaa</string>
     <string name="market_sidebar_listings">Tarreeffamtoota</string>
-    <string name="market_sidebar_messages">Ergaa</string>
+    <string name="market_sidebar_messages">Ergaalee</string>
     <string name="market_sidebar_purchases">Bittaa</string>
     <string name="market_sidebar_reviews">Gamaaggamoota</string>
     <string name="market_sidebar_sales">Gurguraawwan</string>
@@ -470,7 +470,7 @@
     <string name="market_type_digital">Dijitaala</string>
     <string name="market_type_physical">Qaamaan</string>
     <string name="market_warnings_title">Akeekkachiisawwan</string>
-    <string name="market_sale_review_response_submitting">Erguu jira…</string>
+    <string name="market_sale_review_response_submitting">Ergamaa jira…</string>
     <string name="market_checkout_subscribing">Galmaa\'aa jira…</string>
     <string name="market_filter_remove">Calaltuu balleessuu</string>
     <string name="market_listings_action_appeal">Komii balleessuu</string>
@@ -563,7 +563,7 @@
     <string name="market_listing_unsave">Kanneen kaa\'aman irraa balleessi</string>
     <string name="market_listings_delete_failed">Tarreeffama balleessuun hin milkoofne</string>
     <string name="market_listings_delete_message">Kun wixinee herrega kee irraa yeroo hundaaf balleessa.</string>
-    <string name="market_listings_delete_title">Tarreeffama balleessuu?</string>
+    <string name="market_listings_delete_title">Tarreeffama haqxa?</string>
     <string name="market_listings_empty_subtitle">Wanta jalqabaa uumuuf Tarreeffama haaraa tuqi.</string>
     <string name="market_listings_load_failed">Tarreeffamoota kee fe\'uun hin milkoofne</string>
     <string name="market_listings_search_placeholder">Tarreeffamoota kee barbaadi</string>
@@ -663,7 +663,7 @@
     <string name="market_seller_become_heading">Gurguraa ta\'i</string>
     <string name="market_seller_become_title">Gurguraa ta\'i</string>
     <string name="market_seller_check_status">Haala mirkaneessi</string>
-    <string name="market_seller_checking">Mirkaneessaa jira...</string>
+    <string name="market_seller_checking">Sakatta\'aa jira…</string>
     <string name="market_seller_connect_stripe">Stripe Walitti Hidhi</string>
     <string name="market_seller_connecting">Fe\'aa jiraa...</string>
     <string name="market_seller_fee_loading">Bal\'ina kaffaltii fe\'aa jiraa...</string>
@@ -691,7 +691,7 @@
     <string name="market_seller_step_stripe_desc">Kaffaltii bitattoota irraa fudhachuuf akkaawuntii Stripe walqabsiisi</string>
     <string name="market_seller_step_stripe_title">Stripe Walitti Hidhi</string>
     <string name="market_seller_stripe_more_info">Stripe odeeffannoo dabalataa kaffaltii fudhachuu dura barbaada. Hojii barbaachisaa Stripe Dashboard keessatti raawwadhuu, ergasiis Haala Mirkaneessi cuqaasi.</string>
-    <string name="market_seller_summary_account_status">Haala akaawuntii</string>
+    <string name="market_seller_summary_account_status">Haala akkaawuntii</string>
     <string name="market_seller_summary_fees">Kaffaltiiwwan</string>
     <string name="market_seller_summary_payments">Kaffaltiwwan</string>
     <string name="market_sidebar_become_seller">Gurguraa ta\'i</string>

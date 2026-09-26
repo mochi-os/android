@@ -64,7 +64,7 @@
     <string name="go_channel_name">Уведомления Го</string>
     <string name="go_channel_description">Уведомления о ходах, пасах, предложениях ничьей и результатах партий.</string>
     <string name="go_open_sidebar">Открыть боковую панель</string>
-    <string name="go_sidebar_active">Активные партии</string>
+    <string name="go_sidebar_active">Активные игры</string>
     <string name="go_empty_active">Пока нет активных партий.</string>
     <string name="go_status_resigned">Сдалась</string>
     <string name="go_new_game_title">Новая партия Го</string>

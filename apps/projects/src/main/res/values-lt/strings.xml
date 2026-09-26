@@ -206,7 +206,7 @@
     <string name="projects_comment_replying_to">Atsakoma į %1$s</string>
     <string name="projects_comment_clear_reply">Išvalyti atsakymą</string>
     <string name="projects_comment_placeholder">Pridėti komentarą</string>
-    <string name="projects_property_pick_date">Pasirinkite datą</string>
+    <string name="projects_property_pick_date">Pasirinkti datą</string>
     <string name="projects_property_ok">Gerai</string>
     <string name="projects_property_add_item">Pridėti elementą</string>
     <string name="projects_property_required">%1$s yra privalomas</string>
@@ -245,7 +245,7 @@
     <string name="projects_request_field_target">Tikslinė šaka</string>
     <string name="projects_diff_title">Skirtumai: %1$s -&gt; %2$s</string>
     <string name="projects_tree_collapse">Sutraukti</string>
-    <string name="projects_tree_expand">Išplėsti</string>
+    <string name="projects_tree_expand">Išskleisti</string>
     <string name="projects_tree_move">Perkelti</string>
     <string name="projects_tree_move_to_parent">Perkelti į tėvinį</string>
     <string name="projects_tree_root_level">(Šakninis lygis)</string>
@@ -276,9 +276,9 @@
     <string name="projects_classes_empty">Klasių nėra</string>
     <string name="projects_class_label">Klasė: %1$s</string>
     <string name="projects_class_title_field_description">Kuris laukas naudojamas kaip rodomas šios klasės objektų pavadinimas.</string>
-    <string name="projects_class_title_field_default">Numatytasis (įskaitomas)</string>
+    <string name="projects_class_title_field_default">Numatytasis (skaitomas)</string>
     <string name="projects_class_merge_requests_description">Leisti šios klasės objektams sujungimo užklausas.</string>
-    <string name="projects_class_parents">Pirminės klasės</string>
+    <string name="projects_class_parents">Tėvinės klasės</string>
     <string name="projects_class_delete_message">Ar tikrai norite ištrinti klasę \"%1$s\"? Visi laukai ir jų parinktys taip pat bus ištrinti.</string>
     <string name="projects_field_type_enumerated">Išvardytas</string>
     <string name="projects_field_label">Laukas: %1$s</string>
@@ -286,12 +286,12 @@
     <string name="projects_field_sortable">Rūšiuojamas</string>
     <string name="projects_field_filterable">Filtruojamas</string>
     <string name="projects_field_show_on_card">Rodyti kortelėje</string>
-    <string name="projects_field_multi">Keli pasirinkimai</string>
-    <string name="projects_field_position">Rodymo vieta</string>
+    <string name="projects_field_multi">Kelių pasirinkimas</string>
+    <string name="projects_field_position">Rodymo padėtis</string>
     <string name="projects_field_position_header">Antraštė</string>
     <string name="projects_field_validation">Tikrinimas</string>
-    <string name="projects_field_min_length">Minimalus ilgis</string>
-    <string name="projects_field_max_length">Maksimalus ilgis</string>
+    <string name="projects_field_min_length">Mažiausias ilgis</string>
+    <string name="projects_field_max_length">Didžiausias ilgis</string>
     <string name="projects_field_pattern">Šablonas (regex)</string>
     <string name="projects_field_rows">Eilutės (teksto srities aukštis)</string>
     <string name="projects_field_no_options">Parinkčių nėra</string>

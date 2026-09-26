@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Feeda Mochi</string>
     <string name="feeds_source_type_feed_memories">Bîranîn</string>
-    <string name="feeds_remove_source">Çavkaniyê rake</string>
+    <string name="feeds_remove_source">Çavkaniyê rake?</string>
     <string name="feeds_suggested_credibility_accept">Qebûl bike</string>
     <string name="feeds_rss_url_copied">URL ya RSS hate kopîkirin</string>
     <string name="feeds_logout">Derkeve</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">URLa RSS</string>
     <string name="feeds_source_never_fetched">Qet nehatiye anîn</string>
     <string name="feeds_source_poll">Lêpirsîn</string>
-    <string name="feeds_source_transform">Veguherîn</string>
+    <string name="feeds_source_transform">Veguherandina AI</string>
     <string name="feeds_remove_source_confirm">\"%1$s\" rake?</string>
     <string name="feeds_remove_also_delete_posts">Şandiyên hatî anîn jî jê bibe</string>
     <string name="feeds_suggested_credibility_title">Pêbaweriya pêşniyazkirî</string>
@@ -154,7 +154,7 @@
     <string name="feeds_access_select_group">Komê hilbijêre</string>
     <string name="feeds_access_selected">Hilbijartî: %1$s</string>
     <string name="feeds_access_subject_anyone">Her kes</string>
-    <string name="feeds_access_subject_authenticated">Bikarhênerên erêkirî</string>
+    <string name="feeds_access_subject_authenticated">Bikarhênerên pejirandî</string>
     <string name="feeds_markdown_supported">Markdown tê piştgirîkirin</string>
     <string name="feeds_permission_deny">Red bike</string>
     <string name="feeds_rss_feed">Pelê RSS</string>

@@ -3,10 +3,10 @@
 
     <string name="chess_app_title">Schack</string>
     <string name="chess_sidebar_header">Schack</string>
-    <string name="chess_sidebar_active">Aktiva spel</string>
+    <string name="chess_sidebar_active">Aktiva partier</string>
     <string name="chess_sidebar_completed">Slutförd</string>
     <string name="chess_sidebar_new_game">Nytt spel</string>
-    <string name="chess_section_active">Aktiva spel</string>
+    <string name="chess_section_active">Aktiva partier</string>
     <string name="chess_section_completed">Slutförd</string>
     <string name="chess_new_game">Nytt spel</string>
     <string name="chess_empty_title">Inga spel ännu</string>
@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">Acceptera</string>
     <string name="chess_draw_decline">Avböj</string>
     <string name="chess_status_checkmate_you_win">Schackmatt — du vinner!</string>
-    <string name="chess_status_stalemate">Patt — oavgjort</string>
+    <string name="chess_status_stalemate">Patt — remi</string>
     <string name="chess_status_draw">Remi</string>
     <string name="chess_status_check_your_move">Schack — ditt drag</string>
     <string name="chess_status_your_move">Ditt drag</string>
@@ -60,12 +60,12 @@
     <string name="chess_empty_subtitle">Starta ditt första parti för att spela schack med en vän.</string>
     <string name="chess_empty_start_button">Starta ditt första parti</string>
     <string name="chess_detail_unavailable">Parti otillgängligt</string>
-    <string name="chess_delete_title">Radera parti?</string>
+    <string name="chess_delete_title">Ta bort partiet?</string>
     <string name="chess_delete_message">Detta tar bort partiet från din lista.</string>
     <string name="chess_ws_connecting">Ansluter…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_reconnecting">Återansluter…</string>
-    <string name="chess_ws_failed">Anslutning misslyckades</string>
+    <string name="chess_ws_failed">Anslutningen misslyckades</string>
     <string name="chess_move_capture">%1$s tog %2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 

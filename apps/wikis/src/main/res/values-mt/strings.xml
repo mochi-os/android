@@ -225,7 +225,7 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Aġġornat %1$s</string>
     <string name="wikis_pageview_not_found_description">Il-paġna “%1$s” għadha ma teżistix.</string>
-    <string name="wikis_pageview_share_chooser">Link tal-wiki</string>
+    <string name="wikis_pageview_share_chooser">Ħolqa tal-wiki</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">Ħolqa</string>
     <string name="wikis_open_sidebar">Iftaħ il-bar tal-ġenb</string>

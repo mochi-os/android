@@ -16,7 +16,7 @@
     <string name="go_color_white">თეთრი</string>
     <string name="go_delete_confirm">წაშლა</string>
     <string name="go_delete_message">ეს თამაში წაიშლება სიიდან. ამის გაუქმება შეუძლებელია.</string>
-    <string name="go_delete_title">წავშალოთ თამაში?</string>
+    <string name="go_delete_title">თამაშის წაშლა?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">მიღება</string>
     <string name="go_draw_decline">უარის თქმა</string>

@@ -112,8 +112,8 @@
     <string name="feeds_clipboard_label_rss">RSS-URL</string>
     <string name="feeds_source_never_fetched">Aldri henta</string>
     <string name="feeds_source_poll">Hent</string>
-    <string name="feeds_source_transform">Omform</string>
-    <string name="feeds_remove_source">Fjern kjelde</string>
+    <string name="feeds_source_transform">KI-omforming</string>
+    <string name="feeds_remove_source">Fjern kjelde?</string>
     <string name="feeds_remove_source_confirm">Fjerna \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Slett òg importerte innlegg</string>
     <string name="feeds_suggested_credibility_title">Føreslått truverd</string>
@@ -170,7 +170,7 @@
     <string name="feeds_source_transform_help">Lat stå tomt for å slå av.</string>
     <string name="feeds_settings_name_cancel_cd">Avbryt redigering</string>
     <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-    <string name="feeds_access_management">Tilgangshandsaming</string>
+    <string name="feeds_access_management">Tilgangsstyring</string>
     <string name="feeds_access_anyone_desc">Inkludert anonyme brukarar</string>
     <string name="feeds_access_add_subtitle">Vel ein brukar, gruppe eller annan regel for å gje tilgang.</string>
     <string name="feeds_create_first_post">Opprett det fyrste innlegget</string>

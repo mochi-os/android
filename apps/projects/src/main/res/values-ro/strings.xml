@@ -200,9 +200,9 @@
     <string name="projects_links_empty">Nicio legătură</string>
     <string name="projects_links_section_relates">Legat de</string>
     <string name="projects_links_section_duplicated_by">Duplicat de</string>
-    <string name="projects_links_type">Tip legătură</string>
+    <string name="projects_links_type">Tip de legătură</string>
     <string name="projects_links_type_relates">Legat de</string>
-    <string name="projects_links_remove">Eliminați legătura</string>
+    <string name="projects_links_remove">Elimină linkul</string>
     <string name="projects_comment_replying_to">Răspuns la %1$s</string>
     <string name="projects_comment_clear_reply">Anulați răspunsul</string>
     <string name="projects_comment_placeholder">Adăugați un comentariu</string>
@@ -244,8 +244,8 @@
     <string name="projects_request_create_title">Creați cerere de îmbinare</string>
     <string name="projects_request_field_target">Ramură țintă</string>
     <string name="projects_diff_title">Diferențe: %1$s -&gt; %2$s</string>
-    <string name="projects_tree_collapse">Restrângeți</string>
-    <string name="projects_tree_expand">Extindeți</string>
+    <string name="projects_tree_collapse">Restrânge</string>
+    <string name="projects_tree_expand">Extinde</string>
     <string name="projects_tree_move">Mutați</string>
     <string name="projects_tree_move_to_parent">Mutați la părinte</string>
     <string name="projects_tree_root_level">(Nivel rădăcină)</string>
@@ -314,7 +314,7 @@
     <string name="projects_design_preview_empty">Nimic de afișat</string>
 
     <string name="projects_create_choose_template">Alege un șablon</string>
-    <string name="projects_create_next">Înainte</string>
+    <string name="projects_create_next">Următor</string>
     <string name="projects_filter">Filtrează</string>
     <string name="projects_link">Link</string>
     <string name="projects_filter_clear_all">Golește tot</string>

@@ -276,13 +276,13 @@
     <string name="projects_classes_empty">Tidak ada kelas yang ditentukan</string>
     <string name="projects_class_label">Kelas: %1$s</string>
     <string name="projects_class_title_field_description">Bidang mana yang digunakan sebagai judul tampilan untuk objek kelas ini.</string>
-    <string name="projects_class_title_field_default">Default (terbaca)</string>
+    <string name="projects_class_title_field_default">Default (dapat dibaca)</string>
     <string name="projects_class_merge_requests_description">Izinkan permintaan penggabungan pada objek kelas ini.</string>
     <string name="projects_class_parents">Kelas induk</string>
     <string name="projects_class_delete_message">Apakah Anda yakin ingin menghapus kelas \"%1$s\"? Semua bidang dan opsinya juga akan dihapus.</string>
-    <string name="projects_field_type_enumerated">Terhitung</string>
+    <string name="projects_field_type_enumerated">Terenumerasi</string>
     <string name="projects_field_label">Bidang: %1$s</string>
-    <string name="projects_field_readonly">Hanya-baca</string>
+    <string name="projects_field_readonly">Hanya baca</string>
     <string name="projects_field_sortable">Dapat diurutkan</string>
     <string name="projects_field_filterable">Dapat difilter</string>
     <string name="projects_field_show_on_card">Tampilkan pada kartu</string>

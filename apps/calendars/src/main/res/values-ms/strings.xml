@@ -151,7 +151,7 @@
     <string name="calendars_link_submit">Pautkan</string>
     <string name="calendars_link_sync">Segerakkan sekarang</string>
     <string name="calendars_link_grant">Benarkan akses kalendar</string>
-    <string name="calendars_link_linked">Berpaut</string>
+    <string name="calendars_link_linked">Dipautkan</string>
     <string name="calendars_link_marker">Kalendar berpaut</string>
     <string name="calendars_link_remote_empty">Tiada kalendar</string>
     <string name="calendars_poll_conflict">Satu acara berubah di kedua-dua belah</string>

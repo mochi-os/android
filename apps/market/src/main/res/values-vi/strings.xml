@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Báo cáo tin đăng</string>
     <string name="market_listing_detail_save">Lưu</string>
     <string name="market_listing_detail_seller_heading">Người bán</string>
-    <string name="market_listing_detail_shipping_heading">Vận chuyển</string>
+    <string name="market_listing_detail_shipping_heading">Tùy chọn vận chuyển</string>
     <string name="market_listing_detail_subscribe">Đăng ký</string>
     <string name="market_listing_detail_tags_heading">Các thẻ</string>
     <string name="market_listing_detail_title">Tin đăng</string>
@@ -427,7 +427,7 @@
     <string name="market_account_stripe_refresh">Làm mới trạng thái</string>
     <string name="market_account_stripe_refresh_failed">Không thể làm mới trạng thái Stripe</string>
     <string name="market_appeal_dialog_reason_label">Vì sao bạn kháng nghị?</string>
-    <string name="market_appeal_dialog_title">Kháng nghị việc gỡ bỏ</string>
+    <string name="market_appeal_dialog_title">Khiếu nại việc gỡ bỏ</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
     <string name="market_bid_dialog_amount_label">Mức đặt giá của bạn</string>
     <string name="market_bid_dialog_current_high">Mức đặt giá cao nhất hiện tại: %1$s</string>
@@ -467,7 +467,7 @@
     <string name="market_editor_days">%1$d ngày</string>
     <string name="market_editor_delete">Xóa danh sách</string>
     <string name="market_editor_delete_confirm_message">Thao tác này sẽ xóa vĩnh viễn danh sách.</string>
-    <string name="market_editor_delete_confirm_title">Xóa danh sách?</string>
+    <string name="market_editor_delete_confirm_title">Xóa tin đăng?</string>
     <string name="market_editor_download">Tải xuống trực tiếp</string>
     <string name="market_editor_duration">Thời lượng đấu giá</string>
     <string name="market_editor_fee_preview_pending">Đang lưu bản nháp…</string>
@@ -488,7 +488,7 @@
     <string name="market_editor_stripe_banner_description">Kết nối tài khoản Stripe để nhận chi trả cho danh sách này.</string>
     <string name="market_editor_stripe_banner_title">Hoàn tất thiết lập Stripe</string>
     <string name="market_editor_tags_field">Thẻ (phân tách bằng dấu phẩy)</string>
-    <string name="market_editor_title_new">Danh sách mới</string>
+    <string name="market_editor_title_new">Tin đăng mới</string>
     <string name="market_editor_title_required">Nhập tiêu đề trước khi thêm ảnh hoặc tệp</string>
     <string name="market_editor_type">Loại danh sách</string>
     <string name="market_editor_zone_add">Thêm khu vực</string>
@@ -706,7 +706,7 @@
     <string name="market_editor_stock_unlimited">Không giới hạn</string>
     <string name="market_editor_start_time">Thời gian bắt đầu</string>
     <string name="market_editor_start_time_help">Để trống để bắt đầu khi xuất bản.</string>
-    <string name="market_editor_start_time_next">Tiếp theo</string>
+    <string name="market_editor_start_time_next">Tiếp</string>
     <string name="market_editor_start_time_clear">Xóa</string>
     <string name="market_listing_detail_buy_now_label">Mua ngay</string>
     <string name="market_section_recently_viewed">Đã xem gần đây</string>

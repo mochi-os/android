@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">פיד Mochi</string>
     <string name="feeds_source_type_feed_memories">זיכרונות</string>
-    <string name="feeds_remove_source">הסר מקור</string>
+    <string name="feeds_remove_source">להסיר מקור?</string>
     <string name="feeds_suggested_credibility_accept">אישור</string>
     <string name="feeds_rss_url_copied">כתובת ה-URL של RSS הועתקה ללוח</string>
     <string name="feeds_logout">התנתק</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">כתובת RSS</string>
     <string name="feeds_source_never_fetched">מעולם לא נמשך</string>
     <string name="feeds_source_poll">תשאול</string>
-    <string name="feeds_source_transform">המרה</string>
+    <string name="feeds_source_transform">המרת AI</string>
     <string name="feeds_remove_source_confirm">להסיר את \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">מחק גם את הפוסטים המיובאים</string>
     <string name="feeds_suggested_credibility_title">אמינות מוצעת</string>

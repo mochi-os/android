@@ -211,7 +211,7 @@
     <string name="staff_dashboard_kpi_total_orders">Pedidos totais</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Non</string>
-    <string name="staff_dashboard_open_sidebar">Abrir a barra lateral</string>
+    <string name="staff_dashboard_open_sidebar">Abrir barra lateral</string>
     <string name="staff_dashboard_order_fallback">Pedido n.º %1$s</string>
     <string name="staff_dashboard_system">Sistema</string>
     <string name="staff_dashboard_tab_audit">Auditoría</string>
@@ -284,7 +284,7 @@
     <string name="staff_filter_chip_remove">Eliminar o filtro</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderación</string>
-    <string name="staff_filter_label_query">Procura</string>
+    <string name="staff_filter_label_query">Buscar</string>
     <string name="staff_filter_label_seller">Vendedor</string>
     <string name="staff_filter_label_status">Estado</string>
     <string name="staff_filter_label_type">Tipo</string>
@@ -399,7 +399,7 @@
     <string name="staff_sidebar_overview">Resumo xeral</string>
     <string name="staff_sidebar_reports">Informes</string>
     <string name="staff_sidebar_reviews">Reseñas</string>
-    <string name="staff_sidebar_settings">Axustes</string>
+    <string name="staff_sidebar_settings">Configuración</string>
     <string name="staff_sidebar_team">Equipo</string>
     <string name="staff_status_actioned">Realizado</string>
     <string name="staff_status_active">Activo</string>

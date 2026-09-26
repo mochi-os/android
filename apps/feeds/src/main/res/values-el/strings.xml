@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Ροή Mochi</string>
     <string name="feeds_source_type_feed_memories">Αναμνήσεις</string>
-    <string name="feeds_remove_source">Αφαίρεση πηγής</string>
+    <string name="feeds_remove_source">Αφαίρεση πηγής;</string>
     <string name="feeds_suggested_credibility_accept">Αποδοχή</string>
     <string name="feeds_rss_url_copied">Το URL του RSS αντιγράφηκε στο πρόχειρο</string>
     <string name="feeds_logout">Αποσύνδεση</string>
@@ -112,7 +112,7 @@
     <string name="feeds_clipboard_label_rss">URL RSS</string>
     <string name="feeds_source_never_fetched">Καμία λήψη</string>
     <string name="feeds_source_poll">Δημοσκόπηση</string>
-    <string name="feeds_source_transform">Μετασχηματισμός</string>
+    <string name="feeds_source_transform">Μετασχηματισμός AI</string>
     <string name="feeds_remove_source_confirm">Αφαίρεση \"%1$s\";</string>
     <string name="feeds_remove_also_delete_posts">Διαγραφή και των εισαγόμενων αναρτήσεων</string>
     <string name="feeds_suggested_credibility_title">Προτεινόμενη αξιοπιστία</string>

@@ -16,7 +16,7 @@
     <string name="go_color_white">Ак</string>
     <string name="go_delete_confirm">Жок кылуу</string>
     <string name="go_delete_message">Бул оюн тизмеңизден өчүрүлөт. Бул кайтарылбайт.</string>
-    <string name="go_delete_title">Оюнду өчүрөбү?</string>
+    <string name="go_delete_title">Оюн жок кылынсынбы?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">Кабыл алуу</string>
     <string name="go_draw_decline">Четке кагуу</string>
@@ -50,8 +50,8 @@
     <string name="go_resign_title">Оюндан баш тартасызбы?</string>
     <string name="go_sidebar_completed">Аяктады</string>
     <string name="go_sidebar_new_game">Жаңы оюн</string>
-    <string name="go_status_draw">Теңтайлаш</string>
-    <string name="go_status_draw_text">Теңтайлаш</string>
+    <string name="go_status_draw">Тең оюн</string>
+    <string name="go_status_draw_text">Тең оюн</string>
     <string name="go_status_game_over">Оюн бүттү</string>
     <string name="go_status_opponent_move">%1$s жүрүшү</string>
     <string name="go_status_opponent_wins">%1$s жеңди</string>

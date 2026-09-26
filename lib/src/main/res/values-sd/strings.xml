@@ -25,7 +25,7 @@
     <string name="common_edit">ترميم</string>
     <string name="common_delete">ختم ڪريو</string>
     <string name="common_add">شامل ڪريو</string>
-    <string name="common_notifications">اطلاعون</string>
+    <string name="common_notifications">اطلاعات</string>
     <string name="common_logout">لاگ آئوٽ</string>
     <string name="common_subscribe">سبسڪرائب ڪريو</string>
     <string name="common_copy">ڪاپي ڪريو</string>
@@ -52,8 +52,8 @@
     <string name="reaction_disagree">غير متفق</string>
     <string name="push_service_action_hide">لڪايو</string>
     <string name="about_close">بند ڪريو</string>
-    <string name="notifications_open">اطلاعون</string>
-    <string name="notifications_title">اطلاعون</string>
+    <string name="notifications_open">اطلاعات</string>
+    <string name="notifications_title">اطلاعات</string>
     <string name="notifications_empty">ڪا اطلاع نه آهي</string>
     <string name="notifications_empty_unread">سڀ ڪجهه پڙهي ورتو اٿوَ</string>
     <string name="notifications_tab_unread">اڻ پڙهيل</string>
@@ -125,7 +125,7 @@
     <string name="game_chat_move_played">%1$s %2$s کيڏيو</string>
 
     <string name="error_network">ڪنيڪشن ٿي نه سگھيو. پنھنجو انٽرنيٽ ڪنيڪشن چيڪ ڪريو ۽ ٻيھر ڪوشش ڪريو.</string>
-    <string name="error_authentication_required">تصديق گھربل آھي</string>
+    <string name="error_authentication_required">تصديق گهربل</string>
     <string name="error_not_found">نه مليو</string>
     <string name="error_server">سرور جي خرابي (%1$d). مھرباني ڪري بعد ۾ ٻيھر ڪوشش ڪريو.</string>
     <string name="error_unexpected">ھڪ غير متوقع خرابي ٿي</string>
@@ -146,7 +146,7 @@
     <string name="auth_use_passkey">ھڪ پاس ڪي استعمال ڪريو</string>
     <string name="auth_email_me_a_code">مون کي اي ميل تي ڪوڊ موڪليو</string>
     <string name="auth_or_enter_authenticator_code">يا تصديق ڪندڙ ڪوڊ داخل ڪريو</string>
-    <string name="auth_log_in">لاگ ان ٿيو</string>
+    <string name="auth_log_in">لاگ ان</string>
     <string name="auth_back">واپس</string>
     <string name="auth_lost_access_recovery">رسائي وڃائي؟ ھڪ بحالي ڪوڊ استعمال ڪريو</string>
     <string name="auth_create_identity_title">پنھنجي سڃاڻپ ٺاھيو</string>
@@ -162,10 +162,10 @@
     <string name="bootstrap_sign_in_differently">مختلف طريقي سان سائن ان ٿيو</string>
     <string name="bootstrap_choose_account">ھڪ اڪائونٽ چونڊيو</string>
     <string name="bootstrap_sign_in_different_server">ھڪ مختلف سرور تي سائن ان ٿيو</string>
-    <string name="common_retry">ٻيھر ڪوشش ڪريو</string>
-    <string name="common_more_options">وڌيڪ آپشن</string>
-    <string name="common_collapse">سميٽيو</string>
-    <string name="common_expand">وڌايو</string>
+    <string name="common_retry">ٻيهر ڪوشش ڪريو</string>
+    <string name="common_more_options">وڌيڪ اختيار</string>
+    <string name="common_collapse">سُيڪيڙيو</string>
+    <string name="common_expand">پکيڙيو</string>
     <string name="common_play_video">وڊيو ھلايو</string>
     <string name="place_picker_name">جڳھ جو نالو</string>
     <string name="place_origin">اصل جڳھ</string>
@@ -175,10 +175,10 @@
     <string name="access_add_rule_title">رسائي جو قاعدو شامل ڪريو</string>
     <string name="access_level_manage">منظم ڪريو</string>
     <string name="access_level_react">ردِعمل</string>
-    <string name="notifications_clear">اطلاع صاف ڪريو</string>
+    <string name="notifications_clear">اطلاعون صاف ڪريو</string>
     <string name="entity_avatar_alt">%1$s لاءِ اوتار</string>
     <string name="media_grid_more_count">+%1$d</string>
-    <string name="format_time_just_now">ھاڻي ئي</string>
+    <string name="format_time_just_now">هينئر ئي</string>
     <string name="format_time_minutes_ago">%1$dm اڳ</string>
     <string name="format_time_hours_ago">%1$dh اڳ</string>
     <string name="format_time_days_ago">%1$dd اڳ</string>
@@ -258,7 +258,7 @@
     <string name="tags_interest_up">هن جهڙا وڌيڪ ڏيکاريو</string>
     <string name="tags_interest_down">هن جهڙا گهٽ ڏيکاريو</string>
     <string name="tags_interest_clear">ڏيکارڻ بند ڪريو</string>
-    <string name="tags_none">ڪو ٽيگ ناهي</string>
+    <string name="tags_none">ڪي ٽيگ ناهن</string>
     <string name="tags_delete">ٽيگ هٽايو</string>
     <string name="person_picker_none">ڪا به نه</string>
     <string name="person_picker_clear">انتخاب صاف ڪريو</string>

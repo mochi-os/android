@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi 피드</string>
     <string name="feeds_source_type_feed_memories">메모리</string>
-    <string name="feeds_remove_source">소스 제거</string>
+    <string name="feeds_remove_source">소스를 제거할까요?</string>
     <string name="feeds_suggested_credibility_accept">수락</string>
     <string name="feeds_rss_url_copied">RSS URL이 클립보드에 복사되었어요</string>
     <string name="feeds_logout">로그아웃</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">가져온 적 없음</string>
     <string name="feeds_source_poll">폴링</string>
-    <string name="feeds_source_transform">변환</string>
+    <string name="feeds_source_transform">AI 변환</string>
     <string name="feeds_remove_source_confirm">\"%1$s\"을(를) 제거하시겠습니까?</string>
     <string name="feeds_remove_also_delete_posts">가져온 게시물도 삭제</string>
     <string name="feeds_suggested_credibility_title">추천 신뢰도</string>

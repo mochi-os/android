@@ -58,7 +58,7 @@
     <string name="notifications_empty_unread">Rydych chi wedi dal i fyny</string>
     <string name="notifications_tab_unread">Heb ddarllen</string>
     <string name="notifications_tab_unread_count">Heb ddarllen (%1$d)</string>
-    <string name="notifications_tab_all">Popeth</string>
+    <string name="notifications_tab_all">Pob un</string>
     <string name="notifications_mark_all_read">Marcio\'r cyfan wedi\'u darllen</string>
     <string name="notifications_clear_all">Clirio popeth</string>
     <string name="settings_title">Gosodiadau</string>
@@ -128,7 +128,7 @@
     <string name="error_enter_email">Rhowch eich e-bost</string>
     <string name="error_enter_name">Rhowch enw</string>
     <string name="auth_connect_to_server">Cysylltu â\'ch gweinydd</string>
-    <string name="auth_server_url">URL y gweinydd</string>
+    <string name="auth_server_url">URL gweinydd</string>
     <string name="auth_connect">Cysylltu</string>
     <string name="auth_sign_in">Mewngofnodi</string>
     <string name="auth_check_email">Gwiriwch eich e-bost am god dilysu</string>
@@ -159,7 +159,7 @@
     <string name="bootstrap_sign_in_differently">Mewngofnodi\'n wahanol</string>
     <string name="bootstrap_choose_account">Dewiswch gyfrif</string>
     <string name="bootstrap_sign_in_different_server">Mewngofnodi i weinydd gwahanol</string>
-    <string name="common_retry">Ailgeisio</string>
+    <string name="common_retry">Ail-geisio</string>
     <string name="common_more_options">Rhagor o opsiynau</string>
     <string name="common_collapse">Crebachu</string>
     <string name="common_expand">Ehangu</string>
@@ -188,7 +188,7 @@
     <string name="format_time_days_short">%1$dd</string>
     <string name="format_time_weeks_short">%1$dw</string>
     <string name="format_time_months_short">%1$dmis</string>
-    <string name="reaction_add">Ychwanegu ymateb</string>
+    <string name="reaction_add">Ychwanegu adwaith</string>
     <string name="push_service_channel">Hysbysiadau gwthio Mochi</string>
     <string name="push_service_channel_description">Cadw Mochi wedi\'i gysylltu i dderbyn hysbysiadau</string>
     <string name="push_service_group">Gwasanaeth cefndir</string>
@@ -209,7 +209,7 @@
     <string name="about_up_to_date">Yn gyfredol</string>
     <string name="about_check_downloading">Mae fersiwn %1$s ar gael, yn lawrlwytho…</string>
     <string name="about_check_network_error">Methu cyrraedd y gweinydd diweddaru</string>
-    <string name="about_check_download_failed">Methodd y lawrlwytho</string>
+    <string name="about_check_download_failed">Methwyd â lawrlwytho</string>
     <string name="notifications_clear_all_title">Clirio pob hysbysiad?</string>
     <string name="notifications_clear_all_message">Bydd hyn yn dileu pob hysbysiad. Ni ellir eu hadfer.</string>
     <string name="settings_value_auto">Awtomatig</string>
@@ -247,7 +247,7 @@
     <string name="reactivation_sign_out">Parhau i gau ac allgofnodi</string>
 
     <string name="common_play">Chwarae</string>
-    <string name="common_pause">Oedi</string>
+    <string name="common_pause">Seibio</string>
     <string name="common_opening_file">Yn agor y ffeil…</string>
     <string name="common_no_app_for_file">Ni all unrhyw ap agor y ffeil hon</string>
     <string name="common_file_open_failed">Methwyd agor y ffeil</string>

@@ -9,7 +9,7 @@
     <string name="projects_list_logout">Одјави се</string>
     <string name="projects_list_create">Креирај пројекат</string>
     <string name="projects_create_title">Креирај пројекат</string>
-    <string name="projects_create_name">Име</string>
+    <string name="projects_create_name">Назив</string>
     <string name="projects_create_description">Опис</string>
     <string name="projects_create_prefix">Префикс</string>
     <string name="projects_create_privacy">Приватност</string>
@@ -24,7 +24,7 @@
     <string name="projects_watched">Праћено</string>
     <string name="projects_create_object">Креирај објекат</string>
     <string name="projects_search">Претражи</string>
-    <string name="projects_settings">Поставке</string>
+    <string name="projects_settings">Подешавања</string>
     <string name="projects_design">Дизајн</string>
     <string name="projects_sort_label">Сортирај</string>
     <string name="projects_sort_direction">Смер</string>
@@ -34,7 +34,7 @@
     <string name="projects_sort_updated">Ажурирано</string>
     <string name="projects_create_object_type">Тип</string>
     <string name="projects_create_object_parent">Родитељ</string>
-    <string name="projects_settings_title">Поставке</string>
+    <string name="projects_settings_title">Подешавања</string>
     <string name="projects_settings_tab_general">Опште</string>
     <string name="projects_settings_tab_access">Приступ</string>
     <string name="projects_settings_tab_people">Људи</string>
@@ -114,7 +114,7 @@
     <string name="projects_classes_add">Додај класу</string>
     <string name="projects_classes_add_dialog_title">Додај класу</string>
     <string name="projects_classes_create">Креирај</string>
-    <string name="projects_class_name">Име</string>
+    <string name="projects_class_name">Назив</string>
     <string name="projects_class_save_name">Сачувај назив</string>
     <string name="projects_class_title_field">Поље наслова</string>
     <string name="projects_class_merge_requests">Захтеви за спајање</string>
@@ -127,7 +127,7 @@
     <string name="projects_field_type_user">Корисник</string>
     <string name="projects_field_type_date">Датум</string>
     <string name="projects_field_type_checklist">Чек-листа</string>
-    <string name="projects_field_name">Име</string>
+    <string name="projects_field_name">Назив</string>
     <string name="projects_field_type">Тип</string>
     <string name="projects_field_flags">Заставице</string>
     <string name="projects_field_required">Обавезно</string>
@@ -191,7 +191,7 @@
     <string name="projects_views_filter">Филтер (сачуван, још није примењен)</string>
     <string name="projects_people_empty">Још нико нема приступ</string>
     <string name="projects_settings_delete_confirm_message">Да ли сте сигурни да желите да обришете овај пројекат? Сви објекти, коментари и подешавања биће трајно уклоњени.</string>
-    <string name="projects_object_unwatch">Не прати</string>
+    <string name="projects_object_unwatch">Прекини праћење</string>
     <string name="projects_object_tab_watchers">Пратиоци</string>
     <string name="projects_watchers_empty">Још нема пратилаца</string>
     <string name="projects_object_delete_title">Обриши објекат</string>
@@ -199,12 +199,12 @@
     <string name="projects_parent_none">Без надређеног</string>
     <string name="projects_links_empty">Нема веза</string>
     <string name="projects_links_section_relates">Односи се на</string>
-    <string name="projects_links_section_duplicated_by">Дуплиран од</string>
+    <string name="projects_links_section_duplicated_by">Дуплирано од</string>
     <string name="projects_links_type">Тип везе</string>
     <string name="projects_links_type_relates">Односи се на</string>
     <string name="projects_links_remove">Уклони везу</string>
     <string name="projects_comment_replying_to">Одговор на %1$s</string>
-    <string name="projects_comment_clear_reply">Обриши одговор</string>
+    <string name="projects_comment_clear_reply">Откажи одговор</string>
     <string name="projects_comment_placeholder">Додај коментар</string>
     <string name="projects_property_pick_date">Изабери датум</string>
     <string name="projects_property_ok">У реду</string>
@@ -246,9 +246,9 @@
     <string name="projects_diff_title">Разлике: %1$s -&gt; %2$s</string>
     <string name="projects_tree_collapse">Скупи</string>
     <string name="projects_tree_expand">Прошири</string>
-    <string name="projects_tree_move">Помери</string>
+    <string name="projects_tree_move">Премести</string>
     <string name="projects_tree_move_to_parent">Помери у надређени</string>
-    <string name="projects_tree_root_level">(Корени ниво)</string>
+    <string name="projects_tree_root_level">(Основни ниво)</string>
     <string name="projects_tree_empty">Нема објеката</string>
     <string name="projects_board_no_columns">Нема колона подешених за овај приказ</string>
     <string name="projects_board_no_options">Нема подешених опција за поље колоне</string>
@@ -261,7 +261,7 @@
     <string name="projects_drag_row">Превуци ред</string>
     <string name="projects_drag_column">Превуци колону</string>
     <string name="projects_drag_hint">Дуго притисните и превуците за премештање</string>
-    <string name="projects_design_more_options">Више опција</string>
+    <string name="projects_design_more_options">Још опција</string>
     <string name="projects_design_clipboard_label">JSON дизајна</string>
     <string name="projects_design_export_subject">Дизајн пројекта</string>
     <string name="projects_design_share_chooser">Подели дизајн</string>
@@ -287,9 +287,9 @@
     <string name="projects_field_filterable">Може се филтрирати</string>
     <string name="projects_field_show_on_card">Прикажи на картици</string>
     <string name="projects_field_multi">Вишеструки избор</string>
-    <string name="projects_field_position">Положај приказа</string>
+    <string name="projects_field_position">Позиција приказа</string>
     <string name="projects_field_position_header">Заглавље</string>
-    <string name="projects_field_validation">Провера</string>
+    <string name="projects_field_validation">Валидација</string>
     <string name="projects_field_min_length">Најмања дужина</string>
     <string name="projects_field_max_length">Највећа дужина</string>
     <string name="projects_field_pattern">Шаблон (regex)</string>
@@ -314,7 +314,7 @@
     <string name="projects_design_preview_empty">Нема ничега за приказ</string>
 
     <string name="projects_create_choose_template">Изаберите шаблон</string>
-    <string name="projects_create_next">Даље</string>
+    <string name="projects_create_next">Следеће</string>
     <string name="projects_filter">Филтер</string>
     <string name="projects_link">Веза</string>
     <string name="projects_filter_clear_all">Очисти све</string>

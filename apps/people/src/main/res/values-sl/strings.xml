@@ -100,7 +100,7 @@
     <string name="people_welcome_title">Dobrodošli v Ljudje</string>
     <string name="people_person_banner_alt">Pasica za %1$s</string>
     <string name="people_person_private">Ta profil je zaseben</string>
-    <string name="people_person_state_invited">Povabljen(a)</string>
+    <string name="people_person_state_invited">Povabljen</string>
 
     <string name="people_invitations_accept_all">Sprejmi vse</string>
     <string name="people_invitations_decline_all">Zavrni vse</string>
@@ -117,7 +117,7 @@
     <string name="people_profile_avatar">Avatar</string>
     <string name="people_profile_banner">Pasica</string>
     <string name="people_contacts_search_placeholder">Iskanje…</string>
-    <string name="people_contacts_invited">Povabljen(a)</string>
+    <string name="people_contacts_invited">Povabljen</string>
     <string name="people_contacts_accept">Sprejmi</string>
     <string name="people_contacts_message">Pošlji sporočilo</string>
     <string name="people_contacts_no_people_found">Oseb ni mogoče najti</string>

@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Tákn</string>
     <string name="crm_option_icon_placeholder">t.d. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Afskrá áskrift</string>
-    <string name="crm_settings_delete_crm">Eyða verkefni</string>
+    <string name="crm_settings_delete_crm">Eyða CRM</string>
     <string name="crm_settings_delete_confirm_title">Eyða CRM</string>
     <string name="crm_settings_unsubscribe_title">Afskrá áskrift</string>
     <string name="crm_settings_unsubscribe_message">Ertu viss um að þú viljir afskrá þig úr þessu CRM?</string>
@@ -156,7 +156,7 @@
     <string name="crm_object_unwatch">Hætta að fylgjast með</string>
     <string name="crm_object_delete_title">Eyða hlut</string>
     <string name="crm_object_delete_message">Ertu viss um að þú viljir eyða þessum hlut? Ekki er hægt að afturkalla þessa aðgerð.</string>
-    <string name="crm_parent_none">Ekkert foreldri</string>
+    <string name="crm_parent_none">Enginn yfirhlutur</string>
     <string name="crm_links_empty">Engir tenglar</string>
     <string name="crm_links_section_relates">Tengist</string>
     <string name="crm_links_section_duplicated_by">Tvítekið af</string>
@@ -168,7 +168,7 @@
     <string name="crm_comment_placeholder">Bæta við athugasemd</string>
     <string name="crm_property_pick_date">Velja dagsetningu</string>
     <string name="crm_property_ok">Í lagi</string>
-    <string name="crm_property_add_item">Bæta við hlut</string>
+    <string name="crm_property_add_item">Bæta við atriði</string>
     <string name="crm_property_required">%1$s er nauðsynlegt</string>
     <string name="crm_activity_empty">Engin virkni</string>
     <string name="crm_activity_created">bjó til þennan hlut</string>
@@ -204,7 +204,7 @@
     <string name="crm_class_title_field_default">Sjálfgefið (læsilegt)</string>
     <string name="crm_class_parents">Yfirflokkar</string>
     <string name="crm_class_delete_message">Ertu viss um að þú viljir eyða flokknum \"%1$s\"? Öllum reitum og valkostum þeirra verður einnig eytt.</string>
-    <string name="crm_field_type_enumerated">Upptalið</string>
+    <string name="crm_field_type_enumerated">Upptalning</string>
     <string name="crm_field_label">Reitur: %1$s</string>
     <string name="crm_field_readonly">Skrifvarið</string>
     <string name="crm_field_sortable">Hægt að raða</string>

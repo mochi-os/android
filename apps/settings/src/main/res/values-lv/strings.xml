@@ -277,7 +277,7 @@
     <string name="account_section_identity">Identitāte</string>
     <string name="account_identity_identity">Identitāte</string>
     <string name="account_identity_username">Lietotājvārds</string>
-    <string name="account_identity_name">Nosaukums</string>
+    <string name="account_identity_name">Vārds</string>
     <string name="account_identity_fingerprint">Pirkstu nospiedums</string>
     <string name="account_identity_directory_toggle">Ļaut citiem atrast tevi direktorijā</string>
     <string name="domain_add">Pievienot domēnu</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s vairs nepārvaldīs maršrutus šajā domēnā.</string>
     <string name="domain_delegation_delete_title">Dzēst deleģējumu?</string>
     <string name="domain_delegation_path">Ceļš</string>
-    <string name="domain_delegation_user">Lietotāja ID</string>
+    <string name="domain_delegation_user">Lietotājs</string>
     <string name="domain_delegations">Deleģējumi</string>
     <string name="domain_delegations_empty">Nav konfigurētu deleģējumu.</string>
     <string name="domain_delete">Dzēst domēnu</string>
@@ -393,7 +393,7 @@
     <string name="accounts_capability_calendar">Kalendārs</string>
     <string name="accounts_capability_notify">Paziņojumi</string>
     <string name="accounts_capability_ai">AI</string>
-    <string name="accounts_capability_login">Pieteikšanās</string>
+    <string name="accounts_capability_login">Pierakstīšanās</string>
     <string name="accounts_provider_caldav">Kalendāra serveris</string>
     <string name="accounts_revoke_confirm">Tādējādi tiks atsaukta %1$s piekļuve kalendāram. Pieteikšanās ar %2$s saglabāsies, līdz to atsaistīsiet pieteikšanās lapā.</string>
     <string name="accounts_capability_mcp">MCP</string>

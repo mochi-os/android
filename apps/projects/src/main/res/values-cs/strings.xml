@@ -191,7 +191,7 @@
     <string name="projects_parent_none">Bez nadřazeného</string>
     <string name="projects_links_empty">Žádné odkazy</string>
     <string name="projects_links_section_relates">Souvisí s</string>
-    <string name="projects_links_section_duplicated_by">Duplikováno tímto</string>
+    <string name="projects_links_section_duplicated_by">Duplikováno</string>
     <string name="projects_links_type">Typ odkazu</string>
     <string name="projects_links_type_relates">Souvisí s</string>
     <string name="projects_links_search_placeholder">Hledat objekty</string>
@@ -276,7 +276,7 @@
     <string name="projects_class_move_up">Posunout nahoru</string>
     <string name="projects_class_move_down">Posunout dolů</string>
     <string name="projects_class_delete_message">Opravdu chcete smazat třídu \"%1$s\"? Všechna pole a jejich možnosti budou rovněž smazány.</string>
-    <string name="projects_field_type_enumerated">Výčtové</string>
+    <string name="projects_field_type_enumerated">Výčet</string>
     <string name="projects_field_label">Pole: %1$s</string>
     <string name="projects_field_readonly">Pouze pro čtení</string>
     <string name="projects_field_sortable">Lze řadit</string>
@@ -286,10 +286,10 @@
     <string name="projects_field_position">Pozice zobrazení</string>
     <string name="projects_field_position_header">Záhlaví</string>
     <string name="projects_field_position_body">Obsah</string>
-    <string name="projects_field_validation">Ověření</string>
+    <string name="projects_field_validation">Validace</string>
     <string name="projects_field_min_length">Minimální délka</string>
     <string name="projects_field_max_length">Maximální délka</string>
-    <string name="projects_field_pattern">Vzor (regulární výraz)</string>
+    <string name="projects_field_pattern">Vzor (regex)</string>
     <string name="projects_field_rows">Řádky (výška textového pole)</string>
     <string name="projects_field_no_options">Nejsou definovány žádné možnosti</string>
     <string name="projects_field_delete_message">Opravdu chcete smazat pole \"%1$s\"? Všechny možnosti a hodnoty budou ztraceny.</string>
@@ -330,7 +330,7 @@
     <string name="projects_settings_field_fingerprint">Otisk</string>
     <string name="projects_settings_field_server">Server</string>
     <string name="projects_access_subject_anyone">Kdokoli</string>
-    <string name="projects_access_subject_authenticated">Ověření uživatelé</string>
+    <string name="projects_access_subject_authenticated">Přihlášení uživatelé</string>
     <string name="projects_access_select_role">Vyberte roli</string>
     <string name="projects_access_role_view">Pouze pro čtení</string>
     <string name="projects_access_role_none">Žádný přístup</string>

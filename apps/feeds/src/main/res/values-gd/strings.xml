@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Inbhir Mochi</string>
     <string name="feeds_source_type_feed_memories">Cuimhneachain</string>
-    <string name="feeds_remove_source">Thoir air falbh an stòr</string>
+    <string name="feeds_remove_source">Thoir an tùs air falbh?</string>
     <string name="feeds_suggested_credibility_accept">Gabh ris</string>
     <string name="feeds_rss_url_copied">Chaidh URL RSS a lethbhreacadh dhan stòr-bhòrd</string>
     <string name="feeds_logout">Clàraich a-mach</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">URL RSS</string>
     <string name="feeds_source_never_fetched">Cha deach a thoirt a-nuas a-riamh</string>
     <string name="feeds_source_poll">Cunntas-bheachd</string>
-    <string name="feeds_source_transform">Cruth-atharraich</string>
+    <string name="feeds_source_transform">Cruth-atharrachadh AI</string>
     <string name="feeds_remove_source_confirm">Thoir air falbh \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Sguab às na postaichean a chaidh ion-phortadh cuideachd</string>
     <string name="feeds_suggested_credibility_title">Earbsachd a thathar a\' moladh</string>
@@ -176,7 +176,7 @@
     <string name="feeds_allow_search">Ceadaich do dhuine sam bith inbhir a lorg</string>
     <string name="feeds_post_content">Susbaint a\' phuist</string>
     <string name="feeds_enable_memories">Cuir cuimhneachain an comas</string>
-    <string name="feeds_permission_request_title">Iarrtas ceada</string>
+    <string name="feeds_permission_request_title">Iarrtas cead</string>
     <string name="feeds_unsubscribe_confirm">Sgur dhen fho-sgrìobhadh dhan inbhir?</string>
     <string name="feeds_settings_title">Roghainnean %1$s</string>
     <string name="feeds_source_transform_help">Fàg falamh gus chur dheth.</string>
@@ -217,7 +217,7 @@
     <string name="feeds_ai_prompt_custom">Gnàthaichte</string>
     <string name="feeds_ai_prompt_variables">Caochladairean: %1$s</string>
     <string name="feeds_link">Ceangal</string>
-    <string name="feeds_share_link_title">Ceangal an inbhir</string>
+    <string name="feeds_share_link_title">Ceangal inbhir</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$d bheachd</item>
         <item quantity="two">%1$d bheachd</item>

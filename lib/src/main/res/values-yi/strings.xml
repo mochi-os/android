@@ -79,7 +79,7 @@
     <string name="settings_font_dyslexia">דיסלעקסיע פֿרײַנדלעך</string>
     <string name="settings_font_size">שריפֿט גרייס</string>
     <string name="settings_font_size_small">קליין</string>
-    <string name="settings_font_size_normal">נארמאל</string>
+    <string name="settings_font_size_normal">נאָרמאַל</string>
     <string name="settings_font_size_large">גרויס</string>
     <string name="settings_font_size_extra_large">עקסטרא גרויס</string>
     <string name="settings_language">שפּראַך</string>
@@ -125,8 +125,8 @@
 
     <string name="app_brand">Mochi</string>
     <string name="error_network">ניט מעגלעך זיך צו פֿאַרבינדן. קאָנטראָלירט אײַער אינטערנעץ־פֿאַרבינדונג און פּרוּווט נאָך אַ מאָל.</string>
-    <string name="error_authentication_required">אױטענטיפֿיקאַציע נױטיק</string>
-    <string name="error_not_found">ניט געפֿונען</string>
+    <string name="error_authentication_required">אויטענטיפֿיקאַציע נייטיק</string>
+    <string name="error_not_found">נישט געפֿונען</string>
     <string name="error_server">סערװער־טעות (%1$d). פּרוּווט שפּעטער נאָך אַ מאָל.</string>
     <string name="error_unexpected">אַן אומגעריכטע טעות איז פֿאָרגעקומען</string>
     <string name="error_enter_server_url">גיט אַרײַן אַ סערװער־URL</string>
@@ -142,11 +142,11 @@
     <string name="auth_login_title">אַרײַנגײן צו Mochi</string>
     <string name="auth_next">ווײַטער</string>
     <string name="auth_or_log_in_with">אָדער אַרײַנגײן מיט</string>
-    <string name="auth_passkey">דורכשליסל</string>
+    <string name="auth_passkey">פּאַסקיי</string>
     <string name="auth_use_passkey">ניצט אַ דורכשליסל</string>
     <string name="auth_email_me_a_code">שיקט מיר אַ קאָד אױף בליצפּאָסט</string>
     <string name="auth_or_enter_authenticator_code">אָדער גיט אַרײַן דעם אויטענטיפֿיקאַטאָר־קאָד</string>
-    <string name="auth_log_in">אַרײַנגײן</string>
+    <string name="auth_log_in">אַרײַנקומען</string>
     <string name="auth_back">צוריק</string>
     <string name="auth_lost_access_recovery">פֿאַרלוירן צוטריט? ניצט אַ ריקגעווינונג־קאָד</string>
     <string name="auth_create_identity_title">שאַפֿט אײַער אידענטיטעט</string>
@@ -162,10 +162,10 @@
     <string name="bootstrap_sign_in_differently">אַרײַנגײן אױף אַן אַנדער אופֿן</string>
     <string name="bootstrap_choose_account">קלײַבט אױס אַ חשבון</string>
     <string name="bootstrap_sign_in_different_server">אַרײַנגײן צו אַן אַנדער סערװער</string>
-    <string name="common_retry">פּרוּװן נאָך אַ מאָל</string>
+    <string name="common_retry">פּרוּווט נאָך אַ מאָל</string>
     <string name="common_more_options">מער אָפּציעס</string>
-    <string name="common_collapse">צונױפֿקלאַפּן</string>
-    <string name="common_expand">אױסשפּרײטן</string>
+    <string name="common_collapse">צונויפֿקלאַפּן</string>
+    <string name="common_expand">אויסשפּרייטן</string>
     <string name="common_play_video">שפּילן ווידעאָ</string>
     <string name="place_picker_name">אָרט־נאָמען</string>
     <string name="place_origin">אױסגאַנג</string>
@@ -175,10 +175,10 @@
     <string name="access_add_rule_title">צולײגן אַ צוטריט־כּלל</string>
     <string name="access_level_manage">פֿאַרוואַלטן</string>
     <string name="access_level_react">רעאַגירן</string>
-    <string name="notifications_clear">אױסמעקן באַנאָכריכטיקונגען</string>
+    <string name="notifications_clear">רייניקן מעלדונגען</string>
     <string name="entity_avatar_alt">אַװאַטאַר פֿאַר %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
-    <string name="format_time_just_now">פּונקט איצט</string>
+    <string name="format_time_just_now">פּונקט אַצינד</string>
     <string name="format_time_minutes_ago">מיט %1$dמ צוריק</string>
     <string name="format_time_hours_ago">מיט %1$dש צוריק</string>
     <string name="format_time_days_ago">מיט %1$dט צוריק</string>
@@ -190,7 +190,7 @@
     <string name="format_time_days_short">%1$dט</string>
     <string name="format_time_weeks_short">%1$dװ</string>
     <string name="format_time_months_short">%1$dחד</string>
-    <string name="reaction_add">צולײגן אַ רעאַקציע</string>
+    <string name="reaction_add">צולייגן אַ רעאַקציע</string>
     <string name="push_service_channel">Mochi שטופּן</string>
     <string name="push_service_channel_description">האַלט Mochi פֿאַרבונדן צו באַקומען באַנאָכריכטיקונגען</string>
     <string name="push_service_group">הינטערגרונט־דינסט</string>
@@ -210,7 +210,7 @@
     <string name="about_up_to_date">אויפן נייַעסטן</string>
     <string name="about_check_downloading">ווערסיע %1$s פֿאַראַן, אַראָפּלאָדן…</string>
     <string name="about_check_network_error">האָט נישט געקענט דערגרייכן דעם אויפדאַטירונג סערווער</string>
-    <string name="about_check_download_failed">אַראָפּלאָדן איז דורכגעפאַלן</string>
+    <string name="about_check_download_failed">אַראָפּלאָדן דורכגעפֿאַלן</string>
     <string name="notifications_clear_all_title">באַזייטיקט אַלע מעלדונגען?</string>
     <string name="notifications_clear_all_message">דאָס וועט אַוועקנעמען יעדע מעלדונג. זיי קענען נישט אומגעקערט ווערן.</string>
     <string name="settings_value_auto">אויטאָמאַטיש</string>
@@ -238,7 +238,7 @@
     <string name="stepup_error_oauth">מע האָט נישט געקענט באַשטעטיקן מיט יענעם קאָנטע. ביטע פּרובירט נאָך אַ מאָל.</string>
     <string name="game_system_resign">%1$s האָט זיך אונטערגעגעבן</string>
     <string name="game_system_draw_offer">%1$s האָט פֿאָרגעלייגט אַ גלײַך</string>
-    <string name="game_system_draw_accept">מסכים געווען אויף אַ גלײַך</string>
+    <string name="game_system_draw_accept">תּיקו אָפּגעמאַכט</string>
     <string name="game_system_draw_decline">%1$s האָט אָפּגעזאָגט דעם גלײַך</string>
     <string name="reactivation_title">אײַער קאָנטע איז צוגעשטעלט צו ווערן אויסגעמעקט</string>
     <string name="reactivation_body">אײַער קאָנטע איז צוגעשטעלט צו ווערן אויסגעמעקט. איר קענט אַנולירן און צוריקשטעלן פֿולן צוטריט איצט.</string>
@@ -254,7 +254,7 @@
     <string name="common_logout_confirm_message">זענט איר זיכער אַז איר ווילט זיך אויסלאָגירן? איר וועט זיך דאַרפֿן ווידער אײַנלאָגירן צו באַקומען צוטריט צו אײַער קאָנטע.</string>
     <string name="comment_anonymous">אַנאָנים</string>
     <string name="tags_label">טאַגן</string>
-    <string name="tags_add">לייג צו אַ טאַג</string>
+    <string name="tags_add">צולייגן אַ טאַג</string>
     <string name="tags_interest_up">װײַזן מער אַזעלכע</string>
     <string name="tags_interest_down">װײַזן װײניקער אַזעלכע</string>
     <string name="tags_interest_clear">אױפֿהערן צו װײַזן</string>
@@ -263,7 +263,7 @@
     <string name="person_picker_none">קיינס</string>
     <string name="person_picker_clear">רייניקן אויסקלײַב</string>
     <string name="person_picker_select">קלײַבט אויס …</string>
-    <string name="person_picker_directory">פֿאַרצייכעניש</string>
+    <string name="person_picker_directory">פֿאַרצײכעניש</string>
     <string name="person_picker_no_people">קיין מענטשן נישטאָ</string>
     <string name="person_picker_project_members">פּראָיעקט מיטגלידער</string>
     <string name="account_token_label">Mochi סעסיע</string>
@@ -288,7 +288,7 @@
     <string name="lightbox_comments">קאָמענטאַרן</string>
     <string name="common_attachment_unavailable">צוגאב איז דערווייל נישט פאראן</string>
     <string name="common_unavailable">נישט פֿאַראַן</string>
-    <string name="common_not_found">ניט געפֿונען</string>
+    <string name="common_not_found">נישט געפֿונען</string>
     <string name="format_bold">פֿעט</string>
     <string name="format_italic">קורסיוו</string>
     <string name="format_link">לינק</string>
@@ -310,7 +310,7 @@
     <string name="settings_card_flat">פלאַך</string>
     <string name="settings_card_raised">אויפֿגעהויבן</string>
     <string name="error_server_https">דער סערווער־אַדרעס מוז אָנהייבן מיט https://</string>
-    <string name="device_name_fallback">מאָבילער אַפּאַראַט</string>
+    <string name="device_name_fallback">מאָבילער מיטל</string>
     <string name="account_error_token_type">ניט־געשטיצטער טאָקן־טיפּ</string>
     <string name="account_error_caller">דער רופֿער איז ניט דערלויבט</string>
 </resources>

@@ -198,10 +198,10 @@
     <string name="projects_object_delete_message">确定要删除此对象吗？此操作无法撤销。</string>
     <string name="projects_parent_none">无父项</string>
     <string name="projects_links_empty">暂无链接</string>
-    <string name="projects_links_section_relates">关联</string>
+    <string name="projects_links_section_relates">相关</string>
     <string name="projects_links_section_duplicated_by">被以下重复</string>
     <string name="projects_links_type">链接类型</string>
-    <string name="projects_links_type_relates">关联</string>
+    <string name="projects_links_type_relates">相关</string>
     <string name="projects_links_remove">移除链接</string>
     <string name="projects_comment_replying_to">回复 %1$s</string>
     <string name="projects_comment_clear_reply">清除回复</string>
@@ -244,7 +244,7 @@
     <string name="projects_request_create_title">创建合并请求</string>
     <string name="projects_request_field_target">目标分支</string>
     <string name="projects_diff_title">差异：%1$s -&gt; %2$s</string>
-    <string name="projects_tree_collapse">折叠</string>
+    <string name="projects_tree_collapse">收起</string>
     <string name="projects_tree_expand">展开</string>
     <string name="projects_tree_move">移动</string>
     <string name="projects_tree_move_to_parent">移至父项</string>
@@ -289,7 +289,7 @@
     <string name="projects_field_multi">多选</string>
     <string name="projects_field_position">显示位置</string>
     <string name="projects_field_position_header">标题栏</string>
-    <string name="projects_field_validation">校验</string>
+    <string name="projects_field_validation">验证</string>
     <string name="projects_field_min_length">最小长度</string>
     <string name="projects_field_max_length">最大长度</string>
     <string name="projects_field_pattern">模式(正则表达式)</string>

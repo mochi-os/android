@@ -201,7 +201,7 @@
     <string name="projects_parent_none">Ei yläkohdetta</string>
     <string name="projects_links_empty">Ei linkkejä</string>
     <string name="projects_links_section_relates">Liittyy</string>
-    <string name="projects_links_section_duplicated_by">Kaksoiskappaleena</string>
+    <string name="projects_links_section_duplicated_by">Kaksoiskappaleet</string>
     <string name="projects_links_type">Linkin tyyppi</string>
     <string name="projects_links_type_relates">Liittyy</string>
     <string name="projects_links_remove">Poista linkki</string>
@@ -244,7 +244,7 @@
     <string name="projects_request_create_title">Luo yhdistämispyyntö</string>
     <string name="projects_request_field_target">Kohdehaara</string>
     <string name="projects_diff_title">Erot: %1$s -&gt; %2$s</string>
-    <string name="projects_tree_collapse">Kutista</string>
+    <string name="projects_tree_collapse">Tiivistä</string>
     <string name="projects_tree_expand">Laajenna</string>
     <string name="projects_tree_move">Siirrä</string>
     <string name="projects_tree_move_to_parent">Siirrä yläkohteeksi</string>
@@ -287,7 +287,7 @@
     <string name="projects_field_filterable">Suodatettavissa</string>
     <string name="projects_field_show_on_card">Näytä kortilla</string>
     <string name="projects_field_multi">Monivalinta</string>
-    <string name="projects_field_position">Näyttöpaikka</string>
+    <string name="projects_field_position">Näyttösijainti</string>
     <string name="projects_field_position_header">Otsake</string>
     <string name="projects_field_validation">Validointi</string>
     <string name="projects_field_min_length">Vähimmäispituus</string>
@@ -330,7 +330,7 @@
     <string name="projects_settings_field_fingerprint">Sormenjälki</string>
     <string name="projects_settings_field_server">Palvelin</string>
     <string name="projects_access_subject_anyone">Kuka tahansa</string>
-    <string name="projects_access_subject_authenticated">Todennetut käyttäjät</string>
+    <string name="projects_access_subject_authenticated">Kirjautuneet käyttäjät</string>
     <string name="projects_access_select_role">Valitse rooli</string>
     <string name="projects_access_role_view">Vain katselu</string>
     <string name="projects_access_role_none">Ei käyttöoikeutta</string>

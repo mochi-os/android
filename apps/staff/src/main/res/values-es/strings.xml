@@ -211,7 +211,7 @@
     <string name="staff_dashboard_kpi_total_orders">Pedidos totales</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">No</string>
-    <string name="staff_dashboard_open_sidebar">Abrir menú lateral</string>
+    <string name="staff_dashboard_open_sidebar">Abrir barra lateral</string>
     <string name="staff_dashboard_order_fallback">Pedido n.º %1$s</string>
     <string name="staff_dashboard_system">Sistema</string>
     <string name="staff_dashboard_tab_audit">Auditoría</string>

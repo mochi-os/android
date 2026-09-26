@@ -7,7 +7,7 @@
     <string name="go_color_white">Branco</string>
     <string name="go_delete_confirm">Excluir</string>
     <string name="go_delete_message">Este jogo será removido da sua lista. Esta ação não pode ser desfeita.</string>
-    <string name="go_delete_title">Excluir jogo?</string>
+    <string name="go_delete_title">Excluir o jogo?</string>
     <string name="go_draw_offered_waiting">Empate oferecido — esperando %1$s</string>
     <string name="go_error_delete_failed">Falha ao excluir jogo</string>
     <string name="go_error_draw_offer_failed">Falha ao oferecer empate</string>
@@ -28,7 +28,7 @@
     <string name="go_channel_name">Notificações de Go</string>
     <string name="go_channel_description">Notificações sobre jogadas, passes, ofertas de empate e resultados de partidas.</string>
     <string name="go_open_sidebar">Abrir barra lateral</string>
-    <string name="go_sidebar_active">Partidas ativas</string>
+    <string name="go_sidebar_active">Jogos ativos</string>
     <string name="go_empty_active">Ainda sem partidas ativas.</string>
     <string name="go_status_resigned">Abandonada</string>
     <string name="go_new_game_title">Nova partida de Go</string>

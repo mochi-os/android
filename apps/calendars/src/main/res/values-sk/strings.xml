@@ -57,10 +57,10 @@
     <string name="calendars_drawer_title">Kalendáre</string>
     <string name="calendars_drawer_open">Kalendáre</string>
     <string name="calendars_calendar_menu">Možnosti: %1$s</string>
-    <string name="calendars_only_this">Iba tento</string>
+    <string name="calendars_only_this">Len tento</string>
     <string name="calendars_create">Vytvoriť kalendár</string>
     <string name="calendars_subscribe">Prihlásiť sa na odber kalendára</string>
-    <string name="calendars_poll">Načítať teraz</string>
+    <string name="calendars_poll">Skontrolovať teraz</string>
     <string name="calendars_delete_title">Odstrániť %1$s?</string>
     <string name="calendars_delete_message">Jeho udalosti sa odstránia spolu s ním.</string>
     <string name="calendars_today">Dnes</string>
@@ -77,7 +77,7 @@
     <string name="calendars_event_allday">Celý deň</string>
     <string name="calendars_event_finish">Koniec</string>
     <string name="calendars_event_repeat">Opakovanie</string>
-    <string name="calendars_event_reminder">Pripomenutie</string>
+    <string name="calendars_event_reminder">Pripomienka</string>
     <string name="calendars_event_recurring">Opakuje sa</string>
     <string name="calendars_event_delete_title">Odstrániť %1$s?</string>
     <string name="calendars_event_delete_message">Toto sa nedá vrátiť späť.</string>
@@ -99,10 +99,10 @@
     <string name="calendars_hours_finish">Koniec pracovného času</string>
     <string name="calendars_hours_invalid">Pracovný čas sa musí skončiť po svojom začiatku.</string>
     <string name="calendars_work_days">Pracovné dni</string>
-    <string name="calendars_multiweek_weeks">Zobrazené týždne</string>
-    <string name="calendars_multiweek_previous">Týždne dozadu</string>
+    <string name="calendars_multiweek_weeks">Zobrazených týždňov</string>
+    <string name="calendars_multiweek_previous">Týždňov pred</string>
     <string name="calendars_default_duration">Predvolená dĺžka udalosti</string>
-    <string name="calendars_default_reminder">Predvolené pripomenutie</string>
+    <string name="calendars_default_reminder">Predvolená pripomienka</string>
     <string name="calendars_link_title">Odkaz na kalendár</string>
     <string name="calendars_link_copy">Kopírovať odkaz</string>
     <string name="calendars_link_once">Skopírujte ho teraz: už sa nezobrazí.</string>

@@ -100,7 +100,7 @@
     <string name="people_welcome_title">Baga Namootatti Nagaan Dhuftan</string>
     <string name="people_person_banner_alt">Baanarii %1$s</string>
     <string name="people_person_private">Piroofaayiliin kun dhuunfaadha</string>
-    <string name="people_person_state_invited">Afeerameera</string>
+    <string name="people_person_state_invited">Affeerameera</string>
 
     <string name="people_invitations_accept_all">Hunda fudhadhu</string>
     <string name="people_invitations_decline_all">Hunda diddu</string>
@@ -117,7 +117,7 @@
     <string name="people_profile_avatar">Fakkii</string>
     <string name="people_profile_banner">Bannerii</string>
     <string name="people_contacts_search_placeholder">Barbaadi…</string>
-    <string name="people_contacts_invited">Afeerameera</string>
+    <string name="people_contacts_invited">Affeerameera</string>
     <string name="people_contacts_accept">Fudhadhu</string>
     <string name="people_contacts_message">Ergaa ergi</string>
     <string name="people_contacts_no_people_found">Namoonni hin argamne</string>
@@ -152,14 +152,14 @@
     <string name="people_contacts_add_to_start">Walqunnamuu jalqabuuf quunnamtiiwwan dabali</string>
     <string name="people_contacts_actions">Gochawwan quunnamtii</string>
     <string name="people_contacts_friend">Hiriyaa</string>
-    <string name="people_contacts_invite">Afeeri</string>
+    <string name="people_contacts_invite">Affeeri</string>
     <string name="people_contacts_unfriend_confirm">%1$s siif hiriyaa hin ta\'u. Quunnamtiin kitaaba teessoo kee keessatti hafa.</string>
     <string name="people_contacts_delete">Quunnamtii haqi</string>
     <string name="people_contacts_delete_confirm">%1$s quunnamtiiwwan kee keessaa haqamuu?</string>
     <string name="people_contacts_delete_friend_confirm">%1$s quunnamtiiwwan kee keessaa haqamuu? Hiriyummaan keessanis ni dhaabata.</string>
     <string name="people_contact_new_title">Quunnamtii haaraa</string>
-    <string name="people_contact_edit_title">Quunnamtii gulaali</string>
-    <string name="people_contact_given">Maqaa</string>
+    <string name="people_contact_edit_title">Quunnamtii sirreessi</string>
+    <string name="people_contact_given">Maqaa jalqabaa</string>
     <string name="people_contact_family">Maqaa maatii</string>
     <string name="people_contact_nickname">Maqaa moggaasaa</string>
     <string name="people_contact_add_email">Imeelii dabali</string>
@@ -187,7 +187,7 @@
     <string name="people_welcome_body">Mochi guutuu keessatti hiriyoota barbaadi walqunnami. Afeerraa erguuf Quunnamtii dabali tuqi.</string>
     <string name="people_person_state_contact">Quunnamtiiwwan keessa</string>
     <string name="people_device_create">Uumi</string>
-    <string name="people_device_server">Server</string>
+    <string name="people_device_server">Sarvarii</string>
     <string name="people_device_username">Maqaa fayyadamaa</string>
     <string name="people_device_done">Xumurame</string>
     <string name="people_device_list">Meeshaalee</string>

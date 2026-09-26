@@ -158,7 +158,7 @@
     <string name="people_contacts_delete_confirm">Të fshihet %1$s nga kontaktet tuaja?</string>
     <string name="people_contacts_delete_friend_confirm">Të fshihet %1$s nga kontaktet tuaja? Përfundon edhe miqësia juaj.</string>
     <string name="people_contact_new_title">Kontakt i ri</string>
-    <string name="people_contact_edit_title">Redakto kontaktin</string>
+    <string name="people_contact_edit_title">Modifiko kontaktin</string>
     <string name="people_contact_given">Emri</string>
     <string name="people_contact_family">Mbiemri</string>
     <string name="people_contact_nickname">Nofka</string>

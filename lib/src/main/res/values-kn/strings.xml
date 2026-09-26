@@ -4,7 +4,7 @@
     <string name="error_access_denied">ಪ್ರವೇಶ ನಿರಾಕರಿಸಲಾಗಿದೆ</string>
     <string name="auth_email">ಇಮೇಲ್</string>
     <string name="auth_continue">ಮುಂದುವರಿಸಿ</string>
-    <string name="auth_verification_code">ಪರಿಶೀಲನೆ ಕೋಡ್</string>
+    <string name="auth_verification_code">ಪರಿಶೀಲನಾ ಕೋಡ್</string>
     <string name="auth_email_code">ಇಮೇಲ್ ಕೋಡ್</string>
     <string name="auth_recovery_code">ರಿಕವರಿ ಕೋಡ್</string>
     <string name="auth_name">ಹೆಸರು</string>
@@ -25,7 +25,7 @@
     <string name="common_edit">ಸಂಪಾದಿಸಿ</string>
     <string name="common_delete">ಅಳಿಸಿ</string>
     <string name="common_add">ಸೇರಿಸಿ</string>
-    <string name="common_notifications">ನೋಟಿಫಿಕೇಶನ್‌ಗಳು</string>
+    <string name="common_notifications">ಅಧಿಸೂಚನೆಗಳು</string>
     <string name="common_logout">ಲಾಗ್ ಔಟ್</string>
     <string name="common_subscribe">ಚಂದಾದಾರರಾಗಿ</string>
     <string name="common_copy">ನಕಲಿಸಿ</string>
@@ -52,11 +52,11 @@
     <string name="reaction_disagree">ಒಪ್ಪುವುದಿಲ್ಲ</string>
     <string name="push_service_action_hide">ಮರೆಮಾಡಿ</string>
     <string name="about_close">ಮುಚ್ಚಿ</string>
-    <string name="notifications_open">ನೋಟಿಫಿಕೇಶನ್‌ಗಳು</string>
-    <string name="notifications_title">ನೋಟಿಫಿಕೇಶನ್‌ಗಳು</string>
-    <string name="notifications_empty">ಯಾವುದೇ ನೋಟಿಫಿಕೇಶನ್‌ಗಳಿಲ್ಲ</string>
+    <string name="notifications_open">ಅಧಿಸೂಚನೆಗಳು</string>
+    <string name="notifications_title">ಅಧಿಸೂಚನೆಗಳು</string>
+    <string name="notifications_empty">ಯಾವುದೇ ಅಧಿಸೂಚನೆಗಳಿಲ್ಲ</string>
     <string name="notifications_empty_unread">ಎಲ್ಲವನ್ನೂ ನೋಡಿ ಆಗಿದೆ</string>
-    <string name="notifications_tab_unread">ಓದದಿರುವ</string>
+    <string name="notifications_tab_unread">ಓದದ</string>
     <string name="notifications_tab_unread_count">ಓದದಿರುವ (%1$d)</string>
     <string name="notifications_tab_all">ಎಲ್ಲಾ</string>
     <string name="notifications_mark_all_read">ಎಲ್ಲಾ ಓದಲಾಗಿದೆ ಎಂದು ಮಾರ್ಕ್ ಮಾಡಿ</string>
@@ -125,7 +125,7 @@
 
     <string name="app_brand">Mochi</string>
     <string name="error_network">ಸಂಪರ್ಕಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ನಿಮ್ಮ ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
-    <string name="error_authentication_required">ದೃಢೀಕರಣ ಅಗತ್ಯವಿದೆ</string>
+    <string name="error_authentication_required">ದೃಢೀಕರಣ ಅಗತ್ಯ</string>
     <string name="error_not_found">ಕಂಡುಬಂದಿಲ್ಲ</string>
     <string name="error_server">ಸರ್ವರ್ ದೋಷ (%1$d). ದಯವಿಟ್ಟು ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
     <string name="error_unexpected">ಅನಿರೀಕ್ಷಿತ ದೋಷ ಸಂಭವಿಸಿದೆ</string>
@@ -164,7 +164,7 @@
     <string name="bootstrap_sign_in_different_server">ಬೇರೆ ಸರ್ವರ್‌ಗೆ ಸೈನ್ ಇನ್ ಮಾಡಿ</string>
     <string name="common_retry">ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ</string>
     <string name="common_more_options">ಹೆಚ್ಚಿನ ಆಯ್ಕೆಗಳು</string>
-    <string name="common_collapse">ಮುಚ್ಚಿ</string>
+    <string name="common_collapse">ಸಂಕುಚಿಸಿ</string>
     <string name="common_expand">ವಿಸ್ತರಿಸಿ</string>
     <string name="common_play_video">ವೀಡಿಯೊ ಪ್ಲೇ ಮಾಡಿ</string>
     <string name="place_picker_name">ಸ್ಥಳದ ಹೆಸರು</string>
@@ -238,7 +238,7 @@
     <string name="stepup_error_oauth">ಆ ಖಾತೆಯೊಂದಿಗೆ ಪರಿಶೀಲಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
     <string name="game_system_resign">%1$s ಶರಣಾದರು</string>
     <string name="game_system_draw_offer">%1$s ಡ್ರಾ ಪ್ರಸ್ತಾಪಿಸಿದರು</string>
-    <string name="game_system_draw_accept">ಡ್ರಾ ಒಪ್ಪಿಗೆಯಾಯಿತು</string>
+    <string name="game_system_draw_accept">ಡ್ರಾ ಒಪ್ಪಿಗೆಯಾಗಿದೆ</string>
     <string name="game_system_draw_decline">%1$s ಡ್ರಾ ನಿರಾಕರಿಸಿದರು</string>
     <string name="reactivation_title">ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಅಳಿಸಲು ನಿಗದಿಪಡಿಸಲಾಗಿದೆ</string>
     <string name="reactivation_body">ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಅಳಿಸಲು ನಿಗದಿಪಡಿಸಲಾಗಿದೆ. ನೀವು ಈಗ ರದ್ದುಗೊಳಿಸಿ ಪೂರ್ಣ ಪ್ರವೇಶವನ್ನು ಮರುಸ್ಥಾಪಿಸಬಹುದು.</string>
@@ -246,7 +246,7 @@
     <string name="reactivation_reactivate">ನನ್ನ ಖಾತೆಯನ್ನು ಮರುಸಕ್ರಿಯಗೊಳಿಸಿ</string>
     <string name="reactivation_sign_out">ಮುಚ್ಚುವುದನ್ನು ಮುಂದುವರಿಸಿ ಮತ್ತು ಸೈನ್ ಔಟ್ ಮಾಡಿ</string>
     <string name="common_play">ಪ್ಲೇ ಮಾಡಿ</string>
-    <string name="common_pause">ವಿರಾಮ</string>
+    <string name="common_pause">ವಿರಾಮಗೊಳಿಸಿ</string>
     <string name="common_opening_file">ಫೈಲ್ ತೆರೆಯಲಾಗುತ್ತಿದೆ…</string>
     <string name="common_no_app_for_file">ಈ ಫೈಲ್ ಅನ್ನು ಯಾವುದೇ ಆ್ಯಪ್ ತೆರೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ</string>
     <string name="common_file_open_failed">ಫೈಲ್ ತೆರೆಯಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>

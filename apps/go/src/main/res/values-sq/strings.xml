@@ -10,12 +10,12 @@
     <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Kapje të ziu</string>
     <string name="go_captures_white_sr">Kapje të bardhë</string>
-    <string name="go_chat_title">Bisedë</string>
+    <string name="go_chat_title">Bisedimi</string>
     <string name="go_color_black">I zi</string>
     <string name="go_color_white">I bardhë</string>
     <string name="go_delete_confirm">Fshi</string>
     <string name="go_delete_message">Kjo lojë do të hiqet nga lista juaj. Kjo veprim nuk mund të zhbëhet.</string>
-    <string name="go_delete_title">Fshini lojën?</string>
+    <string name="go_delete_title">Të fshihet loja?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">Prano</string>
     <string name="go_draw_decline">Refuzo</string>
@@ -62,7 +62,7 @@
     <string name="go_channel_name">Njoftime Go</string>
     <string name="go_channel_description">Njoftime për lëvizjet, kalimet, ofertat e barazimit dhe rezultatet e ndeshjeve.</string>
     <string name="go_open_sidebar">Hap shiritin anësor</string>
-    <string name="go_sidebar_active">Ndeshje aktive</string>
+    <string name="go_sidebar_active">Lojëra aktive</string>
     <string name="go_empty_active">Ende nuk ka ndeshje aktive.</string>
     <string name="go_status_resigned">U dorëzua</string>
     <string name="go_new_game_title">Ndeshje e re Go</string>

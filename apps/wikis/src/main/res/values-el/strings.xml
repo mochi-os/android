@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Αφαίρεση</string>
     <string name="wikis_replicas_remove_failed">Αποτυχία αφαίρεσης αντιγράφου</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki</string>
     <string name="wikis_channel_name">Ειδοποιήσεις Wikis</string>
     <string name="wikis_channel_description">Ειδοποιήσεις σχετικά με επεξεργασίες σελίδων, σχόλια και προσκλήσεις.</string>
     <string name="wikis_pageview_toc_expand">Εμφάνιση πίνακα περιεχομένων</string>

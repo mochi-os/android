@@ -20,7 +20,7 @@
     <string name="calendars_repeat_never">کبھی نہیں</string>
     <string name="calendars_repeat_monthly">ماہانہ</string>
     <string name="calendars_repeat_yearly">سالانہ</string>
-    <string name="calendars_repeat_custom">حسبِ ضرورت</string>
+    <string name="calendars_repeat_custom">اپنی مرضی کا</string>
     <string name="calendars_reminder_none">کوئی نہیں</string>
     <string name="calendars_day_sunday">اتوار</string>
     <string name="calendars_day_monday">پیر</string>
@@ -57,10 +57,10 @@
     <string name="calendars_drawer_title">کیلنڈرز</string>
     <string name="calendars_drawer_open">کیلنڈرز</string>
     <string name="calendars_calendar_menu">%1$s کے اختیارات</string>
-    <string name="calendars_only_this">صرف یہی</string>
+    <string name="calendars_only_this">صرف یہ</string>
     <string name="calendars_create">کیلنڈر بنائیں</string>
     <string name="calendars_subscribe">کیلنڈر کو سبسکرائب کریں</string>
-    <string name="calendars_poll">ابھی حاصل کریں</string>
+    <string name="calendars_poll">ابھی چیک کریں</string>
     <string name="calendars_delete_title">%1$s حذف کریں؟</string>
     <string name="calendars_delete_message">اس کے ایونٹس بھی اس کے ساتھ حذف ہو جائیں گے۔</string>
     <string name="calendars_today">آج</string>
@@ -76,7 +76,7 @@
     <string name="calendars_event_calendar">کیلنڈر</string>
     <string name="calendars_event_allday">پورا دن</string>
     <string name="calendars_event_finish">اختتام</string>
-    <string name="calendars_event_repeat">دہرائیں</string>
+    <string name="calendars_event_repeat">تکرار</string>
     <string name="calendars_event_reminder">یاد دہانی</string>
     <string name="calendars_event_recurring">دہرایا جاتا ہے</string>
     <string name="calendars_event_delete_title">%1$s حذف کریں؟</string>
@@ -84,7 +84,7 @@
     <string name="calendars_scope_edit">یہ ایونٹ تبدیل کریں یا سبھی ایونٹس؟</string>
     <string name="calendars_scope_delete">یہ ایونٹ حذف کریں یا سبھی ایونٹس؟</string>
     <string name="calendars_scope_one">یہ ایونٹ</string>
-    <string name="calendars_scope_all">سبھی ایونٹس</string>
+    <string name="calendars_scope_all">تمام ایونٹس</string>
     <string name="calendars_repeat_daily">روزانہ</string>
     <string name="calendars_repeat_weekly">ہفتہ وار</string>
     <string name="calendars_repeat_interval">ہر</string>
@@ -154,7 +154,7 @@
     <string name="calendars_link_submit">لنک کریں</string>
     <string name="calendars_link_sync">ابھی سنک کریں</string>
     <string name="calendars_link_grant">کیلنڈر تک رسائی کی اجازت دیں</string>
-    <string name="calendars_link_linked">لنک شدہ</string>
+    <string name="calendars_link_linked">منسلک</string>
     <string name="calendars_link_marker">لنک شدہ کیلنڈر</string>
     <string name="calendars_link_remote_empty">کوئی کیلنڈر نہیں</string>
     <string name="calendars_poll_conflict">ایک ایونٹ دونوں طرف تبدیل ہوا</string>

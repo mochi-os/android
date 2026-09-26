@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">მიღება</string>
     <string name="chess_draw_decline">უარის თქმა</string>
     <string name="chess_status_checkmate_you_win">მატი — თქვენ მოიგეთ!</string>
-    <string name="chess_status_stalemate">უმოქმედო — ფრე</string>
+    <string name="chess_status_stalemate">პატი — ფრე</string>
     <string name="chess_status_draw">ფრე</string>
     <string name="chess_status_check_your_move">შაჰი — თქვენი სვლაა</string>
     <string name="chess_status_your_move">თქვენი სვლა</string>
@@ -60,12 +60,12 @@
     <string name="chess_empty_subtitle">დაიწყეთ პირველი თამაში, რომ მეგობართან ერთად ჭადრაკი ითამაშოთ.</string>
     <string name="chess_empty_start_button">დაიწყეთ პირველი თამაში</string>
     <string name="chess_detail_unavailable">თამაში მიუწვდომელია</string>
-    <string name="chess_delete_title">წავშალოთ თამაში?</string>
+    <string name="chess_delete_title">თამაშის წაშლა?</string>
     <string name="chess_delete_message">ეს ამოშლის თამაშს თქვენი სიიდან.</string>
     <string name="chess_ws_connecting">დაკავშირება…</string>
     <string name="chess_ws_disconnected">ოფლაინ</string>
     <string name="chess_ws_reconnecting">ხელახლა დაკავშირება…</string>
-    <string name="chess_ws_failed">დაკავშირება ვერ მოხერხდა</string>
+    <string name="chess_ws_failed">კავშირი ვერ დამყარდა</string>
     <string name="chess_move_capture">%1$s-მა აიღო %2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 

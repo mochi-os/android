@@ -2,7 +2,7 @@
 <resources>
 
     <string name="words_list_title">Jechoota</string>
-    <string name="words_list_menu">Menu</string>
+    <string name="words_list_menu">Liisticha</string>
     <string name="words_list_logout">Ba\'i</string>
     <string name="words_sidebar_completed">Xumurame</string>
     <string name="words_sidebar_new_game">Taphaa haaraa</string>

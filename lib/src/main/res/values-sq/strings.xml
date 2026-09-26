@@ -56,7 +56,7 @@
     <string name="notifications_title">Njoftime</string>
     <string name="notifications_empty">Asnjë njoftim</string>
     <string name="notifications_empty_unread">S\'ke asgjë për të parë</string>
-    <string name="notifications_tab_unread">Të palexuara</string>
+    <string name="notifications_tab_unread">Pa lexuar</string>
     <string name="notifications_tab_unread_count">Të palexuara (%1$d)</string>
     <string name="notifications_tab_all">Të gjitha</string>
     <string name="notifications_mark_all_read">Shëno të gjitha si të lexuara</string>
@@ -108,7 +108,7 @@
     <string name="settings_display_reset_confirm_message">Kjo do të rivendosë cilësimet e ekranit në vlerat e tyre të parazgjedhura.</string>
     <string name="settings_theme_title">Tema</string>
     <string name="settings_theme_default">I parazgjedhur</string>
-    <string name="settings_background">Sfondi</string>
+    <string name="settings_background">Sfond</string>
     <string name="settings_background_theme">Nga tema</string>
     <string name="settings_background_off">Asnjë</string>
     <string name="game_chat_empty">Ende pa mesazhe</string>
@@ -140,13 +140,13 @@
     <string name="auth_mfa_subtitle">Përfundoni hapat e mbetur të verifikimit</string>
     <string name="auth_recover_account">Rikuperoni llogarinë</string>
     <string name="auth_login_title">Hyni në Mochi</string>
-    <string name="auth_next">Tjetra</string>
+    <string name="auth_next">Tjetri</string>
     <string name="auth_or_log_in_with">Ose hyni me</string>
     <string name="auth_passkey">Kyç</string>
     <string name="auth_use_passkey">Përdorni një çelës hyrjeje</string>
     <string name="auth_email_me_a_code">Më dërgo një kod me email</string>
     <string name="auth_or_enter_authenticator_code">Ose vendosni kodin e autentikuesit</string>
-    <string name="auth_log_in">Hyni</string>
+    <string name="auth_log_in">Kyçu</string>
     <string name="auth_back">Mbrapa</string>
     <string name="auth_lost_access_recovery">Humbët aksesin? Përdorni një kod rikuperimi</string>
     <string name="auth_create_identity_title">Krijoni identitetin tuaj</string>
@@ -178,7 +178,7 @@
     <string name="notifications_clear">Pastro njoftimet</string>
     <string name="entity_avatar_alt">Avatar për %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
-    <string name="format_time_just_now">Tani</string>
+    <string name="format_time_just_now">Sapo</string>
     <string name="format_time_minutes_ago">%1$dm më parë</string>
     <string name="format_time_hours_ago">%1$dorë më parë</string>
     <string name="format_time_days_ago">%1$dd më parë</string>

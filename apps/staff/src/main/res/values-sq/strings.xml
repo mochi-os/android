@@ -284,7 +284,7 @@
     <string name="staff_filter_chip_remove">Hiq filtrin</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderimi</string>
-    <string name="staff_filter_label_query">Kërkimi</string>
+    <string name="staff_filter_label_query">Kërko</string>
     <string name="staff_filter_label_seller">Shitësi</string>
     <string name="staff_filter_label_status">Statusi</string>
     <string name="staff_filter_label_type">Lloji</string>

@@ -70,7 +70,7 @@
     <string name="chat_marked_read">Merkt som lesen</string>
     <string name="chat_search_next">Neste treff</string>
     <string name="chat_search_prev">Førre treff</string>
-    <string name="chat_settings_id">Chat-ID</string>
+    <string name="chat_settings_id">Prat-ID</string>
     <string name="chat_forward_empty">Ingen prat å vidaresende til</string>
     <string name="chat_forward_search">Søk i prat…</string>
     <string name="chat_forward_subtitle">Vel ein prat eller ein venn å vidaresende dei valde meldingane til</string>

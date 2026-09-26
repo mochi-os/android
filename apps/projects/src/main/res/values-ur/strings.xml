@@ -167,10 +167,10 @@
     <string name="projects_class_move_up">اوپر منتقل کریں</string>
     <string name="projects_views_move_down">نیچے منتقل کریں</string>
     <string name="projects_class_move_down">نیچے منتقل کریں</string>
-    <string name="projects_sort_direction_asc">چڑھتی</string>
-    <string name="projects_views_direction_asc">چڑھتی</string>
-    <string name="projects_sort_direction_desc">ڈھلتی</string>
-    <string name="projects_views_direction_desc">ڈھلتی</string>
+    <string name="projects_sort_direction_asc">صعودی</string>
+    <string name="projects_views_direction_asc">صعودی</string>
+    <string name="projects_sort_direction_desc">نزولی</string>
+    <string name="projects_views_direction_desc">نزولی</string>
     <string name="projects_list_add_to_home">ہوم اسکرین میں شامل کریں</string>
     <string name="projects_search_objects_placeholder">اشیاء تلاش کریں</string>
     <string name="projects_links_search_placeholder">اشیاء تلاش کریں</string>
@@ -191,7 +191,7 @@
     <string name="projects_views_filter">فلٹر (محفوظ، ابھی لاگو نہیں)</string>
     <string name="projects_people_empty">ابھی تک کسی کو رسائی حاصل نہیں ہے</string>
     <string name="projects_settings_delete_confirm_message">کیا آپ واقعی اس پراجیکٹ کو حذف کرنا چاہتے ہیں؟ تمام اشیاء، تبصرے اور ترتیبات مستقل طور پر ہٹا دی جائیں گی۔</string>
-    <string name="projects_object_unwatch">دیکھنا بند کریں</string>
+    <string name="projects_object_unwatch">نگرانی ختم کریں</string>
     <string name="projects_object_tab_watchers">دیکھنے والے</string>
     <string name="projects_watchers_empty">ابھی تک کوئی دیکھنے والا نہیں</string>
     <string name="projects_object_delete_title">آبجیکٹ حذف کریں</string>
@@ -199,7 +199,7 @@
     <string name="projects_parent_none">کوئی پیرنٹ نہیں</string>
     <string name="projects_links_empty">کوئی لنکس نہیں</string>
     <string name="projects_links_section_relates">متعلق ہے</string>
-    <string name="projects_links_section_duplicated_by">اس کی نقل ہے</string>
+    <string name="projects_links_section_duplicated_by">نقل کیا گیا بذریعہ</string>
     <string name="projects_links_type">لنک کی قسم</string>
     <string name="projects_links_type_relates">متعلق ہے</string>
     <string name="projects_links_remove">لنک ہٹائیں</string>
@@ -244,7 +244,7 @@
     <string name="projects_request_create_title">مرج درخواست بنائیں</string>
     <string name="projects_request_field_target">ہدف برانچ</string>
     <string name="projects_diff_title">ڈف: %1$s -&gt; %2$s</string>
-    <string name="projects_tree_collapse">سکیڑیں</string>
+    <string name="projects_tree_collapse">سمیٹیں</string>
     <string name="projects_tree_expand">پھیلائیں</string>
     <string name="projects_tree_move">منتقل کریں</string>
     <string name="projects_tree_move_to_parent">پیرنٹ میں منتقل کریں</string>
@@ -306,7 +306,7 @@
     <string name="projects_views_filter_classes">کلاسز پر فلٹر کریں</string>
     <string name="projects_views_by">بمطابق %1$s</string>
     <string name="projects_views_sorted">ترتیب %1$s</string>
-    <string name="projects_design_preview_label">پیش منظر:</string>
+    <string name="projects_design_preview_label">پیش نظارہ:</string>
     <string name="projects_design_preview_no_view">پیش منظر کے لیے کوئی ویو نہیں</string>
     <string name="projects_design_preview_no_class">اس ویو کے لیے کوئی کلاس نہیں</string>
     <string name="projects_design_preview_pick_columns">کالمز فیلڈ منتخب کریں</string>
@@ -318,7 +318,7 @@
     <string name="projects_filter">فلٹر</string>
     <string name="projects_link">لنک</string>
     <string name="projects_filter_clear_all">سب صاف کریں</string>
-    <string name="projects_filter_all">سب</string>
+    <string name="projects_filter_all">تمام</string>
     <string name="projects_filter_other">دیگر</string>
     <string name="projects_create_object_title">نیا</string>
     <string name="projects_settings_section_identity">شناخت</string>
@@ -371,7 +371,7 @@
     <string name="projects_design_export_saved">ڈیزائن محفوظ ہو گیا</string>
     <string name="projects_design_import_failed">وہ فائل پڑھی نہیں جا سکی</string>
     <string name="projects_design_or_upload_json">یا فائل اپ لوڈ کریں</string>
-    <string name="projects_export">ڈیٹا ایکسپورٹ کریں</string>
+    <string name="projects_export">ڈیٹا برآمد کریں</string>
     <string name="projects_export_failed">ایکسپورٹ محفوظ نہیں ہو سکا</string>
     <string name="projects_export_saved">پروجیکٹ ڈیٹا محفوظ ہو گیا</string>
     <string name="projects_exporting">ایکسپورٹ تیار کیا جا رہا ہے…</string>

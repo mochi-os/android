@@ -64,7 +64,7 @@
     <string name="go_channel_name">Go pranešimai</string>
     <string name="go_channel_description">Pranešimai apie ėjimus, praleidimus, lygiųjų pasiūlymus ir partijų rezultatus.</string>
     <string name="go_open_sidebar">Atidaryti šoninę juostą</string>
-    <string name="go_sidebar_active">Aktyvios partijos</string>
+    <string name="go_sidebar_active">Aktyvūs žaidimai</string>
     <string name="go_empty_active">Dar nėra aktyvių partijų.</string>
     <string name="go_status_resigned">Pasidavė</string>
     <string name="go_new_game_title">Nauja Go partija</string>

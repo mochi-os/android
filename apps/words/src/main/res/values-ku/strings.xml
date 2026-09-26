@@ -2,7 +2,7 @@
 <resources>
 
     <string name="words_list_title">Peyv</string>
-    <string name="words_list_menu">Menu</string>
+    <string name="words_list_menu">Menû</string>
     <string name="words_list_logout">Derkeve</string>
     <string name="words_sidebar_completed">Temam</string>
     <string name="words_sidebar_new_game">Lîstika nû</string>
@@ -26,7 +26,7 @@
     <string name="words_detail_action_resign">Dest jê berde</string>
     <string name="words_detail_action_rematch">Lîstika ji nû</string>
     <string name="words_detail_action_delete">Lîstikê jê bibe</string>
-    <string name="words_detail_chat_title">Chat</string>
+    <string name="words_detail_chat_title">Sohbet</string>
     <string name="words_detail_recall">Vegere bîr</string>
     <string name="words_detail_submit">Bişîne</string>
     <string name="words_detail_cancel">Betal bike</string>

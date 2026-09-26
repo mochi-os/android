@@ -191,7 +191,7 @@
     <string name="projects_views_filter">フィルター (保存済み、未適用)</string>
     <string name="projects_people_empty">アクセス権を持つユーザーはまだいません</string>
     <string name="projects_settings_delete_confirm_message">このプロジェクトを削除してもよろしいですか? すべてのオブジェクト、コメント、設定が完全に削除されます。</string>
-    <string name="projects_object_unwatch">ウォッチ解除</string>
+    <string name="projects_object_unwatch">ウォッチを解除</string>
     <string name="projects_object_tab_watchers">ウォッチャー</string>
     <string name="projects_watchers_empty">ウォッチャーはまだいません</string>
     <string name="projects_object_delete_title">オブジェクトを削除</string>
@@ -245,7 +245,7 @@
     <string name="projects_request_field_target">ターゲットブランチ</string>
     <string name="projects_diff_title">差分: %1$s -&gt; %2$s</string>
     <string name="projects_tree_collapse">折りたたむ</string>
-    <string name="projects_tree_expand">展開</string>
+    <string name="projects_tree_expand">展開する</string>
     <string name="projects_tree_move">移動</string>
     <string name="projects_tree_move_to_parent">親に移動</string>
     <string name="projects_tree_root_level">(ルートレベル)</string>
@@ -283,7 +283,7 @@
     <string name="projects_field_type_enumerated">列挙型</string>
     <string name="projects_field_label">フィールド: %1$s</string>
     <string name="projects_field_readonly">読み取り専用</string>
-    <string name="projects_field_sortable">並び替え可能</string>
+    <string name="projects_field_sortable">並べ替え可能</string>
     <string name="projects_field_filterable">フィルター可能</string>
     <string name="projects_field_show_on_card">カードに表示</string>
     <string name="projects_field_multi">複数選択</string>

@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">Прихвати</string>
     <string name="chess_draw_decline">Одбиј</string>
     <string name="chess_status_checkmate_you_win">Шах-мат — побеђујете!</string>
-    <string name="chess_status_stalemate">Пат — нерешено</string>
+    <string name="chess_status_stalemate">Пат — реми</string>
     <string name="chess_status_draw">Реми</string>
     <string name="chess_status_check_your_move">Шах — ваш потез</string>
     <string name="chess_status_your_move">Твој потез</string>
@@ -60,7 +60,7 @@
     <string name="chess_empty_subtitle">Покрените прву партију да играте шах са пријатељем.</string>
     <string name="chess_empty_start_button">Покрените прву партију</string>
     <string name="chess_detail_unavailable">Партија недоступна</string>
-    <string name="chess_delete_title">Обрисати партију?</string>
+    <string name="chess_delete_title">Обрисати игру?</string>
     <string name="chess_delete_message">Ово уклања партију са ваше листе.</string>
     <string name="chess_ws_connecting">Повезивање…</string>
     <string name="chess_ws_disconnected">Ван мреже</string>

@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Cabut</string>
     <string name="wikis_replicas_remove_failed">Gagal mbusak replika</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">Notifikasi babagan suntingan kaca wiki, komentar, lan undangan.</string>
     <string name="wikis_pageview_toc_expand">Tampilake daftar isi</string>
@@ -283,7 +283,7 @@
     <string name="wikis_load_more">Muat luwih akèh</string>
     <string name="wikis_access_change_level">Tingkat akses</string>
     <string name="wikis_access_subject_anyone">Sapa wae</string>
-    <string name="wikis_access_subject_authenticated">Pangguna sing wis dipriksa</string>
+    <string name="wikis_access_subject_authenticated">Panganggo sing wis diverifikasi</string>
 
     <string name="wikis_revision_compare">Bandhingake owahan</string>
     <string name="wikis_revision_author">miturut %1$s</string>

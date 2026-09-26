@@ -100,7 +100,7 @@
     <string name="people_welcome_title">Καλώς ήρθατε στα Άτομα</string>
     <string name="people_person_banner_alt">Πανό για τον/την %1$s</string>
     <string name="people_person_private">Αυτό το προφίλ είναι ιδιωτικό</string>
-    <string name="people_person_state_invited">Προσκεκλημένος</string>
+    <string name="people_person_state_invited">Προσκλήθηκε</string>
 
     <string name="people_invitations_accept_all">Αποδοχή όλων</string>
     <string name="people_invitations_decline_all">Απόρριψη όλων</string>
@@ -117,7 +117,7 @@
     <string name="people_profile_avatar">Άβαταρ</string>
     <string name="people_profile_banner">Μπάνερ</string>
     <string name="people_contacts_search_placeholder">Αναζήτηση…</string>
-    <string name="people_contacts_invited">Προσκεκλημένος</string>
+    <string name="people_contacts_invited">Προσκλήθηκε</string>
     <string name="people_contacts_accept">Αποδοχή</string>
     <string name="people_contacts_message">Αποστολή μηνύματος</string>
     <string name="people_contacts_no_people_found">Δεν βρέθηκαν άτομα</string>
@@ -170,7 +170,7 @@
     <string name="people_contact_organisation">Οργανισμός</string>
     <string name="people_contact_url">Ιστότοπος</string>
     <string name="people_contact_note">Σημείωση</string>
-    <string name="people_contact_book">Ευρετήριο διευθύνσεων</string>
+    <string name="people_contact_book">Βιβλίο διευθύνσεων</string>
     <string name="people_contact_type_work">Εργασία</string>
     <string name="people_contact_type_mobile">Κινητό</string>
     <string name="people_contact_pick_date">Επιλέξτε ημερομηνία</string>

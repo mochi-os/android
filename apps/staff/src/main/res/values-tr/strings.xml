@@ -170,7 +170,7 @@
     <string name="staff_config_field_stripe_oauth_client">OAuth istemci kimliği</string>
     <string name="staff_config_field_stripe_publishable">Yayınlanabilir anahtar</string>
     <string name="staff_config_field_stripe_secret">Gizli anahtar</string>
-    <string name="staff_config_group_moderation">Moderasyon</string>
+    <string name="staff_config_group_moderation">Denetim</string>
     <string name="staff_config_group_payments">Ödemeler</string>
     <string name="staff_config_group_reviews">Yorumlar</string>
     <string name="staff_config_group_stripe">Stripe</string>
@@ -187,7 +187,7 @@
     <string name="staff_dashboard_col_date">Tarih</string>
     <string name="staff_dashboard_col_detail">Ayrıntı</string>
     <string name="staff_dashboard_col_listing">İlan</string>
-    <string name="staff_dashboard_col_moderation">Moderasyon</string>
+    <string name="staff_dashboard_col_moderation">Denetim</string>
     <string name="staff_dashboard_col_name">Ad</string>
     <string name="staff_dashboard_col_object">Nesne</string>
     <string name="staff_dashboard_col_reason">Neden</string>
@@ -216,7 +216,7 @@
     <string name="staff_dashboard_system">Sistem</string>
     <string name="staff_dashboard_tab_audit">Denetim</string>
     <string name="staff_dashboard_tab_listings">İlanlar</string>
-    <string name="staff_dashboard_tab_moderation">Moderasyon</string>
+    <string name="staff_dashboard_tab_moderation">Denetim</string>
     <string name="staff_dashboard_tab_orders">Siparişler</string>
     <string name="staff_dashboard_tab_signups">Kayıtlar</string>
     <string name="staff_dashboard_yes">Evet</string>
@@ -283,8 +283,8 @@
     <string name="staff_disputes_view">Görüntüle</string>
     <string name="staff_filter_chip_remove">Filtreyi kaldır</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
-    <string name="staff_filter_label_moderation">Moderasyon</string>
-    <string name="staff_filter_label_query">Arama</string>
+    <string name="staff_filter_label_moderation">Denetim</string>
+    <string name="staff_filter_label_query">Ara</string>
     <string name="staff_filter_label_seller">Satıcı</string>
     <string name="staff_filter_label_status">Durum</string>
     <string name="staff_filter_label_type">Tür</string>
@@ -297,7 +297,7 @@
     <string name="staff_listings_approved_toast">İlan onaylandı</string>
     <string name="staff_listings_cancel">İptal</string>
     <string name="staff_listings_empty">İlan yok</string>
-    <string name="staff_listings_filter_moderation_label">Moderasyon</string>
+    <string name="staff_listings_filter_moderation_label">Denetim</string>
     <string name="staff_listings_filter_status_label">Durum</string>
     <string name="staff_listings_moderation_auto_approved">Otomatik onaylandı</string>
     <string name="staff_listings_moderation_hold">Beklet</string>

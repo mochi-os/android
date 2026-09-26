@@ -43,15 +43,15 @@
     <string name="people_member_add_hint">Dodaj użytkowników lub grupy, aby zacząć</string>
     <string name="people_member_remove">Usuń członka</string>
     <string name="people_member_remove_title">Usuń członka</string>
-    <string name="people_member_search_hint">Wpisz nazwę, aby znaleźć osoby, które chcesz dodać</string>
+    <string name="people_member_search_hint">Wpisz imię, aby znaleźć osoby, które chcesz dodać</string>
     <string name="people_member_type_user">Użytkownik</string>
     <string name="people_member_type_group">Grupa</string>
     <string name="people_profile_save">Zapisz</string>
     <string name="people_profile_saving">Zapisywanie…</string>
     <string name="people_profile_save_failed">Nie udało się zapisać</string>
-    <string name="people_profile_name">Nazwa</string>
-    <string name="people_profile_name_saved">Nazwa zapisana</string>
-    <string name="people_profile_edit_name">Edytuj nazwę</string>
+    <string name="people_profile_name">Imię i nazwisko</string>
+    <string name="people_profile_name_saved">Imię i nazwisko zapisane</string>
+    <string name="people_profile_edit_name">Edytuj imię i nazwisko</string>
     <string name="people_profile_identity">Tożsamość</string>
     <string name="people_profile_accent">Akcent</string>
     <string name="people_profile_directory_listing">Zezwól innym znaleźć cię w katalogu</string>
@@ -90,7 +90,7 @@
     <string name="people_group_delete_confirm">Usunąć grupę \"%1$s\"? Tej operacji nie można cofnąć.</string>
     <string name="people_member_remove_confirm">Czy na pewno chcesz usunąć %1$s z tej grupy?</string>
     <string name="people_member_remove_with_name">Usuń %1$s</string>
-    <string name="people_member_search_placeholder">Wpisz nazwę, aby wyszukać…</string>
+    <string name="people_member_search_placeholder">Wpisz imię, aby wyszukać…</string>
     <string name="people_groups_add_member_confirm_title">Dodaj do grupy</string>
     <string name="people_groups_add_member_confirm_action">Dodaj do grupy</string>
     <string name="people_profile_image_process_failed">Nie można przetworzyć obrazu %1$s</string>
@@ -124,7 +124,7 @@
     <string name="people_contacts_try_adjusting">Spróbuj dostosować wyszukiwanie</string>
     <string name="people_contact_section_address">Adres</string>
     <string name="people_contact_section_detail">Szczegóły</string>
-    <string name="people_contact_name">Nazwa</string>
+    <string name="people_contact_name">Imię i nazwisko</string>
     <string name="people_contact_email">E-mail</string>
     <string name="people_contact_city">Miasto</string>
     <string name="people_contact_region">Region</string>
@@ -137,7 +137,7 @@
     <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Nazwa</string>
     <string name="people_books_rename">Zmień nazwę</string>
-    <string name="people_contacts_sort_name">Nazwa</string>
+    <string name="people_contacts_sort_name">Imię i nazwisko</string>
     <string name="people_contacts_sort_recent">Niedawno dodane</string>
     <string name="people_contacts_thats_you">To ty</string>
     <string name="people_contacts_try_different_search">Spróbuj innego wyrażenia wyszukiwania</string>

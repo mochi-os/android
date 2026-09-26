@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Поскаржитися на оголошення</string>
     <string name="market_listing_detail_save">Зберегти</string>
     <string name="market_listing_detail_seller_heading">Продавець</string>
-    <string name="market_listing_detail_shipping_heading">Доставка</string>
+    <string name="market_listing_detail_shipping_heading">Варіанти доставки</string>
     <string name="market_listing_detail_subscribe">Підписатися</string>
     <string name="market_listing_detail_tags_heading">Теги</string>
     <string name="market_listing_detail_title">Оголошення</string>
@@ -326,7 +326,7 @@
     <string name="market_sale_tracking_label">Номер відстеження</string>
     <string name="market_saved_title">Збережене</string>
     <string name="market_search_clear">Очистити пошук</string>
-    <string name="market_section_categories">Огляд категорій</string>
+    <string name="market_section_categories">Перегляд категорій</string>
     <string name="market_section_listings">Останні оголошення</string>
     <string name="market_section_recent">Нещодавно переглянуті</string>
     <string name="market_ship_dialog_cancel">Скасувати</string>
@@ -427,7 +427,7 @@
     <string name="market_account_stripe_refresh">Оновити стан</string>
     <string name="market_account_stripe_refresh_failed">Не вдалося оновити стан Stripe</string>
     <string name="market_appeal_dialog_reason_label">Чому ви оскаржуєте?</string>
-    <string name="market_appeal_dialog_title">Оскарження видалення</string>
+    <string name="market_appeal_dialog_title">Оскаржити видалення</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
     <string name="market_bid_dialog_amount_label">Ваша ставка</string>
     <string name="market_bid_dialog_current_high">Поточна найвища ставка: %1$s</string>

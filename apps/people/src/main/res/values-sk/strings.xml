@@ -49,9 +49,9 @@
     <string name="people_profile_save">Uložiť</string>
     <string name="people_profile_saving">Ukladám…</string>
     <string name="people_profile_save_failed">Nepodarilo sa uložiť</string>
-    <string name="people_profile_name">Názov</string>
-    <string name="people_profile_name_saved">Názov uložený</string>
-    <string name="people_profile_edit_name">Upraviť názov</string>
+    <string name="people_profile_name">Meno</string>
+    <string name="people_profile_name_saved">Meno uložené</string>
+    <string name="people_profile_edit_name">Upraviť meno</string>
     <string name="people_profile_identity">Identita</string>
     <string name="people_profile_accent">Akcent</string>
     <string name="people_profile_directory_listing">Povoliť ostatným nájsť vás v adresári</string>
@@ -124,7 +124,7 @@
     <string name="people_contacts_try_adjusting">Skúste upraviť vyhľadávanie</string>
     <string name="people_contact_section_address">Adresa</string>
     <string name="people_contact_section_detail">Podrobnosti</string>
-    <string name="people_contact_name">Názov</string>
+    <string name="people_contact_name">Meno</string>
     <string name="people_contact_email">E-mail</string>
     <string name="people_contact_city">Mesto</string>
     <string name="people_contact_region">Región</string>
@@ -137,7 +137,7 @@
     <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Názov</string>
     <string name="people_books_rename">Premenovať</string>
-    <string name="people_contacts_sort_name">Názov</string>
+    <string name="people_contacts_sort_name">Meno</string>
     <string name="people_contacts_sort_recent">Nedávno pridané</string>
     <string name="people_contacts_thats_you">To ste vy</string>
     <string name="people_contacts_try_different_search">Skúste iný hľadaný výraz</string>
@@ -166,7 +166,7 @@
     <string name="people_contact_add_phone">Pridať telefón</string>
     <string name="people_contact_add_address">Pridať adresu</string>
     <string name="people_contact_street">Ulica</string>
-    <string name="people_contact_birthday">Narodeniny</string>
+    <string name="people_contact_birthday">Dátum narodenia</string>
     <string name="people_contact_organisation">Organizácia</string>
     <string name="people_contact_url">Webová stránka</string>
     <string name="people_contact_note">Poznámka</string>

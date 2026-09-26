@@ -13,7 +13,7 @@
     <string name="market_account_seller_step_activate_title">ធ្វើឱ្យគណនីអ្នកលក់សកម្ម</string>
     <string name="market_account_seller_step_activate_desc">បង្កើតប្រវត្តិរូបអ្នកលក់របស់អ្នកដើម្បីចាប់ផ្តើមដាក់លក់ទំនិញ</string>
     <string name="market_account_seller_step_stripe_desc">ភ្ជាប់គណនី Stripe ដើម្បីទទួលការទូទាត់ពីអ្នកទិញ</string>
-    <string name="market_account_seller_fees_heading">ថ្លៃសេវា៖</string>
+    <string name="market_account_seller_fees_heading">កម្រៃ៖</string>
     <string name="market_account_seller_fees_mochi">Mochi យក %1$s%% នៃការលក់នីមួយៗ។</string>
     <string name="market_account_seller_fees_stripe">Stripe គិតថ្លៃដំណើរការផ្ទាល់ខ្លួនរបស់ខ្លួនក្នុងមួយប្រតិបត្តិការ និងថ្លៃថេរក្នុងមួយការទាមទារប្រាក់វិញ។ អត្រាបច្ចុប្បន្នសម្រាប់រូបិយប័ណ្ណ និងតំបន់របស់អ្នកត្រូវបានរាយក្នុងផ្ទាំងគ្រប់គ្រង Stripeរបស់អ្នក។</string>
     <string name="market_account_seller_connect">ភ្ជាប់ Stripe</string>
@@ -40,9 +40,9 @@
     <string name="market_bid_dialog_instant_win">បានបញ្ជាក់ការទិញ — បញ្ចប់ការទូទាត់</string>
     <string name="market_bid_dialog_invalid_ceiling">ការដេញថ្លៃអតិបរមាត្រូវយ៉ាងហោចណាស់ស្មើនឹងចំនួនការដេញថ្លៃរបស់អ្នក</string>
     <string name="market_bid_dialog_outbid">ការដេញថ្លៃរបស់អ្នកត្រូវបានដាក់ ប៉ុន្តែត្រូវបានឆ្លងកាត់ភ្លាមៗ។ អ្នកដេញថ្លៃផ្សេងទៀតមានកំរិតអតិបរមាខ្ពស់ជាង។ ការដេញថ្លៃរបស់គាត់ឥឡូវនេះគឺ %1$s។</string>
-    <string name="market_bid_dialog_submit">ដាក់ការដេញថ្លៃ</string>
+    <string name="market_bid_dialog_submit">ដាក់តម្លៃដេញ</string>
     <string name="market_bid_dialog_success">បានដាក់ការដេញថ្លៃ</string>
-    <string name="market_bid_dialog_title">ដាក់ការដេញថ្លៃ</string>
+    <string name="market_bid_dialog_title">ដាក់តម្លៃដេញ</string>
     <string name="market_bid_ended">ការដេញថ្លៃបានបញ្ចប់</string>
     <string name="market_bid_high">ការដេញថ្លៃខ្ពស់</string>
     <string name="market_bids_empty">មិនមានការដេញថ្លៃ</string>
@@ -234,7 +234,7 @@
     <string name="market_listing_detail_save">រក្សាទុក</string>
     <string name="market_listing_detail_seller_heading">អ្នកលក់</string>
     <string name="market_listing_detail_share">ចែករំលែកការផ្សាយ</string>
-    <string name="market_listing_detail_shipping_heading">ការដឹកជញ្ជូន</string>
+    <string name="market_listing_detail_shipping_heading">ជម្រើសដឹកជញ្ជូន</string>
     <string name="market_listing_detail_subscribe">ជាវ</string>
     <string name="market_listing_detail_tags_heading">ស្លាក</string>
     <string name="market_listing_detail_title">ការដាក់លក់</string>
@@ -612,7 +612,7 @@
     <string name="market_sale_dispute_state_responded">កំពុងរង់ចាំការសម្រេច</string>
     <string name="market_sale_dispute_stripe_reason">មូលហេតុទាមទារប្រាក់វិញ Stripe៖ %1$s</string>
     <string name="market_sale_fee_gross">សរុបដុល</string>
-    <string name="market_sale_fee_mochi">ថ្លៃ Mochi</string>
+    <string name="market_sale_fee_mochi">ថ្លៃសេវា Mochi</string>
     <string name="market_sale_fee_payout">ចំណូលសុទ្ធ</string>
     <string name="market_sale_fee_stripe">ថ្លៃដំណើរការ Stripe</string>
     <string name="market_sale_fee_stripe_note">ថ្លៃដំណើរការ Stripe ត្រូវបានបង្ហាញនៅក្នុងផ្ទាំងគ្រប់គ្រង Stripe របស់អ្នក។</string>
@@ -629,7 +629,7 @@
     <string name="market_saved_empty_subtitle">ប៉ះរូបតំណាងចំណាំនៅលើបញ្ជីណាមួយដើម្បីរក្សាទុកសម្រាប់ពេលក្រោយ។</string>
     <string name="market_saved_empty_title">មិនមានបញ្ជីបានរក្សាទុក</string>
     <string name="market_status_past_due">ហួសកាលកំណត់</string>
-    <string name="market_stripe_onboarding_action">បន្តការដំឡើង</string>
+    <string name="market_stripe_onboarding_action">បន្តការរៀបចំ</string>
     <string name="market_stripe_onboarding_body">បញ្ចប់ការដំឡើង Stripe មុនពេលអ្នកអាចទទួលការទូទាត់។</string>
     <string name="market_stripe_onboarding_failed">មិនអាចបើក Stripe បានទេ</string>
     <string name="market_stripe_onboarding_opening">កំពុងបើក Stripe…</string>

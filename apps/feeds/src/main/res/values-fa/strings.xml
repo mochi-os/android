@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">فید Mochi</string>
     <string name="feeds_source_type_feed_memories">خاطرات</string>
-    <string name="feeds_remove_source">حذف منبع</string>
+    <string name="feeds_remove_source">حذف منبع؟</string>
     <string name="feeds_suggested_credibility_accept">پذیرش</string>
     <string name="feeds_rss_url_copied">URL RSS در کلیپ‌بورد کپی شد</string>
     <string name="feeds_logout">خروج</string>
@@ -112,7 +112,7 @@
     <string name="feeds_clipboard_label_rss">نشانی RSS</string>
     <string name="feeds_source_never_fetched">هرگز دریافت نشده</string>
     <string name="feeds_source_poll">بازرسی</string>
-    <string name="feeds_source_transform">تبدیل</string>
+    <string name="feeds_source_transform">تبدیل با هوش مصنوعی</string>
     <string name="feeds_remove_source_confirm">حذف \"%1$s\"؟</string>
     <string name="feeds_remove_also_delete_posts">نوشته‌های وارد شده نیز حذف شوند</string>
     <string name="feeds_suggested_credibility_title">اعتبار پیشنهادی</string>

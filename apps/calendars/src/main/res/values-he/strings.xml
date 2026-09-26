@@ -112,7 +112,7 @@
     <string name="calendars_multiweek_weeks">שבועות מוצגים</string>
     <string name="calendars_multiweek_previous">שבועות קודמים</string>
     <string name="calendars_default_duration">אורך אירוע כברירת מחדל</string>
-    <string name="calendars_default_reminder">תזכורת כברירת מחדל</string>
+    <string name="calendars_default_reminder">תזכורת ברירת מחדל</string>
     <string name="calendars_link_title">קישור ליומן</string>
     <string name="calendars_link_copy">העתק קישור</string>
     <string name="calendars_link_once">העתיקו אותו עכשיו: לא ניתן יהיה להציג אותו שוב.</string>
@@ -165,7 +165,7 @@
     <string name="calendars_poll_unauthorised">שרת היומן דחה את פרטי הכניסה של החשבון</string>
     <string name="calendars_subscribe_username">שם משתמש</string>
     <string name="calendars_subscribe_password">סיסמה</string>
-    <string name="calendars_subscribe_connect">התחברות</string>
+    <string name="calendars_subscribe_connect">התחבר</string>
     <string name="calendars_subscribe_server">שרת Mochi או CalDAV אחר</string>
     <string name="calendars_subscribe_address">כתובת יומן שפורסם (לקריאה בלבד)</string>
     <string name="calendars_subscribe_password_apple">סיסמה ייעודית ליישום</string>

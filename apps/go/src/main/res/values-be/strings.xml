@@ -49,8 +49,8 @@
     <string name="go_resign_title">Здацца ў гульні?</string>
     <string name="go_sidebar_completed">Завершана</string>
     <string name="go_sidebar_new_game">Новая гульня</string>
-    <string name="go_status_draw">Маляваць</string>
-    <string name="go_status_draw_text">Маляваць</string>
+    <string name="go_status_draw">Нічыя</string>
+    <string name="go_status_draw_text">Нічыя</string>
     <string name="go_status_game_over">Канец гульні</string>
     <string name="go_status_opponent_move">Ход %1$s</string>
     <string name="go_status_opponent_wins">%1$s перамагае</string>
@@ -62,7 +62,7 @@
     <string name="go_channel_name">Go апавяшчэнні</string>
     <string name="go_channel_description">Апавяшчэнні аб хадах, пропусках, прапановах нічыёй і выніках партый.</string>
     <string name="go_open_sidebar">Адкрыць бакавую панэль</string>
-    <string name="go_sidebar_active">Актыўныя партыі</string>
+    <string name="go_sidebar_active">Актыўныя гульні</string>
     <string name="go_empty_active">Пакуль няма актыўных партый.</string>
     <string name="go_status_resigned">Здаўся</string>
     <string name="go_new_game_title">Новая Go партыя</string>

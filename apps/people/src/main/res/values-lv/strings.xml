@@ -49,9 +49,9 @@
     <string name="people_profile_save">Saglabāt</string>
     <string name="people_profile_saving">Saglabā…</string>
     <string name="people_profile_save_failed">Neizdevās saglabāt</string>
-    <string name="people_profile_name">Nosaukums</string>
-    <string name="people_profile_name_saved">Nosaukums saglabāts</string>
-    <string name="people_profile_edit_name">Rediģēt nosaukumu</string>
+    <string name="people_profile_name">Vārds</string>
+    <string name="people_profile_name_saved">Vārds saglabāts</string>
+    <string name="people_profile_edit_name">Rediģēt vārdu</string>
     <string name="people_profile_identity">Identitāte</string>
     <string name="people_profile_accent">Akcents</string>
     <string name="people_profile_directory_listing">Ļaut citiem atrast tevi direktorijā</string>
@@ -124,7 +124,7 @@
     <string name="people_contacts_try_adjusting">Mēģiniet pielāgot meklēšanu</string>
     <string name="people_contact_section_address">Adrese</string>
     <string name="people_contact_section_detail">Detaļas</string>
-    <string name="people_contact_name">Nosaukums</string>
+    <string name="people_contact_name">Vārds</string>
     <string name="people_contact_email">E-pasts</string>
     <string name="people_contact_city">Pilsēta</string>
     <string name="people_contact_region">Reģions</string>
@@ -137,7 +137,7 @@
     <string name="people_contact_pick_date_confirm">Labi</string>
     <string name="people_books_name">Nosaukums</string>
     <string name="people_books_rename">Pārdēvēt</string>
-    <string name="people_contacts_sort_name">Nosaukums</string>
+    <string name="people_contacts_sort_name">Vārds</string>
     <string name="people_contacts_sort_recent">Nesen pievienots</string>
     <string name="people_contacts_thats_you">Tas esi tu</string>
     <string name="people_contacts_try_different_search">Mēģiniet citu meklēšanas vārdu</string>

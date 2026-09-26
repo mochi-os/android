@@ -242,7 +242,7 @@
     <string name="route_meta">ప్రాధాన్యత %1$d · %2$s</string>
     <string name="interests_search_placeholder">జోడించడానికి అంశాలను శోధించండి…</string>
     <string name="interests_empty">ఇంకా ఆసక్తులు లేవు.</string>
-    <string name="interests_summary_regenerate">సారాంశాన్ని తిరిగి సృష్టించు</string>
+    <string name="interests_summary_regenerate">సారాంశాన్ని రీజెనరేట్ చేయండి</string>
     <string name="interests_summary_regenerating">తిరిగి సృష్టిస్తోంది…</string>
     <string name="interests_summary_empty">మీకు ఇష్టమైన వాటి సారాంశాన్ని సృష్టించడానికి కొన్ని ఆసక్తులను జోడించండి.</string>
     <string name="interests_search_failed">శోధన విఫలమైంది. దయచేసి మళ్లీ ప్రయత్నించండి.</string>
@@ -263,7 +263,7 @@
     <string name="system_settings_reset_message">ఇది \"%1$s\"ని డిఫాల్ట్ విలువకు (%2$s) రీసెట్ చేస్తుంది.</string>
     <string name="system_settings_reset_message_empty">ఇది \"%1$s\"ని డిఫాల్ట్‌కి (ఖాళీ) రీసెట్ చేస్తుంది.</string>
     <string name="settings_home_system_users">వినియోగదారులు (సర్వర్)</string>
-    <string name="system_users_add_user">వినియోగదారుని జోడించు</string>
+    <string name="system_users_add_user">వాడుకరిని జోడించండి</string>
     <string name="system_users_search_placeholder">వినియోగదారులను శోధించు…</string>
     <string name="system_users_sort_by">దీని ద్వారా క్రమబద్ధీకరించు</string>
     <string name="system_users_last_login">చివరి లాగిన్: %1$s</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s ఇకపై ఈ డొమైన్‌లో మార్గాలను నిర్వహించదు.</string>
     <string name="domain_delegation_delete_title">ప్రతినిధ్యాన్ని తొలగించాలా?</string>
     <string name="domain_delegation_path">పాత్</string>
-    <string name="domain_delegation_user">వినియోగదారు ID</string>
+    <string name="domain_delegation_user">యూజర్</string>
     <string name="domain_delegations">ప్రతినిధ్యాలు</string>
     <string name="domain_delegations_empty">కాన్ఫిగర్ చేయబడిన ప్రతినిధులు లేరు.</string>
     <string name="domain_delete">డొమైన్‌ను తొలగించండి</string>
@@ -391,7 +391,7 @@
     <string name="accounts_capability_calendar">క్యాలెండర్</string>
     <string name="accounts_capability_notify">నోటిఫికేషన్‌లు</string>
     <string name="accounts_capability_ai">AI</string>
-    <string name="accounts_capability_login">సైన్-ఇన్</string>
+    <string name="accounts_capability_login">లాగిన్</string>
     <string name="accounts_provider_caldav">క్యాలెండర్ సర్వర్</string>
     <string name="accounts_revoke_confirm">ఇది %1$s యొక్క క్యాలెండర్ యాక్సెస్‌ను ఉపసంహరిస్తుంది. లాగిన్ పేజీలో అన్‌లింక్ చేసే వరకు %2$s తో సైన్-ఇన్ కొనసాగుతుంది.</string>
     <string name="accounts_capability_mcp">MCP</string>

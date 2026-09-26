@@ -128,7 +128,7 @@
     <string name="error_enter_email">Моля, въведете имейл адреса си</string>
     <string name="error_enter_name">Моля, въведете име</string>
     <string name="auth_connect_to_server">Свържете се със сървъра си</string>
-    <string name="auth_server_url">URL адрес на сървъра</string>
+    <string name="auth_server_url">URL на сървър</string>
     <string name="auth_connect">Свързване</string>
     <string name="auth_sign_in">Вход</string>
     <string name="auth_check_email">Проверете имейла си за код за потвърждение</string>
@@ -159,7 +159,7 @@
     <string name="bootstrap_sign_in_differently">Вход по друг начин</string>
     <string name="bootstrap_choose_account">Изберете акаунт</string>
     <string name="bootstrap_sign_in_different_server">Вход в друг сървър</string>
-    <string name="common_retry">Повторен опит</string>
+    <string name="common_retry">Опитай отново</string>
     <string name="common_more_options">Още опции</string>
     <string name="common_collapse">Свиване</string>
     <string name="common_expand">Разгъване</string>
@@ -188,7 +188,7 @@
     <string name="format_time_days_short">%1$d д</string>
     <string name="format_time_weeks_short">%1$d седм</string>
     <string name="format_time_months_short">%1$d мес</string>
-    <string name="reaction_add">Добавяне на реакция</string>
+    <string name="reaction_add">Добави реакция</string>
     <string name="push_service_channel">Пуш известия на Mochi</string>
     <string name="push_service_channel_description">Поддържа Mochi свързан за получаване на известия</string>
     <string name="push_service_group">Фонова услуга</string>
@@ -226,7 +226,7 @@
     <string name="stepup_email_label">Имейл код</string>
     <string name="stepup_email_placeholder">Въведете кода от имейла си</string>
     <string name="stepup_totp_label">Код от удостоверител</string>
-    <string name="stepup_totp_placeholder">Въведете кода от приложението за удостоверяване</string>
+    <string name="stepup_totp_placeholder">Въведете кода от удостоверителя</string>
     <string name="stepup_use_passkey">Използвайте своя ключ за достъп</string>
     <string name="stepup_send_email">Изпрати имейл</string>
     <string name="stepup_resend_email">Изпрати имейла отново</string>

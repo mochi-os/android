@@ -3,7 +3,7 @@
 
     <string name="settings_home_title">Qindaa\'inoota</string>
     <string name="settings_home_logout">Ba\'i</string>
-    <string name="settings_home_account">Akkawuntii</string>
+    <string name="settings_home_account">Akkaawuntii</string>
     <string name="settings_home_preferences">Filannoowwan</string>
     <string name="settings_home_display">Mul\'isi</string>
     <string name="settings_home_notification_prefs">Filannoo beeksisaa</string>
@@ -119,7 +119,7 @@
     <string name="settings_home_system_documents">Galmeewwan</string>
     <string name="settings_home_system_settings">Qindaa\'inoota sirnaa</string>
     <string name="system_settings_title">Qindaa\'inoota sirnaa</string>
-    <string name="system_settings_section_login">Galmaa\'uu</string>
+    <string name="system_settings_section_login">Galchuu</string>
     <string name="system_settings_section_oauth">Galaa\'iinsa qaama sadaffaa</string>
     <string name="system_settings_section_user_defaults">Sirnaan dursaa fayyadamaa</string>
     <string name="system_settings_section_operator">Hojjetaa</string>
@@ -207,7 +207,7 @@
     <string name="system_users_toast_status_failed">Haala fayyadamaa toattaachuu hin dandeenye</string>
     <string name="system_users_toast_revoke_failed">Sessenii haquu hin dandeenye</string>
 
-    <string name="settings_home_sessions">Yeroowwan tajaajila</string>
+    <string name="settings_home_sessions">Yeroowwan turtii</string>
     <string name="settings_home_privacy">Imaammata iccitii</string>
     <string name="settings_home_rules">Seerota</string>
     <string name="settings_home_terms">Haalota tajaajilaa</string>
@@ -229,7 +229,7 @@
     <string name="account_recovery_regen_title">Lakkoofsa deebii irra deebi\'isuun?</string>
     <string name="account_recovery_regen_message">Lakkoofsonni jiran hatattamaan hojiidhaa dhaabbu. Haaroon iddoo nageenya qabuutti olkaa\'i.</string>
     <string name="account_recovery_codes_warning">Lakkoofsota kanneen olkaa\'i — tokko tokkoon yeroo tokko qofa itti fayyadamuu danda\'ama. Lammaffaa hin agarsiisaman.</string>
-    <string name="sessions_title">Yeroowwan tajaajila</string>
+    <string name="sessions_title">Yeroowwan turtii</string>
     <string name="sessions_empty">Mariin dalagu hin jiru.</string>
     <string name="sessions_revoke_message">Meeshaan marii kana fayyadamu ni ba\'a.</string>
     <string name="account_oauth_empty">Akkaawuntiin walqabate hin jiru</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">Dursinsii %1$d · %2$s</string>
     <string name="interests_search_placeholder">Mataduree dabaluuf barbaadi…</string>
     <string name="interests_empty">Hammataan ammayyuu hin jiru.</string>
-    <string name="interests_summary_regenerate">Gabaasa irra deebi\'i</string>
+    <string name="interests_summary_regenerate">Cuunfaa deebisanii uumuu</string>
     <string name="interests_summary_regenerating">Irra deebi\'a jira…</string>
     <string name="interests_summary_empty">Waanota jaallattuu gabaasaa uumuuf hammoota muraasa dabali.</string>
     <string name="interests_search_failed">Barbaaduun hin milkoofne. Ammas yaali.</string>
@@ -263,7 +263,7 @@
     <string name="system_settings_reset_message">Kunis \"%1$s\" gara gatii durtii (%2$s) jijjiira.</string>
     <string name="system_settings_reset_message_empty">Kunis \"%1$s\" gara durtii (duwwaa) jijjiira.</string>
     <string name="settings_home_system_users">Fayyadamtoota (seerverii)</string>
-    <string name="system_users_add_user">Fayyadamtuu dabali</string>
+    <string name="system_users_add_user">Fayyadamaa dabaluu</string>
     <string name="system_users_search_placeholder">Fayyadamtoota barbaadi…</string>
     <string name="system_users_sort_by">Tartiibessuu</string>
     <string name="system_users_last_login">Seenuu dhumaa: %1$s</string>
@@ -273,7 +273,7 @@
     <string name="system_users_revoke_all_title">Marii hunda kaasuu?</string>
     <string name="system_users_revoke_all_message">Mariiwwan dalagaa fayyadamtuu kanaa hundi ni ba\'u.</string>
     <string name="system_users_pagination_status">%3$d fayyadamtoota keessaa %1$d–%2$d agarsiifa</string>
-    <string name="account_title">Akkawuntii</string>
+    <string name="account_title">Akkaawuntii</string>
     <string name="account_section_identity">Eenyummaa</string>
     <string name="account_identity_identity">Eenyummaa</string>
     <string name="account_identity_username">Maqaa fayyadamaa</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s lammaffaa karoorawwan domainii kana irraa hin bulchu.</string>
     <string name="domain_delegation_delete_title">Bakka bu\'iinsa haqu?</string>
     <string name="domain_delegation_path">Daandii</string>
-    <string name="domain_delegation_user">ID fayyadamtuu</string>
+    <string name="domain_delegation_user">Fayyadamaa</string>
     <string name="domain_delegations">Bakka bu\'iinsa</string>
     <string name="domain_delegations_empty">Delegasiyoniin qaroomfaman hin jiran.</string>
     <string name="domain_delete">Damee haqi</string>
@@ -312,7 +312,7 @@
         <item quantity="one">Yeroo turtii 1 kaafame</item>
         <item quantity="other">Yeroowwan turtii %1$d kaafaman</item>
     </plurals>
-    <string name="login_title">Galmaa\'uu</string>
+    <string name="login_title">Galchuu</string>
     <string name="login_section_methods">Mala seenii</string>
     <string name="login_method_email">Koodii imeelii</string>
     <string name="login_method_passkey">Passkey</string>
@@ -392,7 +392,7 @@
     <string name="accounts_capability_notify">Beeksisaalee</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Seensa</string>
-    <string name="accounts_provider_caldav">Saarvarii kaalaandarii</string>
+    <string name="accounts_provider_caldav">Sarvarii kaalaandarii</string>
     <string name="accounts_revoke_confirm">Kun qaqqabummaa kaalaandarii %1$s ni haqa. %2$s waliin seensi hamma fuula Seensaa irratti hiiktutti ni tura.</string>
     <string name="accounts_capability_mcp">MCP</string>
 </resources>

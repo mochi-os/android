@@ -154,7 +154,7 @@
     <string name="calendars_link_submit">Lotu</string>
     <string name="calendars_link_sync">Sinkronizatu orain</string>
     <string name="calendars_link_grant">Baimendu egutegirako sarbidea</string>
-    <string name="calendars_link_linked">Lotuta</string>
+    <string name="calendars_link_linked">Estekatuta</string>
     <string name="calendars_link_marker">Lotutako egutegia</string>
     <string name="calendars_link_remote_empty">Ez dago egutegirik</string>
     <string name="calendars_poll_conflict">Gertaera bat bi aldeetan aldatu da</string>

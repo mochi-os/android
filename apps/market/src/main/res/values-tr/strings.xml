@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">İlanı bildir</string>
     <string name="market_listing_detail_save">Kaydet</string>
     <string name="market_listing_detail_seller_heading">Satıcı</string>
-    <string name="market_listing_detail_shipping_heading">Kargo</string>
+    <string name="market_listing_detail_shipping_heading">Kargo seçenekleri</string>
     <string name="market_listing_detail_subscribe">Abone ol</string>
     <string name="market_listing_detail_tags_heading">Etiketler</string>
     <string name="market_listing_detail_title">İlan</string>

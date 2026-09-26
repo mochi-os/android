@@ -242,7 +242,7 @@
     <string name="route_meta">Առաջնահերթություն %1$d · %2$s</string>
     <string name="interests_search_placeholder">Փնտրել թեմաներ ավելացնելու համար…</string>
     <string name="interests_empty">Դեռևս հետաքրքրություններ չկան։</string>
-    <string name="interests_summary_regenerate">Վերարտադրել ամփոփումը</string>
+    <string name="interests_summary_regenerate">Վերագեներացնել ամփոփումը</string>
     <string name="interests_summary_regenerating">Վերարտադրում է…</string>
     <string name="interests_summary_empty">Ավելացրեք մի քանի հետաքրքրություններ՝ ձեր սիրած բաների ամփոփումը ստեղծելու համար։</string>
     <string name="interests_search_failed">Որոնումը ձախողվեց։ Կրկին փորձեք։</string>

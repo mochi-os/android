@@ -32,8 +32,8 @@
     <string name="chess_draw_accept">Chấp nhận</string>
     <string name="chess_draw_decline">Từ chối</string>
     <string name="chess_status_checkmate_you_win">Chiếu hết — bạn thắng!</string>
-    <string name="chess_status_stalemate">Thế cờ bí — hòa</string>
-    <string name="chess_status_draw">Hoà</string>
+    <string name="chess_status_stalemate">Hết nước đi — hòa</string>
+    <string name="chess_status_draw">Hòa</string>
     <string name="chess_status_check_your_move">Chiếu — đến lượt bạn</string>
     <string name="chess_status_your_move">Lượt của bạn</string>
     <string name="chess_move_subject_you">Bạn</string>
@@ -58,7 +58,7 @@
     <string name="chess_channel_description">Thông báo về nước đi cờ vua, đề nghị hòa và kết quả ván đấu.</string>
     <string name="chess_channel_name">Thông báo cờ vua</string>
     <string name="chess_delete_message">Xoá ván cờ khỏi danh sách của bạn.</string>
-    <string name="chess_delete_title">Xoá ván cờ?</string>
+    <string name="chess_delete_title">Xóa trận đấu?</string>
     <string name="chess_detail_unavailable">Ván cờ không khả dụng</string>
     <string name="chess_empty_start_button">Bắt đầu ván đầu tiên</string>
     <string name="chess_empty_subtitle">Bắt đầu ván đầu tiên để chơi cờ vua với bạn bè.</string>

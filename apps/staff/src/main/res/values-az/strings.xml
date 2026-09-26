@@ -270,7 +270,7 @@
     <string name="staff_filter_chip_remove">Filtri sil</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderasiya</string>
-    <string name="staff_filter_label_query">Axtarış</string>
+    <string name="staff_filter_label_query">Axtar</string>
     <string name="staff_filter_label_seller">Satıcı</string>
     <string name="staff_filter_label_status">Status</string>
     <string name="staff_filter_label_type">Növ</string>
@@ -378,7 +378,7 @@
     <string name="staff_sidebar_disputes">Mübahisələr</string>
     <string name="staff_sidebar_listings">Elanlar</string>
     <string name="staff_sidebar_management">İdarəetmə</string>
-    <string name="staff_sidebar_market">Market</string>
+    <string name="staff_sidebar_market">Bazar</string>
     <string name="staff_sidebar_moderation">Moderasiya jurnalı</string>
     <string name="staff_sidebar_overview">İcmal</string>
     <string name="staff_sidebar_reports">Hesabatlar</string>

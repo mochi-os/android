@@ -119,7 +119,7 @@
     <string name="settings_home_system_documents">Dokumentet</string>
     <string name="settings_home_system_settings">Cilësimet e sistemit</string>
     <string name="system_settings_title">Cilësimet e sistemit</string>
-    <string name="system_settings_section_login">Kyçja</string>
+    <string name="system_settings_section_login">Hyrja</string>
     <string name="system_settings_section_oauth">Hyrje me palë të tretë</string>
     <string name="system_settings_section_user_defaults">Parazgjedhjet e përdoruesit</string>
     <string name="system_settings_section_operator">Operatori</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s nuk do të menaxhojë më rrugët në këtë domain.</string>
     <string name="domain_delegation_delete_title">Të fshihet delegimi?</string>
     <string name="domain_delegation_path">Shtegu</string>
-    <string name="domain_delegation_user">ID e përdoruesit</string>
+    <string name="domain_delegation_user">Përdoruesi</string>
     <string name="domain_delegations">Delegimet</string>
     <string name="domain_delegations_empty">Asnjë delegim i konfiguruar.</string>
     <string name="domain_delete">Fshi domenin</string>
@@ -312,7 +312,7 @@
         <item quantity="one">U revokua 1 sesion</item>
         <item quantity="other">U revokuan %1$d sesione</item>
     </plurals>
-    <string name="login_title">Kyçja</string>
+    <string name="login_title">Hyrja</string>
     <string name="login_section_methods">Mënyrat e hyrjes</string>
     <string name="login_method_email">Kodi me email</string>
     <string name="login_method_passkey">Kyç</string>
@@ -391,7 +391,7 @@
     <string name="accounts_capability_calendar">Kalendari</string>
     <string name="accounts_capability_notify">Njoftime</string>
     <string name="accounts_capability_ai">AI</string>
-    <string name="accounts_capability_login">Hyrje</string>
+    <string name="accounts_capability_login">Hyrja</string>
     <string name="accounts_provider_caldav">Server kalendari</string>
     <string name="accounts_revoke_confirm">Kjo do të revokojë qasjen në kalendar të %1$s. Hyrja me %2$s mbetet derisa ta shkëputni në faqen e hyrjes.</string>
     <string name="accounts_capability_mcp">MCP</string>

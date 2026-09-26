@@ -30,7 +30,7 @@
     <string name="staff_accounts_status_active">Virkur</string>
     <string name="staff_accounts_status_banned">Bannaður</string>
     <string name="staff_accounts_status_suspended">Frestað</string>
-    <string name="staff_accounts_submitting">Sendi…</string>
+    <string name="staff_accounts_submitting">Sendir…</string>
     <string name="staff_accounts_suspend">Fresta</string>
     <string name="staff_accounts_suspended_toast">Reikningur frystur</string>
     <string name="staff_accounts_unban">Afbanna</string>
@@ -53,7 +53,7 @@
     <string name="staff_appeals_notes_label">Athugasemdir</string>
     <string name="staff_appeals_reason_label">Ástæða áfrýjunar seljanda</string>
     <string name="staff_appeals_submit">Senda</string>
-    <string name="staff_appeals_submitting">Sendi…</string>
+    <string name="staff_appeals_submitting">Sendir…</string>
     <string name="staff_appeals_upheld_toast">Áfrýjun staðfest</string>
     <string name="staff_audit_action_account_banned">Bannaður</string>
     <string name="staff_audit_action_account_seller_activated">Seljandi virkjaður</string>
@@ -65,7 +65,7 @@
     <string name="staff_audit_action_account_unbanned">Afbannað</string>
     <string name="staff_audit_action_account_unsuspended">Frestun afturkölluð</string>
     <string name="staff_audit_action_auction_bid_placed">Boð sett fram</string>
-    <string name="staff_audit_action_auction_cancelled">Uppboð aflýst</string>
+    <string name="staff_audit_action_auction_cancelled">Uppboði aflýst</string>
     <string name="staff_audit_action_auction_created">Uppboð búið til</string>
     <string name="staff_audit_action_auction_ended_sold">Uppboð selt</string>
     <string name="staff_audit_action_auction_ended_unsold">Uppboði lokið, óselt</string>
@@ -170,7 +170,7 @@
     <string name="staff_config_field_stripe_oauth_client">OAuth-viðskiptavinakenni</string>
     <string name="staff_config_field_stripe_publishable">Birtingarhæfur lykill</string>
     <string name="staff_config_field_stripe_secret">Leynilykill</string>
-    <string name="staff_config_group_moderation">Yfirferð</string>
+    <string name="staff_config_group_moderation">Umsjón</string>
     <string name="staff_config_group_payments">Greiðslur</string>
     <string name="staff_config_group_reviews">Umsagnir</string>
     <string name="staff_config_group_stripe">Stripe</string>
@@ -187,7 +187,7 @@
     <string name="staff_dashboard_col_date">Dagsetning</string>
     <string name="staff_dashboard_col_detail">Smáatriði</string>
     <string name="staff_dashboard_col_listing">Auglýsing</string>
-    <string name="staff_dashboard_col_moderation">Yfirferð</string>
+    <string name="staff_dashboard_col_moderation">Umsjón</string>
     <string name="staff_dashboard_col_name">Nafn</string>
     <string name="staff_dashboard_col_object">Hlutur</string>
     <string name="staff_dashboard_col_reason">Ástæða</string>
@@ -216,7 +216,7 @@
     <string name="staff_dashboard_system">Kerfi</string>
     <string name="staff_dashboard_tab_audit">Endurskoðun</string>
     <string name="staff_dashboard_tab_listings">Auglýsingar</string>
-    <string name="staff_dashboard_tab_moderation">Yfirferð</string>
+    <string name="staff_dashboard_tab_moderation">Umsjón</string>
     <string name="staff_dashboard_tab_orders">Pantanir</string>
     <string name="staff_dashboard_tab_signups">Skráningar</string>
     <string name="staff_dashboard_yes">Já</string>
@@ -283,8 +283,8 @@
     <string name="staff_disputes_view">Skoða</string>
     <string name="staff_filter_chip_remove">Fjarlægja síu</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
-    <string name="staff_filter_label_moderation">Stjórnun</string>
-    <string name="staff_filter_label_query">Leit</string>
+    <string name="staff_filter_label_moderation">Umsjón</string>
+    <string name="staff_filter_label_query">Leita</string>
     <string name="staff_filter_label_seller">Seljandi</string>
     <string name="staff_filter_label_status">Staða</string>
     <string name="staff_filter_label_type">Tegund</string>
@@ -297,7 +297,7 @@
     <string name="staff_listings_approved_toast">Auglýsing samþykkt</string>
     <string name="staff_listings_cancel">Hætta við</string>
     <string name="staff_listings_empty">Engar skráningar</string>
-    <string name="staff_listings_filter_moderation_label">Yfirferð</string>
+    <string name="staff_listings_filter_moderation_label">Umsjón</string>
     <string name="staff_listings_filter_status_label">Staða</string>
     <string name="staff_listings_moderation_auto_approved">Sjálfvirkt samþykkt</string>
     <string name="staff_listings_moderation_hold">Halda</string>
@@ -321,7 +321,7 @@
     <string name="staff_listings_status_rejected">Hafnað</string>
     <string name="staff_listings_status_removed">Fjarlægt</string>
     <string name="staff_listings_status_sold">Selt</string>
-    <string name="staff_listings_submitting">Sendi…</string>
+    <string name="staff_listings_submitting">Sendir…</string>
     <string name="staff_moderation_empty">Engar yfirferðarfærslur</string>
     <string name="staff_moderation_filter_clear">Hreinsa síu</string>
     <string name="staff_moderation_listing_filter_placeholder">Auðkenni auglýsingar</string>
@@ -365,7 +365,7 @@
     <string name="staff_reports_status_pending">Í bið</string>
     <string name="staff_reports_status_reviewed">Yfirfarið</string>
     <string name="staff_reports_submit">Senda</string>
-    <string name="staff_reports_submitting">Sendi…</string>
+    <string name="staff_reports_submitting">Sendir…</string>
     <string name="staff_reports_type_listing">Auglýsing</string>
     <string name="staff_reports_type_user">Notandi</string>
     <string name="staff_reports_view">Skoða</string>

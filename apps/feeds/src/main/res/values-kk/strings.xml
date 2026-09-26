@@ -5,7 +5,7 @@
     <string name="feeds_create_feed">Арна құру</string>
     <string name="feeds_new_post">Жаңа жазба</string>
     <string name="feeds_all_feeds">Барлық арналар</string>
-    <string name="feeds_name">Аты</string>
+    <string name="feeds_name">Атау</string>
     <string name="feeds_create">Құру</string>
     <string name="feeds_no_feeds_found">Арналар табылмады</string>
     <string name="feeds_feed_title_default">Таспа</string>
@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi таспасы</string>
     <string name="feeds_source_type_feed_memories">Жадтар</string>
-    <string name="feeds_remove_source">Дереккөзді жою</string>
+    <string name="feeds_remove_source">Дереккөзді жою керек пе?</string>
     <string name="feeds_suggested_credibility_accept">Қабылдау</string>
     <string name="feeds_rss_url_copied">RSS URL алмасу буферіне көшірілді</string>
     <string name="feeds_logout">Шығу</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">Ешқашан алынбаған</string>
     <string name="feeds_source_poll">Сұрау жиілігі</string>
-    <string name="feeds_source_transform">Түрлендіру</string>
+    <string name="feeds_source_transform">AI түрлендіру</string>
     <string name="feeds_remove_source_confirm">\"%1$s\" дереккөзін жою?</string>
     <string name="feeds_remove_also_delete_posts">Импортталған жазбаларды да жою</string>
     <string name="feeds_suggested_credibility_title">Ұсынылған сенімділік</string>
@@ -153,13 +153,13 @@
     <string name="feeds_access_segment_other">Басқа</string>
     <string name="feeds_access_select_group">Топты таңдау</string>
     <string name="feeds_access_selected">Таңдалды: %1$s</string>
-    <string name="feeds_access_subject_anyone">Кез келген</string>
+    <string name="feeds_access_subject_anyone">Кез келген адам</string>
     <string name="feeds_access_subject_authenticated">Аутентификацияланған пайдаланушылар</string>
     <string name="feeds_markdown_supported">Markdown қолдау көрсетіледі</string>
     <string name="feeds_permission_deny">Бас тарту</string>
     <string name="feeds_rss_feed">RSS арнасы</string>
     <string name="feeds_settings_field_entity_id">Нысан идентификаторы</string>
-    <string name="feeds_settings_field_fingerprint">Саусақ ізі</string>
+    <string name="feeds_settings_field_fingerprint">Қысқа идентификатор</string>
     <string name="feeds_settings_field_server">Сервер</string>
     <string name="feeds_settings_name_edit_cd">Атауды өңдеу</string>
     <string name="feeds_settings_section_identity">Жеке басы</string>
@@ -186,7 +186,7 @@
     <string name="feeds_source_last_checked">Соңғы тексерілгені: %1$s</string>
     <string name="feeds_settings_unsubscribe_section">Арнадан жазылудан бас тарту</string>
     <string name="feeds_source_transform_hint">Ағылшын тіліне аудару және маркер тізімі ретінде көрсету.</string>
-    <string name="feeds_source_url_hint_feed">Таспа нысаны идентификаторы немесе саусақ ізі</string>
+    <string name="feeds_source_url_hint_feed">Таспа нысаны идентификаторы немесе қысқа идентификаторы</string>
     <string name="feeds_source_credibility_label">Сенімділік</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d сағат</item>
@@ -206,7 +206,7 @@
     <string name="feeds_banner_dismiss">Баннерді жабу</string>
     <string name="feeds_members_search">Мүшелерді сүзу</string>
     <string name="feeds_ai_prompt_default">Әдепкі</string>
-    <string name="feeds_ai_prompt_custom">Теңшелетін</string>
+    <string name="feeds_ai_prompt_custom">Реттелетін</string>
     <string name="feeds_ai_prompt_variables">Айнымалылар: %1$s</string>
     <string name="feeds_link">Сілтеме</string>
     <string name="feeds_share_link_title">Арна сілтемесі</string>

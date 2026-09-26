@@ -284,7 +284,7 @@
     <string name="staff_filter_chip_remove">Filter entfernen</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderation</string>
-    <string name="staff_filter_label_query">Suche</string>
+    <string name="staff_filter_label_query">Suchen</string>
     <string name="staff_filter_label_seller">Verkäufer</string>
     <string name="staff_filter_label_status">Status</string>
     <string name="staff_filter_label_type">Typ</string>
@@ -323,7 +323,7 @@
     <string name="staff_listings_status_sold">Verkauft</string>
     <string name="staff_listings_submitting">Wird gesendet…</string>
     <string name="staff_moderation_empty">Keine Moderationseinträge</string>
-    <string name="staff_moderation_filter_clear">Filter löschen</string>
+    <string name="staff_moderation_filter_clear">Filter zurücksetzen</string>
     <string name="staff_moderation_listing_filter_placeholder">Angebots-ID</string>
     <string name="staff_moderation_system">System</string>
     <string name="staff_moderation_unknown_listing">#%1$s</string>

@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Icône</string>
     <string name="crm_option_icon_placeholder">p. ex. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Se désabonner</string>
-    <string name="crm_settings_delete_crm">Supprimer le projet</string>
+    <string name="crm_settings_delete_crm">Supprimer le CRM</string>
     <string name="crm_settings_delete_confirm_title">Supprimer le CRM</string>
     <string name="crm_settings_unsubscribe_title">Se désabonner</string>
     <string name="crm_settings_unsubscribe_message">Voulez-vous vraiment vous désabonner de ce CRM ?</string>
@@ -251,7 +251,7 @@
     <string name="crm_filter">Filtrer</string>
     <string name="crm_sort_filter_title">Trier et filtrer</string>
     <string name="crm_filter_clear_all">Tout effacer</string>
-    <string name="crm_filter_all">Toutes</string>
+    <string name="crm_filter_all">Tout</string>
     <string name="crm_filter_other">Autre</string>
     <string name="crm_settings_section_identity">Identité</string>
     <string name="crm_settings_section_access">Gestion des accès</string>

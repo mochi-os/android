@@ -60,7 +60,7 @@
     <string name="calendars_only_this">Yalnızca bu</string>
     <string name="calendars_create">Takvim oluştur</string>
     <string name="calendars_subscribe">Takvime abone ol</string>
-    <string name="calendars_poll">Şimdi al</string>
+    <string name="calendars_poll">Şimdi denetle</string>
     <string name="calendars_delete_title">%1$s silinsin mi?</string>
     <string name="calendars_delete_message">Etkinlikleri de onunla birlikte silinir.</string>
     <string name="calendars_today">Bugün</string>
@@ -78,7 +78,7 @@
     <string name="calendars_event_finish">Bitiş</string>
     <string name="calendars_event_repeat">Yineleme</string>
     <string name="calendars_event_reminder">Hatırlatıcı</string>
-    <string name="calendars_event_recurring">Yineleniyor</string>
+    <string name="calendars_event_recurring">Yinelenir</string>
     <string name="calendars_event_delete_title">%1$s silinsin mi?</string>
     <string name="calendars_event_delete_message">Bu geri alınamaz.</string>
     <string name="calendars_scope_edit">Bu etkinlik mi yoksa tüm etkinlikler mi değiştirilsin?</string>
@@ -89,7 +89,7 @@
     <string name="calendars_repeat_weekly">Haftalık</string>
     <string name="calendars_repeat_interval">Her</string>
     <string name="calendars_repeat_days">Günler</string>
-    <string name="calendars_repeat_count">Yineleme sayısı</string>
+    <string name="calendars_repeat_count">Tekrar sayısı</string>
     <string name="calendars_repeat_forever">Sonsuza kadar</string>
     <string name="calendars_reminder_time">Etkinlik saatinde</string>
     <string name="calendars_reminder_minutes">%1$d dakika önce</string>
@@ -168,7 +168,7 @@
     <string name="calendars_subscribe_password_apple">Uygulamaya özel parola</string>
     <string name="calendars_subscribe_server_url">Sunucu adresi</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
-    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_apple_id">Apple kimliği</string>
     <string name="calendars_subscribe_google">Google Takvim</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Bu sunucuda Google hesapları etkinleştirilmedi. Bunları Ayarlar, Sistem ayarları bölümünden etkinleştirin.</string>

@@ -242,7 +242,7 @@
     <string name="route_meta">Priorita %1$d · %2$s</string>
     <string name="interests_search_placeholder">Hľadať témy na pridanie…</string>
     <string name="interests_empty">Zatiaľ žiadne záujmy.</string>
-    <string name="interests_summary_regenerate">Znova vygenerovať zhrnutie</string>
+    <string name="interests_summary_regenerate">Vygenerovať súhrn znova</string>
     <string name="interests_summary_regenerating">Znova generujem…</string>
     <string name="interests_summary_empty">Pridajte záujmy, aby sa vytvorilo zhrnutie toho, čo máte radi.</string>
     <string name="interests_search_failed">Vyhľadávanie zlyhalo. Skúste to znova.</string>
@@ -277,7 +277,7 @@
     <string name="account_section_identity">Identita</string>
     <string name="account_identity_identity">Identita</string>
     <string name="account_identity_username">Používateľské meno</string>
-    <string name="account_identity_name">Názov</string>
+    <string name="account_identity_name">Meno</string>
     <string name="account_identity_fingerprint">Odtlačok</string>
     <string name="account_identity_directory_toggle">Povoliť ostatným nájsť vás v adresári</string>
     <string name="domain_add">Pridať doménu</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s už nebude spravovať trasy na tejto doméne.</string>
     <string name="domain_delegation_delete_title">Odstrániť delegáciu?</string>
     <string name="domain_delegation_path">Cesta</string>
-    <string name="domain_delegation_user">ID používateľa</string>
+    <string name="domain_delegation_user">Používateľ</string>
     <string name="domain_delegations">Delegácie</string>
     <string name="domain_delegations_empty">Nie sú nakonfigurované žiadne delegácie.</string>
     <string name="domain_delete">Odstrániť doménu</string>
@@ -396,7 +396,7 @@
     <string name="accounts_capability_notify">Notifikácie</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Prihlásenie</string>
-    <string name="accounts_provider_caldav">Server kalendára</string>
+    <string name="accounts_provider_caldav">Kalendárový server</string>
     <string name="accounts_revoke_confirm">Týmto sa zruší prístup ku kalendáru pre %1$s. Prihlasovanie cez %2$s zostane, kým ho neodpojíte na stránke prihlásenia.</string>
     <string name="accounts_capability_mcp">MCP</string>
 </resources>

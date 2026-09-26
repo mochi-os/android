@@ -60,7 +60,7 @@
     <string name="chess_empty_subtitle">د ملګري سره شطرنج لوبولو لپاره خپله لومړنۍ لوبه پیل کړئ.</string>
     <string name="chess_empty_start_button">خپله لومړنۍ لوبه پیل کړئ</string>
     <string name="chess_detail_unavailable">لوبه نه لري</string>
-    <string name="chess_delete_title">لوبه ړنګ کړئ؟</string>
+    <string name="chess_delete_title">لوبه ړنګه شي؟</string>
     <string name="chess_delete_message">دا لوبه ستاسو له لیست څخه لري کوي.</string>
     <string name="chess_ws_connecting">وصلېږي…</string>
     <string name="chess_ws_disconnected">Offline</string>

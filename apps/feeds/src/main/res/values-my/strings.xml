@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi ဖိဒ်</string>
     <string name="feeds_source_type_feed_memories">မှတ်ဉာဏ်များ</string>
-    <string name="feeds_remove_source">ရင်းမြစ် ဖယ်ပါ</string>
+    <string name="feeds_remove_source">အရင်းအမြစ် ဖယ်ရှားမလား?</string>
     <string name="feeds_suggested_credibility_accept">လက်ခံမည်</string>
     <string name="feeds_rss_url_copied">RSS URL ကို ကလစ်ဘုတ် သို့ ကူးယူပြီးပါပြီ</string>
     <string name="feeds_logout">ထွက်</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">မဆွဲယူဖူးပါ</string>
     <string name="feeds_source_poll">ပိုလ်</string>
-    <string name="feeds_source_transform">ပြောင်းလဲခြင်း</string>
+    <string name="feeds_source_transform">AI ပြောင်းလဲခြင်း</string>
     <string name="feeds_remove_source_confirm">\"%1$s\" ကို ဖယ်ရှားမည်လား?</string>
     <string name="feeds_remove_also_delete_posts">တင်သွင်းခဲ့သော ပို့စ်များကိုလည်း ဖျက်ပါ</string>
     <string name="feeds_suggested_credibility_title">အကြံပြုထားသော ယုံကြည်စိတ်ချရမှု</string>
@@ -153,11 +153,11 @@
     <string name="feeds_access_select_group">အုပ်စုကို ရွေးပါ</string>
     <string name="feeds_access_selected">ရွေးချယ်ထား: %1$s</string>
     <string name="feeds_access_subject_anyone">မည်သူမဆို</string>
-    <string name="feeds_access_subject_authenticated">အတည်ပြုထားသော အသုံးပြုသူများ</string>
+    <string name="feeds_access_subject_authenticated">အတည်ပြုပြီး အသုံးပြုသူများ</string>
     <string name="feeds_markdown_supported">Markdown ပံ့ပိုးသည်</string>
     <string name="feeds_permission_deny">ငြင်းပယ်မည်</string>
     <string name="feeds_rss_feed">RSS ဖိဒ်</string>
-    <string name="feeds_settings_field_entity_id">အကောင့် ID</string>
+    <string name="feeds_settings_field_entity_id">အရာ ID</string>
     <string name="feeds_settings_field_fingerprint">လက်ဗွေ</string>
     <string name="feeds_settings_field_server">ဆာဗာ</string>
     <string name="feeds_settings_name_edit_cd">အမည် တည်းဖြတ်</string>
@@ -171,7 +171,7 @@
     <string name="feeds_allow_search">မည်သူမဆို ဖိဒ် ကို ရှာဖွေခွင့်ပြုမည်</string>
     <string name="feeds_post_content">ပို့စ် အကြောင်းအရာ</string>
     <string name="feeds_enable_memories">မှတ်ဉာဏ် ဖွင့်</string>
-    <string name="feeds_permission_request_title">ခွင့်ပြုချက် တောင်းဆိုမှု</string>
+    <string name="feeds_permission_request_title">ခွင့်ပြုချက် တောင်းခံချက်</string>
     <string name="feeds_unsubscribe_confirm">ဖိဒ်ကို စာရင်းသွင်းထားမှု ဖျက်မလား?</string>
     <string name="feeds_settings_title">%1$s ဆက်တင်များ</string>
     <string name="feeds_source_transform_help">ပိတ်ရန် ဗလာထားပါ။</string>
@@ -185,7 +185,7 @@
     <string name="feeds_source_last_checked">နောက်ဆုံးစစ်ဆေးခဲ့သည်မှာ %1$s</string>
     <string name="feeds_settings_unsubscribe_section">ဖိဒ် မှ စာရင်းသွင်းမှု ဖြုတ်မည်</string>
     <string name="feeds_source_transform_hint">အင်္ဂလိပ်ဘာသာသို့ ဘာသာပြန်ပြီး အချက်ကောက်များဖြင့် ပြသမည်။</string>
-    <string name="feeds_source_url_hint_feed">ဖိဒ် အကောင့် ID သို့မဟုတ် လက်ဗွေ</string>
+    <string name="feeds_source_url_hint_feed">ဖိဒ် အရာ ID သို့မဟုတ် လက်ဗွေ</string>
     <string name="feeds_source_credibility_label">ယုံကြည်စိတ်ချရမှု</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d နာရီ</item>
@@ -206,7 +206,7 @@
     <string name="feeds_ai_prompt_custom">စိတ်ကြိုက်</string>
     <string name="feeds_ai_prompt_variables">ကိန်းရှင်များ: %1$s</string>
     <string name="feeds_link">လင့်ခ်</string>
-    <string name="feeds_share_link_title">ဖီးဒ် လင့်ခ်</string>
+    <string name="feeds_share_link_title">ဖိဒ်လင့်ခ်</string>
     <plurals name="feeds_comment_count">
         <item quantity="other">မှတ်ချက် %1$d</item>
     </plurals>

@@ -174,8 +174,8 @@
     <string name="projects_find_search_hint">Търсете проекти, за които да се абонирате</string>
     <string name="projects_search_objects_placeholder">Търсене на обекти</string>
     <string name="projects_sort_field">Сортиране по</string>
-    <string name="projects_sort_direction_asc">Възходящо</string>
-    <string name="projects_sort_direction_desc">Низходящо</string>
+    <string name="projects_sort_direction_asc">Възходящ</string>
+    <string name="projects_sort_direction_desc">Низходящ</string>
     <string name="projects_create_object_parent_none">(няма)</string>
     <string name="projects_add_child">Добавяне на дъщерен</string>
     <string name="projects_views_move_up">Преместване нагоре</string>
@@ -183,7 +183,7 @@
     <string name="projects_views_filter">Филтър (запазен, все още неприложен)</string>
     <string name="projects_people_empty">Все още никой няма достъп</string>
     <string name="projects_settings_delete_confirm_message">Сигурни ли сте, че искате да изтриете този проект? Всички обекти, коментари и настройки ще бъдат премахнати завинаги.</string>
-    <string name="projects_object_unwatch">Спиране на наблюдението</string>
+    <string name="projects_object_unwatch">Спри наблюдението</string>
     <string name="projects_object_tab_watchers">Наблюдатели</string>
     <string name="projects_watchers_empty">Все още няма наблюдатели</string>
     <string name="projects_object_delete_title">Изтриване на обект</string>
@@ -200,9 +200,9 @@
     <string name="projects_comment_clear_reply">Изчистване на отговора</string>
     <string name="projects_comment_placeholder">Добавяне на коментар</string>
     <string name="projects_comment_remove_attachment">Премахване на прикачения файл</string>
-    <string name="projects_property_pick_date">Изберете дата</string>
+    <string name="projects_property_pick_date">Избор на дата</string>
     <string name="projects_property_ok">ОК</string>
-    <string name="projects_property_add_item">Добавяне на елемент</string>
+    <string name="projects_property_add_item">Добави елемент</string>
     <string name="projects_property_required">%1$s е задължително</string>
     <string name="projects_activity_empty">Няма активност</string>
     <string name="projects_activity_created">създаде този обект</string>
@@ -242,7 +242,7 @@
     <string name="projects_tree_expand">Разгъване</string>
     <string name="projects_tree_move">Преместване</string>
     <string name="projects_tree_move_to_parent">Преместване към родител</string>
-    <string name="projects_tree_root_level">(Коренно ниво)</string>
+    <string name="projects_tree_root_level">(Основно ниво)</string>
     <string name="projects_tree_empty">Няма обекти</string>
     <string name="projects_board_no_columns">Няма конфигурирани колони за този изглед</string>
     <string name="projects_board_no_options">Няма конфигурирани опции за полето на колоната</string>
@@ -270,7 +270,7 @@
     <string name="projects_classes_empty">Няма дефинирани класове</string>
     <string name="projects_class_label">Клас: %1$s</string>
     <string name="projects_class_title_field_description">Кое поле да се използва като заглавие за показване на обектите от този клас.</string>
-    <string name="projects_class_title_field_default">По подразбиране (четимо)</string>
+    <string name="projects_class_title_field_default">По подразбиране (четливо)</string>
     <string name="projects_class_merge_requests_description">Разрешаване на заявки за сливане за обектите от този клас.</string>
     <string name="projects_class_parents">Родителски класове</string>
     <string name="projects_class_move_up">Преместване нагоре</string>
@@ -286,9 +286,9 @@
     <string name="projects_field_position">Позиция на показване</string>
     <string name="projects_field_position_header">Заглавна част</string>
     <string name="projects_field_position_body">Съдържание</string>
-    <string name="projects_field_validation">Валидация</string>
-    <string name="projects_field_min_length">Мин. дължина</string>
-    <string name="projects_field_max_length">Макс. дължина</string>
+    <string name="projects_field_validation">Валидиране</string>
+    <string name="projects_field_min_length">Минимална дължина</string>
+    <string name="projects_field_max_length">Максимална дължина</string>
     <string name="projects_field_pattern">Шаблон (регулярен израз)</string>
     <string name="projects_field_rows">Редове (височина на текстовата област)</string>
     <string name="projects_field_no_options">Няма дефинирани опции</string>
@@ -301,8 +301,8 @@
     <string name="projects_views_rows_field">Поле за редове (пътеки)</string>
     <string name="projects_views_border_field">Поле за цвят на рамката</string>
     <string name="projects_views_sort_by">Сортиране по</string>
-    <string name="projects_views_direction_asc">Възходящо</string>
-    <string name="projects_views_direction_desc">Низходящо</string>
+    <string name="projects_views_direction_asc">Възходящ</string>
+    <string name="projects_views_direction_desc">Низходящ</string>
     <string name="projects_views_filter_classes">Филтриране по класове</string>
     <string name="projects_views_by">по %1$s</string>
     <string name="projects_views_sorted">сортирано %1$s</string>

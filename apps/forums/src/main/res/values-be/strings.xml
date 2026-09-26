@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Адлюстраванае імя</string>
+    <string name="forums_auth_display_name">Адлюстраваная назва</string>
     <string name="forums_auth_verification_failed">Праверка не атрымалася</string>
     <string name="forums_list_title">Форумы</string>
     <string name="forums_list_find">Знайсці форумы</string>
@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Адпісацца</string>
     <string name="forums_list_unsubscribe_title">Адпісацца</string>
     <string name="forums_create_title">Стварыць форум</string>
-    <string name="forums_create_name">Назва</string>
+    <string name="forums_create_name">Назва форуму</string>
     <string name="forums_create_privacy">Канфідэнцыяльнасць</string>
     <string name="forums_create_private">Прыватны</string>
     <string name="forums_create_public">Публічны</string>
-    <string name="forums_create_action">Стварыць</string>
+    <string name="forums_create_action">Стварыць форум</string>
     <string name="forums_find_title">Знайсці форумы</string>
     <string name="forums_find_recommended">Рэкамендуецца</string>
     <string name="forums_find_subscribe">Падпісацца</string>
@@ -154,7 +154,7 @@
     <string name="forums_banner_placeholder">Сардэчна запрашаем на гэты форум…</string>
     <string name="forums_ai_mode_label">Рэжым: %1$s</string>
     <string name="forums_ai_mode_heading">Рэжым AI</string>
-    <string name="forums_ai_mode_off">Выключаны</string>
+    <string name="forums_ai_mode_off">Адключана</string>
     <string name="forums_ai_account">Уліковы запіс AI</string>
     <string name="forums_ai_prompt_tag">Запыт для тэгавання</string>
     <string name="forums_ai_prompt_score">Запыт для ацэньвання</string>
@@ -224,8 +224,8 @@
     <string name="forums_tab_moderation">Мадэрацыя</string>
     <string name="forums_access_level_view_full">Толькі прагляд</string>
     <string name="forums_access_level_none_full">Няма доступу</string>
-    <string name="forums_access_subject_anyone">Любы</string>
-    <string name="forums_access_subject_authenticated">Аўтэнтыфікаваныя карыстальнікі</string>
+    <string name="forums_access_subject_anyone">Хто заўгодна</string>
+    <string name="forums_access_subject_authenticated">Аўтарызаваныя карыстальнікі</string>
     <string name="forums_access_tab_other">Іншае</string>
     <string name="forums_access_authenticated_desc">Усе, хто ўвайшоў у сістэму</string>
     <string name="forums_access_anyone_desc">Уключаючы ананімных карыстальнікаў</string>
@@ -247,9 +247,9 @@
     <string name="forums_settings_field_entity_id">ID сутнасці</string>
     <string name="forums_settings_field_fingerprint_label">Адбітак пальца</string>
     <string name="forums_settings_field_server">Сервер</string>
-    <string name="forums_settings_name_edit_cd">Рэдагаваць імя</string>
+    <string name="forums_settings_name_edit_cd">Рэдагаваць назву</string>
     <string name="forums_settings_name_cancel_cd">Скасаваць рэдагаванне</string>
-    <string name="forums_settings_save_name">Захаваць імя</string>
+    <string name="forums_settings_save_name">Захаваць назву</string>
     <string name="forums_access_management">Кіраванне доступам</string>
     <string name="forums_access_level_comment_full">Каментаваць, галасаваць і праглядаць</string>
     <string name="forums_access_level_moderate_full">Мадэраваць, публікаваць, каментаваць, галасаваць і праглядаць</string>

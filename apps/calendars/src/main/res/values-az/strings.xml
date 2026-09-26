@@ -20,7 +20,7 @@
     <string name="calendars_repeat_never">Heç vaxt</string>
     <string name="calendars_repeat_monthly">Aylıq</string>
     <string name="calendars_repeat_yearly">İllik</string>
-    <string name="calendars_repeat_custom">Fərdi</string>
+    <string name="calendars_repeat_custom">Xüsusi</string>
     <string name="calendars_reminder_none">Heç biri</string>
     <string name="calendars_day_sunday">Bazar</string>
     <string name="calendars_day_monday">Bazar ertəsi</string>

@@ -17,7 +17,7 @@
     <string name="chess_new_add_friends">Fi àwọn ọ̀rẹ́ kún</string>
     <string name="chess_new_start_button">Bẹ̀rẹ̀ eré</string>
     <string name="chess_new_creating">Ó ń dá…</string>
-    <string name="chess_chat_title">Ìjíròrò</string>
+    <string name="chess_chat_title">Ìfọ̀rọ̀wérọ̀</string>
     <string name="chess_open_chat">Ṣí àwòrán chat</string>
     <string name="chess_open_actions">Ṣí àwọn iṣẹ́ eré</string>
     <string name="chess_offer_draw">Pèsè ìdọ́gba</string>
@@ -32,8 +32,8 @@
     <string name="chess_draw_accept">Gbà</string>
     <string name="chess_draw_decline">Kọ̀</string>
     <string name="chess_status_checkmate_you_win">Checkmate — o ṣẹgun!</string>
-    <string name="chess_status_stalemate">Stalemate — díẹ̀</string>
-    <string name="chess_status_draw">Ìbárapọ̀</string>
+    <string name="chess_status_stalemate">Ìdúró — ìdọ́gba</string>
+    <string name="chess_status_draw">Ìdọ́gba</string>
     <string name="chess_status_check_your_move">Check — ìṣíkiri rẹ</string>
     <string name="chess_status_your_move">Ìṣíkiri rẹ</string>
     <string name="chess_move_subject_you">Ìwọ</string>
@@ -60,7 +60,7 @@
     <string name="chess_empty_subtitle">Bẹ̀rẹ̀ ìdíje àkọ́kọ́ rẹ láti ṣe chess pẹ̀lú ọ̀rẹ́.</string>
     <string name="chess_empty_start_button">Bẹ̀rẹ̀ ìdíje àkọ́kọ́ rẹ</string>
     <string name="chess_detail_unavailable">Ìdíje kò sí</string>
-    <string name="chess_delete_title">Pa ere yi rẹ?</string>
+    <string name="chess_delete_title">Pa eré náà rẹ́?</string>
     <string name="chess_delete_message">Èyí yọ ìdíje kúrò nínú àkọsílẹ̀ rẹ.</string>
     <string name="chess_ws_connecting">Ń sopọ̀…</string>
     <string name="chess_ws_disconnected">Offline</string>

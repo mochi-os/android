@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Subscribe ဖြုတ်မည်</string>
     <string name="forums_list_unsubscribe_title">Subscribe ဖြုတ်မည်</string>
     <string name="forums_create_title">ဖိုရမ် ဖန်တီးမည်</string>
-    <string name="forums_create_name">အမည်</string>
+    <string name="forums_create_name">ဖိုရမ်အမည်</string>
     <string name="forums_create_privacy">ကိုယ်ရေးကိုယ်တာ</string>
     <string name="forums_create_private">သီးသန့်</string>
     <string name="forums_create_public">အများသုံး</string>
-    <string name="forums_create_action">ဖန်တီးမည်</string>
+    <string name="forums_create_action">ဖိုရမ် ဖန်တီးမည်</string>
     <string name="forums_find_title">ဖိုရမ်များ ရှာ</string>
     <string name="forums_find_recommended">အကြံပြုထား</string>
     <string name="forums_find_subscribe">စာရင်းသွင်းမည်</string>
@@ -148,7 +148,7 @@
     <string name="forums_post_tag_remove">တဂ်ကို ဖယ်ရှားပါ</string>
     <string name="forums_access_add">ဝင်ရောက်ခွင့် စည်းမျဉ်း ထည့်ပါ</string>
     <string name="forums_access_empty">စည်းမျဉ်း မရှိသေးပါ — မူရင်းသတ်မှတ်ချက်များ အသုံးပြုပါမည်</string>
-    <string name="forums_access_target_hint">အကောင့် ID, @group, * (လူတိုင်း), သို့မဟုတ် + (အဖွဲ့ဝင်များ)</string>
+    <string name="forums_access_target_hint">အရာ ID, @group, * (လူတိုင်း), သို့မဟုတ် + (အဖွဲ့ဝင်များ)</string>
     <string name="forums_access_level">အဆင့်</string>
     <string name="forums_access_level_moderate">ထိန်းညှိပါ</string>
     <string name="forums_members_search">အဖွဲ့ဝင်များကို စစ်ထုတ်ပါ</string>
@@ -156,7 +156,7 @@
     <string name="forums_banner_placeholder">ဤဖိုရမ်သို့ ကြိုဆိုပါသည်…</string>
     <string name="forums_ai_mode_label">မုဒ်: %1$s</string>
     <string name="forums_ai_mode_heading">AI မုဒ်</string>
-    <string name="forums_ai_mode_off">ပိတ်ထား</string>
+    <string name="forums_ai_mode_off">ပိတ်ထားသည်</string>
     <string name="forums_ai_account">AI အကောင့်</string>
     <string name="forums_ai_prompt_tag">တဂ်တပ်ခြင်း ညွှန်ကြားချက်</string>
     <string name="forums_ai_prompt_score">အမှတ်ပေးခြင်း ညွှန်ကြားချက်</string>
@@ -222,7 +222,7 @@
     <string name="forums_access_level_view_full">ကြည့်ရှုရုံသာ</string>
     <string name="forums_access_level_none_full">ဝင်ရောက်ခွင့်မရှိ</string>
     <string name="forums_access_subject_anyone">မည်သူမဆို</string>
-    <string name="forums_access_subject_authenticated">အတည်ပြုထားသော အသုံးပြုသူများ</string>
+    <string name="forums_access_subject_authenticated">အတည်ပြုပြီး အသုံးပြုသူများ</string>
     <string name="forums_access_tab_other">အခြား</string>
     <string name="forums_access_authenticated_desc">အကောင့်ဝင်ထားသူ မည်သူမဆို</string>
     <string name="forums_access_anyone_desc">အမည်မသိ အသုံးပြုသူများ အပါအဝင်</string>
@@ -241,12 +241,12 @@
     <string name="forums_settings_prompt_saved">ညွှန်ကြားချက် သိမ်းပြီးပါပြီ</string>
     <string name="forums_settings_section_identity">ကိုယ်ပိုင်</string>
     <string name="forums_settings_field_name">အမည်</string>
-    <string name="forums_settings_field_entity_id">အကောင့် ID</string>
+    <string name="forums_settings_field_entity_id">အရာ ID</string>
     <string name="forums_settings_field_fingerprint_label">လက်ဗွေ</string>
     <string name="forums_settings_field_server">ဆာဗာ</string>
     <string name="forums_settings_name_edit_cd">အမည် တည်းဖြတ်</string>
     <string name="forums_settings_name_cancel_cd">တည်းဖြတ်ခြင်းကို ပယ်ဖျက်ရန်</string>
-    <string name="forums_settings_save_name">အမည်သိမ်းမည်</string>
+    <string name="forums_settings_save_name">အမည် သိမ်းပါ</string>
     <string name="forums_access_management">ဝင်ရောက်ခွင့် စီမံခန့်ခွဲမှု</string>
     <string name="forums_access_level_comment_full">မှတ်ချက်ပေးခြင်း၊ မဲပေးခြင်းနှင့် ကြည့်ရှုခြင်း</string>
     <string name="forums_access_level_moderate_full">စိစစ်ခြင်း၊ တင်ခြင်း၊ မှတ်ချက်ပေးခြင်း၊ မဲပေးခြင်းနှင့် ကြည့်ရှုခြင်း</string>
@@ -257,7 +257,7 @@
     <string name="forums_ai_actions_label">ပို့စ်များပေါ်တွင် AI လုပ်ဆောင်ချက်များ</string>
     <string name="forums_ai_prompt_custom">စိတ်ကြိုက်</string>
     <string name="forums_ai_prompt_score_label">အမှတ်ပေး ပရွန့်</string>
-    <string name="forums_ai_prompt_tag_label">တဂ် ပရွန့်</string>
+    <string name="forums_ai_prompt_tag_label">တက်ဂ် ညွှန်ကြားချက်</string>
     <string name="forums_ai_prompt_variables">ကိန်းရှင်များ: %1$s</string>
     <string name="forums_link">လင့်ခ်</string>
     <string name="forums_moderation_ban_message">သင် ကန့်သတ်ချက်ကို မဖယ်ရှားမချင်း ဖိုရမ်သို့ ဝင်ရောက်ခွင့် ဆုံးရှုံးမည်။</string>
@@ -276,7 +276,7 @@
     <string name="forums_moderation_restriction_remove_message">ဖိုရမ်သို့ အပြည့်အဝ ဝင်ရောက်ခွင့်ကို ချက်ချင်း ပြန်ရမည်။</string>
     <string name="forums_moderation_restriction_remove_title">%1$s ၏ ကန့်သတ်ချက်ကို ဖယ်ရှားမလား။</string>
     <string name="forums_moderation_restriction_state_muted">အသံပိတ်ထား</string>
-    <string name="forums_moderation_restriction_state_shadowban">အရိပ်ပိတ်ပင်မှု</string>
+    <string name="forums_moderation_restriction_state_shadowban">လျှို့ဝှက်စွာ ပိတ်ပင်ထားသည်</string>
     <string name="forums_moderation_restrictions_empty_subtitle">အသုံးပြုသူ မည်သူ့ကိုမျှ အသံပိတ် သို့မဟုတ် ပိတ်ပင်ထားခြင်း မရှိပါ</string>
     <string name="forums_moderation_section_premoderation_description">အကြောင်းအရာ မမြင်ရမီ အတည်ပြုချက် လိုအပ်စေပါ</string>
     <string name="forums_moderation_section_ratelimiting_description">အသုံးပြုသူများ မည်မျှ မကြာခဏ ပို့စ်တင်နိုင်သည်ကို ကန့်သတ်ခြင်းဖြင့် စပမ်းကို တားဆီးပါ</string>
@@ -285,10 +285,10 @@
     <string name="forums_moderation_unit_replies">အကြောင်းပြန်ချက်</string>
     <string name="forums_moderation_unit_seconds">စက္ကန့်</string>
     <string name="forums_settings_ai_updated">AI ဆက်တင်များ အပ်ဒိတ်လုပ်ပြီးပါပြီ</string>
-    <string name="forums_settings_forum_renamed">ဖိုရမ်အမည် ပြောင်းလဲပြီးပါပြီ</string>
+    <string name="forums_settings_forum_renamed">ဖိုရမ် အမည်ပြောင်းပြီးပါပြီ</string>
     <string name="forums_settings_name_clear_cd">အမည်ကို ရှင်းလင်းပါ</string>
     <string name="forums_settings_unsubscribe_section">ဖိုရမ်မှ စာရင်းသွင်းမှု ရပ်ဆိုင်းပါ</string>
-    <string name="forums_share_link_title">ဖိုရမ် လင့်ခ်</string>
+    <string name="forums_share_link_title">ဖိုရမ်လင့်ခ်</string>
     <string name="forums_find_found_by_url">URL ဖြင့် တွေ့ရှိသည်</string>
     <string name="forums_moderation_pending_posts">စောင့်ဆိုင်းနေသော ပို့စ်များ (%1$d)</string>
     <string name="forums_moderation_pending_comments">စောင့်ဆိုင်းနေသော မှတ်ချက်များ (%1$d)</string>

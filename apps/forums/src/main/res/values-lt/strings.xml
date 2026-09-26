@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Atšaukti prenumeratą</string>
     <string name="forums_list_unsubscribe_title">Atšaukti prenumeratą</string>
     <string name="forums_create_title">Sukurti forumą</string>
-    <string name="forums_create_name">Pavadinimas</string>
+    <string name="forums_create_name">Forumo pavadinimas</string>
     <string name="forums_create_privacy">Privatumas</string>
     <string name="forums_create_private">Privatus</string>
     <string name="forums_create_public">Viešas</string>
-    <string name="forums_create_action">Sukurti</string>
+    <string name="forums_create_action">Sukurti forumą</string>
     <string name="forums_find_title">Rasti forumus</string>
     <string name="forums_find_recommended">Rekomenduojama</string>
     <string name="forums_find_subscribe">Prenumeruoti</string>
@@ -249,7 +249,7 @@
     <string name="forums_settings_field_server">Serveris</string>
     <string name="forums_settings_name_edit_cd">Redaguoti pavadinimą</string>
     <string name="forums_settings_name_cancel_cd">Atšaukti redagavimą</string>
-    <string name="forums_settings_save_name">Išsaugoti vardą</string>
+    <string name="forums_settings_save_name">Išsaugoti pavadinimą</string>
     <string name="forums_access_management">Prieigos valdymas</string>
     <string name="forums_access_level_comment_full">Komentuoti, balsuoti ir peržiūrėti</string>
     <string name="forums_access_level_moderate_full">Moderuoti, skelbti, komentuoti, balsuoti ir peržiūrėti</string>
@@ -279,7 +279,7 @@
     <string name="forums_moderation_restriction_remove_message">Iškart atgauna visą prieigą prie forumo.</string>
     <string name="forums_moderation_restriction_remove_title">Panaikinti %1$s apribojimą?</string>
     <string name="forums_moderation_restriction_state_muted">Nutildytas</string>
-    <string name="forums_moderation_restriction_state_shadowban">Šešėlinis blokavimas</string>
+    <string name="forums_moderation_restriction_state_shadowban">Slaptai užblokuotas</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Nė vienas naudotojas nenutildytas ir neužblokuotas</string>
     <string name="forums_moderation_section_premoderation_description">Reikalauti patvirtinimo, kol turinys taps matomas</string>
     <string name="forums_moderation_section_ratelimiting_description">Užkirskite kelią šlamštui ribodami, kaip dažnai naudotojai gali skelbti</string>

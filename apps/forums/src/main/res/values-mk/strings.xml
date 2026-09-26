@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Откажи претплата</string>
     <string name="forums_list_unsubscribe_title">Откажи претплата</string>
     <string name="forums_create_title">Создај форум</string>
-    <string name="forums_create_name">Име</string>
+    <string name="forums_create_name">Име на форум</string>
     <string name="forums_create_privacy">Приватност</string>
     <string name="forums_create_private">Приватно</string>
     <string name="forums_create_public">Јавно</string>
-    <string name="forums_create_action">Создај</string>
+    <string name="forums_create_action">Создај форум</string>
     <string name="forums_find_title">Најди форуми</string>
     <string name="forums_find_recommended">Препорачано</string>
     <string name="forums_find_subscribe">Претплати се</string>
@@ -156,7 +156,7 @@
     <string name="forums_banner_placeholder">Добредојдовте на овој форум…</string>
     <string name="forums_ai_mode_label">Режим: %1$s</string>
     <string name="forums_ai_mode_heading">AI режим</string>
-    <string name="forums_ai_mode_off">Исклучено</string>
+    <string name="forums_ai_mode_off">Оневозможено</string>
     <string name="forums_ai_account">AI сметка</string>
     <string name="forums_ai_prompt_tag">Барање за означување</string>
     <string name="forums_ai_prompt_score">Барање за оценување</string>
@@ -178,7 +178,7 @@
     <string name="forums_report_reason_hate">Омраза</string>
     <string name="forums_comment_delete_message">Дали сте сигурни дека сакате да го избришете овој коментар?</string>
     <string name="forums_comment_replying_to">Одговарате на %1$s</string>
-    <string name="forums_comment_clear_reply">Откажи одговор</string>
+    <string name="forums_comment_clear_reply">Исчисти одговор</string>
     <string name="forums_settings_title">Поставки за %1$s</string>
     <string name="forums_settings_rename_label">Име на форум</string>
     <string name="forums_settings_danger_zone">Опасна зона</string>
@@ -276,8 +276,8 @@
     <string name="forums_moderation_restriction_by">Од %1$s</string>
     <string name="forums_moderation_restriction_remove_message">Веднаш го враќа целосниот пристап до форумот.</string>
     <string name="forums_moderation_restriction_remove_title">Да се отстрани ограничувањето за %1$s?</string>
-    <string name="forums_moderation_restriction_state_muted">Замолчен</string>
-    <string name="forums_moderation_restriction_state_shadowban">Сенка блокада</string>
+    <string name="forums_moderation_restriction_state_muted">Заглушен</string>
+    <string name="forums_moderation_restriction_state_shadowban">Скриено блокиран</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Нема замолчени или блокирани корисници</string>
     <string name="forums_moderation_section_premoderation_description">Барај одобрување пред содржината да стане видлива</string>
     <string name="forums_moderation_section_ratelimiting_description">Спречете спам со ограничување колку често корисниците можат да објавуваат</string>
@@ -289,7 +289,7 @@
     <string name="forums_settings_forum_renamed">Форумот е преименуван</string>
     <string name="forums_settings_name_clear_cd">Исчисти го името</string>
     <string name="forums_settings_unsubscribe_section">Откажи претплата на форумот</string>
-    <string name="forums_share_link_title">Врска до форумот</string>
+    <string name="forums_share_link_title">Врска на форумот</string>
     <string name="forums_find_found_by_url">Пронајдено преку URL</string>
     <string name="forums_moderation_pending_posts">Објави на чекање (%1$d)</string>
     <string name="forums_moderation_pending_comments">Коментари на чекање (%1$d)</string>

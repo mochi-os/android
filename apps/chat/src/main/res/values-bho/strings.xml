@@ -34,9 +34,9 @@
     <string name="chat_messages_loading">संदेस लोड हो रहल बा…</string>
     <string name="chat_messages_empty">अबहीं कवनो संदेस नइखे — नमस्ते कहीं!</string>
     <string name="chat_messages_load_more">पुरान संदेस लोड करीं</string>
-    <string name="chat_attachment_remove">अटैचमेंट हटाईं</string>
-    <string name="chat_attachment_move_up">ऊपर करीं</string>
-    <string name="chat_attachment_move_down">नीचे करीं</string>
+    <string name="chat_attachment_remove">संलग्नक हटाईं</string>
+    <string name="chat_attachment_move_up">ऊपर ले जाईं</string>
+    <string name="chat_attachment_move_down">नीचे ले जाईं</string>
     <string name="chat_attachment_label">फाइल</string>
     <string name="chat_settings_rename">चैट के नाम बदलीं</string>
     <string name="chat_settings_add_member_empty">जोड़े खातिर कवनो दोस्त नइखे</string>
@@ -53,7 +53,7 @@
     <string name="chat_forward_search">चैट खोजीं…</string>
     <string name="chat_forward_empty">फॉरवर्ड करे खातिर कवनो चैट नइखे</string>
     <string name="chat_forward_success">फॉरवर्ड हो गइल</string>
-    <string name="chat_message_reply">जवाब दीं</string>
+    <string name="chat_message_reply">जवाब</string>
     <string name="chat_message_select">चुनीं</string>
     <string name="chat_reply_attachment">अटैचमेंट</string>
     <string name="chat_replying_to">%1$s के जवाब देत बानी</string>

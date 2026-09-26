@@ -242,7 +242,7 @@
     <string name="route_meta">Προτεραιότητα %1$d · %2$s</string>
     <string name="interests_search_placeholder">Αναζήτηση θεμάτων προς προσθήκη…</string>
     <string name="interests_empty">Δεν υπάρχουν ενδιαφέροντα ακόμα.</string>
-    <string name="interests_summary_regenerate">Αναδημιουργία περίληψης</string>
+    <string name="interests_summary_regenerate">Αναδημιουργία σύνοψης</string>
     <string name="interests_summary_regenerating">Αναδημιουργία…</string>
     <string name="interests_summary_empty">Προσθέστε μερικά ενδιαφέροντα για να δημιουργήσετε μια περίληψη όσων σας αρέσουν.</string>
     <string name="interests_search_failed">Η αναζήτηση απέτυχε. Δοκιμάστε ξανά.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">Ο %1$s δεν θα διαχειρίζεται πλέον διαδρομές σε αυτόν τον τομέα.</string>
     <string name="domain_delegation_delete_title">Διαγραφή ανάθεσης;</string>
     <string name="domain_delegation_path">Διαδρομή</string>
-    <string name="domain_delegation_user">Αναγνωριστικό χρήστη</string>
+    <string name="domain_delegation_user">Χρήστης</string>
     <string name="domain_delegations">Αναθέσεις</string>
     <string name="domain_delegations_empty">Δεν έχουν διαμορφωθεί ανάθεσεις.</string>
     <string name="domain_delete">Διαγραφή τομέα</string>

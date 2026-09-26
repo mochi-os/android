@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">דווח על רישום</string>
     <string name="market_listing_detail_save">שמור</string>
     <string name="market_listing_detail_seller_heading">מוכר</string>
-    <string name="market_listing_detail_shipping_heading">משלוח</string>
+    <string name="market_listing_detail_shipping_heading">אפשרויות משלוח</string>
     <string name="market_listing_detail_subscribe">הירשם</string>
     <string name="market_listing_detail_tags_heading">תגיות</string>
     <string name="market_listing_detail_title">מודעה</string>
@@ -427,7 +427,7 @@
     <string name="market_account_stripe_refresh">רענון הסטטוס</string>
     <string name="market_account_stripe_refresh_failed">רענון סטטוס Stripe נכשל</string>
     <string name="market_appeal_dialog_reason_label">מדוע אתה מערער?</string>
-    <string name="market_appeal_dialog_title">ערעור על הסרה</string>
+    <string name="market_appeal_dialog_title">ערעור על ההסרה</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
     <string name="market_bid_dialog_amount_label">ההצעה שלך</string>
     <string name="market_bid_dialog_current_high">ההצעה הגבוהה הנוכחית: %1$s</string>
@@ -544,10 +544,10 @@
     <string name="market_listings_action_share">שיתוף</string>
     <string name="market_listings_delete_failed">מחיקת הפריט נכשלה</string>
     <string name="market_listings_delete_message">פעולה זו מסירה לצמיתות את הטיוטה מהחשבון שלכם.</string>
-    <string name="market_listings_delete_title">למחוק את הפריט?</string>
+    <string name="market_listings_delete_title">למחוק את המודעה?</string>
     <string name="market_listings_empty_subtitle">הקישו על פריט חדש כדי ליצור את הפריט הראשון שלכם.</string>
     <string name="market_listings_load_failed">טעינת הפריטים שלכם נכשלה</string>
-    <string name="market_listings_new">פריט חדש</string>
+    <string name="market_listings_new">מודעה חדשה</string>
     <string name="market_listings_search_placeholder">חיפוש בפריטים שלכם</string>
     <string name="market_listings_share_chooser">שיתוף פריט</string>
     <string name="market_messages_compose_placeholder">כתבו הודעה…</string>

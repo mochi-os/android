@@ -199,7 +199,7 @@
     <string name="projects_parent_none">Pa gen paran</string>
     <string name="projects_links_empty">Pa gen lyen</string>
     <string name="projects_links_section_relates">Gen rapò ak</string>
-    <string name="projects_links_section_duplicated_by">Doublonnen pa</string>
+    <string name="projects_links_section_duplicated_by">Duplike pa</string>
     <string name="projects_links_type">Kalite lyen</string>
     <string name="projects_links_type_relates">Gen rapò ak</string>
     <string name="projects_links_remove">Retire lyen</string>
@@ -244,7 +244,7 @@
     <string name="projects_request_create_title">Kreye demann fizyon</string>
     <string name="projects_request_field_target">Branch sib</string>
     <string name="projects_diff_title">Diferans: %1$s -&gt; %2$s</string>
-    <string name="projects_tree_collapse">Ratresi</string>
+    <string name="projects_tree_collapse">Pliye</string>
     <string name="projects_tree_expand">Elaji</string>
     <string name="projects_tree_move">Deplase</string>
     <string name="projects_tree_move_to_parent">Deplase nan paran</string>
@@ -283,8 +283,8 @@
     <string name="projects_field_type_enumerated">Enimere</string>
     <string name="projects_field_label">Chan: %1$s</string>
     <string name="projects_field_readonly">Lekti sèlman</string>
-    <string name="projects_field_sortable">Triye</string>
-    <string name="projects_field_filterable">Filtre</string>
+    <string name="projects_field_sortable">Kapab triye</string>
+    <string name="projects_field_filterable">Kapab filtre</string>
     <string name="projects_field_show_on_card">Montre sou kat la</string>
     <string name="projects_field_multi">Plizyè chwa</string>
     <string name="projects_field_position">Pozisyon afichaj</string>
@@ -330,7 +330,7 @@
     <string name="projects_settings_field_fingerprint">Anprent dijital</string>
     <string name="projects_settings_field_server">Sèvè</string>
     <string name="projects_access_subject_anyone">Nenpòt moun</string>
-    <string name="projects_access_subject_authenticated">Itilizatè otantifye</string>
+    <string name="projects_access_subject_authenticated">Itilizatè ki otantifye</string>
     <string name="projects_access_select_role">Chwazi wòl</string>
     <string name="projects_access_role_view">Wè sèlman</string>
     <string name="projects_access_role_none">Pa gen aksè</string>

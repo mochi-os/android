@@ -3,10 +3,10 @@
 
     <string name="chess_app_title">Catur</string>
     <string name="chess_sidebar_header">Catur</string>
-    <string name="chess_sidebar_active">Permainan Aktif</string>
+    <string name="chess_sidebar_active">Permainan aktif</string>
     <string name="chess_sidebar_completed">Selesai</string>
     <string name="chess_sidebar_new_game">Permainan baru</string>
-    <string name="chess_section_active">Permainan Aktif</string>
+    <string name="chess_section_active">Permainan aktif</string>
     <string name="chess_section_completed">Selesai</string>
     <string name="chess_new_game">Permainan baru</string>
     <string name="chess_empty_title">Belum ada permainan</string>
@@ -17,7 +17,7 @@
     <string name="chess_new_add_friends">Tambah teman</string>
     <string name="chess_new_start_button">Mulai permainan</string>
     <string name="chess_new_creating">Membuat…</string>
-    <string name="chess_chat_title">Chat</string>
+    <string name="chess_chat_title">Obrolan</string>
     <string name="chess_open_chat">Buka panel chat</string>
     <string name="chess_open_actions">Buka tindakan permainan</string>
     <string name="chess_offer_draw">Tawarkan seri</string>
@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">Terima</string>
     <string name="chess_draw_decline">Tolak</string>
     <string name="chess_status_checkmate_you_win">Skakmat — Anda menang!</string>
-    <string name="chess_status_stalemate">Buntu — seri</string>
+    <string name="chess_status_stalemate">Pat — seri</string>
     <string name="chess_status_draw">Seri</string>
     <string name="chess_status_check_your_move">Skak — giliran Anda</string>
     <string name="chess_status_your_move">Giliran Anda</string>
@@ -64,9 +64,9 @@
     <string name="chess_empty_subtitle">Mulai permainan pertama Anda untuk bermain catur dengan teman.</string>
     <string name="chess_move_capture">%1$s menangkap %2$s</string>
     <string name="chess_open_sidebar">Buka bilah samping</string>
-    <string name="chess_ws_connecting">Menyambungkan…</string>
+    <string name="chess_ws_connecting">Menghubungkan…</string>
     <string name="chess_ws_disconnected">Luring</string>
-    <string name="chess_ws_failed">Sambungan gagal</string>
+    <string name="chess_ws_failed">Koneksi gagal</string>
     <string name="chess_ws_reconnecting">Menyambungkan ulang…</string>
     <string name="chess_piece_white">%1$s Putih</string>
     <string name="chess_piece_black">%1$s Hitam</string>

@@ -32,8 +32,8 @@
     <string name="chess_draw_accept">Aċċetta</string>
     <string name="chess_draw_decline">Irrifjuta</string>
     <string name="chess_status_checkmate_you_win">Checkmate — int rebaħt!</string>
-    <string name="chess_status_stalemate">Stalemate — patta</string>
-    <string name="chess_status_draw">Pinġi</string>
+    <string name="chess_status_stalemate">Stallo — patta</string>
+    <string name="chess_status_draw">Patta</string>
     <string name="chess_status_check_your_move">Check — il-mossa tiegħek</string>
     <string name="chess_status_your_move">Il-mossa tiegħek</string>
     <string name="chess_move_subject_you">Int</string>
@@ -60,7 +60,7 @@
     <string name="chess_empty_subtitle">Ibda l-ewwel logħba tiegħek biex tilgħab ċess ma’ ħabib.</string>
     <string name="chess_empty_start_button">Ibda l-ewwel logħba tiegħek</string>
     <string name="chess_detail_unavailable">Il-logħba mhijiex disponibbli</string>
-    <string name="chess_delete_title">Tneħħi l-logħba?</string>
+    <string name="chess_delete_title">Ħassar il-logħba?</string>
     <string name="chess_delete_message">Dan ineħħi l-logħba mil-lista tiegħek.</string>
     <string name="chess_ws_connecting">Qed jikkonnettja…</string>
     <string name="chess_ws_disconnected">Offline</string>

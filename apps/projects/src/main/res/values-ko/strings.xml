@@ -194,7 +194,7 @@
     <string name="projects_object_unwatch">주시 해제</string>
     <string name="projects_object_tab_watchers">주시자</string>
     <string name="projects_watchers_empty">아직 주시자가 없습니다</string>
-    <string name="projects_object_delete_title">객체 삭제</string>
+    <string name="projects_object_delete_title">개체 삭제</string>
     <string name="projects_object_delete_message">이 객체를 삭제하시겠습니까? 이 작업은 취소할 수 없습니다.</string>
     <string name="projects_parent_none">상위 항목 없음</string>
     <string name="projects_links_empty">링크 없음</string>
@@ -249,7 +249,7 @@
     <string name="projects_tree_move">이동</string>
     <string name="projects_tree_move_to_parent">상위로 이동</string>
     <string name="projects_tree_root_level">(최상위)</string>
-    <string name="projects_tree_empty">객체 없음</string>
+    <string name="projects_tree_empty">개체 없음</string>
     <string name="projects_board_no_columns">이 보기에 구성된 열이 없습니다</string>
     <string name="projects_board_no_options">열 필드에 구성된 옵션이 없습니다</string>
     <string name="projects_board_column_options">열 옵션</string>
@@ -278,7 +278,7 @@
     <string name="projects_class_title_field_description">이 클래스의 객체에 대해 표시 제목으로 사용할 필드입니다.</string>
     <string name="projects_class_title_field_default">기본값 (읽기 가능)</string>
     <string name="projects_class_merge_requests_description">이 클래스의 객체에 대해 병합 요청을 허용합니다.</string>
-    <string name="projects_class_parents">부모 클래스</string>
+    <string name="projects_class_parents">상위 클래스</string>
     <string name="projects_class_delete_message">\"%1$s\" 클래스를 삭제하시겠습니까? 모든 필드와 해당 옵션도 함께 삭제됩니다.</string>
     <string name="projects_field_type_enumerated">열거형</string>
     <string name="projects_field_label">필드: %1$s</string>

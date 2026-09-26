@@ -11,7 +11,7 @@
     <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Tangkapan hitam</string>
     <string name="go_captures_white_sr">Tangkapan putih</string>
-    <string name="go_chat_title">Chat</string>
+    <string name="go_chat_title">Obrolan</string>
     <string name="go_color_black">Hitam</string>
     <string name="go_color_white">Putih</string>
     <string name="go_delete_confirm">Hapus</string>
@@ -64,7 +64,7 @@
     <string name="go_channel_name">Notifikasi Go</string>
     <string name="go_channel_description">Notifikasi tentang langkah, pas, tawaran remis, dan hasil pertandingan.</string>
     <string name="go_open_sidebar">Buka bilah samping</string>
-    <string name="go_sidebar_active">Pertandingan aktif</string>
+    <string name="go_sidebar_active">Permainan aktif</string>
     <string name="go_empty_active">Belum ada pertandingan aktif.</string>
     <string name="go_status_resigned">Menyerah</string>
     <string name="go_new_game_title">Pertandingan Go baru</string>

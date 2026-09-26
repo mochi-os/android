@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Fjarlægja</string>
     <string name="wikis_replicas_remove_failed">Tókst ekki að fjarlægja eftirlíkingu</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki-síður</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">Tilkynningar um breytingar á wiki-síðum, athugasemdir og boð.</string>
     <string name="wikis_pageview_toc_expand">Sýna efnisyfirlit</string>
@@ -225,7 +225,7 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Uppfært %1$s</string>
     <string name="wikis_pageview_not_found_description">Síðan „%1$s“ er ekki til enn.</string>
-    <string name="wikis_pageview_share_chooser">Tengill wiki</string>
+    <string name="wikis_pageview_share_chooser">Wiki-tengill</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">Tengill</string>
     <string name="wikis_open_sidebar">Opna hliðarstiku</string>

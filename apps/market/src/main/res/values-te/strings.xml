@@ -28,7 +28,7 @@
     <string name="market_appeal_dialog_cancel">రద్దు చేయండి</string>
     <string name="market_appeal_dialog_failed">అప్పీల్‌ను సమర్పించడంలో విఫలమైంది</string>
     <string name="market_appeal_dialog_submit">అప్పీల్‌ను సమర్పించండి</string>
-    <string name="market_appeal_dialog_submitting">పంపబడుతోంది…</string>
+    <string name="market_appeal_dialog_submitting">సమర్పిస్తోంది…</string>
     <string name="market_appeal_dialog_success">అప్పీల్ సమర్పించబడింది</string>
     <string name="market_appeal_dialog_title">తొలగింపు అప్పీలు</string>
     <string name="market_asset_download">డౌన్‌లోడ్ చేయండి</string>
@@ -89,7 +89,7 @@
     <string name="market_checkout_listing_not_found">లిస్టింగ్ కనుగొనబడలేదు</string>
     <string name="market_checkout_pay_button">Stripe తో చెల్లించండి</string>
     <string name="market_checkout_payment_failed">పేమెంట్ చెకవుట్ ప్రారంభించలేకపోయాము — విక్రేత పేమెంట్ సెటప్‌ను పూర్తి చేయకపోయి ఉండవచ్చు</string>
-    <string name="market_checkout_processing">ప్రాసెస్ చేయబడుతోంది…</string>
+    <string name="market_checkout_processing">ప్రాసెస్ అవుతోంది…</string>
     <string name="market_checkout_secure">Stripe ద్వారా సురక్షిత చెల్లింపు</string>
     <string name="market_checkout_select_option">ఆప్షన్‌ను ఎంచుకోండి</string>
     <string name="market_checkout_shipping">షిప్పింగ్</string>
@@ -118,7 +118,7 @@
     <string name="market_dispute_dialog_failed">ప్రతిస్పందనను సమర్పించడంలో విఫలమైంది</string>
     <string name="market_dispute_dialog_response_label">మీ ప్రతిస్పందన</string>
     <string name="market_dispute_dialog_submit">సమర్పించండి</string>
-    <string name="market_dispute_dialog_submitting">పంపబడుతోంది…</string>
+    <string name="market_dispute_dialog_submitting">సమర్పిస్తోంది…</string>
     <string name="market_dispute_dialog_title">వివాదానికి ప్రతిస్పందించండి</string>
     <string name="market_editor_appeal_submit">అప్పీల్‌ను సమర్పించండి</string>
     <string name="market_editor_asset_add">ఫైల్ జోడించండి</string>
@@ -234,7 +234,7 @@
     <string name="market_listing_detail_save">సేవ్ చేయండి</string>
     <string name="market_listing_detail_seller_heading">విక్రేత</string>
     <string name="market_listing_detail_share">జాబితాను షేర్ చేయండి</string>
-    <string name="market_listing_detail_shipping_heading">షిప్పింగ్</string>
+    <string name="market_listing_detail_shipping_heading">షిప్పింగ్ ఆప్షన్‌లు</string>
     <string name="market_listing_detail_subscribe">చందా చేరండి</string>
     <string name="market_listing_detail_tags_heading">ట్యాగ్‌లు</string>
     <string name="market_listing_detail_title">లిస్టింగ్</string>
@@ -392,7 +392,7 @@
     <string name="market_saved_title">సేవ్ చేసినవి</string>
     <string name="market_search_clear">శోధనను క్లియర్ చేయండి</string>
     <string name="market_search_placeholder">మార్కెట్‌లో శోధించండి</string>
-    <string name="market_section_categories">వర్గాలను విహరించండి</string>
+    <string name="market_section_categories">వర్గాలను బ్రౌజ్ చేయండి</string>
     <string name="market_section_listings">ఇటీవలి లిస్టింగ్‌లు</string>
     <string name="market_section_recent">ఇటీవల వీక్షించినవి</string>
     <string name="market_ship_dialog_cancel">రద్దు చేయండి</string>

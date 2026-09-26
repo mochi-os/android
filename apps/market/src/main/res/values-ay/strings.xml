@@ -14,7 +14,7 @@
     <string name="market_account_seller_step_activate_title">Aljiri cuenta activañani</string>
     <string name="market_account_seller_step_activate_desc">Yänak uñacht’ayañ qalltañataki aljiri perfilam luram</string>
     <string name="market_account_seller_step_stripe_desc">Alirinakat pagon katuqañ Stripe cuenta chinuntam</string>
-    <string name="market_account_seller_fees_heading">Pagonaka:</string>
+    <string name="market_account_seller_fees_heading">Cobronaka:</string>
     <string name="market_account_seller_fees_mochi">Mochi sapa aljañat %1$s%% apsi.</string>
     <string name="market_account_seller_fees_stripe">Stripe sapa transacciónan procesaña pago ukat sapa devoluciónan mä pago churi. Qullqim ukat markam jichha chaninakax Stripe Dashboard ukan uñsti.</string>
     <string name="market_account_seller_connect">Stripe chinjaña</string>
@@ -35,7 +35,7 @@
     <string name="market_appeal_dialog_failed">Janiw apelación apayaña atinkti</string>
     <string name="market_appeal_dialog_reason_label">¿Kunatsa apelasiñ jiwasaki?</string>
     <string name="market_appeal_dialog_submit">Apelación apayaña</string>
-    <string name="market_appeal_dialog_submitting">Apaski…</string>
+    <string name="market_appeal_dialog_submitting">Apayasiwa…</string>
     <string name="market_appeal_dialog_success">Apelación apayata</string>
     <string name="market_appeal_dialog_title">Apaqawi apelasiña</string>
     <string name="market_asset_download">Apaqaña</string>
@@ -47,14 +47,14 @@
     <string name="market_bid_dialog_instant_win">Alasiwi confirmata — phuqhayaña tukuyma</string>
     <string name="market_bid_dialog_invalid_ceiling">Máximo ofertax kawkhaspas ofertama jakhunjamapuni</string>
     <string name="market_bid_dialog_outbid">Bid-mam churatawa ukampis jankakiw yaqhamp pasayatax. Yaqha bidirix juk\'amp jach\'a maximum ukan utji. Jupan bidipax jichhax %1$s.</string>
-    <string name="market_bid_dialog_submit">Ofertaña uchaña</string>
+    <string name="market_bid_dialog_submit">Chanini uchaña</string>
     <string name="market_bid_dialog_success">Bid uchata</string>
-    <string name="market_bid_dialog_title">Ofertaña uchaña</string>
-    <string name="market_bid_ended">Auction tukusi</string>
+    <string name="market_bid_dialog_title">Chanini uchaña</string>
+    <string name="market_bid_ended">Remate tukusxi</string>
     <string name="market_bid_ends_in">%1$s-na tukuyi</string>
     <string name="market_bid_high">Mayïr oferta</string>
     <string name="market_bids_empty">Jan bidanaka</string>
-    <string name="market_bids_ended">Auction tukusi</string>
+    <string name="market_bids_ended">Remate tukusxi</string>
     <string name="market_bids_tab_active">Lurkaski</string>
     <string name="market_bids_tab_all">Taqpach</string>
     <string name="market_bids_tab_lost">Atipt\'ayata</string>
@@ -97,7 +97,7 @@
     <string name="market_checkout_listing_not_found">Janiw listado jikxatkti</string>
     <string name="market_checkout_pay_button">Stripe ukäna pagaña</string>
     <string name="market_checkout_payment_failed">Phuqhayaña checkout jan qalltañ atititi — alxiri janir phuqhayaña configuración tukuyaspat</string>
-    <string name="market_checkout_processing">Lurasiski…</string>
+    <string name="market_checkout_processing">Luraskiwa…</string>
     <string name="market_checkout_secure">Sumäki phuqhayaña Stripe ukamp</string>
     <string name="market_checkout_select_option">Opción ajlliña</string>
     <string name="market_checkout_shipping">Apayañ</string>
@@ -126,7 +126,7 @@
     <string name="market_dispute_dialog_failed">Janiw jaysata apayaña atinkti</string>
     <string name="market_dispute_dialog_response_label">Jaysawima</string>
     <string name="market_dispute_dialog_submit">Apayaña</string>
-    <string name="market_dispute_dialog_submitting">Apaski…</string>
+    <string name="market_dispute_dialog_submitting">Apayasiwa…</string>
     <string name="market_dispute_dialog_title">Atipa wakt\'ayaña</string>
     <string name="market_editor_appeal">Moderasiya apelaña</string>
     <string name="market_editor_appeal_submit">Apelación apayaña</string>
@@ -198,7 +198,7 @@
     <string name="market_editor_zone_european_union">Europa Unión</string>
     <string name="market_editor_zone_region">Región</string>
     <string name="market_editor_zone_worldwide">Aka pachpana</string>
-    <string name="market_empty_title">Janiw resultadonakax utjkiti</string>
+    <string name="market_empty_title">Janiw jikxatatax utjkiti</string>
     <string name="market_fee_preview_item">Artículo</string>
     <string name="market_fee_preview_payout">Pagoma</string>
     <string name="market_filter_all">Taqpach</string>
@@ -239,7 +239,7 @@
     <string name="market_listing_detail_buy_now">Jichhakiy alaña</string>
     <string name="market_listing_detail_description_heading">Uñacht\'awi</string>
     <string name="market_listing_detail_edit">Askichaña</string>
-    <string name="market_listing_detail_information_heading">Apaña yatiyäwi</string>
+    <string name="market_listing_detail_information_heading">Apayaña yatiyäwi</string>
     <string name="market_listing_detail_load_failed">Janiw listado apaqaña atinkti</string>
     <string name="market_listing_detail_listed">Uskuta %1$s</string>
     <string name="market_listing_detail_location_heading">Cheqa</string>
@@ -251,7 +251,7 @@
     <string name="market_listing_detail_report">Aljaña reportama</string>
     <string name="market_listing_detail_save">Imaña</string>
     <string name="market_listing_detail_seller_heading">Aljiri</string>
-    <string name="market_listing_detail_share">Anuncio uñacht\'ayaña</string>
+    <string name="market_listing_detail_share">Aljaña waxt\'ayama</string>
     <string name="market_listing_detail_shipping_heading">Apayañ opcionanaka</string>
     <string name="market_listing_detail_subscribe">Suscribiña</string>
     <string name="market_listing_detail_tags_heading">Chimpunaka</string>
@@ -281,7 +281,7 @@
     <string name="market_listings_title">Aljañanakaja</string>
     <string name="market_messages_compose_placeholder">Maya mensaje qillqaña…</string>
     <string name="market_messages_inbox_empty_title">Janira parlawinakax utjkiti</string>
-    <string name="market_messages_inbox_title">Mensajenaka</string>
+    <string name="market_messages_inbox_title">Parlawinaka</string>
     <string name="market_messages_send">Apayaña</string>
     <string name="market_messages_thread_listing_chip">Listado</string>
     <string name="market_messages_thread_title">Parlawi</string>
@@ -344,7 +344,7 @@
     <string name="market_rating_label">Calificación</string>
     <string name="market_rating_no_reviews">Janira reviewanaka</string>
     <string name="market_rating_reviews">(%1$d reseña)</string>
-    <string name="market_refund_amount_label">Q\'ipt\'asi</string>
+    <string name="market_refund_amount_label">Jakhu</string>
     <string name="market_refund_body">Refund mayisiwi laykuma churma.</string>
     <string name="market_refund_details_label">Detallenaka</string>
     <string name="market_refund_dialog_cancel">Jaytaña</string>
@@ -390,7 +390,7 @@
     <string name="market_sale_dispute_state_open">Jist\'arata</string>
     <string name="market_sale_dispute_state_resolved">Resolvata</string>
     <string name="market_sale_fee_gross">Taqpacha</string>
-    <string name="market_sale_fee_mochi">Mochi pagu</string>
+    <string name="market_sale_fee_mochi">Mochi pagäwi</string>
     <string name="market_sale_fee_payout">Q\'uma pagu</string>
     <string name="market_sale_fee_stripe">Stripe procesador pagu</string>
     <string name="market_sale_load_failed">Janiw pedido apaqaña atinkti</string>
@@ -416,8 +416,8 @@
     <string name="market_saved_title">Imatanaka</string>
     <string name="market_search_clear">Thaqaña q\'umachaña</string>
     <string name="market_search_placeholder">Mercado thaqaña</string>
-    <string name="market_section_categories">Kastanak thaqhaña</string>
-    <string name="market_section_listings">Jichha pacha listadonaka</string>
+    <string name="market_section_categories">Kastanak uñakipaña</string>
+    <string name="market_section_listings">Jichhüru aljañanaka</string>
     <string name="market_section_recent">Jichhüru uñjata</string>
     <string name="market_ship_dialog_cancel">Jaytaña</string>
     <string name="market_ship_dialog_submit">Iyawsaña</string>
@@ -434,13 +434,13 @@
     <string name="market_sidebar_home">Uta</string>
     <string name="market_sidebar_inbox">Bandeja</string>
     <string name="market_sidebar_listings">Listadonaka</string>
-    <string name="market_sidebar_messages">Mensajenaka</string>
+    <string name="market_sidebar_messages">Parlawinaka</string>
     <string name="market_sidebar_purchases">Alasiwinaka</string>
     <string name="market_sidebar_reviews">Reviewanaka</string>
     <string name="market_sidebar_sales">Aljawinaka</string>
     <string name="market_sidebar_saved">Imatanaka</string>
     <string name="market_sidebar_selling">Aljiña</string>
-    <string name="market_sidebar_settings">Configuración</string>
+    <string name="market_sidebar_settings">Wakichawinaka</string>
     <string name="market_sidebar_subscribers">Suscriptoranaka</string>
     <string name="market_sidebar_subscriptions">Suscripcionanaka</string>
     <string name="market_status_active">Lurkaski</string>
@@ -564,7 +564,7 @@
     <string name="market_listing_detail_seller_suspended_cta_hint">Alaña jark\'atawa aljirina cuenta jark\'atapana.</string>
     <string name="market_listing_photo">Aljañ jaqhi</string>
     <string name="market_listing_unsave">Imatatxa apaqama</string>
-    <string name="market_listings_action_appeal">Apaqatatxa apelama</string>
+    <string name="market_listings_action_appeal">Apaqawi apelasiña</string>
     <string name="market_listings_delete_failed">Janiwa aljaña chhaqtayañjamäkiti</string>
     <string name="market_listings_delete_message">Akax cuentamatxa wiñayatakiwa borrador chhaqtayaniwa.</string>
     <string name="market_listings_empty_subtitle">Machaqa aljaña ukaru limt\'asma nayrïri yänakama uskuñataki.</string>
@@ -619,7 +619,7 @@
     <string name="market_sale_order_id_label">Mayiwi ID</string>
     <string name="market_sale_ordered_label">Mayita</string>
     <string name="market_sale_review_no_response_yet">Mä kutiki jaysasma. Jaysawinakax taqinitakiwa.</string>
-    <string name="market_sale_review_response_submitting">Khitaski…</string>
+    <string name="market_sale_review_response_submitting">Apayasiwa…</string>
     <string name="market_sale_section_fees">Qullqi jaljtäwi</string>
     <string name="market_sale_ship_submitting">Ch\'iqachasa…</string>
     <string name="market_sale_tracking_url_label">Arkiri URL (munañ taypi)</string>
@@ -629,7 +629,7 @@
     <string name="market_saved_clear">Taqpach imata pichaña</string>
     <string name="market_saved_empty_subtitle">Kuna aljañatakis qhipharu imañataki marka chimpu lluphintaña.</string>
     <string name="market_saved_empty_title">Janiw imata aljawinaka utjkiti</string>
-    <string name="market_stripe_onboarding_action">Wakichañ arknaqaña</string>
+    <string name="market_stripe_onboarding_action">Wakichäwi sarantayaña</string>
     <string name="market_stripe_onboarding_body">Pagad katuqañ qalltañatakix Stripe wakichawi tukuyañama.</string>
     <string name="market_stripe_onboarding_failed">Janiw Stripe jist\'arañjamäkiti</string>
     <string name="market_stripe_onboarding_opening">Stripe jist\'arasa…</string>
@@ -659,11 +659,11 @@
     <string name="market_account_seller_card_view">Aljiri wakichäwinaka uñjaña</string>
     <string name="market_account_vat_label">IVA / impuesto jakhu</string>
     <string name="market_seller_activate_action">Aljiri cuenta uñstayaña</string>
-    <string name="market_seller_activating">Uñstayasa...</string>
+    <string name="market_seller_activating">Activasa…</string>
     <string name="market_seller_become_heading">Aljiri tukuña</string>
     <string name="market_seller_become_title">Aljiri tukuña</string>
     <string name="market_seller_check_status">Estado uñakipaña</string>
-    <string name="market_seller_checking">Uñakipasa...</string>
+    <string name="market_seller_checking">Uñakipasa…</string>
     <string name="market_seller_connect_stripe">Stripe chinjaña</string>
     <string name="market_seller_connecting">Apaqaskiwa...</string>
     <string name="market_seller_fee_loading">Cobro detallenak apaqaskiwa...</string>
@@ -704,7 +704,7 @@
     <string name="market_editor_stock_unlimited">Jan límite</string>
     <string name="market_editor_start_time">Qalltaña pacha</string>
     <string name="market_editor_start_time_help">Wakischa jaytaña publicara qalltañataki.</string>
-    <string name="market_editor_start_time_next">Jutiri</string>
+    <string name="market_editor_start_time_next">Arkiri</string>
     <string name="market_editor_start_time_clear">Q\'umachaña</string>
     <string name="market_listing_detail_buy_now_label">Jichhakiy alaña</string>
     <string name="market_section_recently_viewed">Jichhüru uñjata</string>

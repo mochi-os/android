@@ -242,7 +242,7 @@
     <string name="route_meta">Prioriteet %1$d · %2$s</string>
     <string name="interests_search_placeholder">Otsi lisamiseks teemasid…</string>
     <string name="interests_empty">Veel pole huvisid.</string>
-    <string name="interests_summary_regenerate">Genereeri uuesti kokkuvõte</string>
+    <string name="interests_summary_regenerate">Genereeri kokkuvõte uuesti</string>
     <string name="interests_summary_regenerating">Genereerin uuesti…</string>
     <string name="interests_summary_empty">Lisa mõned huvid, et genereerida kokkuvõte sellest, mida sulle meeldib.</string>
     <string name="interests_search_failed">Otsing ebaõnnestus. Proovi uuesti.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s ei halda enam marsruute selles domeenis.</string>
     <string name="domain_delegation_delete_title">Kustutada delegeerimine?</string>
     <string name="domain_delegation_path">Tee</string>
-    <string name="domain_delegation_user">Kasutaja ID</string>
+    <string name="domain_delegation_user">Kasutaja</string>
     <string name="domain_delegations">Delegeerimised</string>
     <string name="domain_delegations_empty">Delegeerimisi pole konfigureeritud.</string>
     <string name="domain_delete">Kustuta domeen</string>

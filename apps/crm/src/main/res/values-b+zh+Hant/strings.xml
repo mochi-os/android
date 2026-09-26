@@ -30,11 +30,11 @@
     <string name="crm_settings_title">設定</string>
     <string name="crm_settings_tab_general">一般</string>
     <string name="crm_settings_tab_access">存取</string>
-    <string name="crm_settings_tab_people">人員</string>
+    <string name="crm_settings_tab_people">聯絡人</string>
     <string name="crm_option_icon">圖示</string>
     <string name="crm_option_icon_placeholder">例如 Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">取消訂閱</string>
-    <string name="crm_settings_delete_crm">刪除專案</string>
+    <string name="crm_settings_delete_crm">刪除 CRM</string>
     <string name="crm_settings_delete_confirm_title">刪除 CRM</string>
     <string name="crm_settings_unsubscribe_title">取消訂閱</string>
     <string name="crm_settings_unsubscribe_message">您確定要取消訂閱此 CRM 嗎?</string>
@@ -134,10 +134,10 @@
     <string name="crm_class_move_up">上移</string>
     <string name="crm_views_move_down">下移</string>
     <string name="crm_class_move_down">下移</string>
-    <string name="crm_sort_direction_asc">升序</string>
-    <string name="crm_views_direction_asc">升序</string>
-    <string name="crm_sort_direction_desc">降序</string>
-    <string name="crm_views_direction_desc">降序</string>
+    <string name="crm_sort_direction_asc">升冪</string>
+    <string name="crm_views_direction_asc">升冪</string>
+    <string name="crm_sort_direction_desc">降冪</string>
+    <string name="crm_views_direction_desc">降冪</string>
     <string name="crm_list_add_to_home">加到主畫面</string>
     <string name="crm_search_objects_placeholder">搜尋對象</string>
     <string name="crm_links_search_placeholder">搜尋對象</string>
@@ -193,7 +193,7 @@
     <string name="crm_move_after">%1$s 之後</string>
     <string name="crm_drag_card">拖曳卡片</string>
     <string name="crm_drag_row">拖曳列</string>
-    <string name="crm_drag_column">拖曳欄目</string>
+    <string name="crm_drag_column">拖曳欄</string>
     <string name="crm_design_more_options">更多選項</string>
     <string name="crm_design_no_templates">沒有可用的範本</string>
     <string name="crm_design_use">使用</string>
@@ -275,7 +275,7 @@
     <string name="crm_access_role_none">無存取權</string>
     <string name="crm_all_crms">所有 CRM</string>
     <string name="crm_settings_unsubscribe_section">取消訂閱該 CRM</string>
-    <string name="crm_settings_updated">CRM 已更新</string>
+    <string name="crm_settings_updated">已更新 CRM</string>
     <string name="crm_create_import_backup">從備份匯入（選用）</string>
     <string name="crm_export">匯出資料</string>
     <string name="crm_exporting">正在準備匯出…</string>

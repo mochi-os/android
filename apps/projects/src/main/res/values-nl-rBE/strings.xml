@@ -190,16 +190,16 @@
     <string name="projects_object_delete_title">Object verwijderen</string>
     <string name="projects_object_delete_message">Weet u zeker dat u dit object wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.</string>
     <string name="projects_parent_none">Geen bovenliggend item</string>
-    <string name="projects_links_empty">Geen koppelingen</string>
+    <string name="projects_links_empty">Geen links</string>
     <string name="projects_links_section_relates">Heeft betrekking op</string>
     <string name="projects_links_section_duplicated_by">Gedupliceerd door</string>
     <string name="projects_links_type">Type koppeling</string>
     <string name="projects_links_type_relates">Heeft betrekking op</string>
-    <string name="projects_links_remove">Koppeling verwijderen</string>
+    <string name="projects_links_remove">Link verwijderen</string>
     <string name="projects_comment_replying_to">Antwoorden aan %1$s</string>
     <string name="projects_comment_clear_reply">Antwoord wissen</string>
     <string name="projects_comment_placeholder">Voeg een opmerking toe</string>
-    <string name="projects_property_pick_date">Kies datum</string>
+    <string name="projects_property_pick_date">Datum kiezen</string>
     <string name="projects_property_ok">OK</string>
     <string name="projects_property_add_item">Item toevoegen</string>
     <string name="projects_property_required">%1$s is verplicht</string>
@@ -279,7 +279,7 @@
     <string name="projects_field_sortable">Sorteerbaar</string>
     <string name="projects_field_filterable">Filterbaar</string>
     <string name="projects_field_show_on_card">Weergeven op kaart</string>
-    <string name="projects_field_multi">Meervoudige keuze</string>
+    <string name="projects_field_multi">Meerkeuze</string>
     <string name="projects_field_position">Weergavepositie</string>
     <string name="projects_field_position_header">Koptekst</string>
     <string name="projects_field_validation">Validatie</string>
@@ -293,7 +293,7 @@
     <string name="projects_views_empty">Geen weergaven gedefinieerd</string>
     <string name="projects_views_empty_subtitle">Maak een bord- of lijstweergave om objecten te groeperen</string>
     <string name="projects_views_delete_message">Weet u zeker dat u de weergave \"%1$s\" wilt verwijderen?</string>
-    <string name="projects_views_columns_field">Kolomveld</string>
+    <string name="projects_views_columns_field">Kolommenveld</string>
     <string name="projects_views_rows_field">Rijenveld (swimlanes)</string>
     <string name="projects_views_border_field">Veld voor randkleur</string>
     <string name="projects_views_filter_classes">Filteren op klassen</string>

@@ -9,9 +9,9 @@
     <string name="settings_home_notification_prefs">Jakinarazpenen hobespenak</string>
     <string name="settings_home_accounts">Konektatutako kontuak</string>
     <string name="settings_home_interests">Interesak</string>
-    <string name="account_section_passkeys">Passkey-ak</string>
-    <string name="account_passkey_register">Gehitu pasakodea</string>
-    <string name="account_passkey_delete_title">Ezabatu pasakodea?</string>
+    <string name="account_section_passkeys">Sarbide-gakoak</string>
+    <string name="account_passkey_register">Gehitu sarbide-gakoa</string>
+    <string name="account_passkey_delete_title">Ezabatu sarbide-gakoa?</string>
     <string name="account_section_totp">Autentifikatzaile aplikazioa</string>
     <string name="account_totp_setup">Konfiguratu autentifikatzailea</string>
     <string name="account_totp_setup_title">Konfiguratu autentifikatzailea</string>
@@ -137,7 +137,7 @@
     <string name="system_settings_reset_title">Lehenetsira berrezarri?</string>
     <string name="system_setting_apps_install_user">Baimendu erabiltzaileei aplikazioak instalatzea</string>
     <string name="system_setting_auth_email">Hasi saioa posta-kodearekin</string>
-    <string name="system_setting_auth_passkey">Hasi saioa pasakodearekin</string>
+    <string name="system_setting_auth_passkey">Hasi saioa sarbide-gakoarekin</string>
     <string name="system_setting_auth_totp">Hasi saioa TOTP autentifikatzaile-aplikazioarekin</string>
     <string name="system_setting_auth_recovery">Hasi saioa berreskuratze-kodearekin</string>
     <string name="system_setting_auth_oauth">Hasi saioa OAuth 2.0 erabiliz</string>
@@ -211,9 +211,9 @@
     <string name="settings_home_privacy">Pribatutasun-politika</string>
     <string name="settings_home_rules">Arauak</string>
     <string name="settings_home_terms">Zerbitzuaren baldintzak</string>
-    <string name="account_passkeys_empty">Ez dago erregistratutako gako-pasarik.</string>
-    <string name="account_passkey_register_title">Gako-pasea gehitu</string>
-    <string name="account_passkey_register_message">Zure gailuak baieztatzeko eskatuko dizu. Gako-pasea gailu honetara lotuta dago eta etorkizuneko saio-hasteetarako erabiliko da.</string>
+    <string name="account_passkeys_empty">Ez dago erregistratutako sarbide-gakorik.</string>
+    <string name="account_passkey_register_title">Sarbide-gako bat gehitu</string>
+    <string name="account_passkey_register_message">Zure gailuak baieztatzeko eskatuko dizu. Sarbide-gakoa gailu honetara lotuta dago eta etorkizuneko saio-hasteetarako erabiliko da.</string>
     <string name="account_passkey_name_label">Izena (aukerakoa)</string>
     <string name="account_passkey_delete_message">\"%1$s\"-ek ez du gehiago saioa hasiko.</string>
     <string name="account_totp_description">Hasi saioa autentifikazio-aplikazio bateko 6 zifrako kodearekin.</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">Lehentasuna %1$d · %2$s</string>
     <string name="interests_search_placeholder">Bilatu gehitzeko gaiak…</string>
     <string name="interests_empty">Oraindik ez dago interesik.</string>
-    <string name="interests_summary_regenerate">Berriro sortu laburpena</string>
+    <string name="interests_summary_regenerate">Birsortu laburpena</string>
     <string name="interests_summary_regenerating">Berriro sortzen…</string>
     <string name="interests_summary_empty">Gehitu interes batzuk gustuko dituzunaren laburpena sortzeko.</string>
     <string name="interests_search_failed">Bilaketa huts egin du. Saiatu berriro.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s-k ez ditu ibilbideak domeinu honetan kudeatuko.</string>
     <string name="domain_delegation_delete_title">Ezabatu eskuordetza?</string>
     <string name="domain_delegation_path">Bidea</string>
-    <string name="domain_delegation_user">Erabiltzaile-ID</string>
+    <string name="domain_delegation_user">Erabiltzailea</string>
     <string name="domain_delegations">Eskuordetzak</string>
     <string name="domain_delegations_empty">Ez dago konfiguratutako eskuordetzerik.</string>
     <string name="domain_delete">Ezabatu domeinua</string>
@@ -315,7 +315,7 @@
     <string name="login_title">Saio-hasiera</string>
     <string name="login_section_methods">Saio-hasiera metodoak</string>
     <string name="login_method_email">Posta elektronikoko kodea</string>
-    <string name="login_method_passkey">Passkey-a</string>
+    <string name="login_method_passkey">Sarbide-gakoa</string>
     <string name="login_method_totp">Autentifikatzaile aplikazioa</string>
     <string name="login_method_oauth">Hirugarrenen saio-hasiera</string>
     <string name="login_method_recovery">Berreskuratze-kodeak</string>
@@ -361,7 +361,7 @@
     <string name="accounts_provider_fcm">Android push jakinarazpenak</string>
     <string name="accounts_provider_mcp">MCP zerbitzaria</string>
     <string name="accounts_provider_unifiedpush">Push jakinarazpena</string>
-    <string name="accounts_provider_url">Kanpoko URL-a</string>
+    <string name="accounts_provider_url">Kanpoko URLa</string>
     <string name="accounts_provider_web">Mochi weba</string>
     <string name="accounts_verified">Kontua egiaztatua</string>
     <string name="accounts_verify_invalid">Egiaztapen-kode baliogabea</string>
@@ -391,7 +391,7 @@
     <string name="accounts_capability_calendar">Egutegia</string>
     <string name="accounts_capability_notify">Jakinarazpenak</string>
     <string name="accounts_capability_ai">AA</string>
-    <string name="accounts_capability_login">Saioa hastea</string>
+    <string name="accounts_capability_login">Saio-hasiera</string>
     <string name="accounts_provider_caldav">Egutegi-zerbitzaria</string>
     <string name="accounts_revoke_confirm">Honek %1$s kontuaren egutegirako sarbidea baliogabetuko du. %2$s bidezko saio-hasiera mantendu egingo da saioa hasteko orrian deslotu arte.</string>
     <string name="accounts_capability_mcp">MCP</string>

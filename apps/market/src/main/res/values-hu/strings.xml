@@ -35,9 +35,9 @@
     <string name="market_bid_dialog_submit">Licit leadása</string>
     <string name="market_bid_dialog_success">Licit leadva</string>
     <string name="market_bid_dialog_title">Licit leadása</string>
-    <string name="market_bid_ended">Aukció lezárult</string>
+    <string name="market_bid_ended">Aukció véget ért</string>
     <string name="market_bids_empty">Nincsenek licitek</string>
-    <string name="market_bids_ended">Aukció lezárult</string>
+    <string name="market_bids_ended">Aukció véget ért</string>
     <string name="market_bids_tab_active">Aktív</string>
     <string name="market_bids_tab_all">Összes</string>
     <string name="market_bids_tab_lost">Elveszett</string>
@@ -179,7 +179,7 @@
     <string name="market_listing_detail_buy_now">Megvásárlás</string>
     <string name="market_listing_detail_description_heading">Leírás</string>
     <string name="market_listing_detail_edit">Szerkesztés</string>
-    <string name="market_listing_detail_information_heading">Szállítási információ</string>
+    <string name="market_listing_detail_information_heading">Szállítási információk</string>
     <string name="market_listing_detail_load_failed">Nem sikerült betölteni a hirdetést</string>
     <string name="market_listing_detail_listed">Meghirdetve: %1$s</string>
     <string name="market_listing_detail_location_heading">Hely</string>
@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Hirdetés bejelentése</string>
     <string name="market_listing_detail_save">Mentés</string>
     <string name="market_listing_detail_seller_heading">Eladó</string>
-    <string name="market_listing_detail_shipping_heading">Szállítás</string>
+    <string name="market_listing_detail_shipping_heading">Szállítási lehetőségek</string>
     <string name="market_listing_detail_subscribe">Feliratkozás</string>
     <string name="market_listing_detail_tags_heading">Címkék</string>
     <string name="market_listing_detail_title">Hirdetés</string>
@@ -327,7 +327,7 @@
     <string name="market_saved_title">Mentett elemek</string>
     <string name="market_search_clear">Keresés törlése</string>
     <string name="market_section_categories">Kategóriák böngészése</string>
-    <string name="market_section_listings">Legújabb hirdetések</string>
+    <string name="market_section_listings">Friss hirdetések</string>
     <string name="market_section_recent">Nemrég megtekintett</string>
     <string name="market_ship_dialog_cancel">Mégse</string>
     <string name="market_ship_dialog_submit">Megerősítés</string>
@@ -435,7 +435,7 @@
     <string name="market_fee_disclosure_title">Platformdíjak</string>
     <string name="market_fee_preview_failed">A díjak nem számíthatók ki</string>
     <string name="market_fee_preview_loading">Díjak kiszámítása…</string>
-    <string name="market_fee_preview_mochi_fee">Mochi díj</string>
+    <string name="market_fee_preview_mochi_fee">Mochi-díj</string>
     <string name="market_fee_preview_processor_fee">Feldolgozói díj</string>
     <string name="market_filter_chip_max">Max. %1$s</string>
     <string name="market_filter_chip_min">Min. %1$s</string>
@@ -458,7 +458,7 @@
     <string name="market_listing_photo">Hirdetés fényképe</string>
     <string name="market_listing_save">Hirdetés mentése</string>
     <string name="market_listing_unsave">Eltávolítás a mentettek közül</string>
-    <string name="market_listings_action_appeal">Fellebbezés az eltávolítás ellen</string>
+    <string name="market_listings_action_appeal">Eltávolítás megfellebbezése</string>
     <string name="market_listings_action_share">Megosztás</string>
     <string name="market_listings_delete_failed">A hirdetés törlése nem sikerült</string>
     <string name="market_listings_delete_message">Ez véglegesen eltávolítja a vázlatot a fiókjából.</string>
@@ -577,7 +577,7 @@
     <string name="market_appeal_dialog_reason_label">Miért fellebbez?</string>
     <string name="market_appeal_dialog_title">Eltávolítás megfellebbezése</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
-    <string name="market_bid_dialog_amount_label">Az ön ajánlata</string>
+    <string name="market_bid_dialog_amount_label">Az Ön licitje</string>
     <string name="market_bid_dialog_current_high">Jelenlegi legmagasabb ajánlat: %1$s</string>
     <string name="market_bid_dialog_failed">Az ajánlat leadása sikertelen</string>
     <string name="market_bid_dialog_invalid_amount">Adjon meg a jelenlegi ajánlatnál magasabb összeget</string>
@@ -706,7 +706,7 @@
     <string name="market_editor_stock_unlimited">Korlátlan</string>
     <string name="market_editor_start_time">Kezdés ideje</string>
     <string name="market_editor_start_time_help">Hagyja üresen, hogy közzétételkor induljon.</string>
-    <string name="market_editor_start_time_next">Tovább</string>
+    <string name="market_editor_start_time_next">Következő</string>
     <string name="market_editor_start_time_clear">Törlés</string>
     <string name="market_listing_detail_buy_now_label">Vásárolja meg most</string>
     <string name="market_section_recently_viewed">Nemrég megtekintett</string>

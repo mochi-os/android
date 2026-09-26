@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">قبول ڪريو</string>
     <string name="chess_draw_decline">رد ڪريو</string>
     <string name="chess_status_checkmate_you_win">شھ مات — توهان کٽيا!</string>
-    <string name="chess_status_stalemate">اسٽاليميٽ — ڊرا</string>
+    <string name="chess_status_stalemate">پاٽ — برابر</string>
     <string name="chess_status_draw">برابر</string>
     <string name="chess_status_check_your_move">شھ — توهان جي چال</string>
     <string name="chess_status_your_move">توهان جي چال</string>
@@ -60,7 +60,7 @@
     <string name="chess_empty_subtitle">دوست سان شطرنج کيڏڻ لاءِ پنهنجي پهرين راند شروع ڪريو.</string>
     <string name="chess_empty_start_button">پنهنجي پهرين راند شروع ڪريو</string>
     <string name="chess_detail_unavailable">راند موجود ناهي</string>
-    <string name="chess_delete_title">راند ختم ڪجي؟</string>
+    <string name="chess_delete_title">گيم ختم ڪجي؟</string>
     <string name="chess_delete_message">هي راند کي توهان جي فهرست مان هٽائي ٿو.</string>
     <string name="chess_ws_connecting">ڳنڍجي رهيو آهي…</string>
     <string name="chess_ws_disconnected">Offline</string>

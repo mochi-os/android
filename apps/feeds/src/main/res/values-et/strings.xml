@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi voog</string>
     <string name="feeds_source_type_feed_memories">Mälud</string>
-    <string name="feeds_remove_source">Eemalda allikas</string>
+    <string name="feeds_remove_source">Kas eemaldada allikas?</string>
     <string name="feeds_suggested_credibility_accept">Nõustu</string>
     <string name="feeds_rss_url_copied">RSS URL kopeeritud lõikepuhvrisse</string>
     <string name="feeds_logout">Logi välja</string>
@@ -112,7 +112,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">Pole kunagi toodud</string>
     <string name="feeds_source_poll">Pärimine</string>
-    <string name="feeds_source_transform">Teisendus</string>
+    <string name="feeds_source_transform">AI teisendus</string>
     <string name="feeds_remove_source_confirm">Eemalda \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Kustuta ka imporditud postitused</string>
     <string name="feeds_suggested_credibility_title">Soovitatud usaldusväärsus</string>
@@ -172,7 +172,7 @@
     <string name="feeds_allow_search">Luba kõigil otsida voogu</string>
     <string name="feeds_post_content">Postituse sisu</string>
     <string name="feeds_enable_memories">Luba mälud</string>
-    <string name="feeds_permission_request_title">Õiguse taotlus</string>
+    <string name="feeds_permission_request_title">Õiguste taotlus</string>
     <string name="feeds_unsubscribe_confirm">Kas loobuda voo tellimusest?</string>
     <string name="feeds_settings_title">%1$s seaded</string>
     <string name="feeds_source_transform_help">Jäta tühjaks, et keelata.</string>

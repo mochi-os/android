@@ -91,7 +91,7 @@
     <string name="accounts_add_title">Иловаи ҳисоб</string>
     <string name="accounts_empty">Ягон ҳисоби пайвастшуда нест</string>
     <string name="accounts_type_label">Намуд</string>
-    <string name="accounts_field_email">Email</string>
+    <string name="accounts_field_email">Имейл</string>
     <string name="accounts_field_model">Модел</string>
     <string name="accounts_field_name">Ном</string>
     <string name="accounts_status_pending">Дар интизор</string>
@@ -119,7 +119,7 @@
     <string name="settings_home_system_documents">Ҳуҷҷатҳо</string>
     <string name="settings_home_system_settings">Танзимоти система</string>
     <string name="system_settings_title">Танзимоти система</string>
-    <string name="system_settings_section_login">Воридшавӣ</string>
+    <string name="system_settings_section_login">Вуруд</string>
     <string name="system_settings_section_oauth">Воридшавӣ аз тарафи сеюм</string>
     <string name="system_settings_section_user_defaults">Пешфарзҳои корбар</string>
     <string name="system_settings_section_operator">Оператор</string>
@@ -174,7 +174,7 @@
     <string name="system_users_role_user">Корбар</string>
     <string name="system_users_status_suspended">Боздошта шуд</string>
     <string name="system_users_last_never">Ҳеҷ гоҳ</string>
-    <string name="system_users_email_label">Email</string>
+    <string name="system_users_email_label">Имейл</string>
     <string name="system_users_edit">Таҳрири корбар</string>
     <string name="system_users_edit_title">Таҳрири корбар</string>
     <string name="system_users_create_title">Эҷоди корбар</string>
@@ -191,7 +191,7 @@
     <string name="system_users_unknown_browser">Браузери номаълум</string>
     <string name="system_users_unknown">Номаълум</string>
     <string name="system_users_previous">Қаблӣ</string>
-    <string name="system_users_next">Минбаъд</string>
+    <string name="system_users_next">Баъдӣ</string>
     <string name="system_users_empty">Ягон корбар ёфт нашуд</string>
     <string name="system_users_empty_search">Ягон корбар ба ҷустуҷӯи шумо мувофиқ нест</string>
     <string name="system_users_empty_search_hint">Меъёрҳои ҷустуҷӯи худро танзим кунед</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">Афзалият %1$d · %2$s</string>
     <string name="interests_search_placeholder">Мавзӯъҳоро барои илова ҷустуҷӯ кунед…</string>
     <string name="interests_empty">Ҳанӯз шавқҳо нестанд.</string>
-    <string name="interests_summary_regenerate">Хулосаро аз нав эҷод кунед</string>
+    <string name="interests_summary_regenerate">Хулосаро аз нав сохтан</string>
     <string name="interests_summary_regenerating">Аз нав эҷод мешавад…</string>
     <string name="interests_summary_empty">Барои эҷоди хулосаи он чи ки шумо дӯст медоред, чанд шавқ илова кунед.</string>
     <string name="interests_search_failed">Ҷустуҷӯ ноком шуд. Лутфан боз кӯшиш кунед.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s дигар роҳҳоро дар ин домейн идора намекунад.</string>
     <string name="domain_delegation_delete_title">Делегатсияро нест кунем?</string>
     <string name="domain_delegation_path">Роҳ</string>
-    <string name="domain_delegation_user">ID корбар</string>
+    <string name="domain_delegation_user">Корбар</string>
     <string name="domain_delegations">Делегатсияҳо</string>
     <string name="domain_delegations_empty">Уполномочии танзимшуда нестанд.</string>
     <string name="domain_delete">Нест кардани домен</string>
@@ -311,7 +311,7 @@
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">%1$d сессия бекор карда шуд</item>
     </plurals>
-    <string name="login_title">Воридшавӣ</string>
+    <string name="login_title">Вуруд</string>
     <string name="login_section_methods">Усулҳои воридшавӣ</string>
     <string name="login_method_email">Рамзи email</string>
     <string name="login_method_passkey">Калиди дастрасӣ</string>
@@ -388,7 +388,7 @@
     <string name="account_totp_open">Дар барномаи аутентификатор кушодан</string>
     <string name="accounts_revoke">Дастрасиро бекор кунед</string>
     <string name="accounts_capability_calendar">Тақвим</string>
-    <string name="accounts_capability_notify">Огоҳиномаҳо</string>
+    <string name="accounts_capability_notify">Огоҳиҳо</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Воридшавӣ</string>
     <string name="accounts_provider_caldav">Сервери тақвим</string>

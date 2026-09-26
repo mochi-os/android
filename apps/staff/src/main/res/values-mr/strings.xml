@@ -252,7 +252,7 @@
     <string name="staff_filter_chip_remove">फिल्टर काढा</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">मॉडरेशन</string>
-    <string name="staff_filter_label_query">शोध</string>
+    <string name="staff_filter_label_query">शोधा</string>
     <string name="staff_filter_label_seller">विक्रेता</string>
     <string name="staff_filter_label_status">स्थिती</string>
     <string name="staff_filter_label_type">प्रकार</string>
@@ -423,7 +423,7 @@
     <string name="staff_audit_action_staff_team_role_changed">कर्मचारी भूमिका बदलली</string>
     <string name="staff_categories_delete_desc">“%1$s” हटवायचे? हे पूर्ववत करता येणार नाही.</string>
     <string name="staff_disputes_dialog_title_chargeback">चार्जबॅक: %1$s</string>
-    <string name="staff_disputes_dialog_title_view">वाद पाहा</string>
+    <string name="staff_disputes_dialog_title_view">वाद पहा</string>
     <string name="staff_disputes_meta_buyer_details">खरेदीदाराचे तपशील</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">Stripe ने ठेवले</string>
     <string name="staff_disputes_meta_chargeback_fee_partial">%1$s परत केले</string>

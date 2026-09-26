@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="go_action_delete">刪除遊戲</string>
+    <string name="go_action_delete">刪除對局</string>
     <string name="go_action_more">開啟遊戲動作</string>
     <string name="go_action_offer_draw">提議和局</string>
     <string name="go_action_open_chat">打開傾偈面板</string>
     <string name="go_action_pass">略過</string>
-    <string name="go_action_rematch">再戰一場</string>
+    <string name="go_action_rematch">再嚟一局</string>
     <string name="go_action_resign">認輸</string>
     <string name="go_app_title">圍棋</string>
     <string name="go_captures_black_sr">黑棋俘獲</string>
     <string name="go_captures_white_sr">白棋俘獲</string>
-    <string name="go_chat_title">傾偈</string>
-    <string name="go_color_black">黑色</string>
+    <string name="go_chat_title">聊天</string>
+    <string name="go_color_black">黑方</string>
     <string name="go_color_white">白方</string>
     <string name="go_delete_confirm">刪除</string>
     <string name="go_delete_message">呢個棋局會喺你個列表度移走。冇法回復。</string>
-    <string name="go_delete_title">刪除棋局?</string>
+    <string name="go_delete_title">刪除對局？</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">接受</string>
     <string name="go_draw_decline">拒絕</string>
@@ -32,13 +32,13 @@
     <string name="go_error_resign_failed">認輸失敗</string>
     <string name="go_error_send_failed">傳送失敗</string>
     <string name="go_game_deleted">遊戲已刪除</string>
-    <string name="go_new_game_add_friends">新增好友</string>
+    <string name="go_new_game_add_friends">加朋友</string>
     <string name="go_new_game_board_size_label">棋盤大小</string>
     <string name="go_new_game_friend_label">對手</string>
     <string name="go_new_game_komi_field_label">貼目</string>
     <string name="go_new_game_komi_label">貼目</string>
     <string name="go_new_game_komi_range_error">必須介於 0 和 10 之間</string>
-    <string name="go_new_game_start">開始遊戲</string>
+    <string name="go_new_game_start">開始對局</string>
     <string name="go_pass_confirm">略過</string>
     <string name="go_pass_end_confirm">結束遊戲</string>
     <string name="go_pass_end_message">%1$s 也已停一手。確認將結束對局並計算棋盤得分。</string>
@@ -49,22 +49,22 @@
     <string name="go_resign_message">確定要認輸嗎?%1$s 將贏得比賽。</string>
     <string name="go_resign_title">認輸?</string>
     <string name="go_sidebar_completed">已完成</string>
-    <string name="go_sidebar_new_game">新遊戲</string>
+    <string name="go_sidebar_new_game">新對局</string>
     <string name="go_status_draw">和局</string>
     <string name="go_status_draw_text">和局</string>
-    <string name="go_status_game_over">遊戲結束</string>
+    <string name="go_status_game_over">對局結束</string>
     <string name="go_status_opponent_move">輪到 %1$s</string>
     <string name="go_status_opponent_wins">%1$s 獲勝</string>
     <string name="go_status_resigned_opponent">%1$s 已認輸 — 您贏了!</string>
     <string name="go_status_resigned_self">您已認輸 — %1$s 獲勝</string>
     <string name="go_status_score">%1$s 獲勝 — 黑:%2$s 白:%3$s</string>
-    <string name="go_status_you_win">您贏了!</string>
-    <string name="go_status_your_move">輪到您</string>
+    <string name="go_status_you_win">你贏咗！</string>
+    <string name="go_status_your_move">輪到你行</string>
 
     <string name="go_channel_name">Go notifications</string>
     <string name="go_channel_description">關於走棋、停一手、提議和棋局結果的通知。</string>
-    <string name="go_open_sidebar">開啟側邊欄</string>
-    <string name="go_sidebar_active">進行中的棋局</string>
+    <string name="go_open_sidebar">開啟側欄</string>
+    <string name="go_sidebar_active">進行中嘅對局</string>
     <string name="go_empty_active">暫無進行中的棋局。</string>
     <string name="go_status_resigned">已認輸</string>
     <string name="go_new_game_title">新圍棋棋局</string>

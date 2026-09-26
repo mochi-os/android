@@ -14,7 +14,7 @@
     <string name="market_account_seller_step_activate_title">Mú àkáǹtì olùtà ṣiṣẹ́</string>
     <string name="market_account_seller_step_activate_desc">Ṣẹ̀dá profáìlì olùtà rẹ láti bẹ̀rẹ̀ sí í to àwọn ọjà jọ</string>
     <string name="market_account_seller_step_stripe_desc">So àkáǹtì Stripe pọ̀ láti gba ìsanwó lọ́wọ́ àwọn olùrà</string>
-    <string name="market_account_seller_fees_heading">Owó ìṣẹ́:</string>
+    <string name="market_account_seller_fees_heading">Owó-iṣẹ́:</string>
     <string name="market_account_seller_fees_mochi">Mochi ń gba %1$s%% nínú títà kọ̀ọ̀kan.</string>
     <string name="market_account_seller_fees_stripe">Stripe ń gba owó ìṣàmúlò tirẹ̀ fún ìṣòwò kọ̀ọ̀kan àti owó tí kò yí padà fún ìfàsẹ́yìn owó kọ̀ọ̀kan. Àwọn ìdíyelé lọ́wọ́lọ́wọ́ fún owó àti agbègbè rẹ wà nínú Stripe Dashboard rẹ.</string>
     <string name="market_account_seller_connect">So Stripe pọ̀</string>
@@ -46,13 +46,13 @@
     <string name="market_bid_dialog_instant_win">A ti jẹ́rìí rírà — parí ìsanwó</string>
     <string name="market_bid_dialog_invalid_ceiling">Bid tó ga jùlọ gbọ́dọ̀ jẹ́ ó kéré tán iye bid rẹ</string>
     <string name="market_bid_dialog_outbid">A gbe ìfowó-rà rẹ kalẹ̀ ṣùgbọ́n a kọjá rẹ̀ lẹ́sẹ̀kẹsẹ̀. Olufowó-rà mìíràn ní ìwọ̀n-òkè tó ga jù. Ìfowó-rà rẹ̀ ní báyìí ni %1$s.</string>
-    <string name="market_bid_dialog_submit">Fi ọfà</string>
+    <string name="market_bid_dialog_submit">Fún owó</string>
     <string name="market_bid_dialog_success">A ti gbé bid</string>
-    <string name="market_bid_dialog_title">Fi ọfà</string>
-    <string name="market_bid_ended">Eré-ìdárayá ti parí</string>
+    <string name="market_bid_dialog_title">Fún owó</string>
+    <string name="market_bid_ended">Ìtajà-ìdíje ti parí</string>
     <string name="market_bid_high">Ọfà gígajù</string>
     <string name="market_bids_empty">Kò sí bid</string>
-    <string name="market_bids_ended">Eré-ìdárayá ti parí</string>
+    <string name="market_bids_ended">Ìtajà-ìdíje ti parí</string>
     <string name="market_bids_tab_active">Ó ń ṣiṣẹ́</string>
     <string name="market_bids_tab_all">Gbogbo</string>
     <string name="market_bids_tab_lost">Pàdánù</string>
@@ -95,7 +95,7 @@
     <string name="market_checkout_listing_not_found">A kò rí listing</string>
     <string name="market_checkout_pay_button">San pẹ̀lú Stripe</string>
     <string name="market_checkout_payment_failed">A kò lè bẹ̀rẹ̀ checkout ìsanwó — olùtà lè má tíì parí ìṣètò ìsanwó</string>
-    <string name="market_checkout_processing">Ń ṣiṣẹ́…</string>
+    <string name="market_checkout_processing">Ń ṣiṣẹ́ lé e…</string>
     <string name="market_checkout_secure">Ìsanwó tí ó ní ààbò nípasẹ̀ Stripe</string>
     <string name="market_checkout_select_option">Yan àṣàyàn</string>
     <string name="market_checkout_shipping">Ìfijíṣẹ́</string>
@@ -143,7 +143,7 @@
     <string name="market_editor_description">Àpèjúwe</string>
     <string name="market_editor_interval_monthly">Oṣooṣù</string>
     <string name="market_editor_interval_yearly">Lọ́dọọdún</string>
-    <string name="market_editor_photo_delete">Pa fọ́tò kúrò</string>
+    <string name="market_editor_photo_delete">Pa fọ́tò rẹ́</string>
     <string name="market_editor_photo_uploading">Ń gbé sókè…</string>
     <string name="market_editor_photos_add">Fikún fọ́tò</string>
     <string name="market_editor_price">Iye</string>
@@ -185,11 +185,11 @@
     <string name="market_editor_zone_country_it">Ítálì</string>
     <string name="market_editor_zone_country_jp">Japani</string>
     <string name="market_editor_zone_country_nl">Nedalandi</string>
-    <string name="market_editor_zone_country_us">Amẹrikà</string>
+    <string name="market_editor_zone_country_us">Orílẹ̀-èdè Amẹ́ríkà</string>
     <string name="market_editor_zone_european_union">Àpapọ̀ Yúróòpù</string>
     <string name="market_editor_zone_region">Àgbègbè</string>
     <string name="market_editor_zone_worldwide">Káàkiri ayé</string>
-    <string name="market_empty_title">Kò sí èsì</string>
+    <string name="market_empty_title">Kò sí àbájáde</string>
     <string name="market_fee_preview_item">Ohun</string>
     <string name="market_fee_preview_payout">Owó tí o ó gbà</string>
     <string name="market_filter_all">Gbogbo</string>
@@ -214,7 +214,7 @@
     <string name="market_filter_pricing_pwyw">Sanwó iye tí o fẹ́</string>
     <string name="market_filter_pricing_subscription">Ìforúkọsílẹ̀</string>
     <string name="market_filter_sort">Ṣètò</string>
-    <string name="market_filter_sort_default">Àìpé</string>
+    <string name="market_filter_sort_default">Àìyípadà</string>
     <string name="market_filter_sort_price_high">Iye: ga sí kéré</string>
     <string name="market_filter_sort_price_low">Iye: kéré sí ga</string>
     <string name="market_filter_sort_recent">Tó ṣẹ̀ṣẹ̀ jùlọ</string>
@@ -229,7 +229,7 @@
     <string name="market_listing_detail_buy_now">Rà báyìí</string>
     <string name="market_listing_detail_description_heading">Àpèjúwe</string>
     <string name="market_listing_detail_edit">Ṣàtúnṣe</string>
-    <string name="market_listing_detail_information_heading">Alaye ifijiṣẹ</string>
+    <string name="market_listing_detail_information_heading">Àlàyé ìfijíṣẹ́</string>
     <string name="market_listing_detail_load_failed">Kò lè ṣí listing lọ̀</string>
     <string name="market_listing_detail_listed">Ti ṣe atokọ %1$s</string>
     <string name="market_listing_detail_location_heading">Ibi</string>
@@ -242,7 +242,7 @@
     <string name="market_listing_detail_save">Fi pamọ́</string>
     <string name="market_listing_detail_seller_heading">Olùtà</string>
     <string name="market_listing_detail_share">Pín ìkéde</string>
-    <string name="market_listing_detail_shipping_heading">Ìfijíṣẹ́</string>
+    <string name="market_listing_detail_shipping_heading">Àwọn àṣàyàn ìfijíṣẹ́</string>
     <string name="market_listing_detail_subscribe">Forúkọsílẹ̀</string>
     <string name="market_listing_detail_tags_heading">Àwọn àmì</string>
     <string name="market_listing_detail_title">Àkójọ</string>
@@ -269,8 +269,8 @@
     <string name="market_listings_relist_failed">Kò lè tún listing ṣe</string>
     <string name="market_listings_title">Àwọn ìtòlẹ́ mi</string>
     <string name="market_messages_compose_placeholder">Kọ ìsọfúnni…</string>
-    <string name="market_messages_inbox_title">Àwọn ìránṣẹ́</string>
-    <string name="market_messages_send">Fi ránṣẹ́</string>
+    <string name="market_messages_inbox_title">Àwọn ìfiránṣẹ́</string>
+    <string name="market_messages_send">Firánṣẹ́</string>
     <string name="market_messages_thread_listing_chip">Àkójọ</string>
     <string name="market_messages_thread_title">Ìjíròrò</string>
     <string name="market_onboarding_activate">Mú ṣiṣẹ́</string>
@@ -400,8 +400,8 @@
     <string name="market_saved_title">Àwọn tí a fi pamọ́</string>
     <string name="market_search_clear">Pa àwárí rẹ́</string>
     <string name="market_search_placeholder">Wá ọjà</string>
-    <string name="market_section_categories">Ṣàwárí àwọn ẹ̀ka</string>
-    <string name="market_section_listings">Àwọn àkọsílẹ̀ tuntun</string>
+    <string name="market_section_categories">Wo àwọn ẹ̀ka</string>
+    <string name="market_section_listings">Àwọn àkójọ tuntun</string>
     <string name="market_section_recent">Tí a wò láìpẹ́</string>
     <string name="market_ship_dialog_cancel">Fagilé</string>
     <string name="market_ship_dialog_submit">Fọwọ́sí</string>
@@ -418,7 +418,7 @@
     <string name="market_sidebar_home">Ilé</string>
     <string name="market_sidebar_inbox">Apótí àbáwọlé</string>
     <string name="market_sidebar_listings">Àwọn àkójọ</string>
-    <string name="market_sidebar_messages">Àwọn ìránṣẹ́</string>
+    <string name="market_sidebar_messages">Àwọn ìfiránṣẹ́</string>
     <string name="market_sidebar_purchases">Àwọn rírà</string>
     <string name="market_sidebar_reviews">Àwọn àyẹ̀wò</string>
     <string name="market_sidebar_sales">Àwọn ìtà</string>
@@ -455,7 +455,7 @@
     <string name="market_subscription_detail_started">Bẹ̀rẹ̀ ní %1$s</string>
     <string name="market_subscription_detail_title">Ìforúkọsílẹ̀</string>
     <string name="market_subscriptions_action_cancel">Fagilé</string>
-    <string name="market_subscriptions_action_pause">Dúró</string>
+    <string name="market_subscriptions_action_pause">Dáwọ́ dúró</string>
     <string name="market_subscriptions_action_reactivate">Tún mú ṣiṣẹ́</string>
     <string name="market_subscriptions_action_resubscribe">Tún àlàápín</string>
     <string name="market_subscriptions_action_resume">Tẹ̀síwájú</string>
@@ -478,7 +478,7 @@
     <string name="market_type_digital">Oníńọ́mbà</string>
     <string name="market_type_physical">Tara</string>
     <string name="market_warnings_title">Ìkìlọ̀</string>
-    <string name="market_sale_review_response_submitting">Nrans…</string>
+    <string name="market_sale_review_response_submitting">Ń fi ránṣẹ́…</string>
     <string name="market_checkout_subscribing">Ó ń forúkọsílẹ̀…</string>
     <string name="market_filter_remove">Yọ àyàn kúrò</string>
     <string name="market_listings_action_appeal">Atampa ẹ̀sùn</string>
@@ -612,7 +612,7 @@
     <string name="market_sale_dispute_state_responded">Ń dúró de ìpinnu</string>
     <string name="market_sale_dispute_stripe_reason">Ìdí ìfagílé owó Stripe: %1$s</string>
     <string name="market_sale_fee_gross">Lápapọ̀</string>
-    <string name="market_sale_fee_mochi">Owó Mochi</string>
+    <string name="market_sale_fee_mochi">Owó-iṣẹ́ Mochi</string>
     <string name="market_sale_fee_payout">Owó tí a san</string>
     <string name="market_sale_fee_stripe">Owó ìṣiṣẹ́ Stripe</string>
     <string name="market_sale_fee_stripe_note">Àwọn owó ìṣiṣẹ́ Stripe ni a fihàn nínú dasibọ́ọ̀dù Stripe rẹ.</string>
@@ -644,7 +644,7 @@
     <string name="market_subscriptions_per_year">%1$s lọ́dọọdún</string>
 
     <string name="market_account_address_desc">Yóò kún ara rẹ̀ ní ìsanwó ọjọ́ iwájú nígbà tí a bá fi ìsopọ̀ ìsanwó kún un.</string>
-    <string name="market_account_address_title">Àdírẹ́sì ìfiránṣẹ́ àkọ́kọ́</string>
+    <string name="market_account_address_title">Àdírẹ́sì ìfiránṣẹ́ àìyípadà</string>
     <string name="market_account_business_desc">A ń lò ó fún àwọn ìwé-ọ̀rọ̀ àti ìbámu owó-orí. Kì í farahàn lórí profáìlì gbangba rẹ.</string>
     <string name="market_account_business_switch">Mo ń tà gẹ́gẹ́ bí iṣẹ́-òwò</string>
     <string name="market_account_business_title">Àlàyé iṣẹ́-òwò</string>
@@ -663,7 +663,7 @@
     <string name="market_seller_become_heading">Di olùtà</string>
     <string name="market_seller_become_title">Di olùtà</string>
     <string name="market_seller_check_status">Ṣàyẹ̀wò ipò</string>
-    <string name="market_seller_checking">Ó ń ṣàyẹ̀wò...</string>
+    <string name="market_seller_checking">Ó ń ṣàyẹ̀wò…</string>
     <string name="market_seller_connect_stripe">So Stripe pọ̀</string>
     <string name="market_seller_connecting">Ń ṣí...</string>
     <string name="market_seller_fee_loading">Ń ṣí àwọn àlàyé owó...</string>
@@ -691,7 +691,7 @@
     <string name="market_seller_step_stripe_desc">So àkáǹtì Stripe pọ̀ láti gba ìsanwó láti ọwọ́ àwọn rírà</string>
     <string name="market_seller_step_stripe_title">So Stripe pọ̀</string>
     <string name="market_seller_stripe_more_info">Stripe nilo alaye diẹ sii ṣaaju ki o le gba awọn isanwo. Pari awọn ibeere lori Stripe Dashboard rẹ, lẹhinna tẹ Ṣayẹwo ipo.</string>
-    <string name="market_seller_summary_account_status">Ipò àkàùntì</string>
+    <string name="market_seller_summary_account_status">Ipò àkáǹtì</string>
     <string name="market_seller_summary_fees">Owó-iṣẹ́</string>
     <string name="market_seller_summary_payments">Àwọn ìsanwó</string>
     <string name="market_sidebar_become_seller">Di olùtà</string>

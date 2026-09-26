@@ -55,7 +55,7 @@
     <string name="chat_forward_success">Kudluliselwe</string>
     <string name="chat_message_reply">Phendula</string>
     <string name="chat_message_select">Khetha</string>
-    <string name="chat_reply_attachment">Isinamathiselo</string>
+    <string name="chat_reply_attachment">Okunamathiselwe</string>
     <string name="chat_replying_to">Uphendula u-%1$s</string>
     <string name="chat_delete_confirm_title">Susa umlayezo?</string>
     <string name="chat_delete_confirm_body">Lokhu kususa umlayezo kuwo wonke umuntu futhi ngeke kuhlehliswe.</string>

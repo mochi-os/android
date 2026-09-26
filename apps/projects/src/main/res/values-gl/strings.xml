@@ -24,7 +24,7 @@
     <string name="projects_watched">Vixiado</string>
     <string name="projects_create_object">Crear obxecto</string>
     <string name="projects_search">Buscar</string>
-    <string name="projects_settings">Axustes</string>
+    <string name="projects_settings">Configuración</string>
     <string name="projects_design">Deseño</string>
     <string name="projects_sort_label">Ordenar</string>
     <string name="projects_sort_direction">Dirección</string>
@@ -34,7 +34,7 @@
     <string name="projects_sort_updated">Actualizado</string>
     <string name="projects_create_object_type">Tipo</string>
     <string name="projects_create_object_parent">Pai</string>
-    <string name="projects_settings_title">Axustes</string>
+    <string name="projects_settings_title">Configuración</string>
     <string name="projects_settings_tab_general">Xeral</string>
     <string name="projects_settings_tab_access">Acceso</string>
     <string name="projects_settings_tab_people">Persoas</string>
@@ -202,9 +202,9 @@
     <string name="projects_links_section_duplicated_by">Duplicado por</string>
     <string name="projects_links_type">Tipo de ligazón</string>
     <string name="projects_links_type_relates">Relaciónase con</string>
-    <string name="projects_links_remove">Eliminar ligazón</string>
+    <string name="projects_links_remove">Quitar a ligazón</string>
     <string name="projects_comment_replying_to">Respondendo a %1$s</string>
-    <string name="projects_comment_clear_reply">Limpar resposta</string>
+    <string name="projects_comment_clear_reply">Borrar resposta</string>
     <string name="projects_comment_placeholder">Engadir un comentario</string>
     <string name="projects_property_pick_date">Escoller data</string>
     <string name="projects_property_ok">Aceptar</string>
@@ -278,7 +278,7 @@
     <string name="projects_class_title_field_description">Que campo usar como título de visualización para os obxectos desta clase.</string>
     <string name="projects_class_title_field_default">Predeterminado (lexible)</string>
     <string name="projects_class_merge_requests_description">Permitir solicitudes de fusión nos obxectos desta clase.</string>
-    <string name="projects_class_parents">Clases proxenitoras</string>
+    <string name="projects_class_parents">Clases pai</string>
     <string name="projects_class_delete_message">Seguro que queres eliminar a clase \"%1$s\"? Tamén se eliminarán todos os campos e as súas opcións.</string>
     <string name="projects_field_type_enumerated">Enumerado</string>
     <string name="projects_field_label">Campo: %1$s</string>

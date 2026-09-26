@@ -64,7 +64,7 @@
     <string name="staff_audit_action_account_unbanned">Toirmeasg dheth</string>
     <string name="staff_audit_action_account_unsuspended">Cur an cois dheth</string>
     <string name="staff_audit_action_auction_bid_placed">Tairgse air a cur</string>
-    <string name="staff_audit_action_auction_cancelled">Roup air a sgur</string>
+    <string name="staff_audit_action_auction_cancelled">Reic-tairgse air a chur dheth</string>
     <string name="staff_audit_action_auction_created">Reic-tairgse air a chruthachadh</string>
     <string name="staff_audit_action_auction_ended_sold">Reic-tairgse air a reic</string>
     <string name="staff_audit_action_auction_ended_unsold">Reic-tairgse air thighinn gu crìch gun reic</string>
@@ -169,7 +169,7 @@
     <string name="staff_config_field_stripe_oauth_client">ID cliant OAuth</string>
     <string name="staff_config_field_stripe_publishable">Iuchair fhoillseachail</string>
     <string name="staff_config_field_stripe_secret">Iuchair dhìomhair</string>
-    <string name="staff_config_group_moderation">Maoir-ùghdarrais</string>
+    <string name="staff_config_group_moderation">Modarataireachd</string>
     <string name="staff_config_group_payments">Pàighidhean</string>
     <string name="staff_config_group_reviews">Lèirmheasan</string>
     <string name="staff_config_group_stripe">Stripe</string>
@@ -186,7 +186,7 @@
     <string name="staff_dashboard_col_date">Ceann-là</string>
     <string name="staff_dashboard_col_detail">Mion-fhiosrachadh</string>
     <string name="staff_dashboard_col_listing">Liosta</string>
-    <string name="staff_dashboard_col_moderation">Maoir-ùghdarrais</string>
+    <string name="staff_dashboard_col_moderation">Modarataireachd</string>
     <string name="staff_dashboard_col_name">Ainm</string>
     <string name="staff_dashboard_col_object">Nì</string>
     <string name="staff_dashboard_col_reason">Adhbhar</string>
@@ -215,7 +215,7 @@
     <string name="staff_dashboard_system">Siostam</string>
     <string name="staff_dashboard_tab_audit">Sgrùdadh</string>
     <string name="staff_dashboard_tab_listings">Liostan</string>
-    <string name="staff_dashboard_tab_moderation">Maoir-ùghdarrais</string>
+    <string name="staff_dashboard_tab_moderation">Modarataireachd</string>
     <string name="staff_dashboard_tab_orders">Òrduighean</string>
     <string name="staff_dashboard_tab_signups">Clàraidhean</string>
     <string name="staff_dashboard_yes">Tha</string>
@@ -259,7 +259,7 @@
     <string name="staff_disputes_view">Seall</string>
     <string name="staff_filter_chip_remove">Thoir air falbh a\' chriathrag</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
-    <string name="staff_filter_label_moderation">Maoir-ùghdarrais</string>
+    <string name="staff_filter_label_moderation">Modarataireachd</string>
     <string name="staff_filter_label_query">Lorg</string>
     <string name="staff_filter_label_seller">Reiceadair</string>
     <string name="staff_filter_label_status">Cor</string>
@@ -273,7 +273,7 @@
     <string name="staff_listings_approved_toast">Chaidh aontachadh ris an liosta</string>
     <string name="staff_listings_cancel">Sguir dheth</string>
     <string name="staff_listings_empty">Cha deach liostadh a lorg</string>
-    <string name="staff_listings_filter_moderation_label">Maoir-ùghdarrais</string>
+    <string name="staff_listings_filter_moderation_label">Modarataireachd</string>
     <string name="staff_listings_filter_status_label">Cor</string>
     <string name="staff_listings_moderation_auto_approved">Fèin-aontaichte</string>
     <string name="staff_listings_moderation_hold">Cùm</string>
@@ -364,7 +364,7 @@
     <string name="staff_sidebar_disputes">Connspaidean</string>
     <string name="staff_sidebar_listings">Liostan</string>
     <string name="staff_sidebar_management">Stiùireadh</string>
-    <string name="staff_sidebar_market">Margaidh</string>
+    <string name="staff_sidebar_market">Margadh</string>
     <string name="staff_sidebar_moderation">Loga maoir-ùghdarrais</string>
     <string name="staff_sidebar_overview">Foir-shealladh</string>
     <string name="staff_sidebar_reports">Aithisgean</string>

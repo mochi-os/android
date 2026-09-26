@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">ان سبسکرائب کریں</string>
     <string name="forums_list_unsubscribe_title">ان سبسکرائب کریں</string>
     <string name="forums_create_title">فورم بنائیں</string>
-    <string name="forums_create_name">نام</string>
+    <string name="forums_create_name">فورم کا نام</string>
     <string name="forums_create_privacy">پرائیویسی</string>
     <string name="forums_create_private">نجی</string>
     <string name="forums_create_public">عوامی</string>
-    <string name="forums_create_action">بنائیں</string>
+    <string name="forums_create_action">فورم بنائیں</string>
     <string name="forums_find_title">فورمز تلاش کریں</string>
     <string name="forums_find_recommended">تجویز کردہ</string>
     <string name="forums_find_subscribe">سبسکرائب کریں</string>
@@ -71,7 +71,7 @@
     <string name="forums_ai_account_default">ڈیفالٹ اکاؤنٹ</string>
     <string name="forums_ai_prompt_reset">ڈیفالٹ پر ری سیٹ کریں</string>
     <string name="forums_settings_unsubscribe">ان سبسکرائب کریں</string>
-    <string name="forums_moderation_title">moderation</string>
+    <string name="forums_moderation_title">نگرانی</string>
     <string name="forums_moderation_tab_queue">قطار</string>
     <string name="forums_moderation_tab_reports">رپورٹس</string>
     <string name="forums_moderation_tab_log">لاگ</string>
@@ -156,7 +156,7 @@
     <string name="forums_banner_placeholder">اس فورم میں خوش آمدید…</string>
     <string name="forums_ai_mode_label">موڈ: %1$s</string>
     <string name="forums_ai_mode_heading">AI موڈ</string>
-    <string name="forums_ai_mode_off">بند</string>
+    <string name="forums_ai_mode_off">غیر فعال</string>
     <string name="forums_ai_account">AI اکاؤنٹ</string>
     <string name="forums_ai_prompt_tag">ٹیگنگ پرامپٹ</string>
     <string name="forums_ai_prompt_score">اسکورنگ پرامپٹ</string>
@@ -219,7 +219,7 @@
     <string name="forums_all_forums">تمام فورمز</string>
     <string name="forums_create_allow_search">کسی کو بھی فورم تلاش کرنے کی اجازت دیں</string>
     <string name="forums_rss_clipboard_label">فورم RSS یو آر ایل</string>
-    <string name="forums_tab_moderation">moderation</string>
+    <string name="forums_tab_moderation">نگرانی</string>
     <string name="forums_access_level_view_full">صرف دیکھنا</string>
     <string name="forums_access_level_none_full">کوئی رسائی نہیں</string>
     <string name="forums_access_subject_anyone">کوئی بھی</string>
@@ -256,7 +256,7 @@
     <string name="forums_access_select_group">ایک گروپ منتخب کریں</string>
     <string name="forums_access_select_rule">ایک اصول منتخب کریں</string>
     <string name="forums_ai_actions_label">پوسٹس پر AI کارروائیاں</string>
-    <string name="forums_ai_prompt_custom">حسبِ ضرورت</string>
+    <string name="forums_ai_prompt_custom">اپنی مرضی کا</string>
     <string name="forums_ai_prompt_score_label">اسکور پرامپٹ</string>
     <string name="forums_ai_prompt_tag_label">ٹیگ پرامپٹ</string>
     <string name="forums_ai_prompt_variables">متغیرات: %1$s</string>
@@ -277,7 +277,7 @@
     <string name="forums_moderation_restriction_remove_message">فوراً فورم تک مکمل رسائی دوبارہ حاصل ہو جائے گی۔</string>
     <string name="forums_moderation_restriction_remove_title">%1$s کی پابندی ہٹائیں؟</string>
     <string name="forums_moderation_restriction_state_muted">خاموش</string>
-    <string name="forums_moderation_restriction_state_shadowban">خفیہ پابندی</string>
+    <string name="forums_moderation_restriction_state_shadowban">خفیہ طور پر پابندی شدہ</string>
     <string name="forums_moderation_restrictions_empty_subtitle">کسی صارف کو خاموش یا بند نہیں کیا گیا</string>
     <string name="forums_moderation_section_premoderation_description">مواد ظاہر ہونے سے پہلے منظوری لازمی کریں</string>
     <string name="forums_moderation_section_ratelimiting_description">صارفین کے پوسٹ کرنے کی تعداد محدود کر کے اسپام روکیں</string>
@@ -289,7 +289,7 @@
     <string name="forums_settings_forum_renamed">فورم کا نام تبدیل ہو گیا</string>
     <string name="forums_settings_name_clear_cd">نام صاف کریں</string>
     <string name="forums_settings_unsubscribe_section">فورم کی رکنیت ختم کریں</string>
-    <string name="forums_share_link_title">فورم کا لنک</string>
+    <string name="forums_share_link_title">فورم لنک</string>
     <string name="forums_find_found_by_url">URL سے ملا</string>
     <string name="forums_moderation_pending_posts">زیر التوا پوسٹس (%1$d)</string>
     <string name="forums_moderation_pending_comments">زیر التوا تبصرے (%1$d)</string>

@@ -65,7 +65,7 @@
     <string name="staff_audit_action_account_unbanned">Бан уклоњен</string>
     <string name="staff_audit_action_account_unsuspended">Суспензија уклоњена</string>
     <string name="staff_audit_action_auction_bid_placed">Понуда дата</string>
-    <string name="staff_audit_action_auction_cancelled">Аукција отказана</string>
+    <string name="staff_audit_action_auction_cancelled">Аукција је отказана</string>
     <string name="staff_audit_action_auction_created">Аукција креирана</string>
     <string name="staff_audit_action_auction_ended_sold">Аукција продата</string>
     <string name="staff_audit_action_auction_ended_unsold">Аукција завршена непродано</string>
@@ -131,7 +131,7 @@
     <string name="staff_categories_action_delete">Обриши</string>
     <string name="staff_categories_action_edit">Уреди</string>
     <string name="staff_categories_add">Додај</string>
-    <string name="staff_categories_col_name">Име</string>
+    <string name="staff_categories_col_name">Назив</string>
     <string name="staff_categories_col_status">Статус</string>
     <string name="staff_categories_col_types">Типови</string>
     <string name="staff_categories_create">Креирај</string>
@@ -145,7 +145,7 @@
     <string name="staff_categories_dialog_digital">Дигитално</string>
     <string name="staff_categories_dialog_edit_title">Уреди категорију</string>
     <string name="staff_categories_dialog_icon">Икона</string>
-    <string name="staff_categories_dialog_name">Име</string>
+    <string name="staff_categories_dialog_name">Назив</string>
     <string name="staff_categories_dialog_parent">Родитељ</string>
     <string name="staff_categories_dialog_parent_none">Ништа</string>
     <string name="staff_categories_dialog_physical">Физички</string>
@@ -188,7 +188,7 @@
     <string name="staff_dashboard_col_detail">Детаљ</string>
     <string name="staff_dashboard_col_listing">Оглас</string>
     <string name="staff_dashboard_col_moderation">Модерација</string>
-    <string name="staff_dashboard_col_name">Име</string>
+    <string name="staff_dashboard_col_name">Назив</string>
     <string name="staff_dashboard_col_object">Објекат</string>
     <string name="staff_dashboard_col_reason">Разлог</string>
     <string name="staff_dashboard_col_score">Резултат</string>
@@ -284,7 +284,7 @@
     <string name="staff_filter_chip_remove">Уклони филтер</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Модерација</string>
-    <string name="staff_filter_label_query">Претрага</string>
+    <string name="staff_filter_label_query">Претражи</string>
     <string name="staff_filter_label_seller">Продавац</string>
     <string name="staff_filter_label_status">Статус</string>
     <string name="staff_filter_label_type">Тип</string>
@@ -399,7 +399,7 @@
     <string name="staff_sidebar_overview">Преглед</string>
     <string name="staff_sidebar_reports">Пријаве</string>
     <string name="staff_sidebar_reviews">Рецензије</string>
-    <string name="staff_sidebar_settings">Поставке</string>
+    <string name="staff_sidebar_settings">Подешавања</string>
     <string name="staff_sidebar_team">Тим</string>
     <string name="staff_status_actioned">Извршено</string>
     <string name="staff_status_active">Активно</string>

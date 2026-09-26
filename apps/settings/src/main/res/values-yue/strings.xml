@@ -108,9 +108,9 @@
     <string name="interests_remove">移除興趣</string>
     <string name="interests_search_failed">搜尋失敗。請再試。</string>
     <string name="document_privacy_title">私隱政策</string>
-    <string name="document_rules_title">規則</string>
+    <string name="document_rules_title">守則</string>
     <string name="document_terms_title">服務條款</string>
-    <string name="notifprefs_title">通知</string>
+    <string name="notifprefs_title">通知偏好</string>
     <string name="notifprefs_tab_categories">類別</string>
     <string name="notifprefs_tab_topics">主題</string>
     <string name="notifprefs_add_category">新增類別</string>
@@ -150,7 +150,7 @@
     <string name="accounts_field_url">伺服器網址</string>
     <string name="accounts_status_pending">待處理</string>
     <string name="accounts_status_verified">已驗證</string>
-    <string name="accounts_status_connected">已連線</string>
+    <string name="accounts_status_connected">已連接</string>
     <string name="accounts_default_for_ai">AI 預設</string>
     <string name="accounts_set_default_ai">設為預設 AI</string>
     <string name="accounts_test">測試</string>
@@ -280,7 +280,7 @@
     <string name="account_identity_directory_toggle">允許其他人在目錄中找到您</string>
     <string name="account_identity_fingerprint">指紋</string>
     <string name="account_identity_identity">身分</string>
-    <string name="account_identity_name">名稱</string>
+    <string name="account_identity_name">姓名</string>
     <string name="account_identity_username">使用者名稱</string>
     <string name="account_section_identity">身分</string>
     <string name="account_title">帳戶</string>
@@ -297,7 +297,7 @@
     <string name="domain_delegation_delete_message">%1$s 將唔再管理呢個網域上面嘅路由。</string>
     <string name="domain_delegation_delete_title">刪除委派？</string>
     <string name="domain_delegation_path">路徑</string>
-    <string name="domain_delegation_user">用戶 ID</string>
+    <string name="domain_delegation_user">用戶</string>
     <string name="domain_delegations">委派</string>
     <string name="domain_delegations_empty">未設定任何委派。</string>
     <string name="domain_delete">刪除網域</string>

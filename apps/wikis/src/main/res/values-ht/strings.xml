@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Retire</string>
     <string name="wikis_replicas_remove_failed">Echwe pou retire replika</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">Notifikasyon sou modifikasyon paj wiki, kòmantè ak envitasyon.</string>
     <string name="wikis_pageview_toc_expand">Montre tab kontni</string>
@@ -225,7 +225,7 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Mete ajou %1$s</string>
     <string name="wikis_pageview_not_found_description">Paj “%1$s” la poko egziste.</string>
-    <string name="wikis_pageview_share_chooser">Lyen wiki a</string>
+    <string name="wikis_pageview_share_chooser">Lyen wiki</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">Lyen</string>
     <string name="wikis_open_sidebar">Louvri ba bò a</string>
@@ -283,7 +283,7 @@
     <string name="wikis_load_more">Chaje plis</string>
     <string name="wikis_access_change_level">Nivo aksè</string>
     <string name="wikis_access_subject_anyone">Nenpòt moun</string>
-    <string name="wikis_access_subject_authenticated">Itilizatè otantifye</string>
+    <string name="wikis_access_subject_authenticated">Itilizatè ki otantifye</string>
 
     <string name="wikis_revision_compare">Konpare chanjman yo</string>
     <string name="wikis_revision_author">pa %1$s</string>

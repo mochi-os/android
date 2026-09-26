@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Signaler l\'annonce</string>
     <string name="market_listing_detail_save">Enregistrer</string>
     <string name="market_listing_detail_seller_heading">Vendeur</string>
-    <string name="market_listing_detail_shipping_heading">Expédition</string>
+    <string name="market_listing_detail_shipping_heading">Options d\'expédition</string>
     <string name="market_listing_detail_subscribe">S\'abonner</string>
     <string name="market_listing_detail_tags_heading">Étiquettes</string>
     <string name="market_listing_detail_title">Annonce</string>
@@ -427,7 +427,7 @@
     <string name="market_account_stripe_refresh">Actualiser le statut</string>
     <string name="market_account_stripe_refresh_failed">Impossible d\'actualiser le statut Stripe</string>
     <string name="market_appeal_dialog_reason_label">Pourquoi faites-vous appel ?</string>
-    <string name="market_appeal_dialog_title">Faire appel de la suppression</string>
+    <string name="market_appeal_dialog_title">Contester le retrait</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
     <string name="market_bid_dialog_amount_label">Votre enchère</string>
     <string name="market_bid_dialog_current_high">Enchère la plus haute actuelle : %1$s</string>
@@ -444,7 +444,7 @@
     <string name="market_carousel_thumbnail">Miniature %1$d</string>
     <string name="market_checkout_browser_unavailable">Aucun navigateur disponible pour ouvrir la page de paiement</string>
     <string name="market_checkout_pay_button">Payer avec Stripe</string>
-    <string name="market_checkout_processing">Traitement en cours…</string>
+    <string name="market_checkout_processing">Traitement…</string>
     <string name="market_checkout_pwyw_label">Votre prix (minimum %1$s)</string>
     <string name="market_checkout_pwyw_min_error">Le montant doit être d\'au moins %1$s</string>
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
@@ -628,7 +628,7 @@
     <string name="market_saved_empty_title">Aucune annonce enregistrée</string>
     <string name="market_search_placeholder">Rechercher sur le marché</string>
     <string name="market_status_past_due">En retard</string>
-    <string name="market_stripe_onboarding_action">Poursuivre la configuration</string>
+    <string name="market_stripe_onboarding_action">Continuer la configuration</string>
     <string name="market_stripe_onboarding_body">Terminez votre configuration Stripe avant de pouvoir recevoir des versements.</string>
     <string name="market_stripe_onboarding_failed">Impossible d\'ouvrir Stripe</string>
     <string name="market_stripe_onboarding_opening">Ouverture de Stripe…</string>

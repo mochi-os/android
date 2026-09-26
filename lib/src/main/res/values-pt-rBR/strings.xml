@@ -108,7 +108,7 @@
     <string name="settings_display_reset_confirm_message">Isso redefinirá as configurações de exibição para seus valores padrão.</string>
     <string name="settings_theme_title">Tema</string>
     <string name="settings_theme_default">Padrão</string>
-    <string name="settings_background">Fundo</string>
+    <string name="settings_background">Plano de fundo</string>
     <string name="settings_background_theme">Do tema</string>
     <string name="settings_background_off">Nenhum</string>
     <string name="game_chat_empty">Ainda não há mensagens</string>
@@ -177,7 +177,7 @@
     <string name="entity_avatar_alt">Avatar de %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="lightbox_position">%1$d / %2$d</string>
-    <string name="format_time_just_now">Agora</string>
+    <string name="format_time_just_now">Agora mesmo</string>
     <string name="format_time_minutes_ago">há %1$dmin</string>
     <string name="format_time_hours_ago">há %1$dh</string>
     <string name="format_time_days_ago">há %1$dd</string>
@@ -256,8 +256,8 @@
     <string name="tags_interest_up">Mostrar mais como este</string>
     <string name="tags_interest_down">Mostrar menos como este</string>
     <string name="tags_interest_clear">Parar de mostrar</string>
-    <string name="tags_none">Sem etiquetas</string>
-    <string name="tags_delete">Remover etiqueta</string>
+    <string name="tags_none">Sem tags</string>
+    <string name="tags_delete">Remover tag</string>
     <string name="person_picker_none">Nenhum</string>
     <string name="person_picker_clear">Limpar seleção</string>
     <string name="person_picker_select">Selecionar …</string>

@@ -174,8 +174,8 @@
     <string name="projects_find_search_hint">Soek projekte om op in te teken</string>
     <string name="projects_search_objects_placeholder">Soek objekte</string>
     <string name="projects_sort_field">Sorteer volgens</string>
-    <string name="projects_sort_direction_asc">Stygend</string>
-    <string name="projects_sort_direction_desc">Dalend</string>
+    <string name="projects_sort_direction_asc">Oplopend</string>
+    <string name="projects_sort_direction_desc">Aflopend</string>
     <string name="projects_create_object_parent_none">(geen)</string>
     <string name="projects_add_child">Voeg kind by</string>
     <string name="projects_views_move_up">Skuif op</string>
@@ -278,9 +278,9 @@
     <string name="projects_class_delete_message">Is jy seker jy wil die klas \"%1$s\" uitvee? Alle velde en hul opsies sal ook uitgevee word.</string>
     <string name="projects_field_type_enumerated">Opgesom</string>
     <string name="projects_field_label">Veld: %1$s</string>
-    <string name="projects_field_readonly">Slegs-lees</string>
+    <string name="projects_field_readonly">Leesalleen</string>
     <string name="projects_field_sortable">Sorteerbaar</string>
-    <string name="projects_field_filterable">Filterbaar</string>
+    <string name="projects_field_filterable">Filtreerbaar</string>
     <string name="projects_field_show_on_card">Wys op kaart</string>
     <string name="projects_field_multi">Multikeuse</string>
     <string name="projects_field_position">Vertoonposisie</string>
@@ -301,8 +301,8 @@
     <string name="projects_views_rows_field">Ryveld (swembane)</string>
     <string name="projects_views_border_field">Randkleurveld</string>
     <string name="projects_views_sort_by">Sorteer volgens</string>
-    <string name="projects_views_direction_asc">Stygend</string>
-    <string name="projects_views_direction_desc">Dalend</string>
+    <string name="projects_views_direction_asc">Oplopend</string>
+    <string name="projects_views_direction_desc">Aflopend</string>
     <string name="projects_views_filter_classes">Filter na klasse</string>
     <string name="projects_views_by">volgens %1$s</string>
     <string name="projects_views_sorted">gesorteer %1$s</string>
@@ -318,7 +318,7 @@
     <string name="projects_filter">Filter</string>
     <string name="projects_link">Skakel</string>
     <string name="projects_filter_clear_all">Maak alles skoon</string>
-    <string name="projects_filter_all">Almal</string>
+    <string name="projects_filter_all">Alle</string>
     <string name="projects_filter_other">Ander</string>
     <string name="projects_create_object_title">Nuut</string>
     <string name="projects_settings_section_identity">Identiteit</string>

@@ -146,7 +146,7 @@
     <string name="people_add_contact_search_start">İstifadəçiləri axtarmaq üçün yazmağa başlayın</string>
     <string name="people_contact_phone">Telefon</string>
     <string name="people_contact_title">Vəzifə</string>
-    <string name="people_contacts_title">Əlaqələr</string>
+    <string name="people_contacts_title">Kontaktlar</string>
     <string name="people_contacts_all">Bütün kontaktlar</string>
     <string name="people_contacts_empty">Kontakt tapılmadı</string>
     <string name="people_contacts_add_to_start">Əlaqə qurmaq üçün kontakt əlavə edin</string>
@@ -166,7 +166,7 @@
     <string name="people_contact_add_phone">Telefon əlavə et</string>
     <string name="people_contact_add_address">Ünvan əlavə et</string>
     <string name="people_contact_street">Küçə</string>
-    <string name="people_contact_birthday">Ad günü</string>
+    <string name="people_contact_birthday">Doğum günü</string>
     <string name="people_contact_organisation">Təşkilat</string>
     <string name="people_contact_url">Veb sayt</string>
     <string name="people_contact_note">Qeyd</string>

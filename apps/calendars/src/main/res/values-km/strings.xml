@@ -44,7 +44,7 @@
     <string name="calendars_device_create">បង្កើត</string>
     <string name="calendars_device_server">ម៉ាស៊ីនមេ</string>
     <string name="calendars_device_address">អាសយដ្ឋាន</string>
-    <string name="calendars_device_username">ឈ្មោះអ្នកប្រើ</string>
+    <string name="calendars_device_username">ឈ្មោះអ្នកប្រើប្រាស់</string>
     <string name="calendars_device_password">ពាក្យសម្ងាត់</string>
     <string name="calendars_device_copy">ចម្លង %1$s</string>
     <string name="calendars_device_done">រួចរាល់</string>
@@ -73,7 +73,7 @@
     <string name="calendars_workweek">សប្តាហ៍ធ្វើការ</string>
     <string name="calendars_range">%1$s ដល់ %2$s</string>
     <string name="calendars_truncated">ព្រឹត្តិការណ៍មួយចំនួននៅក្នុងចន្លោះនេះមិនត្រូវបានបង្ហាញទេ។</string>
-    <string name="calendars_list_empty">គ្មានព្រឹត្តិការណ៍ទេ</string>
+    <string name="calendars_list_empty">មិនមានព្រឹត្តិការណ៍</string>
     <plurals name="calendars_more">
         <item quantity="other">+%1$d បន្ថែមទៀត</item>
     </plurals>
@@ -157,7 +157,7 @@
     <string name="calendars_poll_conflict">ព្រឹត្តិការណ៍មួយបានផ្លាស់ប្តូរទាំងសងខាង</string>
     <string name="calendars_poll_missing">ប្រតិទិននេះលែងមាននៅលើម៉ាស៊ីនមេរបស់វាទៀតហើយ</string>
     <string name="calendars_poll_unauthorised">ម៉ាស៊ីនមេប្រតិទិនបានបដិសេធព័ត៌មានសម្គាល់គណនី</string>
-    <string name="calendars_subscribe_username">ឈ្មោះអ្នកប្រើ</string>
+    <string name="calendars_subscribe_username">ឈ្មោះអ្នកប្រើប្រាស់</string>
     <string name="calendars_subscribe_password">ពាក្យសម្ងាត់</string>
     <string name="calendars_subscribe_connect">ភ្ជាប់</string>
     <string name="calendars_subscribe_server">ម៉ាស៊ីនមេ Mochi ឬ CalDAV ផ្សេងទៀត</string>

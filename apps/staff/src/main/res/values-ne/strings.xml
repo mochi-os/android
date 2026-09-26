@@ -253,7 +253,7 @@
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">मोडरेसन</string>
     <string name="staff_filter_label_query">खोज्नुहोस्</string>
-    <string name="staff_filter_label_seller">विक्रेता</string>
+    <string name="staff_filter_label_seller">बिक्रेता</string>
     <string name="staff_filter_label_status">स्थिति</string>
     <string name="staff_filter_label_type">प्रकार</string>
     <string name="staff_listings_action_approve_title">सूची स्वीकृत गर्नुहोस्</string>
@@ -356,7 +356,7 @@
     <string name="staff_sidebar_disputes">विवादहरू</string>
     <string name="staff_sidebar_listings">सूचीहरू</string>
     <string name="staff_sidebar_management">व्यवस्थापन</string>
-    <string name="staff_sidebar_market">मार्केट</string>
+    <string name="staff_sidebar_market">बजार</string>
     <string name="staff_sidebar_moderation">मोडरेसन लग</string>
     <string name="staff_sidebar_overview">सिंहावलोकन</string>
     <string name="staff_sidebar_reports">रिपोर्टहरू</string>
@@ -414,7 +414,7 @@
     <string name="staff_team_toast_add_failed">सदस्य थप्न असफल</string>
     <string name="staff_team_toast_removed">सदस्य हटाइयो</string>
     <string name="staff_team_toast_role_updated">भूमिका अद्यावधिक गरियो</string>
-    <string name="staff_audit_action_auction_cancelled">लिलामी रद्द गरियो</string>
+    <string name="staff_audit_action_auction_cancelled">लिलाम रद्द गरियो</string>
     <string name="staff_dashboard_order_fallback">अर्डर #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">कारण (वैकल्पिक)</string>

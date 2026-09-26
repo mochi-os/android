@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Rimuovi</string>
     <string name="wikis_replicas_remove_failed">Impossibile rimuovere la replica</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki</string>
     <string name="wikis_channel_name">Notifiche Wikis</string>
     <string name="wikis_channel_description">Notifiche su modifiche alle pagine, commenti e inviti.</string>
     <string name="wikis_pageview_toc_expand">Mostra indice</string>

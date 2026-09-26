@@ -328,7 +328,7 @@
     <string name="market_subscriptions_per_month">%1$s 每月</string>
     <string name="market_subscriptions_per_year">%1$s 每年</string>
     <string name="market_warnings_title">警告</string>
-    <string name="market_checkout_address_name">名稱</string>
+    <string name="market_checkout_address_name">姓名</string>
     <string name="market_checkout_back">返回</string>
     <string name="market_editor_back">返回</string>
     <string name="market_dispute_dialog_cancel">取消</string>

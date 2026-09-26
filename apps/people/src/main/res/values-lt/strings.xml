@@ -49,9 +49,9 @@
     <string name="people_profile_save">Išsaugoti</string>
     <string name="people_profile_saving">Išsaugoma…</string>
     <string name="people_profile_save_failed">Nepavyko išsaugoti</string>
-    <string name="people_profile_name">Pavadinimas</string>
+    <string name="people_profile_name">Vardas</string>
     <string name="people_profile_name_saved">Pavadinimas išsaugotas</string>
-    <string name="people_profile_edit_name">Redaguoti pavadinimą</string>
+    <string name="people_profile_edit_name">Redaguoti vardą</string>
     <string name="people_profile_identity">Tapatybė</string>
     <string name="people_profile_accent">Akcentas</string>
     <string name="people_profile_directory_listing">Leisti kitiems rasti jus kataloge</string>
@@ -100,7 +100,7 @@
     <string name="people_welcome_title">Sveiki atvykę į Žmones</string>
     <string name="people_person_banner_alt">%1$s baneris</string>
     <string name="people_person_private">Šis profilis yra privatus</string>
-    <string name="people_person_state_invited">Pakviestas (-a)</string>
+    <string name="people_person_state_invited">Pakviesta</string>
 
     <string name="people_invitations_accept_all">Priimti visus</string>
     <string name="people_invitations_decline_all">Atmesti visus</string>
@@ -117,14 +117,14 @@
     <string name="people_profile_avatar">Avataras</string>
     <string name="people_profile_banner">Reklamjuostė</string>
     <string name="people_contacts_search_placeholder">Ieškoti…</string>
-    <string name="people_contacts_invited">Pakviestas (-a)</string>
+    <string name="people_contacts_invited">Pakviesta</string>
     <string name="people_contacts_accept">Priimti</string>
     <string name="people_contacts_message">Rašyti žinutę</string>
     <string name="people_contacts_no_people_found">Žmonių nerasta</string>
     <string name="people_contacts_try_adjusting">Pabandykite koreguoti paiešką</string>
     <string name="people_contact_section_address">Adresas</string>
     <string name="people_contact_section_detail">Detalės</string>
-    <string name="people_contact_name">Pavadinimas</string>
+    <string name="people_contact_name">Vardas</string>
     <string name="people_contact_email">El. paštas</string>
     <string name="people_contact_city">Miestas</string>
     <string name="people_contact_region">Regionas</string>
@@ -137,7 +137,7 @@
     <string name="people_contact_pick_date_confirm">Gerai</string>
     <string name="people_books_name">Pavadinimas</string>
     <string name="people_books_rename">Pervadinti</string>
-    <string name="people_contacts_sort_name">Pavadinimas</string>
+    <string name="people_contacts_sort_name">Vardas</string>
     <string name="people_contacts_sort_recent">Neseniai pridėta</string>
     <string name="people_contacts_thats_you">Tai jūs</string>
     <string name="people_contacts_try_different_search">Pabandykite kitą paieškos terminą</string>
@@ -170,7 +170,7 @@
     <string name="people_contact_organisation">Organizacija</string>
     <string name="people_contact_url">Svetainė</string>
     <string name="people_contact_note">Pastaba</string>
-    <string name="people_contact_book">Adresų knygelė</string>
+    <string name="people_contact_book">Adresų knyga</string>
     <string name="people_contact_type_work">Darbas</string>
     <string name="people_contact_type_mobile">Mobilusis</string>
     <string name="people_contact_pick_date">Pasirinkite datą</string>

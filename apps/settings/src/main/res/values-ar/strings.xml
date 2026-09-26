@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">لن يدير %1$s المسارات على هذا النطاق بعد الآن.</string>
     <string name="domain_delegation_delete_title">حذف التفويض؟</string>
     <string name="domain_delegation_path">المسار</string>
-    <string name="domain_delegation_user">معرّف المستخدم</string>
+    <string name="domain_delegation_user">المستخدم</string>
     <string name="domain_delegations">التفويضات</string>
     <string name="domain_delegations_empty">لا توجد تفويضات مُهيأة.</string>
     <string name="domain_delete">حذف النطاق</string>
@@ -369,7 +369,7 @@
     <string name="accounts_provider_fcm">إشعار Android</string>
     <string name="accounts_provider_mcp">خادم MCP</string>
     <string name="accounts_provider_unifiedpush">إشعار فوري</string>
-    <string name="accounts_provider_url">URL خارجي</string>
+    <string name="accounts_provider_url">رابط خارجي</string>
     <string name="accounts_provider_web">Mochi على الويب</string>
     <string name="accounts_verified">تم التحقق من الحساب</string>
     <string name="accounts_verify_invalid">رمز التحقق غير صالح</string>

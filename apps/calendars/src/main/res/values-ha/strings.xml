@@ -4,7 +4,7 @@
     <string name="calendars_subscribe_submit">Yi subscribe</string>
     <string name="calendars_subscribe_url">Adireshi</string>
     <string name="calendars_connect_device">Haɗa na\'ura</string>
-    <string name="calendars_preferences">Abubuwan da aka fi so</string>
+    <string name="calendars_preferences">Abubuwan da kake so</string>
     <string name="calendars_name">Suna</string>
     <string name="calendars_rename">Sake suna</string>
     <string name="calendars_delete">Goge</string>
@@ -42,7 +42,7 @@
     <string name="calendars_device_title">Haɗa na\'ura</string>
     <string name="calendars_device_name">Sunan na\'ura</string>
     <string name="calendars_device_create">Ƙirƙira</string>
-    <string name="calendars_device_server">Server</string>
+    <string name="calendars_device_server">Sabar</string>
     <string name="calendars_device_address">Adireshi</string>
     <string name="calendars_device_username">Sunan mai amfani</string>
     <string name="calendars_device_password">Kalmar sirri</string>
@@ -166,7 +166,7 @@
     <string name="calendars_subscribe_server">Wani uwar garken Mochi ko CalDAV</string>
     <string name="calendars_subscribe_address">Adireshin kalandar da aka wallafa (karatu kawai)</string>
     <string name="calendars_subscribe_password_apple">Kalmar sirri ta musamman ga manhaja</string>
-    <string name="calendars_subscribe_server_url">Adireshin uwar garke</string>
+    <string name="calendars_subscribe_server_url">Adireshin sabar</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Kalandar Google</string>

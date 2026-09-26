@@ -242,7 +242,7 @@
     <string name="route_meta">অগ্রাধিকার %1$d · %2$s</string>
     <string name="interests_search_placeholder">যোগ করার জন্য বিষয় অনুসন্ধান করুন…</string>
     <string name="interests_empty">এখনো কোনো আগ্রহ নেই।</string>
-    <string name="interests_summary_regenerate">সারাংশ পুনরায় তৈরি করুন</string>
+    <string name="interests_summary_regenerate">সারসংক্ষেপ পুনরায় তৈরি করুন</string>
     <string name="interests_summary_regenerating">পুনরায় তৈরি হচ্ছে…</string>
     <string name="interests_summary_empty">আপনি যা পছন্দ করেন তার সারাংশ তৈরি করতে কিছু আগ্রহ যোগ করুন।</string>
     <string name="interests_search_failed">অনুসন্ধান ব্যর্থ। অনুগ্রহ করে আবার চেষ্টা করুন।</string>
@@ -265,7 +265,7 @@
     <string name="settings_home_system_users">ব্যবহারকারী (সার্ভার)</string>
     <string name="system_users_add_user">ব্যবহারকারী যোগ করুন</string>
     <string name="system_users_search_placeholder">ব্যবহারকারী অনুসন্ধান…</string>
-    <string name="system_users_sort_by">সাজান</string>
+    <string name="system_users_sort_by">অনুসারে সাজান</string>
     <string name="system_users_last_login">শেষ লগইন: %1$s</string>
     <string name="system_users_delete_message">এটি স্থায়ীভাবে \"%1$s\" ব্যবহারকারীকে মুছে ফেলবে। এই ক্রিয়াটি পূর্বাবস্থায় ফেরানো যাবে না।</string>
     <string name="system_users_sessions_title">%1$s এর সেশন</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s আর এই ডোমেইনে রুট পরিচালনা করবে না।</string>
     <string name="domain_delegation_delete_title">ডেলিগেশন মুছবেন?</string>
     <string name="domain_delegation_path">পাথ</string>
-    <string name="domain_delegation_user">ব্যবহারকারী আইডি</string>
+    <string name="domain_delegation_user">ব্যবহারকারী</string>
     <string name="domain_delegations">ডেলিগেশন</string>
     <string name="domain_delegations_empty">কোনো অর্পণ কনফিগার করা নেই।</string>
     <string name="domain_delete">ডোমেইন মুছুন</string>
@@ -391,7 +391,7 @@
     <string name="accounts_capability_calendar">ক্যালেন্ডার</string>
     <string name="accounts_capability_notify">বিজ্ঞপ্তি</string>
     <string name="accounts_capability_ai">AI</string>
-    <string name="accounts_capability_login">সাইন-ইন</string>
+    <string name="accounts_capability_login">লগইন</string>
     <string name="accounts_provider_caldav">ক্যালেন্ডার সার্ভার</string>
     <string name="accounts_revoke_confirm">এটি %1$s-এর ক্যালেন্ডার অ্যাক্সেস প্রত্যাহার করবে। %2$s দিয়ে সাইন-ইন লগইন পৃষ্ঠায় সংযোগ বিচ্ছিন্ন না করা পর্যন্ত থাকবে।</string>
     <string name="accounts_capability_mcp">MCP</string>

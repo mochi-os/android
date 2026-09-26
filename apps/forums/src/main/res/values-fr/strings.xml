@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Se désabonner</string>
     <string name="forums_list_unsubscribe_title">Se désabonner</string>
     <string name="forums_create_title">Créer le forum</string>
-    <string name="forums_create_name">Nom</string>
+    <string name="forums_create_name">Nom du forum</string>
     <string name="forums_create_privacy">Confidentialité</string>
     <string name="forums_create_private">Privé</string>
     <string name="forums_create_public">Public</string>
-    <string name="forums_create_action">Créer</string>
+    <string name="forums_create_action">Créer le forum</string>
     <string name="forums_find_title">Trouver des forums</string>
     <string name="forums_find_recommended">Recommandé</string>
     <string name="forums_find_subscribe">S\'abonner</string>
@@ -35,8 +35,8 @@
     <string name="forums_post_edit_title">Modifier la publication</string>
     <string name="forums_post_edit_title_field">Titre</string>
     <string name="forums_post_save">Enregistrer</string>
-    <string name="forums_post_delete">Supprimer le message</string>
-    <string name="forums_post_delete_title">Supprimer le message</string>
+    <string name="forums_post_delete">Supprimer la publication</string>
+    <string name="forums_post_delete_title">Supprimer la publication</string>
     <string name="forums_post_locked">Verrouillé</string>
     <string name="forums_post_pinned">Épinglé</string>
     <string name="forums_post_removed">Supprimé</string>
@@ -222,7 +222,7 @@
     <string name="forums_tab_moderation">Modération</string>
     <string name="forums_access_level_view_full">Lecture seule</string>
     <string name="forums_access_level_none_full">Aucun accès</string>
-    <string name="forums_access_subject_anyone">Tout le monde</string>
+    <string name="forums_access_subject_anyone">N\'importe qui</string>
     <string name="forums_access_subject_authenticated">Utilisateurs authentifiés</string>
     <string name="forums_access_tab_other">Autre</string>
     <string name="forums_access_authenticated_desc">Toute personne connectée</string>
@@ -257,8 +257,8 @@
     <string name="forums_access_select_rule">Sélectionnez une règle</string>
     <string name="forums_ai_actions_label">Actions IA sur les publications</string>
     <string name="forums_ai_prompt_custom">Personnalisé</string>
-    <string name="forums_ai_prompt_score_label">Prompt de notation</string>
-    <string name="forums_ai_prompt_tag_label">Prompt de tags</string>
+    <string name="forums_ai_prompt_score_label">Invite de notation</string>
+    <string name="forums_ai_prompt_tag_label">Invite d\'étiquette</string>
     <string name="forums_ai_prompt_variables">Variables : %1$s</string>
     <string name="forums_link">Lien</string>
     <string name="forums_moderation_ban_message">Cette personne perd l\'accès au forum jusqu\'à ce que vous leviez la restriction.</string>
@@ -277,7 +277,7 @@
     <string name="forums_moderation_restriction_remove_message">Cette personne retrouve immédiatement l\'accès complet au forum.</string>
     <string name="forums_moderation_restriction_remove_title">Lever la restriction sur %1$s ?</string>
     <string name="forums_moderation_restriction_state_muted">Muet</string>
-    <string name="forums_moderation_restriction_state_shadowban">Banni discrètement</string>
+    <string name="forums_moderation_restriction_state_shadowban">Banni en sourdine</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Aucun utilisateur n\'est muet ni banni</string>
     <string name="forums_moderation_section_premoderation_description">Exiger une approbation avant que le contenu ne devienne visible</string>
     <string name="forums_moderation_section_ratelimiting_description">Limitez la fréquence de publication pour éviter le spam</string>

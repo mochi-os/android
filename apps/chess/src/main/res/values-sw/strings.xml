@@ -31,7 +31,7 @@
     <string name="chess_draw_accept">Kubali</string>
     <string name="chess_draw_decline">Kataa</string>
     <string name="chess_status_checkmate_you_win">Shahimati — umeshinda!</string>
-    <string name="chess_status_stalemate">Sare — sare</string>
+    <string name="chess_status_stalemate">Sare ya kukwama — sare</string>
     <string name="chess_status_draw">Sare</string>
     <string name="chess_status_check_your_move">Shari — zamu yako</string>
     <string name="chess_status_your_move">Hamisho lako</string>

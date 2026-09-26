@@ -7,7 +7,7 @@
     <string name="auth_verification_code">Kod weryfikacyjny</string>
     <string name="auth_email_code">Kod e-mail</string>
     <string name="auth_recovery_code">Kod odzyskiwania</string>
-    <string name="auth_name">Nazwa</string>
+    <string name="auth_name">Imię i nazwisko</string>
     <string name="auth_create">Utwórz</string>
     <string name="auth_privacy_label">Prywatność</string>
     <string name="auth_privacy_public">Publiczny</string>
@@ -129,7 +129,7 @@
     <string name="error_unexpected">Wystąpił nieoczekiwany błąd</string>
     <string name="error_enter_server_url">Wprowadź adres URL serwera</string>
     <string name="error_enter_email">Wprowadź swój adres e-mail</string>
-    <string name="error_enter_name">Wprowadź nazwę</string>
+    <string name="error_enter_name">Wprowadź imię i nazwisko</string>
     <string name="auth_connect_to_server">Połącz się ze swoim serwerem</string>
     <string name="auth_connect">Połącz</string>
     <string name="auth_sign_in">Zaloguj się</string>
@@ -148,7 +148,7 @@
     <string name="auth_back">Wstecz</string>
     <string name="auth_lost_access_recovery">Utracono dostęp? Użyj kodu odzyskiwania</string>
     <string name="auth_create_identity_title">Utwórz swoją tożsamość</string>
-    <string name="auth_create_identity_subtitle">Wybierz nazwę dla swojej tożsamości na tym serwerze</string>
+    <string name="auth_create_identity_subtitle">Wybierz imię dla swojej tożsamości na tym serwerze</string>
     <string name="auth_privacy_public_description">Widoczna w katalogu użytkowników, aby inni mogli Cię znaleźć.</string>
     <string name="auth_privacy_private_description">Ukryta w katalogu użytkowników.</string>
     <string name="auth_link_terms">Regulamin</string>
@@ -160,7 +160,7 @@
     <string name="bootstrap_sign_in_differently">Zaloguj się w inny sposób</string>
     <string name="bootstrap_choose_account">Wybierz konto</string>
     <string name="bootstrap_sign_in_different_server">Zaloguj się na innym serwerze</string>
-    <string name="common_retry">Ponów</string>
+    <string name="common_retry">Ponów próbę</string>
     <string name="common_more_options">Więcej opcji</string>
     <string name="common_collapse">Zwiń</string>
     <string name="common_expand">Rozwiń</string>

@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Ukloni</string>
     <string name="wikis_replicas_remove_failed">Uklanjanje replike nije uspjelo</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wikiji</string>
     <string name="wikis_channel_name">Wikis obavijesti</string>
     <string name="wikis_channel_description">Obavijesti o uređivanjima stranica, komentarima i pozivnicama.</string>
     <string name="wikis_pageview_toc_expand">Prikaži sadržaj</string>
@@ -232,7 +232,7 @@
     <string name="wikis_search_placeholder">Pretraži wiki…</string>
     <string name="wikis_unsubscribe_confirm_message">Sigurno želite otkazati pretplatu na %1$s?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_find_search_placeholder">Pretraži po imenu, ID, otisku ili URL…</string>
+    <string name="wikis_find_search_placeholder">Pretraži po nazivu, ID, otisku ili URL…</string>
     <string name="wikis_join_search_button">Pretraži wikie…</string>
     <string name="wikis_join_id_hint">abc123…</string>
     <string name="wikis_subscribe_502_retry">Pokušavam ponovno bez predloženog poslužitelja…</string>
@@ -272,7 +272,7 @@
     <string name="wikis_attachments_delete_confirm_message">Izbrisati „%1$s\"? Ovo se ne može poništiti.</string>
     <string name="wikis_attachments_downloading">Preuzimanje…</string>
     <string name="wikis_attachments_empty_description">Dodirnite Prenesi za dodavanje datoteka na ovu stranicu.</string>
-    <string name="wikis_settings_name_save_cd">Spremi ime</string>
+    <string name="wikis_settings_name_save_cd">Spremi naziv</string>
     <string name="wikis_settings_name_cancel_cd">Otkaži uređivanje</string>
     <string name="wikis_access_level_label">Dopuštenje</string>
     <string name="wikis_access_set_failed">Ažuriranje pristupa nije uspjelo</string>
@@ -283,7 +283,7 @@
     <string name="wikis_load_more">Učitaj više</string>
     <string name="wikis_access_change_level">Razina pristupa</string>
     <string name="wikis_access_subject_anyone">Bilo tko</string>
-    <string name="wikis_access_subject_authenticated">Autenticirani korisnici</string>
+    <string name="wikis_access_subject_authenticated">Prijavljeni korisnici</string>
 
     <string name="wikis_revision_compare">Usporedi promjene</string>
     <string name="wikis_revision_author">prema %1$s</string>

@@ -133,7 +133,7 @@
     <string name="error_enter_email">הזינו את כתובת הדואל שלכם</string>
     <string name="error_enter_name">הזינו שם</string>
     <string name="auth_connect_to_server">התחברו לשרת שלכם</string>
-    <string name="auth_connect">התחברות</string>
+    <string name="auth_connect">התחבר</string>
     <string name="auth_sign_in">כניסה</string>
     <string name="auth_check_email">בדקו את הדואל לקבלת קוד אימות</string>
     <string name="auth_mfa_title">אימות רב-שלבי</string>
@@ -161,9 +161,9 @@
     <string name="bootstrap_sign_in_differently">כניסה בדרך אחרת</string>
     <string name="bootstrap_choose_account">בחירת חשבון</string>
     <string name="bootstrap_sign_in_different_server">כניסה לשרת אחר</string>
-    <string name="common_retry">ניסיון חוזר</string>
+    <string name="common_retry">נסה שוב</string>
     <string name="common_more_options">אפשרויות נוספות</string>
-    <string name="common_collapse">מזעור</string>
+    <string name="common_collapse">כיווץ</string>
     <string name="common_expand">הרחבה</string>
     <string name="common_play_video">הפעלת סרטון</string>
     <string name="place_picker_name">שם המקום</string>
@@ -190,7 +190,7 @@
     <string name="format_time_days_short">%1$d י\'</string>
     <string name="format_time_weeks_short">%1$d שב\'</string>
     <string name="format_time_months_short">%1$d ח\'</string>
-    <string name="reaction_add">הוספת תגובה</string>
+    <string name="reaction_add">הוספת ריאקציה</string>
     <string name="push_service_channel">התראות Mochi</string>
     <string name="push_service_channel_description">שומר על חיבור של Mochi לקבלת התראות</string>
     <string name="push_service_group">שירות רקע</string>
@@ -263,7 +263,7 @@
     <string name="person_picker_none">ללא</string>
     <string name="person_picker_clear">נקה בחירה</string>
     <string name="person_picker_select">בחרו …</string>
-    <string name="person_picker_directory">ספרייה</string>
+    <string name="person_picker_directory">מדריך</string>
     <string name="person_picker_no_people">אין אנשים</string>
     <string name="person_picker_project_members">חברי הפרויקט</string>
     <string name="account_token_label">הפעלת Mochi</string>

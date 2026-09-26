@@ -277,7 +277,7 @@
     <string name="account_section_identity">身分</string>
     <string name="account_identity_identity">身分</string>
     <string name="account_identity_username">使用者名稱</string>
-    <string name="account_identity_name">名稱</string>
+    <string name="account_identity_name">姓名</string>
     <string name="account_identity_fingerprint">指紋</string>
     <string name="account_identity_directory_toggle">允許其他人在目錄中找到您</string>
     <string name="domain_add">新增網域</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s 將不再管理此網域的路由。</string>
     <string name="domain_delegation_delete_title">刪除委派?</string>
     <string name="domain_delegation_path">路徑</string>
-    <string name="domain_delegation_user">使用者 ID</string>
+    <string name="domain_delegation_user">使用者</string>
     <string name="domain_delegations">委派</string>
     <string name="domain_delegations_empty">未設定任何委派。</string>
     <string name="domain_delete">刪除網域</string>

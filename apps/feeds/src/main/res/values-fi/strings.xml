@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi-syöte</string>
     <string name="feeds_source_type_feed_memories">Muistot</string>
-    <string name="feeds_remove_source">Poista lähde</string>
+    <string name="feeds_remove_source">Poistetaanko lähde?</string>
     <string name="feeds_suggested_credibility_accept">Hyväksy</string>
     <string name="feeds_rss_url_copied">RSS-URL kopioitu leikepöydälle</string>
     <string name="feeds_logout">Kirjaudu ulos</string>
@@ -112,7 +112,7 @@
     <string name="feeds_clipboard_label_rss">RSS-URL</string>
     <string name="feeds_source_never_fetched">Ei koskaan haettu</string>
     <string name="feeds_source_poll">Kysely</string>
-    <string name="feeds_source_transform">Muunna</string>
+    <string name="feeds_source_transform">Tekoälymuunnos</string>
     <string name="feeds_remove_source_confirm">Poistetaanko \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Poista myös tuodut julkaisut</string>
     <string name="feeds_suggested_credibility_title">Ehdotettu uskottavuus</string>
@@ -154,7 +154,7 @@
     <string name="feeds_access_select_group">Valitse ryhmä</string>
     <string name="feeds_access_selected">Valittu: %1$s</string>
     <string name="feeds_access_subject_anyone">Kuka tahansa</string>
-    <string name="feeds_access_subject_authenticated">Todennetut käyttäjät</string>
+    <string name="feeds_access_subject_authenticated">Kirjautuneet käyttäjät</string>
     <string name="feeds_markdown_supported">Markdown tuettu</string>
     <string name="feeds_permission_deny">Estä</string>
     <string name="feeds_rss_feed">RSS-syöte</string>

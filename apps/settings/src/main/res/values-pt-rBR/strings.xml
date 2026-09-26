@@ -285,7 +285,7 @@
     <string name="domain_delegation_delete_message">%1$s não gerenciará mais as rotas neste domínio.</string>
     <string name="domain_delegation_delete_title">Excluir delegação?</string>
     <string name="domain_delegation_path">Caminho</string>
-    <string name="domain_delegation_user">ID do usuário</string>
+    <string name="domain_delegation_user">Usuário</string>
     <string name="domain_delegations">Delegações</string>
     <string name="domain_delegations_empty">Nenhuma delegação configurada.</string>
     <string name="domain_delete">Excluir domínio</string>

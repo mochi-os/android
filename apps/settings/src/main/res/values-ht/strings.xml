@@ -242,7 +242,7 @@
     <string name="route_meta">Priyorite %1$d · %2$s</string>
     <string name="interests_search_placeholder">Chèche sijè pou ajoute…</string>
     <string name="interests_empty">Poko gen enterè.</string>
-    <string name="interests_summary_regenerate">Rejenere rezime</string>
+    <string name="interests_summary_regenerate">Rejenere rezime a</string>
     <string name="interests_summary_regenerating">Ap rejenere…</string>
     <string name="interests_summary_empty">Ajoute kèk enterè pou kreye yon rezime sa ou renmen yo.</string>
     <string name="interests_search_failed">Rechèch echwe. Tanpri eseye ankò.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s pap jere chemen sou domèn sa a ankò.</string>
     <string name="domain_delegation_delete_title">Efase delegasyon?</string>
     <string name="domain_delegation_path">Chemen</string>
-    <string name="domain_delegation_user">ID itilizatè</string>
+    <string name="domain_delegation_user">Itilizatè</string>
     <string name="domain_delegations">Delegasyon yo</string>
     <string name="domain_delegations_empty">Pa gen delegasyon konfigire.</string>
     <string name="domain_delete">Efase domèn</string>

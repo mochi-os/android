@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="settings_home_title">सेटिंग</string>
+    <string name="settings_home_title">सेटिंग सब</string>
     <string name="settings_home_logout">लॉग आउट</string>
     <string name="settings_home_account">खाता</string>
     <string name="settings_home_preferences">वरीयता</string>
@@ -265,7 +265,7 @@
     <string name="settings_home_system_users">उपयोगकर्ता (सर्वर)</string>
     <string name="system_users_add_user">उपयोगकर्ता जोड़ीं</string>
     <string name="system_users_search_placeholder">उपयोगकर्ता खोजीं…</string>
-    <string name="system_users_sort_by">क्रम लगाईं</string>
+    <string name="system_users_sort_by">एकरे अनुसार क्रमबद्ध करीं</string>
     <string name="system_users_last_login">आखिरी लॉगिन: %1$s</string>
     <string name="system_users_delete_message">ई हमेशा खातिर उपयोगकर्ता \"%1$s\" के मिटा दी। ई काम पीछे ना ले जा सकेला।</string>
     <string name="system_users_sessions_title">%1$s के सत्र</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s अब एह डोमेन पर रास्ता ना संभाली।</string>
     <string name="domain_delegation_delete_title">प्रत्यायोजन मेटाईं?</string>
     <string name="domain_delegation_path">पथ</string>
-    <string name="domain_delegation_user">उपयोगकर्ता ID</string>
+    <string name="domain_delegation_user">उपयोगकर्ता</string>
     <string name="domain_delegations">प्रत्यायोजन</string>
     <string name="domain_delegations_empty">कौनो प्रतिनिधि कॉन्फिगर नइखे।</string>
     <string name="domain_delete">डोमेन मेटाईं</string>
@@ -391,7 +391,7 @@
     <string name="accounts_capability_calendar">कैलेंडर</string>
     <string name="accounts_capability_notify">सूचना</string>
     <string name="accounts_capability_ai">AI</string>
-    <string name="accounts_capability_login">साइन-इन</string>
+    <string name="accounts_capability_login">लॉगिन</string>
     <string name="accounts_provider_caldav">कैलेंडर सर्वर</string>
     <string name="accounts_revoke_confirm">एह से %1$s के कैलेंडर पहुंच खतम हो जाई। %2$s से साइन-इन तब ले रही जब ले रउआ लॉगिन पन्ना पर ओकरा के अलग ना करीं।</string>
     <string name="accounts_capability_mcp">MCP</string>

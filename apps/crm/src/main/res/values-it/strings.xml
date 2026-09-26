@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Icona</string>
     <string name="crm_option_icon_placeholder">es. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Annulla iscrizione</string>
-    <string name="crm_settings_delete_crm">Elimina progetto</string>
+    <string name="crm_settings_delete_crm">Elimina CRM</string>
     <string name="crm_settings_delete_confirm_title">Elimina CRM</string>
     <string name="crm_settings_unsubscribe_title">Annulla iscrizione</string>
     <string name="crm_settings_unsubscribe_message">Sei sicuro di voler annullare l\'iscrizione a questo CRM?</string>
@@ -158,10 +158,10 @@
     <string name="crm_object_delete_message">Sei sicuro di voler eliminare questo oggetto? Questa azione non può essere annullata.</string>
     <string name="crm_parent_none">Nessun genitore</string>
     <string name="crm_links_empty">Nessun collegamento</string>
-    <string name="crm_links_section_relates">In relazione con</string>
+    <string name="crm_links_section_relates">Correlato a</string>
     <string name="crm_links_section_duplicated_by">Duplicato da</string>
     <string name="crm_links_type">Tipo di collegamento</string>
-    <string name="crm_links_type_relates">In relazione con</string>
+    <string name="crm_links_type_relates">Correlato a</string>
     <string name="crm_links_remove">Rimuovi collegamento</string>
     <string name="crm_comment_replying_to">In risposta a %1$s</string>
     <string name="crm_comment_clear_reply">Annulla risposta</string>
@@ -183,7 +183,7 @@
     <string name="crm_attachment_delete_confirm_message">Questo allegato verrà eliminato definitivamente.</string>
     <string name="crm_tree_move">Sposta</string>
     <string name="crm_tree_move_to_parent">Sposta al genitore</string>
-    <string name="crm_tree_root_level">(Livello radice)</string>
+    <string name="crm_tree_root_level">(Livello principale)</string>
     <string name="crm_tree_empty">Nessun oggetto</string>
     <string name="crm_board_no_columns">Nessuna colonna configurata per questa vista</string>
     <string name="crm_board_no_options">Nessuna opzione configurata per il campo colonna</string>

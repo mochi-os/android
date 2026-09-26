@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Odstrániť</string>
     <string name="wikis_replicas_remove_failed">Nepodarilo sa odstrániť repliku</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki</string>
     <string name="wikis_channel_name">Oznámenia Wikis</string>
     <string name="wikis_channel_description">Oznámenia o úpravách stránok, komentároch a pozvánkach.</string>
     <string name="wikis_pageview_toc_expand">Zobraziť obsah</string>
@@ -246,7 +246,7 @@
     <string name="wikis_insert_dialog_empty">Zatiaľ žiadne prílohy. Nahrajte súbor pre začiatok.</string>
     <string name="wikis_delete_page_message">Chystáte sa zmazať stránku „%1$s\" (%2$s). Túto akciu možno vrátiť obnovou z histórie.</string>
     <string name="wikis_delete_page_success">Stránka zmazaná</string>
-    <string name="wikis_revert_page_title">Vrátiť stránku</string>
+    <string name="wikis_revert_page_title">Vrátiť stránku späť</string>
     <string name="wikis_revert_page_message">Chystáte sa vrátiť %1$s na verziu %2$d. Tým vznikne nová revízia s obsahom verzie %2$d.</string>
     <string name="wikis_revert_page_default_comment">Vrátené na verziu %1$d</string>
     <string name="wikis_revert_page_success">Vrátené na verziu %1$d</string>
@@ -273,7 +273,7 @@
     <string name="wikis_attachments_downloading">Sťahovanie…</string>
     <string name="wikis_attachments_empty_description">Klepnite na Nahrať pre pridanie súborov na túto stránku.</string>
     <string name="wikis_settings_name_save_cd">Uložiť názov</string>
-    <string name="wikis_settings_name_cancel_cd">Zrušiť úpravy</string>
+    <string name="wikis_settings_name_cancel_cd">Zrušiť úpravu</string>
     <string name="wikis_access_level_label">Povolenie</string>
     <string name="wikis_access_set_failed">Aktualizácia prístupu zlyhala</string>
     <string name="wikis_replicas_col_subscribed">Odoberá: %1$s</string>
@@ -283,7 +283,7 @@
     <string name="wikis_load_more">Načítať viac</string>
     <string name="wikis_access_change_level">Úroveň prístupu</string>
     <string name="wikis_access_subject_anyone">Ktokoľvek</string>
-    <string name="wikis_access_subject_authenticated">Overení používatelia</string>
+    <string name="wikis_access_subject_authenticated">Prihlásení používatelia</string>
 
     <string name="wikis_revision_compare">Porovnať zmeny</string>
     <string name="wikis_revision_author">podľa %1$s</string>

@@ -123,7 +123,7 @@
     <string name="game_chat_move_played">%1$s jogou %2$s</string>
 
     <string name="error_network">Não foi possível conectar. Verifique a sua ligação à internet e tente novamente.</string>
-    <string name="error_authentication_required">Autenticação necessária</string>
+    <string name="error_authentication_required">É necessária autenticação</string>
     <string name="error_not_found">Não encontrado</string>
     <string name="error_server">Erro do servidor (%1$d). Por favor, tente novamente mais tarde.</string>
     <string name="error_unexpected">Ocorreu um erro inesperado</string>

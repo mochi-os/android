@@ -125,15 +125,15 @@
     <string name="game_chat_move_played">%1$s main %2$s</string>
 
     <string name="error_network">Ora bisa nyambung. Priksa sambungan internet sampeyan lan coba maneh.</string>
-    <string name="error_authentication_required">Otentikasi dibutuhake</string>
-    <string name="error_not_found">Ora ketemu</string>
+    <string name="error_authentication_required">Butuh otentikasi</string>
+    <string name="error_not_found">Ora ditemokake</string>
     <string name="error_server">Kesalahan server (%1$d). Mangga coba maneh mengko.</string>
     <string name="error_unexpected">Ana kesalahan sing ora dikarepake</string>
     <string name="error_enter_server_url">Mangga lebokake URL server</string>
     <string name="error_enter_email">Mangga lebokake email sampeyan</string>
     <string name="error_enter_name">Mangga lebokake jeneng</string>
     <string name="auth_connect_to_server">Sambungake menyang server sampeyan</string>
-    <string name="auth_connect">Sambungake</string>
+    <string name="auth_connect">Sambung</string>
     <string name="auth_sign_in">Mlebu</string>
     <string name="auth_check_email">Priksa email sampeyan kanggo kode verifikasi</string>
     <string name="auth_mfa_title">Otentikasi multi-faktor</string>
@@ -164,8 +164,8 @@
     <string name="bootstrap_sign_in_different_server">Mlebu menyang server liyane</string>
     <string name="common_retry">Coba maneh</string>
     <string name="common_more_options">Pilihan liyane</string>
-    <string name="common_collapse">Cilikake</string>
-    <string name="common_expand">Gedhekake</string>
+    <string name="common_collapse">Ciutaké</string>
+    <string name="common_expand">Jèrèngaké</string>
     <string name="common_play_video">Puter video</string>
     <string name="place_picker_name">Jeneng papan</string>
     <string name="place_origin">Asal</string>
@@ -175,7 +175,7 @@
     <string name="access_add_rule_title">Tambah aturan akses</string>
     <string name="access_level_manage">Atur</string>
     <string name="access_level_react">Reaksi</string>
-    <string name="notifications_clear">Busak kabar</string>
+    <string name="notifications_clear">Resiki notifikasi</string>
     <string name="entity_avatar_alt">Avatar kanggo %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="format_time_just_now">Lagi wae</string>
@@ -210,7 +210,7 @@
     <string name="about_up_to_date">Wis paling anyar</string>
     <string name="about_check_downloading">Versi %1$s kasedhiya, ngundhuh…</string>
     <string name="about_check_network_error">Ora bisa nyambung server nganyari</string>
-    <string name="about_check_download_failed">Ngundhuh gagal</string>
+    <string name="about_check_download_failed">Gagal ngundhuh</string>
     <string name="notifications_clear_all_title">Resiki kabeh notifikasi?</string>
     <string name="notifications_clear_all_message">Iki bakal mbusak kabeh notifikasi. Ora bisa dibalèkaké.</string>
     <string name="settings_value_auto">Otomatis</string>
@@ -259,7 +259,7 @@
     <string name="tags_interest_down">Tuduhke luwih sithik sing kaya iki</string>
     <string name="tags_interest_clear">Aja ditampilake</string>
     <string name="tags_none">Ora ana tag</string>
-    <string name="tags_delete">Busek tag</string>
+    <string name="tags_delete">Busak tag</string>
     <string name="person_picker_none">Ora ana</string>
     <string name="person_picker_clear">Resiki pilihan</string>
     <string name="person_picker_select">Pilih …</string>
@@ -288,7 +288,7 @@
     <string name="lightbox_comments">Komentar</string>
     <string name="common_attachment_unavailable">Lampiran sauntara ora kasedhiya</string>
     <string name="common_unavailable">Ora kasedhiya</string>
-    <string name="common_not_found">Ora ketemu</string>
+    <string name="common_not_found">Ora ditemokake</string>
     <string name="format_bold">Kandel</string>
     <string name="format_italic">Miring</string>
     <string name="format_link">Tautan</string>

@@ -16,7 +16,7 @@
     <string name="wikis_page_action_rename">Athainmnigh</string>
     <string name="wikis_page_action_history">Stair</string>
     <string name="wikis_page_action_delete">Scrios</string>
-    <string name="wikis_page_action_section_wiki">Wiki</string>
+    <string name="wikis_page_action_section_wiki">Vicí</string>
     <string name="wikis_page_action_search">Cuardach</string>
     <string name="wikis_page_action_tags">Clibeanna</string>
     <string name="wikis_page_action_recent_changes">Athruithe le déanaí</string>
@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Bain</string>
     <string name="wikis_replicas_remove_failed">Theip ar bhaint macasamhla</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Vicíonna</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">Fógraí faoi eagarthóireacht leathanach wiki, tuairimí agus cuirí.</string>
     <string name="wikis_pageview_toc_expand">Taispeáin clár na n-ábhar</string>
@@ -225,7 +225,7 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Nuashonraithe %1$s</string>
     <string name="wikis_pageview_not_found_description">Níl an leathanach “%1$s” ann fós.</string>
-    <string name="wikis_pageview_share_chooser">Nasc na vicí</string>
+    <string name="wikis_pageview_share_chooser">Nasc an vicí</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">Nasc</string>
     <string name="wikis_open_sidebar">Oscail barra taoibh</string>

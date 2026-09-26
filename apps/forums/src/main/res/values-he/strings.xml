@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">בטל הרשמה</string>
     <string name="forums_list_unsubscribe_title">בטל הרשמה</string>
     <string name="forums_create_title">צור פורום</string>
-    <string name="forums_create_name">שם</string>
+    <string name="forums_create_name">שם הפורום</string>
     <string name="forums_create_privacy">פרטיות</string>
     <string name="forums_create_private">פרטי</string>
     <string name="forums_create_public">ציבורי</string>
-    <string name="forums_create_action">צור</string>
+    <string name="forums_create_action">צור פורום</string>
     <string name="forums_find_title">חפש פורומים</string>
     <string name="forums_find_recommended">מומלץ</string>
     <string name="forums_find_subscribe">הירשם</string>
@@ -156,7 +156,7 @@
     <string name="forums_banner_placeholder">ברוכים הבאים לפורום זה…</string>
     <string name="forums_ai_mode_label">מצב: %1$s</string>
     <string name="forums_ai_mode_heading">מצב AI</string>
-    <string name="forums_ai_mode_off">כבוי</string>
+    <string name="forums_ai_mode_off">מושבת</string>
     <string name="forums_ai_account">חשבון AI</string>
     <string name="forums_ai_prompt_tag">פרומפט תיוג</string>
     <string name="forums_ai_prompt_score">פרומפט ניקוד</string>
@@ -259,8 +259,8 @@
     <string name="forums_access_select_rule">בחר כלל</string>
     <string name="forums_ai_actions_label">פעולות AI על פוסטים</string>
     <string name="forums_ai_prompt_custom">מותאם אישית</string>
-    <string name="forums_ai_prompt_score_label">פרומפט ניקוד</string>
-    <string name="forums_ai_prompt_tag_label">פרומפט תגיות</string>
+    <string name="forums_ai_prompt_score_label">הנחיית ציון</string>
+    <string name="forums_ai_prompt_tag_label">הנחיית תגית</string>
     <string name="forums_ai_prompt_variables">משתנים: %1$s</string>
     <string name="forums_link">קישור</string>
     <string name="forums_moderation_ban_message">המשתמש מאבד גישה לפורום עד שתסיר את ההגבלה.</string>
@@ -279,7 +279,7 @@
     <string name="forums_moderation_restriction_remove_message">המשתמש מקבל מיד גישה מלאה לפורום בחזרה.</string>
     <string name="forums_moderation_restriction_remove_title">להסיר את ההגבלה על %1$s?</string>
     <string name="forums_moderation_restriction_state_muted">מושתק</string>
-    <string name="forums_moderation_restriction_state_shadowban">חסימה סמויה</string>
+    <string name="forums_moderation_restriction_state_shadowban">חסום בהסתר</string>
     <string name="forums_moderation_restrictions_empty_subtitle">לא הושתקו או נחסמו משתמשים</string>
     <string name="forums_moderation_section_premoderation_description">דרוש אישור לפני שהתוכן יוצג</string>
     <string name="forums_moderation_section_ratelimiting_description">מנע ספאם על ידי הגבלת תדירות הפרסום</string>

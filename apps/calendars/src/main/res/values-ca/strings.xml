@@ -74,7 +74,7 @@
     <string name="calendars_workweek">Setmana laboral</string>
     <string name="calendars_range">%1$s a %2$s</string>
     <string name="calendars_truncated">Alguns esdeveniments d\'aquest interval no es mostren.</string>
-    <string name="calendars_list_empty">Cap esdeveniment</string>
+    <string name="calendars_list_empty">Sense esdeveniments</string>
     <plurals name="calendars_more">
         <item quantity="one">+%1$d més</item>
         <item quantity="other">+%1$d més</item>
@@ -110,7 +110,7 @@
     <string name="calendars_multiweek_weeks">Setmanes mostrades</string>
     <string name="calendars_multiweek_previous">Setmanes anteriors</string>
     <string name="calendars_default_duration">Durada predeterminada de l\'esdeveniment</string>
-    <string name="calendars_default_reminder">Recordatori predeterminat</string>
+    <string name="calendars_default_reminder">Recordatori per defecte</string>
     <string name="calendars_link_title">Enllaç del calendari</string>
     <string name="calendars_link_copy">Copia l\'enllaç</string>
     <string name="calendars_link_once">Copieu-lo ara: no es podrà tornar a mostrar.</string>
@@ -154,7 +154,7 @@
     <string name="calendars_link_submit">Enllaça</string>
     <string name="calendars_link_sync">Sincronitza ara</string>
     <string name="calendars_link_grant">Permet l\'accés al calendari</string>
-    <string name="calendars_link_linked">Enllaçat</string>
+    <string name="calendars_link_linked">Vinculat</string>
     <string name="calendars_link_marker">Calendari enllaçat</string>
     <string name="calendars_link_remote_empty">Cap calendari</string>
     <string name="calendars_poll_conflict">Un esdeveniment ha canviat a banda i banda</string>
@@ -168,7 +168,7 @@
     <string name="calendars_subscribe_password_apple">Contrasenya específica de l\'aplicació</string>
     <string name="calendars_subscribe_server_url">Adreça del servidor</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
-    <string name="calendars_subscribe_apple_id">Apple ID</string>
+    <string name="calendars_subscribe_apple_id">ID d\'Apple</string>
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Els comptes de Google no estan activats en aquest servidor. Activa\'ls a Configuració, Configuració del sistema.</string>

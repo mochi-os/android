@@ -40,7 +40,7 @@
     <string name="market_appeal_dialog_submit">Dien appèl in</string>
     <string name="market_appeal_dialog_submitting">Indien…</string>
     <string name="market_appeal_dialog_success">Appèl ingedien</string>
-    <string name="market_appeal_dialog_title">Verwydering appelleer</string>
+    <string name="market_appeal_dialog_title">Appelleer verwydering</string>
     <string name="market_asset_download">Laai af</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
     <string name="market_back">Terug</string>
@@ -58,12 +58,12 @@
     <string name="market_bid_dialog_submitting">Bod word geplaas</string>
     <string name="market_bid_dialog_success">Bod geplaas</string>
     <string name="market_bid_dialog_title">Plaas bod</string>
-    <string name="market_bid_ended">Veiling beëindig</string>
+    <string name="market_bid_ended">Veiling geëindig</string>
     <string name="market_bid_ends_in">Eindig oor %1$s</string>
     <string name="market_bid_high">Hoogste bod</string>
     <string name="market_bids_current_bid">Huidig: %1$s</string>
     <string name="market_bids_empty">Geen biedinge nie</string>
-    <string name="market_bids_ended">Veiling beëindig</string>
+    <string name="market_bids_ended">Veiling geëindig</string>
     <string name="market_bids_ends_in">Eindig oor %1$s</string>
     <string name="market_bids_tab_active">Aktief</string>
     <string name="market_bids_tab_all">Alle</string>
@@ -179,7 +179,7 @@
     <string name="market_editor_interval">Faktuurinterval</string>
     <string name="market_editor_interval_monthly">Maandeliks</string>
     <string name="market_editor_interval_yearly">Jaarliks</string>
-    <string name="market_editor_photo_delete">Vee foto uit</string>
+    <string name="market_editor_photo_delete">Skrap foto</string>
     <string name="market_editor_photo_upload_failed">Kon nie foto oplaai nie</string>
     <string name="market_editor_photo_uploading">Laai op…</string>
     <string name="market_editor_photos_add">Voeg fotos by</string>
@@ -299,7 +299,7 @@
     <string name="market_listing_detail_buy_now">Koop nou</string>
     <string name="market_listing_detail_description_heading">Beskrywing</string>
     <string name="market_listing_detail_edit">Wysig</string>
-    <string name="market_listing_detail_information_heading">Afleweringinligting</string>
+    <string name="market_listing_detail_information_heading">Afleweringsinligting</string>
     <string name="market_listing_detail_load_failed">Kon nie lys laai nie</string>
     <string name="market_listing_detail_loading">Laai lys</string>
     <string name="market_listing_detail_listed">Gelys %1$s</string>
@@ -319,7 +319,7 @@
     <string name="market_listing_detail_seller_suspended_banner">Hierdie verkoper is opgeskort. Nuwe bestellings is gepouseer totdat die rekening herstel is.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">Aankope is gedeaktiveer terwyl die verkoper se rekening beperk is.</string>
     <string name="market_listing_detail_share">Deel lys</string>
-    <string name="market_listing_detail_shipping_heading">Versending</string>
+    <string name="market_listing_detail_shipping_heading">Versendingsopsies</string>
     <string name="market_listing_detail_subscribe">Teken in</string>
     <string name="market_listing_detail_tags_heading">Etikette</string>
     <string name="market_listing_detail_title">Lys</string>
@@ -588,7 +588,7 @@
     <string name="market_status_pending">Hangend</string>
     <string name="market_status_refunded">Terugbetaal</string>
     <string name="market_status_shipped">Versend</string>
-    <string name="market_stripe_onboarding_action">Gaan voort met opstel</string>
+    <string name="market_stripe_onboarding_action">Gaan voort met opstelling</string>
     <string name="market_stripe_onboarding_body">Voltooi jou Stripe-aanboording voordat jy uitbetalings kan aanvaar.</string>
     <string name="market_stripe_onboarding_check">Kontroleer status</string>
     <string name="market_stripe_onboarding_failed">Kon nie Stripe oopmaak nie</string>
@@ -662,7 +662,7 @@
     <string name="market_seller_become_heading">Word \'n verkoper</string>
     <string name="market_seller_become_title">Word \'n verkoper</string>
     <string name="market_seller_check_status">Kontroleer status</string>
-    <string name="market_seller_checking">Kontroleer...</string>
+    <string name="market_seller_checking">Besig om te kontroleer…</string>
     <string name="market_seller_connect_stripe">Verbind Stripe</string>
     <string name="market_seller_connecting">Laai...</string>
     <string name="market_seller_fee_loading">Laai fooibesonderhede...</string>

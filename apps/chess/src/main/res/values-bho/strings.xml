@@ -60,7 +60,7 @@
     <string name="chess_empty_subtitle">दोस्त के साथे शतरंज खेले खातिर आपन पहिला खेल शुरू करीं।</string>
     <string name="chess_empty_start_button">आपन पहिला खेल शुरू करीं</string>
     <string name="chess_detail_unavailable">खेल उपलब्ध नइखे</string>
-    <string name="chess_delete_title">खेल हटाईं?</string>
+    <string name="chess_delete_title">खेल मेटाईं?</string>
     <string name="chess_delete_message">ई खेल के रउआ सूची से हटा देला।</string>
     <string name="chess_ws_connecting">कनेक्ट होत बा…</string>
     <string name="chess_ws_disconnected">Offline</string>

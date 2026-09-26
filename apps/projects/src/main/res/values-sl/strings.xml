@@ -329,7 +329,7 @@
     <string name="projects_settings_field_entity_id">ID entitete</string>
     <string name="projects_settings_field_fingerprint">Prstni odtis</string>
     <string name="projects_settings_field_server">Strežnik</string>
-    <string name="projects_access_subject_anyone">Kdorkoli</string>
+    <string name="projects_access_subject_anyone">Kdor koli</string>
     <string name="projects_access_subject_authenticated">Overjeni uporabniki</string>
     <string name="projects_access_select_role">Izberi vlogo</string>
     <string name="projects_access_role_view">Samo za branje</string>

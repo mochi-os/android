@@ -32,7 +32,7 @@
     <string name="people_group_name">Назва групи</string>
     <string name="people_group_description">Опис</string>
     <string name="people_group_description_optional">Необов\'язковий опис</string>
-    <string name="people_group_name_required">Ім\'я обов\'язкове</string>
+    <string name="people_group_name_required">Назва обов\'язкова</string>
     <string name="people_group_actions">Групові дії</string>
     <string name="people_group_members">Учасники</string>
     <string name="people_group_members_count">Кількість учасників</string>
@@ -161,8 +161,8 @@
     <string name="people_contact_edit_title">Редагувати контакт</string>
     <string name="people_contact_given">Ім\'я</string>
     <string name="people_contact_family">Прізвище</string>
-    <string name="people_contact_nickname">Прізвисько</string>
-    <string name="people_contact_add_email">Додати ел. пошту</string>
+    <string name="people_contact_nickname">Псевдонім</string>
+    <string name="people_contact_add_email">Додати електронну пошту</string>
     <string name="people_contact_add_phone">Додати телефон</string>
     <string name="people_contact_add_address">Додати адресу</string>
     <string name="people_contact_street">Вулиця</string>

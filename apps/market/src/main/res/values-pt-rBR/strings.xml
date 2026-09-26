@@ -40,7 +40,7 @@
     <string name="market_bids_tab_active">Ativo</string>
     <string name="market_bids_tab_all">Todos</string>
     <string name="market_bids_tab_lost">Perdido</string>
-    <string name="market_bids_tab_outbid">Superado</string>
+    <string name="market_bids_tab_outbid">Lance superado</string>
     <string name="market_bids_tab_won">Ganho</string>
     <string name="market_bids_title">Lances</string>
     <string name="market_channel_name">Mercado</string>
@@ -186,7 +186,7 @@
     <string name="market_listing_detail_report">Denunciar anúncio</string>
     <string name="market_listing_detail_save">Salvar</string>
     <string name="market_listing_detail_seller_heading">Vendedor</string>
-    <string name="market_listing_detail_shipping_heading">Envio</string>
+    <string name="market_listing_detail_shipping_heading">Opções de envio</string>
     <string name="market_listing_detail_subscribe">Inscrever-se</string>
     <string name="market_listing_detail_title">Anúncio</string>
     <string name="market_listing_detail_unsave">Salvo</string>
@@ -318,7 +318,7 @@
     <string name="market_sale_tracking_label">Número de rastreamento</string>
     <string name="market_saved_title">Salvos</string>
     <string name="market_search_clear">Limpar pesquisa</string>
-    <string name="market_section_categories">Explorar categorias</string>
+    <string name="market_section_categories">Ver categorias</string>
     <string name="market_section_listings">Anúncios recentes</string>
     <string name="market_section_recent">Vistos recentemente</string>
     <string name="market_ship_dialog_cancel">Cancelar</string>
@@ -504,7 +504,7 @@
     <string name="market_editor_zone_worldwide">Mundo inteiro</string>
     <string name="market_editor_zones_empty">Nenhuma zona ainda</string>
     <string name="market_empty_subtitle">Tente ajustar ou limpar seus filtros.</string>
-    <string name="market_empty_title">Sem resultados</string>
+    <string name="market_empty_title">Nenhum resultado</string>
     <string name="market_fee_disclosure_body">Taxa da plataforma: %1$s%%. Consulte seu painel do Stripe para ver as taxas do processador.</string>
     <string name="market_fee_disclosure_title">Taxas da plataforma</string>
     <string name="market_fee_preview_failed">Não foi possível calcular as taxas</string>
@@ -532,7 +532,7 @@
     <string name="market_listing_photo">Foto do anúncio</string>
     <string name="market_listing_save">Salvar anúncio</string>
     <string name="market_listing_unsave">Remover dos salvos</string>
-    <string name="market_listings_action_appeal">Recorrer da remoção</string>
+    <string name="market_listings_action_appeal">Contestar remoção</string>
     <string name="market_listings_action_share">Compartilhar</string>
     <string name="market_listings_delete_failed">Falha ao excluir o anúncio</string>
     <string name="market_listings_delete_message">Isso remove permanentemente o rascunho da sua conta.</string>
@@ -599,7 +599,7 @@
     <string name="market_sale_dispute_state_responded">Aguardando decisão</string>
     <string name="market_sale_dispute_stripe_reason">Motivo do chargeback da Stripe: %1$s</string>
     <string name="market_sale_fee_gross">Bruto</string>
-    <string name="market_sale_fee_mochi">Taxa da Mochi</string>
+    <string name="market_sale_fee_mochi">Taxa Mochi</string>
     <string name="market_sale_fee_payout">Repasse líquido</string>
     <string name="market_sale_fee_stripe">Taxa de processamento da Stripe</string>
     <string name="market_sale_fee_stripe_note">As taxas de processamento da Stripe são exibidas no seu painel da Stripe.</string>
@@ -620,7 +620,7 @@
     <string name="market_saved_empty_title">Nenhum anúncio salvo</string>
     <string name="market_search_placeholder">Pesquisar no mercado</string>
     <string name="market_status_past_due">Vencido</string>
-    <string name="market_stripe_onboarding_action">Continuar configuração</string>
+    <string name="market_stripe_onboarding_action">Continuar a configuração</string>
     <string name="market_stripe_onboarding_body">Conclua a integração com a Stripe antes de poder receber repasses.</string>
     <string name="market_stripe_onboarding_failed">Não foi possível abrir a Stripe</string>
     <string name="market_stripe_onboarding_opening">Abrindo a Stripe…</string>

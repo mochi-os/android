@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Cancelar suscripción</string>
     <string name="forums_list_unsubscribe_title">Cancelar suscripción</string>
     <string name="forums_create_title">Crear foro</string>
-    <string name="forums_create_name">Nombre</string>
+    <string name="forums_create_name">Nombre del foro</string>
     <string name="forums_create_privacy">Privacidad</string>
     <string name="forums_create_private">Privado</string>
     <string name="forums_create_public">Público</string>
-    <string name="forums_create_action">Crear</string>
+    <string name="forums_create_action">Crear foro</string>
     <string name="forums_find_title">Buscar foros</string>
     <string name="forums_find_recommended">Recomendado</string>
     <string name="forums_find_subscribe">Suscribirse</string>
@@ -257,8 +257,8 @@
     <string name="forums_access_select_rule">Selecciona una regla</string>
     <string name="forums_ai_actions_label">Acciones de IA en las publicaciones</string>
     <string name="forums_ai_prompt_custom">Personalizado</string>
-    <string name="forums_ai_prompt_score_label">Prompt de puntuación</string>
-    <string name="forums_ai_prompt_tag_label">Prompt de etiquetas</string>
+    <string name="forums_ai_prompt_score_label">Indicación de puntuación</string>
+    <string name="forums_ai_prompt_tag_label">Indicación de etiqueta</string>
     <string name="forums_ai_prompt_variables">Variables: %1$s</string>
     <string name="forums_link">Enlace</string>
     <string name="forums_moderation_ban_message">Pierde el acceso al foro hasta que elimines la restricción.</string>
@@ -277,7 +277,7 @@
     <string name="forums_moderation_restriction_remove_message">Recupera el acceso completo al foro de inmediato.</string>
     <string name="forums_moderation_restriction_remove_title">¿Eliminar la restricción de %1$s?</string>
     <string name="forums_moderation_restriction_state_muted">Silenciado</string>
-    <string name="forums_moderation_restriction_state_shadowban">Bloqueado en la sombra</string>
+    <string name="forums_moderation_restriction_state_shadowban">Vetado en secreto</string>
     <string name="forums_moderation_restrictions_empty_subtitle">No hay usuarios silenciados ni bloqueados</string>
     <string name="forums_moderation_section_premoderation_description">Requiere aprobación antes de que el contenido sea visible</string>
     <string name="forums_moderation_section_ratelimiting_description">Evita el spam limitando la frecuencia con la que los usuarios pueden publicar</string>

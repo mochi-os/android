@@ -23,7 +23,7 @@
     <string name="crm_sort_direction">Arah</string>
     <string name="crm_sort_rank">Manual</string>
     <string name="crm_sort_created">Dijieun</string>
-    <string name="crm_sort_updated">Diapdet</string>
+    <string name="crm_sort_updated">Diropéa</string>
     <string name="crm_create_object_title">Jieun obyék</string>
     <string name="crm_create_object_type">Tipe</string>
     <string name="crm_create_object_parent">Kolot</string>
@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Ikon</string>
     <string name="crm_option_icon_placeholder">saperti Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Hentikeun langganan</string>
-    <string name="crm_settings_delete_crm">Hapus proyék</string>
+    <string name="crm_settings_delete_crm">Hapus CRM</string>
     <string name="crm_settings_delete_confirm_title">Hapus CRM</string>
     <string name="crm_settings_unsubscribe_title">Hentikeun langganan</string>
     <string name="crm_settings_unsubscribe_message">Anjeun yakin hayang eureun langganan ti CRM ieu?</string>
@@ -121,7 +121,7 @@
     <string name="crm_views_type_list">Daptar</string>
     <string name="crm_views_direction">Arah</string>
     <string name="crm_views_sort_created">Dijieun</string>
-    <string name="crm_views_sort_updated">Diapdet</string>
+    <string name="crm_views_sort_updated">Diropéa</string>
     <string name="crm_views_sort_rank">Pangkat</string>
     <string name="crm_not_found">Proyék teu kapanggih</string>
     <string name="crm_more">Lianna</string>
@@ -162,9 +162,9 @@
     <string name="crm_links_section_duplicated_by">Diduplikasi ku</string>
     <string name="crm_links_type">Jenis tautan</string>
     <string name="crm_links_type_relates">Patali jeung</string>
-    <string name="crm_links_remove">Piceun tautan</string>
+    <string name="crm_links_remove">Hapus tautan</string>
     <string name="crm_comment_replying_to">Ngawalon ka %1$s</string>
-    <string name="crm_comment_clear_reply">Bersihan walonan</string>
+    <string name="crm_comment_clear_reply">Hapus waleran</string>
     <string name="crm_comment_placeholder">Tambahkeun koméntar</string>
     <string name="crm_property_pick_date">Pilih tanggal</string>
     <string name="crm_property_ok">OK</string>
@@ -207,10 +207,10 @@
     <string name="crm_field_type_enumerated">Énumérasi</string>
     <string name="crm_field_label">Widang: %1$s</string>
     <string name="crm_field_readonly">Maca-wungkul</string>
-    <string name="crm_field_sortable">Bisa disortir</string>
+    <string name="crm_field_sortable">Bisa diurutkeun</string>
     <string name="crm_field_filterable">Bisa disaring</string>
     <string name="crm_field_show_on_card">Témbongkeun dina kartu</string>
-    <string name="crm_field_multi">Multi-pilih</string>
+    <string name="crm_field_multi">Multi-pilihan</string>
     <string name="crm_field_position">Posisi tampilan</string>
     <string name="crm_field_position_header">Lulugu</string>
     <string name="crm_field_validation">Validasi</string>
@@ -265,7 +265,7 @@
     <string name="crm_access_select_role">Pilih peran</string>
     <string name="crm_access_selected">Dipilih: %1$s</string>
     <string name="crm_access_subject_anyone">Saha waé</string>
-    <string name="crm_access_subject_authenticated">Pangguna anu disahkeun</string>
+    <string name="crm_access_subject_authenticated">Pamaké anu diverifikasi</string>
     <string name="crm_access_authenticated_desc">Saha waé anu parantos asup log</string>
     <string name="crm_access_anyone_desc">Kalebet pamaké anonim</string>
     <string name="crm_access_role_design">Ngarancang, nyieun, ngédit, méré koméntar, jeung nempo</string>

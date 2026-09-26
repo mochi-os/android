@@ -57,10 +57,10 @@
     <string name="calendars_drawer_title">දින දර්ශන</string>
     <string name="calendars_drawer_open">දින දර්ශන</string>
     <string name="calendars_calendar_menu">%1$s විකල්ප</string>
-    <string name="calendars_only_this">මෙය පමණයි</string>
+    <string name="calendars_only_this">මෙය පමණි</string>
     <string name="calendars_create">දින දර්ශනයක් සාදන්න</string>
     <string name="calendars_subscribe">දින දර්ශනයට දායක වන්න</string>
-    <string name="calendars_poll">දැන් ලබා ගන්න</string>
+    <string name="calendars_poll">දැන් පරීක්ෂා කරන්න</string>
     <string name="calendars_delete_title">%1$s මකන්නද?</string>
     <string name="calendars_delete_message">එහි සිදුවීම් ද එය සමඟ මැකෙයි.</string>
     <string name="calendars_today">අද</string>
@@ -74,7 +74,7 @@
     <string name="calendars_event_new">නව සිදුවීම</string>
     <string name="calendars_event_edit">සිදුවීම සංස්කරණය කරන්න</string>
     <string name="calendars_event_calendar">දින දර්ශනය</string>
-    <string name="calendars_event_allday">මුළු දිනයම</string>
+    <string name="calendars_event_allday">මුළු දිනය</string>
     <string name="calendars_event_finish">අවසානය</string>
     <string name="calendars_event_repeat">පුනරාවර්තනය</string>
     <string name="calendars_event_reminder">මතක් කිරීම</string>
@@ -85,11 +85,11 @@
     <string name="calendars_scope_delete">මෙම සිදුවීම මකන්නද නැතහොත් සියලු සිදුවීම්ද?</string>
     <string name="calendars_scope_one">මෙම සිදුවීම</string>
     <string name="calendars_scope_all">සියලු සිදුවීම්</string>
-    <string name="calendars_repeat_daily">දිනපතා</string>
-    <string name="calendars_repeat_weekly">සතිපතා</string>
+    <string name="calendars_repeat_daily">දෛනික</string>
+    <string name="calendars_repeat_weekly">සාප්තාහික</string>
     <string name="calendars_repeat_interval">සෑම</string>
     <string name="calendars_repeat_days">දින</string>
-    <string name="calendars_repeat_count">සිදුවීම් ගණන</string>
+    <string name="calendars_repeat_count">පුනරාවර්තන</string>
     <string name="calendars_repeat_forever">සදාකාලිකව</string>
     <string name="calendars_reminder_time">එම වේලාවේදී</string>
     <string name="calendars_reminder_minutes">මිනිත්තු %1$d කට පෙර</string>
@@ -154,7 +154,7 @@
     <string name="calendars_link_submit">සම්බන්ධ කරන්න</string>
     <string name="calendars_link_sync">දැන් සමමුහුර්ත කරන්න</string>
     <string name="calendars_link_grant">දින දර්ශන ප්‍රවේශයට ඉඩ දෙන්න</string>
-    <string name="calendars_link_linked">සම්බන්ධිතයි</string>
+    <string name="calendars_link_linked">සම්බන්ධයි</string>
     <string name="calendars_link_marker">සම්බන්ධිත දින දර්ශනය</string>
     <string name="calendars_link_remote_empty">දින දර්ශන නැත</string>
     <string name="calendars_poll_conflict">සිදුවීමක් දෙපැත්තෙන්ම වෙනස් විය</string>

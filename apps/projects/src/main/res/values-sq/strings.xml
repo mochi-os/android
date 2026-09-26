@@ -2,7 +2,7 @@
 <resources>
     <string name="projects_auth_display_name">Emri i shfaqur</string>
     <string name="projects_auth_verification_failed">Verifikimi dështoi</string>
-    <string name="projects_list_title">Projektet</string>
+    <string name="projects_list_title">Projekte</string>
     <string name="projects_list_close_search">Mbyll kërkimin</string>
     <string name="projects_list_search">Kërko</string>
     <string name="projects_list_find">Gjej projekte</string>
@@ -37,7 +37,7 @@
     <string name="projects_settings_title">Cilësimet</string>
     <string name="projects_settings_tab_general">Të përgjithshme</string>
     <string name="projects_settings_tab_access">Qasja</string>
-    <string name="projects_settings_tab_people">Persona</string>
+    <string name="projects_settings_tab_people">Njerëz</string>
     <string name="projects_option_icon">Ikona</string>
     <string name="projects_option_icon_placeholder">p.sh. Check, Star, Flag</string>
     <string name="projects_settings_unsubscribe">Çabonohu</string>
@@ -167,10 +167,10 @@
     <string name="projects_class_move_up">Lëviz lart</string>
     <string name="projects_views_move_down">Lëviz poshtë</string>
     <string name="projects_class_move_down">Lëviz poshtë</string>
-    <string name="projects_sort_direction_asc">Rritëse</string>
-    <string name="projects_views_direction_asc">Rritëse</string>
-    <string name="projects_sort_direction_desc">Zbritëse</string>
-    <string name="projects_views_direction_desc">Zbritëse</string>
+    <string name="projects_sort_direction_asc">Në rritje</string>
+    <string name="projects_views_direction_asc">Në rritje</string>
+    <string name="projects_sort_direction_desc">Në zbritje</string>
+    <string name="projects_views_direction_desc">Në zbritje</string>
     <string name="projects_list_add_to_home">Shto në ekranin kryesor</string>
     <string name="projects_search_objects_placeholder">Kërko objekte</string>
     <string name="projects_links_search_placeholder">Kërko objekte</string>
@@ -191,22 +191,22 @@
     <string name="projects_views_filter">Filtër (i ruajtur, ende i pazbatuar)</string>
     <string name="projects_people_empty">Asnjë person nuk ka qasje ende</string>
     <string name="projects_settings_delete_confirm_message">Jeni i sigurt që doni ta fshini këtë projekt? Të gjitha objektet, komentet dhe cilësimet do të hiqen përgjithmonë.</string>
-    <string name="projects_object_unwatch">Mos ndiq</string>
+    <string name="projects_object_unwatch">Hiq ndjekjen</string>
     <string name="projects_object_tab_watchers">Ndjekësit</string>
     <string name="projects_watchers_empty">Ende asnjë ndjekës</string>
-    <string name="projects_object_delete_title">Fshij objektin</string>
+    <string name="projects_object_delete_title">Fshi objektin</string>
     <string name="projects_object_delete_message">Jeni i sigurt që doni ta fshini këtë objekt? Ky veprim nuk mund të zhbëhet.</string>
     <string name="projects_parent_none">Pa prind</string>
     <string name="projects_links_empty">Asnjë lidhje</string>
     <string name="projects_links_section_relates">Lidhet me</string>
-    <string name="projects_links_section_duplicated_by">Dublikuar nga</string>
+    <string name="projects_links_section_duplicated_by">I dyfishuar nga</string>
     <string name="projects_links_type">Lloji i lidhjes</string>
     <string name="projects_links_type_relates">Lidhet me</string>
     <string name="projects_links_remove">Hiq lidhjen</string>
     <string name="projects_comment_replying_to">Duke iu përgjigjur %1$s</string>
     <string name="projects_comment_clear_reply">Pastro përgjigjen</string>
     <string name="projects_comment_placeholder">Shtoni një koment</string>
-    <string name="projects_property_pick_date">Zgjidhni datën</string>
+    <string name="projects_property_pick_date">Zgjidh datën</string>
     <string name="projects_property_ok">OK</string>
     <string name="projects_property_add_item">Shto element</string>
     <string name="projects_property_required">%1$s kërkohet</string>
@@ -244,8 +244,8 @@
     <string name="projects_request_create_title">Krijo kërkesë bashkimi</string>
     <string name="projects_request_field_target">Dega cak</string>
     <string name="projects_diff_title">Dallimet: %1$s -&gt; %2$s</string>
-    <string name="projects_tree_collapse">Mbylle</string>
-    <string name="projects_tree_expand">Zgjeroje</string>
+    <string name="projects_tree_collapse">Palos</string>
+    <string name="projects_tree_expand">Zgjero</string>
     <string name="projects_tree_move">Zhvendos</string>
     <string name="projects_tree_move_to_parent">Zhvendos te prindi</string>
     <string name="projects_tree_root_level">(Niveli rrënjë)</string>
@@ -314,7 +314,7 @@
     <string name="projects_design_preview_empty">Asgjë për t\'u shfaqur</string>
 
     <string name="projects_create_choose_template">Zgjidh një shabllon</string>
-    <string name="projects_create_next">Tjetra</string>
+    <string name="projects_create_next">Tjetri</string>
     <string name="projects_filter">Filtro</string>
     <string name="projects_link">Lidhje</string>
     <string name="projects_filter_clear_all">Pastro të gjitha</string>

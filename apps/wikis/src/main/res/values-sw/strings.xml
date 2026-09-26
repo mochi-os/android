@@ -215,7 +215,7 @@
     <string name="wikis_replicas_remove_confirm_title">Ondoa nakala?</string>
     <string name="wikis_replicas_remove_confirm_action">Ondoa</string>
     <string name="wikis_replicas_remove_failed">Imeshindwa kuondoa nakala</string>
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki</string>
     <string name="wikis_channel_name">Arifa za Wikis</string>
     <string name="wikis_channel_description">Arifa kuhusu uhariri wa kurasa, maoni, na mialiko.</string>
     <string name="wikis_pageview_toc_expand">Onyesha jedwali la yaliyomo</string>

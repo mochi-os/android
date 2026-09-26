@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Teken uit</string>
     <string name="forums_list_unsubscribe_title">Teken uit</string>
     <string name="forums_create_title">Skep forum</string>
-    <string name="forums_create_name">Naam</string>
+    <string name="forums_create_name">Forumnaam</string>
     <string name="forums_create_privacy">Privaatheid</string>
     <string name="forums_create_private">Privaat</string>
     <string name="forums_create_public">Publiek</string>
-    <string name="forums_create_action">Skep</string>
+    <string name="forums_create_action">Skep forum</string>
     <string name="forums_find_title">Vind forums</string>
     <string name="forums_find_recommended">Aanbeveel</string>
     <string name="forums_find_subscribe">Teken in</string>
@@ -71,7 +71,7 @@
     <string name="forums_ai_account_default">Verstek rekening</string>
     <string name="forums_ai_prompt_reset">Stel terug na verstek</string>
     <string name="forums_settings_unsubscribe">Teken uit</string>
-    <string name="forums_moderation_title">Moderasie</string>
+    <string name="forums_moderation_title">Moderering</string>
     <string name="forums_moderation_tab_queue">Tou</string>
     <string name="forums_moderation_tab_reports">Rapporte</string>
     <string name="forums_moderation_tab_log">Logboek</string>
@@ -154,7 +154,7 @@
     <string name="forums_banner_placeholder">Welkom by hierdie forum…</string>
     <string name="forums_ai_mode_label">Modus: %1$s</string>
     <string name="forums_ai_mode_heading">KI-modus</string>
-    <string name="forums_ai_mode_off">Af</string>
+    <string name="forums_ai_mode_off">Gedeaktiveer</string>
     <string name="forums_ai_account">KI-rekening</string>
     <string name="forums_ai_prompt_tag">Etiketteringsprompt</string>
     <string name="forums_ai_prompt_score">Puntetoekenningsprompt</string>
@@ -219,7 +219,7 @@
     <string name="forums_all_forums">Alle forums</string>
     <string name="forums_create_allow_search">Laat enigiemand toe om die forum te soek</string>
     <string name="forums_rss_clipboard_label">Forum RSS-URL</string>
-    <string name="forums_tab_moderation">Moderasie</string>
+    <string name="forums_tab_moderation">Moderering</string>
     <string name="forums_access_level_view_full">Slegs bekyk</string>
     <string name="forums_access_level_none_full">Geen toegang</string>
     <string name="forums_access_subject_anyone">Enigiemand</string>
@@ -277,7 +277,7 @@
     <string name="forums_moderation_restriction_remove_message">Hulle kry dadelik weer volle toegang tot die forum.</string>
     <string name="forums_moderation_restriction_remove_title">Verwyder beperking op %1$s?</string>
     <string name="forums_moderation_restriction_state_muted">Gedemp</string>
-    <string name="forums_moderation_restriction_state_shadowban">Skaduverbanning</string>
+    <string name="forums_moderation_restriction_state_shadowban">Skadu-verban</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Geen gebruikers is gedemp of verban nie</string>
     <string name="forums_moderation_section_premoderation_description">Vereis goedkeuring voordat inhoud sigbaar word</string>
     <string name="forums_moderation_section_ratelimiting_description">Voorkom gemorspos deur te beperk hoe gereeld gebruikers kan plaas</string>
@@ -286,7 +286,7 @@
     <string name="forums_moderation_unit_replies">antwoorde</string>
     <string name="forums_moderation_unit_seconds">sekondes</string>
     <string name="forums_settings_ai_updated">KI-instellings opgedateer</string>
-    <string name="forums_settings_forum_renamed">Forum se naam verander</string>
+    <string name="forums_settings_forum_renamed">Forum hernoem</string>
     <string name="forums_settings_name_clear_cd">Maak naam skoon</string>
     <string name="forums_settings_unsubscribe_section">Teken uit van forum</string>
     <string name="forums_share_link_title">Forumskakel</string>

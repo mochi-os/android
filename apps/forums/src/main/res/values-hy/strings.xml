@@ -9,7 +9,7 @@
     <string name="forums_list_unsubscribe">Բաժանորդագրությունից հրաժարվել</string>
     <string name="forums_list_unsubscribe_title">Բաժանորդագրությունից հրաժարվել</string>
     <string name="forums_create_title">Ստեղծել ֆորում</string>
-    <string name="forums_create_name">Անուն</string>
+    <string name="forums_create_name">Ֆորումի անվանումը</string>
     <string name="forums_create_privacy">Գաղտնիություն</string>
     <string name="forums_create_private">Մասնավոր</string>
     <string name="forums_create_public">Հանրային</string>
@@ -18,7 +18,7 @@
     <string name="forums_find_recommended">Առաջարկվող</string>
     <string name="forums_find_subscribe">Բաժանորդագրվել</string>
     <string name="forums_find_no_results">Ֆորումներ չեն գտնվել</string>
-    <string name="forums_loading">Կողպված է</string>
+    <string name="forums_loading">Բեռնվում է…</string>
     <string name="forums_no_posts">Դեռ գրառումներ չկան</string>
     <string name="forums_new_post">Նոր գրառում</string>
     <string name="forums_settings">Կարգավորումներ</string>
@@ -71,7 +71,7 @@
     <string name="forums_ai_account_default">Լռելյայն հաշիվ</string>
     <string name="forums_ai_prompt_reset">Վերականգնել լռելյայնին</string>
     <string name="forums_settings_unsubscribe">Բաժանորդագրությունից հրաժարվել</string>
-    <string name="forums_moderation_title">Մոդերացիայի բաժիններ</string>
+    <string name="forums_moderation_title">Մոդերացիա</string>
     <string name="forums_moderation_tab_queue">Հերթ</string>
     <string name="forums_moderation_tab_reports">Հաղորդումներ</string>
     <string name="forums_moderation_tab_log">Մատյան</string>
@@ -219,7 +219,7 @@
     <string name="forums_all_forums">Բոլոր ֆորումները</string>
     <string name="forums_create_allow_search">Թույլատրել բոլորին որոնել ֆորում</string>
     <string name="forums_rss_clipboard_label">Ֆորումի RSS URL</string>
-    <string name="forums_tab_moderation">Մոդերացիայի բաժիններ</string>
+    <string name="forums_tab_moderation">Մոդերացիա</string>
     <string name="forums_access_level_view_full">Միայն դիտել</string>
     <string name="forums_access_level_none_full">Մուտք չկա</string>
     <string name="forums_access_subject_anyone">Ցանկացած ոք</string>

@@ -123,7 +123,7 @@
     <string name="game_chat_move_played">%1$s ने %2$s चला</string>
 
     <string name="error_network">कनेक्ट नहीं हो सका। अपना इंटरनेट कनेक्शन जाँचें और पुनः प्रयास करें।</string>
-    <string name="error_authentication_required">प्रमाणीकरण आवश्यक है</string>
+    <string name="error_authentication_required">ऑथेंटिकेशन आवश्यक</string>
     <string name="error_not_found">नहीं मिला</string>
     <string name="error_server">सर्वर त्रुटि (%1$d)। कृपया बाद में पुनः प्रयास करें।</string>
     <string name="error_unexpected">एक अप्रत्याशित त्रुटि हुई</string>
@@ -138,7 +138,7 @@
     <string name="auth_mfa_subtitle">शेष सत्यापन चरण पूरे करें</string>
     <string name="auth_recover_account">खाता पुनर्प्राप्त करें</string>
     <string name="auth_login_title">Mochi में लॉग इन करें</string>
-    <string name="auth_next">आगे</string>
+    <string name="auth_next">अगला</string>
     <string name="auth_or_log_in_with">या इसके साथ लॉग इन करें</string>
     <string name="auth_passkey">पासकी</string>
     <string name="auth_use_passkey">पासकी का उपयोग करें</string>
@@ -189,7 +189,7 @@
     <string name="format_time_days_short">%1$dदि</string>
     <string name="format_time_weeks_short">%1$dस</string>
     <string name="format_time_months_short">%1$dमा</string>
-    <string name="reaction_add">प्रतिक्रिया जोड़ें</string>
+    <string name="reaction_add">रिएक्शन जोड़ें</string>
     <string name="push_service_channel">Mochi पुश</string>
     <string name="push_service_channel_description">सूचनाएँ प्राप्त करने के लिए Mochi को कनेक्टेड रखता है</string>
     <string name="push_service_group">पृष्ठभूमि सेवा</string>

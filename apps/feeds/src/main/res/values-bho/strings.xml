@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi फीड</string>
     <string name="feeds_source_type_feed_memories">यादें</string>
-    <string name="feeds_remove_source">स्रोत हटाईं</string>
+    <string name="feeds_remove_source">स्रोत हटाईं?</string>
     <string name="feeds_suggested_credibility_accept">स्वीकार करीं</string>
     <string name="feeds_rss_url_copied">RSS URL क्लिपबोर्ड पर कॉपी भइल</string>
     <string name="feeds_logout">लॉग आउट</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">कबो ना लेहल गइल</string>
     <string name="feeds_source_poll">पोल</string>
-    <string name="feeds_source_transform">रूपांतरण</string>
+    <string name="feeds_source_transform">AI रूपांतरण</string>
     <string name="feeds_remove_source_confirm">\"%1$s\" के हटाईं?</string>
     <string name="feeds_remove_also_delete_posts">आयात कइल पोस्ट भी मिटाईं</string>
     <string name="feeds_suggested_credibility_title">सुझावल विश्वसनीयता</string>
@@ -153,7 +153,7 @@
     <string name="feeds_access_segment_other">दोसर</string>
     <string name="feeds_access_select_group">समूह चुनीं</string>
     <string name="feeds_access_selected">चुनल: %1$s</string>
-    <string name="feeds_access_subject_anyone">केहू</string>
+    <string name="feeds_access_subject_anyone">केहू भी</string>
     <string name="feeds_access_subject_authenticated">प्रमाणित प्रयोगकर्ता</string>
     <string name="feeds_markdown_supported">Markdown समर्थित</string>
     <string name="feeds_permission_deny">मना करीं</string>
@@ -172,7 +172,7 @@
     <string name="feeds_allow_search">केहू के फीड खोजे के अनुमति दीं</string>
     <string name="feeds_post_content">पोस्ट सामग्री</string>
     <string name="feeds_enable_memories">यादें चालू करीं</string>
-    <string name="feeds_permission_request_title">अनुमति के अनुरोध</string>
+    <string name="feeds_permission_request_title">अनुमति अनुरोध</string>
     <string name="feeds_unsubscribe_confirm">फीड से अनसब्सक्राइब करीं?</string>
     <string name="feeds_settings_title">%1$s सेटिंग</string>
     <string name="feeds_source_transform_help">बंद करे खातिर खाली छोड़ीं।</string>
@@ -206,10 +206,10 @@
     <string name="feeds_banner_dismiss">बैनर खारिज करीं</string>
     <string name="feeds_members_search">सदस्य छाँटीं</string>
     <string name="feeds_ai_prompt_default">डिफ़ॉल्ट</string>
-    <string name="feeds_ai_prompt_custom">कस्टम</string>
+    <string name="feeds_ai_prompt_custom">अनुकूलित</string>
     <string name="feeds_ai_prompt_variables">चर: %1$s</string>
     <string name="feeds_link">लिंक</string>
-    <string name="feeds_share_link_title">फीड लिंक</string>
+    <string name="feeds_share_link_title">फ़ीड लिंक</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$d टिप्पणी</item>
         <item quantity="other">%1$d टिप्पणी</item>

@@ -223,7 +223,7 @@
     <string name="staff_disputes_any_status">Всички състояния</string>
     <string name="staff_disputes_cancel">Отказ</string>
     <string name="staff_disputes_close">Затвори</string>
-    <string name="staff_disputes_dialog_title_chargeback">Връщане на сума: %1$s</string>
+    <string name="staff_disputes_dialog_title_chargeback">Обратно плащане: %1$s</string>
     <string name="staff_disputes_dialog_title_review">Преглед на спор</string>
     <string name="staff_disputes_dialog_title_view">Преглед на спор</string>
     <string name="staff_disputes_empty">Няма спорове</string>
@@ -286,7 +286,7 @@
     <string name="staff_filter_label_moderation">Модерация</string>
     <string name="staff_filter_label_query">Търсене</string>
     <string name="staff_filter_label_seller">Продавач</string>
-    <string name="staff_filter_label_status">Статус</string>
+    <string name="staff_filter_label_status">Състояние</string>
     <string name="staff_filter_label_type">Тип</string>
     <string name="staff_listings_action_approve_title">Одобри обявата</string>
     <string name="staff_listings_action_reject_title">Отхвърли обявата</string>
@@ -323,7 +323,7 @@
     <string name="staff_listings_status_sold">Продадено</string>
     <string name="staff_listings_submitting">Изпращане…</string>
     <string name="staff_moderation_empty">Няма записи за модерация</string>
-    <string name="staff_moderation_filter_clear">Изчисти филтъра</string>
+    <string name="staff_moderation_filter_clear">Изчистване на филтъра</string>
     <string name="staff_moderation_listing_filter_placeholder">ID на обява</string>
     <string name="staff_moderation_system">Система</string>
     <string name="staff_moderation_unknown_listing">#%1$s</string>

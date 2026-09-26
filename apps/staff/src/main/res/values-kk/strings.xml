@@ -131,7 +131,7 @@
     <string name="staff_categories_action_delete">Жою</string>
     <string name="staff_categories_action_edit">Өңдеу</string>
     <string name="staff_categories_add">Қосу</string>
-    <string name="staff_categories_col_name">Аты</string>
+    <string name="staff_categories_col_name">Атау</string>
     <string name="staff_categories_col_status">Күй</string>
     <string name="staff_categories_col_types">Түрлері</string>
     <string name="staff_categories_create">Құру</string>
@@ -145,7 +145,7 @@
     <string name="staff_categories_dialog_digital">Сандық</string>
     <string name="staff_categories_dialog_edit_title">Санатты өңдеу</string>
     <string name="staff_categories_dialog_icon">Белгіше</string>
-    <string name="staff_categories_dialog_name">Аты</string>
+    <string name="staff_categories_dialog_name">Атау</string>
     <string name="staff_categories_dialog_parent">Ата-ана</string>
     <string name="staff_categories_dialog_parent_none">Жоқ</string>
     <string name="staff_categories_dialog_physical">Физикалық</string>
@@ -188,7 +188,7 @@
     <string name="staff_dashboard_col_detail">Мәлімет</string>
     <string name="staff_dashboard_col_listing">Хабарландыру</string>
     <string name="staff_dashboard_col_moderation">Модерация</string>
-    <string name="staff_dashboard_col_name">Аты</string>
+    <string name="staff_dashboard_col_name">Атау</string>
     <string name="staff_dashboard_col_object">Нысан</string>
     <string name="staff_dashboard_col_reason">Себеп</string>
     <string name="staff_dashboard_col_score">Ұпай</string>
@@ -426,7 +426,7 @@
     <string name="staff_team_dialog_person">Адам</string>
     <string name="staff_team_dialog_role">Рөл</string>
     <string name="staff_team_dialog_role_placeholder">Рөлді таңдау</string>
-    <string name="staff_team_dialog_search_placeholder">Атау, саусақ ізі немесе ID бойынша іздеу…</string>
+    <string name="staff_team_dialog_search_placeholder">Атау, қысқа идентификатор немесе ID бойынша іздеу…</string>
     <string name="staff_team_empty">Команда мүшелері жоқ</string>
     <string name="staff_team_remove_confirm">Жою</string>
     <string name="staff_team_remove_desc">Бұл мүшені қызметкерлер тобынан жою керек пе?</string>

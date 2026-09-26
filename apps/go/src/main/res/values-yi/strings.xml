@@ -16,7 +16,7 @@
     <string name="go_color_white">ווײַס</string>
     <string name="go_delete_confirm">אויסמעקן</string>
     <string name="go_delete_message">די שפּיל וועט זיין אַראָפּגענומען פֿון אײַער ליסטע. דאָס קען נישט זיין צוריקגעטאָן.</string>
-    <string name="go_delete_title">אויסמעקן שפּיל?</string>
+    <string name="go_delete_title">אויסמעקן דעם שפּיל?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">אָננעמען</string>
     <string name="go_draw_decline">אָפּזאָגן</string>

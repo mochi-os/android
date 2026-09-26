@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Іконка</string>
     <string name="crm_option_icon_placeholder">напр. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Адпісацца</string>
-    <string name="crm_settings_delete_crm">Выдаліць праект</string>
+    <string name="crm_settings_delete_crm">Выдаліць CRM</string>
     <string name="crm_settings_delete_confirm_title">Выдаліць CRM</string>
     <string name="crm_settings_unsubscribe_title">Адпісацца</string>
     <string name="crm_settings_unsubscribe_message">Вы ўпэўнены, што хочаце адпісацца ад гэтай CRM?</string>
@@ -87,7 +87,7 @@
     <string name="crm_classes_add_dialog_title">Дадаць клас</string>
     <string name="crm_classes_create">Стварыць</string>
     <string name="crm_class_name">Назва</string>
-    <string name="crm_class_save_name">Захаваць імя</string>
+    <string name="crm_class_save_name">Захаваць назву</string>
     <string name="crm_class_title_field">Поле назвы</string>
     <string name="crm_class_fields">Палі</string>
     <string name="crm_class_add_field">Дадаць поле</string>
@@ -188,7 +188,7 @@
     <string name="crm_drag_card">Перацягнуць картку</string>
     <string name="crm_drag_row">Перацягнуць радок</string>
     <string name="crm_drag_column">Перацягнуць слупок</string>
-    <string name="crm_design_more_options">Дадатковыя параметры</string>
+    <string name="crm_design_more_options">Больш параметраў</string>
     <string name="crm_design_no_templates">Шаблоны недаступныя</string>
     <string name="crm_design_use">Выкарыстаць</string>
     <string name="crm_design_replace_message">Гэта заменіць бягучы дызайн на %1$s. Усе існуючыя класы, палі, параметры і выгляды будуць выдалены. Існуючыя аб\'екты не будуць выдалены, але могуць больш не з\'яўляцца ў выглядах.</string>
@@ -226,7 +226,7 @@
     <string name="crm_views_border_field">Поле колеру мяжы</string>
     <string name="crm_views_sort_by">Сартаваць па</string>
     <string name="crm_views_direction_asc">Па ўзрастанні</string>
-    <string name="crm_views_direction_desc">Па змяншэнні</string>
+    <string name="crm_views_direction_desc">Па ўбыванні</string>
     <string name="crm_views_filter_classes">Фільтр па класах</string>
     <string name="crm_views_by">па %1$s</string>
     <string name="crm_views_sorted">сартавана %1$s</string>
@@ -265,7 +265,7 @@
     <string name="crm_access_select_role">Выбраць ролю</string>
     <string name="crm_access_selected">Выбрана: %1$s</string>
     <string name="crm_access_subject_anyone">Хто заўгодна</string>
-    <string name="crm_access_subject_authenticated">Аўтэнтыфікаваныя карыстальнікі</string>
+    <string name="crm_access_subject_authenticated">Аўтарызаваныя карыстальнікі</string>
     <string name="crm_access_authenticated_desc">Усе, хто ўвайшоў у сістэму</string>
     <string name="crm_access_anyone_desc">Уключаючы ананімных карыстальнікаў</string>
     <string name="crm_access_role_design">Распрацоўка, стварэнне, рэдагаванне, каментаванне і прагляд</string>
@@ -275,9 +275,9 @@
     <string name="crm_access_role_none">Няма доступу</string>
     <string name="crm_all_crms">Усе CRM</string>
     <string name="crm_settings_unsubscribe_section">Адпісацца ад CRM</string>
-    <string name="crm_settings_updated">CRM абноўлены</string>
+    <string name="crm_settings_updated">CRM абноўлена</string>
     <string name="crm_create_import_backup">Імпарт з рэзервовай копіі (неабавязкова)</string>
-    <string name="crm_export">Экспарт даных</string>
+    <string name="crm_export">Экспартаваць даныя</string>
     <string name="crm_exporting">Падрыхтоўка экспарту…</string>
     <string name="crm_create_allow_search">Дазволіць усім шукаць CRM</string>
     <string name="crm_no_crms_found">CRM не знойдзены</string>

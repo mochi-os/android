@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Symbol</string>
     <string name="crm_option_icon_placeholder">z. B. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Abbestellen</string>
-    <string name="crm_settings_delete_crm">Projekt löschen</string>
+    <string name="crm_settings_delete_crm">CRM löschen</string>
     <string name="crm_settings_delete_confirm_title">CRM löschen</string>
     <string name="crm_settings_unsubscribe_title">Abbestellen</string>
     <string name="crm_settings_unsubscribe_message">Möchten Sie dieses CRM wirklich abbestellen?</string>
@@ -140,8 +140,8 @@
     <string name="crm_sort_direction_asc">Aufsteigend</string>
     <string name="crm_sort_direction_desc">Absteigend</string>
     <string name="crm_create_object_parent_none">(keiner)</string>
-    <string name="crm_views_move_up">Nach oben</string>
-    <string name="crm_views_move_down">Nach unten</string>
+    <string name="crm_views_move_up">Nach oben verschieben</string>
+    <string name="crm_views_move_down">Nach unten verschieben</string>
     <string name="crm_views_filter">Filter (gespeichert, noch nicht angewendet)</string>
     <string name="crm_people_empty">Noch hat niemand Zugriff</string>
     <string name="crm_settings_delete_confirm_message">Möchten Sie dieses CRM wirklich löschen? Alle Objekte, Kommentare und Einstellungen werden dauerhaft entfernt.</string>
@@ -155,7 +155,7 @@
     <string name="crm_links_type">Verknüpfungstyp</string>
     <string name="crm_links_type_relates">Bezieht sich auf</string>
     <string name="crm_links_search_placeholder">Objekte suchen</string>
-    <string name="crm_links_remove">Verknüpfung entfernen</string>
+    <string name="crm_links_remove">Link entfernen</string>
     <string name="crm_comment_replying_to">Antwort an %1$s</string>
     <string name="crm_comment_clear_reply">Antwort verwerfen</string>
     <string name="crm_comment_placeholder">Kommentar hinzufügen</string>
@@ -185,7 +185,7 @@
 
     <string name="crm_tree_move">Verschieben</string>
     <string name="crm_tree_move_to_parent">In übergeordnetes Element verschieben</string>
-    <string name="crm_tree_root_level">(Wurzelebene)</string>
+    <string name="crm_tree_root_level">(Stammebene)</string>
     <string name="crm_tree_empty">Keine Objekte</string>
     <string name="crm_board_no_columns">Keine Spalten für diese Ansicht konfiguriert</string>
     <string name="crm_board_no_options">Keine Optionen für das Spaltenfeld konfiguriert</string>
@@ -267,7 +267,7 @@
     <string name="crm_access_select_role">Rolle auswählen</string>
     <string name="crm_access_selected">Ausgewählt: %1$s</string>
     <string name="crm_access_subject_anyone">Jeder</string>
-    <string name="crm_access_subject_authenticated">Authentifizierte Benutzer</string>
+    <string name="crm_access_subject_authenticated">Angemeldete Benutzer</string>
     <string name="crm_access_authenticated_desc">Alle angemeldeten Benutzer</string>
     <string name="crm_access_anyone_desc">Einschließlich anonymer Benutzer</string>
     <string name="crm_access_role_design">Entwerfen, erstellen, bearbeiten, kommentieren und ansehen</string>

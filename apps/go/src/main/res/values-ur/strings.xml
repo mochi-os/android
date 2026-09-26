@@ -62,7 +62,7 @@
     <string name="go_channel_name">Go اطلاعات</string>
     <string name="go_channel_description">چالوں، پاس، ڈرا کی پیش کشوں اور کھیل کے نتائج کے بارے میں اطلاعات۔</string>
     <string name="go_open_sidebar">سائیڈبار کھولیں</string>
-    <string name="go_sidebar_active">فعال کھیل</string>
+    <string name="go_sidebar_active">فعال گیمز</string>
     <string name="go_empty_active">ابھی کوئی فعال کھیل نہیں۔</string>
     <string name="go_status_resigned">ہار مان لی</string>
     <string name="go_new_game_title">نیا Go کھیل</string>

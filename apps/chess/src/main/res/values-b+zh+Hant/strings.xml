@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">接受</string>
     <string name="chess_draw_decline">拒絕</string>
     <string name="chess_status_checkmate_you_win">將死——您贏了!</string>
-    <string name="chess_status_stalemate">和棋 — 平手</string>
+    <string name="chess_status_stalemate">逼和 — 和局</string>
     <string name="chess_status_draw">和局</string>
     <string name="chess_status_check_your_move">將軍——輪到您下棋</string>
     <string name="chess_status_your_move">輪到您</string>
@@ -63,7 +63,7 @@
     <string name="chess_empty_start_button">開始你的第一局</string>
     <string name="chess_empty_subtitle">開始你的第一局，與好友下國際象棋。</string>
     <string name="chess_move_capture">%1$s 吃掉了 %2$s</string>
-    <string name="chess_open_sidebar">打開側邊欄</string>
+    <string name="chess_open_sidebar">開啟側邊欄</string>
     <string name="chess_ws_connecting">連線中…</string>
     <string name="chess_ws_disconnected">離線</string>
     <string name="chess_ws_failed">連線失敗</string>

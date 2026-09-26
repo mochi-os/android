@@ -34,7 +34,7 @@
     <string name="market_asset_download">Yuklab olish</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
     <string name="market_back">Orqaga</string>
-    <string name="market_bid_dialog_amount_label">Sizning takflingiz</string>
+    <string name="market_bid_dialog_amount_label">Sizning taklifingiz</string>
     <string name="market_bid_dialog_cancel">Bekor qilish</string>
     <string name="market_bid_dialog_ceiling_help">Ushbu maksimumgacha, oldinda qolish uchun zarur bo\'lgan eng kichik miqdor bilan taklifingizni avtomatik ravishda oshiramiz.</string>
     <string name="market_bid_dialog_instant_win">Xarid tasdiqlandi — toʻlovni yakunlang</string>
@@ -74,7 +74,7 @@
     <string name="market_checkout_address_heading">Yetkazib berish manzili</string>
     <string name="market_checkout_address_line1">Manzil qatori 1</string>
     <string name="market_checkout_address_line2">Manzil qatori 2</string>
-    <string name="market_checkout_address_name">Nomi</string>
+    <string name="market_checkout_address_name">Ism</string>
     <string name="market_checkout_address_postcode">Indeks</string>
     <string name="market_checkout_address_region">Hudud</string>
     <string name="market_checkout_back">Orqaga</string>
@@ -89,7 +89,7 @@
     <string name="market_checkout_listing_not_found">Eʼlon topilmadi</string>
     <string name="market_checkout_pay_button">Stripe orqali toʻlash</string>
     <string name="market_checkout_payment_failed">Toʻlovni boshlab boʻlmadi — sotuvchi toʻlov sozlamalarini tugatmagan boʻlishi mumkin</string>
-    <string name="market_checkout_processing">Ishlanmoqda…</string>
+    <string name="market_checkout_processing">Qayta ishlanmoqda…</string>
     <string name="market_checkout_secure">Stripe orqali xavfsiz toʻlov</string>
     <string name="market_checkout_select_option">Variantni tanlang</string>
     <string name="market_checkout_shipping">Yetkazib berish</string>
@@ -137,7 +137,7 @@
     <string name="market_editor_description">Tavsif</string>
     <string name="market_editor_interval_monthly">Oylik</string>
     <string name="market_editor_interval_yearly">Yillik</string>
-    <string name="market_editor_photo_delete">Fotosurati oʻchirish</string>
+    <string name="market_editor_photo_delete">Fotosuratni oʻchirish</string>
     <string name="market_editor_photo_uploading">Yuklanmoqda…</string>
     <string name="market_editor_photos_add">Foto qoʻshish</string>
     <string name="market_editor_price">Narx</string>
@@ -221,7 +221,7 @@
     <string name="market_listing_detail_buy_now">Hozir sotib oling</string>
     <string name="market_listing_detail_description_heading">Tavsif</string>
     <string name="market_listing_detail_edit">Tahrirlash</string>
-    <string name="market_listing_detail_information_heading">Yetkazib berish ma\'lumotlari</string>
+    <string name="market_listing_detail_information_heading">Yetkazib berish maʼlumoti</string>
     <string name="market_listing_detail_load_failed">Eʼlonni yuklab boʻlmadi</string>
     <string name="market_listing_detail_listed">Joylangan %1$s</string>
     <string name="market_listing_detail_location_heading">Joylashuv</string>
@@ -234,7 +234,7 @@
     <string name="market_listing_detail_save">Saqlash</string>
     <string name="market_listing_detail_seller_heading">Sotuvchi</string>
     <string name="market_listing_detail_share">Eʼlonni ulashish</string>
-    <string name="market_listing_detail_shipping_heading">Yetkazib berish</string>
+    <string name="market_listing_detail_shipping_heading">Yetkazib berish variantlari</string>
     <string name="market_listing_detail_subscribe">Obuna boʻlish</string>
     <string name="market_listing_detail_tags_heading">Teglar</string>
     <string name="market_listing_detail_title">Eʼlon</string>

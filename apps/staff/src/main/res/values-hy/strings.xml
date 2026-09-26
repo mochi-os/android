@@ -65,7 +65,7 @@
     <string name="staff_audit_action_account_unbanned">Արգելքը հանվեց</string>
     <string name="staff_audit_action_account_unsuspended">Կասեցումը չեղարկվեց</string>
     <string name="staff_audit_action_auction_bid_placed">Հայտը ներկայացվեց</string>
-    <string name="staff_audit_action_auction_cancelled">Աճուրդը չեղարկվեց</string>
+    <string name="staff_audit_action_auction_cancelled">Աճուրդը չեղարկված է</string>
     <string name="staff_audit_action_auction_created">Աճուրդը ստեղծվեց</string>
     <string name="staff_audit_action_auction_ended_sold">Աճուրդը վաճառված է</string>
     <string name="staff_audit_action_auction_ended_unsold">Աճուրդն ավարտվեց առանց վաճառքի</string>
@@ -170,7 +170,7 @@
     <string name="staff_config_field_stripe_oauth_client">OAuth հաճախորդի ID</string>
     <string name="staff_config_field_stripe_publishable">Հրապարակային բանալի</string>
     <string name="staff_config_field_stripe_secret">Գաղտնի բանալի</string>
-    <string name="staff_config_group_moderation">Մոդերացիայի բաժիններ</string>
+    <string name="staff_config_group_moderation">Մոդերացիա</string>
     <string name="staff_config_group_payments">Վճարումներ</string>
     <string name="staff_config_group_reviews">Կարծիքներ</string>
     <string name="staff_config_group_stripe">Stripe</string>
@@ -187,7 +187,7 @@
     <string name="staff_dashboard_col_date">Ամսաթիվ</string>
     <string name="staff_dashboard_col_detail">Մանրամասն</string>
     <string name="staff_dashboard_col_listing">Հայտարարություն</string>
-    <string name="staff_dashboard_col_moderation">Մոդերացիայի բաժիններ</string>
+    <string name="staff_dashboard_col_moderation">Մոդերացիա</string>
     <string name="staff_dashboard_col_name">Անուն</string>
     <string name="staff_dashboard_col_object">Օբյեկտ</string>
     <string name="staff_dashboard_col_reason">Պատճառ</string>
@@ -216,7 +216,7 @@
     <string name="staff_dashboard_system">Համակարգ</string>
     <string name="staff_dashboard_tab_audit">Աուդիտ</string>
     <string name="staff_dashboard_tab_listings">Հայտարարություններ</string>
-    <string name="staff_dashboard_tab_moderation">Մոդերացիայի բաժիններ</string>
+    <string name="staff_dashboard_tab_moderation">Մոդերացիա</string>
     <string name="staff_dashboard_tab_orders">Պատվերներ</string>
     <string name="staff_dashboard_tab_signups">Գրանցումներ</string>
     <string name="staff_dashboard_yes">Այո</string>
@@ -269,7 +269,7 @@
     <string name="staff_disputes_view">Դիտել</string>
     <string name="staff_filter_chip_remove">Հեռացնել զտիչը</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
-    <string name="staff_filter_label_moderation">Մոդերացիայի բաժիններ</string>
+    <string name="staff_filter_label_moderation">Մոդերացիա</string>
     <string name="staff_filter_label_query">Որոնել</string>
     <string name="staff_filter_label_seller">Վաճառող</string>
     <string name="staff_filter_label_status">Կարգավիճակ</string>
@@ -283,7 +283,7 @@
     <string name="staff_listings_approved_toast">Հայտարարությունը հաստատվեց</string>
     <string name="staff_listings_cancel">Չեղարկել</string>
     <string name="staff_listings_empty">Հայտարարություններ չկան</string>
-    <string name="staff_listings_filter_moderation_label">Մոդերացիայի բաժիններ</string>
+    <string name="staff_listings_filter_moderation_label">Մոդերացիա</string>
     <string name="staff_listings_filter_status_label">Կարգավիճակ</string>
     <string name="staff_listings_moderation_auto_approved">Ինքնահաստատված</string>
     <string name="staff_listings_moderation_hold">Պահել</string>

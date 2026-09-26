@@ -9,7 +9,7 @@
     <string name="market_account_seller_step_activate_title">Aktiviraj račun prodajalca</string>
     <string name="market_account_seller_step_activate_desc">Ustvarite profil prodajalca, da začnete objavljati izdelke</string>
     <string name="market_account_seller_step_stripe_desc">Povežite račun Stripe za sprejemanje plačil od kupcev</string>
-    <string name="market_account_seller_fees_heading">Pristojbine:</string>
+    <string name="market_account_seller_fees_heading">Provizije:</string>
     <string name="market_account_seller_fees_mochi">Mochi vzame %1$s%% od vsake prodaje.</string>
     <string name="market_account_seller_fees_stripe">Stripe zaračuna svojo provizijo za obdelavo na transakcijo in fiksno provizijo na vsako vračilo bremenitve. Trenutne stopnje za vašo valuto in regijo so navedene v vaši nadzorni plošči Stripe.</string>
     <string name="market_account_seller_connect">Poveži Stripe</string>
@@ -41,7 +41,7 @@
     <string name="market_bids_tab_active">Aktivno</string>
     <string name="market_bids_tab_all">Vse</string>
     <string name="market_bids_tab_lost">Izgubljeno</string>
-    <string name="market_bids_tab_outbid">Preglasovan</string>
+    <string name="market_bids_tab_outbid">Presežen</string>
     <string name="market_bids_tab_won">Zmagano</string>
     <string name="market_bids_title">Ponudbe</string>
     <string name="market_channel_name">Tržnica</string>
@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Prijavi oglas</string>
     <string name="market_listing_detail_save">Shrani</string>
     <string name="market_listing_detail_seller_heading">Prodajalec</string>
-    <string name="market_listing_detail_shipping_heading">Pošiljanje</string>
+    <string name="market_listing_detail_shipping_heading">Možnosti pošiljanja</string>
     <string name="market_listing_detail_subscribe">Naroči se</string>
     <string name="market_listing_detail_tags_heading">Oznake</string>
     <string name="market_listing_detail_title">Oglas</string>
@@ -512,7 +512,7 @@
     <string name="market_editor_zone_worldwide">Po vsem svetu</string>
     <string name="market_editor_zones_empty">Še ni območij</string>
     <string name="market_empty_subtitle">Poskusite prilagoditi ali počistiti filtre.</string>
-    <string name="market_empty_title">Ni rezultatov</string>
+    <string name="market_empty_title">Ni zadetkov</string>
     <string name="market_fee_disclosure_body">Provizija platforme: %1$s%%. Provizije procesorja si oglejte na nadzorni plošči Stripe.</string>
     <string name="market_fee_disclosure_title">Provizije platforme</string>
     <string name="market_fee_preview_failed">Provizij ni bilo mogoče izračunati</string>
@@ -540,7 +540,7 @@
     <string name="market_listing_photo">Fotografija ponudbe</string>
     <string name="market_listing_save">Shrani ponudbo</string>
     <string name="market_listing_unsave">Odstrani iz shranjenih</string>
-    <string name="market_listings_action_appeal">Pritoži se zoper odstranitev</string>
+    <string name="market_listings_action_appeal">Pritožba na odstranitev</string>
     <string name="market_listings_action_share">Deli</string>
     <string name="market_listings_delete_failed">Ponudbe ni bilo mogoče izbrisati</string>
     <string name="market_listings_delete_message">S tem trajno odstranite osnutek iz svojega računa.</string>
@@ -663,7 +663,7 @@
     <string name="market_seller_become_heading">Postanite prodajalec</string>
     <string name="market_seller_become_title">Postanite prodajalec</string>
     <string name="market_seller_check_status">Preveri stanje</string>
-    <string name="market_seller_checking">Preverjanje ...</string>
+    <string name="market_seller_checking">Preverjanje…</string>
     <string name="market_seller_connect_stripe">Poveži Stripe</string>
     <string name="market_seller_connecting">Nalaganje...</string>
     <string name="market_seller_fee_loading">Nalaganje podrobnosti o proviziji...</string>

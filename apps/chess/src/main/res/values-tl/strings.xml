@@ -22,7 +22,7 @@
     <string name="chess_open_actions">Buksan ang mga aksyon ng laro</string>
     <string name="chess_offer_draw">Mag-alok ng tabla</string>
     <string name="chess_resign">Sumuko</string>
-    <string name="chess_rematch">Muling maglaban</string>
+    <string name="chess_rematch">Rematch</string>
     <string name="chess_delete_game">I-delete ang game</string>
     <string name="chess_side_white">Puti</string>
     <string name="chess_side_black">Itim</string>
@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">Tanggapin</string>
     <string name="chess_draw_decline">Tanggihan</string>
     <string name="chess_status_checkmate_you_win">Checkmate — nanalo ka!</string>
-    <string name="chess_status_stalemate">Stalemate — patas</string>
+    <string name="chess_status_stalemate">Stalemate — tabla</string>
     <string name="chess_status_draw">Tabla</string>
     <string name="chess_status_check_your_move">Check — galaw mo na</string>
     <string name="chess_status_your_move">Galaw mo</string>
@@ -60,7 +60,7 @@
     <string name="chess_empty_subtitle">Simulan ang iyong unang laro upang makipag-chess sa isang kaibigan.</string>
     <string name="chess_empty_start_button">Simulan ang iyong unang laro</string>
     <string name="chess_detail_unavailable">Hindi available ang laro</string>
-    <string name="chess_delete_title">Tanggalin ang laro?</string>
+    <string name="chess_delete_title">I-delete ang laro?</string>
     <string name="chess_delete_message">Aalisin nito ang laro sa iyong listahan.</string>
     <string name="chess_ws_connecting">Kumokonekta…</string>
     <string name="chess_ws_disconnected">Offline</string>

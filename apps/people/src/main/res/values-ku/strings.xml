@@ -42,7 +42,7 @@
     <string name="people_member_add">Endam zêde bike</string>
     <string name="people_member_add_hint">Ji bo destpêkirinê bikarhêner an koman zêde bike</string>
     <string name="people_member_remove">Endamê rake</string>
-    <string name="people_member_remove_title">Endam Rake</string>
+    <string name="people_member_remove_title">Endamê rake</string>
     <string name="people_member_search_hint">Ji bo dîtina kesên ku tu dixwazî zêde bikî navekî binivîse</string>
     <string name="people_member_type_user">Bikarhêner</string>
     <string name="people_member_type_group">Kom</string>
@@ -146,7 +146,7 @@
     <string name="people_add_contact_search_start">Ji bo lêgerîna bikarhêneran dest bi nivîsandinê bike</string>
     <string name="people_contact_phone">Telefon</string>
     <string name="people_contact_title">Sernavê karî</string>
-    <string name="people_contacts_title">Kontakt</string>
+    <string name="people_contacts_title">Têkilî</string>
     <string name="people_contacts_all">Hemû têkilî</string>
     <string name="people_contacts_empty">Tu têkilî nehat dîtin</string>
     <string name="people_contacts_add_to_start">Ji bo destpêkirinê têkiliyan lê zêde bike</string>
@@ -158,13 +158,13 @@
     <string name="people_contacts_delete_confirm">%1$s ji têkiliyên te were jêbirin?</string>
     <string name="people_contacts_delete_friend_confirm">%1$s ji têkiliyên te were jêbirin? Hevaltiya we jî diqede.</string>
     <string name="people_contact_new_title">Têkiliya nû</string>
-    <string name="people_contact_edit_title">Têkiliyê biguherîne</string>
+    <string name="people_contact_edit_title">Têkiliyê sererast bike</string>
     <string name="people_contact_given">Nav</string>
     <string name="people_contact_family">Paşnav</string>
-    <string name="people_contact_nickname">Navê pêşîn</string>
-    <string name="people_contact_add_email">E-name lê zêde bike</string>
-    <string name="people_contact_add_phone">Telefon lê zêde bike</string>
-    <string name="people_contact_add_address">Navnîşan lê zêde bike</string>
+    <string name="people_contact_nickname">Leqeb</string>
+    <string name="people_contact_add_email">E-name zêde bike</string>
+    <string name="people_contact_add_phone">Telefon zêde bike</string>
+    <string name="people_contact_add_address">Navnîşan zêde bike</string>
     <string name="people_contact_street">Kolan</string>
     <string name="people_contact_birthday">Rojbûn</string>
     <string name="people_contact_organisation">Rêxistin</string>
@@ -175,7 +175,7 @@
     <string name="people_contact_type_mobile">Mobîl</string>
     <string name="people_contact_pick_date">Dîrokekê hilbijêre</string>
     <string name="people_contact_conflict">Têkilî guherî</string>
-    <string name="people_add_contact_title">Têkilî lê zêde bike</string>
+    <string name="people_add_contact_title">Têkilî zêde bike</string>
     <string name="people_add_contact_add">Li têkiliyan zêde bike</string>
     <string name="people_add_contact_in_contacts">Di têkiliyan de</string>
     <string name="people_books_create">Pirtûka navnîşanan çêbike</string>

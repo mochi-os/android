@@ -17,7 +17,7 @@
     <string name="chess_new_add_friends">Tambah babaturan</string>
     <string name="chess_new_start_button">Mimitian kaulinan</string>
     <string name="chess_new_creating">Ngajieun…</string>
-    <string name="chess_chat_title">Chat</string>
+    <string name="chess_chat_title">Obrolan</string>
     <string name="chess_open_chat">Buka panel obrolan</string>
     <string name="chess_open_actions">Buka aksi game</string>
     <string name="chess_offer_draw">Tawarkeun seri</string>
@@ -26,13 +26,13 @@
     <string name="chess_delete_game">Hapus kaulinan</string>
     <string name="chess_side_white">Bodas</string>
     <string name="chess_side_black">Hideung</string>
-    <string name="chess_resign_title">Nyerah tina pertandingan?</string>
+    <string name="chess_resign_title">Nyerah tina kaulinan?</string>
     <string name="chess_resign_confirm">Nyerah</string>
     <string name="chess_delete_confirm">Hapus kaulinan</string>
     <string name="chess_draw_accept">Tarima</string>
     <string name="chess_draw_decline">Tolak</string>
     <string name="chess_status_checkmate_you_win">Skakmat — anjeun meunang!</string>
-    <string name="chess_status_stalemate">Stalemate — séri</string>
+    <string name="chess_status_stalemate">Pat — seri</string>
     <string name="chess_status_draw">Seri</string>
     <string name="chess_status_check_your_move">Skak — giliran anjeun</string>
     <string name="chess_status_your_move">Lengkah anjeun</string>
@@ -60,7 +60,7 @@
     <string name="chess_empty_subtitle">Mimitian pertandingan kahiji anjeun pikeun ulin bidak jeung babaturan.</string>
     <string name="chess_empty_start_button">Mimitian pertandingan kahiji anjeun</string>
     <string name="chess_detail_unavailable">Pertandingan teu sayogi</string>
-    <string name="chess_delete_title">Hapus pertandingan?</string>
+    <string name="chess_delete_title">Hapus kaulinan?</string>
     <string name="chess_delete_message">Ieu ngahapus pertandingan tina daptar anjeun.</string>
     <string name="chess_ws_connecting">Nyambungkeun…</string>
     <string name="chess_ws_disconnected">Offline</string>

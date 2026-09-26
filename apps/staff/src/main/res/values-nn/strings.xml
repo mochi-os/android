@@ -65,9 +65,9 @@
     <string name="staff_audit_action_account_unbanned">Bann oppheva</string>
     <string name="staff_audit_action_account_unsuspended">Suspensjon oppheva</string>
     <string name="staff_audit_action_auction_bid_placed">Bod lagt inn</string>
-    <string name="staff_audit_action_auction_cancelled">Auksjon avbroten</string>
+    <string name="staff_audit_action_auction_cancelled">Auksjon avlyst</string>
     <string name="staff_audit_action_auction_created">Auksjon oppretta</string>
-    <string name="staff_audit_action_auction_ended_sold">Auksjon selt</string>
+    <string name="staff_audit_action_auction_ended_sold">Auksjon seld</string>
     <string name="staff_audit_action_auction_ended_unsold">Auksjon avslutta utan sal</string>
     <string name="staff_audit_action_auction_opened">Auksjon opna</string>
     <string name="staff_audit_action_auction_payment_overdue">Auksjonsbetaling forfalla</string>
@@ -170,7 +170,7 @@
     <string name="staff_config_field_stripe_oauth_client">OAuth-klient-ID</string>
     <string name="staff_config_field_stripe_publishable">Publiserbar nykel</string>
     <string name="staff_config_field_stripe_secret">Hemmeleg nykel</string>
-    <string name="staff_config_group_moderation">Moderasjon</string>
+    <string name="staff_config_group_moderation">Moderering</string>
     <string name="staff_config_group_payments">Betalingar</string>
     <string name="staff_config_group_reviews">Vurderingar</string>
     <string name="staff_config_group_stripe">Stripe</string>
@@ -187,7 +187,7 @@
     <string name="staff_dashboard_col_date">Dato</string>
     <string name="staff_dashboard_col_detail">Detalj</string>
     <string name="staff_dashboard_col_listing">Oppføring</string>
-    <string name="staff_dashboard_col_moderation">Moderasjon</string>
+    <string name="staff_dashboard_col_moderation">Moderering</string>
     <string name="staff_dashboard_col_name">Namn</string>
     <string name="staff_dashboard_col_object">Objekt</string>
     <string name="staff_dashboard_col_reason">Grunn</string>
@@ -211,12 +211,12 @@
     <string name="staff_dashboard_kpi_total_orders">Totale ordrar</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Nei</string>
-    <string name="staff_dashboard_open_sidebar">Opne sidepanelet</string>
+    <string name="staff_dashboard_open_sidebar">Opne sidefelt</string>
     <string name="staff_dashboard_order_fallback">Tinging #%1$s</string>
     <string name="staff_dashboard_system">System</string>
     <string name="staff_dashboard_tab_audit">Revisjon</string>
     <string name="staff_dashboard_tab_listings">Oppføringar</string>
-    <string name="staff_dashboard_tab_moderation">Moderasjon</string>
+    <string name="staff_dashboard_tab_moderation">Moderering</string>
     <string name="staff_dashboard_tab_orders">Bestillingar</string>
     <string name="staff_dashboard_tab_signups">Registreringar</string>
     <string name="staff_dashboard_yes">Ja</string>
@@ -283,7 +283,7 @@
     <string name="staff_disputes_view">Vis</string>
     <string name="staff_filter_chip_remove">Fjern filter</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
-    <string name="staff_filter_label_moderation">Moderasjon</string>
+    <string name="staff_filter_label_moderation">Moderering</string>
     <string name="staff_filter_label_query">Søk</string>
     <string name="staff_filter_label_seller">Seljar</string>
     <string name="staff_filter_label_status">Status</string>
@@ -297,7 +297,7 @@
     <string name="staff_listings_approved_toast">Oppføring godkjend</string>
     <string name="staff_listings_cancel">Avbryt</string>
     <string name="staff_listings_empty">Ingen annonsar</string>
-    <string name="staff_listings_filter_moderation_label">Moderasjon</string>
+    <string name="staff_listings_filter_moderation_label">Moderering</string>
     <string name="staff_listings_filter_status_label">Status</string>
     <string name="staff_listings_moderation_auto_approved">Autogodkjend</string>
     <string name="staff_listings_moderation_hold">Hald</string>
@@ -452,7 +452,7 @@
     <string name="staff_team_role_support">Hjelp</string>
     <string name="staff_team_toast_add_failed">Klarte ikkje leggja til medlem</string>
     <string name="staff_team_toast_removed">Medlem fjerna</string>
-    <string name="staff_team_toast_role_updated">Rolle oppdatert</string>
+    <string name="staff_team_toast_role_updated">Rolla vart oppdatert</string>
 
     <string name="staff_disputes_meta_already_refunded">Allereie refundert</string>
     <string name="staff_disputes_refund_exceeds_remaining">Refusjonsbeløpet overstig det gjenverande refunderbare beløpet</string>

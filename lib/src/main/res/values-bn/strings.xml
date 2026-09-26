@@ -121,7 +121,7 @@
     <string name="app_brand">Mochi</string>
     <string name="error_network">সংযোগ করা যাচ্ছে না। আপনার ইন্টারনেট সংযোগ পরীক্ষা করে আবার চেষ্টা করুন।</string>
     <string name="error_authentication_required">প্রমাণীকরণ প্রয়োজন</string>
-    <string name="error_not_found">পাওয়া যায়নি</string>
+    <string name="error_not_found">খুঁজে পাওয়া যায়নি</string>
     <string name="error_server">সার্ভার ত্রুটি (%1$d)। অনুগ্রহ করে কিছুক্ষণ পরে আবার চেষ্টা করুন।</string>
     <string name="error_unexpected">একটি অপ্রত্যাশিত ত্রুটি ঘটেছে</string>
     <string name="error_enter_server_url">অনুগ্রহ করে একটি সার্ভার URL লিখুন</string>
@@ -159,7 +159,7 @@
     <string name="bootstrap_sign_in_differently">ভিন্নভাবে সাইন ইন করুন</string>
     <string name="bootstrap_choose_account">একটি অ্যাকাউন্ট বেছে নিন</string>
     <string name="bootstrap_sign_in_different_server">একটি ভিন্ন সার্ভারে সাইন ইন করুন</string>
-    <string name="common_retry">পুনরায় চেষ্টা করুন</string>
+    <string name="common_retry">আবার চেষ্টা করুন</string>
     <string name="common_more_options">আরও বিকল্প</string>
     <string name="common_collapse">সংকুচিত করুন</string>
     <string name="common_expand">প্রসারিত করুন</string>
@@ -172,7 +172,7 @@
     <string name="access_add_rule_title">অ্যাক্সেস নিয়ম যোগ করুন</string>
     <string name="access_level_manage">পরিচালনা</string>
     <string name="access_level_react">প্রতিক্রিয়া</string>
-    <string name="notifications_clear">বিজ্ঞপ্তি সাফ করুন</string>
+    <string name="notifications_clear">বিজ্ঞপ্তি পরিষ্কার করুন</string>
     <string name="entity_avatar_alt">%1$s-এর অ্যাভাটার</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="lightbox_position">%1$d / %2$d</string>
@@ -188,7 +188,7 @@
     <string name="format_time_days_short">%1$dদি</string>
     <string name="format_time_weeks_short">%1$dস</string>
     <string name="format_time_months_short">%1$dমা</string>
-    <string name="reaction_add">প্রতিক্রিয়া যোগ করুন</string>
+    <string name="reaction_add">রিঅ্যাকশন যোগ করুন</string>
     <string name="push_service_channel">Mochi পুশ</string>
     <string name="push_service_channel_description">বিজ্ঞপ্তি গ্রহণের জন্য Mochi-কে সংযুক্ত রাখে</string>
     <string name="push_service_group">ব্যাকগ্রাউন্ড পরিষেবা</string>
@@ -238,7 +238,7 @@
     <string name="stepup_error_oauth">ওই অ্যাকাউন্ট দিয়ে যাচাই করা যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।</string>
     <string name="game_system_resign">%1$s হার মেনে নিয়েছেন</string>
     <string name="game_system_draw_offer">%1$s ড্র-এর প্রস্তাব দিয়েছেন</string>
-    <string name="game_system_draw_accept">ড্র মেনে নেওয়া হয়েছে</string>
+    <string name="game_system_draw_accept">ড্র গৃহীত হয়েছে</string>
     <string name="game_system_draw_decline">%1$s ড্র প্রত্যাখ্যান করেছেন</string>
     <string name="reactivation_title">আপনার অ্যাকাউন্ট মুছে ফেলার জন্য নির্ধারিত হয়েছে</string>
     <string name="reactivation_body">আপনার অ্যাকাউন্ট মুছে ফেলার জন্য নির্ধারিত হয়েছে। আপনি এখনই বাতিল করে সম্পূর্ণ অ্যাক্সেস পুনরুদ্ধার করতে পারেন।</string>
@@ -246,7 +246,7 @@
     <string name="reactivation_reactivate">আমার অ্যাকাউন্ট পুনরায় সক্রিয় করুন</string>
     <string name="reactivation_sign_out">বন্ধ করা চালিয়ে যান এবং সাইন আউট করুন</string>
     <string name="common_play">চালান</string>
-    <string name="common_pause">বিরতি দিন</string>
+    <string name="common_pause">বিরতি</string>
     <string name="common_opening_file">ফাইল খোলা হচ্ছে…</string>
     <string name="common_no_app_for_file">কোনো অ্যাপ এই ফাইলটি খুলতে পারে না</string>
     <string name="common_file_open_failed">ফাইল খোলা যায়নি</string>
@@ -288,7 +288,7 @@
     <string name="lightbox_comments">মন্তব্য</string>
     <string name="common_attachment_unavailable">সংযুক্তি সাময়িকভাবে অনুপলব্ধ</string>
     <string name="common_unavailable">অনুপলব্ধ</string>
-    <string name="common_not_found">পাওয়া যায়নি</string>
+    <string name="common_not_found">খুঁজে পাওয়া যায়নি</string>
     <string name="format_bold">গাঢ়</string>
     <string name="format_italic">বাঁকা</string>
     <string name="format_link">লিঙ্ক</string>

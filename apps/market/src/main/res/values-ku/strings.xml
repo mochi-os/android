@@ -13,7 +13,7 @@
     <string name="market_account_seller_step_activate_title">Hesabê firoşkar çalak bike</string>
     <string name="market_account_seller_step_activate_desc">Profîla xwe ya firoşkar biafirîne da ku dest bi lîstekirina tiştan bikî</string>
     <string name="market_account_seller_step_stripe_desc">Hesabek Stripe girê bide da ku dravdanan ji kirryaran qebûl bikî</string>
-    <string name="market_account_seller_fees_heading">Xerc:</string>
+    <string name="market_account_seller_fees_heading">Mesref:</string>
     <string name="market_account_seller_fees_mochi">Mochi ji her firotinê %1$s%% digire.</string>
     <string name="market_account_seller_fees_stripe">Stripe ji bo her danûstendinê xerca pêvajoyê ya xwe û ji bo her vegerandina dravê xercek sabît distîne. Rêjeyên niha ji bo dirav û herêma te di Dashboard a Stripe de têne rêzkirin.</string>
     <string name="market_account_seller_connect">Stripe ve girêbide</string>
@@ -40,13 +40,13 @@
     <string name="market_bid_dialog_instant_win">Kirîn hate erêkirin — dayînê temam bike</string>
     <string name="market_bid_dialog_invalid_ceiling">Pêşniyariya herî zêde divê herî kêm bi qasî pêşniyariya te be</string>
     <string name="market_bid_dialog_outbid">Pêşniyara te hat danîn lê tavilê hat derbaskirin. Pêşkêşkarekî din maksîmûmeke bilindtir heye. Pêşniyara wî niha %1$s e.</string>
-    <string name="market_bid_dialog_submit">Pêşniyar bike</string>
+    <string name="market_bid_dialog_submit">Pêşniyazê bike</string>
     <string name="market_bid_dialog_success">Pêşkêş hat danîn</string>
-    <string name="market_bid_dialog_title">Pêşniyar bike</string>
-    <string name="market_bid_ended">Mezad qediya</string>
+    <string name="market_bid_dialog_title">Pêşniyazê bike</string>
+    <string name="market_bid_ended">Mezad bi dawî bû</string>
     <string name="market_bid_high">Pêşniyara herî bilind</string>
     <string name="market_bids_empty">Tu pêşniyar tune</string>
-    <string name="market_bids_ended">Mezad qediya</string>
+    <string name="market_bids_ended">Mezad bi dawî bû</string>
     <string name="market_bids_tab_active">Çalak</string>
     <string name="market_bids_tab_all">Hemû</string>
     <string name="market_bids_tab_lost">Wenda</string>
@@ -137,7 +137,7 @@
     <string name="market_editor_description">Şirove</string>
     <string name="market_editor_interval_monthly">Mehane</string>
     <string name="market_editor_interval_yearly">Salane</string>
-    <string name="market_editor_photo_delete">Wêne jê bibe</string>
+    <string name="market_editor_photo_delete">Wêneyê jê bibe</string>
     <string name="market_editor_photo_uploading">Tê barkirin…</string>
     <string name="market_editor_photos_add">Wêneyan zêde bike</string>
     <string name="market_editor_price">Bedel</string>
@@ -221,7 +221,7 @@
     <string name="market_listing_detail_buy_now">Niha bikire</string>
     <string name="market_listing_detail_description_heading">Şirove</string>
     <string name="market_listing_detail_edit">Sererast bike</string>
-    <string name="market_listing_detail_information_heading">Agahiyên gihandinê</string>
+    <string name="market_listing_detail_information_heading">Agahiyên şandinê</string>
     <string name="market_listing_detail_load_failed">Barkirina lîsteyê neserkeftî bû</string>
     <string name="market_listing_detail_listed">Hate navnîşkirin %1$s</string>
     <string name="market_listing_detail_location_heading">Cih</string>
@@ -234,7 +234,7 @@
     <string name="market_listing_detail_save">Tomar bike</string>
     <string name="market_listing_detail_seller_heading">Firoşker</string>
     <string name="market_listing_detail_share">Lîsteyê parve bike</string>
-    <string name="market_listing_detail_shipping_heading">Şandin</string>
+    <string name="market_listing_detail_shipping_heading">Vebijarkên şandinê</string>
     <string name="market_listing_detail_subscribe">Abone bibe</string>
     <string name="market_listing_detail_tags_heading">Nîşan</string>
     <string name="market_listing_detail_title">Lîste</string>
@@ -393,7 +393,7 @@
     <string name="market_search_clear">Lêgerînê paqij bike</string>
     <string name="market_search_placeholder">Li bazarê bigere</string>
     <string name="market_section_categories">Li Kategoriyan Bigere</string>
-    <string name="market_section_listings">Lîsteyên Dawî</string>
+    <string name="market_section_listings">Lîsteyên dawîn</string>
     <string name="market_section_recent">Vê dawiyê dîtî</string>
     <string name="market_ship_dialog_cancel">Betal bike</string>
     <string name="market_ship_dialog_submit">Piştrast bike</string>
@@ -612,7 +612,7 @@
     <string name="market_sale_dispute_state_responded">Li benda biryarê</string>
     <string name="market_sale_dispute_stripe_reason">Sedema vegerandina Stripe: %1$s</string>
     <string name="market_sale_fee_gross">Giştî</string>
-    <string name="market_sale_fee_mochi">Heqê Mochi</string>
+    <string name="market_sale_fee_mochi">Heqdestê Mochi</string>
     <string name="market_sale_fee_payout">Tezmînata net</string>
     <string name="market_sale_fee_stripe">Heqê pêvajoyê yê Stripe</string>
     <string name="market_sale_fee_stripe_note">Heqên pêvajoyê yên Stripe li panela te ya Stripe têne nîşandan.</string>
@@ -651,7 +651,7 @@
     <string name="market_account_company_label">Şîrket</string>
     <string name="market_account_seller_card_active_body">Stripe hate girêdan.</string>
     <string name="market_account_seller_card_active_title">Hesabê firoşkar çalak e</string>
-    <string name="market_account_seller_card_continue">Berdewamî sazkirinê</string>
+    <string name="market_account_seller_card_continue">Sazkirinê bidomîne</string>
     <string name="market_account_seller_card_incomplete_body">Stripe girê bide da ku dest bi rêzkirina tiştan û wergirtina dravdanan bikî.</string>
     <string name="market_account_seller_card_incomplete_title">Sazkirina firoşkar netemam e</string>
     <string name="market_account_seller_card_start_body">Hesabeke firoşkar çêbike da ku tiştan rêz bikî û bigihîjî kirrîyaran.</string>
@@ -659,11 +659,11 @@
     <string name="market_account_seller_card_view">Mîhengên firoşkar bibîne</string>
     <string name="market_account_vat_label">Nasnameya VAT / bacê</string>
     <string name="market_seller_activate_action">Hesabê firoşkar çalak bike</string>
-    <string name="market_seller_activating">Çalak dibe...</string>
+    <string name="market_seller_activating">Tê çalakkirin…</string>
     <string name="market_seller_become_heading">Bibe firoşkar</string>
     <string name="market_seller_become_title">Bibe firoşkar</string>
     <string name="market_seller_check_status">Rewşê kontrol bike</string>
-    <string name="market_seller_checking">Tê kontrolkirin...</string>
+    <string name="market_seller_checking">Tê kontrolkirin…</string>
     <string name="market_seller_connect_stripe">Stripe ve girêbide</string>
     <string name="market_seller_connecting">Tê barkirin...</string>
     <string name="market_seller_fee_loading">Hûrgiliyên mesrefan tê barkirin...</string>
@@ -691,7 +691,7 @@
     <string name="market_seller_step_stripe_desc">Hesabek Stripe girê bide da ku tu dravdanan ji kiroxan qebûl bikî</string>
     <string name="market_seller_step_stripe_title">Stripe ve girêbide</string>
     <string name="market_seller_stripe_more_info">Stripe pêwîstî bi agahdariyên zêde heye berî ku tu bikaribî dahatan qebûl bikî. Pêwîstiyên xwe li Stripe Dashboard temam bike, paşê Rewşê Kontrol bike pê ve bike.</string>
-    <string name="market_seller_summary_account_status">Rewşa hesêb</string>
+    <string name="market_seller_summary_account_status">Rewşa hesabê</string>
     <string name="market_seller_summary_fees">Heqdest</string>
     <string name="market_seller_summary_payments">Dayîn</string>
     <string name="market_sidebar_become_seller">Bibe firoşkar</string>
@@ -704,7 +704,7 @@
     <string name="market_editor_stock_unlimited">Bê sînor</string>
     <string name="market_editor_start_time">Dema destpêkê</string>
     <string name="market_editor_start_time_help">Vala bihêle ji bo destpêkirinê bi weşandinê.</string>
-    <string name="market_editor_start_time_next">Pêş</string>
+    <string name="market_editor_start_time_next">Pêştir</string>
     <string name="market_editor_start_time_clear">Paqij bike</string>
     <string name="market_listing_detail_buy_now_label">Niha bikire</string>
     <string name="market_section_recently_viewed">Vê dawiyê dîtî</string>

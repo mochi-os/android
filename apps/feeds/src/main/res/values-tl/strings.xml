@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Feed ng Mochi</string>
     <string name="feeds_source_type_feed_memories">Mga Alaala</string>
-    <string name="feeds_remove_source">Tanggalin ang pinagmulan</string>
+    <string name="feeds_remove_source">Alisin ang source?</string>
     <string name="feeds_suggested_credibility_accept">Tanggapin</string>
     <string name="feeds_rss_url_copied">Nakopya ang RSS URL sa clipboard</string>
     <string name="feeds_logout">Mag-log out</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">Hindi pa nakukuha</string>
     <string name="feeds_source_poll">Kunin ngayon</string>
-    <string name="feeds_source_transform">Transform</string>
+    <string name="feeds_source_transform">Pag-transform ng AI</string>
     <string name="feeds_remove_source_confirm">Tanggalin ang \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Tanggalin din ang mga na-import na post</string>
     <string name="feeds_suggested_credibility_title">Iminumungkahing kredibilidad</string>
@@ -153,8 +153,8 @@
     <string name="feeds_access_segment_other">Iba pa</string>
     <string name="feeds_access_select_group">Pumili ng group</string>
     <string name="feeds_access_selected">Napili: %1$s</string>
-    <string name="feeds_access_subject_anyone">Sinuman</string>
-    <string name="feeds_access_subject_authenticated">Mga napatotohanang user</string>
+    <string name="feeds_access_subject_anyone">Kahit sino</string>
+    <string name="feeds_access_subject_authenticated">Mga naka-authenticate na user</string>
     <string name="feeds_markdown_supported">Sinusuportahan ang Markdown</string>
     <string name="feeds_permission_deny">Tanggihan</string>
     <string name="feeds_rss_feed">Feed ng RSS</string>
@@ -172,7 +172,7 @@
     <string name="feeds_allow_search">Payagan ang sinumang maghanap ng feed</string>
     <string name="feeds_post_content">Nilalaman ng post</string>
     <string name="feeds_enable_memories">Paganahin ang mga alaala</string>
-    <string name="feeds_permission_request_title">Kahilingan sa pahintulot</string>
+    <string name="feeds_permission_request_title">Kahilingan ng permission</string>
     <string name="feeds_unsubscribe_confirm">Mag-unsubscribe sa feed?</string>
     <string name="feeds_settings_title">Mga setting ng %1$s</string>
     <string name="feeds_source_transform_help">Iwanang walang laman para i-disable.</string>

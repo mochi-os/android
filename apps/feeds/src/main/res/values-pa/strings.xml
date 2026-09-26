@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi ਫੀਡ</string>
     <string name="feeds_source_type_feed_memories">ਯਾਦਾਂ</string>
-    <string name="feeds_remove_source">ਸਰੋਤ ਹਟਾਓ</string>
+    <string name="feeds_remove_source">ਸਰੋਤ ਹਟਾਈਏ?</string>
     <string name="feeds_suggested_credibility_accept">ਸਵੀਕਾਰ ਕਰੋ</string>
     <string name="feeds_rss_url_copied">RSS URL ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਕਾਪੀ ਹੋ ਗਿਆ</string>
     <string name="feeds_logout">ਲੌਗ ਆਊਟ</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">ਕਦੇ ਨਹੀਂ ਲਿਆ</string>
     <string name="feeds_source_poll">ਪੋਲ</string>
-    <string name="feeds_source_transform">ਪਰਿਵਰਤਨ</string>
+    <string name="feeds_source_transform">AI ਤਬਦੀਲੀ</string>
     <string name="feeds_remove_source_confirm">\"%1$s\" ਨੂੰ ਹਟਾਉਣਾ ਹੈ?</string>
     <string name="feeds_remove_also_delete_posts">ਆਯਾਤ ਕੀਤੀਆਂ ਪੋਸਟਾਂ ਵੀ ਮਿਟਾਓ</string>
     <string name="feeds_suggested_credibility_title">ਸੁਝਾਈ ਭਰੋਸੇਯੋਗਤਾ</string>

@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Mbatalaké langganan</string>
     <string name="forums_list_unsubscribe_title">Mbatalaké langganan</string>
     <string name="forums_create_title">Gawé forum</string>
-    <string name="forums_create_name">Jeneng</string>
+    <string name="forums_create_name">Jeneng forum</string>
     <string name="forums_create_privacy">Privasi</string>
     <string name="forums_create_private">Privat</string>
     <string name="forums_create_public">Publik</string>
-    <string name="forums_create_action">Gawé</string>
+    <string name="forums_create_action">Gawé forum</string>
     <string name="forums_find_title">Golèk forum</string>
     <string name="forums_find_recommended">Disaranaké</string>
     <string name="forums_find_subscribe">Langganan</string>
@@ -145,7 +145,7 @@
     <string name="forums_post_quote">Kutip ing wangsulan</string>
     <string name="forums_comment_quote">Kutip ing wangsulan</string>
     <string name="forums_tag_clear">Resiki saringan</string>
-    <string name="forums_post_tag_remove">Busek tag</string>
+    <string name="forums_post_tag_remove">Busak tag</string>
     <string name="forums_access_add">Tambah aturan akses</string>
     <string name="forums_access_empty">Dereng wonten aturan — standar dipun ginakaken</string>
     <string name="forums_access_target_hint">ID entitas, @grup, * (sedaya), utawi + (anggota)</string>
@@ -156,7 +156,7 @@
     <string name="forums_banner_placeholder">Sugeng rawuh wonten ing forum punika…</string>
     <string name="forums_ai_mode_label">Mode: %1$s</string>
     <string name="forums_ai_mode_heading">Mode AI</string>
-    <string name="forums_ai_mode_off">Mati</string>
+    <string name="forums_ai_mode_off">Dipatèni</string>
     <string name="forums_ai_account">Akun AI</string>
     <string name="forums_ai_prompt_tag">Pituduh tagging</string>
     <string name="forums_ai_prompt_score">Pituduh skor</string>
@@ -178,9 +178,9 @@
     <string name="forums_report_reason_hate">Sengit</string>
     <string name="forums_comment_delete_message">Panjenengan saestu badhe mbusek komentar punika?</string>
     <string name="forums_comment_replying_to">Mangsuli dhateng %1$s</string>
-    <string name="forums_comment_clear_reply">Resiki wangsulan</string>
+    <string name="forums_comment_clear_reply">Busak balesan</string>
     <string name="forums_settings_title">Setelan %1$s</string>
-    <string name="forums_settings_rename_label">Nami forum</string>
+    <string name="forums_settings_rename_label">Jeneng forum</string>
     <string name="forums_settings_danger_zone">Wewengkon bebaya</string>
     <string name="forums_settings_delete_message">Punika badhe mbusek forum lan sedaya kirimanipun kanthi permanen. Boten saged dipun wangsulaken.</string>
 
@@ -216,14 +216,14 @@
     <string name="forums_attachment_move_up">Pindhah munggah</string>
     <string name="forums_attachment_move_down">Pindhah mudhun</string>
     <string name="forums_post_comments">Komentar</string>
-    <string name="forums_all_forums">Kabeh forum</string>
+    <string name="forums_all_forums">Kabèh forum</string>
     <string name="forums_create_allow_search">Ngidini sapa wae nggoleki forum</string>
     <string name="forums_rss_clipboard_label">URL RSS forum</string>
     <string name="forums_tab_moderation">Moderasi</string>
     <string name="forums_access_level_view_full">Mung deleng</string>
     <string name="forums_access_level_none_full">Ora ana akses</string>
     <string name="forums_access_subject_anyone">Sapa wae</string>
-    <string name="forums_access_subject_authenticated">Pangguna sing wis dipriksa</string>
+    <string name="forums_access_subject_authenticated">Panganggo sing wis diverifikasi</string>
     <string name="forums_access_tab_other">Liyané</string>
     <string name="forums_access_authenticated_desc">Sapa wae sing wis mlebu</string>
     <string name="forums_access_anyone_desc">Kalebu pangguna anonim</string>
@@ -256,8 +256,8 @@
     <string name="forums_access_select_group">Pilih grup</string>
     <string name="forums_access_select_rule">Pilih aturan</string>
     <string name="forums_ai_actions_label">Tumindak AI ing kiriman</string>
-    <string name="forums_ai_prompt_custom">Kustom</string>
-    <string name="forums_ai_prompt_score_label">Prompt biji</string>
+    <string name="forums_ai_prompt_custom">Khusus</string>
+    <string name="forums_ai_prompt_score_label">Prompt skor</string>
     <string name="forums_ai_prompt_tag_label">Prompt tag</string>
     <string name="forums_ai_prompt_variables">Variabel: %1$s</string>
     <string name="forums_link">Tautan</string>
@@ -276,8 +276,8 @@
     <string name="forums_moderation_restriction_by">Dening %1$s</string>
     <string name="forums_moderation_restriction_remove_message">Dheweke langsung entuk akses lengkap menyang forum maneh.</string>
     <string name="forums_moderation_restriction_remove_title">Busak watesan kanggo %1$s?</string>
-    <string name="forums_moderation_restriction_state_muted">Dibisokake</string>
-    <string name="forums_moderation_restriction_state_shadowban">Blokir sesidheman</string>
+    <string name="forums_moderation_restriction_state_muted">Dibisukaké</string>
+    <string name="forums_moderation_restriction_state_shadowban">Diblokir meneng-menengan</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Ora ana pangguna sing dibisokake utawa diblokir</string>
     <string name="forums_moderation_section_premoderation_description">Mbutuhake persetujuan sadurunge isi katon</string>
     <string name="forums_moderation_section_ratelimiting_description">Nyegah spam kanthi mbatesi sepira kerepe pangguna bisa kirim</string>
@@ -286,7 +286,7 @@
     <string name="forums_moderation_unit_replies">wangsulan</string>
     <string name="forums_moderation_unit_seconds">detik</string>
     <string name="forums_settings_ai_updated">Setelan AI wis dianyari</string>
-    <string name="forums_settings_forum_renamed">Forum wis diganti jeneng</string>
+    <string name="forums_settings_forum_renamed">Jeneng forum wis diganti</string>
     <string name="forums_settings_name_clear_cd">Busak jeneng</string>
     <string name="forums_settings_unsubscribe_section">Mundur saka forum</string>
     <string name="forums_share_link_title">Tautan forum</string>

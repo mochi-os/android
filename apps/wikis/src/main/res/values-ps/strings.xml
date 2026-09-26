@@ -16,12 +16,12 @@
     <string name="wikis_page_action_rename">بیا نومول</string>
     <string name="wikis_page_action_history">تاریخچه</string>
     <string name="wikis_page_action_delete">ړنګ کړئ</string>
-    <string name="wikis_page_action_section_wiki">Wiki</string>
+    <string name="wikis_page_action_section_wiki">ویکي</string>
     <string name="wikis_page_action_search">لټون</string>
     <string name="wikis_page_action_tags">ټاګونه</string>
     <string name="wikis_page_action_recent_changes">وروستي بدلونونه</string>
     <string name="wikis_page_action_new_page">نوې پاڼه</string>
-    <string name="wikis_page_action_settings">ترتیبات</string>
+    <string name="wikis_page_action_settings">تنظیمات</string>
     <string name="wikis_page_action_unsubscribe">ګډون لغوه کول</string>
     <string name="wikis_title">ویکي ګانې</string>
     <string name="wikis_empty_title">خپل لومړی wiki پیل کړئ</string>
@@ -165,8 +165,8 @@
     <string name="wikis_attachments_empty_title">تر اوسه هیڅ ضمیمې نشته</string>
     <string name="wikis_attachments_no_results_title">هیڅ ضمیمه ستاسو د لټون سره سمون نه خوري</string>
     <string name="wikis_attachments_no_results_description">بل د لټون اصطلاح یا فلټر هڅه وکړئ.</string>
-    <string name="wikis_settings_title">ترتیبات</string>
-    <string name="wikis_settings_tab_settings">ترتیبات</string>
+    <string name="wikis_settings_title">تنظیمات</string>
+    <string name="wikis_settings_tab_settings">تنظیمات</string>
     <string name="wikis_settings_tab_redirects">بیرته لارښوونې</string>
     <string name="wikis_settings_tab_access">لاسرسی</string>
     <string name="wikis_settings_tab_replicas">نقلونه</string>
@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">لرې کول</string>
     <string name="wikis_replicas_remove_failed">د نقل لیرې کولو پاتې راغلل</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi ویکي ګانې</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">د wiki پاڼې د سمونونو، څرګندونو او بلنو په اړه خبرتیاوې.</string>
     <string name="wikis_pageview_toc_expand">فهرست وښیه</string>
@@ -272,7 +272,7 @@
     <string name="wikis_attachments_delete_confirm_message">“%1$s” ړنګ کړئ؟ دا بیرته نه اخیستل کیږي.</string>
     <string name="wikis_attachments_downloading">ډاونلوډ کیږي…</string>
     <string name="wikis_attachments_empty_description">دې پاڼې ته د فایلونو اضافه کولو لپاره پورته کول ووهئ.</string>
-    <string name="wikis_settings_name_save_cd">نوم وساتئ</string>
+    <string name="wikis_settings_name_save_cd">نوم خوندي کړئ</string>
     <string name="wikis_settings_name_cancel_cd">سمون لغوه کړئ</string>
     <string name="wikis_access_level_label">اجازه</string>
     <string name="wikis_access_set_failed">لاسرسی تازه نه شو</string>
@@ -283,7 +283,7 @@
     <string name="wikis_load_more">نور بار کړئ</string>
     <string name="wikis_access_change_level">د لاسرسي کچه</string>
     <string name="wikis_access_subject_anyone">هر څوک</string>
-    <string name="wikis_access_subject_authenticated">تصدیق شوي کاروونکي</string>
+    <string name="wikis_access_subject_authenticated">تصدیق شوي کارنان</string>
 
     <string name="wikis_revision_compare">بدلونونه پرتله کړئ</string>
     <string name="wikis_revision_author">د %1$s له خوا</string>

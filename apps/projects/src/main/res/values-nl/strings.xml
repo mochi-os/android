@@ -244,8 +244,8 @@
     <string name="projects_request_create_title">Merge-verzoek aanmaken</string>
     <string name="projects_request_field_target">Doel-branch</string>
     <string name="projects_diff_title">Verschil: %1$s -&gt; %2$s</string>
-    <string name="projects_tree_collapse">Samenvouwen</string>
-    <string name="projects_tree_expand">Uitvouwen</string>
+    <string name="projects_tree_collapse">Inklappen</string>
+    <string name="projects_tree_expand">Uitklappen</string>
     <string name="projects_tree_move">Verplaatsen</string>
     <string name="projects_tree_move_to_parent">Naar bovenliggend item verplaatsen</string>
     <string name="projects_tree_root_level">(Hoofdniveau)</string>
@@ -257,9 +257,9 @@
     <string name="projects_move_to_column">Verplaats naar kolom</string>
     <string name="projects_move_to_row">Verplaats naar rij</string>
     <string name="projects_move_after">Na %1$s</string>
-    <string name="projects_drag_card">Sleep kaart</string>
-    <string name="projects_drag_row">Sleep rij</string>
-    <string name="projects_drag_column">Sleep kolom</string>
+    <string name="projects_drag_card">Kaart slepen</string>
+    <string name="projects_drag_row">Rij slepen</string>
+    <string name="projects_drag_column">Kolom slepen</string>
     <string name="projects_drag_hint">Houd ingedrukt en sleep om te verplaatsen</string>
     <string name="projects_design_more_options">Meer opties</string>
     <string name="projects_design_clipboard_label">Ontwerp-JSON</string>
@@ -300,7 +300,7 @@
     <string name="projects_views_empty">Geen weergaven gedefinieerd</string>
     <string name="projects_views_empty_subtitle">Maak een bord- of lijstweergave om objecten te groeperen</string>
     <string name="projects_views_delete_message">Weet u zeker dat u de weergave \"%1$s\" wilt verwijderen?</string>
-    <string name="projects_views_columns_field">Kolommenveld</string>
+    <string name="projects_views_columns_field">Kolomveld</string>
     <string name="projects_views_rows_field">Rijenveld (swimlanes)</string>
     <string name="projects_views_border_field">Veld voor randkleur</string>
     <string name="projects_views_filter_classes">Filter op klassen</string>
@@ -318,7 +318,7 @@
     <string name="projects_filter">Filter</string>
     <string name="projects_link">Link</string>
     <string name="projects_filter_clear_all">Alles wissen</string>
-    <string name="projects_filter_all">Alle</string>
+    <string name="projects_filter_all">Alles</string>
     <string name="projects_filter_other">Overig</string>
     <string name="projects_create_object_title">Nieuw</string>
     <string name="projects_settings_section_identity">Identiteit</string>

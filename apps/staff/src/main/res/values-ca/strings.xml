@@ -30,7 +30,7 @@
     <string name="staff_accounts_status_active">Actiu</string>
     <string name="staff_accounts_status_banned">Vetat</string>
     <string name="staff_accounts_status_suspended">Suspès</string>
-    <string name="staff_accounts_submitting">Enviant…</string>
+    <string name="staff_accounts_submitting">S\'està enviant…</string>
     <string name="staff_accounts_suspend">Suspèn</string>
     <string name="staff_accounts_suspended_toast">Compte suspès</string>
     <string name="staff_accounts_unban">Desbloqueja</string>
@@ -53,7 +53,7 @@
     <string name="staff_appeals_notes_label">Notes</string>
     <string name="staff_appeals_reason_label">Motiu del recurs del venedor</string>
     <string name="staff_appeals_submit">Envia</string>
-    <string name="staff_appeals_submitting">Enviant…</string>
+    <string name="staff_appeals_submitting">S\'està enviant…</string>
     <string name="staff_appeals_upheld_toast">Recurs estimat</string>
     <string name="staff_audit_action_account_banned">Vetat</string>
     <string name="staff_audit_action_account_seller_activated">Venedor activat</string>
@@ -211,7 +211,7 @@
     <string name="staff_dashboard_kpi_total_orders">Comandes totals</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">No</string>
-    <string name="staff_dashboard_open_sidebar">Obrir la barra lateral</string>
+    <string name="staff_dashboard_open_sidebar">Obre la barra lateral</string>
     <string name="staff_dashboard_order_fallback">Comanda núm. %1$s</string>
     <string name="staff_dashboard_system">Sistema</string>
     <string name="staff_dashboard_tab_audit">Auditoria</string>
@@ -321,9 +321,9 @@
     <string name="staff_listings_status_rejected">Rebutjat</string>
     <string name="staff_listings_status_removed">Eliminat</string>
     <string name="staff_listings_status_sold">Venut</string>
-    <string name="staff_listings_submitting">Enviant…</string>
+    <string name="staff_listings_submitting">S\'està enviant…</string>
     <string name="staff_moderation_empty">Sense entrades de moderació</string>
-    <string name="staff_moderation_filter_clear">Netejar el filtre</string>
+    <string name="staff_moderation_filter_clear">Esborra el filtre</string>
     <string name="staff_moderation_listing_filter_placeholder">ID de l\'anunci</string>
     <string name="staff_moderation_system">Sistema</string>
     <string name="staff_moderation_unknown_listing">#%1$s</string>
@@ -365,7 +365,7 @@
     <string name="staff_reports_status_pending">Pendent</string>
     <string name="staff_reports_status_reviewed">Revisat</string>
     <string name="staff_reports_submit">Envia</string>
-    <string name="staff_reports_submitting">Enviant…</string>
+    <string name="staff_reports_submitting">S\'està enviant…</string>
     <string name="staff_reports_type_listing">Anunci</string>
     <string name="staff_reports_type_user">Usuari</string>
     <string name="staff_reports_view">Visualitza</string>

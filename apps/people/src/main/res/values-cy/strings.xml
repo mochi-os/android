@@ -100,7 +100,7 @@
     <string name="people_welcome_title">Croeso i Pobl</string>
     <string name="people_person_banner_alt">Baner ar gyfer %1$s</string>
     <string name="people_person_private">Mae\'r proffil hwn yn breifat</string>
-    <string name="people_person_state_invited">Wedi gwahodd</string>
+    <string name="people_person_state_invited">Wedi\'i wahodd</string>
 
     <string name="people_invitations_accept_all">Derbyn popeth</string>
     <string name="people_invitations_decline_all">Gwrthod popeth</string>
@@ -117,7 +117,7 @@
     <string name="people_profile_avatar">Afatar</string>
     <string name="people_profile_banner">Baner</string>
     <string name="people_contacts_search_placeholder">Chwilio…</string>
-    <string name="people_contacts_invited">Wedi gwahodd</string>
+    <string name="people_contacts_invited">Wedi\'i wahodd</string>
     <string name="people_contacts_accept">Derbyn</string>
     <string name="people_contacts_message">Anfon neges</string>
     <string name="people_contacts_no_people_found">Heb ddod o hyd i bobl</string>
@@ -147,18 +147,18 @@
     <string name="people_contact_phone">Ffôn</string>
     <string name="people_contact_title">Teitl swydd</string>
     <string name="people_contacts_title">Cysylltiadau</string>
-    <string name="people_contacts_all">Pob cysylltiad</string>
+    <string name="people_contacts_all">Pob cyswllt</string>
     <string name="people_contacts_empty">Heb ddod o hyd i gysylltiadau</string>
     <string name="people_contacts_add_to_start">Ychwanegwch gysylltiadau i ddechrau cysylltu</string>
     <string name="people_contacts_actions">Gweithredoedd cysylltiad</string>
     <string name="people_contacts_friend">Ffrind</string>
     <string name="people_contacts_invite">Gwahodd</string>
     <string name="people_contacts_unfriend_confirm">Ni fydd %1$s yn ffrind i chi mwyach. Mae\'r cysylltiad yn aros yn eich llyfr cyfeiriadau.</string>
-    <string name="people_contacts_delete">Dileu\'r cysylltiad</string>
+    <string name="people_contacts_delete">Dileu cyswllt</string>
     <string name="people_contacts_delete_confirm">Dileu %1$s o\'ch cysylltiadau?</string>
     <string name="people_contacts_delete_friend_confirm">Dileu %1$s o\'ch cysylltiadau? Bydd eich cyfeillgarwch yn dod i ben hefyd.</string>
-    <string name="people_contact_new_title">Cysylltiad newydd</string>
-    <string name="people_contact_edit_title">Golygu\'r cysylltiad</string>
+    <string name="people_contact_new_title">Cyswllt newydd</string>
+    <string name="people_contact_edit_title">Golygu cyswllt</string>
     <string name="people_contact_given">Enw cyntaf</string>
     <string name="people_contact_family">Cyfenw</string>
     <string name="people_contact_nickname">Llysenw</string>
@@ -175,7 +175,7 @@
     <string name="people_contact_type_mobile">Symudol</string>
     <string name="people_contact_pick_date">Dewiswch ddyddiad</string>
     <string name="people_contact_conflict">Mae\'r cysylltiad wedi newid</string>
-    <string name="people_add_contact_title">Ychwanegu cysylltiad</string>
+    <string name="people_add_contact_title">Ychwanegu cyswllt</string>
     <string name="people_add_contact_add">Ychwanegu at gysylltiadau</string>
     <string name="people_add_contact_in_contacts">Yn y cysylltiadau</string>
     <string name="people_books_create">Creu llyfr cyfeiriadau</string>

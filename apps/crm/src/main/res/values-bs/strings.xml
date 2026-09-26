@@ -6,7 +6,7 @@
     <string name="crm_list_logout">Odjavi se</string>
     <string name="crm_list_create">Kreiraj CRM</string>
     <string name="crm_create_title">Kreiraj CRM</string>
-    <string name="crm_create_name">Ime</string>
+    <string name="crm_create_name">Naziv</string>
     <string name="crm_create_description">Opis</string>
     <string name="crm_create_template_none">Ništa</string>
     <string name="crm_create_action">Kreiraj</string>
@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Ikona</string>
     <string name="crm_option_icon_placeholder">npr. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Otkaži pretplatu</string>
-    <string name="crm_settings_delete_crm">Obriši projekt</string>
+    <string name="crm_settings_delete_crm">Obriši CRM</string>
     <string name="crm_settings_delete_confirm_title">Obriši CRM</string>
     <string name="crm_settings_unsubscribe_title">Otkaži pretplatu</string>
     <string name="crm_settings_unsubscribe_message">Jeste li sigurni da se želite odjaviti s ovog CRM-a?</string>
@@ -86,7 +86,7 @@
     <string name="crm_classes_add">Dodaj klasu</string>
     <string name="crm_classes_add_dialog_title">Dodaj klasu</string>
     <string name="crm_classes_create">Kreiraj</string>
-    <string name="crm_class_name">Ime</string>
+    <string name="crm_class_name">Naziv</string>
     <string name="crm_class_save_name">Sačuvaj naziv</string>
     <string name="crm_class_title_field">Polje naslova</string>
     <string name="crm_class_fields">Polja</string>
@@ -98,7 +98,7 @@
     <string name="crm_field_type_user">Korisnik</string>
     <string name="crm_field_type_date">Datum</string>
     <string name="crm_field_type_checklist">Lista</string>
-    <string name="crm_field_name">Ime</string>
+    <string name="crm_field_name">Naziv</string>
     <string name="crm_field_type">Tip</string>
     <string name="crm_field_flags">Zastave</string>
     <string name="crm_field_required">Obavezno</string>
@@ -139,14 +139,14 @@
     <string name="crm_sort_field">Sortiraj po</string>
     <string name="crm_sort_direction_asc">Rastuće</string>
     <string name="crm_sort_direction_desc">Opadajuće</string>
-    <string name="crm_create_object_parent_none">(nijedan)</string>
+    <string name="crm_create_object_parent_none">(nema)</string>
     <string name="crm_views_move_up">Pomjeri gore</string>
     <string name="crm_views_move_down">Pomjeri dolje</string>
     <string name="crm_views_filter">Filter (sačuvan, još nije primijenjen)</string>
     <string name="crm_people_empty">Još niko nema pristup</string>
     <string name="crm_settings_delete_confirm_message">Jeste li sigurni da želite obrisati ovaj CRM? Svi objekti, komentari i postavke će biti trajno uklonjeni.</string>
     <string name="crm_object_unwatch">Prestani pratiti</string>
-    <string name="crm_object_delete_title">Obriši objekt</string>
+    <string name="crm_object_delete_title">Obriši objekat</string>
     <string name="crm_object_delete_message">Jeste li sigurni da želite obrisati ovaj objekt? Ova radnja se ne može poništiti.</string>
     <string name="crm_parent_none">Bez nadređenog</string>
     <string name="crm_links_empty">Nema veza</string>
@@ -203,10 +203,10 @@
     <string name="crm_field_type_enumerated">Nabrojano</string>
     <string name="crm_field_label">Polje: %1$s</string>
     <string name="crm_field_readonly">Samo za čitanje</string>
-    <string name="crm_field_sortable">Sortabilno</string>
-    <string name="crm_field_filterable">Filtrabilno</string>
+    <string name="crm_field_sortable">Može se sortirati</string>
+    <string name="crm_field_filterable">Može se filtrirati</string>
     <string name="crm_field_show_on_card">Prikaži na kartici</string>
-    <string name="crm_field_multi">Višestruki izbor</string>
+    <string name="crm_field_multi">Višestruki odabir</string>
     <string name="crm_field_position">Pozicija prikaza</string>
     <string name="crm_field_position_header">Zaglavlje</string>
     <string name="crm_field_position_body">Glavni dio</string>
@@ -225,8 +225,8 @@
     <string name="crm_views_rows_field">Polje redova (trake)</string>
     <string name="crm_views_border_field">Polje boje ivice</string>
     <string name="crm_views_sort_by">Sortiraj po</string>
-    <string name="crm_views_direction_asc">Uzlazno</string>
-    <string name="crm_views_direction_desc">Silazno</string>
+    <string name="crm_views_direction_asc">Rastuće</string>
+    <string name="crm_views_direction_desc">Opadajuće</string>
     <string name="crm_views_filter_classes">Filtriraj po klasama</string>
     <string name="crm_views_by">po %1$s</string>
     <string name="crm_views_sorted">sortirano %1$s</string>
@@ -265,7 +265,7 @@
     <string name="crm_access_select_role">Odaberi ulogu</string>
     <string name="crm_access_selected">Odabrano: %1$s</string>
     <string name="crm_access_subject_anyone">Bilo ko</string>
-    <string name="crm_access_subject_authenticated">Autentificirani korisnici</string>
+    <string name="crm_access_subject_authenticated">Prijavljeni korisnici</string>
     <string name="crm_access_authenticated_desc">Svako ko je prijavljen</string>
     <string name="crm_access_anyone_desc">Uključujući anonimne korisnike</string>
     <string name="crm_access_role_design">Dizajniranje, kreiranje, uređivanje, komentiranje i pregled</string>

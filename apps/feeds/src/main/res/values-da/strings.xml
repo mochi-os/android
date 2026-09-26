@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi-feed</string>
     <string name="feeds_source_type_feed_memories">Minder</string>
-    <string name="feeds_remove_source">Fjern kilde</string>
+    <string name="feeds_remove_source">Fjern kilde?</string>
     <string name="feeds_suggested_credibility_accept">Accepter</string>
     <string name="feeds_rss_url_copied">RSS-URL kopieret til udklipsholderen</string>
     <string name="feeds_logout">Log ud</string>
@@ -112,7 +112,7 @@
     <string name="feeds_clipboard_label_rss">RSS-URL</string>
     <string name="feeds_source_never_fetched">Aldrig hentet</string>
     <string name="feeds_source_poll">Forespørg</string>
-    <string name="feeds_source_transform">Transformér</string>
+    <string name="feeds_source_transform">AI-transformation</string>
     <string name="feeds_remove_source_confirm">Fjern \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Slet også importerede indlæg</string>
     <string name="feeds_suggested_credibility_title">Foreslået troværdighed</string>
@@ -172,7 +172,7 @@
     <string name="feeds_allow_search">Tillad alle at søge efter feed</string>
     <string name="feeds_post_content">Indlæggets indhold</string>
     <string name="feeds_enable_memories">Aktivér minder</string>
-    <string name="feeds_permission_request_title">Anmodning om tilladelse</string>
+    <string name="feeds_permission_request_title">Tilladelsesanmodning</string>
     <string name="feeds_unsubscribe_confirm">Afmeld feedet?</string>
     <string name="feeds_settings_title">Indstillinger for %1$s</string>
     <string name="feeds_source_transform_help">Lad være tomt for at deaktivere.</string>
@@ -206,7 +206,7 @@
     <string name="feeds_banner_dismiss">Afvis banner</string>
     <string name="feeds_members_search">Filtrer medlemmer</string>
     <string name="feeds_ai_prompt_default">Standard</string>
-    <string name="feeds_ai_prompt_custom">Tilpasset</string>
+    <string name="feeds_ai_prompt_custom">Brugerdefineret</string>
     <string name="feeds_ai_prompt_variables">Variabler: %1$s</string>
     <string name="feeds_link">Link</string>
     <string name="feeds_share_link_title">Feed-link</string>

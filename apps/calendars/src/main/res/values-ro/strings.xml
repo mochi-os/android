@@ -9,7 +9,7 @@
     <string name="calendars_rename">Redenumește</string>
     <string name="calendars_delete">Șterge</string>
     <string name="calendars_previous">Anterior</string>
-    <string name="calendars_next">Înainte</string>
+    <string name="calendars_next">Următor</string>
     <string name="calendars_view">Vizualizare</string>
     <string name="calendars_view_list">Listă</string>
     <string name="calendars_list_search">Caută</string>
@@ -59,14 +59,14 @@
     <string name="calendars_only_this">Doar acesta</string>
     <string name="calendars_create">Creează calendar</string>
     <string name="calendars_subscribe">Abonează-te la calendar</string>
-    <string name="calendars_poll">Actualizează acum</string>
+    <string name="calendars_poll">Verifică acum</string>
     <string name="calendars_delete_title">Ștergi %1$s?</string>
     <string name="calendars_delete_message">Evenimentele sale se șterg odată cu el.</string>
-    <string name="calendars_today">Azi</string>
+    <string name="calendars_today">Astăzi</string>
     <string name="calendars_view_week">Săptămână</string>
     <string name="calendars_view_multiweek">Mai multe săptămâni</string>
     <string name="calendars_view_month">Lună</string>
-    <string name="calendars_workweek">Săptămâna de lucru</string>
+    <string name="calendars_workweek">Săptămână de lucru</string>
     <string name="calendars_range">%1$s până la %2$s</string>
     <string name="calendars_truncated">Unele evenimente din acest interval nu sunt afișate.</string>
     <string name="calendars_list_empty">Niciun eveniment</string>
@@ -165,7 +165,7 @@
     <string name="calendars_poll_unauthorised">Serverul calendarului a respins datele de autentificare ale contului</string>
     <string name="calendars_subscribe_username">Nume de utilizator</string>
     <string name="calendars_subscribe_password">Parolă</string>
-    <string name="calendars_subscribe_connect">Conectează-te</string>
+    <string name="calendars_subscribe_connect">Conectare</string>
     <string name="calendars_subscribe_server">Alt server Mochi sau CalDAV</string>
     <string name="calendars_subscribe_address">Adresă de calendar publicată (doar citire)</string>
     <string name="calendars_subscribe_password_apple">Parolă specifică aplicației</string>

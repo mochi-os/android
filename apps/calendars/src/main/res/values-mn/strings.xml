@@ -4,7 +4,7 @@
     <string name="calendars_subscribe_submit">Захиалах</string>
     <string name="calendars_subscribe_url">Хаяг</string>
     <string name="calendars_connect_device">Төхөөрөмж холбох</string>
-    <string name="calendars_preferences">Тохиргоо</string>
+    <string name="calendars_preferences">Тохиргоонууд</string>
     <string name="calendars_name">Нэр</string>
     <string name="calendars_rename">Нэр өөрчлөх</string>
     <string name="calendars_delete">Устгах</string>
@@ -20,7 +20,7 @@
     <string name="calendars_repeat_never">Хэзээ ч</string>
     <string name="calendars_repeat_monthly">Сар бүр</string>
     <string name="calendars_repeat_yearly">Жилийн</string>
-    <string name="calendars_repeat_custom">Тохируулсан</string>
+    <string name="calendars_repeat_custom">Захиалгат</string>
     <string name="calendars_reminder_none">Алга</string>
     <string name="calendars_day_sunday">Ням гараг</string>
     <string name="calendars_day_monday">Даваа</string>
@@ -154,7 +154,7 @@
     <string name="calendars_link_submit">Холбох</string>
     <string name="calendars_link_sync">Одоо синк хийх</string>
     <string name="calendars_link_grant">Хуанлийн хандалтыг зөвшөөрөх</string>
-    <string name="calendars_link_linked">Холбосон</string>
+    <string name="calendars_link_linked">Холбогдсон</string>
     <string name="calendars_link_marker">Холбосон хуанли</string>
     <string name="calendars_link_remote_empty">Хуанли байхгүй</string>
     <string name="calendars_poll_conflict">Үйл явдал хоёр талдаа өөрчлөгдсөн</string>

@@ -32,8 +32,8 @@
     <string name="chess_draw_accept">Зөвшөөрөх</string>
     <string name="chess_draw_decline">Татгалзах</string>
     <string name="chess_status_checkmate_you_win">Шахмат — та ялсан!</string>
-    <string name="chess_status_stalemate">Тэнцсэн — тэнцэв</string>
-    <string name="chess_status_draw">Зурах</string>
+    <string name="chess_status_stalemate">Пат — тэнцээ</string>
+    <string name="chess_status_draw">Тэнцээ</string>
     <string name="chess_status_check_your_move">Шах — таны нүүдэл</string>
     <string name="chess_status_your_move">Таны нүүдэл</string>
     <string name="chess_move_subject_you">Та</string>

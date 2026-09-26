@@ -64,7 +64,7 @@
     <string name="market_checkout_address_heading">Dodacia adresa</string>
     <string name="market_checkout_address_line1">Adresa, riadok 1</string>
     <string name="market_checkout_address_line2">Adresa, riadok 2</string>
-    <string name="market_checkout_address_name">Názov</string>
+    <string name="market_checkout_address_name">Meno</string>
     <string name="market_checkout_address_postcode">PSČ</string>
     <string name="market_checkout_address_region">Región</string>
     <string name="market_checkout_back">Späť</string>
@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Nahlásiť inzerát</string>
     <string name="market_listing_detail_save">Uložiť</string>
     <string name="market_listing_detail_seller_heading">Predajca</string>
-    <string name="market_listing_detail_shipping_heading">Doručenie</string>
+    <string name="market_listing_detail_shipping_heading">Možnosti doručenia</string>
     <string name="market_listing_detail_subscribe">Prihlásiť na odber</string>
     <string name="market_listing_detail_tags_heading">Tagy</string>
     <string name="market_listing_detail_title">Inzerát</string>
@@ -326,8 +326,8 @@
     <string name="market_sale_tracking_label">Číslo sledovania</string>
     <string name="market_saved_title">Uložené</string>
     <string name="market_search_clear">Vymazať vyhľadávanie</string>
-    <string name="market_section_categories">Prehľadávať kategórie</string>
-    <string name="market_section_listings">Najnovšie inzeráty</string>
+    <string name="market_section_categories">Prehliadať kategórie</string>
+    <string name="market_section_listings">Nedávne inzeráty</string>
     <string name="market_section_recent">Nedávno zobrazené</string>
     <string name="market_ship_dialog_cancel">Zrušiť</string>
     <string name="market_ship_dialog_submit">Potvrdiť</string>
@@ -404,9 +404,9 @@
     <string name="market_type_digital">Digitálne</string>
     <string name="market_type_physical">Fyzický</string>
     <string name="market_messages_send">Odoslať</string>
-    <string name="market_appeal_dialog_submitting">Odosiela sa…</string>
-    <string name="market_dispute_dialog_submitting">Odosiela sa…</string>
-    <string name="market_sale_review_response_submitting">Odosiela sa…</string>
+    <string name="market_appeal_dialog_submitting">Odosielanie…</string>
+    <string name="market_dispute_dialog_submitting">Odosielanie…</string>
+    <string name="market_sale_review_response_submitting">Odosielanie…</string>
     <string name="market_checkout_subscribing">Prihlasovanie na odber…</string>
     <string name="market_filter_remove">Odstrániť filter</string>
     <string name="market_listing_detail_sales_count">%1$d predajov</string>
@@ -444,7 +444,7 @@
     <string name="market_carousel_thumbnail">Miniatúra %1$d</string>
     <string name="market_checkout_browser_unavailable">Nie je dostupný žiadny prehliadač na otvorenie platobnej stránky</string>
     <string name="market_checkout_pay_button">Zaplatiť cez Stripe</string>
-    <string name="market_checkout_processing">Spracúva sa…</string>
+    <string name="market_checkout_processing">Spracováva sa…</string>
     <string name="market_checkout_pwyw_label">Vaša cena (minimum %1$s)</string>
     <string name="market_checkout_pwyw_min_error">Suma musí byť aspoň %1$s</string>
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
@@ -544,10 +544,10 @@
     <string name="market_listings_action_share">Zdieľať</string>
     <string name="market_listings_delete_failed">Ponuku sa nepodarilo odstrániť</string>
     <string name="market_listings_delete_message">Týmto sa koncept natrvalo odstráni z vášho účtu.</string>
-    <string name="market_listings_delete_title">Odstrániť ponuku?</string>
+    <string name="market_listings_delete_title">Odstrániť inzerát?</string>
     <string name="market_listings_empty_subtitle">Klepnutím na Nová ponuka vytvoríte svoju prvú položku.</string>
     <string name="market_listings_load_failed">Vaše ponuky sa nepodarilo načítať</string>
-    <string name="market_listings_new">Nová ponuka</string>
+    <string name="market_listings_new">Nový inzerát</string>
     <string name="market_listings_search_placeholder">Hľadať vo vašich ponukách</string>
     <string name="market_listings_share_chooser">Zdieľať ponuku</string>
     <string name="market_messages_compose_placeholder">Napíšte správu…</string>
@@ -663,7 +663,7 @@
     <string name="market_seller_become_heading">Staňte sa predajcom</string>
     <string name="market_seller_become_title">Staňte sa predajcom</string>
     <string name="market_seller_check_status">Skontrolovať stav</string>
-    <string name="market_seller_checking">Kontroluje sa...</string>
+    <string name="market_seller_checking">Prebieha kontrola…</string>
     <string name="market_seller_connect_stripe">Pripojiť Stripe</string>
     <string name="market_seller_connecting">Načítava sa…</string>
     <string name="market_seller_fee_loading">Načítavajú sa detaily poplatkov…</string>

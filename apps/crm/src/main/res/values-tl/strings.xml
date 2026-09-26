@@ -159,7 +159,7 @@
     <string name="crm_parent_none">Walang magulang</string>
     <string name="crm_links_empty">Walang link</string>
     <string name="crm_links_section_relates">Kaugnay ng</string>
-    <string name="crm_links_section_duplicated_by">Dinoble ng</string>
+    <string name="crm_links_section_duplicated_by">Dinuplika ng</string>
     <string name="crm_links_type">Uri ng link</string>
     <string name="crm_links_type_relates">Kaugnay ng</string>
     <string name="crm_links_remove">Alisin ang link</string>
@@ -265,7 +265,7 @@
     <string name="crm_access_select_role">Pumili ng tungkulin</string>
     <string name="crm_access_selected">Napili: %1$s</string>
     <string name="crm_access_subject_anyone">Kahit sino</string>
-    <string name="crm_access_subject_authenticated">Mga napatotohanang user</string>
+    <string name="crm_access_subject_authenticated">Mga naka-authenticate na user</string>
     <string name="crm_access_authenticated_desc">Sinumang naka-log in</string>
     <string name="crm_access_anyone_desc">Kasama ang mga anonymous na user</string>
     <string name="crm_access_role_design">Magdisenyo, gumawa, mag-edit, magkomento, at tumingin</string>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="wikis_sidebar_header">Wiki</string>
+    <string name="wikis_sidebar_header">উইকি</string>
     <string name="wikis_sidebar_all">সব wiki</string>
     <string name="wikis_sidebar_find">উইকি খুঁজুন</string>
     <string name="wikis_sidebar_create">wiki তৈরি করুন</string>
@@ -22,7 +22,7 @@
     <string name="wikis_page_action_new_page">নতুন পৃষ্ঠা</string>
     <string name="wikis_page_action_settings">সেটিংস</string>
     <string name="wikis_page_action_unsubscribe">আনসাবস্ক্রাইব করুন</string>
-    <string name="wikis_title">Wiki</string>
+    <string name="wikis_title">উইকি</string>
     <string name="wikis_empty_title">আপনার প্রথম wiki শুরু করুন</string>
     <string name="wikis_empty_subtitle">সাবস্ক্রাইব করার জন্য একটি উইকি অনুসন্ধান করুন, অথবা আপনার নিজের ডকুমেন্টেশন প্রকাশ করার জন্য একটি তৈরি করুন।</string>
     <string name="wikis_create_button">wiki তৈরি করুন</string>
@@ -215,7 +215,7 @@
     <string name="wikis_replicas_remove_confirm_title">রেপ্লিকা সরাবেন?</string>
     <string name="wikis_replicas_remove_confirm_action">সরান</string>
     <string name="wikis_replicas_remove_failed">রেপ্লিকা সরাতে ব্যর্থ</string>
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi উইকি</string>
     <string name="wikis_channel_name">Wikis নোটিফিকেশন</string>
     <string name="wikis_channel_description">পৃষ্ঠা সম্পাদনা, মন্তব্য এবং আমন্ত্রণ সম্পর্কে নোটিফিকেশন।</string>
     <string name="wikis_pageview_toc_expand">সূচিপত্র দেখান</string>

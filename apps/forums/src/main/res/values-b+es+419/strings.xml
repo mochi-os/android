@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Cancelar suscripción</string>
     <string name="forums_list_unsubscribe_title">Cancelar suscripción</string>
     <string name="forums_create_title">Crear foro</string>
-    <string name="forums_create_name">Nombre</string>
+    <string name="forums_create_name">Nombre del foro</string>
     <string name="forums_create_privacy">Privacidad</string>
     <string name="forums_create_private">Privado</string>
     <string name="forums_create_public">Público</string>
-    <string name="forums_create_action">Crear</string>
+    <string name="forums_create_action">Crear foro</string>
     <string name="forums_find_title">Buscar foros</string>
     <string name="forums_find_recommended">Recomendado</string>
     <string name="forums_find_subscribe">Suscribirse</string>
@@ -278,7 +278,7 @@
     <string name="forums_moderation_restriction_remove_message">Recupera el acceso completo al foro de inmediato.</string>
     <string name="forums_moderation_restriction_by">Por %1$s</string>
     <string name="forums_moderation_restriction_state_muted">Silenciado</string>
-    <string name="forums_moderation_restriction_state_shadowban">Bloqueado en la sombra</string>
+    <string name="forums_moderation_restriction_state_shadowban">Bloqueado en secreto</string>
     <string name="forums_moderation_section_premoderation_description">Requiere aprobación antes de que el contenido sea visible</string>
     <string name="forums_moderation_section_ratelimiting_description">Evita el spam limitando la frecuencia con la que los usuarios pueden publicar</string>
     <string name="forums_moderation_require_posts_description">Los hilos nuevos deben aprobarse</string>

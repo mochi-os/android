@@ -30,7 +30,7 @@
     <string name="staff_accounts_status_active">সক্রিয়</string>
     <string name="staff_accounts_status_banned">নিষিদ্ধ</string>
     <string name="staff_accounts_status_suspended">স্থগিত</string>
-    <string name="staff_accounts_submitting">পাঠানো হচ্ছে…</string>
+    <string name="staff_accounts_submitting">জমা দেওয়া হচ্ছে…</string>
     <string name="staff_accounts_suspend">স্থগিত করুন</string>
     <string name="staff_accounts_suspended_toast">অ্যাকাউন্ট স্থগিত করা হয়েছে</string>
     <string name="staff_accounts_unban">নিষেধাজ্ঞা প্রত্যাহার করুন</string>
@@ -53,7 +53,7 @@
     <string name="staff_appeals_notes_label">নোট</string>
     <string name="staff_appeals_reason_label">বিক্রেতার আপিলের কারণ</string>
     <string name="staff_appeals_submit">জমা দিন</string>
-    <string name="staff_appeals_submitting">পাঠানো হচ্ছে…</string>
+    <string name="staff_appeals_submitting">জমা দেওয়া হচ্ছে…</string>
     <string name="staff_appeals_upheld_toast">আপিল বহাল রাখা হয়েছে</string>
     <string name="staff_audit_action_account_banned">নিষিদ্ধ</string>
     <string name="staff_audit_action_account_seller_activated">বিক্রেতা সক্রিয় হয়েছে</string>
@@ -65,7 +65,7 @@
     <string name="staff_audit_action_account_unbanned">নিষেধাজ্ঞা প্রত্যাহার করা হয়েছে</string>
     <string name="staff_audit_action_account_unsuspended">স্থগিতাদেশ প্রত্যাহার করা হয়েছে</string>
     <string name="staff_audit_action_auction_bid_placed">বিড স্থাপন করা হয়েছে</string>
-    <string name="staff_audit_action_auction_cancelled">নিলাম বাতিল</string>
+    <string name="staff_audit_action_auction_cancelled">নিলাম বাতিল করা হয়েছে</string>
     <string name="staff_audit_action_auction_created">নিলাম তৈরি হয়েছে</string>
     <string name="staff_audit_action_auction_ended_sold">নিলাম বিক্রি হয়েছে</string>
     <string name="staff_audit_action_auction_ended_unsold">নিলাম অবিক্রিত অবস্থায় শেষ হয়েছে</string>
@@ -286,7 +286,7 @@
     <string name="staff_filter_label_moderation">মডারেশন</string>
     <string name="staff_filter_label_query">অনুসন্ধান</string>
     <string name="staff_filter_label_seller">বিক্রেতা</string>
-    <string name="staff_filter_label_status">স্থিতি</string>
+    <string name="staff_filter_label_status">স্ট্যাটাস</string>
     <string name="staff_filter_label_type">ধরন</string>
     <string name="staff_listings_action_approve_title">তালিকা অনুমোদন করুন</string>
     <string name="staff_listings_action_reject_title">লিস্টিং প্রত্যাখ্যান করুন</string>
@@ -321,9 +321,9 @@
     <string name="staff_listings_status_rejected">প্রত্যাখ্যাত</string>
     <string name="staff_listings_status_removed">সরানো হয়েছে</string>
     <string name="staff_listings_status_sold">বিক্রি হয়েছে</string>
-    <string name="staff_listings_submitting">পাঠানো হচ্ছে…</string>
+    <string name="staff_listings_submitting">জমা দেওয়া হচ্ছে…</string>
     <string name="staff_moderation_empty">কোনো মডারেশন এন্ট্রি নেই</string>
-    <string name="staff_moderation_filter_clear">ফিল্টার সাফ করুন</string>
+    <string name="staff_moderation_filter_clear">ফিল্টার পরিষ্কার করুন</string>
     <string name="staff_moderation_listing_filter_placeholder">তালিকা আইডি</string>
     <string name="staff_moderation_system">সিস্টেম</string>
     <string name="staff_moderation_unknown_listing">#%1$s</string>
@@ -365,7 +365,7 @@
     <string name="staff_reports_status_pending">মুলতুবি</string>
     <string name="staff_reports_status_reviewed">রিভিউ করা হয়েছে</string>
     <string name="staff_reports_submit">জমা দিন</string>
-    <string name="staff_reports_submitting">পাঠানো হচ্ছে…</string>
+    <string name="staff_reports_submitting">জমা দেওয়া হচ্ছে…</string>
     <string name="staff_reports_type_listing">তালিকা</string>
     <string name="staff_reports_type_user">ব্যবহারকারী</string>
     <string name="staff_reports_view">দেখুন</string>

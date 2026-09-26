@@ -16,7 +16,7 @@
     <string name="wikis_page_action_rename">איבערטויפֿן</string>
     <string name="wikis_page_action_history">היסטאָריע</string>
     <string name="wikis_page_action_delete">אויסמעקן</string>
-    <string name="wikis_page_action_section_wiki">Wiki</string>
+    <string name="wikis_page_action_section_wiki">וויקי</string>
     <string name="wikis_page_action_search">זוך</string>
     <string name="wikis_page_action_tags">טאַגן</string>
     <string name="wikis_page_action_recent_changes">לעצטיקע ענדערונגען</string>
@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">אַראָפּנעמען</string>
     <string name="wikis_replicas_remove_failed">ניט געלונגען צו אַראָפּנעמען רעפּליקע</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi וויקיס</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">מעלדונגען וועגן wiki־בלאַט־רעדאַקציעס, קאָמענטאַרן און פֿאַרבעטונגען.</string>
     <string name="wikis_pageview_toc_expand">ווײַז אינהאַלט־טאַבעלע</string>
@@ -225,7 +225,7 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">באַנײַט %1$s</string>
     <string name="wikis_pageview_not_found_description">דער בלאַט „%1$s“ עקזיסטירט נאָך נישט.</string>
-    <string name="wikis_pageview_share_chooser">וויקי־לינק</string>
+    <string name="wikis_pageview_share_chooser">וויקי לינק</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">לינק</string>
     <string name="wikis_open_sidebar">עפֿן זייַטל</string>
@@ -283,7 +283,7 @@
     <string name="wikis_load_more">לאָדן מער</string>
     <string name="wikis_access_change_level">צוטריט שטאַפּל</string>
     <string name="wikis_access_subject_anyone">ווער עס איז</string>
-    <string name="wikis_access_subject_authenticated">אַטענטיפֿיצירטע באַניצער</string>
+    <string name="wikis_access_subject_authenticated">אױטענטיפֿיצירטע באַניצער</string>
 
     <string name="wikis_revision_compare">פֿאַרגלײַך ענדערונגען</string>
     <string name="wikis_revision_author">לױט %1$s</string>

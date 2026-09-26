@@ -123,7 +123,7 @@
     <string name="game_chat_move_played">%1$s memainkan %2$s</string>
 
     <string name="error_network">Tidak dapat terhubung. Periksa koneksi internet Anda dan coba lagi.</string>
-    <string name="error_authentication_required">Autentikasi diperlukan</string>
+    <string name="error_authentication_required">Diperlukan autentikasi</string>
     <string name="error_not_found">Tidak ditemukan</string>
     <string name="error_server">Kesalahan server (%1$d). Silakan coba lagi nanti.</string>
     <string name="error_unexpected">Terjadi kesalahan tak terduga</string>
@@ -189,7 +189,7 @@
     <string name="format_time_days_short">%1$d hr</string>
     <string name="format_time_weeks_short">%1$d mgg</string>
     <string name="format_time_months_short">%1$d bln</string>
-    <string name="reaction_add">Tambah reaksi</string>
+    <string name="reaction_add">Tambahkan reaksi</string>
     <string name="push_service_channel">Notifikasi Mochi</string>
     <string name="push_service_channel_description">Menjaga Mochi tetap terhubung untuk menerima notifikasi</string>
     <string name="push_service_group">Layanan latar belakang</string>

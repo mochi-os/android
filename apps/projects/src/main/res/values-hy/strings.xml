@@ -20,7 +20,7 @@
     <string name="projects_find_title">Գտնել նախագծեր</string>
     <string name="projects_find_recommended">Առաջարկվող</string>
     <string name="projects_find_subscribe">Բաժանորդագրվել</string>
-    <string name="projects_loading">Կողպված է</string>
+    <string name="projects_loading">Բեռնվում է…</string>
     <string name="projects_watched">Հետևված</string>
     <string name="projects_create_object">Ստեղծել օբյեկտ</string>
     <string name="projects_search">Որոնել</string>
@@ -186,7 +186,7 @@
     <string name="projects_list_empty">Դեռ ծրագրեր չկան</string>
     <string name="projects_find_search_placeholder">Փնտրել ծրագրեր կամ տեղադրել URL</string>
     <string name="projects_find_search_hint">Փնտրեք ծրագրեր՝ բաժանորդագրվելու համար</string>
-    <string name="projects_create_object_parent_none">(չկա)</string>
+    <string name="projects_create_object_parent_none">(ոչ մեկը)</string>
     <string name="projects_add_child">Ավելացնել զավակ</string>
     <string name="projects_views_filter">Զտիչ (պահպանված է, դեռ չի կիրառվել)</string>
     <string name="projects_people_empty">Դեռ ոչ ոք մուտք չունի</string>
@@ -197,14 +197,14 @@
     <string name="projects_object_delete_title">Ջնջել օբյեկտը</string>
     <string name="projects_object_delete_message">Իսկապե՞ս ցանկանում եք ջնջել այս օբյեկտը: Այս գործողությունը հնարավոր չէ հետարկել:</string>
     <string name="projects_parent_none">Ծնող չկա</string>
-    <string name="projects_links_empty">Հղումներ չկան</string>
+    <string name="projects_links_empty">Կապեր չկան</string>
     <string name="projects_links_section_relates">Կապված է</string>
     <string name="projects_links_section_duplicated_by">Կրկնօրինակված է</string>
-    <string name="projects_links_type">Հղման տեսակ</string>
+    <string name="projects_links_type">Կապի տեսակ</string>
     <string name="projects_links_type_relates">Կապված է</string>
     <string name="projects_links_remove">Հեռացնել հղումը</string>
     <string name="projects_comment_replying_to">Պատասխանում է %1$s-ին</string>
-    <string name="projects_comment_clear_reply">Չեղարկել պատասխանը</string>
+    <string name="projects_comment_clear_reply">Մաքրել պատասխանը</string>
     <string name="projects_comment_placeholder">Ավելացնել մեկնաբանություն</string>
     <string name="projects_property_pick_date">Ընտրել ամսաթիվ</string>
     <string name="projects_property_ok">OK</string>

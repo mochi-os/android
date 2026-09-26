@@ -137,7 +137,7 @@
     <string name="about_up_to_date">Al dia</string>
     <string name="about_check_downloading">Versió %1$s disponible, baixant…</string>
     <string name="about_check_network_error">No s\'ha pogut connectar amb el servidor d\'actualitzacions</string>
-    <string name="about_check_download_failed">La descàrrega ha fallat</string>
+    <string name="about_check_download_failed">Ha fallat la baixada</string>
     <string name="notifications_clear_all_title">Voleu esborrar totes les notificacions?</string>
     <string name="notifications_clear_all_message">Això eliminarà totes les notificacions. No es podran recuperar.</string>
     <string name="settings_value_auto">Automàtic</string>
@@ -261,7 +261,7 @@
     <string name="tags_interest_down">Mostra\'n menys com aquesta</string>
     <string name="tags_interest_clear">Deixa de mostrar</string>
     <string name="tags_none">Sense etiquetes</string>
-    <string name="tags_delete">Elimina etiqueta</string>
+    <string name="tags_delete">Elimina l\'etiqueta</string>
     <string name="person_picker_none">Cap</string>
     <string name="person_picker_clear">Esborra la selecció</string>
     <string name="person_picker_select">Selecciona …</string>

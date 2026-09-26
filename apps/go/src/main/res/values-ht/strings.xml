@@ -11,12 +11,12 @@
     <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Kaptire nwa</string>
     <string name="go_captures_white_sr">Kaptire blan</string>
-    <string name="go_chat_title">Chat</string>
+    <string name="go_chat_title">Diskisyon</string>
     <string name="go_color_black">Nwa</string>
     <string name="go_color_white">Blan</string>
     <string name="go_delete_confirm">Efase</string>
     <string name="go_delete_message">Pati sa ap retire de lis ou. Sa pa kab anile.</string>
-    <string name="go_delete_title">Efase pati?</string>
+    <string name="go_delete_title">Efase jwèt la?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">Aksepte</string>
     <string name="go_draw_decline">Refize</string>
@@ -50,8 +50,8 @@
     <string name="go_resign_title">Demisyone jwèt?</string>
     <string name="go_sidebar_completed">Konplete</string>
     <string name="go_sidebar_new_game">Nouvo jwèt</string>
-    <string name="go_status_draw">Match nul</string>
-    <string name="go_status_draw_text">Match nul</string>
+    <string name="go_status_draw">Egalite</string>
+    <string name="go_status_draw_text">Egalite</string>
     <string name="go_status_game_over">Jwèt fini</string>
     <string name="go_status_opponent_move">Mouvman %1$s</string>
     <string name="go_status_opponent_wins">%1$s genyen</string>

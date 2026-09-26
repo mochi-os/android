@@ -41,7 +41,7 @@
     <string name="market_bids_tab_active">Inayotumika</string>
     <string name="market_bids_tab_all">Vyote</string>
     <string name="market_bids_tab_lost">Imeshindwa</string>
-    <string name="market_bids_tab_outbid">Imepitwa</string>
+    <string name="market_bids_tab_outbid">Imezidiwa zabuni</string>
     <string name="market_bids_tab_won">Imeshindwa</string>
     <string name="market_bids_title">Zabuni</string>
     <string name="market_channel_name">Soko</string>
@@ -179,7 +179,7 @@
     <string name="market_listing_detail_buy_now">Nunua sasa</string>
     <string name="market_listing_detail_description_heading">Maelezo</string>
     <string name="market_listing_detail_edit">Hariri</string>
-    <string name="market_listing_detail_information_heading">Maelezo ya uwasilishaji</string>
+    <string name="market_listing_detail_information_heading">Maelezo ya usafirishaji</string>
     <string name="market_listing_detail_load_failed">Imeshindwa kupakia orodha</string>
     <string name="market_listing_detail_listed">Imeorodheshwa %1$s</string>
     <string name="market_listing_detail_location_heading">Eneo</string>
@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Ripoti orodha</string>
     <string name="market_listing_detail_save">Hifadhi</string>
     <string name="market_listing_detail_seller_heading">Muuzaji</string>
-    <string name="market_listing_detail_shipping_heading">Usafirishaji</string>
+    <string name="market_listing_detail_shipping_heading">Chaguzi za usafirishaji</string>
     <string name="market_listing_detail_subscribe">Jiunge</string>
     <string name="market_listing_detail_tags_heading">Lebo</string>
     <string name="market_listing_detail_title">Orodha</string>
@@ -467,7 +467,7 @@
     <string name="market_editor_days">Siku %1$d</string>
     <string name="market_editor_delete">Futa tangazo</string>
     <string name="market_editor_delete_confirm_message">Hii itafuta tangazo kabisa.</string>
-    <string name="market_editor_delete_confirm_title">Futa tangazo?</string>
+    <string name="market_editor_delete_confirm_title">Futa orodha?</string>
     <string name="market_editor_download">Pakua moja kwa moja</string>
     <string name="market_editor_duration">Muda wa mnada</string>
     <string name="market_editor_fee_preview_pending">Inahifadhi rasimu…</string>
@@ -488,7 +488,7 @@
     <string name="market_editor_stripe_banner_description">Unganisha akaunti ya Stripe ili kupokea malipo kwenye tangazo hili.</string>
     <string name="market_editor_stripe_banner_title">Maliza usajili wa Stripe</string>
     <string name="market_editor_tags_field">Vitambulisho (vimetenganishwa kwa koma)</string>
-    <string name="market_editor_title_new">Tangazo jipya</string>
+    <string name="market_editor_title_new">Orodha mpya</string>
     <string name="market_editor_title_required">Weka kichwa kabla ya kuongeza picha au faili</string>
     <string name="market_editor_type">Aina ya tangazo</string>
     <string name="market_editor_zone_add">Ongeza eneo</string>
@@ -659,11 +659,11 @@
     <string name="market_account_seller_card_view">Tazama mipangilio ya muuzaji</string>
     <string name="market_account_vat_label">Nambari ya VAT / kodi</string>
     <string name="market_seller_activate_action">Washa akaunti ya muuzaji</string>
-    <string name="market_seller_activating">Inawasha...</string>
+    <string name="market_seller_activating">Inawezesha…</string>
     <string name="market_seller_become_heading">Kuwa muuzaji</string>
     <string name="market_seller_become_title">Kuwa muuzaji</string>
     <string name="market_seller_check_status">Angalia hali</string>
-    <string name="market_seller_checking">Inaangalia...</string>
+    <string name="market_seller_checking">Inakagua…</string>
     <string name="market_seller_connect_stripe">Unganisha Stripe</string>
     <string name="market_seller_connecting">Inapakia...</string>
     <string name="market_seller_fee_loading">Inapakia maelezo ya ada...</string>
@@ -704,7 +704,7 @@
     <string name="market_editor_stock_unlimited">Bila Kikomo</string>
     <string name="market_editor_start_time">Wakati wa kuanza</string>
     <string name="market_editor_start_time_help">Acha tupu kuanza wakati wa kuchapisha.</string>
-    <string name="market_editor_start_time_next">Endelea</string>
+    <string name="market_editor_start_time_next">Inayofuata</string>
     <string name="market_editor_start_time_clear">Futa</string>
     <string name="market_listing_detail_buy_now_label">Inunue sasa</string>
     <string name="market_section_recently_viewed">Zilizotazamwa hivi karibuni</string>

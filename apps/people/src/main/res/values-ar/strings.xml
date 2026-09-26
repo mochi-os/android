@@ -42,7 +42,7 @@
     <string name="people_member_add">إضافة عضو</string>
     <string name="people_member_add_hint">أضف مستخدمين أو مجموعات للبدء</string>
     <string name="people_member_remove">إزالة العضو</string>
-    <string name="people_member_remove_title">إزالة عضو</string>
+    <string name="people_member_remove_title">إزالة العضو</string>
     <string name="people_member_search_hint">أدخل اسماً للعثور على أشخاص تريد إضافتهم</string>
     <string name="people_member_type_user">المستخدم</string>
     <string name="people_member_type_group">مجموعة</string>

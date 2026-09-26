@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi фийд</string>
     <string name="feeds_source_type_feed_memories">Дурсамж</string>
-    <string name="feeds_remove_source">Эх сурвалжийг устгах</string>
+    <string name="feeds_remove_source">Эх сурвалж хасах уу?</string>
     <string name="feeds_suggested_credibility_accept">Зөвшөөрөх</string>
     <string name="feeds_rss_url_copied">RSS URL түр санах ой руу хуулагдсан</string>
     <string name="feeds_logout">Гарах</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">Хэзээ ч татаагүй</string>
     <string name="feeds_source_poll">Санал асуулга</string>
-    <string name="feeds_source_transform">Хувиргалт</string>
+    <string name="feeds_source_transform">AI хувиргалт</string>
     <string name="feeds_remove_source_confirm">\"%1$s\"-г устгах уу?</string>
     <string name="feeds_remove_also_delete_posts">Импортолсон нийтлэлүүдийг бас устгах</string>
     <string name="feeds_suggested_credibility_title">Санал болгож буй найдвартай байдал</string>
@@ -206,7 +206,7 @@
     <string name="feeds_banner_dismiss">Баннер хаах</string>
     <string name="feeds_members_search">Гишүүдийг шүүх</string>
     <string name="feeds_ai_prompt_default">Үндсэн</string>
-    <string name="feeds_ai_prompt_custom">Тохируулсан</string>
+    <string name="feeds_ai_prompt_custom">Захиалгат</string>
     <string name="feeds_ai_prompt_variables">Хувьсагчид: %1$s</string>
     <string name="feeds_link">Холбоос</string>
     <string name="feeds_share_link_title">Хангамжийн холбоос</string>

@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">ਹਟਾਓ</string>
     <string name="wikis_replicas_remove_failed">ਰੈਪਲੀਕਾ ਹਟਾਉਣ ਵਿੱਚ ਅਸਫਲ</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi ਵਿੱਕੀ</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">wiki ਪੰਨਾ ਸੰਪਾਦਨਾਂ, ਟਿੱਪਣੀਆਂ ਅਤੇ ਸੱਦਿਆਂ ਬਾਰੇ ਸੂਚਨਾਵਾਂ।</string>
     <string name="wikis_pageview_toc_expand">ਤਤਕਰਾ ਵਿਖਾਓ</string>
@@ -246,7 +246,7 @@
     <string name="wikis_insert_dialog_empty">ਹਾਲੇ ਕੋਈ ਅਟੈਚਮੈਂਟ ਨਹੀਂ। ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਫਾਈਲ ਅੱਪਲੋਡ ਕਰੋ।</string>
     <string name="wikis_delete_page_message">ਤੁਸੀਂ “%1$s” (%2$s) ਪੰਨਾ ਮਿਟਾਉਣ ਵਾਲੇ ਹੋ। ਇਤਿਹਾਸ ਤੋਂ ਬਹਾਲ ਕਰਕੇ ਇਹ ਕਾਰਵਾਈ ਵਾਪਸ ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ।</string>
     <string name="wikis_delete_page_success">ਪੰਨਾ ਮਿਟਾਇਆ ਗਿਆ</string>
-    <string name="wikis_revert_page_title">ਪੰਨਾ ਵਾਪਸ ਕਰੋ</string>
+    <string name="wikis_revert_page_title">ਪੇਜ ਵਾਪਸ ਕਰੋ</string>
     <string name="wikis_revert_page_message">ਤੁਸੀਂ %1$s ਨੂੰ ਸੰਸਕਰਣ %2$d ਉੱਤੇ ਵਾਪਸ ਕਰਨ ਵਾਲੇ ਹੋ। ਇਸ ਨਾਲ ਸੰਸਕਰਣ %2$d ਦੀ ਸਮੱਗਰੀ ਵਾਲਾ ਨਵਾਂ ਸੰਸ਼ੋਧਨ ਬਣੇਗਾ।</string>
     <string name="wikis_revert_page_default_comment">ਸੰਸਕਰਣ %1$d ਉੱਤੇ ਵਾਪਸ ਕੀਤਾ</string>
     <string name="wikis_revert_page_success">ਸੰਸਕਰਣ %1$d ਉੱਤੇ ਵਾਪਸ ਕੀਤਾ</string>
@@ -273,7 +273,7 @@
     <string name="wikis_attachments_downloading">ਡਾਊਨਲੋਡ ਹੋ ਰਿਹਾ ਹੈ…</string>
     <string name="wikis_attachments_empty_description">ਇਸ ਪੰਨੇ ਵਿੱਚ ਫਾਈਲਾਂ ਜੋੜਨ ਲਈ ਅੱਪਲੋਡ ਦਬਾਓ।</string>
     <string name="wikis_settings_name_save_cd">ਨਾਮ ਸੰਭਾਲੋ</string>
-    <string name="wikis_settings_name_cancel_cd">ਸੋਧ ਰੱਦ ਕਰੋ</string>
+    <string name="wikis_settings_name_cancel_cd">ਸੰਪਾਦਨ ਰੱਦ ਕਰੋ</string>
     <string name="wikis_access_level_label">ਇਜਾਜ਼ਤ</string>
     <string name="wikis_access_set_failed">ਪਹੁੰਚ ਅੱਪਡੇਟ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="wikis_replicas_col_subscribed">ਗਾਹਕੀ ਲਈ: %1$s</string>

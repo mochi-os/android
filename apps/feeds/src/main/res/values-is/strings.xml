@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi-straumur</string>
     <string name="feeds_source_type_feed_memories">Minningar</string>
-    <string name="feeds_remove_source">Fjarlægja uppruna</string>
+    <string name="feeds_remove_source">Fjarlægja uppsprettu?</string>
     <string name="feeds_suggested_credibility_accept">Samþykkja</string>
     <string name="feeds_rss_url_copied">RSS-vefslóð afrituð á klippiborð</string>
     <string name="feeds_logout">Skrá út</string>
@@ -100,7 +100,7 @@
     <string name="feeds_unable_to_load">Ekki tókst að hlaða síðuna</string>
     <string name="feeds_delete_post_confirm">Ertu viss um að þú viljir eyða þessari færslu? Þessu er ekki hægt að breyta.</string>
     <string name="feeds_delete_comment_confirm">Ertu viss um að þú viljir eyða þessari athugasemd?</string>
-    <string name="feeds_anonymous">Nafnlaust</string>
+    <string name="feeds_anonymous">Nafnlaus</string>
     <string name="feeds_replying_to_author">Svar til %1$s</string>
     <string name="feeds_attach_file">Hengja við skrá</string>
     <string name="feeds_file">Skrá</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS-slóð</string>
     <string name="feeds_source_never_fetched">Aldrei sótt</string>
     <string name="feeds_source_poll">Sækja</string>
-    <string name="feeds_source_transform">Umbreyta</string>
+    <string name="feeds_source_transform">Gervigreindarumbreyting</string>
     <string name="feeds_remove_source_confirm">Fjarlægja \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Eyða einnig innfluttum færslum</string>
     <string name="feeds_suggested_credibility_title">Tillagður trúverðugleiki</string>
@@ -172,7 +172,7 @@
     <string name="feeds_allow_search">Leyfa öllum að leita að straumi</string>
     <string name="feeds_post_content">Innihald færslu</string>
     <string name="feeds_enable_memories">Virkja minningar</string>
-    <string name="feeds_permission_request_title">Beiðni um heimild</string>
+    <string name="feeds_permission_request_title">Leyfisbeiðni</string>
     <string name="feeds_unsubscribe_confirm">Hætta áskrift að straumnum?</string>
     <string name="feeds_settings_title">Stillingar %1$s</string>
     <string name="feeds_source_transform_help">Skildu eftir autt til að slökkva.</string>
@@ -209,7 +209,7 @@
     <string name="feeds_ai_prompt_custom">Sérsniðið</string>
     <string name="feeds_ai_prompt_variables">Breytur: %1$s</string>
     <string name="feeds_link">Tengill</string>
-    <string name="feeds_share_link_title">Tengill á streymi</string>
+    <string name="feeds_share_link_title">Streymistengill</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$d athugasemd</item>
         <item quantity="other">%1$d athugasemdir</item>

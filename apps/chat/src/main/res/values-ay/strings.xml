@@ -53,9 +53,9 @@
     <string name="chat_forward_search">Chatanaka thaqhaña…</string>
     <string name="chat_forward_empty">Janiw apayañataki chatanakax utjkiti</string>
     <string name="chat_forward_success">Apayatawa</string>
-    <string name="chat_message_reply">Kutiyaña</string>
+    <string name="chat_message_reply">Jaysaña</string>
     <string name="chat_message_select">Ajlliña</string>
-    <string name="chat_reply_attachment">Archivo</string>
+    <string name="chat_reply_attachment">Adjunto</string>
     <string name="chat_replying_to">%1$s tuqir kutiyaski</string>
     <string name="chat_delete_confirm_title">¿Mensaje chhaqtayañ?</string>
     <string name="chat_delete_confirm_body">Akax taqininakatakiw mensaje chhaqtayi, janiw kutt\'ayañ atipkiti.</string>
@@ -78,7 +78,7 @@
     <string name="chat_marked_read">Ullt\'ata ukham uñacht\'ayata</string>
     <string name="chat_search_next">Jutir chika</string>
     <string name="chat_search_prev">Nayrïr chika</string>
-    <string name="chat_settings_id">Aruskipäwi ID</string>
+    <string name="chat_settings_id">Chat ID</string>
     <string name="chat_message_edited">(askichata)</string>
     <string name="chat_new_fallback_name">Chat</string>
 </resources>

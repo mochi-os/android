@@ -32,8 +32,8 @@
     <string name="chess_draw_accept">स्वीकार गर्नुहोस्</string>
     <string name="chess_draw_decline">अस्वीकार गर्नुहोस्</string>
     <string name="chess_status_checkmate_you_win">चेकमेट — तपाईं जित्नुभयो!</string>
-    <string name="chess_status_stalemate">गतिरोध — बराबरी</string>
-    <string name="chess_status_draw">ड्र</string>
+    <string name="chess_status_stalemate">स्टेलमेट — बराबरी</string>
+    <string name="chess_status_draw">बराबरी</string>
     <string name="chess_status_check_your_move">चेक — तपाईंको चाल</string>
     <string name="chess_status_your_move">तपाईंको चाल</string>
     <string name="chess_move_subject_you">तपाईं</string>

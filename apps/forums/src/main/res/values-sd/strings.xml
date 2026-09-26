@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">ان سبسڪرائب ڪريو</string>
     <string name="forums_list_unsubscribe_title">ان سبسڪرائب ڪريو</string>
     <string name="forums_create_title">فورم ٺاهيو</string>
-    <string name="forums_create_name">نالو</string>
+    <string name="forums_create_name">فورم جو نالو</string>
     <string name="forums_create_privacy">رازداري</string>
     <string name="forums_create_private">نجي</string>
     <string name="forums_create_public">عوامي</string>
-    <string name="forums_create_action">ٺاهيو</string>
+    <string name="forums_create_action">فورم ٺاهيو</string>
     <string name="forums_find_title">فورمَ ڳوليو</string>
     <string name="forums_find_recommended">تجويز ڪيل</string>
     <string name="forums_find_subscribe">سبسڪرائب ڪريو</string>
@@ -71,7 +71,7 @@
     <string name="forums_ai_account_default">ڊفالٽ اڪائونٽ</string>
     <string name="forums_ai_prompt_reset">ڊفالٽ تي ري سيٽ ڪريو</string>
     <string name="forums_settings_unsubscribe">ان سبسڪرائب ڪريو</string>
-    <string name="forums_moderation_title">اعتدال</string>
+    <string name="forums_moderation_title">نگراني</string>
     <string name="forums_moderation_tab_queue">قطار</string>
     <string name="forums_moderation_tab_reports">رپورٽون</string>
     <string name="forums_moderation_tab_log">لاگ</string>
@@ -156,7 +156,7 @@
     <string name="forums_banner_placeholder">هن فورم ۾ ڀلي ڪري آيا…</string>
     <string name="forums_ai_mode_label">موڊ: %1$s</string>
     <string name="forums_ai_mode_heading">AI موڊ</string>
-    <string name="forums_ai_mode_off">بند</string>
+    <string name="forums_ai_mode_off">غيرفعال</string>
     <string name="forums_ai_account">AI اڪائونٽ</string>
     <string name="forums_ai_prompt_tag">ٽيگنگ پرامپٽ</string>
     <string name="forums_ai_prompt_score">اسڪورنگ پرامپٽ</string>
@@ -219,11 +219,11 @@
     <string name="forums_all_forums">سڀ فورم</string>
     <string name="forums_create_allow_search">ڪنهن کي به فورم ڳولڻ جي اجازت ڏيو</string>
     <string name="forums_rss_clipboard_label">فورم RSS URL</string>
-    <string name="forums_tab_moderation">اعتدال</string>
+    <string name="forums_tab_moderation">نگراني</string>
     <string name="forums_access_level_view_full">صرف ڏسڻ</string>
     <string name="forums_access_level_none_full">ڪو رسائي نه</string>
     <string name="forums_access_subject_anyone">ڪوبه</string>
-    <string name="forums_access_subject_authenticated">تصديق ٿيل استعمال ڪندڙ</string>
+    <string name="forums_access_subject_authenticated">تصديق ٿيل صارف</string>
     <string name="forums_access_tab_other">ٻيو</string>
     <string name="forums_access_authenticated_desc">ڪو به جيڪو لاگ ان ٿيل آهي</string>
     <string name="forums_access_anyone_desc">گمنام استعمال ڪندڙن سميت</string>
@@ -276,8 +276,8 @@
     <string name="forums_moderation_restriction_by">%1$s طرفان</string>
     <string name="forums_moderation_restriction_remove_message">کين فوري طور تي فورم تائين مڪمل رسائي واپس ملندي.</string>
     <string name="forums_moderation_restriction_remove_title">%1$s تي پابندي هٽائجي؟</string>
-    <string name="forums_moderation_restriction_state_muted">خاموش</string>
-    <string name="forums_moderation_restriction_state_shadowban">لڪل پابندي</string>
+    <string name="forums_moderation_restriction_state_muted">خاموش ڪيل</string>
+    <string name="forums_moderation_restriction_state_shadowban">ڳجهي طور تي پابند</string>
     <string name="forums_moderation_restrictions_empty_subtitle">ڪنهن به صارف کي خاموش يا بند نه ڪيو ويو آهي</string>
     <string name="forums_moderation_section_premoderation_description">مواد ظاهر ٿيڻ کان اڳ منظوري گهرو</string>
     <string name="forums_moderation_section_ratelimiting_description">صارفين ڪيترا ڀيرا پوسٽ ڪري سگهن ٿا، ان کي محدود ڪري اسپام روڪيو</string>
@@ -289,7 +289,7 @@
     <string name="forums_settings_forum_renamed">فورم جو نالو تبديل ٿيو</string>
     <string name="forums_settings_name_clear_cd">نالو صاف ڪريو</string>
     <string name="forums_settings_unsubscribe_section">فورم مان رڪنيت ختم ڪريو</string>
-    <string name="forums_share_link_title">فورم جو لنڪ</string>
+    <string name="forums_share_link_title">فورم لنڪ</string>
     <string name="forums_find_found_by_url">URL ذريعي مليو</string>
     <string name="forums_moderation_pending_posts">رهيل پوسٽون (%1$d)</string>
     <string name="forums_moderation_pending_comments">رهيل تبصرا (%1$d)</string>

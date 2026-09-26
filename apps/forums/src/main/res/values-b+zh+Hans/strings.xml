@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">取消订阅</string>
     <string name="forums_list_unsubscribe_title">取消订阅</string>
     <string name="forums_create_title">创建论坛</string>
-    <string name="forums_create_name">名称</string>
+    <string name="forums_create_name">论坛名称</string>
     <string name="forums_create_privacy">隐私</string>
     <string name="forums_create_private">私有</string>
     <string name="forums_create_public">公开</string>
-    <string name="forums_create_action">创建</string>
+    <string name="forums_create_action">创建论坛</string>
     <string name="forums_find_title">查找论坛</string>
     <string name="forums_find_recommended">推荐</string>
     <string name="forums_find_subscribe">订阅</string>
@@ -71,7 +71,7 @@
     <string name="forums_ai_account_default">默认账户</string>
     <string name="forums_ai_prompt_reset">重置为默认</string>
     <string name="forums_settings_unsubscribe">取消订阅</string>
-    <string name="forums_moderation_title">内容审核</string>
+    <string name="forums_moderation_title">审核</string>
     <string name="forums_moderation_tab_queue">队列</string>
     <string name="forums_moderation_tab_reports">举报</string>
     <string name="forums_moderation_tab_log">日志</string>
@@ -156,7 +156,7 @@
     <string name="forums_banner_placeholder">欢迎来到本论坛…</string>
     <string name="forums_ai_mode_label">模式:%1$s</string>
     <string name="forums_ai_mode_heading">AI 模式</string>
-    <string name="forums_ai_mode_off">关闭</string>
+    <string name="forums_ai_mode_off">已禁用</string>
     <string name="forums_ai_account">AI 账户</string>
     <string name="forums_ai_prompt_tag">标签提示词</string>
     <string name="forums_ai_prompt_score">评分提示词</string>
@@ -218,7 +218,7 @@
     <string name="forums_all_forums">所有论坛</string>
     <string name="forums_create_allow_search">允许任何人搜索论坛</string>
     <string name="forums_rss_clipboard_label">论坛 RSS 网址</string>
-    <string name="forums_tab_moderation">内容审核</string>
+    <string name="forums_tab_moderation">审核</string>
     <string name="forums_access_level_view_full">仅查看</string>
     <string name="forums_access_level_none_full">无访问权限</string>
     <string name="forums_access_subject_anyone">任何人</string>
@@ -276,13 +276,13 @@
     <string name="forums_moderation_restriction_remove_message">对方将立即恢复对论坛的完全访问权限。</string>
     <string name="forums_moderation_restriction_remove_title">解除对 %1$s 的限制？</string>
     <string name="forums_moderation_restriction_state_muted">已禁言</string>
-    <string name="forums_moderation_restriction_state_shadowban">影子封禁</string>
+    <string name="forums_moderation_restriction_state_shadowban">已影子封禁</string>
     <string name="forums_moderation_restrictions_empty_subtitle">没有用户被禁言或封禁</string>
     <string name="forums_moderation_section_premoderation_description">内容公开前需要审核</string>
     <string name="forums_moderation_section_ratelimiting_description">限制用户发帖频率以防止垃圾信息</string>
     <string name="forums_moderation_settings_updated">管理设置已更新</string>
-    <string name="forums_moderation_unit_posts">篇</string>
-    <string name="forums_moderation_unit_replies">条</string>
+    <string name="forums_moderation_unit_posts">条帖子</string>
+    <string name="forums_moderation_unit_replies">条回复</string>
     <string name="forums_moderation_unit_seconds">秒</string>
     <string name="forums_settings_ai_updated">AI 设置已更新</string>
     <string name="forums_settings_forum_renamed">论坛已重命名</string>

@@ -8,12 +8,12 @@
     <string name="forums_list_logout">Skrá út</string>
     <string name="forums_list_unsubscribe">Afskrá áskrift</string>
     <string name="forums_list_unsubscribe_title">Afskrá áskrift</string>
-    <string name="forums_create_title">Búa til spjallþráð</string>
-    <string name="forums_create_name">Nafn</string>
+    <string name="forums_create_title">Búa til spjallborð</string>
+    <string name="forums_create_name">Nafn spjallborðs</string>
     <string name="forums_create_privacy">Friðhelgi</string>
     <string name="forums_create_private">Einkamál</string>
     <string name="forums_create_public">Opinbert</string>
-    <string name="forums_create_action">Búa til</string>
+    <string name="forums_create_action">Búa til spjallborð</string>
     <string name="forums_find_title">Finna spjallborð</string>
     <string name="forums_find_recommended">Mælt með</string>
     <string name="forums_find_subscribe">Gerast áskrifandi</string>
@@ -71,7 +71,7 @@
     <string name="forums_ai_account_default">Sjálfgefinn reikningur</string>
     <string name="forums_ai_prompt_reset">Endurstilla á sjálfgefið</string>
     <string name="forums_settings_unsubscribe">Afskrá áskrift</string>
-    <string name="forums_moderation_title">Yfirferð</string>
+    <string name="forums_moderation_title">Umsjón</string>
     <string name="forums_moderation_tab_queue">Biðröð</string>
     <string name="forums_moderation_tab_reports">Tilkynningar</string>
     <string name="forums_moderation_tab_log">Skrá</string>
@@ -219,7 +219,7 @@
     <string name="forums_all_forums">Öll spjallborð</string>
     <string name="forums_create_allow_search">Leyfa hverjum sem er að leita að spjallborðinu</string>
     <string name="forums_rss_clipboard_label">RSS-slóð spjallborðs</string>
-    <string name="forums_tab_moderation">Yfirferð</string>
+    <string name="forums_tab_moderation">Umsjón</string>
     <string name="forums_access_level_view_full">Aðeins skoða</string>
     <string name="forums_access_level_none_full">Enginn aðgangur</string>
     <string name="forums_access_subject_anyone">Hver sem er</string>
@@ -276,8 +276,8 @@
     <string name="forums_moderation_restriction_by">Af %1$s</string>
     <string name="forums_moderation_restriction_remove_message">Viðkomandi fær strax fullan aðgang að spjallborðinu aftur.</string>
     <string name="forums_moderation_restriction_remove_title">Fjarlægja takmörkun á %1$s?</string>
-    <string name="forums_moderation_restriction_state_muted">Þaggað</string>
-    <string name="forums_moderation_restriction_state_shadowban">Skuggabann</string>
+    <string name="forums_moderation_restriction_state_muted">Þaggaður</string>
+    <string name="forums_moderation_restriction_state_shadowban">Bannaður í leyni</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Engir notendur hafa verið þaggaðir eða bannaðir</string>
     <string name="forums_moderation_section_premoderation_description">Krefjast samþykkis áður en efni verður sýnilegt</string>
     <string name="forums_moderation_section_ratelimiting_description">Komdu í veg fyrir ruslpóst með því að takmarka hversu oft notendur mega senda færslur</string>

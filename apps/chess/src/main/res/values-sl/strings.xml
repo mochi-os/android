@@ -31,7 +31,7 @@
     <string name="chess_draw_accept">Sprejmi</string>
     <string name="chess_draw_decline">Zavrni</string>
     <string name="chess_status_checkmate_you_win">Šah-mat — zmagali ste!</string>
-    <string name="chess_status_stalemate">Pat — neodločeno</string>
+    <string name="chess_status_stalemate">Pat — remi</string>
     <string name="chess_status_draw">Neodločeno</string>
     <string name="chess_status_check_your_move">Šah — vaša poteza</string>
     <string name="chess_status_your_move">Tvoja poteza</string>
@@ -58,12 +58,12 @@
     <string name="chess_empty_subtitle">Začnite prvo partijo za igranje šaha s prijateljem.</string>
     <string name="chess_empty_start_button">Začnite prvo partijo</string>
     <string name="chess_detail_unavailable">Partija ni na voljo</string>
-    <string name="chess_delete_title">Izbriši partijo?</string>
+    <string name="chess_delete_title">Izbriši igro?</string>
     <string name="chess_delete_message">To odstrani partijo s vašega seznama.</string>
     <string name="chess_ws_connecting">Povezovanje…</string>
     <string name="chess_ws_disconnected">Brez povezave</string>
     <string name="chess_ws_reconnecting">Ponovno povezovanje…</string>
-    <string name="chess_ws_failed">Povezava neuspešna</string>
+    <string name="chess_ws_failed">Povezava ni uspela</string>
     <string name="chess_move_capture">%1$s je vzel %2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
     <string name="chess_piece_white">Bele %1$s</string>

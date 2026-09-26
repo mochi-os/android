@@ -154,7 +154,7 @@
     <string name="calendars_link_submit">সংযুক্ত করুন</string>
     <string name="calendars_link_sync">এখন সিঙ্ক করুন</string>
     <string name="calendars_link_grant">ক্যালেন্ডার অ্যাক্সেসের অনুমতি দিন</string>
-    <string name="calendars_link_linked">সংযুক্ত</string>
+    <string name="calendars_link_linked">লিঙ্ক করা</string>
     <string name="calendars_link_marker">সংযুক্ত ক্যালেন্ডার</string>
     <string name="calendars_link_remote_empty">কোনো ক্যালেন্ডার নেই</string>
     <string name="calendars_poll_conflict">একটি ইভেন্ট উভয় দিকেই পরিবর্তিত হয়েছে</string>

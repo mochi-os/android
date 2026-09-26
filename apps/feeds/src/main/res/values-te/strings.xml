@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi ఫీడ్</string>
     <string name="feeds_source_type_feed_memories">జ్ఞాపకాలు</string>
-    <string name="feeds_remove_source">మూలాన్ని తీసివేయండి</string>
+    <string name="feeds_remove_source">సోర్స్‌ను తొలగించాలా?</string>
     <string name="feeds_suggested_credibility_accept">అంగీకరించండి</string>
     <string name="feeds_rss_url_copied">RSS URL క్లిప్‌బోర్డ్‌కు కాపీ చేయబడింది</string>
     <string name="feeds_logout">లాగ్ అవుట్</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">ఎప్పుడూ తేబడలేదు</string>
     <string name="feeds_source_poll">పోల్</string>
-    <string name="feeds_source_transform">మార్చు</string>
+    <string name="feeds_source_transform">AI రూపాంతరం</string>
     <string name="feeds_remove_source_confirm">\"%1$s\"ను తీసివేయాలా?</string>
     <string name="feeds_remove_also_delete_posts">దిగుమతి చేసిన పోస్ట్‌లను కూడా తొలగించండి</string>
     <string name="feeds_suggested_credibility_title">సూచించిన విశ్వసనీయత</string>
@@ -206,7 +206,7 @@
     <string name="feeds_banner_dismiss">బ్యానర్‌ను విస్మరించండి</string>
     <string name="feeds_members_search">సభ్యులను ఫిల్టర్ చేయండి</string>
     <string name="feeds_ai_prompt_default">డిఫాల్ట్</string>
-    <string name="feeds_ai_prompt_custom">అనుకూలం</string>
+    <string name="feeds_ai_prompt_custom">అనుకూల</string>
     <string name="feeds_ai_prompt_variables">వేరియబుల్స్: %1$s</string>
     <string name="feeds_link">లింక్</string>
     <string name="feeds_share_link_title">ఫీడ్ లింక్</string>

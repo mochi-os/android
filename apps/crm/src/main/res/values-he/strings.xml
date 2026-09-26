@@ -34,7 +34,7 @@
     <string name="crm_option_icon">אייקון</string>
     <string name="crm_option_icon_placeholder">לדוגמה Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">בטל הרשמה</string>
-    <string name="crm_settings_delete_crm">מחק פרויקט</string>
+    <string name="crm_settings_delete_crm">מחק CRM</string>
     <string name="crm_settings_delete_confirm_title">מחק CRM</string>
     <string name="crm_settings_unsubscribe_title">בטל הרשמה</string>
     <string name="crm_settings_unsubscribe_message">האם אתה בטוח שברצונך לבטל את המינוי ל-CRM זה?</string>
@@ -135,10 +135,10 @@
     <string name="crm_class_move_up">הזזה למעלה</string>
     <string name="crm_class_move_down">הזזה למטה</string>
     <string name="crm_views_sort_by">מיין לפי</string>
-    <string name="crm_sort_direction_asc">עולה</string>
-    <string name="crm_views_direction_asc">עולה</string>
-    <string name="crm_sort_direction_desc">יורד</string>
-    <string name="crm_views_direction_desc">יורד</string>
+    <string name="crm_sort_direction_asc">סדר עולה</string>
+    <string name="crm_views_direction_asc">סדר עולה</string>
+    <string name="crm_sort_direction_desc">סדר יורד</string>
+    <string name="crm_views_direction_desc">סדר יורד</string>
     <string name="crm_search_objects_placeholder">חפש פריטים</string>
     <string name="crm_links_search_placeholder">חפש פריטים</string>
 
@@ -160,11 +160,11 @@
     <string name="crm_links_empty">אין קישורים</string>
     <string name="crm_links_section_relates">קשור ל</string>
     <string name="crm_links_section_duplicated_by">שוכפל על ידי</string>
-    <string name="crm_links_type">סוג הקישור</string>
+    <string name="crm_links_type">סוג קישור</string>
     <string name="crm_links_type_relates">קשור ל</string>
     <string name="crm_links_remove">הסרת קישור</string>
     <string name="crm_comment_replying_to">מענה ל-%1$s</string>
-    <string name="crm_comment_clear_reply">ניקוי מענה</string>
+    <string name="crm_comment_clear_reply">ניקוי תגובה</string>
     <string name="crm_comment_placeholder">הוספת הערה</string>
     <string name="crm_property_pick_date">בחירת תאריך</string>
     <string name="crm_property_ok">אישור</string>
@@ -183,7 +183,7 @@
     <string name="crm_attachment_delete_confirm_message">הקובץ המצורף הזה יימחק לצמיתות.</string>
     <string name="crm_tree_move">העברה</string>
     <string name="crm_tree_move_to_parent">העברה להורה</string>
-    <string name="crm_tree_root_level">(רמת שורש)</string>
+    <string name="crm_tree_root_level">(רמת השורש)</string>
     <string name="crm_tree_empty">אין אובייקטים</string>
     <string name="crm_board_no_columns">לא הוגדרו עמודות לתצוגה זו</string>
     <string name="crm_board_no_options">לא הוגדרו אפשרויות לשדה העמודה</string>
@@ -215,7 +215,7 @@
     <string name="crm_field_position_header">כותרת</string>
     <string name="crm_field_validation">אימות</string>
     <string name="crm_field_min_length">אורך מינימלי</string>
-    <string name="crm_field_max_length">אורך מקסימלי</string>
+    <string name="crm_field_max_length">אורך מרבי</string>
     <string name="crm_field_pattern">תבנית (ביטוי רגולרי)</string>
     <string name="crm_field_rows">שורות (גובה תיבת טקסט)</string>
     <string name="crm_field_no_options">לא הוגדרו אפשרויות</string>
@@ -275,7 +275,7 @@
     <string name="crm_access_role_none">אין גישה</string>
     <string name="crm_all_crms">כל מערכות ה-CRM</string>
     <string name="crm_settings_unsubscribe_section">ביטול מנוי ל-CRM</string>
-    <string name="crm_settings_updated">ה-CRM עודכן</string>
+    <string name="crm_settings_updated">CRM עודכן</string>
     <string name="crm_create_import_backup">ייבוא מגיבוי (אופציונלי)</string>
     <string name="crm_export">ייצוא נתונים</string>
     <string name="crm_exporting">מכין את הייצוא…</string>

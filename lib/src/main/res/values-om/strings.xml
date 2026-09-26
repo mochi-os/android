@@ -56,7 +56,7 @@
     <string name="notifications_title">Beeksisaalee</string>
     <string name="notifications_empty">Beeksisaaleen hin jiran</string>
     <string name="notifications_empty_unread">Hunda dubbiteerta</string>
-    <string name="notifications_tab_unread">Kan hin dubbatamne</string>
+    <string name="notifications_tab_unread">Hin dubbifamne</string>
     <string name="notifications_tab_unread_count">Kan hin dubbatamne (%1$d)</string>
     <string name="notifications_tab_all">Hunda</string>
     <string name="notifications_mark_all_read">Hunda dubbifame</string>
@@ -108,7 +108,7 @@
     <string name="settings_display_reset_confirm_message">Kun qindaa\'inoota agarsiisa gara gatiiwwan isaanii durtiitti ni deebisa.</string>
     <string name="settings_theme_title">Akeeka</string>
     <string name="settings_theme_default">Idilee</string>
-    <string name="settings_background">Duuba</string>
+    <string name="settings_background">Duubbee</string>
     <string name="settings_background_theme">Akeeka irraa</string>
     <string name="settings_background_off">Tokko illee</string>
     <string name="game_chat_empty">Hanga ammaatti ergaawwan hin jiran</string>
@@ -125,7 +125,7 @@
     <string name="game_chat_move_played">%1$s %2$s taphate</string>
 
     <string name="error_network">Walitti hidhamuun hin dandeenye. Walitti hidhamiinsa intarneetii kee mirkaneessitee irra deebi\'ii yaali.</string>
-    <string name="error_authentication_required">Mirkaneessa barbaachisa</string>
+    <string name="error_authentication_required">Mirkaneessuun barbaachisa</string>
     <string name="error_not_found">Hin argamne</string>
     <string name="error_server">Dogoggora sarvarii (%1$d). Maaloo booda irra deebi\'ii yaali.</string>
     <string name="error_unexpected">Dogoggorri hin eegamne uumameera</string>
@@ -133,7 +133,7 @@
     <string name="error_enter_email">Maaloo imeelii kee galchi</string>
     <string name="error_enter_name">Maaloo maqaa galchi</string>
     <string name="auth_connect_to_server">Sarvarii keetti walitti hidhi</string>
-    <string name="auth_connect">Walitti hidhi</string>
+    <string name="auth_connect">Wal qunnamsiisi</string>
     <string name="auth_sign_in">Seeni</string>
     <string name="auth_check_email">Koodii mirkaneessuuf imeelii kee ilaali</string>
     <string name="auth_mfa_title">Mirkaneessa marsaa baay\'ee</string>
@@ -165,7 +165,7 @@
     <string name="common_retry">Irra deebi\'ii yaali</string>
     <string name="common_more_options">Filannoo dabalataa</string>
     <string name="common_collapse">Walitti qabi</string>
-    <string name="common_expand">Bal\'isi</string>
+    <string name="common_expand">Babalʼisi</string>
     <string name="common_play_video">Viidiyoo taphachiisi</string>
     <string name="place_picker_name">Maqaa bakkaa</string>
     <string name="place_origin">Madda</string>
@@ -190,7 +190,7 @@
     <string name="format_time_days_short">%1$d guy</string>
     <string name="format_time_weeks_short">%1$d tor</string>
     <string name="format_time_months_short">%1$d ji\'a</string>
-    <string name="reaction_add">Deebii dabali</string>
+    <string name="reaction_add">Yaada miiraa dabali</string>
     <string name="push_service_channel">Dhiibbaa Mochi</string>
     <string name="push_service_channel_description">Beeksisa fudhachuuf Mochi walitti hidhamee tursiisa</string>
     <string name="push_service_group">Tajaajila duubaa</string>
@@ -210,7 +210,7 @@
     <string name="about_up_to_date">Haaromfameera</string>
     <string name="about_check_downloading">Versiyiin %1$s ni jira, buufamaa jira…</string>
     <string name="about_check_network_error">Sarvarii haaromsaa bira gahuu hin dandeenye</string>
-    <string name="about_check_download_failed">Buusuun kufeera</string>
+    <string name="about_check_download_failed">Buufachuun hin milkoofne</string>
     <string name="notifications_clear_all_title">Beeksisawwan hunda haquu?</string>
     <string name="notifications_clear_all_message">Kun beeksisa hunda ni haqa. Deebisanii argachuun hin danda\'amu.</string>
     <string name="settings_value_auto">Ofumaan</string>
@@ -238,7 +238,7 @@
     <string name="stepup_error_oauth">Akkaawuntii sana waliin mirkaneessuun hin danda\'amne. Maaloo irra deebi\'ii yaali.</string>
     <string name="game_system_resign">%1$s harka kenne</string>
     <string name="game_system_draw_offer">%1$s qixxaa dhiheesse</string>
-    <string name="game_system_draw_accept">Qixxaan walii galame</string>
+    <string name="game_system_draw_accept">Walqixxina walii galame</string>
     <string name="game_system_draw_decline">%1$s qixxaa dide</string>
     <string name="reactivation_title">Akaawuntiin kee haquuf qophaaʼeera</string>
     <string name="reactivation_body">Akaawuntiin kee haquuf qophaaʼeera. Amma dhaabuun dandeenya guutuu deebisuu dandeessa.</string>
@@ -246,7 +246,7 @@
     <string name="reactivation_reactivate">Akaawuntii koo deebisii hojjechiisi</string>
     <string name="reactivation_sign_out">Cufuu itti fufiitii baʼi</string>
     <string name="common_play">Taphachiisi</string>
-    <string name="common_pause">Dhaabi</string>
+    <string name="common_pause">Dhaabsisi</string>
     <string name="common_opening_file">Faayilii banaa jira…</string>
     <string name="common_no_app_for_file">Appiin faayilii kana banu hin jiru</string>
     <string name="common_file_open_failed">Faayilii banuun hin danda\'amne</string>
@@ -254,7 +254,7 @@
     <string name="common_logout_confirm_message">Seenuu keessan cufuu akka barbaaddan mirkaneeffattanii? Akkaawuntii keessan argachuuf irra deebitanii seenuun isin barbaachisa.</string>
     <string name="comment_anonymous">Maqaa malee</string>
     <string name="tags_label">Tagoota</string>
-    <string name="tags_add">Maallattoo dabali</string>
+    <string name="tags_add">Mallattoo dabali</string>
     <string name="tags_interest_up">Kana fakkaatu dabalataan agarsiisi</string>
     <string name="tags_interest_down">Kana fakkaatu xinneessii agarsiisi</string>
     <string name="tags_interest_clear">Agarsiisuu dhaabi</string>
@@ -310,7 +310,7 @@
     <string name="settings_card_flat">Diriiraa</string>
     <string name="settings_card_raised">Ol kaafame</string>
     <string name="error_server_https">Teessoon sarvarii https:// jalqabuu qaba</string>
-    <string name="device_name_fallback">Meeshaa harkaa</string>
+    <string name="device_name_fallback">Meeshaa mobaayilii</string>
     <string name="account_error_token_type">Gosti toksinii hin deggeramne</string>
     <string name="account_error_caller">Waamichi hin hayyamamne</string>
 </resources>

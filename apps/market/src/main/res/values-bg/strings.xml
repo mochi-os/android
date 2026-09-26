@@ -11,7 +11,7 @@
     <string name="market_account_seller_step_stripe_desc">Свържете акаунт в Stripe, за да приемате плащания от купувачи</string>
     <string name="market_account_seller_fees_heading">Такси:</string>
     <string name="market_account_seller_fees_mochi">Mochi взема %1$s%% от всяка продажба.</string>
-    <string name="market_account_seller_fees_stripe">Stripe начислява собствена такса за обработка на транзакция и фиксирана такса за всяко оспорено плащане. Текущите тарифи за вашата валута и регион са посочени в таблото на Stripe.</string>
+    <string name="market_account_seller_fees_stripe">Stripe начислява собствена такса за обработка на транзакция и фиксирана такса за всяко обратно плащане. Текущите тарифи за вашата валута и регион са посочени в таблото на Stripe.</string>
     <string name="market_account_seller_connect">Свържи Stripe</string>
     <string name="market_account_seller_step_stripe_title">Свържи Stripe</string>
     <string name="market_account_seller_check_status">Провери състоянието</string>
@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Докладвай обявата</string>
     <string name="market_listing_detail_save">Запази</string>
     <string name="market_listing_detail_seller_heading">Продавач</string>
-    <string name="market_listing_detail_shipping_heading">Доставка</string>
+    <string name="market_listing_detail_shipping_heading">Опции за доставка</string>
     <string name="market_listing_detail_subscribe">Абонирай се</string>
     <string name="market_listing_detail_tags_heading">Етикети</string>
     <string name="market_listing_detail_title">Обява</string>
@@ -326,7 +326,7 @@
     <string name="market_sale_tracking_label">Номер за проследяване</string>
     <string name="market_saved_title">Запазени</string>
     <string name="market_search_clear">Изчисти търсенето</string>
-    <string name="market_section_categories">Разгледай категориите</string>
+    <string name="market_section_categories">Преглед на категориите</string>
     <string name="market_section_listings">Скорошни обяви</string>
     <string name="market_section_recent">Наскоро прегледани</string>
     <string name="market_ship_dialog_cancel">Отказ</string>
@@ -436,7 +436,7 @@
     <string name="market_carousel_thumbnail">Миниатюра %1$d</string>
     <string name="market_checkout_browser_unavailable">Няма наличен браузър за отваряне на страницата за плащане</string>
     <string name="market_checkout_pay_button">Плащане със Stripe</string>
-    <string name="market_checkout_processing">Обработка…</string>
+    <string name="market_checkout_processing">Обработва се…</string>
     <string name="market_checkout_pwyw_label">Вашата цена (минимум %1$s)</string>
     <string name="market_checkout_pwyw_min_error">Сумата трябва да е поне %1$s</string>
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
@@ -487,8 +487,8 @@
     <string name="market_editor_type">Тип на обявата</string>
     <string name="market_editor_zone_add">Добави зона</string>
     <string name="market_editor_zone_country_au">Австралия</string>
-    <string name="market_purchase_dispute_chargeback">Чарджбек %1$s</string>
-    <string name="market_purchase_dispute_chargeback_body">Вашата банка подаде чарджбек за тази поръчка. Stripe обработва спора с продавача; резултатът ще се покаже тук, когато бъде решен.</string>
+    <string name="market_purchase_dispute_chargeback">Обратно плащане %1$s</string>
+    <string name="market_purchase_dispute_chargeback_body">Вашата банка подаде обратно плащане за тази поръчка. Stripe обработва спора с продавача; резултатът ще се покаже тук, когато бъде решен.</string>
     <string name="market_purchase_dispute_response">Отговор на продавача</string>
     <string name="market_purchase_download_many">Изтеглете вашите %1$d файла по-долу.</string>
     <string name="market_purchase_download_one">Изтеглете вашия файл по-долу.</string>
@@ -524,7 +524,7 @@
     <string name="market_sale_carrier_custom_label">Име на превозвача</string>
     <string name="market_sale_dispute_evidence_due">Доказателства до %1$s</string>
     <string name="market_sale_dispute_state_responded">Очаква решение</string>
-    <string name="market_sale_dispute_stripe_reason">Причина за чарджбек от Stripe: %1$s</string>
+    <string name="market_sale_dispute_stripe_reason">Причина за обратно плащане от Stripe: %1$s</string>
     <string name="market_sale_fee_gross">Брутно</string>
     <string name="market_sale_fee_mochi">Такса на Mochi</string>
     <string name="market_sale_fee_payout">Нетна изплащана сума</string>
@@ -548,7 +548,7 @@
     <string name="market_saved_empty_title">Няма запазени обяви</string>
     <string name="market_search_placeholder">Търсене в пазара</string>
     <string name="market_status_past_due">Просрочено</string>
-    <string name="market_stripe_onboarding_action">Продължаване на настройката</string>
+    <string name="market_stripe_onboarding_action">Продължи настройката</string>
     <string name="market_stripe_onboarding_body">Завършете регистрацията си в Stripe, преди да можете да приемате изплащания.</string>
     <string name="market_stripe_onboarding_failed">Stripe не може да бъде отворен</string>
     <string name="market_stripe_onboarding_opening">Отваряне на Stripe…</string>

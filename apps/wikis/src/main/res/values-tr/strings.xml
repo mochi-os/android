@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Kaldır</string>
     <string name="wikis_replicas_remove_failed">Kopya kaldırılamadı</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki\'ler</string>
     <string name="wikis_channel_name">Wikis bildirimleri</string>
     <string name="wikis_channel_description">Sayfa düzenlemeleri, yorumlar ve davetler hakkında bildirimler.</string>
     <string name="wikis_pageview_toc_expand">İçindekiler tablosunu göster</string>

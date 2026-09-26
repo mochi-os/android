@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Abonnement opzeggen</string>
     <string name="forums_list_unsubscribe_title">Abonnement opzeggen</string>
     <string name="forums_create_title">Forum aanmaken</string>
-    <string name="forums_create_name">Naam</string>
+    <string name="forums_create_name">Forumnaam</string>
     <string name="forums_create_privacy">Privacy</string>
     <string name="forums_create_private">Privé</string>
     <string name="forums_create_public">Openbaar</string>
-    <string name="forums_create_action">Aanmaken</string>
+    <string name="forums_create_action">Forum aanmaken</string>
     <string name="forums_find_title">Forums zoeken</string>
     <string name="forums_find_recommended">Aanbevolen</string>
     <string name="forums_find_subscribe">Abonneren</string>
@@ -156,7 +156,7 @@
     <string name="forums_banner_placeholder">Welkom op dit forum…</string>
     <string name="forums_ai_mode_label">Modus: %1$s</string>
     <string name="forums_ai_mode_heading">AI-modus</string>
-    <string name="forums_ai_mode_off">Uit</string>
+    <string name="forums_ai_mode_off">Uitgeschakeld</string>
     <string name="forums_ai_account">AI-account</string>
     <string name="forums_ai_prompt_tag">Tag-prompt</string>
     <string name="forums_ai_prompt_score">Scoringsprompt</string>
@@ -206,7 +206,7 @@
         <item quantity="other">%d nieuwe berichten</item>
     </plurals>
     <string name="forums_rss_feed">RSS-feed</string>
-    <string name="forums_rss_mode_posts">Berichten</string>
+    <string name="forums_rss_mode_posts">Posts</string>
     <string name="forums_rss_mode_posts_comments">Posts en reacties</string>
     <string name="forums_rss_copied">RSS-URL gekopieerd naar het klembord</string>
     <string name="forums_find_results">Zoekresultaten</string>
@@ -257,8 +257,8 @@
     <string name="forums_access_select_rule">Selecteer een regel</string>
     <string name="forums_ai_actions_label">AI-acties op berichten</string>
     <string name="forums_ai_prompt_custom">Aangepast</string>
-    <string name="forums_ai_prompt_score_label">Scoreprompt</string>
-    <string name="forums_ai_prompt_tag_label">Tagprompt</string>
+    <string name="forums_ai_prompt_score_label">Score-prompt</string>
+    <string name="forums_ai_prompt_tag_label">Tag-prompt</string>
     <string name="forums_ai_prompt_variables">Variabelen: %1$s</string>
     <string name="forums_link">Link</string>
     <string name="forums_moderation_ban_message">Deze persoon verliest de toegang tot het forum totdat je de beperking opheft.</string>
@@ -277,7 +277,7 @@
     <string name="forums_moderation_restriction_remove_message">Deze persoon krijgt meteen weer volledige toegang tot het forum.</string>
     <string name="forums_moderation_restriction_remove_title">Beperking voor %1$s opheffen?</string>
     <string name="forums_moderation_restriction_state_muted">Gedempt</string>
-    <string name="forums_moderation_restriction_state_shadowban">Shadowban</string>
+    <string name="forums_moderation_restriction_state_shadowban">Stil verbannen</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Er zijn geen gebruikers gedempt of verbannen</string>
     <string name="forums_moderation_section_premoderation_description">Goedkeuring vereisen voordat inhoud zichtbaar wordt</string>
     <string name="forums_moderation_section_ratelimiting_description">Voorkom spam door te beperken hoe vaak gebruikers kunnen plaatsen</string>

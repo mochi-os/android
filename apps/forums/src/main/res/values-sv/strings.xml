@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Avsluta prenumeration</string>
     <string name="forums_list_unsubscribe_title">Avsluta prenumeration</string>
     <string name="forums_create_title">Skapa forum</string>
-    <string name="forums_create_name">Namn</string>
+    <string name="forums_create_name">Forumnamn</string>
     <string name="forums_create_privacy">Integritet</string>
     <string name="forums_create_private">Privat</string>
     <string name="forums_create_public">Offentlig</string>
-    <string name="forums_create_action">Skapa</string>
+    <string name="forums_create_action">Skapa forum</string>
     <string name="forums_find_title">Hitta forum</string>
     <string name="forums_find_recommended">Rekommenderad</string>
     <string name="forums_find_subscribe">Prenumerera</string>
@@ -156,7 +156,7 @@
     <string name="forums_banner_placeholder">Välkommen till det här forumet…</string>
     <string name="forums_ai_mode_label">Läge: %1$s</string>
     <string name="forums_ai_mode_heading">AI-läge</string>
-    <string name="forums_ai_mode_off">Av</string>
+    <string name="forums_ai_mode_off">Inaktiverad</string>
     <string name="forums_ai_account">AI-konto</string>
     <string name="forums_ai_prompt_tag">Prompt för taggning</string>
     <string name="forums_ai_prompt_score">Prompt för poängsättning</string>

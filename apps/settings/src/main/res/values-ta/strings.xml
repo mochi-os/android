@@ -4,7 +4,7 @@
     <string name="settings_home_title">அமைப்புகள்</string>
     <string name="settings_home_logout">வெளியேறு</string>
     <string name="settings_home_account">கணக்கு</string>
-    <string name="settings_home_preferences">விருப்பங்கள்</string>
+    <string name="settings_home_preferences">விருப்பத்தேர்வுகள்</string>
     <string name="settings_home_display">காட்சி</string>
     <string name="settings_home_notification_prefs">அறிவிப்பு விருப்பங்கள்</string>
     <string name="settings_home_accounts">இணைக்கப்பட்ட கணக்குகள்</string>
@@ -74,7 +74,7 @@
     <string name="system_status_title">நிலை</string>
     <string name="system_status_version">பதிப்பு</string>
     <string name="system_status_started">தொடங்கப்பட்டது</string>
-    <string name="system_status_update">புதுப்பி</string>
+    <string name="system_status_update">புதுப்பிப்பு</string>
     <string name="system_status_refresh">புதுப்பி</string>
     <string name="system_status_install_update">புதுப்பிப்பை நிறுவு</string>
     <string name="system_status_download_installer">நிறுவியை பதிவிறக்கு</string>
@@ -263,7 +263,7 @@
     <string name="system_settings_reset_message">இது \"%1$s\" ஐ இயல்புநிலை மதிப்பிற்கு (%2$s) மீட்டமைக்கும்.</string>
     <string name="system_settings_reset_message_empty">இது \"%1$s\" ஐ இயல்புநிலைக்கு (வெற்று) மீட்டமைக்கும்.</string>
     <string name="settings_home_system_users">பயனர்கள் (சேவையகம்)</string>
-    <string name="system_users_add_user">பயனரை சேர்</string>
+    <string name="system_users_add_user">பயனரைச் சேர்</string>
     <string name="system_users_search_placeholder">பயனர்களைத் தேடு…</string>
     <string name="system_users_sort_by">வரிசைப்படுத்து</string>
     <string name="system_users_last_login">கடைசி உள்நுழைவு: %1$s</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s இனி இந்த டொமைனில் வழிகளை நிர்வகிக்காது.</string>
     <string name="domain_delegation_delete_title">பிரதிநிதித்துவத்தை நீக்கவா?</string>
     <string name="domain_delegation_path">பாதை</string>
-    <string name="domain_delegation_user">பயனர் ID</string>
+    <string name="domain_delegation_user">பயனர்</string>
     <string name="domain_delegations">பிரதிநிதித்துவங்கள்</string>
     <string name="domain_delegations_empty">கட்டமைக்கப்பட்ட வழங்கப்பட்டுள்ளவை இல்லை.</string>
     <string name="domain_delete">டொமைனை நீக்கு</string>

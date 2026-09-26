@@ -34,7 +34,7 @@
     <string name="crm_option_icon">આઇકોન</string>
     <string name="crm_option_icon_placeholder">ઉદા.ત. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">અનસબ્સ્ક્રાઇબ કરો</string>
-    <string name="crm_settings_delete_crm">પ્રોજેક્ટ કાઢી નાખો</string>
+    <string name="crm_settings_delete_crm">CRM કાઢી નાખો</string>
     <string name="crm_settings_delete_confirm_title">CRM કાઢી નાખો</string>
     <string name="crm_settings_unsubscribe_title">અનસબ્સ્ક્રાઇબ કરો</string>
     <string name="crm_settings_unsubscribe_message">શું તમે ખરેખર આ CRM માંથી અનસબ્સ્ક્રાઇબ કરવા માંગો છો?</string>
@@ -135,10 +135,10 @@
     <string name="crm_class_move_up">ઉપર ખસેડો</string>
     <string name="crm_class_move_down">નીચે ખસેડો</string>
     <string name="crm_views_sort_by">દ્વારા સૉર્ટ કરો</string>
-    <string name="crm_sort_direction_asc">ઊભરતું</string>
-    <string name="crm_views_direction_asc">ઊભરતું</string>
-    <string name="crm_sort_direction_desc">ઊતરતું</string>
-    <string name="crm_views_direction_desc">ઊતરતું</string>
+    <string name="crm_sort_direction_asc">ચઢતો ક્રમ</string>
+    <string name="crm_views_direction_asc">ચઢતો ક્રમ</string>
+    <string name="crm_sort_direction_desc">ઊતરતો ક્રમ</string>
+    <string name="crm_views_direction_desc">ઊતરતો ક્રમ</string>
     <string name="crm_search_objects_placeholder">વસ્તુઓ શોધો</string>
     <string name="crm_links_search_placeholder">વસ્તુઓ શોધો</string>
 
@@ -154,7 +154,7 @@
     <string name="crm_people_empty">હજુ સુધી કોઈને ઍક્સેસ નથી</string>
     <string name="crm_settings_delete_confirm_message">શું તમે ખરેખર આ CRM કાઢી નાખવા માગો છો? બધી વસ્તુઓ, ટિપ્પણીઓ અને સેટિંગ્સ કાયમ માટે દૂર કરવામાં આવશે.</string>
     <string name="crm_object_unwatch">જોવાનું બંધ કરો</string>
-    <string name="crm_object_delete_title">વસ્તુ કાઢી નાખો</string>
+    <string name="crm_object_delete_title">ઑબ્જેક્ટ કાઢી નાખો</string>
     <string name="crm_object_delete_message">શું તમે ખરેખર આ વસ્તુ કાઢી નાખવા માગો છો? આ ક્રિયા પૂર્વવત્ કરી શકાતી નથી.</string>
     <string name="crm_parent_none">કોઈ પેરન્ટ નથી</string>
     <string name="crm_links_empty">કોઈ લિંક નથી</string>
@@ -168,7 +168,7 @@
     <string name="crm_comment_placeholder">ટિપ્પણી ઉમેરો</string>
     <string name="crm_property_pick_date">તારીખ પસંદ કરો</string>
     <string name="crm_property_ok">ઓકે</string>
-    <string name="crm_property_add_item">વસ્તુ ઉમેરો</string>
+    <string name="crm_property_add_item">આઇટમ ઉમેરો</string>
     <string name="crm_property_required">%1$s જરૂરી છે</string>
     <string name="crm_activity_empty">કોઈ પ્રવૃત્તિ નથી</string>
     <string name="crm_activity_created">આ વસ્તુ બનાવી</string>
@@ -184,7 +184,7 @@
     <string name="crm_tree_move">ખસેડો</string>
     <string name="crm_tree_move_to_parent">પેરન્ટ પર ખસેડો</string>
     <string name="crm_tree_root_level">(રૂટ સ્તર)</string>
-    <string name="crm_tree_empty">કોઈ વસ્તુઓ નથી</string>
+    <string name="crm_tree_empty">કોઈ ઑબ્જેક્ટ્સ નથી</string>
     <string name="crm_board_no_columns">આ દૃશ્ય માટે કોઈ કૉલમ ગોઠવેલ નથી</string>
     <string name="crm_board_no_options">કૉલમ ફીલ્ડ માટે કોઈ વિકલ્પો ગોઠવેલ નથી</string>
     <string name="crm_board_nested_count">+%1$d નેસ્ટેડ</string>
@@ -204,11 +204,11 @@
     <string name="crm_class_title_field_default">મૂળભૂત (વાંચી શકાય તેવું)</string>
     <string name="crm_class_parents">પેરન્ટ વર્ગો</string>
     <string name="crm_class_delete_message">શું તમે ખરેખર \"%1$s\" વર્ગને કાઢી નાખવા માગો છો? તમામ ક્ષેત્રો અને તેમના વિકલ્પો પણ કાઢી નાખવામાં આવશે.</string>
-    <string name="crm_field_type_enumerated">ગણતરી કરાયેલ</string>
+    <string name="crm_field_type_enumerated">ગણતરી કરેલ</string>
     <string name="crm_field_label">ક્ષેત્ર: %1$s</string>
     <string name="crm_field_readonly">ફક્ત-વાંચન</string>
     <string name="crm_field_sortable">ક્રમબદ્ધ કરી શકાય તેવું</string>
-    <string name="crm_field_filterable">ગાળી શકાય તેવું</string>
+    <string name="crm_field_filterable">ફિલ્ટર કરી શકાય તેવું</string>
     <string name="crm_field_show_on_card">કાર્ડ પર બતાવો</string>
     <string name="crm_field_multi">બહુ-પસંદગી</string>
     <string name="crm_field_position">પ્રદર્શન સ્થાન</string>
@@ -224,7 +224,7 @@
     <string name="crm_views_empty">કોઈ દૃશ્ય વ્યાખ્યાયિત નથી</string>
     <string name="crm_views_empty_subtitle">ઑબ્જેક્ટ્સ જૂથબદ્ધ કરવા માટે બોર્ડ અથવા સૂચિ દૃશ્ય બનાવો</string>
     <string name="crm_views_delete_message">શું તમે ખરેખર \"%1$s\" દૃશ્યને કાઢી નાખવા માગો છો?</string>
-    <string name="crm_views_columns_field">કૉલમ ક્ષેત્ર</string>
+    <string name="crm_views_columns_field">કૉલમ ફીલ્ડ</string>
     <string name="crm_views_rows_field">પંક્તિ ક્ષેત્ર (સ્વિમલેન)</string>
     <string name="crm_views_border_field">બોર્ડર રંગ ક્ષેત્ર</string>
     <string name="crm_views_filter_classes">વર્ગો માટે ગાળો</string>
@@ -277,7 +277,7 @@
     <string name="crm_settings_unsubscribe_section">CRM માંથી અનસબ્સ્ક્રાઇબ કરો</string>
     <string name="crm_settings_updated">CRM અપડેટ થયું</string>
     <string name="crm_create_import_backup">બેકઅપમાંથી ઇમ્પોર્ટ કરો (વૈકલ્પિક)</string>
-    <string name="crm_export">ડેટા નિકાસ કરો</string>
+    <string name="crm_export">ડેટા એક્સપોર્ટ કરો</string>
     <string name="crm_exporting">નિકાસ તૈયાર કરી રહ્યાં છીએ…</string>
     <string name="crm_create_allow_search">કોઈને પણ CRM શોધવાની મંજૂરી આપો</string>
     <string name="crm_no_crms_found">કોઈ CRM મળ્યા નથી</string>

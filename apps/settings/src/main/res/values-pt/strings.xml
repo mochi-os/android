@@ -276,7 +276,7 @@
     <string name="account_title">Conta</string>
     <string name="account_section_identity">Identidade</string>
     <string name="account_identity_identity">Identidade</string>
-    <string name="account_identity_username">Nome de usuário</string>
+    <string name="account_identity_username">Nome de utilizador</string>
     <string name="account_identity_name">Nome</string>
     <string name="account_identity_fingerprint">Impressão digital</string>
     <string name="account_identity_directory_toggle">Permitir que outros o encontrem no diretório</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s já não vai gerir rotas neste domínio.</string>
     <string name="domain_delegation_delete_title">Eliminar delegação?</string>
     <string name="domain_delegation_path">Caminho</string>
-    <string name="domain_delegation_user">ID do utilizador</string>
+    <string name="domain_delegation_user">Utilizador</string>
     <string name="domain_delegations">Delegações</string>
     <string name="domain_delegations_empty">Nenhuma delegação configurada.</string>
     <string name="domain_delete">Eliminar domínio</string>

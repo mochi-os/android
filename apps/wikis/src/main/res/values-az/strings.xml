@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Sil</string>
     <string name="wikis_replicas_remove_failed">Replikanı silmək alınmadı</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki-lər</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">Wiki səhifə redaktələri, şərhlər və dəvətlər barədə bildirişlər.</string>
     <string name="wikis_pageview_toc_expand">Mündəricatı göstər</string>
@@ -240,7 +240,7 @@
     <string name="wikis_comment_form_placeholder_new">Şərh yazın…</string>
     <string name="wikis_comment_form_placeholder_reply">Cavab yaz…</string>
     <string name="wikis_comment_form_send">Göndər</string>
-    <string name="wikis_comment_form_remove_attachment">Qoşmanı silin</string>
+    <string name="wikis_comment_form_remove_attachment">Qoşmanı sil</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Məzmununuzu burada Markdown ilə yazın…</string>
     <string name="wikis_insert_dialog_empty">Hələ qoşma yoxdur. Başlamaq üçün fayl yükləyin.</string>

@@ -37,7 +37,7 @@
 
     <string name="words_channel_name">Žodžių pranešimai</string>
     <string name="words_channel_description">Pranešimai apie eilę, mainus ir partijų rezultatus.</string>
-    <string name="words_sidebar_active">Aktyvios partijos</string>
+    <string name="words_sidebar_active">Aktyvūs žaidimai</string>
     <string name="words_sidebar_empty">Dar nėra partijų.</string>
     <string name="words_new_game_choose_opponents">Pasirinkite varžovus</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
@@ -55,7 +55,7 @@
     <string name="words_detail_chat_you_played">Jūs žaidėte %1$s</string>
     <string name="words_detail_chat_player_played">%1$s žaidė %2$s</string>
 
-    <string name="words_detail_delete_title">Ištrinti partiją?</string>
+    <string name="words_detail_delete_title">Ištrinti žaidimą?</string>
     <string name="words_detail_delete_confirm">Ištrinti</string>
     <string name="words_detail_delete_message">Tai visam laikui ištrins žaidimą ir jo pokalbį. Šio veiksmo negalima anuliuoti.</string>
     <string name="words_detail_chat_passed">%1$s praleido ėjimą</string>

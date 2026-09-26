@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Pupus</string>
     <string name="wikis_replicas_remove_failed">Gagal mupus réplika</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">Bewara ngeunaan éditan kaca wiki, koméntar, jeung ondangan.</string>
     <string name="wikis_pageview_toc_expand">Témbongkeun daptar eusi</string>
@@ -283,7 +283,7 @@
     <string name="wikis_load_more">Muat leuwih loba</string>
     <string name="wikis_access_change_level">Tingkat aksés</string>
     <string name="wikis_access_subject_anyone">Saha waé</string>
-    <string name="wikis_access_subject_authenticated">Pangguna anu disahkeun</string>
+    <string name="wikis_access_subject_authenticated">Pamaké anu diverifikasi</string>
 
     <string name="wikis_revision_compare">Bandingkeun parobahan</string>
     <string name="wikis_revision_author">ku %1$s</string>

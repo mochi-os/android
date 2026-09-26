@@ -20,7 +20,7 @@
     <string name="calendars_repeat_never">कहिल्यै होइन</string>
     <string name="calendars_repeat_monthly">मासिक</string>
     <string name="calendars_repeat_yearly">वार्षिक</string>
-    <string name="calendars_repeat_custom">अनुकूलित</string>
+    <string name="calendars_repeat_custom">अनुकूलन</string>
     <string name="calendars_reminder_none">कुनै पनि होइन</string>
     <string name="calendars_day_sunday">आइतबार</string>
     <string name="calendars_day_monday">सोमबार</string>
@@ -166,7 +166,7 @@
     <string name="calendars_subscribe_server">अर्को Mochi वा CalDAV सर्भर</string>
     <string name="calendars_subscribe_address">प्रकाशित क्यालेन्डरको ठेगाना (पढ्ने मात्र)</string>
     <string name="calendars_subscribe_password_apple">एपका लागि विशेष पासवर्ड</string>
-    <string name="calendars_subscribe_server_url">सर्भरको ठेगाना</string>
+    <string name="calendars_subscribe_server_url">सर्भर ठेगाना</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google पात्रो</string>

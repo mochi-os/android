@@ -4,7 +4,7 @@
     <string name="settings_home_title">Saitunan</string>
     <string name="settings_home_logout">Fita</string>
     <string name="settings_home_account">Asusu</string>
-    <string name="settings_home_preferences">Abubuwan da aka fi so</string>
+    <string name="settings_home_preferences">Abubuwan da kake so</string>
     <string name="settings_home_display">Nuna</string>
     <string name="settings_home_notification_prefs">Saiyyun sanarwa</string>
     <string name="settings_home_accounts">Asusai da aka haɗa</string>
@@ -74,7 +74,7 @@
     <string name="system_status_title">Matsayi</string>
     <string name="system_status_version">Sigar</string>
     <string name="system_status_started">An fara</string>
-    <string name="system_status_update">Sabunta</string>
+    <string name="system_status_update">Sabuntawa</string>
     <string name="system_status_refresh">Sabuntawa</string>
     <string name="system_status_install_update">Shigar da sabuntawa</string>
     <string name="system_status_download_installer">Sauke mai shigarwa</string>
@@ -91,7 +91,7 @@
     <string name="accounts_add_title">Ƙara asusu</string>
     <string name="accounts_empty">Babu accounts da aka haɗa</string>
     <string name="accounts_type_label">Nau\'i</string>
-    <string name="accounts_field_email">Email</string>
+    <string name="accounts_field_email">Imel</string>
     <string name="accounts_field_model">Model</string>
     <string name="accounts_field_name">Suna</string>
     <string name="accounts_status_pending">Jiran</string>
@@ -174,7 +174,7 @@
     <string name="system_users_role_user">Mai amfani</string>
     <string name="system_users_status_suspended">An dakatar</string>
     <string name="system_users_last_never">Babu lokaci</string>
-    <string name="system_users_email_label">Email</string>
+    <string name="system_users_email_label">Imel</string>
     <string name="system_users_edit">Gyara mai amfani</string>
     <string name="system_users_edit_title">Gyara mai amfani</string>
     <string name="system_users_create_title">Ƙirƙira mai amfani</string>
@@ -207,7 +207,7 @@
     <string name="system_users_toast_status_failed">An gaza sabunta matsayin mai amfani</string>
     <string name="system_users_toast_revoke_failed">An gaza janye session</string>
 
-    <string name="settings_home_sessions">Zama-zaman</string>
+    <string name="settings_home_sessions">Zama-zama</string>
     <string name="settings_home_privacy">Manufar sirri</string>
     <string name="settings_home_rules">Dokoki</string>
     <string name="settings_home_terms">Sharuɗɗan sabis</string>
@@ -229,7 +229,7 @@
     <string name="account_recovery_regen_title">Sake ƙirƙira lambobin dawowa?</string>
     <string name="account_recovery_regen_message">Lambobin da ke akwai za su daina aiki nan da nan. Adana sababbi a wuri mai aminci.</string>
     <string name="account_recovery_codes_warning">Adana waɗannan lambobi — kowanne kawai za a iya amfani da shi sau ɗaya. Ba za a sake nuna su ba.</string>
-    <string name="sessions_title">Zama-zaman</string>
+    <string name="sessions_title">Zama-zama</string>
     <string name="sessions_empty">Babu zaman da ke aiki.</string>
     <string name="sessions_revoke_message">Na\'urar da ke amfani da wannan zaman za ta fita.</string>
     <string name="account_oauth_empty">Babu asusun da aka haɗa</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">Fifiko %1$d · %2$s</string>
     <string name="interests_search_placeholder">Bincika batutuwa don ƙarawa…</string>
     <string name="interests_empty">Babu sha\'awa tukuna.</string>
-    <string name="interests_summary_regenerate">Sake ƙirƙira taƙaitawa</string>
+    <string name="interests_summary_regenerate">Sake samar da taƙaitawa</string>
     <string name="interests_summary_regenerating">Ana sake ƙirƙira…</string>
     <string name="interests_summary_empty">Ƙara wasu sha\'awa don ƙirƙirar taƙaitawa game da abin da kake so.</string>
     <string name="interests_search_failed">Bincike ya kasa. Da fatan a sake gwadawa.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s ba zai kara sarrafa hanyoyin akan wannan yanki ba.</string>
     <string name="domain_delegation_delete_title">Goge wakilci?</string>
     <string name="domain_delegation_path">Hanya</string>
-    <string name="domain_delegation_user">ID na mai amfani</string>
+    <string name="domain_delegation_user">Mai amfani</string>
     <string name="domain_delegations">Wakilci</string>
     <string name="domain_delegations_empty">Babu wakilai da aka saita.</string>
     <string name="domain_delete">Goge domain</string>
@@ -356,7 +356,7 @@
     <string name="route_target_select">Zaɓa</string>
     <string name="account_data_description">Sauke cikakken ajiyar da za ku iya maidowa a wannan uwar garke ko wata ta Mochi.</string>
     <string name="route_target_none">Babu wuraren da ake da su</string>
-    <string name="login_invalid_code">Code mara inganci</string>
+    <string name="login_invalid_code">Lamba mara inganci</string>
     <string name="accounts_provider_browser">Sanarwar browser</string>
     <string name="accounts_provider_fcm">Tura ta Android</string>
     <string name="accounts_provider_mcp">Sabar MCP</string>

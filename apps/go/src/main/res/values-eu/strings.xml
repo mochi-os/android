@@ -62,7 +62,7 @@
     <string name="go_channel_name">Go jakinarazpenak</string>
     <string name="go_channel_description">Mugimenduak, pasatzeak, berdinketa eskaintzak eta partiden emaitzei buruzko jakinarazpenak.</string>
     <string name="go_open_sidebar">Ireki alboko barra</string>
-    <string name="go_sidebar_active">Partida aktiboak</string>
+    <string name="go_sidebar_active">Joko aktiboak</string>
     <string name="go_empty_active">Ez dago partida aktiborik oraindik.</string>
     <string name="go_status_resigned">Errenditua</string>
     <string name="go_new_game_title">Go partida berria</string>

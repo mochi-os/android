@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">നീക്കം ചെയ്യുക</string>
     <string name="wikis_replicas_remove_failed">റെപ്ലിക്ക നീക്കം ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi വിക്കികൾ</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">wiki പേജ് എഡിറ്റുകൾ, അഭിപ്രായങ്ങൾ, ക്ഷണങ്ങൾ എന്നിവയെക്കുറിച്ചുള്ള അറിയിപ്പുകൾ.</string>
     <string name="wikis_pageview_toc_expand">ഉള്ളടക്ക പട്ടിക കാണിക്കുക</string>

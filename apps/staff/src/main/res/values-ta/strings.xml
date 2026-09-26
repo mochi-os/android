@@ -163,7 +163,7 @@
     <string name="staff_config_field_stripe_oauth_client">OAuth கிளையன்ட் ID</string>
     <string name="staff_config_field_stripe_publishable">வெளியிடக்கூடிய திறவுகோல்</string>
     <string name="staff_config_field_stripe_secret">ரகசிய திறவுகோல்</string>
-    <string name="staff_config_group_moderation">மிதப்படுத்தல்</string>
+    <string name="staff_config_group_moderation">மட்டுறுத்தல்</string>
     <string name="staff_config_group_payments">கட்டணங்கள்</string>
     <string name="staff_config_group_reviews">மதிப்புரைகள்</string>
     <string name="staff_config_group_stripe">Stripe</string>
@@ -180,7 +180,7 @@
     <string name="staff_dashboard_col_date">தேதி</string>
     <string name="staff_dashboard_col_detail">விவரம்</string>
     <string name="staff_dashboard_col_listing">பட்டியல்</string>
-    <string name="staff_dashboard_col_moderation">மிதப்படுத்தல்</string>
+    <string name="staff_dashboard_col_moderation">மட்டுறுத்தல்</string>
     <string name="staff_dashboard_col_name">பெயர்</string>
     <string name="staff_dashboard_col_object">ஆப்ஜெக்ட்</string>
     <string name="staff_dashboard_col_reason">காரணம்</string>
@@ -208,7 +208,7 @@
     <string name="staff_dashboard_system">சிஸ்டம்</string>
     <string name="staff_dashboard_tab_audit">தணிக்கை</string>
     <string name="staff_dashboard_tab_listings">பட்டியல்கள்</string>
-    <string name="staff_dashboard_tab_moderation">மிதப்படுத்தல்</string>
+    <string name="staff_dashboard_tab_moderation">மட்டுறுத்தல்</string>
     <string name="staff_dashboard_tab_orders">ஆர்டர்கள்</string>
     <string name="staff_dashboard_tab_signups">பதிவுகள்</string>
     <string name="staff_dashboard_yes">ஆம்</string>
@@ -251,7 +251,7 @@
     <string name="staff_disputes_view">காட்டு</string>
     <string name="staff_filter_chip_remove">வடிகட்டியை அகற்று</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
-    <string name="staff_filter_label_moderation">மிதப்படுத்தல்</string>
+    <string name="staff_filter_label_moderation">மட்டுறுத்தல்</string>
     <string name="staff_filter_label_query">தேடு</string>
     <string name="staff_filter_label_seller">விற்பனையாளர்</string>
     <string name="staff_filter_label_status">நிலை</string>
@@ -265,7 +265,7 @@
     <string name="staff_listings_approved_toast">பட்டியல் அங்கீகரிக்கப்பட்டது</string>
     <string name="staff_listings_cancel">ரத்துசெய்</string>
     <string name="staff_listings_empty">பட்டியல்கள் இல்லை</string>
-    <string name="staff_listings_filter_moderation_label">மிதப்படுத்தல்</string>
+    <string name="staff_listings_filter_moderation_label">மட்டுறுத்தல்</string>
     <string name="staff_listings_filter_status_label">நிலை</string>
     <string name="staff_listings_moderation_auto_approved">தானாக அங்கீகரிக்கப்பட்டது</string>
     <string name="staff_listings_moderation_hold">வைத்திரு</string>

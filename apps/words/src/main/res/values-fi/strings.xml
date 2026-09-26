@@ -26,7 +26,7 @@
     <string name="words_detail_action_resign">Luovuta</string>
     <string name="words_detail_action_rematch">Uusinta</string>
     <string name="words_detail_action_delete">Poista peli</string>
-    <string name="words_detail_chat_title">Chat</string>
+    <string name="words_detail_chat_title">Keskustelu</string>
     <string name="words_detail_recall">Peruuta</string>
     <string name="words_detail_submit">Lähetä</string>
     <string name="words_detail_cancel">Peruuta</string>

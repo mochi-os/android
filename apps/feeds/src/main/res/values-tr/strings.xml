@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi akışı</string>
     <string name="feeds_source_type_feed_memories">Anılar</string>
-    <string name="feeds_remove_source">Kaynağı kaldır</string>
+    <string name="feeds_remove_source">Kaynak kaldırılsın mı?</string>
     <string name="feeds_suggested_credibility_accept">Kabul et</string>
     <string name="feeds_rss_url_copied">RSS URL\'si panoya kopyalandı</string>
     <string name="feeds_logout">Oturumu kapat</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL\'si</string>
     <string name="feeds_source_never_fetched">Hiç alınmadı</string>
     <string name="feeds_source_poll">Sorgula</string>
-    <string name="feeds_source_transform">Dönüştür</string>
+    <string name="feeds_source_transform">AI dönüşümü</string>
     <string name="feeds_remove_source_confirm">\"%1$s\" kaldırılsın mı?</string>
     <string name="feeds_remove_also_delete_posts">İçe aktarılan gönderiler de silinsin</string>
     <string name="feeds_suggested_credibility_title">Önerilen güvenilirlik</string>

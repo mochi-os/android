@@ -9,7 +9,7 @@
     <string name="forums_list_unsubscribe">ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
     <string name="forums_list_unsubscribe_title">ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
     <string name="forums_create_title">ਫੋਰਮ ਬਣਾਓ</string>
-    <string name="forums_create_name">ਨਾਮ</string>
+    <string name="forums_create_name">ਫੋਰਮ ਦਾ ਨਾਮ</string>
     <string name="forums_create_privacy">ਪ੍ਰਾਈਵੇਸੀ</string>
     <string name="forums_create_private">ਨਿੱਜੀ</string>
     <string name="forums_create_public">ਜਨਤਕ</string>
@@ -71,7 +71,7 @@
     <string name="forums_ai_account_default">ਡਿਫਾਲਟ ਖਾਤਾ</string>
     <string name="forums_ai_prompt_reset">ਡਿਫਾਲਟ \'ਤੇ ਰੀਸੈੱਟ ਕਰੋ</string>
     <string name="forums_settings_unsubscribe">ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
-    <string name="forums_moderation_title">ਮਾਡਰੇਸ਼ਨ</string>
+    <string name="forums_moderation_title">ਸੰਚਾਲਨ</string>
     <string name="forums_moderation_tab_queue">ਕਤਾਰ</string>
     <string name="forums_moderation_tab_reports">ਰਿਪੋਰਟਾਂ</string>
     <string name="forums_moderation_tab_log">ਲੌਗ</string>
@@ -156,7 +156,7 @@
     <string name="forums_banner_placeholder">ਇਸ ਫੋਰਮ ਵਿੱਚ ਜੀ ਆਇਆਂ ਨੂੰ…</string>
     <string name="forums_ai_mode_label">ਮੋਡ: %1$s</string>
     <string name="forums_ai_mode_heading">AI ਮੋਡ</string>
-    <string name="forums_ai_mode_off">ਬੰਦ</string>
+    <string name="forums_ai_mode_off">ਬੰਦ ਕੀਤਾ</string>
     <string name="forums_ai_account">AI ਖਾਤਾ</string>
     <string name="forums_ai_prompt_tag">ਟੈਗਿੰਗ ਪ੍ਰੋਂਪਟ</string>
     <string name="forums_ai_prompt_score">ਸਕੋਰਿੰਗ ਪ੍ਰੋਂਪਟ</string>
@@ -219,7 +219,7 @@
     <string name="forums_all_forums">ਸਾਰੇ ਫੋਰਮ</string>
     <string name="forums_create_allow_search">ਕਿਸੇ ਨੂੰ ਵੀ ਫੋਰਮ ਖੋਜਣ ਦੀ ਆਗਿਆ ਦਿਓ</string>
     <string name="forums_rss_clipboard_label">ਫੋਰਮ RSS URL</string>
-    <string name="forums_tab_moderation">ਮਾਡਰੇਸ਼ਨ</string>
+    <string name="forums_tab_moderation">ਸੰਚਾਲਨ</string>
     <string name="forums_access_level_view_full">ਸਿਰਫ਼ ਦੇਖੋ</string>
     <string name="forums_access_level_none_full">ਪਹੁੰਚ ਨਹੀਂ</string>
     <string name="forums_access_subject_anyone">ਕੋਈ ਵੀ</string>
@@ -277,7 +277,7 @@
     <string name="forums_moderation_restriction_remove_message">ਉਹਨਾਂ ਨੂੰ ਤੁਰੰਤ ਫੋਰਮ ਤੱਕ ਪੂਰੀ ਪਹੁੰਚ ਵਾਪਸ ਮਿਲ ਜਾਵੇਗੀ।</string>
     <string name="forums_moderation_restriction_remove_title">%1$s \'ਤੇ ਲੱਗੀ ਪਾਬੰਦੀ ਹਟਾਉਣੀ ਹੈ?</string>
     <string name="forums_moderation_restriction_state_muted">ਮਿਊਟ ਕੀਤਾ</string>
-    <string name="forums_moderation_restriction_state_shadowban">ਪਰਛਾਵਾਂ ਪਾਬੰਦੀ</string>
+    <string name="forums_moderation_restriction_state_shadowban">ਗੁਪਤ ਤੌਰ \'ਤੇ ਪਾਬੰਦੀਸ਼ੁਦਾ</string>
     <string name="forums_moderation_restrictions_empty_subtitle">ਕਿਸੇ ਵਰਤੋਂਕਾਰ ਨੂੰ ਮਿਊਟ ਜਾਂ ਪਾਬੰਦੀਸ਼ੁਦਾ ਨਹੀਂ ਕੀਤਾ ਗਿਆ</string>
     <string name="forums_moderation_section_premoderation_description">ਸਮੱਗਰੀ ਦਿਖਾਈ ਦੇਣ ਤੋਂ ਪਹਿਲਾਂ ਮਨਜ਼ੂਰੀ ਲਾਜ਼ਮੀ ਕਰੋ</string>
     <string name="forums_moderation_section_ratelimiting_description">ਵਰਤੋਂਕਾਰ ਕਿੰਨੀ ਵਾਰ ਪੋਸਟ ਕਰ ਸਕਦੇ ਹਨ, ਇਹ ਸੀਮਤ ਕਰਕੇ ਸਪੈਮ ਰੋਕੋ</string>
@@ -286,7 +286,7 @@
     <string name="forums_moderation_unit_replies">ਜਵਾਬ</string>
     <string name="forums_moderation_unit_seconds">ਸਕਿੰਟ</string>
     <string name="forums_settings_ai_updated">AI ਸੈਟਿੰਗਾਂ ਅੱਪਡੇਟ ਹੋਈਆਂ</string>
-    <string name="forums_settings_forum_renamed">ਫੋਰਮ ਦਾ ਨਾਂ ਬਦਲਿਆ</string>
+    <string name="forums_settings_forum_renamed">ਫੋਰਮ ਦਾ ਨਾਮ ਬਦਲਿਆ ਗਿਆ</string>
     <string name="forums_settings_name_clear_cd">ਨਾਂ ਸਾਫ਼ ਕਰੋ</string>
     <string name="forums_settings_unsubscribe_section">ਫੋਰਮ ਤੋਂ ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
     <string name="forums_share_link_title">ਫੋਰਮ ਲਿੰਕ</string>

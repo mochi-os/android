@@ -16,7 +16,7 @@
     <string name="wikis_page_action_rename">ປ່ຽນຊື່</string>
     <string name="wikis_page_action_history">ປະຫວັດ</string>
     <string name="wikis_page_action_delete">ລົບ</string>
-    <string name="wikis_page_action_section_wiki">Wiki</string>
+    <string name="wikis_page_action_section_wiki">ວິກິ</string>
     <string name="wikis_page_action_search">ຄົ້ນຫາ</string>
     <string name="wikis_page_action_tags">ແທັກ</string>
     <string name="wikis_page_action_recent_changes">ການປ່ຽນແປງລ່າສຸດ</string>
@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">ລຶບອອກ</string>
     <string name="wikis_replicas_remove_failed">ຍ້າຍສຳເນົາລົ້ມເຫຼວ</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi ວິກິ</string>
     <string name="wikis_channel_name">Wikis notifications</string>
     <string name="wikis_channel_description">ການແຈ້ງເຕືອນກ່ຽວກັບການແກ້ໄຂໜ້າ wiki, ຄຳເຫັນ ແລະ ຄຳເຊີນ.</string>
     <string name="wikis_pageview_toc_expand">ສະແດງສາລະບານ</string>

@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Personnel</string>
-    <string name="launcher_staff">Mochi Personnel</string>
+    <string name="launcher_staff">Personnel Mochi</string>
     <string name="staff_accounts_action_ban_title">Bannir le compte</string>
     <string name="staff_accounts_action_suspend_title">Suspendre le compte</string>
     <string name="staff_accounts_action_unban_title">Lever le bannissement</string>
@@ -211,7 +211,7 @@
     <string name="staff_dashboard_kpi_total_orders">Total des commandes</string>
     <string name="staff_dashboard_listing_fallback">n° %1$s</string>
     <string name="staff_dashboard_no">Non</string>
-    <string name="staff_dashboard_open_sidebar">Ouvrir le menu</string>
+    <string name="staff_dashboard_open_sidebar">Ouvrir le panneau latéral</string>
     <string name="staff_dashboard_order_fallback">Commande n° %1$s</string>
     <string name="staff_dashboard_system">Système</string>
     <string name="staff_dashboard_tab_audit">Audit</string>
@@ -284,7 +284,7 @@
     <string name="staff_filter_chip_remove">Supprimer le filtre</string>
     <string name="staff_filter_chip_template">%1$s : %2$s</string>
     <string name="staff_filter_label_moderation">Modération</string>
-    <string name="staff_filter_label_query">Recherche</string>
+    <string name="staff_filter_label_query">Rechercher</string>
     <string name="staff_filter_label_seller">Vendeur</string>
     <string name="staff_filter_label_status">Statut</string>
     <string name="staff_filter_label_type">Type</string>

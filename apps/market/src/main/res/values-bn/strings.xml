@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">লিস্টিং রিপোর্ট করুন</string>
     <string name="market_listing_detail_save">সংরক্ষণ করুন</string>
     <string name="market_listing_detail_seller_heading">বিক্রেতা</string>
-    <string name="market_listing_detail_shipping_heading">শিপিং</string>
+    <string name="market_listing_detail_shipping_heading">শিপিং বিকল্প</string>
     <string name="market_listing_detail_subscribe">সাবস্ক্রাইব করুন</string>
     <string name="market_listing_detail_tags_heading">ট্যাগ</string>
     <string name="market_listing_detail_title">তালিকা</string>
@@ -326,8 +326,8 @@
     <string name="market_sale_tracking_label">ট্র্যাকিং নম্বর</string>
     <string name="market_saved_title">সংরক্ষিত</string>
     <string name="market_search_clear">অনুসন্ধান পরিষ্কার করুন</string>
-    <string name="market_section_categories">বিভাগ ব্রাউজ করুন</string>
-    <string name="market_section_listings">সাম্প্রতিক তালিকা</string>
+    <string name="market_section_categories">ক্যাটেগরি ব্রাউজ করুন</string>
+    <string name="market_section_listings">সাম্প্রতিক লিস্টিং</string>
     <string name="market_section_recent">সম্প্রতি দেখা</string>
     <string name="market_ship_dialog_cancel">বাতিল করুন</string>
     <string name="market_ship_dialog_submit">নিশ্চিত করুন</string>
@@ -477,7 +477,7 @@
     <string name="market_price_per_month">%1$s / মাস</string>
     <string name="market_price_per_year">%1$s / বছর</string>
     <string name="market_price_starting_bid">শুরুর বিড: %1$s</string>
-    <string name="market_profile_biography">পরিচিতি</string>
+    <string name="market_profile_biography">সম্পর্কে</string>
     <string name="market_profile_load_failed">প্রোফাইল লোড করা যায়নি</string>
     <string name="market_profile_member_since">%1$s থেকে সদস্য</string>
     <string name="market_profile_joined">%1$s-এ যোগ দিয়েছেন</string>
@@ -665,7 +665,7 @@
     <string name="market_seller_become_heading">বিক্রেতা হন</string>
     <string name="market_seller_become_title">বিক্রেতা হন</string>
     <string name="market_seller_check_status">স্ট্যাটাস চেক করুন</string>
-    <string name="market_seller_checking">চেক করা হচ্ছে...</string>
+    <string name="market_seller_checking">পরীক্ষা করা হচ্ছে…</string>
     <string name="market_seller_connect_stripe">Stripe সংযোগ করুন</string>
     <string name="market_seller_connecting">লোড হচ্ছে...</string>
     <string name="market_seller_fee_loading">ফি বিবরণ লোড হচ্ছে...</string>

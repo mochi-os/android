@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Hojjettoota</string>
-    <string name="launcher_staff">Mochi Hojjettoota</string>
+    <string name="launcher_staff">Hojjettoota Mochi</string>
     <string name="staff_accounts_action_ban_title">Akkaawuntii dhorki</string>
     <string name="staff_accounts_action_suspend_title">Akkaawuntii hidhi</string>
     <string name="staff_accounts_any_seller">Hunda</string>
@@ -161,7 +161,7 @@
     <string name="staff_config_field_stripe_oauth_client">ID maamilaa OAuth</string>
     <string name="staff_config_field_stripe_publishable">Furtuu maxxansamuu danda\'u</string>
     <string name="staff_config_field_stripe_secret">Furtuu iccitii</string>
-    <string name="staff_config_group_moderation">Toattaachuu</string>
+    <string name="staff_config_group_moderation">To\'annoo</string>
     <string name="staff_config_group_payments">Kaffaltiwwan</string>
     <string name="staff_config_group_reviews">Gamaaggamoota</string>
     <string name="staff_config_group_stripe">Stripe</string>
@@ -178,7 +178,7 @@
     <string name="staff_dashboard_col_date">Guyyaa</string>
     <string name="staff_dashboard_col_detail">Bal\'inaan</string>
     <string name="staff_dashboard_col_listing">Tarreeffama</string>
-    <string name="staff_dashboard_col_moderation">Toattaachuu</string>
+    <string name="staff_dashboard_col_moderation">To\'annoo</string>
     <string name="staff_dashboard_col_name">Maqaa</string>
     <string name="staff_dashboard_col_object">Wanta</string>
     <string name="staff_dashboard_col_reason">Sababa</string>
@@ -206,7 +206,7 @@
     <string name="staff_dashboard_system">Sirna</string>
     <string name="staff_dashboard_tab_audit">Qoraannoo</string>
     <string name="staff_dashboard_tab_listings">Tarreeffamtoota</string>
-    <string name="staff_dashboard_tab_moderation">Toattaachuu</string>
+    <string name="staff_dashboard_tab_moderation">To\'annoo</string>
     <string name="staff_dashboard_tab_orders">Ajajawwan</string>
     <string name="staff_dashboard_tab_signups">Galmee\'iinsa</string>
     <string name="staff_dashboard_yes">Eeyyee</string>
@@ -248,11 +248,11 @@
     <string name="staff_disputes_view">Daawwadhu</string>
     <string name="staff_filter_chip_remove">Calaltuu balleessuu</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
-    <string name="staff_filter_label_moderation">Toattaachuu</string>
-    <string name="staff_filter_label_query">Barbaaduu</string>
+    <string name="staff_filter_label_moderation">To\'annoo</string>
+    <string name="staff_filter_label_query">Barbaadi</string>
     <string name="staff_filter_label_seller">Gurguraa</string>
     <string name="staff_filter_label_status">Haala</string>
-    <string name="staff_filter_label_type">Gosa</string>
+    <string name="staff_filter_label_type">Akaakuu</string>
     <string name="staff_listings_action_approve_title">Tarreessaa mirkaneessi</string>
     <string name="staff_listings_action_reject_title">Tarreeffama didi</string>
     <string name="staff_listings_action_remove_title">Tarreeffama haqi</string>
@@ -262,7 +262,7 @@
     <string name="staff_listings_approved_toast">Tarreeffamni mirkanaaye</string>
     <string name="staff_listings_cancel">Haquu</string>
     <string name="staff_listings_empty">Tarreeffamni hin jiru</string>
-    <string name="staff_listings_filter_moderation_label">Toattaachuu</string>
+    <string name="staff_listings_filter_moderation_label">To\'annoo</string>
     <string name="staff_listings_filter_status_label">Haala</string>
     <string name="staff_listings_moderation_auto_approved">Ofumaan mirkanaa\'e</string>
     <string name="staff_listings_moderation_hold">Qabi</string>
@@ -353,7 +353,7 @@
     <string name="staff_sidebar_disputes">Mormii</string>
     <string name="staff_sidebar_listings">Tarreeffamtoota</string>
     <string name="staff_sidebar_management">Bulchiinsa</string>
-    <string name="staff_sidebar_market">Market</string>
+    <string name="staff_sidebar_market">Gabaa</string>
     <string name="staff_sidebar_moderation">Galmee toattaachuu</string>
     <string name="staff_sidebar_overview">Cuunfaa</string>
     <string name="staff_sidebar_reports">Gabaasawwan</string>
