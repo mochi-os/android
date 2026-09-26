@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="feeds_title">फीड</string>
+    <string name="feeds_title">फ़ीड</string>
     <string name="feeds_find_feeds">फीड खोजीं</string>
     <string name="feeds_create_feed">फीड बनाईं</string>
     <string name="feeds_new_post">नया पोस्ट</string>
@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">अबहीं तक कौनो पोस्ट नइखे</string>
     <string name="feeds_sort_label">क्रमबद्ध करीं</string>
     <string name="feeds_sort_interests">रुचि</string>
-    <string name="feeds_sort_new">नया</string>
+    <string name="feeds_sort_new">सबसे नया</string>
     <string name="feeds_sort_hot">हॉट</string>
-    <string name="feeds_sort_top">ऊपर</string>
+    <string name="feeds_sort_top">टॉप</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">पोस्ट</string>
     <string name="feeds_image_preview">पूर्वावलोकन</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">जवाब रद्द करीं</string>
     <string name="feeds_edit_post">पोस्ट संपादित करीं</string>
     <string name="feeds_save_label">सहेजीं</string>
-    <string name="feeds_post_action">पोस्ट</string>
+    <string name="feeds_post_action">पोस्ट करीं</string>
     <string name="feeds_feed_label">फीड</string>
     <string name="feeds_add_files">फाइल जोड़ीं</string>
     <string name="feeds_restore">बहाल करीं</string>
@@ -43,7 +43,7 @@
     <string name="feeds_feed_name">फीड के नाम</string>
     <string name="feeds_save_name">नाम सहेजीं</string>
     <string name="feeds_banner">बैनर</string>
-    <string name="feeds_banner_description">रउआ feed के ऊपर देखावे वाला वैकल्पिक markdown बैनर।</string>
+    <string name="feeds_banner_description">रउआ फ़ीड के ऊपर देखावे वाला वैकल्पिक markdown बैनर।</string>
     <string name="feeds_clear">साफ करीं</string>
     <string name="feeds_delete_feed">फीड मेटाईं</string>
     <string name="feeds_no_members">कौनो सदस्य नइखे</string>
@@ -57,13 +57,13 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi फीड</string>
     <string name="feeds_source_type_feed_memories">यादें</string>
-    <string name="feeds_remove_source">स्रोत हटाईं</string>
+    <string name="feeds_remove_source">स्रोत हटाईं?</string>
     <string name="feeds_suggested_credibility_accept">स्वीकार करीं</string>
     <string name="feeds_rss_url_copied">RSS URL क्लिपबोर्ड पर कॉपी भइल</string>
     <string name="feeds_logout">लॉग आउट</string>
     <string name="feeds_ai_account_default">डिफ़ॉल्ट खाता</string>
     <string name="feeds_ai_mode_off">अक्षम</string>
-    <string name="feeds_ai_mode_tag">टैग</string>
+    <string name="feeds_ai_mode_tag">टैग करीं</string>
     <string name="feeds_ai_mode_tag_deduplicate">टैग + डुप्लिकेट हटाईं</string>
     <string name="feeds_feed_not_found">फीड नइखे मिलल</string>
     <string name="feeds_post_not_found">पोस्ट ना मिलल</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">कबो ना लेहल गइल</string>
     <string name="feeds_source_poll">पोल</string>
-    <string name="feeds_source_transform">रूपांतरण</string>
+    <string name="feeds_source_transform">AI रूपांतरण</string>
     <string name="feeds_remove_source_confirm">\"%1$s\" के हटाईं?</string>
     <string name="feeds_remove_also_delete_posts">आयात कइल पोस्ट भी मिटाईं</string>
     <string name="feeds_suggested_credibility_title">सुझावल विश्वसनीयता</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">रुचि घटावल गइल</string>
     <string name="feeds_interest_removed">रुचि हटावल गइल</string>
     <string name="feeds_interest_failed">रुचि समायोजित करे में विफल</string>
-    <string name="feeds_saved_title">सहेजल गइल</string>
-    <string name="feeds_saved_menu">सहेजल गइल</string>
+    <string name="feeds_saved_title">सहेजल</string>
+    <string name="feeds_saved_menu">सहेजल</string>
     <string name="feeds_saved_save">बाद खातिर सहेजीं</string>
     <string name="feeds_saved_remove">सहेजल से हटाईं</string>
     <string name="feeds_saved_clear_all">सब साफ करीं</string>
@@ -153,7 +153,7 @@
     <string name="feeds_access_segment_other">दोसर</string>
     <string name="feeds_access_select_group">समूह चुनीं</string>
     <string name="feeds_access_selected">चुनल: %1$s</string>
-    <string name="feeds_access_subject_anyone">केहू</string>
+    <string name="feeds_access_subject_anyone">केहू भी</string>
     <string name="feeds_access_subject_authenticated">प्रमाणित प्रयोगकर्ता</string>
     <string name="feeds_markdown_supported">Markdown समर्थित</string>
     <string name="feeds_permission_deny">मना करीं</string>
@@ -172,7 +172,7 @@
     <string name="feeds_allow_search">केहू के फीड खोजे के अनुमति दीं</string>
     <string name="feeds_post_content">पोस्ट सामग्री</string>
     <string name="feeds_enable_memories">यादें चालू करीं</string>
-    <string name="feeds_permission_request_title">अनुमति के अनुरोध</string>
+    <string name="feeds_permission_request_title">अनुमति अनुरोध</string>
     <string name="feeds_unsubscribe_confirm">फीड से अनसब्सक्राइब करीं?</string>
     <string name="feeds_settings_title">%1$s सेटिंग</string>
     <string name="feeds_source_transform_help">बंद करे खातिर खाली छोड़ीं।</string>
@@ -203,13 +203,13 @@
     <string name="feeds_access_select_rule">पहुँच नियम चुनीं</string>
     <string name="feeds_access_authenticated_desc">जे केहू लॉग इन बा</string>
     <string name="feeds_banner_hint">ए फोरम में रउआ के स्वागत बा…</string>
-    <string name="feeds_banner_dismiss">Banner खारिज करीं</string>
+    <string name="feeds_banner_dismiss">बैनर खारिज करीं</string>
     <string name="feeds_members_search">सदस्य छाँटीं</string>
     <string name="feeds_ai_prompt_default">डिफ़ॉल्ट</string>
-    <string name="feeds_ai_prompt_custom">कस्टम</string>
+    <string name="feeds_ai_prompt_custom">अनुकूलित</string>
     <string name="feeds_ai_prompt_variables">चर: %1$s</string>
     <string name="feeds_link">लिंक</string>
-    <string name="feeds_share_link_title">फीड लिंक</string>
+    <string name="feeds_share_link_title">फ़ीड लिंक</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$d टिप्पणी</item>
         <item quantity="other">%1$d टिप्पणी</item>

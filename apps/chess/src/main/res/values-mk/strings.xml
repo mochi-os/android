@@ -12,7 +12,7 @@
     <string name="chess_new_title">Нова игра</string>
     <string name="chess_new_pick_opponent">Избери противник</string>
     <string name="chess_new_no_friends_title">Сè уште нема пријатели</string>
-    <string name="chess_new_no_friends_subtitle">Додај пријатели во апликацијата People за да започнеш да играш</string>
+    <string name="chess_new_no_friends_subtitle">Додај пријатели во апликацијата „Луѓе“ за да започнеш да играш</string>
     <string name="chess_new_add_friends">Додај пријатели</string>
     <string name="chess_new_start_button">Започнете игра</string>
     <string name="chess_new_creating">Создавање…</string>
@@ -58,9 +58,9 @@
     <string name="chess_empty_subtitle">Започнете ја првата партија за да играте шах со пријател.</string>
     <string name="chess_empty_start_button">Започнете ја првата партија</string>
     <string name="chess_detail_unavailable">Партијата не е достапна</string>
-    <string name="chess_delete_title">Избриши партија?</string>
+    <string name="chess_delete_title">Да се избрише играта?</string>
     <string name="chess_delete_message">Ова ја отстранува партијата од вашата листа.</string>
-    <string name="chess_ws_connecting">Се поврзува…</string>
+    <string name="chess_ws_connecting">Поврзување…</string>
     <string name="chess_ws_disconnected">Офлајн</string>
     <string name="chess_ws_reconnecting">Се поврзува повторно…</string>
     <string name="chess_ws_failed">Поврзувањето не успеа</string>

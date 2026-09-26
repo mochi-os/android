@@ -8,7 +8,7 @@
     <string name="go_action_pass">דלג</string>
     <string name="go_action_rematch">משחק חוזר</string>
     <string name="go_action_resign">פרוש</string>
-    <string name="go_app_title">Go</string>
+    <string name="go_app_title">גו</string>
     <string name="go_captures_black_sr">תפיסות שחור</string>
     <string name="go_captures_white_sr">תפיסות לבן</string>
     <string name="go_chat_title">צ\'אט</string>
@@ -35,8 +35,8 @@
     <string name="go_new_game_add_friends">הוסף חברים</string>
     <string name="go_new_game_board_size_label">גודל לוח</string>
     <string name="go_new_game_friend_label">יריב</string>
-    <string name="go_new_game_komi_field_label">Komi</string>
-    <string name="go_new_game_komi_label">Komi</string>
+    <string name="go_new_game_komi_field_label">קומי</string>
+    <string name="go_new_game_komi_label">קומי</string>
     <string name="go_new_game_komi_range_error">חייב להיות בין 0 ל-10</string>
     <string name="go_new_game_start">התחל משחק</string>
     <string name="go_pass_confirm">דלג</string>

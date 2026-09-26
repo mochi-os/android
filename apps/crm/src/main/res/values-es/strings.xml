@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Icono</string>
     <string name="crm_option_icon_placeholder">p. ej. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Cancelar suscripción</string>
-    <string name="crm_settings_delete_crm">Eliminar proyecto</string>
+    <string name="crm_settings_delete_crm">Eliminar CRM</string>
     <string name="crm_settings_delete_confirm_title">Eliminar CRM</string>
     <string name="crm_settings_unsubscribe_title">Cancelar suscripción</string>
     <string name="crm_settings_unsubscribe_message">¿Seguro que quieres anular la suscripción a este CRM?</string>
@@ -160,11 +160,11 @@
     <string name="crm_object_delete_message">¿Está seguro de que desea eliminar este objeto? Esta acción no se puede deshacer.</string>
     <string name="crm_parent_none">Sin elemento principal</string>
     <string name="crm_links_empty">Sin enlaces</string>
-    <string name="crm_links_section_relates">Se relaciona con</string>
+    <string name="crm_links_section_relates">Relacionado con</string>
     <string name="crm_links_section_duplicated_by">Duplicado por</string>
     <string name="crm_links_type">Tipo de enlace</string>
-    <string name="crm_links_type_relates">Se relaciona con</string>
-    <string name="crm_links_remove">Eliminar enlace</string>
+    <string name="crm_links_type_relates">Relacionado con</string>
+    <string name="crm_links_remove">Quitar enlace</string>
     <string name="crm_comment_placeholder">Añadir un comentario</string>
     <string name="crm_property_pick_date">Elegir fecha</string>
     <string name="crm_property_ok">Aceptar</string>

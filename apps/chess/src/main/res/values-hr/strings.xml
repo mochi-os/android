@@ -60,12 +60,12 @@
     <string name="chess_empty_subtitle">Započnite prvu partiju za igranje šaha s prijateljem.</string>
     <string name="chess_empty_start_button">Započnite prvu partiju</string>
     <string name="chess_detail_unavailable">Partija nedostupna</string>
-    <string name="chess_delete_title">Izbrisati partiju?</string>
+    <string name="chess_delete_title">Izbrisati igru?</string>
     <string name="chess_delete_message">Ovo uklanja partiju s vašeg popisa.</string>
     <string name="chess_ws_connecting">Povezivanje…</string>
     <string name="chess_ws_disconnected">Izvan mreže</string>
     <string name="chess_ws_reconnecting">Ponovno povezivanje…</string>
-    <string name="chess_ws_failed">Povezivanje neuspjelo</string>
+    <string name="chess_ws_failed">Povezivanje nije uspjelo</string>
     <string name="chess_move_capture">%1$s je uzeo %2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 

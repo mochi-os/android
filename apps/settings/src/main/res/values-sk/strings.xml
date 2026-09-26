@@ -151,7 +151,7 @@
     <string name="system_setting_oauth_github_client_secret">Tajný kľúč klienta GitHub</string>
     <string name="system_setting_oauth_microsoft_client_id">ID klienta Microsoft</string>
     <string name="system_setting_oauth_microsoft_client_secret">Tajný kľúč klienta Microsoft</string>
-    <string name="system_setting_oauth_microsoft_tenant">Microsoft tenant</string>
+    <string name="system_setting_oauth_microsoft_tenant">Tenant Microsoft</string>
     <string name="system_setting_oauth_facebook_client_id">ID aplikácie Facebook</string>
     <string name="system_setting_oauth_facebook_client_secret">Tajný kľúč aplikácie Facebook</string>
     <string name="system_setting_oauth_x_client_id">X klient ID</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">Priorita %1$d · %2$s</string>
     <string name="interests_search_placeholder">Hľadať témy na pridanie…</string>
     <string name="interests_empty">Zatiaľ žiadne záujmy.</string>
-    <string name="interests_summary_regenerate">Znova vygenerovať zhrnutie</string>
+    <string name="interests_summary_regenerate">Vygenerovať súhrn znova</string>
     <string name="interests_summary_regenerating">Znova generujem…</string>
     <string name="interests_summary_empty">Pridajte záujmy, aby sa vytvorilo zhrnutie toho, čo máte radi.</string>
     <string name="interests_search_failed">Vyhľadávanie zlyhalo. Skúste to znova.</string>
@@ -277,7 +277,7 @@
     <string name="account_section_identity">Identita</string>
     <string name="account_identity_identity">Identita</string>
     <string name="account_identity_username">Používateľské meno</string>
-    <string name="account_identity_name">Názov</string>
+    <string name="account_identity_name">Meno</string>
     <string name="account_identity_fingerprint">Odtlačok</string>
     <string name="account_identity_directory_toggle">Povoliť ostatným nájsť vás v adresári</string>
     <string name="domain_add">Pridať doménu</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s už nebude spravovať trasy na tejto doméne.</string>
     <string name="domain_delegation_delete_title">Odstrániť delegáciu?</string>
     <string name="domain_delegation_path">Cesta</string>
-    <string name="domain_delegation_user">ID používateľa</string>
+    <string name="domain_delegation_user">Používateľ</string>
     <string name="domain_delegations">Delegácie</string>
     <string name="domain_delegations_empty">Nie sú nakonfigurované žiadne delegácie.</string>
     <string name="domain_delete">Odstrániť doménu</string>
@@ -362,11 +362,11 @@
     <string name="route_target_none">Nie sú dostupné žiadne cieľe</string>
     <string name="login_invalid_code">Neplatný kód</string>
     <string name="accounts_provider_browser">Notifikácie prehliadača</string>
-    <string name="accounts_provider_fcm">Android push</string>
+    <string name="accounts_provider_fcm">Push oznámenia pre Android</string>
     <string name="accounts_provider_mcp">Server MCP</string>
     <string name="accounts_provider_unifiedpush">Push oznámenie</string>
     <string name="accounts_provider_url">Externá URL</string>
-    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_provider_web">Mochi v prehliadači</string>
     <string name="accounts_verified">Účet overený</string>
     <string name="accounts_verify_invalid">Neplatný overovací kód</string>
     <string name="accounts_verify_sent">Overovací kód odoslaný</string>
@@ -383,7 +383,7 @@
     <string name="notifprefs_device_push">%1$s · push</string>
     <string name="notifprefs_test_partial">Test odoslaný do %1$d z %2$d cieľov</string>
     <string name="notifprefs_test_none">Nie sú nakonfigurované žiadne cieľové miesta</string>
-    <string name="notifprefs_transport_fcm">Android push</string>
+    <string name="notifprefs_transport_fcm">Push oznámenia pre Android</string>
     <string name="notifprefs_no_destinations">Žiadne ciele</string>
     <string name="account_data_generate">Vygenerovať heslovú frázu</string>
     <string name="accounts_field_server">URL servera</string>
@@ -396,7 +396,7 @@
     <string name="accounts_capability_notify">Notifikácie</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Prihlásenie</string>
-    <string name="accounts_provider_caldav">Server kalendára</string>
+    <string name="accounts_provider_caldav">Kalendárový server</string>
     <string name="accounts_revoke_confirm">Týmto sa zruší prístup ku kalendáru pre %1$s. Prihlasovanie cez %2$s zostane, kým ho neodpojíte na stránke prihlásenia.</string>
     <string name="accounts_capability_mcp">MCP</string>
 </resources>

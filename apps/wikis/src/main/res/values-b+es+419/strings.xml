@@ -246,7 +246,7 @@
     <string name="wikis_insert_dialog_empty">Aún no hay archivos adjuntos. Sube un archivo para empezar.</string>
     <string name="wikis_delete_page_message">Estás por eliminar la página “%1$s” (%2$s). Esta acción se puede deshacer restaurando desde el historial.</string>
     <string name="wikis_delete_page_success">Page deleted</string>
-    <string name="wikis_revert_page_title">Revert page</string>
+    <string name="wikis_revert_page_title">Revertir página</string>
     <string name="wikis_revert_page_message">Estás por revertir %1$s a la versión %2$d. Esto creará una nueva revisión con el contenido de la versión %2$d.</string>
     <string name="wikis_revert_page_default_comment">Revertido a la versión %1$d</string>
     <string name="wikis_revert_page_success">Revertido a la versión %1$d</string>
@@ -273,7 +273,7 @@
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">Toca Subir para agregar archivos a esta página.</string>
     <string name="wikis_settings_name_save_cd">Guardar nombre</string>
-    <string name="wikis_settings_name_cancel_cd">Cancel edit</string>
+    <string name="wikis_settings_name_cancel_cd">Cancelar edición</string>
     <string name="wikis_access_level_label">Permission</string>
     <string name="wikis_access_set_failed">No se pudo actualizar el acceso</string>
     <string name="wikis_replicas_col_subscribed">Subscribed: %1$s</string>

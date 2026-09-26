@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">Prijať</string>
     <string name="chess_draw_decline">Odmietnuť</string>
     <string name="chess_status_checkmate_you_win">Mat — vyhrali ste!</string>
-    <string name="chess_status_stalemate">Patová situácia — remíza</string>
+    <string name="chess_status_stalemate">Pat — remíza</string>
     <string name="chess_status_draw">Remíza</string>
     <string name="chess_status_check_your_move">Šach — váš ťah</string>
     <string name="chess_status_your_move">Váš ťah</string>
@@ -60,9 +60,9 @@
     <string name="chess_empty_subtitle">Začnite prvú partiu a hrajte šach s priateľom.</string>
     <string name="chess_empty_start_button">Začať prvú partiu</string>
     <string name="chess_detail_unavailable">Partia nedostupná</string>
-    <string name="chess_delete_title">Zmazať partiu?</string>
+    <string name="chess_delete_title">Odstrániť hru?</string>
     <string name="chess_delete_message">Tým sa partia odstráni zo zoznamu.</string>
-    <string name="chess_ws_connecting">Pripájanie…</string>
+    <string name="chess_ws_connecting">Pripája sa…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_reconnecting">Opätovné pripájanie…</string>
     <string name="chess_ws_failed">Pripojenie zlyhalo</string>

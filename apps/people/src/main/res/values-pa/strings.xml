@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">ਨੈਵੀਗੇਸ਼ਨ ਖੋਲ੍ਹੋ</string>
     <string name="people_person_state_friend">ਦੋਸਤ</string>
     <string name="people_person_state_self">ਤੁਸੀਂ</string>
-    <string name="people_person_message">ਸੁਨੇਹਾ</string>
+    <string name="people_person_message">ਸੁਨੇਹਾ ਭੇਜੋ</string>
     <string name="people_person_accept">ਸਵੀਕਾਰ ਕਰੋ</string>
     <string name="people_person_decline">ਅਸਵੀਕਾਰ ਕਰੋ</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">ਸਭ ਸਵੀਕਾਰ ਕਰੋ</string>
     <string name="people_invitations_decline_all">ਸਭ ਅਸਵੀਕਾਰ ਕਰੋ</string>
     <string name="people_invitations_cancel_all">ਸਭ ਰੱਦ ਕਰੋ</string>
+    <string name="people_invitations_cancel">ਰੱਦ ਕਰੋ</string>
     <string name="people_invitations_all_accepted">ਸਾਰੇ ਸੱਦੇ ਸਵੀਕਾਰ ਕੀਤੇ ਗਏ</string>
     <string name="people_invitations_all_declined">ਸਾਰੇ ਸੱਦੇ ਅਸਵੀਕਾਰ ਕੀਤੇ ਗਏ</string>
     <string name="people_invitations_all_cancelled">ਸਾਰੇ ਸੱਦੇ ਰੱਦ ਕੀਤੇ ਗਏ</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">ਖੋਜੋ…</string>
     <string name="people_contacts_invited">ਸੱਦਾ ਭੇਜਿਆ</string>
     <string name="people_contacts_accept">ਸਵੀਕਾਰ ਕਰੋ</string>
-    <string name="people_contacts_message">ਸੁਨੇਹਾ</string>
+    <string name="people_contacts_message">ਸੁਨੇਹਾ ਭੇਜੋ</string>
     <string name="people_contacts_no_people_found">ਕੋਈ ਲੋਕ ਨਹੀਂ ਮਿਲੇ</string>
     <string name="people_contacts_try_adjusting">ਆਪਣੀ ਖੋਜ ਠੀਕ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ</string>
     <string name="people_contact_section_address">ਪਤਾ</string>
@@ -157,13 +158,13 @@
     <string name="people_contacts_delete_confirm">%1$s ਨੂੰ ਤੁਹਾਡੇ ਸੰਪਰਕਾਂ ਵਿੱਚੋਂ ਮਿਟਾਉਣਾ ਹੈ?</string>
     <string name="people_contacts_delete_friend_confirm">%1$s ਨੂੰ ਤੁਹਾਡੇ ਸੰਪਰਕਾਂ ਵਿੱਚੋਂ ਮਿਟਾਉਣਾ ਹੈ? ਤੁਹਾਡੀ ਦੋਸਤੀ ਵੀ ਖ਼ਤਮ ਹੋ ਜਾਵੇਗੀ।</string>
     <string name="people_contact_new_title">ਨਵਾਂ ਸੰਪਰਕ</string>
-    <string name="people_contact_edit_title">ਸੰਪਰਕ ਸੋਧੋ</string>
-    <string name="people_contact_given">ਨਾਮ</string>
-    <string name="people_contact_family">ਗੋਤ</string>
+    <string name="people_contact_edit_title">ਸੰਪਰਕ ਸੰਪਾਦਿਤ ਕਰੋ</string>
+    <string name="people_contact_given">ਪਹਿਲਾ ਨਾਮ</string>
+    <string name="people_contact_family">ਆਖ਼ਰੀ ਨਾਮ</string>
     <string name="people_contact_nickname">ਉਪਨਾਮ</string>
-    <string name="people_contact_add_email">ਈਮੇਲ ਸ਼ਾਮਲ ਕਰੋ</string>
-    <string name="people_contact_add_phone">ਫ਼ੋਨ ਸ਼ਾਮਲ ਕਰੋ</string>
-    <string name="people_contact_add_address">ਪਤਾ ਸ਼ਾਮਲ ਕਰੋ</string>
+    <string name="people_contact_add_email">ਈਮੇਲ ਜੋੜੋ</string>
+    <string name="people_contact_add_phone">ਫ਼ੋਨ ਜੋੜੋ</string>
+    <string name="people_contact_add_address">ਪਤਾ ਜੋੜੋ</string>
     <string name="people_contact_street">ਗਲੀ</string>
     <string name="people_contact_birthday">ਜਨਮਦਿਨ</string>
     <string name="people_contact_organisation">ਸੰਸਥਾ</string>
@@ -174,7 +175,7 @@
     <string name="people_contact_type_mobile">ਮੋਬਾਈਲ</string>
     <string name="people_contact_pick_date">ਤਾਰੀਖ਼ ਚੁਣੋ</string>
     <string name="people_contact_conflict">ਸੰਪਰਕ ਬਦਲ ਗਿਆ</string>
-    <string name="people_add_contact_title">ਸੰਪਰਕ ਸ਼ਾਮਲ ਕਰੋ</string>
+    <string name="people_add_contact_title">ਸੰਪਰਕ ਜੋੜੋ</string>
     <string name="people_add_contact_add">ਸੰਪਰਕਾਂ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ</string>
     <string name="people_add_contact_in_contacts">ਸੰਪਰਕਾਂ ਵਿੱਚ</string>
     <string name="people_books_create">ਪਤਾ ਕਿਤਾਬ ਬਣਾਓ</string>

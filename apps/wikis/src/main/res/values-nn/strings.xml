@@ -215,7 +215,7 @@
     <string name="wikis_replicas_remove_confirm_title">Fjern replika?</string>
     <string name="wikis_replicas_remove_confirm_action">Fjern</string>
     <string name="wikis_replicas_remove_failed">Klarte ikkje fjerna replika</string>
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wikiar</string>
     <string name="wikis_channel_name">Wikis-varsel</string>
     <string name="wikis_channel_description">Varsel om sideredigeringar, kommentarar og invitasjonar.</string>
     <string name="wikis_pageview_toc_expand">Vis innhaldsliste</string>
@@ -244,7 +244,7 @@
     <string name="wikis_insert_dialog_empty">Ingen vedlegg enno. Last opp ei fil for å kome i gang.</string>
     <string name="wikis_delete_page_message">Du er i ferd med å slette sida „%1$s\" (%2$s). Denne handlinga kan angrast ved å gjenopprette frå historikken.</string>
     <string name="wikis_delete_page_success">Side sletta</string>
-    <string name="wikis_revert_page_title">Tilbakestill side</string>
+    <string name="wikis_revert_page_title">Tilbakestill sida</string>
     <string name="wikis_revert_page_message">Du er i ferd med å tilbakestille %1$s til versjon %2$d. Dette opprettar ein ny revisjon med innhaldet frå versjon %2$d.</string>
     <string name="wikis_revert_page_default_comment">Tilbakestilt til versjon %1$d</string>
     <string name="wikis_revert_page_success">Tilbakestilt til versjon %1$d</string>
@@ -322,7 +322,7 @@
     <string name="wikis_attachments_caption_save_failed">Klarte ikkje lagre bileteksten</string>
     <string name="wikis_attachments_upload_types">Støtta filer: bilete, PDF, DOC, DOCX, TXT og MD.</string>
     <string name="wikis_attachments_upload_limits">Store opplastingar kan vere avgrensa av tenaren din eller proxy-oppsettet.</string>
-    <string name="wikis_rss_replace">Erstatt</string>
+    <string name="wikis_rss_replace">Byt ut</string>
     <string name="wikis_rss_copied_new">Ny RSS-URL kopiert til utklippstavla</string>
     <string name="wikis_rss_exists">Denne straum-URL-en er allereie utferda og kan ikkje visast igjen.</string>
     <plurals name="wikis_comments_truncated">

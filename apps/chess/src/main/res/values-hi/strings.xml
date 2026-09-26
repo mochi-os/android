@@ -13,7 +13,7 @@
     <string name="chess_new_title">नया गेम</string>
     <string name="chess_new_pick_opponent">प्रतिद्वंद्वी चुनें</string>
     <string name="chess_new_no_friends_title">अभी तक कोई मित्र नहीं</string>
-    <string name="chess_new_no_friends_subtitle">खेलना शुरू करने के लिए People ऐप में मित्र जोड़ें</string>
+    <string name="chess_new_no_friends_subtitle">खेलना शुरू करने के लिए “लोग” ऐप में मित्र जोड़ें</string>
     <string name="chess_new_add_friends">मित्र जोड़ें</string>
     <string name="chess_new_start_button">गेम शुरू करें</string>
     <string name="chess_new_creating">बना रहे हैं…</string>
@@ -58,7 +58,7 @@
     <string name="chess_channel_description">शतरंज की चालों, ड्रॉ प्रस्तावों और खेल परिणामों के बारे में सूचनाएँ.</string>
     <string name="chess_channel_name">शतरंज सूचनाएँ</string>
     <string name="chess_delete_message">खेल को आपकी सूची से हटा देता है.</string>
-    <string name="chess_delete_title">खेल हटाएँ?</string>
+    <string name="chess_delete_title">गेम हटाएँ?</string>
     <string name="chess_detail_unavailable">खेल उपलब्ध नहीं है</string>
     <string name="chess_empty_start_button">अपना पहला खेल शुरू करें</string>
     <string name="chess_empty_subtitle">किसी मित्र के साथ शतरंज खेलने के लिए अपना पहला खेल शुरू करें.</string>
@@ -66,7 +66,7 @@
     <string name="chess_open_sidebar">साइडबार खोलें</string>
     <string name="chess_ws_connecting">कनेक्ट हो रहा है…</string>
     <string name="chess_ws_disconnected">ऑफ़लाइन</string>
-    <string name="chess_ws_failed">कनेक्शन विफल</string>
+    <string name="chess_ws_failed">कनेक्शन विफल रहा</string>
     <string name="chess_ws_reconnecting">पुनः कनेक्ट हो रहा है…</string>
     <string name="chess_piece_white">सफेद %1$s</string>
     <string name="chess_piece_black">काला %1$s</string>

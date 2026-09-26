@@ -9,13 +9,13 @@
     <string name="launcher_people">Mochi Ljudi</string>
     <string name="launcher_settings">Mochi Postavke</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wikiji</string>
     <string name="launcher_chess">Mochi Šah</string>
     <string name="launcher_go">Mochi Go</string>
     <string name="launcher_words">Mochi Riječi</string>
     <string name="launcher_market">Mochi Tržište</string>
     <string name="launcher_calendars">Mochi Kalendari</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="launcher_staff">Mochi osoblje</string>
 
 
     <string name="app_name">Mochi</string>

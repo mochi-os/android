@@ -50,7 +50,7 @@
     <string name="wikis_join_id_label">ID сутності вікі</string>
     <string name="wikis_join_submit">Реплікувати вікі</string>
     <string name="wikis_create_title">Створити вікі</string>
-    <string name="wikis_create_name_label">Ім\'я</string>
+    <string name="wikis_create_name_label">Назва</string>
     <string name="wikis_create_privacy_label">Дозволити всім шукати вікі</string>
     <string name="wikis_create_submit">Створити</string>
     <string name="wikis_comments_empty_title">Коментарів ще немає</string>
@@ -151,7 +151,7 @@
     <string name="wikis_attachments_filter_images">Зображення</string>
     <string name="wikis_attachments_filter_documents">Документи</string>
     <string name="wikis_attachments_sort_date">Дата</string>
-    <string name="wikis_attachments_sort_name">Ім\'я</string>
+    <string name="wikis_attachments_sort_name">Назва</string>
     <string name="wikis_attachments_sort_size">Розмір</string>
     <string name="wikis_attachments_view_grid">Вигляд сітки</string>
     <string name="wikis_attachments_view_list">Вигляд списку</string>
@@ -171,12 +171,12 @@
     <string name="wikis_settings_tab_access">Доступ</string>
     <string name="wikis_settings_tab_replicas">Репліки</string>
     <string name="wikis_settings_section_identity">Ідентичність</string>
-    <string name="wikis_settings_field_name">Ім\'я</string>
+    <string name="wikis_settings_field_name">Назва</string>
     <string name="wikis_settings_field_entity_id">ID сутності</string>
     <string name="wikis_settings_field_fingerprint">Відбиток</string>
-    <string name="wikis_settings_name_edit_cd">Редагувати ім\'я</string>
-    <string name="wikis_settings_name_invalid_char">Ім\'я не може містити символи &lt; або &gt;</string>
-    <string name="wikis_settings_name_too_long">Ім\'я має містити 100 символів або менше</string>
+    <string name="wikis_settings_name_edit_cd">Редагувати назву</string>
+    <string name="wikis_settings_name_invalid_char">Назва не може містити символи &amp;lt; або &amp;gt;</string>
+    <string name="wikis_settings_name_too_long">Назва має містити 100 символів або менше</string>
     <string name="wikis_settings_name_required">Потрібно вказати назву вікі</string>
     <string name="wikis_settings_name_saved">Вікі перейменовано</string>
     <string name="wikis_settings_name_save_failed">Не вдалося перейменувати вікі</string>
@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Видалити</string>
     <string name="wikis_replicas_remove_failed">Не вдалося видалити репліку</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Вікі</string>
     <string name="wikis_channel_name">Сповіщення Wikis</string>
     <string name="wikis_channel_description">Сповіщення про редагування сторінок, коментарі та запрошення.</string>
     <string name="wikis_pageview_toc_expand">Показати зміст</string>
@@ -232,7 +232,7 @@
     <string name="wikis_search_placeholder">Пошук вікі…</string>
     <string name="wikis_unsubscribe_confirm_message">Ви впевнені, що хочете відписатися від %1$s?</string>
     <string name="wikis_clipboard_label_rss">RSS URL вікі</string>
-    <string name="wikis_find_search_placeholder">Пошук за іменем, ID, відбитком або URL…</string>
+    <string name="wikis_find_search_placeholder">Пошук за назвою, ID, відбитком або URL…</string>
     <string name="wikis_join_search_button">Пошук вікі…</string>
     <string name="wikis_join_id_hint">abc123…</string>
     <string name="wikis_subscribe_502_retry">Повторна спроба без запропонованого сервера…</string>
@@ -246,7 +246,7 @@
     <string name="wikis_insert_dialog_empty">Ще немає вкладень. Завантажте файл, щоб почати.</string>
     <string name="wikis_delete_page_message">Ви збираєтеся видалити сторінку „%1$s\" (%2$s). Цю дію можна скасувати, відновивши з історії.</string>
     <string name="wikis_delete_page_success">Сторінку видалено</string>
-    <string name="wikis_revert_page_title">Повернути сторінку</string>
+    <string name="wikis_revert_page_title">Відкотити сторінку</string>
     <string name="wikis_revert_page_message">Ви збираєтеся повернути %1$s до версії %2$d. Це створить нову редакцію з вмістом версії %2$d.</string>
     <string name="wikis_revert_page_default_comment">Повернуто до версії %1$d</string>
     <string name="wikis_revert_page_success">Повернуто до версії %1$d</string>
@@ -272,7 +272,7 @@
     <string name="wikis_attachments_delete_confirm_message">Видалити „%1$s\"? Цю дію не можна скасувати.</string>
     <string name="wikis_attachments_downloading">Завантаження…</string>
     <string name="wikis_attachments_empty_description">Торкніться Завантажити, щоб додати файли до цієї сторінки.</string>
-    <string name="wikis_settings_name_save_cd">Зберегти ім\'я</string>
+    <string name="wikis_settings_name_save_cd">Зберегти назву</string>
     <string name="wikis_settings_name_cancel_cd">Скасувати редагування</string>
     <string name="wikis_access_level_label">Дозвіл</string>
     <string name="wikis_access_set_failed">Не вдалося оновити доступ</string>

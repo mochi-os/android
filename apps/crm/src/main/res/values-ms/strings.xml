@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Ikon</string>
     <string name="crm_option_icon_placeholder">cth. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Berhenti melanggan</string>
-    <string name="crm_settings_delete_crm">Padam projek</string>
+    <string name="crm_settings_delete_crm">Padam CRM</string>
     <string name="crm_settings_delete_confirm_title">Padam CRM</string>
     <string name="crm_settings_unsubscribe_title">Berhenti melanggan</string>
     <string name="crm_settings_unsubscribe_message">Adakah anda pasti mahu berhenti melanggan CRM ini?</string>
@@ -211,7 +211,7 @@
     <string name="crm_parent_none">Tiada induk</string>
     <string name="crm_links_empty">Tiada pautan</string>
     <string name="crm_links_section_relates">Berkaitan dengan</string>
-    <string name="crm_links_section_duplicated_by">Diduakan oleh</string>
+    <string name="crm_links_section_duplicated_by">Diduplikasi oleh</string>
     <string name="crm_links_type">Jenis pautan</string>
     <string name="crm_links_type_relates">Berkaitan dengan</string>
     <string name="crm_links_remove">Alih keluar pautan</string>

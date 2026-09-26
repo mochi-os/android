@@ -35,8 +35,8 @@
     <string name="chat_messages_empty">እስካሁን መልዕክቶች የሉም — ሰላም ይበሉ!</string>
     <string name="chat_messages_load_more">የቆዩ መልዕክቶችን ይጫኑ</string>
     <string name="chat_attachment_remove">አባሪውን ያስወግዱ</string>
-    <string name="chat_attachment_move_up">ወደ ላይ ያንቀሳቅሱ</string>
-    <string name="chat_attachment_move_down">ወደ ታች ያንቀሳቅሱ</string>
+    <string name="chat_attachment_move_up">ወደ ላይ አንቀሳቅስ</string>
+    <string name="chat_attachment_move_down">ወደ ታች አንቀሳቅስ</string>
     <string name="chat_attachment_label">ፋይል</string>
     <string name="chat_settings_rename">ውይይቱን ይሰይሙ</string>
     <string name="chat_settings_add_member_empty">የሚጨመር ጓደኛ የለም</string>
@@ -53,7 +53,7 @@
     <string name="chat_forward_search">ውይይቶችን ፈልግ…</string>
     <string name="chat_forward_empty">የሚተላለፍበት ውይይት የለም</string>
     <string name="chat_forward_success">ተላልፏል</string>
-    <string name="chat_message_reply">መልስ ስጥ</string>
+    <string name="chat_message_reply">ምላሽ ስጥ</string>
     <string name="chat_message_select">ምረጥ</string>
     <string name="chat_reply_attachment">አባሪ</string>
     <string name="chat_replying_to">ለ%1$s መልስ በመስጠት ላይ</string>
@@ -78,7 +78,7 @@
     <string name="chat_marked_read">እንደተነበበ ምልክት ተደርጓል</string>
     <string name="chat_search_next">ቀጣይ ተዛማጅ</string>
     <string name="chat_search_prev">ቀዳሚ ተዛማጅ</string>
-    <string name="chat_settings_id">የውይይት መታወቂያ</string>
+    <string name="chat_settings_id">የውይይት መለያ</string>
     <string name="chat_message_edited">(ተሻሽሏል)</string>
     <string name="chat_new_fallback_name">ውይይት</string>
 </resources>

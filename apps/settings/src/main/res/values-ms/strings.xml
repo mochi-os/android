@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s tidak akan menguruskan laluan pada domain ini lagi.</string>
     <string name="domain_delegation_delete_title">Padam delegasi?</string>
     <string name="domain_delegation_path">Laluan</string>
-    <string name="domain_delegation_user">ID pengguna</string>
+    <string name="domain_delegation_user">Pengguna</string>
     <string name="domain_delegations">Delegasi</string>
     <string name="domain_delegations_empty">Tiada delegasi dikonfigurasi.</string>
     <string name="domain_delete">Padam domain</string>

@@ -55,7 +55,7 @@
     <string name="chat_forward_success">Reenviat</string>
     <string name="chat_message_reply">Respon</string>
     <string name="chat_message_select">Selecciona</string>
-    <string name="chat_reply_attachment">Adjunt</string>
+    <string name="chat_reply_attachment">Fitxer adjunt</string>
     <string name="chat_replying_to">S\'està responent a %1$s</string>
     <string name="chat_delete_confirm_title">Voleu suprimir el missatge?</string>
     <string name="chat_delete_confirm_body">Això suprimeix el missatge per a tothom i no es pot desfer.</string>

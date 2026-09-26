@@ -119,7 +119,7 @@
     <string name="settings_home_system_documents">Sgrìobhainnean</string>
     <string name="settings_home_system_settings">Roghainnean an t-siostaim</string>
     <string name="system_settings_title">Roghainnean an t-siostaim</string>
-    <string name="system_settings_section_login">Clàradh</string>
+    <string name="system_settings_section_login">Clàradh a-steach</string>
     <string name="system_settings_section_oauth">Soidhnigeadh a-steach treas-phàrtaidh</string>
     <string name="system_settings_section_user_defaults">Bunaitichean cleachdaiche</string>
     <string name="system_settings_section_operator">Obraiche</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">Prìomhachas %1$d · %2$s</string>
     <string name="interests_search_placeholder">Lorg cuspairean ri chur ris…</string>
     <string name="interests_empty">Chan eil ùidhean fhathast.</string>
-    <string name="interests_summary_regenerate">Ath-chruthaich geàrr-chunntas</string>
+    <string name="interests_summary_regenerate">Ath-ghin an geàrr-iomradh</string>
     <string name="interests_summary_regenerating">A\' ath-chruthachadh…</string>
     <string name="interests_summary_empty">Cuir ris cuid de dh\'ùidhean gus geàrr-chunntas a chruthachadh den rud as toigh leat.</string>
     <string name="interests_search_failed">Dh\'fhàillig an lorg. Feuch ris a-rithist.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">Cha riaghail %1$s slighean air an fhearann seo tuilleadh.</string>
     <string name="domain_delegation_delete_title">Sguab às tiomnadh?</string>
     <string name="domain_delegation_path">Slighe</string>
-    <string name="domain_delegation_user">ID a\' chleachdaiche</string>
+    <string name="domain_delegation_user">Cleachdaiche</string>
     <string name="domain_delegations">Tiomnaidhean</string>
     <string name="domain_delegations_empty">Chan eil tiomnaidhean air an rèiteachadh.</string>
     <string name="domain_delete">Sguab às àrainn</string>
@@ -316,7 +316,7 @@
         <item quantity="other">Cùl-ghairmte %1$d seiseanan</item>
         <item quantity="two">Cùl-ghairmte %1$d sheisean</item>
     </plurals>
-    <string name="login_title">Clàradh</string>
+    <string name="login_title">Clàradh a-steach</string>
     <string name="login_section_methods">Dòighean clàraidh a-steach</string>
     <string name="login_method_email">Còd puist-d</string>
     <string name="login_method_passkey">Pasgair</string>
@@ -396,7 +396,7 @@
     <string name="accounts_capability_notify">Brathan</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Clàradh a-steach</string>
-    <string name="accounts_provider_caldav">Frithealaiche mìosachain</string>
+    <string name="accounts_provider_caldav">Frithealaiche mhìosachan</string>
     <string name="accounts_revoke_confirm">Cuiridh seo às do inntrigeadh mìosachain %1$s. Mairidh an clàradh a-steach le %2$s gus an dì-cheangail thu e air duilleag a\' chlàraidh a-steach.</string>
     <string name="accounts_capability_mcp">MCP</string>
 </resources>

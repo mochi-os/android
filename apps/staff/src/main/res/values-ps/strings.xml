@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">Mochi کارمندان</string>
+    <string name="launcher_staff">Mochi کارمندان</string>
     <string name="staff_accounts_action_ban_title">حساب بند کړه</string>
     <string name="staff_accounts_action_suspend_title">حساب ودرول</string>
     <string name="staff_accounts_action_unban_title">پابندي لرې کړئ</string>
@@ -86,9 +86,9 @@
     <string name="staff_audit_action_listing_updated">لیسټینګ وسمول شو</string>
     <string name="staff_audit_action_listing_warning">خبرداری ورکړل شو</string>
     <string name="staff_audit_action_order_cancelled">لغوه شو</string>
-    <string name="staff_audit_action_order_chargeback">Chargeback ترلاسه شو</string>
-    <string name="staff_audit_action_order_chargeback_lost">Chargeback وساتل شو</string>
-    <string name="staff_audit_action_order_chargeback_won">Chargeback رد شو</string>
+    <string name="staff_audit_action_order_chargeback">چارج‌بیک ترلاسه شو</string>
+    <string name="staff_audit_action_order_chargeback_lost">چارج‌بیک وساتل شو</string>
+    <string name="staff_audit_action_order_chargeback_won">چارج‌بیک رد شو</string>
     <string name="staff_audit_action_order_completed">بشپړ شو</string>
     <string name="staff_audit_action_order_created">فرمایش وشو</string>
     <string name="staff_audit_action_order_paid">تادیه ترلاسه شوه</string>
@@ -109,9 +109,9 @@
     <string name="staff_audit_action_subscription_active">فعال ته بیرته راګرځیدلی</string>
     <string name="staff_audit_action_subscription_cancel_scheduled">د لغوې لپاره مهال ویش</string>
     <string name="staff_audit_action_subscription_cancelled">لغوه شو</string>
-    <string name="staff_audit_action_subscription_chargeback">Chargeback ترلاسه شو</string>
-    <string name="staff_audit_action_subscription_chargeback_lost">Chargeback وساتل شو</string>
-    <string name="staff_audit_action_subscription_chargeback_won">Chargeback رد شو</string>
+    <string name="staff_audit_action_subscription_chargeback">چارج‌بیک ترلاسه شو</string>
+    <string name="staff_audit_action_subscription_chargeback_lost">چارج‌بیک وساتل شو</string>
+    <string name="staff_audit_action_subscription_chargeback_won">چارج‌بیک رد شو</string>
     <string name="staff_audit_action_subscription_created">ګډون جوړ شو</string>
     <string name="staff_audit_action_subscription_past_due">تادیه له موده تېره ده</string>
     <string name="staff_audit_action_subscription_paused">ودرول شوی</string>
@@ -140,7 +140,7 @@
     <string name="staff_categories_dialog_position">موقعیت</string>
     <string name="staff_categories_dialog_save">خوندي کول</string>
     <string name="staff_categories_dialog_saving">د خوندي کولو په حال کې…</string>
-    <string name="staff_categories_dialog_slug">Slug</string>
+    <string name="staff_categories_dialog_slug">د URL پېژندونکی</string>
     <string name="staff_categories_empty">هیڅ کټګورۍ نشته</string>
     <string name="staff_categories_toast_created">کټګورۍ جوړه شوه</string>
     <string name="staff_categories_toast_deleted">کټګورۍ ړنګه شوه</string>
@@ -150,7 +150,7 @@
     <string name="staff_categories_type_digital">ډیجیټل</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">فزیکي</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">Mochi کارمندان</string>
     <string name="staff_config_field_auto_approve">د اوتومات منلو حد</string>
     <string name="staff_config_field_hold">د نیولو حد</string>
     <string name="staff_config_field_platform_fee">د پلیټفارم فیس</string>
@@ -158,7 +158,7 @@
     <string name="staff_config_field_stripe_oauth_client">د OAuth پیرودونکي ID</string>
     <string name="staff_config_field_stripe_publishable">د خپرولو وړ کلیډ</string>
     <string name="staff_config_field_stripe_secret">پټ کلیډ</string>
-    <string name="staff_config_group_moderation">اعتدال</string>
+    <string name="staff_config_group_moderation">څارنه</string>
     <string name="staff_config_group_payments">تادیې</string>
     <string name="staff_config_group_reviews">بیاکتنې</string>
     <string name="staff_config_group_stripe">Stripe</string>
@@ -192,7 +192,7 @@
     <string name="staff_dashboard_system">سیسټم</string>
     <string name="staff_dashboard_tab_audit">تفتیش</string>
     <string name="staff_dashboard_tab_listings">لیسټینګونه</string>
-    <string name="staff_dashboard_tab_moderation">اعتدال</string>
+    <string name="staff_dashboard_tab_moderation">څارنه</string>
     <string name="staff_dashboard_tab_orders">فرمایشونه</string>
     <string name="staff_dashboard_tab_signups">نوم لیکنې</string>
     <string name="staff_disputes_any_status">ټول حالتونه</string>
@@ -202,7 +202,7 @@
     <string name="staff_disputes_empty">هیڅ شخړې نشته</string>
     <string name="staff_disputes_filter_status_label">حالت</string>
     <string name="staff_disputes_listing_label">#%1$s</string>
-    <string name="staff_disputes_meta_chargeback_fee">د Chargeback فیس</string>
+    <string name="staff_disputes_meta_chargeback_fee">د چارج‌بیک فیس</string>
     <string name="staff_disputes_meta_evidence_due">ثبوت تر دې نېټې پورې</string>
     <string name="staff_disputes_meta_listing">لیسټینګ</string>
     <string name="staff_disputes_meta_reason">دلیل</string>
@@ -223,16 +223,16 @@
     <string name="staff_disputes_resolution_seller">د پلورونکي لپاره حل کړئ</string>
     <string name="staff_disputes_resolve">حل کول</string>
     <string name="staff_disputes_resolved_toast">شخړه حل شوه</string>
-    <string name="staff_disputes_review">بیاکتنه</string>
+    <string name="staff_disputes_review">وڅیړئ</string>
     <string name="staff_disputes_status_escalated">زیات شوی</string>
     <string name="staff_disputes_status_open">خلاص</string>
     <string name="staff_disputes_status_resolved_buyer">حل شوی (پیرودونکی)</string>
     <string name="staff_disputes_status_resolved_seller">حل شوی (پلورونکی)</string>
     <string name="staff_disputes_status_responded">ځواب ورکړل شو</string>
     <string name="staff_disputes_status_reviewing">د بیاکتلو په حال کې</string>
-    <string name="staff_disputes_view">ولید</string>
-    <string name="staff_filter_label_moderation">اعتدال</string>
-    <string name="staff_filter_label_seller">پلورونکی</string>
+    <string name="staff_disputes_view">وګورئ</string>
+    <string name="staff_filter_label_moderation">څارنه</string>
+    <string name="staff_filter_label_seller">خرڅوونکی</string>
     <string name="staff_filter_label_status">حالت</string>
     <string name="staff_filter_label_type">ډول</string>
     <string name="staff_listings_action_approve_title">لیست ومنه</string>
@@ -244,7 +244,7 @@
     <string name="staff_listings_approved_toast">لیسټینګ تصویب شو</string>
     <string name="staff_listings_cancel">لغوه کول</string>
     <string name="staff_listings_empty">هیڅ لیستونه نشته</string>
-    <string name="staff_listings_filter_moderation_label">اعتدال</string>
+    <string name="staff_listings_filter_moderation_label">څارنه</string>
     <string name="staff_listings_filter_status_label">حالت</string>
     <string name="staff_listings_moderation_auto_approved">په اوتومات ډول ومنل شو</string>
     <string name="staff_listings_moderation_hold">ونیسئ</string>
@@ -295,7 +295,7 @@
     <string name="staff_reports_meta_reason">دلیل</string>
     <string name="staff_reports_meta_reporter">راپور ورکوونکی</string>
     <string name="staff_reports_meta_seller">خرڅوونکی</string>
-    <string name="staff_reports_meta_target">هدف</string>
+    <string name="staff_reports_meta_target">راپور شوی توکی</string>
     <string name="staff_reports_meta_type">ډول</string>
     <string name="staff_reports_notes_label">یادښتونه</string>
     <string name="staff_reports_reason_counterfeit">جعلي یا غلا شوی</string>
@@ -303,7 +303,7 @@
     <string name="staff_reports_reason_misleading">ګمراه کوونکی تفصیل</string>
     <string name="staff_reports_reason_other">نور</string>
     <string name="staff_reports_reason_prohibited">منع شوی یا غیرقانوني توکی</string>
-    <string name="staff_reports_reason_spam">Spam یا کلاهبرداري</string>
+    <string name="staff_reports_reason_spam">سپام یا کلاهبرداري</string>
     <string name="staff_reports_status_actioned">کړنه ترسره شوه</string>
     <string name="staff_reports_status_dismissed">وردکړل شو</string>
     <string name="staff_reports_status_pending">په تمه</string>
@@ -312,7 +312,7 @@
     <string name="staff_reports_submitting">د لیږلو په حال کې…</string>
     <string name="staff_reports_type_listing">لیسټینګ</string>
     <string name="staff_reports_type_user">کاروونکی</string>
-    <string name="staff_reports_view">ولید</string>
+    <string name="staff_reports_view">وګورئ</string>
     <string name="staff_reviews_action_remove">لرې کول</string>
     <string name="staff_reviews_action_restore">بیرته راګرځول</string>
     <string name="staff_reviews_empty">هیڅ بیاکتنې نشته</string>
@@ -334,12 +334,12 @@
     <string name="staff_sidebar_disputes">شخړې</string>
     <string name="staff_sidebar_listings">لیسټینګونه</string>
     <string name="staff_sidebar_management">اداره</string>
-    <string name="staff_sidebar_market">Market</string>
+    <string name="staff_sidebar_market">بازار</string>
     <string name="staff_sidebar_moderation">د اعتدال لاګ</string>
     <string name="staff_sidebar_overview">کتنه</string>
     <string name="staff_sidebar_reports">راپورونه</string>
     <string name="staff_sidebar_reviews">بیاکتنې</string>
-    <string name="staff_sidebar_settings">ترتیبات</string>
+    <string name="staff_sidebar_settings">تنظیمات</string>
     <string name="staff_sidebar_team">ټیم</string>
     <string name="staff_status_actioned">کړنه ترسره شوه</string>
     <string name="staff_status_active">فعال</string>
@@ -393,7 +393,7 @@
     <string name="staff_team_toast_removed">غړی لیرې شو</string>
     <string name="staff_team_toast_added">غړی زیات شو</string>
     <string name="staff_team_toast_role_updated">رول تازه شو</string>
-    <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
+    <string name="staff_audit_action_auction_cancelled">لیلام لغوه شو</string>
     <string name="staff_dashboard_order_fallback">امر #%1$s</string>
 
     <string name="staff_accounts_action_unsuspend_title">د بندیز پورته کول</string>

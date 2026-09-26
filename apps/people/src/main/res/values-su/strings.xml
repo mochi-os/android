@@ -71,12 +71,12 @@
     <string name="people_common_cancel">Batalkeun</string>
     <string name="people_common_close">Tutup</string>
     <string name="people_common_save">Simpen</string>
-    <string name="people_welcome_dismiss">Pasini</string>
+    <string name="people_welcome_dismiss">Tutup</string>
     <string name="people_sidebar_header">Jalma</string>
     <string name="people_open_sidebar">Buka navigasi</string>
     <string name="people_person_state_friend">Babaturan</string>
     <string name="people_person_state_self">Anjeun</string>
-    <string name="people_person_message">Pesen</string>
+    <string name="people_person_message">Kirim pesen</string>
     <string name="people_person_accept">Tarima</string>
     <string name="people_person_decline">Tolak</string>
 
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">Asupkeun kode warna hex anu sah (cth. #a78bfa)</string>
     <string name="people_profile_accent_none">Euweuh</string>
     <string name="people_profile_privacy_private_desc">Ngan babaturan timbal balik anu tiasa ningali propil anjeun</string>
-    <string name="people_welcome_title">Wilujeng sumping di People</string>
+    <string name="people_welcome_title">Wilujeng sumping di Jalma</string>
     <string name="people_person_banner_alt">Spanduk pikeun %1$s</string>
     <string name="people_person_private">Propil ieu pribadi</string>
     <string name="people_person_state_invited">Diondang</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Tarima sadayana</string>
     <string name="people_invitations_decline_all">Tolak sadayana</string>
     <string name="people_invitations_cancel_all">Batalkeun sadayana</string>
+    <string name="people_invitations_cancel">Batalkeun</string>
     <string name="people_invitations_all_accepted">Sadaya ondangan ditarima</string>
     <string name="people_invitations_all_declined">Sadaya ondangan ditolak</string>
     <string name="people_invitations_all_cancelled">Sadaya ondangan dibatalkeun</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Paluruh…</string>
     <string name="people_contacts_invited">Diondang</string>
     <string name="people_contacts_accept">Tarima</string>
-    <string name="people_contacts_message">Pesen</string>
+    <string name="people_contacts_message">Kirim pesen</string>
     <string name="people_contacts_no_people_found">Teu manggih jalma</string>
     <string name="people_contacts_try_adjusting">Cobian luyukeun pamilarian anjeun</string>
     <string name="people_contact_section_address">Alamat</string>
@@ -146,14 +147,14 @@
     <string name="people_contact_phone">Telepon</string>
     <string name="people_contact_title">Judul pagawéan</string>
     <string name="people_contacts_title">Kontak</string>
-    <string name="people_contacts_all">Sadaya kontak</string>
+    <string name="people_contacts_all">Sakabéh kontak</string>
     <string name="people_contacts_empty">Teu aya kontak kapendak</string>
     <string name="people_contacts_add_to_start">Tambihkeun kontak pikeun ngamimitian nyambung</string>
     <string name="people_contacts_actions">Tindakan kontak</string>
     <string name="people_contacts_friend">Babaturan</string>
     <string name="people_contacts_invite">Ondang</string>
     <string name="people_contacts_unfriend_confirm">%1$s moal jadi babaturan anjeun deui. Kontak tetep aya dina buku alamat anjeun.</string>
-    <string name="people_contacts_delete">Pupus kontak</string>
+    <string name="people_contacts_delete">Hapus kontak</string>
     <string name="people_contacts_delete_confirm">Pupus %1$s tina kontak anjeun?</string>
     <string name="people_contacts_delete_friend_confirm">Pupus %1$s tina kontak anjeun? Babaturan anjeun ogé bakal réngsé.</string>
     <string name="people_contact_new_title">Kontak anyar</string>
@@ -161,11 +162,11 @@
     <string name="people_contact_given">Ngaran hareup</string>
     <string name="people_contact_family">Ngaran kulawarga</string>
     <string name="people_contact_nickname">Landihan</string>
-    <string name="people_contact_add_email">Tambih surélék</string>
-    <string name="people_contact_add_phone">Tambih telepon</string>
-    <string name="people_contact_add_address">Tambih alamat</string>
+    <string name="people_contact_add_email">Tambah surélék</string>
+    <string name="people_contact_add_phone">Tambah telepon</string>
+    <string name="people_contact_add_address">Tambah alamat</string>
     <string name="people_contact_street">Jalan</string>
-    <string name="people_contact_birthday">Poé lahir</string>
+    <string name="people_contact_birthday">Tanggal lahir</string>
     <string name="people_contact_organisation">Organisasi</string>
     <string name="people_contact_url">Ramatloka</string>
     <string name="people_contact_note">Catetan</string>
@@ -174,7 +175,7 @@
     <string name="people_contact_type_mobile">Sélulér</string>
     <string name="people_contact_pick_date">Pilih tanggal</string>
     <string name="people_contact_conflict">Kontak robah</string>
-    <string name="people_add_contact_title">Tambih kontak</string>
+    <string name="people_add_contact_title">Tambah kontak</string>
     <string name="people_add_contact_add">Tambihkeun kana kontak</string>
     <string name="people_add_contact_in_contacts">Aya dina kontak</string>
     <string name="people_books_create">Jieun buku alamat</string>

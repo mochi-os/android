@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">Foireann Mochi</string>
+    <string name="launcher_staff">Mochi Foireann</string>
     <string name="staff_accounts_action_ban_title">Coisc cuntas</string>
     <string name="staff_accounts_action_suspend_title">Cuir cuntas ar fionraí</string>
     <string name="staff_accounts_action_unban_title">Bain cosc</string>
     <string name="staff_accounts_action_unsuspend_title">Bain fionraí</string>
-    <string name="staff_accounts_any_seller">Iomlán</string>
-    <string name="staff_accounts_any_status">Iomlán</string>
+    <string name="staff_accounts_any_seller">Uile</string>
+    <string name="staff_accounts_any_status">Uile</string>
     <string name="staff_accounts_ban">Cosc</string>
     <string name="staff_accounts_banned_toast">Cuntas coiscthe</string>
     <string name="staff_accounts_cancel">Cealaigh</string>
@@ -64,7 +64,7 @@
     <string name="staff_audit_action_account_unbanned">Cosc bainte</string>
     <string name="staff_audit_action_account_unsuspended">Fionraí bainte</string>
     <string name="staff_audit_action_auction_bid_placed">Tairiscint déanta</string>
-    <string name="staff_audit_action_auction_cancelled">Ceant curtha ar ceal</string>
+    <string name="staff_audit_action_auction_cancelled">Ceant cealaithe</string>
     <string name="staff_audit_action_auction_created">Ceant cruthaithe</string>
     <string name="staff_audit_action_auction_ended_sold">Ceant díolta</string>
     <string name="staff_audit_action_auction_ended_unsold">Ceant críochnaithe gan díol</string>
@@ -158,7 +158,7 @@
     <string name="staff_categories_type_digital">Digiteach</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">Fisiciúil</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">Foireann Mochi</string>
     <string name="staff_config_field_auto_approve">Tairseach uath-cheadaithe</string>
     <string name="staff_config_field_hold">Tairseach coinneála</string>
     <string name="staff_config_field_platform_fee">Táille ardáin</string>
@@ -243,15 +243,15 @@
     <string name="staff_disputes_resolve">Réitigh</string>
     <string name="staff_disputes_resolved_toast">Aighneas réitithe</string>
     <string name="staff_disputes_resolving">Á réiteach…</string>
-    <string name="staff_disputes_review">Athbhreithniú</string>
+    <string name="staff_disputes_review">Athbhreithnigh</string>
     <string name="staff_disputes_status_escalated">Géaraithe</string>
-    <string name="staff_disputes_status_open">Oscail</string>
+    <string name="staff_disputes_status_open">Oscailte</string>
     <string name="staff_disputes_status_resolved_buyer">Réitithe (ceannaitheoir)</string>
     <string name="staff_disputes_status_resolved_seller">Réitithe (díoltóir)</string>
     <string name="staff_disputes_status_responded">Freagartha</string>
     <string name="staff_disputes_status_reviewing">Á athbhreithniú</string>
     <string name="staff_disputes_view">Féach</string>
-    <string name="staff_filter_label_moderation">Modhnú</string>
+    <string name="staff_filter_label_moderation">Modhnóireacht</string>
     <string name="staff_filter_label_seller">Díoltóir</string>
     <string name="staff_filter_label_status">Stádas</string>
     <string name="staff_filter_label_type">Cineál</string>
@@ -296,7 +296,7 @@
     <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Gníomh</string>
     <string name="staff_reports_action_ban">Coisc úsáideoir</string>
-    <string name="staff_reports_action_dismiss">Dífhostaigh</string>
+    <string name="staff_reports_action_dismiss">Diúltaigh</string>
     <string name="staff_reports_action_label">Gníomh</string>
     <string name="staff_reports_action_placeholder">Roghnaigh gníomh</string>
     <string name="staff_reports_action_remove">Bain</string>
@@ -308,7 +308,7 @@
     <string name="staff_reports_cancel">Cealaigh</string>
     <string name="staff_reports_close">Dún</string>
     <string name="staff_reports_dialog_title_action">Glac gníomh ar an tuairisc</string>
-    <string name="staff_reports_dialog_title_view">Tuairiscigh</string>
+    <string name="staff_reports_dialog_title_view">Tuairisc</string>
     <string name="staff_reports_empty">Níl aon tuairisc</string>
     <string name="staff_reports_filter_status_label">Stádas</string>
     <string name="staff_reports_filter_type_label">Cineál</string>
@@ -328,7 +328,7 @@
     <string name="staff_reports_reason_prohibited">Mír thoirmiscthe nó mhídhleathach</string>
     <string name="staff_reports_reason_spam">Turscar nó scam</string>
     <string name="staff_reports_status_actioned">Gníomhaithe</string>
-    <string name="staff_reports_status_dismissed">Dífhostaithe</string>
+    <string name="staff_reports_status_dismissed">Diúltaithe</string>
     <string name="staff_reports_status_pending">Ar feitheamh</string>
     <string name="staff_reports_status_reviewed">Athbhreithnithe</string>
     <string name="staff_reports_submit">Cuir isteach</string>
@@ -372,7 +372,7 @@
     <string name="staff_status_approved">Faofa</string>
     <string name="staff_status_auto_approved">Uath-cheadaithe</string>
     <string name="staff_status_banned">Coiscthe</string>
-    <string name="staff_status_dismissed">Dífhostaithe</string>
+    <string name="staff_status_dismissed">Diúltaithe</string>
     <string name="staff_status_draft">Dréacht</string>
     <string name="staff_status_escalated">Géaraithe</string>
     <string name="staff_status_expired">Imithe in éag</string>
@@ -380,7 +380,7 @@
     <string name="staff_status_hold">Coinnigh</string>
     <string name="staff_status_manual">Láimhe</string>
     <string name="staff_status_moderator">Modhnóir</string>
-    <string name="staff_status_open">Oscail</string>
+    <string name="staff_status_open">Oscailte</string>
     <string name="staff_status_pending">Ar feitheamh</string>
     <string name="staff_status_published">Foilsithe</string>
     <string name="staff_status_rejected">Diúltaithe</string>

@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">Բացել կողագոտին</string>
     <string name="go_sidebar_active">Ակտիվ խաղեր</string>
     <string name="go_empty_active">Դեռ ակտիվ խաղեր չկան։</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">Հանձնվել է</string>
     <string name="go_new_game_title">Նոր Go խաղ</string>
     <string name="go_new_game_no_friends">Խաղ սկսելուց առաջ պետք է ընկեր ավելացնեք։</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

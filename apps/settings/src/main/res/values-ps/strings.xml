@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="settings_home_title">ترتیبات</string>
+    <string name="settings_home_title">تنظیمات</string>
     <string name="settings_home_logout">لاګ آوټ</string>
     <string name="settings_home_account">حساب</string>
     <string name="settings_home_preferences">غوره توبونه</string>
@@ -9,14 +9,14 @@
     <string name="settings_home_notification_prefs">د خبرتیا غوره توبونه</string>
     <string name="settings_home_accounts">وصل شوي حسابونه</string>
     <string name="settings_home_interests">علاقې</string>
-    <string name="account_section_passkeys">د لاسرسي کيلۍ</string>
-    <string name="account_passkey_register">Passkey اضافه کړئ</string>
-    <string name="account_passkey_delete_title">Passkey ړنګ کړئ؟</string>
-    <string name="account_section_totp">د Authenticator اپلیکیشن</string>
-    <string name="account_totp_setup">Authenticator تنظیم کړئ</string>
-    <string name="account_totp_setup_title">Authenticator تنظیم کړئ</string>
+    <string name="account_section_passkeys">پاسکي ګانې</string>
+    <string name="account_passkey_register">پاسکي اضافه کړئ</string>
+    <string name="account_passkey_delete_title">پاسکي ړنګ کړئ؟</string>
+    <string name="account_section_totp">د تصدیق کوونکي اپلیکیشن</string>
+    <string name="account_totp_setup">تصدیق کوونکی تنظیم کړئ</string>
+    <string name="account_totp_setup_title">تصدیق کوونکی تنظیم کړئ</string>
     <string name="account_totp_verify">تصدیق</string>
-    <string name="account_totp_disable_title">Authenticator غیرفعال کړئ؟</string>
+    <string name="account_totp_disable_title">تصدیق کوونکی غیرفعال کړئ؟</string>
     <string name="account_section_recovery">د بیرته راګرځولو کوډونه</string>
     <string name="account_recovery_codes_title">د بیرته راګرځولو کوډونه</string>
     <string name="sessions_unknown_agent">نامعلوم ډیوایس</string>
@@ -99,7 +99,7 @@
     <string name="accounts_status_connected">وصل شو</string>
     <string name="accounts_default_for_ai">د AI لپاره ډیفالټ</string>
     <string name="accounts_test">ازموینه</string>
-    <string name="accounts_settings">ترتیبات</string>
+    <string name="accounts_settings">تنظیمات</string>
     <string name="accounts_verify">تصدیق</string>
     <string name="accounts_remove">لرې کول</string>
     <string name="accounts_remove_title">حساب لرې کړو؟</string>
@@ -119,7 +119,7 @@
     <string name="settings_home_system_documents">سندونه</string>
     <string name="settings_home_system_settings">د سیسټم ترتیبات</string>
     <string name="system_settings_title">د سیسټم ترتیبات</string>
-    <string name="system_settings_section_login">لاګ ان</string>
+    <string name="system_settings_section_login">ننوتل</string>
     <string name="system_settings_section_oauth">د دریمې اړخ ننوتل</string>
     <string name="system_settings_section_user_defaults">د کاروونکي اصلي تنظیمات</string>
     <string name="system_settings_section_operator">چلوونکی</string>
@@ -137,7 +137,7 @@
     <string name="system_settings_reset_title">ډیفالټ ته بیرته تنظیم کړو؟</string>
     <string name="system_setting_apps_install_user">کاروونکو ته اجازه ورکړه چې اپلیکیشنونه نصب کړي</string>
     <string name="system_setting_auth_email">د بریښنالیک کوډ په کارولو سره لاګ ان</string>
-    <string name="system_setting_auth_passkey">د passkey په کارولو سره لاګ ان</string>
+    <string name="system_setting_auth_passkey">د پاسکي په کارولو سره لاګ ان</string>
     <string name="system_setting_auth_totp">د TOTP تصدیق کوونکي اپ په کارولو سره لاګ ان</string>
     <string name="system_setting_auth_recovery">د بیرته راګرځولو کوډ په کارولو سره لاګ ان</string>
     <string name="system_setting_auth_oauth">د OAuth 2.0 په کارولو سره لاګ ان</string>
@@ -145,12 +145,12 @@
     <string name="system_setting_domains_verification">د ډومین تایید اړین دی</string>
     <string name="system_setting_email_from">د سیسټم بریښنالیکونو لپاره ډیفالټ پته</string>
     <string name="system_setting_oauth_public_url">د OAuth بیرته لارښوونو لپاره عامه URL</string>
-    <string name="system_setting_oauth_google_client_id">د Google client ID</string>
-    <string name="system_setting_oauth_google_client_secret">د Google client راز</string>
-    <string name="system_setting_oauth_github_client_id">د GitHub client ID</string>
-    <string name="system_setting_oauth_github_client_secret">د GitHub client راز</string>
-    <string name="system_setting_oauth_microsoft_client_id">د Microsoft client ID</string>
-    <string name="system_setting_oauth_microsoft_client_secret">د Microsoft client راز</string>
+    <string name="system_setting_oauth_google_client_id">د Google کلاینټ ID</string>
+    <string name="system_setting_oauth_google_client_secret">د Google کلاینټ راز</string>
+    <string name="system_setting_oauth_github_client_id">د GitHub کلاینټ ID</string>
+    <string name="system_setting_oauth_github_client_secret">د GitHub کلاینټ راز</string>
+    <string name="system_setting_oauth_microsoft_client_id">د Microsoft کلاینټ ID</string>
+    <string name="system_setting_oauth_microsoft_client_secret">د Microsoft کلاینټ راز</string>
     <string name="system_setting_oauth_microsoft_tenant">د Microsoft تینانټ</string>
     <string name="system_setting_oauth_facebook_client_id">د Facebook اپ ID</string>
     <string name="system_setting_oauth_facebook_client_secret">د Facebook اپ راز</string>
@@ -211,9 +211,9 @@
     <string name="settings_home_privacy">د محرمیت تګلاره</string>
     <string name="settings_home_rules">قواعد</string>
     <string name="settings_home_terms">د خدمت شرایط</string>
-    <string name="account_passkeys_empty">کوم ثبت شوي کیلیګانې شتون نلري.</string>
-    <string name="account_passkey_register_title">کیلي اضافه کړئ</string>
-    <string name="account_passkey_register_message">ستاسو وسیله به ستاسو څخه د تایید غوښتنه وکړي. کیلي د دې وسیلې سره تړل شوې او د راتلونکو لاسلیکونو لپاره کارول کیږي.</string>
+    <string name="account_passkeys_empty">هیڅ پاسکي نه دي راجستر شوي.</string>
+    <string name="account_passkey_register_title">پاسکي اضافه کړئ</string>
+    <string name="account_passkey_register_message">ستاسو وسیله به ستاسو څخه د تایید غوښتنه وکړي، پاسکي د دې وسیلې سره تړل شوې او د راتلونکو لاسلیکونو لپاره کارول کیږي.</string>
     <string name="account_passkey_name_label">نوم (اختیاري)</string>
     <string name="account_passkey_delete_message">\"%1$s\" به نور تاسو ته اجازه ورنه کړي.</string>
     <string name="account_totp_description">د تایید پروګرام څخه د 6 عددي کوډ سره ننوځئ.</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">لومړیتوب %1$d · %2$s</string>
     <string name="interests_search_placeholder">د اضافه کولو لپاره موضوعات لټوئ…</string>
     <string name="interests_empty">تر اوسه هیڅ علاقې نشته.</string>
-    <string name="interests_summary_regenerate">لنډیز بیا جوړ کړئ</string>
+    <string name="interests_summary_regenerate">لنډیز بیا جوړول</string>
     <string name="interests_summary_regenerating">بیا جوړیږي…</string>
     <string name="interests_summary_empty">د هغه څه چې تاسو یې خوښوئ د لنډیز جوړولو لپاره ځینې علاقې اضافه کړئ.</string>
     <string name="interests_search_failed">لټون پاتې راغی. بیا هڅه وکړئ.</string>
@@ -263,7 +263,7 @@
     <string name="system_settings_reset_message">دا به \"%1$s\" د ډیفالټ ارزښت (%2$s) ته بیرته راولي.</string>
     <string name="system_settings_reset_message_empty">دا به \"%1$s\" د ډیفالټ (خالي) ته بیرته راولي.</string>
     <string name="settings_home_system_users">کاروونکي (سرور)</string>
-    <string name="system_users_add_user">کارن اضافه کړئ</string>
+    <string name="system_users_add_user">کاروونکی اضافه کړئ</string>
     <string name="system_users_search_placeholder">کاروونکي ولټوئ…</string>
     <string name="system_users_sort_by">ترتیب</string>
     <string name="system_users_last_login">وروستی ننوتل: %1$s</string>
@@ -276,9 +276,9 @@
     <string name="account_title">حساب</string>
     <string name="account_section_identity">هویت</string>
     <string name="account_identity_identity">هویت</string>
-    <string name="account_identity_username">د کارن نوم</string>
+    <string name="account_identity_username">د کاروونکي نوم</string>
     <string name="account_identity_name">نوم</string>
-    <string name="account_identity_fingerprint">Fingerprint</string>
+    <string name="account_identity_fingerprint">د ګوتو نښه</string>
     <string name="account_identity_directory_toggle">نورو ته اجازه ورکړه چې تاسو په ډایرکټرۍ کې ومومي</string>
     <string name="domain_add">ډومین اضافه کړئ</string>
     <string name="domain_add_title">ډومین اضافه کړئ</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s به نور په دې ډومین کې لارې اداره نکړي.</string>
     <string name="domain_delegation_delete_title">وکالت ړنګ کړئ؟</string>
     <string name="domain_delegation_path">لاره</string>
-    <string name="domain_delegation_user">کارن ID</string>
+    <string name="domain_delegation_user">کاروونکی</string>
     <string name="domain_delegations">وکالتونه</string>
     <string name="domain_delegations_empty">هیڅ استازي تنظیم شوي نه دي.</string>
     <string name="domain_delete">ډومین ړنګ کړئ</string>
@@ -312,11 +312,11 @@
         <item quantity="one">1 ناسته لغوه شوه</item>
         <item quantity="other">%1$d ناستې لغوه شوې</item>
     </plurals>
-    <string name="login_title">لاګ ان</string>
+    <string name="login_title">ننوتل</string>
     <string name="login_section_methods">د ننوتلو لارې</string>
     <string name="login_method_email">د بریښنالیک کوډ</string>
     <string name="login_method_passkey">پاسکي</string>
-    <string name="login_method_totp">د Authenticator اپلیکیشن</string>
+    <string name="login_method_totp">د تصدیق کوونکي اپلیکیشن</string>
     <string name="login_method_oauth">د دریمې اړخ ننوتل</string>
     <string name="login_method_recovery">د بیرته راګرځولو کوډونه</string>
     <string name="account_close_section">حساب وتړئ</string>
@@ -342,7 +342,7 @@
     <string name="system_status_reachability_private">خصوصي</string>
     <string name="system_status_reachability_unknown">نامعلوم</string>
     <string name="system_status_relay">د ریلې له لارې</string>
-    <string name="system_status_mesh">د خپرونې mesh</string>
+    <string name="system_status_mesh">د خپرونې جالي شبکه</string>
     <string name="system_status_broadcast">وروستۍ خپرونه</string>
     <string name="system_status_queued_broadcasts">په کتار کې د خپرونې پیغامونه</string>
     <string name="system_setting_hostname_publish">د کوربه نوم او ډومینونه نورو سرورونو ته اعلان کړئ</string>
@@ -388,11 +388,11 @@
     <string name="accounts_field_secret">د لاسلیک راز</string>
     <string name="account_totp_open">په تصدیق کوونکي اپ کې خلاص کړئ</string>
     <string name="accounts_revoke">لاسرسی لغوه کړئ</string>
-    <string name="accounts_capability_calendar">کالنډر</string>
+    <string name="accounts_capability_calendar">کليز</string>
     <string name="accounts_capability_notify">خبرتیاوې</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">ننوتل</string>
-    <string name="accounts_provider_caldav">د کالنډر سرور</string>
-    <string name="accounts_revoke_confirm">دا به د %1$s کالنډر لاسرسی لغوه کړي. د %2$s سره ننوتل به تر هغه پاتې وي چې تاسو یې د ننوتلو پاڼه کې جلا نه کړئ.</string>
+    <string name="accounts_provider_caldav">د کليز سرور</string>
+    <string name="accounts_revoke_confirm">دا به د %1$s کليز لاسرسی لغوه کړي. د %2$s سره ننوتل به تر هغه پاتې وي چې تاسو یې د ننوتلو پاڼه کې جلا نه کړئ.</string>
     <string name="accounts_capability_mcp">MCP</string>
 </resources>

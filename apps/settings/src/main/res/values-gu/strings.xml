@@ -3,7 +3,7 @@
 
     <string name="settings_home_title">સેટિંગ્સ</string>
     <string name="settings_home_logout">લૉગ આઉટ કરો</string>
-    <string name="settings_home_account">એકાઉન્ટ</string>
+    <string name="settings_home_account">ખાતું</string>
     <string name="settings_home_preferences">પસંદગીઓ</string>
     <string name="settings_home_display">દર્શાવો</string>
     <string name="settings_home_notification_prefs">સૂચના પસંદગીઓ</string>
@@ -12,7 +12,7 @@
     <string name="account_section_passkeys">પાસકીઝ</string>
     <string name="account_passkey_register">પાસકી ઉમેરો</string>
     <string name="account_passkey_delete_title">પાસકી કાઢી નાખવી છે?</string>
-    <string name="account_section_totp">Authenticator એપ્લિકેશન</string>
+    <string name="account_section_totp">ઑથેન્ટિકેટર એપ્લિકેશન</string>
     <string name="account_totp_setup">પ્રમાણીકરણકર્તા સેટ અપ કરો</string>
     <string name="account_totp_setup_title">પ્રમાણીકરણકર્તા સેટ અપ કરો</string>
     <string name="account_totp_verify">ચકાસો</string>
@@ -119,7 +119,7 @@
     <string name="settings_home_system_documents">દસ્તાવેજો</string>
     <string name="settings_home_system_settings">સિસ્ટમ સેટિંગ્સ</string>
     <string name="system_settings_title">સિસ્ટમ સેટિંગ્સ</string>
-    <string name="system_settings_section_login">લૉગિન</string>
+    <string name="system_settings_section_login">લોગિન</string>
     <string name="system_settings_section_oauth">તૃતીય-પક્ષ લૉગિન</string>
     <string name="system_settings_section_user_defaults">વપરાશકર્તા ડિફોલ્ટ</string>
     <string name="system_settings_section_operator">ઑપરેટર</string>
@@ -143,7 +143,7 @@
     <string name="system_setting_auth_oauth">OAuth 2.0 નો ઉપયોગ કરીને લૉગિન</string>
     <string name="system_setting_default_theme">ડિફૉલ્ટ થીમ</string>
     <string name="system_setting_domains_verification">ડોમેન ચકાસણી જરૂરી કરો</string>
-    <string name="system_setting_email_from">સિસ્ટમ ઇમેઇલ માટે ડિફૉલ્ટ from સરનામું</string>
+    <string name="system_setting_email_from">સિસ્ટમ ઇમેઇલ માટે ડિફૉલ્ટ મોકલનાર સરનામું</string>
     <string name="system_setting_oauth_public_url">OAuth રિડાયરેક્ટ માટે જાહેર URL</string>
     <string name="system_setting_oauth_google_client_id">Google ક્લાયન્ટ ID</string>
     <string name="system_setting_oauth_google_client_secret">Google ક્લાયન્ટ સિક્રેટ</string>
@@ -151,7 +151,7 @@
     <string name="system_setting_oauth_github_client_secret">GitHub ક્લાયન્ટ સિક્રેટ</string>
     <string name="system_setting_oauth_microsoft_client_id">Microsoft ક્લાયન્ટ ID</string>
     <string name="system_setting_oauth_microsoft_client_secret">Microsoft ક્લાયન્ટ સિક્રેટ</string>
-    <string name="system_setting_oauth_microsoft_tenant">Microsoft tenant</string>
+    <string name="system_setting_oauth_microsoft_tenant">Microsoft ટેનન્ટ</string>
     <string name="system_setting_oauth_facebook_client_id">Facebook ઍપ ID</string>
     <string name="system_setting_oauth_facebook_client_secret">Facebook ઍપ સિક્રેટ</string>
     <string name="system_setting_oauth_x_client_id">X ક્લાયન્ટ ID</string>
@@ -170,7 +170,7 @@
     <string name="system_users_col_last">છેલ્લું લૉગિન</string>
     <string name="system_users_open_actions">યુઝર ક્રિયાઓ ખોલો</string>
     <string name="system_users_role_label">ભૂમિકા</string>
-    <string name="system_users_role_administrator">Administrator</string>
+    <string name="system_users_role_administrator">એડમિનિસ્ટ્રેટર</string>
     <string name="system_users_role_user">વપરાશકર્તા</string>
     <string name="system_users_status_suspended">સસ્પેન્ડ કર્યા</string>
     <string name="system_users_last_never">ક્યારેય નહીં</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">પ્રાથમિકતા %1$d · %2$s</string>
     <string name="interests_search_placeholder">ઉમેરવા માટેના વિષયો શોધો…</string>
     <string name="interests_empty">હજુ સુધી કોઈ રસ નથી.</string>
-    <string name="interests_summary_regenerate">સારાંશ ફરીથી બનાવો</string>
+    <string name="interests_summary_regenerate">સારાંશ ફરી જનરેટ કરો</string>
     <string name="interests_summary_regenerating">ફરીથી બનાવી રહ્યું છે…</string>
     <string name="interests_summary_empty">તમને ગમે છે તે વસ્તુઓનો સારાંશ બનાવવા માટે કેટલાક રસ ઉમેરો.</string>
     <string name="interests_search_failed">શોધ નિષ્ફળ થઈ. કૃપા કરીને ફરીથી પ્રયાસ કરો.</string>
@@ -273,10 +273,10 @@
     <string name="system_users_revoke_all_title">બધા સત્રો રદ કરવા?</string>
     <string name="system_users_revoke_all_message">આ વપરાશકર્તાના તમામ સક્રિય સત્રો સાઇન આઉટ થશે.</string>
     <string name="system_users_pagination_status">%3$d વપરાશકર્તાઓમાંથી %1$d–%2$d દર્શાવી રહ્યું છે</string>
-    <string name="account_title">એકાઉન્ટ</string>
+    <string name="account_title">ખાતું</string>
     <string name="account_section_identity">ઓળખ</string>
     <string name="account_identity_identity">ઓળખ</string>
-    <string name="account_identity_username">વપરાશકર્તાનામ</string>
+    <string name="account_identity_username">વપરાશકર્તા નામ</string>
     <string name="account_identity_name">નામ</string>
     <string name="account_identity_fingerprint">આંગળાની છાપ</string>
     <string name="account_identity_directory_toggle">બીજાને તમને ડિરેક્ટરીમાં શોધવાની મંજૂરી આપો</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s હવે આ ડોમેન પરના માર્ગોનું સંચાલન કરશે નહીં.</string>
     <string name="domain_delegation_delete_title">ડેલિગેશન કાઢી નાખવું છે?</string>
     <string name="domain_delegation_path">પાથ</string>
-    <string name="domain_delegation_user">વપરાશકર્તા ID</string>
+    <string name="domain_delegation_user">વપરાશકર્તા</string>
     <string name="domain_delegations">ડેલિગેશન</string>
     <string name="domain_delegations_empty">કોઈ પ્રતિનિધિ રૂપરેખાંકિત નથી.</string>
     <string name="domain_delete">ડોમેન કાઢી નાખો</string>
@@ -312,11 +312,11 @@
         <item quantity="one">%1$d સત્ર રદ કર્યું</item>
         <item quantity="other">%1$d સત્રો રદ કર્યા</item>
     </plurals>
-    <string name="login_title">લૉગિન</string>
+    <string name="login_title">લોગિન</string>
     <string name="login_section_methods">લૉગિન પદ્ધતિઓ</string>
     <string name="login_method_email">ઇમેઇલ કોડ</string>
     <string name="login_method_passkey">પાસકી</string>
-    <string name="login_method_totp">Authenticator એપ્લિકેશન</string>
+    <string name="login_method_totp">ઑથેન્ટિકેટર એપ્લિકેશન</string>
     <string name="login_method_oauth">તૃતીય-પક્ષ લૉગિન</string>
     <string name="login_method_recovery">રિકવરી કોડ્સ</string>
     <string name="account_close_section">ખાતું બંધ કરો</string>

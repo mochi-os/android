@@ -99,7 +99,7 @@
     <string name="settings_number_format">Számformátum</string>
     <string name="settings_units">Egységek</string>
     <string name="settings_units_metric">Metrika</string>
-    <string name="settings_units_imperial">Imperial</string>
+    <string name="settings_units_imperial">Angolszász</string>
     <string name="settings_time_zone">Időzóna</string>
     <string name="settings_reset_to_defaults">Visszaállítás alapértelmezettre</string>
     <string name="settings_reset_confirm_title">Visszaállítja a preferenciákat?</string>
@@ -143,7 +143,7 @@
     <string name="auth_mfa_subtitle">Végezze el a hátralévő ellenőrzési lépéseket</string>
     <string name="auth_recover_account">Fiók helyreállítása</string>
     <string name="auth_login_title">Jelentkezzen be a Mochiba</string>
-    <string name="auth_next">Tovább</string>
+    <string name="auth_next">Következő</string>
     <string name="auth_or_log_in_with">Vagy jelentkezzen be ezzel</string>
     <string name="auth_passkey">Azonosítókulcs</string>
     <string name="auth_use_passkey">Azonosítókulcs használata</string>
@@ -165,7 +165,7 @@
     <string name="bootstrap_choose_account">Válasszon fiókot</string>
     <string name="bootstrap_sign_in_different_server">Bejelentkezés másik kiszolgálóra</string>
     <string name="common_retry">Újra</string>
-    <string name="common_more_options">További beállítások</string>
+    <string name="common_more_options">További lehetőségek</string>
     <string name="common_collapse">Összecsukás</string>
     <string name="common_expand">Kibontás</string>
     <string name="common_play_video">Videó lejátszása</string>
@@ -181,7 +181,7 @@
     <string name="entity_avatar_alt">%1$s profilképe</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="lightbox_position">%1$d / %2$d</string>
-    <string name="format_time_just_now">Az imént</string>
+    <string name="format_time_just_now">Épp most</string>
     <string name="format_time_minutes_ago">%1$d perce</string>
     <string name="format_time_hours_ago">%1$d órája</string>
     <string name="format_time_days_ago">%1$d napja</string>
@@ -194,7 +194,7 @@
     <string name="format_time_weeks_short">%1$d h</string>
     <string name="format_time_months_short">%1$d hó</string>
     <string name="reaction_add">Reakció hozzáadása</string>
-    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel">Mochi push értesítések</string>
     <string name="push_service_channel_description">Csatlakoztatva tartja a Mochit az értesítések fogadásához</string>
     <string name="push_service_group">Háttérszolgáltatás</string>
     <string name="push_service_title">A Mochi értesítésekre vár</string>

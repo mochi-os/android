@@ -106,7 +106,7 @@
     <string name="projects_design_import">Ngenisa umklamo</string>
     <string name="projects_design_imported">Idizayini ingenisiwe</string>
     <string name="projects_design_tab_classes">Amaklasi</string>
-    <string name="projects_design_tab_views">Ukubukwa</string>
+    <string name="projects_design_tab_views">Imibukiso</string>
     <string name="projects_design_import_dialog_title">Ngenisa umklamo</string>
     <string name="projects_design_import_choose_template">Khetha isifanekiso</string>
     <string name="projects_design_replace_title">Buyisela idizayini?</string>
@@ -160,23 +160,23 @@
     <string name="projects_comment_send">Thumela</string>
     <string name="projects_field_position_body">Umzimba</string>
     <string name="projects_sort_field">Hlunga ngo</string>
-    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_comment_remove_attachment">Khipha okunamathiselwe</string>
     <string name="projects_views_sort_by">Hlunga ngo</string>
     <string name="projects_auth_login_failed">Ukungena akuphumelelanga</string>
     <string name="projects_views_move_up">Hambisa phezulu</string>
     <string name="projects_class_move_up">Hambisa phezulu</string>
     <string name="projects_views_move_down">Hambisa phansi</string>
     <string name="projects_class_move_down">Hambisa phansi</string>
-    <string name="projects_sort_direction_asc">Iyenyuka</string>
-    <string name="projects_views_direction_asc">Iyenyuka</string>
-    <string name="projects_sort_direction_desc">Iyehla</string>
-    <string name="projects_views_direction_desc">Iyehla</string>
+    <string name="projects_sort_direction_asc">Ukukhuphuka</string>
+    <string name="projects_views_direction_asc">Ukukhuphuka</string>
+    <string name="projects_sort_direction_desc">Ukwehla</string>
+    <string name="projects_views_direction_desc">Ukwehla</string>
     <string name="projects_list_add_to_home">Engeza kwisikrini sasekhaya</string>
     <string name="projects_search_objects_placeholder">Sesha izinto</string>
     <string name="projects_links_search_placeholder">Sesha izinto</string>
 
     <string name="notification_channel_projects">Izaziso zamaphrojekthi</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Amaphrojekthi</string>
     <string name="projects_auth_create_identity_failed">Yehlulekile ukudala ubunikazi</string>
     <string name="projects_auth_mfa_unsupported">I-MFA ayikasekelwa kuhlelo lokusebenza lweselula</string>
     <string name="projects_auth_enter_code_sent">Faka ikhodi ethunyelwe ku-%1$s</string>
@@ -248,7 +248,7 @@
     <string name="projects_tree_expand">Nweba</string>
     <string name="projects_tree_move">Hambisa</string>
     <string name="projects_tree_move_to_parent">Hambisa kumzali</string>
-    <string name="projects_tree_root_level">(Izinga elingumsuka)</string>
+    <string name="projects_tree_root_level">(Izinga lempande)</string>
     <string name="projects_tree_empty">Azikho izinto</string>
     <string name="projects_board_no_columns">Awekho amakholomu amisiwe alolu kubuka</string>
     <string name="projects_board_no_options">Awekho amathuba amisiwe enkambini yekholomu</string>
@@ -261,7 +261,7 @@
     <string name="projects_drag_row">Hudula umugqa</string>
     <string name="projects_drag_column">Hudula ikholomu</string>
     <string name="projects_drag_hint">Cindezela isikhathi eside bese uhudula ukuze ususe</string>
-    <string name="projects_design_more_options">Amathuba engeziwe</string>
+    <string name="projects_design_more_options">Eziningi izinketho</string>
     <string name="projects_design_clipboard_label">Idizayini ye-JSON</string>
     <string name="projects_design_export_subject">Idizayini yephrojekthi</string>
     <string name="projects_design_share_chooser">Yabelana ngedizayini</string>
@@ -278,15 +278,15 @@
     <string name="projects_class_title_field_description">Yiyiphi inkambu ezosetshenziswa njengesihloko esiboniswayo sezinto zalesi kilasi.</string>
     <string name="projects_class_title_field_default">Okuzenzakalelayo (okufundekayo)</string>
     <string name="projects_class_merge_requests_description">Vumela izicelo zokuhlanganisa ezintweni zalesi kilasi.</string>
-    <string name="projects_class_parents">Amakilasi azali</string>
+    <string name="projects_class_parents">Amakilasi omzali</string>
     <string name="projects_class_delete_message">Ingabe uqinisekile ufuna ukususa ikilasi elithi \"%1$s\"? Zonke izinkambu kanye namathuba azo nazo zizosulwa.</string>
-    <string name="projects_field_type_enumerated">Okubaliwe</string>
+    <string name="projects_field_type_enumerated">Okubalwe ngokulandelana</string>
     <string name="projects_field_label">Inkambu: %1$s</string>
-    <string name="projects_field_readonly">Okufundwayo kuphela</string>
-    <string name="projects_field_sortable">Okuhlukaniswayo</string>
-    <string name="projects_field_filterable">Okuhluzwayo</string>
+    <string name="projects_field_readonly">Okufundekayo kuphela</string>
+    <string name="projects_field_sortable">Kungahlelwa</string>
+    <string name="projects_field_filterable">Kungahlungwa</string>
     <string name="projects_field_show_on_card">Bonisa ekhadini</string>
-    <string name="projects_field_multi">Khetha okuningi</string>
+    <string name="projects_field_multi">Ukukhetha okuningi</string>
     <string name="projects_field_position">Indawo yokubonisa</string>
     <string name="projects_field_position_header">Isihloko</string>
     <string name="projects_field_validation">Ukuqinisekiswa</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Khetha umthetho</string>
     <string name="projects_access_authenticated_desc">Noma ubani ongene ngemvume</string>
     <string name="projects_access_anyone_desc">Kuhlanganisa nabasebenzisi abangaziwa</string>
-    <string name="projects_access_target">Okuqondiwe</string>
+    <string name="projects_access_target">Umsebenzisi noma iqembu</string>
     <string name="projects_access_target_hint">I-ID yonhlangothi, @iqembu, * (wonke umuntu), noma + (amalungu)</string>
     <string name="projects_access_selected">Okukhethiwe: %1$s</string>
     <string name="projects_access_role_comment">Phawula futhi ubuke</string>
@@ -371,7 +371,7 @@
     <string name="projects_design_export_saved">Umklamo ulondoloziwe</string>
     <string name="projects_design_import_failed">Ayikwazanga ukufundwa leyo fayela</string>
     <string name="projects_design_or_upload_json">Noma layisha ifayela</string>
-    <string name="projects_export">Thumela idatha</string>
+    <string name="projects_export">Khipha idatha</string>
     <string name="projects_export_failed">Ayikwazanga ukulondolozwa okuthunyelwe</string>
     <string name="projects_export_saved">Idatha yephrojekthi ilondoloziwe</string>
     <string name="projects_exporting">Ilungiselela okuthunyelwayo…</string>
@@ -381,5 +381,5 @@
     <string name="projects_option_delete_message">Ingabe uqinisekile ukuthi ufuna ukususa inketho ethi \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Azikho izinhlobo zezinto ezingadalwa okwamanje. Dala izinto zomzali ezidingekayo kuqala.</string>
     <string name="projects_create_blocked_no_options">Ayikwazi ukudala: %1$s iyadingeka kodwa ayinazo izinketho. Engeza izinketho kuMklamo.</string>
-    <string name="projects_attachment_remove">Remove attachment</string>
+    <string name="projects_attachment_remove">Khipha okunamathiselwe</string>
 </resources>

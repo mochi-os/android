@@ -13,7 +13,7 @@
     <string name="chess_new_title">Umdlalo Omusha</string>
     <string name="chess_new_pick_opponent">Khetha imbangi</string>
     <string name="chess_new_no_friends_title">Abakho abangani okwamanje</string>
-    <string name="chess_new_no_friends_subtitle">Engeza abangane ku-app yabantu ukuze uqale ukudlala</string>
+    <string name="chess_new_no_friends_subtitle">Engeza abangane ku-app yaBantu ukuze uqale ukudlala</string>
     <string name="chess_new_add_friends">Engeza abangane</string>
     <string name="chess_new_start_button">Qala umdlalo</string>
     <string name="chess_new_creating">Kuyadalwa…</string>
@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">Yamukela</string>
     <string name="chess_draw_decline">Yenqaba</string>
     <string name="chess_status_checkmate_you_win">Checkmate — uphumelele!</string>
-    <string name="chess_status_stalemate">Akekho ophumelelayo — ukulingana</string>
+    <string name="chess_status_stalemate">Ukuvimbeka — ukulingana</string>
     <string name="chess_status_draw">Ukulingana</string>
     <string name="chess_status_check_your_move">Hlola — kuyahanjwa wena</string>
     <string name="chess_status_your_move">Ukunyakaza kwakho</string>

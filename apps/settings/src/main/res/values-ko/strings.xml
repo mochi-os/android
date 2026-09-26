@@ -242,7 +242,7 @@
     <string name="route_meta">우선순위 %1$d · %2$s</string>
     <string name="interests_search_placeholder">추가할 주제 검색…</string>
     <string name="interests_empty">아직 관심사가 없습니다.</string>
-    <string name="interests_summary_regenerate">요약 다시 생성</string>
+    <string name="interests_summary_regenerate">요약 재생성</string>
     <string name="interests_summary_regenerating">다시 생성 중…</string>
     <string name="interests_summary_empty">관심사를 추가하면 좋아하는 것의 요약이 생성됩니다.</string>
     <string name="interests_search_failed">검색에 실패했습니다. 다시 시도해 주세요.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s은(는) 더 이상 이 도메인의 경로를 관리하지 않습니다.</string>
     <string name="domain_delegation_delete_title">위임을 삭제할까요?</string>
     <string name="domain_delegation_path">경로</string>
-    <string name="domain_delegation_user">사용자 ID</string>
+    <string name="domain_delegation_user">사용자</string>
     <string name="domain_delegations">위임</string>
     <string name="domain_delegations_empty">구성된 위임이 없습니다.</string>
     <string name="domain_delete">도메인 삭제</string>

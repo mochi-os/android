@@ -62,7 +62,7 @@
     <string name="people_profile_uploading">Жүктөлүүдө…</string>
     <string name="people_profile_change_banner">Баннерди өзгөртүү</string>
     <string name="people_profile_no_banner">Баннер орнотулган эмес</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">Фавикон</string>
     <string name="people_profile_browser_icon">Браузер иконкасы</string>
     <string name="people_profile_file_too_large">Файл өтө чоң</string>
     <string name="people_profile_clear">Тазалоо</string>
@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Навигацияны ачуу</string>
     <string name="people_person_state_friend">Достор</string>
     <string name="people_person_state_self">Сиз</string>
-    <string name="people_person_message">Билдирүү</string>
+    <string name="people_person_message">Билдирүү жөнөтүү</string>
     <string name="people_person_accept">Кабыл алуу</string>
     <string name="people_person_decline">Четке кагуу</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Баарын кабыл алуу</string>
     <string name="people_invitations_decline_all">Баарынан баш тартуу</string>
     <string name="people_invitations_cancel_all">Баарын жокко чыгаруу</string>
+    <string name="people_invitations_cancel">Жокко чыгаруу</string>
     <string name="people_invitations_all_accepted">Бардык чакыруулар кабыл алынды</string>
     <string name="people_invitations_all_declined">Бардык чакыруулардан баш тартылды</string>
     <string name="people_invitations_all_cancelled">Бардык чакыруулар жокко чыгарылды</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Издөө…</string>
     <string name="people_contacts_invited">Чакырылган</string>
     <string name="people_contacts_accept">Кабыл алуу</string>
-    <string name="people_contacts_message">Билдирүү</string>
+    <string name="people_contacts_message">Билдирүү жөнөтүү</string>
     <string name="people_contacts_no_people_found">Адамдар табылган жок</string>
     <string name="people_contacts_try_adjusting">Издөөңүздү тууралап көрүңүз</string>
     <string name="people_contact_section_address">Дарек</string>
@@ -145,7 +146,7 @@
     <string name="people_add_contact_search_start">Колдонуучуларды издөө үчүн жаза баштаңыз</string>
     <string name="people_contact_phone">Телефон</string>
     <string name="people_contact_title">Кызмат аты</string>
-    <string name="people_contacts_title">Контакттар</string>
+    <string name="people_contacts_title">Байланыштар</string>
     <string name="people_contacts_all">Бардык байланыштар</string>
     <string name="people_contacts_empty">Байланыш табылган жок</string>
     <string name="people_contacts_add_to_start">Баарлашууну баштоо үчүн байланыш кошуңуз</string>
@@ -161,7 +162,7 @@
     <string name="people_contact_given">Аты</string>
     <string name="people_contact_family">Фамилиясы</string>
     <string name="people_contact_nickname">Каймана аты</string>
-    <string name="people_contact_add_email">Эл. почта кошуу</string>
+    <string name="people_contact_add_email">Электрондук почта кошуу</string>
     <string name="people_contact_add_phone">Телефон кошуу</string>
     <string name="people_contact_add_address">Дарек кошуу</string>
     <string name="people_contact_street">Көчө</string>
@@ -169,7 +170,7 @@
     <string name="people_contact_organisation">Уюм</string>
     <string name="people_contact_url">Вебсайт</string>
     <string name="people_contact_note">Эскертме</string>
-    <string name="people_contact_book">Дарек китепчеси</string>
+    <string name="people_contact_book">Даректер китепчеси</string>
     <string name="people_contact_type_work">Жумуш</string>
     <string name="people_contact_type_mobile">Мобилдик</string>
     <string name="people_contact_pick_date">Күндү тандаңыз</string>
@@ -187,7 +188,7 @@
     <string name="people_person_state_contact">Байланыштарда</string>
     <string name="people_device_create">Түзүү</string>
     <string name="people_device_server">Сервер</string>
-    <string name="people_device_username">Колдонуучу аты</string>
+    <string name="people_device_username">Колдонуучунун аты</string>
     <string name="people_device_done">Бүттү</string>
     <string name="people_device_list">Түзмөктөр</string>
     <string name="people_device_used">Акыркы колдонуу %1$s</string>

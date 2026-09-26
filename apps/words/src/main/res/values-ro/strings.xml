@@ -37,7 +37,7 @@
 
     <string name="words_channel_name">Notificări Cuvinte</string>
     <string name="words_channel_description">Notificări despre ture, schimburi și rezultate de partidă.</string>
-    <string name="words_sidebar_active">Partide active</string>
+    <string name="words_sidebar_active">Jocuri active</string>
     <string name="words_sidebar_empty">Încă nu există partide.</string>
     <string name="words_new_game_choose_opponents">Alegeți adversari</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
@@ -55,7 +55,7 @@
     <string name="words_detail_chat_you_played">Ai jucat %1$s</string>
     <string name="words_detail_chat_player_played">%1$s a jucat %2$s</string>
 
-    <string name="words_detail_delete_title">Ștergeți partida?</string>
+    <string name="words_detail_delete_title">Ștergi jocul?</string>
     <string name="words_detail_delete_confirm">Șterge</string>
     <string name="words_detail_delete_message">Aceasta va șterge definitiv jocul și discuția asociată. Această acțiune nu poate fi anulată.</string>
     <string name="words_detail_chat_passed">%1$s a pasat</string>

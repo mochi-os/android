@@ -173,7 +173,7 @@
     <string name="wikis_settings_section_identity">Identità</string>
     <string name="wikis_settings_field_name">Nome</string>
     <string name="wikis_settings_field_entity_id">ID entità</string>
-    <string name="wikis_settings_field_fingerprint">Fingerprint</string>
+    <string name="wikis_settings_field_fingerprint">Impronta</string>
     <string name="wikis_settings_name_edit_cd">Modifica nome</string>
     <string name="wikis_settings_name_invalid_char">Il nome non può contenere i caratteri &lt; o &gt;</string>
     <string name="wikis_settings_name_too_long">Il nome deve contenere al massimo 100 caratteri</string>
@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Rimuovi</string>
     <string name="wikis_replicas_remove_failed">Impossibile rimuovere la replica</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki</string>
     <string name="wikis_channel_name">Notifiche Wikis</string>
     <string name="wikis_channel_description">Notifiche su modifiche alle pagine, commenti e inviti.</string>
     <string name="wikis_pageview_toc_expand">Mostra indice</string>

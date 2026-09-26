@@ -7,7 +7,7 @@
     <string name="go_action_pass">পাস</string>
     <string name="go_action_rematch">পুনরায় খেলুন</string>
     <string name="go_action_resign">পদত্যাগ</string>
-    <string name="go_app_title">যান</string>
+    <string name="go_app_title">গো</string>
     <string name="go_captures_black_sr">কালো বন্দি</string>
     <string name="go_captures_white_sr">সাদা বন্দি</string>
     <string name="go_chat_title">চ্যাট</string>

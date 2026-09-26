@@ -35,7 +35,7 @@
     <string name="words_detail_resign_title">ยอมแพ้เกม?</string>
     <string name="words_detail_resign_message">แน่ใจว่าต้องการยอมแพ้?</string>
 
-    <string name="words_channel_name">การแจ้งเตือน Words</string>
+    <string name="words_channel_name">การแจ้งเตือนคำศัพท์</string>
     <string name="words_channel_description">การแจ้งเตือนเกี่ยวกับเทิร์น การแลกเปลี่ยน และผลการแข่งขัน</string>
     <string name="words_sidebar_active">เกมที่กำลังเล่น</string>
     <string name="words_sidebar_empty">ยังไม่มีเกม</string>

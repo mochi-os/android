@@ -32,8 +32,8 @@
     <string name="chess_draw_accept">Derbyn</string>
     <string name="chess_draw_decline">Gwrthod</string>
     <string name="chess_status_checkmate_you_win">Siecmat — chi sy\'n ennill!</string>
-    <string name="chess_status_stalemate">Sefyllfa farw — gêm gyfartal</string>
-    <string name="chess_status_draw">Cyfartal</string>
+    <string name="chess_status_stalemate">Sefyllfa ddi-symud — gêm gyfartal</string>
+    <string name="chess_status_draw">Gêm gyfartal</string>
     <string name="chess_status_check_your_move">Siec — eich tro chi</string>
     <string name="chess_status_your_move">Eich symudiad</string>
     <string name="chess_move_subject_you">Chi</string>

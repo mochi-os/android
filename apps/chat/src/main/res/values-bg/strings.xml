@@ -54,7 +54,7 @@
     <string name="chat_forward_empty">Няма чатове за препращане</string>
     <string name="chat_forward_success">Препратено</string>
     <string name="chat_message_reply">Отговор</string>
-    <string name="chat_message_select">Избор</string>
+    <string name="chat_message_select">Избери</string>
     <string name="chat_reply_attachment">Прикачен файл</string>
     <string name="chat_replying_to">Отговор до %1$s</string>
     <string name="chat_delete_confirm_title">Изтриване на съобщението?</string>

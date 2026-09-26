@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Poista</string>
     <string name="wikis_replicas_remove_failed">Replikan poisto epäonnistui</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wikit</string>
     <string name="wikis_channel_name">Wikis-ilmoitukset</string>
     <string name="wikis_channel_description">Ilmoitukset sivumuokkauksista, kommenteista ja kutsuista.</string>
     <string name="wikis_pageview_toc_expand">Näytä sisällysluettelo</string>
@@ -283,7 +283,7 @@
     <string name="wikis_load_more">Lataa lisää</string>
     <string name="wikis_access_change_level">Käyttöoikeustaso</string>
     <string name="wikis_access_subject_anyone">Kuka tahansa</string>
-    <string name="wikis_access_subject_authenticated">Todennetut käyttäjät</string>
+    <string name="wikis_access_subject_authenticated">Kirjautuneet käyttäjät</string>
 
     <string name="wikis_revision_compare">Vertaa muutoksia</string>
     <string name="wikis_revision_author">tekijältä %1$s</string>

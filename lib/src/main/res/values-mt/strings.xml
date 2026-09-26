@@ -41,7 +41,7 @@
     <string name="access_add_rule">Żid regola</string>
     <string name="access_owner">Sid</string>
     <string name="access_revoke">Irrevoka</string>
-    <string name="access_level_comment">Kumment</string>
+    <string name="access_level_comment">Ikkummenta</string>
     <string name="access_level_view">Ara</string>
     <string name="access_level_none">Xejn</string>
     <string name="reaction_like">Ħobb</string>
@@ -59,12 +59,12 @@
     <string name="notifications_title">Notifiki</string>
     <string name="notifications_empty">L-ebda notifiki</string>
     <string name="notifications_empty_unread">Aġġornat kollox</string>
-    <string name="notifications_tab_unread">Mhux maqru</string>
+    <string name="notifications_tab_unread">Mhux moqri</string>
     <string name="notifications_tab_unread_count">Mhux maqru (%1$d)</string>
     <string name="notifications_tab_all">Kollha</string>
     <string name="notifications_mark_all_read">Immarka kollox maqru</string>
     <string name="notifications_clear_all">Naddaf kollox</string>
-    <string name="settings_title">Settings</string>
+    <string name="settings_title">Issettjar</string>
     <string name="settings_appearance">Dehra</string>
     <string name="settings_appearance_light">Ċar</string>
     <string name="settings_appearance_dark">Skur</string>
@@ -104,13 +104,13 @@
     <string name="settings_reset_to_defaults">Irriżetta għal defaults</string>
     <string name="settings_reset_confirm_title">Tirriżetta l-preferenzi?</string>
     <string name="settings_reset_confirm_message">Dan se jirrisettja l-preferenzi kollha għall-valuri default tagħhom.</string>
-    <string name="settings_reset">Reset</string>
+    <string name="settings_reset">Irrisettja</string>
     <string name="settings_display_title">Wiri</string>
     <string name="settings_display_reset">Irriżetta għal defaults</string>
     <string name="settings_display_reset_confirm_title">Tirresetja l-wirja?</string>
     <string name="settings_display_reset_confirm_message">Dan jirresetja s-settings tal-wirja għall-valuri default tagħhom.</string>
     <string name="settings_theme_title">Tema</string>
-    <string name="settings_theme_default">Default</string>
+    <string name="settings_theme_default">Prestabbilit</string>
     <string name="settings_background">Sfond</string>
     <string name="settings_background_theme">Mit-tema</string>
     <string name="settings_background_off">Xejn</string>
@@ -128,7 +128,7 @@
     <string name="game_chat_move_played">%1$s laqat %2$s</string>
 
     <string name="error_network">Ma jistax jaqbad. Iċċekkja l-konnessjoni tal-internet u erġa\' pprova.</string>
-    <string name="error_authentication_required">Awtentikazzjoni meħtieġa</string>
+    <string name="error_authentication_required">Meħtieġa awtentikazzjoni</string>
     <string name="error_not_found">Ma nstabx</string>
     <string name="error_server">Żball tas-server (%1$d). Jekk jogħġbok erġa\' pprova aktar tard.</string>
     <string name="error_unexpected">Seħħ żball mhux mistenni</string>
@@ -145,7 +145,7 @@
     <string name="auth_login_title">Idħol f\'Mochi</string>
     <string name="auth_next">Li jmiss</string>
     <string name="auth_or_log_in_with">Jew idħol bi</string>
-    <string name="auth_passkey">Passkey</string>
+    <string name="auth_passkey">Ċavetta tal-aċċess</string>
     <string name="auth_use_passkey">Uża passkey</string>
     <string name="auth_email_me_a_code">Ibgħatli kodiċi bl-email</string>
     <string name="auth_or_enter_authenticator_code">Jew daħħal il-kodiċi tal-awtentikazzjoni</string>
@@ -167,7 +167,7 @@
     <string name="bootstrap_sign_in_different_server">Idħol f\'server differenti</string>
     <string name="common_retry">Erġa\' pprova</string>
     <string name="common_more_options">Aktar għażliet</string>
-    <string name="common_collapse">Naqqas</string>
+    <string name="common_collapse">Aġbor</string>
     <string name="common_expand">Espandi</string>
     <string name="common_play_video">Daqq il-video</string>
     <string name="place_picker_name">Isem tal-post</string>
@@ -181,7 +181,7 @@
     <string name="notifications_clear">Neħħi n-notifiki</string>
     <string name="entity_avatar_alt">Avatar għal %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
-    <string name="format_time_just_now">Issa stess</string>
+    <string name="format_time_just_now">Issa</string>
     <string name="format_time_minutes_ago">%1$dm ilu</string>
     <string name="format_time_hours_ago">%1$ds ilu</string>
     <string name="format_time_days_ago">%1$dj ilu</string>

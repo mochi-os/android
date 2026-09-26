@@ -52,7 +52,7 @@
     <string name="people_profile_name">ชื่อ</string>
     <string name="people_profile_name_saved">บันทึกชื่อแล้ว</string>
     <string name="people_profile_edit_name">แก้ไขชื่อ</string>
-    <string name="people_profile_identity">Identity</string>
+    <string name="people_profile_identity">ตัวตน</string>
     <string name="people_profile_accent">สีเน้น</string>
     <string name="people_profile_directory_listing">อนุญาตให้ผู้อื่นค้นหาคุณในไดเรกทอรี</string>
     <string name="people_profile_markdown_supported">รองรับ Markdown</string>
@@ -62,7 +62,7 @@
     <string name="people_profile_uploading">กำลังอัปโหลด…</string>
     <string name="people_profile_change_banner">เปลี่ยนแบนเนอร์</string>
     <string name="people_profile_no_banner">ยังไม่ได้ตั้งแบนเนอร์</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">ไอคอนเว็บไซต์</string>
     <string name="people_profile_browser_icon">ไอคอนเบราว์เซอร์</string>
     <string name="people_profile_file_too_large">ไฟล์ใหญ่เกินไป</string>
     <string name="people_profile_clear">ล้าง</string>
@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">เปิดการนำทาง</string>
     <string name="people_person_state_friend">เพื่อน</string>
     <string name="people_person_state_self">คุณ</string>
-    <string name="people_person_message">ข้อความ</string>
+    <string name="people_person_message">ส่งข้อความ</string>
     <string name="people_person_accept">ยอมรับ</string>
     <string name="people_person_decline">ปฏิเสธ</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">ยอมรับทั้งหมด</string>
     <string name="people_invitations_decline_all">ปฏิเสธทั้งหมด</string>
     <string name="people_invitations_cancel_all">ยกเลิกทั้งหมด</string>
+    <string name="people_invitations_cancel">ยกเลิก</string>
     <string name="people_invitations_all_accepted">ยอมรับคำเชิญทั้งหมดแล้ว</string>
     <string name="people_invitations_all_declined">ปฏิเสธคำเชิญทั้งหมดแล้ว</string>
     <string name="people_invitations_all_cancelled">ยกเลิกคำเชิญทั้งหมดแล้ว</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">ค้นหา…</string>
     <string name="people_contacts_invited">เชิญแล้ว</string>
     <string name="people_contacts_accept">ยอมรับ</string>
-    <string name="people_contacts_message">ข้อความ</string>
+    <string name="people_contacts_message">ส่งข้อความ</string>
     <string name="people_contacts_no_people_found">ไม่พบผู้คน</string>
     <string name="people_contacts_try_adjusting">ลองปรับการค้นหาของคุณ</string>
     <string name="people_contact_section_address">ที่อยู่</string>
@@ -146,18 +147,18 @@
     <string name="people_contact_phone">โทรศัพท์</string>
     <string name="people_contact_title">ตำแหน่งงาน</string>
     <string name="people_contacts_title">ผู้ติดต่อ</string>
-    <string name="people_contacts_all">รายชื่อติดต่อทั้งหมด</string>
+    <string name="people_contacts_all">ผู้ติดต่อทั้งหมด</string>
     <string name="people_contacts_empty">ไม่พบรายชื่อติดต่อ</string>
     <string name="people_contacts_add_to_start">เพิ่มรายชื่อติดต่อเพื่อเริ่มเชื่อมต่อ</string>
     <string name="people_contacts_actions">การดำเนินการกับรายชื่อติดต่อ</string>
     <string name="people_contacts_friend">เพื่อน</string>
     <string name="people_contacts_invite">เชิญ</string>
     <string name="people_contacts_unfriend_confirm">%1$s จะไม่เป็นเพื่อนของคุณอีกต่อไป รายชื่อติดต่อยังคงอยู่ในสมุดที่อยู่ของคุณ</string>
-    <string name="people_contacts_delete">ลบรายชื่อติดต่อ</string>
+    <string name="people_contacts_delete">ลบผู้ติดต่อ</string>
     <string name="people_contacts_delete_confirm">ลบ %1$s ออกจากรายชื่อติดต่อของคุณหรือไม่</string>
     <string name="people_contacts_delete_friend_confirm">ลบ %1$s ออกจากรายชื่อติดต่อของคุณหรือไม่ มิตรภาพของคุณจะสิ้นสุดด้วย</string>
-    <string name="people_contact_new_title">รายชื่อติดต่อใหม่</string>
-    <string name="people_contact_edit_title">แก้ไขรายชื่อติดต่อ</string>
+    <string name="people_contact_new_title">ผู้ติดต่อใหม่</string>
+    <string name="people_contact_edit_title">แก้ไขผู้ติดต่อ</string>
     <string name="people_contact_given">ชื่อ</string>
     <string name="people_contact_family">นามสกุล</string>
     <string name="people_contact_nickname">ชื่อเล่น</string>
@@ -168,22 +169,22 @@
     <string name="people_contact_birthday">วันเกิด</string>
     <string name="people_contact_organisation">องค์กร</string>
     <string name="people_contact_url">เว็บไซต์</string>
-    <string name="people_contact_note">บันทึก</string>
+    <string name="people_contact_note">หมายเหตุ</string>
     <string name="people_contact_book">สมุดที่อยู่</string>
     <string name="people_contact_type_work">ที่ทำงาน</string>
     <string name="people_contact_type_mobile">มือถือ</string>
     <string name="people_contact_pick_date">เลือกวันที่</string>
     <string name="people_contact_conflict">รายชื่อติดต่อเปลี่ยนแปลง</string>
-    <string name="people_add_contact_title">เพิ่มรายชื่อติดต่อ</string>
+    <string name="people_add_contact_title">เพิ่มผู้ติดต่อ</string>
     <string name="people_add_contact_add">เพิ่มในรายชื่อติดต่อ</string>
-    <string name="people_add_contact_in_contacts">อยู่ในรายชื่อติดต่อ</string>
+    <string name="people_add_contact_in_contacts">อยู่ในผู้ติดต่อแล้ว</string>
     <string name="people_books_create">สร้างสมุดที่อยู่</string>
     <string name="people_books_delete">ลบสมุดที่อยู่</string>
     <plurals name="people_books_delete_confirm">
         <item quantity="other">ลบ %1$s และรายชื่อติดต่อ %2$d รายการในนั้นหรือไม่</item>
     </plurals>
     <string name="people_welcome_body">ค้นหาเพื่อนทั่ว Mochi และเชื่อมต่อกัน แตะ เพิ่มรายชื่อติดต่อ เพื่อส่งคำเชิญ</string>
-    <string name="people_person_state_contact">อยู่ในรายชื่อติดต่อ</string>
+    <string name="people_person_state_contact">อยู่ในผู้ติดต่อแล้ว</string>
     <string name="people_device_create">สร้าง</string>
     <string name="people_device_server">เซิร์ฟเวอร์</string>
     <string name="people_device_username">ชื่อผู้ใช้</string>

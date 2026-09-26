@@ -99,14 +99,14 @@
     <string name="projects_board_rename">Hernoem</string>
     <string name="projects_board_rename_column">Hernoem kolom</string>
     <string name="projects_move_position">Posisie</string>
-    <string name="projects_move_position_top">Bo</string>
+    <string name="projects_move_position_top">Boaan</string>
     <string name="projects_move_current">Huidig</string>
     <string name="projects_design_title">Ontwerp</string>
     <string name="projects_design_export">Voer ontwerp uit</string>
     <string name="projects_design_import">Voer ontwerp in</string>
     <string name="projects_design_imported">Ontwerp ingevoer</string>
     <string name="projects_design_tab_classes">Klasse</string>
-    <string name="projects_design_tab_views">Bekykings</string>
+    <string name="projects_design_tab_views">Aansigte</string>
     <string name="projects_design_import_dialog_title">Voer ontwerp in</string>
     <string name="projects_design_import_choose_template">Kies \'n sjabloon</string>
     <string name="projects_design_replace_title">Vervang ontwerp?</string>
@@ -123,7 +123,7 @@
     <string name="projects_class_delete">Verwyder klas</string>
     <string name="projects_class_delete_title">Verwyder klas</string>
     <string name="projects_field_type_text">Teks</string>
-    <string name="projects_field_type_number">Nommer</string>
+    <string name="projects_field_type_number">Getal</string>
     <string name="projects_field_type_user">Gebruiker</string>
     <string name="projects_field_type_date">Datum</string>
     <string name="projects_field_type_checklist">Kontrolelys</string>
@@ -160,7 +160,7 @@
     <string name="projects_comment_send">Stuur</string>
 
     <string name="notification_channel_projects">Projekte-kennisgewings</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Projekte</string>
     <string name="projects_auth_login_failed">Aanmelding het misluk</string>
     <string name="projects_auth_create_identity_failed">Kon nie identiteit skep nie</string>
     <string name="projects_auth_mfa_unsupported">MFA word nog nie in die mobiele toepassing ondersteun nie</string>
@@ -174,8 +174,8 @@
     <string name="projects_find_search_hint">Soek projekte om op in te teken</string>
     <string name="projects_search_objects_placeholder">Soek objekte</string>
     <string name="projects_sort_field">Sorteer volgens</string>
-    <string name="projects_sort_direction_asc">Stygend</string>
-    <string name="projects_sort_direction_desc">Dalend</string>
+    <string name="projects_sort_direction_asc">Oplopend</string>
+    <string name="projects_sort_direction_desc">Aflopend</string>
     <string name="projects_create_object_parent_none">(geen)</string>
     <string name="projects_add_child">Voeg kind by</string>
     <string name="projects_views_move_up">Skuif op</string>
@@ -278,14 +278,14 @@
     <string name="projects_class_delete_message">Is jy seker jy wil die klas \"%1$s\" uitvee? Alle velde en hul opsies sal ook uitgevee word.</string>
     <string name="projects_field_type_enumerated">Opgesom</string>
     <string name="projects_field_label">Veld: %1$s</string>
-    <string name="projects_field_readonly">Slegs-lees</string>
+    <string name="projects_field_readonly">Leesalleen</string>
     <string name="projects_field_sortable">Sorteerbaar</string>
-    <string name="projects_field_filterable">Filterbaar</string>
+    <string name="projects_field_filterable">Filtreerbaar</string>
     <string name="projects_field_show_on_card">Wys op kaart</string>
     <string name="projects_field_multi">Multikeuse</string>
     <string name="projects_field_position">Vertoonposisie</string>
     <string name="projects_field_position_header">Kopstuk</string>
-    <string name="projects_field_position_body">Liggaam</string>
+    <string name="projects_field_position_body">Inhoud</string>
     <string name="projects_field_validation">Validering</string>
     <string name="projects_field_min_length">Min lengte</string>
     <string name="projects_field_max_length">Maks lengte</string>
@@ -301,8 +301,8 @@
     <string name="projects_views_rows_field">Ryveld (swembane)</string>
     <string name="projects_views_border_field">Randkleurveld</string>
     <string name="projects_views_sort_by">Sorteer volgens</string>
-    <string name="projects_views_direction_asc">Stygend</string>
-    <string name="projects_views_direction_desc">Dalend</string>
+    <string name="projects_views_direction_asc">Oplopend</string>
+    <string name="projects_views_direction_desc">Aflopend</string>
     <string name="projects_views_filter_classes">Filter na klasse</string>
     <string name="projects_views_by">volgens %1$s</string>
     <string name="projects_views_sorted">gesorteer %1$s</string>
@@ -318,7 +318,7 @@
     <string name="projects_filter">Filter</string>
     <string name="projects_link">Skakel</string>
     <string name="projects_filter_clear_all">Maak alles skoon</string>
-    <string name="projects_filter_all">Almal</string>
+    <string name="projects_filter_all">Alle</string>
     <string name="projects_filter_other">Ander</string>
     <string name="projects_create_object_title">Nuut</string>
     <string name="projects_settings_section_identity">Identiteit</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Kies \'n reël</string>
     <string name="projects_access_authenticated_desc">Enigiemand wat aangemeld is</string>
     <string name="projects_access_anyone_desc">Insluitend anonieme gebruikers</string>
-    <string name="projects_access_target">Teiken</string>
+    <string name="projects_access_target">Gebruiker of groep</string>
     <string name="projects_access_target_hint">Entiteits-ID, @groep, * (almal) of + (lede)</string>
     <string name="projects_access_selected">Gekies: %1$s</string>
     <string name="projects_access_role_comment">Kommentaar lewer en bekyk</string>

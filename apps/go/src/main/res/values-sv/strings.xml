@@ -8,7 +8,7 @@
     <string name="go_action_pass">Passa</string>
     <string name="go_action_rematch">Revansch</string>
     <string name="go_action_resign">Ge upp</string>
-    <string name="go_app_title">Gå</string>
+    <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Svart fångar</string>
     <string name="go_captures_white_sr">Vit fångar</string>
     <string name="go_chat_title">Chatt</string>
@@ -16,7 +16,7 @@
     <string name="go_color_white">Vit</string>
     <string name="go_delete_confirm">Ta bort</string>
     <string name="go_delete_message">Detta spel kommer att tas bort från din lista. Detta kan inte ångras.</string>
-    <string name="go_delete_title">Ta bort spelet?</string>
+    <string name="go_delete_title">Ta bort partiet?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">Acceptera</string>
     <string name="go_draw_decline">Avböj</string>

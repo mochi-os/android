@@ -4,11 +4,11 @@
     <string name="go_action_delete">ဂိမ်း ဖျက်မည်</string>
     <string name="go_action_more">ဂိမ်း လုပ်ဆောင်ချက်များကို ဖွင့်</string>
     <string name="go_action_offer_draw">ထိုးကွက် ပြန်မျှခြင်း ကမ်းလှမ်း</string>
-    <string name="go_action_open_chat">ချတ် panel ကို ဖွင့်</string>
+    <string name="go_action_open_chat">ချတ် ပန်နယ် ကို ဖွင့်</string>
     <string name="go_action_pass">ကျော်</string>
     <string name="go_action_rematch">ပြန်ကစား</string>
     <string name="go_action_resign">ရှုံးကြောင်းပြော</string>
-    <string name="go_app_title">သွား</string>
+    <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">အနက်ဖမ်းမှု</string>
     <string name="go_captures_white_sr">အဖြူဖမ်းမှု</string>
     <string name="go_chat_title">စကားပြောခန်း</string>
@@ -35,13 +35,13 @@
     <string name="go_new_game_add_friends">သူငယ်ချင်းများ ထည့်မည်</string>
     <string name="go_new_game_board_size_label">ဘုတ်အရွယ်အစား</string>
     <string name="go_new_game_friend_label">ပြိုင်ဘက်</string>
-    <string name="go_new_game_komi_field_label">Komi</string>
-    <string name="go_new_game_komi_label">Komi</string>
+    <string name="go_new_game_komi_field_label">ကိုမီ</string>
+    <string name="go_new_game_komi_label">ကိုမီ</string>
     <string name="go_new_game_komi_range_error">0 နှင့် 10 ကြားတွင် ဖြစ်ရမည်</string>
     <string name="go_new_game_start">ဂိမ်း စတင်မည်</string>
     <string name="go_pass_confirm">ကျော်</string>
     <string name="go_pass_end_confirm">ဂိမ်း အဆုံးသတ်</string>
-    <string name="go_pass_end_message">%1$s လည်း ကျော်ခဲ့သည်။ အတည်ပြုခြင်းသည် ဂိမ်းကို အဆုံးသတ်ပြီး board ကို အမှတ်ပေးပါမည်။</string>
+    <string name="go_pass_end_message">%1$s လည်း ကျော်ခဲ့သည်။ အတည်ပြုခြင်းသည် ဂိမ်းကို အဆုံးသတ်ပြီး ဘုတ်ကို အမှတ်ပေးပါမည်။</string>
     <string name="go_pass_end_title">ဂိမ်း အဆုံးသတ်မလား</string>
     <string name="go_pass_message">သင့်အလှည့်ကို ကျော်ပြီး တစ်ဖက်လူသို့ လွှဲပေးမည်။</string>
     <string name="go_pass_title">လှည့်ကို ကျော်မလား?</string>
@@ -66,13 +66,13 @@
     <string name="go_open_sidebar">ဘေးဘားကို ဖွင့်ပါ</string>
     <string name="go_sidebar_active">လက်ရှိ ဂိမ်းများ</string>
     <string name="go_empty_active">လက်ရှိကစားနေသော ဂိမ်းများ မရှိသေးပါ။</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">အရှုံးပေးခဲ့သည်</string>
     <string name="go_new_game_title">Go ဂိမ်းအသစ်</string>
     <string name="go_new_game_no_friends">ဂိမ်းမစတင်မီ သူငယ်ချင်းတစ်ဦး ထည့်ရန် လိုအပ်သည်။</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">အနက်ရောင်က ဦးစွာစတင်သည်ကို ချိန်ခွင်လျှာညှိရန် အဖြူရောင်၏ရမှတ်တွင် ထည့်သွင်းသည့် အမှတ်များ</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go board</string>
+    <string name="go_board_a11y">%1$d×%1$d Go ဘုတ်</string>
     <string name="go_board_a11y_turn_black">%1$d×%1$d ဂိုဘုတ်၊ အနက်ကျောက်ချရန် သင့်အလှည့်</string>
     <string name="go_board_a11y_turn_white">%1$d×%1$d ဂိုဘုတ်၊ အဖြူကျောက်ချရန် သင့်အလှည့်</string>
     <string name="go_status_scoring">ရေတွက်နေသည် — ရမှတ်ကို သဘောတူပါ သို့မဟုတ် ဆက်ကစားပါ</string>

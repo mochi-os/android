@@ -32,8 +32,8 @@
     <string name="chess_draw_accept">Glac leis</string>
     <string name="chess_draw_decline">Diúltaigh</string>
     <string name="chess_status_checkmate_you_win">Tic mata — bhuaigh tú!</string>
-    <string name="chess_status_stalemate">Stoppa — comhscór</string>
-    <string name="chess_status_draw">Tarraing</string>
+    <string name="chess_status_stalemate">Leamhsháinn — cluiche cothrom</string>
+    <string name="chess_status_draw">Cluiche cothrom</string>
     <string name="chess_status_check_your_move">Seic — do shealsa</string>
     <string name="chess_status_your_move">Do ghluaiseacht</string>
     <string name="chess_move_subject_you">Tusa</string>

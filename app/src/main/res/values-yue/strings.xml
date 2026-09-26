@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="launcher_settings">Mochi 設定</string>
-    <string name="launcher_people">Mochi 用戶</string>
+    <string name="launcher_people">Mochi 聯絡人</string>
     <string name="launcher_chat">Mochi 聊天</string>
     <string name="launcher_wikis">Mochi Wiki</string>
     <string name="launcher_chess">Mochi 國際象棋</string>
@@ -10,7 +10,7 @@
 
     <string name="app_name">Mochi</string>
     <string name="launcher_feeds">Mochi 資訊串流</string>
-    <string name="launcher_forums">Mochi 討論區</string>
+    <string name="launcher_forums">Mochi 論壇</string>
     <string name="launcher_projects">Mochi 項目</string>
     <string name="launcher_crm">Mochi 客戶關係管理</string>
     <string name="launcher_market">Mochi 市場</string>

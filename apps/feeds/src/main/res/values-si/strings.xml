@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">තවම පළ කිරීම් නැත</string>
     <string name="feeds_sort_label">වර්ග කරන්න</string>
     <string name="feeds_sort_interests">උනන්දු</string>
-    <string name="feeds_sort_new">අලුත්</string>
+    <string name="feeds_sort_new">නවතම</string>
     <string name="feeds_sort_hot">උණුසුම්</string>
-    <string name="feeds_sort_top">ඉහළ</string>
+    <string name="feeds_sort_top">හොඳම</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">පළ කිරීම</string>
     <string name="feeds_image_preview">පෙරදසුන</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">පිළිතුර අවලංගු කරන්න</string>
     <string name="feeds_edit_post">පළ කිරීම සංස්කරණය කරන්න</string>
     <string name="feeds_save_label">සුරකින්න</string>
-    <string name="feeds_post_action">පළ කිරීම</string>
+    <string name="feeds_post_action">පළ කරන්න</string>
     <string name="feeds_feed_label">සංග්‍රහය</string>
     <string name="feeds_add_files">ගොනු එක් කරන්න</string>
     <string name="feeds_restore">ප්‍රතිසාධනය කරන්න</string>
@@ -57,13 +57,13 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi සංග්‍රහය</string>
     <string name="feeds_source_type_feed_memories">මතකයන්</string>
-    <string name="feeds_remove_source">මූලාශ්‍රය ඉවත් කරන්න</string>
+    <string name="feeds_remove_source">මූලාශ්‍රය ඉවත් කරන්නද?</string>
     <string name="feeds_suggested_credibility_accept">පිළිගන්න</string>
     <string name="feeds_rss_url_copied">RSS URL ක්ලිප්බෝඩ් වෙත පිටපත් කරන ලදී</string>
     <string name="feeds_logout">ඉවත් වන්න</string>
     <string name="feeds_ai_account_default">පෙරනිමි ගිණුම</string>
     <string name="feeds_ai_mode_off">අක්‍රියයි</string>
-    <string name="feeds_ai_mode_tag">ටැගය</string>
+    <string name="feeds_ai_mode_tag">ටැග් කරන්න</string>
     <string name="feeds_ai_mode_tag_deduplicate">ටැග් + අනුපිටපත් ඉවත් කරන්න</string>
     <string name="feeds_feed_not_found">සංග්‍රහය හමු නොවීය</string>
     <string name="feeds_post_not_found">පළ කිරීම හමු නොවීය</string>
@@ -80,7 +80,7 @@
     <string name="feeds_settings_member_removed">සාමාජිකයා ඉවත් කරන ලදී</string>
     <string name="feeds_settings_ai_mode_updated">AI විදීඇගඅවහ ජොෝව නවඨවා ගත්ති</string>
     <string name="feeds_settings_ai_account_updated">AI ගිණුම ජොෝව නවඨවා ගත්ති</string>
-    <string name="feeds_settings_prompt_saved">prompt එක සුරකින ලදී</string>
+    <string name="feeds_settings_prompt_saved">විමසුම සුරකින ලදී</string>
     <string name="feeds_settings_prompt_reset">පිෝරොම්ප්ජි ජෙවෙල ඉර්වි‌සැඩෝෞොල්ඩ් ඼ෝො ලෝෞොෞ‌ෞ‌ෞ</string>
     <string name="feeds_send">යවන්න</string>
     <string name="feeds_move_up">ඉහළට ගෙනයන්න</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">කිසිදිනක ලබාගෙන නැත</string>
     <string name="feeds_source_poll">පෝලය</string>
-    <string name="feeds_source_transform">පරිවර්තනය</string>
+    <string name="feeds_source_transform">AI පරිවර්තනය</string>
     <string name="feeds_remove_source_confirm">\"%1$s\" ඉවත් කරන්නද?</string>
     <string name="feeds_remove_also_delete_posts">ආයාත කළ පළ කිරීම් ද මකන්න</string>
     <string name="feeds_suggested_credibility_title">යෝජිත විශ්වසනීයත්වය</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">උනන්දුව අඩු කරන ලදී</string>
     <string name="feeds_interest_removed">උනන්දුව ඉවත් කරන ලදී</string>
     <string name="feeds_interest_failed">උනන්දුව සකස් කිරීමට අසමත් විය</string>
-    <string name="feeds_saved_title">සුරකින ලදී</string>
-    <string name="feeds_saved_menu">සුරකින ලදී</string>
+    <string name="feeds_saved_title">සුරැකි</string>
+    <string name="feeds_saved_menu">සුරැකි</string>
     <string name="feeds_saved_save">පසුව සඳහා සුරකින්න</string>
     <string name="feeds_saved_remove">සුරැකූවායින් ඉවත් කරන්න</string>
     <string name="feeds_saved_clear_all">සියල්ල හිස් කරන්න</string>
@@ -154,7 +154,7 @@
     <string name="feeds_access_select_group">කණ්ඩායම තෝරන්න</string>
     <string name="feeds_access_selected">තෝරාගත්: %1$s</string>
     <string name="feeds_access_subject_anyone">ඕනෑම කෙනෙක්</string>
-    <string name="feeds_access_subject_authenticated">සත්‍යාපිත පරිශීලකයින්</string>
+    <string name="feeds_access_subject_authenticated">සත්‍යාපිත පරිශීලකයන්</string>
     <string name="feeds_markdown_supported">Markdown සහාය දක්වයි</string>
     <string name="feeds_permission_deny">ප්‍රතික්ෂේප කරන්න</string>
     <string name="feeds_rss_feed">RSS සංග්‍රහය</string>

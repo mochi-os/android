@@ -35,8 +35,8 @@
     <string name="chat_messages_empty">এখনও কোনো বার্তা নেই — হাই বলুন!</string>
     <string name="chat_messages_load_more">পুরোনো বার্তা লোড করুন</string>
     <string name="chat_attachment_remove">সংযুক্তি সরান</string>
-    <string name="chat_attachment_move_up">উপরে নিন</string>
-    <string name="chat_attachment_move_down">নিচে নিন</string>
+    <string name="chat_attachment_move_up">উপরে সরান</string>
+    <string name="chat_attachment_move_down">নিচে সরান</string>
     <string name="chat_attachment_label">ফাইল</string>
     <string name="chat_settings_rename">চ্যাটের নাম পরিবর্তন করুন</string>
     <string name="chat_settings_add_member_empty">যোগ করার মতো কোনো বন্ধু নেই</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_list_title">Chats</string>
+    <string name="chat_list_title">Rimanakuykuna</string>
     <string name="chat_list_search">Maskay</string>
     <string name="chat_list_logout">Lluqsiy</string>
     <string name="chat_list_new">Musuq chat</string>
@@ -25,7 +25,7 @@
     <string name="chat_chat_not_found">Chat mana tarisqa</string>
 
     <string name="chat_message_send">Apachiy</string>
-    <string name="chat_attachment_remove">Remove attachment</string>
+    <string name="chat_attachment_remove">Adjuntota qichuy</string>
     <string name="chat_attachment_move_up">Patamanta apay</string>
     <string name="chat_attachment_move_down">Uramanta apay</string>
 
@@ -55,14 +55,14 @@
     <string name="chat_forward_success">Reenviasqa</string>
     <string name="chat_message_reply">Kutichiy</string>
     <string name="chat_message_select">Akllay</string>
-    <string name="chat_reply_attachment">Kawsay</string>
+    <string name="chat_reply_attachment">Adjunto</string>
     <string name="chat_replying_to">%1$s runaman kutichichkan</string>
     <string name="chat_delete_confirm_title">¿Willayta pichay?</string>
     <string name="chat_delete_confirm_body">Kayqa willayta llapanpaq pichan, manañam kutichiy atikunchu.</string>
     <string name="chat_delete_own_only">Kikiyki willaykunallatam pichayta atinki</string>
     <string name="chat_selection_title">%1$d akllasqa</string>
     <string name="chat_forward_subtitle">Akllasqa willaykunata apachinaykipaq huk rimanakuyta utaq masita akllay</string>
-    <string name="chat_forward_chats">Chats</string>
+    <string name="chat_forward_chats">Rimanakuykuna</string>
     <string name="chat_forward_friends">Masikuna</string>
     <string name="chat_policy_title">Chayamuq rimanakuykuna</string>
     <string name="chat_policy_friends">Masikunallam</string>
@@ -80,5 +80,5 @@
     <string name="chat_search_prev">Ñawpaq tupay</string>
     <string name="chat_settings_id">Rimanakuy ID</string>
     <string name="chat_message_edited">(hukchasqa)</string>
-    <string name="chat_new_fallback_name">Chat</string>
+    <string name="chat_new_fallback_name">Rimanakuy</string>
 </resources>

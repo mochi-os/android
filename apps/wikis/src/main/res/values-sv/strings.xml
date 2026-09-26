@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="wikis_sidebar_header">Wikis</string>
+    <string name="wikis_sidebar_header">Wikier</string>
     <string name="wikis_sidebar_all">Alla wikis</string>
     <string name="wikis_sidebar_find">Hitta wikis</string>
     <string name="wikis_sidebar_create">Skapa wiki</string>
@@ -23,7 +23,7 @@
     <string name="wikis_page_action_new_page">Ny sida</string>
     <string name="wikis_page_action_settings">Inställningar</string>
     <string name="wikis_page_action_unsubscribe">Avsluta prenumeration</string>
-    <string name="wikis_title">Wikis</string>
+    <string name="wikis_title">Wikier</string>
     <string name="wikis_empty_title">Starta din första wiki</string>
     <string name="wikis_empty_subtitle">Sök efter ett wiki att prenumerera på, eller skapa ett för att publicera din egen dokumentation.</string>
     <string name="wikis_create_button">Skapa wiki</string>
@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Ta bort</string>
     <string name="wikis_replicas_remove_failed">Kunde inte ta bort replik</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wikier</string>
     <string name="wikis_channel_name">Wikis-aviseringar</string>
     <string name="wikis_channel_description">Aviseringar om sidredigeringar, kommentarer och inbjudningar.</string>
     <string name="wikis_pageview_toc_expand">Visa innehållsförteckning</string>

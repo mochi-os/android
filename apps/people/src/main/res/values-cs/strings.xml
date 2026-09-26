@@ -49,9 +49,9 @@
     <string name="people_profile_save">Uložit</string>
     <string name="people_profile_saving">Ukládá se…</string>
     <string name="people_profile_save_failed">Nepodařilo se uložit</string>
-    <string name="people_profile_name">Název</string>
-    <string name="people_profile_name_saved">Název uložen</string>
-    <string name="people_profile_edit_name">Upravit název</string>
+    <string name="people_profile_name">Jméno</string>
+    <string name="people_profile_name_saved">Jméno uloženo</string>
+    <string name="people_profile_edit_name">Upravit jméno</string>
     <string name="people_profile_identity">Identita</string>
     <string name="people_profile_accent">Zvýraznění</string>
     <string name="people_profile_directory_listing">Povolit ostatním najít vás v adresáři</string>
@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Otevřít navigaci</string>
     <string name="people_person_state_friend">Přátelé</string>
     <string name="people_person_state_self">Vy</string>
-    <string name="people_person_message">Zpráva</string>
+    <string name="people_person_message">Napsat zprávu</string>
     <string name="people_person_accept">Přijmout</string>
     <string name="people_person_decline">Odmítnout</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Přijmout vše</string>
     <string name="people_invitations_decline_all">Odmítnout vše</string>
     <string name="people_invitations_cancel_all">Zrušit vše</string>
+    <string name="people_invitations_cancel">Zrušit</string>
     <string name="people_invitations_all_accepted">Všechny pozvánky přijaty</string>
     <string name="people_invitations_all_declined">Všechny pozvánky odmítnuty</string>
     <string name="people_invitations_all_cancelled">Všechny pozvánky zrušeny</string>
@@ -118,15 +119,15 @@
     <string name="people_contacts_search_placeholder">Hledat…</string>
     <string name="people_contacts_invited">Pozván</string>
     <string name="people_contacts_accept">Přijmout</string>
-    <string name="people_contacts_message">Zpráva</string>
+    <string name="people_contacts_message">Napsat zprávu</string>
     <string name="people_contacts_no_people_found">Žádní lidé nenalezeni</string>
     <string name="people_contacts_try_adjusting">Zkuste upravit hledaný výraz</string>
     <string name="people_contact_section_address">Adresa</string>
     <string name="people_contact_section_detail">Podrobnosti</string>
-    <string name="people_contact_name">Název</string>
+    <string name="people_contact_name">Jméno</string>
     <string name="people_contact_email">E-mail</string>
     <string name="people_contact_city">Město</string>
-    <string name="people_contact_region">Region</string>
+    <string name="people_contact_region">Kraj</string>
     <string name="people_contact_postcode">PSČ</string>
     <string name="people_contact_country">Země</string>
     <string name="people_contact_type">Typ</string>
@@ -136,7 +137,7 @@
     <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Název</string>
     <string name="people_books_rename">Přejmenovat</string>
-    <string name="people_contacts_sort_name">Název</string>
+    <string name="people_contacts_sort_name">Jméno</string>
     <string name="people_contacts_sort_recent">Nedávno přidáno</string>
     <string name="people_contacts_thats_you">To jste vy</string>
     <string name="people_contacts_try_different_search">Zkuste jiný vyhledávací výraz</string>

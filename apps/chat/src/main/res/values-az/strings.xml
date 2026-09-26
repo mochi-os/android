@@ -34,9 +34,9 @@
     <string name="chat_messages_loading">Mesajlar yüklənir…</string>
     <string name="chat_messages_empty">Hələ mesaj yoxdur — salam deyin!</string>
     <string name="chat_messages_load_more">Köhnə mesajları yükləyin</string>
-    <string name="chat_attachment_remove">Qoşmanı silin</string>
-    <string name="chat_attachment_move_up">Yuxarı köçürün</string>
-    <string name="chat_attachment_move_down">Aşağı köçürün</string>
+    <string name="chat_attachment_remove">Qoşmanı sil</string>
+    <string name="chat_attachment_move_up">Yuxarı köçür</string>
+    <string name="chat_attachment_move_down">Aşağı köçür</string>
     <string name="chat_attachment_label">Fayl</string>
     <string name="chat_settings_rename">Söhbəti adlandırın</string>
     <string name="chat_settings_add_member_empty">Əlavə ediləcək dost yoxdur</string>

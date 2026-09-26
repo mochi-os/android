@@ -4,10 +4,10 @@
     <string name="chess_sidebar_header">Xadrez</string>
     <string name="chess_sidebar_active">Partidas activas</string>
     <string name="chess_sidebar_completed">Completado</string>
-    <string name="chess_sidebar_new_game">Novo xogo</string>
+    <string name="chess_sidebar_new_game">Nova partida</string>
     <string name="chess_section_active">Partidas activas</string>
     <string name="chess_section_completed">Completado</string>
-    <string name="chess_new_game">Novo xogo</string>
+    <string name="chess_new_game">Nova partida</string>
     <string name="chess_empty_title">Aínda non hai xogos</string>
     <string name="chess_new_title">Nova partida</string>
     <string name="chess_new_pick_opponent">Escoller oponente</string>
@@ -16,7 +16,7 @@
     <string name="chess_new_add_friends">Engadir amizades</string>
     <string name="chess_new_start_button">Iniciar partida</string>
     <string name="chess_new_creating">Creando…</string>
-    <string name="chess_chat_title">Chat</string>
+    <string name="chess_chat_title">Conversa</string>
     <string name="chess_open_chat">Abrir o panel do chat</string>
     <string name="chess_open_actions">Abrir accións do xogo</string>
     <string name="chess_offer_draw">Ofrecer empate</string>
@@ -31,7 +31,7 @@
     <string name="chess_draw_accept">Aceptar</string>
     <string name="chess_draw_decline">Rexeitar</string>
     <string name="chess_status_checkmate_you_win">Xaque mate — gañaches!</string>
-    <string name="chess_status_stalemate">Empate por afogado — empate</string>
+    <string name="chess_status_stalemate">Afogado — táboas</string>
     <string name="chess_status_draw">Empate</string>
     <string name="chess_status_check_your_move">Xaque — a túa quenda</string>
     <string name="chess_status_your_move">O teu movemento</string>
@@ -58,12 +58,12 @@
     <string name="chess_empty_subtitle">Comeza a túa primeira partida para xogar ao xadrez cun amigo.</string>
     <string name="chess_empty_start_button">Comeza a túa primeira partida</string>
     <string name="chess_detail_unavailable">Partida non dispoñible</string>
-    <string name="chess_delete_title">Eliminar partida?</string>
+    <string name="chess_delete_title">Eliminar a partida?</string>
     <string name="chess_delete_message">Isto elimina a partida da túa lista.</string>
     <string name="chess_ws_connecting">Conectando…</string>
     <string name="chess_ws_disconnected">Sen conexión</string>
     <string name="chess_ws_reconnecting">Reconectando…</string>
-    <string name="chess_ws_failed">Conexión fallida</string>
+    <string name="chess_ws_failed">Fallou a conexión</string>
     <string name="chess_move_capture">%1$s capturou %2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
     <string name="chess_piece_white">Branco %1$s</string>

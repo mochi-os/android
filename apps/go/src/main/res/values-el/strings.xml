@@ -8,7 +8,7 @@
     <string name="go_action_pass">Πάσο</string>
     <string name="go_action_rematch">Ρεβάνς</string>
     <string name="go_action_resign">Παραίτηση</string>
-    <string name="go_app_title">Μετάβαση</string>
+    <string name="go_app_title">Γκο</string>
     <string name="go_captures_black_sr">Μαύρες αιχμαλωσίες</string>
     <string name="go_captures_white_sr">Λευκές αιχμαλωσίες</string>
     <string name="go_chat_title">Συνομιλία</string>
@@ -64,7 +64,7 @@
     <string name="go_channel_name">Ειδοποιήσεις Go</string>
     <string name="go_channel_description">Ειδοποιήσεις σχετικά με κινήσεις, πάσα, προτάσεις ισοπαλίας και αποτελέσματα παρτίδων.</string>
     <string name="go_open_sidebar">Άνοιγμα πλευρικής μπάρας</string>
-    <string name="go_sidebar_active">Ενεργές παρτίδες</string>
+    <string name="go_sidebar_active">Ενεργά παιχνίδια</string>
     <string name="go_empty_active">Δεν υπάρχουν ακόμη ενεργές παρτίδες.</string>
     <string name="go_status_resigned">Παραιτήθηκε</string>
     <string name="go_new_game_title">Νέα παρτίδα Go</string>

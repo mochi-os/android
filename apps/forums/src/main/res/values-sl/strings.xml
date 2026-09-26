@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Odjavi se</string>
     <string name="forums_list_unsubscribe_title">Odjavi se</string>
     <string name="forums_create_title">Ustvari forum</string>
-    <string name="forums_create_name">Ime</string>
+    <string name="forums_create_name">Ime foruma</string>
     <string name="forums_create_privacy">Zasebnost</string>
     <string name="forums_create_private">Zasebno</string>
     <string name="forums_create_public">Javno</string>
-    <string name="forums_create_action">Ustvari</string>
+    <string name="forums_create_action">Ustvari forum</string>
     <string name="forums_find_title">Najdi forume</string>
     <string name="forums_find_recommended">Priporočeno</string>
     <string name="forums_find_subscribe">Naroči se</string>
@@ -24,9 +24,9 @@
     <string name="forums_settings">Nastavitve</string>
     <string name="forums_load_more">Naloži več</string>
     <string name="forums_sort_label">Razvrsti</string>
-    <string name="forums_sort_new">Novo</string>
+    <string name="forums_sort_new">Najnovejše</string>
     <string name="forums_sort_hot">Vroče</string>
-    <string name="forums_sort_top">Vrh</string>
+    <string name="forums_sort_top">Najboljše</string>
     <string name="forums_sort_interests">Zanimanja</string>
     <string name="forums_post_title_field">Naslov</string>
     <string name="forums_post_attach">Priloži datoteke</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Člani</string>
     <string name="forums_tab_banner">Pasica</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Cilj</string>
-    <string name="forums_access_level_view">Pogled</string>
+    <string name="forums_access_target">Uporabnik ali skupina</string>
+    <string name="forums_access_level_view">Poglej</string>
     <string name="forums_access_level_vote">Glasuj</string>
-    <string name="forums_access_level_comment">Komentar</string>
+    <string name="forums_access_level_comment">Komentiraj</string>
     <string name="forums_access_level_post">Objavi</string>
     <string name="forums_access_level_none">Brez</string>
     <string name="forums_members_empty">Brez članov</string>
     <string name="forums_banner_dismiss">Opusti pasico</string>
-    <string name="forums_ai_mode_tag">Oznaka</string>
+    <string name="forums_ai_mode_tag">Označi</string>
     <string name="forums_ai_account_default">Privzeti račun</string>
     <string name="forums_ai_prompt_reset">Ponastavi na privzeto</string>
     <string name="forums_settings_unsubscribe">Odjavi se</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_login_failed">Prijava neuspešna</string>
 
     <string name="notification_channel_forums">Obvestila forumov</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Forumi</string>
     <string name="forums_auth_create_identity_failed">Ustvarjanje identitete ni uspelo</string>
     <string name="forums_auth_mfa_unsupported">Večstopenjsko preverjanje pristnosti še ni podprto v mobilni aplikaciji</string>
     <string name="forums_auth_enter_code_sent">Vnesite kodo, poslano na %1$s</string>
@@ -156,7 +156,7 @@
     <string name="forums_banner_placeholder">Dobrodošli na tem forumu…</string>
     <string name="forums_ai_mode_label">Način: %1$s</string>
     <string name="forums_ai_mode_heading">Način UI</string>
-    <string name="forums_ai_mode_off">Izklopljeno</string>
+    <string name="forums_ai_mode_off">Onemogočeno</string>
     <string name="forums_ai_account">Račun UI</string>
     <string name="forums_ai_prompt_tag">Poziv za oznake</string>
     <string name="forums_ai_prompt_score">Poziv za ocenjevanje</string>
@@ -279,7 +279,7 @@
     <string name="forums_moderation_restriction_remove_message">Takoj znova pridobi poln dostop do foruma.</string>
     <string name="forums_moderation_restriction_remove_title">Ali želite odstraniti omejitev za %1$s?</string>
     <string name="forums_moderation_restriction_state_muted">Utišan</string>
-    <string name="forums_moderation_restriction_state_shadowban">Senčna prepoved</string>
+    <string name="forums_moderation_restriction_state_shadowban">Skrito prepovedan</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Noben uporabnik ni utišan ali blokiran</string>
     <string name="forums_moderation_section_premoderation_description">Zahtevaj odobritev, preden vsebina postane vidna</string>
     <string name="forums_moderation_section_ratelimiting_description">Preprečite neželeno vsebino z omejevanjem pogostosti objav</string>
@@ -322,7 +322,7 @@
     <string name="forums_moderation_action_restrict">Omejeno</string>
     <string name="forums_moderation_action_unrestrict">Omejitev odstranjena</string>
     <string name="forums_moderation_action_resolve">Razrešena prijava</string>
-    <string name="forums_moderation_target_post">Objavi</string>
+    <string name="forums_moderation_target_post">Objava</string>
     <string name="forums_moderation_target_comment">Komentar</string>
     <string name="forums_moderation_target_user">Uporabnik</string>
     <string name="forums_moderation_reason_spam">Spam</string>

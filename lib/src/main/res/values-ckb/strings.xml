@@ -41,7 +41,7 @@
     <string name="access_add_rule">زیادکردنی یاسا</string>
     <string name="access_owner">خاوەن</string>
     <string name="access_revoke">ڕاگرتن</string>
-    <string name="access_level_comment">لێدوان</string>
+    <string name="access_level_comment">لێدوان نووسین</string>
     <string name="access_level_view">بینین</string>
     <string name="access_level_none">هیچ</string>
     <string name="reaction_like">بەدڵبوون</string>
@@ -98,7 +98,7 @@
     <string name="settings_week_sunday">یەکشەممە</string>
     <string name="settings_number_format">شێوازی ژمارە</string>
     <string name="settings_units">یەکەکان</string>
-    <string name="settings_units_metric">Metric</string>
+    <string name="settings_units_metric">مەتری</string>
     <string name="settings_units_imperial">ئیمپێریاڵ</string>
     <string name="settings_time_zone">هەرێمی کات</string>
     <string name="settings_reset_to_defaults">گەڕاندنەوە بۆ بنەڕەتەکان</string>
@@ -111,7 +111,7 @@
     <string name="settings_display_reset_confirm_message">ئەمە ڕێکخستنەکانی پیشاندان دەگەڕێنێتەوە بۆ نرخە بنەڕەتییەکانیان.</string>
     <string name="settings_theme_title">ڕووکار</string>
     <string name="settings_theme_default">بنەڕەت</string>
-    <string name="settings_background">پاشبنە</string>
+    <string name="settings_background">پاشبنەما</string>
     <string name="settings_background_theme">لە ڕووکارەوە</string>
     <string name="settings_background_off">هیچ</string>
     <string name="game_chat_empty">هێشتا هیچ پەیامێک نییە</string>
@@ -123,7 +123,7 @@
 
     <string name="app_brand">Mochi</string>
     <string name="error_network">ناتوانرێت پەیوەندی بکرێت. پەیوەندی ئینتەرنێتەکەت بپشکنە و دووبارە هەوڵبدەرەوە.</string>
-    <string name="error_authentication_required">ڕەسەنایەتی پێویستە</string>
+    <string name="error_authentication_required">ڕاستکردنەوەی هەژمار پێویستە</string>
     <string name="error_not_found">نەدۆزرایەوە</string>
     <string name="error_server">هەڵەی ڕاژەکار (%1$d). تکایە دواتر هەوڵبدەرەوە.</string>
     <string name="error_unexpected">هەڵەیەکی چاوەڕواننەکراو ڕوویدا</string>
@@ -131,7 +131,7 @@
     <string name="error_enter_email">تکایە ئیمەیڵەکەت بنووسە</string>
     <string name="error_enter_name">تکایە ناوێک بنووسە</string>
     <string name="auth_connect_to_server">پەیوەندی بە ڕاژەکارەکەتەوە بکە</string>
-    <string name="auth_server_url">بەستەری ڕاژەکار</string>
+    <string name="auth_server_url">URLی ڕاژەکار</string>
     <string name="auth_connect">پەیوەندی بکە</string>
     <string name="auth_sign_in">بچۆ ژوورەوە</string>
     <string name="auth_check_email">ئیمەیڵەکەت بپشکنە بۆ کۆدی پشتڕاستکردنەوە</string>
@@ -145,7 +145,7 @@
     <string name="auth_use_passkey">پاسکیەک بەکاربهێنە</string>
     <string name="auth_email_me_a_code">کۆدێکم بۆ بنێرە بە ئیمەیڵ</string>
     <string name="auth_or_enter_authenticator_code">یان کۆدی پشتڕاستکەرەوە بنووسە</string>
-    <string name="auth_log_in">بچۆ ژوورەوە</string>
+    <string name="auth_log_in">چوونەژوورەوە</string>
     <string name="auth_back">گەڕانەوە</string>
     <string name="auth_lost_access_recovery">دەستگەیشتنت لەدەستدا؟ کۆدی گەڕانەوە بەکاربهێنە</string>
     <string name="auth_create_identity_title">ناسنامەکەت دروست بکە</string>
@@ -164,7 +164,7 @@
     <string name="bootstrap_sign_in_different_server">بچۆ ژوورەوە بۆ ڕاژەکارێکی تر</string>
     <string name="common_retry">دووبارە هەوڵبدەرەوە</string>
     <string name="common_more_options">بژاردەی زیاتر</string>
-    <string name="common_collapse">داخستن</string>
+    <string name="common_collapse">داپۆشین</string>
     <string name="common_expand">فراوانکردن</string>
     <string name="common_play_video">لێدانی ڤیدیۆ</string>
     <string name="place_picker_name">ناوی شوێن</string>
@@ -191,7 +191,7 @@
     <string name="format_time_days_short">%1$dڕ</string>
     <string name="format_time_weeks_short">%1$dه</string>
     <string name="format_time_months_short">%1$dم</string>
-    <string name="reaction_add">زیادکردنی کاردانەوە</string>
+    <string name="reaction_add">کاردانەوە زیاد بکە</string>
     <string name="push_service_channel">پاڵنانی Mochi</string>
     <string name="push_service_channel_description">مۆچی پەیوەست ڕادەگرێت بۆ وەرگرتنی ئاگادارکردنەوەکان</string>
     <string name="push_service_group">خزمەتگوزاری پاشبنەما</string>
@@ -266,7 +266,7 @@
     <string name="person_picker_none">هیچ</string>
     <string name="person_picker_clear">پاککردنەوەی هەڵبژاردە</string>
     <string name="person_picker_select">هەڵبژێرە …</string>
-    <string name="person_picker_directory">ڕابەر</string>
+    <string name="person_picker_directory">پێڕست</string>
     <string name="person_picker_no_people">کەس نییە</string>
     <string name="person_picker_project_members">ئەندامانی پڕۆژە</string>
     <string name="account_token_label">دانیشتنی Mochi</string>

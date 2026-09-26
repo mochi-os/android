@@ -101,8 +101,6 @@
     <string name="projects_object_watch">Beobachten</string>
     <string name="projects_watchers_watch">Beobachten</string>
     <string name="projects_object_tab_activity">Aktivität</string>
-    <string name="projects_object_tab_links">Links</string>
-    <string name="projects_links_title">Links</string>
     <string name="projects_request_merge">Zusammenführen</string>
     <string name="projects_request_merge_dialog_title">Zusammenführen</string>
     <string name="projects_request_method_merge">Zusammenführen</string>
@@ -110,7 +108,6 @@
     <string name="projects_links_search_placeholder">Objekte suchen</string>
     <string name="projects_create_object">Objekt erstellen</string>
     <string name="notification_channel_projects">Projekt-Benachrichtigungen</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
     <string name="projects_list_search_placeholder">Projekte suchen</string>
     <string name="projects_list_find">Projekte finden</string>
     <string name="projects_list_create">Projekt erstellen</string>

@@ -71,12 +71,12 @@
     <string name="people_common_cancel">Cealaigh</string>
     <string name="people_common_close">Dún</string>
     <string name="people_common_save">Sábháil</string>
-    <string name="people_welcome_dismiss">Dífhostaigh</string>
+    <string name="people_welcome_dismiss">Dún</string>
     <string name="people_sidebar_header">Daoine</string>
     <string name="people_open_sidebar">Oscail nascleanúint</string>
     <string name="people_person_state_friend">Cairde</string>
     <string name="people_person_state_self">Tusa</string>
-    <string name="people_person_message">Teachtaireacht</string>
+    <string name="people_person_message">Seol teachtaireacht</string>
     <string name="people_person_accept">Glac leis</string>
     <string name="people_person_decline">Diúltaigh</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Glac le gach ceann</string>
     <string name="people_invitations_decline_all">Diúltaigh do gach ceann</string>
     <string name="people_invitations_cancel_all">Cuir gach ceann ar ceal</string>
+    <string name="people_invitations_cancel">Cealaigh</string>
     <string name="people_invitations_all_accepted">Glacadh le gach cuireadh</string>
     <string name="people_invitations_all_declined">Diúltaíodh do gach cuireadh</string>
     <string name="people_invitations_all_cancelled">Cuireadh gach cuireadh ar ceal</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Cuardaigh…</string>
     <string name="people_contacts_invited">Tugadh cuireadh</string>
     <string name="people_contacts_accept">Glac leis</string>
-    <string name="people_contacts_message">Teachtaireacht</string>
+    <string name="people_contacts_message">Seol teachtaireacht</string>
     <string name="people_contacts_no_people_found">Níor aimsíodh aon duine</string>
     <string name="people_contacts_try_adjusting">Bain triail as do chuardach a choigeartú</string>
     <string name="people_contact_section_address">Seoladh</string>
@@ -145,7 +146,7 @@
     <string name="people_add_contact_search_start">Tosaigh ag clóscríobh chun cuardach a dhéanamh ar úsáideoirí</string>
     <string name="people_contact_phone">Fón</string>
     <string name="people_contact_title">Teideal poist</string>
-    <string name="people_contacts_title">Teagmhálacha</string>
+    <string name="people_contacts_title">Teagmhálaithe</string>
     <string name="people_contacts_all">Gach teagmhálaí</string>
     <string name="people_contacts_empty">Níor aimsíodh aon teagmhálaí</string>
     <string name="people_contacts_add_to_start">Cuir teagmhálaithe leis chun tosú</string>
@@ -158,7 +159,7 @@
     <string name="people_contacts_delete_friend_confirm">An bhfuil fonn ort %1$s a scriosadh ó do theagmhálaithe? Cuirfear deireadh le bhur gcairdeas freisin.</string>
     <string name="people_contact_new_title">Teagmhálaí nua</string>
     <string name="people_contact_edit_title">Cuir an teagmhálaí in eagar</string>
-    <string name="people_contact_given">Ainm</string>
+    <string name="people_contact_given">Céadainm</string>
     <string name="people_contact_family">Sloinne</string>
     <string name="people_contact_nickname">Leasainm</string>
     <string name="people_contact_add_email">Cuir ríomhphost leis</string>

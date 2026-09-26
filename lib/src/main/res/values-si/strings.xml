@@ -32,7 +32,7 @@
     <string name="common_logout">ඉවත් වන්න</string>
     <string name="common_subscribe">දායක වන්න</string>
     <string name="common_copy">පිටපත් කරන්න</string>
-    <string name="common_copied">Clipboard එකට පිටපත් කරන ලදී</string>
+    <string name="common_copied">ක්ලිප්බෝඩ් වෙත පිටපත් කරන ලදී</string>
     <string name="comment_edited">(සංස්කරණය කළා)</string>
     <string name="comment_reply">පිළිතුර</string>
     <string name="person_picker_search">පරිශීලකයින් සොයන්න</string>
@@ -41,7 +41,7 @@
     <string name="access_add_rule">නියමයක් එක් කරන්න</string>
     <string name="access_owner">හිමිකරු</string>
     <string name="access_revoke">අවලංගු කරන්න</string>
-    <string name="access_level_comment">අදහස</string>
+    <string name="access_level_comment">අදහස් දක්වන්න</string>
     <string name="access_level_view">බලන්න</string>
     <string name="access_level_none">කිසිවක් නැත</string>
     <string name="reaction_like">කැමති</string>
@@ -101,15 +101,15 @@
     <string name="settings_units_metric">මිනුම</string>
     <string name="settings_units_imperial">ඉම්පීරියල්</string>
     <string name="settings_time_zone">කාල කලාපය</string>
-    <string name="settings_reset_to_defaults">පෙරනිමිවලට reset කරන්න</string>
-    <string name="settings_reset_confirm_title">අභිරුචියන් reset කරන්නද?</string>
+    <string name="settings_reset_to_defaults">පෙරනිමිවලට යළි සකසන්න</string>
+    <string name="settings_reset_confirm_title">අභිරුචියන් යළි සකසන්නද?</string>
     <string name="settings_reset_confirm_message">මෙය සියලුම මනාප ඒවායේ පෙරනිමි අගයන්ට යළි පිහිටුවනු ඇත.</string>
-    <string name="settings_reset">reset</string>
+    <string name="settings_reset">යළි සකසන්න</string>
     <string name="settings_display_title">සංදර්ශන කරන්න</string>
-    <string name="settings_display_reset">පෙරනිමිවලට reset කරන්න</string>
+    <string name="settings_display_reset">පෙරනිමිවලට යළි සකසන්න</string>
     <string name="settings_display_reset_confirm_title">සංදර්ශනය යළි සකසන්නද?</string>
     <string name="settings_display_reset_confirm_message">මෙය සංදර්ශන සැකසුම් ඒවායේ පෙරනිමි අගයන්වලට යළි සකසනු ඇත.</string>
-    <string name="settings_theme_title">theme</string>
+    <string name="settings_theme_title">තේමාව</string>
     <string name="settings_theme_default">පෙරනිමි</string>
     <string name="settings_background">පසුබිම</string>
     <string name="settings_background_theme">තේමාවෙන්</string>
@@ -148,8 +148,8 @@
     <string name="auth_passkey">ප්‍රවේශ යතුර</string>
     <string name="auth_use_passkey">මුරයතුරක් භාවිතා කරන්න</string>
     <string name="auth_email_me_a_code">මට කේතයක් ඊමේල් කරන්න</string>
-    <string name="auth_or_enter_authenticator_code">හෝ Authenticator කේතය ඇතුළත් කරන්න</string>
-    <string name="auth_log_in">පුරන්න</string>
+    <string name="auth_or_enter_authenticator_code">හෝ සත්‍යාපන කේතය ඇතුළත් කරන්න</string>
+    <string name="auth_log_in">පිවිසෙන්න</string>
     <string name="auth_back">ආපසු</string>
     <string name="auth_lost_access_recovery">ප්‍රවේශය නැති වුණාද? ප්‍රතිසාධන කේතයක් භාවිතා කරන්න</string>
     <string name="auth_create_identity_title">ඔබගේ අනන්‍යතාව සාදන්න</string>
@@ -168,7 +168,7 @@
     <string name="common_retry">නැවත උත්සාහ කරන්න</string>
     <string name="common_more_options">තවත් විකල්ප</string>
     <string name="common_collapse">හකුළන්න</string>
-    <string name="common_expand">දිගහරින්න</string>
+    <string name="common_expand">විහිදන්න</string>
     <string name="common_play_video">වීඩියෝව වාදනය කරන්න</string>
     <string name="place_picker_name">ස්ථානයේ නම</string>
     <string name="place_origin">ආරම්භය</string>
@@ -193,8 +193,8 @@
     <string name="format_time_days_short">%1$dදි</string>
     <string name="format_time_weeks_short">%1$dස</string>
     <string name="format_time_months_short">%1$dමා</string>
-    <string name="reaction_add">ප්‍රතික්‍රියාව එක් කරන්න</string>
-    <string name="push_service_channel">Mochi push</string>
+    <string name="reaction_add">ප්‍රතික්‍රියාවක් එක් කරන්න</string>
+    <string name="push_service_channel">Mochi දැනුම්දීම්</string>
     <string name="push_service_channel_description">දැනුම්දීම් ලබා ගැනීමට Mochi සම්බන්ධව තබා ගනී</string>
     <string name="push_service_group">පසුබිම් සේවාව</string>
     <string name="push_service_title">Mochi දැනුම්දීම් සඳහා සවන් දෙමින්</string>
@@ -204,7 +204,7 @@
     <string name="reauth_signin_text">ඔබ නැවත පුරනය වන තුරු දැනුම්දීම් විරාම කර ඇත</string>
     <string name="oem_hint_title">පසුබිමෙහි ළඟා විය හැකි ලෙස සිටින්න</string>
     <string name="oem_hint_body">දැනුම්දීම් ලබා දීමට Mochi පසුබිමෙහි ක්‍රියාත්මක විය යුතුය. කරුණාකර මීළඟ තිරයේදී මෙය ඉඩ දෙන්න, නැතහොත් තිරය නිවී ඇති විට ඔබගේ දුරකථනය දැනුම්දීම් විරාම කළ හැකිය.</string>
-    <string name="oem_hint_samsung_note">Samsung දුරකථන මත, Settings → Device care → Sleeping apps ද පරීක්ෂා කර Mochi ලැයිස්තුගත වී ඇත්නම් එය ඉවත් කරන්න.</string>
+    <string name="oem_hint_samsung_note">Samsung දුරකථන මත, සැකසුම් → උපාංග රැකවරණය → නිදන යෙදුම් ද පරීක්ෂා කර Mochi ලැයිස්තුගත වී ඇත්නම් එය ඉවත් කරන්න.</string>
     <string name="oem_hint_allow">පසුබිම ඉඩ දෙන්න</string>
     <string name="oem_hint_dismiss">නැවත පෙන්වන්න එපා</string>
     <string name="about_title">Mochi සේවාලාභියා</string>
@@ -228,7 +228,7 @@
     <string name="stepup_description">මෙය ඔබගේ ගිණුමට කරන ආරක්ෂක වෙනසකි. ඉදිරියට යාමට එය ඔබ බව තහවුරු කරන්න.</string>
     <string name="stepup_email_label">ඊමේල් කේතය</string>
     <string name="stepup_email_placeholder">ඔබේ විද්‍යුත් තැපෑලෙහි ඇති කේතය ඇතුළු කරන්න</string>
-    <string name="stepup_totp_label">Authenticator කේතය</string>
+    <string name="stepup_totp_label">සත්‍යාපන කේතය</string>
     <string name="stepup_totp_placeholder">ඔබගේ සත්‍යාපන කේතය ඇතුළත් කරන්න</string>
     <string name="stepup_use_passkey">ඔබගේ මුරයතුර භාවිතා කරන්න</string>
     <string name="stepup_send_email">ඊමේල් යවන්න</string>
@@ -241,7 +241,7 @@
     <string name="stepup_error_oauth">එම ගිණුම සමඟ සත්‍යාපනය කළ නොහැකි විය. කරුණාකර නැවත උත්සාහ කරන්න.</string>
     <string name="game_system_resign">%1$s ඉල්ලා අස්විය</string>
     <string name="game_system_draw_offer">%1$s ජය පරාජයක් නැති බව යෝජනා කළේය</string>
-    <string name="game_system_draw_accept">ජය පරාජයක් නැති බව එකඟ විය</string>
+    <string name="game_system_draw_accept">සම ප්‍රතිඵලයට එකඟ විය</string>
     <string name="game_system_draw_decline">%1$s ජය පරාජයක් නැති බව ප්‍රතික්ෂේප කළේය</string>
     <string name="reactivation_title">ඔබේ ගිණුම මැකීමට නියමිතය</string>
     <string name="reactivation_body">ඔබේ ගිණුම මැකීමට නියමිතය. ඔබට දැන් මෙය අවලංගු කර සම්පූර්ණ ප්‍රවේශය නැවත ලබා ගත හැකිය.</string>
@@ -257,7 +257,7 @@
     <string name="common_logout_confirm_message">ඔබට ඉවත් වීමට අවශ්‍ය බව විශ්වාසද? ඔබගේ ගිණුමට ප්‍රවේශ වීමට නැවත පිවිසීමට සිදුවේ.</string>
     <string name="comment_anonymous">නිර්නාමික</string>
     <string name="tags_label">ටැග</string>
-    <string name="tags_add">ටැගය එක් කරන්න</string>
+    <string name="tags_add">ටැගයක් එක් කරන්න</string>
     <string name="tags_interest_up">මේ වැනි තවත් පෙන්වන්න</string>
     <string name="tags_interest_down">මේ වැනි අඩුවෙන් පෙන්වන්න</string>
     <string name="tags_interest_clear">පෙන්වීම නවත්වන්න</string>

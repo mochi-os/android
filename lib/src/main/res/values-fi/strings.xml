@@ -41,7 +41,7 @@
     <string name="access_add_rule">Lisää sääntö</string>
     <string name="access_owner">Omistaja</string>
     <string name="access_revoke">Peruuta</string>
-    <string name="access_level_comment">Kommentti</string>
+    <string name="access_level_comment">Kommentoi</string>
     <string name="access_level_view">Näytä</string>
     <string name="access_level_none">Ei mitään</string>
     <string name="reaction_like">Tykkää</string>
@@ -59,7 +59,7 @@
     <string name="notifications_title">Ilmoitukset</string>
     <string name="notifications_empty">Ei ilmoituksia</string>
     <string name="notifications_empty_unread">Olet ajan tasalla</string>
-    <string name="notifications_tab_unread">Lukematta</string>
+    <string name="notifications_tab_unread">Lukemattomat</string>
     <string name="notifications_tab_unread_count">Lukematta (%1$d)</string>
     <string name="notifications_tab_all">Kaikki</string>
     <string name="notifications_mark_all_read">Merkitse kaikki luetuiksi</string>

@@ -13,7 +13,7 @@
     <string name="chess_new_title">Yeni oyun</string>
     <string name="chess_new_pick_opponent">Rakip seçin</string>
     <string name="chess_new_no_friends_title">Henüz arkadaş yok</string>
-    <string name="chess_new_no_friends_subtitle">Oynamaya başlamak için People uygulamasından arkadaş ekleyin</string>
+    <string name="chess_new_no_friends_subtitle">Oynamaya başlamak için Kişiler uygulamasından arkadaş ekleyin</string>
     <string name="chess_new_add_friends">Arkadaş ekle</string>
     <string name="chess_new_start_button">Oyunu başlat</string>
     <string name="chess_new_creating">Oluşturuluyor…</string>

@@ -20,7 +20,7 @@
     <string name="words_new_game_language_us">英文（美式）</string>
     <string name="words_new_game_start">開始對局</string>
     <string name="words_new_game_no_friends_title">尚未有朋友</string>
-    <string name="words_new_game_no_friends_subtitle">喺 People 應用程式內加朋友先可以開始玩。</string>
+    <string name="words_new_game_no_friends_subtitle">喺聯絡人應用程式內加朋友先可以開始玩。</string>
     <string name="words_new_game_add_friends">加朋友</string>
     <string name="words_detail_title">對局</string>
     <string name="words_detail_status_your_move">輪到你出招</string>

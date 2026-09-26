@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Chan eil postaichean ann fhathast</string>
     <string name="feeds_sort_label">Seòrsaich</string>
     <string name="feeds_sort_interests">Ùidhean</string>
-    <string name="feeds_sort_new">Ùr</string>
+    <string name="feeds_sort_new">As ùire</string>
     <string name="feeds_sort_hot">Teth</string>
-    <string name="feeds_sort_top">Mullach</string>
+    <string name="feeds_sort_top">As fheàrr</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Post</string>
     <string name="feeds_image_preview">Ro-shealladh</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Sguir den fhreagairt</string>
     <string name="feeds_edit_post">Deasaich am post</string>
     <string name="feeds_save_label">Sàbhail</string>
-    <string name="feeds_post_action">Post</string>
+    <string name="feeds_post_action">Postaich</string>
     <string name="feeds_feed_label">Inbhir</string>
     <string name="feeds_add_files">Cuir faidhlichean ris</string>
     <string name="feeds_restore">Aiseag</string>
@@ -57,13 +57,13 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Inbhir Mochi</string>
     <string name="feeds_source_type_feed_memories">Cuimhneachain</string>
-    <string name="feeds_remove_source">Thoir air falbh an stòr</string>
+    <string name="feeds_remove_source">Thoir an tùs air falbh?</string>
     <string name="feeds_suggested_credibility_accept">Gabh ris</string>
     <string name="feeds_rss_url_copied">Chaidh URL RSS a lethbhreacadh dhan stòr-bhòrd</string>
     <string name="feeds_logout">Clàraich a-mach</string>
     <string name="feeds_ai_account_default">Cunntas bunaiteach</string>
     <string name="feeds_ai_mode_off">À comas</string>
-    <string name="feeds_ai_mode_tag">Taga</string>
+    <string name="feeds_ai_mode_tag">Tagaich</string>
     <string name="feeds_ai_mode_tag_deduplicate">Taga + dì-dhùblaich</string>
     <string name="feeds_feed_not_found">Cha deach an inbhir a lorg</string>
     <string name="feeds_post_not_found">Cha deach am post a lorg</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">URL RSS</string>
     <string name="feeds_source_never_fetched">Cha deach a thoirt a-nuas a-riamh</string>
     <string name="feeds_source_poll">Cunntas-bheachd</string>
-    <string name="feeds_source_transform">Cruth-atharraich</string>
+    <string name="feeds_source_transform">Cruth-atharrachadh AI</string>
     <string name="feeds_remove_source_confirm">Thoir air falbh \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Sguab às na postaichean a chaidh ion-phortadh cuideachd</string>
     <string name="feeds_suggested_credibility_title">Earbsachd a thathar a\' moladh</string>
@@ -131,8 +131,8 @@
     <string name="feeds_interest_reduced">Chaidh an ùidh ìsleachadh</string>
     <string name="feeds_interest_removed">Chaidh an ùidh a thoirt air falbh</string>
     <string name="feeds_interest_failed">Cha b\' urrainn an ùidh atharrachadh</string>
-    <string name="feeds_saved_title">Air a shàbhaladh</string>
-    <string name="feeds_saved_menu">Air a shàbhaladh</string>
+    <string name="feeds_saved_title">Air an sàbhaladh</string>
+    <string name="feeds_saved_menu">Air an sàbhaladh</string>
     <string name="feeds_saved_save">Sàbhail airson às dèidh seo</string>
     <string name="feeds_saved_remove">Thoir air falbh bho na sàbhailte</string>
     <string name="feeds_saved_clear_all">Falamhaich a h-uile</string>
@@ -176,7 +176,7 @@
     <string name="feeds_allow_search">Ceadaich do dhuine sam bith inbhir a lorg</string>
     <string name="feeds_post_content">Susbaint a\' phuist</string>
     <string name="feeds_enable_memories">Cuir cuimhneachain an comas</string>
-    <string name="feeds_permission_request_title">Iarrtas ceada</string>
+    <string name="feeds_permission_request_title">Iarrtas cead</string>
     <string name="feeds_unsubscribe_confirm">Sgur dhen fho-sgrìobhadh dhan inbhir?</string>
     <string name="feeds_settings_title">Roghainnean %1$s</string>
     <string name="feeds_source_transform_help">Fàg falamh gus chur dheth.</string>
@@ -217,7 +217,7 @@
     <string name="feeds_ai_prompt_custom">Gnàthaichte</string>
     <string name="feeds_ai_prompt_variables">Caochladairean: %1$s</string>
     <string name="feeds_link">Ceangal</string>
-    <string name="feeds_share_link_title">Ceangal an inbhir</string>
+    <string name="feeds_share_link_title">Ceangal inbhir</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$d bheachd</item>
         <item quantity="two">%1$d bheachd</item>

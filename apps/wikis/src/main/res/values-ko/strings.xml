@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">제거</string>
     <string name="wikis_replicas_remove_failed">복제본 제거에 실패했어요</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi 위키</string>
     <string name="wikis_channel_name">Wikis 알림</string>
     <string name="wikis_channel_description">페이지 편집, 댓글, 초대에 관한 알림.</string>
     <string name="wikis_pageview_toc_expand">목차 표시</string>

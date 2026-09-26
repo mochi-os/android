@@ -52,7 +52,7 @@
     <string name="chat_forward_search">Chats zoeken…</string>
     <string name="chat_forward_empty">Geen chats om naar door te sturen</string>
     <string name="chat_forward_success">Doorgestuurd</string>
-    <string name="chat_message_reply">Antwoorden</string>
+    <string name="chat_message_reply">Antwoord</string>
     <string name="chat_message_select">Selecteren</string>
     <string name="chat_reply_attachment">Bijlage</string>
     <string name="chat_replying_to">Antwoorden op %1$s</string>

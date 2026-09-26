@@ -4,7 +4,7 @@
     <string name="settings_home_title">Cài đặt</string>
     <string name="settings_home_logout">Đăng xuất</string>
     <string name="settings_home_account">Tài khoản</string>
-    <string name="settings_home_preferences">Tùy chỉnh</string>
+    <string name="settings_home_preferences">Tuỳ chọn</string>
     <string name="settings_home_display">Hiển thị</string>
     <string name="settings_home_notification_prefs">Tùy chọn thông báo</string>
     <string name="settings_home_accounts">Tài khoản đã kết nối</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s sẽ không còn quản lý các tuyến trên miền này.</string>
     <string name="domain_delegation_delete_title">Xóa ủy quyền?</string>
     <string name="domain_delegation_path">Đường dẫn</string>
-    <string name="domain_delegation_user">ID người dùng</string>
+    <string name="domain_delegation_user">Người dùng</string>
     <string name="domain_delegations">Ủy quyền</string>
     <string name="domain_delegations_empty">Không có ủy quyền nào được cấu hình.</string>
     <string name="domain_delete">Xóa tên miền</string>
@@ -361,7 +361,7 @@
     <string name="accounts_provider_mcp">Máy chủ MCP</string>
     <string name="accounts_provider_unifiedpush">Thông báo đẩy</string>
     <string name="accounts_provider_url">URL bên ngoài</string>
-    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_provider_web">Web Mochi</string>
     <string name="accounts_verified">Đã xác minh tài khoản</string>
     <string name="accounts_verify_invalid">Mã xác minh không hợp lệ</string>
     <string name="accounts_verify_sent">Đã gửi mã xác minh</string>
@@ -375,7 +375,7 @@
     <string name="accounts_forget_message">Thao tác này sẽ quên thiết bị \"%1$s\" và dừng thông báo đến thiết bị đó.</string>
     <string name="accounts_device_seen">Lần cuối nhìn thấy %1$s</string>
     <string name="notifprefs_device_app">%1$s · ứng dụng</string>
-    <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_device_push">%1$s · thông báo đẩy</string>
     <string name="notifprefs_test_partial">Đã gửi thử nghiệm đến %1$d trong số %2$d đích</string>
     <string name="notifprefs_test_none">Chưa cấu hình điểm đến</string>
     <string name="notifprefs_transport_fcm">Push Android</string>

@@ -89,8 +89,8 @@ data class ContactsBatchRequest(val contacts: List<String>)
 
 data class ContactsBatchResponse(val contacts: List<Contact> = emptyList())
 
-/** `-/token/create`: the device's password, returned this once. */
-data class TokenResponse(val token: String = "")
+/** `-/token/create`: the device's password, returned this once, and the username to enter beside it. */
+data class TokenResponse(val token: String = "", val username: String = "")
 
 data class TokensResponse(val tokens: List<DeviceToken> = emptyList())
 

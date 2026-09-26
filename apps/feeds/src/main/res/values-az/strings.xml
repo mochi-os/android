@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Hələ post yoxdur</string>
     <string name="feeds_sort_label">Sırala</string>
     <string name="feeds_sort_interests">Maraqlar</string>
-    <string name="feeds_sort_new">Yeni</string>
+    <string name="feeds_sort_new">Ən yeni</string>
     <string name="feeds_sort_hot">İsti</string>
-    <string name="feeds_sort_top">Yuxarı</string>
+    <string name="feeds_sort_top">Ən yaxşı</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Post</string>
     <string name="feeds_image_preview">Önbaxış</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Cavabı ləğv et</string>
     <string name="feeds_edit_post">Postu redaktə et</string>
     <string name="feeds_save_label">Saxla</string>
-    <string name="feeds_post_action">Post</string>
+    <string name="feeds_post_action">Paylaş</string>
     <string name="feeds_feed_label">Lent</string>
     <string name="feeds_add_files">Fayllar əlavə et</string>
     <string name="feeds_restore">Bərpa et</string>
@@ -57,13 +57,13 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi lenti</string>
     <string name="feeds_source_type_feed_memories">Yaddaşlar</string>
-    <string name="feeds_remove_source">Mənbəni sil</string>
+    <string name="feeds_remove_source">Mənbəni silək?</string>
     <string name="feeds_suggested_credibility_accept">Qəbul et</string>
     <string name="feeds_rss_url_copied">RSS URL panelə kopyalandı</string>
     <string name="feeds_logout">Çıx</string>
     <string name="feeds_ai_account_default">Default hesab</string>
     <string name="feeds_ai_mode_off">Söndürülmüşdür</string>
-    <string name="feeds_ai_mode_tag">Etiket</string>
+    <string name="feeds_ai_mode_tag">Etiketlə</string>
     <string name="feeds_ai_mode_tag_deduplicate">Etiketlə + dublikatları sil</string>
     <string name="feeds_feed_not_found">Lent tapılmadı</string>
     <string name="feeds_post_not_found">Post tapılmadı</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">Heç vaxt alınmayıb</string>
     <string name="feeds_source_poll">Sorğu</string>
-    <string name="feeds_source_transform">Çevirmə</string>
+    <string name="feeds_source_transform">AI çevrilməsi</string>
     <string name="feeds_remove_source_confirm">\"%1$s\" silinsin?</string>
     <string name="feeds_remove_also_delete_posts">İdxal edilmiş yazılar da silinsin</string>
     <string name="feeds_suggested_credibility_title">Təklif olunan etibarlılıq</string>
@@ -131,8 +131,8 @@
     <string name="feeds_interest_reduced">Maraq azaldıldı</string>
     <string name="feeds_interest_removed">Maraq silindi</string>
     <string name="feeds_interest_failed">Marağı tənzimləmək alınmadı</string>
-    <string name="feeds_saved_title">Saxlanıldı</string>
-    <string name="feeds_saved_menu">Saxlanıldı</string>
+    <string name="feeds_saved_title">Saxlanılanlar</string>
+    <string name="feeds_saved_menu">Saxlanılanlar</string>
     <string name="feeds_saved_save">Sonra üçün saxla</string>
     <string name="feeds_saved_remove">Saxlanılanlardan sil</string>
     <string name="feeds_saved_clear_all">Hamısını təmizlə</string>
@@ -208,7 +208,7 @@
     <string name="feeds_banner_dismiss">Banneri rədd et</string>
     <string name="feeds_members_search">Üzvləri filtrlə</string>
     <string name="feeds_ai_prompt_default">Standart</string>
-    <string name="feeds_ai_prompt_custom">Fərdi</string>
+    <string name="feeds_ai_prompt_custom">Xüsusi</string>
     <string name="feeds_ai_prompt_variables">Dəyişənlər: %1$s</string>
     <string name="feeds_link">Keçid</string>
     <string name="feeds_share_link_title">Lent keçidi</string>

@@ -242,7 +242,7 @@
     <string name="route_meta">Prioritet %1$d · %2$s</string>
     <string name="interests_search_placeholder">Sök ämnen att lägga till…</string>
     <string name="interests_empty">Inga intressen ännu.</string>
-    <string name="interests_summary_regenerate">Återskapa sammanfattning</string>
+    <string name="interests_summary_regenerate">Generera om sammanfattningen</string>
     <string name="interests_summary_regenerating">Återskapar…</string>
     <string name="interests_summary_empty">Lägg till intressen för att skapa en sammanfattning av vad du gillar.</string>
     <string name="interests_search_failed">Sökningen misslyckades. Försök igen.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s kommer inte längre hantera rutter på denna domän.</string>
     <string name="domain_delegation_delete_title">Ta bort delegering?</string>
     <string name="domain_delegation_path">Sökväg</string>
-    <string name="domain_delegation_user">Användar-ID</string>
+    <string name="domain_delegation_user">Användare</string>
     <string name="domain_delegations">Delegeringar</string>
     <string name="domain_delegations_empty">Inga delegeringar konfigurerade.</string>
     <string name="domain_delete">Ta bort domän</string>

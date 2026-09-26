@@ -41,7 +41,7 @@
     <string name="access_add_rule">నియమం జోడించండి</string>
     <string name="access_owner">ఓనర్</string>
     <string name="access_revoke">రద్దు చేయండి</string>
-    <string name="access_level_comment">వ్యాఖ్య</string>
+    <string name="access_level_comment">వ్యాఖ్యానించండి</string>
     <string name="access_level_view">వీక్షించండి</string>
     <string name="access_level_none">ఏదీ లేదు</string>
     <string name="reaction_like">ఇష్టం</string>
@@ -149,7 +149,7 @@
     <string name="auth_use_passkey">పాస్‌కీని ఉపయోగించండి</string>
     <string name="auth_email_me_a_code">నాకు ఒక కోడ్‌ను ఇమెయిల్ చేయండి</string>
     <string name="auth_or_enter_authenticator_code">లేదా ఆథెంటికేటర్ కోడ్‌ను నమోదు చేయండి</string>
-    <string name="auth_log_in">లాగిన్ అవ్వండి</string>
+    <string name="auth_log_in">లాగిన్</string>
     <string name="auth_back">వెనుకకు</string>
     <string name="auth_lost_access_recovery">యాక్సెస్ కోల్పోయారా? రికవరీ కోడ్‌ను ఉపయోగించండి</string>
     <string name="auth_create_identity_title">మీ గుర్తింపును సృష్టించండి</string>
@@ -167,8 +167,8 @@
     <string name="bootstrap_sign_in_different_server">వేరే సర్వర్‌కు సైన్ ఇన్ చేయండి</string>
     <string name="common_retry">మళ్లీ ప్రయత్నించండి</string>
     <string name="common_more_options">మరిన్ని ఎంపికలు</string>
-    <string name="common_collapse">కుదించండి</string>
-    <string name="common_expand">విస్తరించండి</string>
+    <string name="common_collapse">కుదించు</string>
+    <string name="common_expand">విస్తరించు</string>
     <string name="common_play_video">వీడియో ప్లే చేయండి</string>
     <string name="place_picker_name">స్థల పేరు</string>
     <string name="place_origin">మూలం</string>
@@ -178,7 +178,7 @@
     <string name="access_add_rule_title">యాక్సెస్ నియమాన్ని జోడించండి</string>
     <string name="access_level_manage">నిర్వహించండి</string>
     <string name="access_level_react">ప్రతిస్పందించండి</string>
-    <string name="notifications_clear">నోటిఫికేషన్‌లను తొలగించండి</string>
+    <string name="notifications_clear">నోటిఫికేషన్‌లను క్లియర్ చేయండి</string>
     <string name="entity_avatar_alt">%1$s కోసం అవతార్</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="format_time_just_now">ఇప్పుడే</string>
@@ -193,7 +193,7 @@
     <string name="format_time_days_short">%1$dరో</string>
     <string name="format_time_weeks_short">%1$dవా</string>
     <string name="format_time_months_short">%1$dనె</string>
-    <string name="reaction_add">ప్రతిస్పందన జోడించండి</string>
+    <string name="reaction_add">రియాక్షన్ జోడించండి</string>
     <string name="push_service_channel">Mochi పుష్</string>
     <string name="push_service_channel_description">నోటిఫికేషన్‌లను స్వీకరించడానికి Mochiని కనెక్ట్‌గా ఉంచుతుంది</string>
     <string name="push_service_group">నేపథ్య సేవ</string>
@@ -204,7 +204,7 @@
     <string name="reauth_signin_text">మీరు మళ్లీ సైన్ ఇన్ చేసే వరకు నోటిఫికేషన్‌లు నిలిపివేయబడ్డాయి</string>
     <string name="oem_hint_title">నేపథ్యంలో అందుబాటులో ఉండండి</string>
     <string name="oem_hint_body">నోటిఫికేషన్‌లను అందించడానికి Mochi తప్పనిసరిగా నేపథ్యంలో రన్ అవ్వాలి. దయచేసి తదుపరి స్క్రీన్‌లో దీన్ని అనుమతించండి, లేకుంటే స్క్రీన్ ఆఫ్ అయినప్పుడు మీ ఫోన్ నోటిఫికేషన్‌లను నిలిపివేయవచ్చు.</string>
-    <string name="oem_hint_samsung_note">Samsung ఫోన్‌లలో, Settings → Device care → Sleeping apps ను కూడా తనిఖీ చేయండి మరియు జాబితాలో ఉంటే Mochi ని తీసివేయండి.</string>
+    <string name="oem_hint_samsung_note">Samsung ఫోన్‌లలో, సెట్టింగ్‌లు → పరికర సంరక్షణ → నిద్రిస్తున్న యాప్‌లను కూడా తనిఖీ చేయండి మరియు జాబితాలో ఉంటే Mochi ని తీసివేయండి.</string>
     <string name="oem_hint_allow">నేపథ్యాన్ని అనుమతించండి</string>
     <string name="oem_hint_dismiss">మళ్లీ చూపించవద్దు</string>
     <string name="about_title">Mochi క్లయింట్</string>
@@ -241,7 +241,7 @@
     <string name="stepup_error_oauth">ఆ ఖాతాతో ధృవీకరించడం సాధ్యం కాలేదు. దయచేసి మళ్లీ ప్రయత్నించండి.</string>
     <string name="game_system_resign">%1$s ఓటమిని అంగీకరించారు</string>
     <string name="game_system_draw_offer">%1$s డ్రా ప్రతిపాదించారు</string>
-    <string name="game_system_draw_accept">డ్రాకు అంగీకరించారు</string>
+    <string name="game_system_draw_accept">డ్రా అంగీకరించబడింది</string>
     <string name="game_system_draw_decline">%1$s డ్రాను తిరస్కరించారు</string>
     <string name="reactivation_title">మీ ఖాతా తొలగింపు కోసం షెడ్యూల్ చేయబడింది</string>
     <string name="reactivation_body">మీ ఖాతా తొలగింపు కోసం షెడ్యూల్ చేయబడింది. మీరు ఇప్పుడు రద్దు చేసి పూర్తి యాక్సెస్‌ను పునరుద్ధరించవచ్చు.</string>
@@ -249,7 +249,7 @@
     <string name="reactivation_reactivate">నా ఖాతాను తిరిగి సక్రియం చేయి</string>
     <string name="reactivation_sign_out">మూసివేయడం కొనసాగించి సైన్ అవుట్ చేయండి</string>
     <string name="common_play">ప్లే చేయండి</string>
-    <string name="common_pause">పాజ్ చేయండి</string>
+    <string name="common_pause">పాజ్</string>
     <string name="common_opening_file">ఫైల్‌ను తెరుస్తోంది…</string>
     <string name="common_no_app_for_file">ఈ ఫైల్‌ను తెరవగల యాప్ ఏదీ లేదు</string>
     <string name="common_file_open_failed">ఫైల్‌ను తెరవడం సాధ్యపడలేదు</string>

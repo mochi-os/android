@@ -8,7 +8,7 @@
     <string name="go_action_pass">አስተላልፍ</string>
     <string name="go_action_rematch">እንደገና ተወዳደር</string>
     <string name="go_action_resign">ለቀቅ</string>
-    <string name="go_app_title">ሂድ</string>
+    <string name="go_app_title">ጎ</string>
     <string name="go_captures_black_sr">ጥቁር መያዣዎች</string>
     <string name="go_captures_white_sr">ነጭ መያዣዎች</string>
     <string name="go_chat_title">ውይይት</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">የጎን አሞሌ ክፈት</string>
     <string name="go_sidebar_active">ንቁ ጨዋታዎች</string>
     <string name="go_empty_active">እስካሁን ንቁ ጨዋታዎች የሉም።</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">እጅ ሰጥቷል</string>
     <string name="go_new_game_title">አዲስ የGo ጨዋታ</string>
     <string name="go_new_game_no_friends">ጨዋታ ከመጀመርዎ በፊት ጓደኛ ማከል አለብዎት።</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

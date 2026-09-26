@@ -10,7 +10,7 @@
     <string name="calendars_delete">Ħassar</string>
     <string name="calendars_previous">Preċedenti</string>
     <string name="calendars_next">Li jmiss</string>
-    <string name="calendars_view">Ara</string>
+    <string name="calendars_view">Veduta</string>
     <string name="calendars_view_list">Lista</string>
     <string name="calendars_list_search">Fittex</string>
     <string name="calendars_event_untitled">Bla titlu</string>
@@ -77,7 +77,7 @@
     <string name="calendars_workweek">Ġimgħa tax-xogħol</string>
     <string name="calendars_range">minn %1$s sa %2$s</string>
     <string name="calendars_truncated">Xi avvenimenti f\'din il-firxa mhumiex murija.</string>
-    <string name="calendars_list_empty">L-ebda avveniment</string>
+    <string name="calendars_list_empty">L-ebda avvenimenti</string>
     <plurals name="calendars_more">
         <item quantity="one">+%1$d ieħor</item>
         <item quantity="two">+%1$d oħra</item>
@@ -163,7 +163,7 @@
     <string name="calendars_link_submit">Orbot</string>
     <string name="calendars_link_sync">Sinkronizza issa</string>
     <string name="calendars_link_grant">Ippermetti l-aċċess għall-kalendarju</string>
-    <string name="calendars_link_linked">Marbut</string>
+    <string name="calendars_link_linked">Illinkjat</string>
     <string name="calendars_link_marker">Kalendarju marbut</string>
     <string name="calendars_link_remote_empty">L-ebda kalendarji</string>
     <string name="calendars_poll_conflict">Avveniment inbidel fuq iż-żewġ naħat</string>
@@ -178,7 +178,7 @@
     <string name="calendars_subscribe_server_url">Indirizz tas-server</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Kalendarju Google</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Il-kontijiet ta\' Google mhumiex attivati fuq dan is-server. Attivahom taħt Settings, Settings tas-sistema.</string>
     <string name="calendars_subscribe_google_connect">Ma qabbadtx kont ta\' Google.</string>

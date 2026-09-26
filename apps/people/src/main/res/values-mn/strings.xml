@@ -52,7 +52,7 @@
     <string name="people_profile_name">Нэр</string>
     <string name="people_profile_name_saved">Нэр хадгалагдсан</string>
     <string name="people_profile_edit_name">Нэр засах</string>
-    <string name="people_profile_identity">Identity</string>
+    <string name="people_profile_identity">Танилт</string>
     <string name="people_profile_accent">Өнгөлгөө</string>
     <string name="people_profile_directory_listing">Бусад хэрэглэгч таныг лавлахаас олох боломжтой</string>
     <string name="people_profile_markdown_supported">Markdown дэмжигдсэн</string>
@@ -62,7 +62,7 @@
     <string name="people_profile_uploading">Байршуулж байна…</string>
     <string name="people_profile_change_banner">Баннер солих</string>
     <string name="people_profile_no_banner">Баннер тохируулаагүй</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_favicon">Фавикон</string>
     <string name="people_profile_browser_icon">Хөтчийн дүрс</string>
     <string name="people_profile_file_too_large">Файл хэт том</string>
     <string name="people_profile_clear">Цэвэрлэх</string>
@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Навигац нээх</string>
     <string name="people_person_state_friend">Найзууд</string>
     <string name="people_person_state_self">Та</string>
-    <string name="people_person_message">Мессеж</string>
+    <string name="people_person_message">Зурвас илгээх</string>
     <string name="people_person_accept">Зөвшөөрөх</string>
     <string name="people_person_decline">Татгалзах</string>
 
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">Зөв hex өнгө оруулна уу (жишээ нь #a78bfa)</string>
     <string name="people_profile_accent_none">Алга</string>
     <string name="people_profile_privacy_private_desc">Зөвхөн харилцан найзууд таны профайлыг үзэх боломжтой</string>
-    <string name="people_welcome_title">People-д тавтай морилно уу</string>
+    <string name="people_welcome_title">Хүмүүс апп-д тавтай морилно уу</string>
     <string name="people_person_banner_alt">%1$s-н баннер</string>
     <string name="people_person_private">Энэ профайл хувийн</string>
     <string name="people_person_state_invited">Уригдсан</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Бүгдийг хүлээн зөвшөөрөх</string>
     <string name="people_invitations_decline_all">Бүгдээс татгалзах</string>
     <string name="people_invitations_cancel_all">Бүгдийг цуцлах</string>
+    <string name="people_invitations_cancel">Цуцлах</string>
     <string name="people_invitations_all_accepted">Бүх урилгыг хүлээн зөвшөөрсөн</string>
     <string name="people_invitations_all_declined">Бүх урилгаас татгалзсан</string>
     <string name="people_invitations_all_cancelled">Бүх урилгыг цуцалсан</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Хайх…</string>
     <string name="people_contacts_invited">Уригдсан</string>
     <string name="people_contacts_accept">Зөвшөөрөх</string>
-    <string name="people_contacts_message">Мессеж</string>
+    <string name="people_contacts_message">Зурвас илгээх</string>
     <string name="people_contacts_no_people_found">Хүн олдсонгүй</string>
     <string name="people_contacts_try_adjusting">Хайлтаа засахыг туршаад үз</string>
     <string name="people_contact_section_address">Хаяг</string>
@@ -145,7 +146,7 @@
     <string name="people_add_contact_search_start">Хэрэглэгч хайхын тулд бичиж эхэл</string>
     <string name="people_contact_phone">Утас</string>
     <string name="people_contact_title">Албан тушаал</string>
-    <string name="people_contacts_title">Холбоо барих хүмүүс</string>
+    <string name="people_contacts_title">Харилцагчид</string>
     <string name="people_contacts_all">Бүх харилцагч</string>
     <string name="people_contacts_empty">Харилцагч олдсонгүй</string>
     <string name="people_contacts_add_to_start">Холбоо тогтоохын тулд харилцагч нэмнэ үү</string>
@@ -153,15 +154,15 @@
     <string name="people_contacts_friend">Найз</string>
     <string name="people_contacts_invite">Урих</string>
     <string name="people_contacts_unfriend_confirm">%1$s цаашид таны найз байхаа болино. Харилцагч таны хаягийн дэвтэрт үлдэнэ.</string>
-    <string name="people_contacts_delete">Харилцагчийг устгах</string>
+    <string name="people_contacts_delete">Харилцагч устгах</string>
     <string name="people_contacts_delete_confirm">%1$s-г таны харилцагчдаас устгах уу?</string>
     <string name="people_contacts_delete_friend_confirm">%1$s-г таны харилцагчдаас устгах уу? Таны найзын харилцаа ч дуусна.</string>
     <string name="people_contact_new_title">Шинэ харилцагч</string>
-    <string name="people_contact_edit_title">Харилцагчийг засах</string>
+    <string name="people_contact_edit_title">Харилцагч засах</string>
     <string name="people_contact_given">Нэр</string>
     <string name="people_contact_family">Овог</string>
-    <string name="people_contact_nickname">Хоч нэр</string>
-    <string name="people_contact_add_email">И-мэйл нэмэх</string>
+    <string name="people_contact_nickname">Хоч</string>
+    <string name="people_contact_add_email">Имэйл нэмэх</string>
     <string name="people_contact_add_phone">Утас нэмэх</string>
     <string name="people_contact_add_address">Хаяг нэмэх</string>
     <string name="people_contact_street">Гудамж</string>

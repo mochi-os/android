@@ -41,7 +41,7 @@
     <string name="access_add_rule">नियम थप्नुहोस्</string>
     <string name="access_owner">मालिक</string>
     <string name="access_revoke">रद्द गर्नुहोस्</string>
-    <string name="access_level_comment">टिप्पणी</string>
+    <string name="access_level_comment">टिप्पणी गर्नुहोस्</string>
     <string name="access_level_view">हेर्नुहोस्</string>
     <string name="access_level_none">कुनै पनि होइन</string>
     <string name="reaction_like">मन पर्यो</string>
@@ -128,7 +128,7 @@
     <string name="game_chat_move_played">%1$s ले %2$s खेल्यो</string>
 
     <string name="error_network">जडान गर्न असमर्थ। आफ्नो इन्टरनेट जडान जाँच गर्नुहोस् र फेरि प्रयास गर्नुहोस्।</string>
-    <string name="error_authentication_required">प्रमाणीकरण आवश्यक छ</string>
+    <string name="error_authentication_required">प्रमाणीकरण आवश्यक</string>
     <string name="error_not_found">फेला परेन</string>
     <string name="error_server">सर्भर त्रुटि (%1$d)। कृपया पछि फेरि प्रयास गर्नुहोस्।</string>
     <string name="error_unexpected">अप्रत्याशित त्रुटि भयो</string>
@@ -165,7 +165,7 @@
     <string name="bootstrap_sign_in_differently">फरक तरिकाले साइन इन गर्नुहोस्</string>
     <string name="bootstrap_choose_account">एउटा खाता छान्नुहोस्</string>
     <string name="bootstrap_sign_in_different_server">फरक सर्भरमा साइन इन गर्नुहोस्</string>
-    <string name="common_retry">पुन: प्रयास गर्नुहोस्</string>
+    <string name="common_retry">फेरि प्रयास गर्नुहोस्</string>
     <string name="common_more_options">थप विकल्पहरू</string>
     <string name="common_collapse">संक्षिप्त गर्नुहोस्</string>
     <string name="common_expand">विस्तार गर्नुहोस्</string>
@@ -204,7 +204,7 @@
     <string name="reauth_signin_text">तपाईं फेरि साइन इन नगरेसम्म सूचनाहरू रोकिएका छन्</string>
     <string name="oem_hint_title">पृष्ठभूमिमा पहुँचयोग्य रहनुहोस्</string>
     <string name="oem_hint_body">सूचनाहरू पुर्‍याउन मोची पृष्ठभूमिमा चल्नुपर्छ। कृपया अर्को स्क्रिनमा यो अनुमति दिनुहोस्, अन्यथा स्क्रिन निभेको बेला तपाईंको फोनले सूचनाहरू रोक्न सक्छ।</string>
-    <string name="oem_hint_samsung_note">स्यामसङ फोनहरूमा, Settings → Device care → Sleeping apps पनि जाँच गर्नुहोस् र सूचीमा भए मोचीलाई हटाउनुहोस्।</string>
+    <string name="oem_hint_samsung_note">स्यामसङ फोनहरूमा, सेटिङहरू → उपकरण हेरचाह → सुतिरहेका एपहरू पनि जाँच गर्नुहोस् र सूचीमा भए Mochi लाई हटाउनुहोस्।</string>
     <string name="oem_hint_allow">पृष्ठभूमि अनुमति दिनुहोस्</string>
     <string name="oem_hint_dismiss">फेरि नदेखाउनुहोस्</string>
     <string name="about_title">मोची क्लाइन्ट</string>
@@ -228,7 +228,7 @@
     <string name="stepup_description">यो तपाईंको खातामा सुरक्षा परिवर्तन हो। जारी राख्न तपाईं नै हो भनी पुष्टि गर्नुहोस्।</string>
     <string name="stepup_email_label">इमेल कोड</string>
     <string name="stepup_email_placeholder">तपाईंको इमेलमा आएको कोड प्रविष्ट गर्नुहोस्</string>
-    <string name="stepup_totp_label">Authenticator कोड</string>
+    <string name="stepup_totp_label">अथेन्टिकेटर कोड</string>
     <string name="stepup_totp_placeholder">आफ्नो प्रमाणक कोड हाल्नुहोस्</string>
     <string name="stepup_use_passkey">आफ्नो पासकी प्रयोग गर्नुहोस्</string>
     <string name="stepup_send_email">इमेल पठाउनुहोस्</string>
@@ -241,7 +241,7 @@
     <string name="stepup_error_oauth">त्यो खातासँग प्रमाणित गर्न सकिएन। कृपया फेरि प्रयास गर्नुहोस्।</string>
     <string name="game_system_resign">%1$s ले हार स्वीकार गर्‍यो</string>
     <string name="game_system_draw_offer">%1$s ले बराबरीको प्रस्ताव गर्‍यो</string>
-    <string name="game_system_draw_accept">बराबरी सहमति भयो</string>
+    <string name="game_system_draw_accept">बराबरी स्वीकार गरियो</string>
     <string name="game_system_draw_decline">%1$s ले बराबरी अस्वीकार गर्‍यो</string>
     <string name="reactivation_title">तपाईंको खाता मेटाउन तालिका गरिएको छ</string>
     <string name="reactivation_body">तपाईंको खाता मेटाउन तालिका गरिएको छ। तपाईं अहिले रद्द गरी पूर्ण पहुँच पुनर्स्थापना गर्न सक्नुहुन्छ।</string>
@@ -261,7 +261,7 @@
     <string name="tags_interest_up">यस्तै अरू देखाउनुहोस्</string>
     <string name="tags_interest_down">यस्तै कम देखाउनुहोस्</string>
     <string name="tags_interest_clear">देखाउन रोक्नुहोस्</string>
-    <string name="tags_none">कुनै ट्याग छैन</string>
+    <string name="tags_none">कुनै ट्यागहरू छैनन्</string>
     <string name="tags_delete">ट्याग हटाउनुहोस्</string>
     <string name="person_picker_none">कुनै पनि होइन</string>
     <string name="person_picker_clear">चयन खाली गर्नुहोस्</string>
@@ -313,7 +313,7 @@
     <string name="settings_card_flat">सम्म</string>
     <string name="settings_card_raised">उठाइएको</string>
     <string name="error_server_https">सर्भर ठेगाना https:// बाट सुरु हुनुपर्छ</string>
-    <string name="device_name_fallback">मोबाइल उपकरण</string>
+    <string name="device_name_fallback">मोबाइल यन्त्र</string>
     <string name="account_error_token_type">असमर्थित टोकन प्रकार</string>
     <string name="account_error_caller">कल गर्नेलाई अनुमति छैन</string>
 </resources>

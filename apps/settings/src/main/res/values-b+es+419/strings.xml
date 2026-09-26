@@ -53,7 +53,7 @@
     <string name="interests_title">Intereses</string>
     <string name="interests_summary_title">Resumen</string>
     <string name="interests_remove">Eliminar interés</string>
-    <string name="notifprefs_title">Preferencias de notificación</string>
+    <string name="notifprefs_title">Preferencias de notificaciones</string>
     <string name="notifprefs_tab_categories">Categorías</string>
     <string name="notifprefs_tab_topics">Temas</string>
     <string name="notifprefs_add_category">Añadir categoría</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s ya no podrá administrar rutas en este dominio.</string>
     <string name="domain_delegation_delete_title">¿Eliminar delegación?</string>
     <string name="domain_delegation_path">Ruta</string>
-    <string name="domain_delegation_user">ID de usuario</string>
+    <string name="domain_delegation_user">Usuario</string>
     <string name="domain_delegations">Delegaciones</string>
     <string name="domain_delegations_empty">No hay delegaciones configuradas.</string>
     <string name="domain_delete">Eliminar dominio</string>

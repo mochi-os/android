@@ -76,12 +76,12 @@
     <string name="people_open_sidebar">வழிசெலுத்தலைத் திறக்கவும்</string>
     <string name="people_person_state_friend">நண்பர்கள்</string>
     <string name="people_person_state_self">நீங்கள்</string>
-    <string name="people_person_message">செய்தி</string>
+    <string name="people_person_message">செய்தி அனுப்பு</string>
     <string name="people_person_accept">ஏற்றுக்கொள்</string>
     <string name="people_person_decline">மறு</string>
 
 
-    <string name="notification_channel_people">நபர்கள் அறிவிப்புகள்</string>
+    <string name="notification_channel_people">மக்கள் அறிவிப்புகள்</string>
     <string name="people_friends_searching">தேடுகிறது…</string>
     <string name="people_invitations_toast_accepted">%1$s இடமிருந்து வந்த அழைப்பிதழ் ஏற்கப்பட்டது</string>
     <string name="people_invitations_toast_declined">%1$s இடமிருந்து வந்த அழைப்பிதழ் நிராகரிக்கப்பட்டது</string>
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">சரியான ஹெக்ஸ் நிறத்தை உள்ளிடவும் (எ.கா. #a78bfa)</string>
     <string name="people_profile_accent_none">ஒன்றுமில்லை</string>
     <string name="people_profile_privacy_private_desc">பரஸ்பர நண்பர்கள் மட்டுமே உங்கள் சுயவிவரத்தைப் பார்க்க முடியும்</string>
-    <string name="people_welcome_title">People க்கு வரவேற்கிறோம்</string>
+    <string name="people_welcome_title">மக்கள் பயன்பாட்டுக்கு வரவேற்கிறோம்</string>
     <string name="people_person_banner_alt">%1$s க்கான பேனர்</string>
     <string name="people_person_private">இந்த சுயவிவரம் தனிப்பட்டது</string>
     <string name="people_person_state_invited">அழைக்கப்பட்டது</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">அனைத்தையும் ஏற்கவும்</string>
     <string name="people_invitations_decline_all">அனைத்தையும் நிராகரி</string>
     <string name="people_invitations_cancel_all">அனைத்தையும் ரத்துசெய்</string>
+    <string name="people_invitations_cancel">ரத்துசெய்</string>
     <string name="people_invitations_all_accepted">அனைத்து அழைப்புகளும் ஏற்கப்பட்டன</string>
     <string name="people_invitations_all_declined">அனைத்து அழைப்புகளும் நிராகரிக்கப்பட்டன</string>
     <string name="people_invitations_all_cancelled">அனைத்து அழைப்புகளும் ரத்தாயின</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">தேடு…</string>
     <string name="people_contacts_invited">அழைக்கப்பட்டது</string>
     <string name="people_contacts_accept">ஏற்றுக்கொள்</string>
-    <string name="people_contacts_message">செய்தி</string>
+    <string name="people_contacts_message">செய்தி அனுப்பு</string>
     <string name="people_contacts_no_people_found">நபர்கள் எதுவும் கிடைக்கவில்லை</string>
     <string name="people_contacts_try_adjusting">உங்கள் தேடலை சரிசெய்ய முயற்சி செய்யுங்கள்</string>
     <string name="people_contact_section_address">முகவரி</string>
@@ -127,7 +128,7 @@
     <string name="people_contact_email">மின்னஞ்சல்</string>
     <string name="people_contact_city">நகரம்</string>
     <string name="people_contact_region">பகுதி</string>
-    <string name="people_contact_postcode">Postcode</string>
+    <string name="people_contact_postcode">அஞ்சல் குறியீடு</string>
     <string name="people_contact_country">நாடு</string>
     <string name="people_contact_type">வகை</string>
     <string name="people_contact_type_home">வீடு</string>
@@ -151,19 +152,19 @@
     <string name="people_contacts_add_to_start">இணைவதைத் தொடங்க தொடர்புகளைச் சேர்க்கவும்</string>
     <string name="people_contacts_actions">தொடர்பு செயல்கள்</string>
     <string name="people_contacts_friend">நண்பர்</string>
-    <string name="people_contacts_invite">அழைக்கவும்</string>
+    <string name="people_contacts_invite">அழை</string>
     <string name="people_contacts_unfriend_confirm">%1$s இனி உங்கள் நண்பராக இருக்க மாட்டார். தொடர்பு உங்கள் முகவரிப் புத்தகத்தில் இருக்கும்.</string>
     <string name="people_contacts_delete">தொடர்பை நீக்கு</string>
     <string name="people_contacts_delete_confirm">%1$s ஐ உங்கள் தொடர்புகளிலிருந்து நீக்கவா?</string>
     <string name="people_contacts_delete_friend_confirm">%1$s ஐ உங்கள் தொடர்புகளிலிருந்து நீக்கவா? உங்கள் நட்பும் முடிவடையும்.</string>
     <string name="people_contact_new_title">புதிய தொடர்பு</string>
     <string name="people_contact_edit_title">தொடர்பைத் திருத்து</string>
-    <string name="people_contact_given">பெயர்</string>
+    <string name="people_contact_given">முதல் பெயர்</string>
     <string name="people_contact_family">குடும்பப் பெயர்</string>
     <string name="people_contact_nickname">செல்லப்பெயர்</string>
-    <string name="people_contact_add_email">மின்னஞ்சல் சேர்</string>
-    <string name="people_contact_add_phone">தொலைபேசி சேர்</string>
-    <string name="people_contact_add_address">முகவரி சேர்</string>
+    <string name="people_contact_add_email">மின்னஞ்சலைச் சேர்</string>
+    <string name="people_contact_add_phone">தொலைபேசியைச் சேர்</string>
+    <string name="people_contact_add_address">முகவரியைச் சேர்</string>
     <string name="people_contact_street">தெரு</string>
     <string name="people_contact_birthday">பிறந்தநாள்</string>
     <string name="people_contact_organisation">நிறுவனம்</string>

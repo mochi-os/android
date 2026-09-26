@@ -8,7 +8,7 @@
     <string name="go_action_pass">Oʻtish</string>
     <string name="go_action_rematch">Qayta oʻyin</string>
     <string name="go_action_resign">Taslim boʻlish</string>
-    <string name="go_app_title">Oʻtish</string>
+    <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Qora qo\'lga olishlar</string>
     <string name="go_captures_white_sr">Oq qo\'lga olishlar</string>
     <string name="go_chat_title">Suhbat</string>
@@ -16,7 +16,7 @@
     <string name="go_color_white">Oq</string>
     <string name="go_delete_confirm">Oʻchirish</string>
     <string name="go_delete_message">Ushbu o\'yin ro\'yxatingizdan olib tashlanadi. Buni qaytarib bo\'lmaydi.</string>
-    <string name="go_delete_title">O\'yinni o\'chirish?</string>
+    <string name="go_delete_title">Oʻyin oʻchirilsinmi?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">Qabul qilish</string>
     <string name="go_draw_decline">Rad etish</string>
@@ -50,8 +50,8 @@
     <string name="go_resign_title">Oʻyindan voz kechilsinmi?</string>
     <string name="go_sidebar_completed">Yakunlandi</string>
     <string name="go_sidebar_new_game">Yangi oʻyin</string>
-    <string name="go_status_draw">Chizish</string>
-    <string name="go_status_draw_text">Chizish</string>
+    <string name="go_status_draw">Durang</string>
+    <string name="go_status_draw_text">Durang</string>
     <string name="go_status_game_over">Oʻyin tugadi</string>
     <string name="go_status_opponent_move">%1$s ning yurishi</string>
     <string name="go_status_opponent_wins">%1$s gʻalaba qildi</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">Yon panelni ochish</string>
     <string name="go_sidebar_active">Faol oʻyinlar</string>
     <string name="go_empty_active">Hozircha faol o‘yinlar yo‘q.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">Taslim boʻldi</string>
     <string name="go_new_game_title">Yangi Go o‘yini</string>
     <string name="go_new_game_no_friends">O‘yinni boshlashdan oldin do‘st qo‘shishingiz kerak.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

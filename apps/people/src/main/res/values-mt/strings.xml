@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Iftaħ navigazzjoni</string>
     <string name="people_person_state_friend">Ħbieb</string>
     <string name="people_person_state_self">Int</string>
-    <string name="people_person_message">Messaġġ</string>
+    <string name="people_person_message">Ibgħat messaġġ</string>
     <string name="people_person_accept">Aċċetta</string>
     <string name="people_person_decline">Irrifjuta</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Aċċetta kollox</string>
     <string name="people_invitations_decline_all">Irrifjuta kollox</string>
     <string name="people_invitations_cancel_all">Ikkanċella kollox</string>
+    <string name="people_invitations_cancel">Ikkanċella</string>
     <string name="people_invitations_all_accepted">L-istediniet kollha aċċettati</string>
     <string name="people_invitations_all_declined">L-istediniet kollha rifjutati</string>
     <string name="people_invitations_all_cancelled">L-istediniet kollha kkanċellati</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Fittex…</string>
     <string name="people_contacts_invited">Mistieden</string>
     <string name="people_contacts_accept">Aċċetta</string>
-    <string name="people_contacts_message">Messaġġ</string>
+    <string name="people_contacts_message">Ibgħat messaġġ</string>
     <string name="people_contacts_no_people_found">Ma nstabu l-ebda nies</string>
     <string name="people_contacts_try_adjusting">Ipprova taġġusta t-tfittxija tiegħek</string>
     <string name="people_contact_section_address">Indirizz</string>
@@ -127,7 +128,7 @@
     <string name="people_contact_email">Email</string>
     <string name="people_contact_city">Belt</string>
     <string name="people_contact_region">Reġjun</string>
-    <string name="people_contact_postcode">Postcode</string>
+    <string name="people_contact_postcode">Kodiċi postali</string>
     <string name="people_contact_country">Pajjiż</string>
     <string name="people_contact_type">Tip</string>
     <string name="people_contact_type_home">Dar</string>

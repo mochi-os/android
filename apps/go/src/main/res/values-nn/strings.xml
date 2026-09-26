@@ -7,7 +7,7 @@
     <string name="go_action_pass">Pasar</string>
     <string name="go_action_rematch">Omkamp</string>
     <string name="go_action_resign">Gje opp</string>
-    <string name="go_app_title">Gå</string>
+    <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Svarte erobringar</string>
     <string name="go_captures_white_sr">Kvite erobringar</string>
     <string name="go_chat_title">Prat</string>
@@ -62,7 +62,7 @@
     <string name="go_channel_name">Go-varsel</string>
     <string name="go_channel_description">Varsel om trekk, pass, remistilbod og partiresultat.</string>
     <string name="go_open_sidebar">Opne sidefelt</string>
-    <string name="go_sidebar_active">Aktive parti</string>
+    <string name="go_sidebar_active">Aktive spel</string>
     <string name="go_empty_active">Ingen aktive parti enno.</string>
     <string name="go_status_resigned">Gitt opp</string>
     <string name="go_new_game_title">Nytt Go-parti</string>

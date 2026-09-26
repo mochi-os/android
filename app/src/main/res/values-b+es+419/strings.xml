@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Mochi Feeds</string>
     <string name="launcher_chat">Mochi Chat</string>
     <string name="launcher_forums">Mochi Foros</string>
     <string name="launcher_projects">Mochi Proyectos</string>
@@ -11,8 +10,7 @@
 
     <string name="launcher_wikis">Mochi Wikis</string>
     <string name="launcher_go">Mochi Go</string>
-    <string name="launcher_market">Mochi Mercado</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="launcher_staff">Mochi Personal</string>
 
 
     <string name="app_name">Mochi</string>

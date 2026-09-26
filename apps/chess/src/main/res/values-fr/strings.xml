@@ -3,10 +3,10 @@
 
     <string name="chess_app_title">Échecs</string>
     <string name="chess_sidebar_header">Échecs</string>
-    <string name="chess_sidebar_active">Parties actives</string>
+    <string name="chess_sidebar_active">Parties en cours</string>
     <string name="chess_sidebar_completed">Terminé</string>
     <string name="chess_sidebar_new_game">Nouvelle partie</string>
-    <string name="chess_section_active">Parties actives</string>
+    <string name="chess_section_active">Parties en cours</string>
     <string name="chess_section_completed">Terminé</string>
     <string name="chess_new_game">Nouvelle partie</string>
     <string name="chess_empty_title">Aucune partie pour le moment</string>
@@ -17,7 +17,7 @@
     <string name="chess_new_add_friends">Ajouter des amis</string>
     <string name="chess_new_start_button">Démarrer la partie</string>
     <string name="chess_new_creating">Création…</string>
-    <string name="chess_chat_title">Chat</string>
+    <string name="chess_chat_title">Messagerie</string>
     <string name="chess_open_chat">Ouvrir le panneau de chat</string>
     <string name="chess_open_actions">Ouvrir les actions de la partie</string>
     <string name="chess_offer_draw">Proposer un match nul</string>
@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">Accepter</string>
     <string name="chess_draw_decline">Refuser</string>
     <string name="chess_status_checkmate_you_win">Échec et mat — vous avez gagné !</string>
-    <string name="chess_status_stalemate">Pat — match nul</string>
+    <string name="chess_status_stalemate">Pat — nulle</string>
     <string name="chess_status_draw">Match nul</string>
     <string name="chess_status_check_your_move">Échec — à votre tour</string>
     <string name="chess_status_your_move">À votre tour</string>
@@ -63,7 +63,7 @@
     <string name="chess_empty_start_button">Démarrer votre première partie</string>
     <string name="chess_empty_subtitle">Démarrez votre première partie pour jouer aux échecs avec un ami.</string>
     <string name="chess_move_capture">%1$s a pris %2$s</string>
-    <string name="chess_open_sidebar">Ouvrir le menu</string>
+    <string name="chess_open_sidebar">Ouvrir le panneau latéral</string>
     <string name="chess_ws_connecting">Connexion…</string>
     <string name="chess_ws_disconnected">Hors ligne</string>
     <string name="chess_ws_failed">Échec de la connexion</string>

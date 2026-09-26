@@ -25,7 +25,7 @@
     <string name="chat_chat_not_found">שמועס נישט געפֿונען</string>
 
     <string name="chat_message_send">שיקן</string>
-    <string name="chat_attachment_remove">Remove attachment</string>
+    <string name="chat_attachment_remove">אַראָפּנעמען בײַלאַגע</string>
     <string name="chat_attachment_move_up">באַוועגן אַרויף</string>
     <string name="chat_attachment_move_down">באַוועגן אַראָפּ</string>
 
@@ -38,7 +38,7 @@
     <string name="chat_messages_empty">נאָך קיין מעלדונגען — זאָגט שלום!</string>
     <string name="chat_messages_load_more">לאָדן עלטערע מעלדונגען</string>
     <string name="chat_attachment_label">טעקע</string>
-    <string name="chat_settings_rename">איבערנעמען שמועס</string>
+    <string name="chat_settings_rename">איבערטויפֿן שמועס</string>
     <string name="chat_settings_add_member_empty">קיין פֿרײַנד צוצוגעבן</string>
     <string name="chat_settings_remove_member_message">אַראָפּנעמען %1$s פֿון דעם שמועס?</string>
     <string name="chat_settings_leave_message">אַוועקגיין פֿון דעם שמועס? אַנדערע מיטגלידער וועלן מער נישט זען אײַערע מעלדונגען.</string>
@@ -53,7 +53,7 @@
     <string name="chat_forward_search">זוכן שמועסן…</string>
     <string name="chat_forward_empty">ניטאָ קיין שמועסן וווּהין ווײַטערצושיקן</string>
     <string name="chat_forward_success">ווײַטערגעשיקט</string>
-    <string name="chat_message_reply">ענטפֿערן</string>
+    <string name="chat_message_reply">ענטפֿער</string>
     <string name="chat_message_select">אויסקלײַבן</string>
     <string name="chat_reply_attachment">בײַלאַגע</string>
     <string name="chat_replying_to">ענטפֿערט אויף %1$s</string>
@@ -66,7 +66,7 @@
     <string name="chat_forward_friends">חברים</string>
     <string name="chat_policy_title">אַרײַנקומענדיקע שמועסן</string>
     <string name="chat_policy_friends">בלויז פֿרײַנד</string>
-    <string name="chat_policy_anyone">עמעצער</string>
+    <string name="chat_policy_anyone">ווער עס איז</string>
     <string name="chat_new_search_placeholder">זוך מענטשן</string>
     <string name="chat_new_no_matches">קיין פּאַסיקע מענטשן</string>
     <string name="chat_new_no_friends">זוך מענטשן צו שמועסן מיט</string>
@@ -78,7 +78,7 @@
     <string name="chat_marked_read">מארקירט ווי געלייענט</string>
     <string name="chat_search_next">ווײַטערדיקער געפֿינס</string>
     <string name="chat_search_prev">פֿריִערדיקער געפֿינס</string>
-    <string name="chat_settings_id">טשאַט אידענטיפֿיקאַציע</string>
+    <string name="chat_settings_id">שמועס ID</string>
     <string name="chat_message_edited">(רעדאַגירט)</string>
     <string name="chat_new_fallback_name">שמועס</string>
 </resources>

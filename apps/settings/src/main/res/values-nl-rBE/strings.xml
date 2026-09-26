@@ -283,7 +283,7 @@
     <string name="domain_delegation_delete_message">%1$s zal geen routes op dit domein meer beheren.</string>
     <string name="domain_delegation_delete_title">Delegatie verwijderen?</string>
     <string name="domain_delegation_path">Pad</string>
-    <string name="domain_delegation_user">Gebruikers-ID</string>
+    <string name="domain_delegation_user">Gebruiker</string>
     <string name="domain_delegations">Delegaties</string>
     <string name="domain_delegations_empty">Geen delegaties geconfigureerd.</string>
     <string name="domain_delete">Domein verwijderen</string>

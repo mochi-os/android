@@ -13,7 +13,7 @@
     <string name="chess_new_title">Yeni Oyun</string>
     <string name="chess_new_pick_opponent">Rəqib seçin</string>
     <string name="chess_new_no_friends_title">Hələ dost yoxdur</string>
-    <string name="chess_new_no_friends_subtitle">Oynamağa başlamaq üçün People tətbiqində dost əlavə edin</string>
+    <string name="chess_new_no_friends_subtitle">Oynamağa başlamaq üçün İnsanlar tətbiqində dost əlavə edin</string>
     <string name="chess_new_add_friends">Dostlar əlavə et</string>
     <string name="chess_new_start_button">Oyuna başla</string>
     <string name="chess_new_creating">Yaradılır…</string>
@@ -60,7 +60,7 @@
     <string name="chess_empty_subtitle">Dostunuzla şahmat oynamaq üçün ilk oyununuza başlayın.</string>
     <string name="chess_empty_start_button">İlk oyununuza başlayın</string>
     <string name="chess_detail_unavailable">Oyun əlçatan deyil</string>
-    <string name="chess_delete_title">Oyunu silmək?</string>
+    <string name="chess_delete_title">Oyun silinsin?</string>
     <string name="chess_delete_message">Bu, oyunu siyahınızdan silir.</string>
     <string name="chess_ws_connecting">Bağlanır…</string>
     <string name="chess_ws_disconnected">Oflayn</string>

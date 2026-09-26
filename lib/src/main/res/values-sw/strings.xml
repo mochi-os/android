@@ -41,7 +41,7 @@
     <string name="access_add_rule">Ongeza sheria</string>
     <string name="access_owner">Mmiliki</string>
     <string name="access_revoke">Batilisha</string>
-    <string name="access_level_comment">Maoni</string>
+    <string name="access_level_comment">Toa maoni</string>
     <string name="access_level_view">Tazama</string>
     <string name="access_level_none">Hakuna</string>
     <string name="reaction_like">Pendezwa</string>
@@ -61,7 +61,7 @@
     <string name="notifications_empty_unread">Umemaliza zote</string>
     <string name="notifications_tab_unread">Ambazo hazijasomwa</string>
     <string name="notifications_tab_unread_count">Ambazo hazijasomwa (%1$d)</string>
-    <string name="notifications_tab_all">Zote</string>
+    <string name="notifications_tab_all">Vyote</string>
     <string name="notifications_mark_all_read">Weka zote zimesomwa</string>
     <string name="notifications_clear_all">Futa vyote</string>
     <string name="settings_title">Mipangilio</string>
@@ -99,7 +99,7 @@
     <string name="settings_number_format">Muundo wa nambari</string>
     <string name="settings_units">Vipimo</string>
     <string name="settings_units_metric">Metriki</string>
-    <string name="settings_units_imperial">Imperial</string>
+    <string name="settings_units_imperial">Kiimperia</string>
     <string name="settings_time_zone">Saa za eneo</string>
     <string name="settings_reset_to_defaults">Weka upya kwa chaguo-msingi</string>
     <string name="settings_reset_confirm_title">Weka upya mapendeleo?</string>
@@ -111,7 +111,7 @@
     <string name="settings_display_reset_confirm_message">Hii itaweka upya mipangilio ya onyesho kwa thamani zao za chaguomsingi.</string>
     <string name="settings_theme_title">Mandhari</string>
     <string name="settings_theme_default">Chaguo-msingi</string>
-    <string name="settings_background">Mandhari nyuma</string>
+    <string name="settings_background">Mandharinyuma</string>
     <string name="settings_background_theme">Kutoka mandhari</string>
     <string name="settings_background_off">Hakuna</string>
     <string name="game_chat_empty">Hakuna ujumbe bado</string>
@@ -141,7 +141,7 @@
     <string name="auth_mfa_subtitle">Kamilisha hatua za uthibitishaji zilizosalia</string>
     <string name="auth_recover_account">Rejesha akaunti</string>
     <string name="auth_login_title">Ingia kwenye Mochi</string>
-    <string name="auth_next">Endelea</string>
+    <string name="auth_next">Inayofuata</string>
     <string name="auth_or_log_in_with">Au ingia kwa kutumia</string>
     <string name="auth_passkey">Pasiki</string>
     <string name="auth_use_passkey">Tumia ufunguo wa kupita</string>
@@ -192,7 +192,7 @@
     <string name="format_time_days_short">%1$dsk</string>
     <string name="format_time_weeks_short">%1$dw</string>
     <string name="format_time_months_short">%1$dmw</string>
-    <string name="reaction_add">Ongeza mwitikio</string>
+    <string name="reaction_add">Ongeza hisia</string>
     <string name="push_service_channel">Arifa za Mochi</string>
     <string name="push_service_channel_description">Huiweka Mochi imeunganishwa ili kupokea arifa</string>
     <string name="push_service_group">Huduma ya nyuma</string>
@@ -207,13 +207,13 @@
     <string name="oem_hint_allow">Ruhusu nyuma</string>
     <string name="oem_hint_dismiss">Usionyeshe tena</string>
     <string name="about_label">Kuhusu</string>
-    <string name="about_title">Mochi Client</string>
+    <string name="about_title">Mteja wa Mochi</string>
     <string name="about_version">Toleo %1$s</string>
     <string name="about_check_updates">Angalia masasisho</string>
     <string name="about_up_to_date">Imesasishwa</string>
     <string name="about_check_downloading">Toleo %1$s linapatikana, inapakua…</string>
     <string name="about_check_network_error">Haikuweza kufikia seva ya masasisho</string>
-    <string name="about_check_download_failed">Upakuaji umeshindikana</string>
+    <string name="about_check_download_failed">Upakuaji umeshindwa</string>
     <string name="notifications_clear_all_title">Futa arifa zote?</string>
     <string name="notifications_clear_all_message">Hii itaondoa kila arifa. Haziwezi kurejeshwa.</string>
     <string name="settings_value_auto">Otomatiki</string>
@@ -266,7 +266,7 @@
     <string name="person_picker_none">Hakuna</string>
     <string name="person_picker_clear">Futa uteuzi</string>
     <string name="person_picker_select">Chagua …</string>
-    <string name="person_picker_directory">Orodha</string>
+    <string name="person_picker_directory">Saraka</string>
     <string name="person_picker_no_people">Hakuna watu</string>
     <string name="person_picker_project_members">Wanachama wa mradi</string>
     <string name="account_token_label">Kipindi cha Mochi</string>

@@ -4,7 +4,7 @@
     <string name="error_access_denied">Giriş rədd edildi</string>
     <string name="auth_email">E-poçt</string>
     <string name="auth_continue">Davam et</string>
-    <string name="auth_verification_code">Yoxlama uğursuz oldu</string>
+    <string name="auth_verification_code">Təsdiq kodu</string>
     <string name="auth_email_code">E-poçt kodu</string>
     <string name="auth_recovery_code">Bərpa kodu</string>
     <string name="auth_name">Ad</string>
@@ -41,7 +41,7 @@
     <string name="access_add_rule">Qayda əlavə et</string>
     <string name="access_owner">Sahibi</string>
     <string name="access_revoke">Geri çağır</string>
-    <string name="access_level_comment">Şərh</string>
+    <string name="access_level_comment">Şərh yaz</string>
     <string name="access_level_view">Bax</string>
     <string name="access_level_none">Heç biri</string>
     <string name="reaction_like">Bəyən</string>
@@ -123,7 +123,7 @@
 
     <string name="app_brand">Mochi</string>
     <string name="error_network">Qoşulmaq mümkün olmadı. İnternet bağlantınızı yoxlayıb yenidən cəhd edin.</string>
-    <string name="error_authentication_required">Kimlik doğrulaması tələb olunur</string>
+    <string name="error_authentication_required">Doğrulama lazımdır</string>
     <string name="error_not_found">Tapılmadı</string>
     <string name="error_server">Server xətası (%1$d). Zəhmət olmasa daha sonra yenidən cəhd edin.</string>
     <string name="error_unexpected">Gözlənilməz xəta baş verdi</string>
@@ -163,9 +163,9 @@
     <string name="bootstrap_choose_account">Hesab seçin</string>
     <string name="bootstrap_sign_in_different_server">Başqa serverə daxil ol</string>
     <string name="common_retry">Yenidən cəhd et</string>
-    <string name="common_more_options">Daha çox seçim</string>
+    <string name="common_more_options">Digər seçimlər</string>
     <string name="common_collapse">Yığ</string>
-    <string name="common_expand">Aç</string>
+    <string name="common_expand">Genişlət</string>
     <string name="common_play_video">Videonu oynat</string>
     <string name="place_picker_name">Yer adı</string>
     <string name="place_origin">Başlanğıc</string>
@@ -192,7 +192,7 @@
     <string name="format_time_weeks_short">%1$d həftə</string>
     <string name="format_time_months_short">%1$d ay</string>
     <string name="reaction_add">Reaksiya əlavə et</string>
-    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel">Mochi push bildirişləri</string>
     <string name="push_service_channel_description">Bildirişləri almaq üçün Mochi-ni qoşulu saxlayır</string>
     <string name="push_service_group">Arxa fon xidməti</string>
     <string name="push_service_title">Mochi bildirişləri gözləyir</string>
@@ -241,7 +241,7 @@
     <string name="stepup_error_oauth">Bu hesabla doğrulama mümkün olmadı. Zəhmət olmasa, yenidən cəhd edin.</string>
     <string name="game_system_resign">%1$s təslim oldu</string>
     <string name="game_system_draw_offer">%1$s heç-heçə təklif etdi</string>
-    <string name="game_system_draw_accept">Heç-heçə razılaşıldı</string>
+    <string name="game_system_draw_accept">Heç-heçəyə razılaşıldı</string>
     <string name="game_system_draw_decline">%1$s heç-heçəni rədd etdi</string>
     <string name="reactivation_title">Hesabınız silinmək üçün planlaşdırılıb</string>
     <string name="reactivation_body">Hesabınız silinmək üçün planlaşdırılıb. İndi ləğv edib tam girişi bərpa edə bilərsiniz.</string>
@@ -249,7 +249,7 @@
     <string name="reactivation_reactivate">Hesabımı yenidən aktivləşdir</string>
     <string name="reactivation_sign_out">Bağlamağa davam et və çıx</string>
     <string name="common_play">Oynat</string>
-    <string name="common_pause">Dayandır</string>
+    <string name="common_pause">Pauza</string>
     <string name="common_opening_file">Fayl açılır…</string>
     <string name="common_no_app_for_file">Bu faylı aça biləcək tətbiq yoxdur</string>
     <string name="common_file_open_failed">Faylı açmaq mümkün olmadı</string>

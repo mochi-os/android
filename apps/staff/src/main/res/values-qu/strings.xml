@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">Llamk\'aqkuna</string>
+    <string name="launcher_staff">Mochi Llamk\'aqkuna</string>
     <string name="staff_accounts_action_ban_title">Cuenta hark\'ay</string>
     <string name="staff_accounts_action_suspend_title">Cuentata hark\'ay</string>
     <string name="staff_accounts_any_seller">Llapan</string>
@@ -24,7 +24,7 @@
     <string name="staff_accounts_status_active">Kawsachkan</string>
     <string name="staff_accounts_status_banned">Hark\'asqa</string>
     <string name="staff_accounts_status_suspended">Hark\'asqa</string>
-    <string name="staff_accounts_submitting">Apachispa…</string>
+    <string name="staff_accounts_submitting">Apachichkan…</string>
     <string name="staff_accounts_suspend">Hark\'ay</string>
     <string name="staff_accounts_suspended_toast">Cuenta sayachisqa</string>
     <string name="staff_accounts_unban">Banta paskay</string>
@@ -46,7 +46,7 @@
     <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Qillqakuna</string>
     <string name="staff_appeals_submit">Apachiy</string>
-    <string name="staff_appeals_submitting">Apachispa…</string>
+    <string name="staff_appeals_submitting">Apachichkan…</string>
     <string name="staff_appeals_upheld_toast">Apelación takyachisqa</string>
     <string name="staff_audit_action_account_banned">Hark\'asqa</string>
     <string name="staff_audit_action_account_seller_activated">Rantikuq atichasqa</string>
@@ -149,15 +149,15 @@
     <string name="staff_categories_type_digital">Digital</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">Físico</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">Llamk\'aqkuna</string>
     <string name="staff_config_field_auto_approve">Auto-chaskiy umbral</string>
     <string name="staff_config_field_hold">Hap\'iy umbral</string>
     <string name="staff_config_field_platform_fee">Plataforma fee</string>
     <string name="staff_config_field_review_window">Reseña ventana</string>
     <string name="staff_config_field_stripe_oauth_client">OAuth cliente ID</string>
-    <string name="staff_config_field_stripe_publishable">Publishable key</string>
+    <string name="staff_config_field_stripe_publishable">Publicana llave</string>
     <string name="staff_config_field_stripe_secret">Pakana key</string>
-    <string name="staff_config_group_moderation">Moderacion</string>
+    <string name="staff_config_group_moderation">Qhawakipay</string>
     <string name="staff_config_group_payments">Pagokuna</string>
     <string name="staff_config_group_reviews">Reseñakuna</string>
     <string name="staff_config_group_stripe">Stripe</string>
@@ -169,7 +169,7 @@
     <string name="staff_config_toast_save_failed">Mana waqaychayta atinchu</string>
     <string name="staff_config_toast_saved">Waqaychasqa</string>
     <string name="staff_dashboard_col_buyer">Rantiq</string>
-    <string name="staff_dashboard_col_detail">Sasi</string>
+    <string name="staff_dashboard_col_detail">Willariy</string>
     <string name="staff_dashboard_col_object">Objeto</string>
     <string name="staff_dashboard_col_reason">Imarayku</string>
     <string name="staff_dashboard_col_seller">Rantikuq</string>
@@ -189,9 +189,9 @@
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_open_sidebar">Lado tarjeta kicharikuy</string>
     <string name="staff_dashboard_system">Sistema</string>
-    <string name="staff_dashboard_tab_audit">Audit</string>
+    <string name="staff_dashboard_tab_audit">Auditoría</string>
     <string name="staff_dashboard_tab_listings">Qhatuykuna</string>
-    <string name="staff_dashboard_tab_moderation">Moderacion</string>
+    <string name="staff_dashboard_tab_moderation">Qhawakipay</string>
     <string name="staff_dashboard_tab_orders">Ordenkuna</string>
     <string name="staff_dashboard_tab_signups">Qillqaykuykuna</string>
     <string name="staff_disputes_any_status">Llapan kayniyoq</string>
@@ -222,18 +222,18 @@
     <string name="staff_disputes_resolution_seller">Vendiqpaq allichay</string>
     <string name="staff_disputes_resolve">Allichay</string>
     <string name="staff_disputes_resolved_toast">Disputa allichasqa</string>
-    <string name="staff_disputes_review">Reseña</string>
+    <string name="staff_disputes_review">Qhawapay</string>
     <string name="staff_disputes_status_escalated">Wichaymanta</string>
-    <string name="staff_disputes_status_open">Kichay</string>
+    <string name="staff_disputes_status_open">Kicharisqa</string>
     <string name="staff_disputes_status_resolved_buyer">Allichasqa (rantiq)</string>
     <string name="staff_disputes_status_resolved_seller">Allichasqa (vendiq)</string>
     <string name="staff_disputes_status_responded">Kutichisqa</string>
     <string name="staff_disputes_status_reviewing">Reseñashan</string>
     <string name="staff_disputes_view">Qhaway</string>
-    <string name="staff_filter_label_moderation">Moderacion</string>
-    <string name="staff_filter_label_seller">Vendiq</string>
+    <string name="staff_filter_label_moderation">Qhawakipay</string>
+    <string name="staff_filter_label_seller">Rantikuq</string>
     <string name="staff_filter_label_status">Estado</string>
-    <string name="staff_filter_label_type">Rikch\'aq</string>
+    <string name="staff_filter_label_type">Layan</string>
     <string name="staff_listings_action_approve_title">Listing chaskiy</string>
     <string name="staff_listings_action_reject_title">Vendiy mana munay</string>
     <string name="staff_listings_action_remove_title">Vendiyta qichuy</string>
@@ -243,13 +243,13 @@
     <string name="staff_listings_approved_toast">Qhatuy chaskisqa</string>
     <string name="staff_listings_cancel">Mana ruway</string>
     <string name="staff_listings_empty">Mana vendiykuna</string>
-    <string name="staff_listings_filter_moderation_label">Moderacion</string>
+    <string name="staff_listings_filter_moderation_label">Qhawakipay</string>
     <string name="staff_listings_filter_status_label">Estado</string>
     <string name="staff_listings_moderation_auto_approved">Auto-chaskisqa</string>
     <string name="staff_listings_moderation_hold">Hap\'iy</string>
     <string name="staff_listings_moderation_manual">Maki ruway</string>
     <string name="staff_listings_moderation_rejected">Mana munasqa</string>
-    <string name="staff_listings_moderation_review">Reseña</string>
+    <string name="staff_listings_moderation_review">Qhawapayanapaq</string>
     <string name="staff_listings_moderation_soft_approved">Llampu-chaskisqa</string>
     <string name="staff_listings_notes_label">Qillqakuna</string>
     <string name="staff_listings_price_placeholder">—</string>
@@ -266,7 +266,7 @@
     <string name="staff_listings_status_rejected">Mana munasqa</string>
     <string name="staff_listings_status_removed">Qichusqa</string>
     <string name="staff_listings_status_sold">Rantisqa</string>
-    <string name="staff_listings_submitting">Apachispa…</string>
+    <string name="staff_listings_submitting">Apachichkan…</string>
     <string name="staff_moderation_empty">Mana moderación qillqakuna</string>
     <string name="staff_moderation_listing_filter_placeholder">Qhatuy ID</string>
     <string name="staff_moderation_system">Sistema</string>
@@ -293,7 +293,7 @@
     <string name="staff_reports_meta_reason">Imarayku</string>
     <string name="staff_reports_meta_reporter">Reporteq</string>
     <string name="staff_reports_meta_seller">Rantikuq</string>
-    <string name="staff_reports_meta_target">Chayana</string>
+    <string name="staff_reports_meta_target">Reportasqa</string>
     <string name="staff_reports_meta_type">Layan</string>
     <string name="staff_reports_notes_label">Qillqakuna</string>
     <string name="staff_reports_reason_counterfeit">Yanqa utaq suwasqa</string>
@@ -307,7 +307,7 @@
     <string name="staff_reports_status_pending">Suyashan</string>
     <string name="staff_reports_status_reviewed">Reseñasqa</string>
     <string name="staff_reports_submit">Apachiy</string>
-    <string name="staff_reports_submitting">Apachispa…</string>
+    <string name="staff_reports_submitting">Apachichkan…</string>
     <string name="staff_reports_type_listing">Qhatuy</string>
     <string name="staff_reports_type_user">Apaykachaq</string>
     <string name="staff_reports_view">Qhaway</string>
@@ -328,11 +328,11 @@
     <string name="staff_sidebar_appeals">Apelaciones</string>
     <string name="staff_sidebar_categories">Categorías</string>
     <string name="staff_sidebar_config">Configuración</string>
-    <string name="staff_sidebar_dashboard">Dashboard</string>
+    <string name="staff_sidebar_dashboard">Panel</string>
     <string name="staff_sidebar_disputes">Disputas</string>
     <string name="staff_sidebar_listings">Qhatuykuna</string>
     <string name="staff_sidebar_management">Kamachiy</string>
-    <string name="staff_sidebar_market">Market</string>
+    <string name="staff_sidebar_market">Qhatu</string>
     <string name="staff_sidebar_moderation">Moderacion log</string>
     <string name="staff_sidebar_overview">Qhawasqa</string>
     <string name="staff_sidebar_reports">Reportekuna</string>
@@ -341,7 +341,7 @@
     <string name="staff_sidebar_team">Huñu</string>
     <string name="staff_status_actioned">Ruwasqa</string>
     <string name="staff_status_active">Kawsachkan</string>
-    <string name="staff_status_admin">Admin</string>
+    <string name="staff_status_admin">Kamachiq</string>
     <string name="staff_status_appealed">Apelasqa</string>
     <string name="staff_status_approved">Chaskisqa</string>
     <string name="staff_status_auto_approved">Auto-chaskisqa</string>
@@ -354,7 +354,7 @@
     <string name="staff_status_hold">Hap\'iy</string>
     <string name="staff_status_manual">Maki ruway</string>
     <string name="staff_status_moderator">Moderador</string>
-    <string name="staff_status_open">Kichay</string>
+    <string name="staff_status_open">Kicharisqa</string>
     <string name="staff_status_pending">Suyashan</string>
     <string name="staff_status_published">Publishasqa</string>
     <string name="staff_status_rejected">Mana munasqa</string>
@@ -362,7 +362,7 @@
     <string name="staff_status_resolved_buyer">Allichasqa (rantiq)</string>
     <string name="staff_status_resolved_seller">Allichasqa (vendiq)</string>
     <string name="staff_status_responded">Kutichisqa</string>
-    <string name="staff_status_review">Reseña</string>
+    <string name="staff_status_review">Qhawapayanapaq</string>
     <string name="staff_status_reviewed">Reseñasqa</string>
     <string name="staff_status_reviewing">Reseñashan</string>
     <string name="staff_status_soft_approved">Llampu-chaskisqa</string>
@@ -384,14 +384,14 @@
     <string name="staff_team_remove_confirm">Qichuy</string>
     <string name="staff_team_remove_desc">Staff equipomanta kay miembrota qichuy?</string>
     <string name="staff_team_remove_title">Equipo miembrota qichuy</string>
-    <string name="staff_team_role_admin">Admin</string>
+    <string name="staff_team_role_admin">Kamachiq</string>
     <string name="staff_team_role_moderator">Moderador</string>
     <string name="staff_team_role_support">Yanapay</string>
     <string name="staff_team_toast_add_failed">Mana miembrota yapayta atinchu</string>
     <string name="staff_team_toast_removed">Miembro pichasqa</string>
     <string name="staff_team_toast_added">Miembro yapasqa</string>
     <string name="staff_team_toast_role_updated">Llamk\'ana musuqyachisqa</string>
-    <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
+    <string name="staff_audit_action_auction_cancelled">Subasta mana ruwasqa</string>
     <string name="staff_dashboard_order_fallback">Mañakuy #%1$s</string>
 
     <string name="staff_accounts_action_unban_title">Hark\'ayta hurqay</string>
@@ -427,7 +427,7 @@
     <string name="staff_disputes_stripe_subscription_canceled">qillqasqa tukuchisqa</string>
     <string name="staff_disputes_stripe_unrecognized">mana riqsisqa kuyuy</string>
     <string name="staff_listings_seller_verified">Takyachisqa rantikuq</string>
-    <string name="staff_moderation_filter_clear">Akllaq pichay</string>
+    <string name="staff_moderation_filter_clear">Suskuyta pichay</string>
     <string name="staff_reports_listing_label">Rantiy #%1$s</string>
     <string name="staff_reports_meta_details">Willakuqpa willaykunan</string>
     <string name="staff_reviews_order_label">kamachiy #%1$s</string>

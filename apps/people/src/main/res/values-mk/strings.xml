@@ -61,8 +61,8 @@
     <string name="people_profile_upload">Прикачи</string>
     <string name="people_profile_uploading">Се прикачува…</string>
     <string name="people_profile_change_banner">Промени банер</string>
-    <string name="people_profile_no_banner">Не е поставен banner</string>
-    <string name="people_profile_favicon">Favicon</string>
+    <string name="people_profile_no_banner">Не е поставен банер</string>
+    <string name="people_profile_favicon">Фавикон</string>
     <string name="people_profile_browser_icon">Икона на прелистувач</string>
     <string name="people_profile_file_too_large">Датотеката е премногу голема</string>
     <string name="people_profile_clear">Исчисти</string>
@@ -76,7 +76,7 @@
     <string name="people_open_sidebar">Отвори навигација</string>
     <string name="people_person_state_friend">Пријатели</string>
     <string name="people_person_state_self">Вие</string>
-    <string name="people_person_message">Порака</string>
+    <string name="people_person_message">Испрати порака</string>
     <string name="people_person_accept">Прифати</string>
     <string name="people_person_decline">Одбиј</string>
 
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Прифати ги сите</string>
     <string name="people_invitations_decline_all">Одбиј ги сите</string>
     <string name="people_invitations_cancel_all">Откажи ги сите</string>
+    <string name="people_invitations_cancel">Откажи</string>
     <string name="people_invitations_all_accepted">Сите покани се прифатени</string>
     <string name="people_invitations_all_declined">Сите покани се одбиени</string>
     <string name="people_invitations_all_cancelled">Сите покани се откажани</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Пребарувај…</string>
     <string name="people_contacts_invited">Поканет</string>
     <string name="people_contacts_accept">Прифати</string>
-    <string name="people_contacts_message">Порака</string>
+    <string name="people_contacts_message">Испрати порака</string>
     <string name="people_contacts_no_people_found">Не се пронајдени луѓе</string>
     <string name="people_contacts_try_adjusting">Обидете се да го прилагодите вашето пребарување</string>
     <string name="people_contact_section_address">Адреса</string>

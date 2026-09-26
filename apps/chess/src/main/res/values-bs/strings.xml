@@ -13,7 +13,7 @@
     <string name="chess_new_title">Nova igra</string>
     <string name="chess_new_pick_opponent">Odaberite protivnika</string>
     <string name="chess_new_no_friends_title">Još nema prijatelja</string>
-    <string name="chess_new_no_friends_subtitle">Dodajte prijatelje u People aplikaciji da biste počeli igrati</string>
+    <string name="chess_new_no_friends_subtitle">Dodajte prijatelje u aplikaciji Ljudi da biste počeli igrati</string>
     <string name="chess_new_add_friends">Dodaj prijatelje</string>
     <string name="chess_new_start_button">Započni igru</string>
     <string name="chess_new_creating">Kreiranje…</string>
@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">Prihvati</string>
     <string name="chess_draw_decline">Odbij</string>
     <string name="chess_status_checkmate_you_win">Mat — pobijedili ste!</string>
-    <string name="chess_status_stalemate">Pat — neriješeno</string>
+    <string name="chess_status_stalemate">Pat — remi</string>
     <string name="chess_status_draw">Remi</string>
     <string name="chess_status_check_your_move">Šah — vaš potez</string>
     <string name="chess_status_your_move">Tvoj potez</string>

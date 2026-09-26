@@ -64,7 +64,7 @@
     <string name="go_channel_name">Oznámení Go</string>
     <string name="go_channel_description">Oznámení o tazích, vynechání tahu, nabídkách remízy a výsledcích partií.</string>
     <string name="go_open_sidebar">Otevřít boční panel</string>
-    <string name="go_sidebar_active">Aktivní partie</string>
+    <string name="go_sidebar_active">Aktivní hry</string>
     <string name="go_empty_active">Zatím žádné aktivní partie.</string>
     <string name="go_status_resigned">Vzdáno</string>
     <string name="go_new_game_title">Nová partie Go</string>

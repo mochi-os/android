@@ -215,7 +215,7 @@
     <string name="wikis_replicas_remove_confirm_title">Të hiqet replika?</string>
     <string name="wikis_replicas_remove_confirm_action">Hiq</string>
     <string name="wikis_replicas_remove_failed">Heqja e replikës dështoi</string>
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki-t</string>
     <string name="wikis_channel_name">Njoftime Wikis</string>
     <string name="wikis_channel_description">Njoftime për redaktime faqesh, komente dhe ftesa.</string>
     <string name="wikis_pageview_toc_expand">Shfaq tabelën e përmbajtjes</string>

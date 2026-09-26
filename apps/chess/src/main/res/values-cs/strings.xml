@@ -60,12 +60,12 @@
     <string name="chess_empty_subtitle">Zahajte první partii a hrajte šachy s přítelem.</string>
     <string name="chess_empty_start_button">Zahájit první partii</string>
     <string name="chess_detail_unavailable">Partie nedostupná</string>
-    <string name="chess_delete_title">Smazat partii?</string>
+    <string name="chess_delete_title">Smazat hru?</string>
     <string name="chess_delete_message">Tím se partie odstraní ze seznamu.</string>
     <string name="chess_ws_connecting">Připojování…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_reconnecting">Opětovné připojování…</string>
-    <string name="chess_ws_failed">Připojení selhalo</string>
+    <string name="chess_ws_failed">Připojení se nezdařilo</string>
     <string name="chess_move_capture">%1$s vzal %2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 

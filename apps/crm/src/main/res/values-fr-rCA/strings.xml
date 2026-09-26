@@ -63,8 +63,6 @@
     <string name="crm_views_sort_by">Trier par</string>
     <string name="crm_design">Conception</string>
     <string name="crm_design_title">Conception</string>
-    <string name="crm_sort_direction">Direction</string>
-    <string name="crm_views_direction">Direction</string>
     <string name="crm_sort_direction_asc">Croissant</string>
     <string name="crm_views_direction_asc">Croissant</string>
     <string name="crm_sort_direction_desc">Décroissant</string>

@@ -41,7 +41,7 @@
     <string name="market_bids_tab_active">アクティブ</string>
     <string name="market_bids_tab_all">すべて</string>
     <string name="market_bids_tab_lost">落札できず</string>
-    <string name="market_bids_tab_outbid">他の入札者あり</string>
+    <string name="market_bids_tab_outbid">より高い入札がありました</string>
     <string name="market_bids_tab_won">落札</string>
     <string name="market_bids_title">入札</string>
     <string name="market_channel_name">マーケット</string>
@@ -93,7 +93,7 @@
     <string name="market_checkout_title">チェックアウト</string>
     <string name="market_checkout_total">合計</string>
     <string name="market_checkout_winning_bid">落札</string>
-    <string name="market_condition_new">新規</string>
+    <string name="market_condition_new">新品</string>
     <string name="market_condition_refurbished">整備済み</string>
     <string name="market_condition_used">中古</string>
     <string name="market_dispute_dialog_cancel">キャンセル</string>
@@ -108,7 +108,7 @@
     <string name="market_editor_back">戻る</string>
     <string name="market_editor_category">カテゴリ</string>
     <string name="market_editor_condition">コンディション</string>
-    <string name="market_editor_condition_new">新規</string>
+    <string name="market_editor_condition_new">新品</string>
     <string name="market_editor_condition_refurbished">整備済み</string>
     <string name="market_editor_condition_used">中古</string>
     <string name="market_editor_currency">通貨</string>
@@ -142,7 +142,7 @@
     <string name="market_editor_type_physical">物理的</string>
     <string name="market_editor_zone_cancel">キャンセル</string>
     <string name="market_editor_zone_country_us">アメリカ合衆国</string>
-    <string name="market_editor_zone_region">都道府県</string>
+    <string name="market_editor_zone_region">地域</string>
     <string name="market_fee_preview_item">商品</string>
     <string name="market_fee_preview_payout">あなたの支払い</string>
     <string name="market_filter_all">すべて</string>
@@ -150,7 +150,7 @@
     <string name="market_filter_category">カテゴリ</string>
     <string name="market_filter_clear">フィルターをクリア</string>
     <string name="market_filter_condition">コンディション</string>
-    <string name="market_filter_condition_new">新規</string>
+    <string name="market_filter_condition_new">新品</string>
     <string name="market_filter_condition_refurbished">整備済み</string>
     <string name="market_filter_condition_used">中古</string>
     <string name="market_filter_delivery">配送</string>
@@ -183,7 +183,7 @@
     <string name="market_listing_detail_load_failed">出品の読み込みに失敗しました</string>
     <string name="market_listing_detail_listed">出品日 %1$s</string>
     <string name="market_listing_detail_location_heading">場所</string>
-    <string name="market_listing_detail_message">メッセージ</string>
+    <string name="market_listing_detail_message">メッセージを送信</string>
     <string name="market_listing_detail_message_seller">販売者にメッセージ</string>
     <string name="market_listing_detail_not_found">リスティングが見つかりません</string>
     <string name="market_listing_detail_place_bid">入札する</string>
@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">リスティングを報告</string>
     <string name="market_listing_detail_save">保存</string>
     <string name="market_listing_detail_seller_heading">販売者</string>
-    <string name="market_listing_detail_shipping_heading">発送</string>
+    <string name="market_listing_detail_shipping_heading">発送オプション</string>
     <string name="market_listing_detail_subscribe">購読する</string>
     <string name="market_listing_detail_tags_heading">タグ</string>
     <string name="market_listing_detail_title">リスティング</string>
@@ -200,7 +200,7 @@
     <string name="market_listings_action_delete">削除</string>
     <string name="market_listings_action_edit">編集</string>
     <string name="market_listings_action_relist">再出品</string>
-    <string name="market_listings_action_view">ビュー</string>
+    <string name="market_listings_action_view">表示</string>
     <string name="market_listings_delete_confirm">削除</string>
     <string name="market_listings_empty_title">まだリスティングがありません</string>
     <string name="market_listings_filter_active">アクティブ</string>
@@ -305,7 +305,7 @@
     <string name="market_sale_carrier_other">その他</string>
     <string name="market_sale_completed_label">完了</string>
     <string name="market_sale_dispute_respond">返答</string>
-    <string name="market_sale_dispute_state_open">開く</string>
+    <string name="market_sale_dispute_state_open">オープン</string>
     <string name="market_sale_dispute_state_resolved">解決済み</string>
     <string name="market_sale_load_failed">注文の読み込みに失敗しました</string>
     <string name="market_sale_message_buyer">購入者にメッセージ</string>
@@ -324,9 +324,9 @@
     <string name="market_sale_shipped_label">発送済み</string>
     <string name="market_sale_title">販売</string>
     <string name="market_sale_tracking_label">追跡番号</string>
-    <string name="market_saved_title">保存しました</string>
+    <string name="market_saved_title">保存済み</string>
     <string name="market_search_clear">検索をクリア</string>
-    <string name="market_section_categories">カテゴリを見る</string>
+    <string name="market_section_categories">カテゴリーを見る</string>
     <string name="market_section_listings">最近の出品</string>
     <string name="market_section_recent">最近見た商品</string>
     <string name="market_ship_dialog_cancel">キャンセル</string>
@@ -336,7 +336,7 @@
     <string name="market_shipping_days_value">%1$s日</string>
     <string name="market_shipping_notes">メモ</string>
     <string name="market_shipping_price">価格</string>
-    <string name="market_shipping_region">都道府県</string>
+    <string name="market_shipping_region">地域</string>
     <string name="market_sidebar_account">アカウント</string>
     <string name="market_sidebar_bids">入札</string>
     <string name="market_sidebar_browse">ブラウズ</string>
@@ -348,7 +348,7 @@
     <string name="market_sidebar_purchases">購入</string>
     <string name="market_sidebar_reviews">レビュー</string>
     <string name="market_sidebar_sales">販売</string>
-    <string name="market_sidebar_saved">保存しました</string>
+    <string name="market_sidebar_saved">保存済み</string>
     <string name="market_sidebar_selling">販売</string>
     <string name="market_sidebar_settings">設定</string>
     <string name="market_sidebar_subscribers">購読者</string>
@@ -429,7 +429,7 @@
     <string name="market_appeal_dialog_reason_label">異議申し立ての理由は何ですか?</string>
     <string name="market_appeal_dialog_title">削除に異議申し立て</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
-    <string name="market_bid_dialog_amount_label">入札額</string>
+    <string name="market_bid_dialog_amount_label">あなたの入札</string>
     <string name="market_bid_dialog_current_high">現在の最高入札額: %1$s</string>
     <string name="market_bid_dialog_failed">入札できませんでした</string>
     <string name="market_bid_dialog_invalid_amount">現在の入札額より高い金額を入力してください</string>
@@ -488,7 +488,7 @@
     <string name="market_editor_stripe_banner_description">この出品で支払いを受け取るにはStripeアカウントを接続してください。</string>
     <string name="market_editor_stripe_banner_title">Stripeのオンボーディングを完了</string>
     <string name="market_editor_tags_field">タグ (カンマ区切り)</string>
-    <string name="market_editor_title_new">新しい出品</string>
+    <string name="market_editor_title_new">新規出品</string>
     <string name="market_editor_title_required">写真やファイルを追加する前にタイトルを入力してください</string>
     <string name="market_editor_type">出品タイプ</string>
     <string name="market_editor_zone_add">ゾーンを追加</string>
@@ -607,7 +607,7 @@
     <string name="market_sale_dispute_state_responded">判定待ち</string>
     <string name="market_sale_dispute_stripe_reason">Stripe チャージバック理由: %1$s</string>
     <string name="market_sale_fee_gross">売上総額</string>
-    <string name="market_sale_fee_mochi">Mochi 手数料</string>
+    <string name="market_sale_fee_mochi">Mochi手数料</string>
     <string name="market_sale_fee_payout">受取額</string>
     <string name="market_sale_fee_stripe">Stripe 決済手数料</string>
     <string name="market_sale_fee_stripe_note">Stripe の決済手数料は Stripe ダッシュボードで確認できます。</string>
@@ -651,7 +651,7 @@
     <string name="market_account_company_label">会社</string>
     <string name="market_account_seller_card_active_body">Stripe を連携しました。</string>
     <string name="market_account_seller_card_active_title">販売者アカウントは有効です</string>
-    <string name="market_account_seller_card_continue">設定を続ける</string>
+    <string name="market_account_seller_card_continue">セットアップを続ける</string>
     <string name="market_account_seller_card_incomplete_body">Stripe を連携すると、出品と支払いの受け取りを開始できます。</string>
     <string name="market_account_seller_card_incomplete_title">販売者設定が未完了です</string>
     <string name="market_account_seller_card_start_body">販売者アカウントを作成すると、出品して購入者に届けられます。</string>
@@ -659,7 +659,7 @@
     <string name="market_account_seller_card_view">販売者設定を表示</string>
     <string name="market_account_vat_label">VAT／税務ID</string>
     <string name="market_seller_activate_action">出品者アカウントを有効化</string>
-    <string name="market_seller_activating">有効化しています...</string>
+    <string name="market_seller_activating">有効化中…</string>
     <string name="market_seller_become_heading">出品者になる</string>
     <string name="market_seller_become_title">出品者になる</string>
     <string name="market_seller_check_status">ステータスを確認</string>

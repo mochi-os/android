@@ -85,7 +85,7 @@
     <string name="projects_request_merge_dialog_title">Yhdistä</string>
     <string name="projects_request_method">Tapa</string>
     <string name="projects_request_method_merge">Yhdistä</string>
-    <string name="projects_request_field_repository">Repository</string>
+    <string name="projects_request_field_repository">Tietovarasto</string>
     <string name="projects_request_field_source">Lähdehaara</string>
     <string name="projects_request_field_title">Otsikko</string>
     <string name="projects_request_field_description">Kuvaus</string>
@@ -106,7 +106,7 @@
     <string name="projects_design_import">Tuo rakenne</string>
     <string name="projects_design_imported">Suunnitelma tuotu</string>
     <string name="projects_design_tab_classes">Luokat</string>
-    <string name="projects_design_tab_views">Katselukerrat</string>
+    <string name="projects_design_tab_views">Näkymät</string>
     <string name="projects_design_import_dialog_title">Tuo rakenne</string>
     <string name="projects_design_import_choose_template">Valitse malli</string>
     <string name="projects_design_replace_title">Korvataanko suunnittelu?</string>
@@ -123,7 +123,7 @@
     <string name="projects_class_delete">Poista luokka</string>
     <string name="projects_class_delete_title">Poista luokka</string>
     <string name="projects_field_type_text">Teksti</string>
-    <string name="projects_field_type_number">Numero</string>
+    <string name="projects_field_type_number">Luku</string>
     <string name="projects_field_type_user">Käyttäjä</string>
     <string name="projects_field_type_date">Päivämäärä</string>
     <string name="projects_field_type_checklist">Tarkistuslista</string>
@@ -146,7 +146,7 @@
     <string name="projects_views_edit_dialog_title">Muokkaa näkymää</string>
     <string name="projects_views_delete_title">Poista näkymä</string>
     <string name="projects_views_type">Tyyppi</string>
-    <string name="projects_views_type_board">Lauta</string>
+    <string name="projects_views_type_board">Taulu</string>
     <string name="projects_views_type_list">Luettelo</string>
     <string name="projects_views_direction">Suunta</string>
     <string name="projects_views_sort_number">Numero</string>
@@ -182,7 +182,7 @@
     <string name="projects_links_search_placeholder">Hae kohteita</string>
 
     <string name="notification_channel_projects">Projects-ilmoitukset</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Projektit</string>
     <string name="projects_list_search_placeholder">Hae projekteja</string>
     <string name="projects_list_no_matching">Ei vastaavia projekteja</string>
     <string name="projects_list_empty">Ei vielä projekteja</string>
@@ -201,7 +201,7 @@
     <string name="projects_parent_none">Ei yläkohdetta</string>
     <string name="projects_links_empty">Ei linkkejä</string>
     <string name="projects_links_section_relates">Liittyy</string>
-    <string name="projects_links_section_duplicated_by">Kaksoiskappaleena</string>
+    <string name="projects_links_section_duplicated_by">Kaksoiskappaleet</string>
     <string name="projects_links_type">Linkin tyyppi</string>
     <string name="projects_links_type_relates">Liittyy</string>
     <string name="projects_links_remove">Poista linkki</string>
@@ -244,7 +244,7 @@
     <string name="projects_request_create_title">Luo yhdistämispyyntö</string>
     <string name="projects_request_field_target">Kohdehaara</string>
     <string name="projects_diff_title">Erot: %1$s -&gt; %2$s</string>
-    <string name="projects_tree_collapse">Kutista</string>
+    <string name="projects_tree_collapse">Tiivistä</string>
     <string name="projects_tree_expand">Laajenna</string>
     <string name="projects_tree_move">Siirrä</string>
     <string name="projects_tree_move_to_parent">Siirrä yläkohteeksi</string>
@@ -287,7 +287,7 @@
     <string name="projects_field_filterable">Suodatettavissa</string>
     <string name="projects_field_show_on_card">Näytä kortilla</string>
     <string name="projects_field_multi">Monivalinta</string>
-    <string name="projects_field_position">Näyttöpaikka</string>
+    <string name="projects_field_position">Näyttösijainti</string>
     <string name="projects_field_position_header">Otsake</string>
     <string name="projects_field_validation">Validointi</string>
     <string name="projects_field_min_length">Vähimmäispituus</string>
@@ -330,7 +330,7 @@
     <string name="projects_settings_field_fingerprint">Sormenjälki</string>
     <string name="projects_settings_field_server">Palvelin</string>
     <string name="projects_access_subject_anyone">Kuka tahansa</string>
-    <string name="projects_access_subject_authenticated">Todennetut käyttäjät</string>
+    <string name="projects_access_subject_authenticated">Kirjautuneet käyttäjät</string>
     <string name="projects_access_select_role">Valitse rooli</string>
     <string name="projects_access_role_view">Vain katselu</string>
     <string name="projects_access_role_none">Ei käyttöoikeutta</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Valitse sääntö</string>
     <string name="projects_access_authenticated_desc">Kaikki kirjautuneet käyttäjät</string>
     <string name="projects_access_anyone_desc">Mukaan lukien anonyymit käyttäjät</string>
-    <string name="projects_access_target">Kohde</string>
+    <string name="projects_access_target">Käyttäjä tai ryhmä</string>
     <string name="projects_access_target_hint">Entiteetin tunnus, @ryhmä, * (kaikki) tai + (jäsenet)</string>
     <string name="projects_access_selected">Valittu: %1$s</string>
     <string name="projects_access_role_comment">Kommentoi ja katsele</string>

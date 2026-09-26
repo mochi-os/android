@@ -10,7 +10,7 @@
     <string name="calendars_delete">Efase</string>
     <string name="calendars_previous">Anvan</string>
     <string name="calendars_next">Pwochen</string>
-    <string name="calendars_view">Wè</string>
+    <string name="calendars_view">Vi</string>
     <string name="calendars_view_list">Lis</string>
     <string name="calendars_list_search">Chèche</string>
     <string name="calendars_event_untitled">San tit</string>
@@ -30,7 +30,7 @@
     <string name="calendars_day_friday">Vandredi</string>
     <string name="calendars_day_saturday">Samdi</string>
     <string name="calendars_link_replace">Ranplase</string>
-    <string name="calendars_link_revoke">Retire</string>
+    <string name="calendars_link_revoke">Anile</string>
     <string name="calendars_permission_allow">Pèmèt</string>
     <string name="calendars_permission_deny">Refize</string>
     <string name="calendars_sync_title">Senkronize ak telefòn sa a</string>
@@ -154,7 +154,7 @@
     <string name="calendars_link_submit">Konekte</string>
     <string name="calendars_link_sync">Sinkronize kounye a</string>
     <string name="calendars_link_grant">Pèmèt aksè kalandriye</string>
-    <string name="calendars_link_linked">Konekte</string>
+    <string name="calendars_link_linked">Lye</string>
     <string name="calendars_link_marker">Kalandriye konekte</string>
     <string name="calendars_link_remote_empty">Pa gen kalandriye</string>
     <string name="calendars_poll_conflict">Yon evènman chanje toude bò yo</string>
@@ -169,7 +169,7 @@
     <string name="calendars_subscribe_server_url">Adrès sèvè a</string>
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
-    <string name="calendars_subscribe_google">Google Calendar</string>
+    <string name="calendars_subscribe_google">Google Kalandriye</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Kont Google yo pa aktive sou sèvè sa a. Aktive yo anba Paramèt, Paramèt sistèm.</string>
     <string name="calendars_subscribe_google_connect">Ou pa konekte okenn kont Google.</string>

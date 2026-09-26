@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="settings_home_title">Axustes</string>
+    <string name="settings_home_title">Configuración</string>
     <string name="settings_home_logout">Pechar sesión</string>
     <string name="settings_home_account">Conta</string>
     <string name="settings_home_preferences">Preferencias</string>
@@ -99,7 +99,7 @@
     <string name="accounts_status_connected">Conectado</string>
     <string name="accounts_default_for_ai">Predeterminado para a IA</string>
     <string name="accounts_test">Probar</string>
-    <string name="accounts_settings">Axustes</string>
+    <string name="accounts_settings">Configuración</string>
     <string name="accounts_verify">Verificar</string>
     <string name="accounts_remove">Eliminar</string>
     <string name="accounts_remove_title">Eliminar conta?</string>
@@ -242,7 +242,7 @@
     <string name="route_meta">Prioridade %1$d · %2$s</string>
     <string name="interests_search_placeholder">Buscar temas para engadir…</string>
     <string name="interests_empty">Aínda non hai intereses.</string>
-    <string name="interests_summary_regenerate">Rexenerar resumo</string>
+    <string name="interests_summary_regenerate">Rexenerar o resumo</string>
     <string name="interests_summary_regenerating">Rexenerando…</string>
     <string name="interests_summary_empty">Engade algúns intereses para xerar un resumo do que che gusta.</string>
     <string name="interests_search_failed">A busca fallou. Por favor, téntao de novo.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s xa non xestionará rutas neste dominio.</string>
     <string name="domain_delegation_delete_title">Eliminar delegación?</string>
     <string name="domain_delegation_path">Ruta</string>
-    <string name="domain_delegation_user">ID de usuario</string>
+    <string name="domain_delegation_user">Usuario</string>
     <string name="domain_delegations">Delegacións</string>
     <string name="domain_delegations_empty">Non hai delegacións configuradas.</string>
     <string name="domain_delete">Eliminar dominio</string>
@@ -375,7 +375,7 @@
     <string name="accounts_forget_title">Esquecer o dispositivo?</string>
     <string name="accounts_forget_message">Isto esquecerá o dispositivo \"%1$s\" e deixará de enviarlle notificacións.</string>
     <string name="accounts_device_seen">Visto por última vez %1$s</string>
-    <string name="notifprefs_device_app">%1$s · app</string>
+    <string name="notifprefs_device_app">%1$s · aplicación</string>
     <string name="notifprefs_device_push">%1$s · push</string>
     <string name="notifprefs_test_partial">Proba enviada a %1$d de %2$d destinos</string>
     <string name="notifprefs_test_none">Non hai destinos configurados</string>

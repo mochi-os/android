@@ -17,7 +17,7 @@
     <string name="chess_new_add_friends">Ajoute zanmi</string>
     <string name="chess_new_start_button">Kòmanse jwèt la</string>
     <string name="chess_new_creating">Ap kreye…</string>
-    <string name="chess_chat_title">Chat</string>
+    <string name="chess_chat_title">Diskisyon</string>
     <string name="chess_open_chat">Ouvri panèl chat</string>
     <string name="chess_open_actions">Ouvri aksyon jwèt yo</string>
     <string name="chess_offer_draw">Pwopoze egalite</string>
@@ -32,8 +32,8 @@
     <string name="chess_draw_accept">Aksepte</string>
     <string name="chess_draw_decline">Refize</string>
     <string name="chess_status_checkmate_you_win">Echèk e mat — ou genyen!</string>
-    <string name="chess_status_stalemate">Mat — egal</string>
-    <string name="chess_status_draw">Match nul</string>
+    <string name="chess_status_stalemate">Pat — egalite</string>
+    <string name="chess_status_draw">Egalite</string>
     <string name="chess_status_check_your_move">Echèk — koudè ou</string>
     <string name="chess_status_your_move">Mouvman w</string>
     <string name="chess_move_subject_you">Ou</string>
@@ -60,7 +60,7 @@
     <string name="chess_empty_subtitle">Kòmanse premye pati ou pou jwe echèk ak yon zanmi.</string>
     <string name="chess_empty_start_button">Kòmanse premye pati ou</string>
     <string name="chess_detail_unavailable">Pati pa disponib</string>
-    <string name="chess_delete_title">Efase pati?</string>
+    <string name="chess_delete_title">Efase jwèt la?</string>
     <string name="chess_delete_message">Sa retire pati a nan lis ou.</string>
     <string name="chess_ws_connecting">Ap konekte…</string>
     <string name="chess_ws_disconnected">Offline</string>

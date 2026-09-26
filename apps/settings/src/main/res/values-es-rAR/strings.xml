@@ -351,6 +351,5 @@
     <string name="login_method_recovery">Códigos de recuperación</string>
     <string name="route_target_select">Seleccionar</string>
     <string name="accounts_provider_url">URL externa</string>
-    <string name="accounts_provider_web">Mochi web</string>
     <string name="account_data_generate">Generar frase de contraseña</string>
 </resources>

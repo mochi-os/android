@@ -8,7 +8,7 @@
     <string name="go_action_pass">Passa</string>
     <string name="go_action_rematch">Revenja</string>
     <string name="go_action_resign">Abandona</string>
-    <string name="go_app_title">Vés</string>
+    <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Captures negres</string>
     <string name="go_captures_white_sr">Captures blanques</string>
     <string name="go_chat_title">Xat</string>
@@ -16,7 +16,7 @@
     <string name="go_color_white">Blanques</string>
     <string name="go_delete_confirm">Suprimeix</string>
     <string name="go_delete_message">Aquesta partida s\'eliminarà de la teva llista. Aquesta acció no es pot desfer.</string>
-    <string name="go_delete_title">Suprimir la partida?</string>
+    <string name="go_delete_title">Vols suprimir la partida?</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">Accepta</string>
     <string name="go_draw_decline">Rebutja</string>

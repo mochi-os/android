@@ -109,7 +109,7 @@
     <string name="wikis_rename_page_failed">Seite konnte nicht umbenannt werden</string>
     <string name="wikis_history_title">Verlauf</string>
     <string name="wikis_history_empty">Keine Revisionen gefunden</string>
-    <string name="wikis_history_view_action">Ansicht</string>
+    <string name="wikis_history_view_action">Anzeigen</string>
     <string name="wikis_history_revert_action">Auf diese Version zurücksetzen</string>
     <string name="wikis_revision_current_badge">Aktuell</string>
     <string name="wikis_revision_revert_to_this">Auf diese Version zurücksetzen</string>
@@ -283,7 +283,7 @@
     <string name="wikis_load_more">Mehr laden</string>
     <string name="wikis_access_change_level">Zugriffsebene</string>
     <string name="wikis_access_subject_anyone">Jeder</string>
-    <string name="wikis_access_subject_authenticated">Authentifizierte Benutzer</string>
+    <string name="wikis_access_subject_authenticated">Angemeldete Benutzer</string>
 
     <string name="wikis_revision_compare">Änderungen vergleichen</string>
     <string name="wikis_revision_author">nach %1$s</string>

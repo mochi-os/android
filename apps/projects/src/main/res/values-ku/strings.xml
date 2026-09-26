@@ -37,7 +37,7 @@
     <string name="projects_settings_title">Mîheng</string>
     <string name="projects_settings_tab_general">Giştî</string>
     <string name="projects_settings_tab_access">Gihîştin</string>
-    <string name="projects_settings_tab_people">Kes</string>
+    <string name="projects_settings_tab_people">Mirov</string>
     <string name="projects_option_icon">Wêneyê piçûk</string>
     <string name="projects_option_icon_placeholder">wekî Check, Star, Flag</string>
     <string name="projects_settings_unsubscribe">Abone yî nebe</string>
@@ -52,12 +52,12 @@
     <string name="projects_object_tab_activity">Çalakî</string>
     <string name="projects_object_tab_requests">Daxwaz</string>
     <string name="projects_object_tab_attachments">Pêvek</string>
-    <string name="projects_object_tab_links">Lînka</string>
+    <string name="projects_object_tab_links">Girêdan</string>
     <string name="projects_watchers_watch">Temaşe bike</string>
     <string name="projects_watchers_unwatch">Temaşekirinê rawestîne</string>
     <string name="projects_parent_label">Dêûbav</string>
     <string name="projects_parent_search_placeholder">Lêger</string>
-    <string name="projects_links_title">Lînka</string>
+    <string name="projects_links_title">Girêdan</string>
     <string name="projects_links_add">Girêdan zêde bike</string>
     <string name="projects_links_section_blocks">Blok</string>
     <string name="projects_links_section_blocked_by">Hat astengkirin ji aliyê</string>
@@ -106,7 +106,7 @@
     <string name="projects_design_import">Sêwiranê bîne</string>
     <string name="projects_design_imported">Sêwiran hat îthal kirin</string>
     <string name="projects_design_tab_classes">Pol</string>
-    <string name="projects_design_tab_views">Dîtin</string>
+    <string name="projects_design_tab_views">Dîmen</string>
     <string name="projects_design_import_dialog_title">Sêwiranê bîne</string>
     <string name="projects_design_import_choose_template">Şabloneke hilbijêre</string>
     <string name="projects_design_replace_title">Dîzaynê biguhere?</string>
@@ -146,7 +146,7 @@
     <string name="projects_views_edit_dialog_title">Dîmenê sererast bike</string>
     <string name="projects_views_delete_title">Dîtinê jê bibe</string>
     <string name="projects_views_type">Cure</string>
-    <string name="projects_views_type_board">Tabloya</string>
+    <string name="projects_views_type_board">Tablo</string>
     <string name="projects_views_type_list">Lîste</string>
     <string name="projects_views_direction">Arasteyî</string>
     <string name="projects_views_sort_number">Hejmar</string>
@@ -160,23 +160,23 @@
     <string name="projects_comment_send">Bişîne</string>
     <string name="projects_field_position_body">Naverok</string>
     <string name="projects_sort_field">Rêz bike li gor</string>
-    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_comment_remove_attachment">Pêvekê rake</string>
     <string name="projects_views_sort_by">Rêz bike li gor</string>
     <string name="projects_auth_login_failed">Têketin têk çû</string>
     <string name="projects_views_move_up">Bibe jor</string>
     <string name="projects_class_move_up">Bibe jor</string>
     <string name="projects_views_move_down">Bibe jêr</string>
     <string name="projects_class_move_down">Bibe jêr</string>
-    <string name="projects_sort_direction_asc">Hilkişîn</string>
-    <string name="projects_views_direction_asc">Hilkişîn</string>
-    <string name="projects_sort_direction_desc">Daketin</string>
-    <string name="projects_views_direction_desc">Daketin</string>
+    <string name="projects_sort_direction_asc">Hilkişandî</string>
+    <string name="projects_views_direction_asc">Hilkişandî</string>
+    <string name="projects_sort_direction_desc">Daketî</string>
+    <string name="projects_views_direction_desc">Daketî</string>
     <string name="projects_list_add_to_home">Li ekrana malê zêde bike</string>
     <string name="projects_search_objects_placeholder">Lê bigerin</string>
     <string name="projects_links_search_placeholder">Lê bigerin</string>
 
     <string name="notification_channel_projects">Agahdariyên projeyan</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_auth_brand">Mochi Proje</string>
     <string name="projects_auth_create_identity_failed">Çêkirina nasnameyê bi ser neket</string>
     <string name="projects_auth_mfa_unsupported">MFA hîn di sepana mobîl de nayê piştgirîkirin</string>
     <string name="projects_auth_enter_code_sent">Koda ku ji %1$s re hat şandin binivîse</string>
@@ -191,7 +191,7 @@
     <string name="projects_views_filter">Parzûn (hatiye tomar kirin, hîn nehatiye sepandin)</string>
     <string name="projects_people_empty">Hîn kesek bi gihîştinê tune</string>
     <string name="projects_settings_delete_confirm_message">Bi rastî tu dixwazî vê projeyê jê bibî? Hemû obje, şîrove û mîheng dê bi awayekî mayînde werin rakirin.</string>
-    <string name="projects_object_unwatch">Çavdêrî betal bike</string>
+    <string name="projects_object_unwatch">Êdî temaşe neke</string>
     <string name="projects_object_tab_watchers">Çavdêr</string>
     <string name="projects_watchers_empty">Hîn çavdêr tune</string>
     <string name="projects_object_delete_title">Objeyê jê bibe</string>
@@ -244,9 +244,9 @@
     <string name="projects_request_create_title">Daxwaza tevlihevkirinê çêke</string>
     <string name="projects_request_field_target">Şaxê armanc</string>
     <string name="projects_diff_title">Cudahî: %1$s -&gt; %2$s</string>
-    <string name="projects_tree_collapse">Bigire</string>
-    <string name="projects_tree_expand">Veke</string>
-    <string name="projects_tree_move">Bibe</string>
+    <string name="projects_tree_collapse">Berhev bike</string>
+    <string name="projects_tree_expand">Fireh bike</string>
+    <string name="projects_tree_move">Veguhêze</string>
     <string name="projects_tree_move_to_parent">Bibe bo dêûbav</string>
     <string name="projects_tree_root_level">(Asta kok)</string>
     <string name="projects_tree_empty">Obje tune</string>
@@ -261,7 +261,7 @@
     <string name="projects_drag_row">Rêzê bikişîne</string>
     <string name="projects_drag_column">Stûnê bikişîne</string>
     <string name="projects_drag_hint">Ji bo livandinê dirêj bitikîne û bikişîne</string>
-    <string name="projects_design_more_options">Bêtir vebijark</string>
+    <string name="projects_design_more_options">Vebijarkên zêdetir</string>
     <string name="projects_design_clipboard_label">JSON-a sêwiranê</string>
     <string name="projects_design_export_subject">Sêwirana projeyê</string>
     <string name="projects_design_share_chooser">Sêwiranê parve bike</string>
@@ -276,7 +276,7 @@
     <string name="projects_classes_empty">Tu çîn nehatine pênasekirin</string>
     <string name="projects_class_label">Çîn: %1$s</string>
     <string name="projects_class_title_field_description">Kîjan qad wekî sernavê pêşandanê ji bo tiştên vê çînê were bikaranîn.</string>
-    <string name="projects_class_title_field_default">Berdest (xwendinbar)</string>
+    <string name="projects_class_title_field_default">Standard (xwendinbar)</string>
     <string name="projects_class_merge_requests_description">Destûrê bide daxwazên tevlihevkirinê li ser tiştên vê çînê.</string>
     <string name="projects_class_parents">Çînên dê û bav</string>
     <string name="projects_class_delete_message">Bi rastî tu dixwazî çîna \"%1$s\" jê bibî? Hemû qad û vebijarkên wan jî dê werin jêbirin.</string>
@@ -287,12 +287,12 @@
     <string name="projects_field_filterable">Parzûnbar</string>
     <string name="projects_field_show_on_card">Li ser kartê nîşan bide</string>
     <string name="projects_field_multi">Pir-hilbijartin</string>
-    <string name="projects_field_position">Cihê pêşandanê</string>
-    <string name="projects_field_position_header">Sernav</string>
+    <string name="projects_field_position">Cihê nîşandanê</string>
+    <string name="projects_field_position_header">Sernivîs</string>
     <string name="projects_field_validation">Pejirandin</string>
     <string name="projects_field_min_length">Dirêjiya herî kêm</string>
     <string name="projects_field_max_length">Dirêjiya herî zêde</string>
-    <string name="projects_field_pattern">Şêwaz (regex)</string>
+    <string name="projects_field_pattern">Şablon (regex)</string>
     <string name="projects_field_rows">Rêz (bilindahiya qada nivîsê)</string>
     <string name="projects_field_no_options">Tu vebijark nehatine pênasekirin</string>
     <string name="projects_field_delete_message">Bi rastî tu dixwazî qada \"%1$s\" jê bibî? Hemû vebijark û nirx dê winda bibin.</string>
@@ -314,7 +314,7 @@
     <string name="projects_design_preview_empty">Tiştek ji bo nîşandanê tune</string>
 
     <string name="projects_create_choose_template">Şabloneke hilbijêre</string>
-    <string name="projects_create_next">Pêş</string>
+    <string name="projects_create_next">Pêştir</string>
     <string name="projects_filter">Parzûna</string>
     <string name="projects_link">Girêdan</string>
     <string name="projects_filter_clear_all">Hemûyan paqij bike</string>
@@ -330,7 +330,7 @@
     <string name="projects_settings_field_fingerprint">Tilîya destan</string>
     <string name="projects_settings_field_server">Server</string>
     <string name="projects_access_subject_anyone">Her kes</string>
-    <string name="projects_access_subject_authenticated">Bikarhênerên erêkirî</string>
+    <string name="projects_access_subject_authenticated">Bikarhênerên pejirandî</string>
     <string name="projects_access_select_role">Rolê hilbijêre</string>
     <string name="projects_access_role_view">Tenê dîtin</string>
     <string name="projects_access_role_none">Bê destpêkirin</string>
@@ -343,7 +343,7 @@
     <string name="projects_access_select_rule">Rêzikekê hilbijêre</string>
     <string name="projects_access_authenticated_desc">Her kesê ku têketî ye</string>
     <string name="projects_access_anyone_desc">Bikarhênerên nenas jî tê de</string>
-    <string name="projects_access_target">Armanc</string>
+    <string name="projects_access_target">Bikarhêner an kom</string>
     <string name="projects_access_target_hint">Nasnameya saziyê, @kom, * (her kes), an + (endam)</string>
     <string name="projects_access_selected">Hilbijartî: %1$s</string>
     <string name="projects_access_role_comment">Şîrove û dîtin</string>
@@ -371,7 +371,7 @@
     <string name="projects_design_export_saved">Sêwirandin hate tomarkirin</string>
     <string name="projects_design_import_failed">Nekarî wê pelê bixwîne</string>
     <string name="projects_design_or_upload_json">An jî pelekê bar bike</string>
-    <string name="projects_export">Daneyan derxîne</string>
+    <string name="projects_export">Daneyan eksport bike</string>
     <string name="projects_export_failed">Nekarî hinardekirin tomar bike</string>
     <string name="projects_export_saved">Daneyên projeyê hatin tomarkirin</string>
     <string name="projects_exporting">Hinardekirin tê amadekirin…</string>
@@ -381,5 +381,5 @@
     <string name="projects_option_delete_message">Ma tu pê ewle yî ku dixwazî vebijêrka \"%1$s\" jê bibî?</string>
     <string name="projects_create_object_no_types">Hêj tu cure babetan nikarin werin afirandin. Pêşî babetên dê yên pêwîst biafirîne.</string>
     <string name="projects_create_blocked_no_options">Nayê afirandin: %1$s pêwîst e lê vebijarkên wê tune ne. Di Sêwiranê de vebijarkan lê zêde bike.</string>
-    <string name="projects_attachment_remove">Remove attachment</string>
+    <string name="projects_attachment_remove">Pêvekê rake</string>
 </resources>

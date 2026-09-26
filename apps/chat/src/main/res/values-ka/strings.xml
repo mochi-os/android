@@ -25,7 +25,7 @@
     <string name="chat_chat_not_found">ჩატი ვერ მოიძებნა</string>
 
     <string name="chat_message_send">გაგზავნა</string>
-    <string name="chat_attachment_remove">Remove attachment</string>
+    <string name="chat_attachment_remove">დანართის ამოღება</string>
     <string name="chat_attachment_move_up">აწევა</string>
     <string name="chat_attachment_move_down">ჩამოწევა</string>
 
@@ -54,7 +54,7 @@
     <string name="chat_forward_empty">გადასაგზავნი ჩატები არ არის</string>
     <string name="chat_forward_success">გადაიგზავნა</string>
     <string name="chat_message_reply">პასუხი</string>
-    <string name="chat_message_select">მონიშვნა</string>
+    <string name="chat_message_select">არჩევა</string>
     <string name="chat_reply_attachment">დანართი</string>
     <string name="chat_replying_to">პასუხი %1$s-ს</string>
     <string name="chat_delete_confirm_title">წავშალოთ შეტყობინება?</string>

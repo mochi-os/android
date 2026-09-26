@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Cancelar inscrição</string>
     <string name="forums_list_unsubscribe_title">Cancelar inscrição</string>
     <string name="forums_create_title">Criar fórum</string>
-    <string name="forums_create_name">Nome</string>
+    <string name="forums_create_name">Nome do fórum</string>
     <string name="forums_create_privacy">Privacidade</string>
     <string name="forums_create_private">Privado</string>
     <string name="forums_create_public">Público</string>
-    <string name="forums_create_action">Criar</string>
+    <string name="forums_create_action">Criar fórum</string>
     <string name="forums_find_title">Encontrar fóruns</string>
     <string name="forums_find_recommended">Recomendado</string>
     <string name="forums_find_subscribe">Inscrever-se</string>
@@ -24,13 +24,13 @@
     <string name="forums_settings">Configurações</string>
     <string name="forums_load_more">Carregar mais</string>
     <string name="forums_sort_label">Ordenar</string>
-    <string name="forums_sort_new">Novo</string>
+    <string name="forums_sort_new">Recentes</string>
     <string name="forums_sort_hot">Em alta</string>
-    <string name="forums_sort_top">Topo</string>
+    <string name="forums_sort_top">Melhores</string>
     <string name="forums_sort_interests">Interesses</string>
     <string name="forums_post_title_field">Título</string>
     <string name="forums_post_attach">Anexar arquivos</string>
-    <string name="forums_post_create_action">Postagem</string>
+    <string name="forums_post_create_action">Publicar</string>
     <string name="forums_post_edit">Editar publicação</string>
     <string name="forums_post_edit_title">Editar publicação</string>
     <string name="forums_post_edit_title_field">Título</string>
@@ -58,11 +58,11 @@
     <string name="forums_tab_members">Membros</string>
     <string name="forums_tab_banner">Banner</string>
     <string name="forums_tab_ai">IA</string>
-    <string name="forums_access_target">Destino</string>
+    <string name="forums_access_target">Usuário ou grupo</string>
     <string name="forums_access_level_view">Visualizar</string>
     <string name="forums_access_level_vote">Votar</string>
-    <string name="forums_access_level_comment">Comentário</string>
-    <string name="forums_access_level_post">Postagem</string>
+    <string name="forums_access_level_comment">Comentar</string>
+    <string name="forums_access_level_post">Publicar</string>
     <string name="forums_access_level_none">Nenhum</string>
     <string name="forums_members_empty">Sem membros</string>
     <string name="forums_banner_dismiss">Dispensar banner</string>
@@ -129,7 +129,7 @@
     <string name="forums_auth_login_failed">Falha no login</string>
 
     <string name="notification_channel_forums">Notificações de fóruns</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Fóruns</string>
     <string name="forums_auth_create_identity_failed">Falha ao criar identidade</string>
     <string name="forums_auth_mfa_unsupported">MFA ainda não é compatível no aplicativo móvel</string>
     <string name="forums_auth_enter_code_sent">Digite o código enviado para %1$s</string>
@@ -143,7 +143,7 @@
     <string name="forums_post_vote_down">Voto negativo</string>
     <string name="forums_post_quote">Citar na resposta</string>
     <string name="forums_comment_quote">Citar na resposta</string>
-    <string name="forums_post_tag_remove">Remover etiqueta</string>
+    <string name="forums_post_tag_remove">Remover tag</string>
     <string name="forums_access_add">Adicionar regra de acesso</string>
     <string name="forums_access_empty">Nenhuma regra ainda — padrões aplicados</string>
     <string name="forums_access_target_hint">ID da entidade, @grupo, * (todos) ou + (membros)</string>
@@ -190,7 +190,7 @@
     <string name="forums_access_tab_manual">Manual</string>
     <string name="forums_access_search_users">Pesquisar usuários</string>
     <string name="forums_access_no_groups">Nenhum grupo disponível</string>
-    <string name="forums_saved_title">Salvo</string>
+    <string name="forums_saved_title">Salvos</string>
     <string name="forums_saved_save">Salvar para mais tarde</string>
     <string name="forums_saved_remove">Remover dos salvos</string>
     <string name="forums_saved_clear_all">Limpar tudo</string>
@@ -256,7 +256,7 @@
     <string name="forums_ai_actions_label">Ações de IA nas publicações</string>
     <string name="forums_ai_prompt_custom">Personalizado</string>
     <string name="forums_ai_prompt_score_label">Prompt de pontuação</string>
-    <string name="forums_ai_prompt_tag_label">Prompt de tags</string>
+    <string name="forums_ai_prompt_tag_label">Prompt de tag</string>
     <string name="forums_ai_prompt_variables">Variáveis: %1$s</string>
     <string name="forums_moderation_ban_message">Perde o acesso ao fórum até você remover a restrição.</string>
     <string name="forums_moderation_ban_title">Banir %1$s?</string>
@@ -274,7 +274,7 @@
     <string name="forums_moderation_restriction_remove_message">Recupera o acesso total ao fórum imediatamente.</string>
     <string name="forums_moderation_restriction_remove_title">Remover a restrição de %1$s?</string>
     <string name="forums_moderation_restriction_state_muted">Silenciado</string>
-    <string name="forums_moderation_restriction_state_shadowban">Banido em segredo</string>
+    <string name="forums_moderation_restriction_state_shadowban">Banido em silêncio</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Nenhum usuário foi silenciado ou banido</string>
     <string name="forums_moderation_section_premoderation_description">Exigir aprovação antes de o conteúdo ficar visível</string>
     <string name="forums_moderation_section_ratelimiting_description">Evite spam limitando a frequência com que os usuários podem publicar</string>

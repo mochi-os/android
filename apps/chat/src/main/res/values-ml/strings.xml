@@ -25,7 +25,7 @@
     <string name="chat_chat_not_found">ചാറ്റ് കണ്ടെത്തിയില്ല</string>
 
     <string name="chat_message_send">അയയ്ക്കുക</string>
-    <string name="chat_attachment_remove">Remove attachment</string>
+    <string name="chat_attachment_remove">അറ്റാച്ച്മെന്റ് നീക്കം ചെയ്യുക</string>
     <string name="chat_attachment_move_up">മുകളിലേക്ക് നീക്കുക</string>
     <string name="chat_attachment_move_down">താഴേക്ക് നീക്കുക</string>
 
@@ -53,9 +53,9 @@
     <string name="chat_forward_search">ചാറ്റുകൾ തിരയുക…</string>
     <string name="chat_forward_empty">ഫോർവേഡ് ചെയ്യാൻ ചാറ്റുകളൊന്നുമില്ല</string>
     <string name="chat_forward_success">ഫോർവേഡ് ചെയ്തു</string>
-    <string name="chat_message_reply">മറുപടി നൽകുക</string>
+    <string name="chat_message_reply">മറുപടി</string>
     <string name="chat_message_select">തിരഞ്ഞെടുക്കുക</string>
-    <string name="chat_reply_attachment">അറ്റാച്ച്മെന്റ്</string>
+    <string name="chat_reply_attachment">അറ്റാച്ച്‌മെന്റ്</string>
     <string name="chat_replying_to">%1$s നു മറുപടി നൽകുന്നു</string>
     <string name="chat_delete_confirm_title">സന്ദേശം ഇല്ലാതാക്കണോ?</string>
     <string name="chat_delete_confirm_body">ഇത് എല്ലാവർക്കുമായി സന്ദേശം ഇല്ലാതാക്കുന്നു, ഇത് പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
@@ -78,7 +78,7 @@
     <string name="chat_marked_read">വായിച്ചതായി അടയാളപ്പെടുത്തി</string>
     <string name="chat_search_next">അടുത്ത പൊരുത്തം</string>
     <string name="chat_search_prev">മുൻ പൊരുത്തം</string>
-    <string name="chat_settings_id">ചാറ്റ് ഐഡി</string>
+    <string name="chat_settings_id">ചാറ്റ് ID</string>
     <string name="chat_message_edited">(എഡിറ്റ് ചെയ്തു)</string>
     <string name="chat_new_fallback_name">ചാറ്റ്</string>
 </resources>

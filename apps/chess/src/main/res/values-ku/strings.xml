@@ -17,7 +17,7 @@
     <string name="chess_new_add_friends">Hevalan zêde bike</string>
     <string name="chess_new_start_button">Lîstikê dest pê bike</string>
     <string name="chess_new_creating">Tê çêkirin…</string>
-    <string name="chess_chat_title">Chat</string>
+    <string name="chess_chat_title">Sohbet</string>
     <string name="chess_open_chat">Panela chatê veke</string>
     <string name="chess_open_actions">Çalakiyên lîstikê veke</string>
     <string name="chess_offer_draw">Wekheviyê pêşniyar bike</string>
@@ -32,8 +32,8 @@
     <string name="chess_draw_accept">Qebûl bike</string>
     <string name="chess_draw_decline">Red bike</string>
     <string name="chess_status_checkmate_you_win">Mat — tu bi ser ketî!</string>
-    <string name="chess_status_stalemate">Patgirê — wekhevî</string>
-    <string name="chess_status_draw">Xêz bike</string>
+    <string name="chess_status_stalemate">Pat — wekhev</string>
+    <string name="chess_status_draw">Wekhev</string>
     <string name="chess_status_check_your_move">Şah — tewra te</string>
     <string name="chess_status_your_move">Tevgera te</string>
     <string name="chess_move_subject_you">Tu</string>
@@ -60,7 +60,7 @@
     <string name="chess_empty_subtitle">Lîstika xwe ya yekem dest pê bike ku bi hevalekî re şetrenc bilîzî.</string>
     <string name="chess_empty_start_button">Lîstika xwe ya yekem dest pê bike</string>
     <string name="chess_detail_unavailable">Lîstik peyda nabe</string>
-    <string name="chess_delete_title">Lîstik bê jêbirin?</string>
+    <string name="chess_delete_title">Lîstik jê bibe?</string>
     <string name="chess_delete_message">Ev lîstikê ji lîsteya te derdixe.</string>
     <string name="chess_ws_connecting">Tê girêdan…</string>
     <string name="chess_ws_disconnected">Offline</string>

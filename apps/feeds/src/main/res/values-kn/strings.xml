@@ -14,7 +14,7 @@
     <string name="feeds_no_posts_yet">ಇನ್ನೂ ಯಾವುದೇ ಪೋಸ್ಟ್‌ಗಳಿಲ್ಲ</string>
     <string name="feeds_sort_label">ವಿಂಗಡಿಸಿ</string>
     <string name="feeds_sort_interests">ಆಸಕ್ತಿಗಳು</string>
-    <string name="feeds_sort_new">ಹೊಸ</string>
+    <string name="feeds_sort_new">ಇತ್ತೀಚಿನ</string>
     <string name="feeds_sort_hot">ಹಾಟ್</string>
     <string name="feeds_sort_top">ಅಗ್ರ</string>
     <string name="feeds_sort_ai">AI</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">ಪ್ರತ್ಯುತ್ತರ ರದ್ದುಮಾಡಿ</string>
     <string name="feeds_edit_post">ಪೋಸ್ಟ್ ಸಂಪಾದಿಸಿ</string>
     <string name="feeds_save_label">ಉಳಿಸಿ</string>
-    <string name="feeds_post_action">ಪೋಸ್ಟ್</string>
+    <string name="feeds_post_action">ಪೋಸ್ಟ್ ಮಾಡಿ</string>
     <string name="feeds_feed_label">ಫೀಡ್</string>
     <string name="feeds_add_files">ಫೈಲ್‌ಗಳನ್ನು ಸೇರಿಸಿ</string>
     <string name="feeds_restore">ಮರುಸ್ಥಾಪಿಸಿ</string>
@@ -57,13 +57,13 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi ಫೀಡ್</string>
     <string name="feeds_source_type_feed_memories">ಸ್ಮೃತಿಗಳು</string>
-    <string name="feeds_remove_source">ಮೂಲವನ್ನು ತೆಗೆದುಹಾಕಿ</string>
+    <string name="feeds_remove_source">ಮೂಲ ತೆಗೆದುಹಾಕಬೇಕೆ?</string>
     <string name="feeds_suggested_credibility_accept">ಸ್ವೀಕರಿಸಿ</string>
     <string name="feeds_rss_url_copied">RSS URL ಅನ್ನು ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ಕಾಪಿ ಮಾಡಲಾಗಿದೆ</string>
     <string name="feeds_logout">ಲಾಗ್ ಔಟ್</string>
     <string name="feeds_ai_account_default">ಡೀಫಾಲ್ಟ್ ಖಾತೆ</string>
     <string name="feeds_ai_mode_off">ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ</string>
-    <string name="feeds_ai_mode_tag">ಟ್ಯಾಗ್</string>
+    <string name="feeds_ai_mode_tag">ಟ್ಯಾಗ್ ಮಾಡಿ</string>
     <string name="feeds_ai_mode_tag_deduplicate">ಟ್ಯಾಗ್ + ನಕಲನ್ನು ತೆಗೆದುಹಾಕಿ</string>
     <string name="feeds_feed_not_found">ಫೀಡ್ ಸಿಗಲಿಲ್ಲ</string>
     <string name="feeds_post_not_found">ಪೋಸ್ಟ್ ಸಿಗಲಿಲ್ಲ</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">ಎಂದಿಗೂ ತರಲಾಗಿಲ್ಲ</string>
     <string name="feeds_source_poll">ಪೋಲ್</string>
-    <string name="feeds_source_transform">ಪರಿವರ್ತಿಸಿ</string>
+    <string name="feeds_source_transform">AI ರೂಪಾಂತರ</string>
     <string name="feeds_remove_source_confirm">\"%1$s\" ಅನ್ನು ತೆಗೆದುಹಾಕಬೇಕೆ?</string>
     <string name="feeds_remove_also_delete_posts">ಆಮದು ಮಾಡಿದ ಪೋಸ್ಟ್‌ಗಳನ್ನು ಸಹ ಅಳಿಸಿ</string>
     <string name="feeds_suggested_credibility_title">ಸೂಚಿಸಲಾದ ವಿಶ್ವಾಸಾರ್ಹತೆ</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">ಆಸಕ್ತಿ ಕಡಿಮೆ ಮಾಡಲಾಗಿದೆ</string>
     <string name="feeds_interest_removed">ಆಸಕ್ತಿ ತೆಗೆದುಹಾಕಲಾಗಿದೆ</string>
     <string name="feeds_interest_failed">ಆಸಕ್ತಿ ಹೊಂದಿಸಲು ವಿಫಲವಾಗಿದೆ</string>
-    <string name="feeds_saved_title">ಉಳಿಸಲಾಗಿದೆ</string>
-    <string name="feeds_saved_menu">ಉಳಿಸಲಾಗಿದೆ</string>
+    <string name="feeds_saved_title">ಉಳಿಸಿದವು</string>
+    <string name="feeds_saved_menu">ಉಳಿಸಿದವು</string>
     <string name="feeds_saved_save">ನಂತರಕ್ಕಾಗಿ ಉಳಿಸಿ</string>
     <string name="feeds_saved_remove">ಉಳಿಸಿದವುಗಳಿಂದ ತೆಗೆದುಹಾಕಿ</string>
     <string name="feeds_saved_clear_all">ಎಲ್ಲವನ್ನೂ ತೆರವುಗೊಳಿಸಿ</string>
@@ -154,7 +154,7 @@
     <string name="feeds_access_select_group">ಗುಂಪು ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="feeds_access_selected">ಆಯ್ಕೆಮಾಡಲಾಗಿದೆ: %1$s</string>
     <string name="feeds_access_subject_anyone">ಯಾರಾದರೂ</string>
-    <string name="feeds_access_subject_authenticated">ದೃಢೀಕರಿಸಿದ ಬಳಕೆದಾರರು</string>
+    <string name="feeds_access_subject_authenticated">ದೃಢೀಕೃತ ಬಳಕೆದಾರರು</string>
     <string name="feeds_markdown_supported">Markdown ಬೆಂಬಲಿತ</string>
     <string name="feeds_permission_deny">ನಿರಾಕರಿಸಿ</string>
     <string name="feeds_rss_feed">RSS ಫೀಡ್</string>

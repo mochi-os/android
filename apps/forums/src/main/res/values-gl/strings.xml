@@ -9,11 +9,11 @@
     <string name="forums_list_unsubscribe">Cancelar subscrición</string>
     <string name="forums_list_unsubscribe_title">Cancelar subscrición</string>
     <string name="forums_create_title">Crear foro</string>
-    <string name="forums_create_name">Nome</string>
+    <string name="forums_create_name">Nome do foro</string>
     <string name="forums_create_privacy">Privacidade</string>
     <string name="forums_create_private">Privado</string>
     <string name="forums_create_public">Público</string>
-    <string name="forums_create_action">Crear</string>
+    <string name="forums_create_action">Crear foro</string>
     <string name="forums_find_title">Buscar foros</string>
     <string name="forums_find_recommended">Recomendado</string>
     <string name="forums_find_subscribe">Subscribirse</string>
@@ -21,12 +21,12 @@
     <string name="forums_loading">Cargando…</string>
     <string name="forums_no_posts">Aínda non hai publicacións</string>
     <string name="forums_new_post">Nova publicación</string>
-    <string name="forums_settings">Axustes</string>
+    <string name="forums_settings">Configuración</string>
     <string name="forums_load_more">Cargar máis</string>
     <string name="forums_sort_label">Ordenar</string>
-    <string name="forums_sort_new">Novo</string>
+    <string name="forums_sort_new">Máis recentes</string>
     <string name="forums_sort_hot">Popular</string>
-    <string name="forums_sort_top">Arriba</string>
+    <string name="forums_sort_top">Mellores</string>
     <string name="forums_sort_interests">Intereses</string>
     <string name="forums_post_title_field">Título</string>
     <string name="forums_post_attach">Anexar ficheiros</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Membros</string>
     <string name="forums_tab_banner">Báner</string>
     <string name="forums_tab_ai">IA</string>
-    <string name="forums_access_target">Obxectivo</string>
+    <string name="forums_access_target">Usuario ou grupo</string>
     <string name="forums_access_level_view">Ver</string>
     <string name="forums_access_level_vote">Votar</string>
-    <string name="forums_access_level_comment">Comentario</string>
+    <string name="forums_access_level_comment">Comentar</string>
     <string name="forums_access_level_post">Publicar</string>
     <string name="forums_access_level_none">Ningún</string>
     <string name="forums_members_empty">Sen membros</string>
     <string name="forums_banner_dismiss">Descartar banner</string>
-    <string name="forums_ai_mode_tag">Etiqueta</string>
+    <string name="forums_ai_mode_tag">Etiquetar</string>
     <string name="forums_ai_account_default">Conta predeterminada</string>
     <string name="forums_ai_prompt_reset">Restablecer ao valor por defecto</string>
     <string name="forums_settings_unsubscribe">Cancelar subscrición</string>
@@ -135,7 +135,7 @@
     <string name="forums_write_comment">Escribe un comentario…</string>
 
     <string name="notification_channel_forums">Notificacións de foros</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Foros</string>
     <string name="forums_list_empty">Aínda non hai foros</string>
     <string name="forums_list_unsubscribe_message">Seguro que quere darse de baixa deste foro?</string>
     <string name="forums_find_search_placeholder">Buscar foros ou pegar URL</string>
@@ -171,7 +171,7 @@
     <string name="forums_moderation_log_meta">Por %1$s · Obxectivo %2$s</string>
     <string name="forums_moderation_restriction_add">Engadir restrición</string>
     <string name="forums_moderation_restriction_user">Identidade do usuario</string>
-    <string name="forums_moderation_restriction_type_shadowban">Shadowban</string>
+    <string name="forums_moderation_restriction_type_shadowban">Veto en segredo</string>
     <string name="forums_moderation_restriction_duration_seconds">Duración (segundos, en branco para permanente)</string>
     <string name="forums_moderation_restriction_expires">Caduca o %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanente</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">Manual</string>
     <string name="forums_access_search_users">Buscar usuarios</string>
     <string name="forums_access_no_groups">Non hai grupos dispoñibles</string>
-    <string name="forums_saved_title">Gardado</string>
+    <string name="forums_saved_title">Gardados</string>
     <string name="forums_saved_save">Gardar para máis tarde</string>
     <string name="forums_saved_remove">Quitar dos gardados</string>
     <string name="forums_saved_clear_all">Borrar todo</string>
@@ -247,7 +247,7 @@
     <string name="forums_settings_field_server">Servidor</string>
     <string name="forums_settings_name_edit_cd">Editar nome</string>
     <string name="forums_settings_name_cancel_cd">Cancelar a edición</string>
-    <string name="forums_settings_save_name">Gardar nome</string>
+    <string name="forums_settings_save_name">Gardar o nome</string>
     <string name="forums_access_management">Xestión de acceso</string>
     <string name="forums_access_level_comment_full">Comentar, votar e ver</string>
     <string name="forums_access_level_moderate_full">Moderar, publicar, comentar, votar e ver</string>
@@ -277,7 +277,7 @@
     <string name="forums_moderation_restriction_remove_message">Recupera de inmediato o acceso completo ao foro.</string>
     <string name="forums_moderation_restriction_remove_title">Queres eliminar a restrición de %1$s?</string>
     <string name="forums_moderation_restriction_state_muted">Silenciado</string>
-    <string name="forums_moderation_restriction_state_shadowban">Bloqueado en segredo</string>
+    <string name="forums_moderation_restriction_state_shadowban">Vetado en segredo</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Non hai usuarios silenciados nin bloqueados</string>
     <string name="forums_moderation_section_premoderation_description">Require aprobación antes de que o contido sexa visible</string>
     <string name="forums_moderation_section_ratelimiting_description">Evita o spam limitando a frecuencia coa que os usuarios poden publicar</string>
@@ -286,7 +286,7 @@
     <string name="forums_moderation_unit_replies">respostas</string>
     <string name="forums_moderation_unit_seconds">segundos</string>
     <string name="forums_settings_ai_updated">Actualizouse a configuración de IA</string>
-    <string name="forums_settings_forum_renamed">Renomeouse o foro</string>
+    <string name="forums_settings_forum_renamed">Foro renomeado</string>
     <string name="forums_settings_name_clear_cd">Borrar o nome</string>
     <string name="forums_settings_unsubscribe_section">Cancelar a subscrición ao foro</string>
     <string name="forums_share_link_title">Ligazón do foro</string>
@@ -320,7 +320,7 @@
     <string name="forums_moderation_action_restrict">Restrinxido</string>
     <string name="forums_moderation_action_unrestrict">Sen restricións</string>
     <string name="forums_moderation_action_resolve">Informe resolto</string>
-    <string name="forums_moderation_target_post">Publicar</string>
+    <string name="forums_moderation_target_post">Publicación</string>
     <string name="forums_moderation_target_comment">Comentario</string>
     <string name="forums_moderation_target_user">Usuario</string>
     <string name="forums_moderation_reason_spam">Spam</string>

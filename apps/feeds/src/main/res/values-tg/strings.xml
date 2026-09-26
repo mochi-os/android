@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">То ҳол ягон пост нест</string>
     <string name="feeds_sort_label">Мураттаб кардан</string>
     <string name="feeds_sort_interests">Шавқҳо</string>
-    <string name="feeds_sort_new">Нав</string>
+    <string name="feeds_sort_new">Навтарин</string>
     <string name="feeds_sort_hot">Доғ</string>
-    <string name="feeds_sort_top">Боло</string>
+    <string name="feeds_sort_top">Беҳтарин</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Пост</string>
     <string name="feeds_image_preview">Пешнамоиш</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Бекор кардани ҷавоб</string>
     <string name="feeds_edit_post">Таҳрири паём</string>
     <string name="feeds_save_label">Захира</string>
-    <string name="feeds_post_action">Пост</string>
+    <string name="feeds_post_action">Нашр кардан</string>
     <string name="feeds_feed_label">Фид</string>
     <string name="feeds_add_files">Иловаи файлҳо</string>
     <string name="feeds_restore">Барқарор кардан</string>
@@ -57,13 +57,13 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Фиди Mochi</string>
     <string name="feeds_source_type_feed_memories">Хотираҳо</string>
-    <string name="feeds_remove_source">Манбаъро тоза кардан</string>
+    <string name="feeds_remove_source">Манбаъро хориҷ кардан?</string>
     <string name="feeds_suggested_credibility_accept">Қабул кардан</string>
     <string name="feeds_rss_url_copied">URL-и RSS ба буфер нусха карда шуд</string>
     <string name="feeds_logout">Баромадан</string>
     <string name="feeds_ai_account_default">Ҳисоби пешфарз</string>
     <string name="feeds_ai_mode_off">Ғайрифаъолшуда</string>
-    <string name="feeds_ai_mode_tag">Барчасп</string>
+    <string name="feeds_ai_mode_tag">Барчаспгузорӣ</string>
     <string name="feeds_ai_mode_tag_deduplicate">Барчасп + такрорзудоӣ</string>
     <string name="feeds_feed_not_found">Фид ёфт нашуд</string>
     <string name="feeds_post_not_found">Пост ёфт нашуд</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">URL-и RSS</string>
     <string name="feeds_source_never_fetched">Ҳеҷ гоҳ боргирӣ нашудааст</string>
     <string name="feeds_source_poll">Пурсиш</string>
-    <string name="feeds_source_transform">Табдил</string>
+    <string name="feeds_source_transform">Табдилдиҳии AI</string>
     <string name="feeds_remove_source_confirm">\"%1$s\"-ро тоза мекунед?</string>
     <string name="feeds_remove_also_delete_posts">Ҳамчунин паёмҳои воридшударо нест кунед</string>
     <string name="feeds_suggested_credibility_title">Эътимоднокии пешниҳодшуда</string>
@@ -204,7 +204,7 @@
     <string name="feeds_banner_dismiss">Рад кардани баннер</string>
     <string name="feeds_members_search">Филтр кардани аъзоён</string>
     <string name="feeds_ai_prompt_default">Пешфарз</string>
-    <string name="feeds_ai_prompt_custom">Фармоишӣ</string>
+    <string name="feeds_ai_prompt_custom">Танзимшаванда</string>
     <string name="feeds_ai_prompt_variables">Тағйирёбандаҳо: %1$s</string>
     <string name="feeds_link">Пайванд</string>
     <string name="feeds_share_link_title">Пайванди навор</string>

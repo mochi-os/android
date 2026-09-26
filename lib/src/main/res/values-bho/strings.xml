@@ -41,7 +41,7 @@
     <string name="access_add_rule">नियम जोड़ीं</string>
     <string name="access_owner">मालिक</string>
     <string name="access_revoke">वापस लीं</string>
-    <string name="access_level_comment">टिप्पणी</string>
+    <string name="access_level_comment">टिप्पणी करीं</string>
     <string name="access_level_view">देखीं</string>
     <string name="access_level_none">कुछुओ ना</string>
     <string name="reaction_like">पसंद</string>
@@ -57,7 +57,7 @@
     <string name="about_close">बंद करीं</string>
     <string name="notifications_open">सूचना</string>
     <string name="notifications_title">सूचना</string>
-    <string name="notifications_empty">कौनो सूचना नइखे</string>
+    <string name="notifications_empty">कवनो सूचना नइखे</string>
     <string name="notifications_empty_unread">सब पढ़ल हो गइल</string>
     <string name="notifications_tab_unread">अनपढ़ल</string>
     <string name="notifications_tab_unread_count">अनपढ़ल (%1$d)</string>
@@ -143,8 +143,8 @@
     <string name="auth_passkey">पासकी</string>
     <string name="auth_use_passkey">पासकी के उपयोग करीं</string>
     <string name="auth_email_me_a_code">हमरा के ईमेल पर कोड भेजीं</string>
-    <string name="auth_or_enter_authenticator_code">या authenticator कोड डालीं</string>
-    <string name="auth_log_in">लॉग इन करीं</string>
+    <string name="auth_or_enter_authenticator_code">या ऑथेंटिकेटर कोड डालीं</string>
+    <string name="auth_log_in">लॉग इन</string>
     <string name="auth_back">वापस</string>
     <string name="auth_lost_access_recovery">पहुँच खो गइल? रिकवरी कोड के उपयोग करीं</string>
     <string name="auth_create_identity_title">आपन पहचान बनाईं</string>
@@ -162,7 +162,7 @@
     <string name="bootstrap_choose_account">एगो खाता चुनीं</string>
     <string name="bootstrap_sign_in_different_server">अलग सर्वर पर साइन इन करीं</string>
     <string name="common_not_saved">सहेजल ना गइल</string>
-    <string name="common_retry">फिर कोशिश करीं</string>
+    <string name="common_retry">फेर से कोसिस करीं</string>
     <string name="common_more_options">अउरी विकल्प</string>
     <string name="common_collapse">समेटीं</string>
     <string name="common_expand">फइलाईं</string>
@@ -191,7 +191,7 @@
     <string name="format_time_days_short">%1$dदि</string>
     <string name="format_time_weeks_short">%1$dह</string>
     <string name="format_time_months_short">%1$dमा</string>
-    <string name="reaction_add">प्रतिक्रिया जोड़ीं</string>
+    <string name="reaction_add">रिएक्शन जोड़ीं</string>
     <string name="push_service_channel">Mochi पुश</string>
     <string name="push_service_channel_description">सूचना पावे खातिर Mochi के जुड़ल राखेला</string>
     <string name="push_service_group">बैकग्राउंड सेवा</string>
@@ -202,17 +202,17 @@
     <string name="reauth_signin_text">जब ले रउआ फेर से साइन इन ना करीं तब ले सूचना रुकल बा</string>
     <string name="oem_hint_title">बैकग्राउंड में पहुँच जोग्य रहीं</string>
     <string name="oem_hint_body">सूचना देवे खातिर Mochi के बैकग्राउंड में चलल जरूरी बा। कृपया अगिला स्क्रीन प एकर अनुमति दीं, ना त स्क्रीन बंद रहला प रउआ के फोन सूचना रोक सकेला।</string>
-    <string name="oem_hint_samsung_note">Samsung फोन प, Settings → Device care → Sleeping apps में भी देखीं आ अगर Mochi लिस्ट में बा त ओकरा के हटा दीं।</string>
+    <string name="oem_hint_samsung_note">Samsung फोन प, सेटिंग → डिवाइस केयर → स्लीपिंग ऐप में भी देखीं आ अगर Mochi लिस्ट में बा त ओकरा के हटा दीं।</string>
     <string name="oem_hint_allow">बैकग्राउंड के अनुमति दीं</string>
     <string name="oem_hint_dismiss">फेर मत देखाईं</string>
-    <string name="about_label">बारे में</string>
+    <string name="about_label">के बारे में</string>
     <string name="about_title">Mochi क्लाइंट</string>
     <string name="about_version">संस्करण %1$s</string>
     <string name="about_check_updates">अपडेट खोजीं</string>
     <string name="about_up_to_date">अद्यतन बा</string>
     <string name="about_check_downloading">वर्जन %1$s उपलब्ध बा, डाउनलोड हो रहल बा…</string>
     <string name="about_check_network_error">अपडेट सर्वर ले नइखे पहुँचल जा सकत</string>
-    <string name="about_check_download_failed">डाउनलोड विफल भइल</string>
+    <string name="about_check_download_failed">डाउनलोड असफल भइल</string>
     <string name="notifications_clear_all_title">सब सूचना मिटाईं?</string>
     <string name="notifications_clear_all_message">एह से हर सूचना हट जाई। उनकर वापसी ना हो पाई।</string>
     <string name="settings_value_auto">स्वचालित</string>
@@ -228,7 +228,7 @@
     <string name="stepup_description">ई रउआ खाता में सुरक्षा बदलाव बा। आगे बढ़े खातिर पुष्टि करीं कि ई रउआ बानी।</string>
     <string name="stepup_email_label">ईमेल कोड</string>
     <string name="stepup_email_placeholder">आपन ईमेल से आइल कोड डालीं</string>
-    <string name="stepup_totp_label">Authenticator कोड</string>
+    <string name="stepup_totp_label">ऑथेंटिकेटर कोड</string>
     <string name="stepup_totp_placeholder">आपन प्रमाणक कोड डालीं</string>
     <string name="stepup_use_passkey">आपन पासकी इस्तेमाल करीं</string>
     <string name="stepup_send_email">ईमेल भेजीं</string>
@@ -241,7 +241,7 @@
     <string name="stepup_error_oauth">ओह खाता से सत्यापन ना हो सकल। कृपया फेर से कोसिस करीं।</string>
     <string name="game_system_resign">%1$s हार मान लिहलें</string>
     <string name="game_system_draw_offer">%1$s ड्रॉ के प्रस्ताव दिहलें</string>
-    <string name="game_system_draw_accept">ड्रॉ पर सहमति बनल</string>
+    <string name="game_system_draw_accept">ड्रॉ पर सहमति</string>
     <string name="game_system_draw_decline">%1$s ड्रॉ ठुकरा दिहलें</string>
     <string name="reactivation_title">रउआ के खाता मिटावे खातिर तय बा</string>
     <string name="reactivation_body">रउआ के खाता मिटावे खातिर तय बा। रउआ अबहीं रद्द क के पूरा पहुँच वापस पा सकेनी।</string>

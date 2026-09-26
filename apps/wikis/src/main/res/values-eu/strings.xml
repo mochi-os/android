@@ -215,7 +215,7 @@
     <string name="wikis_replicas_remove_confirm_title">Erreplika kendu?</string>
     <string name="wikis_replicas_remove_confirm_action">Kendu</string>
     <string name="wikis_replicas_remove_failed">Ezin izan da erreplika kendu</string>
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wikiak</string>
     <string name="wikis_channel_name">Wikis jakinarazpenak</string>
     <string name="wikis_channel_description">Orrialde-edizioak, iruzkinak eta gonbidapenak buruzko jakinarazpenak.</string>
     <string name="wikis_pageview_toc_expand">Erakutsi edukien aurkibidea</string>

@@ -3,17 +3,17 @@
 
     <string name="forums_auth_display_name">Emri i shfaqur</string>
     <string name="forums_auth_verification_failed">Verifikimi dështoi</string>
-    <string name="forums_list_title">Forumet</string>
+    <string name="forums_list_title">Forume</string>
     <string name="forums_list_find">Gjej forume</string>
     <string name="forums_list_logout">Dilni</string>
     <string name="forums_list_unsubscribe">Çabonohu</string>
     <string name="forums_list_unsubscribe_title">Çabonohu</string>
     <string name="forums_create_title">Krijo forum</string>
-    <string name="forums_create_name">Emri</string>
+    <string name="forums_create_name">Emri i forumit</string>
     <string name="forums_create_privacy">Privatësia</string>
     <string name="forums_create_private">Privat</string>
     <string name="forums_create_public">Publik</string>
-    <string name="forums_create_action">Krijo</string>
+    <string name="forums_create_action">Krijo forum</string>
     <string name="forums_find_title">Gjej forume</string>
     <string name="forums_find_recommended">I rekomanduar</string>
     <string name="forums_find_subscribe">Abonohu</string>
@@ -24,9 +24,9 @@
     <string name="forums_settings">Cilësimet</string>
     <string name="forums_load_more">Ngarko më shumë</string>
     <string name="forums_sort_label">Rendit</string>
-    <string name="forums_sort_new">I ri</string>
+    <string name="forums_sort_new">Më të rejat</string>
     <string name="forums_sort_hot">Të nxehta</string>
-    <string name="forums_sort_top">Lart</string>
+    <string name="forums_sort_top">Më të mirat</string>
     <string name="forums_sort_interests">Interesat</string>
     <string name="forums_post_title_field">Titulli</string>
     <string name="forums_post_attach">Bashkëngjit skedarë</string>
@@ -59,15 +59,15 @@
     <string name="forums_tab_members">Anëtarët</string>
     <string name="forums_tab_banner">Banner-i</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Objektivi</string>
+    <string name="forums_access_target">Subjekti</string>
     <string name="forums_access_level_view">Shiko</string>
     <string name="forums_access_level_vote">Voto</string>
-    <string name="forums_access_level_comment">Komenti</string>
+    <string name="forums_access_level_comment">Komento</string>
     <string name="forums_access_level_post">Posto</string>
     <string name="forums_access_level_none">Asnjë</string>
     <string name="forums_members_empty">Asnjë anëtar</string>
     <string name="forums_banner_dismiss">Hidhe banner-in</string>
-    <string name="forums_ai_mode_tag">Etiketa</string>
+    <string name="forums_ai_mode_tag">Etiketo</string>
     <string name="forums_ai_account_default">Llogaria e parazgjedhur</string>
     <string name="forums_ai_prompt_reset">Rivendos në parazgjedhje</string>
     <string name="forums_settings_unsubscribe">Çabonohu</string>
@@ -80,7 +80,7 @@
     <string name="forums_moderation_reports_resolved">I zgjidhur</string>
     <string name="forums_moderation_reports_all">Të gjitha</string>
     <string name="forums_moderation_reports_empty">Asnjë raport</string>
-    <string name="forums_moderation_report_dismiss">Hidhe</string>
+    <string name="forums_moderation_report_dismiss">Hidh poshtë</string>
     <string name="forums_moderation_restrictions_empty">Asnjë kufizim</string>
     <string name="forums_moderation_restriction_remove">Hiq</string>
     <string name="forums_moderation_restriction_type">Lloji</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_login_failed">Hyrja dështoi</string>
 
     <string name="notification_channel_forums">Njoftime për forumet</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_brand">Mochi Forume</string>
     <string name="forums_auth_create_identity_failed">Krijimi i identitetit dështoi</string>
     <string name="forums_auth_mfa_unsupported">MFA-ja nuk mbështetet ende në aplikacionin mobil</string>
     <string name="forums_auth_enter_code_sent">Shkruani kodin e dërguar te %1$s</string>
@@ -156,8 +156,8 @@
     <string name="forums_banner_placeholder">Mirë se vini në këtë forum…</string>
     <string name="forums_ai_mode_label">Mënyra: %1$s</string>
     <string name="forums_ai_mode_heading">Mënyra e AI-së</string>
-    <string name="forums_ai_mode_off">Joaktive</string>
-    <string name="forums_ai_account">Llogaria e AI-së</string>
+    <string name="forums_ai_mode_off">I çaktivizuar</string>
+    <string name="forums_ai_account">Llogaria AI</string>
     <string name="forums_ai_prompt_tag">Kërkesa për etiketim</string>
     <string name="forums_ai_prompt_score">Kërkesa për vlerësim</string>
     <string name="forums_ai_post_prompt_label">Kërkesë për etiketat e postimeve</string>
@@ -171,7 +171,7 @@
     <string name="forums_moderation_log_meta">Nga %1$s · Objektivi %2$s</string>
     <string name="forums_moderation_restriction_add">Shtoni kufizim</string>
     <string name="forums_moderation_restriction_user">Identiteti i përdoruesit</string>
-    <string name="forums_moderation_restriction_type_shadowban">Shadowban</string>
+    <string name="forums_moderation_restriction_type_shadowban">Bllokim i fshehtë</string>
     <string name="forums_moderation_restriction_duration_seconds">Kohëzgjatja (sekonda, lëreni bosh për të përhershëm)</string>
     <string name="forums_moderation_restriction_expires">Skadon më %1$s</string>
     <string name="forums_moderation_restriction_permanent">I përhershëm</string>
@@ -192,7 +192,7 @@
     <string name="forums_access_tab_manual">Manual</string>
     <string name="forums_access_search_users">Kërko përdorues</string>
     <string name="forums_access_no_groups">Asnjë grup i disponueshëm</string>
-    <string name="forums_saved_title">I ruajtur</string>
+    <string name="forums_saved_title">Të ruajturat</string>
     <string name="forums_saved_save">Ruaj për më vonë</string>
     <string name="forums_saved_remove">Hiq nga të ruajturat</string>
     <string name="forums_saved_clear_all">Pastro të gjitha</string>
@@ -205,7 +205,7 @@
         <item quantity="one">%d postim i ri</item>
         <item quantity="other">%d postime të reja</item>
     </plurals>
-    <string name="forums_rss_feed">Burimi RSS</string>
+    <string name="forums_rss_feed">Prurje RSS</string>
     <string name="forums_rss_mode_posts">Postimet</string>
     <string name="forums_rss_mode_posts_comments">Postimet dhe komentet</string>
     <string name="forums_rss_copied">URL e RSS u kopjua në clipboard</string>
@@ -256,7 +256,7 @@
     <string name="forums_access_select_group">Zgjidhni një grup</string>
     <string name="forums_access_select_rule">Zgjidhni një rregull</string>
     <string name="forums_ai_actions_label">Veprimet e IA-së në postime</string>
-    <string name="forums_ai_prompt_custom">I personalizuar</string>
+    <string name="forums_ai_prompt_custom">Personalizuar</string>
     <string name="forums_ai_prompt_score_label">Prompti i vlerësimit</string>
     <string name="forums_ai_prompt_tag_label">Prompti i etiketave</string>
     <string name="forums_ai_prompt_variables">Variablat: %1$s</string>
@@ -277,7 +277,7 @@
     <string name="forums_moderation_restriction_remove_message">Rifiton menjëherë aksesin e plotë në forum.</string>
     <string name="forums_moderation_restriction_remove_title">Të hiqet kufizimi për %1$s?</string>
     <string name="forums_moderation_restriction_state_muted">I heshtur</string>
-    <string name="forums_moderation_restriction_state_shadowban">Bllokim i fshehtë</string>
+    <string name="forums_moderation_restriction_state_shadowban">I përjashtuar fshehurazi</string>
     <string name="forums_moderation_restrictions_empty_subtitle">Asnjë përdorues nuk është heshtur ose bllokuar</string>
     <string name="forums_moderation_section_premoderation_description">Kërko miratim përpara se përmbajtja të bëhet e dukshme</string>
     <string name="forums_moderation_section_ratelimiting_description">Parandaloni spamin duke kufizuar sa shpesh përdoruesit mund të postojnë</string>
@@ -320,7 +320,7 @@
     <string name="forums_moderation_action_restrict">I kufizuar</string>
     <string name="forums_moderation_action_unrestrict">Kufizimi u hoq</string>
     <string name="forums_moderation_action_resolve">Raport i zgjidhur</string>
-    <string name="forums_moderation_target_post">Posto</string>
+    <string name="forums_moderation_target_post">Postim</string>
     <string name="forums_moderation_target_comment">Komenti</string>
     <string name="forums_moderation_target_user">Përdoruesi</string>
     <string name="forums_moderation_reason_spam">Spam</string>

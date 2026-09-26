@@ -25,7 +25,7 @@
     <string name="chat_chat_not_found">Чат табылмады</string>
 
     <string name="chat_message_send">Жіберу</string>
-    <string name="chat_attachment_remove">Remove attachment</string>
+    <string name="chat_attachment_remove">Тіркемені алып тастау</string>
     <string name="chat_attachment_move_up">Жоғары жылжыту</string>
     <string name="chat_attachment_move_down">Төмен жылжыту</string>
 

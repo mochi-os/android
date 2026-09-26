@@ -9,10 +9,10 @@
     <string name="auth_recovery_code">Gjenopprettingskode</string>
     <string name="auth_name">Namn</string>
     <string name="auth_create">Opprett</string>
-    <string name="auth_privacy_label">Privacy</string>
+    <string name="auth_privacy_label">Personvern</string>
     <string name="auth_privacy_public">Offentleg</string>
     <string name="auth_privacy_private">Privat</string>
-    <string name="auth_link_privacy">Privacy</string>
+    <string name="auth_link_privacy">Personvern</string>
     <string name="auth_use_different_account">Bruk ein annan konto</string>
     <string name="auth_error_suspended_title">Konto suspendert</string>
     <string name="common_back">Tilbake</string>
@@ -58,7 +58,7 @@
     <string name="notifications_title">Varsel</string>
     <string name="notifications_empty">Ingen varsel</string>
     <string name="notifications_empty_unread">Du er ajour</string>
-    <string name="notifications_tab_unread">Ulesne</string>
+    <string name="notifications_tab_unread">Ulesen</string>
     <string name="notifications_tab_unread_count">Ulesne (%1$d)</string>
     <string name="notifications_tab_all">Alle</string>
     <string name="notifications_mark_all_read">Merk alle som lesne</string>
@@ -73,11 +73,11 @@
     <string name="settings_density_spacious">Romsleg</string>
     <string name="settings_radius_none">Ingen</string>
     <string name="settings_radius_small">Liten</string>
-    <string name="settings_radius_medium">Medium</string>
+    <string name="settings_radius_medium">Middels</string>
     <string name="settings_radius_large">Stor</string>
     <string name="settings_font">Skrifttype</string>
     <string name="settings_font_system">System</string>
-    <string name="settings_font_serif">Serif</string>
+    <string name="settings_font_serif">Antikva</string>
     <string name="settings_font_dyslexia">Dyslektikarvenleg</string>
     <string name="settings_font_size">Skriftstorleik</string>
     <string name="settings_font_size_small">Liten</string>
@@ -98,7 +98,7 @@
     <string name="settings_number_format">Talformat</string>
     <string name="settings_units">Einingar</string>
     <string name="settings_units_metric">Metrisk</string>
-    <string name="settings_units_imperial">Imperial</string>
+    <string name="settings_units_imperial">Imperialsk</string>
     <string name="settings_time_zone">Tidssone</string>
     <string name="settings_reset_to_defaults">Tilbakestill til standardverdiar</string>
     <string name="settings_reset_confirm_title">Tilbakestill innstillingar?</string>
@@ -125,7 +125,7 @@
     <string name="game_chat_move_played">%1$s spelte %2$s</string>
 
     <string name="error_network">Kan ikkje kople til. Sjekk internett-tilkoplinga di og prøv igjen.</string>
-    <string name="error_authentication_required">Autentisering krevst</string>
+    <string name="error_authentication_required">Autentisering er påkravd</string>
     <string name="error_not_found">Ikkje funnen</string>
     <string name="error_server">Tenarfeil (%1$d). Prøv igjen seinare.</string>
     <string name="error_unexpected">Det oppstod ein uventa feil</string>
@@ -133,7 +133,7 @@
     <string name="error_enter_email">Skriv inn e-postadressa di</string>
     <string name="error_enter_name">Skriv inn eit namn</string>
     <string name="auth_connect_to_server">Kopla til tenaren din</string>
-    <string name="auth_connect">Kopla til</string>
+    <string name="auth_connect">Kople til</string>
     <string name="auth_sign_in">Logg inn</string>
     <string name="auth_check_email">Sjekk e-posten din for ein stadfestingskode</string>
     <string name="auth_mfa_title">Fleirfaktor-autentisering</string>
@@ -142,7 +142,7 @@
     <string name="auth_login_title">Logg inn på Mochi</string>
     <string name="auth_next">Neste</string>
     <string name="auth_or_log_in_with">Eller logg inn med</string>
-    <string name="auth_passkey">Passnøkkel</string>
+    <string name="auth_passkey">Tilgangsnøkkel</string>
     <string name="auth_use_passkey">Bruk ein passnøkkel</string>
     <string name="auth_email_me_a_code">Send meg ein kode på e-post</string>
     <string name="auth_or_enter_authenticator_code">Eller skriv inn autentiseringskode</string>
@@ -180,7 +180,7 @@
     <string name="entity_avatar_alt">Avatar for %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="lightbox_position">%1$d / %2$d</string>
-    <string name="format_time_just_now">Nett no</string>
+    <string name="format_time_just_now">Nettopp no</string>
     <string name="format_time_minutes_ago">%1$dm sidan</string>
     <string name="format_time_hours_ago">%1$dt sidan</string>
     <string name="format_time_days_ago">%1$dd sidan</string>
@@ -213,7 +213,7 @@
     <string name="about_up_to_date">Oppdatert</string>
     <string name="about_check_downloading">Versjon %1$s er tilgjengeleg, lastar ned…</string>
     <string name="about_check_network_error">Nådde ikkje oppdateringstenaren</string>
-    <string name="about_check_download_failed">Nedlasting feila</string>
+    <string name="about_check_download_failed">Nedlastinga feila</string>
     <string name="notifications_clear_all_title">Fjerne alle varslingar?</string>
     <string name="notifications_clear_all_message">Dette fjernar alle varslingar. Dei kan ikkje gjenopprettast.</string>
     <string name="settings_value_auto">Automatisk</string>
@@ -247,7 +247,7 @@
     <string name="stepup_totp_placeholder">Skriv inn autentiseringskoden din</string>
     <string name="stepup_use_passkey">Bruk passnøkkelen din</string>
     <string name="stepup_send_email">Send e-post</string>
-    <string name="stepup_resend_email">Send e-post på nytt</string>
+    <string name="stepup_resend_email">Send e-posten på nytt</string>
     <string name="stepup_continue_with">Fortsett med %1$s</string>
     <string name="stepup_error_start">Kunne ikke starte ny autentisering. Prøv igjen.</string>
     <string name="stepup_error_code">Den koden er feil eller har utløpt.</string>
@@ -313,7 +313,7 @@
     <string name="settings_card_flat">Flat</string>
     <string name="settings_card_raised">Heva</string>
     <string name="error_server_https">Serveradressa må byrja med https://</string>
-    <string name="device_name_fallback">Mobileining</string>
+    <string name="device_name_fallback">Mobil eining</string>
     <string name="account_error_token_type">Tokentypen er ikkje støtta</string>
     <string name="account_error_caller">Kallaren har ikkje løyve</string>
 </resources>

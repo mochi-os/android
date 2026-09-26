@@ -76,12 +76,12 @@
     <string name="people_open_sidebar">Buka navigasi</string>
     <string name="people_person_state_friend">Rakan</string>
     <string name="people_person_state_self">Anda</string>
-    <string name="people_person_message">Mesej</string>
+    <string name="people_person_message">Hantar mesej</string>
     <string name="people_person_accept">Terima</string>
     <string name="people_person_decline">Tolak</string>
 
 
-    <string name="notification_channel_people">Pemberitahuan People</string>
+    <string name="notification_channel_people">Pemberitahuan Orang</string>
     <string name="people_friends_searching">Mencari…</string>
     <string name="people_invitations_toast_accepted">Menerima jemputan daripada %1$s</string>
     <string name="people_invitations_toast_declined">Menolak jemputan daripada %1$s</string>
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">Masukkan warna heks yang sah (cth. #a78bfa)</string>
     <string name="people_profile_accent_none">Tiada</string>
     <string name="people_profile_privacy_private_desc">Hanya rakan yang sama-sama berkawan boleh melihat profil anda</string>
-    <string name="people_welcome_title">Selamat datang ke People</string>
+    <string name="people_welcome_title">Selamat datang ke Orang</string>
     <string name="people_person_banner_alt">Sepanduk untuk %1$s</string>
     <string name="people_person_private">Profil ini adalah peribadi</string>
     <string name="people_person_state_invited">Dijemput</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Terima semua</string>
     <string name="people_invitations_decline_all">Tolak semua</string>
     <string name="people_invitations_cancel_all">Batalkan semua</string>
+    <string name="people_invitations_cancel">Batal</string>
     <string name="people_invitations_all_accepted">Semua jemputan diterima</string>
     <string name="people_invitations_all_declined">Semua jemputan ditolak</string>
     <string name="people_invitations_all_cancelled">Semua jemputan dibatalkan</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Cari…</string>
     <string name="people_contacts_invited">Dijemput</string>
     <string name="people_contacts_accept">Terima</string>
-    <string name="people_contacts_message">Mesej</string>
+    <string name="people_contacts_message">Hantar mesej</string>
     <string name="people_contacts_no_people_found">Tiada orang dijumpai</string>
     <string name="people_contacts_try_adjusting">Cuba laraskan carian anda</string>
     <string name="people_contact_section_address">Alamat</string>

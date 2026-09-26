@@ -34,7 +34,7 @@
     <string name="crm_option_icon">Biểu tượng</string>
     <string name="crm_option_icon_placeholder">ví dụ Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Hủy đăng ký</string>
-    <string name="crm_settings_delete_crm">Xóa dự án</string>
+    <string name="crm_settings_delete_crm">Xóa CRM</string>
     <string name="crm_settings_delete_confirm_title">Xóa CRM</string>
     <string name="crm_settings_unsubscribe_title">Hủy đăng ký</string>
     <string name="crm_settings_unsubscribe_message">Bạn có chắc muốn hủy đăng ký CRM này?</string>
@@ -78,7 +78,7 @@
     <string name="crm_design_or_upload_json">Hoặc tải lên một tệp</string>
     <string name="crm_design_upload_json">Tải lên tệp .json</string>
     <string name="crm_design_tab_classes">Class</string>
-    <string name="crm_design_tab_views">Lượt xem</string>
+    <string name="crm_design_tab_views">Chế độ xem</string>
     <string name="crm_design_import_dialog_title">Nhập thiết kế</string>
     <string name="crm_design_import_choose_template">Chọn một mẫu</string>
     <string name="crm_design_replace_title">Thay thế thiết kế?</string>
@@ -126,7 +126,7 @@
     <string name="crm_not_found">Không tìm thấy dự án</string>
     <string name="crm_more">Thêm</string>
     <string name="crm_comment_send">Gửi</string>
-    <string name="crm_field_position_body">Nội dung</string>
+    <string name="crm_field_position_body">Phần thân</string>
     <string name="crm_sort_field">Sắp xếp theo</string>
     <string name="crm_comment_remove_attachment">Xóa tệp đính kèm</string>
     <string name="crm_views_sort_by">Sắp xếp theo</string>
@@ -194,7 +194,7 @@
     <string name="crm_drag_card">Kéo thẻ</string>
     <string name="crm_drag_row">Kéo hàng</string>
     <string name="crm_drag_column">Kéo cột</string>
-    <string name="crm_design_more_options">Thêm tùy chọn</string>
+    <string name="crm_design_more_options">Tùy chọn khác</string>
     <string name="crm_design_no_templates">Không có mẫu nào</string>
     <string name="crm_design_use">Sử dụng</string>
     <string name="crm_design_replace_message">Thao tác này sẽ thay thế thiết kế hiện tại bằng %1$s. Tất cả các lớp, trường, tùy chọn và chế độ xem hiện có sẽ bị xóa. Các đối tượng hiện có sẽ không bị xóa nhưng có thể không còn xuất hiện trong các chế độ xem.</string>
@@ -220,7 +220,7 @@
     <string name="crm_field_rows">Số hàng (chiều cao vùng nhập)</string>
     <string name="crm_field_no_options">Chưa có tùy chọn nào được xác định</string>
     <string name="crm_field_delete_message">Bạn có chắc chắn muốn xóa trường \"%1$s\" không? Tất cả các tùy chọn và giá trị sẽ bị mất.</string>
-    <string name="crm_option_color">Màu sắc</string>
+    <string name="crm_option_color">Màu</string>
     <string name="crm_views_empty">Chưa có chế độ xem nào được xác định</string>
     <string name="crm_views_empty_subtitle">Tạo chế độ xem bảng hoặc danh sách để nhóm các đối tượng</string>
     <string name="crm_views_delete_message">Bạn có chắc chắn muốn xóa chế độ xem \"%1$s\" không?</string>

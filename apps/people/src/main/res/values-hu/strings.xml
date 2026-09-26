@@ -76,12 +76,12 @@
     <string name="people_open_sidebar">Navigáció megnyitása</string>
     <string name="people_person_state_friend">Barátok</string>
     <string name="people_person_state_self">Ön</string>
-    <string name="people_person_message">Üzenet</string>
+    <string name="people_person_message">Üzenet küldése</string>
     <string name="people_person_accept">Elfogadás</string>
     <string name="people_person_decline">Elutasítás</string>
 
 
-    <string name="notification_channel_people">Emberek értesítések</string>
+    <string name="notification_channel_people">Személyek értesítései</string>
     <string name="people_friends_searching">Keresés…</string>
     <string name="people_invitations_toast_accepted">Elfogadta %1$s meghívóját</string>
     <string name="people_invitations_toast_declined">Elutasította %1$s meghívóját</string>
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">Adjon meg érvényes hexadecimális színt (pl. #a78bfa)</string>
     <string name="people_profile_accent_none">Nincs</string>
     <string name="people_profile_privacy_private_desc">Csak a kölcsönös ismerősök tekinthetik meg a profilját</string>
-    <string name="people_welcome_title">Üdvözli az Emberek</string>
+    <string name="people_welcome_title">Üdvözöljük a Személyek alkalmazásban</string>
     <string name="people_person_banner_alt">%1$s borítóképe</string>
     <string name="people_person_private">Ez a profil zárt</string>
     <string name="people_person_state_invited">Meghívva</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Összes elfogadása</string>
     <string name="people_invitations_decline_all">Összes elutasítása</string>
     <string name="people_invitations_cancel_all">Összes megszakítása</string>
+    <string name="people_invitations_cancel">Visszavonás</string>
     <string name="people_invitations_all_accepted">Minden meghívás elfogadva</string>
     <string name="people_invitations_all_declined">Minden meghívás elutasítva</string>
     <string name="people_invitations_all_cancelled">Minden meghívás visszavonva</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Keresés…</string>
     <string name="people_contacts_invited">Meghívva</string>
     <string name="people_contacts_accept">Elfogadás</string>
-    <string name="people_contacts_message">Üzenet</string>
+    <string name="people_contacts_message">Üzenet küldése</string>
     <string name="people_contacts_no_people_found">Nem találhatók személyek</string>
     <string name="people_contacts_try_adjusting">Próbálja módosítani a keresést</string>
     <string name="people_contact_section_address">Cím</string>
@@ -145,12 +146,12 @@
     <string name="people_add_contact_search_start">Kezdj el gépelni a felhasználók kereséséhez</string>
     <string name="people_contact_phone">Telefon</string>
     <string name="people_contact_title">Beosztás</string>
-    <string name="people_contacts_title">Kapcsolatok</string>
+    <string name="people_contacts_title">Névjegyek</string>
     <string name="people_contacts_all">Összes névjegy</string>
     <string name="people_contacts_empty">Nincs találat a névjegyek között</string>
     <string name="people_contacts_add_to_start">Vegyen fel névjegyeket a kapcsolatfelvételhez</string>
     <string name="people_contacts_actions">Névjegyműveletek</string>
-    <string name="people_contacts_friend">Ismerős</string>
+    <string name="people_contacts_friend">Barát</string>
     <string name="people_contacts_invite">Meghívás</string>
     <string name="people_contacts_unfriend_confirm">%1$s a továbbiakban nem lesz az ismerőse. A névjegy a címjegyzékében marad.</string>
     <string name="people_contacts_delete">Névjegy törlése</string>
@@ -158,11 +159,11 @@
     <string name="people_contacts_delete_friend_confirm">Törli %1$s névjegyét a névjegyei közül? Az ismeretségük is megszűnik.</string>
     <string name="people_contact_new_title">Új névjegy</string>
     <string name="people_contact_edit_title">Névjegy szerkesztése</string>
-    <string name="people_contact_given">Utónév</string>
+    <string name="people_contact_given">Keresztnév</string>
     <string name="people_contact_family">Vezetéknév</string>
     <string name="people_contact_nickname">Becenév</string>
     <string name="people_contact_add_email">E-mail hozzáadása</string>
-    <string name="people_contact_add_phone">Telefon hozzáadása</string>
+    <string name="people_contact_add_phone">Telefonszám hozzáadása</string>
     <string name="people_contact_add_address">Cím hozzáadása</string>
     <string name="people_contact_street">Utca</string>
     <string name="people_contact_birthday">Születésnap</string>

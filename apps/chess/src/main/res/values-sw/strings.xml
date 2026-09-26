@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="chess_app_title">Sataranji</string>
-    <string name="chess_sidebar_header">Sataranji</string>
+    <string name="chess_app_title">Chesi</string>
+    <string name="chess_sidebar_header">Chesi</string>
     <string name="chess_sidebar_active">Michezo Inayoendelea</string>
     <string name="chess_sidebar_completed">Imekamilika</string>
     <string name="chess_sidebar_new_game">Mchezo mpya</string>
@@ -31,7 +31,7 @@
     <string name="chess_draw_accept">Kubali</string>
     <string name="chess_draw_decline">Kataa</string>
     <string name="chess_status_checkmate_you_win">Shahimati — umeshinda!</string>
-    <string name="chess_status_stalemate">Sare — sare</string>
+    <string name="chess_status_stalemate">Sare ya kukwama — sare</string>
     <string name="chess_status_draw">Sare</string>
     <string name="chess_status_check_your_move">Shari — zamu yako</string>
     <string name="chess_status_your_move">Hamisho lako</string>

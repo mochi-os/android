@@ -163,7 +163,7 @@
     <string name="bootstrap_choose_account">اختر حسابًا</string>
     <string name="bootstrap_sign_in_different_server">تسجيل الدخول إلى خادم مختلف</string>
     <string name="common_retry">إعادة المحاولة</string>
-    <string name="common_more_options">المزيد من الخيارات</string>
+    <string name="common_more_options">خيارات أخرى</string>
     <string name="common_collapse">طي</string>
     <string name="common_expand">توسيع</string>
     <string name="common_play_video">تشغيل الفيديو</string>
@@ -300,7 +300,7 @@
     <string name="format_italic">مائل</string>
     <string name="format_link">رابط</string>
     <string name="format_heading">عنوان</string>
-    <string name="format_code">الرمز</string>
+    <string name="format_code">تعليمات برمجية</string>
     <string name="format_list">قائمة نقطية</string>
     <string name="common_preview">معاينة</string>
     <string name="rss_revoke_confirm">إلغاء</string>

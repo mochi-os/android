@@ -33,7 +33,7 @@
     <string name="crm_settings_tab_people">Personas</string>
     <string name="crm_option_icon">Icono</string>
     <string name="crm_settings_unsubscribe">Cancelar suscripción</string>
-    <string name="crm_settings_delete_crm">Eliminar proyecto</string>
+    <string name="crm_settings_delete_crm">Eliminar CRM</string>
     <string name="crm_settings_delete_confirm_title">Eliminar CRM</string>
     <string name="crm_settings_unsubscribe_title">Cancelar suscripción</string>
     <string name="crm_settings_unsubscribe_message">¿Seguro que quieres cancelar la suscripción a este CRM?</string>

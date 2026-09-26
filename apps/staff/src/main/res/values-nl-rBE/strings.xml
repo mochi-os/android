@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="launcher_staff">Mochi-personeel</string>
     <string name="staff_accounts_action_ban_title">Account verbannen</string>
     <string name="staff_accounts_action_suspend_title">Account schorsen</string>
     <string name="staff_accounts_action_unban_title">Verbanning opheffen</string>
@@ -82,14 +82,14 @@
     <string name="staff_audit_action_listing_appeal_decided">Beroep beslist</string>
     <string name="staff_audit_action_listing_appeal_submitted">Beroep ingediend</string>
     <string name="staff_audit_action_listing_approved">Goedgekeurd door personeel</string>
-    <string name="staff_audit_action_listing_created">Listing aangemaakt</string>
-    <string name="staff_audit_action_listing_deleted">Listing verwijderd</string>
+    <string name="staff_audit_action_listing_created">Advertentie aangemaakt</string>
+    <string name="staff_audit_action_listing_deleted">Advertentie verwijderd</string>
     <string name="staff_audit_action_listing_expired">Verlopen</string>
-    <string name="staff_audit_action_listing_published">Listing gepubliceerd</string>
+    <string name="staff_audit_action_listing_published">Advertentie gepubliceerd</string>
     <string name="staff_audit_action_listing_rejected">Afgewezen door staff</string>
     <string name="staff_audit_action_listing_relisted">Opnieuw aangeboden</string>
     <string name="staff_audit_action_listing_removed">Verwijderd</string>
-    <string name="staff_audit_action_listing_updated">Listing bewerkt</string>
+    <string name="staff_audit_action_listing_updated">Advertentie bewerkt</string>
     <string name="staff_audit_action_listing_warning">Waarschuwing gegeven</string>
     <string name="staff_audit_action_order_cancelled">Geannuleerd</string>
     <string name="staff_audit_action_order_chargeback">Chargeback ontvangen</string>
@@ -234,7 +234,7 @@
     <string name="staff_disputes_refund_help">Laat leeg voor een volledige terugbetaling van %1$s. Voer een lager bedrag in voor een gedeeltelijke terugbetaling.</string>
     <string name="staff_disputes_refund_must_be_positive">Terugbetalingsbedrag moet groter zijn dan nul</string>
     <string name="staff_disputes_resolution_buyer">Oplossen ten gunste van koper</string>
-    <string name="staff_disputes_resolution_label">Resolutie</string>
+    <string name="staff_disputes_resolution_label">Oplossing</string>
     <string name="staff_disputes_resolution_placeholder">Selecteer oplossing</string>
     <string name="staff_disputes_resolution_seller">Oplossen ten gunste van verkoper</string>
     <string name="staff_disputes_resolve">Oplossen</string>
@@ -271,7 +271,7 @@
     <string name="staff_listings_any_moderation">Elke moderatie</string>
     <string name="staff_listings_any_status">Elke status</string>
     <string name="staff_listings_approve">Goedkeuren</string>
-    <string name="staff_listings_approved_toast">Listing goedgekeurd</string>
+    <string name="staff_listings_approved_toast">Advertentie goedgekeurd</string>
     <string name="staff_listings_cancel">Annuleren</string>
     <string name="staff_listings_empty">Geen advertenties</string>
     <string name="staff_listings_filter_moderation_label">Moderatie</string>
@@ -285,9 +285,9 @@
     <string name="staff_listings_price_placeholder">—</string>
     <string name="staff_listings_reason_label">Reden</string>
     <string name="staff_listings_reject">Afwijzen</string>
-    <string name="staff_listings_rejected_toast">Listing afgewezen</string>
+    <string name="staff_listings_rejected_toast">Advertentie afgewezen</string>
     <string name="staff_listings_remove">Verwijderen</string>
-    <string name="staff_listings_removed_toast">Listing verwijderd</string>
+    <string name="staff_listings_removed_toast">Advertentie verwijderd</string>
     <string name="staff_listings_search_clear">Zoekopdracht wissen</string>
     <string name="staff_listings_search_placeholder">Zoek in titel of beschrijving</string>
     <string name="staff_listings_seller_verified">Geverifieerde verkoper</string>
@@ -304,7 +304,7 @@
     <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Actie</string>
     <string name="staff_reports_action_ban">Gebruiker verbannen</string>
-    <string name="staff_reports_action_dismiss">Sluiten</string>
+    <string name="staff_reports_action_dismiss">Afwijzen</string>
     <string name="staff_reports_action_label">Actie</string>
     <string name="staff_reports_action_placeholder">Selecteer actie</string>
     <string name="staff_reports_action_remove">Verwijderen</string>
@@ -316,7 +316,7 @@
     <string name="staff_reports_cancel">Annuleren</string>
     <string name="staff_reports_close">Sluiten</string>
     <string name="staff_reports_dialog_title_action">Actie ondernemen op melding</string>
-    <string name="staff_reports_dialog_title_view">Rapporteren</string>
+    <string name="staff_reports_dialog_title_view">Rapport</string>
     <string name="staff_reports_empty">Geen rapporten</string>
     <string name="staff_reports_filter_status_label">Status</string>
     <string name="staff_reports_filter_type_label">Type</string>

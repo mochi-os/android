@@ -137,7 +137,6 @@
     <string name="projects_links_search_placeholder">Buscar objetos</string>
 
     <string name="notification_channel_projects">Notificaciones de proyectos</string>
-    <string name="projects_auth_brand">Mochi Projects</string>
     <string name="projects_list_search_placeholder">Buscar proyectos</string>
     <string name="projects_list_find">Buscar proyectos</string>
     <string name="projects_list_no_matching">No hay proyectos coincidentes</string>

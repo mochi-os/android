@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">إزالة</string>
     <string name="wikis_replicas_remove_failed">فشل إزالة النسخة المتماثلة</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi الويكي</string>
     <string name="wikis_channel_name">إشعارات Wikis</string>
     <string name="wikis_channel_description">إشعارات حول تعديلات الصفحات والتعليقات والدعوات.</string>
     <string name="wikis_pageview_toc_expand">إظهار جدول المحتويات</string>
@@ -246,7 +246,7 @@
     <string name="wikis_insert_dialog_empty">لا توجد مرفقات بعد. ارفع ملفاً للبدء.</string>
     <string name="wikis_delete_page_message">أنت على وشك حذف الصفحة «%1$s» (%2$s). يمكن التراجع عن هذا الإجراء بالاستعادة من السجل.</string>
     <string name="wikis_delete_page_success">تم حذف الصفحة</string>
-    <string name="wikis_revert_page_title">استرجاع الصفحة</string>
+    <string name="wikis_revert_page_title">إرجاع الصفحة</string>
     <string name="wikis_revert_page_message">أنت على وشك استرجاع %1$s إلى الإصدار %2$d. سيؤدي ذلك إلى إنشاء مراجعة جديدة بمحتوى الإصدار %2$d.</string>
     <string name="wikis_revert_page_default_comment">تم الاسترجاع إلى الإصدار %1$d</string>
     <string name="wikis_revert_page_success">تم الاسترجاع إلى الإصدار %1$d</string>
@@ -283,7 +283,7 @@
     <string name="wikis_load_more">تحميل المزيد</string>
     <string name="wikis_access_change_level">مستوى الوصول</string>
     <string name="wikis_access_subject_anyone">أي شخص</string>
-    <string name="wikis_access_subject_authenticated">المستخدمون المُوثَّقون</string>
+    <string name="wikis_access_subject_authenticated">المستخدمون المسجّلون</string>
 
     <string name="wikis_revision_compare">مقارنة التغييرات</string>
     <string name="wikis_revision_author">حسب %1$s</string>

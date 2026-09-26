@@ -41,7 +41,7 @@
     <string name="access_add_rule">ሕግ አክል</string>
     <string name="access_owner">ባለቤት</string>
     <string name="access_revoke">ይሻሩ</string>
-    <string name="access_level_comment">አስተያየት</string>
+    <string name="access_level_comment">አስተያየት ስጥ</string>
     <string name="access_level_view">ይመልከቱ</string>
     <string name="access_level_none">ምንም</string>
     <string name="reaction_like">ወደድኩት</string>
@@ -59,7 +59,7 @@
     <string name="notifications_title">ማሳወቂያዎች</string>
     <string name="notifications_empty">ምንም ማሳወቂያዎች የሉም</string>
     <string name="notifications_empty_unread">ሁሉንም አንብበዋል</string>
-    <string name="notifications_tab_unread">ያልተነበቡ</string>
+    <string name="notifications_tab_unread">ያልተነበበ</string>
     <string name="notifications_tab_unread_count">ያልተነበቡ (%1$d)</string>
     <string name="notifications_tab_all">ሁሉም</string>
     <string name="notifications_mark_all_read">ሁሉንም እንደተነበበ ምልክት አድርግ</string>
@@ -123,7 +123,7 @@
 
     <string name="app_brand">Mochi</string>
     <string name="error_network">መገናኘት አልተቻለም። የበይነመረብ ግንኙነትዎን ይፈትሹ እና እንደገና ይሞክሩ።</string>
-    <string name="error_authentication_required">ማረጋገጫ ያስፈልጋል</string>
+    <string name="error_authentication_required">ማረጋገጥ ያስፈልጋል</string>
     <string name="error_not_found">አልተገኘም</string>
     <string name="error_server">የአገልጋይ ስህተት (%1$d)። እባክዎ ቆይተው እንደገና ይሞክሩ።</string>
     <string name="error_unexpected">ያልተጠበቀ ስህተት ተከስቷል</string>
@@ -132,7 +132,7 @@
     <string name="error_enter_name">እባክዎ ስም ያስገቡ</string>
     <string name="auth_connect_to_server">ከአገልጋይዎ ጋር ይገናኙ</string>
     <string name="auth_server_url">የአገልጋይ URL</string>
-    <string name="auth_connect">ይገናኙ</string>
+    <string name="auth_connect">አገናኝ</string>
     <string name="auth_sign_in">ይግቡ</string>
     <string name="auth_check_email">የማረጋገጫ ኮድ ለማግኘት ኢሜይልዎን ይፈትሹ</string>
     <string name="auth_mfa_title">ባለብዙ-ደረጃ ማረጋገጫ</string>
@@ -141,18 +141,18 @@
     <string name="auth_login_title">ወደ Mochi ይግቡ</string>
     <string name="auth_next">ቀጣይ</string>
     <string name="auth_or_log_in_with">ወይም በዚህ ይግቡ</string>
-    <string name="auth_passkey">የይለፍ ቁልፍ</string>
-    <string name="auth_use_passkey">የይለፍ ቁልፍ ይጠቀሙ</string>
+    <string name="auth_passkey">ፓስኪ</string>
+    <string name="auth_use_passkey">ፓስኪ ይጠቀሙ</string>
     <string name="auth_email_me_a_code">ኮድ በኢሜይል ይላኩልኝ</string>
     <string name="auth_or_enter_authenticator_code">ወይም የአረጋጋጭ ኮድ ያስገቡ</string>
-    <string name="auth_log_in">ይግቡ</string>
+    <string name="auth_log_in">ግባ</string>
     <string name="auth_back">ተመለስ</string>
     <string name="auth_lost_access_recovery">መዳረሻ አጥተዋል? የመልሶ ማግኛ ኮድ ይጠቀሙ</string>
     <string name="auth_create_identity_title">ማንነትዎን ይፍጠሩ</string>
     <string name="auth_create_identity_subtitle">በዚህ አገልጋይ ላይ ለማንነትዎ ስም ይምረጡ</string>
     <string name="auth_privacy_public_description">ሌሎች እንዲያገኙዎት በተጠቃሚ ማውጫ ውስጥ ተዘርዝሯል።</string>
     <string name="auth_privacy_private_description">ከተጠቃሚ ማውጫ ተደብቋል።</string>
-    <string name="auth_link_rules">ደንቦች</string>
+    <string name="auth_link_rules">ህጎች</string>
     <string name="auth_link_terms">ውሎች</string>
     <string name="auth_error_suspended_body">መለያዎ ታግዷል። ይህ ስህተት ነው ብለው ካሰቡ የአገልጋዩን አስተዳዳሪ ያነጋግሩ።</string>
     <string name="auth_error_signup_disabled_title">የመመዝገቢያ አገልግሎት ተሰናክሏል</string>
@@ -164,8 +164,8 @@
     <string name="bootstrap_sign_in_different_server">ወደ ሌላ አገልጋይ ይግቡ</string>
     <string name="common_retry">እንደገና ሞክር</string>
     <string name="common_more_options">ተጨማሪ አማራጮች</string>
-    <string name="common_collapse">አሳጥር</string>
-    <string name="common_expand">አስፋ</string>
+    <string name="common_collapse">ሰብስብ</string>
+    <string name="common_expand">ዘርጋ</string>
     <string name="common_play_video">ቪዲዮ አጫውት</string>
     <string name="place_picker_name">የቦታ ስም</string>
     <string name="place_origin">መነሻ</string>
@@ -230,14 +230,14 @@
     <string name="stepup_email_placeholder">ከኢሜይልዎ የመጣውን ኮድ ያስገቡ</string>
     <string name="stepup_totp_label">የማረጋገጫ ኮድ</string>
     <string name="stepup_totp_placeholder">የአረጋጋጭዎን ኮድ ያስገቡ</string>
-    <string name="stepup_use_passkey">የይለፍ ቁልፍዎን ይጠቀሙ</string>
+    <string name="stepup_use_passkey">ፓስኪዎን ይጠቀሙ</string>
     <string name="stepup_send_email">ኢሜይል ላክ</string>
     <string name="stepup_resend_email">ኢሜይል እንደገና ላክ</string>
     <string name="stepup_verify">ያረጋግጡ</string>
     <string name="stepup_continue_with">በ%1$s ይቀጥሉ</string>
     <string name="stepup_error_start">እንደገና ማረጋገጥን መጀመር አልተቻለም። እባክዎ እንደገና ይሞክሩ።</string>
     <string name="stepup_error_code">ያ ኮድ የተሳሳተ ነው ወይም ጊዜው አልፎበታል።</string>
-    <string name="stepup_error_passkey">የይለፍ ቁልፍ ማረጋገጫ አልተሳካም። እባክዎ እንደገና ይሞክሩ።</string>
+    <string name="stepup_error_passkey">ፓስኪ ማረጋገጫ አልተሳካም። እባክዎ እንደገና ይሞክሩ።</string>
     <string name="stepup_error_oauth">በዚያ መለያ ማረጋገጥ አልተቻለም። እባክዎ እንደገና ይሞክሩ።</string>
     <string name="game_system_resign">%1$s እጅ ሰጠ</string>
     <string name="game_system_draw_offer">%1$s አቻ ጨዋታ አቀረበ</string>
@@ -302,7 +302,7 @@
     <string name="rss_revoke_confirm">ይሻሩ</string>
     <string name="rss_revoke">መዳረሻን ሻር</string>
     <string name="rss_revoke_title">የRSS መዳረሻ ይሻር?</string>
-    <string name="rss_revoke_message">በዚህ ምግብ የተመዘገበ ማንኛውም ነገር መቀበሉን ያቆማል። ከዚያ በኋላ አዲስ URL መቅዳት ይችላሉ።</string>
+    <string name="rss_revoke_message">በዚህ ፊድ የተመዘገበ ማንኛውም ነገር መቀበሉን ያቆማል። ከዚያ በኋላ አዲስ URL መቅዳት ይችላሉ።</string>
     <string name="rss_revoked">የRSS መዳረሻ ተሽሯል</string>
     <string name="rss_revoke_failed">የRSS መዳረሻን መሻር አልተቻለም</string>
     <string name="game_empty_title">እስካሁን ጨዋታዎች የሉም</string>
@@ -313,7 +313,7 @@
     <string name="settings_card_flat">ጠፍጣፋ</string>
     <string name="settings_card_raised">ከፍ ያለ</string>
     <string name="error_server_https">የአገልጋዩ አድራሻ በhttps:// መጀመር አለበት</string>
-    <string name="device_name_fallback">ተንቀሳቃሽ መሣሪያ</string>
+    <string name="device_name_fallback">ሞባይል መሣሪያ</string>
     <string name="account_error_token_type">ያልተደገፈ የቶከን ዓይነት</string>
     <string name="account_error_caller">ጠሪው አይፈቀድም</string>
 </resources>

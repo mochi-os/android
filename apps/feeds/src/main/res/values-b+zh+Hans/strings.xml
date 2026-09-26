@@ -14,13 +14,13 @@
     <string name="feeds_no_posts_yet">暂无帖子</string>
     <string name="feeds_sort_label">排序</string>
     <string name="feeds_sort_interests">兴趣</string>
-    <string name="feeds_sort_new">新建</string>
+    <string name="feeds_sort_new">最新</string>
     <string name="feeds_sort_hot">热门</string>
-    <string name="feeds_sort_top">顶部</string>
+    <string name="feeds_sort_top">最佳</string>
     <string name="feeds_sort_ai">AI</string>
-    <string name="feeds_post_default_author">发布</string>
+    <string name="feeds_post_default_author">帖子</string>
     <string name="feeds_image_preview">预览</string>
-    <string name="feeds_post">发布</string>
+    <string name="feeds_post">帖子</string>
     <string name="feeds_comments">评论</string>
     <string name="feeds_delete_post">删除帖子</string>
     <string name="feeds_delete_comment">删除评论</string>
@@ -57,13 +57,13 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi 信息流</string>
     <string name="feeds_source_type_feed_memories">回忆</string>
-    <string name="feeds_remove_source">移除来源</string>
+    <string name="feeds_remove_source">移除来源？</string>
     <string name="feeds_suggested_credibility_accept">接受</string>
     <string name="feeds_rss_url_copied">RSS URL 已复制到剪贴板</string>
     <string name="feeds_logout">退出登录</string>
     <string name="feeds_ai_account_default">默认账户</string>
     <string name="feeds_ai_mode_off">已禁用</string>
-    <string name="feeds_ai_mode_tag">标签</string>
+    <string name="feeds_ai_mode_tag">标记</string>
     <string name="feeds_ai_mode_tag_deduplicate">标记 + 去重</string>
     <string name="feeds_feed_not_found">信息流未找到</string>
     <string name="feeds_post_not_found">帖子未找到</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS 网址</string>
     <string name="feeds_source_never_fetched">从未获取</string>
     <string name="feeds_source_poll">轮询</string>
-    <string name="feeds_source_transform">转换</string>
+    <string name="feeds_source_transform">AI 转换</string>
     <string name="feeds_remove_source_confirm">移除 \"%1$s\"？</string>
     <string name="feeds_remove_also_delete_posts">同时删除已导入的帖子</string>
     <string name="feeds_suggested_credibility_title">推荐可信度</string>
@@ -206,7 +206,7 @@
     <string name="feeds_ai_prompt_custom">自定义</string>
     <string name="feeds_ai_prompt_variables">变量：%1$s</string>
     <string name="feeds_link">链接</string>
-    <string name="feeds_share_link_title">订阅源链接</string>
+    <string name="feeds_share_link_title">信息流链接</string>
     <plurals name="feeds_comment_count">
         <item quantity="other">%1$d 条评论</item>
     </plurals>

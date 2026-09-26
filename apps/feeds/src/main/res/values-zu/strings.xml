@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Akukho okwabiwayo okwamanje</string>
     <string name="feeds_sort_label">Hlunga</string>
     <string name="feeds_sort_interests">Izintshisekelo</string>
-    <string name="feeds_sort_new">Okusha</string>
+    <string name="feeds_sort_new">Okusha kakhulu</string>
     <string name="feeds_sort_hot">Okushisayo</string>
-    <string name="feeds_sort_top">Phezulu</string>
+    <string name="feeds_sort_top">Okuhamba phambili</string>
     <string name="feeds_sort_ai">I-AI</string>
     <string name="feeds_post_default_author">Okuthunyelwe</string>
     <string name="feeds_image_preview">Buka kuqala</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Khansela impendulo</string>
     <string name="feeds_edit_post">Hlela okwabiwayo</string>
     <string name="feeds_save_label">Londoloza</string>
-    <string name="feeds_post_action">Okuthunyelwe</string>
+    <string name="feeds_post_action">Thumela</string>
     <string name="feeds_feed_label">Ifidi</string>
     <string name="feeds_add_files">Engeza amafayela</string>
     <string name="feeds_restore">Buyisela</string>
@@ -57,13 +57,13 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Ifidi ye-Mochi</string>
     <string name="feeds_source_type_feed_memories">Izinkumbulo</string>
-    <string name="feeds_remove_source">Susa umthombo</string>
+    <string name="feeds_remove_source">Susa umthombo?</string>
     <string name="feeds_suggested_credibility_accept">Yamukela</string>
     <string name="feeds_rss_url_copied">I-URL ye-RSS ikopishelwe kubhodi</string>
     <string name="feeds_logout">Phuma</string>
     <string name="feeds_ai_account_default">I-akhawunti ezenzakalelayo</string>
     <string name="feeds_ai_mode_off">Kuvinjelwe</string>
-    <string name="feeds_ai_mode_tag">Ithegi</string>
+    <string name="feeds_ai_mode_tag">Faka amathegi</string>
     <string name="feeds_ai_mode_tag_deduplicate">Ithegi + susa okuphindiwe</string>
     <string name="feeds_feed_not_found">Ifidi ayitholakalanga</string>
     <string name="feeds_post_not_found">Okwabiwayo akutholakali</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">I-URL ye-RSS</string>
     <string name="feeds_source_never_fetched">Akukaze kulandwe</string>
     <string name="feeds_source_poll">Inhlolovo</string>
-    <string name="feeds_source_transform">Guqula</string>
+    <string name="feeds_source_transform">Ukuguqula nge-AI</string>
     <string name="feeds_remove_source_confirm">Susa \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Susa futhi okuthunyelwe okungeniswe</string>
     <string name="feeds_suggested_credibility_title">Ukwethenjwa okusikiselwayo</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">Intshisekelo inciphisiwe</string>
     <string name="feeds_interest_removed">Intshisekelo isusiwe</string>
     <string name="feeds_interest_failed">Kuhlulekile ukulungisa intshisekelo</string>
-    <string name="feeds_saved_title">Kulondoloziwe</string>
-    <string name="feeds_saved_menu">Kulondoloziwe</string>
+    <string name="feeds_saved_title">Okulondoloziwe</string>
+    <string name="feeds_saved_menu">Okulondoloziwe</string>
     <string name="feeds_saved_save">Londoloza ukuze ubuke kamuva</string>
     <string name="feeds_saved_remove">Susa kokulondoloziwe</string>
     <string name="feeds_saved_clear_all">Sula konke</string>
@@ -206,7 +206,7 @@
     <string name="feeds_banner_dismiss">Cashisa ibhana</string>
     <string name="feeds_members_search">Hlunga amalungu</string>
     <string name="feeds_ai_prompt_default">Okuzenzakalelayo</string>
-    <string name="feeds_ai_prompt_custom">Okwezifiso</string>
+    <string name="feeds_ai_prompt_custom">Okuzenzelwe</string>
     <string name="feeds_ai_prompt_variables">Okuguqukayo: %1$s</string>
     <string name="feeds_link">Isixhumanisi</string>
     <string name="feeds_share_link_title">Isixhumanisi sefidi</string>

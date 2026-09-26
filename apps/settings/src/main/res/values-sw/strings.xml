@@ -242,7 +242,7 @@
     <string name="route_meta">Kipaumbele %1$d · %2$s</string>
     <string name="interests_search_placeholder">Tafuta mada za kuongeza…</string>
     <string name="interests_empty">Bado hakuna maslahi.</string>
-    <string name="interests_summary_regenerate">Zalisha tena muhtasari</string>
+    <string name="interests_summary_regenerate">Zalisha muhtasari upya</string>
     <string name="interests_summary_regenerating">Inazalisha tena…</string>
     <string name="interests_summary_empty">Ongeza baadhi ya maslahi ili kuzalisha muhtasari wa unachopenda.</string>
     <string name="interests_search_failed">Utafutaji umeshindwa. Tafadhali jaribu tena.</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s haitasimamia tena njia kwenye kikoa hiki.</string>
     <string name="domain_delegation_delete_title">Futa ukabidhi?</string>
     <string name="domain_delegation_path">Njia</string>
-    <string name="domain_delegation_user">Kitambulisho cha mtumiaji</string>
+    <string name="domain_delegation_user">Mtumiaji</string>
     <string name="domain_delegations">Ukabidhi</string>
     <string name="domain_delegations_empty">Hakuna utowezi uliowekwa.</string>
     <string name="domain_delete">Futa kikoa</string>
@@ -376,7 +376,7 @@
     <string name="accounts_forget_message">Hii itasahau kifaa \"%1$s\" na kusimamisha arifa kwake.</string>
     <string name="accounts_device_seen">Ilionekana mara ya mwisho %1$s</string>
     <string name="notifprefs_device_app">%1$s · programu</string>
-    <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_device_push">%1$s · arifa za push</string>
     <string name="notifprefs_test_partial">Jaribio limetumwa kwa %1$d kati ya %2$d vituo</string>
     <string name="notifprefs_test_none">Hakuna marudio yaliyosanidiwa</string>
     <string name="notifprefs_transport_fcm">Push ya Android</string>

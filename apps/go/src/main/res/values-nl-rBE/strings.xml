@@ -4,7 +4,7 @@
     <string name="go_action_delete">Spel verwijderen</string>
     <string name="go_action_more">Spelacties openen</string>
     <string name="go_action_open_chat">Chatpaneel openen</string>
-    <string name="go_app_title">Start</string>
+    <string name="go_app_title">Go</string>
     <string name="go_error_rematch_failed">Rematch aanmaken mislukt</string>
     <string name="go_pass_message">Sla uw beurt over en geef door aan uw tegenstander.</string>
     <string name="go_resign_message">Bent u zeker dat u wilt opgeven? %1$s wint de partij.</string>

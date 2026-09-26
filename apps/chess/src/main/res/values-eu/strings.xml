@@ -31,7 +31,7 @@
     <string name="chess_draw_accept">Onartu</string>
     <string name="chess_draw_decline">Ukatu</string>
     <string name="chess_status_checkmate_you_win">Mate — zuk irabazi duzu!</string>
-    <string name="chess_status_stalemate">Itsumandoa — berdinketa</string>
+    <string name="chess_status_stalemate">Itota — berdinketa</string>
     <string name="chess_status_draw">Berdinketa</string>
     <string name="chess_status_check_your_move">Xake — zure jokaldia</string>
     <string name="chess_status_your_move">Zure mugimendua</string>
@@ -58,7 +58,7 @@
     <string name="chess_empty_subtitle">Hasi zure lehen partida lagun batekin xakean jokatzeko.</string>
     <string name="chess_empty_start_button">Hasi zure lehen partida</string>
     <string name="chess_detail_unavailable">Partida ez dago erabilgarri</string>
-    <string name="chess_delete_title">Partida ezabatu?</string>
+    <string name="chess_delete_title">Jokoa ezabatu?</string>
     <string name="chess_delete_message">Honek partida zure zerrendatik kentzen du.</string>
     <string name="chess_ws_connecting">Konektatzen…</string>
     <string name="chess_ws_disconnected">Lineaz kanpo</string>

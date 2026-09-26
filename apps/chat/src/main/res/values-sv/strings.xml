@@ -54,7 +54,7 @@
     <string name="chat_forward_empty">Inga chattar att vidarebefordra till</string>
     <string name="chat_forward_success">Vidarebefordrat</string>
     <string name="chat_message_reply">Svara</string>
-    <string name="chat_message_select">Markera</string>
+    <string name="chat_message_select">Välj</string>
     <string name="chat_reply_attachment">Bilaga</string>
     <string name="chat_replying_to">Svarar %1$s</string>
     <string name="chat_delete_confirm_title">Radera meddelande?</string>

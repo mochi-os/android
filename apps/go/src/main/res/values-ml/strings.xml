@@ -8,7 +8,7 @@
     <string name="go_action_pass">പാസ് ചെയ്യുക</string>
     <string name="go_action_rematch">വീണ്ടും മത്സരം</string>
     <string name="go_action_resign">പിന്മാറുക</string>
-    <string name="go_app_title">പോകുക</string>
+    <string name="go_app_title">ഗോ</string>
     <string name="go_captures_black_sr">കറുപ്പ് പിടിക്കൽ</string>
     <string name="go_captures_white_sr">വെള്ള പിടിക്കൽ</string>
     <string name="go_chat_title">ചാറ്റ്</string>

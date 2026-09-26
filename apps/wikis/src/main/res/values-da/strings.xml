@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Fjern</string>
     <string name="wikis_replicas_remove_failed">Kunne ikke fjerne replika</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wikier</string>
     <string name="wikis_channel_name">Wikis-notifikationer</string>
     <string name="wikis_channel_description">Notifikationer om sideredigeringer, kommentarer og invitationer.</string>
     <string name="wikis_pageview_toc_expand">Vis indholdsfortegnelse</string>
@@ -246,7 +246,7 @@
     <string name="wikis_insert_dialog_empty">Ingen vedhæftninger endnu. Upload en fil for at komme i gang.</string>
     <string name="wikis_delete_page_message">Du er ved at slette siden \"%1$s\" (%2$s). Denne handling kan fortrydes ved at gendanne fra historikken.</string>
     <string name="wikis_delete_page_success">Side slettet</string>
-    <string name="wikis_revert_page_title">Gendan side</string>
+    <string name="wikis_revert_page_title">Tilbagefør side</string>
     <string name="wikis_revert_page_message">Du er ved at gendanne %1$s til version %2$d. Dette opretter en ny revision med indholdet fra version %2$d.</string>
     <string name="wikis_revert_page_default_comment">Gendannet til version %1$d</string>
     <string name="wikis_revert_page_success">Gendannet til version %1$d</string>

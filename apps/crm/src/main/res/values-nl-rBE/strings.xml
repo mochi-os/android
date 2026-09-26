@@ -65,7 +65,7 @@
     <string name="crm_board_rename">Hernoemen</string>
     <string name="crm_board_rename_column">Kolom hernoemen</string>
     <string name="crm_move_position">Positie</string>
-    <string name="crm_move_position_top">Boven</string>
+    <string name="crm_move_position_top">Bovenaan</string>
     <string name="crm_move_current">Huidig</string>
     <string name="crm_design_title">Ontwerp</string>
     <string name="crm_design_export">Ontwerp exporteren</string>

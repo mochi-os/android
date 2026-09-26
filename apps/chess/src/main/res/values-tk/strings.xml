@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chess_app_title">Şahmat</string>
-    <string name="chess_sidebar_header">Şahmat</string>
+    <string name="chess_app_title">Küşt</string>
+    <string name="chess_sidebar_header">Küşt</string>
     <string name="chess_sidebar_active">Aktiw oýunlar</string>
     <string name="chess_sidebar_completed">Tamamlandy</string>
     <string name="chess_sidebar_new_game">Täze oýun</string>
@@ -13,7 +13,7 @@
     <string name="chess_new_title">Täze oýun</string>
     <string name="chess_new_pick_opponent">Garşydaş saýlamak</string>
     <string name="chess_new_no_friends_title">Heniz dostlar ýok</string>
-    <string name="chess_new_no_friends_subtitle">Oýun başlamak üçin People programmasynda dostlar goşuň</string>
+    <string name="chess_new_no_friends_subtitle">Oýun başlamak üçin Adamlar programmasynda dostlar goşuň</string>
     <string name="chess_new_add_friends">Dost goşmak</string>
     <string name="chess_new_start_button">Oýny başla</string>
     <string name="chess_new_creating">Döredilýär…</string>
@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">Kabul etmek</string>
     <string name="chess_draw_decline">Ret etmek</string>
     <string name="chess_status_checkmate_you_win">Mat — siz utdyňyz!</string>
-    <string name="chess_status_stalemate">Stalemate — deňme-deň</string>
+    <string name="chess_status_stalemate">Pat — deňme-deň</string>
     <string name="chess_status_draw">Deňme-deň</string>
     <string name="chess_status_check_your_move">Şah — siziň hereketiňiz</string>
     <string name="chess_status_your_move">Hereketiň</string>
@@ -60,7 +60,7 @@
     <string name="chess_empty_subtitle">Dostuň bilen küşt oýnamak üçin ilkinji oýnuňy başla.</string>
     <string name="chess_empty_start_button">Ilkinji oýnuňy başla</string>
     <string name="chess_detail_unavailable">Oýun elýeterli däl</string>
-    <string name="chess_delete_title">Oýny pozmaly?</string>
+    <string name="chess_delete_title">Oýun pozulsynmy?</string>
     <string name="chess_delete_message">Bu oýny sanawyňdan aýyrýar.</string>
     <string name="chess_ws_connecting">Birikdirilýär…</string>
     <string name="chess_ws_disconnected">Offline</string>

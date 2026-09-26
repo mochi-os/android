@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">अहिलेसम्म कुनै पोस्ट छैन</string>
     <string name="feeds_sort_label">क्रमबद्ध गर्नुहोस्</string>
     <string name="feeds_sort_interests">रुचिहरू</string>
-    <string name="feeds_sort_new">नयाँ</string>
+    <string name="feeds_sort_new">सबैभन्दा नयाँ</string>
     <string name="feeds_sort_hot">हट</string>
-    <string name="feeds_sort_top">माथि</string>
+    <string name="feeds_sort_top">शीर्ष</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">पोस्ट</string>
     <string name="feeds_image_preview">पूर्वावलोकन</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">जवाफ रद्द गर्नुहोस्</string>
     <string name="feeds_edit_post">पोस्ट सम्पादन गर्नुहोस्</string>
     <string name="feeds_save_label">सुरक्षित गर्नुहोस्</string>
-    <string name="feeds_post_action">पोस्ट</string>
+    <string name="feeds_post_action">पोस्ट गर्नुहोस्</string>
     <string name="feeds_feed_label">फिड</string>
     <string name="feeds_add_files">फाइलहरू थप्नुहोस्</string>
     <string name="feeds_restore">पुनर्स्थापना गर्नुहोस्</string>
@@ -57,13 +57,13 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi फिड</string>
     <string name="feeds_source_type_feed_memories">स्मृतिहरू</string>
-    <string name="feeds_remove_source">स्रोत हटाउनुहोस्</string>
+    <string name="feeds_remove_source">स्रोत हटाउने?</string>
     <string name="feeds_suggested_credibility_accept">स्वीकार गर्नुहोस्</string>
     <string name="feeds_rss_url_copied">RSS URL क्लिपबोर्डमा प्रतिलिपि गरियो</string>
     <string name="feeds_logout">लग आउट</string>
     <string name="feeds_ai_account_default">पूर्वनिर्धारित खाता</string>
     <string name="feeds_ai_mode_off">निष्क्रिय</string>
-    <string name="feeds_ai_mode_tag">ट्याग</string>
+    <string name="feeds_ai_mode_tag">ट्याग गर्नुहोस्</string>
     <string name="feeds_ai_mode_tag_deduplicate">ट्याग + डुप्लिकेट हटाउनुहोस्</string>
     <string name="feeds_feed_not_found">फिड फेला परेन</string>
     <string name="feeds_post_not_found">पोस्ट भेटिएन</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">कहिल्यै प्राप्त गरिएको छैन</string>
     <string name="feeds_source_poll">पोल</string>
-    <string name="feeds_source_transform">रूपान्तरण</string>
+    <string name="feeds_source_transform">AI रूपान्तरण</string>
     <string name="feeds_remove_source_confirm">\"%1$s\" हटाउने?</string>
     <string name="feeds_remove_also_delete_posts">आयात गरिएका पोस्टहरू पनि मेटाउनुहोस्</string>
     <string name="feeds_suggested_credibility_title">सुझाव गरिएको विश्वसनीयता</string>
@@ -129,8 +129,8 @@
     <string name="feeds_interest_reduced">रुचि घटाइयो</string>
     <string name="feeds_interest_removed">रुचि हटाइयो</string>
     <string name="feeds_interest_failed">रुचि समायोजन गर्न असफल</string>
-    <string name="feeds_saved_title">सुरक्षित गरियो</string>
-    <string name="feeds_saved_menu">सुरक्षित गरियो</string>
+    <string name="feeds_saved_title">सुरक्षित गरिएका</string>
+    <string name="feeds_saved_menu">सुरक्षित गरिएका</string>
     <string name="feeds_saved_save">पछिको लागि सुरक्षित गर्नुहोस्</string>
     <string name="feeds_saved_remove">सुरक्षितबाट हटाउनुहोस्</string>
     <string name="feeds_saved_clear_all">सबै खाली गर्नुहोस्</string>
@@ -153,8 +153,8 @@
     <string name="feeds_access_segment_other">अन्य</string>
     <string name="feeds_access_select_group">समूह छान्नुहोस्</string>
     <string name="feeds_access_selected">चयन गरिएको: %1$s</string>
-    <string name="feeds_access_subject_anyone">जो कोही</string>
-    <string name="feeds_access_subject_authenticated">प्रमाणित प्रयोगकर्ता</string>
+    <string name="feeds_access_subject_anyone">जोसुकै</string>
+    <string name="feeds_access_subject_authenticated">प्रमाणित प्रयोगकर्ताहरू</string>
     <string name="feeds_markdown_supported">Markdown समर्थित</string>
     <string name="feeds_permission_deny">अस्वीकार गर्नुहोस्</string>
     <string name="feeds_rss_feed">RSS फिड</string>
@@ -206,7 +206,7 @@
     <string name="feeds_banner_dismiss">ब्यानर हटाउनुहोस्</string>
     <string name="feeds_members_search">सदस्यहरू फिल्टर गर्नुहोस्</string>
     <string name="feeds_ai_prompt_default">पूर्वनिर्धारित</string>
-    <string name="feeds_ai_prompt_custom">अनुकूलित</string>
+    <string name="feeds_ai_prompt_custom">अनुकूलन</string>
     <string name="feeds_ai_prompt_variables">चलहरू: %1$s</string>
     <string name="feeds_link">लिङ्क</string>
     <string name="feeds_share_link_title">फिड लिङ्क</string>

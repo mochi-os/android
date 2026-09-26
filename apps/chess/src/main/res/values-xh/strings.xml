@@ -32,8 +32,8 @@
     <string name="chess_draw_accept">Yamkela</string>
     <string name="chess_draw_decline">Yala</string>
     <string name="chess_status_checkmate_you_win">Checkmate — uyaphumelela!</string>
-    <string name="chess_status_stalemate">Akukho mphumeleli — yahlula</string>
-    <string name="chess_status_draw">Zoba</string>
+    <string name="chess_status_stalemate">Ukuxinga — ukulingana</string>
+    <string name="chess_status_draw">Ukulingana</string>
     <string name="chess_status_check_your_move">Check — ihambo yakho</string>
     <string name="chess_status_your_move">Umqhubo wakho</string>
     <string name="chess_move_subject_you">Wena</string>

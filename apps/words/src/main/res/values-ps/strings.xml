@@ -19,7 +19,7 @@
     <string name="words_detail_status_opponent_resigned">حریف تسلیم شو — تاسو وګټلې!</string>
     <string name="words_detail_status_you_resigned">تاسو استعفا ورکړه</string>
     <string name="words_detail_label_you">تاسو</string>
-    <string name="words_detail_action_shuffle">Rack ګډوډ کړئ</string>
+    <string name="words_detail_action_shuffle">د ټایلونو ځای ګډوډ کړئ</string>
     <string name="words_detail_action_pass">تېرول</string>
     <string name="words_detail_action_exchange">ټایلونه تبادله کړئ</string>
     <string name="words_detail_action_cancel_exchange">تبادله لغوه کړه</string>
@@ -35,24 +35,24 @@
     <string name="words_detail_resign_title">لوبه تسلیم کړو؟</string>
     <string name="words_detail_resign_message">ایا تاسو ډاډه یاست چې غواړئ استعفا ورکړئ؟</string>
 
-    <string name="words_channel_name">Words notifications</string>
-    <string name="words_channel_description">د Words وارونو، تبادلو او د لوبې پایلو په اړه خبرتیاوې.</string>
+    <string name="words_channel_name">د کلمو خبرتیاوې</string>
+    <string name="words_channel_description">د کلمو وارونو، تبادلو او د لوبې پایلو په اړه خبرتیاوې.</string>
     <string name="words_sidebar_active">فعالې لوبې</string>
     <string name="words_sidebar_empty">تر اوسه لوبې نشته.</string>
-    <string name="words_new_game_choose_opponents">Choose opponents</string>
+    <string name="words_new_game_choose_opponents">حریفان وټاکئ</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$d players</string>
-    <string name="words_new_game_no_friends_subtitle">د لوبې پیل کولو لپاره په People اپ کې ملګري اضافه کړئ.</string>
-    <string name="words_detail_title">Game</string>
+    <string name="words_new_game_player_count">%1$d لوبغاړي</string>
+    <string name="words_new_game_no_friends_subtitle">د لوبې پیل کولو لپاره په خلک اپ کې ملګري اضافه کړئ.</string>
+    <string name="words_detail_title">لوبه</string>
     <string name="words_detail_status_opponent_move">د %1$s حرکت</string>
-    <string name="words_detail_status_winner_wins">%1$s wins</string>
-    <string name="words_detail_player_fallback">Player %1$d</string>
-    <string name="words_detail_player_count">%1$d players</string>
-    <string name="words_detail_label_tiles_left">%1$d tiles left</string>
-    <string name="words_detail_action_open_chat">Open chat</string>
-    <string name="words_detail_action_more">Game actions</string>
-    <string name="words_detail_exchange_count">Exchange (%1$d)</string>
-    <string name="words_detail_chat_you_played">You played %1$s</string>
+    <string name="words_detail_status_winner_wins">%1$s ګټي</string>
+    <string name="words_detail_player_fallback">لوبغاړی %1$d</string>
+    <string name="words_detail_player_count">%1$d لوبغاړي</string>
+    <string name="words_detail_label_tiles_left">%1$d ټایلونه پاتې دي</string>
+    <string name="words_detail_action_open_chat">چټ خلاص کړئ</string>
+    <string name="words_detail_action_more">د لوبې کړنې</string>
+    <string name="words_detail_exchange_count">تبادله (%1$d)</string>
+    <string name="words_detail_chat_you_played">تاسو %1$s ولوبوله</string>
     <string name="words_detail_chat_player_played">%1$s %2$s ولوبید</string>
 
     <string name="words_detail_delete_title">لوبه ړنګه شي؟</string>

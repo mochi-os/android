@@ -3,7 +3,7 @@
 
     <string name="people_person_message">訊息</string>
 
-    <string name="people_profile_name">名稱</string>
+    <string name="people_profile_name">姓名</string>
     <string name="people_common_close">關閉</string>
     <string name="people_common_cancel">取消</string>
     <string name="people_profile_save">儲存</string>
@@ -13,7 +13,7 @@
     <string name="people_person_state_self">你</string>
     <string name="people_group_description">描述</string>
     <string name="people_member_type_user">用戶</string>
-    <string name="people_sidebar_header">用戶</string>
+    <string name="people_sidebar_header">聯絡人</string>
     <string name="people_group_members">成員</string>
     <string name="people_invitations_accept">接受</string>
     <string name="people_person_accept">接受</string>
@@ -21,7 +21,7 @@
     <string name="people_friends_pending">待處理</string>
     <string name="people_invitations_decline">拒絕</string>
     <string name="people_profile_saving">儲存緊…</string>
-    <string name="people_profile_edit_name">編輯名稱</string>
+    <string name="people_profile_edit_name">編輯姓名</string>
     <string name="people_profile_identity">身分</string>
     <string name="people_profile_preview">預覽</string>
     <string name="people_profile_uploading">上載緊…</string>
@@ -98,7 +98,7 @@
     <string name="people_profile_accent_invalid">請輸入有效嘅十六進制色碼（例如 #a78bfa）</string>
     <string name="people_profile_accent_none">無</string>
     <string name="people_profile_privacy_private_desc">只有互相加咗朋友先可以查看你嘅個人檔案</string>
-    <string name="people_welcome_title">歡迎使用 People</string>
+    <string name="people_welcome_title">歡迎使用聯絡人</string>
     <string name="people_open_sidebar">開啟導覽</string>
     <string name="people_person_banner_alt">%1$s 嘅橫額</string>
     <string name="people_person_private">呢個個人檔案係私人</string>
@@ -110,6 +110,7 @@
     <string name="people_invitations_all_cancelled">所有邀請都取消咗</string>
     <string name="people_invitations_all_declined">所有邀請都拒絕咗</string>
     <string name="people_invitations_cancel_all">全部取消</string>
+    <string name="people_invitations_cancel">取消</string>
     <string name="people_invitations_decline_all">全部拒絕</string>
     <string name="people_invitations_some_accept_failed">有部分邀請接受唔到</string>
     <string name="people_invitations_some_cancel_failed">有部分邀請取消唔到</string>
@@ -123,7 +124,7 @@
     <string name="people_contacts_try_adjusting">試吓調整搜尋條件</string>
     <string name="people_contact_section_address">地址</string>
     <string name="people_contact_section_detail">詳情</string>
-    <string name="people_contact_name">名稱</string>
+    <string name="people_contact_name">姓名</string>
     <string name="people_contact_email">電郵</string>
     <string name="people_contact_city">城市</string>
     <string name="people_contact_region">地區</string>
@@ -179,7 +180,7 @@
     </plurals>
     <string name="people_welcome_body">喺 Mochi 各處搵朋友並聯繫。㩒「加聯絡人」就可以發出邀請。</string>
     <string name="people_person_state_contact">喺聯絡人中</string>
-    <string name="people_contacts_sort_name">名稱</string>
+    <string name="people_contacts_sort_name">姓名</string>
     <string name="people_contacts_sort_recent">最近加入</string>
     <string name="people_contacts_thats_you">呢個係你</string>
     <string name="people_contacts_try_different_search">試下第個搜尋字詞</string>

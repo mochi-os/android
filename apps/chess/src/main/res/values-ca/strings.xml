@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">Accepta</string>
     <string name="chess_draw_decline">Rebutja</string>
     <string name="chess_status_checkmate_you_win">Escac i mat — has guanyat!</string>
-    <string name="chess_status_stalemate">Ofegat — empat</string>
+    <string name="chess_status_stalemate">Ofegat — taules</string>
     <string name="chess_status_draw">Taules</string>
     <string name="chess_status_check_your_move">Escac — el teu moviment</string>
     <string name="chess_status_your_move">El teu torn</string>
@@ -60,12 +60,12 @@
     <string name="chess_empty_subtitle">Comença la teva primera partida per jugar a escacs amb un amic.</string>
     <string name="chess_empty_start_button">Comença la teva primera partida</string>
     <string name="chess_detail_unavailable">Partida no disponible</string>
-    <string name="chess_delete_title">Eliminar partida?</string>
+    <string name="chess_delete_title">Vols suprimir la partida?</string>
     <string name="chess_delete_message">Això elimina la partida de la teva llista.</string>
     <string name="chess_ws_connecting">Connectant…</string>
     <string name="chess_ws_disconnected">Fora de línia</string>
     <string name="chess_ws_reconnecting">Reconnectant…</string>
-    <string name="chess_ws_failed">Connexió fallida</string>
+    <string name="chess_ws_failed">Ha fallat la connexió</string>
     <string name="chess_move_capture">%1$s va capturar %2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 

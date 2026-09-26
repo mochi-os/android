@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">حذف</string>
     <string name="wikis_replicas_remove_failed">حذف نسخه تکثیر ناموفق بود</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">ویکی‌های Mochi</string>
     <string name="wikis_channel_name">اعلان‌های Wikis</string>
     <string name="wikis_channel_description">اعلان‌ها در مورد ویرایش صفحات، نظرات و دعوت‌نامه‌ها.</string>
     <string name="wikis_pageview_toc_expand">نمایش فهرست مطالب</string>
@@ -225,7 +225,7 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">به‌روزرسانی شده %1$s</string>
     <string name="wikis_pageview_not_found_description">صفحه «%1$s» هنوز وجود ندارد.</string>
-    <string name="wikis_pageview_share_chooser">لینک ویکی</string>
+    <string name="wikis_pageview_share_chooser">پیوند ویکی</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS ویکی</string>
     <string name="wikis_page_action_share">پیوند</string>
     <string name="wikis_open_sidebar">باز کردن نوار کناری</string>
@@ -261,12 +261,12 @@
     <string name="wikis_redirect_delete_confirm_message">این تغییر مسیر را از «%1$s» به «%2$s» حذف می‌کند. کاربرانی که از URL مبدأ بازدید می‌کنند دیگر تغییر مسیر داده نمی‌شوند.</string>
     <string name="wikis_tags_subtitle">صفحات را بر اساس تگ مرور کنید. روی یک تگ ضربه بزنید تا تمام صفحات با آن تگ را ببینید.</string>
     <string name="wikis_tag_pages_title_template">صفحات با برچسب «%1$s»</string>
-    <string name="wikis_tag_manager_add_action">افزودن تگ</string>
+    <string name="wikis_tag_manager_add_action">افزودن برچسب</string>
     <string name="wikis_tag_manager_remove_confirm_title">حذف تگ؟</string>
     <string name="wikis_tag_manager_remove_confirm_message">تگ «%1$s» را از این صفحه حذف کنم؟</string>
     <string name="wikis_tag_manager_added">تگ «%1$s» اضافه شد</string>
     <string name="wikis_tag_manager_removed">تگ «%1$s» حذف شد</string>
-    <string name="wikis_tag_dialog_title">افزودن تگ</string>
+    <string name="wikis_tag_dialog_title">افزودن برچسب</string>
     <string name="wikis_tag_dialog_empty">تگ نمی‌تواند خالی باشد</string>
     <string name="wikis_attachments_search_placeholder">جستجوی پیوست‌ها…</string>
     <string name="wikis_attachments_delete_confirm_message">«%1$s» را حذف کنم؟ این عمل قابل بازگشت نیست.</string>

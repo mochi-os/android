@@ -4,8 +4,8 @@
     <string name="words_list_menu">Menú</string>
     <string name="words_list_logout">Pechar sesión</string>
     <string name="words_sidebar_completed">Completado</string>
-    <string name="words_sidebar_new_game">Novo xogo</string>
-    <string name="words_new_game_title">Novo xogo</string>
+    <string name="words_sidebar_new_game">Nova partida</string>
+    <string name="words_new_game_title">Nova partida</string>
     <string name="words_new_game_language">Idioma</string>
     <string name="words_new_game_language_uk">Inglés (RU)</string>
     <string name="words_new_game_language_us">Inglés (EUA)</string>
@@ -25,7 +25,7 @@
     <string name="words_detail_action_resign">Abandonar</string>
     <string name="words_detail_action_rematch">Revancha</string>
     <string name="words_detail_action_delete">Eliminar partida</string>
-    <string name="words_detail_chat_title">Chat</string>
+    <string name="words_detail_chat_title">Conversa</string>
     <string name="words_detail_recall">Recuperar</string>
     <string name="words_detail_submit">Enviar</string>
     <string name="words_detail_cancel">Cancelar</string>
@@ -52,7 +52,7 @@
     <string name="words_detail_exchange_count">Intercambiar (%1$d)</string>
     <string name="words_detail_chat_you_played">Xogaches %1$s</string>
     <string name="words_detail_chat_player_played">%1$s xogou %2$s</string>
-    <string name="words_detail_delete_title">Eliminar partida?</string>
+    <string name="words_detail_delete_title">Eliminar a partida?</string>
     <string name="words_detail_delete_confirm">Eliminar</string>
     <string name="words_detail_delete_message">Isto eliminará permanentemente a partida e a súa conversa. Esta acción non se pode desfacer.</string>
     <string name="words_detail_chat_passed">%1$s pasou</string>

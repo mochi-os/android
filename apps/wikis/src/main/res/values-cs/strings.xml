@@ -217,7 +217,7 @@
     <string name="wikis_replicas_remove_confirm_action">Odebrat</string>
     <string name="wikis_replicas_remove_failed">Nepodařilo se odebrat repliku</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_wikis">Mochi Wiki</string>
     <string name="wikis_channel_name">Oznámení Wikis</string>
     <string name="wikis_channel_description">Oznámení o úpravách stránek, komentářích a pozvánkách.</string>
     <string name="wikis_pageview_toc_expand">Zobrazit obsah</string>
@@ -240,7 +240,7 @@
     <string name="wikis_comment_form_placeholder_new">Napište komentář…</string>
     <string name="wikis_comment_form_placeholder_reply">Napište odpověď…</string>
     <string name="wikis_comment_form_send">Odeslat</string>
-    <string name="wikis_comment_form_remove_attachment">Odstranit přílohu</string>
+    <string name="wikis_comment_form_remove_attachment">Odebrat přílohu</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Napište svůj obsah zde pomocí Markdown…</string>
     <string name="wikis_insert_dialog_empty">Zatím žádné přílohy. Nahrajte soubor pro začátek.</string>
@@ -261,19 +261,19 @@
     <string name="wikis_redirect_delete_confirm_message">Tím se odstraní přesměrování z „%1$s\" na „%2$s\". Uživatelé, kteří navštíví zdrojovou URL, již nebudou přesměrováni.</string>
     <string name="wikis_tags_subtitle">Procházet stránky podle značky. Klepněte na značku pro zobrazení všech stránek s touto značkou.</string>
     <string name="wikis_tag_pages_title_template">Stránky se značkou „%1$s\"</string>
-    <string name="wikis_tag_manager_add_action">Přidat značku</string>
+    <string name="wikis_tag_manager_add_action">Přidat štítek</string>
     <string name="wikis_tag_manager_remove_confirm_title">Odstranit značku?</string>
     <string name="wikis_tag_manager_remove_confirm_message">Odstranit značku „%1$s\" z této stránky?</string>
     <string name="wikis_tag_manager_added">Značka „%1$s\" přidána</string>
     <string name="wikis_tag_manager_removed">Značka „%1$s\" odstraněna</string>
-    <string name="wikis_tag_dialog_title">Přidat značku</string>
+    <string name="wikis_tag_dialog_title">Přidat štítek</string>
     <string name="wikis_tag_dialog_empty">Značka nesmí být prázdná</string>
     <string name="wikis_attachments_search_placeholder">Hledat přílohy…</string>
     <string name="wikis_attachments_delete_confirm_message">Smazat „%1$s\"? Akci nelze vrátit.</string>
     <string name="wikis_attachments_downloading">Stahování…</string>
     <string name="wikis_attachments_empty_description">Klepněte na Nahrát pro přidání souborů na tuto stránku.</string>
     <string name="wikis_settings_name_save_cd">Uložit název</string>
-    <string name="wikis_settings_name_cancel_cd">Zrušit úpravy</string>
+    <string name="wikis_settings_name_cancel_cd">Zrušit úpravu</string>
     <string name="wikis_access_level_label">Oprávnění</string>
     <string name="wikis_access_set_failed">Aktualizace přístupu selhala</string>
     <string name="wikis_replicas_col_subscribed">Odebírá: %1$s</string>
@@ -283,7 +283,7 @@
     <string name="wikis_load_more">Načíst další</string>
     <string name="wikis_access_change_level">Úroveň přístupu</string>
     <string name="wikis_access_subject_anyone">Kdokoli</string>
-    <string name="wikis_access_subject_authenticated">Ověření uživatelé</string>
+    <string name="wikis_access_subject_authenticated">Přihlášení uživatelé</string>
 
     <string name="wikis_revision_compare">Porovnat změny</string>
     <string name="wikis_revision_author">podle %1$s</string>

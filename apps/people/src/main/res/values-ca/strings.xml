@@ -76,12 +76,12 @@
     <string name="people_open_sidebar">Obre la navegació</string>
     <string name="people_person_state_friend">Amics</string>
     <string name="people_person_state_self">Tu</string>
-    <string name="people_person_message">Missatge</string>
+    <string name="people_person_message">Envia un missatge</string>
     <string name="people_person_accept">Accepta</string>
     <string name="people_person_decline">Rebutja</string>
 
 
-    <string name="notification_channel_people">Notificacions de Gent</string>
+    <string name="notification_channel_people">Notificacions de Persones</string>
     <string name="people_friends_searching">S\'està cercant…</string>
     <string name="people_invitations_toast_accepted">S\'ha acceptat la invitació de %1$s</string>
     <string name="people_invitations_toast_declined">S\'ha rebutjat la invitació de %1$s</string>
@@ -97,7 +97,7 @@
     <string name="people_profile_accent_invalid">Introduïu un color hexadecimal vàlid (p. ex. #a78bfa)</string>
     <string name="people_profile_accent_none">Cap</string>
     <string name="people_profile_privacy_private_desc">Només els amics mutus poden veure el vostre perfil</string>
-    <string name="people_welcome_title">Us donem la benvinguda a Gent</string>
+    <string name="people_welcome_title">Us donem la benvinguda a Persones</string>
     <string name="people_person_banner_alt">Bàner de %1$s</string>
     <string name="people_person_private">Aquest perfil és privat</string>
     <string name="people_person_state_invited">Convidat</string>
@@ -105,6 +105,7 @@
     <string name="people_invitations_accept_all">Accepta-ho tot</string>
     <string name="people_invitations_decline_all">Rebutja-ho tot</string>
     <string name="people_invitations_cancel_all">Cancel·la-ho tot</string>
+    <string name="people_invitations_cancel">Cancel·la</string>
     <string name="people_invitations_all_accepted">Totes les invitacions acceptades</string>
     <string name="people_invitations_all_declined">Totes les invitacions rebutjades</string>
     <string name="people_invitations_all_cancelled">Totes les invitacions cancel·lades</string>
@@ -118,7 +119,7 @@
     <string name="people_contacts_search_placeholder">Cerca…</string>
     <string name="people_contacts_invited">Convidat</string>
     <string name="people_contacts_accept">Accepta</string>
-    <string name="people_contacts_message">Missatge</string>
+    <string name="people_contacts_message">Envia un missatge</string>
     <string name="people_contacts_no_people_found">No s\'ha trobat ningú</string>
     <string name="people_contacts_try_adjusting">Prova d\'ajustar la cerca</string>
     <string name="people_contact_section_address">Adreça</string>

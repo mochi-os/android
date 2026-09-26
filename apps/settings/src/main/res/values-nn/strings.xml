@@ -6,7 +6,7 @@
     <string name="settings_home_display">Vis</string>
     <string name="settings_home_accounts">Tilkopla kontoar</string>
     <string name="settings_home_interests">Interesser</string>
-    <string name="account_section_passkeys">Nyklar</string>
+    <string name="account_section_passkeys">Tilgangsnøklar</string>
     <string name="account_passkey_register">Legg til passnøkkel</string>
     <string name="account_passkey_delete_title">Slette passnøkkel?</string>
     <string name="account_section_totp">Autentiseringsapp</string>
@@ -104,7 +104,7 @@
     <string name="system_documents_description">Tenarreglar, vilkår og personvernerklæring vist til brukarane dine</string>
     <string name="system_documents_tab_rules">Tenarreglar</string>
     <string name="system_documents_tab_terms">Vilkår</string>
-    <string name="system_documents_tab_privacy">Privacy</string>
+    <string name="system_documents_tab_privacy">Personvern</string>
     <string name="system_documents_language">Språk</string>
     <string name="system_documents_no_language">Ingen dokument tilgjengeleg for dette språket.</string>
     <string name="system_documents_customised">Tilpassa</string>
@@ -146,7 +146,7 @@
     <string name="system_setting_oauth_github_client_secret">GitHub klient-løyndom</string>
     <string name="system_setting_oauth_microsoft_client_id">Microsoft klient-ID</string>
     <string name="system_setting_oauth_microsoft_client_secret">Microsoft klient-løyndom</string>
-    <string name="system_setting_oauth_microsoft_tenant">Microsoft tenant</string>
+    <string name="system_setting_oauth_microsoft_tenant">Microsoft-leigetakar</string>
     <string name="system_setting_oauth_facebook_client_id">Facebook-app-ID</string>
     <string name="system_setting_oauth_facebook_client_secret">Facebook App-løyndom</string>
     <string name="system_setting_oauth_x_client_id">X-klient-ID</string>
@@ -208,7 +208,7 @@
     <string name="account_identity_fingerprint">Fingeravtrykk</string>
     <string name="account_identity_directory_toggle">Tillat andre å finne deg i katalogen</string>
 
-    <string name="settings_home_notification_prefs">Varslingsinnstillingar</string>
+    <string name="settings_home_notification_prefs">Varselinnstillingar</string>
     <string name="settings_home_privacy">Personvernerklæring</string>
     <string name="settings_home_rules">Reglar</string>
     <string name="settings_home_terms">Brukarvilkår</string>
@@ -241,7 +241,7 @@
     <string name="route_meta">Prioritet %1$d · %2$s</string>
     <string name="interests_search_placeholder">Søk etter emne å leggje til…</string>
     <string name="interests_empty">Ingen interesser enno.</string>
-    <string name="interests_summary_regenerate">Lag samandrag på nytt</string>
+    <string name="interests_summary_regenerate">Generer samandrag på nytt</string>
     <string name="interests_summary_regenerating">Lagar på nytt…</string>
     <string name="interests_summary_empty">Legg til nokre interesser for å laga eit samandrag av kva du er oppteken av.</string>
     <string name="interests_search_failed">Søket feila. Prøv igjen.</string>
@@ -280,7 +280,7 @@
 
     <string name="sessions_title">Økter</string>
     <string name="settings_home_account">Konto</string>
-    <string name="settings_home_preferences">Innstillinger</string>
+    <string name="settings_home_preferences">Innstillingar</string>
     <string name="settings_home_sessions">Økter</string>
     <string name="domain_add">Legg til domene</string>
     <string name="domain_add_title">Legg til domene</string>
@@ -290,7 +290,7 @@
     <string name="domain_delegation_delete_message">%1$s vil ikkje lenger handsame ruter på dette domenet.</string>
     <string name="domain_delegation_delete_title">Slette delegering?</string>
     <string name="domain_delegation_path">Sti</string>
-    <string name="domain_delegation_user">Brukar-ID</string>
+    <string name="domain_delegation_user">Brukar</string>
     <string name="domain_delegations">Delegeringar</string>
     <string name="domain_delegations_empty">Ingen delegeringar er sette opp.</string>
     <string name="domain_delete">Slett domene</string>
@@ -316,7 +316,7 @@
     </plurals>
     <string name="login_title">Innlogging</string>
     <string name="login_method_email">E-postkode</string>
-    <string name="login_method_passkey">Nykel</string>
+    <string name="login_method_passkey">Tilgangsnøkkel</string>
     <string name="login_method_totp">Autentiseringsapp</string>
     <string name="login_method_oauth">Tredjeparts-innlogging</string>
     <string name="login_method_recovery">Gjenopprettingskodar</string>
@@ -347,10 +347,10 @@
     <string name="system_setting_hostname_publish">Annonser vertsnavn og domener til andre servere</string>
     <string name="system_setting_hostname">Vertsnavn annonsert til andre servere</string>
     <string name="system_status_peer_id">Peer-ID</string>
-    <string name="system_status_holepunch">Hullslag</string>
+    <string name="system_status_holepunch">Holslag</string>
     <string name="system_status_holepunch_value">%1$d vellykket · %2$d mislyktes</string>
     <string name="system_status_awaiting_routing">Meldinger som venter på ruting</string>
-    <string name="system_status_relay_service">Relétjeneste</string>
+    <string name="system_status_relay_service">Reléteneste</string>
     <string name="system_status_relay_service_value">%1$d / %2$d reservasjoner · %3$d kretser · %4$d avvist</string>
     <string name="login_section_methods">Innloggingsmetodar</string>
     <string name="route_target_select">Vel</string>
@@ -378,7 +378,7 @@
     <string name="accounts_forget_message">Dette vil gløyme eininga \"%1$s\" og stoppe varsel til henne.</string>
     <string name="accounts_device_seen">Sist sett %1$s</string>
     <string name="notifprefs_device_app">%1$s · app</string>
-    <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_device_push">%1$s · push-varsel</string>
     <string name="notifprefs_test_partial">Test send til %1$d av %2$d destinasjonar</string>
     <string name="notifprefs_test_none">Ingen mål er sette opp</string>
     <string name="notifprefs_transport_fcm">Android-push</string>
@@ -393,7 +393,7 @@
     <string name="accounts_capability_calendar">Kalender</string>
     <string name="accounts_capability_notify">Varsel</string>
     <string name="accounts_capability_ai">KI</string>
-    <string name="accounts_capability_login">Pålogging</string>
+    <string name="accounts_capability_login">Innlogging</string>
     <string name="accounts_provider_caldav">Kalendertenar</string>
     <string name="accounts_revoke_confirm">Dette tilbakekallar kalendertilgangen til %1$s. Pålogging med %2$s står ved lag til du koplar henne frå på påloggingssida.</string>
     <string name="accounts_capability_mcp">MCP</string>

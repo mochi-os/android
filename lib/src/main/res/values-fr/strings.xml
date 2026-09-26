@@ -41,8 +41,8 @@
     <string name="access_add_rule">Ajouter une règle</string>
     <string name="access_owner">Propriétaire</string>
     <string name="access_revoke">Révoquer</string>
-    <string name="access_level_comment">Commentaire</string>
-    <string name="access_level_view">Vue</string>
+    <string name="access_level_comment">Commenter</string>
+    <string name="access_level_view">Voir</string>
     <string name="access_level_none">Aucun</string>
     <string name="reaction_like">J\'aime</string>
     <string name="reaction_dislike">Je n\'aime pas</string>
@@ -61,7 +61,7 @@
     <string name="notifications_empty_unread">Vous êtes à jour</string>
     <string name="notifications_tab_unread">Non lues</string>
     <string name="notifications_tab_unread_count">Non lues (%1$d)</string>
-    <string name="notifications_tab_all">Toutes</string>
+    <string name="notifications_tab_all">Tout</string>
     <string name="notifications_mark_all_read">Tout marquer comme lu</string>
     <string name="notifications_clear_all">Tout effacer</string>
     <string name="settings_title">Paramètres</string>

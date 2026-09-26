@@ -41,7 +41,7 @@
     <string name="access_add_rule">Tambah aturan</string>
     <string name="access_owner">Pemilik</string>
     <string name="access_revoke">Cabut</string>
-    <string name="access_level_comment">Komentar</string>
+    <string name="access_level_comment">Komentari</string>
     <string name="access_level_view">Lihat</string>
     <string name="access_level_none">Tidak ada</string>
     <string name="reaction_like">Suka</string>
@@ -104,13 +104,13 @@
     <string name="settings_reset_to_defaults">Reset ke default</string>
     <string name="settings_reset_confirm_title">Reset preferensi?</string>
     <string name="settings_reset_confirm_message">Ini akan mengatur ulang semua preferensi ke nilai defaultnya.</string>
-    <string name="settings_reset">Reset</string>
+    <string name="settings_reset">Setel ulang</string>
     <string name="settings_display_title">Tampilan</string>
     <string name="settings_display_reset">Reset ke default</string>
     <string name="settings_display_reset_confirm_title">Setel ulang tampilan?</string>
     <string name="settings_display_reset_confirm_message">Ini akan menyetel ulang pengaturan tampilan ke nilai defaultnya.</string>
     <string name="settings_theme_title">Tema</string>
-    <string name="settings_theme_default">Default</string>
+    <string name="settings_theme_default">Bawaan</string>
     <string name="settings_background">Latar belakang</string>
     <string name="settings_background_theme">Dari tema</string>
     <string name="settings_background_off">Tidak ada</string>
@@ -126,7 +126,7 @@
     <string name="game_chat_move_played">%1$s memainkan %2$s</string>
 
     <string name="error_network">Tidak dapat terhubung. Periksa koneksi internet Anda dan coba lagi.</string>
-    <string name="error_authentication_required">Autentikasi diperlukan</string>
+    <string name="error_authentication_required">Diperlukan autentikasi</string>
     <string name="error_not_found">Tidak ditemukan</string>
     <string name="error_server">Kesalahan server (%1$d). Silakan coba lagi nanti.</string>
     <string name="error_unexpected">Terjadi kesalahan tak terduga</string>
@@ -192,7 +192,7 @@
     <string name="format_time_days_short">%1$d hr</string>
     <string name="format_time_weeks_short">%1$d mgg</string>
     <string name="format_time_months_short">%1$d bln</string>
-    <string name="reaction_add">Tambah reaksi</string>
+    <string name="reaction_add">Tambahkan reaksi</string>
     <string name="push_service_channel">Notifikasi Mochi</string>
     <string name="push_service_channel_description">Menjaga Mochi tetap terhubung untuk menerima notifikasi</string>
     <string name="push_service_group">Layanan latar belakang</string>

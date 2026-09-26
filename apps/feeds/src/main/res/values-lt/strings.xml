@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="feeds_title">Srautai</string>
+    <string name="feeds_title">Sklaidos kanalai</string>
     <string name="feeds_find_feeds">Rasti srautus</string>
     <string name="feeds_create_feed">Sukurti srautą</string>
     <string name="feeds_new_post">Naujas įrašas</string>
@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">Dar nėra įrašų</string>
     <string name="feeds_sort_label">Rūšiuoti</string>
     <string name="feeds_sort_interests">Pomėgiai</string>
-    <string name="feeds_sort_new">Naujas</string>
+    <string name="feeds_sort_new">Naujausi</string>
     <string name="feeds_sort_hot">Karšta</string>
-    <string name="feeds_sort_top">Viršus</string>
+    <string name="feeds_sort_top">Geriausia</string>
     <string name="feeds_sort_ai">DI</string>
     <string name="feeds_post_default_author">Įrašas</string>
     <string name="feeds_image_preview">Peržiūra</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">Atšaukti atsakymą</string>
     <string name="feeds_edit_post">Redaguoti įrašą</string>
     <string name="feeds_save_label">Išsaugoti</string>
-    <string name="feeds_post_action">Įrašas</string>
+    <string name="feeds_post_action">Skelbti</string>
     <string name="feeds_feed_label">Srautas</string>
     <string name="feeds_add_files">Pridėti failus</string>
     <string name="feeds_restore">Atkurti</string>
@@ -57,13 +57,13 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi srautas</string>
     <string name="feeds_source_type_feed_memories">Atmintys</string>
-    <string name="feeds_remove_source">Pašalinti šaltinį</string>
+    <string name="feeds_remove_source">Šalinti šaltinį?</string>
     <string name="feeds_suggested_credibility_accept">Priimti</string>
     <string name="feeds_rss_url_copied">RSS URL nukopijuotas į iškarpinę</string>
     <string name="feeds_logout">Atsijungti</string>
     <string name="feeds_ai_account_default">Numatytoji paskyra</string>
     <string name="feeds_ai_mode_off">Išjungta</string>
-    <string name="feeds_ai_mode_tag">Žyma</string>
+    <string name="feeds_ai_mode_tag">Žymėti</string>
     <string name="feeds_ai_mode_tag_deduplicate">Žymėti + pašalinti dublikatus</string>
     <string name="feeds_feed_not_found">Srautas nerastas</string>
     <string name="feeds_post_not_found">Įrašas nerastas</string>
@@ -100,7 +100,7 @@
     <string name="feeds_unable_to_load">Nepavyko įkelti puslapio</string>
     <string name="feeds_delete_post_confirm">Ar tikrai norite ištrinti šį įrašą? Šio veiksmo atšaukti negalima.</string>
     <string name="feeds_delete_comment_confirm">Ar tikrai norite ištrinti šį komentarą?</string>
-    <string name="feeds_anonymous">Anoniminis</string>
+    <string name="feeds_anonymous">Anonimas</string>
     <string name="feeds_replying_to_author">Atsakoma %1$s</string>
     <string name="feeds_attach_file">Pridėti failą</string>
     <string name="feeds_file">Failas</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">Niekada negauta</string>
     <string name="feeds_source_poll">Apklausa</string>
-    <string name="feeds_source_transform">Transformuoti</string>
+    <string name="feeds_source_transform">DI transformacija</string>
     <string name="feeds_remove_source_confirm">Pašalinti \"%1$s\"?</string>
     <string name="feeds_remove_also_delete_posts">Taip pat ištrinti importuotus įrašus</string>
     <string name="feeds_suggested_credibility_title">Siūlomas patikimumas</string>

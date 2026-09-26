@@ -414,7 +414,6 @@
     <string name="market_listing_detail_information_heading">Informations de livraison</string>
     <string name="market_listing_detail_load_failed">Échec du chargement de l\'annonce</string>
     <string name="market_listing_detail_loading">Chargement de l\'annonce</string>
-    <string name="market_listing_detail_message">Message</string>
     <string name="market_listing_detail_message_seller">Écrire au vendeur</string>
     <string name="market_listing_detail_not_found">Annonce introuvable</string>
     <string name="market_listing_detail_place_bid">Placer une enchère</string>

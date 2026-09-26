@@ -14,9 +14,9 @@
     <string name="feeds_no_posts_yet">아직 게시물이 없어요</string>
     <string name="feeds_sort_label">정렬</string>
     <string name="feeds_sort_interests">관심사</string>
-    <string name="feeds_sort_new">새로 만들기</string>
+    <string name="feeds_sort_new">최신순</string>
     <string name="feeds_sort_hot">인기</string>
-    <string name="feeds_sort_top">위</string>
+    <string name="feeds_sort_top">최고</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">게시물</string>
     <string name="feeds_image_preview">미리보기</string>
@@ -29,7 +29,7 @@
     <string name="feeds_cancel_reply">답글 취소</string>
     <string name="feeds_edit_post">게시물 편집</string>
     <string name="feeds_save_label">저장</string>
-    <string name="feeds_post_action">게시물</string>
+    <string name="feeds_post_action">게시</string>
     <string name="feeds_feed_label">피드</string>
     <string name="feeds_add_files">파일 추가</string>
     <string name="feeds_restore">복원</string>
@@ -57,7 +57,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi 피드</string>
     <string name="feeds_source_type_feed_memories">메모리</string>
-    <string name="feeds_remove_source">소스 제거</string>
+    <string name="feeds_remove_source">소스를 제거할까요?</string>
     <string name="feeds_suggested_credibility_accept">수락</string>
     <string name="feeds_rss_url_copied">RSS URL이 클립보드에 복사되었어요</string>
     <string name="feeds_logout">로그아웃</string>
@@ -111,7 +111,7 @@
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">가져온 적 없음</string>
     <string name="feeds_source_poll">폴링</string>
-    <string name="feeds_source_transform">변환</string>
+    <string name="feeds_source_transform">AI 변환</string>
     <string name="feeds_remove_source_confirm">\"%1$s\"을(를) 제거하시겠습니까?</string>
     <string name="feeds_remove_also_delete_posts">가져온 게시물도 삭제</string>
     <string name="feeds_suggested_credibility_title">추천 신뢰도</string>

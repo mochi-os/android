@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="people_person_message">Message</string>
 
     <string name="people_profile_name">Nom</string>
     <string name="people_common_close">Fermer</string>
@@ -105,7 +104,6 @@
     <string name="people_contacts_search_placeholder">Rechercher…</string>
     <string name="people_contacts_invited">Invité</string>
     <string name="people_contacts_accept">Accepter</string>
-    <string name="people_contacts_message">Message</string>
     <string name="people_contacts_no_people_found">Aucune personne trouvée</string>
     <string name="people_contacts_try_adjusting">Essayez d\'ajuster votre recherche</string>
     <string name="people_contact_section_address">Adresse</string>

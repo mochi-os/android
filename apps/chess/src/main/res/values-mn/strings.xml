@@ -13,7 +13,7 @@
     <string name="chess_new_title">Шинэ тоглоом</string>
     <string name="chess_new_pick_opponent">Өрсөлдөгчөө сонгох</string>
     <string name="chess_new_no_friends_title">Найз алга</string>
-    <string name="chess_new_no_friends_subtitle">Тоглоом эхлүүлэхийн тулд People апп дотор найз нэмнэ үү</string>
+    <string name="chess_new_no_friends_subtitle">Тоглоом эхлүүлэхийн тулд Хүмүүс апп дотор найз нэмнэ үү</string>
     <string name="chess_new_add_friends">Найзууд нэмэх</string>
     <string name="chess_new_start_button">Тоглоом эхлүүлэх</string>
     <string name="chess_new_creating">Үүсгэж байна…</string>
@@ -32,8 +32,8 @@
     <string name="chess_draw_accept">Зөвшөөрөх</string>
     <string name="chess_draw_decline">Татгалзах</string>
     <string name="chess_status_checkmate_you_win">Шахмат — та ялсан!</string>
-    <string name="chess_status_stalemate">Тэнцсэн — тэнцэв</string>
-    <string name="chess_status_draw">Зурах</string>
+    <string name="chess_status_stalemate">Пат — тэнцээ</string>
+    <string name="chess_status_draw">Тэнцээ</string>
     <string name="chess_status_check_your_move">Шах — таны нүүдэл</string>
     <string name="chess_status_your_move">Таны нүүдэл</string>
     <string name="chess_move_subject_you">Та</string>

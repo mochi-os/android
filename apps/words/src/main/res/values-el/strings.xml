@@ -37,7 +37,7 @@
 
     <string name="words_channel_name">Ειδοποιήσεις Λέξεις</string>
     <string name="words_channel_description">Ειδοποιήσεις σχετικά με σειρές, ανταλλαγές και αποτελέσματα παρτίδων.</string>
-    <string name="words_sidebar_active">Ενεργές παρτίδες</string>
+    <string name="words_sidebar_active">Ενεργά παιχνίδια</string>
     <string name="words_sidebar_empty">Δεν υπάρχουν ακόμη παρτίδες.</string>
     <string name="words_new_game_choose_opponents">Επιλέξτε αντιπάλους</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
@@ -55,7 +55,7 @@
     <string name="words_detail_chat_you_played">Παίξατε %1$s</string>
     <string name="words_detail_chat_player_played">Ο %1$s έπαιξε %2$s</string>
 
-    <string name="words_detail_delete_title">Διαγραφή παρτίδας;</string>
+    <string name="words_detail_delete_title">Διαγραφή παιχνιδιού;</string>
     <string name="words_detail_delete_confirm">Διαγραφή</string>
     <string name="words_detail_delete_message">Αυτό θα διαγράψει οριστικά το παιχνίδι και τη συνομιλία του. Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</string>
     <string name="words_detail_chat_passed">Ο/Η %1$s πέρασε</string>

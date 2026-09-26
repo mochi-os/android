@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="words_list_title">Kata</string>
+    <string name="words_list_title">Perkataan</string>
     <string name="words_list_menu">Menu</string>
     <string name="words_list_logout">Log keluar</string>
     <string name="words_sidebar_completed">Selesai</string>

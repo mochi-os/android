@@ -41,7 +41,7 @@
     <string name="market_bids_tab_active">Aktif</string>
     <string name="market_bids_tab_all">Semua</string>
     <string name="market_bids_tab_lost">Kalah</string>
-    <string name="market_bids_tab_outbid">Tertawar</string>
+    <string name="market_bids_tab_outbid">Tawaran dilampaui</string>
     <string name="market_bids_tab_won">Menang</string>
     <string name="market_bids_title">Penawaran</string>
     <string name="market_channel_name">Pasar</string>
@@ -70,7 +70,7 @@
     <string name="market_checkout_back">Kembali</string>
     <string name="market_checkout_buy_it_now">Beli sekarang</string>
     <string name="market_checkout_create_failed">Gagal membuat pesanan</string>
-    <string name="market_checkout_delivery_download">Unduh</string>
+    <string name="market_checkout_delivery_download">Unduhan</string>
     <string name="market_checkout_delivery_method">Metode pengiriman</string>
     <string name="market_checkout_delivery_pickup">Ambil sendiri</string>
     <string name="market_checkout_delivery_shipping">Pengiriman</string>
@@ -154,7 +154,7 @@
     <string name="market_filter_condition_refurbished">Direkondisi</string>
     <string name="market_filter_condition_used">Bekas</string>
     <string name="market_filter_delivery">Pengiriman</string>
-    <string name="market_filter_delivery_download">Unduh</string>
+    <string name="market_filter_delivery_download">Unduhan</string>
     <string name="market_filter_delivery_pickup">Ambil sendiri</string>
     <string name="market_filter_delivery_shipping">Pengiriman</string>
     <string name="market_filter_price_max">Maks</string>
@@ -166,7 +166,7 @@
     <string name="market_filter_pricing_pwyw">Bayar sesukamu</string>
     <string name="market_filter_pricing_subscription">Langganan</string>
     <string name="market_filter_sort">Urutkan</string>
-    <string name="market_filter_sort_default">Default</string>
+    <string name="market_filter_sort_default">Bawaan</string>
     <string name="market_filter_sort_price_high">Harga: tinggi ke rendah</string>
     <string name="market_filter_sort_price_low">Harga: rendah ke tinggi</string>
     <string name="market_filter_sort_recent">Terbaru</string>
@@ -183,7 +183,7 @@
     <string name="market_listing_detail_load_failed">Gagal memuat daftar</string>
     <string name="market_listing_detail_listed">Diposting %1$s</string>
     <string name="market_listing_detail_location_heading">Lokasi</string>
-    <string name="market_listing_detail_message">Pesan</string>
+    <string name="market_listing_detail_message">Kirim pesan</string>
     <string name="market_listing_detail_message_seller">Kirim pesan ke penjual</string>
     <string name="market_listing_detail_not_found">Daftar tidak ditemukan</string>
     <string name="market_listing_detail_place_bid">Pasang tawaran</string>
@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Laporkan listing</string>
     <string name="market_listing_detail_save">Simpan</string>
     <string name="market_listing_detail_seller_heading">Penjual</string>
-    <string name="market_listing_detail_shipping_heading">Pengiriman</string>
+    <string name="market_listing_detail_shipping_heading">Opsi pengiriman</string>
     <string name="market_listing_detail_subscribe">Berlangganan</string>
     <string name="market_listing_detail_tags_heading">Tag</string>
     <string name="market_listing_detail_title">Daftar</string>
@@ -305,7 +305,7 @@
     <string name="market_sale_carrier_other">Lainnya</string>
     <string name="market_sale_completed_label">Selesai</string>
     <string name="market_sale_dispute_respond">Tanggapi</string>
-    <string name="market_sale_dispute_state_open">Buka</string>
+    <string name="market_sale_dispute_state_open">Terbuka</string>
     <string name="market_sale_dispute_state_resolved">Diselesaikan</string>
     <string name="market_sale_load_failed">Gagal memuat pesanan</string>
     <string name="market_sale_message_buyer">Kirim pesan ke pembeli</string>
@@ -327,7 +327,7 @@
     <string name="market_saved_title">Tersimpan</string>
     <string name="market_search_clear">Bersihkan pencarian</string>
     <string name="market_section_categories">Jelajahi Kategori</string>
-    <string name="market_section_listings">Daftar Terbaru</string>
+    <string name="market_section_listings">Daftar terbaru</string>
     <string name="market_section_recent">Baru dilihat</string>
     <string name="market_ship_dialog_cancel">Batal</string>
     <string name="market_ship_dialog_submit">Konfirmasi</string>
@@ -380,7 +380,7 @@
     <string name="market_subscription_detail_seller">Penjual</string>
     <string name="market_subscription_detail_started">Dimulai %1$s</string>
     <string name="market_subscription_detail_title">Langganan</string>
-    <string name="market_subscriptions_action_cancel">Batal</string>
+    <string name="market_subscriptions_action_cancel">Batalkan</string>
     <string name="market_subscriptions_action_pause">Jeda</string>
     <string name="market_subscriptions_action_reactivate">Aktifkan kembali</string>
     <string name="market_subscriptions_action_resubscribe">Berlangganan ulang</string>
@@ -544,10 +544,10 @@
     <string name="market_listings_action_share">Bagikan</string>
     <string name="market_listings_delete_failed">Gagal menghapus listing</string>
     <string name="market_listings_delete_message">Ini menghapus draf secara permanen dari akun Anda.</string>
-    <string name="market_listings_delete_title">Hapus listing?</string>
+    <string name="market_listings_delete_title">Hapus daftar?</string>
     <string name="market_listings_empty_subtitle">Ketuk Listing baru untuk membuat item pertama Anda.</string>
     <string name="market_listings_load_failed">Gagal memuat listing Anda</string>
-    <string name="market_listings_new">Listing baru</string>
+    <string name="market_listings_new">Daftar baru</string>
     <string name="market_listings_search_placeholder">Cari listing Anda</string>
     <string name="market_listings_share_chooser">Bagikan listing</string>
     <string name="market_messages_compose_placeholder">Tulis pesan…</string>
@@ -570,7 +570,7 @@
     <string name="market_profile_no_reviews">Belum ada ulasan.</string>
     <string name="market_profile_rating_breakdown">Rincian peringkat</string>
     <string name="market_profile_stars_value">%1$d bintang</string>
-    <string name="market_purchase_dispute_chargeback">Chargeback %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Tolak bayar %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Bank Anda mengajukan chargeback untuk pesanan ini. Stripe sedang menangani sengketa dengan penjual; hasilnya akan muncul di sini setelah diputuskan.</string>
     <string name="market_purchase_download_many">Unduh %1$d file Anda di bawah.</string>
     <string name="market_purchase_download_one">Unduh file Anda di bawah.</string>

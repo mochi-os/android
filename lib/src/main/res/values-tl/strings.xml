@@ -41,7 +41,7 @@
     <string name="access_add_rule">Magdagdag ng panuntunan</string>
     <string name="access_owner">May-ari</string>
     <string name="access_revoke">Bawiin</string>
-    <string name="access_level_comment">Komento</string>
+    <string name="access_level_comment">Magkomento</string>
     <string name="access_level_view">Tingnan</string>
     <string name="access_level_none">Wala</string>
     <string name="reaction_like">Gusto</string>
@@ -66,10 +66,10 @@
     <string name="notifications_clear_all">Burahin lahat</string>
     <string name="settings_title">Mga setting</string>
     <string name="settings_appearance">Hitsura</string>
-    <string name="settings_appearance_light">Light</string>
+    <string name="settings_appearance_light">Maliwanag</string>
     <string name="settings_appearance_dark">Madilim</string>
     <string name="settings_density">Densidad</string>
-    <string name="settings_density_compact">Compact</string>
+    <string name="settings_density_compact">Siksik</string>
     <string name="settings_density_comfortable">Komportable</string>
     <string name="settings_density_spacious">Maluwag</string>
     <string name="settings_radius_none">Wala</string>
@@ -77,7 +77,7 @@
     <string name="settings_radius_medium">Katamtaman</string>
     <string name="settings_radius_large">Malaki</string>
     <string name="settings_font">Font</string>
-    <string name="settings_font_system">System</string>
+    <string name="settings_font_system">Sistema</string>
     <string name="settings_font_serif">Serif</string>
     <string name="settings_font_dyslexia">Angkop sa dyslexia</string>
     <string name="settings_font_size">Laki ng titik</string>
@@ -98,8 +98,8 @@
     <string name="settings_week_sunday">Linggo</string>
     <string name="settings_number_format">Format ng numero</string>
     <string name="settings_units">Mga yunit</string>
-    <string name="settings_units_metric">Metric</string>
-    <string name="settings_units_imperial">Imperial</string>
+    <string name="settings_units_metric">Metriko</string>
+    <string name="settings_units_imperial">Imperyal</string>
     <string name="settings_time_zone">Time zone</string>
     <string name="settings_reset_to_defaults">I-reset sa mga default</string>
     <string name="settings_reset_confirm_title">I-reset ang mga kagustuhan?</string>
@@ -109,9 +109,9 @@
     <string name="settings_display_reset">I-reset sa mga default</string>
     <string name="settings_display_reset_confirm_title">I-reset ang display?</string>
     <string name="settings_display_reset_confirm_message">Ire-reset nito ang mga setting ng display sa kanilang mga default na halaga.</string>
-    <string name="settings_theme_title">Theme</string>
+    <string name="settings_theme_title">Tema</string>
     <string name="settings_theme_default">Default</string>
-    <string name="settings_background">Background</string>
+    <string name="settings_background">Likuran</string>
     <string name="settings_background_theme">Mula sa tema</string>
     <string name="settings_background_off">Wala</string>
     <string name="game_chat_empty">Wala pang mensahe</string>
@@ -128,8 +128,8 @@
     <string name="game_chat_move_played">Naglaro si %1$s ng %2$s</string>
 
     <string name="error_network">Hindi makakonekta. Suriin ang iyong koneksyon sa internet at subukan muli.</string>
-    <string name="error_authentication_required">Kailangan ng pagpapatunay</string>
-    <string name="error_not_found">Hindi natagpuan</string>
+    <string name="error_authentication_required">Kailangan ng authentication</string>
+    <string name="error_not_found">Hindi nahanap</string>
     <string name="error_server">Error sa server (%1$d). Pakisubukan muli mamaya.</string>
     <string name="error_unexpected">May naganap na hindi inaasahang error</string>
     <string name="error_enter_server_url">Pakipasok ang URL ng server</string>
@@ -165,8 +165,8 @@
     <string name="bootstrap_sign_in_differently">Mag-sign in sa ibang paraan</string>
     <string name="bootstrap_choose_account">Pumili ng account</string>
     <string name="bootstrap_sign_in_different_server">Mag-sign in sa ibang server</string>
-    <string name="common_retry">Subukan muli</string>
-    <string name="common_more_options">Higit pang mga opsyon</string>
+    <string name="common_retry">Subukang muli</string>
+    <string name="common_more_options">Iba pang opsyon</string>
     <string name="common_collapse">I-collapse</string>
     <string name="common_expand">Palawakin</string>
     <string name="common_play_video">I-play ang video</string>
@@ -194,7 +194,7 @@
     <string name="format_time_weeks_short">%1$dw</string>
     <string name="format_time_months_short">%1$dmo</string>
     <string name="reaction_add">Magdagdag ng reaksyon</string>
-    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel">Mga notification ng Mochi</string>
     <string name="push_service_channel_description">Pinapanatiling nakakonekta ang Mochi upang makatanggap ng mga abiso</string>
     <string name="push_service_group">Serbisyo sa background</string>
     <string name="push_service_title">Nakikinig ang Mochi para sa mga abiso</string>
@@ -207,7 +207,7 @@
     <string name="oem_hint_samsung_note">Sa mga Samsung phone, tingnan din ang Settings → Device care → Sleeping apps at alisin ang Mochi kung nakalista.</string>
     <string name="oem_hint_allow">Payagan ang background</string>
     <string name="oem_hint_dismiss">Huwag nang ipakita muli</string>
-    <string name="about_title">Mochi Client</string>
+    <string name="about_title">Client ng Mochi</string>
     <string name="about_version">Bersyon %1$s</string>
     <string name="about_check_updates">Tingnan kung may update</string>
     <string name="about_up_to_date">Pinakabago na</string>
@@ -241,7 +241,7 @@
     <string name="stepup_error_oauth">Hindi ma-verify gamit ang account na iyon. Pakisubukang muli.</string>
     <string name="game_system_resign">Sumuko si %1$s</string>
     <string name="game_system_draw_offer">Nag-alok ng tabla si %1$s</string>
-    <string name="game_system_draw_accept">Napagkasunduang tabla</string>
+    <string name="game_system_draw_accept">Pinagkasunduan ang tabla</string>
     <string name="game_system_draw_decline">Tinanggihan ni %1$s ang tabla</string>
     <string name="reactivation_title">Nakatakda nang burahin ang iyong account</string>
     <string name="reactivation_body">Nakatakda nang burahin ang iyong account. Maaari mong kanselahin at ibalik ang buong access ngayon.</string>
@@ -291,14 +291,14 @@
     <string name="lightbox_comments">Mga komento</string>
     <string name="common_attachment_unavailable">Pansamantalang hindi magagamit ang kalakip</string>
     <string name="common_unavailable">Hindi available</string>
-    <string name="common_not_found">Hindi natagpuan</string>
+    <string name="common_not_found">Hindi nahanap</string>
     <string name="format_bold">Makapal</string>
     <string name="format_italic">Pahilis</string>
     <string name="format_link">Link</string>
     <string name="format_heading">Pamagat</string>
     <string name="format_code">Code</string>
     <string name="format_list">Tuldok na listahan</string>
-    <string name="common_preview">Paunang tingin</string>
+    <string name="common_preview">Preview</string>
     <string name="rss_revoke_confirm">Bawiin</string>
     <string name="rss_revoke">Bawiin ang access</string>
     <string name="rss_revoke_title">Bawiin ang access sa RSS?</string>

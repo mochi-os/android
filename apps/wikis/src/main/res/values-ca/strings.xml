@@ -261,12 +261,12 @@
     <string name="wikis_redirect_delete_confirm_message">Això eliminarà la redirecció de «%1$s» a «%2$s». Els usuaris que visitin la URL d\'origen ja no seran redirigits.</string>
     <string name="wikis_tags_subtitle">Navega les pàgines per etiqueta. Toca una etiqueta per veure totes les pàgines amb aquesta etiqueta.</string>
     <string name="wikis_tag_pages_title_template">Pàgines etiquetades «%1$s»</string>
-    <string name="wikis_tag_manager_add_action">Afegeix etiqueta</string>
+    <string name="wikis_tag_manager_add_action">Afegeix una etiqueta</string>
     <string name="wikis_tag_manager_remove_confirm_title">Treure etiqueta?</string>
     <string name="wikis_tag_manager_remove_confirm_message">Treure l\'etiqueta «%1$s» d\'aquesta pàgina?</string>
     <string name="wikis_tag_manager_added">Etiqueta «%1$s» afegida</string>
     <string name="wikis_tag_manager_removed">Etiqueta «%1$s» treta</string>
-    <string name="wikis_tag_dialog_title">Afegeix etiqueta</string>
+    <string name="wikis_tag_dialog_title">Afegeix una etiqueta</string>
     <string name="wikis_tag_dialog_empty">L\'etiqueta no pot estar buida</string>
     <string name="wikis_attachments_search_placeholder">Cerca adjunts…</string>
     <string name="wikis_attachments_delete_confirm_message">Eliminar «%1$s»? Això no es pot desfer.</string>

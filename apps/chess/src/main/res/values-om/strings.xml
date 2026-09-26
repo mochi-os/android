@@ -32,7 +32,7 @@
     <string name="chess_draw_accept">Fudhadhu</string>
     <string name="chess_draw_decline">Dhiisi</string>
     <string name="chess_status_checkmate_you_win">Cheekiimeetii — mo\'atte!</string>
-    <string name="chess_status_stalemate">Mormii — qixxee</string>
+    <string name="chess_status_stalemate">Dhaabbii — wal qixxee</string>
     <string name="chess_status_draw">Walqixxee</string>
     <string name="chess_status_check_your_move">Cheekii — sochiin kee</string>
     <string name="chess_status_your_move">Tarkaanfii kee</string>

@@ -70,7 +70,7 @@
     <string name="market_checkout_back">Atrás</string>
     <string name="market_checkout_buy_it_now">Cómpralo ya</string>
     <string name="market_checkout_create_failed">Error al crear el pedido</string>
-    <string name="market_checkout_delivery_download">Descargar</string>
+    <string name="market_checkout_delivery_download">Descarga</string>
     <string name="market_checkout_delivery_method">Método de entrega</string>
     <string name="market_checkout_delivery_pickup">Recogida</string>
     <string name="market_checkout_delivery_shipping">Envío</string>
@@ -107,7 +107,7 @@
     <string name="market_editor_asset_external_filename">Nombre de archivo</string>
     <string name="market_editor_back">Atrás</string>
     <string name="market_editor_category">Categoría</string>
-    <string name="market_editor_condition">Condición</string>
+    <string name="market_editor_condition">Estado</string>
     <string name="market_editor_condition_new">Nuevo</string>
     <string name="market_editor_condition_refurbished">Reacondicionado</string>
     <string name="market_editor_condition_used">Usado</string>
@@ -149,12 +149,12 @@
     <string name="market_filter_apply">Aplicar</string>
     <string name="market_filter_category">Categoría</string>
     <string name="market_filter_clear">Borrar filtros</string>
-    <string name="market_filter_condition">Condición</string>
+    <string name="market_filter_condition">Estado</string>
     <string name="market_filter_condition_new">Nuevo</string>
     <string name="market_filter_condition_refurbished">Reacondicionado</string>
     <string name="market_filter_condition_used">Usado</string>
     <string name="market_filter_delivery">Entrega</string>
-    <string name="market_filter_delivery_download">Descargar</string>
+    <string name="market_filter_delivery_download">Descarga</string>
     <string name="market_filter_delivery_pickup">Recogida</string>
     <string name="market_filter_delivery_shipping">Envío</string>
     <string name="market_filter_price_max">Máx.</string>
@@ -183,7 +183,7 @@
     <string name="market_listing_detail_load_failed">Error al cargar el anuncio</string>
     <string name="market_listing_detail_listed">Publicado %1$s</string>
     <string name="market_listing_detail_location_heading">Ubicación</string>
-    <string name="market_listing_detail_message">Mensaje</string>
+    <string name="market_listing_detail_message">Enviar mensaje</string>
     <string name="market_listing_detail_message_seller">Enviar mensaje al vendedor</string>
     <string name="market_listing_detail_not_found">Anuncio no encontrado</string>
     <string name="market_listing_detail_place_bid">Pujar</string>
@@ -191,7 +191,7 @@
     <string name="market_listing_detail_report">Denunciar anuncio</string>
     <string name="market_listing_detail_save">Guardar</string>
     <string name="market_listing_detail_seller_heading">Vendedor</string>
-    <string name="market_listing_detail_shipping_heading">Envío</string>
+    <string name="market_listing_detail_shipping_heading">Opciones de envío</string>
     <string name="market_listing_detail_subscribe">Suscribirse</string>
     <string name="market_listing_detail_tags_heading">Etiquetas</string>
     <string name="market_listing_detail_title">Anuncio</string>
@@ -305,7 +305,7 @@
     <string name="market_sale_carrier_other">Otro</string>
     <string name="market_sale_completed_label">Completado</string>
     <string name="market_sale_dispute_respond">Responder</string>
-    <string name="market_sale_dispute_state_open">Abrir</string>
+    <string name="market_sale_dispute_state_open">Abierto</string>
     <string name="market_sale_dispute_state_resolved">Resuelto</string>
     <string name="market_sale_load_failed">Error al cargar el pedido</string>
     <string name="market_sale_message_buyer">Enviar mensaje al comprador</string>
@@ -427,7 +427,7 @@
     <string name="market_account_stripe_refresh">Actualizar estado</string>
     <string name="market_account_stripe_refresh_failed">No se pudo actualizar el estado de Stripe</string>
     <string name="market_appeal_dialog_reason_label">¿Por qué presentas un recurso?</string>
-    <string name="market_appeal_dialog_title">Recurrir eliminación</string>
+    <string name="market_appeal_dialog_title">Apelar la retirada</string>
     <string name="market_audit_actor_and_action">%1$s — %2$s</string>
     <string name="market_bid_dialog_amount_label">Tu puja</string>
     <string name="market_bid_dialog_current_high">Puja más alta actual: %1$s</string>
@@ -628,7 +628,7 @@
     <string name="market_saved_empty_title">No hay anuncios guardados</string>
     <string name="market_search_placeholder">Buscar en el mercado</string>
     <string name="market_status_past_due">Vencido</string>
-    <string name="market_stripe_onboarding_action">Continuar configuración</string>
+    <string name="market_stripe_onboarding_action">Continuar la configuración</string>
     <string name="market_stripe_onboarding_body">Finalice la configuración de Stripe antes de poder recibir pagos.</string>
     <string name="market_stripe_onboarding_failed">No se pudo abrir Stripe</string>
     <string name="market_stripe_onboarding_opening">Abriendo Stripe…</string>
@@ -663,7 +663,7 @@
     <string name="market_seller_become_heading">Conviértete en vendedor</string>
     <string name="market_seller_become_title">Conviértete en vendedor</string>
     <string name="market_seller_check_status">Comprobar estado</string>
-    <string name="market_seller_checking">Comprobando...</string>
+    <string name="market_seller_checking">Verificando…</string>
     <string name="market_seller_connect_stripe">Conectar Stripe</string>
     <string name="market_seller_connecting">Cargando...</string>
     <string name="market_seller_fee_loading">Cargando detalles de la comisión...</string>

@@ -64,7 +64,7 @@
     <string name="go_channel_name">圍棋通知</string>
     <string name="go_channel_description">關於走棋、停一手、提議和棋局結果的通知。</string>
     <string name="go_open_sidebar">開啟側邊欄</string>
-    <string name="go_sidebar_active">進行中的棋局</string>
+    <string name="go_sidebar_active">進行中的遊戲</string>
     <string name="go_empty_active">暫無進行中的棋局。</string>
     <string name="go_status_resigned">已認輸</string>
     <string name="go_new_game_title">新圍棋棋局</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_list_title">Chats</string>
+    <string name="chat_list_title">Arust\'awinaka</string>
     <string name="chat_list_search">Thaqhama</string>
     <string name="chat_list_logout">Mistuña</string>
     <string name="chat_list_new">Machaqa parla</string>
@@ -53,16 +53,16 @@
     <string name="chat_forward_search">Chatanaka thaqhaña…</string>
     <string name="chat_forward_empty">Janiw apayañataki chatanakax utjkiti</string>
     <string name="chat_forward_success">Apayatawa</string>
-    <string name="chat_message_reply">Kutiyaña</string>
+    <string name="chat_message_reply">Jaysaña</string>
     <string name="chat_message_select">Ajlliña</string>
-    <string name="chat_reply_attachment">Archivo</string>
+    <string name="chat_reply_attachment">Adjunto</string>
     <string name="chat_replying_to">%1$s tuqir kutiyaski</string>
     <string name="chat_delete_confirm_title">¿Mensaje chhaqtayañ?</string>
     <string name="chat_delete_confirm_body">Akax taqininakatakiw mensaje chhaqtayi, janiw kutt\'ayañ atipkiti.</string>
     <string name="chat_delete_own_only">Jumampi mensajenakamak chhaqtayañ atta</string>
     <string name="chat_selection_title">%1$d ajllita</string>
     <string name="chat_forward_subtitle">Mä aru lakʼa jan ukax mä masi ajllim, ajllita yatiyäwinak apañataki</string>
-    <string name="chat_forward_chats">Chats</string>
+    <string name="chat_forward_chats">Arust\'awinaka</string>
     <string name="chat_forward_friends">Masinaka</string>
     <string name="chat_policy_title">Puriri chatanaka</string>
     <string name="chat_policy_friends">Amigonakaki</string>
@@ -78,7 +78,7 @@
     <string name="chat_marked_read">Ullt\'ata ukham uñacht\'ayata</string>
     <string name="chat_search_next">Jutir chika</string>
     <string name="chat_search_prev">Nayrïr chika</string>
-    <string name="chat_settings_id">Aruskipäwi ID</string>
+    <string name="chat_settings_id">Chat ID</string>
     <string name="chat_message_edited">(askichata)</string>
     <string name="chat_new_fallback_name">Chat</string>
 </resources>

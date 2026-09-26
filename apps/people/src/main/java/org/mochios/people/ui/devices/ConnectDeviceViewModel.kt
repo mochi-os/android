@@ -41,6 +41,8 @@ data class ConnectDeviceUiState(
     val name: String = "",
     val isCreating: Boolean = false,
     val token: String? = null,
+    /** The username to enter beside [token]: the account's address. */
+    val username: String = "",
     val deleting: DeviceToken? = null,
     val isDeleting: Boolean = false,
 )
@@ -92,8 +94,8 @@ class ConnectDeviceViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isCreating = true)
             try {
-                val token = repository.createToken(name)
-                _uiState.value = _uiState.value.copy(isCreating = false, token = token, name = "")
+                val created = repository.createToken(name)
+                _uiState.value = _uiState.value.copy(isCreating = false, token = created.token, username = created.username, name = "")
                 load()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isCreating = false)
