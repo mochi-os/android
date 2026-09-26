@@ -307,10 +307,11 @@ open class MainActivity : ComponentActivity() {
      * the installer's Open button relaunches through the default launcher
      * entry whatever was active, so when the running versionName differs from
      * the last cold start's, a launch at that entry prefers the app saved by
-     * [onPause]. Only that entry: a tap on any other icon names its own app,
-     * and was being redirected to the last active one for the first launch
-     * after every update. A launch naming no app goes to the last active one,
-     * then to the default.
+     * [onPause]. Only that entry, and only without [Intent.getSourceBounds]:
+     * a launcher sets the tapped icon's bounds, `getLaunchIntentForPackage`
+     * never does, so a real tap on any icon, the default app's included, opens
+     * its own app. A launch naming no app goes to the last active one, then to
+     * the default.
      */
     private fun resolveStartTargetApp(intent: Intent?, savedInstanceState: Bundle?, hosted: String?): String {
         // Configuration changes / process death restores: this class is
@@ -330,7 +331,8 @@ open class MainActivity : ComponentActivity() {
             val upgraded = lastSeen != null && current != null && lastSeen != current
             val saved = prefs.getString(KEY_PENDING_DEEP_LINK, null)?.let(::appForLink)
                 ?: prefs.getString(KEY_LAST_ACTIVE_APP, null)
-            if (upgraded && saved != null && hosted == DEFAULT_APP) {
+            val installerOpen = hosted == DEFAULT_APP && intent?.sourceBounds == null
+            if (upgraded && saved != null && installerOpen) {
                 Log.i(TAG, "Upgrade relaunch ($lastSeen -> $current); restoring $saved over $hosted")
                 return saved
             }
