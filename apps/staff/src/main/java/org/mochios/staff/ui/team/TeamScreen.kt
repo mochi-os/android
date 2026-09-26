@@ -25,7 +25,6 @@ import androidx.compose.material.icons.outlined.PersonRemove
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -71,13 +70,13 @@ import org.mochios.staff.ui.components.StaffUserAvatar
 @Composable
 fun TeamScreen(
     @Suppress("UNUSED_PARAMETER") navController: NavController,
+    snackbarHostState: SnackbarHostState,
     viewModel: TeamViewModel = hiltViewModel(),
 ) {
     val me = LocalStaffMe.current
     val isAdmin = me?.role == "admin"
 
     val state by viewModel.state.collectAsState()
-    val snackbarHostState = remember { SnackbarHostState() }
     val resources = LocalResources.current
 
     LaunchedEffect(Unit) {
@@ -93,18 +92,12 @@ fun TeamScreen(
         }
     }
 
-    Box(modifier = Modifier.fillMaxSize()) {
-        TeamBody(
-            state = state,
-            isAdmin = isAdmin,
-            onChangeRole = viewModel::changeRole,
-            onAskRemove = viewModel::askRemove,
-        )
-        SnackbarHost(
-            hostState = snackbarHostState,
-            modifier = Modifier.align(Alignment.BottomCenter),
-        )
-    }
+    TeamBody(
+        state = state,
+        isAdmin = isAdmin,
+        onChangeRole = viewModel::changeRole,
+        onAskRemove = viewModel::askRemove,
+    )
 
     val removeTarget = state.removeTarget
     if (removeTarget != null) {

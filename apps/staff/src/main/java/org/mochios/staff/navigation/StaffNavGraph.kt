@@ -10,11 +10,13 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.PersonAdd
 import androidx.compose.material3.Icon
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.stringResource
@@ -187,6 +189,7 @@ fun NavGraphBuilder.staffNavGraph(
     // share one instance.
     composable(StaffApp.CATEGORIES) { entry ->
         val viewModel: CategoriesViewModel = hiltViewModel()
+        val snackbarHostState = remember { SnackbarHostState() }
         LaunchedEffect(entry) {
             entry.savedStateHandle.getStateFlow<Int?>(CATEGORY_SAVED, null).collect { message ->
                 if (message != null) {
@@ -199,6 +202,7 @@ fun NavGraphBuilder.staffNavGraph(
             navController = navController,
             currentRoute = StaffApp.CATEGORIES,
             titleRes = R.string.staff_sidebar_categories,
+            snackbarHostState = snackbarHostState,
             floatingActionButton = {
                 MochiFab(onClick = { navController.navigate(StaffApp.CATEGORY_NEW) }) {
                     Icon(
@@ -208,7 +212,11 @@ fun NavGraphBuilder.staffNavGraph(
                 }
             },
         ) {
-            CategoriesScreen(navController = navController, viewModel = viewModel)
+            CategoriesScreen(
+                navController = navController,
+                snackbarHostState = snackbarHostState,
+                viewModel = viewModel,
+            )
         }
     }
     composable(StaffApp.CATEGORY_NEW) {
@@ -247,6 +255,7 @@ fun NavGraphBuilder.staffNavGraph(
     // LocalStaffMe.current.role.
     composable(StaffApp.TEAM) { entry ->
         val viewModel: TeamViewModel = hiltViewModel()
+        val snackbarHostState = remember { SnackbarHostState() }
         LaunchedEffect(entry) {
             entry.savedStateHandle.getStateFlow(TEAM_MEMBER_ADDED, false).collect { added ->
                 if (added) {
@@ -259,6 +268,7 @@ fun NavGraphBuilder.staffNavGraph(
             navController = navController,
             currentRoute = StaffApp.TEAM,
             titleRes = R.string.staff_sidebar_team,
+            snackbarHostState = snackbarHostState,
             floatingActionButton = {
                 val isAdmin = LocalStaffMe.current?.role == "admin"
                 if (isAdmin) {
@@ -271,7 +281,11 @@ fun NavGraphBuilder.staffNavGraph(
                 }
             },
         ) {
-            TeamScreen(navController = navController, viewModel = viewModel)
+            TeamScreen(
+                navController = navController,
+                snackbarHostState = snackbarHostState,
+                viewModel = viewModel,
+            )
         }
     }
 

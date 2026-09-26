@@ -26,7 +26,6 @@ import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -67,6 +66,7 @@ import org.mochios.staff.ui.components.StaffStatusBadge
 @Composable
 fun CategoriesScreen(
     navController: NavController,
+    snackbarHostState: SnackbarHostState,
     viewModel: CategoriesViewModel = hiltViewModel(),
 ) {
     // Categories surfaces are admin-gated server-side, but every staff role
@@ -77,7 +77,6 @@ fun CategoriesScreen(
     val me = org.mochios.staff.ui.components.LocalStaffMe.current
 
     val state by viewModel.state.collectAsState()
-    val snackbarHostState = remember { SnackbarHostState() }
     val resources = LocalResources.current
 
     LaunchedEffect(Unit) {
@@ -93,17 +92,11 @@ fun CategoriesScreen(
         }
     }
 
-    Box(modifier = Modifier.fillMaxSize()) {
-        CategoriesBody(
-            state = state,
-            onEdit = { category -> navController.navigate(StaffApp.categoryEdit(category.id)) },
-            onDelete = viewModel::askDelete,
-        )
-        SnackbarHost(
-            hostState = snackbarHostState,
-            modifier = Modifier.align(Alignment.BottomCenter),
-        )
-    }
+    CategoriesBody(
+        state = state,
+        onEdit = { category -> navController.navigate(StaffApp.categoryEdit(category.id)) },
+        onDelete = viewModel::askDelete,
+    )
 
     // Delete confirmation
     val deleteTarget = state.deleteTarget

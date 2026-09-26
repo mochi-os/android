@@ -17,6 +17,8 @@ import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.rememberDrawerState
@@ -103,6 +105,8 @@ class StaffLayoutViewModel @Inject constructor(
  * staff-events WebSocket. Provides [LocalStaffMe]; the drawer stays mounted in
  * the loading and error states so the user can navigate away. A screen's one
  * add action goes in [floatingActionButton], which can read [LocalStaffMe].
+ * Screens with a floating button show messages through [snackbarHostState] so
+ * the Scaffold lifts the button above the snackbar.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -112,6 +116,7 @@ fun StaffLayout(
     @StringRes titleRes: Int,
     topBarActions: @Composable RowScope.() -> Unit = {},
     floatingActionButton: @Composable () -> Unit = {},
+    snackbarHostState: SnackbarHostState = remember { SnackbarHostState() },
     layoutViewModel: StaffLayoutViewModel = hiltViewModel(),
     content: @Composable () -> Unit,
 ) {
@@ -177,6 +182,7 @@ fun StaffLayout(
                         floatingActionButton()
                     }
                 },
+                snackbarHost = { SnackbarHost(hostState = snackbarHostState) },
             ) { padding ->
                 Box(
                     modifier = Modifier
