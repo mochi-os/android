@@ -13,8 +13,8 @@
     <string name="launcher_forums">Mochi 論壇</string>
     <string name="launcher_projects">Mochi 項目</string>
     <string name="launcher_crm">Mochi 客戶關係管理</string>
-    <string name="launcher_market">Mochi 市場</string>
+    <string name="launcher_market">Mochi Market</string>
     <string name="launcher_calendars">Mochi 日曆</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="launcher_staff">Mochi 員工</string>
 
 </resources>
