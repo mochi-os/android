@@ -56,3 +56,6 @@ data class CalendarResponse(val calendar: Calendar = Calendar())
 
 /** The body of `-/calendars/poll`: how many events the poll moved. */
 data class PollResponse(val changed: Int = 0, val calendar: Calendar = Calendar())
+
+/** `-/calendars/refresh`: whether syncing the stale linked calendars changed anything. */
+data class RefreshResponse(val changed: Boolean = false)

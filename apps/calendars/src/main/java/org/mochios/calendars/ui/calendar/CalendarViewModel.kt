@@ -374,6 +374,17 @@ class CalendarViewModel @Inject constructor(
      * call — so the drawer's line under the calendar is only right once the
      * list has been read again, which the repository's own announcement does.
      */
+    /** Another server's changes, pulled in as the screen comes into view. */
+    fun refresh() {
+        viewModelScope.launch {
+            try {
+                repository.refreshCalendars()
+            } catch (e: Exception) {
+                // The scheduled poll carries on; nothing to tell the user.
+            }
+        }
+    }
+
     fun poll(calendar: String) {
         viewModelScope.launch {
             try {

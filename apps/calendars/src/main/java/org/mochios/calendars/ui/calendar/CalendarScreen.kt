@@ -122,7 +122,10 @@ fun CalendarScreen(
     var linking by remember { mutableStateOf<Calendar?>(null) }
     var preferences by remember { mutableStateOf(false) }
 
-    DisposableRefresh(lifecycle) { viewModel.load(refreshing = true, reset = false) }
+    DisposableRefresh(lifecycle) {
+        viewModel.load(refreshing = true, reset = false)
+        viewModel.refresh()
+    }
 
     LaunchedEffect(Unit) {
         // Each message on its own, so a move's "Undo" waiting to be tapped

@@ -209,6 +209,13 @@ class CalendarsRepository @Inject constructor(
      * Fetches a subscription or syncs a linked calendar now, answering how
      * many events moved.
      */
+    /**
+     * Sync the linked calendars someone is looking at; the server skips any
+     * synced in the last minute. A change is announced, so the screens reload.
+     */
+    suspend fun refreshCalendars(): Boolean =
+        call { api.refreshCalendars().unwrap().changed }.also { if (it) announce() }
+
     suspend fun pollCalendar(calendar: String): Int = call {
         api.pollCalendar(calendar).unwrap().changed
     }.also { announce() }
