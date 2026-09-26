@@ -186,14 +186,14 @@
     <string name="people_welcome_body">ค้นหาเพื่อนทั่ว Mochi และเชื่อมต่อกัน แตะ เพิ่มรายชื่อติดต่อ เพื่อส่งคำเชิญ</string>
     <string name="people_person_state_contact">อยู่ในผู้ติดต่อแล้ว</string>
     <string name="people_device_create">สร้าง</string>
+    <string name="people_device_add">เพิ่มอุปกรณ์</string>
     <string name="people_device_server">เซิร์ฟเวอร์</string>
     <string name="people_device_username">ชื่อผู้ใช้</string>
     <string name="people_device_done">เสร็จสิ้น</string>
-    <string name="people_device_list">อุปกรณ์</string>
     <string name="people_device_used">ใช้ล่าสุด %1$s</string>
     <string name="people_device_never">ไม่เลย</string>
     <string name="people_sync_now">ซิงค์เดี๋ยวนี้</string>
-    <string name="people_device_title">เชื่อมต่ออุปกรณ์</string>
+    <string name="people_device_title">อุปกรณ์ที่เชื่อมต่อ</string>
     <string name="people_device_name">ชื่ออุปกรณ์</string>
     <string name="people_device_address">URL สมุดที่อยู่</string>
     <string name="people_device_password">รหัสผ่าน</string>

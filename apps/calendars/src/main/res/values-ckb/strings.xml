@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">دروستکردن</string>
     <string name="calendars_subscribe_submit">بەشداربە</string>
     <string name="calendars_subscribe_url">ناونیشان</string>
-    <string name="calendars_connect_device">ئامێرێک بەستنەوە</string>
+    <string name="calendars_connect_device">ئامێرە پەیوەستکراوەکان</string>
     <string name="calendars_preferences">پەسەندییەکان</string>
     <string name="calendars_name">ناو</string>
     <string name="calendars_rename">ناوگۆڕکردن</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">هێشتا هاوکات نەکراوە</string>
     <string name="calendars_sync_time">دوایین هاوکاتکردن %1$s</string>
     <string name="calendars_sync_transport">نەتوانرا بگاتە سێرڤەر</string>
-    <string name="calendars_device_title">ئامێرێک بەستنەوە</string>
+    <string name="calendars_device_title">ئامێرە پەیوەستکراوەکان</string>
     <string name="calendars_device_name">ناوی ئامێر</string>
     <string name="calendars_device_create">دروستکردن</string>
+    <string name="calendars_device_add">زیادکردنی ئامێر</string>
     <string name="calendars_device_server">ڕاژەکار</string>
     <string name="calendars_device_address">ناونیشان</string>
     <string name="calendars_device_username">ناوی بەکارهێنەر</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">پێویستە دەستڕاگەیشتن بە ڕۆژژمێر هەبێت</string>
     <string name="calendars_sync_authorization">بۆ بەردەوامبوونی هاوکاتکردن دیسان بچۆ ژوورەوە</string>
     <string name="calendars_device_warning">ئێستا وشەی نهێنی کۆپی بکە: دووبارە پیشان نادرێتەوە.</string>
-    <string name="calendars_device_list">ئامێرە پەیوەستکراوەکان</string>
     <string name="calendars_device_empty">هیچ ئامێرێک پەیوەست نەکراوە</string>
     <string name="calendars_device_used">کۆتا بەکارھێنان %1$s</string>
     <string name="calendars_device_never">هەرگیز</string>

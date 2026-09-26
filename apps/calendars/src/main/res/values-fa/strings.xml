@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">ساختن</string>
     <string name="calendars_subscribe_submit">اشتراک</string>
     <string name="calendars_subscribe_url">آدرس</string>
-    <string name="calendars_connect_device">اتصال دستگاه</string>
+    <string name="calendars_connect_device">دستگاه‌های متصل</string>
     <string name="calendars_preferences">ترجیحات</string>
     <string name="calendars_name">نام</string>
     <string name="calendars_rename">تغییر نام</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">هنوز همگام‌سازی نشده است</string>
     <string name="calendars_sync_time">آخرین همگام‌سازی %1$s</string>
     <string name="calendars_sync_transport">دسترسی به سرور ممکن نشد</string>
-    <string name="calendars_device_title">اتصال دستگاه</string>
+    <string name="calendars_device_title">دستگاه‌های متصل</string>
     <string name="calendars_device_name">نام دستگاه</string>
     <string name="calendars_device_create">ساختن</string>
+    <string name="calendars_device_add">افزودن دستگاه</string>
     <string name="calendars_device_server">سرور</string>
     <string name="calendars_device_address">آدرس</string>
     <string name="calendars_device_username">نام کاربری</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">دسترسی به تقویم لازم است</string>
     <string name="calendars_sync_authorization">برای ادامه همگام‌سازی دوباره وارد شوید</string>
     <string name="calendars_device_warning">گذرواژه را همین حالا کپی کنید: دیگر نمایش داده نخواهد شد.</string>
-    <string name="calendars_device_list">دستگاه‌های متصل</string>
     <string name="calendars_device_empty">هیچ دستگاهی متصل نیست</string>
     <string name="calendars_device_used">آخرین استفاده %1$s</string>
     <string name="calendars_device_never">هرگز</string>

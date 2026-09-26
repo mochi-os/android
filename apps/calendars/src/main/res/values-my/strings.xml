@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">ဖန်တီးမည်</string>
     <string name="calendars_subscribe_submit">စာရင်းသွင်းမည်</string>
     <string name="calendars_subscribe_url">လိပ်စာ</string>
-    <string name="calendars_connect_device">ကိရိယာ ချိတ်ဆက်မည်</string>
+    <string name="calendars_connect_device">ချိတ်ဆက်ထားသော ကိရိယာများ</string>
     <string name="calendars_preferences">ဦးစားပေးချက်များ</string>
     <string name="calendars_name">အမည်</string>
     <string name="calendars_rename">အမည်ပြောင်း</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">မထပ်တူပြုရသေးပါ</string>
     <string name="calendars_sync_time">နောက်ဆုံး ထပ်တူပြုခဲ့ချိန်: %1$s</string>
     <string name="calendars_sync_transport">ဆာဗာသို့ ဆက်သွယ်၍မရပါ</string>
-    <string name="calendars_device_title">ကိရိယာ ချိတ်ဆက်မည်</string>
+    <string name="calendars_device_title">ချိတ်ဆက်ထားသော ကိရိယာများ</string>
     <string name="calendars_device_name">ကိရိယာအမည်</string>
     <string name="calendars_device_create">ဖန်တီးမည်</string>
+    <string name="calendars_device_add">ကိရိယာ ထည့်မည်</string>
     <string name="calendars_device_server">ဆာဗာ</string>
     <string name="calendars_device_address">လိပ်စာ</string>
     <string name="calendars_device_username">သုံးစွဲသူအမည်</string>
@@ -118,7 +119,6 @@
     <string name="calendars_sync_permission">ပြက္ခဒိန် အသုံးပြုခွင့် လိုအပ်သည်</string>
     <string name="calendars_sync_authorization">ချိန်ကိုက်မှု ဆက်လုပ်ရန် ပြန်လည် ဝင်ရောက်ပါ</string>
     <string name="calendars_device_warning">စကားဝှက်ကို ယခု ကူးယူပါ။ ထပ်မံ ပြသ၍ မရပါ။</string>
-    <string name="calendars_device_list">ချိတ်ဆက်ထားသော ကိရိယာများ</string>
     <string name="calendars_device_empty">ချိတ်ဆက်ထားသော ကိရိယာ မရှိပါ</string>
     <string name="calendars_device_used">နောက်ဆုံး အသုံးပြုခဲ့သည် %1$s</string>
     <string name="calendars_device_never">ဘယ်တော့မှ မဟုတ်</string>

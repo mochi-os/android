@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Li seranserê Mochi hevalan bibîne û têkilî deyne. Ji bo şandina vexwendinê Têkilî lê zêde bike bitikîne.</string>
     <string name="people_person_state_contact">Di têkiliyan de</string>
     <string name="people_device_create">Çêbike</string>
+    <string name="people_device_add">Cîhazekê zêde bike</string>
     <string name="people_device_server">Server</string>
     <string name="people_device_username">Navê bikarhêner</string>
     <string name="people_device_done">Qediya</string>
-    <string name="people_device_list">Cîhaz</string>
     <string name="people_device_used">Bikaranîna dawî %1$s</string>
     <string name="people_device_never">Tu car</string>
     <string name="people_sync_now">Niha hev demîne bike</string>
-    <string name="people_device_title">Cîhazekê girê bide</string>
+    <string name="people_device_title">Cîhazên girêdayî</string>
     <string name="people_device_name">Navê cîhazê</string>
     <string name="people_device_address">URLa pirtûka navnîşanan</string>
     <string name="people_device_password">Şîfre</string>

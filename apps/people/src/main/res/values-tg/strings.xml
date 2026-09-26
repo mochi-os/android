@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Дар тамоми Mochi дӯстонро ёбед ва муошират кунед. Барои фиристодани даъватнома Илова кардани тамос -ро зер кунед.</string>
     <string name="people_person_state_contact">Дар тамосҳо</string>
     <string name="people_device_create">Эҷод кардан</string>
+    <string name="people_device_add">Иловаи дастгоҳ</string>
     <string name="people_device_server">Сервер</string>
     <string name="people_device_username">Номи корбар</string>
     <string name="people_device_done">Иҷро шуд</string>
-    <string name="people_device_list">Дастгоҳҳо</string>
     <string name="people_device_used">Истифодаи охирин %1$s</string>
     <string name="people_device_never">Ҳеҷ гоҳ</string>
     <string name="people_sync_now">Ҳозир ҳамоҳанг кардан</string>
-    <string name="people_device_title">Пайваст кардани дастгоҳ</string>
+    <string name="people_device_title">Дастгоҳҳои пайвастшуда</string>
     <string name="people_device_name">Номи дастгоҳ</string>
     <string name="people_device_address">URL-и дафтари суроғаҳо</string>
     <string name="people_device_password">Рамз</string>

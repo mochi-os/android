@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Nemo abokai a duk faɗin Mochi ka haɗu da su. Danna Ƙara lamba don aika gayyata.</string>
     <string name="people_person_state_contact">Cikin lambobin sadarwa</string>
     <string name="people_device_create">Ƙirƙira</string>
+    <string name="people_device_add">Ƙara na\'ura</string>
     <string name="people_device_server">Sabar</string>
     <string name="people_device_username">Sunan mai amfani</string>
     <string name="people_device_done">An gama</string>
-    <string name="people_device_list">Na\'urori</string>
     <string name="people_device_used">Amfani na ƙarshe %1$s</string>
     <string name="people_device_never">Babu lokaci</string>
     <string name="people_sync_now">Daidaita yanzu</string>
-    <string name="people_device_title">Haɗa na\'ura</string>
+    <string name="people_device_title">Na\'urorin da aka haɗa</string>
     <string name="people_device_name">Sunan na\'ura</string>
     <string name="people_device_address">URL na littafin adireshi</string>
     <string name="people_device_password">Kalmar sirri</string>

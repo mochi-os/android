@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Құру</string>
     <string name="calendars_subscribe_submit">Жазылу</string>
     <string name="calendars_subscribe_url">Мекенжай</string>
-    <string name="calendars_connect_device">Құрылғыны қосу</string>
+    <string name="calendars_connect_device">Қосылған құрылғылар</string>
     <string name="calendars_preferences">Параметрлер</string>
     <string name="calendars_name">Атау</string>
     <string name="calendars_rename">Атын өзгерту</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Әлі синхрондалмаған</string>
     <string name="calendars_sync_time">Соңғы синхрондау: %1$s</string>
     <string name="calendars_sync_transport">Серверге қосыла алмады</string>
-    <string name="calendars_device_title">Құрылғыны қосу</string>
+    <string name="calendars_device_title">Қосылған құрылғылар</string>
     <string name="calendars_device_name">Құрылғы атауы</string>
     <string name="calendars_device_create">Құру</string>
+    <string name="calendars_device_add">Құрылғы қосу</string>
     <string name="calendars_device_server">Сервер</string>
     <string name="calendars_device_address">Мекенжай</string>
     <string name="calendars_device_username">Пайдаланушы аты</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">Күнтізбеге рұқсат қажет</string>
     <string name="calendars_sync_authorization">Синхрондауды жалғастыру үшін қайта кіріңіз</string>
     <string name="calendars_device_warning">Құпия сөзді қазір көшіріңіз: оны қайта көрсету мүмкін емес.</string>
-    <string name="calendars_device_list">Қосылған құрылғылар</string>
     <string name="calendars_device_empty">Қосылған құрылғылар жоқ</string>
     <string name="calendars_device_used">Соңғы пайдаланылды %1$s</string>
     <string name="calendars_device_never">Ешқашан</string>

@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Kreye</string>
     <string name="calendars_subscribe_submit">Abone</string>
     <string name="calendars_subscribe_url">Adrès</string>
-    <string name="calendars_connect_device">Konekte yon aparèy</string>
+    <string name="calendars_connect_device">Aparèy konekte yo</string>
     <string name="calendars_preferences">Preferans</string>
     <string name="calendars_name">Non</string>
     <string name="calendars_rename">Rebatize</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Poko senkronize</string>
     <string name="calendars_sync_time">Dènye senkronizasyon: %1$s</string>
     <string name="calendars_sync_transport">Pa t kapab jwenn sèvè a</string>
-    <string name="calendars_device_title">Konekte yon aparèy</string>
+    <string name="calendars_device_title">Aparèy konekte yo</string>
     <string name="calendars_device_name">Non aparèy la</string>
     <string name="calendars_device_create">Kreye</string>
+    <string name="calendars_device_add">Ajoute yon aparèy</string>
     <string name="calendars_device_server">Sèvè</string>
     <string name="calendars_device_address">Adrès</string>
     <string name="calendars_device_username">Non itilizatè</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">Aksè a kalandriye nesesè</string>
     <string name="calendars_sync_authorization">Konekte ankò pou kontinye sinkronize</string>
     <string name="calendars_device_warning">Kopye modpas la kounye a: li pa ka parèt ankò.</string>
-    <string name="calendars_device_list">Aparèy konekte yo</string>
     <string name="calendars_device_empty">Pa gen okenn aparèy konekte</string>
     <string name="calendars_device_used">Dènye itilizasyon %1$s</string>
     <string name="calendars_device_never">janmen</string>

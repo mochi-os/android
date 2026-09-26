@@ -187,14 +187,14 @@
     <string name="people_welcome_body">იპოვეთ მეგობრები Mochi-ს მასშტაბით და დაუკავშირდით. მოსაწვევის გასაგზავნად შეეხეთ კონტაქტის დამატებას.</string>
     <string name="people_person_state_contact">კონტაქტებშია</string>
     <string name="people_device_create">შექმნა</string>
+    <string name="people_device_add">მოწყობილობის დამატება</string>
     <string name="people_device_server">სერვერი</string>
     <string name="people_device_username">მომხმარებლის სახელი</string>
     <string name="people_device_done">მზადაა</string>
-    <string name="people_device_list">მოწყობილობები</string>
     <string name="people_device_used">ბოლოს გამოყენებული %1$s</string>
     <string name="people_device_never">არასოდეს</string>
     <string name="people_sync_now">ახლავე სინქრონიზება</string>
-    <string name="people_device_title">მოწყობილობის დაკავშირება</string>
+    <string name="people_device_title">დაკავშირებული მოწყობილობები</string>
     <string name="people_device_name">მოწყობილობის სახელი</string>
     <string name="people_device_address">მისამართების წიგნის URL</string>
     <string name="people_device_password">პაროლი</string>

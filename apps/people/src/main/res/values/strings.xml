@@ -216,9 +216,10 @@
     <string name="people_profile_too_long">Profile is too long</string>
 
     <!-- Connect device (CardDAV) -->
-    <string name="people_device_title">Connect device</string>
+    <string name="people_device_title">Connected devices</string>
     <string name="people_device_name">Device name</string>
     <string name="people_device_create">Create</string>
+    <string name="people_device_add">Add device</string>
     <string name="people_device_server">Server</string>
     <string name="people_device_address">Address book URL</string>
     <string name="people_device_username">Username</string>
@@ -226,7 +227,6 @@
     <string name="people_device_copy">Copy %1$s</string>
     <string name="people_device_warning">Save this password now. It cannot be shown again.</string>
     <string name="people_device_done">Done</string>
-    <string name="people_device_list">Devices</string>
     <string name="people_device_empty">No devices connected.</string>
     <string name="people_device_created">Created %1$s</string>
     <string name="people_device_used">Last used %1$s</string>

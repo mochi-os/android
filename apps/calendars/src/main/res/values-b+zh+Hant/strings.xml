@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">建立</string>
     <string name="calendars_subscribe_submit">訂閱</string>
     <string name="calendars_subscribe_url">位址</string>
-    <string name="calendars_connect_device">連接裝置</string>
+    <string name="calendars_connect_device">已連接的裝置</string>
     <string name="calendars_preferences">偏好設定</string>
     <string name="calendars_name">名稱</string>
     <string name="calendars_rename">重新命名</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">尚未同步</string>
     <string name="calendars_sync_time">上次同步：%1$s</string>
     <string name="calendars_sync_transport">無法連線至伺服器</string>
-    <string name="calendars_device_title">連接裝置</string>
+    <string name="calendars_device_title">已連接的裝置</string>
     <string name="calendars_device_name">裝置名稱</string>
     <string name="calendars_device_create">建立</string>
+    <string name="calendars_device_add">新增裝置</string>
     <string name="calendars_device_server">伺服器</string>
     <string name="calendars_device_address">位址</string>
     <string name="calendars_device_username">使用者名稱</string>
@@ -118,7 +119,6 @@
     <string name="calendars_sync_permission">需要行事曆存取權限</string>
     <string name="calendars_sync_authorization">請重新登入以繼續同步</string>
     <string name="calendars_device_warning">請立即複製密碼：它無法再次顯示。</string>
-    <string name="calendars_device_list">已連接的裝置</string>
     <string name="calendars_device_empty">沒有已連接的裝置</string>
     <string name="calendars_device_used">上次使用 %1$s</string>
     <string name="calendars_device_never">永不</string>

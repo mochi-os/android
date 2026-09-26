@@ -187,14 +187,14 @@
     <string name="people_contact_phone">電話</string>
     <string name="people_contact_title">職銜</string>
     <string name="people_device_create">建立</string>
+    <string name="people_device_add">加入裝置</string>
     <string name="people_device_server">伺服器</string>
     <string name="people_device_username">使用者名稱</string>
     <string name="people_device_done">完成</string>
-    <string name="people_device_list">裝置</string>
     <string name="people_device_used">上次使用 %1$s</string>
     <string name="people_device_never">從未</string>
     <string name="people_sync_now">即刻同步</string>
-    <string name="people_device_title">連接裝置</string>
+    <string name="people_device_title">已連接嘅裝置</string>
     <string name="people_device_name">裝置名稱</string>
     <string name="people_device_address">通訊錄 URL</string>
     <string name="people_device_password">密碼</string>

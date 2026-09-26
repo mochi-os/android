@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Sukurti</string>
     <string name="calendars_subscribe_submit">Prenumeruoti</string>
     <string name="calendars_subscribe_url">Adresas</string>
-    <string name="calendars_connect_device">Prijungti įrenginį</string>
+    <string name="calendars_connect_device">Prijungti įrenginiai</string>
     <string name="calendars_preferences">Nuostatos</string>
     <string name="calendars_name">Pavadinimas</string>
     <string name="calendars_rename">Pervadinti</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Dar nesinchronizuota</string>
     <string name="calendars_sync_time">Paskutinė sinchronizacija: %1$s</string>
     <string name="calendars_sync_transport">Nepavyko pasiekti serverio</string>
-    <string name="calendars_device_title">Prijungti įrenginį</string>
+    <string name="calendars_device_title">Prijungti įrenginiai</string>
     <string name="calendars_device_name">Įrenginio pavadinimas</string>
     <string name="calendars_device_create">Sukurti</string>
+    <string name="calendars_device_add">Pridėti įrenginį</string>
     <string name="calendars_device_server">Serveris</string>
     <string name="calendars_device_address">Adresas</string>
     <string name="calendars_device_username">Vartotojo vardas</string>
@@ -122,7 +123,6 @@
     <string name="calendars_sync_permission">Reikia prieigos prie kalendoriaus</string>
     <string name="calendars_sync_authorization">Prisijunkite iš naujo, kad sinchronizavimas tęstųsi</string>
     <string name="calendars_device_warning">Nukopijuokite slaptažodį dabar: jo nebus galima parodyti dar kartą.</string>
-    <string name="calendars_device_list">Prijungti įrenginiai</string>
     <string name="calendars_device_empty">Nėra prijungtų įrenginių</string>
     <string name="calendars_device_used">Paskutinį kartą naudota %1$s</string>
     <string name="calendars_device_never">niekada</string>

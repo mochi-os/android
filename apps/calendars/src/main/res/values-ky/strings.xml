@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Түзүү</string>
     <string name="calendars_subscribe_submit">Жазылуу</string>
     <string name="calendars_subscribe_url">Дарек</string>
-    <string name="calendars_connect_device">Түзмөк туташтыруу</string>
+    <string name="calendars_connect_device">Туташтырылган түзмөктөр</string>
     <string name="calendars_preferences">Жөндөөлөр</string>
     <string name="calendars_name">Аты</string>
     <string name="calendars_rename">Атын өзгөртүү</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Азырынча синхрондоштурула элек</string>
     <string name="calendars_sync_time">Акыркы синхрондоо: %1$s</string>
     <string name="calendars_sync_transport">Серверге жетүү мүмкүн болбоду</string>
-    <string name="calendars_device_title">Түзмөк туташтыруу</string>
+    <string name="calendars_device_title">Туташтырылган түзмөктөр</string>
     <string name="calendars_device_name">Түзмөктүн аты</string>
     <string name="calendars_device_create">Түзүү</string>
+    <string name="calendars_device_add">Түзмөк кошуу</string>
     <string name="calendars_device_server">Сервер</string>
     <string name="calendars_device_address">Дарек</string>
     <string name="calendars_device_username">Колдонуучунун аты</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">Календарга мүмкүнчүлүк керек</string>
     <string name="calendars_sync_authorization">Шайкештирүүнү улантуу үчүн кайра кириңиз</string>
     <string name="calendars_device_warning">Сырсөздү азыр көчүрүп алыңыз: аны кайра көрсөтүү мүмкүн эмес.</string>
-    <string name="calendars_device_list">Туташтырылган түзмөктөр</string>
     <string name="calendars_device_empty">Туташтырылган түзмөктөр жок</string>
     <string name="calendars_device_used">Акыркы колдонуу %1$s</string>
     <string name="calendars_device_never">Эч качан</string>

@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Yenza</string>
     <string name="calendars_subscribe_submit">Rhuma</string>
     <string name="calendars_subscribe_url">Idilesi</string>
-    <string name="calendars_connect_device">Qhagamshela isixhobo</string>
+    <string name="calendars_connect_device">Izixhobo ezidibeneyo</string>
     <string name="calendars_preferences">Izinto ozithandayo</string>
     <string name="calendars_name">Igama</string>
     <string name="calendars_rename">Guqula igama</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Akukabikho ungqamaniso</string>
     <string name="calendars_sync_time">Ungqamaniso lokugqibela: %1$s</string>
     <string name="calendars_sync_transport">Akukwazekanga ukufikelela kwiseva</string>
-    <string name="calendars_device_title">Qhagamshela isixhobo</string>
+    <string name="calendars_device_title">Izixhobo ezidibeneyo</string>
     <string name="calendars_device_name">Igama lesixhobo</string>
     <string name="calendars_device_create">Yenza</string>
+    <string name="calendars_device_add">Yongeza isixhobo</string>
     <string name="calendars_device_server">Iseva</string>
     <string name="calendars_device_address">Idilesi</string>
     <string name="calendars_device_username">Igama lomsebenzisi</string>
@@ -112,7 +113,6 @@
     <string name="calendars_sync_permission">Kufuneka ufikelelo kwikhalenda</string>
     <string name="calendars_sync_authorization">Ngena kwakhona ukuze uqhubeke ukungqamanisa</string>
     <string name="calendars_device_warning">Khuphela iphasiwedi ngoku: ayinakuboniswa kwakhona.</string>
-    <string name="calendars_device_list">Izixhobo ezidibeneyo</string>
     <string name="calendars_device_empty">Akukho zixhobo zidibeneyo</string>
     <string name="calendars_device_used">yasetyenziswa okokugqibela %1$s</string>
     <string name="calendars_device_never">akukho</string>

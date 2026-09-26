@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Gumawa</string>
     <string name="calendars_subscribe_submit">Mag-subscribe</string>
     <string name="calendars_subscribe_url">Adres</string>
-    <string name="calendars_connect_device">Ikonekta ang device</string>
+    <string name="calendars_connect_device">Mga nakakonektang device</string>
     <string name="calendars_preferences">Mga kagustuhan</string>
     <string name="calendars_name">Pangalan</string>
     <string name="calendars_rename">Palitan ang pangalan</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Hindi pa na-sync</string>
     <string name="calendars_sync_time">Huling na-sync %1$s</string>
     <string name="calendars_sync_transport">Hindi maabot ang server</string>
-    <string name="calendars_device_title">Ikonekta ang device</string>
+    <string name="calendars_device_title">Mga nakakonektang device</string>
     <string name="calendars_device_name">Pangalan ng device</string>
     <string name="calendars_device_create">Gumawa</string>
+    <string name="calendars_device_add">Magdagdag ng device</string>
     <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Adres</string>
     <string name="calendars_device_username">Username</string>
@@ -112,7 +113,6 @@
     <string name="calendars_sync_permission">Kailangan ng access sa kalendaryo</string>
     <string name="calendars_sync_authorization">Mag-sign in ulit para magpatuloy ang pag-sync</string>
     <string name="calendars_device_warning">Kopyahin ang password ngayon: hindi na ito maipapakita ulit.</string>
-    <string name="calendars_device_list">Mga nakakonektang device</string>
     <string name="calendars_device_empty">Walang nakakonektang device</string>
     <string name="calendars_device_used">huling ginamit %1$s</string>
     <string name="calendars_device_never">hindi kailanman</string>

@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Találjon ismerősöket a Mochi egészén, és lépjen velük kapcsolatba. Meghívó küldéséhez koppintson a Névjegy hozzáadása lehetőségre.</string>
     <string name="people_person_state_contact">A névjegyek között</string>
     <string name="people_device_create">Létrehozás</string>
+    <string name="people_device_add">Eszköz hozzáadása</string>
     <string name="people_device_server">Kiszolgáló</string>
     <string name="people_device_username">Felhasználónév</string>
     <string name="people_device_done">Kész</string>
-    <string name="people_device_list">Eszközök</string>
     <string name="people_device_used">Utoljára használva %1$s</string>
     <string name="people_device_never">Soha</string>
     <string name="people_sync_now">Szinkronizálás most</string>
-    <string name="people_device_title">Eszköz csatlakoztatása</string>
+    <string name="people_device_title">Csatlakoztatott eszközök</string>
     <string name="people_device_name">Eszköz neve</string>
     <string name="people_device_address">Címjegyzék URL-je</string>
     <string name="people_device_password">Jelszó</string>

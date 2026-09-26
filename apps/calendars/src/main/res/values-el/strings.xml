@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Δημιουργία</string>
     <string name="calendars_subscribe_submit">Εγγραφή</string>
     <string name="calendars_subscribe_url">Διεύθυνση</string>
-    <string name="calendars_connect_device">Σύνδεση συσκευής</string>
+    <string name="calendars_connect_device">Συνδεδεμένες συσκευές</string>
     <string name="calendars_preferences">Προτιμήσεις</string>
     <string name="calendars_name">Όνομα</string>
     <string name="calendars_rename">Μετονομασία</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Δεν έχει συγχρονιστεί ακόμα</string>
     <string name="calendars_sync_time">Τελευταίος συγχρονισμός %1$s</string>
     <string name="calendars_sync_transport">Δεν ήταν δυνατή η σύνδεση με τον διακομιστή</string>
-    <string name="calendars_device_title">Σύνδεση συσκευής</string>
+    <string name="calendars_device_title">Συνδεδεμένες συσκευές</string>
     <string name="calendars_device_name">Όνομα συσκευής</string>
     <string name="calendars_device_create">Δημιουργία</string>
+    <string name="calendars_device_add">Προσθήκη συσκευής</string>
     <string name="calendars_device_server">Διακομιστής</string>
     <string name="calendars_device_address">Διεύθυνση</string>
     <string name="calendars_device_username">Όνομα χρήστη</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">Απαιτείται πρόσβαση στο ημερολόγιο</string>
     <string name="calendars_sync_authorization">Συνδεθείτε ξανά για να συνεχιστεί ο συγχρονισμός</string>
     <string name="calendars_device_warning">Αντιγράψτε τον κωδικό πρόσβασης τώρα: δεν μπορεί να εμφανιστεί ξανά.</string>
-    <string name="calendars_device_list">Συνδεδεμένες συσκευές</string>
     <string name="calendars_device_empty">Δεν υπάρχουν συνδεδεμένες συσκευές</string>
     <string name="calendars_device_used">τελευταία χρήση %1$s</string>
     <string name="calendars_device_never">ποτέ</string>

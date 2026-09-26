@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Mochi genelinde arkadaşlar bulun ve bağlantı kurun. Davet göndermek için Kişi ekle öğesine dokunun.</string>
     <string name="people_person_state_contact">Kişilerde</string>
     <string name="people_device_create">Oluştur</string>
+    <string name="people_device_add">Cihaz ekle</string>
     <string name="people_device_server">Sunucu</string>
     <string name="people_device_username">Kullanıcı adı</string>
     <string name="people_device_done">Tamamlandı</string>
-    <string name="people_device_list">Cihazlar</string>
     <string name="people_device_used">Son kullanım %1$s</string>
     <string name="people_device_never">Asla</string>
     <string name="people_sync_now">Şimdi senkronize et</string>
-    <string name="people_device_title">Cihaz bağla</string>
+    <string name="people_device_title">Bağlı cihazlar</string>
     <string name="people_device_name">Cihaz adı</string>
     <string name="people_device_address">Adres defteri URL\'si</string>
     <string name="people_device_password">Parola</string>

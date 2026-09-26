@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Dá</string>
     <string name="calendars_subscribe_submit">Forúkọsílẹ̀</string>
     <string name="calendars_subscribe_url">Àdírẹ́sì</string>
-    <string name="calendars_connect_device">So ẹ̀rọ kan pọ̀</string>
+    <string name="calendars_connect_device">Àwọn ẹ̀rọ tí a so pọ̀</string>
     <string name="calendars_preferences">Àwọn ààyò</string>
     <string name="calendars_name">Orúkọ</string>
     <string name="calendars_rename">Tún sọ orúkọ</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">A kò tíì ṣe àmúṣiṣẹ́pọ̀</string>
     <string name="calendars_sync_time">Àmúṣiṣẹ́pọ̀ tó kẹ́yìn: %1$s</string>
     <string name="calendars_sync_transport">Kò lè dé sí olùpín</string>
-    <string name="calendars_device_title">So ẹ̀rọ kan pọ̀</string>
+    <string name="calendars_device_title">Àwọn ẹ̀rọ tí a so pọ̀</string>
     <string name="calendars_device_name">Orúkọ ẹ̀rọ</string>
     <string name="calendars_device_create">Dá</string>
+    <string name="calendars_device_add">Fi ẹ̀rọ kan kún</string>
     <string name="calendars_device_server">Sáfà</string>
     <string name="calendars_device_address">Àdírẹ́sì</string>
     <string name="calendars_device_username">Orúkọ olùmúlò</string>
@@ -112,7 +113,6 @@
     <string name="calendars_sync_permission">A nílò ìwọlé sí kàlẹ́ńdà</string>
     <string name="calendars_sync_authorization">Wọlé lẹ́ẹ̀kan sí i láti máa bá àmúṣiṣẹ́pọ̀ lọ</string>
     <string name="calendars_device_warning">Ṣe àdàkọ ọ̀rọ̀ ìgbaniwọlé báyìí: kò ní farahàn mọ́.</string>
-    <string name="calendars_device_list">Àwọn ẹ̀rọ tí a so pọ̀</string>
     <string name="calendars_device_empty">Kò sí ẹ̀rọ tí a so pọ̀</string>
     <string name="calendars_device_used">lò kẹ́yìn %1$s</string>
     <string name="calendars_device_never">kò ṣẹlẹ̀ rí</string>

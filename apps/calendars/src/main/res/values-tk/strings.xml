@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Döretmek</string>
     <string name="calendars_subscribe_submit">Abuna ýaz</string>
     <string name="calendars_subscribe_url">Salgy</string>
-    <string name="calendars_connect_device">Enjam birikdir</string>
+    <string name="calendars_connect_device">Birikdirilen enjamlar</string>
     <string name="calendars_preferences">Saýlamalar</string>
     <string name="calendars_name">At</string>
     <string name="calendars_rename">Adyny üýtget</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Entek sinhronlaşdyrylmady</string>
     <string name="calendars_sync_time">Soňky sinhronlaşdyrma: %1$s</string>
     <string name="calendars_sync_transport">Servere ýetip bolmady</string>
-    <string name="calendars_device_title">Enjam birikdir</string>
+    <string name="calendars_device_title">Birikdirilen enjamlar</string>
     <string name="calendars_device_name">Enjamyň ady</string>
     <string name="calendars_device_create">Döretmek</string>
+    <string name="calendars_device_add">Enjam goş</string>
     <string name="calendars_device_server">Serwer</string>
     <string name="calendars_device_address">Salgy</string>
     <string name="calendars_device_username">Ulanyjy ady</string>
@@ -112,7 +113,6 @@
     <string name="calendars_sync_permission">Kalendara elýeterlilik gerek</string>
     <string name="calendars_sync_authorization">Sinhronlamany dowam etdirmek üçin gaýtadan giriň</string>
     <string name="calendars_device_warning">Paroly häzir göçüriň: gaýtadan görkezilmez.</string>
-    <string name="calendars_device_list">Birikdirilen enjamlar</string>
     <string name="calendars_device_empty">Birikdirilen enjam ýok</string>
     <string name="calendars_device_used">iň soňky ulanylan %1$s</string>
     <string name="calendars_device_never">hiç haçan</string>

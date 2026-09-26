@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Mochi ukana masinaka thaqhama ukat chikachasima. Jaqi uchaña ukar limt\'ma mä jawsäwi apayañataki.</string>
     <string name="people_person_state_contact">Contactonakankiwa</string>
     <string name="people_device_create">Luraña</string>
+    <string name="people_device_add">Mä dispositivo yapxataña</string>
     <string name="people_device_server">Servidor</string>
     <string name="people_device_username">Apnaqiri suti</string>
     <string name="people_device_done">Tukuyata</string>
-    <string name="people_device_list">Dispositivonaka</string>
     <string name="people_device_used">Qhipa apnaqata %1$s</string>
     <string name="people_device_never">Janipuni</string>
     <string name="people_sync_now">Jichha sincronizaña</string>
-    <string name="people_device_title">Mä dispositivo chikanchaña</string>
+    <string name="people_device_title">Chinjata dispositivonaka</string>
     <string name="people_device_name">Dispositivon sutipa</string>
     <string name="people_device_address">Chiqa libru URL</string>
     <string name="people_device_password">Contraseña</string>

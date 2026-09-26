@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Uumi</string>
     <string name="calendars_subscribe_submit">Galaa\'i</string>
     <string name="calendars_subscribe_url">Teessoo</string>
-    <string name="calendars_connect_device">Meeshaa walqabsiisi</string>
+    <string name="calendars_connect_device">Meeshaalee walqabsiifaman</string>
     <string name="calendars_preferences">Filannoowwan</string>
     <string name="calendars_name">Maqaa</string>
     <string name="calendars_rename">Maqaa jijjiiri</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Ammallee hin walsimsiifamne</string>
     <string name="calendars_sync_time">Yeroo dhumaa walsimsiifame: %1$s</string>
     <string name="calendars_sync_transport">Sarvarii bira gahuu hin dandeenye</string>
-    <string name="calendars_device_title">Meeshaa walqabsiisi</string>
+    <string name="calendars_device_title">Meeshaalee walqabsiifaman</string>
     <string name="calendars_device_name">Maqaa meeshaa</string>
     <string name="calendars_device_create">Uumi</string>
+    <string name="calendars_device_add">Meeshaa dabali</string>
     <string name="calendars_device_server">Sarvarii</string>
     <string name="calendars_device_address">Teessoo</string>
     <string name="calendars_device_username">Maqaa fayyadamaa</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">Qaqqabummaan kaalaandarii barbaachisaadha</string>
     <string name="calendars_sync_authorization">Wal simsiisuu itti fufuuf irra deebi\'ii seeni</string>
     <string name="calendars_device_warning">Jecha darbii amma garagalchi: lammata mul\'achuu hin danda\'u.</string>
-    <string name="calendars_device_list">Meeshaalee walqabsiifaman</string>
     <string name="calendars_device_empty">Meeshaan walqabsiifame hin jiru</string>
     <string name="calendars_device_used">Yeroo dhumaa fayyadamame %1$s</string>
     <string name="calendars_device_never">gonkumaa</string>

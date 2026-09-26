@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Creu</string>
     <string name="calendars_subscribe_submit">Tanysgrifio</string>
     <string name="calendars_subscribe_url">Cyfeiriad</string>
-    <string name="calendars_connect_device">Cysylltu dyfais</string>
+    <string name="calendars_connect_device">Dyfeisiau cysylltiedig</string>
     <string name="calendars_preferences">Dewisiadau</string>
     <string name="calendars_name">Enw</string>
     <string name="calendars_rename">Ailenwi</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Heb gysoni eto</string>
     <string name="calendars_sync_time">Cysonwyd ddiwethaf %1$s</string>
     <string name="calendars_sync_transport">Methu cyrraedd y gweinydd</string>
-    <string name="calendars_device_title">Cysylltu dyfais</string>
+    <string name="calendars_device_title">Dyfeisiau cysylltiedig</string>
     <string name="calendars_device_name">Enw\'r ddyfais</string>
     <string name="calendars_device_create">Creu</string>
+    <string name="calendars_device_add">Ychwanegu dyfais</string>
     <string name="calendars_device_server">Gweinydd</string>
     <string name="calendars_device_address">Cyfeiriad</string>
     <string name="calendars_device_username">Enw defnyddiwr</string>
@@ -128,7 +129,6 @@
     <string name="calendars_sync_permission">Mae angen mynediad at y calendr</string>
     <string name="calendars_sync_authorization">Mewngofnodwch eto i barhau i gydweddu</string>
     <string name="calendars_device_warning">Copïwch y cyfrinair nawr: ni ellir ei ddangos eto.</string>
-    <string name="calendars_device_list">Dyfeisiau cysylltiedig</string>
     <string name="calendars_device_empty">Dim dyfeisiau wedi\'u cysylltu</string>
     <string name="calendars_device_used">defnyddiwyd ddiwethaf %1$s</string>
     <string name="calendars_device_never">byth</string>

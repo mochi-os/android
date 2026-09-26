@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Kamariy</string>
     <string name="calendars_subscribe_submit">Suscribiy</string>
     <string name="calendars_subscribe_url">Dirección</string>
-    <string name="calendars_connect_device">Huk mañanata tinkichiy</string>
+    <string name="calendars_connect_device">Tinkisqa apaykachanakuna</string>
     <string name="calendars_preferences">Munaykuna</string>
     <string name="calendars_name">Sutin</string>
     <string name="calendars_rename">Huk sutin churay</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Manaraq tinkichisqachu</string>
     <string name="calendars_sync_time">Qhipa tinkichiy: %1$s</string>
     <string name="calendars_sync_transport">Servidorman mana chayayta atikunchu</string>
-    <string name="calendars_device_title">Huk mañanata tinkichiy</string>
+    <string name="calendars_device_title">Tinkisqa apaykachanakuna</string>
     <string name="calendars_device_name">Mañanapa sutin</string>
     <string name="calendars_device_create">Kamariy</string>
+    <string name="calendars_device_add">Huk mañanata yapay</string>
     <string name="calendars_device_server">Servidor</string>
     <string name="calendars_device_address">Dirección</string>
     <string name="calendars_device_username">Apaykachaq suti</string>
@@ -112,7 +113,6 @@
     <string name="calendars_sync_permission">Kalendaryuman yaykuy necesitakun</string>
     <string name="calendars_sync_authorization">Tinkichiyta qatinaykipaq yapamanta yaykuy</string>
     <string name="calendars_device_warning">Yaykuna rimayta kunan kopyay: manaña qhawachikunqachu.</string>
-    <string name="calendars_device_list">Tinkisqa apaykachanakuna</string>
     <string name="calendars_device_empty">Mana ima apaykachana tinkisqachu</string>
     <string name="calendars_device_used">qhipa kutin llamk\'achisqa %1$s</string>
     <string name="calendars_device_never">mana hayk\'appas</string>

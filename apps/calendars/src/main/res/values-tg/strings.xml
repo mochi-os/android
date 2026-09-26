@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Эҷод кардан</string>
     <string name="calendars_subscribe_submit">Обуна шудан</string>
     <string name="calendars_subscribe_url">Суроға</string>
-    <string name="calendars_connect_device">Пайваст кардани дастгоҳ</string>
+    <string name="calendars_connect_device">Дастгоҳҳои пайвастшуда</string>
     <string name="calendars_preferences">Афзалиятҳо</string>
     <string name="calendars_name">Ном</string>
     <string name="calendars_rename">Тағйири ном</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Ҳанӯз ҳамоҳанг нашудааст</string>
     <string name="calendars_sync_time">Ҳамоҳангсозии охирин: %1$s</string>
     <string name="calendars_sync_transport">Ба сервер пайваст шуда нашуд</string>
-    <string name="calendars_device_title">Пайваст кардани дастгоҳ</string>
+    <string name="calendars_device_title">Дастгоҳҳои пайвастшуда</string>
     <string name="calendars_device_name">Номи дастгоҳ</string>
     <string name="calendars_device_create">Эҷод кардан</string>
+    <string name="calendars_device_add">Иловаи дастгоҳ</string>
     <string name="calendars_device_server">Сервер</string>
     <string name="calendars_device_address">Суроға</string>
     <string name="calendars_device_username">Номи корбар</string>
@@ -112,7 +113,6 @@
     <string name="calendars_sync_permission">Дастрасӣ ба тақвим лозим аст</string>
     <string name="calendars_sync_authorization">Барои идомаи ҳамоҳангсозӣ дубора ворид шавед</string>
     <string name="calendars_device_warning">Ниҳонвожаро ҳозир нусха кунед: он дигар нишон дода намешавад.</string>
-    <string name="calendars_device_list">Дастгоҳҳои пайвастшуда</string>
     <string name="calendars_device_empty">Ягон дастгоҳ пайваст нест</string>
     <string name="calendars_device_used">бори охир истифода шуд %1$s</string>
     <string name="calendars_device_never">ҳеҷ гоҳ</string>

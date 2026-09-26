@@ -189,14 +189,14 @@
     <string name="people_welcome_body">Poiščite prijatelje po vsem Mochi in se povežite. Za pošiljanje povabila se dotaknite Dodaj stik.</string>
     <string name="people_person_state_contact">Med stiki</string>
     <string name="people_device_create">Ustvari</string>
+    <string name="people_device_add">Dodaj napravo</string>
     <string name="people_device_server">Strežnik</string>
     <string name="people_device_username">Uporabniško ime</string>
     <string name="people_device_done">Končano</string>
-    <string name="people_device_list">Naprave</string>
     <string name="people_device_used">Nazadnje uporabljeno %1$s</string>
     <string name="people_device_never">Nikoli</string>
     <string name="people_sync_now">Sinhroniziraj zdaj</string>
-    <string name="people_device_title">Poveži napravo</string>
+    <string name="people_device_title">Povezane naprave</string>
     <string name="people_device_name">Ime naprave</string>
     <string name="people_device_address">URL imenika</string>
     <string name="people_device_password">Geslo</string>

@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">建立</string>
     <string name="calendars_subscribe_submit">訂閱</string>
     <string name="calendars_subscribe_url">地址</string>
-    <string name="calendars_connect_device">連接裝置</string>
+    <string name="calendars_connect_device">已連接嘅裝置</string>
     <string name="calendars_preferences">偏好設定</string>
     <string name="calendars_name">名稱</string>
     <string name="calendars_rename">重新命名</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">未同步過</string>
     <string name="calendars_sync_time">上次同步 %1$s</string>
     <string name="calendars_sync_transport">連接唔到伺服器</string>
-    <string name="calendars_device_title">連接裝置</string>
+    <string name="calendars_device_title">已連接嘅裝置</string>
     <string name="calendars_device_name">裝置名稱</string>
     <string name="calendars_device_create">建立</string>
+    <string name="calendars_device_add">加入裝置</string>
     <string name="calendars_device_server">伺服器</string>
     <string name="calendars_device_address">地址</string>
     <string name="calendars_device_username">使用者名稱</string>
@@ -112,7 +113,6 @@
     <string name="calendars_sync_permission">需要日曆存取權</string>
     <string name="calendars_sync_authorization">重新登入先可以繼續同步</string>
     <string name="calendars_device_warning">即刻複製密碼：唔會再顯示。</string>
-    <string name="calendars_device_list">已連接嘅裝置</string>
     <string name="calendars_device_empty">未有裝置連接</string>
     <string name="calendars_device_used">最後使用 %1$s</string>
     <string name="calendars_device_never">從未</string>

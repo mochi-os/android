@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Գտեք ընկերների Mochi-ի ողջ տարածքում և կապ հաստատեք։ Հրավեր ուղարկելու համար հպեք Ավելացնել կոնտակտ։</string>
     <string name="people_person_state_contact">Կոնտակտներում</string>
     <string name="people_device_create">Ստեղծել</string>
+    <string name="people_device_add">Ավելացնել սարք</string>
     <string name="people_device_server">Սերվեր</string>
     <string name="people_device_username">Օգտանուն</string>
     <string name="people_device_done">Կատարված է</string>
-    <string name="people_device_list">Սարքեր</string>
     <string name="people_device_used">Վերջին օգտագործումը %1$s</string>
     <string name="people_device_never">Երբեք</string>
     <string name="people_sync_now">Համաժամանակեցնել հիմա</string>
-    <string name="people_device_title">Միացնել սարք</string>
+    <string name="people_device_title">Միացված սարքեր</string>
     <string name="people_device_name">Սարքի անունը</string>
     <string name="people_device_address">Հասցեագրքի URL</string>
     <string name="people_device_password">Գաղտնաբառ</string>

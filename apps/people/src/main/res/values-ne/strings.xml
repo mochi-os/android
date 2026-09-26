@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Mochi भरि साथीहरू खोज्नुहोस् र जोडिनुहोस्। निमन्त्रणा पठाउन सम्पर्क थप्नुहोस् थिच्नुहोस्।</string>
     <string name="people_person_state_contact">सम्पर्कहरूमा</string>
     <string name="people_device_create">सिर्जना गर्नुहोस्</string>
+    <string name="people_device_add">उपकरण थप्नुहोस्</string>
     <string name="people_device_server">सर्भर</string>
     <string name="people_device_username">प्रयोगकर्ता नाम</string>
     <string name="people_device_done">सम्पन्न</string>
-    <string name="people_device_list">उपकरणहरू</string>
     <string name="people_device_used">अन्तिम पटक प्रयोग गरियो %1$s</string>
     <string name="people_device_never">कहिल्यै होइन</string>
     <string name="people_sync_now">अहिले सिङ्क गर्नुहोस्</string>
-    <string name="people_device_title">उपकरण जडान गर्नुहोस्</string>
+    <string name="people_device_title">जडान गरिएका उपकरणहरू</string>
     <string name="people_device_name">उपकरणको नाम</string>
     <string name="people_device_address">ठेगाना पुस्तिकाको URL</string>
     <string name="people_device_password">पासवर्ड</string>

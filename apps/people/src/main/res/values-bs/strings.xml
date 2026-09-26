@@ -188,14 +188,14 @@
     <string name="people_welcome_body">Pronađite prijatelje širom Mochija i povežite se. Dodirnite Dodaj kontakt da pošaljete pozivnicu.</string>
     <string name="people_person_state_contact">U kontaktima</string>
     <string name="people_device_create">Kreiraj</string>
+    <string name="people_device_add">Dodaj uređaj</string>
     <string name="people_device_server">Server</string>
     <string name="people_device_username">Korisničko ime</string>
     <string name="people_device_done">Gotovo</string>
-    <string name="people_device_list">Uređaji</string>
     <string name="people_device_used">Zadnji put korišteno %1$s</string>
     <string name="people_device_never">Nikad</string>
     <string name="people_sync_now">Sinhronizuj sada</string>
-    <string name="people_device_title">Poveži uređaj</string>
+    <string name="people_device_title">Povezani uređaji</string>
     <string name="people_device_name">Naziv uređaja</string>
     <string name="people_device_address">URL adresara</string>
     <string name="people_device_password">Lozinka</string>

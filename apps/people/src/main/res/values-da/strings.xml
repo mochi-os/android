@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Find venner på tværs af Mochi, og kom i kontakt. Tryk på Tilføj kontakt for at sende en invitation.</string>
     <string name="people_person_state_contact">I kontakter</string>
     <string name="people_device_create">Opret</string>
+    <string name="people_device_add">Tilføj en enhed</string>
     <string name="people_device_server">Server</string>
     <string name="people_device_username">Brugernavn</string>
     <string name="people_device_done">Færdig</string>
-    <string name="people_device_list">Enheder</string>
     <string name="people_device_used">Sidst brugt %1$s</string>
     <string name="people_device_never">Aldrig</string>
     <string name="people_sync_now">Synkronisér nu</string>
-    <string name="people_device_title">Tilslut en enhed</string>
+    <string name="people_device_title">Tilsluttede enheder</string>
     <string name="people_device_name">Enhedsnavn</string>
     <string name="people_device_address">Adressebogens URL</string>
     <string name="people_device_password">Adgangskode</string>

@@ -187,14 +187,14 @@
     <string name="people_welcome_body">געפֿינט פֿרײַנד איבער Mochi און פֿאַרבינדט זיך. דריקט צולייגן קאָנטאַקט צו שיקן אַן אײַנלאַדונג.</string>
     <string name="people_person_state_contact">אין די קאָנטאַקטן</string>
     <string name="people_device_create">באַשאַפֿן</string>
+    <string name="people_device_add">צולייגן אַ מיטל</string>
     <string name="people_device_server">סערווער</string>
     <string name="people_device_username">באַניצער־נאָמען</string>
     <string name="people_device_done">געטאָן</string>
-    <string name="people_device_list">מיטלען</string>
     <string name="people_device_used">לעצטע מאָל גענוצט %1$s</string>
     <string name="people_device_never">קיינמאָל</string>
     <string name="people_sync_now">סינכראָניזיר איצט</string>
-    <string name="people_device_title">פֿאַרבינדן אַ מיטל</string>
+    <string name="people_device_title">פֿאַרבונדענע אַפּאַראַטן</string>
     <string name="people_device_name">נאָמען פֿון מיטל</string>
     <string name="people_device_address">URL פֿון אַדרעס־בוך</string>
     <string name="people_device_password">פּאַראָל</string>

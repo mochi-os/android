@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">ರಚಿಸಿ</string>
     <string name="calendars_subscribe_submit">ಚಂದಾದಾರರಾಗಿ</string>
     <string name="calendars_subscribe_url">ವಿಳಾಸ</string>
-    <string name="calendars_connect_device">ಸಾಧನವನ್ನು ಸಂಪರ್ಕಿಸಿ</string>
+    <string name="calendars_connect_device">ಸಂಪರ್ಕಗೊಂಡ ಸಾಧನಗಳು</string>
     <string name="calendars_preferences">ಆದ್ಯತೆಗಳು</string>
     <string name="calendars_name">ಹೆಸರು</string>
     <string name="calendars_rename">ಮರುಹೆಸರಿಸಿ</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">ಇನ್ನೂ ಸಿಂಕ್ ಮಾಡಿಲ್ಲ</string>
     <string name="calendars_sync_time">ಕೊನೆಯ ಸಿಂಕ್: %1$s</string>
     <string name="calendars_sync_transport">ಸರ್ವರ್ ಅನ್ನು ತಲುಪಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
-    <string name="calendars_device_title">ಸಾಧನವನ್ನು ಸಂಪರ್ಕಿಸಿ</string>
+    <string name="calendars_device_title">ಸಂಪರ್ಕಗೊಂಡ ಸಾಧನಗಳು</string>
     <string name="calendars_device_name">ಸಾಧನದ ಹೆಸರು</string>
     <string name="calendars_device_create">ರಚಿಸಿ</string>
+    <string name="calendars_device_add">ಸಾಧನವನ್ನು ಸೇರಿಸಿ</string>
     <string name="calendars_device_server">ಸರ್ವರ್</string>
     <string name="calendars_device_address">ವಿಳಾಸ</string>
     <string name="calendars_device_username">ಬಳಕೆದಾರಹೆಸರು</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">ಕ್ಯಾಲೆಂಡರ್ ಪ್ರವೇಶ ಅಗತ್ಯವಿದೆ</string>
     <string name="calendars_sync_authorization">ಸಿಂಕ್ ಮುಂದುವರಿಸಲು ಮತ್ತೆ ಸೈನ್ ಇನ್ ಮಾಡಿ</string>
     <string name="calendars_device_warning">ಪಾಸ್‌ವರ್ಡ್ ಅನ್ನು ಈಗಲೇ ನಕಲಿಸಿ: ಇದನ್ನು ಮತ್ತೆ ತೋರಿಸಲಾಗುವುದಿಲ್ಲ.</string>
-    <string name="calendars_device_list">ಸಂಪರ್ಕಗೊಂಡ ಸಾಧನಗಳು</string>
     <string name="calendars_device_empty">ಯಾವುದೇ ಸಾಧನಗಳು ಸಂಪರ್ಕಗೊಂಡಿಲ್ಲ</string>
     <string name="calendars_device_used">ಕೊನೆಯದಾಗಿ ಬಳಸಲಾಗಿದೆ %1$s</string>
     <string name="calendars_device_never">ಎಂದಿಗೂ ಇಲ್ಲ</string>

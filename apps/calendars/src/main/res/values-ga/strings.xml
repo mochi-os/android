@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Cruthaigh</string>
     <string name="calendars_subscribe_submit">Liostáil</string>
     <string name="calendars_subscribe_url">Seoladh</string>
-    <string name="calendars_connect_device">Ceangail gléas</string>
+    <string name="calendars_connect_device">Gléasanna ceangailte</string>
     <string name="calendars_preferences">Sainroghanna</string>
     <string name="calendars_name">Ainm</string>
     <string name="calendars_rename">Athainmnigh</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Níor sioncrónaíodh fós</string>
     <string name="calendars_sync_time">Sioncrónú deireanach: %1$s</string>
     <string name="calendars_sync_transport">Níorbh fhéidir teagmháil a dhéanamh leis an bhfreastalaí</string>
-    <string name="calendars_device_title">Ceangail gléas</string>
+    <string name="calendars_device_title">Gléasanna ceangailte</string>
     <string name="calendars_device_name">Ainm an ghléis</string>
     <string name="calendars_device_create">Cruthaigh</string>
+    <string name="calendars_device_add">Cuir gléas leis</string>
     <string name="calendars_device_server">Freastalaí</string>
     <string name="calendars_device_address">Seoladh</string>
     <string name="calendars_device_username">Ainm úsáideora</string>
@@ -126,7 +127,6 @@
     <string name="calendars_sync_permission">Tá rochtain ar an bhféilire ag teastáil</string>
     <string name="calendars_sync_authorization">Sínigh isteach arís chun leanúint ag sioncronú</string>
     <string name="calendars_device_warning">Cóipeáil an pasfhocal anois: ní féidir é a thaispeáint arís.</string>
-    <string name="calendars_device_list">Gléasanna ceangailte</string>
     <string name="calendars_device_empty">Níl aon ghléas ceangailte</string>
     <string name="calendars_device_used">úsáidte go deireanach %1$s</string>
     <string name="calendars_device_never">riamh</string>

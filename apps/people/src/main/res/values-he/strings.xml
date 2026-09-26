@@ -188,14 +188,14 @@
     <string name="people_welcome_body">מצאו חברים בכל Mochi והתחברו אליהם. הקישו על הוספת איש קשר כדי לשלוח הזמנה.</string>
     <string name="people_person_state_contact">באנשי הקשר</string>
     <string name="people_device_create">צור</string>
+    <string name="people_device_add">הוספת מכשיר</string>
     <string name="people_device_server">שרת</string>
     <string name="people_device_username">שם משתמש</string>
     <string name="people_device_done">בוצע</string>
-    <string name="people_device_list">מכשירים</string>
     <string name="people_device_used">שימוש אחרון %1$s</string>
     <string name="people_device_never">אף פעם</string>
     <string name="people_sync_now">סנכרן עכשיו</string>
-    <string name="people_device_title">חיבור מכשיר</string>
+    <string name="people_device_title">מכשירים מחוברים</string>
     <string name="people_device_name">שם המכשיר</string>
     <string name="people_device_address">כתובת URL של פנקס הכתובות</string>
     <string name="people_device_password">סיסמה</string>

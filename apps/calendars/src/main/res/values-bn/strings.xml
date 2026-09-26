@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">তৈরি করুন</string>
     <string name="calendars_subscribe_submit">সাবস্ক্রাইব করুন</string>
     <string name="calendars_subscribe_url">ঠিকানা</string>
-    <string name="calendars_connect_device">একটি ডিভাইস সংযুক্ত করুন</string>
+    <string name="calendars_connect_device">সংযুক্ত ডিভাইস</string>
     <string name="calendars_preferences">পছন্দসমূহ</string>
     <string name="calendars_name">নাম</string>
     <string name="calendars_rename">পুনঃনামকরণ করুন</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">এখনও সিঙ্ক হয়নি</string>
     <string name="calendars_sync_time">শেষ সিঙ্ক %1$s</string>
     <string name="calendars_sync_transport">সার্ভারে পৌঁছানো যায়নি</string>
-    <string name="calendars_device_title">একটি ডিভাইস সংযুক্ত করুন</string>
+    <string name="calendars_device_title">সংযুক্ত ডিভাইস</string>
     <string name="calendars_device_name">ডিভাইসের নাম</string>
     <string name="calendars_device_create">তৈরি করুন</string>
+    <string name="calendars_device_add">ডিভাইস যোগ করুন</string>
     <string name="calendars_device_server">সার্ভার</string>
     <string name="calendars_device_address">ঠিকানা</string>
     <string name="calendars_device_username">ব্যবহারকারীর নাম</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">ক্যালেন্ডার অ্যাক্সেস প্রয়োজন</string>
     <string name="calendars_sync_authorization">সিঙ্ক চালু রাখতে আবার সাইন ইন করুন</string>
     <string name="calendars_device_warning">পাসওয়ার্ডটি এখনই কপি করুন: এটি আর দেখানো যাবে না।</string>
-    <string name="calendars_device_list">সংযুক্ত ডিভাইস</string>
     <string name="calendars_device_empty">কোনো ডিভাইস সংযুক্ত নেই</string>
     <string name="calendars_device_used">শেষ ব্যবহার %1$s</string>
     <string name="calendars_device_never">কখনই না</string>

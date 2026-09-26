@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">באַשאַפֿן</string>
     <string name="calendars_subscribe_submit">אַבאָנירן</string>
     <string name="calendars_subscribe_url">אַדרעס</string>
-    <string name="calendars_connect_device">פֿאַרבינדן אַ מיטל</string>
+    <string name="calendars_connect_device">פֿאַרבונדענע אַפּאַראַטן</string>
     <string name="calendars_preferences">פֿאָרצוגן</string>
     <string name="calendars_name">נאָמען</string>
     <string name="calendars_rename">איבערטויפֿן</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">נאָך ניט סינכראָניזירט</string>
     <string name="calendars_sync_time">לעצטע סינכראָניזאַציע: %1$s</string>
     <string name="calendars_sync_transport">האָט ניט געקענט דערגרייכן דעם סערווער</string>
-    <string name="calendars_device_title">פֿאַרבינדן אַ מיטל</string>
+    <string name="calendars_device_title">פֿאַרבונדענע אַפּאַראַטן</string>
     <string name="calendars_device_name">נאָמען פֿון מיטל</string>
     <string name="calendars_device_create">באַשאַפֿן</string>
+    <string name="calendars_device_add">צולייגן אַ מיטל</string>
     <string name="calendars_device_server">סערווער</string>
     <string name="calendars_device_address">אַדרעס</string>
     <string name="calendars_device_username">באַניצער־נאָמען</string>
@@ -112,7 +113,6 @@
     <string name="calendars_sync_permission">מען דאַרף צוטריט צום קאַלענדאַר</string>
     <string name="calendars_sync_authorization">לאָגירט זיך ווידער אַרײַן צו האַלטן סינכראָניזירן</string>
     <string name="calendars_device_warning">קאָפּירט דעם פּאַראָל איצט: מען קען אים ניט ווידער ווײַזן.</string>
-    <string name="calendars_device_list">פֿאַרבונדענע אַפּאַראַטן</string>
     <string name="calendars_device_empty">קיין אַפּאַראַטן ניט פֿאַרבונדן</string>
     <string name="calendars_device_used">לעצט געניצט %1$s</string>
     <string name="calendars_device_never">קיין מאָל</string>

@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Tafuta marafiki kote kwenye Mochi na uungane nao. Gusa Ongeza anwani ili kutuma mwaliko.</string>
     <string name="people_person_state_contact">Katika anwani</string>
     <string name="people_device_create">Unda</string>
+    <string name="people_device_add">Ongeza kifaa</string>
     <string name="people_device_server">Seva</string>
     <string name="people_device_username">Jina la mtumiaji</string>
     <string name="people_device_done">Imekamilika</string>
-    <string name="people_device_list">Vifaa</string>
     <string name="people_device_used">Mara ya mwisho kutumika %1$s</string>
     <string name="people_device_never">Kamwe</string>
     <string name="people_sync_now">Sawazisha sasa</string>
-    <string name="people_device_title">Unganisha kifaa</string>
+    <string name="people_device_title">Vifaa vilivyounganishwa</string>
     <string name="people_device_name">Jina la kifaa</string>
     <string name="people_device_address">URL ya kitabu cha anwani</string>
     <string name="people_device_password">Nenosiri</string>

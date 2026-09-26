@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Aurkitu lagunak Mochi osoan eta konektatu haiekin. Sakatu Gehitu kontaktua gonbidapen bat bidaltzeko.</string>
     <string name="people_person_state_contact">Kontaktuetan</string>
     <string name="people_device_create">Sortu</string>
+    <string name="people_device_add">Gehitu gailu bat</string>
     <string name="people_device_server">Zerbitzaria</string>
     <string name="people_device_username">Erabiltzaile-izena</string>
     <string name="people_device_done">Eginda</string>
-    <string name="people_device_list">Gailuak</string>
     <string name="people_device_used">Azken erabilera %1$s</string>
     <string name="people_device_never">Inoiz ez</string>
     <string name="people_sync_now">Sinkronizatu orain</string>
-    <string name="people_device_title">Konektatu gailu bat</string>
+    <string name="people_device_title">Konektatutako gailuak</string>
     <string name="people_device_name">Gailuaren izena</string>
     <string name="people_device_address">Helbide-liburuaren URLa</string>
     <string name="people_device_password">Pasahitza</string>

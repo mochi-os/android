@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Vytvoriť</string>
     <string name="calendars_subscribe_submit">Prihlásiť na odber</string>
     <string name="calendars_subscribe_url">Adresa</string>
-    <string name="calendars_connect_device">Pripojiť zariadenie</string>
+    <string name="calendars_connect_device">Pripojené zariadenia</string>
     <string name="calendars_preferences">Predvoľby</string>
     <string name="calendars_name">Názov</string>
     <string name="calendars_rename">Premenovať</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Zatiaľ nesynchronizované</string>
     <string name="calendars_sync_time">Posledná synchronizácia: %1$s</string>
     <string name="calendars_sync_transport">Nepodarilo sa spojiť so serverom</string>
-    <string name="calendars_device_title">Pripojiť zariadenie</string>
+    <string name="calendars_device_title">Pripojené zariadenia</string>
     <string name="calendars_device_name">Názov zariadenia</string>
     <string name="calendars_device_create">Vytvoriť</string>
+    <string name="calendars_device_add">Pridať zariadenie</string>
     <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Adresa</string>
     <string name="calendars_device_username">Používateľské meno</string>
@@ -112,7 +113,6 @@
     <string name="calendars_sync_permission">Vyžaduje sa prístup ku kalendáru</string>
     <string name="calendars_sync_authorization">Prihláste sa znova, aby synchronizácia pokračovala</string>
     <string name="calendars_device_warning">Skopírujte heslo teraz: už sa nezobrazí.</string>
-    <string name="calendars_device_list">Pripojené zariadenia</string>
     <string name="calendars_device_empty">Žiadne pripojené zariadenia</string>
     <string name="calendars_device_used">naposledy použité %1$s</string>
     <string name="calendars_device_never">nikdy</string>

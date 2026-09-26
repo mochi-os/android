@@ -186,14 +186,14 @@
     <string name="people_welcome_body">Golek kanca ing saindenging Mochi lan sesambungan. Ketuk Tambah kontak kanggo ngirim undangan.</string>
     <string name="people_person_state_contact">Ana ing kontak</string>
     <string name="people_device_create">Gawé</string>
+    <string name="people_device_add">Tambah piranti</string>
     <string name="people_device_server">Server</string>
     <string name="people_device_username">Jeneng panganggo</string>
     <string name="people_device_done">Rampung</string>
-    <string name="people_device_list">Piranti</string>
     <string name="people_device_used">Pungkasan dianggo %1$s</string>
     <string name="people_device_never">Ora tau</string>
     <string name="people_sync_now">Sinkronisasi saiki</string>
-    <string name="people_device_title">Sambungake piranti</string>
+    <string name="people_device_title">Piranti sing kasambung</string>
     <string name="people_device_name">Jeneng piranti</string>
     <string name="people_device_address">URL buku alamat</string>
     <string name="people_device_password">Tembung sandhi</string>

@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Mochi boyunca dostlar tapın və əlaqə qurun. Dəvət göndərmək üçün Kontakt əlavə et düyməsinə toxunun.</string>
     <string name="people_person_state_contact">Kontaktlarda</string>
     <string name="people_device_create">Yarat</string>
+    <string name="people_device_add">Cihaz əlavə et</string>
     <string name="people_device_server">Server</string>
     <string name="people_device_username">İstifadəçi adı</string>
     <string name="people_device_done">Hazırdır</string>
-    <string name="people_device_list">Cihazlar</string>
     <string name="people_device_used">Son istifadə %1$s</string>
     <string name="people_device_never">Heç vaxt</string>
     <string name="people_sync_now">İndi sinxronlaşdır</string>
-    <string name="people_device_title">Cihaz qoşun</string>
+    <string name="people_device_title">Qoşulmuş cihazlar</string>
     <string name="people_device_name">Cihaz adı</string>
     <string name="people_device_address">Ünvan kitabçası URL-i</string>
     <string name="people_device_password">Şifrə</string>

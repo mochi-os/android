@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Crea</string>
     <string name="calendars_subscribe_submit">Subscriu-te</string>
     <string name="calendars_subscribe_url">Adreça</string>
-    <string name="calendars_connect_device">Connecta un dispositiu</string>
+    <string name="calendars_connect_device">Dispositius connectats</string>
     <string name="calendars_preferences">Preferències</string>
     <string name="calendars_name">Nom</string>
     <string name="calendars_rename">Canvia el nom</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Encara no s\'ha sincronitzat</string>
     <string name="calendars_sync_time">Darrera sincronització: %1$s</string>
     <string name="calendars_sync_transport">No s\'ha pogut connectar amb el servidor</string>
-    <string name="calendars_device_title">Connecta un dispositiu</string>
+    <string name="calendars_device_title">Dispositius connectats</string>
     <string name="calendars_device_name">Nom del dispositiu</string>
     <string name="calendars_device_create">Crea</string>
+    <string name="calendars_device_add">Afegeix un dispositiu</string>
     <string name="calendars_device_server">Servidor</string>
     <string name="calendars_device_address">Adreça</string>
     <string name="calendars_device_username">Nom d\'usuari</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">Cal accés al calendari</string>
     <string name="calendars_sync_authorization">Torneu a iniciar la sessió per continuar la sincronització</string>
     <string name="calendars_device_warning">Copieu la contrasenya ara: no es podrà tornar a mostrar.</string>
-    <string name="calendars_device_list">Dispositius connectats</string>
     <string name="calendars_device_empty">No hi ha cap dispositiu connectat</string>
     <string name="calendars_device_used">darrer ús %1$s</string>
     <string name="calendars_device_never">mai</string>

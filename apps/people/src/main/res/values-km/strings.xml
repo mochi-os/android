@@ -186,14 +186,14 @@
     <string name="people_welcome_body">ស្វែងរកមិត្តភក្តិនៅទូទាំង Mochi ហើយភ្ជាប់ទំនាក់ទំនង។ ចុច បន្ថែមទំនាក់ទំនង ដើម្បីផ្ញើការអញ្ជើញ។</string>
     <string name="people_person_state_contact">មានក្នុងទំនាក់ទំនង</string>
     <string name="people_device_create">បង្កើត</string>
+    <string name="people_device_add">បន្ថែមឧបករណ៍</string>
     <string name="people_device_server">ម៉ាស៊ីនមេ</string>
     <string name="people_device_username">ឈ្មោះអ្នកប្រើប្រាស់</string>
     <string name="people_device_done">រួចរាល់</string>
-    <string name="people_device_list">ឧបករណ៍</string>
     <string name="people_device_used">ប្រើចុងក្រោយ %1$s</string>
     <string name="people_device_never">មិនដែល</string>
     <string name="people_sync_now">ធ្វើសមកាលកម្មឥឡូវនេះ</string>
-    <string name="people_device_title">ភ្ជាប់ឧបករណ៍</string>
+    <string name="people_device_title">ឧបករណ៍ដែលបានភ្ជាប់</string>
     <string name="people_device_name">ឈ្មោះឧបករណ៍</string>
     <string name="people_device_address">URL សៀវភៅអាសយដ្ឋាន</string>
     <string name="people_device_password">ពាក្យសម្ងាត់</string>

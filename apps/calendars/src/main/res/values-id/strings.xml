@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Buat</string>
     <string name="calendars_subscribe_submit">Berlangganan</string>
     <string name="calendars_subscribe_url">Alamat</string>
-    <string name="calendars_connect_device">Hubungkan perangkat</string>
+    <string name="calendars_connect_device">Perangkat terhubung</string>
     <string name="calendars_preferences">Preferensi</string>
     <string name="calendars_name">Nama</string>
     <string name="calendars_rename">Ubah nama</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Belum disinkronkan</string>
     <string name="calendars_sync_time">Terakhir disinkronkan %1$s</string>
     <string name="calendars_sync_transport">Tidak dapat menjangkau server</string>
-    <string name="calendars_device_title">Hubungkan perangkat</string>
+    <string name="calendars_device_title">Perangkat terhubung</string>
     <string name="calendars_device_name">Nama perangkat</string>
     <string name="calendars_device_create">Buat</string>
+    <string name="calendars_device_add">Tambah perangkat</string>
     <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Alamat</string>
     <string name="calendars_device_username">Nama pengguna</string>
@@ -118,7 +119,6 @@
     <string name="calendars_sync_permission">Akses kalender diperlukan</string>
     <string name="calendars_sync_authorization">Masuk lagi untuk melanjutkan sinkronisasi</string>
     <string name="calendars_device_warning">Salin kata sandi sekarang: kata sandi tidak dapat ditampilkan lagi.</string>
-    <string name="calendars_device_list">Perangkat terhubung</string>
     <string name="calendars_device_empty">Tidak ada perangkat yang terhubung</string>
     <string name="calendars_device_used">Terakhir digunakan %1$s</string>
     <string name="calendars_device_never">tidak pernah</string>

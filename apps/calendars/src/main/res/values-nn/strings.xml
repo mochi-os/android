@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Opprett</string>
     <string name="calendars_subscribe_submit">Abonner</string>
     <string name="calendars_subscribe_url">Adresse</string>
-    <string name="calendars_connect_device">Kople til ei eining</string>
+    <string name="calendars_connect_device">Tilkopla einingar</string>
     <string name="calendars_preferences">Innstillingar</string>
     <string name="calendars_name">Namn</string>
     <string name="calendars_rename">Døyp om</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Ikkje synkronisert enno</string>
     <string name="calendars_sync_time">Sist synkronisert %1$s</string>
     <string name="calendars_sync_transport">Nådde ikkje tenaren</string>
-    <string name="calendars_device_title">Kople til ei eining</string>
+    <string name="calendars_device_title">Tilkopla einingar</string>
     <string name="calendars_device_name">Einingsnamn</string>
     <string name="calendars_device_create">Opprett</string>
+    <string name="calendars_device_add">Legg til ei eining</string>
     <string name="calendars_device_server">Tenar</string>
     <string name="calendars_device_address">Adresse</string>
     <string name="calendars_device_username">Brukarnamn</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">Kalendertilgang trengst</string>
     <string name="calendars_sync_authorization">Logg inn igjen for å halda fram synkroniseringa</string>
     <string name="calendars_device_warning">Kopier passordet no: det kan ikkje visast igjen.</string>
-    <string name="calendars_device_list">Tilkopla einingar</string>
     <string name="calendars_device_empty">Ingen einingar tilkopla</string>
     <string name="calendars_device_used">Sist brukt %1$s</string>
     <string name="calendars_device_never">aldri</string>

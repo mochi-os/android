@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">නිර්මාණය කරන්න</string>
     <string name="calendars_subscribe_submit">දායක වන්න</string>
     <string name="calendars_subscribe_url">ලිපිනය</string>
-    <string name="calendars_connect_device">උපාංගයක් සම්බන්ධ කරන්න</string>
+    <string name="calendars_connect_device">සම්බන්ධිත උපාංග</string>
     <string name="calendars_preferences">මනාපයන්</string>
     <string name="calendars_name">නම</string>
     <string name="calendars_rename">නැවත නම් කරන්න</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">තවම සමමුහුර්ත කර නැත</string>
     <string name="calendars_sync_time">අවසන් සමමුහුර්තය: %1$s</string>
     <string name="calendars_sync_transport">සේවාදායකය වෙත ළඟා විය නොහැකි විය</string>
-    <string name="calendars_device_title">උපාංගයක් සම්බන්ධ කරන්න</string>
+    <string name="calendars_device_title">සම්බන්ධිත උපාංග</string>
     <string name="calendars_device_name">උපාංගයේ නම</string>
     <string name="calendars_device_create">නිර්මාණය කරන්න</string>
+    <string name="calendars_device_add">උපාංගයක් එක් කරන්න</string>
     <string name="calendars_device_server">සේවාදායකය</string>
     <string name="calendars_device_address">ලිපිනය</string>
     <string name="calendars_device_username">පරිශීලක නාමය</string>
@@ -112,7 +113,6 @@
     <string name="calendars_sync_permission">දින දර්ශන ප්‍රවේශය අවශ්‍යයි</string>
     <string name="calendars_sync_authorization">සමමුහූර්ත කිරීම දිගටම කරගෙන යාමට නැවත පුරන්න</string>
     <string name="calendars_device_warning">මුරපදය දැන් පිටපත් කරන්න: එය නැවත පෙන්විය නොහැක.</string>
-    <string name="calendars_device_list">සම්බන්ධිත උපාංග</string>
     <string name="calendars_device_empty">උපාංග කිසිවක් සම්බන්ධ කර නැත</string>
     <string name="calendars_device_used">අවසන් වරට භාවිත කළේ %1$s</string>
     <string name="calendars_device_never">කවදාවත් නැත</string>

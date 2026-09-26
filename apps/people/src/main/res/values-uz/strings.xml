@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Mochi bo\'ylab do\'stlarni toping va bog\'laning. Taklif yuborish uchun Kontakt qo\'shish tugmasini bosing.</string>
     <string name="people_person_state_contact">Kontaktlarda</string>
     <string name="people_device_create">Yaratish</string>
+    <string name="people_device_add">Qurilma qoʻshish</string>
     <string name="people_device_server">Server</string>
     <string name="people_device_username">Foydalanuvchi nomi</string>
     <string name="people_device_done">Bajarildi</string>
-    <string name="people_device_list">Qurilmalar</string>
     <string name="people_device_used">Oxirgi foydalanish %1$s</string>
     <string name="people_device_never">Hech qachon</string>
     <string name="people_sync_now">Hozir sinxronlash</string>
-    <string name="people_device_title">Qurilma ulash</string>
+    <string name="people_device_title">Ulangan qurilmalar</string>
     <string name="people_device_name">Qurilma nomi</string>
     <string name="people_device_address">Manzillar kitobi URL manzili</string>
     <string name="people_device_password">Parol</string>

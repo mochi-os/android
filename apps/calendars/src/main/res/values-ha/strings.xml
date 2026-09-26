@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Ƙirƙira</string>
     <string name="calendars_subscribe_submit">Yi subscribe</string>
     <string name="calendars_subscribe_url">Adireshi</string>
-    <string name="calendars_connect_device">Haɗa na\'ura</string>
+    <string name="calendars_connect_device">Na\'urorin da aka haɗa</string>
     <string name="calendars_preferences">Abubuwan da kake so</string>
     <string name="calendars_name">Suna</string>
     <string name="calendars_rename">Sake suna</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Ba a daidaita ba tukuna</string>
     <string name="calendars_sync_time">An daidaita na ƙarshe %1$s</string>
     <string name="calendars_sync_transport">An kasa isa ga sabar</string>
-    <string name="calendars_device_title">Haɗa na\'ura</string>
+    <string name="calendars_device_title">Na\'urorin da aka haɗa</string>
     <string name="calendars_device_name">Sunan na\'ura</string>
     <string name="calendars_device_create">Ƙirƙira</string>
+    <string name="calendars_device_add">Ƙara na\'ura</string>
     <string name="calendars_device_server">Sabar</string>
     <string name="calendars_device_address">Adireshi</string>
     <string name="calendars_device_username">Sunan mai amfani</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">Ana buƙatar damar shiga kalanda</string>
     <string name="calendars_sync_authorization">Sake shiga don ci gaba da daidaitawa</string>
     <string name="calendars_device_warning">Kwafi kalmar sirri yanzu: ba za a sake nuna ta ba.</string>
-    <string name="calendars_device_list">Na\'urorin da aka haɗa</string>
     <string name="calendars_device_empty">Babu na\'urar da aka haɗa</string>
     <string name="calendars_device_used">amfani na ƙarshe %1$s</string>
     <string name="calendars_device_never">babu lokaci</string>

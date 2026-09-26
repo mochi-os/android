@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Mochi জুড়ে বন্ধু খুঁজুন ও যুক্ত হোন। আমন্ত্রণ পাঠাতে পরিচিতি যোগ করুন চাপুন।</string>
     <string name="people_person_state_contact">পরিচিতিতে আছে</string>
     <string name="people_device_create">তৈরি করুন</string>
+    <string name="people_device_add">ডিভাইস যোগ করুন</string>
     <string name="people_device_server">সার্ভার</string>
     <string name="people_device_username">ব্যবহারকারীর নাম</string>
     <string name="people_device_done">সম্পন্ন</string>
-    <string name="people_device_list">ডিভাইস</string>
     <string name="people_device_used">শেষ ব্যবহার %1$s</string>
     <string name="people_device_never">কখনই না</string>
     <string name="people_sync_now">এখন সিঙ্ক করুন</string>
-    <string name="people_device_title">একটি ডিভাইস সংযুক্ত করুন</string>
+    <string name="people_device_title">সংযুক্ত ডিভাইস</string>
     <string name="people_device_name">ডিভাইসের নাম</string>
     <string name="people_device_address">ঠিকানা বইয়ের URL</string>
     <string name="people_device_password">পাসওয়ার্ড</string>

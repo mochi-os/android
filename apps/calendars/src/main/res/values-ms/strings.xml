@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Cipta</string>
     <string name="calendars_subscribe_submit">Langgan</string>
     <string name="calendars_subscribe_url">Alamat</string>
-    <string name="calendars_connect_device">Sambungkan peranti</string>
+    <string name="calendars_connect_device">Peranti yang disambungkan</string>
     <string name="calendars_preferences">Keutamaan</string>
     <string name="calendars_name">Nama</string>
     <string name="calendars_rename">Namakan semula</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Belum disegerakkan</string>
     <string name="calendars_sync_time">Terakhir disegerakkan %1$s</string>
     <string name="calendars_sync_transport">Tidak dapat menghubungi pelayan</string>
-    <string name="calendars_device_title">Sambungkan peranti</string>
+    <string name="calendars_device_title">Peranti yang disambungkan</string>
     <string name="calendars_device_name">Nama peranti</string>
     <string name="calendars_device_create">Cipta</string>
+    <string name="calendars_device_add">Tambah peranti</string>
     <string name="calendars_device_server">Pelayan</string>
     <string name="calendars_device_address">Alamat</string>
     <string name="calendars_device_username">Nama pengguna</string>
@@ -118,7 +119,6 @@
     <string name="calendars_sync_permission">Akses kalendar diperlukan</string>
     <string name="calendars_sync_authorization">Log masuk semula untuk terus menyegerak</string>
     <string name="calendars_device_warning">Salin kata laluan sekarang: ia tidak boleh dipaparkan lagi.</string>
-    <string name="calendars_device_list">Peranti yang disambungkan</string>
     <string name="calendars_device_empty">Tiada peranti disambungkan</string>
     <string name="calendars_device_used">Terakhir digunakan %1$s</string>
     <string name="calendars_device_never">tidak pernah</string>

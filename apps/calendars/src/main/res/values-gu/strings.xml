@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">બનાવો</string>
     <string name="calendars_subscribe_submit">સબ્સ્ક્રાઇબ કરો</string>
     <string name="calendars_subscribe_url">સરનામું</string>
-    <string name="calendars_connect_device">ઉપકરણ કનેક્ટ કરો</string>
+    <string name="calendars_connect_device">જોડાયેલાં ઉપકરણો</string>
     <string name="calendars_preferences">પસંદગીઓ</string>
     <string name="calendars_name">નામ</string>
     <string name="calendars_rename">નામ બદલો</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">હજી સિંક થયું નથી</string>
     <string name="calendars_sync_time">છેલ્લે સિંક થયું %1$s</string>
     <string name="calendars_sync_transport">સર્વર સુધી પહોંચી શકાયું નહીં</string>
-    <string name="calendars_device_title">ઉપકરણ કનેક્ટ કરો</string>
+    <string name="calendars_device_title">જોડાયેલાં ઉપકરણો</string>
     <string name="calendars_device_name">ઉપકરણનું નામ</string>
     <string name="calendars_device_create">બનાવો</string>
+    <string name="calendars_device_add">ઉપકરણ ઉમેરો</string>
     <string name="calendars_device_server">સર્વર</string>
     <string name="calendars_device_address">સરનામું</string>
     <string name="calendars_device_username">વપરાશકર્તા નામ</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">કૅલેન્ડર ઍક્સેસ જરૂરી છે</string>
     <string name="calendars_sync_authorization">સિંક ચાલુ રાખવા માટે ફરીથી સાઇન ઇન કરો</string>
     <string name="calendars_device_warning">પાસવર્ડ હમણાં જ કૉપિ કરો: તે ફરીથી બતાવી શકાશે નહીં.</string>
-    <string name="calendars_device_list">જોડાયેલાં ઉપકરણો</string>
     <string name="calendars_device_empty">કોઈ ઉપકરણ જોડાયેલું નથી</string>
     <string name="calendars_device_used">છેલ્લે ઉપયોગ કર્યો %1$s</string>
     <string name="calendars_device_never">ક્યારેય નહીં</string>

@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">सिर्जना गर्नुहोस्</string>
     <string name="calendars_subscribe_submit">सदस्यता लिनुहोस्</string>
     <string name="calendars_subscribe_url">ठेगाना</string>
-    <string name="calendars_connect_device">उपकरण जडान गर्नुहोस्</string>
+    <string name="calendars_connect_device">जडान गरिएका उपकरणहरू</string>
     <string name="calendars_preferences">प्राथमिकताहरू</string>
     <string name="calendars_name">नाम</string>
     <string name="calendars_rename">नाम परिवर्तन गर्नुहोस्</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">अहिलेसम्म सिङ्क गरिएको छैन</string>
     <string name="calendars_sync_time">पछिल्लो सिङ्क: %1$s</string>
     <string name="calendars_sync_transport">सर्भरमा पुग्न सकिएन</string>
-    <string name="calendars_device_title">उपकरण जडान गर्नुहोस्</string>
+    <string name="calendars_device_title">जडान गरिएका उपकरणहरू</string>
     <string name="calendars_device_name">उपकरणको नाम</string>
     <string name="calendars_device_create">सिर्जना गर्नुहोस्</string>
+    <string name="calendars_device_add">उपकरण थप्नुहोस्</string>
     <string name="calendars_device_server">सर्भर</string>
     <string name="calendars_device_address">ठेगाना</string>
     <string name="calendars_device_username">प्रयोगकर्ता नाम</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">क्यालेन्डर पहुँच आवश्यक छ</string>
     <string name="calendars_sync_authorization">सिंक जारी राख्न फेरि साइन इन गर्नुहोस्</string>
     <string name="calendars_device_warning">पासवर्ड अहिले नै प्रतिलिपि गर्नुहोस्: यो फेरि देखाउन सकिँदैन।</string>
-    <string name="calendars_device_list">जडान गरिएका उपकरणहरू</string>
     <string name="calendars_device_empty">कुनै उपकरण जडान गरिएको छैन</string>
     <string name="calendars_device_used">अन्तिम पटक प्रयोग गरियो %1$s</string>
     <string name="calendars_device_never">कहिल्यै होइन</string>

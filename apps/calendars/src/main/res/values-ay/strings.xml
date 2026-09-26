@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Luraña</string>
     <string name="calendars_subscribe_submit">Suscribiña</string>
     <string name="calendars_subscribe_url">Dirección</string>
-    <string name="calendars_connect_device">Mä dispositivo chikanchaña</string>
+    <string name="calendars_connect_device">Chinjata dispositivonaka</string>
     <string name="calendars_preferences">Ajllinaka</string>
     <string name="calendars_name">Suti</string>
     <string name="calendars_rename">Suti machaqachama</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Janïraw sincronizatäkiti</string>
     <string name="calendars_sync_time">Qhipa sincronizata %1$s</string>
     <string name="calendars_sync_transport">Servidorar janiw puriñ atipkiti</string>
-    <string name="calendars_device_title">Mä dispositivo chikanchaña</string>
+    <string name="calendars_device_title">Chinjata dispositivonaka</string>
     <string name="calendars_device_name">Dispositivon sutipa</string>
     <string name="calendars_device_create">Luraña</string>
+    <string name="calendars_device_add">Mä dispositivo yapxataña</string>
     <string name="calendars_device_server">Servidor</string>
     <string name="calendars_device_address">Dirección</string>
     <string name="calendars_device_username">Apnaqiri suti</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">Calendarior mantañax wakisiwa</string>
     <string name="calendars_sync_authorization">Sincronizaña sarantayañataki wasitat mantam</string>
     <string name="calendars_device_warning">Contraseña jichha copiam: janiw wasitat uñachayañjamakiti.</string>
-    <string name="calendars_device_list">Chinjata dispositivonaka</string>
     <string name="calendars_device_empty">Janiw dispositivo chinjatäkiti</string>
     <string name="calendars_device_used">qhipa apnaqata %1$s</string>
     <string name="calendars_device_never">janipuni</string>

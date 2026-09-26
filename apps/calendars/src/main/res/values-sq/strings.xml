@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Krijo</string>
     <string name="calendars_subscribe_submit">Abonohu</string>
     <string name="calendars_subscribe_url">Adresa</string>
-    <string name="calendars_connect_device">Lidh një pajisje</string>
+    <string name="calendars_connect_device">Pajisjet e lidhura</string>
     <string name="calendars_preferences">Preferencat</string>
     <string name="calendars_name">Emri</string>
     <string name="calendars_rename">Riemërto</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Nuk është sinkronizuar ende</string>
     <string name="calendars_sync_time">Sinkronizimi i fundit: %1$s</string>
     <string name="calendars_sync_transport">Serveri nuk u arrit</string>
-    <string name="calendars_device_title">Lidh një pajisje</string>
+    <string name="calendars_device_title">Pajisjet e lidhura</string>
     <string name="calendars_device_name">Emri i pajisjes</string>
     <string name="calendars_device_create">Krijo</string>
+    <string name="calendars_device_add">Shto një pajisje</string>
     <string name="calendars_device_server">Serveri</string>
     <string name="calendars_device_address">Adresa</string>
     <string name="calendars_device_username">Emri i përdoruesit</string>
@@ -112,7 +113,6 @@
     <string name="calendars_sync_permission">Nevojitet qasja te kalendari</string>
     <string name="calendars_sync_authorization">Hyni sërish për të vazhduar sinkronizimin</string>
     <string name="calendars_device_warning">Kopjojeni fjalëkalimin tani: nuk mund të shfaqet sërish.</string>
-    <string name="calendars_device_list">Pajisjet e lidhura</string>
     <string name="calendars_device_empty">Asnjë pajisje e lidhur</string>
     <string name="calendars_device_used">përdorur së fundi %1$s</string>
     <string name="calendars_device_never">asnjëherë</string>

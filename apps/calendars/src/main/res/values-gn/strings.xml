@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Emoheñói</string>
     <string name="calendars_subscribe_submit">Eñemboaty</string>
     <string name="calendars_subscribe_url">Dirección</string>
-    <string name="calendars_connect_device">Embojoaju peteĩ mba\'e</string>
+    <string name="calendars_connect_device">Mba\'e oñembojoajúva</string>
     <string name="calendars_preferences">Jeporavo</string>
     <string name="calendars_name">Téra</string>
     <string name="calendars_rename">Embohera jey</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Noñembojojái gueteri</string>
     <string name="calendars_sync_time">Paha ñembojoja %1$s</string>
     <string name="calendars_sync_transport">Ndaikatúi og̃uahẽ mohendahápe</string>
-    <string name="calendars_device_title">Embojoaju peteĩ mba\'e</string>
+    <string name="calendars_device_title">Mba\'e oñembojoajúva</string>
     <string name="calendars_device_name">Mba\'e réra</string>
     <string name="calendars_device_create">Emoheñói</string>
+    <string name="calendars_device_add">Embojuaju peteĩ mba\'e</string>
     <string name="calendars_device_server">Mohendaha</string>
     <string name="calendars_device_address">Dirección</string>
     <string name="calendars_device_username">Puruhára réra</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">Tekotevẽ jeike arapapahápe</string>
     <string name="calendars_sync_authorization">Eike jey resincroniza meme hag̃ua</string>
     <string name="calendars_device_warning">Ekopia ñe\'ẽñemi ko\'ág̃a: ndaikatumo\'ãi ojehechauka jey.</string>
-    <string name="calendars_device_list">Mba\'e oñembojoajúva</string>
     <string name="calendars_device_empty">Ndaipóri mba\'e oñembojoajúva</string>
     <string name="calendars_device_used">iporu paha %1$s</string>
     <string name="calendars_device_never">araka\'eve</string>

@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Vind vrienden op heel Mochi en maak verbinding. Tik op Contact toevoegen om een uitnodiging te sturen.</string>
     <string name="people_person_state_contact">In contacten</string>
     <string name="people_device_create">Aanmaken</string>
+    <string name="people_device_add">Apparaat toevoegen</string>
     <string name="people_device_server">Server</string>
     <string name="people_device_username">Gebruikersnaam</string>
     <string name="people_device_done">Klaar</string>
-    <string name="people_device_list">Apparaten</string>
     <string name="people_device_used">Laatst gebruikt %1$s</string>
     <string name="people_device_never">Nooit</string>
     <string name="people_sync_now">Nu synchroniseren</string>
-    <string name="people_device_title">Apparaat koppelen</string>
+    <string name="people_device_title">Gekoppelde apparaten</string>
     <string name="people_device_name">Apparaatnaam</string>
     <string name="people_device_address">URL van het adresboek</string>
     <string name="people_device_password">Wachtwoord</string>

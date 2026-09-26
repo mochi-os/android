@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Loo</string>
     <string name="calendars_subscribe_submit">Telli</string>
     <string name="calendars_subscribe_url">Aadress</string>
-    <string name="calendars_connect_device">Ühenda seade</string>
+    <string name="calendars_connect_device">Ühendatud seadmed</string>
     <string name="calendars_preferences">Eelistused</string>
     <string name="calendars_name">Nimi</string>
     <string name="calendars_rename">Nimeta ümber</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Pole veel sünkroonitud</string>
     <string name="calendars_sync_time">Viimati sünkroonitud %1$s</string>
     <string name="calendars_sync_transport">Serveriga ei õnnestunud ühendust luua</string>
-    <string name="calendars_device_title">Ühenda seade</string>
+    <string name="calendars_device_title">Ühendatud seadmed</string>
     <string name="calendars_device_name">Seadme nimi</string>
     <string name="calendars_device_create">Loo</string>
+    <string name="calendars_device_add">Lisa seade</string>
     <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Aadress</string>
     <string name="calendars_device_username">Kasutajanimi</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">Vaja on juurdepääsu kalendrile</string>
     <string name="calendars_sync_authorization">Sünkroonimise jätkamiseks logi uuesti sisse</string>
     <string name="calendars_device_warning">Kopeeri parool kohe: seda ei saa uuesti kuvada.</string>
-    <string name="calendars_device_list">Ühendatud seadmed</string>
     <string name="calendars_device_empty">Ühtegi seadet pole ühendatud</string>
     <string name="calendars_device_used">viimati kasutatud %1$s</string>
     <string name="calendars_device_never">mitte kunagi</string>

@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">बनाएँ</string>
     <string name="calendars_subscribe_submit">सब्सक्राइब करें</string>
     <string name="calendars_subscribe_url">पता</string>
-    <string name="calendars_connect_device">डिवाइस कनेक्ट करें</string>
+    <string name="calendars_connect_device">कनेक्ट किए गए डिवाइस</string>
     <string name="calendars_preferences">प्राथमिकताएँ</string>
     <string name="calendars_name">नाम</string>
     <string name="calendars_rename">नाम बदलें</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">अभी तक सिंक नहीं हुआ</string>
     <string name="calendars_sync_time">अंतिम सिंक: %1$s</string>
     <string name="calendars_sync_transport">सर्वर तक नहीं पहुँच सके</string>
-    <string name="calendars_device_title">डिवाइस कनेक्ट करें</string>
+    <string name="calendars_device_title">कनेक्ट किए गए डिवाइस</string>
     <string name="calendars_device_name">डिवाइस का नाम</string>
     <string name="calendars_device_create">बनाएँ</string>
+    <string name="calendars_device_add">डिवाइस जोड़ें</string>
     <string name="calendars_device_server">सर्वर</string>
     <string name="calendars_device_address">पता</string>
     <string name="calendars_device_username">उपयोगकर्ता नाम</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">कैलेंडर एक्सेस की आवश्यकता है</string>
     <string name="calendars_sync_authorization">सिंक जारी रखने के लिए फिर से साइन इन करें</string>
     <string name="calendars_device_warning">पासवर्ड अभी कॉपी करें: इसे दोबारा नहीं दिखाया जा सकता।</string>
-    <string name="calendars_device_list">कनेक्ट किए गए डिवाइस</string>
     <string name="calendars_device_empty">कोई डिवाइस कनेक्ट नहीं है</string>
     <string name="calendars_device_used">अंतिम बार उपयोग %1$s</string>
     <string name="calendars_device_never">कभी नहीं</string>

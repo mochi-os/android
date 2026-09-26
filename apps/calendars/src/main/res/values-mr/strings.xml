@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">तयार करा</string>
     <string name="calendars_subscribe_submit">सबस्क्राइब करा</string>
     <string name="calendars_subscribe_url">पत्ता</string>
-    <string name="calendars_connect_device">डिव्हाइस कनेक्ट करा</string>
+    <string name="calendars_connect_device">कनेक्ट केलेली डिव्हाइस</string>
     <string name="calendars_preferences">प्राधान्ये</string>
     <string name="calendars_name">नाव</string>
     <string name="calendars_rename">पुन्हा नाव द्या</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">अद्याप सिंक केलेले नाही</string>
     <string name="calendars_sync_time">शेवटचे सिंक: %1$s</string>
     <string name="calendars_sync_transport">सर्व्हरपर्यंत पोहोचू शकलो नाही</string>
-    <string name="calendars_device_title">डिव्हाइस कनेक्ट करा</string>
+    <string name="calendars_device_title">कनेक्ट केलेली डिव्हाइस</string>
     <string name="calendars_device_name">डिव्हाइसचे नाव</string>
     <string name="calendars_device_create">तयार करा</string>
+    <string name="calendars_device_add">डिव्हाइस जोडा</string>
     <string name="calendars_device_server">सर्व्हर</string>
     <string name="calendars_device_address">पत्ता</string>
     <string name="calendars_device_username">वापरकर्तानाव</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">कॅलेंडर प्रवेश आवश्यक आहे</string>
     <string name="calendars_sync_authorization">सिंक सुरू ठेवण्यासाठी पुन्हा साइन इन करा</string>
     <string name="calendars_device_warning">पासवर्ड आताच कॉपी करा: तो पुन्हा दाखवता येणार नाही.</string>
-    <string name="calendars_device_list">कनेक्ट केलेली डिव्हाइस</string>
     <string name="calendars_device_empty">कोणतेही डिव्हाइस कनेक्ट केलेले नाही</string>
     <string name="calendars_device_used">शेवटचे वापरले %1$s</string>
     <string name="calendars_device_never">कधीही नाही</string>

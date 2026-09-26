@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Izveidot</string>
     <string name="calendars_subscribe_submit">Abonēt</string>
     <string name="calendars_subscribe_url">Adrese</string>
-    <string name="calendars_connect_device">Pievienot ierīci</string>
+    <string name="calendars_connect_device">Pievienotās ierīces</string>
     <string name="calendars_preferences">Preferences</string>
     <string name="calendars_name">Nosaukums</string>
     <string name="calendars_rename">Pārdēvēt</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Vēl nav sinhronizēts</string>
     <string name="calendars_sync_time">Pēdējā sinhronizācija: %1$s</string>
     <string name="calendars_sync_transport">Neizdevās sasniegt serveri</string>
-    <string name="calendars_device_title">Pievienot ierīci</string>
+    <string name="calendars_device_title">Pievienotās ierīces</string>
     <string name="calendars_device_name">Ierīces nosaukums</string>
     <string name="calendars_device_create">Izveidot</string>
+    <string name="calendars_device_add">Pievienot jaunu ierīci</string>
     <string name="calendars_device_server">Serveris</string>
     <string name="calendars_device_address">Adrese</string>
     <string name="calendars_device_username">Lietotājvārds</string>
@@ -122,7 +123,6 @@
     <string name="calendars_sync_permission">Nepieciešama piekļuve kalendāram</string>
     <string name="calendars_sync_authorization">Piesakieties vēlreiz, lai turpinātu sinhronizāciju</string>
     <string name="calendars_device_warning">Nokopējiet paroli tagad: to vairs nevarēs parādīt.</string>
-    <string name="calendars_device_list">Pievienotās ierīces</string>
     <string name="calendars_device_empty">Nav pievienotu ierīču</string>
     <string name="calendars_device_used">Pēdējoreiz lietots %1$s</string>
     <string name="calendars_device_never">nekad</string>

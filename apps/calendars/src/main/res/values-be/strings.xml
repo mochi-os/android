@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Стварыць</string>
     <string name="calendars_subscribe_submit">Падпісацца</string>
     <string name="calendars_subscribe_url">Адрас</string>
-    <string name="calendars_connect_device">Падключыць прыладу</string>
+    <string name="calendars_connect_device">Падключаныя прылады</string>
     <string name="calendars_preferences">Налады</string>
     <string name="calendars_name">Назва</string>
     <string name="calendars_rename">Перайменаваць</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Яшчэ не сінхранізавана</string>
     <string name="calendars_sync_time">Апошняя сінхранізацыя: %1$s</string>
     <string name="calendars_sync_transport">Не ўдалося звязацца з серверам</string>
-    <string name="calendars_device_title">Падключыць прыладу</string>
+    <string name="calendars_device_title">Падключаныя прылады</string>
     <string name="calendars_device_name">Назва прылады</string>
     <string name="calendars_device_create">Стварыць</string>
+    <string name="calendars_device_add">Дадаць прыладу</string>
     <string name="calendars_device_server">Сервер</string>
     <string name="calendars_device_address">Адрас</string>
     <string name="calendars_device_username">Імя карыстальніка</string>
@@ -124,7 +125,6 @@
     <string name="calendars_sync_permission">Патрэбны доступ да календара</string>
     <string name="calendars_sync_authorization">Увайдзіце зноў, каб працягнуць сінхранізацыю</string>
     <string name="calendars_device_warning">Скапіюйце пароль зараз: паказаць яго зноў немагчыма.</string>
-    <string name="calendars_device_list">Падключаныя прылады</string>
     <string name="calendars_device_empty">Няма падключаных прылад</string>
     <string name="calendars_device_used">апошняе выкарыстанне %1$s</string>
     <string name="calendars_device_never">ніколі</string>

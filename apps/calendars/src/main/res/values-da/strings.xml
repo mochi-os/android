@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Opret</string>
     <string name="calendars_subscribe_submit">Abonnér</string>
     <string name="calendars_subscribe_url">Adresse</string>
-    <string name="calendars_connect_device">Tilslut en enhed</string>
+    <string name="calendars_connect_device">Tilsluttede enheder</string>
     <string name="calendars_preferences">Præferencer</string>
     <string name="calendars_name">Navn</string>
     <string name="calendars_rename">Omdøb</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Ikke synkroniseret endnu</string>
     <string name="calendars_sync_time">Sidst synkroniseret %1$s</string>
     <string name="calendars_sync_transport">Kunne ikke nå serveren</string>
-    <string name="calendars_device_title">Tilslut en enhed</string>
+    <string name="calendars_device_title">Tilsluttede enheder</string>
     <string name="calendars_device_name">Enhedsnavn</string>
     <string name="calendars_device_create">Opret</string>
+    <string name="calendars_device_add">Tilføj en enhed</string>
     <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Adresse</string>
     <string name="calendars_device_username">Brugernavn</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">Der kræves adgang til kalenderen</string>
     <string name="calendars_sync_authorization">Log ind igen for at fortsætte synkroniseringen</string>
     <string name="calendars_device_warning">Kopier adgangskoden nu: den kan ikke vises igen.</string>
-    <string name="calendars_device_list">Tilsluttede enheder</string>
     <string name="calendars_device_empty">Ingen enheder tilsluttet</string>
     <string name="calendars_device_used">sidst brugt %1$s</string>
     <string name="calendars_device_never">aldrig</string>

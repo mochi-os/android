@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Opprett</string>
     <string name="calendars_subscribe_submit">Abonner</string>
     <string name="calendars_subscribe_url">Adresse</string>
-    <string name="calendars_connect_device">Koble til en enhet</string>
+    <string name="calendars_connect_device">Tilkoblede enheter</string>
     <string name="calendars_preferences">Preferanser</string>
     <string name="calendars_name">Navn</string>
     <string name="calendars_rename">Gi nytt navn</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Ikke synkronisert ennå</string>
     <string name="calendars_sync_time">Sist synkronisert %1$s</string>
     <string name="calendars_sync_transport">Kunne ikke nå serveren</string>
-    <string name="calendars_device_title">Koble til en enhet</string>
+    <string name="calendars_device_title">Tilkoblede enheter</string>
     <string name="calendars_device_name">Enhetsnavn</string>
     <string name="calendars_device_create">Opprett</string>
+    <string name="calendars_device_add">Legg til en enhet</string>
     <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Adresse</string>
     <string name="calendars_device_username">Brukernavn</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">Kalendertilgang kreves</string>
     <string name="calendars_sync_authorization">Logg inn igjen for å fortsette synkroniseringen</string>
     <string name="calendars_device_warning">Kopier passordet nå: det kan ikke vises igjen.</string>
-    <string name="calendars_device_list">Tilkoblede enheter</string>
     <string name="calendars_device_empty">Ingen enheter tilkoblet</string>
     <string name="calendars_device_used">Sist brukt %1$s</string>
     <string name="calendars_device_never">aldri</string>

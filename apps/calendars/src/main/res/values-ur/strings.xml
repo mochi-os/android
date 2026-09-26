@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">بنائیں</string>
     <string name="calendars_subscribe_submit">سبسکرائب کریں</string>
     <string name="calendars_subscribe_url">پتہ</string>
-    <string name="calendars_connect_device">ڈیوائس منسلک کریں</string>
+    <string name="calendars_connect_device">منسلک آلات</string>
     <string name="calendars_preferences">ترجیحات</string>
     <string name="calendars_name">نام</string>
     <string name="calendars_rename">نام تبدیل کریں</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">ابھی تک سنک نہیں ہوا</string>
     <string name="calendars_sync_time">آخری سنک: %1$s</string>
     <string name="calendars_sync_transport">سرور تک پہنچنا ممکن نہ ہوا</string>
-    <string name="calendars_device_title">ڈیوائس منسلک کریں</string>
+    <string name="calendars_device_title">منسلک آلات</string>
     <string name="calendars_device_name">ڈیوائس کا نام</string>
     <string name="calendars_device_create">بنائیں</string>
+    <string name="calendars_device_add">ڈیوائس شامل کریں</string>
     <string name="calendars_device_server">سرور</string>
     <string name="calendars_device_address">پتہ</string>
     <string name="calendars_device_username">صارف نام</string>
@@ -112,7 +113,6 @@
     <string name="calendars_sync_permission">کیلنڈر تک رسائی درکار ہے</string>
     <string name="calendars_sync_authorization">سنک جاری رکھنے کے لیے دوبارہ سائن ان کریں</string>
     <string name="calendars_device_warning">پاس ورڈ ابھی کاپی کریں: یہ دوبارہ نہیں دکھایا جائے گا۔</string>
-    <string name="calendars_device_list">منسلک آلات</string>
     <string name="calendars_device_empty">کوئی آلہ منسلک نہیں</string>
     <string name="calendars_device_used">آخری استعمال %1$s</string>
     <string name="calendars_device_never">کبھی نہیں</string>

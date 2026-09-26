@@ -186,14 +186,14 @@
     <string name="people_welcome_body">Mochi တစ်လျှောက် သူငယ်ချင်းများကို ရှာဖွေပြီး ဆက်သွယ်ပါ။ ဖိတ်ကြားစာ ပို့ရန် အဆက်အသွယ် ထည့်ရန် ကို နှိပ်ပါ။</string>
     <string name="people_person_state_contact">အဆက်အသွယ်များတွင်</string>
     <string name="people_device_create">ဖန်တီးမည်</string>
+    <string name="people_device_add">ကိရိယာ ထည့်မည်</string>
     <string name="people_device_server">ဆာဗာ</string>
     <string name="people_device_username">သုံးစွဲသူအမည်</string>
     <string name="people_device_done">ပြီးပါပြီ</string>
-    <string name="people_device_list">ကိရိယာများ</string>
     <string name="people_device_used">နောက်ဆုံး အသုံးပြုခဲ့သည် %1$s</string>
     <string name="people_device_never">ဘယ်တော့မှ မဟုတ်</string>
     <string name="people_sync_now">ယခု ထပ်တူပြုမည်</string>
-    <string name="people_device_title">ကိရိယာ ချိတ်ဆက်မည်</string>
+    <string name="people_device_title">ချိတ်ဆက်ထားသော ကိရိယာများ</string>
     <string name="people_device_name">ကိရိယာအမည်</string>
     <string name="people_device_address">လိပ်စာစာအုပ် URL</string>
     <string name="people_device_password">စကားဝှက်</string>

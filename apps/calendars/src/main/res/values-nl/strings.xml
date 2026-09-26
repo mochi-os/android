@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Aanmaken</string>
     <string name="calendars_subscribe_submit">Abonneren</string>
     <string name="calendars_subscribe_url">Adres</string>
-    <string name="calendars_connect_device">Apparaat koppelen</string>
+    <string name="calendars_connect_device">Gekoppelde apparaten</string>
     <string name="calendars_preferences">Voorkeuren</string>
     <string name="calendars_name">Naam</string>
     <string name="calendars_rename">Hernoemen</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Nog niet gesynchroniseerd</string>
     <string name="calendars_sync_time">Laatst gesynchroniseerd %1$s</string>
     <string name="calendars_sync_transport">Kan de server niet bereiken</string>
-    <string name="calendars_device_title">Apparaat koppelen</string>
+    <string name="calendars_device_title">Gekoppelde apparaten</string>
     <string name="calendars_device_name">Apparaatnaam</string>
     <string name="calendars_device_create">Aanmaken</string>
+    <string name="calendars_device_add">Apparaat toevoegen</string>
     <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Adres</string>
     <string name="calendars_device_username">Gebruikersnaam</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">Agendatoegang is nodig</string>
     <string name="calendars_sync_authorization">Log opnieuw in om te blijven synchroniseren</string>
     <string name="calendars_device_warning">Kopieer het wachtwoord nu: het kan niet opnieuw worden getoond.</string>
-    <string name="calendars_device_list">Gekoppelde apparaten</string>
     <string name="calendars_device_empty">Geen apparaten gekoppeld</string>
     <string name="calendars_device_used">Laatst gebruikt %1$s</string>
     <string name="calendars_device_never">nooit</string>

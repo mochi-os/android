@@ -187,14 +187,14 @@
     <string name="people_welcome_body">په ټول Mochi کې ملګري ومومئ او اړیکه ونیسئ. بلنه لیږلو لپاره اړیکه ورزیاته کړئ کېکاږئ.</string>
     <string name="people_person_state_contact">په اړیکو کې</string>
     <string name="people_device_create">جوړ کړئ</string>
+    <string name="people_device_add">وسیله اضافه کړئ</string>
     <string name="people_device_server">سرور</string>
     <string name="people_device_username">د کاروونکي نوم</string>
     <string name="people_device_done">ترسره شو</string>
-    <string name="people_device_list">وسیلې</string>
     <string name="people_device_used">وروستی کارول %1$s</string>
     <string name="people_device_never">هیڅکله</string>
     <string name="people_sync_now">اوس همغږي کړئ</string>
-    <string name="people_device_title">وسیله وصل کړئ</string>
+    <string name="people_device_title">نښلول شوې وسیلې</string>
     <string name="people_device_name">د وسیلې نوم</string>
     <string name="people_device_address">د پتو کتابچې URL</string>
     <string name="people_device_password">پټنوم</string>

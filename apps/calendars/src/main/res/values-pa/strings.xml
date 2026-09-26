@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">ਬਣਾਓ</string>
     <string name="calendars_subscribe_submit">ਗਾਹਕ ਬਣੋ</string>
     <string name="calendars_subscribe_url">ਪਤਾ</string>
-    <string name="calendars_connect_device">ਡਿਵਾਈਸ ਕਨੈਕਟ ਕਰੋ</string>
+    <string name="calendars_connect_device">ਜੁੜੇ ਹੋਏ ਡਿਵਾਈਸ</string>
     <string name="calendars_preferences">ਤਰਜੀਹਾਂ</string>
     <string name="calendars_name">ਨਾਮ</string>
     <string name="calendars_rename">ਨਾਮ ਬਦਲੋ</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">ਅਜੇ ਸਿੰਕ ਨਹੀਂ ਹੋਇਆ</string>
     <string name="calendars_sync_time">ਆਖਰੀ ਸਿੰਕ: %1$s</string>
     <string name="calendars_sync_transport">ਸਰਵਰ ਤੱਕ ਨਹੀਂ ਪਹੁੰਚ ਸਕੇ</string>
-    <string name="calendars_device_title">ਡਿਵਾਈਸ ਕਨੈਕਟ ਕਰੋ</string>
+    <string name="calendars_device_title">ਜੁੜੇ ਹੋਏ ਡਿਵਾਈਸ</string>
     <string name="calendars_device_name">ਡਿਵਾਈਸ ਦਾ ਨਾਮ</string>
     <string name="calendars_device_create">ਬਣਾਓ</string>
+    <string name="calendars_device_add">ਡਿਵਾਈਸ ਜੋੜੋ</string>
     <string name="calendars_device_server">ਸਰਵਰ</string>
     <string name="calendars_device_address">ਪਤਾ</string>
     <string name="calendars_device_username">ਉਪਭੋਗਤਾ ਨਾਮ</string>
@@ -112,7 +113,6 @@
     <string name="calendars_sync_permission">ਕੈਲੰਡਰ ਪਹੁੰਚ ਦੀ ਲੋੜ ਹੈ</string>
     <string name="calendars_sync_authorization">ਸਿੰਕ ਜਾਰੀ ਰੱਖਣ ਲਈ ਦੁਬਾਰਾ ਸਾਈਨ ਇਨ ਕਰੋ</string>
     <string name="calendars_device_warning">ਪਾਸਵਰਡ ਹੁਣੇ ਕਾਪੀ ਕਰੋ: ਇਹ ਦੁਬਾਰਾ ਨਹੀਂ ਦਿਖਾਇਆ ਜਾਵੇਗਾ।</string>
-    <string name="calendars_device_list">ਜੁੜੇ ਹੋਏ ਡਿਵਾਈਸ</string>
     <string name="calendars_device_empty">ਕੋਈ ਡਿਵਾਈਸ ਨਹੀਂ ਜੁੜਿਆ</string>
     <string name="calendars_device_used">ਆਖਰੀ ਵਰਤੋਂ %1$s</string>
     <string name="calendars_device_never">ਕਦੇ ਨਹੀਂ</string>

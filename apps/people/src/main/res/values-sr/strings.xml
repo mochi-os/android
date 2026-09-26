@@ -188,14 +188,14 @@
     <string name="people_welcome_body">Пронађите пријатеље широм Mochi-ја и повежите се. Додирните Додај контакт да пошаљете позивницу.</string>
     <string name="people_person_state_contact">У контактима</string>
     <string name="people_device_create">Креирај</string>
+    <string name="people_device_add">Додај уређај</string>
     <string name="people_device_server">Сервер</string>
     <string name="people_device_username">Корисничко име</string>
     <string name="people_device_done">Готово</string>
-    <string name="people_device_list">Уређаји</string>
     <string name="people_device_used">Последње коришћено %1$s</string>
     <string name="people_device_never">Никад</string>
     <string name="people_sync_now">Синхронизуј сада</string>
-    <string name="people_device_title">Повежи уређај</string>
+    <string name="people_device_title">Повезани уређаји</string>
     <string name="people_device_name">Назив уређаја</string>
     <string name="people_device_address">URL адресара</string>
     <string name="people_device_password">Лозинка</string>

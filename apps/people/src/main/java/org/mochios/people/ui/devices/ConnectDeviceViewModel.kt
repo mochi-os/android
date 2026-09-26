@@ -28,7 +28,7 @@ import javax.inject.Inject
 const val DEVICE_NAME_MAXIMUM = 100
 
 /**
- * The connect-a-device screen. [token] is the new device's password, held
+ * The connected-devices screen. [token] is the new device's password, held
  * only here and dropped when the screen goes: the server never shows it
  * again. [server] and [address] are what a CardDAV client is given.
  */
@@ -38,10 +38,12 @@ data class ConnectDeviceUiState(
     val tokens: List<DeviceToken> = emptyList(),
     val isLoading: Boolean = true,
     val error: MochiError? = null,
+    /** The add dialog is open, asking for [name]. */
+    val adding: Boolean = false,
     val name: String = "",
     val isCreating: Boolean = false,
     val token: String? = null,
-    /** The username to enter beside [token]: the account's address. */
+    /** The username every device enters, the account's address: from the device list, or a new device's own answer. */
     val username: String = "",
     val deleting: DeviceToken? = null,
     val isDeleting: Boolean = false,
@@ -76,12 +78,26 @@ class ConnectDeviceViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val tokens = repository.listTokens().sortedWith(compareBy(NaturalCompare) { it.name })
-                _uiState.value = _uiState.value.copy(isLoading = false, tokens = tokens)
+                val listing = repository.listTokens()
+                val tokens = listing.tokens.sortedWith(compareBy(NaturalCompare) { it.name })
+                _uiState.value = _uiState.value.copy(
+                    isLoading = false,
+                    tokens = tokens,
+                    username = listing.username.ifBlank { _uiState.value.username },
+                )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }
         }
+    }
+
+    fun startAdd() {
+        _uiState.value = _uiState.value.copy(adding = true, name = "")
+    }
+
+    fun cancelAdd() {
+        if (_uiState.value.isCreating) return
+        _uiState.value = _uiState.value.copy(adding = false, name = "")
     }
 
     fun setName(name: String) {
@@ -95,7 +111,7 @@ class ConnectDeviceViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isCreating = true)
             try {
                 val created = repository.createToken(name)
-                _uiState.value = _uiState.value.copy(isCreating = false, token = created.token, username = created.username, name = "")
+                _uiState.value = _uiState.value.copy(isCreating = false, adding = false, token = created.token, username = created.username, name = "")
                 load()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isCreating = false)

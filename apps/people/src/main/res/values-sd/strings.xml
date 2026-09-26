@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Mochi ۾ دوست ڳوليو ۽ ڳنڍجو. دعوت موڪلڻ لاءِ رابطو شامل ڪريو تي ٽيپ ڪريو.</string>
     <string name="people_person_state_contact">رابطن ۾</string>
     <string name="people_device_create">ٺاهيو</string>
+    <string name="people_device_add">ڊوائيس شامل ڪريو</string>
     <string name="people_device_server">سرور</string>
     <string name="people_device_username">صارف نالو</string>
     <string name="people_device_done">مڪمل</string>
-    <string name="people_device_list">ڊوائيسون</string>
     <string name="people_device_used">آخري استعمال %1$s</string>
     <string name="people_device_never">ڪڏهن به نه</string>
     <string name="people_sync_now">هاڻي سنڪ ڪريو</string>
-    <string name="people_device_title">ڊوائيس ڳنڍيو</string>
+    <string name="people_device_title">ڳنڍيل ڊوائيس</string>
     <string name="people_device_name">ڊوائيس جو نالو</string>
     <string name="people_device_address">ايڊريس بڪ جو URL</string>
     <string name="people_device_password">پاسورڊ</string>

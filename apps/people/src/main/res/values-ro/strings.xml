@@ -188,14 +188,14 @@
     <string name="people_welcome_body">Găsiți prieteni în tot Mochi și luați legătura. Atingeți Adaugă contact pentru a trimite o invitație.</string>
     <string name="people_person_state_contact">În contacte</string>
     <string name="people_device_create">Creează</string>
+    <string name="people_device_add">Adaugă un dispozitiv</string>
     <string name="people_device_server">Server</string>
     <string name="people_device_username">Nume de utilizator</string>
     <string name="people_device_done">Terminat</string>
-    <string name="people_device_list">Dispozitive</string>
     <string name="people_device_used">Ultima utilizare %1$s</string>
     <string name="people_device_never">Niciodată</string>
     <string name="people_sync_now">Sincronizează acum</string>
-    <string name="people_device_title">Conectează un dispozitiv</string>
+    <string name="people_device_title">Dispozitive conectate</string>
     <string name="people_device_name">Numele dispozitivului</string>
     <string name="people_device_address">URL-ul agendei</string>
     <string name="people_device_password">Parolă</string>

@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Utwórz</string>
     <string name="calendars_subscribe_submit">Subskrybuj</string>
     <string name="calendars_subscribe_url">Adres</string>
-    <string name="calendars_connect_device">Połącz urządzenie</string>
+    <string name="calendars_connect_device">Połączone urządzenia</string>
     <string name="calendars_preferences">Preferencje</string>
     <string name="calendars_name">Nazwa</string>
     <string name="calendars_rename">Zmień nazwę</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Jeszcze nie zsynchronizowano</string>
     <string name="calendars_sync_time">Ostatnia synchronizacja: %1$s</string>
     <string name="calendars_sync_transport">Nie udało się połączyć z serwerem</string>
-    <string name="calendars_device_title">Połącz urządzenie</string>
+    <string name="calendars_device_title">Połączone urządzenia</string>
     <string name="calendars_device_name">Nazwa urządzenia</string>
     <string name="calendars_device_create">Utwórz</string>
+    <string name="calendars_device_add">Dodaj urządzenie</string>
     <string name="calendars_device_server">Serwer</string>
     <string name="calendars_device_address">Adres</string>
     <string name="calendars_device_username">Nazwa użytkownika</string>
@@ -112,7 +113,6 @@
     <string name="calendars_sync_permission">Wymagany jest dostęp do kalendarza</string>
     <string name="calendars_sync_authorization">Zaloguj się ponownie, aby kontynuować synchronizację</string>
     <string name="calendars_device_warning">Skopiuj hasło teraz: nie będzie pokazane ponownie.</string>
-    <string name="calendars_device_list">Połączone urządzenia</string>
     <string name="calendars_device_empty">Brak połączonych urządzeń</string>
     <string name="calendars_device_used">ostatnio użyte %1$s</string>
     <string name="calendars_device_never">nigdy</string>

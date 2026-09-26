@@ -186,14 +186,14 @@
     <string name="people_welcome_body">在 Mochi 中尋找好友並建立聯繫。點按「新增聯絡人」即可傳送邀請。</string>
     <string name="people_person_state_contact">已在聯絡人中</string>
     <string name="people_device_create">建立</string>
+    <string name="people_device_add">新增裝置</string>
     <string name="people_device_server">伺服器</string>
     <string name="people_device_username">使用者名稱</string>
     <string name="people_device_done">完成</string>
-    <string name="people_device_list">裝置</string>
     <string name="people_device_used">上次使用 %1$s</string>
     <string name="people_device_never">永不</string>
     <string name="people_sync_now">立即同步</string>
-    <string name="people_device_title">連接裝置</string>
+    <string name="people_device_title">已連接的裝置</string>
     <string name="people_device_name">裝置名稱</string>
     <string name="people_device_address">通訊錄 URL</string>
     <string name="people_device_password">密碼</string>

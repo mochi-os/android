@@ -188,14 +188,14 @@
     <string name="people_welcome_body">Najděte přátele napříč Mochi a spojte se s nimi. Klepnutím na Přidat kontakt odešlete pozvánku.</string>
     <string name="people_person_state_contact">V kontaktech</string>
     <string name="people_device_create">Vytvořit</string>
+    <string name="people_device_add">Přidat zařízení</string>
     <string name="people_device_server">Server</string>
     <string name="people_device_username">Uživatelské jméno</string>
     <string name="people_device_done">Hotovo</string>
-    <string name="people_device_list">Zařízení</string>
     <string name="people_device_used">Naposledy použito %1$s</string>
     <string name="people_device_never">Nikdy</string>
     <string name="people_sync_now">Synchronizovat nyní</string>
-    <string name="people_device_title">Připojit zařízení</string>
+    <string name="people_device_title">Připojená zařízení</string>
     <string name="people_device_name">Název zařízení</string>
     <string name="people_device_address">URL adresáře</string>
     <string name="people_device_password">Heslo</string>

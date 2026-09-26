@@ -187,14 +187,14 @@
     <string name="people_welcome_body">በMochi ላይ ጓደኞችን ያግኙ እና ይገናኙ። ግብዣ ለመላክ እውቂያ አክል የሚለውን ይንኩ።</string>
     <string name="people_person_state_contact">በእውቂያዎች ውስጥ</string>
     <string name="people_device_create">ፍጠር</string>
+    <string name="people_device_add">መሳሪያ ያክሉ</string>
     <string name="people_device_server">ሰርቨር</string>
     <string name="people_device_username">የተጠቃሚ ስም</string>
     <string name="people_device_done">ተጠናቅቋል</string>
-    <string name="people_device_list">መሳሪያዎች</string>
     <string name="people_device_used">መጨረሻ የተጠቀመው %1$s</string>
     <string name="people_device_never">በፍፁም</string>
     <string name="people_sync_now">አሁን ያመሳስሉ</string>
-    <string name="people_device_title">መሳሪያ ያገናኙ</string>
+    <string name="people_device_title">የተገናኙ መሳሪያዎች</string>
     <string name="people_device_name">የመሳሪያ ስም</string>
     <string name="people_device_address">የአድራሻ ደብተር URL</string>
     <string name="people_device_password">የይለፍ ቃል</string>

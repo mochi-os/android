@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Gjeni miq në të gjithë Mochi dhe lidhuni. Prekni Shto kontakt për të dërguar një ftesë.</string>
     <string name="people_person_state_contact">Në kontakte</string>
     <string name="people_device_create">Krijo</string>
+    <string name="people_device_add">Shto një pajisje</string>
     <string name="people_device_server">Serveri</string>
     <string name="people_device_username">Emri i përdoruesit</string>
     <string name="people_device_done">Përfunduar</string>
-    <string name="people_device_list">Pajisjet</string>
     <string name="people_device_used">Përdorur së fundi %1$s</string>
     <string name="people_device_never">Asnjëherë</string>
     <string name="people_sync_now">Sinkronizo tani</string>
-    <string name="people_device_title">Lidh një pajisje</string>
+    <string name="people_device_title">Pajisjet e lidhura</string>
     <string name="people_device_name">Emri i pajisjes</string>
     <string name="people_device_address">URL-ja e librit të adresave</string>
     <string name="people_device_password">Fjalëkalimi</string>

@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Creează</string>
     <string name="calendars_subscribe_submit">Abonează-te</string>
     <string name="calendars_subscribe_url">Adresă</string>
-    <string name="calendars_connect_device">Conectează un dispozitiv</string>
+    <string name="calendars_connect_device">Dispozitive conectate</string>
     <string name="calendars_preferences">Preferințe</string>
     <string name="calendars_name">Nume</string>
     <string name="calendars_rename">Redenumește</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Nesincronizat încă</string>
     <string name="calendars_sync_time">Ultima sincronizare: %1$s</string>
     <string name="calendars_sync_transport">Serverul nu a putut fi contactat</string>
-    <string name="calendars_device_title">Conectează un dispozitiv</string>
+    <string name="calendars_device_title">Dispozitive conectate</string>
     <string name="calendars_device_name">Numele dispozitivului</string>
     <string name="calendars_device_create">Creează</string>
+    <string name="calendars_device_add">Adaugă un dispozitiv</string>
     <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Adresă</string>
     <string name="calendars_device_username">Nume de utilizator</string>
@@ -112,7 +113,6 @@
     <string name="calendars_sync_permission">Este necesar accesul la calendar</string>
     <string name="calendars_sync_authorization">Autentifică-te din nou pentru a continua sincronizarea</string>
     <string name="calendars_device_warning">Copiază parola acum: nu mai poate fi afișată.</string>
-    <string name="calendars_device_list">Dispozitive conectate</string>
     <string name="calendars_device_empty">Niciun dispozitiv conectat</string>
     <string name="calendars_device_used">ultima utilizare %1$s</string>
     <string name="calendars_device_never">niciodată</string>

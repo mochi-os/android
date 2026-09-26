@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Trobeu amics per tot Mochi i connecteu-vos-hi. Toqueu Afegeix un contacte per enviar una invitació.</string>
     <string name="people_person_state_contact">Als contactes</string>
     <string name="people_device_create">Crea</string>
+    <string name="people_device_add">Afegeix un dispositiu</string>
     <string name="people_device_server">Servidor</string>
     <string name="people_device_username">Nom d\'usuari</string>
     <string name="people_device_done">Fet</string>
-    <string name="people_device_list">Dispositius</string>
     <string name="people_device_used">Darrer ús %1$s</string>
     <string name="people_device_never">Mai</string>
     <string name="people_sync_now">Sincronitza ara</string>
-    <string name="people_device_title">Connecta un dispositiu</string>
+    <string name="people_device_title">Dispositius connectats</string>
     <string name="people_device_name">Nom del dispositiu</string>
     <string name="people_device_address">URL de la llibreta d\'adreces</string>
     <string name="people_device_password">Contrasenya</string>

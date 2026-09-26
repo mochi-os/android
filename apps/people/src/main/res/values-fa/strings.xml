@@ -187,14 +187,14 @@
     <string name="people_welcome_body">در سراسر Mochi دوستان را بیابید و ارتباط بگیرید. برای فرستادن دعوت، افزودن مخاطب را بزنید.</string>
     <string name="people_person_state_contact">در مخاطبین</string>
     <string name="people_device_create">ساختن</string>
+    <string name="people_device_add">افزودن دستگاه</string>
     <string name="people_device_server">سرور</string>
     <string name="people_device_username">نام کاربری</string>
     <string name="people_device_done">انجام شد</string>
-    <string name="people_device_list">دستگاه‌ها</string>
     <string name="people_device_used">آخرین استفاده %1$s</string>
     <string name="people_device_never">هرگز</string>
     <string name="people_sync_now">همگام‌سازی اکنون</string>
-    <string name="people_device_title">اتصال دستگاه</string>
+    <string name="people_device_title">دستگاه‌های متصل</string>
     <string name="people_device_name">نام دستگاه</string>
     <string name="people_device_address">نشانی URL دفترچه نشانی</string>
     <string name="people_device_password">گذرواژه</string>

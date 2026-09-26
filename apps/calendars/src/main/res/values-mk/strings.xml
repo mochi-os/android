@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Создај</string>
     <string name="calendars_subscribe_submit">Претплати се</string>
     <string name="calendars_subscribe_url">Адреса</string>
-    <string name="calendars_connect_device">Поврзи уред</string>
+    <string name="calendars_connect_device">Поврзани уреди</string>
     <string name="calendars_preferences">Преференции</string>
     <string name="calendars_name">Име</string>
     <string name="calendars_rename">Преименувај</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Сè уште не е синхронизирано</string>
     <string name="calendars_sync_time">Последна синхронизација: %1$s</string>
     <string name="calendars_sync_transport">Серверот не е достапен</string>
-    <string name="calendars_device_title">Поврзи уред</string>
+    <string name="calendars_device_title">Поврзани уреди</string>
     <string name="calendars_device_name">Име на уредот</string>
     <string name="calendars_device_create">Создај</string>
+    <string name="calendars_device_add">Додај уред</string>
     <string name="calendars_device_server">Сервер</string>
     <string name="calendars_device_address">Адреса</string>
     <string name="calendars_device_username">Корисничко име</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">Потребен е пристап до календарот</string>
     <string name="calendars_sync_authorization">Најавете се повторно за да продолжи синхронизацијата</string>
     <string name="calendars_device_warning">Копирајте ја лозинката сега: не може повторно да се прикаже.</string>
-    <string name="calendars_device_list">Поврзани уреди</string>
     <string name="calendars_device_empty">Нема поврзани уреди</string>
     <string name="calendars_device_used">Последно користен %1$s</string>
     <string name="calendars_device_never">Никогаш</string>

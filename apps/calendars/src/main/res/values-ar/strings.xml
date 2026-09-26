@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">إنشاء</string>
     <string name="calendars_subscribe_submit">اشتراك</string>
     <string name="calendars_subscribe_url">العنوان</string>
-    <string name="calendars_connect_device">ربط جهاز</string>
+    <string name="calendars_connect_device">الأجهزة المتصلة</string>
     <string name="calendars_preferences">التفضيلات</string>
     <string name="calendars_name">الاسم</string>
     <string name="calendars_rename">إعادة تسمية</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">لم تتم المزامنة بعد</string>
     <string name="calendars_sync_time">آخر مزامنة %1$s</string>
     <string name="calendars_sync_transport">تعذر الوصول إلى الخادم</string>
-    <string name="calendars_device_title">ربط جهاز</string>
+    <string name="calendars_device_title">الأجهزة المتصلة</string>
     <string name="calendars_device_name">اسم الجهاز</string>
     <string name="calendars_device_create">إنشاء</string>
+    <string name="calendars_device_add">إضافة جهاز</string>
     <string name="calendars_device_server">الخادم</string>
     <string name="calendars_device_address">العنوان</string>
     <string name="calendars_device_username">اسم المستخدم</string>
@@ -128,7 +129,6 @@
     <string name="calendars_sync_permission">الوصول إلى التقويم مطلوب</string>
     <string name="calendars_sync_authorization">سجّل الدخول مرة أخرى لمتابعة المزامنة</string>
     <string name="calendars_device_warning">انسخ كلمة المرور الآن: لا يمكن عرضها مرة أخرى.</string>
-    <string name="calendars_device_list">الأجهزة المتصلة</string>
     <string name="calendars_device_empty">لا توجد أجهزة متصلة</string>
     <string name="calendars_device_used">آخر استخدام %1$s</string>
     <string name="calendars_device_never">أبداً</string>

@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Tạo</string>
     <string name="calendars_subscribe_submit">Đăng ký</string>
     <string name="calendars_subscribe_url">Địa chỉ</string>
-    <string name="calendars_connect_device">Kết nối thiết bị</string>
+    <string name="calendars_connect_device">Thiết bị đã kết nối</string>
     <string name="calendars_preferences">Tuỳ chọn</string>
     <string name="calendars_name">Tên</string>
     <string name="calendars_rename">Đổi tên</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Chưa đồng bộ</string>
     <string name="calendars_sync_time">Lần đồng bộ cuối: %1$s</string>
     <string name="calendars_sync_transport">Không thể kết nối tới máy chủ</string>
-    <string name="calendars_device_title">Kết nối thiết bị</string>
+    <string name="calendars_device_title">Thiết bị đã kết nối</string>
     <string name="calendars_device_name">Tên thiết bị</string>
     <string name="calendars_device_create">Tạo</string>
+    <string name="calendars_device_add">Thêm thiết bị</string>
     <string name="calendars_device_server">Máy chủ</string>
     <string name="calendars_device_address">Địa chỉ</string>
     <string name="calendars_device_username">Tên người dùng</string>
@@ -112,7 +113,6 @@
     <string name="calendars_sync_permission">Cần quyền truy cập lịch</string>
     <string name="calendars_sync_authorization">Đăng nhập lại để tiếp tục đồng bộ</string>
     <string name="calendars_device_warning">Hãy sao chép mật khẩu ngay: mật khẩu sẽ không hiện lại.</string>
-    <string name="calendars_device_list">Thiết bị đã kết nối</string>
     <string name="calendars_device_empty">Chưa có thiết bị nào kết nối</string>
     <string name="calendars_device_used">dùng lần cuối %1$s</string>
     <string name="calendars_device_never">chưa bao giờ</string>

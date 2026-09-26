@@ -66,10 +66,9 @@ data class DeviceToken(
     }
 }
 
-/** The body of `-/token/list`. */
-data class TokensResponse(val tokens: List<DeviceToken> = emptyList())
+/** The body of `-/token/list`: the devices, and the username every device enters. */
+data class TokensResponse(val tokens: List<DeviceToken> = emptyList(), val username: String = "")
 
-/** The body of `-/token/create`: the credential, shown once. */
 /** `-/token/create`: the device's password, shown this once, and the username to enter beside it. */
 data class TokenResponse(val token: String = "", val username: String = "")
 

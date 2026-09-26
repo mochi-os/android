@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Намирайте приятели в Mochi и се свързвайте с тях. Докоснете Добавяне на контакт, за да изпратите покана.</string>
     <string name="people_person_state_contact">В контактите</string>
     <string name="people_device_create">Създай</string>
+    <string name="people_device_add">Добавяне на устройство</string>
     <string name="people_device_server">Сървър</string>
     <string name="people_device_username">Потребителско име</string>
     <string name="people_device_done">Готово</string>
-    <string name="people_device_list">Устройства</string>
     <string name="people_device_used">Последно използван %1$s</string>
     <string name="people_device_never">Никога</string>
     <string name="people_sync_now">Синхронизирай сега</string>
-    <string name="people_device_title">Свързване на устройство</string>
+    <string name="people_device_title">Свързани устройства</string>
     <string name="people_device_name">Име на устройството</string>
     <string name="people_device_address">URL на адресната книга</string>
     <string name="people_device_password">Парола</string>

@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">创建</string>
     <string name="calendars_subscribe_submit">订阅</string>
     <string name="calendars_subscribe_url">地址</string>
-    <string name="calendars_connect_device">连接设备</string>
+    <string name="calendars_connect_device">已连接的设备</string>
     <string name="calendars_preferences">偏好设置</string>
     <string name="calendars_name">名称</string>
     <string name="calendars_rename">重命名</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">尚未同步</string>
     <string name="calendars_sync_time">上次同步：%1$s</string>
     <string name="calendars_sync_transport">无法连接到服务器</string>
-    <string name="calendars_device_title">连接设备</string>
+    <string name="calendars_device_title">已连接的设备</string>
     <string name="calendars_device_name">设备名称</string>
     <string name="calendars_device_create">创建</string>
+    <string name="calendars_device_add">添加设备</string>
     <string name="calendars_device_server">服务器</string>
     <string name="calendars_device_address">地址</string>
     <string name="calendars_device_username">用户名</string>
@@ -118,7 +119,6 @@
     <string name="calendars_sync_permission">需要日历访问权限</string>
     <string name="calendars_sync_authorization">请重新登录以继续同步</string>
     <string name="calendars_device_warning">请立即复制密码：它无法再次显示。</string>
-    <string name="calendars_device_list">已连接的设备</string>
     <string name="calendars_device_empty">没有已连接的设备</string>
     <string name="calendars_device_used">上次使用 %1$s</string>
     <string name="calendars_device_never">从不</string>

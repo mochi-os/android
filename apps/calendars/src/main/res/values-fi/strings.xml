@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Luo</string>
     <string name="calendars_subscribe_submit">Tilaa</string>
     <string name="calendars_subscribe_url">Osoite</string>
-    <string name="calendars_connect_device">Yhdistä laite</string>
+    <string name="calendars_connect_device">Yhdistetyt laitteet</string>
     <string name="calendars_preferences">Mieltymykset</string>
     <string name="calendars_name">Nimi</string>
     <string name="calendars_rename">Nimeä uudelleen</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Ei vielä synkronoitu</string>
     <string name="calendars_sync_time">Viimeksi synkronoitu %1$s</string>
     <string name="calendars_sync_transport">Palvelimeen ei saatu yhteyttä</string>
-    <string name="calendars_device_title">Yhdistä laite</string>
+    <string name="calendars_device_title">Yhdistetyt laitteet</string>
     <string name="calendars_device_name">Laitteen nimi</string>
     <string name="calendars_device_create">Luo</string>
+    <string name="calendars_device_add">Lisää laite</string>
     <string name="calendars_device_server">Palvelin</string>
     <string name="calendars_device_address">Osoite</string>
     <string name="calendars_device_username">Käyttäjätunnus</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">Kalenterin käyttöoikeus tarvitaan</string>
     <string name="calendars_sync_authorization">Kirjaudu uudelleen sisään jatkaaksesi synkronointia</string>
     <string name="calendars_device_warning">Kopioi salasana nyt: sitä ei voi näyttää uudelleen.</string>
-    <string name="calendars_device_list">Yhdistetyt laitteet</string>
     <string name="calendars_device_empty">Ei yhdistettyjä laitteita</string>
     <string name="calendars_device_used">viimeksi käytetty %1$s</string>
     <string name="calendars_device_never">ei koskaan</string>

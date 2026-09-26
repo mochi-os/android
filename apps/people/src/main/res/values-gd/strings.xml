@@ -189,14 +189,14 @@
     <string name="people_welcome_body">Lorg caraidean air feadh Mochi is ceangail riutha. Thoir gnogag air Cuir neach-aithne ris gus cuireadh a chur.</string>
     <string name="people_person_state_contact">San luchd-aithne</string>
     <string name="people_device_create">Cruthaich</string>
+    <string name="people_device_add">Cuir inneal ris</string>
     <string name="people_device_server">Frithealaiche</string>
     <string name="people_device_username">Ainm-cleachdaiche</string>
     <string name="people_device_done">Deiseil</string>
-    <string name="people_device_list">Innealan</string>
     <string name="people_device_used">Chleachdte mu dheireadh %1$s</string>
     <string name="people_device_never">Chaoidh</string>
     <string name="people_sync_now">Sioncronaich a-nis</string>
-    <string name="people_device_title">Ceangail inneal</string>
+    <string name="people_device_title">Innealan ceangailte</string>
     <string name="people_device_name">Ainm an inneil</string>
     <string name="people_device_address">URL an leabhair-sheòlaidhean</string>
     <string name="people_device_password">Facal-faire</string>

@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Ejuhu angirũnguéra Mochi tuichakue javeve ha ejoaju hendivekuéra. Eikutu Embojuaju ñeñandu emondo hag̃ua jehupytyrã.</string>
     <string name="people_person_state_contact">Contactokuérape</string>
     <string name="people_device_create">Emoheñói</string>
+    <string name="people_device_add">Embojuaju peteĩ mba\'e</string>
     <string name="people_device_server">Mohendaha</string>
     <string name="people_device_username">Puruhára réra</string>
     <string name="people_device_done">Apopyre</string>
-    <string name="people_device_list">Mba\'ekuéra</string>
     <string name="people_device_used">Iporu paha %1$s</string>
     <string name="people_device_never">Araka\'eve</string>
     <string name="people_sync_now">Embojoja ko\'ág̃a</string>
-    <string name="people_device_title">Embojoaju peteĩ mba\'e</string>
+    <string name="people_device_title">Mba\'e oñembojoajúva</string>
     <string name="people_device_name">Mba\'e réra</string>
     <string name="people_device_address">Ogarenda kuatia URL</string>
     <string name="people_device_password">Ñe\'ẽñemi</string>

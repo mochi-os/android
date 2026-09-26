@@ -186,14 +186,14 @@
     <string name="people_welcome_body">Wá àwọn ọ̀rẹ́ káàkiri Mochi kí o sì bá wọn ṣepọ̀. Tẹ Fi olùbásọ̀rọ̀ kún láti fi ìpè ránṣẹ́.</string>
     <string name="people_person_state_contact">Nínú àwọn olùbásọ̀rọ̀</string>
     <string name="people_device_create">Dá</string>
+    <string name="people_device_add">Fi ẹ̀rọ kan kún</string>
     <string name="people_device_server">Sáfà</string>
     <string name="people_device_username">Orúkọ olùmúlò</string>
     <string name="people_device_done">Ti parí</string>
-    <string name="people_device_list">Àwọn ẹ̀rọ</string>
     <string name="people_device_used">Lò gbẹyìn %1$s</string>
     <string name="people_device_never">Láéláé</string>
     <string name="people_sync_now">Ṣe àmúṣiṣẹ́pọ̀ báyìí</string>
-    <string name="people_device_title">So ẹ̀rọ kan pọ̀</string>
+    <string name="people_device_title">Àwọn ẹ̀rọ tí a so pọ̀</string>
     <string name="people_device_name">Orúkọ ẹ̀rọ</string>
     <string name="people_device_address">URL ìwé àdírẹ́sì</string>
     <string name="people_device_password">Ọ̀rọ̀ aṣínà</string>

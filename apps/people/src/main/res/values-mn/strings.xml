@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Mochi даяар найзуудаа олж, холбоо тогтоо. Урилга илгээхийн тулд Харилцагч нэмэх дээр дарна уу.</string>
     <string name="people_person_state_contact">Харилцагчдад байна</string>
     <string name="people_device_create">Үүсгэх</string>
+    <string name="people_device_add">Төхөөрөмж нэмэх</string>
     <string name="people_device_server">Сервер</string>
     <string name="people_device_username">Хэрэглэгчийн нэр</string>
     <string name="people_device_done">Дууссан</string>
-    <string name="people_device_list">Төхөөрөмжүүд</string>
     <string name="people_device_used">Сүүлд ашигласан %1$s</string>
     <string name="people_device_never">Хэзээ ч</string>
     <string name="people_sync_now">Одоо синк хийх</string>
-    <string name="people_device_title">Төхөөрөмж холбох</string>
+    <string name="people_device_title">Холбогдсон төхөөрөмжүүд</string>
     <string name="people_device_name">Төхөөрөмжийн нэр</string>
     <string name="people_device_address">Хаягийн дэвтрийн URL</string>
     <string name="people_device_password">Нууц үг</string>

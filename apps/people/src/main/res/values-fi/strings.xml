@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Löydä kavereita kaikkialta Mochista ja ota yhteyttä. Lähetä kutsu napauttamalla Lisää yhteystieto.</string>
     <string name="people_person_state_contact">Yhteystiedoissa</string>
     <string name="people_device_create">Luo</string>
+    <string name="people_device_add">Lisää laite</string>
     <string name="people_device_server">Palvelin</string>
     <string name="people_device_username">Käyttäjätunnus</string>
     <string name="people_device_done">Valmis</string>
-    <string name="people_device_list">Laitteet</string>
     <string name="people_device_used">Viimeksi käytetty %1$s</string>
     <string name="people_device_never">Ei koskaan</string>
     <string name="people_sync_now">Synkronoi nyt</string>
-    <string name="people_device_title">Yhdistä laite</string>
+    <string name="people_device_title">Yhdistetyt laitteet</string>
     <string name="people_device_name">Laitteen nimi</string>
     <string name="people_device_address">Osoitekirjan URL</string>
     <string name="people_device_password">Salasana</string>

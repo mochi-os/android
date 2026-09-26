@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">உருவாக்கு</string>
     <string name="calendars_subscribe_submit">சந்தாதாராக</string>
     <string name="calendars_subscribe_url">முகவரி</string>
-    <string name="calendars_connect_device">சாதனத்தை இணைக்கவும்</string>
+    <string name="calendars_connect_device">இணைக்கப்பட்ட சாதனங்கள்</string>
     <string name="calendars_preferences">விருப்பத்தேர்வுகள்</string>
     <string name="calendars_name">பெயர்</string>
     <string name="calendars_rename">பெயர் மாற்று</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">இன்னும் ஒத்திசைக்கப்படவில்லை</string>
     <string name="calendars_sync_time">கடைசி ஒத்திசைவு: %1$s</string>
     <string name="calendars_sync_transport">சர்வரை அடைய முடியவில்லை</string>
-    <string name="calendars_device_title">சாதனத்தை இணைக்கவும்</string>
+    <string name="calendars_device_title">இணைக்கப்பட்ட சாதனங்கள்</string>
     <string name="calendars_device_name">சாதனத்தின் பெயர்</string>
     <string name="calendars_device_create">உருவாக்கு</string>
+    <string name="calendars_device_add">சாதனத்தைச் சேர்க்கவும்</string>
     <string name="calendars_device_server">சர்வர்</string>
     <string name="calendars_device_address">முகவரி</string>
     <string name="calendars_device_username">பயனர்பெயர்</string>
@@ -112,7 +113,6 @@
     <string name="calendars_sync_permission">நாட்காட்டி அணுகல் தேவை</string>
     <string name="calendars_sync_authorization">ஒத்திசைவைத் தொடர மீண்டும் உள்நுழையவும்</string>
     <string name="calendars_device_warning">கடவுச்சொல்லை இப்போதே நகலெடுங்கள்: இது மீண்டும் காட்டப்படாது.</string>
-    <string name="calendars_device_list">இணைக்கப்பட்ட சாதனங்கள்</string>
     <string name="calendars_device_empty">எந்த சாதனமும் இணைக்கப்படவில்லை</string>
     <string name="calendars_device_used">கடைசியாகப் பயன்படுத்தியது %1$s</string>
     <string name="calendars_device_never">ஒருபோதும் இல்லை</string>

@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Hitta vänner i hela Mochi och ta kontakt. Tryck på Lägg till kontakt för att skicka en inbjudan.</string>
     <string name="people_person_state_contact">I kontakter</string>
     <string name="people_device_create">Skapa</string>
+    <string name="people_device_add">Lägg till en enhet</string>
     <string name="people_device_server">Server</string>
     <string name="people_device_username">Användarnamn</string>
     <string name="people_device_done">Klar</string>
-    <string name="people_device_list">Enheter</string>
     <string name="people_device_used">Senast använd %1$s</string>
     <string name="people_device_never">Aldrig</string>
     <string name="people_sync_now">Synkronisera nu</string>
-    <string name="people_device_title">Anslut en enhet</string>
+    <string name="people_device_title">Anslutna enheter</string>
     <string name="people_device_name">Enhetsnamn</string>
     <string name="people_device_address">Adressbokens URL</string>
     <string name="people_device_password">Lösenord</string>

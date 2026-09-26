@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Jieun</string>
     <string name="calendars_subscribe_submit">Langgan</string>
     <string name="calendars_subscribe_url">Alamat</string>
-    <string name="calendars_connect_device">Sambungkeun pakakas</string>
+    <string name="calendars_connect_device">Alat nu nyambung</string>
     <string name="calendars_preferences">Préferénsi</string>
     <string name="calendars_name">Ngaran</string>
     <string name="calendars_rename">Ganti ngaran</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Teu acan disinkronkeun</string>
     <string name="calendars_sync_time">Sinkronisasi pamungkas: %1$s</string>
     <string name="calendars_sync_transport">Teu tiasa nyambung ka server</string>
-    <string name="calendars_device_title">Sambungkeun pakakas</string>
+    <string name="calendars_device_title">Alat nu nyambung</string>
     <string name="calendars_device_name">Ngaran pakakas</string>
     <string name="calendars_device_create">Jieun</string>
+    <string name="calendars_device_add">Tambah pakakas</string>
     <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Alamat</string>
     <string name="calendars_device_username">Ngaran pamaké</string>
@@ -112,7 +113,6 @@
     <string name="calendars_sync_permission">Peryogi aksés kana kalénder</string>
     <string name="calendars_sync_authorization">Lebet deui supados sinkronisasi tetep jalan</string>
     <string name="calendars_device_warning">Salin kecap konci ayeuna: moal dipidangkeun deui.</string>
-    <string name="calendars_device_list">Alat nu nyambung</string>
     <string name="calendars_device_empty">Teu aya alat nu nyambung</string>
     <string name="calendars_device_used">panungtung dipaké %1$s</string>
     <string name="calendars_device_never">teu kantos</string>

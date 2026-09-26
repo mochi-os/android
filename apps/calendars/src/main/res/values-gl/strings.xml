@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Crear</string>
     <string name="calendars_subscribe_submit">Subscribirse</string>
     <string name="calendars_subscribe_url">Enderezo</string>
-    <string name="calendars_connect_device">Conectar un dispositivo</string>
+    <string name="calendars_connect_device">Dispositivos conectados</string>
     <string name="calendars_preferences">Preferencias</string>
     <string name="calendars_name">Nome</string>
     <string name="calendars_rename">Renomear</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Aínda non se sincronizou</string>
     <string name="calendars_sync_time">Última sincronización: %1$s</string>
     <string name="calendars_sync_transport">Non se puido contactar co servidor</string>
-    <string name="calendars_device_title">Conectar un dispositivo</string>
+    <string name="calendars_device_title">Dispositivos conectados</string>
     <string name="calendars_device_name">Nome do dispositivo</string>
     <string name="calendars_device_create">Crear</string>
+    <string name="calendars_device_add">Engadir un dispositivo</string>
     <string name="calendars_device_server">Servidor</string>
     <string name="calendars_device_address">Enderezo</string>
     <string name="calendars_device_username">Nome de usuario</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">Cómpre acceso ao calendario</string>
     <string name="calendars_sync_authorization">Inicia sesión de novo para seguir sincronizando</string>
     <string name="calendars_device_warning">Copia o contrasinal agora: non se poderá mostrar de novo.</string>
-    <string name="calendars_device_list">Dispositivos conectados</string>
     <string name="calendars_device_empty">Non hai dispositivos conectados</string>
     <string name="calendars_device_used">último uso %1$s</string>
     <string name="calendars_device_never">nunca</string>

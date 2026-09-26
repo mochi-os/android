@@ -149,11 +149,9 @@
     <string name="people_device_server">Servidor</string>
     <string name="people_device_username">Nome de usuário</string>
     <string name="people_device_done">Pronto</string>
-    <string name="people_device_list">Dispositivos</string>
     <string name="people_device_used">Último uso em %1$s</string>
     <string name="people_device_never">Nunca</string>
     <string name="people_sync_now">Sincronizar agora</string>
-    <string name="people_device_title">Conectar um dispositivo</string>
     <string name="people_device_name">Nome do dispositivo</string>
     <string name="people_device_address">URL do catálogo de endereços</string>
     <string name="people_device_password">Senha</string>

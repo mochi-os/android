@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Unda</string>
     <string name="calendars_subscribe_submit">Jiunge</string>
     <string name="calendars_subscribe_url">Anwani</string>
-    <string name="calendars_connect_device">Unganisha kifaa</string>
+    <string name="calendars_connect_device">Vifaa vilivyounganishwa</string>
     <string name="calendars_preferences">Mapendeleo</string>
     <string name="calendars_name">Jina</string>
     <string name="calendars_rename">Badilisha jina</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Bado haijasawazishwa</string>
     <string name="calendars_sync_time">Usawazishaji wa mwisho: %1$s</string>
     <string name="calendars_sync_transport">Haikuweza kufikia seva</string>
-    <string name="calendars_device_title">Unganisha kifaa</string>
+    <string name="calendars_device_title">Vifaa vilivyounganishwa</string>
     <string name="calendars_device_name">Jina la kifaa</string>
     <string name="calendars_device_create">Unda</string>
+    <string name="calendars_device_add">Ongeza kifaa</string>
     <string name="calendars_device_server">Seva</string>
     <string name="calendars_device_address">Anwani</string>
     <string name="calendars_device_username">Jina la mtumiaji</string>
@@ -112,7 +113,6 @@
     <string name="calendars_sync_permission">Ufikiaji wa kalenda unahitajika</string>
     <string name="calendars_sync_authorization">Ingia tena ili kuendelea kusawazisha</string>
     <string name="calendars_device_warning">Nakili nenosiri sasa: haliwezi kuonyeshwa tena.</string>
-    <string name="calendars_device_list">Vifaa vilivyounganishwa</string>
     <string name="calendars_device_empty">Hakuna kifaa kilichounganishwa</string>
     <string name="calendars_device_used">kilitumika mwisho %1$s</string>
     <string name="calendars_device_never">kamwe</string>

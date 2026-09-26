@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Skapa</string>
     <string name="calendars_subscribe_submit">Prenumerera</string>
     <string name="calendars_subscribe_url">Adress</string>
-    <string name="calendars_connect_device">Anslut en enhet</string>
+    <string name="calendars_connect_device">Anslutna enheter</string>
     <string name="calendars_preferences">Inställningar</string>
     <string name="calendars_name">Namn</string>
     <string name="calendars_rename">Byt namn</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Inte synkroniserad än</string>
     <string name="calendars_sync_time">Senast synkroniserad %1$s</string>
     <string name="calendars_sync_transport">Kunde inte nå servern</string>
-    <string name="calendars_device_title">Anslut en enhet</string>
+    <string name="calendars_device_title">Anslutna enheter</string>
     <string name="calendars_device_name">Enhetsnamn</string>
     <string name="calendars_device_create">Skapa</string>
+    <string name="calendars_device_add">Lägg till en enhet</string>
     <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Adress</string>
     <string name="calendars_device_username">Användarnamn</string>
@@ -112,7 +113,6 @@
     <string name="calendars_sync_permission">Åtkomst till kalendern krävs</string>
     <string name="calendars_sync_authorization">Logga in igen för att fortsätta synkronisera</string>
     <string name="calendars_device_warning">Kopiera lösenordet nu: det kan inte visas igen.</string>
-    <string name="calendars_device_list">Anslutna enheter</string>
     <string name="calendars_device_empty">Inga enheter anslutna</string>
     <string name="calendars_device_used">senast använd %1$s</string>
     <string name="calendars_device_never">aldrig</string>

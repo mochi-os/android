@@ -187,14 +187,14 @@
     <string name="people_welcome_body">لە Mochi هاوڕێ بدۆزەرەوە و پەیوەندی بکە. بۆ ناردنی بانگهێشت دەست بنێ بە زیادکردنی پەیوەندی.</string>
     <string name="people_person_state_contact">لە پەیوەندییەکاندا</string>
     <string name="people_device_create">دروستکردن</string>
+    <string name="people_device_add">زیادکردنی ئامێر</string>
     <string name="people_device_server">ڕاژەکار</string>
     <string name="people_device_username">ناوی بەکارهێنەر</string>
     <string name="people_device_done">تەواوبوو</string>
-    <string name="people_device_list">ئامێرەکان</string>
     <string name="people_device_used">کۆتا بەکارھێنان %1$s</string>
     <string name="people_device_never">هەرگیز</string>
     <string name="people_sync_now">ئێستا هاوکاتبکە</string>
-    <string name="people_device_title">ئامێرێک بەستنەوە</string>
+    <string name="people_device_title">ئامێرە پەیوەستکراوەکان</string>
     <string name="people_device_name">ناوی ئامێر</string>
     <string name="people_device_address">URLی دەفتەری ناونیشان</string>
     <string name="people_device_password">وشەی نهێنی</string>

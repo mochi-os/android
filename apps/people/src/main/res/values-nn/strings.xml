@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Finn vener på tvers av Mochi og ta kontakt. Trykk på Legg til kontakt for å sende ein invitasjon.</string>
     <string name="people_person_state_contact">I kontaktar</string>
     <string name="people_device_create">Opprett</string>
+    <string name="people_device_add">Legg til ei eining</string>
     <string name="people_device_server">Tenar</string>
     <string name="people_device_username">Brukarnamn</string>
     <string name="people_device_done">Ferdig</string>
-    <string name="people_device_list">Einingar</string>
     <string name="people_device_used">Sist brukt %1$s</string>
     <string name="people_device_never">Aldri</string>
     <string name="people_sync_now">Synkroniser no</string>
-    <string name="people_device_title">Kople til ei eining</string>
+    <string name="people_device_title">Tilkopla einingar</string>
     <string name="people_device_name">Einingsnamn</string>
     <string name="people_device_address">URL til adresseboka</string>
     <string name="people_device_password">Passord</string>

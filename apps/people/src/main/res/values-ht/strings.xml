@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Jwenn zanmi toupatou nan Mochi epi konekte. Peze Ajoute kontak pou voye yon envitasyon.</string>
     <string name="people_person_state_contact">Nan kontak</string>
     <string name="people_device_create">Kreye</string>
+    <string name="people_device_add">Ajoute yon aparèy</string>
     <string name="people_device_server">Sèvè</string>
     <string name="people_device_username">Non itilizatè</string>
     <string name="people_device_done">Fini</string>
-    <string name="people_device_list">Aparèy yo</string>
     <string name="people_device_used">Dènye itilizasyon %1$s</string>
     <string name="people_device_never">Janmen</string>
     <string name="people_sync_now">Sinkronize kounye a</string>
-    <string name="people_device_title">Konekte yon aparèy</string>
+    <string name="people_device_title">Aparèy konekte yo</string>
     <string name="people_device_name">Non aparèy la</string>
     <string name="people_device_address">URL kanè adrès la</string>
     <string name="people_device_password">Modpas</string>

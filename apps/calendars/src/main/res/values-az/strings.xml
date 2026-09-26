@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Yarat</string>
     <string name="calendars_subscribe_submit">Abunə ol</string>
     <string name="calendars_subscribe_url">Ünvan</string>
-    <string name="calendars_connect_device">Cihaz qoşun</string>
+    <string name="calendars_connect_device">Qoşulmuş cihazlar</string>
     <string name="calendars_preferences">Üstünlüklər</string>
     <string name="calendars_name">Ad</string>
     <string name="calendars_rename">Adı dəyiş</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Hələ sinxronlaşdırılmayıb</string>
     <string name="calendars_sync_time">Son sinxronlaşdırma: %1$s</string>
     <string name="calendars_sync_transport">Serverə qoşulmaq mümkün olmadı</string>
-    <string name="calendars_device_title">Cihaz qoşun</string>
+    <string name="calendars_device_title">Qoşulmuş cihazlar</string>
     <string name="calendars_device_name">Cihaz adı</string>
     <string name="calendars_device_create">Yarat</string>
+    <string name="calendars_device_add">Cihaz əlavə et</string>
     <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Ünvan</string>
     <string name="calendars_device_username">İstifadəçi adı</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">Təqvimə giriş tələb olunur</string>
     <string name="calendars_sync_authorization">Sinxronizasiyanı davam etdirmək üçün yenidən daxil olun</string>
     <string name="calendars_device_warning">Şifrəni indi kopyalayın: bir daha göstərilə bilməz.</string>
-    <string name="calendars_device_list">Qoşulmuş cihazlar</string>
     <string name="calendars_device_empty">Heç bir cihaz qoşulmayıb</string>
     <string name="calendars_device_used">son istifadə %1$s</string>
     <string name="calendars_device_never">heç vaxt</string>

@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Gawé</string>
     <string name="calendars_subscribe_submit">Langganan</string>
     <string name="calendars_subscribe_url">Alamat</string>
-    <string name="calendars_connect_device">Sambungake piranti</string>
+    <string name="calendars_connect_device">Piranti sing kasambung</string>
     <string name="calendars_preferences">Preferensi</string>
     <string name="calendars_name">Jeneng</string>
     <string name="calendars_rename">Owahi jeneng</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Durung disinkronaké</string>
     <string name="calendars_sync_time">Pungkasan disinkronaké %1$s</string>
     <string name="calendars_sync_transport">Ora bisa nyambung menyang server</string>
-    <string name="calendars_device_title">Sambungake piranti</string>
+    <string name="calendars_device_title">Piranti sing kasambung</string>
     <string name="calendars_device_name">Jeneng piranti</string>
     <string name="calendars_device_create">Gawé</string>
+    <string name="calendars_device_add">Tambah piranti</string>
     <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Alamat</string>
     <string name="calendars_device_username">Jeneng panganggo</string>
@@ -118,7 +119,6 @@
     <string name="calendars_sync_permission">Butuh akses kalender</string>
     <string name="calendars_sync_authorization">Mlebu manèh supaya sinkronisasi terus mlaku</string>
     <string name="calendars_device_warning">Salin tembung sandhi saiki: ora bisa ditampilake manèh.</string>
-    <string name="calendars_device_list">Piranti sing kasambung</string>
     <string name="calendars_device_empty">Ora ana piranti sing kasambung</string>
     <string name="calendars_device_used">Pungkasan dianggo %1$s</string>
     <string name="calendars_device_never">ora tau</string>

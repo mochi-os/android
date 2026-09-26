@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Atopa amigos por todo Mochi e conecta con eles. Toca Engadir contacto para enviar un convite.</string>
     <string name="people_person_state_contact">Nos contactos</string>
     <string name="people_device_create">Crear</string>
+    <string name="people_device_add">Engadir un dispositivo</string>
     <string name="people_device_server">Servidor</string>
     <string name="people_device_username">Nome de usuario</string>
     <string name="people_device_done">Feito</string>
-    <string name="people_device_list">Dispositivos</string>
     <string name="people_device_used">Último uso %1$s</string>
     <string name="people_device_never">Nunca</string>
     <string name="people_sync_now">Sincronizar agora</string>
-    <string name="people_device_title">Conectar un dispositivo</string>
+    <string name="people_device_title">Dispositivos conectados</string>
     <string name="people_device_name">Nome do dispositivo</string>
     <string name="people_device_address">URL do caderno de enderezos</string>
     <string name="people_device_password">Contrasinal</string>

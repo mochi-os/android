@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">შექმნა</string>
     <string name="calendars_subscribe_submit">გამოწერა</string>
     <string name="calendars_subscribe_url">მისამართი</string>
-    <string name="calendars_connect_device">მოწყობილობის დაკავშირება</string>
+    <string name="calendars_connect_device">დაკავშირებული მოწყობილობები</string>
     <string name="calendars_preferences">პარამეტრები</string>
     <string name="calendars_name">სახელი</string>
     <string name="calendars_rename">სახელის შეცვლა</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">ჯერ არ არის სინქრონიზებული</string>
     <string name="calendars_sync_time">ბოლო სინქრონიზაცია: %1$s</string>
     <string name="calendars_sync_transport">სერვერთან დაკავშირება ვერ მოხერხდა</string>
-    <string name="calendars_device_title">მოწყობილობის დაკავშირება</string>
+    <string name="calendars_device_title">დაკავშირებული მოწყობილობები</string>
     <string name="calendars_device_name">მოწყობილობის სახელი</string>
     <string name="calendars_device_create">შექმნა</string>
+    <string name="calendars_device_add">მოწყობილობის დამატება</string>
     <string name="calendars_device_server">სერვერი</string>
     <string name="calendars_device_address">მისამართი</string>
     <string name="calendars_device_username">მომხმარებლის სახელი</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">საჭიროა კალენდარზე წვდომა</string>
     <string name="calendars_sync_authorization">სინქრონიზაციის გასაგრძელებლად ხელახლა შედით</string>
     <string name="calendars_device_warning">დააკოპირეთ პაროლი ახლავე: მისი ხელახლა ჩვენება შეუძლებელია.</string>
-    <string name="calendars_device_list">დაკავშირებული მოწყობილობები</string>
     <string name="calendars_device_empty">დაკავშირებული მოწყობილობები არ არის</string>
     <string name="calendars_device_used">ბოლოს გამოყენებული %1$s</string>
     <string name="calendars_device_never">არასოდეს</string>

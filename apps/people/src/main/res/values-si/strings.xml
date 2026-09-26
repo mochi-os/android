@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Mochi පුරා මිතුරන් සොයාගෙන සම්බන්ධ වන්න. ආරාධනයක් යැවීමට සම්බන්ධතාවය එක් කරන්න තට්ටු කරන්න.</string>
     <string name="people_person_state_contact">සම්බන්ධතාවල</string>
     <string name="people_device_create">නිර්මාණය කරන්න</string>
+    <string name="people_device_add">උපාංගයක් එක් කරන්න</string>
     <string name="people_device_server">සේවාදායකය</string>
     <string name="people_device_username">පරිශීලක නාමය</string>
     <string name="people_device_done">නිමයි</string>
-    <string name="people_device_list">උපාංග</string>
     <string name="people_device_used">අවසන් භාවිතය %1$s</string>
     <string name="people_device_never">කවදාවත්</string>
     <string name="people_sync_now">දැන් සමමුහුර්ත කරන්න</string>
-    <string name="people_device_title">උපාංගයක් සම්බන්ධ කරන්න</string>
+    <string name="people_device_title">සම්බන්ධිත උපාංග</string>
     <string name="people_device_name">උපාංගයේ නම</string>
     <string name="people_device_address">ලිපින පොතේ URL</string>
     <string name="people_device_password">මුරපදය</string>

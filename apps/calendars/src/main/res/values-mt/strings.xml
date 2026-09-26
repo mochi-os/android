@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Oħloq</string>
     <string name="calendars_subscribe_submit">Abbona</string>
     <string name="calendars_subscribe_url">Indirizz</string>
-    <string name="calendars_connect_device">Qabbad apparat</string>
+    <string name="calendars_connect_device">Apparati mqabbda</string>
     <string name="calendars_preferences">Preferenzi</string>
     <string name="calendars_name">Isem</string>
     <string name="calendars_rename">Irrinomina</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Għadu mhux sinkronizzat</string>
     <string name="calendars_sync_time">L-aħħar sinkronizzazzjoni: %1$s</string>
     <string name="calendars_sync_transport">Ma rnexxiex jilħaq is-server</string>
-    <string name="calendars_device_title">Qabbad apparat</string>
+    <string name="calendars_device_title">Apparati mqabbda</string>
     <string name="calendars_device_name">Isem l-apparat</string>
     <string name="calendars_device_create">Oħloq</string>
+    <string name="calendars_device_add">Żid apparat</string>
     <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Indirizz</string>
     <string name="calendars_device_username">Isem tal-utent</string>
@@ -126,7 +127,6 @@
     <string name="calendars_sync_permission">Hemm bżonn aċċess għall-kalendarju</string>
     <string name="calendars_sync_authorization">Erġa\' idħol biex tkompli tissinkronizza</string>
     <string name="calendars_device_warning">Ikkupja l-password issa: ma tistax tintwera mill-ġdid.</string>
-    <string name="calendars_device_list">Apparati mqabbda</string>
     <string name="calendars_device_empty">L-ebda apparat mhu mqabbad</string>
     <string name="calendars_device_used">L-aħħar uża %1$s</string>
     <string name="calendars_device_never">qatt</string>

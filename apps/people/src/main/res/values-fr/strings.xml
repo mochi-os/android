@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Trouvez des amis dans tout Mochi et échangez avec eux. Touchez Ajouter un contact pour envoyer une invitation.</string>
     <string name="people_person_state_contact">Dans les contacts</string>
     <string name="people_device_create">Créer</string>
+    <string name="people_device_add">Ajouter un appareil</string>
     <string name="people_device_server">Serveur</string>
     <string name="people_device_username">Nom d\'utilisateur</string>
     <string name="people_device_done">Terminé</string>
-    <string name="people_device_list">Appareils</string>
     <string name="people_device_used">Dernière utilisation %1$s</string>
     <string name="people_device_never">Jamais</string>
     <string name="people_sync_now">Synchroniser maintenant</string>
-    <string name="people_device_title">Connecter un appareil</string>
+    <string name="people_device_title">Appareils connectés</string>
     <string name="people_device_name">Nom de l\'appareil</string>
     <string name="people_device_address">URL du carnet d\'adresses</string>
     <string name="people_device_password">Mot de passe</string>

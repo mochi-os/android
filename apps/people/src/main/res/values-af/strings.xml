@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Vind vriende regoor Mochi en maak kontak. Tik Voeg kontak by om \'n uitnodiging te stuur.</string>
     <string name="people_person_state_contact">In kontakte</string>
     <string name="people_device_create">Skep</string>
+    <string name="people_device_add">Voeg \'n toestel by</string>
     <string name="people_device_server">Bediener</string>
     <string name="people_device_username">Gebruikersnaam</string>
     <string name="people_device_done">Klaar</string>
-    <string name="people_device_list">Toestelle</string>
     <string name="people_device_used">Laaste gebruik %1$s</string>
     <string name="people_device_never">Nooit</string>
     <string name="people_sync_now">Sinkroniseer nou</string>
-    <string name="people_device_title">Koppel \'n toestel</string>
+    <string name="people_device_title">Verbinde toestelle</string>
     <string name="people_device_name">Toestelnaam</string>
     <string name="people_device_address">Adresboek-URL</string>
     <string name="people_device_password">Wagwoord</string>

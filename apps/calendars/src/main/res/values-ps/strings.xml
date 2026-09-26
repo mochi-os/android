@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">جوړ کړئ</string>
     <string name="calendars_subscribe_submit">ګډون وکړئ</string>
     <string name="calendars_subscribe_url">پته</string>
-    <string name="calendars_connect_device">وسیله وصل کړئ</string>
+    <string name="calendars_connect_device">نښلول شوې وسیلې</string>
     <string name="calendars_preferences">غوره توبونه</string>
     <string name="calendars_name">نوم</string>
     <string name="calendars_rename">بیا نومول</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">لا تر اوسه نه دی همغږي شوی</string>
     <string name="calendars_sync_time">وروستۍ همغږي: %1$s</string>
     <string name="calendars_sync_transport">سرور ته نه شو رسېدلی</string>
-    <string name="calendars_device_title">وسیله وصل کړئ</string>
+    <string name="calendars_device_title">نښلول شوې وسیلې</string>
     <string name="calendars_device_name">د وسیلې نوم</string>
     <string name="calendars_device_create">جوړ کړئ</string>
+    <string name="calendars_device_add">وسیله اضافه کړئ</string>
     <string name="calendars_device_server">سرور</string>
     <string name="calendars_device_address">پته</string>
     <string name="calendars_device_username">د کاروونکي نوم</string>
@@ -112,7 +113,6 @@
     <string name="calendars_sync_permission">کليز ته لاسرسی اړین دی</string>
     <string name="calendars_sync_authorization">د همغږۍ د دوام لپاره بیا ننوځئ</string>
     <string name="calendars_device_warning">پاسورډ اوس کاپي کړئ: بیا به ونه ښودل شي.</string>
-    <string name="calendars_device_list">نښلول شوې وسیلې</string>
     <string name="calendars_device_empty">هېڅ وسیله نه ده نښلول شوې</string>
     <string name="calendars_device_used">وروستی کارول %1$s</string>
     <string name="calendars_device_never">هېڅکله</string>

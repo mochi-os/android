@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Yaratish</string>
     <string name="calendars_subscribe_submit">Obuna boʻlish</string>
     <string name="calendars_subscribe_url">Manzil</string>
-    <string name="calendars_connect_device">Qurilma ulash</string>
+    <string name="calendars_connect_device">Ulangan qurilmalar</string>
     <string name="calendars_preferences">Sozlamalar</string>
     <string name="calendars_name">Nomi</string>
     <string name="calendars_rename">Nomini oʻzgartirish</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Hali sinxronlanmagan</string>
     <string name="calendars_sync_time">Oxirgi sinxronlash: %1$s</string>
     <string name="calendars_sync_transport">Serverga ulanib bo\'lmadi</string>
-    <string name="calendars_device_title">Qurilma ulash</string>
+    <string name="calendars_device_title">Ulangan qurilmalar</string>
     <string name="calendars_device_name">Qurilma nomi</string>
     <string name="calendars_device_create">Yaratish</string>
+    <string name="calendars_device_add">Qurilma qoʻshish</string>
     <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Manzil</string>
     <string name="calendars_device_username">Foydalanuvchi nomi</string>
@@ -112,7 +113,6 @@
     <string name="calendars_sync_permission">Kalendarga ruxsat kerak</string>
     <string name="calendars_sync_authorization">Sinxronlashni davom ettirish uchun qayta kiring</string>
     <string name="calendars_device_warning">Parolni hozir nusxalang: u boshqa koʻrsatilmaydi.</string>
-    <string name="calendars_device_list">Ulangan qurilmalar</string>
     <string name="calendars_device_empty">Ulangan qurilma yoʻq</string>
     <string name="calendars_device_used">oxirgi foydalanilgan %1$s</string>
     <string name="calendars_device_never">hech qachon</string>

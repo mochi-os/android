@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Mochi वर मित्र शोधा आणि जोडले जा. आमंत्रण पाठवण्यासाठी संपर्क जोडा दाबा.</string>
     <string name="people_person_state_contact">संपर्कांमध्ये</string>
     <string name="people_device_create">तयार करा</string>
+    <string name="people_device_add">डिव्हाइस जोडा</string>
     <string name="people_device_server">सर्व्हर</string>
     <string name="people_device_username">वापरकर्तानाव</string>
     <string name="people_device_done">पूर्ण</string>
-    <string name="people_device_list">डिव्हाइस</string>
     <string name="people_device_used">शेवटचे वापरले %1$s</string>
     <string name="people_device_never">कधीही नाही</string>
     <string name="people_sync_now">आता सिंक करा</string>
-    <string name="people_device_title">डिव्हाइस कनेक्ट करा</string>
+    <string name="people_device_title">कनेक्ट केलेली डिव्हाइस</string>
     <string name="people_device_name">डिव्हाइसचे नाव</string>
     <string name="people_device_address">पत्तापुस्तिकेची URL</string>
     <string name="people_device_password">पासवर्ड</string>

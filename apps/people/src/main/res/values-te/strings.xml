@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Mochi అంతటా స్నేహితులను కనుగొని కలవండి. ఆహ్వానం పంపడానికి పరిచయాన్ని జోడించు నొక్కండి.</string>
     <string name="people_person_state_contact">పరిచయాలలో</string>
     <string name="people_device_create">సృష్టించండి</string>
+    <string name="people_device_add">పరికరాన్ని జోడించండి</string>
     <string name="people_device_server">సర్వర్</string>
     <string name="people_device_username">వినియోగదారు పేరు</string>
     <string name="people_device_done">పూర్తయింది</string>
-    <string name="people_device_list">పరికరాలు</string>
     <string name="people_device_used">చివరిగా ఉపయోగించబడింది %1$s</string>
     <string name="people_device_never">ఎప్పుడూ లేదు</string>
     <string name="people_sync_now">ఇప్పుడే సింక్ చేయండి</string>
-    <string name="people_device_title">పరికరాన్ని కనెక్ట్ చేయండి</string>
+    <string name="people_device_title">కనెక్ట్ చేసిన పరికరాలు</string>
     <string name="people_device_name">పరికరం పేరు</string>
     <string name="people_device_address">చిరునామా పుస్తకం URL</string>
     <string name="people_device_password">పాస్‌వర్డ్</string>

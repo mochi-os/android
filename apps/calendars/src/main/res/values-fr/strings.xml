@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Créer</string>
     <string name="calendars_subscribe_submit">S\'abonner</string>
     <string name="calendars_subscribe_url">Adresse</string>
-    <string name="calendars_connect_device">Connecter un appareil</string>
+    <string name="calendars_connect_device">Appareils connectés</string>
     <string name="calendars_preferences">Préférences</string>
     <string name="calendars_name">Nom</string>
     <string name="calendars_rename">Renommer</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Pas encore synchronisé</string>
     <string name="calendars_sync_time">Dernière synchronisation : %1$s</string>
     <string name="calendars_sync_transport">Impossible de joindre le serveur</string>
-    <string name="calendars_device_title">Connecter un appareil</string>
+    <string name="calendars_device_title">Appareils connectés</string>
     <string name="calendars_device_name">Nom de l\'appareil</string>
     <string name="calendars_device_create">Créer</string>
+    <string name="calendars_device_add">Ajouter un appareil</string>
     <string name="calendars_device_server">Serveur</string>
     <string name="calendars_device_address">Adresse</string>
     <string name="calendars_device_username">Nom d\'utilisateur</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">L\'accès au calendrier est nécessaire</string>
     <string name="calendars_sync_authorization">Reconnectez-vous pour continuer la synchronisation</string>
     <string name="calendars_device_warning">Copiez le mot de passe maintenant : il ne pourra plus être affiché.</string>
-    <string name="calendars_device_list">Appareils connectés</string>
     <string name="calendars_device_empty">Aucun appareil connecté</string>
     <string name="calendars_device_used">dernière utilisation %1$s</string>
     <string name="calendars_device_never">jamais</string>

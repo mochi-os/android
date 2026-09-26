@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">സൃഷ്ടിക്കുക</string>
     <string name="calendars_subscribe_submit">സബ്സ്ക്രൈബ് ചെയ്യുക</string>
     <string name="calendars_subscribe_url">വിലാസം</string>
-    <string name="calendars_connect_device">ഒരു ഡിവൈസ് ബന്ധിപ്പിക്കുക</string>
+    <string name="calendars_connect_device">ബന്ധിപ്പിച്ച ഡിവൈസുകൾ</string>
     <string name="calendars_preferences">മുൻഗണനകൾ</string>
     <string name="calendars_name">പേര്</string>
     <string name="calendars_rename">പുനർനാമകരണം ചെയ്യുക</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">ഇതുവരെ സിങ്ക് ചെയ്തിട്ടില്ല</string>
     <string name="calendars_sync_time">അവസാനം സിങ്ക് ചെയ്തത്: %1$s</string>
     <string name="calendars_sync_transport">സെർവറിലേക്ക് എത്താൻ കഴിഞ്ഞില്ല</string>
-    <string name="calendars_device_title">ഒരു ഡിവൈസ് ബന്ധിപ്പിക്കുക</string>
+    <string name="calendars_device_title">ബന്ധിപ്പിച്ച ഡിവൈസുകൾ</string>
     <string name="calendars_device_name">ഡിവൈസിന്റെ പേര്</string>
     <string name="calendars_device_create">സൃഷ്ടിക്കുക</string>
+    <string name="calendars_device_add">ഒരു ഡിവൈസ് ചേർക്കുക</string>
     <string name="calendars_device_server">സെർവർ</string>
     <string name="calendars_device_address">വിലാസം</string>
     <string name="calendars_device_username">ഉപയോക്തൃനാമം</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">കലണ്ടർ ആക്‌സസ് ആവശ്യമാണ്</string>
     <string name="calendars_sync_authorization">സമന്വയം തുടരാൻ വീണ്ടും സൈൻ ഇൻ ചെയ്യുക</string>
     <string name="calendars_device_warning">പാസ്‌വേഡ് ഇപ്പോൾ തന്നെ പകർത്തുക: ഇത് വീണ്ടും കാണിക്കാനാകില്ല.</string>
-    <string name="calendars_device_list">ബന്ധിപ്പിച്ച ഡിവൈസുകൾ</string>
     <string name="calendars_device_empty">ഡിവൈസുകളൊന്നും ബന്ധിപ്പിച്ചിട്ടില്ല</string>
     <string name="calendars_device_used">അവസാനം ഉപയോഗിച്ചത് %1$s</string>
     <string name="calendars_device_never">ഒരിക്കലുമില്ല</string>

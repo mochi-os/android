@@ -188,14 +188,14 @@
     <string name="people_welcome_body">Raskite draugų visoje Mochi ir susisiekite. Palieskite Pridėti kontaktą, kad išsiųstumėte kvietimą.</string>
     <string name="people_person_state_contact">Kontaktuose</string>
     <string name="people_device_create">Sukurti</string>
+    <string name="people_device_add">Pridėti įrenginį</string>
     <string name="people_device_server">Serveris</string>
     <string name="people_device_username">Vartotojo vardas</string>
     <string name="people_device_done">Atlikta</string>
-    <string name="people_device_list">Įrenginiai</string>
     <string name="people_device_used">Paskutinį kartą naudota %1$s</string>
     <string name="people_device_never">Niekada</string>
     <string name="people_sync_now">Sinchronizuoti dabar</string>
-    <string name="people_device_title">Prijungti įrenginį</string>
+    <string name="people_device_title">Prijungti įrenginiai</string>
     <string name="people_device_name">Įrenginio pavadinimas</string>
     <string name="people_device_address">Adresų knygos URL</string>
     <string name="people_device_password">Slaptažodis</string>

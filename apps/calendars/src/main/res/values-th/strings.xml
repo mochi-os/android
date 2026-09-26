@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">สร้าง</string>
     <string name="calendars_subscribe_submit">ติดตาม</string>
     <string name="calendars_subscribe_url">ที่อยู่</string>
-    <string name="calendars_connect_device">เชื่อมต่ออุปกรณ์</string>
+    <string name="calendars_connect_device">อุปกรณ์ที่เชื่อมต่อ</string>
     <string name="calendars_preferences">การตั้งค่า</string>
     <string name="calendars_name">ชื่อ</string>
     <string name="calendars_rename">เปลี่ยนชื่อ</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">ยังไม่ได้ซิงค์</string>
     <string name="calendars_sync_time">ซิงค์ล่าสุด %1$s</string>
     <string name="calendars_sync_transport">ไม่สามารถเชื่อมต่อเซิร์ฟเวอร์ได้</string>
-    <string name="calendars_device_title">เชื่อมต่ออุปกรณ์</string>
+    <string name="calendars_device_title">อุปกรณ์ที่เชื่อมต่อ</string>
     <string name="calendars_device_name">ชื่ออุปกรณ์</string>
     <string name="calendars_device_create">สร้าง</string>
+    <string name="calendars_device_add">เพิ่มอุปกรณ์</string>
     <string name="calendars_device_server">เซิร์ฟเวอร์</string>
     <string name="calendars_device_address">ที่อยู่</string>
     <string name="calendars_device_username">ชื่อผู้ใช้</string>
@@ -112,7 +113,6 @@
     <string name="calendars_sync_permission">ต้องมีสิทธิ์เข้าถึงปฏิทิน</string>
     <string name="calendars_sync_authorization">ลงชื่อเข้าใช้อีกครั้งเพื่อซิงค์ต่อ</string>
     <string name="calendars_device_warning">คัดลอกรหัสผ่านตอนนี้ เพราะจะไม่แสดงอีก</string>
-    <string name="calendars_device_list">อุปกรณ์ที่เชื่อมต่อ</string>
     <string name="calendars_device_empty">ไม่มีอุปกรณ์ที่เชื่อมต่อ</string>
     <string name="calendars_device_used">ใช้ล่าสุด %1$s</string>
     <string name="calendars_device_never">ไม่เคย</string>

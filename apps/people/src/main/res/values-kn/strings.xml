@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Mochi ಉದ್ದಕ್ಕೂ ಸ್ನೇಹಿತರನ್ನು ಹುಡುಕಿ ಮತ್ತು ಸಂಪರ್ಕಿಸಿ. ಆಹ್ವಾನ ಕಳುಹಿಸಲು ಸಂಪರ್ಕ ಸೇರಿಸಿ ಒತ್ತಿ.</string>
     <string name="people_person_state_contact">ಸಂಪರ್ಕಗಳಲ್ಲಿ</string>
     <string name="people_device_create">ರಚಿಸಿ</string>
+    <string name="people_device_add">ಸಾಧನವನ್ನು ಸೇರಿಸಿ</string>
     <string name="people_device_server">ಸರ್ವರ್</string>
     <string name="people_device_username">ಬಳಕೆದಾರಹೆಸರು</string>
     <string name="people_device_done">ಮುಗಿಯಿತು</string>
-    <string name="people_device_list">ಸಾಧನಗಳು</string>
     <string name="people_device_used">ಕೊನೆಯದಾಗಿ ಬಳಸಲಾಗಿದೆ %1$s</string>
     <string name="people_device_never">ಎಂದಿಗೂ ಇಲ್ಲ</string>
     <string name="people_sync_now">ಈಗ ಸಿಂಕ್ ಮಾಡಿ</string>
-    <string name="people_device_title">ಸಾಧನವನ್ನು ಸಂಪರ್ಕಿಸಿ</string>
+    <string name="people_device_title">ಸಂಪರ್ಕಗೊಂಡ ಸಾಧನಗಳು</string>
     <string name="people_device_name">ಸಾಧನದ ಹೆಸರು</string>
     <string name="people_device_address">ವಿಳಾಸ ಪುಸ್ತಕದ URL</string>
     <string name="people_device_password">ಪಾಸ್‌ವರ್ಡ್</string>

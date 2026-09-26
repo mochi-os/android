@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Búa til</string>
     <string name="calendars_subscribe_submit">Gerast áskrifandi</string>
     <string name="calendars_subscribe_url">Vistfang</string>
-    <string name="calendars_connect_device">Tengja tæki</string>
+    <string name="calendars_connect_device">Tengd tæki</string>
     <string name="calendars_preferences">Kjörstillingar</string>
     <string name="calendars_name">Nafn</string>
     <string name="calendars_rename">Endurnefna</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Ekki samstillt enn</string>
     <string name="calendars_sync_time">Síðast samstillt %1$s</string>
     <string name="calendars_sync_transport">Náðist ekki samband við þjóninn</string>
-    <string name="calendars_device_title">Tengja tæki</string>
+    <string name="calendars_device_title">Tengd tæki</string>
     <string name="calendars_device_name">Heiti tækis</string>
     <string name="calendars_device_create">Búa til</string>
+    <string name="calendars_device_add">Bæta við tæki</string>
     <string name="calendars_device_server">Þjónn</string>
     <string name="calendars_device_address">Vistfang</string>
     <string name="calendars_device_username">Notandanafn</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">Aðgangur að dagatali er nauðsynlegur</string>
     <string name="calendars_sync_authorization">Skráðu þig inn aftur til að halda samstillingu áfram</string>
     <string name="calendars_device_warning">Afritaðu lykilorðið núna: ekki er hægt að birta það aftur.</string>
-    <string name="calendars_device_list">Tengd tæki</string>
     <string name="calendars_device_empty">Engin tæki tengd</string>
     <string name="calendars_device_used">Síðast notað %1$s</string>
     <string name="calendars_device_never">aldrei</string>

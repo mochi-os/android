@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Sortu</string>
     <string name="calendars_subscribe_submit">Harpidetu</string>
     <string name="calendars_subscribe_url">Helbidea</string>
-    <string name="calendars_connect_device">Konektatu gailu bat</string>
+    <string name="calendars_connect_device">Konektatutako gailuak</string>
     <string name="calendars_preferences">Hobespenak</string>
     <string name="calendars_name">Izena</string>
     <string name="calendars_rename">Aldatu izena</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Oraindik ez da sinkronizatu</string>
     <string name="calendars_sync_time">Azken sinkronizazioa: %1$s</string>
     <string name="calendars_sync_transport">Ezin izan da zerbitzarira iritsi</string>
-    <string name="calendars_device_title">Konektatu gailu bat</string>
+    <string name="calendars_device_title">Konektatutako gailuak</string>
     <string name="calendars_device_name">Gailuaren izena</string>
     <string name="calendars_device_create">Sortu</string>
+    <string name="calendars_device_add">Gehitu gailu bat</string>
     <string name="calendars_device_server">Zerbitzaria</string>
     <string name="calendars_device_address">Helbidea</string>
     <string name="calendars_device_username">Erabiltzaile-izena</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">Egutegirako sarbidea behar da</string>
     <string name="calendars_sync_authorization">Hasi saioa berriro sinkronizatzen jarraitzeko</string>
     <string name="calendars_device_warning">Kopiatu pasahitza orain: ezin izango da berriro erakutsi.</string>
-    <string name="calendars_device_list">Konektatutako gailuak</string>
     <string name="calendars_device_empty">Ez dago gailurik konektatuta</string>
     <string name="calendars_device_used">azken erabilera %1$s</string>
     <string name="calendars_device_never">inoiz ez</string>

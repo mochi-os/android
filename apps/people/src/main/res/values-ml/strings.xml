@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Mochi യിലുടനീളം സുഹൃത്തുക്കളെ കണ്ടെത്തി ബന്ധപ്പെടുക. ക്ഷണം അയയ്ക്കാൻ കോൺടാക്റ്റ് ചേർക്കുക അമർത്തുക.</string>
     <string name="people_person_state_contact">കോൺടാക്റ്റുകളിൽ</string>
     <string name="people_device_create">സൃഷ്ടിക്കുക</string>
+    <string name="people_device_add">ഒരു ഡിവൈസ് ചേർക്കുക</string>
     <string name="people_device_server">സെർവർ</string>
     <string name="people_device_username">ഉപയോക്തൃനാമം</string>
     <string name="people_device_done">പൂർത്തിയായി</string>
-    <string name="people_device_list">ഡിവൈസുകൾ</string>
     <string name="people_device_used">അവസാനം ഉപയോഗിച്ചത് %1$s</string>
     <string name="people_device_never">ഒരിക്കലുമില്ല</string>
     <string name="people_sync_now">ഇപ്പോൾ സിങ്ക് ചെയ്യുക</string>
-    <string name="people_device_title">ഒരു ഡിവൈസ് ബന്ധിപ്പിക്കുക</string>
+    <string name="people_device_title">ബന്ധിപ്പിച്ച ഡിവൈസുകൾ</string>
     <string name="people_device_name">ഡിവൈസിന്റെ പേര്</string>
     <string name="people_device_address">വിലാസപ്പുസ്തകത്തിന്റെ URL</string>
     <string name="people_device_password">പാസ്‌വേഡ്</string>

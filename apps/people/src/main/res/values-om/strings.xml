@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Mochi guutuu keessatti hiriyoota barbaadi walqunnami. Afeerraa erguuf Quunnamtii dabali tuqi.</string>
     <string name="people_person_state_contact">Quunnamtiiwwan keessa</string>
     <string name="people_device_create">Uumi</string>
+    <string name="people_device_add">Meeshaa dabali</string>
     <string name="people_device_server">Sarvarii</string>
     <string name="people_device_username">Maqaa fayyadamaa</string>
     <string name="people_device_done">Xumurame</string>
-    <string name="people_device_list">Meeshaalee</string>
     <string name="people_device_used">Yeroo dhumaa fayyadamame %1$s</string>
     <string name="people_device_never">Gonkumaa</string>
     <string name="people_sync_now">Amma walsimsiisi</string>
-    <string name="people_device_title">Meeshaa walqabsiisi</string>
+    <string name="people_device_title">Meeshaalee walqabsiifaman</string>
     <string name="people_device_name">Maqaa meeshaa</string>
     <string name="people_device_address">URL kitaaba teessoo</string>
     <string name="people_device_password">Jecha darbii</string>

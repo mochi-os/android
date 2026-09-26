@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">ፍጠር</string>
     <string name="calendars_subscribe_submit">ይመዝገቡ</string>
     <string name="calendars_subscribe_url">አድራሻ</string>
-    <string name="calendars_connect_device">መሳሪያ ያገናኙ</string>
+    <string name="calendars_connect_device">የተገናኙ መሳሪያዎች</string>
     <string name="calendars_preferences">ምርጫዎች</string>
     <string name="calendars_name">ስም</string>
     <string name="calendars_rename">ስም ቀይር</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">ገና አልተመሳሰለም</string>
     <string name="calendars_sync_time">ለመጨረሻ ጊዜ የተመሳሰለው %1$s</string>
     <string name="calendars_sync_transport">አገልጋዩ ላይ መድረስ አልተቻለም</string>
-    <string name="calendars_device_title">መሳሪያ ያገናኙ</string>
+    <string name="calendars_device_title">የተገናኙ መሳሪያዎች</string>
     <string name="calendars_device_name">የመሳሪያ ስም</string>
     <string name="calendars_device_create">ፍጠር</string>
+    <string name="calendars_device_add">መሳሪያ ያክሉ</string>
     <string name="calendars_device_server">ሰርቨር</string>
     <string name="calendars_device_address">አድራሻ</string>
     <string name="calendars_device_username">የተጠቃሚ ስም</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">የቀን መቁጠሪያ መዳረሻ ያስፈልጋል</string>
     <string name="calendars_sync_authorization">ማመሳሰልን ለመቀጠል እንደገና ይግቡ</string>
     <string name="calendars_device_warning">የይለፍ ቃሉን አሁን ቅዳ፦ እንደገና ሊታይ አይችልም።</string>
-    <string name="calendars_device_list">የተገናኙ መሳሪያዎች</string>
     <string name="calendars_device_empty">ምንም መሳሪያ አልተገናኘም</string>
     <string name="calendars_device_used">መጨረሻ የተጠቀመው %1$s</string>
     <string name="calendars_device_never">በፍፁም</string>

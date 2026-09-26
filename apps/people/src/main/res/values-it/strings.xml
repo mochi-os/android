@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Trova amici in tutto Mochi e mettiti in contatto. Tocca Aggiungi contatto per inviare un invito.</string>
     <string name="people_person_state_contact">Nei contatti</string>
     <string name="people_device_create">Crea</string>
+    <string name="people_device_add">Aggiungi un dispositivo</string>
     <string name="people_device_server">Server</string>
     <string name="people_device_username">Nome utente</string>
     <string name="people_device_done">Fatto</string>
-    <string name="people_device_list">Dispositivi</string>
     <string name="people_device_used">Ultimo uso %1$s</string>
     <string name="people_device_never">Mai</string>
     <string name="people_sync_now">Sincronizza ora</string>
-    <string name="people_device_title">Collega un dispositivo</string>
+    <string name="people_device_title">Dispositivi collegati</string>
     <string name="people_device_name">Nome del dispositivo</string>
     <string name="people_device_address">URL della rubrica</string>
     <string name="people_device_password">Password</string>

@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">ٺاهيو</string>
     <string name="calendars_subscribe_submit">سبسڪرائب ڪريو</string>
     <string name="calendars_subscribe_url">پتو</string>
-    <string name="calendars_connect_device">ڊوائيس ڳنڍيو</string>
+    <string name="calendars_connect_device">ڳنڍيل ڊوائيس</string>
     <string name="calendars_preferences">ترجيحون</string>
     <string name="calendars_name">نالو</string>
     <string name="calendars_rename">نالو تبديل ڪريو</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">اڃا سنڪ نه ٿيو آهي</string>
     <string name="calendars_sync_time">آخري سنڪ: %1$s</string>
     <string name="calendars_sync_transport">سرور تائين پھچي نه سگھيو</string>
-    <string name="calendars_device_title">ڊوائيس ڳنڍيو</string>
+    <string name="calendars_device_title">ڳنڍيل ڊوائيس</string>
     <string name="calendars_device_name">ڊوائيس جو نالو</string>
     <string name="calendars_device_create">ٺاهيو</string>
+    <string name="calendars_device_add">ڊوائيس شامل ڪريو</string>
     <string name="calendars_device_server">سرور</string>
     <string name="calendars_device_address">پتو</string>
     <string name="calendars_device_username">صارف نالو</string>
@@ -112,7 +113,6 @@
     <string name="calendars_sync_permission">ڪئلينڊر تائين رسائي گهربل آهي</string>
     <string name="calendars_sync_authorization">سنڪ جاري رکڻ لاءِ ٻيهر سائن ان ڪريو</string>
     <string name="calendars_device_warning">پاسورڊ هاڻي ڪاپي ڪريو: هي وري نه ڏيکاريو ويندو.</string>
-    <string name="calendars_device_list">ڳنڍيل ڊوائيس</string>
     <string name="calendars_device_empty">ڪوبه ڊوائيس ڳنڍيل ناهي</string>
     <string name="calendars_device_used">آخري استعمال %1$s</string>
     <string name="calendars_device_never">ڪڏهن به نه</string>

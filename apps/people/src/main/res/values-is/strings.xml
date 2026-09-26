@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Finndu vini um allt Mochi og tengstu þeim. Ýttu á Bæta við tengilið til að senda boð.</string>
     <string name="people_person_state_contact">Í tengiliðum</string>
     <string name="people_device_create">Búa til</string>
+    <string name="people_device_add">Bæta við tæki</string>
     <string name="people_device_server">Þjónn</string>
     <string name="people_device_username">Notandanafn</string>
     <string name="people_device_done">Lokið</string>
-    <string name="people_device_list">Tæki</string>
     <string name="people_device_used">Síðast notað %1$s</string>
     <string name="people_device_never">Aldrei</string>
     <string name="people_sync_now">Samstilla núna</string>
-    <string name="people_device_title">Tengja tæki</string>
+    <string name="people_device_title">Tengd tæki</string>
     <string name="people_device_name">Heiti tækis</string>
     <string name="people_device_address">URL tengiliðaskrár</string>
     <string name="people_device_password">Lykilorð</string>

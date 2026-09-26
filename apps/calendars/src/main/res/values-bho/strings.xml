@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">बनाईं</string>
     <string name="calendars_subscribe_submit">सदस्यता लीं</string>
     <string name="calendars_subscribe_url">पता</string>
-    <string name="calendars_connect_device">उपकरण जोड़ीं</string>
+    <string name="calendars_connect_device">जुड़ल उपकरण</string>
     <string name="calendars_preferences">वरीयता</string>
     <string name="calendars_name">नाम</string>
     <string name="calendars_rename">नाम बदलीं</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">अबहीं ले सिंक नइखे भइल</string>
     <string name="calendars_sync_time">आखिरी बेर सिंक भइल %1$s</string>
     <string name="calendars_sync_transport">सर्वर ले ना पहुँचल जा सकल</string>
-    <string name="calendars_device_title">उपकरण जोड़ीं</string>
+    <string name="calendars_device_title">जुड़ल उपकरण</string>
     <string name="calendars_device_name">उपकरण के नाम</string>
     <string name="calendars_device_create">बनाईं</string>
+    <string name="calendars_device_add">उपकरण शामिल करीं</string>
     <string name="calendars_device_server">सर्वर</string>
     <string name="calendars_device_address">पता</string>
     <string name="calendars_device_username">उपयोगकर्ता नाम</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">कैलेंडर के पहुंच चाहीं</string>
     <string name="calendars_sync_authorization">सिंक जारी राखे खातिर फेर से साइन इन करीं</string>
     <string name="calendars_device_warning">पासवर्ड अबहीं कॉपी कर लीं: ई फेर से ना देखावल जाई।</string>
-    <string name="calendars_device_list">जुड़ल उपकरण</string>
     <string name="calendars_device_empty">कवनो उपकरण जुड़ल नइखे</string>
     <string name="calendars_device_used">आखिरी इस्तेमाल %1$s</string>
     <string name="calendars_device_never">कबो ना</string>

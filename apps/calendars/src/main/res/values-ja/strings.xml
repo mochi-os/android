@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">作成</string>
     <string name="calendars_subscribe_submit">購読する</string>
     <string name="calendars_subscribe_url">アドレス</string>
-    <string name="calendars_connect_device">デバイスを接続</string>
+    <string name="calendars_connect_device">接続中のデバイス</string>
     <string name="calendars_preferences">環境設定</string>
     <string name="calendars_name">名前</string>
     <string name="calendars_rename">名前を変更</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">まだ同期されていません</string>
     <string name="calendars_sync_time">最終同期：%1$s</string>
     <string name="calendars_sync_transport">サーバーに接続できませんでした</string>
-    <string name="calendars_device_title">デバイスを接続</string>
+    <string name="calendars_device_title">接続中のデバイス</string>
     <string name="calendars_device_name">デバイス名</string>
     <string name="calendars_device_create">作成</string>
+    <string name="calendars_device_add">デバイスを追加</string>
     <string name="calendars_device_server">サーバー</string>
     <string name="calendars_device_address">アドレス</string>
     <string name="calendars_device_username">ユーザー名</string>
@@ -118,7 +119,6 @@
     <string name="calendars_sync_permission">カレンダーへのアクセスが必要です</string>
     <string name="calendars_sync_authorization">同期を続けるには再度サインインしてください</string>
     <string name="calendars_device_warning">今すぐパスワードをコピーしてください。再表示することはできません。</string>
-    <string name="calendars_device_list">接続中のデバイス</string>
     <string name="calendars_device_empty">接続されているデバイスはありません</string>
     <string name="calendars_device_used">最終使用 %1$s</string>
     <string name="calendars_device_never">なし</string>

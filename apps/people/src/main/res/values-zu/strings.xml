@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Thola abangane kuyo yonke i-Mochi bese uxhumana nabo. Thepha u-Engeza oxhumana naye ukuze uthumele isimemo.</string>
     <string name="people_person_state_contact">Koxhumana nabo</string>
     <string name="people_device_create">Dala</string>
+    <string name="people_device_add">Engeza idivayisi</string>
     <string name="people_device_server">Iseva</string>
     <string name="people_device_username">Igama lomsebenzisi</string>
     <string name="people_device_done">Kwenziwe</string>
-    <string name="people_device_list">Amadivayisi</string>
     <string name="people_device_used">Isetshenziswe okokugcina %1$s</string>
     <string name="people_device_never">Akekho</string>
     <string name="people_sync_now">Vumelanisa manje</string>
-    <string name="people_device_title">Xhuma idivayisi</string>
+    <string name="people_device_title">Amadivayisi axhunyiwe</string>
     <string name="people_device_name">Igama ledivayisi</string>
     <string name="people_device_address">I-URL yencwadi yamakheli</string>
     <string name="people_device_password">Iphasiwedi</string>

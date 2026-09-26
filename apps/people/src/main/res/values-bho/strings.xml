@@ -187,14 +187,14 @@
     <string name="people_welcome_body">Mochi पर दोस्त खोजीं आ जुड़ीं। नेवता भेजे खातिर संपर्क जोड़ीं पर टैप करीं।</string>
     <string name="people_person_state_contact">संपर्क में बा</string>
     <string name="people_device_create">बनाईं</string>
+    <string name="people_device_add">उपकरण शामिल करीं</string>
     <string name="people_device_server">सर्वर</string>
     <string name="people_device_username">उपयोगकर्ता नाम</string>
     <string name="people_device_done">हो गइल</string>
-    <string name="people_device_list">उपकरण</string>
     <string name="people_device_used">आखिरी इस्तेमाल %1$s</string>
     <string name="people_device_never">कबो ना</string>
     <string name="people_sync_now">अब सिंक करीं</string>
-    <string name="people_device_title">उपकरण जोड़ीं</string>
+    <string name="people_device_title">जुड़ल उपकरण</string>
     <string name="people_device_name">उपकरण के नाम</string>
     <string name="people_device_address">पता किताब के URL</string>
     <string name="people_device_password">पासवर्ड</string>

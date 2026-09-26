@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">បង្កើត</string>
     <string name="calendars_subscribe_submit">ជាវ</string>
     <string name="calendars_subscribe_url">អាសយដ្ឋាន</string>
-    <string name="calendars_connect_device">ភ្ជាប់ឧបករណ៍</string>
+    <string name="calendars_connect_device">ឧបករណ៍ដែលបានភ្ជាប់</string>
     <string name="calendars_preferences">ចំណូលចិត្ត</string>
     <string name="calendars_name">ឈ្មោះ</string>
     <string name="calendars_rename">ប្តូរឈ្មោះ</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">មិនទាន់បានធ្វើសមកាលកម្មនៅឡើយ</string>
     <string name="calendars_sync_time">បានធ្វើសមកាលកម្មចុងក្រោយ៖ %1$s</string>
     <string name="calendars_sync_transport">មិនអាចភ្ជាប់ទៅម៉ាស៊ីនមេបានទេ</string>
-    <string name="calendars_device_title">ភ្ជាប់ឧបករណ៍</string>
+    <string name="calendars_device_title">ឧបករណ៍ដែលបានភ្ជាប់</string>
     <string name="calendars_device_name">ឈ្មោះឧបករណ៍</string>
     <string name="calendars_device_create">បង្កើត</string>
+    <string name="calendars_device_add">បន្ថែមឧបករណ៍</string>
     <string name="calendars_device_server">ម៉ាស៊ីនមេ</string>
     <string name="calendars_device_address">អាសយដ្ឋាន</string>
     <string name="calendars_device_username">ឈ្មោះអ្នកប្រើប្រាស់</string>
@@ -118,7 +119,6 @@
     <string name="calendars_sync_permission">ត្រូវការសិទ្ធិចូលប្រើប្រតិទិន</string>
     <string name="calendars_sync_authorization">ចូលម្ដងទៀត ដើម្បីបន្តធ្វើសមកាលកម្ម</string>
     <string name="calendars_device_warning">ចម្លងពាក្យសម្ងាត់ឥឡូវនេះ៖ វាមិនអាចបង្ហាញម្ដងទៀតបានទេ។</string>
-    <string name="calendars_device_list">ឧបករណ៍ដែលបានភ្ជាប់</string>
     <string name="calendars_device_empty">គ្មានឧបករណ៍ដែលបានភ្ជាប់ទេ</string>
     <string name="calendars_device_used">ប្រើចុងក្រោយ %1$s</string>
     <string name="calendars_device_never">មិនដែល</string>

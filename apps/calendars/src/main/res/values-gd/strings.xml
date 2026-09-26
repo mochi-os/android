@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Cruthaich</string>
     <string name="calendars_subscribe_submit">Fo-sgrìobh</string>
     <string name="calendars_subscribe_url">Seòladh</string>
-    <string name="calendars_connect_device">Ceangail inneal</string>
+    <string name="calendars_connect_device">Innealan ceangailte</string>
     <string name="calendars_preferences">Roghainnean</string>
     <string name="calendars_name">Ainm</string>
     <string name="calendars_rename">Cuir ainm ùr air</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Cha deach a shioncronachadh fhathast</string>
     <string name="calendars_sync_time">Sioncronachadh mu dheireadh: %1$s</string>
     <string name="calendars_sync_transport">Cha b\' urrainn ruigsinn air an fhrithealaiche</string>
-    <string name="calendars_device_title">Ceangail inneal</string>
+    <string name="calendars_device_title">Innealan ceangailte</string>
     <string name="calendars_device_name">Ainm an inneil</string>
     <string name="calendars_device_create">Cruthaich</string>
+    <string name="calendars_device_add">Cuir inneal ris</string>
     <string name="calendars_device_server">Frithealaiche</string>
     <string name="calendars_device_address">Seòladh</string>
     <string name="calendars_device_username">Ainm-cleachdaiche</string>
@@ -124,7 +125,6 @@
     <string name="calendars_sync_permission">Tha feum air inntrigeadh dhan mhìosachan</string>
     <string name="calendars_sync_authorization">Clàraich a-steach a-rithist gus cumail a\' sioncronachadh</string>
     <string name="calendars_device_warning">Dèan lethbhreac dhen fhacal-faire an-dràsta: chan urrainn dhuinn a shealltainn a-rithist.</string>
-    <string name="calendars_device_list">Innealan ceangailte</string>
     <string name="calendars_device_empty">Chan eil inneal sam bith ceangailte</string>
     <string name="calendars_device_used">chleachdte mu dheireadh %1$s</string>
     <string name="calendars_device_never">chaoidh</string>

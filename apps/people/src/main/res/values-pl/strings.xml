@@ -189,14 +189,14 @@
     <string name="people_welcome_body">Znajdź znajomych w całym Mochi i nawiąż kontakt. Dotknij Dodaj kontakt, aby wysłać zaproszenie.</string>
     <string name="people_person_state_contact">W kontaktach</string>
     <string name="people_device_create">Utwórz</string>
+    <string name="people_device_add">Dodaj urządzenie</string>
     <string name="people_device_server">Serwer</string>
     <string name="people_device_username">Nazwa użytkownika</string>
     <string name="people_device_done">Gotowe</string>
-    <string name="people_device_list">Urządzenia</string>
     <string name="people_device_used">Ostatnio użyty %1$s</string>
     <string name="people_device_never">Nigdy</string>
     <string name="people_sync_now">Synchronizuj teraz</string>
-    <string name="people_device_title">Połącz urządzenie</string>
+    <string name="people_device_title">Połączone urządzenia</string>
     <string name="people_device_name">Nazwa urządzenia</string>
     <string name="people_device_address">Adres URL książki adresowej</string>
     <string name="people_device_password">Hasło</string>

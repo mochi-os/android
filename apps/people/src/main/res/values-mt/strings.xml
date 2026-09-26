@@ -190,14 +190,14 @@
     <string name="people_welcome_body">Sib ħbieb madwar Mochi u ikkomunika magħhom. Agħfas Żid kuntatt biex tibgħat stedina.</string>
     <string name="people_person_state_contact">Fil-kuntatti</string>
     <string name="people_device_create">Oħloq</string>
+    <string name="people_device_add">Żid apparat</string>
     <string name="people_device_server">Server</string>
     <string name="people_device_username">Isem tal-utent</string>
     <string name="people_device_done">Lest</string>
-    <string name="people_device_list">Apparati</string>
     <string name="people_device_used">L-aħħar uża %1$s</string>
     <string name="people_device_never">Qatt</string>
     <string name="people_sync_now">Sinkronizza issa</string>
-    <string name="people_device_title">Qabbad apparat</string>
+    <string name="people_device_title">Apparati mqabbda</string>
     <string name="people_device_name">Isem l-apparat</string>
     <string name="people_device_address">URL tal-ktieb tal-indirizzi</string>
     <string name="people_device_password">Password</string>

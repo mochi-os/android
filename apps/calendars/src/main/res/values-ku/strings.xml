@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Çêbike</string>
     <string name="calendars_subscribe_submit">Abone bibe</string>
     <string name="calendars_subscribe_url">Navnîşan</string>
-    <string name="calendars_connect_device">Cîhazekê girê bide</string>
+    <string name="calendars_connect_device">Cîhazên girêdayî</string>
     <string name="calendars_preferences">Tercîh</string>
     <string name="calendars_name">Nav</string>
     <string name="calendars_rename">Navê biguhere</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Hêj nehatiye hevdemkirin</string>
     <string name="calendars_sync_time">Hevdemkirina dawîn: %1$s</string>
     <string name="calendars_sync_transport">Nekarî bigihîje serverê</string>
-    <string name="calendars_device_title">Cîhazekê girê bide</string>
+    <string name="calendars_device_title">Cîhazên girêdayî</string>
     <string name="calendars_device_name">Navê cîhazê</string>
     <string name="calendars_device_create">Çêbike</string>
+    <string name="calendars_device_add">Cîhazekê zêde bike</string>
     <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Navnîşan</string>
     <string name="calendars_device_username">Navê bikarhêner</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">Gihîştina salnameyê pêwîst e</string>
     <string name="calendars_sync_authorization">Ji bo berdewamkirina hevdemkirinê dîsa têkeve</string>
     <string name="calendars_device_warning">Şîfreyê niha kopî bike: careke din nayê nîşandan.</string>
-    <string name="calendars_device_list">Cîhazên girêdayî</string>
     <string name="calendars_device_empty">Tu cîhaz ne girêdayî ye</string>
     <string name="calendars_device_used">Bikaranîna dawî %1$s</string>
     <string name="calendars_device_never">tu car</string>

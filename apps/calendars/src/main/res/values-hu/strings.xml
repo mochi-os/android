@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Létrehozás</string>
     <string name="calendars_subscribe_submit">Feliratkozás</string>
     <string name="calendars_subscribe_url">Cím</string>
-    <string name="calendars_connect_device">Eszköz csatlakoztatása</string>
+    <string name="calendars_connect_device">Csatlakoztatott eszközök</string>
     <string name="calendars_preferences">Preferenciák</string>
     <string name="calendars_name">Név</string>
     <string name="calendars_rename">Átnevezés</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">Még nincs szinkronizálva</string>
     <string name="calendars_sync_time">Utolsó szinkronizálás: %1$s</string>
     <string name="calendars_sync_transport">A kiszolgáló nem érhető el</string>
-    <string name="calendars_device_title">Eszköz csatlakoztatása</string>
+    <string name="calendars_device_title">Csatlakoztatott eszközök</string>
     <string name="calendars_device_name">Eszköz neve</string>
     <string name="calendars_device_create">Létrehozás</string>
+    <string name="calendars_device_add">Eszköz hozzáadása</string>
     <string name="calendars_device_server">Kiszolgáló</string>
     <string name="calendars_device_address">Cím</string>
     <string name="calendars_device_username">Felhasználónév</string>
@@ -120,7 +121,6 @@
     <string name="calendars_sync_permission">Naptár-hozzáférés szükséges</string>
     <string name="calendars_sync_authorization">Jelentkezzen be újra a szinkronizálás folytatásához</string>
     <string name="calendars_device_warning">Másolja ki most a jelszót: később nem jeleníthető meg újra.</string>
-    <string name="calendars_device_list">Csatlakoztatott eszközök</string>
     <string name="calendars_device_empty">Nincs csatlakoztatott eszköz</string>
     <string name="calendars_device_used">Utoljára használva %1$s</string>
     <string name="calendars_device_never">soha</string>

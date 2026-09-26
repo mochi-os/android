@@ -191,14 +191,14 @@
     <string name="people_welcome_body">Dewch o hyd i ffrindiau ar draws Mochi a chysylltu â nhw. Tapiwch Ychwanegu cysylltiad i anfon gwahoddiad.</string>
     <string name="people_person_state_contact">Yn y cysylltiadau</string>
     <string name="people_device_create">Creu</string>
+    <string name="people_device_add">Ychwanegu dyfais</string>
     <string name="people_device_server">Gweinydd</string>
     <string name="people_device_username">Enw defnyddiwr</string>
     <string name="people_device_done">Wedi gorffen</string>
-    <string name="people_device_list">Dyfeisiau</string>
     <string name="people_device_used">Defnyddiwyd ddiwethaf %1$s</string>
     <string name="people_device_never">Byth</string>
     <string name="people_sync_now">Cysoni nawr</string>
-    <string name="people_device_title">Cysylltu dyfais</string>
+    <string name="people_device_title">Dyfeisiau cysylltiedig</string>
     <string name="people_device_name">Enw\'r ddyfais</string>
     <string name="people_device_address">URL y llyfr cyfeiriadau</string>
     <string name="people_device_password">Cyfrinair</string>

@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">ສ້າງ</string>
     <string name="calendars_subscribe_submit">ສະໝັກສະມາຊິກ</string>
     <string name="calendars_subscribe_url">ທີ່ຢູ່</string>
-    <string name="calendars_connect_device">ເຊື່ອມຕໍ່ອຸປະກອນ</string>
+    <string name="calendars_connect_device">ອຸປະກອນທີ່ເຊື່ອມຕໍ່</string>
     <string name="calendars_preferences">ການຕັ້ງຄ່າ</string>
     <string name="calendars_name">ຊື່</string>
     <string name="calendars_rename">ປ່ຽນຊື່</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">ຍັງບໍ່ໄດ້ຊິງຄ໌</string>
     <string name="calendars_sync_time">ຊິງຄ໌ຄັ້ງສຸດທ້າຍ: %1$s</string>
     <string name="calendars_sync_transport">ບໍ່ສາມາດເຂົ້າເຖິງເຊີບເວີໄດ້</string>
-    <string name="calendars_device_title">ເຊື່ອມຕໍ່ອຸປະກອນ</string>
+    <string name="calendars_device_title">ອຸປະກອນທີ່ເຊື່ອມຕໍ່</string>
     <string name="calendars_device_name">ຊື່ອຸປະກອນ</string>
     <string name="calendars_device_create">ສ້າງ</string>
+    <string name="calendars_device_add">ເພີ່ມອຸປະກອນ</string>
     <string name="calendars_device_server">ເຊີບເວີ</string>
     <string name="calendars_device_address">ທີ່ຢູ່</string>
     <string name="calendars_device_username">ຊື່ຜູ້ໃຊ້</string>
@@ -118,7 +119,6 @@
     <string name="calendars_sync_permission">ຕ້ອງການສິດເຂົ້າເຖິງປະຕິທິນ</string>
     <string name="calendars_sync_authorization">ເຂົ້າສູ່ລະບົບອີກຄັ້ງເພື່ອຊິງຄ໌ຕໍ່</string>
     <string name="calendars_device_warning">ສຳເນົາລະຫັດຜ່ານດຽວນີ້: ມັນຈະບໍ່ສາມາດສະແດງໄດ້ອີກ.</string>
-    <string name="calendars_device_list">ອຸປະກອນທີ່ເຊື່ອມຕໍ່</string>
     <string name="calendars_device_empty">ບໍ່ມີອຸປະກອນທີ່ເຊື່ອມຕໍ່</string>
     <string name="calendars_device_used">ໃຊ້ຄັ້ງສຸດທ້າຍ %1$s</string>
     <string name="calendars_device_never">ບໍ່ເຄີຍ</string>

@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">సృష్టించండి</string>
     <string name="calendars_subscribe_submit">చందా చేరండి</string>
     <string name="calendars_subscribe_url">చిరునామా</string>
-    <string name="calendars_connect_device">పరికరాన్ని కనెక్ట్ చేయండి</string>
+    <string name="calendars_connect_device">కనెక్ట్ చేసిన పరికరాలు</string>
     <string name="calendars_preferences">ప్రాధాన్యతలు</string>
     <string name="calendars_name">పేరు</string>
     <string name="calendars_rename">పేరు మార్చండి</string>
@@ -39,9 +39,10 @@
     <string name="calendars_sync_never">ఇంకా సింక్ చేయలేదు</string>
     <string name="calendars_sync_time">చివరి సింక్: %1$s</string>
     <string name="calendars_sync_transport">సర్వర్‌ను చేరుకోలేకపోయింది</string>
-    <string name="calendars_device_title">పరికరాన్ని కనెక్ట్ చేయండి</string>
+    <string name="calendars_device_title">కనెక్ట్ చేసిన పరికరాలు</string>
     <string name="calendars_device_name">పరికరం పేరు</string>
     <string name="calendars_device_create">సృష్టించండి</string>
+    <string name="calendars_device_add">పరికరాన్ని జోడించండి</string>
     <string name="calendars_device_server">సర్వర్</string>
     <string name="calendars_device_address">చిరునామా</string>
     <string name="calendars_device_username">వినియోగదారు పేరు</string>
@@ -112,7 +113,6 @@
     <string name="calendars_sync_permission">క్యాలెండర్ యాక్సెస్ అవసరం</string>
     <string name="calendars_sync_authorization">సింక్ కొనసాగించడానికి మళ్లీ సైన్ ఇన్ చేయండి</string>
     <string name="calendars_device_warning">పాస్‌వర్డ్‌ను ఇప్పుడే కాపీ చేయండి: ఇది మళ్లీ చూపబడదు.</string>
-    <string name="calendars_device_list">కనెక్ట్ చేసిన పరికరాలు</string>
     <string name="calendars_device_empty">ఏ పరికరం కనెక్ట్ కాలేదు</string>
     <string name="calendars_device_used">చివరిగా ఉపయోగించినది %1$s</string>
     <string name="calendars_device_never">ఎప్పుడూ లేదు</string>

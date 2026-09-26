@@ -189,14 +189,14 @@
     <string name="people_welcome_body">Знаходьте друзів у всьому Mochi та спілкуйтеся. Торкніться Додати контакт, щоб надіслати запрошення.</string>
     <string name="people_person_state_contact">У контактах</string>
     <string name="people_device_create">Створити</string>
+    <string name="people_device_add">Додати пристрій</string>
     <string name="people_device_server">Сервер</string>
     <string name="people_device_username">Ім\'я користувача</string>
     <string name="people_device_done">Готово</string>
-    <string name="people_device_list">Пристрої</string>
     <string name="people_device_used">Востаннє використано %1$s</string>
     <string name="people_device_never">Ніколи</string>
     <string name="people_sync_now">Синхронізувати зараз</string>
-    <string name="people_device_title">Підключити пристрій</string>
+    <string name="people_device_title">Підключені пристрої</string>
     <string name="people_device_name">Назва пристрою</string>
     <string name="people_device_address">URL адресної книги</string>
     <string name="people_device_password">Пароль</string>

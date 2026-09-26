@@ -186,14 +186,14 @@
     <string name="people_welcome_body">ຊອກຫາໝູ່ທົ່ວ Mochi ແລະເຊື່ອມຕໍ່. ແຕະ ເພີ່ມຜູ້ຕິດຕໍ່ ເພື່ອສົ່ງຄຳເຊີນ.</string>
     <string name="people_person_state_contact">ຢູ່ໃນຜູ້ຕິດຕໍ່</string>
     <string name="people_device_create">ສ້າງ</string>
+    <string name="people_device_add">ເພີ່ມອຸປະກອນ</string>
     <string name="people_device_server">ເຊີບເວີ</string>
     <string name="people_device_username">ຊື່ຜູ້ໃຊ້</string>
     <string name="people_device_done">ສຳເລັດແລ້ວ</string>
-    <string name="people_device_list">ອຸປະກອນ</string>
     <string name="people_device_used">ໃຊ້ຄັ້ງສຸດທ້າຍ %1$s</string>
     <string name="people_device_never">ບໍ່ເຄີຍ</string>
     <string name="people_sync_now">ຊິງຄ໌ດຽວນີ້</string>
-    <string name="people_device_title">ເຊື່ອມຕໍ່ອຸປະກອນ</string>
+    <string name="people_device_title">ອຸປະກອນທີ່ເຊື່ອມຕໍ່</string>
     <string name="people_device_name">ຊື່ອຸປະກອນ</string>
     <string name="people_device_address">URL ປຶ້ມທີ່ຢູ່</string>
     <string name="people_device_password">ລະຫັດຜ່ານ</string>
