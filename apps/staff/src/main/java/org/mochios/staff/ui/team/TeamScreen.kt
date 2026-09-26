@@ -215,10 +215,14 @@ private fun AddedByLine(member: StaffMember, added: String) {
     val isSystem = member.addedby == "system"
     Row(verticalAlignment = Alignment.CenterVertically) {
         Text(
-            text = stringResource(R.string.staff_team_col_added_by) + ": ",
+            text = stringResource(
+                R.string.staff_team_added_by_label,
+                stringResource(R.string.staff_team_col_added_by),
+            ),
             style = MaterialTheme.typography.bodySmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
+        Spacer(modifier = Modifier.width(4.dp))
         if (isSystem) {
             Text(
                 text = stringResource(R.string.staff_team_added_by_system),
@@ -226,7 +230,8 @@ private fun AddedByLine(member: StaffMember, added: String) {
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
         } else {
-            val name = member.addedbyName?.takeIf { it.isNotBlank() } ?: formatFingerprint(member.addedbyFingerprint)
+            val name = member.addedbyName?.takeIf { value -> value.isNotBlank() }
+                ?: formatFingerprint(member.addedbyFingerprint)
             StaffUserAvatar(name = name, id = member.addedby, size = 20.dp)
             Spacer(modifier = Modifier.width(6.dp))
             Text(
@@ -239,7 +244,7 @@ private fun AddedByLine(member: StaffMember, added: String) {
             )
         }
         Text(
-            text = " · $added",
+            text = stringResource(R.string.staff_team_added_when, added),
             style = MaterialTheme.typography.bodySmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             maxLines = 1,

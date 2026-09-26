@@ -9,8 +9,8 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 /**
- * The filter button's badge counts the listing attributes being narrowed by:
- * a price range once whatever its bounds, and never the sort or the currency.
+ * The filter button's badge counts the filters that have a pill: a price range
+ * once whatever its bounds, the sort order, and never the currency.
  */
 class ActiveFilterCountTest {
 
@@ -39,8 +39,12 @@ class ActiveFilterCountTest {
     }
 
     @Test
-    fun `sort and currency are not filters`() {
-        val filters = mapOf(Filter.SORT to "price_low", Filter.CURRENCY to "eur")
-        assertEquals(0, activeFilterCount(filters))
+    fun `a sort order counts`() {
+        assertEquals(1, activeFilterCount(mapOf(Filter.SORT to "price_low")))
+    }
+
+    @Test
+    fun `currency is not a filter`() {
+        assertEquals(0, activeFilterCount(mapOf(Filter.CURRENCY to "eur")))
     }
 }

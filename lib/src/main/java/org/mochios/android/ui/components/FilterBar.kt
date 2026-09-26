@@ -33,7 +33,9 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.R
 
 /**
- * One single-choice filter in a [FilterBar].
+ * One single-choice filter in a [FilterBar]. A [current] value missing from
+ * [options] still gets its removable chip, named by [chipLabel] alone, since
+ * the raw wire value means nothing to the reader.
  *
  * @property label Name of the filter, shown before its choices.
  * @property chipLabel Label of the removable chip shown while the filter is set.
@@ -201,20 +203,18 @@ private fun ActiveChips(filters: List<ChoiceFilter>) {
         verticalArrangement = Arrangement.spacedBy(4.dp),
     ) {
         set.forEach { filter ->
-            val current = filter.current.orEmpty()
             val value = filter.options
-                .firstOrNull { option -> option.first == current }
+                .firstOrNull { option -> option.first == filter.current }
                 ?.second
-                ?: current
             AssistChip(
                 onClick = { filter.onSelect(null) },
                 label = {
                     Text(
-                        text = stringResource(
-                            R.string.common_filter_chip,
-                            filter.chipLabel,
-                            value,
-                        ),
+                        text = if (value != null) {
+                            stringResource(R.string.common_filter_chip, filter.chipLabel, value)
+                        } else {
+                            filter.chipLabel
+                        },
                     )
                 },
                 trailingIcon = {
