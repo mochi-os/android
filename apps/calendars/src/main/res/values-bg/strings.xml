@@ -13,7 +13,6 @@
     <string name="calendars_view">Изглед</string>
     <string name="calendars_view_list">Списък</string>
     <string name="calendars_list_search">Търсене</string>
-    <string name="calendars_event_untitled">Без заглавие</string>
     <string name="calendars_event_title">Заглавие</string>
     <string name="calendars_event_location">Местоположение</string>
     <string name="calendars_event_description">Описание</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">от %1$s до %2$s</string>
     <string name="calendars_truncated">Някои събития в този период не са показани.</string>
     <string name="calendars_list_empty">Няма събития</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d още</item>
-        <item quantity="other">+%1$d още</item>
-    </plurals>
+    <string name="calendars_untitled">(Без заглавие)</string>
+    <string name="calendars_status_cancelled">Отменено</string>
+    <string name="calendars_status_tentative">Под въпрос</string>
     <string name="calendars_event_new">Ново събитие</string>
     <string name="calendars_event_edit">Редактиране на събитие</string>
     <string name="calendars_event_calendar">Календар</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Не сте свързали акаунт в Google.</string>
     <string name="calendars_subscribe_google_connect_action">Свързване с Google</string>
     <string name="calendars_grant_failed">Достъпът до календара не беше разрешен</string>
+    <string name="calendars_event_exception">Променено повторение</string>
 </resources>

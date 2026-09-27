@@ -13,7 +13,6 @@
     <string name="calendars_view">Выгляд</string>
     <string name="calendars_view_list">Спіс</string>
     <string name="calendars_list_search">Пошук</string>
-    <string name="calendars_event_untitled">Без назвы</string>
     <string name="calendars_event_title">Назва</string>
     <string name="calendars_event_location">Месцазнаходжанне</string>
     <string name="calendars_event_description">Апісанне</string>
@@ -78,12 +77,9 @@
     <string name="calendars_range">з %1$s па %2$s</string>
     <string name="calendars_truncated">Некаторыя падзеі ў гэтым дыяпазоне не паказаны.</string>
     <string name="calendars_list_empty">Няма падзей</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d яшчэ</item>
-        <item quantity="few">+%1$d яшчэ</item>
-        <item quantity="many">+%1$d яшчэ</item>
-        <item quantity="other">+%1$d яшчэ</item>
-    </plurals>
+    <string name="calendars_untitled">(Без назвы)</string>
+    <string name="calendars_status_cancelled">Адменена</string>
+    <string name="calendars_status_tentative">Пад пытаннем</string>
     <string name="calendars_event_new">Новая падзея</string>
     <string name="calendars_event_edit">Рэдагаваць падзею</string>
     <string name="calendars_event_calendar">Каляндар</string>
@@ -181,4 +177,5 @@
     <string name="calendars_subscribe_google_connect">Вы не падключылі ўліковы запіс Google.</string>
     <string name="calendars_subscribe_google_connect_action">Злучыць Google</string>
     <string name="calendars_grant_failed">Доступ да календара не быў нададзены</string>
+    <string name="calendars_event_exception">Зменены паўтор</string>
 </resources>

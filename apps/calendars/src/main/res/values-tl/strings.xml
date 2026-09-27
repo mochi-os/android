@@ -13,7 +13,6 @@
     <string name="calendars_view">Tanaw</string>
     <string name="calendars_view_list">Listahan</string>
     <string name="calendars_list_search">Maghanap</string>
-    <string name="calendars_event_untitled">Walang pamagat</string>
     <string name="calendars_event_title">Pamagat</string>
     <string name="calendars_event_location">Lokasyon</string>
     <string name="calendars_event_description">Paglalarawan</string>
@@ -72,6 +71,9 @@
     <string name="calendars_range">%1$s hanggang %2$s</string>
     <string name="calendars_truncated">May mga event sa saklaw na ito na hindi ipinapakita.</string>
     <string name="calendars_list_empty">Walang kaganapan</string>
+    <string name="calendars_untitled">(Walang pamagat)</string>
+    <string name="calendars_status_cancelled">Kinansela</string>
+    <string name="calendars_status_tentative">Pansamantala</string>
     <string name="calendars_event_new">Bagong kaganapan</string>
     <string name="calendars_event_edit">I-edit ang kaganapan</string>
     <string name="calendars_event_calendar">Kalendaryo</string>
@@ -123,10 +125,6 @@
         <item quantity="one">%1$d event ang na-update</item>
         <item quantity="other">%1$d na event ang na-update</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d pa</item>
-        <item quantity="other">+%1$d pa</item>
-    </plurals>
     <string name="calendars_sync_choose">Mga kalendaryong isi-sync</string>
     <string name="calendars_poll_large">Masyadong malaki ang kalendaryo</string>
     <string name="calendars_poll_invalid">Walang kalendaryong ibinalik ang adres</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Wala kang nakakonektang Google account.</string>
     <string name="calendars_subscribe_google_connect_action">Ikonekta ang Google</string>
     <string name="calendars_grant_failed">Hindi ibinigay ang access sa kalendaryo</string>
+    <string name="calendars_event_exception">Binagong pag-ulit</string>
 </resources>

@@ -13,7 +13,6 @@
     <string name="calendars_view">منظر</string>
     <string name="calendars_view_list">لسٽ</string>
     <string name="calendars_list_search">ڳوليو</string>
-    <string name="calendars_event_untitled">بي عنوان</string>
     <string name="calendars_event_title">عنوان</string>
     <string name="calendars_event_location">هنڌ</string>
     <string name="calendars_event_description">تفصيل</string>
@@ -72,6 +71,9 @@
     <string name="calendars_range">%1$s کان %2$s تائين</string>
     <string name="calendars_truncated">هن حد ۾ ڪجهه واقعا نه ڏيکاريا ويا آهن.</string>
     <string name="calendars_list_empty">ڪو واقعو نه آهي</string>
+    <string name="calendars_untitled">(بي عنوان)</string>
+    <string name="calendars_status_cancelled">منسوخ ٿيل</string>
+    <string name="calendars_status_tentative">عارضي</string>
     <string name="calendars_event_new">نئون واقعو</string>
     <string name="calendars_event_edit">واقعي ۾ ترميم ڪريو</string>
     <string name="calendars_event_calendar">ڪئلينڊر</string>
@@ -123,10 +125,6 @@
         <item quantity="one">%1$d واقعو اپڊيٽ ٿيو</item>
         <item quantity="other">%1$d واقعا اپڊيٽ ٿيا</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d وڌيڪ</item>
-        <item quantity="other">+%1$d وڌيڪ</item>
-    </plurals>
     <string name="calendars_sync_choose">سنڪ ڪرڻ لاءِ ڪئلينڊر</string>
     <string name="calendars_poll_large">ڪئلينڊر تمام وڏو آهي</string>
     <string name="calendars_poll_invalid">پتي مان ڪوبه ڪئلينڊر نه مليو</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">توهان ڪوبه Google اڪائونٽ نه ڳنڍيو آهي.</string>
     <string name="calendars_subscribe_google_connect_action">Google ڳنڍيو</string>
     <string name="calendars_grant_failed">ڪئلينڊر رسائي نه ڏني وئي</string>
+    <string name="calendars_event_exception">تبديل ٿيل واقعو</string>
 </resources>

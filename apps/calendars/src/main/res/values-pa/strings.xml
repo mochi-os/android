@@ -13,7 +13,6 @@
     <string name="calendars_view">ਦ੍ਰਿਸ਼</string>
     <string name="calendars_view_list">ਸੂਚੀ</string>
     <string name="calendars_list_search">ਖੋਜ</string>
-    <string name="calendars_event_untitled">ਬਿਨਾਂ ਸਿਰਲੇਖ</string>
     <string name="calendars_event_title">ਸਿਰਲੇਖ</string>
     <string name="calendars_event_location">ਟਿਕਾਣਾ</string>
     <string name="calendars_event_description">ਵੇਰਵਾ</string>
@@ -72,6 +71,9 @@
     <string name="calendars_range">%1$s ਤੋਂ %2$s</string>
     <string name="calendars_truncated">ਇਸ ਸੀਮਾ ਦੇ ਕੁਝ ਸਮਾਗਮ ਨਹੀਂ ਦਿਖਾਏ ਗਏ।</string>
     <string name="calendars_list_empty">ਕੋਈ ਇਵੈਂਟ ਨਹੀਂ</string>
+    <string name="calendars_untitled">(ਕੋਈ ਸਿਰਲੇਖ ਨਹੀਂ)</string>
+    <string name="calendars_status_cancelled">ਰੱਦ</string>
+    <string name="calendars_status_tentative">ਆਰਜ਼ੀ</string>
     <string name="calendars_event_new">ਨਵਾਂ ਇਵੈਂਟ</string>
     <string name="calendars_event_edit">ਇਵੈਂਟ ਸੰਪਾਦਿਤ ਕਰੋ</string>
     <string name="calendars_event_calendar">ਕੈਲੰਡਰ</string>
@@ -123,10 +125,6 @@
         <item quantity="one">%1$d ਸਮਾਗਮ ਅੱਪਡੇਟ ਹੋਇਆ</item>
         <item quantity="other">%1$d ਸਮਾਗਮ ਅੱਪਡੇਟ ਹੋਏ</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d ਹੋਰ</item>
-        <item quantity="other">+%1$d ਹੋਰ</item>
-    </plurals>
     <string name="calendars_sync_choose">ਸਿੰਕ ਕਰਨ ਵਾਲੇ ਕੈਲੰਡਰ</string>
     <string name="calendars_poll_large">ਕੈਲੰਡਰ ਬਹੁਤ ਵੱਡਾ ਹੈ</string>
     <string name="calendars_poll_invalid">ਪਤੇ ਤੋਂ ਕੋਈ ਕੈਲੰਡਰ ਨਹੀਂ ਮਿਲਿਆ</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">ਤੁਸੀਂ ਕੋਈ Google ਖਾਤਾ ਨਹੀਂ ਜੋੜਿਆ ਹੈ।</string>
     <string name="calendars_subscribe_google_connect_action">Google ਨਾਲ ਜੁੜੋ</string>
     <string name="calendars_grant_failed">ਕੈਲੰਡਰ ਪਹੁੰਚ ਨਹੀਂ ਦਿੱਤੀ ਗਈ</string>
+    <string name="calendars_event_exception">ਬਦਲਿਆ ਦੁਹਰਾਓ</string>
 </resources>

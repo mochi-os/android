@@ -13,7 +13,6 @@
     <string name="calendars_view">ವೀಕ್ಷಣೆ</string>
     <string name="calendars_view_list">ಪಟ್ಟಿ</string>
     <string name="calendars_list_search">ಹುಡುಕಿ</string>
-    <string name="calendars_event_untitled">ಶೀರ್ಷಿಕೆರಹಿತ</string>
     <string name="calendars_event_title">ಶೀರ್ಷಿಕೆ</string>
     <string name="calendars_event_location">ಸ್ಥಳ</string>
     <string name="calendars_event_description">ವಿವರಣೆ</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">%1$s ರಿಂದ %2$s ವರೆಗೆ</string>
     <string name="calendars_truncated">ಈ ವ್ಯಾಪ್ತಿಯ ಕೆಲವು ಈವೆಂಟ್‌ಗಳನ್ನು ತೋರಿಸಲಾಗಿಲ್ಲ.</string>
     <string name="calendars_list_empty">ಯಾವುದೇ ಈವೆಂಟ್‌ಗಳಿಲ್ಲ</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d ಇನ್ನಷ್ಟು</item>
-        <item quantity="other">+%1$d ಇನ್ನಷ್ಟು</item>
-    </plurals>
+    <string name="calendars_untitled">(ಶೀರ್ಷಿಕೆ ಇಲ್ಲ)</string>
+    <string name="calendars_status_cancelled">ರದ್ದಾಗಿದೆ</string>
+    <string name="calendars_status_tentative">ತಾತ್ಕಾಲಿಕ</string>
     <string name="calendars_event_new">ಹೊಸ ಈವೆಂಟ್</string>
     <string name="calendars_event_edit">ಈವೆಂಟ್ ಸಂಪಾದಿಸಿ</string>
     <string name="calendars_event_calendar">ಕ್ಯಾಲೆಂಡರ್</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">ನೀವು Google ಖಾತೆಯನ್ನು ಸಂಪರ್ಕಿಸಿಲ್ಲ.</string>
     <string name="calendars_subscribe_google_connect_action">Google ಸಂಪರ್ಕಿಸಿ</string>
     <string name="calendars_grant_failed">ಕ್ಯಾಲೆಂಡರ್ ಪ್ರವೇಶ ನೀಡಲಾಗಿಲ್ಲ</string>
+    <string name="calendars_event_exception">ಬದಲಾದ ಪುನರಾವರ್ತನೆ</string>
 </resources>

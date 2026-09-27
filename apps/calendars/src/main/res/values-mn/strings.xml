@@ -13,7 +13,6 @@
     <string name="calendars_view">Харагдац</string>
     <string name="calendars_view_list">Жагсаалт</string>
     <string name="calendars_list_search">Хайх</string>
-    <string name="calendars_event_untitled">Гарчиггүй</string>
     <string name="calendars_event_title">Гарчиг</string>
     <string name="calendars_event_location">Байршил</string>
     <string name="calendars_event_description">Тайлбар</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">%1$s - %2$s</string>
     <string name="calendars_truncated">Энэ мужийн зарим үйл явдлыг харуулаагүй байна.</string>
     <string name="calendars_list_empty">Үйл явдал алга</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d илүү</item>
-        <item quantity="other">+%1$d илүү</item>
-    </plurals>
+    <string name="calendars_untitled">(Гарчиггүй)</string>
+    <string name="calendars_status_cancelled">Цуцалсан</string>
+    <string name="calendars_status_tentative">Урьдчилсан</string>
     <string name="calendars_event_new">Шинэ үйл явдал</string>
     <string name="calendars_event_edit">Үйл явдал засах</string>
     <string name="calendars_event_calendar">Хуанли</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Та Google бүртгэл холбоогүй байна.</string>
     <string name="calendars_subscribe_google_connect_action">Google-т холбогдох</string>
     <string name="calendars_grant_failed">Хуанлийн хандалт олгогдсонгүй</string>
+    <string name="calendars_event_exception">Өөрчлөгдсөн давталт</string>
 </resources>

@@ -13,7 +13,6 @@
     <string name="calendars_view">Koʻrinish</string>
     <string name="calendars_view_list">Roʻyxat</string>
     <string name="calendars_list_search">Qidirish</string>
-    <string name="calendars_event_untitled">Sarlavhasiz</string>
     <string name="calendars_event_title">Sarlavha</string>
     <string name="calendars_event_location">Joylashuv</string>
     <string name="calendars_event_description">Tavsif</string>
@@ -72,6 +71,9 @@
     <string name="calendars_range">%1$s dan %2$s gacha</string>
     <string name="calendars_truncated">Bu oraliqdagi ayrim tadbirlar koʻrsatilmagan.</string>
     <string name="calendars_list_empty">Tadbirlar yoʻq</string>
+    <string name="calendars_untitled">(Sarlavhasiz)</string>
+    <string name="calendars_status_cancelled">Bekor qilindi</string>
+    <string name="calendars_status_tentative">Taxminiy</string>
     <string name="calendars_event_new">Yangi tadbir</string>
     <string name="calendars_event_edit">Tadbirni tahrirlash</string>
     <string name="calendars_event_calendar">Kalendar</string>
@@ -123,10 +125,6 @@
         <item quantity="one">%1$d tadbir yangilandi</item>
         <item quantity="other">%1$d tadbir yangilandi</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">yana +%1$d</item>
-        <item quantity="other">yana +%1$d</item>
-    </plurals>
     <string name="calendars_sync_choose">Sinxronlanadigan kalendarlar</string>
     <string name="calendars_poll_large">Kalendar juda katta</string>
     <string name="calendars_poll_invalid">Manzil kalendar qaytarmadi</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Siz Google hisobini ulamagansiz.</string>
     <string name="calendars_subscribe_google_connect_action">Google\'ni ulash</string>
     <string name="calendars_grant_failed">Kalendarga kirish berilmadi</string>
+    <string name="calendars_event_exception">Oʻzgartirilgan takror</string>
 </resources>

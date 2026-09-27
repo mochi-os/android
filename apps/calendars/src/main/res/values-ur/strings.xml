@@ -13,7 +13,6 @@
     <string name="calendars_view">منظر</string>
     <string name="calendars_view_list">فہرست</string>
     <string name="calendars_list_search">تلاش کریں</string>
-    <string name="calendars_event_untitled">بے عنوان</string>
     <string name="calendars_event_title">عنوان</string>
     <string name="calendars_event_location">مقام</string>
     <string name="calendars_event_description">تفصیل</string>
@@ -72,6 +71,9 @@
     <string name="calendars_range">%1$s سے %2$s تک</string>
     <string name="calendars_truncated">اس حد میں کچھ ایونٹس نہیں دکھائے گئے۔</string>
     <string name="calendars_list_empty">کوئی ایونٹ نہیں</string>
+    <string name="calendars_untitled">(کوئی عنوان نہیں)</string>
+    <string name="calendars_status_cancelled">منسوخ</string>
+    <string name="calendars_status_tentative">عارضی</string>
     <string name="calendars_event_new">نیا ایونٹ</string>
     <string name="calendars_event_edit">ایونٹ میں ترمیم کریں</string>
     <string name="calendars_event_calendar">کیلنڈر</string>
@@ -123,10 +125,6 @@
         <item quantity="one">%1$d ایونٹ اپ ڈیٹ ہوا</item>
         <item quantity="other">%1$d ایونٹس اپ ڈیٹ ہوئے</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d مزید</item>
-        <item quantity="other">+%1$d مزید</item>
-    </plurals>
     <string name="calendars_sync_choose">سنک کرنے کے لیے کیلنڈرز</string>
     <string name="calendars_poll_large">کیلنڈر بہت بڑا ہے</string>
     <string name="calendars_poll_invalid">پتے سے کوئی کیلنڈر نہیں ملا</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">آپ نے کوئی Google اکاؤنٹ کنیکٹ نہیں کیا۔</string>
     <string name="calendars_subscribe_google_connect_action">Google سے جڑیں</string>
     <string name="calendars_grant_failed">کیلنڈر تک رسائی نہیں دی گئی</string>
+    <string name="calendars_event_exception">تبدیل شدہ تکرار</string>
 </resources>

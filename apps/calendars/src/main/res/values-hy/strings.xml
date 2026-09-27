@@ -13,7 +13,6 @@
     <string name="calendars_view">Տեսք</string>
     <string name="calendars_view_list">Ցանկ</string>
     <string name="calendars_list_search">Որոնել</string>
-    <string name="calendars_event_untitled">Անվերնագիր</string>
     <string name="calendars_event_title">Վերնագիր</string>
     <string name="calendars_event_location">Գտնվելու վայր</string>
     <string name="calendars_event_description">Նկարագրություն</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">%1$s-ից մինչև %2$s</string>
     <string name="calendars_truncated">Այս միջակայքի որոշ միջոցառումներ ցուցադրված չեն։</string>
     <string name="calendars_list_empty">Միջոցառումներ չկան</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d ավելին</item>
-        <item quantity="other">+%1$d ավելին</item>
-    </plurals>
+    <string name="calendars_untitled">(Առանց վերնագրի)</string>
+    <string name="calendars_status_cancelled">Չեղարկված</string>
+    <string name="calendars_status_tentative">Նախնական</string>
     <string name="calendars_event_new">Նոր միջոցառում</string>
     <string name="calendars_event_edit">Խմբագրել միջոցառումը</string>
     <string name="calendars_event_calendar">Օրացույց</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Դուք Google հաշիվ չեք միացրել։</string>
     <string name="calendars_subscribe_google_connect_action">Միացնել Google-ը</string>
     <string name="calendars_grant_failed">Օրացույցի մուտքը չի տրամադրվել</string>
+    <string name="calendars_event_exception">Փոփոխված կրկնություն</string>
 </resources>

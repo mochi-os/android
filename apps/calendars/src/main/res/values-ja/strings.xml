@@ -13,7 +13,6 @@
     <string name="calendars_view">ビュー</string>
     <string name="calendars_view_list">リスト</string>
     <string name="calendars_list_search">検索</string>
-    <string name="calendars_event_untitled">無題</string>
     <string name="calendars_event_title">タイトル</string>
     <string name="calendars_event_location">場所</string>
     <string name="calendars_event_description">説明</string>
@@ -75,9 +74,9 @@
     <string name="calendars_range">%1$s ～ %2$s</string>
     <string name="calendars_truncated">この期間の一部の予定は表示されていません。</string>
     <string name="calendars_list_empty">予定はありません</string>
-    <plurals name="calendars_more">
-        <item quantity="other">他 +%1$d 件</item>
-    </plurals>
+    <string name="calendars_untitled">（タイトルなし）</string>
+    <string name="calendars_status_cancelled">キャンセル済み</string>
+    <string name="calendars_status_tentative">未確定</string>
     <string name="calendars_event_new">新しい予定</string>
     <string name="calendars_event_edit">予定を編集</string>
     <string name="calendars_event_calendar">カレンダー</string>
@@ -172,4 +171,5 @@
     <string name="calendars_subscribe_google_connect">Google アカウントが接続されていません。</string>
     <string name="calendars_subscribe_google_connect_action">Google に接続</string>
     <string name="calendars_grant_failed">カレンダーへのアクセスが許可されませんでした</string>
+    <string name="calendars_event_exception">変更された予定</string>
 </resources>

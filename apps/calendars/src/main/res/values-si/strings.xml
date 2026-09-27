@@ -13,7 +13,6 @@
     <string name="calendars_view">දසුන</string>
     <string name="calendars_view_list">ලැයිස්තුව</string>
     <string name="calendars_list_search">සොයන්න</string>
-    <string name="calendars_event_untitled">මාතෘකා රහිත</string>
     <string name="calendars_event_title">මාතෘකාව</string>
     <string name="calendars_event_location">ස්ථානය</string>
     <string name="calendars_event_description">විස්තරය</string>
@@ -72,6 +71,9 @@
     <string name="calendars_range">%1$s සිට %2$s දක්වා</string>
     <string name="calendars_truncated">මෙම පරාසයේ සමහර සිදුවීම් පෙන්වා නැත.</string>
     <string name="calendars_list_empty">සිදුවීම් නැත</string>
+    <string name="calendars_untitled">(මාතෘකාවක් නැත)</string>
+    <string name="calendars_status_cancelled">අවලංගු කරන ලදී</string>
+    <string name="calendars_status_tentative">තාවකාලික</string>
     <string name="calendars_event_new">නව සිදුවීම</string>
     <string name="calendars_event_edit">සිදුවීම සංස්කරණය කරන්න</string>
     <string name="calendars_event_calendar">දින දර්ශනය</string>
@@ -123,10 +125,6 @@
         <item quantity="one">සිදුවීම් %1$d ක් යාවත්කාලීන විය</item>
         <item quantity="other">සිදුවීම් %1$d ක් යාවත්කාලීන විය</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">තවත් %1$d ක්</item>
-        <item quantity="other">තවත් %1$d ක්</item>
-    </plurals>
     <string name="calendars_sync_choose">සමමුහූර්ත කිරීමට දින දර්ශන</string>
     <string name="calendars_poll_large">දින දර්ශනය ඉතා විශාලයි</string>
     <string name="calendars_poll_invalid">ලිපිනයෙන් දින දර්ශනයක් ලැබුණේ නැත</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">ඔබ Google ගිණුමක් සම්බන්ධ කර නැත.</string>
     <string name="calendars_subscribe_google_connect_action">Google සම්බන්ධ කරන්න</string>
     <string name="calendars_grant_failed">දින දර්ශන ප්‍රවේශය ලබා දී නැත</string>
+    <string name="calendars_event_exception">වෙනස් කළ පුනරාවර්තනය</string>
 </resources>

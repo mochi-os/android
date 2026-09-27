@@ -17,7 +17,11 @@ import java.time.ZoneOffset
  * an all-day occurrence's [start] is the midnight of that date in the user's
  * own timezone, not in the viewer's. [exception] marks an occurrence the user
  * has detached from its series. [zone] is the zone each end was written in,
- * on a timed occurrence only.
+ * on a timed occurrence only. [alarm] says the occurrence's own event carries
+ * a reminder; a changed occurrence answers for itself, and a core that
+ * predates the field leaves it out. [status] is the event's `STATUS` as
+ * written, blank when it has none. [colour] is the colour the occurrence is
+ * drawn in: its event's own `COLOR` when it carries one, else its calendar's.
  */
 data class Instance(
     val event: String = "",
@@ -37,7 +41,17 @@ data class Instance(
     val recurring: Boolean = false,
     val exception: Boolean = false,
     val zone: Zone? = null,
+    val alarm: Boolean = false,
 ) {
+    /** The occurrence has been called off: its event's `STATUS:CANCELLED`. */
+    val cancelled: Boolean get() = status.trim().equals("CANCELLED", ignoreCase = true)
+
+    /** The occurrence is not yet certain: its event's `STATUS:TENTATIVE`. */
+    val tentative: Boolean get() = status.trim().equals("TENTATIVE", ignoreCase = true)
+
+    /** The occurrence has no title of its own, so the views say "(No title)". */
+    val untitled: Boolean get() = summary.isBlank()
+
     /** A birthday occurrence is derived from a contact and has no event to open. */
     val birthday: Boolean get() = event.startsWith(BIRTHDAY)
 
@@ -59,6 +73,16 @@ data class Instance(
         const val BIRTHDAY = "birthday-"
     }
 }
+
+/** A colour as the server writes one. */
+private val HEX = Regex("^#[0-9a-fA-F]{6}$")
+
+/**
+ * The colour an occurrence is drawn in: [own], the colour it arrived with,
+ * when that is a `#rrggbb` colour, and otherwise [calendar], its calendar's.
+ */
+fun tint(own: String?, calendar: String?): String =
+    own?.trim()?.takeIf { HEX.matches(it) } ?: calendar.orEmpty()
 
 /**
  * The IANA zone each end of a timed occurrence was written in, its `TZID`:

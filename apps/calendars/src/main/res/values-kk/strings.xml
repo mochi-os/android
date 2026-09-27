@@ -13,7 +13,6 @@
     <string name="calendars_view">Көрініс</string>
     <string name="calendars_view_list">Тізім</string>
     <string name="calendars_list_search">Іздеу</string>
-    <string name="calendars_event_untitled">Атаусыз</string>
     <string name="calendars_event_title">Тақырып</string>
     <string name="calendars_event_location">Орналасуы</string>
     <string name="calendars_event_description">Сипаттама</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">%1$s – %2$s</string>
     <string name="calendars_truncated">Осы аралықтағы кейбір іс-шаралар көрсетілмеген.</string>
     <string name="calendars_list_empty">Іс-шаралар жоқ</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d тағы</item>
-        <item quantity="other">+%1$d тағы</item>
-    </plurals>
+    <string name="calendars_untitled">(Атауы жоқ)</string>
+    <string name="calendars_status_cancelled">Болдырылмады</string>
+    <string name="calendars_status_tentative">Алдын ала</string>
     <string name="calendars_event_new">Жаңа іс-шара</string>
     <string name="calendars_event_edit">Іс-шараны өңдеу</string>
     <string name="calendars_event_calendar">Күнтізбе</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Сіз Google тіркелгісін қоспағансыз.</string>
     <string name="calendars_subscribe_google_connect_action">Google-ға қосылу</string>
     <string name="calendars_grant_failed">Күнтізбеге қол жеткізу берілмеді</string>
+    <string name="calendars_event_exception">Өзгертілген қайталану</string>
 </resources>

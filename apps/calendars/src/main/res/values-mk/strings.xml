@@ -13,7 +13,6 @@
     <string name="calendars_view">Приказ</string>
     <string name="calendars_view_list">Листа</string>
     <string name="calendars_list_search">Барај</string>
-    <string name="calendars_event_untitled">Без наслов</string>
     <string name="calendars_event_title">Наслов</string>
     <string name="calendars_event_location">Локација</string>
     <string name="calendars_event_description">Опис</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">%1$s до %2$s</string>
     <string name="calendars_truncated">Некои настани во овој период не се прикажани.</string>
     <string name="calendars_list_empty">Нема настани</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d повеќе</item>
-        <item quantity="other">+%1$d повеќе</item>
-    </plurals>
+    <string name="calendars_untitled">(Без наслов)</string>
+    <string name="calendars_status_cancelled">Откажано</string>
+    <string name="calendars_status_tentative">Непотврдено</string>
     <string name="calendars_event_new">Нов настан</string>
     <string name="calendars_event_edit">Уреди настан</string>
     <string name="calendars_event_calendar">Календар</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Не си поврзал сметка на Google.</string>
     <string name="calendars_subscribe_google_connect_action">Поврзи Google</string>
     <string name="calendars_grant_failed">Пристапот до календарот не беше даден</string>
+    <string name="calendars_event_exception">Изменето повторување</string>
 </resources>

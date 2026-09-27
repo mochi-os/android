@@ -13,7 +13,6 @@
     <string name="calendars_view">بینین</string>
     <string name="calendars_view_list">لیست</string>
     <string name="calendars_list_search">گەڕان</string>
-    <string name="calendars_event_untitled">بێ ناونیشان</string>
     <string name="calendars_event_title">ناونیشان</string>
     <string name="calendars_event_location">شوێن</string>
     <string name="calendars_event_description">وەسف</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">لە %1$s بۆ %2$s</string>
     <string name="calendars_truncated">هەندێک ڕووداو لەم مەودایەدا پیشان نادرێن.</string>
     <string name="calendars_list_empty">هیچ ڕووداوێک نییە</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d زیاتر</item>
-        <item quantity="other">+%1$d زیاتر</item>
-    </plurals>
+    <string name="calendars_untitled">(بێ ناونیشان)</string>
+    <string name="calendars_status_cancelled">هەڵوەشێنراوە</string>
+    <string name="calendars_status_tentative">کاتی</string>
     <string name="calendars_event_new">ڕووداوی نوێ</string>
     <string name="calendars_event_edit">دەستکاری ڕووداو</string>
     <string name="calendars_event_calendar">ڕۆژژمێر</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">تۆ هیچ هەژمارێکی Google پەیوەست نەکردووە.</string>
     <string name="calendars_subscribe_google_connect_action">پەیوەندی بە Google</string>
     <string name="calendars_grant_failed">دەستڕاگەیشتنی ڕۆژژمێر نەدرا</string>
+    <string name="calendars_event_exception">ڕوودانی گۆڕاو</string>
 </resources>

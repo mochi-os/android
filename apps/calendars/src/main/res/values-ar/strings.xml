@@ -13,7 +13,6 @@
     <string name="calendars_view">عرض</string>
     <string name="calendars_view_list">قائمة</string>
     <string name="calendars_list_search">بحث</string>
-    <string name="calendars_event_untitled">بدون عنوان</string>
     <string name="calendars_event_title">العنوان</string>
     <string name="calendars_event_location">الموقع</string>
     <string name="calendars_event_description">الوصف</string>
@@ -80,14 +79,9 @@
     <string name="calendars_range">%1$s إلى %2$s</string>
     <string name="calendars_truncated">بعض الأحداث في هذا النطاق غير معروضة.</string>
     <string name="calendars_list_empty">لا توجد أحداث</string>
-    <plurals name="calendars_more">
-        <item quantity="zero">+%1$d أخرى</item>
-        <item quantity="one">+%1$d أخرى</item>
-        <item quantity="two">+%1$d أخرى</item>
-        <item quantity="few">+%1$d أخرى</item>
-        <item quantity="many">+%1$d أخرى</item>
-        <item quantity="other">+%1$d أخرى</item>
-    </plurals>
+    <string name="calendars_untitled">(بلا عنوان)</string>
+    <string name="calendars_status_cancelled">ملغى</string>
+    <string name="calendars_status_tentative">مبدئي</string>
     <string name="calendars_event_new">حدث جديد</string>
     <string name="calendars_event_edit">تعديل الحدث</string>
     <string name="calendars_event_calendar">التقويم</string>
@@ -187,4 +181,5 @@
     <string name="calendars_subscribe_google_connect">لم تربط أي حساب Google.</string>
     <string name="calendars_subscribe_google_connect_action">ربط Google</string>
     <string name="calendars_grant_failed">لم يُمنح الوصول إلى التقويم</string>
+    <string name="calendars_event_exception">تكرار معدَّل</string>
 </resources>

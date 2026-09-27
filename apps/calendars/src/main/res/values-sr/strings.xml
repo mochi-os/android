@@ -13,7 +13,6 @@
     <string name="calendars_view">Приказ</string>
     <string name="calendars_view_list">Листа</string>
     <string name="calendars_list_search">Претражи</string>
-    <string name="calendars_event_untitled">Без наслова</string>
     <string name="calendars_event_title">Наслов</string>
     <string name="calendars_event_location">Локација</string>
     <string name="calendars_event_description">Опис</string>
@@ -72,6 +71,9 @@
     <string name="calendars_range">Од %1$s до %2$s</string>
     <string name="calendars_truncated">Неки догађаји у овом опсегу нису приказани.</string>
     <string name="calendars_list_empty">Нема догађаја</string>
+    <string name="calendars_untitled">(Без наслова)</string>
+    <string name="calendars_status_cancelled">Отказано</string>
+    <string name="calendars_status_tentative">Непотврђено</string>
     <string name="calendars_event_new">Нови догађај</string>
     <string name="calendars_event_edit">Уреди догађај</string>
     <string name="calendars_event_calendar">Календар</string>
@@ -124,11 +126,6 @@
         <item quantity="few">Ажурирана %1$d догађаја</item>
         <item quantity="other">Ажурирано %1$d догађаја</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d више</item>
-        <item quantity="few">+%1$d више</item>
-        <item quantity="other">+%1$d више</item>
-    </plurals>
     <string name="calendars_sync_choose">Календари за синхронизацију</string>
     <string name="calendars_poll_large">Календар је превелик</string>
     <string name="calendars_poll_invalid">Адреса није вратила календар</string>
@@ -178,4 +175,5 @@
     <string name="calendars_subscribe_google_connect">Нисте повезали Google налог.</string>
     <string name="calendars_subscribe_google_connect_action">Повежи Google</string>
     <string name="calendars_grant_failed">Приступ календару није одобрен</string>
+    <string name="calendars_event_exception">Измењено понављање</string>
 </resources>

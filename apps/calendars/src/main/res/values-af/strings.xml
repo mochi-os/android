@@ -13,7 +13,6 @@
     <string name="calendars_view">Aansig</string>
     <string name="calendars_view_list">Lys</string>
     <string name="calendars_list_search">Soek</string>
-    <string name="calendars_event_untitled">Sonder titel</string>
     <string name="calendars_event_title">Titel</string>
     <string name="calendars_event_location">Ligging</string>
     <string name="calendars_event_description">Beskrywing</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">%1$s tot %2$s</string>
     <string name="calendars_truncated">Sommige gebeurtenisse in hierdie tydperk word nie gewys nie.</string>
     <string name="calendars_list_empty">Geen gebeurtenisse nie</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d meer</item>
-        <item quantity="other">+%1$d meer</item>
-    </plurals>
+    <string name="calendars_untitled">(Geen titel)</string>
+    <string name="calendars_status_cancelled">Gekanselleer</string>
+    <string name="calendars_status_tentative">Voorlopig</string>
     <string name="calendars_event_new">Nuwe gebeurtenis</string>
     <string name="calendars_event_edit">Wysig gebeurtenis</string>
     <string name="calendars_event_calendar">Kalender</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Jy het nog nie \'n Google-rekening verbind nie.</string>
     <string name="calendars_subscribe_google_connect_action">Verbind Google</string>
     <string name="calendars_grant_failed">Kalendertoegang is nie toegestaan nie</string>
+    <string name="calendars_event_exception">Veranderde herhaling</string>
 </resources>

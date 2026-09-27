@@ -13,7 +13,6 @@
     <string name="calendars_view">Ikuspegia</string>
     <string name="calendars_view_list">Zerrenda</string>
     <string name="calendars_list_search">Bilatu</string>
-    <string name="calendars_event_untitled">Izengabea</string>
     <string name="calendars_event_title">Izenburua</string>
     <string name="calendars_event_location">Kokapena</string>
     <string name="calendars_event_description">Deskribapena</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">%1$s eta %2$s artean</string>
     <string name="calendars_truncated">Bitarte honetako gertaera batzuk ez dira erakusten.</string>
     <string name="calendars_list_empty">Gertaerarik ez</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d gehiago</item>
-        <item quantity="other">+%1$d gehiago</item>
-    </plurals>
+    <string name="calendars_untitled">(Izenbururik gabe)</string>
+    <string name="calendars_status_cancelled">Bertan behera</string>
+    <string name="calendars_status_tentative">Behin-behinekoa</string>
     <string name="calendars_event_new">Gertaera berria</string>
     <string name="calendars_event_edit">Editatu gertaera</string>
     <string name="calendars_event_calendar">Egutegia</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Ez duzu Google konturik konektatu.</string>
     <string name="calendars_subscribe_google_connect_action">Konektatu Google</string>
     <string name="calendars_grant_failed">Ez da egutegirako sarbidea eman</string>
+    <string name="calendars_event_exception">Aldatutako agerraldia</string>
 </resources>

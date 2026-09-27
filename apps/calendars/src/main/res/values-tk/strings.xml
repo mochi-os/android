@@ -13,7 +13,6 @@
     <string name="calendars_view">Görnüş</string>
     <string name="calendars_view_list">Sanaw</string>
     <string name="calendars_list_search">Gözle</string>
-    <string name="calendars_event_untitled">Atsyz</string>
     <string name="calendars_event_title">At</string>
     <string name="calendars_event_location">Ýerleşýän ýeri</string>
     <string name="calendars_event_description">Düşündiriş</string>
@@ -72,6 +71,9 @@
     <string name="calendars_range">%1$s – %2$s</string>
     <string name="calendars_truncated">Şu aralykdaky käbir wakalar görkezilmedi.</string>
     <string name="calendars_list_empty">Çäreler ýok</string>
+    <string name="calendars_untitled">(Atsyz)</string>
+    <string name="calendars_status_cancelled">Ýatyryldy</string>
+    <string name="calendars_status_tentative">Deslapky</string>
     <string name="calendars_event_new">Täze çäre</string>
     <string name="calendars_event_edit">Çäräni düzet</string>
     <string name="calendars_event_calendar">Senenama</string>
@@ -123,10 +125,6 @@
         <item quantity="one">%1$d waka täzelendi</item>
         <item quantity="other">%1$d waka täzelendi</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">ýene +%1$d</item>
-        <item quantity="other">ýene +%1$d</item>
-    </plurals>
     <string name="calendars_sync_choose">Sinhronlanjak kalendarlar</string>
     <string name="calendars_poll_large">Kalendar örän uly</string>
     <string name="calendars_poll_invalid">Salgy kalendar gaýtarmady</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Google hasaby baglanyşdyrmadyňyz.</string>
     <string name="calendars_subscribe_google_connect_action">Google birikdir</string>
     <string name="calendars_grant_failed">Senenama elýeterliligi berilmedi</string>
+    <string name="calendars_event_exception">Üýtgedilen gaýtalanma</string>
 </resources>

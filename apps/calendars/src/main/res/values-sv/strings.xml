@@ -13,7 +13,6 @@
     <string name="calendars_view">Vy</string>
     <string name="calendars_view_list">Lista</string>
     <string name="calendars_list_search">Sök</string>
-    <string name="calendars_event_untitled">Namnlös</string>
     <string name="calendars_event_title">Titel</string>
     <string name="calendars_event_location">Plats</string>
     <string name="calendars_event_description">Beskrivning</string>
@@ -72,6 +71,9 @@
     <string name="calendars_range">%1$s till %2$s</string>
     <string name="calendars_truncated">Vissa händelser i det här intervallet visas inte.</string>
     <string name="calendars_list_empty">Inga händelser</string>
+    <string name="calendars_untitled">(Ingen titel)</string>
+    <string name="calendars_status_cancelled">Inställt</string>
+    <string name="calendars_status_tentative">Preliminärt</string>
     <string name="calendars_event_new">Ny händelse</string>
     <string name="calendars_event_edit">Redigera händelse</string>
     <string name="calendars_event_calendar">Kalender</string>
@@ -123,10 +125,6 @@
         <item quantity="one">%1$d händelse uppdaterad</item>
         <item quantity="other">%1$d händelser uppdaterade</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d till</item>
-        <item quantity="other">+%1$d till</item>
-    </plurals>
     <string name="calendars_sync_choose">Kalendrar att synkronisera</string>
     <string name="calendars_poll_large">Kalendern är för stor</string>
     <string name="calendars_poll_invalid">Adressen returnerade ingen kalender</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Du har inte anslutit något Google-konto.</string>
     <string name="calendars_subscribe_google_connect_action">Anslut Google</string>
     <string name="calendars_grant_failed">Kalenderåtkomst beviljades inte</string>
+    <string name="calendars_event_exception">Ändrad förekomst</string>
 </resources>

@@ -13,7 +13,6 @@
     <string name="calendars_view">Veduta</string>
     <string name="calendars_view_list">Lista</string>
     <string name="calendars_list_search">Fittex</string>
-    <string name="calendars_event_untitled">Bla titlu</string>
     <string name="calendars_event_title">Titlu</string>
     <string name="calendars_event_location">Post</string>
     <string name="calendars_event_description">Deskrizzjoni</string>
@@ -79,13 +78,9 @@
     <string name="calendars_range">minn %1$s sa %2$s</string>
     <string name="calendars_truncated">Xi avvenimenti f\'din il-firxa mhumiex murija.</string>
     <string name="calendars_list_empty">L-ebda avvenimenti</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d ieħor</item>
-        <item quantity="two">+%1$d oħra</item>
-        <item quantity="few">+%1$d oħra</item>
-        <item quantity="many">+%1$d oħra</item>
-        <item quantity="other">+%1$d oħra</item>
-    </plurals>
+    <string name="calendars_untitled">(L-ebda titlu)</string>
+    <string name="calendars_status_cancelled">Ikkanċellat</string>
+    <string name="calendars_status_tentative">Provviżorju</string>
     <string name="calendars_event_new">Avveniment ġdid</string>
     <string name="calendars_event_edit">Editja l-avveniment</string>
     <string name="calendars_event_calendar">Kalendarju</string>
@@ -184,4 +179,5 @@
     <string name="calendars_subscribe_google_connect">Ma qabbadtx kont ta\' Google.</string>
     <string name="calendars_subscribe_google_connect_action">Qabbad Google</string>
     <string name="calendars_grant_failed">L-aċċess għall-kalendarju ma ngħatax</string>
+    <string name="calendars_event_exception">Okkorrenza mibdula</string>
 </resources>

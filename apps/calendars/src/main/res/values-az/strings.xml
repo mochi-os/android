@@ -13,7 +13,6 @@
     <string name="calendars_view">Görünüş</string>
     <string name="calendars_view_list">Siyahı</string>
     <string name="calendars_list_search">Axtar</string>
-    <string name="calendars_event_untitled">Başlıqsız</string>
     <string name="calendars_event_title">Başlıq</string>
     <string name="calendars_event_location">Yer</string>
     <string name="calendars_event_description">Təsvir</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">%1$s - %2$s</string>
     <string name="calendars_truncated">Bu aralıqdakı bəzi tədbirlər göstərilmir.</string>
     <string name="calendars_list_empty">Tədbir yoxdur</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d daha</item>
-        <item quantity="other">+%1$d daha</item>
-    </plurals>
+    <string name="calendars_untitled">(Başlıqsız)</string>
+    <string name="calendars_status_cancelled">Ləğv edilib</string>
+    <string name="calendars_status_tentative">Qəti deyil</string>
     <string name="calendars_event_new">Yeni tədbir</string>
     <string name="calendars_event_edit">Tədbiri redaktə et</string>
     <string name="calendars_event_calendar">Təqvim</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Google hesabı qoşmamısınız.</string>
     <string name="calendars_subscribe_google_connect_action">Google-a qoşul</string>
     <string name="calendars_grant_failed">Təqvimə giriş verilmədi</string>
+    <string name="calendars_event_exception">Dəyişdirilmiş təkrar</string>
 </resources>

@@ -13,7 +13,6 @@
     <string name="calendars_view">ভিউ</string>
     <string name="calendars_view_list">তালিকা</string>
     <string name="calendars_list_search">অনুসন্ধান</string>
-    <string name="calendars_event_untitled">শিরোনামহীন</string>
     <string name="calendars_event_title">শিরোনাম</string>
     <string name="calendars_event_location">অবস্থান</string>
     <string name="calendars_event_description">বিবরণ</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">%1$s থেকে %2$s</string>
     <string name="calendars_truncated">এই পরিসরের কিছু ইভেন্ট দেখানো হয়নি।</string>
     <string name="calendars_list_empty">কোনো ইভেন্ট নেই</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d আরও</item>
-        <item quantity="other">+%1$d আরও</item>
-    </plurals>
+    <string name="calendars_untitled">(শিরোনাম নেই)</string>
+    <string name="calendars_status_cancelled">বাতিল</string>
+    <string name="calendars_status_tentative">অনিশ্চিত</string>
     <string name="calendars_event_new">নতুন ইভেন্ট</string>
     <string name="calendars_event_edit">ইভেন্ট সম্পাদনা</string>
     <string name="calendars_event_calendar">ক্যালেন্ডার</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">আপনি কোনো Google অ্যাকাউন্ট সংযুক্ত করেননি।</string>
     <string name="calendars_subscribe_google_connect_action">Google সংযোগ করুন</string>
     <string name="calendars_grant_failed">ক্যালেন্ডার অ্যাক্সেস দেওয়া হয়নি</string>
+    <string name="calendars_event_exception">পরিবর্তিত পুনরাবৃত্তি</string>
 </resources>

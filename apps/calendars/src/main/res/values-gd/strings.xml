@@ -13,7 +13,6 @@
     <string name="calendars_view">Sealladh</string>
     <string name="calendars_view_list">Liosta</string>
     <string name="calendars_list_search">Lorg</string>
-    <string name="calendars_event_untitled">Gun tiotal</string>
     <string name="calendars_event_title">Tiotal</string>
     <string name="calendars_event_location">Àite</string>
     <string name="calendars_event_description">Tuairisgeul</string>
@@ -78,12 +77,9 @@
     <string name="calendars_range">%1$s gu %2$s</string>
     <string name="calendars_truncated">Chan eil cuid de na tachartasan san rainse seo gan sealltainn.</string>
     <string name="calendars_list_empty">Gun tachartasan</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d a bharrachd</item>
-        <item quantity="two">+%1$d a bharrachd</item>
-        <item quantity="few">+%1$d a bharrachd</item>
-        <item quantity="other">+%1$d a bharrachd</item>
-    </plurals>
+    <string name="calendars_untitled">(Gun tiotal)</string>
+    <string name="calendars_status_cancelled">Air a chur dheth</string>
+    <string name="calendars_status_tentative">Sealach</string>
     <string name="calendars_event_new">Tachartas ùr</string>
     <string name="calendars_event_edit">Deasaich an tachartas</string>
     <string name="calendars_event_calendar">Mìosachan</string>
@@ -181,4 +177,5 @@
     <string name="calendars_subscribe_google_connect">Cha do cheangail thu cunntas Google.</string>
     <string name="calendars_subscribe_google_connect_action">Ceangail Google</string>
     <string name="calendars_grant_failed">Cha deach inntrigeadh mìosachain a cheadachadh</string>
+    <string name="calendars_event_exception">Turas atharraichte</string>
 </resources>

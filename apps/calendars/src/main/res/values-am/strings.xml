@@ -13,7 +13,6 @@
     <string name="calendars_view">እይታ</string>
     <string name="calendars_view_list">ዝርዝር</string>
     <string name="calendars_list_search">ይፈልጉ</string>
-    <string name="calendars_event_untitled">ርዕስ የለሽ</string>
     <string name="calendars_event_title">ርዕስ</string>
     <string name="calendars_event_location">አካባቢ</string>
     <string name="calendars_event_description">መግለጫ</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">ከ%1$s እስከ %2$s</string>
     <string name="calendars_truncated">በዚህ ክልል ውስጥ ያሉ አንዳንድ ክስተቶች አይታዩም።</string>
     <string name="calendars_list_empty">ምንም ክስተቶች የሉም</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d ተጨማሪ</item>
-        <item quantity="other">+%1$d ተጨማሪ</item>
-    </plurals>
+    <string name="calendars_untitled">(ርዕስ የለም)</string>
+    <string name="calendars_status_cancelled">ተሰርዟል</string>
+    <string name="calendars_status_tentative">ያልተረጋገጠ</string>
     <string name="calendars_event_new">አዲስ ክስተት</string>
     <string name="calendars_event_edit">ክስተት አስተካክል</string>
     <string name="calendars_event_calendar">የቀን መቁጠሪያ</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">የGoogle መለያ አላገናኙም።</string>
     <string name="calendars_subscribe_google_connect_action">Google አገናኝ</string>
     <string name="calendars_grant_failed">የቀን መቁጠሪያ መዳረሻ አልተፈቀደም</string>
+    <string name="calendars_event_exception">የተቀየረ ድግግሞሽ</string>
 </resources>

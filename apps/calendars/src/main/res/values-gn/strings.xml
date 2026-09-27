@@ -13,7 +13,6 @@
     <string name="calendars_view">Jehecha</string>
     <string name="calendars_view_list">Tysýi</string>
     <string name="calendars_list_search">Eheka</string>
-    <string name="calendars_event_untitled">Téra\'ỹva</string>
     <string name="calendars_event_title">Téra</string>
     <string name="calendars_event_location">Tenda</string>
     <string name="calendars_event_description">Mbohekoha</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">%1$s guive %2$s peve</string>
     <string name="calendars_truncated">Oĩ evento ko aravópe ndojehechaukáiva.</string>
     <string name="calendars_list_empty">Ndaipóri evento</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d hetave</item>
-        <item quantity="other">+%1$d hetave</item>
-    </plurals>
+    <string name="calendars_untitled">(Téra\'ỹ)</string>
+    <string name="calendars_status_cancelled">Oñehéja</string>
+    <string name="calendars_status_tentative">Noñemoneĩri gueteri</string>
     <string name="calendars_event_new">Evento pyahu</string>
     <string name="calendars_event_edit">Embojuruja evento</string>
     <string name="calendars_event_calendar">Arapapaha</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Ndembojuajúi peteĩ Google mba\'ete.</string>
     <string name="calendars_subscribe_google_connect_action">Embojoaju Google</string>
     <string name="calendars_grant_failed">Ndoje\'ẽi jeike arapapahápe</string>
+    <string name="calendars_event_exception">Evento oñemoambuéva</string>
 </resources>

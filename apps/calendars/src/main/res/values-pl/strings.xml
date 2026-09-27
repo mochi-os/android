@@ -13,7 +13,6 @@
     <string name="calendars_view">Widok</string>
     <string name="calendars_view_list">Lista</string>
     <string name="calendars_list_search">Szukaj</string>
-    <string name="calendars_event_untitled">Bez tytułu</string>
     <string name="calendars_event_title">Tytuł</string>
     <string name="calendars_event_location">Lokalizacja</string>
     <string name="calendars_event_description">Opis</string>
@@ -71,6 +70,9 @@
     <string name="calendars_range">Od %1$s do %2$s</string>
     <string name="calendars_truncated">Niektóre wydarzenia z tego zakresu nie są pokazane.</string>
     <string name="calendars_list_empty">Brak wydarzeń</string>
+    <string name="calendars_untitled">(Bez tytułu)</string>
+    <string name="calendars_status_cancelled">Odwołane</string>
+    <string name="calendars_status_tentative">Wstępne</string>
     <string name="calendars_event_new">Nowe wydarzenie</string>
     <string name="calendars_event_edit">Edytuj wydarzenie</string>
     <string name="calendars_event_calendar">Kalendarz</string>
@@ -125,12 +127,6 @@
         <item quantity="many">Zaktualizowano %1$d wydarzeń</item>
         <item quantity="other">Zaktualizowano %1$d wydarzenia</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d więcej</item>
-        <item quantity="few">+%1$d więcej</item>
-        <item quantity="many">+%1$d więcej</item>
-        <item quantity="other">+%1$d więcej</item>
-    </plurals>
     <string name="calendars_sync_choose">Kalendarze do synchronizacji</string>
     <string name="calendars_poll_large">Kalendarz jest za duży</string>
     <string name="calendars_poll_invalid">Adres nie zwrócił kalendarza</string>
@@ -181,4 +177,5 @@
     <string name="calendars_subscribe_google_connect">Nie połączono żadnego konta Google.</string>
     <string name="calendars_subscribe_google_connect_action">Połącz Google</string>
     <string name="calendars_grant_failed">Nie przyznano dostępu do kalendarza</string>
+    <string name="calendars_event_exception">Zmienione wystąpienie</string>
 </resources>

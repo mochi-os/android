@@ -13,7 +13,6 @@
     <string name="calendars_view">Вигляд</string>
     <string name="calendars_view_list">Список</string>
     <string name="calendars_list_search">Пошук</string>
-    <string name="calendars_event_untitled">Без назви</string>
     <string name="calendars_event_title">Заголовок</string>
     <string name="calendars_event_location">Розташування</string>
     <string name="calendars_event_description">Опис</string>
@@ -72,6 +71,9 @@
     <string name="calendars_range">Від %1$s до %2$s</string>
     <string name="calendars_truncated">Деякі події в цьому діапазоні не показано.</string>
     <string name="calendars_list_empty">Немає подій</string>
+    <string name="calendars_untitled">(Без назви)</string>
+    <string name="calendars_status_cancelled">Скасовано</string>
+    <string name="calendars_status_tentative">Під питанням</string>
     <string name="calendars_event_new">Нова подія</string>
     <string name="calendars_event_edit">Редагувати подію</string>
     <string name="calendars_event_calendar">Календар</string>
@@ -125,12 +127,6 @@
         <item quantity="many">Оновлено %1$d подій</item>
         <item quantity="other">Оновлено %1$d події</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d ще</item>
-        <item quantity="few">+%1$d ще</item>
-        <item quantity="many">+%1$d ще</item>
-        <item quantity="other">+%1$d ще</item>
-    </plurals>
     <string name="calendars_sync_choose">Календарі для синхронізації</string>
     <string name="calendars_poll_large">Календар завеликий</string>
     <string name="calendars_poll_invalid">За адресою не знайдено календаря</string>
@@ -181,4 +177,5 @@
     <string name="calendars_subscribe_google_connect">Ви не підключили обліковий запис Google.</string>
     <string name="calendars_subscribe_google_connect_action">Підключити Google</string>
     <string name="calendars_grant_failed">Доступ до календаря не надано</string>
+    <string name="calendars_event_exception">Змінене повторення</string>
 </resources>

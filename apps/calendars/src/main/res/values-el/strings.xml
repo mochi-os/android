@@ -13,7 +13,6 @@
     <string name="calendars_view">Προβολή</string>
     <string name="calendars_view_list">Λίστα</string>
     <string name="calendars_list_search">Αναζήτηση</string>
-    <string name="calendars_event_untitled">Χωρίς τίτλο</string>
     <string name="calendars_event_title">Τίτλος</string>
     <string name="calendars_event_location">Τοποθεσία</string>
     <string name="calendars_event_description">Περιγραφή</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">%1$s έως %2$s</string>
     <string name="calendars_truncated">Ορισμένα συμβάντα σε αυτό το εύρος δεν εμφανίζονται.</string>
     <string name="calendars_list_empty">Δεν υπάρχουν συμβάντα</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d ακόμη</item>
-        <item quantity="other">+%1$d ακόμη</item>
-    </plurals>
+    <string name="calendars_untitled">(Χωρίς τίτλο)</string>
+    <string name="calendars_status_cancelled">Ακυρώθηκε</string>
+    <string name="calendars_status_tentative">Με επιφύλαξη</string>
     <string name="calendars_event_new">Νέο συμβάν</string>
     <string name="calendars_event_edit">Επεξεργασία συμβάντος</string>
     <string name="calendars_event_calendar">Ημερολόγιο</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Δεν έχετε συνδέσει λογαριασμό Google.</string>
     <string name="calendars_subscribe_google_connect_action">Σύνδεση με Google</string>
     <string name="calendars_grant_failed">Δεν δόθηκε πρόσβαση στο ημερολόγιο</string>
+    <string name="calendars_event_exception">Τροποποιημένη επανάληψη</string>
 </resources>

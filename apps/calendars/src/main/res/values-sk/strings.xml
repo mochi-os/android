@@ -13,7 +13,6 @@
     <string name="calendars_view">Zobrazenie</string>
     <string name="calendars_view_list">Zoznam</string>
     <string name="calendars_list_search">Hľadať</string>
-    <string name="calendars_event_untitled">Bez názvu</string>
     <string name="calendars_event_title">Názov</string>
     <string name="calendars_event_location">Poloha</string>
     <string name="calendars_event_description">Popis</string>
@@ -72,6 +71,9 @@
     <string name="calendars_range">%1$s až %2$s</string>
     <string name="calendars_truncated">Niektoré udalosti v tomto rozsahu nie sú zobrazené.</string>
     <string name="calendars_list_empty">Žiadne udalosti</string>
+    <string name="calendars_untitled">(Bez názvu)</string>
+    <string name="calendars_status_cancelled">Zrušené</string>
+    <string name="calendars_status_tentative">Predbežné</string>
     <string name="calendars_event_new">Nová udalosť</string>
     <string name="calendars_event_edit">Upraviť udalosť</string>
     <string name="calendars_event_calendar">Kalendár</string>
@@ -124,11 +126,6 @@
         <item quantity="few">Aktualizované %1$d udalosti</item>
         <item quantity="other">Aktualizovaných %1$d udalostí</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d ďalšia</item>
-        <item quantity="few">+%1$d ďalšie</item>
-        <item quantity="other">+%1$d ďalších</item>
-    </plurals>
     <string name="calendars_sync_choose">Kalendáre na synchronizáciu</string>
     <string name="calendars_poll_large">Kalendár je príliš veľký</string>
     <string name="calendars_poll_invalid">Adresa nevrátila kalendár</string>
@@ -178,4 +175,5 @@
     <string name="calendars_subscribe_google_connect">Nepripojili ste žiadny účet Google.</string>
     <string name="calendars_subscribe_google_connect_action">Pripojiť Google</string>
     <string name="calendars_grant_failed">Prístup ku kalendáru nebol udelený</string>
+    <string name="calendars_event_exception">Zmenený výskyt</string>
 </resources>

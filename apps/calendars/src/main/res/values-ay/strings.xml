@@ -13,7 +13,6 @@
     <string name="calendars_view">Uñjäwi</string>
     <string name="calendars_view_list">Lista</string>
     <string name="calendars_list_search">Thaqhama</string>
-    <string name="calendars_event_untitled">Jan sutini</string>
     <string name="calendars_event_title">Título</string>
     <string name="calendars_event_location">Cheqa</string>
     <string name="calendars_event_description">Uñacht\'awi</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">%1$s uksata %2$s ukakama</string>
     <string name="calendars_truncated">Aka pachanxa yaqhip lurawinakaxa janiw uñstkiti.</string>
     <string name="calendars_list_empty">Jan lurawinaka</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d juk\'ampi</item>
-        <item quantity="other">+%1$d juk\'ampi</item>
-    </plurals>
+    <string name="calendars_untitled">(Jan sutini)</string>
+    <string name="calendars_status_cancelled">Jaytata</string>
+    <string name="calendars_status_tentative">Jan chiqanchata</string>
     <string name="calendars_event_new">Machaqa lurawi</string>
     <string name="calendars_event_edit">Lurawi askichaña</string>
     <string name="calendars_event_calendar">Calendario</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Janiw mä Google cuenta chinjatäkiti.</string>
     <string name="calendars_subscribe_google_connect_action">Google chikacht’aña</string>
     <string name="calendars_grant_failed">Calendario mantañax janiw iyawsatäkiti</string>
+    <string name="calendars_event_exception">Turkata lurawi</string>
 </resources>

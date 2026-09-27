@@ -13,7 +13,6 @@
     <string name="calendars_view">Golwg</string>
     <string name="calendars_view_list">Rhestr</string>
     <string name="calendars_list_search">Chwilio</string>
-    <string name="calendars_event_untitled">Heb deitl</string>
     <string name="calendars_event_title">Teitl</string>
     <string name="calendars_event_location">Lleoliad</string>
     <string name="calendars_event_description">Disgrifiad</string>
@@ -80,14 +79,9 @@
     <string name="calendars_range">%1$s i %2$s</string>
     <string name="calendars_truncated">Nid yw rhai digwyddiadau yn yr ystod hon yn cael eu dangos.</string>
     <string name="calendars_list_empty">Dim digwyddiadau</string>
-    <plurals name="calendars_more">
-        <item quantity="zero">+%1$d yn rhagor</item>
-        <item quantity="one">+%1$d yn rhagor</item>
-        <item quantity="two">+%1$d yn rhagor</item>
-        <item quantity="few">+%1$d yn rhagor</item>
-        <item quantity="many">+%1$d yn rhagor</item>
-        <item quantity="other">+%1$d yn rhagor</item>
-    </plurals>
+    <string name="calendars_untitled">(Dim teitl)</string>
+    <string name="calendars_status_cancelled">Wedi\'i ganslo</string>
+    <string name="calendars_status_tentative">Dros dro</string>
     <string name="calendars_event_new">Digwyddiad newydd</string>
     <string name="calendars_event_edit">Golygu digwyddiad</string>
     <string name="calendars_event_calendar">Calendr</string>
@@ -187,4 +181,5 @@
     <string name="calendars_subscribe_google_connect">Nid ydych wedi cysylltu cyfrif Google.</string>
     <string name="calendars_subscribe_google_connect_action">Cysylltu Google</string>
     <string name="calendars_grant_failed">Ni roddwyd mynediad i\'r calendr</string>
+    <string name="calendars_event_exception">Achlysur wedi\'i newid</string>
 </resources>

@@ -13,7 +13,6 @@
     <string name="calendars_view">കാഴ്ച</string>
     <string name="calendars_view_list">ലിസ്റ്റ്</string>
     <string name="calendars_list_search">തിരയുക</string>
-    <string name="calendars_event_untitled">ശീർഷകമില്ലാത്തത്</string>
     <string name="calendars_event_title">തലക്കെട്ട്</string>
     <string name="calendars_event_location">ലൊക്കേഷൻ</string>
     <string name="calendars_event_description">വിവരണം</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">%1$s മുതൽ %2$s വരെ</string>
     <string name="calendars_truncated">ഈ ശ്രേണിയിലെ ചില ഇവന്റുകൾ കാണിച്ചിട്ടില്ല.</string>
     <string name="calendars_list_empty">ഇവന്റുകളൊന്നുമില്ല</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d കൂടി</item>
-        <item quantity="other">+%1$d കൂടി</item>
-    </plurals>
+    <string name="calendars_untitled">(തലക്കെട്ടില്ല)</string>
+    <string name="calendars_status_cancelled">റദ്ദാക്കി</string>
+    <string name="calendars_status_tentative">താൽക്കാലികം</string>
     <string name="calendars_event_new">പുതിയ ഇവന്റ്</string>
     <string name="calendars_event_edit">ഇവന്റ് എഡിറ്റ് ചെയ്യുക</string>
     <string name="calendars_event_calendar">കലണ്ടർ</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">നിങ്ങൾ Google അക്കൗണ്ട് കണക്റ്റ് ചെയ്തിട്ടില്ല.</string>
     <string name="calendars_subscribe_google_connect_action">Google കണക്റ്റ് ചെയ്യുക</string>
     <string name="calendars_grant_failed">കലണ്ടർ ആക്സസ് നൽകിയിട്ടില്ല</string>
+    <string name="calendars_event_exception">മാറ്റിയ ആവർത്തനം</string>
 </resources>

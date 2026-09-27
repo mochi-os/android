@@ -13,7 +13,6 @@
     <string name="calendars_view">Ìwòye</string>
     <string name="calendars_view_list">Àkójọ</string>
     <string name="calendars_list_search">Wá</string>
-    <string name="calendars_event_untitled">Aláìlórúkọ</string>
     <string name="calendars_event_title">Àkọlé</string>
     <string name="calendars_event_location">Ibi</string>
     <string name="calendars_event_description">Àpèjúwe</string>
@@ -72,6 +71,9 @@
     <string name="calendars_range">%1$s sí %2$s</string>
     <string name="calendars_truncated">Àwọn ìṣẹ̀lẹ̀ kan nínú àsìkò yìí kò farahàn.</string>
     <string name="calendars_list_empty">Kò sí ìṣẹ̀lẹ̀</string>
+    <string name="calendars_untitled">(Kò sí àkọlé)</string>
+    <string name="calendars_status_cancelled">Tí a fagilé</string>
+    <string name="calendars_status_tentative">Fún ìgbà díẹ̀</string>
     <string name="calendars_event_new">Ìṣẹ̀lẹ̀ tuntun</string>
     <string name="calendars_event_edit">Ṣàtúnṣe ìṣẹ̀lẹ̀</string>
     <string name="calendars_event_calendar">Kàlẹ́ńdà</string>
@@ -122,9 +124,6 @@
     <plurals name="calendars_polled">
         <item quantity="other">A ti ṣe ìmúdójúìwọ̀n ìṣẹ̀lẹ̀ %1$d</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="other">+%1$d síi</item>
-    </plurals>
     <string name="calendars_sync_choose">Àwọn kàlẹ́ńdà láti ṣe àmúṣiṣẹ́pọ̀</string>
     <string name="calendars_poll_large">Kàlẹ́ńdà náà tóbi jù</string>
     <string name="calendars_poll_invalid">Àdírẹ́sì náà kò dá kàlẹ́ńdà padà</string>
@@ -172,4 +171,5 @@
     <string name="calendars_subscribe_google_connect">O kò tíì so àkáǹtì Google kankan pọ̀.</string>
     <string name="calendars_subscribe_google_connect_action">So Google pọ̀</string>
     <string name="calendars_grant_failed">A kò fún ni ìwọlé kàlẹ́ńdà</string>
+    <string name="calendars_event_exception">Ìgbà tí a yípadà</string>
 </resources>

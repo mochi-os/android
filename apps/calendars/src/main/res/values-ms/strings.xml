@@ -13,7 +13,6 @@
     <string name="calendars_view">Paparan</string>
     <string name="calendars_view_list">Senarai</string>
     <string name="calendars_list_search">Cari</string>
-    <string name="calendars_event_untitled">Tiada tajuk</string>
     <string name="calendars_event_title">Tajuk</string>
     <string name="calendars_event_location">Lokasi</string>
     <string name="calendars_event_description">Penerangan</string>
@@ -75,9 +74,9 @@
     <string name="calendars_range">%1$s hingga %2$s</string>
     <string name="calendars_truncated">Sesetengah acara dalam julat ini tidak dipaparkan.</string>
     <string name="calendars_list_empty">Tiada acara</string>
-    <plurals name="calendars_more">
-        <item quantity="other">+%1$d lagi</item>
-    </plurals>
+    <string name="calendars_untitled">(Tiada tajuk)</string>
+    <string name="calendars_status_cancelled">Dibatalkan</string>
+    <string name="calendars_status_tentative">Sementara</string>
     <string name="calendars_event_new">Acara baharu</string>
     <string name="calendars_event_edit">Edit acara</string>
     <string name="calendars_event_calendar">Kalendar</string>
@@ -172,4 +171,5 @@
     <string name="calendars_subscribe_google_connect">Anda belum menyambungkan akaun Google.</string>
     <string name="calendars_subscribe_google_connect_action">Sambungkan Google</string>
     <string name="calendars_grant_failed">Akses kalendar tidak diberikan</string>
+    <string name="calendars_event_exception">Ulangan yang diubah</string>
 </resources>

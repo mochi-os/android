@@ -13,7 +13,6 @@
     <string name="calendars_view">दृश्य</string>
     <string name="calendars_view_list">यादी</string>
     <string name="calendars_list_search">शोधा</string>
-    <string name="calendars_event_untitled">शीर्षकविरहित</string>
     <string name="calendars_event_title">शीर्षक</string>
     <string name="calendars_event_location">स्थान</string>
     <string name="calendars_event_description">वर्णन</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">%1$s ते %2$s</string>
     <string name="calendars_truncated">या कालावधीतील काही कार्यक्रम दाखवले नाहीत.</string>
     <string name="calendars_list_empty">कार्यक्रम नाहीत</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d आणखी</item>
-        <item quantity="other">+%1$d आणखी</item>
-    </plurals>
+    <string name="calendars_untitled">(शीर्षक नाही)</string>
+    <string name="calendars_status_cancelled">रद्द</string>
+    <string name="calendars_status_tentative">तात्पुरते</string>
     <string name="calendars_event_new">नवीन कार्यक्रम</string>
     <string name="calendars_event_edit">कार्यक्रम संपादित करा</string>
     <string name="calendars_event_calendar">कॅलेंडर</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">तुम्ही कोणतेही Google खाते कनेक्ट केलेले नाही.</string>
     <string name="calendars_subscribe_google_connect_action">Google कनेक्ट करा</string>
     <string name="calendars_grant_failed">कॅलेंडर प्रवेश दिला गेला नाही</string>
+    <string name="calendars_event_exception">बदललेली पुनरावृत्ती</string>
 </resources>

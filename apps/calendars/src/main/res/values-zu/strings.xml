@@ -13,7 +13,6 @@
     <string name="calendars_view">Umbukiso</string>
     <string name="calendars_view_list">Uhla</string>
     <string name="calendars_list_search">Sesha</string>
-    <string name="calendars_event_untitled">Akunasihloko</string>
     <string name="calendars_event_title">Isihloko</string>
     <string name="calendars_event_location">Indawo</string>
     <string name="calendars_event_description">Incazelo</string>
@@ -72,6 +71,9 @@
     <string name="calendars_range">%1$s kuya ku-%2$s</string>
     <string name="calendars_truncated">Eminye imicimbi kulesi sikhathi ayiboniswa.</string>
     <string name="calendars_list_empty">Ayikho imicimbi</string>
+    <string name="calendars_untitled">(Asikho isihloko)</string>
+    <string name="calendars_status_cancelled">Kukhanselwe</string>
+    <string name="calendars_status_tentative">Okwesikhashana</string>
     <string name="calendars_event_new">Umcimbi omusha</string>
     <string name="calendars_event_edit">Hlela umcimbi</string>
     <string name="calendars_event_calendar">Ikhalenda</string>
@@ -123,10 +125,6 @@
         <item quantity="one">Umcimbi ongu-%1$d ubuyekeziwe</item>
         <item quantity="other">Imicimbi engu-%1$d ibuyekeziwe</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d okwengeziwe</item>
-        <item quantity="other">+%1$d okwengeziwe</item>
-    </plurals>
     <string name="calendars_sync_choose">Amakhalenda okuvumelanisa</string>
     <string name="calendars_poll_large">Ikhalenda likhulu kakhulu</string>
     <string name="calendars_poll_invalid">Ikheli alibuyiselanga khalenda</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Awukaxhumi i-akhawunti ye-Google.</string>
     <string name="calendars_subscribe_google_connect_action">Xhuma i-Google</string>
     <string name="calendars_grant_failed">Ukufinyelela kwekhalenda akunikeziwe</string>
+    <string name="calendars_event_exception">Isenzeko esishintshiwe</string>
 </resources>

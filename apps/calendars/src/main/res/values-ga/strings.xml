@@ -13,7 +13,6 @@
     <string name="calendars_view">Amharc</string>
     <string name="calendars_view_list">Liosta</string>
     <string name="calendars_list_search">Cuardach</string>
-    <string name="calendars_event_untitled">Gan teideal</string>
     <string name="calendars_event_title">Teideal</string>
     <string name="calendars_event_location">Suíomh</string>
     <string name="calendars_event_description">Cur síos</string>
@@ -79,13 +78,9 @@
     <string name="calendars_range">%1$s go %2$s</string>
     <string name="calendars_truncated">Níl roinnt imeachtaí sa raon seo á dtaispeáint.</string>
     <string name="calendars_list_empty">Níl aon imeacht</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d eile</item>
-        <item quantity="two">+%1$d eile</item>
-        <item quantity="few">+%1$d eile</item>
-        <item quantity="many">+%1$d eile</item>
-        <item quantity="other">+%1$d eile</item>
-    </plurals>
+    <string name="calendars_untitled">(Gan teideal)</string>
+    <string name="calendars_status_cancelled">Curtha ar ceal</string>
+    <string name="calendars_status_tentative">Sealadach</string>
     <string name="calendars_event_new">Imeacht nua</string>
     <string name="calendars_event_edit">Cuir an t-imeacht in eagar</string>
     <string name="calendars_event_calendar">Féilire</string>
@@ -184,4 +179,5 @@
     <string name="calendars_subscribe_google_connect">Níl cuntas Google ceangailte agat.</string>
     <string name="calendars_subscribe_google_connect_action">Ceangail Google</string>
     <string name="calendars_grant_failed">Níor tugadh rochtain ar an bhféilire</string>
+    <string name="calendars_event_exception">Tarlú athraithe</string>
 </resources>

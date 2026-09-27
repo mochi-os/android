@@ -13,7 +13,6 @@
     <string name="calendars_view">Pogled</string>
     <string name="calendars_view_list">Seznam</string>
     <string name="calendars_list_search">Iskanje</string>
-    <string name="calendars_event_untitled">Brez naslova</string>
     <string name="calendars_event_title">Naslov</string>
     <string name="calendars_event_location">Lokacija</string>
     <string name="calendars_event_description">Opis</string>
@@ -72,6 +71,9 @@
     <string name="calendars_range">Od %1$s do %2$s</string>
     <string name="calendars_truncated">Nekateri dogodki v tem obsegu niso prikazani.</string>
     <string name="calendars_list_empty">Brez dogodkov</string>
+    <string name="calendars_untitled">(Brez naslova)</string>
+    <string name="calendars_status_cancelled">Odpovedano</string>
+    <string name="calendars_status_tentative">Začasno</string>
     <string name="calendars_event_new">Nov dogodek</string>
     <string name="calendars_event_edit">Uredi dogodek</string>
     <string name="calendars_event_calendar">Koledar</string>
@@ -125,12 +127,6 @@
         <item quantity="few">Posodobljeni %1$d dogodki</item>
         <item quantity="other">Posodobljenih %1$d dogodkov</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d več</item>
-        <item quantity="two">+%1$d več</item>
-        <item quantity="few">+%1$d več</item>
-        <item quantity="other">+%1$d več</item>
-    </plurals>
     <string name="calendars_sync_choose">Koledarji za sinhronizacijo</string>
     <string name="calendars_poll_large">Koledar je prevelik</string>
     <string name="calendars_poll_invalid">Naslov ni vrnil koledarja</string>
@@ -181,4 +177,5 @@
     <string name="calendars_subscribe_google_connect">Niste povezali računa Google.</string>
     <string name="calendars_subscribe_google_connect_action">Poveži Google</string>
     <string name="calendars_grant_failed">Dostop do koledarja ni bil odobren</string>
+    <string name="calendars_event_exception">Spremenjena ponovitev</string>
 </resources>

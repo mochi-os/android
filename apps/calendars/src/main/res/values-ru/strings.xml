@@ -13,7 +13,6 @@
     <string name="calendars_view">Вид</string>
     <string name="calendars_view_list">Список</string>
     <string name="calendars_list_search">Поиск</string>
-    <string name="calendars_event_untitled">Без названия</string>
     <string name="calendars_event_title">Заголовок</string>
     <string name="calendars_event_location">Местоположение</string>
     <string name="calendars_event_description">Описание</string>
@@ -72,6 +71,9 @@
     <string name="calendars_range">с %1$s по %2$s</string>
     <string name="calendars_truncated">Некоторые события в этом диапазоне не показаны.</string>
     <string name="calendars_list_empty">Нет событий</string>
+    <string name="calendars_untitled">(Без названия)</string>
+    <string name="calendars_status_cancelled">Отменено</string>
+    <string name="calendars_status_tentative">Под вопросом</string>
     <string name="calendars_event_new">Новое событие</string>
     <string name="calendars_event_edit">Изменить событие</string>
     <string name="calendars_event_calendar">Календарь</string>
@@ -125,12 +127,6 @@
         <item quantity="many">Обновлено %1$d событий</item>
         <item quantity="other">Обновлено %1$d события</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d ещё</item>
-        <item quantity="few">+%1$d ещё</item>
-        <item quantity="many">+%1$d ещё</item>
-        <item quantity="other">+%1$d ещё</item>
-    </plurals>
     <string name="calendars_sync_choose">Календари для синхронизации</string>
     <string name="calendars_poll_large">Календарь слишком большой</string>
     <string name="calendars_poll_invalid">По адресу не найден календарь</string>
@@ -181,4 +177,5 @@
     <string name="calendars_subscribe_google_connect">Вы не подключили аккаунт Google.</string>
     <string name="calendars_subscribe_google_connect_action">Подключить Google</string>
     <string name="calendars_grant_failed">Доступ к календарю не предоставлен</string>
+    <string name="calendars_event_exception">Изменённое повторение</string>
 </resources>

@@ -13,7 +13,6 @@
     <string name="calendars_view">لید</string>
     <string name="calendars_view_list">لیسټ</string>
     <string name="calendars_list_search">لټون</string>
-    <string name="calendars_event_untitled">بې سرلیکه</string>
     <string name="calendars_event_title">سرلیک</string>
     <string name="calendars_event_location">موقعیت</string>
     <string name="calendars_event_description">تفصیل</string>
@@ -72,6 +71,9 @@
     <string name="calendars_range">له %1$s څخه تر %2$s</string>
     <string name="calendars_truncated">په دې سلسله کې ځینې پېښې نه ښودل کېږي.</string>
     <string name="calendars_list_empty">هیڅ پېښې نشته</string>
+    <string name="calendars_untitled">(بې سرلیکه)</string>
+    <string name="calendars_status_cancelled">لغوه شوی</string>
+    <string name="calendars_status_tentative">لنډمهاله</string>
     <string name="calendars_event_new">نوې پېښه</string>
     <string name="calendars_event_edit">پېښه سمه کړئ</string>
     <string name="calendars_event_calendar">کليز</string>
@@ -123,10 +125,6 @@
         <item quantity="one">%1$d پېښه تازه شوه</item>
         <item quantity="other">%1$d پېښې تازه شوې</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d نور</item>
-        <item quantity="other">+%1$d نور</item>
-    </plurals>
     <string name="calendars_sync_choose">د همغږۍ لپاره کليزونه</string>
     <string name="calendars_poll_large">کليز ډېر لوی دی</string>
     <string name="calendars_poll_invalid">له پتې څخه کليز لاسته نه راغی</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">تاسو د Google حساب نه دی وصل کړی.</string>
     <string name="calendars_subscribe_google_connect_action">Google ونښلوئ</string>
     <string name="calendars_grant_failed">د کليز لاسرسی ور نه کړل شو</string>
+    <string name="calendars_event_exception">بدله شوې پیښه</string>
 </resources>

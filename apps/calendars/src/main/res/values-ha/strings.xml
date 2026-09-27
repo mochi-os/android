@@ -13,7 +13,6 @@
     <string name="calendars_view">Kallo</string>
     <string name="calendars_view_list">Jeri</string>
     <string name="calendars_list_search">Bincika</string>
-    <string name="calendars_event_untitled">Ba shi da suna</string>
     <string name="calendars_event_title">Take</string>
     <string name="calendars_event_location">Wuri</string>
     <string name="calendars_event_description">Bayani</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">%1$s zuwa %2$s</string>
     <string name="calendars_truncated">Ba a nuna wasu tarurruka a wannan zangon ba.</string>
     <string name="calendars_list_empty">Babu tarurruka</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d ƙari</item>
-        <item quantity="other">+%1$d ƙari</item>
-    </plurals>
+    <string name="calendars_untitled">(Babu take)</string>
+    <string name="calendars_status_cancelled">An soke</string>
+    <string name="calendars_status_tentative">Na wucin gadi</string>
     <string name="calendars_event_new">Sabon taro</string>
     <string name="calendars_event_edit">Gyara taron</string>
     <string name="calendars_event_calendar">Kalanda</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Ba ka haɗa asusun Google ba.</string>
     <string name="calendars_subscribe_google_connect_action">Haɗa Google</string>
     <string name="calendars_grant_failed">Ba a ba da damar shiga kalanda ba</string>
+    <string name="calendars_event_exception">Maimaicin da aka canza</string>
 </resources>

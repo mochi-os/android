@@ -13,7 +13,6 @@
     <string name="calendars_view">Qhaway</string>
     <string name="calendars_view_list">Lista</string>
     <string name="calendars_list_search">Maskay</string>
-    <string name="calendars_event_untitled">Mana sutinchayniyuq</string>
     <string name="calendars_event_title">Sutinchay</string>
     <string name="calendars_event_location">Cheqaq</string>
     <string name="calendars_event_description">Willariy</string>
@@ -72,6 +71,9 @@
     <string name="calendars_range">%1$s manta %2$s kama</string>
     <string name="calendars_truncated">Kay chiqanpi wakin ruwaykuna mana rikuchikunchu.</string>
     <string name="calendars_list_empty">Mana ruwanakuna kanchu</string>
+    <string name="calendars_untitled">(Mana sutinchayniyuq)</string>
+    <string name="calendars_status_cancelled">Mana ruwasqa</string>
+    <string name="calendars_status_tentative">Manaraq takyachisqa</string>
     <string name="calendars_event_new">Musuq ruwana</string>
     <string name="calendars_event_edit">Ruwanata hukchay</string>
     <string name="calendars_event_calendar">Calendario</string>
@@ -123,10 +125,6 @@
         <item quantity="one">%1$d ruway musuqchasqa</item>
         <item quantity="other">%1$d ruwaykuna musuqchasqa</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d astawan</item>
-        <item quantity="other">+%1$d astawan</item>
-    </plurals>
     <string name="calendars_sync_choose">Tinkichinapaq kalendaryukuna</string>
     <string name="calendars_poll_large">Kalendaryuqa nishu hatunmi</string>
     <string name="calendars_poll_invalid">Direcciónmanta mana kalendaryu chayamunchu</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Manam ima Google cuentatapas tinkichirqankichu.</string>
     <string name="calendars_subscribe_google_connect_action">Google tinkiy</string>
     <string name="calendars_grant_failed">Calendarioman yaykuy mana qusqachu</string>
+    <string name="calendars_event_exception">Hukchasqa ruwana</string>
 </resources>

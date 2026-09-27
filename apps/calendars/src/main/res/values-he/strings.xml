@@ -13,7 +13,6 @@
     <string name="calendars_view">תצוגה</string>
     <string name="calendars_view_list">רשימה</string>
     <string name="calendars_list_search">חיפוש</string>
-    <string name="calendars_event_untitled">ללא כותרת</string>
     <string name="calendars_event_title">כותרת</string>
     <string name="calendars_event_location">מיקום</string>
     <string name="calendars_event_description">תיאור</string>
@@ -77,11 +76,9 @@
     <string name="calendars_range">%1$s עד %2$s</string>
     <string name="calendars_truncated">חלק מהאירועים בטווח הזה אינם מוצגים.</string>
     <string name="calendars_list_empty">אין אירועים</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d נוסף</item>
-        <item quantity="two">+%1$d נוספים</item>
-        <item quantity="other">+%1$d נוספים</item>
-    </plurals>
+    <string name="calendars_untitled">(ללא כותרת)</string>
+    <string name="calendars_status_cancelled">בוטל</string>
+    <string name="calendars_status_tentative">לא סופי</string>
     <string name="calendars_event_new">אירוע חדש</string>
     <string name="calendars_event_edit">ערוך אירוע</string>
     <string name="calendars_event_calendar">יומן</string>
@@ -178,4 +175,5 @@
     <string name="calendars_subscribe_google_connect">לא חיברת חשבון Google.</string>
     <string name="calendars_subscribe_google_connect_action">התחבר ל-Google</string>
     <string name="calendars_grant_failed">הגישה ליומן לא ניתנה</string>
+    <string name="calendars_event_exception">מופע ששונה</string>
 </resources>

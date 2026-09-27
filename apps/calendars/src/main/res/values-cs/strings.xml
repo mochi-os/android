@@ -13,7 +13,6 @@
     <string name="calendars_view">Zobrazení</string>
     <string name="calendars_view_list">Seznam</string>
     <string name="calendars_list_search">Hledat</string>
-    <string name="calendars_event_untitled">Bez názvu</string>
     <string name="calendars_event_title">Název</string>
     <string name="calendars_event_location">Umístění</string>
     <string name="calendars_event_description">Popis</string>
@@ -76,11 +75,9 @@
     <string name="calendars_range">%1$s až %2$s</string>
     <string name="calendars_truncated">Některé události v tomto rozsahu nejsou zobrazeny.</string>
     <string name="calendars_list_empty">Žádné události</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d další</item>
-        <item quantity="few">+%1$d další</item>
-        <item quantity="other">+%1$d dalších</item>
-    </plurals>
+    <string name="calendars_untitled">(Bez názvu)</string>
+    <string name="calendars_status_cancelled">Zrušeno</string>
+    <string name="calendars_status_tentative">Předběžné</string>
     <string name="calendars_event_new">Nová událost</string>
     <string name="calendars_event_edit">Upravit událost</string>
     <string name="calendars_event_calendar">Kalendář</string>
@@ -178,4 +175,5 @@
     <string name="calendars_subscribe_google_connect">Nepřipojili jste žádný účet Google.</string>
     <string name="calendars_subscribe_google_connect_action">Připojit Google</string>
     <string name="calendars_grant_failed">Přístup ke kalendáři nebyl udělen</string>
+    <string name="calendars_event_exception">Změněné opakování</string>
 </resources>

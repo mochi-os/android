@@ -13,7 +13,6 @@
     <string name="calendars_view">보기</string>
     <string name="calendars_view_list">목록</string>
     <string name="calendars_list_search">검색</string>
-    <string name="calendars_event_untitled">제목 없음</string>
     <string name="calendars_event_title">제목</string>
     <string name="calendars_event_location">위치</string>
     <string name="calendars_event_description">설명</string>
@@ -75,9 +74,9 @@
     <string name="calendars_range">%1$s ~ %2$s</string>
     <string name="calendars_truncated">이 기간의 일부 일정은 표시되지 않았어요.</string>
     <string name="calendars_list_empty">일정이 없어요</string>
-    <plurals name="calendars_more">
-        <item quantity="other">+%1$d개 더</item>
-    </plurals>
+    <string name="calendars_untitled">(제목 없음)</string>
+    <string name="calendars_status_cancelled">취소됨</string>
+    <string name="calendars_status_tentative">미정</string>
     <string name="calendars_event_new">새 일정</string>
     <string name="calendars_event_edit">일정 편집</string>
     <string name="calendars_event_calendar">캘린더</string>
@@ -172,4 +171,5 @@
     <string name="calendars_subscribe_google_connect">Google 계정을 연결하지 않았어요.</string>
     <string name="calendars_subscribe_google_connect_action">Google 연결</string>
     <string name="calendars_grant_failed">캘린더 액세스가 허용되지 않았어요</string>
+    <string name="calendars_event_exception">변경된 일정</string>
 </resources>

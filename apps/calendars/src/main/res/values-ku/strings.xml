@@ -13,7 +13,6 @@
     <string name="calendars_view">Dîmen</string>
     <string name="calendars_view_list">Lîste</string>
     <string name="calendars_list_search">Lêger</string>
-    <string name="calendars_event_untitled">Bê sernav</string>
     <string name="calendars_event_title">Sernav</string>
     <string name="calendars_event_location">Cih</string>
     <string name="calendars_event_description">Şirove</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">ji %1$s heta %2$s</string>
     <string name="calendars_truncated">Hin bûyerên vê navberê nayên nîşandan.</string>
     <string name="calendars_list_empty">Tu bûyer tune</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d din</item>
-        <item quantity="other">+%1$d din</item>
-    </plurals>
+    <string name="calendars_untitled">(Bê sernav)</string>
+    <string name="calendars_status_cancelled">Hat betalkirin</string>
+    <string name="calendars_status_tentative">Demkî</string>
     <string name="calendars_event_new">Bûyera nû</string>
     <string name="calendars_event_edit">Bûyerê sererast bike</string>
     <string name="calendars_event_calendar">Salname</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Te tu hesabê Google girênedaye.</string>
     <string name="calendars_subscribe_google_connect_action">Google girêde</string>
     <string name="calendars_grant_failed">Gihîştina salnameyê nehat dayîn</string>
+    <string name="calendars_event_exception">Cara guhertî</string>
 </resources>

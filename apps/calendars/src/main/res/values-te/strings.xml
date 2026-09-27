@@ -13,7 +13,6 @@
     <string name="calendars_view">వీక్షణ</string>
     <string name="calendars_view_list">జాబితా</string>
     <string name="calendars_list_search">శోధన</string>
-    <string name="calendars_event_untitled">శీర్షికలేని</string>
     <string name="calendars_event_title">శీర్షిక</string>
     <string name="calendars_event_location">స్థానం</string>
     <string name="calendars_event_description">వివరణ</string>
@@ -72,6 +71,9 @@
     <string name="calendars_range">%1$s నుండి %2$s వరకు</string>
     <string name="calendars_truncated">ఈ పరిధిలోని కొన్ని ఈవెంట్‌లు చూపబడలేదు.</string>
     <string name="calendars_list_empty">ఈవెంట్‌లు లేవు</string>
+    <string name="calendars_untitled">(శీర్షిక లేదు)</string>
+    <string name="calendars_status_cancelled">రద్దు చేయబడింది</string>
+    <string name="calendars_status_tentative">తాత్కాలికం</string>
     <string name="calendars_event_new">కొత్త ఈవెంట్</string>
     <string name="calendars_event_edit">ఈవెంట్‌ను సవరించండి</string>
     <string name="calendars_event_calendar">క్యాలెండర్</string>
@@ -123,10 +125,6 @@
         <item quantity="one">%1$d ఈవెంట్ నవీకరించబడింది</item>
         <item quantity="other">%1$d ఈవెంట్‌లు నవీకరించబడ్డాయి</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d మరిన్ని</item>
-        <item quantity="other">+%1$d మరిన్ని</item>
-    </plurals>
     <string name="calendars_sync_choose">సింక్ చేయాల్సిన క్యాలెండర్‌లు</string>
     <string name="calendars_poll_large">క్యాలెండర్ చాలా పెద్దది</string>
     <string name="calendars_poll_invalid">చిరునామా క్యాలెండర్‌ను అందించలేదు</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">మీరు Google ఖాతాను కనెక్ట్ చేయలేదు.</string>
     <string name="calendars_subscribe_google_connect_action">Google కనెక్ట్ చేయండి</string>
     <string name="calendars_grant_failed">క్యాలెండర్ యాక్సెస్ ఇవ్వబడలేదు</string>
+    <string name="calendars_event_exception">మార్చిన పునరావృత్తి</string>
 </resources>

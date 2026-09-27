@@ -13,7 +13,6 @@
     <string name="calendars_view">Skats</string>
     <string name="calendars_view_list">Saraksts</string>
     <string name="calendars_list_search">Meklēt</string>
-    <string name="calendars_event_untitled">Bez nosaukuma</string>
     <string name="calendars_event_title">Virsraksts</string>
     <string name="calendars_event_location">Atrašanās vieta</string>
     <string name="calendars_event_description">Apraksts</string>
@@ -77,11 +76,9 @@
     <string name="calendars_range">no %1$s līdz %2$s</string>
     <string name="calendars_truncated">Daži šī diapazona notikumi netiek rādīti.</string>
     <string name="calendars_list_empty">Nav notikumu</string>
-    <plurals name="calendars_more">
-        <item quantity="zero">+%1$d vēl</item>
-        <item quantity="one">+%1$d vēl</item>
-        <item quantity="other">+%1$d vēl</item>
-    </plurals>
+    <string name="calendars_untitled">(Bez nosaukuma)</string>
+    <string name="calendars_status_cancelled">Atcelts</string>
+    <string name="calendars_status_tentative">Provizorisks</string>
     <string name="calendars_event_new">Jauns notikums</string>
     <string name="calendars_event_edit">Rediģēt notikumu</string>
     <string name="calendars_event_calendar">Kalendārs</string>
@@ -178,4 +175,5 @@
     <string name="calendars_subscribe_google_connect">Tu neesi savienojis Google kontu.</string>
     <string name="calendars_subscribe_google_connect_action">Savienot Google</string>
     <string name="calendars_grant_failed">Piekļuve kalendāram netika piešķirta</string>
+    <string name="calendars_event_exception">Mainīts atkārtojums</string>
 </resources>

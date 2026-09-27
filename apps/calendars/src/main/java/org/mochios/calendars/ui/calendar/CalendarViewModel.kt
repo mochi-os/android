@@ -28,6 +28,7 @@ import org.mochios.android.util.NaturalCompare
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.Preferences
+import org.mochios.calendars.model.tint
 import org.mochios.calendars.repository.CalendarsRepository
 import org.mochios.calendars.repository.EventChangedException
 import org.mochios.calendars.storage.VisibilityStore
@@ -42,6 +43,7 @@ import org.mochios.calendars.ui.editor.split
 import org.mochios.calendars.ui.router.CALENDARS_FEATURE
 import org.mochios.calendars.ui.router.CalendarsSection
 import org.mochios.calendars.ui.router.calendarsView
+import java.time.Instant
 import java.time.LocalDate
 import java.time.ZoneId
 import java.time.temporal.ChronoUnit
@@ -294,10 +296,17 @@ class CalendarViewModel @Inject constructor(
         }
     }
 
-    /** Occurrences in the order every view draws them. */
-    private fun ordered(instances: List<Instance>): List<Instance> = instances.sortedWith(
-        compareBy<Instance> { it.start }.thenByDescending { it.allday }.thenBy(NaturalCompare) { it.summary },
-    )
+    /**
+     * Occurrences in the order every view draws them, each in the colour it
+     * is drawn in: its event's own, or its calendar's when it has none or
+     * one that will not parse.
+     */
+    private fun ordered(instances: List<Instance>): List<Instance> {
+        val colours = _uiState.value.calendars.associate { it.id to it.colour }
+        return instances
+            .map { it.copy(colour = tint(it.colour, colours[it.calendar])) }
+            .sortedWith(compareBy<Instance> { it.start }.thenByDescending { it.allday }.thenBy(NaturalCompare) { it.summary })
+    }
 
     // ---- the toolbar ----
 
@@ -662,6 +671,10 @@ class CalendarViewModel @Inject constructor(
     /** The block a timed occurrence puts on [day], null when it does not touch the day. */
     fun cut(instance: Instance, day: LocalDate): Cut? = cut(instance, day, zone, zones)
 
+    /** Whether an occurrence is over, which the views draw faded. */
+    fun past(instance: Instance): Boolean =
+        past(instance, finish(instance), Instant.now().epochSecond, LocalDate.now(zone))
+
     /** Whether an occurrence touches [day], a multi-day one on every day it spans. */
     fun covers(instance: Instance, day: LocalDate): Boolean {
         val from = day(instance)
@@ -706,3 +719,11 @@ fun step(view: String, anchor: LocalDate, direction: Int): LocalDate = when (vie
  */
 fun last(date: LocalDate, start: Long, finish: Long): LocalDate =
     date.plusDays(maxOf(1L, Math.round((finish - start) / 86400.0)) - 1)
+
+/**
+ * Whether an occurrence is over: a timed one once its finish, epoch seconds,
+ * is before [now], and an all-day one once its [last] day is before [today].
+ * A timed one with no length is over once its start is.
+ */
+fun past(instance: Instance, last: LocalDate, now: Long, today: LocalDate): Boolean =
+    if (instance.allday) last.isBefore(today) else maxOf(instance.start, instance.finish) < now

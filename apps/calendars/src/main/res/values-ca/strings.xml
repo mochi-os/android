@@ -13,7 +13,6 @@
     <string name="calendars_view">Vista</string>
     <string name="calendars_view_list">Llista</string>
     <string name="calendars_list_search">Cerca</string>
-    <string name="calendars_event_untitled">Sense títol</string>
     <string name="calendars_event_title">Títol</string>
     <string name="calendars_event_location">Ubicació</string>
     <string name="calendars_event_description">Descripció</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">%1$s a %2$s</string>
     <string name="calendars_truncated">Alguns esdeveniments d\'aquest interval no es mostren.</string>
     <string name="calendars_list_empty">Sense esdeveniments</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d més</item>
-        <item quantity="other">+%1$d més</item>
-    </plurals>
+    <string name="calendars_untitled">(Sense títol)</string>
+    <string name="calendars_status_cancelled">Cancel·lat</string>
+    <string name="calendars_status_tentative">Provisional</string>
     <string name="calendars_event_new">Esdeveniment nou</string>
     <string name="calendars_event_edit">Edita l\'esdeveniment</string>
     <string name="calendars_event_calendar">Calendari</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">No has connectat cap compte de Google.</string>
     <string name="calendars_subscribe_google_connect_action">Connecta Google</string>
     <string name="calendars_grant_failed">No s\'ha concedit l\'accés al calendari</string>
+    <string name="calendars_event_exception">Ocurrència modificada</string>
 </resources>

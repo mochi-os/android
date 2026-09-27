@@ -13,7 +13,6 @@
     <string name="calendars_view">မြင်ကွင်း</string>
     <string name="calendars_view_list">စာရင်း</string>
     <string name="calendars_list_search">ရှာဖွေ</string>
-    <string name="calendars_event_untitled">ခေါင်းစဉ်မရှိ</string>
     <string name="calendars_event_title">ခေါင်းစဉ်</string>
     <string name="calendars_event_location">တည်နေရာ</string>
     <string name="calendars_event_description">ဖော်ပြချက်</string>
@@ -75,9 +74,9 @@
     <string name="calendars_range">%1$s မှ %2$s</string>
     <string name="calendars_truncated">ဤကာလအတွင်း အစီအစဉ် အချို့ကို မပြထားပါ။</string>
     <string name="calendars_list_empty">အစီအစဉ်များ မရှိပါ</string>
-    <plurals name="calendars_more">
-        <item quantity="other">+%1$d ခု ထပ်မံ</item>
-    </plurals>
+    <string name="calendars_untitled">(ခေါင်းစဉ်မရှိ)</string>
+    <string name="calendars_status_cancelled">ဖျက်သိမ်းပြီး</string>
+    <string name="calendars_status_tentative">ယာယီ</string>
     <string name="calendars_event_new">အစီအစဉ်အသစ်</string>
     <string name="calendars_event_edit">အစီအစဉ် တည်းဖြတ်</string>
     <string name="calendars_event_calendar">ပြက္ခဒိန်</string>
@@ -172,4 +171,5 @@
     <string name="calendars_subscribe_google_connect">သင် Google အကောင့် ချိတ်ဆက်ထားခြင်း မရှိပါ။</string>
     <string name="calendars_subscribe_google_connect_action">Google ချိတ်ဆက်မည်</string>
     <string name="calendars_grant_failed">ပြက္ခဒိန် ဝင်ရောက်ခွင့် မရရှိပါ</string>
+    <string name="calendars_event_exception">ပြောင်းလဲထားသော အကြိမ်</string>
 </resources>

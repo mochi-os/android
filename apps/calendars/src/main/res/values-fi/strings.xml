@@ -13,7 +13,6 @@
     <string name="calendars_view">Näkymä</string>
     <string name="calendars_view_list">Luettelo</string>
     <string name="calendars_list_search">Haku</string>
-    <string name="calendars_event_untitled">Nimetön</string>
     <string name="calendars_event_title">Otsikko</string>
     <string name="calendars_event_location">Sijainti</string>
     <string name="calendars_event_description">Kuvaus</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">%1$s – %2$s</string>
     <string name="calendars_truncated">Kaikkia tämän aikavälin tapahtumia ei näytetä.</string>
     <string name="calendars_list_empty">Ei tapahtumia</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d lisää</item>
-        <item quantity="other">+%1$d lisää</item>
-    </plurals>
+    <string name="calendars_untitled">(Ei otsikkoa)</string>
+    <string name="calendars_status_cancelled">Peruttu</string>
+    <string name="calendars_status_tentative">Alustava</string>
     <string name="calendars_event_new">Uusi tapahtuma</string>
     <string name="calendars_event_edit">Muokkaa tapahtumaa</string>
     <string name="calendars_event_calendar">Kalenteri</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Et ole yhdistänyt Google-tiliä.</string>
     <string name="calendars_subscribe_google_connect_action">Yhdistä Google</string>
     <string name="calendars_grant_failed">Kalenterin käyttöoikeutta ei myönnetty</string>
+    <string name="calendars_event_exception">Muutettu toistokerta</string>
 </resources>

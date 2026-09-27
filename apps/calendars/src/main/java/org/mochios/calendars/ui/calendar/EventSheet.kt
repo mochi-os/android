@@ -7,6 +7,7 @@ package org.mochios.calendars.ui.calendar
 
 import android.content.Intent
 import android.net.Uri
+import androidx.annotation.StringRes
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -50,8 +51,9 @@ import org.mochios.calendars.model.Instance
 
 /**
  * The summary of one occurrence, anchored to the bottom of the screen: what
- * it is called, when it is, where it is, which calendar it is in and the
- * first of its description, with "Copy" beneath, which [onCopy] answers.
+ * it is called, when it is, whether it is cancelled or tentative, where it
+ * is, which calendar it is in and the first of its description, with "Copy"
+ * beneath, which [onCopy] answers.
  * Only a read-only occurrence - a subscription's or a birthday - lands here;
  * a tap on an editable one opens the editor. A copy is what a read-only
  * occurrence is for, into a calendar of the user's own.
@@ -102,8 +104,9 @@ fun EventSheet(
         ) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
-                    text = instance.summary.ifBlank { stringResource(R.string.calendars_event_untitled) },
+                    text = if (instance.untitled) stringResource(R.string.calendars_untitled) else instance.summary,
                     style = MaterialTheme.typography.titleLarge,
+                    color = if (instance.untitled) MaterialTheme.colorScheme.onSurfaceVariant else MaterialTheme.colorScheme.onSurface,
                     modifier = Modifier.weight(1f),
                 )
                 if (instance.recurring) {
@@ -122,6 +125,13 @@ fun EventSheet(
                 Text(
                     text = own,
                     style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+            status(instance)?.let { label ->
+                Text(
+                    text = stringResource(label),
+                    style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
@@ -162,7 +172,9 @@ fun EventSheet(
                 }
             }
             Row(verticalAlignment = Alignment.CenterVertically) {
-                org.mochios.calendars.ui.components.ColourCheckbox(instance.colour, shown = true, size = 14.dp)
+                // The calendar's own colour beside its name, which an event
+                // with a colour of its own does not change.
+                org.mochios.calendars.ui.components.ColourCheckbox(calendar?.colour ?: instance.colour, shown = true, size = 14.dp)
                 Spacer(Modifier.width(8.dp))
                 Text(
                     text = calendar?.name.orEmpty(),
@@ -205,3 +217,14 @@ fun EventSheet(
  */
 fun geo(location: String): String =
     "geo:0,0?q=" + URLEncoder.encode(location.trim(), "UTF-8").replace("+", "%20")
+
+/**
+ * The line the summary shows for an occurrence's status: "Cancelled" or
+ * "Tentative", and nothing for a confirmed one or one that says nothing.
+ */
+@StringRes
+fun status(instance: Instance): Int? = when {
+    instance.cancelled -> R.string.calendars_status_cancelled
+    instance.tentative -> R.string.calendars_status_tentative
+    else -> null
+}

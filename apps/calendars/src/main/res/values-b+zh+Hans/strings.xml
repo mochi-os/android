@@ -13,7 +13,6 @@
     <string name="calendars_view">视图</string>
     <string name="calendars_view_list">列表</string>
     <string name="calendars_list_search">搜索</string>
-    <string name="calendars_event_untitled">未命名</string>
     <string name="calendars_event_title">标题</string>
     <string name="calendars_event_location">位置</string>
     <string name="calendars_event_description">描述</string>
@@ -75,9 +74,9 @@
     <string name="calendars_range">%1$s 至 %2$s</string>
     <string name="calendars_truncated">此范围内的部分活动未显示。</string>
     <string name="calendars_list_empty">无活动</string>
-    <plurals name="calendars_more">
-        <item quantity="other">+%1$d 个</item>
-    </plurals>
+    <string name="calendars_untitled">（无标题）</string>
+    <string name="calendars_status_cancelled">已取消</string>
+    <string name="calendars_status_tentative">暂定</string>
     <string name="calendars_event_new">新建活动</string>
     <string name="calendars_event_edit">编辑活动</string>
     <string name="calendars_event_calendar">日历</string>
@@ -172,4 +171,5 @@
     <string name="calendars_subscribe_google_connect">您尚未连接 Google 账户。</string>
     <string name="calendars_subscribe_google_connect_action">连接 Google</string>
     <string name="calendars_grant_failed">未授予日历访问权限</string>
+    <string name="calendars_event_exception">已修改的重复项</string>
 </resources>

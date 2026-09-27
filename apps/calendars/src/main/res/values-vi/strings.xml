@@ -13,7 +13,6 @@
     <string name="calendars_view">Chế độ xem</string>
     <string name="calendars_view_list">Danh sách</string>
     <string name="calendars_list_search">Tìm kiếm</string>
-    <string name="calendars_event_untitled">Không có tiêu đề</string>
     <string name="calendars_event_title">Tiêu đề</string>
     <string name="calendars_event_location">Vị trí</string>
     <string name="calendars_event_description">Mô tả</string>
@@ -72,6 +71,9 @@
     <string name="calendars_range">%1$s đến %2$s</string>
     <string name="calendars_truncated">Một số sự kiện trong khoảng này không được hiển thị.</string>
     <string name="calendars_list_empty">Không có sự kiện</string>
+    <string name="calendars_untitled">(Không có tiêu đề)</string>
+    <string name="calendars_status_cancelled">Đã hủy</string>
+    <string name="calendars_status_tentative">Chưa chắc chắn</string>
     <string name="calendars_event_new">Sự kiện mới</string>
     <string name="calendars_event_edit">Sửa sự kiện</string>
     <string name="calendars_event_calendar">Lịch</string>
@@ -122,9 +124,6 @@
     <plurals name="calendars_polled">
         <item quantity="other">Đã cập nhật %1$d sự kiện</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="other">+%1$d nữa</item>
-    </plurals>
     <string name="calendars_sync_choose">Lịch cần đồng bộ</string>
     <string name="calendars_poll_large">Lịch quá lớn</string>
     <string name="calendars_poll_invalid">Địa chỉ không trả về lịch nào</string>
@@ -172,4 +171,5 @@
     <string name="calendars_subscribe_google_connect">Bạn chưa kết nối tài khoản Google nào.</string>
     <string name="calendars_subscribe_google_connect_action">Kết nối Google</string>
     <string name="calendars_grant_failed">Quyền truy cập lịch chưa được cấp</string>
+    <string name="calendars_event_exception">Lần lặp đã thay đổi</string>
 </resources>

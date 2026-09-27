@@ -250,6 +250,7 @@ fun CalendarScreen(
                             View(
                                 uiState,
                                 viewModel,
+                                selected = selected,
                                 onOpen = { instance ->
                                     if (instance.editable) {
                                         onEditEvent(instance.event, if (instance.recurring) instance.start else 0)
@@ -397,7 +398,8 @@ fun CalendarScreen(
 private class Move(val instance: Instance, val run: (Scope) -> Unit)
 
 /**
- * The view the state names, drawn from the same occurrence list. [onMove]
+ * The view the state names, drawn from the same occurrence list, with the
+ * occurrence whose summary is open, [selected], tinted in each. [onMove]
  * is a block dragged or resized in a time grid, with the occurrence's new
  * ends; [onMoveDay] a chip dropped on a day in a month grid, with the
  * occurrence's new first day.
@@ -406,6 +408,7 @@ private class Move(val instance: Instance, val run: (Scope) -> Unit)
 private fun View(
     state: CalendarUiState,
     viewModel: CalendarViewModel,
+    selected: Instance?,
     onOpen: (Instance) -> Unit,
     onNewEvent: (Long, Boolean?) -> Unit,
     onMove: (Instance, Long, Long) -> Unit,
@@ -426,6 +429,7 @@ private fun View(
             onOpen = onOpen,
             onCreate = { day, hour -> onNewEvent(moment(day, hour), false) },
             onMove = onMove,
+            selected = selected,
         )
         CalendarsSection.WEEK -> {
             val week = viewModel.week(state.anchor)
@@ -438,6 +442,7 @@ private fun View(
                 onOpen = onOpen,
                 onCreate = { day, hour -> onNewEvent(moment(day, hour), false) },
                 onMove = onMove,
+                selected = selected,
             )
         }
         CalendarsSection.MULTIWEEK -> MonthGrid(
@@ -448,6 +453,7 @@ private fun View(
             onOpen = onOpen,
             onCreate = { day -> onNewEvent(moment(day, 9), null) },
             onMove = onMoveDay,
+            selected = selected,
         )
         CalendarsSection.MONTH -> MonthGrid(
             weeks = viewModel.weeks(state),
@@ -457,6 +463,7 @@ private fun View(
             onOpen = onOpen,
             onCreate = { day -> onNewEvent(moment(day, 9), null) },
             onMove = onMoveDay,
+            selected = selected,
         )
         // The list view opens on the anchor day and pages on as the reader
         // scrolls, so it has no range to pick — only something to search.
@@ -470,7 +477,7 @@ private fun View(
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp, vertical = 8.dp),
             )
-            AgendaList(state, viewModel, onOpen)
+            AgendaList(state, viewModel, onOpen, selected)
         }
     }
 }

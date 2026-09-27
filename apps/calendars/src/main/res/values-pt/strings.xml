@@ -13,7 +13,6 @@
     <string name="calendars_view">Vista</string>
     <string name="calendars_view_list">Lista</string>
     <string name="calendars_list_search">Pesquisar</string>
-    <string name="calendars_event_untitled">Sem título</string>
     <string name="calendars_event_title">Título</string>
     <string name="calendars_event_location">Localização</string>
     <string name="calendars_event_description">Descrição</string>
@@ -72,6 +71,9 @@
     <string name="calendars_range">%1$s a %2$s</string>
     <string name="calendars_truncated">Alguns eventos deste intervalo não são mostrados.</string>
     <string name="calendars_list_empty">Sem eventos</string>
+    <string name="calendars_untitled">(Sem título)</string>
+    <string name="calendars_status_cancelled">Cancelado</string>
+    <string name="calendars_status_tentative">Provisório</string>
     <string name="calendars_event_new">Novo evento</string>
     <string name="calendars_event_edit">Editar evento</string>
     <string name="calendars_event_calendar">Calendário</string>
@@ -123,10 +125,6 @@
         <item quantity="one">%1$d evento atualizado</item>
         <item quantity="other">%1$d eventos atualizados</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d mais</item>
-        <item quantity="other">+%1$d mais</item>
-    </plurals>
     <string name="calendars_sync_choose">Calendários a sincronizar</string>
     <string name="calendars_poll_large">O calendário é demasiado grande</string>
     <string name="calendars_poll_invalid">O endereço não devolveu um calendário</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Não ligou nenhuma conta Google.</string>
     <string name="calendars_subscribe_google_connect_action">Ligar o Google</string>
     <string name="calendars_grant_failed">O acesso ao calendário não foi concedido</string>
+    <string name="calendars_event_exception">Ocorrência alterada</string>
 </resources>

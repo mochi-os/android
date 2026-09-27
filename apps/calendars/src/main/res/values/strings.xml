@@ -52,10 +52,6 @@
         <item quantity="one">%1$d minute</item>
         <item quantity="other">%1$d minutes</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d more</item>
-        <item quantity="other">+%1$d more</item>
-    </plurals>
 
     <!-- Events -->
     <string name="calendars_event_new">New event</string>
@@ -63,7 +59,9 @@
     <string name="calendars_editor_copy_title">Copy event</string>
     <string name="calendars_event_copy">Copy</string>
     <string name="calendars_event_copied">Event copied</string>
-    <string name="calendars_event_untitled">Untitled</string>
+    <string name="calendars_untitled">(No title)</string>
+    <string name="calendars_status_cancelled">Cancelled</string>
+    <string name="calendars_status_tentative">Tentative</string>
     <string name="calendars_event_title">Title</string>
     <string name="calendars_title_required">Title is required</string>
     <string name="calendars_event_calendar">Calendar</string>
@@ -79,6 +77,7 @@
     <string name="calendars_event_reminder">Reminder</string>
     <string name="calendars_event_description">Description</string>
     <string name="calendars_event_recurring">Repeats</string>
+    <string name="calendars_event_exception">Changed occurrence</string>
     <string name="calendars_event_delete_title">Delete %1$s?</string>
     <string name="calendars_event_delete_message">This cannot be undone.</string>
     <string name="calendars_scope_edit">Change this event or all events?</string>

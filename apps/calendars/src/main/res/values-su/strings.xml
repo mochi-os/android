@@ -13,7 +13,6 @@
     <string name="calendars_view">Tampilan</string>
     <string name="calendars_view_list">Daptar</string>
     <string name="calendars_list_search">Paluruh</string>
-    <string name="calendars_event_untitled">Tanpa judul</string>
     <string name="calendars_event_title">Judul</string>
     <string name="calendars_event_location">Lokasi</string>
     <string name="calendars_event_description">Pedaran</string>
@@ -72,6 +71,9 @@
     <string name="calendars_range">%1$s dugi ka %2$s</string>
     <string name="calendars_truncated">Sawatara acara dina rentang ieu henteu dipidangkeun.</string>
     <string name="calendars_list_empty">Teu aya acara</string>
+    <string name="calendars_untitled">(Tanpa judul)</string>
+    <string name="calendars_status_cancelled">Dibatalkeun</string>
+    <string name="calendars_status_tentative">Samentawis</string>
     <string name="calendars_event_new">Acara anyar</string>
     <string name="calendars_event_edit">Édit acara</string>
     <string name="calendars_event_calendar">Kalénder</string>
@@ -122,9 +124,6 @@
     <plurals name="calendars_polled">
         <item quantity="other">%1$d acara diropéa</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="other">+%1$d deui</item>
-    </plurals>
     <string name="calendars_sync_choose">Kalénder nu rék disinkronkeun</string>
     <string name="calendars_poll_large">Kalénderna kagedéan</string>
     <string name="calendars_poll_invalid">Alamat teu ngabalikeun kalénder</string>
@@ -172,4 +171,5 @@
     <string name="calendars_subscribe_google_connect">Anjeun tacan nyambungkeun akun Google.</string>
     <string name="calendars_subscribe_google_connect_action">Sambungkeun Google</string>
     <string name="calendars_grant_failed">Aksés kalénder henteu dipasihkeun</string>
+    <string name="calendars_event_exception">Kajadian nu dirobah</string>
 </resources>

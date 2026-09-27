@@ -13,7 +13,6 @@
     <string name="calendars_view">Pamja</string>
     <string name="calendars_view_list">Lista</string>
     <string name="calendars_list_search">Kërko</string>
-    <string name="calendars_event_untitled">Pa titull</string>
     <string name="calendars_event_title">Titulli</string>
     <string name="calendars_event_location">Vendndodhja</string>
     <string name="calendars_event_description">Përshkrimi</string>
@@ -72,6 +71,9 @@
     <string name="calendars_range">%1$s deri më %2$s</string>
     <string name="calendars_truncated">Disa ngjarje në këtë interval nuk shfaqen.</string>
     <string name="calendars_list_empty">Asnjë ngjarje</string>
+    <string name="calendars_untitled">(Pa titull)</string>
+    <string name="calendars_status_cancelled">Anuluar</string>
+    <string name="calendars_status_tentative">Paraprak</string>
     <string name="calendars_event_new">Ngjarje e re</string>
     <string name="calendars_event_edit">Modifiko ngjarjen</string>
     <string name="calendars_event_calendar">Kalendari</string>
@@ -123,10 +125,6 @@
         <item quantity="one">%1$d ngjarje u përditësua</item>
         <item quantity="other">%1$d ngjarje u përditësuan</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d më shumë</item>
-        <item quantity="other">+%1$d më shumë</item>
-    </plurals>
     <string name="calendars_sync_choose">Kalendarët për sinkronizim</string>
     <string name="calendars_poll_large">Kalendari është shumë i madh</string>
     <string name="calendars_poll_invalid">Adresa nuk ktheu një kalendar</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Nuk ke lidhur asnjë llogari Google.</string>
     <string name="calendars_subscribe_google_connect_action">Lidh Google</string>
     <string name="calendars_grant_failed">Qasja në kalendar nuk u dha</string>
+    <string name="calendars_event_exception">Përsëritje e ndryshuar</string>
 </resources>

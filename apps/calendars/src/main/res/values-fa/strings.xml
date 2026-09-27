@@ -13,7 +13,6 @@
     <string name="calendars_view">نمایش</string>
     <string name="calendars_view_list">فهرست</string>
     <string name="calendars_list_search">جست‌وجو</string>
-    <string name="calendars_event_untitled">بدون عنوان</string>
     <string name="calendars_event_title">عنوان</string>
     <string name="calendars_event_location">مکان</string>
     <string name="calendars_event_description">توضیحات</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">%1$s تا %2$s</string>
     <string name="calendars_truncated">برخی از رویدادهای این بازه نمایش داده نمی‌شوند.</string>
     <string name="calendars_list_empty">هیچ رویدادی وجود ندارد</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d بیشتر</item>
-        <item quantity="other">+%1$d بیشتر</item>
-    </plurals>
+    <string name="calendars_untitled">(بدون عنوان)</string>
+    <string name="calendars_status_cancelled">لغوشده</string>
+    <string name="calendars_status_tentative">قطعی نشده</string>
     <string name="calendars_event_new">رویداد جدید</string>
     <string name="calendars_event_edit">ویرایش رویداد</string>
     <string name="calendars_event_calendar">تقویم</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">هیچ حساب Google متصل نکرده‌اید.</string>
     <string name="calendars_subscribe_google_connect_action">اتصال به Google</string>
     <string name="calendars_grant_failed">دسترسی به تقویم داده نشد</string>
+    <string name="calendars_event_exception">رخداد تغییریافته</string>
 </resources>

@@ -13,7 +13,6 @@
     <string name="calendars_view">Ansicht</string>
     <string name="calendars_view_list">Liste</string>
     <string name="calendars_list_search">Suchen</string>
-    <string name="calendars_event_untitled">Unbenannt</string>
     <string name="calendars_event_title">Titel</string>
     <string name="calendars_event_location">Ort</string>
     <string name="calendars_event_description">Beschreibung</string>
@@ -75,10 +74,9 @@
     <string name="calendars_range">%1$s bis %2$s</string>
     <string name="calendars_truncated">Einige Termine in diesem Zeitraum werden nicht angezeigt.</string>
     <string name="calendars_list_empty">Keine Termine</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d weiterer</item>
-        <item quantity="other">+%1$d weitere</item>
-    </plurals>
+    <string name="calendars_untitled">(Kein Titel)</string>
+    <string name="calendars_status_cancelled">Abgesagt</string>
+    <string name="calendars_status_tentative">Vorläufig</string>
     <string name="calendars_event_new">Neuer Termin</string>
     <string name="calendars_event_edit">Termin bearbeiten</string>
     <string name="calendars_event_calendar">Kalender</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Sie haben kein Google-Konto verbunden.</string>
     <string name="calendars_subscribe_google_connect_action">Google verbinden</string>
     <string name="calendars_grant_failed">Kalenderzugriff wurde nicht erteilt</string>
+    <string name="calendars_event_exception">Geänderter Einzeltermin</string>
 </resources>

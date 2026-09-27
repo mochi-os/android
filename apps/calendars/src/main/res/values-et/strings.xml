@@ -13,7 +13,6 @@
     <string name="calendars_view">Vaade</string>
     <string name="calendars_view_list">Loend</string>
     <string name="calendars_list_search">Otsi</string>
-    <string name="calendars_event_untitled">Pealkirjata</string>
     <string name="calendars_event_title">Pealkiri</string>
     <string name="calendars_event_location">Asukoht</string>
     <string name="calendars_event_description">Kirjeldus</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">%1$s kuni %2$s</string>
     <string name="calendars_truncated">Mõni selle vahemiku sündmus pole kuvatud.</string>
     <string name="calendars_list_empty">Sündmusi pole</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d veel</item>
-        <item quantity="other">+%1$d veel</item>
-    </plurals>
+    <string name="calendars_untitled">(Pealkirjata)</string>
+    <string name="calendars_status_cancelled">Tühistatud</string>
+    <string name="calendars_status_tentative">Esialgne</string>
     <string name="calendars_event_new">Uus sündmus</string>
     <string name="calendars_event_edit">Muuda sündmust</string>
     <string name="calendars_event_calendar">Kalender</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Sa ei ole Google\'i kontot ühendanud.</string>
     <string name="calendars_subscribe_google_connect_action">Ühenda Google</string>
     <string name="calendars_grant_failed">Juurdepääsu kalendrile ei antud</string>
+    <string name="calendars_event_exception">Muudetud kordus</string>
 </resources>

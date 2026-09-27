@@ -13,7 +13,6 @@
     <string name="calendars_view">દૃશ્ય</string>
     <string name="calendars_view_list">લિસ્ટ</string>
     <string name="calendars_list_search">શોધો</string>
-    <string name="calendars_event_untitled">શીર્ષક વગરનું</string>
     <string name="calendars_event_title">શીર્ષક</string>
     <string name="calendars_event_location">સ્થાન</string>
     <string name="calendars_event_description">વર્ણન</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">%1$s થી %2$s</string>
     <string name="calendars_truncated">આ શ્રેણીના કેટલાક ઇવેન્ટ્સ બતાવાયા નથી.</string>
     <string name="calendars_list_empty">કોઈ ઇવેન્ટ્સ નથી</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d વધુ</item>
-        <item quantity="other">+%1$d વધુ</item>
-    </plurals>
+    <string name="calendars_untitled">(શીર્ષક નથી)</string>
+    <string name="calendars_status_cancelled">રદ</string>
+    <string name="calendars_status_tentative">કામચલાઉ</string>
     <string name="calendars_event_new">નવું ઇવેન્ટ</string>
     <string name="calendars_event_edit">ઇવેન્ટ સંપાદિત કરો</string>
     <string name="calendars_event_calendar">કૅલેન્ડર</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">તમે કોઈ Google ખાતું જોડ્યું નથી.</string>
     <string name="calendars_subscribe_google_connect_action">Google સાથે જોડાઓ</string>
     <string name="calendars_grant_failed">કૅલેન્ડર ઍક્સેસ આપવામાં આવી નથી</string>
+    <string name="calendars_event_exception">બદલાયેલું પુનરાવર્તન</string>
 </resources>

@@ -13,7 +13,6 @@
     <string name="calendars_view">בליק</string>
     <string name="calendars_view_list">רשימה</string>
     <string name="calendars_list_search">זוך</string>
-    <string name="calendars_event_untitled">אָן קעפּל</string>
     <string name="calendars_event_title">קעפּל</string>
     <string name="calendars_event_location">אָרט</string>
     <string name="calendars_event_description">באַשרײַבונג</string>
@@ -72,6 +71,9 @@
     <string name="calendars_range">%1$s ביז %2$s</string>
     <string name="calendars_truncated">עטלעכע געשעענישן אין דעם פּעריאָד ווערן ניט געוויזן.</string>
     <string name="calendars_list_empty">קיין געשעענישן</string>
+    <string name="calendars_untitled">(אָן קעפּל)</string>
+    <string name="calendars_status_cancelled">אָפּגעזאָגט</string>
+    <string name="calendars_status_tentative">פּראָוויזאָריש</string>
     <string name="calendars_event_new">נײַע געשעעניש</string>
     <string name="calendars_event_edit">רעדאַקטירן געשעעניש</string>
     <string name="calendars_event_calendar">קאַלענדאַר</string>
@@ -123,10 +125,6 @@
         <item quantity="one">%1$d געשעעניש דערהײַנטיקט</item>
         <item quantity="other">%1$d געשעענישן דערהײַנטיקט</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d מער</item>
-        <item quantity="other">+%1$d מער</item>
-    </plurals>
     <string name="calendars_sync_choose">קאַלענדאַרן צו סינכראָניזירן</string>
     <string name="calendars_poll_large">דער קאַלענדאַר איז צו גרויס</string>
     <string name="calendars_poll_invalid">דער אַדרעס האָט ניט צוריקגעגעבן קיין קאַלענדאַר</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">איר האָט נישט פֿאַרבונדן קיין Google קאָנטע.</string>
     <string name="calendars_subscribe_google_connect_action">פֿאַרבינדן Google</string>
     <string name="calendars_grant_failed">קאַלענדאַר־צוטריט איז ניט געגעבן געוואָרן</string>
+    <string name="calendars_event_exception">געביטענע פֿאָרקומעניש</string>
 </resources>

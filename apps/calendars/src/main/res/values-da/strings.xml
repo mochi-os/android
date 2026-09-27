@@ -13,7 +13,6 @@
     <string name="calendars_view">Visning</string>
     <string name="calendars_view_list">Liste</string>
     <string name="calendars_list_search">Søg</string>
-    <string name="calendars_event_untitled">Uden titel</string>
     <string name="calendars_event_title">Titel</string>
     <string name="calendars_event_location">Placering</string>
     <string name="calendars_event_description">Beskrivelse</string>
@@ -75,10 +74,9 @@
     <string name="calendars_range">%1$s til %2$s</string>
     <string name="calendars_truncated">Nogle begivenheder i denne periode vises ikke.</string>
     <string name="calendars_list_empty">Ingen begivenheder</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d mere</item>
-        <item quantity="other">+%1$d mere</item>
-    </plurals>
+    <string name="calendars_untitled">(Ingen titel)</string>
+    <string name="calendars_status_cancelled">Aflyst</string>
+    <string name="calendars_status_tentative">Foreløbig</string>
     <string name="calendars_event_new">Ny begivenhed</string>
     <string name="calendars_event_edit">Redigér begivenhed</string>
     <string name="calendars_event_calendar">Kalender</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Du har ikke forbundet en Google-konto.</string>
     <string name="calendars_subscribe_google_connect_action">Forbind Google</string>
     <string name="calendars_grant_failed">Kalenderadgang blev ikke givet</string>
+    <string name="calendars_event_exception">Ændret forekomst</string>
 </resources>

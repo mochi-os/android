@@ -13,7 +13,6 @@
     <string name="calendars_view">มุมมอง</string>
     <string name="calendars_view_list">รายการ</string>
     <string name="calendars_list_search">ค้นหา</string>
-    <string name="calendars_event_untitled">ไม่มีชื่อ</string>
     <string name="calendars_event_title">ชื่อ</string>
     <string name="calendars_event_location">ตำแหน่ง</string>
     <string name="calendars_event_description">คำอธิบาย</string>
@@ -72,6 +71,9 @@
     <string name="calendars_range">%1$s ถึง %2$s</string>
     <string name="calendars_truncated">กิจกรรมบางรายการในช่วงนี้ไม่ได้แสดง</string>
     <string name="calendars_list_empty">ไม่มีกิจกรรม</string>
+    <string name="calendars_untitled">(ไม่มีชื่อ)</string>
+    <string name="calendars_status_cancelled">ยกเลิกแล้ว</string>
+    <string name="calendars_status_tentative">ยังไม่แน่นอน</string>
     <string name="calendars_event_new">กิจกรรมใหม่</string>
     <string name="calendars_event_edit">แก้ไขกิจกรรม</string>
     <string name="calendars_event_calendar">ปฏิทิน</string>
@@ -122,9 +124,6 @@
     <plurals name="calendars_polled">
         <item quantity="other">อัปเดตแล้ว %1$d กิจกรรม</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="other">+%1$d เพิ่มเติม</item>
-    </plurals>
     <string name="calendars_sync_choose">ปฏิทินที่จะซิงค์</string>
     <string name="calendars_poll_large">ปฏิทินใหญ่เกินไป</string>
     <string name="calendars_poll_invalid">ที่อยู่ไม่ได้ส่งปฏิทินกลับมา</string>
@@ -172,4 +171,5 @@
     <string name="calendars_subscribe_google_connect">คุณยังไม่ได้เชื่อมต่อบัญชี Google</string>
     <string name="calendars_subscribe_google_connect_action">เชื่อมต่อ Google</string>
     <string name="calendars_grant_failed">ไม่ได้รับอนุญาตให้เข้าถึงปฏิทิน</string>
+    <string name="calendars_event_exception">ครั้งที่ถูกเปลี่ยนแปลง</string>
 </resources>

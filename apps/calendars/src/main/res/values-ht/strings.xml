@@ -13,7 +13,6 @@
     <string name="calendars_view">Vi</string>
     <string name="calendars_view_list">Lis</string>
     <string name="calendars_list_search">Chèche</string>
-    <string name="calendars_event_untitled">San tit</string>
     <string name="calendars_event_title">Tit</string>
     <string name="calendars_event_location">Lokasyon</string>
     <string name="calendars_event_description">Deskripsyon</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">%1$s a %2$s</string>
     <string name="calendars_truncated">Kèk evènman nan peryòd sa a pa parèt.</string>
     <string name="calendars_list_empty">Pa gen evènman</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d lòt</item>
-        <item quantity="other">+%1$d lòt</item>
-    </plurals>
+    <string name="calendars_untitled">(San tit)</string>
+    <string name="calendars_status_cancelled">Anile</string>
+    <string name="calendars_status_tentative">Pwovizwa</string>
     <string name="calendars_event_new">Nouvo evènman</string>
     <string name="calendars_event_edit">Modifye evènman</string>
     <string name="calendars_event_calendar">Kalandriye</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Ou pa konekte okenn kont Google.</string>
     <string name="calendars_subscribe_google_connect_action">Konekte Google</string>
     <string name="calendars_grant_failed">Yo pa bay aksè kalandriye</string>
+    <string name="calendars_event_exception">Repetisyon ki chanje</string>
 </resources>

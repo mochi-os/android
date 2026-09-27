@@ -13,7 +13,6 @@
     <string name="calendars_view">Rodinys</string>
     <string name="calendars_view_list">Sąrašas</string>
     <string name="calendars_list_search">Ieškoti</string>
-    <string name="calendars_event_untitled">Be pavadinimo</string>
     <string name="calendars_event_title">Pavadinimas</string>
     <string name="calendars_event_location">Vieta</string>
     <string name="calendars_event_description">Aprašymas</string>
@@ -77,11 +76,9 @@
     <string name="calendars_range">nuo %1$s iki %2$s</string>
     <string name="calendars_truncated">Kai kurie šio intervalo įvykiai nerodomi.</string>
     <string name="calendars_list_empty">Įvykių nėra</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d daugiau</item>
-        <item quantity="few">+%1$d daugiau</item>
-        <item quantity="other">+%1$d daugiau</item>
-    </plurals>
+    <string name="calendars_untitled">(Be pavadinimo)</string>
+    <string name="calendars_status_cancelled">Atšaukta</string>
+    <string name="calendars_status_tentative">Nepatvirtinta</string>
     <string name="calendars_event_new">Naujas įvykis</string>
     <string name="calendars_event_edit">Redaguoti įvykį</string>
     <string name="calendars_event_calendar">Kalendorius</string>
@@ -178,4 +175,5 @@
     <string name="calendars_subscribe_google_connect">Neprijungėte Google paskyros.</string>
     <string name="calendars_subscribe_google_connect_action">Prijungti Google</string>
     <string name="calendars_grant_failed">Prieiga prie kalendoriaus nesuteikta</string>
+    <string name="calendars_event_exception">Pakeistas pasikartojimas</string>
 </resources>

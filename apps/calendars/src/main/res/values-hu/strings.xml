@@ -13,7 +13,6 @@
     <string name="calendars_view">Nézet</string>
     <string name="calendars_view_list">Lista</string>
     <string name="calendars_list_search">Keresés</string>
-    <string name="calendars_event_untitled">Cím nélküli</string>
     <string name="calendars_event_title">Cím</string>
     <string name="calendars_event_location">Hely</string>
     <string name="calendars_event_description">Leírás</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">%1$s – %2$s</string>
     <string name="calendars_truncated">Ebben a tartományban néhány esemény nem jelenik meg.</string>
     <string name="calendars_list_empty">Nincsenek események</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d további</item>
-        <item quantity="other">+%1$d további</item>
-    </plurals>
+    <string name="calendars_untitled">(Nincs cím)</string>
+    <string name="calendars_status_cancelled">Lemondva</string>
+    <string name="calendars_status_tentative">Előzetes</string>
     <string name="calendars_event_new">Új esemény</string>
     <string name="calendars_event_edit">Esemény szerkesztése</string>
     <string name="calendars_event_calendar">Naptár</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Nem csatlakoztattál Google-fiókot.</string>
     <string name="calendars_subscribe_google_connect_action">Google csatlakoztatása</string>
     <string name="calendars_grant_failed">A naptár-hozzáférést nem adták meg</string>
+    <string name="calendars_event_exception">Módosított előfordulás</string>
 </resources>

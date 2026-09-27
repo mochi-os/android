@@ -13,7 +13,6 @@
     <string name="calendars_view">Mwonekano</string>
     <string name="calendars_view_list">Orodha</string>
     <string name="calendars_list_search">Tafuta</string>
-    <string name="calendars_event_untitled">Bila kichwa</string>
     <string name="calendars_event_title">Kichwa</string>
     <string name="calendars_event_location">Eneo</string>
     <string name="calendars_event_description">Maelezo</string>
@@ -72,6 +71,9 @@
     <string name="calendars_range">%1$s hadi %2$s</string>
     <string name="calendars_truncated">Baadhi ya matukio katika kipindi hiki hayajaonyeshwa.</string>
     <string name="calendars_list_empty">Hakuna matukio</string>
+    <string name="calendars_untitled">(Bila kichwa)</string>
+    <string name="calendars_status_cancelled">Imeghairiwa</string>
+    <string name="calendars_status_tentative">Ya muda</string>
     <string name="calendars_event_new">Tukio jipya</string>
     <string name="calendars_event_edit">Hariri tukio</string>
     <string name="calendars_event_calendar">Kalenda</string>
@@ -123,10 +125,6 @@
         <item quantity="one">Tukio %1$d limesasishwa</item>
         <item quantity="other">Matukio %1$d yamesasishwa</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d zaidi</item>
-        <item quantity="other">+%1$d zaidi</item>
-    </plurals>
     <string name="calendars_sync_choose">Kalenda za kusawazisha</string>
     <string name="calendars_poll_large">Kalenda ni kubwa mno</string>
     <string name="calendars_poll_invalid">Anwani haikurudisha kalenda</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Hujaunganisha akaunti ya Google.</string>
     <string name="calendars_subscribe_google_connect_action">Unganisha Google</string>
     <string name="calendars_grant_failed">Ufikiaji wa kalenda haukutolewa</string>
+    <string name="calendars_event_exception">Marudio yaliyobadilishwa</string>
 </resources>

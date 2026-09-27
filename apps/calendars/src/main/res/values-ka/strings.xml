@@ -13,7 +13,6 @@
     <string name="calendars_view">ხედი</string>
     <string name="calendars_view_list">სია</string>
     <string name="calendars_list_search">ძიება</string>
-    <string name="calendars_event_untitled">უსათაურო</string>
     <string name="calendars_event_title">სათაური</string>
     <string name="calendars_event_location">მდებარეობა</string>
     <string name="calendars_event_description">აღწერა</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">%1$s-დან %2$s-მდე</string>
     <string name="calendars_truncated">ამ დიაპაზონის ზოგიერთი ღონისძიება ნაჩვენები არ არის.</string>
     <string name="calendars_list_empty">ღონისძიებები არ არის</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d სხვა</item>
-        <item quantity="other">+%1$d სხვა</item>
-    </plurals>
+    <string name="calendars_untitled">(სათაურის გარეშე)</string>
+    <string name="calendars_status_cancelled">გაუქმებულია</string>
+    <string name="calendars_status_tentative">წინასწარი</string>
     <string name="calendars_event_new">ახალი ღონისძიება</string>
     <string name="calendars_event_edit">ღონისძიების რედაქტირება</string>
     <string name="calendars_event_calendar">კალენდარი</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">თქვენ არ დაგიკავშირებიათ Google-ის ანგარიში.</string>
     <string name="calendars_subscribe_google_connect_action">Google-თან დაკავშირება</string>
     <string name="calendars_grant_failed">კალენდართან წვდომა არ გაიცა</string>
+    <string name="calendars_event_exception">შეცვლილი გამეორება</string>
 </resources>

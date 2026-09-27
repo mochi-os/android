@@ -13,7 +13,6 @@
     <string name="calendars_view">ទិដ្ឋភាព</string>
     <string name="calendars_view_list">បញ្ជី</string>
     <string name="calendars_list_search">ស្វែងរក</string>
-    <string name="calendars_event_untitled">គ្មានចំណងជើង</string>
     <string name="calendars_event_title">ចំណងជើង</string>
     <string name="calendars_event_location">ទីតាំង</string>
     <string name="calendars_event_description">ការពិពណ៌នា</string>
@@ -75,9 +74,9 @@
     <string name="calendars_range">%1$s ដល់ %2$s</string>
     <string name="calendars_truncated">ព្រឹត្តិការណ៍មួយចំនួននៅក្នុងចន្លោះនេះមិនត្រូវបានបង្ហាញទេ។</string>
     <string name="calendars_list_empty">មិនមានព្រឹត្តិការណ៍</string>
-    <plurals name="calendars_more">
-        <item quantity="other">+%1$d បន្ថែមទៀត</item>
-    </plurals>
+    <string name="calendars_untitled">(គ្មានចំណងជើង)</string>
+    <string name="calendars_status_cancelled">បានបោះបង់</string>
+    <string name="calendars_status_tentative">បណ្ដោះអាសន្ន</string>
     <string name="calendars_event_new">ព្រឹត្តិការណ៍ថ្មី</string>
     <string name="calendars_event_edit">កែសម្រួលព្រឹត្តិការណ៍</string>
     <string name="calendars_event_calendar">ប្រតិទិន</string>
@@ -172,4 +171,5 @@
     <string name="calendars_subscribe_google_connect">អ្នកមិនទាន់បានភ្ជាប់គណនី Google ទេ។</string>
     <string name="calendars_subscribe_google_connect_action">ភ្ជាប់ Google</string>
     <string name="calendars_grant_failed">មិនបានផ្តល់ការចូលប្រើប្រតិទិនទេ</string>
+    <string name="calendars_event_exception">ការកើតឡើងដែលបានផ្លាស់ប្តូរ</string>
 </resources>

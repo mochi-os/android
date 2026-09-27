@@ -13,7 +13,6 @@
     <string name="calendars_view">Görünüm</string>
     <string name="calendars_view_list">Liste</string>
     <string name="calendars_list_search">Ara</string>
-    <string name="calendars_event_untitled">Başlıksız</string>
     <string name="calendars_event_title">Başlık</string>
     <string name="calendars_event_location">Konum</string>
     <string name="calendars_event_description">Açıklama</string>
@@ -72,6 +71,9 @@
     <string name="calendars_range">%1$s - %2$s</string>
     <string name="calendars_truncated">Bu aralıktaki bazı etkinlikler gösterilmiyor.</string>
     <string name="calendars_list_empty">Etkinlik yok</string>
+    <string name="calendars_untitled">(Başlıksız)</string>
+    <string name="calendars_status_cancelled">İptal edildi</string>
+    <string name="calendars_status_tentative">Kesin değil</string>
     <string name="calendars_event_new">Yeni etkinlik</string>
     <string name="calendars_event_edit">Etkinliği düzenle</string>
     <string name="calendars_event_calendar">Takvim</string>
@@ -123,10 +125,6 @@
         <item quantity="one">%1$d etkinlik güncellendi</item>
         <item quantity="other">%1$d etkinlik güncellendi</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d daha</item>
-        <item quantity="other">+%1$d daha</item>
-    </plurals>
     <string name="calendars_sync_choose">Eşitlenecek takvimler</string>
     <string name="calendars_poll_large">Takvim çok büyük</string>
     <string name="calendars_poll_invalid">Adres bir takvim döndürmedi</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Google hesabı bağlamadınız.</string>
     <string name="calendars_subscribe_google_connect_action">Google\'a bağlan</string>
     <string name="calendars_grant_failed">Takvim erişimi verilmedi</string>
+    <string name="calendars_event_exception">Değiştirilmiş yineleme</string>
 </resources>

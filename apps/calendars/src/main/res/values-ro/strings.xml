@@ -13,7 +13,6 @@
     <string name="calendars_view">Vizualizare</string>
     <string name="calendars_view_list">Listă</string>
     <string name="calendars_list_search">Caută</string>
-    <string name="calendars_event_untitled">Fără titlu</string>
     <string name="calendars_event_title">Titlu</string>
     <string name="calendars_event_location">Locație</string>
     <string name="calendars_event_description">Descriere</string>
@@ -71,6 +70,9 @@
     <string name="calendars_range">%1$s până la %2$s</string>
     <string name="calendars_truncated">Unele evenimente din acest interval nu sunt afișate.</string>
     <string name="calendars_list_empty">Niciun eveniment</string>
+    <string name="calendars_untitled">(Fără titlu)</string>
+    <string name="calendars_status_cancelled">Anulat</string>
+    <string name="calendars_status_tentative">Provizoriu</string>
     <string name="calendars_event_new">Eveniment nou</string>
     <string name="calendars_event_edit">Editează evenimentul</string>
     <string name="calendars_event_calendar">Calendar</string>
@@ -124,11 +126,6 @@
         <item quantity="few">%1$d evenimente actualizate</item>
         <item quantity="other">%1$d de evenimente actualizate</item>
     </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d în plus</item>
-        <item quantity="few">+%1$d în plus</item>
-        <item quantity="other">+%1$d în plus</item>
-    </plurals>
     <string name="calendars_sync_choose">Calendare de sincronizat</string>
     <string name="calendars_poll_large">Calendarul este prea mare</string>
     <string name="calendars_poll_invalid">Adresa nu a returnat un calendar</string>
@@ -178,4 +175,5 @@
     <string name="calendars_subscribe_google_connect">Nu ai conectat niciun cont Google.</string>
     <string name="calendars_subscribe_google_connect_action">Conectare Google</string>
     <string name="calendars_grant_failed">Accesul la calendar nu a fost acordat</string>
+    <string name="calendars_event_exception">Apariție modificată</string>
 </resources>

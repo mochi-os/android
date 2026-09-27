@@ -13,7 +13,6 @@
     <string name="calendars_view">Mul\'ata</string>
     <string name="calendars_view_list">Tarree</string>
     <string name="calendars_list_search">Barbaadi</string>
-    <string name="calendars_event_untitled">Mata dureen hin qabne</string>
     <string name="calendars_event_title">Mata duree</string>
     <string name="calendars_event_location">Iddoo</string>
     <string name="calendars_event_description">Ibsa</string>
@@ -76,10 +75,9 @@
     <string name="calendars_range">%1$s hanga %2$s</string>
     <string name="calendars_truncated">Taateewwan yeroo kana keessaa tokko tokko hin agarsiifamne.</string>
     <string name="calendars_list_empty">Taateewwan hin jiran</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d dabalataa</item>
-        <item quantity="other">+%1$d dabalataa</item>
-    </plurals>
+    <string name="calendars_untitled">(Mata duree hin qabu)</string>
+    <string name="calendars_status_cancelled">Haqame</string>
+    <string name="calendars_status_tentative">Hin mirkanoofne</string>
     <string name="calendars_event_new">Taatee haaraa</string>
     <string name="calendars_event_edit">Taatee sirreessi</string>
     <string name="calendars_event_calendar">Kaalaandarii</string>
@@ -175,4 +173,5 @@
     <string name="calendars_subscribe_google_connect">Akkaawuntii Google hin walqabsiifne.</string>
     <string name="calendars_subscribe_google_connect_action">Google wal qunnamsiisi</string>
     <string name="calendars_grant_failed">Seensi kaalaandarii hin kennamne</string>
+    <string name="calendars_event_exception">Taatee jijjiirame</string>
 </resources>
