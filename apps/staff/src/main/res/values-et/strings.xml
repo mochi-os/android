@@ -413,6 +413,7 @@
     <string name="staff_status_suspended">Peatatud</string>
     <string name="staff_team_action_remove">Eemalda</string>
     <string name="staff_team_add_member">Lisa liige</string>
+    <string name="staff_team_added_by_label">Lisas:</string>
     <string name="staff_team_added_by_system">Süsteem</string>
     <string name="staff_team_col_added_by">Lisas</string>
     <string name="staff_team_dialog_add">Lisa</string>

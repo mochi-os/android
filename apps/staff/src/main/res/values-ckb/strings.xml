@@ -380,6 +380,7 @@
     <string name="staff_status_suspended">ڕاگیراوە</string>
     <string name="staff_team_action_remove">لابردن</string>
     <string name="staff_team_add_member">زیادکردنی ئەندام</string>
+    <string name="staff_team_added_by_label">زیادکراو لەلایەن:</string>
     <string name="staff_team_added_by_system">سیستەم</string>
     <string name="staff_team_col_added_by">زیادکراو لەلایەن</string>
     <string name="staff_team_dialog_add">زیادکردن</string>

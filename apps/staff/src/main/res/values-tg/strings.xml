@@ -380,6 +380,7 @@
     <string name="staff_status_suspended">Боздошта шуд</string>
     <string name="staff_team_action_remove">Хориҷ кардан</string>
     <string name="staff_team_add_member">Иловаи аъзо</string>
+    <string name="staff_team_added_by_label">Илова карда шуд аз тарафи:</string>
     <string name="staff_team_added_by_system">Система</string>
     <string name="staff_team_col_added_by">Илова карда шуд аз тарафи</string>
     <string name="staff_team_dialog_add">Илова кардан</string>

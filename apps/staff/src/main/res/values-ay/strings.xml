@@ -370,6 +370,7 @@
     <string name="staff_status_suspended">Inakacht\'ata</string>
     <string name="staff_team_action_remove">Aparma</string>
     <string name="staff_team_add_member">Miembro yapxataña</string>
+    <string name="staff_team_added_by_label">Yapxatatpan:</string>
     <string name="staff_team_added_by_system">Sistema</string>
     <string name="staff_team_col_added_by">Yapxatatpan</string>
     <string name="staff_team_dialog_add">Yapxataña</string>

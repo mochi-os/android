@@ -413,6 +413,7 @@
     <string name="staff_status_suspended">सस्पेंड किया गया</string>
     <string name="staff_team_action_remove">हटाएँ</string>
     <string name="staff_team_add_member">सदस्य जोड़ें</string>
+    <string name="staff_team_added_by_label">द्वारा जोड़ा गया:</string>
     <string name="staff_team_added_by_system">सिस्टम</string>
     <string name="staff_team_col_added_by">द्वारा जोड़ा गया</string>
     <string name="staff_team_dialog_add">जोड़ें</string>

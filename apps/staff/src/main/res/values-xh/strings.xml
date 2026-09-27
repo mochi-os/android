@@ -373,6 +373,7 @@
     <string name="staff_status_suspended">Imisiwe okwexeshana</string>
     <string name="staff_team_action_remove">Susa</string>
     <string name="staff_team_add_member">Yongeza ilungu</string>
+    <string name="staff_team_added_by_label">Yongezwe ngu:</string>
     <string name="staff_team_added_by_system">Inkqubo</string>
     <string name="staff_team_col_added_by">Yongezwe ngu</string>
     <string name="staff_team_dialog_add">Yongeza</string>

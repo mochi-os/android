@@ -380,6 +380,7 @@
     <string name="staff_status_suspended">Sospiż</string>
     <string name="staff_team_action_remove">Neħħi</string>
     <string name="staff_team_add_member">Żid membru</string>
+    <string name="staff_team_added_by_label">Miżjud minn:</string>
     <string name="staff_team_added_by_system">Sistema</string>
     <string name="staff_team_col_added_by">Miżjud minn</string>
     <string name="staff_team_dialog_add">Żid</string>

@@ -413,6 +413,7 @@
     <string name="staff_status_suspended">Etenda</string>
     <string name="staff_team_action_remove">Kendu</string>
     <string name="staff_team_add_member">Gehitu kidea</string>
+    <string name="staff_team_added_by_label">Gehitu duena:</string>
     <string name="staff_team_added_by_system">Sistema</string>
     <string name="staff_team_col_added_by">Gehitu duena</string>
     <string name="staff_team_dialog_add">Gehitu</string>

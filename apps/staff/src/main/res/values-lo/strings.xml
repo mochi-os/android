@@ -375,6 +375,7 @@
     <string name="staff_status_suspended">ໂຈະແລ້ວ</string>
     <string name="staff_team_action_remove">ລຶບອອກ</string>
     <string name="staff_team_add_member">ເພີ່ມສະມາຊິກ</string>
+    <string name="staff_team_added_by_label">ເພີ່ມໂດຍ:</string>
     <string name="staff_team_added_by_system">ລະບົບ</string>
     <string name="staff_team_col_added_by">ເພີ່ມໂດຍ</string>
     <string name="staff_team_dialog_add">ເພີ່ມ</string>

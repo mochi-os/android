@@ -373,6 +373,7 @@
     <string name="staff_status_suspended">Sekinandî</string>
     <string name="staff_team_action_remove">Rake</string>
     <string name="staff_team_add_member">Endam zêde bike</string>
+    <string name="staff_team_added_by_label">Zêdekiriye:</string>
     <string name="staff_team_added_by_system">Pergal</string>
     <string name="staff_team_col_added_by">Zêdekiriye</string>
     <string name="staff_team_dialog_add">Zêde bike</string>

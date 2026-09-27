@@ -413,6 +413,7 @@
     <string name="staff_status_suspended">Felfüggesztve</string>
     <string name="staff_team_action_remove">Eltávolítás</string>
     <string name="staff_team_add_member">Tag hozzáadása</string>
+    <string name="staff_team_added_by_label">Hozzáadta:</string>
     <string name="staff_team_added_by_system">Rendszer</string>
     <string name="staff_team_col_added_by">Hozzáadta</string>
     <string name="staff_team_dialog_add">Hozzáadás</string>

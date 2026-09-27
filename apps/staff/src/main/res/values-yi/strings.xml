@@ -373,6 +373,7 @@
     <string name="staff_status_suspended">סוספּענדירט</string>
     <string name="staff_team_action_remove">אַראָפּנעמען</string>
     <string name="staff_team_add_member">צולייגן מיטגליד</string>
+    <string name="staff_team_added_by_label">צוגעלייגט פֿון:</string>
     <string name="staff_team_added_by_system">סיסטעם</string>
     <string name="staff_team_col_added_by">צוגעלייגט פֿון</string>
     <string name="staff_team_dialog_add">צולייגן</string>

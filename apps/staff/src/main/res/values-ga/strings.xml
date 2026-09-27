@@ -397,6 +397,7 @@
     <string name="staff_status_suspended">Ar fionraí</string>
     <string name="staff_team_action_remove">Bain</string>
     <string name="staff_team_add_member">Cuir ball leis</string>
+    <string name="staff_team_added_by_label">Curtha leis ag:</string>
     <string name="staff_team_added_by_system">Córas</string>
     <string name="staff_team_col_added_by">Curtha leis ag</string>
     <string name="staff_team_dialog_add">Cuir leis</string>

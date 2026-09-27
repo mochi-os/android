@@ -413,6 +413,7 @@
     <string name="staff_status_suspended">ถูกระงับ</string>
     <string name="staff_team_action_remove">ลบ</string>
     <string name="staff_team_add_member">เพิ่มสมาชิก</string>
+    <string name="staff_team_added_by_label">เพิ่มโดย:</string>
     <string name="staff_team_added_by_system">ระบบ</string>
     <string name="staff_team_col_added_by">เพิ่มโดย</string>
     <string name="staff_team_dialog_add">เพิ่ม</string>

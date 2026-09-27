@@ -413,6 +413,7 @@
     <string name="staff_status_suspended">Sospeso</string>
     <string name="staff_team_action_remove">Rimuovi</string>
     <string name="staff_team_add_member">Aggiungi membro</string>
+    <string name="staff_team_added_by_label">Aggiunto da:</string>
     <string name="staff_team_added_by_system">Sistema</string>
     <string name="staff_team_col_added_by">Aggiunto da</string>
     <string name="staff_team_dialog_add">Aggiungi</string>

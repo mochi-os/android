@@ -413,6 +413,7 @@
     <string name="staff_status_suspended">Суспендован</string>
     <string name="staff_team_action_remove">Уклони</string>
     <string name="staff_team_add_member">Додај члана</string>
+    <string name="staff_team_added_by_label">Додао:</string>
     <string name="staff_team_added_by_system">Систем</string>
     <string name="staff_team_col_added_by">Додао</string>
     <string name="staff_team_dialog_add">Додај</string>

@@ -413,6 +413,7 @@
     <string name="staff_status_suspended">Pozastavený</string>
     <string name="staff_team_action_remove">Odstrániť</string>
     <string name="staff_team_add_member">Pridať člena</string>
+    <string name="staff_team_added_by_label">Pridal:</string>
     <string name="staff_team_added_by_system">Systém</string>
     <string name="staff_team_col_added_by">Pridal</string>
     <string name="staff_team_dialog_add">Pridať</string>

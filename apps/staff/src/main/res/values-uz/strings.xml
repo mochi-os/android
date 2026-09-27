@@ -386,6 +386,7 @@
     <string name="staff_status_suspended">Toʻxtatib qoʻyilgan</string>
     <string name="staff_team_action_remove">Olib tashlash</string>
     <string name="staff_team_add_member">Aʼzo qoʻshish</string>
+    <string name="staff_team_added_by_label">Qoʻshgan:</string>
     <string name="staff_team_added_by_system">Tizim</string>
     <string name="staff_team_col_added_by">Qoʻshgan</string>
     <string name="staff_team_dialog_add">Qoʻshish</string>

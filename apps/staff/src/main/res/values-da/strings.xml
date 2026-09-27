@@ -413,6 +413,7 @@
     <string name="staff_status_suspended">Suspenderet</string>
     <string name="staff_team_action_remove">Fjern</string>
     <string name="staff_team_add_member">Tilføj medlem</string>
+    <string name="staff_team_added_by_label">Tilføjet af:</string>
     <string name="staff_team_added_by_system">System</string>
     <string name="staff_team_col_added_by">Tilføjet af</string>
     <string name="staff_team_dialog_add">Tilføj</string>

@@ -413,6 +413,7 @@
     <string name="staff_status_suspended">Suspendido</string>
     <string name="staff_team_action_remove">Eliminar</string>
     <string name="staff_team_add_member">Engadir membro</string>
+    <string name="staff_team_added_by_label">Engadido por:</string>
     <string name="staff_team_added_by_system">Sistema</string>
     <string name="staff_team_col_added_by">Engadido por</string>
     <string name="staff_team_dialog_add">Engadir</string>

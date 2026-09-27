@@ -413,6 +413,7 @@
     <string name="staff_status_suspended">معلق</string>
     <string name="staff_team_action_remove">إزالة</string>
     <string name="staff_team_add_member">إضافة عضو</string>
+    <string name="staff_team_added_by_label">تمت الإضافة بواسطة:</string>
     <string name="staff_team_added_by_system">النظام</string>
     <string name="staff_team_col_added_by">تمت الإضافة بواسطة</string>
     <string name="staff_team_dialog_add">إضافة</string>

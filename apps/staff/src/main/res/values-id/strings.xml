@@ -413,6 +413,7 @@
     <string name="staff_status_suspended">Ditangguhkan</string>
     <string name="staff_team_action_remove">Hapus</string>
     <string name="staff_team_add_member">Tambah anggota</string>
+    <string name="staff_team_added_by_label">Ditambahkan oleh:</string>
     <string name="staff_team_added_by_system">Sistem</string>
     <string name="staff_team_col_added_by">Ditambahkan oleh</string>
     <string name="staff_team_dialog_add">Tambah</string>

@@ -413,6 +413,7 @@
     <string name="staff_status_suspended">Geschorst</string>
     <string name="staff_team_action_remove">Verwijderen</string>
     <string name="staff_team_add_member">Lid toevoegen</string>
+    <string name="staff_team_added_by_label">Toegevoegd door:</string>
     <string name="staff_team_added_by_system">Systeem</string>
     <string name="staff_team_col_added_by">Toegevoegd door</string>
     <string name="staff_team_dialog_add">Toevoegen</string>

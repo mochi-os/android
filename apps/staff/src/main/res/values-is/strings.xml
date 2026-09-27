@@ -413,6 +413,7 @@
     <string name="staff_status_suspended">Frestað</string>
     <string name="staff_team_action_remove">Fjarlægja</string>
     <string name="staff_team_add_member">Bæta við meðlim</string>
+    <string name="staff_team_added_by_label">Bætt við af:</string>
     <string name="staff_team_added_by_system">Kerfi</string>
     <string name="staff_team_col_added_by">Bætt við af</string>
     <string name="staff_team_dialog_add">Bæta við</string>

@@ -413,6 +413,7 @@
     <string name="staff_status_suspended">Apturēts</string>
     <string name="staff_team_action_remove">Noņemt</string>
     <string name="staff_team_add_member">Pievienot dalībnieku</string>
+    <string name="staff_team_added_by_label">Pievienoja:</string>
     <string name="staff_team_added_by_system">Sistēma</string>
     <string name="staff_team_col_added_by">Pievienoja</string>
     <string name="staff_team_dialog_add">Pievienot</string>

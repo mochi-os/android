@@ -413,6 +413,7 @@
     <string name="staff_status_suspended">停止中</string>
     <string name="staff_team_action_remove">削除</string>
     <string name="staff_team_add_member">メンバーを追加</string>
+    <string name="staff_team_added_by_label">追加者：</string>
     <string name="staff_team_added_by_system">システム</string>
     <string name="staff_team_col_added_by">追加者</string>
     <string name="staff_team_dialog_add">追加</string>

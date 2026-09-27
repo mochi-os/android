@@ -375,6 +375,7 @@
     <string name="staff_status_suspended">ਮੁਅੱਤਲ ਕੀਤਾ ਗਿਆ</string>
     <string name="staff_team_action_remove">ਹਟਾਓ</string>
     <string name="staff_team_add_member">ਮੈਂਬਰ ਜੋੜੋ</string>
+    <string name="staff_team_added_by_label">ਇਸ ਦੁਆਰਾ ਜੋੜਿਆ ਗਿਆ:</string>
     <string name="staff_team_added_by_system">ਸਿਸਟਮ</string>
     <string name="staff_team_col_added_by">ਇਸ ਦੁਆਰਾ ਜੋੜਿਆ ਗਿਆ</string>
     <string name="staff_team_dialog_add">ਜੋੜੋ</string>

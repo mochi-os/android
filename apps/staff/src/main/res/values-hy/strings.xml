@@ -397,6 +397,7 @@
     <string name="staff_status_suspended">Կասեցված է</string>
     <string name="staff_team_action_remove">Հեռացնել</string>
     <string name="staff_team_add_member">Ավելացնել անդամ</string>
+    <string name="staff_team_added_by_label">Ավելացրել է:</string>
     <string name="staff_team_added_by_system">Համակարգ</string>
     <string name="staff_team_col_added_by">Ավելացրել է</string>
     <string name="staff_team_dialog_add">Ավելացնել</string>

@@ -413,6 +413,7 @@
     <string name="staff_status_suspended">Keskeytetty</string>
     <string name="staff_team_action_remove">Poista</string>
     <string name="staff_team_add_member">Lisää jäsen</string>
+    <string name="staff_team_added_by_label">Lisääjä:</string>
     <string name="staff_team_added_by_system">Järjestelmä</string>
     <string name="staff_team_col_added_by">Lisääjä</string>
     <string name="staff_team_dialog_add">Lisää</string>

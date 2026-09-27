@@ -397,6 +397,7 @@
     <string name="staff_status_suspended">Dayandırıldı</string>
     <string name="staff_team_action_remove">Sil</string>
     <string name="staff_team_add_member">Üzv əlavə et</string>
+    <string name="staff_team_added_by_label">Əlavə edən:</string>
     <string name="staff_team_added_by_system">Sistem</string>
     <string name="staff_team_col_added_by">Əlavə edən</string>
     <string name="staff_team_dialog_add">Əlavə et</string>

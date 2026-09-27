@@ -413,6 +413,7 @@
     <string name="staff_status_suspended">Suspendovano</string>
     <string name="staff_team_action_remove">Ukloni</string>
     <string name="staff_team_add_member">Dodaj člana</string>
+    <string name="staff_team_added_by_label">Dodao:</string>
     <string name="staff_team_added_by_system">Sistem</string>
     <string name="staff_team_col_added_by">Dodao</string>
     <string name="staff_team_dialog_add">Dodaj</string>

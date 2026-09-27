@@ -413,6 +413,7 @@
     <string name="staff_status_suspended">Suspendat</string>
     <string name="staff_team_action_remove">Elimină</string>
     <string name="staff_team_add_member">Adaugă membru</string>
+    <string name="staff_team_added_by_label">Adăugat de:</string>
     <string name="staff_team_added_by_system">Sistem</string>
     <string name="staff_team_col_added_by">Adăugat de</string>
     <string name="staff_team_dialog_add">Adaugă</string>

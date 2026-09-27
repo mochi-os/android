@@ -413,6 +413,7 @@
     <string name="staff_status_suspended">정지됨</string>
     <string name="staff_team_action_remove">제거</string>
     <string name="staff_team_add_member">멤버 추가</string>
+    <string name="staff_team_added_by_label">추가한 사람:</string>
     <string name="staff_team_added_by_system">시스템</string>
     <string name="staff_team_col_added_by">추가한 사람</string>
     <string name="staff_team_dialog_add">추가</string>

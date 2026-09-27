@@ -399,6 +399,7 @@
     <string name="staff_status_suspended">Imesimamishwa</string>
     <string name="staff_team_action_remove">Ondoa</string>
     <string name="staff_team_add_member">Ongeza mwanachama</string>
+    <string name="staff_team_added_by_label">Imeongezwa na:</string>
     <string name="staff_team_added_by_system">Mfumo</string>
     <string name="staff_team_col_added_by">Imeongezwa na</string>
     <string name="staff_team_dialog_add">Ongeza</string>

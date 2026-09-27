@@ -413,6 +413,7 @@
     <string name="staff_status_suspended">Đã đình chỉ</string>
     <string name="staff_team_action_remove">Xoá</string>
     <string name="staff_team_add_member">Thêm thành viên</string>
+    <string name="staff_team_added_by_label">Thêm bởi:</string>
     <string name="staff_team_added_by_system">Hệ thống</string>
     <string name="staff_team_col_added_by">Thêm bởi</string>
     <string name="staff_team_dialog_add">Thêm</string>

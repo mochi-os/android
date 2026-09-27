@@ -413,6 +413,7 @@
     <string name="staff_status_suspended">Askıya alındı</string>
     <string name="staff_team_action_remove">Kaldır</string>
     <string name="staff_team_add_member">Üye ekle</string>
+    <string name="staff_team_added_by_label">Ekleyen:</string>
     <string name="staff_team_added_by_system">Sistem</string>
     <string name="staff_team_col_added_by">Ekleyen</string>
     <string name="staff_team_dialog_add">Ekle</string>

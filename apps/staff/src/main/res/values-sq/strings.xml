@@ -413,6 +413,7 @@
     <string name="staff_status_suspended">I pezulluar</string>
     <string name="staff_team_action_remove">Hiq</string>
     <string name="staff_team_add_member">Shto anëtar</string>
+    <string name="staff_team_added_by_label">Shtuar nga:</string>
     <string name="staff_team_added_by_system">Sistemi</string>
     <string name="staff_team_col_added_by">Shtuar nga</string>
     <string name="staff_team_dialog_add">Shto</string>

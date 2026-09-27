@@ -62,7 +62,9 @@ fun BidStatusBadge(status: BidStatus?, modifier: Modifier = Modifier) {
             stringResource(R.string.market_purchase_purchased) to StatusTone.Positive
         BidStatus.OUTBID -> stringResource(R.string.market_bids_tab_outbid) to StatusTone.Neutral
         BidStatus.LOST -> stringResource(R.string.market_bids_tab_lost) to StatusTone.Neutral
-        BidStatus.EXPIRED, null -> status?.name?.lowercase().orEmpty() to StatusTone.Neutral
+        BidStatus.EXPIRED ->
+            stringResource(R.string.market_listings_filter_expired) to StatusTone.Neutral
+        null -> "" to StatusTone.Neutral
     }
     StatusBadge(
         label = label,

@@ -382,6 +382,7 @@
     <string name="staff_status_suspended">Токтотулду</string>
     <string name="staff_team_action_remove">Алуу</string>
     <string name="staff_team_add_member">Мүчө кошуу</string>
+    <string name="staff_team_added_by_label">Тарабынан кошулду:</string>
     <string name="staff_team_added_by_system">Система</string>
     <string name="staff_team_col_added_by">Тарабынан кошулду</string>
     <string name="staff_team_dialog_add">Кошуу</string>

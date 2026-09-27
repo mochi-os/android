@@ -373,6 +373,7 @@
     <string name="staff_status_suspended">معطل ٿيل</string>
     <string name="staff_team_action_remove">هٽايو</string>
     <string name="staff_team_add_member">ميمبر شامل ڪريو</string>
+    <string name="staff_team_added_by_label">شامل ڪندڙ:</string>
     <string name="staff_team_added_by_system">سسٽم</string>
     <string name="staff_team_col_added_by">شامل ڪندڙ</string>
     <string name="staff_team_dialog_add">شامل ڪريو</string>

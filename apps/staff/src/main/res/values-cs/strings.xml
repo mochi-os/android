@@ -413,6 +413,7 @@
     <string name="staff_status_suspended">Pozastaveno</string>
     <string name="staff_team_action_remove">Odebrat</string>
     <string name="staff_team_add_member">Přidat člena</string>
+    <string name="staff_team_added_by_label">Přidal:</string>
     <string name="staff_team_added_by_system">Systém</string>
     <string name="staff_team_col_added_by">Přidal</string>
     <string name="staff_team_dialog_add">Přidat</string>

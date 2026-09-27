@@ -375,6 +375,7 @@
     <string name="staff_status_suspended">ဆိုင်းငံ့ထား</string>
     <string name="staff_team_action_remove">ဖယ်ရှား</string>
     <string name="staff_team_add_member">အဖွဲ့ဝင် ထည့်မည်</string>
+    <string name="staff_team_added_by_label">ထည့်သည့်သူ:</string>
     <string name="staff_team_added_by_system">စနစ်</string>
     <string name="staff_team_col_added_by">ထည့်သည့်သူ</string>
     <string name="staff_team_dialog_add">ထည့်မည်</string>

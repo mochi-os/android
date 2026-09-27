@@ -375,6 +375,7 @@
     <string name="staff_status_suspended">निलम्बित</string>
     <string name="staff_team_action_remove">हटाउनुहोस्</string>
     <string name="staff_team_add_member">सदस्य थप्नुहोस्</string>
+    <string name="staff_team_added_by_label">द्वारा थपिएको:</string>
     <string name="staff_team_added_by_system">प्रणाली</string>
     <string name="staff_team_col_added_by">द्वारा थपिएको</string>
     <string name="staff_team_dialog_add">थप्नुहोस्</string>

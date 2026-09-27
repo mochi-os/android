@@ -375,6 +375,7 @@
     <string name="staff_status_suspended">സസ്പെൻഡ് ചെയ്തു</string>
     <string name="staff_team_action_remove">നീക്കം ചെയ്യുക</string>
     <string name="staff_team_add_member">അംഗത്തെ ചേർക്കുക</string>
+    <string name="staff_team_added_by_label">ചേർത്തത്:</string>
     <string name="staff_team_added_by_system">സിസ്റ്റം</string>
     <string name="staff_team_col_added_by">ചേർത്തത്</string>
     <string name="staff_team_dialog_add">ചേർക്കുക</string>

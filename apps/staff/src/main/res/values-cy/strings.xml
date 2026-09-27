@@ -413,6 +413,7 @@
     <string name="staff_status_suspended">Wedi\'i atal</string>
     <string name="staff_team_action_remove">Tynnu</string>
     <string name="staff_team_add_member">Ychwanegu aelod</string>
+    <string name="staff_team_added_by_label">Ychwanegwyd gan:</string>
     <string name="staff_team_added_by_system">System</string>
     <string name="staff_team_col_added_by">Ychwanegwyd gan</string>
     <string name="staff_team_dialog_add">Ychwanegu</string>

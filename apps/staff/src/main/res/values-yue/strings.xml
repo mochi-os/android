@@ -56,6 +56,7 @@
     <string name="staff_audit_actor_system">系統</string>
     <string name="staff_dashboard_system">系統</string>
     <string name="staff_moderation_system">系統</string>
+    <string name="staff_team_added_by_label">加入者：</string>
     <string name="staff_team_added_by_system">系統</string>
     <string name="staff_audit_action_listing_removed">已移除</string>
     <string name="staff_listings_status_removed">已移除</string>

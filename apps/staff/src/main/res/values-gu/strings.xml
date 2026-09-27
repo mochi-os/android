@@ -375,6 +375,7 @@
     <string name="staff_status_suspended">સસ્પેન્ડ કર્યા</string>
     <string name="staff_team_action_remove">દૂર કરો</string>
     <string name="staff_team_add_member">સભ્ય ઉમેરો</string>
+    <string name="staff_team_added_by_label">દ્વારા ઉમેર્યું:</string>
     <string name="staff_team_added_by_system">સિસ્ટમ</string>
     <string name="staff_team_col_added_by">દ્વારા ઉમેર્યું</string>
     <string name="staff_team_dialog_add">ઉમેરો</string>

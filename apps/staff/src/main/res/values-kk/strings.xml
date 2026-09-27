@@ -397,6 +397,7 @@
     <string name="staff_status_suspended">Тоқтатылды</string>
     <string name="staff_team_action_remove">Жою</string>
     <string name="staff_team_add_member">Мүше қосу</string>
+    <string name="staff_team_added_by_label">Қосқан:</string>
     <string name="staff_team_added_by_system">Жүйе</string>
     <string name="staff_team_col_added_by">Қосқан</string>
     <string name="staff_team_dialog_add">Қосу</string>

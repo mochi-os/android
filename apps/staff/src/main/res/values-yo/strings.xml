@@ -371,6 +371,7 @@
     <string name="staff_status_suspended">Ti dádúró</string>
     <string name="staff_team_action_remove">Yọ kúrò</string>
     <string name="staff_team_add_member">Fi ọmọ ẹgbẹ́ kún</string>
+    <string name="staff_team_added_by_label">A fi kún láti ọwọ́:</string>
     <string name="staff_team_added_by_system">Sístẹ́mù</string>
     <string name="staff_team_col_added_by">A fi kún láti ọwọ́</string>
     <string name="staff_team_dialog_add">Fi kún</string>

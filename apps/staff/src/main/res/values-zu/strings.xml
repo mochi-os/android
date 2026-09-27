@@ -373,6 +373,7 @@
     <string name="staff_status_suspended">Kumisiwe</string>
     <string name="staff_team_action_remove">Khipha</string>
     <string name="staff_team_add_member">Engeza ilungu</string>
+    <string name="staff_team_added_by_label">Kwengezwe ngu:</string>
     <string name="staff_team_added_by_system">Isistimu</string>
     <string name="staff_team_col_added_by">Kwengezwe ngu</string>
     <string name="staff_team_dialog_add">Engeza</string>

@@ -375,6 +375,7 @@
     <string name="staff_status_suspended">ಅಮಾನತುಗೊಳಿಸಲಾಗಿದೆ</string>
     <string name="staff_team_action_remove">ತೆಗೆದುಹಾಕಿ</string>
     <string name="staff_team_add_member">ಸದಸ್ಯರನ್ನು ಸೇರಿಸಿ</string>
+    <string name="staff_team_added_by_label">ಸೇರಿಸಿದವರು:</string>
     <string name="staff_team_added_by_system">ಸಿಸ್ಟಮ್</string>
     <string name="staff_team_col_added_by">ಸೇರಿಸಿದವರು</string>
     <string name="staff_team_dialog_add">ಸೇರಿಸಿ</string>

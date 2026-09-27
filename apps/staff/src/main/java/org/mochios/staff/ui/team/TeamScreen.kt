@@ -215,10 +215,7 @@ private fun AddedByLine(member: StaffMember, added: String) {
     val isSystem = member.addedby == "system"
     Row(verticalAlignment = Alignment.CenterVertically) {
         Text(
-            text = stringResource(
-                R.string.staff_team_added_by_label,
-                stringResource(R.string.staff_team_col_added_by),
-            ),
+            text = stringResource(R.string.staff_team_added_by_label),
             style = MaterialTheme.typography.bodySmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )

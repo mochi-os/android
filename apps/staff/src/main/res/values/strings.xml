@@ -415,7 +415,7 @@
     <string name="staff_status_suspended">Suspended</string>
     <string name="staff_team_action_remove">Remove</string>
     <string name="staff_team_add_member">Add member</string>
-    <string name="staff_team_added_by_label" translatable="false">%1$s:</string>
+    <string name="staff_team_added_by_label">Added by:</string>
     <string name="staff_team_added_by_system">System</string>
     <string name="staff_team_added_when" translatable="false">" · %1$s"</string>
     <string name="staff_team_col_added_by">Added by</string>

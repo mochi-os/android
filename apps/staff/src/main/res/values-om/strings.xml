@@ -372,6 +372,7 @@
     <string name="staff_status_suspended">Hidhameera</string>
     <string name="staff_team_action_remove">Haqi</string>
     <string name="staff_team_add_member">Miseensa dabali</string>
+    <string name="staff_team_added_by_label">Kan dabale:</string>
     <string name="staff_team_added_by_system">Sirna</string>
     <string name="staff_team_col_added_by">Kan dabale</string>
     <string name="staff_team_dialog_add">Dabali</string>

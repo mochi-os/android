@@ -386,6 +386,7 @@
     <string name="staff_status_suspended">Түр зогсоосон</string>
     <string name="staff_team_action_remove">Хасах</string>
     <string name="staff_team_add_member">Гишүүн нэмэх</string>
+    <string name="staff_team_added_by_label">Нэмсэн:</string>
     <string name="staff_team_added_by_system">Систем</string>
     <string name="staff_team_col_added_by">Нэмсэн</string>
     <string name="staff_team_dialog_add">Нэмэх</string>

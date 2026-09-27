@@ -413,6 +413,7 @@
     <string name="staff_status_suspended">Спрян</string>
     <string name="staff_team_action_remove">Премахни</string>
     <string name="staff_team_add_member">Добави член</string>
+    <string name="staff_team_added_by_label">Добавено от:</string>
     <string name="staff_team_added_by_system">Система</string>
     <string name="staff_team_col_added_by">Добавено от</string>
     <string name="staff_team_dialog_add">Добави</string>

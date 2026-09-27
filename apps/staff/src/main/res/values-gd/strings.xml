@@ -383,6 +383,7 @@
     <string name="staff_status_suspended">An cois</string>
     <string name="staff_team_action_remove">Thoir air falbh</string>
     <string name="staff_team_add_member">Cuir ball ris</string>
+    <string name="staff_team_added_by_label">Air a chur ris le:</string>
     <string name="staff_team_added_by_system">Siostam</string>
     <string name="staff_team_col_added_by">Air a chur ris le</string>
     <string name="staff_team_dialog_add">Cuir ris</string>

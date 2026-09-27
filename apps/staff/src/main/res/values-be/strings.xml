@@ -397,6 +397,7 @@
     <string name="staff_status_suspended">Прыпынена</string>
     <string name="staff_team_action_remove">Выдаліць</string>
     <string name="staff_team_add_member">Дадаць удзельніка</string>
+    <string name="staff_team_added_by_label">Дададзена:</string>
     <string name="staff_team_added_by_system">Сістэма</string>
     <string name="staff_team_col_added_by">Дададзена</string>
     <string name="staff_team_dialog_add">Дадаць</string>
