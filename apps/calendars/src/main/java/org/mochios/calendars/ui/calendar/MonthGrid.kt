@@ -213,6 +213,7 @@ fun MonthGrid(
                     lifted.instance,
                     Modifier.fillMaxWidth().shadow(6.dp, corners()),
                     stacked = !look.bar,
+                    raised = true,
                     time = if (look.time) {
                         format.formatTime(lifted.instance.start, clockZone(lifted.instance.zone?.start, viewModel.zones()))
                     } else {
@@ -310,7 +311,6 @@ private fun Cell(
                     .fillMaxWidth()
                     .bringIntoViewRequester(requester)
                     .alpha(opacity(carried = same(instance, lifted), over = viewModel.past(instance), cancelled = instance.cancelled)),
-                bar = look.bar,
                 stacked = !look.bar,
                 time = if (look.time) format.formatTime(instance.start, clockZone(instance.zone?.start, zones)) else null,
                 chosen = same(instance, selected),
@@ -371,9 +371,9 @@ private object Contained : NestedScrollConnection {
 }
 
 /**
- * How an occurrence is drawn in a month or multiweek cell: as a [bar] on the
- * neutral surface, or as a line on the cell itself, and whether it says its
- * start [time].
+ * How an occurrence is drawn in a month or multiweek cell: as a one-line
+ * [bar] held at the top of the cell, or as a two-line entry in the list that
+ * scrolls beneath, and whether it says its start [time].
  */
 data class Look(val bar: Boolean, val time: Boolean)
 

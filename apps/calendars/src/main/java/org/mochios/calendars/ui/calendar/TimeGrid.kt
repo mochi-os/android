@@ -608,7 +608,7 @@ private fun lay(instances: List<Instance>, viewModel: CalendarViewModel, day: Lo
 }
 
 /**
- * A timed occurrence's block: the neutral surface every occurrence sits on,
+ * A timed occurrence's block: the neutral surface of the time grid,
  * its outline dashed for a tentative one and in the primary colour, over the
  * primary colour's tint, when [chosen]. Its time is its span, "09:00 to
  * 10:00", each end read in its own zone when [zones] is on, or [span] when
@@ -706,11 +706,11 @@ fun Block(
 }
 
 /**
- * An occurrence in the all-day band or a month or multiweek cell. A [bar]
- * sits on the neutral surface, as an all-day or multi-day occurrence does,
- * its outline dashed for a tentative one; otherwise the entry stands on the
- * cell itself. [chosen] tints either in the primary colour, and gives a bar
- * a primary outline. On one line it reads dot,
+ * An occurrence in the all-day band or a month or multiweek cell, standing
+ * on the cell itself with no surface or outline of its own, and tinted in
+ * the primary colour when [chosen]. The chip a drag carries is [raised]: on
+ * the cards' own tone in an outline, dashed for a tentative occurrence, so
+ * it reads over the entries it passes. On one line it reads dot,
  * title, marks and [time] when given; [stacked], as a timed occurrence within
  * a day is drawn in a month or multiweek cell, puts the time and marks on a
  * second line beneath the title. [lift] comes after the tap in the chain,
@@ -720,10 +720,10 @@ fun Block(
 fun Chip(
     instance: Instance,
     modifier: Modifier = Modifier,
-    bar: Boolean = true,
     stacked: Boolean = false,
     time: String? = null,
     chosen: Boolean = false,
+    raised: Boolean = false,
     lift: Modifier = Modifier,
     onClick: () -> Unit,
 ) {
@@ -733,7 +733,7 @@ fun Chip(
         modifier = modifier
             .then(
                 when {
-                    bar -> Modifier.panel(shape, dashed = instance.tentative, chosen = chosen)
+                    raised -> Modifier.panel(shape, dashed = instance.tentative, chosen = chosen)
                     chosen -> Modifier.clip(shape).background(tint)
                     else -> Modifier.clip(shape)
                 },
@@ -936,9 +936,10 @@ fun TextStyle.packed(): TextStyle = if (fontSize.isSp) copy(lineHeight = fontSiz
 fun corners(): Shape = RoundedCornerShape(minOf(LocalEntityRadius.current, CORNER))
 
 /**
- * The neutral surface a block or bar sits on: the cards' own tone, with a
- * thin outline, [dashed] for a tentative occurrence. [chosen] lays the
- * primary colour's tint over it and draws the outline in the primary colour.
+ * The neutral surface a timed block or a carried chip sits on: the cards'
+ * own tone, with a thin outline, [dashed] for a tentative occurrence.
+ * [chosen] lays the primary colour's tint over it and draws the outline in
+ * the primary colour.
  */
 @Composable
 fun Modifier.panel(shape: Shape, dashed: Boolean = false, chosen: Boolean = false): Modifier {
