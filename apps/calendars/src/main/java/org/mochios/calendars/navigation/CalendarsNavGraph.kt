@@ -20,6 +20,7 @@ import org.mochios.calendars.ui.dialogs.CreateCalendarScreen
 import org.mochios.calendars.ui.dialogs.SubscribeCalendarScreen
 import org.mochios.calendars.ui.editor.EventEditScreen
 import org.mochios.calendars.ui.editor.Scope
+import java.net.URLDecoder
 import java.net.URLEncoder
 
 object CalendarsApp {
@@ -59,6 +60,25 @@ object CalendarsApp {
      */
     fun event(event: String, occurrence: Long = 0): String =
         "calendars/events/edit/$event?occurrence=$occurrence"
+
+    /**
+     * The editor a notification's link opens, or null when it names no event.
+     * A reminder links to `/calendars/?view=day&date=...&event=...&occurrence=...`;
+     * an older link carried the event and occurrence as path segments. [path]
+     * and [query] are the link's two halves, without the leading slash or `?`.
+     */
+    fun linked(path: String, query: String): String? {
+        val fields = query.split('&').mapNotNull { pair ->
+            val parts = pair.split('=', limit = 2)
+            if (parts.size == 2) parts[0] to URLDecoder.decode(parts[1], "UTF-8") else null
+        }.toMap()
+        val segments = path.trim('/').split('/')
+        val event = fields["event"]?.takeIf { it.isNotBlank() }
+            ?: segments.getOrNull(1)?.takeIf { it.isNotBlank() && it != "views" }
+            ?: return null
+        val occurrence = (fields["occurrence"] ?: segments.getOrNull(2))?.toLongOrNull() ?: 0
+        return event(event, occurrence)
+    }
 
     /**
      * The editor on a copy of a stored event, as a new event. [occurrence] is

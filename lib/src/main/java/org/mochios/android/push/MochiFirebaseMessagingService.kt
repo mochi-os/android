@@ -23,6 +23,7 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import org.mochios.android.notifications.NotificationsRepository
+import org.mochios.android.sync.SyncSignal
 
 /**
  * Receives FCM messages and posts the system notification on the app's channel.
@@ -42,6 +43,10 @@ class MochiFirebaseMessagingService : FirebaseMessagingService() {
 
     override fun onMessageReceived(message: RemoteMessage) {
         val data = message.data
+        SyncSignal.kind(data)?.let {
+            SyncSignal.run(applicationContext, it, deps().sessionManager())
+            return
+        }
         val title = data["title"].orEmpty()
         val body = data["body"].orEmpty()
         val link = data["link"].orEmpty()

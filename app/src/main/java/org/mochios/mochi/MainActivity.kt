@@ -888,11 +888,9 @@ open class MainActivity : ComponentActivity() {
             }
             "calendars" -> {
                 navController.openAppHome(CalendarsApp.HOME)
-                // A reminder names the event it is for, and the second segment
-                // is the occurrence it names when the event repeats.
-                if (id != null && id != "views") {
-                    val occurrence = parts.getOrNull(2)?.toLongOrNull() ?: 0
-                    navController.navigate(CalendarsApp.event(id, occurrence)) { launchSingleTop = true }
+                // A reminder names the event it is for and its occurrence.
+                CalendarsApp.linked(path, query)?.let { route ->
+                    navController.navigate(route) { launchSingleTop = true }
                 }
             }
         }

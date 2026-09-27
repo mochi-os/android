@@ -18,6 +18,7 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONObject
 import org.mochios.android.auth.AuthRepository
+import org.mochios.android.sync.SyncSignal
 import org.mochios.android.util.isServerOrigin
 import org.unifiedpush.android.connector.MessagingReceiver
 import org.unifiedpush.android.connector.data.PushEndpoint
@@ -227,6 +228,11 @@ abstract class MochiPushReceiver : MessagingReceiver() {
             JSONObject(text)
         } catch (_: Exception) {
             Log.w(TAG, "Push payload not JSON; ignoring")
+            return
+        }
+
+        SyncSignal.kind(mapOf("sync" to payload.optString("sync", "")))?.let {
+            SyncSignal.run(context, it, deps(context).sessionManager())
             return
         }
 
