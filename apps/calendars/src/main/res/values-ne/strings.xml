@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">यो क्यालेन्डरका लागि लिङ्क पहिले नै छ।</string>
     <string name="calendars_permission_title">पहुँच दिने?</string>
     <string name="calendars_permission_message">%1$s ले यो माग गर्दैछ:</string>
-    <string name="calendars_sync_permission">क्यालेन्डर पहुँच आवश्यक छ</string>
     <string name="calendars_sync_authorization">सिंक जारी राख्न फेरि साइन इन गर्नुहोस्</string>
     <string name="calendars_device_warning">पासवर्ड अहिले नै प्रतिलिपि गर्नुहोस्: यो फेरि देखाउन सकिँदैन।</string>
     <string name="calendars_device_empty">कुनै उपकरण जडान गरिएको छैन</string>

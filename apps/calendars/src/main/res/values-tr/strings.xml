@@ -112,7 +112,6 @@
     <string name="calendars_link_exists">Bu takvim için zaten bir bağlantı var.</string>
     <string name="calendars_permission_title">Erişime izin verilsin mi?</string>
     <string name="calendars_permission_message">%1$s şunu istiyor:</string>
-    <string name="calendars_sync_permission">Takvim erişimi gerekiyor</string>
     <string name="calendars_sync_authorization">Eşitlemeyi sürdürmek için yeniden oturum açın</string>
     <string name="calendars_device_warning">Parolayı şimdi kopyalayın: bir daha gösterilemez.</string>
     <string name="calendars_device_empty">Bağlı cihaz yok</string>

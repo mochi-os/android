@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">За този календар вече има връзка.</string>
     <string name="calendars_permission_title">Да се разреши ли достъп?</string>
     <string name="calendars_permission_message">%1$s иска:</string>
-    <string name="calendars_sync_permission">Необходим е достъп до календара</string>
     <string name="calendars_sync_authorization">Влезте отново, за да продължи синхронизирането</string>
     <string name="calendars_device_warning">Копирайте паролата сега: не може да бъде показана отново.</string>
     <string name="calendars_device_empty">Няма свързани устройства</string>

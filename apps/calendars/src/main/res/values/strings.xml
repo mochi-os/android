@@ -174,7 +174,6 @@
     <string name="calendars_sync_running">Syncing…</string>
     <string name="calendars_sync_never">Not synced yet</string>
     <string name="calendars_sync_time">Last synced %1$s</string>
-    <string name="calendars_sync_permission">Calendar access is needed</string>
     <string name="calendars_sync_authorization">Sign in again to keep syncing</string>
     <string name="calendars_sync_transport">Could not reach the server</string>
 

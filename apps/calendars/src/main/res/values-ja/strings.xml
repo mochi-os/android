@@ -115,7 +115,6 @@
     <string name="calendars_link_exists">このカレンダーにはすでにリンクがあります。</string>
     <string name="calendars_permission_title">アクセスを許可しますか？</string>
     <string name="calendars_permission_message">%1$s が次を要求しています:</string>
-    <string name="calendars_sync_permission">カレンダーへのアクセスが必要です</string>
     <string name="calendars_sync_authorization">同期を続けるには再度サインインしてください</string>
     <string name="calendars_device_warning">今すぐパスワードをコピーしてください。再表示することはできません。</string>
     <string name="calendars_device_empty">接続されているデバイスはありません</string>

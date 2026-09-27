@@ -112,7 +112,6 @@
     <string name="calendars_link_exists">Барои ин тақвим аллакай пайванд мавҷуд аст.</string>
     <string name="calendars_permission_title">Дастрасӣ дода шавад?</string>
     <string name="calendars_permission_message">%1$s дархост мекунад:</string>
-    <string name="calendars_sync_permission">Дастрасӣ ба тақвим лозим аст</string>
     <string name="calendars_sync_authorization">Барои идомаи ҳамоҳангсозӣ дубора ворид шавед</string>
     <string name="calendars_device_warning">Ниҳонвожаро ҳозир нусха кунед: он дигар нишон дода намешавад.</string>
     <string name="calendars_device_empty">Ягон дастгоҳ пайваст нест</string>

@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">Gen deja yon lyen pou kalandriye sa a.</string>
     <string name="calendars_permission_title">Pèmèt aksè?</string>
     <string name="calendars_permission_message">%1$s ap mande:</string>
-    <string name="calendars_sync_permission">Aksè a kalandriye nesesè</string>
     <string name="calendars_sync_authorization">Konekte ankò pou kontinye sinkronize</string>
     <string name="calendars_device_warning">Kopye modpas la kounye a: li pa ka parèt ankò.</string>
     <string name="calendars_device_empty">Pa gen okenn aparèy konekte</string>

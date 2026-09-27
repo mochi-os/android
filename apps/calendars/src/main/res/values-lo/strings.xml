@@ -115,7 +115,6 @@
     <string name="calendars_link_exists">ມີລິ້ງສຳລັບປະຕິທິນນີ້ແລ້ວ.</string>
     <string name="calendars_permission_title">ອະນຸຍາດການເຂົ້າເຖິງບໍ?</string>
     <string name="calendars_permission_message">%1$s ກຳລັງຂໍ:</string>
-    <string name="calendars_sync_permission">ຕ້ອງການສິດເຂົ້າເຖິງປະຕິທິນ</string>
     <string name="calendars_sync_authorization">ເຂົ້າສູ່ລະບົບອີກຄັ້ງເພື່ອຊິງຄ໌ຕໍ່</string>
     <string name="calendars_device_warning">ສຳເນົາລະຫັດຜ່ານດຽວນີ້: ມັນຈະບໍ່ສາມາດສະແດງໄດ້ອີກ.</string>
     <string name="calendars_device_empty">ບໍ່ມີອຸປະກອນທີ່ເຊື່ອມຕໍ່</string>

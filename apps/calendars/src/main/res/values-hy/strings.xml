@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">Այս օրացույցի համար հղում արդեն կա։</string>
     <string name="calendars_permission_title">Թույլատրե՞լ մուտքը։</string>
     <string name="calendars_permission_message">%1$s-ը խնդրում է՝</string>
-    <string name="calendars_sync_permission">Անհրաժեշտ է օրացույցի հասանելիություն</string>
     <string name="calendars_sync_authorization">Համաժամացումը շարունակելու համար նորից մուտք գործեք</string>
     <string name="calendars_device_warning">Պատճենեք գաղտնաբառը հիմա։ Այն այլևս հնարավոր չի լինի ցուցադրել։</string>
     <string name="calendars_device_empty">Միացված սարքեր չկան</string>

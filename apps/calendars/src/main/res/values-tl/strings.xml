@@ -112,7 +112,6 @@
     <string name="calendars_link_exists">May link na para sa kalendaryong ito.</string>
     <string name="calendars_permission_title">Payagan ang access?</string>
     <string name="calendars_permission_message">Hinihiling ng %1$s ang:</string>
-    <string name="calendars_sync_permission">Kailangan ng access sa kalendaryo</string>
     <string name="calendars_sync_authorization">Mag-sign in ulit para magpatuloy ang pag-sync</string>
     <string name="calendars_device_warning">Kopyahin ang password ngayon: hindi na ito maipapakita ulit.</string>
     <string name="calendars_device_empty">Walang nakakonektang device</string>

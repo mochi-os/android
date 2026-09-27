@@ -112,7 +112,6 @@
     <string name="calendars_link_exists">ఈ క్యాలెండర్‌కు ఇప్పటికే ఒక లింక్ ఉంది.</string>
     <string name="calendars_permission_title">యాక్సెస్‌ను అనుమతించాలా?</string>
     <string name="calendars_permission_message">%1$s అడుగుతోంది:</string>
-    <string name="calendars_sync_permission">క్యాలెండర్ యాక్సెస్ అవసరం</string>
     <string name="calendars_sync_authorization">సింక్ కొనసాగించడానికి మళ్లీ సైన్ ఇన్ చేయండి</string>
     <string name="calendars_device_warning">పాస్‌వర్డ్‌ను ఇప్పుడే కాపీ చేయండి: ఇది మళ్లీ చూపబడదు.</string>
     <string name="calendars_device_empty">ఏ పరికరం కనెక్ట్ కాలేదు</string>

@@ -375,6 +375,7 @@ class AppBootstrapViewModel @Inject constructor(
                 context,
                 identity = identity.identity,
                 name = displayName,
+                email = identity.email,
                 server = server,
                 fingerprint = identity.fingerprint.takeIf { it.isNotBlank() },
                 session = session

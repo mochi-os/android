@@ -112,7 +112,6 @@
     <string name="calendars_link_exists">Lịch này đã có một liên kết.</string>
     <string name="calendars_permission_title">Cho phép truy cập?</string>
     <string name="calendars_permission_message">%1$s đang yêu cầu:</string>
-    <string name="calendars_sync_permission">Cần quyền truy cập lịch</string>
     <string name="calendars_sync_authorization">Đăng nhập lại để tiếp tục đồng bộ</string>
     <string name="calendars_device_warning">Hãy sao chép mật khẩu ngay: mật khẩu sẽ không hiện lại.</string>
     <string name="calendars_device_empty">Chưa có thiết bị nào kết nối</string>

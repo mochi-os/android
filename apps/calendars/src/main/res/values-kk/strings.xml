@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">Бұл күнтізбе үшін сілтеме бұрыннан бар.</string>
     <string name="calendars_permission_title">Рұқсат берілсін бе?</string>
     <string name="calendars_permission_message">%1$s мынаны сұрайды:</string>
-    <string name="calendars_sync_permission">Күнтізбеге рұқсат қажет</string>
     <string name="calendars_sync_authorization">Синхрондауды жалғастыру үшін қайта кіріңіз</string>
     <string name="calendars_device_warning">Құпия сөзді қазір көшіріңіз: оны қайта көрсету мүмкін емес.</string>
     <string name="calendars_device_empty">Қосылған құрылғылар жоқ</string>

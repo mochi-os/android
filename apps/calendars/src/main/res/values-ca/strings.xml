@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">Ja hi ha un enllaç per a aquest calendari.</string>
     <string name="calendars_permission_title">Voleu permetre l\'accés?</string>
     <string name="calendars_permission_message">%1$s demana:</string>
-    <string name="calendars_sync_permission">Cal accés al calendari</string>
     <string name="calendars_sync_authorization">Torneu a iniciar la sessió per continuar la sincronització</string>
     <string name="calendars_device_warning">Copieu la contrasenya ara: no es podrà tornar a mostrar.</string>
     <string name="calendars_device_empty">No hi ha cap dispositiu connectat</string>

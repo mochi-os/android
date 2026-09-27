@@ -115,7 +115,6 @@
     <string name="calendars_link_exists">ဤပြက္ခဒိန်အတွက် လင့်ခ် ရှိပြီးသား ဖြစ်သည်။</string>
     <string name="calendars_permission_title">အသုံးပြုခွင့် ပေးမလား?</string>
     <string name="calendars_permission_message">%1$s မှ တောင်းဆိုနေသည်မှာ:</string>
-    <string name="calendars_sync_permission">ပြက္ခဒိန် အသုံးပြုခွင့် လိုအပ်သည်</string>
     <string name="calendars_sync_authorization">ချိန်ကိုက်မှု ဆက်လုပ်ရန် ပြန်လည် ဝင်ရောက်ပါ</string>
     <string name="calendars_device_warning">စကားဝှက်ကို ယခု ကူးယူပါ။ ထပ်မံ ပြသ၍ မရပါ။</string>
     <string name="calendars_device_empty">ချိတ်ဆက်ထားသော ကိရိယာ မရှိပါ</string>

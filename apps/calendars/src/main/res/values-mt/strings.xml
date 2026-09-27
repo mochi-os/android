@@ -119,7 +119,6 @@
     <string name="calendars_link_exists">Diġà teżisti ħolqa għal dan il-kalendarju.</string>
     <string name="calendars_permission_title">Tippermetti l-aċċess?</string>
     <string name="calendars_permission_message">%1$s qed jitlob:</string>
-    <string name="calendars_sync_permission">Hemm bżonn aċċess għall-kalendarju</string>
     <string name="calendars_sync_authorization">Erġa\' idħol biex tkompli tissinkronizza</string>
     <string name="calendars_device_warning">Ikkupja l-password issa: ma tistax tintwera mill-ġdid.</string>
     <string name="calendars_device_empty">L-ebda apparat mhu mqabbad</string>

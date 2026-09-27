@@ -112,7 +112,6 @@
     <string name="calendars_link_exists">Pre tento kalendár už odkaz existuje.</string>
     <string name="calendars_permission_title">Povoliť prístup?</string>
     <string name="calendars_permission_message">%1$s žiada o:</string>
-    <string name="calendars_sync_permission">Vyžaduje sa prístup ku kalendáru</string>
     <string name="calendars_sync_authorization">Prihláste sa znova, aby synchronizácia pokračovala</string>
     <string name="calendars_device_warning">Skopírujte heslo teraz: už sa nezobrazí.</string>
     <string name="calendars_device_empty">Žiadne pripojené zariadenia</string>

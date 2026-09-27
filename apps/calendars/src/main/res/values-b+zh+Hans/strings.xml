@@ -115,7 +115,6 @@
     <string name="calendars_link_exists">此日历已有链接。</string>
     <string name="calendars_permission_title">允许访问？</string>
     <string name="calendars_permission_message">%1$s 请求：</string>
-    <string name="calendars_sync_permission">需要日历访问权限</string>
     <string name="calendars_sync_authorization">请重新登录以继续同步</string>
     <string name="calendars_device_warning">请立即复制密码：它无法再次显示。</string>
     <string name="calendars_device_empty">没有已连接的设备</string>

@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">Tälle kalenterille on jo linkki.</string>
     <string name="calendars_permission_title">Sallitaanko käyttöoikeus?</string>
     <string name="calendars_permission_message">%1$s pyytää:</string>
-    <string name="calendars_sync_permission">Kalenterin käyttöoikeus tarvitaan</string>
     <string name="calendars_sync_authorization">Kirjaudu uudelleen sisään jatkaaksesi synkronointia</string>
     <string name="calendars_device_warning">Kopioi salasana nyt: sitä ei voi näyttää uudelleen.</string>
     <string name="calendars_device_empty">Ei yhdistettyjä laitteita</string>

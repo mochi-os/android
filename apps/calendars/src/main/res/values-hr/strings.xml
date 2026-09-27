@@ -117,7 +117,6 @@
     <string name="calendars_link_exists">Za ovaj kalendar već postoji poveznica.</string>
     <string name="calendars_permission_title">Dopustiti pristup?</string>
     <string name="calendars_permission_message">%1$s traži:</string>
-    <string name="calendars_sync_permission">Potreban je pristup kalendaru</string>
     <string name="calendars_sync_authorization">Prijavite se ponovno za nastavak sinkronizacije</string>
     <string name="calendars_device_warning">Kopirajte lozinku sada: ne može se ponovno prikazati.</string>
     <string name="calendars_device_empty">Nema povezanih uređaja</string>

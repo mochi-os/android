@@ -112,7 +112,6 @@
     <string name="calendars_link_exists">Ten kalendarz ma już link.</string>
     <string name="calendars_permission_title">Zezwolić na dostęp?</string>
     <string name="calendars_permission_message">%1$s prosi o:</string>
-    <string name="calendars_sync_permission">Wymagany jest dostęp do kalendarza</string>
     <string name="calendars_sync_authorization">Zaloguj się ponownie, aby kontynuować synchronizację</string>
     <string name="calendars_device_warning">Skopiuj hasło teraz: nie będzie pokazane ponownie.</string>
     <string name="calendars_device_empty">Brak połączonych urządzeń</string>

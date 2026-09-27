@@ -112,6 +112,7 @@ fun NavGraphBuilder.calendarsNavGraph(
             onCopyOccurrence = { instance -> navController.navigate(CalendarsApp.copyOccurrence(instance)) },
             copied = copied,
             onCopiedShown = { entry.savedStateHandle[CalendarsApp.COPIED] = false },
+            onLogout = onLogout,
         )
     }
 

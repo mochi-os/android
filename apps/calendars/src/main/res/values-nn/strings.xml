@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">Det finst allereie ei lenkje for denne kalenderen.</string>
     <string name="calendars_permission_title">Tillate tilgang?</string>
     <string name="calendars_permission_message">%1$s ber om:</string>
-    <string name="calendars_sync_permission">Kalendertilgang trengst</string>
     <string name="calendars_sync_authorization">Logg inn igjen for å halda fram synkroniseringa</string>
     <string name="calendars_device_warning">Kopier passordet no: det kan ikkje visast igjen.</string>
     <string name="calendars_device_empty">Ingen einingar tilkopla</string>

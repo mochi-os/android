@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">ለዚህ የቀን መቁጠሪያ አገናኝ አስቀድሞ አለ።</string>
     <string name="calendars_permission_title">መዳረሻ ይፈቀድ?</string>
     <string name="calendars_permission_message">%1$s የሚከተለውን ይጠይቃል፦</string>
-    <string name="calendars_sync_permission">የቀን መቁጠሪያ መዳረሻ ያስፈልጋል</string>
     <string name="calendars_sync_authorization">ማመሳሰልን ለመቀጠል እንደገና ይግቡ</string>
     <string name="calendars_device_warning">የይለፍ ቃሉን አሁን ቅዳ፦ እንደገና ሊታይ አይችልም።</string>
     <string name="calendars_device_empty">ምንም መሳሪያ አልተገናኘም</string>

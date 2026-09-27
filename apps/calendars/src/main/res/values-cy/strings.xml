@@ -120,7 +120,6 @@
     <string name="calendars_link_exists">Mae dolen eisoes yn bodoli ar gyfer y calendr hwn.</string>
     <string name="calendars_permission_title">Caniatáu mynediad?</string>
     <string name="calendars_permission_message">Mae %1$s yn gofyn am:</string>
-    <string name="calendars_sync_permission">Mae angen mynediad at y calendr</string>
     <string name="calendars_sync_authorization">Mewngofnodwch eto i barhau i gydweddu</string>
     <string name="calendars_device_warning">Copïwch y cyfrinair nawr: ni ellir ei ddangos eto.</string>
     <string name="calendars_device_empty">Dim dyfeisiau wedi\'u cysylltu</string>

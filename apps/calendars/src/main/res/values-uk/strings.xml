@@ -112,7 +112,6 @@
     <string name="calendars_link_exists">Для цього календаря вже є посилання.</string>
     <string name="calendars_permission_title">Дозволити доступ?</string>
     <string name="calendars_permission_message">%1$s запитує:</string>
-    <string name="calendars_sync_permission">Потрібен доступ до календаря</string>
     <string name="calendars_sync_authorization">Увійдіть знову, щоб продовжити синхронізацію</string>
     <string name="calendars_device_warning">Скопіюйте пароль зараз: він більше не відображатиметься.</string>
     <string name="calendars_device_empty">Немає підключених пристроїв</string>

@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">Daar bestaan reeds ’n skakel vir hierdie kalender.</string>
     <string name="calendars_permission_title">Laat toegang toe?</string>
     <string name="calendars_permission_message">%1$s vra om:</string>
-    <string name="calendars_sync_permission">Kalendertoegang word vereis</string>
     <string name="calendars_sync_authorization">Meld weer aan om te bly sinkroniseer</string>
     <string name="calendars_device_warning">Kopieer die wagwoord nou: dit kan nie weer gewys word nie.</string>
     <string name="calendars_device_empty">Geen toestelle verbind nie</string>

@@ -112,7 +112,6 @@
     <string name="calendars_link_exists">Bu kalendar uchun havola allaqachon mavjud.</string>
     <string name="calendars_permission_title">Ruxsat berilsinmi?</string>
     <string name="calendars_permission_message">%1$s soʻramoqda:</string>
-    <string name="calendars_sync_permission">Kalendarga ruxsat kerak</string>
     <string name="calendars_sync_authorization">Sinxronlashni davom ettirish uchun qayta kiring</string>
     <string name="calendars_device_warning">Parolni hozir nusxalang: u boshqa koʻrsatilmaydi.</string>
     <string name="calendars_device_empty">Ulangan qurilma yoʻq</string>

@@ -112,7 +112,6 @@
     <string name="calendars_link_exists">Det finns redan en länk för den här kalendern.</string>
     <string name="calendars_permission_title">Tillåt åtkomst?</string>
     <string name="calendars_permission_message">%1$s begär:</string>
-    <string name="calendars_sync_permission">Åtkomst till kalendern krävs</string>
     <string name="calendars_sync_authorization">Logga in igen för att fortsätta synkronisera</string>
     <string name="calendars_device_warning">Kopiera lösenordet nu: det kan inte visas igen.</string>
     <string name="calendars_device_empty">Inga enheter anslutna</string>

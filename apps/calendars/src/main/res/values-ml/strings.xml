@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">ഈ കലണ്ടറിന് ഇതിനകം ഒരു ലിങ്ക് ഉണ്ട്.</string>
     <string name="calendars_permission_title">ആക്‌സസ് അനുവദിക്കണോ?</string>
     <string name="calendars_permission_message">%1$s ഇത് ആവശ്യപ്പെടുന്നു:</string>
-    <string name="calendars_sync_permission">കലണ്ടർ ആക്‌സസ് ആവശ്യമാണ്</string>
     <string name="calendars_sync_authorization">സമന്വയം തുടരാൻ വീണ്ടും സൈൻ ഇൻ ചെയ്യുക</string>
     <string name="calendars_device_warning">പാസ്‌വേഡ് ഇപ്പോൾ തന്നെ പകർത്തുക: ഇത് വീണ്ടും കാണിക്കാനാകില്ല.</string>
     <string name="calendars_device_empty">ഡിവൈസുകളൊന്നും ബന്ധിപ്പിച്ചിട്ടില്ല</string>

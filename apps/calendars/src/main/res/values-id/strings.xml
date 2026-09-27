@@ -115,7 +115,6 @@
     <string name="calendars_link_exists">Tautan untuk kalender ini sudah ada.</string>
     <string name="calendars_permission_title">Izinkan akses?</string>
     <string name="calendars_permission_message">%1$s meminta:</string>
-    <string name="calendars_sync_permission">Akses kalender diperlukan</string>
     <string name="calendars_sync_authorization">Masuk lagi untuk melanjutkan sinkronisasi</string>
     <string name="calendars_device_warning">Salin kata sandi sekarang: kata sandi tidak dapat ditampilkan lagi.</string>
     <string name="calendars_device_empty">Tidak ada perangkat yang terhubung</string>

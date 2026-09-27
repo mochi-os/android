@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">ई कैलेंडर खातिर पहिलहीं एगो लिंक बा।</string>
     <string name="calendars_permission_title">पहुंच के अनुमति दीं?</string>
     <string name="calendars_permission_message">%1$s ई मांगत बा:</string>
-    <string name="calendars_sync_permission">कैलेंडर के पहुंच चाहीं</string>
     <string name="calendars_sync_authorization">सिंक जारी राखे खातिर फेर से साइन इन करीं</string>
     <string name="calendars_device_warning">पासवर्ड अबहीं कॉपी कर लीं: ई फेर से ना देखावल जाई।</string>
     <string name="calendars_device_empty">कवनो उपकरण जुड़ल नइखे</string>

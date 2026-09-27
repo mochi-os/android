@@ -120,7 +120,6 @@
     <string name="calendars_link_exists">يوجد رابط بالفعل لهذا التقويم.</string>
     <string name="calendars_permission_title">السماح بالوصول؟</string>
     <string name="calendars_permission_message">%1$s يطلب:</string>
-    <string name="calendars_sync_permission">الوصول إلى التقويم مطلوب</string>
     <string name="calendars_sync_authorization">سجّل الدخول مرة أخرى لمتابعة المزامنة</string>
     <string name="calendars_device_warning">انسخ كلمة المرور الآن: لا يمكن عرضها مرة أخرى.</string>
     <string name="calendars_device_empty">لا توجد أجهزة متصلة</string>

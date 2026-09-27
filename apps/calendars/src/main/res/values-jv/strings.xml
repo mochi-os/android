@@ -115,7 +115,6 @@
     <string name="calendars_link_exists">Tautan kanggo kalender iki wis ana.</string>
     <string name="calendars_permission_title">Idini akses?</string>
     <string name="calendars_permission_message">%1$s njaluk:</string>
-    <string name="calendars_sync_permission">Butuh akses kalender</string>
     <string name="calendars_sync_authorization">Mlebu manèh supaya sinkronisasi terus mlaku</string>
     <string name="calendars_device_warning">Salin tembung sandhi saiki: ora bisa ditampilake manèh.</string>
     <string name="calendars_device_empty">Ora ana piranti sing kasambung</string>

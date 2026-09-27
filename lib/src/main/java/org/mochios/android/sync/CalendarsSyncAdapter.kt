@@ -21,6 +21,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.EntryPointAccessors
 import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.runBlocking
+import org.mochios.android.account.MochiAccount
 import org.mochios.android.auth.SessionManager
 import java.io.IOException
 
@@ -65,7 +66,7 @@ class CalendarsSyncAdapter(context: Context) : AbstractThreadedSyncAdapter(conte
         if (!CalendarsSync.enabled(account)) return
         val deps = EntryPointAccessors.fromApplication(context, CalendarsSyncEntryPoint::class.java)
         val bound = runBlocking { deps.sessionManager().getBoundIdentity() }
-        if (bound != account.name) {
+        if (bound != MochiAccount.identityOf(context, account)) {
             // The transport speaks for the bound account only; another
             // account's rows are not this session's to write.
             return

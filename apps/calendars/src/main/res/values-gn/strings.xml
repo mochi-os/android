@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">Oĩma peteĩ link ko arapapaha peg̃uarã.</string>
     <string name="calendars_permission_title">Emoneĩta jeike?</string>
     <string name="calendars_permission_message">%1$s ojerure:</string>
-    <string name="calendars_sync_permission">Tekotevẽ jeike arapapahápe</string>
     <string name="calendars_sync_authorization">Eike jey resincroniza meme hag̃ua</string>
     <string name="calendars_device_warning">Ekopia ñe\'ẽñemi ko\'ág̃a: ndaikatumo\'ãi ojehechauka jey.</string>
     <string name="calendars_device_empty">Ndaipóri mba\'e oñembojoajúva</string>

@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">پێشتر بەستەرێک بۆ ئەم ڕۆژژمێرە هەیە.</string>
     <string name="calendars_permission_title">ڕێگە بە دەستڕاگەیشتن بدرێت؟</string>
     <string name="calendars_permission_message">%1$s داوای ئەمانە دەکات:</string>
-    <string name="calendars_sync_permission">پێویستە دەستڕاگەیشتن بە ڕۆژژمێر هەبێت</string>
     <string name="calendars_sync_authorization">بۆ بەردەوامبوونی هاوکاتکردن دیسان بچۆ ژوورەوە</string>
     <string name="calendars_device_warning">ئێستا وشەی نهێنی کۆپی بکە: دووبارە پیشان نادرێتەوە.</string>
     <string name="calendars_device_empty">هیچ ئامێرێک پەیوەست نەکراوە</string>

@@ -112,7 +112,6 @@
     <string name="calendars_link_exists">Tayari kuna kiungo cha kalenda hii.</string>
     <string name="calendars_permission_title">Uruhusu ufikiaji?</string>
     <string name="calendars_permission_message">%1$s inaomba:</string>
-    <string name="calendars_sync_permission">Ufikiaji wa kalenda unahitajika</string>
     <string name="calendars_sync_authorization">Ingia tena ili kuendelea kusawazisha</string>
     <string name="calendars_device_warning">Nakili nenosiri sasa: haliwezi kuonyeshwa tena.</string>
     <string name="calendars_device_empty">Hakuna kifaa kilichounganishwa</string>

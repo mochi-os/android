@@ -112,7 +112,6 @@
     <string name="calendars_link_exists">Există deja un link pentru acest calendar.</string>
     <string name="calendars_permission_title">Permiți accesul?</string>
     <string name="calendars_permission_message">%1$s solicită:</string>
-    <string name="calendars_sync_permission">Este necesar accesul la calendar</string>
     <string name="calendars_sync_authorization">Autentifică-te din nou pentru a continua sincronizarea</string>
     <string name="calendars_device_warning">Copiază parola acum: nu mai poate fi afișată.</string>
     <string name="calendars_device_empty">Niciun dispozitiv conectat</string>

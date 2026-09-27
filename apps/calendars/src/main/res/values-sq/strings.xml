@@ -112,7 +112,6 @@
     <string name="calendars_link_exists">Për këtë kalendar ekziston tashmë një lidhje.</string>
     <string name="calendars_permission_title">Të lejohet qasja?</string>
     <string name="calendars_permission_message">%1$s po kërkon:</string>
-    <string name="calendars_sync_permission">Nevojitet qasja te kalendari</string>
     <string name="calendars_sync_authorization">Hyni sërish për të vazhduar sinkronizimin</string>
     <string name="calendars_device_warning">Kopjojeni fjalëkalimin tani: nuk mund të shfaqet sërish.</string>
     <string name="calendars_device_empty">Asnjë pajisje e lidhur</string>

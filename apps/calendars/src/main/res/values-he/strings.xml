@@ -117,7 +117,6 @@
     <string name="calendars_link_exists">כבר קיים קישור ליומן הזה.</string>
     <string name="calendars_permission_title">לאפשר גישה?</string>
     <string name="calendars_permission_message">%1$s מבקש:</string>
-    <string name="calendars_sync_permission">נדרשת גישה ליומן</string>
     <string name="calendars_sync_authorization">התחברו שוב כדי להמשיך בסנכרון</string>
     <string name="calendars_device_warning">העתיקו את הסיסמה עכשיו: לא ניתן יהיה להציג אותה שוב.</string>
     <string name="calendars_device_empty">אין מכשירים מחוברים</string>

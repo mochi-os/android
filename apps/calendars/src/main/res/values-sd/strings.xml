@@ -112,7 +112,6 @@
     <string name="calendars_link_exists">هن ڪئلينڊر لاءِ اڳ ۾ ئي هڪ لنڪ موجود آهي.</string>
     <string name="calendars_permission_title">رسائي ڏجي؟</string>
     <string name="calendars_permission_message">%1$s گهر ڪري رهيو آهي:</string>
-    <string name="calendars_sync_permission">ڪئلينڊر تائين رسائي گهربل آهي</string>
     <string name="calendars_sync_authorization">سنڪ جاري رکڻ لاءِ ٻيهر سائن ان ڪريو</string>
     <string name="calendars_device_warning">پاسورڊ هاڻي ڪاپي ڪريو: هي وري نه ڏيکاريو ويندو.</string>
     <string name="calendars_device_empty">ڪوبه ڊوائيس ڳنڍيل ناهي</string>

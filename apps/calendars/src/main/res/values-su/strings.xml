@@ -112,7 +112,6 @@
     <string name="calendars_link_exists">Tumbu pikeun kalénder ieu parantos aya.</string>
     <string name="calendars_permission_title">Idinan aksés?</string>
     <string name="calendars_permission_message">%1$s nyuhunkeun:</string>
-    <string name="calendars_sync_permission">Peryogi aksés kana kalénder</string>
     <string name="calendars_sync_authorization">Lebet deui supados sinkronisasi tetep jalan</string>
     <string name="calendars_device_warning">Salin kecap konci ayeuna: moal dipidangkeun deui.</string>
     <string name="calendars_device_empty">Teu aya alat nu nyambung</string>

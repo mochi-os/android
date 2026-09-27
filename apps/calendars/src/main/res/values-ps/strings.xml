@@ -112,7 +112,6 @@
     <string name="calendars_link_exists">د دې کليز لپاره لا دمخه لینک شته.</string>
     <string name="calendars_permission_title">لاسرسی ورکړئ؟</string>
     <string name="calendars_permission_message">%1$s غوښتنه کوي:</string>
-    <string name="calendars_sync_permission">کليز ته لاسرسی اړین دی</string>
     <string name="calendars_sync_authorization">د همغږۍ د دوام لپاره بیا ننوځئ</string>
     <string name="calendars_device_warning">پاسورډ اوس کاپي کړئ: بیا به ونه ښودل شي.</string>
     <string name="calendars_device_empty">هېڅ وسیله نه ده نښلول شوې</string>

@@ -117,7 +117,6 @@
     <string name="calendars_link_exists">Šiam kalendoriui nuoroda jau yra.</string>
     <string name="calendars_permission_title">Leisti prieigą?</string>
     <string name="calendars_permission_message">%1$s prašo:</string>
-    <string name="calendars_sync_permission">Reikia prieigos prie kalendoriaus</string>
     <string name="calendars_sync_authorization">Prisijunkite iš naujo, kad sinchronizavimas tęstųsi</string>
     <string name="calendars_device_warning">Nukopijuokite slaptažodį dabar: jo nebus galima parodyti dar kartą.</string>
     <string name="calendars_device_empty">Nėra prijungtų įrenginių</string>

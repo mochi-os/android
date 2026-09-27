@@ -115,7 +115,6 @@
     <string name="calendars_link_exists">មានតំណសម្រាប់ប្រតិទិននេះរួចហើយ។</string>
     <string name="calendars_permission_title">អនុញ្ញាតឱ្យចូលប្រើមែនទេ?</string>
     <string name="calendars_permission_message">%1$s កំពុងស្នើសុំ៖</string>
-    <string name="calendars_sync_permission">ត្រូវការសិទ្ធិចូលប្រើប្រតិទិន</string>
     <string name="calendars_sync_authorization">ចូលម្ដងទៀត ដើម្បីបន្តធ្វើសមកាលកម្ម</string>
     <string name="calendars_device_warning">ចម្លងពាក្យសម្ងាត់ឥឡូវនេះ៖ វាមិនអាចបង្ហាញម្ដងទៀតបានទេ។</string>
     <string name="calendars_device_empty">គ្មានឧបករណ៍ដែលបានភ្ជាប់ទេ</string>

@@ -113,7 +113,6 @@
     <string name="calendars_link_exists">呢個日曆已經有連結。</string>
     <string name="calendars_permission_title">允許存取？</string>
     <string name="calendars_permission_message">%1$s 要求：</string>
-    <string name="calendars_sync_permission">需要日曆存取權</string>
     <string name="calendars_sync_authorization">重新登入先可以繼續同步</string>
     <string name="calendars_device_warning">即刻複製密碼：唔會再顯示。</string>
     <string name="calendars_device_empty">未有裝置連接</string>

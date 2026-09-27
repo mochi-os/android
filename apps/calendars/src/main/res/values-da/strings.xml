@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">Der findes allerede et link til denne kalender.</string>
     <string name="calendars_permission_title">Tillad adgang?</string>
     <string name="calendars_permission_message">%1$s beder om:</string>
-    <string name="calendars_sync_permission">Der kræves adgang til kalenderen</string>
     <string name="calendars_sync_authorization">Log ind igen for at fortsætte synkroniseringen</string>
     <string name="calendars_device_warning">Kopier adgangskoden nu: den kan ikke vises igen.</string>
     <string name="calendars_device_empty">Ingen enheder tilsluttet</string>

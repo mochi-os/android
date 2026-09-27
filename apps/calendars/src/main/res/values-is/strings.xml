@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">Tengill er þegar til fyrir þetta dagatal.</string>
     <string name="calendars_permission_title">Leyfa aðgang?</string>
     <string name="calendars_permission_message">%1$s biður um:</string>
-    <string name="calendars_sync_permission">Aðgangur að dagatali er nauðsynlegur</string>
     <string name="calendars_sync_authorization">Skráðu þig inn aftur til að halda samstillingu áfram</string>
     <string name="calendars_device_warning">Afritaðu lykilorðið núna: ekki er hægt að birta það aftur.</string>
     <string name="calendars_device_empty">Engin tæki tengd</string>

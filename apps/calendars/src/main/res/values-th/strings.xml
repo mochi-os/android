@@ -112,7 +112,6 @@
     <string name="calendars_link_exists">ปฏิทินนี้มีลิงก์อยู่แล้ว</string>
     <string name="calendars_permission_title">อนุญาตการเข้าถึงไหม</string>
     <string name="calendars_permission_message">%1$s ขอสิทธิ์:</string>
-    <string name="calendars_sync_permission">ต้องมีสิทธิ์เข้าถึงปฏิทิน</string>
     <string name="calendars_sync_authorization">ลงชื่อเข้าใช้อีกครั้งเพื่อซิงค์ต่อ</string>
     <string name="calendars_device_warning">คัดลอกรหัสผ่านตอนนี้ เพราะจะไม่แสดงอีก</string>
     <string name="calendars_device_empty">ไม่มีอุปกรณ์ที่เชื่อมต่อ</string>

@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">આ કૅલેન્ડર માટે પહેલેથી જ એક લિંક છે.</string>
     <string name="calendars_permission_title">ઍક્સેસની મંજૂરી આપવી?</string>
     <string name="calendars_permission_message">%1$s આ માગે છે:</string>
-    <string name="calendars_sync_permission">કૅલેન્ડર ઍક્સેસ જરૂરી છે</string>
     <string name="calendars_sync_authorization">સિંક ચાલુ રાખવા માટે ફરીથી સાઇન ઇન કરો</string>
     <string name="calendars_device_warning">પાસવર્ડ હમણાં જ કૉપિ કરો: તે ફરીથી બતાવી શકાશે નહીં.</string>
     <string name="calendars_device_empty">કોઈ ઉપકરણ જોડાયેલું નથી</string>

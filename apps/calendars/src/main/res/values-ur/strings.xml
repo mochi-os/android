@@ -112,7 +112,6 @@
     <string name="calendars_link_exists">اس کیلنڈر کے لیے پہلے سے ایک لنک موجود ہے۔</string>
     <string name="calendars_permission_title">رسائی کی اجازت دیں؟</string>
     <string name="calendars_permission_message">%1$s یہ مانگ رہا ہے:</string>
-    <string name="calendars_sync_permission">کیلنڈر تک رسائی درکار ہے</string>
     <string name="calendars_sync_authorization">سنک جاری رکھنے کے لیے دوبارہ سائن ان کریں</string>
     <string name="calendars_device_warning">پاس ورڈ ابھی کاپی کریں: یہ دوبارہ نہیں دکھایا جائے گا۔</string>
     <string name="calendars_device_empty">کوئی آلہ منسلک نہیں</string>

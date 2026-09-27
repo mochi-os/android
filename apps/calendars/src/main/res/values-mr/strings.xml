@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">या कॅलेंडरसाठी आधीच दुवा आहे.</string>
     <string name="calendars_permission_title">प्रवेशास अनुमती द्यायची का?</string>
     <string name="calendars_permission_message">%1$s हे मागत आहे:</string>
-    <string name="calendars_sync_permission">कॅलेंडर प्रवेश आवश्यक आहे</string>
     <string name="calendars_sync_authorization">सिंक सुरू ठेवण्यासाठी पुन्हा साइन इन करा</string>
     <string name="calendars_device_warning">पासवर्ड आताच कॉपी करा: तो पुन्हा दाखवता येणार नाही.</string>
     <string name="calendars_device_empty">कोणतेही डिव्हाइस कनेक्ट केलेले नाही</string>

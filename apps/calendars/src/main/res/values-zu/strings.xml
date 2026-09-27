@@ -112,7 +112,6 @@
     <string name="calendars_link_exists">Sekukhona isixhumanisi saleli khalenda.</string>
     <string name="calendars_permission_title">Vumela ukufinyelela?</string>
     <string name="calendars_permission_message">I-%1$s icela:</string>
-    <string name="calendars_sync_permission">Kudingeka ukufinyelela kukhalenda</string>
     <string name="calendars_sync_authorization">Ngena futhi ukuze uqhubeke nokuvumelanisa</string>
     <string name="calendars_device_warning">Kopisha iphasiwedi manje: ngeke iphinde iboniswe.</string>
     <string name="calendars_device_empty">Awekho amadivayisi axhunyiwe</string>

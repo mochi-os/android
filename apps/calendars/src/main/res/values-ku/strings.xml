@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">Ji bo vê salnameyê jixwe girêdanek heye.</string>
     <string name="calendars_permission_title">Destûra gihîştinê bê dayîn?</string>
     <string name="calendars_permission_message">%1$s vê dixwaze:</string>
-    <string name="calendars_sync_permission">Gihîştina salnameyê pêwîst e</string>
     <string name="calendars_sync_authorization">Ji bo berdewamkirina hevdemkirinê dîsa têkeve</string>
     <string name="calendars_device_warning">Şîfreyê niha kopî bike: careke din nayê nîşandan.</string>
     <string name="calendars_device_empty">Tu cîhaz ne girêdayî ye</string>

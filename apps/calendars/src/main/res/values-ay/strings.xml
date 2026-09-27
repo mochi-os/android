@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">Aka calendarion mä chimpupax utjxiwa.</string>
     <string name="calendars_permission_title">¿Mantaña iyawsañati?</string>
     <string name="calendars_permission_message">%1$s akanak mayiski:</string>
-    <string name="calendars_sync_permission">Calendarior mantañax wakisiwa</string>
     <string name="calendars_sync_authorization">Sincronizaña sarantayañataki wasitat mantam</string>
     <string name="calendars_device_warning">Contraseña jichha copiam: janiw wasitat uñachayañjamakiti.</string>
     <string name="calendars_device_empty">Janiw dispositivo chinjatäkiti</string>

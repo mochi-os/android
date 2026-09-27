@@ -112,7 +112,6 @@
     <string name="calendars_link_exists">Sele likho ikhonkco lale khalenda.</string>
     <string name="calendars_permission_title">Vumela ufikelelo?</string>
     <string name="calendars_permission_message">I-%1$s icela:</string>
-    <string name="calendars_sync_permission">Kufuneka ufikelelo kwikhalenda</string>
     <string name="calendars_sync_authorization">Ngena kwakhona ukuze uqhubeke ukungqamanisa</string>
     <string name="calendars_device_warning">Khuphela iphasiwedi ngoku: ayinakuboniswa kwakhona.</string>
     <string name="calendars_device_empty">Akukho zixhobo zidibeneyo</string>

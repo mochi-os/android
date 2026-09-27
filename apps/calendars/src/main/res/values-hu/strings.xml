@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">Ehhez a naptárhoz már tartozik hivatkozás.</string>
     <string name="calendars_permission_title">Engedélyezi a hozzáférést?</string>
     <string name="calendars_permission_message">A(z) %1$s a következőt kéri:</string>
-    <string name="calendars_sync_permission">Naptár-hozzáférés szükséges</string>
     <string name="calendars_sync_authorization">Jelentkezzen be újra a szinkronizálás folytatásához</string>
     <string name="calendars_device_warning">Másolja ki most a jelszót: később nem jeleníthető meg újra.</string>
     <string name="calendars_device_empty">Nincs csatlakoztatott eszköz</string>

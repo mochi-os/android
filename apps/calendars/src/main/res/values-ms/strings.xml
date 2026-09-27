@@ -115,7 +115,6 @@
     <string name="calendars_link_exists">Pautan untuk kalendar ini sudah wujud.</string>
     <string name="calendars_permission_title">Benarkan akses?</string>
     <string name="calendars_permission_message">%1$s meminta:</string>
-    <string name="calendars_sync_permission">Akses kalendar diperlukan</string>
     <string name="calendars_sync_authorization">Log masuk semula untuk terus menyegerak</string>
     <string name="calendars_device_warning">Salin kata laluan sekarang: ia tidak boleh dipaparkan lagi.</string>
     <string name="calendars_device_empty">Tiada peranti disambungkan</string>

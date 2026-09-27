@@ -112,7 +112,6 @@
     <string name="calendars_link_exists">இந்த நாட்காட்டிக்கு ஏற்கெனவே ஒரு இணைப்பு உள்ளது.</string>
     <string name="calendars_permission_title">அணுகலை அனுமதிக்கவா?</string>
     <string name="calendars_permission_message">%1$s கேட்பது:</string>
-    <string name="calendars_sync_permission">நாட்காட்டி அணுகல் தேவை</string>
     <string name="calendars_sync_authorization">ஒத்திசைவைத் தொடர மீண்டும் உள்நுழையவும்</string>
     <string name="calendars_device_warning">கடவுச்சொல்லை இப்போதே நகலெடுங்கள்: இது மீண்டும் காட்டப்படாது.</string>
     <string name="calendars_device_empty">எந்த சாதனமும் இணைக்கப்படவில்லை</string>

@@ -112,7 +112,6 @@
     <string name="calendars_link_exists">ਇਸ ਕੈਲੰਡਰ ਲਈ ਪਹਿਲਾਂ ਹੀ ਇੱਕ ਲਿੰਕ ਮੌਜੂਦ ਹੈ।</string>
     <string name="calendars_permission_title">ਪਹੁੰਚ ਦੇਣੀ ਹੈ?</string>
     <string name="calendars_permission_message">%1$s ਇਹ ਮੰਗ ਰਿਹਾ ਹੈ:</string>
-    <string name="calendars_sync_permission">ਕੈਲੰਡਰ ਪਹੁੰਚ ਦੀ ਲੋੜ ਹੈ</string>
     <string name="calendars_sync_authorization">ਸਿੰਕ ਜਾਰੀ ਰੱਖਣ ਲਈ ਦੁਬਾਰਾ ਸਾਈਨ ਇਨ ਕਰੋ</string>
     <string name="calendars_device_warning">ਪਾਸਵਰਡ ਹੁਣੇ ਕਾਪੀ ਕਰੋ: ਇਹ ਦੁਬਾਰਾ ਨਹੀਂ ਦਿਖਾਇਆ ਜਾਵੇਗਾ।</string>
     <string name="calendars_device_empty">ਕੋਈ ਡਿਵਾਈਸ ਨਹੀਂ ਜੁੜਿਆ</string>

@@ -60,6 +60,7 @@ import androidx.lifecycle.compose.LocalLifecycleOwner
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LabeledSelectField
 import org.mochios.android.ui.components.MochiDropdownMenu
@@ -104,6 +105,7 @@ fun CalendarScreen(
     onCopyOccurrence: (Instance) -> Unit,
     copied: Boolean = false,
     onCopiedShown: () -> Unit = {},
+    onLogout: () -> Unit = {},
     viewModel: CalendarViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -121,6 +123,7 @@ fun CalendarScreen(
     var deleting by remember { mutableStateOf<Calendar?>(null) }
     var linking by remember { mutableStateOf<Calendar?>(null) }
     var preferences by remember { mutableStateOf(false) }
+    var about by remember { mutableStateOf(false) }
 
     DisposableRefresh(lifecycle) {
         viewModel.load(refreshing = true, reset = false)
@@ -192,6 +195,8 @@ fun CalendarScreen(
         onSubscribe = onSubscribe,
         onPreferences = { preferences = true },
         onConnectDevice = onConnectDevice,
+        onLogout = onLogout,
+        onAbout = { about = true },
     ) {
         Scaffold(
             topBar = {
@@ -381,6 +386,10 @@ fun CalendarScreen(
             },
         )
     }
+    if (about) {
+        AboutDialog(onDismiss = { about = false })
+    }
+
     if (preferences) {
         PreferencesDialog(
             preferences = uiState.preferences,

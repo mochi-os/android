@@ -112,7 +112,6 @@
     <string name="calendars_link_exists">මෙම දින දර්ශනය සඳහා සබැඳියක් දැනටමත් තිබේ.</string>
     <string name="calendars_permission_title">ප්‍රවේශය ලබා දෙන්නද?</string>
     <string name="calendars_permission_message">%1$s ඉල්ලා සිටින්නේ:</string>
-    <string name="calendars_sync_permission">දින දර්ශන ප්‍රවේශය අවශ්‍යයි</string>
     <string name="calendars_sync_authorization">සමමුහූර්ත කිරීම දිගටම කරගෙන යාමට නැවත පුරන්න</string>
     <string name="calendars_device_warning">මුරපදය දැන් පිටපත් කරන්න: එය නැවත පෙන්විය නොහැක.</string>
     <string name="calendars_device_empty">උපාංග කිසිවක් සම්බන්ධ කර නැත</string>

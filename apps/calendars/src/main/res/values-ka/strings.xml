@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">ამ კალენდრისთვის ბმული უკვე არსებობს.</string>
     <string name="calendars_permission_title">დაიშვას წვდომა?</string>
     <string name="calendars_permission_message">%1$s ითხოვს:</string>
-    <string name="calendars_sync_permission">საჭიროა კალენდარზე წვდომა</string>
     <string name="calendars_sync_authorization">სინქრონიზაციის გასაგრძელებლად ხელახლა შედით</string>
     <string name="calendars_device_warning">დააკოპირეთ პაროლი ახლავე: მისი ხელახლა ჩვენება შეუძლებელია.</string>
     <string name="calendars_device_empty">დაკავშირებული მოწყობილობები არ არის</string>

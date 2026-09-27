@@ -112,7 +112,6 @@
     <string name="calendars_link_exists">Za ta koledar povezava že obstaja.</string>
     <string name="calendars_permission_title">Dovolim dostop?</string>
     <string name="calendars_permission_message">%1$s prosi za:</string>
-    <string name="calendars_sync_permission">Potreben je dostop do koledarja</string>
     <string name="calendars_sync_authorization">Znova se prijavite za nadaljevanje sinhronizacije</string>
     <string name="calendars_device_warning">Kopirajte geslo zdaj: ne bo ga več mogoče prikazati.</string>
     <string name="calendars_device_empty">Nobena naprava ni povezana</string>

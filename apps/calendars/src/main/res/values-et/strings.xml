@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">Sellele kalendrile on juba link olemas.</string>
     <string name="calendars_permission_title">Kas lubada juurdepääs?</string>
     <string name="calendars_permission_message">%1$s küsib:</string>
-    <string name="calendars_sync_permission">Vaja on juurdepääsu kalendrile</string>
     <string name="calendars_sync_authorization">Sünkroonimise jätkamiseks logi uuesti sisse</string>
     <string name="calendars_device_warning">Kopeeri parool kohe: seda ei saa uuesti kuvada.</string>
     <string name="calendars_device_empty">Ühtegi seadet pole ühendatud</string>

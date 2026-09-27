@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">এই ক্যালেন্ডারের জন্য ইতিমধ্যে একটি লিঙ্ক রয়েছে।</string>
     <string name="calendars_permission_title">অ্যাক্সেসের অনুমতি দেবেন?</string>
     <string name="calendars_permission_message">%1$s চাইছে:</string>
-    <string name="calendars_sync_permission">ক্যালেন্ডার অ্যাক্সেস প্রয়োজন</string>
     <string name="calendars_sync_authorization">সিঙ্ক চালু রাখতে আবার সাইন ইন করুন</string>
     <string name="calendars_device_warning">পাসওয়ার্ডটি এখনই কপি করুন: এটি আর দেখানো যাবে না।</string>
     <string name="calendars_device_empty">কোনো ডিভাইস সংযুক্ত নেই</string>

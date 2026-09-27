@@ -117,7 +117,6 @@
     <string name="calendars_link_exists">Šim kalendāram saite jau pastāv.</string>
     <string name="calendars_permission_title">Atļaut piekļuvi?</string>
     <string name="calendars_permission_message">%1$s pieprasa:</string>
-    <string name="calendars_sync_permission">Nepieciešama piekļuve kalendāram</string>
     <string name="calendars_sync_authorization">Piesakieties vēlreiz, lai turpinātu sinhronizāciju</string>
     <string name="calendars_device_warning">Nokopējiet paroli tagad: to vairs nevarēs parādīt.</string>
     <string name="calendars_device_empty">Nav pievienotu ierīču</string>

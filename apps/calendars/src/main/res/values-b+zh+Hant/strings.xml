@@ -115,7 +115,6 @@
     <string name="calendars_link_exists">此行事曆已有連結。</string>
     <string name="calendars_permission_title">允許存取？</string>
     <string name="calendars_permission_message">%1$s 要求：</string>
-    <string name="calendars_sync_permission">需要行事曆存取權限</string>
     <string name="calendars_sync_authorization">請重新登入以繼續同步</string>
     <string name="calendars_device_warning">請立即複製密碼：它無法再次顯示。</string>
     <string name="calendars_device_empty">沒有已連接的裝置</string>

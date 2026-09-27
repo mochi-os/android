@@ -112,7 +112,6 @@
     <string name="calendars_link_exists">Kay kalendaryupaqqa t\'inkiña kapun.</string>
     <string name="calendars_permission_title">¿Yaykuyta saqiy?</string>
     <string name="calendars_permission_message">%1$s mañakushan:</string>
-    <string name="calendars_sync_permission">Kalendaryuman yaykuy necesitakun</string>
     <string name="calendars_sync_authorization">Tinkichiyta qatinaykipaq yapamanta yaykuy</string>
     <string name="calendars_device_warning">Yaykuna rimayta kunan kopyay: manaña qhawachikunqachu.</string>
     <string name="calendars_device_empty">Mana ima apaykachana tinkisqachu</string>

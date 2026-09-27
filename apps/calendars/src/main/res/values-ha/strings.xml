@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">Akwai hanya riga don wannan kalanda.</string>
     <string name="calendars_permission_title">A ba da izinin shiga?</string>
     <string name="calendars_permission_message">%1$s na neman:</string>
-    <string name="calendars_sync_permission">Ana buƙatar damar shiga kalanda</string>
     <string name="calendars_sync_authorization">Sake shiga don ci gaba da daidaitawa</string>
     <string name="calendars_device_warning">Kwafi kalmar sirri yanzu: ba za a sake nuna ta ba.</string>
     <string name="calendars_device_empty">Babu na\'urar da aka haɗa</string>

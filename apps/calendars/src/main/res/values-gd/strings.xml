@@ -118,7 +118,6 @@
     <string name="calendars_link_exists">Tha ceangal ann mu thràth airson a\' mhìosachain seo.</string>
     <string name="calendars_permission_title">A bheil thu airson inntrigeadh a cheadachadh?</string>
     <string name="calendars_permission_message">Tha %1$s ag iarraidh:</string>
-    <string name="calendars_sync_permission">Tha feum air inntrigeadh dhan mhìosachan</string>
     <string name="calendars_sync_authorization">Clàraich a-steach a-rithist gus cumail a\' sioncronachadh</string>
     <string name="calendars_device_warning">Dèan lethbhreac dhen fhacal-faire an-dràsta: chan urrainn dhuinn a shealltainn a-rithist.</string>
     <string name="calendars_device_empty">Chan eil inneal sam bith ceangailte</string>

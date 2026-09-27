@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">Bu təqvim üçün artıq keçid mövcuddur.</string>
     <string name="calendars_permission_title">Girişə icazə verilsin?</string>
     <string name="calendars_permission_message">%1$s bunları istəyir:</string>
-    <string name="calendars_sync_permission">Təqvimə giriş tələb olunur</string>
     <string name="calendars_sync_authorization">Sinxronizasiyanı davam etdirmək üçün yenidən daxil olun</string>
     <string name="calendars_device_warning">Şifrəni indi kopyalayın: bir daha göstərilə bilməz.</string>
     <string name="calendars_device_empty">Heç bir cihaz qoşulmayıb</string>

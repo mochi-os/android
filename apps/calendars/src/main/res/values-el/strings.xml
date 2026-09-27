@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">Υπάρχει ήδη σύνδεσμος για αυτό το ημερολόγιο.</string>
     <string name="calendars_permission_title">Να επιτραπεί η πρόσβαση;</string>
     <string name="calendars_permission_message">Το %1$s ζητά:</string>
-    <string name="calendars_sync_permission">Απαιτείται πρόσβαση στο ημερολόγιο</string>
     <string name="calendars_sync_authorization">Συνδεθείτε ξανά για να συνεχιστεί ο συγχρονισμός</string>
     <string name="calendars_device_warning">Αντιγράψτε τον κωδικό πρόσβασης τώρα: δεν μπορεί να εμφανιστεί ξανά.</string>
     <string name="calendars_device_empty">Δεν υπάρχουν συνδεδεμένες συσκευές</string>

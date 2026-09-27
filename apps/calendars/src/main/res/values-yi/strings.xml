@@ -112,7 +112,6 @@
     <string name="calendars_link_exists">פֿאַר דעם קאַלענדאַר עקזיסטירט שוין אַ לינק.</string>
     <string name="calendars_permission_title">דערלויבן צוטריט?</string>
     <string name="calendars_permission_message">%1$s בעט:</string>
-    <string name="calendars_sync_permission">מען דאַרף צוטריט צום קאַלענדאַר</string>
     <string name="calendars_sync_authorization">לאָגירט זיך ווידער אַרײַן צו האַלטן סינכראָניזירן</string>
     <string name="calendars_device_warning">קאָפּירט דעם פּאַראָל איצט: מען קען אים ניט ווידער ווײַזן.</string>
     <string name="calendars_device_empty">קיין אַפּאַראַטן ניט פֿאַרבונדן</string>

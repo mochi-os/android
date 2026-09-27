@@ -119,7 +119,6 @@
     <string name="calendars_link_exists">Tá nasc ann cheana don fhéilire seo.</string>
     <string name="calendars_permission_title">Ceadaigh rochtain?</string>
     <string name="calendars_permission_message">Tá %1$s ag iarraidh:</string>
-    <string name="calendars_sync_permission">Tá rochtain ar an bhféilire ag teastáil</string>
     <string name="calendars_sync_authorization">Sínigh isteach arís chun leanúint ag sioncronú</string>
     <string name="calendars_device_warning">Cóipeáil an pasfhocal anois: ní féidir é a thaispeáint arís.</string>
     <string name="calendars_device_empty">Níl aon ghléas ceangailte</string>

@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">Kaalaandarii kanaaf hidhaan duraan jira.</string>
     <string name="calendars_permission_title">Qaqqabummaa eeyyamuu?</string>
     <string name="calendars_permission_message">%1$s kana gaafata:</string>
-    <string name="calendars_sync_permission">Qaqqabummaan kaalaandarii barbaachisaadha</string>
     <string name="calendars_sync_authorization">Wal simsiisuu itti fufuuf irra deebi\'ii seeni</string>
     <string name="calendars_device_warning">Jecha darbii amma garagalchi: lammata mul\'achuu hin danda\'u.</string>
     <string name="calendars_device_empty">Meeshaan walqabsiifame hin jiru</string>

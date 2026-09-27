@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">Egutegi honek badu esteka bat jada.</string>
     <string name="calendars_permission_title">Sarbidea baimendu?</string>
     <string name="calendars_permission_message">%1$s hau eskatzen ari da:</string>
-    <string name="calendars_sync_permission">Egutegirako sarbidea behar da</string>
     <string name="calendars_sync_authorization">Hasi saioa berriro sinkronizatzen jarraitzeko</string>
     <string name="calendars_device_warning">Kopiatu pasahitza orain: ezin izango da berriro erakutsi.</string>
     <string name="calendars_device_empty">Ez dago gailurik konektatuta</string>

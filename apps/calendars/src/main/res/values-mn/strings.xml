@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">Энэ хуанлийн хувьд холбоос аль хэдийн байна.</string>
     <string name="calendars_permission_title">Хандахыг зөвшөөрөх үү?</string>
     <string name="calendars_permission_message">%1$s дараахыг хүсэж байна:</string>
-    <string name="calendars_sync_permission">Хуанлид хандах эрх шаардлагатай</string>
     <string name="calendars_sync_authorization">Синк үргэлжлүүлэхийн тулд дахин нэвтэрнэ үү</string>
     <string name="calendars_device_warning">Нууц үгийг одоо хуулж авна уу: дахин харуулах боломжгүй.</string>
     <string name="calendars_device_empty">Холбогдсон төхөөрөмж байхгүй</string>

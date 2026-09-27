@@ -116,7 +116,6 @@
     <string name="calendars_link_exists">Бул календарь үчүн шилтеме мурунтан эле бар.</string>
     <string name="calendars_permission_title">Мүмкүнчүлүк берилсинби?</string>
     <string name="calendars_permission_message">%1$s мына буларды сурап жатат:</string>
-    <string name="calendars_sync_permission">Календарга мүмкүнчүлүк керек</string>
     <string name="calendars_sync_authorization">Шайкештирүүнү улантуу үчүн кайра кириңиз</string>
     <string name="calendars_device_warning">Сырсөздү азыр көчүрүп алыңыз: аны кайра көрсөтүү мүмкүн эмес.</string>
     <string name="calendars_device_empty">Туташтырылган түзмөктөр жок</string>
