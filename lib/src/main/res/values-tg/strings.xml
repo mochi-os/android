@@ -18,6 +18,9 @@
     <string name="common_back">Бозгашт</string>
     <string name="common_close">Пӯшидан</string>
     <string name="common_cancel">Бекор кардан</string>
+    <string name="common_filter">Филтр</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Филтрро тоза кардан</string>
     <string name="common_confirm">Тасдиқ</string>
     <string name="common_save">Захира</string>
     <string name="common_saving">Захира кардан…</string>

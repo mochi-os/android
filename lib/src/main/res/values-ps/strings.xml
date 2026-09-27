@@ -18,6 +18,9 @@
     <string name="common_back">شاته</string>
     <string name="common_close">وتړئ</string>
     <string name="common_cancel">لغوه کول</string>
+    <string name="common_filter">فلټر</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">فلټر لرې کړئ</string>
     <string name="common_confirm">تایید کړئ</string>
     <string name="common_save">خوندي کول</string>
     <string name="common_saving">د خوندي کولو په حال کې…</string>

@@ -18,6 +18,9 @@
     <string name="common_back">பின்</string>
     <string name="common_close">மூடு</string>
     <string name="common_cancel">ரத்துசெய்</string>
+    <string name="common_filter">வடிகட்டி</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">வடிகட்டியை அகற்று</string>
     <string name="common_confirm">உறுதிசெய்</string>
     <string name="common_save">சேமி</string>
     <string name="common_saving">சேமிக்கிறது…</string>

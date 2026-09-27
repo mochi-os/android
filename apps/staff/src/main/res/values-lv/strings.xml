@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Konti nav atrasti</string>
     <string name="staff_accounts_filter_seller_label">Pārdevējs</string>
     <string name="staff_accounts_filter_status_label">Statuss</string>
-    <string name="staff_accounts_history">Vēsture</string>
     <string name="staff_accounts_history_title">Konta vēsture</string>
     <string name="staff_accounts_notes_label">Piezīmes</string>
     <string name="staff_accounts_reason_label">Iemesls</string>
@@ -131,15 +130,12 @@
     <string name="staff_categories_action_delete">Dzēst</string>
     <string name="staff_categories_action_edit">Rediģēt</string>
     <string name="staff_categories_add">Pievienot</string>
-    <string name="staff_categories_col_name">Nosaukums</string>
-    <string name="staff_categories_col_status">Statuss</string>
     <string name="staff_categories_col_types">Tipi</string>
     <string name="staff_categories_create">Izveidot</string>
     <string name="staff_categories_delete_confirm">Dzēst</string>
     <string name="staff_categories_delete_desc">Dzēst %1$s? Šo darbību nevar atsaukt.</string>
     <string name="staff_categories_delete_title">Dzēst kategoriju</string>
     <string name="staff_categories_dialog_active">Aktīvs</string>
-    <string name="staff_categories_dialog_cancel">Atcelt</string>
     <string name="staff_categories_dialog_create_title">Izveidot kategoriju</string>
     <string name="staff_categories_dialog_creating">Izveido…</string>
     <string name="staff_categories_dialog_digital">Digitāls</string>
@@ -181,21 +177,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">Neizdevās saglabāt</string>
     <string name="staff_config_toast_saved">Saglabāts</string>
-    <string name="staff_dashboard_col_action">Darbība</string>
-    <string name="staff_dashboard_col_actor">Veicējs</string>
     <string name="staff_dashboard_col_buyer">Pircējs</string>
-    <string name="staff_dashboard_col_date">Datums</string>
     <string name="staff_dashboard_col_detail">Detaļa</string>
-    <string name="staff_dashboard_col_listing">Sludinājums</string>
-    <string name="staff_dashboard_col_moderation">Moderēšana</string>
-    <string name="staff_dashboard_col_name">Nosaukums</string>
     <string name="staff_dashboard_col_object">Objekts</string>
     <string name="staff_dashboard_col_reason">Iemesls</string>
-    <string name="staff_dashboard_col_score">Rezultāts</string>
     <string name="staff_dashboard_col_seller">Pārdevējs</string>
-    <string name="staff_dashboard_col_status">Statuss</string>
-    <string name="staff_dashboard_col_title">Virsraksts</string>
-    <string name="staff_dashboard_col_total">Kopā</string>
     <string name="staff_dashboard_empty_audit">Nav audita ierakstu</string>
     <string name="staff_dashboard_empty_listings">Nav neseno sludinājumu</string>
     <string name="staff_dashboard_empty_moderation">Nav nesenas moderācijas</string>
@@ -210,7 +196,6 @@
     <string name="staff_dashboard_kpi_sellers">Pārdevēji</string>
     <string name="staff_dashboard_kpi_total_orders">Pasūtījumi kopā</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">Nē</string>
     <string name="staff_dashboard_open_sidebar">Atvērt sānu joslu</string>
     <string name="staff_dashboard_order_fallback">Pasūtījums Nr. %1$s</string>
     <string name="staff_dashboard_system">Sistēma</string>
@@ -219,7 +204,6 @@
     <string name="staff_dashboard_tab_moderation">Moderēšana</string>
     <string name="staff_dashboard_tab_orders">Pasūtījumi</string>
     <string name="staff_dashboard_tab_signups">Reģistrācijas</string>
-    <string name="staff_dashboard_yes">Jā</string>
     <string name="staff_disputes_any_status">Visi statusi</string>
     <string name="staff_disputes_cancel">Atcelt</string>
     <string name="staff_disputes_close">Aizvērt</string>
@@ -281,10 +265,7 @@
     <string name="staff_disputes_stripe_subscription_canceled">abonements atcelts</string>
     <string name="staff_disputes_stripe_unrecognized">neatpazīts maksājums</string>
     <string name="staff_disputes_view">Skatīt</string>
-    <string name="staff_filter_chip_remove">Noņemt filtru</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderēšana</string>
-    <string name="staff_filter_label_query">Meklēt</string>
     <string name="staff_filter_label_seller">Pārdevējs</string>
     <string name="staff_filter_label_status">Statuss</string>
     <string name="staff_filter_label_type">Tips</string>
@@ -376,7 +357,6 @@
     <string name="staff_reviews_filter_published">Publicēts</string>
     <string name="staff_reviews_filter_removed">Noņemts</string>
     <string name="staff_reviews_order_label">pasūtījums Nr. %1$s</string>
-    <string name="staff_reviews_overflow_actions">Darbības</string>
     <string name="staff_reviews_remove_confirm">Noņemt</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$s. Pavisam dzēst šo atsauksmi? Šo darbību nevar atsaukt.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Pavisam dzēst šo atsauksmi? Šo darbību nevar atsaukt.</string>
@@ -433,6 +413,7 @@
     <string name="staff_status_suspended">Apturēts</string>
     <string name="staff_team_action_remove">Noņemt</string>
     <string name="staff_team_add_member">Pievienot dalībnieku</string>
+    <string name="staff_team_added_by_label">Pievienoja:</string>
     <string name="staff_team_added_by_system">Sistēma</string>
     <string name="staff_team_col_added_by">Pievienoja</string>
     <string name="staff_team_dialog_add">Pievienot</string>
@@ -452,6 +433,7 @@
     <string name="staff_team_role_support">Atbalsts</string>
     <string name="staff_team_toast_add_failed">Neizdevās pievienot dalībnieku</string>
     <string name="staff_team_toast_removed">Dalībnieks noņemts</string>
+    <string name="staff_team_toast_added">Dalībnieks pievienots</string>
     <string name="staff_team_toast_role_updated">Loma atjaunināta</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook parakstīšanas noslēpums</string>

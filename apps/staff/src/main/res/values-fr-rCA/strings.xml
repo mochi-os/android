@@ -3,16 +3,13 @@
 
     <string name="staff_reports_reason_spam">Pourriel ou arnaque</string>
 
-    <string name="staff_categories_col_name">Nom</string>
     <string name="staff_categories_dialog_name">Nom</string>
-    <string name="staff_dashboard_col_name">Nom</string>
     <string name="staff_categories_create">Créer</string>
     <string name="staff_accounts_close">Fermer</string>
     <string name="staff_disputes_close">Fermer</string>
     <string name="staff_reports_close">Fermer</string>
     <string name="staff_accounts_cancel">Annuler</string>
     <string name="staff_appeals_cancel">Annuler</string>
-    <string name="staff_categories_dialog_cancel">Annuler</string>
     <string name="staff_disputes_cancel">Annuler</string>
     <string name="staff_listings_cancel">Annuler</string>
     <string name="staff_reports_cancel">Annuler</string>
@@ -28,7 +25,6 @@
     <string name="staff_categories_dialog_parent_none">Aucun</string>
     <string name="staff_sidebar_settings">Paramètres</string>
     <string name="staff_accounts_search_placeholder">Rechercher</string>
-    <string name="staff_filter_label_query">Rechercher</string>
     <string name="staff_listings_remove">Supprimer</string>
     <string name="staff_reports_action_remove">Supprimer</string>
     <string name="staff_reviews_action_remove">Supprimer</string>
@@ -39,15 +35,12 @@
     <string name="staff_filter_label_type">Type</string>
     <string name="staff_reports_filter_type_label">Type</string>
     <string name="staff_reports_meta_type">Type</string>
-    <string name="staff_dashboard_col_title">Titre</string>
     <string name="staff_disputes_status_open">Ouvrir</string>
     <string name="staff_status_open">Ouvrir</string>
     <string name="staff_reports_type_user">Utilisateur</string>
     <string name="staff_accounts_any_seller">Tous</string>
     <string name="staff_accounts_any_status">Tous</string>
     <string name="staff_accounts_filter_status_label">Statut</string>
-    <string name="staff_categories_col_status">Statut</string>
-    <string name="staff_dashboard_col_status">Statut</string>
     <string name="staff_disputes_filter_status_label">Statut</string>
     <string name="staff_filter_label_status">Statut</string>
     <string name="staff_listings_filter_status_label">Statut</string>
@@ -73,7 +66,6 @@
     <string name="staff_accounts_banned_toast">Compte banni</string>
     <string name="staff_accounts_empty">Aucun compte trouvé</string>
     <string name="staff_accounts_filter_seller_label">Vendeur</string>
-    <string name="staff_accounts_history">Historique</string>
     <string name="staff_accounts_history_title">Historique du compte</string>
     <string name="staff_accounts_notes_label">Notes</string>
     <string name="staff_accounts_reason_optional_label">Motif (facultatif)</string>
@@ -146,17 +138,10 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">Échec de l\'enregistrement</string>
     <string name="staff_config_toast_saved">Enregistré</string>
-    <string name="staff_dashboard_col_action">Action</string>
-    <string name="staff_dashboard_col_actor">Auteur</string>
     <string name="staff_dashboard_col_buyer">Acheteur</string>
-    <string name="staff_dashboard_col_date">Date</string>
     <string name="staff_dashboard_col_detail">Détail</string>
-    <string name="staff_dashboard_col_listing">Annonce</string>
-    <string name="staff_dashboard_col_moderation">Modération</string>
     <string name="staff_dashboard_col_object">Objet</string>
-    <string name="staff_dashboard_col_score">Score</string>
     <string name="staff_dashboard_col_seller">Vendeur</string>
-    <string name="staff_dashboard_col_total">Total</string>
     <string name="staff_dashboard_empty_audit">Aucune entrée de vérification</string>
     <string name="staff_dashboard_empty_listings">Aucune annonce récente</string>
     <string name="staff_dashboard_empty_moderation">Aucune modération récente</string>
@@ -170,7 +155,6 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Vendeurs</string>
     <string name="staff_dashboard_kpi_total_orders">Total des commandes</string>
-    <string name="staff_dashboard_no">Non</string>
     <string name="staff_dashboard_order_fallback">Commande #%1$s</string>
     <string name="staff_dashboard_system">Système</string>
     <string name="staff_dashboard_tab_audit">Vérification</string>
@@ -178,7 +162,6 @@
     <string name="staff_dashboard_tab_moderation">Modération</string>
     <string name="staff_dashboard_tab_orders">Commandes</string>
     <string name="staff_dashboard_tab_signups">Inscriptions</string>
-    <string name="staff_dashboard_yes">Oui</string>
     <string name="staff_disputes_any_status">Tous les statuts</string>
     <string name="staff_disputes_dialog_title_chargeback">Rétrofacturation : %1$s</string>
     <string name="staff_disputes_dialog_title_review">Examiner le litige</string>
@@ -232,8 +215,6 @@
     <string name="staff_disputes_stripe_product_unacceptable">produit inacceptable</string>
     <string name="staff_disputes_stripe_subscription_canceled">abonnement annulé</string>
     <string name="staff_disputes_stripe_unrecognized">frais non reconnus</string>
-    <string name="staff_filter_chip_remove">Retirer le filtre</string>
-    <string name="staff_filter_chip_template">%1$s : %2$s</string>
     <string name="staff_filter_label_moderation">Modération</string>
     <string name="staff_filter_label_seller">Vendeur</string>
     <string name="staff_listings_action_approve_title">Approuver l\'annonce</string>
@@ -306,7 +287,6 @@
     <string name="staff_reviews_filter_published">Publiés</string>
     <string name="staff_reviews_filter_removed">Supprimés</string>
     <string name="staff_reviews_order_label">commande nº %1$s</string>
-    <string name="staff_reviews_overflow_actions">Actions</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s le %3$s. Supprimer définitivement cet avis ? Cette action est irréversible.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Supprimer définitivement cet avis ? Cette action est irréversible.</string>
     <string name="staff_reviews_remove_title">Supprimer l\'avis ?</string>
@@ -358,6 +338,7 @@
     <string name="staff_status_support">Soutien</string>
     <string name="staff_status_suspended">Suspendu</string>
     <string name="staff_team_add_member">Ajouter un membre</string>
+    <string name="staff_team_added_by_label">Ajouté par :</string>
     <string name="staff_team_added_by_system">Système</string>
     <string name="staff_team_col_added_by">Ajouté par</string>
     <string name="staff_team_dialog_add_title">Ajouter un membre de l\'équipe</string>
@@ -375,6 +356,7 @@
     <string name="staff_team_role_support">Soutien</string>
     <string name="staff_team_toast_add_failed">Échec de l\'ajout du membre</string>
     <string name="staff_team_toast_removed">Membre retiré</string>
+    <string name="staff_team_toast_added">Membre ajouté</string>
     <string name="staff_team_toast_role_updated">Rôle mis à jour</string>
 
     <string name="staff_audit_actor_system">Système</string>

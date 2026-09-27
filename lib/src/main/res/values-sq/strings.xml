@@ -18,6 +18,9 @@
     <string name="common_back">Mbrapa</string>
     <string name="common_close">Mbyll</string>
     <string name="common_cancel">Anulo</string>
+    <string name="common_filter">Filtro</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Hiq filtrin</string>
     <string name="common_confirm">Konfirmo</string>
     <string name="common_save">Ruaj</string>
     <string name="common_saving">Duke ruajtur…</string>

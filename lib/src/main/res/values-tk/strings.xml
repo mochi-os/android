@@ -18,6 +18,9 @@
     <string name="common_back">Yza</string>
     <string name="common_close">Ýapmak</string>
     <string name="common_cancel">Ýatyrmak</string>
+    <string name="common_filter">Süzgüç</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Süzgüçi aýyr</string>
     <string name="common_confirm">Tassyklamak</string>
     <string name="common_save">Saklamak</string>
     <string name="common_saving">Saklanýar…</string>

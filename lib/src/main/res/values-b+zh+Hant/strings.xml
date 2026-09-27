@@ -18,6 +18,9 @@
     <string name="common_back">返回</string>
     <string name="common_close">關閉</string>
     <string name="common_cancel">取消</string>
+    <string name="common_filter">篩選</string>
+    <string name="common_filter_chip">%1$s:%2$s</string>
+    <string name="common_filter_remove">移除篩選</string>
     <string name="common_confirm">確認</string>
     <string name="common_save">儲存</string>
     <string name="common_saving">儲存中…</string>

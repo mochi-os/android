@@ -74,7 +74,7 @@ import org.mochios.market.model.RemovalCheck
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.components.FeeDisclosure
 import org.mochios.market.ui.components.ListingCard
-import org.mochios.market.ui.components.StatusBadge
+import org.mochios.market.ui.components.MarketStatusBadge
 import org.mochios.market.ui.components.StripeOnboardingBanner
 import org.mochios.market.ui.dialog.AppealRemovalDialog
 import org.mochios.market.repository.MarketRepository
@@ -246,7 +246,7 @@ fun MyListingsScreen(
                                 verticalAlignment = Alignment.CenterVertically,
                             ) {
                                 listing.status?.let {
-                                    StatusBadge(status = it.wireName())
+                                    MarketStatusBadge(status = it.wireName())
                                 }
                             }
                         }

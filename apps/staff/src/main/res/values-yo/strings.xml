@@ -13,7 +13,6 @@
     <string name="staff_accounts_empty">A kò rí ìròyìn kankan</string>
     <string name="staff_accounts_filter_seller_label">Olùtà</string>
     <string name="staff_accounts_filter_status_label">Ìpò</string>
-    <string name="staff_accounts_history">Ìtàn</string>
     <string name="staff_accounts_history_title">Ìtàn àkáǹtì</string>
     <string name="staff_accounts_notes_label">Àkọsílẹ̀</string>
     <string name="staff_accounts_reason_label">Ìdí</string>
@@ -123,14 +122,11 @@
     <string name="staff_categories_action_delete">Pa rẹ́</string>
     <string name="staff_categories_action_edit">Ṣàtúnṣe</string>
     <string name="staff_categories_add">Fi kún</string>
-    <string name="staff_categories_col_name">Orúkọ</string>
-    <string name="staff_categories_col_status">Ìpò</string>
     <string name="staff_categories_col_types">Àwọn irú</string>
     <string name="staff_categories_create">Dá</string>
     <string name="staff_categories_delete_confirm">Pa rẹ́</string>
     <string name="staff_categories_delete_title">Pa ẹ̀ka rẹ́</string>
     <string name="staff_categories_dialog_active">Ó ń ṣiṣẹ́</string>
-    <string name="staff_categories_dialog_cancel">Fagilé</string>
     <string name="staff_categories_dialog_create_title">Dá ẹ̀ka</string>
     <string name="staff_categories_dialog_creating">Ó ń dá…</string>
     <string name="staff_categories_dialog_digital">Oníńọ́mbà</string>
@@ -172,21 +168,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">Kò lè fi pamọ́</string>
     <string name="staff_config_toast_saved">Ti fi pamọ́</string>
-    <string name="staff_dashboard_col_action">Ìṣe</string>
-    <string name="staff_dashboard_col_actor">Aṣèré</string>
     <string name="staff_dashboard_col_buyer">Olùrà</string>
-    <string name="staff_dashboard_col_date">Ọjọ́</string>
     <string name="staff_dashboard_col_detail">Ẹ̀kúnrẹ́rẹ́</string>
-    <string name="staff_dashboard_col_listing">Àkójọ</string>
-    <string name="staff_dashboard_col_moderation">Ìṣàkóso</string>
-    <string name="staff_dashboard_col_name">Orúkọ</string>
     <string name="staff_dashboard_col_object">Nǹkan</string>
     <string name="staff_dashboard_col_reason">Ìdí</string>
-    <string name="staff_dashboard_col_score">Àmì</string>
     <string name="staff_dashboard_col_seller">Olùtà</string>
-    <string name="staff_dashboard_col_status">Ìpò</string>
-    <string name="staff_dashboard_col_title">Àkọlé</string>
-    <string name="staff_dashboard_col_total">Lápapọ̀</string>
     <string name="staff_dashboard_empty_audit">Kò sí ìwọlé audit</string>
     <string name="staff_dashboard_empty_listings">Kò sí ìtòlẹ́ àìpẹ́</string>
     <string name="staff_dashboard_empty_moderation">Kò sí ìṣàkóso àìpẹ́</string>
@@ -201,7 +187,6 @@
     <string name="staff_dashboard_kpi_sellers">Àwọn olùtà</string>
     <string name="staff_dashboard_kpi_total_orders">Lápapọ̀ àwọn ọjà</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">Bẹ́ẹ̀ kọ́</string>
     <string name="staff_dashboard_open_sidebar">Ṣí akọtọ ẹgbẹ</string>
     <string name="staff_dashboard_system">Sístẹ́mù</string>
     <string name="staff_dashboard_tab_audit">Àyẹ̀wò</string>
@@ -209,7 +194,6 @@
     <string name="staff_dashboard_tab_moderation">Ìṣàkóso</string>
     <string name="staff_dashboard_tab_orders">Àwọn àṣẹ</string>
     <string name="staff_dashboard_tab_signups">Àwọn ìforúkọsílẹ̀</string>
-    <string name="staff_dashboard_yes">Bẹ́ẹ̀ ni</string>
     <string name="staff_disputes_any_status">Gbogbo ipò</string>
     <string name="staff_disputes_cancel">Fagilé</string>
     <string name="staff_disputes_close">Tì</string>
@@ -246,10 +230,7 @@
     <string name="staff_disputes_status_responded">Ti dáhùn</string>
     <string name="staff_disputes_status_reviewing">Ń yẹ̀wò</string>
     <string name="staff_disputes_view">Wo</string>
-    <string name="staff_filter_chip_remove">Yọ àyàn kúrò</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Ìṣàkóso</string>
-    <string name="staff_filter_label_query">Wá</string>
     <string name="staff_filter_label_seller">Olùtà</string>
     <string name="staff_filter_label_status">Ìpò</string>
     <string name="staff_filter_label_type">Irú</string>
@@ -336,7 +317,6 @@
     <string name="staff_reviews_filter_all">Gbogbo ipò</string>
     <string name="staff_reviews_filter_published">Ti gbé jáde</string>
     <string name="staff_reviews_filter_removed">Ti yọ kúrò</string>
-    <string name="staff_reviews_overflow_actions">Àwọn ìṣe</string>
     <string name="staff_reviews_remove_confirm">Yọ kúrò</string>
     <string name="staff_reviews_remove_title">Yọ àyẹ̀wò kúrò?</string>
     <string name="staff_reviews_role_buyer">Olùrà</string>
@@ -391,6 +371,7 @@
     <string name="staff_status_suspended">Ti dádúró</string>
     <string name="staff_team_action_remove">Yọ kúrò</string>
     <string name="staff_team_add_member">Fi ọmọ ẹgbẹ́ kún</string>
+    <string name="staff_team_added_by_label">A fi kún láti ọwọ́:</string>
     <string name="staff_team_added_by_system">Sístẹ́mù</string>
     <string name="staff_team_col_added_by">A fi kún láti ọwọ́</string>
     <string name="staff_team_dialog_add">Fi kún</string>
@@ -408,6 +389,7 @@
     <string name="staff_team_role_support">Àtìlẹ́yìn</string>
     <string name="staff_team_toast_add_failed">Kò lè fi ọmọ-ẹgbẹ́ kún</string>
     <string name="staff_team_toast_removed">Ọmọ ẹgbẹ́ ti yọ kúrò</string>
+    <string name="staff_team_toast_added">A ti ṣafikun ọmọ ẹgbẹ́</string>
     <string name="staff_team_toast_role_updated">Ipa ti ni imudojuiwọn</string>
     <string name="staff_audit_action_auction_cancelled">A ti fagilé ìtajà-ìdíje</string>
     <string name="staff_dashboard_order_fallback">Pípèsè #%1$s</string>

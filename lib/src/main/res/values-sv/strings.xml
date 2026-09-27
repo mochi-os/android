@@ -18,6 +18,9 @@
     <string name="common_back">Tillbaka</string>
     <string name="common_close">Stäng</string>
     <string name="common_cancel">Avbryt</string>
+    <string name="common_filter">Filter</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Ta bort filter</string>
     <string name="common_confirm">Bekräfta</string>
     <string name="common_save">Spara</string>
     <string name="common_saving">Sparar…</string>

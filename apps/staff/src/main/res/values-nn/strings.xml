@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Ingen kontoar funne</string>
     <string name="staff_accounts_filter_seller_label">Seljar</string>
     <string name="staff_accounts_filter_status_label">Status</string>
-    <string name="staff_accounts_history">Historikk</string>
     <string name="staff_accounts_history_title">Kontohistorikk</string>
     <string name="staff_accounts_notes_label">Merknader</string>
     <string name="staff_accounts_reason_label">Grunn</string>
@@ -131,15 +130,12 @@
     <string name="staff_categories_action_delete">Slett</string>
     <string name="staff_categories_action_edit">Rediger</string>
     <string name="staff_categories_add">Legg til</string>
-    <string name="staff_categories_col_name">Namn</string>
-    <string name="staff_categories_col_status">Status</string>
     <string name="staff_categories_col_types">Typar</string>
     <string name="staff_categories_create">Opprett</string>
     <string name="staff_categories_delete_confirm">Slett</string>
     <string name="staff_categories_delete_desc">Slett %1$s? Denne handlinga kan ikkje angrast.</string>
     <string name="staff_categories_delete_title">Slett kategori</string>
     <string name="staff_categories_dialog_active">Aktiv</string>
-    <string name="staff_categories_dialog_cancel">Avbryt</string>
     <string name="staff_categories_dialog_create_title">Opprett kategori</string>
     <string name="staff_categories_dialog_creating">Opprettar…</string>
     <string name="staff_categories_dialog_digital">Digitalt</string>
@@ -181,21 +177,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">Klarte ikkje lagra</string>
     <string name="staff_config_toast_saved">Lagra</string>
-    <string name="staff_dashboard_col_action">Handling</string>
-    <string name="staff_dashboard_col_actor">Aktør</string>
     <string name="staff_dashboard_col_buyer">Kjøpar</string>
-    <string name="staff_dashboard_col_date">Dato</string>
     <string name="staff_dashboard_col_detail">Detalj</string>
-    <string name="staff_dashboard_col_listing">Oppføring</string>
-    <string name="staff_dashboard_col_moderation">Moderering</string>
-    <string name="staff_dashboard_col_name">Namn</string>
     <string name="staff_dashboard_col_object">Objekt</string>
     <string name="staff_dashboard_col_reason">Grunn</string>
-    <string name="staff_dashboard_col_score">Poengsum</string>
     <string name="staff_dashboard_col_seller">Seljar</string>
-    <string name="staff_dashboard_col_status">Status</string>
-    <string name="staff_dashboard_col_title">Tittel</string>
-    <string name="staff_dashboard_col_total">Totalt</string>
     <string name="staff_dashboard_empty_audit">Ingen revisjonsoppføringar</string>
     <string name="staff_dashboard_empty_listings">Ingen nylege annonsar</string>
     <string name="staff_dashboard_empty_moderation">Inga nyleg moderasjon</string>
@@ -210,7 +196,6 @@
     <string name="staff_dashboard_kpi_sellers">Seljarar</string>
     <string name="staff_dashboard_kpi_total_orders">Totale ordrar</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">Nei</string>
     <string name="staff_dashboard_open_sidebar">Opne sidefelt</string>
     <string name="staff_dashboard_order_fallback">Tinging #%1$s</string>
     <string name="staff_dashboard_system">System</string>
@@ -219,7 +204,6 @@
     <string name="staff_dashboard_tab_moderation">Moderering</string>
     <string name="staff_dashboard_tab_orders">Bestillingar</string>
     <string name="staff_dashboard_tab_signups">Registreringar</string>
-    <string name="staff_dashboard_yes">Ja</string>
     <string name="staff_disputes_any_status">Alle statusar</string>
     <string name="staff_disputes_cancel">Avbryt</string>
     <string name="staff_disputes_close">Lat att</string>
@@ -281,10 +265,7 @@
     <string name="staff_disputes_stripe_subscription_canceled">abonnement avslutta</string>
     <string name="staff_disputes_stripe_unrecognized">ukjend belastning</string>
     <string name="staff_disputes_view">Vis</string>
-    <string name="staff_filter_chip_remove">Fjern filter</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderering</string>
-    <string name="staff_filter_label_query">Søk</string>
     <string name="staff_filter_label_seller">Seljar</string>
     <string name="staff_filter_label_status">Status</string>
     <string name="staff_filter_label_type">Type</string>
@@ -376,7 +357,6 @@
     <string name="staff_reviews_filter_published">Publisert</string>
     <string name="staff_reviews_filter_removed">Fjerna</string>
     <string name="staff_reviews_order_label">tinging #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Handlingar</string>
     <string name="staff_reviews_remove_confirm">Fjern</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s den %3$s. Slette denne vurderinga permanent? Denne handlinga kan ikkje angrast.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Slette denne vurderinga permanent? Denne handlinga kan ikkje angrast.</string>
@@ -433,6 +413,7 @@
     <string name="staff_status_suspended">Suspendert</string>
     <string name="staff_team_action_remove">Fjern</string>
     <string name="staff_team_add_member">Legg til medlem</string>
+    <string name="staff_team_added_by_label">Lagt til av:</string>
     <string name="staff_team_added_by_system">System</string>
     <string name="staff_team_col_added_by">Lagt til av</string>
     <string name="staff_team_dialog_add">Legg til</string>
@@ -451,6 +432,7 @@
     <string name="staff_team_role_moderator">Moderator</string>
     <string name="staff_team_role_support">Hjelp</string>
     <string name="staff_team_toast_add_failed">Klarte ikkje leggja til medlem</string>
+    <string name="staff_team_toast_added">Medlem lagt til</string>
     <string name="staff_team_toast_removed">Medlem fjerna</string>
     <string name="staff_team_toast_role_updated">Rolla vart oppdatert</string>
 

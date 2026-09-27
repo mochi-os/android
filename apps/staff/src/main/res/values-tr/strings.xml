@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Hesap bulunamadı</string>
     <string name="staff_accounts_filter_seller_label">Satıcı</string>
     <string name="staff_accounts_filter_status_label">Durum</string>
-    <string name="staff_accounts_history">Geçmiş</string>
     <string name="staff_accounts_history_title">Hesap geçmişi</string>
     <string name="staff_accounts_notes_label">Notlar</string>
     <string name="staff_accounts_reason_label">Neden</string>
@@ -131,15 +130,12 @@
     <string name="staff_categories_action_delete">Sil</string>
     <string name="staff_categories_action_edit">Düzenle</string>
     <string name="staff_categories_add">Ekle</string>
-    <string name="staff_categories_col_name">Ad</string>
-    <string name="staff_categories_col_status">Durum</string>
     <string name="staff_categories_col_types">Türler</string>
     <string name="staff_categories_create">Oluştur</string>
     <string name="staff_categories_delete_confirm">Sil</string>
     <string name="staff_categories_delete_desc">«%1$s» silinsin mi? Bu işlem geri alınamaz.</string>
     <string name="staff_categories_delete_title">Kategoriyi sil</string>
     <string name="staff_categories_dialog_active">Etkin</string>
-    <string name="staff_categories_dialog_cancel">İptal</string>
     <string name="staff_categories_dialog_create_title">Kategori oluştur</string>
     <string name="staff_categories_dialog_creating">Oluşturuluyor…</string>
     <string name="staff_categories_dialog_digital">Dijital</string>
@@ -181,21 +177,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">Kaydedilemedi</string>
     <string name="staff_config_toast_saved">Kaydedildi</string>
-    <string name="staff_dashboard_col_action">Eylem</string>
-    <string name="staff_dashboard_col_actor">Aktör</string>
     <string name="staff_dashboard_col_buyer">Alıcı</string>
-    <string name="staff_dashboard_col_date">Tarih</string>
     <string name="staff_dashboard_col_detail">Ayrıntı</string>
-    <string name="staff_dashboard_col_listing">İlan</string>
-    <string name="staff_dashboard_col_moderation">Denetim</string>
-    <string name="staff_dashboard_col_name">Ad</string>
     <string name="staff_dashboard_col_object">Nesne</string>
     <string name="staff_dashboard_col_reason">Neden</string>
-    <string name="staff_dashboard_col_score">Skor</string>
     <string name="staff_dashboard_col_seller">Satıcı</string>
-    <string name="staff_dashboard_col_status">Durum</string>
-    <string name="staff_dashboard_col_title">Başlık</string>
-    <string name="staff_dashboard_col_total">Toplam</string>
     <string name="staff_dashboard_empty_audit">Denetim kaydı yok</string>
     <string name="staff_dashboard_empty_listings">Son ilan yok</string>
     <string name="staff_dashboard_empty_moderation">Son moderasyon yok</string>
@@ -210,7 +196,6 @@
     <string name="staff_dashboard_kpi_sellers">Satıcılar</string>
     <string name="staff_dashboard_kpi_total_orders">Toplam siparişler</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">Hayır</string>
     <string name="staff_dashboard_open_sidebar">Kenar çubuğunu aç</string>
     <string name="staff_dashboard_order_fallback">Sipariş #%1$s</string>
     <string name="staff_dashboard_system">Sistem</string>
@@ -219,7 +204,6 @@
     <string name="staff_dashboard_tab_moderation">Denetim</string>
     <string name="staff_dashboard_tab_orders">Siparişler</string>
     <string name="staff_dashboard_tab_signups">Kayıtlar</string>
-    <string name="staff_dashboard_yes">Evet</string>
     <string name="staff_disputes_any_status">Tüm durumlar</string>
     <string name="staff_disputes_cancel">İptal</string>
     <string name="staff_disputes_close">Kapat</string>
@@ -281,10 +265,7 @@
     <string name="staff_disputes_stripe_subscription_canceled">abonelik iptal edildi</string>
     <string name="staff_disputes_stripe_unrecognized">tanınmayan ücret</string>
     <string name="staff_disputes_view">Görüntüle</string>
-    <string name="staff_filter_chip_remove">Filtreyi kaldır</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Denetim</string>
-    <string name="staff_filter_label_query">Ara</string>
     <string name="staff_filter_label_seller">Satıcı</string>
     <string name="staff_filter_label_status">Durum</string>
     <string name="staff_filter_label_type">Tür</string>
@@ -376,7 +357,6 @@
     <string name="staff_reviews_filter_published">Yayınlandı</string>
     <string name="staff_reviews_filter_removed">Kaldırıldı</string>
     <string name="staff_reviews_order_label">sipariş #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Eylemler</string>
     <string name="staff_reviews_remove_confirm">Kaldır</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$s tarihinde. Bu değerlendirme kalıcı olarak silinsin mi? Bu işlem geri alınamaz.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Bu değerlendirme kalıcı olarak silinsin mi? Bu işlem geri alınamaz.</string>
@@ -433,6 +413,7 @@
     <string name="staff_status_suspended">Askıya alındı</string>
     <string name="staff_team_action_remove">Kaldır</string>
     <string name="staff_team_add_member">Üye ekle</string>
+    <string name="staff_team_added_by_label">Ekleyen:</string>
     <string name="staff_team_added_by_system">Sistem</string>
     <string name="staff_team_col_added_by">Ekleyen</string>
     <string name="staff_team_dialog_add">Ekle</string>
@@ -452,6 +433,7 @@
     <string name="staff_team_role_support">Destek</string>
     <string name="staff_team_toast_add_failed">Üye eklenemedi</string>
     <string name="staff_team_toast_removed">Üye kaldırıldı</string>
+    <string name="staff_team_toast_added">Üye eklendi</string>
     <string name="staff_team_toast_role_updated">Rol güncellendi</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook imzalama gizli anahtarı</string>

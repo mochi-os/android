@@ -15,7 +15,6 @@
     <string name="staff_accounts_empty">கணக்குகள் எதுவும் கிடைக்கவில்லை</string>
     <string name="staff_accounts_filter_seller_label">விற்பனையாளர்</string>
     <string name="staff_accounts_filter_status_label">நிலை</string>
-    <string name="staff_accounts_history">வரலாறு</string>
     <string name="staff_accounts_history_title">கணக்கு வரலாறு</string>
     <string name="staff_accounts_notes_label">குறிப்புகள்</string>
     <string name="staff_accounts_reason_label">காரணம்</string>
@@ -125,14 +124,11 @@
     <string name="staff_categories_action_delete">நீக்கு</string>
     <string name="staff_categories_action_edit">திருத்து</string>
     <string name="staff_categories_add">சேர்</string>
-    <string name="staff_categories_col_name">பெயர்</string>
-    <string name="staff_categories_col_status">நிலை</string>
     <string name="staff_categories_col_types">வகைகள்</string>
     <string name="staff_categories_create">உருவாக்கு</string>
     <string name="staff_categories_delete_confirm">நீக்கு</string>
     <string name="staff_categories_delete_title">வகையை நீக்கு</string>
     <string name="staff_categories_dialog_active">செயலில்</string>
-    <string name="staff_categories_dialog_cancel">ரத்துசெய்</string>
     <string name="staff_categories_dialog_create_title">வகை உருவாக்கு</string>
     <string name="staff_categories_dialog_creating">உருவாக்குகிறது…</string>
     <string name="staff_categories_dialog_digital">டிஜிட்டல்</string>
@@ -174,21 +170,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">சேமிக்க முடியவில்லை</string>
     <string name="staff_config_toast_saved">சேமிக்கப்பட்டது</string>
-    <string name="staff_dashboard_col_action">செயல்</string>
-    <string name="staff_dashboard_col_actor">செய்பவர்</string>
     <string name="staff_dashboard_col_buyer">வாங்குபவர்</string>
-    <string name="staff_dashboard_col_date">தேதி</string>
     <string name="staff_dashboard_col_detail">விவரம்</string>
-    <string name="staff_dashboard_col_listing">பட்டியல்</string>
-    <string name="staff_dashboard_col_moderation">மட்டுறுத்தல்</string>
-    <string name="staff_dashboard_col_name">பெயர்</string>
     <string name="staff_dashboard_col_object">ஆப்ஜெக்ட்</string>
     <string name="staff_dashboard_col_reason">காரணம்</string>
-    <string name="staff_dashboard_col_score">மதிப்பெண்</string>
     <string name="staff_dashboard_col_seller">விற்பனையாளர்</string>
-    <string name="staff_dashboard_col_status">நிலை</string>
-    <string name="staff_dashboard_col_title">தலைப்பு</string>
-    <string name="staff_dashboard_col_total">மொத்தம்</string>
     <string name="staff_dashboard_empty_audit">தணிக்கை உள்ளீடுகள் இல்லை</string>
     <string name="staff_dashboard_empty_listings">சமீபத்திய பட்டியல்கள் இல்லை</string>
     <string name="staff_dashboard_empty_moderation">சமீபத்திய மிதப்படுத்தல் இல்லை</string>
@@ -203,7 +189,6 @@
     <string name="staff_dashboard_kpi_sellers">விற்பனையாளர்கள்</string>
     <string name="staff_dashboard_kpi_total_orders">மொத்த ஆர்டர்கள்</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">இல்லை</string>
     <string name="staff_dashboard_open_sidebar">பக்கப்பட்டியைத் திற</string>
     <string name="staff_dashboard_system">சிஸ்டம்</string>
     <string name="staff_dashboard_tab_audit">தணிக்கை</string>
@@ -211,7 +196,6 @@
     <string name="staff_dashboard_tab_moderation">மட்டுறுத்தல்</string>
     <string name="staff_dashboard_tab_orders">ஆர்டர்கள்</string>
     <string name="staff_dashboard_tab_signups">பதிவுகள்</string>
-    <string name="staff_dashboard_yes">ஆம்</string>
     <string name="staff_disputes_any_status">அனைத்து நிலைகள்</string>
     <string name="staff_disputes_cancel">ரத்துசெய்</string>
     <string name="staff_disputes_close">மூடு</string>
@@ -249,10 +233,7 @@
     <string name="staff_disputes_status_responded">பதிலளிக்கப்பட்டது</string>
     <string name="staff_disputes_status_reviewing">மதிப்பாய்வு செய்கிறது</string>
     <string name="staff_disputes_view">காட்டு</string>
-    <string name="staff_filter_chip_remove">வடிகட்டியை அகற்று</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">மட்டுறுத்தல்</string>
-    <string name="staff_filter_label_query">தேடு</string>
     <string name="staff_filter_label_seller">விற்பனையாளர்</string>
     <string name="staff_filter_label_status">நிலை</string>
     <string name="staff_filter_label_type">வகை</string>
@@ -340,7 +321,6 @@
     <string name="staff_reviews_filter_all">அனைத்து நிலைகள்</string>
     <string name="staff_reviews_filter_published">வெளியிடப்பட்டது</string>
     <string name="staff_reviews_filter_removed">அகற்றப்பட்டது</string>
-    <string name="staff_reviews_overflow_actions">செயல்கள்</string>
     <string name="staff_reviews_remove_confirm">அகற்று</string>
     <string name="staff_reviews_remove_title">விமர்சனத்தை அகற்றவா?</string>
     <string name="staff_reviews_role_buyer">வாங்குபவர்</string>
@@ -395,6 +375,7 @@
     <string name="staff_status_suspended">இடைநிறுத்தப்பட்டது</string>
     <string name="staff_team_action_remove">அகற்று</string>
     <string name="staff_team_add_member">உறுப்பினர் சேர்</string>
+    <string name="staff_team_added_by_label">சேர்த்தவர்:</string>
     <string name="staff_team_added_by_system">சிஸ்டம்</string>
     <string name="staff_team_col_added_by">சேர்த்தவர்</string>
     <string name="staff_team_dialog_add">சேர்</string>
@@ -413,6 +394,7 @@
     <string name="staff_team_role_support">ஆதரவு</string>
     <string name="staff_team_toast_add_failed">உறுப்பினரைச் சேர்க்க முடியவில்லை</string>
     <string name="staff_team_toast_removed">உறுப்பினர் அகற்றப்பட்டார்</string>
+    <string name="staff_team_toast_added">உறுப்பினர் சேர்க்கப்பட்டார்</string>
     <string name="staff_team_toast_role_updated">பணி புதுப்பிக்கப்பட்டது</string>
     <string name="staff_audit_action_auction_cancelled">ஏலம் ரத்து செய்யப்பட்டது</string>
     <string name="staff_dashboard_order_fallback">ஆர்டர் #%1$s</string>

@@ -14,7 +14,6 @@
     <string name="staff_accounts_empty">ڪو اڪائونٽ نه مليو</string>
     <string name="staff_accounts_filter_seller_label">وڪرو ڪندڙ</string>
     <string name="staff_accounts_filter_status_label">حالت</string>
-    <string name="staff_accounts_history">تاريخ</string>
     <string name="staff_accounts_history_title">اڪائونٽ جي تاريخ</string>
     <string name="staff_accounts_notes_label">نوٽ</string>
     <string name="staff_accounts_reason_label">سبب</string>
@@ -124,14 +123,11 @@
     <string name="staff_categories_action_delete">ختم ڪريو</string>
     <string name="staff_categories_action_edit">ترميم</string>
     <string name="staff_categories_add">شامل ڪريو</string>
-    <string name="staff_categories_col_name">نالو</string>
-    <string name="staff_categories_col_status">حالت</string>
     <string name="staff_categories_col_types">قسم</string>
     <string name="staff_categories_create">ٺاهيو</string>
     <string name="staff_categories_delete_confirm">ختم ڪريو</string>
     <string name="staff_categories_delete_title">زمرو ختم ڪريو</string>
     <string name="staff_categories_dialog_active">فعال</string>
-    <string name="staff_categories_dialog_cancel">منسوخ ڪريو</string>
     <string name="staff_categories_dialog_create_title">زمرو ٺاهيو</string>
     <string name="staff_categories_dialog_creating">ٺاهي رهيو آهي…</string>
     <string name="staff_categories_dialog_digital">ڊجيٽل</string>
@@ -173,21 +169,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">محفوظ ڪرڻ ۾ ناڪام</string>
     <string name="staff_config_toast_saved">محفوظ ٿيو</string>
-    <string name="staff_dashboard_col_action">عمل</string>
-    <string name="staff_dashboard_col_actor">ادا ڪندڙ</string>
     <string name="staff_dashboard_col_buyer">خريدار</string>
-    <string name="staff_dashboard_col_date">تاريخ</string>
     <string name="staff_dashboard_col_detail">تفصيل</string>
-    <string name="staff_dashboard_col_listing">لسٽنگ</string>
-    <string name="staff_dashboard_col_moderation">نگراني</string>
-    <string name="staff_dashboard_col_name">نالو</string>
     <string name="staff_dashboard_col_object">اعتراض</string>
     <string name="staff_dashboard_col_reason">سبب</string>
-    <string name="staff_dashboard_col_score">اسڪور</string>
     <string name="staff_dashboard_col_seller">وڪرو ڪندڙ</string>
-    <string name="staff_dashboard_col_status">حالت</string>
-    <string name="staff_dashboard_col_title">عنوان</string>
-    <string name="staff_dashboard_col_total">ڪل</string>
     <string name="staff_dashboard_empty_audit">ڪي به آڊٽ داخلائون نه آهن</string>
     <string name="staff_dashboard_empty_listings">ڪا تازي فهرست نه آهي</string>
     <string name="staff_dashboard_empty_moderation">ڪا تازي اعتدال نه آهي</string>
@@ -202,7 +188,6 @@
     <string name="staff_dashboard_kpi_sellers">وڪرو ڪندڙ</string>
     <string name="staff_dashboard_kpi_total_orders">ڪل آرڊر</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">نه</string>
     <string name="staff_dashboard_open_sidebar">سائڊبار کوليو</string>
     <string name="staff_dashboard_system">سسٽم</string>
     <string name="staff_dashboard_tab_audit">آڊٽ</string>
@@ -210,7 +195,6 @@
     <string name="staff_dashboard_tab_moderation">نگراني</string>
     <string name="staff_dashboard_tab_orders">آرڊر</string>
     <string name="staff_dashboard_tab_signups">سائن اپس</string>
-    <string name="staff_dashboard_yes">ها</string>
     <string name="staff_disputes_any_status">سڀ حالتون</string>
     <string name="staff_disputes_cancel">منسوخ ڪريو</string>
     <string name="staff_disputes_close">بند ڪريو</string>
@@ -247,10 +231,7 @@
     <string name="staff_disputes_status_responded">جواب ڏنل</string>
     <string name="staff_disputes_status_reviewing">جائزو وٺي رهيو آهي</string>
     <string name="staff_disputes_view">ڏسو</string>
-    <string name="staff_filter_chip_remove">فلٽر ختم ڪريو</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">نگراني</string>
-    <string name="staff_filter_label_query">ڳوليو</string>
     <string name="staff_filter_label_seller">وڪرو ڪندڙ</string>
     <string name="staff_filter_label_status">حالت</string>
     <string name="staff_filter_label_type">قسم</string>
@@ -338,7 +319,6 @@
     <string name="staff_reviews_filter_all">سڀ حالتون</string>
     <string name="staff_reviews_filter_published">شايع ٿيو</string>
     <string name="staff_reviews_filter_removed">هٽايو ويو</string>
-    <string name="staff_reviews_overflow_actions">عمل</string>
     <string name="staff_reviews_remove_confirm">هٽايو</string>
     <string name="staff_reviews_remove_title">جائزو هٽائجي؟</string>
     <string name="staff_reviews_role_buyer">خريدار</string>
@@ -393,6 +373,7 @@
     <string name="staff_status_suspended">معطل ٿيل</string>
     <string name="staff_team_action_remove">هٽايو</string>
     <string name="staff_team_add_member">ميمبر شامل ڪريو</string>
+    <string name="staff_team_added_by_label">شامل ڪندڙ:</string>
     <string name="staff_team_added_by_system">سسٽم</string>
     <string name="staff_team_col_added_by">شامل ڪندڙ</string>
     <string name="staff_team_dialog_add">شامل ڪريو</string>
@@ -411,6 +392,7 @@
     <string name="staff_team_role_support">سپورٽ</string>
     <string name="staff_team_toast_add_failed">ميمبر شامل ڪرڻ ۾ ناڪام</string>
     <string name="staff_team_toast_removed">ميمبر هٽايو ويو</string>
+    <string name="staff_team_toast_added">ميمبر شامل ڪيو ويو</string>
     <string name="staff_team_toast_role_updated">ڪردار اپڊيٽ ٿيو</string>
     <string name="staff_audit_action_auction_cancelled">نيلامي منسوخ ڪئي وئي</string>
     <string name="staff_dashboard_order_fallback">آرڊر #%1$s</string>

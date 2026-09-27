@@ -18,6 +18,9 @@
     <string name="common_back">Geri</string>
     <string name="common_close">Kapat</string>
     <string name="common_cancel">İptal</string>
+    <string name="common_filter">Filtrele</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Filtreyi kaldır</string>
     <string name="common_confirm">Onayla</string>
     <string name="common_save">Kaydet</string>
     <string name="common_saving">Kaydediliyor…</string>

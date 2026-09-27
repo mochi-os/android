@@ -15,7 +15,6 @@
     <string name="staff_accounts_empty">Hasaplar tapylmady</string>
     <string name="staff_accounts_filter_seller_label">Satyjy</string>
     <string name="staff_accounts_filter_status_label">Ýagdaý</string>
-    <string name="staff_accounts_history">Taryh</string>
     <string name="staff_accounts_history_title">Hasap taryhy</string>
     <string name="staff_accounts_notes_label">Bellikler</string>
     <string name="staff_accounts_reason_label">Sebäp</string>
@@ -125,14 +124,11 @@
     <string name="staff_categories_action_delete">Pozmak</string>
     <string name="staff_categories_action_edit">Düzet</string>
     <string name="staff_categories_add">Goşmak</string>
-    <string name="staff_categories_col_name">At</string>
-    <string name="staff_categories_col_status">Ýagdaý</string>
     <string name="staff_categories_col_types">Görnüşler</string>
     <string name="staff_categories_create">Döretmek</string>
     <string name="staff_categories_delete_confirm">Pozmak</string>
     <string name="staff_categories_delete_title">Kategoriýa pozmak</string>
     <string name="staff_categories_dialog_active">Aktiw</string>
-    <string name="staff_categories_dialog_cancel">Ýatyrmak</string>
     <string name="staff_categories_dialog_create_title">Kategoriýa döretmek</string>
     <string name="staff_categories_dialog_creating">Döredilýär…</string>
     <string name="staff_categories_dialog_digital">Sanly</string>
@@ -174,21 +170,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">Saklanyp galynmady</string>
     <string name="staff_config_toast_saved">Saklandy</string>
-    <string name="staff_dashboard_col_action">Hereket</string>
-    <string name="staff_dashboard_col_actor">Aktýor</string>
     <string name="staff_dashboard_col_buyer">Alyjy</string>
-    <string name="staff_dashboard_col_date">Sene</string>
     <string name="staff_dashboard_col_detail">Jikme-jiklik</string>
-    <string name="staff_dashboard_col_listing">Sanaw</string>
-    <string name="staff_dashboard_col_moderation">Moderasiýa</string>
-    <string name="staff_dashboard_col_name">At</string>
     <string name="staff_dashboard_col_object">Obýekt</string>
     <string name="staff_dashboard_col_reason">Sebäp</string>
-    <string name="staff_dashboard_col_score">Bal</string>
     <string name="staff_dashboard_col_seller">Satyjy</string>
-    <string name="staff_dashboard_col_status">Ýagdaý</string>
-    <string name="staff_dashboard_col_title">At</string>
-    <string name="staff_dashboard_col_total">Jemi</string>
     <string name="staff_dashboard_empty_audit">Audit ýazgylary ýok</string>
     <string name="staff_dashboard_empty_listings">Soňky sanawlar ýok</string>
     <string name="staff_dashboard_empty_moderation">Soňky moderasiýa ýok</string>
@@ -203,7 +189,6 @@
     <string name="staff_dashboard_kpi_sellers">Satyjylar</string>
     <string name="staff_dashboard_kpi_total_orders">Jemi sargytlar</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">Ýok</string>
     <string name="staff_dashboard_open_sidebar">Gapdal paneli aç</string>
     <string name="staff_dashboard_system">Ulgam</string>
     <string name="staff_dashboard_tab_audit">Audit</string>
@@ -211,7 +196,6 @@
     <string name="staff_dashboard_tab_moderation">Moderasiýa</string>
     <string name="staff_dashboard_tab_orders">Sargytlar</string>
     <string name="staff_dashboard_tab_signups">Hasaba alyşlar</string>
-    <string name="staff_dashboard_yes">Hawa</string>
     <string name="staff_disputes_any_status">Ähli ýagdaýlar</string>
     <string name="staff_disputes_cancel">Ýatyrmak</string>
     <string name="staff_disputes_close">Ýapmak</string>
@@ -248,10 +232,7 @@
     <string name="staff_disputes_status_responded">Jogap berdi</string>
     <string name="staff_disputes_status_reviewing">Syn edilýär</string>
     <string name="staff_disputes_view">Görkez</string>
-    <string name="staff_filter_chip_remove">Süzgüçi aýyr</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderasiýa</string>
-    <string name="staff_filter_label_query">Gözle</string>
     <string name="staff_filter_label_seller">Satyjy</string>
     <string name="staff_filter_label_status">Ýagdaý</string>
     <string name="staff_filter_label_type">Görnüş</string>
@@ -339,7 +320,6 @@
     <string name="staff_reviews_filter_all">Ähli ýagdaýlar</string>
     <string name="staff_reviews_filter_published">Çap edildi</string>
     <string name="staff_reviews_filter_removed">Aýryldy</string>
-    <string name="staff_reviews_overflow_actions">Hereketler</string>
     <string name="staff_reviews_remove_confirm">Aýyr</string>
     <string name="staff_reviews_remove_title">Syny aýyrmak?</string>
     <string name="staff_reviews_role_buyer">Alyjy</string>
@@ -394,6 +374,7 @@
     <string name="staff_status_suspended">Togtadyldy</string>
     <string name="staff_team_action_remove">Aýyr</string>
     <string name="staff_team_add_member">Agza goşmak</string>
+    <string name="staff_team_added_by_label">Goşan:</string>
     <string name="staff_team_added_by_system">Ulgam</string>
     <string name="staff_team_col_added_by">Goşan</string>
     <string name="staff_team_dialog_add">Goşmak</string>
@@ -412,6 +393,7 @@
     <string name="staff_team_role_support">Goldaw</string>
     <string name="staff_team_toast_add_failed">Agza goşulmady</string>
     <string name="staff_team_toast_removed">Agza aýryldy</string>
+    <string name="staff_team_toast_added">Agza goşuldy</string>
     <string name="staff_team_toast_role_updated">Rol täzelendi</string>
     <string name="staff_audit_action_auction_cancelled">Auksion ýatyryldy</string>
     <string name="staff_dashboard_order_fallback">Sargyt #%1$s</string>

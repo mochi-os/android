@@ -18,6 +18,9 @@
     <string name="common_back">צוריק</string>
     <string name="common_close">פֿאַרמאַכן</string>
     <string name="common_cancel">אָפּזאָגן</string>
+    <string name="common_filter">פֿילטער</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">אַראָפּנעמען פֿילטער</string>
     <string name="common_confirm">באַשטעטיקן</string>
     <string name="common_save">היט אויף</string>
     <string name="common_saving">היטן…</string>

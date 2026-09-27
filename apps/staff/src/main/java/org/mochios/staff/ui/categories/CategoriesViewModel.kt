@@ -20,34 +20,10 @@ import org.mochios.staff.model.Category
 import org.mochios.staff.repository.StaffRepository
 import javax.inject.Inject
 
-/**
- * `position` is a string so the field can be cleared; empty submits null
- * (server default 0).
- */
-data class CategoryForm(
-    val name: String = "",
-    val slug: String = "",
-    val parent: String = "",
-    val icon: String = "",
-    val digital: Boolean = false,
-    val physical: Boolean = false,
-    val position: String = "0",
-    val active: Boolean = true,
-)
-
-/** Mode for [CategoryEditDialog]. Edit carries the existing row's id so the
- *  ViewModel knows which endpoint to hit on submit. */
-sealed interface CategoryDialogMode {
-    data object Create : CategoryDialogMode
-    data class Edit(val category: Category) : CategoryDialogMode
-}
-
 data class CategoriesUiState(
     val categories: List<Category> = emptyList(),
     val isLoading: Boolean = false,
     val error: MochiError? = null,
-    val dialogMode: CategoryDialogMode? = null,
-    val form: CategoryForm = CategoryForm(),
     val deleteTarget: Category? = null,
     val submitting: Boolean = false,
 )
@@ -84,83 +60,12 @@ class CategoriesViewModel @Inject constructor(
         }
     }
 
-    fun openCreate() {
-        _state.value = _state.value.copy(
-            dialogMode = CategoryDialogMode.Create,
-            form = CategoryForm(),
-        )
-    }
-
-    fun openEdit(category: Category) {
-        _state.value = _state.value.copy(
-            dialogMode = CategoryDialogMode.Edit(category),
-            form = CategoryForm(
-                name = category.name,
-                slug = category.slug,
-                parent = category.parent ?: "",
-                icon = category.icon,
-                digital = category.digital,
-                physical = category.physical,
-                position = category.position.toString(),
-                active = category.active,
-            ),
-        )
-    }
-
-    fun closeDialog() {
-        _state.value = _state.value.copy(dialogMode = null)
-    }
-
-    fun setForm(form: CategoryForm) {
-        _state.value = _state.value.copy(form = form)
-    }
-
-    fun submit() {
-        val mode = _state.value.dialogMode ?: return
-        val form = _state.value.form
-        if (form.name.isBlank() || form.slug.isBlank()) return
+    /** Reloads after the form screen saved a category, and says what it did. */
+    fun onSaved(messageRes: Int) {
         viewModelScope.launch {
-            _state.value = _state.value.copy(submitting = true)
-            try {
-                when (mode) {
-                    is CategoryDialogMode.Create -> {
-                        repo.createCategory(
-                            name = form.name.trim(),
-                            slug = form.slug.trim(),
-                            parent = form.parent.takeIf { it.isNotBlank() },
-                            icon = form.icon.takeIf { it.isNotBlank() },
-                            position = form.position.toIntOrNull(),
-                            digital = form.digital,
-                            physical = form.physical,
-                        )
-                        _events.send(
-                            CategoriesEvent.Toast(org.mochios.staff.R.string.staff_categories_toast_created),
-                        )
-                    }
-                    is CategoryDialogMode.Edit -> {
-                        repo.updateCategory(
-                            id = mode.category.id,
-                            name = form.name.trim(),
-                            slug = form.slug.trim(),
-                            parent = form.parent,
-                            icon = form.icon.takeIf { it.isNotBlank() },
-                            position = form.position.toIntOrNull(),
-                            digital = form.digital,
-                            physical = form.physical,
-                            active = form.active,
-                        )
-                        _events.send(
-                            CategoriesEvent.Toast(org.mochios.staff.R.string.staff_categories_toast_updated),
-                        )
-                    }
-                }
-                _state.value = _state.value.copy(dialogMode = null, submitting = false)
-                load()
-            } catch (e: Exception) {
-                _state.value = _state.value.copy(submitting = false)
-                _events.send(CategoriesEvent.Error(e.toMochiError()))
-            }
+            _events.send(CategoriesEvent.Toast(messageRes))
         }
+        load()
     }
 
     fun askDelete(category: Category) {

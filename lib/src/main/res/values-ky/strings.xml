@@ -18,6 +18,9 @@
     <string name="common_back">Артка</string>
     <string name="common_close">Жабуу</string>
     <string name="common_cancel">Жокко чыгаруу</string>
+    <string name="common_filter">Чыпка</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Чыпканы алып салуу</string>
     <string name="common_confirm">Ырастоо</string>
     <string name="common_save">Сактоо</string>
     <string name="common_saving">Сакталууда…</string>

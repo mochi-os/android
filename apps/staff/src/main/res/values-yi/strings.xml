@@ -15,7 +15,6 @@
     <string name="staff_accounts_empty">קיין קאָנטעס ניט געפֿונען</string>
     <string name="staff_accounts_filter_seller_label">פֿאַרקויפֿער</string>
     <string name="staff_accounts_filter_status_label">סטאַטוס</string>
-    <string name="staff_accounts_history">היסטאָריע</string>
     <string name="staff_accounts_history_title">קאָנטע געשיכטע</string>
     <string name="staff_accounts_notes_label">נאָטיצן</string>
     <string name="staff_accounts_reason_label">סיבה</string>
@@ -125,14 +124,11 @@
     <string name="staff_categories_action_delete">אויסמעקן</string>
     <string name="staff_categories_action_edit">רעדאַקטירן</string>
     <string name="staff_categories_add">צולייגן</string>
-    <string name="staff_categories_col_name">נאָמען</string>
-    <string name="staff_categories_col_status">סטאַטוס</string>
     <string name="staff_categories_col_types">טיפּן</string>
     <string name="staff_categories_create">באַשאַפֿן</string>
     <string name="staff_categories_delete_confirm">אויסמעקן</string>
     <string name="staff_categories_delete_title">אויסמעקן קאַטעגאָריע</string>
     <string name="staff_categories_dialog_active">אַקטיוו</string>
-    <string name="staff_categories_dialog_cancel">אָפּזאָגן</string>
     <string name="staff_categories_dialog_create_title">באַשאַפֿן קאַטעגאָריע</string>
     <string name="staff_categories_dialog_creating">באַשאַפֿן…</string>
     <string name="staff_categories_dialog_digital">דיגיטאַל</string>
@@ -174,21 +170,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">ניט געלונגען אויפֿצוהיטן</string>
     <string name="staff_config_toast_saved">אויפֿגעהיט</string>
-    <string name="staff_dashboard_col_action">אַקציע</string>
-    <string name="staff_dashboard_col_actor">אַקטיאָר</string>
     <string name="staff_dashboard_col_buyer">קויפֿער</string>
-    <string name="staff_dashboard_col_date">דאַטע</string>
     <string name="staff_dashboard_col_detail">פּרט</string>
-    <string name="staff_dashboard_col_listing">רשימה</string>
-    <string name="staff_dashboard_col_moderation">מאָדעראַציע</string>
-    <string name="staff_dashboard_col_name">נאָמען</string>
     <string name="staff_dashboard_col_object">אָביעקט</string>
     <string name="staff_dashboard_col_reason">סיבה</string>
-    <string name="staff_dashboard_col_score">צאָל</string>
     <string name="staff_dashboard_col_seller">פֿאַרקויפֿער</string>
-    <string name="staff_dashboard_col_status">סטאַטוס</string>
-    <string name="staff_dashboard_col_title">קעפּל</string>
-    <string name="staff_dashboard_col_total">סך־הכּל</string>
     <string name="staff_dashboard_empty_audit">קיין אוידיט אײַנשרײַבונגען</string>
     <string name="staff_dashboard_empty_listings">קיין לעצטיקע ליסטיגקײַטן</string>
     <string name="staff_dashboard_empty_moderation">קיין לעצטיקע מאָדעראַציע</string>
@@ -203,7 +189,6 @@
     <string name="staff_dashboard_kpi_sellers">פֿאַרקויפֿערס</string>
     <string name="staff_dashboard_kpi_total_orders">סך־הכּל באַשטעלונגען</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">ניין</string>
     <string name="staff_dashboard_open_sidebar">עפֿן זייַטל</string>
     <string name="staff_dashboard_system">סיסטעם</string>
     <string name="staff_dashboard_tab_audit">אויפֿזיכט</string>
@@ -211,7 +196,6 @@
     <string name="staff_dashboard_tab_moderation">מאָדעראַציע</string>
     <string name="staff_dashboard_tab_orders">באַשטעלונגען</string>
     <string name="staff_dashboard_tab_signups">אַרײַנמעלדונגען</string>
-    <string name="staff_dashboard_yes">יאָ</string>
     <string name="staff_disputes_any_status">אַלע סטאַטוסן</string>
     <string name="staff_disputes_cancel">אָפּזאָגן</string>
     <string name="staff_disputes_close">פֿאַרמאַכן</string>
@@ -248,10 +232,7 @@
     <string name="staff_disputes_status_responded">געענטפֿערט</string>
     <string name="staff_disputes_status_reviewing">רעצענזירן</string>
     <string name="staff_disputes_view">באַקוקן</string>
-    <string name="staff_filter_chip_remove">אַראָפּנעמען פֿילטער</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">מאָדעראַציע</string>
-    <string name="staff_filter_label_query">זוך</string>
     <string name="staff_filter_label_seller">פֿאַרקויפֿער</string>
     <string name="staff_filter_label_status">סטאַטוס</string>
     <string name="staff_filter_label_type">טיפּ</string>
@@ -338,7 +319,6 @@
     <string name="staff_reviews_filter_all">אַלע סטאַטוסן</string>
     <string name="staff_reviews_filter_published">פֿאַרעפֿנטלעכט</string>
     <string name="staff_reviews_filter_removed">אַראָפּגענומען</string>
-    <string name="staff_reviews_overflow_actions">אַקציעס</string>
     <string name="staff_reviews_remove_confirm">אַראָפּנעמען</string>
     <string name="staff_reviews_remove_title">אַראָפּנעמען רעצענזיע?</string>
     <string name="staff_reviews_role_buyer">קויפֿער</string>
@@ -393,6 +373,7 @@
     <string name="staff_status_suspended">סוספּענדירט</string>
     <string name="staff_team_action_remove">אַראָפּנעמען</string>
     <string name="staff_team_add_member">צולייגן מיטגליד</string>
+    <string name="staff_team_added_by_label">צוגעלייגט פֿון:</string>
     <string name="staff_team_added_by_system">סיסטעם</string>
     <string name="staff_team_col_added_by">צוגעלייגט פֿון</string>
     <string name="staff_team_dialog_add">צולייגן</string>
@@ -411,6 +392,7 @@
     <string name="staff_team_role_support">שטיצע</string>
     <string name="staff_team_toast_add_failed">ניט געלונגען צוצוגעבן מיטגליד</string>
     <string name="staff_team_toast_removed">מיטגליד אַראָפּגענומען</string>
+    <string name="staff_team_toast_added">מיטגליד צוגעגעבן</string>
     <string name="staff_team_toast_role_updated">ראָלע באנייט</string>
     <string name="staff_audit_action_auction_cancelled">אויקציע אָפּגעזאָגט</string>
     <string name="staff_dashboard_order_fallback">באשטעלונג #%1$s</string>

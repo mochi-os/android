@@ -18,6 +18,9 @@
     <string name="common_back">Kutta</string>
     <string name="common_close">Jist\'antaña</string>
     <string name="common_cancel">Jaytaña</string>
+    <string name="common_filter">Suk\'a</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Filtruxa apsuña</string>
     <string name="common_confirm">Iyawsaña</string>
     <string name="common_save">Imaña</string>
     <string name="common_saving">Imaski…</string>

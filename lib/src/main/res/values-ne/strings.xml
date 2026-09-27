@@ -18,6 +18,9 @@
     <string name="common_back">पछाडि</string>
     <string name="common_close">बन्द गर्नुहोस्</string>
     <string name="common_cancel">रद्द गर्नुहोस्</string>
+    <string name="common_filter">फिल्टर</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">फिल्टर हटाउनुहोस्</string>
     <string name="common_confirm">पुष्टि गर्नुहोस्</string>
     <string name="common_save">सुरक्षित गर्नुहोस्</string>
     <string name="common_saving">सुरक्षित गर्दै…</string>

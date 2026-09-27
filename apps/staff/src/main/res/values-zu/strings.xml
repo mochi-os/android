@@ -14,7 +14,6 @@
     <string name="staff_accounts_empty">Awekho ama-akhawunti atholakele</string>
     <string name="staff_accounts_filter_seller_label">Umthengisi</string>
     <string name="staff_accounts_filter_status_label">Isimo</string>
-    <string name="staff_accounts_history">Umlando</string>
     <string name="staff_accounts_history_title">Umlando we-akhawunti</string>
     <string name="staff_accounts_notes_label">Amanothi</string>
     <string name="staff_accounts_reason_label">Isizathu</string>
@@ -124,14 +123,11 @@
     <string name="staff_categories_action_delete">Susa</string>
     <string name="staff_categories_action_edit">Hlela</string>
     <string name="staff_categories_add">Engeza</string>
-    <string name="staff_categories_col_name">Igama</string>
-    <string name="staff_categories_col_status">Isimo</string>
     <string name="staff_categories_col_types">Izinhlobo</string>
     <string name="staff_categories_create">Dala</string>
     <string name="staff_categories_delete_confirm">Susa</string>
     <string name="staff_categories_delete_title">Susa isigaba</string>
     <string name="staff_categories_dialog_active">Iyasebenza</string>
-    <string name="staff_categories_dialog_cancel">Khansela</string>
     <string name="staff_categories_dialog_create_title">Dala isigaba</string>
     <string name="staff_categories_dialog_creating">Kuyadalwa…</string>
     <string name="staff_categories_dialog_digital">Idijithali</string>
@@ -173,21 +169,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">Kuhlulekile ukulondoloza</string>
     <string name="staff_config_toast_saved">Kulondoloziwe</string>
-    <string name="staff_dashboard_col_action">Isenzo</string>
-    <string name="staff_dashboard_col_actor">Umlingisi</string>
     <string name="staff_dashboard_col_buyer">Umthengi</string>
-    <string name="staff_dashboard_col_date">Usuku</string>
     <string name="staff_dashboard_col_detail">Imininingwane</string>
-    <string name="staff_dashboard_col_listing">Uhlu</string>
-    <string name="staff_dashboard_col_moderation">Ukulawula</string>
-    <string name="staff_dashboard_col_name">Igama</string>
     <string name="staff_dashboard_col_object">Into</string>
     <string name="staff_dashboard_col_reason">Isizathu</string>
-    <string name="staff_dashboard_col_score">Iskoli</string>
     <string name="staff_dashboard_col_seller">Umthengisi</string>
-    <string name="staff_dashboard_col_status">Isimo</string>
-    <string name="staff_dashboard_col_title">Isihloko</string>
-    <string name="staff_dashboard_col_total">Isamba</string>
     <string name="staff_dashboard_empty_audit">Awekho amabhukho okuhlola</string>
     <string name="staff_dashboard_empty_listings">Akukho okufakiwe kwakamuva</string>
     <string name="staff_dashboard_empty_moderation">Akukho ukulawula kwakamuva</string>
@@ -202,7 +188,6 @@
     <string name="staff_dashboard_kpi_sellers">Abathengisi</string>
     <string name="staff_dashboard_kpi_total_orders">Isamba sama-oda</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">Cha</string>
     <string name="staff_dashboard_open_sidebar">Vula ibha eseceleni</string>
     <string name="staff_dashboard_system">Isistimu</string>
     <string name="staff_dashboard_tab_audit">Ucwaningo lwemali</string>
@@ -210,7 +195,6 @@
     <string name="staff_dashboard_tab_moderation">Ukulawula</string>
     <string name="staff_dashboard_tab_orders">Ama-oda</string>
     <string name="staff_dashboard_tab_signups">Ukubhalisa</string>
-    <string name="staff_dashboard_yes">Yebo</string>
     <string name="staff_disputes_any_status">Zonke izimo</string>
     <string name="staff_disputes_cancel">Khansela</string>
     <string name="staff_disputes_close">Vala</string>
@@ -247,10 +231,7 @@
     <string name="staff_disputes_status_responded">Kuphenduliwe</string>
     <string name="staff_disputes_status_reviewing">Kuyabuyekezwa</string>
     <string name="staff_disputes_view">Buka</string>
-    <string name="staff_filter_chip_remove">Susa isihlungi</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Ukulawula</string>
-    <string name="staff_filter_label_query">Sesha</string>
     <string name="staff_filter_label_seller">Umthengisi</string>
     <string name="staff_filter_label_status">Isimo</string>
     <string name="staff_filter_label_type">Uhlobo</string>
@@ -338,7 +319,6 @@
     <string name="staff_reviews_filter_all">Zonke izimo</string>
     <string name="staff_reviews_filter_published">Kushicilelwe</string>
     <string name="staff_reviews_filter_removed">Kukhishiwe</string>
-    <string name="staff_reviews_overflow_actions">Izenzo</string>
     <string name="staff_reviews_remove_confirm">Khipha</string>
     <string name="staff_reviews_remove_title">Khipha ukubuyekeza?</string>
     <string name="staff_reviews_role_buyer">Umthengi</string>
@@ -393,6 +373,7 @@
     <string name="staff_status_suspended">Kumisiwe</string>
     <string name="staff_team_action_remove">Khipha</string>
     <string name="staff_team_add_member">Engeza ilungu</string>
+    <string name="staff_team_added_by_label">Kwengezwe ngu:</string>
     <string name="staff_team_added_by_system">Isistimu</string>
     <string name="staff_team_col_added_by">Kwengezwe ngu</string>
     <string name="staff_team_dialog_add">Engeza</string>
@@ -411,6 +392,7 @@
     <string name="staff_team_role_support">Usekelo</string>
     <string name="staff_team_toast_add_failed">Kuhlulekile ukungeza ilungu</string>
     <string name="staff_team_toast_removed">Ilungu likhishiwe</string>
+    <string name="staff_team_toast_added">Ilungu lengeziwe</string>
     <string name="staff_team_toast_role_updated">Indima ibuyekeziwe</string>
     <string name="staff_audit_action_auction_cancelled">Indali ikhanseliwe</string>
     <string name="staff_dashboard_order_fallback">I-oda #%1$s</string>

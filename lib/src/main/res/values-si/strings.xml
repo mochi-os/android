@@ -18,6 +18,9 @@
     <string name="common_back">ආපසු</string>
     <string name="common_close">වසන්න</string>
     <string name="common_cancel">අවලංගු කරන්න</string>
+    <string name="common_filter">පෙරහන</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">පෙරහන ඉවත් කරන්න</string>
     <string name="common_confirm">තහවුරු කරන්න</string>
     <string name="common_save">සුරකින්න</string>
     <string name="common_saving">සුරැකේ…</string>

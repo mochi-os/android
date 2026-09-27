@@ -5,8 +5,6 @@
 
 package org.mochios.staff.ui.appeals
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -17,9 +15,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Gavel
+import androidx.compose.material.icons.outlined.Gavel
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
@@ -33,25 +31,26 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
+import org.mochios.android.format.formatFingerprint
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EmptyState
-import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
-import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.staff.R
-import org.mochios.android.format.formatFingerprint
 import org.mochios.staff.model.Appeal
 import org.mochios.staff.ui.components.ScoreColorChip
+import org.mochios.staff.ui.components.StaffCardAction
+import org.mochios.staff.ui.components.StaffCardMenu
 import org.mochios.staff.ui.components.StaffStatusBadge
+import org.mochios.staff.ui.components.StaffUserAvatar
 import org.mochios.staff.ui.dialog.AppealDecideDialog
 
 /**
@@ -151,75 +150,79 @@ private fun AppealRow(
 ) {
     val format = LocalFormat.current
 
-    Column(
+    MochiCard(
+        onClick = onOpenListing,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 12.dp, vertical = 6.dp)
-            .clip(RoundedCornerShape(10.dp))
-            .background(MaterialTheme.colorScheme.surface)
-            .padding(12.dp),
+            .padding(horizontal = 16.dp, vertical = 6.dp),
+        shape = MaterialTheme.shapes.medium,
     ) {
-        // Title → opens market listing detail.
-        Text(
-            text = appeal.title.ifBlank { stringResource(R.string.staff_appeals_listing_label, appeal.listing) },
-            style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis,
-            modifier = Modifier
-                .fillMaxWidth()
-                .clickable(onClick = onOpenListing),
-        )
-        Spacer(Modifier.height(6.dp))
-
-        // Seller row.
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            EntityAvatar(
-                name = appeal.sellerName.ifBlank { appeal.seller },
-                seed = appeal.seller,
-                size = 20.dp,
-            )
-            Spacer(Modifier.width(6.dp))
-            Text(
-                text = appeal.sellerName.ifBlank { formatFingerprint(appeal.sellerFingerprint) },
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.weight(1f),
-            )
-        }
-        Spacer(Modifier.height(8.dp))
-
-        // Listing-moderation badge + score chip.
-        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-            StaffStatusBadge(status = appeal.listingModeration)
-            ScoreColorChip(score = appeal.score.toInt())
-        }
-        Spacer(Modifier.height(6.dp))
-
-        // Reason text.
-        if (appeal.reason.isNotBlank()) {
-            Text(
-                text = appeal.reason,
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                maxLines = 3,
-                overflow = TextOverflow.Ellipsis,
-            )
+        Column(modifier = Modifier.padding(16.dp)) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    text = appeal.title.ifBlank {
+                        stringResource(R.string.staff_appeals_listing_label, appeal.listing)
+                    },
+                    style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f),
+                )
+                StaffCardMenu(
+                    actions = listOf(
+                        StaffCardAction(
+                            label = stringResource(R.string.staff_appeals_decide),
+                            icon = Icons.Outlined.Gavel,
+                            onClick = onDecideClick,
+                        ),
+                    ),
+                )
+            }
             Spacer(Modifier.height(6.dp))
-        }
 
-        // Created + decide button.
-        Row(verticalAlignment = Alignment.CenterVertically) {
+            // Seller row.
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                StaffUserAvatar(
+                    name = appeal.sellerName.ifBlank { appeal.seller },
+                    id = appeal.seller,
+                    size = 20.dp,
+                )
+                Spacer(Modifier.width(6.dp))
+                Text(
+                    text = appeal.sellerName.ifBlank { formatFingerprint(appeal.sellerFingerprint) },
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f),
+                )
+            }
+            Spacer(Modifier.height(8.dp))
+
+            // Listing-moderation badge + score chip.
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                StaffStatusBadge(status = appeal.listingModeration)
+                ScoreColorChip(score = appeal.score.toInt())
+            }
+            Spacer(Modifier.height(6.dp))
+
+            // Reason text.
+            if (appeal.reason.isNotBlank()) {
+                Text(
+                    text = appeal.reason,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 3,
+                    overflow = TextOverflow.Ellipsis,
+                )
+                Spacer(Modifier.height(6.dp))
+            }
+
             Text(
                 text = format.formatTimestamp(appeal.created),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.weight(1f),
             )
-            MochiOutlinedButton(onClick = onDecideClick) {
-                Text(stringResource(R.string.staff_appeals_decide))
-            }
         }
     }
 }

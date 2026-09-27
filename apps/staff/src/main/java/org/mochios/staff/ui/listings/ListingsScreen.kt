@@ -5,8 +5,6 @@
 
 package org.mochios.staff.ui.listings
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -18,12 +16,14 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.ShieldMoon
+import androidx.compose.material.icons.outlined.Block
+import androidx.compose.material.icons.outlined.CheckCircle
+import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -40,7 +40,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -48,24 +47,26 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.delay
-import org.mochios.android.i18n.LocalFormat
-import org.mochios.android.i18n.formatTimestamp
-import org.mochios.android.ui.components.EmptyState
-import org.mochios.android.ui.components.EntityAvatar
-import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.FilterDropdown
-import org.mochios.android.ui.components.InfiniteList
-import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiOutlinedButton
-import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.format.formatFingerprint
 import org.mochios.android.format.formatPrice
+import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.ui.components.ChoiceFilter
+import org.mochios.android.ui.components.EmptyState
+import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.FilterBar
+import org.mochios.android.ui.components.FilterBarStyle
+import org.mochios.android.ui.components.InfiniteList
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
 import org.mochios.staff.model.PendingListing
-import org.mochios.staff.ui.components.FilterChipSpec
-import org.mochios.staff.ui.components.FilterChipsRow
 import org.mochios.staff.ui.components.ScoreColorChip
+import org.mochios.staff.ui.components.StaffCardAction
+import org.mochios.staff.ui.components.StaffCardMenu
 import org.mochios.staff.ui.components.StaffStatusBadge
+import org.mochios.staff.ui.components.StaffUserAvatar
 import org.mochios.staff.ui.dialog.ListingActionDialog
 
 /**
@@ -79,6 +80,8 @@ import org.mochios.staff.ui.dialog.ListingActionDialog
 fun ListingsScreen(
     navController: NavController,
     viewModel: ListingsViewModel = hiltViewModel(),
+    filtersOpen: Boolean = false,
+    onFiltersDismiss: () -> Unit = {},
 ) {
     val state by viewModel.state.collectAsState()
     val snackbar = remember { SnackbarHostState() }
@@ -115,6 +118,8 @@ fun ListingsScreen(
     Box(Modifier.fillMaxSize()) {
         ListingsBody(
             state = state,
+            filtersOpen = filtersOpen,
+            onFiltersDismiss = onFiltersDismiss,
             searchInput = searchInput,
             onSearchInput = { searchInput = it },
             onClearSearch = {
@@ -149,6 +154,8 @@ fun ListingsScreen(
 @Composable
 private fun ListingsBody(
     state: ListingsUiState,
+    filtersOpen: Boolean,
+    onFiltersDismiss: () -> Unit,
     searchInput: String,
     onSearchInput: (String) -> Unit,
     onClearSearch: () -> Unit,
@@ -160,39 +167,50 @@ private fun ListingsBody(
     onRetry: () -> Unit,
 ) {
     Column(Modifier.fillMaxSize()) {
-        FiltersRow(
-            status = state.status,
-            moderation = state.moderation,
-            onStatusChange = onStatusChange,
-            onModerationChange = onModerationChange,
-        )
-        MochiTextField(
-            value = searchInput,
-            onValueChange = onSearchInput,
-            placeholder = { Text(stringResource(R.string.staff_listings_search_placeholder)) },
-            leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
-            trailingIcon = if (searchInput.isNotEmpty()) {
-                {
-                    MochiIconButton(onClick = onClearSearch) {
-                        Icon(
-                            Icons.Default.Close,
-                            contentDescription = stringResource(R.string.staff_listings_search_clear),
-                        )
-                    }
-                }
-            } else null,
-            singleLine = true,
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 16.dp, vertical = 8.dp),
-        )
-        ActiveFilterChips(
-            status = state.status,
-            moderation = state.moderation,
-            query = state.query,
-            onStatusChange = onStatusChange,
-            onModerationChange = onModerationChange,
-            onClearSearch = onClearSearch,
+        FilterBar(
+            style = FilterBarStyle.Sheet,
+            sheetOpen = filtersOpen,
+            onSheetDismiss = onFiltersDismiss,
+            filters = listOf(
+                ChoiceFilter(
+                    label = stringResource(R.string.staff_listings_filter_status_label),
+                    chipLabel = stringResource(R.string.staff_filter_label_status),
+                    anyLabel = stringResource(R.string.staff_listings_any_status),
+                    options = listingStatusOptions(),
+                    current = state.status,
+                    onSelect = onStatusChange,
+                ),
+                ChoiceFilter(
+                    label = stringResource(R.string.staff_listings_filter_moderation_label),
+                    chipLabel = stringResource(R.string.staff_filter_label_moderation),
+                    anyLabel = stringResource(R.string.staff_listings_any_moderation),
+                    options = moderationStateOptions(),
+                    current = state.moderation,
+                    onSelect = onModerationChange,
+                ),
+            ),
+            search = {
+                MochiTextField(
+                    value = searchInput,
+                    onValueChange = onSearchInput,
+                    placeholder = { Text(stringResource(R.string.staff_listings_search_placeholder)) },
+                    leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
+                    trailingIcon = if (searchInput.isNotEmpty()) {
+                        {
+                            MochiIconButton(onClick = onClearSearch) {
+                                Icon(
+                                    Icons.Default.Close,
+                                    contentDescription = stringResource(R.string.staff_listings_search_clear),
+                                )
+                            }
+                        }
+                    } else null,
+                    singleLine = true,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 8.dp),
+                )
+            },
         )
 
         val currentError = state.error
@@ -236,132 +254,109 @@ private fun ListingRow(
     val pending = listing.status == "active" &&
         (listing.moderation == "hold" || listing.moderation == "review")
     val canRemove = listing.status == "active"
+    val actions = buildList {
+        if (pending) {
+            add(
+                StaffCardAction(
+                    label = stringResource(R.string.staff_listings_approve),
+                    icon = Icons.Outlined.CheckCircle,
+                    onClick = { onAction(ListingActionType.APPROVE) },
+                ),
+            )
+            add(
+                StaffCardAction(
+                    label = stringResource(R.string.staff_listings_reject),
+                    icon = Icons.Outlined.Block,
+                    onClick = { onAction(ListingActionType.REJECT) },
+                ),
+            )
+        }
+        if (canRemove) {
+            add(
+                StaffCardAction(
+                    label = stringResource(R.string.staff_listings_remove),
+                    icon = Icons.Outlined.Delete,
+                    destructive = true,
+                    onClick = { onAction(ListingActionType.REMOVE) },
+                ),
+            )
+        }
+    }
 
-    Column(
+    MochiCard(
+        onClick = onOpen,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 12.dp, vertical = 6.dp)
-            .clip(RoundedCornerShape(10.dp))
-            .background(MaterialTheme.colorScheme.surface)
-            .padding(12.dp),
+            .padding(horizontal = 16.dp, vertical = 6.dp),
+        shape = MaterialTheme.shapes.medium,
     ) {
-        // Title -> opens market listing detail
-        Text(
-            text = listing.title,
-            style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis,
-            modifier = Modifier
-                .fillMaxWidth()
-                .clickable(onClick = onOpen),
-        )
-        Spacer(Modifier.height(6.dp))
+        Column(modifier = Modifier.padding(16.dp)) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    text = listing.title,
+                    style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f),
+                )
+                StaffCardMenu(actions = actions)
+            }
+            Spacer(Modifier.height(6.dp))
 
-        // Seller — avatar + name + onboarded tick.
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            EntityAvatar(
-                name = listing.sellerName.ifBlank { listing.seller },
-                seed = listing.seller,
-                size = 20.dp,
-            )
-            Spacer(Modifier.width(6.dp))
-            Text(
-                text = listing.sellerName.ifBlank { formatFingerprint(listing.sellerFingerprint) },
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.weight(1f),
-            )
-            if (listing.sellerOnboarded != 0) {
-                Icon(
-                    Icons.Default.CheckCircle,
-                    contentDescription = stringResource(R.string.staff_listings_seller_verified),
-                    tint = MaterialTheme.colorScheme.tertiary,
-                    modifier = Modifier.size(14.dp),
+            // Seller — avatar + name + onboarded tick.
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                StaffUserAvatar(
+                    name = listing.sellerName.ifBlank { listing.seller },
+                    id = listing.seller,
+                    size = 20.dp,
+                )
+                Spacer(Modifier.width(6.dp))
+                Text(
+                    text = listing.sellerName.ifBlank { formatFingerprint(listing.sellerFingerprint) },
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f),
+                )
+                if (listing.sellerOnboarded != 0) {
+                    Icon(
+                        Icons.Default.CheckCircle,
+                        contentDescription = stringResource(R.string.staff_listings_seller_verified),
+                        tint = MaterialTheme.colorScheme.tertiary,
+                        modifier = Modifier.size(14.dp),
+                    )
+                }
+            }
+            Spacer(Modifier.height(8.dp))
+
+            // Status / moderation / score chips.
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                StaffStatusBadge(status = listing.status)
+                StaffStatusBadge(status = listing.moderation)
+                ScoreColorChip(score = listing.score.toInt())
+            }
+            Spacer(Modifier.height(6.dp))
+
+            // Price + created.
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                val priceText = if (listing.price > 0L) {
+                    formatPrice(listing.price, listing.currency)
+                } else {
+                    stringResource(R.string.staff_listings_price_placeholder)
+                }
+                Text(
+                    text = priceText,
+                    style = MaterialTheme.typography.labelMedium,
+                    modifier = Modifier.weight(1f),
+                )
+                Text(
+                    text = format.formatTimestamp(listing.created),
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
         }
-        Spacer(Modifier.height(8.dp))
-
-        // Status / moderation / score chips.
-        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-            StaffStatusBadge(status = listing.status)
-            StaffStatusBadge(status = listing.moderation)
-            ScoreColorChip(score = listing.score.toInt())
-        }
-        Spacer(Modifier.height(6.dp))
-
-        // Price + created.
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            val priceText = if (listing.price > 0L) {
-                formatPrice(listing.price, listing.currency)
-            } else {
-                stringResource(R.string.staff_listings_price_placeholder)
-            }
-            Text(
-                text = priceText,
-                style = MaterialTheme.typography.labelMedium,
-                modifier = Modifier.weight(1f),
-            )
-            Text(
-                text = format.formatTimestamp(listing.created),
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-        }
-
-        // Action row.
-        if (pending || canRemove) {
-            Spacer(Modifier.height(8.dp))
-            Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                if (pending) {
-                    MochiOutlinedButton(onClick = { onAction(ListingActionType.APPROVE) }) {
-                        Text(stringResource(R.string.staff_listings_approve))
-                    }
-                    MochiOutlinedButton(onClick = { onAction(ListingActionType.REJECT) }) {
-                        Text(stringResource(R.string.staff_listings_reject))
-                    }
-                }
-                if (canRemove) {
-                    MochiOutlinedButton(onClick = { onAction(ListingActionType.REMOVE) }) {
-                        Text(stringResource(R.string.staff_listings_remove))
-                    }
-                }
-            }
-        }
-    }
-}
-
-@Composable
-private fun FiltersRow(
-    status: String?,
-    moderation: String?,
-    onStatusChange: (String?) -> Unit,
-    onModerationChange: (String?) -> Unit,
-) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 8.dp),
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
-    ) {
-        FilterDropdown(
-            label = stringResource(R.string.staff_listings_filter_status_label),
-            current = status,
-            options = listingStatusOptions(),
-            anyLabel = stringResource(R.string.staff_listings_any_status),
-            onSelect = onStatusChange,
-            modifier = Modifier.weight(1f),
-        )
-        FilterDropdown(
-            label = stringResource(R.string.staff_listings_filter_moderation_label),
-            current = moderation,
-            options = moderationStateOptions(),
-            anyLabel = stringResource(R.string.staff_listings_any_moderation),
-            onSelect = onModerationChange,
-            modifier = Modifier.weight(1f),
-        )
     }
 }
 
@@ -384,34 +379,4 @@ private fun moderationStateOptions(): List<Pair<String, String>> = listOf(
     "manual" to stringResource(R.string.staff_listings_moderation_manual),
     "rejected" to stringResource(R.string.staff_listings_moderation_rejected),
 )
-
-@Composable
-private fun ActiveFilterChips(
-    status: String?,
-    moderation: String?,
-    query: String,
-    onStatusChange: (String?) -> Unit,
-    onModerationChange: (String?) -> Unit,
-    onClearSearch: () -> Unit,
-) {
-    val statusLabel = stringResource(R.string.staff_filter_label_status)
-    val moderationLabel = stringResource(R.string.staff_filter_label_moderation)
-    val queryLabel = stringResource(R.string.staff_filter_label_query)
-    val statusOpts = listingStatusOptions()
-    val modOpts = moderationStateOptions()
-    val chips = buildList {
-        if (!status.isNullOrBlank()) {
-            val value = statusOpts.firstOrNull { it.first == status }?.second ?: status
-            add(FilterChipSpec(statusLabel, value) { onStatusChange(null) })
-        }
-        if (!moderation.isNullOrBlank()) {
-            val value = modOpts.firstOrNull { it.first == moderation }?.second ?: moderation
-            add(FilterChipSpec(moderationLabel, value) { onModerationChange(null) })
-        }
-        if (query.isNotBlank()) {
-            add(FilterChipSpec(queryLabel, query, onClearSearch))
-        }
-    }
-    FilterChipsRow(chips = chips)
-}
 

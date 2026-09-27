@@ -47,12 +47,12 @@ import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.market.R
 import org.mochios.market.ui.components.MarketLayout
+import org.mochios.market.ui.components.MarketStatusBadge
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Bid
 import org.mochios.market.model.Currency
 import org.mochios.market.model.Order
 import org.mochios.market.navigation.MarketApp
-import org.mochios.market.ui.components.StatusBadge
 
 @Composable
 fun MyPurchasesScreen(
@@ -214,7 +214,7 @@ private fun OrderRowCard(order: Order, onClick: (String) -> Unit) {
                 )
             }
             Spacer(Modifier.height(4.dp))
-            StatusBadge(status = order.status?.name?.lowercase() ?: "")
+            MarketStatusBadge(status = order.status?.name?.lowercase() ?: "")
         }
     }
 }

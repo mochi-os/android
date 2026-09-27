@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Non se atoparon contas</string>
     <string name="staff_accounts_filter_seller_label">Vendedor</string>
     <string name="staff_accounts_filter_status_label">Estado</string>
-    <string name="staff_accounts_history">Historial</string>
     <string name="staff_accounts_history_title">Historial da conta</string>
     <string name="staff_accounts_notes_label">Notas</string>
     <string name="staff_accounts_reason_label">Motivo</string>
@@ -131,15 +130,12 @@
     <string name="staff_categories_action_delete">Eliminar</string>
     <string name="staff_categories_action_edit">Editar</string>
     <string name="staff_categories_add">Engadir</string>
-    <string name="staff_categories_col_name">Nome</string>
-    <string name="staff_categories_col_status">Estado</string>
     <string name="staff_categories_col_types">Tipos</string>
     <string name="staff_categories_create">Crear</string>
     <string name="staff_categories_delete_confirm">Eliminar</string>
     <string name="staff_categories_delete_desc">Eliminar «%1$s»? Esta acción non se pode desfacer.</string>
     <string name="staff_categories_delete_title">Eliminar categoría</string>
     <string name="staff_categories_dialog_active">Activo</string>
-    <string name="staff_categories_dialog_cancel">Cancelar</string>
     <string name="staff_categories_dialog_create_title">Crear categoría</string>
     <string name="staff_categories_dialog_creating">Creando…</string>
     <string name="staff_categories_dialog_digital">Dixital</string>
@@ -181,21 +177,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">Non se puido gardar</string>
     <string name="staff_config_toast_saved">Gardado</string>
-    <string name="staff_dashboard_col_action">Acción</string>
-    <string name="staff_dashboard_col_actor">Actor</string>
     <string name="staff_dashboard_col_buyer">Comprador</string>
-    <string name="staff_dashboard_col_date">Data</string>
     <string name="staff_dashboard_col_detail">Detalle</string>
-    <string name="staff_dashboard_col_listing">Anuncio</string>
-    <string name="staff_dashboard_col_moderation">Moderación</string>
-    <string name="staff_dashboard_col_name">Nome</string>
     <string name="staff_dashboard_col_object">Obxecto</string>
     <string name="staff_dashboard_col_reason">Motivo</string>
-    <string name="staff_dashboard_col_score">Puntuación</string>
     <string name="staff_dashboard_col_seller">Vendedor</string>
-    <string name="staff_dashboard_col_status">Estado</string>
-    <string name="staff_dashboard_col_title">Título</string>
-    <string name="staff_dashboard_col_total">Total</string>
     <string name="staff_dashboard_empty_audit">Non hai entradas de auditoría</string>
     <string name="staff_dashboard_empty_listings">Non hai listaxes recentes</string>
     <string name="staff_dashboard_empty_moderation">Non hai moderación recente</string>
@@ -210,7 +196,6 @@
     <string name="staff_dashboard_kpi_sellers">Vendedores</string>
     <string name="staff_dashboard_kpi_total_orders">Pedidos totais</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">Non</string>
     <string name="staff_dashboard_open_sidebar">Abrir barra lateral</string>
     <string name="staff_dashboard_order_fallback">Pedido n.º %1$s</string>
     <string name="staff_dashboard_system">Sistema</string>
@@ -219,7 +204,6 @@
     <string name="staff_dashboard_tab_moderation">Moderación</string>
     <string name="staff_dashboard_tab_orders">Pedidos</string>
     <string name="staff_dashboard_tab_signups">Rexistros</string>
-    <string name="staff_dashboard_yes">Si</string>
     <string name="staff_disputes_any_status">Todos os estados</string>
     <string name="staff_disputes_cancel">Cancelar</string>
     <string name="staff_disputes_close">Pechar</string>
@@ -281,10 +265,7 @@
     <string name="staff_disputes_stripe_subscription_canceled">subscrición cancelada</string>
     <string name="staff_disputes_stripe_unrecognized">cargo non recoñecido</string>
     <string name="staff_disputes_view">Ver</string>
-    <string name="staff_filter_chip_remove">Eliminar o filtro</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderación</string>
-    <string name="staff_filter_label_query">Buscar</string>
     <string name="staff_filter_label_seller">Vendedor</string>
     <string name="staff_filter_label_status">Estado</string>
     <string name="staff_filter_label_type">Tipo</string>
@@ -376,7 +357,6 @@
     <string name="staff_reviews_filter_published">Publicado</string>
     <string name="staff_reviews_filter_removed">Eliminado</string>
     <string name="staff_reviews_order_label">pedido n.º %1$s</string>
-    <string name="staff_reviews_overflow_actions">Accións</string>
     <string name="staff_reviews_remove_confirm">Eliminar</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s o %3$s. Eliminar permanentemente esta crítica? Esta acción non se pode desfacer.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Eliminar permanentemente esta crítica? Esta acción non se pode desfacer.</string>
@@ -433,6 +413,7 @@
     <string name="staff_status_suspended">Suspendido</string>
     <string name="staff_team_action_remove">Eliminar</string>
     <string name="staff_team_add_member">Engadir membro</string>
+    <string name="staff_team_added_by_label">Engadido por:</string>
     <string name="staff_team_added_by_system">Sistema</string>
     <string name="staff_team_col_added_by">Engadido por</string>
     <string name="staff_team_dialog_add">Engadir</string>
@@ -452,6 +433,7 @@
     <string name="staff_team_role_support">Soporte</string>
     <string name="staff_team_toast_add_failed">Non se puido engadir o membro</string>
     <string name="staff_team_toast_removed">Membro eliminado</string>
+    <string name="staff_team_toast_added">Membro engadido</string>
     <string name="staff_team_toast_role_updated">Rol actualizado</string>
 
     <string name="staff_config_field_stripe_webhook">Segredo de sinatura do webhook</string>

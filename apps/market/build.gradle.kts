@@ -32,6 +32,7 @@ dependencies {
     implementation(project(":lib"))
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
+    testImplementation(libs.junit)
 
     // Custom Tabs for Stripe Checkout / Connect onboarding redirects.
     implementation(libs.browser)

@@ -18,6 +18,9 @@
     <string name="common_back">Tilbage</string>
     <string name="common_close">Luk</string>
     <string name="common_cancel">Annuller</string>
+    <string name="common_filter">Filter</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Fjern filter</string>
     <string name="common_confirm">Bekræft</string>
     <string name="common_save">Gem</string>
     <string name="common_saving">Gemmer…</string>

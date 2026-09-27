@@ -18,6 +18,9 @@
     <string name="common_back">Հետ</string>
     <string name="common_close">Փակել</string>
     <string name="common_cancel">Չեղարկել</string>
+    <string name="common_filter">Զտել</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Հեռացնել զտիչը</string>
     <string name="common_confirm">Հաստատել</string>
     <string name="common_save">Պահպանել</string>
     <string name="common_saving">Պահպանում…</string>

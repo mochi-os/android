@@ -18,6 +18,9 @@
     <string name="common_back">Kutichiy</string>
     <string name="common_close">Wichq\'ay</string>
     <string name="common_cancel">Mana ruway</string>
+    <string name="common_filter">Suysuy</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Llaqwana hurquy</string>
     <string name="common_confirm">Takyachiy</string>
     <string name="common_save">Waqaychay</string>
     <string name="common_saving">Waqaychashan…</string>

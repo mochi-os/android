@@ -12,6 +12,9 @@
     <string name="auth_create">Erstellen</string>
     <string name="common_back">Zurück</string>
     <string name="common_cancel">Abbrechen</string>
+    <string name="common_filter">Filter</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Filter entfernen</string>
     <string name="common_save">Speichern</string>
     <string name="common_edit">Bearbeiten</string>
     <string name="common_delete">Löschen</string>

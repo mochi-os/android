@@ -15,7 +15,6 @@
     <string name="staff_accounts_empty">အကောင့်များ မတွေ့ပါ</string>
     <string name="staff_accounts_filter_seller_label">ရောင်းသူ</string>
     <string name="staff_accounts_filter_status_label">အခြေအနေ</string>
-    <string name="staff_accounts_history">မှတ်တမ်း</string>
     <string name="staff_accounts_history_title">အကောင့်မှတ်တမ်း</string>
     <string name="staff_accounts_notes_label">မှတ်စုများ</string>
     <string name="staff_accounts_reason_label">အကြောင်းပြချက်</string>
@@ -125,14 +124,11 @@
     <string name="staff_categories_action_delete">ဖျက်မည်</string>
     <string name="staff_categories_action_edit">တည်းဖြတ်</string>
     <string name="staff_categories_add">ထည့်မည်</string>
-    <string name="staff_categories_col_name">အမည်</string>
-    <string name="staff_categories_col_status">အခြေအနေ</string>
     <string name="staff_categories_col_types">အမျိုးအစားများ</string>
     <string name="staff_categories_create">ဖန်တီးမည်</string>
     <string name="staff_categories_delete_confirm">ဖျက်မည်</string>
     <string name="staff_categories_delete_title">အမျိုးအစား ဖျက်မည်</string>
     <string name="staff_categories_dialog_active">လက်ရှိ</string>
-    <string name="staff_categories_dialog_cancel">မလုပ်တော့ပါ</string>
     <string name="staff_categories_dialog_create_title">အမျိုးအစား ဖန်တီးမည်</string>
     <string name="staff_categories_dialog_creating">ဖန်တီးနေသည်…</string>
     <string name="staff_categories_dialog_digital">ဒစ်ဂျစ်တယ်</string>
@@ -174,21 +170,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">သိမ်း၍ မရပါ</string>
     <string name="staff_config_toast_saved">သိမ်းပြီး</string>
-    <string name="staff_dashboard_col_action">လုပ်ဆောင်ချက်</string>
-    <string name="staff_dashboard_col_actor">အဖြစ်ဆောင်သူ</string>
     <string name="staff_dashboard_col_buyer">ဝယ်သူ</string>
-    <string name="staff_dashboard_col_date">ရက်စွဲ</string>
     <string name="staff_dashboard_col_detail">အသေးစိတ်</string>
-    <string name="staff_dashboard_col_listing">စာရင်း</string>
-    <string name="staff_dashboard_col_moderation">စိစစ်မှု</string>
-    <string name="staff_dashboard_col_name">အမည်</string>
     <string name="staff_dashboard_col_object">အရာဝတ္ထု</string>
     <string name="staff_dashboard_col_reason">အကြောင်းပြချက်</string>
-    <string name="staff_dashboard_col_score">ရမှတ်</string>
     <string name="staff_dashboard_col_seller">ရောင်းသူ</string>
-    <string name="staff_dashboard_col_status">အခြေအနေ</string>
-    <string name="staff_dashboard_col_title">ခေါင်းစဉ်</string>
-    <string name="staff_dashboard_col_total">စုစုပေါင်း</string>
     <string name="staff_dashboard_empty_audit">စစ်ဆေးမှု မှတ်တမ်းများ မရှိပါ</string>
     <string name="staff_dashboard_empty_listings">လတ်တလော စာရင်းများ မရှိပါ</string>
     <string name="staff_dashboard_empty_moderation">လတ်တလော moderation မရှိပါ</string>
@@ -203,7 +189,6 @@
     <string name="staff_dashboard_kpi_sellers">ရောင်းသူများ</string>
     <string name="staff_dashboard_kpi_total_orders">စုစုပေါင်း အမှာစာများ</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">မဟုတ်</string>
     <string name="staff_dashboard_open_sidebar">ဘေးဘားကို ဖွင့်ပါ</string>
     <string name="staff_dashboard_system">စနစ်</string>
     <string name="staff_dashboard_tab_audit">စစ်ဆေးမှု</string>
@@ -211,7 +196,6 @@
     <string name="staff_dashboard_tab_moderation">စိစစ်မှု</string>
     <string name="staff_dashboard_tab_orders">အော်ဒါများ</string>
     <string name="staff_dashboard_tab_signups">စာရင်းသွင်းမှုများ</string>
-    <string name="staff_dashboard_yes">ဟုတ်</string>
     <string name="staff_disputes_any_status">အခြေအနေအားလုံး</string>
     <string name="staff_disputes_cancel">မလုပ်တော့ပါ</string>
     <string name="staff_disputes_close">ပိတ်မည်</string>
@@ -249,10 +233,7 @@
     <string name="staff_disputes_status_responded">တုံ့ပြန်ပြီး</string>
     <string name="staff_disputes_status_reviewing">သုံးသပ်နေသည်</string>
     <string name="staff_disputes_view">ကြည့်ရှုမည်</string>
-    <string name="staff_filter_chip_remove">စစ်ထုတ်မှု ဖယ်ပါ</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">စိစစ်မှု</string>
-    <string name="staff_filter_label_query">ရှာဖွေ</string>
     <string name="staff_filter_label_seller">ရောင်းသူ</string>
     <string name="staff_filter_label_status">အခြေအနေ</string>
     <string name="staff_filter_label_type">အမျိုးအစား</string>
@@ -340,7 +321,6 @@
     <string name="staff_reviews_filter_all">အခြေအနေအားလုံး</string>
     <string name="staff_reviews_filter_published">ထုတ်ဝေပြီးသည်</string>
     <string name="staff_reviews_filter_removed">ဖယ်ရှားပြီး</string>
-    <string name="staff_reviews_overflow_actions">လုပ်ဆောင်ချက်များ</string>
     <string name="staff_reviews_remove_confirm">ဖယ်ရှား</string>
     <string name="staff_reviews_remove_title">သုံးသပ်ချက် ဖယ်ရှားမလား?</string>
     <string name="staff_reviews_role_buyer">ဝယ်သူ</string>
@@ -395,6 +375,7 @@
     <string name="staff_status_suspended">ဆိုင်းငံ့ထား</string>
     <string name="staff_team_action_remove">ဖယ်ရှား</string>
     <string name="staff_team_add_member">အဖွဲ့ဝင် ထည့်မည်</string>
+    <string name="staff_team_added_by_label">ထည့်သည့်သူ:</string>
     <string name="staff_team_added_by_system">စနစ်</string>
     <string name="staff_team_col_added_by">ထည့်သည့်သူ</string>
     <string name="staff_team_dialog_add">ထည့်မည်</string>
@@ -413,6 +394,7 @@
     <string name="staff_team_role_support">ပံ့ပိုးကူညီမှု</string>
     <string name="staff_team_toast_add_failed">အဖွဲ့ဝင် ထည့်၍ မရပါ</string>
     <string name="staff_team_toast_removed">အဖွဲ့ဝင် ဖယ်ရှားပြီးပါပြီ</string>
+    <string name="staff_team_toast_added">အဖွဲ့ဝင် ထည့်ပြီးပါပြီ</string>
     <string name="staff_team_toast_role_updated">ရာထူးကို အပ်ဒိတ်လုပ်ပြီးပါပြီ</string>
     <string name="staff_audit_action_auction_cancelled">လေလံ ပယ်ဖျက်ပြီးပါပြီ</string>
     <string name="staff_dashboard_order_fallback">အမှာစာ #%1$s</string>

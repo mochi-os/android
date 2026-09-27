@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Ma nstabu l-ebda kontijiet</string>
     <string name="staff_accounts_filter_seller_label">Bejjiegħ</string>
     <string name="staff_accounts_filter_status_label">Status</string>
-    <string name="staff_accounts_history">Storja</string>
     <string name="staff_accounts_history_title">Storja tal-kont</string>
     <string name="staff_accounts_notes_label">Noti</string>
     <string name="staff_accounts_reason_label">Raġuni</string>
@@ -128,15 +127,12 @@
     <string name="staff_categories_action_delete">Ħassar</string>
     <string name="staff_categories_action_edit">Editja</string>
     <string name="staff_categories_add">Żid</string>
-    <string name="staff_categories_col_name">Isem</string>
-    <string name="staff_categories_col_status">Status</string>
     <string name="staff_categories_col_types">Tipi</string>
     <string name="staff_categories_create">Oħloq</string>
     <string name="staff_categories_delete_confirm">Ħassar</string>
     <string name="staff_categories_delete_desc">Ħassar %1$s? Din l-azzjoni ma tistax tiġi rriversjata.</string>
     <string name="staff_categories_delete_title">Ħassar kategorija</string>
     <string name="staff_categories_dialog_active">Attiv</string>
-    <string name="staff_categories_dialog_cancel">Ikkanċella</string>
     <string name="staff_categories_dialog_create_title">Oħloq kategorija</string>
     <string name="staff_categories_dialog_creating">Qed joħloq…</string>
     <string name="staff_categories_dialog_digital">Diġitali</string>
@@ -178,21 +174,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">Ma rnexxiex jiġi ssejvjat</string>
     <string name="staff_config_toast_saved">Issejvjat</string>
-    <string name="staff_dashboard_col_action">Azzjoni</string>
-    <string name="staff_dashboard_col_actor">Attur</string>
     <string name="staff_dashboard_col_buyer">Xerrej</string>
-    <string name="staff_dashboard_col_date">Data</string>
     <string name="staff_dashboard_col_detail">Dettall</string>
-    <string name="staff_dashboard_col_listing">Elenku</string>
-    <string name="staff_dashboard_col_moderation">Moderazzjoni</string>
-    <string name="staff_dashboard_col_name">Isem</string>
     <string name="staff_dashboard_col_object">Oġġett</string>
     <string name="staff_dashboard_col_reason">Raġuni</string>
-    <string name="staff_dashboard_col_score">Punteġġ</string>
     <string name="staff_dashboard_col_seller">Bejjiegħ</string>
-    <string name="staff_dashboard_col_status">Status</string>
-    <string name="staff_dashboard_col_title">Titlu</string>
-    <string name="staff_dashboard_col_total">Total</string>
     <string name="staff_dashboard_empty_audit">L-ebda entrati ta\' awditu</string>
     <string name="staff_dashboard_empty_listings">L-ebda listings reċenti</string>
     <string name="staff_dashboard_empty_moderation">L-ebda moderazzjoni reċenti</string>
@@ -207,7 +193,6 @@
     <string name="staff_dashboard_kpi_sellers">Bejjiegħa</string>
     <string name="staff_dashboard_kpi_total_orders">Total ordnijiet</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">Le</string>
     <string name="staff_dashboard_open_sidebar">Iftaħ il-bar tal-ġenb</string>
     <string name="staff_dashboard_system">Sistema</string>
     <string name="staff_dashboard_tab_audit">Awditjar</string>
@@ -215,7 +200,6 @@
     <string name="staff_dashboard_tab_moderation">Moderazzjoni</string>
     <string name="staff_dashboard_tab_orders">Ordnijiet</string>
     <string name="staff_dashboard_tab_signups">Reġistrazzjonijiet</string>
-    <string name="staff_dashboard_yes">Iva</string>
     <string name="staff_disputes_any_status">L-istatuses kollha</string>
     <string name="staff_disputes_cancel">Ikkanċella</string>
     <string name="staff_disputes_close">Agħlaq</string>
@@ -253,10 +237,7 @@
     <string name="staff_disputes_status_responded">Wieġeb</string>
     <string name="staff_disputes_status_reviewing">Qed jirrevedi</string>
     <string name="staff_disputes_view">Ara</string>
-    <string name="staff_filter_chip_remove">Neħħi l-filtru</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderazzjoni</string>
-    <string name="staff_filter_label_query">Fittex</string>
     <string name="staff_filter_label_seller">Bejjiegħ</string>
     <string name="staff_filter_label_status">Status</string>
     <string name="staff_filter_label_type">Tip</string>
@@ -345,7 +326,6 @@
     <string name="staff_reviews_filter_all">L-istatuses kollha</string>
     <string name="staff_reviews_filter_published">Ippubblikat</string>
     <string name="staff_reviews_filter_removed">Imneħħi</string>
-    <string name="staff_reviews_overflow_actions">Azzjonijiet</string>
     <string name="staff_reviews_remove_confirm">Neħħi</string>
     <string name="staff_reviews_remove_title">Tneħħi r-review?</string>
     <string name="staff_reviews_role_buyer">Xerrej</string>
@@ -400,6 +380,7 @@
     <string name="staff_status_suspended">Sospiż</string>
     <string name="staff_team_action_remove">Neħħi</string>
     <string name="staff_team_add_member">Żid membru</string>
+    <string name="staff_team_added_by_label">Miżjud minn:</string>
     <string name="staff_team_added_by_system">Sistema</string>
     <string name="staff_team_col_added_by">Miżjud minn</string>
     <string name="staff_team_dialog_add">Żid</string>
@@ -418,6 +399,7 @@
     <string name="staff_team_role_support">Appoġġ</string>
     <string name="staff_team_toast_add_failed">Ma rnexxiex jiżdied il-membru</string>
     <string name="staff_team_toast_removed">Tneħħa l-membru</string>
+    <string name="staff_team_toast_added">Żdied il-membru</string>
     <string name="staff_team_toast_role_updated">Ir-rwol ġie aġġornat</string>
 
     <string name="staff_audit_action_auction_cancelled">Irkant ikkanċellat</string>

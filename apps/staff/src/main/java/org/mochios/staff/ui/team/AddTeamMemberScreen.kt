@@ -52,8 +52,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
-import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
@@ -61,7 +61,7 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
-import org.mochios.android.R as MochiR
+import org.mochios.staff.ui.components.StaffUserAvatar
 
 /**
  * Add-team-member screen: debounced directory search, then a role choice.
@@ -215,12 +215,7 @@ fun AddTeamMemberScreen(
                                             .padding(horizontal = 8.dp, vertical = 8.dp),
                                         verticalAlignment = Alignment.CenterVertically,
                                     ) {
-                                        EntityAvatar(
-                                            name = person.name,
-                                            src = "/staff/-/user/${person.id}/asset/avatar",
-                                            seed = person.id,
-                                            size = 28.dp,
-                                        )
+                                        StaffUserAvatar(name = person.name, id = person.id, size = 28.dp)
                                         Spacer(modifier = Modifier.width(8.dp))
                                         Text(
                                             text = person.name,

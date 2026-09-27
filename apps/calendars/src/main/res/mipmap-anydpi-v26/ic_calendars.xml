@@ -6,6 +6,6 @@
     <foreground>
         <inset
             android:drawable="@mipmap/ic_calendars_foreground"
-            android:inset="12dp" />
+            android:inset="30dp" />
     </foreground>
 </adaptive-icon>

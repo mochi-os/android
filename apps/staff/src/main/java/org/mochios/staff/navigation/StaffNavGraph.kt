@@ -5,42 +5,51 @@
 
 package org.mochios.staff.navigation
 
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
+import android.net.Uri
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.PersonAdd
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.Text
+import androidx.compose.material3.SnackbarHostState
+import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.ui.Modifier
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
+import androidx.navigation.NavType
 import androidx.navigation.compose.composable
-import org.mochios.android.ui.components.MochiButton
+import androidx.navigation.navArgument
+import org.mochios.android.ui.components.FilterButton
+import org.mochios.android.ui.components.MochiFab
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.staff.R
 import org.mochios.staff.ui.accounts.AccountsScreen
+import org.mochios.staff.ui.accounts.AccountsViewModel
 import org.mochios.staff.ui.appeals.AppealsScreen
 import org.mochios.staff.ui.categories.CategoriesScreen
 import org.mochios.staff.ui.categories.CategoriesViewModel
+import org.mochios.staff.ui.categories.CategoryFormScreen
 import org.mochios.staff.ui.components.LocalStaffMe
 import org.mochios.staff.ui.components.StaffLayout
 import org.mochios.staff.ui.config.ConfigScreen
 import org.mochios.staff.ui.dashboard.DashboardScreen
 import org.mochios.staff.ui.disputes.DisputesScreen
 import org.mochios.staff.ui.listings.ListingsScreen
+import org.mochios.staff.ui.listings.ListingsViewModel
 import org.mochios.staff.ui.moderation.ModerationLogScreen
 import org.mochios.staff.ui.reports.ReportsScreen
+import org.mochios.staff.ui.reports.ReportsViewModel
 import org.mochios.staff.ui.reviews.ReviewsScreen
 import org.mochios.staff.ui.team.AddTeamMemberScreen
 import org.mochios.staff.ui.team.TeamScreen
+import org.mochios.staff.ui.team.TeamViewModel
 
 /**
  * Staff routes; all class-level (no entity scope) and assume a signed-in staff
@@ -56,10 +65,23 @@ object StaffApp {
     const val APPEALS = "staff/appeals"
     const val REVIEWS = "staff/reviews"
     const val CATEGORIES = "staff/categories"
+    const val CATEGORY_NEW = "staff/categories/new"
+    const val CATEGORY_EDIT = "staff/categories/edit/{id}"
     const val CONFIG = "staff/config"
     const val TEAM = "staff/team"
     const val TEAM_ADD = "staff/team/add"
+
+    /** Route of the form that edits the category [id]. */
+    fun categoryEdit(id: String) = "staff/categories/edit/${Uri.encode(id)}"
 }
+
+/**
+ * Keys a form screen sets on the list below it before popping back, so the
+ * list reloads only when something changed: a save, or a category to edit
+ * that no longer exists.
+ */
+private const val CATEGORY_SAVED = "category_saved"
+private const val TEAM_MEMBER_ADDED = "team_member_added"
 
 fun NavGraphBuilder.staffNavGraph(
     navController: NavController,
@@ -76,13 +98,49 @@ fun NavGraphBuilder.staffNavGraph(
         }
     }
     composable(StaffApp.ACCOUNTS) {
-        StaffLayout(navController, StaffApp.ACCOUNTS, R.string.staff_sidebar_accounts) {
-            AccountsScreen(navController = navController)
+        val viewModel: AccountsViewModel = hiltViewModel()
+        val state by viewModel.state.collectAsState()
+        var filtersOpen by rememberSaveable { mutableStateOf(false) }
+        StaffLayout(
+            navController = navController,
+            currentRoute = StaffApp.ACCOUNTS,
+            titleRes = R.string.staff_sidebar_accounts,
+            topBarActions = {
+                FilterButton(
+                    active = listOfNotNull(state.status, state.seller).isNotEmpty(),
+                    onClick = { filtersOpen = true },
+                )
+            },
+        ) {
+            AccountsScreen(
+                navController = navController,
+                viewModel = viewModel,
+                filtersOpen = filtersOpen,
+                onFiltersDismiss = { filtersOpen = false },
+            )
         }
     }
     composable(StaffApp.LISTINGS) {
-        StaffLayout(navController, StaffApp.LISTINGS, R.string.staff_sidebar_listings) {
-            ListingsScreen(navController = navController)
+        val viewModel: ListingsViewModel = hiltViewModel()
+        val state by viewModel.state.collectAsState()
+        var filtersOpen by rememberSaveable { mutableStateOf(false) }
+        StaffLayout(
+            navController = navController,
+            currentRoute = StaffApp.LISTINGS,
+            titleRes = R.string.staff_sidebar_listings,
+            topBarActions = {
+                FilterButton(
+                    active = listOfNotNull(state.status, state.moderation).isNotEmpty(),
+                    onClick = { filtersOpen = true },
+                )
+            },
+        ) {
+            ListingsScreen(
+                navController = navController,
+                viewModel = viewModel,
+                filtersOpen = filtersOpen,
+                onFiltersDismiss = { filtersOpen = false },
+            )
         }
     }
     composable(StaffApp.MODERATION) {
@@ -91,8 +149,26 @@ fun NavGraphBuilder.staffNavGraph(
         }
     }
     composable(StaffApp.REPORTS) {
-        StaffLayout(navController, StaffApp.REPORTS, R.string.staff_sidebar_reports) {
-            ReportsScreen(navController = navController)
+        val viewModel: ReportsViewModel = hiltViewModel()
+        val state by viewModel.state.collectAsState()
+        var filtersOpen by rememberSaveable { mutableStateOf(false) }
+        StaffLayout(
+            navController = navController,
+            currentRoute = StaffApp.REPORTS,
+            titleRes = R.string.staff_sidebar_reports,
+            topBarActions = {
+                FilterButton(
+                    active = listOfNotNull(state.type, state.status).isNotEmpty(),
+                    onClick = { filtersOpen = true },
+                )
+            },
+        ) {
+            ReportsScreen(
+                navController = navController,
+                viewModel = viewModel,
+                filtersOpen = filtersOpen,
+                onFiltersDismiss = { filtersOpen = false },
+            )
         }
     }
     composable(StaffApp.DISPUTES) {
@@ -110,27 +186,48 @@ fun NavGraphBuilder.staffNavGraph(
             ReviewsScreen(navController = navController)
         }
     }
-    // Categories needs a topbar "Add" action; mount the VM at the route so
-    // the screen body and the topbar share one instance.
-    composable(StaffApp.CATEGORIES) {
+    // Mount the VM at the route so the screen body and the form's result
+    // share one instance.
+    composable(StaffApp.CATEGORIES) { entry ->
         val viewModel: CategoriesViewModel = hiltViewModel()
+        val snackbarHostState = remember { SnackbarHostState() }
+        LaunchedEffect(entry) {
+            entry.savedStateHandle.getStateFlow<Int?>(CATEGORY_SAVED, null).collect { message ->
+                if (message != null) {
+                    entry.savedStateHandle.remove<Int>(CATEGORY_SAVED)
+                    viewModel.onSaved(message)
+                }
+            }
+        }
         StaffLayout(
             navController = navController,
             currentRoute = StaffApp.CATEGORIES,
             titleRes = R.string.staff_sidebar_categories,
-            topBarActions = {
-                MochiButton(
-                    onClick = { viewModel.openCreate() },
-                    modifier = Modifier.padding(end = 8.dp),
-                ) {
-                    Icon(Icons.Default.Add, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
-                    Spacer(Modifier.width(ButtonDefaults.IconSpacing))
-                    Text(stringResource(R.string.staff_categories_add))
+            snackbarHostState = snackbarHostState,
+            floatingActionButton = {
+                MochiFab(onClick = { navController.navigate(StaffApp.CATEGORY_NEW) }) {
+                    Icon(
+                        Icons.Default.Add,
+                        contentDescription = stringResource(R.string.staff_categories_add),
+                    )
                 }
             },
         ) {
-            CategoriesScreen(navController = navController, viewModel = viewModel)
+            CategoriesScreen(
+                navController = navController,
+                snackbarHostState = snackbarHostState,
+                viewModel = viewModel,
+            )
         }
+    }
+    composable(StaffApp.CATEGORY_NEW) {
+        CategoryFormRoute(navController)
+    }
+    composable(
+        route = StaffApp.CATEGORY_EDIT,
+        arguments = listOf(navArgument("id") { type = NavType.StringType }),
+    ) {
+        CategoryFormRoute(navController)
     }
     // Admin gate at route level (web's `beforeLoad` redirect): non-admins are
     // sent to the dashboard. Stays inside StaffLayout because `LocalStaffMe` is
@@ -155,45 +252,69 @@ fun NavGraphBuilder.staffNavGraph(
             }
         }
     }
-    // Team needs an admin-only "Add member" topbar action, gated on
+    // Team needs an admin-only "Add member" FAB, gated on
     // LocalStaffMe.current.role.
-    composable(StaffApp.TEAM) {
+    composable(StaffApp.TEAM) { entry ->
+        val viewModel: TeamViewModel = hiltViewModel()
+        val snackbarHostState = remember { SnackbarHostState() }
+        LaunchedEffect(entry) {
+            entry.savedStateHandle.getStateFlow(TEAM_MEMBER_ADDED, false).collect { added ->
+                if (added) {
+                    entry.savedStateHandle.remove<Boolean>(TEAM_MEMBER_ADDED)
+                    viewModel.onAdded()
+                }
+            }
+        }
         StaffLayout(
             navController = navController,
             currentRoute = StaffApp.TEAM,
             titleRes = R.string.staff_sidebar_team,
-            topBarActions = {
+            snackbarHostState = snackbarHostState,
+            floatingActionButton = {
                 val isAdmin = LocalStaffMe.current?.role == "admin"
                 if (isAdmin) {
-                    MochiButton(
-                        onClick = { navController.navigate(StaffApp.TEAM_ADD) },
-                        modifier = Modifier.padding(end = 8.dp),
-                    ) {
+                    MochiFab(onClick = { navController.navigate(StaffApp.TEAM_ADD) }) {
                         Icon(
                             Icons.Default.PersonAdd,
-                            contentDescription = null,
-                            modifier = Modifier.padding(end = 4.dp),
+                            contentDescription = stringResource(R.string.staff_team_add_member),
                         )
-                        Text(stringResource(R.string.staff_team_add_member))
                     }
                 }
             },
         ) {
-            TeamScreen(navController = navController)
+            TeamScreen(
+                navController = navController,
+                snackbarHostState = snackbarHostState,
+                viewModel = viewModel,
+            )
         }
     }
 
     composable(StaffApp.TEAM_ADD) {
         AddTeamMemberScreen(
             onBack = { navController.popBackStack() },
-            // Rebuild the team in place once a member has joined: popping back
-            // would land on the team entry that was already there, whose view
-            // model still holds the list fetched before the add.
             onAdded = {
-                navController.navigate(StaffApp.TEAM) {
-                    popUpTo(StaffApp.TEAM) { inclusive = true }
-                }
+                navController.previousBackStackEntry?.savedStateHandle?.set(TEAM_MEMBER_ADDED, true)
+                navController.popBackStack()
             },
         )
     }
+}
+
+@Composable
+private fun CategoryFormRoute(navController: NavController) {
+    val listEntry = remember(navController) {
+        runCatching { navController.getBackStackEntry(StaffApp.CATEGORIES) }.getOrNull()
+    }
+    val knownCategories = listEntry
+        ?.let { entry -> hiltViewModel<CategoriesViewModel>(entry).state.value.categories }
+        .orEmpty()
+    CategoryFormScreen(
+        knownCategories = knownCategories,
+        onBack = { navController.popBackStack() },
+        onDone = { message ->
+            navController.previousBackStackEntry?.savedStateHandle?.set(CATEGORY_SAVED, message)
+            navController.popBackStack()
+        },
+    )
 }

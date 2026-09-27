@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Nie znaleziono kont</string>
     <string name="staff_accounts_filter_seller_label">Sprzedający</string>
     <string name="staff_accounts_filter_status_label">Status</string>
-    <string name="staff_accounts_history">Historia</string>
     <string name="staff_accounts_history_title">Historia konta</string>
     <string name="staff_accounts_notes_label">Notatki</string>
     <string name="staff_accounts_reason_label">Powód</string>
@@ -131,15 +130,12 @@
     <string name="staff_categories_action_delete">Usuń</string>
     <string name="staff_categories_action_edit">Edytuj</string>
     <string name="staff_categories_add">Dodaj</string>
-    <string name="staff_categories_col_name">Nazwa</string>
-    <string name="staff_categories_col_status">Status</string>
     <string name="staff_categories_col_types">Typy</string>
     <string name="staff_categories_create">Utwórz</string>
     <string name="staff_categories_delete_confirm">Usuń</string>
     <string name="staff_categories_delete_desc">Usunąć %1$s? Tej operacji nie można cofnąć.</string>
     <string name="staff_categories_delete_title">Usuń kategorię</string>
     <string name="staff_categories_dialog_active">Aktywne</string>
-    <string name="staff_categories_dialog_cancel">Anuluj</string>
     <string name="staff_categories_dialog_create_title">Utwórz kategorię</string>
     <string name="staff_categories_dialog_creating">Tworzenie…</string>
     <string name="staff_categories_dialog_digital">Cyfrowy</string>
@@ -181,21 +177,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">Nie udało się zapisać</string>
     <string name="staff_config_toast_saved">Zapisano</string>
-    <string name="staff_dashboard_col_action">Akcja</string>
-    <string name="staff_dashboard_col_actor">Podmiot</string>
     <string name="staff_dashboard_col_buyer">Kupujący</string>
-    <string name="staff_dashboard_col_date">Data</string>
     <string name="staff_dashboard_col_detail">Szczegół</string>
-    <string name="staff_dashboard_col_listing">Oferta</string>
-    <string name="staff_dashboard_col_moderation">Moderacja</string>
-    <string name="staff_dashboard_col_name">Nazwa</string>
     <string name="staff_dashboard_col_object">Obiekt</string>
     <string name="staff_dashboard_col_reason">Powód</string>
-    <string name="staff_dashboard_col_score">Wynik</string>
     <string name="staff_dashboard_col_seller">Sprzedający</string>
-    <string name="staff_dashboard_col_status">Status</string>
-    <string name="staff_dashboard_col_title">Tytuł</string>
-    <string name="staff_dashboard_col_total">Razem</string>
     <string name="staff_dashboard_empty_audit">Brak wpisów audytu</string>
     <string name="staff_dashboard_empty_listings">Brak ostatnich ofert</string>
     <string name="staff_dashboard_empty_moderation">Brak ostatniej moderacji</string>
@@ -210,7 +196,6 @@
     <string name="staff_dashboard_kpi_sellers">Sprzedający</string>
     <string name="staff_dashboard_kpi_total_orders">Razem zamówień</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">Nie</string>
     <string name="staff_dashboard_open_sidebar">Otwórz panel boczny</string>
     <string name="staff_dashboard_order_fallback">Zamówienie #%1$s</string>
     <string name="staff_dashboard_system">System</string>
@@ -219,7 +204,6 @@
     <string name="staff_dashboard_tab_moderation">Moderacja</string>
     <string name="staff_dashboard_tab_orders">Zamówienia</string>
     <string name="staff_dashboard_tab_signups">Rejestracje</string>
-    <string name="staff_dashboard_yes">Tak</string>
     <string name="staff_disputes_any_status">Wszystkie statusy</string>
     <string name="staff_disputes_cancel">Anuluj</string>
     <string name="staff_disputes_close">Zamknij</string>
@@ -281,10 +265,7 @@
     <string name="staff_disputes_stripe_subscription_canceled">subskrypcja anulowana</string>
     <string name="staff_disputes_stripe_unrecognized">nierozpoznane obciążenie</string>
     <string name="staff_disputes_view">Zobacz</string>
-    <string name="staff_filter_chip_remove">Usuń filtr</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderacja</string>
-    <string name="staff_filter_label_query">Szukaj</string>
     <string name="staff_filter_label_seller">Sprzedający</string>
     <string name="staff_filter_label_status">Status</string>
     <string name="staff_filter_label_type">Typ</string>
@@ -376,7 +357,6 @@
     <string name="staff_reviews_filter_published">Opublikowano</string>
     <string name="staff_reviews_filter_removed">Usunięto</string>
     <string name="staff_reviews_order_label">zamówienie #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Akcje</string>
     <string name="staff_reviews_remove_confirm">Usuń</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s w dniu %3$s. Czy trwale usunąć tę recenzję? Tej operacji nie można cofnąć.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Czy trwale usunąć tę recenzję? Tej operacji nie można cofnąć.</string>
@@ -433,6 +413,7 @@
     <string name="staff_status_suspended">Zawieszono</string>
     <string name="staff_team_action_remove">Usuń</string>
     <string name="staff_team_add_member">Dodaj członka</string>
+    <string name="staff_team_added_by_label">Dodane przez:</string>
     <string name="staff_team_added_by_system">System</string>
     <string name="staff_team_col_added_by">Dodane przez</string>
     <string name="staff_team_dialog_add">Dodaj</string>
@@ -452,6 +433,7 @@
     <string name="staff_team_role_support">Wsparcie</string>
     <string name="staff_team_toast_add_failed">Nie udało się dodać członka</string>
     <string name="staff_team_toast_removed">Usunięto członka</string>
+    <string name="staff_team_toast_added">Dodano członka</string>
     <string name="staff_team_toast_role_updated">Rola zaktualizowana</string>
 
     <string name="staff_config_field_stripe_webhook">Tajny klucz podpisywania webhooka</string>

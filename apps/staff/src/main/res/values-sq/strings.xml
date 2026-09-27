@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">S\'u gjet asnjë llogari</string>
     <string name="staff_accounts_filter_seller_label">Shitësi</string>
     <string name="staff_accounts_filter_status_label">Statusi</string>
-    <string name="staff_accounts_history">Historia</string>
     <string name="staff_accounts_history_title">Historiku i llogarisë</string>
     <string name="staff_accounts_notes_label">Shënime</string>
     <string name="staff_accounts_reason_label">Arsyeja</string>
@@ -131,15 +130,12 @@
     <string name="staff_categories_action_delete">Fshi</string>
     <string name="staff_categories_action_edit">Modifiko</string>
     <string name="staff_categories_add">Shto</string>
-    <string name="staff_categories_col_name">Emri</string>
-    <string name="staff_categories_col_status">Statusi</string>
     <string name="staff_categories_col_types">Llojet</string>
     <string name="staff_categories_create">Krijo</string>
     <string name="staff_categories_delete_confirm">Fshi</string>
     <string name="staff_categories_delete_desc">Fshi %1$s? Ky veprim nuk mund të zhbëhet.</string>
     <string name="staff_categories_delete_title">Fshi kategorinë</string>
     <string name="staff_categories_dialog_active">Aktiv</string>
-    <string name="staff_categories_dialog_cancel">Anulo</string>
     <string name="staff_categories_dialog_create_title">Krijo kategori</string>
     <string name="staff_categories_dialog_creating">Po krijon…</string>
     <string name="staff_categories_dialog_digital">Dixhitale</string>
@@ -181,21 +177,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">Ruajtja dështoi</string>
     <string name="staff_config_toast_saved">I ruajtur</string>
-    <string name="staff_dashboard_col_action">Veprimi</string>
-    <string name="staff_dashboard_col_actor">Aktori</string>
     <string name="staff_dashboard_col_buyer">Blerësi</string>
-    <string name="staff_dashboard_col_date">Data</string>
     <string name="staff_dashboard_col_detail">Detaji</string>
-    <string name="staff_dashboard_col_listing">Shpallja</string>
-    <string name="staff_dashboard_col_moderation">Moderimi</string>
-    <string name="staff_dashboard_col_name">Emri</string>
     <string name="staff_dashboard_col_object">Objekti</string>
     <string name="staff_dashboard_col_reason">Arsyeja</string>
-    <string name="staff_dashboard_col_score">Rezultati</string>
     <string name="staff_dashboard_col_seller">Shitësi</string>
-    <string name="staff_dashboard_col_status">Statusi</string>
-    <string name="staff_dashboard_col_title">Titulli</string>
-    <string name="staff_dashboard_col_total">Totali</string>
     <string name="staff_dashboard_empty_audit">Asnjë hyrje auditimi</string>
     <string name="staff_dashboard_empty_listings">Asnjë listim i fundit</string>
     <string name="staff_dashboard_empty_moderation">Asnjë moderim i fundit</string>
@@ -210,7 +196,6 @@
     <string name="staff_dashboard_kpi_sellers">Shitësit</string>
     <string name="staff_dashboard_kpi_total_orders">Totali i porosive</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">Jo</string>
     <string name="staff_dashboard_open_sidebar">Hap shiritin anësor</string>
     <string name="staff_dashboard_order_fallback">Porosia #%1$s</string>
     <string name="staff_dashboard_system">Sistemi</string>
@@ -219,7 +204,6 @@
     <string name="staff_dashboard_tab_moderation">Moderimi</string>
     <string name="staff_dashboard_tab_orders">Porositë</string>
     <string name="staff_dashboard_tab_signups">Regjistrimet</string>
-    <string name="staff_dashboard_yes">Po</string>
     <string name="staff_disputes_any_status">Të gjithë statuset</string>
     <string name="staff_disputes_cancel">Anulo</string>
     <string name="staff_disputes_close">Mbyll</string>
@@ -281,10 +265,7 @@
     <string name="staff_disputes_stripe_subscription_canceled">abonimi u anulua</string>
     <string name="staff_disputes_stripe_unrecognized">tarifë e panjohur</string>
     <string name="staff_disputes_view">Shiko</string>
-    <string name="staff_filter_chip_remove">Hiq filtrin</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderimi</string>
-    <string name="staff_filter_label_query">Kërko</string>
     <string name="staff_filter_label_seller">Shitësi</string>
     <string name="staff_filter_label_status">Statusi</string>
     <string name="staff_filter_label_type">Lloji</string>
@@ -376,7 +357,6 @@
     <string name="staff_reviews_filter_published">I publikuar</string>
     <string name="staff_reviews_filter_removed">I hequr</string>
     <string name="staff_reviews_order_label">porosia #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Veprimet</string>
     <string name="staff_reviews_remove_confirm">Hiq</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s më %3$s. Fshi përgjithmonë këtë vlerësim? Ky veprim nuk mund të zhbëhet.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Fshi përgjithmonë këtë vlerësim? Ky veprim nuk mund të zhbëhet.</string>
@@ -433,6 +413,7 @@
     <string name="staff_status_suspended">I pezulluar</string>
     <string name="staff_team_action_remove">Hiq</string>
     <string name="staff_team_add_member">Shto anëtar</string>
+    <string name="staff_team_added_by_label">Shtuar nga:</string>
     <string name="staff_team_added_by_system">Sistemi</string>
     <string name="staff_team_col_added_by">Shtuar nga</string>
     <string name="staff_team_dialog_add">Shto</string>
@@ -452,6 +433,7 @@
     <string name="staff_team_role_support">Mbështetja</string>
     <string name="staff_team_toast_add_failed">Shtimi i anëtarit dështoi</string>
     <string name="staff_team_toast_removed">Anëtari u hoq</string>
+    <string name="staff_team_toast_added">Anëtari u shtua</string>
     <string name="staff_team_toast_role_updated">Roli u përditësua</string>
 
     <string name="staff_config_field_stripe_webhook">Sekreti i nënshkrimit të webhook-ut</string>

@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Не са намерени акаунти</string>
     <string name="staff_accounts_filter_seller_label">Продавач</string>
     <string name="staff_accounts_filter_status_label">Състояние</string>
-    <string name="staff_accounts_history">История</string>
     <string name="staff_accounts_history_title">История на акаунта</string>
     <string name="staff_accounts_notes_label">Бележки</string>
     <string name="staff_accounts_reason_label">Причина</string>
@@ -131,15 +130,12 @@
     <string name="staff_categories_action_delete">Изтрий</string>
     <string name="staff_categories_action_edit">Редактиране</string>
     <string name="staff_categories_add">Добави</string>
-    <string name="staff_categories_col_name">Име</string>
-    <string name="staff_categories_col_status">Състояние</string>
     <string name="staff_categories_col_types">Типове</string>
     <string name="staff_categories_create">Създай</string>
     <string name="staff_categories_delete_confirm">Изтрий</string>
     <string name="staff_categories_delete_desc">Изтриване на „%1$s“? Това действие не може да бъде отменено.</string>
     <string name="staff_categories_delete_title">Изтрий категорията</string>
     <string name="staff_categories_dialog_active">Активно</string>
-    <string name="staff_categories_dialog_cancel">Отказ</string>
     <string name="staff_categories_dialog_create_title">Създай категория</string>
     <string name="staff_categories_dialog_creating">Създаване…</string>
     <string name="staff_categories_dialog_digital">Дигитално</string>
@@ -181,21 +177,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">Неуспешно записване</string>
     <string name="staff_config_toast_saved">Запазено</string>
-    <string name="staff_dashboard_col_action">Действие</string>
-    <string name="staff_dashboard_col_actor">Извършител</string>
     <string name="staff_dashboard_col_buyer">Купувач</string>
-    <string name="staff_dashboard_col_date">Дата</string>
     <string name="staff_dashboard_col_detail">Детайл</string>
-    <string name="staff_dashboard_col_listing">Обява</string>
-    <string name="staff_dashboard_col_moderation">Модерация</string>
-    <string name="staff_dashboard_col_name">Име</string>
     <string name="staff_dashboard_col_object">Обект</string>
     <string name="staff_dashboard_col_reason">Причина</string>
-    <string name="staff_dashboard_col_score">Резултат</string>
     <string name="staff_dashboard_col_seller">Продавач</string>
-    <string name="staff_dashboard_col_status">Състояние</string>
-    <string name="staff_dashboard_col_title">Заглавие</string>
-    <string name="staff_dashboard_col_total">Общо</string>
     <string name="staff_dashboard_empty_audit">Няма записи в одита</string>
     <string name="staff_dashboard_empty_listings">Няма скорошни обяви</string>
     <string name="staff_dashboard_empty_moderation">Няма скорошна модерация</string>
@@ -210,7 +196,6 @@
     <string name="staff_dashboard_kpi_sellers">Продавачи</string>
     <string name="staff_dashboard_kpi_total_orders">Общо поръчки</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">Не</string>
     <string name="staff_dashboard_open_sidebar">Отвори страничната лента</string>
     <string name="staff_dashboard_order_fallback">Поръчка #%1$s</string>
     <string name="staff_dashboard_system">Система</string>
@@ -219,7 +204,6 @@
     <string name="staff_dashboard_tab_moderation">Модерация</string>
     <string name="staff_dashboard_tab_orders">Поръчки</string>
     <string name="staff_dashboard_tab_signups">Регистрации</string>
-    <string name="staff_dashboard_yes">Да</string>
     <string name="staff_disputes_any_status">Всички състояния</string>
     <string name="staff_disputes_cancel">Отказ</string>
     <string name="staff_disputes_close">Затвори</string>
@@ -281,10 +265,7 @@
     <string name="staff_disputes_stripe_subscription_canceled">абонамент отменен</string>
     <string name="staff_disputes_stripe_unrecognized">неразпозната такса</string>
     <string name="staff_disputes_view">Преглед</string>
-    <string name="staff_filter_chip_remove">Премахни филтъра</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Модерация</string>
-    <string name="staff_filter_label_query">Търсене</string>
     <string name="staff_filter_label_seller">Продавач</string>
     <string name="staff_filter_label_status">Състояние</string>
     <string name="staff_filter_label_type">Тип</string>
@@ -376,7 +357,6 @@
     <string name="staff_reviews_filter_published">Публикуван</string>
     <string name="staff_reviews_filter_removed">Премахнато</string>
     <string name="staff_reviews_order_label">поръчка #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Действия</string>
     <string name="staff_reviews_remove_confirm">Премахни</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s на %3$s. Изтрий ли този отзив за постоянно? Това действие не може да бъде отменено.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Изтрий ли този отзив за постоянно? Това действие не може да бъде отменено.</string>
@@ -433,6 +413,7 @@
     <string name="staff_status_suspended">Спрян</string>
     <string name="staff_team_action_remove">Премахни</string>
     <string name="staff_team_add_member">Добави член</string>
+    <string name="staff_team_added_by_label">Добавено от:</string>
     <string name="staff_team_added_by_system">Система</string>
     <string name="staff_team_col_added_by">Добавено от</string>
     <string name="staff_team_dialog_add">Добави</string>
@@ -452,6 +433,7 @@
     <string name="staff_team_role_support">Поддръжка</string>
     <string name="staff_team_toast_add_failed">Неуспешно добавяне на член</string>
     <string name="staff_team_toast_removed">Членът е премахнат</string>
+    <string name="staff_team_toast_added">Членът е добавен</string>
     <string name="staff_team_toast_role_updated">Ролята е актуализирана</string>
 
     <string name="staff_config_field_stripe_webhook">Таен ключ за подписване на Webhook</string>

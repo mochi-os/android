@@ -18,6 +18,9 @@
     <string name="common_back">رجوع</string>
     <string name="common_close">إغلاق</string>
     <string name="common_cancel">إلغاء</string>
+    <string name="common_filter">تصفية</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">إزالة الفلتر</string>
     <string name="common_confirm">تأكيد</string>
     <string name="common_save">حفظ</string>
     <string name="common_saving">جارٍ الحفظ…</string>

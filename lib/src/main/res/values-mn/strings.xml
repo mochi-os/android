@@ -18,6 +18,9 @@
     <string name="common_back">Буцах</string>
     <string name="common_close">Хаах</string>
     <string name="common_cancel">Цуцлах</string>
+    <string name="common_filter">Шүүлтүүр</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Шүүлтүүр устгах</string>
     <string name="common_confirm">Баталгаажуулах</string>
     <string name="common_save">Хадгалах</string>
     <string name="common_saving">Хадгалж байна…</string>

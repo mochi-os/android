@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">कोई अकाउंट नहीं मिले</string>
     <string name="staff_accounts_filter_seller_label">विक्रेता</string>
     <string name="staff_accounts_filter_status_label">स्टेटस</string>
-    <string name="staff_accounts_history">इतिहास</string>
     <string name="staff_accounts_history_title">अकाउंट इतिहास</string>
     <string name="staff_accounts_notes_label">नोट्स</string>
     <string name="staff_accounts_reason_label">कारण</string>
@@ -131,15 +130,12 @@
     <string name="staff_categories_action_delete">हटाएँ</string>
     <string name="staff_categories_action_edit">संपादित करें</string>
     <string name="staff_categories_add">जोड़ें</string>
-    <string name="staff_categories_col_name">नाम</string>
-    <string name="staff_categories_col_status">स्टेटस</string>
     <string name="staff_categories_col_types">प्रकार</string>
     <string name="staff_categories_create">बनाएँ</string>
     <string name="staff_categories_delete_confirm">हटाएँ</string>
     <string name="staff_categories_delete_desc">%1$s को हटाएं? यह क्रिया पूर्ववत नहीं की जा सकती।</string>
     <string name="staff_categories_delete_title">श्रेणी हटाएँ</string>
     <string name="staff_categories_dialog_active">सक्रिय</string>
-    <string name="staff_categories_dialog_cancel">रद्द करें</string>
     <string name="staff_categories_dialog_create_title">श्रेणी बनाएँ</string>
     <string name="staff_categories_dialog_creating">बना रहे हैं…</string>
     <string name="staff_categories_dialog_digital">डिजिटल</string>
@@ -181,21 +177,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">सहेजने में विफल</string>
     <string name="staff_config_toast_saved">सेव किया गया</string>
-    <string name="staff_dashboard_col_action">एक्शन</string>
-    <string name="staff_dashboard_col_actor">अभिनेता</string>
     <string name="staff_dashboard_col_buyer">खरीदार</string>
-    <string name="staff_dashboard_col_date">दिनांक</string>
     <string name="staff_dashboard_col_detail">विवरण</string>
-    <string name="staff_dashboard_col_listing">लिस्टिंग</string>
-    <string name="staff_dashboard_col_moderation">मॉडरेशन</string>
-    <string name="staff_dashboard_col_name">नाम</string>
     <string name="staff_dashboard_col_object">ऑब्जेक्ट</string>
     <string name="staff_dashboard_col_reason">कारण</string>
-    <string name="staff_dashboard_col_score">स्कोर</string>
     <string name="staff_dashboard_col_seller">विक्रेता</string>
-    <string name="staff_dashboard_col_status">स्टेटस</string>
-    <string name="staff_dashboard_col_title">टाइटल</string>
-    <string name="staff_dashboard_col_total">कुल</string>
     <string name="staff_dashboard_empty_audit">कोई ऑडिट एंट्रीज़ नहीं</string>
     <string name="staff_dashboard_empty_listings">कोई हाल की लिस्टिंग नहीं</string>
     <string name="staff_dashboard_empty_moderation">कोई हाल का मॉडरेशन नहीं</string>
@@ -210,7 +196,6 @@
     <string name="staff_dashboard_kpi_sellers">विक्रेता</string>
     <string name="staff_dashboard_kpi_total_orders">कुल ऑर्डर</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">नहीं</string>
     <string name="staff_dashboard_open_sidebar">साइडबार खोलें</string>
     <string name="staff_dashboard_order_fallback">ऑर्डर #%1$s</string>
     <string name="staff_dashboard_system">सिस्टम</string>
@@ -219,7 +204,6 @@
     <string name="staff_dashboard_tab_moderation">मॉडरेशन</string>
     <string name="staff_dashboard_tab_orders">ऑर्डर</string>
     <string name="staff_dashboard_tab_signups">साइनअप</string>
-    <string name="staff_dashboard_yes">हाँ</string>
     <string name="staff_disputes_any_status">सभी स्थितियाँ</string>
     <string name="staff_disputes_cancel">रद्द करें</string>
     <string name="staff_disputes_close">बंद करें</string>
@@ -281,10 +265,7 @@
     <string name="staff_disputes_stripe_subscription_canceled">सदस्यता रद्द</string>
     <string name="staff_disputes_stripe_unrecognized">अज्ञात शुल्क</string>
     <string name="staff_disputes_view">देखें</string>
-    <string name="staff_filter_chip_remove">फ़िल्टर हटाएं</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">मॉडरेशन</string>
-    <string name="staff_filter_label_query">खोजें</string>
     <string name="staff_filter_label_seller">विक्रेता</string>
     <string name="staff_filter_label_status">स्टेटस</string>
     <string name="staff_filter_label_type">प्रकार</string>
@@ -376,7 +357,6 @@
     <string name="staff_reviews_filter_published">पब्लिश किया गया</string>
     <string name="staff_reviews_filter_removed">हटाया गया</string>
     <string name="staff_reviews_order_label">ऑर्डर #%1$s</string>
-    <string name="staff_reviews_overflow_actions">एक्शन्स</string>
     <string name="staff_reviews_remove_confirm">हटाएँ</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s दिनांक %3$s. इस समीक्षा को स्थायी रूप से हटाएं? यह क्रिया पूर्ववत नहीं की जा सकती।</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. इस समीक्षा को स्थायी रूप से हटाएं? यह क्रिया पूर्ववत नहीं की जा सकती।</string>
@@ -433,6 +413,7 @@
     <string name="staff_status_suspended">सस्पेंड किया गया</string>
     <string name="staff_team_action_remove">हटाएँ</string>
     <string name="staff_team_add_member">सदस्य जोड़ें</string>
+    <string name="staff_team_added_by_label">द्वारा जोड़ा गया:</string>
     <string name="staff_team_added_by_system">सिस्टम</string>
     <string name="staff_team_col_added_by">द्वारा जोड़ा गया</string>
     <string name="staff_team_dialog_add">जोड़ें</string>
@@ -452,6 +433,7 @@
     <string name="staff_team_role_support">सपोर्ट</string>
     <string name="staff_team_toast_add_failed">सदस्य जोड़ने में विफल</string>
     <string name="staff_team_toast_removed">सदस्य हटाया गया</string>
+    <string name="staff_team_toast_added">सदस्य जोड़ा गया</string>
     <string name="staff_team_toast_role_updated">भूमिका अपडेट की गई</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook हस्ताक्षर गुप्त</string>

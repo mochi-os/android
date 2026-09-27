@@ -14,7 +14,6 @@
     <string name="staff_accounts_empty">Teu manggih akun</string>
     <string name="staff_accounts_filter_seller_label">Penjual</string>
     <string name="staff_accounts_filter_status_label">Status</string>
-    <string name="staff_accounts_history">Riwayat</string>
     <string name="staff_accounts_history_title">Riwayat akun</string>
     <string name="staff_accounts_notes_label">Catetan</string>
     <string name="staff_accounts_reason_label">Alesan</string>
@@ -124,14 +123,11 @@
     <string name="staff_categories_action_delete">Hapus</string>
     <string name="staff_categories_action_edit">Édit</string>
     <string name="staff_categories_add">Tambah</string>
-    <string name="staff_categories_col_name">Ngaran</string>
-    <string name="staff_categories_col_status">Status</string>
     <string name="staff_categories_col_types">Tipe</string>
     <string name="staff_categories_create">Jieun</string>
     <string name="staff_categories_delete_confirm">Hapus</string>
     <string name="staff_categories_delete_title">Hapus katégori</string>
     <string name="staff_categories_dialog_active">Aktif</string>
-    <string name="staff_categories_dialog_cancel">Batalkeun</string>
     <string name="staff_categories_dialog_create_title">Jieun katégori</string>
     <string name="staff_categories_dialog_creating">Ngajieun…</string>
     <string name="staff_categories_dialog_digital">Digital</string>
@@ -173,21 +169,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">Gagal nyimpen</string>
     <string name="staff_config_toast_saved">Disimpen</string>
-    <string name="staff_dashboard_col_action">Aksi</string>
-    <string name="staff_dashboard_col_actor">Aktor</string>
     <string name="staff_dashboard_col_buyer">Pameuli</string>
-    <string name="staff_dashboard_col_date">Tanggal</string>
     <string name="staff_dashboard_col_detail">Détil</string>
-    <string name="staff_dashboard_col_listing">Daptar</string>
-    <string name="staff_dashboard_col_moderation">Moderasi</string>
-    <string name="staff_dashboard_col_name">Ngaran</string>
     <string name="staff_dashboard_col_object">Objék</string>
     <string name="staff_dashboard_col_reason">Alesan</string>
-    <string name="staff_dashboard_col_score">Skor</string>
     <string name="staff_dashboard_col_seller">Penjual</string>
-    <string name="staff_dashboard_col_status">Status</string>
-    <string name="staff_dashboard_col_title">Judul</string>
-    <string name="staff_dashboard_col_total">Total</string>
     <string name="staff_dashboard_empty_audit">Euweuh éntri audit</string>
     <string name="staff_dashboard_empty_listings">Teu aya daptaran panganyarna</string>
     <string name="staff_dashboard_empty_moderation">Teu aya moderasi panganyarna</string>
@@ -202,7 +188,6 @@
     <string name="staff_dashboard_kpi_sellers">Penjual</string>
     <string name="staff_dashboard_kpi_total_orders">Total pesenan</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">Henteu</string>
     <string name="staff_dashboard_open_sidebar">Buka sidebar</string>
     <string name="staff_dashboard_system">Sistem</string>
     <string name="staff_dashboard_tab_audit">Audit</string>
@@ -210,7 +195,6 @@
     <string name="staff_dashboard_tab_moderation">Moderasi</string>
     <string name="staff_dashboard_tab_orders">Pesenan</string>
     <string name="staff_dashboard_tab_signups">Pendaptaran</string>
-    <string name="staff_dashboard_yes">Enya</string>
     <string name="staff_disputes_any_status">Sadaya status</string>
     <string name="staff_disputes_cancel">Batalkeun</string>
     <string name="staff_disputes_close">Tutup</string>
@@ -247,10 +231,7 @@
     <string name="staff_disputes_status_responded">Dijawab</string>
     <string name="staff_disputes_status_reviewing">Ningali</string>
     <string name="staff_disputes_view">Tingali</string>
-    <string name="staff_filter_chip_remove">Hapus saringan</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderasi</string>
-    <string name="staff_filter_label_query">Paluruh</string>
     <string name="staff_filter_label_seller">Penjual</string>
     <string name="staff_filter_label_status">Status</string>
     <string name="staff_filter_label_type">Tipe</string>
@@ -337,7 +318,6 @@
     <string name="staff_reviews_filter_all">Sadaya status</string>
     <string name="staff_reviews_filter_published">Dipasarkeun</string>
     <string name="staff_reviews_filter_removed">Dicabut</string>
-    <string name="staff_reviews_overflow_actions">Aksi</string>
     <string name="staff_reviews_remove_confirm">Pupus</string>
     <string name="staff_reviews_remove_title">Cabut ulasan?</string>
     <string name="staff_reviews_role_buyer">Pameuli</string>
@@ -392,6 +372,7 @@
     <string name="staff_status_suspended">Ditunda</string>
     <string name="staff_team_action_remove">Pupus</string>
     <string name="staff_team_add_member">Tambah anggota</string>
+    <string name="staff_team_added_by_label">Ditambahkeun ku:</string>
     <string name="staff_team_added_by_system">Sistem</string>
     <string name="staff_team_col_added_by">Ditambahkeun ku</string>
     <string name="staff_team_dialog_add">Tambah</string>
@@ -410,6 +391,7 @@
     <string name="staff_team_role_support">Pangrojong</string>
     <string name="staff_team_toast_add_failed">Gagal nambahkeun anggota</string>
     <string name="staff_team_toast_removed">Anggota dipupus</string>
+    <string name="staff_team_toast_added">Anggota ditambihan</string>
     <string name="staff_team_toast_role_updated">Pancén diropéa</string>
     <string name="staff_audit_action_auction_cancelled">Lélang dibatalkeun</string>
     <string name="staff_dashboard_order_fallback">Pesenan #%1$s</string>

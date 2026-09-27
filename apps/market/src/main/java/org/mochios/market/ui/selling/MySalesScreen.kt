@@ -43,11 +43,11 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.market.R
 import org.mochios.market.ui.components.MarketLayout
+import org.mochios.market.ui.components.MarketStatusBadge
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Currency
 import org.mochios.market.model.Order
 import org.mochios.market.navigation.MarketApp
-import org.mochios.market.ui.components.StatusBadge
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -142,7 +142,7 @@ private fun SaleRow(order: Order, onClick: () -> Unit) {
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
             ) {
-                order.status?.let { StatusBadge(status = it.name.lowercase()) }
+                order.status?.let { MarketStatusBadge(status = it.name.lowercase()) }
                 if (timeLabel.isNotEmpty()) {
                     Text(
                         text = timeLabel,

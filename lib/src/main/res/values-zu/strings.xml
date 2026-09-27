@@ -18,6 +18,9 @@
     <string name="common_back">Emuva</string>
     <string name="common_close">Vala</string>
     <string name="common_cancel">Khansela</string>
+    <string name="common_filter">Hlunga</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Susa isihlungi</string>
     <string name="common_confirm">Qinisekisa</string>
     <string name="common_save">Londoloza</string>
     <string name="common_saving">Iyalondoloza…</string>

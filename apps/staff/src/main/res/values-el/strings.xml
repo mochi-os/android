@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Δεν βρέθηκαν λογαριασμοί</string>
     <string name="staff_accounts_filter_seller_label">Πωλητής</string>
     <string name="staff_accounts_filter_status_label">Κατάσταση</string>
-    <string name="staff_accounts_history">Ιστορικό</string>
     <string name="staff_accounts_history_title">Ιστορικό λογαριασμού</string>
     <string name="staff_accounts_notes_label">Σημειώσεις</string>
     <string name="staff_accounts_reason_label">Αιτία</string>
@@ -131,15 +130,12 @@
     <string name="staff_categories_action_delete">Διαγραφή</string>
     <string name="staff_categories_action_edit">Επεξεργασία</string>
     <string name="staff_categories_add">Προσθήκη</string>
-    <string name="staff_categories_col_name">Όνομα</string>
-    <string name="staff_categories_col_status">Κατάσταση</string>
     <string name="staff_categories_col_types">Τύποι</string>
     <string name="staff_categories_create">Δημιουργία</string>
     <string name="staff_categories_delete_confirm">Διαγραφή</string>
     <string name="staff_categories_delete_desc">Διαγραφή «%1$s»; Αυτή η ενέργεια δεν αναιρείται.</string>
     <string name="staff_categories_delete_title">Διαγραφή κατηγορίας</string>
     <string name="staff_categories_dialog_active">Ενεργό</string>
-    <string name="staff_categories_dialog_cancel">Ακύρωση</string>
     <string name="staff_categories_dialog_create_title">Δημιουργία κατηγορίας</string>
     <string name="staff_categories_dialog_creating">Δημιουργία…</string>
     <string name="staff_categories_dialog_digital">Ψηφιακό</string>
@@ -181,21 +177,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">Αποτυχία αποθήκευσης</string>
     <string name="staff_config_toast_saved">Αποθηκεύτηκε</string>
-    <string name="staff_dashboard_col_action">Ενέργεια</string>
-    <string name="staff_dashboard_col_actor">Δράστης</string>
     <string name="staff_dashboard_col_buyer">Αγοραστής</string>
-    <string name="staff_dashboard_col_date">Ημερομηνία</string>
     <string name="staff_dashboard_col_detail">Λεπτομέρεια</string>
-    <string name="staff_dashboard_col_listing">Καταχώριση</string>
-    <string name="staff_dashboard_col_moderation">Συντονισμός</string>
-    <string name="staff_dashboard_col_name">Όνομα</string>
     <string name="staff_dashboard_col_object">Αντικείμενο</string>
     <string name="staff_dashboard_col_reason">Αιτία</string>
-    <string name="staff_dashboard_col_score">Βαθμολογία</string>
     <string name="staff_dashboard_col_seller">Πωλητής</string>
-    <string name="staff_dashboard_col_status">Κατάσταση</string>
-    <string name="staff_dashboard_col_title">Τίτλος</string>
-    <string name="staff_dashboard_col_total">Σύνολο</string>
     <string name="staff_dashboard_empty_audit">Δεν υπάρχουν καταχωρήσεις ελέγχου</string>
     <string name="staff_dashboard_empty_listings">Καμία πρόσφατη αγγελία</string>
     <string name="staff_dashboard_empty_moderation">Κανένας πρόσφατος συντονισμός</string>
@@ -210,7 +196,6 @@
     <string name="staff_dashboard_kpi_sellers">Πωλητές</string>
     <string name="staff_dashboard_kpi_total_orders">Σύνολο παραγγελιών</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">Όχι</string>
     <string name="staff_dashboard_open_sidebar">Άνοιγμα πλευρικής μπάρας</string>
     <string name="staff_dashboard_order_fallback">Παραγγελία #%1$s</string>
     <string name="staff_dashboard_system">Σύστημα</string>
@@ -219,7 +204,6 @@
     <string name="staff_dashboard_tab_moderation">Συντονισμός</string>
     <string name="staff_dashboard_tab_orders">Παραγγελίες</string>
     <string name="staff_dashboard_tab_signups">Εγγραφές</string>
-    <string name="staff_dashboard_yes">Ναι</string>
     <string name="staff_disputes_any_status">Όλες οι καταστάσεις</string>
     <string name="staff_disputes_cancel">Ακύρωση</string>
     <string name="staff_disputes_close">Κλείσιμο</string>
@@ -281,10 +265,7 @@
     <string name="staff_disputes_stripe_subscription_canceled">η συνδρομή ακυρώθηκε</string>
     <string name="staff_disputes_stripe_unrecognized">μη αναγνωρισμένη χρέωση</string>
     <string name="staff_disputes_view">Προβολή</string>
-    <string name="staff_filter_chip_remove">Αφαίρεση φίλτρου</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Συντονισμός</string>
-    <string name="staff_filter_label_query">Αναζήτηση</string>
     <string name="staff_filter_label_seller">Πωλητής</string>
     <string name="staff_filter_label_status">Κατάσταση</string>
     <string name="staff_filter_label_type">Τύπος</string>
@@ -376,7 +357,6 @@
     <string name="staff_reviews_filter_published">Δημοσιεύτηκε</string>
     <string name="staff_reviews_filter_removed">Αφαιρέθηκε</string>
     <string name="staff_reviews_order_label">παραγγελία #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Ενέργειες</string>
     <string name="staff_reviews_remove_confirm">Αφαίρεση</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s στις %3$s. Διαγραφή αυτής της κριτικής μόνιμα; Αυτή η ενέργεια δεν αναιρείται.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Διαγραφή αυτής της κριτικής μόνιμα; Αυτή η ενέργεια δεν αναιρείται.</string>
@@ -433,6 +413,7 @@
     <string name="staff_status_suspended">Σε αναστολή</string>
     <string name="staff_team_action_remove">Αφαίρεση</string>
     <string name="staff_team_add_member">Προσθήκη μέλους</string>
+    <string name="staff_team_added_by_label">Προστέθηκε από:</string>
     <string name="staff_team_added_by_system">Σύστημα</string>
     <string name="staff_team_col_added_by">Προστέθηκε από</string>
     <string name="staff_team_dialog_add">Προσθήκη</string>
@@ -452,6 +433,7 @@
     <string name="staff_team_role_support">Υποστήριξη</string>
     <string name="staff_team_toast_add_failed">Αποτυχία προσθήκης μέλους</string>
     <string name="staff_team_toast_removed">Το μέλος αφαιρέθηκε</string>
+    <string name="staff_team_toast_added">Το μέλος προστέθηκε</string>
     <string name="staff_team_toast_role_updated">Ο ρόλος ενημερώθηκε</string>
 
     <string name="staff_config_field_stripe_webhook">Μυστικό υπογραφής Webhook</string>

@@ -18,6 +18,9 @@
     <string name="common_back">Nazaj</string>
     <string name="common_close">Zapri</string>
     <string name="common_cancel">Prekliči</string>
+    <string name="common_filter">Filter</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Odstrani filter</string>
     <string name="common_confirm">Potrdi</string>
     <string name="common_save">Shrani</string>
     <string name="common_saving">Shranjevanje…</string>

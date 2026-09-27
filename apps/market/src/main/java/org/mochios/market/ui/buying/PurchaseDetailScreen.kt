@@ -77,8 +77,8 @@ import org.mochios.market.model.OrderStatus
 import org.mochios.market.model.Review
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.components.AuditTimeline
+import org.mochios.market.ui.components.MarketStatusBadge
 import org.mochios.market.ui.components.disputeReasonLabel
-import org.mochios.market.ui.components.StatusBadge
 import org.mochios.market.ui.dialog.RequestRefundDialog
 
 @Composable
@@ -212,7 +212,7 @@ private fun OrderSummaryCard(order: Order, listing: Listing) {
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.weight(1f),
                 )
-                StatusBadge(status = order.status?.name?.lowercase() ?: "")
+                MarketStatusBadge(status = order.status?.name?.lowercase() ?: "")
             }
             Text(
                 listing.title.ifBlank { "Order #${order.id}" },
@@ -418,7 +418,7 @@ private fun DisputeCard(dispute: Dispute, orderTotal: Long, currency: Currency) 
                     style = MaterialTheme.typography.titleSmall,
                     modifier = Modifier.weight(1f),
                 )
-                StatusBadge(status = dispute.status)
+                MarketStatusBadge(status = dispute.status)
             }
             if (isChargeback) {
                 Text(

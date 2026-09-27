@@ -18,6 +18,9 @@
     <string name="common_back">بازگشت</string>
     <string name="common_close">بستن</string>
     <string name="common_cancel">لغو</string>
+    <string name="common_filter">فیلتر</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">حذف فیلتر</string>
     <string name="common_confirm">تأیید</string>
     <string name="common_save">ذخیره</string>
     <string name="common_saving">در حال ذخیره…</string>

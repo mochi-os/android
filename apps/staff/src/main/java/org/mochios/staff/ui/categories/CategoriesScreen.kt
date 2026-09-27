@@ -8,32 +8,37 @@ package org.mochios.staff.ui.categories
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Category
+import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -43,20 +48,25 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.LoadingState
 import org.mochios.android.ui.components.MochiAlertDialog
-import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.staff.R
 import org.mochios.staff.model.Category
+import org.mochios.staff.navigation.StaffApp
 import org.mochios.staff.ui.components.StaffStatusBadge
-import org.mochios.staff.ui.dialog.CategoryEditDialog
 
 /**
  * Port of `apps/staff/web/src/features/categories/categories-page.tsx`; the Add
- * action is mounted at the route level in StaffNavGraph.
+ * action is mounted at the route level in StaffNavGraph, and both Add and Edit
+ * open [CategoryFormScreen].
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CategoriesScreen(
-    @Suppress("UNUSED_PARAMETER") navController: NavController,
+    navController: NavController,
+    snackbarHostState: SnackbarHostState,
     viewModel: CategoriesViewModel = hiltViewModel(),
 ) {
     // Categories surfaces are admin-gated server-side, but every staff role
@@ -67,7 +77,6 @@ fun CategoriesScreen(
     val me = org.mochios.staff.ui.components.LocalStaffMe.current
 
     val state by viewModel.state.collectAsState()
-    val snackbarHostState = remember { SnackbarHostState() }
     val resources = LocalResources.current
 
     LaunchedEffect(Unit) {
@@ -83,30 +92,11 @@ fun CategoriesScreen(
         }
     }
 
-    Box(modifier = Modifier.fillMaxSize()) {
-        CategoriesBody(
-            state = state,
-            onEdit = viewModel::openEdit,
-            onDelete = viewModel::askDelete,
-        )
-        SnackbarHost(
-            hostState = snackbarHostState,
-            modifier = Modifier.align(Alignment.BottomCenter),
-        )
-    }
-
-    // Edit / create dialog
-    if (state.dialogMode != null) {
-        CategoryEditDialog(
-            mode = state.dialogMode!!,
-            form = state.form,
-            categories = state.categories,
-            submitting = state.submitting,
-            onFormChange = viewModel::setForm,
-            onSubmit = viewModel::submit,
-            onCancel = viewModel::closeDialog,
-        )
-    }
+    CategoriesBody(
+        state = state,
+        onEdit = { category -> navController.navigate(StaffApp.categoryEdit(category.id)) },
+        onDelete = viewModel::askDelete,
+    )
 
     // Delete confirmation
     val deleteTarget = state.deleteTarget
@@ -129,136 +119,141 @@ private fun CategoriesBody(
     onEdit: (Category) -> Unit,
     onDelete: (Category) -> Unit,
 ) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize(),
-    ) {
-        when {
-            state.isLoading && state.categories.isEmpty() -> LoadingState()
-            state.categories.isEmpty() -> EmptyState(
-                icon = Icons.Default.Category,
-                title = stringResource(R.string.staff_categories_empty),
-            )
-            else -> {
-                CategoriesHeader()
-                HorizontalDivider()
-                LazyColumn(modifier = Modifier.fillMaxSize()) {
-                    items(state.categories, key = { it.id }) { cat ->
-                        CategoryRow(
-                            category = cat,
-                            categories = state.categories,
-                            onEdit = { onEdit(cat) },
-                            onDelete = { onDelete(cat) },
-                        )
-                        HorizontalDivider()
-                    }
-                }
+    when {
+        state.isLoading && state.categories.isEmpty() -> LoadingState()
+        state.categories.isEmpty() -> EmptyState(
+            icon = Icons.Default.Category,
+            title = stringResource(R.string.staff_categories_empty),
+        )
+        else -> LazyColumn(
+            modifier = Modifier.fillMaxSize(),
+            contentPadding = PaddingValues(top = 16.dp, bottom = 88.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp),
+        ) {
+            items(state.categories, key = { category -> category.id }) { category ->
+                CategoryCard(
+                    category = category,
+                    categories = state.categories,
+                    onEdit = { onEdit(category) },
+                    onDelete = { onDelete(category) },
+                )
             }
         }
     }
 }
 
 @Composable
-private fun CategoriesHeader() {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 8.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        Text(
-            text = stringResource(R.string.staff_categories_col_name),
-            style = MaterialTheme.typography.labelMedium,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-            fontWeight = FontWeight.SemiBold,
-            modifier = Modifier.weight(2f),
-        )
-        Text(
-            text = stringResource(R.string.staff_categories_col_types),
-            style = MaterialTheme.typography.labelMedium,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-            fontWeight = FontWeight.SemiBold,
-            modifier = Modifier.weight(1f),
-        )
-        Text(
-            text = stringResource(R.string.staff_categories_col_status),
-            style = MaterialTheme.typography.labelMedium,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-            fontWeight = FontWeight.SemiBold,
-            modifier = Modifier.weight(1f),
-        )
-    }
-}
-
-@Composable
-private fun CategoryRow(
+private fun CategoryCard(
     category: Category,
     categories: List<Category>,
     onEdit: () -> Unit,
     onDelete: () -> Unit,
 ) {
-    // Resolve the parent ID to the parent category's name. Fall back to the
-    // standard "—" placeholder when the parent is unset OR the lookup misses
-    // (parent may have been deleted, or the list page might have been
-    // paginated before the parent loaded in earlier ports of this screen).
-    val noneLabel = stringResource(R.string.staff_categories_type_none)
-    val parentLabel = category.parent?.let { pid ->
-        categories.firstOrNull { it.id == pid }?.name ?: noneLabel
-    } ?: noneLabel
+    val parentName = category.parent?.let { parentId ->
+        categories.firstOrNull { candidate -> candidate.id == parentId }?.name
+    }
     val types = when {
         category.digital && category.physical -> stringResource(R.string.staff_categories_type_both)
         category.digital -> stringResource(R.string.staff_categories_type_digital)
         category.physical -> stringResource(R.string.staff_categories_type_physical)
         else -> stringResource(R.string.staff_categories_type_none)
     }
-    val statusKey = if (category.active) "active" else "inactive"
-
-    Column(
+    MochiCard(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 12.dp),
+            .padding(horizontal = 16.dp),
+        shape = MaterialTheme.shapes.medium,
     ) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Column(modifier = Modifier.weight(2f)) {
-                Text(
-                    text = category.name,
-                    style = MaterialTheme.typography.bodyLarge,
-                    fontWeight = FontWeight.SemiBold,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
+        Column(modifier = Modifier.padding(16.dp)) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Column(modifier = Modifier.weight(1f)) {
+                    Text(
+                        text = category.name,
+                        style = MaterialTheme.typography.titleMedium,
+                        maxLines = 2,
+                        overflow = TextOverflow.Ellipsis,
+                    )
+                    Text(
+                        text = category.slug,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+                StaffStatusBadge(
+                    status = if (category.active) "active" else "inactive",
+                    modifier = Modifier.padding(start = 8.dp),
                 )
-                Text(
-                    text = category.slug,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-                Text(
-                    text = parentLabel,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                CategoryMenu(onEdit = onEdit, onDelete = onDelete)
+            }
+            Spacer(Modifier.height(8.dp))
+            if (parentName != null) {
+                CategoryField(
+                    label = stringResource(R.string.staff_categories_dialog_parent),
+                    value = parentName,
                 )
             }
-            Column(modifier = Modifier.weight(1f)) {
-                Text(text = types, style = MaterialTheme.typography.bodyMedium)
-                Text(
-                    text = category.position.toString(),
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-            }
-            Box(modifier = Modifier.weight(1f), contentAlignment = Alignment.CenterStart) {
-                StaffStatusBadge(status = statusKey)
-            }
+            CategoryField(
+                label = stringResource(R.string.staff_categories_col_types),
+                value = types,
+            )
+            CategoryField(
+                label = stringResource(R.string.staff_categories_dialog_position),
+                value = category.position.toString(),
+            )
         }
-        Spacer(modifier = Modifier.padding(top = 6.dp))
-        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            MochiOutlinedButton(onClick = onEdit) {
-                Text(stringResource(R.string.staff_categories_action_edit))
-            }
-            MochiOutlinedButton(onClick = onDelete) {
-                Text(stringResource(R.string.staff_categories_action_delete))
-            }
-            Spacer(modifier = Modifier.width(0.dp))
+    }
+}
+
+@Composable
+private fun CategoryField(label: String, value: String) {
+    Row(modifier = Modifier.padding(vertical = 2.dp)) {
+        Text(
+            text = label,
+            style = MaterialTheme.typography.labelMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            maxLines = 2,
+            overflow = TextOverflow.Ellipsis,
+            modifier = Modifier
+                .widthIn(min = 80.dp, max = 144.dp)
+                .padding(top = 2.dp, end = 8.dp),
+        )
+        Text(
+            text = value,
+            style = MaterialTheme.typography.bodyMedium,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+        )
+    }
+}
+
+@Composable
+private fun CategoryMenu(onEdit: () -> Unit, onDelete: () -> Unit) {
+    var expanded by remember { mutableStateOf(false) }
+    Box {
+        MochiIconButton(onClick = { expanded = true }) {
+            Icon(
+                Icons.Default.MoreVert,
+                contentDescription = stringResource(MochiR.string.common_more_options),
+            )
+        }
+        MochiDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+            MochiDropdownMenuItem(
+                text = { Text(stringResource(R.string.staff_categories_action_edit)) },
+                onClick = {
+                    expanded = false
+                    onEdit()
+                },
+                leadingIcon = { Icon(Icons.Outlined.Edit, contentDescription = null) },
+            )
+            MochiDropdownMenuItem(
+                text = { Text(stringResource(R.string.staff_categories_action_delete)) },
+                onClick = {
+                    expanded = false
+                    onDelete()
+                },
+                leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
+                destructive = true,
+            )
         }
     }
 }

@@ -18,6 +18,9 @@
     <string name="common_back">ተመለስ</string>
     <string name="common_close">ዝጋ</string>
     <string name="common_cancel">ይቅር</string>
+    <string name="common_filter">ማጣሪያ</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">ማጣሪያ አስወግድ</string>
     <string name="common_confirm">አረጋግጥ</string>
     <string name="common_save">ያስቀምጡ</string>
     <string name="common_saving">በማስቀመጥ ላይ…</string>

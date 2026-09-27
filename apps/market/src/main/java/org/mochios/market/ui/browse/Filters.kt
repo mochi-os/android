@@ -29,6 +29,25 @@ enum class Filter {
 }
 
 /**
+ * How many of the filters with a pill [filters] sets; any at all puts a dot on
+ * the filter button. A price range counts once whichever bounds it has, and a
+ * sort order counts since it gets a pill and a chip too; the currency the range
+ * is read in is not a filter of its own.
+ */
+fun activeFilterCount(filters: Map<Filter, String>): Int {
+    val attributes = listOf(
+        Filter.CATEGORY,
+        Filter.TYPE,
+        Filter.CONDITION,
+        Filter.PRICING,
+        Filter.DELIVERY,
+        Filter.SORT,
+    ).count { filter -> filters.containsKey(filter) }
+    val priceRange = filters.containsKey(Filter.PRICE_MIN) || filters.containsKey(Filter.PRICE_MAX)
+    return attributes + if (priceRange) 1 else 0
+}
+
+/**
  * Browse screen state. [filters] is sparse: a missing key means "all", default
  * sort, or no price bound.
  */

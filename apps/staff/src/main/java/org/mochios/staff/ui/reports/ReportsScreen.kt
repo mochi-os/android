@@ -5,11 +5,10 @@
 
 package org.mochios.staff.ui.reports
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -17,9 +16,10 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Flag
+import androidx.compose.material.icons.outlined.Gavel
+import androidx.compose.material.icons.outlined.Visibility
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
@@ -34,27 +34,28 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
+import org.mochios.android.format.formatFingerprint
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.ui.components.ChoiceFilter
 import org.mochios.android.ui.components.EmptyState
-import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.FilterDropdown
+import org.mochios.android.ui.components.FilterBar
+import org.mochios.android.ui.components.FilterBarStyle
 import org.mochios.android.ui.components.InfiniteList
-import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.staff.R
-import org.mochios.android.format.formatFingerprint
 import org.mochios.staff.model.Report
-import org.mochios.staff.ui.components.FilterChipSpec
-import org.mochios.staff.ui.components.FilterChipsRow
+import org.mochios.staff.ui.components.StaffCardAction
+import org.mochios.staff.ui.components.StaffCardMenu
 import org.mochios.staff.ui.components.StaffStatusBadge
+import org.mochios.staff.ui.components.StaffUserAvatar
 import org.mochios.staff.ui.dialog.ReportActionDialog
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -62,6 +63,8 @@ import org.mochios.staff.ui.dialog.ReportActionDialog
 fun ReportsScreen(
     navController: NavController,
     viewModel: ReportsViewModel = hiltViewModel(),
+    filtersOpen: Boolean = false,
+    onFiltersDismiss: () -> Unit = {},
 ) {
     val state by viewModel.state.collectAsState()
     val snackbar = remember { SnackbarHostState() }
@@ -85,6 +88,8 @@ fun ReportsScreen(
     Box(Modifier.fillMaxSize()) {
         ReportsBody(
             state = state,
+            filtersOpen = filtersOpen,
+            onFiltersDismiss = onFiltersDismiss,
             onTypeChange = viewModel::setType,
             onStatusChange = viewModel::setStatus,
             onLoadMore = viewModel::loadMore,
@@ -117,6 +122,8 @@ fun ReportsScreen(
 @Composable
 private fun ReportsBody(
     state: ReportsUiState,
+    filtersOpen: Boolean,
+    onFiltersDismiss: () -> Unit,
     onTypeChange: (String?) -> Unit,
     onStatusChange: (String?) -> Unit,
     onLoadMore: () -> Unit,
@@ -125,17 +132,28 @@ private fun ReportsBody(
     onRetry: () -> Unit,
 ) {
     Column(Modifier.fillMaxSize()) {
-        FiltersRow(
-            type = state.type,
-            status = state.status,
-            onTypeChange = onTypeChange,
-            onStatusChange = onStatusChange,
-        )
-        ActiveFilterChips(
-            type = state.type,
-            status = state.status,
-            onTypeChange = onTypeChange,
-            onStatusChange = onStatusChange,
+        FilterBar(
+            style = FilterBarStyle.Sheet,
+            sheetOpen = filtersOpen,
+            onSheetDismiss = onFiltersDismiss,
+            filters = listOf(
+                ChoiceFilter(
+                    label = stringResource(R.string.staff_reports_filter_type_label),
+                    chipLabel = stringResource(R.string.staff_filter_label_type),
+                    anyLabel = stringResource(R.string.staff_reports_any_type),
+                    options = reportTypeOptions(),
+                    current = state.type,
+                    onSelect = onTypeChange,
+                ),
+                ChoiceFilter(
+                    label = stringResource(R.string.staff_reports_filter_status_label),
+                    chipLabel = stringResource(R.string.staff_filter_label_status),
+                    anyLabel = stringResource(R.string.staff_reports_any_status),
+                    options = reportStatusOptions(),
+                    current = state.status,
+                    onSelect = onStatusChange,
+                ),
+            ),
         )
 
         when {
@@ -176,88 +194,90 @@ private fun ReportRow(
 ) {
     val format = LocalFormat.current
 
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 12.dp, vertical = 6.dp)
-            .clip(RoundedCornerShape(10.dp))
-            .background(MaterialTheme.colorScheme.surface)
-            .padding(12.dp),
-    ) {
-        // Target (listing title links to market detail; user shows resolved name).
-        val targetText = targetText(report)
-        if (report.type == "listing" && report.listing != null) {
-            Text(
-                text = targetText,
-                style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clickable { onOpenListing(report.listing.id) },
-            )
-        } else {
-            Text(
-                text = targetText,
-                style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.fillMaxWidth(),
-            )
-        }
-        Spacer(Modifier.height(6.dp))
+    val cardModifier = Modifier
+        .fillMaxWidth()
+        .padding(horizontal = 16.dp, vertical = 6.dp)
+    val content: @Composable ColumnScope.() -> Unit = {
+        Column(modifier = Modifier.padding(16.dp)) {
+            // Target: the listing title, or the reported user's resolved name.
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    text = targetText(report),
+                    style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f),
+                )
+                val pending = report.status == "pending"
+                StaffCardMenu(
+                    actions = listOf(
+                        StaffCardAction(
+                            label = if (pending) {
+                                stringResource(R.string.staff_reports_action)
+                            } else {
+                                stringResource(R.string.staff_reports_view)
+                            },
+                            icon = if (pending) Icons.Outlined.Gavel else Icons.Outlined.Visibility,
+                            onClick = onActionClick,
+                        ),
+                    ),
+                )
+            }
+            Spacer(Modifier.height(6.dp))
 
-        // Reporter row.
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            EntityAvatar(
-                name = report.reporterName.ifBlank { report.reporter },
-                seed = report.reporter,
-                size = 20.dp,
-            )
-            Spacer(Modifier.width(6.dp))
+            // Reporter row.
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                StaffUserAvatar(
+                    name = report.reporterName.ifBlank { report.reporter },
+                    id = report.reporter,
+                    size = 20.dp,
+                )
+                Spacer(Modifier.width(6.dp))
+                Text(
+                    text = report.reporterName.ifBlank { formatFingerprint(report.reporterFingerprint) },
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f),
+                )
+            }
+            Spacer(Modifier.height(8.dp))
+
+            // Type / status / reason chips.
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                StaffStatusBadge(status = report.type)
+                StaffStatusBadge(status = report.status)
+            }
+            Spacer(Modifier.height(6.dp))
+
+            // Reason text.
             Text(
-                text = report.reporterName.ifBlank { formatFingerprint(report.reporterFingerprint) },
-                style = MaterialTheme.typography.labelSmall,
+                text = reasonLabel(report.reason),
+                style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
-                maxLines = 1,
+                maxLines = 2,
                 overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.weight(1f),
             )
-        }
-        Spacer(Modifier.height(8.dp))
+            Spacer(Modifier.height(6.dp))
 
-        // Type / status / reason chips.
-        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-            StaffStatusBadge(status = report.type)
-            StaffStatusBadge(status = report.status)
-        }
-        Spacer(Modifier.height(6.dp))
-
-        // Reason text.
-        Text(
-            text = reasonLabel(report.reason),
-            style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-            maxLines = 2,
-            overflow = TextOverflow.Ellipsis,
-        )
-        Spacer(Modifier.height(6.dp))
-
-        // Created + action row.
-        Row(verticalAlignment = Alignment.CenterVertically) {
             Text(
                 text = format.formatTimestamp(report.created),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.weight(1f),
             )
-            MochiOutlinedButton(onClick = onActionClick) {
-                Text(
-                    if (report.status == "pending") stringResource(R.string.staff_reports_action)
-                    else stringResource(R.string.staff_reports_view),
-                )
-            }
         }
+    }
+    val listing = report.listing
+    if (report.type == "listing" && listing != null) {
+        MochiCard(
+            onClick = { onOpenListing(listing.id) },
+            modifier = cardModifier,
+            shape = MaterialTheme.shapes.medium,
+            content = content,
+        )
+    } else {
+        MochiCard(modifier = cardModifier, shape = MaterialTheme.shapes.medium, content = content)
     }
 }
 
@@ -280,38 +300,6 @@ private fun reasonLabel(reason: String): String = when (reason) {
 }
 
 @Composable
-private fun FiltersRow(
-    type: String?,
-    status: String?,
-    onTypeChange: (String?) -> Unit,
-    onStatusChange: (String?) -> Unit,
-) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 8.dp),
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
-    ) {
-        FilterDropdown(
-            label = stringResource(R.string.staff_reports_filter_type_label),
-            current = type,
-            options = reportTypeOptions(),
-            anyLabel = stringResource(R.string.staff_reports_any_type),
-            onSelect = onTypeChange,
-            modifier = Modifier.weight(1f),
-        )
-        FilterDropdown(
-            label = stringResource(R.string.staff_reports_filter_status_label),
-            current = status,
-            options = reportStatusOptions(),
-            anyLabel = stringResource(R.string.staff_reports_any_status),
-            onSelect = onStatusChange,
-            modifier = Modifier.weight(1f),
-        )
-    }
-}
-
-@Composable
 private fun reportTypeOptions(): List<Pair<String, String>> = listOf(
     "listing" to stringResource(R.string.staff_reports_type_listing),
     "user" to stringResource(R.string.staff_reports_type_user),
@@ -325,26 +313,3 @@ private fun reportStatusOptions(): List<Pair<String, String>> = listOf(
     "dismissed" to stringResource(R.string.staff_reports_status_dismissed),
 )
 
-@Composable
-private fun ActiveFilterChips(
-    type: String?,
-    status: String?,
-    onTypeChange: (String?) -> Unit,
-    onStatusChange: (String?) -> Unit,
-) {
-    val typeLabel = stringResource(R.string.staff_filter_label_type)
-    val statusLabel = stringResource(R.string.staff_filter_label_status)
-    val typeOpts = reportTypeOptions()
-    val statusOpts = reportStatusOptions()
-    val chips = buildList {
-        if (!type.isNullOrBlank()) {
-            val value = typeOpts.firstOrNull { it.first == type }?.second ?: type
-            add(FilterChipSpec(typeLabel, value) { onTypeChange(null) })
-        }
-        if (!status.isNullOrBlank()) {
-            val value = statusOpts.firstOrNull { it.first == status }?.second ?: status
-            add(FilterChipSpec(statusLabel, value) { onStatusChange(null) })
-        }
-    }
-    FilterChipsRow(chips = chips)
-}

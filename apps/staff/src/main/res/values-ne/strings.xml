@@ -15,7 +15,6 @@
     <string name="staff_accounts_empty">कुनै खाता भेटिएन</string>
     <string name="staff_accounts_filter_seller_label">बिक्रेता</string>
     <string name="staff_accounts_filter_status_label">स्थिति</string>
-    <string name="staff_accounts_history">इतिहास</string>
     <string name="staff_accounts_history_title">खाता इतिहास</string>
     <string name="staff_accounts_notes_label">नोटहरू</string>
     <string name="staff_accounts_reason_label">कारण</string>
@@ -125,14 +124,11 @@
     <string name="staff_categories_action_delete">मेटाउनुहोस्</string>
     <string name="staff_categories_action_edit">सम्पादन</string>
     <string name="staff_categories_add">थप्नुहोस्</string>
-    <string name="staff_categories_col_name">नाम</string>
-    <string name="staff_categories_col_status">स्थिति</string>
     <string name="staff_categories_col_types">प्रकारहरू</string>
     <string name="staff_categories_create">सिर्जना गर्नुहोस्</string>
     <string name="staff_categories_delete_confirm">मेटाउनुहोस्</string>
     <string name="staff_categories_delete_title">श्रेणी मेटाउनुहोस्</string>
     <string name="staff_categories_dialog_active">सक्रिय</string>
-    <string name="staff_categories_dialog_cancel">रद्द गर्नुहोस्</string>
     <string name="staff_categories_dialog_create_title">श्रेणी सिर्जना गर्नुहोस्</string>
     <string name="staff_categories_dialog_creating">सिर्जना गर्दै…</string>
     <string name="staff_categories_dialog_digital">डिजिटल</string>
@@ -174,21 +170,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">सुरक्षित गर्न असफल</string>
     <string name="staff_config_toast_saved">सुरक्षित गरियो</string>
-    <string name="staff_dashboard_col_action">कार्य</string>
-    <string name="staff_dashboard_col_actor">अभिनेता</string>
     <string name="staff_dashboard_col_buyer">खरिदकर्ता</string>
-    <string name="staff_dashboard_col_date">मिति</string>
     <string name="staff_dashboard_col_detail">विवरण</string>
-    <string name="staff_dashboard_col_listing">सूची</string>
-    <string name="staff_dashboard_col_moderation">मोडरेसन</string>
-    <string name="staff_dashboard_col_name">नाम</string>
     <string name="staff_dashboard_col_object">वस्तु</string>
     <string name="staff_dashboard_col_reason">कारण</string>
-    <string name="staff_dashboard_col_score">स्कोर</string>
     <string name="staff_dashboard_col_seller">बिक्रेता</string>
-    <string name="staff_dashboard_col_status">स्थिति</string>
-    <string name="staff_dashboard_col_title">शीर्षक</string>
-    <string name="staff_dashboard_col_total">जम्मा</string>
     <string name="staff_dashboard_empty_audit">कुनै अडिट प्रविष्टि छैन</string>
     <string name="staff_dashboard_empty_listings">कुनै हालैको लिस्टिङ छैन</string>
     <string name="staff_dashboard_empty_moderation">कुनै हालैको मोडरेसन छैन</string>
@@ -203,7 +189,6 @@
     <string name="staff_dashboard_kpi_sellers">बिक्रेताहरू</string>
     <string name="staff_dashboard_kpi_total_orders">जम्मा अर्डरहरू</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">होइन</string>
     <string name="staff_dashboard_open_sidebar">साइडबार खोल्नुहोस्</string>
     <string name="staff_dashboard_system">प्रणाली</string>
     <string name="staff_dashboard_tab_audit">अडिट</string>
@@ -211,7 +196,6 @@
     <string name="staff_dashboard_tab_moderation">मोडरेसन</string>
     <string name="staff_dashboard_tab_orders">अर्डरहरू</string>
     <string name="staff_dashboard_tab_signups">साइनअप</string>
-    <string name="staff_dashboard_yes">हो</string>
     <string name="staff_disputes_any_status">सबै स्थितिहरू</string>
     <string name="staff_disputes_cancel">रद्द गर्नुहोस्</string>
     <string name="staff_disputes_close">बन्द गर्नुहोस्</string>
@@ -249,10 +233,7 @@
     <string name="staff_disputes_status_responded">प्रतिक्रिया दिइयो</string>
     <string name="staff_disputes_status_reviewing">समीक्षा गर्दै</string>
     <string name="staff_disputes_view">हेर्नुहोस्</string>
-    <string name="staff_filter_chip_remove">फिल्टर हटाउनुहोस्</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">मोडरेसन</string>
-    <string name="staff_filter_label_query">खोज्नुहोस्</string>
     <string name="staff_filter_label_seller">बिक्रेता</string>
     <string name="staff_filter_label_status">स्थिति</string>
     <string name="staff_filter_label_type">प्रकार</string>
@@ -340,7 +321,6 @@
     <string name="staff_reviews_filter_all">सबै स्थितिहरू</string>
     <string name="staff_reviews_filter_published">प्रकाशित</string>
     <string name="staff_reviews_filter_removed">हटाइयो</string>
-    <string name="staff_reviews_overflow_actions">कार्यहरू</string>
     <string name="staff_reviews_remove_confirm">हटाउनुहोस्</string>
     <string name="staff_reviews_remove_title">समीक्षा हटाउने?</string>
     <string name="staff_reviews_role_buyer">खरिदकर्ता</string>
@@ -395,6 +375,7 @@
     <string name="staff_status_suspended">निलम्बित</string>
     <string name="staff_team_action_remove">हटाउनुहोस्</string>
     <string name="staff_team_add_member">सदस्य थप्नुहोस्</string>
+    <string name="staff_team_added_by_label">द्वारा थपिएको:</string>
     <string name="staff_team_added_by_system">प्रणाली</string>
     <string name="staff_team_col_added_by">द्वारा थपिएको</string>
     <string name="staff_team_dialog_add">थप्नुहोस्</string>
@@ -413,6 +394,7 @@
     <string name="staff_team_role_support">समर्थन</string>
     <string name="staff_team_toast_add_failed">सदस्य थप्न असफल</string>
     <string name="staff_team_toast_removed">सदस्य हटाइयो</string>
+    <string name="staff_team_toast_added">सदस्य थपियो</string>
     <string name="staff_team_toast_role_updated">भूमिका अद्यावधिक गरियो</string>
     <string name="staff_audit_action_auction_cancelled">लिलाम रद्द गरियो</string>
     <string name="staff_dashboard_order_fallback">अर्डर #%1$s</string>

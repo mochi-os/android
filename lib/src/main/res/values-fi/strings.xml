@@ -18,6 +18,9 @@
     <string name="common_back">Takaisin</string>
     <string name="common_close">Sulje</string>
     <string name="common_cancel">Peruuta</string>
+    <string name="common_filter">Suodata</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Poista suodatin</string>
     <string name="common_confirm">Vahvista</string>
     <string name="common_save">Tallenna</string>
     <string name="common_saving">Tallennetaan…</string>

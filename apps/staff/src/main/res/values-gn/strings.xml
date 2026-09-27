@@ -13,7 +13,6 @@
     <string name="staff_accounts_empty">Ndojejuhúi mba\'ete</string>
     <string name="staff_accounts_filter_seller_label">Hepyme\'ẽha</string>
     <string name="staff_accounts_filter_status_label">Mba\'éichapa</string>
-    <string name="staff_accounts_history">Tembiasakue</string>
     <string name="staff_accounts_history_title">Mba\'ete rembiasakue</string>
     <string name="staff_accounts_notes_label">Apuntes</string>
     <string name="staff_accounts_reason_label">Mba\'érepa</string>
@@ -122,14 +121,11 @@
     <string name="staff_categories_action_delete">Hundi</string>
     <string name="staff_categories_action_edit">Embojuruja</string>
     <string name="staff_categories_add">Embojuaju</string>
-    <string name="staff_categories_col_name">Téra</string>
-    <string name="staff_categories_col_status">Mba\'éichapa</string>
     <string name="staff_categories_col_types">Mba\'éichagua kuéra</string>
     <string name="staff_categories_create">Emoheñói</string>
     <string name="staff_categories_delete_confirm">Hundi</string>
     <string name="staff_categories_delete_title">Hundi categoría</string>
     <string name="staff_categories_dialog_active">Oikóva</string>
-    <string name="staff_categories_dialog_cancel">Heja</string>
     <string name="staff_categories_dialog_create_title">Emoheñói categoría</string>
     <string name="staff_categories_dialog_creating">Embojeguávahína…</string>
     <string name="staff_categories_dialog_digital">Digital</string>
@@ -171,21 +167,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">Ndaikatúi oñongatu</string>
     <string name="staff_config_toast_saved">Oñeñongatu</string>
-    <string name="staff_dashboard_col_action">Tembiapo</string>
-    <string name="staff_dashboard_col_actor">Oporoapóva</string>
     <string name="staff_dashboard_col_buyer">Ojoguáva</string>
-    <string name="staff_dashboard_col_date">Ára</string>
     <string name="staff_dashboard_col_detail">Detalle</string>
-    <string name="staff_dashboard_col_listing">Listado</string>
-    <string name="staff_dashboard_col_moderation">Ñangareko</string>
-    <string name="staff_dashboard_col_name">Téra</string>
     <string name="staff_dashboard_col_object">Mba\'e</string>
     <string name="staff_dashboard_col_reason">Mba\'érepa</string>
-    <string name="staff_dashboard_col_score">Puntaje</string>
     <string name="staff_dashboard_col_seller">Hepyme\'ẽha</string>
-    <string name="staff_dashboard_col_status">Mba\'éichapa</string>
-    <string name="staff_dashboard_col_title">Téra</string>
-    <string name="staff_dashboard_col_total">Total</string>
     <string name="staff_dashboard_empty_audit">Ndaipóri auditoría jehai</string>
     <string name="staff_dashboard_empty_listings">Ndaipóri jehepyme\'ẽ ramoguáva</string>
     <string name="staff_dashboard_empty_moderation">Ndaipóri moderación ramoguáva</string>
@@ -200,7 +186,6 @@
     <string name="staff_dashboard_kpi_sellers">Hepyme\'ẽhakuéra</string>
     <string name="staff_dashboard_kpi_total_orders">Pedido total</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">Nahániri</string>
     <string name="staff_dashboard_open_sidebar">Embovy yke pe</string>
     <string name="staff_dashboard_system">Sistema</string>
     <string name="staff_dashboard_tab_audit">Auditoría</string>
@@ -208,7 +193,6 @@
     <string name="staff_dashboard_tab_moderation">Ñangareko</string>
     <string name="staff_dashboard_tab_orders">Pedidokuéra</string>
     <string name="staff_dashboard_tab_signups">Ñehupi</string>
-    <string name="staff_dashboard_yes">Heẽ</string>
     <string name="staff_disputes_any_status">Opaite estado</string>
     <string name="staff_disputes_cancel">Heja</string>
     <string name="staff_disputes_close">Mboty</string>
@@ -245,10 +229,7 @@
     <string name="staff_disputes_status_responded">Oñembohováima</string>
     <string name="staff_disputes_status_reviewing">Oñehesa\'ỹijohína</string>
     <string name="staff_disputes_view">Ehecha</string>
-    <string name="staff_filter_chip_remove">Embogue mboheko</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Ñangareko</string>
-    <string name="staff_filter_label_query">Eheka</string>
     <string name="staff_filter_label_seller">Hepyme\'ẽha</string>
     <string name="staff_filter_label_status">Mba\'éichapa</string>
     <string name="staff_filter_label_type">Mba\'éichagua</string>
@@ -335,7 +316,6 @@
     <string name="staff_reviews_filter_all">Opaite estado</string>
     <string name="staff_reviews_filter_published">Oñemoherakuãma</string>
     <string name="staff_reviews_filter_removed">Oñembogueta</string>
-    <string name="staff_reviews_overflow_actions">Tembiapokuéra</string>
     <string name="staff_reviews_remove_confirm">Embogue</string>
     <string name="staff_reviews_remove_title">Embogue reseña?</string>
     <string name="staff_reviews_role_buyer">Ojoguáva</string>
@@ -390,6 +370,7 @@
     <string name="staff_status_suspended">Oñembopytu\'u</string>
     <string name="staff_team_action_remove">Embogue</string>
     <string name="staff_team_add_member">Embojuaju membro</string>
+    <string name="staff_team_added_by_label">Ombojuajúva:</string>
     <string name="staff_team_added_by_system">Sistema</string>
     <string name="staff_team_col_added_by">Ombojuajúva</string>
     <string name="staff_team_dialog_add">Embojuaju</string>
@@ -407,6 +388,7 @@
     <string name="staff_team_role_support">Pytyvõ</string>
     <string name="staff_team_toast_add_failed">Ndaikatúi oñembojuaju irũ</string>
     <string name="staff_team_toast_removed">Oñembogue irũ</string>
+    <string name="staff_team_toast_added">Oñembojoapy irũ</string>
     <string name="staff_team_toast_role_updated">Tembiapo oñembohekopyahu</string>
 
     <string name="staff_accounts_action_unban_title">Eipe\'a jeity</string>

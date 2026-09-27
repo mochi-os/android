@@ -73,7 +73,7 @@ import org.mochios.market.model.Listing
 import org.mochios.market.model.Subscription
 import org.mochios.market.model.SubscriptionStatus
 import org.mochios.market.navigation.MarketApp
-import org.mochios.market.ui.components.StatusBadge
+import org.mochios.market.ui.components.MarketStatusBadge
 
 @Composable
 fun SubscriptionDetailScreen(
@@ -223,7 +223,7 @@ private fun SummaryCard(
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 }
-                StatusBadge(status = subscription.status?.name?.lowercase() ?: "")
+                MarketStatusBadge(status = subscription.status?.name?.lowercase() ?: "")
             }
             Spacer(modifier = Modifier.height(12.dp))
             Row(verticalAlignment = Alignment.CenterVertically) {

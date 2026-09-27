@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Hesab tapılmadı</string>
     <string name="staff_accounts_filter_seller_label">Satıcı</string>
     <string name="staff_accounts_filter_status_label">Status</string>
-    <string name="staff_accounts_history">Tarixçə</string>
     <string name="staff_accounts_history_title">Hesab tarixçəsi</string>
     <string name="staff_accounts_notes_label">Qeydlər</string>
     <string name="staff_accounts_reason_label">Səbəb</string>
@@ -131,15 +130,12 @@
     <string name="staff_categories_action_delete">Sil</string>
     <string name="staff_categories_action_edit">Redaktə et</string>
     <string name="staff_categories_add">Əlavə et</string>
-    <string name="staff_categories_col_name">Ad</string>
-    <string name="staff_categories_col_status">Status</string>
     <string name="staff_categories_col_types">Növlər</string>
     <string name="staff_categories_create">Yarat</string>
     <string name="staff_categories_delete_confirm">Sil</string>
     <string name="staff_categories_delete_desc">%1$s silinsin? Bu əməliyyat geri qaytarıla bilməz.</string>
     <string name="staff_categories_delete_title">Kateqoriyanı sil</string>
     <string name="staff_categories_dialog_active">Aktiv</string>
-    <string name="staff_categories_dialog_cancel">Ləğv et</string>
     <string name="staff_categories_dialog_create_title">Kateqoriya yarat</string>
     <string name="staff_categories_dialog_creating">Yaradılır…</string>
     <string name="staff_categories_dialog_digital">Rəqəmsal</string>
@@ -181,21 +177,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">Saxlamaq alınmadı</string>
     <string name="staff_config_toast_saved">Saxlanıldı</string>
-    <string name="staff_dashboard_col_action">Əməliyyat</string>
-    <string name="staff_dashboard_col_actor">İcraçı</string>
     <string name="staff_dashboard_col_buyer">Alıcı</string>
-    <string name="staff_dashboard_col_date">Tarix</string>
     <string name="staff_dashboard_col_detail">Detal</string>
-    <string name="staff_dashboard_col_listing">Elan</string>
-    <string name="staff_dashboard_col_moderation">Moderasiya</string>
-    <string name="staff_dashboard_col_name">Ad</string>
     <string name="staff_dashboard_col_object">Obyekt</string>
     <string name="staff_dashboard_col_reason">Səbəb</string>
-    <string name="staff_dashboard_col_score">Xal</string>
     <string name="staff_dashboard_col_seller">Satıcı</string>
-    <string name="staff_dashboard_col_status">Status</string>
-    <string name="staff_dashboard_col_title">Başlıq</string>
-    <string name="staff_dashboard_col_total">Cəmi</string>
     <string name="staff_dashboard_empty_audit">Audit qeydləri yoxdur</string>
     <string name="staff_dashboard_empty_listings">Son elanlar yoxdur</string>
     <string name="staff_dashboard_empty_moderation">Son moderasiya yoxdur</string>
@@ -210,7 +196,6 @@
     <string name="staff_dashboard_kpi_sellers">Satıcılar</string>
     <string name="staff_dashboard_kpi_total_orders">Ümumi sifarişlər</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">Xeyr</string>
     <string name="staff_dashboard_open_sidebar">Yan paneli aç</string>
     <string name="staff_dashboard_order_fallback">Sifariş #%1$s</string>
     <string name="staff_dashboard_system">Sistem</string>
@@ -219,7 +204,6 @@
     <string name="staff_dashboard_tab_moderation">Moderasiya</string>
     <string name="staff_dashboard_tab_orders">Sifarişlər</string>
     <string name="staff_dashboard_tab_signups">Qeydiyyatlar</string>
-    <string name="staff_dashboard_yes">Bəli</string>
     <string name="staff_disputes_any_status">Bütün statuslar</string>
     <string name="staff_disputes_cancel">Ləğv et</string>
     <string name="staff_disputes_close">Bağla</string>
@@ -267,10 +251,7 @@
     <string name="staff_disputes_status_responded">Cavablandırıldı</string>
     <string name="staff_disputes_status_reviewing">Nəzərdən keçirilir</string>
     <string name="staff_disputes_view">Bax</string>
-    <string name="staff_filter_chip_remove">Filtri sil</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderasiya</string>
-    <string name="staff_filter_label_query">Axtar</string>
     <string name="staff_filter_label_seller">Satıcı</string>
     <string name="staff_filter_label_status">Status</string>
     <string name="staff_filter_label_type">Növ</string>
@@ -362,7 +343,6 @@
     <string name="staff_reviews_filter_published">Dərc edildi</string>
     <string name="staff_reviews_filter_removed">Silindi</string>
     <string name="staff_reviews_order_label">sifariş #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Əməliyyatlar</string>
     <string name="staff_reviews_remove_confirm">Sil</string>
     <string name="staff_reviews_remove_title">Rəyi silək?</string>
     <string name="staff_reviews_role_buyer">Alıcı</string>
@@ -417,6 +397,7 @@
     <string name="staff_status_suspended">Dayandırıldı</string>
     <string name="staff_team_action_remove">Sil</string>
     <string name="staff_team_add_member">Üzv əlavə et</string>
+    <string name="staff_team_added_by_label">Əlavə edən:</string>
     <string name="staff_team_added_by_system">Sistem</string>
     <string name="staff_team_col_added_by">Əlavə edən</string>
     <string name="staff_team_dialog_add">Əlavə et</string>
@@ -436,6 +417,7 @@
     <string name="staff_team_role_support">Dəstək</string>
     <string name="staff_team_toast_add_failed">Üzv əlavə etmək alınmadı</string>
     <string name="staff_team_toast_removed">Üzv silindi</string>
+    <string name="staff_team_toast_added">Üzv əlavə edildi</string>
     <string name="staff_team_toast_role_updated">Rol yeniləndi</string>
 
 

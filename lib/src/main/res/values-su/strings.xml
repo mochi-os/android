@@ -18,6 +18,9 @@
     <string name="common_back">Tukang</string>
     <string name="common_close">Tutup</string>
     <string name="common_cancel">Batalkeun</string>
+    <string name="common_filter">Saring</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Hapus saringan</string>
     <string name="common_confirm">Konfirmasi</string>
     <string name="common_save">Simpen</string>
     <string name="common_saving">Nyimpen…</string>

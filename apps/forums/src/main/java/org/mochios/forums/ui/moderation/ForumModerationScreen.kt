@@ -23,8 +23,9 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.outlined.VolumeOff
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Flag
 import androidx.compose.material.icons.filled.Group
 import androidx.compose.material.icons.filled.History
@@ -38,7 +39,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuAnchorType
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
-import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -58,6 +58,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
@@ -65,6 +66,7 @@ import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.FilterChipRow
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButtonTone
 import org.mochios.android.ui.components.MochiCard
@@ -77,6 +79,7 @@ import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.StatusBadge
 import org.mochios.android.ui.components.StatusTone
+import org.mochios.android.ui.components.defaultIcon
 import org.mochios.forums.R
 import org.mochios.forums.model.ModerationLogEntry
 import org.mochios.forums.model.ModerationReport
@@ -85,7 +88,6 @@ import org.mochios.forums.model.humanise
 import org.mochios.forums.model.moderationAction
 import org.mochios.forums.model.moderationReason
 import org.mochios.forums.model.moderationTarget
-import org.mochios.android.R as MochiR
 
 /** A moderation tab as rendered: its label, icon, and the state it selects. */
 private data class ModerationTabEntry(
@@ -489,20 +491,14 @@ private fun ReportStatusChips(
     onSelect: (String) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    Row(
-        modifier = modifier
-            .fillMaxWidth()
-            .padding(horizontal = 12.dp, vertical = 8.dp),
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
-    ) {
-        statuses.forEach { (code, label) ->
-            FilterChip(
-                selected = selected == code,
-                onClick = { onSelect(code) },
-                label = { Text(label) },
-            )
-        }
-    }
+    FilterChipRow(
+        options = statuses,
+        isSelected = { code -> selected == code },
+        onSelect = onSelect,
+        modifier = modifier,
+        singleLine = true,
+        contentPadding = PaddingValues(horizontal = 12.dp, vertical = 8.dp),
+    )
 }
 
 @Composable
@@ -883,7 +879,8 @@ private fun RestrictionBadge(type: String) {
         "shadowban" -> stringResource(R.string.forums_moderation_restriction_state_shadowban)
         else -> type
     }
-    StatusBadge(label = label, tone = tone)
+    val icon = if (type == "muted") Icons.AutoMirrored.Outlined.VolumeOff else tone.defaultIcon
+    StatusBadge(label = label, tone = tone, icon = icon)
 }
 
 @OptIn(ExperimentalMaterial3Api::class)

@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Nem található fiók</string>
     <string name="staff_accounts_filter_seller_label">Eladó</string>
     <string name="staff_accounts_filter_status_label">Állapot</string>
-    <string name="staff_accounts_history">Előzmények</string>
     <string name="staff_accounts_history_title">Fiókelőzmények</string>
     <string name="staff_accounts_notes_label">Jegyzetek</string>
     <string name="staff_accounts_reason_label">Indok</string>
@@ -131,15 +130,12 @@
     <string name="staff_categories_action_delete">Törlés</string>
     <string name="staff_categories_action_edit">Szerkesztés</string>
     <string name="staff_categories_add">Hozzáadás</string>
-    <string name="staff_categories_col_name">Név</string>
-    <string name="staff_categories_col_status">Állapot</string>
     <string name="staff_categories_col_types">Típusok</string>
     <string name="staff_categories_create">Létrehozás</string>
     <string name="staff_categories_delete_confirm">Törlés</string>
     <string name="staff_categories_delete_desc">Törli a(z) „%1$s” elemet? Ez a művelet nem vonható vissza.</string>
     <string name="staff_categories_delete_title">Kategória törlése</string>
     <string name="staff_categories_dialog_active">Aktív</string>
-    <string name="staff_categories_dialog_cancel">Mégse</string>
     <string name="staff_categories_dialog_create_title">Kategória létrehozása</string>
     <string name="staff_categories_dialog_creating">Létrehozás…</string>
     <string name="staff_categories_dialog_digital">Digitális</string>
@@ -181,21 +177,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">Nem sikerült menteni</string>
     <string name="staff_config_toast_saved">Mentve</string>
-    <string name="staff_dashboard_col_action">Művelet</string>
-    <string name="staff_dashboard_col_actor">Szereplő</string>
     <string name="staff_dashboard_col_buyer">Vevő</string>
-    <string name="staff_dashboard_col_date">Dátum</string>
     <string name="staff_dashboard_col_detail">Részlet</string>
-    <string name="staff_dashboard_col_listing">Hirdetés</string>
-    <string name="staff_dashboard_col_moderation">Moderálás</string>
-    <string name="staff_dashboard_col_name">Név</string>
     <string name="staff_dashboard_col_object">Objektum</string>
     <string name="staff_dashboard_col_reason">Indok</string>
-    <string name="staff_dashboard_col_score">Pontszám</string>
     <string name="staff_dashboard_col_seller">Eladó</string>
-    <string name="staff_dashboard_col_status">Állapot</string>
-    <string name="staff_dashboard_col_title">Cím</string>
-    <string name="staff_dashboard_col_total">Összesen</string>
     <string name="staff_dashboard_empty_audit">Nincsenek auditbejegyzések</string>
     <string name="staff_dashboard_empty_listings">Nincsenek friss hirdetések</string>
     <string name="staff_dashboard_empty_moderation">Nincs friss moderáció</string>
@@ -210,7 +196,6 @@
     <string name="staff_dashboard_kpi_sellers">Eladók</string>
     <string name="staff_dashboard_kpi_total_orders">Rendelések összesen</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">Nem</string>
     <string name="staff_dashboard_open_sidebar">Oldalsáv megnyitása</string>
     <string name="staff_dashboard_order_fallback">Rendelés #%1$s</string>
     <string name="staff_dashboard_system">Rendszer</string>
@@ -219,7 +204,6 @@
     <string name="staff_dashboard_tab_moderation">Moderálás</string>
     <string name="staff_dashboard_tab_orders">Rendelések</string>
     <string name="staff_dashboard_tab_signups">Regisztrációk</string>
-    <string name="staff_dashboard_yes">Igen</string>
     <string name="staff_disputes_any_status">Összes állapot</string>
     <string name="staff_disputes_cancel">Mégse</string>
     <string name="staff_disputes_close">Bezárás</string>
@@ -281,10 +265,7 @@
     <string name="staff_disputes_stripe_subscription_canceled">előfizetés megszüntetve</string>
     <string name="staff_disputes_stripe_unrecognized">azonosítatlan terhelés</string>
     <string name="staff_disputes_view">Megtekintés</string>
-    <string name="staff_filter_chip_remove">Szűrő eltávolítása</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderálás</string>
-    <string name="staff_filter_label_query">Keresés</string>
     <string name="staff_filter_label_seller">Eladó</string>
     <string name="staff_filter_label_status">Állapot</string>
     <string name="staff_filter_label_type">Típus</string>
@@ -376,7 +357,6 @@
     <string name="staff_reviews_filter_published">Közzétéve</string>
     <string name="staff_reviews_filter_removed">Eltávolítva</string>
     <string name="staff_reviews_order_label">rendelés #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Műveletek</string>
     <string name="staff_reviews_remove_confirm">Eltávolítás</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s ekkor: %3$s. Véglegesen törli ezt az értékelést? Ez a művelet nem vonható vissza.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Véglegesen törli ezt az értékelést? Ez a művelet nem vonható vissza.</string>
@@ -433,6 +413,7 @@
     <string name="staff_status_suspended">Felfüggesztve</string>
     <string name="staff_team_action_remove">Eltávolítás</string>
     <string name="staff_team_add_member">Tag hozzáadása</string>
+    <string name="staff_team_added_by_label">Hozzáadta:</string>
     <string name="staff_team_added_by_system">Rendszer</string>
     <string name="staff_team_col_added_by">Hozzáadta</string>
     <string name="staff_team_dialog_add">Hozzáadás</string>
@@ -452,6 +433,7 @@
     <string name="staff_team_role_support">Támogatás</string>
     <string name="staff_team_toast_add_failed">Nem sikerült hozzáadni a tagot</string>
     <string name="staff_team_toast_removed">Tag eltávolítva</string>
+    <string name="staff_team_toast_added">Tag hozzáadva</string>
     <string name="staff_team_toast_role_updated">Szerepkör frissítve</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook aláírási titok</string>

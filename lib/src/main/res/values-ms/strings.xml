@@ -18,6 +18,9 @@
     <string name="common_back">Kembali</string>
     <string name="common_close">Tutup</string>
     <string name="common_cancel">Batal</string>
+    <string name="common_filter">Tapis</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Buang penapis</string>
     <string name="common_confirm">Sahkan</string>
     <string name="common_save">Simpan</string>
     <string name="common_saving">Menyimpan…</string>

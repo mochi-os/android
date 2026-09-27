@@ -18,6 +18,9 @@
     <string name="common_back">Air ais</string>
     <string name="common_close">Dùin</string>
     <string name="common_cancel">Sguir dheth</string>
+    <string name="common_filter">Sìolachan</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Thoir air falbh a\' chriathrag</string>
     <string name="common_confirm">Dearbhaich</string>
     <string name="common_save">Sàbhail</string>
     <string name="common_saving">A\' sàbhaladh…</string>

@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Tiada akaun dijumpai</string>
     <string name="staff_accounts_filter_seller_label">Penjual</string>
     <string name="staff_accounts_filter_status_label">Status</string>
-    <string name="staff_accounts_history">Sejarah</string>
     <string name="staff_accounts_history_title">Sejarah akaun</string>
     <string name="staff_accounts_notes_label">Nota</string>
     <string name="staff_accounts_reason_label">Sebab</string>
@@ -131,15 +130,12 @@
     <string name="staff_categories_action_delete">Padam</string>
     <string name="staff_categories_action_edit">Edit</string>
     <string name="staff_categories_add">Tambah</string>
-    <string name="staff_categories_col_name">Nama</string>
-    <string name="staff_categories_col_status">Status</string>
     <string name="staff_categories_col_types">Jenis</string>
     <string name="staff_categories_create">Cipta</string>
     <string name="staff_categories_delete_confirm">Padam</string>
     <string name="staff_categories_delete_desc">Padam «%1$s»? Tindakan ini tidak boleh dibatalkan.</string>
     <string name="staff_categories_delete_title">Padam kategori</string>
     <string name="staff_categories_dialog_active">Aktif</string>
-    <string name="staff_categories_dialog_cancel">Batal</string>
     <string name="staff_categories_dialog_create_title">Cipta kategori</string>
     <string name="staff_categories_dialog_creating">Mencipta…</string>
     <string name="staff_categories_dialog_digital">Digital</string>
@@ -181,21 +177,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">Gagal menyimpan</string>
     <string name="staff_config_toast_saved">Disimpan</string>
-    <string name="staff_dashboard_col_action">Tindakan</string>
-    <string name="staff_dashboard_col_actor">Pelaku</string>
     <string name="staff_dashboard_col_buyer">Pembeli</string>
-    <string name="staff_dashboard_col_date">Tarikh</string>
     <string name="staff_dashboard_col_detail">Butiran</string>
-    <string name="staff_dashboard_col_listing">Penyenaraian</string>
-    <string name="staff_dashboard_col_moderation">Moderasi</string>
-    <string name="staff_dashboard_col_name">Nama</string>
     <string name="staff_dashboard_col_object">Objek</string>
     <string name="staff_dashboard_col_reason">Sebab</string>
-    <string name="staff_dashboard_col_score">Skor</string>
     <string name="staff_dashboard_col_seller">Penjual</string>
-    <string name="staff_dashboard_col_status">Status</string>
-    <string name="staff_dashboard_col_title">Tajuk</string>
-    <string name="staff_dashboard_col_total">Jumlah</string>
     <string name="staff_dashboard_empty_audit">Tiada entri audit</string>
     <string name="staff_dashboard_empty_listings">Tiada penyenaraian terkini</string>
     <string name="staff_dashboard_empty_moderation">Tiada penyederhanaan terkini</string>
@@ -210,7 +196,6 @@
     <string name="staff_dashboard_kpi_sellers">Penjual</string>
     <string name="staff_dashboard_kpi_total_orders">Jumlah pesanan</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">Tidak</string>
     <string name="staff_dashboard_open_sidebar">Buka bar sisi</string>
     <string name="staff_dashboard_order_fallback">Pesanan #%1$s</string>
     <string name="staff_dashboard_system">Sistem</string>
@@ -219,7 +204,6 @@
     <string name="staff_dashboard_tab_moderation">Moderasi</string>
     <string name="staff_dashboard_tab_orders">Pesanan</string>
     <string name="staff_dashboard_tab_signups">Pendaftaran</string>
-    <string name="staff_dashboard_yes">Ya</string>
     <string name="staff_disputes_any_status">Semua status</string>
     <string name="staff_disputes_cancel">Batal</string>
     <string name="staff_disputes_close">Tutup</string>
@@ -281,10 +265,7 @@
     <string name="staff_disputes_stripe_subscription_canceled">langganan dibatalkan</string>
     <string name="staff_disputes_stripe_unrecognized">caj tidak dikenali</string>
     <string name="staff_disputes_view">Lihat</string>
-    <string name="staff_filter_chip_remove">Buang penapis</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderasi</string>
-    <string name="staff_filter_label_query">Cari</string>
     <string name="staff_filter_label_seller">Penjual</string>
     <string name="staff_filter_label_status">Status</string>
     <string name="staff_filter_label_type">Jenis</string>
@@ -376,7 +357,6 @@
     <string name="staff_reviews_filter_published">Diterbitkan</string>
     <string name="staff_reviews_filter_removed">Dialih keluar</string>
     <string name="staff_reviews_order_label">pesanan #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Tindakan</string>
     <string name="staff_reviews_remove_confirm">Alih keluar</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s pada %3$s. Padam kekal ulasan ini? Tindakan ini tidak boleh dibatalkan.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Padam kekal ulasan ini? Tindakan ini tidak boleh dibatalkan.</string>
@@ -433,6 +413,7 @@
     <string name="staff_status_suspended">Digantung</string>
     <string name="staff_team_action_remove">Alih keluar</string>
     <string name="staff_team_add_member">Tambah ahli</string>
+    <string name="staff_team_added_by_label">Ditambah oleh:</string>
     <string name="staff_team_added_by_system">Sistem</string>
     <string name="staff_team_col_added_by">Ditambah oleh</string>
     <string name="staff_team_dialog_add">Tambah</string>
@@ -452,6 +433,7 @@
     <string name="staff_team_role_support">Sokongan</string>
     <string name="staff_team_toast_add_failed">Gagal menambah ahli</string>
     <string name="staff_team_toast_removed">Ahli dialih keluar</string>
+    <string name="staff_team_toast_added">Ahli ditambah</string>
     <string name="staff_team_toast_role_updated">Peranan dikemas kini</string>
 
     <string name="staff_config_field_stripe_webhook">Rahsia tandatangan Webhook</string>

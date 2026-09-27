@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Nije pronađen nijedan račun</string>
     <string name="staff_accounts_filter_seller_label">Prodavač</string>
     <string name="staff_accounts_filter_status_label">Status</string>
-    <string name="staff_accounts_history">Povijest</string>
     <string name="staff_accounts_history_title">Povijest računa</string>
     <string name="staff_accounts_notes_label">Bilješke</string>
     <string name="staff_accounts_reason_label">Razlog</string>
@@ -131,15 +130,12 @@
     <string name="staff_categories_action_delete">Obriši</string>
     <string name="staff_categories_action_edit">Uredi</string>
     <string name="staff_categories_add">Dodaj</string>
-    <string name="staff_categories_col_name">Naziv</string>
-    <string name="staff_categories_col_status">Status</string>
     <string name="staff_categories_col_types">Tipovi</string>
     <string name="staff_categories_create">Stvori</string>
     <string name="staff_categories_delete_confirm">Obriši</string>
     <string name="staff_categories_delete_desc">Obrisati %1$s? Ova radnja se ne može poništiti.</string>
     <string name="staff_categories_delete_title">Obriši kategoriju</string>
     <string name="staff_categories_dialog_active">Aktivno</string>
-    <string name="staff_categories_dialog_cancel">Odustani</string>
     <string name="staff_categories_dialog_create_title">Stvori kategoriju</string>
     <string name="staff_categories_dialog_creating">Stvaranje…</string>
     <string name="staff_categories_dialog_digital">Digitalno</string>
@@ -181,21 +177,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">Spremanje nije uspjelo</string>
     <string name="staff_config_toast_saved">Spremljeno</string>
-    <string name="staff_dashboard_col_action">Radnja</string>
-    <string name="staff_dashboard_col_actor">Akter</string>
     <string name="staff_dashboard_col_buyer">Kupac</string>
-    <string name="staff_dashboard_col_date">Datum</string>
     <string name="staff_dashboard_col_detail">Detalj</string>
-    <string name="staff_dashboard_col_listing">Oglas</string>
-    <string name="staff_dashboard_col_moderation">Moderiranje</string>
-    <string name="staff_dashboard_col_name">Naziv</string>
     <string name="staff_dashboard_col_object">Objekt</string>
     <string name="staff_dashboard_col_reason">Razlog</string>
-    <string name="staff_dashboard_col_score">Rezultat</string>
     <string name="staff_dashboard_col_seller">Prodavač</string>
-    <string name="staff_dashboard_col_status">Status</string>
-    <string name="staff_dashboard_col_title">Naslov</string>
-    <string name="staff_dashboard_col_total">Ukupno</string>
     <string name="staff_dashboard_empty_audit">Nema unosa revizije</string>
     <string name="staff_dashboard_empty_listings">Nema nedavnih oglasa</string>
     <string name="staff_dashboard_empty_moderation">Nema nedavnog moderiranja</string>
@@ -210,7 +196,6 @@
     <string name="staff_dashboard_kpi_sellers">Prodavači</string>
     <string name="staff_dashboard_kpi_total_orders">Ukupno narudžbi</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">Ne</string>
     <string name="staff_dashboard_open_sidebar">Otvori bočnu traku</string>
     <string name="staff_dashboard_order_fallback">Narudžba #%1$s</string>
     <string name="staff_dashboard_system">Sustav</string>
@@ -219,7 +204,6 @@
     <string name="staff_dashboard_tab_moderation">Moderiranje</string>
     <string name="staff_dashboard_tab_orders">Narudžbe</string>
     <string name="staff_dashboard_tab_signups">Registracije</string>
-    <string name="staff_dashboard_yes">Da</string>
     <string name="staff_disputes_any_status">Svi statusi</string>
     <string name="staff_disputes_cancel">Odustani</string>
     <string name="staff_disputes_close">Zatvori</string>
@@ -281,10 +265,7 @@
     <string name="staff_disputes_stripe_subscription_canceled">pretplata otkazana</string>
     <string name="staff_disputes_stripe_unrecognized">neprepoznato terećenje</string>
     <string name="staff_disputes_view">Prikaži</string>
-    <string name="staff_filter_chip_remove">Ukloni filtar</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderiranje</string>
-    <string name="staff_filter_label_query">Pretraži</string>
     <string name="staff_filter_label_seller">Prodavač</string>
     <string name="staff_filter_label_status">Status</string>
     <string name="staff_filter_label_type">Tip</string>
@@ -376,7 +357,6 @@
     <string name="staff_reviews_filter_published">Objavljeno</string>
     <string name="staff_reviews_filter_removed">Uklonjeno</string>
     <string name="staff_reviews_order_label">narudžba #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Radnje</string>
     <string name="staff_reviews_remove_confirm">Ukloni</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s dana %3$s. Trajno obrisati ovu recenziju? Ova radnja se ne može poništiti.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Trajno obrisati ovu recenziju? Ova radnja se ne može poništiti.</string>
@@ -433,6 +413,7 @@
     <string name="staff_status_suspended">Suspendirano</string>
     <string name="staff_team_action_remove">Ukloni</string>
     <string name="staff_team_add_member">Dodaj člana</string>
+    <string name="staff_team_added_by_label">Dodao:</string>
     <string name="staff_team_added_by_system">Sustav</string>
     <string name="staff_team_col_added_by">Dodao</string>
     <string name="staff_team_dialog_add">Dodaj</string>
@@ -452,6 +433,7 @@
     <string name="staff_team_role_support">Podrška</string>
     <string name="staff_team_toast_add_failed">Dodavanje člana nije uspjelo</string>
     <string name="staff_team_toast_removed">Član uklonjen</string>
+    <string name="staff_team_toast_added">Član dodan</string>
     <string name="staff_team_toast_role_updated">Uloga ažurirana</string>
 
     <string name="staff_config_field_stripe_webhook">Tajni ključ za potpisivanje webhooka</string>

@@ -14,7 +14,6 @@
     <string name="staff_config_save">Guardá</string>
     <string name="staff_dashboard_kpi_open_disputes">Abrí las disputas</string>
     <string name="staff_disputes_resolution_placeholder">Seleccioná una resolución</string>
-    <string name="staff_filter_label_query">Buscá</string>
     <string name="staff_listings_action_approve_title">Aprobá el aviso</string>
     <string name="staff_listings_action_reject_title">Rechazá el aviso</string>
     <string name="staff_listings_action_remove_title">Quitá el aviso</string>
@@ -37,9 +36,7 @@
     <string name="staff_team_remove_confirm">Quitá</string>
     <string name="staff_team_remove_desc">¿Quitás a este miembro del equipo de personal?</string>
     <string name="staff_team_remove_title">Quitá al miembro del equipo</string>
-    <string name="staff_categories_col_name">Nombre</string>
     <string name="staff_categories_dialog_name">Nombre</string>
-    <string name="staff_dashboard_col_name">Nombre</string>
     <string name="staff_categories_create">Crear</string>
     <string name="staff_accounts_close">Cerrar</string>
     <string name="staff_disputes_close">Cerrar</string>
@@ -52,15 +49,12 @@
     <string name="staff_filter_label_type">Tipo</string>
     <string name="staff_reports_filter_type_label">Tipo</string>
     <string name="staff_reports_meta_type">Tipo</string>
-    <string name="staff_dashboard_col_title">Título</string>
     <string name="staff_disputes_status_open">Abrir</string>
     <string name="staff_status_open">Abrir</string>
     <string name="staff_reports_type_user">Usuario</string>
     <string name="staff_accounts_any_seller">Todos</string>
     <string name="staff_accounts_any_status">Todos</string>
     <string name="staff_accounts_filter_status_label">Estado</string>
-    <string name="staff_categories_col_status">Estado</string>
-    <string name="staff_dashboard_col_status">Estado</string>
     <string name="staff_disputes_filter_status_label">Estado</string>
     <string name="staff_filter_label_status">Estado</string>
     <string name="staff_listings_filter_status_label">Estado</string>
@@ -86,7 +80,6 @@
     <string name="staff_accounts_banned_toast">Cuenta baneada</string>
     <string name="staff_accounts_empty">No se encontraron cuentas</string>
     <string name="staff_accounts_filter_seller_label">Vendedor</string>
-    <string name="staff_accounts_history">Historial</string>
     <string name="staff_accounts_history_title">Historial de la cuenta</string>
     <string name="staff_accounts_notes_label">Notas</string>
     <string name="staff_accounts_reason_optional_label">Motivo (opcional)</string>
@@ -227,17 +220,10 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">No se pudo guardar</string>
     <string name="staff_config_toast_saved">Guardado</string>
-    <string name="staff_dashboard_col_action">Acción</string>
-    <string name="staff_dashboard_col_actor">Actor</string>
     <string name="staff_dashboard_col_buyer">Comprador</string>
-    <string name="staff_dashboard_col_date">Fecha</string>
     <string name="staff_dashboard_col_detail">Detalle</string>
-    <string name="staff_dashboard_col_listing">Publicación</string>
-    <string name="staff_dashboard_col_moderation">Moderación</string>
     <string name="staff_dashboard_col_object">Objeto</string>
-    <string name="staff_dashboard_col_score">Puntaje</string>
     <string name="staff_dashboard_col_seller">Vendedor</string>
-    <string name="staff_dashboard_col_total">Total</string>
     <string name="staff_dashboard_empty_audit">Sin entradas de auditoría</string>
     <string name="staff_dashboard_empty_listings">Sin publicaciones recientes</string>
     <string name="staff_dashboard_empty_moderation">Sin moderación reciente</string>
@@ -251,7 +237,6 @@
     <string name="staff_dashboard_kpi_sellers">Vendedores</string>
     <string name="staff_dashboard_kpi_total_orders">Total de pedidos</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">No</string>
     <string name="staff_dashboard_order_fallback">Pedido #%1$s</string>
     <string name="staff_dashboard_system">Sistema</string>
     <string name="staff_dashboard_tab_audit">Auditoría</string>
@@ -259,7 +244,6 @@
     <string name="staff_dashboard_tab_moderation">Moderación</string>
     <string name="staff_dashboard_tab_orders">Pedidos</string>
     <string name="staff_dashboard_tab_signups">Registros</string>
-    <string name="staff_dashboard_yes">Sí</string>
     <string name="staff_disputes_any_status">Todos los estados</string>
     <string name="staff_disputes_dialog_title_chargeback">Contracargo: %1$s</string>
     <string name="staff_disputes_dialog_title_review">Revisar disputa</string>
@@ -313,8 +297,6 @@
     <string name="staff_disputes_stripe_product_unacceptable">producto inaceptable</string>
     <string name="staff_disputes_stripe_subscription_canceled">suscripción cancelada</string>
     <string name="staff_disputes_stripe_unrecognized">cargo no reconocido</string>
-    <string name="staff_filter_chip_remove">Quitar filtro</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderación</string>
     <string name="staff_filter_label_seller">Vendedor</string>
     <string name="staff_listings_any_moderation">Cualquier moderación</string>
@@ -380,7 +362,6 @@
     <string name="staff_reviews_filter_published">Publicadas</string>
     <string name="staff_reviews_filter_removed">Eliminadas</string>
     <string name="staff_reviews_order_label">pedido #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Acciones</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s el %3$s. ¿Eliminar esta reseña en forma permanente? Esta acción no se puede deshacer.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. ¿Eliminar esta reseña en forma permanente? Esta acción no se puede deshacer.</string>
     <string name="staff_reviews_role_buyer">Comprador</string>
@@ -430,6 +411,7 @@
     <string name="staff_status_sold">Vendido</string>
     <string name="staff_status_support">Soporte</string>
     <string name="staff_status_suspended">Suspendido</string>
+    <string name="staff_team_added_by_label">Agregado por:</string>
     <string name="staff_team_added_by_system">Sistema</string>
     <string name="staff_team_col_added_by">Agregado por</string>
     <string name="staff_team_dialog_adding">Agregando…</string>
@@ -443,6 +425,7 @@
     <string name="staff_team_role_support">Soporte</string>
     <string name="staff_team_toast_add_failed">No se pudo agregar el miembro</string>
     <string name="staff_team_toast_removed">Miembro eliminado</string>
+    <string name="staff_team_toast_added">Miembro agregado</string>
     <string name="staff_team_toast_role_updated">Rol actualizado</string>
 
     <string name="staff_disputes_meta_already_refunded">Ya reembolsado</string>

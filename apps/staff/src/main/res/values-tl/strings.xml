@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Walang nakitang account</string>
     <string name="staff_accounts_filter_seller_label">Nagbebenta</string>
     <string name="staff_accounts_filter_status_label">Status</string>
-    <string name="staff_accounts_history">Kasaysayan</string>
     <string name="staff_accounts_history_title">Kasaysayan ng account</string>
     <string name="staff_accounts_notes_label">Mga Tala</string>
     <string name="staff_accounts_reason_label">Dahilan</string>
@@ -131,15 +130,12 @@
     <string name="staff_categories_action_delete">I-delete</string>
     <string name="staff_categories_action_edit">I-edit</string>
     <string name="staff_categories_add">Idagdag</string>
-    <string name="staff_categories_col_name">Pangalan</string>
-    <string name="staff_categories_col_status">Status</string>
     <string name="staff_categories_col_types">Mga uri</string>
     <string name="staff_categories_create">Gumawa</string>
     <string name="staff_categories_delete_confirm">I-delete</string>
     <string name="staff_categories_delete_desc">Burahin ang %1$s? Hindi maaaring ibalik ang aksyong ito.</string>
     <string name="staff_categories_delete_title">I-delete ang category</string>
     <string name="staff_categories_dialog_active">Aktibo</string>
-    <string name="staff_categories_dialog_cancel">Kanselahin</string>
     <string name="staff_categories_dialog_create_title">Gumawa ng category</string>
     <string name="staff_categories_dialog_creating">Ginagawa…</string>
     <string name="staff_categories_dialog_digital">Digital</string>
@@ -181,21 +177,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">Nabigong i-save</string>
     <string name="staff_config_toast_saved">Na-save</string>
-    <string name="staff_dashboard_col_action">Aksyon</string>
-    <string name="staff_dashboard_col_actor">Nagsagawa</string>
     <string name="staff_dashboard_col_buyer">Mamimili</string>
-    <string name="staff_dashboard_col_date">Petsa</string>
     <string name="staff_dashboard_col_detail">Detalye</string>
-    <string name="staff_dashboard_col_listing">Listing</string>
-    <string name="staff_dashboard_col_moderation">Moderasyon</string>
-    <string name="staff_dashboard_col_name">Pangalan</string>
     <string name="staff_dashboard_col_object">Object</string>
     <string name="staff_dashboard_col_reason">Dahilan</string>
-    <string name="staff_dashboard_col_score">Score</string>
     <string name="staff_dashboard_col_seller">Nagbebenta</string>
-    <string name="staff_dashboard_col_status">Status</string>
-    <string name="staff_dashboard_col_title">Pamagat</string>
-    <string name="staff_dashboard_col_total">Kabuuan</string>
     <string name="staff_dashboard_empty_audit">Walang audit entry</string>
     <string name="staff_dashboard_empty_listings">Walang kamakailang listing</string>
     <string name="staff_dashboard_empty_moderation">Walang kamakailang moderasyon</string>
@@ -210,7 +196,6 @@
     <string name="staff_dashboard_kpi_sellers">Mga nagbebenta</string>
     <string name="staff_dashboard_kpi_total_orders">Kabuuang order</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">Hindi</string>
     <string name="staff_dashboard_open_sidebar">Buksan ang sidebar</string>
     <string name="staff_dashboard_order_fallback">Order #%1$s</string>
     <string name="staff_dashboard_system">System</string>
@@ -219,7 +204,6 @@
     <string name="staff_dashboard_tab_moderation">Moderasyon</string>
     <string name="staff_dashboard_tab_orders">Mga order</string>
     <string name="staff_dashboard_tab_signups">Mga signup</string>
-    <string name="staff_dashboard_yes">Oo</string>
     <string name="staff_disputes_any_status">Lahat ng status</string>
     <string name="staff_disputes_cancel">Kanselahin</string>
     <string name="staff_disputes_close">Isara</string>
@@ -267,10 +251,7 @@
     <string name="staff_disputes_status_responded">Tumugon</string>
     <string name="staff_disputes_status_reviewing">Sinusuri</string>
     <string name="staff_disputes_view">Tingnan</string>
-    <string name="staff_filter_chip_remove">Tanggalin ang filter</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderasyon</string>
-    <string name="staff_filter_label_query">Maghanap</string>
     <string name="staff_filter_label_seller">Nagbebenta</string>
     <string name="staff_filter_label_status">Status</string>
     <string name="staff_filter_label_type">Uri</string>
@@ -362,7 +343,6 @@
     <string name="staff_reviews_filter_published">Na-publish</string>
     <string name="staff_reviews_filter_removed">Naalis</string>
     <string name="staff_reviews_order_label">order #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Mga aksyon</string>
     <string name="staff_reviews_remove_confirm">Alisin</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s noong %3$s. Permanenteng burahin ang review na ito? Hindi maaaring ibalik ang aksyong ito.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Permanenteng burahin ang review na ito? Hindi maaaring ibalik ang aksyong ito.</string>
@@ -419,6 +399,7 @@
     <string name="staff_status_suspended">Suspendido</string>
     <string name="staff_team_action_remove">Alisin</string>
     <string name="staff_team_add_member">Magdagdag ng member</string>
+    <string name="staff_team_added_by_label">Idinagdag ni:</string>
     <string name="staff_team_added_by_system">System</string>
     <string name="staff_team_col_added_by">Idinagdag ni</string>
     <string name="staff_team_dialog_add">Idagdag</string>
@@ -438,6 +419,7 @@
     <string name="staff_team_role_support">Suporta</string>
     <string name="staff_team_toast_add_failed">Nabigong magdagdag ng member</string>
     <string name="staff_team_toast_removed">Naalis ang miyembro</string>
+    <string name="staff_team_toast_added">Naidagdag ang miyembro</string>
     <string name="staff_team_toast_role_updated">Na-update ang papel</string>
 
 

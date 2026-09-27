@@ -18,6 +18,9 @@
     <string name="common_back">חזור</string>
     <string name="common_close">סגור</string>
     <string name="common_cancel">ביטול</string>
+    <string name="common_filter">סינון</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">הסרת מסנן</string>
     <string name="common_confirm">אישור</string>
     <string name="common_save">שמור</string>
     <string name="common_saving">שומר…</string>

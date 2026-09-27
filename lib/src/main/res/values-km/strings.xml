@@ -18,6 +18,9 @@
     <string name="common_back">ត្រឡប់</string>
     <string name="common_close">បិទ</string>
     <string name="common_cancel">បោះបង់</string>
+    <string name="common_filter">តម្រង</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">លុបតម្រង</string>
     <string name="common_confirm">បញ្ជាក់</string>
     <string name="common_save">រក្សាទុក</string>
     <string name="common_saving">កំពុងរក្សាទុក…</string>

@@ -5,93 +5,88 @@
 
 package org.mochios.staff.ui.components
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.outlined.Undo
+import androidx.compose.material.icons.outlined.EventBusy
+import androidx.compose.material.icons.outlined.PauseCircle
+import androidx.compose.material.icons.outlined.ReportProblem
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.StatusBadge
+import org.mochios.android.ui.components.StatusTone
+import org.mochios.android.ui.components.defaultIcon
 import org.mochios.staff.R
 
 /**
  * Status chip for every wire status string the console shows, mirroring
  * `apps/staff/web/src/components/shared/status-badge.tsx`; unknown values
- * render neutrally with the raw string.
+ * render neutrally with the raw string. Drawn with the shared [StatusBadge] so
+ * a state reads the same in the console as in every other app.
  */
 @Composable
 fun StaffStatusBadge(status: String, modifier: Modifier = Modifier) {
     val key = status.trim().lowercase()
     val tone = staffStatusTone(key)
-    val label = staffStatusLabel(key) ?: key
-
-    Text(
-        text = label,
-        style = MaterialTheme.typography.labelSmall,
-        color = tone.foreground,
-        modifier = modifier
-            .clip(RoundedCornerShape(999.dp))
-            .background(tone.background)
-            .padding(horizontal = 8.dp, vertical = 2.dp),
+    StatusBadge(
+        label = staffStatusLabel(key) ?: key,
+        tone = tone,
+        icon = staffStatusIcon(key) ?: tone.defaultIcon,
+        modifier = modifier,
     )
 }
 
-private data class StatusTone(val background: Color, val foreground: Color)
+private fun staffStatusTone(key: String): StatusTone = when (key) {
+    "active",
+    "published",
+    "auto_approved",
+    "soft_approved",
+    "approved",
+    "manual",
+    "resolved_buyer",
+    "resolved_seller",
+    "reviewed",
+    "actioned",
+    "sold",
+    "completed",
+    "paid",
+    "shipped",
+    "delivered" -> StatusTone.Positive
 
-@Composable
-private fun staffStatusTone(key: String): StatusTone {
-    val scheme = MaterialTheme.colorScheme
-    return when (key) {
-        // Healthy / active / approved-equivalent
-        "active",
-        "published",
-        "auto_approved",
-        "soft_approved",
-        "approved",
-        "manual",
-        "resolved_buyer",
-        "resolved_seller",
-        "reviewed",
-        "actioned" ->
-            StatusTone(scheme.primaryContainer, scheme.onPrimaryContainer)
+    "draft",
+    "pending",
+    "hold",
+    "review",
+    "open",
+    "responded",
+    "reviewing",
+    "appealed",
+    "paused" -> StatusTone.Waiting
 
-        // Completed / sold / admin role
-        "sold",
-        "completed",
-        "admin" ->
-            StatusTone(scheme.tertiaryContainer, scheme.onTertiaryContainer)
+    "rejected",
+    "removed",
+    "hidden",
+    "expired",
+    "dismissed",
+    "escalated",
+    "suspended",
+    "banned",
+    "disputed",
+    "cancelled",
+    "past_due" -> StatusTone.Negative
 
-        // Awaiting attention / pending
-        "draft",
-        "pending",
-        "hold",
-        "review",
-        "open",
-        "responded",
-        "reviewing",
-        "appealed",
-        "moderator",
-        "support" ->
-            StatusTone(scheme.surfaceVariant, scheme.onSurfaceVariant)
+    "admin" -> StatusTone.Accent
 
-        // Negative / removed / banned
-        "rejected",
-        "removed",
-        "hidden",
-        "expired",
-        "dismissed",
-        "escalated",
-        "suspended",
-        "banned" ->
-            StatusTone(scheme.errorContainer, scheme.onErrorContainer)
+    else -> StatusTone.Neutral
+}
 
-        else ->
-            StatusTone(scheme.surfaceVariant, scheme.onSurfaceVariant)
-    }
+private fun staffStatusIcon(key: String): ImageVector? = when (key) {
+    "inactive" -> Icons.Outlined.PauseCircle
+    "refunded" -> Icons.AutoMirrored.Outlined.Undo
+    "disputed" -> Icons.Outlined.ReportProblem
+    "past_due" -> Icons.Outlined.EventBusy
+    else -> null
 }
 
 @Composable

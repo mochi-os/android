@@ -18,6 +18,9 @@
     <string name="common_back">နောက်သို့</string>
     <string name="common_close">ပိတ်မည်</string>
     <string name="common_cancel">မလုပ်တော့ပါ</string>
+    <string name="common_filter">စိစစ်</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">စစ်ထုတ်မှု ဖယ်ပါ</string>
     <string name="common_confirm">အတည်ပြုမည်</string>
     <string name="common_save">သိမ်းမည်</string>
     <string name="common_saving">သိမ်းနေသည်…</string>

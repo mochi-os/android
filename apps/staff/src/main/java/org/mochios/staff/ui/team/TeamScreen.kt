@@ -5,25 +5,26 @@
 
 package org.mochios.staff.ui.team
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Group
+import androidx.compose.material.icons.outlined.PersonRemove
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -44,20 +45,22 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
+import org.mochios.android.format.formatFingerprint
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.EmptyState
-import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.LoadingState
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
-import org.mochios.android.format.formatFingerprint
 import org.mochios.staff.R
 import org.mochios.staff.model.StaffMember
 import org.mochios.staff.ui.components.LocalStaffMe
 import org.mochios.staff.ui.components.StaffStatusBadge
+import org.mochios.staff.ui.components.StaffUserAvatar
 
 /**
  * Staff team management. Admin gating here is cosmetic; the server enforces it
@@ -67,13 +70,13 @@ import org.mochios.staff.ui.components.StaffStatusBadge
 @Composable
 fun TeamScreen(
     @Suppress("UNUSED_PARAMETER") navController: NavController,
+    snackbarHostState: SnackbarHostState,
     viewModel: TeamViewModel = hiltViewModel(),
 ) {
     val me = LocalStaffMe.current
     val isAdmin = me?.role == "admin"
 
     val state by viewModel.state.collectAsState()
-    val snackbarHostState = remember { SnackbarHostState() }
     val resources = LocalResources.current
 
     LaunchedEffect(Unit) {
@@ -89,18 +92,12 @@ fun TeamScreen(
         }
     }
 
-    Box(modifier = Modifier.fillMaxSize()) {
-        TeamBody(
-            state = state,
-            isAdmin = isAdmin,
-            onChangeRole = viewModel::changeRole,
-            onAskRemove = viewModel::askRemove,
-        )
-        SnackbarHost(
-            hostState = snackbarHostState,
-            modifier = Modifier.align(Alignment.BottomCenter),
-        )
-    }
+    TeamBody(
+        state = state,
+        isAdmin = isAdmin,
+        onChangeRole = viewModel::changeRole,
+        onAskRemove = viewModel::askRemove,
+    )
 
     val removeTarget = state.removeTarget
     if (removeTarget != null) {
@@ -134,8 +131,11 @@ private fun TeamBody(
                 title = stringResource(R.string.staff_team_empty),
             )
             else -> {
-                LazyColumn(modifier = Modifier.fillMaxSize()) {
-                    items(state.members, key = { it.id }) { member ->
+                LazyColumn(
+                    modifier = Modifier.fillMaxSize(),
+                    contentPadding = PaddingValues(top = 6.dp, bottom = 88.dp),
+                ) {
+                    items(state.members, key = { member -> member.id }) { member ->
                         MemberRow(
                             member = member,
                             isAdmin = isAdmin,
@@ -143,7 +143,6 @@ private fun TeamBody(
                             onChangeRole = onChangeRole,
                             onAskRemove = onAskRemove,
                         )
-                        HorizontalDivider()
                     }
                 }
             }
@@ -161,17 +160,16 @@ private fun MemberRow(
 ) {
     val format = LocalFormat.current
     val displayName = member.name?.takeIf { it.isNotBlank() } ?: formatFingerprint(member.fingerprint)
-    val avatarUrl = "/staff/-/user/${member.id}/asset/avatar"
 
-    Row(
+    MochiCard(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 12.dp),
-        verticalAlignment = Alignment.CenterVertically,
+            .padding(horizontal = 16.dp, vertical = 6.dp),
+        shape = MaterialTheme.shapes.medium,
     ) {
-        Column(modifier = Modifier.weight(2f)) {
+        Column(modifier = Modifier.padding(16.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                EntityAvatar(name = displayName, src = avatarUrl, seed = member.id, size = 32.dp)
+                StaffUserAvatar(name = displayName, id = member.id, size = 32.dp)
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
                     text = displayName,
@@ -181,48 +179,47 @@ private fun MemberRow(
                     overflow = TextOverflow.Ellipsis,
                     modifier = Modifier.weight(1f),
                 )
+                if (isAdmin) {
+                    RoleDropdown(
+                        current = member.role,
+                        enabled = !roleUpdating,
+                        onChange = { role -> onChangeRole(member, role) },
+                    )
+                    MochiIconButton(onClick = { onAskRemove(member) }) {
+                        Icon(
+                            Icons.Outlined.PersonRemove,
+                            contentDescription = stringResource(R.string.staff_team_action_remove),
+                        )
+                    }
+                } else {
+                    StaffStatusBadge(status = member.role)
+                }
             }
-            Spacer(modifier = Modifier.padding(top = 4.dp))
-            Text(
-                text = format.formatRelativeTime(member.added),
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
+            Spacer(modifier = Modifier.height(8.dp))
+            val added = format.formatRelativeTime(member.added)
             if (member.addedby.isNotBlank()) {
-                AddedByLine(member = member)
-            }
-        }
-        Box(modifier = Modifier.weight(1f), contentAlignment = Alignment.CenterStart) {
-            if (isAdmin) {
-                RoleDropdown(
-                    current = member.role,
-                    enabled = !roleUpdating,
-                    onChange = { onChangeRole(member, it) },
-                )
+                AddedByLine(member = member, added = added)
             } else {
-                StaffStatusBadge(status = member.role)
-            }
-        }
-        if (isAdmin) {
-            MochiOutlinedButton(onClick = { onAskRemove(member) }) {
-                Text(stringResource(R.string.staff_team_action_remove))
+                Text(
+                    text = added,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
             }
         }
     }
 }
 
 @Composable
-private fun AddedByLine(member: StaffMember) {
+private fun AddedByLine(member: StaffMember, added: String) {
     val isSystem = member.addedby == "system"
-    Row(
-        verticalAlignment = Alignment.CenterVertically,
-        modifier = Modifier.padding(top = 2.dp),
-    ) {
+    Row(verticalAlignment = Alignment.CenterVertically) {
         Text(
-            text = stringResource(R.string.staff_team_col_added_by) + ": ",
+            text = stringResource(R.string.staff_team_added_by_label),
             style = MaterialTheme.typography.bodySmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
+        Spacer(modifier = Modifier.width(4.dp))
         if (isSystem) {
             Text(
                 text = stringResource(R.string.staff_team_added_by_system),
@@ -230,13 +227,9 @@ private fun AddedByLine(member: StaffMember) {
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
         } else {
-            val name = member.addedbyName?.takeIf { it.isNotBlank() } ?: formatFingerprint(member.addedbyFingerprint)
-            EntityAvatar(
-                name = name,
-                src = "/staff/-/user/${member.addedby}/asset/avatar",
-                seed = member.addedby,
-                size = 20.dp,
-            )
+            val name = member.addedbyName?.takeIf { value -> value.isNotBlank() }
+                ?: formatFingerprint(member.addedbyFingerprint)
+            StaffUserAvatar(name = name, id = member.addedby, size = 20.dp)
             Spacer(modifier = Modifier.width(6.dp))
             Text(
                 text = name,
@@ -244,8 +237,15 @@ private fun AddedByLine(member: StaffMember) {
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.weight(1f, fill = false),
             )
         }
+        Text(
+            text = stringResource(R.string.staff_team_added_when, added),
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            maxLines = 1,
+        )
     }
 }
 
@@ -256,14 +256,18 @@ private fun RoleDropdown(
     onChange: (String) -> Unit,
 ) {
     var expanded by remember { mutableStateOf(false) }
-    val label = roleLabel(current)
     Box {
         MochiOutlinedButton(
             onClick = { expanded = true },
             enabled = enabled,
+            contentPadding = PaddingValues(start = 14.dp, end = 6.dp),
         ) {
-            Text(label)
-            Icon(Icons.Default.ArrowDropDown, contentDescription = null)
+            Text(roleLabel(current))
+            Icon(
+                Icons.Default.ArrowDropDown,
+                contentDescription = null,
+                modifier = Modifier.size(20.dp),
+            )
         }
         MochiDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
             ROLE_OPTIONS.forEach { value ->

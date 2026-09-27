@@ -15,7 +15,6 @@
     <string name="staff_accounts_empty">ගිණුම් කිසිවක් හමු නොවීය</string>
     <string name="staff_accounts_filter_seller_label">විකුණුම්කරු</string>
     <string name="staff_accounts_filter_status_label">තත්ත්වය</string>
-    <string name="staff_accounts_history">ඉතිහාසය</string>
     <string name="staff_accounts_history_title">ගිණුම් ඉතිහාසය</string>
     <string name="staff_accounts_notes_label">සටහන්</string>
     <string name="staff_accounts_reason_label">හේතුව</string>
@@ -125,14 +124,11 @@
     <string name="staff_categories_action_delete">මකන්න</string>
     <string name="staff_categories_action_edit">සංස්කරණය කරන්න</string>
     <string name="staff_categories_add">එක් කරන්න</string>
-    <string name="staff_categories_col_name">නම</string>
-    <string name="staff_categories_col_status">තත්ත්වය</string>
     <string name="staff_categories_col_types">වර්ග</string>
     <string name="staff_categories_create">නිර්මාණය කරන්න</string>
     <string name="staff_categories_delete_confirm">මකන්න</string>
     <string name="staff_categories_delete_title">ප්‍රවර්ගය මකන්න</string>
     <string name="staff_categories_dialog_active">සක්‍රීය</string>
-    <string name="staff_categories_dialog_cancel">අවලංගු කරන්න</string>
     <string name="staff_categories_dialog_create_title">ප්‍රවර්ගයක් නිර්මාණය කරන්න</string>
     <string name="staff_categories_dialog_creating">නිර්මාණය කරමින්…</string>
     <string name="staff_categories_dialog_digital">ඩිජිටල්</string>
@@ -174,21 +170,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">සුරැකීමට අසමත් විය</string>
     <string name="staff_config_toast_saved">සුරකින ලදී</string>
-    <string name="staff_dashboard_col_action">ක්‍රියාව</string>
-    <string name="staff_dashboard_col_actor">ක්‍රියාකරු</string>
     <string name="staff_dashboard_col_buyer">ගැනුම්කරු</string>
-    <string name="staff_dashboard_col_date">දිනය</string>
     <string name="staff_dashboard_col_detail">විස්තරය</string>
-    <string name="staff_dashboard_col_listing">ලැයිස්තුගත කිරීම</string>
-    <string name="staff_dashboard_col_moderation">පාලනය</string>
-    <string name="staff_dashboard_col_name">නම</string>
     <string name="staff_dashboard_col_object">වස්තුව</string>
     <string name="staff_dashboard_col_reason">හේතුව</string>
-    <string name="staff_dashboard_col_score">ලකුණු</string>
     <string name="staff_dashboard_col_seller">විකුණුම්කරු</string>
-    <string name="staff_dashboard_col_status">තත්ත්වය</string>
-    <string name="staff_dashboard_col_title">මාතෘකාව</string>
-    <string name="staff_dashboard_col_total">මුළු</string>
     <string name="staff_dashboard_empty_audit">විගණන ප්‍රවේශයන් නැත</string>
     <string name="staff_dashboard_empty_listings">මෑත ලැයිස්තුගත කිරීම් නැත</string>
     <string name="staff_dashboard_empty_moderation">මෑත මෝඩරේෂන් නැත</string>
@@ -203,7 +189,6 @@
     <string name="staff_dashboard_kpi_sellers">විකුණුම්කරුවන්</string>
     <string name="staff_dashboard_kpi_total_orders">මුළු ඇණවුම්</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">නැත</string>
     <string name="staff_dashboard_open_sidebar">පැති තීරුව විවෘත කරන්න</string>
     <string name="staff_dashboard_system">පද්ධතිය</string>
     <string name="staff_dashboard_tab_audit">විගණනය</string>
@@ -211,7 +196,6 @@
     <string name="staff_dashboard_tab_moderation">පාලනය</string>
     <string name="staff_dashboard_tab_orders">ඇණවුම්</string>
     <string name="staff_dashboard_tab_signups">ලියාපදිංචි කිරීම්</string>
-    <string name="staff_dashboard_yes">ඔව්</string>
     <string name="staff_disputes_any_status">සියලු තත්ත්ව</string>
     <string name="staff_disputes_cancel">අවලංගු කරන්න</string>
     <string name="staff_disputes_close">වසන්න</string>
@@ -249,10 +233,7 @@
     <string name="staff_disputes_status_responded">ප්‍රතිචාර දැක්වූ</string>
     <string name="staff_disputes_status_reviewing">සමාලෝචනය කරමින්</string>
     <string name="staff_disputes_view">බලන්න</string>
-    <string name="staff_filter_chip_remove">පෙරහන ඉවත් කරන්න</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">පාලනය</string>
-    <string name="staff_filter_label_query">සොයන්න</string>
     <string name="staff_filter_label_seller">විකුණුම්කරු</string>
     <string name="staff_filter_label_status">තත්ත්වය</string>
     <string name="staff_filter_label_type">වර්ගය</string>
@@ -340,7 +321,6 @@
     <string name="staff_reviews_filter_all">සියලු තත්ත්ව</string>
     <string name="staff_reviews_filter_published">ප්‍රකාශයට පත් කරන ලදී</string>
     <string name="staff_reviews_filter_removed">ඉවත් කරන ලදී</string>
-    <string name="staff_reviews_overflow_actions">ක්‍රියා</string>
     <string name="staff_reviews_remove_confirm">ඉවත් කරන්න</string>
     <string name="staff_reviews_remove_title">සමාලෝචනය ඉවත් කරන්නද?</string>
     <string name="staff_reviews_role_buyer">ගැනුම්කරු</string>
@@ -395,6 +375,7 @@
     <string name="staff_status_suspended">අත්හිටුවන ලදී</string>
     <string name="staff_team_action_remove">ඉවත් කරන්න</string>
     <string name="staff_team_add_member">සාමාජිකයෙකු එක් කරන්න</string>
+    <string name="staff_team_added_by_label">එක් කළේ:</string>
     <string name="staff_team_added_by_system">පද්ධතිය</string>
     <string name="staff_team_col_added_by">එක් කළේ</string>
     <string name="staff_team_dialog_add">එක් කරන්න</string>
@@ -413,6 +394,7 @@
     <string name="staff_team_role_support">සහාය</string>
     <string name="staff_team_toast_add_failed">සාමාජිකයා එක් කිරීමට අසමත් විය</string>
     <string name="staff_team_toast_removed">සාමාජිකයා ඉවත් කරන ලදී</string>
+    <string name="staff_team_toast_added">සාමාජිකයා එක් කරන ලදී</string>
     <string name="staff_team_toast_role_updated">භූමිකාව යාවත්කාලීන කරන ලදී</string>
     <string name="staff_audit_action_auction_cancelled">වෙන්දේසිය අවලංගු කරන ලදී</string>
     <string name="staff_dashboard_order_fallback">ඇණවුම #%1$s</string>

@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Tilejä ei löytynyt</string>
     <string name="staff_accounts_filter_seller_label">Myyjä</string>
     <string name="staff_accounts_filter_status_label">Tila</string>
-    <string name="staff_accounts_history">Historia</string>
     <string name="staff_accounts_history_title">Tilihistoria</string>
     <string name="staff_accounts_notes_label">Muistiinpanot</string>
     <string name="staff_accounts_reason_label">Syy</string>
@@ -131,15 +130,12 @@
     <string name="staff_categories_action_delete">Poista</string>
     <string name="staff_categories_action_edit">Muokkaa</string>
     <string name="staff_categories_add">Lisää</string>
-    <string name="staff_categories_col_name">Nimi</string>
-    <string name="staff_categories_col_status">Tila</string>
     <string name="staff_categories_col_types">Tyypit</string>
     <string name="staff_categories_create">Luo</string>
     <string name="staff_categories_delete_confirm">Poista</string>
     <string name="staff_categories_delete_desc">Poistetaanko %1$s? Tätä toimintoa ei voi peruuttaa.</string>
     <string name="staff_categories_delete_title">Poista kategoria</string>
     <string name="staff_categories_dialog_active">Aktiivinen</string>
-    <string name="staff_categories_dialog_cancel">Peruuta</string>
     <string name="staff_categories_dialog_create_title">Luo kategoria</string>
     <string name="staff_categories_dialog_creating">Luodaan…</string>
     <string name="staff_categories_dialog_digital">Digitaalinen</string>
@@ -181,21 +177,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">Tallennus epäonnistui</string>
     <string name="staff_config_toast_saved">Tallennettu</string>
-    <string name="staff_dashboard_col_action">Toiminto</string>
-    <string name="staff_dashboard_col_actor">Tekijä</string>
     <string name="staff_dashboard_col_buyer">Ostaja</string>
-    <string name="staff_dashboard_col_date">Päivämäärä</string>
     <string name="staff_dashboard_col_detail">Yksityiskohta</string>
-    <string name="staff_dashboard_col_listing">Ilmoitus</string>
-    <string name="staff_dashboard_col_moderation">Moderointi</string>
-    <string name="staff_dashboard_col_name">Nimi</string>
     <string name="staff_dashboard_col_object">Kohde</string>
     <string name="staff_dashboard_col_reason">Syy</string>
-    <string name="staff_dashboard_col_score">Pisteet</string>
     <string name="staff_dashboard_col_seller">Myyjä</string>
-    <string name="staff_dashboard_col_status">Tila</string>
-    <string name="staff_dashboard_col_title">Otsikko</string>
-    <string name="staff_dashboard_col_total">Yhteensä</string>
     <string name="staff_dashboard_empty_audit">Ei auditointimerkintöjä</string>
     <string name="staff_dashboard_empty_listings">Ei viimeaikaisia ilmoituksia</string>
     <string name="staff_dashboard_empty_moderation">Ei viimeaikaista moderointia</string>
@@ -210,7 +196,6 @@
     <string name="staff_dashboard_kpi_sellers">Myyjät</string>
     <string name="staff_dashboard_kpi_total_orders">Tilauksia yhteensä</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">Ei</string>
     <string name="staff_dashboard_open_sidebar">Avaa sivupalkki</string>
     <string name="staff_dashboard_order_fallback">Tilaus #%1$s</string>
     <string name="staff_dashboard_system">Järjestelmä</string>
@@ -219,7 +204,6 @@
     <string name="staff_dashboard_tab_moderation">Moderointi</string>
     <string name="staff_dashboard_tab_orders">Tilaukset</string>
     <string name="staff_dashboard_tab_signups">Rekisteröitymiset</string>
-    <string name="staff_dashboard_yes">Kyllä</string>
     <string name="staff_disputes_any_status">Kaikki tilat</string>
     <string name="staff_disputes_cancel">Peruuta</string>
     <string name="staff_disputes_close">Sulje</string>
@@ -281,10 +265,7 @@
     <string name="staff_disputes_stripe_subscription_canceled">tilaus peruttu</string>
     <string name="staff_disputes_stripe_unrecognized">tuntematon veloitus</string>
     <string name="staff_disputes_view">Näytä</string>
-    <string name="staff_filter_chip_remove">Poista suodatin</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderointi</string>
-    <string name="staff_filter_label_query">Haku</string>
     <string name="staff_filter_label_seller">Myyjä</string>
     <string name="staff_filter_label_status">Tila</string>
     <string name="staff_filter_label_type">Tyyppi</string>
@@ -376,7 +357,6 @@
     <string name="staff_reviews_filter_published">Julkaistu</string>
     <string name="staff_reviews_filter_removed">Poistettu</string>
     <string name="staff_reviews_order_label">tilaus #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Toiminnot</string>
     <string name="staff_reviews_remove_confirm">Poista</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$s. Poistetaanko tämä arvostelu pysyvästi? Tätä toimintoa ei voi peruuttaa.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Poistetaanko tämä arvostelu pysyvästi? Tätä toimintoa ei voi peruuttaa.</string>
@@ -433,6 +413,7 @@
     <string name="staff_status_suspended">Keskeytetty</string>
     <string name="staff_team_action_remove">Poista</string>
     <string name="staff_team_add_member">Lisää jäsen</string>
+    <string name="staff_team_added_by_label">Lisääjä:</string>
     <string name="staff_team_added_by_system">Järjestelmä</string>
     <string name="staff_team_col_added_by">Lisääjä</string>
     <string name="staff_team_dialog_add">Lisää</string>
@@ -452,6 +433,7 @@
     <string name="staff_team_role_support">Tuki</string>
     <string name="staff_team_toast_add_failed">Jäsenen lisääminen epäonnistui</string>
     <string name="staff_team_toast_removed">Jäsen poistettu</string>
+    <string name="staff_team_toast_added">Jäsen lisätty</string>
     <string name="staff_team_toast_role_updated">Rooli päivitetty</string>
 
     <string name="staff_config_field_stripe_webhook">Webhookin allekirjoitussalaisuus</string>

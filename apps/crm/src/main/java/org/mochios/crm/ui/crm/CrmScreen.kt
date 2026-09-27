@@ -8,12 +8,14 @@ package org.mochios.crm.ui.crm
 import android.content.Context
 import android.content.Intent
 import android.widget.Toast
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.foundation.gestures.rememberScrollableState
 import androidx.compose.foundation.gestures.scrollable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -22,21 +24,21 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.FormatListBulleted
 import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.ArrowDownward
+import androidx.compose.material.icons.filled.ArrowUpward
 import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.Folder
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Dashboard
 import androidx.compose.material.icons.outlined.Delete
@@ -55,8 +57,8 @@ import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
-import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
@@ -70,8 +72,8 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -90,11 +92,13 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
 import kotlinx.coroutines.launch
+import org.mochios.android.R as MochiR
 import org.mochios.android.api.MochiError
+import org.mochios.android.api.userMessage
 import org.mochios.android.files.MIME_CSV
 import org.mochios.android.files.MIME_ZIP
-import org.mochios.android.files.shareExportFile
 import org.mochios.android.files.rememberFileSaveLauncher
+import org.mochios.android.files.shareExportFile
 import org.mochios.android.push.VisibleEntityEffect
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
@@ -103,6 +107,8 @@ import org.mochios.android.ui.components.DrawerPlaceholderScreen
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.FilterChipRow
+import org.mochios.android.ui.components.FilterSheet
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
@@ -113,17 +119,18 @@ import org.mochios.android.ui.components.MochiFab
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiSearchTopBar
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.crm.R
 import org.mochios.crm.model.Crm
-import org.mochios.crm.ui.board.BoardView
+import org.mochios.crm.model.CrmField
+import org.mochios.crm.model.FieldOption
 import org.mochios.crm.ui.`object`.ObjectDetailSheet
+import org.mochios.crm.ui.board.BoardView
 import org.mochios.crm.ui.crmlist.CrmListViewModel
-import org.mochios.android.api.userMessage
 import org.mochios.crm.ui.router.CRM_FEATURE
 import org.mochios.crm.ui.tree.TreeView
-import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -961,3 +968,131 @@ private fun ExportProgressDialog() {
     }
 }
 
+/**
+ * Sort and filter sheet for the object list. Changes apply live, so there is no
+ * Apply button. [activeSort] null means no chip reads as selected.
+ */
+@Composable
+private fun SortFilterSheet(
+    fieldSortOptions: List<Pair<String, String>>,
+    builtInSortOptions: List<Pair<String, String>>,
+    activeSort: String?,
+    activeDirection: String,
+    filterFields: List<Pair<CrmField, List<FieldOption>>>,
+    activeFieldFilters: Map<String, Set<String>>,
+    watchedOnly: Boolean,
+    onSortChange: (String) -> Unit,
+    onToggleDirection: () -> Unit,
+    onToggleFieldValue: (fieldId: String, optionId: String) -> Unit,
+    onClearFieldFilter: (String) -> Unit,
+    onToggleWatched: () -> Unit,
+    onClearAll: () -> Unit,
+    onDismiss: () -> Unit,
+) {
+    FilterSheet(
+        title = stringResource(R.string.crm_sort_filter_title),
+        onDismiss = onDismiss,
+        headerAction = {
+            MochiTextButton(onClick = onClearAll) {
+                Text(stringResource(R.string.crm_filter_clear_all))
+            }
+        },
+    ) {
+        // Direction sits on the "Sort by" heading itself: it's a property of
+        // the sort, and a labelled button there is a bigger, closer target
+        // than a separate control below the chips.
+        val descending = activeDirection == "desc"
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            SectionLabel(
+                text = stringResource(R.string.crm_sort_field),
+                modifier = Modifier.weight(1f),
+            )
+            MochiTextButton(onClick = onToggleDirection) {
+                Icon(
+                    imageVector = if (descending) {
+                        Icons.Default.ArrowDownward
+                    } else {
+                        Icons.Default.ArrowUpward
+                    },
+                    contentDescription = null,
+                    modifier = Modifier.size(18.dp),
+                )
+                Spacer(modifier = Modifier.width(6.dp))
+                Text(
+                    stringResource(
+                        if (descending) R.string.crm_sort_direction_desc
+                        else R.string.crm_sort_direction_asc
+                    )
+                )
+            }
+        }
+        // The CRM's own sortable fields keep their own row, above the sort
+        // keys every CRM has — the split the old dropdown drew as a divider.
+        Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            if (fieldSortOptions.isNotEmpty()) {
+                FilterChipRow(
+                    options = fieldSortOptions,
+                    isSelected = { id -> id == activeSort },
+                    onSelect = onSortChange,
+                    verticalSpacing = 0.dp,
+                )
+            }
+            FilterChipRow(
+                options = builtInSortOptions,
+                isSelected = { id -> id == activeSort },
+                onSelect = onSortChange,
+                verticalSpacing = 0.dp,
+            )
+        }
+
+        filterFields.forEach { (field, options) ->
+            val selected = activeFieldFilters[field.id].orEmpty()
+            SectionLabel(field.name)
+            FilterChipRow(
+                options = listOf<Pair<String?, String>>(
+                    null to stringResource(R.string.crm_filter_all),
+                ) + options.map { option -> option.id to option.name },
+                isSelected = { optionId ->
+                    if (optionId == null) selected.isEmpty() else optionId in selected
+                },
+                onSelect = { optionId ->
+                    if (optionId == null) {
+                        onClearFieldFilter(field.id)
+                    } else {
+                        onToggleFieldValue(field.id, optionId)
+                    }
+                },
+                verticalSpacing = 0.dp,
+            )
+        }
+
+        SectionLabel(stringResource(R.string.crm_filter_other))
+        FilterChip(
+            selected = watchedOnly,
+            onClick = onToggleWatched,
+            label = { Text(stringResource(R.string.crm_watched)) },
+            leadingIcon = if (watchedOnly) {
+                {
+                    Icon(
+                        Icons.Default.Visibility,
+                        contentDescription = null,
+                        modifier = Modifier.size(16.dp),
+                    )
+                }
+            } else null,
+        )
+    }
+}
+
+@Composable
+private fun SectionLabel(text: String, modifier: Modifier = Modifier) {
+    Text(
+        text = text,
+        style = MaterialTheme.typography.labelLarge,
+        color = MaterialTheme.colorScheme.onSurfaceVariant,
+        modifier = modifier,
+    )
+}

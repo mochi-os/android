@@ -5,7 +5,6 @@
 
 package org.mochios.staff.ui.disputes
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -16,9 +15,10 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Report
+import androidx.compose.material.icons.outlined.Gavel
+import androidx.compose.material.icons.outlined.Visibility
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
@@ -33,28 +33,28 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
-import org.mochios.android.i18n.LocalFormat
-import org.mochios.android.i18n.formatTimestamp
-import org.mochios.android.ui.components.EmptyState
-import org.mochios.android.ui.components.EntityAvatar
-import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.FilterDropdown
-import org.mochios.android.ui.components.InfiniteList
-import org.mochios.android.ui.components.MochiOutlinedButton
-import org.mochios.staff.R
 import org.mochios.android.format.formatFingerprint
 import org.mochios.android.format.formatPrice
+import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.ui.components.ChoiceFilter
+import org.mochios.android.ui.components.EmptyState
+import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.FilterBar
+import org.mochios.android.ui.components.InfiniteList
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.staff.R
 import org.mochios.staff.model.Dispute
-import org.mochios.staff.ui.components.FilterChipSpec
-import org.mochios.staff.ui.components.FilterChipsRow
+import org.mochios.staff.ui.components.StaffCardAction
+import org.mochios.staff.ui.components.StaffCardMenu
 import org.mochios.staff.ui.components.StaffStatusBadge
+import org.mochios.staff.ui.components.StaffUserAvatar
 import org.mochios.staff.ui.dialog.DisputeReviewDialog
 
 /**
@@ -125,13 +125,17 @@ private fun DisputesBody(
     onRetry: () -> Unit,
 ) {
     Column(Modifier.fillMaxSize()) {
-        FiltersRow(
-            status = state.status,
-            onStatusChange = onStatusChange,
-        )
-        ActiveFilterChips(
-            status = state.status,
-            onStatusChange = onStatusChange,
+        FilterBar(
+            filters = listOf(
+                ChoiceFilter(
+                    label = stringResource(R.string.staff_disputes_filter_status_label),
+                    chipLabel = stringResource(R.string.staff_filter_label_status),
+                    anyLabel = stringResource(R.string.staff_disputes_any_status),
+                    options = disputeStatusOptions(),
+                    current = state.status,
+                    onSelect = onStatusChange,
+                ),
+            ),
         )
 
         when {
@@ -174,94 +178,103 @@ private fun DisputeRow(
         && dispute.status != "resolved_seller"
     val showAction = dispute.opener == "stripe" || canReview
 
-    Column(
+    MochiCard(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 12.dp, vertical = 6.dp)
-            .clip(RoundedCornerShape(10.dp))
-            .background(MaterialTheme.colorScheme.surface)
-            .padding(12.dp),
+            .padding(horizontal = 16.dp, vertical = 6.dp),
+        shape = MaterialTheme.shapes.medium,
     ) {
-        Text(
-            text = dispute.title.ifBlank { stringResource(R.string.staff_disputes_listing_label, dispute.listing) },
-            style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis,
-        )
-        Spacer(Modifier.height(6.dp))
+        Column(modifier = Modifier.padding(16.dp)) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    text = dispute.title.ifBlank {
+                        stringResource(R.string.staff_disputes_listing_label, dispute.listing)
+                    },
+                    style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f),
+                )
+                if (showAction) {
+                    val stripe = dispute.opener == "stripe"
+                    StaffCardMenu(
+                        actions = listOf(
+                            StaffCardAction(
+                                label = if (stripe) {
+                                    stringResource(R.string.staff_disputes_view)
+                                } else {
+                                    stringResource(R.string.staff_disputes_review)
+                                },
+                                icon = if (stripe) Icons.Outlined.Visibility else Icons.Outlined.Gavel,
+                                onClick = onActionClick,
+                            ),
+                        ),
+                    )
+                }
+            }
+            Spacer(Modifier.height(6.dp))
 
-        // Seller row.
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            EntityAvatar(
-                name = dispute.sellerName.ifBlank { dispute.seller },
-                seed = dispute.seller,
-                size = 18.dp,
-            )
-            Spacer(Modifier.width(6.dp))
+            // Seller row.
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                StaffUserAvatar(
+                    name = dispute.sellerName.ifBlank { dispute.seller },
+                    id = dispute.seller,
+                    size = 18.dp,
+                )
+                Spacer(Modifier.width(6.dp))
+                Text(
+                    text = dispute.sellerName.ifBlank { formatFingerprint(dispute.sellerFingerprint) },
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f),
+                )
+            }
+            Spacer(Modifier.height(2.dp))
+
+            // Buyer row.
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                StaffUserAvatar(
+                    name = dispute.buyerName.ifBlank { dispute.buyer },
+                    id = dispute.buyer,
+                    size = 18.dp,
+                )
+                Spacer(Modifier.width(6.dp))
+                Text(
+                    text = dispute.buyerName.ifBlank { formatFingerprint(dispute.buyerFingerprint) },
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f),
+                )
+            }
+            Spacer(Modifier.height(8.dp))
+
+            // Status + total + reason.
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                StaffStatusBadge(status = dispute.status)
+                Text(
+                    text = formatPrice(dispute.total, dispute.currency),
+                    style = MaterialTheme.typography.labelMedium,
+                )
+            }
+            Spacer(Modifier.height(6.dp))
             Text(
-                text = dispute.sellerName.ifBlank { formatFingerprint(dispute.sellerFingerprint) },
-                style = MaterialTheme.typography.labelSmall,
+                text = disputeReasonText(dispute),
+                style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
-                maxLines = 1,
+                maxLines = 2,
                 overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.weight(1f),
             )
-        }
-        Spacer(Modifier.height(2.dp))
+            Spacer(Modifier.height(6.dp))
 
-        // Buyer row.
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            EntityAvatar(
-                name = dispute.buyerName.ifBlank { dispute.buyer },
-                seed = dispute.buyer,
-                size = 18.dp,
-            )
-            Spacer(Modifier.width(6.dp))
-            Text(
-                text = dispute.buyerName.ifBlank { formatFingerprint(dispute.buyerFingerprint) },
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.weight(1f),
-            )
-        }
-        Spacer(Modifier.height(8.dp))
-
-        // Status + total + reason.
-        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-            StaffStatusBadge(status = dispute.status)
-            Text(
-                text = formatPrice(dispute.total, dispute.currency),
-                style = MaterialTheme.typography.labelMedium,
-            )
-        }
-        Spacer(Modifier.height(6.dp))
-        Text(
-            text = disputeReasonText(dispute),
-            style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-            maxLines = 2,
-            overflow = TextOverflow.Ellipsis,
-        )
-        Spacer(Modifier.height(6.dp))
-
-        // Created + action button.
-        Row(verticalAlignment = Alignment.CenterVertically) {
             Text(
                 text = format.formatTimestamp(dispute.created),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.weight(1f),
             )
-            if (showAction) {
-                MochiOutlinedButton(onClick = onActionClick) {
-                    Text(
-                        if (dispute.opener == "stripe") stringResource(R.string.staff_disputes_view)
-                        else stringResource(R.string.staff_disputes_review),
-                    )
-                }
-            }
         }
     }
 }
@@ -279,28 +292,6 @@ private fun disputeReasonText(dispute: Dispute): String {
 }
 
 @Composable
-private fun FiltersRow(
-    status: String?,
-    onStatusChange: (String?) -> Unit,
-) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 8.dp),
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
-    ) {
-        FilterDropdown(
-            label = stringResource(R.string.staff_disputes_filter_status_label),
-            current = status,
-            options = disputeStatusOptions(),
-            anyLabel = stringResource(R.string.staff_disputes_any_status),
-            onSelect = onStatusChange,
-            modifier = Modifier.weight(1f),
-        )
-    }
-}
-
-@Composable
 private fun disputeStatusOptions(): List<Pair<String, String>> = listOf(
     "open" to stringResource(R.string.staff_disputes_status_open),
     "responded" to stringResource(R.string.staff_disputes_status_responded),
@@ -309,22 +300,6 @@ private fun disputeStatusOptions(): List<Pair<String, String>> = listOf(
     "resolved_seller" to stringResource(R.string.staff_disputes_status_resolved_seller),
     "escalated" to stringResource(R.string.staff_disputes_status_escalated),
 )
-
-@Composable
-private fun ActiveFilterChips(
-    status: String?,
-    onStatusChange: (String?) -> Unit,
-) {
-    val statusLabel = stringResource(R.string.staff_filter_label_status)
-    val statusOpts = disputeStatusOptions()
-    val chips = buildList {
-        if (!status.isNullOrBlank()) {
-            val value = statusOpts.firstOrNull { it.first == status }?.second ?: status
-            add(FilterChipSpec(statusLabel, value) { onStatusChange(null) })
-        }
-    }
-    FilterChipsRow(chips = chips)
-}
 
 @Composable
 internal fun stripeReasonLabel(reason: String): String = when (reason) {

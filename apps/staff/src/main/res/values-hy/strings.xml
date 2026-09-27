@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Հաշիվներ չեն գտնվել</string>
     <string name="staff_accounts_filter_seller_label">Վաճառող</string>
     <string name="staff_accounts_filter_status_label">Կարգավիճակ</string>
-    <string name="staff_accounts_history">Պատմություն</string>
     <string name="staff_accounts_history_title">Հաշվի պատմություն</string>
     <string name="staff_accounts_notes_label">Նշումներ</string>
     <string name="staff_accounts_reason_label">Պատճառ</string>
@@ -131,15 +130,12 @@
     <string name="staff_categories_action_delete">Ջնջել</string>
     <string name="staff_categories_action_edit">Խմբագրել</string>
     <string name="staff_categories_add">Ավելացնել</string>
-    <string name="staff_categories_col_name">Անուն</string>
-    <string name="staff_categories_col_status">Կարգավիճակ</string>
     <string name="staff_categories_col_types">Տեսակներ</string>
     <string name="staff_categories_create">Ստեղծել</string>
     <string name="staff_categories_delete_confirm">Ջնջել</string>
     <string name="staff_categories_delete_desc">Ջնջե՞լ %1$s-ը։ Այս գործողությունը հնարավոր չէ չեղարկել։</string>
     <string name="staff_categories_delete_title">Ջնջել կատեգորիան</string>
     <string name="staff_categories_dialog_active">Ակտիվ</string>
-    <string name="staff_categories_dialog_cancel">Չեղարկել</string>
     <string name="staff_categories_dialog_create_title">Ստեղծել կատեգորիա</string>
     <string name="staff_categories_dialog_creating">Արժանահավատություն</string>
     <string name="staff_categories_dialog_digital">Թվային</string>
@@ -181,21 +177,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">Չհաջողվեց պահպանել</string>
     <string name="staff_config_toast_saved">Պահպանված է</string>
-    <string name="staff_dashboard_col_action">Գործողություն</string>
-    <string name="staff_dashboard_col_actor">Կատարող</string>
     <string name="staff_dashboard_col_buyer">Գնորդ</string>
-    <string name="staff_dashboard_col_date">Ամսաթիվ</string>
     <string name="staff_dashboard_col_detail">Մանրամասն</string>
-    <string name="staff_dashboard_col_listing">Հայտարարություն</string>
-    <string name="staff_dashboard_col_moderation">Մոդերացիա</string>
-    <string name="staff_dashboard_col_name">Անուն</string>
     <string name="staff_dashboard_col_object">Օբյեկտ</string>
     <string name="staff_dashboard_col_reason">Պատճառ</string>
-    <string name="staff_dashboard_col_score">Միավոր</string>
     <string name="staff_dashboard_col_seller">Վաճառող</string>
-    <string name="staff_dashboard_col_status">Կարգավիճակ</string>
-    <string name="staff_dashboard_col_title">Վերնագիր</string>
-    <string name="staff_dashboard_col_total">Ընդհանուր</string>
     <string name="staff_dashboard_empty_audit">Աուդիտի գրառումներ չկան</string>
     <string name="staff_dashboard_empty_listings">Վերջին հայտարարություններ չկան</string>
     <string name="staff_dashboard_empty_moderation">Վերջին մոդերացիա չկա</string>
@@ -210,7 +196,6 @@
     <string name="staff_dashboard_kpi_sellers">Վաճառողներ</string>
     <string name="staff_dashboard_kpi_total_orders">Ընդհանուր պատվերներ</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">Ոչ</string>
     <string name="staff_dashboard_open_sidebar">Բացել կողագոտին</string>
     <string name="staff_dashboard_order_fallback">Պատվեր #%1$s</string>
     <string name="staff_dashboard_system">Համակարգ</string>
@@ -219,7 +204,6 @@
     <string name="staff_dashboard_tab_moderation">Մոդերացիա</string>
     <string name="staff_dashboard_tab_orders">Պատվերներ</string>
     <string name="staff_dashboard_tab_signups">Գրանցումներ</string>
-    <string name="staff_dashboard_yes">Այո</string>
     <string name="staff_disputes_any_status">Բոլոր կարգավիճակները</string>
     <string name="staff_disputes_cancel">Չեղարկել</string>
     <string name="staff_disputes_close">Փակել</string>
@@ -267,10 +251,7 @@
     <string name="staff_disputes_status_responded">Արձագանքվել է</string>
     <string name="staff_disputes_status_reviewing">Վերանայվում է</string>
     <string name="staff_disputes_view">Դիտել</string>
-    <string name="staff_filter_chip_remove">Հեռացնել զտիչը</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Մոդերացիա</string>
-    <string name="staff_filter_label_query">Որոնել</string>
     <string name="staff_filter_label_seller">Վաճառող</string>
     <string name="staff_filter_label_status">Կարգավիճակ</string>
     <string name="staff_filter_label_type">Տեսակ</string>
@@ -362,7 +343,6 @@
     <string name="staff_reviews_filter_published">Հրապարակված է</string>
     <string name="staff_reviews_filter_removed">Հեռացված է</string>
     <string name="staff_reviews_order_label">պատվեր #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Գործողություններ</string>
     <string name="staff_reviews_remove_confirm">Հեռացնել</string>
     <string name="staff_reviews_remove_title">Հեռացնե՞լ կարծիքը։</string>
     <string name="staff_reviews_role_buyer">Գնորդ</string>
@@ -417,6 +397,7 @@
     <string name="staff_status_suspended">Կասեցված է</string>
     <string name="staff_team_action_remove">Հեռացնել</string>
     <string name="staff_team_add_member">Ավելացնել անդամ</string>
+    <string name="staff_team_added_by_label">Ավելացրել է:</string>
     <string name="staff_team_added_by_system">Համակարգ</string>
     <string name="staff_team_col_added_by">Ավելացրել է</string>
     <string name="staff_team_dialog_add">Ավելացնել</string>
@@ -436,6 +417,7 @@
     <string name="staff_team_role_support">Աջակցություն</string>
     <string name="staff_team_toast_add_failed">Չհաջողվեց ավելացնել անդամին</string>
     <string name="staff_team_toast_removed">Անդամը հեռացվեց</string>
+    <string name="staff_team_toast_added">Անդամն ավելացվեց</string>
     <string name="staff_team_toast_role_updated">Դերը թարմացված է</string>
 
 

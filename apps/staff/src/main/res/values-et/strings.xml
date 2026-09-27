@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Kontosid ei leitud</string>
     <string name="staff_accounts_filter_seller_label">Müüja</string>
     <string name="staff_accounts_filter_status_label">Olek</string>
-    <string name="staff_accounts_history">Ajalugu</string>
     <string name="staff_accounts_history_title">Konto ajalugu</string>
     <string name="staff_accounts_notes_label">Märkmed</string>
     <string name="staff_accounts_reason_label">Põhjus</string>
@@ -131,15 +130,12 @@
     <string name="staff_categories_action_delete">Kustuta</string>
     <string name="staff_categories_action_edit">Muuda</string>
     <string name="staff_categories_add">Lisa</string>
-    <string name="staff_categories_col_name">Nimi</string>
-    <string name="staff_categories_col_status">Olek</string>
     <string name="staff_categories_col_types">Tüübid</string>
     <string name="staff_categories_create">Loo</string>
     <string name="staff_categories_delete_confirm">Kustuta</string>
     <string name="staff_categories_delete_desc">Kustuta %1$s? Seda toimingut ei saa tagasi võtta.</string>
     <string name="staff_categories_delete_title">Kustuta kategooria</string>
     <string name="staff_categories_dialog_active">Aktiivne</string>
-    <string name="staff_categories_dialog_cancel">Tühista</string>
     <string name="staff_categories_dialog_create_title">Loo kategooria</string>
     <string name="staff_categories_dialog_creating">Loomine…</string>
     <string name="staff_categories_dialog_digital">Digitaalne</string>
@@ -181,21 +177,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">Salvestamine ebaõnnestus</string>
     <string name="staff_config_toast_saved">Salvestatud</string>
-    <string name="staff_dashboard_col_action">Tegevus</string>
-    <string name="staff_dashboard_col_actor">Tegija</string>
     <string name="staff_dashboard_col_buyer">Ostja</string>
-    <string name="staff_dashboard_col_date">Kuupäev</string>
     <string name="staff_dashboard_col_detail">Üksikasjad</string>
-    <string name="staff_dashboard_col_listing">Kuulutus</string>
-    <string name="staff_dashboard_col_moderation">Modereerimine</string>
-    <string name="staff_dashboard_col_name">Nimi</string>
     <string name="staff_dashboard_col_object">Objekt</string>
     <string name="staff_dashboard_col_reason">Põhjus</string>
-    <string name="staff_dashboard_col_score">Skoor</string>
     <string name="staff_dashboard_col_seller">Müüja</string>
-    <string name="staff_dashboard_col_status">Olek</string>
-    <string name="staff_dashboard_col_title">Pealkiri</string>
-    <string name="staff_dashboard_col_total">Kokku</string>
     <string name="staff_dashboard_empty_audit">Auditi kirjeid pole</string>
     <string name="staff_dashboard_empty_listings">Hiljutisi kuulutusi pole</string>
     <string name="staff_dashboard_empty_moderation">Hiljutist modereerimist pole</string>
@@ -210,7 +196,6 @@
     <string name="staff_dashboard_kpi_sellers">Müüjad</string>
     <string name="staff_dashboard_kpi_total_orders">Tellimusi kokku</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">Ei</string>
     <string name="staff_dashboard_open_sidebar">Ava külgriba</string>
     <string name="staff_dashboard_order_fallback">Tellimus #%1$s</string>
     <string name="staff_dashboard_system">Süsteem</string>
@@ -219,7 +204,6 @@
     <string name="staff_dashboard_tab_moderation">Modereerimine</string>
     <string name="staff_dashboard_tab_orders">Tellimused</string>
     <string name="staff_dashboard_tab_signups">Registreerimised</string>
-    <string name="staff_dashboard_yes">Jah</string>
     <string name="staff_disputes_any_status">Kõik olekud</string>
     <string name="staff_disputes_cancel">Tühista</string>
     <string name="staff_disputes_close">Sulge</string>
@@ -281,10 +265,7 @@
     <string name="staff_disputes_stripe_subscription_canceled">tellimus tühistatud</string>
     <string name="staff_disputes_stripe_unrecognized">tundmatu makse</string>
     <string name="staff_disputes_view">Vaata</string>
-    <string name="staff_filter_chip_remove">Eemalda filter</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Modereerimine</string>
-    <string name="staff_filter_label_query">Otsi</string>
     <string name="staff_filter_label_seller">Müüja</string>
     <string name="staff_filter_label_status">Olek</string>
     <string name="staff_filter_label_type">Tüüp</string>
@@ -376,7 +357,6 @@
     <string name="staff_reviews_filter_published">Avaldatud</string>
     <string name="staff_reviews_filter_removed">Eemaldatud</string>
     <string name="staff_reviews_order_label">tellimus #%1$s</string>
-    <string name="staff_reviews_overflow_actions">Tegevused</string>
     <string name="staff_reviews_remove_confirm">Eemalda</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$s. Kustuta see arvustus jäädavalt? Seda toimingut ei saa tagasi võtta.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Kustuta see arvustus jäädavalt? Seda toimingut ei saa tagasi võtta.</string>
@@ -433,6 +413,7 @@
     <string name="staff_status_suspended">Peatatud</string>
     <string name="staff_team_action_remove">Eemalda</string>
     <string name="staff_team_add_member">Lisa liige</string>
+    <string name="staff_team_added_by_label">Lisas:</string>
     <string name="staff_team_added_by_system">Süsteem</string>
     <string name="staff_team_col_added_by">Lisas</string>
     <string name="staff_team_dialog_add">Lisa</string>
@@ -452,6 +433,7 @@
     <string name="staff_team_role_support">Tugi</string>
     <string name="staff_team_toast_add_failed">Liikme lisamine ebaõnnestus</string>
     <string name="staff_team_toast_removed">Liige eemaldatud</string>
+    <string name="staff_team_toast_added">Liige lisatud</string>
     <string name="staff_team_toast_role_updated">Roll on uuendatud</string>
 
     <string name="staff_config_field_stripe_webhook">Webhooki allkirjastamise saladus</string>

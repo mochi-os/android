@@ -18,6 +18,9 @@
     <string name="common_back">گەڕانەوە</string>
     <string name="common_close">داخستن</string>
     <string name="common_cancel">هەڵوەشاندنەوە</string>
+    <string name="common_filter">فلتەر</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">لابردنی فلتەر</string>
     <string name="common_confirm">پشتڕاستکردنەوە</string>
     <string name="common_save">پاشەکەوتکردن</string>
     <string name="common_saving">پاشەکەوتکردن…</string>

@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">לא נמצאו חשבונות</string>
     <string name="staff_accounts_filter_seller_label">מוכר</string>
     <string name="staff_accounts_filter_status_label">סטטוס</string>
-    <string name="staff_accounts_history">היסטוריה</string>
     <string name="staff_accounts_history_title">היסטוריית חשבון</string>
     <string name="staff_accounts_notes_label">הערות</string>
     <string name="staff_accounts_reason_label">סיבה</string>
@@ -131,15 +130,12 @@
     <string name="staff_categories_action_delete">מחק</string>
     <string name="staff_categories_action_edit">עריכה</string>
     <string name="staff_categories_add">הוספה</string>
-    <string name="staff_categories_col_name">שם</string>
-    <string name="staff_categories_col_status">סטטוס</string>
     <string name="staff_categories_col_types">סוגים</string>
     <string name="staff_categories_create">צור</string>
     <string name="staff_categories_delete_confirm">מחק</string>
     <string name="staff_categories_delete_desc">למחוק את «%1$s»? לא ניתן לבטל פעולה זו.</string>
     <string name="staff_categories_delete_title">מחק קטגוריה</string>
     <string name="staff_categories_dialog_active">פעיל</string>
-    <string name="staff_categories_dialog_cancel">ביטול</string>
     <string name="staff_categories_dialog_create_title">צור קטגוריה</string>
     <string name="staff_categories_dialog_creating">יוצר…</string>
     <string name="staff_categories_dialog_digital">דיגיטלי</string>
@@ -181,21 +177,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">השמירה נכשלה</string>
     <string name="staff_config_toast_saved">נשמר</string>
-    <string name="staff_dashboard_col_action">פעולה</string>
-    <string name="staff_dashboard_col_actor">מבצע</string>
     <string name="staff_dashboard_col_buyer">קונה</string>
-    <string name="staff_dashboard_col_date">תאריך</string>
     <string name="staff_dashboard_col_detail">פרט</string>
-    <string name="staff_dashboard_col_listing">מודעה</string>
-    <string name="staff_dashboard_col_moderation">ניהול תוכן</string>
-    <string name="staff_dashboard_col_name">שם</string>
     <string name="staff_dashboard_col_object">אובייקט</string>
     <string name="staff_dashboard_col_reason">סיבה</string>
-    <string name="staff_dashboard_col_score">ניקוד</string>
     <string name="staff_dashboard_col_seller">מוכר</string>
-    <string name="staff_dashboard_col_status">סטטוס</string>
-    <string name="staff_dashboard_col_title">כותרת</string>
-    <string name="staff_dashboard_col_total">סה\"כ</string>
     <string name="staff_dashboard_empty_audit">אין רשומות ביקורת</string>
     <string name="staff_dashboard_empty_listings">אין רישומים אחרונים</string>
     <string name="staff_dashboard_empty_moderation">אין ניהול תוכן אחרון</string>
@@ -210,7 +196,6 @@
     <string name="staff_dashboard_kpi_sellers">מוכרים</string>
     <string name="staff_dashboard_kpi_total_orders">סה\"כ הזמנות</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">לא</string>
     <string name="staff_dashboard_open_sidebar">פתח סרגל צד</string>
     <string name="staff_dashboard_order_fallback">הזמנה #%1$s</string>
     <string name="staff_dashboard_system">מערכת</string>
@@ -219,7 +204,6 @@
     <string name="staff_dashboard_tab_moderation">ניהול תוכן</string>
     <string name="staff_dashboard_tab_orders">הזמנות</string>
     <string name="staff_dashboard_tab_signups">הרשמות</string>
-    <string name="staff_dashboard_yes">כן</string>
     <string name="staff_disputes_any_status">כל הסטטוסים</string>
     <string name="staff_disputes_cancel">ביטול</string>
     <string name="staff_disputes_close">סגור</string>
@@ -281,10 +265,7 @@
     <string name="staff_disputes_stripe_subscription_canceled">המינוי בוטל</string>
     <string name="staff_disputes_stripe_unrecognized">חיוב לא מזוהה</string>
     <string name="staff_disputes_view">הצג</string>
-    <string name="staff_filter_chip_remove">הסרת מסנן</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">ניהול תוכן</string>
-    <string name="staff_filter_label_query">חיפוש</string>
     <string name="staff_filter_label_seller">מוכר</string>
     <string name="staff_filter_label_status">סטטוס</string>
     <string name="staff_filter_label_type">סוג</string>
@@ -376,7 +357,6 @@
     <string name="staff_reviews_filter_published">פורסם</string>
     <string name="staff_reviews_filter_removed">הוסר</string>
     <string name="staff_reviews_order_label">הזמנה #%1$s</string>
-    <string name="staff_reviews_overflow_actions">פעולות</string>
     <string name="staff_reviews_remove_confirm">הסר</string>
     <string name="staff_reviews_remove_desc_full">%1$s ← %2$s בתאריך %3$s. למחוק ביקורת זו לצמיתות? לא ניתן לבטל פעולה זו.</string>
     <string name="staff_reviews_remove_desc_short">%1$s ← %2$s. למחוק ביקורת זו לצמיתות? לא ניתן לבטל פעולה זו.</string>
@@ -433,6 +413,7 @@
     <string name="staff_status_suspended">מושעה</string>
     <string name="staff_team_action_remove">הסר</string>
     <string name="staff_team_add_member">הוסף חבר</string>
+    <string name="staff_team_added_by_label">נוסף על ידי:</string>
     <string name="staff_team_added_by_system">מערכת</string>
     <string name="staff_team_col_added_by">נוסף על ידי</string>
     <string name="staff_team_dialog_add">הוספה</string>
@@ -452,6 +433,7 @@
     <string name="staff_team_role_support">תמיכה</string>
     <string name="staff_team_toast_add_failed">הוספת חבר נכשלה</string>
     <string name="staff_team_toast_removed">החבר הוסר</string>
+    <string name="staff_team_toast_added">החבר נוסף</string>
     <string name="staff_team_toast_role_updated">התפקיד עודכן</string>
 
     <string name="staff_config_field_stripe_webhook">סוד החתימה של ה-Webhook</string>

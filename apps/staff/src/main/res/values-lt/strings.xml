@@ -16,7 +16,6 @@
     <string name="staff_accounts_empty">Paskyrų nerasta</string>
     <string name="staff_accounts_filter_seller_label">Pardavėjas</string>
     <string name="staff_accounts_filter_status_label">Būsena</string>
-    <string name="staff_accounts_history">Istorija</string>
     <string name="staff_accounts_history_title">Paskyros istorija</string>
     <string name="staff_accounts_notes_label">Pastabos</string>
     <string name="staff_accounts_reason_label">Priežastis</string>
@@ -131,15 +130,12 @@
     <string name="staff_categories_action_delete">Ištrinti</string>
     <string name="staff_categories_action_edit">Redaguoti</string>
     <string name="staff_categories_add">Pridėti</string>
-    <string name="staff_categories_col_name">Pavadinimas</string>
-    <string name="staff_categories_col_status">Būsena</string>
     <string name="staff_categories_col_types">Tipai</string>
     <string name="staff_categories_create">Sukurti</string>
     <string name="staff_categories_delete_confirm">Ištrinti</string>
     <string name="staff_categories_delete_desc">Ištrinti %1$s? Šio veiksmo atšaukti negalima.</string>
     <string name="staff_categories_delete_title">Ištrinti kategoriją</string>
     <string name="staff_categories_dialog_active">Aktyvus</string>
-    <string name="staff_categories_dialog_cancel">Atšaukti</string>
     <string name="staff_categories_dialog_create_title">Sukurti kategoriją</string>
     <string name="staff_categories_dialog_creating">Kuriama…</string>
     <string name="staff_categories_dialog_digital">Skaitmeninis</string>
@@ -181,21 +177,11 @@
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">Nepavyko išsaugoti</string>
     <string name="staff_config_toast_saved">Išsaugota</string>
-    <string name="staff_dashboard_col_action">Veiksmas</string>
-    <string name="staff_dashboard_col_actor">Veikėjas</string>
     <string name="staff_dashboard_col_buyer">Pirkėjas</string>
-    <string name="staff_dashboard_col_date">Data</string>
     <string name="staff_dashboard_col_detail">Detalė</string>
-    <string name="staff_dashboard_col_listing">Skelbimas</string>
-    <string name="staff_dashboard_col_moderation">Moderavimas</string>
-    <string name="staff_dashboard_col_name">Pavadinimas</string>
     <string name="staff_dashboard_col_object">Objektas</string>
     <string name="staff_dashboard_col_reason">Priežastis</string>
-    <string name="staff_dashboard_col_score">Rezultatas</string>
     <string name="staff_dashboard_col_seller">Pardavėjas</string>
-    <string name="staff_dashboard_col_status">Būsena</string>
-    <string name="staff_dashboard_col_title">Pavadinimas</string>
-    <string name="staff_dashboard_col_total">Iš viso</string>
     <string name="staff_dashboard_empty_audit">Nėra audito įrašų</string>
     <string name="staff_dashboard_empty_listings">Naujausių skelbimų nėra</string>
     <string name="staff_dashboard_empty_moderation">Naujausio moderavimo nėra</string>
@@ -210,7 +196,6 @@
     <string name="staff_dashboard_kpi_sellers">Pardavėjai</string>
     <string name="staff_dashboard_kpi_total_orders">Iš viso užsakymų</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
-    <string name="staff_dashboard_no">Ne</string>
     <string name="staff_dashboard_open_sidebar">Atidaryti šoninę juostą</string>
     <string name="staff_dashboard_order_fallback">Užsakymas Nr. %1$s</string>
     <string name="staff_dashboard_system">Sistema</string>
@@ -219,7 +204,6 @@
     <string name="staff_dashboard_tab_moderation">Moderavimas</string>
     <string name="staff_dashboard_tab_orders">Užsakymai</string>
     <string name="staff_dashboard_tab_signups">Registracijos</string>
-    <string name="staff_dashboard_yes">Taip</string>
     <string name="staff_disputes_any_status">Visos būsenos</string>
     <string name="staff_disputes_cancel">Atšaukti</string>
     <string name="staff_disputes_close">Uždaryti</string>
@@ -281,10 +265,7 @@
     <string name="staff_disputes_stripe_subscription_canceled">prenumerata atšaukta</string>
     <string name="staff_disputes_stripe_unrecognized">neatpažintas mokestis</string>
     <string name="staff_disputes_view">Peržiūrėti</string>
-    <string name="staff_filter_chip_remove">Pašalinti filtrą</string>
-    <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderavimas</string>
-    <string name="staff_filter_label_query">Ieškoti</string>
     <string name="staff_filter_label_seller">Pardavėjas</string>
     <string name="staff_filter_label_status">Būsena</string>
     <string name="staff_filter_label_type">Tipas</string>
@@ -376,7 +357,6 @@
     <string name="staff_reviews_filter_published">Paskelbta</string>
     <string name="staff_reviews_filter_removed">Pašalinta</string>
     <string name="staff_reviews_order_label">užsakymas Nr. %1$s</string>
-    <string name="staff_reviews_overflow_actions">Veiksmai</string>
     <string name="staff_reviews_remove_confirm">Šalinti</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$s. Visam laikui ištrinti šį atsiliepimą? Šio veiksmo atšaukti negalima.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Visam laikui ištrinti šį atsiliepimą? Šio veiksmo atšaukti negalima.</string>
@@ -433,6 +413,7 @@
     <string name="staff_status_suspended">Sustabdyta</string>
     <string name="staff_team_action_remove">Šalinti</string>
     <string name="staff_team_add_member">Pridėti narį</string>
+    <string name="staff_team_added_by_label">Pridėjo:</string>
     <string name="staff_team_added_by_system">Sistema</string>
     <string name="staff_team_col_added_by">Pridėjo</string>
     <string name="staff_team_dialog_add">Pridėti</string>
@@ -452,6 +433,7 @@
     <string name="staff_team_role_support">Pagalba</string>
     <string name="staff_team_toast_add_failed">Nepavyko pridėti nario</string>
     <string name="staff_team_toast_removed">Narys pašalintas</string>
+    <string name="staff_team_toast_added">Narys pridėtas</string>
     <string name="staff_team_toast_role_updated">Vaidmuo atnaujintas</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook pasirašymo paslaptis</string>

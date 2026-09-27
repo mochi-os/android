@@ -49,7 +49,7 @@ import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.model.DisputeEvidence
-import org.mochios.market.ui.components.StatusBadge
+import org.mochios.market.ui.components.MarketStatusBadge
 
 @Composable
 fun DisputeResponseDialog(
@@ -85,7 +85,7 @@ fun DisputeResponseDialog(
         content = {
             Column {
                 if (disputeStatus.isNotBlank()) {
-                    StatusBadge(status = disputeStatus)
+                    MarketStatusBadge(status = disputeStatus)
                     Spacer(Modifier.height(12.dp))
                 }
                 val fileEvidence = existingEvidence.filter { it.name.isNotBlank() || it.url.isNotBlank() }

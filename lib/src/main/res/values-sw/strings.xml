@@ -18,6 +18,9 @@
     <string name="common_back">Rudi</string>
     <string name="common_close">Funga</string>
     <string name="common_cancel">Ghairi</string>
+    <string name="common_filter">Chuja</string>
+    <string name="common_filter_chip">%1$s: %2$s</string>
+    <string name="common_filter_remove">Ondoa kichujio</string>
     <string name="common_confirm">Thibitisha</string>
     <string name="common_save">Hifadhi</string>
     <string name="common_saving">Inahifadhi…</string>
