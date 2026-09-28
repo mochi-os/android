@@ -21,6 +21,7 @@ import org.mochios.android.i18n.PreferencesManager
 import org.mochios.android.sync.CalendarsMapping
 import org.mochios.android.sync.EventComponent
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.descriptionText
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Event
 import org.mochios.calendars.model.Instance
@@ -66,6 +67,8 @@ data class EditorUiState(
     val revealed: Boolean = false,
     val location: String = "",
     val description: String = "",
+    /** The description as the event holds it, which [description] shows as text. */
+    val original: String = "",
     val recurrence: Recurrence = Recurrence(),
     val reminders: List<Int> = emptyList(),
     val etag: String = "",
@@ -235,6 +238,7 @@ class EventEditViewModel @Inject constructor(
             zone = form.zone,
             location = form.location,
             description = form.description,
+            original = form.original,
             recurrence = form.recurrence,
             reminders = form.reminders,
             isLoading = false,
@@ -293,7 +297,9 @@ class EventEditViewModel @Inject constructor(
         // rather than the series', which is the one the master declares.
         val begins = if (override == null && occurrence > 0) occurrence else declared
         val ends = begins + length
-        val alarms = alarms(shown).ifEmpty { master?.let(::alarms).orEmpty() }
+        // An override replaces its occurrence whole: its reminders are its own,
+        // and one with none has none.
+        val alarms = alarms(shown)
         _uiState.value = EditorUiState(
             event = loaded.id,
             occurrence = occurrence,
@@ -306,7 +312,8 @@ class EventEditViewModel @Inject constructor(
             finish = ends,
             zone = written(shown, zone),
             location = shown.value("LOCATION"),
-            description = shown.value("DESCRIPTION"),
+            description = descriptionText(shown.value("DESCRIPTION")),
+            original = shown.value("DESCRIPTION"),
             recurrence = recurrence(master?.value("RRULE")),
             reminders = alarms.mapNotNull(::alarmMinutes).distinct(),
             etag = loaded.etag,
@@ -531,6 +538,7 @@ class EventEditViewModel @Inject constructor(
         zone = Zone(state.zone.start.ifBlank { zone }, state.zone.finish.ifBlank { zone }),
         location = state.location,
         description = state.description,
+        original = state.original,
         recurrence = state.recurrence,
         reminders = state.reminders,
         occurrence = state.occurrence,

@@ -222,6 +222,51 @@ class EventComponentsTest {
         assertEquals(listOf("-PT10M", "-PT60M"), triggers)
     }
 
+    // ---- a description written as HTML ----
+
+    private val HTML = "PNR: 2YHEIJ<br>Class: <b>Business</b> &amp; lounge"
+    private val TEXT = "PNR: 2YHEIJ\nClass: Business & lounge"
+
+    private fun described() = master().let { it.copy(properties = it.properties + property("DESCRIPTION", HTML)) }
+
+    @Test
+    fun `an HTML description opens in the editor as its text`() {
+        val read = draft(described(), LONDON)
+        assertEquals(TEXT, read.description)
+        assertEquals(HTML, read.original)
+    }
+
+    @Test
+    fun `an HTML description keeps its markup through a save that changed something else`() {
+        val carried = described()
+        val tree = components(draft(carried, LONDON).copy(title = "Renamed"), listOf(carried), Scope.ALL)
+        assertEquals(HTML, tree[0].value("DESCRIPTION"))
+    }
+
+    @Test
+    fun `an HTML description keeps its markup on one occurrence's override`() {
+        val carried = described()
+        val read = draft(carried, LONDON, NEXT).copy(title = "Just once", occurrence = NEXT, series = TEN)
+        val tree = components(read, listOf(carried), Scope.ONE)
+        val override = tree.single { it.property("RECURRENCE-ID") != null }
+        assertEquals(HTML, override.value("DESCRIPTION"))
+    }
+
+    @Test
+    fun `an edited HTML description is saved as the text typed`() {
+        val carried = described()
+        val read = draft(carried, LONDON)
+        val tree = components(read.copy(description = read.description + "\nSeat 2A"), listOf(carried), Scope.ALL)
+        assertEquals("$TEXT\nSeat 2A", tree[0].value("DESCRIPTION"))
+    }
+
+    @Test
+    fun `a cleared HTML description is dropped`() {
+        val carried = described()
+        val tree = components(draft(carried, LONDON).copy(description = ""), listOf(carried), Scope.ALL)
+        assertNull(tree[0].property("DESCRIPTION"))
+    }
+
     @Test
     fun `alarms the reminder setting cannot say are kept`() {
         fun alarm(trigger: String, parameter: String? = null, argument: String? = null) =

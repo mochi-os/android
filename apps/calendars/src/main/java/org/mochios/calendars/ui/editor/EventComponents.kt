@@ -9,6 +9,7 @@ import org.mochios.android.sync.CalendarsMapping
 import org.mochios.android.sync.EventComponent
 import org.mochios.android.sync.EventProperty
 import org.mochios.android.sync.property
+import org.mochios.android.util.descriptionText
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.Zone
 import org.mochios.calendars.storage.Memory
@@ -33,6 +34,11 @@ enum class Scope {
  * 10:00 Europe/London to 13:00 America/New_York, though most events have the
  * same zone at both ends.
  *
+ * [description] is the description as text, which the editor shows and
+ * edits; [original] is the description as the event holds it, which may be
+ * HTML, as a Google calendar's is. While [description] still reads as its
+ * text, the event keeps [original] as it was, markup and all.
+ *
  * [occurrence] is the occurrence the user opened, epoch seconds, 0 when the
  * event does not repeat; [series] is the master's own start. The form shows
  * the occurrence, so a change to the whole series moves the master by however
@@ -46,6 +52,7 @@ data class EventForm(
     val zone: Zone = Zone(),
     val location: String = "",
     val description: String = "",
+    val original: String = "",
     val recurrence: Recurrence = Recurrence(),
     val reminders: List<Int> = emptyList(),
     val occurrence: Long = 0,
@@ -204,7 +211,8 @@ fun draft(component: EventComponent, user: String, occurrence: Long = 0): EventF
         allday = allday,
         zone = written(component, user),
         location = component.value("LOCATION"),
-        description = component.value("DESCRIPTION"),
+        description = descriptionText(component.value("DESCRIPTION")),
+        original = component.value("DESCRIPTION"),
         recurrence = recurrence(component.value("RRULE")),
         reminders = alarms(component).mapNotNull(::alarmMinutes).distinct(),
     )
@@ -241,10 +249,9 @@ fun instant(form: EventForm, user: String): Long {
 /**
  * The form a copy of a stored event opens on, as a new event of its own.
  * With [Scope.ONE] it is the occurrence at [occurrence] alone: its own
- * override, or the master moved onto it, with the repeat cleared, and an
- * override without a reminder of its own sounding the master's, as the
- * editor shows it. With any other scope it is the master, its repeat kept
- * as written. Null when the event has no master to copy.
+ * override, reminders and all, or the master moved onto it, with the repeat
+ * cleared. With any other scope it is the master, its repeat kept as written.
+ * Null when the event has no master to copy.
  */
 fun copied(carried: List<EventComponent>, occurrence: Long, scope: Scope, user: String): EventForm? {
     val events = carried.filter { it.name.equals("VEVENT", ignoreCase = true) }
@@ -253,10 +260,7 @@ fun copied(carried: List<EventComponent>, occurrence: Long, scope: Scope, user: 
     if (scope != Scope.ONE || occurrence == 0L) return whole
     val override = events.firstOrNull { it.exception() && matches(it, occurrence) }
     val own = if (override != null) draft(override, user) else draft(master, user, occurrence)
-    return own.copy(
-        recurrence = Recurrence(),
-        reminders = own.reminders.ifEmpty { whole.reminders },
-    )
+    return own.copy(recurrence = Recurrence())
 }
 
 /**
@@ -284,7 +288,8 @@ fun copied(instance: Instance, user: String, reminder: Int): EventForm {
         allday = instance.allday,
         zone = Zone(begins, ends),
         location = instance.location,
-        description = instance.description,
+        description = descriptionText(instance.description),
+        original = instance.description,
         reminders = defaultReminders(reminder),
     )
 }
@@ -504,7 +509,8 @@ private fun component(
     properties.add(CalendarsMapping.stamp("DTSTART", start * 1000, zone, form.allday))
     properties.add(CalendarsMapping.stamp("DTEND", finish * 1000, ends, form.allday))
     if (form.location.isNotBlank()) properties.add(property("LOCATION", form.location.trim()))
-    if (form.description.isNotBlank()) properties.add(property("DESCRIPTION", form.description.trim()))
+    val description = if (form.description == descriptionText(form.original)) form.original else form.description.trim()
+    if (description.isNotBlank()) properties.add(property("DESCRIPTION", description))
     if (recurrence) {
         val rule = form.recurrence.rule()
         if (rule != null) {
