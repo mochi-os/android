@@ -9,8 +9,11 @@ import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Test
 import org.mochios.android.sync.CalendarsMapping
+import org.mochios.android.sync.EventComponent
+import org.mochios.android.sync.property
 import org.mochios.calendars.ui.editor.Frequency
 import org.mochios.calendars.ui.editor.Recurrence
+import org.mochios.calendars.ui.editor.alarmMinutes
 import org.mochios.calendars.ui.editor.minutes
 import org.mochios.calendars.ui.editor.recurrence
 
@@ -168,6 +171,18 @@ class RecurrenceTest {
         assertEquals(1440, minutes("-P1D"))
         assertEquals(-10, minutes("PT10M"))
         assertEquals(-1, minutes("20260922T090000Z"))
+    }
+
+    @Test
+    fun `only the alarms the reminder setting can say are read`() {
+        fun alarm(trigger: String, parameter: String? = null, argument: String? = null) =
+            EventComponent("VALARM", listOf(property("TRIGGER", trigger, parameter, argument)))
+        assertEquals(15, alarmMinutes(alarm("-PT15M")))
+        assertEquals(0, alarmMinutes(alarm("PT0S")))
+        assertNull("relative to the end", alarmMinutes(alarm("-PT15M", "RELATED", "END")))
+        assertNull("at a fixed time", alarmMinutes(alarm("20260922T090000Z", "VALUE", "DATE-TIME")))
+        assertNull("after the start", alarmMinutes(alarm("PT10M")))
+        assertNull("no trigger", alarmMinutes(EventComponent("VALARM")))
     }
 
     @Test

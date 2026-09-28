@@ -20,6 +20,7 @@ import org.mochios.calendars.ui.editor.Frequency
 import org.mochios.calendars.ui.editor.Recurrence
 import org.mochios.calendars.ui.editor.Scope
 import org.mochios.calendars.ui.editor.components
+import org.mochios.calendars.ui.editor.draft
 import org.mochios.calendars.ui.editor.excluded
 import org.mochios.calendars.ui.editor.follow
 import org.mochios.calendars.ui.editor.foreign
@@ -208,6 +209,33 @@ class EventComponentsTest {
         val alarms = tree[0].components.filter { it.name == "VALARM" }
         assertEquals(1, alarms.size)
         assertEquals("-PT15M", alarms.single().value("TRIGGER"))
+    }
+
+    @Test
+    fun `alarms the reminder setting cannot say are kept`() {
+        fun alarm(trigger: String, parameter: String? = null, argument: String? = null) =
+            EventComponent("VALARM", listOf(property("TRIGGER", trigger, parameter, argument)))
+        val carried = master().copy(
+            components = listOf(
+                alarm("-PT1H"),
+                alarm("-PT30M", "RELATED", "END"),
+                alarm("20260922T090000Z", "VALUE", "DATE-TIME"),
+                alarm("PT10M"),
+            ),
+        )
+        val tree = components(form(reminder = 15), listOf(carried), Scope.ALL)
+        val triggers = tree[0].components.filter { it.name == "VALARM" }.map { it.value("TRIGGER") }
+        assertEquals(listOf("-PT30M", "20260922T090000Z", "PT10M", "-PT15M"), triggers)
+    }
+
+    @Test
+    fun `the reminder is read from the first alarm the setting can say`() {
+        fun alarm(trigger: String, parameter: String? = null, argument: String? = null) =
+            EventComponent("VALARM", listOf(property("TRIGGER", trigger, parameter, argument)))
+        val both = master().copy(components = listOf(alarm("-PT15M", "RELATED", "END"), alarm("-PT30M")))
+        assertEquals(30, draft(both, LONDON).reminder)
+        val end = master().copy(components = listOf(alarm("-PT15M", "RELATED", "END")))
+        assertEquals(-1, draft(end, LONDON).reminder)
     }
 
     @Test

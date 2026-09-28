@@ -293,8 +293,7 @@ class EventEditViewModel @Inject constructor(
         // rather than the series', which is the one the master declares.
         val begins = if (override == null && occurrence > 0) occurrence else declared
         val ends = begins + length
-        val alarm = shown.components.firstOrNull { it.name.equals("VALARM", ignoreCase = true) }
-            ?: master?.components?.firstOrNull { it.name.equals("VALARM", ignoreCase = true) }
+        val alarms = alarms(shown).ifEmpty { master?.let(::alarms).orEmpty() }
         _uiState.value = EditorUiState(
             event = loaded.id,
             occurrence = occurrence,
@@ -309,7 +308,7 @@ class EventEditViewModel @Inject constructor(
             location = shown.value("LOCATION"),
             description = shown.value("DESCRIPTION"),
             recurrence = recurrence(master?.value("RRULE")),
-            reminder = alarm?.property("TRIGGER")?.let { minutes(it.value) } ?: -1,
+            reminder = alarms.firstNotNullOfOrNull(::alarmMinutes) ?: -1,
             etag = loaded.etag,
             recurring = master?.property("RRULE") != null || master?.property("RDATE") != null,
             series = master?.property("DTSTART")?.let { CalendarsMapping.moment(it) / 1000 } ?: 0,
@@ -548,6 +547,25 @@ class EventEditViewModel @Inject constructor(
             .toLocalDate()
             .atStartOfDay(ZoneOffset.UTC)
             .toEpochSecond()
+}
+
+/** The component's `VALARM`s. */
+fun alarms(component: EventComponent): List<EventComponent> =
+    component.components.filter { it.name.equals("VALARM", ignoreCase = true) }
+
+/**
+ * The minutes before the start an alarm fires, when the reminder setting can
+ * say it: a duration relative to the start, at or before it. An alarm relative
+ * to the end, after the start or at a fixed time is null; the editor leaves it
+ * as it is.
+ */
+fun alarmMinutes(alarm: EventComponent): Int? {
+    val trigger = alarm.property("TRIGGER") ?: return null
+    if (trigger.parameter("RELATED").equals("END", ignoreCase = true)) return null
+    if (trigger.parameter("VALUE").equals("DATE-TIME", ignoreCase = true)) return null
+    val value = trigger.value.trim()
+    if (!value.startsWith("-P") && !value.startsWith("P")) return null
+    return minutes(value).takeIf { it >= 0 }
 }
 
 /** A `TRIGGER` as minutes before the start, -1 when it says something else. */

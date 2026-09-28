@@ -197,7 +197,6 @@ fun draft(component: EventComponent, user: String, occurrence: Long = 0): EventF
     val length = component.property("DTEND")?.let { CalendarsMapping.moment(it) / 1000 - start }
         ?: component.value("DURATION").takeIf { it.isNotBlank() }?.let { CalendarsMapping.seconds(it) }
         ?: if (allday) 86_400L else 0L
-    val alarm = component.components.firstOrNull { it.name.equals("VALARM", ignoreCase = true) }
     val form = EventForm(
         title = component.value("SUMMARY"),
         start = start,
@@ -207,7 +206,7 @@ fun draft(component: EventComponent, user: String, occurrence: Long = 0): EventF
         location = component.value("LOCATION"),
         description = component.value("DESCRIPTION"),
         recurrence = recurrence(component.value("RRULE")),
-        reminder = alarm?.property("TRIGGER")?.let { minutes(it.value) } ?: -1,
+        reminder = alarms(component).firstNotNullOfOrNull(::alarmMinutes) ?: -1,
     )
     return if (occurrence > 0 && start != 0L) shifted(form, occurrence - start) else form
 }
@@ -519,7 +518,11 @@ private fun component(
         val allday = carried?.property("RECURRENCE-ID")?.let { CalendarsMapping.date(it) } ?: form.allday
         properties.add(CalendarsMapping.stamp("RECURRENCE-ID", occurrence * 1000, zone, allday))
     }
-    val nested = carried?.components?.filterNot { it.name.equals("VALARM", ignoreCase = true) }.orEmpty()
+    // The alarms the reminder setting cannot say are kept as they are; the
+    // ones it can are replaced by it.
+    val nested = carried?.components?.filterNot {
+        it.name.equals("VALARM", ignoreCase = true) && (it.property("TRIGGER") == null || alarmMinutes(it) != null)
+    }.orEmpty()
     val alarms = if (form.reminder >= 0) {
         listOf(CalendarsMapping.alarm(form.reminder, form.title.trim()))
     } else {
