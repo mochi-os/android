@@ -213,7 +213,7 @@ fun CalendarScreen(
             },
             snackbarHost = { SnackbarHost(snackbar) },
             floatingActionButton = {
-                MochiFab(onClick = { onNewEvent(0, null) }) {
+                MochiFab(onClick = { onNewEvent(viewModel.creation(), null) }) {
                     Icon(Icons.Default.Add, contentDescription = stringResource(R.string.calendars_event_new))
                 }
             },
@@ -460,7 +460,7 @@ private fun View(
             state = state,
             viewModel = viewModel,
             onOpen = onOpen,
-            onCreate = { day -> onNewEvent(moment(day, 9), null) },
+            onCreate = { day -> onNewEvent(viewModel.creation(day), null) },
             onMove = onMoveDay,
             selected = selected,
         )
@@ -470,7 +470,7 @@ private fun View(
             state = state,
             viewModel = viewModel,
             onOpen = onOpen,
-            onCreate = { day -> onNewEvent(moment(day, 9), null) },
+            onCreate = { day -> onNewEvent(viewModel.creation(day), null) },
             onMove = onMoveDay,
             selected = selected,
         )

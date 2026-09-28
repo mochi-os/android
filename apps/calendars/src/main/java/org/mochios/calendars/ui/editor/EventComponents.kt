@@ -10,10 +10,14 @@ import org.mochios.android.sync.EventComponent
 import org.mochios.android.sync.EventProperty
 import org.mochios.android.sync.property
 import org.mochios.android.util.descriptionText
+import org.mochios.calendars.model.Hours
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.Zone
 import org.mochios.calendars.storage.Memory
 import java.time.Instant
+import java.time.LocalDate
+import java.time.LocalDateTime
+import java.time.LocalTime
 import java.time.ZoneId
 import java.time.ZoneOffset
 
@@ -532,3 +536,25 @@ private fun component(
     val alarms = form.reminders.distinct().map { CalendarsMapping.alarm(it, form.title.trim()) }
     return EventComponent("VEVENT", properties, nested + alarms)
 }
+
+/**
+ * Where a new event with no time of its own starts on [day]: at the next
+ * whole hour when [day] is [today], at the start of the working [hours] on
+ * any other day, and at tomorrow's working hours once today has no whole hour
+ * left. The web client starts one the same way.
+ */
+fun defaultStart(day: LocalDate, today: LocalDate, now: LocalTime, hours: Hours): LocalDateTime {
+    val working = hours.start.coerceIn(0, 23)
+    if (day != today) return day.atTime(working, 0)
+    val next = now.hour + 1
+    if (next > 23) return today.plusDays(1).atTime(working, 0)
+    return today.atTime(next, 0)
+}
+
+/**
+ * The day "New event" lands on: [today] when it is on screen, the [days] from
+ * [from], and otherwise [anchor], the day the view is on, since a user paging
+ * through another week is planning that week.
+ */
+fun creationDay(today: LocalDate, anchor: LocalDate, from: LocalDate, days: Long): LocalDate =
+    if (!today.isBefore(from) && today.isBefore(from.plusDays(days))) today else anchor

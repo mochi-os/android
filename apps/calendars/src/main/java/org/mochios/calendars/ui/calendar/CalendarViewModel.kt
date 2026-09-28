@@ -36,6 +36,8 @@ import org.mochios.calendars.ui.editor.EventForm
 import org.mochios.calendars.ui.editor.Scope
 import org.mochios.calendars.ui.editor.advanced
 import org.mochios.calendars.ui.editor.components
+import org.mochios.calendars.ui.editor.creationDay
+import org.mochios.calendars.ui.editor.defaultStart
 import org.mochios.calendars.ui.editor.draft
 import org.mochios.calendars.ui.editor.instant
 import org.mochios.calendars.ui.editor.matches
@@ -46,6 +48,7 @@ import org.mochios.calendars.ui.router.calendarsView
 import java.time.Instant
 import java.time.LocalDate
 import java.time.ZoneId
+import java.time.ZonedDateTime
 import java.time.temporal.ChronoUnit
 import javax.inject.Inject
 
@@ -589,6 +592,25 @@ class CalendarViewModel @Inject constructor(
 
     /** The server the link's address is built on, as the session holds it. */
     private suspend fun server(): String = sessionManager.serverUrl.first().trimEnd('/')
+
+    // ---- new events ----
+
+    /**
+     * Where a new event with no time of its own starts, in epoch seconds: on
+     * [day] when a day cell was tapped, and otherwise on the day "New event"
+     * lands on, today when today is on screen and else the day the view is on.
+     */
+    fun creation(day: LocalDate? = null, state: CalendarUiState = _uiState.value): Long {
+        val now = ZonedDateTime.now(zone)
+        val today = now.toLocalDate()
+        val chosen = day ?: run {
+            val (first, last) = range(state)
+            val from = Instant.ofEpochSecond(first).atZone(zone).toLocalDate()
+            val until = Instant.ofEpochSecond(last).atZone(zone).toLocalDate()
+            creationDay(today, state.anchor, from, ChronoUnit.DAYS.between(from, until))
+        }
+        return defaultStart(chosen, today, now.toLocalTime(), state.preferences.hours).atZone(zone).toEpochSecond()
+    }
 
     // ---- ranges ----
 

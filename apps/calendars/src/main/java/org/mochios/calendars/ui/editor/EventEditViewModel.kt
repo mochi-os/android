@@ -24,6 +24,7 @@ import org.mochios.android.util.NaturalCompare
 import org.mochios.android.util.descriptionText
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Event
+import org.mochios.calendars.model.Hours
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.Zone
 import org.mochios.calendars.repository.CalendarsRepository
@@ -32,6 +33,7 @@ import org.mochios.calendars.storage.Memory
 import org.mochios.calendars.storage.MemoryStore
 import org.mochios.calendars.storage.VisibilityStore
 import java.time.Instant
+import java.time.LocalDate
 import java.time.ZoneId
 import java.time.ZoneOffset
 import javax.inject.Inject
@@ -93,6 +95,12 @@ data class EditorUiState(
     val writable: Boolean get() = calendars.firstOrNull { it.id == calendar }?.readonly != true
 }
 
+/** What the day strip draws besides the event. */
+data class StripState(
+    val others: List<Block> = emptyList(),
+    val hours: Hours = Hours(),
+)
+
 /** Which question the screen is asking: "This event or all events?", and why. */
 enum class Prompt {
     SAVE,
@@ -110,6 +118,11 @@ class EventEditViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(EditorUiState())
     val uiState: StateFlow<EditorUiState> = _uiState.asStateFlow()
+
+    private val _strip = MutableStateFlow(StripState())
+
+    /** What the day strip draws besides the event: the day's other events and the working hours. */
+    val strip: StateFlow<StripState> = _strip.asStateFlow()
 
     /** The tree the server last sent, whose unmanaged properties are kept. */
     private var carried: Event? = null
@@ -168,7 +181,7 @@ class EventEditViewModel @Inject constructor(
                 val begins = when {
                     memory.allday -> day(if (start > 0) start else Instant.now().epochSecond)
                     start > 0 -> start
-                    else -> nextHour()
+                    else -> opening(preferences?.hours ?: Hours())
                 }
                 val length = if (memory.allday) 86_400L else 60L * (preferences?.duration ?: 60)
                 _uiState.value = EditorUiState(
@@ -321,6 +334,31 @@ class EventEditViewModel @Inject constructor(
             series = master?.property("DTSTART")?.let { CalendarsMapping.moment(it) / 1000 } ?: 0,
             isLoading = false,
         )
+    }
+
+    // ---- the day strip ----
+
+    /**
+     * Loads what the day strip draws for [day] read in [zone]: the other
+     * events of the calendars this device shows, the one being edited left
+     * out, and the working hours. A failure leaves the strip bare rather than
+     * showing an error for a view that is only an aid.
+     */
+    fun strip(day: LocalDate, zone: String) {
+        viewModelScope.launch {
+            val id = runCatching { ZoneId.of(zone) }.getOrNull() ?: return@launch
+            val from = day.atStartOfDay(id).toEpochSecond()
+            val to = day.plusDays(1).atStartOfDay(id).toEpochSecond()
+            val listed = runCatching { repository.listEvents(from, to, emptyList(), this@EventEditViewModel.zone).first }
+                .getOrNull() ?: return@launch
+            val hidden = VisibilityStore.hidden(context)
+            val hours = runCatching { repository.getPreferences().hours }.getOrNull() ?: _strip.value.hours
+            val state = _uiState.value
+            _strip.value = StripState(
+                others = Strip.blocks(listed.filterNot { it.calendar in hidden }, day, zone, state.event, state.moment),
+                hours = hours,
+            )
+        }
     }
 
     // ---- the form ----
@@ -545,14 +583,15 @@ class EventEditViewModel @Inject constructor(
         series = state.series,
     )
 
-    /** The next whole hour, in the user's zone, for a new event with no time. */
-    private fun nextHour(): Long =
-        java.time.ZonedDateTime.now(runCatching { ZoneId.of(zone) }.getOrDefault(ZoneId.systemDefault()))
-            .plusHours(1)
-            .withMinute(0)
-            .withSecond(0)
-            .withNano(0)
-            .toEpochSecond()
+    /**
+     * Where a new event opened with no time at all starts: today's next whole
+     * hour, or tomorrow's working [hours] once today has none left.
+     */
+    private fun opening(hours: Hours): Long {
+        val id = runCatching { ZoneId.of(zone) }.getOrDefault(ZoneId.systemDefault())
+        val now = java.time.ZonedDateTime.now(id)
+        return defaultStart(now.toLocalDate(), now.toLocalDate(), now.toLocalTime(), hours).atZone(id).toEpochSecond()
+    }
 
     /** The day [moment] falls on in the user's zone, at its UTC midnight, which is how an all-day form holds a day. */
     private fun day(moment: Long): Long =

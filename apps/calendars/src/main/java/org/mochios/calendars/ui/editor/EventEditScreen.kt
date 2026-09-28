@@ -52,6 +52,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -77,6 +78,8 @@ import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.util.zoneCity
 import org.mochios.calendars.R
+import org.mochios.calendars.model.Zone
+import org.mochios.calendars.ui.calendar.toColour
 import org.mochios.calendars.ui.dialogs.DeleteEventDialog
 import org.mochios.calendars.ui.dialogs.ScopeDialog
 import org.mochios.calendars.ui.dialogs.reminderChoices
@@ -250,6 +253,31 @@ fun EventEditScreen(
                         label = stringResource(R.string.calendars_event_zone_finish),
                         zone = uiState.zone.finish,
                         onChange = { viewModel.zone(uiState.zone.copy(finish = it)) },
+                    )
+                }
+            }
+            // The event's day beneath its times, for one that starts and ends
+            // on one day in one zone.
+            val span = if (uiState.isLoading) {
+                null
+            } else {
+                val begins = uiState.zone.start.ifBlank { viewModel.zone }
+                Strip.span(uiState.start, uiState.finish, uiState.allday, Zone(begins, uiState.zone.finish.ifBlank { begins }))
+            }
+            if (span != null) {
+                val begins = uiState.zone.start.ifBlank { viewModel.zone }
+                val ends = uiState.zone.finish.ifBlank { begins }
+                val strip by viewModel.strip.collectAsState()
+                LaunchedEffect(span.day, begins) { viewModel.strip(span.day, begins) }
+                key(span.day, begins) {
+                    DayStrip(
+                        span = span,
+                        colour = uiState.calendars.firstOrNull { it.id == uiState.calendar }?.colour
+                            ?.toColour(MaterialTheme.colorScheme.primary) ?: MaterialTheme.colorScheme.primary,
+                        others = strip.others,
+                        hours = strip.hours,
+                        onMove = { viewModel.start(Strip.instant(span.day, it, begins)) },
+                        onResize = { viewModel.finish(Strip.instant(span.day, it, ends)) },
                     )
                 }
             }
