@@ -125,6 +125,9 @@
     <string name="calendars_default_duration">Durata evento predefinita</string>
     <string name="calendars_default_reminder">Promemoria predefinito</string>
     <string name="calendars_default_calendar">Calendario predefinito</string>
+    <string name="calendars_preferences_allday">Eventi di tutto il giorno</string>
+    <string name="calendars_allday_first">All\'inizio</string>
+    <string name="calendars_allday_last">Alla fine</string>
     <string name="calendars_link_title">Link del calendario</string>
     <string name="calendars_link_copy">Copia link</string>
     <string name="calendars_link_once">Copialo adesso: non potrà essere mostrato di nuovo.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Connetti Google</string>
     <string name="calendars_grant_failed">L\'accesso al calendario non è stato concesso</string>
     <string name="calendars_event_exception">Ricorrenza modificata</string>
+    <string name="calendars_span_day">%1$s, dalle %2$s alle %3$s</string>
+    <string name="calendars_zone_sea">In mare</string>
 </resources>

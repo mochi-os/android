@@ -118,6 +118,9 @@
     <string name="calendars_default_duration">ความยาวกิจกรรมเริ่มต้น</string>
     <string name="calendars_default_reminder">การแจ้งเตือนเริ่มต้น</string>
     <string name="calendars_default_calendar">ปฏิทินเริ่มต้น</string>
+    <string name="calendars_preferences_allday">กิจกรรมตลอดวัน</string>
+    <string name="calendars_allday_first">ไว้ด้านบน</string>
+    <string name="calendars_allday_last">ไว้ด้านล่าง</string>
     <string name="calendars_link_title">ลิงก์ปฏิทิน</string>
     <string name="calendars_link_copy">คัดลอกลิงก์</string>
     <string name="calendars_link_once">คัดลอกตอนนี้ เพราะจะไม่แสดงอีก</string>
@@ -183,4 +186,6 @@
     <string name="calendars_subscribe_google_connect_action">เชื่อมต่อ Google</string>
     <string name="calendars_grant_failed">ไม่ได้รับอนุญาตให้เข้าถึงปฏิทิน</string>
     <string name="calendars_event_exception">ครั้งที่ถูกเปลี่ยนแปลง</string>
+    <string name="calendars_span_day">%1$s %2$s ถึง %3$s</string>
+    <string name="calendars_zone_sea">ในทะเล</string>
 </resources>

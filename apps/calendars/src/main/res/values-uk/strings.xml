@@ -127,6 +127,9 @@
     <string name="calendars_default_duration">Типова тривалість події</string>
     <string name="calendars_default_reminder">Нагадування за замовчуванням</string>
     <string name="calendars_default_calendar">Календар за замовчуванням</string>
+    <string name="calendars_preferences_allday">Події на весь день</string>
+    <string name="calendars_allday_first">На початку</string>
+    <string name="calendars_allday_last">У кінці</string>
     <string name="calendars_link_title">Посилання на календар</string>
     <string name="calendars_link_copy">Копіювати посилання</string>
     <string name="calendars_link_once">Скопіюйте його зараз: воно більше не відображатиметься.</string>
@@ -198,4 +201,6 @@
     <string name="calendars_subscribe_google_connect_action">Підключити Google</string>
     <string name="calendars_grant_failed">Доступ до календаря не надано</string>
     <string name="calendars_event_exception">Змінене повторення</string>
+    <string name="calendars_span_day">%1$s, з %2$s до %3$s</string>
+    <string name="calendars_zone_sea">У морі</string>
 </resources>

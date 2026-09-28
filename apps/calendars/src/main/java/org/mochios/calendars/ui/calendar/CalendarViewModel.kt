@@ -436,6 +436,7 @@ class CalendarViewModel @Inject constructor(
                 zones = value.zones,
                 // Blank only when no calendar could be offered, which is no choice.
                 calendar = value.calendar.ifEmpty { null },
+                allday = value.allday,
             ),
         )
         _uiState.value = _uiState.value.copy(preferences = saved)

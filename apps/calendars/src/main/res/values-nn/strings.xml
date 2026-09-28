@@ -125,6 +125,9 @@
     <string name="calendars_default_duration">Standard lengd på hending</string>
     <string name="calendars_default_reminder">Standardpåminning</string>
     <string name="calendars_default_calendar">Standardkalender</string>
+    <string name="calendars_preferences_allday">Heildagshendingar</string>
+    <string name="calendars_allday_first">Først</string>
+    <string name="calendars_allday_last">Sist</string>
     <string name="calendars_link_title">Kalenderlenkje</string>
     <string name="calendars_link_copy">Kopier lenkje</string>
     <string name="calendars_link_once">Kopier henne no: ho kan ikkje visast igjen.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Kople til Google</string>
     <string name="calendars_grant_failed">Kalendertilgang vart ikkje gjeven</string>
     <string name="calendars_event_exception">Endra førekomst</string>
+    <string name="calendars_span_day">%1$s, %2$s til %3$s</string>
+    <string name="calendars_zone_sea">Til sjøs</string>
 </resources>

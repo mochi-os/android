@@ -137,6 +137,9 @@
     <string name="calendars_default_duration">Tul prestabbilit tal-avveniment</string>
     <string name="calendars_default_reminder">Tfakkira prestabbilita</string>
     <string name="calendars_default_calendar">Kalendarju prestabbilit</string>
+    <string name="calendars_preferences_allday">Avvenimenti tal-ġurnata kollha</string>
+    <string name="calendars_allday_first">Fil-bidu</string>
+    <string name="calendars_allday_last">Fl-aħħar</string>
     <string name="calendars_link_title">Ħolqa tal-kalendarju</string>
     <string name="calendars_link_copy">Ikkupja l-ħolqa</string>
     <string name="calendars_link_once">Ikkupjaha issa: ma tistax tintwera mill-ġdid.</string>
@@ -203,4 +206,6 @@
     <string name="calendars_subscribe_google_connect_action">Qabbad Google</string>
     <string name="calendars_grant_failed">L-aċċess għall-kalendarju ma ngħatax</string>
     <string name="calendars_event_exception">Okkorrenza mibdula</string>
+    <string name="calendars_span_day">%1$s, minn %2$s sa %3$s</string>
+    <string name="calendars_zone_sea">Fuq il-baħar</string>
 </resources>

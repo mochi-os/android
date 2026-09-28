@@ -125,6 +125,9 @@
     <string name="calendars_default_duration">Продължителност на събитието по подразбиране</string>
     <string name="calendars_default_reminder">Напомняне по подразбиране</string>
     <string name="calendars_default_calendar">Календар по подразбиране</string>
+    <string name="calendars_preferences_allday">Целодневни събития</string>
+    <string name="calendars_allday_first">В началото</string>
+    <string name="calendars_allday_last">В края</string>
     <string name="calendars_link_title">Връзка към календара</string>
     <string name="calendars_link_copy">Копирай връзката</string>
     <string name="calendars_link_once">Копирайте я сега: не може да бъде показана отново.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Свързване с Google</string>
     <string name="calendars_grant_failed">Достъпът до календара не беше разрешен</string>
     <string name="calendars_event_exception">Променено повторение</string>
+    <string name="calendars_span_day">%1$s, %2$s до %3$s</string>
+    <string name="calendars_zone_sea">В морето</string>
 </resources>

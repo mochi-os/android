@@ -121,6 +121,9 @@
     <string name="calendars_default_duration">ໄລຍະເວລາເຫດການເລີ່ມຕົ້ນ</string>
     <string name="calendars_default_reminder">ການແຈ້ງເຕືອນເລີ່ມຕົ້ນ</string>
     <string name="calendars_default_calendar">ປະຕິທິນເລີ່ມຕົ້ນ</string>
+    <string name="calendars_preferences_allday">ເຫດການຕະຫຼອດມື້</string>
+    <string name="calendars_allday_first">ຢູ່ຕົ້ນ</string>
+    <string name="calendars_allday_last">ຢູ່ທ້າຍ</string>
     <string name="calendars_link_title">ລິ້ງປະຕິທິນ</string>
     <string name="calendars_link_copy">ສຳເນົາລິ້ງ</string>
     <string name="calendars_link_once">ສຳເນົາດຽວນີ້: ມັນຈະບໍ່ສາມາດສະແດງໄດ້ອີກ.</string>
@@ -183,4 +186,6 @@
     <string name="calendars_subscribe_google_connect_action">ເຊື່ອມຕໍ່ Google</string>
     <string name="calendars_grant_failed">ບໍ່ໄດ້ຮັບການເຂົ້າເຖິງປະຕິທິນ</string>
     <string name="calendars_event_exception">ຄັ້ງທີ່ຖືກປ່ຽນແປງ</string>
+    <string name="calendars_span_day">%1$s %2$s ຫາ %3$s</string>
+    <string name="calendars_zone_sea">ຢູ່ທະເລ</string>
 </resources>

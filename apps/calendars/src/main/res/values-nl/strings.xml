@@ -125,6 +125,9 @@
     <string name="calendars_default_duration">Standaardduur van afspraak</string>
     <string name="calendars_default_reminder">Standaardherinnering</string>
     <string name="calendars_default_calendar">Standaardagenda</string>
+    <string name="calendars_preferences_allday">Afspraken voor de hele dag</string>
+    <string name="calendars_allday_first">Eerst</string>
+    <string name="calendars_allday_last">Als laatste</string>
     <string name="calendars_link_title">Agendalink</string>
     <string name="calendars_link_copy">Link kopiëren</string>
     <string name="calendars_link_once">Kopieer hem nu: hij kan niet opnieuw worden getoond.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Google verbinden</string>
     <string name="calendars_grant_failed">Agendatoegang is niet verleend</string>
     <string name="calendars_event_exception">Gewijzigde herhaling</string>
+    <string name="calendars_span_day">%1$s, %2$s tot %3$s</string>
+    <string name="calendars_zone_sea">Op zee</string>
 </resources>

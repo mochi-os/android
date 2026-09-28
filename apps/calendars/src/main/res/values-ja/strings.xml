@@ -121,6 +121,9 @@
     <string name="calendars_default_duration">予定の既定の長さ</string>
     <string name="calendars_default_reminder">デフォルトのリマインダー</string>
     <string name="calendars_default_calendar">デフォルトのカレンダー</string>
+    <string name="calendars_preferences_allday">終日の予定</string>
+    <string name="calendars_allday_first">先頭</string>
+    <string name="calendars_allday_last">末尾</string>
     <string name="calendars_link_title">カレンダーのリンク</string>
     <string name="calendars_link_copy">リンクをコピー</string>
     <string name="calendars_link_once">今すぐコピーしてください。再表示することはできません。</string>
@@ -183,4 +186,6 @@
     <string name="calendars_subscribe_google_connect_action">Google に接続</string>
     <string name="calendars_grant_failed">カレンダーへのアクセスが許可されませんでした</string>
     <string name="calendars_event_exception">変更された予定</string>
+    <string name="calendars_span_day">%1$s %2$s～%3$s</string>
+    <string name="calendars_zone_sea">海上</string>
 </resources>

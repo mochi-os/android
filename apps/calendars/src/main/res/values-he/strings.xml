@@ -132,6 +132,9 @@
     <string name="calendars_default_duration">אורך אירוע כברירת מחדל</string>
     <string name="calendars_default_reminder">תזכורת ברירת מחדל</string>
     <string name="calendars_default_calendar">יומן ברירת מחדל</string>
+    <string name="calendars_preferences_allday">אירועים של יום שלם</string>
+    <string name="calendars_allday_first">בהתחלה</string>
+    <string name="calendars_allday_last">בסוף</string>
     <string name="calendars_link_title">קישור ליומן</string>
     <string name="calendars_link_copy">העתק קישור</string>
     <string name="calendars_link_once">העתיקו אותו עכשיו: לא ניתן יהיה להציג אותו שוב.</string>
@@ -196,4 +199,6 @@
     <string name="calendars_subscribe_google_connect_action">התחבר ל-Google</string>
     <string name="calendars_grant_failed">הגישה ליומן לא ניתנה</string>
     <string name="calendars_event_exception">מופע ששונה</string>
+    <string name="calendars_span_day">%1$s, %2$s עד %3$s</string>
+    <string name="calendars_zone_sea">בים</string>
 </resources>

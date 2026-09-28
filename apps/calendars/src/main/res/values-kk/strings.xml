@@ -125,6 +125,9 @@
     <string name="calendars_default_duration">Іс-шараның әдепкі ұзақтығы</string>
     <string name="calendars_default_reminder">Әдепкі еске салғыш</string>
     <string name="calendars_default_calendar">Әдепкі күнтізбе</string>
+    <string name="calendars_preferences_allday">Күні бойғы іс-шаралар</string>
+    <string name="calendars_allday_first">Басында</string>
+    <string name="calendars_allday_last">Соңында</string>
     <string name="calendars_link_title">Күнтізбе сілтемесі</string>
     <string name="calendars_link_copy">Сілтемені көшіру</string>
     <string name="calendars_link_once">Оны қазір көшіріңіз: оны қайта көрсету мүмкін емес.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Google-ға қосылу</string>
     <string name="calendars_grant_failed">Күнтізбеге қол жеткізу берілмеді</string>
     <string name="calendars_event_exception">Өзгертілген қайталану</string>
+    <string name="calendars_span_day">%1$s, %2$s – %3$s</string>
+    <string name="calendars_zone_sea">Теңізде</string>
 </resources>

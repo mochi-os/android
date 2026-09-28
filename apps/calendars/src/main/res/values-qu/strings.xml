@@ -121,6 +121,9 @@
     <string name="calendars_default_duration">Ñawpaqmanta ruway unay</string>
     <string name="calendars_default_reminder">Yuyarichiq predeterminado</string>
     <string name="calendars_default_calendar">Calendario predeterminado</string>
+    <string name="calendars_preferences_allday">Tukuy p\'unchaw ruwanakuna</string>
+    <string name="calendars_allday_first">Qallariypi</string>
+    <string name="calendars_allday_last">Tukukuypi</string>
     <string name="calendars_link_title">Kalendaryu t\'inki</string>
     <string name="calendars_link_copy">T\'inkita kopyay</string>
     <string name="calendars_link_once">Kunan kopyay: manaña qhawachikunqachu.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Google tinkiy</string>
     <string name="calendars_grant_failed">Calendarioman yaykuy mana qusqachu</string>
     <string name="calendars_event_exception">Hukchasqa ruwana</string>
+    <string name="calendars_span_day">%1$s, %2$s %3$s kama</string>
+    <string name="calendars_zone_sea">Mama quchapi</string>
 </resources>

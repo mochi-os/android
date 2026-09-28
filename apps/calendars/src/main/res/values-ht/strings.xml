@@ -122,6 +122,9 @@
     <string name="calendars_default_duration">Dire evènman pa defo</string>
     <string name="calendars_default_reminder">Rapèl pa defo</string>
     <string name="calendars_default_calendar">Kalandriye pa defo</string>
+    <string name="calendars_preferences_allday">Evènman tout jounen</string>
+    <string name="calendars_allday_first">Anvan</string>
+    <string name="calendars_allday_last">Apre</string>
     <string name="calendars_link_title">Lyen kalandriye</string>
     <string name="calendars_link_copy">Kopye lyen</string>
     <string name="calendars_link_once">Kopye li kounye a: li pa ka parèt ankò.</string>
@@ -185,4 +188,6 @@
     <string name="calendars_subscribe_google_connect_action">Konekte Google</string>
     <string name="calendars_grant_failed">Yo pa bay aksè kalandriye</string>
     <string name="calendars_event_exception">Repetisyon ki chanje</string>
+    <string name="calendars_span_day">%1$s, %2$s a %3$s</string>
+    <string name="calendars_zone_sea">Nan lanmè</string>
 </resources>

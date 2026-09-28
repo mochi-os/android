@@ -46,6 +46,7 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.Zones
 import java.util.Locale
 
 /** Public, shared by the dropdown row. Display screen owns its own dropdown. */
@@ -155,18 +156,21 @@ private fun prefSchema(
     ),
 )
 
-private val TIMEZONE_OPTIONS: List<String> by lazy {
-    val zones = java.util.TimeZone.getAvailableIDs()
-        .filter { it.contains('/') } // drop short aliases like "EST"
-        .sorted()
-    zones
+/**
+ * The zones of places by their current names, each with its offset from UTC
+ * now, then the sea's zones, which are their offsets; the web lists them the
+ * same way. Asia/Kolkata appears once, not again as Asia/Calcutta.
+ */
+private val TIMEZONE_OPTIONS: List<Pair<String, String>> by lazy {
+    val now = java.time.Instant.now()
+    Zones.listed().keys.map { it to "${Zones.label(it)} (${Zones.offset(it, now)})" } +
+        Zones.sea().map { it to Zones.label(it) }
 }
 
 /** The zone rows, with the localised automatic row in front. */
 @Composable
 private fun timezoneOptions(): List<Pair<String, String>> =
-    listOf("auto" to stringResource(R.string.settings_value_auto)) +
-        TIMEZONE_OPTIONS.map { it to it }
+    listOf("auto" to stringResource(R.string.settings_value_auto)) + TIMEZONE_OPTIONS
 
 /**
  * Overrides where the platform's display name is not Mochi's wording; mirrors
@@ -261,9 +265,11 @@ fun UserSettingsScreen(
             verticalArrangement = Arrangement.spacedBy(4.dp),
         ) {
             items(schema, key = { it.key }) { spec ->
+                val stored = uiState.values[spec.key] ?: ""
                 PrefRow(
                     spec = spec,
-                    current = uiState.values[spec.key] ?: "",
+                    // A stored zone may carry a name the list knows by another.
+                    current = if (spec.key == "timezone" && stored.isNotEmpty() && stored != "auto") Zones.current(stored) else stored,
                     onChange = { value -> viewModel.set(spec.key, value) },
                 )
             }

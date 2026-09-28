@@ -141,6 +141,9 @@
     <string name="calendars_default_duration">مدة الحدث الافتراضية</string>
     <string name="calendars_default_reminder">التذكير الافتراضي</string>
     <string name="calendars_default_calendar">التقويم الافتراضي</string>
+    <string name="calendars_preferences_allday">أحداث طوال اليوم</string>
+    <string name="calendars_allday_first">في البداية</string>
+    <string name="calendars_allday_last">في النهاية</string>
     <string name="calendars_link_title">رابط التقويم</string>
     <string name="calendars_link_copy">نسخ الرابط</string>
     <string name="calendars_link_once">انسخه الآن: لا يمكن عرضه مرة أخرى.</string>
@@ -208,4 +211,6 @@
     <string name="calendars_subscribe_google_connect_action">ربط Google</string>
     <string name="calendars_grant_failed">لم يُمنح الوصول إلى التقويم</string>
     <string name="calendars_event_exception">تكرار معدَّل</string>
+    <string name="calendars_span_day">%1$s، %2$s إلى %3$s</string>
+    <string name="calendars_zone_sea">في البحر</string>
 </resources>

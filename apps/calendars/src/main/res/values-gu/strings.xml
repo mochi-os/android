@@ -125,6 +125,9 @@
     <string name="calendars_default_duration">ઇવેન્ટની ડિફૉલ્ટ લંબાઈ</string>
     <string name="calendars_default_reminder">ડિફૉલ્ટ રિમાઇન્ડર</string>
     <string name="calendars_default_calendar">ડિફૉલ્ટ કૅલેન્ડર</string>
+    <string name="calendars_preferences_allday">આખા દિવસના ઇવેન્ટ્સ</string>
+    <string name="calendars_allday_first">શરૂઆતમાં</string>
+    <string name="calendars_allday_last">અંતમાં</string>
     <string name="calendars_link_title">કૅલેન્ડર લિંક</string>
     <string name="calendars_link_copy">લિંક કૉપિ કરો</string>
     <string name="calendars_link_once">હમણાં જ કૉપિ કરો: તે ફરીથી બતાવી શકાશે નહીં.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Google સાથે જોડાઓ</string>
     <string name="calendars_grant_failed">કૅલેન્ડર ઍક્સેસ આપવામાં આવી નથી</string>
     <string name="calendars_event_exception">બદલાયેલું પુનરાવર્તન</string>
+    <string name="calendars_span_day">%1$s, %2$s થી %3$s</string>
+    <string name="calendars_zone_sea">સમુદ્રમાં</string>
 </resources>

@@ -76,6 +76,7 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.util.Zones
 import org.mochios.android.util.zoneCity
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Zone
@@ -86,7 +87,6 @@ import org.mochios.calendars.ui.dialogs.reminderChoices
 import java.time.Instant
 import java.time.LocalDate
 import java.time.LocalTime
-import java.time.ZoneId
 import org.mochios.android.R as MochiR
 
 /**
@@ -497,7 +497,8 @@ private fun ZoneField(label: String, zone: String, onChange: (String) -> Unit) {
         )
         Spacer(Modifier.width(6.dp))
         Text(
-            text = zoneCity(zone),
+            // By its current name: an event written in Asia/Calcutta reads Kolkata.
+            text = zoneCity(Zones.current(zone)),
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.primary,
         )
@@ -516,8 +517,11 @@ private fun ZoneField(label: String, zone: String, onChange: (String) -> Unit) {
 }
 
 /**
- * Every zone the platform knows, in one list a search box narrows: by the
- * zone's name or by its city, so "york" finds America/New_York.
+ * The zones of places by their current names, each with its offset from UTC
+ * now, then the sea's zones, in one list a search box narrows: by a zone's
+ * name, its city, another name it goes by or its offset, so "york" finds
+ * America/New_York and "calcutta" Asia/Kolkata. The web's picker lists them
+ * the same way.
  */
 @Composable
 private fun ZoneDialog(
@@ -527,15 +531,49 @@ private fun ZoneDialog(
     onSelect: (String) -> Unit,
 ) {
     var search by remember { mutableStateOf("") }
-    val all = remember { ZoneId.getAvailableZoneIds().sortedWith(String.CASE_INSENSITIVE_ORDER) }
-    val shown = remember(search, all) {
-        val wanted = search.trim()
-        if (wanted.isEmpty()) {
-            all
-        } else {
-            all.filter { it.contains(wanted, ignoreCase = true) || zoneCity(it).contains(wanted, ignoreCase = true) }
+    val listed = remember { Zones.listed() }
+    val sea = remember { Zones.sea() }
+    val offsets = remember(listed) {
+        val now = java.time.Instant.now()
+        listed.keys.associateWith { Zones.offset(it, now) }
+    }
+    val chosen = remember(selected) { Zones.current(selected) }
+    val wanted = search.trim()
+    fun found(zone: String, others: List<String>): Boolean =
+        wanted.isEmpty() ||
+            zone.contains(wanted, ignoreCase = true) ||
+            zoneCity(zone).contains(wanted, ignoreCase = true) ||
+            others.any { it.contains(wanted, ignoreCase = true) } ||
+            offsets[zone].orEmpty().contains(wanted, ignoreCase = true)
+    val places = listed.filter { (zone, others) -> found(zone, others) }.keys.toList()
+    val waters = sea.filter { found(it, emptyList()) }
+
+    @Composable
+    fun Choice(zone: String, offset: String?) {
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier
+                .fillMaxWidth()
+                .clickable { onSelect(zone) }
+                .padding(horizontal = 4.dp, vertical = 10.dp),
+        ) {
+            Text(
+                text = Zones.label(zone),
+                style = MaterialTheme.typography.bodyMedium,
+                color = if (zone == chosen) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface,
+                modifier = Modifier.weight(1f),
+            )
+            if (!offset.isNullOrEmpty()) {
+                Text(
+                    text = offset,
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.padding(start = 12.dp),
+                )
+            }
         }
     }
+
     MochiAlertDialog(
         onDismissRequest = onDismiss,
         title = title,
@@ -550,21 +588,18 @@ private fun ZoneDialog(
                     modifier = Modifier.fillMaxWidth(),
                 )
                 LazyColumn(modifier = Modifier.fillMaxWidth().heightIn(max = 360.dp)) {
-                    items(shown, key = { it }) { zone ->
-                        Text(
-                            // A sea zone is its offset from UTC, which is its whole name.
-                            text = if (zone.startsWith("Etc/GMT")) zoneCity(zone) else zone,
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = if (zone == selected) {
-                                MaterialTheme.colorScheme.primary
-                            } else {
-                                MaterialTheme.colorScheme.onSurface
-                            },
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .clickable { onSelect(zone) }
-                                .padding(horizontal = 4.dp, vertical = 10.dp),
-                        )
+                    items(places, key = { it }) { zone -> Choice(zone, offsets[zone]) }
+                    if (waters.isNotEmpty()) {
+                        item(key = "sea") {
+                            Text(
+                                text = stringResource(R.string.calendars_zone_sea),
+                                style = MaterialTheme.typography.labelMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.padding(start = 4.dp, top = 12.dp, bottom = 4.dp),
+                            )
+                        }
+                        // A sea zone is its offset from UTC, which is its whole name.
+                        items(waters, key = { it }) { zone -> Choice(zone, null) }
                     }
                 }
             }

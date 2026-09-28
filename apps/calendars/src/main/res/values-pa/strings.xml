@@ -121,6 +121,9 @@
     <string name="calendars_default_duration">ਮੂਲ ਸਮਾਗਮ ਅਵਧੀ</string>
     <string name="calendars_default_reminder">ਡਿਫਾਲਟ ਰਿਮਾਈਂਡਰ</string>
     <string name="calendars_default_calendar">ਡਿਫਾਲਟ ਕੈਲੰਡਰ</string>
+    <string name="calendars_preferences_allday">ਪੂਰੇ ਦਿਨ ਦੇ ਇਵੈਂਟ</string>
+    <string name="calendars_allday_first">ਸ਼ੁਰੂ ਵਿੱਚ</string>
+    <string name="calendars_allday_last">ਅਖੀਰ ਵਿੱਚ</string>
     <string name="calendars_link_title">ਕੈਲੰਡਰ ਲਿੰਕ</string>
     <string name="calendars_link_copy">ਲਿੰਕ ਕਾਪੀ ਕਰੋ</string>
     <string name="calendars_link_once">ਇਸ ਨੂੰ ਹੁਣੇ ਕਾਪੀ ਕਰੋ: ਇਹ ਦੁਬਾਰਾ ਨਹੀਂ ਦਿਖਾਇਆ ਜਾਵੇਗਾ।</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Google ਨਾਲ ਜੁੜੋ</string>
     <string name="calendars_grant_failed">ਕੈਲੰਡਰ ਪਹੁੰਚ ਨਹੀਂ ਦਿੱਤੀ ਗਈ</string>
     <string name="calendars_event_exception">ਬਦਲਿਆ ਦੁਹਰਾਓ</string>
+    <string name="calendars_span_day">%1$s, %2$s ਤੋਂ %3$s ਤੱਕ</string>
+    <string name="calendars_zone_sea">ਸਮੁੰਦਰ ਵਿੱਚ</string>
 </resources>

@@ -125,6 +125,9 @@
     <string name="calendars_default_duration">مدت پیش‌فرض رویداد</string>
     <string name="calendars_default_reminder">یادآور پیش‌فرض</string>
     <string name="calendars_default_calendar">تقویم پیش‌فرض</string>
+    <string name="calendars_preferences_allday">رویدادهای تمام‌روز</string>
+    <string name="calendars_allday_first">در ابتدا</string>
+    <string name="calendars_allday_last">در انتها</string>
     <string name="calendars_link_title">پیوند تقویم</string>
     <string name="calendars_link_copy">کپی پیوند</string>
     <string name="calendars_link_once">همین حالا آن را کپی کنید: دیگر نمایش داده نخواهد شد.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">اتصال به Google</string>
     <string name="calendars_grant_failed">دسترسی به تقویم داده نشد</string>
     <string name="calendars_event_exception">رخداد تغییریافته</string>
+    <string name="calendars_span_day">%1$s، %2$s تا %3$s</string>
+    <string name="calendars_zone_sea">در دریا</string>
 </resources>

@@ -118,6 +118,9 @@
     <string name="calendars_default_duration">Panjang acara baku</string>
     <string name="calendars_default_reminder">Panginget standar</string>
     <string name="calendars_default_calendar">Kalénder standar</string>
+    <string name="calendars_preferences_allday">Acara sapoé pinuh</string>
+    <string name="calendars_allday_first">Di awal</string>
+    <string name="calendars_allday_last">Di tungtung</string>
     <string name="calendars_link_title">Tumbu kalénder</string>
     <string name="calendars_link_copy">Salin tumbu</string>
     <string name="calendars_link_once">Salin ayeuna: moal dipidangkeun deui.</string>
@@ -183,4 +186,6 @@
     <string name="calendars_subscribe_google_connect_action">Sambungkeun Google</string>
     <string name="calendars_grant_failed">Aksés kalénder henteu dipasihkeun</string>
     <string name="calendars_event_exception">Kajadian nu dirobah</string>
+    <string name="calendars_span_day">%1$s, %2$s nepi ka %3$s</string>
+    <string name="calendars_zone_sea">Di laut</string>
 </resources>

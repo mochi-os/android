@@ -121,6 +121,9 @@
     <string name="calendars_default_duration">ایونٹ کا ڈیفالٹ دورانیہ</string>
     <string name="calendars_default_reminder">ڈیفالٹ یاد دہانی</string>
     <string name="calendars_default_calendar">ڈیفالٹ کیلنڈر</string>
+    <string name="calendars_preferences_allday">پورے دن کے ایونٹس</string>
+    <string name="calendars_allday_first">شروع میں</string>
+    <string name="calendars_allday_last">آخر میں</string>
     <string name="calendars_link_title">کیلنڈر لنک</string>
     <string name="calendars_link_copy">لنک کاپی کریں</string>
     <string name="calendars_link_once">اسے ابھی کاپی کریں: یہ دوبارہ نہیں دکھایا جائے گا۔</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Google سے جڑیں</string>
     <string name="calendars_grant_failed">کیلنڈر تک رسائی نہیں دی گئی</string>
     <string name="calendars_event_exception">تبدیل شدہ تکرار</string>
+    <string name="calendars_span_day">%1$s، %2$s سے %3$s تک</string>
+    <string name="calendars_zone_sea">سمندر میں</string>
 </resources>

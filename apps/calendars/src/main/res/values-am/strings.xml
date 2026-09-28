@@ -125,6 +125,9 @@
     <string name="calendars_default_duration">ነባሪ የክስተት ርዝመት</string>
     <string name="calendars_default_reminder">ነባሪ አስታዋሽ</string>
     <string name="calendars_default_calendar">ነባሪ የቀን መቁጠሪያ</string>
+    <string name="calendars_preferences_allday">የሙሉ ቀን ክስተቶች</string>
+    <string name="calendars_allday_first">መጀመሪያ ላይ</string>
+    <string name="calendars_allday_last">መጨረሻ ላይ</string>
     <string name="calendars_link_title">የቀን መቁጠሪያ አገናኝ</string>
     <string name="calendars_link_copy">አገናኝ ቅዳ</string>
     <string name="calendars_link_once">አሁን ቅዳው፦ እንደገና ሊታይ አይችልም።</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Google አገናኝ</string>
     <string name="calendars_grant_failed">የቀን መቁጠሪያ መዳረሻ አልተፈቀደም</string>
     <string name="calendars_event_exception">የተቀየረ ድግግሞሽ</string>
+    <string name="calendars_span_day">%1$s, ከ%2$s እስከ %3$s</string>
+    <string name="calendars_zone_sea">በባሕር ላይ</string>
 </resources>

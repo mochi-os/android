@@ -172,6 +172,7 @@ fun PreferencesDialog(
     var duration by rememberSaveable { mutableIntStateOf(preferences.duration) }
     var reminder by rememberSaveable { mutableIntStateOf(preferences.reminder) }
     var zones by rememberSaveable { mutableStateOf(preferences.zones) }
+    var allday by rememberSaveable { mutableStateOf(preferences.allday) }
     // The calendars a new event can go in, the built-in default first.
     val writable = calendars.filterNot { it.readonly }
         .sortedWith(compareByDescending<Calendar> { it.default }.thenBy(NaturalCompare) { it.name })
@@ -204,6 +205,7 @@ fun PreferencesDialog(
                     view = preferences.view,
                     zones = zones,
                     calendar = calendar,
+                    allday = allday,
                 ),
             )
         },
@@ -263,6 +265,16 @@ fun PreferencesDialog(
                     options = (0..2).map { it.toString() to it.toString() },
                     selected = previous.toString(),
                     onSelect = { previous = it.toIntOrNull() ?: previous },
+                )
+                LabeledSelectField(
+                    label = stringResource(R.string.calendars_preferences_allday),
+                    placeholder = "",
+                    options = listOf(
+                        "first" to stringResource(R.string.calendars_allday_first),
+                        "last" to stringResource(R.string.calendars_allday_last),
+                    ),
+                    selected = allday,
+                    onSelect = { allday = it },
                 )
                 LabeledSelectField(
                     label = stringResource(R.string.calendars_default_duration),

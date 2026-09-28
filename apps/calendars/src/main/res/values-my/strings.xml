@@ -121,6 +121,9 @@
     <string name="calendars_default_duration">မူရင်း အစီအစဉ် ကြာချိန်</string>
     <string name="calendars_default_reminder">မူရင်း သတိပေးချက်</string>
     <string name="calendars_default_calendar">မူရင်း ပြက္ခဒိန်</string>
+    <string name="calendars_preferences_allday">တစ်နေကုန် အစီအစဉ်များ</string>
+    <string name="calendars_allday_first">အစတွင်</string>
+    <string name="calendars_allday_last">အဆုံးတွင်</string>
     <string name="calendars_link_title">ပြက္ခဒိန် လင့်ခ်</string>
     <string name="calendars_link_copy">လင့်ခ် ကူးမည်</string>
     <string name="calendars_link_once">ယခု ကူးယူပါ။ ထပ်မံ ပြသ၍ မရပါ။</string>
@@ -183,4 +186,6 @@
     <string name="calendars_subscribe_google_connect_action">Google ချိတ်ဆက်မည်</string>
     <string name="calendars_grant_failed">ပြက္ခဒိန် ဝင်ရောက်ခွင့် မရရှိပါ</string>
     <string name="calendars_event_exception">ပြောင်းလဲထားသော အကြိမ်</string>
+    <string name="calendars_span_day">%1$s %2$s မှ %3$s</string>
+    <string name="calendars_zone_sea">ပင်လယ်ပြင်တွင်</string>
 </resources>

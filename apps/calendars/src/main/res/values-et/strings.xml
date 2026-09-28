@@ -125,6 +125,9 @@
     <string name="calendars_default_duration">Sündmuse vaikepikkus</string>
     <string name="calendars_default_reminder">Vaikimisi meeldetuletus</string>
     <string name="calendars_default_calendar">Vaikekalender</string>
+    <string name="calendars_preferences_allday">Kogu päeva sündmused</string>
+    <string name="calendars_allday_first">Alguses</string>
+    <string name="calendars_allday_last">Lõpus</string>
     <string name="calendars_link_title">Kalendri link</string>
     <string name="calendars_link_copy">Kopeeri link</string>
     <string name="calendars_link_once">Kopeeri see kohe: seda ei saa uuesti kuvada.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Ühenda Google</string>
     <string name="calendars_grant_failed">Juurdepääsu kalendrile ei antud</string>
     <string name="calendars_event_exception">Muudetud kordus</string>
+    <string name="calendars_span_day">%1$s, %2$s kuni %3$s</string>
+    <string name="calendars_zone_sea">Merel</string>
 </resources>

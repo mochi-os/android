@@ -125,6 +125,9 @@
     <string name="calendars_default_duration">ღონისძიების ნაგულისხმევი ხანგრძლივობა</string>
     <string name="calendars_default_reminder">ნაგულისხმევი შეხსენება</string>
     <string name="calendars_default_calendar">ნაგულისხმევი კალენდარი</string>
+    <string name="calendars_preferences_allday">მთელი დღის ღონისძიებები</string>
+    <string name="calendars_allday_first">დასაწყისში</string>
+    <string name="calendars_allday_last">ბოლოს</string>
     <string name="calendars_link_title">კალენდრის ბმული</string>
     <string name="calendars_link_copy">ბმულის კოპირება</string>
     <string name="calendars_link_once">დააკოპირეთ ახლავე: მისი ხელახლა ჩვენება შეუძლებელია.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Google-თან დაკავშირება</string>
     <string name="calendars_grant_failed">კალენდართან წვდომა არ გაიცა</string>
     <string name="calendars_event_exception">შეცვლილი გამეორება</string>
+    <string name="calendars_span_day">%1$s, %2$s-დან %3$s-მდე</string>
+    <string name="calendars_zone_sea">ზღვაზე</string>
 </resources>

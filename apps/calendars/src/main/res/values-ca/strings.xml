@@ -125,6 +125,9 @@
     <string name="calendars_default_duration">Durada predeterminada de l\'esdeveniment</string>
     <string name="calendars_default_reminder">Recordatori per defecte</string>
     <string name="calendars_default_calendar">Calendari per defecte</string>
+    <string name="calendars_preferences_allday">Esdeveniments de tot el dia</string>
+    <string name="calendars_allday_first">Al principi</string>
+    <string name="calendars_allday_last">Al final</string>
     <string name="calendars_link_title">Enllaç del calendari</string>
     <string name="calendars_link_copy">Copia l\'enllaç</string>
     <string name="calendars_link_once">Copieu-lo ara: no es podrà tornar a mostrar.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Connecta Google</string>
     <string name="calendars_grant_failed">No s\'ha concedit l\'accés al calendari</string>
     <string name="calendars_event_exception">Ocurrència modificada</string>
+    <string name="calendars_span_day">%1$s, de %2$s a %3$s</string>
+    <string name="calendars_zone_sea">En alta mar</string>
 </resources>

@@ -121,6 +121,9 @@
     <string name="calendars_default_duration">Tadbirning standart davomiyligi</string>
     <string name="calendars_default_reminder">Standart eslatma</string>
     <string name="calendars_default_calendar">Standart kalendar</string>
+    <string name="calendars_preferences_allday">Kun boʻyi tadbirlar</string>
+    <string name="calendars_allday_first">Boshida</string>
+    <string name="calendars_allday_last">Oxirida</string>
     <string name="calendars_link_title">Kalendar havolasi</string>
     <string name="calendars_link_copy">Havolani nusxalash</string>
     <string name="calendars_link_once">Uni hozir nusxalang: u boshqa koʻrsatilmaydi.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Google\'ni ulash</string>
     <string name="calendars_grant_failed">Kalendarga kirish berilmadi</string>
     <string name="calendars_event_exception">Oʻzgartirilgan takror</string>
+    <string name="calendars_span_day">%1$s, %2$s – %3$s</string>
+    <string name="calendars_zone_sea">Dengizda</string>
 </resources>

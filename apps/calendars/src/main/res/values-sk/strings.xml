@@ -127,6 +127,9 @@
     <string name="calendars_default_duration">Predvolená dĺžka udalosti</string>
     <string name="calendars_default_reminder">Predvolená pripomienka</string>
     <string name="calendars_default_calendar">Predvolený kalendár</string>
+    <string name="calendars_preferences_allday">Celodenné udalosti</string>
+    <string name="calendars_allday_first">Na začiatku</string>
+    <string name="calendars_allday_last">Na konci</string>
     <string name="calendars_link_title">Odkaz na kalendár</string>
     <string name="calendars_link_copy">Kopírovať odkaz</string>
     <string name="calendars_link_once">Skopírujte ho teraz: už sa nezobrazí.</string>
@@ -196,4 +199,6 @@
     <string name="calendars_subscribe_google_connect_action">Pripojiť Google</string>
     <string name="calendars_grant_failed">Prístup ku kalendáru nebol udelený</string>
     <string name="calendars_event_exception">Zmenený výskyt</string>
+    <string name="calendars_span_day">%1$s, od %2$s do %3$s</string>
+    <string name="calendars_zone_sea">Na mori</string>
 </resources>

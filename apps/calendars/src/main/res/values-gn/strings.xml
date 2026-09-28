@@ -125,6 +125,9 @@
     <string name="calendars_default_duration">Evento pukukue ypygua</string>
     <string name="calendars_default_reminder">Mandu\'ara ypygua</string>
     <string name="calendars_default_calendar">Arapapaha ypygua</string>
+    <string name="calendars_preferences_allday">Evento ára pukukue</string>
+    <string name="calendars_allday_first">Ñepyrũme</string>
+    <string name="calendars_allday_last">Pahápe</string>
     <string name="calendars_link_title">Arapapaha link</string>
     <string name="calendars_link_copy">Ekopia link</string>
     <string name="calendars_link_once">Ekopia ko\'ág̃a: ndaikatumo\'ãi ojehechauka jey.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Embojoaju Google</string>
     <string name="calendars_grant_failed">Ndoje\'ẽi jeike arapapahápe</string>
     <string name="calendars_event_exception">Evento oñemoambuéva</string>
+    <string name="calendars_span_day">%1$s, %2$s guive %3$s peve</string>
+    <string name="calendars_zone_sea">Paraguasúpe</string>
 </resources>

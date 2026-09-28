@@ -125,6 +125,9 @@
     <string name="calendars_default_duration">Стандардно времетраење на настан</string>
     <string name="calendars_default_reminder">Стандарден потсетник</string>
     <string name="calendars_default_calendar">Стандарден календар</string>
+    <string name="calendars_preferences_allday">Целодневни настани</string>
+    <string name="calendars_allday_first">На почеток</string>
+    <string name="calendars_allday_last">На крај</string>
     <string name="calendars_link_title">Врска до календарот</string>
     <string name="calendars_link_copy">Копирај ја врската</string>
     <string name="calendars_link_once">Копирајте ја сега: не може повторно да се прикаже.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Поврзи Google</string>
     <string name="calendars_grant_failed">Пристапот до календарот не беше даден</string>
     <string name="calendars_event_exception">Изменето повторување</string>
+    <string name="calendars_span_day">%1$s, %2$s до %3$s</string>
+    <string name="calendars_zone_sea">На море</string>
 </resources>

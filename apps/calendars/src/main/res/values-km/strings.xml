@@ -121,6 +121,9 @@
     <string name="calendars_default_duration">រយៈពេលព្រឹត្តិការណ៍លំនាំដើម</string>
     <string name="calendars_default_reminder">ការរំលឹកលំនាំដើម</string>
     <string name="calendars_default_calendar">ប្រតិទិនលំនាំដើម</string>
+    <string name="calendars_preferences_allday">ព្រឹត្តិការណ៍ពេញមួយថ្ងៃ</string>
+    <string name="calendars_allday_first">នៅខាងដើម</string>
+    <string name="calendars_allday_last">នៅខាងចុង</string>
     <string name="calendars_link_title">តំណប្រតិទិន</string>
     <string name="calendars_link_copy">ចម្លងតំណ</string>
     <string name="calendars_link_once">ចម្លងវាឥឡូវនេះ៖ វាមិនអាចបង្ហាញម្ដងទៀតបានទេ។</string>
@@ -183,4 +186,6 @@
     <string name="calendars_subscribe_google_connect_action">ភ្ជាប់ Google</string>
     <string name="calendars_grant_failed">មិនបានផ្តល់ការចូលប្រើប្រតិទិនទេ</string>
     <string name="calendars_event_exception">ការកើតឡើងដែលបានផ្លាស់ប្តូរ</string>
+    <string name="calendars_span_day">%1$s, %2$s ដល់ %3$s</string>
+    <string name="calendars_zone_sea">នៅសមុទ្រ</string>
 </resources>

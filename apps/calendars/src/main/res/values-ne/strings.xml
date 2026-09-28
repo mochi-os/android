@@ -125,6 +125,9 @@
     <string name="calendars_default_duration">पूर्वनिर्धारित कार्यक्रम अवधि</string>
     <string name="calendars_default_reminder">पूर्वनिर्धारित सम्झना</string>
     <string name="calendars_default_calendar">पूर्वनिर्धारित क्यालेन्डर</string>
+    <string name="calendars_preferences_allday">दिनभरिका कार्यक्रमहरू</string>
+    <string name="calendars_allday_first">सुरुमा</string>
+    <string name="calendars_allday_last">अन्त्यमा</string>
     <string name="calendars_link_title">क्यालेन्डर लिङ्क</string>
     <string name="calendars_link_copy">लिङ्क प्रतिलिपि गर्नुहोस्</string>
     <string name="calendars_link_once">यो अहिले नै प्रतिलिपि गर्नुहोस्: यो फेरि देखाउन सकिँदैन।</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Google जडान गर्नुहोस्</string>
     <string name="calendars_grant_failed">क्यालेन्डर पहुँच दिइएन</string>
     <string name="calendars_event_exception">परिवर्तित पुनरावृत्ति</string>
+    <string name="calendars_span_day">%1$s, %2$s देखि %3$s सम्म</string>
+    <string name="calendars_zone_sea">समुद्रमा</string>
 </resources>

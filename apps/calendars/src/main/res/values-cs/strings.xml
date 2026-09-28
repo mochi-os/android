@@ -129,6 +129,9 @@
     <string name="calendars_default_duration">Výchozí délka události</string>
     <string name="calendars_default_reminder">Výchozí připomenutí</string>
     <string name="calendars_default_calendar">Výchozí kalendář</string>
+    <string name="calendars_preferences_allday">Celodenní události</string>
+    <string name="calendars_allday_first">Na začátku</string>
+    <string name="calendars_allday_last">Na konci</string>
     <string name="calendars_link_title">Odkaz na kalendář</string>
     <string name="calendars_link_copy">Kopírovat odkaz</string>
     <string name="calendars_link_once">Zkopírujte jej nyní: znovu jej nelze zobrazit.</string>
@@ -193,4 +196,6 @@
     <string name="calendars_subscribe_google_connect_action">Připojit Google</string>
     <string name="calendars_grant_failed">Přístup ke kalendáři nebyl udělen</string>
     <string name="calendars_event_exception">Změněné opakování</string>
+    <string name="calendars_span_day">%1$s, %2$s až %3$s</string>
+    <string name="calendars_zone_sea">Na moři</string>
 </resources>

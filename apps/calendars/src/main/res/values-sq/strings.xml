@@ -121,6 +121,9 @@
     <string name="calendars_default_duration">Gjatësia e parazgjedhur e ngjarjes</string>
     <string name="calendars_default_reminder">Kujtesa e parazgjedhur</string>
     <string name="calendars_default_calendar">Kalendari i parazgjedhur</string>
+    <string name="calendars_preferences_allday">Ngjarjet gjithë ditën</string>
+    <string name="calendars_allday_first">Në fillim</string>
+    <string name="calendars_allday_last">Në fund</string>
     <string name="calendars_link_title">Lidhja e kalendarit</string>
     <string name="calendars_link_copy">Kopjo lidhjen</string>
     <string name="calendars_link_once">Kopjojeni tani: nuk mund të shfaqet sërish.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Lidh Google</string>
     <string name="calendars_grant_failed">Qasja në kalendar nuk u dha</string>
     <string name="calendars_event_exception">Përsëritje e ndryshuar</string>
+    <string name="calendars_span_day">%1$s, nga %2$s deri në %3$s</string>
+    <string name="calendars_zone_sea">Në det</string>
 </resources>

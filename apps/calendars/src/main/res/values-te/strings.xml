@@ -121,6 +121,9 @@
     <string name="calendars_default_duration">డిఫాల్ట్ ఈవెంట్ నిడివి</string>
     <string name="calendars_default_reminder">డిఫాల్ట్ రిమైండర్</string>
     <string name="calendars_default_calendar">డిఫాల్ట్ క్యాలెండర్</string>
+    <string name="calendars_preferences_allday">రోజంతా ఈవెంట్‌లు</string>
+    <string name="calendars_allday_first">ప్రారంభంలో</string>
+    <string name="calendars_allday_last">చివరలో</string>
     <string name="calendars_link_title">క్యాలెండర్ లింక్</string>
     <string name="calendars_link_copy">లింక్‌ను కాపీ చేయి</string>
     <string name="calendars_link_once">ఇప్పుడే కాపీ చేయండి: ఇది మళ్లీ చూపబడదు.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Google కనెక్ట్ చేయండి</string>
     <string name="calendars_grant_failed">క్యాలెండర్ యాక్సెస్ ఇవ్వబడలేదు</string>
     <string name="calendars_event_exception">మార్చిన పునరావృత్తి</string>
+    <string name="calendars_span_day">%1$s, %2$s నుండి %3$s వరకు</string>
+    <string name="calendars_zone_sea">సముద్రంలో</string>
 </resources>

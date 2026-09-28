@@ -121,6 +121,9 @@
     <string name="calendars_default_duration">Dawa acara standar</string>
     <string name="calendars_default_reminder">Pangeling-eling standar</string>
     <string name="calendars_default_calendar">Kalender standar</string>
+    <string name="calendars_preferences_allday">Acara sedina muput</string>
+    <string name="calendars_allday_first">Ing wiwitan</string>
+    <string name="calendars_allday_last">Ing pungkasan</string>
     <string name="calendars_link_title">Tautan kalender</string>
     <string name="calendars_link_copy">Salin tautan</string>
     <string name="calendars_link_once">Salin saiki: ora bisa ditampilake manèh.</string>
@@ -183,4 +186,6 @@
     <string name="calendars_subscribe_google_connect_action">Sambungake Google</string>
     <string name="calendars_grant_failed">Akses kalender ora diwenehake</string>
     <string name="calendars_event_exception">Pengulangan sing diowahi</string>
+    <string name="calendars_span_day">%1$s, %2$s nganti %3$s</string>
+    <string name="calendars_zone_sea">Ing segara</string>
 </resources>

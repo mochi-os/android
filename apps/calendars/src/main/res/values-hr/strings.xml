@@ -129,6 +129,9 @@
     <string name="calendars_default_duration">Zadano trajanje događaja</string>
     <string name="calendars_default_reminder">Zadani podsjetnik</string>
     <string name="calendars_default_calendar">Zadani kalendar</string>
+    <string name="calendars_preferences_allday">Cjelodnevni događaji</string>
+    <string name="calendars_allday_first">Na početku</string>
+    <string name="calendars_allday_last">Na kraju</string>
     <string name="calendars_link_title">Poveznica kalendara</string>
     <string name="calendars_link_copy">Kopiraj poveznicu</string>
     <string name="calendars_link_once">Kopirajte je sada: ne može se ponovno prikazati.</string>
@@ -193,4 +196,6 @@
     <string name="calendars_subscribe_google_connect_action">Poveži Google</string>
     <string name="calendars_grant_failed">Pristup kalendaru nije odobren</string>
     <string name="calendars_event_exception">Izmijenjeno pojavljivanje</string>
+    <string name="calendars_span_day">%1$s, od %2$s do %3$s</string>
+    <string name="calendars_zone_sea">Na moru</string>
 </resources>

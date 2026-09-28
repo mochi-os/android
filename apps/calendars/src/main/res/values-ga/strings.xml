@@ -137,6 +137,9 @@
     <string name="calendars_default_duration">Fad réamhshocraithe imeachta</string>
     <string name="calendars_default_reminder">Meabhrúchán réamhshocraithe</string>
     <string name="calendars_default_calendar">Féilire réamhshocraithe</string>
+    <string name="calendars_preferences_allday">Imeachtaí lae iomláin</string>
+    <string name="calendars_allday_first">Ar dtús</string>
+    <string name="calendars_allday_last">Ar deireadh</string>
     <string name="calendars_link_title">Nasc an fhéilire</string>
     <string name="calendars_link_copy">Cóipeáil an nasc</string>
     <string name="calendars_link_once">Cóipeáil anois é: ní féidir é a thaispeáint arís.</string>
@@ -203,4 +206,6 @@
     <string name="calendars_subscribe_google_connect_action">Ceangail Google</string>
     <string name="calendars_grant_failed">Níor tugadh rochtain ar an bhféilire</string>
     <string name="calendars_event_exception">Tarlú athraithe</string>
+    <string name="calendars_span_day">%1$s, %2$s go %3$s</string>
+    <string name="calendars_zone_sea">Ar muir</string>
 </resources>

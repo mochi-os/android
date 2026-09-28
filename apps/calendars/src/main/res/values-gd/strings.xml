@@ -133,6 +133,9 @@
     <string name="calendars_default_duration">Faid bhunaiteach tachartais</string>
     <string name="calendars_default_reminder">Cuimhneachan bunaiteach</string>
     <string name="calendars_default_calendar">Mìosachan bunaiteach</string>
+    <string name="calendars_preferences_allday">Tachartasan fad an latha</string>
+    <string name="calendars_allday_first">An toiseach</string>
+    <string name="calendars_allday_last">Aig an deireadh</string>
     <string name="calendars_link_title">Ceangal a\' mhìosachain</string>
     <string name="calendars_link_copy">Dèan lethbhreac dhen cheangal</string>
     <string name="calendars_link_once">Dèan lethbhreac dheth an-dràsta: chan urrainn dhuinn a shealltainn a-rithist.</string>
@@ -198,4 +201,6 @@
     <string name="calendars_subscribe_google_connect_action">Ceangail Google</string>
     <string name="calendars_grant_failed">Cha deach inntrigeadh mìosachain a cheadachadh</string>
     <string name="calendars_event_exception">Turas atharraichte</string>
+    <string name="calendars_span_day">%1$s, %2$s gu %3$s</string>
+    <string name="calendars_zone_sea">Aig muir</string>
 </resources>

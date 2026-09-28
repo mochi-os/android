@@ -63,6 +63,7 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.Velocity
 import androidx.compose.ui.unit.dp
@@ -89,12 +90,13 @@ private data class Hold(val instance: Instance, val day: LocalDate, val grab: Of
 
 /**
  * The month and multiweek views: [weeks] rows of seven days, each cell
- * holding every one of its occurrences: one-line bars for the all-day and
- * multi-day ones at the top, and beneath them two lines on the cell for each
- * of the rest, the title above the time and marks, in a list that scrolls
- * within the cell when it holds more than the cell has room for. In the
- * month view days outside [month] are dimmed but drawn; in the multiweek
- * view [month] is null and every day reads the same.
+ * holding every one of its occurrences from its own top: one-line bars for
+ * the all-day and multi-day ones, and two lines on the cell for each of the
+ * rest, the title above the time and marks. The bars come first unless the
+ * user put all-day events last; each group scrolls within the cell when it
+ * holds more than the cell has room for. In the month view days outside
+ * [month] are dimmed but drawn; in the multiweek view [month] is null and
+ * every day reads the same.
  *
  * A tap on a chip opens its summary, a tap on empty cell space starts an
  * event on that day, and the day number opens the day view. A long press
@@ -159,6 +161,7 @@ fun MonthGrid(
                         Cell(
                             day = day,
                             today = today,
+                            allday = state.preferences.allday,
                             outside = month != null && day.monthValue != month,
                             instances = occurrences,
                             viewModel = viewModel,
@@ -229,6 +232,7 @@ fun MonthGrid(
 private fun Cell(
     day: LocalDate,
     today: LocalDate,
+    allday: String,
     outside: Boolean,
     instances: List<Instance>,
     viewModel: CalendarViewModel,
@@ -286,14 +290,17 @@ private fun Cell(
                 )
             }
         }
-        // The bars stay at the top of the cell and the timed entries beneath
-        // them scroll within it. Bars that would leave no room for a timed
-        // entry are held to a band of their own, which scrolls on its own.
+        // The bars and the timed entries stack from the top of the cell in the
+        // order the user chose, each group scrolling on its own. The upper one
+        // is held so that one entry of the lower stays in view.
         val entries = instances.map { it to look(it, viewModel.day(it), viewModel.finish(it), day) }
-        val bars = entries.filter { it.second.bar }
-        val lines = entries.filterNot { it.second.bar }
         val line = leading(MaterialTheme.typography.labelSmall)
         val pair = leading(MaterialTheme.typography.labelSmall.packed()) * 2
+        val groups = stack(
+            Group(entries.filter { it.second.bar }, line),
+            Group(entries.filterNot { it.second.bar }, pair),
+            allday,
+        ).filter { it.entries.isNotEmpty() }
 
         @Composable
         fun Entry(instance: Instance, look: Look) {
@@ -324,32 +331,29 @@ private fun Cell(
                 .fillMaxWidth()
                 .padding(start = 2.dp, end = 2.dp, top = 1.dp, bottom = 2.dp),
         ) {
-            val held = band(bars.size, line.value, STEP.value, maxHeight.value, pair.value, lines.isNotEmpty())
+            val upper = groups.getOrNull(0)
+            val lower = groups.getOrNull(1)
+            val held = upper?.let {
+                band(it.entries.size, it.height.value, STEP.value, maxHeight.value, lower?.height?.value ?: 0f, below = lower != null)
+            }
             Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.spacedBy(STEP)) {
-                if (bars.isNotEmpty()) {
+                for ((index, group) in groups.withIndex()) {
+                    val last = index == groups.size - 1
                     Column(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .then(if (held != null) Modifier.height(held.dp) else Modifier)
+                            .then(
+                                when {
+                                    last -> Modifier.weight(1f)
+                                    held != null -> Modifier.height(held.dp)
+                                    else -> Modifier
+                                },
+                            )
                             .nestedScroll(Contained)
                             .verticalScroll(rememberScrollState()),
                         verticalArrangement = Arrangement.spacedBy(STEP),
                     ) {
-                        for ((instance, look) in bars) {
-                            key(instance.event, instance.start) { Entry(instance, look) }
-                        }
-                    }
-                }
-                if (lines.isNotEmpty()) {
-                    Column(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .weight(1f)
-                            .nestedScroll(Contained)
-                            .verticalScroll(rememberScrollState()),
-                        verticalArrangement = Arrangement.spacedBy(STEP),
-                    ) {
-                        for ((instance, look) in lines) {
+                        for ((instance, look) in group.entries) {
                             key(instance.event, instance.start) { Entry(instance, look) }
                         }
                     }
@@ -358,6 +362,16 @@ private fun Cell(
         }
     }
 }
+
+/** One of a cell's two groups: its entries, and how tall each one is. */
+private data class Group(val entries: List<Pair<Instance, Look>>, val height: Dp)
+
+/**
+ * A cell's [bars] and its timed [lines] in the order they stack from its
+ * top: the bars first, unless the user put all-day events "last".
+ */
+fun <T> stack(bars: T, lines: T, allday: String): List<T> =
+    if (allday == "last") listOf(lines, bars) else listOf(bars, lines)
 
 /**
  * Keeps a cell's scrolling to the cell: whatever its list cannot take, at
@@ -390,17 +404,17 @@ fun look(instance: Instance, first: LocalDate, last: LocalDate, day: LocalDate):
 }
 
 /**
- * The height a cell's bars are held to, in the same unit as [room], or null
- * when they need no holding: [count] bars, each [line] tall and [gap] apart,
- * take their own height while that leaves room beneath for one [entry] of
- * the day's timed ones when there are [timed] ones, or fits the cell when
- * there are none. Past that they are held to what is left, and never to less
- * than one bar, and scroll within it.
+ * The height a cell's upper group is held to, in the same unit as [room], or
+ * null when it needs no holding: [count] entries, each [line] tall and [gap]
+ * apart, take their own height while that leaves room beneath for one
+ * [entry] of the group [below] when there is one, or fits the cell when there
+ * is none. Past that they are held to what is left, and never to less than
+ * one entry, and scroll within it.
  */
-fun band(count: Int, line: Float, gap: Float, room: Float, entry: Float, timed: Boolean): Float? {
+fun band(count: Int, line: Float, gap: Float, room: Float, entry: Float, below: Boolean): Float? {
     if (count == 0) return null
     val natural = count * line + (count - 1) * gap
-    val limit = if (timed) room - gap - entry else room
+    val limit = if (below) room - gap - entry else room
     if (natural <= limit) return null
     return maxOf(limit, line)
 }

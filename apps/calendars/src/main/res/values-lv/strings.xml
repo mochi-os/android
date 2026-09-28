@@ -129,6 +129,9 @@
     <string name="calendars_default_duration">Noklusētais notikuma ilgums</string>
     <string name="calendars_default_reminder">Noklusētais atgādinājums</string>
     <string name="calendars_default_calendar">Noklusētais kalendārs</string>
+    <string name="calendars_preferences_allday">Visas dienas notikumi</string>
+    <string name="calendars_allday_first">Sākumā</string>
+    <string name="calendars_allday_last">Beigās</string>
     <string name="calendars_link_title">Kalendāra saite</string>
     <string name="calendars_link_copy">Kopēt saiti</string>
     <string name="calendars_link_once">Nokopējiet to tagad: to vairs nevarēs parādīt.</string>
@@ -193,4 +196,6 @@
     <string name="calendars_subscribe_google_connect_action">Savienot Google</string>
     <string name="calendars_grant_failed">Piekļuve kalendāram netika piešķirta</string>
     <string name="calendars_event_exception">Mainīts atkārtojums</string>
+    <string name="calendars_span_day">%1$s, no %2$s līdz %3$s</string>
+    <string name="calendars_zone_sea">Jūrā</string>
 </resources>

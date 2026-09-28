@@ -121,6 +121,9 @@
     <string name="calendars_default_duration">預設活動時長</string>
     <string name="calendars_default_reminder">預設提醒</string>
     <string name="calendars_default_calendar">預設行事曆</string>
+    <string name="calendars_preferences_allday">整天活動</string>
+    <string name="calendars_allday_first">在前</string>
+    <string name="calendars_allday_last">在後</string>
     <string name="calendars_link_title">行事曆連結</string>
     <string name="calendars_link_copy">複製連結</string>
     <string name="calendars_link_once">請立即複製：它無法再次顯示。</string>
@@ -183,4 +186,6 @@
     <string name="calendars_subscribe_google_connect_action">連接 Google</string>
     <string name="calendars_grant_failed">未授予行事曆存取權限</string>
     <string name="calendars_event_exception">已變更的活動</string>
+    <string name="calendars_span_day">%1$s %2$s 至 %3$s</string>
+    <string name="calendars_zone_sea">海上</string>
 </resources>

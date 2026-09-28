@@ -121,6 +121,9 @@
     <string name="calendars_default_duration">இயல்புநிலை நிகழ்வு நீளம்</string>
     <string name="calendars_default_reminder">இயல்புநிலை நினைவூட்டல்</string>
     <string name="calendars_default_calendar">இயல்புநிலை நாட்காட்டி</string>
+    <string name="calendars_preferences_allday">நாள் முழுவதுமான நிகழ்வுகள்</string>
+    <string name="calendars_allday_first">தொடக்கத்தில்</string>
+    <string name="calendars_allday_last">இறுதியில்</string>
     <string name="calendars_link_title">நாட்காட்டி இணைப்பு</string>
     <string name="calendars_link_copy">இணைப்பை நகலெடு</string>
     <string name="calendars_link_once">இப்போதே நகலெடுங்கள்: இது மீண்டும் காட்டப்படாது.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Google உடன் இணை</string>
     <string name="calendars_grant_failed">நாட்காட்டி அணுகல் வழங்கப்படவில்லை</string>
     <string name="calendars_event_exception">மாற்றப்பட்ட நிகழ்வு</string>
+    <string name="calendars_span_day">%1$s, %2$s முதல் %3$s வரை</string>
+    <string name="calendars_zone_sea">கடலில்</string>
 </resources>

@@ -71,6 +71,7 @@
     <string name="calendars_view_month">月</string>
     <string name="calendars_workweek">工作週</string>
     <string name="calendars_range">%1$s 至 %2$s</string>
+    <string name="calendars_span_day">%1$s %2$s 至 %3$s</string>
     <string name="calendars_truncated">呢個範圍有部分活動未顯示。</string>
     <string name="calendars_list_empty">冇活動</string>
     <string name="calendars_untitled">（冇標題）</string>
@@ -119,6 +120,9 @@
     <string name="calendars_default_duration">預設活動長度</string>
     <string name="calendars_default_reminder">預設提醒</string>
     <string name="calendars_default_calendar">預設日曆</string>
+    <string name="calendars_preferences_allday">全日活動</string>
+    <string name="calendars_allday_first">排喺前面</string>
+    <string name="calendars_allday_last">排喺後面</string>
     <string name="calendars_link_title">日曆連結</string>
     <string name="calendars_link_copy">複製連結</string>
     <string name="calendars_link_once">即刻複製：唔會再顯示。</string>
@@ -146,6 +150,7 @@
     </plurals>
     <string name="calendars_event_zone_start">開始時區</string>
     <string name="calendars_event_zone_finish">結束時區</string>
+    <string name="calendars_zone_sea">海上</string>
     <string name="calendars_event_backwards">結束早過開始</string>
     <string name="calendars_preferences_zones">按活動本身嘅時區顯示</string>
     <string name="calendars_event_timezone">時區</string>

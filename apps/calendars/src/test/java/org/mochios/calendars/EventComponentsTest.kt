@@ -5,6 +5,7 @@
 
 package org.mochios.calendars
 
+import org.mochios.android.util.Zones
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNotNull
@@ -418,6 +419,26 @@ class EventComponentsTest {
         assertTrue(foreign(Zone(NEW_YORK, LONDON), LONDON))
         assertTrue(foreign(Zone(LONDON, NEW_YORK), LONDON))
         assertTrue(foreign(Zone(NEW_YORK, NEW_YORK), LONDON))
+    }
+
+    /** A platform that resolves zones as ICU does, where Asia/Kolkata's own name is Asia/Calcutta. */
+    private val icu = object : Zones.Registry {
+        override fun canonical(zone: String): String? =
+            mapOf("Asia/Kolkata" to "Asia/Calcutta", "Asia/Calcutta" to "Asia/Calcutta")[zone]
+
+        override fun places(): Collection<String> = emptyList()
+    }
+
+    @Test
+    fun `an end under another name of the user's own zone needs no zones shown`() {
+        assertFalse(foreign(Zone("Asia/Calcutta", "Asia/Calcutta"), "Asia/Kolkata", icu))
+        assertFalse(foreign(Zone("Asia/Kolkata", ""), "Asia/Calcutta", icu))
+        assertTrue(foreign(Zone("Asia/Calcutta", NEW_YORK), "Asia/Kolkata", icu))
+    }
+
+    @Test
+    fun `the finish zone follows the start zone while the two are one zone under two names`() {
+        assertEquals(Zone(NEW_YORK, NEW_YORK), follow(Zone("Asia/Calcutta", "Asia/Kolkata"), NEW_YORK, icu))
     }
 
     @Test

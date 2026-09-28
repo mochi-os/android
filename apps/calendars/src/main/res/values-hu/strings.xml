@@ -125,6 +125,9 @@
     <string name="calendars_default_duration">Alapértelmezett eseményhossz</string>
     <string name="calendars_default_reminder">Alapértelmezett emlékeztető</string>
     <string name="calendars_default_calendar">Alapértelmezett naptár</string>
+    <string name="calendars_preferences_allday">Egész napos események</string>
+    <string name="calendars_allday_first">Az elején</string>
+    <string name="calendars_allday_last">A végén</string>
     <string name="calendars_link_title">Naptárhivatkozás</string>
     <string name="calendars_link_copy">Hivatkozás másolása</string>
     <string name="calendars_link_once">Másolja ki most: később nem jeleníthető meg újra.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Google csatlakoztatása</string>
     <string name="calendars_grant_failed">A naptár-hozzáférést nem adták meg</string>
     <string name="calendars_event_exception">Módosított előfordulás</string>
+    <string name="calendars_span_day">%1$s, %2$s és %3$s között</string>
+    <string name="calendars_zone_sea">Tengeren</string>
 </resources>

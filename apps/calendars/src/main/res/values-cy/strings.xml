@@ -141,6 +141,9 @@
     <string name="calendars_default_duration">Hyd rhagosodedig digwyddiad</string>
     <string name="calendars_default_reminder">Nodyn atgoffa diofyn</string>
     <string name="calendars_default_calendar">Calendr diofyn</string>
+    <string name="calendars_preferences_allday">Digwyddiadau trwy\'r dydd</string>
+    <string name="calendars_allday_first">Yn gyntaf</string>
+    <string name="calendars_allday_last">Yn olaf</string>
     <string name="calendars_link_title">Dolen y calendr</string>
     <string name="calendars_link_copy">Copïo\'r ddolen</string>
     <string name="calendars_link_once">Copïwch hi nawr: ni ellir ei dangos eto.</string>
@@ -208,4 +211,6 @@
     <string name="calendars_subscribe_google_connect_action">Cysylltu Google</string>
     <string name="calendars_grant_failed">Ni roddwyd mynediad i\'r calendr</string>
     <string name="calendars_event_exception">Achlysur wedi\'i newid</string>
+    <string name="calendars_span_day">%1$s, %2$s i %3$s</string>
+    <string name="calendars_zone_sea">Ar y môr</string>
 </resources>

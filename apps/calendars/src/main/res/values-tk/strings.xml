@@ -121,6 +121,9 @@
     <string name="calendars_default_duration">Wakanyň adaty dowamlylygy</string>
     <string name="calendars_default_reminder">Adaty ýatladyş</string>
     <string name="calendars_default_calendar">Adaty senenama</string>
+    <string name="calendars_preferences_allday">Bütin günlük çäreler</string>
+    <string name="calendars_allday_first">Başda</string>
+    <string name="calendars_allday_last">Ahyrda</string>
     <string name="calendars_link_title">Kalendar salgylanmasy</string>
     <string name="calendars_link_copy">Salgylanmany göçür</string>
     <string name="calendars_link_once">Ony häzir göçüriň: gaýtadan görkezilmez.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Google birikdir</string>
     <string name="calendars_grant_failed">Senenama elýeterliligi berilmedi</string>
     <string name="calendars_event_exception">Üýtgedilen gaýtalanma</string>
+    <string name="calendars_span_day">%1$s, %2$s bilen %3$s aralygy</string>
+    <string name="calendars_zone_sea">Deňizde</string>
 </resources>

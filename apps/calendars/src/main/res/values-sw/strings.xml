@@ -121,6 +121,9 @@
     <string name="calendars_default_duration">Urefu chaguomsingi wa tukio</string>
     <string name="calendars_default_reminder">Kikumbusho chaguo-msingi</string>
     <string name="calendars_default_calendar">Kalenda chaguo-msingi</string>
+    <string name="calendars_preferences_allday">Matukio ya siku nzima</string>
+    <string name="calendars_allday_first">Mwanzoni</string>
+    <string name="calendars_allday_last">Mwishoni</string>
     <string name="calendars_link_title">Kiungo cha kalenda</string>
     <string name="calendars_link_copy">Nakili kiungo</string>
     <string name="calendars_link_once">Nakili sasa: hakiwezi kuonyeshwa tena.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Unganisha Google</string>
     <string name="calendars_grant_failed">Ufikiaji wa kalenda haukutolewa</string>
     <string name="calendars_event_exception">Marudio yaliyobadilishwa</string>
+    <string name="calendars_span_day">%1$s, %2$s hadi %3$s</string>
+    <string name="calendars_zone_sea">Baharini</string>
 </resources>

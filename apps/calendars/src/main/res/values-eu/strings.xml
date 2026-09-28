@@ -125,6 +125,9 @@
     <string name="calendars_default_duration">Gertaeraren luzera lehenetsia</string>
     <string name="calendars_default_reminder">Oroigarri lehenetsia</string>
     <string name="calendars_default_calendar">Egutegi lehenetsia</string>
+    <string name="calendars_preferences_allday">Egun osoko gertaerak</string>
+    <string name="calendars_allday_first">Hasieran</string>
+    <string name="calendars_allday_last">Amaieran</string>
     <string name="calendars_link_title">Egutegiaren esteka</string>
     <string name="calendars_link_copy">Kopiatu esteka</string>
     <string name="calendars_link_once">Kopiatu orain: ezin izango da berriro erakutsi.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Konektatu Google</string>
     <string name="calendars_grant_failed">Ez da egutegirako sarbidea eman</string>
     <string name="calendars_event_exception">Aldatutako agerraldia</string>
+    <string name="calendars_span_day">%1$s, %2$s - %3$s</string>
+    <string name="calendars_zone_sea">Itsasoan</string>
 </resources>

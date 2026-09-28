@@ -132,6 +132,9 @@
     <string name="calendars_default_duration">Numatytasis įvykio ilgis</string>
     <string name="calendars_default_reminder">Numatytasis priminimas</string>
     <string name="calendars_default_calendar">Numatytasis kalendorius</string>
+    <string name="calendars_preferences_allday">Visos dienos įvykiai</string>
+    <string name="calendars_allday_first">Pradžioje</string>
+    <string name="calendars_allday_last">Pabaigoje</string>
     <string name="calendars_link_title">Kalendoriaus nuoroda</string>
     <string name="calendars_link_copy">Kopijuoti nuorodą</string>
     <string name="calendars_link_once">Nukopijuokite ją dabar: jos nebus galima parodyti dar kartą.</string>
@@ -196,4 +199,6 @@
     <string name="calendars_subscribe_google_connect_action">Prijungti Google</string>
     <string name="calendars_grant_failed">Prieiga prie kalendoriaus nesuteikta</string>
     <string name="calendars_event_exception">Pakeistas pasikartojimas</string>
+    <string name="calendars_span_day">%1$s, nuo %2$s iki %3$s</string>
+    <string name="calendars_zone_sea">Jūroje</string>
 </resources>

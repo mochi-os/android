@@ -125,6 +125,9 @@
     <string name="calendars_default_duration">Nayrïri lurawi pacha</string>
     <string name="calendars_default_reminder">Nayrïri amtayiri</string>
     <string name="calendars_default_calendar">Nayrïri calendario</string>
+    <string name="calendars_preferences_allday">Taqi uru lurawinaka</string>
+    <string name="calendars_allday_first">Nayraqata</string>
+    <string name="calendars_allday_last">Qhipharu</string>
     <string name="calendars_link_title">Calendario chimpu</string>
     <string name="calendars_link_copy">Chimpu copiaña</string>
     <string name="calendars_link_once">Jichha copiam: janiw wasitat uñachayañjamakiti.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Google chikacht’aña</string>
     <string name="calendars_grant_failed">Calendario mantañax janiw iyawsatäkiti</string>
     <string name="calendars_event_exception">Turkata lurawi</string>
+    <string name="calendars_span_day">%1$s, %2$s %3$s kama</string>
+    <string name="calendars_zone_sea">Lamarana</string>
 </resources>

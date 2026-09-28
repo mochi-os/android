@@ -26,6 +26,7 @@ import org.mochios.calendars.ui.calendar.look
 import org.mochios.calendars.ui.calendar.marks
 import org.mochios.calendars.ui.calendar.opacity
 import org.mochios.calendars.ui.calendar.same
+import org.mochios.calendars.ui.calendar.stack
 import org.mochios.calendars.ui.calendar.status
 import org.mochios.calendars.ui.calendar.past
 import java.time.LocalDate
@@ -36,8 +37,8 @@ import java.time.ZonedDateTime
  * How the views draw an occurrence: faded once it is over, in a month or
  * multiweek cell as a bar or as a two-line entry, with its start time or
  * without, with its marks between its title and its time on one line or
- * after the time on a stacked second line, how tall a cell's bars stand
- * above its scrolling list of timed entries, and what its status, title,
+ * after the time on a stacked second line, which of a cell's groups stacks
+ * on top and how tall it stands above the other, and what its status, title,
  * span, colour and selection make of it.
  */
 class LookTest {
@@ -224,31 +225,46 @@ class LookTest {
 
     @Test
     fun `a cell with no bars holds none`() {
-        assertNull(band(0, 16f, 2f, 78f, 26f, timed = true))
+        assertNull(band(0, 16f, 2f, 78f, 26f, below = true))
     }
 
     @Test
     fun `bars that leave room for a timed entry take their own height`() {
         // Two bars, 34, and a gap and an entry beneath, 28: 62 of 78.
-        assertNull(band(2, 16f, 2f, 78f, 26f, timed = true))
+        assertNull(band(2, 16f, 2f, 78f, 26f, below = true))
         // Four bars need 70, which a cell of 78 holds when there is nothing timed.
-        assertNull(band(4, 16f, 2f, 78f, 26f, timed = false))
+        assertNull(band(4, 16f, 2f, 78f, 26f, below = false))
     }
 
     @Test
     fun `bars that would crowd out the timed entries are held to what is left`() {
         // Four bars need 70; 78 less a gap and an entry leaves 50.
-        assertEquals(50f, band(4, 16f, 2f, 78f, 26f, timed = true))
+        assertEquals(50f, band(4, 16f, 2f, 78f, 26f, below = true))
     }
 
     @Test
     fun `bars that do not fit a cell with nothing timed are held to the cell`() {
-        assertEquals(78f, band(6, 16f, 2f, 78f, 26f, timed = false))
+        assertEquals(78f, band(6, 16f, 2f, 78f, 26f, below = false))
     }
 
     @Test
     fun `held bars always keep one bar showing`() {
-        assertEquals(16f, band(3, 16f, 2f, 30f, 26f, timed = true))
+        assertEquals(16f, band(3, 16f, 2f, 30f, 26f, below = true))
+    }
+
+    @Test
+    fun `timed entries stacked above the bars are held to leave room for one bar`() {
+        // Three timed entries need 82; 78 less a gap and a bar leaves 60.
+        assertEquals(60f, band(3, 26f, 2f, 78f, 16f, below = true))
+    }
+
+    // ---- stack ----
+
+    @Test
+    fun `the bars stack above the timed entries unless all-day events go last`() {
+        assertEquals(listOf("bars", "lines"), stack("bars", "lines", "first"))
+        assertEquals(listOf("lines", "bars"), stack("bars", "lines", "last"))
+        assertEquals(listOf("bars", "lines"), stack("bars", "lines", ""))
     }
 
     // ---- status ----

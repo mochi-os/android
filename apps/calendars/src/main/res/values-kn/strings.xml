@@ -125,6 +125,9 @@
     <string name="calendars_default_duration">ಡೀಫಾಲ್ಟ್ ಈವೆಂಟ್ ಅವಧಿ</string>
     <string name="calendars_default_reminder">ಡೀಫಾಲ್ಟ್ ಜ್ಞಾಪನೆ</string>
     <string name="calendars_default_calendar">ಡೀಫಾಲ್ಟ್ ಕ್ಯಾಲೆಂಡರ್</string>
+    <string name="calendars_preferences_allday">ಇಡೀ ದಿನದ ಈವೆಂಟ್‌ಗಳು</string>
+    <string name="calendars_allday_first">ಆರಂಭದಲ್ಲಿ</string>
+    <string name="calendars_allday_last">ಕೊನೆಯಲ್ಲಿ</string>
     <string name="calendars_link_title">ಕ್ಯಾಲೆಂಡರ್ ಲಿಂಕ್</string>
     <string name="calendars_link_copy">ಲಿಂಕ್ ನಕಲಿಸಿ</string>
     <string name="calendars_link_once">ಇದನ್ನು ಈಗಲೇ ನಕಲಿಸಿ: ಇದನ್ನು ಮತ್ತೆ ತೋರಿಸಲಾಗುವುದಿಲ್ಲ.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Google ಸಂಪರ್ಕಿಸಿ</string>
     <string name="calendars_grant_failed">ಕ್ಯಾಲೆಂಡರ್ ಪ್ರವೇಶ ನೀಡಲಾಗಿಲ್ಲ</string>
     <string name="calendars_event_exception">ಬದಲಾದ ಪುನರಾವರ್ತನೆ</string>
+    <string name="calendars_span_day">%1$s, %2$s ರಿಂದ %3$s ವರೆಗೆ</string>
+    <string name="calendars_zone_sea">ಸಮುದ್ರದಲ್ಲಿ</string>
 </resources>

@@ -125,6 +125,9 @@
     <string name="calendars_default_duration">डीफॉल्ट कार्यक्रम कालावधी</string>
     <string name="calendars_default_reminder">डीफॉल्ट स्मरणपत्र</string>
     <string name="calendars_default_calendar">डीफॉल्ट कॅलेंडर</string>
+    <string name="calendars_preferences_allday">संपूर्ण दिवसाचे कार्यक्रम</string>
+    <string name="calendars_allday_first">सुरुवातीला</string>
+    <string name="calendars_allday_last">शेवटी</string>
     <string name="calendars_link_title">कॅलेंडर दुवा</string>
     <string name="calendars_link_copy">दुवा कॉपी करा</string>
     <string name="calendars_link_once">तो आताच कॉपी करा: तो पुन्हा दाखवता येणार नाही.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Google कनेक्ट करा</string>
     <string name="calendars_grant_failed">कॅलेंडर प्रवेश दिला गेला नाही</string>
     <string name="calendars_event_exception">बदललेली पुनरावृत्ती</string>
+    <string name="calendars_span_day">%1$s, %2$s ते %3$s</string>
+    <string name="calendars_zone_sea">समुद्रात</string>
 </resources>

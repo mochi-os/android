@@ -121,6 +121,9 @@
     <string name="calendars_default_duration">Ubude besiganeko obumiselweyo</string>
     <string name="calendars_default_reminder">Isikhumbuzo soqobo</string>
     <string name="calendars_default_calendar">Ikhalenda yoqobo</string>
+    <string name="calendars_preferences_allday">Imisitho yemini yonke</string>
+    <string name="calendars_allday_first">Ekuqaleni</string>
+    <string name="calendars_allday_last">Ekugqibeleni</string>
     <string name="calendars_link_title">Ikhonkco lekhalenda</string>
     <string name="calendars_link_copy">Khuphela ikhonkco</string>
     <string name="calendars_link_once">Likhuphele ngoku: alinakuboniswa kwakhona.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Qhagamshela i-Google</string>
     <string name="calendars_grant_failed">Ufikelelo lwekhalenda alunikwanga</string>
     <string name="calendars_event_exception">Isiganeko esiguqulweyo</string>
+    <string name="calendars_span_day">%1$s, ukusuka ku-%2$s ukuya ku-%3$s</string>
+    <string name="calendars_zone_sea">Elwandle</string>
 </resources>

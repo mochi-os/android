@@ -125,6 +125,9 @@
     <string name="calendars_default_duration">Προεπιλεγμένη διάρκεια συμβάντος</string>
     <string name="calendars_default_reminder">Προεπιλεγμένη υπενθύμιση</string>
     <string name="calendars_default_calendar">Προεπιλεγμένο ημερολόγιο</string>
+    <string name="calendars_preferences_allday">Ολοήμερα συμβάντα</string>
+    <string name="calendars_allday_first">Στην αρχή</string>
+    <string name="calendars_allday_last">Στο τέλος</string>
     <string name="calendars_link_title">Σύνδεσμος ημερολογίου</string>
     <string name="calendars_link_copy">Αντιγραφή συνδέσμου</string>
     <string name="calendars_link_once">Αντιγράψτε τον τώρα: δεν μπορεί να εμφανιστεί ξανά.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Σύνδεση με Google</string>
     <string name="calendars_grant_failed">Δεν δόθηκε πρόσβαση στο ημερολόγιο</string>
     <string name="calendars_event_exception">Τροποποιημένη επανάληψη</string>
+    <string name="calendars_span_day">%1$s, %2$s έως %3$s</string>
+    <string name="calendars_zone_sea">Στη θάλασσα</string>
 </resources>

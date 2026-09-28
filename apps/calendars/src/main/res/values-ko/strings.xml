@@ -121,6 +121,9 @@
     <string name="calendars_default_duration">기본 일정 길이</string>
     <string name="calendars_default_reminder">기본 알림</string>
     <string name="calendars_default_calendar">기본 캘린더</string>
+    <string name="calendars_preferences_allday">종일 일정</string>
+    <string name="calendars_allday_first">맨 앞</string>
+    <string name="calendars_allday_last">맨 뒤</string>
     <string name="calendars_link_title">캘린더 링크</string>
     <string name="calendars_link_copy">링크 복사</string>
     <string name="calendars_link_once">지금 복사하세요. 다시 표시할 수 없어요.</string>
@@ -183,4 +186,6 @@
     <string name="calendars_subscribe_google_connect_action">Google 연결</string>
     <string name="calendars_grant_failed">캘린더 액세스가 허용되지 않았어요</string>
     <string name="calendars_event_exception">변경된 일정</string>
+    <string name="calendars_span_day">%1$s %2$s~%3$s</string>
+    <string name="calendars_zone_sea">해상</string>
 </resources>

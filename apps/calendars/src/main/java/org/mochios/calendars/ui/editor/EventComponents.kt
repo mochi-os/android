@@ -9,6 +9,7 @@ import org.mochios.android.sync.CalendarsMapping
 import org.mochios.android.sync.EventComponent
 import org.mochios.android.sync.EventProperty
 import org.mochios.android.sync.property
+import org.mochios.android.util.Zones
 import org.mochios.android.util.descriptionText
 import org.mochios.calendars.model.Hours
 import org.mochios.calendars.model.Instance
@@ -76,12 +77,12 @@ fun written(component: EventComponent, user: String): Zone {
 }
 
 /**
- * Whether either end reads in another zone than the [user]'s own, which is
- * when the editor shows the zones without being asked. A blank end reads in
- * the user's zone.
+ * Whether either end reads in another zone than the [user]'s own, under any
+ * of its names, which is when the editor shows the zones without being
+ * asked. A blank end reads in the user's zone.
  */
-fun foreign(zone: Zone, user: String): Boolean =
-    zone.start.ifBlank { user } != user || zone.finish.ifBlank { user } != user
+fun foreign(zone: Zone, user: String, registry: Zones.Registry = Zones.Platform): Boolean =
+    !Zones.same(zone.start.ifBlank { user }, user, registry) || !Zones.same(zone.finish.ifBlank { user }, user, registry)
 
 /**
  * The zone a moment of the form is shown and picked in. An all-day day is
@@ -105,10 +106,11 @@ fun following(begins: Long, ends: Long): Long {
 
 /**
  * The pair after the start zone is set to [start]: the finish zone follows
- * while the two are still equal, and stops once it has been set apart.
+ * while the two are one zone, under whichever names, and stops once it has
+ * been set apart.
  */
-fun follow(zone: Zone, start: String): Zone =
-    Zone(start, if (zone.finish == zone.start) start else zone.finish)
+fun follow(zone: Zone, start: String, registry: Zones.Registry = Zones.Platform): Zone =
+    Zone(start, if (Zones.same(zone.finish, zone.start, registry)) start else zone.finish)
 
 /**
  * What a blank new form starts with, from the [memory] of the last new event

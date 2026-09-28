@@ -121,6 +121,9 @@
     <string name="calendars_default_duration">Varsayılan etkinlik süresi</string>
     <string name="calendars_default_reminder">Varsayılan hatırlatıcı</string>
     <string name="calendars_default_calendar">Varsayılan takvim</string>
+    <string name="calendars_preferences_allday">Tüm gün etkinlikleri</string>
+    <string name="calendars_allday_first">Başta</string>
+    <string name="calendars_allday_last">Sonda</string>
     <string name="calendars_link_title">Takvim bağlantısı</string>
     <string name="calendars_link_copy">Bağlantıyı kopyala</string>
     <string name="calendars_link_once">Şimdi kopyalayın: bir daha gösterilemez.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Google\'a bağlan</string>
     <string name="calendars_grant_failed">Takvim erişimi verilmedi</string>
     <string name="calendars_event_exception">Değiştirilmiş yineleme</string>
+    <string name="calendars_span_day">%1$s, %2$s - %3$s</string>
+    <string name="calendars_zone_sea">Denizde</string>
 </resources>

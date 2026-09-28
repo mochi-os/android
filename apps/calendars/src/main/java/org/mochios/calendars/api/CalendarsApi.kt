@@ -108,6 +108,7 @@ data class PreferencesRequest(
     val view: String? = null,
     val zones: Boolean? = null,
     val calendar: String? = null,
+    val allday: String? = null,
 )
 
 /**

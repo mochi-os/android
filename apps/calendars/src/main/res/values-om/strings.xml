@@ -125,6 +125,9 @@
     <string name="calendars_default_duration">Dheerina taatee idilee</string>
     <string name="calendars_default_reminder">Yaadachiisa idilee</string>
     <string name="calendars_default_calendar">Kaalaandarii idilee</string>
+    <string name="calendars_preferences_allday">Taateewwan guyyaa guutuu</string>
+    <string name="calendars_allday_first">Jalqaba irratti</string>
+    <string name="calendars_allday_last">Dhuma irratti</string>
     <string name="calendars_link_title">Hidhaa kaalaandarii</string>
     <string name="calendars_link_copy">Hidhaa garagalchi</string>
     <string name="calendars_link_once">Amma garagalchi: lammata mul\'achuu hin danda\'u.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Google wal qunnamsiisi</string>
     <string name="calendars_grant_failed">Seensi kaalaandarii hin kennamne</string>
     <string name="calendars_event_exception">Taatee jijjiirame</string>
+    <string name="calendars_span_day">%1$s, %2$s hanga %3$s</string>
+    <string name="calendars_zone_sea">Galaana irratti</string>
 </resources>

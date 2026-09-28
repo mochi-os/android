@@ -125,6 +125,9 @@
     <string name="calendars_default_duration">ডিফল্ট ইভেন্টের দৈর্ঘ্য</string>
     <string name="calendars_default_reminder">ডিফল্ট অনুস্মারক</string>
     <string name="calendars_default_calendar">ডিফল্ট ক্যালেন্ডার</string>
+    <string name="calendars_preferences_allday">সারাদিনের ইভেন্ট</string>
+    <string name="calendars_allday_first">শুরুতে</string>
+    <string name="calendars_allday_last">শেষে</string>
     <string name="calendars_link_title">ক্যালেন্ডার লিঙ্ক</string>
     <string name="calendars_link_copy">লিঙ্ক কপি করুন</string>
     <string name="calendars_link_once">এখনই কপি করুন: এটি আর দেখানো যাবে না।</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Google সংযোগ করুন</string>
     <string name="calendars_grant_failed">ক্যালেন্ডার অ্যাক্সেস দেওয়া হয়নি</string>
     <string name="calendars_event_exception">পরিবর্তিত পুনরাবৃত্তি</string>
+    <string name="calendars_span_day">%1$s, %2$s থেকে %3$s</string>
+    <string name="calendars_zone_sea">সমুদ্রে</string>
 </resources>

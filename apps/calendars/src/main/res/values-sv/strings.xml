@@ -121,6 +121,9 @@
     <string name="calendars_default_duration">Standardlängd för händelse</string>
     <string name="calendars_default_reminder">Standardpåminnelse</string>
     <string name="calendars_default_calendar">Standardkalender</string>
+    <string name="calendars_preferences_allday">Heldagshändelser</string>
+    <string name="calendars_allday_first">Först</string>
+    <string name="calendars_allday_last">Sist</string>
     <string name="calendars_link_title">Kalenderlänk</string>
     <string name="calendars_link_copy">Kopiera länk</string>
     <string name="calendars_link_once">Kopiera den nu: den kan inte visas igen.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Anslut Google</string>
     <string name="calendars_grant_failed">Kalenderåtkomst beviljades inte</string>
     <string name="calendars_event_exception">Ändrad förekomst</string>
+    <string name="calendars_span_day">%1$s, %2$s till %3$s</string>
+    <string name="calendars_zone_sea">Till sjöss</string>
 </resources>

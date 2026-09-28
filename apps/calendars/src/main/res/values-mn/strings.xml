@@ -125,6 +125,9 @@
     <string name="calendars_default_duration">Үйл явдлын үндсэн үргэлжлэх хугацаа</string>
     <string name="calendars_default_reminder">Үндсэн сануулга</string>
     <string name="calendars_default_calendar">Үндсэн хуанли</string>
+    <string name="calendars_preferences_allday">Өдөржингийн үйл явдал</string>
+    <string name="calendars_allday_first">Эхэнд</string>
+    <string name="calendars_allday_last">Төгсгөлд</string>
     <string name="calendars_link_title">Хуанлийн холбоос</string>
     <string name="calendars_link_copy">Холбоосыг хуулах</string>
     <string name="calendars_link_once">Одоо хуулж авна уу: дахин харуулах боломжгүй.</string>
@@ -188,4 +191,6 @@
     <string name="calendars_subscribe_google_connect_action">Google-т холбогдох</string>
     <string name="calendars_grant_failed">Хуанлийн хандалт олгогдсонгүй</string>
     <string name="calendars_event_exception">Өөрчлөгдсөн давталт</string>
+    <string name="calendars_span_day">%1$s, %2$s - %3$s</string>
+    <string name="calendars_zone_sea">Далайд</string>
 </resources>
