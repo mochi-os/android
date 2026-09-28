@@ -202,5 +202,4 @@
     <string name="calendars_grant_failed">Nie przyznano dostępu do kalendarza</string>
     <string name="calendars_event_exception">Zmienione wystąpienie</string>
     <string name="calendars_span_day">%1$s, od %2$s do %3$s</string>
-    <string name="calendars_zone_sea">Na morzu</string>
 </resources>

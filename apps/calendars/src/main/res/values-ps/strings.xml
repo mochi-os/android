@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">د کليز لاسرسی ور نه کړل شو</string>
     <string name="calendars_event_exception">بدله شوې پیښه</string>
     <string name="calendars_span_day">%1$s، %2$s تر %3$s</string>
-    <string name="calendars_zone_sea">په سمندر کې</string>
 </resources>

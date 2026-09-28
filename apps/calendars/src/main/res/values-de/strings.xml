@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">Kalenderzugriff wurde nicht erteilt</string>
     <string name="calendars_event_exception">Geänderter Einzeltermin</string>
     <string name="calendars_span_day">%1$s, %2$s bis %3$s</string>
-    <string name="calendars_zone_sea">Auf See</string>
 </resources>

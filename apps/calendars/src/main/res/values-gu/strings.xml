@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">કૅલેન્ડર ઍક્સેસ આપવામાં આવી નથી</string>
     <string name="calendars_event_exception">બદલાયેલું પુનરાવર્તન</string>
     <string name="calendars_span_day">%1$s, %2$s થી %3$s</string>
-    <string name="calendars_zone_sea">સમુદ્રમાં</string>
 </resources>

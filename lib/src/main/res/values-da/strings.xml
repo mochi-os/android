@@ -318,4 +318,5 @@
     <string name="device_name_fallback">Mobilenhed</string>
     <string name="account_error_token_type">Ikke-understøttet tokentype</string>
     <string name="account_error_caller">Kalderen har ikke tilladelse</string>
+    <string name="zone_sea">Til søs</string>
 </resources>

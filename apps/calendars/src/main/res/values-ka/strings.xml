@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">კალენდართან წვდომა არ გაიცა</string>
     <string name="calendars_event_exception">შეცვლილი გამეორება</string>
     <string name="calendars_span_day">%1$s, %2$s-დან %3$s-მდე</string>
-    <string name="calendars_zone_sea">ზღვაზე</string>
 </resources>

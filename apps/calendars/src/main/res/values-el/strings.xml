@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">Δεν δόθηκε πρόσβαση στο ημερολόγιο</string>
     <string name="calendars_event_exception">Τροποποιημένη επανάληψη</string>
     <string name="calendars_span_day">%1$s, %2$s έως %3$s</string>
-    <string name="calendars_zone_sea">Στη θάλασσα</string>
 </resources>

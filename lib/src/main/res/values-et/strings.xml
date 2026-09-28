@@ -316,4 +316,5 @@
     <string name="device_name_fallback">Mobiilseade</string>
     <string name="account_error_token_type">Toetamata loasiku tüüp</string>
     <string name="account_error_caller">Kutsujal pole luba</string>
+    <string name="zone_sea">Merel</string>
 </resources>

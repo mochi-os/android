@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">Дастрасӣ ба тақвим дода нашуд</string>
     <string name="calendars_event_exception">Такрори тағйирёфта</string>
     <string name="calendars_span_day">%1$s, аз %2$s то %3$s</string>
-    <string name="calendars_zone_sea">Дар баҳр</string>
 </resources>

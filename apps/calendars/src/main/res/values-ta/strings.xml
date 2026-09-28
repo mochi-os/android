@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">நாட்காட்டி அணுகல் வழங்கப்படவில்லை</string>
     <string name="calendars_event_exception">மாற்றப்பட்ட நிகழ்வு</string>
     <string name="calendars_span_day">%1$s, %2$s முதல் %3$s வரை</string>
-    <string name="calendars_zone_sea">கடலில்</string>
 </resources>

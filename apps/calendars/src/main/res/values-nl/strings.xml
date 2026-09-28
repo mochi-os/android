@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">Agendatoegang is niet verleend</string>
     <string name="calendars_event_exception">Gewijzigde herhaling</string>
     <string name="calendars_span_day">%1$s, %2$s tot %3$s</string>
-    <string name="calendars_zone_sea">Op zee</string>
 </resources>

@@ -381,4 +381,6 @@
     <string name="account_error_caller">Caller not allowed</string>
     <string name="account_error_token_type">Unsupported token type</string>
     <string name="device_name_fallback">Mobile device</string>
+    <string name="zone_sea">At sea</string>
+    <string name="zone_attribution" translatable="false">© OpenStreetMap contributors</string>
 </resources>

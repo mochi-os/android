@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">క్యాలెండర్ యాక్సెస్ ఇవ్వబడలేదు</string>
     <string name="calendars_event_exception">మార్చిన పునరావృత్తి</string>
     <string name="calendars_span_day">%1$s, %2$s నుండి %3$s వరకు</string>
-    <string name="calendars_zone_sea">సముద్రంలో</string>
 </resources>

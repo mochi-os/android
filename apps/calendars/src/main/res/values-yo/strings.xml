@@ -187,5 +187,4 @@
     <string name="calendars_grant_failed">A kò fún ni ìwọlé kàlẹ́ńdà</string>
     <string name="calendars_event_exception">Ìgbà tí a yípadà</string>
     <string name="calendars_span_day">%1$s, láti %2$s sí %3$s</string>
-    <string name="calendars_zone_sea">Lórí òkun</string>
 </resources>

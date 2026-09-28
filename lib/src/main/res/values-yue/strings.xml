@@ -316,4 +316,5 @@
     <string name="device_name_fallback">流動裝置</string>
     <string name="account_error_token_type">唔支援嘅權杖類型</string>
     <string name="account_error_caller">唔准呢個呼叫方</string>
+    <string name="zone_sea">海上</string>
 </resources>

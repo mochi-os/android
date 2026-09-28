@@ -318,4 +318,5 @@
     <string name="device_name_fallback">Dispositiu mòbil</string>
     <string name="account_error_token_type">Tipus de testimoni no admès</string>
     <string name="account_error_caller">Qui truca no té permís</string>
+    <string name="zone_sea">En alta mar</string>
 </resources>

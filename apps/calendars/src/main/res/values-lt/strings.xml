@@ -200,5 +200,4 @@
     <string name="calendars_grant_failed">Prieiga prie kalendoriaus nesuteikta</string>
     <string name="calendars_event_exception">Pakeistas pasikartojimas</string>
     <string name="calendars_span_day">%1$s, nuo %2$s iki %3$s</string>
-    <string name="calendars_zone_sea">Jūroje</string>
 </resources>

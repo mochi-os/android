@@ -316,4 +316,5 @@
     <string name="device_name_fallback">Mobil enhet</string>
     <string name="account_error_token_type">Tokentypen støttes ikke</string>
     <string name="account_error_caller">Kalleren har ikke tillatelse</string>
+    <string name="zone_sea">Til sjøs</string>
 </resources>

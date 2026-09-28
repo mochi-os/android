@@ -316,4 +316,5 @@
     <string name="device_name_fallback">Mba\'e poguy</string>
     <string name="account_error_token_type">Token reko ojeguerekóiva</string>
     <string name="account_error_caller">Ohenóiva ndaikatúi</string>
+    <string name="zone_sea">Paraguasúpe</string>
 </resources>

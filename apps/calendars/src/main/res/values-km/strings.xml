@@ -187,5 +187,4 @@
     <string name="calendars_grant_failed">មិនបានផ្តល់ការចូលប្រើប្រតិទិនទេ</string>
     <string name="calendars_event_exception">ការកើតឡើងដែលបានផ្លាស់ប្តូរ</string>
     <string name="calendars_span_day">%1$s, %2$s ដល់ %3$s</string>
-    <string name="calendars_zone_sea">នៅសមុទ្រ</string>
 </resources>

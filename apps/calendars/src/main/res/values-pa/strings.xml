@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">ਕੈਲੰਡਰ ਪਹੁੰਚ ਨਹੀਂ ਦਿੱਤੀ ਗਈ</string>
     <string name="calendars_event_exception">ਬਦਲਿਆ ਦੁਹਰਾਓ</string>
     <string name="calendars_span_day">%1$s, %2$s ਤੋਂ %3$s ਤੱਕ</string>
-    <string name="calendars_zone_sea">ਸਮੁੰਦਰ ਵਿੱਚ</string>
 </resources>

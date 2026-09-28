@@ -75,7 +75,6 @@
     <string name="calendars_event_timezone">Time zone</string>
     <string name="calendars_event_zone_start">Start time zone</string>
     <string name="calendars_event_zone_finish">End time zone</string>
-    <string name="calendars_zone_sea">At sea</string>
     <string name="calendars_event_backwards">Ends before it starts</string>
     <string name="calendars_event_location">Location</string>
     <string name="calendars_event_repeat">Repeat</string>

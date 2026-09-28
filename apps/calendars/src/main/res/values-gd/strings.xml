@@ -202,5 +202,4 @@
     <string name="calendars_grant_failed">Cha deach inntrigeadh mìosachain a cheadachadh</string>
     <string name="calendars_event_exception">Turas atharraichte</string>
     <string name="calendars_span_day">%1$s, %2$s gu %3$s</string>
-    <string name="calendars_zone_sea">Aig muir</string>
 </resources>

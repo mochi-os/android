@@ -316,4 +316,5 @@
     <string name="device_name_fallback">ಮೊಬೈಲ್ ಸಾಧನ</string>
     <string name="account_error_token_type">ಬೆಂಬಲಿಸದ ಟೋಕನ್ ಪ್ರಕಾರ</string>
     <string name="account_error_caller">ಕರೆ ಮಾಡುವವರಿಗೆ ಅನುಮತಿ ಇಲ್ಲ</string>
+    <string name="zone_sea">ಸಮುದ್ರದಲ್ಲಿ</string>
 </resources>

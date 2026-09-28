@@ -187,5 +187,4 @@
     <string name="calendars_grant_failed">ပြက္ခဒိန် ဝင်ရောက်ခွင့် မရရှိပါ</string>
     <string name="calendars_event_exception">ပြောင်းလဲထားသော အကြိမ်</string>
     <string name="calendars_span_day">%1$s %2$s မှ %3$s</string>
-    <string name="calendars_zone_sea">ပင်လယ်ပြင်တွင်</string>
 </resources>

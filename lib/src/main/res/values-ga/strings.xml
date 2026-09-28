@@ -319,4 +319,5 @@
     <string name="device_name_fallback">Gléas soghluaiste</string>
     <string name="account_error_token_type">Cineál comhartha gan tacaíocht</string>
     <string name="account_error_caller">Níl cead ag an nglaoiteoir</string>
+    <string name="zone_sea">Ar muir</string>
 </resources>

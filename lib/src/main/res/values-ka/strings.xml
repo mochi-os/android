@@ -316,4 +316,5 @@
     <string name="device_name_fallback">მობილური მოწყობილობა</string>
     <string name="account_error_token_type">მხარდაუჭერელი ჟეტონის ტიპი</string>
     <string name="account_error_caller">გამომძახებელს არ აქვს უფლება</string>
+    <string name="zone_sea">ზღვაზე</string>
 </resources>

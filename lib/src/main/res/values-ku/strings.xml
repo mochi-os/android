@@ -316,4 +316,5 @@
     <string name="device_name_fallback">Cîhaza mobîl</string>
     <string name="account_error_token_type">Cureya nîşanê nayê piştgirî kirin</string>
     <string name="account_error_caller">Bangker nayê destûr kirin</string>
+    <string name="zone_sea">Li deryayê</string>
 </resources>

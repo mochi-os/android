@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">L\'accesso al calendario non è stato concesso</string>
     <string name="calendars_event_exception">Ricorrenza modificata</string>
     <string name="calendars_span_day">%1$s, dalle %2$s alle %3$s</string>
-    <string name="calendars_zone_sea">In mare</string>
 </resources>

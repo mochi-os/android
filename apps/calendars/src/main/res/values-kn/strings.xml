@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">ಕ್ಯಾಲೆಂಡರ್ ಪ್ರವೇಶ ನೀಡಲಾಗಿಲ್ಲ</string>
     <string name="calendars_event_exception">ಬದಲಾದ ಪುನರಾವರ್ತನೆ</string>
     <string name="calendars_span_day">%1$s, %2$s ರಿಂದ %3$s ವರೆಗೆ</string>
-    <string name="calendars_zone_sea">ಸಮುದ್ರದಲ್ಲಿ</string>
 </resources>

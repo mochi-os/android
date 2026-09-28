@@ -197,5 +197,4 @@
     <string name="calendars_grant_failed">Accesul la calendar nu a fost acordat</string>
     <string name="calendars_event_exception">Apariție modificată</string>
     <string name="calendars_span_day">%1$s, de la %2$s la %3$s</string>
-    <string name="calendars_zone_sea">Pe mare</string>
 </resources>

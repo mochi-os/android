@@ -316,4 +316,5 @@
     <string name="device_name_fallback">Mobiel apparaat</string>
     <string name="account_error_token_type">Niet-ondersteund tokentype</string>
     <string name="account_error_caller">Aanroeper niet toegestaan</string>
+    <string name="zone_sea">Op zee</string>
 </resources>

@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">ڪئلينڊر رسائي نه ڏني وئي</string>
     <string name="calendars_event_exception">تبديل ٿيل واقعو</string>
     <string name="calendars_span_day">%1$s، %2$s کان %3$s</string>
-    <string name="calendars_zone_sea">سمنڊ ۾</string>
 </resources>

@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">کیلنڈر تک رسائی نہیں دی گئی</string>
     <string name="calendars_event_exception">تبدیل شدہ تکرار</string>
     <string name="calendars_span_day">%1$s، %2$s سے %3$s تک</string>
-    <string name="calendars_zone_sea">سمندر میں</string>
 </resources>

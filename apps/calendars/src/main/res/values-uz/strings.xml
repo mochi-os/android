@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">Kalendarga kirish berilmadi</string>
     <string name="calendars_event_exception">Oʻzgartirilgan takror</string>
     <string name="calendars_span_day">%1$s, %2$s – %3$s</string>
-    <string name="calendars_zone_sea">Dengizda</string>
 </resources>

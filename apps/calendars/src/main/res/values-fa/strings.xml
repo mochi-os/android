@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">دسترسی به تقویم داده نشد</string>
     <string name="calendars_event_exception">رخداد تغییریافته</string>
     <string name="calendars_span_day">%1$s، %2$s تا %3$s</string>
-    <string name="calendars_zone_sea">در دریا</string>
 </resources>

@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">ক্যালেন্ডার অ্যাক্সেস দেওয়া হয়নি</string>
     <string name="calendars_event_exception">পরিবর্তিত পুনরাবৃত্তি</string>
     <string name="calendars_span_day">%1$s, %2$s থেকে %3$s</string>
-    <string name="calendars_zone_sea">সমুদ্রে</string>
 </resources>

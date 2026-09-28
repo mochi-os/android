@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">Qasja në kalendar nuk u dha</string>
     <string name="calendars_event_exception">Përsëritje e ndryshuar</string>
     <string name="calendars_span_day">%1$s, nga %2$s deri në %3$s</string>
-    <string name="calendars_zone_sea">Në det</string>
 </resources>

@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">දින දර්ශන ප්‍රවේශය ලබා දී නැත</string>
     <string name="calendars_event_exception">වෙනස් කළ පුනරාවර්තනය</string>
     <string name="calendars_span_day">%1$s, %2$s සිට %3$s දක්වා</string>
-    <string name="calendars_zone_sea">මුහුදේ</string>
 </resources>

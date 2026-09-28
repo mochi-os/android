@@ -212,5 +212,4 @@
     <string name="calendars_grant_failed">Ni roddwyd mynediad i\'r calendr</string>
     <string name="calendars_event_exception">Achlysur wedi\'i newid</string>
     <string name="calendars_span_day">%1$s, %2$s i %3$s</string>
-    <string name="calendars_zone_sea">Ar y môr</string>
 </resources>

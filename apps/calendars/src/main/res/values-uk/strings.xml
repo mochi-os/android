@@ -202,5 +202,4 @@
     <string name="calendars_grant_failed">Доступ до календаря не надано</string>
     <string name="calendars_event_exception">Змінене повторення</string>
     <string name="calendars_span_day">%1$s, з %2$s до %3$s</string>
-    <string name="calendars_zone_sea">У морі</string>
 </resources>

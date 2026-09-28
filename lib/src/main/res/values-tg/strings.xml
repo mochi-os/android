@@ -316,4 +316,5 @@
     <string name="device_name_fallback">Дастгоҳи мобилӣ</string>
     <string name="account_error_token_type">Навъи рамз дастгирӣ намешавад</string>
     <string name="account_error_caller">Ба даъваткунанда иҷозат нест</string>
+    <string name="zone_sea">Дар баҳр</string>
 </resources>

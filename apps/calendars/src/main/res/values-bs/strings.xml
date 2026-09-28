@@ -197,5 +197,4 @@
     <string name="calendars_grant_failed">Pristup kalendaru nije odobren</string>
     <string name="calendars_event_exception">Izmijenjeno pojavljivanje</string>
     <string name="calendars_span_day">%1$s, %2$s do %3$s</string>
-    <string name="calendars_zone_sea">Na moru</string>
 </resources>

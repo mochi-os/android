@@ -316,4 +316,5 @@
     <string name="device_name_fallback">モバイルデバイス</string>
     <string name="account_error_token_type">サポートされていないトークンの種類</string>
     <string name="account_error_caller">この呼び出し元は許可されていません</string>
+    <string name="zone_sea">海上</string>
 </resources>

@@ -18,8 +18,6 @@ import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
@@ -31,7 +29,6 @@ import androidx.compose.material.icons.outlined.Close
 import androidx.compose.material.icons.outlined.ContentCopy
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Public
-import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DatePicker
@@ -52,7 +49,6 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -76,11 +72,10 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.ZonePicker
 import org.mochios.android.util.Zones
 import org.mochios.android.util.zoneCity
 import org.mochios.calendars.R
-import org.mochios.calendars.model.Zone
-import org.mochios.calendars.ui.calendar.toColour
 import org.mochios.calendars.ui.dialogs.DeleteEventDialog
 import org.mochios.calendars.ui.dialogs.ScopeDialog
 import org.mochios.calendars.ui.dialogs.reminderChoices
@@ -253,31 +248,6 @@ fun EventEditScreen(
                         label = stringResource(R.string.calendars_event_zone_finish),
                         zone = uiState.zone.finish,
                         onChange = { viewModel.zone(uiState.zone.copy(finish = it)) },
-                    )
-                }
-            }
-            // The event's day beneath its times, for one that starts and ends
-            // on one day in one zone.
-            val span = if (uiState.isLoading) {
-                null
-            } else {
-                val begins = uiState.zone.start.ifBlank { viewModel.zone }
-                Strip.span(uiState.start, uiState.finish, uiState.allday, Zone(begins, uiState.zone.finish.ifBlank { begins }))
-            }
-            if (span != null) {
-                val begins = uiState.zone.start.ifBlank { viewModel.zone }
-                val ends = uiState.zone.finish.ifBlank { begins }
-                val strip by viewModel.strip.collectAsState()
-                LaunchedEffect(span.day, begins) { viewModel.strip(span.day, begins) }
-                key(span.day, begins) {
-                    DayStrip(
-                        span = span,
-                        colour = uiState.calendars.firstOrNull { it.id == uiState.calendar }?.colour
-                            ?.toColour(MaterialTheme.colorScheme.primary) ?: MaterialTheme.colorScheme.primary,
-                        others = strip.others,
-                        hours = strip.hours,
-                        onMove = { viewModel.start(Strip.instant(span.day, it, begins)) },
-                        onResize = { viewModel.finish(Strip.instant(span.day, it, ends)) },
                     )
                 }
             }
@@ -504,7 +474,7 @@ private fun ZoneField(label: String, zone: String, onChange: (String) -> Unit) {
         )
     }
     if (picking) {
-        ZoneDialog(
+        ZonePicker(
             title = label,
             selected = zone,
             onDismiss = { picking = false },
@@ -514,97 +484,6 @@ private fun ZoneField(label: String, zone: String, onChange: (String) -> Unit) {
             },
         )
     }
-}
-
-/**
- * The zones of places by their current names, each with its offset from UTC
- * now, then the sea's zones, in one list a search box narrows: by a zone's
- * name, its city, another name it goes by or its offset, so "york" finds
- * America/New_York and "calcutta" Asia/Kolkata. The web's picker lists them
- * the same way.
- */
-@Composable
-private fun ZoneDialog(
-    title: String,
-    selected: String,
-    onDismiss: () -> Unit,
-    onSelect: (String) -> Unit,
-) {
-    var search by remember { mutableStateOf("") }
-    val listed = remember { Zones.listed() }
-    val sea = remember { Zones.sea() }
-    val offsets = remember(listed) {
-        val now = java.time.Instant.now()
-        listed.keys.associateWith { Zones.offset(it, now) }
-    }
-    val chosen = remember(selected) { Zones.current(selected) }
-    val wanted = search.trim()
-    fun found(zone: String, others: List<String>): Boolean =
-        wanted.isEmpty() ||
-            zone.contains(wanted, ignoreCase = true) ||
-            zoneCity(zone).contains(wanted, ignoreCase = true) ||
-            others.any { it.contains(wanted, ignoreCase = true) } ||
-            offsets[zone].orEmpty().contains(wanted, ignoreCase = true)
-    val places = listed.filter { (zone, others) -> found(zone, others) }.keys.toList()
-    val waters = sea.filter { found(it, emptyList()) }
-
-    @Composable
-    fun Choice(zone: String, offset: String?) {
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier
-                .fillMaxWidth()
-                .clickable { onSelect(zone) }
-                .padding(horizontal = 4.dp, vertical = 10.dp),
-        ) {
-            Text(
-                text = Zones.label(zone),
-                style = MaterialTheme.typography.bodyMedium,
-                color = if (zone == chosen) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface,
-                modifier = Modifier.weight(1f),
-            )
-            if (!offset.isNullOrEmpty()) {
-                Text(
-                    text = offset,
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.padding(start = 12.dp),
-                )
-            }
-        }
-    }
-
-    MochiAlertDialog(
-        onDismissRequest = onDismiss,
-        title = title,
-        dismissText = stringResource(MochiR.string.common_cancel),
-        content = {
-            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                MochiTextField(
-                    value = search,
-                    onValueChange = { search = it },
-                    singleLine = true,
-                    leadingIcon = { Icon(Icons.Outlined.Search, contentDescription = null) },
-                    modifier = Modifier.fillMaxWidth(),
-                )
-                LazyColumn(modifier = Modifier.fillMaxWidth().heightIn(max = 360.dp)) {
-                    items(places, key = { it }) { zone -> Choice(zone, offsets[zone]) }
-                    if (waters.isNotEmpty()) {
-                        item(key = "sea") {
-                            Text(
-                                text = stringResource(R.string.calendars_zone_sea),
-                                style = MaterialTheme.typography.labelMedium,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                modifier = Modifier.padding(start = 4.dp, top = 12.dp, bottom = 4.dp),
-                            )
-                        }
-                        // A sea zone is its offset from UTC, which is its whole name.
-                        items(waters, key = { it }) { zone -> Choice(zone, null) }
-                    }
-                }
-            }
-        },
-    )
 }
 
 /**

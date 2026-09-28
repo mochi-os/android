@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">Kalenderåtkomst beviljades inte</string>
     <string name="calendars_event_exception">Ändrad förekomst</string>
     <string name="calendars_span_day">%1$s, %2$s till %3$s</string>
-    <string name="calendars_zone_sea">Till sjöss</string>
 </resources>

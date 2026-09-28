@@ -318,4 +318,5 @@
     <string name="device_name_fallback">Mobilní zařízení</string>
     <string name="account_error_token_type">Nepodporovaný typ tokenu</string>
     <string name="account_error_caller">Volající nemá oprávnění</string>
+    <string name="zone_sea">Na moři</string>
 </resources>

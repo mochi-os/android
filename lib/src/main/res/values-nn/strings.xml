@@ -316,4 +316,5 @@
     <string name="device_name_fallback">Mobil eining</string>
     <string name="account_error_token_type">Tokentypen er ikkje støtta</string>
     <string name="account_error_caller">Kallaren har ikkje løyve</string>
+    <string name="zone_sea">Til sjøs</string>
 </resources>

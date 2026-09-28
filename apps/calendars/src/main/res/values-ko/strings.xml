@@ -187,5 +187,4 @@
     <string name="calendars_grant_failed">캘린더 액세스가 허용되지 않았어요</string>
     <string name="calendars_event_exception">변경된 일정</string>
     <string name="calendars_span_day">%1$s %2$s~%3$s</string>
-    <string name="calendars_zone_sea">해상</string>
 </resources>

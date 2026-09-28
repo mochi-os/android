@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">No s\'ha concedit l\'accés al calendari</string>
     <string name="calendars_event_exception">Ocurrència modificada</string>
     <string name="calendars_span_day">%1$s, de %2$s a %3$s</string>
-    <string name="calendars_zone_sea">En alta mar</string>
 </resources>

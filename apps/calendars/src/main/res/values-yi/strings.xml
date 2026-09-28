@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">קאַלענדאַר־צוטריט איז ניט געגעבן געוואָרן</string>
     <string name="calendars_event_exception">געביטענע פֿאָרקומעניש</string>
     <string name="calendars_span_day">%1$s, %2$s ביז %3$s</string>
-    <string name="calendars_zone_sea">אויפֿן ים</string>
 </resources>

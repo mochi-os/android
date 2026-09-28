@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">የቀን መቁጠሪያ መዳረሻ አልተፈቀደም</string>
     <string name="calendars_event_exception">የተቀየረ ድግግሞሽ</string>
     <string name="calendars_span_day">%1$s, ከ%2$s እስከ %3$s</string>
-    <string name="calendars_zone_sea">በባሕር ላይ</string>
 </resources>

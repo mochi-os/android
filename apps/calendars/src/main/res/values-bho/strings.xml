@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">कैलेंडर के पहुँच ना मिलल</string>
     <string name="calendars_event_exception">बदलल गइल दोहराव</string>
     <string name="calendars_span_day">%1$s, %2$s से %3$s तक</string>
-    <string name="calendars_zone_sea">समुद्र में</string>
 </resources>

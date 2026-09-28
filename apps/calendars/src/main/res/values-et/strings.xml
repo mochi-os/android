@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">Juurdepääsu kalendrile ei antud</string>
     <string name="calendars_event_exception">Muudetud kordus</string>
     <string name="calendars_span_day">%1$s, %2$s kuni %3$s</string>
-    <string name="calendars_zone_sea">Merel</string>
 </resources>

@@ -316,4 +316,5 @@
     <string name="device_name_fallback">موبائل ڈیوائس</string>
     <string name="account_error_token_type">غیر تعاون یافتہ ٹوکن کی قسم</string>
     <string name="account_error_caller">کال کرنے والے کو اجازت نہیں</string>
+    <string name="zone_sea">سمندر میں</string>
 </resources>

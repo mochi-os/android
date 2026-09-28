@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">क्यालेन्डर पहुँच दिइएन</string>
     <string name="calendars_event_exception">परिवर्तित पुनरावृत्ति</string>
     <string name="calendars_span_day">%1$s, %2$s देखि %3$s सम्म</string>
-    <string name="calendars_zone_sea">समुद्रमा</string>
 </resources>

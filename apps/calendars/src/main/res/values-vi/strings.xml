@@ -187,5 +187,4 @@
     <string name="calendars_grant_failed">Quyền truy cập lịch chưa được cấp</string>
     <string name="calendars_event_exception">Lần lặp đã thay đổi</string>
     <string name="calendars_span_day">%1$s, %2$s đến %3$s</string>
-    <string name="calendars_zone_sea">Trên biển</string>
 </resources>

@@ -5,6 +5,7 @@
 
 package org.mochios.settings.ui.preferences
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -45,6 +46,7 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.ZonePicker
 import org.mochios.android.util.NaturalCompare
 import org.mochios.android.util.Zones
 import java.util.Locale
@@ -156,21 +158,10 @@ private fun prefSchema(
     ),
 )
 
-/**
- * The zones of places by their current names, each with its offset from UTC
- * now, then the sea's zones, which are their offsets; the web lists them the
- * same way. Asia/Kolkata appears once, not again as Asia/Calcutta.
- */
-private val TIMEZONE_OPTIONS: List<Pair<String, String>> by lazy {
-    val now = java.time.Instant.now()
-    Zones.listed().keys.map { it to "${Zones.label(it)} (${Zones.offset(it, now)})" } +
-        Zones.sea().map { it to Zones.label(it) }
-}
-
-/** The zone rows, with the localised automatic row in front. */
+/** The automatic choice, which follows the device; the picker lists the zones themselves. */
 @Composable
 private fun timezoneOptions(): List<Pair<String, String>> =
-    listOf("auto" to stringResource(R.string.settings_value_auto)) + TIMEZONE_OPTIONS
+    listOf("auto" to stringResource(R.string.settings_value_auto))
 
 /**
  * Overrides where the platform's display name is not Mochi's wording; mirrors
@@ -266,12 +257,21 @@ fun UserSettingsScreen(
         ) {
             items(schema, key = { it.key }) { spec ->
                 val stored = uiState.values[spec.key] ?: ""
-                PrefRow(
-                    spec = spec,
-                    // A stored zone may carry a name the list knows by another.
-                    current = if (spec.key == "timezone" && stored.isNotEmpty() && stored != "auto") Zones.current(stored) else stored,
-                    onChange = { value -> viewModel.set(spec.key, value) },
-                )
+                if (spec.key == "timezone") {
+                    ZoneRow(
+                        label = spec.label,
+                        // A stored zone may carry a name the list knows by another.
+                        current = if (stored.isEmpty() || stored == "auto") "auto" else Zones.current(stored),
+                        automatic = spec.options.first().second,
+                        onChange = { value -> viewModel.set(spec.key, value) },
+                    )
+                } else {
+                    PrefRow(
+                        spec = spec,
+                        current = stored,
+                        onChange = { value -> viewModel.set(spec.key, value) },
+                    )
+                }
             }
             item(key = "reset") {
                 Spacer(Modifier.height(16.dp))
@@ -297,6 +297,49 @@ fun UserSettingsScreen(
                 dismissText = stringResource(R.string.common_cancel),
             )
         }
+    }
+}
+
+/**
+ * The time zone row: the zone chosen, by its current name and its offset from
+ * UTC, or the automatic choice; a tap opens the picker with the map, as the
+ * web's does.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun ZoneRow(label: String, current: String, automatic: String, onChange: (String) -> Unit) {
+    var picking by remember { mutableStateOf(false) }
+    val shown = if (current == "auto") automatic else "${Zones.label(current)} (${Zones.offset(current)})"
+    Column(modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp)) {
+        Text(
+            text = label,
+            style = MaterialTheme.typography.titleSmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+        Spacer(Modifier.height(4.dp))
+        Box {
+            MochiTextField(
+                value = shown,
+                onValueChange = {},
+                readOnly = true,
+                trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = picking) },
+                modifier = Modifier.fillMaxWidth(),
+            )
+            // Over the field, which would otherwise take the tap for itself.
+            Box(modifier = Modifier.matchParentSize().clickable { picking = true })
+        }
+    }
+    if (picking) {
+        ZonePicker(
+            title = label,
+            selected = current,
+            automatic = automatic,
+            onDismiss = { picking = false },
+            onSelect = {
+                picking = false
+                onChange(it)
+            },
+        )
     }
 }
 

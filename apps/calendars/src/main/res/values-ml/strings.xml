@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">കലണ്ടർ ആക്സസ് നൽകിയിട്ടില്ല</string>
     <string name="calendars_event_exception">മാറ്റിയ ആവർത്തനം</string>
     <string name="calendars_span_day">%1$s, %2$s മുതൽ %3$s വരെ</string>
-    <string name="calendars_zone_sea">കടലിൽ</string>
 </resources>

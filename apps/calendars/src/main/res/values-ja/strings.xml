@@ -187,5 +187,4 @@
     <string name="calendars_grant_failed">カレンダーへのアクセスが許可されませんでした</string>
     <string name="calendars_event_exception">変更された予定</string>
     <string name="calendars_span_day">%1$s %2$s～%3$s</string>
-    <string name="calendars_zone_sea">海上</string>
 </resources>

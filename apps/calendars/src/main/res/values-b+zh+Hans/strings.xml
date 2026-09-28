@@ -187,5 +187,4 @@
     <string name="calendars_grant_failed">未授予日历访问权限</string>
     <string name="calendars_event_exception">已修改的重复项</string>
     <string name="calendars_span_day">%1$s %2$s 至 %3$s</string>
-    <string name="calendars_zone_sea">海上</string>
 </resources>

@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">Gihîştina salnameyê nehat dayîn</string>
     <string name="calendars_event_exception">Cara guhertî</string>
     <string name="calendars_span_day">%1$s, ji %2$s heta %3$s</string>
-    <string name="calendars_zone_sea">Li deryayê</string>
 </resources>

@@ -316,4 +316,5 @@
     <string name="device_name_fallback">Celular</string>
     <string name="account_error_token_type">Janiw uka token uñacht\'awix yanapkiti</string>
     <string name="account_error_caller">Jawsirix janiw wakiskiti</string>
+    <string name="zone_sea">Lamarana</string>
 </resources>

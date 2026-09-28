@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">Пристапот до календарот не беше даден</string>
     <string name="calendars_event_exception">Изменето повторување</string>
     <string name="calendars_span_day">%1$s, %2$s до %3$s</string>
-    <string name="calendars_zone_sea">На море</string>
 </resources>

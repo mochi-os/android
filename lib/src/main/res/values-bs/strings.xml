@@ -317,4 +317,5 @@
     <string name="device_name_fallback">Mobilni uređaj</string>
     <string name="account_error_token_type">Nepodržana vrsta tokena</string>
     <string name="account_error_caller">Pozivatelju nije dopušteno</string>
+    <string name="zone_sea">Na moru</string>
 </resources>

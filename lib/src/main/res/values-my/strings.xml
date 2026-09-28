@@ -316,4 +316,5 @@
     <string name="device_name_fallback">မိုဘိုင်းစက်ပစ္စည်း</string>
     <string name="account_error_token_type">မပံ့ပိုးသော တိုကင်အမျိုးအစား</string>
     <string name="account_error_caller">ခေါ်ဆိုသူကို ခွင့်မပြုပါ</string>
+    <string name="zone_sea">ပင်လယ်ပြင်တွင်</string>
 </resources>

@@ -197,5 +197,4 @@
     <string name="calendars_grant_failed">Piekļuve kalendāram netika piešķirta</string>
     <string name="calendars_event_exception">Mainīts atkārtojums</string>
     <string name="calendars_span_day">%1$s, no %2$s līdz %3$s</string>
-    <string name="calendars_zone_sea">Jūrā</string>
 </resources>

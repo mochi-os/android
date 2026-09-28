@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">Calendario mantañax janiw iyawsatäkiti</string>
     <string name="calendars_event_exception">Turkata lurawi</string>
     <string name="calendars_span_day">%1$s, %2$s %3$s kama</string>
-    <string name="calendars_zone_sea">Lamarana</string>
 </resources>

@@ -316,4 +316,5 @@
     <string name="device_name_fallback">Na\'urar wayar hannu</string>
     <string name="account_error_token_type">Nau\'in alama da ba a tallafawa</string>
     <string name="account_error_caller">Ba a yarda mai kira ba</string>
+    <string name="zone_sea">A teku</string>
 </resources>

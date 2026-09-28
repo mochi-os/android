@@ -187,5 +187,4 @@
     <string name="calendars_grant_failed">ไม่ได้รับอนุญาตให้เข้าถึงปฏิทิน</string>
     <string name="calendars_event_exception">ครั้งที่ถูกเปลี่ยนแปลง</string>
     <string name="calendars_span_day">%1$s %2$s ถึง %3$s</string>
-    <string name="calendars_zone_sea">ในทะเล</string>
 </resources>

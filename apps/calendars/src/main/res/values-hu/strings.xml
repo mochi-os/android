@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">A naptár-hozzáférést nem adták meg</string>
     <string name="calendars_event_exception">Módosított előfordulás</string>
     <string name="calendars_span_day">%1$s, %2$s és %3$s között</string>
-    <string name="calendars_zone_sea">Tengeren</string>
 </resources>

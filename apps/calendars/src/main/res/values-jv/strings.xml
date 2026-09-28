@@ -187,5 +187,4 @@
     <string name="calendars_grant_failed">Akses kalender ora diwenehake</string>
     <string name="calendars_event_exception">Pengulangan sing diowahi</string>
     <string name="calendars_span_day">%1$s, %2$s nganti %3$s</string>
-    <string name="calendars_zone_sea">Ing segara</string>
 </resources>

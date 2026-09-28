@@ -202,5 +202,4 @@
     <string name="calendars_grant_failed">Dostop do koledarja ni bil odobren</string>
     <string name="calendars_event_exception">Spremenjena ponovitev</string>
     <string name="calendars_span_day">%1$s, %2$s do %3$s</string>
-    <string name="calendars_zone_sea">Na morju</string>
 </resources>

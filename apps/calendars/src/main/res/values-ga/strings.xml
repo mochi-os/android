@@ -207,5 +207,4 @@
     <string name="calendars_grant_failed">Níor tugadh rochtain ar an bhféilire</string>
     <string name="calendars_event_exception">Tarlú athraithe</string>
     <string name="calendars_span_day">%1$s, %2$s go %3$s</string>
-    <string name="calendars_zone_sea">Ar muir</string>
 </resources>

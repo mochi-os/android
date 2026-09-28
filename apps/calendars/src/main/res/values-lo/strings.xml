@@ -187,5 +187,4 @@
     <string name="calendars_grant_failed">ບໍ່ໄດ້ຮັບການເຂົ້າເຖິງປະຕິທິນ</string>
     <string name="calendars_event_exception">ຄັ້ງທີ່ຖືກປ່ຽນແປງ</string>
     <string name="calendars_span_day">%1$s %2$s ຫາ %3$s</string>
-    <string name="calendars_zone_sea">ຢູ່ທະເລ</string>
 </resources>

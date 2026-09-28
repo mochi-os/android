@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">Ufikelelo lwekhalenda alunikwanga</string>
     <string name="calendars_event_exception">Isiganeko esiguqulweyo</string>
     <string name="calendars_span_day">%1$s, ukusuka ku-%2$s ukuya ku-%3$s</string>
-    <string name="calendars_zone_sea">Elwandle</string>
 </resources>

@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">Seensi kaalaandarii hin kennamne</string>
     <string name="calendars_event_exception">Taatee jijjiirame</string>
     <string name="calendars_span_day">%1$s, %2$s hanga %3$s</string>
-    <string name="calendars_zone_sea">Galaana irratti</string>
 </resources>

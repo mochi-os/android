@@ -187,5 +187,4 @@
     <string name="calendars_grant_failed">Aksés kalénder henteu dipasihkeun</string>
     <string name="calendars_event_exception">Kajadian nu dirobah</string>
     <string name="calendars_span_day">%1$s, %2$s nepi ka %3$s</string>
-    <string name="calendars_zone_sea">Di laut</string>
 </resources>

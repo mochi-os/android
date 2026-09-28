@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">Kalenterin käyttöoikeutta ei myönnetty</string>
     <string name="calendars_event_exception">Muutettu toistokerta</string>
     <string name="calendars_span_day">%1$s, %2$s–%3$s</string>
-    <string name="calendars_zone_sea">Merellä</string>
 </resources>

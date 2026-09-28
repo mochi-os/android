@@ -318,4 +318,5 @@
     <string name="device_name_fallback">Urządzenie mobilne</string>
     <string name="account_error_token_type">Nieobsługiwany typ tokena</string>
     <string name="account_error_caller">Wywołujący nie ma uprawnień</string>
+    <string name="zone_sea">Na morzu</string>
 </resources>

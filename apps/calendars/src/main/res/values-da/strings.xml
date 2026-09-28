@@ -192,5 +192,4 @@
     <string name="calendars_grant_failed">Kalenderadgang blev ikke givet</string>
     <string name="calendars_event_exception">Ændret forekomst</string>
     <string name="calendars_span_day">%1$s, %2$s til %3$s</string>
-    <string name="calendars_zone_sea">Til søs</string>
 </resources>

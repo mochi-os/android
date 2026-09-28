@@ -200,5 +200,4 @@
     <string name="calendars_grant_failed">הגישה ליומן לא ניתנה</string>
     <string name="calendars_event_exception">מופע ששונה</string>
     <string name="calendars_span_day">%1$s, %2$s עד %3$s</string>
-    <string name="calendars_zone_sea">בים</string>
 </resources>
