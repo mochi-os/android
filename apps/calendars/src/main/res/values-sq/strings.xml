@@ -120,6 +120,7 @@
     <string name="calendars_multiweek_previous">Javët e mëparshme</string>
     <string name="calendars_default_duration">Gjatësia e parazgjedhur e ngjarjes</string>
     <string name="calendars_default_reminder">Kujtesa e parazgjedhur</string>
+    <string name="calendars_default_calendar">Kalendari i parazgjedhur</string>
     <string name="calendars_link_title">Lidhja e kalendarit</string>
     <string name="calendars_link_copy">Kopjo lidhjen</string>
     <string name="calendars_link_once">Kopjojeni tani: nuk mund të shfaqet sërish.</string>

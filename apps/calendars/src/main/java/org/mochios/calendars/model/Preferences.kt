@@ -28,7 +28,23 @@ data class Preferences(
     val reminder: Int = 15,
     val view: String = "month",
     val zones: Boolean = false,
+    /**
+     * The calendar a new event opens on; blank, or one the user can no longer
+     * write to, means the built-in default calendar.
+     */
+    val calendar: String = "",
 )
+
+/**
+ * The calendar a new event opens on: the one the preferences name while the
+ * user can still write to it, else the built-in default calendar, else the
+ * first the user can write to. The web client chooses the same way.
+ */
+fun defaultCalendar(calendars: List<Calendar>, preference: String): String {
+    val writable = calendars.filterNot { it.readonly }
+    return (writable.firstOrNull { it.id == preference } ?: writable.firstOrNull { it.default } ?: writable.firstOrNull())
+        ?.id.orEmpty()
+}
 
 /** The body of `-/preferences/get` and `-/preferences/set`. */
 data class PreferencesResponse(val preferences: Preferences = Preferences())

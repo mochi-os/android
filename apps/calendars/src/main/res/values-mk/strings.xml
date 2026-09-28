@@ -124,6 +124,7 @@
     <string name="calendars_multiweek_previous">Претходни недели</string>
     <string name="calendars_default_duration">Стандардно времетраење на настан</string>
     <string name="calendars_default_reminder">Стандарден потсетник</string>
+    <string name="calendars_default_calendar">Стандарден календар</string>
     <string name="calendars_link_title">Врска до календарот</string>
     <string name="calendars_link_copy">Копирај ја врската</string>
     <string name="calendars_link_once">Копирајте ја сега: не може повторно да се прикаже.</string>

@@ -124,6 +124,7 @@
     <string name="calendars_multiweek_previous">Wochen davor</string>
     <string name="calendars_default_duration">Standarddauer für Termine</string>
     <string name="calendars_default_reminder">Standard-Erinnerung</string>
+    <string name="calendars_default_calendar">Standardkalender</string>
     <string name="calendars_link_title">Kalenderlink</string>
     <string name="calendars_link_copy">Link kopieren</string>
     <string name="calendars_link_once">Kopiere ihn jetzt: er kann nicht erneut angezeigt werden.</string>

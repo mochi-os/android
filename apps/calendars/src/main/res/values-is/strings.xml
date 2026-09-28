@@ -124,6 +124,7 @@
     <string name="calendars_multiweek_previous">Vikur á undan</string>
     <string name="calendars_default_duration">Sjálfgefin lengd viðburðar</string>
     <string name="calendars_default_reminder">Sjálfgefin áminning</string>
+    <string name="calendars_default_calendar">Sjálfgefið dagatal</string>
     <string name="calendars_link_title">Dagatalstengill</string>
     <string name="calendars_link_copy">Afrita tengil</string>
     <string name="calendars_link_once">Afritaðu hann núna: ekki er hægt að birta hann aftur.</string>

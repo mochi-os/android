@@ -120,6 +120,7 @@
     <string name="calendars_multiweek_previous">이전 주 수</string>
     <string name="calendars_default_duration">기본 일정 길이</string>
     <string name="calendars_default_reminder">기본 알림</string>
+    <string name="calendars_default_calendar">기본 캘린더</string>
     <string name="calendars_link_title">캘린더 링크</string>
     <string name="calendars_link_copy">링크 복사</string>
     <string name="calendars_link_once">지금 복사하세요. 다시 표시할 수 없어요.</string>

@@ -124,6 +124,7 @@
     <string name="calendars_multiweek_previous">ቀደም ያሉ ሳምንታት</string>
     <string name="calendars_default_duration">ነባሪ የክስተት ርዝመት</string>
     <string name="calendars_default_reminder">ነባሪ አስታዋሽ</string>
+    <string name="calendars_default_calendar">ነባሪ የቀን መቁጠሪያ</string>
     <string name="calendars_link_title">የቀን መቁጠሪያ አገናኝ</string>
     <string name="calendars_link_copy">አገናኝ ቅዳ</string>
     <string name="calendars_link_once">አሁን ቅዳው፦ እንደገና ሊታይ አይችልም።</string>

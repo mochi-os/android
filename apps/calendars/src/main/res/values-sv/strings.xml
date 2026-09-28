@@ -120,6 +120,7 @@
     <string name="calendars_multiweek_previous">Veckor före</string>
     <string name="calendars_default_duration">Standardlängd för händelse</string>
     <string name="calendars_default_reminder">Standardpåminnelse</string>
+    <string name="calendars_default_calendar">Standardkalender</string>
     <string name="calendars_link_title">Kalenderlänk</string>
     <string name="calendars_link_copy">Kopiera länk</string>
     <string name="calendars_link_once">Kopiera den nu: den kan inte visas igen.</string>

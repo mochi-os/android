@@ -120,6 +120,7 @@
     <string name="calendars_multiweek_previous">Önceki haftalar</string>
     <string name="calendars_default_duration">Varsayılan etkinlik süresi</string>
     <string name="calendars_default_reminder">Varsayılan hatırlatıcı</string>
+    <string name="calendars_default_calendar">Varsayılan takvim</string>
     <string name="calendars_link_title">Takvim bağlantısı</string>
     <string name="calendars_link_copy">Bağlantıyı kopyala</string>
     <string name="calendars_link_once">Şimdi kopyalayın: bir daha gösterilemez.</string>

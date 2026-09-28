@@ -136,6 +136,7 @@
     <string name="calendars_multiweek_previous">Ġimgħat qabel</string>
     <string name="calendars_default_duration">Tul prestabbilit tal-avveniment</string>
     <string name="calendars_default_reminder">Tfakkira prestabbilita</string>
+    <string name="calendars_default_calendar">Kalendarju prestabbilit</string>
     <string name="calendars_link_title">Ħolqa tal-kalendarju</string>
     <string name="calendars_link_copy">Ikkupja l-ħolqa</string>
     <string name="calendars_link_once">Ikkupjaha issa: ma tistax tintwera mill-ġdid.</string>

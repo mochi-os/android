@@ -121,6 +121,7 @@
     <string name="calendars_multiweek_previous">Semèn anvan yo</string>
     <string name="calendars_default_duration">Dire evènman pa defo</string>
     <string name="calendars_default_reminder">Rapèl pa defo</string>
+    <string name="calendars_default_calendar">Kalandriye pa defo</string>
     <string name="calendars_link_title">Lyen kalandriye</string>
     <string name="calendars_link_copy">Kopye lyen</string>
     <string name="calendars_link_once">Kopye li kounye a: li pa ka parèt ankò.</string>

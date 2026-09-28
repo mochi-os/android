@@ -118,6 +118,7 @@
     <string name="calendars_multiweek_previous">之前週數</string>
     <string name="calendars_default_duration">預設活動長度</string>
     <string name="calendars_default_reminder">預設提醒</string>
+    <string name="calendars_default_calendar">預設日曆</string>
     <string name="calendars_link_title">日曆連結</string>
     <string name="calendars_link_copy">複製連結</string>
     <string name="calendars_link_once">即刻複製：唔會再顯示。</string>

@@ -120,6 +120,7 @@
     <string name="calendars_multiweek_previous">පෙර සති</string>
     <string name="calendars_default_duration">පෙරනිමි සිදුවීම් දිග</string>
     <string name="calendars_default_reminder">පෙරනිමි මතක් කිරීම</string>
+    <string name="calendars_default_calendar">පෙරනිමි දින දර්ශනය</string>
     <string name="calendars_link_title">දින දර්ශන සබැඳිය</string>
     <string name="calendars_link_copy">සබැඳිය පිටපත් කරන්න</string>
     <string name="calendars_link_once">දැන් එය පිටපත් කරන්න: එය නැවත පෙන්විය නොහැක.</string>

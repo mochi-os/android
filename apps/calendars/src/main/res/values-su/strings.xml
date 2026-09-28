@@ -117,6 +117,7 @@
     <string name="calendars_multiweek_previous">Minggu saméméhna</string>
     <string name="calendars_default_duration">Panjang acara baku</string>
     <string name="calendars_default_reminder">Panginget standar</string>
+    <string name="calendars_default_calendar">Kalénder standar</string>
     <string name="calendars_link_title">Tumbu kalénder</string>
     <string name="calendars_link_copy">Salin tumbu</string>
     <string name="calendars_link_once">Salin ayeuna: moal dipidangkeun deui.</string>

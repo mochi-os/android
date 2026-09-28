@@ -117,6 +117,7 @@
     <string name="calendars_multiweek_previous">สัปดาห์ก่อนหน้า</string>
     <string name="calendars_default_duration">ความยาวกิจกรรมเริ่มต้น</string>
     <string name="calendars_default_reminder">การแจ้งเตือนเริ่มต้น</string>
+    <string name="calendars_default_calendar">ปฏิทินเริ่มต้น</string>
     <string name="calendars_link_title">ลิงก์ปฏิทิน</string>
     <string name="calendars_link_copy">คัดลอกลิงก์</string>
     <string name="calendars_link_once">คัดลอกตอนนี้ เพราะจะไม่แสดงอีก</string>

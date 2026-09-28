@@ -124,6 +124,7 @@
     <string name="calendars_multiweek_previous">Өмнөх долоо хоног</string>
     <string name="calendars_default_duration">Үйл явдлын үндсэн үргэлжлэх хугацаа</string>
     <string name="calendars_default_reminder">Үндсэн сануулга</string>
+    <string name="calendars_default_calendar">Үндсэн хуанли</string>
     <string name="calendars_link_title">Хуанлийн холбоос</string>
     <string name="calendars_link_copy">Холбоосыг хуулах</string>
     <string name="calendars_link_once">Одоо хуулж авна уу: дахин харуулах боломжгүй.</string>

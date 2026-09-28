@@ -120,6 +120,7 @@
     <string name="calendars_multiweek_previous">Wiki zilizotangulia</string>
     <string name="calendars_default_duration">Urefu chaguomsingi wa tukio</string>
     <string name="calendars_default_reminder">Kikumbusho chaguo-msingi</string>
+    <string name="calendars_default_calendar">Kalenda chaguo-msingi</string>
     <string name="calendars_link_title">Kiungo cha kalenda</string>
     <string name="calendars_link_copy">Nakili kiungo</string>
     <string name="calendars_link_once">Nakili sasa: hakiwezi kuonyeshwa tena.</string>

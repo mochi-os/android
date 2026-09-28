@@ -124,6 +124,7 @@
     <string name="calendars_multiweek_previous">Eelnevad nädalad</string>
     <string name="calendars_default_duration">Sündmuse vaikepikkus</string>
     <string name="calendars_default_reminder">Vaikimisi meeldetuletus</string>
+    <string name="calendars_default_calendar">Vaikekalender</string>
     <string name="calendars_link_title">Kalendri link</string>
     <string name="calendars_link_copy">Kopeeri link</string>
     <string name="calendars_link_once">Kopeeri see kohe: seda ei saa uuesti kuvada.</string>

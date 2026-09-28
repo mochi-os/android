@@ -120,6 +120,7 @@
     <string name="calendars_multiweek_previous">之前的周数</string>
     <string name="calendars_default_duration">默认活动时长</string>
     <string name="calendars_default_reminder">默认提醒</string>
+    <string name="calendars_default_calendar">默认日历</string>
     <string name="calendars_link_title">日历链接</string>
     <string name="calendars_link_copy">复制链接</string>
     <string name="calendars_link_once">请立即复制：它无法再次显示。</string>

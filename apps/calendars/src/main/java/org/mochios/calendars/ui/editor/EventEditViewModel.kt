@@ -27,6 +27,7 @@ import org.mochios.calendars.model.Event
 import org.mochios.calendars.model.Hours
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.Zone
+import org.mochios.calendars.model.defaultCalendar
 import org.mochios.calendars.repository.CalendarsRepository
 import org.mochios.calendars.repository.EventChangedException
 import org.mochios.calendars.storage.Memory
@@ -186,7 +187,7 @@ class EventEditViewModel @Inject constructor(
                 val length = if (memory.allday) 86_400L else 60L * (preferences?.duration ?: 60)
                 _uiState.value = EditorUiState(
                     calendars = calendars,
-                    calendar = preferred(calendars),
+                    calendar = preferred(calendars, preferences?.calendar.orEmpty()),
                     allday = memory.allday,
                     start = begins,
                     finish = begins + length,
@@ -217,7 +218,8 @@ class EventEditViewModel @Inject constructor(
             try {
                 val loaded = repository.getEvent(event)
                 val form = copied(loaded.components, occurrence, scope, zone) ?: EventForm()
-                open(form, calendars, calendars.firstOrNull { it.id == loaded.calendar }?.id ?: preferred(calendars))
+                val preference = runCatching { repository.getPreferences().calendar }.getOrNull().orEmpty()
+                open(form, calendars, calendars.firstOrNull { it.id == loaded.calendar }?.id ?: preferred(calendars, preference))
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }
@@ -234,7 +236,7 @@ class EventEditViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             val calendars = calendars() ?: return@launch
             val preferences = runCatching { repository.getPreferences() }.getOrNull()
-            open(copied(instance, zone, preferences?.reminder ?: 15), calendars, preferred(calendars))
+            open(copied(instance, zone, preferences?.reminder ?: 15), calendars, preferred(calendars, preferences?.calendar.orEmpty()))
         }
     }
 
@@ -278,12 +280,9 @@ class EventEditViewModel @Inject constructor(
         MemoryStore.memory(context, Memory(allday = state.allday, zone = form(state).zone))
     }
 
-    /** The calendar a new event lands in: the one last written to, else the default, else the first. */
-    private fun preferred(calendars: List<Calendar>): String =
-        VisibilityStore.recent(context)
-            ?.takeIf { recent -> calendars.any { it.id == recent } }
-            ?: calendars.firstOrNull { it.default }?.id
-            ?: calendars.firstOrNull()?.id.orEmpty()
+    /** The calendar a new event lands in: the one the preferences name, else the built-in default. */
+    private fun preferred(calendars: List<Calendar>, preference: String): String =
+        defaultCalendar(calendars, preference)
 
     /** The form for a loaded event, showing the occurrence the user opened. */
     private fun fill(loaded: Event, moment: Long, calendars: List<Calendar>) {
@@ -495,7 +494,7 @@ class EventEditViewModel @Inject constructor(
             _uiState.value = state.copy(isSaving = true, error = null)
             try {
                 val saved = write(state, scope, state.etag)
-                VisibilityStore.recent(context, saved.calendar)
+                VisibilityStore.reveal(context, saved.calendar)
                 remember(state)
                 _uiState.value = _uiState.value.copy(isSaving = false, saved = true)
             } catch (_: EventChangedException) {
@@ -505,7 +504,7 @@ class EventEditViewModel @Inject constructor(
                     val fresh = repository.getEvent(state.event.orEmpty())
                     carried = fresh
                     val saved = write(state.copy(etag = fresh.etag), scope, fresh.etag)
-                    VisibilityStore.recent(context, saved.calendar)
+                    VisibilityStore.reveal(context, saved.calendar)
                     _uiState.value = _uiState.value.copy(isSaving = false, saved = true)
                 } catch (e: Exception) {
                     _uiState.value = _uiState.value.copy(isSaving = false, error = e.toMochiError())

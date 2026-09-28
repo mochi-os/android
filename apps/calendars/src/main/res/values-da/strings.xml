@@ -124,6 +124,7 @@
     <string name="calendars_multiweek_previous">Uger før</string>
     <string name="calendars_default_duration">Standardlængde for begivenhed</string>
     <string name="calendars_default_reminder">Standardpåmindelse</string>
+    <string name="calendars_default_calendar">Standardkalender</string>
     <string name="calendars_link_title">Kalenderlink</string>
     <string name="calendars_link_copy">Kopier link</string>
     <string name="calendars_link_once">Kopier det nu: det kan ikke vises igen.</string>

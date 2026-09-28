@@ -120,6 +120,7 @@
     <string name="calendars_multiweek_previous">וואָכן פֿריִער</string>
     <string name="calendars_default_duration">געוויינטלעכע לענג פֿון אַ געשעעניש</string>
     <string name="calendars_default_reminder">סטאַנדאַרד דערמאָנונג</string>
+    <string name="calendars_default_calendar">סטאַנדאַרד קאַלענדאַר</string>
     <string name="calendars_link_title">קאַלענדאַר־לינק</string>
     <string name="calendars_link_copy">קאָפּירן דעם לינק</string>
     <string name="calendars_link_once">קאָפּירט עס איצט: מען קען עס ניט ווידער ווײַזן.</string>

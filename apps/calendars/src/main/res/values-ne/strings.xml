@@ -124,6 +124,7 @@
     <string name="calendars_multiweek_previous">अघिल्ला हप्ता</string>
     <string name="calendars_default_duration">पूर्वनिर्धारित कार्यक्रम अवधि</string>
     <string name="calendars_default_reminder">पूर्वनिर्धारित सम्झना</string>
+    <string name="calendars_default_calendar">पूर्वनिर्धारित क्यालेन्डर</string>
     <string name="calendars_link_title">क्यालेन्डर लिङ्क</string>
     <string name="calendars_link_copy">लिङ्क प्रतिलिपि गर्नुहोस्</string>
     <string name="calendars_link_once">यो अहिले नै प्रतिलिपि गर्नुहोस्: यो फेरि देखाउन सकिँदैन।</string>

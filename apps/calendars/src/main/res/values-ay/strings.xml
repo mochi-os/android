@@ -124,6 +124,7 @@
     <string name="calendars_multiweek_previous">Nayrïri semananaka</string>
     <string name="calendars_default_duration">Nayrïri lurawi pacha</string>
     <string name="calendars_default_reminder">Nayrïri amtayiri</string>
+    <string name="calendars_default_calendar">Nayrïri calendario</string>
     <string name="calendars_link_title">Calendario chimpu</string>
     <string name="calendars_link_copy">Chimpu copiaña</string>
     <string name="calendars_link_once">Jichha copiam: janiw wasitat uñachayañjamakiti.</string>

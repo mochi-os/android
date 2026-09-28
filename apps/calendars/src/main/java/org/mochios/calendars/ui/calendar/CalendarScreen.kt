@@ -393,6 +393,7 @@ fun CalendarScreen(
     if (preferences) {
         PreferencesDialog(
             preferences = uiState.preferences,
+            calendars = uiState.calendars,
             saving = false,
             onDismiss = { preferences = false },
             onConfirm = {

@@ -120,6 +120,7 @@
     <string name="calendars_multiweek_previous">Ñawpaq semanakuna</string>
     <string name="calendars_default_duration">Ñawpaqmanta ruway unay</string>
     <string name="calendars_default_reminder">Yuyarichiq predeterminado</string>
+    <string name="calendars_default_calendar">Calendario predeterminado</string>
     <string name="calendars_link_title">Kalendaryu t\'inki</string>
     <string name="calendars_link_copy">T\'inkita kopyay</string>
     <string name="calendars_link_once">Kunan kopyay: manaña qhawachikunqachu.</string>

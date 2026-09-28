@@ -124,6 +124,7 @@
     <string name="calendars_multiweek_previous">წინა კვირები</string>
     <string name="calendars_default_duration">ღონისძიების ნაგულისხმევი ხანგრძლივობა</string>
     <string name="calendars_default_reminder">ნაგულისხმევი შეხსენება</string>
+    <string name="calendars_default_calendar">ნაგულისხმევი კალენდარი</string>
     <string name="calendars_link_title">კალენდრის ბმული</string>
     <string name="calendars_link_copy">ბმულის კოპირება</string>
     <string name="calendars_link_once">დააკოპირეთ ახლავე: მისი ხელახლა ჩვენება შეუძლებელია.</string>

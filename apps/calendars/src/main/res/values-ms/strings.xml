@@ -120,6 +120,7 @@
     <string name="calendars_multiweek_previous">Minggu sebelumnya</string>
     <string name="calendars_default_duration">Tempoh acara lalai</string>
     <string name="calendars_default_reminder">Peringatan lalai</string>
+    <string name="calendars_default_calendar">Kalendar lalai</string>
     <string name="calendars_link_title">Pautan kalendar</string>
     <string name="calendars_link_copy">Salin pautan</string>
     <string name="calendars_link_once">Salin sekarang: ia tidak boleh dipaparkan lagi.</string>

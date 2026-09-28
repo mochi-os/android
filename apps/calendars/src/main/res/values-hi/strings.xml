@@ -124,6 +124,7 @@
     <string name="calendars_multiweek_previous">पहले के सप्ताह</string>
     <string name="calendars_default_duration">डिफ़ॉल्ट इवेंट अवधि</string>
     <string name="calendars_default_reminder">डिफ़ॉल्ट रिमाइंडर</string>
+    <string name="calendars_default_calendar">डिफ़ॉल्ट कैलेंडर</string>
     <string name="calendars_link_title">कैलेंडर लिंक</string>
     <string name="calendars_link_copy">लिंक कॉपी करें</string>
     <string name="calendars_link_once">इसे अभी कॉपी करें: इसे दोबारा नहीं दिखाया जा सकता।</string>

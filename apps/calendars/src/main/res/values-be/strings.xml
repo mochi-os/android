@@ -132,6 +132,7 @@
     <string name="calendars_multiweek_previous">Тыдняў раней</string>
     <string name="calendars_default_duration">Працягласць падзеі па змаўчанні</string>
     <string name="calendars_default_reminder">Напамін па змаўчанні</string>
+    <string name="calendars_default_calendar">Каляндар па змаўчанні</string>
     <string name="calendars_link_title">Спасылка на каляндар</string>
     <string name="calendars_link_copy">Капіяваць спасылку</string>
     <string name="calendars_link_once">Скапіюйце яе зараз: паказаць зноў немагчыма.</string>

@@ -117,6 +117,7 @@
     <string name="calendars_multiweek_previous">Àwọn ọ̀sẹ̀ ṣáájú</string>
     <string name="calendars_default_duration">Gígùn ìṣẹ̀lẹ̀ àìyípadà</string>
     <string name="calendars_default_reminder">Ìránnilétí àìyípadà</string>
+    <string name="calendars_default_calendar">Kàlẹ́ńdà àìyípadà</string>
     <string name="calendars_link_title">Ìjápọ̀ kàlẹ́ńdà</string>
     <string name="calendars_link_copy">Ṣe àdàkọ ìjápọ̀</string>
     <string name="calendars_link_once">Ṣe àdàkọ rẹ̀ báyìí: kò ní farahàn mọ́.</string>

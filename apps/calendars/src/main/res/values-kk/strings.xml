@@ -124,6 +124,7 @@
     <string name="calendars_multiweek_previous">Алдыңғы апталар</string>
     <string name="calendars_default_duration">Іс-шараның әдепкі ұзақтығы</string>
     <string name="calendars_default_reminder">Әдепкі еске салғыш</string>
+    <string name="calendars_default_calendar">Әдепкі күнтізбе</string>
     <string name="calendars_link_title">Күнтізбе сілтемесі</string>
     <string name="calendars_link_copy">Сілтемені көшіру</string>
     <string name="calendars_link_once">Оны қазір көшіріңіз: оны қайта көрсету мүмкін емес.</string>

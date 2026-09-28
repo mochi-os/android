@@ -124,6 +124,7 @@
     <string name="calendars_multiweek_previous">Əvvəlki həftələr</string>
     <string name="calendars_default_duration">Standart tədbir müddəti</string>
     <string name="calendars_default_reminder">Standart xatırlatma</string>
+    <string name="calendars_default_calendar">Standart təqvim</string>
     <string name="calendars_link_title">Təqvim keçidi</string>
     <string name="calendars_link_copy">Keçidi kopyala</string>
     <string name="calendars_link_once">İndi kopyalayın: bir daha göstərilə bilməz.</string>

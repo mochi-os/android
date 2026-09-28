@@ -132,6 +132,7 @@
     <string name="calendars_multiweek_previous">Seachdainean roimhe</string>
     <string name="calendars_default_duration">Faid bhunaiteach tachartais</string>
     <string name="calendars_default_reminder">Cuimhneachan bunaiteach</string>
+    <string name="calendars_default_calendar">Mìosachan bunaiteach</string>
     <string name="calendars_link_title">Ceangal a\' mhìosachain</string>
     <string name="calendars_link_copy">Dèan lethbhreac dhen cheangal</string>
     <string name="calendars_link_once">Dèan lethbhreac dheth an-dràsta: chan urrainn dhuinn a shealltainn a-rithist.</string>

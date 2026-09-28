@@ -124,6 +124,7 @@
     <string name="calendars_multiweek_previous">Weken ervoor</string>
     <string name="calendars_default_duration">Standaardduur van afspraak</string>
     <string name="calendars_default_reminder">Standaardherinnering</string>
+    <string name="calendars_default_calendar">Standaardagenda</string>
     <string name="calendars_link_title">Agendalink</string>
     <string name="calendars_link_copy">Link kopiëren</string>
     <string name="calendars_link_once">Kopieer hem nu: hij kan niet opnieuw worden getoond.</string>

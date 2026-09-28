@@ -124,6 +124,7 @@
     <string name="calendars_multiweek_previous">ಹಿಂದಿನ ವಾರಗಳು</string>
     <string name="calendars_default_duration">ಡೀಫಾಲ್ಟ್ ಈವೆಂಟ್ ಅವಧಿ</string>
     <string name="calendars_default_reminder">ಡೀಫಾಲ್ಟ್ ಜ್ಞಾಪನೆ</string>
+    <string name="calendars_default_calendar">ಡೀಫಾಲ್ಟ್ ಕ್ಯಾಲೆಂಡರ್</string>
     <string name="calendars_link_title">ಕ್ಯಾಲೆಂಡರ್ ಲಿಂಕ್</string>
     <string name="calendars_link_copy">ಲಿಂಕ್ ನಕಲಿಸಿ</string>
     <string name="calendars_link_once">ಇದನ್ನು ಈಗಲೇ ನಕಲಿಸಿ: ಇದನ್ನು ಮತ್ತೆ ತೋರಿಸಲಾಗುವುದಿಲ್ಲ.</string>

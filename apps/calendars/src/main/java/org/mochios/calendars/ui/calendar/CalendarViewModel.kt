@@ -138,6 +138,10 @@ class CalendarViewModel @Inject constructor(
     /** True until the user has picked a view on this device. */
     private var untouched = LastViewedStore.get(context, CALENDARS_FEATURE).isNullOrBlank()
 
+    // Redraws whenever the calendars shown change: from the drawer, or from
+    // the editor showing a hidden calendar an event was just saved into.
+    private val unwatch = VisibilityStore.watch(context) { shade() }
+
     init {
         val view = calendarsView(LastViewedStore.get(context, CALENDARS_FEATURE).orEmpty())
         _uiState.value = _uiState.value.copy(view = view)
@@ -352,12 +356,14 @@ class CalendarViewModel @Inject constructor(
 
     fun toggle(calendar: String) {
         VisibilityStore.toggle(context, calendar)
-        shade()
     }
 
     fun only(calendar: String) {
         VisibilityStore.only(context, calendar, _uiState.value.calendars.map { it.id })
-        shade()
+    }
+
+    override fun onCleared() {
+        unwatch()
     }
 
     /**
@@ -428,6 +434,8 @@ class CalendarViewModel @Inject constructor(
                 duration = value.duration,
                 reminder = value.reminder,
                 zones = value.zones,
+                // Blank only when no calendar could be offered, which is no choice.
+                calendar = value.calendar.ifEmpty { null },
             ),
         )
         _uiState.value = _uiState.value.copy(preferences = saved)

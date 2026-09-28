@@ -123,6 +123,7 @@
     <string name="calendars_multiweek_previous">Седмица пре</string>
     <string name="calendars_default_duration">Подразумевано трајање догађаја</string>
     <string name="calendars_default_reminder">Подразумевани подсетник</string>
+    <string name="calendars_default_calendar">Подразумевани календар</string>
     <string name="calendars_link_title">Веза ка календару</string>
     <string name="calendars_link_copy">Копирај везу</string>
     <string name="calendars_link_once">Копирајте је одмах: неће поново бити приказана.</string>

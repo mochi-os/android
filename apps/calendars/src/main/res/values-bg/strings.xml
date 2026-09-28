@@ -124,6 +124,7 @@
     <string name="calendars_multiweek_previous">Седмици преди</string>
     <string name="calendars_default_duration">Продължителност на събитието по подразбиране</string>
     <string name="calendars_default_reminder">Напомняне по подразбиране</string>
+    <string name="calendars_default_calendar">Календар по подразбиране</string>
     <string name="calendars_link_title">Връзка към календара</string>
     <string name="calendars_link_copy">Копирай връзката</string>
     <string name="calendars_link_once">Копирайте я сега: не може да бъде показана отново.</string>

@@ -140,6 +140,7 @@
     <string name="calendars_multiweek_previous">الأسابيع السابقة</string>
     <string name="calendars_default_duration">مدة الحدث الافتراضية</string>
     <string name="calendars_default_reminder">التذكير الافتراضي</string>
+    <string name="calendars_default_calendar">التقويم الافتراضي</string>
     <string name="calendars_link_title">رابط التقويم</string>
     <string name="calendars_link_copy">نسخ الرابط</string>
     <string name="calendars_link_once">انسخه الآن: لا يمكن عرضه مرة أخرى.</string>

@@ -120,6 +120,7 @@
     <string name="calendars_multiweek_previous">Oldingi haftalar</string>
     <string name="calendars_default_duration">Tadbirning standart davomiyligi</string>
     <string name="calendars_default_reminder">Standart eslatma</string>
+    <string name="calendars_default_calendar">Standart kalendar</string>
     <string name="calendars_link_title">Kalendar havolasi</string>
     <string name="calendars_link_copy">Havolani nusxalash</string>
     <string name="calendars_link_once">Uni hozir nusxalang: u boshqa koʻrsatilmaydi.</string>

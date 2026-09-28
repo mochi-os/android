@@ -6,6 +6,7 @@
 package org.mochios.calendars.storage
 
 import android.content.Context
+import android.content.SharedPreferences
 
 /**
  * Which calendars the views show, kept per device and never on the server: it
@@ -44,19 +45,27 @@ object VisibilityStore {
     }
 
     /**
-     * The last calendar an event was made in, which the editor offers first:
-     * the checkbox model selects nothing, so the device's own habit is the
-     * only signal there is.
+     * Shows [calendar] if it is hidden, as when an event was just saved into
+     * it, so the event does not vanish from view as if it had not saved.
      */
-    fun recent(context: Context): String? =
-        preferences(context).getString(RECENT, null)?.takeIf { it.isNotBlank() }
-
-    fun recent(context: Context, calendar: String) {
-        if (calendar.isBlank()) return
-        preferences(context).edit().putString(RECENT, calendar).apply()
+    fun reveal(context: Context, calendar: String) {
+        val current = hidden(context)
+        if (calendar in current) hidden(context, current - calendar)
     }
 
-    private const val RECENT = "recent"
+    /**
+     * Calls [listener] each time the hidden calendars change, from anywhere
+     * on the device, until the function returned is called.
+     */
+    fun watch(context: Context, listener: () -> Unit): () -> Unit {
+        val preferences = preferences(context)
+        // Held here, since the preferences hold their listeners weakly.
+        val callback = SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
+            if (key == HIDDEN) listener()
+        }
+        preferences.registerOnSharedPreferenceChangeListener(callback)
+        return { preferences.unregisterOnSharedPreferenceChangeListener(callback) }
+    }
 
     private fun preferences(context: Context) =
         context.applicationContext.getSharedPreferences(PREFERENCES, Context.MODE_PRIVATE)

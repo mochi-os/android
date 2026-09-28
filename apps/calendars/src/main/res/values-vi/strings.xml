@@ -117,6 +117,7 @@
     <string name="calendars_multiweek_previous">Số tuần trước đó</string>
     <string name="calendars_default_duration">Độ dài sự kiện mặc định</string>
     <string name="calendars_default_reminder">Lời nhắc mặc định</string>
+    <string name="calendars_default_calendar">Lịch mặc định</string>
     <string name="calendars_link_title">Liên kết lịch</string>
     <string name="calendars_link_copy">Sao chép liên kết</string>
     <string name="calendars_link_once">Hãy sao chép ngay: liên kết sẽ không hiện lại.</string>

@@ -140,6 +140,7 @@
     <string name="calendars_multiweek_previous">Weeks before</string>
     <string name="calendars_default_duration">Default event length</string>
     <string name="calendars_default_reminder">Default reminder</string>
+    <string name="calendars_default_calendar">Default calendar</string>
     <string name="calendars_preferences_zones">Show events in their own time zone</string>
 
     <!-- ICS link -->

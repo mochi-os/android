@@ -107,6 +107,7 @@ data class PreferencesRequest(
     val reminder: Int? = null,
     val view: String? = null,
     val zones: Boolean? = null,
+    val calendar: String? = null,
 )
 
 /**

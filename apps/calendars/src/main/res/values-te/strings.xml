@@ -120,6 +120,7 @@
     <string name="calendars_multiweek_previous">ముందు వారాలు</string>
     <string name="calendars_default_duration">డిఫాల్ట్ ఈవెంట్ నిడివి</string>
     <string name="calendars_default_reminder">డిఫాల్ట్ రిమైండర్</string>
+    <string name="calendars_default_calendar">డిఫాల్ట్ క్యాలెండర్</string>
     <string name="calendars_link_title">క్యాలెండర్ లింక్</string>
     <string name="calendars_link_copy">లింక్‌ను కాపీ చేయి</string>
     <string name="calendars_link_once">ఇప్పుడే కాపీ చేయండి: ఇది మళ్లీ చూపబడదు.</string>

@@ -124,6 +124,7 @@
     <string name="calendars_multiweek_previous">Setmanes anteriors</string>
     <string name="calendars_default_duration">Durada predeterminada de l\'esdeveniment</string>
     <string name="calendars_default_reminder">Recordatori per defecte</string>
+    <string name="calendars_default_calendar">Calendari per defecte</string>
     <string name="calendars_link_title">Enllaç del calendari</string>
     <string name="calendars_link_copy">Copia l\'enllaç</string>
     <string name="calendars_link_once">Copieu-lo ara: no es podrà tornar a mostrar.</string>

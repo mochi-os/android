@@ -120,6 +120,7 @@
     <string name="calendars_multiweek_previous">ອາທິດກ່ອນໜ້າ</string>
     <string name="calendars_default_duration">ໄລຍະເວລາເຫດການເລີ່ມຕົ້ນ</string>
     <string name="calendars_default_reminder">ການແຈ້ງເຕືອນເລີ່ມຕົ້ນ</string>
+    <string name="calendars_default_calendar">ປະຕິທິນເລີ່ມຕົ້ນ</string>
     <string name="calendars_link_title">ລິ້ງປະຕິທິນ</string>
     <string name="calendars_link_copy">ສຳເນົາລິ້ງ</string>
     <string name="calendars_link_once">ສຳເນົາດຽວນີ້: ມັນຈະບໍ່ສາມາດສະແດງໄດ້ອີກ.</string>

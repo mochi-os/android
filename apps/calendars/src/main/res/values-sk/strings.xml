@@ -126,6 +126,7 @@
     <string name="calendars_multiweek_previous">Týždňov pred</string>
     <string name="calendars_default_duration">Predvolená dĺžka udalosti</string>
     <string name="calendars_default_reminder">Predvolená pripomienka</string>
+    <string name="calendars_default_calendar">Predvolený kalendár</string>
     <string name="calendars_link_title">Odkaz na kalendár</string>
     <string name="calendars_link_copy">Kopírovať odkaz</string>
     <string name="calendars_link_once">Skopírujte ho teraz: už sa nezobrazí.</string>

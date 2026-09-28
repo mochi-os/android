@@ -128,6 +128,7 @@
     <string name="calendars_multiweek_previous">Týdnů zpět</string>
     <string name="calendars_default_duration">Výchozí délka události</string>
     <string name="calendars_default_reminder">Výchozí připomenutí</string>
+    <string name="calendars_default_calendar">Výchozí kalendář</string>
     <string name="calendars_link_title">Odkaz na kalendář</string>
     <string name="calendars_link_copy">Kopírovat odkaz</string>
     <string name="calendars_link_once">Zkopírujte jej nyní: znovu jej nelze zobrazit.</string>

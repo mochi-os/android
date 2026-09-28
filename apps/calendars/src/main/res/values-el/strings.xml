@@ -124,6 +124,7 @@
     <string name="calendars_multiweek_previous">Προηγούμενες εβδομάδες</string>
     <string name="calendars_default_duration">Προεπιλεγμένη διάρκεια συμβάντος</string>
     <string name="calendars_default_reminder">Προεπιλεγμένη υπενθύμιση</string>
+    <string name="calendars_default_calendar">Προεπιλεγμένο ημερολόγιο</string>
     <string name="calendars_link_title">Σύνδεσμος ημερολογίου</string>
     <string name="calendars_link_copy">Αντιγραφή συνδέσμου</string>
     <string name="calendars_link_once">Αντιγράψτε τον τώρα: δεν μπορεί να εμφανιστεί ξανά.</string>

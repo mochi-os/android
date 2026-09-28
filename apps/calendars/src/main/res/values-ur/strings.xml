@@ -120,6 +120,7 @@
     <string name="calendars_multiweek_previous">پچھلے ہفتے</string>
     <string name="calendars_default_duration">ایونٹ کا ڈیفالٹ دورانیہ</string>
     <string name="calendars_default_reminder">ڈیفالٹ یاد دہانی</string>
+    <string name="calendars_default_calendar">ڈیفالٹ کیلنڈر</string>
     <string name="calendars_link_title">کیلنڈر لنک</string>
     <string name="calendars_link_copy">لنک کاپی کریں</string>
     <string name="calendars_link_once">اسے ابھی کاپی کریں: یہ دوبارہ نہیں دکھایا جائے گا۔</string>

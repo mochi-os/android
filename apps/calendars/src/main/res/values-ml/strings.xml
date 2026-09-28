@@ -124,6 +124,7 @@
     <string name="calendars_multiweek_previous">മുമ്പുള്ള ആഴ്ചകൾ</string>
     <string name="calendars_default_duration">ഡിഫോൾട്ട് ഇവന്റ് ദൈർഘ്യം</string>
     <string name="calendars_default_reminder">ഡിഫോൾട്ട് ഓർമ്മപ്പെടുത്തൽ</string>
+    <string name="calendars_default_calendar">ഡിഫോൾട്ട് കലണ്ടർ</string>
     <string name="calendars_link_title">കലണ്ടർ ലിങ്ക്</string>
     <string name="calendars_link_copy">ലിങ്ക് പകർത്തുക</string>
     <string name="calendars_link_once">ഇത് ഇപ്പോൾ പകർത്തുക: ഇത് വീണ്ടും കാണിക്കാനാകില്ല.</string>

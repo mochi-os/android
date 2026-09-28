@@ -124,6 +124,7 @@
     <string name="calendars_multiweek_previous">هفته‌های پیشین</string>
     <string name="calendars_default_duration">مدت پیش‌فرض رویداد</string>
     <string name="calendars_default_reminder">یادآور پیش‌فرض</string>
+    <string name="calendars_default_calendar">تقویم پیش‌فرض</string>
     <string name="calendars_link_title">پیوند تقویم</string>
     <string name="calendars_link_copy">کپی پیوند</string>
     <string name="calendars_link_once">همین حالا آن را کپی کنید: دیگر نمایش داده نخواهد شد.</string>

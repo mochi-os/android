@@ -131,6 +131,7 @@
     <string name="calendars_multiweek_previous">Ankstesnės savaitės</string>
     <string name="calendars_default_duration">Numatytasis įvykio ilgis</string>
     <string name="calendars_default_reminder">Numatytasis priminimas</string>
+    <string name="calendars_default_calendar">Numatytasis kalendorius</string>
     <string name="calendars_link_title">Kalendoriaus nuoroda</string>
     <string name="calendars_link_copy">Kopijuoti nuorodą</string>
     <string name="calendars_link_once">Nukopijuokite ją dabar: jos nebus galima parodyti dar kartą.</string>

@@ -124,6 +124,7 @@
     <string name="calendars_multiweek_previous">هەفتەکانی پێشوو</string>
     <string name="calendars_default_duration">درێژی بنەڕەتی ڕووداو</string>
     <string name="calendars_default_reminder">بیرخەرەوەی بنەڕەت</string>
+    <string name="calendars_default_calendar">ڕۆژژمێری بنەڕەت</string>
     <string name="calendars_link_title">بەستەری ڕۆژژمێر</string>
     <string name="calendars_link_copy">کۆپیکردنی بەستەر</string>
     <string name="calendars_link_once">ئێستا کۆپی بکە: دووبارە پیشان نادرێتەوە.</string>

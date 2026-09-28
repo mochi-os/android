@@ -34,11 +34,13 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButtonTone
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.util.NaturalCompare
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Hours
 import org.mochios.calendars.model.Multiweek
 import org.mochios.calendars.model.Preferences
+import org.mochios.calendars.model.defaultCalendar
 import org.mochios.calendars.ui.editor.REMINDER_LEADS
 import org.mochios.calendars.ui.editor.reminderLeads
 import org.mochios.android.R as MochiR
@@ -150,12 +152,14 @@ fun LinkDialog(
 
 /**
  * The preferences the views read: the working hours they shade, the work
- * days, how many weeks a multiweek view shows, the default event length and
- * the default reminder. Shared with the web, so a change here shows there.
+ * days, how many weeks a multiweek view shows, the default event length, the
+ * default reminder and the calendar a new event goes in, chosen from
+ * [calendars]. Shared with the web, so a change here shows there.
  */
 @Composable
 fun PreferencesDialog(
     preferences: Preferences,
+    calendars: List<Calendar>,
     saving: Boolean,
     onDismiss: () -> Unit,
     onConfirm: (Preferences) -> Unit,
@@ -168,6 +172,10 @@ fun PreferencesDialog(
     var duration by rememberSaveable { mutableIntStateOf(preferences.duration) }
     var reminder by rememberSaveable { mutableIntStateOf(preferences.reminder) }
     var zones by rememberSaveable { mutableStateOf(preferences.zones) }
+    // The calendars a new event can go in, the built-in default first.
+    val writable = calendars.filterNot { it.readonly }
+        .sortedWith(compareByDescending<Calendar> { it.default }.thenBy(NaturalCompare) { it.name })
+    var calendar by rememberSaveable { mutableStateOf(defaultCalendar(writable, preferences.calendar)) }
 
     val hours = (0..23).map { it.toString() to it.toString().padStart(2, '0') + ":00" }
     val ends = (1..24).map { it.toString() to it.toString().padStart(2, '0') + ":00" }
@@ -195,6 +203,7 @@ fun PreferencesDialog(
                     reminder = reminder,
                     view = preferences.view,
                     zones = zones,
+                    calendar = calendar,
                 ),
             )
         },
@@ -271,6 +280,13 @@ fun PreferencesDialog(
                     options = reminderOptions(),
                     selected = reminder.toString(),
                     onSelect = { reminder = it.toIntOrNull() ?: reminder },
+                )
+                LabeledSelectField(
+                    label = stringResource(R.string.calendars_default_calendar),
+                    placeholder = "",
+                    options = writable.map { it.id to it.name },
+                    selected = calendar,
+                    onSelect = { calendar = it },
                 )
                 LabeledSwitchRow(
                     label = stringResource(R.string.calendars_preferences_zones),
