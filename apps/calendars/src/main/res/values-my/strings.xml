@@ -101,9 +101,17 @@
     <string name="calendars_repeat_count">အကြိမ်အရေအတွက်</string>
     <string name="calendars_repeat_forever">အမြဲတမ်း</string>
     <string name="calendars_reminder_time">အစီအစဉ် စတင်ချိန်တွင်</string>
-    <string name="calendars_reminder_minutes">%1$d မိနစ် အလို</string>
-    <string name="calendars_reminder_hour">1 နာရီ အလို</string>
-    <string name="calendars_reminder_day">1 ရက် အလို</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="other">%1$d မိနစ် အလို</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="other">%1$d နာရီ အလို</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="other">%1$d ရက် အလို</item>
+    </plurals>
+    <string name="calendars_reminder_add">သတိပေးချက် ထည့်မည်</string>
+    <string name="calendars_reminder_remove">သတိပေးချက် ဖယ်ရှားမည်</string>
     <string name="calendars_hours_start">အလုပ်ချိန် စတင်ချိန်</string>
     <string name="calendars_hours_finish">အလုပ်ချိန် ပြီးဆုံးချိန်</string>
     <string name="calendars_hours_invalid">အလုပ်ချိန်သည် စတင်ချိန်ပြီးနောက် ပြီးဆုံးရပါမည်။</string>

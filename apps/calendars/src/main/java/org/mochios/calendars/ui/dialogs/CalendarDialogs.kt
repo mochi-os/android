@@ -39,6 +39,8 @@ import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Hours
 import org.mochios.calendars.model.Multiweek
 import org.mochios.calendars.model.Preferences
+import org.mochios.calendars.ui.editor.REMINDER_LEADS
+import org.mochios.calendars.ui.editor.reminderLeads
 import org.mochios.android.R as MochiR
 
 /** Renames a calendar. */
@@ -280,17 +282,25 @@ fun PreferencesDialog(
     )
 }
 
-/** The reminder choices, as value-to-label pairs for a select. */
+/** The default reminder's choices, none among them, as value-to-label pairs for a select. */
 @Composable
-fun reminderOptions(): List<Pair<String, String>> = listOf(
-    "-1" to stringResource(R.string.calendars_reminder_none),
-    "0" to stringResource(R.string.calendars_reminder_time),
-    "5" to stringResource(R.string.calendars_reminder_minutes, 5),
-    "15" to stringResource(R.string.calendars_reminder_minutes, 15),
-    "30" to stringResource(R.string.calendars_reminder_minutes, 30),
-    "60" to stringResource(R.string.calendars_reminder_hour),
-    "1440" to stringResource(R.string.calendars_reminder_day),
-)
+fun reminderOptions(): List<Pair<String, String>> =
+    listOf("-1" to stringResource(R.string.calendars_reminder_none)) +
+        REMINDER_LEADS.map { it.toString() to reminderLabel(it) }
+
+/** The choices for one of an event's reminders, as value-to-label pairs for a select. */
+@Composable
+fun reminderChoices(current: Int): List<Pair<String, String>> =
+    reminderLeads(current).map { it.toString() to reminderLabel(it) }
+
+/** A reminder as the editor names it: at the time, or so long before the start. */
+@Composable
+fun reminderLabel(minutes: Int): String = when {
+    minutes == 0 -> stringResource(R.string.calendars_reminder_time)
+    minutes % 1440 == 0 -> pluralStringResource(R.plurals.calendars_reminder_days, minutes / 1440, minutes / 1440)
+    minutes % 60 == 0 -> pluralStringResource(R.plurals.calendars_reminder_hours, minutes / 60, minutes / 60)
+    else -> pluralStringResource(R.plurals.calendars_reminder_minutes, minutes, minutes)
+}
 
 /**
  * "This event", "This and following" or "All events" for a recurring

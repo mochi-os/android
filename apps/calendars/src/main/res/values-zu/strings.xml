@@ -98,9 +98,20 @@
     <string name="calendars_repeat_count">Izikhathi zokuphindwa</string>
     <string name="calendars_repeat_forever">Phakade</string>
     <string name="calendars_reminder_time">Ngesikhathi somcimbi</string>
-    <string name="calendars_reminder_minutes">Imizuzu engu-%1$d ngaphambili</string>
-    <string name="calendars_reminder_hour">Ihora elingu-1 ngaphambili</string>
-    <string name="calendars_reminder_day">Usuku olungu-1 ngaphambili</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">umzuzu ongu-%1$d ngaphambili</item>
+        <item quantity="other">imizuzu engu-%1$d ngaphambili</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">ihora elingu-%1$d ngaphambili</item>
+        <item quantity="other">amahora angu-%1$d ngaphambili</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">usuku olungu-%1$d ngaphambili</item>
+        <item quantity="other">izinsuku ezingu-%1$d ngaphambili</item>
+    </plurals>
+    <string name="calendars_reminder_add">Engeza isikhumbuzi</string>
+    <string name="calendars_reminder_remove">Khipha isikhumbuzi</string>
     <string name="calendars_hours_start">Ukuqala kwamahora omsebenzi</string>
     <string name="calendars_hours_finish">Ukuphela kwamahora omsebenzi</string>
     <string name="calendars_hours_invalid">Amahora omsebenzi kumele aphele ngemva kokuqala kwawo.</string>

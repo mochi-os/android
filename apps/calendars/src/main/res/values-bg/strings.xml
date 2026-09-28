@@ -102,9 +102,20 @@
     <string name="calendars_repeat_count">Повторения</string>
     <string name="calendars_repeat_forever">Завинаги</string>
     <string name="calendars_reminder_time">В момента на събитието</string>
-    <string name="calendars_reminder_minutes">%1$d минути по-рано</string>
-    <string name="calendars_reminder_hour">1 час по-рано</string>
-    <string name="calendars_reminder_day">1 ден по-рано</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d минута преди</item>
+        <item quantity="other">%1$d минути преди</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d час преди</item>
+        <item quantity="other">%1$d часа преди</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d ден преди</item>
+        <item quantity="other">%1$d дни преди</item>
+    </plurals>
+    <string name="calendars_reminder_add">Добави напомняне</string>
+    <string name="calendars_reminder_remove">Премахни напомнянето</string>
     <string name="calendars_hours_start">Начало на работното време</string>
     <string name="calendars_hours_finish">Край на работното време</string>
     <string name="calendars_hours_invalid">Работното време трябва да свършва след като започне.</string>

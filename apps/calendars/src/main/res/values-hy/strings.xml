@@ -102,9 +102,20 @@
     <string name="calendars_repeat_count">Կրկնությունների քանակը</string>
     <string name="calendars_repeat_forever">Ընդմիշտ</string>
     <string name="calendars_reminder_time">Միջոցառման պահին</string>
-    <string name="calendars_reminder_minutes">%1$d րոպե առաջ</string>
-    <string name="calendars_reminder_hour">1 ժամ առաջ</string>
-    <string name="calendars_reminder_day">1 օր առաջ</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d րոպե առաջ</item>
+        <item quantity="other">%1$d րոպե առաջ</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d ժամ առաջ</item>
+        <item quantity="other">%1$d ժամ առաջ</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d օր առաջ</item>
+        <item quantity="other">%1$d օր առաջ</item>
+    </plurals>
+    <string name="calendars_reminder_add">Ավելացնել հիշեցում</string>
+    <string name="calendars_reminder_remove">Հեռացնել հիշեցումը</string>
     <string name="calendars_hours_start">Աշխատանքային ժամերի սկիզբ</string>
     <string name="calendars_hours_finish">Աշխատանքային ժամերի ավարտ</string>
     <string name="calendars_hours_invalid">Աշխատանքային ժամերը պետք է ավարտվեն սկսվելուց հետո։</string>

@@ -101,9 +101,17 @@
     <string name="calendars_repeat_count">Pengulangan</string>
     <string name="calendars_repeat_forever">Salawasé</string>
     <string name="calendars_reminder_time">Pas wektuné</string>
-    <string name="calendars_reminder_minutes">%1$d menit sadurungé</string>
-    <string name="calendars_reminder_hour">1 jam sadurungé</string>
-    <string name="calendars_reminder_day">1 dina sadurungé</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="other">%1$d menit sadurungé</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="other">%1$d jam sadurungé</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="other">%1$d dina sadurungé</item>
+    </plurals>
+    <string name="calendars_reminder_add">Tambah pangeling-eling</string>
+    <string name="calendars_reminder_remove">Cabut pangeling-eling</string>
     <string name="calendars_hours_start">Wiwitan jam kerja</string>
     <string name="calendars_hours_finish">Pungkasan jam kerja</string>
     <string name="calendars_hours_invalid">Jam kerja kudu rampung sawisé wiwitané.</string>

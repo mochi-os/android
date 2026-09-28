@@ -98,9 +98,23 @@
     <string name="calendars_repeat_count">Број понављања</string>
     <string name="calendars_repeat_forever">Заувек</string>
     <string name="calendars_reminder_time">У време догађаја</string>
-    <string name="calendars_reminder_minutes">%1$d минута раније</string>
-    <string name="calendars_reminder_hour">1 сат раније</string>
-    <string name="calendars_reminder_day">1 дан раније</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d минут раније</item>
+        <item quantity="few">%1$d минута раније</item>
+        <item quantity="other">%1$d минута раније</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d сат раније</item>
+        <item quantity="few">%1$d сата раније</item>
+        <item quantity="other">%1$d сати раније</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d дан раније</item>
+        <item quantity="few">%1$d дана раније</item>
+        <item quantity="other">%1$d дана раније</item>
+    </plurals>
+    <string name="calendars_reminder_add">Додај подсетник</string>
+    <string name="calendars_reminder_remove">Уклони подсетник</string>
     <string name="calendars_hours_start">Почетак радног времена</string>
     <string name="calendars_hours_finish">Крај радног времена</string>
     <string name="calendars_hours_invalid">Радно време мора да се заврши након свог почетка.</string>

@@ -101,9 +101,17 @@
     <string name="calendars_repeat_count">回数</string>
     <string name="calendars_repeat_forever">無期限</string>
     <string name="calendars_reminder_time">予定の開始時刻</string>
-    <string name="calendars_reminder_minutes">%1$d 分前</string>
-    <string name="calendars_reminder_hour">1 時間前</string>
-    <string name="calendars_reminder_day">1 日前</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="other">%1$d 分前</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="other">%1$d 時間前</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="other">%1$d 日前</item>
+    </plurals>
+    <string name="calendars_reminder_add">リマインダーを追加</string>
+    <string name="calendars_reminder_remove">リマインダーを削除</string>
     <string name="calendars_hours_start">勤務時間の開始</string>
     <string name="calendars_hours_finish">勤務時間の終了</string>
     <string name="calendars_hours_invalid">勤務時間の終了は開始より後にしてください。</string>

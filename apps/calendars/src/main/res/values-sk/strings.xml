@@ -98,9 +98,26 @@
     <string name="calendars_repeat_count">Počet opakovaní</string>
     <string name="calendars_repeat_forever">Navždy</string>
     <string name="calendars_reminder_time">V čase udalosti</string>
-    <string name="calendars_reminder_minutes">%1$d minút predtým</string>
-    <string name="calendars_reminder_hour">1 hodinu predtým</string>
-    <string name="calendars_reminder_day">1 deň predtým</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d minútu vopred</item>
+        <item quantity="few">%1$d minúty vopred</item>
+        <item quantity="many">%1$d minút vopred</item>
+        <item quantity="other">%1$d minút vopred</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d hodinu vopred</item>
+        <item quantity="few">%1$d hodiny vopred</item>
+        <item quantity="many">%1$d hodín vopred</item>
+        <item quantity="other">%1$d hodín vopred</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d deň vopred</item>
+        <item quantity="few">%1$d dni vopred</item>
+        <item quantity="many">%1$d dní vopred</item>
+        <item quantity="other">%1$d dní vopred</item>
+    </plurals>
+    <string name="calendars_reminder_add">Pridať pripomienku</string>
+    <string name="calendars_reminder_remove">Odstrániť pripomienku</string>
     <string name="calendars_hours_start">Začiatok pracovného času</string>
     <string name="calendars_hours_finish">Koniec pracovného času</string>
     <string name="calendars_hours_invalid">Pracovný čas sa musí skončiť po svojom začiatku.</string>

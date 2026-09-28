@@ -24,7 +24,10 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Check
+import androidx.compose.material.icons.outlined.Close
 import androidx.compose.material.icons.outlined.ContentCopy
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Public
@@ -51,11 +54,13 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
@@ -64,14 +69,17 @@ import org.mochios.android.ui.components.LabeledSelectField
 import org.mochios.android.ui.components.LabeledSwitchRow
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.util.zoneCity
 import org.mochios.calendars.R
 import org.mochios.calendars.ui.dialogs.DeleteEventDialog
 import org.mochios.calendars.ui.dialogs.ScopeDialog
-import org.mochios.calendars.ui.dialogs.reminderOptions
+import org.mochios.calendars.ui.dialogs.reminderChoices
 import java.time.Instant
 import java.time.LocalDate
 import java.time.LocalTime
@@ -257,13 +265,24 @@ fun EventEditScreen(
                 recurrence = uiState.recurrence,
                 onChange = viewModel::recurrence,
             )
-            LabeledSelectField(
-                label = stringResource(R.string.calendars_event_reminder),
-                placeholder = "",
-                options = reminderOptions(),
-                selected = uiState.reminder.toString(),
-                onSelect = { viewModel.reminder(it.toIntOrNull() ?: -1) },
-            )
+            Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                Text(
+                    text = stringResource(R.string.calendars_event_reminder),
+                    style = MaterialTheme.typography.labelMedium,
+                )
+                uiState.reminders.forEachIndexed { index, minutes ->
+                    ReminderRow(
+                        minutes = minutes,
+                        onSelect = { viewModel.reminder(index, it) },
+                        onRemove = { viewModel.removeReminder(index) },
+                    )
+                }
+                MochiTextButton(onClick = viewModel::addReminder) {
+                    Icon(Icons.Outlined.Add, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
+                    Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+                    Text(stringResource(R.string.calendars_reminder_add))
+                }
+            }
             MochiTextField(
                 value = uiState.description,
                 onValueChange = viewModel::description,
@@ -616,4 +635,39 @@ private fun localeForWeekStart(weekStartsOn: Int): java.util.Locale = when (week
     1 -> java.util.Locale.UK
     6 -> java.util.Locale.forLanguageTag("ar-SA")
     else -> java.util.Locale.getDefault()
+}
+
+/** One of an event's reminders: its choice, and a button that removes it. */
+@Composable
+private fun ReminderRow(minutes: Int, onSelect: (Int) -> Unit, onRemove: () -> Unit) {
+    var expanded by rememberSaveable { mutableStateOf(false) }
+    val choices = reminderChoices(minutes)
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        Box(Modifier.weight(1f)) {
+            MochiOutlinedButton(onClick = { expanded = true }, modifier = Modifier.fillMaxWidth()) {
+                Text(
+                    text = choices.firstOrNull { it.first == minutes.toString() }?.second.orEmpty(),
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f),
+                )
+                Icon(Icons.Default.ArrowDropDown, contentDescription = null)
+            }
+            MochiDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+                choices.forEach { (value, label) ->
+                    MochiDropdownMenuItem(
+                        text = { Text(label) },
+                        onClick = {
+                            expanded = false
+                            onSelect(value.toInt())
+                        },
+                        selected = value == minutes.toString(),
+                    )
+                }
+            }
+        }
+        MochiIconButton(onClick = onRemove) {
+            Icon(Icons.Outlined.Close, contentDescription = stringResource(R.string.calendars_reminder_remove))
+        }
+    }
 }

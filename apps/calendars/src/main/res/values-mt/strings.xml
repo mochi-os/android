@@ -105,9 +105,29 @@
     <string name="calendars_repeat_count">Okkorrenzi</string>
     <string name="calendars_repeat_forever">Għal dejjem</string>
     <string name="calendars_reminder_time">Fil-ħin tal-avveniment</string>
-    <string name="calendars_reminder_minutes">%1$d minuti qabel</string>
-    <string name="calendars_reminder_hour">1 siegħa qabel</string>
-    <string name="calendars_reminder_day">1 jum qabel</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d minuta qabel</item>
+        <item quantity="two">%1$d minuti qabel</item>
+        <item quantity="few">%1$d minuti qabel</item>
+        <item quantity="many">%1$d minuta qabel</item>
+        <item quantity="other">%1$d minuta qabel</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d siegħa qabel</item>
+        <item quantity="two">sagħtejn qabel</item>
+        <item quantity="few">%1$d sigħat qabel</item>
+        <item quantity="many">%1$d siegħa qabel</item>
+        <item quantity="other">%1$d siegħa qabel</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d jum qabel</item>
+        <item quantity="two">jumejn qabel</item>
+        <item quantity="few">%1$d ijiem qabel</item>
+        <item quantity="many">%1$d jum qabel</item>
+        <item quantity="other">%1$d jum qabel</item>
+    </plurals>
+    <string name="calendars_reminder_add">Żid tfakkira</string>
+    <string name="calendars_reminder_remove">Neħħi t-tfakkira</string>
     <string name="calendars_hours_start">Bidu tal-ħin tax-xogħol</string>
     <string name="calendars_hours_finish">Tmiem il-ħin tax-xogħol</string>
     <string name="calendars_hours_invalid">Il-ħinijiet tax-xogħol iridu jintemmu wara li jibdew.</string>

@@ -98,9 +98,17 @@
     <string name="calendars_repeat_count">จำนวนครั้ง</string>
     <string name="calendars_repeat_forever">ตลอดไป</string>
     <string name="calendars_reminder_time">ตรงเวลาที่เริ่ม</string>
-    <string name="calendars_reminder_minutes">%1$d นาทีก่อน</string>
-    <string name="calendars_reminder_hour">1 ชั่วโมงก่อน</string>
-    <string name="calendars_reminder_day">1 วันก่อน</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="other">%1$d นาทีก่อน</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="other">%1$d ชั่วโมงก่อน</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="other">%1$d วันก่อน</item>
+    </plurals>
+    <string name="calendars_reminder_add">เพิ่มการแจ้งเตือน</string>
+    <string name="calendars_reminder_remove">ลบการแจ้งเตือนออก</string>
     <string name="calendars_hours_start">เวลาเริ่มทำงาน</string>
     <string name="calendars_hours_finish">เวลาเลิกงาน</string>
     <string name="calendars_hours_invalid">เวลาทำงานต้องสิ้นสุดหลังเวลาเริ่ม</string>

@@ -102,9 +102,20 @@
     <string name="calendars_repeat_count">Repeticións</string>
     <string name="calendars_repeat_forever">Para sempre</string>
     <string name="calendars_reminder_time">Á hora</string>
-    <string name="calendars_reminder_minutes">%1$d minutos antes</string>
-    <string name="calendars_reminder_hour">1 hora antes</string>
-    <string name="calendars_reminder_day">1 día antes</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d minuto antes</item>
+        <item quantity="other">%1$d minutos antes</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d hora antes</item>
+        <item quantity="other">%1$d horas antes</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d día antes</item>
+        <item quantity="other">%1$d días antes</item>
+    </plurals>
+    <string name="calendars_reminder_add">Engadir un recordatorio</string>
+    <string name="calendars_reminder_remove">Eliminar o recordatorio</string>
     <string name="calendars_hours_start">Inicio da xornada laboral</string>
     <string name="calendars_hours_finish">Fin da xornada laboral</string>
     <string name="calendars_hours_invalid">A xornada laboral debe rematar despois de comezar.</string>

@@ -102,9 +102,20 @@
     <string name="calendars_repeat_count">ژمارەی دووبارەبوونەوە</string>
     <string name="calendars_repeat_forever">بۆ هەمیشە</string>
     <string name="calendars_reminder_time">لە کاتی خۆیدا</string>
-    <string name="calendars_reminder_minutes">%1$d خولەک پێشتر</string>
-    <string name="calendars_reminder_hour">١ کاتژمێر پێشتر</string>
-    <string name="calendars_reminder_day">١ ڕۆژ پێشتر</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d خولەک پێشتر</item>
+        <item quantity="other">%1$d خولەک پێشتر</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d کاتژمێر پێشتر</item>
+        <item quantity="other">%1$d کاتژمێر پێشتر</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d ڕۆژ پێشتر</item>
+        <item quantity="other">%1$d ڕۆژ پێشتر</item>
+    </plurals>
+    <string name="calendars_reminder_add">زیادکردنی بیرخەرەوە</string>
+    <string name="calendars_reminder_remove">لابردنی بیرخەرەوە</string>
     <string name="calendars_hours_start">دەستپێکی کاتژمێرەکانی کار</string>
     <string name="calendars_hours_finish">کۆتایی کاتژمێرەکانی کار</string>
     <string name="calendars_hours_invalid">کاتژمێرەکانی کار دەبێت دوای دەستپێکردن کۆتایی بێن.</string>

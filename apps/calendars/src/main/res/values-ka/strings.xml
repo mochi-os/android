@@ -102,9 +102,20 @@
     <string name="calendars_repeat_count">გამეორებების რაოდენობა</string>
     <string name="calendars_repeat_forever">სამუდამოდ</string>
     <string name="calendars_reminder_time">ღონისძიების დროს</string>
-    <string name="calendars_reminder_minutes">%1$d წუთით ადრე</string>
-    <string name="calendars_reminder_hour">1 საათით ადრე</string>
-    <string name="calendars_reminder_day">1 დღით ადრე</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d წუთით ადრე</item>
+        <item quantity="other">%1$d წუთით ადრე</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d საათით ადრე</item>
+        <item quantity="other">%1$d საათით ადრე</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d დღით ადრე</item>
+        <item quantity="other">%1$d დღით ადრე</item>
+    </plurals>
+    <string name="calendars_reminder_add">შეხსენების დამატება</string>
+    <string name="calendars_reminder_remove">შეხსენების წაშლა</string>
     <string name="calendars_hours_start">სამუშაო საათების დასაწყისი</string>
     <string name="calendars_hours_finish">სამუშაო საათების დასასრული</string>
     <string name="calendars_hours_invalid">სამუშაო საათები დაწყების შემდეგ უნდა დასრულდეს.</string>

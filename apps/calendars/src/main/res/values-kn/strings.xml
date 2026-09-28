@@ -102,9 +102,20 @@
     <string name="calendars_repeat_count">ಪುನರಾವರ್ತನೆಗಳ ಸಂಖ್ಯೆ</string>
     <string name="calendars_repeat_forever">ಶಾಶ್ವತವಾಗಿ</string>
     <string name="calendars_reminder_time">ಈವೆಂಟ್‌ನ ಸಮಯದಲ್ಲಿ</string>
-    <string name="calendars_reminder_minutes">%1$d ನಿಮಿಷಗಳ ಮೊದಲು</string>
-    <string name="calendars_reminder_hour">1 ಗಂಟೆ ಮೊದಲು</string>
-    <string name="calendars_reminder_day">1 ದಿನ ಮೊದಲು</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d ನಿಮಿಷ ಮೊದಲು</item>
+        <item quantity="other">%1$d ನಿಮಿಷಗಳ ಮೊದಲು</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d ಗಂಟೆ ಮೊದಲು</item>
+        <item quantity="other">%1$d ಗಂಟೆಗಳ ಮೊದಲು</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d ದಿನ ಮೊದಲು</item>
+        <item quantity="other">%1$d ದಿನಗಳ ಮೊದಲು</item>
+    </plurals>
+    <string name="calendars_reminder_add">ಜ್ಞಾಪನೆ ಸೇರಿಸಿ</string>
+    <string name="calendars_reminder_remove">ಜ್ಞಾಪನೆ ತೆಗೆದುಹಾಕಿ</string>
     <string name="calendars_hours_start">ಕೆಲಸದ ಸಮಯದ ಪ್ರಾರಂಭ</string>
     <string name="calendars_hours_finish">ಕೆಲಸದ ಸಮಯದ ಅಂತ್ಯ</string>
     <string name="calendars_hours_invalid">ಕೆಲಸದ ಸಮಯವು ಪ್ರಾರಂಭದ ನಂತರ ಕೊನೆಗೊಳ್ಳಬೇಕು.</string>

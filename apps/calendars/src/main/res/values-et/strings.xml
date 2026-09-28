@@ -102,9 +102,20 @@
     <string name="calendars_repeat_count">Kordused</string>
     <string name="calendars_repeat_forever">Igavesti</string>
     <string name="calendars_reminder_time">Sündmuse ajal</string>
-    <string name="calendars_reminder_minutes">%1$d minutit varem</string>
-    <string name="calendars_reminder_hour">1 tund varem</string>
-    <string name="calendars_reminder_day">1 päev varem</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d minut varem</item>
+        <item quantity="other">%1$d minutit varem</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d tund varem</item>
+        <item quantity="other">%1$d tundi varem</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d päev varem</item>
+        <item quantity="other">%1$d päeva varem</item>
+    </plurals>
+    <string name="calendars_reminder_add">Lisa meeldetuletus</string>
+    <string name="calendars_reminder_remove">Eemalda meeldetuletus</string>
     <string name="calendars_hours_start">Tööaja algus</string>
     <string name="calendars_hours_finish">Tööaja lõpp</string>
     <string name="calendars_hours_invalid">Tööaeg peab lõppema pärast selle algust.</string>

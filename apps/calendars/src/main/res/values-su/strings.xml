@@ -98,9 +98,17 @@
     <string name="calendars_repeat_count">Jumlah kajadian</string>
     <string name="calendars_repeat_forever">Salamina</string>
     <string name="calendars_reminder_time">Dina waktuna</string>
-    <string name="calendars_reminder_minutes">%1$d menit saméméhna</string>
-    <string name="calendars_reminder_hour">1 jam saméméhna</string>
-    <string name="calendars_reminder_day">1 poé saméméhna</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="other">%1$d menit saméméhna</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="other">%1$d jam saméméhna</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="other">%1$d poé saméméhna</item>
+    </plurals>
+    <string name="calendars_reminder_add">Tambah panginget</string>
+    <string name="calendars_reminder_remove">Pupus panginget</string>
     <string name="calendars_hours_start">Awal jam damel</string>
     <string name="calendars_hours_finish">Ahir jam damel</string>
     <string name="calendars_hours_invalid">Jam damel kedah réngsé saatos dimimitian.</string>

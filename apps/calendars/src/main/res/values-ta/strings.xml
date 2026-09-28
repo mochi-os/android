@@ -98,9 +98,20 @@
     <string name="calendars_repeat_count">நிகழ்வுகளின் எண்ணிக்கை</string>
     <string name="calendars_repeat_forever">எப்போதும்</string>
     <string name="calendars_reminder_time">நிகழும் நேரத்தில்</string>
-    <string name="calendars_reminder_minutes">%1$d நிமிடங்களுக்கு முன்</string>
-    <string name="calendars_reminder_hour">1 மணி நேரத்திற்கு முன்</string>
-    <string name="calendars_reminder_day">1 நாளுக்கு முன்</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d நிமிடம் முன்</item>
+        <item quantity="other">%1$d நிமிடங்கள் முன்</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d மணி நேரம் முன்</item>
+        <item quantity="other">%1$d மணி நேரம் முன்</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d நாள் முன்</item>
+        <item quantity="other">%1$d நாட்கள் முன்</item>
+    </plurals>
+    <string name="calendars_reminder_add">நினைவூட்டலைச் சேர்</string>
+    <string name="calendars_reminder_remove">நினைவூட்டலை அகற்று</string>
     <string name="calendars_hours_start">வேலை நேரம் தொடக்கம்</string>
     <string name="calendars_hours_finish">வேலை நேரம் முடிவு</string>
     <string name="calendars_hours_invalid">வேலை நேரம் தொடங்கிய பிறகு முடிய வேண்டும்.</string>

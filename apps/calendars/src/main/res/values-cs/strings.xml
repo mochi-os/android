@@ -103,9 +103,23 @@
     <string name="calendars_repeat_count">Opakování</string>
     <string name="calendars_repeat_forever">Navždy</string>
     <string name="calendars_reminder_time">V čase události</string>
-    <string name="calendars_reminder_minutes">%1$d minut předem</string>
-    <string name="calendars_reminder_hour">1 hodinu předem</string>
-    <string name="calendars_reminder_day">1 den předem</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d minutu předem</item>
+        <item quantity="few">%1$d minuty předem</item>
+        <item quantity="other">%1$d minut předem</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d hodinu předem</item>
+        <item quantity="few">%1$d hodiny předem</item>
+        <item quantity="other">%1$d hodin předem</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d den předem</item>
+        <item quantity="few">%1$d dny předem</item>
+        <item quantity="other">%1$d dní předem</item>
+    </plurals>
+    <string name="calendars_reminder_add">Přidat připomenutí</string>
+    <string name="calendars_reminder_remove">Odebrat připomenutí</string>
     <string name="calendars_hours_start">Začátek pracovní doby</string>
     <string name="calendars_hours_finish">Konec pracovní doby</string>
     <string name="calendars_hours_invalid">Pracovní doba musí skončit až po svém začátku.</string>

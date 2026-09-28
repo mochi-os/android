@@ -98,9 +98,20 @@
     <string name="calendars_repeat_count">පුනරාවර්තන</string>
     <string name="calendars_repeat_forever">සදාකාලිකව</string>
     <string name="calendars_reminder_time">එම වේලාවේදී</string>
-    <string name="calendars_reminder_minutes">මිනිත්තු %1$d කට පෙර</string>
-    <string name="calendars_reminder_hour">පැය 1 කට පෙර</string>
-    <string name="calendars_reminder_day">දින 1 කට පෙර</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">මිනිත්තු %1$dකට පෙර</item>
+        <item quantity="other">මිනිත්තු %1$dකට පෙර</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">පැය %1$dකට පෙර</item>
+        <item quantity="other">පැය %1$dකට පෙර</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">දින %1$dකට පෙර</item>
+        <item quantity="other">දින %1$dකට පෙර</item>
+    </plurals>
+    <string name="calendars_reminder_add">මතක් කිරීමක් එක් කරන්න</string>
+    <string name="calendars_reminder_remove">මතක් කිරීම ඉවත් කරන්න</string>
     <string name="calendars_hours_start">වැඩ කරන වේලාව ආරම්භය</string>
     <string name="calendars_hours_finish">වැඩ කරන වේලාව අවසානය</string>
     <string name="calendars_hours_invalid">වැඩ කරන වේලාව ආරම්භයෙන් පසු අවසන් විය යුතුය.</string>

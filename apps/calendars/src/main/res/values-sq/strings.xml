@@ -98,9 +98,20 @@
     <string name="calendars_repeat_count">Përsëritje</string>
     <string name="calendars_repeat_forever">Përgjithmonë</string>
     <string name="calendars_reminder_time">Në momentin e ngjarjes</string>
-    <string name="calendars_reminder_minutes">%1$d minuta para</string>
-    <string name="calendars_reminder_hour">1 orë para</string>
-    <string name="calendars_reminder_day">1 ditë para</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d minutë më parë</item>
+        <item quantity="other">%1$d minuta më parë</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d orë më parë</item>
+        <item quantity="other">%1$d orë më parë</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d ditë më parë</item>
+        <item quantity="other">%1$d ditë më parë</item>
+    </plurals>
+    <string name="calendars_reminder_add">Shto kujtesë</string>
+    <string name="calendars_reminder_remove">Hiq kujtesën</string>
     <string name="calendars_hours_start">Fillimi i orarit të punës</string>
     <string name="calendars_hours_finish">Mbarimi i orarit të punës</string>
     <string name="calendars_hours_invalid">Orari i punës duhet të mbarojë pas fillimit.</string>

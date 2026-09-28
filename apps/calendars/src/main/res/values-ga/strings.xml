@@ -105,9 +105,29 @@
     <string name="calendars_repeat_count">Tarluithe</string>
     <string name="calendars_repeat_forever">Go deo</string>
     <string name="calendars_reminder_time">Ag an am</string>
-    <string name="calendars_reminder_minutes">%1$d nóiméad roimh ré</string>
-    <string name="calendars_reminder_hour">1 uair an chloig roimh ré</string>
-    <string name="calendars_reminder_day">1 lá roimh ré</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d nóiméad roimhe</item>
+        <item quantity="two">%1$d nóiméad roimhe</item>
+        <item quantity="few">%1$d nóiméad roimhe</item>
+        <item quantity="many">%1$d nóiméad roimhe</item>
+        <item quantity="other">%1$d nóiméad roimhe</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d uair roimhe</item>
+        <item quantity="two">%1$d uair roimhe</item>
+        <item quantity="few">%1$d huaire roimhe</item>
+        <item quantity="many">%1$d n-uaire roimhe</item>
+        <item quantity="other">%1$d uair roimhe</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d lá roimhe</item>
+        <item quantity="two">%1$d lá roimhe</item>
+        <item quantity="few">%1$d lá roimhe</item>
+        <item quantity="many">%1$d lá roimhe</item>
+        <item quantity="other">%1$d lá roimhe</item>
+    </plurals>
+    <string name="calendars_reminder_add">Cuir meabhrúchán leis</string>
+    <string name="calendars_reminder_remove">Bain meabhrúchán</string>
     <string name="calendars_hours_start">Tús na n-uaireanta oibre</string>
     <string name="calendars_hours_finish">Deireadh na n-uaireanta oibre</string>
     <string name="calendars_hours_invalid">Caithfidh na huaireanta oibre críochnú tar éis dóibh tosú.</string>

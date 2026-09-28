@@ -102,9 +102,20 @@
     <string name="calendars_repeat_count">Кайталануулардын саны</string>
     <string name="calendars_repeat_forever">Түбөлүккө</string>
     <string name="calendars_reminder_time">Иш-чаранын убагында</string>
-    <string name="calendars_reminder_minutes">%1$d мүнөт мурун</string>
-    <string name="calendars_reminder_hour">1 саат мурун</string>
-    <string name="calendars_reminder_day">1 күн мурун</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d мүнөт мурун</item>
+        <item quantity="other">%1$d мүнөт мурун</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d саат мурун</item>
+        <item quantity="other">%1$d саат мурун</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d күн мурун</item>
+        <item quantity="other">%1$d күн мурун</item>
+    </plurals>
+    <string name="calendars_reminder_add">Эскертме кошуу</string>
+    <string name="calendars_reminder_remove">Эскертмени алып салуу</string>
     <string name="calendars_hours_start">Жумуш убактысынын башталышы</string>
     <string name="calendars_hours_finish">Жумуш убактысынын аякташы</string>
     <string name="calendars_hours_invalid">Иш убактысы башталгандан кийин аяктоосу керек.</string>

@@ -98,9 +98,17 @@
     <string name="calendars_repeat_count">Iye ìgbà</string>
     <string name="calendars_repeat_forever">Títí láé</string>
     <string name="calendars_reminder_time">Ní àkókò náà</string>
-    <string name="calendars_reminder_minutes">Ìṣẹ́jú %1$d ṣáájú</string>
-    <string name="calendars_reminder_hour">Wákàtí 1 ṣáájú</string>
-    <string name="calendars_reminder_day">Ọjọ́ 1 ṣáájú</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="other">ìṣẹ́jú %1$d ṣáájú</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="other">wákàtí %1$d ṣáájú</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="other">ọjọ́ %1$d ṣáájú</item>
+    </plurals>
+    <string name="calendars_reminder_add">Fi ìránnilétí kún</string>
+    <string name="calendars_reminder_remove">Yọ ìránnilétí kúrò</string>
     <string name="calendars_hours_start">Ìbẹ̀rẹ̀ wákàtí iṣẹ́</string>
     <string name="calendars_hours_finish">Ìparí wákàtí iṣẹ́</string>
     <string name="calendars_hours_invalid">Wákàtí iṣẹ́ gbọ́dọ̀ parí lẹ́yìn tí ó bá ti bẹ̀rẹ̀.</string>

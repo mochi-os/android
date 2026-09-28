@@ -98,9 +98,20 @@
     <string name="calendars_repeat_count">Takrorlar soni</string>
     <string name="calendars_repeat_forever">Doimiy</string>
     <string name="calendars_reminder_time">Tadbir vaqtida</string>
-    <string name="calendars_reminder_minutes">%1$d daqiqa oldin</string>
-    <string name="calendars_reminder_hour">1 soat oldin</string>
-    <string name="calendars_reminder_day">1 kun oldin</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d daqiqa oldin</item>
+        <item quantity="other">%1$d daqiqa oldin</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d soat oldin</item>
+        <item quantity="other">%1$d soat oldin</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d kun oldin</item>
+        <item quantity="other">%1$d kun oldin</item>
+    </plurals>
+    <string name="calendars_reminder_add">Eslatma qoʻshish</string>
+    <string name="calendars_reminder_remove">Eslatmani olib tashlash</string>
     <string name="calendars_hours_start">Ish vaqti boshlanishi</string>
     <string name="calendars_hours_finish">Ish vaqti tugashi</string>
     <string name="calendars_hours_invalid">Ish vaqti boshlangandan keyin tugashi kerak.</string>

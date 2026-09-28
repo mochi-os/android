@@ -102,9 +102,20 @@
     <string name="calendars_repeat_count">Occurrences</string>
     <string name="calendars_repeat_forever">Toujours</string>
     <string name="calendars_reminder_time">À l\'heure</string>
-    <string name="calendars_reminder_minutes">%1$d minutes avant</string>
-    <string name="calendars_reminder_hour">1 heure avant</string>
-    <string name="calendars_reminder_day">1 jour avant</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d minute avant</item>
+        <item quantity="other">%1$d minutes avant</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d heure avant</item>
+        <item quantity="other">%1$d heures avant</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d jour avant</item>
+        <item quantity="other">%1$d jours avant</item>
+    </plurals>
+    <string name="calendars_reminder_add">Ajouter un rappel</string>
+    <string name="calendars_reminder_remove">Retirer le rappel</string>
     <string name="calendars_hours_start">Début des heures de travail</string>
     <string name="calendars_hours_finish">Fin des heures de travail</string>
     <string name="calendars_hours_invalid">Les heures de travail doivent se terminer après leur début.</string>

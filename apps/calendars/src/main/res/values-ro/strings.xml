@@ -98,9 +98,23 @@
     <string name="calendars_repeat_count">Apariții</string>
     <string name="calendars_repeat_forever">Pentru totdeauna</string>
     <string name="calendars_reminder_time">La ora evenimentului</string>
-    <string name="calendars_reminder_minutes">cu %1$d minute înainte</string>
-    <string name="calendars_reminder_hour">cu 1 oră înainte</string>
-    <string name="calendars_reminder_day">cu 1 zi înainte</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">cu %1$d minut înainte</item>
+        <item quantity="few">cu %1$d minute înainte</item>
+        <item quantity="other">cu %1$d de minute înainte</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">cu %1$d oră înainte</item>
+        <item quantity="few">cu %1$d ore înainte</item>
+        <item quantity="other">cu %1$d de ore înainte</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">cu %1$d zi înainte</item>
+        <item quantity="few">cu %1$d zile înainte</item>
+        <item quantity="other">cu %1$d de zile înainte</item>
+    </plurals>
+    <string name="calendars_reminder_add">Adaugă un memento</string>
+    <string name="calendars_reminder_remove">Elimină mementoul</string>
     <string name="calendars_hours_start">Începutul programului de lucru</string>
     <string name="calendars_hours_finish">Sfârșitul programului de lucru</string>
     <string name="calendars_hours_invalid">Programul de lucru trebuie să se termine după ce începe.</string>

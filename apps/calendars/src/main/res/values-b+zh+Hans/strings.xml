@@ -101,9 +101,17 @@
     <string name="calendars_repeat_count">重复次数</string>
     <string name="calendars_repeat_forever">永久</string>
     <string name="calendars_reminder_time">准时</string>
-    <string name="calendars_reminder_minutes">提前 %1$d 分钟</string>
-    <string name="calendars_reminder_hour">提前 1 小时</string>
-    <string name="calendars_reminder_day">提前 1 天</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="other">%1$d 分钟前</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="other">%1$d 小时前</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="other">%1$d 天前</item>
+    </plurals>
+    <string name="calendars_reminder_add">添加提醒</string>
+    <string name="calendars_reminder_remove">移除提醒</string>
     <string name="calendars_hours_start">工作时间开始</string>
     <string name="calendars_hours_finish">工作时间结束</string>
     <string name="calendars_hours_invalid">工作时间的结束必须晚于开始。</string>

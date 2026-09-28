@@ -102,9 +102,20 @@
     <string name="calendars_repeat_count">Qawqha kuti</string>
     <string name="calendars_repeat_forever">Wiñayataki</string>
     <string name="calendars_reminder_time">Uka horasa</string>
-    <string name="calendars_reminder_minutes">%1$d minuto nayra</string>
-    <string name="calendars_reminder_hour">1 hora nayra</string>
-    <string name="calendars_reminder_day">1 uru nayra</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d minuto nayra</item>
+        <item quantity="other">%1$d minuto nayra</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d hora nayra</item>
+        <item quantity="other">%1$d hora nayra</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d uru nayra</item>
+        <item quantity="other">%1$d uru nayra</item>
+    </plurals>
+    <string name="calendars_reminder_add">Amtayiri yapxataña</string>
+    <string name="calendars_reminder_remove">Amtayiri aparaña</string>
     <string name="calendars_hours_start">Irnaqaña pacha qalltawi</string>
     <string name="calendars_hours_finish">Irnaqaña pacha tukuyawi</string>
     <string name="calendars_hours_invalid">Irnaqaña pachaxa qalltatatxa qhipatwa tukuyañapa.</string>

@@ -98,9 +98,26 @@
     <string name="calendars_repeat_count">Wystąpienia</string>
     <string name="calendars_repeat_forever">Zawsze</string>
     <string name="calendars_reminder_time">W momencie wydarzenia</string>
-    <string name="calendars_reminder_minutes">%1$d minut wcześniej</string>
-    <string name="calendars_reminder_hour">1 godzinę wcześniej</string>
-    <string name="calendars_reminder_day">1 dzień wcześniej</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d minutę wcześniej</item>
+        <item quantity="few">%1$d minuty wcześniej</item>
+        <item quantity="many">%1$d minut wcześniej</item>
+        <item quantity="other">%1$d minut wcześniej</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d godzinę wcześniej</item>
+        <item quantity="few">%1$d godziny wcześniej</item>
+        <item quantity="many">%1$d godzin wcześniej</item>
+        <item quantity="other">%1$d godzin wcześniej</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d dzień wcześniej</item>
+        <item quantity="few">%1$d dni wcześniej</item>
+        <item quantity="many">%1$d dni wcześniej</item>
+        <item quantity="other">%1$d dni wcześniej</item>
+    </plurals>
+    <string name="calendars_reminder_add">Dodaj przypomnienie</string>
+    <string name="calendars_reminder_remove">Usuń przypomnienie</string>
     <string name="calendars_hours_start">Początek godzin pracy</string>
     <string name="calendars_hours_finish">Koniec godzin pracy</string>
     <string name="calendars_hours_invalid">Godziny pracy muszą kończyć się po ich rozpoczęciu.</string>

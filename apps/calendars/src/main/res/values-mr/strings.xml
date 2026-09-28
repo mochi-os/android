@@ -102,9 +102,20 @@
     <string name="calendars_repeat_count">पुनरावृत्तींची संख्या</string>
     <string name="calendars_repeat_forever">कायमचे</string>
     <string name="calendars_reminder_time">कार्यक्रमाच्या वेळी</string>
-    <string name="calendars_reminder_minutes">%1$d मिनिटे आधी</string>
-    <string name="calendars_reminder_hour">1 तास आधी</string>
-    <string name="calendars_reminder_day">1 दिवस आधी</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d मिनिट आधी</item>
+        <item quantity="other">%1$d मिनिटे आधी</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d तास आधी</item>
+        <item quantity="other">%1$d तास आधी</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d दिवस आधी</item>
+        <item quantity="other">%1$d दिवस आधी</item>
+    </plurals>
+    <string name="calendars_reminder_add">स्मरणपत्र जोडा</string>
+    <string name="calendars_reminder_remove">स्मरणपत्र काढा</string>
     <string name="calendars_hours_start">कामाच्या वेळेची सुरुवात</string>
     <string name="calendars_hours_finish">कामाच्या वेळेची समाप्ती</string>
     <string name="calendars_hours_invalid">कामाची वेळ सुरू झाल्यानंतर संपली पाहिजे.</string>

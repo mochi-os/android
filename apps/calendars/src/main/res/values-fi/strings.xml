@@ -102,9 +102,20 @@
     <string name="calendars_repeat_count">Toistokerrat</string>
     <string name="calendars_repeat_forever">Ikuisesti</string>
     <string name="calendars_reminder_time">Tapahtuman alkaessa</string>
-    <string name="calendars_reminder_minutes">%1$d minuuttia ennen</string>
-    <string name="calendars_reminder_hour">1 tunti ennen</string>
-    <string name="calendars_reminder_day">1 päivä ennen</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d minuutti ennen</item>
+        <item quantity="other">%1$d minuuttia ennen</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d tunti ennen</item>
+        <item quantity="other">%1$d tuntia ennen</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d päivä ennen</item>
+        <item quantity="other">%1$d päivää ennen</item>
+    </plurals>
+    <string name="calendars_reminder_add">Lisää muistutus</string>
+    <string name="calendars_reminder_remove">Poista muistutus</string>
     <string name="calendars_hours_start">Työajan alku</string>
     <string name="calendars_hours_finish">Työajan loppu</string>
     <string name="calendars_hours_invalid">Työajan on päätyttävä sen alkamisen jälkeen.</string>

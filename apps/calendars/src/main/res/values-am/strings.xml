@@ -102,9 +102,20 @@
     <string name="calendars_repeat_count">ድግግሞሾች</string>
     <string name="calendars_repeat_forever">ለዘላለም</string>
     <string name="calendars_reminder_time">በሰዓቱ</string>
-    <string name="calendars_reminder_minutes">ከ%1$d ደቂቃ በፊት</string>
-    <string name="calendars_reminder_hour">ከ1 ሰዓት በፊት</string>
-    <string name="calendars_reminder_day">ከ1 ቀን በፊት</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d ደቂቃ በፊት</item>
+        <item quantity="other">%1$d ደቂቃዎች በፊት</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d ሰዓት በፊት</item>
+        <item quantity="other">%1$d ሰዓታት በፊት</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d ቀን በፊት</item>
+        <item quantity="other">%1$d ቀናት በፊት</item>
+    </plurals>
+    <string name="calendars_reminder_add">አስታዋሽ ጨምር</string>
+    <string name="calendars_reminder_remove">አስታዋሽ አስወግድ</string>
     <string name="calendars_hours_start">የሥራ ሰዓት መጀመሪያ</string>
     <string name="calendars_hours_finish">የሥራ ሰዓት መጨረሻ</string>
     <string name="calendars_hours_invalid">የሥራ ሰዓት ከተጀመረ በኋላ መጠናቀቅ አለበት።</string>

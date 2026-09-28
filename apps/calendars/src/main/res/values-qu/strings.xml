@@ -98,9 +98,20 @@
     <string name="calendars_repeat_count">Kutikuna</string>
     <string name="calendars_repeat_forever">Wiñaypaq</string>
     <string name="calendars_reminder_time">Chay pachapi</string>
-    <string name="calendars_reminder_minutes">%1$d minutu ñawpaqta</string>
-    <string name="calendars_reminder_hour">1 ura ñawpaqta</string>
-    <string name="calendars_reminder_day">1 p\'unchaw ñawpaqta</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d minuto ñawpaqta</item>
+        <item quantity="other">%1$d minuto ñawpaqta</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d hora ñawpaqta</item>
+        <item quantity="other">%1$d hora ñawpaqta</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d p\'unchaw ñawpaqta</item>
+        <item quantity="other">%1$d p\'unchaw ñawpaqta</item>
+    </plurals>
+    <string name="calendars_reminder_add">Yuyarichiq yapay</string>
+    <string name="calendars_reminder_remove">Yuyarichiq qichuy</string>
     <string name="calendars_hours_start">Llamk\'ana pacha qallariy</string>
     <string name="calendars_hours_finish">Llamk\'ana pacha tukukuy</string>
     <string name="calendars_hours_invalid">Llamk\'ana pachaqa qallarisqan qhipatam tukunan.</string>

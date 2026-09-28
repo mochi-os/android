@@ -102,9 +102,20 @@
     <string name="calendars_repeat_count">दोहराव के संख्या</string>
     <string name="calendars_repeat_forever">हमेशा</string>
     <string name="calendars_reminder_time">ठीक समय पर</string>
-    <string name="calendars_reminder_minutes">%1$d मिनट पहिले</string>
-    <string name="calendars_reminder_hour">1 घंटा पहिले</string>
-    <string name="calendars_reminder_day">1 दिन पहिले</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d मिनट पहिले</item>
+        <item quantity="other">%1$d मिनट पहिले</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d घंटा पहिले</item>
+        <item quantity="other">%1$d घंटा पहिले</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d दिन पहिले</item>
+        <item quantity="other">%1$d दिन पहिले</item>
+    </plurals>
+    <string name="calendars_reminder_add">रिमाइंडर जोड़ीं</string>
+    <string name="calendars_reminder_remove">रिमाइंडर हटाईं</string>
     <string name="calendars_hours_start">काम के घंटा के शुरुआत</string>
     <string name="calendars_hours_finish">काम के घंटा के अंत</string>
     <string name="calendars_hours_invalid">काम के घंटा शुरू होखला के बाद खतम होखे के चाहीं।</string>

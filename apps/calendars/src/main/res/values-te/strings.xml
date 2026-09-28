@@ -98,9 +98,20 @@
     <string name="calendars_repeat_count">పునరావృత్తులు</string>
     <string name="calendars_repeat_forever">ఎప్పటికీ</string>
     <string name="calendars_reminder_time">సమయానికి</string>
-    <string name="calendars_reminder_minutes">%1$d నిమిషాల ముందు</string>
-    <string name="calendars_reminder_hour">1 గంట ముందు</string>
-    <string name="calendars_reminder_day">1 రోజు ముందు</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d నిమిషం ముందు</item>
+        <item quantity="other">%1$d నిమిషాల ముందు</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d గంట ముందు</item>
+        <item quantity="other">%1$d గంటల ముందు</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d రోజు ముందు</item>
+        <item quantity="other">%1$d రోజుల ముందు</item>
+    </plurals>
+    <string name="calendars_reminder_add">రిమైండర్‌ను జోడించండి</string>
+    <string name="calendars_reminder_remove">రిమైండర్‌ను తొలగించండి</string>
     <string name="calendars_hours_start">పని గంటల ప్రారంభం</string>
     <string name="calendars_hours_finish">పని గంటల ముగింపు</string>
     <string name="calendars_hours_invalid">పని గంటలు ప్రారంభమైన తర్వాత ముగియాలి.</string>

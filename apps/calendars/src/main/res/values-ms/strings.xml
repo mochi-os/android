@@ -101,9 +101,17 @@
     <string name="calendars_repeat_count">Ulangan</string>
     <string name="calendars_repeat_forever">Selamanya</string>
     <string name="calendars_reminder_time">Pada masa acara</string>
-    <string name="calendars_reminder_minutes">%1$d minit sebelum</string>
-    <string name="calendars_reminder_hour">1 jam sebelum</string>
-    <string name="calendars_reminder_day">1 hari sebelum</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="other">%1$d minit sebelum</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="other">%1$d jam sebelum</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="other">%1$d hari sebelum</item>
+    </plurals>
+    <string name="calendars_reminder_add">Tambah peringatan</string>
+    <string name="calendars_reminder_remove">Alih keluar peringatan</string>
     <string name="calendars_hours_start">Mula waktu bekerja</string>
     <string name="calendars_hours_finish">Tamat waktu bekerja</string>
     <string name="calendars_hours_invalid">Waktu bekerja mesti tamat selepas ia bermula.</string>

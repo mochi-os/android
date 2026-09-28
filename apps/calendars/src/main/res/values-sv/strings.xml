@@ -98,9 +98,20 @@
     <string name="calendars_repeat_count">Antal tillfällen</string>
     <string name="calendars_repeat_forever">För alltid</string>
     <string name="calendars_reminder_time">Vid tidpunkten</string>
-    <string name="calendars_reminder_minutes">%1$d minuter innan</string>
-    <string name="calendars_reminder_hour">1 timme innan</string>
-    <string name="calendars_reminder_day">1 dag innan</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d minut innan</item>
+        <item quantity="other">%1$d minuter innan</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d timme innan</item>
+        <item quantity="other">%1$d timmar innan</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d dag innan</item>
+        <item quantity="other">%1$d dagar innan</item>
+    </plurals>
+    <string name="calendars_reminder_add">Lägg till påminnelse</string>
+    <string name="calendars_reminder_remove">Ta bort påminnelse</string>
     <string name="calendars_hours_start">Arbetstid börjar</string>
     <string name="calendars_hours_finish">Arbetstid slutar</string>
     <string name="calendars_hours_invalid">Arbetstiden måste sluta efter att den börjat.</string>

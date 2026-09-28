@@ -98,9 +98,20 @@
     <string name="calendars_repeat_count">ਦੁਹਰਾਓ ਦੀ ਗਿਣਤੀ</string>
     <string name="calendars_repeat_forever">ਹਮੇਸ਼ਾ</string>
     <string name="calendars_reminder_time">ਸਮੇਂ ਸਿਰ</string>
-    <string name="calendars_reminder_minutes">%1$d ਮਿੰਟ ਪਹਿਲਾਂ</string>
-    <string name="calendars_reminder_hour">1 ਘੰਟਾ ਪਹਿਲਾਂ</string>
-    <string name="calendars_reminder_day">1 ਦਿਨ ਪਹਿਲਾਂ</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d ਮਿੰਟ ਪਹਿਲਾਂ</item>
+        <item quantity="other">%1$d ਮਿੰਟ ਪਹਿਲਾਂ</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d ਘੰਟਾ ਪਹਿਲਾਂ</item>
+        <item quantity="other">%1$d ਘੰਟੇ ਪਹਿਲਾਂ</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d ਦਿਨ ਪਹਿਲਾਂ</item>
+        <item quantity="other">%1$d ਦਿਨ ਪਹਿਲਾਂ</item>
+    </plurals>
+    <string name="calendars_reminder_add">ਰਿਮਾਈਂਡਰ ਜੋੜੋ</string>
+    <string name="calendars_reminder_remove">ਰਿਮਾਈਂਡਰ ਹਟਾਓ</string>
     <string name="calendars_hours_start">ਕੰਮ ਦੇ ਘੰਟੇ ਸ਼ੁਰੂ</string>
     <string name="calendars_hours_finish">ਕੰਮ ਦੇ ਘੰਟੇ ਸਮਾਪਤ</string>
     <string name="calendars_hours_invalid">ਕੰਮ ਦੇ ਘੰਟੇ ਸ਼ੁਰੂ ਹੋਣ ਤੋਂ ਬਾਅਦ ਸਮਾਪਤ ਹੋਣੇ ਚਾਹੀਦੇ ਹਨ।</string>

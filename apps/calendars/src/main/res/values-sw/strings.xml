@@ -98,9 +98,20 @@
     <string name="calendars_repeat_count">Idadi ya marudio</string>
     <string name="calendars_repeat_forever">Milele</string>
     <string name="calendars_reminder_time">Wakati wa tukio</string>
-    <string name="calendars_reminder_minutes">Dakika %1$d kabla</string>
-    <string name="calendars_reminder_hour">Saa 1 kabla</string>
-    <string name="calendars_reminder_day">Siku 1 kabla</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">dakika %1$d kabla</item>
+        <item quantity="other">dakika %1$d kabla</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">saa %1$d kabla</item>
+        <item quantity="other">saa %1$d kabla</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">siku %1$d kabla</item>
+        <item quantity="other">siku %1$d kabla</item>
+    </plurals>
+    <string name="calendars_reminder_add">Ongeza kikumbusho</string>
+    <string name="calendars_reminder_remove">Ondoa kikumbusho</string>
     <string name="calendars_hours_start">Saa za kazi zinaanza</string>
     <string name="calendars_hours_finish">Saa za kazi zinaisha</string>
     <string name="calendars_hours_invalid">Saa za kazi lazima ziishe baada ya kuanza.</string>

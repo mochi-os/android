@@ -102,9 +102,20 @@
     <string name="calendars_repeat_count">Adadin maimaitawa</string>
     <string name="calendars_repeat_forever">Har abada</string>
     <string name="calendars_reminder_time">A daidai lokacin</string>
-    <string name="calendars_reminder_minutes">Minti %1$d kafin</string>
-    <string name="calendars_reminder_hour">Awa 1 kafin</string>
-    <string name="calendars_reminder_day">Rana 1 kafin</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">minti %1$d kafin</item>
+        <item quantity="other">mintuna %1$d kafin</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">sa\'a %1$d kafin</item>
+        <item quantity="other">sa\'o\'i %1$d kafin</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">kwana %1$d kafin</item>
+        <item quantity="other">kwanaki %1$d kafin</item>
+    </plurals>
+    <string name="calendars_reminder_add">Ƙara tunatarwa</string>
+    <string name="calendars_reminder_remove">Cire tunatarwa</string>
     <string name="calendars_hours_start">Farkon lokacin aiki</string>
     <string name="calendars_hours_finish">Ƙarshen lokacin aiki</string>
     <string name="calendars_hours_invalid">Lokacin aiki dole ya ƙare bayan ya fara.</string>

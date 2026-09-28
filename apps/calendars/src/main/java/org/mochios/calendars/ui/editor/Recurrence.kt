@@ -147,5 +147,19 @@ private fun moment(value: String): Long? {
 private val DATE: DateTimeFormatter = DateTimeFormatter.ofPattern("yyyyMMdd")
 private val PLAIN_STAMP: DateTimeFormatter = DateTimeFormatter.ofPattern("yyyyMMdd'T'HHmmss")
 
-/** The reminders the editor offers, in minutes before the start; -1 is none. */
-val REMINDERS = listOf(-1, 0, 5, 15, 30, 60, 1440)
+/** The reminders the editor offers, in minutes before the start. */
+val REMINDER_LEADS = listOf(0, 5, 15, 30, 60, 1440)
+
+/**
+ * The choices for one of an event's reminders: those offered, and the one it
+ * has when that is not among them, as a reminder another calendar set can be.
+ */
+fun reminderLeads(current: Int): List<Int> =
+    if (current in REMINDER_LEADS) REMINDER_LEADS else (REMINDER_LEADS + current).sorted()
+
+/** The reminders a new event opens with, from the default reminder preference; -1 is none. */
+fun defaultReminders(preference: Int): List<Int> = if (preference >= 0) listOf(preference) else emptyList()
+
+/** The reminder "Add reminder" adds: the first offered the event lacks. */
+fun nextReminder(reminders: List<Int>): Int =
+    (listOf(15) + REMINDER_LEADS).firstOrNull { it !in reminders } ?: 15

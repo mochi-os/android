@@ -101,9 +101,17 @@
     <string name="calendars_repeat_count">ចំនួនដង</string>
     <string name="calendars_repeat_forever">ជារៀងរហូត</string>
     <string name="calendars_reminder_time">នៅពេលនោះ</string>
-    <string name="calendars_reminder_minutes">%1$d នាទីមុន</string>
-    <string name="calendars_reminder_hour">1 ម៉ោងមុន</string>
-    <string name="calendars_reminder_day">1 ថ្ងៃមុន</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="other">%1$d នាទីមុន</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="other">%1$d ម៉ោងមុន</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="other">%1$d ថ្ងៃមុន</item>
+    </plurals>
+    <string name="calendars_reminder_add">បន្ថែមការរំលឹក</string>
+    <string name="calendars_reminder_remove">យកការរំលឹកចេញ</string>
     <string name="calendars_hours_start">ម៉ោងចាប់ផ្តើមការងារ</string>
     <string name="calendars_hours_finish">ម៉ោងបញ្ចប់ការងារ</string>
     <string name="calendars_hours_invalid">ម៉ោងធ្វើការត្រូវតែបញ្ចប់បន្ទាប់ពីពេលចាប់ផ្តើម។</string>

@@ -102,9 +102,20 @@
     <string name="calendars_repeat_count">Forekomster</string>
     <string name="calendars_repeat_forever">For altid</string>
     <string name="calendars_reminder_time">På tidspunktet</string>
-    <string name="calendars_reminder_minutes">%1$d minutter før</string>
-    <string name="calendars_reminder_hour">1 time før</string>
-    <string name="calendars_reminder_day">1 dag før</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d minut før</item>
+        <item quantity="other">%1$d minutter før</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d time før</item>
+        <item quantity="other">%1$d timer før</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d dag før</item>
+        <item quantity="other">%1$d dage før</item>
+    </plurals>
+    <string name="calendars_reminder_add">Tilføj påmindelse</string>
+    <string name="calendars_reminder_remove">Fjern påmindelse</string>
     <string name="calendars_hours_start">Arbejdstid starter</string>
     <string name="calendars_hours_finish">Arbejdstid slutter</string>
     <string name="calendars_hours_invalid">Arbejdstiden skal slutte efter, den begynder.</string>

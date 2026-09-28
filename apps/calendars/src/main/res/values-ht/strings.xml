@@ -102,9 +102,17 @@
     <string name="calendars_repeat_count">Kantite repetisyon</string>
     <string name="calendars_repeat_forever">Pou tout tan</string>
     <string name="calendars_reminder_time">Nan lè evènman an</string>
-    <string name="calendars_reminder_minutes">%1$d minit anvan</string>
-    <string name="calendars_reminder_hour">1 èdtan anvan</string>
-    <string name="calendars_reminder_day">1 jou anvan</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="other">%1$d minit anvan</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="other">%1$d èdtan anvan</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="other">%1$d jou anvan</item>
+    </plurals>
+    <string name="calendars_reminder_add">Ajoute yon rapèl</string>
+    <string name="calendars_reminder_remove">Retire rapèl la</string>
     <string name="calendars_hours_start">Kòmansman lè travay</string>
     <string name="calendars_hours_finish">Fen lè travay</string>
     <string name="calendars_hours_invalid">Lè travay yo dwe fini apre yo kòmanse.</string>

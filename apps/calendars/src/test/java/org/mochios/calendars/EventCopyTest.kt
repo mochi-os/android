@@ -76,7 +76,7 @@ class EventCopyTest {
         assertEquals("Room 1", form.location)
         assertEquals("Notes", form.description)
         assertEquals(Zone(LONDON, LONDON), form.zone)
-        assertEquals(15, form.reminder)
+        assertEquals(listOf(15), form.reminders)
         assertEquals(Frequency.NEVER, form.recurrence.frequency)
         assertNull(form.recurrence.rule)
 
@@ -96,7 +96,7 @@ class EventCopyTest {
         assertEquals("Later", form.title)
         assertEquals(at(2026, 9, 20, 14), form.start)
         assertEquals(at(2026, 9, 20, 15), form.finish)
-        assertEquals(15, form.reminder)
+        assertEquals(listOf(15), form.reminders)
         assertEquals(Frequency.NEVER, form.recurrence.frequency)
         assertNull(form.recurrence.rule)
     }
@@ -112,7 +112,7 @@ class EventCopyTest {
         assertEquals(rule, form.recurrence.rule)
         assertEquals(Frequency.MONTHLY, form.recurrence.frequency)
         assertFalse(form.recurrence.expressible)
-        assertEquals(15, form.reminder)
+        assertEquals(listOf(15), form.reminders)
         assertEquals(rule, components(form, emptyList(), Scope.ALL).single().value("RRULE"))
     }
 
@@ -141,7 +141,7 @@ class EventCopyTest {
         assertEquals("LHR", form.location)
         assertEquals("BA 117", form.description)
         assertEquals(Zone(LONDON, "America/New_York"), form.zone)
-        assertEquals(30, form.reminder)
+        assertEquals(listOf(30), form.reminders)
         assertEquals(Frequency.NEVER, form.recurrence.frequency)
     }
 

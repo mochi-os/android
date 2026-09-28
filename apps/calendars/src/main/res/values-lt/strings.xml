@@ -103,9 +103,26 @@
     <string name="calendars_repeat_count">Pasikartojimai</string>
     <string name="calendars_repeat_forever">Visam laikui</string>
     <string name="calendars_reminder_time">Įvykio metu</string>
-    <string name="calendars_reminder_minutes">prieš %1$d min.</string>
-    <string name="calendars_reminder_hour">prieš 1 valandą</string>
-    <string name="calendars_reminder_day">prieš 1 dieną</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">prieš %1$d minutę</item>
+        <item quantity="few">prieš %1$d minutes</item>
+        <item quantity="many">prieš %1$d minutės</item>
+        <item quantity="other">prieš %1$d minučių</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">prieš %1$d valandą</item>
+        <item quantity="few">prieš %1$d valandas</item>
+        <item quantity="many">prieš %1$d valandos</item>
+        <item quantity="other">prieš %1$d valandų</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">prieš %1$d dieną</item>
+        <item quantity="few">prieš %1$d dienas</item>
+        <item quantity="many">prieš %1$d dienos</item>
+        <item quantity="other">prieš %1$d dienų</item>
+    </plurals>
+    <string name="calendars_reminder_add">Pridėti priminimą</string>
+    <string name="calendars_reminder_remove">Šalinti priminimą</string>
     <string name="calendars_hours_start">Darbo laiko pradžia</string>
     <string name="calendars_hours_finish">Darbo laiko pabaiga</string>
     <string name="calendars_hours_invalid">Darbo laikas turi baigtis po jo pradžios.</string>

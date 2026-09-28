@@ -71,14 +71,14 @@ class EventComponentsTest {
         occurrence: Long = NEXT,
         series: Long = TEN,
         recurrence: Recurrence = Recurrence(Frequency.WEEKLY),
-        reminder: Int = -1,
+        reminders: List<Int> = emptyList(),
     ) = EventForm(
         title = title,
         start = start,
         finish = finish,
         zone = Zone(LONDON, LONDON),
         recurrence = recurrence,
-        reminder = reminder,
+        reminders = reminders,
         occurrence = occurrence,
         series = series,
     )
@@ -203,12 +203,23 @@ class EventComponentsTest {
     }
 
     @Test
-    fun `a reminder becomes the event's only VALARM`() {
+    fun `each reminder becomes a VALARM, replacing the ones the event had`() {
         val carried = master().let { it.copy(components = listOf(CalendarsMapping.alarm(60, "Stand-up"))) }
-        val tree = components(form(reminder = 15), listOf(carried), Scope.ALL)
-        val alarms = tree[0].components.filter { it.name == "VALARM" }
-        assertEquals(1, alarms.size)
-        assertEquals("-PT15M", alarms.single().value("TRIGGER"))
+        val tree = components(form(reminders = listOf(15, 1440)), listOf(carried), Scope.ALL)
+        val triggers = tree[0].components.filter { it.name == "VALARM" }.map { it.value("TRIGGER") }
+        assertEquals(listOf("-PT15M", "-PT1440M"), triggers)
+    }
+
+    @Test
+    fun `an event's every reminder survives a save that changed something else`() {
+        val carried = master().copy(
+            components = listOf(CalendarsMapping.alarm(10, "Stand-up"), CalendarsMapping.alarm(60, "Stand-up")),
+        )
+        val read = draft(carried, LONDON)
+        assertEquals(listOf(10, 60), read.reminders)
+        val tree = components(read.copy(title = "Renamed"), listOf(carried), Scope.ALL)
+        val triggers = tree[0].components.filter { it.name == "VALARM" }.map { it.value("TRIGGER") }
+        assertEquals(listOf("-PT10M", "-PT60M"), triggers)
     }
 
     @Test
@@ -223,25 +234,27 @@ class EventComponentsTest {
                 alarm("PT10M"),
             ),
         )
-        val tree = components(form(reminder = 15), listOf(carried), Scope.ALL)
+        val tree = components(form(reminders = listOf(15)), listOf(carried), Scope.ALL)
         val triggers = tree[0].components.filter { it.name == "VALARM" }.map { it.value("TRIGGER") }
         assertEquals(listOf("-PT30M", "20260922T090000Z", "PT10M", "-PT15M"), triggers)
     }
 
     @Test
-    fun `the reminder is read from the first alarm the setting can say`() {
+    fun `every alarm the setting can say is read, once each`() {
         fun alarm(trigger: String, parameter: String? = null, argument: String? = null) =
             EventComponent("VALARM", listOf(property("TRIGGER", trigger, parameter, argument)))
-        val both = master().copy(components = listOf(alarm("-PT15M", "RELATED", "END"), alarm("-PT30M")))
-        assertEquals(30, draft(both, LONDON).reminder)
+        val all = master().copy(
+            components = listOf(alarm("-PT15M", "RELATED", "END"), alarm("-PT30M"), alarm("-P1D"), alarm("-PT30M")),
+        )
+        assertEquals(listOf(30, 1440), draft(all, LONDON).reminders)
         val end = master().copy(components = listOf(alarm("-PT15M", "RELATED", "END")))
-        assertEquals(-1, draft(end, LONDON).reminder)
+        assertEquals(emptyList<Int>(), draft(end, LONDON).reminders)
     }
 
     @Test
     fun `no reminder leaves no VALARM`() {
         val carried = master().let { it.copy(components = listOf(CalendarsMapping.alarm(60, "Stand-up"))) }
-        val tree = components(form(reminder = -1), listOf(carried), Scope.ALL)
+        val tree = components(form(reminders = emptyList()), listOf(carried), Scope.ALL)
         assertTrue(tree[0].components.none { it.name == "VALARM" })
     }
 

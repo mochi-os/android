@@ -98,9 +98,20 @@
     <string name="calendars_repeat_count">פֿאָרקומענישן</string>
     <string name="calendars_repeat_forever">אויף שטענדיק</string>
     <string name="calendars_reminder_time">אין דער צײַט</string>
-    <string name="calendars_reminder_minutes">%1$d מינוט פֿריִער</string>
-    <string name="calendars_reminder_hour">1 שעה פֿריִער</string>
-    <string name="calendars_reminder_day">1 טאָג פֿריִער</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d מינוט פֿריִער</item>
+        <item quantity="other">%1$d מינוט פֿריִער</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d שעה פֿריִער</item>
+        <item quantity="other">%1$d שעה פֿריִער</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d טאָג פֿריִער</item>
+        <item quantity="other">%1$d טעג פֿריִער</item>
+    </plurals>
+    <string name="calendars_reminder_add">צולייגן דערמאָנונג</string>
+    <string name="calendars_reminder_remove">אַראָפּנעמען דערמאָנונג</string>
     <string name="calendars_hours_start">אָנהייב פֿון די אַרבעטס־שעהען</string>
     <string name="calendars_hours_finish">סוף פֿון די אַרבעטס־שעהען</string>
     <string name="calendars_hours_invalid">די אַרבעטס־שעהען מוזן זיך ענדיקן נאָך זייער אָנהייב.</string>

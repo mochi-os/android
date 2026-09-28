@@ -98,9 +98,20 @@
     <string name="calendars_repeat_count">Bilang ng pag-ulit</string>
     <string name="calendars_repeat_forever">Habambuhay</string>
     <string name="calendars_reminder_time">Sa mismong oras</string>
-    <string name="calendars_reminder_minutes">%1$d minuto bago</string>
-    <string name="calendars_reminder_hour">1 oras bago</string>
-    <string name="calendars_reminder_day">1 araw bago</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d minuto bago</item>
+        <item quantity="other">%1$d na minuto bago</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d oras bago</item>
+        <item quantity="other">%1$d na oras bago</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d araw bago</item>
+        <item quantity="other">%1$d na araw bago</item>
+    </plurals>
+    <string name="calendars_reminder_add">Magdagdag ng paalala</string>
+    <string name="calendars_reminder_remove">Alisin ang paalala</string>
     <string name="calendars_hours_start">Simula ng oras ng trabaho</string>
     <string name="calendars_hours_finish">Katapusan ng oras ng trabaho</string>
     <string name="calendars_hours_invalid">Dapat matapos ang oras ng trabaho pagkatapos ng simula nito.</string>

@@ -28,8 +28,8 @@ enum class Scope {
 
 /**
  * What the editor's fields say, as far as building an event's tree needs it.
- * [start] and [finish] are epoch seconds and [reminder] minutes before the
- * start, -1 for none. [zone] is the zone each end is written in: a flight is
+ * [start] and [finish] are epoch seconds and [reminders] each reminder the
+ * editor can say, in minutes before the start. [zone] is the zone each end is written in: a flight is
  * 10:00 Europe/London to 13:00 America/New_York, though most events have the
  * same zone at both ends.
  *
@@ -47,7 +47,7 @@ data class EventForm(
     val location: String = "",
     val description: String = "",
     val recurrence: Recurrence = Recurrence(),
-    val reminder: Int = -1,
+    val reminders: List<Int> = emptyList(),
     val occurrence: Long = 0,
     val series: Long = 0,
 )
@@ -206,7 +206,7 @@ fun draft(component: EventComponent, user: String, occurrence: Long = 0): EventF
         location = component.value("LOCATION"),
         description = component.value("DESCRIPTION"),
         recurrence = recurrence(component.value("RRULE")),
-        reminder = alarms(component).firstNotNullOfOrNull(::alarmMinutes) ?: -1,
+        reminders = alarms(component).mapNotNull(::alarmMinutes).distinct(),
     )
     return if (occurrence > 0 && start != 0L) shifted(form, occurrence - start) else form
 }
@@ -255,7 +255,7 @@ fun copied(carried: List<EventComponent>, occurrence: Long, scope: Scope, user: 
     val own = if (override != null) draft(override, user) else draft(master, user, occurrence)
     return own.copy(
         recurrence = Recurrence(),
-        reminder = if (own.reminder >= 0) own.reminder else whole.reminder,
+        reminders = own.reminders.ifEmpty { whole.reminders },
     )
 }
 
@@ -285,7 +285,7 @@ fun copied(instance: Instance, user: String, reminder: Int): EventForm {
         zone = Zone(begins, ends),
         location = instance.location,
         description = instance.description,
-        reminder = reminder,
+        reminders = defaultReminders(reminder),
     )
 }
 
@@ -523,10 +523,6 @@ private fun component(
     val nested = carried?.components?.filterNot {
         it.name.equals("VALARM", ignoreCase = true) && (it.property("TRIGGER") == null || alarmMinutes(it) != null)
     }.orEmpty()
-    val alarms = if (form.reminder >= 0) {
-        listOf(CalendarsMapping.alarm(form.reminder, form.title.trim()))
-    } else {
-        emptyList()
-    }
+    val alarms = form.reminders.distinct().map { CalendarsMapping.alarm(it, form.title.trim()) }
     return EventComponent("VEVENT", properties, nested + alarms)
 }

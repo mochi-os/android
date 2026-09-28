@@ -106,9 +106,32 @@
     <string name="calendars_repeat_count">التكرارات</string>
     <string name="calendars_repeat_forever">إلى الأبد</string>
     <string name="calendars_reminder_time">في الموعد</string>
-    <string name="calendars_reminder_minutes">قبل %1$d دقيقة</string>
-    <string name="calendars_reminder_hour">قبل ساعة واحدة</string>
-    <string name="calendars_reminder_day">قبل يوم واحد</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="zero">قبل %1$d دقائق</item>
+        <item quantity="one">قبل دقيقة واحدة</item>
+        <item quantity="two">قبل دقيقتين</item>
+        <item quantity="few">قبل %1$d دقائق</item>
+        <item quantity="many">قبل %1$d دقيقة</item>
+        <item quantity="other">قبل %1$d دقيقة</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="zero">قبل %1$d ساعات</item>
+        <item quantity="one">قبل ساعة واحدة</item>
+        <item quantity="two">قبل ساعتين</item>
+        <item quantity="few">قبل %1$d ساعات</item>
+        <item quantity="many">قبل %1$d ساعة</item>
+        <item quantity="other">قبل %1$d ساعة</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="zero">قبل %1$d أيام</item>
+        <item quantity="one">قبل يوم واحد</item>
+        <item quantity="two">قبل يومين</item>
+        <item quantity="few">قبل %1$d أيام</item>
+        <item quantity="many">قبل %1$d يومًا</item>
+        <item quantity="other">قبل %1$d يوم</item>
+    </plurals>
+    <string name="calendars_reminder_add">إضافة تذكير</string>
+    <string name="calendars_reminder_remove">إزالة التذكير</string>
     <string name="calendars_hours_start">بداية ساعات العمل</string>
     <string name="calendars_hours_finish">نهاية ساعات العمل</string>
     <string name="calendars_hours_invalid">يجب أن تنتهي ساعات العمل بعد بدايتها.</string>

@@ -102,9 +102,20 @@
     <string name="calendars_repeat_count">Mboy jey oiko</string>
     <string name="calendars_repeat_forever">Tapiaite</string>
     <string name="calendars_reminder_time">Aravo hápe</string>
-    <string name="calendars_reminder_minutes">%1$d aravo\'i mboyve</string>
-    <string name="calendars_reminder_hour">1 aravo mboyve</string>
-    <string name="calendars_reminder_day">1 ára mboyve</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d aravo\'i mboyve</item>
+        <item quantity="other">%1$d aravo\'i mboyve</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d aravo mboyve</item>
+        <item quantity="other">%1$d aravo mboyve</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d ára mboyve</item>
+        <item quantity="other">%1$d ára mboyve</item>
+    </plurals>
+    <string name="calendars_reminder_add">Embojuaju mandu\'ara</string>
+    <string name="calendars_reminder_remove">Embogue mandu\'ara</string>
     <string name="calendars_hours_start">Mba\'apo aravo ñepyrũ</string>
     <string name="calendars_hours_finish">Mba\'apo aravo paha</string>
     <string name="calendars_hours_invalid">Mba\'apo aravo opa va\'erã oñepyrũ rire.</string>

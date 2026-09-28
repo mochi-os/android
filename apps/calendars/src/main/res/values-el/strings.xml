@@ -102,9 +102,20 @@
     <string name="calendars_repeat_count">Επαναλήψεις</string>
     <string name="calendars_repeat_forever">Για πάντα</string>
     <string name="calendars_reminder_time">Την ώρα του συμβάντος</string>
-    <string name="calendars_reminder_minutes">%1$d λεπτά πριν</string>
-    <string name="calendars_reminder_hour">1 ώρα πριν</string>
-    <string name="calendars_reminder_day">1 ημέρα πριν</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d λεπτό πριν</item>
+        <item quantity="other">%1$d λεπτά πριν</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d ώρα πριν</item>
+        <item quantity="other">%1$d ώρες πριν</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d ημέρα πριν</item>
+        <item quantity="other">%1$d ημέρες πριν</item>
+    </plurals>
+    <string name="calendars_reminder_add">Προσθήκη υπενθύμισης</string>
+    <string name="calendars_reminder_remove">Αφαίρεση υπενθύμισης</string>
     <string name="calendars_hours_start">Έναρξη ωραρίου εργασίας</string>
     <string name="calendars_hours_finish">Λήξη ωραρίου εργασίας</string>
     <string name="calendars_hours_invalid">Το ωράριο εργασίας πρέπει να λήγει μετά την έναρξή του.</string>

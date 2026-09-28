@@ -67,7 +67,7 @@ data class EditorUiState(
     val location: String = "",
     val description: String = "",
     val recurrence: Recurrence = Recurrence(),
-    val reminder: Int = 15,
+    val reminders: List<Int> = emptyList(),
     val etag: String = "",
     val recurring: Boolean = false,
     /**
@@ -175,7 +175,7 @@ class EventEditViewModel @Inject constructor(
                     start = begins,
                     finish = begins + length,
                     zone = memory.zone,
-                    reminder = preferences?.reminder ?: 15,
+                    reminders = defaultReminders(preferences?.reminder ?: 15),
                     isLoading = false,
                 )
                 return@launch
@@ -236,7 +236,7 @@ class EventEditViewModel @Inject constructor(
             location = form.location,
             description = form.description,
             recurrence = form.recurrence,
-            reminder = form.reminder,
+            reminders = form.reminders,
             isLoading = false,
         )
     }
@@ -308,7 +308,7 @@ class EventEditViewModel @Inject constructor(
             location = shown.value("LOCATION"),
             description = shown.value("DESCRIPTION"),
             recurrence = recurrence(master?.value("RRULE")),
-            reminder = alarms.firstNotNullOfOrNull(::alarmMinutes) ?: -1,
+            reminders = alarms.mapNotNull(::alarmMinutes).distinct(),
             etag = loaded.etag,
             recurring = master?.property("RRULE") != null || master?.property("RDATE") != null,
             series = master?.property("DTSTART")?.let { CalendarsMapping.moment(it) / 1000 } ?: 0,
@@ -326,7 +326,13 @@ class EventEditViewModel @Inject constructor(
 
     fun description(value: String) = edit { copy(description = value) }
 
-    fun reminder(value: Int) = edit { copy(reminder = value) }
+    /** Sets the reminder at [index] to [minutes] before the start. */
+    fun reminder(index: Int, minutes: Int) =
+        edit { copy(reminders = reminders.mapIndexed { at, each -> if (at == index) minutes else each }) }
+
+    fun addReminder() = edit { copy(reminders = reminders + nextReminder(reminders)) }
+
+    fun removeReminder(index: Int) = edit { copy(reminders = reminders.filterIndexed { at, _ -> at != index }) }
 
     fun recurrence(value: Recurrence) = edit { copy(recurrence = recurrence.revised(value)) }
 
@@ -526,7 +532,7 @@ class EventEditViewModel @Inject constructor(
         location = state.location,
         description = state.description,
         recurrence = state.recurrence,
-        reminder = state.reminder,
+        reminders = state.reminders,
         occurrence = state.occurrence,
         series = state.series,
     )

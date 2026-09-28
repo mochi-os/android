@@ -98,9 +98,20 @@
     <string name="calendars_repeat_count">Шумораи такрорҳо</string>
     <string name="calendars_repeat_forever">Ҳамеша</string>
     <string name="calendars_reminder_time">Дар вақти рӯйдод</string>
-    <string name="calendars_reminder_minutes">%1$d дақиқа пеш</string>
-    <string name="calendars_reminder_hour">1 соат пеш</string>
-    <string name="calendars_reminder_day">1 рӯз пеш</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d дақиқа пештар</item>
+        <item quantity="other">%1$d дақиқа пештар</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d соат пештар</item>
+        <item quantity="other">%1$d соат пештар</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d рӯз пештар</item>
+        <item quantity="other">%1$d рӯз пештар</item>
+    </plurals>
+    <string name="calendars_reminder_add">Илова кардани ёдоварӣ</string>
+    <string name="calendars_reminder_remove">Хориҷ кардани ёдоварӣ</string>
     <string name="calendars_hours_start">Оғози вақти корӣ</string>
     <string name="calendars_hours_finish">Анҷоми вақти корӣ</string>
     <string name="calendars_hours_invalid">Вақти корӣ бояд пас аз оғозаш анҷом ёбад.</string>

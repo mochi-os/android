@@ -102,9 +102,20 @@
     <string name="calendars_repeat_count">Baay\'ina irra deebi\'uu</string>
     <string name="calendars_repeat_forever">Bara baraan</string>
     <string name="calendars_reminder_time">Yeroo taateen jalqabu</string>
-    <string name="calendars_reminder_minutes">daqiiqaa %1$d dura</string>
-    <string name="calendars_reminder_hour">sa\'aatii 1 dura</string>
-    <string name="calendars_reminder_day">guyyaa 1 dura</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">daqiiqaa %1$d dura</item>
+        <item quantity="other">daqiiqaa %1$d dura</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">sa\'aatii %1$d dura</item>
+        <item quantity="other">sa\'aatii %1$d dura</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">guyyaa %1$d dura</item>
+        <item quantity="other">guyyoota %1$d dura</item>
+    </plurals>
+    <string name="calendars_reminder_add">Yaadachiisa dabali</string>
+    <string name="calendars_reminder_remove">Yaadachiisa haqi</string>
     <string name="calendars_hours_start">Jalqaba sa\'aatii hojii</string>
     <string name="calendars_hours_finish">Xumura sa\'aatii hojii</string>
     <string name="calendars_hours_invalid">Sa\'aatiin hojii erga jalqabee booda xumuramuu qaba.</string>

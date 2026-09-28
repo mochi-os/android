@@ -102,9 +102,20 @@
     <string name="calendars_repeat_count">पुनरावृत्तिको सङ्ख्या</string>
     <string name="calendars_repeat_forever">सधैंभरि</string>
     <string name="calendars_reminder_time">कार्यक्रमको समयमा</string>
-    <string name="calendars_reminder_minutes">%1$d मिनेट अघि</string>
-    <string name="calendars_reminder_hour">1 घण्टा अघि</string>
-    <string name="calendars_reminder_day">1 दिन अघि</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d मिनेट अघि</item>
+        <item quantity="other">%1$d मिनेट अघि</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d घण्टा अघि</item>
+        <item quantity="other">%1$d घण्टा अघि</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d दिन अघि</item>
+        <item quantity="other">%1$d दिन अघि</item>
+    </plurals>
+    <string name="calendars_reminder_add">सम्झना थप्नुहोस्</string>
+    <string name="calendars_reminder_remove">सम्झना हटाउनुहोस्</string>
     <string name="calendars_hours_start">कार्य समयको सुरु</string>
     <string name="calendars_hours_finish">कार्य समयको अन्त्य</string>
     <string name="calendars_hours_invalid">कामको समय सुरु भएपछि सकिनुपर्छ।</string>

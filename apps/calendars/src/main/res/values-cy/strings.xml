@@ -106,9 +106,32 @@
     <string name="calendars_repeat_count">Achlysuron</string>
     <string name="calendars_repeat_forever">Am byth</string>
     <string name="calendars_reminder_time">Ar yr adeg</string>
-    <string name="calendars_reminder_minutes">%1$d munud ynghynt</string>
-    <string name="calendars_reminder_hour">1 awr ynghynt</string>
-    <string name="calendars_reminder_day">1 diwrnod ynghynt</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="zero">%1$d munud ynghynt</item>
+        <item quantity="one">%1$d munud ynghynt</item>
+        <item quantity="two">%1$d funud ynghynt</item>
+        <item quantity="few">%1$d munud ynghynt</item>
+        <item quantity="many">%1$d munud ynghynt</item>
+        <item quantity="other">%1$d munud ynghynt</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="zero">%1$d awr ynghynt</item>
+        <item quantity="one">%1$d awr ynghynt</item>
+        <item quantity="two">%1$d awr ynghynt</item>
+        <item quantity="few">%1$d awr ynghynt</item>
+        <item quantity="many">%1$d awr ynghynt</item>
+        <item quantity="other">%1$d awr ynghynt</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="zero">%1$d diwrnod ynghynt</item>
+        <item quantity="one">%1$d diwrnod ynghynt</item>
+        <item quantity="two">%1$d ddiwrnod ynghynt</item>
+        <item quantity="few">%1$d diwrnod ynghynt</item>
+        <item quantity="many">%1$d diwrnod ynghynt</item>
+        <item quantity="other">%1$d diwrnod ynghynt</item>
+    </plurals>
+    <string name="calendars_reminder_add">Ychwanegu nodyn atgoffa</string>
+    <string name="calendars_reminder_remove">Tynnu nodyn atgoffa</string>
     <string name="calendars_hours_start">Dechrau oriau gwaith</string>
     <string name="calendars_hours_finish">Diwedd oriau gwaith</string>
     <string name="calendars_hours_invalid">Rhaid i oriau gwaith ddod i ben ar ôl iddynt ddechrau.</string>

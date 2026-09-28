@@ -14,6 +14,9 @@ import org.mochios.android.sync.property
 import org.mochios.calendars.ui.editor.Frequency
 import org.mochios.calendars.ui.editor.Recurrence
 import org.mochios.calendars.ui.editor.alarmMinutes
+import org.mochios.calendars.ui.editor.defaultReminders
+import org.mochios.calendars.ui.editor.nextReminder
+import org.mochios.calendars.ui.editor.reminderLeads
 import org.mochios.calendars.ui.editor.minutes
 import org.mochios.calendars.ui.editor.recurrence
 
@@ -183,6 +186,26 @@ class RecurrenceTest {
         assertNull("at a fixed time", alarmMinutes(alarm("20260922T090000Z", "VALUE", "DATE-TIME")))
         assertNull("after the start", alarmMinutes(alarm("PT10M")))
         assertNull("no trigger", alarmMinutes(EventComponent("VALARM")))
+    }
+
+    @Test
+    fun `a reminder set elsewhere to a time not offered joins the choices in its place`() {
+        assertEquals(listOf(0, 5, 15, 30, 60, 1440), reminderLeads(15))
+        assertEquals(listOf(0, 5, 10, 15, 30, 60, 1440), reminderLeads(10))
+        assertEquals(listOf(0, 5, 15, 30, 60, 1440, 2880), reminderLeads(2880))
+    }
+
+    @Test
+    fun `adding a reminder adds the first offered the event lacks`() {
+        assertEquals(15, nextReminder(emptyList()))
+        assertEquals(0, nextReminder(listOf(15)))
+        assertEquals(30, nextReminder(listOf(15, 0, 5)))
+    }
+
+    @Test
+    fun `a new event opens with the default reminder, or none`() {
+        assertEquals(listOf(15), defaultReminders(15))
+        assertEquals(emptyList<Int>(), defaultReminders(-1))
     }
 
     @Test

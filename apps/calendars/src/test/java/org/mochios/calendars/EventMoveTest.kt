@@ -92,7 +92,7 @@ class EventMoveTest {
         assertEquals(FIRST, form.start)
         assertEquals(FIRST + 3600, form.finish)
         assertEquals(LONDON, form.zone.start)
-        assertEquals(15, form.reminder)
+        assertEquals(listOf(15), form.reminders)
         assertEquals("FREQ=DAILY", form.recurrence.rule())
     }
 

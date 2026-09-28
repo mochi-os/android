@@ -98,9 +98,26 @@
     <string name="calendars_repeat_count">Ponovitve</string>
     <string name="calendars_repeat_forever">Za vedno</string>
     <string name="calendars_reminder_time">Ob času dogodka</string>
-    <string name="calendars_reminder_minutes">%1$d minut prej</string>
-    <string name="calendars_reminder_hour">1 uro prej</string>
-    <string name="calendars_reminder_day">1 dan prej</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d minuto prej</item>
+        <item quantity="two">%1$d minuti prej</item>
+        <item quantity="few">%1$d minute prej</item>
+        <item quantity="other">%1$d minut prej</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d uro prej</item>
+        <item quantity="two">%1$d uri prej</item>
+        <item quantity="few">%1$d ure prej</item>
+        <item quantity="other">%1$d ur prej</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d dan prej</item>
+        <item quantity="two">%1$d dneva prej</item>
+        <item quantity="few">%1$d dni prej</item>
+        <item quantity="other">%1$d dni prej</item>
+    </plurals>
+    <string name="calendars_reminder_add">Dodaj opomnik</string>
+    <string name="calendars_reminder_remove">Odstrani opomnik</string>
     <string name="calendars_hours_start">Začetek delovnega časa</string>
     <string name="calendars_hours_finish">Konec delovnega časa</string>
     <string name="calendars_hours_invalid">Delovni čas se mora končati po svojem začetku.</string>

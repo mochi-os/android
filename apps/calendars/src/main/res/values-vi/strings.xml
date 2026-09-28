@@ -98,9 +98,17 @@
     <string name="calendars_repeat_count">Số lần lặp</string>
     <string name="calendars_repeat_forever">Mãi mãi</string>
     <string name="calendars_reminder_time">Đúng giờ diễn ra</string>
-    <string name="calendars_reminder_minutes">Trước %1$d phút</string>
-    <string name="calendars_reminder_hour">Trước 1 giờ</string>
-    <string name="calendars_reminder_day">Trước 1 ngày</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="other">%1$d phút trước</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="other">%1$d giờ trước</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="other">%1$d ngày trước</item>
+    </plurals>
+    <string name="calendars_reminder_add">Thêm lời nhắc</string>
+    <string name="calendars_reminder_remove">Xoá lời nhắc</string>
     <string name="calendars_hours_start">Giờ làm việc bắt đầu</string>
     <string name="calendars_hours_finish">Giờ làm việc kết thúc</string>
     <string name="calendars_hours_invalid">Giờ làm việc phải kết thúc sau khi bắt đầu.</string>

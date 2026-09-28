@@ -98,9 +98,26 @@
     <string name="calendars_repeat_count">Число повторов</string>
     <string name="calendars_repeat_forever">Всегда</string>
     <string name="calendars_reminder_time">В момент события</string>
-    <string name="calendars_reminder_minutes">За %1$d минут</string>
-    <string name="calendars_reminder_hour">За 1 час</string>
-    <string name="calendars_reminder_day">За 1 день</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">за %1$d минуту</item>
+        <item quantity="few">за %1$d минуты</item>
+        <item quantity="many">за %1$d минут</item>
+        <item quantity="other">за %1$d минуты</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">за %1$d час</item>
+        <item quantity="few">за %1$d часа</item>
+        <item quantity="many">за %1$d часов</item>
+        <item quantity="other">за %1$d часа</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">за %1$d день</item>
+        <item quantity="few">за %1$d дня</item>
+        <item quantity="many">за %1$d дней</item>
+        <item quantity="other">за %1$d дня</item>
+    </plurals>
+    <string name="calendars_reminder_add">Добавить напоминание</string>
+    <string name="calendars_reminder_remove">Удалить напоминание</string>
     <string name="calendars_hours_start">Начало рабочего времени</string>
     <string name="calendars_hours_finish">Конец рабочего времени</string>
     <string name="calendars_hours_invalid">Рабочее время должно заканчиваться после его начала.</string>

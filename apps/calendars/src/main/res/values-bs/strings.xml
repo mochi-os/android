@@ -103,9 +103,23 @@
     <string name="calendars_repeat_count">Pojavljivanja</string>
     <string name="calendars_repeat_forever">Zauvijek</string>
     <string name="calendars_reminder_time">U vrijeme događaja</string>
-    <string name="calendars_reminder_minutes">%1$d minuta ranije</string>
-    <string name="calendars_reminder_hour">1 sat ranije</string>
-    <string name="calendars_reminder_day">1 dan ranije</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d minuta prije</item>
+        <item quantity="few">%1$d minute prije</item>
+        <item quantity="other">%1$d minuta prije</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d sat prije</item>
+        <item quantity="few">%1$d sata prije</item>
+        <item quantity="other">%1$d sati prije</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d dan prije</item>
+        <item quantity="few">%1$d dana prije</item>
+        <item quantity="other">%1$d dana prije</item>
+    </plurals>
+    <string name="calendars_reminder_add">Dodaj podsjetnik</string>
+    <string name="calendars_reminder_remove">Ukloni podsjetnik</string>
     <string name="calendars_hours_start">Početak radnog vremena</string>
     <string name="calendars_hours_finish">Kraj radnog vremena</string>
     <string name="calendars_hours_invalid">Radno vrijeme mora završiti nakon što počne.</string>

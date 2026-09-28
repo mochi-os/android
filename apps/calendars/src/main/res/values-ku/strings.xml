@@ -102,9 +102,20 @@
     <string name="calendars_repeat_count">Hejmara caran</string>
     <string name="calendars_repeat_forever">Herdem</string>
     <string name="calendars_reminder_time">Di dema bûyerê de</string>
-    <string name="calendars_reminder_minutes">%1$d xulek berê</string>
-    <string name="calendars_reminder_hour">1 saet berê</string>
-    <string name="calendars_reminder_day">1 roj berê</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d xulek berê</item>
+        <item quantity="other">%1$d xulek berê</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d saet berê</item>
+        <item quantity="other">%1$d saet berê</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d roj berê</item>
+        <item quantity="other">%1$d roj berê</item>
+    </plurals>
+    <string name="calendars_reminder_add">Bîranînê zêde bike</string>
+    <string name="calendars_reminder_remove">Bîranînê rake</string>
     <string name="calendars_hours_start">Destpêka saetên kar</string>
     <string name="calendars_hours_finish">Dawiya saetên kar</string>
     <string name="calendars_hours_invalid">Divê saetên xebatê piştî destpêka wan biqedin.</string>

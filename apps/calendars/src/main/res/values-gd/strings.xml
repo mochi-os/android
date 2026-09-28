@@ -104,9 +104,26 @@
     <string name="calendars_repeat_count">Tursan</string>
     <string name="calendars_repeat_forever">Gu bràth</string>
     <string name="calendars_reminder_time">Aig an àm</string>
-    <string name="calendars_reminder_minutes">%1$d mionaid ro làimh</string>
-    <string name="calendars_reminder_hour">1 uair ro làimh</string>
-    <string name="calendars_reminder_day">1 latha ro làimh</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d mhionaid roimhe</item>
+        <item quantity="two">%1$d mhionaid roimhe</item>
+        <item quantity="few">%1$d mionaidean roimhe</item>
+        <item quantity="other">%1$d mionaid roimhe</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d uair roimhe</item>
+        <item quantity="two">%1$d uair roimhe</item>
+        <item quantity="few">%1$d uairean roimhe</item>
+        <item quantity="other">%1$d uair roimhe</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d latha roimhe</item>
+        <item quantity="two">%1$d latha roimhe</item>
+        <item quantity="few">%1$d làithean roimhe</item>
+        <item quantity="other">%1$d latha roimhe</item>
+    </plurals>
+    <string name="calendars_reminder_add">Cuir cuimhneachan ris</string>
+    <string name="calendars_reminder_remove">Thoir air falbh an cuimhneachan</string>
     <string name="calendars_hours_start">Toiseach uairean obrach</string>
     <string name="calendars_hours_finish">Deireadh uairean obrach</string>
     <string name="calendars_hours_invalid">Feumaidh na h-uairean obrach crìochnachadh às dèidh dhaibh tòiseachadh.</string>

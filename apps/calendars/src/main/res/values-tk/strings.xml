@@ -98,9 +98,20 @@
     <string name="calendars_repeat_count">Gaýtalanma sany</string>
     <string name="calendars_repeat_forever">Hemişe</string>
     <string name="calendars_reminder_time">Wagty gelende</string>
-    <string name="calendars_reminder_minutes">%1$d minut öň</string>
-    <string name="calendars_reminder_hour">1 sagat öň</string>
-    <string name="calendars_reminder_day">1 gün öň</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d minut öň</item>
+        <item quantity="other">%1$d minut öň</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d sagat öň</item>
+        <item quantity="other">%1$d sagat öň</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d gün öň</item>
+        <item quantity="other">%1$d gün öň</item>
+    </plurals>
+    <string name="calendars_reminder_add">Ýatladyş goş</string>
+    <string name="calendars_reminder_remove">Ýatladyşy aýyr</string>
     <string name="calendars_hours_start">Iş wagtynyň başlangyjy</string>
     <string name="calendars_hours_finish">Iş wagtynyň soňy</string>
     <string name="calendars_hours_invalid">Iş wagty başlanyndan soň gutarmaly.</string>
