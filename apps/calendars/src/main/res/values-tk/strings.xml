@@ -63,6 +63,9 @@
     <string name="calendars_poll">Häzir barla</string>
     <string name="calendars_delete_title">%1$s pozulsynmy?</string>
     <string name="calendars_delete_message">Onuň wakalary hem onuň bilen bile pozulýar.</string>
+    <string name="calendars_remove">Aýyr</string>
+    <string name="calendars_remove_title">%1$s Mochi-den aýrylsynmy?</string>
+    <string name="calendars_remove_message">Onuň çäreleri asyl senenamada galýar.</string>
     <string name="calendars_today">Şu gün</string>
     <string name="calendars_view_week">Hepde</string>
     <string name="calendars_view_multiweek">Birnäçe hepde</string>

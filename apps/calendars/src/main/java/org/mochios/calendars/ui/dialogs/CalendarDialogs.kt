@@ -335,7 +335,11 @@ fun ScopeDialog(
     )
 }
 
-/** Confirms deleting a calendar, saying that its events go with it. */
+/**
+ * Confirms deleting a calendar, saying that its events go with it. A linked or
+ * subscribed calendar is only removed from Mochi: the original and its events
+ * stay where they are.
+ */
 @Composable
 fun DeleteCalendarDialog(
     calendar: Calendar,
@@ -343,11 +347,16 @@ fun DeleteCalendarDialog(
     onDismiss: () -> Unit,
     onConfirm: () -> Unit,
 ) {
+    val detached = calendar.linked || calendar.subscription
     MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = stringResource(R.string.calendars_delete_title, calendar.name),
-        text = stringResource(R.string.calendars_delete_message),
-        confirmText = stringResource(R.string.calendars_delete),
+        title = if (detached) {
+            stringResource(R.string.calendars_remove_title, calendar.name)
+        } else {
+            stringResource(R.string.calendars_delete_title, calendar.name)
+        },
+        text = stringResource(if (detached) R.string.calendars_remove_message else R.string.calendars_delete_message),
+        confirmText = stringResource(if (detached) R.string.calendars_remove else R.string.calendars_delete),
         onConfirm = onConfirm,
         confirmLoading = deleting,
         destructive = true,

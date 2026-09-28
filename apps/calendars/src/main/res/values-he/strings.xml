@@ -63,6 +63,9 @@
     <string name="calendars_poll">בדוק עכשיו</string>
     <string name="calendars_delete_title">למחוק את %1$s?</string>
     <string name="calendars_delete_message">האירועים שלו נמחקים יחד איתו.</string>
+    <string name="calendars_remove">הסר</string>
+    <string name="calendars_remove_title">להסיר את %1$s מ-Mochi?</string>
+    <string name="calendars_remove_message">האירועים שלו נשארים ביומן המקורי.</string>
     <plurals name="calendars_polled">
         <item quantity="one">אירוע %1$d עודכן</item>
         <item quantity="two">%1$d אירועים עודכנו</item>

@@ -61,6 +61,9 @@
     <string name="calendars_poll">即刻更新</string>
     <string name="calendars_delete_title">刪除 %1$s？</string>
     <string name="calendars_delete_message">入面嘅活動都會一齊刪除。</string>
+    <string name="calendars_remove">移除</string>
+    <string name="calendars_remove_title">要將 %1$s 由 Mochi 移除？</string>
+    <string name="calendars_remove_message">入面嘅活動會留喺原本嘅日曆。</string>
     <string name="calendars_today">今日</string>
     <string name="calendars_view_day">日</string>
     <string name="calendars_view_week">週</string>

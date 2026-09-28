@@ -63,6 +63,9 @@
     <string name="calendars_poll">Niha kontrol bike</string>
     <string name="calendars_delete_title">%1$s jê bibe?</string>
     <string name="calendars_delete_message">Bûyerên wê jî bi wê re têne jêbirin.</string>
+    <string name="calendars_remove">Rake</string>
+    <string name="calendars_remove_title">%1$s ji Mochi were rakirin?</string>
+    <string name="calendars_remove_message">Bûyerên wê di salnameya eslî de dimînin.</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d bûyer hate nûkirin</item>
         <item quantity="other">%1$d bûyer hatin nûkirin</item>

@@ -63,6 +63,9 @@
     <string name="calendars_poll">지금 확인</string>
     <string name="calendars_delete_title">%1$s을(를) 삭제할까요?</string>
     <string name="calendars_delete_message">포함된 일정도 함께 삭제돼요.</string>
+    <string name="calendars_remove">제거</string>
+    <string name="calendars_remove_title">%1$s을(를) Mochi에서 제거할까요?</string>
+    <string name="calendars_remove_message">일정은 원래 캘린더에 그대로 남아 있어요.</string>
     <plurals name="calendars_polled">
         <item quantity="other">일정 %1$d개를 업데이트했어요</item>
     </plurals>

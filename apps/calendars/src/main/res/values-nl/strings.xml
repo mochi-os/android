@@ -62,6 +62,9 @@
     <string name="calendars_poll">Nu ophalen</string>
     <string name="calendars_delete_title">%1$s verwijderen?</string>
     <string name="calendars_delete_message">De afspraken erin worden mee verwijderd.</string>
+    <string name="calendars_remove">Verwijderen</string>
+    <string name="calendars_remove_title">%1$s uit Mochi verwijderen?</string>
+    <string name="calendars_remove_message">De afspraken blijven in de oorspronkelijke agenda staan.</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d afspraak bijgewerkt</item>
         <item quantity="other">%1$d afspraken bijgewerkt</item>

@@ -63,6 +63,9 @@
     <string name="calendars_poll">立即检查</string>
     <string name="calendars_delete_title">删除%1$s？</string>
     <string name="calendars_delete_message">其中的活动会一并删除。</string>
+    <string name="calendars_remove">移除</string>
+    <string name="calendars_remove_title">从 Mochi 移除 %1$s?</string>
+    <string name="calendars_remove_message">其中的活动会保留在原日历中。</string>
     <plurals name="calendars_polled">
         <item quantity="other">已更新 %1$d 个活动</item>
     </plurals>

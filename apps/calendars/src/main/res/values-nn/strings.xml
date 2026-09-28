@@ -62,6 +62,9 @@
     <string name="calendars_poll">Hent no</string>
     <string name="calendars_delete_title">Slette %1$s?</string>
     <string name="calendars_delete_message">Hendingane i han blir sletta saman med han.</string>
+    <string name="calendars_remove">Fjern</string>
+    <string name="calendars_remove_title">Fjerne %1$s frå Mochi?</string>
+    <string name="calendars_remove_message">Hendingane i han blir verande i den opphavlege kalenderen.</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d hending oppdatert</item>
         <item quantity="other">%1$d hendingar oppdaterte</item>

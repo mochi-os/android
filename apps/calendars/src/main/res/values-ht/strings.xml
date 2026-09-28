@@ -63,6 +63,9 @@
     <string name="calendars_poll">Tcheke kounye a</string>
     <string name="calendars_delete_title">Efase %1$s?</string>
     <string name="calendars_delete_message">Evènman li yo efase ansanm ak li.</string>
+    <string name="calendars_remove">Retire</string>
+    <string name="calendars_remove_title">Retire %1$s nan Mochi?</string>
+    <string name="calendars_remove_message">Evènman li yo rete nan kalandriye orijinal la.</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d evènman mete ajou</item>
         <item quantity="other">%1$d evènman mete ajou</item>

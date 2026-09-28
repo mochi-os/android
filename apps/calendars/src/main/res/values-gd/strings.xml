@@ -63,6 +63,9 @@
     <string name="calendars_poll">Thoir sùil an-dràsta</string>
     <string name="calendars_delete_title">A bheil thu airson %1$s a sguabadh às?</string>
     <string name="calendars_delete_message">Thèid na tachartasan aige a sguabadh às còmhla ris.</string>
+    <string name="calendars_remove">Thoir air falbh</string>
+    <string name="calendars_remove_title">A bheil thu airson %1$s a thoirt air falbh à Mochi?</string>
+    <string name="calendars_remove_message">Fanaidh na tachartasan aige sa mhìosachan thùsail.</string>
     <plurals name="calendars_polled">
         <item quantity="one">Chaidh %1$d tachartas ùrachadh</item>
         <item quantity="two">Chaidh %1$d thachartas ùrachadh</item>

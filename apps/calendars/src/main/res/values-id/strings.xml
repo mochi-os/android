@@ -63,6 +63,9 @@
     <string name="calendars_poll">Periksa sekarang</string>
     <string name="calendars_delete_title">Hapus %1$s?</string>
     <string name="calendars_delete_message">Acara di dalamnya ikut terhapus.</string>
+    <string name="calendars_remove">Hapus</string>
+    <string name="calendars_remove_title">Hapus %1$s dari Mochi?</string>
+    <string name="calendars_remove_message">Acaranya tetap ada di kalender asli.</string>
     <plurals name="calendars_polled">
         <item quantity="other">%1$d acara diperbarui</item>
     </plurals>

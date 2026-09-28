@@ -63,6 +63,9 @@
     <string name="calendars_poll">Amma sakatta\'i</string>
     <string name="calendars_delete_title">%1$s haquu?</string>
     <string name="calendars_delete_message">Taateewwan isaa isa waliin ni haqamu.</string>
+    <string name="calendars_remove">Haqi</string>
+    <string name="calendars_remove_title">%1$s Mochi irraa haquu?</string>
+    <string name="calendars_remove_message">Taateewwan isaa kaalaandarii jalqabaa keessatti hafu.</string>
     <plurals name="calendars_polled">
         <item quantity="one">taateen %1$d haaromfameera</item>
         <item quantity="other">taateewwan %1$d haaromfamaniiru</item>

@@ -63,6 +63,9 @@
     <string name="calendars_poll">Egiaztatu orain</string>
     <string name="calendars_delete_title">%1$s ezabatu?</string>
     <string name="calendars_delete_message">Bere gertaerak ere ezabatuko dira.</string>
+    <string name="calendars_remove">Kendu</string>
+    <string name="calendars_remove_title">%1$s Mochitik kendu?</string>
+    <string name="calendars_remove_message">Haren gertaerak jatorrizko egutegian geratzen dira.</string>
     <plurals name="calendars_polled">
         <item quantity="one">Gertaera %1$d eguneratu da</item>
         <item quantity="other">%1$d gertaera eguneratu dira</item>

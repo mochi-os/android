@@ -63,6 +63,9 @@
     <string name="calendars_poll">Comprova ara</string>
     <string name="calendars_delete_title">Voleu suprimir %1$s?</string>
     <string name="calendars_delete_message">Els seus esdeveniments se suprimeixen amb ell.</string>
+    <string name="calendars_remove">Elimina</string>
+    <string name="calendars_remove_title">Voleu eliminar %1$s de Mochi?</string>
+    <string name="calendars_remove_message">Els seus esdeveniments es mantenen al calendari original.</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d esdeveniment actualitzat</item>
         <item quantity="other">%1$d esdeveniments actualitzats</item>

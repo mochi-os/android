@@ -63,6 +63,9 @@
     <string name="calendars_poll">දැන් පරීක්ෂා කරන්න</string>
     <string name="calendars_delete_title">%1$s මකන්නද?</string>
     <string name="calendars_delete_message">එහි සිදුවීම් ද එය සමඟ මැකෙයි.</string>
+    <string name="calendars_remove">ඉවත් කරන්න</string>
+    <string name="calendars_remove_title">%1$s Mochi වෙතින් ඉවත් කරන්නද?</string>
+    <string name="calendars_remove_message">එහි සිදුවීම් මුල් දින දර්ශනයේම පවතී.</string>
     <string name="calendars_today">අද</string>
     <string name="calendars_view_week">සතිය</string>
     <string name="calendars_view_multiweek">සති කිහිපයක්</string>

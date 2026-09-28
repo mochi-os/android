@@ -63,6 +63,9 @@
     <string name="calendars_poll">Hozir tekshirish</string>
     <string name="calendars_delete_title">%1$s oʻchirilsinmi?</string>
     <string name="calendars_delete_message">Uning tadbirlari ham u bilan birga oʻchiriladi.</string>
+    <string name="calendars_remove">Olib tashlash</string>
+    <string name="calendars_remove_title">%1$s Mochi’dan olib tashlansinmi?</string>
+    <string name="calendars_remove_message">Uning tadbirlari asl kalendarda qoladi.</string>
     <string name="calendars_today">Bugun</string>
     <string name="calendars_view_week">Hafta</string>
     <string name="calendars_view_multiweek">Bir necha hafta</string>

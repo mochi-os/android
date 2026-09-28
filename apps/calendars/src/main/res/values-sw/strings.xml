@@ -63,6 +63,9 @@
     <string name="calendars_poll">Angalia sasa</string>
     <string name="calendars_delete_title">Ufute %1$s?</string>
     <string name="calendars_delete_message">Matukio yake yatafutwa pamoja nayo.</string>
+    <string name="calendars_remove">Ondoa</string>
+    <string name="calendars_remove_title">Uondoe %1$s kutoka Mochi?</string>
+    <string name="calendars_remove_message">Matukio yake yanabaki kwenye kalenda ya asili.</string>
     <string name="calendars_today">Leo</string>
     <string name="calendars_view_week">Wiki</string>
     <string name="calendars_view_multiweek">Wiki kadhaa</string>

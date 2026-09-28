@@ -63,6 +63,9 @@
     <string name="calendars_poll">አሁን ፈትሽ</string>
     <string name="calendars_delete_title">%1$sን ይሰረዝ?</string>
     <string name="calendars_delete_message">ክስተቶቹም አብረው ይሰረዛሉ።</string>
+    <string name="calendars_remove">አስወግድ</string>
+    <string name="calendars_remove_title">%1$s ከMochi ይወገድ?</string>
+    <string name="calendars_remove_message">ክስተቶቹ በመጀመሪያው የቀን መቁጠሪያ ውስጥ ይቆያሉ።</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d ክስተት ተዘምኗል</item>
         <item quantity="other">%1$d ክስተቶች ተዘምነዋል</item>

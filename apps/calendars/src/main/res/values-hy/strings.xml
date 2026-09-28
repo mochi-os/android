@@ -63,6 +63,9 @@
     <string name="calendars_poll">Ստուգել հիմա</string>
     <string name="calendars_delete_title">Ջնջե՞լ %1$s-ը։</string>
     <string name="calendars_delete_message">Դրա միջոցառումները ջնջվում են դրա հետ միասին։</string>
+    <string name="calendars_remove">Հեռացնել</string>
+    <string name="calendars_remove_title">Հեռացնե՞լ %1$s-ը Mochi-ից։</string>
+    <string name="calendars_remove_message">Դրա միջոցառումները մնում են սկզբնական օրացույցում։</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d միջոցառում թարմացվեց</item>
         <item quantity="other">%1$d միջոցառում թարմացվեց</item>

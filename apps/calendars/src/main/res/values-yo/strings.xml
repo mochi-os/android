@@ -63,6 +63,9 @@
     <string name="calendars_poll">Ṣàyẹ̀wò báyìí</string>
     <string name="calendars_delete_title">Pa %1$s rẹ́?</string>
     <string name="calendars_delete_message">Àwọn ìṣẹ̀lẹ̀ rẹ̀ yóò parẹ́ pẹ̀lú rẹ̀.</string>
+    <string name="calendars_remove">Yọ kúrò</string>
+    <string name="calendars_remove_title">Yọ %1$s kúrò nínú Mochi?</string>
+    <string name="calendars_remove_message">Àwọn ìṣẹ̀lẹ̀ rẹ̀ ṣì wà nínú kàlẹ́ńdà àtilẹ̀wá.</string>
     <string name="calendars_today">Lónìí</string>
     <string name="calendars_view_week">Ọ̀sẹ̀</string>
     <string name="calendars_view_multiweek">Ọ̀sẹ̀ púpọ̀</string>

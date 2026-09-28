@@ -63,6 +63,9 @@
     <string name="calendars_poll">Tikrinti dabar</string>
     <string name="calendars_delete_title">Ištrinti %1$s?</string>
     <string name="calendars_delete_message">Kartu su juo ištrinami ir jo įvykiai.</string>
+    <string name="calendars_remove">Šalinti</string>
+    <string name="calendars_remove_title">Šalinti %1$s iš Mochi?</string>
+    <string name="calendars_remove_message">Jo įvykiai lieka pradiniame kalendoriuje.</string>
     <plurals name="calendars_polled">
         <item quantity="one">atnaujintas %1$d įvykis</item>
         <item quantity="few">atnaujinti %1$d įvykiai</item>

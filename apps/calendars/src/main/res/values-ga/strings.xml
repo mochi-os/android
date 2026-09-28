@@ -63,6 +63,9 @@
     <string name="calendars_poll">Seiceáil anois</string>
     <string name="calendars_delete_title">Scrios %1$s?</string>
     <string name="calendars_delete_message">Scriostar a imeachtaí in éineacht leis.</string>
+    <string name="calendars_remove">Bain</string>
+    <string name="calendars_remove_title">Bain %1$s de Mochi?</string>
+    <string name="calendars_remove_message">Fanann a imeachtaí san fhéilire bunaidh.</string>
     <plurals name="calendars_polled">
         <item quantity="one">Nuashonraíodh %1$d imeacht</item>
         <item quantity="two">Nuashonraíodh %1$d imeacht</item>

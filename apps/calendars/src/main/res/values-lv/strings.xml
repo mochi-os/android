@@ -63,6 +63,9 @@
     <string name="calendars_poll">Pārbaudīt tagad</string>
     <string name="calendars_delete_title">Dzēst %1$s?</string>
     <string name="calendars_delete_message">Kopā ar to tiek dzēsti arī tā notikumi.</string>
+    <string name="calendars_remove">Noņemt</string>
+    <string name="calendars_remove_title">Noņemt %1$s no Mochi?</string>
+    <string name="calendars_remove_message">Tā notikumi paliek sākotnējā kalendārā.</string>
     <plurals name="calendars_polled">
         <item quantity="zero">atjaunināti %1$d notikumi</item>
         <item quantity="one">atjaunināts %1$d notikums</item>

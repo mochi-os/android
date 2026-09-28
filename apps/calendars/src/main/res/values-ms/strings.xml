@@ -63,6 +63,9 @@
     <string name="calendars_poll">Semak sekarang</string>
     <string name="calendars_delete_title">Padam %1$s?</string>
     <string name="calendars_delete_message">Acaranya turut dipadamkan bersamanya.</string>
+    <string name="calendars_remove">Alih keluar</string>
+    <string name="calendars_remove_title">Alih keluar %1$s daripada Mochi?</string>
+    <string name="calendars_remove_message">Acaranya kekal dalam kalendar asal.</string>
     <plurals name="calendars_polled">
         <item quantity="other">%1$d acara dikemas kini</item>
     </plurals>

@@ -63,6 +63,9 @@
     <string name="calendars_poll">Одоо шалгах</string>
     <string name="calendars_delete_title">%1$s-г устгах уу?</string>
     <string name="calendars_delete_message">Түүний үйл явдлууд хамт устана.</string>
+    <string name="calendars_remove">Хасах</string>
+    <string name="calendars_remove_title">%1$s-г Mochi-оос хасах уу?</string>
+    <string name="calendars_remove_message">Түүн дэх үйл явдлууд эх хуанлидаа хэвээр үлдэнэ.</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d үйл явдлыг шинэчиллээ</item>
         <item quantity="other">%1$d үйл явдлыг шинэчиллээ</item>

@@ -63,6 +63,9 @@
     <string name="calendars_poll">ഇപ്പോൾ പരിശോധിക്കുക</string>
     <string name="calendars_delete_title">%1$s ഇല്ലാതാക്കണോ?</string>
     <string name="calendars_delete_message">അതിലെ ഇവന്റുകളും അതോടൊപ്പം ഇല്ലാതാകും.</string>
+    <string name="calendars_remove">നീക്കം ചെയ്യുക</string>
+    <string name="calendars_remove_title">%1$s Mochi-യിൽ നിന്ന് നീക്കം ചെയ്യണോ?</string>
+    <string name="calendars_remove_message">ഇതിന്റെ ഇവന്റുകൾ യഥാർത്ഥ കലണ്ടറിൽ തന്നെ തുടരും.</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d ഇവന്റ് അപ്ഡേറ്റ് ചെയ്തു</item>
         <item quantity="other">%1$d ഇവന്റുകൾ അപ്ഡേറ്റ് ചെയ്തു</item>

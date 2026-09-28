@@ -28,6 +28,9 @@
     <string name="calendars_poll_missing">The calendar is gone from its server</string>
     <string name="calendars_delete_title">Delete %1$s?</string>
     <string name="calendars_delete_message">Its events are deleted with it.</string>
+    <string name="calendars_remove">Remove</string>
+    <string name="calendars_remove_title">Remove %1$s from Mochi?</string>
+    <string name="calendars_remove_message">Its events stay in the original calendar.</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d event updated</item>
         <item quantity="other">%1$d events updated</item>

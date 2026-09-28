@@ -63,6 +63,9 @@
     <string name="calendars_poll">Suriin ngayon</string>
     <string name="calendars_delete_title">Tanggalin ang %1$s?</string>
     <string name="calendars_delete_message">Matatanggal din ang mga event nito.</string>
+    <string name="calendars_remove">Alisin</string>
+    <string name="calendars_remove_title">Alisin ang %1$s sa Mochi?</string>
+    <string name="calendars_remove_message">Mananatili ang mga kaganapan nito sa orihinal na kalendaryo.</string>
     <string name="calendars_today">Ngayong araw</string>
     <string name="calendars_view_week">Linggo</string>
     <string name="calendars_view_multiweek">Ilang linggo</string>

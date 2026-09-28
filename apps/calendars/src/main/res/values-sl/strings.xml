@@ -63,6 +63,9 @@
     <string name="calendars_poll">Preveri zdaj</string>
     <string name="calendars_delete_title">Izbrišem %1$s?</string>
     <string name="calendars_delete_message">Njegovi dogodki bodo izbrisani z njim.</string>
+    <string name="calendars_remove">Odstrani</string>
+    <string name="calendars_remove_title">Želite odstraniti %1$s iz Mochija?</string>
+    <string name="calendars_remove_message">Njegovi dogodki ostanejo v izvirnem koledarju.</string>
     <string name="calendars_today">Danes</string>
     <string name="calendars_view_week">Teden</string>
     <string name="calendars_view_multiweek">Več tednov</string>

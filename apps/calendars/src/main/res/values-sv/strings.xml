@@ -63,6 +63,9 @@
     <string name="calendars_poll">Hämta nu</string>
     <string name="calendars_delete_title">Ta bort %1$s?</string>
     <string name="calendars_delete_message">Dess händelser tas bort med den.</string>
+    <string name="calendars_remove">Ta bort</string>
+    <string name="calendars_remove_title">Ta bort %1$s från Mochi?</string>
+    <string name="calendars_remove_message">Dess händelser finns kvar i den ursprungliga kalendern.</string>
     <string name="calendars_today">Idag</string>
     <string name="calendars_view_week">Vecka</string>
     <string name="calendars_view_multiweek">Flera veckor</string>

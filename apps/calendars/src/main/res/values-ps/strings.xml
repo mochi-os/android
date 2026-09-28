@@ -63,6 +63,9 @@
     <string name="calendars_poll">اوس وګورئ</string>
     <string name="calendars_delete_title">%1$s ړنګ کړئ؟</string>
     <string name="calendars_delete_message">د دې پېښې هم ورسره ړنګېږي.</string>
+    <string name="calendars_remove">لرې کول</string>
+    <string name="calendars_remove_title">%1$s له Mochi څخه لرې کړئ؟</string>
+    <string name="calendars_remove_message">د هغه پېښې په اصلي کليز کې پاتې کېږي.</string>
     <string name="calendars_today">نن</string>
     <string name="calendars_view_week">اونۍ</string>
     <string name="calendars_view_multiweek">څو اونۍ</string>

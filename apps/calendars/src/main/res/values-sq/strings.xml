@@ -63,6 +63,9 @@
     <string name="calendars_poll">Kontrollo tani</string>
     <string name="calendars_delete_title">Të fshihet %1$s?</string>
     <string name="calendars_delete_message">Ngjarjet e tij fshihen bashkë me të.</string>
+    <string name="calendars_remove">Hiq</string>
+    <string name="calendars_remove_title">Të hiqet %1$s nga Mochi?</string>
+    <string name="calendars_remove_message">Ngjarjet e tij mbeten në kalendarin origjinal.</string>
     <string name="calendars_today">Sot</string>
     <string name="calendars_view_week">Java</string>
     <string name="calendars_view_multiweek">Disa javë</string>

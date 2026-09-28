@@ -63,6 +63,9 @@
     <string name="calendars_poll">İndi yoxla</string>
     <string name="calendars_delete_title">%1$s silinsin?</string>
     <string name="calendars_delete_message">Tədbirləri də onunla birlikdə silinəcək.</string>
+    <string name="calendars_remove">Sil</string>
+    <string name="calendars_remove_title">%1$s Mochi-dən silinsin?</string>
+    <string name="calendars_remove_message">Onun tədbirləri orijinal təqvimdə qalır.</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d tədbir yeniləndi</item>
         <item quantity="other">%1$d tədbir yeniləndi</item>

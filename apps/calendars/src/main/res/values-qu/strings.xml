@@ -63,6 +63,9 @@
     <string name="calendars_poll">Kunan qhaway</string>
     <string name="calendars_delete_title">¿%1$s wischuy?</string>
     <string name="calendars_delete_message">Ruwaykunanpas paywan kuska wischusqa kanqa.</string>
+    <string name="calendars_remove">Qichuy</string>
+    <string name="calendars_remove_title">%1$s-ta Mochi-manta qichuyta munanki?</string>
+    <string name="calendars_remove_message">Ruwanakunanqa ñawpaq calendariopim qhepakun.</string>
     <string name="calendars_today">Kunan p\'unchaw</string>
     <string name="calendars_view_week">Semana</string>
     <string name="calendars_view_multiweek">Achka semanakuna</string>

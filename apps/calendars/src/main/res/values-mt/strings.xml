@@ -63,6 +63,9 @@
     <string name="calendars_poll">Iċċekkja issa</string>
     <string name="calendars_delete_title">Tħassar %1$s?</string>
     <string name="calendars_delete_message">L-avvenimenti tiegħu jitħassru miegħu.</string>
+    <string name="calendars_remove">Neħħi</string>
+    <string name="calendars_remove_title">Tneħħi %1$s minn Mochi?</string>
+    <string name="calendars_remove_message">L-avvenimenti tiegħu jibqgħu fil-kalendarju oriġinali.</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d avveniment aġġornat</item>
         <item quantity="two">%1$d avvenimenti aġġornati</item>

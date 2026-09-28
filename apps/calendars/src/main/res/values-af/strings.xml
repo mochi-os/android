@@ -63,6 +63,9 @@
     <string name="calendars_poll">Haal nou op</string>
     <string name="calendars_delete_title">Verwyder %1$s?</string>
     <string name="calendars_delete_message">Die gebeurtenisse daarvan word saam verwyder.</string>
+    <string name="calendars_remove">Verwyder</string>
+    <string name="calendars_remove_title">Verwyder %1$s uit Mochi?</string>
+    <string name="calendars_remove_message">Sy gebeurtenisse bly in die oorspronklike kalender.</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d gebeurtenis opgedateer</item>
         <item quantity="other">%1$d gebeurtenisse opgedateer</item>

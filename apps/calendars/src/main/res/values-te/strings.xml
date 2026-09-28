@@ -63,6 +63,9 @@
     <string name="calendars_poll">ఇప్పుడే తనిఖీ చేయండి</string>
     <string name="calendars_delete_title">%1$sను తొలగించాలా?</string>
     <string name="calendars_delete_message">దాని ఈవెంట్‌లు కూడా దానితో పాటు తొలగించబడతాయి.</string>
+    <string name="calendars_remove">తొలగించండి</string>
+    <string name="calendars_remove_title">%1$s ను Mochi నుండి తొలగించాలా?</string>
+    <string name="calendars_remove_message">దాని ఈవెంట్‌లు అసలు క్యాలెండర్‌లోనే ఉంటాయి.</string>
     <string name="calendars_today">ఈ రోజు</string>
     <string name="calendars_view_week">వారం</string>
     <string name="calendars_view_multiweek">అనేక వారాలు</string>

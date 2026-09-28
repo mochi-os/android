@@ -312,7 +312,13 @@ private fun CalendarRow(
                 }
                 if (!calendar.default && !calendar.birthdays) {
                     MochiDropdownMenuItem(
-                        text = { Text(stringResource(R.string.calendars_delete)) },
+                        text = {
+                            Text(
+                                stringResource(
+                                    if (calendar.linked || calendar.subscription) R.string.calendars_remove else R.string.calendars_delete,
+                                ),
+                            )
+                        },
                         leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
                         destructive = true,
                         onClick = {

@@ -63,6 +63,9 @@
     <string name="calendars_poll">இப்போது சரிபார்</string>
     <string name="calendars_delete_title">%1$s ஐ நீக்கவா?</string>
     <string name="calendars_delete_message">அதன் நிகழ்வுகளும் அதனுடன் நீக்கப்படும்.</string>
+    <string name="calendars_remove">அகற்று</string>
+    <string name="calendars_remove_title">%1$s-ஐ Mochi-இலிருந்து அகற்றவா?</string>
+    <string name="calendars_remove_message">அதன் நிகழ்வுகள் அசல் நாட்காட்டியிலேயே இருக்கும்.</string>
     <string name="calendars_today">இன்று</string>
     <string name="calendars_view_week">வாரம்</string>
     <string name="calendars_view_multiweek">பல வாரங்கள்</string>

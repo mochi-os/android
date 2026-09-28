@@ -62,6 +62,9 @@
     <string name="calendars_poll">Verifică acum</string>
     <string name="calendars_delete_title">Ștergi %1$s?</string>
     <string name="calendars_delete_message">Evenimentele sale se șterg odată cu el.</string>
+    <string name="calendars_remove">Elimină</string>
+    <string name="calendars_remove_title">Elimini %1$s din Mochi?</string>
+    <string name="calendars_remove_message">Evenimentele sale rămân în calendarul original.</string>
     <string name="calendars_today">Astăzi</string>
     <string name="calendars_view_week">Săptămână</string>
     <string name="calendars_view_multiweek">Mai multe săptămâni</string>

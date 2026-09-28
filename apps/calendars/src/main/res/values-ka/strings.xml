@@ -63,6 +63,9 @@
     <string name="calendars_poll">ახლავე შემოწმება</string>
     <string name="calendars_delete_title">წაიშალოს %1$s?</string>
     <string name="calendars_delete_message">მისი ღონისძიებებიც მასთან ერთად წაიშლება.</string>
+    <string name="calendars_remove">წაშლა</string>
+    <string name="calendars_remove_title">წაიშალოს %1$s Mochi-დან?</string>
+    <string name="calendars_remove_message">მისი ღონისძიებები თავდაპირველ კალენდარში რჩება.</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d ღონისძიება განახლდა</item>
         <item quantity="other">%1$d ღონისძიება განახლდა</item>

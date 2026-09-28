@@ -63,6 +63,9 @@
     <string name="calendars_poll">Provjeri sada</string>
     <string name="calendars_delete_title">Obrisati %1$s?</string>
     <string name="calendars_delete_message">Njegovi događaji brišu se zajedno s njim.</string>
+    <string name="calendars_remove">Ukloni</string>
+    <string name="calendars_remove_title">Ukloniti %1$s iz Mochija?</string>
+    <string name="calendars_remove_message">Njegovi događaji ostaju u izvornom kalendaru.</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d događaj ažuriran</item>
         <item quantity="few">%1$d događaja ažurirana</item>

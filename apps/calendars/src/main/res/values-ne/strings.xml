@@ -63,6 +63,9 @@
     <string name="calendars_poll">अहिले जाँच्नुहोस्</string>
     <string name="calendars_delete_title">%1$s मेटाउने?</string>
     <string name="calendars_delete_message">यसका कार्यक्रमहरू पनि यससँगै मेटिन्छन्।</string>
+    <string name="calendars_remove">हटाउनुहोस्</string>
+    <string name="calendars_remove_title">%1$s लाई Mochi बाट हटाउने?</string>
+    <string name="calendars_remove_message">यसका कार्यक्रमहरू मूल क्यालेन्डरमै रहन्छन्।</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d कार्यक्रम अपडेट गरियो</item>
         <item quantity="other">%1$d कार्यक्रम अपडेट गरिए</item>

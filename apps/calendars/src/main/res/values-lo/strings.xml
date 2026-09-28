@@ -63,6 +63,9 @@
     <string name="calendars_poll">ດຶງຂໍ້ມູນດຽວນີ້</string>
     <string name="calendars_delete_title">ລຶບ %1$s ບໍ?</string>
     <string name="calendars_delete_message">ເຫດການຂອງມັນຈະຖືກລຶບໄປພ້ອມກັນ.</string>
+    <string name="calendars_remove">ລຶບອອກ</string>
+    <string name="calendars_remove_title">ລຶບ %1$s ອອກຈາກ Mochi ບໍ?</string>
+    <string name="calendars_remove_message">ເຫດການຂອງປະຕິທິນນີ້ຍັງຄົງຢູ່ໃນປະຕິທິນຕົ້ນສະບັບ</string>
     <plurals name="calendars_polled">
         <item quantity="other">ອັບເດດ %1$d ເຫດການແລ້ວ</item>
     </plurals>

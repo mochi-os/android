@@ -63,6 +63,9 @@
     <string name="calendars_poll">Gwirio nawr</string>
     <string name="calendars_delete_title">Dileu %1$s?</string>
     <string name="calendars_delete_message">Caiff ei ddigwyddiadau eu dileu gydag ef.</string>
+    <string name="calendars_remove">Tynnu</string>
+    <string name="calendars_remove_title">Tynnu %1$s o Mochi?</string>
+    <string name="calendars_remove_message">Mae ei ddigwyddiadau\'n aros yn y calendr gwreiddiol.</string>
     <plurals name="calendars_polled">
         <item quantity="zero">Diweddarwyd %1$d digwyddiad</item>
         <item quantity="one">Diweddarwyd %1$d digwyddiad</item>

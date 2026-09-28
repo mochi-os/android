@@ -63,6 +63,9 @@
     <string name="calendars_poll">נעם אַראָפּ איצט</string>
     <string name="calendars_delete_title">אויסמעקן %1$s?</string>
     <string name="calendars_delete_message">אירע געשעענישן ווערן אויסגעמעקט צוזאַמען מיט איר.</string>
+    <string name="calendars_remove">אַראָפּנעמען</string>
+    <string name="calendars_remove_title">אַראָפּנעמען %1$s פֿון Mochi?</string>
+    <string name="calendars_remove_message">זײַנע געשעענישן בלײַבן אין דעם אָריגינעלן קאַלענדאַר.</string>
     <string name="calendars_today">הײַנט</string>
     <string name="calendars_view_week">וואָך</string>
     <string name="calendars_view_multiweek">עטלעכע וואָכן</string>

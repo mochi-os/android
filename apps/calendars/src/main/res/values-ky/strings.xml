@@ -63,6 +63,9 @@
     <string name="calendars_poll">Азыр текшерүү</string>
     <string name="calendars_delete_title">%1$s өчүрүлсүнбү?</string>
     <string name="calendars_delete_message">Анын иш-чаралары да аны менен бирге өчүрүлөт.</string>
+    <string name="calendars_remove">Алуу</string>
+    <string name="calendars_remove_title">%1$s Mochi-ден алып салынсынбы?</string>
+    <string name="calendars_remove_message">Анын иш-чаралары баштапкы календарда калат.</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d иш-чара жаңыланды</item>
         <item quantity="other">%1$d иш-чара жаңыланды</item>

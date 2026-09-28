@@ -63,6 +63,9 @@
     <string name="calendars_poll">Tarkista nyt</string>
     <string name="calendars_delete_title">Poistetaanko %1$s?</string>
     <string name="calendars_delete_message">Sen tapahtumat poistetaan samalla.</string>
+    <string name="calendars_remove">Poista</string>
+    <string name="calendars_remove_title">Poistetaanko %1$s Mochista?</string>
+    <string name="calendars_remove_message">Sen tapahtumat säilyvät alkuperäisessä kalenterissa.</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d tapahtuma päivitetty</item>
         <item quantity="other">%1$d tapahtumaa päivitetty</item>

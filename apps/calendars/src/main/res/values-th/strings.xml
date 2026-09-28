@@ -63,6 +63,9 @@
     <string name="calendars_poll">ดึงข้อมูลตอนนี้</string>
     <string name="calendars_delete_title">ลบ %1$s ไหม</string>
     <string name="calendars_delete_message">กิจกรรมในปฏิทินจะถูกลบไปด้วย</string>
+    <string name="calendars_remove">ลบ</string>
+    <string name="calendars_remove_title">ลบ %1$s ออกจาก Mochi ไหม?</string>
+    <string name="calendars_remove_message">กิจกรรมของปฏิทินนี้ยังคงอยู่ในปฏิทินต้นทาง</string>
     <string name="calendars_today">วันนี้</string>
     <string name="calendars_view_week">สัปดาห์</string>
     <string name="calendars_view_multiweek">หลายสัปดาห์</string>

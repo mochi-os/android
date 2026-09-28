@@ -63,6 +63,9 @@
     <string name="calendars_poll">Ellenőrzés most</string>
     <string name="calendars_delete_title">Törli a következőt: %1$s?</string>
     <string name="calendars_delete_message">Az eseményei is törlődnek vele együtt.</string>
+    <string name="calendars_remove">Eltávolítás</string>
+    <string name="calendars_remove_title">Eltávolítja a Mochiból a következőt: %1$s?</string>
+    <string name="calendars_remove_message">Az eseményei az eredeti naptárban maradnak.</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d esemény frissítve</item>
         <item quantity="other">%1$d esemény frissítve</item>

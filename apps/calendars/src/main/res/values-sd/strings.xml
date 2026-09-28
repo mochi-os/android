@@ -63,6 +63,9 @@
     <string name="calendars_poll">هينئر جانچيو</string>
     <string name="calendars_delete_title">%1$s ختم ڪجي؟</string>
     <string name="calendars_delete_message">ان جا واقعا به ان سان گڏ ختم ٿي ويندا.</string>
+    <string name="calendars_remove">هٽايو</string>
+    <string name="calendars_remove_title">%1$s کي Mochi مان هٽائجي؟</string>
+    <string name="calendars_remove_message">ان جا واقعا اصل ڪئلينڊر ۾ رهندا.</string>
     <string name="calendars_today">اڄ</string>
     <string name="calendars_view_week">هفتو</string>
     <string name="calendars_view_multiweek">ڪيترائي هفتا</string>

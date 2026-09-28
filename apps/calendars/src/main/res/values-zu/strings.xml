@@ -63,6 +63,9 @@
     <string name="calendars_poll">Hlola manje</string>
     <string name="calendars_delete_title">Susa i-%1$s?</string>
     <string name="calendars_delete_message">Imicimbi yalo isuswa kanye nalo.</string>
+    <string name="calendars_remove">Khipha</string>
+    <string name="calendars_remove_title">Khipha u-%1$s ku-Mochi?</string>
+    <string name="calendars_remove_message">Imicimbi yayo ihlala ekhalendeni yokuqala.</string>
     <string name="calendars_today">Namuhla</string>
     <string name="calendars_view_week">Iviki</string>
     <string name="calendars_view_multiweek">Amaviki amaningi</string>

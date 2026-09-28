@@ -63,6 +63,9 @@
     <string name="calendars_poll">Праверыць цяпер</string>
     <string name="calendars_delete_title">Выдаліць %1$s?</string>
     <string name="calendars_delete_message">Яго падзеі будуць выдалены разам з ім.</string>
+    <string name="calendars_remove">Выдаліць</string>
+    <string name="calendars_remove_title">Выдаліць %1$s з Mochi?</string>
+    <string name="calendars_remove_message">Яго падзеі застаюцца ў зыходным календары.</string>
     <plurals name="calendars_polled">
         <item quantity="one">Абноўлена %1$d падзея</item>
         <item quantity="few">Абноўлена %1$d падзеі</item>

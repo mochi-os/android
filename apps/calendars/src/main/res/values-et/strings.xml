@@ -63,6 +63,9 @@
     <string name="calendars_poll">Kontrolli kohe</string>
     <string name="calendars_delete_title">Kas kustutada %1$s?</string>
     <string name="calendars_delete_message">Selle sündmused kustutatakse koos sellega.</string>
+    <string name="calendars_remove">Eemalda</string>
+    <string name="calendars_remove_title">Kas eemaldada %1$s Mochist?</string>
+    <string name="calendars_remove_message">Selle sündmused jäävad algsesse kalendrisse.</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d sündmus uuendatud</item>
         <item quantity="other">%1$d sündmust uuendatud</item>

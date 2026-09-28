@@ -63,6 +63,9 @@
     <string name="calendars_poll">Duba yanzu</string>
     <string name="calendars_delete_title">A goge %1$s?</string>
     <string name="calendars_delete_message">Ana goge tarurrukansa tare da shi.</string>
+    <string name="calendars_remove">Cire</string>
+    <string name="calendars_remove_title">A cire %1$s daga Mochi?</string>
+    <string name="calendars_remove_message">Tarurrukansa za su ci gaba da kasancewa a cikin kalandar asali.</string>
     <plurals name="calendars_polled">
         <item quantity="one">An sabunta taro %1$d</item>
         <item quantity="other">An sabunta tarurruka %1$d</item>

@@ -63,6 +63,9 @@
     <string name="calendars_poll">Khangela ngoku</string>
     <string name="calendars_delete_title">Cima i-%1$s?</string>
     <string name="calendars_delete_message">Iziganeko zayo zicinywa kunye nayo.</string>
+    <string name="calendars_remove">Susa</string>
+    <string name="calendars_remove_title">Susa u-%1$s ku-Mochi?</string>
+    <string name="calendars_remove_message">Imisitho yayo ihlala kwikhalenda yantlandlolo.</string>
     <string name="calendars_today">Namhlanje</string>
     <string name="calendars_view_week">Iveki</string>
     <string name="calendars_view_multiweek">Iiveki ezininzi</string>

@@ -63,6 +63,9 @@
     <string name="calendars_poll">Skontrolovať teraz</string>
     <string name="calendars_delete_title">Odstrániť %1$s?</string>
     <string name="calendars_delete_message">Jeho udalosti sa odstránia spolu s ním.</string>
+    <string name="calendars_remove">Odstrániť</string>
+    <string name="calendars_remove_title">Odstrániť %1$s z Mochi?</string>
+    <string name="calendars_remove_message">Jeho udalosti zostanú v pôvodnom kalendári.</string>
     <string name="calendars_today">Dnes</string>
     <string name="calendars_view_week">Týždeň</string>
     <string name="calendars_view_multiweek">Viac týždňov</string>

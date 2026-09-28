@@ -63,6 +63,9 @@
     <string name="calendars_poll">Провери сега</string>
     <string name="calendars_delete_title">Да се изтрие ли %1$s?</string>
     <string name="calendars_delete_message">Събитията му се изтриват заедно с него.</string>
+    <string name="calendars_remove">Премахни</string>
+    <string name="calendars_remove_title">Да се премахне ли %1$s от Mochi?</string>
+    <string name="calendars_remove_message">Събитията му остават в оригиналния календар.</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d събитие е обновено</item>
         <item quantity="other">%1$d събития са обновени</item>

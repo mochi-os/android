@@ -63,6 +63,9 @@
     <string name="calendars_poll">Pariksa ayeuna</string>
     <string name="calendars_delete_title">Hapus %1$s?</string>
     <string name="calendars_delete_message">Acarana ogé bakal dihapus ngahiji jeung éta.</string>
+    <string name="calendars_remove">Pupus</string>
+    <string name="calendars_remove_title">Pupus %1$s tina Mochi?</string>
+    <string name="calendars_remove_message">Acarana tetep aya dina kalénder aslina.</string>
     <string name="calendars_today">Poé ieu</string>
     <string name="calendars_view_week">Minggu</string>
     <string name="calendars_view_multiweek">Sababaraha minggu</string>

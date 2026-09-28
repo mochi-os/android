@@ -63,6 +63,9 @@
     <string name="calendars_poll">Athuga núna</string>
     <string name="calendars_delete_title">Eyða %1$s?</string>
     <string name="calendars_delete_message">Viðburðum þess er eytt með því.</string>
+    <string name="calendars_remove">Fjarlægja</string>
+    <string name="calendars_remove_title">Fjarlægja %1$s úr Mochi?</string>
+    <string name="calendars_remove_message">Viðburðir þess verða áfram í upprunalega dagatalinu.</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d viðburður uppfærður</item>
         <item quantity="other">%1$d viðburðir uppfærðir</item>

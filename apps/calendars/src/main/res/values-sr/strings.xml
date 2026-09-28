@@ -63,6 +63,9 @@
     <string name="calendars_poll">Провери сада</string>
     <string name="calendars_delete_title">Обрисати %1$s?</string>
     <string name="calendars_delete_message">Његови догађаји се бришу заједно са њим.</string>
+    <string name="calendars_remove">Уклони</string>
+    <string name="calendars_remove_title">Уклонити %1$s из Mochi?</string>
+    <string name="calendars_remove_message">Његови догађаји остају у изворном календару.</string>
     <string name="calendars_today">Данас</string>
     <string name="calendars_view_week">Седмица</string>
     <string name="calendars_view_multiweek">Више седмица</string>

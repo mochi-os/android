@@ -63,6 +63,9 @@
     <string name="calendars_poll">Ehecha ko\'ágã</string>
     <string name="calendars_delete_title">Ehundíta %1$s?</string>
     <string name="calendars_delete_message">Ievénto kuéra oñehundi avei hendive.</string>
+    <string name="calendars_remove">Embogue</string>
+    <string name="calendars_remove_title">Embogue %1$s Mochi-gui?</string>
+    <string name="calendars_remove_message">Umi evento opyta arapapaha ypykuépe.</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d evento oñembohekopyahu</item>
         <item quantity="other">%1$d evento oñembohekopyahu</item>

@@ -63,6 +63,9 @@
     <string name="calendars_poll">ពិនិត្យឥឡូវនេះ</string>
     <string name="calendars_delete_title">លុប %1$s មែនទេ?</string>
     <string name="calendars_delete_message">ព្រឹត្តិការណ៍របស់វាក៏ត្រូវបានលុបជាមួយវាដែរ។</string>
+    <string name="calendars_remove">យកចេញ</string>
+    <string name="calendars_remove_title">យក %1$s ចេញពី Mochi ឬ?</string>
+    <string name="calendars_remove_message">ព្រឹត្តិការណ៍របស់វានៅតែមាននៅក្នុងប្រតិទិនដើម។</string>
     <plurals name="calendars_polled">
         <item quantity="other">បានធ្វើបច្ចុប្បន្នភាពព្រឹត្តិការណ៍ %1$d</item>
     </plurals>

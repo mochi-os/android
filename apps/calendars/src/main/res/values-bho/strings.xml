@@ -63,6 +63,9 @@
     <string name="calendars_poll">अबहीं जाँचीं</string>
     <string name="calendars_delete_title">%1$s के मेटाईं?</string>
     <string name="calendars_delete_message">एकरा के कार्यक्रम सब भी एकरे संगे मेटा जइहें।</string>
+    <string name="calendars_remove">हटाईं</string>
+    <string name="calendars_remove_title">%1$s के Mochi से हटाईं?</string>
+    <string name="calendars_remove_message">एकर कार्यक्रम मूल कैलेंडर में बनल रही।</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d कार्यक्रम अपडेट भइल</item>
         <item quantity="other">%1$d कार्यक्रम अपडेट भइलें</item>

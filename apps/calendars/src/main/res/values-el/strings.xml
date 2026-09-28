@@ -63,6 +63,9 @@
     <string name="calendars_poll">Έλεγχος τώρα</string>
     <string name="calendars_delete_title">Διαγραφή %1$s;</string>
     <string name="calendars_delete_message">Τα συμβάντα του διαγράφονται μαζί του.</string>
+    <string name="calendars_remove">Αφαίρεση</string>
+    <string name="calendars_remove_title">Αφαίρεση του %1$s από το Mochi;</string>
+    <string name="calendars_remove_message">Τα συμβάντα του παραμένουν στο αρχικό ημερολόγιο.</string>
     <plurals name="calendars_polled">
         <item quantity="one">Ενημερώθηκε %1$d συμβάν</item>
         <item quantity="other">Ενημερώθηκαν %1$d συμβάντα</item>

@@ -63,6 +63,9 @@
     <string name="calendars_poll">ابھی چیک کریں</string>
     <string name="calendars_delete_title">%1$s حذف کریں؟</string>
     <string name="calendars_delete_message">اس کے ایونٹس بھی اس کے ساتھ حذف ہو جائیں گے۔</string>
+    <string name="calendars_remove">ہٹائیں</string>
+    <string name="calendars_remove_title">%1$s کو Mochi سے ہٹائیں؟</string>
+    <string name="calendars_remove_message">اس کے ایونٹس اصل کیلنڈر میں رہیں گے۔</string>
     <string name="calendars_today">آج</string>
     <string name="calendars_view_week">ہفتہ</string>
     <string name="calendars_view_multiweek">کئی ہفتے</string>

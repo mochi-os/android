@@ -63,6 +63,9 @@
     <string name="calendars_poll">Priksa saiki</string>
     <string name="calendars_delete_title">Busak %1$s?</string>
     <string name="calendars_delete_message">Acara-acarané uga bakal kabusak.</string>
+    <string name="calendars_remove">Cabut</string>
+    <string name="calendars_remove_title">Cabut %1$s saka Mochi?</string>
+    <string name="calendars_remove_message">Acarané tetep ana ing kalender asliné.</string>
     <plurals name="calendars_polled">
         <item quantity="other">%1$d acara dianyari</item>
     </plurals>

@@ -63,6 +63,9 @@
     <string name="calendars_poll">立即擷取</string>
     <string name="calendars_delete_title">刪除%1$s？</string>
     <string name="calendars_delete_message">其中的活動會一併刪除。</string>
+    <string name="calendars_remove">移除</string>
+    <string name="calendars_remove_title">從 Mochi 移除 %1$s?</string>
+    <string name="calendars_remove_message">其中的活動仍會保留在原始行事曆中。</string>
     <plurals name="calendars_polled">
         <item quantity="other">已更新 %1$d 個活動</item>
     </plurals>

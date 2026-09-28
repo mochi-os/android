@@ -63,6 +63,9 @@
     <string name="calendars_poll">ئێستا بپشکنە</string>
     <string name="calendars_delete_title">%1$s بسڕدرێتەوە؟</string>
     <string name="calendars_delete_message">ڕووداوەکانیشی لەگەڵیدا دەسڕدرێنەوە.</string>
+    <string name="calendars_remove">لابردن</string>
+    <string name="calendars_remove_title">%1$s لە Mochi لاببرێت؟</string>
+    <string name="calendars_remove_message">ڕووداوەکانی لە ڕۆژژمێرە ڕەسەنەکەدا دەمێننەوە.</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d ڕووداو نوێکرایەوە</item>
         <item quantity="other">%1$d ڕووداو نوێکرانەوە</item>

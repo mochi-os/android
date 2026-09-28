@@ -63,6 +63,9 @@
     <string name="calendars_poll">今すぐ取得</string>
     <string name="calendars_delete_title">%1$s を削除しますか？</string>
     <string name="calendars_delete_message">予定もまとめて削除されます。</string>
+    <string name="calendars_remove">削除</string>
+    <string name="calendars_remove_title">%1$s を Mochi から削除しますか?</string>
+    <string name="calendars_remove_message">予定は元のカレンダーに残ります。</string>
     <plurals name="calendars_polled">
         <item quantity="other">%1$d 件の予定を更新しました</item>
     </plurals>

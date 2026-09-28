@@ -63,6 +63,9 @@
     <string name="calendars_poll">التحقق الآن</string>
     <string name="calendars_delete_title">حذف %1$s؟</string>
     <string name="calendars_delete_message">ستُحذف أحداثه معه.</string>
+    <string name="calendars_remove">إزالة</string>
+    <string name="calendars_remove_title">إزالة %1$s من Mochi؟</string>
+    <string name="calendars_remove_message">تبقى أحداثه في التقويم الأصلي.</string>
     <plurals name="calendars_polled">
         <item quantity="zero">تم تحديث %1$d حدث</item>
         <item quantity="one">تم تحديث %1$d حدث</item>

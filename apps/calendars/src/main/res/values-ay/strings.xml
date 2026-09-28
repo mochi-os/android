@@ -63,6 +63,9 @@
     <string name="calendars_poll">Jichha jikiña</string>
     <string name="calendars_delete_title">¿%1$s chhaqtayañati?</string>
     <string name="calendars_delete_message">Lurawinakapas chikawa chhaqtayaski.</string>
+    <string name="calendars_remove">Aparma</string>
+    <string name="calendars_remove_title">%1$s Mochi-ta aparañati?</string>
+    <string name="calendars_remove_message">Lurawinakapax nayrïri calendarionwa qhiparaki.</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d lurawi machaqachatawa</item>
         <item quantity="other">%1$d lurawinaka machaqachatawa</item>

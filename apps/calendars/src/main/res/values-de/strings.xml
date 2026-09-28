@@ -62,6 +62,9 @@
     <string name="calendars_poll">Jetzt abrufen</string>
     <string name="calendars_delete_title">%1$s löschen?</string>
     <string name="calendars_delete_message">Seine Termine werden mit gelöscht.</string>
+    <string name="calendars_remove">Entfernen</string>
+    <string name="calendars_remove_title">%1$s aus Mochi entfernen?</string>
+    <string name="calendars_remove_message">Seine Termine bleiben im ursprünglichen Kalender erhalten.</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d Termin aktualisiert</item>
         <item quantity="other">%1$d Termine aktualisiert</item>

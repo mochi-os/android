@@ -63,6 +63,9 @@
     <string name="calendars_poll">Провери сега</string>
     <string name="calendars_delete_title">Да се избрише %1$s?</string>
     <string name="calendars_delete_message">Неговите настани се бришат заедно со него.</string>
+    <string name="calendars_remove">Отстрани</string>
+    <string name="calendars_remove_title">Да се отстрани %1$s од Mochi?</string>
+    <string name="calendars_remove_message">Неговите настани остануваат во оригиналниот календар.</string>
     <plurals name="calendars_polled">
         <item quantity="one">%1$d настан е ажуриран</item>
         <item quantity="other">%1$d настани се ажурирани</item>

@@ -63,6 +63,9 @@
     <string name="calendars_poll">ယခု စစ်ဆေးမည်</string>
     <string name="calendars_delete_title">%1$s ကို ဖျက်မလား?</string>
     <string name="calendars_delete_message">၎င်း၏ အစီအစဉ်များကိုလည်း အတူတူ ဖျက်ပါမည်။</string>
+    <string name="calendars_remove">ဖယ်ရှား</string>
+    <string name="calendars_remove_title">%1$s ကို Mochi မှ ဖယ်ရှားမလား?</string>
+    <string name="calendars_remove_message">၎င်း၏ အစီအစဉ်များသည် မူလ ပြက္ခဒိန်တွင် ဆက်ရှိနေပါမည်။</string>
     <plurals name="calendars_polled">
         <item quantity="other">အစီအစဉ် %1$d ခု အပ်ဒိတ်လုပ်ပြီးပါပြီ</item>
     </plurals>

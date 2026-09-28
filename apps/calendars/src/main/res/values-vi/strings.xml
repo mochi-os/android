@@ -63,6 +63,9 @@
     <string name="calendars_poll">Kiểm tra ngay</string>
     <string name="calendars_delete_title">Xóa %1$s?</string>
     <string name="calendars_delete_message">Các sự kiện trong lịch cũng sẽ bị xóa.</string>
+    <string name="calendars_remove">Xoá</string>
+    <string name="calendars_remove_title">Xoá %1$s khỏi Mochi?</string>
+    <string name="calendars_remove_message">Các sự kiện của lịch vẫn được giữ nguyên trong lịch gốc.</string>
     <string name="calendars_today">Hôm nay</string>
     <string name="calendars_view_week">Tuần</string>
     <string name="calendars_view_multiweek">Nhiều tuần</string>

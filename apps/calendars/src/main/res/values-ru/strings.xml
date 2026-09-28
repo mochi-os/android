@@ -63,6 +63,9 @@
     <string name="calendars_poll">Проверить сейчас</string>
     <string name="calendars_delete_title">Удалить %1$s?</string>
     <string name="calendars_delete_message">Его события будут удалены вместе с ним.</string>
+    <string name="calendars_remove">Удалить</string>
+    <string name="calendars_remove_title">Удалить %1$s из Mochi?</string>
+    <string name="calendars_remove_message">Его события останутся в исходном календаре.</string>
     <string name="calendars_today">Сегодня</string>
     <string name="calendars_view_week">Неделя</string>
     <string name="calendars_view_multiweek">Несколько недель</string>
