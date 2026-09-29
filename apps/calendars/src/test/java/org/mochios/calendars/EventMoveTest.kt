@@ -67,6 +67,18 @@ class EventMoveTest {
         ),
     )
 
+    /** An override of the 18th, moved to 14:00 to 15:00 and renamed. */
+    private fun once() = EventComponent(
+        name = "VEVENT",
+        properties = listOf(
+            property("UID", "uid-1@mochi"),
+            property("SUMMARY", "Once"),
+            property("RECURRENCE-ID", "20260918T090000", "TZID", LONDON),
+            property("DTSTART", "20260918T140000", "TZID", LONDON),
+            property("DTEND", "20260918T150000", "TZID", LONDON),
+        ),
+    )
+
     /** An override of the 17th, renamed but at its time. */
     private fun earlier() = EventComponent(
         name = "VEVENT",
@@ -237,6 +249,34 @@ class EventMoveTest {
         assertEquals("20260920T100000", following.value("RECURRENCE-ID"))
         assertEquals(LONDON, following.property("RECURRENCE-ID")!!.parameter("TZID"))
         assertNull(following.property("RRULE"))
+    }
+
+    @Test
+    fun `this and following from a changed occurrence starts from the form without its old override`() {
+        val carried = listOf(master(), once(), later())
+        // The 18th as the editor opens it: its override's own values and the
+        // series' rule, given a location.
+        val form = draft(once(), LONDON).copy(
+            location = "Room 2",
+            recurrence = draft(master(), LONDON).recurrence,
+            occurrence = THIRD,
+            series = FIRST,
+        )
+        val (before, after) = split(carried, form, THIRD, LONDON)!!
+        assertEquals("FREQ=DAILY;UNTIL=20260918T075959Z", before[0].value("RRULE"))
+        assertEquals("20260918T140000", after[0].value("DTSTART"))
+        assertEquals("FREQ=DAILY", after[0].value("RRULE"))
+        assertEquals("Room 2", after[0].value("LOCATION"))
+        assertEquals(listOf("Once", "Later"), after.map { it.value("SUMMARY") })
+        assertEquals("20260920T140000", after[1].value("RECURRENCE-ID"))
+    }
+
+    @Test
+    fun `a dragged occurrence carries its override into the new series`() {
+        val carried = listOf(master(), once(), later())
+        val moved = shifted(draft(carried[0], LONDON, THIRD), 3600)
+        val (_, after) = split(carried, moved, THIRD, LONDON)!!
+        assertEquals(listOf("Standup", "Once", "Later"), after.map { it.value("SUMMARY") })
     }
 
     @Test

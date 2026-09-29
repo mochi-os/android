@@ -155,7 +155,8 @@ private val MANAGED = setOf(
  * sent it, whose properties the editor has no field for are kept. [user] is
  * the zone an override's end reads in when it names none.
  *
- * [Scope.ALL] rewrites the master and keeps every override; a series whose
+ * [Scope.ALL] rewrites the master and keeps every override but that of the
+ * occurrence the form was opened on, which the form replaces; a series whose
  * start moved takes its overrides and listed dates along by the same
  * distance. [Scope.ONE] keeps the master as it stands and replaces just the
  * override for the occurrence the user opened, adding one when there was
@@ -181,9 +182,10 @@ fun components(
         val head = component(form, master, recurrence = true, occurrence = 0, start = start)
         val first = master?.let { begins(it) } ?: 0L
         val shift = if (first == 0L) 0L else start - first
-        if (shift == 0L) return listOf(head) + overrides
+        val kept = unopened(overrides, form)
+        if (shift == 0L) return listOf(head) + kept
         return listOf(relisted(head, master!!, Long.MIN_VALUE, shift)) +
-            carried(overrides, head, Long.MIN_VALUE, shift, user)
+            carried(kept, head, Long.MIN_VALUE, shift, user)
     }
     val replaced = component(
         form,
@@ -341,9 +343,11 @@ fun truncated(carried: List<EventComponent>, occurrence: Long): List<EventCompon
  * the series as it now goes on from there, so the form's dates are where
  * this occurrence lands. The old overrides and listed dates from the cut
  * onwards move to the new event, shifted as the form shifted the occurrence,
- * and its rule keeps the old one's end; a `COUNT` is left for the server to
- * shorten by the occurrences the old event keeps. Null when the occurrence
- * is the series' first, which makes the edit one of the whole series.
+ * except the override of the occurrence the form was opened on, which the
+ * form replaces. The new rule keeps the old one's end; a `COUNT` is left for
+ * the server to shorten by the occurrences the old event keeps. Null when
+ * the occurrence is the series' first, which makes the edit one of the whole
+ * series.
  */
 fun split(
     carried: List<EventComponent>,
@@ -357,9 +361,18 @@ fun split(
     val shift = form.start - occurrence
     val head = component(form, master, recurrence = true, occurrence = 0, start = form.start)
     val after = listOf(relisted(head, master, occurrence, shift)) +
-        carried(events.filter { it.exception() }, head, occurrence, shift, user)
+        carried(unopened(events.filter { it.exception() }, form), head, occurrence, shift, user)
     return before to after
 }
+
+/**
+ * The overrides less the one of the occurrence the editor's form was opened
+ * on, which the form replaces when it is saved to the whole series or to it
+ * and the ones after it. A drag's form names no occurrence, and a dragged
+ * occurrence's override moves along with it.
+ */
+private fun unopened(overrides: List<EventComponent>, form: EventForm): List<EventComponent> =
+    if (form.occurrence > 0) overrides.filterNot { matches(it, form.occurrence) } else overrides
 
 /** The instant a master begins, 0 for one without a readable `DTSTART`. */
 private fun begins(master: EventComponent): Long =

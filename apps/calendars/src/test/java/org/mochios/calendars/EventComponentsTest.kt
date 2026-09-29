@@ -158,10 +158,32 @@ class EventComponentsTest {
     }
 
     @Test
-    fun `all events keeps every override`() {
-        val tree = components(form(), listOf(master(), override()), Scope.ALL)
+    fun `all events keeps the overrides of other occurrences`() {
+        // Opened on the first occurrence; the 29th's override stays.
+        val tree = components(
+            form(start = TEN, finish = ELEVEN, occurrence = TEN),
+            listOf(master(), override()),
+            Scope.ALL,
+        )
         assertEquals(2, tree.size)
         assertEquals("Stand-up, moved", tree[1].value("SUMMARY"))
+    }
+
+    @Test
+    fun `all events from a changed occurrence makes the form the series and replaces its override`() {
+        // The 29th, moved to 14:00, opened as the editor shows it: its own
+        // values and the series' rule. Given a location, then saved to all.
+        val opened = form(title = "Stand-up, moved", start = NEXT + 14_400, finish = NEXT_END + 14_400)
+        val tree = components(
+            opened.copy(location = "Room 2"),
+            listOf(master(), override()),
+            Scope.ALL,
+        )
+        assertEquals(1, tree.size)
+        assertEquals("FREQ=WEEKLY", tree[0].value("RRULE"))
+        assertEquals("the series moves to 14:00, not onto the 29th", TEN + 14_400, start(tree[0]))
+        assertEquals("Stand-up, moved", tree[0].value("SUMMARY"))
+        assertEquals("Room 2", tree[0].value("LOCATION"))
     }
 
     @Test
