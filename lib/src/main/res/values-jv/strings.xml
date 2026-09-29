@@ -317,4 +317,7 @@
     <string name="account_error_token_type">Jinis token ora didhukung</string>
     <string name="account_error_caller">Sing nyeluk ora diidini</string>
     <string name="zone_sea">Ing segara</string>
+    <string name="access_remove">Cabut</string>
+    <string name="access_remove_title">Cabut akses?</string>
+    <string name="access_remove_message">Busak aturan akses kanggo \"%1$s\"?</string>
 </resources>

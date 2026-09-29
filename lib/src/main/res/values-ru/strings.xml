@@ -319,4 +319,7 @@
     <string name="account_error_token_type">Неподдерживаемый тип токена</string>
     <string name="account_error_caller">Вызывающей стороне отказано</string>
     <string name="zone_sea">В море</string>
+    <string name="access_remove">Удалить</string>
+    <string name="access_remove_title">Удалить доступ?</string>
+    <string name="access_remove_message">Удалить правило доступа для «%1$s»?</string>
 </resources>

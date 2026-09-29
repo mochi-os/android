@@ -211,6 +211,10 @@ fun FeedScreen(
     val rssClipboardLabel = stringResource(R.string.feeds_clipboard_label_rss)
     val unsubscribedMessage = stringResource(R.string.feeds_unsubscribed)
     val shareLinkTitle = stringResource(R.string.feeds_share_link_title)
+    // True while the unsubscribe confirmation dialog is open. It stays open,
+    // its button spinning, until the unsubscribe answers; only success closes it.
+    var pendingUnsubscribe by remember { mutableStateOf(false) }
+    val isUnsubscribing by viewModel.isUnsubscribing.collectAsState()
     // Turn one-shot overflow-menu actions into a clipboard write, a toast, or a
     // jump back to the "All feeds" aggregate after unsubscribing.
     LaunchedEffect(Unit) {
@@ -228,6 +232,7 @@ fun FeedScreen(
                 }
 
                 is FeedActionEvent.Unsubscribed -> {
+                    pendingUnsubscribe = false
                     Toast.makeText(context, unsubscribedMessage, Toast.LENGTH_SHORT).show()
                     onSelectFeed(LastViewedStore.ALL)
                 }
@@ -301,8 +306,6 @@ fun FeedScreen(
     var showAbout by remember { mutableStateOf(false) }
     // Whether the overflow menu is showing its nested "RSS feed" submenu.
     var showRssSubmenu by remember { mutableStateOf(false) }
-    // True while the unsubscribe confirmation dialog is open.
-    var pendingUnsubscribe by remember { mutableStateOf(false) }
     var pendingDelete by remember { mutableStateOf<Post?>(null) }
     // (feedId, postId, commentId) of a comment pending delete confirmation.
     val pagerState = rememberPagerState(pageCount = { posts.size })
@@ -981,16 +984,15 @@ fun FeedScreen(
 
         if (pendingUnsubscribe) {
             MochiAlertDialog(
-                onDismissRequest = { pendingUnsubscribe = false },
+                onDismissRequest = { if (!isUnsubscribing) pendingUnsubscribe = false },
                 title = stringResource(R.string.feeds_unsubscribe_confirm),
                 text = stringResource(R.string.feeds_unsubscribe_confirm_message),
                 confirmText = stringResource(R.string.feeds_unsubscribe),
-                onConfirm = {
-                    viewModel.unsubscribe()
-                    pendingUnsubscribe = false
-                },
+                onConfirm = { viewModel.unsubscribe() },
+                confirmLoading = isUnsubscribing,
                 destructive = true,
                 dismissText = stringResource(MochiR.string.common_cancel),
+                dismissEnabled = !isUnsubscribing,
             )
         }
 

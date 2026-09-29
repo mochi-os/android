@@ -317,4 +317,7 @@
     <string name="account_error_token_type">Tunnisteen tyyppiä ei tueta</string>
     <string name="account_error_caller">Kutsujalla ei ole lupaa</string>
     <string name="zone_sea">Merellä</string>
+    <string name="access_remove">Poista</string>
+    <string name="access_remove_title">Poistetaanko käyttöoikeus?</string>
+    <string name="access_remove_message">Poistetaanko käyttöoikeussääntö kohteelle ”%1$s”?</string>
 </resources>

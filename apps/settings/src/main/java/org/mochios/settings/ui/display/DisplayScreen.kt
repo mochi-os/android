@@ -35,10 +35,13 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -50,6 +53,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.R
+import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.ThemeInfo
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiBottomSheet
@@ -158,8 +162,18 @@ fun DisplayScreen(
     val uiState by viewModel.uiState.collectAsState()
     val topSchema = displaySchemaTop()
     val bottomSchema = displaySchemaBottom()
+    val snackbar = remember { SnackbarHostState() }
+    // A failed load, save or reset is shown over the settings, which stay put.
+    LaunchedEffect(uiState.error) {
+        val failure = uiState.error
+        if (failure != null) {
+            snackbar.showSnackbar(failure.userMessage())
+            viewModel.clearError()
+        }
+    }
 
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbar) },
         topBar = {
             TopAppBar(
                 title = { Text(stringResource(R.string.settings_display_title)) },
@@ -229,15 +243,16 @@ fun DisplayScreen(
 
         if (showResetConfirm) {
             MochiAlertDialog(
-                onDismissRequest = { showResetConfirm = false },
+                onDismissRequest = { if (!uiState.isResetting) showResetConfirm = false },
                 title = stringResource(R.string.settings_display_reset_confirm_title),
                 text = stringResource(R.string.settings_display_reset_confirm_message),
                 confirmText = stringResource(R.string.settings_reset),
                 onConfirm = {
-                    showResetConfirm = false
-                    viewModel.reset(DISPLAY_RESET_KEYS)
+                    viewModel.reset(DISPLAY_RESET_KEYS) { showResetConfirm = false }
                 },
+                confirmLoading = uiState.isResetting,
                 dismissText = stringResource(R.string.common_cancel),
+                dismissEnabled = !uiState.isResetting,
             )
         }
 

@@ -317,4 +317,7 @@
     <string name="account_error_token_type">Janiw uka token uñacht\'awix yanapkiti</string>
     <string name="account_error_caller">Jawsirix janiw wakiskiti</string>
     <string name="zone_sea">Lamarana</string>
+    <string name="access_remove">Aparma</string>
+    <string name="access_remove_title">¿Mantañ aparma?</string>
+    <string name="access_remove_message">¿\"%1$s\" mantañataki kamachi apsuñati?</string>
 </resources>

@@ -302,6 +302,10 @@ fun BannerSection(
  * @param onConfirm Called once the action is confirmed.
  * @param isBusy Whether the action is in flight; swaps the button for a spinner
  *   and refuses further presses.
+ * @param keepOpen Keep the confirmation open, its button spinning while
+ *   [isBusy], instead of closing it on confirm. For an action whose success
+ *   leaves the screen, so a failure leaves the confirmation up to retry or
+ *   cancel.
  */
 @Composable
 fun ConfirmActionSection(
@@ -311,7 +315,8 @@ fun ConfirmActionSection(
     confirmMessage: String,
     confirmLabel: String,
     onConfirm: () -> Unit,
-    isBusy: Boolean = false
+    isBusy: Boolean = false,
+    keepOpen: Boolean = false
 ) {
     var showConfirm by remember { mutableStateOf(false) }
 
@@ -339,16 +344,18 @@ fun ConfirmActionSection(
 
     if (showConfirm) {
         MochiAlertDialog(
-            onDismissRequest = { showConfirm = false },
+            onDismissRequest = { if (!isBusy) showConfirm = false },
             title = confirmTitle,
             text = confirmMessage,
             confirmText = confirmLabel,
             onConfirm = {
-                showConfirm = false
+                if (!keepOpen) showConfirm = false
                 onConfirm()
             },
+            confirmLoading = keepOpen && isBusy,
             destructive = true,
             dismissText = stringResource(R.string.common_cancel),
+            dismissEnabled = !isBusy,
         )
     }
 }
@@ -364,6 +371,9 @@ fun ConfirmActionSection(
  * @param confirmMessage Body of the confirmation.
  * @param onUnsubscribe Called once unsubscribing is confirmed.
  * @param identity The feature's read-only identity card.
+ * @param isBusy Whether the unsubscribe is in flight; see [ConfirmActionSection].
+ * @param keepOpen Keep the confirmation open until the unsubscribe succeeds;
+ *   see [ConfirmActionSection].
  */
 @Composable
 fun SubscriberSettings(
@@ -372,7 +382,9 @@ fun SubscriberSettings(
     confirmTitle: String,
     confirmMessage: String,
     onUnsubscribe: () -> Unit,
-    identity: @Composable () -> Unit
+    identity: @Composable () -> Unit,
+    isBusy: Boolean = false,
+    keepOpen: Boolean = false
 ) {
     Column(
         modifier = Modifier
@@ -389,7 +401,9 @@ fun SubscriberSettings(
             confirmTitle = confirmTitle,
             confirmMessage = confirmMessage,
             confirmLabel = unsubscribeLabel,
-            onConfirm = onUnsubscribe
+            onConfirm = onUnsubscribe,
+            isBusy = isBusy,
+            keepOpen = keepOpen
         )
     }
 }

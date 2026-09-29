@@ -317,4 +317,7 @@
     <string name="account_error_token_type">Kalite jeton ki pa sipòte</string>
     <string name="account_error_caller">Moun k ap rele a pa gen dwa</string>
     <string name="zone_sea">Nan lanmè</string>
+    <string name="access_remove">Retire</string>
+    <string name="access_remove_title">Retire aksè?</string>
+    <string name="access_remove_message">Retire règ aksè pou \"%1$s\"?</string>
 </resources>

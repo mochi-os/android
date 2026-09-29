@@ -60,6 +60,7 @@ fun FeedSettingsScreen(
     val isLoading by viewModel.isLoading.collectAsState()
     val error by viewModel.error.collectAsState()
     val actionMessage by viewModel.actionMessage.collectAsState()
+    val isUnsubscribing by viewModel.isUnsubscribing.collectAsState()
     val aiAccounts by viewModel.aiAccounts.collectAsState()
 
     // Owners/admins get the full tabbed editor; plain subscribers get a
@@ -148,6 +149,7 @@ fun FeedSettingsScreen(
                 !canManage && info != null -> {
                     SubscriberSettings(
                         feed = info,
+                        isUnsubscribing = isUnsubscribing,
                         onUnsubscribe = { viewModel.unsubscribe { onUnsubscribed() } },
                     )
                 }
@@ -177,6 +179,7 @@ fun FeedSettingsScreen(
 @Composable
 private fun SubscriberSettings(
     feed: Feed,
+    isUnsubscribing: Boolean,
     onUnsubscribe: () -> Unit
 ) {
     SubscriberSettingsLayout(
@@ -185,7 +188,9 @@ private fun SubscriberSettings(
         confirmTitle = stringResource(R.string.feeds_unsubscribe_confirm),
         confirmMessage = stringResource(R.string.feeds_unsubscribe_confirm_message),
         onUnsubscribe = onUnsubscribe,
-        identity = { FeedIdentitySection(feed = feed, editable = false, onRename = {}) }
+        identity = { FeedIdentitySection(feed = feed, editable = false, onRename = {}) },
+        isBusy = isUnsubscribing,
+        keepOpen = true
     )
 }
 

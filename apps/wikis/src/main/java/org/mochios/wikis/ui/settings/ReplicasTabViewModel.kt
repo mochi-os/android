@@ -72,12 +72,14 @@ class ReplicasTabViewModel @Inject constructor(
         }
     }
 
-    fun remove(replicaId: String) {
+    fun remove(replicaId: String, onSuccess: () -> Unit) {
+        if (_uiState.value.isRemoving) return
         _uiState.value = _uiState.value.copy(isRemoving = true)
         viewModelScope.launch {
             try {
                 repository.removeReplica(wikiId, replicaId)
                 _uiState.value = _uiState.value.copy(isRemoving = false)
+                onSuccess()
                 _snackbar.emit(ReplicasTabSnackbar(R.string.wikis_replicas_removed_success))
                 load()
             } catch (e: Exception) {

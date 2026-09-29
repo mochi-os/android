@@ -317,4 +317,7 @@
     <string name="account_error_token_type">మద్దతు లేని టోకెన్ రకం</string>
     <string name="account_error_caller">కాలర్‌కు అనుమతి లేదు</string>
     <string name="zone_sea">సముద్రంలో</string>
+    <string name="access_remove">తొలగించండి</string>
+    <string name="access_remove_title">యాక్సెస్‌ను తొలగించాలా?</string>
+    <string name="access_remove_message">\"%1$s\" కోసం యాక్సెస్ నియమాన్ని తీసివేయాలా?</string>
 </resources>

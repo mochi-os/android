@@ -318,4 +318,7 @@
     <string name="account_error_token_type">Tip de jeton neacceptat</string>
     <string name="account_error_caller">Apelantul nu este permis</string>
     <string name="zone_sea">Pe mare</string>
+    <string name="access_remove">Elimină</string>
+    <string name="access_remove_title">Elimini accesul?</string>
+    <string name="access_remove_message">Eliminați regula de acces pentru „%1$s”?</string>
 </resources>

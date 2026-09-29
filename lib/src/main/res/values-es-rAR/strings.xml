@@ -269,4 +269,6 @@
     <string name="common_preview">Vista previa</string>
     <string name="rss_revoke_confirm">Revocar</string>
     <string name="update_install">Instalá</string>
+    <string name="access_remove">Quitá</string>
+    <string name="access_remove_title">¿Quitás el acceso?</string>
 </resources>

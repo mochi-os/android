@@ -319,4 +319,7 @@
     <string name="account_error_token_type">Nie-ondersteunde tekentipe</string>
     <string name="account_error_caller">Oproeper nie toegelaat nie</string>
     <string name="zone_sea">Op see</string>
+    <string name="access_remove">Verwyder</string>
+    <string name="access_remove_title">Verwyder toegang?</string>
+    <string name="access_remove_message">Verwyder toegangsreël vir \"%1$s\"?</string>
 </resources>

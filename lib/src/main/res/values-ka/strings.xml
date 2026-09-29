@@ -317,4 +317,7 @@
     <string name="account_error_token_type">მხარდაუჭერელი ჟეტონის ტიპი</string>
     <string name="account_error_caller">გამომძახებელს არ აქვს უფლება</string>
     <string name="zone_sea">ზღვაზე</string>
+    <string name="access_remove">წაშლა</string>
+    <string name="access_remove_title">წვდომის წაშლა?</string>
+    <string name="access_remove_message">წავშალოთ წვდომის წესი „%1$s“-ისთვის?</string>
 </resources>

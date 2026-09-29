@@ -318,4 +318,7 @@
     <string name="account_error_token_type">Неподржан тип токена</string>
     <string name="account_error_caller">Позиваоцу није дозвољено</string>
     <string name="zone_sea">На мору</string>
+    <string name="access_remove">Уклони</string>
+    <string name="access_remove_title">Уклонити приступ?</string>
+    <string name="access_remove_message">Уклонити правило приступа за „%1$s“?</string>
 </resources>

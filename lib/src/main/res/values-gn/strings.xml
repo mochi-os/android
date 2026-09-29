@@ -317,4 +317,7 @@
     <string name="account_error_token_type">Token reko ojeguerekóiva</string>
     <string name="account_error_caller">Ohenóiva ndaikatúi</string>
     <string name="zone_sea">Paraguasúpe</string>
+    <string name="access_remove">Embogue</string>
+    <string name="access_remove_title">Embogue acceso?</string>
+    <string name="access_remove_message">¿Emboguéta jeike rembiapoukapy \"%1$s\" peg̃uarã?</string>
 </resources>

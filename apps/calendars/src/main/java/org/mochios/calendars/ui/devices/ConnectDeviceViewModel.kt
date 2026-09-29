@@ -152,7 +152,8 @@ class ConnectDeviceViewModel @Inject constructor(
                 )
                 _events.tryEmit(ConnectDeviceEvent.Deleted)
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isDeleting = false, deleting = null)
+                // The confirmation stays up, so the delete can be retried or cancelled.
+                _uiState.value = _uiState.value.copy(isDeleting = false)
                 _events.tryEmit(ConnectDeviceEvent.Failed(e.toMochiError(), creating = false))
             }
         }

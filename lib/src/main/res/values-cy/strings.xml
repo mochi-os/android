@@ -322,4 +322,7 @@
     <string name="account_error_token_type">Math o docyn heb ei gefnogi</string>
     <string name="account_error_caller">Ni chaniateir y galwr</string>
     <string name="zone_sea">Ar y môr</string>
+    <string name="access_remove">Tynnu</string>
+    <string name="access_remove_title">Tynnu mynediad?</string>
+    <string name="access_remove_message">Tynnu\'r rheol mynediad ar gyfer \"%1$s\"?</string>
 </resources>

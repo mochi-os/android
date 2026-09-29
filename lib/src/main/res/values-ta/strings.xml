@@ -317,4 +317,7 @@
     <string name="account_error_token_type">ஆதரிக்கப்படாத டோக்கன் வகை</string>
     <string name="account_error_caller">அழைப்பாளருக்கு அனுமதி இல்லை</string>
     <string name="zone_sea">கடலில்</string>
+    <string name="access_remove">அகற்று</string>
+    <string name="access_remove_title">அணுகலை அகற்றவா?</string>
+    <string name="access_remove_message">\"%1$s\" க்கான அணுகல் விதியை அகற்றவா?</string>
 </resources>

@@ -317,4 +317,7 @@
     <string name="account_error_token_type">غیر تعاون یافتہ ٹوکن کی قسم</string>
     <string name="account_error_caller">کال کرنے والے کو اجازت نہیں</string>
     <string name="zone_sea">سمندر میں</string>
+    <string name="access_remove">ہٹائیں</string>
+    <string name="access_remove_title">رسائی ہٹائیں؟</string>
+    <string name="access_remove_message">\"%1$s\" کے لیے رسائی کا اصول ہٹائیں؟</string>
 </resources>

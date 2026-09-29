@@ -317,4 +317,7 @@
     <string name="account_error_token_type">不支援的權杖類型</string>
     <string name="account_error_caller">不允許此呼叫方</string>
     <string name="zone_sea">海上</string>
+    <string name="access_remove">移除</string>
+    <string name="access_remove_title">移除存取權?</string>
+    <string name="access_remove_message">移除「%1$s」的存取規則？</string>
 </resources>

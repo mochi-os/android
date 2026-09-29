@@ -318,4 +318,7 @@
     <string name="account_error_token_type">Qo‘llab-quvvatlanmaydigan token turi</string>
     <string name="account_error_caller">Chaqiruvchiga ruxsat yo‘q</string>
     <string name="zone_sea">Dengizda</string>
+    <string name="access_remove">Olib tashlash</string>
+    <string name="access_remove_title">Kirishni olib tashlasinmi?</string>
+    <string name="access_remove_message">\"%1$s\" uchun kirish qoidasi olib tashlansinmi?</string>
 </resources>

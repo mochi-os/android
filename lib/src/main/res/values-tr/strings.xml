@@ -317,4 +317,7 @@
     <string name="account_error_token_type">Desteklenmeyen belirteç türü</string>
     <string name="account_error_caller">Çağırana izin verilmiyor</string>
     <string name="zone_sea">Denizde</string>
+    <string name="access_remove">Kaldır</string>
+    <string name="access_remove_title">Erişim kaldırılsın mı?</string>
+    <string name="access_remove_message">\"%1$s\" için erişim kuralı kaldırılsın mı?</string>
 </resources>

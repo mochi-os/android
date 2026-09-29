@@ -317,4 +317,7 @@
     <string name="account_error_token_type">Onartzen ez den token mota</string>
     <string name="account_error_caller">Deitzaileak ez du baimenik</string>
     <string name="zone_sea">Itsasoan</string>
+    <string name="access_remove">Kendu</string>
+    <string name="access_remove_title">Sarbidea kendu?</string>
+    <string name="access_remove_message">«%1$s» sarbide-araua kendu?</string>
 </resources>

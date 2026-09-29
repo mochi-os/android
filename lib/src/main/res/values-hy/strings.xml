@@ -317,4 +317,7 @@
     <string name="account_error_token_type">Չաջակցվող նշանի տեսակ</string>
     <string name="account_error_caller">Կանչողին թույլատրված չէ</string>
     <string name="zone_sea">Ծովում</string>
+    <string name="access_remove">Հեռացնել</string>
+    <string name="access_remove_title">Հեռացնե՞լ մուտքը։</string>
+    <string name="access_remove_message">Հեռացնե՞լ «%1$s»-ի մուտքի կանոնը։</string>
 </resources>

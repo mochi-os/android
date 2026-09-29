@@ -320,4 +320,7 @@
     <string name="account_error_token_type">Cineál comhartha gan tacaíocht</string>
     <string name="account_error_caller">Níl cead ag an nglaoiteoir</string>
     <string name="zone_sea">Ar muir</string>
+    <string name="access_remove">Bain</string>
+    <string name="access_remove_title">Bain rochtain?</string>
+    <string name="access_remove_message">An bhfuil fonn ort riail rochtana \"%1$s\" a bhaint?</string>
 </resources>

@@ -317,4 +317,7 @@
     <string name="account_error_token_type">Дэмжигдээгүй токены төрөл</string>
     <string name="account_error_caller">Дуудагчид зөвшөөрөгдөөгүй</string>
     <string name="zone_sea">Далайд</string>
+    <string name="access_remove">Хасах</string>
+    <string name="access_remove_title">Хандалтыг хасах уу?</string>
+    <string name="access_remove_message">\"%1$s\"-ийн хандалтын дүрмийг устгах уу?</string>
 </resources>

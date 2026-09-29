@@ -321,4 +321,7 @@
     <string name="account_error_token_type">نوع رمز غير مدعوم</string>
     <string name="account_error_caller">المتصل غير مسموح له</string>
     <string name="zone_sea">في البحر</string>
+    <string name="access_remove">إزالة</string>
+    <string name="access_remove_title">إزالة الوصول؟</string>
+    <string name="access_remove_message">إزالة قاعدة الوصول لـ \"%1$s\"؟</string>
 </resources>

@@ -317,4 +317,7 @@
     <string name="account_error_token_type">Uhlobo lwethokheni olungasekelwe</string>
     <string name="account_error_caller">Umshayeli akavunyelwe</string>
     <string name="zone_sea">Olwandle</string>
+    <string name="access_remove">Khipha</string>
+    <string name="access_remove_title">Khipha ukufinyelela?</string>
+    <string name="access_remove_message">Susa umthetho wokufinyelela we-\"%1$s\"?</string>
 </resources>

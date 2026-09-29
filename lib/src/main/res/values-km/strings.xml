@@ -317,4 +317,7 @@
     <string name="account_error_token_type">ប្រភេទថូខឹនមិនត្រូវបានគាំទ្រ</string>
     <string name="account_error_caller">អ្នកហៅមិនត្រូវបានអនុញ្ញាត</string>
     <string name="zone_sea">នៅសមុទ្រ</string>
+    <string name="access_remove">យកចេញ</string>
+    <string name="access_remove_title">យកសិទ្ធិចូលប្រើចេញ?</string>
+    <string name="access_remove_message">លុបច្បាប់ចូលប្រើសម្រាប់ \"%1$s\"?</string>
 </resources>

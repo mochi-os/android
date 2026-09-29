@@ -310,4 +310,7 @@
     <string name="settings_card_theme">Del tema</string>
     <string name="settings_card_flat">Plana</string>
     <string name="settings_card_raised">Elevada</string>
+    <string name="access_remove">Eliminar</string>
+    <string name="access_remove_title">¿Eliminar acceso?</string>
+    <string name="access_remove_message">¿Quitar la regla de acceso para «%1$s»?</string>
 </resources>

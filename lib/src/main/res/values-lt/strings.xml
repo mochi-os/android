@@ -319,4 +319,7 @@
     <string name="account_error_token_type">Nepalaikomas prieigos rakto tipas</string>
     <string name="account_error_caller">Iškvietėjui neleidžiama</string>
     <string name="zone_sea">Jūroje</string>
+    <string name="access_remove">Šalinti</string>
+    <string name="access_remove_title">Šalinti prieigą?</string>
+    <string name="access_remove_message">Pašalinti prieigos taisyklę „%1$s“?</string>
 </resources>

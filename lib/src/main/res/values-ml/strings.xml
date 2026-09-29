@@ -317,4 +317,7 @@
     <string name="account_error_token_type">പിന്തുണയ്ക്കാത്ത ടോക്കൺ തരം</string>
     <string name="account_error_caller">വിളിക്കുന്നയാൾക്ക് അനുമതിയില്ല</string>
     <string name="zone_sea">കടലിൽ</string>
+    <string name="access_remove">നീക്കം ചെയ്യുക</string>
+    <string name="access_remove_title">ആക്സസ് നീക്കം ചെയ്യണോ?</string>
+    <string name="access_remove_message">\"%1$s\" എന്നതിനുള്ള ആക്‌സസ് നിയമം നീക്കംചെയ്യണോ?</string>
 </resources>

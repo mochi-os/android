@@ -91,6 +91,8 @@ fun SourcesTab(
     val suggestedCredibility by viewModel.suggestedCredibility.collectAsState()
     val pendingPermission by viewModel.pendingPermission.collectAsState()
     val addSourceError by viewModel.addSourceError.collectAsState()
+    val isAddingSource by viewModel.isAddingSource.collectAsState()
+    val isSavingSource by viewModel.isSavingSource.collectAsState()
 
     var showAddDialog by remember { mutableStateOf(false) }
     var showEditDialog by remember { mutableStateOf<Source?>(null) }
@@ -176,6 +178,7 @@ fun SourcesTab(
         AddSourceDialog(
             hasMemoriesSource = sources.any { it.type == "feed/memories" },
             errorMessage = addSourceError?.userMessage(),
+            busy = isAddingSource,
             onClearError = { viewModel.clearAddSourceError() },
             onDismiss = {
                 showAddDialog = false
@@ -192,10 +195,12 @@ fun SourcesTab(
     showEditDialog?.let { source ->
         EditSourceDialog(
             source = source,
+            busy = isSavingSource,
             onDismiss = { showEditDialog = null },
             onSave = { name, credibility, transform ->
-                viewModel.editSource(source.id, name, credibility, transform)
-                showEditDialog = null
+                viewModel.editSource(source.id, name, credibility, transform) {
+                    showEditDialog = null
+                }
             }
         )
     }
@@ -203,10 +208,12 @@ fun SourcesTab(
     showRemoveDialog?.let { source ->
         RemoveSourceDialog(
             source = source,
+            busy = isSavingSource,
             onDismiss = { showRemoveDialog = null },
             onRemove = { deletePosts ->
-                viewModel.removeSource(source.id, deletePosts)
-                showRemoveDialog = null
+                viewModel.removeSource(source.id, deletePosts) {
+                    showRemoveDialog = null
+                }
             }
         )
     }
@@ -214,6 +221,7 @@ fun SourcesTab(
     suggestedCredibility?.let { pending ->
         SuggestedCredibilityDialog(
             suggested = pending.suggested,
+            busy = isSavingSource,
             onAccept = { viewModel.acceptSuggestedCredibility() },
             onDismiss = { viewModel.dismissSuggestedCredibility() }
         )
@@ -430,6 +438,7 @@ private fun SourceCard(
 private fun AddSourceDialog(
     hasMemoriesSource: Boolean,
     errorMessage: String?,
+    busy: Boolean,
     onClearError: () -> Unit,
     onDismiss: () -> Unit,
     onAdd: (String, String) -> Unit
@@ -466,7 +475,7 @@ private fun AddSourceDialog(
     }
 
     MochiAlertDialog(
-        onDismissRequest = onDismiss,
+        onDismissRequest = { if (!busy) onDismiss() },
         title = stringResource(R.string.feeds_add_source),
         content = {
             Column {
@@ -526,7 +535,9 @@ private fun AddSourceDialog(
         confirmText = stringResource(MochiR.string.common_add),
         onConfirm = { onAdd(url, type) },
         confirmEnabled = !urlRequired || url.isNotBlank(),
+        confirmLoading = busy,
         dismissText = stringResource(MochiR.string.common_cancel),
+        dismissEnabled = !busy,
     )
 }
 
@@ -534,6 +545,7 @@ private fun AddSourceDialog(
 @Composable
 private fun EditSourceDialog(
     source: Source,
+    busy: Boolean,
     onDismiss: () -> Unit,
     onSave: (String?, Int?, String?) -> Unit
 ) {
@@ -548,7 +560,7 @@ private fun EditSourceDialog(
     var transform by remember { mutableStateOf(source.transform) }
 
     MochiAlertDialog(
-        onDismissRequest = onDismiss,
+        onDismissRequest = { if (!busy) onDismiss() },
         title = stringResource(R.string.feeds_edit_source),
         content = {
             Column {
@@ -621,36 +633,42 @@ private fun EditSourceDialog(
                 transform.takeIf { it != source.transform }
             )
         },
+        confirmLoading = busy,
         dismissText = stringResource(MochiR.string.common_cancel),
+        dismissEnabled = !busy,
     )
 }
 
 @Composable
 private fun SuggestedCredibilityDialog(
     suggested: Int,
+    busy: Boolean,
     onAccept: () -> Unit,
     onDismiss: () -> Unit
 ) {
     MochiAlertDialog(
-        onDismissRequest = onDismiss,
+        onDismissRequest = { if (!busy) onDismiss() },
         title = stringResource(R.string.feeds_suggested_credibility_title),
         text = stringResource(R.string.feeds_suggested_credibility_body, suggested),
         confirmText = stringResource(R.string.feeds_suggested_credibility_accept),
         onConfirm = onAccept,
+        confirmLoading = busy,
         dismissText = stringResource(R.string.feeds_suggested_credibility_keep),
+        dismissEnabled = !busy,
     )
 }
 
 @Composable
 private fun RemoveSourceDialog(
     source: Source,
+    busy: Boolean,
     onDismiss: () -> Unit,
     onRemove: (Boolean) -> Unit
 ) {
     var deletePosts by remember { mutableStateOf(false) }
 
     MochiAlertDialog(
-        onDismissRequest = onDismiss,
+        onDismissRequest = { if (!busy) onDismiss() },
         title = stringResource(R.string.feeds_remove_source),
         content = {
             Column {
@@ -668,7 +686,9 @@ private fun RemoveSourceDialog(
         },
         confirmText = stringResource(R.string.feeds_remove),
         onConfirm = { onRemove(deletePosts) },
+        confirmLoading = busy,
         destructive = true,
         dismissText = stringResource(MochiR.string.common_cancel),
+        dismissEnabled = !busy,
     )
 }

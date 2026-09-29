@@ -131,8 +131,8 @@ fun AccessTab(
             },
             onSearchUsers = { query -> viewModel.searchUsers(query) },
             onLoadGroups = { viewModel.loadGroups() },
-            onSetAccess = { subject, level -> viewModel.setAccess(subject, level) },
-            onRevoke = { subject -> viewModel.revokeAccess(subject) },
+            onSetAccess = { subject, level, onDone -> viewModel.setAccess(subject, level, onDone) },
+            onRevoke = { subject, onDone -> viewModel.revokeAccess(subject, onDone) },
             isLoading = isLoading
         )
 

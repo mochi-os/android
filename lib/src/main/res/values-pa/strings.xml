@@ -317,4 +317,7 @@
     <string name="account_error_token_type">ਅਸਮਰਥਿਤ ਟੋਕਨ ਕਿਸਮ</string>
     <string name="account_error_caller">ਕਾਲਰ ਨੂੰ ਇਜਾਜ਼ਤ ਨਹੀਂ</string>
     <string name="zone_sea">ਸਮੁੰਦਰ ਵਿੱਚ</string>
+    <string name="access_remove">ਹਟਾਓ</string>
+    <string name="access_remove_title">ਪਹੁੰਚ ਹਟਾਏ?</string>
+    <string name="access_remove_message">\"%1$s\" ਲਈ ਪਹੁੰਚ ਨਿਯਮ ਹਟਾਈਏ?</string>
 </resources>

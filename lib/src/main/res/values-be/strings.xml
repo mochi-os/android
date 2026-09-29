@@ -319,4 +319,7 @@
     <string name="account_error_token_type">Тып токена не падтрымліваецца</string>
     <string name="account_error_caller">Выклікальніку не дазволена</string>
     <string name="zone_sea">У моры</string>
+    <string name="access_remove">Выдаліць</string>
+    <string name="access_remove_title">Выдаліць доступ?</string>
+    <string name="access_remove_message">Выдаліць правіла доступу для \"%1$s\"?</string>
 </resources>

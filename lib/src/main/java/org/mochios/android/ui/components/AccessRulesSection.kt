@@ -157,8 +157,13 @@ data class AccessLabels(
  * @param groups Groups the feature offers, loaded via [onLoadGroups].
  * @param onSearchUsers Called as the user search text changes.
  * @param onLoadGroups Called the first time the group segment is opened.
- * @param onSetAccess Called with a subject and the level to grant it.
- * @param onRevoke Called with the subject whose rule should be dropped.
+ * @param onSetAccess Called with a subject, the level to grant it, and a
+ *   callback to report whether that succeeded. The add dialog stays open, its
+ *   button spinning, until the callback runs, and closes only on success.
+ * @param onRevoke Called, once the removal is confirmed, with the subject whose
+ *   rule should be dropped and a callback to report whether that succeeded. The
+ *   confirmation stays open, its button spinning, until the callback runs, and
+ *   closes only on success.
  * @param isLoading Whether a first load is still in flight; shows a spinner in
  *   place of the empty text.
  */
@@ -173,11 +178,16 @@ fun AccessRulesSection(
     groups: List<AccessCandidate>,
     onSearchUsers: (String) -> Unit,
     onLoadGroups: () -> Unit,
-    onSetAccess: (String, String) -> Unit,
-    onRevoke: (String) -> Unit,
+    onSetAccess: (String, String, (Boolean) -> Unit) -> Unit,
+    onRevoke: (String, (Boolean) -> Unit) -> Unit,
     isLoading: Boolean = false
 ) {
     var showAddDialog by remember { mutableStateOf(false) }
+    // Whether a rule added in the dialog is being saved; it stays open until then.
+    var adding by remember { mutableStateOf(false) }
+    // The rule whose removal awaits confirmation, and whether it is in flight.
+    var removing by remember { mutableStateOf<AccessSubjectRule?>(null) }
+    var revoking by remember { mutableStateOf(false) }
 
     Section(
         title = labels.sectionTitle,
@@ -217,8 +227,8 @@ fun AccessRulesSection(
                         levelLabel = levelLabel,
                         roleLabel = labels.rowRoleLabel,
                         subjectLabel = subjectLabel(rule, labels),
-                        onLevelChange = { level -> onSetAccess(rule.subject, level) },
-                        onRevoke = { onRevoke(rule.subject) }
+                        onLevelChange = { level -> onSetAccess(rule.subject, level) {} },
+                        onRevoke = { removing = rule }
                     )
                 }
             }
@@ -235,11 +245,35 @@ fun AccessRulesSection(
             groups = groups,
             onSearchUsers = onSearchUsers,
             onLoadGroups = onLoadGroups,
+            busy = adding,
             onConfirm = { subject, level ->
-                onSetAccess(subject, level)
-                showAddDialog = false
+                adding = true
+                onSetAccess(subject, level) { succeeded ->
+                    adding = false
+                    if (succeeded) showAddDialog = false
+                }
             },
             onDismiss = { showAddDialog = false }
+        )
+    }
+
+    removing?.let { rule ->
+        MochiAlertDialog(
+            onDismissRequest = { if (!revoking) removing = null },
+            title = stringResource(R.string.access_remove_title),
+            text = stringResource(R.string.access_remove_message, subjectLabel(rule, labels)),
+            confirmText = stringResource(R.string.access_remove),
+            onConfirm = {
+                revoking = true
+                onRevoke(rule.subject) { succeeded ->
+                    revoking = false
+                    if (succeeded) removing = null
+                }
+            },
+            confirmLoading = revoking,
+            destructive = true,
+            dismissText = stringResource(R.string.common_cancel),
+            dismissEnabled = !revoking,
         )
     }
 }
@@ -363,6 +397,7 @@ private fun AddAccessDialog(
     groups: List<AccessCandidate>,
     onSearchUsers: (String) -> Unit,
     onLoadGroups: () -> Unit,
+    busy: Boolean,
     onConfirm: (target: String, level: String) -> Unit,
     onDismiss: () -> Unit
 ) {
@@ -380,7 +415,7 @@ private fun AddAccessDialog(
     }
 
     MochiAlertDialog(
-        onDismissRequest = onDismiss,
+        onDismissRequest = { if (!busy) onDismiss() },
         title = labels.dialogTitle,
         subtitle = labels.dialogSubtitle,
         content = {
@@ -556,7 +591,9 @@ private fun AddAccessDialog(
         confirmText = stringResource(R.string.common_add),
         onConfirm = { onConfirm(selectedSubject, level) },
         confirmEnabled = selectedSubject.isNotBlank(),
+        confirmLoading = busy,
         dismissText = stringResource(R.string.common_cancel),
+        dismissEnabled = !busy,
     )
 }
 

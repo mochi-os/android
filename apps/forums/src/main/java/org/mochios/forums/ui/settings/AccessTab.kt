@@ -122,8 +122,8 @@ fun AccessTab(viewModel: ForumSettingsViewModel) {
             },
             onSearchUsers = { query -> viewModel.searchUsers(query) },
             onLoadGroups = { viewModel.loadGroups() },
-            onSetAccess = { subject, level -> viewModel.setAccess(subject, level) },
-            onRevoke = { subject -> viewModel.revokeAccess(subject) }
+            onSetAccess = { subject, level, onDone -> viewModel.setAccess(subject, level, onDone) },
+            onRevoke = { subject, onDone -> viewModel.revokeAccess(subject, onDone) }
         )
 
         Section(title = stringResource(R.string.forums_tab_members)) {

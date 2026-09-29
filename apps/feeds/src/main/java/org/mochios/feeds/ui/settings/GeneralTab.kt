@@ -38,6 +38,7 @@ fun GeneralTab(
     onFeedDeleted: () -> Unit
 ) {
     val feedInfo by viewModel.feedInfo.collectAsState()
+    val isDeletingFeed by viewModel.isDeletingFeed.collectAsState()
     // The banner arrives with the feed information load; no separate fetch.
     val banner = feedInfo?.banner.orEmpty()
     var bannerDraft by remember(banner) { mutableStateOf(banner) }
@@ -77,7 +78,9 @@ fun GeneralTab(
             confirmTitle = stringResource(R.string.feeds_delete_feed),
             confirmMessage = stringResource(R.string.feeds_delete_feed_confirm),
             confirmLabel = stringResource(MochiR.string.common_delete),
-            onConfirm = { viewModel.deleteFeed { onFeedDeleted() } }
+            onConfirm = { viewModel.deleteFeed { onFeedDeleted() } },
+            isBusy = isDeletingFeed,
+            keepOpen = true
         )
     }
 }

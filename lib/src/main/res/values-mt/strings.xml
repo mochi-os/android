@@ -321,4 +321,7 @@
     <string name="account_error_token_type">Tip ta\' token mhux appoġġjat</string>
     <string name="account_error_caller">Min iċempel mhux permess</string>
     <string name="zone_sea">Fuq il-baħar</string>
+    <string name="access_remove">Neħħi</string>
+    <string name="access_remove_title">Tneħħi l-aċċess?</string>
+    <string name="access_remove_message">Tneħħi r-regola ta\' aċċess għal \"%1$s\"?</string>
 </resources>

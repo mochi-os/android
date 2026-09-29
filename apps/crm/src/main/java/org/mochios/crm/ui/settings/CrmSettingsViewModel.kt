@@ -174,15 +174,18 @@ class CrmSettingsViewModel @Inject constructor(
         }
     }
 
-    fun setAccess(subject: String, level: String) {
+    /** [onDone] reports whether the grant succeeded, so the add dialog can close or stay. */
+    fun setAccess(subject: String, level: String, onDone: (Boolean) -> Unit = {}) {
         viewModelScope.launch {
             try {
                 repository.setAccess(crmId, subject, level)
+                onDone(true)
                 _uiState.value = _uiState.value.copy(
                     actionMessage = R.string.crm_settings_access_updated
                 )
                 loadAccess()
             } catch (e: Exception) {
+                onDone(false)
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
         }
@@ -236,15 +239,18 @@ class CrmSettingsViewModel @Inject constructor(
         }
     }
 
-    fun revokeAccess(subject: String) {
+    /** [onDone] reports whether the revoke succeeded, so its confirmation can close or stay. */
+    fun revokeAccess(subject: String, onDone: (Boolean) -> Unit = {}) {
         viewModelScope.launch {
             try {
                 repository.revokeAccess(crmId, subject)
+                onDone(true)
                 _uiState.value = _uiState.value.copy(
                     actionMessage = R.string.crm_settings_access_revoked
                 )
                 loadAccess()
             } catch (e: Exception) {
+                onDone(false)
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
         }

@@ -317,4 +317,7 @@
     <string name="account_error_token_type">ניט־געשטיצטער טאָקן־טיפּ</string>
     <string name="account_error_caller">דער רופֿער איז ניט דערלויבט</string>
     <string name="zone_sea">אויפֿן ים</string>
+    <string name="access_remove">אַראָפּנעמען</string>
+    <string name="access_remove_title">אַראָפּנעמען צוטריט?</string>
+    <string name="access_remove_message">אַראָפּנעמען די צוטריט־כּלל פֿאַר \"%1$s\"?</string>
 </resources>

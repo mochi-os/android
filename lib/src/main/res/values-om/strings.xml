@@ -317,4 +317,7 @@
     <string name="account_error_token_type">Gosti toksinii hin deggeramne</string>
     <string name="account_error_caller">Waamichi hin hayyamamne</string>
     <string name="zone_sea">Galaana irratti</string>
+    <string name="access_remove">Haqi</string>
+    <string name="access_remove_title">Itti seenumsa haquuf?</string>
+    <string name="access_remove_message">Seera argannoo \"%1$s\" haquu?</string>
 </resources>

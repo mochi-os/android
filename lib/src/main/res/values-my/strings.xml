@@ -317,4 +317,7 @@
     <string name="account_error_token_type">မပံ့ပိုးသော တိုကင်အမျိုးအစား</string>
     <string name="account_error_caller">ခေါ်ဆိုသူကို ခွင့်မပြုပါ</string>
     <string name="zone_sea">ပင်လယ်ပြင်တွင်</string>
+    <string name="access_remove">ဖယ်ရှား</string>
+    <string name="access_remove_title">ဝင်ရောက်ခွင့် ဖယ်ရှားမလား?</string>
+    <string name="access_remove_message">\"%1$s\" အတွက် ဝင်ရောက်ခွင့်စည်းမျဉ်းကို ဖယ်ရှားမလား။</string>
 </resources>

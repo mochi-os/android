@@ -317,4 +317,7 @@
     <string name="account_error_token_type">Aina ya tokeni haitumiki</string>
     <string name="account_error_caller">Mpigaji simu haruhusiwi</string>
     <string name="zone_sea">Baharini</string>
+    <string name="access_remove">Ondoa</string>
+    <string name="access_remove_title">Ondoa ufikiaji?</string>
+    <string name="access_remove_message">Ondoa sheria ya ufikiaji ya \"%1$s\"?</string>
 </resources>

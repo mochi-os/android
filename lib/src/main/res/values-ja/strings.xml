@@ -317,4 +317,7 @@
     <string name="account_error_token_type">サポートされていないトークンの種類</string>
     <string name="account_error_caller">この呼び出し元は許可されていません</string>
     <string name="zone_sea">海上</string>
+    <string name="access_remove">削除</string>
+    <string name="access_remove_title">アクセスを削除しますか?</string>
+    <string name="access_remove_message">「%1$s」のアクセスルールを削除しますか？</string>
 </resources>

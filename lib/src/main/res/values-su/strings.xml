@@ -317,4 +317,7 @@
     <string name="account_error_token_type">Jinis token teu dirojong</string>
     <string name="account_error_caller">Nu nelepon teu diidinan</string>
     <string name="zone_sea">Di laut</string>
+    <string name="access_remove">Pupus</string>
+    <string name="access_remove_title">Cabut aksés?</string>
+    <string name="access_remove_message">Piceun aturan aksés pikeun \"%1$s\"?</string>
 </resources>

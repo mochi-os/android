@@ -317,4 +317,7 @@
     <string name="account_error_token_type">Uhlobo lwethokheni olungaxhaswanga</string>
     <string name="account_error_caller">Umbizi akavumelekanga</string>
     <string name="zone_sea">Elwandle</string>
+    <string name="access_remove">Susa</string>
+    <string name="access_remove_title">Susa ufikelelo?</string>
+    <string name="access_remove_message">Susa umthetho wofikelelo we-\"%1$s\"?</string>
 </resources>

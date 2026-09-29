@@ -317,4 +317,7 @@
     <string name="account_error_token_type">Niet-ondersteund tokentype</string>
     <string name="account_error_caller">Aanroeper niet toegestaan</string>
     <string name="zone_sea">Op zee</string>
+    <string name="access_remove">Verwijderen</string>
+    <string name="access_remove_title">Toegang verwijderen?</string>
+    <string name="access_remove_message">Toegangsregel voor \"%1$s\" verwijderen?</string>
 </resources>

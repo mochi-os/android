@@ -280,4 +280,5 @@
     <string name="settings_card_theme">跟隨主題</string>
     <string name="settings_card_flat">平面</string>
     <string name="settings_card_raised">浮起</string>
+    <string name="access_remove">移除</string>
 </resources>

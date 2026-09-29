@@ -180,6 +180,7 @@ fun ConnectDeviceScreen(
             confirmLoading = uiState.isDeleting,
             destructive = true,
             dismissText = stringResource(R.string.people_common_cancel),
+            dismissEnabled = !uiState.isDeleting,
         )
     }
 

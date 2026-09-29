@@ -125,26 +125,32 @@ class AccessTabViewModel @Inject constructor(
         }
     }
 
-    fun setAccess(subject: String, level: String) {
+    /** [onDone] reports whether the grant succeeded, so the add dialog can close or stay. */
+    fun setAccess(subject: String, level: String, onDone: (Boolean) -> Unit = {}) {
         viewModelScope.launch {
             try {
                 repository.setAccess(wikiId, subject, level)
+                onDone(true)
                 _snackbar.emit(AccessTabSnackbar(R.string.wikis_access_set_success))
                 load()
             } catch (e: Exception) {
+                onDone(false)
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
                 _snackbar.emit(AccessTabSnackbar(R.string.wikis_access_set_failed))
             }
         }
     }
 
-    fun revokeAccess(subject: String) {
+    /** [onDone] reports whether the revoke succeeded, so its confirmation can close or stay. */
+    fun revokeAccess(subject: String, onDone: (Boolean) -> Unit = {}) {
         viewModelScope.launch {
             try {
                 repository.revokeAccess(wikiId, subject)
+                onDone(true)
                 _snackbar.emit(AccessTabSnackbar(R.string.wikis_access_revoke_success))
                 load()
             } catch (e: Exception) {
+                onDone(false)
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
                 _snackbar.emit(AccessTabSnackbar(R.string.wikis_access_revoke_failed))
             }

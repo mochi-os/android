@@ -317,4 +317,7 @@
     <string name="account_error_token_type">جۆری تۆکنی پشتگیرینەکراو</string>
     <string name="account_error_caller">بانگکەر ڕێگەپێدراو نییە</string>
     <string name="zone_sea">لە دەریادا</string>
+    <string name="access_remove">لابردن</string>
+    <string name="access_remove_title">دەستڕاگەیشتن لاببەیت؟</string>
+    <string name="access_remove_message">یاسای دەستپێگەیشتن بۆ \"%1$s\" لابردرێت؟</string>
 </resources>

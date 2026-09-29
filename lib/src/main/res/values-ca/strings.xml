@@ -319,4 +319,7 @@
     <string name="account_error_token_type">Tipus de testimoni no admès</string>
     <string name="account_error_caller">Qui truca no té permís</string>
     <string name="zone_sea">En alta mar</string>
+    <string name="access_remove">Elimina</string>
+    <string name="access_remove_title">Vols eliminar l\'accés?</string>
+    <string name="access_remove_message">Voleu eliminar la regla d\'accés per a «%1$s»?</string>
 </resources>

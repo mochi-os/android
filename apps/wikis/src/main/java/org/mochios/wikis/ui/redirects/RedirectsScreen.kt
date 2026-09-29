@@ -203,8 +203,11 @@ fun RedirectsBody(
 
     val toDelete = pendingDelete
     if (toDelete != null) {
+        // Stays open, its button spinning, until the delete answers; only
+        // success closes it.
+        val busy = state.deleting == toDelete.source
         MochiAlertDialog(
-            onDismissRequest = { pendingDelete = null },
+            onDismissRequest = { if (!busy) pendingDelete = null },
             title = stringResource(R.string.wikis_redirect_delete_confirm_title),
             text = stringResource(
                 R.string.wikis_redirect_delete_confirm_message,
@@ -212,12 +215,11 @@ fun RedirectsBody(
                 toDelete.target,
             ),
             confirmText = stringResource(MochiR.string.common_delete),
-            onConfirm = {
-                viewModel.delete(toDelete.source)
-                pendingDelete = null
-            },
+            onConfirm = { viewModel.delete(toDelete.source) { pendingDelete = null } },
+            confirmLoading = busy,
             destructive = true,
             dismissText = stringResource(MochiR.string.common_cancel),
+            dismissEnabled = !busy,
         )
     }
 }

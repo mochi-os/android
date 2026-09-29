@@ -317,4 +317,7 @@
     <string name="account_error_token_type">ಬೆಂಬಲಿಸದ ಟೋಕನ್ ಪ್ರಕಾರ</string>
     <string name="account_error_caller">ಕರೆ ಮಾಡುವವರಿಗೆ ಅನುಮತಿ ಇಲ್ಲ</string>
     <string name="zone_sea">ಸಮುದ್ರದಲ್ಲಿ</string>
+    <string name="access_remove">ತೆಗೆದುಹಾಕಿ</string>
+    <string name="access_remove_title">ಪ್ರವೇಶ ತೆಗೆದುಹಾಕಬೇಕೆ?</string>
+    <string name="access_remove_message">\"%1$s\" ಗಾಗಿ ಪ್ರವೇಶ ನಿಯಮವನ್ನು ತೆಗೆದುಹಾಕುವುದೇ?</string>
 </resources>

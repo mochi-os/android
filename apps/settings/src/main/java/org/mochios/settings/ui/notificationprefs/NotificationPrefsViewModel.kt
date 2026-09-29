@@ -37,6 +37,8 @@ data class NotificationPrefsUiState(
     val topics: List<NotifTopic> = emptyList(),
     val available: DestinationsAvailable = DestinationsAvailable(),
     val error: MochiError? = null,
+    /** A category delete in flight; its confirmation stays open until it answers. */
+    val isDeletingCategory: Boolean = false,
 )
 
 @HiltViewModel
@@ -99,8 +101,25 @@ class NotificationPrefsViewModel @Inject constructor(
         }
     }
 
-    fun deleteCategory(id: String, reassignTo: String) = mutate {
-        api.deleteCategory(id = id, reassign = reassignTo).unwrapEmpty()
+    fun deleteCategory(id: String, reassignTo: String, onSuccess: () -> Unit) {
+        if (_uiState.value.isDeletingCategory) return
+        _uiState.value = _uiState.value.copy(isDeletingCategory = true)
+        viewModelScope.launch {
+            try {
+                api.deleteCategory(id = id, reassign = reassignTo).unwrapEmpty()
+                _uiState.value = _uiState.value.copy(isDeletingCategory = false)
+                onSuccess()
+                refresh()
+                if (_uiState.value.topicsLoaded) {
+                    loadTopics()
+                }
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(
+                    isDeletingCategory = false,
+                    error = e.toMochiError(),
+                )
+            }
+        }
     }
 
     fun setTopicCategory(topic: NotifTopic, categoryId: String?) = mutate {

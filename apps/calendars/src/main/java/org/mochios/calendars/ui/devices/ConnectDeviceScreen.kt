@@ -182,6 +182,7 @@ fun ConnectDeviceScreen(
             confirmLoading = uiState.isDeleting,
             destructive = true,
             dismissText = stringResource(MochiR.string.common_cancel),
+            dismissEnabled = !uiState.isDeleting,
         )
     }
 

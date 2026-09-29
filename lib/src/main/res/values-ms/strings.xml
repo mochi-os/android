@@ -317,4 +317,7 @@
     <string name="account_error_token_type">Jenis token tidak disokong</string>
     <string name="account_error_caller">Pemanggil tidak dibenarkan</string>
     <string name="zone_sea">Di laut</string>
+    <string name="access_remove">Alih keluar</string>
+    <string name="access_remove_title">Alih keluar akses?</string>
+    <string name="access_remove_message">Alih keluar peraturan akses untuk \"%1$s\"?</string>
 </resources>
