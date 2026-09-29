@@ -84,10 +84,19 @@ data class ContactForm(
     val url: TypedEntry = TypedEntry(),
     val note: String = "",
     val book: String = "",
+    /**
+     * Every instance past the first of a property the form has one field
+     * for, kept for the round trip: a card may hold two URLs or NOTEs, and a
+     * save replaces all of them.
+     */
+    val extras: List<ContactProperty> = emptyList(),
 ) {
     val valid: Boolean
         get() = name.isNotBlank()
 }
+
+/** The properties the form shows one instance of. */
+private val SINGLE = setOf("FN", "N", "NICKNAME", "BDAY", "ORG", "TITLE", "URL", "NOTE")
 
 /** The form a card reads as, with [book] the address book it sits in. */
 fun contactForm(card: List<ContactProperty>?, book: String = ""): ContactForm {
@@ -95,9 +104,16 @@ fun contactForm(card: List<ContactProperty>?, book: String = ""): ContactForm {
     val emails = mutableListOf<TypedEntry>()
     val phones = mutableListOf<TypedEntry>()
     val addresses = mutableListOf<AddressEntry>()
+    val extras = mutableListOf<ContactProperty>()
+    val seen = mutableSetOf<String>()
     for (property in card.orEmpty()) {
-        when (property.name.uppercase()) {
-            "FN" -> if (form.name.isBlank()) form = form.copy(name = property.value)
+        val name = property.name.uppercase()
+        if (name in SINGLE && !seen.add(name)) {
+            extras.add(property)
+            continue
+        }
+        when (name) {
+            "FN" -> form = form.copy(name = property.value)
             "N" -> {
                 val parts = splitComponents(property.value)
                 form = form.copy(
@@ -108,7 +124,7 @@ fun contactForm(card: List<ContactProperty>?, book: String = ""): ContactForm {
                     suffix = parts.component(4),
                 )
             }
-            "NICKNAME" -> if (form.nickname.isBlank()) form = form.copy(nickname = property.value)
+            "NICKNAME" -> form = form.copy(nickname = property.value)
             "EMAIL" -> emails.add(typedEntry(property))
             "TEL" -> phones.add(typedEntry(property))
             "ADR" -> {
@@ -127,14 +143,14 @@ fun contactForm(card: List<ContactProperty>?, book: String = ""): ContactForm {
                     )
                 )
             }
-            "BDAY" -> if (form.birthday.isBlank()) form = form.copy(birthday = property.value)
-            "ORG" -> if (form.organisation.isBlank()) form = form.copy(organisation = property.value)
-            "TITLE" -> if (form.title.isBlank()) form = form.copy(title = property.value)
-            "URL" -> if (form.url.value.isBlank()) form = form.copy(url = typedEntry(property))
-            "NOTE" -> if (form.note.isBlank()) form = form.copy(note = property.value)
+            "BDAY" -> form = form.copy(birthday = property.value)
+            "ORG" -> form = form.copy(organisation = property.value)
+            "TITLE" -> form = form.copy(title = property.value)
+            "URL" -> form = form.copy(url = typedEntry(property))
+            "NOTE" -> form = form.copy(note = property.value)
         }
     }
-    return form.copy(emails = emails, phones = phones, addresses = addresses)
+    return form.copy(emails = emails, phones = phones, addresses = addresses, extras = extras)
 }
 
 /**
@@ -184,6 +200,7 @@ fun ContactForm.properties(): List<ContactProperty> {
         out.add(ContactProperty("URL", url.parameters(), url.value.trim()))
     }
     if (note.isNotBlank()) out.add(ContactProperty("NOTE", emptyMap(), note.trim()))
+    out.addAll(extras)
     return out
 }
 

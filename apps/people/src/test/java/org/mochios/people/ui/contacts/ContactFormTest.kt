@@ -158,6 +158,36 @@ class ContactFormTest {
     }
 
     @Test
+    fun `every instance past the first of a single-field property survives a save`() {
+        val card = listOf(
+            ContactProperty("FN", emptyMap(), "Ada Lovelace"),
+            ContactProperty("FN", mapOf("LANGUAGE" to listOf("fr")), "Ada Lovelace (fr)"),
+            ContactProperty("URL", emptyMap(), "https://example.org/ada"),
+            ContactProperty("URL", mapOf("TYPE" to listOf("work")), "https://example.com/engine"),
+            ContactProperty("NOTE", emptyMap(), "First"),
+            ContactProperty("NOTE", emptyMap(), "Second"),
+        )
+        val written = contactForm(card).properties()
+        for (kept in card) assertTrue("$kept kept", kept in written)
+    }
+
+    @Test
+    fun `editing the first URL leaves the second as it was`() {
+        val form = contactForm(
+            listOf(
+                ContactProperty("FN", emptyMap(), "Ada Lovelace"),
+                ContactProperty("URL", emptyMap(), "https://example.org/ada"),
+                ContactProperty("URL", emptyMap(), "https://example.com/engine"),
+            )
+        )
+        val edited = form.copy(url = form.url.copy(value = "https://example.net/new"))
+        assertEquals(
+            listOf("https://example.net/new", "https://example.com/engine"),
+            edited.properties().filter { it.name == "URL" }.map { it.value },
+        )
+    }
+
+    @Test
     fun `a separator inside a component survives the round trip`() {
         val value = joinComponents(listOf("a;b", "c\\d", "e"))
         // Only the separator is escaped; the backslash stays as it is.
