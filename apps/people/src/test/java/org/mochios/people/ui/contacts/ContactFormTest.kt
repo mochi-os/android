@@ -160,7 +160,8 @@ class ContactFormTest {
     @Test
     fun `a separator inside a component survives the round trip`() {
         val value = joinComponents(listOf("a;b", "c\\d", "e"))
-        assertEquals("a\\;b;c\\\\d;e", value)
+        // Only the separator is escaped; the backslash stays as it is.
+        assertEquals("a\\;b;c\\d;e", value)
         assertEquals(listOf("a;b", "c\\d", "e"), splitComponents(value))
     }
 }

@@ -23,8 +23,9 @@ data class ContactProperty(
 )
 
 /**
- * Split a structured vCard value on its unescaped `;` separators, undoing the
- * escapes each component carries.
+ * Split a structured vCard value on its unescaped `;` separators. Besides
+ * `\;`, the escapes this client used to write (`\,`, `\n`, `\\`) are undone;
+ * any other backslash is the text's own and stays.
  */
 fun splitComponents(value: String): List<String> {
     val out = mutableListOf<String>()
@@ -33,7 +34,11 @@ fun splitComponents(value: String): List<String> {
     for (character in value) {
         when {
             escaped -> {
-                current.append(if (character == 'n' || character == 'N') '\n' else character)
+                when (character) {
+                    'n', 'N' -> current.append('\n')
+                    ';', ',', '\\' -> current.append(character)
+                    else -> current.append('\\').append(character)
+                }
                 escaped = false
             }
             character == '\\' -> escaped = true
@@ -49,17 +54,12 @@ fun splitComponents(value: String): List<String> {
     return out
 }
 
-/** Join components back into one structured value, escaping as vCard wants. */
+/**
+ * Join components back into one structured value in the form the server
+ * stores, which is what its vCard parser gives: only a `;` inside a component
+ * is escaped. Commas, newlines and backslashes stay plain, since the server
+ * escapes them itself when it writes the card for a client; escaping them here
+ * too reached other clients as a literal `\n`.
+ */
 fun joinComponents(components: List<String>): String =
-    components.joinToString(";") { component ->
-        buildString {
-            for (character in component) {
-                when (character) {
-                    '\\' -> append("\\\\")
-                    ';' -> append("\\;")
-                    '\n' -> append("\\n")
-                    else -> append(character)
-                }
-            }
-        }
-    }
+    components.joinToString(";") { it.replace(";", "\\;") }

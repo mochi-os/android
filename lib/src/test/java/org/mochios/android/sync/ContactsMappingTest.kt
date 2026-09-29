@@ -203,6 +203,14 @@ class ContactsMappingTest {
     }
 
     @Test
+    fun `the escapes the client used to write are still read`() {
+        assertEquals(
+            listOf("", "", "Flat 3, 12 Long Street\nBack", "Town", "", "", ""),
+            splitComponents(";;Flat 3\\, 12 Long Street\\nBack;Town;;;"),
+        )
+    }
+
+    @Test
     fun `an address with only the formatted whole becomes the street`() {
         val row = DataRow(StructuredPostal.CONTENT_ITEM_TYPE, mapOf(
             StructuredPostal.FORMATTED_ADDRESS to "1 High Street\nTown",
@@ -210,7 +218,9 @@ class ContactsMappingTest {
         ))
         val property = ContactsMapping.properties(listOf(row)).single()
         assertEquals("ADR", property.name)
-        assertEquals(";;1 High Street\\nTown;;;;", property.value)
+        // Stored as the server's parser gives it: the newline plain, which
+        // the server escapes itself when it writes the card for a client.
+        assertEquals(";;1 High Street\nTown;;;;", property.value)
         assertEquals(listOf("work"), property.params["TYPE"])
     }
 
