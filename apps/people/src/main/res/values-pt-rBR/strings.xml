@@ -161,7 +161,7 @@
     <string name="people_device_created">Criado %1$s</string>
     <string name="people_device_delete">Excluir dispositivo</string>
     <string name="people_device_delete_title">Excluir o dispositivo?</string>
-    <string name="people_device_delete_message">O dispositivo não poderá mais sincronizar contatos.</string>
+    <string name="people_device_delete_message">O dispositivo não poderá mais sincronizar contatos nem calendários.</string>
     <string name="people_device_deleted">Dispositivo excluído</string>
     <string name="people_sync_title">Sincronizar com este celular</string>
     <string name="people_contact_friend">Amigo no Mochi</string>

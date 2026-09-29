@@ -205,7 +205,7 @@
     <string name="people_device_created">Izveidots %1$s</string>
     <string name="people_device_delete">Dzēst ierīci</string>
     <string name="people_device_delete_title">Dzēst ierīci?</string>
-    <string name="people_device_delete_message">Ierīce vairs nevarēs sinhronizēt kontaktus.</string>
+    <string name="people_device_delete_message">Ierīce vairs nevarēs sinhronizēt kontaktus vai kalendārus.</string>
     <string name="people_device_deleted">Ierīce dzēsta</string>
     <string name="people_sync_title">Sinhronizēt ar šo tālruni</string>
     <string name="people_sync_confirm">Dzēšot drauga kontaktu šī tālruņa lietotnē Kontakti, beidzas arī draudzība.</string>

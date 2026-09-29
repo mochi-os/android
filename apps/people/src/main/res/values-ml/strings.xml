@@ -204,7 +204,7 @@
     <string name="people_device_created">സൃഷ്ടിച്ചത് %1$s</string>
     <string name="people_device_delete">ഡിവൈസ് ഇല്ലാതാക്കുക</string>
     <string name="people_device_delete_title">ഡിവൈസ് ഇല്ലാതാക്കണോ?</string>
-    <string name="people_device_delete_message">ഡിവൈസിന് ഇനി കോൺടാക്റ്റുകൾ സമന്വയിപ്പിക്കാനാകില്ല.</string>
+    <string name="people_device_delete_message">ഡിവൈസിന് ഇനി കോൺടാക്റ്റുകളോ കലണ്ടറുകളോ സമന്വയിപ്പിക്കാനാകില്ല.</string>
     <string name="people_device_deleted">ഡിവൈസ് ഇല്ലാതാക്കി</string>
     <string name="people_sync_title">ഈ ഫോണിലേക്ക് സിങ്ക് ചെയ്യുക</string>
     <string name="people_sync_confirm">ഈ ഫോണിലെ കോൺടാക്റ്റുകൾ ആപ്പിൽ ഒരു സുഹൃത്തിന്റെ കോൺടാക്റ്റ് ഇല്ലാതാക്കിയാൽ സൗഹൃദവും അവസാനിക്കും.</string>

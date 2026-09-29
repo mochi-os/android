@@ -233,7 +233,7 @@
     <string name="people_device_never">Never</string>
     <string name="people_device_delete">Delete device</string>
     <string name="people_device_delete_title">Delete device?</string>
-    <string name="people_device_delete_message">The device will no longer be able to sync contacts.</string>
+    <string name="people_device_delete_message">The device will no longer be able to sync contacts or calendars.</string>
     <string name="people_device_deleted">Device deleted</string>
 
     <!-- Sync to this phone (contacts sync adapter) -->

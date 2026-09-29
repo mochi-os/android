@@ -203,7 +203,7 @@
     <string name="people_device_created">Đã tạo %1$s</string>
     <string name="people_device_delete">Xóa thiết bị</string>
     <string name="people_device_delete_title">Xóa thiết bị?</string>
-    <string name="people_device_delete_message">Thiết bị sẽ không thể đồng bộ danh bạ nữa.</string>
+    <string name="people_device_delete_message">Thiết bị sẽ không thể đồng bộ danh bạ hoặc lịch nữa.</string>
     <string name="people_device_deleted">Đã xóa thiết bị</string>
     <string name="people_sync_title">Đồng bộ với điện thoại này</string>
     <string name="people_sync_confirm">Xóa liên hệ của một người bạn trong ứng dụng Danh bạ của điện thoại này cũng sẽ kết thúc tình bạn.</string>

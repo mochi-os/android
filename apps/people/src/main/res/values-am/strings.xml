@@ -204,7 +204,7 @@
     <string name="people_device_created">የተፈጠረ %1$s</string>
     <string name="people_device_delete">መሳሪያ ሰርዝ</string>
     <string name="people_device_delete_title">መሳሪያውን ይሰረዝ?</string>
-    <string name="people_device_delete_message">መሳሪያው ከእንግዲህ እውቂያዎችን ማመሳሰል አይችልም።</string>
+    <string name="people_device_delete_message">መሳሪያው ከእንግዲህ እውቂያዎችን ወይም የቀን መቁጠሪያዎችን ማመሳሰል አይችልም።</string>
     <string name="people_device_deleted">መሳሪያው ተሰርዟል</string>
     <string name="people_sync_title">ከዚህ ስልክ ጋር ማመሳሰል</string>
     <string name="people_sync_confirm">በዚህ ስልክ የእውቂያዎች መተግበሪያ ውስጥ የጓደኛን እውቂያ መሰረዝ ጓደኝነቱንም ያበቃል።</string>

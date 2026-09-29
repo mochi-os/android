@@ -204,7 +204,7 @@
     <string name="people_device_created">%1$s yaratildi</string>
     <string name="people_device_delete">Qurilmani oʻchirish</string>
     <string name="people_device_delete_title">Qurilma oʻchirilsinmi?</string>
-    <string name="people_device_delete_message">Qurilma endi kontaktlarni sinxronlay olmaydi.</string>
+    <string name="people_device_delete_message">Qurilma endi kontaktlar yoki kalendarlarni sinxronlay olmaydi.</string>
     <string name="people_device_deleted">Qurilma oʻchirildi</string>
     <string name="people_sync_title">Bu telefon bilan sinxronlash</string>
     <string name="people_sync_confirm">Bu telefondagi Kontaktlar ilovasida do\'stning kontaktini o\'chirish do\'stlikni ham tugatadi.</string>

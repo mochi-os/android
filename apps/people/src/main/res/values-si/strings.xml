@@ -204,7 +204,7 @@
     <string name="people_device_created">සාදන ලදී %1$s</string>
     <string name="people_device_delete">උපාංගය මකන්න</string>
     <string name="people_device_delete_title">උපාංගය මකන්නද?</string>
-    <string name="people_device_delete_message">උපාංගයට තවදුරටත් සම්බන්ධතා සමමුහුර්ත කළ නොහැක.</string>
+    <string name="people_device_delete_message">උපාංගයට තවදුරටත් සම්බන්ධතා හෝ දින දර්ශන සමමුහුර්ත කළ නොහැක.</string>
     <string name="people_device_deleted">උපාංගය මකා දමන ලදී</string>
     <string name="people_sync_title">මෙම දුරකථනයට සමමුහුර්ත කරන්න</string>
     <string name="people_sync_confirm">මෙම දුරකථනයේ සම්බන්ධතා යෙදුමේ මිතුරෙකුගේ සම්බන්ධතාවය මැකීමෙන් මිත්‍රත්වයද අවසන් වේ.</string>

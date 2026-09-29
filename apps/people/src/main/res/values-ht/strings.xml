@@ -204,7 +204,7 @@
     <string name="people_device_created">Kreye %1$s</string>
     <string name="people_device_delete">Efase aparèy</string>
     <string name="people_device_delete_title">Efase aparèy la?</string>
-    <string name="people_device_delete_message">Aparèy la p ap ka senkronize kontak yo ankò.</string>
+    <string name="people_device_delete_message">Aparèy la p ap ka senkronize kontak oswa kalandriye ankò.</string>
     <string name="people_device_deleted">Aparèy la efase</string>
     <string name="people_sync_title">Senkronize ak telefòn sa a</string>
     <string name="people_sync_confirm">Si ou efase kontak yon zanmi nan aplikasyon Kontak telefòn sa a, zanmitay la ap fini tou.</string>

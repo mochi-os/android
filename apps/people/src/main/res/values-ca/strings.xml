@@ -204,7 +204,7 @@
     <string name="people_device_created">Creat %1$s</string>
     <string name="people_device_delete">Suprimeix el dispositiu</string>
     <string name="people_device_delete_title">Voleu suprimir el dispositiu?</string>
-    <string name="people_device_delete_message">El dispositiu ja no podrà sincronitzar els contactes.</string>
+    <string name="people_device_delete_message">El dispositiu ja no podrà sincronitzar els contactes ni els calendaris.</string>
     <string name="people_device_deleted">S\'ha suprimit el dispositiu</string>
     <string name="people_sync_title">Sincronitza amb aquest telèfon</string>
     <string name="people_sync_confirm">Si suprimiu el contacte d\'un amic a l\'aplicació Contactes d\'aquest telèfon, també s\'acaba l\'amistat.</string>

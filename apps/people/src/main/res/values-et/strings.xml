@@ -204,7 +204,7 @@
     <string name="people_device_created">Loodud %1$s</string>
     <string name="people_device_delete">Kustuta seade</string>
     <string name="people_device_delete_title">Kas kustutada seade?</string>
-    <string name="people_device_delete_message">Seade ei saa enam kontakte sünkroonida.</string>
+    <string name="people_device_delete_message">Seade ei saa enam kontakte ega kalendreid sünkroonida.</string>
     <string name="people_device_deleted">Seade kustutatud</string>
     <string name="people_sync_title">Sünkroniseeri selle telefoniga</string>
     <string name="people_sync_confirm">Sõbra kontakti kustutamine selle telefoni rakenduses Kontaktid lõpetab ka sõpruse.</string>

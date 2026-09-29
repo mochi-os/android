@@ -203,7 +203,7 @@
     <string name="people_device_created">Dibuat %1$s</string>
     <string name="people_device_delete">Padam peranti</string>
     <string name="people_device_delete_title">Padam peranti?</string>
-    <string name="people_device_delete_message">Peranti ini tidak lagi dapat menyegerakkan kenalan.</string>
+    <string name="people_device_delete_message">Peranti ini tidak lagi dapat menyegerakkan kenalan atau kalendar.</string>
     <string name="people_device_deleted">Peranti dipadamkan</string>
     <string name="people_sync_title">Segerakkan ke telefon ini</string>
     <string name="people_sync_confirm">Memadam kenalan rakan dalam apl Kenalan telefon ini turut menamatkan persahabatan.</string>

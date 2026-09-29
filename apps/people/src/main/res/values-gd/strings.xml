@@ -206,7 +206,7 @@
     <string name="people_device_created">Cruthaichte %1$s</string>
     <string name="people_device_delete">Sguab às an t-inneal</string>
     <string name="people_device_delete_title">A bheil thu airson an t-inneal a sguabadh às?</string>
-    <string name="people_device_delete_message">Chan urrainn dhan inneal luchd-aithne a shioncronachadh tuilleadh.</string>
+    <string name="people_device_delete_message">Chan urrainn dhan inneal luchd-aithne no mìosachain a shioncronachadh tuilleadh.</string>
     <string name="people_device_deleted">Chaidh an t-inneal a sguabadh às</string>
     <string name="people_sync_title">Sioncronaich ris an fhòn seo</string>
     <string name="people_sync_confirm">Ma sguabas tu às neach-aithne caraid ann an aplacaid Luchd-aithne an fhòn seo, thig an càirdeas gu crìch cuideachd.</string>

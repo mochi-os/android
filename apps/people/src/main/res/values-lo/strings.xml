@@ -203,7 +203,7 @@
     <string name="people_device_created">ສ້າງ %1$s ແລ້ວ</string>
     <string name="people_device_delete">ລຶບອຸປະກອນ</string>
     <string name="people_device_delete_title">ລຶບອຸປະກອນບໍ?</string>
-    <string name="people_device_delete_message">ອຸປະກອນຈະບໍ່ສາມາດຊິງຄ໌ລາຍຊື່ຜູ້ຕິດຕໍ່ໄດ້ອີກຕໍ່ໄປ.</string>
+    <string name="people_device_delete_message">ອຸປະກອນຈະບໍ່ສາມາດຊິງຄ໌ລາຍຊື່ຜູ້ຕິດຕໍ່ ຫຼື ປະຕິທິນໄດ້ອີກຕໍ່ໄປ.</string>
     <string name="people_device_deleted">ລຶບອຸປະກອນແລ້ວ</string>
     <string name="people_sync_title">ຊິງຄ໌ກັບໂທລະສັບນີ້</string>
     <string name="people_sync_confirm">ການລຶບຜູ້ຕິດຕໍ່ຂອງໝູ່ໃນແອັບຜູ້ຕິດຕໍ່ຂອງໂທລະສັບນີ້ ຈະເຮັດໃຫ້ມິດຕະພາບສິ້ນສຸດນຳ.</string>

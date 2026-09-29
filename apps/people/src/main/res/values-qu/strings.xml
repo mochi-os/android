@@ -204,7 +204,7 @@
     <string name="people_device_created">%1$s kamarisqa</string>
     <string name="people_device_delete">Mañanata wischuy</string>
     <string name="people_device_delete_title">Mañanata wischuychu?</string>
-    <string name="people_device_delete_message">Mañanaqa manañam contactokunata sincronizayta atinqachu.</string>
+    <string name="people_device_delete_message">Kay dispositivo manaña contactokunata nitaq calendariokunata sincronizayta atinqachu.</string>
     <string name="people_device_deleted">Mañana wischusqa</string>
     <string name="people_sync_title">Kay telefonowan tinkichiy</string>
     <string name="people_sync_confirm">Kay telefonopa Contactokuna appninpi masiykipa contactonta pichaspaqa, masintin kayniykipas tukukunqa.</string>

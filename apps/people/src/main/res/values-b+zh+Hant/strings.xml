@@ -203,7 +203,7 @@
     <string name="people_device_created">建立於 %1$s</string>
     <string name="people_device_delete">刪除裝置</string>
     <string name="people_device_delete_title">刪除此裝置？</string>
-    <string name="people_device_delete_message">該裝置將無法再同步聯絡人。</string>
+    <string name="people_device_delete_message">該裝置將無法再同步聯絡人或行事曆。</string>
     <string name="people_device_deleted">裝置已刪除</string>
     <string name="people_sync_title">同步至此手機</string>
     <string name="people_sync_confirm">在此手機的「聯絡人」應用程式中刪除好友的聯絡人，也會結束好友關係。</string>

@@ -204,7 +204,7 @@
     <string name="people_device_created">બનાવેલ %1$s</string>
     <string name="people_device_delete">ઉપકરણ કાઢી નાખો</string>
     <string name="people_device_delete_title">ઉપકરણ કાઢી નાખવું?</string>
-    <string name="people_device_delete_message">ઉપકરણ હવે સંપર્કો સિંક કરી શકશે નહીં.</string>
+    <string name="people_device_delete_message">ઉપકરણ હવે સંપર્કો કે કૅલેન્ડર સિંક કરી શકશે નહીં.</string>
     <string name="people_device_deleted">ઉપકરણ કાઢી નાખ્યું</string>
     <string name="people_sync_title">આ ફોન સાથે સિંક કરો</string>
     <string name="people_sync_confirm">આ ફોનની સંપર્કો ઍપમાં મિત્રનો સંપર્ક કાઢી નાખવાથી મિત્રતા પણ સમાપ્ત થાય છે.</string>

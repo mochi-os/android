@@ -204,7 +204,7 @@
     <string name="people_device_created">Oñemoheñói %1$s</string>
     <string name="people_device_delete">Ehundi mba\'e</string>
     <string name="people_device_delete_title">Ehundíta mba\'e?</string>
-    <string name="people_device_delete_message">Mba\'e ndaikatumo\'ãvéima ombojoaju contacto-kuéra.</string>
+    <string name="people_device_delete_message">Mba\'e ndaikatumo\'ãvéima ombojoaju contacto-kuéra térã arapapahakuéra.</string>
     <string name="people_device_deleted">Mba\'e oñehundíma</string>
     <string name="people_sync_title">Ñembojoja ko pumbyrýre</string>
     <string name="people_sync_confirm">Emboguetéramo peteĩ angirũ contacto ko pumbyry Contactokuéra app-pe, pe angirũreko opáta avei.</string>

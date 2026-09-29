@@ -204,7 +204,7 @@
     <string name="people_device_created">ਬਣਾਇਆ %1$s</string>
     <string name="people_device_delete">ਡਿਵਾਈਸ ਮਿਟਾਓ</string>
     <string name="people_device_delete_title">ਡਿਵਾਈਸ ਮਿਟਾਉਣੀ ਹੈ?</string>
-    <string name="people_device_delete_message">ਡਿਵਾਈਸ ਹੁਣ ਸੰਪਰਕ ਸਿੰਕ ਨਹੀਂ ਕਰ ਸਕੇਗੀ।</string>
+    <string name="people_device_delete_message">ਡਿਵਾਈਸ ਹੁਣ ਸੰਪਰਕ ਜਾਂ ਕੈਲੰਡਰ ਸਿੰਕ ਨਹੀਂ ਕਰ ਸਕੇਗੀ।</string>
     <string name="people_device_deleted">ਡਿਵਾਈਸ ਮਿਟਾਈ ਗਈ</string>
     <string name="people_sync_title">ਇਸ ਫ਼ੋਨ ਨਾਲ ਸਿੰਕ ਕਰੋ</string>
     <string name="people_sync_confirm">ਇਸ ਫ਼ੋਨ ਦੀ ਸੰਪਰਕ ਐਪ ਵਿੱਚ ਕਿਸੇ ਦੋਸਤ ਦਾ ਸੰਪਰਕ ਮਿਟਾਉਣ ਨਾਲ ਦੋਸਤੀ ਵੀ ਖ਼ਤਮ ਹੋ ਜਾਂਦੀ ਹੈ।</string>

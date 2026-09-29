@@ -204,7 +204,7 @@
     <string name="people_device_created">உருவாக்கப்பட்டது %1$s</string>
     <string name="people_device_delete">சாதனத்தை நீக்கு</string>
     <string name="people_device_delete_title">சாதனத்தை நீக்கவா?</string>
-    <string name="people_device_delete_message">இந்தச் சாதனத்தால் இனி தொடர்புகளை ஒத்திசைக்க முடியாது.</string>
+    <string name="people_device_delete_message">இந்தச் சாதனத்தால் இனி தொடர்புகளையோ நாட்காட்டிகளையோ ஒத்திசைக்க முடியாது.</string>
     <string name="people_device_deleted">சாதனம் நீக்கப்பட்டது</string>
     <string name="people_sync_title">இந்தத் தொலைபேசியுடன் ஒத்திசை</string>
     <string name="people_sync_confirm">இந்தத் தொலைபேசியின் தொடர்புகள் ஆப்ஸில் ஒரு நண்பரின் தொடர்பை நீக்கினால் நட்பும் முடிவடையும்.</string>

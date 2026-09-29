@@ -204,7 +204,7 @@
     <string name="people_device_created">Lurata %1$s</string>
     <string name="people_device_delete">Dispositivo chhaqtayaña</string>
     <string name="people_device_delete_title">Dispositivo chhaqtayañati?</string>
-    <string name="people_device_delete_message">Dispositivox janiw contactonaka sincronizañ atkxaniti.</string>
+    <string name="people_device_delete_message">Dispositivox janiw contactonaka jan ukax calendarionak sincronizañ atkxaniti.</string>
     <string name="people_device_deleted">Dispositivo chhaqtayatawa</string>
     <string name="people_sync_title">Aka telefonoru sincronizaña</string>
     <string name="people_sync_confirm">Aka telefonon Contactonaka app ukan mä masin contactop chhaqtayañax masisiñsa tukuyarakiwa.</string>

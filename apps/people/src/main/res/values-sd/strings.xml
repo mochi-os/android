@@ -204,7 +204,7 @@
     <string name="people_device_created">ٺاهيو ويو %1$s</string>
     <string name="people_device_delete">ڊوائيس ختم ڪريو</string>
     <string name="people_device_delete_title">ڊوائيس ختم ڪريو؟</string>
-    <string name="people_device_delete_message">ڊوائيس هاڻي رابطن کي سنڪ نه ڪري سگهندي.</string>
+    <string name="people_device_delete_message">ڊوائيس هاڻي رابطن يا ڪئلينڊرن کي سنڪ نه ڪري سگهندي.</string>
     <string name="people_device_deleted">ڊوائيس ختم ڪئي وئي</string>
     <string name="people_sync_title">هن فون سان سنڪ ڪريو</string>
     <string name="people_sync_confirm">هن فون جي رابطن واري ايپ ۾ ڪنهن دوست جو رابطو ڊاهڻ سان دوستي به ختم ٿي ويندي آهي.</string>

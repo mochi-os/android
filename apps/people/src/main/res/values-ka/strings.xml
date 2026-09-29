@@ -204,7 +204,7 @@
     <string name="people_device_created">შექმნილია %1$s</string>
     <string name="people_device_delete">მოწყობილობის წაშლა</string>
     <string name="people_device_delete_title">წაიშალოს მოწყობილობა?</string>
-    <string name="people_device_delete_message">მოწყობილობა ვეღარ შეძლებს კონტაქტების სინქრონიზაციას.</string>
+    <string name="people_device_delete_message">მოწყობილობა ვეღარ შეძლებს კონტაქტების ან კალენდრების სინქრონიზაციას.</string>
     <string name="people_device_deleted">მოწყობილობა წაიშალა</string>
     <string name="people_sync_title">სინქრონიზება ამ ტელეფონთან</string>
     <string name="people_sync_confirm">ამ ტელეფონის კონტაქტების აპში მეგობრის კონტაქტის წაშლა მეგობრობასაც ასრულებს.</string>

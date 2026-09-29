@@ -204,7 +204,7 @@
     <string name="people_device_created">Skapad %1$s</string>
     <string name="people_device_delete">Ta bort enhet</string>
     <string name="people_device_delete_title">Ta bort enhet?</string>
-    <string name="people_device_delete_message">Enheten kommer inte längre att kunna synkronisera kontakter.</string>
+    <string name="people_device_delete_message">Enheten kommer inte längre att kunna synkronisera kontakter eller kalendrar.</string>
     <string name="people_device_deleted">Enhet borttagen</string>
     <string name="people_sync_title">Synkronisera med den här telefonen</string>
     <string name="people_sync_confirm">Om du tar bort en väns kontakt i appen Kontakter på den här telefonen upphör även vänskapen.</string>

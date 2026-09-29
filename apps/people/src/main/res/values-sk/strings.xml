@@ -205,7 +205,7 @@
     <string name="people_device_created">Vytvorené %1$s</string>
     <string name="people_device_delete">Odstrániť zariadenie</string>
     <string name="people_device_delete_title">Odstrániť zariadenie?</string>
-    <string name="people_device_delete_message">Zariadenie už nebude môcť synchronizovať kontakty.</string>
+    <string name="people_device_delete_message">Zariadenie už nebude môcť synchronizovať kontakty ani kalendáre.</string>
     <string name="people_device_deleted">Zariadenie bolo odstránené</string>
     <string name="people_sync_title">Synchronizovať s týmto telefónom</string>
     <string name="people_sync_confirm">Odstránením kontaktu priateľa v aplikácii Kontakty v tomto telefóne sa skončí aj priateľstvo.</string>

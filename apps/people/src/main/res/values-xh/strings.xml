@@ -204,7 +204,7 @@
     <string name="people_device_created">Yenziwe %1$s</string>
     <string name="people_device_delete">Cima isixhobo</string>
     <string name="people_device_delete_title">Cima isixhobo?</string>
-    <string name="people_device_delete_message">Isixhobo asisayi kukwazi ukungqamanisa abaqhagamshelwa.</string>
+    <string name="people_device_delete_message">Isixhobo asisayi kukwazi ukungqamanisa abaqhagamshelwa okanye iikhalenda.</string>
     <string name="people_device_deleted">Isixhobo sicinyiwe</string>
     <string name="people_sync_title">Ngqamanisa nale fowuni</string>
     <string name="people_sync_confirm">Ukucima uqhagamshelwano lomhlobo kwi-app yaBaqhagamshelwa yale fowuni kukwaphelisa nobuhlobo.</string>

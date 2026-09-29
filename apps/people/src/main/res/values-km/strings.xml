@@ -203,7 +203,7 @@
     <string name="people_device_created">បានបង្កើត %1$s</string>
     <string name="people_device_delete">លុបឧបករណ៍</string>
     <string name="people_device_delete_title">លុបឧបករណ៍?</string>
-    <string name="people_device_delete_message">ឧបករណ៍នេះនឹងលែងអាចធ្វើសមកាលកម្មទំនាក់ទំនងបានទៀតហើយ។</string>
+    <string name="people_device_delete_message">ឧបករណ៍នេះនឹងលែងអាចធ្វើសមកាលកម្មទំនាក់ទំនង ឬប្រតិទិនបានទៀតហើយ។</string>
     <string name="people_device_deleted">បានលុបឧបករណ៍</string>
     <string name="people_sync_title">ធ្វើសមកាលកម្មទៅទូរសព្ទនេះ</string>
     <string name="people_sync_confirm">ការលុបទំនាក់ទំនងរបស់មិត្តភក្តិនៅក្នុងកម្មវិធីទំនាក់ទំនងនៃទូរសព្ទនេះ ក៏នឹងបញ្ចប់មិត្តភាពដែរ។</string>

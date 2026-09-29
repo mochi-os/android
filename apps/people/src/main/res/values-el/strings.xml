@@ -204,7 +204,7 @@
     <string name="people_device_created">Δημιουργήθηκε %1$s</string>
     <string name="people_device_delete">Διαγραφή συσκευής</string>
     <string name="people_device_delete_title">Διαγραφή συσκευής;</string>
-    <string name="people_device_delete_message">Η συσκευή δεν θα μπορεί πλέον να συγχρονίζει επαφές.</string>
+    <string name="people_device_delete_message">Η συσκευή δεν θα μπορεί πλέον να συγχρονίζει επαφές ή ημερολόγια.</string>
     <string name="people_device_deleted">Η συσκευή διαγράφηκε</string>
     <string name="people_sync_title">Συγχρονισμός με αυτό το τηλέφωνο</string>
     <string name="people_sync_confirm">Η διαγραφή της επαφής ενός φίλου στην εφαρμογή Επαφές αυτού του τηλεφώνου τερματίζει και τη φιλία.</string>

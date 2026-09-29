@@ -204,7 +204,7 @@
     <string name="people_device_created">جوړ شو %1$s</string>
     <string name="people_device_delete">وسیله ړنګه کړئ</string>
     <string name="people_device_delete_title">وسیله ړنګه شي؟</string>
-    <string name="people_device_delete_message">وسیله به نور ونشي کولای اړیکې همغږي کړي.</string>
+    <string name="people_device_delete_message">وسیله به نور ونشي کولای اړیکې یا کليزونه همغږي کړي.</string>
     <string name="people_device_deleted">وسیله ړنګه شوه</string>
     <string name="people_sync_title">له دې موبایل سره همغږي کړئ</string>
     <string name="people_sync_confirm">د دې موبایل د اړیکو په اپلیکیشن کې د یوه ملګري د اړیکې ړنګول ملګرتیا هم پای ته رسوي.</string>

@@ -204,7 +204,7 @@
     <string name="people_device_created">Kudaliwe %1$s</string>
     <string name="people_device_delete">Susa idivayisi</string>
     <string name="people_device_delete_title">Susa idivayisi?</string>
-    <string name="people_device_delete_message">Idivayisi ngeke isakwazi ukuvumelanisa oxhumana nabo.</string>
+    <string name="people_device_delete_message">Idivayisi ngeke isakwazi ukuvumelanisa oxhumana nabo noma amakhalenda.</string>
     <string name="people_device_deleted">Idivayisi isusiwe</string>
     <string name="people_sync_title">Vumelanisa nale foni</string>
     <string name="people_sync_confirm">Ukususa othintwayo womngane ku-app ye-Abathintwayo yale foni kuphinde kuqede ubungane.</string>

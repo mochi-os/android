@@ -203,7 +203,7 @@
     <string name="people_device_created">作成 %1$s</string>
     <string name="people_device_delete">デバイスを削除</string>
     <string name="people_device_delete_title">デバイスを削除しますか？</string>
-    <string name="people_device_delete_message">このデバイスは連絡先を同期できなくなります。</string>
+    <string name="people_device_delete_message">このデバイスは連絡先やカレンダーを同期できなくなります。</string>
     <string name="people_device_deleted">デバイスを削除しました</string>
     <string name="people_sync_title">このスマートフォンに同期</string>
     <string name="people_sync_confirm">このスマートフォンの連絡帳アプリで友達の連絡先を削除すると、友達関係も終了します。</string>

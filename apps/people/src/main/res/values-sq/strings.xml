@@ -204,7 +204,7 @@
     <string name="people_device_created">U krijua %1$s</string>
     <string name="people_device_delete">Fshi pajisjen</string>
     <string name="people_device_delete_title">Të fshihet pajisja?</string>
-    <string name="people_device_delete_message">Pajisja nuk do të mund të sinkronizojë më kontaktet.</string>
+    <string name="people_device_delete_message">Pajisja nuk do të mund të sinkronizojë më kontaktet ose kalendarët.</string>
     <string name="people_device_deleted">Pajisja u fshi</string>
     <string name="people_sync_title">Sinkronizo me këtë telefon</string>
     <string name="people_sync_confirm">Fshirja e kontaktit të një miku në aplikacionin Kontaktet të këtij telefoni përfundon edhe miqësinë.</string>

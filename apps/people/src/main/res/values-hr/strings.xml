@@ -205,7 +205,7 @@
     <string name="people_device_created">Stvoreno %1$s</string>
     <string name="people_device_delete">Izbriši uređaj</string>
     <string name="people_device_delete_title">Izbrisati uređaj?</string>
-    <string name="people_device_delete_message">Uređaj više neće moći sinkronizirati kontakte.</string>
+    <string name="people_device_delete_message">Uređaj više neće moći sinkronizirati kontakte ni kalendare.</string>
     <string name="people_device_deleted">Uređaj izbrisan</string>
     <string name="people_sync_title">Sinkroniziraj s ovim telefonom</string>
     <string name="people_sync_confirm">Brisanjem kontakta prijatelja u aplikaciji Kontakti na ovom telefonu prestaje i prijateljstvo.</string>

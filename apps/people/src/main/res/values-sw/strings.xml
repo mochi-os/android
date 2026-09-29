@@ -204,7 +204,7 @@
     <string name="people_device_created">Imeundwa %1$s</string>
     <string name="people_device_delete">Futa kifaa</string>
     <string name="people_device_delete_title">Futa kifaa?</string>
-    <string name="people_device_delete_message">Kifaa hakitaweza tena kusawazisha anwani.</string>
+    <string name="people_device_delete_message">Kifaa hakitaweza tena kusawazisha anwani wala kalenda.</string>
     <string name="people_device_deleted">Kifaa kimefutwa</string>
     <string name="people_sync_title">Sawazisha na simu hii</string>
     <string name="people_sync_confirm">Kufuta anwani ya rafiki katika programu ya Anwani ya simu hii pia kunamaliza urafiki.</string>

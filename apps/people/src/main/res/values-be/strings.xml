@@ -206,7 +206,7 @@
     <string name="people_device_created">Створана %1$s</string>
     <string name="people_device_delete">Выдаліць прыладу</string>
     <string name="people_device_delete_title">Выдаліць прыладу?</string>
-    <string name="people_device_delete_message">Прылада больш не зможа сінхранізаваць кантакты.</string>
+    <string name="people_device_delete_message">Прылада больш не зможа сінхранізаваць кантакты або календары.</string>
     <string name="people_device_deleted">Прылада выдалена</string>
     <string name="people_sync_title">Сінхранізаваць з гэтым тэлефонам</string>
     <string name="people_sync_confirm">Выдаленне кантакту сябра ў праграме «Кантакты» на гэтым тэлефоне таксама спыняе сяброўства.</string>

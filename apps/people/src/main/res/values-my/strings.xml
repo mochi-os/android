@@ -203,7 +203,7 @@
     <string name="people_device_created">%1$s ဖန်တီးပြီး</string>
     <string name="people_device_delete">ကိရိယာ ဖျက်မည်</string>
     <string name="people_device_delete_title">ကိရိယာကို ဖျက်မလား?</string>
-    <string name="people_device_delete_message">ကိရိယာသည် အဆက်အသွယ်များကို ထပ်မံ ချိန်ကိုက်နိုင်တော့မည် မဟုတ်ပါ။</string>
+    <string name="people_device_delete_message">ကိရိယာသည် အဆက်အသွယ်များ သို့မဟုတ် ပြက္ခဒိန်များကို ထပ်မံ ချိန်ကိုက်နိုင်တော့မည် မဟုတ်ပါ။</string>
     <string name="people_device_deleted">ကိရိယာ ဖျက်ပြီးပါပြီ</string>
     <string name="people_sync_title">ဤဖုန်းသို့ ထပ်တူပြုရန်</string>
     <string name="people_sync_confirm">ဤဖုန်း၏ အဆက်အသွယ်များ အက်ပ်တွင် သူငယ်ချင်း၏ အဆက်အသွယ်ကို ဖျက်လျှင် မိတ်ဆွေဖြစ်မှုလည်း ပြီးဆုံးပါမည်။</string>

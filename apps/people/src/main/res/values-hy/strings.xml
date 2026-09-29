@@ -204,7 +204,7 @@
     <string name="people_device_created">Ստեղծվել է %1$s</string>
     <string name="people_device_delete">Ջնջել սարքը</string>
     <string name="people_device_delete_title">Ջնջե՞լ սարքը</string>
-    <string name="people_device_delete_message">Սարքն այլևս չի կարողանա համաժամացնել կոնտակտները։</string>
+    <string name="people_device_delete_message">Սարքն այլևս չի կարողանա համաժամացնել կոնտակտները կամ օրացույցները։</string>
     <string name="people_device_deleted">Սարքը ջնջվեց</string>
     <string name="people_sync_title">Համաժամացնել այս հեռախոսի հետ</string>
     <string name="people_sync_confirm">Այս հեռախոսի Կոնտակտներ հավելվածում ընկերոջ կոնտակտը ջնջելը նաև ավարտում է ընկերությունը։</string>

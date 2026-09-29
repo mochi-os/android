@@ -204,7 +204,7 @@
     <string name="people_device_created">ರಚಿಸಲಾಗಿದೆ %1$s</string>
     <string name="people_device_delete">ಸಾಧನವನ್ನು ಅಳಿಸಿ</string>
     <string name="people_device_delete_title">ಸಾಧನವನ್ನು ಅಳಿಸುವುದೇ?</string>
-    <string name="people_device_delete_message">ಸಾಧನವು ಇನ್ನು ಮುಂದೆ ಸಂಪರ್ಕಗಳನ್ನು ಸಿಂಕ್ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
+    <string name="people_device_delete_message">ಸಾಧನವು ಇನ್ನು ಮುಂದೆ ಸಂಪರ್ಕಗಳನ್ನು ಅಥವಾ ಕ್ಯಾಲೆಂಡರ್‌ಗಳನ್ನು ಸಿಂಕ್ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
     <string name="people_device_deleted">ಸಾಧನವನ್ನು ಅಳಿಸಲಾಗಿದೆ</string>
     <string name="people_sync_title">ಈ ಫೋನ್‌ಗೆ ಸಿಂಕ್ ಮಾಡಿ</string>
     <string name="people_sync_confirm">ಈ ಫೋನ್‌ನ ಸಂಪರ್ಕಗಳು ಆ್ಯಪ್‌ನಲ್ಲಿ ಸ್ನೇಹಿತರ ಸಂಪರ್ಕವನ್ನು ಅಳಿಸಿದರೆ ಸ್ನೇಹವೂ ಕೊನೆಗೊಳ್ಳುತ್ತದೆ.</string>

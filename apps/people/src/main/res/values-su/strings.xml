@@ -203,7 +203,7 @@
     <string name="people_device_created">Dijieun %1$s</string>
     <string name="people_device_delete">Hapus pakakas</string>
     <string name="people_device_delete_title">Hapus pakakas?</string>
-    <string name="people_device_delete_message">Pakakas moal bisa nyingkronkeun kontak deui.</string>
+    <string name="people_device_delete_message">Pakakas moal bisa nyingkronkeun kontak atawa kalénder deui.</string>
     <string name="people_device_deleted">Pakakas geus dihapus</string>
     <string name="people_sync_title">Sinkronkeun sareng telepon ieu</string>
     <string name="people_sync_confirm">Mupus kontak babaturan dina aplikasi Kontak di telepon ieu ogé ngeureunkeun hubungan babaturan.</string>

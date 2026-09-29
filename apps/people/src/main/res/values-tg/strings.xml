@@ -204,7 +204,7 @@
     <string name="people_device_created">Эҷод шуд %1$s</string>
     <string name="people_device_delete">Нест кардани дастгоҳ</string>
     <string name="people_device_delete_title">Дастгоҳ нест карда шавад?</string>
-    <string name="people_device_delete_message">Дастгоҳ дигар тамосҳоро ҳамоҳанг карда наметавонад.</string>
+    <string name="people_device_delete_message">Дастгоҳ дигар тамосҳо ё тақвимҳоро ҳамоҳанг карда наметавонад.</string>
     <string name="people_device_deleted">Дастгоҳ нест карда шуд</string>
     <string name="people_sync_title">Ҳамоҳангсозӣ бо ин телефон</string>
     <string name="people_sync_confirm">Нест кардани тамоси дӯст дар барномаи Тамосҳои ин телефон дӯстиро низ ба охир мерасонад.</string>

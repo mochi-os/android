@@ -204,7 +204,7 @@
     <string name="people_device_created">%1$s құрылды</string>
     <string name="people_device_delete">Құрылғыны жою</string>
     <string name="people_device_delete_title">Құрылғыны жою керек пе?</string>
-    <string name="people_device_delete_message">Құрылғы енді контактілерді синхрондай алмайды.</string>
+    <string name="people_device_delete_message">Құрылғы енді контактілерді немесе күнтізбелерді синхрондай алмайды.</string>
     <string name="people_device_deleted">Құрылғы жойылды</string>
     <string name="people_sync_title">Осы телефонмен синхрондау</string>
     <string name="people_sync_confirm">Осы телефонның Контактілер қолданбасында достың контактісін жою достықты да аяқтайды.</string>

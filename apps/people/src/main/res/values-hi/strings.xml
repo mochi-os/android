@@ -204,7 +204,7 @@
     <string name="people_device_created">बनाया गया %1$s</string>
     <string name="people_device_delete">डिवाइस हटाएँ</string>
     <string name="people_device_delete_title">डिवाइस हटाएँ?</string>
-    <string name="people_device_delete_message">डिवाइस अब संपर्क सिंक नहीं कर पाएगा।</string>
+    <string name="people_device_delete_message">डिवाइस अब संपर्क या कैलेंडर सिंक नहीं कर पाएगा।</string>
     <string name="people_device_deleted">डिवाइस हटाया गया</string>
     <string name="people_sync_title">इस फ़ोन पर सिंक करें</string>
     <string name="people_sync_confirm">इस फ़ोन के संपर्क ऐप में किसी मित्र का संपर्क हटाने से मित्रता भी समाप्त हो जाती है।</string>

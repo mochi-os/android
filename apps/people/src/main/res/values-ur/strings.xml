@@ -204,7 +204,7 @@
     <string name="people_device_created">بنایا گیا %1$s</string>
     <string name="people_device_delete">ڈیوائس حذف کریں</string>
     <string name="people_device_delete_title">ڈیوائس حذف کریں؟</string>
-    <string name="people_device_delete_message">ڈیوائس اب رابطے سنک نہیں کر سکے گی۔</string>
+    <string name="people_device_delete_message">ڈیوائس اب رابطے یا کیلنڈرز سنک نہیں کر سکے گی۔</string>
     <string name="people_device_deleted">ڈیوائس حذف ہو گئی</string>
     <string name="people_sync_title">اس فون کے ساتھ سنک کریں</string>
     <string name="people_sync_confirm">اس فون کی روابط ایپ میں کسی دوست کا رابطہ حذف کرنے سے دوستی بھی ختم ہو جاتی ہے۔</string>

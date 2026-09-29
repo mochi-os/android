@@ -206,7 +206,7 @@
     <string name="people_device_created">Utworzono %1$s</string>
     <string name="people_device_delete">Usuń urządzenie</string>
     <string name="people_device_delete_title">Usunąć urządzenie?</string>
-    <string name="people_device_delete_message">Urządzenie nie będzie już mogło synchronizować kontaktów.</string>
+    <string name="people_device_delete_message">Urządzenie nie będzie już mogło synchronizować kontaktów ani kalendarzy.</string>
     <string name="people_device_deleted">Usunięto urządzenie</string>
     <string name="people_sync_title">Synchronizuj z tym telefonem</string>
     <string name="people_sync_confirm">Usunięcie kontaktu znajomego w aplikacji Kontakty na tym telefonie kończy również znajomość.</string>

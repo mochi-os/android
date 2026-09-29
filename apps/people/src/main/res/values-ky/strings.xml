@@ -204,7 +204,7 @@
     <string name="people_device_created">Түзүлдү %1$s</string>
     <string name="people_device_delete">Түзмөктү өчүрүү</string>
     <string name="people_device_delete_title">Түзмөк өчүрүлсүнбү?</string>
-    <string name="people_device_delete_message">Түзмөк мындан ары байланыштарды шайкештире албайт.</string>
+    <string name="people_device_delete_message">Түзмөк мындан ары байланыштарды же календарларды шайкештире албайт.</string>
     <string name="people_device_deleted">Түзмөк өчүрүлдү</string>
     <string name="people_sync_title">Ушул телефон менен синхрондоштуруу</string>
     <string name="people_sync_confirm">Ушул телефондун Байланыштар колдонмосунда достун байланышын өчүрсөңүз, достук да аяктайт.</string>

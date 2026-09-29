@@ -204,7 +204,7 @@
     <string name="people_device_created">Създадено %1$s</string>
     <string name="people_device_delete">Изтриване на устройството</string>
     <string name="people_device_delete_title">Да се изтрие ли устройството?</string>
-    <string name="people_device_delete_message">Устройството повече няма да може да синхронизира контакти.</string>
+    <string name="people_device_delete_message">Устройството повече няма да може да синхронизира контакти или календари.</string>
     <string name="people_device_deleted">Устройството е изтрито</string>
     <string name="people_sync_title">Синхронизиране с този телефон</string>
     <string name="people_sync_confirm">Изтриването на контакта на приятел в приложението „Контакти“ на този телефон прекратява и приятелството.</string>

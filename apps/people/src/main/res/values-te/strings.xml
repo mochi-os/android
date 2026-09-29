@@ -204,7 +204,7 @@
     <string name="people_device_created">సృష్టించబడింది %1$s</string>
     <string name="people_device_delete">పరికరాన్ని తొలగించండి</string>
     <string name="people_device_delete_title">పరికరాన్ని తొలగించాలా?</string>
-    <string name="people_device_delete_message">పరికరం ఇకపై కాంటాక్ట్‌లను సింక్ చేయలేదు.</string>
+    <string name="people_device_delete_message">పరికరం ఇకపై కాంటాక్ట్‌లను లేదా క్యాలెండర్‌లను సింక్ చేయలేదు.</string>
     <string name="people_device_deleted">పరికరం తొలగించబడింది</string>
     <string name="people_sync_title">ఈ ఫోన్‌కు సింక్ చేయండి</string>
     <string name="people_sync_confirm">ఈ ఫోన్ కాంటాక్ట్‌ల యాప్‌లో స్నేహితుడి కాంటాక్ట్‌ను తొలగిస్తే స్నేహం కూడా ముగుస్తుంది.</string>

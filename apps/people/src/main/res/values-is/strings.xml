@@ -204,7 +204,7 @@
     <string name="people_device_created">Búið til %1$s</string>
     <string name="people_device_delete">Eyða tæki</string>
     <string name="people_device_delete_title">Eyða tæki?</string>
-    <string name="people_device_delete_message">Tækið mun ekki lengur geta samstillt tengiliði.</string>
+    <string name="people_device_delete_message">Tækið mun ekki lengur geta samstillt tengiliði eða dagatöl.</string>
     <string name="people_device_deleted">Tæki eytt</string>
     <string name="people_sync_title">Samstilla við þennan síma</string>
     <string name="people_sync_confirm">Ef þú eyðir tengilið vinar í forritinu Tengiliðir í þessum síma lýkur vináttunni einnig.</string>

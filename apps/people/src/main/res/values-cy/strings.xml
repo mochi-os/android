@@ -208,7 +208,7 @@
     <string name="people_device_created">Wedi\'i greu %1$s</string>
     <string name="people_device_delete">Dileu dyfais</string>
     <string name="people_device_delete_title">Dileu\'r ddyfais?</string>
-    <string name="people_device_delete_message">Ni fydd y ddyfais yn gallu cysoni cysylltiadau mwyach.</string>
+    <string name="people_device_delete_message">Ni fydd y ddyfais yn gallu cysoni cysylltiadau na chalendrau mwyach.</string>
     <string name="people_device_deleted">Dyfais wedi\'i dileu</string>
     <string name="people_sync_title">Cysoni i\'r ffôn hwn</string>
     <string name="people_sync_confirm">Mae dileu cyswllt ffrind yn ap Cysylltiadau\'r ffôn hwn hefyd yn dod â\'r cyfeillgarwch i ben.</string>

@@ -204,7 +204,7 @@
     <string name="people_device_created">An ƙirƙira %1$s</string>
     <string name="people_device_delete">Goge na\'ura</string>
     <string name="people_device_delete_title">Goge na\'urar?</string>
-    <string name="people_device_delete_message">Na\'urar ba za ta ƙara iya daidaita lambobin sadarwa ba.</string>
+    <string name="people_device_delete_message">Na\'urar ba za ta ƙara iya daidaita lambobin sadarwa ko kalandoci ba.</string>
     <string name="people_device_deleted">An goge na\'urar</string>
     <string name="people_sync_title">Daidaita da wannan wayar</string>
     <string name="people_sync_confirm">Share lambar sadarwar aboki a manhajar Lambobin sadarwa ta wannan wayar zai kuma kawo ƙarshen abotar.</string>

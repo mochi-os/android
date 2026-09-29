@@ -206,7 +206,7 @@
     <string name="people_device_created">Ustvarjeno %1$s</string>
     <string name="people_device_delete">Izbriši napravo</string>
     <string name="people_device_delete_title">Izbrišem napravo?</string>
-    <string name="people_device_delete_message">Naprava ne bo več mogla sinhronizirati stikov.</string>
+    <string name="people_device_delete_message">Naprava ne bo več mogla sinhronizirati stikov ali koledarjev.</string>
     <string name="people_device_deleted">Naprava je izbrisana</string>
     <string name="people_sync_title">Sinhroniziraj s tem telefonom</string>
     <string name="people_sync_confirm">Če v aplikaciji Stiki na tem telefonu izbrišete stik prijatelja, se konča tudi prijateljstvo.</string>

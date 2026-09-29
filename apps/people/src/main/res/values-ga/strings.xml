@@ -207,7 +207,7 @@
     <string name="people_device_created">Cruthaithe %1$s</string>
     <string name="people_device_delete">Scrios an gléas</string>
     <string name="people_device_delete_title">Scrios an gléas?</string>
-    <string name="people_device_delete_message">Ní bheidh an gléas in ann teagmhálaithe a shioncrónú a thuilleadh.</string>
+    <string name="people_device_delete_message">Ní bheidh an gléas in ann teagmhálaithe ná féilirí a shioncrónú a thuilleadh.</string>
     <string name="people_device_deleted">Gléas scriosta</string>
     <string name="people_sync_title">Sioncrónaigh leis an bhfón seo</string>
     <string name="people_sync_confirm">Má scriosann tú teagmháil charad san aip Teagmhálacha ar an bhfón seo, cuirfear deireadh leis an gcairdeas freisin.</string>

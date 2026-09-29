@@ -204,7 +204,7 @@
     <string name="people_device_created">Luotu %1$s</string>
     <string name="people_device_delete">Poista laite</string>
     <string name="people_device_delete_title">Poistetaanko laite?</string>
-    <string name="people_device_delete_message">Laite ei voi enää synkronoida yhteystietoja.</string>
+    <string name="people_device_delete_message">Laite ei voi enää synkronoida yhteystietoja eikä kalentereita.</string>
     <string name="people_device_deleted">Laite poistettu</string>
     <string name="people_sync_title">Synkronoi tähän puhelimeen</string>
     <string name="people_sync_confirm">Kaverin yhteystiedon poistaminen tämän puhelimen Yhteystiedot-sovelluksesta päättää myös kaveruuden.</string>

@@ -204,7 +204,7 @@
     <string name="people_device_created">Döredildi %1$s</string>
     <string name="people_device_delete">Enjamy poz</string>
     <string name="people_device_delete_title">Enjam pozulsynmy?</string>
-    <string name="people_device_delete_message">Enjam indi kontaktlary sinhronlap bilmez.</string>
+    <string name="people_device_delete_message">Enjam indi kontaktlary ýa-da senenamalary sinhronlap bilmez.</string>
     <string name="people_device_deleted">Enjam pozuldy</string>
     <string name="people_sync_title">Bu telefon bilen sinhronlaşdyr</string>
     <string name="people_sync_confirm">Bu telefonyň Kontaktlar programmasynda dostuň kontaktyny pozmak dostlugy hem tamamlaýar.</string>

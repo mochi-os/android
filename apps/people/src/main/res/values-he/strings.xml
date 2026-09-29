@@ -205,7 +205,7 @@
     <string name="people_device_created">נוצר %1$s</string>
     <string name="people_device_delete">מחיקת מכשיר</string>
     <string name="people_device_delete_title">למחוק את המכשיר?</string>
-    <string name="people_device_delete_message">המכשיר לא יוכל עוד לסנכרן אנשי קשר.</string>
+    <string name="people_device_delete_message">המכשיר לא יוכל עוד לסנכרן אנשי קשר או יומנים.</string>
     <string name="people_device_deleted">המכשיר נמחק</string>
     <string name="people_sync_title">סנכרון עם הטלפון הזה</string>
     <string name="people_sync_confirm">מחיקת איש הקשר של חבר באפליקציית אנשי הקשר בטלפון הזה מסיימת גם את החברות.</string>

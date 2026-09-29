@@ -203,7 +203,7 @@
     <string name="people_device_created">Digawé %1$s</string>
     <string name="people_device_delete">Busak piranti</string>
     <string name="people_device_delete_title">Busak piranti?</string>
-    <string name="people_device_delete_message">Piranti ora bakal bisa nyelarasake kontak maneh.</string>
+    <string name="people_device_delete_message">Piranti ora bakal bisa nyelarasake kontak utawa kalender maneh.</string>
     <string name="people_device_deleted">Piranti dibusak</string>
     <string name="people_sync_title">Sinkronisasi menyang telpon iki</string>
     <string name="people_sync_confirm">Yen mbusak kontak kanca ing aplikasi Kontak telpon iki, kekancan uga bakal rampung.</string>

@@ -204,7 +204,7 @@
     <string name="people_device_created">Oluşturuldu: %1$s</string>
     <string name="people_device_delete">Cihazı sil</string>
     <string name="people_device_delete_title">Cihaz silinsin mi?</string>
-    <string name="people_device_delete_message">Cihaz artık kişileri eşitleyemeyecek.</string>
+    <string name="people_device_delete_message">Cihaz artık kişileri veya takvimleri eşitleyemeyecek.</string>
     <string name="people_device_deleted">Cihaz silindi</string>
     <string name="people_sync_title">Bu telefonla senkronize et</string>
     <string name="people_sync_confirm">Bir arkadaşın kişi kaydını bu telefonun Kişiler uygulamasında silmek arkadaşlığı da sona erdirir.</string>

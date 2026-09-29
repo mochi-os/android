@@ -204,7 +204,7 @@
     <string name="people_device_created">Oppretta %1$s</string>
     <string name="people_device_delete">Slett eining</string>
     <string name="people_device_delete_title">Slette eining?</string>
-    <string name="people_device_delete_message">Eininga vil ikkje lenger kunne synkronisera kontaktar.</string>
+    <string name="people_device_delete_message">Eininga vil ikkje lenger kunne synkronisera kontaktar eller kalendrar.</string>
     <string name="people_device_deleted">Eining sletta</string>
     <string name="people_sync_title">Synkroniser med denne telefonen</string>
     <string name="people_sync_confirm">Viss du slettar kontakten til ein ven i Kontaktar-appen på denne telefonen, tek òg vennskapen slutt.</string>

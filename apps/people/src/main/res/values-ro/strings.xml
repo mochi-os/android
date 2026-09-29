@@ -205,7 +205,7 @@
     <string name="people_device_created">Creat %1$s</string>
     <string name="people_device_delete">Șterge dispozitivul</string>
     <string name="people_device_delete_title">Ștergi dispozitivul?</string>
-    <string name="people_device_delete_message">Dispozitivul nu va mai putea sincroniza contactele.</string>
+    <string name="people_device_delete_message">Dispozitivul nu va mai putea sincroniza contactele sau calendarele.</string>
     <string name="people_device_deleted">Dispozitiv șters</string>
     <string name="people_sync_title">Sincronizare cu acest telefon</string>
     <string name="people_sync_confirm">Ștergerea contactului unui prieten din aplicația Contacte a acestui telefon încheie și prietenia.</string>

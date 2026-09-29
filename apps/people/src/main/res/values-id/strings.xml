@@ -203,7 +203,7 @@
     <string name="people_device_created">Dibuat %1$s</string>
     <string name="people_device_delete">Hapus perangkat</string>
     <string name="people_device_delete_title">Hapus perangkat?</string>
-    <string name="people_device_delete_message">Perangkat tidak akan bisa lagi menyinkronkan kontak.</string>
+    <string name="people_device_delete_message">Perangkat tidak akan bisa lagi menyinkronkan kontak atau kalender.</string>
     <string name="people_device_deleted">Perangkat dihapus</string>
     <string name="people_sync_title">Sinkronkan ke ponsel ini</string>
     <string name="people_sync_confirm">Menghapus kontak teman di aplikasi Kontak ponsel ini juga mengakhiri pertemanan.</string>

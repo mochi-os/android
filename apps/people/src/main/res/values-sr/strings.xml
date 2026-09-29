@@ -205,7 +205,7 @@
     <string name="people_device_created">Креирано %1$s</string>
     <string name="people_device_delete">Обриши уређај</string>
     <string name="people_device_delete_title">Обрисати уређај?</string>
-    <string name="people_device_delete_message">Уређај више неће моћи да синхронизује контакте.</string>
+    <string name="people_device_delete_message">Уређај више неће моћи да синхронизује контакте ни календаре.</string>
     <string name="people_device_deleted">Уређај је обрисан</string>
     <string name="people_sync_title">Синхронизуј са овим телефоном</string>
     <string name="people_sync_confirm">Брисање контакта пријатеља у апликацији Контакти на овом телефону завршава и пријатељство.</string>

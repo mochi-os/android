@@ -204,7 +204,7 @@
     <string name="people_device_created">%1$s uumame</string>
     <string name="people_device_delete">Meeshaa haqi</string>
     <string name="people_device_delete_title">Meeshaa haquu?</string>
-    <string name="people_device_delete_message">Meeshaan kun kana booda qunnamtiiwwan walsimsiisuu hin danda\'u.</string>
+    <string name="people_device_delete_message">Meeshaan kun kana booda qunnamtiiwwan ykn kaalaandaroota walsimsiisuu hin danda\'u.</string>
     <string name="people_device_deleted">Meeshaan haqameera</string>
     <string name="people_sync_title">Bilbila kana waliin walsimsiisi</string>
     <string name="people_sync_confirm">Appii Quunnamtiiwwan bilbila kanaa keessatti quunnamtii hiriyaa tokkoo haquun hiriyummaas ni dhaabsa.</string>

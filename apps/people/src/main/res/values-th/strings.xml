@@ -203,7 +203,7 @@
     <string name="people_device_created">สร้าง %1$s</string>
     <string name="people_device_delete">ลบอุปกรณ์</string>
     <string name="people_device_delete_title">ลบอุปกรณ์หรือไม่</string>
-    <string name="people_device_delete_message">อุปกรณ์จะไม่สามารถซิงค์รายชื่อผู้ติดต่อได้อีกต่อไป</string>
+    <string name="people_device_delete_message">อุปกรณ์จะไม่สามารถซิงค์รายชื่อผู้ติดต่อหรือปฏิทินได้อีกต่อไป</string>
     <string name="people_device_deleted">ลบอุปกรณ์แล้ว</string>
     <string name="people_sync_title">ซิงค์กับโทรศัพท์เครื่องนี้</string>
     <string name="people_sync_confirm">การลบรายชื่อติดต่อของเพื่อนในแอปรายชื่อติดต่อของโทรศัพท์เครื่องนี้จะทำให้มิตรภาพสิ้นสุดลงด้วย</string>

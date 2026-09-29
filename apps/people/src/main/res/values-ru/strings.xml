@@ -206,7 +206,7 @@
     <string name="people_device_created">Создано %1$s</string>
     <string name="people_device_delete">Удалить устройство</string>
     <string name="people_device_delete_title">Удалить устройство?</string>
-    <string name="people_device_delete_message">Устройство больше не сможет синхронизировать контакты.</string>
+    <string name="people_device_delete_message">Устройство больше не сможет синхронизировать контакты или календари.</string>
     <string name="people_device_deleted">Устройство удалено</string>
     <string name="people_sync_title">Синхронизация с этим телефоном</string>
     <string name="people_sync_confirm">Удаление контакта друга в приложении «Контакты» на этом телефоне также прекращает дружбу.</string>

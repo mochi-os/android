@@ -204,7 +204,7 @@
     <string name="people_device_created">Opprettet %1$s</string>
     <string name="people_device_delete">Slett enhet</string>
     <string name="people_device_delete_title">Slette enhet?</string>
-    <string name="people_device_delete_message">Enheten vil ikke lenger kunne synkronisere kontakter.</string>
+    <string name="people_device_delete_message">Enheten vil ikke lenger kunne synkronisere kontakter eller kalendere.</string>
     <string name="people_device_deleted">Enhet slettet</string>
     <string name="people_sync_title">Synkroniser med denne telefonen</string>
     <string name="people_sync_confirm">Hvis du sletter kontakten til en venn i Kontakter-appen på denne telefonen, avsluttes også vennskapet.</string>

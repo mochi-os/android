@@ -204,7 +204,7 @@
     <string name="people_device_created">তৈরি %1$s</string>
     <string name="people_device_delete">ডিভাইস মুছুন</string>
     <string name="people_device_delete_title">ডিভাইস মুছবেন?</string>
-    <string name="people_device_delete_message">ডিভাইসটি আর পরিচিতি সিঙ্ক করতে পারবে না।</string>
+    <string name="people_device_delete_message">ডিভাইসটি আর পরিচিতি বা ক্যালেন্ডার সিঙ্ক করতে পারবে না।</string>
     <string name="people_device_deleted">ডিভাইস মুছে ফেলা হয়েছে</string>
     <string name="people_sync_title">এই ফোনে সিঙ্ক করুন</string>
     <string name="people_sync_confirm">এই ফোনের পরিচিতি অ্যাপে কোনো বন্ধুর পরিচিতি মুছলে বন্ধুত্বও শেষ হয়ে যায়।</string>

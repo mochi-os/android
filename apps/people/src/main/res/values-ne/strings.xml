@@ -204,7 +204,7 @@
     <string name="people_device_created">सिर्जना गरिएको %1$s</string>
     <string name="people_device_delete">उपकरण मेटाउनुहोस्</string>
     <string name="people_device_delete_title">उपकरण मेटाउने?</string>
-    <string name="people_device_delete_message">उपकरणले अब सम्पर्कहरू सिंक गर्न सक्ने छैन।</string>
+    <string name="people_device_delete_message">उपकरणले अब सम्पर्क वा क्यालेन्डरहरू सिंक गर्न सक्ने छैन।</string>
     <string name="people_device_deleted">उपकरण मेटाइयो</string>
     <string name="people_sync_title">यो फोनमा सिङ्क गर्नुहोस्</string>
     <string name="people_sync_confirm">यो फोनको सम्पर्क एपमा साथीको सम्पर्क मेटाउँदा मित्रता पनि समाप्त हुन्छ।</string>

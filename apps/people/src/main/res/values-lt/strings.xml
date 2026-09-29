@@ -205,7 +205,7 @@
     <string name="people_device_created">Sukurta %1$s</string>
     <string name="people_device_delete">Ištrinti įrenginį</string>
     <string name="people_device_delete_title">Ištrinti įrenginį?</string>
-    <string name="people_device_delete_message">Įrenginys nebegalės sinchronizuoti kontaktų.</string>
+    <string name="people_device_delete_message">Įrenginys nebegalės sinchronizuoti kontaktų ar kalendorių.</string>
     <string name="people_device_deleted">Įrenginys ištrintas</string>
     <string name="people_sync_title">Sinchronizuoti su šiuo telefonu</string>
     <string name="people_sync_confirm">Ištrynus draugo kontaktą šio telefono programoje „Kontaktai“, baigiasi ir draugystė.</string>

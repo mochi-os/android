@@ -203,7 +203,7 @@
     <string name="people_device_created">创建于 %1$s</string>
     <string name="people_device_delete">删除设备</string>
     <string name="people_device_delete_title">删除此设备？</string>
-    <string name="people_device_delete_message">该设备将无法再同步联系人。</string>
+    <string name="people_device_delete_message">该设备将无法再同步联系人或日历。</string>
     <string name="people_device_deleted">设备已删除</string>
     <string name="people_sync_title">同步到此手机</string>
     <string name="people_sync_confirm">在此手机的“通讯录”应用中删除好友的联系人，也会结束好友关系。</string>

@@ -204,7 +204,7 @@
     <string name="people_device_created">%1$s үүссэн</string>
     <string name="people_device_delete">Төхөөрөмж устгах</string>
     <string name="people_device_delete_title">Төхөөрөмжийг устгах уу?</string>
-    <string name="people_device_delete_message">Төхөөрөмж цаашид харилцагчдыг синк хийх боломжгүй болно.</string>
+    <string name="people_device_delete_message">Төхөөрөмж цаашид харилцагчид эсвэл хуанлиудыг синк хийх боломжгүй болно.</string>
     <string name="people_device_deleted">Төхөөрөмж устлаа</string>
     <string name="people_sync_title">Энэ утастай синк хийх</string>
     <string name="people_sync_confirm">Энэ утасны Харилцагчид аппаас найзын харилцагчийг устгавал найзын харилцаа мөн дуусна.</string>

@@ -204,7 +204,7 @@
     <string name="people_device_created">Creado %1$s</string>
     <string name="people_device_delete">Eliminar dispositivo</string>
     <string name="people_device_delete_title">¿Eliminar el dispositivo?</string>
-    <string name="people_device_delete_message">El dispositivo ya no podrá sincronizar contactos.</string>
+    <string name="people_device_delete_message">El dispositivo ya no podrá sincronizar contactos ni calendarios.</string>
     <string name="people_device_deleted">Dispositivo eliminado</string>
     <string name="people_sync_title">Sincronizar con este teléfono</string>
     <string name="people_sync_confirm">Eliminar el contacto de un amigo en la aplicación Contactos de este teléfono también pone fin a la amistad.</string>

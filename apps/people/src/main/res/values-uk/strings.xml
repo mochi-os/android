@@ -206,7 +206,7 @@
     <string name="people_device_created">Створено %1$s</string>
     <string name="people_device_delete">Видалити пристрій</string>
     <string name="people_device_delete_title">Видалити пристрій?</string>
-    <string name="people_device_delete_message">Пристрій більше не зможе синхронізувати контакти.</string>
+    <string name="people_device_delete_message">Пристрій більше не зможе синхронізувати контакти або календарі.</string>
     <string name="people_device_deleted">Пристрій видалено</string>
     <string name="people_sync_title">Синхронізація з цим телефоном</string>
     <string name="people_sync_confirm">Видалення контакту друга в застосунку «Контакти» на цьому телефоні також завершує дружбу.</string>

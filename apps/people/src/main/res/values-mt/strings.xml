@@ -207,7 +207,7 @@
     <string name="people_device_created">Maħluq %1$s</string>
     <string name="people_device_delete">Ħassar l-apparat</string>
     <string name="people_device_delete_title">Tħassar l-apparat?</string>
-    <string name="people_device_delete_message">L-apparat ma jkunx jista\' jissinkronizza l-kuntatti aktar.</string>
+    <string name="people_device_delete_message">L-apparat ma jkunx jista\' jissinkronizza l-kuntatti jew il-kalendarji aktar.</string>
     <string name="people_device_deleted">L-apparat tħassar</string>
     <string name="people_sync_title">Issinkronizza ma\' dan it-telefon</string>
     <string name="people_sync_confirm">Jekk tħassar il-kuntatt ta\' ħabib fl-app tal-Kuntatti ta\' dan it-telefon, tintemm ukoll il-ħbiberija.</string>

@@ -204,7 +204,7 @@
     <string name="people_device_created">Ginawa noong %1$s</string>
     <string name="people_device_delete">I-delete ang device</string>
     <string name="people_device_delete_title">I-delete ang device?</string>
-    <string name="people_device_delete_message">Hindi na maisi-sync ng device ang mga contact.</string>
+    <string name="people_device_delete_message">Hindi na maisi-sync ng device ang mga contact o kalendaryo.</string>
     <string name="people_device_deleted">Na-delete na ang device</string>
     <string name="people_sync_title">I-sync sa teleponong ito</string>
     <string name="people_sync_confirm">Ang pagtanggal ng contact ng isang kaibigan sa app na Mga Contact ng teleponong ito ay tatapos din sa pagkakaibigan.</string>

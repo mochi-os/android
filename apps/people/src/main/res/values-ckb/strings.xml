@@ -204,7 +204,7 @@
     <string name="people_device_created">دروستکرا %1$s</string>
     <string name="people_device_delete">سڕینەوەی ئامێر</string>
     <string name="people_device_delete_title">ئامێرەکە بسڕدرێتەوە؟</string>
-    <string name="people_device_delete_message">ئامێرەکە چیتر ناتوانێت پەیوەندییەکان هاوکات بکات.</string>
+    <string name="people_device_delete_message">ئامێرەکە چیتر ناتوانێت پەیوەندییەکان یان ڕۆژژمێرەکان هاوکات بکات.</string>
     <string name="people_device_deleted">ئامێرەکە سڕایەوە</string>
     <string name="people_sync_title">هاوکاتکردن لەگەڵ ئەم مۆبایلە</string>
     <string name="people_sync_confirm">سڕینەوەی پەیوەندیی هاوڕێیەک لە ئەپی پەیوەندییەکانی ئەم مۆبایلە، هاوڕێیەتییەکەش کۆتایی پێدەهێنێت.</string>

@@ -204,7 +204,7 @@
     <string name="people_device_created">Geskep %1$s</string>
     <string name="people_device_delete">Verwyder toestel</string>
     <string name="people_device_delete_title">Verwyder toestel?</string>
-    <string name="people_device_delete_message">Die toestel sal nie meer kontakte kan sinchroniseer nie.</string>
+    <string name="people_device_delete_message">Die toestel sal nie meer kontakte of kalenders kan sinchroniseer nie.</string>
     <string name="people_device_deleted">Toestel verwyder</string>
     <string name="people_sync_title">Sinkroniseer met hierdie foon</string>
     <string name="people_sync_confirm">As jy \'n vriend se kontak in hierdie foon se Kontakte-app uitvee, eindig die vriendskap ook.</string>

@@ -204,7 +204,7 @@
     <string name="people_device_created">Erstellt %1$s</string>
     <string name="people_device_delete">Gerät löschen</string>
     <string name="people_device_delete_title">Gerät löschen?</string>
-    <string name="people_device_delete_message">Das Gerät kann dann keine Kontakte mehr synchronisieren.</string>
+    <string name="people_device_delete_message">Das Gerät kann dann keine Kontakte oder Kalender mehr synchronisieren.</string>
     <string name="people_device_deleted">Gerät gelöscht</string>
     <string name="people_sync_title">Mit diesem Telefon synchronisieren</string>
     <string name="people_sync_confirm">Wenn Sie den Kontakt eines Freundes in der Kontakte-App dieses Telefons löschen, endet auch die Freundschaft.</string>

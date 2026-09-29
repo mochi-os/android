@@ -204,7 +204,7 @@
     <string name="people_device_created">%1$s yaradıldı</string>
     <string name="people_device_delete">Cihazı sil</string>
     <string name="people_device_delete_title">Cihaz silinsin?</string>
-    <string name="people_device_delete_message">Cihaz artıq kontaktları sinxronlaşdıra bilməyəcək.</string>
+    <string name="people_device_delete_message">Cihaz artıq kontaktları və ya təqvimləri sinxronlaşdıra bilməyəcək.</string>
     <string name="people_device_deleted">Cihaz silindi</string>
     <string name="people_sync_title">Bu telefonla sinxronlaşdır</string>
     <string name="people_sync_confirm">Bu telefonun Kontaktlar tətbiqində dostun kontaktını silmək dostluğu da sona çatdırır.</string>

@@ -204,7 +204,7 @@
     <string name="people_device_created">ساخته‌شده %1$s</string>
     <string name="people_device_delete">حذف دستگاه</string>
     <string name="people_device_delete_title">دستگاه حذف شود؟</string>
-    <string name="people_device_delete_message">این دستگاه دیگر نمی‌تواند مخاطبان را همگام‌سازی کند.</string>
+    <string name="people_device_delete_message">این دستگاه دیگر نمی‌تواند مخاطبان یا تقویم‌ها را همگام‌سازی کند.</string>
     <string name="people_device_deleted">دستگاه حذف شد</string>
     <string name="people_sync_title">همگام‌سازی با این تلفن</string>
     <string name="people_sync_confirm">حذف مخاطب یک دوست در برنامه مخاطبین این تلفن، دوستی را هم پایان می‌دهد.</string>

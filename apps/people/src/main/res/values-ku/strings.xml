@@ -204,7 +204,7 @@
     <string name="people_device_created">Hat çêkirin %1$s</string>
     <string name="people_device_delete">Cîhazê jê bibe</string>
     <string name="people_device_delete_title">Cîhaz were jêbirin?</string>
-    <string name="people_device_delete_message">Cîhaz êdî nikare kontaktan hevdem bike.</string>
+    <string name="people_device_delete_message">Cîhaz êdî nikare kontakt an salnameyan hevdem bike.</string>
     <string name="people_device_deleted">Cîhaz hate jêbirin</string>
     <string name="people_sync_title">Bi vê telefonê re hevdem bike</string>
     <string name="people_sync_confirm">Jêbirina kontakta hevalekî di sepana Kontakt a vê telefonê de hevaltiyê jî diqedîne.</string>

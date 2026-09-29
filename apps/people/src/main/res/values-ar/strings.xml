@@ -208,7 +208,7 @@
     <string name="people_device_created">تم الإنشاء %1$s</string>
     <string name="people_device_delete">حذف الجهاز</string>
     <string name="people_device_delete_title">حذف الجهاز؟</string>
-    <string name="people_device_delete_message">لن يتمكن الجهاز من مزامنة جهات الاتصال بعد الآن.</string>
+    <string name="people_device_delete_message">لن يتمكن الجهاز من مزامنة جهات الاتصال أو التقويمات بعد الآن.</string>
     <string name="people_device_deleted">تم حذف الجهاز</string>
     <string name="people_sync_title">المزامنة مع هذا الهاتف</string>
     <string name="people_sync_confirm">حذف جهة اتصال صديق في تطبيق جهات الاتصال على هذا الهاتف ينهي الصداقة أيضًا.</string>

@@ -203,7 +203,7 @@
     <string name="people_device_created">생성 %1$s</string>
     <string name="people_device_delete">기기 삭제</string>
     <string name="people_device_delete_title">기기를 삭제할까요?</string>
-    <string name="people_device_delete_message">이 기기는 더 이상 연락처를 동기화할 수 없어요.</string>
+    <string name="people_device_delete_message">이 기기는 더 이상 연락처나 캘린더를 동기화할 수 없어요.</string>
     <string name="people_device_deleted">기기가 삭제되었어요</string>
     <string name="people_sync_title">이 휴대전화에 동기화</string>
     <string name="people_sync_confirm">이 휴대전화의 연락처 앱에서 친구의 연락처를 삭제하면 친구 관계도 종료됩니다.</string>

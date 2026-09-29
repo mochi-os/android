@@ -203,7 +203,7 @@
     <string name="people_device_created">Ṣẹdá %1$s</string>
     <string name="people_device_delete">Pa ẹ̀rọ rẹ́</string>
     <string name="people_device_delete_title">Pa ẹ̀rọ náà rẹ́?</string>
-    <string name="people_device_delete_message">Ẹ̀rọ náà kò ní lè ṣe àmúṣiṣẹ́pọ̀ àwọn olùbásọ̀rọ̀ mọ́.</string>
+    <string name="people_device_delete_message">Ẹ̀rọ náà kò ní lè ṣe àmúṣiṣẹ́pọ̀ àwọn olùbásọ̀rọ̀ tàbí àwọn kàlẹ́ńdà mọ́.</string>
     <string name="people_device_deleted">A ti pa ẹ̀rọ náà rẹ́</string>
     <string name="people_sync_title">Ṣe àmúṣiṣẹ́pọ̀ sí fóònù yìí</string>
     <string name="people_sync_confirm">Pípa olùbásọ̀rọ̀ ọ̀rẹ́ kan rẹ́ nínú app Àwọn olùbásọ̀rọ̀ fóònù yìí tún máa fòpin sí ìbáṣepọ̀ ọ̀rẹ́ náà.</string>

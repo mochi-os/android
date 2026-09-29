@@ -204,7 +204,7 @@
     <string name="people_device_created">%1$s sortua</string>
     <string name="people_device_delete">Ezabatu gailua</string>
     <string name="people_device_delete_title">Gailua ezabatu?</string>
-    <string name="people_device_delete_message">Gailuak ezin izango ditu kontaktuak sinkronizatu aurrerantzean.</string>
+    <string name="people_device_delete_message">Gailuak ezin izango ditu kontaktuak edo egutegiak sinkronizatu aurrerantzean.</string>
     <string name="people_device_deleted">Gailua ezabatu da</string>
     <string name="people_sync_title">Sinkronizatu telefono honekin</string>
     <string name="people_sync_confirm">Telefono honetako Kontaktuak aplikazioan lagun baten kontaktua ezabatzeak laguntasuna ere amaitzen du.</string>
