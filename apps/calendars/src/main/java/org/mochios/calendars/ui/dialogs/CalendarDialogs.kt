@@ -35,6 +35,7 @@ import org.mochios.android.ui.components.MochiButtonTone
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.characters
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Hours
@@ -65,7 +66,7 @@ fun RenameCalendarDialog(
         content = {
             MochiTextField(
                 value = name,
-                onValueChange = { name = it },
+                onValueChange = { name = characters(it, NAME_MAXIMUM) },
                 label = { Text(stringResource(R.string.calendars_name)) },
                 singleLine = true,
                 modifier = Modifier.fillMaxWidth(),

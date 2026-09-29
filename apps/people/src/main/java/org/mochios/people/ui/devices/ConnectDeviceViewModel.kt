@@ -20,6 +20,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.characters
 import org.mochios.people.model.DeviceToken
 import org.mochios.people.repository.PeopleRepository
 import javax.inject.Inject
@@ -101,7 +102,7 @@ class ConnectDeviceViewModel @Inject constructor(
     }
 
     fun setName(name: String) {
-        _uiState.value = _uiState.value.copy(name = name.take(DEVICE_NAME_MAXIMUM))
+        _uiState.value = _uiState.value.copy(name = characters(name, DEVICE_NAME_MAXIMUM))
     }
 
     fun create() {

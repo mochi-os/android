@@ -62,6 +62,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.auth.AuthRepository
 import org.mochios.android.auth.OAuthPkce
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.util.characters
 import org.mochios.android.util.webUri
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
@@ -344,11 +345,11 @@ class SubscribeCalendarViewModel @Inject constructor(
     }
 
     fun setLabel(value: String) {
-        _uiState.value = _uiState.value.copy(label = value, error = null)
+        _uiState.value = _uiState.value.copy(label = characters(value, NAME_MAXIMUM), error = null)
     }
 
     fun setName(value: String) {
-        _uiState.value = _uiState.value.copy(name = value, error = null)
+        _uiState.value = _uiState.value.copy(name = characters(value, NAME_MAXIMUM), error = null)
     }
 
     fun setColour(value: String) {
