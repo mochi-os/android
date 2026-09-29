@@ -68,6 +68,15 @@ data class SystemUsersUiState(
     val toast: SystemUsersToast? = null,
 )
 
+/**
+ * Creating an administrator grants a privilege, so it takes the step-up that
+ * promoting one does and [create] gets the proof; an ordinary user is created
+ * at once, with none.
+ */
+internal fun createGated(role: String, stepUp: StepUpController, create: (String?) -> Unit) {
+    if (role == "administrator") stepUp.request { token -> create(token) } else create(null)
+}
+
 @HiltViewModel
 class SystemUsersViewModel @Inject constructor(
     private val api: SystemUsersApi,
@@ -168,11 +177,13 @@ class SystemUsersViewModel @Inject constructor(
     }
 
     fun create(username: String, role: String, onDone: (Boolean) -> Unit) {
-        mutate(
-            success = SystemUsersToast.USER_CREATED,
-            failure = SystemUsersToast.CREATE_FAILED,
-            onDone = onDone,
-        ) { api.create(username, role).unwrapRaw() }
+        createGated(role, stepUp) { token ->
+            mutate(
+                success = SystemUsersToast.USER_CREATED,
+                failure = SystemUsersToast.CREATE_FAILED,
+                onDone = onDone,
+            ) { api.create(username, role, token).unwrapRaw() }
+        }
     }
 
     fun update(uid: String, username: String?, role: String?, onDone: (Boolean) -> Unit) {

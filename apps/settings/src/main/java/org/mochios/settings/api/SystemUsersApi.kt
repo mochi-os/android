@@ -70,6 +70,9 @@ interface SystemUsersApi {
     suspend fun create(
         @Field("username") username: String,
         @Field("role") role: String,
+        // The step-up proof, which creating an administrator takes; omitted
+        // for an ordinary user.
+        @Field("token") token: String?,
     ): Response<SystemUser>
 
     @FormUrlEncoded
