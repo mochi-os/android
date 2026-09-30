@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">புதிய அழைப்புகள் இங்கே தோன்றும்</string>
     <string name="people_invitations_accept">ஏற்றுக்கொள்</string>
     <string name="people_invitations_decline">மறு</string>
+    <string name="people_invitations_listed_as">%1$s என பட்டியலிடப்பட்டுள்ளது</string>
     <string name="people_invitations_toast_policy">அழைப்புக் கொள்கை புதுப்பிக்கப்பட்டது</string>
     <string name="people_invite_settings">அழைப்பு அமைப்புகள்</string>
     <string name="people_invite_settings_notify_me">எனக்கு அறிவிக்கவும்</string>

@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Àwọn ìpè tuntun yóò farahàn níbí</string>
     <string name="people_invitations_accept">Gbà</string>
     <string name="people_invitations_decline">Kọ̀</string>
+    <string name="people_invitations_listed_as">Wà nínú àkójọ gẹ́gẹ́ bí %1$s</string>
     <string name="people_invitations_toast_policy">A ti mú ìlànà ìpè dòde</string>
     <string name="people_invite_settings">Àwọn ètò ìpè</string>
     <string name="people_invite_settings_notify_me">Fìtọ́nisí mi</string>

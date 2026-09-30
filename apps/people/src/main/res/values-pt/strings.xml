@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Os novos convites aparecerão aqui</string>
     <string name="people_invitations_accept">Aceitar</string>
     <string name="people_invitations_decline">Recusar</string>
+    <string name="people_invitations_listed_as">No diretório como %1$s</string>
     <string name="people_invitations_toast_policy">Política de convites atualizada</string>
     <string name="people_invite_settings">Definições de convites</string>
     <string name="people_invite_settings_notify_me">Notificar-me</string>

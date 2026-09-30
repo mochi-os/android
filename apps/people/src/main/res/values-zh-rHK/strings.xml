@@ -22,6 +22,7 @@
     <string name="people_welcome_dismiss">關閉</string>
     <string name="people_friends_pending">待處理</string>
     <string name="people_invitations_decline">拒絕</string>
+    <string name="people_invitations_listed_as">目錄中的名稱：%1$s</string>
     <string name="people_profile_saving">正在儲存…</string>
     <string name="people_person_decline">拒絕</string>
     <string name="people_member_add">加入成員</string>

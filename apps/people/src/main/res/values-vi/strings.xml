@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Lời mời mới sẽ xuất hiện ở đây</string>
     <string name="people_invitations_accept">Chấp nhận</string>
     <string name="people_invitations_decline">Từ chối</string>
+    <string name="people_invitations_listed_as">Có trong danh bạ với tên %1$s</string>
     <string name="people_invitations_toast_policy">Đã cập nhật chính sách mời</string>
     <string name="people_invite_settings">Cài đặt mời</string>
     <string name="people_invite_settings_notify_me">Thông báo cho tôi</string>

@@ -20,6 +20,7 @@
     <string name="people_welcome_dismiss">關閉</string>
     <string name="people_friends_pending">待處理</string>
     <string name="people_invitations_decline">拒絕</string>
+    <string name="people_invitations_listed_as">目錄入面嘅名：%1$s</string>
     <string name="people_profile_saving">儲存緊…</string>
     <string name="people_profile_edit_name">編輯姓名</string>
     <string name="people_profile_identity">身分</string>

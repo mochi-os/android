@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Даъватномаҳои нав дар ин ҷо пайдо мешаванд</string>
     <string name="people_invitations_accept">Қабул кардан</string>
     <string name="people_invitations_decline">Рад кардан</string>
+    <string name="people_invitations_listed_as">Дар феҳрист ҳамчун %1$s</string>
     <string name="people_invitations_toast_policy">Сиёсати даъватномаҳо навсозӣ шуд</string>
     <string name="people_invite_settings">Танзимоти даъватномаҳо</string>
     <string name="people_invite_settings_notify_me">Маро огоҳ кунед</string>

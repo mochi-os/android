@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">คำเชิญใหม่จะปรากฏที่นี่</string>
     <string name="people_invitations_accept">ยอมรับ</string>
     <string name="people_invitations_decline">ปฏิเสธ</string>
+    <string name="people_invitations_listed_as">อยู่ในไดเรกทอรีในชื่อ %1$s</string>
     <string name="people_invitations_toast_policy">อัปเดตนโยบายการเชิญแล้ว</string>
     <string name="people_invite_settings">การตั้งค่าคำเชิญ</string>
     <string name="people_invite_settings_notify_me">แจ้งเตือนฉัน</string>

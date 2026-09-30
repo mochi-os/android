@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Новите покани ще се появят тук</string>
     <string name="people_invitations_accept">Приеми</string>
     <string name="people_invitations_decline">Откажи</string>
+    <string name="people_invitations_listed_as">В указателя като %1$s</string>
     <string name="people_invitations_toast_policy">Политиката за покани е актуализирана</string>
     <string name="people_invite_settings">Настройки на поканите</string>
     <string name="people_invite_settings_notify_me">Извести ме</string>

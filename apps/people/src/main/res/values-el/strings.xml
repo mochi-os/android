@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Νέες προσκλήσεις θα εμφανίζονται εδώ</string>
     <string name="people_invitations_accept">Αποδοχή</string>
     <string name="people_invitations_decline">Απόρριψη</string>
+    <string name="people_invitations_listed_as">Στον κατάλογο ως %1$s</string>
     <string name="people_invitations_toast_policy">Η πολιτική προσκλήσεων ενημερώθηκε</string>
     <string name="people_invite_settings">Ρυθμίσεις προσκλήσεων</string>
     <string name="people_invite_settings_notify_me">Ειδοποίησέ με</string>

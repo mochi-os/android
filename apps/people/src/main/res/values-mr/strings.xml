@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">नवीन आमंत्रणे येथे दिसतील</string>
     <string name="people_invitations_accept">स्वीकारा</string>
     <string name="people_invitations_decline">नाकारा</string>
+    <string name="people_invitations_listed_as">%1$s म्हणून नोंदवलेले</string>
     <string name="people_invitations_toast_policy">आमंत्रण धोरण अद्यतनित केले</string>
     <string name="people_invite_settings">आमंत्रण सेटिंग्ज</string>
     <string name="people_invite_settings_notify_me">मला सूचित करा</string>

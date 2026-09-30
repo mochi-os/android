@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Invitațiile noi vor apărea aici</string>
     <string name="people_invitations_accept">Acceptă</string>
     <string name="people_invitations_decline">Respinge</string>
+    <string name="people_invitations_listed_as">În director ca %1$s</string>
     <string name="people_invitations_toast_policy">Politica de invitații a fost actualizată</string>
     <string name="people_invite_settings">Setări invitații</string>
     <string name="people_invite_settings_notify_me">Notifică-mă</string>

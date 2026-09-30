@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Жаңы чакыруулар бул жерде көрүнөт</string>
     <string name="people_invitations_accept">Кабыл алуу</string>
     <string name="people_invitations_decline">Четке кагуу</string>
+    <string name="people_invitations_listed_as">Маалымдамада: %1$s</string>
     <string name="people_invitations_toast_policy">Чакыруу саясаты жаңыланды</string>
     <string name="people_invite_settings">Чакыруу жөндөөлөрү</string>
     <string name="people_invite_settings_notify_me">Мага билдирүү</string>

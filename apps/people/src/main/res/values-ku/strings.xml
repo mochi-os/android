@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Vexwendinên nû dê li vir xuya bibin</string>
     <string name="people_invitations_accept">Qebûl bike</string>
     <string name="people_invitations_decline">Red bike</string>
+    <string name="people_invitations_listed_as">Di rêberê de wek %1$s</string>
     <string name="people_invitations_toast_policy">Polîtîkaya vexwendinê hat rojanekirin</string>
     <string name="people_invite_settings">Mîhengên vexwendinê</string>
     <string name="people_invite_settings_notify_me">Min agahdar bike</string>

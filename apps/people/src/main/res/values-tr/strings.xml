@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Yeni davetler burada görünecek</string>
     <string name="people_invitations_accept">Kabul et</string>
     <string name="people_invitations_decline">Reddet</string>
+    <string name="people_invitations_listed_as">Dizinde %1$s olarak</string>
     <string name="people_invitations_toast_policy">Davet ilkesi güncellendi</string>
     <string name="people_invite_settings">Davet ayarları</string>
     <string name="people_invite_settings_notify_me">Bana bildir</string>

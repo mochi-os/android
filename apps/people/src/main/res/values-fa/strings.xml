@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">دعوت‌های جدید اینجا نمایش داده می‌شوند</string>
     <string name="people_invitations_accept">پذیرش</string>
     <string name="people_invitations_decline">رد</string>
+    <string name="people_invitations_listed_as">با نام %1$s ثبت شده</string>
     <string name="people_invitations_toast_policy">سیاست دعوت به‌روزرسانی شد</string>
     <string name="people_invite_settings">تنظیمات دعوت</string>
     <string name="people_invite_settings_notify_me">به من اطلاع بده</string>

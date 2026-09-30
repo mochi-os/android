@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Yeni dəvətlər burada görünəcək</string>
     <string name="people_invitations_accept">Qəbul et</string>
     <string name="people_invitations_decline">Rədd et</string>
+    <string name="people_invitations_listed_as">Kataloqda %1$s kimi</string>
     <string name="people_invitations_toast_policy">Dəvət siyasəti yeniləndi</string>
     <string name="people_invite_settings">Dəvət parametrləri</string>
     <string name="people_invite_settings_notify_me">Mənə xəbər ver</string>

@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Nye invitationer vises her</string>
     <string name="people_invitations_accept">Accepter</string>
     <string name="people_invitations_decline">Afvis</string>
+    <string name="people_invitations_listed_as">Opført som %1$s</string>
     <string name="people_invitations_toast_policy">Invitationspolitik opdateret</string>
     <string name="people_invite_settings">Invitationsindstillinger</string>
     <string name="people_invite_settings_notify_me">Notificér mig</string>

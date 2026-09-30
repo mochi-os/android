@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Нові запрошення з\'являться тут</string>
     <string name="people_invitations_accept">Прийняти</string>
     <string name="people_invitations_decline">Відхилити</string>
+    <string name="people_invitations_listed_as">У каталозі як %1$s</string>
     <string name="people_invitations_toast_policy">Політику запрошень оновлено</string>
     <string name="people_invite_settings">Налаштування запрошень</string>
     <string name="people_invite_settings_notify_me">Сповістити мене</string>

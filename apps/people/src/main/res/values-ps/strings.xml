@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">نوې بلنې به دلته ښکاره شي</string>
     <string name="people_invitations_accept">ومنه</string>
     <string name="people_invitations_decline">رد کړئ</string>
+    <string name="people_invitations_listed_as">د %1$s په نوم ثبت شوی</string>
     <string name="people_invitations_toast_policy">د بلنې پالیسي تازه شوه</string>
     <string name="people_invite_settings">د بلنې تنظیمات</string>
     <string name="people_invite_settings_notify_me">ما خبر کړئ</string>

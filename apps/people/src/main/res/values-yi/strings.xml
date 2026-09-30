@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">נײַע אײַנלאַדונגען וועלן זיך באַווײַזן דאָ</string>
     <string name="people_invitations_accept">אָננעמען</string>
     <string name="people_invitations_decline">אָפּזאָגן</string>
+    <string name="people_invitations_listed_as">רעגיסטרירט ווי %1$s</string>
     <string name="people_invitations_toast_policy">אײַנלאַדונג־פּאָליטיק דערהײַנטיקט</string>
     <string name="people_invite_settings">אײַנלאַדונג־הגדרות</string>
     <string name="people_invite_settings_notify_me">מעלד מיר</string>

@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Les nouvelles invitations apparaîtront ici</string>
     <string name="people_invitations_accept">Accepter</string>
     <string name="people_invitations_decline">Refuser</string>
+    <string name="people_invitations_listed_as">Dans l\'annuaire sous le nom %1$s</string>
     <string name="people_invitations_toast_policy">Politique d\'invitation mise à jour</string>
     <string name="people_invite_settings">Paramètres d\'invitation</string>
     <string name="people_invite_settings_notify_me">Me notifier</string>

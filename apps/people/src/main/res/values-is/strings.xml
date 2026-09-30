@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Ný boð birtast hér</string>
     <string name="people_invitations_accept">Samþykkja</string>
     <string name="people_invitations_decline">Hafna</string>
+    <string name="people_invitations_listed_as">Í skránni sem %1$s</string>
     <string name="people_invitations_toast_policy">Stefna um boð uppfærð</string>
     <string name="people_invite_settings">Stillingar boða</string>
     <string name="people_invite_settings_notify_me">Láta mig vita</string>

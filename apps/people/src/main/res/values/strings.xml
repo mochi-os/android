@@ -110,6 +110,7 @@
     <string name="people_invitations_empty_hint">New invitations will appear here</string>
     <string name="people_invitations_accept">Accept</string>
     <string name="people_invitations_decline">Decline</string>
+    <string name="people_invitations_listed_as">Listed as %1$s</string>
     <string name="people_invitations_toast_accepted">Accepted invitation from %1$s</string>
     <string name="people_invitations_toast_declined">Declined invitation from %1$s</string>
     <string name="people_invitations_toast_cancelled">Cancelled invitation to %1$s</string>

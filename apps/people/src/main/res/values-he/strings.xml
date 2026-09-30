@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">הזמנות חדשות יופיעו כאן</string>
     <string name="people_invitations_accept">אישור</string>
     <string name="people_invitations_decline">דחייה</string>
+    <string name="people_invitations_listed_as">במדריך בשם %1$s</string>
     <string name="people_invitations_toast_policy">מדיניות ההזמנות עודכנה</string>
     <string name="people_invite_settings">הגדרות הזמנה</string>
     <string name="people_invite_settings_notify_me">התרע לי</string>

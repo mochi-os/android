@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">නව ආරාධනා මෙහි දිස්වනු ඇත</string>
     <string name="people_invitations_accept">පිළිගන්න</string>
     <string name="people_invitations_decline">ප්‍රතික්ෂේප කරන්න</string>
+    <string name="people_invitations_listed_as">%1$s ලෙස ලැයිස්තුගත කර ඇත</string>
     <string name="people_invitations_toast_policy">ආරාධන ප්‍රතිපත්තිය යාවත්කාලීන කරන ලදී</string>
     <string name="people_invite_settings">ආරාධන සැකසුම්</string>
     <string name="people_invite_settings_notify_me">මට දැනුම් දෙන්න</string>

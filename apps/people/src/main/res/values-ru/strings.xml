@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Новые приглашения будут отображаться здесь</string>
     <string name="people_invitations_accept">Принять</string>
     <string name="people_invitations_decline">Отклонить</string>
+    <string name="people_invitations_listed_as">В каталоге как %1$s</string>
     <string name="people_invitations_toast_policy">Политика приглашений обновлена</string>
     <string name="people_invite_settings">Настройки приглашений</string>
     <string name="people_invite_settings_notify_me">Уведомлять меня</string>

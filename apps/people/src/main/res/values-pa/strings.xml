@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">ਨਵੇਂ ਸੱਦੇ ਇੱਥੇ ਦਿਖਾਈ ਦੇਣਗੇ</string>
     <string name="people_invitations_accept">ਸਵੀਕਾਰ ਕਰੋ</string>
     <string name="people_invitations_decline">ਅਸਵੀਕਾਰ ਕਰੋ</string>
+    <string name="people_invitations_listed_as">%1$s ਵਜੋਂ ਦਰਜ</string>
     <string name="people_invitations_toast_policy">ਸੱਦਾ ਨੀਤੀ ਅੱਪਡੇਟ ਹੋਈ</string>
     <string name="people_invite_settings">ਸੱਦਾ ਸੈਟਿੰਗਾਂ</string>
     <string name="people_invite_settings_notify_me">ਮੈਨੂੰ ਨੋਟੀਫਾਈ ਕਰੋ</string>

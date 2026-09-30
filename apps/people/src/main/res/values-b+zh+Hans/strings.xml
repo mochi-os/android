@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">新的邀请将显示在此处</string>
     <string name="people_invitations_accept">接受</string>
     <string name="people_invitations_decline">拒绝</string>
+    <string name="people_invitations_listed_as">目录中的名称：%1$s</string>
     <string name="people_invitations_toast_policy">邀请策略已更新</string>
     <string name="people_invite_settings">邀请设置</string>
     <string name="people_invite_settings_notify_me">通知我</string>

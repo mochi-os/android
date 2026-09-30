@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">ستظهر الدعوات الجديدة هنا</string>
     <string name="people_invitations_accept">قبول</string>
     <string name="people_invitations_decline">رفض</string>
+    <string name="people_invitations_listed_as">مُدرج باسم %1$s</string>
     <string name="people_invitations_toast_policy">تم تحديث سياسة الدعوة</string>
     <string name="people_invite_settings">إعدادات الدعوة</string>
     <string name="people_invite_settings_notify_me">أشعرني</string>

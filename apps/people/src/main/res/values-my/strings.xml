@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">ဖိတ်ကြားချက်အသစ်များသည် ဤနေရာတွင် ပေါ်လာပါမည်</string>
     <string name="people_invitations_accept">လက်ခံမည်</string>
     <string name="people_invitations_decline">ငြင်းပယ်မည်</string>
+    <string name="people_invitations_listed_as">%1$s အဖြစ် စာရင်းသွင်းထားသည်</string>
     <string name="people_invitations_toast_policy">ဖိတ်ကြားမှု မူဝါဒ ပြင်ဆင်ပြီးပါပြီ</string>
     <string name="people_invite_settings">ဖိတ်ကြားမှု ဆက်တင်များ</string>
     <string name="people_invite_settings_notify_me">ကျွန်ုပ်ကို အသိပေးပါ</string>

@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Ftesat e reja do të shfaqen këtu</string>
     <string name="people_invitations_accept">Prano</string>
     <string name="people_invitations_decline">Refuzo</string>
+    <string name="people_invitations_listed_as">Në direktori si %1$s</string>
     <string name="people_invitations_toast_policy">Politika e ftesave u përditësua</string>
     <string name="people_invite_settings">Cilësimet e ftesave</string>
     <string name="people_invite_settings_notify_me">Më njofto</string>

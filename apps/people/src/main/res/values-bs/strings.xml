@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Nove pozivnice će se pojaviti ovdje</string>
     <string name="people_invitations_accept">Prihvati</string>
     <string name="people_invitations_decline">Odbij</string>
+    <string name="people_invitations_listed_as">U imeniku kao %1$s</string>
     <string name="people_invitations_toast_policy">Politika pozivnica ažurirana</string>
     <string name="people_invite_settings">Postavke pozivnica</string>
     <string name="people_invite_settings_notify_me">Obavijesti me</string>

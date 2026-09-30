@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">I nuovi inviti appariranno qui</string>
     <string name="people_invitations_accept">Accetta</string>
     <string name="people_invitations_decline">Rifiuta</string>
+    <string name="people_invitations_listed_as">Nell\'elenco come %1$s</string>
     <string name="people_invitations_toast_policy">Politica degli inviti aggiornata</string>
     <string name="people_invite_settings">Impostazioni inviti</string>
     <string name="people_invite_settings_notify_me">Avvisami</string>

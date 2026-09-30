@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Az új meghívók itt jelennek meg</string>
     <string name="people_invitations_accept">Elfogadás</string>
     <string name="people_invitations_decline">Elutasítás</string>
+    <string name="people_invitations_listed_as">A címtárban: %1$s</string>
     <string name="people_invitations_toast_policy">Meghívási szabályzat frissítve</string>
     <string name="people_invite_settings">Meghívási beállítások</string>
     <string name="people_invite_settings_notify_me">Értesítsen engem</string>

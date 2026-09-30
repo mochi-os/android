@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">新しい招待はここに表示されます</string>
     <string name="people_invitations_accept">承認</string>
     <string name="people_invitations_decline">拒否</string>
+    <string name="people_invitations_listed_as">ディレクトリ上の名前: %1$s</string>
     <string name="people_invitations_toast_policy">招待ポリシーを更新しました</string>
     <string name="people_invite_settings">招待設定</string>
     <string name="people_invite_settings_notify_me">通知する</string>

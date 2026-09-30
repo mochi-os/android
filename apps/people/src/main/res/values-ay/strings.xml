@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Machaqa invitacionanak akan uñstani</string>
     <string name="people_invitations_accept">Iyawsaña</string>
     <string name="people_invitations_decline">Jark\'aña</string>
+    <string name="people_invitations_listed_as">%1$s sutimpi qillqantata</string>
     <string name="people_invitations_toast_policy">Invitación política machaqachatawa</string>
     <string name="people_invite_settings">Invitación configuracionanaka</string>
     <string name="people_invite_settings_notify_me">Yatiyita</string>

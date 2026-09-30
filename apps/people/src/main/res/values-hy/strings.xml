@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Նոր հրավերները կհայտնվեն այստեղ</string>
     <string name="people_invitations_accept">Ընդունել</string>
     <string name="people_invitations_decline">Մերժել</string>
+    <string name="people_invitations_listed_as">Տեղեկատուում՝ %1$s</string>
     <string name="people_invitations_toast_policy">Հրավերների քաղաքականությունը թարմացվեց</string>
     <string name="people_invite_settings">Հրավերների կարգավորումներ</string>
     <string name="people_invite_settings_notify_me">Ծանուցել ինձ</string>

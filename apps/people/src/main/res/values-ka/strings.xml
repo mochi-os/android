@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">ახალი მოწვევები აქ გამოჩნდება</string>
     <string name="people_invitations_accept">მიღება</string>
     <string name="people_invitations_decline">უარის თქმა</string>
+    <string name="people_invitations_listed_as">ცნობარში: %1$s</string>
     <string name="people_invitations_toast_policy">მოწვევის პოლიტიკა განახლდა</string>
     <string name="people_invite_settings">მოწვევის პარამეტრები</string>
     <string name="people_invite_settings_notify_me">შემატყობინე</string>

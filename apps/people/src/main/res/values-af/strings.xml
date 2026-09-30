@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Nuwe uitnodigings sal hier verskyn</string>
     <string name="people_invitations_accept">Aanvaar</string>
     <string name="people_invitations_decline">Wys af</string>
+    <string name="people_invitations_listed_as">Gelys as %1$s</string>
     <string name="people_invitations_toast_policy">Uitnodigingsbeleid opgedateer</string>
     <string name="people_invite_settings">Uitnodigingsinstellings</string>
     <string name="people_invite_settings_notify_me">Stel my in kennis</string>

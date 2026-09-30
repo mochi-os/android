@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">አዲስ ግብዣዎች እዚህ ይታያሉ</string>
     <string name="people_invitations_accept">ተቀበል</string>
     <string name="people_invitations_decline">አትቀበል</string>
+    <string name="people_invitations_listed_as">እንደ %1$s ተመዝግቧል</string>
     <string name="people_invitations_toast_policy">የግብዣ ፖሊሲ ተዘምኗል</string>
     <string name="people_invite_settings">የግብዣ ቅንብሮች</string>
     <string name="people_invite_settings_notify_me">አሳውቀኝ</string>

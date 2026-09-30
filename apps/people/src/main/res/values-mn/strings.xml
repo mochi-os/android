@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Шинэ урилгууд энд харагдана</string>
     <string name="people_invitations_accept">Зөвшөөрөх</string>
     <string name="people_invitations_decline">Татгалзах</string>
+    <string name="people_invitations_listed_as">Лавлахад: %1$s</string>
     <string name="people_invitations_toast_policy">Урих бодлого шинэчлэгдсэн</string>
     <string name="people_invite_settings">Урих тохиргоо</string>
     <string name="people_invite_settings_notify_me">Надад мэдэгдэх</string>

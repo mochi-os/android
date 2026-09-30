@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Undangan baru akan muncul di sini</string>
     <string name="people_invitations_accept">Terima</string>
     <string name="people_invitations_decline">Tolak</string>
+    <string name="people_invitations_listed_as">Terdaftar sebagai %1$s</string>
     <string name="people_invitations_toast_policy">Kebijakan undangan diperbarui</string>
     <string name="people_invite_settings">Pengaturan undangan</string>
     <string name="people_invite_settings_notify_me">Beri tahu saya</string>

@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Nauji pakvietimai pasirodys čia</string>
     <string name="people_invitations_accept">Priimti</string>
     <string name="people_invitations_decline">Atmesti</string>
+    <string name="people_invitations_listed_as">Kataloge kaip %1$s</string>
     <string name="people_invitations_toast_policy">Kvietimų politika atnaujinta</string>
     <string name="people_invite_settings">Kvietimų nustatymai</string>
     <string name="people_invite_settings_notify_me">Pranešti man</string>

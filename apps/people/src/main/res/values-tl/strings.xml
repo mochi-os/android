@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Lalabas dito ang mga bagong imbitasyon</string>
     <string name="people_invitations_accept">Tanggapin</string>
     <string name="people_invitations_decline">Tanggihan</string>
+    <string name="people_invitations_listed_as">Nakalista bilang %1$s</string>
     <string name="people_invitations_toast_policy">Na-update ang invite policy</string>
     <string name="people_invite_settings">Mga setting ng imbitasyon</string>
     <string name="people_invite_settings_notify_me">Mag-notify sa akin</string>

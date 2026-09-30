@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Nouvo envitasyon yo ap parèt isit la</string>
     <string name="people_invitations_accept">Aksepte</string>
     <string name="people_invitations_decline">Refize</string>
+    <string name="people_invitations_listed_as">Nan anyè a kòm %1$s</string>
     <string name="people_invitations_toast_policy">Politik envitasyon mete ajou</string>
     <string name="people_invite_settings">Paramèt envitasyon</string>
     <string name="people_invite_settings_notify_me">Notifye m</string>

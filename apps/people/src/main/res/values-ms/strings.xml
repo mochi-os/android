@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Jemputan baharu akan dipaparkan di sini</string>
     <string name="people_invitations_accept">Terima</string>
     <string name="people_invitations_decline">Tolak</string>
+    <string name="people_invitations_listed_as">Disenaraikan sebagai %1$s</string>
     <string name="people_invitations_toast_policy">Polisi jemputan dikemas kini</string>
     <string name="people_invite_settings">Tetapan jemputan</string>
     <string name="people_invite_settings_notify_me">Beritahu saya</string>

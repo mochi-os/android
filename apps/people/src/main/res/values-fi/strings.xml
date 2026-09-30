@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Uudet kutsut näkyvät täällä</string>
     <string name="people_invitations_accept">Hyväksy</string>
     <string name="people_invitations_decline">Hylkää</string>
+    <string name="people_invitations_listed_as">Hakemistossa nimellä %1$s</string>
     <string name="people_invitations_toast_policy">Kutsukäytäntö päivitetty</string>
     <string name="people_invite_settings">Kutsuasetukset</string>
     <string name="people_invite_settings_notify_me">Ilmoita minulle</string>

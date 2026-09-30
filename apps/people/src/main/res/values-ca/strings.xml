@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Les invitacions noves apareixeran aquí</string>
     <string name="people_invitations_accept">Accepta</string>
     <string name="people_invitations_decline">Rebutja</string>
+    <string name="people_invitations_listed_as">Al directori com a %1$s</string>
     <string name="people_invitations_toast_policy">S\'ha actualitzat la política d\'invitacions</string>
     <string name="people_invite_settings">Configuració d\'invitacions</string>
     <string name="people_invite_settings_notify_me">Avisa\'m</string>

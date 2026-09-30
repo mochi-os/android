@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Nova povabila se bodo prikazala tukaj</string>
     <string name="people_invitations_accept">Sprejmi</string>
     <string name="people_invitations_decline">Zavrni</string>
+    <string name="people_invitations_listed_as">V imeniku kot %1$s</string>
     <string name="people_invitations_toast_policy">Pravilnik o povabilih posodobljen</string>
     <string name="people_invite_settings">Nastavitve povabil</string>
     <string name="people_invite_settings_notify_me">Obvesti me</string>

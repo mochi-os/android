@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">نيون دعوتون هتي ظاهر ٿينديون</string>
     <string name="people_invitations_accept">قبول ڪريو</string>
     <string name="people_invitations_decline">رد ڪريو</string>
+    <string name="people_invitations_listed_as">%1$s طور درج ٿيل</string>
     <string name="people_invitations_toast_policy">دعوت پاليسي اپڊيٽ ٿي وئي</string>
     <string name="people_invite_settings">دعوت سيٽنگون</string>
     <string name="people_invite_settings_notify_me">مون کي اطلاع ڏيو</string>

@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Nochdaidh cuireadh ùr an seo</string>
     <string name="people_invitations_accept">Gabh ris</string>
     <string name="people_invitations_decline">Diùlt</string>
+    <string name="people_invitations_listed_as">San eòlaire mar %1$s</string>
     <string name="people_invitations_toast_policy">Chaidh poileasaidh nan cuiridhean ùrachadh</string>
     <string name="people_invite_settings">Roghainnean nan cuiridhean</string>
     <string name="people_invite_settings_notify_me">Cuir brath thugam</string>

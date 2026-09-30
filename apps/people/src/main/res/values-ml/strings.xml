@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">പുതിയ ക്ഷണങ്ങൾ ഇവിടെ ദൃശ്യമാകും</string>
     <string name="people_invitations_accept">സ്വീകരിക്കുക</string>
     <string name="people_invitations_decline">നിരസിക്കുക</string>
+    <string name="people_invitations_listed_as">%1$s എന്ന പേരിൽ രേഖപ്പെടുത്തിയിരിക്കുന്നു</string>
     <string name="people_invitations_toast_policy">ക്ഷണ നയം പുതുക്കി</string>
     <string name="people_invite_settings">ക്ഷണ ക്രമീകരണങ്ങൾ</string>
     <string name="people_invite_settings_notify_me">എന്നെ അറിയിക്കുക</string>

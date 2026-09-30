@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">ការអញ្ជើញថ្មីនឹងបង្ហាញនៅទីនេះ</string>
     <string name="people_invitations_accept">ទទួលយក</string>
     <string name="people_invitations_decline">បដិសេធ</string>
+    <string name="people_invitations_listed_as">មានក្នុងបញ្ជីជា %1$s</string>
     <string name="people_invitations_toast_policy">បានធ្វើបច្ចុប្បន្នភាពគោលការណ៍អញ្ជើញ</string>
     <string name="people_invite_settings">ការកំណត់ការអញ្ជើញ</string>
     <string name="people_invite_settings_notify_me">ជូនដំណឹងខ្ញុំ</string>

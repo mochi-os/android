@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Gonbidapen berriak hemen agertuko dira</string>
     <string name="people_invitations_accept">Onartu</string>
     <string name="people_invitations_decline">Ukatu</string>
+    <string name="people_invitations_listed_as">Direktorioan %1$s gisa</string>
     <string name="people_invitations_toast_policy">Gonbidapen-politika eguneratuta</string>
     <string name="people_invite_settings">Gonbidapen-ezarpenak</string>
     <string name="people_invite_settings_notify_me">Jakinarazi</string>

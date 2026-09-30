@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Uued kutsed ilmuvad siia</string>
     <string name="people_invitations_accept">Nõustu</string>
     <string name="people_invitations_decline">Keeldu</string>
+    <string name="people_invitations_listed_as">Kataloogis nimega %1$s</string>
     <string name="people_invitations_toast_policy">Kutsereeglid värskendatud</string>
     <string name="people_invite_settings">Kutsete seaded</string>
     <string name="people_invite_settings_notify_me">Teavita mind</string>

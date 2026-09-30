@@ -58,6 +58,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
+import org.mochios.android.format.formatFingerprint
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.DrawerTitle
@@ -331,6 +332,17 @@ private fun LazyListScope.sentItems(
     }
 }
 
+/**
+ * The line under a received invite's name: the name and photo are the sender's
+ * own claim, the fingerprint and the directory's name are what an impersonator
+ * cannot copy. The directory's name shows only where it differs.
+ */
+internal fun receivedDetail(invite: FriendInvite, listed: (String) -> String): String {
+    val fingerprint = formatFingerprint(invite.fingerprint)
+    if (invite.directory.isEmpty() || invite.directory == invite.name) return fingerprint
+    return listOf(fingerprint, listed(invite.directory)).filter { it.isNotEmpty() }.joinToString(" · ")
+}
+
 @Composable
 private fun ReceivedRow(
     invite: FriendInvite,
@@ -351,12 +363,19 @@ private fun ReceivedRow(
             seed = invite.id.ifEmpty { invite.name },
             size = 40.dp,
         )
-        Text(
-            text = invite.name,
-            modifier = Modifier.weight(1f),
-            style = MaterialTheme.typography.bodyLarge,
-            fontWeight = FontWeight.Medium,
-        )
+        val listed = stringResource(R.string.people_invitations_listed_as)
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = invite.name,
+                style = MaterialTheme.typography.bodyLarge,
+                fontWeight = FontWeight.Medium,
+            )
+            Text(
+                text = receivedDetail(invite) { listed.format(it) },
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        }
         MochiButton(onClick = onAccept) {
             Icon(
                 Icons.Default.Check,

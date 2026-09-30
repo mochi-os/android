@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Sabbin gayyace-gayyace za su bayyana a nan</string>
     <string name="people_invitations_accept">Yarda</string>
     <string name="people_invitations_decline">Ƙi</string>
+    <string name="people_invitations_listed_as">An jera a matsayin %1$s</string>
     <string name="people_invitations_toast_policy">An sabunta manufar gayyata</string>
     <string name="people_invite_settings">Saitin gayyata</string>
     <string name="people_invite_settings_notify_me">Sanar da ni</string>

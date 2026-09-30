@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Yangi takliflar bu yerda paydo boʻladi</string>
     <string name="people_invitations_accept">Qabul qilish</string>
     <string name="people_invitations_decline">Rad etish</string>
+    <string name="people_invitations_listed_as">Katalogda %1$s sifatida</string>
     <string name="people_invitations_toast_policy">Taklif siyosati yangilandi</string>
     <string name="people_invite_settings">Taklif sozlamalari</string>
     <string name="people_invite_settings_notify_me">Menga xabar berish</string>

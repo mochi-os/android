@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Taispeánfar cuirí nua anseo</string>
     <string name="people_invitations_accept">Glac leis</string>
     <string name="people_invitations_decline">Diúltaigh</string>
+    <string name="people_invitations_listed_as">Sa chomhadlann mar %1$s</string>
     <string name="people_invitations_toast_policy">Polasaí cuireadh nuashonraithe</string>
     <string name="people_invite_settings">Socruithe cuiridh</string>
     <string name="people_invite_settings_notify_me">Cuir fógra chugam</string>

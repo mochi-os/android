@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Bydd gwahoddiadau newydd yn ymddangos yma</string>
     <string name="people_invitations_accept">Derbyn</string>
     <string name="people_invitations_decline">Gwrthod</string>
+    <string name="people_invitations_listed_as">Yn y cyfeiriadur fel %1$s</string>
     <string name="people_invitations_toast_policy">Polisi gwahodd wedi\'i ddiweddaru</string>
     <string name="people_invite_settings">Gosodiadau gwahodd</string>
     <string name="people_invite_settings_notify_me">Hysbysu fi</string>

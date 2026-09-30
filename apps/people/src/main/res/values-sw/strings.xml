@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Mialiko mipya itaonekana hapa</string>
     <string name="people_invitations_accept">Kubali</string>
     <string name="people_invitations_decline">Kataa</string>
+    <string name="people_invitations_listed_as">Imeorodheshwa kama %1$s</string>
     <string name="people_invitations_toast_policy">Sera ya mwaliko imesasishwa</string>
     <string name="people_invite_settings">Mipangilio ya mwaliko</string>
     <string name="people_invite_settings_notify_me">Niarifu</string>

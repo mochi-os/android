@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Uleman anyar bakal nembongan di dieu</string>
     <string name="people_invitations_accept">Tarima</string>
     <string name="people_invitations_decline">Tolak</string>
+    <string name="people_invitations_listed_as">Kadaptar salaku %1$s</string>
     <string name="people_invitations_toast_policy">Kawijakan ondangan diamutahirkeun</string>
     <string name="people_invite_settings">Setélan ondangan</string>
     <string name="people_invite_settings_notify_me">Bewara abdi</string>

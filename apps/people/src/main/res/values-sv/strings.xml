@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Nya inbjudningar visas här</string>
     <string name="people_invitations_accept">Acceptera</string>
     <string name="people_invitations_decline">Avböj</string>
+    <string name="people_invitations_listed_as">I katalogen som %1$s</string>
     <string name="people_invitations_toast_policy">Inbjudningspolicy uppdaterad</string>
     <string name="people_invite_settings">Inbjudningsinställningar</string>
     <string name="people_invite_settings_notify_me">Avisera mig</string>

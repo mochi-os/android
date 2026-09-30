@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">بانگهێشتە نوێیەکان لێرە دەردەکەون</string>
     <string name="people_invitations_accept">وەرگرتن</string>
     <string name="people_invitations_decline">ڕەتکردنەوە</string>
+    <string name="people_invitations_listed_as">بە ناوی %1$s تۆمارکراوە</string>
     <string name="people_invitations_toast_policy">تایبەتمەندی بانگهێشت نوێ کرایەوە</string>
     <string name="people_invite_settings">ڕێکخستنەکانی بانگهێشت</string>
     <string name="people_invite_settings_notify_me">ئاگادارم بکەرەوە</string>

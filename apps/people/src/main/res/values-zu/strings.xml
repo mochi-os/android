@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Izimemo ezintsha zizovela lapha</string>
     <string name="people_invitations_accept">Yamukela</string>
     <string name="people_invitations_decline">Yenqaba</string>
+    <string name="people_invitations_listed_as">Kufakwe ohlwini njengo-%1$s</string>
     <string name="people_invitations_toast_policy">Inqubomgomo yesimemo ibuyekeziwe</string>
     <string name="people_invite_settings">Izilungiselelo zesimemo</string>
     <string name="people_invite_settings_notify_me">Ngazise</string>
