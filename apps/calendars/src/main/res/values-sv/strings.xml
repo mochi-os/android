@@ -8,8 +8,6 @@
     <string name="calendars_name">Namn</string>
     <string name="calendars_rename">Byt namn</string>
     <string name="calendars_delete">Ta bort</string>
-    <string name="calendars_previous">Föregående</string>
-    <string name="calendars_next">Nästa</string>
     <string name="calendars_view">Vy</string>
     <string name="calendars_view_list">Lista</string>
     <string name="calendars_list_search">Sök</string>
@@ -68,7 +66,6 @@
     <string name="calendars_view_multiweek">Flera veckor</string>
     <string name="calendars_view_month">Månad</string>
     <string name="calendars_workweek">Arbetsvecka</string>
-    <string name="calendars_range">%1$s till %2$s</string>
     <string name="calendars_truncated">Vissa händelser i det här intervallet visas inte.</string>
     <string name="calendars_list_empty">Inga händelser</string>
     <string name="calendars_event_new">Ny händelse</string>

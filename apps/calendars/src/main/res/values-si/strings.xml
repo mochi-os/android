@@ -8,8 +8,6 @@
     <string name="calendars_name">නම</string>
     <string name="calendars_rename">නැවත නම් කරන්න</string>
     <string name="calendars_delete">මකන්න</string>
-    <string name="calendars_previous">පෙර</string>
-    <string name="calendars_next">ඊළඟ</string>
     <string name="calendars_view">දසුන</string>
     <string name="calendars_view_list">ලැයිස්තුව</string>
     <string name="calendars_list_search">සොයන්න</string>
@@ -68,7 +66,6 @@
     <string name="calendars_view_multiweek">සති කිහිපයක්</string>
     <string name="calendars_view_month">මාසය</string>
     <string name="calendars_workweek">වැඩ සතිය</string>
-    <string name="calendars_range">%1$s සිට %2$s දක්වා</string>
     <string name="calendars_truncated">මෙම පරාසයේ සමහර සිදුවීම් පෙන්වා නැත.</string>
     <string name="calendars_list_empty">සිදුවීම් නැත</string>
     <string name="calendars_event_new">නව සිදුවීම</string>

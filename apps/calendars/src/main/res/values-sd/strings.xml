@@ -8,8 +8,6 @@
     <string name="calendars_name">نالو</string>
     <string name="calendars_rename">نالو تبديل ڪريو</string>
     <string name="calendars_delete">ختم ڪريو</string>
-    <string name="calendars_previous">پوئيون</string>
-    <string name="calendars_next">اڳيون</string>
     <string name="calendars_view">منظر</string>
     <string name="calendars_view_list">لسٽ</string>
     <string name="calendars_list_search">ڳوليو</string>
@@ -68,7 +66,6 @@
     <string name="calendars_view_multiweek">ڪيترائي هفتا</string>
     <string name="calendars_view_month">مهينو</string>
     <string name="calendars_workweek">ڪم جو هفتو</string>
-    <string name="calendars_range">%1$s کان %2$s تائين</string>
     <string name="calendars_truncated">هن حد ۾ ڪجهه واقعا نه ڏيکاريا ويا آهن.</string>
     <string name="calendars_list_empty">ڪو واقعو نه آهي</string>
     <string name="calendars_event_new">نئون واقعو</string>

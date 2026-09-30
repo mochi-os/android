@@ -8,8 +8,6 @@
     <string name="calendars_name">ឈ្មោះ</string>
     <string name="calendars_rename">ប្តូរឈ្មោះ</string>
     <string name="calendars_delete">លុប</string>
-    <string name="calendars_previous">មុន</string>
-    <string name="calendars_next">បន្ទាប់</string>
     <string name="calendars_view">ទិដ្ឋភាព</string>
     <string name="calendars_view_list">បញ្ជី</string>
     <string name="calendars_list_search">ស្វែងរក</string>
@@ -71,7 +69,6 @@
     <string name="calendars_view_multiweek">ច្រើនសប្តាហ៍</string>
     <string name="calendars_view_month">ខែ</string>
     <string name="calendars_workweek">សប្តាហ៍ធ្វើការ</string>
-    <string name="calendars_range">%1$s ដល់ %2$s</string>
     <string name="calendars_truncated">ព្រឹត្តិការណ៍មួយចំនួននៅក្នុងចន្លោះនេះមិនត្រូវបានបង្ហាញទេ។</string>
     <string name="calendars_list_empty">មិនមានព្រឹត្តិការណ៍</string>
     <plurals name="calendars_more">

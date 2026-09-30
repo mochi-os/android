@@ -8,8 +8,6 @@
     <string name="calendars_name">Име</string>
     <string name="calendars_rename">Преименувай</string>
     <string name="calendars_delete">Изтрий</string>
-    <string name="calendars_previous">Назад</string>
-    <string name="calendars_next">Напред</string>
     <string name="calendars_view">Изглед</string>
     <string name="calendars_view_list">Списък</string>
     <string name="calendars_list_search">Търсене</string>
@@ -72,7 +70,6 @@
     <string name="calendars_view_multiweek">Няколко седмици</string>
     <string name="calendars_view_month">Месец</string>
     <string name="calendars_workweek">Работна седмица</string>
-    <string name="calendars_range">от %1$s до %2$s</string>
     <string name="calendars_truncated">Някои събития в този период не са показани.</string>
     <string name="calendars_list_empty">Няма събития</string>
     <plurals name="calendars_more">

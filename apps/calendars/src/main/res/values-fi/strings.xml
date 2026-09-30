@@ -8,8 +8,6 @@
     <string name="calendars_name">Nimi</string>
     <string name="calendars_rename">Nimeä uudelleen</string>
     <string name="calendars_delete">Poista</string>
-    <string name="calendars_previous">Edellinen</string>
-    <string name="calendars_next">Seuraava</string>
     <string name="calendars_view">Näkymä</string>
     <string name="calendars_view_list">Luettelo</string>
     <string name="calendars_list_search">Haku</string>
@@ -72,7 +70,6 @@
     <string name="calendars_view_multiweek">Monta viikkoa</string>
     <string name="calendars_view_month">Kuukausi</string>
     <string name="calendars_workweek">Työviikko</string>
-    <string name="calendars_range">%1$s – %2$s</string>
     <string name="calendars_truncated">Kaikkia tämän aikavälin tapahtumia ei näytetä.</string>
     <string name="calendars_list_empty">Ei tapahtumia</string>
     <plurals name="calendars_more">

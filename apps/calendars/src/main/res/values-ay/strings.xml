@@ -8,8 +8,6 @@
     <string name="calendars_name">Suti</string>
     <string name="calendars_rename">Suti machaqachama</string>
     <string name="calendars_delete">Chhaqtayaña</string>
-    <string name="calendars_previous">Nayrïri</string>
-    <string name="calendars_next">Arkiri</string>
     <string name="calendars_view">Uñjäwi</string>
     <string name="calendars_view_list">Lista</string>
     <string name="calendars_list_search">Thaqhama</string>
@@ -72,7 +70,6 @@
     <string name="calendars_view_multiweek">Walja semananaka</string>
     <string name="calendars_view_month">Phaxsi</string>
     <string name="calendars_workweek">Irnaqaña semana</string>
-    <string name="calendars_range">%1$s uksata %2$s ukakama</string>
     <string name="calendars_truncated">Aka pachanxa yaqhip lurawinakaxa janiw uñstkiti.</string>
     <string name="calendars_list_empty">Jan lurawinaka</string>
     <plurals name="calendars_more">

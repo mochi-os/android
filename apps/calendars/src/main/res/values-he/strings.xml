@@ -8,8 +8,6 @@
     <string name="calendars_name">שם</string>
     <string name="calendars_rename">שנה שם</string>
     <string name="calendars_delete">מחק</string>
-    <string name="calendars_previous">הקודם</string>
-    <string name="calendars_next">הבא</string>
     <string name="calendars_view">תצוגה</string>
     <string name="calendars_view_list">רשימה</string>
     <string name="calendars_list_search">חיפוש</string>
@@ -73,7 +71,6 @@
     <string name="calendars_view_multiweek">מספר שבועות</string>
     <string name="calendars_view_month">חודש</string>
     <string name="calendars_workweek">שבוע עבודה</string>
-    <string name="calendars_range">%1$s עד %2$s</string>
     <string name="calendars_truncated">חלק מהאירועים בטווח הזה אינם מוצגים.</string>
     <string name="calendars_list_empty">אין אירועים</string>
     <plurals name="calendars_more">

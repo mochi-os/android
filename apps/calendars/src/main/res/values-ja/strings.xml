@@ -8,8 +8,6 @@
     <string name="calendars_name">名前</string>
     <string name="calendars_rename">名前を変更</string>
     <string name="calendars_delete">削除</string>
-    <string name="calendars_previous">前へ</string>
-    <string name="calendars_next">次へ</string>
     <string name="calendars_view">ビュー</string>
     <string name="calendars_view_list">リスト</string>
     <string name="calendars_list_search">検索</string>
@@ -71,7 +69,6 @@
     <string name="calendars_view_multiweek">複数週</string>
     <string name="calendars_view_month">月</string>
     <string name="calendars_workweek">平日</string>
-    <string name="calendars_range">%1$s ～ %2$s</string>
     <string name="calendars_truncated">この期間の一部の予定は表示されていません。</string>
     <string name="calendars_list_empty">予定はありません</string>
     <plurals name="calendars_more">

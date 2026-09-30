@@ -8,8 +8,6 @@
     <string name="calendars_name">ਨਾਮ</string>
     <string name="calendars_rename">ਨਾਮ ਬਦਲੋ</string>
     <string name="calendars_delete">ਮਿਟਾਓ</string>
-    <string name="calendars_previous">ਪਿਛਲਾ</string>
-    <string name="calendars_next">ਅਗਲਾ</string>
     <string name="calendars_view">ਦ੍ਰਿਸ਼</string>
     <string name="calendars_view_list">ਸੂਚੀ</string>
     <string name="calendars_list_search">ਖੋਜ</string>
@@ -68,7 +66,6 @@
     <string name="calendars_view_multiweek">ਕਈ ਹਫ਼ਤੇ</string>
     <string name="calendars_view_month">ਮਹੀਨਾ</string>
     <string name="calendars_workweek">ਕੰਮ ਦਾ ਹਫ਼ਤਾ</string>
-    <string name="calendars_range">%1$s ਤੋਂ %2$s</string>
     <string name="calendars_truncated">ਇਸ ਸੀਮਾ ਦੇ ਕੁਝ ਸਮਾਗਮ ਨਹੀਂ ਦਿਖਾਏ ਗਏ।</string>
     <string name="calendars_list_empty">ਕੋਈ ਇਵੈਂਟ ਨਹੀਂ</string>
     <string name="calendars_event_new">ਨਵਾਂ ਇਵੈਂਟ</string>

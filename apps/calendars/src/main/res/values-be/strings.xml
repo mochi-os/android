@@ -8,8 +8,6 @@
     <string name="calendars_name">Назва</string>
     <string name="calendars_rename">Перайменаваць</string>
     <string name="calendars_delete">Выдаліць</string>
-    <string name="calendars_previous">Назад</string>
-    <string name="calendars_next">Далей</string>
     <string name="calendars_view">Выгляд</string>
     <string name="calendars_view_list">Спіс</string>
     <string name="calendars_list_search">Пошук</string>
@@ -74,7 +72,6 @@
     <string name="calendars_view_multiweek">Некалькі тыдняў</string>
     <string name="calendars_view_month">Месяц</string>
     <string name="calendars_workweek">Працоўны тыдзень</string>
-    <string name="calendars_range">з %1$s па %2$s</string>
     <string name="calendars_truncated">Некаторыя падзеі ў гэтым дыяпазоне не паказаны.</string>
     <string name="calendars_list_empty">Няма падзей</string>
     <plurals name="calendars_more">

@@ -8,8 +8,6 @@
     <string name="calendars_name">نام</string>
     <string name="calendars_rename">نام تبدیل کریں</string>
     <string name="calendars_delete">حذف کریں</string>
-    <string name="calendars_previous">پچھلا</string>
-    <string name="calendars_next">اگلا</string>
     <string name="calendars_view">منظر</string>
     <string name="calendars_view_list">فہرست</string>
     <string name="calendars_list_search">تلاش کریں</string>
@@ -68,7 +66,6 @@
     <string name="calendars_view_multiweek">کئی ہفتے</string>
     <string name="calendars_view_month">مہینہ</string>
     <string name="calendars_workweek">کام کا ہفتہ</string>
-    <string name="calendars_range">%1$s سے %2$s تک</string>
     <string name="calendars_truncated">اس حد میں کچھ ایونٹس نہیں دکھائے گئے۔</string>
     <string name="calendars_list_empty">کوئی ایونٹ نہیں</string>
     <string name="calendars_event_new">نیا ایونٹ</string>

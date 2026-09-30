@@ -8,8 +8,6 @@
     <string name="calendars_name">Nome</string>
     <string name="calendars_rename">Renomear</string>
     <string name="calendars_delete">Eliminar</string>
-    <string name="calendars_previous">Anterior</string>
-    <string name="calendars_next">Seguinte</string>
     <string name="calendars_view">Vista</string>
     <string name="calendars_view_list">Lista</string>
     <string name="calendars_list_search">Pesquisar</string>
@@ -68,7 +66,6 @@
     <string name="calendars_view_multiweek">Várias semanas</string>
     <string name="calendars_view_month">Mês</string>
     <string name="calendars_workweek">Semana de trabalho</string>
-    <string name="calendars_range">%1$s a %2$s</string>
     <string name="calendars_truncated">Alguns eventos deste intervalo não são mostrados.</string>
     <string name="calendars_list_empty">Sem eventos</string>
     <string name="calendars_event_new">Novo evento</string>

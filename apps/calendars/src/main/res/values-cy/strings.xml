@@ -8,8 +8,6 @@
     <string name="calendars_name">Enw</string>
     <string name="calendars_rename">Ailenwi</string>
     <string name="calendars_delete">Dileu</string>
-    <string name="calendars_previous">Blaenorol</string>
-    <string name="calendars_next">Nesaf</string>
     <string name="calendars_view">Golwg</string>
     <string name="calendars_view_list">Rhestr</string>
     <string name="calendars_list_search">Chwilio</string>
@@ -76,7 +74,6 @@
     <string name="calendars_view_multiweek">Aml-wythnos</string>
     <string name="calendars_view_month">Mis</string>
     <string name="calendars_workweek">Wythnos waith</string>
-    <string name="calendars_range">%1$s i %2$s</string>
     <string name="calendars_truncated">Nid yw rhai digwyddiadau yn yr ystod hon yn cael eu dangos.</string>
     <string name="calendars_list_empty">Dim digwyddiadau</string>
     <plurals name="calendars_more">

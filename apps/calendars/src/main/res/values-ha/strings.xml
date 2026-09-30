@@ -8,8 +8,6 @@
     <string name="calendars_name">Suna</string>
     <string name="calendars_rename">Sake suna</string>
     <string name="calendars_delete">Goge</string>
-    <string name="calendars_previous">Na baya</string>
-    <string name="calendars_next">Na gaba</string>
     <string name="calendars_view">Kallo</string>
     <string name="calendars_view_list">Jeri</string>
     <string name="calendars_list_search">Bincika</string>
@@ -72,7 +70,6 @@
     <string name="calendars_view_multiweek">Makonni da yawa</string>
     <string name="calendars_view_month">Wata</string>
     <string name="calendars_workweek">Makon aiki</string>
-    <string name="calendars_range">%1$s zuwa %2$s</string>
     <string name="calendars_truncated">Ba a nuna wasu tarurruka a wannan zangon ba.</string>
     <string name="calendars_list_empty">Babu tarurruka</string>
     <plurals name="calendars_more">

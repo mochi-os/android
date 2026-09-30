@@ -8,8 +8,6 @@
     <string name="calendars_name">नाव</string>
     <string name="calendars_rename">पुन्हा नाव द्या</string>
     <string name="calendars_delete">हटवा</string>
-    <string name="calendars_previous">मागील</string>
-    <string name="calendars_next">पुढे</string>
     <string name="calendars_view">दृश्य</string>
     <string name="calendars_view_list">यादी</string>
     <string name="calendars_list_search">शोधा</string>
@@ -72,7 +70,6 @@
     <string name="calendars_view_multiweek">अनेक आठवडे</string>
     <string name="calendars_view_month">महिना</string>
     <string name="calendars_workweek">कामाचा आठवडा</string>
-    <string name="calendars_range">%1$s ते %2$s</string>
     <string name="calendars_truncated">या कालावधीतील काही कार्यक्रम दाखवले नाहीत.</string>
     <string name="calendars_list_empty">कार्यक्रम नाहीत</string>
     <plurals name="calendars_more">

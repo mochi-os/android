@@ -8,8 +8,6 @@
     <string name="calendars_name">Nosaukums</string>
     <string name="calendars_rename">Pārdēvēt</string>
     <string name="calendars_delete">Dzēst</string>
-    <string name="calendars_previous">Iepriekšējais</string>
-    <string name="calendars_next">Tālāk</string>
     <string name="calendars_view">Skats</string>
     <string name="calendars_view_list">Saraksts</string>
     <string name="calendars_list_search">Meklēt</string>
@@ -73,7 +71,6 @@
     <string name="calendars_view_multiweek">Vairākas nedēļas</string>
     <string name="calendars_view_month">Mēnesis</string>
     <string name="calendars_workweek">Darba nedēļa</string>
-    <string name="calendars_range">no %1$s līdz %2$s</string>
     <string name="calendars_truncated">Daži šī diapazona notikumi netiek rādīti.</string>
     <string name="calendars_list_empty">Nav notikumu</string>
     <plurals name="calendars_more">

@@ -327,10 +327,6 @@ class CalendarViewModel @Inject constructor(
         load()
     }
 
-    fun previous() = anchor(step(_uiState.value.view, _uiState.value.anchor, -1))
-
-    fun next() = anchor(step(_uiState.value.view, _uiState.value.anchor, 1))
-
     fun workweek(value: Boolean) {
         _uiState.value = _uiState.value.copy(workweek = value)
     }
@@ -620,6 +616,28 @@ class CalendarViewModel @Inject constructor(
         return date.minusDays(back.toLong())
     }
 
+    /** The days the week view draws: the anchor's week, less the days off in a work week. */
+    fun days(state: CalendarUiState = _uiState.value): List<LocalDate> {
+        val start = week(state.anchor)
+        return (0 until 7).map { offset -> start.plusDays(offset.toLong()) }
+            .filter { day ->
+                !state.workweek || state.preferences.days.contains(day.dayOfWeek.value % 7)
+            }
+            .ifEmpty { listOf(state.anchor) }
+    }
+
+    /**
+     * The first day the view shows, whose month the toolbar names while the
+     * date panel is closed. The month view names its own month rather than
+     * the previous month's days that lead its grid.
+     */
+    fun first(state: CalendarUiState = _uiState.value): LocalDate = when (state.view) {
+        CalendarsSection.WEEK -> days(state).first()
+        CalendarsSection.MULTIWEEK -> weeks(state).first()
+        CalendarsSection.MONTH -> state.anchor.withDayOfMonth(1)
+        else -> state.anchor
+    }
+
     /** The first day of each week the view draws, in order. */
     fun weeks(state: CalendarUiState = _uiState.value): List<LocalDate> = when (state.view) {
         CalendarsSection.WEEK -> listOf(week(state.anchor))
@@ -679,10 +697,10 @@ class CalendarViewModel @Inject constructor(
 }
 
 /**
- * The anchor one step forward (1) or back (-1) by the view's own unit. The
- * multiweek view steps a week at a time, so its span slides a row rather than
- * jumping its length; the list view pages as the reader scrolls, so its arrows
- * move a month at a time rather than by a range it no longer has.
+ * The anchor [direction] steps forward (positive) or back (negative) by the
+ * view's own unit, as a swipe pages it. The multiweek view steps a week at a
+ * time, so its span slides a row rather than jumping its length; the list
+ * view, which pages as the reader scrolls, counts in months.
  */
 fun step(view: String, anchor: LocalDate, direction: Int): LocalDate = when (view) {
     CalendarsSection.DAY -> anchor.plusDays(direction.toLong())

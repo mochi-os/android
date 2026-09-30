@@ -8,8 +8,6 @@
     <string name="calendars_name">Ainm</string>
     <string name="calendars_rename">Cuir ainm ùr air</string>
     <string name="calendars_delete">Sguab às</string>
-    <string name="calendars_previous">Air ais</string>
-    <string name="calendars_next">Air adhart</string>
     <string name="calendars_view">Sealladh</string>
     <string name="calendars_view_list">Liosta</string>
     <string name="calendars_list_search">Lorg</string>
@@ -74,7 +72,6 @@
     <string name="calendars_view_multiweek">Iomadh seachdain</string>
     <string name="calendars_view_month">Mìos</string>
     <string name="calendars_workweek">Seachdain obrach</string>
-    <string name="calendars_range">%1$s gu %2$s</string>
     <string name="calendars_truncated">Chan eil cuid de na tachartasan san rainse seo gan sealltainn.</string>
     <string name="calendars_list_empty">Gun tachartasan</string>
     <plurals name="calendars_more">

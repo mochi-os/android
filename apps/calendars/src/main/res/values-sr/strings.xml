@@ -8,8 +8,6 @@
     <string name="calendars_name">Назив</string>
     <string name="calendars_rename">Преименуј</string>
     <string name="calendars_delete">Обриши</string>
-    <string name="calendars_previous">Претходно</string>
-    <string name="calendars_next">Следеће</string>
     <string name="calendars_view">Приказ</string>
     <string name="calendars_view_list">Листа</string>
     <string name="calendars_list_search">Претражи</string>
@@ -68,7 +66,6 @@
     <string name="calendars_view_multiweek">Више седмица</string>
     <string name="calendars_view_month">Месец</string>
     <string name="calendars_workweek">Радна седмица</string>
-    <string name="calendars_range">Од %1$s до %2$s</string>
     <string name="calendars_truncated">Неки догађаји у овом опсегу нису приказани.</string>
     <string name="calendars_list_empty">Нема догађаја</string>
     <string name="calendars_event_new">Нови догађај</string>

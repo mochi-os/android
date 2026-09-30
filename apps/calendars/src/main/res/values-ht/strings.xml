@@ -8,8 +8,6 @@
     <string name="calendars_name">Non</string>
     <string name="calendars_rename">Rebatize</string>
     <string name="calendars_delete">Efase</string>
-    <string name="calendars_previous">Anvan</string>
-    <string name="calendars_next">Pwochen</string>
     <string name="calendars_view">Vi</string>
     <string name="calendars_view_list">Lis</string>
     <string name="calendars_list_search">Chèche</string>
@@ -72,7 +70,6 @@
     <string name="calendars_view_multiweek">Plizyè semèn</string>
     <string name="calendars_view_month">Mwa</string>
     <string name="calendars_workweek">Semèn travay</string>
-    <string name="calendars_range">%1$s a %2$s</string>
     <string name="calendars_truncated">Kèk evènman nan peryòd sa a pa parèt.</string>
     <string name="calendars_list_empty">Pa gen evènman</string>
     <plurals name="calendars_more">

@@ -8,8 +8,6 @@
     <string name="calendars_name">Pangalan</string>
     <string name="calendars_rename">Palitan ang pangalan</string>
     <string name="calendars_delete">I-delete</string>
-    <string name="calendars_previous">Nakaraan</string>
-    <string name="calendars_next">Susunod</string>
     <string name="calendars_view">Tanaw</string>
     <string name="calendars_view_list">Listahan</string>
     <string name="calendars_list_search">Maghanap</string>
@@ -68,7 +66,6 @@
     <string name="calendars_view_multiweek">Ilang linggo</string>
     <string name="calendars_view_month">Buwan</string>
     <string name="calendars_workweek">Linggo ng trabaho</string>
-    <string name="calendars_range">%1$s hanggang %2$s</string>
     <string name="calendars_truncated">May mga event sa saklaw na ito na hindi ipinapakita.</string>
     <string name="calendars_list_empty">Walang kaganapan</string>
     <string name="calendars_event_new">Bagong kaganapan</string>

@@ -8,8 +8,6 @@
     <string name="calendars_name">Isem</string>
     <string name="calendars_rename">Irrinomina</string>
     <string name="calendars_delete">Ħassar</string>
-    <string name="calendars_previous">Preċedenti</string>
-    <string name="calendars_next">Li jmiss</string>
     <string name="calendars_view">Veduta</string>
     <string name="calendars_view_list">Lista</string>
     <string name="calendars_list_search">Fittex</string>
@@ -75,7 +73,6 @@
     <string name="calendars_view_multiweek">Diversi ġimgħat</string>
     <string name="calendars_view_month">Xahar</string>
     <string name="calendars_workweek">Ġimgħa tax-xogħol</string>
-    <string name="calendars_range">minn %1$s sa %2$s</string>
     <string name="calendars_truncated">Xi avvenimenti f\'din il-firxa mhumiex murija.</string>
     <string name="calendars_list_empty">L-ebda avvenimenti</string>
     <plurals name="calendars_more">

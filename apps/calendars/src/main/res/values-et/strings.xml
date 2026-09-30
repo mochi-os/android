@@ -8,8 +8,6 @@
     <string name="calendars_name">Nimi</string>
     <string name="calendars_rename">Nimeta ümber</string>
     <string name="calendars_delete">Kustuta</string>
-    <string name="calendars_previous">Eelmine</string>
-    <string name="calendars_next">Edasi</string>
     <string name="calendars_view">Vaade</string>
     <string name="calendars_view_list">Loend</string>
     <string name="calendars_list_search">Otsi</string>
@@ -72,7 +70,6 @@
     <string name="calendars_view_multiweek">Mitu nädalat</string>
     <string name="calendars_view_month">Kuu</string>
     <string name="calendars_workweek">Töönädal</string>
-    <string name="calendars_range">%1$s kuni %2$s</string>
     <string name="calendars_truncated">Mõni selle vahemiku sündmus pole kuvatud.</string>
     <string name="calendars_list_empty">Sündmusi pole</string>
     <plurals name="calendars_more">

@@ -8,8 +8,6 @@
     <string name="calendars_name">נאָמען</string>
     <string name="calendars_rename">איבערטויפֿן</string>
     <string name="calendars_delete">אויסמעקן</string>
-    <string name="calendars_previous">פֿריִער</string>
-    <string name="calendars_next">ווײַטער</string>
     <string name="calendars_view">בליק</string>
     <string name="calendars_view_list">רשימה</string>
     <string name="calendars_list_search">זוך</string>
@@ -68,7 +66,6 @@
     <string name="calendars_view_multiweek">עטלעכע וואָכן</string>
     <string name="calendars_view_month">חודש</string>
     <string name="calendars_workweek">אַרבעט־וואָך</string>
-    <string name="calendars_range">%1$s ביז %2$s</string>
     <string name="calendars_truncated">עטלעכע געשעענישן אין דעם פּעריאָד ווערן ניט געוויזן.</string>
     <string name="calendars_list_empty">קיין געשעענישן</string>
     <string name="calendars_event_new">נײַע געשעעניש</string>

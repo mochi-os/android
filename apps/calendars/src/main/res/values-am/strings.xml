@@ -8,8 +8,6 @@
     <string name="calendars_name">ስም</string>
     <string name="calendars_rename">ስም ቀይር</string>
     <string name="calendars_delete">ሰርዝ</string>
-    <string name="calendars_previous">ቀዳሚ</string>
-    <string name="calendars_next">ቀጣይ</string>
     <string name="calendars_view">እይታ</string>
     <string name="calendars_view_list">ዝርዝር</string>
     <string name="calendars_list_search">ይፈልጉ</string>
@@ -72,7 +70,6 @@
     <string name="calendars_view_multiweek">ብዙ ሳምንታት</string>
     <string name="calendars_view_month">ወር</string>
     <string name="calendars_workweek">የሥራ ሳምንት</string>
-    <string name="calendars_range">ከ%1$s እስከ %2$s</string>
     <string name="calendars_truncated">በዚህ ክልል ውስጥ ያሉ አንዳንድ ክስተቶች አይታዩም።</string>
     <string name="calendars_list_empty">ምንም ክስተቶች የሉም</string>
     <plurals name="calendars_more">

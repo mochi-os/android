@@ -8,8 +8,6 @@
     <string name="calendars_name">အမည်</string>
     <string name="calendars_rename">အမည်ပြောင်း</string>
     <string name="calendars_delete">ဖျက်မည်</string>
-    <string name="calendars_previous">နောက်သို့</string>
-    <string name="calendars_next">ရှေ့သို့</string>
     <string name="calendars_view">မြင်ကွင်း</string>
     <string name="calendars_view_list">စာရင်း</string>
     <string name="calendars_list_search">ရှာဖွေ</string>
@@ -71,7 +69,6 @@
     <string name="calendars_view_multiweek">အပတ်များစွာ</string>
     <string name="calendars_view_month">လ</string>
     <string name="calendars_workweek">အလုပ်ပတ်</string>
-    <string name="calendars_range">%1$s မှ %2$s</string>
     <string name="calendars_truncated">ဤကာလအတွင်း အစီအစဉ် အချို့ကို မပြထားပါ။</string>
     <string name="calendars_list_empty">အစီအစဉ်များ မရှိပါ</string>
     <plurals name="calendars_more">

@@ -8,8 +8,6 @@
     <string name="calendars_name">Ngaran</string>
     <string name="calendars_rename">Ganti ngaran</string>
     <string name="calendars_delete">Hapus</string>
-    <string name="calendars_previous">Saméméhna</string>
-    <string name="calendars_next">Salajengna</string>
     <string name="calendars_view">Tampilan</string>
     <string name="calendars_view_list">Daptar</string>
     <string name="calendars_list_search">Paluruh</string>
@@ -68,7 +66,6 @@
     <string name="calendars_view_multiweek">Sababaraha minggu</string>
     <string name="calendars_view_month">Bulan</string>
     <string name="calendars_workweek">Minggu gawé</string>
-    <string name="calendars_range">%1$s dugi ka %2$s</string>
     <string name="calendars_truncated">Sawatara acara dina rentang ieu henteu dipidangkeun.</string>
     <string name="calendars_list_empty">Teu aya acara</string>
     <string name="calendars_event_new">Acara anyar</string>

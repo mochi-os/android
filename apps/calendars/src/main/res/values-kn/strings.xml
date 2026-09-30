@@ -8,8 +8,6 @@
     <string name="calendars_name">ಹೆಸರು</string>
     <string name="calendars_rename">ಮರುಹೆಸರಿಸಿ</string>
     <string name="calendars_delete">ಅಳಿಸಿ</string>
-    <string name="calendars_previous">ಹಿಂದಿನ</string>
-    <string name="calendars_next">ಮುಂದೆ</string>
     <string name="calendars_view">ವೀಕ್ಷಣೆ</string>
     <string name="calendars_view_list">ಪಟ್ಟಿ</string>
     <string name="calendars_list_search">ಹುಡುಕಿ</string>
@@ -72,7 +70,6 @@
     <string name="calendars_view_multiweek">ಹಲವು ವಾರಗಳು</string>
     <string name="calendars_view_month">ತಿಂಗಳು</string>
     <string name="calendars_workweek">ಕೆಲಸದ ವಾರ</string>
-    <string name="calendars_range">%1$s ರಿಂದ %2$s ವರೆಗೆ</string>
     <string name="calendars_truncated">ಈ ವ್ಯಾಪ್ತಿಯ ಕೆಲವು ಈವೆಂಟ್‌ಗಳನ್ನು ತೋರಿಸಲಾಗಿಲ್ಲ.</string>
     <string name="calendars_list_empty">ಯಾವುದೇ ಈವೆಂಟ್‌ಗಳಿಲ್ಲ</string>
     <plurals name="calendars_more">

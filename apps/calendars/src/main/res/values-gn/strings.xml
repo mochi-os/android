@@ -8,8 +8,6 @@
     <string name="calendars_name">Téra</string>
     <string name="calendars_rename">Embohera jey</string>
     <string name="calendars_delete">Hundi</string>
-    <string name="calendars_previous">Tenondete</string>
-    <string name="calendars_next">Tenondeve</string>
     <string name="calendars_view">Jehecha</string>
     <string name="calendars_view_list">Tysýi</string>
     <string name="calendars_list_search">Eheka</string>
@@ -72,7 +70,6 @@
     <string name="calendars_view_multiweek">Heta arapokõindy</string>
     <string name="calendars_view_month">Jasy</string>
     <string name="calendars_workweek">Mba\'apo arapokõindy</string>
-    <string name="calendars_range">%1$s guive %2$s peve</string>
     <string name="calendars_truncated">Oĩ evento ko aravópe ndojehechaukáiva.</string>
     <string name="calendars_list_empty">Ndaipóri evento</string>
     <plurals name="calendars_more">

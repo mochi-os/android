@@ -8,8 +8,6 @@
     <string name="calendars_name">Ad</string>
     <string name="calendars_rename">Yeniden adlandır</string>
     <string name="calendars_delete">Sil</string>
-    <string name="calendars_previous">Önceki</string>
-    <string name="calendars_next">İleri</string>
     <string name="calendars_view">Görünüm</string>
     <string name="calendars_view_list">Liste</string>
     <string name="calendars_list_search">Ara</string>
@@ -68,7 +66,6 @@
     <string name="calendars_view_multiweek">Çoklu hafta</string>
     <string name="calendars_view_month">Ay</string>
     <string name="calendars_workweek">Çalışma haftası</string>
-    <string name="calendars_range">%1$s - %2$s</string>
     <string name="calendars_truncated">Bu aralıktaki bazı etkinlikler gösterilmiyor.</string>
     <string name="calendars_list_empty">Etkinlik yok</string>
     <string name="calendars_event_new">Yeni etkinlik</string>

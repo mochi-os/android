@@ -8,8 +8,6 @@
     <string name="calendars_name">പേര്</string>
     <string name="calendars_rename">പുനർനാമകരണം ചെയ്യുക</string>
     <string name="calendars_delete">ഇല്ലാതാക്കുക</string>
-    <string name="calendars_previous">മുമ്പത്തേത്</string>
-    <string name="calendars_next">അടുത്തത്</string>
     <string name="calendars_view">കാഴ്ച</string>
     <string name="calendars_view_list">ലിസ്റ്റ്</string>
     <string name="calendars_list_search">തിരയുക</string>
@@ -72,7 +70,6 @@
     <string name="calendars_view_multiweek">ഒന്നിലധികം ആഴ്ചകൾ</string>
     <string name="calendars_view_month">മാസം</string>
     <string name="calendars_workweek">പ്രവൃത്തി ആഴ്ച</string>
-    <string name="calendars_range">%1$s മുതൽ %2$s വരെ</string>
     <string name="calendars_truncated">ഈ ശ്രേണിയിലെ ചില ഇവന്റുകൾ കാണിച്ചിട്ടില്ല.</string>
     <string name="calendars_list_empty">ഇവന്റുകളൊന്നുമില്ല</string>
     <plurals name="calendars_more">

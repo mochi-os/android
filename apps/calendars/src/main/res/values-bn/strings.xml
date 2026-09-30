@@ -8,8 +8,6 @@
     <string name="calendars_name">নাম</string>
     <string name="calendars_rename">পুনঃনামকরণ করুন</string>
     <string name="calendars_delete">মুছুন</string>
-    <string name="calendars_previous">পূর্ববর্তী</string>
-    <string name="calendars_next">পরবর্তী</string>
     <string name="calendars_view">ভিউ</string>
     <string name="calendars_view_list">তালিকা</string>
     <string name="calendars_list_search">অনুসন্ধান</string>
@@ -72,7 +70,6 @@
     <string name="calendars_view_multiweek">একাধিক সপ্তাহ</string>
     <string name="calendars_view_month">মাস</string>
     <string name="calendars_workweek">কর্ম সপ্তাহ</string>
-    <string name="calendars_range">%1$s থেকে %2$s</string>
     <string name="calendars_truncated">এই পরিসরের কিছু ইভেন্ট দেখানো হয়নি।</string>
     <string name="calendars_list_empty">কোনো ইভেন্ট নেই</string>
     <plurals name="calendars_more">

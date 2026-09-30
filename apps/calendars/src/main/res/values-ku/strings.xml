@@ -8,8 +8,6 @@
     <string name="calendars_name">Nav</string>
     <string name="calendars_rename">Navê biguhere</string>
     <string name="calendars_delete">Jê bibe</string>
-    <string name="calendars_previous">Pêştir</string>
-    <string name="calendars_next">Pêştir</string>
     <string name="calendars_view">Dîmen</string>
     <string name="calendars_view_list">Lîste</string>
     <string name="calendars_list_search">Lêger</string>
@@ -72,7 +70,6 @@
     <string name="calendars_view_multiweek">Çend hefte</string>
     <string name="calendars_view_month">Meh</string>
     <string name="calendars_workweek">Hefteya kar</string>
-    <string name="calendars_range">ji %1$s heta %2$s</string>
     <string name="calendars_truncated">Hin bûyerên vê navberê nayên nîşandan.</string>
     <string name="calendars_list_empty">Tu bûyer tune</string>
     <plurals name="calendars_more">

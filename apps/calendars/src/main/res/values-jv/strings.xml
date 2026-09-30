@@ -8,8 +8,6 @@
     <string name="calendars_name">Jeneng</string>
     <string name="calendars_rename">Owahi jeneng</string>
     <string name="calendars_delete">Busak</string>
-    <string name="calendars_previous">Sadurungé</string>
-    <string name="calendars_next">Sabanjure</string>
     <string name="calendars_view">Tampilan</string>
     <string name="calendars_view_list">Daftar</string>
     <string name="calendars_list_search">Goleki</string>
@@ -71,7 +69,6 @@
     <string name="calendars_view_multiweek">Pirang-pirang minggu</string>
     <string name="calendars_view_month">Sasi</string>
     <string name="calendars_workweek">Minggu kerja</string>
-    <string name="calendars_range">%1$s nganti %2$s</string>
     <string name="calendars_truncated">Sawetara acara ing rentang iki ora ditampilake.</string>
     <string name="calendars_list_empty">Ora ana acara</string>
     <plurals name="calendars_more">

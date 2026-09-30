@@ -8,8 +8,6 @@
     <string name="calendars_name">At</string>
     <string name="calendars_rename">Adyny üýtget</string>
     <string name="calendars_delete">Pozmak</string>
-    <string name="calendars_previous">Öňki</string>
-    <string name="calendars_next">Indiki</string>
     <string name="calendars_view">Görnüş</string>
     <string name="calendars_view_list">Sanaw</string>
     <string name="calendars_list_search">Gözle</string>
@@ -68,7 +66,6 @@
     <string name="calendars_view_multiweek">Birnäçe hepde</string>
     <string name="calendars_view_month">Aý</string>
     <string name="calendars_workweek">Iş hepdesi</string>
-    <string name="calendars_range">%1$s – %2$s</string>
     <string name="calendars_truncated">Şu aralykdaky käbir wakalar görkezilmedi.</string>
     <string name="calendars_list_empty">Çäreler ýok</string>
     <string name="calendars_event_new">Täze çäre</string>

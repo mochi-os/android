@@ -8,8 +8,6 @@
     <string name="calendars_name">نوم</string>
     <string name="calendars_rename">بیا نومول</string>
     <string name="calendars_delete">ړنګ کړئ</string>
-    <string name="calendars_previous">تېر</string>
-    <string name="calendars_next">بل</string>
     <string name="calendars_view">لید</string>
     <string name="calendars_view_list">لیسټ</string>
     <string name="calendars_list_search">لټون</string>
@@ -68,7 +66,6 @@
     <string name="calendars_view_multiweek">څو اونۍ</string>
     <string name="calendars_view_month">میاشت</string>
     <string name="calendars_workweek">د کار اونۍ</string>
-    <string name="calendars_range">له %1$s څخه تر %2$s</string>
     <string name="calendars_truncated">په دې سلسله کې ځینې پېښې نه ښودل کېږي.</string>
     <string name="calendars_list_empty">هیڅ پېښې نشته</string>
     <string name="calendars_event_new">نوې پېښه</string>

@@ -35,8 +35,6 @@
 
     <!-- Toolbar and views -->
     <string name="calendars_today">Today</string>
-    <string name="calendars_previous">Previous</string>
-    <string name="calendars_next">Next</string>
     <string name="calendars_view">View</string>
     <string name="calendars_view_day">Day</string>
     <string name="calendars_view_week">Week</string>
@@ -44,7 +42,6 @@
     <string name="calendars_view_month">Month</string>
     <string name="calendars_view_list">List</string>
     <string name="calendars_workweek">Work week</string>
-    <string name="calendars_range">%1$s to %2$s</string>
     <string name="calendars_truncated">Some events in this range are not shown.</string>
     <string name="calendars_list_empty">No events</string>
     <string name="calendars_list_search">Search</string>

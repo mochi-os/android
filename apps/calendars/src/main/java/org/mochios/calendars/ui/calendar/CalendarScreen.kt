@@ -5,7 +5,11 @@
 
 package org.mochios.calendars.ui.calendar
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.expandVertically
+import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.ScrollState
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -15,11 +19,12 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.List
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.ChevronLeft
-import androidx.compose.material.icons.filled.ChevronRight
+import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material.icons.filled.ArrowDropUp
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.outlined.CalendarMonth
@@ -54,6 +59,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
@@ -67,7 +73,6 @@ import java.time.LocalDate
 import kotlin.math.abs
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
-import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LabeledSelectField
 import org.mochios.android.ui.components.MochiDropdownMenu
@@ -121,6 +126,7 @@ fun CalendarScreen(
     val resources = LocalResources.current
 
     var selected by remember { mutableStateOf<Instance?>(null) }
+    var picking by remember { mutableStateOf(false) }
     var copying by remember { mutableStateOf<Instance?>(null) }
     var moving by remember { mutableStateOf<Move?>(null) }
     var renaming by remember { mutableStateOf<Calendar?>(null) }
@@ -201,11 +207,11 @@ fun CalendarScreen(
             topBar = {
                 Toolbar(
                     state = uiState,
-                    title = rangeTitle(uiState, viewModel),
+                    title = monthTitle(if (picking) uiState.anchor else viewModel.first(uiState)),
+                    picking = picking,
                     onMenu = { scope.launch { drawerState.open() } },
+                    onTitle = { picking = !picking },
                     onToday = viewModel::today,
-                    onPrevious = viewModel::previous,
-                    onNext = viewModel::next,
                     onView = viewModel::view,
                     onWorkweek = { viewModel.workweek(!uiState.workweek) },
                 )
@@ -217,58 +223,72 @@ fun CalendarScreen(
                 }
             },
         ) { padding ->
-            Box(modifier = Modifier.fillMaxSize().padding(padding)) {
-                val error = uiState.error
-                when {
-                    uiState.isLoading -> Box(
-                        modifier = Modifier.fillMaxSize(),
-                        contentAlignment = Alignment.Center,
-                    ) { CircularProgressIndicator() }
+            Column(modifier = Modifier.fillMaxSize().padding(padding)) {
+                AnimatedVisibility(
+                    visible = picking,
+                    enter = expandVertically(),
+                    exit = shrinkVertically(),
+                ) {
+                    DatePanel(
+                        anchor = uiState.anchor,
+                        today = LocalDate.now(viewModel.timezone()),
+                        weekStart = viewModel.start(),
+                        onPick = viewModel::anchor,
+                    )
+                }
+                Box(modifier = Modifier.fillMaxWidth().weight(1f)) {
+                    val error = uiState.error
+                    when {
+                        uiState.isLoading -> Box(
+                            modifier = Modifier.fillMaxSize(),
+                            contentAlignment = Alignment.Center,
+                        ) { CircularProgressIndicator() }
 
-                    error != null && uiState.instances.isEmpty() ->
-                        ErrorState(error = error, onRetry = { viewModel.reload() })
+                        error != null && uiState.instances.isEmpty() ->
+                            ErrorState(error = error, onRetry = { viewModel.reload() })
 
-                    // A pull on the list view reaches further back rather
-                    // than starting the range again, which is what the reader
-                    // is asking for at the top of an agenda.
-                    else -> PullToRefreshBox(
-                        isRefreshing = uiState.isRefreshing,
-                        onRefresh = {
-                            if (uiState.view == CalendarsSection.LIST) {
-                                viewModel.earlier()
-                            } else {
-                                viewModel.reload(refreshing = true)
-                            }
-                        },
-                        modifier = Modifier.fillMaxSize(),
-                    ) {
-                        Column(modifier = Modifier.fillMaxSize()) {
-                            if (uiState.truncated) {
-                                Text(
-                                    text = stringResource(R.string.calendars_truncated),
-                                    style = MaterialTheme.typography.bodySmall,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp),
+                        // A pull on the list view reaches further back rather
+                        // than starting the range again, which is what the reader
+                        // is asking for at the top of an agenda.
+                        else -> PullToRefreshBox(
+                            isRefreshing = uiState.isRefreshing,
+                            onRefresh = {
+                                if (uiState.view == CalendarsSection.LIST) {
+                                    viewModel.earlier()
+                                } else {
+                                    viewModel.reload(refreshing = true)
+                                }
+                            },
+                            modifier = Modifier.fillMaxSize(),
+                        ) {
+                            Column(modifier = Modifier.fillMaxSize()) {
+                                if (uiState.truncated) {
+                                    Text(
+                                        text = stringResource(R.string.calendars_truncated),
+                                        style = MaterialTheme.typography.bodySmall,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                        modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp),
+                                    )
+                                }
+                                View(
+                                    uiState,
+                                    viewModel,
+                                    onOpen = { instance ->
+                                        if (instance.editable) {
+                                            onEditEvent(instance.event, if (instance.recurring) instance.start else 0)
+                                        } else {
+                                            selected = instance
+                                        }
+                                    },
+                                    onNewEvent = onNewEvent,
+                                    onMove = { instance, start, finish ->
+                                        request(instance) { scope -> viewModel.move(instance, start, finish, scope) }
+                                    },
+                                    onMoveDay = { instance, day ->
+                                        request(instance) { scope -> viewModel.move(instance, day, scope) }
+                                    },
                                 )
                             }
-                            View(
-                                uiState,
-                                viewModel,
-                                onOpen = { instance ->
-                                    if (instance.editable) {
-                                        onEditEvent(instance.event, if (instance.recurring) instance.start else 0)
-                                    } else {
-                                        selected = instance
-                                    }
-                                },
-                                onNewEvent = onNewEvent,
-                                onMove = { instance, start, finish ->
-                                    request(instance) { scope -> viewModel.move(instance, start, finish, scope) }
-                                },
-                                onMoveDay = { instance, day ->
-                                    request(instance) { scope -> viewModel.move(instance, day, scope) }
-                                },
-                            )
                         }
                     }
                 }
@@ -403,9 +423,9 @@ private class Move(val instance: Instance, val run: (Scope) -> Unit)
 /**
  * The view the state names. The day, week, multiweek and month views sit in
  * a pager, so a swipe brings the period either side in under the finger, as
- * Google Calendar does, and settling on it moves the anchor there. The arrows
- * and the today button slide the pager the same way. The list view scrolls on
- * its own and is drawn as it is.
+ * Google Calendar does, and settling on it moves the anchor there. The today
+ * button slides the pager the same way. The list view scrolls on its own and
+ * is drawn as it is.
  */
 @Composable
 private fun View(
@@ -495,11 +515,8 @@ private fun Page(
             scroll = scroll,
         )
         CalendarsSection.WEEK -> {
-            val week = viewModel.week(state.anchor)
-            val days = (0 until 7).map { week.plusDays(it.toLong()) }
-                .filter { !state.workweek || state.preferences.days.contains(it.dayOfWeek.value % 7) }
             TimeGrid(
-                days = days.ifEmpty { listOf(state.anchor) },
+                days = viewModel.days(state),
                 state = state,
                 viewModel = viewModel,
                 onOpen = onOpen,
@@ -543,23 +560,40 @@ private fun Page(
     }
 }
 
-/** Previous, today, next, the range's title, and the view switcher. */
+/**
+ * The title, which opens and closes the date panel under it, today, and the
+ * view switcher. The title is the month and year of the view's first day, or
+ * of the picked day while the panel is open. There are no previous and next arrows:
+ * the views page with a swipe, and the panel jumps anywhere further.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun Toolbar(
     state: CalendarUiState,
     title: String,
+    picking: Boolean,
     onMenu: () -> Unit,
+    onTitle: () -> Unit,
     onToday: () -> Unit,
-    onPrevious: () -> Unit,
-    onNext: () -> Unit,
     onView: (String) -> Unit,
     onWorkweek: () -> Unit,
 ) {
     var views by remember { mutableStateOf(false) }
     TopAppBar(
         title = {
-            Text(text = title, maxLines = 1, overflow = TextOverflow.Ellipsis)
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier
+                    .clip(RoundedCornerShape(8.dp))
+                    .clickable(onClick = onTitle)
+                    .padding(horizontal = 8.dp, vertical = 4.dp),
+            ) {
+                Text(text = title, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                Icon(
+                    if (picking) Icons.Default.ArrowDropUp else Icons.Default.ArrowDropDown,
+                    contentDescription = null,
+                )
+            }
         },
         navigationIcon = {
             MochiIconButton(onClick = onMenu) {
@@ -567,17 +601,8 @@ private fun Toolbar(
             }
         },
         actions = {
-            MochiIconButton(onClick = onPrevious) {
-                Icon(
-                    Icons.Default.ChevronLeft,
-                    contentDescription = stringResource(R.string.calendars_previous),
-                )
-            }
             MochiIconButton(onClick = onToday) {
                 Icon(Icons.Outlined.Today, contentDescription = stringResource(R.string.calendars_today))
-            }
-            MochiIconButton(onClick = onNext) {
-                Icon(Icons.Default.ChevronRight, contentDescription = stringResource(R.string.calendars_next))
             }
             Box {
                 MochiIconButton(onClick = { views = true }) {
@@ -620,22 +645,14 @@ private val VIEWS = listOf(
     Triple(CalendarsSection.LIST, R.string.calendars_view_list, { Icons.AutoMirrored.Filled.List }),
 )
 
-/** The range the view covers, in words. */
+/** The toolbar's title: [date]'s month and year, in the locale's own short form. */
 @Composable
-private fun rangeTitle(state: CalendarUiState, viewModel: CalendarViewModel): String {
-    val format = LocalFormat.current
-    val (start, finish) = viewModel.range(state)
-    return when (state.view) {
-        CalendarsSection.DAY -> format.formatDate(start)
-        CalendarsSection.MONTH -> state.anchor.month
-            .getDisplayName(java.time.format.TextStyle.FULL, LocalConfiguration.current.locales[0]) +
-            " " + state.anchor.year
-        else -> stringResource(
-            R.string.calendars_range,
-            format.formatDate(start),
-            format.formatDate(finish - 86_400),
-        )
+private fun monthTitle(date: LocalDate): String {
+    val locale = LocalConfiguration.current.locales[0]
+    val pattern = remember(locale) {
+        android.text.format.DateFormat.getBestDateTimePattern(locale, "MMMyyyy")
     }
+    return java.time.format.DateTimeFormatter.ofPattern(pattern, locale).format(date)
 }
 
 /** Reloads the range whenever the screen comes back to the foreground. */

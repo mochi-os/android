@@ -8,8 +8,6 @@
     <string name="calendars_name">Názov</string>
     <string name="calendars_rename">Premenovať</string>
     <string name="calendars_delete">Odstrániť</string>
-    <string name="calendars_previous">Predchádzajúci</string>
-    <string name="calendars_next">Ďalej</string>
     <string name="calendars_view">Zobrazenie</string>
     <string name="calendars_view_list">Zoznam</string>
     <string name="calendars_list_search">Hľadať</string>
@@ -68,7 +66,6 @@
     <string name="calendars_view_multiweek">Viac týždňov</string>
     <string name="calendars_view_month">Mesiac</string>
     <string name="calendars_workweek">Pracovný týždeň</string>
-    <string name="calendars_range">%1$s až %2$s</string>
     <string name="calendars_truncated">Niektoré udalosti v tomto rozsahu nie sú zobrazené.</string>
     <string name="calendars_list_empty">Žiadne udalosti</string>
     <string name="calendars_event_new">Nová udalosť</string>

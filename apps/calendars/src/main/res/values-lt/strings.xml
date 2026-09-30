@@ -8,8 +8,6 @@
     <string name="calendars_name">Pavadinimas</string>
     <string name="calendars_rename">Pervadinti</string>
     <string name="calendars_delete">Ištrinti</string>
-    <string name="calendars_previous">Ankstesnis</string>
-    <string name="calendars_next">Toliau</string>
     <string name="calendars_view">Rodinys</string>
     <string name="calendars_view_list">Sąrašas</string>
     <string name="calendars_list_search">Ieškoti</string>
@@ -73,7 +71,6 @@
     <string name="calendars_view_multiweek">Kelios savaitės</string>
     <string name="calendars_view_month">Mėnuo</string>
     <string name="calendars_workweek">Darbo savaitė</string>
-    <string name="calendars_range">nuo %1$s iki %2$s</string>
     <string name="calendars_truncated">Kai kurie šio intervalo įvykiai nerodomi.</string>
     <string name="calendars_list_empty">Įvykių nėra</string>
     <plurals name="calendars_more">

@@ -8,8 +8,6 @@
     <string name="calendars_name">பெயர்</string>
     <string name="calendars_rename">பெயர் மாற்று</string>
     <string name="calendars_delete">நீக்கு</string>
-    <string name="calendars_previous">முந்தையது</string>
-    <string name="calendars_next">அடுத்து</string>
     <string name="calendars_view">காட்சி</string>
     <string name="calendars_view_list">பட்டியல்</string>
     <string name="calendars_list_search">தேடு</string>
@@ -68,7 +66,6 @@
     <string name="calendars_view_multiweek">பல வாரங்கள்</string>
     <string name="calendars_view_month">மாதம்</string>
     <string name="calendars_workweek">வேலை வாரம்</string>
-    <string name="calendars_range">%1$s முதல் %2$s வரை</string>
     <string name="calendars_truncated">இந்த வரம்பில் உள்ள சில நிகழ்வுகள் காட்டப்படவில்லை.</string>
     <string name="calendars_list_empty">நிகழ்வுகள் இல்லை</string>
     <string name="calendars_event_new">புதிய நிகழ்வு</string>

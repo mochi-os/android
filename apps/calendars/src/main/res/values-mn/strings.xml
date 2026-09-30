@@ -8,8 +8,6 @@
     <string name="calendars_name">Нэр</string>
     <string name="calendars_rename">Нэр өөрчлөх</string>
     <string name="calendars_delete">Устгах</string>
-    <string name="calendars_previous">Өмнөх</string>
-    <string name="calendars_next">Дараах</string>
     <string name="calendars_view">Харагдац</string>
     <string name="calendars_view_list">Жагсаалт</string>
     <string name="calendars_list_search">Хайх</string>
@@ -72,7 +70,6 @@
     <string name="calendars_view_multiweek">Хэд хэдэн долоо хоног</string>
     <string name="calendars_view_month">Сар</string>
     <string name="calendars_workweek">Ажлын долоо хоног</string>
-    <string name="calendars_range">%1$s - %2$s</string>
     <string name="calendars_truncated">Энэ мужийн зарим үйл явдлыг харуулаагүй байна.</string>
     <string name="calendars_list_empty">Үйл явдал алга</string>
     <plurals name="calendars_more">

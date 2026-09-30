@@ -8,8 +8,6 @@
     <string name="calendars_name">نام</string>
     <string name="calendars_rename">تغییر نام</string>
     <string name="calendars_delete">حذف</string>
-    <string name="calendars_previous">قبلی</string>
-    <string name="calendars_next">بعدی</string>
     <string name="calendars_view">نمایش</string>
     <string name="calendars_view_list">فهرست</string>
     <string name="calendars_list_search">جست‌وجو</string>
@@ -72,7 +70,6 @@
     <string name="calendars_view_multiweek">چند هفته</string>
     <string name="calendars_view_month">ماه</string>
     <string name="calendars_workweek">هفته کاری</string>
-    <string name="calendars_range">%1$s تا %2$s</string>
     <string name="calendars_truncated">برخی از رویدادهای این بازه نمایش داده نمی‌شوند.</string>
     <string name="calendars_list_empty">هیچ رویدادی وجود ندارد</string>
     <plurals name="calendars_more">

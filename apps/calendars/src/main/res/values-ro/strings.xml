@@ -8,8 +8,6 @@
     <string name="calendars_name">Nume</string>
     <string name="calendars_rename">Redenumește</string>
     <string name="calendars_delete">Șterge</string>
-    <string name="calendars_previous">Anterior</string>
-    <string name="calendars_next">Următor</string>
     <string name="calendars_view">Vizualizare</string>
     <string name="calendars_view_list">Listă</string>
     <string name="calendars_list_search">Caută</string>
@@ -67,7 +65,6 @@
     <string name="calendars_view_multiweek">Mai multe săptămâni</string>
     <string name="calendars_view_month">Lună</string>
     <string name="calendars_workweek">Săptămână de lucru</string>
-    <string name="calendars_range">%1$s până la %2$s</string>
     <string name="calendars_truncated">Unele evenimente din acest interval nu sunt afișate.</string>
     <string name="calendars_list_empty">Niciun eveniment</string>
     <string name="calendars_event_new">Eveniment nou</string>

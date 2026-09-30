@@ -8,8 +8,6 @@
     <string name="calendars_name">Ad</string>
     <string name="calendars_rename">Adı dəyiş</string>
     <string name="calendars_delete">Sil</string>
-    <string name="calendars_previous">Əvvəlki</string>
-    <string name="calendars_next">Növbəti</string>
     <string name="calendars_view">Görünüş</string>
     <string name="calendars_view_list">Siyahı</string>
     <string name="calendars_list_search">Axtar</string>
@@ -72,7 +70,6 @@
     <string name="calendars_view_multiweek">Çoxhəftəlik</string>
     <string name="calendars_view_month">Ay</string>
     <string name="calendars_workweek">İş həftəsi</string>
-    <string name="calendars_range">%1$s - %2$s</string>
     <string name="calendars_truncated">Bu aralıqdakı bəzi tədbirlər göstərilmir.</string>
     <string name="calendars_list_empty">Tədbir yoxdur</string>
     <plurals name="calendars_more">

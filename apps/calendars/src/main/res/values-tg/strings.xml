@@ -8,8 +8,6 @@
     <string name="calendars_name">Ном</string>
     <string name="calendars_rename">Тағйири ном</string>
     <string name="calendars_delete">Нест кардан</string>
-    <string name="calendars_previous">Қаблӣ</string>
-    <string name="calendars_next">Баъдӣ</string>
     <string name="calendars_view">Намоиш</string>
     <string name="calendars_view_list">Рӯйхат</string>
     <string name="calendars_list_search">Ҷустуҷӯ</string>
@@ -68,7 +66,6 @@
     <string name="calendars_view_multiweek">Якчанд ҳафта</string>
     <string name="calendars_view_month">Моҳ</string>
     <string name="calendars_workweek">Ҳафтаи корӣ</string>
-    <string name="calendars_range">Аз %1$s то %2$s</string>
     <string name="calendars_truncated">Баъзе рӯйдодҳои ин фосила нишон дода нашудаанд.</string>
     <string name="calendars_list_empty">Ягон рӯйдод нест</string>
     <string name="calendars_event_new">Рӯйдоди нав</string>

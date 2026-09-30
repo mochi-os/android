@@ -8,8 +8,6 @@
     <string name="calendars_name">ناو</string>
     <string name="calendars_rename">ناوگۆڕکردن</string>
     <string name="calendars_delete">سڕینەوە</string>
-    <string name="calendars_previous">پێشوو</string>
-    <string name="calendars_next">دواتر</string>
     <string name="calendars_view">بینین</string>
     <string name="calendars_view_list">لیست</string>
     <string name="calendars_list_search">گەڕان</string>
@@ -72,7 +70,6 @@
     <string name="calendars_view_multiweek">چەند هەفتە</string>
     <string name="calendars_view_month">مانگ</string>
     <string name="calendars_workweek">هەفتەی کار</string>
-    <string name="calendars_range">لە %1$s بۆ %2$s</string>
     <string name="calendars_truncated">هەندێک ڕووداو لەم مەودایەدا پیشان نادرێن.</string>
     <string name="calendars_list_empty">هیچ ڕووداوێک نییە</string>
     <plurals name="calendars_more">

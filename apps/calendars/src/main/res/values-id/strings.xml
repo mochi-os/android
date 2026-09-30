@@ -8,8 +8,6 @@
     <string name="calendars_name">Nama</string>
     <string name="calendars_rename">Ubah nama</string>
     <string name="calendars_delete">Hapus</string>
-    <string name="calendars_previous">Sebelumnya</string>
-    <string name="calendars_next">Berikutnya</string>
     <string name="calendars_view">Tampilan</string>
     <string name="calendars_view_list">Daftar</string>
     <string name="calendars_list_search">Cari</string>
@@ -71,7 +69,6 @@
     <string name="calendars_view_multiweek">Beberapa minggu</string>
     <string name="calendars_view_month">Bulan</string>
     <string name="calendars_workweek">Minggu kerja</string>
-    <string name="calendars_range">%1$s sampai %2$s</string>
     <string name="calendars_truncated">Beberapa acara dalam rentang ini tidak ditampilkan.</string>
     <string name="calendars_list_empty">Tidak ada acara</string>
     <plurals name="calendars_more">

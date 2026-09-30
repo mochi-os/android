@@ -8,8 +8,6 @@
     <string name="calendars_name">Ainm</string>
     <string name="calendars_rename">Athainmnigh</string>
     <string name="calendars_delete">Scrios</string>
-    <string name="calendars_previous">Roimhe seo</string>
-    <string name="calendars_next">Ar aghaidh</string>
     <string name="calendars_view">Amharc</string>
     <string name="calendars_view_list">Liosta</string>
     <string name="calendars_list_search">Cuardach</string>
@@ -75,7 +73,6 @@
     <string name="calendars_view_multiweek">Ilseachtain</string>
     <string name="calendars_view_month">Mí</string>
     <string name="calendars_workweek">Seachtain oibre</string>
-    <string name="calendars_range">%1$s go %2$s</string>
     <string name="calendars_truncated">Níl roinnt imeachtaí sa raon seo á dtaispeáint.</string>
     <string name="calendars_list_empty">Níl aon imeacht</string>
     <plurals name="calendars_more">

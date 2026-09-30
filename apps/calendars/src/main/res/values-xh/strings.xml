@@ -8,8 +8,6 @@
     <string name="calendars_name">Igama</string>
     <string name="calendars_rename">Guqula igama</string>
     <string name="calendars_delete">Cima</string>
-    <string name="calendars_previous">Engaphambili</string>
-    <string name="calendars_next">Okulandelayo</string>
     <string name="calendars_view">Imbonakalo</string>
     <string name="calendars_view_list">Uluhlu</string>
     <string name="calendars_list_search">Khangela</string>
@@ -68,7 +66,6 @@
     <string name="calendars_view_multiweek">Iiveki ezininzi</string>
     <string name="calendars_view_month">Inyanga</string>
     <string name="calendars_workweek">Iveki yokusebenza</string>
-    <string name="calendars_range">%1$s ukuya ku-%2$s</string>
     <string name="calendars_truncated">Ezinye iziganeko kwesi sithuba azibonakaliswanga.</string>
     <string name="calendars_list_empty">Akukho misitho</string>
     <string name="calendars_event_new">Umsitho omtsha</string>

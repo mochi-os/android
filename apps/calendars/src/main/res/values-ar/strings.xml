@@ -8,8 +8,6 @@
     <string name="calendars_name">الاسم</string>
     <string name="calendars_rename">إعادة تسمية</string>
     <string name="calendars_delete">حذف</string>
-    <string name="calendars_previous">السابق</string>
-    <string name="calendars_next">التالي</string>
     <string name="calendars_view">عرض</string>
     <string name="calendars_view_list">قائمة</string>
     <string name="calendars_list_search">بحث</string>
@@ -76,7 +74,6 @@
     <string name="calendars_view_multiweek">عدة أسابيع</string>
     <string name="calendars_view_month">شهر</string>
     <string name="calendars_workweek">أسبوع العمل</string>
-    <string name="calendars_range">%1$s إلى %2$s</string>
     <string name="calendars_truncated">بعض الأحداث في هذا النطاق غير معروضة.</string>
     <string name="calendars_list_empty">لا توجد أحداث</string>
     <plurals name="calendars_more">

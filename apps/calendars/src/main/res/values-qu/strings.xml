@@ -8,8 +8,6 @@
     <string name="calendars_name">Sutin</string>
     <string name="calendars_rename">Huk sutin churay</string>
     <string name="calendars_delete">Wischuy</string>
-    <string name="calendars_previous">Ñawpaqnin</string>
-    <string name="calendars_next">Qatiqnin</string>
     <string name="calendars_view">Qhaway</string>
     <string name="calendars_view_list">Lista</string>
     <string name="calendars_list_search">Maskay</string>
@@ -68,7 +66,6 @@
     <string name="calendars_view_multiweek">Achka semanakuna</string>
     <string name="calendars_view_month">Killa</string>
     <string name="calendars_workweek">Llamk\'ana semana</string>
-    <string name="calendars_range">%1$s manta %2$s kama</string>
     <string name="calendars_truncated">Kay chiqanpi wakin ruwaykuna mana rikuchikunchu.</string>
     <string name="calendars_list_empty">Mana ruwanakuna kanchu</string>
     <string name="calendars_event_new">Musuq ruwana</string>

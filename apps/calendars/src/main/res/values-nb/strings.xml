@@ -8,8 +8,6 @@
     <string name="calendars_name">Navn</string>
     <string name="calendars_rename">Gi nytt navn</string>
     <string name="calendars_delete">Slett</string>
-    <string name="calendars_previous">Forrige</string>
-    <string name="calendars_next">Neste</string>
     <string name="calendars_view">Visning</string>
     <string name="calendars_view_list">Liste</string>
     <string name="calendars_list_search">Søk</string>
@@ -71,7 +69,6 @@
     <string name="calendars_view_multiweek">Flere uker</string>
     <string name="calendars_view_month">Måned</string>
     <string name="calendars_workweek">Arbeidsuke</string>
-    <string name="calendars_range">%1$s til %2$s</string>
     <string name="calendars_truncated">Noen hendelser i denne perioden vises ikke.</string>
     <string name="calendars_list_empty">Ingen hendelser</string>
     <plurals name="calendars_more">

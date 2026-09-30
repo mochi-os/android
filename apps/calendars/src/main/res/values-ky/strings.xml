@@ -8,8 +8,6 @@
     <string name="calendars_name">Аты</string>
     <string name="calendars_rename">Атын өзгөртүү</string>
     <string name="calendars_delete">Жок кылуу</string>
-    <string name="calendars_previous">Мурунку</string>
-    <string name="calendars_next">Кийинки</string>
     <string name="calendars_view">Көрүнүш</string>
     <string name="calendars_view_list">Тизме</string>
     <string name="calendars_list_search">Издөө</string>
@@ -72,7 +70,6 @@
     <string name="calendars_view_multiweek">Бир нече жума</string>
     <string name="calendars_view_month">Ай</string>
     <string name="calendars_workweek">Жумуш жумасы</string>
-    <string name="calendars_range">%1$s - %2$s</string>
     <string name="calendars_truncated">Бул аралыктагы кээ бир иш-чаралар көрсөтүлгөн жок.</string>
     <string name="calendars_list_empty">Иш-чаралар жок</string>
     <plurals name="calendars_more">

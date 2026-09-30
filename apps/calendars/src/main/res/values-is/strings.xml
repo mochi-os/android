@@ -8,8 +8,6 @@
     <string name="calendars_name">Nafn</string>
     <string name="calendars_rename">Endurnefna</string>
     <string name="calendars_delete">Eyða</string>
-    <string name="calendars_previous">Fyrri</string>
-    <string name="calendars_next">Áfram</string>
     <string name="calendars_view">Sýn</string>
     <string name="calendars_view_list">Listi</string>
     <string name="calendars_list_search">Leita</string>
@@ -72,7 +70,6 @@
     <string name="calendars_view_multiweek">Margar vikur</string>
     <string name="calendars_view_month">Mánuður</string>
     <string name="calendars_workweek">Vinnuvika</string>
-    <string name="calendars_range">%1$s til %2$s</string>
     <string name="calendars_truncated">Sumir viðburðir á þessu tímabili eru ekki sýndir.</string>
     <string name="calendars_list_empty">Engir viðburðir</string>
     <plurals name="calendars_more">
