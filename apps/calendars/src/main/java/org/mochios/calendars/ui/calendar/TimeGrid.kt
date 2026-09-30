@@ -122,6 +122,9 @@ private data class Drop(val day: LocalDate, val cut: Cut, val start: Long, val f
  *
  * [scroll] is the grid's vertical position, shared by the pages either side
  * so a swipe keeps the same hours in view.
+ *
+ * With [stacked], each column header puts the weekday above the day number,
+ * as the week view does; otherwise it reads on one line, as in the day view.
  */
 @Composable
 fun TimeGrid(
@@ -132,6 +135,7 @@ fun TimeGrid(
     onCreate: (LocalDate, Int) -> Unit,
     onMove: (Instance, Long, Long) -> Unit,
     scroll: ScrollState,
+    stacked: Boolean = false,
 ) {
     val format = LocalFormat.current
     val today = LocalDate.now(viewModel.timezone())
@@ -205,7 +209,7 @@ fun TimeGrid(
         Row(modifier = Modifier.fillMaxWidth()) {
             Spacer(Modifier.width(GUTTER))
             for (day in days) {
-                DayHeading(day, today, width, Modifier.clickable { viewModel.open(day) })
+                DayHeading(day, today, width, stacked, Modifier.clickable { viewModel.open(day) })
             }
         }
         AllDayBand(days, byDay, width, onOpen)
@@ -287,23 +291,50 @@ private fun LayoutCoordinates.rectInRoot(): Rect {
 }
 
 @Composable
-private fun DayHeading(day: LocalDate, today: LocalDate, width: Dp, modifier: Modifier) {
+private fun DayHeading(
+    day: LocalDate,
+    today: LocalDate,
+    width: Dp,
+    stacked: Boolean,
+    modifier: Modifier,
+) {
     val current = day == today
+    val colour = if (current) {
+        MaterialTheme.colorScheme.onPrimary
+    } else {
+        MaterialTheme.colorScheme.onSurface
+    }
+    val weight = if (current) FontWeight.Bold else FontWeight.Normal
     val locale = LocalConfiguration.current.locales[0]
     val pattern = remember(locale) { android.text.format.DateFormat.getBestDateTimePattern(locale, "EEEd") }
-    Box(
+    Column(
         modifier = modifier
             .width(width)
             .then(if (current) Modifier.background(MaterialTheme.colorScheme.primary) else Modifier)
             .padding(vertical = 4.dp),
-        contentAlignment = Alignment.Center,
+        horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Text(
-            text = heading(day, pattern, locale),
-            style = MaterialTheme.typography.titleSmall,
-            fontWeight = if (current) FontWeight.Bold else FontWeight.Normal,
-            color = if (current) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurface,
-        )
+        if (stacked) {
+            Text(
+                text = weekdayLabel(day),
+                style = MaterialTheme.typography.labelSmall,
+                fontWeight = weight,
+                color = colour,
+            )
+            Text(
+                text = day.dayOfMonth.toString(),
+                style = MaterialTheme.typography.titleSmall,
+                fontWeight = weight,
+                color = colour,
+            )
+        } else {
+            Text(
+                text = heading(day, pattern, locale),
+                style = MaterialTheme.typography.titleSmall,
+                fontWeight = weight,
+                color = colour,
+            )
+        }
     }
 }
 

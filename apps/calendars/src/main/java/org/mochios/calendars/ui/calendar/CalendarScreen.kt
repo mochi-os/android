@@ -523,6 +523,7 @@ private fun Page(
                 onCreate = { day, hour -> onNewEvent(moment(day, hour), false) },
                 onMove = onMove,
                 scroll = scroll,
+                stacked = true,
             )
         }
         CalendarsSection.MULTIWEEK -> MonthGrid(
