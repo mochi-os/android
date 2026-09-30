@@ -5,6 +5,7 @@
 
 package org.mochios.calendars.ui.calendar
 
+import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -12,6 +13,8 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.pager.HorizontalPager
+import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.List
 import androidx.compose.material.icons.filled.Add
@@ -42,10 +45,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
@@ -57,6 +63,8 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
+import java.time.LocalDate
+import kotlin.math.abs
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
@@ -80,7 +88,6 @@ import org.mochios.calendars.ui.dialogs.RenameCalendarDialog
 import org.mochios.calendars.ui.dialogs.ScopeDialog
 import org.mochios.calendars.ui.editor.Scope
 import org.mochios.calendars.ui.router.CalendarsSection
-import java.time.LocalDate
 
 /**
  * The calendars app's one screen: the drawer of calendars, the toolbar that
@@ -394,15 +401,77 @@ fun CalendarScreen(
 private class Move(val instance: Instance, val run: (Scope) -> Unit)
 
 /**
- * The view the state names, drawn from the same occurrence list. [onMove]
- * is a block dragged or resized in a time grid, with the occurrence's new
- * ends; [onMoveDay] a chip dropped on a day in a month grid, with the
- * occurrence's new first day.
+ * The view the state names. The day, week, multiweek and month views sit in
+ * a pager, so a swipe brings the period either side in under the finger, as
+ * Google Calendar does, and settling on it moves the anchor there. The arrows
+ * and the today button slide the pager the same way. The list view scrolls on
+ * its own and is drawn as it is.
  */
 @Composable
 private fun View(
     state: CalendarUiState,
     viewModel: CalendarViewModel,
+    onOpen: (Instance) -> Unit,
+    onNewEvent: (Long, Boolean?) -> Unit,
+    onMove: (Instance, Long, Long) -> Unit,
+    onMoveDay: (Instance, LocalDate) -> Unit,
+) {
+    val scroll = rememberHourScroll(state.preferences.hours.start)
+    if (state.view == CalendarsSection.LIST) {
+        Page(state, viewModel, scroll, onOpen, onNewEvent, onMove, onMoveDay)
+        return
+    }
+    key(state.view) {
+        val base = remember { state.anchor }
+        val pager = rememberPagerState(initialPage = SWIPE_CENTRE) { SWIPE_PAGES }
+        val target = SWIPE_CENTRE + steps(state.view, base, state.anchor, viewModel::week)
+        val anchor by rememberUpdatedState(state.anchor)
+
+        LaunchedEffect(target) {
+            if (pager.currentPage != target) {
+                if (abs(pager.currentPage - target) == 1) {
+                    pager.animateScrollToPage(target)
+                } else {
+                    pager.scrollToPage(target)
+                }
+            }
+        }
+        LaunchedEffect(pager) {
+            snapshotFlow { pager.settledPage }.collect { page ->
+                if (SWIPE_CENTRE + steps(state.view, base, anchor, viewModel::week) != page) {
+                    viewModel.anchor(step(state.view, base, page - SWIPE_CENTRE))
+                }
+            }
+        }
+
+        HorizontalPager(state = pager, modifier = Modifier.fillMaxSize()) { page ->
+            val shown = if (page == target) {
+                state
+            } else {
+                state.copy(anchor = step(state.view, base, page - SWIPE_CENTRE))
+            }
+            Page(shown, viewModel, scroll, onOpen, onNewEvent, onMove, onMoveDay)
+        }
+    }
+}
+
+/** How many pages the pager holds; it opens in the middle, so either way is endless. */
+private const val SWIPE_PAGES = Int.MAX_VALUE
+
+/** The page the pager opens on, which shows the anchor it opened with. */
+private const val SWIPE_CENTRE = SWIPE_PAGES / 2
+
+/**
+ * One page of the view the state names, drawn from the same occurrence list.
+ * [scroll] is the time grid's vertical position. [onMove] is a block dragged
+ * or resized in a time grid, with the occurrence's new ends; [onMoveDay] a
+ * chip dropped on a day in a month grid, with the occurrence's new first day.
+ */
+@Composable
+private fun Page(
+    state: CalendarUiState,
+    viewModel: CalendarViewModel,
+    scroll: ScrollState,
     onOpen: (Instance) -> Unit,
     onNewEvent: (Long, Boolean?) -> Unit,
     onMove: (Instance, Long, Long) -> Unit,
@@ -423,6 +492,7 @@ private fun View(
             onOpen = onOpen,
             onCreate = { day, hour -> onNewEvent(moment(day, hour), false) },
             onMove = onMove,
+            scroll = scroll,
         )
         CalendarsSection.WEEK -> {
             val week = viewModel.week(state.anchor)
@@ -435,6 +505,7 @@ private fun View(
                 onOpen = onOpen,
                 onCreate = { day, hour -> onNewEvent(moment(day, hour), false) },
                 onMove = onMove,
+                scroll = scroll,
             )
         }
         CalendarsSection.MULTIWEEK -> MonthGrid(

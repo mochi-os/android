@@ -193,7 +193,10 @@ class CalendarViewModel @Inject constructor(
                 if (state.view == CalendarsSection.LIST) {
                     pages(state, reset)
                 } else {
-                    val (start, finish) = range(state)
+                    // The periods either side are read too, so a swipe
+                    // brings its neighbour in already drawn.
+                    val (start, _) = range(state.copy(anchor = step(state.view, state.anchor, -1)))
+                    val (_, finish) = range(state.copy(anchor = step(state.view, state.anchor, 1)))
                     // With events shown in their own zones, a day's
                     // occurrences can begin or end up to a day away by the
                     // user's clock, so the range reaches a day each side.
@@ -686,6 +689,24 @@ fun step(view: String, anchor: LocalDate, direction: Int): LocalDate = when (vie
     CalendarsSection.WEEK, CalendarsSection.MULTIWEEK -> anchor.plusWeeks(direction.toLong())
     else -> anchor.plusMonths(direction.toLong())
 }
+
+/**
+ * How many of the view's own steps [to] lies from [from], the inverse of
+ * [step]: days in the day view, weeks in the week and multiweek views, and
+ * months otherwise. [week] gives the first day of a date's week, so two days
+ * of the same week are no steps apart.
+ */
+fun steps(
+    view: String,
+    from: LocalDate,
+    to: LocalDate,
+    week: (LocalDate) -> LocalDate,
+): Int = when (view) {
+    CalendarsSection.DAY -> ChronoUnit.DAYS.between(from, to)
+    CalendarsSection.WEEK, CalendarsSection.MULTIWEEK ->
+        ChronoUnit.WEEKS.between(week(from), week(to))
+    else -> ChronoUnit.MONTHS.between(from.withDayOfMonth(1), to.withDayOfMonth(1))
+}.toInt()
 
 /**
  * The last day an all-day occurrence covers: its date plus its whole days less

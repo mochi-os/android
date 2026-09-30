@@ -5,6 +5,7 @@
 
 package org.mochios.calendars.ui.calendar
 
+import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectDragGesturesAfterLongPress
@@ -118,6 +119,9 @@ private data class Drop(val day: LocalDate, val cut: Cut, val start: Long, val f
  * long press on the strip along its bottom edge drags its end instead; the
  * grid scrolls while the finger rests near its top or bottom. Letting go
  * somewhere else asks [onMove] to move the occurrence there.
+ *
+ * [scroll] is the grid's vertical position, shared by the pages either side
+ * so a swipe keeps the same hours in view.
  */
 @Composable
 fun TimeGrid(
@@ -127,9 +131,9 @@ fun TimeGrid(
     onOpen: (Instance) -> Unit,
     onCreate: (LocalDate, Int) -> Unit,
     onMove: (Instance, Long, Long) -> Unit,
+    scroll: ScrollState,
 ) {
     val format = LocalFormat.current
-    val scroll = rememberScrollState()
     val today = LocalDate.now(viewModel.timezone())
     val columns = LocalConfiguration.current.screenWidthDp.dp - GUTTER
     val width = columns / days.size.coerceAtLeast(1)
@@ -138,14 +142,7 @@ fun TimeGrid(
         days.associateWith { day -> state.visible.filter { viewModel.covers(it, day) } }
     }
 
-    // Opens on the working day rather than at midnight, as Thunderbird does.
-    // The scroll is in pixels, so the hour rows are measured through the
-    // density rather than taken as their own dp number.
     val density = LocalDensity.current
-    LaunchedEffect(state.preferences.hours.start, days.firstOrNull()) {
-        val hours = state.preferences.hours.start.coerceIn(0, 23)
-        scroll.scrollTo(with(density) { (HOUR * hours).roundToPx() })
-    }
 
     // The lifted block, the finger and the grid's geometry, all in the
     // root's coordinates: the finger stays put while the grid scrolls under
@@ -269,6 +266,21 @@ fun TimeGrid(
 }
 
 /** A layout's bounds in the root's coordinates, unclipped by its parents. */
+/**
+ * A time grid's vertical position, opened on the working day rather than at
+ * midnight, as Thunderbird does. The scroll is in pixels, so the hour rows are
+ * measured through the density rather than taken as their own dp number.
+ */
+@Composable
+fun rememberHourScroll(start: Int): ScrollState {
+    val scroll = rememberScrollState()
+    val density = LocalDensity.current
+    LaunchedEffect(start) {
+        scroll.scrollTo(with(density) { (HOUR * start.coerceIn(0, 23)).roundToPx() })
+    }
+    return scroll
+}
+
 private fun LayoutCoordinates.rectInRoot(): Rect {
     val origin = positionInRoot()
     return Rect(origin.x, origin.y, origin.x + size.width, origin.y + size.height)
