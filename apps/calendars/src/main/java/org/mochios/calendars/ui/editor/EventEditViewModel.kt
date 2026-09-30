@@ -486,6 +486,16 @@ class EventEditViewModel @Inject constructor(
      */
     private suspend fun write(state: EditorUiState, scope: Scope, etag: String): Event {
         if (state.event == null) return repository.createEvent(state.calendar, components(state, scope))
+        // One occurrence taken to another calendar leaves the series behind
+        // and becomes an event of its own there.
+        val home = carried?.calendar
+        if (scope == Scope.ONE && state.recurring && state.occurrence > 0 && home != null && state.calendar != home) {
+            return moveOccurrence(
+                create = { repository.createEvent(state.calendar, single(form(state), carried?.components.orEmpty())) },
+                exclude = { repository.excludeOccurrence(state.event, state.occurrence) },
+                delete = { created -> repository.deleteEvent(created.id, created.etag) },
+            )
+        }
         if (scope == Scope.FOLLOWING && state.recurring) {
             val halves = split(carried?.components.orEmpty(), form(state), state.occurrence, zone)
             if (halves != null) {

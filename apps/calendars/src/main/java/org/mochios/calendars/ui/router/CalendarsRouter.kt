@@ -6,6 +6,7 @@
 package org.mochios.calendars.ui.router
 
 import org.mochios.android.ui.components.LastViewedStore
+import org.mochios.calendars.api.PreferencesRequest
 
 // Where the app opens. The five views are one screen with a switcher rather
 // than five routes, so there is no router screen to pass through: the screen's
@@ -38,3 +39,10 @@ object CalendarsSection {
  */
 fun calendarsView(stored: String): String =
     if (stored in CalendarsSection.ALL) stored else CalendarsSection.DEFAULT
+
+/**
+ * The request that saves [chosen] as the view a new browser or device opens
+ * on, or null when it is already the one saved or is not a view.
+ */
+fun sharedView(chosen: String, saved: String): PreferencesRequest? =
+    if (chosen == saved || chosen !in CalendarsSection.ALL) null else PreferencesRequest(view = chosen)

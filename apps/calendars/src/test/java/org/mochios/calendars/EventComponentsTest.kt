@@ -12,6 +12,7 @@ import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
+import kotlinx.coroutines.runBlocking
 import org.mochios.android.sync.CalendarsMapping
 import org.mochios.android.sync.EventComponent
 import org.mochios.android.sync.property
@@ -26,6 +27,8 @@ import org.mochios.calendars.ui.editor.excluded
 import org.mochios.calendars.ui.editor.follow
 import org.mochios.calendars.ui.editor.foreign
 import org.mochios.calendars.ui.editor.moved
+import org.mochios.calendars.ui.editor.moveOccurrence
+import org.mochios.calendars.ui.editor.single
 import org.mochios.calendars.ui.editor.written
 
 /**
@@ -327,6 +330,53 @@ class EventComponentsTest {
     }
 
     // ---- removing one occurrence ----
+
+    // ---- one occurrence to another calendar ----
+
+    @Test
+    fun `an occurrence alone is the form with nothing of the series on it`() {
+        val tree = single(form(title = "Elsewhere"), listOf(master(), override()))
+        assertEquals(1, tree.size)
+        assertEquals("Elsewhere", tree[0].value("SUMMARY"))
+        assertEquals(NEXT, start(tree[0]))
+        assertNull(tree[0].property("RRULE"))
+        assertNull(tree[0].property("RECURRENCE-ID"))
+        assertNull(tree[0].property("EXDATE"))
+    }
+
+    @Test
+    fun `an occurrence with no override of its own carries the master's other properties`() {
+        val tree = single(form(), listOf(master()))
+        assertEquals("mailto:a@b.c", tree[0].value("ORGANIZER"))
+        assertNull(tree[0].property("RRULE"))
+    }
+
+    @Test
+    fun `a moved occurrence is created, then excluded from the series`() = runBlocking {
+        val steps = mutableListOf<String>()
+        val created = moveOccurrence(
+            create = { steps.add("create"); "copy" },
+            exclude = { steps.add("exclude") },
+            delete = { steps.add("delete $it") },
+        )
+        assertEquals("copy", created)
+        assertEquals(listOf("create", "exclude"), steps)
+    }
+
+    @Test
+    fun `a series that cannot be written takes the copy back`() = runBlocking {
+        val steps = mutableListOf<String>()
+        val failure = runCatching {
+            moveOccurrence(
+                create = { steps.add("create"); "copy" },
+                exclude = { throw IllegalStateException("changed") },
+                delete = { steps.add("delete $it") },
+            )
+        }
+        assertTrue(failure.isFailure)
+        assertEquals("changed", failure.exceptionOrNull()?.message)
+        assertEquals(listOf("create", "delete copy"), steps)
+    }
 
     @Test
     fun `excluding an occurrence adds an EXDATE and drops its override`() {

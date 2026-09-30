@@ -45,6 +45,7 @@ import org.mochios.calendars.ui.editor.split
 import org.mochios.calendars.ui.router.CALENDARS_FEATURE
 import org.mochios.calendars.ui.router.CalendarsSection
 import org.mochios.calendars.ui.router.calendarsView
+import org.mochios.calendars.ui.router.sharedView
 import java.time.Instant
 import java.time.LocalDate
 import java.time.ZoneId
@@ -322,7 +323,22 @@ class CalendarViewModel @Inject constructor(
         if (value == _uiState.value.view) return
         _uiState.value = _uiState.value.copy(view = value)
         remember(value)
+        share(value)
         load()
+    }
+
+    /**
+     * Saves the view as the one a new browser or device opens on. This
+     * device keeps its own either way, so a failure changes nothing it shows.
+     */
+    private fun share(view: String) {
+        val request = sharedView(view, _uiState.value.preferences.view) ?: return
+        viewModelScope.launch {
+            try {
+                _uiState.value = _uiState.value.copy(preferences = repository.setPreferences(request))
+            } catch (_: Exception) {
+            }
+        }
     }
 
     /** Records the view so the next launch on this device opens on it. */

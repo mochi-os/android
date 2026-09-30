@@ -499,6 +499,39 @@ fun excluded(carried: List<EventComponent>, occurrence: Long): List<EventCompone
     return listOf(master.copy(properties = master.properties + exdate)) + kept
 }
 
+/**
+ * One occurrence of a series as an event of its own: the form over the
+ * occurrence's own override or, failing one, the master, with nothing of the
+ * series on it.
+ */
+fun single(form: EventForm, carried: List<EventComponent>): List<EventComponent> {
+    val events = carried.filter { it.name.equals("VEVENT", ignoreCase = true) }
+    val own = events.firstOrNull { it.exception() && matches(it, form.occurrence) }
+        ?: events.firstOrNull { !it.exception() }
+    return listOf(component(form, own, recurrence = false, occurrence = 0, start = form.start))
+}
+
+/**
+ * One occurrence of a series moved to another calendar: [create] makes it an
+ * event of its own there, then [exclude] takes it out of the series. The copy
+ * is taken back if the series cannot be written, so the occurrence is never
+ * left in both calendars.
+ */
+suspend fun <T> moveOccurrence(
+    create: suspend () -> T,
+    exclude: suspend () -> Unit,
+    delete: suspend (T) -> Unit,
+): T {
+    val created = create()
+    try {
+        exclude()
+    } catch (e: Exception) {
+        runCatching { delete(created) }
+        throw e
+    }
+    return created
+}
+
 /** Whether an override replaces the occurrence starting at [occurrence]. */
 fun matches(override: EventComponent, occurrence: Long): Boolean =
     override.property("RECURRENCE-ID")?.let { CalendarsMapping.moment(it) / 1000 } == occurrence
