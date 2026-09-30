@@ -200,6 +200,8 @@ private fun scriptBucket(native: String): Int {
 }
 
 /**
+ * The automatic choice is stored as "auto", as the web stores it: the server
+ * skips a blank value, so a blank could never clear a language once set.
  * [current] is included even if the server does not list it, so a saved value
  * never vanishes from the picker.
  */
@@ -208,8 +210,8 @@ internal fun languageOptions(
     current: String,
     defaultLabel: String,
 ): List<Pair<String, String>> {
-    val installed = (tags + current.takeIf { it.isNotBlank() }.orEmpty())
-        .filter { it.isNotBlank() }
+    val installed = (tags + current)
+        .filter { it.isNotBlank() && !it.equals("auto", ignoreCase = true) }
         .distinct()
     val sorted = installed
         .map { it to languageName(it) }
@@ -217,7 +219,7 @@ internal fun languageOptions(
             compareBy<Pair<String, String>> { scriptBucket(it.second) }
                 .thenComparing({ it.second }, NaturalCompare),
         )
-    return listOf("" to defaultLabel) + sorted
+    return listOf("auto" to defaultLabel) + sorted
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
