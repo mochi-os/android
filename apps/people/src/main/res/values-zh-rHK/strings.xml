@@ -2,7 +2,6 @@
 <resources>
 
     <string name="people_profile_title">個人資料</string>
-    <string name="people_group_members_description">屬於此群組的用戶和群組</string>
     <string name="people_member_add_hint">新增用戶或群組以開始</string>
     <string name="people_member_type_user">用戶</string>
 
@@ -58,7 +57,6 @@
     <string name="people_groups_create">建立群組</string>
     <string name="people_groups_not_found">找不到群組</string>
     <string name="people_group_name">群組名稱</string>
-    <string name="people_group_description_optional">選填說明</string>
     <string name="people_group_name_required">必須輸入名稱</string>
     <string name="people_group_actions">群組操作</string>
     <string name="people_group_members_count">成員數量</string>
@@ -69,15 +67,15 @@
     <string name="people_member_remove_confirm">確定要將 %1$s 從此群組移除嗎？</string>
     <string name="people_member_remove_with_name">移除 %1$s</string>
     <string name="people_member_search_placeholder">輸入名稱以搜尋…</string>
-    <string name="people_member_search_hint">輸入名稱以尋找想新增的人</string>
     <string name="people_member_type_group">群組</string>
+    <string name="people_member_unknown_person">未知使用者</string>
+    <string name="people_member_deleted_group">已刪除的群組</string>
     <string name="people_groups_add_member_confirm_title">加入群組</string>
     <string name="people_groups_add_member_confirm_action">加入群組</string>
     <string name="people_profile_save_failed">儲存失敗</string>
     <string name="people_profile_name_saved">已儲存名稱</string>
     <string name="people_profile_accent">強調色</string>
     <string name="people_profile_directory_listing">允許他人在目錄中找到您</string>
-    <string name="people_profile_markdown_supported">支援 Markdown</string>
     <string name="people_profile_upload_avatar">上載頭像</string>
     <string name="people_profile_upload">上載</string>
     <string name="people_profile_change_banner">更改橫額</string>

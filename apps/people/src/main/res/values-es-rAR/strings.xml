@@ -12,7 +12,6 @@
     <string name="people_member_add_hint">Agregá usuarios o grupos para empezar</string>
     <string name="people_member_remove">Quitá al miembro</string>
     <string name="people_member_remove_title">Quitá al miembro</string>
-    <string name="people_member_search_hint">Ingresá un nombre para encontrar personas que querés agregar</string>
     <string name="people_profile_save">Guardá</string>
     <string name="people_profile_edit_name">Editá el nombre</string>
     <string name="people_profile_directory_listing">Permití que otros te encuentren en el directorio</string>
@@ -60,12 +59,10 @@
     <string name="people_groups_empty">No hay grupos</string>
     <string name="people_groups_not_found">Grupo no encontrado</string>
     <string name="people_group_name">Nombre del grupo</string>
-    <string name="people_group_description_optional">Descripción opcional</string>
     <string name="people_group_name_required">El nombre es obligatorio</string>
     <string name="people_group_actions">Acciones del grupo</string>
     <string name="people_group_members">Miembros</string>
     <string name="people_group_members_count">Cantidad de miembros</string>
-    <string name="people_group_members_description">Usuarios y grupos que pertenecen a este grupo</string>
     <string name="people_group_no_members">Sin miembros</string>
     <string name="people_group_delete_confirm">¿Eliminar el grupo \"%1$s\"? Esto no se puede deshacer.</string>
     <string name="people_member_remove_confirm">¿Estás seguro de que querés eliminar a %1$s de este grupo?</string>
@@ -79,7 +76,6 @@
     <string name="people_profile_name_saved">Nombre guardado</string>
     <string name="people_profile_identity">Identidad</string>
     <string name="people_profile_accent">Color de acento</string>
-    <string name="people_profile_markdown_supported">Compatible con Markdown</string>
     <string name="people_profile_preview">Vista previa</string>
     <string name="people_profile_uploading">Subiendo…</string>
     <string name="people_profile_no_banner">No hay banner configurado</string>

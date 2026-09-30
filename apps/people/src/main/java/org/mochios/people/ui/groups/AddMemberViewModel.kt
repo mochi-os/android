@@ -53,7 +53,15 @@ class AddMemberViewModel @Inject constructor(
         val isSaving: Boolean = false,
         val error: MochiError? = null,
         val added: Boolean = false,
-    )
+    ) {
+        /**
+         * The state once [query] is typed: searching from the first keystroke,
+         * since until the pause ends there is no search for what is typed and
+         * nothing may read as "no people found".
+         */
+        fun typed(query: String): UiState =
+            copy(searchQuery = query, searchLoading = query.isNotBlank(), searchError = null)
+    }
 
     private val _state = MutableStateFlow(UiState())
     val state: StateFlow<UiState> = _state.asStateFlow()
@@ -83,7 +91,7 @@ class AddMemberViewModel @Inject constructor(
     }
 
     fun search(query: String) {
-        _state.update { state -> state.copy(searchQuery = query) }
+        _state.update { state -> state.typed(query) }
         searchJob?.cancel()
         if (query.isBlank()) {
             _state.update { state ->
@@ -97,7 +105,6 @@ class AddMemberViewModel @Inject constructor(
         }
         searchJob = viewModelScope.launch {
             delay(SEARCH_DEBOUNCE)
-            _state.update { state -> state.copy(searchLoading = true, searchError = null) }
             try {
                 // The people search is the primary fetch: a failure reaches the
                 // catch below and the screen's error state. The groups merge

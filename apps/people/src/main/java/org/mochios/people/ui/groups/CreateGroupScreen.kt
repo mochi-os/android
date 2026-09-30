@@ -72,7 +72,7 @@ fun CreateGroupScreen(
             MochiTextField(
                 value = description,
                 onValueChange = { value -> description = value },
-                label = { Text(stringResource(R.string.people_group_description_optional)) },
+                label = { Text(stringResource(R.string.people_group_description)) },
                 maxLines = 4,
                 enabled = !uiState.isCreating,
                 modifier = Modifier.fillMaxWidth()

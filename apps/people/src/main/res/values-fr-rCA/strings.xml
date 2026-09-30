@@ -48,12 +48,10 @@
     <string name="people_groups_create">Créer un groupe</string>
     <string name="people_groups_not_found">Groupe introuvable</string>
     <string name="people_group_name">Nom du groupe</string>
-    <string name="people_group_description_optional">Description optionnelle</string>
     <string name="people_group_name_required">Le nom est obligatoire</string>
     <string name="people_group_actions">Actions du groupe</string>
     <string name="people_group_members">Membres</string>
     <string name="people_group_members_count">Nombre de membres</string>
-    <string name="people_group_members_description">Utilisateurs et groupes qui font partie de ce groupe</string>
     <string name="people_group_no_members">Aucun membre</string>
     <string name="people_group_delete">Supprimer le groupe</string>
     <string name="people_group_delete_confirm">Supprimer le groupe \"%1$s\"? Cette action est irréversible.</string>
@@ -64,7 +62,6 @@
     <string name="people_member_remove_confirm">Voulez-vous vraiment retirer %1$s de ce groupe?</string>
     <string name="people_member_remove_with_name">Retirer %1$s</string>
     <string name="people_member_search_placeholder">Saisir un nom à rechercher…</string>
-    <string name="people_member_search_hint">Saisissez un nom pour trouver les personnes à ajouter</string>
     <string name="people_member_type_group">Groupe</string>
     <string name="people_groups_add_member_confirm_title">Ajouter au groupe</string>
     <string name="people_groups_add_member_confirm_action">Ajouter au groupe</string>
@@ -75,7 +72,6 @@
     <string name="people_profile_identity">Identité</string>
     <string name="people_profile_accent">Couleur d\'accent</string>
     <string name="people_profile_directory_listing">Permettre aux autres de vous trouver dans le répertoire</string>
-    <string name="people_profile_markdown_supported">Markdown pris en charge</string>
     <string name="people_profile_preview">Aperçu</string>
     <string name="people_profile_upload_avatar">Téléverser un avatar</string>
     <string name="people_profile_upload">Téléverser</string>

@@ -29,12 +29,12 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountCircle
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.CloudUpload
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.PhotoCamera
 import androidx.compose.material.icons.filled.Refresh
-import androidx.compose.material.icons.filled.Save
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -582,7 +582,6 @@ private fun BioSection(
                 bioField = updated
                 if (updated.text != state.bioDraft) viewModel.setBioDraft(updated.text)
             },
-            placeholder = { Text(stringResource(R.string.people_profile_markdown_supported)) },
             minLines = 4,
             maxLines = 10,
             isError = tooLong,
@@ -623,7 +622,7 @@ private fun BioSection(
                 if (savingBio) {
                     CircularProgressIndicator(modifier = Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
                 } else {
-                    Icon(Icons.Filled.Save, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
+                    Icon(Icons.Filled.Check, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
                 }
                 Spacer(Modifier.width(ButtonDefaults.IconSpacing))
                 Text(

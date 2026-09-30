@@ -192,13 +192,7 @@ private fun SearchStep(
         Spacer(Modifier.height(12.dp))
 
         when {
-            state.searchQuery.isBlank() -> {
-                Text(
-                    text = stringResource(R.string.people_member_search_hint),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-            }
+            state.searchQuery.isBlank() -> Unit
 
             state.searchLoading -> {
                 Row(
