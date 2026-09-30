@@ -161,6 +161,9 @@
     <string name="feeds_markdown_supported">Tacaíonn Markdown</string>
     <string name="feeds_permission_deny">Diúltaigh</string>
     <string name="feeds_rss_feed">Fotha RSS</string>
+    <string name="feeds_notifications_post">Postálacha nua</string>
+    <string name="feeds_follow_thread">Lean an snáithe</string>
+    <string name="feeds_unfollow_thread">Stop ag leanúint an tsnáithe</string>
     <string name="feeds_settings_field_entity_id">ID an aonáin</string>
     <string name="feeds_settings_field_fingerprint">Méarlorg</string>
     <string name="feeds_settings_field_server">Freastalaí</string>

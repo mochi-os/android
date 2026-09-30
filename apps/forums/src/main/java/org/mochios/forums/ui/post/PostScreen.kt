@@ -49,6 +49,8 @@ import androidx.compose.material.icons.outlined.FormatQuote
 import androidx.compose.material.icons.outlined.LocalOffer
 import androidx.compose.material.icons.outlined.Lock
 import androidx.compose.material.icons.outlined.LockOpen
+import androidx.compose.material.icons.outlined.NotificationsActive
+import androidx.compose.material.icons.outlined.NotificationsNone
 import androidx.compose.material.icons.outlined.PushPin
 import androidx.compose.material.icons.outlined.Report
 import androidx.compose.material.icons.outlined.Restore
@@ -281,6 +283,18 @@ fun PostScreen(
                     }
                 },
                 actions = {
+                    // Every reply in a followed thread notifies; a post in a
+                    // forum the user does not hold cannot be followed.
+                    uiState.following?.let { following ->
+                        MochiIconButton(onClick = { viewModel.setFollowing(!following) }) {
+                            Icon(
+                                if (following) Icons.Outlined.NotificationsActive else Icons.Outlined.NotificationsNone,
+                                contentDescription = stringResource(
+                                    if (following) R.string.forums_unfollow_thread else R.string.forums_follow_thread
+                                ),
+                            )
+                        }
+                    }
                     // The post's own actions live in the bar rather than beside
                     // the title, leaving the card as pure content.
                     if (uiState.post.id.isNotEmpty()) {

@@ -17,8 +17,8 @@
     <string name="people_invitations_empty_hint">Affeerraawwan haaraan asitti mul\'atu</string>
     <string name="people_invitations_accept">Fudhadhu</string>
     <string name="people_invitations_decline">Dhiisi</string>
-    <string name="people_invitations_toast_policy">Imaammanni affeerraa toattaachame</string>
-    <string name="people_invite_settings">Sirreeffama affeerraa</string>
+    <string name="people_invitations_toast_policy">Imaammanni affeerraa haaromfame</string>
+    <string name="people_invite_settings">Qindaa\'ina affeerraa</string>
     <string name="people_invite_settings_notify_me">Na beeksisi</string>
     <string name="people_invite_settings_notify_description">Affeerraawwan affeerraa keessatti mul\'atu, beeksisni siif ergama (idilee).</string>
     <string name="people_invite_settings_store_silently">Calliisaan kuusi</string>

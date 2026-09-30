@@ -219,6 +219,11 @@
     <string name="forums_all_forums">אַלע פֿאָרומען</string>
     <string name="forums_create_allow_search">דערלויבן יעדן צו זוכן דעם פֿאָרום</string>
     <string name="forums_rss_clipboard_label">פֿאָרום RSS URL</string>
+    <string name="forums_notifications_post">נײַע פּאָסטן</string>
+    <string name="forums_notifications_reply">ענטפֿערס צו אײַך</string>
+    <string name="forums_notifications_comment">אַלע ענטפֿערס</string>
+    <string name="forums_follow_thread">פֿאָלג נאָך דעם פֿאָדעם</string>
+    <string name="forums_unfollow_thread">הער אויף נאָכפֿאָלגן דעם פֿאָדעם</string>
     <string name="forums_tab_moderation">מאָדעראַציע</string>
     <string name="forums_access_level_view_full">בלויז זען</string>
     <string name="forums_access_level_none_full">קיין צוטריט</string>

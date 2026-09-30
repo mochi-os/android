@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Zonke iiforamu</string>
     <string name="forums_create_allow_search">Vumela nabani na ukuba akhangele iqonga</string>
     <string name="forums_rss_clipboard_label">I-URL ye-RSS yeqonga</string>
+    <string name="forums_notifications_post">Iimpapasho ezintsha</string>
+    <string name="forums_notifications_reply">Iimpendulo kuwe</string>
+    <string name="forums_notifications_comment">Zonke iimpendulo</string>
+    <string name="forums_follow_thread">Landela umsonto</string>
+    <string name="forums_unfollow_thread">Yeka ukulandela umsonto</string>
     <string name="forums_tab_moderation">Ulungelelwaniso</string>
     <string name="forums_access_level_view_full">Bonisa kuphela</string>
     <string name="forums_access_level_none_full">Akukho lufikelelo</string>

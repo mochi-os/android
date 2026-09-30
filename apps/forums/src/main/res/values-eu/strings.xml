@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Foro guztiak</string>
     <string name="forums_create_allow_search">Baimendu edonori foroa bilatzea</string>
     <string name="forums_rss_clipboard_label">Foroaren RSS URLa</string>
+    <string name="forums_notifications_post">Argitalpen berriak</string>
+    <string name="forums_notifications_reply">Zuri emandako erantzunak</string>
+    <string name="forums_notifications_comment">Erantzun guztiak</string>
+    <string name="forums_follow_thread">Jarraitu hariari</string>
+    <string name="forums_unfollow_thread">Utzi hariari jarraitzeari</string>
     <string name="forums_tab_moderation">Moderazioa</string>
     <string name="forums_access_level_view_full">Ikusi soilik</string>
     <string name="forums_access_level_none_full">Sarbiderik ez</string>

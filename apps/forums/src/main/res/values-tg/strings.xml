@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Ҳама форумҳо</string>
     <string name="forums_create_allow_search">Ба ҳама иҷозат диҳед, ки форумро ҷустуҷӯ кунанд</string>
     <string name="forums_rss_clipboard_label">Суроғаи RSS-и форум</string>
+    <string name="forums_notifications_post">Постҳои нав</string>
+    <string name="forums_notifications_reply">Ҷавобҳо ба шумо</string>
+    <string name="forums_notifications_comment">Ҳамаи ҷавобҳо</string>
+    <string name="forums_follow_thread">Пайгирии сӯҳбат</string>
+    <string name="forums_unfollow_thread">Қатъи пайгирии сӯҳбат</string>
     <string name="forums_tab_moderation">Модератсия</string>
     <string name="forums_access_level_view_full">Танҳо назар</string>
     <string name="forums_access_level_none_full">Дастрасӣ нест</string>

@@ -219,6 +219,11 @@
     <string name="forums_all_forums">ಎಲ್ಲಾ ಫೋರಮ್‌ಗಳು</string>
     <string name="forums_create_allow_search">ಯಾರಾದರೂ ವೇದಿಕೆಯನ್ನು ಹುಡುಕಲು ಅನುಮತಿಸಿ</string>
     <string name="forums_rss_clipboard_label">ವೇದಿಕೆ RSS URL</string>
+    <string name="forums_notifications_post">ಹೊಸ ಪೋಸ್ಟ್‌ಗಳು</string>
+    <string name="forums_notifications_reply">ನಿಮಗೆ ಬಂದ ಪ್ರತ್ಯುತ್ತರಗಳು</string>
+    <string name="forums_notifications_comment">ಎಲ್ಲಾ ಪ್ರತ್ಯುತ್ತರಗಳು</string>
+    <string name="forums_follow_thread">ಥ್ರೆಡ್ ಅನುಸರಿಸಿ</string>
+    <string name="forums_unfollow_thread">ಥ್ರೆಡ್ ಅನುಸರಿಸುವುದನ್ನು ನಿಲ್ಲಿಸಿ</string>
     <string name="forums_tab_moderation">ಮಾಡರೇಶನ್</string>
     <string name="forums_access_level_view_full">ನೋಡುವುದು ಮಾತ್ರ</string>
     <string name="forums_access_level_none_full">ಪ್ರವೇಶವಿಲ್ಲ</string>

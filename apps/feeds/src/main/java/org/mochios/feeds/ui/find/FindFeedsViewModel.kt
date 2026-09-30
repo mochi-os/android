@@ -5,6 +5,7 @@
 
 package org.mochios.feeds.ui.find
 
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -26,6 +27,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class FindFeedsViewModel @Inject constructor(
+    savedStateHandle: SavedStateHandle,
     private val repository: FeedsRepository
 ) : ViewModel() {
 
@@ -69,6 +71,8 @@ class FindFeedsViewModel @Inject constructor(
     init {
         loadRecommendations()
         loadSubscribed()
+        // Arriving with a share link resolves it straight away, as if pasted.
+        savedStateHandle.get<String>("link")?.takeIf { it.isNotBlank() }?.let { setSearchQuery(it) }
     }
 
     /**
@@ -100,7 +104,7 @@ class FindFeedsViewModel @Inject constructor(
         }
         searchJob = viewModelScope.launch {
             delay(SEARCH_DEBOUNCE)
-            if (looksLikeUrl(query)) {
+            if (isProbeLink(query)) {
                 probe(query)
                 _searchResults.value = emptyList()
             } else {
@@ -110,11 +114,6 @@ class FindFeedsViewModel @Inject constructor(
         }
     }
 
-    private fun looksLikeUrl(query: String): Boolean {
-        val trimmed = query.trim()
-        return trimmed.startsWith("http://", ignoreCase = true) ||
-                trimmed.startsWith("https://", ignoreCase = true)
-    }
 
     private suspend fun search(query: String) {
         _isSearching.value = true
@@ -176,4 +175,14 @@ class FindFeedsViewModel @Inject constructor(
     fun clearError() {
         _error.value = null
     }
+}
+
+/** Whether a search is a link to resolve through the probe rather than a name
+ *  to look up: a web URL, or a mochi:// share link, which reaches a private
+ *  feed no directory lists. */
+internal fun isProbeLink(query: String): Boolean {
+    val trimmed = query.trim()
+    return trimmed.startsWith("http://", ignoreCase = true) ||
+        trimmed.startsWith("https://", ignoreCase = true) ||
+        trimmed.startsWith("mochi://", ignoreCase = true)
 }

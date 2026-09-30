@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Összes fórum</string>
     <string name="forums_create_allow_search">Bárki kereshesse a fórumot</string>
     <string name="forums_rss_clipboard_label">Fórum RSS URL-címe</string>
+    <string name="forums_notifications_post">Új bejegyzések</string>
+    <string name="forums_notifications_reply">Neked szóló válaszok</string>
+    <string name="forums_notifications_comment">Összes válasz</string>
+    <string name="forums_follow_thread">Téma követése</string>
+    <string name="forums_unfollow_thread">Téma követésének megszüntetése</string>
     <string name="forums_tab_moderation">Moderálás</string>
     <string name="forums_access_level_view_full">Csak megtekintés</string>
     <string name="forums_access_level_none_full">Nincs hozzáférés</string>

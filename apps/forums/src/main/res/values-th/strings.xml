@@ -218,6 +218,11 @@
     <string name="forums_all_forums">ฟอรัมทั้งหมด</string>
     <string name="forums_create_allow_search">อนุญาตให้ทุกคนค้นหาฟอรัม</string>
     <string name="forums_rss_clipboard_label">URL RSS ของฟอรัม</string>
+    <string name="forums_notifications_post">โพสต์ใหม่</string>
+    <string name="forums_notifications_reply">การตอบกลับถึงคุณ</string>
+    <string name="forums_notifications_comment">การตอบกลับทั้งหมด</string>
+    <string name="forums_follow_thread">ติดตามเธรด</string>
+    <string name="forums_unfollow_thread">เลิกติดตามเธรด</string>
     <string name="forums_tab_moderation">การกลั่นกรอง</string>
     <string name="forums_access_level_view_full">ดูอย่างเดียว</string>
     <string name="forums_access_level_none_full">ไม่มีสิทธิ์เข้าถึง</string>

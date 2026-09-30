@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Tout fowòm</string>
     <string name="forums_create_allow_search">Kite nenpòt moun chèche fowòm nan</string>
     <string name="forums_rss_clipboard_label">URL RSS fowòm</string>
+    <string name="forums_notifications_post">Nouvo pòs</string>
+    <string name="forums_notifications_reply">Repons pou ou</string>
+    <string name="forums_notifications_comment">Tout repons yo</string>
+    <string name="forums_follow_thread">Swiv konvèsasyon</string>
+    <string name="forums_unfollow_thread">Sispann swiv konvèsasyon</string>
     <string name="forums_tab_moderation">Moderasyon</string>
     <string name="forums_access_level_view_full">Wè sèlman</string>
     <string name="forums_access_level_none_full">Pa gen aksè</string>

@@ -221,6 +221,11 @@
     <string name="forums_all_forums">Vsi forumi</string>
     <string name="forums_create_allow_search">Dovoli vsem iskanje foruma</string>
     <string name="forums_rss_clipboard_label">RSS URL foruma</string>
+    <string name="forums_notifications_post">Nove objave</string>
+    <string name="forums_notifications_reply">Odgovori vam</string>
+    <string name="forums_notifications_comment">Vsi odgovori</string>
+    <string name="forums_follow_thread">Spremljaj nit</string>
+    <string name="forums_unfollow_thread">Prenehaj spremljati nit</string>
     <string name="forums_tab_moderation">Moderiranje</string>
     <string name="forums_access_level_view_full">Samo za branje</string>
     <string name="forums_access_level_none_full">Brez dostopa</string>

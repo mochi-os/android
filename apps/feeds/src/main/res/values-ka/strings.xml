@@ -158,6 +158,9 @@
     <string name="feeds_markdown_supported">Markdown მხარდაჭერილია</string>
     <string name="feeds_permission_deny">უარყოფა</string>
     <string name="feeds_rss_feed">RSS ფიდი</string>
+    <string name="feeds_notifications_post">ახალი პოსტები</string>
+    <string name="feeds_follow_thread">თემის გამოწერა</string>
+    <string name="feeds_unfollow_thread">თემის გამოწერის გაუქმება</string>
     <string name="feeds_settings_field_entity_id">ერთეულის ID</string>
     <string name="feeds_settings_field_fingerprint">ანაბეჭდი</string>
     <string name="feeds_settings_field_server">სერვერი</string>

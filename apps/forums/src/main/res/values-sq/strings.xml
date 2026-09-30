@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Të gjitha forumet</string>
     <string name="forums_create_allow_search">Lejo këdo të kërkojë forumin</string>
     <string name="forums_rss_clipboard_label">URL RSS e forumit</string>
+    <string name="forums_notifications_post">Postime të reja</string>
+    <string name="forums_notifications_reply">Përgjigje për ju</string>
+    <string name="forums_notifications_comment">Të gjitha përgjigjet</string>
+    <string name="forums_follow_thread">Ndiq temën</string>
+    <string name="forums_unfollow_thread">Ndalo ndjekjen e temës</string>
     <string name="forums_tab_moderation">Moderimi</string>
     <string name="forums_access_level_view_full">Vetëm shikim</string>
     <string name="forums_access_level_none_full">Pa qasje</string>

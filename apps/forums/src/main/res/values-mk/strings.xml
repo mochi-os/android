@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Сите форуми</string>
     <string name="forums_create_allow_search">Дозволи секој да го пребарува форумот</string>
     <string name="forums_rss_clipboard_label">RSS URL на форумот</string>
+    <string name="forums_notifications_post">Нови објави</string>
+    <string name="forums_notifications_reply">Одговори до вас</string>
+    <string name="forums_notifications_comment">Сите одговори</string>
+    <string name="forums_follow_thread">Следи ја темата</string>
+    <string name="forums_unfollow_thread">Прекини го следењето на темата</string>
     <string name="forums_tab_moderation">Модерација</string>
     <string name="forums_access_level_view_full">Само прикажување</string>
     <string name="forums_access_level_none_full">Без пристап</string>

@@ -221,6 +221,11 @@
     <string name="forums_all_forums">Všetky fóra</string>
     <string name="forums_create_allow_search">Povoliť komukoľvek vyhľadať fórum</string>
     <string name="forums_rss_clipboard_label">RSS URL fóra</string>
+    <string name="forums_notifications_post">Nové príspevky</string>
+    <string name="forums_notifications_reply">Odpovede vám</string>
+    <string name="forums_notifications_comment">Všetky odpovede</string>
+    <string name="forums_follow_thread">Sledovať vlákno</string>
+    <string name="forums_unfollow_thread">Prestať sledovať vlákno</string>
     <string name="forums_tab_moderation">Moderovanie</string>
     <string name="forums_access_level_view_full">Iba zobrazenie</string>
     <string name="forums_access_level_none_full">Žiadny prístup</string>

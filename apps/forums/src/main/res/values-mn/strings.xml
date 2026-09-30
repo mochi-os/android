@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Бүх форумууд</string>
     <string name="forums_create_allow_search">Хэн ч форумыг хайхыг зөвшөөрөх</string>
     <string name="forums_rss_clipboard_label">Форумын RSS URL</string>
+    <string name="forums_notifications_post">Шинэ нийтлэлүүд</string>
+    <string name="forums_notifications_reply">Танд ирсэн хариу</string>
+    <string name="forums_notifications_comment">Бүх хариу</string>
+    <string name="forums_follow_thread">Хэлхээг дагах</string>
+    <string name="forums_unfollow_thread">Хэлхээг дагахаа болих</string>
     <string name="forums_tab_moderation">Хяналт</string>
     <string name="forums_access_level_view_full">Зөвхөн үзэх</string>
     <string name="forums_access_level_none_full">Хандах эрх байхгүй</string>

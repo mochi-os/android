@@ -219,6 +219,11 @@
     <string name="forums_all_forums">ყველა ფორუმი</string>
     <string name="forums_create_allow_search">ნება დართეთ ნებისმიერს მოძებნოს ფორუმი</string>
     <string name="forums_rss_clipboard_label">ფორუმის RSS URL</string>
+    <string name="forums_notifications_post">ახალი პოსტები</string>
+    <string name="forums_notifications_reply">პასუხები თქვენთვის</string>
+    <string name="forums_notifications_comment">ყველა პასუხი</string>
+    <string name="forums_follow_thread">თემის გამოწერა</string>
+    <string name="forums_unfollow_thread">თემის გამოწერის გაუქმება</string>
     <string name="forums_tab_moderation">მოდერაცია</string>
     <string name="forums_access_level_view_full">მხოლოდ ნახვა</string>
     <string name="forums_access_level_none_full">წვდომა არ არის</string>

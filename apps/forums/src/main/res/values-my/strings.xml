@@ -218,6 +218,11 @@
     <string name="forums_all_forums">ဖိုရမ်အားလုံး</string>
     <string name="forums_create_allow_search">မည်သူမဆို ဖိုရမ်ကို ရှာဖွေခွင့်ပြုပါ</string>
     <string name="forums_rss_clipboard_label">ဖိုရမ် RSS URL</string>
+    <string name="forums_notifications_post">ပို့စ်အသစ်များ</string>
+    <string name="forums_notifications_reply">သင့်ထံ ပြန်ဖြေချက်များ</string>
+    <string name="forums_notifications_comment">ပြန်ဖြေချက်အားလုံး</string>
+    <string name="forums_follow_thread">စကားဝိုင်းကို လိုက်ကြည့်မည်</string>
+    <string name="forums_unfollow_thread">စကားဝိုင်းကို လိုက်ကြည့်ခြင်း ရပ်မည်</string>
     <string name="forums_tab_moderation">စိစစ်မှု</string>
     <string name="forums_access_level_view_full">ကြည့်ရှုရုံသာ</string>
     <string name="forums_access_level_none_full">ဝင်ရောက်ခွင့်မရှိ</string>

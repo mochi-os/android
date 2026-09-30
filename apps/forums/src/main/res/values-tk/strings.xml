@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Ähli forumlar</string>
     <string name="forums_create_allow_search">Islendik adama forumy gözlemäge rugsat beriň</string>
     <string name="forums_rss_clipboard_label">Forumyň RSS URL-i</string>
+    <string name="forums_notifications_post">Täze postlar</string>
+    <string name="forums_notifications_reply">Size jogaplar</string>
+    <string name="forums_notifications_comment">Ähli jogaplar</string>
+    <string name="forums_follow_thread">Pikir alyşmany yzarla</string>
+    <string name="forums_unfollow_thread">Pikir alyşmany yzarlamagy bes et</string>
     <string name="forums_tab_moderation">Moderasiýa</string>
     <string name="forums_access_level_view_full">Diňe görkez</string>
     <string name="forums_access_level_none_full">Girip bolmaýar</string>

@@ -221,6 +221,11 @@
     <string name="forums_all_forums">כל הפורומים</string>
     <string name="forums_create_allow_search">לאפשר לכל אחד לחפש את הפורום</string>
     <string name="forums_rss_clipboard_label">כתובת RSS של הפורום</string>
+    <string name="forums_notifications_post">פוסטים חדשים</string>
+    <string name="forums_notifications_reply">תגובות אליך</string>
+    <string name="forums_notifications_comment">כל התגובות</string>
+    <string name="forums_follow_thread">מעקב אחר השרשור</string>
+    <string name="forums_unfollow_thread">הפסקת מעקב אחר השרשור</string>
     <string name="forums_tab_moderation">ניהול תוכן</string>
     <string name="forums_access_level_view_full">תצוגה בלבד</string>
     <string name="forums_access_level_none_full">אין גישה</string>

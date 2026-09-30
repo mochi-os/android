@@ -137,6 +137,19 @@ class PostDetailViewModel @Inject constructor(
         }
     }
 
+    /** Follow or unfollow the post: every reply and reaction in a followed
+     *  one notifies. */
+    fun setFollowing(following: Boolean) {
+        viewModelScope.launch {
+            try {
+                repository.followPost(feedId, postId, following)
+                _post.value = _post.value?.copy(following = following)
+            } catch (e: Exception) {
+                _actionError.value = e.toMochiError()
+            }
+        }
+    }
+
     fun reactToPost(reaction: String) {
         viewModelScope.launch {
             try {

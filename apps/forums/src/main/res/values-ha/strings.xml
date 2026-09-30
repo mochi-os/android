@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Duk dandali</string>
     <string name="forums_create_allow_search">Bar kowa ya nemi dandali</string>
     <string name="forums_rss_clipboard_label">Adireshin RSS na dandali</string>
+    <string name="forums_notifications_post">Sababbin sakonni</string>
+    <string name="forums_notifications_reply">Amsoshi zuwa gare ka</string>
+    <string name="forums_notifications_comment">Duk amsoshi</string>
+    <string name="forums_follow_thread">Bi tsibi</string>
+    <string name="forums_unfollow_thread">Daina bin tsibi</string>
     <string name="forums_tab_moderation">Daidaitawa</string>
     <string name="forums_access_level_view_full">Kalla kawai</string>
     <string name="forums_access_level_none_full">Babu damar shiga</string>

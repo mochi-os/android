@@ -221,6 +221,11 @@
     <string name="forums_all_forums">Усі форуми</string>
     <string name="forums_create_allow_search">Дозволити всім шукати форум</string>
     <string name="forums_rss_clipboard_label">RSS-адреса форуму</string>
+    <string name="forums_notifications_post">Нові дописи</string>
+    <string name="forums_notifications_reply">Відповіді вам</string>
+    <string name="forums_notifications_comment">Усі відповіді</string>
+    <string name="forums_follow_thread">Стежити за темою</string>
+    <string name="forums_unfollow_thread">Не стежити за темою</string>
     <string name="forums_tab_moderation">Модерація</string>
     <string name="forums_access_level_view_full">Лише перегляд</string>
     <string name="forums_access_level_none_full">Немає доступу</string>

@@ -219,6 +219,11 @@
     <string name="forums_all_forums">ਸਾਰੇ ਫੋਰਮ</string>
     <string name="forums_create_allow_search">ਕਿਸੇ ਨੂੰ ਵੀ ਫੋਰਮ ਖੋਜਣ ਦੀ ਆਗਿਆ ਦਿਓ</string>
     <string name="forums_rss_clipboard_label">ਫੋਰਮ RSS URL</string>
+    <string name="forums_notifications_post">ਨਵੀਆਂ ਪੋਸਟਾਂ</string>
+    <string name="forums_notifications_reply">ਤੁਹਾਨੂੰ ਆਏ ਜਵਾਬ</string>
+    <string name="forums_notifications_comment">ਸਾਰੇ ਜਵਾਬ</string>
+    <string name="forums_follow_thread">ਥ੍ਰੈੱਡ ਫਾਲੋ ਕਰੋ</string>
+    <string name="forums_unfollow_thread">ਥ੍ਰੈੱਡ ਅਨਫਾਲੋ ਕਰੋ</string>
     <string name="forums_tab_moderation">ਸੰਚਾਲਨ</string>
     <string name="forums_access_level_view_full">ਸਿਰਫ਼ ਦੇਖੋ</string>
     <string name="forums_access_level_none_full">ਪਹੁੰਚ ਨਹੀਂ</string>

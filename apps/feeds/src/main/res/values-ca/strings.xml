@@ -160,6 +160,9 @@
     <string name="feeds_markdown_supported">Admet markdown</string>
     <string name="feeds_permission_deny">Denega</string>
     <string name="feeds_rss_feed">Canal RSS</string>
+    <string name="feeds_notifications_post">Publicacions noves</string>
+    <string name="feeds_follow_thread">Segueix el fil</string>
+    <string name="feeds_unfollow_thread">Deixa de seguir el fil</string>
     <string name="feeds_settings_field_entity_id">ID de l\'entitat</string>
     <string name="feeds_settings_field_fingerprint">Empremta</string>
     <string name="feeds_settings_field_server">Servidor</string>

@@ -24,6 +24,7 @@ import org.mochios.android.model.Comment
 import org.mochios.android.model.PlaceData
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
+import org.mochios.feeds.api.FeedNotificationSettings
 import org.mochios.feeds.api.FeedsApi
 import org.mochios.feeds.api.MenuApi
 import org.mochios.feeds.api.PostDetailResponse
@@ -102,8 +103,11 @@ internal fun addEditOrder(builder: MultipartBody.Builder, order: List<String>?) 
 
 data class ProbeResult(
     val feed: Feed?,
-    val type: String
 )
+
+/** The feed a probe found: its answer is the feed's own entry, empty when it
+ *  found nothing. */
+internal fun probeFeed(entry: Feed): Feed? = entry.takeIf { it.id.isNotEmpty() }
 
 data class AddSourceResult(
     val source: Source,
@@ -223,8 +227,7 @@ class FeedsRepository @Inject constructor(
 
     suspend fun probeUrl(url: String): ProbeResult {
         return try {
-            val response = api.probeUrl(url).unwrap()
-            ProbeResult(feed = response.feed, type = response.type)
+            ProbeResult(feed = probeFeed(api.probeUrl(url).unwrap()))
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -865,6 +868,31 @@ class FeedsRepository @Inject constructor(
     suspend fun clearNotifications(feedId: String) {
         try {
             api.clearNotifications(feedId).unwrap()
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
+    }
+
+    suspend fun getNotifications(feedId: String): FeedNotificationSettings {
+        try {
+            return api.getNotifications(feedId).unwrap()
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
+    }
+
+    suspend fun setNotification(feedId: String, kind: String, enabled: Boolean): FeedNotificationSettings {
+        try {
+            return api.setNotification(feedId, kind, enabled.toString()).unwrap()
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
+    }
+
+    /** Follow or unfollow a post: every reply and reaction in a followed one notifies. */
+    suspend fun followPost(feedId: String, postId: String, following: Boolean) {
+        try {
+            if (following) api.followPost(feedId, postId).unwrap() else api.unfollowPost(feedId, postId).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }

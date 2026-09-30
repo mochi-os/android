@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Tüm forumlar</string>
     <string name="forums_create_allow_search">Herkesin forumu aramasına izin ver</string>
     <string name="forums_rss_clipboard_label">Forum RSS URL adresi</string>
+    <string name="forums_notifications_post">Yeni gönderiler</string>
+    <string name="forums_notifications_reply">Size gelen yanıtlar</string>
+    <string name="forums_notifications_comment">Tüm yanıtlar</string>
+    <string name="forums_follow_thread">Konuyu takip et</string>
+    <string name="forums_unfollow_thread">Konuyu takip etmeyi bırak</string>
     <string name="forums_tab_moderation">Denetim</string>
     <string name="forums_access_level_view_full">Yalnızca görüntüleme</string>
     <string name="forums_access_level_none_full">Erişim yok</string>

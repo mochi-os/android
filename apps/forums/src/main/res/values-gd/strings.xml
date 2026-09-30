@@ -221,6 +221,11 @@
     <string name="forums_all_forums">Na fòraman uile</string>
     <string name="forums_create_allow_search">Leig le duine sam bith am fòram a lorg</string>
     <string name="forums_rss_clipboard_label">URL RSS an fhòraim</string>
+    <string name="forums_notifications_post">Postaichean ùra</string>
+    <string name="forums_notifications_reply">Freagairtean dhut</string>
+    <string name="forums_notifications_comment">Gach freagairt</string>
+    <string name="forums_follow_thread">Lean an snàithlean</string>
+    <string name="forums_unfollow_thread">Na lean an snàithlean tuilleadh</string>
     <string name="forums_tab_moderation">Modarataireachd</string>
     <string name="forums_access_level_view_full">Seall a-mhàin</string>
     <string name="forums_access_level_none_full">Gun chothrom</string>

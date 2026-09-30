@@ -158,6 +158,9 @@
     <string name="feeds_markdown_supported">Markdown געשטיצט</string>
     <string name="feeds_permission_deny">אָפּזאָגן</string>
     <string name="feeds_rss_feed">RSS פֿיד</string>
+    <string name="feeds_notifications_post">נײַע פּאָסטן</string>
+    <string name="feeds_follow_thread">פֿאָלג נאָך דעם פֿאָדעם</string>
+    <string name="feeds_unfollow_thread">הער אויף נאָכפֿאָלגן דעם פֿאָדעם</string>
     <string name="feeds_settings_field_entity_id">ענטיטעט־ID</string>
     <string name="feeds_settings_field_fingerprint">פֿינגער־אָפּדרוק</string>
     <string name="feeds_settings_field_server">סערווער</string>

@@ -219,6 +219,11 @@
     <string name="forums_all_forums">ሁሉም መድረኮች</string>
     <string name="forums_create_allow_search">ማንኛውም ሰው መድረኩን እንዲፈልግ ፍቀድ</string>
     <string name="forums_rss_clipboard_label">የመድረክ RSS URL</string>
+    <string name="forums_notifications_post">አዲስ ልጥፎች</string>
+    <string name="forums_notifications_reply">ለእርስዎ የተሰጡ ምላሾች</string>
+    <string name="forums_notifications_comment">ሁሉም ምላሾች</string>
+    <string name="forums_follow_thread">ክሩን ተከተል</string>
+    <string name="forums_unfollow_thread">ክሩን መከተል አቁም</string>
     <string name="forums_tab_moderation">ቁጥጥር</string>
     <string name="forums_access_level_view_full">እይታ ብቻ</string>
     <string name="forums_access_level_none_full">ምንም ድረሳ የለም</string>

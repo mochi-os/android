@@ -158,6 +158,9 @@
     <string name="feeds_markdown_supported">ማርክዳውን ይደገፋል</string>
     <string name="feeds_permission_deny">ተከለከል</string>
     <string name="feeds_rss_feed">RSS ፊድ</string>
+    <string name="feeds_notifications_post">አዲስ ልጥፎች</string>
+    <string name="feeds_follow_thread">ክሩን ተከተል</string>
+    <string name="feeds_unfollow_thread">ክሩን መከተል አቁም</string>
     <string name="feeds_settings_field_entity_id">የአካል መለያ</string>
     <string name="feeds_settings_field_fingerprint">ጣት አሻራ</string>
     <string name="feeds_settings_field_server">ሰርቨር</string>

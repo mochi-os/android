@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Tots els fòrums</string>
     <string name="forums_create_allow_search">Permet que qualsevol cerqui el fòrum</string>
     <string name="forums_rss_clipboard_label">URL RSS del fòrum</string>
+    <string name="forums_notifications_post">Publicacions noves</string>
+    <string name="forums_notifications_reply">Respostes a tu</string>
+    <string name="forums_notifications_comment">Totes les respostes</string>
+    <string name="forums_follow_thread">Segueix el fil</string>
+    <string name="forums_unfollow_thread">Deixa de seguir el fil</string>
     <string name="forums_tab_moderation">Moderació</string>
     <string name="forums_access_level_view_full">Només visualització</string>
     <string name="forums_access_level_none_full">Sense accés</string>

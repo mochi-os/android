@@ -219,6 +219,11 @@
     <string name="forums_all_forums">تمام فورمز</string>
     <string name="forums_create_allow_search">کسی کو بھی فورم تلاش کرنے کی اجازت دیں</string>
     <string name="forums_rss_clipboard_label">فورم RSS یو آر ایل</string>
+    <string name="forums_notifications_post">نئی پوسٹس</string>
+    <string name="forums_notifications_reply">آپ کو جوابات</string>
+    <string name="forums_notifications_comment">تمام جوابات</string>
+    <string name="forums_follow_thread">تھریڈ فالو کریں</string>
+    <string name="forums_unfollow_thread">تھریڈ کو فالو کرنا بند کریں</string>
     <string name="forums_tab_moderation">نگرانی</string>
     <string name="forums_access_level_view_full">صرف دیکھنا</string>
     <string name="forums_access_level_none_full">کوئی رسائی نہیں</string>

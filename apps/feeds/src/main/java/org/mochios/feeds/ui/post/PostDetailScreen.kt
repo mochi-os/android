@@ -39,6 +39,8 @@ import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material.icons.outlined.LocalOffer
+import androidx.compose.material.icons.outlined.NotificationsActive
+import androidx.compose.material.icons.outlined.NotificationsNone
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -165,6 +167,18 @@ fun PostDetailScreen(
                     }
                 },
                 actions = {
+                    // Every reply and reaction in a followed post notifies; a
+                    // post in a feed the user does not hold cannot be followed.
+                    post?.following?.let { following ->
+                        MochiIconButton(onClick = { viewModel.setFollowing(!following) }) {
+                            Icon(
+                                if (following) Icons.Outlined.NotificationsActive else Icons.Outlined.NotificationsNone,
+                                contentDescription = stringResource(
+                                    if (following) R.string.feeds_unfollow_thread else R.string.feeds_follow_thread
+                                ),
+                            )
+                        }
+                    }
                     if (permissions.manage) {
                         MochiIconButton(onClick = { onEditPost(viewModel.feedId, viewModel.postId) }) {
                             Icon(

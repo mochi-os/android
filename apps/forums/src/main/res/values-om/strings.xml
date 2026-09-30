@@ -148,7 +148,7 @@
     <string name="forums_post_tag_remove">Mallattoo haqi</string>
     <string name="forums_access_add">Seera dhaqqabummaa dabali</string>
     <string name="forums_access_empty">Ammaaf seerri hin jiru — kan duraa hojiirra oola</string>
-    <string name="forums_access_target_hint">Eenyummaa entiitii, @gareen, * (hunda), yookaan + (miseensota)</string>
+    <string name="forums_access_target_hint">Eenyummaa qaamaa, @gareen, * (hunda), yookaan + (miseensota)</string>
     <string name="forums_access_level">Sadarkaa</string>
     <string name="forums_access_level_moderate">To\'achuu</string>
     <string name="forums_members_search">Miseensota gulaali</string>
@@ -205,7 +205,7 @@
         <item quantity="one">%d maxxansaa haaraa</item>
         <item quantity="other">%d maxxansaalee haaraa</item>
     </plurals>
-    <string name="forums_rss_feed">Fiidii RSS</string>
+    <string name="forums_rss_feed">Feed RSS</string>
     <string name="forums_rss_mode_posts">Maxxansoota</string>
     <string name="forums_rss_mode_posts_comments">Maxxansoota fi yaadawwan</string>
     <string name="forums_rss_copied">URL RSS kilipboordiitti garagalfame</string>
@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Marii hunda</string>
     <string name="forums_create_allow_search">Nama kamiyyuu marii barbaaduuf hayyami</string>
     <string name="forums_rss_clipboard_label">RSS URL marii</string>
+    <string name="forums_notifications_post">Maxxansoota haaraa</string>
+    <string name="forums_notifications_reply">Deebii siif kenname</string>
+    <string name="forums_notifications_comment">Deebii hunda</string>
+    <string name="forums_follow_thread">Sarara hordofi</string>
+    <string name="forums_unfollow_thread">Sarara hordofuu dhiisi</string>
     <string name="forums_tab_moderation">To\'annoo</string>
     <string name="forums_access_level_view_full">Daawwannaa qofa</string>
     <string name="forums_access_level_none_full">Itti seenuun hin jiru</string>
@@ -237,12 +242,12 @@
     <string name="forums_moderation_unit_days">guyyoota</string>
     <string name="forums_settings_banner_saved">Baanara olkaa\'amee jira</string>
     <string name="forums_settings_access_updated">Seensi haaromfame</string>
-    <string name="forums_settings_access_revoked">Galmaa\'iinsi haqamee jira</string>
+    <string name="forums_settings_access_revoked">Seensi haqamee jira</string>
     <string name="forums_settings_member_removed">Miseensi haqame</string>
     <string name="forums_settings_prompt_saved">Gaaffii olkaa\'ame</string>
     <string name="forums_settings_section_identity">Eenyummaa</string>
     <string name="forums_settings_field_name">Maqaa</string>
-    <string name="forums_settings_field_entity_id">ID Iddoo</string>
+    <string name="forums_settings_field_entity_id">ID Qaamaa</string>
     <string name="forums_settings_field_fingerprint_label">Maxxansa quba</string>
     <string name="forums_settings_field_server">Sarvarii</string>
     <string name="forums_settings_name_edit_cd">Maqaa sirreessi</string>
@@ -262,7 +267,7 @@
     <string name="forums_ai_prompt_variables">Jijjiiramoo: %1$s</string>
     <string name="forums_find_found_by_url">URL\'n argame</string>
     <string name="forums_link">Geessituu</string>
-    <string name="forums_moderation_ban_message">Hanga ati daangaa hin kaafnetti, foramii irratti carraa hin argatan.</string>
+    <string name="forums_moderation_ban_message">Hanga ati daangaa hin kaafnetti, foramii irratti seensa hin argatan.</string>
     <string name="forums_moderation_ban_title">%1$s dhorkuu?</string>
     <string name="forums_moderation_log_empty_subtitle">Hanga ammaatti gochi to\'annaa galmaa\'e hin jiru</string>
     <string name="forums_moderation_mute_message">Foramii keessa turu, garuu hanga ati daangaa hin kaafnetti maxxansuu yookaan yaada kennuu hin danda\'an.</string>
@@ -275,7 +280,7 @@
     <string name="forums_moderation_require_new_users_description">Qabiyyeen fayyadamtoota daangaa gadi jiranii mirkanaa\'uu qaba</string>
     <string name="forums_moderation_require_posts_description">Mata dureewwan haaraan mirkanaa\'uu qabu</string>
     <string name="forums_moderation_restriction_by">%1$s tiin</string>
-    <string name="forums_moderation_restriction_remove_message">Battalumatti foramii irratti carraa guutuu deebi\'anii argatu.</string>
+    <string name="forums_moderation_restriction_remove_message">Battalumatti foramii irratti seensa guutuu deebi\'anii argatu.</string>
     <string name="forums_moderation_restriction_remove_title">Daangaa %1$s irraa kaasuu?</string>
     <string name="forums_moderation_restriction_state_muted">Calliifame</string>
     <string name="forums_moderation_restriction_state_shadowban">Dhoksaan dhorkame</string>

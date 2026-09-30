@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Hemû forum</string>
     <string name="forums_create_allow_search">Destûr bide her kesî ku li forumê bigere</string>
     <string name="forums_rss_clipboard_label">URL-ya RSS ya forumê</string>
+    <string name="forums_notifications_post">Postên nû</string>
+    <string name="forums_notifications_reply">Bersivên ji te re</string>
+    <string name="forums_notifications_comment">Hemû bersiv</string>
+    <string name="forums_follow_thread">Mijarê bişopîne</string>
+    <string name="forums_unfollow_thread">Şopandina mijarê rawestîne</string>
     <string name="forums_tab_moderation">Moderasyon</string>
     <string name="forums_access_level_view_full">Tenê dîtin</string>
     <string name="forums_access_level_none_full">Bê destpêkirin</string>

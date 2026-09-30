@@ -158,6 +158,9 @@
     <string name="feeds_markdown_supported">Markdown સપોર્ટેડ</string>
     <string name="feeds_permission_deny">નકારો</string>
     <string name="feeds_rss_feed">RSS ફીડ</string>
+    <string name="feeds_notifications_post">નવી પોસ્ટ્સ</string>
+    <string name="feeds_follow_thread">થ્રેડ અનુસરો</string>
+    <string name="feeds_unfollow_thread">થ્રેડ અનુસરવાનું બંધ કરો</string>
     <string name="feeds_settings_field_entity_id">એન્ટિટી ID</string>
     <string name="feeds_settings_field_fingerprint">આંગળાની છાપ</string>
     <string name="feeds_settings_field_server">સર્વર</string>

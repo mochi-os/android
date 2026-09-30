@@ -46,7 +46,7 @@
     <string name="route_path">Daandii</string>
     <string name="route_method">Mala</string>
     <string name="route_method_app">Appii</string>
-    <string name="route_method_entity">Iddoo</string>
+    <string name="route_method_entity">Qaama</string>
     <string name="route_method_redirect">Deebi\'iinsa</string>
     <string name="route_priority">Dursa</string>
     <string name="route_enabled">Dandeessifame</string>
@@ -141,7 +141,7 @@
     <string name="system_setting_auth_totp">Appii authenticator TOTP fayyadamuun seeni</string>
     <string name="system_setting_auth_recovery">Koodii deebisaa fayyadamuun seeni</string>
     <string name="system_setting_auth_oauth">OAuth 2.0 fayyadamuun seeni</string>
-    <string name="system_setting_default_theme">Bocii idilee</string>
+    <string name="system_setting_default_theme">Bifa idilee</string>
     <string name="system_setting_domains_verification">Mirkaneeffannaa doomeenii barbaachisi</string>
     <string name="system_setting_email_from">Imeelii sirnaaf teessoo idilee irraa</string>
     <string name="system_setting_oauth_public_url">URL ifa OAuth deebi\'iinsaaf</string>
@@ -183,7 +183,7 @@
     <string name="system_users_remove_suspension">Adabbii haqi</string>
     <string name="system_users_delete">Fayyadamaa haqi</string>
     <string name="system_users_delete_title">Fayyadamaa haqu?</string>
-    <string name="system_users_manage_sessions">Sessenota toattaachi</string>
+    <string name="system_users_manage_sessions">Sessenota bulchi</string>
     <string name="system_users_sessions_description">Yeroowwan turtii ka\'aa fayyadamaa kanaaf daawwadhu fi haqi.</string>
     <string name="system_users_sessions_empty">Fayyadamaan kun yeroo turtii ka\'aa hin qabu.</string>
     <string name="system_users_revoke">Haqi</string>
@@ -202,9 +202,9 @@
     <string name="system_users_toast_suspension_removed">Hidhamuun haqameera</string>
     <string name="system_users_toast_session_revoked">Yeroon turtii haqameera</string>
     <string name="system_users_toast_create_failed">Fayyadamaa uumuu hin dandeenye</string>
-    <string name="system_users_toast_update_failed">Fayyadamaa toattaachuu hin dandeenye</string>
+    <string name="system_users_toast_update_failed">Fayyadamaa haaromsuu hin dandeenye</string>
     <string name="system_users_toast_delete_failed">Fayyadamaa haquu hin dandeenye</string>
-    <string name="system_users_toast_status_failed">Haala fayyadamaa toattaachuu hin dandeenye</string>
+    <string name="system_users_toast_status_failed">Haala fayyadamaa haaromsuu hin dandeenye</string>
     <string name="system_users_toast_revoke_failed">Sessenii haquu hin dandeenye</string>
 
     <string name="settings_home_sessions">Yeroowwan turtii</string>
@@ -325,7 +325,7 @@
     <string name="account_close_confirm_body">Akaawuntiin kee haquuf ni qophaaʼa, atis ni baata. Guyyaa haqiinsaa dura yeroo barbaaddetti deebitee seenuun dhaabuu dandeessa.</string>
     <string name="account_data_download">Buufadhu</string>
     <string name="route_target_app">Appii</string>
-    <string name="route_target_entity">Iddoo</string>
+    <string name="route_target_entity">Qaama</string>
     <string name="route_target_url">URL</string>
     <string name="account_data_section">Daataa kee</string>
     <string name="account_data_dialog_title">Daataa kee buusi</string>

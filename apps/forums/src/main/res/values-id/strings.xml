@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Semua forum</string>
     <string name="forums_create_allow_search">Izinkan siapa saja mencari forum</string>
     <string name="forums_rss_clipboard_label">URL RSS forum</string>
+    <string name="forums_notifications_post">Postingan baru</string>
+    <string name="forums_notifications_reply">Balasan untuk Anda</string>
+    <string name="forums_notifications_comment">Semua balasan</string>
+    <string name="forums_follow_thread">Ikuti utas</string>
+    <string name="forums_unfollow_thread">Berhenti mengikuti utas</string>
     <string name="forums_tab_moderation">Moderasi</string>
     <string name="forums_access_level_view_full">Hanya lihat</string>
     <string name="forums_access_level_none_full">Tidak ada akses</string>

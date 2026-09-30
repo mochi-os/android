@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Semua forum</string>
     <string name="forums_create_allow_search">Benarkan sesiapa sahaja mencari forum</string>
     <string name="forums_rss_clipboard_label">URL RSS forum</string>
+    <string name="forums_notifications_post">Hantaran baharu</string>
+    <string name="forums_notifications_reply">Balasan kepada anda</string>
+    <string name="forums_notifications_comment">Semua balasan</string>
+    <string name="forums_follow_thread">Ikuti bebenang</string>
+    <string name="forums_unfollow_thread">Berhenti mengikuti bebenang</string>
     <string name="forums_tab_moderation">Moderasi</string>
     <string name="forums_access_level_view_full">Lihat sahaja</string>
     <string name="forums_access_level_none_full">Tiada akses</string>

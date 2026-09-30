@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Llapan forumkuna</string>
     <string name="forums_create_allow_search">Pipas forota maskananpaq saqiy</string>
     <string name="forums_rss_clipboard_label">Foro RSS URL</string>
+    <string name="forums_notifications_post">Musuq qillqakuna</string>
+    <string name="forums_notifications_reply">Qanman kutichiykuna</string>
+    <string name="forums_notifications_comment">Llapan kutichiykuna</string>
+    <string name="forums_follow_thread">Rimanakuyta qatiy</string>
+    <string name="forums_unfollow_thread">Rimanakuy qatiyta saqiy</string>
     <string name="forums_tab_moderation">Qhawakipay</string>
     <string name="forums_access_level_view_full">Qhawayllapaq</string>
     <string name="forums_access_level_none_full">Mana yaykuy</string>

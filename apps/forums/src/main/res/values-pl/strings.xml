@@ -221,6 +221,11 @@
     <string name="forums_all_forums">Wszystkie fora</string>
     <string name="forums_create_allow_search">Zezwól każdemu na wyszukiwanie forum</string>
     <string name="forums_rss_clipboard_label">Adres RSS forum</string>
+    <string name="forums_notifications_post">Nowe wpisy</string>
+    <string name="forums_notifications_reply">Odpowiedzi do Ciebie</string>
+    <string name="forums_notifications_comment">Wszystkie odpowiedzi</string>
+    <string name="forums_follow_thread">Obserwuj wątek</string>
+    <string name="forums_unfollow_thread">Przestań obserwować wątek</string>
     <string name="forums_tab_moderation">Moderacja</string>
     <string name="forums_access_level_view_full">Tylko podgląd</string>
     <string name="forums_access_level_none_full">Brak dostępu</string>

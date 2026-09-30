@@ -223,6 +223,11 @@
     <string name="forums_all_forums">Pob fforwm</string>
     <string name="forums_create_allow_search">Caniatáu i unrhyw un chwilio am y fforwm</string>
     <string name="forums_rss_clipboard_label">URL RSS y fforwm</string>
+    <string name="forums_notifications_post">Postiadau newydd</string>
+    <string name="forums_notifications_reply">Atebion i chi</string>
+    <string name="forums_notifications_comment">Pob ateb</string>
+    <string name="forums_follow_thread">Dilyn yr edau</string>
+    <string name="forums_unfollow_thread">Dad-ddilyn yr edau</string>
     <string name="forums_tab_moderation">Cymedroli</string>
     <string name="forums_access_level_view_full">Gweld yn unig</string>
     <string name="forums_access_level_none_full">Dim mynediad</string>

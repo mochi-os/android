@@ -158,6 +158,9 @@
     <string name="feeds_markdown_supported">Markdown inatumika</string>
     <string name="feeds_permission_deny">Kataa</string>
     <string name="feeds_rss_feed">Mlisho wa RSS</string>
+    <string name="feeds_notifications_post">Machapisho mapya</string>
+    <string name="feeds_follow_thread">Fuata mfululizo</string>
+    <string name="feeds_unfollow_thread">Acha kufuata mfululizo</string>
     <string name="feeds_settings_field_entity_id">Kitambulisho cha kitengo</string>
     <string name="feeds_settings_field_fingerprint">Alama ya kidole</string>
     <string name="feeds_settings_field_server">Seva</string>

@@ -31,7 +31,9 @@ data class Post(
     val down: Int = 0,
     val read: Long = 0,
     val source: PostSource? = null,
-    val score: Double? = null
+    val score: Double? = null,
+    /** Whether the reader follows the post; only the single-post view says. */
+    val following: Boolean? = null,
 )
 
 data class PostData(

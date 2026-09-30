@@ -159,6 +159,9 @@
     <string name="feeds_markdown_supported">Markdown podržan</string>
     <string name="feeds_permission_deny">Odbij</string>
     <string name="feeds_rss_feed">RSS kanal</string>
+    <string name="feeds_notifications_post">Nove objave</string>
+    <string name="feeds_follow_thread">Prati temu</string>
+    <string name="feeds_unfollow_thread">Prestani pratiti temu</string>
     <string name="feeds_settings_field_entity_id">ID entiteta</string>
     <string name="feeds_settings_field_fingerprint">Otisak</string>
     <string name="feeds_settings_field_server">Poslužitelj</string>

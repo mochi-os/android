@@ -5,6 +5,7 @@
 
 package org.mochios.forums.ui.find
 
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -59,6 +60,7 @@ data class FindForumsUiState(
 
 @HiltViewModel
 class FindForumsViewModel @Inject constructor(
+    savedStateHandle: SavedStateHandle,
     private val repository: ForumsRepository
 ) : ViewModel() {
 
@@ -73,6 +75,8 @@ class FindForumsViewModel @Inject constructor(
 
     init {
         loadRecommendations()
+        // Arriving with a share link resolves it straight away, as if pasted.
+        savedStateHandle.get<String>("link")?.takeIf { it.isNotBlank() }?.let { updateSearchQuery(it) }
     }
 
     fun loadRecommendations() {

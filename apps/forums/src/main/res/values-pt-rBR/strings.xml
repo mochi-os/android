@@ -217,6 +217,8 @@
     <string name="forums_all_forums">Todos os fóruns</string>
     <string name="forums_create_allow_search">Permitir que qualquer pessoa pesquise o fórum</string>
     <string name="forums_rss_clipboard_label">URL RSS do fórum</string>
+    <string name="forums_notifications_post">Novas postagens</string>
+    <string name="forums_notifications_reply">Respostas para você</string>
     <string name="forums_tab_moderation">Moderação</string>
     <string name="forums_access_level_view_full">Apenas visualizar</string>
     <string name="forums_access_level_none_full">Sem acesso</string>

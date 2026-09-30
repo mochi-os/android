@@ -221,6 +221,11 @@
     <string name="forums_all_forums">Visi forumai</string>
     <string name="forums_create_allow_search">Leisti bet kam ieškoti forumo</string>
     <string name="forums_rss_clipboard_label">Forumo RSS URL</string>
+    <string name="forums_notifications_post">Nauji įrašai</string>
+    <string name="forums_notifications_reply">Atsakymai jums</string>
+    <string name="forums_notifications_comment">Visi atsakymai</string>
+    <string name="forums_follow_thread">Stebėti giją</string>
+    <string name="forums_unfollow_thread">Nebestebėti gijos</string>
     <string name="forums_tab_moderation">Moderavimas</string>
     <string name="forums_access_level_view_full">Tik peržiūra</string>
     <string name="forums_access_level_none_full">Nėra prieigos</string>

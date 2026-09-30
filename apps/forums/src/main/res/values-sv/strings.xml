@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Alla forum</string>
     <string name="forums_create_allow_search">Tillåt vem som helst att söka efter forumet</string>
     <string name="forums_rss_clipboard_label">Forumets RSS-URL</string>
+    <string name="forums_notifications_post">Nya inlägg</string>
+    <string name="forums_notifications_reply">Svar till dig</string>
+    <string name="forums_notifications_comment">Alla svar</string>
+    <string name="forums_follow_thread">Följ tråd</string>
+    <string name="forums_unfollow_thread">Sluta följa tråd</string>
     <string name="forums_tab_moderation">Moderering</string>
     <string name="forums_access_level_view_full">Endast visning</string>
     <string name="forums_access_level_none_full">Ingen åtkomst</string>

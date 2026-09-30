@@ -220,6 +220,11 @@
     <string name="forums_all_forums">Toate forumurile</string>
     <string name="forums_create_allow_search">Permite oricui să caute forumul</string>
     <string name="forums_rss_clipboard_label">URL RSS forum</string>
+    <string name="forums_notifications_post">Postări noi</string>
+    <string name="forums_notifications_reply">Răspunsuri pentru tine</string>
+    <string name="forums_notifications_comment">Toate răspunsurile</string>
+    <string name="forums_follow_thread">Urmărește discuția</string>
+    <string name="forums_unfollow_thread">Nu mai urmări discuția</string>
     <string name="forums_tab_moderation">Moderare</string>
     <string name="forums_access_level_view_full">Doar vizualizare</string>
     <string name="forums_access_level_none_full">Fără acces</string>

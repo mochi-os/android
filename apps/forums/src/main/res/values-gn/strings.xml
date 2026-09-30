@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Opaite forum</string>
     <string name="forums_create_allow_search">Ehejáke opavavépe oheka foro</string>
     <string name="forums_rss_clipboard_label">Foro RSS URL</string>
+    <string name="forums_notifications_post">Marandu pyahukuéra</string>
+    <string name="forums_notifications_reply">Ñembohovái ndéve</string>
+    <string name="forums_notifications_comment">Opaite ñembohovái</string>
+    <string name="forums_follow_thread">Emoirũ hilo</string>
+    <string name="forums_unfollow_thread">Anive emoirũ hilo</string>
     <string name="forums_tab_moderation">Ñangareko</string>
     <string name="forums_access_level_view_full">Ehecha mante</string>
     <string name="forums_access_level_none_full">Ojeikese\'ỹ</string>

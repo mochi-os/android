@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Öll spjallborð</string>
     <string name="forums_create_allow_search">Leyfa hverjum sem er að leita að spjallborðinu</string>
     <string name="forums_rss_clipboard_label">RSS-slóð spjallborðs</string>
+    <string name="forums_notifications_post">Nýjar færslur</string>
+    <string name="forums_notifications_reply">Svör til þín</string>
+    <string name="forums_notifications_comment">Öll svör</string>
+    <string name="forums_follow_thread">Fylgja þræði</string>
+    <string name="forums_unfollow_thread">Hætta að fylgja þræði</string>
     <string name="forums_tab_moderation">Umsjón</string>
     <string name="forums_access_level_view_full">Aðeins skoða</string>
     <string name="forums_access_level_none_full">Enginn aðgangur</string>

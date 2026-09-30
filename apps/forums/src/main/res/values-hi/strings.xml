@@ -219,6 +219,11 @@
     <string name="forums_all_forums">सभी फ़ोरम</string>
     <string name="forums_create_allow_search">किसी को भी फ़ोरम खोजने की अनुमति दें</string>
     <string name="forums_rss_clipboard_label">फ़ोरम RSS URL</string>
+    <string name="forums_notifications_post">नई पोस्ट</string>
+    <string name="forums_notifications_reply">आपको मिले उत्तर</string>
+    <string name="forums_notifications_comment">सभी उत्तर</string>
+    <string name="forums_follow_thread">थ्रेड फ़ॉलो करें</string>
+    <string name="forums_unfollow_thread">थ्रेड अनफ़ॉलो करें</string>
     <string name="forums_tab_moderation">मॉडरेशन</string>
     <string name="forums_access_level_view_full">केवल देखें</string>
     <string name="forums_access_level_none_full">कोई एक्सेस नहीं</string>

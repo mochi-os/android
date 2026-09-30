@@ -47,6 +47,7 @@ import androidx.compose.material.icons.outlined.Forum
 import androidx.compose.material.icons.outlined.Gavel
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Link
+import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.material.icons.outlined.RssFeed
 import androidx.compose.material.icons.outlined.Schedule
 import androidx.compose.material.icons.outlined.Search
@@ -124,6 +125,7 @@ import org.mochios.android.ui.components.NewItemsPill
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.forums.R
+import org.mochios.forums.api.NotificationSettings
 import org.mochios.forums.model.Post
 import org.mochios.forums.ui.components.PostBadges
 import org.mochios.forums.ui.forumlist.ForumListViewModel
@@ -153,6 +155,19 @@ private val SORT_OPTIONS = listOf(
 /** The AI sort, offered only where the server has an AI account to run it. */
 private val AI_SORT =
     SortOption("ai", R.string.forums_sort_ai, Icons.Outlined.AutoAwesome)
+
+/** One of a forum's activity notifications, as the server names its kind. */
+private data class NotificationOption(
+    val kind: String,
+    val labelRes: Int,
+    val enabled: (NotificationSettings) -> Boolean,
+)
+
+private val NOTIFICATION_OPTIONS = listOf(
+    NotificationOption("post", R.string.forums_notifications_post) { it.post },
+    NotificationOption("reply", R.string.forums_notifications_reply) { it.reply },
+    NotificationOption("comment", R.string.forums_notifications_comment) { it.comment },
+)
 
 /**
  * Forum detail screen inside a [MochiListDrawer]; an empty [forumId] opens
@@ -305,6 +320,7 @@ private fun ForumContent(
     val isAll = viewModel.isAll
     var showOverflowMenu by remember { mutableStateOf(false) }
     var showRssSubmenu by remember { mutableStateOf(false) }
+    var showNotificationsSubmenu by remember { mutableStateOf(false) }
     var revokeRssOpen by remember { mutableStateOf(false) }
     val rssRevokedMessage = stringResource(MochiR.string.rss_revoked)
     var showUnsubscribeConfirm by remember { mutableStateOf(false) }
@@ -403,6 +419,7 @@ private fun ForumContent(
                             onDismissRequest = {
                                 showOverflowMenu = false
                                 showRssSubmenu = false
+                                showNotificationsSubmenu = false
                             }
                         ) {
                             // Sort options listed inline, each with its own
@@ -442,6 +459,28 @@ private fun ForumContent(
                                     },
                                     leadingIcon = { Icon(Icons.Outlined.Gavel, contentDescription = null) },
                                 )
+                            }
+                            // Each stays open on a tap so several can be set
+                            // in one visit. Absent until the settings load.
+                            val notifications = uiState.notifications
+                            if (!isAll && notifications != null) {
+                                MochiDropdownSubmenu(
+                                    text = { Text(stringResource(MochiR.string.common_notifications)) },
+                                    expanded = showNotificationsSubmenu,
+                                    onExpandedChange = { showNotificationsSubmenu = it },
+                                    leadingIcon = {
+                                        Icon(Icons.Outlined.Notifications, contentDescription = null)
+                                    },
+                                ) {
+                                    NOTIFICATION_OPTIONS.forEach { option ->
+                                        val enabled = option.enabled(notifications)
+                                        MochiDropdownMenuItem(
+                                            text = { Text(stringResource(option.labelRes)) },
+                                            onClick = { viewModel.setNotification(option.kind, !enabled) },
+                                            selected = enabled,
+                                        )
+                                    }
+                                }
                             }
                             // The aggregate exports a class-level RSS feed
                             // but has no single forum to unsubscribe from.

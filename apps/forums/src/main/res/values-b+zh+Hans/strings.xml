@@ -218,6 +218,11 @@
     <string name="forums_all_forums">所有论坛</string>
     <string name="forums_create_allow_search">允许任何人搜索论坛</string>
     <string name="forums_rss_clipboard_label">论坛 RSS 网址</string>
+    <string name="forums_notifications_post">新帖子</string>
+    <string name="forums_notifications_reply">给你的回复</string>
+    <string name="forums_notifications_comment">所有回复</string>
+    <string name="forums_follow_thread">关注话题</string>
+    <string name="forums_unfollow_thread">取消关注话题</string>
     <string name="forums_tab_moderation">审核</string>
     <string name="forums_access_level_view_full">仅查看</string>
     <string name="forums_access_level_none_full">无访问权限</string>

@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Всички форуми</string>
     <string name="forums_create_allow_search">Разрешаване на всеки да търси форума</string>
     <string name="forums_rss_clipboard_label">RSS URL на форума</string>
+    <string name="forums_notifications_post">Нови публикации</string>
+    <string name="forums_notifications_reply">Отговори до вас</string>
+    <string name="forums_notifications_comment">Всички отговори</string>
+    <string name="forums_follow_thread">Следвай темата</string>
+    <string name="forums_unfollow_thread">Спри да следваш темата</string>
     <string name="forums_tab_moderation">Модерация</string>
     <string name="forums_access_level_view_full">Само за преглед</string>
     <string name="forums_access_level_none_full">Няма достъп</string>

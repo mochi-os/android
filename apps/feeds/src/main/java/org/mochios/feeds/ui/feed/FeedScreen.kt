@@ -58,6 +58,7 @@ import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material.icons.outlined.DoneAll
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Link
+import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.material.icons.outlined.RssFeed
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.Settings
@@ -284,6 +285,7 @@ fun FeedScreen(
 
     val posts by viewModel.posts.collectAsState()
     val feedInfo by viewModel.feedInfo.collectAsState()
+    val notifications by viewModel.notifications.collectAsState()
     val permissions by viewModel.permissions.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
     val isRefreshing by viewModel.isRefreshing.collectAsState()
@@ -306,6 +308,7 @@ fun FeedScreen(
     var showAbout by remember { mutableStateOf(false) }
     // Whether the overflow menu is showing its nested "RSS feed" submenu.
     var showRssSubmenu by remember { mutableStateOf(false) }
+    var showNotificationsSubmenu by remember { mutableStateOf(false) }
     var pendingDelete by remember { mutableStateOf<Post?>(null) }
     // (feedId, postId, commentId) of a comment pending delete confirmation.
     val pagerState = rememberPagerState(pageCount = { posts.size })
@@ -547,6 +550,7 @@ fun FeedScreen(
                                 onDismissRequest = {
                                     showOverflowMenu = false
                                     showRssSubmenu = false
+                                    showNotificationsSubmenu = false
                                 }
                             ) {
                                 // Sort options — listed inline (no nested menu)
@@ -657,6 +661,25 @@ fun FeedScreen(
                                         },
                                         leadingIcon = { Icon(Icons.Outlined.Settings, contentDescription = null) },
                                     )
+                                }
+                                // A tap stays open, so the change shows. Absent
+                                // until the switches load, and for a feed the
+                                // user does not hold.
+                                notifications?.let { settings ->
+                                    MochiDropdownSubmenu(
+                                        text = { Text(stringResource(MochiR.string.common_notifications)) },
+                                        expanded = showNotificationsSubmenu,
+                                        onExpandedChange = { showNotificationsSubmenu = it },
+                                        leadingIcon = {
+                                            Icon(Icons.Outlined.Notifications, contentDescription = null)
+                                        },
+                                    ) {
+                                        MochiDropdownMenuItem(
+                                            text = { Text(stringResource(R.string.feeds_notifications_post)) },
+                                            onClick = { viewModel.setPostNotifications(!settings.post) },
+                                            selected = settings.post,
+                                        )
+                                    }
                                 }
                                 MochiDropdownSubmenu(
                                     text = { Text(stringResource(R.string.feeds_rss_feed)) },

@@ -27,6 +27,7 @@ import org.mochios.forums.api.MembersResponse
 import org.mochios.forums.api.ModerationLogResponse
 import org.mochios.forums.api.ModerationQueueResponse
 import org.mochios.forums.api.ModerationReportsResponse
+import org.mochios.forums.api.NotificationSettings
 import org.mochios.forums.api.RecommendationsResponse
 import org.mochios.forums.api.RestrictionsResponse
 import org.mochios.forums.api.RssTokenResponse
@@ -124,6 +125,15 @@ class ForumsRepository @Inject constructor(
 
     suspend fun deletePost(forumId: String, postId: String) {
         api.deletePost(forumId, postId).unwrap()
+    }
+
+    /** Follow or unfollow a post: every reply in a followed one notifies. */
+    suspend fun followPost(forumId: String, postId: String, following: Boolean) {
+        if (following) {
+            api.followPost(forumId, postId).unwrap()
+        } else {
+            api.unfollowPost(forumId, postId).unwrap()
+        }
     }
 
     suspend fun pinPost(forumId: String, postId: String) {
@@ -440,6 +450,12 @@ class ForumsRepository @Inject constructor(
     suspend fun clearNotifications(forumId: String) {
         api.clearNotifications(forumId).unwrap()
     }
+
+    suspend fun getNotifications(forumId: String): NotificationSettings =
+        api.getNotifications(forumId).unwrap()
+
+    suspend fun setNotification(forumId: String, kind: String, enabled: Boolean): NotificationSettings =
+        api.setNotification(forumId, kind, enabled.toString()).unwrap()
 
     suspend fun getRssToken(entity: String, mode: String = "posts"): RssTokenResponse =
         api.getRssToken(entity, mode).unwrap()

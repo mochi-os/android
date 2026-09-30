@@ -219,6 +219,11 @@
     <string name="forums_all_forums">सब फोरम</string>
     <string name="forums_create_allow_search">केहू के फोरम खोजे के अनुमति दीं</string>
     <string name="forums_rss_clipboard_label">फोरम RSS URL</string>
+    <string name="forums_notifications_post">नया पोस्ट</string>
+    <string name="forums_notifications_reply">रउआ के जवाब</string>
+    <string name="forums_notifications_comment">सगरी जवाब</string>
+    <string name="forums_follow_thread">थ्रेड फॉलो करीं</string>
+    <string name="forums_unfollow_thread">थ्रेड अनफॉलो करीं</string>
     <string name="forums_tab_moderation">मॉडरेशन</string>
     <string name="forums_access_level_view_full">खाली देखीं</string>
     <string name="forums_access_level_none_full">पहुँच नइखे</string>

@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Taqpach forum</string>
     <string name="forums_create_allow_search">Khitisa forox thaqhañapataki iyawsaña</string>
     <string name="forums_rss_clipboard_label">Foro RSS URL</string>
+    <string name="forums_notifications_post">Machaqa qillqatanaka</string>
+    <string name="forums_notifications_reply">Jumar jaysäwinaka</string>
+    <string name="forums_notifications_comment">Taqi jaysäwinaka</string>
+    <string name="forums_follow_thread">Aruskipäwi arkaña</string>
+    <string name="forums_unfollow_thread">Aruskipäwi arkañ jaytaña</string>
     <string name="forums_tab_moderation">Moderación</string>
     <string name="forums_access_level_view_full">Uñjañaki</string>
     <string name="forums_access_level_none_full">Jan mantañ</string>

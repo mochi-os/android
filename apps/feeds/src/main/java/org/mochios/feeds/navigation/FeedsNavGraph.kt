@@ -34,13 +34,30 @@ object FeedsApp {
     const val POST = "feeds/post/{feedId}/{postId}"
     const val POST_SOURCE = "feeds/postSource/{feedId}/{postId}?url={url}&expand={expand}"
     const val CREATE_POST = "feeds/createPost?feedId={feedId}&postId={postId}"
-    const val FIND_FEEDS = "feeds/findFeeds"
+    // [link] is an optional mochi:// share link to resolve on arrival, which is
+    // how a notification about a feed the user does not hold reaches it.
+    const val FIND_FEEDS = "feeds/findFeeds?link={link}"
     const val CREATE_FEED = "feeds/createFeed"
     const val FEED_SETTINGS = "feeds/feedSettings/{feedId}"
     const val FEED_SOURCES = "feeds/feedSources/{feedId}?source={source}"
     const val SAVED = "feeds/saved"
 
     fun feed(feedId: String) = "feeds/feed/$feedId"
+    fun findFeeds(link: String? = null) =
+        if (link.isNullOrEmpty()) "feeds/findFeeds"
+        else "feeds/findFeeds?link=${URLEncoder.encode(link, StandardCharsets.UTF_8.name())}"
+
+    /**
+     * The screen a `/feeds/...` notification link opens: discovery for
+     * `/feeds/find?link=<share link>` (a feed the user does not hold yet), the
+     * post for `/feeds/<feed>/<post>`, else the feed. Null for the bare app.
+     */
+    fun linkRoute(feedId: String?, postId: String?, link: String?): String? = when {
+        feedId == "find" -> findFeeds(link)
+        feedId.isNullOrEmpty() -> null
+        !postId.isNullOrEmpty() -> post(feedId, postId)
+        else -> feed(feedId)
+    }
     fun post(feedId: String, postId: String) = "feeds/post/$feedId/$postId"
     fun postSource(feedId: String, postId: String, url: String, expand: Boolean): String {
         val encoded = URLEncoder.encode(url, StandardCharsets.UTF_8.name())
@@ -116,7 +133,7 @@ fun NavGraphBuilder.feedsNavGraph(
                     launchSingleTop = true
                 }
             },
-            onNavigateToFindFeeds = { navController.navigate(FeedsApp.FIND_FEEDS) },
+            onNavigateToFindFeeds = { navController.navigate(FeedsApp.findFeeds()) },
             onNavigateToCreateFeed = { navController.navigate(FeedsApp.CREATE_FEED) },
             onOpenNotifications = onOpenNotifications,
             onLogout = onLogout,
@@ -216,7 +233,13 @@ fun NavGraphBuilder.feedsNavGraph(
         )
     }
 
-    composable(FeedsApp.FIND_FEEDS) {
+    composable(
+        route = FeedsApp.FIND_FEEDS,
+        arguments = listOf(navArgument("link") {
+            type = NavType.StringType
+            defaultValue = ""
+        }),
+    ) {
         FindFeedsScreen(
             onNavigateBack = { navController.popBackStack() },
             onNavigateToFeed = { feedId ->

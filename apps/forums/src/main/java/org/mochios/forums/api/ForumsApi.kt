@@ -116,8 +116,14 @@ data class ViewPostResponse(
     val member: Member = Member(),
     val can_vote: Boolean = false,
     val can_comment: Boolean = false,
-    val can_moderate: Boolean = false
+    val can_moderate: Boolean = false,
+    /** Whether the reader follows the post; null for a post in a forum they
+     *  do not hold, which they cannot follow. */
+    val following: Boolean? = null,
 )
+
+/** Response of `{forumId}/-/{postId}/follow` and `unfollow`. */
+data class FollowResponse(val following: Boolean = false)
 
 data class CreatePostResponse(
     val id: String = "",
@@ -230,6 +236,17 @@ data class ProbeForumResponse(
 )
 
 data class SortResponse(val sort: String = "")
+
+/**
+ * The activity notifications the user has turned on for a forum, answered by
+ * `{forumId}/-/notifications` and its `set`: every new [post], a [reply] to one
+ * of their own posts or comments, and every [comment]. All off by default.
+ */
+data class NotificationSettings(
+    val post: Boolean = false,
+    val reply: Boolean = false,
+    val comment: Boolean = false,
+)
 
 interface ForumsApi {
 
@@ -377,6 +394,18 @@ interface ForumsApi {
     ): Response<ApiResponse<SuccessResponse>>
 
     // ---- Post moderation ----
+
+    @POST("{forumId}/-/{postId}/follow")
+    suspend fun followPost(
+        @Path("forumId") forumId: String,
+        @Path("postId") postId: String,
+    ): Response<ApiResponse<FollowResponse>>
+
+    @POST("{forumId}/-/{postId}/unfollow")
+    suspend fun unfollowPost(
+        @Path("forumId") forumId: String,
+        @Path("postId") postId: String,
+    ): Response<ApiResponse<FollowResponse>>
 
     @POST("{forumId}/-/{postId}/pin")
     suspend fun pinPost(
@@ -691,6 +720,20 @@ interface ForumsApi {
 
     @POST("{forumId}/-/notifications/clear")
     suspend fun clearNotifications(@Path("forumId") forumId: String): Response<ApiResponse<SuccessResponse>>
+
+    @GET("{forumId}/-/notifications")
+    suspend fun getNotifications(
+        @Path("forumId") forumId: String,
+    ): Response<ApiResponse<NotificationSettings>>
+
+    // kind is "post", "reply" or "comment"; enabled is "true" or "false".
+    @FormUrlEncoded
+    @POST("{forumId}/-/notifications/set")
+    suspend fun setNotification(
+        @Path("forumId") forumId: String,
+        @Field("kind") kind: String,
+        @Field("enabled") enabled: String,
+    ): Response<ApiResponse<NotificationSettings>>
 
     // entity scopes the token (a forum id); mode is "posts" or "all" — both
     // required by the server (action_rss_token).
