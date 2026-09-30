@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Operatørens navn</string>
     <string name="system_setting_operator_email">E-post til operatør</string>
     <string name="system_setting_operator_jurisdiction">Operatørens jurisdiksjon</string>
-    <string name="system_setting_server_started">Server startet</string>
-    <string name="system_setting_server_version">Serverversjon</string>
     <string name="system_setting_signup_enabled">Tillat nye registreringer</string>
     <string name="system_users_title">Brukere</string>
     <string name="system_users_col_user">Bruker</string>
@@ -395,4 +393,5 @@
     <string name="accounts_provider_caldav">Kalenderserver</string>
     <string name="accounts_revoke_confirm">Dette tilbakekaller kalendertilgangen til %1$s. Pålogging med %2$s består til du kobler den fra på påloggingssiden.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Ukjent tema</string>
 </resources>

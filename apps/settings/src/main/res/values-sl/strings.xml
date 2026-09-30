@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Ime operaterja</string>
     <string name="system_setting_operator_email">E-pošta operaterja</string>
     <string name="system_setting_operator_jurisdiction">Jurisdikcija operaterja</string>
-    <string name="system_setting_server_started">Strežnik zagnan</string>
-    <string name="system_setting_server_version">Različica strežnika</string>
     <string name="system_setting_signup_enabled">Dovoli nove prijave</string>
     <string name="system_users_title">Uporabniki</string>
     <string name="system_users_col_user">Uporabnik</string>
@@ -399,4 +397,5 @@
     <string name="accounts_provider_caldav">Koledarski strežnik</string>
     <string name="accounts_revoke_confirm">S tem bo preklican dostop do koledarja za %1$s. Prijava z %2$s ostane, dokler je ne prekinete na strani za prijavo.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Neznana tema</string>
 </resources>

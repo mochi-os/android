@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Оператор аты</string>
     <string name="system_setting_operator_email">Оператор email</string>
     <string name="system_setting_operator_jurisdiction">Оператор юрисдикциясы</string>
-    <string name="system_setting_server_started">Сервер іске қосылды</string>
-    <string name="system_setting_server_version">Сервер нұсқасы</string>
     <string name="system_setting_signup_enabled">Жаңа тіркеулерге рұқсат ету</string>
     <string name="system_users_title">Пайдаланушылар</string>
     <string name="system_users_col_user">Пайдаланушы</string>
@@ -395,4 +393,5 @@
     <string name="accounts_provider_caldav">Күнтізбе сервері</string>
     <string name="accounts_revoke_confirm">Бұл %1$s күнтізбесіне қатынасты жояды. %2$s арқылы кіру, оны Кіру бетінде ажыратқанға дейін сақталады.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Белгісіз тақырып</string>
 </resources>

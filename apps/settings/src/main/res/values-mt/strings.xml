@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Isem tal-operatur</string>
     <string name="system_setting_operator_email">Email tal-operatur</string>
     <string name="system_setting_operator_jurisdiction">Ġurisdizzjoni tal-operatur</string>
-    <string name="system_setting_server_started">Server beda</string>
-    <string name="system_setting_server_version">Verżjoni tas-server</string>
     <string name="system_setting_signup_enabled">Ippermetti reġistrazzjonijiet ġodda</string>
     <string name="system_users_title">Utenti</string>
     <string name="system_users_col_user">Utent</string>
@@ -401,4 +399,5 @@
     <string name="accounts_provider_caldav">Server tal-kalendarju</string>
     <string name="accounts_revoke_confirm">Dan se jirrevoka l-aċċess għall-kalendarju ta\' %1$s. Id-dħul b\'%2$s jibqa\' sakemm tħollu fil-paġna tad-dħul.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Tema mhux magħrufa</string>
 </resources>

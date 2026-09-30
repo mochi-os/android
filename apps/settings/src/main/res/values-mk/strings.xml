@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Име на операторот</string>
     <string name="system_setting_operator_email">Е-пошта на операторот</string>
     <string name="system_setting_operator_jurisdiction">Јурисдикција на операторот</string>
-    <string name="system_setting_server_started">Серверот е стартуван</string>
-    <string name="system_setting_server_version">Верзија на серверот</string>
     <string name="system_setting_signup_enabled">Дозволи нови регистрации</string>
     <string name="system_users_title">Корисници</string>
     <string name="system_users_col_user">Корисник</string>
@@ -395,4 +393,5 @@
     <string name="accounts_provider_caldav">Сервер за календари</string>
     <string name="accounts_revoke_confirm">Ова ќе го отповика пристапот до календарот на %1$s. Најавата со %2$s останува додека не ја прекинете на страницата за најава.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Непозната тема</string>
 </resources>

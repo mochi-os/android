@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Maqaa hojjetaa</string>
     <string name="system_setting_operator_email">Imeelii hojjetaa</string>
     <string name="system_setting_operator_jurisdiction">Daangaa aangoo hojjetaa</string>
-    <string name="system_setting_server_started">Server jalqabameera</string>
-    <string name="system_setting_server_version">Fooyya\'iinsa server</string>
     <string name="system_setting_signup_enabled">Galmee haaraa hayyami</string>
     <string name="system_users_title">Fayyadamtoota</string>
     <string name="system_users_col_user">Fayyadamaa</string>
@@ -395,4 +393,5 @@
     <string name="accounts_provider_caldav">Sarvarii kaalaandarii</string>
     <string name="accounts_revoke_confirm">Kun qaqqabummaa kaalaandarii %1$s ni haqa. %2$s waliin seensi hamma fuula Seensaa irratti hiiktutti ni tura.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Bifa hin beekamne</string>
 </resources>

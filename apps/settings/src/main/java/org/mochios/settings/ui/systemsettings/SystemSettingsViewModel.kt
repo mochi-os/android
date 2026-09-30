@@ -17,6 +17,7 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrapRaw
 import org.mochios.settings.api.SystemSetting
 import org.mochios.settings.api.SystemSettingsApi
+import org.mochios.settings.api.SystemTheme
 import javax.inject.Inject
 import org.mochios.settings.ui.login.SettingsStepUpClient
 import org.mochios.settings.ui.login.StepUpController
@@ -25,6 +26,7 @@ import org.mochios.android.api.unwrapEmpty
 data class SystemSettingsUiState(
     val isLoading: Boolean = true,
     val settings: List<SystemSetting> = emptyList(),
+    val themes: List<SystemTheme> = emptyList(),
     val savingName: String? = null,
     val error: MochiError? = null,
 )
@@ -56,6 +58,7 @@ class SystemSettingsViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     settings = data.settings,
+                    themes = data.themes,
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())

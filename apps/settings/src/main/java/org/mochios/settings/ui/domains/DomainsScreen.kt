@@ -432,7 +432,8 @@ private fun RouteRow(route: Route, onEdit: () -> Unit, onDelete: () -> Unit) {
                 fontFamily = FontFamily.Monospace,
             )
             Text(
-                text = "${route.method} → ${route.targetName ?: route.target}",
+                text = "${stringResource(routeMethodLabel(route.method))} → " +
+                    (route.targetName ?: route.target),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
@@ -619,14 +620,17 @@ private fun RouteDialog(
     )
 }
 
+/** A route method's label: the route list and the method picker name it alike. */
+internal fun routeMethodLabel(method: String): Int = when (method) {
+    "entity" -> R.string.route_method_entity
+    "redirect" -> R.string.route_method_redirect
+    else -> R.string.route_method_app
+}
+
 @Composable
 private fun MethodPicker(value: String, onChange: (String) -> Unit) {
     var open by remember { mutableStateOf(false) }
-    val labelRes = when (value) {
-        "entity" -> R.string.route_method_entity
-        "redirect" -> R.string.route_method_redirect
-        else -> R.string.route_method_app
-    }
+    val labelRes = routeMethodLabel(value)
     Box {
         MochiOutlinedButton(onClick = { open = true }, modifier = Modifier.fillMaxWidth()) {
             Text(stringResource(R.string.route_method) + ": " + stringResource(labelRes))

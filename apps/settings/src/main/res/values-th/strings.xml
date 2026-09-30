@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">ชื่อผู้ดำเนินการ</string>
     <string name="system_setting_operator_email">อีเมลของผู้ดำเนินการ</string>
     <string name="system_setting_operator_jurisdiction">เขตอำนาจศาลของผู้ดำเนินการ</string>
-    <string name="system_setting_server_started">เซิร์ฟเวอร์เริ่มทำงานแล้ว</string>
-    <string name="system_setting_server_version">เวอร์ชันเซิร์ฟเวอร์</string>
     <string name="system_setting_signup_enabled">อนุญาตการสมัครใหม่</string>
     <string name="system_users_title">ผู้ใช้</string>
     <string name="system_users_col_user">ผู้ใช้</string>
@@ -394,4 +392,5 @@
     <string name="accounts_provider_caldav">เซิร์ฟเวอร์ปฏิทิน</string>
     <string name="accounts_revoke_confirm">การดำเนินการนี้จะเพิกถอนการเข้าถึงปฏิทินของ %1$s การลงชื่อเข้าใช้ด้วย %2$s จะยังคงอยู่จนกว่าคุณจะยกเลิกการเชื่อมโยงในหน้าเข้าสู่ระบบ</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">ธีมที่ไม่รู้จัก</string>
 </resources>

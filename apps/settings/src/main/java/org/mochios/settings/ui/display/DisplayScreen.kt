@@ -266,10 +266,15 @@ fun DisplayScreen(
                     themes = uiState.themes,
                     currentThemeId = currentTheme,
                     onPick = { themeId ->
-                        // Tapping the already-selected card resets to default
-                        // (empty string), matching the web behaviour.
-                        val next = if (themeId == currentTheme) "" else themeId
-                        viewModel.set("theme", next)
+                        // Tapping the selected card clears the choice, so the
+                        // server's default theme applies again. Only a theme
+                        // the user chose shows as selected: the server sends ""
+                        // for none. A clear is an unset, not a set of "", which
+                        // the server refuses as not one of its themes.
+                        when (themePick(themeId, currentTheme)) {
+                            null -> viewModel.reset(listOf("theme")) {}
+                            else -> viewModel.set("theme", themeId)
+                        }
                         showThemeSheet = false
                     },
                 )
@@ -411,3 +416,8 @@ private fun ThemeSwatch(
             .border(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.3f), CircleShape),
     )
 }
+
+/** What tapping a theme card does: the theme to choose, or null to clear the
+ *  choice when the card is the one already chosen. */
+internal fun themePick(picked: String, chosen: String): String? =
+    if (picked == chosen) null else picked

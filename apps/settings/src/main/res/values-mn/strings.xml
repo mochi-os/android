@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Операторын нэр</string>
     <string name="system_setting_operator_email">Операторын имэйл</string>
     <string name="system_setting_operator_jurisdiction">Операторын харьяалал</string>
-    <string name="system_setting_server_started">Сервер эхэлсэн</string>
-    <string name="system_setting_server_version">Серверийн хувилбар</string>
     <string name="system_setting_signup_enabled">Шинэ бүртгүүлэлт зөвшөөрөх</string>
     <string name="system_users_title">Хэрэглэгчид</string>
     <string name="system_users_col_user">Хэрэглэгч</string>
@@ -395,4 +393,5 @@
     <string name="accounts_provider_caldav">Хуанлийн сервер</string>
     <string name="accounts_revoke_confirm">Энэ нь %1$s-ийн хуанлийн хандалтыг цуцална. %2$s-ээр нэвтрэх нь Нэвтрэх хуудсан дээр салгах хүртэл хэвээр байна.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Тодорхойгүй загвар</string>
 </resources>

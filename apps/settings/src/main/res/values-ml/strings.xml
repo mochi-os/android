@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">ഓപ്പറേറ്ററുടെ പേര്</string>
     <string name="system_setting_operator_email">ഓപ്പറേറ്ററുടെ ഇമെയിൽ</string>
     <string name="system_setting_operator_jurisdiction">ഓപ്പറേറ്ററുടെ അധികാരപരിധി</string>
-    <string name="system_setting_server_started">സെർവർ ആരംഭിച്ചു</string>
-    <string name="system_setting_server_version">സെർവർ പതിപ്പ്</string>
     <string name="system_setting_signup_enabled">പുതിയ സൈൻഅപ്പുകൾ അനുവദിക്കുക</string>
     <string name="system_users_title">ഉപയോക്താക്കൾ</string>
     <string name="system_users_col_user">ഉപയോക്താവ്</string>
@@ -395,4 +393,5 @@
     <string name="accounts_provider_caldav">കലണ്ടർ സെർവർ</string>
     <string name="accounts_revoke_confirm">ഇത് %1$s-ന്റെ കലണ്ടർ ആക്സസ് പിൻവലിക്കും. ലോഗിൻ പേജിൽ അൺലിങ്ക് ചെയ്യുന്നതുവരെ %2$s ഉപയോഗിച്ചുള്ള സൈൻ-ഇൻ തുടരും.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">അജ്ഞാത തീം</string>
 </resources>

@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">ఆపరేటర్ పేరు</string>
     <string name="system_setting_operator_email">ఆపరేటర్ ఇమెయిల్</string>
     <string name="system_setting_operator_jurisdiction">ఆపరేటర్ అధికార పరిధి</string>
-    <string name="system_setting_server_started">సర్వర్ ప్రారంభమైంది</string>
-    <string name="system_setting_server_version">సర్వర్ వెర్షన్</string>
     <string name="system_setting_signup_enabled">కొత్త సైన్అప్‌లను అనుమతించండి</string>
     <string name="system_users_title">యూజర్‌లు</string>
     <string name="system_users_col_user">యూజర్</string>
@@ -395,4 +393,5 @@
     <string name="accounts_provider_caldav">క్యాలెండర్ సర్వర్</string>
     <string name="accounts_revoke_confirm">ఇది %1$s యొక్క క్యాలెండర్ యాక్సెస్‌ను ఉపసంహరిస్తుంది. లాగిన్ పేజీలో అన్‌లింక్ చేసే వరకు %2$s తో సైన్-ఇన్ కొనసాగుతుంది.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">తెలియని థీమ్</string>
 </resources>

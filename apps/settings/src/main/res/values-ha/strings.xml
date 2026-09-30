@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Sunan mai gudanarwa</string>
     <string name="system_setting_operator_email">Imel na mai gudanarwa</string>
     <string name="system_setting_operator_jurisdiction">Hurumin mai gudanarwa</string>
-    <string name="system_setting_server_started">Server ya fara</string>
-    <string name="system_setting_server_version">Sigar server</string>
     <string name="system_setting_signup_enabled">Ba da damar sabbin rajistoci</string>
     <string name="system_users_title">Masu amfani</string>
     <string name="system_users_col_user">Mai amfani</string>
@@ -395,4 +393,5 @@
     <string name="accounts_provider_caldav">Sabar kalanda</string>
     <string name="accounts_revoke_confirm">Wannan zai soke izinin kalanda na %1$s. Shiga da %2$s zai ci gaba har sai ka cire haɗin sa a shafin Shiga.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Jigo da ba a sani ba</string>
 </resources>

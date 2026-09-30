@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">ناوی بەکارهێنەر</string>
     <string name="system_setting_operator_email">ئیمەیڵی بەکارهێنەر</string>
     <string name="system_setting_operator_jurisdiction">ناوچەی بەکارهێنەر</string>
-    <string name="system_setting_server_started">ڕاژەکار دەستی پێکرد</string>
-    <string name="system_setting_server_version">وەشانی ڕاژەکار</string>
     <string name="system_setting_signup_enabled">ڕێگە بدە بە تۆمارکردنی نوێ</string>
     <string name="system_users_title">بەکارهێنەران</string>
     <string name="system_users_col_user">بەکارهێنەر</string>
@@ -395,4 +393,5 @@
     <string name="accounts_provider_caldav">ڕاژەکاری ڕۆژژمێر</string>
     <string name="accounts_revoke_confirm">ئەمە دەستڕاگەیشتنی ڕۆژژمێری %1$s هەڵدەوەشێنێتەوە. چوونەژوورەوە بە %2$s دەمێنێتەوە تا لە پەڕەی چوونەژوورەوە لێی جیا دەکەیتەوە.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">ڕووکاری نەناسراو</string>
 </resources>

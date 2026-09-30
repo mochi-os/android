@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Naziv operatera</string>
     <string name="system_setting_operator_email">Email operatera</string>
     <string name="system_setting_operator_jurisdiction">Jurisdikcija operatera</string>
-    <string name="system_setting_server_started">Poslužitelj pokrenut</string>
-    <string name="system_setting_server_version">Verzija poslužitelja</string>
     <string name="system_setting_signup_enabled">Dopusti nove registracije</string>
     <string name="system_users_title">Korisnici</string>
     <string name="system_users_col_user">Korisnik</string>
@@ -397,4 +395,5 @@
     <string name="accounts_provider_caldav">Poslužitelj kalendara</string>
     <string name="accounts_revoke_confirm">Ovo će opozvati pristup kalendaru za %1$s. Prijava putem %2$s ostaje dok je ne prekinete na stranici za prijavu.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Nepoznata tema</string>
 </resources>

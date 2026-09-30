@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Operaattorin nimi</string>
     <string name="system_setting_operator_email">Operaattorin sähköposti</string>
     <string name="system_setting_operator_jurisdiction">Operaattorin lainkäyttöalue</string>
-    <string name="system_setting_server_started">Palvelin käynnistetty</string>
-    <string name="system_setting_server_version">Palvelimen versio</string>
     <string name="system_setting_signup_enabled">Salli uudet rekisteröitymiset</string>
     <string name="system_users_title">Käyttäjät</string>
     <string name="system_users_col_user">Käyttäjä</string>
@@ -395,4 +393,5 @@
     <string name="accounts_provider_caldav">Kalenteripalvelin</string>
     <string name="accounts_revoke_confirm">Tämä peruuttaa tilin %1$s kalenterin käyttöoikeuden. Kirjautuminen tilillä %2$s säilyy, kunnes poistat sen linkityksen kirjautumissivulla.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Tuntematon teema</string>
 </resources>

@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Non operatè</string>
     <string name="system_setting_operator_email">Imèl operatè</string>
     <string name="system_setting_operator_jurisdiction">Jiridiksyon operatè</string>
-    <string name="system_setting_server_started">Sèvè a kòmanse</string>
-    <string name="system_setting_server_version">Vèsyon sèvè</string>
     <string name="system_setting_signup_enabled">Pèmèt nouvo enskripsyon</string>
     <string name="system_users_title">Itilizatè</string>
     <string name="system_users_col_user">Itilizatè</string>
@@ -394,4 +392,5 @@
     <string name="accounts_provider_caldav">Sèvè kalandriye</string>
     <string name="accounts_revoke_confirm">Sa ap retire aksè kalandriye %1$s. Koneksyon ak %2$s ap rete jiskaske ou dekonekte l nan paj Koneksyon an.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Tèm enkoni</string>
 </resources>

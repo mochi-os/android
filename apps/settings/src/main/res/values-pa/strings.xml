@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">ਆਪਰੇਟਰ ਨਾਮ</string>
     <string name="system_setting_operator_email">ਆਪਰੇਟਰ ਈਮੇਲ</string>
     <string name="system_setting_operator_jurisdiction">ਆਪਰੇਟਰ ਅਧਿਕਾਰ ਖੇਤਰ</string>
-    <string name="system_setting_server_started">ਸਰਵਰ ਚਾਲੂ ਹੋਇਆ</string>
-    <string name="system_setting_server_version">ਸਰਵਰ ਸੰਸਕਰਣ</string>
     <string name="system_setting_signup_enabled">ਨਵੇਂ ਸਾਈਨਅੱਪ ਦੀ ਆਗਿਆ ਦਿਓ</string>
     <string name="system_users_title">ਉਪਭੋਗਤਾ</string>
     <string name="system_users_col_user">ਉਪਭੋਗਤਾ</string>
@@ -395,4 +393,5 @@
     <string name="accounts_provider_caldav">ਕੈਲੰਡਰ ਸਰਵਰ</string>
     <string name="accounts_revoke_confirm">ਇਹ %1$s ਦੀ ਕੈਲੰਡਰ ਪਹੁੰਚ ਰੱਦ ਕਰ ਦੇਵੇਗਾ। %2$s ਨਾਲ ਸਾਈਨ-ਇਨ ਉਦੋਂ ਤੱਕ ਰਹੇਗਾ ਜਦੋਂ ਤੱਕ ਤੁਸੀਂ ਲੌਗਇਨ ਪੰਨੇ ਉੱਤੇ ਇਸਨੂੰ ਅਣਲਿੰਕ ਨਹੀਂ ਕਰਦੇ।</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">ਅਣਜਾਣ ਥੀਮ</string>
 </resources>

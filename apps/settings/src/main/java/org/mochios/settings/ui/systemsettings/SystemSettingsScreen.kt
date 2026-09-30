@@ -52,7 +52,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
-import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.R as MochiR
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
@@ -65,6 +64,7 @@ import org.mochios.android.ui.components.SecretField
 import org.mochios.android.util.NaturalCompare
 import org.mochios.settings.R
 import org.mochios.settings.api.SystemSetting
+import org.mochios.settings.api.SystemTheme
 import org.mochios.settings.ui.login.StepUpHost
 
 // Mirrors apps/settings/web/src/features/system/settings.tsx. File upload
@@ -194,8 +194,6 @@ private val SETTING_LABEL_RESOURCES: Map<String, Int> = mapOf(
     "operator_name" to R.string.system_setting_operator_name,
     "operator_email" to R.string.system_setting_operator_email,
     "operator_jurisdiction" to R.string.system_setting_operator_jurisdiction,
-    "server_started" to R.string.system_setting_server_started,
-    "server_version" to R.string.system_setting_server_version,
     "signup_enabled" to R.string.system_setting_signup_enabled,
 )
 
@@ -275,6 +273,7 @@ private fun androidx.compose.foundation.lazy.LazyListScope.section(
         SettingRow(
             setting = setting,
             isSaving = state.savingName == setting.name,
+            themes = state.themes,
             onSave = { value -> onSave(setting.name, value) },
         )
     }
@@ -296,6 +295,7 @@ private fun SectionHeader(title: String) {
 private fun SettingRow(
     setting: SystemSetting,
     isSaving: Boolean,
+    themes: List<SystemTheme>,
     onSave: (String) -> Unit,
 ) {
     var localValue by remember(setting.name, setting.value) { mutableStateOf(setting.value) }
@@ -345,6 +345,35 @@ private fun SettingRow(
                     onSave(it)
                 },
             )
+            // default_theme holds an entity:theme id, which no one should read
+            // or type, so it is picked from the installed themes by label.
+            setting.name == "default_theme" && themes.isNotEmpty() -> Row(
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                ThemeDropdown(
+                    value = localValue,
+                    themes = themes,
+                    disabled = isSaving,
+                    onPick = {
+                        localValue = it
+                        onSave(it)
+                    },
+                    modifier = Modifier.weight(1f),
+                )
+                if (!isDefault) {
+                    Spacer(Modifier.size(8.dp))
+                    ResetButton(
+                        setting = setting,
+                        label = label,
+                        disabled = isSaving,
+                        defaultLabel = themeLabel(themes, setting.default)
+                            ?: stringResource(R.string.system_settings_theme_unknown),
+                    ) {
+                        localValue = setting.default
+                        onSave(setting.default)
+                    }
+                }
+            }
             isBoolean(setting) -> Row(verticalAlignment = Alignment.CenterVertically) {
                 Switch(
                     checked = localValue == "true",
@@ -433,12 +462,7 @@ private fun SettingRow(
 
 @Composable
 private fun ReadOnlyValue(setting: SystemSetting) {
-    val format = LocalFormat.current
     val text = when {
-        setting.name == "server_started" -> {
-            val seconds = setting.value.toLongOrNull() ?: 0L
-            if (seconds > 0) format.formatDateTime(seconds) else setting.value
-        }
         setting.value.isEmpty() -> stringResource(R.string.system_settings_empty)
         else -> setting.value
     }
@@ -525,11 +549,65 @@ private fun EnumDropdown(
     }
 }
 
+/** A theme's label by id, or null for an id no installed theme has. */
+internal fun themeLabel(themes: List<SystemTheme>, id: String): String? =
+    themes.firstOrNull { it.id == id }?.label
+
+/** The themes in the order the picker lists them: by label. */
+internal fun themeOrder(themes: List<SystemTheme>): List<SystemTheme> =
+    themes.sortedWith(compareBy(NaturalCompare) { it.label })
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun ThemeDropdown(
+    value: String,
+    themes: List<SystemTheme>,
+    disabled: Boolean,
+    onPick: (String) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    var expanded by remember { mutableStateOf(false) }
+    ExposedDropdownMenuBox(
+        expanded = expanded,
+        onExpandedChange = { if (!disabled) expanded = it },
+        modifier = modifier,
+    ) {
+        MochiTextField(
+            // A stored id no installed theme has shows nothing, never the id.
+            value = themeLabel(themes, value).orEmpty(),
+            onValueChange = {},
+            readOnly = true,
+            enabled = !disabled,
+            trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
+            modifier = Modifier
+                .menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable)
+                .fillMaxWidth(),
+        )
+        ExposedDropdownMenu(
+            expanded = expanded,
+            onDismissRequest = { expanded = false },
+        ) {
+            themeOrder(themes).forEach { theme ->
+                MochiDropdownMenuItem(
+                    text = { Text(theme.label) },
+                    onClick = {
+                        expanded = false
+                        onPick(theme.id)
+                    },
+                )
+            }
+        }
+    }
+}
+
 @Composable
 private fun ResetButton(
     setting: SystemSetting,
     label: String,
     disabled: Boolean,
+    // What the confirmation names as the default; the stored value unless the
+    // row shows its values by another name.
+    defaultLabel: String = setting.default,
     onConfirm: () -> Unit,
 ) {
     var confirm by remember(setting.name) { mutableStateOf(false) }
@@ -548,7 +626,7 @@ private fun ResetButton(
                 stringResource(
                     R.string.system_settings_reset_message,
                     label,
-                    setting.default,
+                    defaultLabel,
                 )
             } else {
                 stringResource(R.string.system_settings_reset_message_empty, label)

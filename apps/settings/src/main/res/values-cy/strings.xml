@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Enw gweithredwr</string>
     <string name="system_setting_operator_email">E-bost gweithredwr</string>
     <string name="system_setting_operator_jurisdiction">Awdurdodaeth gweithredwr</string>
-    <string name="system_setting_server_started">Gweinydd wedi cychwyn</string>
-    <string name="system_setting_server_version">Fersiwn y gweinydd</string>
     <string name="system_setting_signup_enabled">Caniatáu cofrestriadau newydd</string>
     <string name="system_users_title">Defnyddwyr</string>
     <string name="system_users_col_user">Defnyddiwr</string>
@@ -403,4 +401,5 @@
     <string name="accounts_provider_caldav">Gweinydd calendr</string>
     <string name="accounts_revoke_confirm">Bydd hyn yn diddymu mynediad %1$s at y calendr. Bydd mewngofnodi gyda %2$s yn aros nes i chi ei ddatgysylltu ar y dudalen fewngofnodi.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Thema anhysbys</string>
 </resources>

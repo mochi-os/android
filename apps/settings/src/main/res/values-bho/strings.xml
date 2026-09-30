@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">ऑपरेटर नाम</string>
     <string name="system_setting_operator_email">ऑपरेटर ईमेल</string>
     <string name="system_setting_operator_jurisdiction">ऑपरेटर अधिकार क्षेत्र</string>
-    <string name="system_setting_server_started">सर्वर शुरू भइल</string>
-    <string name="system_setting_server_version">सर्वर संस्करण</string>
     <string name="system_setting_signup_enabled">नया साइनअप के अनुमति दीं</string>
     <string name="system_users_title">उपयोगकर्ता सब</string>
     <string name="system_users_col_user">उपयोगकर्ता</string>
@@ -395,4 +393,5 @@
     <string name="accounts_provider_caldav">कैलेंडर सर्वर</string>
     <string name="accounts_revoke_confirm">एह से %1$s के कैलेंडर पहुंच खतम हो जाई। %2$s से साइन-इन तब ले रही जब ले रउआ लॉगिन पन्ना पर ओकरा के अलग ना करीं।</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">अनजान थीम</string>
 </resources>

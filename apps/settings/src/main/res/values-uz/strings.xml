@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Operator nomi</string>
     <string name="system_setting_operator_email">Operator emaili</string>
     <string name="system_setting_operator_jurisdiction">Operator yurisdiktsiyasi</string>
-    <string name="system_setting_server_started">Server ishga tushirildi</string>
-    <string name="system_setting_server_version">Server versiyasi</string>
     <string name="system_setting_signup_enabled">Yangi roʻyxatdan oʻtishlarga ruxsat berish</string>
     <string name="system_users_title">Foydalanuvchilar</string>
     <string name="system_users_col_user">Foydalanuvchi</string>
@@ -395,4 +393,5 @@
     <string name="accounts_provider_caldav">Kalendar serveri</string>
     <string name="accounts_revoke_confirm">Bu %1$s kalendariga kirishni bekor qiladi. %2$s bilan kirish, uni Kirish sahifasida uzmaguningizcha saqlanadi.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Nomaʼlum mavzu</string>
 </resources>

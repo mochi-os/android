@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">營運者名稱</string>
     <string name="system_setting_operator_email">營運者電子郵件</string>
     <string name="system_setting_operator_jurisdiction">營運者管轄地</string>
-    <string name="system_setting_server_started">伺服器已啟動</string>
-    <string name="system_setting_server_version">伺服器版本</string>
     <string name="system_setting_signup_enabled">允許新使用者註冊</string>
     <string name="system_users_title">使用者</string>
     <string name="system_users_col_user">使用者</string>
@@ -394,4 +392,5 @@
     <string name="accounts_provider_caldav">行事曆伺服器</string>
     <string name="accounts_revoke_confirm">這將撤銷 %1$s 的行事曆存取權。使用 %2$s 登入會保留，直到你在登入頁面解除連結。</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">未知主題</string>
 </resources>

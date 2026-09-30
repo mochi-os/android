@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Імя аператара</string>
     <string name="system_setting_operator_email">Email аператара</string>
     <string name="system_setting_operator_jurisdiction">Юрысдыкцыя аператара</string>
-    <string name="system_setting_server_started">Сервер запушчаны</string>
-    <string name="system_setting_server_version">Версія сервера</string>
     <string name="system_setting_signup_enabled">Дазволіць новыя рэгістрацыі</string>
     <string name="system_users_title">Карыстальнікі</string>
     <string name="system_users_col_user">Карыстальнік</string>
@@ -399,4 +397,5 @@
     <string name="accounts_provider_caldav">Сервер календароў</string>
     <string name="accounts_revoke_confirm">Гэта адкліча доступ да календара для %1$s. Уваход праз %2$s застанецца, пакуль вы не адвяжаце яго на старонцы ўваходу.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Невядомая тэма</string>
 </resources>

@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Nome do operador</string>
     <string name="system_setting_operator_email">Email do operador</string>
     <string name="system_setting_operator_jurisdiction">Jurisdição do operador</string>
-    <string name="system_setting_server_started">Servidor iniciado</string>
-    <string name="system_setting_server_version">Versão do servidor</string>
     <string name="system_setting_signup_enabled">Permitir novos registos</string>
     <string name="system_users_title">Utilizadores</string>
     <string name="system_users_col_user">Utilizador</string>
@@ -396,4 +394,5 @@
     <string name="accounts_provider_caldav">Servidor de calendário</string>
     <string name="accounts_revoke_confirm">Isto revoga o acesso ao calendário de %1$s. O início de sessão com %2$s mantém-se até o desassociar na página de início de sessão.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Tema desconhecido</string>
 </resources>

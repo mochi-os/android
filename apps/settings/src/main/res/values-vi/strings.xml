@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Tên nhà điều hành</string>
     <string name="system_setting_operator_email">Email của nhà điều hành</string>
     <string name="system_setting_operator_jurisdiction">Khu vực pháp lý của nhà điều hành</string>
-    <string name="system_setting_server_started">Máy chủ đã khởi động</string>
-    <string name="system_setting_server_version">Phiên bản máy chủ</string>
     <string name="system_setting_signup_enabled">Cho phép đăng ký mới</string>
     <string name="system_users_title">Người dùng</string>
     <string name="system_users_col_user">Người dùng</string>
@@ -394,4 +392,5 @@
     <string name="accounts_provider_caldav">Máy chủ lịch</string>
     <string name="accounts_revoke_confirm">Thao tác này sẽ thu hồi quyền truy cập lịch của %1$s. Việc đăng nhập bằng %2$s vẫn còn cho đến khi bạn hủy liên kết trên trang Đăng nhập.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Giao diện không xác định</string>
 </resources>

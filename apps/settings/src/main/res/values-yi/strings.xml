@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">אָפּעראַטאָר נאָמען</string>
     <string name="system_setting_operator_email">אָפּעראַטאָר ע-בריוו</string>
     <string name="system_setting_operator_jurisdiction">אָפּעראַטאָר יוריסדיקציע</string>
-    <string name="system_setting_server_started">סערווער אָנגעהויבן</string>
-    <string name="system_setting_server_version">סערווער־ווערסיע</string>
     <string name="system_setting_signup_enabled">דערלויבן נײַע אָנשרײַבונגען</string>
     <string name="system_users_title">באַניצערס</string>
     <string name="system_users_col_user">באַניצער</string>
@@ -395,4 +393,5 @@
     <string name="accounts_provider_caldav">קאַלענדאַר־סערווער</string>
     <string name="accounts_revoke_confirm">דאָס וועט אָפּרופֿן דעם קאַלענדאַר־צוטריט פֿון %1$s. אײַנלאָגירן מיט %2$s בלײַבט ביז איר וועט עס אָפּבינדן אויף דער אײַנלאָג־זײַט.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">אומבאַקאַנטע טעמע</string>
 </resources>

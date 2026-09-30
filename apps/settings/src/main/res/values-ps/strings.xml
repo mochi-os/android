@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">د چلوونکي نوم</string>
     <string name="system_setting_operator_email">د چلوونکي ایمیل</string>
     <string name="system_setting_operator_jurisdiction">د چلوونکي حوزه</string>
-    <string name="system_setting_server_started">Server پیل شو</string>
-    <string name="system_setting_server_version">د Server نسخه</string>
     <string name="system_setting_signup_enabled">نویو ګډونونو ته اجازه ورکړه</string>
     <string name="system_users_title">کاروونکي</string>
     <string name="system_users_col_user">کاروونکی</string>
@@ -395,4 +393,5 @@
     <string name="accounts_provider_caldav">د کليز سرور</string>
     <string name="accounts_revoke_confirm">دا به د %1$s کليز لاسرسی لغوه کړي. د %2$s سره ننوتل به تر هغه پاتې وي چې تاسو یې د ننوتلو پاڼه کې جلا نه کړئ.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">نامعلوم ښکارندوی</string>
 </resources>
