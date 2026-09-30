@@ -156,16 +156,22 @@ private val SORT_OPTIONS = listOf(
 private val AI_SORT =
     SortOption("ai", R.string.forums_sort_ai, Icons.Outlined.AutoAwesome)
 
-/** One of a forum's activity notifications, as the server names its kind. */
+/**
+ * One of a forum's activity notifications, as the server names its kind.
+ * [covered] is true while another kind that includes this one's notices is
+ * on: the option then shows ticked and fixed, keeping its own stored choice
+ * for when that kind is turned off.
+ */
 private data class NotificationOption(
     val kind: String,
     val labelRes: Int,
+    val covered: (NotificationSettings) -> Boolean = { false },
     val enabled: (NotificationSettings) -> Boolean,
 )
 
 private val NOTIFICATION_OPTIONS = listOf(
     NotificationOption("post", R.string.forums_notifications_post) { it.post },
-    NotificationOption("reply", R.string.forums_notifications_reply) { it.reply },
+    NotificationOption("reply", R.string.forums_notifications_reply, covered = { it.comment }) { it.reply },
     NotificationOption("comment", R.string.forums_notifications_comment) { it.comment },
 )
 
@@ -474,10 +480,12 @@ private fun ForumContent(
                                 ) {
                                     NOTIFICATION_OPTIONS.forEach { option ->
                                         val enabled = option.enabled(notifications)
+                                        val covered = option.covered(notifications)
                                         MochiDropdownMenuItem(
                                             text = { Text(stringResource(option.labelRes)) },
                                             onClick = { viewModel.setNotification(option.kind, !enabled) },
-                                            selected = enabled,
+                                            enabled = !covered,
+                                            selected = enabled || covered,
                                         )
                                     }
                                 }
