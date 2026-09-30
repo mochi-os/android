@@ -34,8 +34,8 @@ object PeopleApp {
     const val ROUTER = "people/router"
 
     const val CONTACTS = "people/contacts?action={action}"
-    const val CONTACTS_ADD = "people/contacts/add?contact={contact}&name={name}"
-    const val CONTACT_NEW = "people/contacts/new"
+    const val CONTACTS_ADD = "people/contacts/add?contact={contact}&name={name}&book={book}"
+    const val CONTACT_NEW = "people/contacts/new?book={book}"
     const val CONTACT_EDIT = "people/contacts/{id}"
     const val BOOK_CREATE = "people/books/create"
     const val BOOK = "people/books/{id}"
@@ -48,9 +48,16 @@ object PeopleApp {
     const val PERSON_VIEW = "people/person/{id}"
     const val DEVICES = "people/devices"
 
-    /** The add screen, on an ordinary search or opened to link one card to the person it finds. */
-    fun contactsAdd(contact: String = "", name: String = ""): String =
-        "people/contacts/add?contact=${Uri.encode(contact)}&name=${Uri.encode(name)}"
+    /**
+     * The add screen, on an ordinary search or opened to link one card to the
+     * person it finds. [book] is the address book being viewed, where a
+     * contact made there goes.
+     */
+    fun contactsAdd(contact: String = "", name: String = "", book: String = ""): String =
+        "people/contacts/add?contact=${Uri.encode(contact)}&name=${Uri.encode(name)}&book=${Uri.encode(book)}"
+
+    /** A new contact, in [book] when it was started from one. */
+    fun contactNew(book: String = ""): String = "people/contacts/new?book=${Uri.encode(book)}"
 
     fun groupDetail(id: String) = "people/groups/$id"
     fun groupAddMember(id: String) = "people/groups/$id/add-member"
@@ -139,7 +146,8 @@ fun NavGraphBuilder.peopleNavGraph(
     composable(
         route = PeopleApp.BOOK,
         arguments = listOf(navArgument("id") { type = NavType.StringType }),
-    ) {
+    ) { backStackEntry ->
+        val book = backStackEntry.arguments?.getString("id").orEmpty()
         ContactsScreen(
             onOpenContact = { id -> navController.navigate(PeopleApp.contactEdit(id)) },
             onOpenBook = { id ->
@@ -155,7 +163,7 @@ fun NavGraphBuilder.peopleNavGraph(
             onOpenNotifications = onOpenNotifications,
             onLogout = onLogout,
             onMessage = { person -> onOpenLink("chat/new?friend=$person") },
-            onAddContact = { navController.navigate(PeopleApp.contactsAdd()) },
+            onAddContact = { navController.navigate(PeopleApp.contactsAdd(book = book)) },
             onConnectDevice = { navController.navigate(PeopleApp.DEVICES) },
         )
     }
@@ -169,11 +177,13 @@ fun NavGraphBuilder.peopleNavGraph(
         arguments = listOf(
             navArgument("contact") { type = NavType.StringType; defaultValue = "" },
             navArgument("name") { type = NavType.StringType; defaultValue = "" },
+            navArgument("book") { type = NavType.StringType; defaultValue = "" },
         ),
-    ) {
+    ) { backStackEntry ->
+        val book = backStackEntry.arguments?.getString("book").orEmpty()
         AddContactScreen(
             onBack = { navController.popBackStack() },
-            onNewContact = { navController.navigate(PeopleApp.CONTACT_NEW) },
+            onNewContact = { navController.navigate(PeopleApp.contactNew(book)) },
             // An accepted invite or a saved contact leaves the list behind
             // stale, and popping back would land on the entry that was already
             // there. Navigating builds a fresh one that reloads.
@@ -185,7 +195,10 @@ fun NavGraphBuilder.peopleNavGraph(
     }
 
     // Registered ahead of CONTACT_EDIT so "new" is not read as a contact id.
-    composable(PeopleApp.CONTACT_NEW) {
+    composable(
+        route = PeopleApp.CONTACT_NEW,
+        arguments = listOf(navArgument("book") { type = NavType.StringType; defaultValue = "" }),
+    ) {
         ContactEditScreen(
             onBack = { navController.popBackStack() },
             onSaved = { navController.openContacts() },

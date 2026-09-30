@@ -210,6 +210,8 @@ interface PeopleApi {
         @Field("name") name: String,
         /** An existing card to link to the person first, so it becomes the friend itself. */
         @Field("contact") contact: String? = null,
+        /** The address book a contact the invite makes goes in; the default one when null. */
+        @Field("book") book: String? = null,
     ): Response<ApiResponse<EmptyResponse>>
 
     @FormUrlEncoded

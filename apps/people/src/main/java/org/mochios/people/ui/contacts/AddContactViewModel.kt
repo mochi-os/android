@@ -91,6 +91,9 @@ class AddContactViewModel @Inject constructor(
      */
     val linking: String = savedStateHandle.get<String>("contact").orEmpty()
 
+    /** The address book being viewed, where a contact made here goes; blank for the default. */
+    private val book: String = savedStateHandle.get<String>("book").orEmpty()
+
     private val _uiState = MutableStateFlow(AddContactUiState())
     val uiState: StateFlow<AddContactUiState> = _uiState.asStateFlow()
 
@@ -197,6 +200,7 @@ class AddContactViewModel @Inject constructor(
             repository.createContact(
                 properties = listOf(ContactProperty("FN", emptyMap(), user.name)),
                 person = user.id,
+                book = book.ifBlank { null },
             )
             _uiState.value = _uiState.value.copy(
                 addedUserIds = _uiState.value.addedUserIds + user.id,
@@ -226,7 +230,13 @@ class AddContactViewModel @Inject constructor(
                     friendedUserIds = _uiState.value.friendedUserIds + user.id,
                 )
             } else {
-                repository.inviteFriend(user.id, user.name, linking.ifBlank { null })
+                // Linking names the card; otherwise the invite makes a
+                // contact, which goes in the book being viewed.
+                if (linking.isNotBlank()) {
+                    repository.inviteFriend(user.id, user.name, contact = linking)
+                } else {
+                    repository.inviteFriend(user.id, user.name, book = book.ifBlank { null })
+                }
                 _uiState.value = _uiState.value.copy(
                     invitedUserIds = _uiState.value.invitedUserIds + user.id,
                     // Inviting creates or links the contact server-side, so the

@@ -14,12 +14,15 @@ package org.mochios.android.sync
  * pobox;extended;street;city;region;postcode;country.
  *
  * The people app's editor and the contacts sync adapter share this shape; the
- * server stores the card as a list of these.
+ * server stores the card as a list of these. [group] is the vCard group tying
+ * a property to its siblings, as `item1.EMAIL` to the `item1.X-ABLabel` that
+ * names it; null for none.
  */
 data class ContactProperty(
     val name: String = "",
     val params: Map<String, List<String>> = emptyMap(),
     val value: String = "",
+    val group: String? = null,
 )
 
 /**
