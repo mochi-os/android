@@ -66,10 +66,6 @@
     <string name="calendars_remove">Sil</string>
     <string name="calendars_remove_title">%1$s Mochi-dən silinsin?</string>
     <string name="calendars_remove_message">Onun tədbirləri orijinal təqvimdə qalır.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d tədbir yeniləndi</item>
-        <item quantity="other">%1$d tədbir yeniləndi</item>
-    </plurals>
     <string name="calendars_today">Bu gün</string>
     <string name="calendars_view_week">Həftə</string>
     <string name="calendars_view_multiweek">Çoxhəftəlik</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Təqvim</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Bu serverdə Google hesabları aktivləşdirilməyib. Onları Parametrlər, Sistem parametrləri bölməsində aktivləşdirin.</string>
     <string name="calendars_subscribe_google_connect">Google hesabı qoşmamısınız.</string>
     <string name="calendars_subscribe_google_connect_action">Google-a qoşul</string>
     <string name="calendars_grant_failed">Təqvimə giriş verilmədi</string>
     <string name="calendars_event_exception">Dəyişdirilmiş təkrar</string>
     <string name="calendars_span_day">%1$s, %2$s ilə %3$s arası</string>
+    <string name="calendars_polled_current">Təqvim güncəldir</string>
+    <string name="calendars_polled_synced">Təqvim sinxronlaşdırıldı</string>
+    <string name="calendars_link_revoke_title">Təqvim ünvanı ləğv edilsin?</string>
+    <string name="calendars_link_revoke_message">Bu ünvana abunə olan təqvimlər yenilənməyi dayandıracaq.</string>
 </resources>

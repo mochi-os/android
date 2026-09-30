@@ -66,13 +66,6 @@
     <string name="calendars_remove">Bain</string>
     <string name="calendars_remove_title">Bain %1$s de Mochi?</string>
     <string name="calendars_remove_message">Fanann a imeachtaí san fhéilire bunaidh.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">Nuashonraíodh %1$d imeacht</item>
-        <item quantity="two">Nuashonraíodh %1$d imeacht</item>
-        <item quantity="few">Nuashonraíodh %1$d imeacht</item>
-        <item quantity="many">Nuashonraíodh %1$d n-imeacht</item>
-        <item quantity="other">Nuashonraíodh %1$d imeacht</item>
-    </plurals>
     <string name="calendars_today">Inniu</string>
     <string name="calendars_view_week">Seachtain</string>
     <string name="calendars_view_multiweek">Ilseachtain</string>
@@ -200,11 +193,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Féilire</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Níl cuntais Google cumasaithe ar an bhfreastalaí seo. Cumasaigh iad faoi Socruithe, Socruithe an chórais.</string>
     <string name="calendars_subscribe_google_connect">Níl cuntas Google ceangailte agat.</string>
     <string name="calendars_subscribe_google_connect_action">Ceangail Google</string>
     <string name="calendars_grant_failed">Níor tugadh rochtain ar an bhféilire</string>
     <string name="calendars_event_exception">Tarlú athraithe</string>
     <string name="calendars_span_day">%1$s, %2$s go %3$s</string>
+    <string name="calendars_polled_current">Tá an féilire cothrom le dáta</string>
+    <string name="calendars_polled_synced">Féilire sioncronaithe</string>
+    <string name="calendars_link_revoke_title">Seoladh an fhéilire a chúlghairm?</string>
+    <string name="calendars_link_revoke_message">Ní nuashonrófar a thuilleadh na féilirí atá liostáilte leis an seoladh seo.</string>
 </resources>

@@ -30,6 +30,8 @@
     <string name="calendars_day_saturday">星期六</string>
     <string name="calendars_link_replace">取代</string>
     <string name="calendars_link_revoke">撤銷</string>
+    <string name="calendars_link_revoke_title">要撤銷日曆地址嗎？</string>
+    <string name="calendars_link_revoke_message">訂閱咗呢個地址嘅日曆會停止更新。</string>
     <string name="calendars_permission_allow">允許</string>
     <string name="calendars_permission_deny">拒絕</string>
     <string name="calendars_sync_title">同步到呢部手機</string>
@@ -64,6 +66,8 @@
     <string name="calendars_remove">移除</string>
     <string name="calendars_remove_title">要將 %1$s 由 Mochi 移除？</string>
     <string name="calendars_remove_message">入面嘅活動會留喺原本嘅日曆。</string>
+    <string name="calendars_polled_current">日曆已經係最新</string>
+    <string name="calendars_polled_synced">日曆已經同步</string>
     <string name="calendars_today">今日</string>
     <string name="calendars_view_day">日</string>
     <string name="calendars_view_week">週</string>
@@ -137,9 +141,6 @@
     <string name="calendars_device_deleted">裝置已移除</string>
     <string name="calendars_device_delete_title">移除呢個裝置？</string>
     <string name="calendars_device_delete_message">要重新設定先可以同步。</string>
-    <plurals name="calendars_polled">
-        <item quantity="other">已更新 %1$d 個活動</item>
-    </plurals>
     <string name="calendars_sync_choose">要同步嘅日曆</string>
     <string name="calendars_poll_large">日曆太大</string>
     <string name="calendars_poll_invalid">呢個地址冇傳回日曆</string>
@@ -183,7 +184,6 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google 日曆</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">呢個伺服器仲未啟用 Google 帳戶。請喺 設定、系統設定 度啟用。</string>
     <string name="calendars_subscribe_google_connect">你仲未連接 Google 帳戶。</string>
     <string name="calendars_subscribe_google_connect_action">連接 Google</string>

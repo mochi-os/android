@@ -66,10 +66,6 @@
     <string name="calendars_remove">Cire</string>
     <string name="calendars_remove_title">A cire %1$s daga Mochi?</string>
     <string name="calendars_remove_message">Tarurrukansa za su ci gaba da kasancewa a cikin kalandar asali.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">An sabunta taro %1$d</item>
-        <item quantity="other">An sabunta tarurruka %1$d</item>
-    </plurals>
     <string name="calendars_today">Yau</string>
     <string name="calendars_view_week">Mako</string>
     <string name="calendars_view_multiweek">Makonni da yawa</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Kalandar Google</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Ba a kunna asusun Google a wannan sabar ba. Kunna su a Saitunan, Saitunan system.</string>
     <string name="calendars_subscribe_google_connect">Ba ka haɗa asusun Google ba.</string>
     <string name="calendars_subscribe_google_connect_action">Haɗa Google</string>
     <string name="calendars_grant_failed">Ba a ba da damar shiga kalanda ba</string>
     <string name="calendars_event_exception">Maimaicin da aka canza</string>
     <string name="calendars_span_day">%1$s, %2$s zuwa %3$s</string>
+    <string name="calendars_polled_current">Kalanda yana da sabbin bayanai</string>
+    <string name="calendars_polled_synced">An daidaita kalanda</string>
+    <string name="calendars_link_revoke_title">A soke adireshin kalanda?</string>
+    <string name="calendars_link_revoke_message">Kalandocin da suka yi rajista da wannan adireshin za su daina sabuntawa.</string>
 </resources>

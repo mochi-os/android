@@ -764,7 +764,6 @@ private fun AccountForm(
                 value = uiState.url,
                 onValueChange = viewModel::setUrl,
                 label = { Text(stringResource(R.string.calendars_subscribe_server_url)) },
-                placeholder = { Text(stringResource(R.string.calendars_subscribe_server_example)) },
                 singleLine = true,
                 enabled = !uiState.isBusy,
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Uri),

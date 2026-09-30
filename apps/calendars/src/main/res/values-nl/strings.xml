@@ -65,10 +65,6 @@
     <string name="calendars_remove">Verwijderen</string>
     <string name="calendars_remove_title">%1$s uit Mochi verwijderen?</string>
     <string name="calendars_remove_message">De afspraken blijven in de oorspronkelijke agenda staan.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d afspraak bijgewerkt</item>
-        <item quantity="other">%1$d afspraken bijgewerkt</item>
-    </plurals>
     <string name="calendars_today">Vandaag</string>
     <string name="calendars_view_week">Week</string>
     <string name="calendars_view_multiweek">Meerdere weken</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Agenda</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google-accounts zijn niet ingeschakeld op deze server. Schakel ze in onder Instellingen, Systeeminstellingen.</string>
     <string name="calendars_subscribe_google_connect">Je hebt geen Google-account verbonden.</string>
     <string name="calendars_subscribe_google_connect_action">Google verbinden</string>
     <string name="calendars_grant_failed">Agendatoegang is niet verleend</string>
     <string name="calendars_event_exception">Gewijzigde herhaling</string>
     <string name="calendars_span_day">%1$s, %2$s tot %3$s</string>
+    <string name="calendars_polled_current">Agenda is actueel</string>
+    <string name="calendars_polled_synced">Agenda gesynchroniseerd</string>
+    <string name="calendars_link_revoke_title">Agenda-adres intrekken?</string>
+    <string name="calendars_link_revoke_message">Agenda\'s die op dit adres zijn geabonneerd, worden niet meer bijgewerkt.</string>
 </resources>

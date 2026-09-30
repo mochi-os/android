@@ -138,10 +138,6 @@
     <string name="calendars_device_deleted">Inalis ang device</string>
     <string name="calendars_device_delete_title">Alisin ang device na ito?</string>
     <string name="calendars_device_delete_message">Kakailanganin itong i-set up ulit para mag-sync.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d event ang na-update</item>
-        <item quantity="other">%1$d na event ang na-update</item>
-    </plurals>
     <string name="calendars_sync_choose">Mga kalendaryong isi-sync</string>
     <string name="calendars_poll_large">Masyadong malaki ang kalendaryo</string>
     <string name="calendars_poll_invalid">Walang kalendaryong ibinalik ang adres</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Calendar</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Hindi pinagana ang mga Google account sa server na ito. Paganahin ang mga ito sa Mga setting, Mga system setting.</string>
     <string name="calendars_subscribe_google_connect">Wala kang nakakonektang Google account.</string>
     <string name="calendars_subscribe_google_connect_action">Ikonekta ang Google</string>
     <string name="calendars_grant_failed">Hindi ibinigay ang access sa kalendaryo</string>
     <string name="calendars_event_exception">Binagong pag-ulit</string>
     <string name="calendars_span_day">%1$s, %2$s hanggang %3$s</string>
+    <string name="calendars_polled_current">Napapanahon ang kalendaryo</string>
+    <string name="calendars_polled_synced">Na-sync ang kalendaryo</string>
+    <string name="calendars_link_revoke_title">Bawiin ang address ng kalendaryo?</string>
+    <string name="calendars_link_revoke_message">Hindi na mapapanibago ang mga kalendaryong sumusubaybay sa address na ito.</string>
 </resources>

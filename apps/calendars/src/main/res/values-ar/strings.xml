@@ -66,14 +66,6 @@
     <string name="calendars_remove">إزالة</string>
     <string name="calendars_remove_title">إزالة %1$s من Mochi؟</string>
     <string name="calendars_remove_message">تبقى أحداثه في التقويم الأصلي.</string>
-    <plurals name="calendars_polled">
-        <item quantity="zero">تم تحديث %1$d حدث</item>
-        <item quantity="one">تم تحديث %1$d حدث</item>
-        <item quantity="two">تم تحديث %1$d حدثين</item>
-        <item quantity="few">تم تحديث %1$d أحداث</item>
-        <item quantity="many">تم تحديث %1$d حدثًا</item>
-        <item quantity="other">تم تحديث %1$d حدث</item>
-    </plurals>
     <string name="calendars_today">اليوم</string>
     <string name="calendars_view_week">أسبوع</string>
     <string name="calendars_view_multiweek">عدة أسابيع</string>
@@ -205,11 +197,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">معرّف Apple</string>
     <string name="calendars_subscribe_google">تقويم Google</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">لم يتم تفعيل حسابات Google على هذا الخادم. فعّلها من الإعدادات، إعدادات النظام.</string>
     <string name="calendars_subscribe_google_connect">لم تربط أي حساب Google.</string>
     <string name="calendars_subscribe_google_connect_action">ربط Google</string>
     <string name="calendars_grant_failed">لم يُمنح الوصول إلى التقويم</string>
     <string name="calendars_event_exception">تكرار معدَّل</string>
     <string name="calendars_span_day">%1$s، %2$s إلى %3$s</string>
+    <string name="calendars_polled_current">التقويم محدَّث</string>
+    <string name="calendars_polled_synced">تمت مزامنة التقويم</string>
+    <string name="calendars_link_revoke_title">إلغاء عنوان التقويم؟</string>
+    <string name="calendars_link_revoke_message">ستتوقف التقويمات المشتركة في هذا العنوان عن التحديث.</string>
 </resources>

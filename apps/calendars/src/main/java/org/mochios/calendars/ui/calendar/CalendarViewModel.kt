@@ -99,7 +99,8 @@ data class LinkState(
 /** Something the screen has to say once rather than hold in its state. */
 sealed class CalendarEvent {
     data class Failed(val error: MochiError) : CalendarEvent()
-    data class Polled(val changed: Int) : CalendarEvent()
+    /** A manual poll finished; a linked calendar's is a two-way sync, and says so. */
+    data class Polled(val linked: Boolean) : CalendarEvent()
 
     /** An occurrence was moved, and [CalendarViewModel.undo] puts it back. */
     data object Moved : CalendarEvent()
@@ -406,7 +407,7 @@ class CalendarViewModel @Inject constructor(
     fun poll(calendar: String) {
         viewModelScope.launch {
             try {
-                _events.tryEmit(CalendarEvent.Polled(repository.pollCalendar(calendar)))
+                _events.tryEmit(CalendarEvent.Polled(repository.pollCalendar(calendar).calendar.linked))
             } catch (e: Exception) {
                 _events.tryEmit(CalendarEvent.Failed(e.toMochiError()))
             }

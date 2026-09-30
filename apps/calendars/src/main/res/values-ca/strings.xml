@@ -66,10 +66,6 @@
     <string name="calendars_remove">Elimina</string>
     <string name="calendars_remove_title">Voleu eliminar %1$s de Mochi?</string>
     <string name="calendars_remove_message">Els seus esdeveniments es mantenen al calendari original.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d esdeveniment actualitzat</item>
-        <item quantity="other">%1$d esdeveniments actualitzats</item>
-    </plurals>
     <string name="calendars_today">Avui</string>
     <string name="calendars_view_week">Setmana</string>
     <string name="calendars_view_multiweek">Diverses setmanes</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">ID d\'Apple</string>
     <string name="calendars_subscribe_google">Google Calendar</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Els comptes de Google no estan activats en aquest servidor. Activa\'ls a Configuració, Configuració del sistema.</string>
     <string name="calendars_subscribe_google_connect">No has connectat cap compte de Google.</string>
     <string name="calendars_subscribe_google_connect_action">Connecta Google</string>
     <string name="calendars_grant_failed">No s\'ha concedit l\'accés al calendari</string>
     <string name="calendars_event_exception">Ocurrència modificada</string>
     <string name="calendars_span_day">%1$s, de %2$s a %3$s</string>
+    <string name="calendars_polled_current">El calendari està actualitzat</string>
+    <string name="calendars_polled_synced">Calendari sincronitzat</string>
+    <string name="calendars_link_revoke_title">Revocar l\'adreça del calendari?</string>
+    <string name="calendars_link_revoke_message">Els calendaris subscrits a aquesta adreça deixaran d\'actualitzar-se.</string>
 </resources>

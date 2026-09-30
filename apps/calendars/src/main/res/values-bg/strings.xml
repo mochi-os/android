@@ -66,10 +66,6 @@
     <string name="calendars_remove">Премахни</string>
     <string name="calendars_remove_title">Да се премахне ли %1$s от Mochi?</string>
     <string name="calendars_remove_message">Събитията му остават в оригиналния календар.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d събитие е обновено</item>
-        <item quantity="other">%1$d събития са обновени</item>
-    </plurals>
     <string name="calendars_today">Днес</string>
     <string name="calendars_view_week">Седмица</string>
     <string name="calendars_view_multiweek">Няколко седмици</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Календар</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Акаунтите в Google не са активирани на този сървър. Активирайте ги от Настройки, Системни настройки.</string>
     <string name="calendars_subscribe_google_connect">Не сте свързали акаунт в Google.</string>
     <string name="calendars_subscribe_google_connect_action">Свързване с Google</string>
     <string name="calendars_grant_failed">Достъпът до календара не беше разрешен</string>
     <string name="calendars_event_exception">Променено повторение</string>
     <string name="calendars_span_day">%1$s, %2$s до %3$s</string>
+    <string name="calendars_polled_current">Календарът е актуален</string>
+    <string name="calendars_polled_synced">Календарът е синхронизиран</string>
+    <string name="calendars_link_revoke_title">Да се отмени ли адресът на календара?</string>
+    <string name="calendars_link_revoke_message">Календарите, абонирани за този адрес, ще спрат да се обновяват.</string>
 </resources>

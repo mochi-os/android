@@ -66,11 +66,6 @@
     <string name="calendars_remove">Noņemt</string>
     <string name="calendars_remove_title">Noņemt %1$s no Mochi?</string>
     <string name="calendars_remove_message">Tā notikumi paliek sākotnējā kalendārā.</string>
-    <plurals name="calendars_polled">
-        <item quantity="zero">atjaunināti %1$d notikumi</item>
-        <item quantity="one">atjaunināts %1$d notikums</item>
-        <item quantity="other">atjaunināti %1$d notikumi</item>
-    </plurals>
     <string name="calendars_today">Šodien</string>
     <string name="calendars_view_week">Nedēļa</string>
     <string name="calendars_view_multiweek">Vairākas nedēļas</string>
@@ -190,11 +185,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google kalendārs</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google konti šajā serverī nav iespējoti. Iespējo tos sadaļā Iestatījumi, Sistēmas iestatījumi.</string>
     <string name="calendars_subscribe_google_connect">Tu neesi savienojis Google kontu.</string>
     <string name="calendars_subscribe_google_connect_action">Savienot Google</string>
     <string name="calendars_grant_failed">Piekļuve kalendāram netika piešķirta</string>
     <string name="calendars_event_exception">Mainīts atkārtojums</string>
     <string name="calendars_span_day">%1$s, no %2$s līdz %3$s</string>
+    <string name="calendars_polled_current">Kalendārs ir aktuāls</string>
+    <string name="calendars_polled_synced">Kalendārs sinhronizēts</string>
+    <string name="calendars_link_revoke_title">Atsaukt kalendāra adresi?</string>
+    <string name="calendars_link_revoke_message">Kalendāri, kas abonē šo adresi, vairs netiks atjaunināti.</string>
 </resources>

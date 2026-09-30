@@ -66,10 +66,6 @@
     <string name="calendars_remove">हटाएँ</string>
     <string name="calendars_remove_title">%1$s को Mochi से हटाएँ?</string>
     <string name="calendars_remove_message">इसके इवेंट मूल कैलेंडर में बने रहेंगे।</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d इवेंट अपडेट किया गया</item>
-        <item quantity="other">%1$d इवेंट अपडेट किए गए</item>
-    </plurals>
     <string name="calendars_today">आज</string>
     <string name="calendars_view_week">सप्ताह</string>
     <string name="calendars_view_multiweek">कई सप्ताह</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google कैलेंडर</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">इस सर्वर पर Google खाते सक्षम नहीं किए गए हैं। उन्हें सेटिंग्स, सिस्टम सेटिंग्स में सक्षम करें।</string>
     <string name="calendars_subscribe_google_connect">आपने कोई Google खाता कनेक्ट नहीं किया है।</string>
     <string name="calendars_subscribe_google_connect_action">Google कनेक्ट करें</string>
     <string name="calendars_grant_failed">कैलेंडर एक्सेस नहीं दिया गया</string>
     <string name="calendars_event_exception">बदली गई पुनरावृत्ति</string>
     <string name="calendars_span_day">%1$s, %2$s से %3$s तक</string>
+    <string name="calendars_polled_current">कैलेंडर अद्यतित है</string>
+    <string name="calendars_polled_synced">कैलेंडर सिंक हो गया</string>
+    <string name="calendars_link_revoke_title">कैलेंडर का पता रद्द करें?</string>
+    <string name="calendars_link_revoke_message">इस पते की सदस्यता लेने वाले कैलेंडर अद्यतन होना बंद कर देंगे।</string>
 </resources>

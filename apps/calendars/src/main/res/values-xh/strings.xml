@@ -138,10 +138,6 @@
     <string name="calendars_device_deleted">Isixhobo sisusiwe</string>
     <string name="calendars_device_delete_title">Susa esi sixhobo?</string>
     <string name="calendars_device_delete_message">Kuya kufuneka simiselwe kwakhona ukuze singqamanise.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">Isiganeko esingu-%1$d sihlaziyiwe</item>
-        <item quantity="other">Iziganeko ezingu-%1$d zihlaziyiwe</item>
-    </plurals>
     <string name="calendars_sync_choose">Iikhalenda ezizakungqanyaniswa</string>
     <string name="calendars_poll_large">Ikhalenda inkulu kakhulu</string>
     <string name="calendars_poll_invalid">Idilesi ayibuyisanga khalenda</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Ikhalenda yeGoogle</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Ii-akhawunti ze-Google azivulwanga kule seva. Zivule ku-Iisetingi, Iisetingi zenkqubo.</string>
     <string name="calendars_subscribe_google_connect">Awukadibanisi i-akhawunti ye-Google.</string>
     <string name="calendars_subscribe_google_connect_action">Qhagamshela i-Google</string>
     <string name="calendars_grant_failed">Ufikelelo lwekhalenda alunikwanga</string>
     <string name="calendars_event_exception">Isiganeko esiguqulweyo</string>
     <string name="calendars_span_day">%1$s, ukusuka ku-%2$s ukuya ku-%3$s</string>
+    <string name="calendars_polled_current">Ikhalenda ihlaziyiwe</string>
+    <string name="calendars_polled_synced">Ikhalenda ilungelelanisiwe</string>
+    <string name="calendars_link_revoke_title">Ufuna ukurhoxisa idilesi yekhalenda?</string>
+    <string name="calendars_link_revoke_message">Iikhalenda ezibhalisele kule dilesi ziza kuyeka ukuhlaziywa.</string>
 </resources>

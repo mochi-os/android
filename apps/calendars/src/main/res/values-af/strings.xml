@@ -66,10 +66,6 @@
     <string name="calendars_remove">Verwyder</string>
     <string name="calendars_remove_title">Verwyder %1$s uit Mochi?</string>
     <string name="calendars_remove_message">Sy gebeurtenisse bly in die oorspronklike kalender.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d gebeurtenis opgedateer</item>
-        <item quantity="other">%1$d gebeurtenisse opgedateer</item>
-    </plurals>
     <string name="calendars_today">Vandag</string>
     <string name="calendars_view_week">Week</string>
     <string name="calendars_view_multiweek">Meerdere weke</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Kalender</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google-rekeninge is nie op hierdie bediener geaktiveer nie. Aktiveer hulle onder Instellings, Stelselinstellings.</string>
     <string name="calendars_subscribe_google_connect">Jy het nog nie \'n Google-rekening verbind nie.</string>
     <string name="calendars_subscribe_google_connect_action">Verbind Google</string>
     <string name="calendars_grant_failed">Kalendertoegang is nie toegestaan nie</string>
     <string name="calendars_event_exception">Veranderde herhaling</string>
     <string name="calendars_span_day">%1$s, %2$s tot %3$s</string>
+    <string name="calendars_polled_current">Kalender is op datum</string>
+    <string name="calendars_polled_synced">Kalender gesinkroniseer</string>
+    <string name="calendars_link_revoke_title">Herroep die kalenderadres?</string>
+    <string name="calendars_link_revoke_message">Kalenders wat op hierdie adres ingeteken is, sal nie meer bygewerk word nie.</string>
 </resources>

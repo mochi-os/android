@@ -66,9 +66,6 @@
     <string name="calendars_remove">Alih keluar</string>
     <string name="calendars_remove_title">Alih keluar %1$s daripada Mochi?</string>
     <string name="calendars_remove_message">Acaranya kekal dalam kalendar asal.</string>
-    <plurals name="calendars_polled">
-        <item quantity="other">%1$d acara dikemas kini</item>
-    </plurals>
     <string name="calendars_today">Hari ini</string>
     <string name="calendars_view_week">Minggu</string>
     <string name="calendars_view_multiweek">Berbilang minggu</string>
@@ -180,11 +177,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Kalendar Google</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Akaun Google belum didayakan pada pelayan ini. Dayakannya di Tetapan, Tetapan sistem.</string>
     <string name="calendars_subscribe_google_connect">Anda belum menyambungkan akaun Google.</string>
     <string name="calendars_subscribe_google_connect_action">Sambungkan Google</string>
     <string name="calendars_grant_failed">Akses kalendar tidak diberikan</string>
     <string name="calendars_event_exception">Ulangan yang diubah</string>
     <string name="calendars_span_day">%1$s, %2$s hingga %3$s</string>
+    <string name="calendars_polled_current">Kalendar sudah terkini</string>
+    <string name="calendars_polled_synced">Kalendar disegerakkan</string>
+    <string name="calendars_link_revoke_title">Batalkan alamat kalendar?</string>
+    <string name="calendars_link_revoke_message">Kalendar yang melanggan alamat ini akan berhenti dikemas kini.</string>
 </resources>

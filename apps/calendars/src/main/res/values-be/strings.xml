@@ -66,12 +66,6 @@
     <string name="calendars_remove">Выдаліць</string>
     <string name="calendars_remove_title">Выдаліць %1$s з Mochi?</string>
     <string name="calendars_remove_message">Яго падзеі застаюцца ў зыходным календары.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">Абноўлена %1$d падзея</item>
-        <item quantity="few">Абноўлена %1$d падзеі</item>
-        <item quantity="many">Абноўлена %1$d падзей</item>
-        <item quantity="other">Абноўлена %1$d падзеі</item>
-    </plurals>
     <string name="calendars_today">Сёння</string>
     <string name="calendars_view_week">Тыдзень</string>
     <string name="calendars_view_multiweek">Некалькі тыдняў</string>
@@ -195,11 +189,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Каляндар</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Уліковыя запісы Google не ўключаны на гэтым серверы. Уключыце іх у Налады, Сістэмныя налады.</string>
     <string name="calendars_subscribe_google_connect">Вы не падключылі ўліковы запіс Google.</string>
     <string name="calendars_subscribe_google_connect_action">Злучыць Google</string>
     <string name="calendars_grant_failed">Доступ да календара не быў нададзены</string>
     <string name="calendars_event_exception">Зменены паўтор</string>
     <string name="calendars_span_day">%1$s, з %2$s да %3$s</string>
+    <string name="calendars_polled_current">Каляндар актуальны</string>
+    <string name="calendars_polled_synced">Каляндар сінхранізаваны</string>
+    <string name="calendars_link_revoke_title">Адклікаць адрас календара?</string>
+    <string name="calendars_link_revoke_message">Календары, падпісаныя на гэты адрас, перастануць абнаўляцца.</string>
 </resources>

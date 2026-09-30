@@ -35,6 +35,7 @@ import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.LinkResponse
 import org.mochios.calendars.model.Preferences
 import org.mochios.calendars.model.GrantResponse
+import org.mochios.calendars.model.PollResponse
 import org.mochios.calendars.model.RemoteCalendar
 import org.mochios.calendars.ui.calendar.Bounds
 import org.mochios.calendars.ui.editor.excluded
@@ -216,8 +217,8 @@ class CalendarsRepository @Inject constructor(
     suspend fun refreshCalendars(): Boolean =
         call { api.refreshCalendars().unwrap().changed }.also { if (it) announce() }
 
-    suspend fun pollCalendar(calendar: String): Int = call {
-        api.pollCalendar(calendar).unwrap().changed
+    suspend fun pollCalendar(calendar: String): PollResponse = call {
+        api.pollCalendar(calendar).unwrap()
     }.also { announce() }
 
     /** Resolve a permission key to its human label. */

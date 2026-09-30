@@ -151,6 +151,23 @@ fun LinkDialog(
     )
 }
 
+/** Confirms revoking a calendar's ICS link, which stops every subscriber's copy updating. */
+@Composable
+fun RevokeLinkDialog(
+    onDismiss: () -> Unit,
+    onConfirm: () -> Unit,
+) {
+    MochiAlertDialog(
+        onDismissRequest = onDismiss,
+        title = stringResource(R.string.calendars_link_revoke_title),
+        text = stringResource(R.string.calendars_link_revoke_message),
+        confirmText = stringResource(R.string.calendars_link_revoke),
+        onConfirm = onConfirm,
+        destructive = true,
+        dismissText = stringResource(MochiR.string.common_cancel),
+    )
+}
+
 /**
  * The preferences the views read: the working hours they shade, the work
  * days, how many weeks a multiweek view shows, the default event length, the

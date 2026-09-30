@@ -66,13 +66,6 @@
     <string name="calendars_remove">Neħħi</string>
     <string name="calendars_remove_title">Tneħħi %1$s minn Mochi?</string>
     <string name="calendars_remove_message">L-avvenimenti tiegħu jibqgħu fil-kalendarju oriġinali.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d avveniment aġġornat</item>
-        <item quantity="two">%1$d avvenimenti aġġornati</item>
-        <item quantity="few">%1$d avvenimenti aġġornati</item>
-        <item quantity="many">%1$d avveniment aġġornat</item>
-        <item quantity="other">%1$d avveniment aġġornat</item>
-    </plurals>
     <string name="calendars_today">Illum</string>
     <string name="calendars_view_week">Ġimgħa</string>
     <string name="calendars_view_multiweek">Diversi ġimgħat</string>
@@ -200,11 +193,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Kalendarju Google</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Il-kontijiet ta\' Google mhumiex attivati fuq dan is-server. Attivahom taħt Settings, Settings tas-sistema.</string>
     <string name="calendars_subscribe_google_connect">Ma qabbadtx kont ta\' Google.</string>
     <string name="calendars_subscribe_google_connect_action">Qabbad Google</string>
     <string name="calendars_grant_failed">L-aċċess għall-kalendarju ma ngħatax</string>
     <string name="calendars_event_exception">Okkorrenza mibdula</string>
     <string name="calendars_span_day">%1$s, minn %2$s sa %3$s</string>
+    <string name="calendars_polled_current">Il-kalendarju huwa aġġornat</string>
+    <string name="calendars_polled_synced">Il-kalendarju ġie sinkronizzat</string>
+    <string name="calendars_link_revoke_title">Tirrevoka l-indirizz tal-kalendarju?</string>
+    <string name="calendars_link_revoke_message">Il-kalendarji abbonati għal dan l-indirizz ma jibqgħux jiġu aġġornati.</string>
 </resources>

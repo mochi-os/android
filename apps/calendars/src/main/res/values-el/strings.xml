@@ -66,10 +66,6 @@
     <string name="calendars_remove">Αφαίρεση</string>
     <string name="calendars_remove_title">Αφαίρεση του %1$s από το Mochi;</string>
     <string name="calendars_remove_message">Τα συμβάντα του παραμένουν στο αρχικό ημερολόγιο.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">Ενημερώθηκε %1$d συμβάν</item>
-        <item quantity="other">Ενημερώθηκαν %1$d συμβάντα</item>
-    </plurals>
     <string name="calendars_today">Σήμερα</string>
     <string name="calendars_view_week">Εβδομάδα</string>
     <string name="calendars_view_multiweek">Πολλές εβδομάδες</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Ημερολόγιο Google</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Οι λογαριασμοί Google δεν έχουν ενεργοποιηθεί σε αυτόν τον διακομιστή. Ενεργοποιήστε τους από Ρυθμίσεις, Ρυθμίσεις συστήματος.</string>
     <string name="calendars_subscribe_google_connect">Δεν έχετε συνδέσει λογαριασμό Google.</string>
     <string name="calendars_subscribe_google_connect_action">Σύνδεση με Google</string>
     <string name="calendars_grant_failed">Δεν δόθηκε πρόσβαση στο ημερολόγιο</string>
     <string name="calendars_event_exception">Τροποποιημένη επανάληψη</string>
     <string name="calendars_span_day">%1$s, %2$s έως %3$s</string>
+    <string name="calendars_polled_current">Το ημερολόγιο είναι ενημερωμένο</string>
+    <string name="calendars_polled_synced">Το ημερολόγιο συγχρονίστηκε</string>
+    <string name="calendars_link_revoke_title">Ανάκληση της διεύθυνσης του ημερολογίου;</string>
+    <string name="calendars_link_revoke_message">Τα ημερολόγια που έχουν εγγραφεί σε αυτή τη διεύθυνση θα σταματήσουν να ενημερώνονται.</string>
 </resources>

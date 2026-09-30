@@ -66,10 +66,6 @@
     <string name="calendars_remove">Rimuovi</string>
     <string name="calendars_remove_title">Rimuovere %1$s da Mochi?</string>
     <string name="calendars_remove_message">I suoi eventi restano nel calendario originale.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d evento aggiornato</item>
-        <item quantity="other">%1$d eventi aggiornati</item>
-    </plurals>
     <string name="calendars_today">Oggi</string>
     <string name="calendars_view_week">Settimana</string>
     <string name="calendars_view_multiweek">Più settimane</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">ID Apple</string>
     <string name="calendars_subscribe_google">Google Calendar</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Gli account Google non sono abilitati su questo server. Abilitali in Impostazioni, Impostazioni di sistema.</string>
     <string name="calendars_subscribe_google_connect">Non hai connesso alcun account Google.</string>
     <string name="calendars_subscribe_google_connect_action">Connetti Google</string>
     <string name="calendars_grant_failed">L\'accesso al calendario non è stato concesso</string>
     <string name="calendars_event_exception">Ricorrenza modificata</string>
     <string name="calendars_span_day">%1$s, dalle %2$s alle %3$s</string>
+    <string name="calendars_polled_current">Calendario aggiornato</string>
+    <string name="calendars_polled_synced">Calendario sincronizzato</string>
+    <string name="calendars_link_revoke_title">Revocare l\'indirizzo del calendario?</string>
+    <string name="calendars_link_revoke_message">I calendari abbonati a questo indirizzo non verranno più aggiornati.</string>
 </resources>

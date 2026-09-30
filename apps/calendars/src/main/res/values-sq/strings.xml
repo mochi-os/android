@@ -138,10 +138,6 @@
     <string name="calendars_device_deleted">Pajisja u hoq</string>
     <string name="calendars_device_delete_title">Të hiqet kjo pajisje?</string>
     <string name="calendars_device_delete_message">Do të duhet të konfigurohet sërish për sinkronizim.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d ngjarje u përditësua</item>
-        <item quantity="other">%1$d ngjarje u përditësuan</item>
-    </plurals>
     <string name="calendars_sync_choose">Kalendarët për sinkronizim</string>
     <string name="calendars_poll_large">Kalendari është shumë i madh</string>
     <string name="calendars_poll_invalid">Adresa nuk ktheu një kalendar</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Kalendari Google</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Llogaritë Google nuk janë aktivizuar në këtë server. Aktivizoji te Cilësimet, Cilësimet e sistemit.</string>
     <string name="calendars_subscribe_google_connect">Nuk ke lidhur asnjë llogari Google.</string>
     <string name="calendars_subscribe_google_connect_action">Lidh Google</string>
     <string name="calendars_grant_failed">Qasja në kalendar nuk u dha</string>
     <string name="calendars_event_exception">Përsëritje e ndryshuar</string>
     <string name="calendars_span_day">%1$s, nga %2$s deri në %3$s</string>
+    <string name="calendars_polled_current">Kalendari është i përditësuar</string>
+    <string name="calendars_polled_synced">Kalendari u sinkronizua</string>
+    <string name="calendars_link_revoke_title">Të anulohet adresa e kalendarit?</string>
+    <string name="calendars_link_revoke_message">Kalendarët e abonuar në këtë adresë do të ndalojnë së përditësuari.</string>
 </resources>

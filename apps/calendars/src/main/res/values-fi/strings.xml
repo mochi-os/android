@@ -66,10 +66,6 @@
     <string name="calendars_remove">Poista</string>
     <string name="calendars_remove_title">Poistetaanko %1$s Mochista?</string>
     <string name="calendars_remove_message">Sen tapahtumat säilyvät alkuperäisessä kalenterissa.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d tapahtuma päivitetty</item>
-        <item quantity="other">%1$d tapahtumaa päivitetty</item>
-    </plurals>
     <string name="calendars_today">Tänään</string>
     <string name="calendars_view_week">Viikko</string>
     <string name="calendars_view_multiweek">Monta viikkoa</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Kalenteri</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google-tilit eivät ole käytössä tällä palvelimella. Ota ne käyttöön kohdassa Asetukset, Järjestelmäasetukset.</string>
     <string name="calendars_subscribe_google_connect">Et ole yhdistänyt Google-tiliä.</string>
     <string name="calendars_subscribe_google_connect_action">Yhdistä Google</string>
     <string name="calendars_grant_failed">Kalenterin käyttöoikeutta ei myönnetty</string>
     <string name="calendars_event_exception">Muutettu toistokerta</string>
     <string name="calendars_span_day">%1$s, %2$s–%3$s</string>
+    <string name="calendars_polled_current">Kalenteri on ajan tasalla</string>
+    <string name="calendars_polled_synced">Kalenteri synkronoitu</string>
+    <string name="calendars_link_revoke_title">Peruutetaanko kalenterin osoite?</string>
+    <string name="calendars_link_revoke_message">Tämän osoitteen tilanneet kalenterit lakkaavat päivittymästä.</string>
 </resources>

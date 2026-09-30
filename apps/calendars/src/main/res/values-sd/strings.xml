@@ -138,10 +138,6 @@
     <string name="calendars_device_deleted">ڊوائيس هٽايو ويو</string>
     <string name="calendars_device_delete_title">هي ڊوائيس هٽائجي؟</string>
     <string name="calendars_device_delete_message">سنڪ ڪرڻ لاءِ ان کي ٻيهر سيٽ ڪرڻو پوندو.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d واقعو اپڊيٽ ٿيو</item>
-        <item quantity="other">%1$d واقعا اپڊيٽ ٿيا</item>
-    </plurals>
     <string name="calendars_sync_choose">سنڪ ڪرڻ لاءِ ڪئلينڊر</string>
     <string name="calendars_poll_large">ڪئلينڊر تمام وڏو آهي</string>
     <string name="calendars_poll_invalid">پتي مان ڪوبه ڪئلينڊر نه مليو</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google ڪئلينڊر</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">هن سرور تي Google اڪائونٽ فعال نه ڪيا ويا آهن. انهن کي سيٽنگون، سسٽم سيٽنگون ۾ فعال ڪريو.</string>
     <string name="calendars_subscribe_google_connect">توهان ڪوبه Google اڪائونٽ نه ڳنڍيو آهي.</string>
     <string name="calendars_subscribe_google_connect_action">Google ڳنڍيو</string>
     <string name="calendars_grant_failed">ڪئلينڊر رسائي نه ڏني وئي</string>
     <string name="calendars_event_exception">تبديل ٿيل واقعو</string>
     <string name="calendars_span_day">%1$s، %2$s کان %3$s</string>
+    <string name="calendars_polled_current">ڪئلينڊر تازو آهي</string>
+    <string name="calendars_polled_synced">ڪئلينڊر سنڪ ٿي ويو</string>
+    <string name="calendars_link_revoke_title">ڪئلينڊر جو پتو منسوخ ڪجي؟</string>
+    <string name="calendars_link_revoke_message">هن پتي جي رڪنيت وارا ڪئلينڊر تازه ٿيڻ بند ٿي ويندا.</string>
 </resources>

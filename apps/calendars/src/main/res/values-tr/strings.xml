@@ -138,10 +138,6 @@
     <string name="calendars_device_deleted">Cihaz kaldırıldı</string>
     <string name="calendars_device_delete_title">Bu cihaz kaldırılsın mı?</string>
     <string name="calendars_device_delete_message">Eşitlemek için yeniden kurulması gerekir.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d etkinlik güncellendi</item>
-        <item quantity="other">%1$d etkinlik güncellendi</item>
-    </plurals>
     <string name="calendars_sync_choose">Eşitlenecek takvimler</string>
     <string name="calendars_poll_large">Takvim çok büyük</string>
     <string name="calendars_poll_invalid">Adres bir takvim döndürmedi</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple kimliği</string>
     <string name="calendars_subscribe_google">Google Takvim</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Bu sunucuda Google hesapları etkinleştirilmedi. Bunları Ayarlar, Sistem ayarları bölümünden etkinleştirin.</string>
     <string name="calendars_subscribe_google_connect">Google hesabı bağlamadınız.</string>
     <string name="calendars_subscribe_google_connect_action">Google\'a bağlan</string>
     <string name="calendars_grant_failed">Takvim erişimi verilmedi</string>
     <string name="calendars_event_exception">Değiştirilmiş yineleme</string>
     <string name="calendars_span_day">%1$s, %2$s - %3$s</string>
+    <string name="calendars_polled_current">Takvim güncel</string>
+    <string name="calendars_polled_synced">Takvim senkronize edildi</string>
+    <string name="calendars_link_revoke_title">Takvim adresi iptal edilsin mi?</string>
+    <string name="calendars_link_revoke_message">Bu adrese abone olan takvimler artık güncellenmeyecek.</string>
 </resources>

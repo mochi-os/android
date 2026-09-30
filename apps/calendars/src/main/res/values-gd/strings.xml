@@ -66,12 +66,6 @@
     <string name="calendars_remove">Thoir air falbh</string>
     <string name="calendars_remove_title">A bheil thu airson %1$s a thoirt air falbh à Mochi?</string>
     <string name="calendars_remove_message">Fanaidh na tachartasan aige sa mhìosachan thùsail.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">Chaidh %1$d tachartas ùrachadh</item>
-        <item quantity="two">Chaidh %1$d thachartas ùrachadh</item>
-        <item quantity="few">Chaidh %1$d tachartasan ùrachadh</item>
-        <item quantity="other">Chaidh %1$d tachartas ùrachadh</item>
-    </plurals>
     <string name="calendars_today">An-diugh</string>
     <string name="calendars_view_week">Seachdain</string>
     <string name="calendars_view_multiweek">Iomadh seachdain</string>
@@ -195,11 +189,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Mìosachan Google</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Chan eil cunntasan Google air an cur an comas air an fhrithealaiche seo. Cuir an comas iad fo Roghainnean, Roghainnean an t-siostaim.</string>
     <string name="calendars_subscribe_google_connect">Cha do cheangail thu cunntas Google.</string>
     <string name="calendars_subscribe_google_connect_action">Ceangail Google</string>
     <string name="calendars_grant_failed">Cha deach inntrigeadh mìosachain a cheadachadh</string>
     <string name="calendars_event_exception">Turas atharraichte</string>
     <string name="calendars_span_day">%1$s, %2$s gu %3$s</string>
+    <string name="calendars_polled_current">Tha am mìosachan ùraichte</string>
+    <string name="calendars_polled_synced">Mìosachan sioncronaichte</string>
+    <string name="calendars_link_revoke_title">A bheil thu airson seòladh a\' mhìosachain a chùl-ghairm?</string>
+    <string name="calendars_link_revoke_message">Cha tèid na mìosachain a tha fo-sgrìobhte ris an t-seòladh seo ùrachadh tuilleadh.</string>
 </resources>

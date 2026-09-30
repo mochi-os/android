@@ -144,12 +144,6 @@
     <string name="calendars_device_deleted">Naprava odstranjena</string>
     <string name="calendars_device_delete_title">Odstranim to napravo?</string>
     <string name="calendars_device_delete_message">Za sinhronizacijo jo bo treba znova nastaviti.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">Posodobljen %1$d dogodek</item>
-        <item quantity="two">Posodobljena %1$d dogodka</item>
-        <item quantity="few">Posodobljeni %1$d dogodki</item>
-        <item quantity="other">Posodobljenih %1$d dogodkov</item>
-    </plurals>
     <string name="calendars_sync_choose">Koledarji za sinhronizacijo</string>
     <string name="calendars_poll_large">Koledar je prevelik</string>
     <string name="calendars_poll_invalid">Naslov ni vrnil koledarja</string>
@@ -195,11 +189,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Koledar</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Računi Google na tem strežniku niso omogočeni. Omogočite jih v Nastavitve, Sistemske nastavitve.</string>
     <string name="calendars_subscribe_google_connect">Niste povezali računa Google.</string>
     <string name="calendars_subscribe_google_connect_action">Poveži Google</string>
     <string name="calendars_grant_failed">Dostop do koledarja ni bil odobren</string>
     <string name="calendars_event_exception">Spremenjena ponovitev</string>
     <string name="calendars_span_day">%1$s, %2$s do %3$s</string>
+    <string name="calendars_polled_current">Koledar je posodobljen</string>
+    <string name="calendars_polled_synced">Koledar sinhroniziran</string>
+    <string name="calendars_link_revoke_title">Preklicati naslov koledarja?</string>
+    <string name="calendars_link_revoke_message">Koledarji, naročeni na ta naslov, se ne bodo več posodabljali.</string>
 </resources>

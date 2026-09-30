@@ -66,10 +66,6 @@
     <string name="calendars_remove">Kendu</string>
     <string name="calendars_remove_title">%1$s Mochitik kendu?</string>
     <string name="calendars_remove_message">Haren gertaerak jatorrizko egutegian geratzen dira.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">Gertaera %1$d eguneratu da</item>
-        <item quantity="other">%1$d gertaera eguneratu dira</item>
-    </plurals>
     <string name="calendars_today">Gaur</string>
     <string name="calendars_view_week">Astea</string>
     <string name="calendars_view_multiweek">Aste anitz</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Egutegia</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google kontuak ez daude gaituta zerbitzari honetan. Gaitu itzazu Ezarpenak, Sistemako ezarpenak atalean.</string>
     <string name="calendars_subscribe_google_connect">Ez duzu Google konturik konektatu.</string>
     <string name="calendars_subscribe_google_connect_action">Konektatu Google</string>
     <string name="calendars_grant_failed">Ez da egutegirako sarbidea eman</string>
     <string name="calendars_event_exception">Aldatutako agerraldia</string>
     <string name="calendars_span_day">%1$s, %2$s - %3$s</string>
+    <string name="calendars_polled_current">Egutegia eguneratuta dago</string>
+    <string name="calendars_polled_synced">Egutegia sinkronizatuta</string>
+    <string name="calendars_link_revoke_title">Egutegiaren helbidea indargabetu?</string>
+    <string name="calendars_link_revoke_message">Helbide honetara harpidetutako egutegiak eguneratzeari utziko diote.</string>
 </resources>

@@ -66,10 +66,6 @@
     <string name="calendars_remove">Հեռացնել</string>
     <string name="calendars_remove_title">Հեռացնե՞լ %1$s-ը Mochi-ից։</string>
     <string name="calendars_remove_message">Դրա միջոցառումները մնում են սկզբնական օրացույցում։</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d միջոցառում թարմացվեց</item>
-        <item quantity="other">%1$d միջոցառում թարմացվեց</item>
-    </plurals>
     <string name="calendars_today">Այսօր</string>
     <string name="calendars_view_week">Շաբաթ</string>
     <string name="calendars_view_multiweek">Մի քանի շաբաթ</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Օրացույց</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google հաշիվներն այս սերվերում միացված չեն։ Միացրեք դրանք Կարգավորումներ, Համակարգի կարգավորումներ բաժնում։</string>
     <string name="calendars_subscribe_google_connect">Դուք Google հաշիվ չեք միացրել։</string>
     <string name="calendars_subscribe_google_connect_action">Միացնել Google-ը</string>
     <string name="calendars_grant_failed">Օրացույցի մուտքը չի տրամադրվել</string>
     <string name="calendars_event_exception">Փոփոխված կրկնություն</string>
     <string name="calendars_span_day">%1$s, %2$s-ից մինչև %3$s</string>
+    <string name="calendars_polled_current">Օրացույցը թարմ է</string>
+    <string name="calendars_polled_synced">Օրացույցը համաժամանակեցվեց</string>
+    <string name="calendars_link_revoke_title">Չեղարկե՞լ օրացույցի հասցեն</string>
+    <string name="calendars_link_revoke_message">Այս հասցեին բաժանորդագրված օրացույցներն այլևս չեն թարմացվի։</string>
 </resources>

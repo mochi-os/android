@@ -66,10 +66,6 @@
     <string name="calendars_remove">Алуу</string>
     <string name="calendars_remove_title">%1$s Mochi-ден алып салынсынбы?</string>
     <string name="calendars_remove_message">Анын иш-чаралары баштапкы календарда калат.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d иш-чара жаңыланды</item>
-        <item quantity="other">%1$d иш-чара жаңыланды</item>
-    </plurals>
     <string name="calendars_today">Бүгүн</string>
     <string name="calendars_view_week">Жума</string>
     <string name="calendars_view_multiweek">Бир нече жума</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Календарь</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Бул серверде Google аккаунттары иштетилген эмес. Аларды Жөндөөлөр, Системалык жөндөөлөр бөлүмүнөн иштетиңиз.</string>
     <string name="calendars_subscribe_google_connect">Сиз Google аккаунтун туташтырган жоксуз.</string>
     <string name="calendars_subscribe_google_connect_action">Google\'га туташуу</string>
     <string name="calendars_grant_failed">Календарга жетүү берилген жок</string>
     <string name="calendars_event_exception">Өзгөртүлгөн кайталануу</string>
     <string name="calendars_span_day">%1$s, %2$s - %3$s</string>
+    <string name="calendars_polled_current">Календарь жаңыртылган</string>
+    <string name="calendars_polled_synced">Календарь синхрондоштурулду</string>
+    <string name="calendars_link_revoke_title">Календардын дарегин кайтарып алуу керекпи?</string>
+    <string name="calendars_link_revoke_message">Бул дарекке жазылган календарлар мындан ары жаңыланбай калат.</string>
 </resources>

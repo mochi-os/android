@@ -138,10 +138,6 @@
     <string name="calendars_device_deleted">పరికరం తీసివేయబడింది</string>
     <string name="calendars_device_delete_title">ఈ పరికరాన్ని తీసివేయాలా?</string>
     <string name="calendars_device_delete_message">సింక్ చేయడానికి దీన్ని మళ్లీ సెటప్ చేయాల్సి ఉంటుంది.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d ఈవెంట్ నవీకరించబడింది</item>
-        <item quantity="other">%1$d ఈవెంట్‌లు నవీకరించబడ్డాయి</item>
-    </plurals>
     <string name="calendars_sync_choose">సింక్ చేయాల్సిన క్యాలెండర్‌లు</string>
     <string name="calendars_poll_large">క్యాలెండర్ చాలా పెద్దది</string>
     <string name="calendars_poll_invalid">చిరునామా క్యాలెండర్‌ను అందించలేదు</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google క్యాలెండర్</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">ఈ సర్వర్‌లో Google ఖాతాలు ప్రారంభించబడలేదు. వాటిని సెట్టింగ్‌లు, సిస్టమ్ సెట్టింగ్‌లు లో ప్రారంభించండి.</string>
     <string name="calendars_subscribe_google_connect">మీరు Google ఖాతాను కనెక్ట్ చేయలేదు.</string>
     <string name="calendars_subscribe_google_connect_action">Google కనెక్ట్ చేయండి</string>
     <string name="calendars_grant_failed">క్యాలెండర్ యాక్సెస్ ఇవ్వబడలేదు</string>
     <string name="calendars_event_exception">మార్చిన పునరావృత్తి</string>
     <string name="calendars_span_day">%1$s, %2$s నుండి %3$s వరకు</string>
+    <string name="calendars_polled_current">క్యాలెండర్ తాజాగా ఉంది</string>
+    <string name="calendars_polled_synced">క్యాలెండర్ సింక్ చేయబడింది</string>
+    <string name="calendars_link_revoke_title">క్యాలెండర్ చిరునామాను ఉపసంహరించాలా?</string>
+    <string name="calendars_link_revoke_message">ఈ చిరునామాకు చందా చేసిన క్యాలెండర్‌లు ఇకపై నవీకరించబడవు.</string>
 </resources>

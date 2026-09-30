@@ -66,10 +66,6 @@
     <string name="calendars_remove">حذف</string>
     <string name="calendars_remove_title">%1$s از Mochi حذف شود؟</string>
     <string name="calendars_remove_message">رویدادهای آن در تقویم اصلی باقی می‌مانند.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d رویداد به‌روزرسانی شد</item>
-        <item quantity="other">%1$d رویداد به‌روزرسانی شد</item>
-    </plurals>
     <string name="calendars_today">امروز</string>
     <string name="calendars_view_week">هفته</string>
     <string name="calendars_view_multiweek">چند هفته</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">تقویم Google</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">حساب‌های Google در این سرور فعال نشده‌اند. آن‌ها را در تنظیمات، تنظیمات سیستم فعال کنید.</string>
     <string name="calendars_subscribe_google_connect">هیچ حساب Google متصل نکرده‌اید.</string>
     <string name="calendars_subscribe_google_connect_action">اتصال به Google</string>
     <string name="calendars_grant_failed">دسترسی به تقویم داده نشد</string>
     <string name="calendars_event_exception">رخداد تغییریافته</string>
     <string name="calendars_span_day">%1$s، %2$s تا %3$s</string>
+    <string name="calendars_polled_current">تقویم به‌روز است</string>
+    <string name="calendars_polled_synced">تقویم همگام‌سازی شد</string>
+    <string name="calendars_link_revoke_title">نشانی تقویم باطل شود؟</string>
+    <string name="calendars_link_revoke_message">تقویم‌هایی که در این نشانی مشترک شده‌اند دیگر به‌روزرسانی نمی‌شوند.</string>
 </resources>

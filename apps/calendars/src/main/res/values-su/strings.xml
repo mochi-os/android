@@ -135,9 +135,6 @@
     <string name="calendars_device_deleted">Alat dipiceun</string>
     <string name="calendars_device_delete_title">Piceun alat ieu?</string>
     <string name="calendars_device_delete_message">Kedah disetél deui supados tiasa sinkron.</string>
-    <plurals name="calendars_polled">
-        <item quantity="other">%1$d acara diropéa</item>
-    </plurals>
     <string name="calendars_sync_choose">Kalénder nu rék disinkronkeun</string>
     <string name="calendars_poll_large">Kalénderna kagedéan</string>
     <string name="calendars_poll_invalid">Alamat teu ngabalikeun kalénder</string>
@@ -180,11 +177,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Kalénder</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Akun Google tacan diaktipkeun dina server ieu. Aktipkeun dina Setélan, Setélan sistem.</string>
     <string name="calendars_subscribe_google_connect">Anjeun tacan nyambungkeun akun Google.</string>
     <string name="calendars_subscribe_google_connect_action">Sambungkeun Google</string>
     <string name="calendars_grant_failed">Aksés kalénder henteu dipasihkeun</string>
     <string name="calendars_event_exception">Kajadian nu dirobah</string>
     <string name="calendars_span_day">%1$s, %2$s nepi ka %3$s</string>
+    <string name="calendars_polled_current">Kalénder geus panganyarna</string>
+    <string name="calendars_polled_synced">Kalénder geus disinkronkeun</string>
+    <string name="calendars_link_revoke_title">Cabut alamat kalénder?</string>
+    <string name="calendars_link_revoke_message">Kalénder anu ngalanggan alamat ieu moal dianyarkeun deui.</string>
 </resources>

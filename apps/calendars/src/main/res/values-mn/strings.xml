@@ -66,10 +66,6 @@
     <string name="calendars_remove">Хасах</string>
     <string name="calendars_remove_title">%1$s-г Mochi-оос хасах уу?</string>
     <string name="calendars_remove_message">Түүн дэх үйл явдлууд эх хуанлидаа хэвээр үлдэнэ.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d үйл явдлыг шинэчиллээ</item>
-        <item quantity="other">%1$d үйл явдлыг шинэчиллээ</item>
-    </plurals>
     <string name="calendars_today">Өнөөдөр</string>
     <string name="calendars_view_week">Долоо хоног</string>
     <string name="calendars_view_multiweek">Хэд хэдэн долоо хоног</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Календарь</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Энэ сервер дээр Google бүртгэлүүд идэвхжээгүй байна. Тэдгээрийг Тохиргоо, Системийн тохиргоо хэсэгт идэвхжүүлнэ үү.</string>
     <string name="calendars_subscribe_google_connect">Та Google бүртгэл холбоогүй байна.</string>
     <string name="calendars_subscribe_google_connect_action">Google-т холбогдох</string>
     <string name="calendars_grant_failed">Хуанлийн хандалт олгогдсонгүй</string>
     <string name="calendars_event_exception">Өөрчлөгдсөн давталт</string>
     <string name="calendars_span_day">%1$s, %2$s - %3$s</string>
+    <string name="calendars_polled_current">Хуанли шинэчлэгдсэн байна</string>
+    <string name="calendars_polled_synced">Хуанли синк хийгдлээ</string>
+    <string name="calendars_link_revoke_title">Хуанлийн хаягийг цуцлах уу?</string>
+    <string name="calendars_link_revoke_message">Энэ хаягийг захиалсан календарууд шинэчлэгдэхээ болино.</string>
 </resources>

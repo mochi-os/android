@@ -138,10 +138,6 @@
     <string name="calendars_device_deleted">උපාංගය ඉවත් කරන ලදී</string>
     <string name="calendars_device_delete_title">මෙම උපාංගය ඉවත් කරන්නද?</string>
     <string name="calendars_device_delete_message">සමමුහූර්ත කිරීමට එය නැවත සකස් කළ යුතුය.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">සිදුවීම් %1$d ක් යාවත්කාලීන විය</item>
-        <item quantity="other">සිදුවීම් %1$d ක් යාවත්කාලීන විය</item>
-    </plurals>
     <string name="calendars_sync_choose">සමමුහූර්ත කිරීමට දින දර්ශන</string>
     <string name="calendars_poll_large">දින දර්ශනය ඉතා විශාලයි</string>
     <string name="calendars_poll_invalid">ලිපිනයෙන් දින දර්ශනයක් ලැබුණේ නැත</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google දින දර්ශනය</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">මෙම සේවාදායකයේ Google ගිණුම් සක්‍රිය කර නැත. ඒවා සැකසුම්, පද්ධති සැකසුම් තුළ සක්‍රිය කරන්න.</string>
     <string name="calendars_subscribe_google_connect">ඔබ Google ගිණුමක් සම්බන්ධ කර නැත.</string>
     <string name="calendars_subscribe_google_connect_action">Google සම්බන්ධ කරන්න</string>
     <string name="calendars_grant_failed">දින දර්ශන ප්‍රවේශය ලබා දී නැත</string>
     <string name="calendars_event_exception">වෙනස් කළ පුනරාවර්තනය</string>
     <string name="calendars_span_day">%1$s, %2$s සිට %3$s දක්වා</string>
+    <string name="calendars_polled_current">දින දර්ශනය යාවත්කාලීනයි</string>
+    <string name="calendars_polled_synced">දින දර්ශනය සමමුහුර්ත කළා</string>
+    <string name="calendars_link_revoke_title">දින දර්ශනයේ ලිපිනය අවලංගු කරන්නද?</string>
+    <string name="calendars_link_revoke_message">මෙම ලිපිනයට දායක වූ දින දර්ශන යාවත්කාලීන වීම නවතිනු ඇත.</string>
 </resources>

@@ -65,10 +65,6 @@
     <string name="calendars_remove">Fjern</string>
     <string name="calendars_remove_title">Fjern %1$s fra Mochi?</string>
     <string name="calendars_remove_message">Dens begivenheder forbliver i den oprindelige kalender.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d begivenhed opdateret</item>
-        <item quantity="other">%1$d begivenheder opdateret</item>
-    </plurals>
     <string name="calendars_today">I dag</string>
     <string name="calendars_view_week">Uge</string>
     <string name="calendars_view_multiweek">Flere uger</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple-id</string>
     <string name="calendars_subscribe_google">Google Kalender</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google-konti er ikke aktiveret på denne server. Aktivér dem under Indstillinger, Systemindstillinger.</string>
     <string name="calendars_subscribe_google_connect">Du har ikke forbundet en Google-konto.</string>
     <string name="calendars_subscribe_google_connect_action">Forbind Google</string>
     <string name="calendars_grant_failed">Kalenderadgang blev ikke givet</string>
     <string name="calendars_event_exception">Ændret forekomst</string>
     <string name="calendars_span_day">%1$s, %2$s til %3$s</string>
+    <string name="calendars_polled_current">Kalenderen er opdateret</string>
+    <string name="calendars_polled_synced">Kalender synkroniseret</string>
+    <string name="calendars_link_revoke_title">Tilbagekald kalenderadressen?</string>
+    <string name="calendars_link_revoke_message">Kalendere, der abonnerer på denne adresse, holder op med at blive opdateret.</string>
 </resources>

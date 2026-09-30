@@ -141,11 +141,6 @@
     <string name="calendars_device_deleted">Уређај је уклоњен</string>
     <string name="calendars_device_delete_title">Уклонити овај уређај?</string>
     <string name="calendars_device_delete_message">Мораће поново да се подеси за синхронизацију.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">Ажуриран %1$d догађај</item>
-        <item quantity="few">Ажурирана %1$d догађаја</item>
-        <item quantity="other">Ажурирано %1$d догађаја</item>
-    </plurals>
     <string name="calendars_sync_choose">Календари за синхронизацију</string>
     <string name="calendars_poll_large">Календар је превелик</string>
     <string name="calendars_poll_invalid">Адреса није вратила календар</string>
@@ -190,11 +185,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Календар</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google налози нису омогућени на овом серверу. Омогућите их у Поставке, Системске поставке.</string>
     <string name="calendars_subscribe_google_connect">Нисте повезали Google налог.</string>
     <string name="calendars_subscribe_google_connect_action">Повежи Google</string>
     <string name="calendars_grant_failed">Приступ календару није одобрен</string>
     <string name="calendars_event_exception">Измењено понављање</string>
     <string name="calendars_span_day">%1$s, од %2$s до %3$s</string>
+    <string name="calendars_polled_current">Календар је ажуран</string>
+    <string name="calendars_polled_synced">Календар синхронизован</string>
+    <string name="calendars_link_revoke_title">Опозвати адресу календара?</string>
+    <string name="calendars_link_revoke_message">Календари претплаћени на ову адресу престаће да се ажурирају.</string>
 </resources>

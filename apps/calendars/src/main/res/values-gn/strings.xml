@@ -66,10 +66,6 @@
     <string name="calendars_remove">Embogue</string>
     <string name="calendars_remove_title">Embogue %1$s Mochi-gui?</string>
     <string name="calendars_remove_message">Umi evento opyta arapapaha ypykuépe.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d evento oñembohekopyahu</item>
-        <item quantity="other">%1$d evento oñembohekopyahu</item>
-    </plurals>
     <string name="calendars_today">Ko ára</string>
     <string name="calendars_view_week">Arapokõindy</string>
     <string name="calendars_view_multiweek">Heta arapokõindy</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Arapapaha</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google mba\'etekuéra ndoñemyendýi ko mohendahápe. Emyendy Ñemboheko, Sistema ñemboheko-pe.</string>
     <string name="calendars_subscribe_google_connect">Ndembojuajúi peteĩ Google mba\'ete.</string>
     <string name="calendars_subscribe_google_connect_action">Embojoaju Google</string>
     <string name="calendars_grant_failed">Ndoje\'ẽi jeike arapapahápe</string>
     <string name="calendars_event_exception">Evento oñemoambuéva</string>
     <string name="calendars_span_day">%1$s, %2$s guive %3$s peve</string>
+    <string name="calendars_polled_current">Arapapaha ipyahu porã</string>
+    <string name="calendars_polled_synced">Arapapaha ojembojoja</string>
+    <string name="calendars_link_revoke_title">¿Remboguesépa arapapaha dirección?</string>
+    <string name="calendars_link_revoke_message">Umi arapapahakuéra oñemboheraguapýva ko dirección-pe ndoñembohekopyahumo\'ãvéima.</string>
 </resources>

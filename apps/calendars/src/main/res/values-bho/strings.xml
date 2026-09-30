@@ -66,10 +66,6 @@
     <string name="calendars_remove">हटाईं</string>
     <string name="calendars_remove_title">%1$s के Mochi से हटाईं?</string>
     <string name="calendars_remove_message">एकर कार्यक्रम मूल कैलेंडर में बनल रही।</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d कार्यक्रम अपडेट भइल</item>
-        <item quantity="other">%1$d कार्यक्रम अपडेट भइलें</item>
-    </plurals>
     <string name="calendars_today">आज</string>
     <string name="calendars_view_week">हफ्ता</string>
     <string name="calendars_view_multiweek">कई हफ्ता</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google कैलेंडर</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">एह सर्वर पर Google खाता चालू नइखे कइल गइल। एकरा के सेटिंग सब, सिस्टम सेटिंग सब में चालू करीं।</string>
     <string name="calendars_subscribe_google_connect">रउआ कौनो Google खाता ना जोड़ले बानी।</string>
     <string name="calendars_subscribe_google_connect_action">Google से जुड़ीं</string>
     <string name="calendars_grant_failed">कैलेंडर के पहुँच ना मिलल</string>
     <string name="calendars_event_exception">बदलल गइल दोहराव</string>
     <string name="calendars_span_day">%1$s, %2$s से %3$s तक</string>
+    <string name="calendars_polled_current">कैलेंडर अपडेट बा</string>
+    <string name="calendars_polled_synced">कैलेंडर सिंक हो गइल</string>
+    <string name="calendars_link_revoke_title">कैलेंडर के पता रद्द करीं?</string>
+    <string name="calendars_link_revoke_message">एह पता के सदस्यता लेले कैलेंडर अब अद्यतन ना होई।</string>
 </resources>

@@ -138,10 +138,6 @@
     <string name="calendars_device_deleted">דער אַפּאַראַט איז אַראָפּגענומען</string>
     <string name="calendars_device_delete_title">אַראָפּנעמען דעם אַפּאַראַט?</string>
     <string name="calendars_device_delete_message">מען וועט עס דאַרפֿן ווידער אײַנשטעלן צו סינכראָניזירן.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d געשעעניש דערהײַנטיקט</item>
-        <item quantity="other">%1$d געשעענישן דערהײַנטיקט</item>
-    </plurals>
     <string name="calendars_sync_choose">קאַלענדאַרן צו סינכראָניזירן</string>
     <string name="calendars_poll_large">דער קאַלענדאַר איז צו גרויס</string>
     <string name="calendars_poll_invalid">דער אַדרעס האָט ניט צוריקגעגעבן קיין קאַלענדאַר</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google קאַלענדאַר</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google קאָנטעס זענען נישט אַקטיווירט אויף דעם סערווער. אַקטיווירט זיי אונטער אײַנשטעלונגען, סיסטעם־אײַנשטעלונגען.</string>
     <string name="calendars_subscribe_google_connect">איר האָט נישט פֿאַרבונדן קיין Google קאָנטע.</string>
     <string name="calendars_subscribe_google_connect_action">פֿאַרבינדן Google</string>
     <string name="calendars_grant_failed">קאַלענדאַר־צוטריט איז ניט געגעבן געוואָרן</string>
     <string name="calendars_event_exception">געביטענע פֿאָרקומעניש</string>
     <string name="calendars_span_day">%1$s, %2$s ביז %3$s</string>
+    <string name="calendars_polled_current">קאַלענדאַר איז אַקטועל</string>
+    <string name="calendars_polled_synced">קאַלענדאַר סינכראָניזירט</string>
+    <string name="calendars_link_revoke_title">אָפּרופֿן דעם קאַלענדאַר־אַדרעס?</string>
+    <string name="calendars_link_revoke_message">קאַלענדאַרן וואָס זענען אַבאָנירט אויף דעם אַדרעס וועלן מער ניט ווערן דערהיינטיקט.</string>
 </resources>

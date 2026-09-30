@@ -135,9 +135,6 @@
     <string name="calendars_device_deleted">นำอุปกรณ์ออกแล้ว</string>
     <string name="calendars_device_delete_title">นำอุปกรณ์นี้ออกไหม</string>
     <string name="calendars_device_delete_message">ต้องตั้งค่าใหม่อีกครั้งเพื่อซิงค์</string>
-    <plurals name="calendars_polled">
-        <item quantity="other">อัปเดตแล้ว %1$d กิจกรรม</item>
-    </plurals>
     <string name="calendars_sync_choose">ปฏิทินที่จะซิงค์</string>
     <string name="calendars_poll_large">ปฏิทินใหญ่เกินไป</string>
     <string name="calendars_poll_invalid">ที่อยู่ไม่ได้ส่งปฏิทินกลับมา</string>
@@ -180,11 +177,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google ปฏิทิน</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">ยังไม่ได้เปิดใช้งานบัญชี Google บนเซิร์ฟเวอร์นี้ เปิดใช้งานได้ที่ การตั้งค่า, การตั้งค่าระบบ</string>
     <string name="calendars_subscribe_google_connect">คุณยังไม่ได้เชื่อมต่อบัญชี Google</string>
     <string name="calendars_subscribe_google_connect_action">เชื่อมต่อ Google</string>
     <string name="calendars_grant_failed">ไม่ได้รับอนุญาตให้เข้าถึงปฏิทิน</string>
     <string name="calendars_event_exception">ครั้งที่ถูกเปลี่ยนแปลง</string>
     <string name="calendars_span_day">%1$s %2$s ถึง %3$s</string>
+    <string name="calendars_polled_current">ปฏิทินเป็นข้อมูลล่าสุดแล้ว</string>
+    <string name="calendars_polled_synced">ซิงค์ปฏิทินแล้ว</string>
+    <string name="calendars_link_revoke_title">เพิกถอนที่อยู่ปฏิทินหรือไม่</string>
+    <string name="calendars_link_revoke_message">ปฏิทินที่สมัครรับที่อยู่นี้จะไม่ได้รับการปรับปรุงอีก</string>
 </resources>

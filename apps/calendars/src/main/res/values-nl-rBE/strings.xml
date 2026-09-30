@@ -10,4 +10,8 @@
     <string name="calendars_subscribe_google_connect">Je hebt geen Google-account gekoppeld.</string>
     <string name="calendars_subscribe_google_connect_action">Google verbinden</string>
     <string name="calendars_grant_failed">Agendatoegang is niet verleend</string>
+    <string name="calendars_polled_current">Agenda is bijgewerkt</string>
+    <string name="calendars_polled_synced">Agenda gesynchroniseerd</string>
+    <string name="calendars_link_revoke_title">Agenda-adres intrekken?</string>
+    <string name="calendars_link_revoke_message">Agenda\'s die op dit adres geabonneerd zijn, worden niet meer bijgewerkt.</string>
 </resources>

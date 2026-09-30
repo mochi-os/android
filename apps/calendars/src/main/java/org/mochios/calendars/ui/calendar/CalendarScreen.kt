@@ -78,6 +78,7 @@ import org.mochios.calendars.ui.dialogs.DeleteCalendarDialog
 import org.mochios.calendars.ui.dialogs.LinkDialog
 import org.mochios.calendars.ui.dialogs.PreferencesDialog
 import org.mochios.calendars.ui.dialogs.RenameCalendarDialog
+import org.mochios.calendars.ui.dialogs.RevokeLinkDialog
 import org.mochios.calendars.ui.dialogs.ScopeDialog
 import org.mochios.calendars.ui.editor.Scope
 import org.mochios.calendars.ui.router.CalendarsSection
@@ -122,6 +123,7 @@ fun CalendarScreen(
     var colouring by remember { mutableStateOf<Calendar?>(null) }
     var deleting by remember { mutableStateOf<Calendar?>(null) }
     var linking by remember { mutableStateOf<Calendar?>(null) }
+    var revoking by remember { mutableStateOf<Calendar?>(null) }
     var preferences by remember { mutableStateOf(false) }
     var about by remember { mutableStateOf(false) }
 
@@ -138,10 +140,8 @@ fun CalendarScreen(
                 when (event) {
                     is CalendarEvent.Failed -> snackbar.showSnackbar(event.error.userMessage())
                     is CalendarEvent.Polled -> snackbar.showSnackbar(
-                        resources.getQuantityString(
-                            R.plurals.calendars_polled,
-                            event.changed,
-                            event.changed,
+                        resources.getString(
+                            if (event.linked) R.string.calendars_polled_synced else R.string.calendars_polled_current,
                         ),
                     )
                     CalendarEvent.Moved -> {
@@ -382,6 +382,16 @@ fun CalendarScreen(
             onReplace = { viewModel.openLink(calendar.id, regenerate = true) },
             onRevoke = {
                 linking = null
+                viewModel.closeLink()
+                revoking = calendar
+            },
+        )
+    }
+    revoking?.let { calendar ->
+        RevokeLinkDialog(
+            onDismiss = { revoking = null },
+            onConfirm = {
+                revoking = null
                 viewModel.revokeLink(calendar.id)
             },
         )

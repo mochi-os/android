@@ -138,10 +138,6 @@
     <string name="calendars_device_deleted">وسیله لرې شوه</string>
     <string name="calendars_device_delete_title">دا وسیله لرې کړئ؟</string>
     <string name="calendars_device_delete_message">د همغږۍ لپاره به یې بیا جوړول اړین وي.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d پېښه تازه شوه</item>
-        <item quantity="other">%1$d پېښې تازه شوې</item>
-    </plurals>
     <string name="calendars_sync_choose">د همغږۍ لپاره کليزونه</string>
     <string name="calendars_poll_large">کليز ډېر لوی دی</string>
     <string name="calendars_poll_invalid">له پتې څخه کليز لاسته نه راغی</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google کليز</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">د Google حسابونه پدې سرور کې نه دي فعال شوي. دوی په ترتیبات، د سیسټم ترتیبات کې فعال کړئ.</string>
     <string name="calendars_subscribe_google_connect">تاسو د Google حساب نه دی وصل کړی.</string>
     <string name="calendars_subscribe_google_connect_action">Google ونښلوئ</string>
     <string name="calendars_grant_failed">د کليز لاسرسی ور نه کړل شو</string>
     <string name="calendars_event_exception">بدله شوې پیښه</string>
     <string name="calendars_span_day">%1$s، %2$s تر %3$s</string>
+    <string name="calendars_polled_current">کليز تازه دی</string>
+    <string name="calendars_polled_synced">کليز همغږی شو</string>
+    <string name="calendars_link_revoke_title">د کليز پته لغوه کړئ؟</string>
+    <string name="calendars_link_revoke_message">هغه کليزونه چې دې پتې ته ګډون لري نور به نه تازه کیږي.</string>
 </resources>

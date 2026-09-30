@@ -66,10 +66,6 @@
     <string name="calendars_remove">Eltávolítás</string>
     <string name="calendars_remove_title">Eltávolítja a Mochiból a következőt: %1$s?</string>
     <string name="calendars_remove_message">Az eseményei az eredeti naptárban maradnak.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d esemény frissítve</item>
-        <item quantity="other">%1$d esemény frissítve</item>
-    </plurals>
     <string name="calendars_today">Ma</string>
     <string name="calendars_view_week">Hét</string>
     <string name="calendars_view_multiweek">Több hét</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Naptár</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">A Google-fiókok nincsenek engedélyezve ezen a kiszolgálón. Engedélyezd őket a Beállítások, Rendszerbeállítások alatt.</string>
     <string name="calendars_subscribe_google_connect">Nem csatlakoztattál Google-fiókot.</string>
     <string name="calendars_subscribe_google_connect_action">Google csatlakoztatása</string>
     <string name="calendars_grant_failed">A naptár-hozzáférést nem adták meg</string>
     <string name="calendars_event_exception">Módosított előfordulás</string>
     <string name="calendars_span_day">%1$s, %2$s és %3$s között</string>
+    <string name="calendars_polled_current">A naptár naprakész</string>
+    <string name="calendars_polled_synced">Naptár szinkronizálva</string>
+    <string name="calendars_link_revoke_title">Visszavonja a naptár címét?</string>
+    <string name="calendars_link_revoke_message">Az erre a címre feliratkozott naptárak nem frissülnek tovább.</string>
 </resources>

@@ -66,9 +66,6 @@
     <string name="calendars_remove">ລຶບອອກ</string>
     <string name="calendars_remove_title">ລຶບ %1$s ອອກຈາກ Mochi ບໍ?</string>
     <string name="calendars_remove_message">ເຫດການຂອງປະຕິທິນນີ້ຍັງຄົງຢູ່ໃນປະຕິທິນຕົ້ນສະບັບ</string>
-    <plurals name="calendars_polled">
-        <item quantity="other">ອັບເດດ %1$d ເຫດການແລ້ວ</item>
-    </plurals>
     <string name="calendars_today">ມື້ນີ້</string>
     <string name="calendars_view_week">ອາທິດ</string>
     <string name="calendars_view_multiweek">ຫຼາຍອາທິດ</string>
@@ -180,11 +177,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google ປະຕິທິນ</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">ຍັງບໍ່ໄດ້ເປີດໃຊ້ງານບັນຊີ Google ໃນເຊີບເວີນີ້. ເປີດໃຊ້ງານມັນໃນ ການຕັ້ງຄ່າ, ການຕັ້ງຄ່າລະບົບ.</string>
     <string name="calendars_subscribe_google_connect">ທ່ານຍັງບໍ່ໄດ້ເຊື່ອມຕໍ່ບັນຊີ Google.</string>
     <string name="calendars_subscribe_google_connect_action">ເຊື່ອມຕໍ່ Google</string>
     <string name="calendars_grant_failed">ບໍ່ໄດ້ຮັບການເຂົ້າເຖິງປະຕິທິນ</string>
     <string name="calendars_event_exception">ຄັ້ງທີ່ຖືກປ່ຽນແປງ</string>
     <string name="calendars_span_day">%1$s %2$s ຫາ %3$s</string>
+    <string name="calendars_polled_current">ປະຕິທິນເປັນຂໍ້ມູນຫຼ້າສຸດແລ້ວ</string>
+    <string name="calendars_polled_synced">ຊິງຄ໌ປະຕິທິນແລ້ວ</string>
+    <string name="calendars_link_revoke_title">ຖອນທີ່ຢູ່ປະຕິທິນບໍ?</string>
+    <string name="calendars_link_revoke_message">ປະຕິທິນທີ່ສະໝັກຮັບທີ່ຢູ່ນີ້ຈະບໍ່ຖືກປັບປຸງອີກ</string>
 </resources>

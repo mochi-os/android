@@ -66,11 +66,6 @@
     <string name="calendars_remove">Šalinti</string>
     <string name="calendars_remove_title">Šalinti %1$s iš Mochi?</string>
     <string name="calendars_remove_message">Jo įvykiai lieka pradiniame kalendoriuje.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">atnaujintas %1$d įvykis</item>
-        <item quantity="few">atnaujinti %1$d įvykiai</item>
-        <item quantity="other">atnaujinta %1$d įvykių</item>
-    </plurals>
     <string name="calendars_today">Šiandien</string>
     <string name="calendars_view_week">Savaitė</string>
     <string name="calendars_view_multiweek">Kelios savaitės</string>
@@ -193,11 +188,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google kalendorius</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google paskyros šiame serveryje neįjungtos. Įjunkite jas skiltyje Nustatymai, Sistemos nustatymai.</string>
     <string name="calendars_subscribe_google_connect">Neprijungėte Google paskyros.</string>
     <string name="calendars_subscribe_google_connect_action">Prijungti Google</string>
     <string name="calendars_grant_failed">Prieiga prie kalendoriaus nesuteikta</string>
     <string name="calendars_event_exception">Pakeistas pasikartojimas</string>
     <string name="calendars_span_day">%1$s, nuo %2$s iki %3$s</string>
+    <string name="calendars_polled_current">Kalendorius atnaujintas</string>
+    <string name="calendars_polled_synced">Kalendorius sinchronizuotas</string>
+    <string name="calendars_link_revoke_title">Atšaukti kalendoriaus adresą?</string>
+    <string name="calendars_link_revoke_message">Kalendoriai, užsiprenumeravę šį adresą, nebebus atnaujinami.</string>
 </resources>

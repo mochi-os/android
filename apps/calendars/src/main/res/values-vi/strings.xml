@@ -135,9 +135,6 @@
     <string name="calendars_device_deleted">Đã gỡ thiết bị</string>
     <string name="calendars_device_delete_title">Gỡ thiết bị này?</string>
     <string name="calendars_device_delete_message">Sẽ phải thiết lập lại để đồng bộ.</string>
-    <plurals name="calendars_polled">
-        <item quantity="other">Đã cập nhật %1$d sự kiện</item>
-    </plurals>
     <string name="calendars_sync_choose">Lịch cần đồng bộ</string>
     <string name="calendars_poll_large">Lịch quá lớn</string>
     <string name="calendars_poll_invalid">Địa chỉ không trả về lịch nào</string>
@@ -180,11 +177,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Lịch Google</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Tài khoản Google chưa được bật trên máy chủ này. Hãy bật trong Cài đặt, Cài đặt hệ thống.</string>
     <string name="calendars_subscribe_google_connect">Bạn chưa kết nối tài khoản Google nào.</string>
     <string name="calendars_subscribe_google_connect_action">Kết nối Google</string>
     <string name="calendars_grant_failed">Quyền truy cập lịch chưa được cấp</string>
     <string name="calendars_event_exception">Lần lặp đã thay đổi</string>
     <string name="calendars_span_day">%1$s, %2$s đến %3$s</string>
+    <string name="calendars_polled_current">Lịch đã được cập nhật</string>
+    <string name="calendars_polled_synced">Đã đồng bộ lịch</string>
+    <string name="calendars_link_revoke_title">Thu hồi địa chỉ lịch?</string>
+    <string name="calendars_link_revoke_message">Các lịch đã đăng ký địa chỉ này sẽ ngừng cập nhật.</string>
 </resources>

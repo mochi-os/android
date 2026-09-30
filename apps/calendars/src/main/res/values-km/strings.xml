@@ -66,9 +66,6 @@
     <string name="calendars_remove">យកចេញ</string>
     <string name="calendars_remove_title">យក %1$s ចេញពី Mochi ឬ?</string>
     <string name="calendars_remove_message">ព្រឹត្តិការណ៍របស់វានៅតែមាននៅក្នុងប្រតិទិនដើម។</string>
-    <plurals name="calendars_polled">
-        <item quantity="other">បានធ្វើបច្ចុប្បន្នភាពព្រឹត្តិការណ៍ %1$d</item>
-    </plurals>
     <string name="calendars_today">ថ្ងៃនេះ</string>
     <string name="calendars_view_week">សប្តាហ៍</string>
     <string name="calendars_view_multiweek">ច្រើនសប្តាហ៍</string>
@@ -180,11 +177,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google ប្រតិទិន</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">គណនី Google មិនត្រូវបានបើកនៅលើម៉ាស៊ីនមេនេះទេ។ សូមបើកវានៅក្នុង ការកំណត់, ការកំណត់ប្រព័ន្ធ។</string>
     <string name="calendars_subscribe_google_connect">អ្នកមិនទាន់បានភ្ជាប់គណនី Google ទេ។</string>
     <string name="calendars_subscribe_google_connect_action">ភ្ជាប់ Google</string>
     <string name="calendars_grant_failed">មិនបានផ្តល់ការចូលប្រើប្រតិទិនទេ</string>
     <string name="calendars_event_exception">ការកើតឡើងដែលបានផ្លាស់ប្តូរ</string>
     <string name="calendars_span_day">%1$s, %2$s ដល់ %3$s</string>
+    <string name="calendars_polled_current">ប្រតិទិនទាន់សម័យ</string>
+    <string name="calendars_polled_synced">បានធ្វើសមកាលកម្មប្រតិទិន</string>
+    <string name="calendars_link_revoke_title">ដកហូតអាសយដ្ឋានប្រតិទិនឬ?</string>
+    <string name="calendars_link_revoke_message">ប្រតិទិនដែលបានជាវអាសយដ្ឋាននេះនឹងឈប់ធ្វើបច្ចុប្បន្នភាព។</string>
 </resources>

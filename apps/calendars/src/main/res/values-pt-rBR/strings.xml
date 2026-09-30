@@ -23,4 +23,8 @@
     <string name="calendars_link_grant">Permitir o acesso ao calendário</string>
     <string name="calendars_subscribe_google_connect_action">Conectar o Google</string>
     <string name="calendars_grant_failed">O acesso ao calendário não foi concedido</string>
+    <string name="calendars_polled_current">Calendário atualizado</string>
+    <string name="calendars_polled_synced">Calendário sincronizado</string>
+    <string name="calendars_link_revoke_title">Revogar o endereço do calendário?</string>
+    <string name="calendars_link_revoke_message">Os calendários inscritos neste endereço deixarão de ser atualizados.</string>
 </resources>

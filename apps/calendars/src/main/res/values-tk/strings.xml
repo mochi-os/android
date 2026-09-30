@@ -138,10 +138,6 @@
     <string name="calendars_device_deleted">Enjam aýryldy</string>
     <string name="calendars_device_delete_title">Bu enjam aýrylsynmy?</string>
     <string name="calendars_device_delete_message">Sinhronlamak üçin ony gaýtadan sazlamaly bolar.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d waka täzelendi</item>
-        <item quantity="other">%1$d waka täzelendi</item>
-    </plurals>
     <string name="calendars_sync_choose">Sinhronlanjak kalendarlar</string>
     <string name="calendars_poll_large">Kalendar örän uly</string>
     <string name="calendars_poll_invalid">Salgy kalendar gaýtarmady</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Kalendar</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google hasaplary bu serwerde işjeňleşdirilmedi. Olary Sazlamalar, Ulgam sazlamalary bölüminde işjeňleşdiriň.</string>
     <string name="calendars_subscribe_google_connect">Google hasaby baglanyşdyrmadyňyz.</string>
     <string name="calendars_subscribe_google_connect_action">Google birikdir</string>
     <string name="calendars_grant_failed">Senenama elýeterliligi berilmedi</string>
     <string name="calendars_event_exception">Üýtgedilen gaýtalanma</string>
     <string name="calendars_span_day">%1$s, %2$s bilen %3$s aralygy</string>
+    <string name="calendars_polled_current">Senenama täzelenen</string>
+    <string name="calendars_polled_synced">Senenama sinhronlaşdyryldy</string>
+    <string name="calendars_link_revoke_title">Senenamanyň salgysy ýatyrylsynmy?</string>
+    <string name="calendars_link_revoke_message">Bu salga ýazylan kalendarlar mundan beýläk täzelenmez.</string>
 </resources>

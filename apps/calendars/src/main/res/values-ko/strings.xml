@@ -66,9 +66,6 @@
     <string name="calendars_remove">제거</string>
     <string name="calendars_remove_title">%1$s을(를) Mochi에서 제거할까요?</string>
     <string name="calendars_remove_message">일정은 원래 캘린더에 그대로 남아 있어요.</string>
-    <plurals name="calendars_polled">
-        <item quantity="other">일정 %1$d개를 업데이트했어요</item>
-    </plurals>
     <string name="calendars_today">오늘</string>
     <string name="calendars_view_week">주</string>
     <string name="calendars_view_multiweek">여러 주</string>
@@ -180,11 +177,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google 캘린더</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">이 서버에서는 Google 계정이 활성화되어 있지 않아요. 설정, 시스템 설정에서 활성화하세요.</string>
     <string name="calendars_subscribe_google_connect">Google 계정을 연결하지 않았어요.</string>
     <string name="calendars_subscribe_google_connect_action">Google 연결</string>
     <string name="calendars_grant_failed">캘린더 액세스가 허용되지 않았어요</string>
     <string name="calendars_event_exception">변경된 일정</string>
     <string name="calendars_span_day">%1$s %2$s~%3$s</string>
+    <string name="calendars_polled_current">캘린더가 최신 상태예요</string>
+    <string name="calendars_polled_synced">캘린더를 동기화했어요</string>
+    <string name="calendars_link_revoke_title">캘린더 주소를 해지할까요?</string>
+    <string name="calendars_link_revoke_message">이 주소를 구독한 캘린더는 더 이상 업데이트되지 않아요.</string>
 </resources>

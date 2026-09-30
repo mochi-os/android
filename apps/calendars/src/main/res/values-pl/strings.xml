@@ -144,12 +144,6 @@
     <string name="calendars_device_deleted">Usunięto urządzenie</string>
     <string name="calendars_device_delete_title">Usunąć to urządzenie?</string>
     <string name="calendars_device_delete_message">Aby synchronizować, trzeba będzie skonfigurować je ponownie.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">Zaktualizowano %1$d wydarzenie</item>
-        <item quantity="few">Zaktualizowano %1$d wydarzenia</item>
-        <item quantity="many">Zaktualizowano %1$d wydarzeń</item>
-        <item quantity="other">Zaktualizowano %1$d wydarzenia</item>
-    </plurals>
     <string name="calendars_sync_choose">Kalendarze do synchronizacji</string>
     <string name="calendars_poll_large">Kalendarz jest za duży</string>
     <string name="calendars_poll_invalid">Adres nie zwrócił kalendarza</string>
@@ -195,11 +189,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Kalendarz Google</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Konta Google nie są włączone na tym serwerze. Włącz je w Ustawienia, Ustawienia systemu.</string>
     <string name="calendars_subscribe_google_connect">Nie połączono żadnego konta Google.</string>
     <string name="calendars_subscribe_google_connect_action">Połącz Google</string>
     <string name="calendars_grant_failed">Nie przyznano dostępu do kalendarza</string>
     <string name="calendars_event_exception">Zmienione wystąpienie</string>
     <string name="calendars_span_day">%1$s, od %2$s do %3$s</string>
+    <string name="calendars_polled_current">Kalendarz jest aktualny</string>
+    <string name="calendars_polled_synced">Kalendarz zsynchronizowany</string>
+    <string name="calendars_link_revoke_title">Odwołać adres kalendarza?</string>
+    <string name="calendars_link_revoke_message">Kalendarze subskrybujące ten adres przestaną się aktualizować.</string>
 </resources>

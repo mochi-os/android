@@ -66,10 +66,6 @@
     <string name="calendars_remove">አስወግድ</string>
     <string name="calendars_remove_title">%1$s ከMochi ይወገድ?</string>
     <string name="calendars_remove_message">ክስተቶቹ በመጀመሪያው የቀን መቁጠሪያ ውስጥ ይቆያሉ።</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d ክስተት ተዘምኗል</item>
-        <item quantity="other">%1$d ክስተቶች ተዘምነዋል</item>
-    </plurals>
     <string name="calendars_today">ዛሬ</string>
     <string name="calendars_view_week">ሳምንት</string>
     <string name="calendars_view_multiweek">ብዙ ሳምንታት</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google ቀን መቁጠሪያ</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">የGoogle መለያዎች በዚህ ሰርቨር ላይ አልተነቁም። በቅንብሮች፣ የስርዓት ቅንብሮች ውስጥ ያንቁዋቸው።</string>
     <string name="calendars_subscribe_google_connect">የGoogle መለያ አላገናኙም።</string>
     <string name="calendars_subscribe_google_connect_action">Google አገናኝ</string>
     <string name="calendars_grant_failed">የቀን መቁጠሪያ መዳረሻ አልተፈቀደም</string>
     <string name="calendars_event_exception">የተቀየረ ድግግሞሽ</string>
     <string name="calendars_span_day">%1$s, ከ%2$s እስከ %3$s</string>
+    <string name="calendars_polled_current">የቀን መቁጠሪያው ወቅታዊ ነው</string>
+    <string name="calendars_polled_synced">የቀን መቁጠሪያ ተመሳስሏል</string>
+    <string name="calendars_link_revoke_title">የቀን መቁጠሪያ አድራሻው ይሻር?</string>
+    <string name="calendars_link_revoke_message">በዚህ አድራሻ የተመዘገቡ የቀን መቁጠሪያዎች መዘመን ያቆማሉ።</string>
 </resources>

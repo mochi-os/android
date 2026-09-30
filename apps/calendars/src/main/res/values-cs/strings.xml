@@ -65,11 +65,6 @@
     <string name="calendars_remove">Odebrat</string>
     <string name="calendars_remove_title">Odebrat %1$s z Mochi?</string>
     <string name="calendars_remove_message">Jeho události zůstanou v původním kalendáři.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d událost aktualizována</item>
-        <item quantity="few">%1$d události aktualizovány</item>
-        <item quantity="other">%1$d událostí aktualizováno</item>
-    </plurals>
     <string name="calendars_today">Dnes</string>
     <string name="calendars_view_week">Týden</string>
     <string name="calendars_view_multiweek">Více týdnů</string>
@@ -190,11 +185,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Kalendář Google</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Účty Google nejsou na tomto serveru povoleny. Povolte je v Nastavení, Systémová nastavení.</string>
     <string name="calendars_subscribe_google_connect">Nepřipojili jste žádný účet Google.</string>
     <string name="calendars_subscribe_google_connect_action">Připojit Google</string>
     <string name="calendars_grant_failed">Přístup ke kalendáři nebyl udělen</string>
     <string name="calendars_event_exception">Změněné opakování</string>
     <string name="calendars_span_day">%1$s, %2$s až %3$s</string>
+    <string name="calendars_polled_current">Kalendář je aktuální</string>
+    <string name="calendars_polled_synced">Kalendář synchronizován</string>
+    <string name="calendars_link_revoke_title">Zneplatnit adresu kalendáře?</string>
+    <string name="calendars_link_revoke_message">Kalendáře přihlášené k odběru této adresy se přestanou aktualizovat.</string>
 </resources>

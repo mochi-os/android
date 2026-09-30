@@ -66,10 +66,6 @@
     <string name="calendars_remove">Aparma</string>
     <string name="calendars_remove_title">%1$s Mochi-ta aparañati?</string>
     <string name="calendars_remove_message">Lurawinakapax nayrïri calendarionwa qhiparaki.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d lurawi machaqachatawa</item>
-        <item quantity="other">%1$d lurawinaka machaqachatawa</item>
-    </plurals>
     <string name="calendars_today">Jichhüru</string>
     <string name="calendars_view_week">Semana</string>
     <string name="calendars_view_multiweek">Walja semananaka</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Calendar</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google cuentanakax janiw aka servidoran yatichatäkiti. Configuración, Sistema configuración ukan yatichma.</string>
     <string name="calendars_subscribe_google_connect">Janiw mä Google cuenta chinjatäkiti.</string>
     <string name="calendars_subscribe_google_connect_action">Google chikacht’aña</string>
     <string name="calendars_grant_failed">Calendario mantañax janiw iyawsatäkiti</string>
     <string name="calendars_event_exception">Turkata lurawi</string>
     <string name="calendars_span_day">%1$s, %2$s %3$s kama</string>
+    <string name="calendars_polled_current">Calendario machaqawa</string>
+    <string name="calendars_polled_synced">Calendario sincronizata</string>
+    <string name="calendars_link_revoke_title">¿Calendario dirección apaqañati?</string>
+    <string name="calendars_link_revoke_message">Aka direcciónar qillqantat calendarionakax janiw juk\'amp machaqtayatäxaniti.</string>
 </resources>

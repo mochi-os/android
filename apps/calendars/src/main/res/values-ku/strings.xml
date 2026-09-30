@@ -66,10 +66,6 @@
     <string name="calendars_remove">Rake</string>
     <string name="calendars_remove_title">%1$s ji Mochi were rakirin?</string>
     <string name="calendars_remove_message">Bûyerên wê di salnameya eslî de dimînin.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d bûyer hate nûkirin</item>
-        <item quantity="other">%1$d bûyer hatin nûkirin</item>
-    </plurals>
     <string name="calendars_today">Îro</string>
     <string name="calendars_view_week">Hefte</string>
     <string name="calendars_view_multiweek">Çend hefte</string>
@@ -185,11 +181,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Salnameya Google</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Hesabên Google li ser vê serverê nehatine çalakkirin. Wan di Mîheng, Mîhengên pergalê de çalak bike.</string>
     <string name="calendars_subscribe_google_connect">Te tu hesabê Google girênedaye.</string>
     <string name="calendars_subscribe_google_connect_action">Google girêde</string>
     <string name="calendars_grant_failed">Gihîştina salnameyê nehat dayîn</string>
     <string name="calendars_event_exception">Cara guhertî</string>
     <string name="calendars_span_day">%1$s, ji %2$s heta %3$s</string>
+    <string name="calendars_polled_current">Salname nûjen e</string>
+    <string name="calendars_polled_synced">Salname hat hevdemkirin</string>
+    <string name="calendars_link_revoke_title">Navnîşana salnameyê were betalkirin?</string>
+    <string name="calendars_link_revoke_message">Salnameyên ku bi vê navnîşanê ve abone ne dê êdî nûve nebin.</string>
 </resources>

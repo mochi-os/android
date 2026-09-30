@@ -66,11 +66,6 @@
     <string name="calendars_remove">הסר</string>
     <string name="calendars_remove_title">להסיר את %1$s מ-Mochi?</string>
     <string name="calendars_remove_message">האירועים שלו נשארים ביומן המקורי.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">אירוע %1$d עודכן</item>
-        <item quantity="two">%1$d אירועים עודכנו</item>
-        <item quantity="other">%1$d אירועים עודכנו</item>
-    </plurals>
     <string name="calendars_today">היום</string>
     <string name="calendars_view_week">שבוע</string>
     <string name="calendars_view_multiweek">מספר שבועות</string>
@@ -193,11 +188,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">יומן Google</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">חשבונות Google לא הופעלו בשרת הזה. הפעל אותם תחת הגדרות, הגדרות מערכת.</string>
     <string name="calendars_subscribe_google_connect">לא חיברת חשבון Google.</string>
     <string name="calendars_subscribe_google_connect_action">התחבר ל-Google</string>
     <string name="calendars_grant_failed">הגישה ליומן לא ניתנה</string>
     <string name="calendars_event_exception">מופע ששונה</string>
     <string name="calendars_span_day">%1$s, %2$s עד %3$s</string>
+    <string name="calendars_polled_current">היומן מעודכן</string>
+    <string name="calendars_polled_synced">היומן סונכרן</string>
+    <string name="calendars_link_revoke_title">לבטל את כתובת היומן?</string>
+    <string name="calendars_link_revoke_message">לוחות שנה שנרשמו לכתובת זו יפסיקו להתעדכן.</string>
 </resources>

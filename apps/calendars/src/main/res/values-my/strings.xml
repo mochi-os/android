@@ -66,9 +66,6 @@
     <string name="calendars_remove">ဖယ်ရှား</string>
     <string name="calendars_remove_title">%1$s ကို Mochi မှ ဖယ်ရှားမလား?</string>
     <string name="calendars_remove_message">၎င်း၏ အစီအစဉ်များသည် မူလ ပြက္ခဒိန်တွင် ဆက်ရှိနေပါမည်။</string>
-    <plurals name="calendars_polled">
-        <item quantity="other">အစီအစဉ် %1$d ခု အပ်ဒိတ်လုပ်ပြီးပါပြီ</item>
-    </plurals>
     <string name="calendars_today">ယနေ့</string>
     <string name="calendars_view_week">အပတ်</string>
     <string name="calendars_view_multiweek">အပတ်များစွာ</string>
@@ -180,11 +177,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google ပြက္ခဒိန်</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">ဤဆာဗာတွင် Google အကောင့်များကို ဖွင့်ထားခြင်း မရှိပါ။ ၎င်းတို့ကို ဆက်တင်များ၊ စနစ် ဆက်တင်များ တွင် ဖွင့်ပါ။</string>
     <string name="calendars_subscribe_google_connect">သင် Google အကောင့် ချိတ်ဆက်ထားခြင်း မရှိပါ။</string>
     <string name="calendars_subscribe_google_connect_action">Google ချိတ်ဆက်မည်</string>
     <string name="calendars_grant_failed">ပြက္ခဒိန် ဝင်ရောက်ခွင့် မရရှိပါ</string>
     <string name="calendars_event_exception">ပြောင်းလဲထားသော အကြိမ်</string>
     <string name="calendars_span_day">%1$s %2$s မှ %3$s</string>
+    <string name="calendars_polled_current">ပြက္ခဒိန်မှာ နောက်ဆုံးအခြေအနေ ဖြစ်နေပါပြီ</string>
+    <string name="calendars_polled_synced">ပြက္ခဒိန် ထပ်တူပြုပြီးပါပြီ</string>
+    <string name="calendars_link_revoke_title">ပြက္ခဒိန် လိပ်စာကို ရုပ်သိမ်းမလား။</string>
+    <string name="calendars_link_revoke_message">ဤလိပ်စာကို စာရင်းသွင်းထားသော ပြက္ခဒိန်များကို ထပ်မံ မွမ်းမံတော့မည် မဟုတ်ပါ။</string>
 </resources>
