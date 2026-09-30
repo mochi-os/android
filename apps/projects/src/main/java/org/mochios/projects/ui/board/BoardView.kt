@@ -271,6 +271,10 @@ private fun BoardColumn(
         columnDragState.draggingItemId != null &&
         columnDragState.draggingItemId != option.id
     val columnTargetEdge = columnDragState.targetEdge
+    // A card over the column's empty space lands at its end; outline the column
+    // so that drop shows where it goes, as a card target does.
+    val isCardTarget = cardDragState.draggingItemId != null &&
+        cardDragState.targetItemId == "column:${option.id}"
 
     Column(
         modifier = Modifier
@@ -279,6 +283,11 @@ private fun BoardColumn(
             .background(
                 MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f),
                 MaterialTheme.shapes.medium
+            )
+            .then(
+                if (isCardTarget) {
+                    Modifier.border(2.dp, MaterialTheme.colorScheme.primary, MaterialTheme.shapes.medium)
+                } else Modifier
             )
             .then(columnDropModifier)
             .padding(6.dp)
@@ -464,15 +473,23 @@ private fun BoardColumn(
                         // has no lane to report, so without this a drop anywhere
                         // but on another card could not change lane at all —
                         // including into a lane that is currently empty.
+                        val laneId = "lane:${option.id}:${rowOption.id}"
+                        val isLaneTarget = cardDragState.draggingItemId != null &&
+                            cardDragState.targetItemId == laneId
                         Text(
                             text = rowOption.name,
                             style = MaterialTheme.typography.labelMedium,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                             modifier = Modifier
                                 .fillMaxWidth()
+                                .then(
+                                    if (isLaneTarget) {
+                                        Modifier.border(2.dp, MaterialTheme.colorScheme.primary, MaterialTheme.shapes.small)
+                                    } else Modifier
+                                )
                                 .dropTarget(
                                     state = cardDragState,
-                                    itemId = "lane:${option.id}:${rowOption.id}",
+                                    itemId = laneId,
                                     orientation = DropOrientation.OnOnly,
                                     onDrop = { sourceId, _ ->
                                         viewModel.moveObject(
