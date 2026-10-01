@@ -54,6 +54,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.draw.drawWithCache
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.geometry.Offset
@@ -290,7 +291,11 @@ fun TimeGrid(
                 }
                 .verticalScroll(scroll),
         ) {
-            Row(modifier = Modifier.fillMaxWidth()) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .columnLines(days.size, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f)),
+            ) {
                 for (day in days) {
                     DayColumn(
                         day = day,
@@ -368,6 +373,17 @@ fun rememberHourScroll(start: Int): ScrollState {
         scroll.scrollTo(with(density) { (HOUR * start.coerceIn(0, 23)).roundToPx() })
     }
     return scroll
+}
+
+/**
+ * A one-pixel line in [colour] between each of [count] equal columns, behind
+ * what they draw, so the days of a grid read apart.
+ */
+internal fun Modifier.columnLines(count: Int, colour: Color): Modifier = drawBehind {
+    for (column in 1 until count) {
+        val x = size.width * column / count
+        drawLine(colour, Offset(x, 0f), Offset(x, size.height), strokeWidth = 1f)
+    }
 }
 
 /** A layout's bounds in the root's coordinates, unclipped by its parents. */

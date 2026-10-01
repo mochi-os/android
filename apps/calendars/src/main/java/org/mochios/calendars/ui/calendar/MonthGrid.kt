@@ -154,7 +154,12 @@ fun MonthGrid(
             }
             HorizontalDivider()
             for (week in weeks) {
-                Row(modifier = Modifier.fillMaxWidth().weight(1f)) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .weight(1f)
+                        .columnLines(7, MaterialTheme.colorScheme.outlineVariant),
+                ) {
                     for (offset in 0 until 7) {
                         val day = week.plusDays(offset.toLong())
                         val occurrences = byDay[day].orEmpty()
