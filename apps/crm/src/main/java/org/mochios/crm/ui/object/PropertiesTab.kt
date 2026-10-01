@@ -48,14 +48,24 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import org.mochios.android.model.User
+import org.mochios.android.ui.components.FormField
+import org.mochios.android.ui.components.FormHeading
+import org.mochios.android.ui.components.FormRow
+import org.mochios.android.ui.components.formPairs
+import org.mochios.android.ui.components.formRows
+import org.mochios.android.ui.components.oneLine
+import org.mochios.android.ui.components.shortField
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextButton
@@ -69,6 +79,7 @@ import org.mochios.crm.model.CrmDetails
 import org.mochios.crm.model.CrmField
 import org.mochios.crm.model.CrmObject
 import org.mochios.crm.util.HIERARCHY_ROOT
+import org.mochios.crm.util.formFields
 import org.mochios.crm.util.parentAllowed
 import org.mochios.android.R as MochiR
 
@@ -77,11 +88,6 @@ fun PropertiesTab(
     obj: CrmObject,
     crmDetails: CrmDetails,
     viewModel: ObjectDetailViewModel,
-    /**
-     * Field ids the active view pins; they lead the form, the rest of the class
-     * follows in rank order.
-     */
-    viewFieldIds: List<String> = emptyList(),
     onNavigateToObject: (String) -> Unit = {},
     crmId: String = "",
 ) {
@@ -91,19 +97,24 @@ fun PropertiesTab(
     val canWrite = canWriteAccess(uiState.access)
     val titleFieldId = crmDetails.classes.find { cls -> cls.id == obj.objectClass }?.title
         .orEmpty()
-    val visibleFields = remember(fields, viewFieldIds) {
-        val pinned = viewFieldIds.mapNotNull { id -> fields.find { field -> field.id == id } }
-        val pinnedIds = pinned.map { field -> field.id }.toSet()
-        pinned + fields
-            .filterNot { field -> field.id in pinnedIds }
-            .sortedBy { field -> field.rank }
+    val pairs = formPairs(
+        width = LocalConfiguration.current.screenWidthDp.dp - FORM_PADDING * 2,
+        fontScale = LocalDensity.current.fontScale,
+    )
+    val rows = remember(fields, titleFieldId, pairs) {
+        formRows(
+            fields = formFields(fields),
+            title = { field -> field.id == titleFieldId },
+            short = { field -> shortField(field.fieldtype) },
+            pairs = pairs,
+        )
     }
 
     Column(
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
-            .padding(horizontal = 16.dp)
+            .padding(horizontal = FORM_PADDING)
             .padding(bottom = 16.dp)
             .padding(top = 8.dp)
     ) {
@@ -119,12 +130,20 @@ fun PropertiesTab(
         val showParent = parentOptions.isNotEmpty() || currentParent != null
         val parentLabel = stringResource(R.string.crm_parent_label)
 
-        // The parent picker sits directly under the title field, matching the
-        // web form. With no title field among the visible ones it leads instead
-        // — `parentPending` tracks whether it still owes a slot.
-        var parentPending = showParent
-        if (parentPending && visibleFields.none { field -> field.id == titleFieldId }) {
-            PropertyRow(label = parentLabel) {
+        val editor: @Composable (CrmField) -> Unit = { field ->
+            FieldEditor(
+                field = field,
+                value = obj.values[field.id],
+                options = classOptions[field.id] ?: emptyList(),
+                canWrite = canWrite,
+                people = uiState.people,
+                showLabel = false,
+                onValueChange = { viewModel.setValue(field.id, it) },
+                onSearchUsers = { query -> viewModel.searchPeople(query) }
+            )
+        }
+        val parent: @Composable () -> Unit = {
+            FormField(label = parentLabel) {
                 ParentPicker(
                     crmDetails = crmDetails,
                     currentParent = currentParent,
@@ -134,39 +153,41 @@ fun PropertiesTab(
                     onSelect = { newParent -> viewModel.updateParent(newParent) }
                 )
             }
-            Spacer(modifier = Modifier.height(12.dp))
-            parentPending = false
+            Spacer(modifier = Modifier.height(FORM_GAP))
         }
 
-        visibleFields.forEach { field ->
-            PropertyRow(label = field.name) {
-                FieldEditor(
-                    field = field,
-                    value = obj.values[field.id],
-                    options = classOptions[field.id] ?: emptyList(),
-                    canWrite = canWrite,
-                    people = uiState.people,
-                    showLabel = false,
-                    onValueChange = { viewModel.setValue(field.id, it) },
-                    onSearchUsers = { query -> viewModel.searchPeople(query) }
-                )
-            }
-            Spacer(modifier = Modifier.height(12.dp))
+        // The parent picker sits directly under the title, as on the web form;
+        // with no title to sit under, it leads.
+        if (showParent && rows.firstOrNull() !is FormRow.Heading) parent()
 
-            if (parentPending && field.id == titleFieldId) {
-                PropertyRow(label = parentLabel) {
-                    ParentPicker(
-                        crmDetails = crmDetails,
-                        currentParent = currentParent,
-                        parentOptions = parentOptions,
-                        rootAllowed = rootAllowed,
-                        canWrite = canWrite,
-                        onSelect = { newParent -> viewModel.updateParent(newParent) }
+        rows.forEach { row ->
+            when (row) {
+                is FormRow.Heading -> {
+                    val title = row.field
+                    val text = obj.stringValue(title.id)
+                    FormHeading(
+                        value = text,
+                        onValueChange = { viewModel.setValue(title.id, it) },
+                        name = title.name,
+                        readOnly = title.isReadonly || !canWrite,
                     )
+                    if (title.isRequired && text.isBlank()) {
+                        Text(
+                            text = stringResource(R.string.crm_property_required, title.name),
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.error,
+                            modifier = Modifier.padding(top = 2.dp)
+                        )
+                    }
                 }
-                Spacer(modifier = Modifier.height(12.dp))
-                parentPending = false
+                is FormRow.Wide -> FormField(label = row.field.name) { editor(row.field) }
+                is FormRow.Paired -> Row(horizontalArrangement = Arrangement.spacedBy(FORM_GAP)) {
+                    FormField(label = row.first.name, modifier = Modifier.weight(1f)) { editor(row.first) }
+                    FormField(label = row.second.name, modifier = Modifier.weight(1f)) { editor(row.second) }
+                }
             }
+            Spacer(modifier = Modifier.height(FORM_GAP))
+            if (showParent && row is FormRow.Heading) parent()
         }
 
         // Attachments + Links inlined here to match web's object-detail-panel
@@ -200,35 +221,11 @@ fun PropertiesTab(
 internal fun canWriteAccess(access: String): Boolean =
     access == "owner" || access == "design" || access == "write"
 
-/** Width of the label column in the object-detail form. */
-private val PROPERTY_LABEL_WIDTH = 96.dp
+/** Side padding of the object-detail form. */
+private val FORM_PADDING = 16.dp
 
-/**
- * Form row: fixed-width label, editor filling the rest. The label's top padding
- * centres it on a single-line text field.
- */
-@Composable
-private fun PropertyRow(
-    label: String,
-    content: @Composable () -> Unit
-) {
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        verticalAlignment = Alignment.Top
-    ) {
-        Text(
-            text = label,
-            style = MaterialTheme.typography.bodyMedium,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-            modifier = Modifier
-                .width(PROPERTY_LABEL_WIDTH)
-                .padding(top = 18.dp, end = 8.dp)
-        )
-        Box(modifier = Modifier.weight(1f)) {
-            content()
-        }
-    }
-}
+/** Space between the form's rows, and between two fields sharing one. */
+private val FORM_GAP = 12.dp
 
 private fun collectDescendants(objects: List<CrmObject>, rootId: String): Set<String> {
     val result = mutableSetOf<String>()
@@ -264,14 +261,12 @@ private fun ParentPicker(
     val untitled = stringResource(R.string.crm_untitled)
     val displayText = currentParent?.let { objectDisplayTitle(it, crmDetails, untitled) } ?: noParentLabel
 
-    // The label lives in the enclosing PropertyRow, so nothing here repeats it.
+    // The label sits above, in the enclosing FormField, so nothing here repeats it.
     if (!canWrite) {
         Text(
             text = displayText,
             style = MaterialTheme.typography.bodyLarge,
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(top = 16.dp)
+            modifier = Modifier.fillMaxWidth()
         )
         return
     }
@@ -375,14 +370,22 @@ internal fun FieldEditor(
                 if (readOnly) {
                     ReadOnlyDisplay(labelOrNull(showLabel, field.name), stringValue)
                 } else {
+                    // Every line of the value shows: the field grows with it,
+                    // so the form scrolls and the field does not. A field asking
+                    // for one row holds one line of text, wrapped to fit; a line
+                    // break in it becomes a space.
+                    val single = field.rows <= 1
                     MochiTextField(
                         value = stringValue,
-                        onValueChange = onValueChange,
+                        onValueChange = { text -> onValueChange(if (single) oneLine(text) else text) },
                         label = fieldLabel,
                         readOnly = false,
-                        singleLine = field.rows <= 1,
-                        maxLines = if (field.rows > 1) field.rows else 1,
-                        minLines = if (field.rows > 1) field.rows.coerceAtMost(3) else 1,
+                        minLines = field.rows.coerceIn(1, 3),
+                        keyboardOptions = if (single) {
+                            KeyboardOptions(imeAction = ImeAction.Done)
+                        } else {
+                            KeyboardOptions.Default
+                        },
                         modifier = Modifier.fillMaxWidth()
                     )
                 }

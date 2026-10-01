@@ -62,11 +62,6 @@ fun ObjectDetailSheet(
     objectId: String,
     crmDetails: CrmDetails,
     initialObject: org.mochios.crm.model.CrmObject? = null,
-    /**
-     * Field ids the active view pins, in the order it lists them. The
-     * Properties tab leads with these and follows with the rest of the class.
-     */
-    viewFieldIds: List<String> = emptyList(),
     onDismiss: () -> Unit,
     /**
      * Deletes this object. The sheet never deletes anything itself, so this is
@@ -227,7 +222,6 @@ fun ObjectDetailSheet(
                             obj = obj,
                             crmDetails = crmDetails,
                             viewModel = viewModel,
-                            viewFieldIds = viewFieldIds,
                             onNavigateToObject = onNavigateToObject,
                             crmId = crmId,
                         )

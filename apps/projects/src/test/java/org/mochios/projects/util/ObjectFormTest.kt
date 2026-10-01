@@ -80,4 +80,32 @@ class ObjectFormTest {
         assertEquals(listOf("status"), unfillable.map { field -> field.id })
         assertTrue(unsatisfiable(listOf(status), options).isEmpty())
     }
+
+    /** A ticket class as the server hands it over, not in rank order. */
+    private val ticket = listOf(
+        ProjectField(id = "owner", name = "Owner", fieldtype = "user", rank = 5),
+        ProjectField(id = "title", name = "Title", fieldtype = "text", rank = 0),
+        ProjectField(id = "due", name = "Due", fieldtype = "date", rank = 6),
+        ProjectField(id = "status", name = "Status", fieldtype = "enumerated", rank = 2),
+        ProjectField(id = "description", name = "Description", fieldtype = "text", rank = 1),
+        ProjectField(id = "category", name = "Category", fieldtype = "enumerated", rank = 4),
+    )
+
+    @Test
+    fun `an object's form shows every field of its class`() {
+        // A board listing only the title and owner on its cards used to leave
+        // the other four out of the form of a ticket opened from it.
+        assertEquals(
+            setOf("title", "description", "status", "category", "owner", "due"),
+            formFields(ticket).map { field -> field.id }.toSet(),
+        )
+    }
+
+    @Test
+    fun `an object's form lists its fields in the class's order`() {
+        assertEquals(
+            listOf("title", "description", "status", "category", "owner", "due"),
+            formFields(ticket).map { field -> field.id },
+        )
+    }
 }

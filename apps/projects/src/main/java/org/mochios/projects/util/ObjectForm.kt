@@ -56,6 +56,14 @@ private fun usable(
     return options[fieldId].orEmpty().any { option -> option.id == value }
 }
 
+/**
+ * The fields an object's own form shows: every field of its class, in the
+ * class's order, as the web's panel shows them. The view the object was opened
+ * from has no say: the fields a view lists are the ones on its cards and rows,
+ * and a board listing two would otherwise leave the rest uneditable.
+ */
+fun formFields(fields: List<ProjectField>): List<ProjectField> = fields.sortedBy { field -> field.rank }
+
 /** Whether every field flagged required holds a value. */
 fun requiredFilled(fields: List<ProjectField>, values: Map<String, String>): Boolean =
     fields.none { field -> field.isRequired && values[field.id].isNullOrBlank() }
