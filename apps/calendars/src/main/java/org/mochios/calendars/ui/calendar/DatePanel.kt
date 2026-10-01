@@ -28,7 +28,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberUpdatedState
+import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -67,7 +70,8 @@ private const val ROWS = 6
  * day; the panel stays open, so several dates can be looked at in turn.
  * [focus], the day the user last chose, is circled and its month shown
  * whenever it moves; [today] is in the primary colour; [weekStart] counts
- * Sunday 0 to Saturday 6.
+ * Sunday 0 to Saturday 6. A swipe that settles the small month on another
+ * month picks that month's first day, as a tap on its chip does.
  */
 @Composable
 fun DatePanel(
@@ -90,6 +94,15 @@ fun DatePanel(
                 pager.animateScrollToPage(target)
             } else {
                 pager.scrollToPage(target)
+            }
+        }
+    }
+    val picked by rememberUpdatedState(YearMonth.from(focus))
+    LaunchedEffect(pager) {
+        snapshotFlow { pager.settledPage }.collect { page ->
+            val month = base.plusMonths((page - MONTH_CENTRE).toLong())
+            if (month != picked) {
+                onPick(month.atDay(1))
             }
         }
     }
