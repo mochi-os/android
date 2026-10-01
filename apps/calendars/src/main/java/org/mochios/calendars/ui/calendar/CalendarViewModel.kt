@@ -53,14 +53,17 @@ import java.time.temporal.ChronoUnit
 import javax.inject.Inject
 
 /**
- * The calendar screen. [anchor] is the date the view is built around and
- * [hidden] the calendars this device does not show, which is a viewing choice
- * and never leaves the phone. [instances] is everything the server returned
- * for the range, unfiltered, so flipping a checkbox redraws without a fetch.
+ * The calendar screen. [anchor] is the date the view is built around,
+ * [focus] the day the user last chose, which the date panel circles and a new
+ * event lands on, and [hidden] the calendars this device does not show,
+ * which is a viewing choice and never leaves the phone. [instances] is
+ * everything the server returned for the range, unfiltered, so flipping a
+ * checkbox redraws without a fetch.
  */
 data class CalendarUiState(
     val view: String = CalendarsSection.MONTH,
     val anchor: LocalDate = LocalDate.now(),
+    val focus: LocalDate = LocalDate.now(),
     val calendars: List<Calendar> = emptyList(),
     val hidden: Set<String> = emptySet(),
     val instances: List<Instance> = emptyList(),
@@ -354,9 +357,18 @@ class CalendarViewModel @Inject constructor(
     }
 
     fun anchor(date: LocalDate) {
-        if (date == _uiState.value.anchor) return
-        _uiState.value = _uiState.value.copy(anchor = date)
+        if (date == _uiState.value.anchor) {
+            focus(date)
+            return
+        }
+        _uiState.value = _uiState.value.copy(anchor = date, focus = date)
         load()
+    }
+
+    /** Chooses a day the view already shows, without moving the view. */
+    fun focus(date: LocalDate) {
+        if (date == _uiState.value.focus) return
+        _uiState.value = _uiState.value.copy(focus = date)
     }
 
     fun workweek(value: Boolean) {
@@ -621,13 +633,13 @@ class CalendarViewModel @Inject constructor(
 
     /**
      * Where a new event with no time of its own starts, in epoch seconds: on
-     * [day] when a day cell was tapped, and otherwise on the day the view is
-     * on, which is today until the user picks or pages to another.
+     * [day] when a day cell was tapped, and otherwise on the day the user last
+     * chose, which is today until they pick, tap or page to another.
      */
     fun creation(day: LocalDate? = null, state: CalendarUiState = _uiState.value): Long {
         val now = ZonedDateTime.now(zone)
         val today = now.toLocalDate()
-        val chosen = day ?: state.anchor
+        val chosen = day ?: state.focus
         return defaultStart(chosen, today, now.toLocalTime(), state.preferences.hours).atZone(zone).toEpochSecond()
     }
 
@@ -747,7 +759,11 @@ class CalendarViewModel @Inject constructor(
 
     /** Opens the day view on a date, from a column heading or a month cell. */
     fun open(date: LocalDate) {
-        _uiState.value = _uiState.value.copy(anchor = date, view = CalendarsSection.DAY)
+        _uiState.value = _uiState.value.copy(
+            anchor = date,
+            focus = date,
+            view = CalendarsSection.DAY,
+        )
         remember(CalendarsSection.DAY)
         load()
     }

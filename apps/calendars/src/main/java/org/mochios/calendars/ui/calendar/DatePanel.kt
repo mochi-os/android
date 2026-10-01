@@ -64,25 +64,26 @@ private const val ROWS = 6
  * month chips under it, with each year's number before its January. A tap
  * on a day calls [onPick] with it, and a tap on a chip with that month's first
  * day; the panel stays open, so several dates can be looked at in turn.
- * [anchor] is circled and its month shown whenever it moves; [today] is in the primary colour;
- * [weekStart] counts Sunday 0 to Saturday 6.
+ * [focus], the day the user last chose, is circled and its month shown
+ * whenever it moves; [today] is in the primary colour; [weekStart] counts
+ * Sunday 0 to Saturday 6.
  */
 @Composable
 fun DatePanel(
-    anchor: LocalDate,
+    focus: LocalDate,
     today: LocalDate,
     weekStart: Int,
     onPick: (LocalDate) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    val base = remember { YearMonth.from(anchor) }
+    val base = remember { YearMonth.from(focus) }
     val pager = rememberPagerState(initialPage = MONTH_CENTRE) { MONTH_PAGES }
     val chips = rememberLazyListState(initialFirstVisibleItemIndex = CHIP_REACH - 1)
     val locale = LocalConfiguration.current.locales[0]
     val shown = base.plusMonths((pager.currentPage - MONTH_CENTRE).toLong())
 
-    LaunchedEffect(YearMonth.from(anchor)) {
-        val target = MONTH_CENTRE + base.until(YearMonth.from(anchor), ChronoUnit.MONTHS).toInt()
+    LaunchedEffect(YearMonth.from(focus)) {
+        val target = MONTH_CENTRE + base.until(YearMonth.from(focus), ChronoUnit.MONTHS).toInt()
         if (pager.currentPage != target) {
             if (abs(pager.currentPage - target) <= SLIDE) {
                 pager.animateScrollToPage(target)
@@ -115,7 +116,7 @@ fun DatePanel(
         }
         HorizontalPager(state = pager, modifier = Modifier.fillMaxWidth()) { page ->
             val month = base.plusMonths((page - MONTH_CENTRE).toLong())
-            Month(month, anchor, today, weekStart, onPick)
+            Month(month, focus, today, weekStart, onPick)
         }
         Spacer(Modifier.height(4.dp))
         LazyRow(
@@ -158,7 +159,7 @@ fun DatePanel(
 @Composable
 private fun Month(
     month: YearMonth,
-    anchor: LocalDate,
+    focus: LocalDate,
     today: LocalDate,
     weekStart: Int,
     onPick: (LocalDate) -> Unit,
@@ -175,7 +176,7 @@ private fun Month(
                         contentAlignment = Alignment.Center,
                     ) {
                         if (number in 1..month.lengthOfMonth()) {
-                            Day(month.atDay(number), anchor, today, onPick)
+                            Day(month.atDay(number), focus, today, onPick)
                         }
                     }
                 }
@@ -184,10 +185,10 @@ private fun Month(
     }
 }
 
-/** A day's number, circled when it is the anchor and in the primary colour when it is today. */
+/** A day's number, circled when it is the focus and in the primary colour when it is today. */
 @Composable
-private fun Day(day: LocalDate, anchor: LocalDate, today: LocalDate, onPick: (LocalDate) -> Unit) {
-    val picked = day == anchor
+private fun Day(day: LocalDate, focus: LocalDate, today: LocalDate, onPick: (LocalDate) -> Unit) {
+    val picked = day == focus
     val current = day == today
     val circle = MaterialTheme.colorScheme.primaryContainer
     Box(

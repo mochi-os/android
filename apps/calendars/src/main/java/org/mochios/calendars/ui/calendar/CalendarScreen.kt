@@ -223,7 +223,7 @@ fun CalendarScreen(
             topBar = {
                 Toolbar(
                     state = uiState,
-                    title = monthTitle(if (picking) uiState.anchor else viewModel.first(uiState)),
+                    title = monthTitle(if (picking) uiState.focus else viewModel.first(uiState)),
                     picking = picking,
                     onMenu = { scope.launch { drawerState.open() } },
                     onTitle = { picking = !picking },
@@ -246,7 +246,7 @@ fun CalendarScreen(
                     exit = shrinkVertically(),
                 ) {
                     DatePanel(
-                        anchor = uiState.anchor,
+                        focus = uiState.focus,
                         today = LocalDate.now(viewModel.timezone()),
                         weekStart = viewModel.start(),
                         onPick = viewModel::anchor,
@@ -589,7 +589,12 @@ private fun Page(
     // device's. A cell is a timed event, and says so, which the editor's
     // memory of the last new event does not override.
     val moment = { day: LocalDate, hour: Int ->
+        viewModel.focus(day)
         day.atStartOfDay(viewModel.timezone()).plusHours(hour.toLong()).toEpochSecond()
+    }
+    val dated = { day: LocalDate ->
+        viewModel.focus(day)
+        onNewEvent(viewModel.creation(day), null)
     }
     when (state.view) {
         CalendarsSection.DAY -> TimeGrid(
@@ -623,7 +628,7 @@ private fun Page(
             state = state,
             viewModel = viewModel,
             onOpen = onOpen,
-            onCreate = { day -> onNewEvent(viewModel.creation(day), null) },
+            onCreate = dated,
             onMove = onMoveDay,
             selected = selected,
         )
@@ -633,7 +638,7 @@ private fun Page(
             state = state,
             viewModel = viewModel,
             onOpen = onOpen,
-            onCreate = { day -> onNewEvent(viewModel.creation(day), null) },
+            onCreate = dated,
             onMove = onMoveDay,
             selected = selected,
         )
