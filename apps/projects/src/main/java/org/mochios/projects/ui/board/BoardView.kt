@@ -98,9 +98,11 @@ fun BoardView(
     }
 
     val columnFieldId = view.columns
-    val columnOptions = viewModel.getAllOptionsForField(columnFieldId)
+    // The board class's options, as the web's board takes them: the columns
+    // are the same on both, and a column added on either shows on the other.
+    val columnOptions = viewModel.getBoardOptions(view, columnFieldId)
     val rowFieldId = view.rows.takeIf { it.isNotBlank() }
-    val rowOptions = rowFieldId?.let { viewModel.getAllOptionsForField(it) } ?: emptyList()
+    val rowOptions = rowFieldId?.let { viewModel.getBoardOptions(view, it) } ?: emptyList()
     val borderFieldId = view.border.takeIf { it.isNotBlank() }
 
     // Build parent-child map from all objects

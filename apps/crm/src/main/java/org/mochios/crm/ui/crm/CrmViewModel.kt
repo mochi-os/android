@@ -29,6 +29,8 @@ import org.mochios.android.files.SavedExport
 import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
+import org.mochios.crm.ui.board.boardClass
+import org.mochios.crm.ui.board.boardOptions
 import org.mochios.crm.lib.ActiveViewStore
 import org.mochios.crm.model.CrmClass
 import org.mochios.crm.model.CrmDetails
@@ -626,17 +628,21 @@ class CrmViewModel @Inject constructor(
         return _uiState.value.crmDetails?.classes?.find { it.id == classId }
     }
 
-    /** Find the classId that owns a given fieldId. */
-    private fun findClassForField(fieldId: String): String? {
+    /** The class [view]'s board keeps its columns in, or null before the CRM loads. */
+    fun getBoardClass(view: CrmView? = getActiveView()): String? {
         val details = _uiState.value.crmDetails ?: return null
-        for ((classId, fields) in details.fields) {
-            if (fields.any { it.id == fieldId }) return classId
-        }
-        return null
+        return boardClass(details, view)
+    }
+
+    /** The options of [fieldId] that [view]'s board shows as its columns or lanes. */
+    fun getBoardOptions(view: CrmView?, fieldId: String): List<FieldOption> {
+        val details = _uiState.value.crmDetails ?: return emptyList()
+        return boardOptions(details, view, fieldId)
     }
 
     fun renameColumnOption(fieldId: String, optionId: String, name: String) {
-        val classId = findClassForField(fieldId) ?: return
+        // A column is an option of the board class, so that is the class changed.
+        val classId = getBoardClass() ?: return
         viewModelScope.launch {
             try {
                 repository.updateOption(crmId, classId, fieldId, optionId, name, null, null)
@@ -648,7 +654,8 @@ class CrmViewModel @Inject constructor(
     }
 
     fun deleteColumnOption(fieldId: String, optionId: String) {
-        val classId = findClassForField(fieldId) ?: return
+        // A column is an option of the board class, so that is the class changed.
+        val classId = getBoardClass() ?: return
         viewModelScope.launch {
             try {
                 repository.deleteOption(crmId, classId, fieldId, optionId)
@@ -663,7 +670,8 @@ class CrmViewModel @Inject constructor(
      * Persists a drag-reorder: [order] is every option id in display order.
      */
     fun reorderColumnOptions(fieldId: String, order: List<String>) {
-        val classId = findClassForField(fieldId) ?: return
+        // A column is an option of the board class, so that is the class changed.
+        val classId = getBoardClass() ?: return
         viewModelScope.launch {
             try {
                 repository.reorderOptions(crmId, classId, fieldId, order.joinToString(","))

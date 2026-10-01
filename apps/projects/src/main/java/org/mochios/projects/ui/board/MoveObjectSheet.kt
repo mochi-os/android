@@ -51,10 +51,11 @@ fun MoveObjectSheet(
     val uiState by viewModel.uiState.collectAsState()
     val activeView = viewModel.getActiveView() ?: run { onDismiss(); return }
     val columnFieldId = activeView.columns.takeIf { it.isNotBlank() } ?: run { onDismiss(); return }
-    val columnOptions = viewModel.getAllOptionsForField(columnFieldId)
+    // The object's own class's options: the value stored is an id from there.
+    val columnOptions = viewModel.getOptionsForObject(obj.objectClass, columnFieldId)
     val currentColumnValue = obj.stringValue(columnFieldId)
     val rowFieldId = activeView.rows.takeIf { it.isNotBlank() }
-    val rowOptions = rowFieldId?.let { viewModel.getAllOptionsForField(it) } ?: emptyList()
+    val rowOptions = rowFieldId?.let { viewModel.getOptionsForObject(obj.objectClass, it) } ?: emptyList()
     val currentRowValue = rowFieldId?.let { obj.stringValue(it) } ?: ""
 
     // Objects in the same column for reordering, in rank order — the fractional

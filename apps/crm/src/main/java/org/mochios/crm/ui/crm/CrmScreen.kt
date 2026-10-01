@@ -717,11 +717,7 @@ private fun CrmContent(
                                         onClick = {
                                             showOverflow = false
                                             val fieldId = activeView.columns
-                                            val classId = details?.fields?.entries
-                                                ?.firstOrNull { (_, fields) ->
-                                                    fields.any { field -> field.id == fieldId }
-                                                }
-                                                ?.key
+                                            val classId = viewModel.getBoardClass(activeView)
                                             if (classId != null) {
                                                 columnPending = true
                                                 onAddColumn(viewModel.crmId, classId, fieldId)

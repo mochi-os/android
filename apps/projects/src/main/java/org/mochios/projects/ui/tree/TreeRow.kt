@@ -305,6 +305,7 @@ fun TreeRow(
                     metaFields.forEach { field ->
                         MetaValue(
                             field = field,
+                            objectClass = obj.objectClass,
                             value = obj.stringValue(field.id),
                             viewModel = viewModel,
                             people = people,
@@ -373,6 +374,8 @@ fun TreeRow(
 @Composable
 private fun MetaValue(
     field: ProjectField,
+    /** The owning object's class, which is what scopes an option id. */
+    objectClass: String,
     value: String,
     viewModel: ProjectViewModel,
     people: List<Person>,
@@ -382,7 +385,7 @@ private fun MetaValue(
     val rowModifier = modifier
     when (field.fieldtype) {
         "enumerated" -> {
-            val option = viewModel.getAllOptionsForField(field.id).find { it.id == value }
+            val option = viewModel.getOptionsForObject(objectClass, field.id).find { it.id == value }
             Row(modifier = rowModifier, verticalAlignment = Alignment.CenterVertically) {
                 if (option != null && option.colour.isNotBlank()) {
                     Box(

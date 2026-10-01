@@ -721,11 +721,7 @@ private fun ProjectContent(
                                         onClick = {
                                             showOverflow = false
                                             val fieldId = activeView.columns
-                                            val classId = details?.fields?.entries
-                                                ?.firstOrNull { (_, fields) ->
-                                                    fields.any { field -> field.id == fieldId }
-                                                }
-                                                ?.key
+                                            val classId = viewModel.getBoardClass(activeView)
                                             if (classId != null) {
                                                 refreshPending = true
                                                 onAddColumn(viewModel.projectId, classId, fieldId)
