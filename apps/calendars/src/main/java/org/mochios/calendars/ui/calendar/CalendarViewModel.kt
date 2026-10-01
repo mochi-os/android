@@ -36,7 +36,6 @@ import org.mochios.calendars.ui.editor.EventForm
 import org.mochios.calendars.ui.editor.Scope
 import org.mochios.calendars.ui.editor.advanced
 import org.mochios.calendars.ui.editor.components
-import org.mochios.calendars.ui.editor.creationDay
 import org.mochios.calendars.ui.editor.defaultStart
 import org.mochios.calendars.ui.editor.draft
 import org.mochios.calendars.ui.editor.instant
@@ -622,18 +621,13 @@ class CalendarViewModel @Inject constructor(
 
     /**
      * Where a new event with no time of its own starts, in epoch seconds: on
-     * [day] when a day cell was tapped, and otherwise on the day "New event"
-     * lands on, today when today is on screen and else the day the view is on.
+     * [day] when a day cell was tapped, and otherwise on the day the view is
+     * on, which is today until the user picks or pages to another.
      */
     fun creation(day: LocalDate? = null, state: CalendarUiState = _uiState.value): Long {
         val now = ZonedDateTime.now(zone)
         val today = now.toLocalDate()
-        val chosen = day ?: run {
-            val (first, last) = range(state)
-            val from = Instant.ofEpochSecond(first).atZone(zone).toLocalDate()
-            val until = Instant.ofEpochSecond(last).atZone(zone).toLocalDate()
-            creationDay(today, state.anchor, from, ChronoUnit.DAYS.between(from, until))
-        }
+        val chosen = day ?: state.anchor
         return defaultStart(chosen, today, now.toLocalTime(), state.preferences.hours).atZone(zone).toEpochSecond()
     }
 

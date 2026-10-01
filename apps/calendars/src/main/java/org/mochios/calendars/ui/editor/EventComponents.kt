@@ -598,11 +598,3 @@ fun defaultStart(day: LocalDate, today: LocalDate, now: LocalTime, hours: Hours)
     if (next > 23) return today.plusDays(1).atTime(working, 0)
     return today.atTime(next, 0)
 }
-
-/**
- * The day "New event" lands on: [today] when it is on screen, the [days] from
- * [from], and otherwise [anchor], the day the view is on, since a user paging
- * through another week is planning that week.
- */
-fun creationDay(today: LocalDate, anchor: LocalDate, from: LocalDate, days: Long): LocalDate =
-    if (!today.isBefore(from) && today.isBefore(from.plusDays(days))) today else anchor
