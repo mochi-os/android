@@ -5,6 +5,7 @@
 
 package org.mochios.calendars.ui.calendar
 
+import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -58,9 +59,8 @@ private const val SLIDE = 3
 /** How many months the chip row reaches either side of the month it opened with. */
 private const val CHIP_REACH = 120
 
-/** One day cell of the small month, and the grid's fixed six rows of them. */
+/** One day cell of the small month. */
 private val CELL = 36.dp
-private const val ROWS = 6
 
 /**
  * The date picker that drops down under the toolbar's title, as in Google
@@ -130,7 +130,11 @@ fun DatePanel(
             .padding(top = 8.dp, bottom = 8.dp),
     ) {
         if (days) {
-            HorizontalPager(state = pager, modifier = Modifier.fillMaxWidth()) { page ->
+            HorizontalPager(
+                state = pager,
+                modifier = Modifier.fillMaxWidth().animateContentSize(),
+                verticalAlignment = Alignment.Top,
+            ) { page ->
                 val month = base.plusMonths((page - MONTH_CENTRE).toLong())
                 Month(month, focus, today, weekStart, onPick)
             }
@@ -179,7 +183,19 @@ fun DatePanel(
     }
 }
 
-/** One month's weekday letters over its days in six rows of seven, blank outside the month. */
+/** How many weeks [month] reaches into, its first starting on [weekStart]. */
+private fun rows(month: YearMonth, weekStart: Int): Int =
+    (lead(month, weekStart) + month.lengthOfMonth() + 6) / 7
+
+/** How many blank cells come before [month]'s first day in its first week. */
+private fun lead(month: YearMonth, weekStart: Int): Int =
+    ((month.atDay(1).dayOfWeek.value % 7) - weekStart + 7) % 7
+
+/**
+ * One month's weekday letters over its days in rows of seven, as many as the
+ * month reaches into, blank outside the month. The month chips sit right under
+ * the last row, so they move down for a six-week month and back up after it.
+ */
 @Composable
 private fun Month(
     month: YearMonth,
@@ -188,8 +204,7 @@ private fun Month(
     weekStart: Int,
     onPick: (LocalDate) -> Unit,
 ) {
-    val first = month.atDay(1)
-    val lead = ((first.dayOfWeek.value % 7) - weekStart + 7) % 7
+    val lead = lead(month, weekStart)
     val locale = LocalConfiguration.current.locales[0]
     Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp)) {
         Row(modifier = Modifier.fillMaxWidth()) {
@@ -203,7 +218,7 @@ private fun Month(
                 )
             }
         }
-        for (row in 0 until ROWS) {
+        for (row in 0 until rows(month, weekStart)) {
             Row(modifier = Modifier.fillMaxWidth()) {
                 for (column in 0 until 7) {
                     val number = row * 7 + column - lead + 1
