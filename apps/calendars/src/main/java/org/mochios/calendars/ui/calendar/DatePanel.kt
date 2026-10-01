@@ -23,6 +23,7 @@ import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.FilterChip
+import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -101,7 +102,7 @@ fun DatePanel(
         modifier = modifier
             .fillMaxWidth()
             .background(MaterialTheme.colorScheme.surfaceContainer)
-            .padding(bottom = 8.dp),
+            .padding(top = 8.dp, bottom = 8.dp),
     ) {
         Row(modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp)) {
             for (column in 0 until 7) {
@@ -148,6 +149,13 @@ fun DatePanel(
                                 fontWeight = if (current) FontWeight.Bold else FontWeight.Normal,
                             )
                         },
+                        colors = FilterChipDefaults.filterChipColors(
+                            containerColor = MaterialTheme.colorScheme.surfaceContainerLowest,
+                            labelColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                            selectedContainerColor = MaterialTheme.colorScheme.secondaryContainer,
+                            selectedLabelColor = MaterialTheme.colorScheme.onSecondaryContainer,
+                        ),
+                        border = null,
                     )
                 }
             }
