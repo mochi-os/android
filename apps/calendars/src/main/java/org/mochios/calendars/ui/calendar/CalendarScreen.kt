@@ -61,6 +61,9 @@ import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
@@ -494,25 +497,52 @@ private fun View(
 
         val timed = state.view == CalendarsSection.DAY || state.view == CalendarsSection.WEEK
         var top by remember { mutableStateOf(0.dp) }
+        val seamed = state.view == CalendarsSection.MONTH || state.view == CalendarsSection.MULTIWEEK
+        val seam = MaterialTheme.colorScheme.outlineVariant
         Row(modifier = Modifier.fillMaxSize()) {
             if (timed) {
                 HourGutter(top, scroll)
             }
-            HorizontalPager(state = pager, modifier = Modifier.weight(1f).fillMaxHeight()) { page ->
+            HorizontalPager(
+                state = pager,
+                pageSpacing = if (seamed) SEAM else 0.dp,
+                modifier = Modifier.weight(1f).fillMaxHeight(),
+            ) { page ->
                 val shown = if (page == target) {
                     state
                 } else {
                     state.copy(anchor = step(state.view, base, page - SWIPE_CENTRE))
                 }
-                Page(shown, viewModel, selected, scroll, onOpen, onNewEvent, onMove, onMoveDay) { offset ->
-                    if (page == pager.currentPage) {
-                        top = offset
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .then(
+                            if (seamed) {
+                                Modifier.drawBehind {
+                                    drawRect(seam, Offset(-SEAM.toPx(), 0f), Size(SEAM.toPx(), size.height))
+                                }
+                            } else {
+                                Modifier
+                            },
+                        ),
+                ) {
+                    Page(shown, viewModel, selected, scroll, onOpen, onNewEvent, onMove, onMoveDay) { offset ->
+                        if (page == pager.currentPage) {
+                            top = offset
+                        }
                     }
                 }
             }
         }
     }
 }
+
+/**
+ * The band between two pages of the month and multiweek views' pager, off
+ * screen while a page is settled and shown while a swipe carries one in
+ * under the other.
+ */
+private val SEAM = 4.dp
 
 /** How many pages the pager holds; it opens in the middle, so either way is endless. */
 private const val SWIPE_PAGES = Int.MAX_VALUE
