@@ -5,7 +5,7 @@
     <string name="settings_home_logout">Izrakstīties</string>
     <string name="settings_home_account">Konts</string>
     <string name="settings_home_preferences">Preferences</string>
-    <string name="settings_home_display">Attēlot</string>
+    <string name="settings_home_display">Attēlojums</string>
     <string name="settings_home_notification_prefs">Paziņojumu iestatījumi</string>
     <string name="settings_home_accounts">Savienotie konti</string>
     <string name="settings_home_interests">Intereses</string>
@@ -104,13 +104,11 @@
     <string name="accounts_remove">Noņemt</string>
     <string name="accounts_remove_title">Noņemt kontu?</string>
     <string name="system_documents_title">Dokumenti</string>
-    <string name="system_documents_description">Servera noteikumi, lietošanas nosacījumi un privātuma paziņojums, kas tiek rādīts jūsu lietotājiem</string>
     <string name="system_documents_tab_rules">Servera noteikumi</string>
     <string name="system_documents_tab_terms">Lietošanas nosacījumi</string>
     <string name="system_documents_tab_privacy">Privātums</string>
     <string name="system_documents_language">Valoda</string>
     <string name="system_documents_no_language">Nav dokumenta šai valodai.</string>
-    <string name="system_documents_customised">Pielāgots</string>
     <string name="system_documents_using_default">Tiek izmantots iekļautais noklusējums</string>
     <string name="system_documents_revert">Atsaukt uz noklusējumu</string>
     <string name="system_documents_save">Saglabāt</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Dzēst lietotāju</string>
     <string name="system_users_delete_title">Dzēst lietotāju?</string>
     <string name="system_users_manage_sessions">Pārvaldīt sesijas</string>
-    <string name="system_users_sessions_description">Skatīt un atsaukt aktīvās sesijas šim lietotājam.</string>
     <string name="system_users_sessions_empty">Šim lietotājam nav aktīvu sesiju.</string>
     <string name="system_users_revoke">Atsaukt</string>
     <string name="system_users_revoke_all">Atsaukt visas sesijas</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Tālāk</string>
     <string name="system_users_empty">Lietotāji nav atrasti</string>
     <string name="system_users_empty_search">Meklējumam neatbilst neviens lietotājs</string>
-    <string name="system_users_empty_search_hint">Mēģiniet pielāgot meklēšanas kritērijus</string>
     <string name="system_users_toast_created">Lietotājs izveidots</string>
     <string name="system_users_toast_updated">Lietotājs atjaunināts</string>
     <string name="system_users_toast_deleted">Lietotājs izdzēsts</string>
@@ -211,17 +207,19 @@
     <string name="settings_home_terms">Pakalpojuma noteikumi</string>
     <string name="account_passkeys_empty">Nav reģistrētu piekļuves atslēgu.</string>
     <string name="account_passkey_register_title">Pievienot piekļuves atslēgu</string>
-    <string name="account_passkey_register_message">Jūsu ierīce lūgs apstiprināt. Piekļuves atslēga ir saistīta ar šo ierīci un tiek izmantota turpmākai pieteikšanās.</string>
     <string name="account_passkey_name_label">Nosaukums (neobligāts)</string>
     <string name="account_passkey_delete_message">\"%1$s\" vairs jūs nepierakstīs.</string>
-    <string name="account_totp_description">Pierakstieties ar 6 ciparu kodu no autentifikācijas lietotnes.</string>
     <string name="account_totp_enabled">Autentifikators ir iespējots.</string>
     <string name="account_totp_setup_step1">Skenējiet vai ievadiet šo noslēpumu savā autentifikācijas lietotnē.</string>
     <string name="account_totp_setup_step2">Ievadiet 6 ciparu kodu, ko parāda jūsu lietotne.</string>
     <string name="account_totp_code">Kods</string>
     <string name="account_totp_disable_message">Jūs vairs nevarēsiet pierakstīties ar autentifikatora kodu.</string>
     <string name="account_recovery_none">Atkopšanas kodi nav ģenerēti.</string>
-    <string name="account_recovery_count">%1$d neizmantoti atkopšanas kodi.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="zero">Atlikuši %1$d atkopšanas kodi.</item>
+        <item quantity="one">Atlicis %1$d atkopšanas kods.</item>
+        <item quantity="other">Atlikuši %1$d atkopšanas kodi.</item>
+    </plurals>
     <string name="account_recovery_generate">Ģenerēt kodus</string>
     <string name="account_recovery_regenerate">Pārģenerēt kodus</string>
     <string name="account_recovery_regen_title">Pārģenerēt atkopšanas kodus?</string>
@@ -270,7 +268,11 @@
     <string name="system_users_session_last_accessed">Pēdējoreiz piekļūts: %1$s</string>
     <string name="system_users_revoke_all_title">Atsaukt visas sesijas?</string>
     <string name="system_users_revoke_all_message">Visas aktīvās šī lietotāja sesijas tiks izrakstītas.</string>
-    <string name="system_users_pagination_status">Rāda %1$d–%2$d no %3$d lietotājiem</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="zero">Rāda %1$d–%2$d no %3$d lietotājiem</item>
+        <item quantity="one">Rāda %1$d–%2$d no %3$d lietotāja</item>
+        <item quantity="other">Rāda %1$d–%2$d no %3$d lietotājiem</item>
+    </plurals>
     <string name="account_title">Konts</string>
     <string name="account_section_identity">Identitāte</string>
     <string name="account_identity_identity">Identitāte</string>
@@ -349,10 +351,8 @@
     <string name="system_setting_hostname">Citiem serveriem paziņotais resursdatora nosaukums</string>
     <string name="system_status_peer_id">Vienādranga ID</string>
     <string name="system_status_holepunch">Caururšana</string>
-    <string name="system_status_holepunch_value">%1$d veiksmīgi · %2$d neveiksmīgi</string>
     <string name="system_status_awaiting_routing">Ziņojumi, kas gaida maršrutēšanu</string>
     <string name="system_status_relay_service">Retranslācijas pakalpojums</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d rezervācijas · %3$d ķēdes · %4$d noraidīts</string>
     <string name="route_target_select">Atlasīt</string>
     <string name="account_data_description">Lejupielādējiet pilnu rezerves kopiju, ko varat atjaunot šajā vai citā Mochi serverī.</string>
     <string name="route_target_none">Nav pieejamu mērķu</string>
@@ -377,7 +377,11 @@
     <string name="accounts_device_seen">Pēdējoreiz redzēts %1$s</string>
     <string name="notifprefs_device_app">%1$s · lietotne</string>
     <string name="notifprefs_device_push">%1$s · push paziņojumi</string>
-    <string name="notifprefs_test_partial">Tests nosūtīts uz %1$d no %2$d galamērķiem</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="zero">Tests nosūtīts uz %1$d no %2$d galamērķiem</item>
+        <item quantity="one">Tests nosūtīts uz %1$d no %2$d galamērķa</item>
+        <item quantity="other">Tests nosūtīts uz %1$d no %2$d galamērķiem</item>
+    </plurals>
     <string name="notifprefs_test_none">Galamērķi nav konfigurēti</string>
     <string name="notifprefs_transport_fcm">Android push paziņojumi</string>
     <string name="notifprefs_no_destinations">Nav galamērķu</string>
@@ -396,4 +400,32 @@
     <string name="accounts_revoke_confirm">Tādējādi tiks atsaukta %1$s piekļuve kalendāram. Pieteikšanās ar %2$s saglabāsies, līdz to atsaistīsiet pieteikšanās lapā.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Nezināma tēma</string>
+    <string name="system_documents_modified">Mainīts</string>
+    <string name="system_documents_discard_title">Atmest izmaiņas?</string>
+    <string name="system_documents_discard">Atmest</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="zero">%1$d veiksmīgi</item>
+        <item quantity="one">%1$d veiksmīgs</item>
+        <item quantity="other">%1$d veiksmīgi</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="zero">%1$d neveiksmīgi</item>
+        <item quantity="one">%1$d neveiksmīgs</item>
+        <item quantity="other">%1$d neveiksmīgi</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="zero">%1$d / %2$d rezervācijas</item>
+        <item quantity="one">%1$d / %2$d rezervācija</item>
+        <item quantity="other">%1$d / %2$d rezervācijas</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="zero">%1$d ķēdes</item>
+        <item quantity="one">%1$d ķēde</item>
+        <item quantity="other">%1$d ķēdes</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="zero">%1$d noraidīti</item>
+        <item quantity="one">%1$d noraidīts</item>
+        <item quantity="other">%1$d noraidīti</item>
+    </plurals>
 </resources>

@@ -5,7 +5,7 @@
     <string name="settings_home_logout">लॉग आउट</string>
     <string name="settings_home_account">खाता</string>
     <string name="settings_home_preferences">वरीयता</string>
-    <string name="settings_home_display">देखाईं</string>
+    <string name="settings_home_display">प्रदर्शन</string>
     <string name="settings_home_notification_prefs">सूचना पसंद</string>
     <string name="settings_home_accounts">जुड़ल खाता</string>
     <string name="settings_home_interests">रुचि</string>
@@ -104,13 +104,11 @@
     <string name="accounts_remove">हटाईं</string>
     <string name="accounts_remove_title">खाता हटाईं?</string>
     <string name="system_documents_title">दस्तावेज</string>
-    <string name="system_documents_description">सर्वर नियम, शर्त, आ गोपनीयता सूचना जे आपके उपयोगकर्तन के देखावल जाला</string>
     <string name="system_documents_tab_rules">सर्वर नियम</string>
     <string name="system_documents_tab_terms">नियम आ शर्त</string>
     <string name="system_documents_tab_privacy">गोपनीयता</string>
     <string name="system_documents_language">भाषा</string>
     <string name="system_documents_no_language">ए भाषा खातिर कौनो दस्तावेज उपलब्ध नइखे।</string>
-    <string name="system_documents_customised">अनुकूलित</string>
     <string name="system_documents_using_default">बंडल डिफ़ॉल्ट के उपयोग कइल जा रहल बा</string>
     <string name="system_documents_revert">डिफ़ॉल्ट पर वापस जाईं</string>
     <string name="system_documents_save">सहेजीं</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">उपयोगकर्ता मेटाईं</string>
     <string name="system_users_delete_title">उपयोगकर्ता मेटाईं?</string>
     <string name="system_users_manage_sessions">सत्र प्रबंधित करीं</string>
-    <string name="system_users_sessions_description">एह उपयोगकर्ता खातिर सक्रिय सत्र देखीं आ निरस्त करीं।</string>
     <string name="system_users_sessions_empty">एह उपयोगकर्ता के कवनो सक्रिय सत्र नइखे।</string>
     <string name="system_users_revoke">वापस लीं</string>
     <string name="system_users_revoke_all">सब सत्र वापस लीं</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">अगिला</string>
     <string name="system_users_empty">कौनो यूजर ना मिलल</string>
     <string name="system_users_empty_search">कौनो यूजर रउआ खोज से मेल ना खाइल</string>
-    <string name="system_users_empty_search_hint">अपना खोज मानदंड समायोजित करे के कोशिश करीं</string>
     <string name="system_users_toast_created">उपयोगकर्ता बनल</string>
     <string name="system_users_toast_updated">उपयोगकर्ता अपडेट भइल</string>
     <string name="system_users_toast_deleted">उपयोगकर्ता हटावल गइल</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">सेवा के शर्त</string>
     <string name="account_passkeys_empty">कौनो पासकी रजिस्टर नइखे।</string>
     <string name="account_passkey_register_title">पासकी जोड़ीं</string>
-    <string name="account_passkey_register_message">राउर डिवाइस पुष्टि करे खातिर कहीं। पासकी एह डिवाइस से जुड़ल बा अउर भविष्य के साइन-इन खातिर इस्तेमाल होखी।</string>
     <string name="account_passkey_name_label">नाँव (वैकल्पिक)</string>
     <string name="account_passkey_delete_message">\"%1$s\" अब रउआ के साइन इन ना करी।</string>
-    <string name="account_totp_description">प्रमाणीकरण एप से 6 अंक के कोड से साइन इन करीं।</string>
     <string name="account_totp_enabled">प्रमाणक चालू बा।</string>
     <string name="account_totp_setup_step1">एह गुप्त के अपना प्रमाणीकरण एप में स्कैन करीं या डालीं।</string>
     <string name="account_totp_setup_step2">राउर एप जे 6 अंक के कोड देखावे ओकरा डालीं।</string>
     <string name="account_totp_code">कोड</string>
     <string name="account_totp_disable_message">रउआ अब प्रमाणक कोड से साइन इन ना कर सकेम।</string>
     <string name="account_recovery_none">कौनो रिकवरी कोड ना बनल बा।</string>
-    <string name="account_recovery_count">%1$d बिना इस्तेमाल कइल रिकवरी कोड।</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d रिकवरी कोड बाकी बा।</item>
+        <item quantity="other">%1$d रिकवरी कोड बाकी बा।</item>
+    </plurals>
     <string name="account_recovery_generate">कोड बनाईं</string>
     <string name="account_recovery_regenerate">कोड फेर से बनाईं</string>
     <string name="account_recovery_regen_title">रिकवरी कोड फेर से बनाईं?</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">आखिरी पहुँच: %1$s</string>
     <string name="system_users_revoke_all_title">सबन सत्र रद्द करीं?</string>
     <string name="system_users_revoke_all_message">एह उपयोगकर्ता के सबन सक्रिय सत्र साइन आउट हो जाई।</string>
-    <string name="system_users_pagination_status">%3$d उपयोगकर्ता में से %1$d–%2$d देखावल जा रहल बा</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">%3$d उपयोगकर्ता में से %1$d–%2$d देखावल जा रहल बा</item>
+        <item quantity="other">%3$d उपयोगकर्ता में से %1$d–%2$d देखावल जा रहल बा</item>
+    </plurals>
     <string name="account_title">खाता</string>
     <string name="account_section_identity">पहचान</string>
     <string name="account_identity_identity">पहचान</string>
@@ -347,10 +347,8 @@
     <string name="system_setting_hostname">दोसरा सर्वर सभ के बतावल गइल होस्टनेम</string>
     <string name="system_status_peer_id">पीयर आईडी</string>
     <string name="system_status_holepunch">होल पंच</string>
-    <string name="system_status_holepunch_value">%1$d सफल · %2$d विफल</string>
     <string name="system_status_awaiting_routing">रूटिंग के इंतजार में संदेश</string>
     <string name="system_status_relay_service">रिले सेवा</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d आरक्षण · %3$d सर्किट · %4$d अस्वीकृत</string>
     <string name="route_target_select">चुनीं</string>
     <string name="account_data_description">पूरा बैकअप डाउनलोड करीं जेकरा के रउआ ई या कवनो दूसरा Mochi सर्वर पर रिस्टोर कर सकत बानी।</string>
     <string name="route_target_none">कवनो लक्ष्य उपलब्ध नइखे</string>
@@ -375,7 +373,10 @@
     <string name="accounts_device_seen">आखिरी बेर देखल गइल %1$s</string>
     <string name="notifprefs_device_app">%1$s · ऐप</string>
     <string name="notifprefs_device_push">%1$s · पुश</string>
-    <string name="notifprefs_test_partial">परीक्षण %2$d में से %1$d गंतव्य पर भेजल गइल</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">परीक्षण %2$d में से %1$d गंतव्य पर भेजल गइल</item>
+        <item quantity="other">परीक्षण %2$d में से %1$d गंतव्य पर भेजल गइल</item>
+    </plurals>
     <string name="notifprefs_test_none">कौनो गंतव्य सेट नइखे</string>
     <string name="notifprefs_transport_fcm">Android पुश</string>
     <string name="notifprefs_no_destinations">कवनो गंतव्य ना</string>
@@ -394,4 +395,27 @@
     <string name="accounts_revoke_confirm">एह से %1$s के कैलेंडर पहुंच खतम हो जाई। %2$s से साइन-इन तब ले रही जब ले रउआ लॉगिन पन्ना पर ओकरा के अलग ना करीं।</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">अनजान थीम</string>
+    <string name="system_documents_modified">बदलल गइल</string>
+    <string name="system_documents_discard_title">बदलाव छोड़ दीं?</string>
+    <string name="system_documents_discard">छोड़ीं</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d सफल</item>
+        <item quantity="other">%1$d सफल</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d विफल</item>
+        <item quantity="other">%1$d विफल</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d आरक्षण</item>
+        <item quantity="other">%1$d / %2$d आरक्षण</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d सर्किट</item>
+        <item quantity="other">%1$d सर्किट</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d अस्वीकृत</item>
+        <item quantity="other">%1$d अस्वीकृत</item>
+    </plurals>
 </resources>

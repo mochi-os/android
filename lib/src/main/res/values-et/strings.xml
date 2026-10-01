@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Ajavöönd</string>
     <string name="settings_reset_to_defaults">Lähtesta vaikeväärtustele</string>
     <string name="settings_reset_confirm_title">Kas lähtestada eelistused?</string>
-    <string name="settings_reset_confirm_message">See lähtestab kõik eelistused vaikeväärtustele.</string>
+    <string name="settings_reset_confirm_message">See lähtestab need eelistused vaikeväärtustele.</string>
     <string name="settings_reset">Lähtesta</string>
     <string name="settings_display_title">Kuva</string>
     <string name="settings_display_reset">Lähtesta vaikeväärtustele</string>

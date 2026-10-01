@@ -103,7 +103,7 @@
     <string name="settings_time_zone">هەرێمی کات</string>
     <string name="settings_reset_to_defaults">گەڕاندنەوە بۆ بنەڕەتەکان</string>
     <string name="settings_reset_confirm_title">پەسەندییەکان ڕێک بخەرەوە؟</string>
-    <string name="settings_reset_confirm_message">ئەمە هەموو هەڵبژاردەکان بۆ نرخی بنەڕەتییان دەگەڕێنێتەوە.</string>
+    <string name="settings_reset_confirm_message">ئەمە ئەم هەڵبژاردانە بۆ نرخی بنەڕەتییان دەگەڕێنێتەوە.</string>
     <string name="settings_reset">ڕێکخستنەوە</string>
     <string name="settings_display_title">پیشاندان</string>
     <string name="settings_display_reset">گەڕاندنەوە بۆ بنەڕەتەکان</string>

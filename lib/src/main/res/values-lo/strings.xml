@@ -103,7 +103,7 @@
     <string name="settings_time_zone">ເຂດເວລາ</string>
     <string name="settings_reset_to_defaults">ຣີເຊັດເປັນຄ່າເລີ່ມຕົ້ນ</string>
     <string name="settings_reset_confirm_title">ຣີເຊັດການຕັ້ງຄ່າ?</string>
-    <string name="settings_reset_confirm_message">ນີ້ຈະຣີເຊັດຄວາມຕ້ອງການທັງໝົດກັບໄປຄ່າເລີ່ມຕົ້ນ.</string>
+    <string name="settings_reset_confirm_message">ນີ້ຈະຣີເຊັດການຕັ້ງຄ່າເຫຼົ່ານີ້ກັບໄປເປັນຄ່າເລີ່ມຕົ້ນ.</string>
     <string name="settings_reset">ຣີເຊັດ</string>
     <string name="settings_display_title">ການສະແດງ</string>
     <string name="settings_display_reset">ຣີເຊັດເປັນຄ່າເລີ່ມຕົ້ນ</string>

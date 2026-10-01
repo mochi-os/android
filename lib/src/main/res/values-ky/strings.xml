@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Убакыт алкагы</string>
     <string name="settings_reset_to_defaults">Демейкилерге кайтаруу</string>
     <string name="settings_reset_confirm_title">Жөндөөлөрдү баштапкы абалга кайтарасызбы?</string>
-    <string name="settings_reset_confirm_message">Бул бардык артыкчылыктарды демейки маанилерине кайтарат.</string>
+    <string name="settings_reset_confirm_message">Ушул жөндөөлөр демейки маанилерине кайтарылат.</string>
     <string name="settings_reset">Баштапкы абалга кайтаруу</string>
     <string name="settings_display_title">Көрсөтүү</string>
     <string name="settings_display_reset">Демейкилерге кайтаруу</string>

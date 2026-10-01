@@ -103,9 +103,9 @@
     <string name="settings_time_zone">Aravo zona</string>
     <string name="settings_reset_to_defaults">Embojevy ypy peguávape</string>
     <string name="settings_reset_confirm_title">Embojevy ñembojeroviaa?</string>
-    <string name="settings_reset_confirm_message">Kóva omoĩ jey opa preferencia ipygua tepýpe.</string>
+    <string name="settings_reset_confirm_message">Kóva omoĩ jey ko\'ã preferencia ipygua tepýpe.</string>
     <string name="settings_reset">Embojevy</string>
-    <string name="settings_display_title">Hechauka</string>
+    <string name="settings_display_title">Jehechauka</string>
     <string name="settings_display_reset">Embojevy ypy peguávape</string>
     <string name="settings_display_reset_confirm_title">Embojevy techaha?</string>
     <string name="settings_display_reset_confirm_message">Ko mba\'e ombojevýta techaha mbohape iñepyrũmby teépe.</string>

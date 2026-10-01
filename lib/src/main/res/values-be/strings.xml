@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Часавы пояс</string>
     <string name="settings_reset_to_defaults">Скінуць да змаўчання</string>
     <string name="settings_reset_confirm_title">Скінуць налады?</string>
-    <string name="settings_reset_confirm_message">Гэта скіне ўсе перавагі да значэнняў па змаўчанні.</string>
+    <string name="settings_reset_confirm_message">Гэта скіне гэтыя перавагі да значэнняў па змаўчанні.</string>
     <string name="settings_reset">Скід</string>
     <string name="settings_display_title">Адлюстраванне</string>
     <string name="settings_display_reset">Скінуць да змаўчання</string>

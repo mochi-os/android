@@ -51,8 +51,6 @@
     <string name="system_users_remove_suspension">Quitá la suspensión</string>
     <string name="system_users_delete">Eliminá el usuario</string>
     <string name="system_users_delete_title">¿Eliminás el usuario?</string>
-    <string name="system_users_sessions_description">Mirá y revocá las sesiones activas de este usuario.</string>
-    <string name="system_users_empty_search_hint">Probá ajustando tus criterios de búsqueda</string>
 
     <string name="notifprefs_name_label">Nombre</string>
     <string name="accounts_field_name">Nombre</string>
@@ -75,11 +73,9 @@
     <string name="account_section_passkeys">Claves de acceso</string>
     <string name="account_passkeys_empty">No hay claves de acceso registradas.</string>
     <string name="account_passkey_register_title">Agregar una clave de acceso</string>
-    <string name="account_passkey_register_message">Tu dispositivo te pedirá confirmación. La clave de acceso queda vinculada a este dispositivo y se usa para futuros inicios de sesión.</string>
     <string name="account_passkey_name_label">Nombre (opcional)</string>
     <string name="account_passkey_delete_message">\"%1$s\" ya no podrá iniciar tu sesión.</string>
     <string name="account_section_totp">Aplicación de autenticación</string>
-    <string name="account_totp_description">Inicia sesión con un código de 6 dígitos de una aplicación de autenticación.</string>
     <string name="account_totp_enabled">La aplicación de autenticación está habilitada.</string>
     <string name="account_totp_setup_step1">Escaneá o ingresá este secreto en tu aplicación de autenticación.</string>
     <string name="account_totp_setup_step2">Ingresá el código de 6 dígitos que muestra tu aplicación.</string>
@@ -87,7 +83,6 @@
     <string name="account_totp_disable_message">No vas a poder iniciar sesión con un código de autenticación.</string>
     <string name="account_section_recovery">Códigos de recuperación</string>
     <string name="account_recovery_none">No se generaron códigos de recuperación.</string>
-    <string name="account_recovery_count">%1$d códigos de recuperación sin usar.</string>
     <string name="account_recovery_generate">Generar códigos</string>
     <string name="account_recovery_regenerate">Regenerar códigos</string>
     <string name="account_recovery_regen_title">¿Regenerar los códigos de recuperación?</string>
@@ -169,12 +164,10 @@
     <string name="accounts_verify_hint">Ingresá el código enviado a %1$s.</string>
     <string name="accounts_remove_message">Esto eliminará la cuenta conectada \"%1$s\".</string>
     <string name="system_documents_title">Documentos</string>
-    <string name="system_documents_description">Reglas del servidor, términos y condiciones, y aviso de privacidad que se muestran a tus usuarios</string>
     <string name="system_documents_tab_rules">Reglas del servidor</string>
     <string name="system_documents_tab_terms">Términos y condiciones</string>
     <string name="system_documents_language">Idioma</string>
     <string name="system_documents_no_language">No hay documento disponible para este idioma.</string>
-    <string name="system_documents_customised">Personalizado</string>
     <string name="system_documents_using_default">Usando el predeterminado incluido</string>
     <string name="system_documents_last_edited">Última edición: %1$s</string>
     <string name="system_documents_revert">Restaurar al predeterminado</string>
@@ -246,7 +239,6 @@
     <string name="system_users_revoke_all_message">Se cerrarán todas las sesiones activas de este usuario.</string>
     <string name="system_users_unknown_browser">Navegador desconocido</string>
     <string name="system_users_unknown">Desconocido</string>
-    <string name="system_users_pagination_status">Mostrando %1$d–%2$d de %3$d usuarios</string>
     <string name="system_users_previous">Anterior</string>
     <string name="system_users_next">Siguiente</string>
     <string name="system_users_empty">No se encontraron usuarios</string>
@@ -304,11 +296,6 @@
         <item quantity="one">Prueba enviada a %1$d destino</item>
         <item quantity="other">Prueba enviada a %1$d destinos</item>
     </plurals>
-    <plurals name="system_users_sessions_revoked">
-        <item quantity="many">Se revocaron %1$d sesiones</item>
-        <item quantity="one">Se revocó 1 sesión</item>
-        <item quantity="other">Se revocaron %1$d sesiones</item>
-    </plurals>
     <string name="account_close_section">Cerrar cuenta</string>
     <string name="account_close_action">Cerrar cuenta</string>
     <string name="account_close_confirm_title">¿Cerrar tu cuenta?</string>
@@ -336,10 +323,8 @@
     <string name="system_setting_hostname">Nombre de host anunciado a otros servidores</string>
     <string name="system_status_peer_id">ID de par</string>
     <string name="system_status_holepunch">Perforación</string>
-    <string name="system_status_holepunch_value">%1$d con éxito · %2$d fallidas</string>
     <string name="system_status_awaiting_routing">Mensajes en espera de enrutamiento</string>
     <string name="system_status_relay_service">Servicio de retransmisión</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d reservas · %3$d circuitos · %4$d rechazadas</string>
     <string name="login_title">Inicio de sesión</string>
     <string name="login_section_methods">Métodos de inicio de sesión</string>
     <string name="login_method_email">Código por correo</string>

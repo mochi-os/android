@@ -103,7 +103,7 @@
     <string name="settings_time_zone">நேர மண்டலம்</string>
     <string name="settings_reset_to_defaults">இயல்புநிலைகளுக்கு மீட்டமை</string>
     <string name="settings_reset_confirm_title">விருப்பத்தேர்வுகளை மீட்டமைக்கவா?</string>
-    <string name="settings_reset_confirm_message">இது அனைத்து விருப்பத்தேர்வுகளையும் அவற்றின் இயல்பு மதிப்புகளுக்கு மீட்டமைக்கும்.</string>
+    <string name="settings_reset_confirm_message">இது இந்த விருப்பத்தேர்வுகளை அவற்றின் இயல்பு மதிப்புகளுக்கு மீட்டமைக்கும்.</string>
     <string name="settings_reset">மீட்டமை</string>
     <string name="settings_display_title">காட்சி</string>
     <string name="settings_display_reset">இயல்புநிலைகளுக்கு மீட்டமை</string>

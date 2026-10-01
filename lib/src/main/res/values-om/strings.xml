@@ -103,9 +103,9 @@
     <string name="settings_time_zone">Naannoo yeroo</string>
     <string name="settings_reset_to_defaults">Gara durtiitti deebisi</string>
     <string name="settings_reset_confirm_title">Filannoowwan deebisuuf?</string>
-    <string name="settings_reset_confirm_message">Kun filannoolee hunda gatii sirnaan dursaa tti deebisa.</string>
+    <string name="settings_reset_confirm_message">Kun filannoolee kana gara gatii durtii isaaniitti deebisa.</string>
     <string name="settings_reset">Haaromsi</string>
-    <string name="settings_display_title">Mul\'isi</string>
+    <string name="settings_display_title">Agarsiisa</string>
     <string name="settings_display_reset">Gara durtiitti deebisi</string>
     <string name="settings_display_reset_confirm_title">Agarsiisa deebisuu?</string>
     <string name="settings_display_reset_confirm_message">Kun qindaa\'inoota agarsiisa gara gatiiwwan isaanii durtiitti ni deebisa.</string>

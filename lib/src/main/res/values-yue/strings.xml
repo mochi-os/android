@@ -213,7 +213,7 @@
     <string name="settings_time_zone">時區</string>
     <string name="settings_reset_to_defaults">還原為預設</string>
     <string name="settings_reset_confirm_title">還原偏好設定？</string>
-    <string name="settings_reset_confirm_message">呢個動作會將所有偏好設定還原為預設值。</string>
+    <string name="settings_reset_confirm_message">呢個動作會將呢啲偏好設定還原為預設值。</string>
     <string name="settings_display_reset">還原為預設</string>
     <string name="settings_display_reset_confirm_title">還原顯示設定？</string>
     <string name="settings_display_reset_confirm_message">呢個動作會將顯示設定還原為預設值。</string>

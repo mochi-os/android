@@ -5,7 +5,7 @@
     <string name="settings_home_logout">ലോഗ് ഔട്ട്</string>
     <string name="settings_home_account">അക്കൗണ്ട്</string>
     <string name="settings_home_preferences">മുൻഗണനകൾ</string>
-    <string name="settings_home_display">പ്രദർശിപ്പിക്കുക</string>
+    <string name="settings_home_display">പ്രദർശനം</string>
     <string name="settings_home_notification_prefs">അറിയിപ്പ് മുൻഗണനകൾ</string>
     <string name="settings_home_accounts">കണക്റ്റ് ചെയ്ത അക്കൗണ്ടുകൾ</string>
     <string name="settings_home_interests">താൽപ്പര്യങ്ങൾ</string>
@@ -104,13 +104,11 @@
     <string name="accounts_remove">നീക്കം ചെയ്യുക</string>
     <string name="accounts_remove_title">check-in നീക്കം ചെയ്യുക</string>
     <string name="system_documents_title">ഡോക്യുമെന്റുകൾ</string>
-    <string name="system_documents_description">നിങ്ങളുടെ ഉപയോക്താക്കൾക്ക് കാണിക്കുന്ന സെർവർ നിയമങ്ങൾ, നിബന്ധനകളും വ്യവസ്ഥകളും, സ്വകാര്യതാ അറിയിപ്പ്</string>
     <string name="system_documents_tab_rules">സെർവർ നിയമങ്ങൾ</string>
     <string name="system_documents_tab_terms">നിബന്ധനകളും വ്യവസ്ഥകളും</string>
     <string name="system_documents_tab_privacy">സ്വകാര്യത</string>
     <string name="system_documents_language">ഭാഷ</string>
     <string name="system_documents_no_language">ഈ ഭാഷയ്ക്ക് ഡോക്യുമെന്റ് ലഭ്യമല്ല.</string>
-    <string name="system_documents_customised">ഇഷ്ടാനുസൃതമാക്കിയത്</string>
     <string name="system_documents_using_default">ബണ്ടിൽ ചെയ്ത ഡിഫോൾട്ട് ഉപയോഗിക്കുന്നു</string>
     <string name="system_documents_revert">ഡിഫോൾട്ടിലേക്ക് മടങ്ങുക</string>
     <string name="system_documents_save">സേവ് ചെയ്യുക</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">ഉപയോക്താവിനെ ഇല്ലാതാക്കുക</string>
     <string name="system_users_delete_title">ഉപയോക്താവിനെ ഇല്ലാതാക്കണോ?</string>
     <string name="system_users_manage_sessions">സെഷനുകൾ മാനേജ് ചെയ്യുക</string>
-    <string name="system_users_sessions_description">ഈ ഉപയോക്താവിനായുള്ള സജീവ സെഷനുകൾ കാണുകയും റദ്ദാക്കുകയും ചെയ്യുക.</string>
     <string name="system_users_sessions_empty">ഈ ഉപയോക്താവിന് സജീവ സെഷനുകൾ ഒന്നുമില്ല.</string>
     <string name="system_users_revoke">റദ്ദാക്കുക</string>
     <string name="system_users_revoke_all">എല്ലാ സെഷനുകളും റദ്ദാക്കുക</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">അടുത്തത്</string>
     <string name="system_users_empty">ഉപയോക്താക്കളെ കണ്ടെത്തിയില്ല</string>
     <string name="system_users_empty_search">നിങ്ങളുടെ തിരയലുമായി പൊരുത്തപ്പെടുന്ന ഉപയോക്താക്കളൊന്നുമില്ല</string>
-    <string name="system_users_empty_search_hint">നിങ്ങളുടെ തിരയൽ മാനദണ്ഡങ്ങൾ ക്രമീകരിക്കാൻ ശ്രമിക്കുക</string>
     <string name="system_users_toast_created">ഉപയോക്താവിനെ സൃഷ്ടിച്ചു</string>
     <string name="system_users_toast_updated">ഉപയോക്താവിനെ അപ്ഡേറ്റ് ചെയ്തു</string>
     <string name="system_users_toast_deleted">ഉപയോക്താവിനെ ഇല്ലാതാക്കി</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">സേവന നിബന്ധനകൾ</string>
     <string name="account_passkeys_empty">പാസ്കീകൾ രജിസ്റ്റർ ചെയ്തിട്ടില്ല.</string>
     <string name="account_passkey_register_title">പാസ്കീ ചേർക്കുക</string>
-    <string name="account_passkey_register_message">നിങ്ങളുടെ ഉപകരണം സ്ഥിരീകരിക്കാൻ ആവശ്യപ്പെടും. പാസ്കീ ഈ ഉപകരണവുമായി ബന്ധിപ്പിച്ചിരിക്കുന്നു, ഭാവിയിലെ സൈൻ-ഇന്നുകൾക്കായി ഉപയോഗിക്കും.</string>
     <string name="account_passkey_name_label">പേര് (ഓപ്ഷണൽ)</string>
     <string name="account_passkey_delete_message">\"%1$s\" ഇനി നിങ്ങളെ സൈൻ ഇൻ ചെയ്യില്ല.</string>
-    <string name="account_totp_description">പ്രാമാണീകരണ ആപ്പിൽ നിന്ന് 6-അക്ക കോഡ് ഉപയോഗിച്ച് സൈൻ ഇൻ ചെയ്യുക.</string>
     <string name="account_totp_enabled">പ്രാമാണീകരണം പ്രവർത്തനക്ഷമമാക്കിയിരിക്കുന്നു.</string>
     <string name="account_totp_setup_step1">നിങ്ങളുടെ പ്രാമാണീകരണ ആപ്പിൽ ഈ രഹസ്യം സ്കാൻ ചെയ്യുകയോ നൽകുകയോ ചെയ്യുക.</string>
     <string name="account_totp_setup_step2">നിങ്ങളുടെ ആപ്പ് കാണിക്കുന്ന 6-അക്ക കോഡ് നൽകുക.</string>
     <string name="account_totp_code">കോഡ്</string>
     <string name="account_totp_disable_message">നിങ്ങൾക്ക് ഇനി പ്രാമാണീകരണ കോഡ് ഉപയോഗിച്ച് സൈൻ ഇൻ ചെയ്യാൻ കഴിയില്ല.</string>
     <string name="account_recovery_none">വീണ്ടെടുക്കൽ കോഡുകൾ ജനറേറ്റ് ചെയ്തിട്ടില്ല.</string>
-    <string name="account_recovery_count">%1$d ഉപയോഗിക്കാത്ത വീണ്ടെടുക്കൽ കോഡുകൾ.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d വീണ്ടെടുക്കൽ കോഡ് ശേഷിക്കുന്നു.</item>
+        <item quantity="other">%1$d വീണ്ടെടുക്കൽ കോഡുകൾ ശേഷിക്കുന്നു.</item>
+    </plurals>
     <string name="account_recovery_generate">കോഡുകൾ ജനറേറ്റ് ചെയ്യുക</string>
     <string name="account_recovery_regenerate">കോഡുകൾ വീണ്ടും ജനറേറ്റ് ചെയ്യുക</string>
     <string name="account_recovery_regen_title">വീണ്ടെടുക്കൽ കോഡുകൾ വീണ്ടും ജനറേറ്റ് ചെയ്യണോ?</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">അവസാന ആക്സസ്: %1$s</string>
     <string name="system_users_revoke_all_title">എല്ലാ സെഷനുകളും റദ്ദാക്കണോ?</string>
     <string name="system_users_revoke_all_message">ഈ ഉപയോക്താവിന്റെ എല്ലാ സജീവ സെഷനുകളും സൈൻ ഔട്ട് ചെയ്യപ്പെടും.</string>
-    <string name="system_users_pagination_status">%3$d ഉപയോക്താക്കളിൽ %1$d–%2$d കാണിക്കുന്നു</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">%3$d ഉപയോക്താവിൽ %1$d–%2$d കാണിക്കുന്നു</item>
+        <item quantity="other">%3$d ഉപയോക്താക്കളിൽ %1$d–%2$d കാണിക്കുന്നു</item>
+    </plurals>
     <string name="account_title">അക്കൗണ്ട്</string>
     <string name="account_section_identity">സ്വത്വം</string>
     <string name="account_identity_identity">സ്വത്വം</string>
@@ -307,7 +307,7 @@
         <item quantity="other">%1$d ലക്ഷ്യസ്ഥാനങ്ങളിലേക്ക് പരിശോധന അയച്ചു</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 സെഷൻ റദ്ദാക്കി</item>
+        <item quantity="one">%1$d സെഷൻ റദ്ദാക്കി</item>
         <item quantity="other">%1$d സെഷനുകൾ റദ്ദാക്കി</item>
     </plurals>
     <string name="login_title">ലോഗിൻ</string>
@@ -347,10 +347,8 @@
     <string name="system_setting_hostname">മറ്റ് സെർവറുകളെ അറിയിച്ച ഹോസ്റ്റ്നാമം</string>
     <string name="system_status_peer_id">പിയർ ID</string>
     <string name="system_status_holepunch">ഹോൾ പഞ്ച്</string>
-    <string name="system_status_holepunch_value">%1$d വിജയിച്ചു · %2$d പരാജയപ്പെട്ടു</string>
     <string name="system_status_awaiting_routing">റൂട്ടിങ്ങിനായി കാത്തിരിക്കുന്ന സന്ദേശങ്ങൾ</string>
     <string name="system_status_relay_service">റിലേ സേവനം</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d റിസർവേഷനുകൾ · %3$d സർക്യൂട്ടുകൾ · %4$d നിരസിച്ചു</string>
     <string name="route_target_select">തിരഞ്ഞെടുക്കുക</string>
     <string name="account_data_description">ഈ അല്ലെങ്കിൽ മറ്റൊരു Mochi സെർവറിൽ പുനഃസ്ഥാപിക്കാവുന്ന പൂർണ്ണ ബാക്കപ്പ് ഡൗൺലോഡ് ചെയ്യുക.</string>
     <string name="route_target_none">ലക്ഷ്യങ്ങൾ ലഭ്യമല്ല</string>
@@ -375,7 +373,10 @@
     <string name="accounts_device_seen">അവസാനം കണ്ടത് %1$s</string>
     <string name="notifprefs_device_app">%1$s · ആപ്പ്</string>
     <string name="notifprefs_device_push">%1$s · പുഷ്</string>
-    <string name="notifprefs_test_partial">%2$dൽ %1$d ലക്ഷ്യങ്ങളിലേക്ക് പരീക്ഷണം അയച്ചു</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">%2$d ലക്ഷ്യസ്ഥാനത്തിൽ %1$d എണ്ണത്തിലേക്ക് പരിശോധന അയച്ചു</item>
+        <item quantity="other">%2$d ലക്ഷ്യസ്ഥാനങ്ങളിൽ %1$d എണ്ണത്തിലേക്ക് പരിശോധന അയച്ചു</item>
+    </plurals>
     <string name="notifprefs_test_none">ലക്ഷ്യസ്ഥാനങ്ങൾ കോൺഫിഗർ ചെയ്തിട്ടില്ല</string>
     <string name="notifprefs_transport_fcm">Android പുഷ്</string>
     <string name="notifprefs_no_destinations">ലക്ഷ്യസ്ഥാനങ്ങളില്ല</string>
@@ -394,4 +395,27 @@
     <string name="accounts_revoke_confirm">ഇത് %1$s-ന്റെ കലണ്ടർ ആക്സസ് പിൻവലിക്കും. ലോഗിൻ പേജിൽ അൺലിങ്ക് ചെയ്യുന്നതുവരെ %2$s ഉപയോഗിച്ചുള്ള സൈൻ-ഇൻ തുടരും.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">അജ്ഞാത തീം</string>
+    <string name="system_documents_modified">പരിഷ്കരിച്ചത്</string>
+    <string name="system_documents_discard_title">മാറ്റങ്ങൾ ഉപേക്ഷിക്കണോ?</string>
+    <string name="system_documents_discard">ഉപേക്ഷിക്കുക</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d വിജയിച്ചു</item>
+        <item quantity="other">%1$d വിജയിച്ചു</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d പരാജയപ്പെട്ടു</item>
+        <item quantity="other">%1$d പരാജയപ്പെട്ടു</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d റിസർവേഷൻ</item>
+        <item quantity="other">%1$d / %2$d റിസർവേഷനുകൾ</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d സർക്യൂട്ട്</item>
+        <item quantity="other">%1$d സർക്യൂട്ടുകൾ</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d നിരസിച്ചു</item>
+        <item quantity="other">%1$d നിരസിച്ചു</item>
+    </plurals>
 </resources>

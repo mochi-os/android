@@ -103,7 +103,7 @@
     <string name="settings_time_zone">المنطقة الزمنية</string>
     <string name="settings_reset_to_defaults">إعادة التعيين إلى الإعدادات الافتراضية</string>
     <string name="settings_reset_confirm_title">إعادة تعيين التفضيلات؟</string>
-    <string name="settings_reset_confirm_message">سيؤدي هذا إلى إعادة تعيين جميع التفضيلات إلى قيمها الافتراضية.</string>
+    <string name="settings_reset_confirm_message">سيؤدي هذا إلى إعادة تعيين هذه التفضيلات إلى قيمها الافتراضية.</string>
     <string name="settings_reset">إعادة تعيين</string>
     <string name="settings_display_title">العرض</string>
     <string name="settings_display_reset">إعادة التعيين إلى الإعدادات الافتراضية</string>

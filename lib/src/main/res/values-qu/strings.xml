@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Pacha zona</string>
     <string name="settings_reset_to_defaults">Por defectokunaman kutichiy</string>
     <string name="settings_reset_confirm_title">Munaykunata kutichiy?</string>
-    <string name="settings_reset_confirm_message">Kayqa lliw munaykunata default valorninman tikranqa.</string>
+    <string name="settings_reset_confirm_message">Kayqa kay munaykunata default valorninman tikranqa.</string>
     <string name="settings_reset">Kutichiy</string>
     <string name="settings_display_title">Qhaway</string>
     <string name="settings_display_reset">Por defectokunaman kutichiy</string>

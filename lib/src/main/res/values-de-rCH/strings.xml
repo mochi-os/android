@@ -171,7 +171,6 @@
     <string name="notifications_clear_all_title">Alle Mitteilungen löschen?</string>
     <string name="notifications_clear_all_message">Damit werden alle Mitteilungen entfernt. Sie können nicht wiederhergestellt werden.</string>
     <string name="settings_value_auto">Automatisch</string>
-    <string name="settings_value_theme">Theme-Standard</string>
     <string name="settings_appearance">Darstellung</string>
     <string name="settings_appearance_light">Hell</string>
     <string name="settings_appearance_dark">Dunkel</string>
@@ -207,13 +206,10 @@
     <string name="settings_time_zone">Zeitzone</string>
     <string name="settings_reset_to_defaults">Auf Standard zurücksetzen</string>
     <string name="settings_reset_confirm_title">Einstellungen zurücksetzen?</string>
-    <string name="settings_reset_confirm_message">Damit werden alle Einstellungen auf ihre Standardwerte zurückgesetzt.</string>
     <string name="settings_display_reset">Auf Standard zurücksetzen</string>
     <string name="settings_display_reset_confirm_title">Darstellung zurücksetzen?</string>
     <string name="settings_display_reset_confirm_message">Dadurch werden die Anzeigeeinstellungen auf die Standardwerte zurückgesetzt.</string>
-    <string name="settings_theme_title">Thema</string>
     <string name="settings_background">Hintergrund</string>
-    <string name="settings_background_theme">Vom Thema</string>
     <string name="game_chat_empty">Noch keine Nachrichten</string>
     <string name="game_chat_input_placeholder">Nachricht eingeben…</string>
     <string name="game_chat_send">Nachricht senden</string>

@@ -104,13 +104,11 @@
     <string name="accounts_remove">Hiq</string>
     <string name="accounts_remove_title">Të hiqet llogaria?</string>
     <string name="system_documents_title">Dokumentet</string>
-    <string name="system_documents_description">Rregullat e serverit, kushtet dhe njoftimi i privatësisë që u shfaqen përdoruesve tuaj</string>
     <string name="system_documents_tab_rules">Rregullat e serverit</string>
     <string name="system_documents_tab_terms">Kushtet dhe rregullat</string>
     <string name="system_documents_tab_privacy">Privatësia</string>
     <string name="system_documents_language">Gjuha</string>
     <string name="system_documents_no_language">Asnjë dokument i disponueshëm për këtë gjuhë.</string>
-    <string name="system_documents_customised">I personalizuar</string>
     <string name="system_documents_using_default">Duke përdorur parazgjedhjen e paketuar</string>
     <string name="system_documents_revert">Kthe në parazgjedhje</string>
     <string name="system_documents_save">Ruaj</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Fshi përdoruesin</string>
     <string name="system_users_delete_title">Të fshihet përdoruesi?</string>
     <string name="system_users_manage_sessions">Menaxho sesionet</string>
-    <string name="system_users_sessions_description">Shiko dhe revoko sesionet aktive për këtë përdorues.</string>
     <string name="system_users_sessions_empty">Ky përdorues nuk ka sesione aktive.</string>
     <string name="system_users_revoke">Revoko</string>
     <string name="system_users_revoke_all">Revoko të gjitha seancat</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Tjetri</string>
     <string name="system_users_empty">S\'u gjet asnjë përdorues</string>
     <string name="system_users_empty_search">Asnjë përdorues nuk përputhet me kërkimin tuaj</string>
-    <string name="system_users_empty_search_hint">Provo të rregullosh kriteret e kërkimit</string>
     <string name="system_users_toast_created">Përdoruesi u krijua</string>
     <string name="system_users_toast_updated">Përdoruesi u përditësua</string>
     <string name="system_users_toast_deleted">Përdoruesi u fshi</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">Kushtet e shërbimit</string>
     <string name="account_passkeys_empty">Nuk ka çelësa kalimi të regjistruar.</string>
     <string name="account_passkey_register_title">Shto çelës kalimi</string>
-    <string name="account_passkey_register_message">Pajisja juaj do t\'ju kërkojë të konfirmoni. Çelësi i kalimit është i lidhur me këtë pajisje dhe përdoret për hyrjet e ardhshme.</string>
     <string name="account_passkey_name_label">Emri (opsional)</string>
     <string name="account_passkey_delete_message">\"%1$s\" nuk do t\'ju lejojë më të hyni.</string>
-    <string name="account_totp_description">Hyni me një kod 6-shifror nga një aplikacion vërtetimi.</string>
     <string name="account_totp_enabled">Vërtetuesi është aktivizuar.</string>
     <string name="account_totp_setup_step1">Skanoni ose futni këtë sekret në aplikacionin tuaj të vërtetimit.</string>
     <string name="account_totp_setup_step2">Futni kodin 6-shifror që shfaq aplikacioni juaj.</string>
     <string name="account_totp_code">Kodi</string>
     <string name="account_totp_disable_message">Nuk do të jeni më në gjendje të hyni me një kod vërtetimi.</string>
     <string name="account_recovery_none">Asnjë kod rikuperimi nuk është gjeneruar.</string>
-    <string name="account_recovery_count">%1$d kode rikuperimi të papërdorur.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d kod rikuperimi i mbetur.</item>
+        <item quantity="other">%1$d kode rikuperimi të mbetura.</item>
+    </plurals>
     <string name="account_recovery_generate">Gjenero kodet</string>
     <string name="account_recovery_regenerate">Rigjenero kodet</string>
     <string name="account_recovery_regen_title">Rigjenerimi i kodeve të rikuperimit?</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">Aksesi i fundit: %1$s</string>
     <string name="system_users_revoke_all_title">Të anulohen të gjitha sesionet?</string>
     <string name="system_users_revoke_all_message">Të gjitha sesionet aktive të këtij përdoruesi do të dalin.</string>
-    <string name="system_users_pagination_status">Duke shfaqur %1$d–%2$d nga %3$d përdorues</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Duke shfaqur %1$d–%2$d nga %3$d përdorues</item>
+        <item quantity="other">Duke shfaqur %1$d–%2$d nga %3$d përdorues</item>
+    </plurals>
     <string name="account_title">Llogaria</string>
     <string name="account_section_identity">Identiteti</string>
     <string name="account_identity_identity">Identiteti</string>
@@ -307,7 +307,7 @@
         <item quantity="other">Testi u dërgua te %1$d destinacione</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">U revokua 1 sesion</item>
+        <item quantity="one">U revokua %1$d sesion</item>
         <item quantity="other">U revokuan %1$d sesione</item>
     </plurals>
     <string name="login_title">Hyrja</string>
@@ -347,10 +347,8 @@
     <string name="system_setting_hostname">Emri i hostit i njoftuar te serverët e tjerë</string>
     <string name="system_status_peer_id">ID e palës</string>
     <string name="system_status_holepunch">Shpim</string>
-    <string name="system_status_holepunch_value">%1$d të suksesshme · %2$d të dështuara</string>
     <string name="system_status_awaiting_routing">Mesazhe në pritje të rrugëzimit</string>
     <string name="system_status_relay_service">Shërbim rele</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d rezervime · %3$d qarqe · %4$d refuzuar</string>
     <string name="route_target_select">Zgjidh</string>
     <string name="account_data_description">Shkarkoni një kopje rezervë të plotë që mund ta rikthesh në këtë ose në një server tjetër Mochi.</string>
     <string name="route_target_none">Nuk ka objektiva të disponueshme</string>
@@ -375,7 +373,10 @@
     <string name="accounts_device_seen">Parë për herë të fundit %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplikacion</string>
     <string name="notifprefs_device_push">%1$s · njoftime push</string>
-    <string name="notifprefs_test_partial">Testi u dërgua te %1$d nga %2$d destinacione</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Testi u dërgua te %1$d nga %2$d destinacion</item>
+        <item quantity="other">Testi u dërgua te %1$d nga %2$d destinacione</item>
+    </plurals>
     <string name="notifprefs_test_none">Asnjë destinacion i konfiguruar</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
     <string name="notifprefs_no_destinations">Asnjë destinacion</string>
@@ -394,4 +395,27 @@
     <string name="accounts_revoke_confirm">Kjo do të revokojë qasjen në kalendar të %1$s. Hyrja me %2$s mbetet derisa ta shkëputni në faqen e hyrjes.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Temë e panjohur</string>
+    <string name="system_documents_modified">I modifikuar</string>
+    <string name="system_documents_discard_title">T\'i hedhësh ndryshimet?</string>
+    <string name="system_documents_discard">Hidh</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d e suksesshme</item>
+        <item quantity="other">%1$d të suksesshme</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d e dështuar</item>
+        <item quantity="other">%1$d të dështuara</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d rezervim</item>
+        <item quantity="other">%1$d / %2$d rezervime</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d qark</item>
+        <item quantity="other">%1$d qarqe</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d e refuzuar</item>
+        <item quantity="other">%1$d të refuzuara</item>
+    </plurals>
 </resources>

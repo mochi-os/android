@@ -103,9 +103,9 @@
     <string name="settings_time_zone">Tydsone</string>
     <string name="settings_reset_to_defaults">Stel terug na verstek</string>
     <string name="settings_reset_confirm_title">Stel voorkeure terug?</string>
-    <string name="settings_reset_confirm_message">Dit sal alle voorkeure terugstel na hul verstekwaardes.</string>
+    <string name="settings_reset_confirm_message">Dit sal hierdie voorkeure terugstel na hul verstekwaardes.</string>
     <string name="settings_reset">Stel terug</string>
-    <string name="settings_display_title">Vertoon</string>
+    <string name="settings_display_title">Vertoning</string>
     <string name="settings_display_reset">Stel terug na verstek</string>
     <string name="settings_display_reset_confirm_title">Skerm herstel?</string>
     <string name="settings_display_reset_confirm_message">Dit herstel skerm-instellings na hul verstekwaardes.</string>

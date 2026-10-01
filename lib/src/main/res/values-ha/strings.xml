@@ -103,9 +103,9 @@
     <string name="settings_time_zone">Yankin lokaci</string>
     <string name="settings_reset_to_defaults">Mayar zuwa asali</string>
     <string name="settings_reset_confirm_title">A mayar da abubuwan da kake so?</string>
-    <string name="settings_reset_confirm_message">Wannan zai sake saita duk abubuwan da aka fi so zuwa darajojinsu na default.</string>
+    <string name="settings_reset_confirm_message">Wannan zai sake saita waɗannan abubuwan da aka fi so zuwa ƙimominsu na asali.</string>
     <string name="settings_reset">Saiti</string>
-    <string name="settings_display_title">Nuna</string>
+    <string name="settings_display_title">Nuni</string>
     <string name="settings_display_reset">Mayar zuwa asali</string>
     <string name="settings_display_reset_confirm_title">Sake saita nuni?</string>
     <string name="settings_display_reset_confirm_message">Wannan zai sake saita saitunan nuni zuwa tsohuwar darajojinsu.</string>

@@ -103,9 +103,9 @@
     <string name="settings_time_zone">කාල කලාපය</string>
     <string name="settings_reset_to_defaults">පෙරනිමිවලට යළි සකසන්න</string>
     <string name="settings_reset_confirm_title">අභිරුචියන් යළි සකසන්නද?</string>
-    <string name="settings_reset_confirm_message">මෙය සියලුම මනාප ඒවායේ පෙරනිමි අගයන්ට යළි පිහිටුවනු ඇත.</string>
+    <string name="settings_reset_confirm_message">මෙය මෙම මනාප ඒවායේ පෙරනිමි අගයන්ට යළි පිහිටුවනු ඇත.</string>
     <string name="settings_reset">යළි සකසන්න</string>
-    <string name="settings_display_title">සංදර්ශන කරන්න</string>
+    <string name="settings_display_title">සංදර්ශනය</string>
     <string name="settings_display_reset">පෙරනිමිවලට යළි සකසන්න</string>
     <string name="settings_display_reset_confirm_title">සංදර්ශනය යළි සකසන්නද?</string>
     <string name="settings_display_reset_confirm_message">මෙය සංදර්ශන සැකසුම් ඒවායේ පෙරනිමි අගයන්වලට යළි සකසනු ඇත.</string>

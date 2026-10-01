@@ -104,13 +104,11 @@
     <string name="accounts_remove">Remover</string>
     <string name="accounts_remove_title">Remover conta?</string>
     <string name="system_documents_title">Documentos</string>
-    <string name="system_documents_description">Regras do servidor, termos e condições e aviso de privacidade apresentados aos seus utilizadores</string>
     <string name="system_documents_tab_rules">Regras do servidor</string>
     <string name="system_documents_tab_terms">Termos e condições</string>
     <string name="system_documents_tab_privacy">Privacidade</string>
     <string name="system_documents_language">Idioma</string>
     <string name="system_documents_no_language">Não há documento disponível para este idioma.</string>
-    <string name="system_documents_customised">Personalizado</string>
     <string name="system_documents_using_default">A usar predefinição incorporada</string>
     <string name="system_documents_revert">Repor predefinição</string>
     <string name="system_documents_save">Guardar</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Eliminar utilizador</string>
     <string name="system_users_delete_title">Eliminar utilizador?</string>
     <string name="system_users_manage_sessions">Gerir sessões</string>
-    <string name="system_users_sessions_description">Ver e revogar sessões ativas para este utilizador.</string>
     <string name="system_users_sessions_empty">Este utilizador não tem sessões ativas.</string>
     <string name="system_users_revoke">Revogar</string>
     <string name="system_users_revoke_all">Revogar todas as sessões</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Seguinte</string>
     <string name="system_users_empty">Nenhum utilizador encontrado</string>
     <string name="system_users_empty_search">Nenhum utilizador corresponde à sua pesquisa</string>
-    <string name="system_users_empty_search_hint">Tente ajustar os seus critérios de pesquisa</string>
     <string name="system_users_toast_created">Utilizador criado</string>
     <string name="system_users_toast_updated">Utilizador atualizado</string>
     <string name="system_users_toast_deleted">Utilizador eliminado</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">Termos de serviço</string>
     <string name="account_passkeys_empty">Nenhuma passkey registada.</string>
     <string name="account_passkey_register_title">Adicionar passkey</string>
-    <string name="account_passkey_register_message">O seu dispositivo pedir-lhe-á para confirmar. A passkey está vinculada a este dispositivo e será usada para futuros inícios de sessão.</string>
     <string name="account_passkey_name_label">Nome (opcional)</string>
     <string name="account_passkey_delete_message">«%1$s» já não o vai autenticar.</string>
-    <string name="account_totp_description">Inicie sessão com um código de 6 dígitos de uma aplicação de autenticação.</string>
     <string name="account_totp_enabled">Autenticador ativo.</string>
     <string name="account_totp_setup_step1">Digitalize ou introduza este segredo na sua aplicação de autenticação.</string>
     <string name="account_totp_setup_step2">Introduza o código de 6 dígitos que a sua aplicação mostra.</string>
     <string name="account_totp_code">Código</string>
     <string name="account_totp_disable_message">Já não poderá iniciar sessão com um código do autenticador.</string>
     <string name="account_recovery_none">Nenhum código de recuperação gerado.</string>
-    <string name="account_recovery_count">%1$d códigos de recuperação não utilizados.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d código de recuperação restante.</item>
+        <item quantity="other">%1$d códigos de recuperação restantes.</item>
+    </plurals>
     <string name="account_recovery_generate">Gerar códigos</string>
     <string name="account_recovery_regenerate">Regenerar códigos</string>
     <string name="account_recovery_regen_title">Regenerar códigos de recuperação?</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">Último acesso: %1$s</string>
     <string name="system_users_revoke_all_title">Revogar todas as sessões?</string>
     <string name="system_users_revoke_all_message">Todas as sessões ativas deste utilizador serão desconectadas.</string>
-    <string name="system_users_pagination_status">A mostrar %1$d–%2$d de %3$d utilizadores</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">A mostrar %1$d–%2$d de %3$d utilizador</item>
+        <item quantity="other">A mostrar %1$d–%2$d de %3$d utilizadores</item>
+    </plurals>
     <string name="account_title">Conta</string>
     <string name="account_section_identity">Identidade</string>
     <string name="account_identity_identity">Identidade</string>
@@ -348,10 +348,8 @@
     <string name="system_setting_hostname">Nome de host anunciado a outros servidores</string>
     <string name="system_status_peer_id">ID do par</string>
     <string name="system_status_holepunch">Perfuração</string>
-    <string name="system_status_holepunch_value">%1$d com êxito · %2$d falhados</string>
     <string name="system_status_awaiting_routing">Mensagens a aguardar encaminhamento</string>
     <string name="system_status_relay_service">Serviço de retransmissão</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d reservas · %3$d circuitos · %4$d recusadas</string>
     <string name="route_target_select">Selecionar</string>
     <string name="account_data_description">Descarregue uma cópia de segurança completa que pode restaurar neste ou noutro servidor Mochi.</string>
     <string name="route_target_none">Sem destinos disponíveis</string>
@@ -376,7 +374,10 @@
     <string name="accounts_device_seen">Visto pela última vez %1$s</string>
     <string name="notifprefs_device_app">%1$s · app</string>
     <string name="notifprefs_device_push">%1$s · push</string>
-    <string name="notifprefs_test_partial">Teste enviado para %1$d de %2$d destinos</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Teste enviado para %1$d de %2$d destino</item>
+        <item quantity="other">Teste enviado para %1$d de %2$d destinos</item>
+    </plurals>
     <string name="notifprefs_test_none">Sem destinos configurados</string>
     <string name="notifprefs_transport_fcm">Push do Android</string>
     <string name="notifprefs_no_destinations">Sem destinos</string>
@@ -395,4 +396,27 @@
     <string name="accounts_revoke_confirm">Isto revoga o acesso ao calendário de %1$s. O início de sessão com %2$s mantém-se até o desassociar na página de início de sessão.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Tema desconhecido</string>
+    <string name="system_documents_modified">Modificado</string>
+    <string name="system_documents_discard_title">Descartar alterações?</string>
+    <string name="system_documents_discard">Descartar</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d com êxito</item>
+        <item quantity="other">%1$d com êxito</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d sem êxito</item>
+        <item quantity="other">%1$d sem êxito</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d reserva</item>
+        <item quantity="other">%1$d / %2$d reservas</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d circuito</item>
+        <item quantity="other">%1$d circuitos</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d recusada</item>
+        <item quantity="other">%1$d recusadas</item>
+    </plurals>
 </resources>

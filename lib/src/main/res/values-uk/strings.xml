@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Часовий пояс</string>
     <string name="settings_reset_to_defaults">Скинути до значень за замовчуванням</string>
     <string name="settings_reset_confirm_title">Скинути параметри?</string>
-    <string name="settings_reset_confirm_message">Це скине всі налаштування до значень за замовчуванням.</string>
+    <string name="settings_reset_confirm_message">Ці налаштування буде скинуто до значень за замовчуванням.</string>
     <string name="settings_reset">Скинути</string>
     <string name="settings_display_title">Відображення</string>
     <string name="settings_display_reset">Скинути до значень за замовчуванням</string>

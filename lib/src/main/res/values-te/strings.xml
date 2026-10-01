@@ -103,7 +103,7 @@
     <string name="settings_time_zone">టైమ్ జోన్</string>
     <string name="settings_reset_to_defaults">డిఫాల్ట్‌లకు రీసెట్ చేయండి</string>
     <string name="settings_reset_confirm_title">ప్రాధాన్యతలను రీసెట్ చేయాలా?</string>
-    <string name="settings_reset_confirm_message">ఇది అన్ని ప్రాధాన్యతలను వాటి డిఫాల్ట్ విలువలకు రీసెట్ చేస్తుంది.</string>
+    <string name="settings_reset_confirm_message">ఇది ఈ ప్రాధాన్యతలను వాటి డిఫాల్ట్ విలువలకు రీసెట్ చేస్తుంది.</string>
     <string name="settings_reset">రీసెట్</string>
     <string name="settings_display_title">ప్రదర్శన</string>
     <string name="settings_display_reset">డిఫాల్ట్‌లకు రీసెట్ చేయండి</string>

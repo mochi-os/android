@@ -104,13 +104,11 @@
     <string name="accounts_remove">ລຶບອອກ</string>
     <string name="accounts_remove_title">ລຶບບັນຊີ?</string>
     <string name="system_documents_title">ເອກະສານ</string>
-    <string name="system_documents_description">ກົດລະບຽບເຊີບເວີ, ຂໍ້ກຳນົດແລະເງື່ອນໄຂ, ແລະປະກາດຄວາມເປັນສ່ວນຕົວທີ່ສະແດງໃຫ້ຜູ້ໃຊ້ຂອງທ່ານ</string>
     <string name="system_documents_tab_rules">ກົດລະບຽບເຊີບເວີ</string>
     <string name="system_documents_tab_terms">ຂໍ້ກຳນົດແລະເງື່ອນໄຂ</string>
     <string name="system_documents_tab_privacy">ຄວາມເປັນສ່ວນຕົວ</string>
     <string name="system_documents_language">ພາສາ</string>
     <string name="system_documents_no_language">ບໍ່ມີເອກະສານສຳລັບພາສານີ້.</string>
-    <string name="system_documents_customised">ປັບແຕ່ງແລ້ວ</string>
     <string name="system_documents_using_default">ກຳລັງໃຊ້ຄ່າເລີ່ມຕົ້ນທີ່ມາພ້ອມກັນ</string>
     <string name="system_documents_revert">ກັບຄືນເປັນຄ່າເລີ່ມຕົ້ນ</string>
     <string name="system_documents_save">ບັນທຶກ</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">ລົບຜູ້ໃຊ້</string>
     <string name="system_users_delete_title">ລົບຜູ້ໃຊ້ບໍ?</string>
     <string name="system_users_manage_sessions">ຈັດການເຊດຊັນ</string>
-    <string name="system_users_sessions_description">ເບິ່ງແລະຖອນຄືນ ເຊດຊັນ ທີ່ໃຊ້ງານສຳລັບຜູ້ໃຊ້ນີ້.</string>
     <string name="system_users_sessions_empty">ຜູ້ໃຊ້ນີ້ບໍ່ມີເຊດຊັນທີ່ໃຊ້ງານຢູ່.</string>
     <string name="system_users_revoke">ຖອນ</string>
     <string name="system_users_revoke_all">ຖອນເຊດຊັນທັງໝົດ</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">ຕໍ່ໄປ</string>
     <string name="system_users_empty">ບໍ່ພົບຜູ້ໃຊ້</string>
     <string name="system_users_empty_search">ບໍ່ມີຜູ້ໃຊ້ທີ່ກົງກັບການຄົ້ນຫາຂອງທ່ານ</string>
-    <string name="system_users_empty_search_hint">ລອງປັບປ່ຽນເງື່ອນໄຂການຄົ້ນຫາຂອງທ່ານ</string>
     <string name="system_users_toast_created">ຜູ້ໃຊ້ຖືກສ້າງ</string>
     <string name="system_users_toast_updated">ຜູ້ໃຊ້ຖືກອັບເດດ</string>
     <string name="system_users_toast_deleted">ຜູ້ໃຊ້ຖືກລົບ</string>
@@ -211,17 +207,17 @@
     <string name="settings_home_terms">ເງື່ອນໄຂການບໍລິການ</string>
     <string name="account_passkeys_empty">ບໍ່ມີ passkey ທີ່ລົງທະບຽນ.</string>
     <string name="account_passkey_register_title">ເພີ່ມກະແຈຜ່ານ</string>
-    <string name="account_passkey_register_message">ອຸປະກອນຂອງທ່ານຈະຮ້ອງຂໍໃຫ້ຢືນຢັນ. ກະແຈຜ່ານຖືກຜູກກັບອຸປະກອນນີ້ ແລະ ໃຊ້ສຳລັບການເຂົ້າສູ່ລະບົບໃນອະນາຄົດ.</string>
     <string name="account_passkey_name_label">ຊື່ (ທາງເລືອກ)</string>
     <string name="account_passkey_delete_message">\"%1$s\" ຈະບໍ່ເຂົ້າສູ່ລະບົບໃຫ້ທ່ານອີກຕໍ່ໄປ.</string>
-    <string name="account_totp_description">ເຂົ້າສູ່ລະບົບດ້ວຍລະຫັດ 6 ຫຼັກຈາກແອັບການຢັ້ງຢືນ.</string>
     <string name="account_totp_enabled">ການຢັ້ງຢືນເປີດໃຊ້ງານແລ້ວ.</string>
     <string name="account_totp_setup_step1">ສະແກນ ຫຼື ປ້ອນຄວາມລັບນີ້ໃນແອັບການຢັ້ງຢືນຂອງທ່ານ.</string>
     <string name="account_totp_setup_step2">ປ້ອນລະຫັດ 6 ຫຼັກທີ່ແອັບຂອງທ່ານສະແດງ.</string>
     <string name="account_totp_code">ລະຫັດ</string>
     <string name="account_totp_disable_message">ທ່ານຈະບໍ່ສາມາດເຂົ້າສູ່ລະບົບດ້ວຍລະຫັດການຢັ້ງຢືນອີກຕໍ່ໄປ.</string>
     <string name="account_recovery_none">ບໍ່ມີລະຫັດກູ້ຄືນທີ່ສ້າງຂຶ້ນ.</string>
-    <string name="account_recovery_count">ລະຫັດກູ້ຄືນທີ່ບໍ່ໃຊ້ %1$d.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="other">ເຫຼືອລະຫັດກູ້ຄືນ %1$d ລະຫັດ.</item>
+    </plurals>
     <string name="account_recovery_generate">ສ້າງລະຫັດ</string>
     <string name="account_recovery_regenerate">ສ້າງລະຫັດໃໝ່</string>
     <string name="account_recovery_regen_title">ສ້າງລະຫັດກູ້ຄືນໃໝ່?</string>
@@ -270,7 +266,9 @@
     <string name="system_users_session_last_accessed">ການເຂົ້າເຖິງຄັ້ງສຸດທ້າຍ: %1$s</string>
     <string name="system_users_revoke_all_title">ຍົກເລີກທຸກການກອງປະຊຸມ?</string>
     <string name="system_users_revoke_all_message">ການກອງປະຊຸມທີ່ໃຊ້ງານທັງໝົດຂອງຜູ້ໃຊ້ນີ້ຈະອອກຈາກລະບົບ.</string>
-    <string name="system_users_pagination_status">ກໍາລັງສະແດງ %1$d–%2$d ຈາກ %3$d ຜູ້ໃຊ້</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="other">ກຳລັງສະແດງ %1$d–%2$d ຈາກ %3$d ຜູ້ໃຊ້</item>
+    </plurals>
     <string name="account_title">ບັນຊີ</string>
     <string name="account_section_identity">ຕົວຕົນ</string>
     <string name="account_identity_identity">ຕົວຕົນ</string>
@@ -345,10 +343,8 @@
     <string name="system_setting_hostname">ຊື່ໂຮສທີ່ປະກາດໃຫ້ເຊີບເວີອື່ນ</string>
     <string name="system_status_peer_id">ID ຄູ່</string>
     <string name="system_status_holepunch">ການເຈາະ</string>
-    <string name="system_status_holepunch_value">%1$d ສຳເລັດ · %2$d ລົ້ມເຫລວ</string>
     <string name="system_status_awaiting_routing">ຂໍ້ຄວາມທີ່ລໍຖ້າການກຳນົດເສັ້ນທາງ</string>
     <string name="system_status_relay_service">ບໍລິການຣີເລ</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d ການຈອງ · %3$d ວົງຈອນ · %4$d ປະຕິເສດ</string>
     <string name="route_target_select">ເລືອກ</string>
     <string name="account_data_description">ດາວໂຫຼດສຳຮອງຂໍ້ມູນທັງໝົດທີ່ທ່ານສາມາດກູ້ຄືນໃນເຊີບເວີນີ້ ຫຼື ເຊີບເວີ Mochi ອື່ນ.</string>
     <string name="route_target_none">ບໍ່ມີເປົ້າໝາຍທີ່ໃຊ້ໄດ້</string>
@@ -373,7 +369,9 @@
     <string name="accounts_device_seen">ເຫັນຫຼ້າສຸດ %1$s</string>
     <string name="notifprefs_device_app">%1$s · ແອັບ</string>
     <string name="notifprefs_device_push">%1$s · ການແຈ້ງເຕືອນແບບພຸຊ</string>
-    <string name="notifprefs_test_partial">ສົ່ງການທົດສອບໄປ %1$d ຈາກ %2$d ປາຍທາງ</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="other">ສົ່ງການທົດສອບໄປ %1$d ຈາກ %2$d ປາຍທາງ</item>
+    </plurals>
     <string name="notifprefs_test_none">ບໍ່ມີປາຍທາງທີ່ຕັ້ງຄ່າໄວ້</string>
     <string name="notifprefs_transport_fcm">ການແຈ້ງເຕືອນແບບພຸຊ Android</string>
     <string name="notifprefs_no_destinations">ບໍ່ມີຈຸດໝາຍ</string>
@@ -392,4 +390,22 @@
     <string name="accounts_revoke_confirm">ນີ້ຈະຖອນການເຂົ້າເຖິງປະຕິທິນຂອງ %1$s. ການເຂົ້າສູ່ລະບົບດ້ວຍ %2$s ຈະຍັງຄົງຢູ່ຈົນກວ່າທ່ານຈະຕັດການເຊື່ອມຕໍ່ໃນໜ້າເຂົ້າສູ່ລະບົບ.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">ຮູບແບບທີ່ບໍ່ຮູ້ຈັກ</string>
+    <string name="system_documents_modified">ແກ້ໄຂແລ້ວ</string>
+    <string name="system_documents_discard_title">ຖິ້ມການປ່ຽນແປງບໍ?</string>
+    <string name="system_documents_discard">ຖິ້ມ</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="other">%1$d ສຳເລັດ</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="other">%1$d ລົ້ມເຫຼວ</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="other">%1$d / %2$d ການຈອງ</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="other">%1$d ວົງຈອນ</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="other">%1$d ຖືກປະຕິເສດ</item>
+    </plurals>
 </resources>

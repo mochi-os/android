@@ -103,7 +103,7 @@
     <string name="settings_time_zone">সময় অঞ্চল</string>
     <string name="settings_reset_to_defaults">ডিফল্টে রিসেট করুন</string>
     <string name="settings_reset_confirm_title">পছন্দগুলি রিসেট করবেন?</string>
-    <string name="settings_reset_confirm_message">এটি সমস্ত পছন্দকে তাদের ডিফল্ট মানে রিসেট করবে।</string>
+    <string name="settings_reset_confirm_message">এটি এই পছন্দগুলিকে তাদের ডিফল্ট মানে রিসেট করবে।</string>
     <string name="settings_reset">রিসেট</string>
     <string name="settings_display_title">প্রদর্শন</string>
     <string name="settings_display_reset">ডিফল্টে রিসেট করুন</string>

@@ -103,9 +103,9 @@
     <string name="settings_time_zone">સમય ઝોન</string>
     <string name="settings_reset_to_defaults">ડિફૉલ્ટ પર રીસેટ કરો</string>
     <string name="settings_reset_confirm_title">પ્રેફરન્સ રીસેટ કરો?</string>
-    <string name="settings_reset_confirm_message">આ બધી પસંદગીઓને તેમના ડિફોલ્ટ મૂલ્યો પર રીસેટ કરશે.</string>
+    <string name="settings_reset_confirm_message">આનાથી આ પસંદગીઓ તેમના ડિફોલ્ટ મૂલ્યો પર રીસેટ થશે.</string>
     <string name="settings_reset">રીસેટ કરો</string>
-    <string name="settings_display_title">દર્શાવો</string>
+    <string name="settings_display_title">પ્રદર્શન</string>
     <string name="settings_display_reset">ડિફૉલ્ટ પર રીસેટ કરો</string>
     <string name="settings_display_reset_confirm_title">ડિસ્પ્લે ફરીથી સેટ કરવો?</string>
     <string name="settings_display_reset_confirm_message">આ ડિસ્પ્લે સેટિંગ્સને તેમની ડિફોલ્ટ કિંમતો પર ફરીથી સેટ કરશે.</string>

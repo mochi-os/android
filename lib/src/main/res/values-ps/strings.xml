@@ -103,7 +103,7 @@
     <string name="settings_time_zone">د وخت زون</string>
     <string name="settings_reset_to_defaults">ډیفالټونو ته بیرته تنظیم کړئ</string>
     <string name="settings_reset_confirm_title">غوره توبونه بیا تنظیم کړو؟</string>
-    <string name="settings_reset_confirm_message">دا به ټولې غوره توبونه خپلو اصلي ارزښتونو ته بیا تنظیم کړي.</string>
+    <string name="settings_reset_confirm_message">دا کار به دغه غوره توبونه خپلو اصلي ارزښتونو ته بېرته تنظیم کړي.</string>
     <string name="settings_reset">بیا تنظیم</string>
     <string name="settings_display_title">ښوون</string>
     <string name="settings_display_reset">ډیفالټونو ته بیرته تنظیم کړئ</string>
@@ -217,7 +217,7 @@
     <string name="notifications_clear_all_title">ټولې خبرتیاوې پاکې کړو؟</string>
     <string name="notifications_clear_all_message">دا به هره خبرتیا لرې کړي. بیا یې ترلاسه کېدای نه شي.</string>
     <string name="settings_value_auto">اتومات</string>
-    <string name="settings_value_theme">د موضوع اصلي</string>
+    <string name="settings_value_theme">د ښکارندوی ډیفالټ</string>
     <string name="settings_radius">د څنډې شعاع</string>
     <string name="settings_timestamp_display">د وخت ښودنه</string>
     <string name="settings_timestamp_relative">نسبي</string>

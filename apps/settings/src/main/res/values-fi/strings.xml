@@ -104,13 +104,11 @@
     <string name="accounts_remove">Poista</string>
     <string name="accounts_remove_title">Poistetaanko tili?</string>
     <string name="system_documents_title">Asiakirjat</string>
-    <string name="system_documents_description">Palvelimen säännöt, käyttöehdot ja tietosuojailmoitus, jotka näytetään käyttäjillesi</string>
     <string name="system_documents_tab_rules">Palvelimen säännöt</string>
     <string name="system_documents_tab_terms">Käyttöehdot</string>
     <string name="system_documents_tab_privacy">Yksityisyys</string>
     <string name="system_documents_language">Kieli</string>
     <string name="system_documents_no_language">Tällä kielellä ei ole saatavilla dokumenttia.</string>
-    <string name="system_documents_customised">Mukautettu</string>
     <string name="system_documents_using_default">Käytössä mukana toimitettu oletus</string>
     <string name="system_documents_revert">Palauta oletukseen</string>
     <string name="system_documents_save">Tallenna</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Poista käyttäjä</string>
     <string name="system_users_delete_title">Poistetaanko käyttäjä?</string>
     <string name="system_users_manage_sessions">Hallitse istuntoja</string>
-    <string name="system_users_sessions_description">Näytä ja peruuta tämän käyttäjän aktiiviset istunnot.</string>
     <string name="system_users_sessions_empty">Tällä käyttäjällä ei ole aktiivisia istuntoja.</string>
     <string name="system_users_revoke">Peruuta</string>
     <string name="system_users_revoke_all">Peruuta kaikki istunnot</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Seuraava</string>
     <string name="system_users_empty">Käyttäjiä ei löytynyt</string>
     <string name="system_users_empty_search">Yksikään käyttäjä ei vastaa hakuasi</string>
-    <string name="system_users_empty_search_hint">Yritä säätää hakuehtojasi</string>
     <string name="system_users_toast_created">Käyttäjä luotu</string>
     <string name="system_users_toast_updated">Käyttäjä päivitetty</string>
     <string name="system_users_toast_deleted">Käyttäjä poistettu</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">Käyttöehdot</string>
     <string name="account_passkeys_empty">Ei rekisteröityjä avainkoodeja.</string>
     <string name="account_passkey_register_title">Lisää avainkoodi</string>
-    <string name="account_passkey_register_message">Laitteesi pyytää sinua vahvistamaan. Avainkoodi on sidottu tähän laitteeseen ja sitä käytetään tulevissa kirjautumisissa.</string>
     <string name="account_passkey_name_label">Nimi (valinnainen)</string>
     <string name="account_passkey_delete_message">\"%1$s\" ei enää kirjaa sinua sisään.</string>
-    <string name="account_totp_description">Kirjaudu sisään 6-numeroisella koodilla todennussovelluksesta.</string>
     <string name="account_totp_enabled">Todennin on käytössä.</string>
     <string name="account_totp_setup_step1">Skannaa tai syötä tämä salaisuus todennussovellukseesi.</string>
     <string name="account_totp_setup_step2">Syötä sovelluksen näyttämä 6-numeroinen koodi.</string>
     <string name="account_totp_code">Koodi</string>
     <string name="account_totp_disable_message">Et voi enää kirjautua sisään todenninkoodilla.</string>
     <string name="account_recovery_none">Palautuskoodeja ei ole luotu.</string>
-    <string name="account_recovery_count">%1$d käyttämätöntä palautuskoodia.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d palautuskoodi jäljellä.</item>
+        <item quantity="other">%1$d palautuskoodia jäljellä.</item>
+    </plurals>
     <string name="account_recovery_generate">Luo koodit</string>
     <string name="account_recovery_regenerate">Luo koodit uudelleen</string>
     <string name="account_recovery_regen_title">Luodaanko palautuskoodit uudelleen?</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">Viimeisin käyttö: %1$s</string>
     <string name="system_users_revoke_all_title">Peruutetaanko kaikki istunnot?</string>
     <string name="system_users_revoke_all_message">Kaikki tämän käyttäjän aktiiviset istunnot kirjataan ulos.</string>
-    <string name="system_users_pagination_status">Näytetään %1$d–%2$d / %3$d käyttäjää</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Näytetään %1$d–%2$d / %3$d käyttäjä</item>
+        <item quantity="other">Näytetään %1$d–%2$d / %3$d käyttäjää</item>
+    </plurals>
     <string name="account_title">Tili</string>
     <string name="account_section_identity">Identiteetti</string>
     <string name="account_identity_identity">Identiteetti</string>
@@ -307,7 +307,7 @@
         <item quantity="other">Testi lähetetty %1$d kohteeseen</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 istunto peruutettu</item>
+        <item quantity="one">%1$d istunto peruutettu</item>
         <item quantity="other">%1$d istuntoa peruutettu</item>
     </plurals>
     <string name="login_title">Kirjaudu sisään</string>
@@ -347,10 +347,8 @@
     <string name="system_setting_hostname">Muille palvelimille ilmoitettu isäntänimi</string>
     <string name="system_status_peer_id">Vertaistunnus</string>
     <string name="system_status_holepunch">Reiän puhkaisu</string>
-    <string name="system_status_holepunch_value">%1$d onnistui · %2$d epäonnistui</string>
     <string name="system_status_awaiting_routing">Reititystä odottavat viestit</string>
     <string name="system_status_relay_service">Välityspalvelu</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d varaukset · %3$d piirit · %4$d hylätty</string>
     <string name="route_target_select">Valitse</string>
     <string name="account_data_description">Lataa täydellinen varmuuskopio, jonka voit palauttaa tälle tai toiselle Mochi-palvelimelle.</string>
     <string name="route_target_none">Kohteita ei ole saatavilla</string>
@@ -375,7 +373,10 @@
     <string name="accounts_device_seen">Viimeksi nähty %1$s</string>
     <string name="notifprefs_device_app">%1$s · sovellus</string>
     <string name="notifprefs_device_push">%1$s · push-ilmoitukset</string>
-    <string name="notifprefs_test_partial">Testi lähetetty %1$d/%2$d kohteeseen</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Testi lähetetty %1$d/%2$d kohteeseen</item>
+        <item quantity="other">Testi lähetetty %1$d/%2$d kohteeseen</item>
+    </plurals>
     <string name="notifprefs_test_none">Kohteita ei ole määritetty</string>
     <string name="notifprefs_transport_fcm">Android-push</string>
     <string name="notifprefs_no_destinations">Ei kohteita</string>
@@ -394,4 +395,27 @@
     <string name="accounts_revoke_confirm">Tämä peruuttaa tilin %1$s kalenterin käyttöoikeuden. Kirjautuminen tilillä %2$s säilyy, kunnes poistat sen linkityksen kirjautumissivulla.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Tuntematon teema</string>
+    <string name="system_documents_modified">Muokattu</string>
+    <string name="system_documents_discard_title">Hylätäänkö muutokset?</string>
+    <string name="system_documents_discard">Hylkää</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d onnistui</item>
+        <item quantity="other">%1$d onnistui</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d epäonnistui</item>
+        <item quantity="other">%1$d epäonnistui</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d varaus</item>
+        <item quantity="other">%1$d / %2$d varausta</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d piiri</item>
+        <item quantity="other">%1$d piiriä</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d hylätty</item>
+        <item quantity="other">%1$d hylätty</item>
+    </plurals>
 </resources>

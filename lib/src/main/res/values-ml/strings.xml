@@ -103,9 +103,9 @@
     <string name="settings_time_zone">സമയ മേഖല</string>
     <string name="settings_reset_to_defaults">പിന്മാറുക</string>
     <string name="settings_reset_confirm_title">ഡിഫോൾട്ടിലേക്ക് റീസെറ്റ് ചെയ്യുക</string>
-    <string name="settings_reset_confirm_message">ഇത് എല്ലാ മുൻഗണനകളും അവയുടെ സ്ഥിരസ്ഥിതി മൂല്യങ്ങളിലേക്ക് റീസെറ്റ് ചെയ്യും.</string>
+    <string name="settings_reset_confirm_message">ഇത് ഈ മുൻഗണനകളെ അവയുടെ സ്ഥിരസ്ഥിതി മൂല്യങ്ങളിലേക്ക് റീസെറ്റ് ചെയ്യും.</string>
     <string name="settings_reset">പുനഃസജ്ജമാക്കുക</string>
-    <string name="settings_display_title">പ്രദർശിപ്പിക്കുക</string>
+    <string name="settings_display_title">പ്രദർശനം</string>
     <string name="settings_display_reset">പിന്മാറുക</string>
     <string name="settings_display_reset_confirm_title">ഡിസ്പ്ലേ പുനഃക്രമീകരിക്കണോ?</string>
     <string name="settings_display_reset_confirm_message">ഇത് ഡിസ്പ്ലേ ക്രമീകരണങ്ങളെ അവയുടെ സ്ഥിരസ്ഥിതി മൂല്യങ്ങളിലേക്ക് പുനഃക്രമീകരിക്കും.</string>

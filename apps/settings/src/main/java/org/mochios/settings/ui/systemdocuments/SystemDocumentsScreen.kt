@@ -24,9 +24,6 @@ import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.ExposedDropdownMenuAnchorType
-import androidx.compose.material3.ExposedDropdownMenuBox
-import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -54,8 +51,8 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButton
-import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTab
@@ -66,6 +63,7 @@ import org.mochios.android.R as MochiR
 import org.mochios.settings.api.SystemDocument
 import java.util.Locale
 import org.mochios.settings.ui.login.StepUpHost
+import org.mochios.settings.ui.preferences.PrefDropdown
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -130,6 +128,30 @@ fun SystemDocumentsScreen(
     }
 }
 
+/**
+ * Holds a tab or language switch that would drop unsaved edits until the user
+ * discards them or keeps editing.
+ */
+internal class SwitchGuard {
+    var pending by mutableStateOf<(() -> Unit)?>(null)
+        private set
+
+    /** Run [action] now, or, when [dirty], hold it for [discard]. */
+    fun request(dirty: Boolean, action: () -> Unit) {
+        if (dirty) pending = action else action()
+    }
+
+    fun discard() {
+        val action = pending
+        pending = null
+        action?.invoke()
+    }
+
+    fun keep() {
+        pending = null
+    }
+}
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun Content(
@@ -139,33 +161,53 @@ private fun Content(
     onOpen: (name: String, language: String) -> Unit,
     onSave: (name: String, language: String, body: String) -> Unit,
 ) {
+    // Languages available for the active tab. Latin-script bucket first
+    // (mirrors web's sortedLanguages); we then sort each bucket case-insensitively.
+    val languages = remember(state.documents, state.tab) {
+        sortedLanguages(
+            state.documents
+                .filter { it.name == state.tab.value }
+                .map { it.language }
+        )
+    }
+
+    // Resolve the active language. Honour the user's explicit choice if it's
+    // still available for the current tab, otherwise fall back to the device
+    // locale, then English, then the first available language.
+    val deviceLang = LocalConfiguration.current.locales[0].language.lowercase()
+    val activeLanguage = state.language?.takeIf { languages.contains(it) }
+        ?: languages.firstOrNull { it == deviceLang }
+        ?: languages.firstOrNull { it == "en" }
+        ?: languages.firstOrNull()
+
+    LaunchedEffect(state.tab, activeLanguage) {
+        if (activeLanguage != null) onOpen(state.tab.value, activeLanguage)
+    }
+    val document = state.current?.takeIf {
+        it.name == state.tab.value && it.language == activeLanguage
+    }
+
+    // The editor's text, held here so a tab or language switch can see unsaved
+    // edits. It resets whenever the upstream document (name/language/body)
+    // changes, mirroring the web useEffect that snaps the textarea to the
+    // refetched body after a save.
+    var draft by remember(document?.name, document?.language, document?.body) {
+        mutableStateOf(document?.body.orEmpty())
+    }
+    val dirty = document != null && draft != document.body
+    val guard = remember { SwitchGuard() }
+
     Column(modifier = Modifier.fillMaxSize()) {
         MochiTabRow(
             tabs = DocumentKind.entries.map { kind ->
                 MochiTab(stringResource(tabLabelRes(kind)))
             },
             selectedIndex = state.tab.ordinal,
-            onSelect = { index -> onTabChange(DocumentKind.entries[index]) },
+            onSelect = { index ->
+                val kind = DocumentKind.entries[index]
+                if (kind != state.tab) guard.request(dirty) { onTabChange(kind) }
+            },
         )
-
-        // Languages available for the active tab. Latin-script bucket first
-        // (mirrors web's sortedLanguages); we then sort each bucket case-insensitively.
-        val languages = remember(state.documents, state.tab) {
-            sortedLanguages(
-                state.documents
-                    .filter { it.name == state.tab.value }
-                    .map { it.language }
-            )
-        }
-
-        // Resolve the active language. Honour the user's explicit choice if it's
-        // still available for the current tab, otherwise fall back to the device
-        // locale, then English, then the first available language.
-        val deviceLang = LocalConfiguration.current.locales[0].language.lowercase()
-        val activeLanguage = state.language?.takeIf { languages.contains(it) }
-            ?: languages.firstOrNull { it == deviceLang }
-            ?: languages.firstOrNull { it == "en" }
-            ?: languages.firstOrNull()
 
         Column(
             modifier = Modifier
@@ -174,12 +216,6 @@ private fun Content(
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            Text(
-                text = stringResource(R.string.system_documents_description),
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-
             if (languages.isEmpty()) {
                 Text(
                     text = stringResource(R.string.system_documents_no_language),
@@ -192,15 +228,11 @@ private fun Content(
             LanguagePicker(
                 languages = languages,
                 selected = activeLanguage,
-                onChange = onLanguageChange,
+                onChange = { language ->
+                    if (language != activeLanguage) guard.request(dirty) { onLanguageChange(language) }
+                },
             )
 
-            LaunchedEffect(state.tab, activeLanguage) {
-                if (activeLanguage != null) onOpen(state.tab.value, activeLanguage)
-            }
-            val document = state.current?.takeIf {
-                it.name == state.tab.value && it.language == activeLanguage
-            }
             if (document == null && state.loadingDocument) {
                 CircularProgressIndicator()
             } else if (document == null) {
@@ -212,22 +244,33 @@ private fun Content(
             } else {
                 DocumentEditor(
                     document = document,
+                    body = draft,
+                    onBodyChange = { draft = it },
                     isSaving = state.savingKey == "${document.name}/${document.language}",
                     onSave = { body -> onSave(document.name, document.language, body) },
                 )
             }
         }
     }
+
+    if (guard.pending != null) {
+        MochiAlertDialog(
+            onDismissRequest = guard::keep,
+            title = stringResource(R.string.system_documents_discard_title),
+            confirmText = stringResource(R.string.system_documents_discard),
+            onConfirm = guard::discard,
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
+        )
+    }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun LanguagePicker(
     languages: List<String>,
     selected: String?,
     onChange: (String) -> Unit,
 ) {
-    var expanded by remember { mutableStateOf(false) }
     Column(modifier = Modifier.fillMaxWidth()) {
         Text(
             text = stringResource(R.string.system_documents_language),
@@ -235,51 +278,25 @@ private fun LanguagePicker(
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
         Spacer(Modifier.height(4.dp))
-        ExposedDropdownMenuBox(
-            expanded = expanded,
-            onExpandedChange = { expanded = it },
-        ) {
-            MochiTextField(
-                value = selected?.let { languageDisplayName(it) } ?: "",
-                onValueChange = {},
-                readOnly = true,
-                trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
-                modifier = Modifier
-                    .menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable)
-                    .fillMaxWidth(),
-            )
-            ExposedDropdownMenu(
-                expanded = expanded,
-                onDismissRequest = { expanded = false },
-            ) {
-                languages.forEach { lang ->
-                    MochiDropdownMenuItem(
-                        text = { Text(languageDisplayName(lang)) },
-                        onClick = {
-                            expanded = false
-                            onChange(lang)
-                        },
-                    )
-                }
-            }
-        }
+        PrefDropdown(
+            options = languages.map { it to languageDisplayName(it) },
+            selectedLabel = selected?.let { languageDisplayName(it) } ?: "",
+            onChange = onChange,
+            searchable = true,
+        )
     }
 }
 
 @Composable
 private fun DocumentEditor(
     document: SystemDocument,
+    body: String,
+    onBodyChange: (String) -> Unit,
     isSaving: Boolean,
     onSave: (String) -> Unit,
 ) {
     val format = LocalFormat.current
-    // Reset the local draft whenever the upstream document (name/language/body)
-    // changes, mirroring the web useEffect that snaps the textarea to the
-    // refetched body after a save.
-    var body by remember(document.name, document.language, document.body) {
-        mutableStateOf(document.body)
-    }
-    val customised = document.body != document.default
+    val modified = document.body != document.default
     val dirty = body != document.body
 
     Row(
@@ -292,8 +309,8 @@ private fun DocumentEditor(
             enabled = false,
             label = {
                 Text(
-                    text = if (customised) {
-                        stringResource(R.string.system_documents_customised)
+                    text = if (modified) {
+                        stringResource(R.string.system_documents_modified)
                     } else {
                         stringResource(R.string.system_documents_using_default)
                     },
@@ -315,7 +332,7 @@ private fun DocumentEditor(
 
     MochiTextField(
         value = body,
-        onValueChange = { body = it },
+        onValueChange = onBodyChange,
         modifier = Modifier.fillMaxWidth(),
         minLines = 16,
     )
@@ -326,7 +343,7 @@ private fun DocumentEditor(
     ) {
         if (body != document.default) {
             MochiOutlinedButton(
-                onClick = { body = document.default },
+                onClick = { onBodyChange(document.default) },
                 enabled = !isSaving,
             ) {
                 Text(stringResource(R.string.system_documents_revert))

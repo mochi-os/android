@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Zon masa</string>
     <string name="settings_reset_to_defaults">Tetapkan semula kepada lalai</string>
     <string name="settings_reset_confirm_title">Tetapkan semula keutamaan?</string>
-    <string name="settings_reset_confirm_message">Ini akan menetapkan semula semua keutamaan kepada nilai lalainya.</string>
+    <string name="settings_reset_confirm_message">Ini akan menetapkan semula keutamaan ini kepada nilai lalainya.</string>
     <string name="settings_reset">Tetapkan semula</string>
     <string name="settings_display_title">Paparan</string>
     <string name="settings_display_reset">Tetapkan semula kepada lalai</string>

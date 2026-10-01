@@ -35,12 +35,10 @@
     <string name="account_passkeys_empty">Keine Passkeys registriert.</string>
     <string name="account_passkey_register">Passkey hinzufügen</string>
     <string name="account_passkey_register_title">Passkey hinzufügen</string>
-    <string name="account_passkey_register_message">Ihr Gerät fordert Sie zur Bestätigung auf. Der Passkey ist an dieses Gerät gebunden und wird für künftige Anmeldungen verwendet.</string>
     <string name="account_passkey_name_label">Name (optional)</string>
     <string name="account_passkey_delete_title">Passkey löschen?</string>
     <string name="account_passkey_delete_message">\"%1$s\" meldet Sie nicht mehr an.</string>
     <string name="account_section_totp">Authenticator-App</string>
-    <string name="account_totp_description">Mit einem 6-stelligen Code aus einer Authenticator-App anmelden.</string>
     <string name="account_totp_enabled">Authenticator ist aktiviert.</string>
     <string name="account_totp_setup">Authenticator einrichten</string>
     <string name="account_totp_setup_title">Authenticator einrichten</string>
@@ -52,7 +50,6 @@
     <string name="account_totp_disable_message">Sie können sich nicht mehr mit einem Authenticator-Code anmelden.</string>
     <string name="account_section_recovery">Wiederherstellungscodes</string>
     <string name="account_recovery_none">Keine Wiederherstellungscodes erstellt.</string>
-    <string name="account_recovery_count">%1$d unbenutzte Wiederherstellungscodes.</string>
     <string name="account_recovery_generate">Codes erstellen</string>
     <string name="account_recovery_regenerate">Codes neu erstellen</string>
     <string name="account_recovery_regen_title">Wiederherstellungscodes neu erstellen?</string>
@@ -156,12 +153,10 @@
     <string name="accounts_remove_title">Konto entfernen?</string>
     <string name="accounts_remove_message">Dadurch wird das verbundene Konto \"%1$s\" entfernt.</string>
     <string name="system_documents_title">Dokumente</string>
-    <string name="system_documents_description">Serverregeln, Nutzungsbedingungen und Datenschutzhinweis, die Ihren Benutzern angezeigt werden</string>
     <string name="system_documents_tab_rules">Serverregeln</string>
     <string name="system_documents_tab_terms">Nutzungsbedingungen</string>
     <string name="system_documents_language">Sprache</string>
     <string name="system_documents_no_language">Für diese Sprache ist kein Dokument verfügbar.</string>
-    <string name="system_documents_customised">Angepasst</string>
     <string name="system_documents_using_default">Mitgelieferte Standardeinstellung wird verwendet</string>
     <string name="system_documents_last_edited">Zuletzt bearbeitet %1$s</string>
     <string name="system_documents_revert">Auf Standard zurücksetzen</string>
@@ -193,7 +188,6 @@
     <string name="system_setting_auth_totp">Anmeldung mit TOTP-Authenticator-App</string>
     <string name="system_setting_auth_recovery">Anmeldung mit Wiederherstellungscode</string>
     <string name="system_setting_auth_oauth">Anmeldung mit OAuth 2.0</string>
-    <string name="system_setting_default_theme">Standardthema</string>
     <string name="system_setting_domains_verification">Domain-Verifizierung erforderlich</string>
     <string name="system_setting_email_from">Standard-Absenderadresse für System-E-Mails</string>
     <string name="system_setting_oauth_public_url">Öffentliche URL für OAuth-Weiterleitungen</string>
@@ -235,7 +229,6 @@
     <string name="system_users_delete_message">Damit wird der Benutzer \"%1$s\" dauerhaft gelöscht. Diese Aktion kann nicht rückgängig gemacht werden.</string>
     <string name="system_users_manage_sessions">Sitzungen verwalten</string>
     <string name="system_users_sessions_title">Sitzungen für %1$s</string>
-    <string name="system_users_sessions_description">Aktive Sitzungen dieses Benutzers anzeigen und widerrufen.</string>
     <string name="system_users_sessions_empty">Dieser Benutzer hat keine aktiven Sitzungen.</string>
     <string name="system_users_session_last_accessed">Zuletzt verwendet: %1$s</string>
     <string name="system_users_revoke">Widerrufen</string>
@@ -244,12 +237,10 @@
     <string name="system_users_revoke_all_message">Alle aktiven Sitzungen dieses Benutzers werden abgemeldet.</string>
     <string name="system_users_unknown_browser">Unbekannter Browser</string>
     <string name="system_users_unknown">Unbekannt</string>
-    <string name="system_users_pagination_status">Anzeige %1$d–%2$d von %3$d Benutzern</string>
     <string name="system_users_previous">Zurück</string>
     <string name="system_users_next">Weiter</string>
     <string name="system_users_empty">Keine Benutzer gefunden</string>
     <string name="system_users_empty_search">Keine Benutzer entsprechen Ihrer Suche</string>
-    <string name="system_users_empty_search_hint">Passen Sie Ihre Suchkriterien an</string>
     <string name="system_users_toast_created">Benutzer erstellt</string>
     <string name="system_users_toast_updated">Benutzer aktualisiert</string>
     <string name="system_users_toast_deleted">Benutzer gelöscht</string>
@@ -303,10 +294,6 @@
         <item quantity="one">Test an %1$d Ziel gesendet</item>
         <item quantity="other">Test an %1$d Ziele gesendet</item>
     </plurals>
-    <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 Sitzung widerrufen</item>
-        <item quantity="other">%1$d Sitzungen widerrufen</item>
-    </plurals>
     <string name="account_close_section">Konto schliessen</string>
     <string name="account_close_action">Konto schliessen</string>
     <string name="account_close_confirm_title">Konto schliessen?</string>
@@ -334,10 +321,8 @@
     <string name="system_setting_hostname">Anderen Servern bekanntgegebener Hostname</string>
     <string name="system_status_peer_id">Peer-ID</string>
     <string name="system_status_holepunch">Hole Punching</string>
-    <string name="system_status_holepunch_value">%1$d erfolgreich · %2$d fehlgeschlagen</string>
     <string name="system_status_awaiting_routing">Nachrichten, die auf Routing warten</string>
     <string name="system_status_relay_service">Relaisdienst</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d Reservierungen · %3$d Verbindungen · %4$d abgelehnt</string>
     <string name="login_title">Anmeldung</string>
     <string name="login_section_methods">Anmeldemethoden</string>
     <string name="login_method_email">E-Mail-Code</string>

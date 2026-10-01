@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Fus orar</string>
     <string name="settings_reset_to_defaults">Resetează la valorile implicite</string>
     <string name="settings_reset_confirm_title">Resetezi preferințele?</string>
-    <string name="settings_reset_confirm_message">Aceasta va reseta toate preferințele la valorile lor implicite.</string>
+    <string name="settings_reset_confirm_message">Aceasta va reseta aceste preferințe la valorile lor implicite.</string>
     <string name="settings_reset">Resetează</string>
     <string name="settings_display_title">Afișare</string>
     <string name="settings_display_reset">Resetează la valorile implicite</string>

@@ -211,7 +211,7 @@
     <string name="settings_time_zone">Fuseau horaire</string>
     <string name="settings_reset_to_defaults">Rétablir les valeurs par défaut</string>
     <string name="settings_reset_confirm_title">Rétablir les préférences ?</string>
-    <string name="settings_reset_confirm_message">Cela rétablira toutes les préférences à leurs valeurs par défaut.</string>
+    <string name="settings_reset_confirm_message">Cela rétablira ces préférences à leurs valeurs par défaut.</string>
     <string name="settings_display_reset">Rétablir les valeurs par défaut</string>
     <string name="settings_display_reset_confirm_title">Rétablir l\'affichage ?</string>
     <string name="settings_display_reset_confirm_message">Cela réinitialisera les paramètres d\'affichage à leurs valeurs par défaut.</string>

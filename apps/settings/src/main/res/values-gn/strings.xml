@@ -5,7 +5,7 @@
     <string name="settings_home_logout">Esẽ</string>
     <string name="settings_home_account">Mba\'ete</string>
     <string name="settings_home_preferences">Jeporavo</string>
-    <string name="settings_home_display">Hechauka</string>
+    <string name="settings_home_display">Jehechauka</string>
     <string name="settings_home_notification_prefs">Momarandu ñepyrũ</string>
     <string name="settings_home_accounts">Mba\'etekuéra oñembojuajúva</string>
     <string name="settings_home_interests">Oikotevevakuéra</string>
@@ -104,13 +104,11 @@
     <string name="accounts_remove">Embogue</string>
     <string name="accounts_remove_title">Embogue mba\'ete?</string>
     <string name="system_documents_title">Documentos</string>
-    <string name="system_documents_description">Mohendaha mbojeguatára, ñe\'ẽmecha ha tekorosã rehegua oñehechauka ne puruhárakuérape</string>
     <string name="system_documents_tab_rules">Mohendaha mbojeguatára</string>
     <string name="system_documents_tab_terms">Ñe\'ẽmecha ha tekorosã rehegua</string>
     <string name="system_documents_tab_privacy">Privacidad</string>
     <string name="system_documents_language">Ñe\'ẽ</string>
     <string name="system_documents_no_language">Ndaipóri kuatia ko ñe\'ẽme.</string>
-    <string name="system_documents_customised">Customizada</string>
     <string name="system_documents_using_default">Eipuru bundled ypy</string>
     <string name="system_documents_revert">Embojevy ypy peguávape</string>
     <string name="system_documents_save">Ñongatu</string>
@@ -141,7 +139,7 @@
     <string name="system_setting_auth_totp">Login TOTP autenticador app ndive</string>
     <string name="system_setting_auth_recovery">Login recuperación código ndive</string>
     <string name="system_setting_auth_oauth">Login OAuth 2.0 ndive</string>
-    <string name="system_setting_default_theme">Default tema</string>
+    <string name="system_setting_default_theme">Téma ypygua</string>
     <string name="system_setting_domains_verification">Eikotevẽ dominio verificación</string>
     <string name="system_setting_email_from">Default tape sistema email-gua</string>
     <string name="system_setting_oauth_public_url">URL público OAuth redirects rehegua</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Hundi puruhára</string>
     <string name="system_users_delete_title">Hundi puruhára?</string>
     <string name="system_users_manage_sessions">Eñangareko sesiones</string>
-    <string name="system_users_sessions_description">Ehecha ha embogue sesión imbarete ko puruhárape g̃uarã.</string>
     <string name="system_users_sessions_empty">Ko puruhára ndorekói sesión imbaretéva.</string>
     <string name="system_users_revoke">Embogue</string>
     <string name="system_users_revoke_all">Embogue opa sesiones</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Tenondeve</string>
     <string name="system_users_empty">Ndojejuhúi puruhára</string>
     <string name="system_users_empty_search">Ndaipóri puruhára ojuajúva ne ñehekáre</string>
-    <string name="system_users_empty_search_hint">Eha\'ã embohekopyahu ne jeheka peha</string>
     <string name="system_users_toast_created">Puruhára oñemoheñói</string>
     <string name="system_users_toast_updated">Puruhára oñembohekopyahu</string>
     <string name="system_users_toast_deleted">Puruhára oñembogue</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">Mba\'eapo rape</string>
     <string name="account_passkeys_empty">Ndaipori passkey oñembyaty.</string>
     <string name="account_passkey_register_title">Passkey moĩve</string>
-    <string name="account_passkey_register_message">Nde mba\'eveporã ojerure ojeporavove. Passkey oñembojoaju ko mba\'eveporãndive ha oñeñepyrũvo ohóma.</string>
     <string name="account_passkey_name_label">Téra (oĩva\'erã)</string>
     <string name="account_passkey_delete_message">\"%1$s\" ndoike mo\'ã véima.</string>
-    <string name="account_totp_description">Eike 6 papapy code apñemoĩva oguereko peteĩ tekorosã app guive.</string>
     <string name="account_totp_enabled">Autenticador oikóma.</string>
     <string name="account_totp_setup_step1">Eskanea térã eñepyrũ ko ñemañe nde autenticador app rupive.</string>
     <string name="account_totp_setup_step2">Eñepyrũ 6 papapy code nde app ohechauka.</string>
     <string name="account_totp_code">Código</string>
     <string name="account_totp_disable_message">Ndaipóri jeike code autenticador rupive.</string>
     <string name="account_recovery_none">Ndaipóri código jeguerojevy oñembokue.</string>
-    <string name="account_recovery_count">%1$d código jeguerojevy noiporiva.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">Opyta %1$d código jeguerojevy.</item>
+        <item quantity="other">Opyta %1$d código jeguerojevy.</item>
+    </plurals>
     <string name="account_recovery_generate">Embokue código</string>
     <string name="account_recovery_regenerate">Embokue jey código</string>
     <string name="account_recovery_regen_title">Embokue jey código jeguerojevy?</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">Jeike paha: %1$s</string>
     <string name="system_users_revoke_all_title">Embogue opaichagua sesion?</string>
     <string name="system_users_revoke_all_message">Opaichagua sesion oimbáva ko puruhárakuéragui osẽta.</string>
-    <string name="system_users_pagination_status">Ohechauka %1$d–%2$d %3$d puruháragui</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Ohechauka %1$d–%2$d %3$d puruhára apytégui</item>
+        <item quantity="other">Ohechauka %1$d–%2$d %3$d puruhára apytégui</item>
+    </plurals>
     <string name="account_title">Mba\'ete</string>
     <string name="account_section_identity">Identidad</string>
     <string name="account_identity_identity">Identidad</string>
@@ -346,10 +346,8 @@
     <string name="system_setting_hostname">Hostname omomarandupyre ambue servidor-pe</string>
     <string name="system_status_peer_id">Mboja ID</string>
     <string name="system_status_holepunch">NAT ñembokua</string>
-    <string name="system_status_holepunch_value">%1$d osẽ porã · %2$d ndaikatúi</string>
     <string name="system_status_awaiting_routing">Marandu oha’arõva tape</string>
     <string name="system_status_relay_service">Relay servicio</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d ñeñongatu · %3$d circuitos · %4$d ojejokóva</string>
     <string name="route_target_select">Eiporavo</string>
     <string name="account_data_description">Emboguejy peteĩ ñongatu paha ikatúva emoĩ jey ko térã ambue Mochi servidor-pe.</string>
     <string name="route_target_none">Ndaipóri tenda oĩva</string>
@@ -374,7 +372,10 @@
     <string name="accounts_device_seen">Ojehechahague paha %1$s</string>
     <string name="notifprefs_device_app">%1$s · tembiporu\'i</string>
     <string name="notifprefs_device_push">%1$s · momarandu</string>
-    <string name="notifprefs_test_partial">Prueba oñemondo %1$d %2$d-gui</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Ha\'ãha oñemondo %1$d tendápe %2$d apytégui</item>
+        <item quantity="other">Ha\'ãha oñemondo %1$d tendápe %2$d apytégui</item>
+    </plurals>
     <string name="notifprefs_test_none">Ndaipóri henda destino oñembosako\'íva</string>
     <string name="notifprefs_transport_fcm">Android momarandu</string>
     <string name="notifprefs_no_destinations">Mba\'eve mboheve</string>
@@ -393,4 +394,27 @@
     <string name="accounts_revoke_confirm">Kóva oipe\'áta %1$s jeike arapapahápe. Jeike %2$s ndive opytáta ejeíta peve chugui Jeike roguépe.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Téma ojekuaa\'ỹva</string>
+    <string name="system_documents_modified">Oñemoambuéva</string>
+    <string name="system_documents_discard_title">¿Remboykese umi ñemoambue?</string>
+    <string name="system_documents_discard">Mboyke</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d osẽ porã</item>
+        <item quantity="other">%1$d osẽ porã</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d ndaikatúi</item>
+        <item quantity="other">%1$d ndaikatúi</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d ñeñongatu</item>
+        <item quantity="other">%1$d / %2$d ñeñongatu</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d circuito</item>
+        <item quantity="other">%1$d circuito</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d ojejokóva</item>
+        <item quantity="other">%1$d ojejokóva</item>
+    </plurals>
 </resources>

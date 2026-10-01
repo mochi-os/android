@@ -103,7 +103,7 @@
     <string name="settings_time_zone">منطقه زمانی</string>
     <string name="settings_reset_to_defaults">بازنشانی به پیش‌فرض‌ها</string>
     <string name="settings_reset_confirm_title">بازنشانی ترجیحات؟</string>
-    <string name="settings_reset_confirm_message">این کار تمام ترجیحات را به مقادیر پیش‌فرض آن‌ها بازنشانی می‌کند.</string>
+    <string name="settings_reset_confirm_message">این کار این ترجیحات را به مقادیر پیش‌فرض آن‌ها بازنشانی می‌کند.</string>
     <string name="settings_reset">بازنشانی</string>
     <string name="settings_display_title">نمایش</string>
     <string name="settings_display_reset">بازنشانی به پیش‌فرض‌ها</string>

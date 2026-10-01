@@ -104,13 +104,11 @@
     <string name="accounts_remove">Xoá</string>
     <string name="accounts_remove_title">Xoá tài khoản?</string>
     <string name="system_documents_title">Tài liệu</string>
-    <string name="system_documents_description">Quy tắc máy chủ, điều khoản và điều kiện, và thông báo quyền riêng tư hiển thị cho người dùng của bạn</string>
     <string name="system_documents_tab_rules">Quy tắc máy chủ</string>
     <string name="system_documents_tab_terms">Điều khoản và điều kiện</string>
     <string name="system_documents_tab_privacy">Quyền riêng tư</string>
     <string name="system_documents_language">Ngôn ngữ</string>
     <string name="system_documents_no_language">Không có tài liệu cho ngôn ngữ này.</string>
-    <string name="system_documents_customised">Đã tuỳ chỉnh</string>
     <string name="system_documents_using_default">Đang dùng mặc định đi kèm</string>
     <string name="system_documents_revert">Khôi phục về mặc định</string>
     <string name="system_documents_save">Lưu</string>
@@ -141,7 +139,7 @@
     <string name="system_setting_auth_totp">Đăng nhập bằng ứng dụng xác thực TOTP</string>
     <string name="system_setting_auth_recovery">Đăng nhập bằng mã khôi phục</string>
     <string name="system_setting_auth_oauth">Đăng nhập bằng OAuth 2.0</string>
-    <string name="system_setting_default_theme">Theme mặc định</string>
+    <string name="system_setting_default_theme">Giao diện mặc định</string>
     <string name="system_setting_domains_verification">Yêu cầu xác minh tên miền</string>
     <string name="system_setting_email_from">Địa chỉ gửi mặc định cho email hệ thống</string>
     <string name="system_setting_oauth_public_url">URL công khai cho chuyển hướng OAuth</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Xóa người dùng</string>
     <string name="system_users_delete_title">Xóa người dùng?</string>
     <string name="system_users_manage_sessions">Quản lý phiên</string>
-    <string name="system_users_sessions_description">Xem và thu hồi các phiên đang hoạt động cho người dùng này.</string>
     <string name="system_users_sessions_empty">Người dùng này không có phiên hoạt động nào.</string>
     <string name="system_users_revoke">Thu hồi</string>
     <string name="system_users_revoke_all">Thu hồi tất cả phiên</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Tiếp</string>
     <string name="system_users_empty">Không tìm thấy người dùng nào</string>
     <string name="system_users_empty_search">Không có người dùng nào khớp với tìm kiếm của bạn</string>
-    <string name="system_users_empty_search_hint">Hãy thử điều chỉnh tiêu chí tìm kiếm của bạn</string>
     <string name="system_users_toast_created">Đã tạo người dùng</string>
     <string name="system_users_toast_updated">Đã cập nhật người dùng</string>
     <string name="system_users_toast_deleted">Đã xóa người dùng</string>
@@ -211,17 +207,17 @@
     <string name="settings_home_terms">Điều khoản dịch vụ</string>
     <string name="account_passkeys_empty">Không có khóa truy cập nào được đăng ký.</string>
     <string name="account_passkey_register_title">Thêm khóa truy cập</string>
-    <string name="account_passkey_register_message">Thiết bị của bạn sẽ yêu cầu bạn xác nhận. Khóa truy cập được gắn với thiết bị này và sử dụng cho các lần đăng nhập trong tương lai.</string>
     <string name="account_passkey_name_label">Tên (tùy chọn)</string>
     <string name="account_passkey_delete_message">\"%1$s\" sẽ không còn đăng nhập cho bạn.</string>
-    <string name="account_totp_description">Đăng nhập bằng mã 6 chữ số từ ứng dụng xác thực.</string>
     <string name="account_totp_enabled">Trình xác thực đã được bật.</string>
     <string name="account_totp_setup_step1">Quét hoặc nhập bí mật này vào ứng dụng xác thực của bạn.</string>
     <string name="account_totp_setup_step2">Nhập mã 6 chữ số mà ứng dụng hiển thị.</string>
     <string name="account_totp_code">Mã</string>
     <string name="account_totp_disable_message">Bạn sẽ không thể đăng nhập bằng mã xác thực nữa.</string>
     <string name="account_recovery_none">Chưa tạo mã khôi phục.</string>
-    <string name="account_recovery_count">%1$d mã khôi phục chưa sử dụng.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="other">Còn %1$d mã khôi phục.</item>
+    </plurals>
     <string name="account_recovery_generate">Tạo mã</string>
     <string name="account_recovery_regenerate">Tạo lại mã</string>
     <string name="account_recovery_regen_title">Tạo lại mã khôi phục?</string>
@@ -270,7 +266,9 @@
     <string name="system_users_session_last_accessed">Truy cập lần cuối: %1$s</string>
     <string name="system_users_revoke_all_title">Thu hồi tất cả các phiên?</string>
     <string name="system_users_revoke_all_message">Tất cả các phiên hoạt động của người dùng này sẽ bị đăng xuất.</string>
-    <string name="system_users_pagination_status">Hiển thị %1$d–%2$d trong %3$d người dùng</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="other">Hiển thị %1$d–%2$d trong %3$d người dùng</item>
+    </plurals>
     <string name="account_title">Tài khoản</string>
     <string name="account_section_identity">Danh tính</string>
     <string name="account_identity_identity">Danh tính</string>
@@ -346,10 +344,8 @@
     <string name="system_setting_hostname">Tên máy chủ được thông báo cho máy chủ khác</string>
     <string name="system_status_peer_id">ID đồng đẳng</string>
     <string name="system_status_holepunch">Đục lỗ</string>
-    <string name="system_status_holepunch_value">%1$d thành công · %2$d thất bại</string>
     <string name="system_status_awaiting_routing">Tin nhắn đang chờ định tuyến</string>
     <string name="system_status_relay_service">Dịch vụ chuyển tiếp</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d đặt chỗ · %3$d mạch · %4$d bị từ chối</string>
     <string name="route_target_select">Chọn</string>
     <string name="account_data_description">Tải xuống bản sao lưu đầy đủ mà bạn có thể phục hồi trên máy chủ này hoặc một máy chủ Mochi khác.</string>
     <string name="route_target_none">Không có đích khả dụng</string>
@@ -374,7 +370,9 @@
     <string name="accounts_device_seen">Lần cuối nhìn thấy %1$s</string>
     <string name="notifprefs_device_app">%1$s · ứng dụng</string>
     <string name="notifprefs_device_push">%1$s · thông báo đẩy</string>
-    <string name="notifprefs_test_partial">Đã gửi thử nghiệm đến %1$d trong số %2$d đích</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="other">Đã gửi thử nghiệm đến %1$d trong số %2$d đích</item>
+    </plurals>
     <string name="notifprefs_test_none">Chưa cấu hình điểm đến</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
     <string name="notifprefs_no_destinations">Không có đích đến</string>
@@ -393,4 +391,22 @@
     <string name="accounts_revoke_confirm">Thao tác này sẽ thu hồi quyền truy cập lịch của %1$s. Việc đăng nhập bằng %2$s vẫn còn cho đến khi bạn hủy liên kết trên trang Đăng nhập.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Giao diện không xác định</string>
+    <string name="system_documents_modified">Đã sửa đổi</string>
+    <string name="system_documents_discard_title">Loại bỏ thay đổi?</string>
+    <string name="system_documents_discard">Loại bỏ</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="other">%1$d thành công</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="other">%1$d thất bại</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="other">%1$d / %2$d đặt chỗ</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="other">%1$d mạch</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="other">%1$d bị từ chối</item>
+    </plurals>
 </resources>

@@ -103,9 +103,9 @@
     <string name="settings_time_zone">समय क्षेत्र</string>
     <string name="settings_reset_to_defaults">डिफ़ॉल्ट पर रीसेट करीं</string>
     <string name="settings_reset_confirm_title">वरीयता रीसेट करीं?</string>
-    <string name="settings_reset_confirm_message">ई सब वरीयता के ओकर डिफ़ॉल्ट मान पर रीसेट कर दी।</string>
+    <string name="settings_reset_confirm_message">ई एह वरीयता सभ के ओकर डिफ़ॉल्ट मान पर रीसेट कर दी।</string>
     <string name="settings_reset">रीसेट करीं</string>
-    <string name="settings_display_title">देखाईं</string>
+    <string name="settings_display_title">प्रदर्शन</string>
     <string name="settings_display_reset">डिफ़ॉल्ट पर रीसेट करीं</string>
     <string name="settings_display_reset_confirm_title">डिस्प्ले रीसेट करीं?</string>
     <string name="settings_display_reset_confirm_message">ई डिस्प्ले सेटिंग के डिफ़ॉल्ट मान पर रीसेट कर दिही।</string>

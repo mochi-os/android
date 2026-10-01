@@ -30,11 +30,17 @@ data class DestinationRow(
 
 data class NotifCategory(
     val id: String = "",  // base58 uid (server categories.id is text); "0" = "No notifications"
+    /** The stored name. The two seeded categories store English literals. */
     val label: String = "",
+    /** The name to show: [label], or its translation while a seeded category is unrenamed. */
+    val display: String = "",
     val default: Int = 0,
     val created: Long = 0,
     val destinations: List<DestinationRow> = emptyList(),
-)
+) {
+    /** What the user reads; a server that predates `display` leaves the label. */
+    val shown: String get() = display.ifBlank { label }
+}
 
 data class DestinationAccount(
     val id: String = "",

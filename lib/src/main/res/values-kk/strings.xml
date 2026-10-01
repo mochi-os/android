@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Сағат белдеуі</string>
     <string name="settings_reset_to_defaults">Әдепкіге қайтару</string>
     <string name="settings_reset_confirm_title">Параметрлерді қайтару керек пе?</string>
-    <string name="settings_reset_confirm_message">Бұл барлық теңшелімдерді әдепкі мәндеріне қалпына келтіреді.</string>
+    <string name="settings_reset_confirm_message">Бұл осы теңшелімдерді әдепкі мәндеріне қалпына келтіреді.</string>
     <string name="settings_reset">Қайтару</string>
     <string name="settings_display_title">Көрсету</string>
     <string name="settings_display_reset">Әдепкіге қайтару</string>
@@ -217,7 +217,7 @@
     <string name="notifications_clear_all_title">Барлық хабарландырулар тазалансын ба?</string>
     <string name="notifications_clear_all_message">Бұл әрбір хабарландыруды жояды. Оларды қалпына келтіру мүмкін емес.</string>
     <string name="settings_value_auto">Автоматты</string>
-    <string name="settings_value_theme">Әдепкі тақырып</string>
+    <string name="settings_value_theme">Тақырып бойынша әдепкі</string>
     <string name="settings_radius">Бұрыш радиусы</string>
     <string name="settings_timestamp_display">Уақыт белгісін көрсету</string>
     <string name="settings_timestamp_relative">Салыстырмалы</string>

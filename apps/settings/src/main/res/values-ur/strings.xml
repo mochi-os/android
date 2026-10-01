@@ -104,13 +104,11 @@
     <string name="accounts_remove">ہٹائیں</string>
     <string name="accounts_remove_title">اکاؤنٹ ہٹائیں؟</string>
     <string name="system_documents_title">دستاویزات</string>
-    <string name="system_documents_description">آپ کے صارفین کو دکھائے جانے والے سرور قواعد، شرائط و ضوابط، اور پرائیویسی نوٹس</string>
     <string name="system_documents_tab_rules">سرور قواعد</string>
     <string name="system_documents_tab_terms">شرائط و ضوابط</string>
     <string name="system_documents_tab_privacy">پرائیویسی</string>
     <string name="system_documents_language">زبان</string>
     <string name="system_documents_no_language">اِس زبان کے لیے کوئی دستاویز دستیاب نہیں۔</string>
-    <string name="system_documents_customised">حسبِ ضرورت</string>
     <string name="system_documents_using_default">بنڈل شدہ ڈیفالٹ استعمال میں</string>
     <string name="system_documents_revert">ڈیفالٹ پر واپس لائیں</string>
     <string name="system_documents_save">محفوظ کریں</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">صارف حذف کریں</string>
     <string name="system_users_delete_title">صارف حذف کریں؟</string>
     <string name="system_users_manage_sessions">سیشنز کا انتظام کریں</string>
-    <string name="system_users_sessions_description">اس صارف کے فعال سیشنز دیکھیں اور منسوخ کریں۔</string>
     <string name="system_users_sessions_empty">اس صارف کے کوئی فعال سیشنز نہیں ہیں۔</string>
     <string name="system_users_revoke">منسوخ کریں</string>
     <string name="system_users_revoke_all">تمام سیشنز منسوخ کریں</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">اگلا</string>
     <string name="system_users_empty">کوئی صارفین نہیں ملے</string>
     <string name="system_users_empty_search">کوئی صارفین آپ کی تلاش سے میل نہیں کھاتے</string>
-    <string name="system_users_empty_search_hint">اپنے تلاش کے معیار کو ایڈجسٹ کرنے کی کوشش کریں</string>
     <string name="system_users_toast_created">صارف بنا دیا گیا</string>
     <string name="system_users_toast_updated">صارف اپ ڈیٹ ہو گیا</string>
     <string name="system_users_toast_deleted">صارف حذف کر دیا گیا</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">خدمات کی شرائط</string>
     <string name="account_passkeys_empty">کوئی پاس کیز رجسٹرڈ نہیں ہیں۔</string>
     <string name="account_passkey_register_title">پاس کی شامل کریں</string>
-    <string name="account_passkey_register_message">آپ کا آلہ تصدیق کرنے کو کہے گا۔ پاس کی اس آلے سے منسلک ہے اور مستقبل کے سائن انز کے لیے استعمال ہوگی۔</string>
     <string name="account_passkey_name_label">نام (اختیاری)</string>
     <string name="account_passkey_delete_message">\"%1$s\" اب آپ کو سائن ان نہیں کرے گی۔</string>
-    <string name="account_totp_description">تصدیقی ایپ سے 6 ہندسوں کے کوڈ سے سائن ان کریں۔</string>
     <string name="account_totp_enabled">تصدیق کنندہ فعال ہے۔</string>
     <string name="account_totp_setup_step1">اپنی تصدیقی ایپ میں یہ راز اسکین یا درج کریں۔</string>
     <string name="account_totp_setup_step2">آپ کی ایپ جو 6 ہندسوں کا کوڈ دکھاتی ہے درج کریں۔</string>
     <string name="account_totp_code">کوڈ</string>
     <string name="account_totp_disable_message">آپ تصدیق کنندہ کوڈ سے سائن ان نہیں کر سکیں گے۔</string>
     <string name="account_recovery_none">کوئی بازیابی کوڈز پیدا نہیں ہوئے۔</string>
-    <string name="account_recovery_count">%1$d غیر استعمال شدہ بازیابی کوڈز۔</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d بازیابی کوڈ باقی ہے۔</item>
+        <item quantity="other">%1$d بازیابی کوڈز باقی ہیں۔</item>
+    </plurals>
     <string name="account_recovery_generate">کوڈز پیدا کریں</string>
     <string name="account_recovery_regenerate">کوڈز دوبارہ پیدا کریں</string>
     <string name="account_recovery_regen_title">بازیابی کوڈز دوبارہ پیدا کریں؟</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">آخری رسائی: %1$s</string>
     <string name="system_users_revoke_all_title">تمام سیشنز منسوخ کریں؟</string>
     <string name="system_users_revoke_all_message">اس صارف کے تمام فعال سیشنز سائن آؤٹ ہو جائیں گے۔</string>
-    <string name="system_users_pagination_status">%3$d میں سے %1$d–%2$d صارفین دکھا رہا ہے</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">%3$d صارف میں سے %1$d–%2$d دکھائے جا رہے ہیں</item>
+        <item quantity="other">%3$d صارفین میں سے %1$d–%2$d دکھائے جا رہے ہیں</item>
+    </plurals>
     <string name="account_title">اکاؤنٹ</string>
     <string name="account_section_identity">شناخت</string>
     <string name="account_identity_identity">شناخت</string>
@@ -307,7 +307,7 @@
         <item quantity="other">%1$d منزلوں پر ٹیسٹ بھیجا گیا</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 سیشن منسوخ کیا</item>
+        <item quantity="one">%1$d سیشن منسوخ کیا</item>
         <item quantity="other">%1$d سیشنز منسوخ کیے</item>
     </plurals>
     <string name="login_title">لاگ ان</string>
@@ -347,10 +347,8 @@
     <string name="system_setting_hostname">دوسرے سرورز کو اعلان کردہ ہوسٹ نام</string>
     <string name="system_status_peer_id">پیئر ID</string>
     <string name="system_status_holepunch">ہول پنچ</string>
-    <string name="system_status_holepunch_value">%1$d کامیاب · %2$d ناکام</string>
     <string name="system_status_awaiting_routing">روٹنگ کے منتظر پیغامات</string>
     <string name="system_status_relay_service">ریلے سروس</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d ریزرویشنز · %3$d سرکٹس · %4$d مسترد</string>
     <string name="route_target_select">منتخب کریں</string>
     <string name="account_data_description">مکمل بیک اپ ڈاؤن لوڈ کریں جسے آپ اس یا کسی دوسرے Mochi سرور پر بحال کر سکتے ہیں۔</string>
     <string name="route_target_none">کوئی ہدف دستیاب نہیں</string>
@@ -375,7 +373,10 @@
     <string name="accounts_device_seen">آخری بار دیکھا گیا %1$s</string>
     <string name="notifprefs_device_app">%1$s · ایپ</string>
     <string name="notifprefs_device_push">%1$s · پش</string>
-    <string name="notifprefs_test_partial">ٹیسٹ %2$d میں سے %1$d منزلوں کو بھیجا گیا</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">ٹیسٹ %2$d منزل میں سے %1$d کو بھیجا گیا</item>
+        <item quantity="other">ٹیسٹ %2$d منزلوں میں سے %1$d کو بھیجا گیا</item>
+    </plurals>
     <string name="notifprefs_test_none">کوئی منزلیں کنفیگر نہیں ہیں</string>
     <string name="notifprefs_transport_fcm">Android پش</string>
     <string name="notifprefs_no_destinations">کوئی منزل نہیں</string>
@@ -394,4 +395,27 @@
     <string name="accounts_revoke_confirm">اس سے %1$s کی کیلنڈر رسائی منسوخ ہو جائے گی۔ %2$s کے ساتھ سائن-ان اس وقت تک رہے گا جب تک آپ لاگ ان صفحے پر اسے ان لنک نہ کریں۔</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">نامعلوم تھیم</string>
+    <string name="system_documents_modified">ترمیم شدہ</string>
+    <string name="system_documents_discard_title">تبدیلیاں رد کریں؟</string>
+    <string name="system_documents_discard">رد کریں</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d کامیاب</item>
+        <item quantity="other">%1$d کامیاب</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d ناکام</item>
+        <item quantity="other">%1$d ناکام</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d ریزرویشن</item>
+        <item quantity="other">%1$d / %2$d ریزرویشنز</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d سرکٹ</item>
+        <item quantity="other">%1$d سرکٹس</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d مسترد</item>
+        <item quantity="other">%1$d مسترد</item>
+    </plurals>
 </resources>

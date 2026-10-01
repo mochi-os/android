@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Cona demê</string>
     <string name="settings_reset_to_defaults">Ber bi standardan ve veguhêze</string>
     <string name="settings_reset_confirm_title">Tercihan veguhêze?</string>
-    <string name="settings_reset_confirm_message">Ev dê hemû tercîhan ji nû ve bo nirxên standard ên wan saz bike.</string>
+    <string name="settings_reset_confirm_message">Ev dê van tercîhan ji nû ve bo nirxên standard ên wan saz bike.</string>
     <string name="settings_reset">Bişkojka veguhastinê</string>
     <string name="settings_display_title">Xuyabûn</string>
     <string name="settings_display_reset">Ber bi standardan ve veguhêze</string>
@@ -217,7 +217,7 @@
     <string name="notifications_clear_all_title">Hemû agahdarî bên paqijkirin?</string>
     <string name="notifications_clear_all_message">Ev ê hemû agahdariyan jê bibe. Ew nikarin bên vegerandin.</string>
     <string name="settings_value_auto">Xweber</string>
-    <string name="settings_value_theme">Bineya rûkarê</string>
+    <string name="settings_value_theme">Standarda temayê</string>
     <string name="settings_radius">Tîrêja goşeyê</string>
     <string name="settings_timestamp_display">Nîşandana dema demjimêrê</string>
     <string name="settings_timestamp_relative">Têkildar</string>

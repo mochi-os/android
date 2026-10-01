@@ -104,13 +104,11 @@
     <string name="accounts_remove">Odstrániť</string>
     <string name="accounts_remove_title">Odstrániť účet?</string>
     <string name="system_documents_title">Dokumenty</string>
-    <string name="system_documents_description">Pravidlá servera, podmienky používania a oznámenie o ochrane súkromia zobrazené vašim používateľom</string>
     <string name="system_documents_tab_rules">Pravidlá servera</string>
     <string name="system_documents_tab_terms">Podmienky používania</string>
     <string name="system_documents_tab_privacy">Súkromie</string>
     <string name="system_documents_language">Jazyk</string>
     <string name="system_documents_no_language">Pre tento jazyk nie je k dispozícii žiadny dokument.</string>
-    <string name="system_documents_customised">Prispôsobené</string>
     <string name="system_documents_using_default">Používa sa zabudovaná predvolená</string>
     <string name="system_documents_revert">Vrátiť na predvolené</string>
     <string name="system_documents_save">Uložiť</string>
@@ -141,7 +139,7 @@
     <string name="system_setting_auth_totp">Prihlásenie pomocou TOTP autentifikačnej aplikácie</string>
     <string name="system_setting_auth_recovery">Prihlásenie pomocou obnovovacieho kódu</string>
     <string name="system_setting_auth_oauth">Prihlásenie pomocou OAuth 2.0</string>
-    <string name="system_setting_default_theme">Predvolená téma</string>
+    <string name="system_setting_default_theme">Predvolený motív</string>
     <string name="system_setting_domains_verification">Vyžadovať overenie domény</string>
     <string name="system_setting_email_from">Predvolená adresa odosielateľa pre systémové e-maily</string>
     <string name="system_setting_oauth_public_url">Verejná URL pre presmerovania OAuth</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Odstrániť používateľa</string>
     <string name="system_users_delete_title">Odstrániť používateľa?</string>
     <string name="system_users_manage_sessions">Spravovať relácie</string>
-    <string name="system_users_sessions_description">Zobraziť a zrušiť aktívne relácie pre tohto používateľa.</string>
     <string name="system_users_sessions_empty">Tento používateľ nemá žiadne aktívne relácie.</string>
     <string name="system_users_revoke">Odvolať</string>
     <string name="system_users_revoke_all">Odvolať všetky relácie</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Ďalej</string>
     <string name="system_users_empty">Nenašli sa žiadni používatelia</string>
     <string name="system_users_empty_search">Žiadni používatelia nezodpovedajú hľadaniu</string>
-    <string name="system_users_empty_search_hint">Skúste upraviť kritériá vyhľadávania</string>
     <string name="system_users_toast_created">Používateľ vytvorený</string>
     <string name="system_users_toast_updated">Používateľ aktualizovaný</string>
     <string name="system_users_toast_deleted">Používateľ odstránený</string>
@@ -211,17 +207,19 @@
     <string name="settings_home_terms">Podmienky služby</string>
     <string name="account_passkeys_empty">Žiadne registrované prístupové kľúče.</string>
     <string name="account_passkey_register_title">Pridať prístupový kľúč</string>
-    <string name="account_passkey_register_message">Vaše zariadenie vás vyzve na potvrdenie. Prístupový kľúč je viazaný na toto zariadenie a slúži pre budúce prihlásenia.</string>
     <string name="account_passkey_name_label">Názov (voliteľne)</string>
     <string name="account_passkey_delete_message">\"%1$s\" vás už nebude prihlasovať.</string>
-    <string name="account_totp_description">Prihláste sa 6-miestnym kódom z autentifikačnej aplikácie.</string>
     <string name="account_totp_enabled">Autentifikátor je povolený.</string>
     <string name="account_totp_setup_step1">Naskenujte alebo zadajte toto tajomstvo vo svojej autentifikačnej aplikácii.</string>
     <string name="account_totp_setup_step2">Zadajte 6-miestny kód, ktorý aplikácia zobrazuje.</string>
     <string name="account_totp_code">Kód</string>
     <string name="account_totp_disable_message">Už sa nebudete môcť prihlásiť kódom autentifikátora.</string>
     <string name="account_recovery_none">Neboli vygenerované žiadne obnovovacie kódy.</string>
-    <string name="account_recovery_count">%1$d nepoužitých obnovovacích kódov.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">Zostáva %1$d obnovovací kód.</item>
+        <item quantity="few">Zostávajú %1$d obnovovacie kódy.</item>
+        <item quantity="other">Zostáva %1$d obnovovacích kódov.</item>
+    </plurals>
     <string name="account_recovery_generate">Vygenerovať kódy</string>
     <string name="account_recovery_regenerate">Vygenerovať nové kódy</string>
     <string name="account_recovery_regen_title">Vygenerovať nové obnovovacie kódy?</string>
@@ -270,7 +268,11 @@
     <string name="system_users_session_last_accessed">Posledný prístup: %1$s</string>
     <string name="system_users_revoke_all_title">Zrušiť všetky relácie?</string>
     <string name="system_users_revoke_all_message">Všetky aktívne relácie tohto používateľa budú odhlásené.</string>
-    <string name="system_users_pagination_status">Zobrazené %1$d–%2$d z %3$d používateľov</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Zobrazené %1$d–%2$d z %3$d používateľa</item>
+        <item quantity="few">Zobrazené %1$d–%2$d z %3$d používateľov</item>
+        <item quantity="other">Zobrazené %1$d–%2$d z %3$d používateľov</item>
+    </plurals>
     <string name="account_title">Účet</string>
     <string name="account_section_identity">Identita</string>
     <string name="account_identity_identity">Identita</string>
@@ -309,9 +311,9 @@
         <item quantity="other">Test odoslaný na %1$d cieľa</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
+        <item quantity="one">Zrušená %1$d relácia</item>
         <item quantity="few">Zrušené %1$d relácie</item>
         <item quantity="many">Zrušených %1$d relácií</item>
-        <item quantity="one">Zrušená 1 relácia</item>
         <item quantity="other">Zrušených %1$d relácií</item>
     </plurals>
     <string name="login_title">Prihlásenie</string>
@@ -351,10 +353,8 @@
     <string name="system_setting_hostname">Názov hostiteľa oznamovaný ostatným serverom</string>
     <string name="system_status_peer_id">ID partnera</string>
     <string name="system_status_holepunch">Prerazenie</string>
-    <string name="system_status_holepunch_value">%1$d úspešných · %2$d neúspešných</string>
     <string name="system_status_awaiting_routing">Správy čakajúce na smerovanie</string>
     <string name="system_status_relay_service">Služba relé</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d rezervácie · %3$d okruhy · %4$d odmietnuté</string>
     <string name="route_target_select">Vybrať</string>
     <string name="account_data_description">Stiahnite si úplnú záložnú kópiu, ktorú môžete obnoviť na tomto alebo inom serveri Mochi.</string>
     <string name="route_target_none">Nie sú dostupné žiadne cieľe</string>
@@ -379,7 +379,11 @@
     <string name="accounts_device_seen">Naposledy videný %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplikácia</string>
     <string name="notifprefs_device_push">%1$s · push</string>
-    <string name="notifprefs_test_partial">Test odoslaný do %1$d z %2$d cieľov</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Test odoslaný na %1$d z %2$d cieľa</item>
+        <item quantity="few">Test odoslaný na %1$d z %2$d cieľov</item>
+        <item quantity="other">Test odoslaný na %1$d z %2$d cieľov</item>
+    </plurals>
     <string name="notifprefs_test_none">Nie sú nakonfigurované žiadne cieľové miesta</string>
     <string name="notifprefs_transport_fcm">Push oznámenia pre Android</string>
     <string name="notifprefs_no_destinations">Žiadne ciele</string>
@@ -398,4 +402,32 @@
     <string name="accounts_revoke_confirm">Týmto sa zruší prístup ku kalendáru pre %1$s. Prihlasovanie cez %2$s zostane, kým ho neodpojíte na stránke prihlásenia.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Neznámy motív</string>
+    <string name="system_documents_modified">Upravené</string>
+    <string name="system_documents_discard_title">Zahodiť zmeny?</string>
+    <string name="system_documents_discard">Zahodiť</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d úspešný</item>
+        <item quantity="few">%1$d úspešné</item>
+        <item quantity="other">%1$d úspešných</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d neúspešný</item>
+        <item quantity="few">%1$d neúspešné</item>
+        <item quantity="other">%1$d neúspešných</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d rezervácia</item>
+        <item quantity="few">%1$d / %2$d rezervácie</item>
+        <item quantity="other">%1$d / %2$d rezervácií</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d okruh</item>
+        <item quantity="few">%1$d okruhy</item>
+        <item quantity="other">%1$d okruhov</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d odmietnutá</item>
+        <item quantity="few">%1$d odmietnuté</item>
+        <item quantity="other">%1$d odmietnutých</item>
+    </plurals>
 </resources>

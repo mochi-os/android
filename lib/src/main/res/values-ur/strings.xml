@@ -103,7 +103,7 @@
     <string name="settings_time_zone">ٹائم زون</string>
     <string name="settings_reset_to_defaults">ڈیفالٹس پر ری سیٹ کریں</string>
     <string name="settings_reset_confirm_title">ترجیحات ری سیٹ کریں؟</string>
-    <string name="settings_reset_confirm_message">یہ تمام ترجیحات کو ان کی ڈیفالٹ قدروں پر ری سیٹ کر دے گا۔</string>
+    <string name="settings_reset_confirm_message">یہ ان ترجیحات کو ڈیفالٹ قدروں پر ری سیٹ کر دے گا۔</string>
     <string name="settings_reset">ری سیٹ کریں</string>
     <string name="settings_display_title">ڈسپلے</string>
     <string name="settings_display_reset">ڈیفالٹس پر ری سیٹ کریں</string>

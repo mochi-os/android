@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Strefa czasowa</string>
     <string name="settings_reset_to_defaults">Zresetuj do domyślnych</string>
     <string name="settings_reset_confirm_title">Zresetować preferencje?</string>
-    <string name="settings_reset_confirm_message">Spowoduje to zresetowanie wszystkich preferencji do ich wartości domyślnych.</string>
+    <string name="settings_reset_confirm_message">Spowoduje to przywrócenie domyślnych wartości tych preferencji.</string>
     <string name="settings_reset">Zresetuj</string>
     <string name="settings_display_title">Wyświetlanie</string>
     <string name="settings_display_reset">Zresetuj do domyślnych</string>

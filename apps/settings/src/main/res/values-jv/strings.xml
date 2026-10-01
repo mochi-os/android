@@ -104,13 +104,11 @@
     <string name="accounts_remove">Cabut</string>
     <string name="accounts_remove_title">Cabut akun?</string>
     <string name="system_documents_title">Dokumen</string>
-    <string name="system_documents_description">Aturan server, syarat lan ketentuan, lan kabar privasi sing ditampilake marang panganggomu</string>
     <string name="system_documents_tab_rules">Aturan server</string>
     <string name="system_documents_tab_terms">Syarat lan ketentuan</string>
     <string name="system_documents_tab_privacy">Privasi</string>
     <string name="system_documents_language">Basa</string>
     <string name="system_documents_no_language">Ora ana dokumen kasedhiya kanggo basa iki.</string>
-    <string name="system_documents_customised">Disesuaikan</string>
     <string name="system_documents_using_default">Nganggo bawaan</string>
     <string name="system_documents_revert">Bali menyang default</string>
     <string name="system_documents_save">Simpen</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Busak pangguna</string>
     <string name="system_users_delete_title">Busak pangguna?</string>
     <string name="system_users_manage_sessions">Atur sesi</string>
-    <string name="system_users_sessions_description">Deleng lan batalaké sesi aktif kanggo panganggo iki.</string>
     <string name="system_users_sessions_empty">Panganggo iki ora duwé sesi aktif.</string>
     <string name="system_users_revoke">Cabut</string>
     <string name="system_users_revoke_all">Cabut kabèh sesi</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Sabanjure</string>
     <string name="system_users_empty">Ora ana pangguna ditemokaké</string>
     <string name="system_users_empty_search">Ora ana pangguna cocog karo panggolèkanmu</string>
-    <string name="system_users_empty_search_hint">Coba nyetel kriteria penelusuranmu</string>
     <string name="system_users_toast_created">Panganggo digawe</string>
     <string name="system_users_toast_updated">Panganggo dianyari</string>
     <string name="system_users_toast_deleted">Panganggo dibusak</string>
@@ -211,17 +207,17 @@
     <string name="settings_home_terms">Sarat layanan</string>
     <string name="account_passkeys_empty">Ora ana passkey sing kadaftar.</string>
     <string name="account_passkey_register_title">Tambah passkey</string>
-    <string name="account_passkey_register_message">Piranti sampeyan bakal njaluk konfirmasi. Passkey kaikat ing piranti iki lan digunakake kanggo mlebu mbesuk.</string>
     <string name="account_passkey_name_label">Jeneng (opsional)</string>
     <string name="account_passkey_delete_message">\"%1$s\" ora bakal mlebokké sampeyan menèh.</string>
-    <string name="account_totp_description">Mlebu nganggo kode 6 digit saka aplikasi otentikasi.</string>
     <string name="account_totp_enabled">Otentikator diaktifake.</string>
     <string name="account_totp_setup_step1">Pindai utawa lebokké rahasia iki ing aplikasi otentikasi.</string>
     <string name="account_totp_setup_step2">Lebokké kode 6 digit sing dituduhke aplikasi.</string>
     <string name="account_totp_code">Kode</string>
     <string name="account_totp_disable_message">Sampeyan ora bisa mlebu nganggo kode otentikator menèh.</string>
     <string name="account_recovery_none">Ora ana kode pemulihan sing digawe.</string>
-    <string name="account_recovery_count">%1$d kode pemulihan sing durung dianggo.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="other">Isih ana %1$d kode pemulihan.</item>
+    </plurals>
     <string name="account_recovery_generate">Gawe kode</string>
     <string name="account_recovery_regenerate">Gawe ulang kode</string>
     <string name="account_recovery_regen_title">Gawe ulang kode pemulihan?</string>
@@ -270,7 +266,9 @@
     <string name="system_users_session_last_accessed">Akses pungkasan: %1$s</string>
     <string name="system_users_revoke_all_title">Cabut kabeh sesi?</string>
     <string name="system_users_revoke_all_message">Kabeh sesi aktif pangguna iki bakal metu.</string>
-    <string name="system_users_pagination_status">Nuduhake %1$d–%2$d saka %3$d pangguna</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="other">Nuduhake %1$d–%2$d saka %3$d pangguna</item>
+    </plurals>
     <string name="account_title">Akun</string>
     <string name="account_section_identity">Identitas</string>
     <string name="account_identity_identity">Identitas</string>
@@ -345,10 +343,8 @@
     <string name="system_setting_hostname">Jeneng host sing diumumake menyang server liyane</string>
     <string name="system_status_peer_id">ID peer</string>
     <string name="system_status_holepunch">Bolong</string>
-    <string name="system_status_holepunch_value">%1$d kasil · %2$d gagal</string>
     <string name="system_status_awaiting_routing">Pesen ngenteni rute</string>
     <string name="system_status_relay_service">Layanan relay</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d reservasi · %3$d sirkuit · %4$d ditolak</string>
     <string name="route_target_select">Pilih</string>
     <string name="account_data_description">Undhuh serepan lengkap sing bisa sampeyan pulihake ing server Mochi iki utawa liyane.</string>
     <string name="route_target_none">Ora ana target sing kasedhiya</string>
@@ -373,7 +369,9 @@
     <string name="accounts_device_seen">Pungkasan katon %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplikasi</string>
     <string name="notifprefs_device_push">%1$s · push</string>
-    <string name="notifprefs_test_partial">Tes dikirim menyang %1$d saka %2$d tujuan</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="other">Tes dikirim menyang %1$d saka %2$d tujuan</item>
+    </plurals>
     <string name="notifprefs_test_none">Ora ana tujuan disetel</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
     <string name="notifprefs_no_destinations">Ora ana tujuan</string>
@@ -392,4 +390,22 @@
     <string name="accounts_revoke_confirm">Iki bakal mbatalaké akses kalender %1$s. Mlebu nganggo %2$s tetep nganti sampeyan ngeculaké tautané ing kaca Mlebu.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Tema ora dikenal</string>
+    <string name="system_documents_modified">Diowahi</string>
+    <string name="system_documents_discard_title">Buwang owahan?</string>
+    <string name="system_documents_discard">Buwang</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="other">%1$d kasil</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="other">%1$d gagal</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="other">%1$d / %2$d reservasi</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="other">%1$d sirkuit</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="other">%1$d ditolak</item>
+    </plurals>
 </resources>

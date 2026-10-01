@@ -104,13 +104,11 @@
     <string name="accounts_remove">Премахни</string>
     <string name="accounts_remove_title">Премахни акаунта?</string>
     <string name="system_documents_title">Документи</string>
-    <string name="system_documents_description">Правила на сървъра, общи условия и декларация за поверителност, показани на вашите потребители</string>
     <string name="system_documents_tab_rules">Правила на сървъра</string>
     <string name="system_documents_tab_terms">Общи условия</string>
     <string name="system_documents_tab_privacy">Поверителност</string>
     <string name="system_documents_language">Език</string>
     <string name="system_documents_no_language">Няма документ за този език.</string>
-    <string name="system_documents_customised">Персонализирано</string>
     <string name="system_documents_using_default">Използване на вградения по подразбиране</string>
     <string name="system_documents_revert">Върни към подразбиране</string>
     <string name="system_documents_save">Запази</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Изтрий потребителя</string>
     <string name="system_users_delete_title">Изтриване на потребителя?</string>
     <string name="system_users_manage_sessions">Управление на сесии</string>
-    <string name="system_users_sessions_description">Преглед и отнемане на активни сесии за този потребител.</string>
     <string name="system_users_sessions_empty">Този потребител няма активни сесии.</string>
     <string name="system_users_revoke">Оттегли</string>
     <string name="system_users_revoke_all">Оттегли всички сесии</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Напред</string>
     <string name="system_users_empty">Не са намерени потребители</string>
     <string name="system_users_empty_search">Няма потребители, отговарящи на търсенето</string>
-    <string name="system_users_empty_search_hint">Опитайте да коригирате критериите си за търсене</string>
     <string name="system_users_toast_created">Потребителят е създаден</string>
     <string name="system_users_toast_updated">Потребителят е обновен</string>
     <string name="system_users_toast_deleted">Потребителят е изтрит</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">Условия за услугата</string>
     <string name="account_passkeys_empty">Няма регистрирани ключове за достъп.</string>
     <string name="account_passkey_register_title">Добавяне на ключ за достъп</string>
-    <string name="account_passkey_register_message">Вашето устройство ще ви помоли за потвърждение. Ключът за достъп е свързан с това устройство и се използва за бъдещи входове.</string>
     <string name="account_passkey_name_label">Име (по избор)</string>
     <string name="account_passkey_delete_message">„%1$s\" вече няма да ви впише.</string>
-    <string name="account_totp_description">Влезте с 6-цифрен код от приложение за удостоверяване.</string>
     <string name="account_totp_enabled">Удостоверителят е активиран.</string>
     <string name="account_totp_setup_step1">Сканирайте или въведете тази тайна в приложението си за удостоверяване.</string>
     <string name="account_totp_setup_step2">Въведете 6-цифрения код, показан от приложението.</string>
     <string name="account_totp_code">Код</string>
     <string name="account_totp_disable_message">Вече няма да можете да влизате с код от удостоверител.</string>
     <string name="account_recovery_none">Не са генерирани кодове за възстановяване.</string>
-    <string name="account_recovery_count">%1$d неизползвани кода за възстановяване.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">Остава %1$d код за възстановяване.</item>
+        <item quantity="other">Остават %1$d кода за възстановяване.</item>
+    </plurals>
     <string name="account_recovery_generate">Генериране на кодове</string>
     <string name="account_recovery_regenerate">Регенериране на кодове</string>
     <string name="account_recovery_regen_title">Регенериране на кодовете за възстановяване?</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">Последен достъп: %1$s</string>
     <string name="system_users_revoke_all_title">Отмяна на всички сесии?</string>
     <string name="system_users_revoke_all_message">Всички активни сесии на този потребител ще бъдат излезли.</string>
-    <string name="system_users_pagination_status">Показване на %1$d–%2$d от %3$d потребители</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Показване на %1$d–%2$d от %3$d потребител</item>
+        <item quantity="other">Показване на %1$d–%2$d от %3$d потребители</item>
+    </plurals>
     <string name="account_title">Акаунт</string>
     <string name="account_section_identity">Самоличност</string>
     <string name="account_identity_identity">Самоличност</string>
@@ -307,7 +307,7 @@
         <item quantity="other">Тестът е изпратен до %1$d местоназначения</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">Отменена 1 сесия</item>
+        <item quantity="one">Отменена %1$d сесия</item>
         <item quantity="other">Отменени %1$d сесии</item>
     </plurals>
     <string name="login_title">Вход</string>
@@ -347,10 +347,8 @@
     <string name="system_setting_hostname">Име на хост, обявено на други сървъри</string>
     <string name="system_status_peer_id">ID на пиъра</string>
     <string name="system_status_holepunch">Пробив на NAT</string>
-    <string name="system_status_holepunch_value">%1$d успешни · %2$d неуспешни</string>
     <string name="system_status_awaiting_routing">Съобщения, очакващи маршрутизация</string>
     <string name="system_status_relay_service">Релейна услуга</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d резервации · %3$d вериги · %4$d отказани</string>
     <string name="route_target_select">Избери</string>
     <string name="account_data_description">Изтеглете пълно резервно копие, което можете да възстановите на този или на друг сървър Mochi.</string>
     <string name="route_target_none">Няма налични цели</string>
@@ -375,7 +373,10 @@
     <string name="accounts_device_seen">Последно видян %1$s</string>
     <string name="notifprefs_device_app">%1$s · приложение</string>
     <string name="notifprefs_device_push">%1$s · пуш</string>
-    <string name="notifprefs_test_partial">Тестът е изпратен до %1$d от %2$d местоназначения</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Тестът е изпратен до %1$d от %2$d местоназначение</item>
+        <item quantity="other">Тестът е изпратен до %1$d от %2$d местоназначения</item>
+    </plurals>
     <string name="notifprefs_test_none">Няма конфигурирани дестинации</string>
     <string name="notifprefs_transport_fcm">Пуш известия за Android</string>
     <string name="notifprefs_no_destinations">Няма дестинации</string>
@@ -394,4 +395,27 @@
     <string name="accounts_revoke_confirm">Това ще отнеме достъпа до календара на %1$s. Влизането с %2$s остава, докато не го прекратите от страницата за вход.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Непозната тема</string>
+    <string name="system_documents_modified">Променен</string>
+    <string name="system_documents_discard_title">Да се отхвърлят ли промените?</string>
+    <string name="system_documents_discard">Отхвърли</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d успешен</item>
+        <item quantity="other">%1$d успешни</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d неуспешен</item>
+        <item quantity="other">%1$d неуспешни</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d резервация</item>
+        <item quantity="other">%1$d / %2$d резервации</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d верига</item>
+        <item quantity="other">%1$d вериги</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d отказана</item>
+        <item quantity="other">%1$d отказани</item>
+    </plurals>
 </resources>

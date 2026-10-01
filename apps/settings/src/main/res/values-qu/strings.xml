@@ -104,13 +104,11 @@
     <string name="accounts_remove">Qichuy</string>
     <string name="accounts_remove_title">Cuentata qichuy?</string>
     <string name="system_documents_title">Documentos</string>
-    <string name="system_documents_description">Apaykachaqkunaman rikuchisqa server kamachiykuna, condicionkuna, privacidad willakuy</string>
     <string name="system_documents_tab_rules">Server kamachiykuna</string>
     <string name="system_documents_tab_terms">Condicionkuna</string>
     <string name="system_documents_tab_privacy">Pakaynin</string>
     <string name="system_documents_language">Simi</string>
     <string name="system_documents_no_language">Kay simipaq mana documento atikunchu.</string>
-    <string name="system_documents_customised">Sapanchasqa</string>
     <string name="system_documents_using_default">Bundled defaultta apaykachachkan</string>
     <string name="system_documents_revert">Por defectoman kutichipuy</string>
     <string name="system_documents_save">Waqaychay</string>
@@ -141,7 +139,7 @@
     <string name="system_setting_auth_totp">TOTP authenticator app-wan yaykuy</string>
     <string name="system_setting_auth_recovery">Hampikuy código-wan yaykuy</string>
     <string name="system_setting_auth_oauth">OAuth 2.0-wan yaykuy</string>
-    <string name="system_setting_default_theme">Default tema</string>
+    <string name="system_setting_default_theme">Tema predeterminado</string>
     <string name="system_setting_domains_verification">Dominio verificacionta munay</string>
     <string name="system_setting_email_from">Sistema email-paq default cheqaq</string>
     <string name="system_setting_oauth_public_url">OAuth redirigecionkunapaq público URL</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Runa wischuy</string>
     <string name="system_users_delete_title">Runa wischuy?</string>
     <string name="system_users_manage_sessions">Sesionkunata kamachiy</string>
-    <string name="system_users_sessions_description">Kay apaykachaqpaq atichasqa sessionkunata qhaway hinaspa qichuy.</string>
     <string name="system_users_sessions_empty">Kay apaykachaqpaq mana atichasqa sessions kanchu.</string>
     <string name="system_users_revoke">Qichuy</string>
     <string name="system_users_revoke_all">Llapan sesionkunata qichuy</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Qatiqnin</string>
     <string name="system_users_empty">Mana usuariokuna tarisqachu</string>
     <string name="system_users_empty_search">Mana usuariokuna maskasqaykiwan tupanchu</string>
-    <string name="system_users_empty_search_hint">Maskay criterioykita allichayta ruway</string>
     <string name="system_users_toast_created">Apaykachaq ruwasqa</string>
     <string name="system_users_toast_updated">Apaykachaq musuqchasqa</string>
     <string name="system_users_toast_deleted">Apaykachaq qulluchisqa</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">Yanapay rimaykuna</string>
     <string name="account_passkeys_empty">Mana ima passkey qillqasqachu kachkan.</string>
     <string name="account_passkey_register_title">Passkey yapay</string>
-    <string name="account_passkey_register_message">Antaykiqa nisunki kaqlla niyta. Passkeyqa kay antawan watasqa, qhipa yaykuykunapaq apaykachasqa.</string>
     <string name="account_passkey_name_label">Suti (akllay)</string>
     <string name="account_passkey_delete_message">\"%1$s\" mana hukmanchu yaykuchisunkichu.</string>
-    <string name="account_totp_description">6 yupaykunayuq codigowan yaykuy huk app autenticadorpi.</string>
     <string name="account_totp_enabled">Autenticador rikch\'arichkasqa.</string>
     <string name="account_totp_setup_step1">Kay sapasq awqakta scanea otaq qillqay app autenticadorpi.</string>
     <string name="account_totp_setup_step2">App agarsiisaq 6 yupaykunayuq codigokta qillqay.</string>
     <string name="account_totp_code">Codigo</string>
     <string name="account_totp_disable_message">Manaña codigowan autenticadorta yaykuyta atinkichu.</string>
     <string name="account_recovery_none">Mana ima recuperacion codigon ruwasqachu.</string>
-    <string name="account_recovery_count">%1$d manaraq apaykachasqa codigo recuperacion.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d recuperacion codigo puchuq.</item>
+        <item quantity="other">%1$d recuperacion codigo puchuq.</item>
+    </plurals>
     <string name="account_recovery_generate">Codigokunata ruwakuy</string>
     <string name="account_recovery_regenerate">Codigokunata huk kutillata ruwakuy</string>
     <string name="account_recovery_regen_title">Codigo recuperacion huk kutillata ruwakuy?</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">Tukukuy yaykuy: %1$s</string>
     <string name="system_users_revoke_all_title">Llapan sessionkunata urquy?</string>
     <string name="system_users_revoke_all_message">Kay apaykachaqpa llapan llamk\'aq sessionkunaqa lluqsiynqaku.</string>
-    <string name="system_users_pagination_status">%3$d apaykachaqkunamanta %1$d–%2$d qhawachichkan</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">%3$d apaykachaqmanta %1$d–%2$d qhawachichkan</item>
+        <item quantity="other">%3$d apaykachaqkunamanta %1$d–%2$d qhawachichkan</item>
+    </plurals>
     <string name="account_title">Cuenta</string>
     <string name="account_section_identity">Kikinchakuy</string>
     <string name="account_identity_identity">Kikinchakuy</string>
@@ -346,10 +346,8 @@
     <string name="system_setting_hostname">Huk servidorkunaman willasqa hostname</string>
     <string name="system_status_peer_id">Mast\'i ID</string>
     <string name="system_status_holepunch">Perforación</string>
-    <string name="system_status_holepunch_value">%1$d atipasqa · %2$d mana atipasqa</string>
     <string name="system_status_awaiting_routing">Ñanta suyaq willaykuna</string>
     <string name="system_status_relay_service">Relay servicio</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d waqaychay · %3$d circuitos · %4$d mana chaskisqa</string>
     <string name="route_target_select">Akllay</string>
     <string name="account_data_description">Hukllawasqa qhipa yachayta uraykachiy, kay utaq huk Mochi servidorpi kutichiyta atinaykipaq.</string>
     <string name="route_target_none">Manam ima chayana kanchu</string>
@@ -374,7 +372,10 @@
     <string name="accounts_device_seen">Qhipa kaq rikusqa %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplicación</string>
     <string name="notifprefs_device_push">%1$s · push willakuy</string>
-    <string name="notifprefs_test_partial">Prueba apachisqa: %1$d/%2$d</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Prueba %2$d chayanamanta %1$d-man apachisqa</item>
+        <item quantity="other">Prueba %2$d chayanakunamanta %1$d-man apachisqa</item>
+    </plurals>
     <string name="notifprefs_test_none">Mana destinokuna churasqa</string>
     <string name="notifprefs_transport_fcm">Android push willakuy</string>
     <string name="notifprefs_no_destinations">Mana destinokuna</string>
@@ -393,4 +394,27 @@
     <string name="accounts_revoke_confirm">Kayqa %1$s kalendaryuman yaykuyninta qichunqa. %2$s nisqawan yaykuyqa Yaykuy p\'anqapi mana t\'inkita paskaspaykiqa qhipakunqa.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Mana riqsisqa tema</string>
+    <string name="system_documents_modified">Tikrasqa</string>
+    <string name="system_documents_discard_title">¿Tikraykunata wikch\'unkichu?</string>
+    <string name="system_documents_discard">Wikch\'uy</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d atipasqa</item>
+        <item quantity="other">%1$d atipasqa</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d mana atipasqa</item>
+        <item quantity="other">%1$d mana atipasqa</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d waqaychay</item>
+        <item quantity="other">%1$d / %2$d waqaychay</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d circuito</item>
+        <item quantity="other">%1$d circuito</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d mana chaskisqa</item>
+        <item quantity="other">%1$d mana chaskisqa</item>
+    </plurals>
 </resources>

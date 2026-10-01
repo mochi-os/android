@@ -5,7 +5,7 @@
     <string name="settings_home_logout">Çıx</string>
     <string name="settings_home_account">Hesab</string>
     <string name="settings_home_preferences">Üstünlüklər</string>
-    <string name="settings_home_display">Göstər</string>
+    <string name="settings_home_display">Ekran</string>
     <string name="settings_home_notification_prefs">Bildiriş üstünlükləri</string>
     <string name="settings_home_accounts">Qoşulmuş hesablar</string>
     <string name="settings_home_interests">Maraqlar</string>
@@ -104,13 +104,11 @@
     <string name="accounts_remove">Sil</string>
     <string name="accounts_remove_title">Hesabı silək?</string>
     <string name="system_documents_title">Sənədlər</string>
-    <string name="system_documents_description">İstifadəçilərinizə göstərilən server qaydaları, şərtlər və məxfilik bildirişi</string>
     <string name="system_documents_tab_rules">Server qaydaları</string>
     <string name="system_documents_tab_terms">Şərtlər və qaydalar</string>
     <string name="system_documents_tab_privacy">Məxfilik</string>
     <string name="system_documents_language">Dil</string>
     <string name="system_documents_no_language">Bu dil üçün sənəd mövcud deyil.</string>
-    <string name="system_documents_customised">Xüsusiləşdirilib</string>
     <string name="system_documents_using_default">Yoxlama müvəqqəti olaraq oflayndır. Yenə də təqdim edə bilərsiniz.</string>
     <string name="system_documents_revert">Standarta geri qaytar</string>
     <string name="system_documents_save">Saxla</string>
@@ -141,7 +139,7 @@
     <string name="system_setting_auth_totp">TOTP authenticator tətbiqi istifadə edərək daxil ol</string>
     <string name="system_setting_auth_recovery">Bərpa kodu istifadə edərək daxil ol</string>
     <string name="system_setting_auth_oauth">OAuth 2.0 istifadə edərək daxil ol</string>
-    <string name="system_setting_default_theme">Default tema</string>
+    <string name="system_setting_default_theme">Standart tema</string>
     <string name="system_setting_domains_verification">Domen təsdiqini tələb et</string>
     <string name="system_setting_email_from">Sistem e-poçtları üçün default göndərici ünvanı</string>
     <string name="system_setting_oauth_public_url">OAuth yönləndirmələri üçün açıq URL</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">İstifadəçini sil</string>
     <string name="system_users_delete_title">İstifadəçi silinsin?</string>
     <string name="system_users_manage_sessions">Sessiyaları idarə et</string>
-    <string name="system_users_sessions_description">Bu istifadəçinin aktiv sessiyalarına baxın və onları ləğv edin.</string>
     <string name="system_users_sessions_empty">Bu səhifənin yolu olacaq. Kiçik hərflər, rəqəmlər və tirelər istifadə edin.</string>
     <string name="system_users_revoke">Geri çağır</string>
     <string name="system_users_revoke_all">Bütün sessiyaları geri çağır</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Növbəti</string>
     <string name="system_users_empty">İstifadəçi tapılmadı</string>
     <string name="system_users_empty_search">Axtarışınıza uyğun istifadəçi yoxdur</string>
-    <string name="system_users_empty_search_hint">Yenidən cəhd et</string>
     <string name="system_users_toast_created">İstifadəçi yaradıldı</string>
     <string name="system_users_toast_updated">İstifadəçi yeniləndi</string>
     <string name="system_users_toast_deleted">İstifadəçi silindi</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">Xidmət şərtləri</string>
     <string name="account_passkeys_empty">Qeydiyyatdan keçmiş giriş açarları yoxdur.</string>
     <string name="account_passkey_register_title">Giriş açarı əlavə et</string>
-    <string name="account_passkey_register_message">Cihazınız təsdiq etməyi xahiş edəcək. Giriş açarı bu cihaza bağlıdır və gələcək girişlər üçün istifadə olunur.</string>
     <string name="account_passkey_name_label">Ad (istəyə bağlı)</string>
     <string name="account_passkey_delete_message">\"%1$s\" artıq sizi daxil etməyəcək.</string>
-    <string name="account_totp_description">Autentifikasiya tətbiqindən 6 rəqəmli kodla daxil olun.</string>
     <string name="account_totp_enabled">Autentifikator aktivdir.</string>
     <string name="account_totp_setup_step1">Bu sirri autentifikasiya tətbiqinizdə skan edin və ya daxil edin.</string>
     <string name="account_totp_setup_step2">Tətbiqinizin göstərdiyi 6 rəqəmli kodu daxil edin.</string>
     <string name="account_totp_code">Kod</string>
     <string name="account_totp_disable_message">Artıq autentifikator kodu ilə daxil ola bilməyəcəksiniz.</string>
     <string name="account_recovery_none">Bərpa kodları yaradılmayıb.</string>
-    <string name="account_recovery_count">%1$d istifadə olunmamış bərpa kodu.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d bərpa kodu qalıb.</item>
+        <item quantity="other">%1$d bərpa kodu qalıb.</item>
+    </plurals>
     <string name="account_recovery_generate">Kod yarat</string>
     <string name="account_recovery_regenerate">Kodu yenidən yarat</string>
     <string name="account_recovery_regen_title">Bərpa kodlarını yenidən yaradılsın?</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">Son giriş: %1$s</string>
     <string name="system_users_revoke_all_title">Bütün sessiyalar ləğv olunsun?</string>
     <string name="system_users_revoke_all_message">Bu istifadəçinin bütün aktiv sessiyalarından çıxış ediləcək.</string>
-    <string name="system_users_pagination_status">%3$d istifadəçidən %1$d–%2$d göstərilir</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">%3$d istifadəçidən %1$d–%2$d göstərilir</item>
+        <item quantity="other">%3$d istifadəçidən %1$d–%2$d göstərilir</item>
+    </plurals>
     <string name="account_title">Hesab</string>
     <string name="account_section_identity">Şəxsiyyət</string>
     <string name="account_identity_identity">Şəxsiyyət</string>
@@ -307,7 +307,7 @@
         <item quantity="other">Test %1$d ünvana göndərildi</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 sessiya ləğv edildi</item>
+        <item quantity="one">%1$d sessiya ləğv edildi</item>
         <item quantity="other">%1$d sessiya ləğv edildi</item>
     </plurals>
     <string name="login_title">Giriş</string>
@@ -347,10 +347,8 @@
     <string name="system_setting_hostname">Digər serverlərə bildirilən host adı</string>
     <string name="system_status_peer_id">Tay ID-si</string>
     <string name="system_status_holepunch">Deşik açma</string>
-    <string name="system_status_holepunch_value">%1$d uğurlu · %2$d uğursuz</string>
     <string name="system_status_awaiting_routing">Marşrutlaşma gözləyən mesajlar</string>
     <string name="system_status_relay_service">Relay xidməti</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d rezervasiya · %3$d dövrə · %4$d rədd edilən</string>
     <string name="route_target_select">Seç</string>
     <string name="account_data_description">Bu və ya başqa Mochi serverində bərpa edə biləcəyiniz tam ehtiyat nüsxəsini yükləyin.</string>
     <string name="route_target_none">Heç bir hədəf yoxdur</string>
@@ -375,7 +373,10 @@
     <string name="accounts_device_seen">Son görülmə %1$s</string>
     <string name="notifprefs_device_app">%1$s · tətbiq</string>
     <string name="notifprefs_device_push">%1$s · push bildirişi</string>
-    <string name="notifprefs_test_partial">Test %2$d ünvandan %1$d-inə göndərildi</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Test %2$d ünvandan %1$d ünvana göndərildi</item>
+        <item quantity="other">Test %2$d ünvandan %1$d ünvana göndərildi</item>
+    </plurals>
     <string name="notifprefs_test_none">Konfiqurasiya edilmiş təyinat yoxdur</string>
     <string name="notifprefs_transport_fcm">Android push bildirişi</string>
     <string name="notifprefs_no_destinations">Təyinat yoxdur</string>
@@ -393,5 +394,28 @@
     <string name="accounts_provider_caldav">Təqvim serveri</string>
     <string name="accounts_revoke_confirm">Bu, %1$s hesabının təqvimə girişini ləğv edəcək. %2$s ilə giriş, Giriş səhifəsində əlaqəni kəsənə qədər qalır.</string>
     <string name="accounts_capability_mcp">MCP</string>
-    <string name="system_settings_theme_unknown">Naməlum mövzu</string>
+    <string name="system_settings_theme_unknown">Naməlum tema</string>
+    <string name="system_documents_modified">Dəyişdirilib</string>
+    <string name="system_documents_discard_title">Dəyişikliklərdən imtina edilsin?</string>
+    <string name="system_documents_discard">İmtina et</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d uğurlu</item>
+        <item quantity="other">%1$d uğurlu</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d uğursuz</item>
+        <item quantity="other">%1$d uğursuz</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d rezervasiya</item>
+        <item quantity="other">%1$d / %2$d rezervasiya</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d dövrə</item>
+        <item quantity="other">%1$d dövrə</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d rədd edildi</item>
+        <item quantity="other">%1$d rədd edildi</item>
+    </plurals>
 </resources>

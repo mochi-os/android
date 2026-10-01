@@ -103,7 +103,7 @@
     <string name="settings_time_zone">टाइम जोन</string>
     <string name="settings_reset_to_defaults">पूर्वनिर्धारितहरूमा रिसेट गर्नुहोस्</string>
     <string name="settings_reset_confirm_title">प्राथमिकताहरू रिसेट गर्ने?</string>
-    <string name="settings_reset_confirm_message">यसले सबै प्राथमिकताहरूलाई तिनीहरूको पूर्वनिर्धारित मानहरूमा रिसेट गर्नेछ।</string>
+    <string name="settings_reset_confirm_message">यसले यी प्राथमिकताहरूलाई तिनीहरूको पूर्वनिर्धारित मानहरूमा रिसेट गर्नेछ।</string>
     <string name="settings_reset">रिसेट गर्नुहोस्</string>
     <string name="settings_display_title">प्रदर्शन</string>
     <string name="settings_display_reset">पूर्वनिर्धारितहरूमा रिसेट गर्नुहोस्</string>

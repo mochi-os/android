@@ -5,7 +5,7 @@
     <string name="settings_home_logout">Log ud</string>
     <string name="settings_home_account">Konto</string>
     <string name="settings_home_preferences">Præferencer</string>
-    <string name="settings_home_display">Vis</string>
+    <string name="settings_home_display">Visning</string>
     <string name="settings_home_notification_prefs">Notifikationsindstillinger</string>
     <string name="settings_home_accounts">Forbundne konti</string>
     <string name="settings_home_interests">Interesser</string>
@@ -104,13 +104,11 @@
     <string name="accounts_remove">Fjern</string>
     <string name="accounts_remove_title">Fjern konto?</string>
     <string name="system_documents_title">Dokumenter</string>
-    <string name="system_documents_description">Serverregler, vilkår og betingelser samt privatlivsmeddelelse, der vises til dine brugere</string>
     <string name="system_documents_tab_rules">Serverregler</string>
     <string name="system_documents_tab_terms">Vilkår og betingelser</string>
     <string name="system_documents_tab_privacy">Privatliv</string>
     <string name="system_documents_language">Sprog</string>
     <string name="system_documents_no_language">Intet dokument tilgængeligt for dette sprog.</string>
-    <string name="system_documents_customised">Tilpasset</string>
     <string name="system_documents_using_default">Bruger indbygget standard</string>
     <string name="system_documents_revert">Vend tilbage til standard</string>
     <string name="system_documents_save">Gem</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Slet bruger</string>
     <string name="system_users_delete_title">Slet bruger?</string>
     <string name="system_users_manage_sessions">Administrer sessioner</string>
-    <string name="system_users_sessions_description">Vis og tilbagekald aktive sessioner for denne bruger.</string>
     <string name="system_users_sessions_empty">Denne bruger har ingen aktive sessioner.</string>
     <string name="system_users_revoke">Tilbagekald</string>
     <string name="system_users_revoke_all">Tilbagekald alle sessioner</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Næste</string>
     <string name="system_users_empty">Ingen brugere fundet</string>
     <string name="system_users_empty_search">Ingen brugere matcher din søgning</string>
-    <string name="system_users_empty_search_hint">Prøv at justere dine søgekriterier</string>
     <string name="system_users_toast_created">Bruger oprettet</string>
     <string name="system_users_toast_updated">Bruger opdateret</string>
     <string name="system_users_toast_deleted">Bruger slettet</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">Servicevilkår</string>
     <string name="account_passkeys_empty">Ingen adgangsnøgler registreret.</string>
     <string name="account_passkey_register_title">Tilføj adgangsnøgle</string>
-    <string name="account_passkey_register_message">Din enhed beder dig om at bekræfte. Adgangsnøglen er bundet til denne enhed og bruges til fremtidige logins.</string>
     <string name="account_passkey_name_label">Navn (valgfri)</string>
     <string name="account_passkey_delete_message">\"%1$s\" vil ikke længere logge dig ind.</string>
-    <string name="account_totp_description">Log ind med en 6-cifret kode fra en autentificeringsapp.</string>
     <string name="account_totp_enabled">Autentificering er aktiveret.</string>
     <string name="account_totp_setup_step1">Scan eller indtast denne hemmelighed i din autentificeringsapp.</string>
     <string name="account_totp_setup_step2">Indtast den 6-cifrede kode, som din app viser.</string>
     <string name="account_totp_code">Kode</string>
     <string name="account_totp_disable_message">Du kan ikke længere logge ind med en autentificeringskode.</string>
     <string name="account_recovery_none">Ingen gendannelseskoder genereret.</string>
-    <string name="account_recovery_count">%1$d ubrugte gendannelseskoder.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d resterende gendannelseskode.</item>
+        <item quantity="other">%1$d resterende gendannelseskoder.</item>
+    </plurals>
     <string name="account_recovery_generate">Generér koder</string>
     <string name="account_recovery_regenerate">Generér koder igen</string>
     <string name="account_recovery_regen_title">Generér gendannelseskoder igen?</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">Sidste adgang: %1$s</string>
     <string name="system_users_revoke_all_title">Tilbagekald alle sessioner?</string>
     <string name="system_users_revoke_all_message">Alle aktive sessioner for denne bruger vil blive logget ud.</string>
-    <string name="system_users_pagination_status">Viser %1$d–%2$d af %3$d brugere</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Viser %1$d–%2$d af %3$d bruger</item>
+        <item quantity="other">Viser %1$d–%2$d af %3$d brugere</item>
+    </plurals>
     <string name="account_title">Konto</string>
     <string name="account_section_identity">Identitet</string>
     <string name="account_identity_identity">Identitet</string>
@@ -307,7 +307,7 @@
         <item quantity="other">Test sendt til %1$d destinationer</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 session tilbagekaldt</item>
+        <item quantity="one">%1$d session tilbagekaldt</item>
         <item quantity="other">%1$d sessioner tilbagekaldt</item>
     </plurals>
     <string name="login_title">Log ind</string>
@@ -347,10 +347,8 @@
     <string name="system_setting_hostname">Værtsnavn annonceret til andre servere</string>
     <string name="system_status_peer_id">Peer-ID</string>
     <string name="system_status_holepunch">Hulslagning</string>
-    <string name="system_status_holepunch_value">%1$d lykkedes · %2$d mislykkedes</string>
     <string name="system_status_awaiting_routing">Beskeder, der afventer routing</string>
     <string name="system_status_relay_service">Relætjeneste</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d reservationer · %3$d kredsløb · %4$d afvist</string>
     <string name="route_target_select">Vælg</string>
     <string name="account_data_description">Download en fuldstændig sikkerhedskopi, som du kan gendanne på denne eller en anden Mochi-server.</string>
     <string name="route_target_none">Ingen tilgængelige mål</string>
@@ -375,7 +373,10 @@
     <string name="accounts_device_seen">Sidst set %1$s</string>
     <string name="notifprefs_device_app">%1$s · app</string>
     <string name="notifprefs_device_push">%1$s · push</string>
-    <string name="notifprefs_test_partial">Test sendt til %1$d af %2$d destinationer</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Test sendt til %1$d af %2$d destination</item>
+        <item quantity="other">Test sendt til %1$d af %2$d destinationer</item>
+    </plurals>
     <string name="notifprefs_test_none">Ingen destinationer konfigureret</string>
     <string name="notifprefs_transport_fcm">Android-push</string>
     <string name="notifprefs_no_destinations">Ingen destinationer</string>
@@ -394,4 +395,27 @@
     <string name="accounts_revoke_confirm">Dette tilbagekalder kalenderadgangen for %1$s. Login med %2$s forbliver, indtil du fjerner det på loginsiden.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Ukendt tema</string>
+    <string name="system_documents_modified">Ændret</string>
+    <string name="system_documents_discard_title">Kassér ændringer?</string>
+    <string name="system_documents_discard">Kassér</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d lykkedes</item>
+        <item quantity="other">%1$d lykkedes</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d mislykkedes</item>
+        <item quantity="other">%1$d mislykkedes</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d reservation</item>
+        <item quantity="other">%1$d / %2$d reservationer</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d kredsløb</item>
+        <item quantity="other">%1$d kredsløb</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d afvist</item>
+        <item quantity="other">%1$d afvist</item>
+    </plurals>
 </resources>

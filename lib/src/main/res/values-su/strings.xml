@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Zona waktos</string>
     <string name="settings_reset_to_defaults">Setel ulang ka baku</string>
     <string name="settings_reset_confirm_title">Setel ulang préferénsi?</string>
-    <string name="settings_reset_confirm_message">Ieu bakal ngareset sagala préferénsi ka nilai standarna.</string>
+    <string name="settings_reset_confirm_message">Ieu bakal ngareset préferénsi ieu ka nilai standarna.</string>
     <string name="settings_reset">Atur ulang</string>
     <string name="settings_display_title">Tampilan</string>
     <string name="settings_display_reset">Setel ulang ka baku</string>

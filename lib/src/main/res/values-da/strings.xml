@@ -103,9 +103,9 @@
     <string name="settings_time_zone">Tidszone</string>
     <string name="settings_reset_to_defaults">Nulstil til standard</string>
     <string name="settings_reset_confirm_title">Nulstil præferencer?</string>
-    <string name="settings_reset_confirm_message">Dette vil nulstille alle præferencer til deres standardværdier.</string>
+    <string name="settings_reset_confirm_message">Dette vil nulstille disse præferencer til deres standardværdier.</string>
     <string name="settings_reset">Nulstil</string>
-    <string name="settings_display_title">Vis</string>
+    <string name="settings_display_title">Visning</string>
     <string name="settings_display_reset">Nulstil til standard</string>
     <string name="settings_display_reset_confirm_title">Nulstil visning?</string>
     <string name="settings_display_reset_confirm_message">Dette vil nulstille visningsindstillingerne til deres standardværdier.</string>

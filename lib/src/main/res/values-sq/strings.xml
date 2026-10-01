@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Zona kohore</string>
     <string name="settings_reset_to_defaults">Rivendos në parazgjedhjet</string>
     <string name="settings_reset_confirm_title">Të rivendosen preferencat?</string>
-    <string name="settings_reset_confirm_message">Kjo do të rivendosë të gjitha preferencat në vlerat e tyre të parazgjedhura.</string>
+    <string name="settings_reset_confirm_message">Kjo do t\'i rivendosë këto preferenca në vlerat e tyre të parazgjedhura.</string>
     <string name="settings_reset">Rivendos</string>
     <string name="settings_display_title">Shfaqja</string>
     <string name="settings_display_reset">Rivendos në parazgjedhjet</string>

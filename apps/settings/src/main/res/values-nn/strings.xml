@@ -3,7 +3,7 @@
 
     <string name="settings_home_title">Innstillingar</string>
     <string name="settings_home_logout">Logg ut</string>
-    <string name="settings_home_display">Vis</string>
+    <string name="settings_home_display">Visning</string>
     <string name="settings_home_accounts">Tilkopla kontoar</string>
     <string name="settings_home_interests">Interesser</string>
     <string name="account_section_passkeys">Tilgangsnøklar</string>
@@ -101,13 +101,11 @@
     <string name="accounts_remove">Fjern</string>
     <string name="accounts_remove_title">Fjern konto?</string>
     <string name="system_documents_title">Dokument</string>
-    <string name="system_documents_description">Tenarreglar, vilkår og personvernerklæring vist til brukarane dine</string>
     <string name="system_documents_tab_rules">Tenarreglar</string>
     <string name="system_documents_tab_terms">Vilkår</string>
     <string name="system_documents_tab_privacy">Personvern</string>
     <string name="system_documents_language">Språk</string>
     <string name="system_documents_no_language">Ingen dokument tilgjengeleg for dette språket.</string>
-    <string name="system_documents_customised">Tilpassa</string>
     <string name="system_documents_using_default">Brukar medfølgjande standard</string>
     <string name="system_documents_revert">Tilbakerull til standard</string>
     <string name="system_documents_save">Lagre</string>
@@ -175,7 +173,6 @@
     <string name="system_users_delete">Slett brukar</string>
     <string name="system_users_delete_title">Slette brukar?</string>
     <string name="system_users_manage_sessions">Handsam økter</string>
-    <string name="system_users_sessions_description">Vis og opphev aktive økter for denne brukaren.</string>
     <string name="system_users_sessions_empty">Denne brukaren har ingen aktive økter.</string>
     <string name="system_users_revoke">Trekk tilbake</string>
     <string name="system_users_revoke_all">Trekk tilbake alle øktene</string>
@@ -185,7 +182,6 @@
     <string name="system_users_next">Neste</string>
     <string name="system_users_empty">Ingen brukarar funne</string>
     <string name="system_users_empty_search">Ingen brukarar samsvarar med søket ditt</string>
-    <string name="system_users_empty_search_hint">Prøv å justere søkjekriteria</string>
     <string name="system_users_toast_created">Brukar oppretta</string>
     <string name="system_users_toast_updated">Brukar oppdatert</string>
     <string name="system_users_toast_deleted">Brukar sletta</string>
@@ -212,17 +208,18 @@
     <string name="settings_home_terms">Brukarvilkår</string>
     <string name="account_passkeys_empty">Ingen passnøklar er registrerte.</string>
     <string name="account_passkey_register_title">Legg til ein passnøkkel</string>
-    <string name="account_passkey_register_message">Eininga di vil be deg om å stadfeste. Passnøkkelen er knytt til denne eininga og blir brukt til seinare innloggingar.</string>
     <string name="account_passkey_name_label">Namn (valfritt)</string>
     <string name="account_passkey_delete_message">\"%1$s\" vil ikkje lenger logge deg inn.</string>
-    <string name="account_totp_description">Logg inn med ein 6-sifra kode frå ein autentiseringsapp.</string>
     <string name="account_totp_enabled">Autentisering er aktivert.</string>
     <string name="account_totp_setup_step1">Skann eller skriv inn denne løyndomen i autentiseringsappen din.</string>
     <string name="account_totp_setup_step2">Skriv inn den 6-sifra koden som appen viser.</string>
     <string name="account_totp_code">Kode</string>
     <string name="account_totp_disable_message">Du vil ikkje kunne logge inn med ein autentiseringskode.</string>
     <string name="account_recovery_none">Ingen gjenopprettingskodar er genererte.</string>
-    <string name="account_recovery_count">%1$d ubrukte gjenopprettingskodar.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d gjenverande gjenopprettingskode.</item>
+        <item quantity="other">%1$d gjenverande gjenopprettingskodar.</item>
+    </plurals>
     <string name="account_recovery_generate">Generer kodar</string>
     <string name="account_recovery_regenerate">Generer kodar på nytt</string>
     <string name="account_recovery_regen_title">Generere gjenopprettingskodar på nytt?</string>
@@ -274,7 +271,10 @@
     <string name="system_users_session_last_accessed">Sist brukt: %1$s</string>
     <string name="system_users_revoke_all_title">Tilbakekalle alle økter?</string>
     <string name="system_users_revoke_all_message">Alle aktive økter for denne brukaren vert logga ut.</string>
-    <string name="system_users_pagination_status">Viser %1$d–%2$d av %3$d brukarar</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Viser %1$d–%2$d av %3$d brukar</item>
+        <item quantity="other">Viser %1$d–%2$d av %3$d brukarar</item>
+    </plurals>
 
     <string name="sessions_title">Økter</string>
     <string name="settings_home_account">Konto</string>
@@ -309,7 +309,7 @@
         <item quantity="other">Test sendt til %1$d destinasjonar</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">Oppheva 1 økt</item>
+        <item quantity="one">Oppheva %1$d økt</item>
         <item quantity="other">Oppheva %1$d økter</item>
     </plurals>
     <string name="login_title">Innlogging</string>
@@ -346,10 +346,8 @@
     <string name="system_setting_hostname">Vertsnavn annonsert til andre servere</string>
     <string name="system_status_peer_id">Peer-ID</string>
     <string name="system_status_holepunch">Holslag</string>
-    <string name="system_status_holepunch_value">%1$d vellykket · %2$d mislyktes</string>
     <string name="system_status_awaiting_routing">Meldinger som venter på ruting</string>
     <string name="system_status_relay_service">Reléteneste</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d reservasjoner · %3$d kretser · %4$d avvist</string>
     <string name="login_section_methods">Innloggingsmetodar</string>
     <string name="route_target_select">Vel</string>
     <string name="account_data_description">Last ned ein fullstendig tryggingskopi som du kan gjenopprette på denne eller ein annan Mochi-tenar.</string>
@@ -377,7 +375,10 @@
     <string name="accounts_device_seen">Sist sett %1$s</string>
     <string name="notifprefs_device_app">%1$s · app</string>
     <string name="notifprefs_device_push">%1$s · push-varsel</string>
-    <string name="notifprefs_test_partial">Test send til %1$d av %2$d destinasjonar</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Test sendt til %1$d av %2$d destinasjon</item>
+        <item quantity="other">Test sendt til %1$d av %2$d destinasjonar</item>
+    </plurals>
     <string name="notifprefs_test_none">Ingen mål er sette opp</string>
     <string name="notifprefs_transport_fcm">Android-push</string>
     <string name="notifprefs_no_destinations">Ingen mål</string>
@@ -396,4 +397,27 @@
     <string name="accounts_revoke_confirm">Dette tilbakekallar kalendertilgangen til %1$s. Pålogging med %2$s står ved lag til du koplar henne frå på påloggingssida.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Ukjent tema</string>
+    <string name="system_documents_modified">Endra</string>
+    <string name="system_documents_discard_title">Vil du forkaste endringane?</string>
+    <string name="system_documents_discard">Forkast</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d vellukka</item>
+        <item quantity="other">%1$d vellukka</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d mislukka</item>
+        <item quantity="other">%1$d mislukka</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d reservasjon</item>
+        <item quantity="other">%1$d / %2$d reservasjonar</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d krets</item>
+        <item quantity="other">%1$d kretsar</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d avvist</item>
+        <item quantity="other">%1$d avviste</item>
+    </plurals>
 </resources>

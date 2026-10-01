@@ -103,7 +103,7 @@
     <string name="settings_time_zone">אזור זמן</string>
     <string name="settings_reset_to_defaults">אפס לברירות מחדל</string>
     <string name="settings_reset_confirm_title">לאפס העדפות?</string>
-    <string name="settings_reset_confirm_message">פעולה זו תאפס את כל ההעדפות לערכי ברירת המחדל שלהן.</string>
+    <string name="settings_reset_confirm_message">פעולה זו תאפס את ההעדפות האלה לערכי ברירת המחדל שלהן.</string>
     <string name="settings_reset">אפס</string>
     <string name="settings_display_title">תצוגה</string>
     <string name="settings_display_reset">אפס לברירות מחדל</string>

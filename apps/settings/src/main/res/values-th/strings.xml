@@ -5,7 +5,7 @@
     <string name="settings_home_logout">ออกจากระบบ</string>
     <string name="settings_home_account">บัญชี</string>
     <string name="settings_home_preferences">การตั้งค่า</string>
-    <string name="settings_home_display">แสดงผล</string>
+    <string name="settings_home_display">การแสดงผล</string>
     <string name="settings_home_notification_prefs">ค่ากำหนดการแจ้งเตือน</string>
     <string name="settings_home_accounts">บัญชีที่เชื่อมต่อ</string>
     <string name="settings_home_interests">ความสนใจ</string>
@@ -104,13 +104,11 @@
     <string name="accounts_remove">ลบ</string>
     <string name="accounts_remove_title">ลบบัญชี?</string>
     <string name="system_documents_title">เอกสาร</string>
-    <string name="system_documents_description">กฎของเซิร์ฟเวอร์ ข้อกำหนดและเงื่อนไข และนโยบายความเป็นส่วนตัวที่แสดงต่อผู้ใช้ของคุณ</string>
     <string name="system_documents_tab_rules">กฎของเซิร์ฟเวอร์</string>
     <string name="system_documents_tab_terms">ข้อกำหนดและเงื่อนไข</string>
     <string name="system_documents_tab_privacy">ความเป็นส่วนตัว</string>
     <string name="system_documents_language">ภาษา</string>
     <string name="system_documents_no_language">ไม่มีเอกสารสำหรับภาษานี้</string>
-    <string name="system_documents_customised">ปรับแต่งแล้ว</string>
     <string name="system_documents_using_default">ใช้ค่าเริ่มต้นที่มาในตัว</string>
     <string name="system_documents_revert">คืนค่าเริ่มต้น</string>
     <string name="system_documents_save">บันทึก</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">ลบผู้ใช้</string>
     <string name="system_users_delete_title">ลบผู้ใช้หรือไม่?</string>
     <string name="system_users_manage_sessions">จัดการเซสชัน</string>
-    <string name="system_users_sessions_description">ดูและเพิกถอนเซสชันที่ใช้งานอยู่ของผู้ใช้นี้</string>
     <string name="system_users_sessions_empty">ผู้ใช้นี้ไม่มีเซสชันที่ใช้งานอยู่</string>
     <string name="system_users_revoke">เพิกถอน</string>
     <string name="system_users_revoke_all">เพิกถอนเซสชันทั้งหมด</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">ถัดไป</string>
     <string name="system_users_empty">ไม่พบผู้ใช้</string>
     <string name="system_users_empty_search">ไม่มีผู้ใช้ที่ตรงกับการค้นหาของคุณ</string>
-    <string name="system_users_empty_search_hint">ลองปรับเกณฑ์การค้นหาของคุณ</string>
     <string name="system_users_toast_created">สร้างผู้ใช้แล้ว</string>
     <string name="system_users_toast_updated">อัปเดตผู้ใช้แล้ว</string>
     <string name="system_users_toast_deleted">ลบผู้ใช้แล้ว</string>
@@ -211,17 +207,17 @@
     <string name="settings_home_terms">ข้อกำหนดในการให้บริการ</string>
     <string name="account_passkeys_empty">ไม่มีคีย์ผ่านที่ลงทะเบียน</string>
     <string name="account_passkey_register_title">เพิ่มคีย์ผ่าน</string>
-    <string name="account_passkey_register_message">อุปกรณ์ของคุณจะขอให้คุณยืนยัน คีย์ผ่านจะผูกกับอุปกรณ์นี้และใช้สำหรับการเข้าสู่ระบบในอนาคต</string>
     <string name="account_passkey_name_label">ชื่อ (ไม่บังคับ)</string>
     <string name="account_passkey_delete_message">\"%1$s\" จะไม่ลงชื่อเข้าใช้ให้คุณอีก</string>
-    <string name="account_totp_description">เข้าสู่ระบบด้วยรหัส 6 หลักจากแอปพลิเคชันยืนยันตัวตน</string>
     <string name="account_totp_enabled">ตัวยืนยันตัวตนเปิดใช้งานอยู่</string>
     <string name="account_totp_setup_step1">สแกนหรือป้อนความลับนี้ในแอปพลิเคชันยืนยันตัวตนของคุณ</string>
     <string name="account_totp_setup_step2">ป้อนรหัส 6 หลักที่แอปของคุณแสดง</string>
     <string name="account_totp_code">รหัส</string>
     <string name="account_totp_disable_message">คุณจะไม่สามารถเข้าสู่ระบบด้วยรหัสยืนยันตัวตนได้อีก</string>
     <string name="account_recovery_none">ไม่ได้สร้างรหัสกู้คืน</string>
-    <string name="account_recovery_count">รหัสกู้คืนที่ยังไม่ได้ใช้ %1$d รหัส</string>
+    <plurals name="account_recovery_count">
+        <item quantity="other">เหลือรหัสกู้คืน %1$d รหัส</item>
+    </plurals>
     <string name="account_recovery_generate">สร้างรหัส</string>
     <string name="account_recovery_regenerate">สร้างรหัสใหม่</string>
     <string name="account_recovery_regen_title">สร้างรหัสกู้คืนใหม่?</string>
@@ -270,7 +266,9 @@
     <string name="system_users_session_last_accessed">การเข้าถึงล่าสุด: %1$s</string>
     <string name="system_users_revoke_all_title">เพิกถอนทุกเซสชัน?</string>
     <string name="system_users_revoke_all_message">เซสชันที่ใช้งานอยู่ทั้งหมดของผู้ใช้นี้จะถูกออกจากระบบ</string>
-    <string name="system_users_pagination_status">แสดง %1$d–%2$d จาก %3$d ผู้ใช้</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="other">แสดง %1$d–%2$d จาก %3$d ผู้ใช้</item>
+    </plurals>
     <string name="account_title">บัญชี</string>
     <string name="account_section_identity">ตัวตน</string>
     <string name="account_identity_identity">ตัวตน</string>
@@ -346,10 +344,8 @@
     <string name="system_setting_hostname">ชื่อโฮสต์ที่ประกาศไปยังเซิร์ฟเวอร์อื่น</string>
     <string name="system_status_peer_id">ID เพียร์</string>
     <string name="system_status_holepunch">การเจาะรู</string>
-    <string name="system_status_holepunch_value">%1$d สำเร็จ · %2$d ล้มเหลว</string>
     <string name="system_status_awaiting_routing">ข้อความที่รอการกำหนดเส้นทาง</string>
     <string name="system_status_relay_service">บริการรีเลย์</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d การจอง · %3$d วงจร · %4$d ถูกปฏิเสธ</string>
     <string name="route_target_select">เลือก</string>
     <string name="account_data_description">ดาวน์โหลดข้อมูลสำรองทั้งหมดที่คุณสามารถกู้คืนบนเซิร์ฟเวอร์นี้หรือเซิร์ฟเวอร์ Mochi อื่น</string>
     <string name="route_target_none">ไม่มีเป้าหมายที่ใช้ได้</string>
@@ -374,7 +370,9 @@
     <string name="accounts_device_seen">เห็นล่าสุด %1$s</string>
     <string name="notifprefs_device_app">%1$s · แอป</string>
     <string name="notifprefs_device_push">%1$s · พุช</string>
-    <string name="notifprefs_test_partial">ส่งการทดสอบไปยัง %1$d จาก %2$d ปลายทาง</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="other">ส่งการทดสอบไปยัง %1$d จาก %2$d ปลายทางแล้ว</item>
+    </plurals>
     <string name="notifprefs_test_none">ยังไม่ได้ตั้งค่าปลายทาง</string>
     <string name="notifprefs_transport_fcm">พุช Android</string>
     <string name="notifprefs_no_destinations">ไม่มีปลายทาง</string>
@@ -393,4 +391,22 @@
     <string name="accounts_revoke_confirm">การดำเนินการนี้จะเพิกถอนการเข้าถึงปฏิทินของ %1$s การลงชื่อเข้าใช้ด้วย %2$s จะยังคงอยู่จนกว่าคุณจะยกเลิกการเชื่อมโยงในหน้าเข้าสู่ระบบ</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">ธีมที่ไม่รู้จัก</string>
+    <string name="system_documents_modified">แก้ไขแล้ว</string>
+    <string name="system_documents_discard_title">ละทิ้งการเปลี่ยนแปลงใช่ไหม?</string>
+    <string name="system_documents_discard">ละทิ้ง</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="other">%1$d สำเร็จ</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="other">%1$d ล้มเหลว</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="other">%1$d / %2$d การจอง</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="other">%1$d วงจร</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="other">%1$d ถูกปฏิเสธ</item>
+    </plurals>
 </resources>

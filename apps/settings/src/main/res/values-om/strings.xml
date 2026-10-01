@@ -5,7 +5,7 @@
     <string name="settings_home_logout">Ba\'i</string>
     <string name="settings_home_account">Akkaawuntii</string>
     <string name="settings_home_preferences">Filannoowwan</string>
-    <string name="settings_home_display">Mul\'isi</string>
+    <string name="settings_home_display">Agarsiisa</string>
     <string name="settings_home_notification_prefs">Filannoo beeksisaa</string>
     <string name="settings_home_accounts">Akkaawuntiilee walitti hidhaman</string>
     <string name="settings_home_interests">Fedhota</string>
@@ -104,13 +104,11 @@
     <string name="accounts_remove">Haqi</string>
     <string name="accounts_remove_title">Akkaawuntii haquuf?</string>
     <string name="system_documents_title">Galmeewwan</string>
-    <string name="system_documents_description">Seerota, haalota fi tarsiimoo iccitii fayyadamtoota keetiif agarsiifaman</string>
     <string name="system_documents_tab_rules">Seerota server</string>
     <string name="system_documents_tab_terms">Haalota fi tarsiimoolee</string>
     <string name="system_documents_tab_privacy">Iccitii</string>
     <string name="system_documents_language">Afaan</string>
     <string name="system_documents_no_language">Afaan kanaaf sanada hin jiru.</string>
-    <string name="system_documents_customised">Mataa kee waliin walqixxaa\'e</string>
     <string name="system_documents_using_default">Sirnaan dursaa walitti makame fayyadamaa</string>
     <string name="system_documents_revert">Gara durtiitti deebisi</string>
     <string name="system_documents_save">Olkaa\'i</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Fayyadamaa haqi</string>
     <string name="system_users_delete_title">Fayyadamaa haqu?</string>
     <string name="system_users_manage_sessions">Sessenota bulchi</string>
-    <string name="system_users_sessions_description">Yeroowwan turtii ka\'aa fayyadamaa kanaaf daawwadhu fi haqi.</string>
     <string name="system_users_sessions_empty">Fayyadamaan kun yeroo turtii ka\'aa hin qabu.</string>
     <string name="system_users_revoke">Haqi</string>
     <string name="system_users_revoke_all">Galiiwwan hunda haqi</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Itti aanu</string>
     <string name="system_users_empty">Fayyadamtoonni hin argamne</string>
     <string name="system_users_empty_search">Fayyadamtoonni barbaacha keetiin walsiman hin jiran</string>
-    <string name="system_users_empty_search_hint">Ulaagaa barbaacha kee sirreessuu yaali</string>
     <string name="system_users_toast_created">Fayyadamaan uumameera</string>
     <string name="system_users_toast_updated">Fayyadamaan haaromfameera</string>
     <string name="system_users_toast_deleted">Fayyadamaan haqameera</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">Haalota tajaajilaa</string>
     <string name="account_passkeys_empty">Furtuwwan seensaa galmaa\'an hin jiran.</string>
     <string name="account_passkey_register_title">Furtuu seensaa dabaluu</string>
-    <string name="account_passkey_register_message">Meeshaan kee mirkanaa\'uu sii eera. Furtuun seensaa meeshaa kanaaf hidhamee jira fi seenuu boodaaf ittiin fayyadamuuf.</string>
     <string name="account_passkey_name_label">Maqaa (filannoodhaan)</string>
     <string name="account_passkey_delete_message">\"%1$s\" siif galchuu hin danda\'u.</string>
-    <string name="account_totp_description">Lakkoofsa figira 6 qabu sirna mirkaneessaa irraa seenii.</string>
     <string name="account_totp_enabled">Mirkaneessaan hojiirra oolfameera.</string>
     <string name="account_totp_setup_step1">Iccitii kana sirna mirkaneessaa keessatti iskaanii ykn galchii.</string>
     <string name="account_totp_setup_step2">Lakkoofsa figira 6 sirni kee agarsiisu galchii.</string>
     <string name="account_totp_code">Lakkoofsa</string>
     <string name="account_totp_disable_message">Siif hin danda\'amu lakkoofsa mirkaneessaa fayyadamtee seenuu.</string>
     <string name="account_recovery_none">Lakkoofsi deebii uumamee hin jiru.</string>
-    <string name="account_recovery_count">%1$d lakkoofsi deebii hin fayyadamamne.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">Lakkoofsi deebii %1$d hafeera.</item>
+        <item quantity="other">Lakkoofsonni deebii %1$d hafaniiru.</item>
+    </plurals>
     <string name="account_recovery_generate">Lakkoofsa uumi</string>
     <string name="account_recovery_regenerate">Lakkoofsa irra deebi\'i</string>
     <string name="account_recovery_regen_title">Lakkoofsa deebii irra deebi\'isuun?</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">Argachuu dhumaa: %1$s</string>
     <string name="system_users_revoke_all_title">Marii hunda kaasuu?</string>
     <string name="system_users_revoke_all_message">Mariiwwan dalagaa fayyadamtuu kanaa hundi ni ba\'u.</string>
-    <string name="system_users_pagination_status">%3$d fayyadamtoota keessaa %1$d–%2$d agarsiifa</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Fayyadamaa %3$d keessaa %1$d–%2$d agarsiisa</item>
+        <item quantity="other">Fayyadamtoota %3$d keessaa %1$d–%2$d agarsiisa</item>
+    </plurals>
     <string name="account_title">Akkaawuntii</string>
     <string name="account_section_identity">Eenyummaa</string>
     <string name="account_identity_identity">Eenyummaa</string>
@@ -307,7 +307,7 @@
         <item quantity="other">Qorannoon gara bakkeewwan %1$d ergameera</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">Yeroo turtii 1 kaafame</item>
+        <item quantity="one">Yeroo turtii %1$d kaafame</item>
         <item quantity="other">Yeroowwan turtii %1$d kaafaman</item>
     </plurals>
     <string name="login_title">Galchuu</string>
@@ -347,10 +347,8 @@
     <string name="system_setting_hostname">Maqaa keessummeessaa serveroota birootti beeksifame</string>
     <string name="system_status_peer_id">ID hiriyaa</string>
     <string name="system_status_holepunch">Holee punch</string>
-    <string name="system_status_holepunch_value">%1$d milkaa\'e · %2$d kufe</string>
     <string name="system_status_awaiting_routing">Ergaawwan daandii eeggachaa jiran</string>
     <string name="system_status_relay_service">Tajaajila daddabarsaa</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d qabannoo · %3$d geengoo · %4$d didame</string>
     <string name="route_target_select">Filadhu</string>
     <string name="account_data_description">Kuusaa guutuu Mochi sarvarii kana irratti yookaan kan biraa irratti deebisuu dandeessu buufadhu.</string>
     <string name="route_target_none">Galmi jiru hin jiru</string>
@@ -375,7 +373,10 @@
     <string name="accounts_device_seen">Yeroo dhumaaf mul\'ate %1$s</string>
     <string name="notifprefs_device_app">%1$s · appii</string>
     <string name="notifprefs_device_push">%1$s · push</string>
-    <string name="notifprefs_test_partial">Qormaanni bakka %2$d keessaa %1$dtti ergame</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Qorannoon bakka %2$d keessaa %1$dtti ergame</item>
+        <item quantity="other">Qorannoon bakkeewwan %2$d keessaa %1$dtti ergame</item>
+    </plurals>
     <string name="notifprefs_test_none">Galmi qindaa\'e hin jiru</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
     <string name="notifprefs_no_destinations">Gahee hin jiru</string>
@@ -394,4 +395,27 @@
     <string name="accounts_revoke_confirm">Kun qaqqabummaa kaalaandarii %1$s ni haqa. %2$s waliin seensi hamma fuula Seensaa irratti hiiktutti ni tura.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Bifa hin beekamne</string>
+    <string name="system_documents_modified">Jijjiirame</string>
+    <string name="system_documents_discard_title">Jijjiiramoota gatuu?</string>
+    <string name="system_documents_discard">Gati</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d milkaa\'e</item>
+        <item quantity="other">%1$d milkaa\'an</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d kufe</item>
+        <item quantity="other">%1$d kufan</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d qabannoo</item>
+        <item quantity="other">%1$d / %2$d qabannoo</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d geengoo</item>
+        <item quantity="other">%1$d geengoo</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d didame</item>
+        <item quantity="other">%1$d didaman</item>
+    </plurals>
 </resources>

@@ -103,9 +103,9 @@
     <string name="settings_time_zone">Laiko juosta</string>
     <string name="settings_reset_to_defaults">Atstatyti į numatytąsias</string>
     <string name="settings_reset_confirm_title">Atstatyti nuostatas?</string>
-    <string name="settings_reset_confirm_message">Tai iš naujo nustatys visus nustatymus į numatytąsias reikšmes.</string>
+    <string name="settings_reset_confirm_message">Tai atkurs numatytąsias šių nustatymų reikšmes.</string>
     <string name="settings_reset">Atstatyti</string>
-    <string name="settings_display_title">Rodyti</string>
+    <string name="settings_display_title">Rodymas</string>
     <string name="settings_display_reset">Atstatyti į numatytąsias</string>
     <string name="settings_display_reset_confirm_title">Atstatyti rodinį?</string>
     <string name="settings_display_reset_confirm_message">Tai atstatys rodinio nustatymus į jų numatytąsias reikšmes.</string>

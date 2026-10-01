@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Zòn lè</string>
     <string name="settings_reset_to_defaults">Reset nan default</string>
     <string name="settings_reset_confirm_title">Reset preferans?</string>
-    <string name="settings_reset_confirm_message">Sa pral remete tout preferans nan valè defo yo.</string>
+    <string name="settings_reset_confirm_message">Sa pral remete preferans sa yo nan valè defo yo.</string>
     <string name="settings_reset">Reyinisyalize</string>
     <string name="settings_display_title">Afichaj</string>
     <string name="settings_display_reset">Reset nan default</string>

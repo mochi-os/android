@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Vaqt mintaqasi</string>
     <string name="settings_reset_to_defaults">Standartlarga qaytarish</string>
     <string name="settings_reset_confirm_title">Sozlamalar tiklansinmi?</string>
-    <string name="settings_reset_confirm_message">Bu barcha sozlamalarni standart qiymatlariga qaytaradi.</string>
+    <string name="settings_reset_confirm_message">Bu ushbu sozlamalarni standart qiymatlariga qaytaradi.</string>
     <string name="settings_reset">Tiklash</string>
     <string name="settings_display_title">Koʻrsatish</string>
     <string name="settings_display_reset">Standartlarga qaytarish</string>

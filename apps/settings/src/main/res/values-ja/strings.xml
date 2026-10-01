@@ -104,13 +104,11 @@
     <string name="accounts_remove">削除</string>
     <string name="accounts_remove_title">アカウントを削除しますか?</string>
     <string name="system_documents_title">ドキュメント</string>
-    <string name="system_documents_description">ユーザーに表示されるサーバーのルール、利用規約、およびプライバシー通知</string>
     <string name="system_documents_tab_rules">サーバーのルール</string>
     <string name="system_documents_tab_terms">利用規約</string>
     <string name="system_documents_tab_privacy">プライバシー</string>
     <string name="system_documents_language">言語</string>
     <string name="system_documents_no_language">この言語のドキュメントはありません。</string>
-    <string name="system_documents_customised">カスタマイズ済み</string>
     <string name="system_documents_using_default">同梱のデフォルトを使用中</string>
     <string name="system_documents_revert">デフォルトに戻す</string>
     <string name="system_documents_save">保存</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">ユーザーを削除</string>
     <string name="system_users_delete_title">ユーザーを削除しますか？</string>
     <string name="system_users_manage_sessions">セッションを管理</string>
-    <string name="system_users_sessions_description">このユーザーのアクティブなセッションを表示・取り消します。</string>
     <string name="system_users_sessions_empty">このユーザーにアクティブなセッションはありません。</string>
     <string name="system_users_revoke">取り消し</string>
     <string name="system_users_revoke_all">すべてのセッションを取り消す</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">次へ</string>
     <string name="system_users_empty">ユーザーが見つかりません</string>
     <string name="system_users_empty_search">検索に一致するユーザーはいません</string>
-    <string name="system_users_empty_search_hint">検索条件を調整してみてください</string>
     <string name="system_users_toast_created">ユーザーを作成しました</string>
     <string name="system_users_toast_updated">ユーザーを更新しました</string>
     <string name="system_users_toast_deleted">ユーザーを削除しました</string>
@@ -211,17 +207,17 @@
     <string name="settings_home_terms">利用規約</string>
     <string name="account_passkeys_empty">登録されたパスキーはありません。</string>
     <string name="account_passkey_register_title">パスキーを追加</string>
-    <string name="account_passkey_register_message">デバイスから確認を求められます。パスキーはこのデバイスに紐づけられ、今後のサインインに使用されます。</string>
     <string name="account_passkey_name_label">名前（任意）</string>
     <string name="account_passkey_delete_message">「%1$s」では今後サインインできなくなります。</string>
-    <string name="account_totp_description">認証アプリの6桁のコードでサインインします。</string>
     <string name="account_totp_enabled">認証アプリは有効です。</string>
     <string name="account_totp_setup_step1">このシークレットを認証アプリでスキャンまたは入力してください。</string>
     <string name="account_totp_setup_step2">アプリに表示される6桁のコードを入力してください。</string>
     <string name="account_totp_code">コード</string>
     <string name="account_totp_disable_message">認証アプリのコードでサインインできなくなります。</string>
     <string name="account_recovery_none">回復コードは生成されていません。</string>
-    <string name="account_recovery_count">未使用の回復コードが %1$d 個あります。</string>
+    <plurals name="account_recovery_count">
+        <item quantity="other">残りの回復コードは %1$d 個です。</item>
+    </plurals>
     <string name="account_recovery_generate">コードを生成</string>
     <string name="account_recovery_regenerate">コードを再生成</string>
     <string name="account_recovery_regen_title">回復コードを再生成しますか？</string>
@@ -270,7 +266,9 @@
     <string name="system_users_session_last_accessed">最終アクセス: %1$s</string>
     <string name="system_users_revoke_all_title">すべてのセッションを失効させますか？</string>
     <string name="system_users_revoke_all_message">このユーザーのすべてのアクティブなセッションがサインアウトされます。</string>
-    <string name="system_users_pagination_status">%3$d 人中 %1$d–%2$d 人を表示</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="other">%3$d 人中 %1$d–%2$d 人を表示</item>
+    </plurals>
     <string name="account_title">アカウント</string>
     <string name="account_section_identity">アイデンティティ</string>
     <string name="account_identity_identity">アイデンティティ</string>
@@ -346,10 +344,8 @@
     <string name="system_setting_hostname">他のサーバーに通知されるホスト名</string>
     <string name="system_status_peer_id">ピア ID</string>
     <string name="system_status_holepunch">ホールパンチ</string>
-    <string name="system_status_holepunch_value">%1$d 成功 · %2$d 失敗</string>
     <string name="system_status_awaiting_routing">ルーティング待ちのメッセージ</string>
     <string name="system_status_relay_service">リレーサービス</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d 予約 · %3$d 回線 · %4$d 拒否</string>
     <string name="route_target_select">選択</string>
     <string name="account_data_description">このサーバーまたは別の Mochi サーバーで復元できる完全なバックアップをダウンロードします。</string>
     <string name="route_target_none">利用できる宛先がありません</string>
@@ -374,7 +370,9 @@
     <string name="accounts_device_seen">最終確認 %1$s</string>
     <string name="notifprefs_device_app">%1$s · アプリ</string>
     <string name="notifprefs_device_push">%1$s · プッシュ</string>
-    <string name="notifprefs_test_partial">テストを%2$d件中%1$d件の宛先に送信しました</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="other">テストを%2$d件中%1$d件の宛先に送信しました</item>
+    </plurals>
     <string name="notifprefs_test_none">送信先が設定されていません</string>
     <string name="notifprefs_transport_fcm">Android プッシュ</string>
     <string name="notifprefs_no_destinations">送信先がありません</string>
@@ -393,4 +391,22 @@
     <string name="accounts_revoke_confirm">%1$s のカレンダーへのアクセスを取り消します。%2$s でのサインインは、ログインページでリンクを解除するまで有効です。</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">不明なテーマ</string>
+    <string name="system_documents_modified">変更済み</string>
+    <string name="system_documents_discard_title">変更を破棄しますか？</string>
+    <string name="system_documents_discard">破棄</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="other">成功 %1$d</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="other">失敗 %1$d</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="other">予約 %1$d / %2$d</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="other">回線 %1$d</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="other">拒否 %1$d</item>
+    </plurals>
 </resources>

@@ -103,9 +103,9 @@
     <string name="settings_time_zone">Ordu-zona</string>
     <string name="settings_reset_to_defaults">Berrezarri lehenetsietara</string>
     <string name="settings_reset_confirm_title">Hobespenak berrezarri?</string>
-    <string name="settings_reset_confirm_message">Honek hobespen guztiak balio lehenetsietara berrezarriko ditu.</string>
+    <string name="settings_reset_confirm_message">Honek hobespen hauek balio lehenetsietara berrezarriko ditu.</string>
     <string name="settings_reset">Berrezarri</string>
-    <string name="settings_display_title">Bistaratu</string>
+    <string name="settings_display_title">Pantaila</string>
     <string name="settings_display_reset">Berrezarri lehenetsietara</string>
     <string name="settings_display_reset_confirm_title">Bistaratzea berrezarri?</string>
     <string name="settings_display_reset_confirm_message">Honek bistaratze ezarpenak haien balio lehenetsietara berrezarriko ditu.</string>

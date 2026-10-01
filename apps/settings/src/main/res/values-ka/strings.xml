@@ -104,13 +104,11 @@
     <string name="accounts_remove">წაშლა</string>
     <string name="accounts_remove_title">ანგარიშის წაშლა?</string>
     <string name="system_documents_title">დოკუმენტები</string>
-    <string name="system_documents_description">სერვერის წესები, პირობები და კონფიდენციალურობის შეტყობინება, რომელიც ნაჩვენებია თქვენი მომხმარებლებისთვის</string>
     <string name="system_documents_tab_rules">სერვერის წესები</string>
     <string name="system_documents_tab_terms">წესები და პირობები</string>
     <string name="system_documents_tab_privacy">კონფიდენციალურობა</string>
     <string name="system_documents_language">ენა</string>
     <string name="system_documents_no_language">ამ ენისთვის დოკუმენტი მიუწვდომელია.</string>
-    <string name="system_documents_customised">მორგებული</string>
     <string name="system_documents_using_default">გამოიყენება ჩაშენებული ნაგულისხმევი</string>
     <string name="system_documents_revert">ნაგულისხმევზე დაბრუნება</string>
     <string name="system_documents_save">შენახვა</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">მომხმარებლის წაშლა</string>
     <string name="system_users_delete_title">მომხმარებლის წაშლა?</string>
     <string name="system_users_manage_sessions">სესიების მართვა</string>
-    <string name="system_users_sessions_description">ერთეულის დეტალების ნახვა და რედაქტირება</string>
     <string name="system_users_sessions_empty">ამ მომხმარებელს არ აქვს აქტიური სესიები.</string>
     <string name="system_users_revoke">გაუქმება</string>
     <string name="system_users_revoke_all">ყველა სესიის გაუქმება</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">შემდეგი</string>
     <string name="system_users_empty">მომხმარებლები ვერ მოიძებნა</string>
     <string name="system_users_empty_search">თქვენი ძიების შესაბამისი მომხმარებლები არ არის</string>
-    <string name="system_users_empty_search_hint">სცადეთ ძიების კორექტირება</string>
     <string name="system_users_toast_created">მომხმარებელი შეიქმნა</string>
     <string name="system_users_toast_updated">მომხმარებელი განახლდა</string>
     <string name="system_users_toast_deleted">მომხმარებელი წაიშალა</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">მომსახურების პირობები</string>
     <string name="account_passkeys_empty">რეგისტრირებული საშვი არ არის.</string>
     <string name="account_passkey_register_title">საშვის დამატება</string>
-    <string name="account_passkey_register_message">თქვენი მოწყობილობა მოგთხოვთ დადასტურებას. საშვი დაკავშირებულია ამ მოწყობილობასთან და გამოიყენება მომავალი შესვლებისთვის.</string>
     <string name="account_passkey_name_label">სახელი (არასავალდებულო)</string>
     <string name="account_passkey_delete_message">\"%1$s\" აღარ შემოგიყვანთ.</string>
-    <string name="account_totp_description">შედით ავთენტიფიკატორის აპლიკაციიდან 6-ნიშნა კოდით.</string>
     <string name="account_totp_enabled">ავთენტიფიკატორი ჩართულია.</string>
     <string name="account_totp_setup_step1">დაასკანერეთ ან შეიყვანეთ ეს საიდუმლო თქვენს ავთენტიფიკატორის აპლიკაციაში.</string>
     <string name="account_totp_setup_step2">შეიყვანეთ თქვენი აპლიკაციის მიერ ნაჩვენები 6-ნიშნა კოდი.</string>
     <string name="account_totp_code">კოდი</string>
     <string name="account_totp_disable_message">ვეღარ შეძლებთ ავთენტიფიკატორის კოდით შესვლას.</string>
     <string name="account_recovery_none">აღდგენის კოდები არ შექმნილა.</string>
-    <string name="account_recovery_count">%1$d გამოუყენებელი აღდგენის კოდი.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">დარჩა %1$d აღდგენის კოდი.</item>
+        <item quantity="other">დარჩა %1$d აღდგენის კოდი.</item>
+    </plurals>
     <string name="account_recovery_generate">კოდების შექმნა</string>
     <string name="account_recovery_regenerate">კოდების ხელახლა შექმნა</string>
     <string name="account_recovery_regen_title">აღდგენის კოდების ხელახლა შექმნა?</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">ბოლო წვდომა: %1$s</string>
     <string name="system_users_revoke_all_title">ყველა სესიის გაუქმება?</string>
     <string name="system_users_revoke_all_message">ამ მომხმარებლის ყველა აქტიური სესია გამოვა.</string>
-    <string name="system_users_pagination_status">ნაჩვენებია %1$d–%2$d %3$d მომხმარებლიდან</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">ნაჩვენებია %1$d–%2$d %3$d მომხმარებლიდან</item>
+        <item quantity="other">ნაჩვენებია %1$d–%2$d %3$d მომხმარებლიდან</item>
+    </plurals>
     <string name="account_title">ანგარიში</string>
     <string name="account_section_identity">ვინაობა</string>
     <string name="account_identity_identity">ვინაობა</string>
@@ -307,7 +307,7 @@
         <item quantity="other">ტესტი გაიგზავნა %1$d მიმართულებაზე</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 სესია გაუქმდა</item>
+        <item quantity="one">%1$d სესია გაუქმდა</item>
         <item quantity="other">%1$d სესია გაუქმდა</item>
     </plurals>
     <string name="login_title">შესვლა</string>
@@ -347,10 +347,8 @@
     <string name="system_setting_hostname">სხვა სერვერებისთვის გამოცხადებული ჰოსტის სახელი</string>
     <string name="system_status_peer_id">კვანძის ID</string>
     <string name="system_status_holepunch">გახვრეტა</string>
-    <string name="system_status_holepunch_value">%1$d წარმატებული · %2$d ჩაიშალა</string>
     <string name="system_status_awaiting_routing">მარშრუტიზაციას მომლოდინე შეტყობინებები</string>
     <string name="system_status_relay_service">რელეს სერვისი</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d დაჯავშნები · %3$d წრედები · %4$d უარყოფილი</string>
     <string name="route_target_select">არჩევა</string>
     <string name="account_data_description">ჩამოტვირთეთ სრული სარეზერვო ასლი, რომელიც შეგიძლიათ აღადგინოთ ამ ან სხვა Mochi სერვერზე.</string>
     <string name="route_target_none">სამიზნეები არ არის ხელმისაწვდომი</string>
@@ -375,7 +373,10 @@
     <string name="accounts_device_seen">ბოლოს ნანახი %1$s</string>
     <string name="notifprefs_device_app">%1$s · აპი</string>
     <string name="notifprefs_device_push">%1$s · პუშ-შეტყობინებები</string>
-    <string name="notifprefs_test_partial">ტესტი გაიგზავნა %1$d დანიშნულებაზე %2$d-დან</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">ტესტი გაიგზავნა %1$d დანიშნულებაზე %2$d-დან</item>
+        <item quantity="other">ტესტი გაიგზავნა %1$d დანიშნულებაზე %2$d-დან</item>
+    </plurals>
     <string name="notifprefs_test_none">დანიშნულებები არ არის კონფიგურირებული</string>
     <string name="notifprefs_transport_fcm">Android პუშ-შეტყობინება</string>
     <string name="notifprefs_no_destinations">დანიშნულების ადგილები არ არის</string>
@@ -394,4 +395,27 @@
     <string name="accounts_revoke_confirm">ეს გააუქმებს %1$s-ის წვდომას კალენდარზე. %2$s-ით შესვლა დარჩება, სანამ შესვლის გვერდზე არ გათიშავთ.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">უცნობი თემა</string>
+    <string name="system_documents_modified">შეცვლილი</string>
+    <string name="system_documents_discard_title">გავაუქმოთ ცვლილებები?</string>
+    <string name="system_documents_discard">უარყოფა</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d წარმატებული</item>
+        <item quantity="other">%1$d წარმატებული</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d წარუმატებელი</item>
+        <item quantity="other">%1$d წარუმატებელი</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d დაჯავშნა</item>
+        <item quantity="other">%1$d / %2$d დაჯავშნა</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d წრედი</item>
+        <item quantity="other">%1$d წრედი</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d უარყოფილი</item>
+        <item quantity="other">%1$d უარყოფილი</item>
+    </plurals>
 </resources>

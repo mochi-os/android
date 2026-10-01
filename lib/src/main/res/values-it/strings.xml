@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Fuso orario</string>
     <string name="settings_reset_to_defaults">Reimposta ai valori predefiniti</string>
     <string name="settings_reset_confirm_title">Reimpostare le preferenze?</string>
-    <string name="settings_reset_confirm_message">Questa operazione ripristinerà tutte le preferenze ai valori predefiniti.</string>
+    <string name="settings_reset_confirm_message">Questa operazione ripristinerà queste preferenze ai valori predefiniti.</string>
     <string name="settings_reset">Reimposta</string>
     <string name="settings_display_title">Visualizzazione</string>
     <string name="settings_display_reset">Reimposta ai valori predefiniti</string>

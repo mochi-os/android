@@ -103,7 +103,7 @@
     <string name="settings_time_zone">タイムゾーン</string>
     <string name="settings_reset_to_defaults">デフォルトに戻す</string>
     <string name="settings_reset_confirm_title">設定をリセットしますか?</string>
-    <string name="settings_reset_confirm_message">すべての設定がデフォルト値にリセットされます。</string>
+    <string name="settings_reset_confirm_message">これらの設定がデフォルト値にリセットされます。</string>
     <string name="settings_reset">リセット</string>
     <string name="settings_display_title">表示</string>
     <string name="settings_display_reset">デフォルトに戻す</string>

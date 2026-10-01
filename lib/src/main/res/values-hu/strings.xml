@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Időzóna</string>
     <string name="settings_reset_to_defaults">Visszaállítás alapértelmezettre</string>
     <string name="settings_reset_confirm_title">Visszaállítja a preferenciákat?</string>
-    <string name="settings_reset_confirm_message">Ez visszaállítja az összes beállítást az alapértelmezett értékére.</string>
+    <string name="settings_reset_confirm_message">Ez visszaállítja ezeket a beállításokat az alapértelmezett értékeikre.</string>
     <string name="settings_reset">Visszaállítás</string>
     <string name="settings_display_title">Megjelenítés</string>
     <string name="settings_display_reset">Visszaállítás alapértelmezettre</string>

@@ -103,9 +103,9 @@
     <string name="settings_time_zone">Crios ama</string>
     <string name="settings_reset_to_defaults">Athshocraigh chuig réamhshocruithe</string>
     <string name="settings_reset_confirm_title">Athshocraigh sainroghanna?</string>
-    <string name="settings_reset_confirm_message">Athshocróidh sé seo gach sainrogha go dtí a luachanna réamhshocraithe.</string>
+    <string name="settings_reset_confirm_message">Athshocróidh sé seo na sainroghanna seo go dtí a luachanna réamhshocraithe.</string>
     <string name="settings_reset">Athshocraigh</string>
-    <string name="settings_display_title">Taispeáin</string>
+    <string name="settings_display_title">Taispeáint</string>
     <string name="settings_display_reset">Athshocraigh chuig réamhshocruithe</string>
     <string name="settings_display_reset_confirm_title">Athshocraigh an taispeáint?</string>
     <string name="settings_display_reset_confirm_message">Athshocróidh sé seo socruithe taispeána chuig a luachanna réamhshocraithe.</string>

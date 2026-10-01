@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Часовой пояс</string>
     <string name="settings_reset_to_defaults">Сбросить к значениям по умолчанию</string>
     <string name="settings_reset_confirm_title">Сбросить предпочтения?</string>
-    <string name="settings_reset_confirm_message">Это сбросит все предпочтения к значениям по умолчанию.</string>
+    <string name="settings_reset_confirm_message">Эти настройки будут сброшены к значениям по умолчанию.</string>
     <string name="settings_reset">Сбросить</string>
     <string name="settings_display_title">Отображение</string>
     <string name="settings_display_reset">Сбросить к значениям по умолчанию</string>

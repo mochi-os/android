@@ -5,7 +5,7 @@
     <string name="settings_home_logout">Logáil amach</string>
     <string name="settings_home_account">Cuntas</string>
     <string name="settings_home_preferences">Sainroghanna</string>
-    <string name="settings_home_display">Taispeáin</string>
+    <string name="settings_home_display">Taispeáint</string>
     <string name="settings_home_notification_prefs">Sainroghanna fógraí</string>
     <string name="settings_home_accounts">Cuntais cheangailte</string>
     <string name="settings_home_interests">Suimeanna</string>
@@ -104,13 +104,11 @@
     <string name="accounts_remove">Bain</string>
     <string name="accounts_remove_title">Bain cuntas?</string>
     <string name="system_documents_title">Cáipéisí</string>
-    <string name="system_documents_description">Rialacha an fhreastalaí, téarmaí agus coinníollacha, agus fógra príobháideachais a thaispeántar do d\'úsáideoirí</string>
     <string name="system_documents_tab_rules">Rialacha an fhreastalaí</string>
     <string name="system_documents_tab_terms">Téarmaí agus coinníollacha</string>
     <string name="system_documents_tab_privacy">Príobháideacht</string>
     <string name="system_documents_language">Teanga</string>
     <string name="system_documents_no_language">Níl aon doiciméad ar fáil don teanga seo.</string>
-    <string name="system_documents_customised">Saincheaptha</string>
     <string name="system_documents_using_default">Réamhshocrú cuachta in úsáid</string>
     <string name="system_documents_revert">Fill chuig réamhshocrú</string>
     <string name="system_documents_save">Sábháil</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Scrios úsáideoir</string>
     <string name="system_users_delete_title">Scrios úsáideoir?</string>
     <string name="system_users_manage_sessions">Bainistigh seisiúin</string>
-    <string name="system_users_sessions_description">Féach ar agus cúlghair seisiúin ghníomhacha don úsáideoir seo.</string>
     <string name="system_users_sessions_empty">Níl aon seisiúin ghníomhacha ag an úsáideoir seo.</string>
     <string name="system_users_revoke">Cúlghair</string>
     <string name="system_users_revoke_all">Cúlghair gach seisiún</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Ar aghaidh</string>
     <string name="system_users_empty">Níor aimsíodh aon úsáideoir</string>
     <string name="system_users_empty_search">Níl aon úsáideoir ag teacht le do chuardach</string>
-    <string name="system_users_empty_search_hint">Bain triail as critéir do chuardaigh a choigeartú</string>
     <string name="system_users_toast_created">Úsáideoir cruthaithe</string>
     <string name="system_users_toast_updated">Úsáideoir nuashonraithe</string>
     <string name="system_users_toast_deleted">Úsáideoir scriosta</string>
@@ -211,17 +207,21 @@
     <string name="settings_home_terms">Téarmaí seirbhíse</string>
     <string name="account_passkeys_empty">Níl aon eochair phasaí cláraithe.</string>
     <string name="account_passkey_register_title">Cuir eochair phasaí leis</string>
-    <string name="account_passkey_register_message">Iarrfaidh do ghléas ort cinntiú. Tá an eochair phasaí ceangailte leis an ngléas seo agus úsáidte le haghaidh síniú isteach amach anseo.</string>
     <string name="account_passkey_name_label">Ainm (roghnach)</string>
     <string name="account_passkey_delete_message">Ní shíneoidh \"%1$s\" isteach thú a thuilleadh.</string>
-    <string name="account_totp_description">Síniú isteach le cód 6 dhigit ó app fíordheimhniúcháin.</string>
     <string name="account_totp_enabled">Tá an fíordheimhneoir cumasaithe.</string>
     <string name="account_totp_setup_step1">Scan nó iontráil an rún seo san app fíordheimhniúcháin.</string>
     <string name="account_totp_setup_step2">Iontráil an cód 6 dhigit a thaispeánann d\'app.</string>
     <string name="account_totp_code">Cód</string>
     <string name="account_totp_disable_message">Ní bheidh tú in ann síniú isteach le cód fíordheimhneora a thuilleadh.</string>
     <string name="account_recovery_none">Níor giniúint aon chód téarnaimh.</string>
-    <string name="account_recovery_count">%1$d cód téarnaimh gan úsáid.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d chód téarnaimh fágtha.</item>
+        <item quantity="two">%1$d chód téarnaimh fágtha.</item>
+        <item quantity="few">%1$d chód téarnaimh fágtha.</item>
+        <item quantity="many">%1$d gcód téarnaimh fágtha.</item>
+        <item quantity="other">%1$d cód téarnaimh fágtha.</item>
+    </plurals>
     <string name="account_recovery_generate">Gin cóid</string>
     <string name="account_recovery_regenerate">Athgin cóid</string>
     <string name="account_recovery_regen_title">Athgin cóid téarnaimh?</string>
@@ -270,7 +270,13 @@
     <string name="system_users_session_last_accessed">Rochtain dheireanach: %1$s</string>
     <string name="system_users_revoke_all_title">Cealaigh gach seisiún?</string>
     <string name="system_users_revoke_all_message">Síneofar amach gach seisiún gníomhach den úsáideoir seo.</string>
-    <string name="system_users_pagination_status">Ag taispeáint %1$d–%2$d as %3$d úsáideoir</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Ag taispeáint %1$d–%2$d as %3$d úsáideoir</item>
+        <item quantity="two">Ag taispeáint %1$d–%2$d as %3$d úsáideoir</item>
+        <item quantity="few">Ag taispeáint %1$d–%2$d as %3$d úsáideoir</item>
+        <item quantity="many">Ag taispeáint %1$d–%2$d as %3$d n-úsáideoir</item>
+        <item quantity="other">Ag taispeáint %1$d–%2$d as %3$d úsáideoir</item>
+    </plurals>
     <string name="account_title">Cuntas</string>
     <string name="account_section_identity">Aitheantas</string>
     <string name="account_identity_identity">Aitheantas</string>
@@ -310,11 +316,11 @@
         <item quantity="other">Seoladh an tástáil chuig %1$d ceann scríbe</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
+        <item quantity="one">Cúlghaireadh %1$d seisiún</item>
+        <item quantity="two">Cúlghaireadh %1$d sheisiún</item>
         <item quantity="few">Cúlghaireadh %1$d sheisiún</item>
         <item quantity="many">Cúlghaireadh %1$d seisiún</item>
-        <item quantity="one">Cúlghaireadh 1 seisiún</item>
         <item quantity="other">Cúlghaireadh %1$d seisiúin</item>
-        <item quantity="two">Cúlghaireadh %1$d sheisiún</item>
     </plurals>
     <string name="login_title">Logáil isteach</string>
     <string name="login_section_methods">Modhanna logála isteach</string>
@@ -353,10 +359,8 @@
     <string name="system_setting_hostname">Óstainm a fhógraítear d\'fhreastalaithe eile</string>
     <string name="system_status_peer_id">Aitheantas piaraí</string>
     <string name="system_status_holepunch">Tolladh</string>
-    <string name="system_status_holepunch_value">%1$d rathúil · %2$d teipthe</string>
     <string name="system_status_awaiting_routing">Teachtaireachtaí ag fanacht le ródú</string>
     <string name="system_status_relay_service">Seirbhís athsheachadáin</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d áirithintí · %3$d ciorcaid · %4$d diúltaithe</string>
     <string name="route_target_select">Roghnaigh</string>
     <string name="account_data_description">Íoslódáil cúltaca iomlán is féidir leat a athchóiriú ar an bhfreastalaí Mochi seo nó ar cheann eile.</string>
     <string name="route_target_none">Níl aon sprioc ar fáil</string>
@@ -381,7 +385,13 @@
     <string name="accounts_device_seen">Feicthe go deireanach %1$s</string>
     <string name="notifprefs_device_app">%1$s · aip</string>
     <string name="notifprefs_device_push">%1$s · brú</string>
-    <string name="notifprefs_test_partial">Seoladh an tástáil chuig %1$d as %2$d sprioc</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Seoladh an tástáil chuig %1$d as %2$d cheann scríbe</item>
+        <item quantity="two">Seoladh an tástáil chuig %1$d as %2$d cheann scríbe</item>
+        <item quantity="few">Seoladh an tástáil chuig %1$d as %2$d cheann scríbe</item>
+        <item quantity="many">Seoladh an tástáil chuig %1$d as %2$d gceann scríbe</item>
+        <item quantity="other">Seoladh an tástáil chuig %1$d as %2$d ceann scríbe</item>
+    </plurals>
     <string name="notifprefs_test_none">Níl aon cheann scríbe cumraithe</string>
     <string name="notifprefs_transport_fcm">Brú Android</string>
     <string name="notifprefs_no_destinations">Gan cinn scríbe</string>
@@ -400,4 +410,42 @@
     <string name="accounts_revoke_confirm">Cuirfidh sé seo rochtain %1$s ar an bhféilire ar ceal. Fanfaidh síniú isteach le %2$s go dtí go ndínascfaidh tú é ar an leathanach sínithe isteach.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Téama anaithnid</string>
+    <string name="system_documents_modified">Athraithe</string>
+    <string name="system_documents_discard_title">An gcuirfear na hathruithe i leataobh?</string>
+    <string name="system_documents_discard">Cuir i leataobh</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d rathúil</item>
+        <item quantity="two">%1$d rathúil</item>
+        <item quantity="few">%1$d rathúil</item>
+        <item quantity="many">%1$d rathúil</item>
+        <item quantity="other">%1$d rathúil</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d teipthe</item>
+        <item quantity="two">%1$d teipthe</item>
+        <item quantity="few">%1$d teipthe</item>
+        <item quantity="many">%1$d teipthe</item>
+        <item quantity="other">%1$d teipthe</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d áirithint</item>
+        <item quantity="two">%1$d / %2$d áirithint</item>
+        <item quantity="few">%1$d / %2$d áirithint</item>
+        <item quantity="many">%1$d / %2$d n-áirithint</item>
+        <item quantity="other">%1$d / %2$d áirithint</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d chiorcad</item>
+        <item quantity="two">%1$d chiorcad</item>
+        <item quantity="few">%1$d chiorcad</item>
+        <item quantity="many">%1$d gciorcad</item>
+        <item quantity="other">%1$d ciorcad</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d diúltaithe</item>
+        <item quantity="two">%1$d diúltaithe</item>
+        <item quantity="few">%1$d diúltaithe</item>
+        <item quantity="many">%1$d diúltaithe</item>
+        <item quantity="other">%1$d diúltaithe</item>
+    </plurals>
 </resources>

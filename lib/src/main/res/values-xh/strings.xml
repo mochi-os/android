@@ -103,9 +103,9 @@
     <string name="settings_time_zone">Ummandla wexesha</string>
     <string name="settings_reset_to_defaults">Buyisela kumiselweyo</string>
     <string name="settings_reset_confirm_title">Buyisela izinto ozithandayo?</string>
-    <string name="settings_reset_confirm_message">Oku kuya kuvuselela zonke izinto ozikhethileyo kumaxabiso azo amisiweyo.</string>
+    <string name="settings_reset_confirm_message">Oku kuya kuvuselela ezi zinto ozikhethileyo kumaxabiso azo amisiweyo.</string>
     <string name="settings_reset">Buyisela</string>
-    <string name="settings_display_title">Bonisa</string>
+    <string name="settings_display_title">Umboniso</string>
     <string name="settings_display_reset">Buyisela kumiselweyo</string>
     <string name="settings_display_reset_confirm_title">Buyisela imboniso?</string>
     <string name="settings_display_reset_confirm_message">Oku kuya kubuyisela iisetingi zemboniso kumaxabiso azo amiselweyo.</string>

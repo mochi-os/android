@@ -595,11 +595,6 @@ private fun SessionsDialog(
         title = stringResource(R.string.system_users_sessions_title, user.username),
         content = {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                Text(
-                    stringResource(R.string.system_users_sessions_description),
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
                 when {
                     loading -> Box(
                         modifier = Modifier.fillMaxWidth().padding(vertical = 24.dp),
@@ -683,7 +678,8 @@ private fun PaginationBar(
     val to = minOf(offset + limit, count)
     Column(modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp)) {
         Text(
-            text = stringResource(R.string.system_users_pagination_status, from, to, count),
+            // The noun agrees with the total, the number it sits beside.
+            text = pluralStringResource(R.plurals.system_users_pagination_status, count, from, to, count),
             style = MaterialTheme.typography.labelMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
@@ -750,13 +746,5 @@ private fun EmptyUsers(searchActive: Boolean) {
             style = MaterialTheme.typography.titleMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
-        if (searchActive) {
-            Spacer(Modifier.height(4.dp))
-            Text(
-                stringResource(R.string.system_users_empty_search_hint),
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-        }
     }
 }

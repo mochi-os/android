@@ -103,16 +103,16 @@
     <string name="settings_time_zone">Agbègbè àkókò</string>
     <string name="settings_reset_to_defaults">Pa padà sí àwọn àìyípadà</string>
     <string name="settings_reset_confirm_title">Pa àwọn ìfẹ́ padà?</string>
-    <string name="settings_reset_confirm_message">Èyí yóò tún gbogbo àwọn àfẹ́nilọ́kàn sí àwọn iye àìyípadà wọn.</string>
+    <string name="settings_reset_confirm_message">Èyí yóò tún àwọn àfẹ́nilọ́kàn wọ̀nyí sí àwọn iye àìyípadà wọn.</string>
     <string name="settings_reset">Pa padà</string>
     <string name="settings_display_title">Àfihàn</string>
     <string name="settings_display_reset">Pa padà sí àwọn àìyípadà</string>
     <string name="settings_display_reset_confirm_title">Tun ifihan ṣeto?</string>
     <string name="settings_display_reset_confirm_message">Èyí yóò tún àwọn ètò ìfihàn ṣètò sí àwọn iye àìyípadà wọn.</string>
-    <string name="settings_theme_title">Theme</string>
+    <string name="settings_theme_title">Àkòrí</string>
     <string name="settings_theme_default">Àìyípadà</string>
     <string name="settings_background">Ẹ̀yìn</string>
-    <string name="settings_background_theme">Lát\'ọ̀dọ̀ Theme</string>
+    <string name="settings_background_theme">Láti ọ̀dọ̀ àkòrí</string>
     <string name="settings_background_off">Kòsí</string>
     <string name="game_chat_empty">Kò sí ìránṣẹ́ síbẹ̀</string>
     <string name="game_chat_input_placeholder">Tẹ ìránṣẹ́…</string>
@@ -217,7 +217,7 @@
     <string name="notifications_clear_all_title">Pa gbogbo àwọn ìfitónilétí rẹ́?</string>
     <string name="notifications_clear_all_message">Èyí yóò pa gbogbo ìfitónilétí rẹ́. A kò lè gbà wọ́n padà.</string>
     <string name="settings_value_auto">Aládàáṣe</string>
-    <string name="settings_value_theme">Àìyípadà theme</string>
+    <string name="settings_value_theme">Àìyípadà àkòrí</string>
     <string name="settings_radius">Ìgúnrégé igun</string>
     <string name="settings_timestamp_display">Ìfihàn àkókò</string>
     <string name="settings_timestamp_relative">Ìbátan</string>
@@ -309,7 +309,7 @@
     <string name="game_select_title">Yan eré kan</string>
     <string name="game_select_subtitle">Yan eré kan láti inú ọ̀pá ẹ̀gbẹ́ tàbí bẹ̀rẹ̀ eré tuntun.</string>
     <string name="settings_card">Àṣà káàdì</string>
-    <string name="settings_card_theme">Lát\'ọ̀dọ̀ Theme</string>
+    <string name="settings_card_theme">Láti ọ̀dọ̀ àkòrí</string>
     <string name="settings_card_flat">Pẹ̀tẹ́lẹ̀</string>
     <string name="settings_card_raised">Gbígbé sókè</string>
     <string name="error_server_https">Àdírẹ́sì olùpèsè gbọ́dọ̀ bẹ̀rẹ̀ pẹ̀lú https://</string>

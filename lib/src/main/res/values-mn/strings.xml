@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Цагийн бүс</string>
     <string name="settings_reset_to_defaults">Анхдагчид буцаах</string>
     <string name="settings_reset_confirm_title">Тохиргоог сэргээх үү?</string>
-    <string name="settings_reset_confirm_message">Энэ нь бүх тохиргоог үндсэн утганд буцаана.</string>
+    <string name="settings_reset_confirm_message">Энэ нь эдгээр тохиргоог үндсэн утганд нь буцаана.</string>
     <string name="settings_reset">Шинэчлэх</string>
     <string name="settings_display_title">Дэлгэц</string>
     <string name="settings_display_reset">Анхдагчид буцаах</string>

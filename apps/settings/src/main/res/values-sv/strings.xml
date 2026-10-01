@@ -5,7 +5,7 @@
     <string name="settings_home_logout">Logga ut</string>
     <string name="settings_home_account">Konto</string>
     <string name="settings_home_preferences">Inställningar</string>
-    <string name="settings_home_display">Visa</string>
+    <string name="settings_home_display">Visning</string>
     <string name="settings_home_notification_prefs">Aviseringsinställningar</string>
     <string name="settings_home_accounts">Anslutna konton</string>
     <string name="settings_home_interests">Intressen</string>
@@ -104,13 +104,11 @@
     <string name="accounts_remove">Ta bort</string>
     <string name="accounts_remove_title">Ta bort konto?</string>
     <string name="system_documents_title">Dokument</string>
-    <string name="system_documents_description">Serverregler, villkor och integritetsinformation som visas för dina användare</string>
     <string name="system_documents_tab_rules">Serverregler</string>
     <string name="system_documents_tab_terms">Villkor</string>
     <string name="system_documents_tab_privacy">Integritet</string>
     <string name="system_documents_language">Språk</string>
     <string name="system_documents_no_language">Inget dokument tillgängligt för detta språk.</string>
-    <string name="system_documents_customised">Anpassad</string>
     <string name="system_documents_using_default">Använder medföljande standard</string>
     <string name="system_documents_revert">Återställ till standard</string>
     <string name="system_documents_save">Spara</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Ta bort användare</string>
     <string name="system_users_delete_title">Ta bort användare?</string>
     <string name="system_users_manage_sessions">Hantera sessioner</string>
-    <string name="system_users_sessions_description">Visa och återkalla aktiva sessioner för denna användare.</string>
     <string name="system_users_sessions_empty">Den här användaren har inga aktiva sessioner.</string>
     <string name="system_users_revoke">Återkalla</string>
     <string name="system_users_revoke_all">Återkalla alla sessioner</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Nästa</string>
     <string name="system_users_empty">Inga användare hittades</string>
     <string name="system_users_empty_search">Inga användare matchar din sökning</string>
-    <string name="system_users_empty_search_hint">Försök justera dina sökkriterier</string>
     <string name="system_users_toast_created">Användare skapad</string>
     <string name="system_users_toast_updated">Användare uppdaterad</string>
     <string name="system_users_toast_deleted">Användare borttagen</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">Användarvillkor</string>
     <string name="account_passkeys_empty">Inga nycklar registrerade.</string>
     <string name="account_passkey_register_title">Lägg till nyckel</string>
-    <string name="account_passkey_register_message">Din enhet ber dig bekräfta. Nyckeln är bunden till denna enhet och används för framtida inloggningar.</string>
     <string name="account_passkey_name_label">Namn (valfritt)</string>
     <string name="account_passkey_delete_message">\"%1$s\" kommer inte längre att logga in dig.</string>
-    <string name="account_totp_description">Logga in med en 6-siffrig kod från en autentiseringsapp.</string>
     <string name="account_totp_enabled">Autentisering är aktiverad.</string>
     <string name="account_totp_setup_step1">Skanna eller ange denna hemlighet i din autentiseringsapp.</string>
     <string name="account_totp_setup_step2">Ange den 6-siffriga koden som appen visar.</string>
     <string name="account_totp_code">Kod</string>
     <string name="account_totp_disable_message">Du kan inte längre logga in med en autentiseringskod.</string>
     <string name="account_recovery_none">Inga återställningskoder genererade.</string>
-    <string name="account_recovery_count">%1$d oanvända återställningskoder.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d återstående återställningskod.</item>
+        <item quantity="other">%1$d återstående återställningskoder.</item>
+    </plurals>
     <string name="account_recovery_generate">Generera koder</string>
     <string name="account_recovery_regenerate">Återskapa koder</string>
     <string name="account_recovery_regen_title">Återskapa återställningskoder?</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">Senaste åtkomst: %1$s</string>
     <string name="system_users_revoke_all_title">Återkalla alla sessioner?</string>
     <string name="system_users_revoke_all_message">Alla aktiva sessioner för denna användare loggas ut.</string>
-    <string name="system_users_pagination_status">Visar %1$d–%2$d av %3$d användare</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Visar %1$d–%2$d av %3$d användare</item>
+        <item quantity="other">Visar %1$d–%2$d av %3$d användare</item>
+    </plurals>
     <string name="account_title">Konto</string>
     <string name="account_section_identity">Identitet</string>
     <string name="account_identity_identity">Identitet</string>
@@ -307,7 +307,7 @@
         <item quantity="other">Test skickat till %1$d destinationer</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 session återkallad</item>
+        <item quantity="one">%1$d session återkallad</item>
         <item quantity="other">%1$d sessioner återkallade</item>
     </plurals>
     <string name="login_title">Logga in</string>
@@ -347,10 +347,8 @@
     <string name="system_setting_hostname">Värdnamn annonserat till andra servrar</string>
     <string name="system_status_peer_id">Peer-ID</string>
     <string name="system_status_holepunch">Hålslagning</string>
-    <string name="system_status_holepunch_value">%1$d lyckades · %2$d misslyckades</string>
     <string name="system_status_awaiting_routing">Meddelanden som väntar på routing</string>
     <string name="system_status_relay_service">Relätjänst</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d reservationer · %3$d kretsar · %4$d nekade</string>
     <string name="route_target_select">Välj</string>
     <string name="account_data_description">Ladda ner en fullständig säkerhetskopia som du kan återställa på den här eller en annan Mochi-server.</string>
     <string name="route_target_none">Inga mål tillgängliga</string>
@@ -375,7 +373,10 @@
     <string name="accounts_device_seen">Senast sedd %1$s</string>
     <string name="notifprefs_device_app">%1$s · app</string>
     <string name="notifprefs_device_push">%1$s · push</string>
-    <string name="notifprefs_test_partial">Test skickat till %1$d av %2$d destinationer</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Test skickat till %1$d av %2$d destination</item>
+        <item quantity="other">Test skickat till %1$d av %2$d destinationer</item>
+    </plurals>
     <string name="notifprefs_test_none">Inga destinationer konfigurerade</string>
     <string name="notifprefs_transport_fcm">Android-push</string>
     <string name="notifprefs_no_destinations">Inga destinationer</string>
@@ -394,4 +395,27 @@
     <string name="accounts_revoke_confirm">Detta återkallar kalenderåtkomsten för %1$s. Inloggning med %2$s finns kvar tills du tar bort länken på inloggningssidan.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Okänt tema</string>
+    <string name="system_documents_modified">Ändrad</string>
+    <string name="system_documents_discard_title">Kasta ändringarna?</string>
+    <string name="system_documents_discard">Kasta</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d lyckades</item>
+        <item quantity="other">%1$d lyckades</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d misslyckades</item>
+        <item quantity="other">%1$d misslyckades</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d reservation</item>
+        <item quantity="other">%1$d / %2$d reservationer</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d krets</item>
+        <item quantity="other">%1$d kretsar</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d nekad</item>
+        <item quantity="other">%1$d nekade</item>
+    </plurals>
 </resources>

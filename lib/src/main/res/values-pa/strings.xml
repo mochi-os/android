@@ -103,7 +103,7 @@
     <string name="settings_time_zone">ਟਾਈਮ ਜ਼ੋਨ</string>
     <string name="settings_reset_to_defaults">ਡਿਫਾਲਟ \'ਤੇ ਰੀਸੈੱਟ ਕਰੋ</string>
     <string name="settings_reset_confirm_title">ਪ੍ਰੈਫਰੈਂਸ ਰੀਸੈੱਟ ਕਰੀਏ?</string>
-    <string name="settings_reset_confirm_message">ਇਹ ਸਾਰੀਆਂ ਪਸੰਦਾਂ ਨੂੰ ਉਨ੍ਹਾਂ ਦੇ ਡਿਫਾਲਟ ਮੁੱਲਾਂ \'ਤੇ ਰੀਸੈੱਟ ਕਰ ਦੇਵੇਗਾ।</string>
+    <string name="settings_reset_confirm_message">ਇਹ ਇਨ੍ਹਾਂ ਪਸੰਦਾਂ ਨੂੰ ਉਨ੍ਹਾਂ ਦੇ ਡਿਫਾਲਟ ਮੁੱਲਾਂ \'ਤੇ ਰੀਸੈੱਟ ਕਰ ਦੇਵੇਗਾ।</string>
     <string name="settings_reset">ਰੀਸੈੱਟ</string>
     <string name="settings_display_title">ਡਿਸਪਲੇ</string>
     <string name="settings_display_reset">ਡਿਫਾਲਟ \'ਤੇ ਰੀਸੈੱਟ ਕਰੋ</string>

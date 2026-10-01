@@ -104,13 +104,11 @@
     <string name="accounts_remove">حذف</string>
     <string name="accounts_remove_title">حذف حساب؟</string>
     <string name="system_documents_title">اسناد</string>
-    <string name="system_documents_description">قوانین سرور، شرایط و ضوابط و اعلان حریم خصوصی که به کاربران شما نمایش داده می‌شود</string>
     <string name="system_documents_tab_rules">قوانین سرور</string>
     <string name="system_documents_tab_terms">شرایط و ضوابط</string>
     <string name="system_documents_tab_privacy">حریم خصوصی</string>
     <string name="system_documents_language">زبان</string>
     <string name="system_documents_no_language">سندی برای این زبان در دسترس نیست.</string>
-    <string name="system_documents_customised">سفارشی‌شده</string>
     <string name="system_documents_using_default">استفاده از پیش‌فرض همراه</string>
     <string name="system_documents_revert">بازگشت به پیش‌فرض</string>
     <string name="system_documents_save">ذخیره</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">حذف کاربر</string>
     <string name="system_users_delete_title">حذف کاربر؟</string>
     <string name="system_users_manage_sessions">مدیریت جلسات</string>
-    <string name="system_users_sessions_description">نمایش و لغو نشست‌های فعال برای این کاربر.</string>
     <string name="system_users_sessions_empty">این کاربر هیچ نشست فعالی ندارد.</string>
     <string name="system_users_revoke">لغو</string>
     <string name="system_users_revoke_all">لغو همه نشست‌ها</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">بعدی</string>
     <string name="system_users_empty">کاربری یافت نشد</string>
     <string name="system_users_empty_search">هیچ کاربری با جست‌وجوی شما مطابقت ندارد</string>
-    <string name="system_users_empty_search_hint">معیارهای جست‌وجوی خود را تنظیم کنید</string>
     <string name="system_users_toast_created">کاربر ایجاد شد</string>
     <string name="system_users_toast_updated">کاربر به‌روزرسانی شد</string>
     <string name="system_users_toast_deleted">کاربر حذف شد</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">شرایط خدمات</string>
     <string name="account_passkeys_empty">هیچ کلید عبوری ثبت نشده است.</string>
     <string name="account_passkey_register_title">افزودن کلید عبور</string>
-    <string name="account_passkey_register_message">دستگاه شما از شما تأییدیه می‌خواهد. کلید عبور به این دستگاه گره خورده و برای ورودهای آینده استفاده می‌شود.</string>
     <string name="account_passkey_name_label">نام (اختیاری)</string>
     <string name="account_passkey_delete_message">«%1$s» دیگر شما را وارد نخواهد کرد.</string>
-    <string name="account_totp_description">با کد ۶ رقمی از یک برنامه احراز هویت وارد شوید.</string>
     <string name="account_totp_enabled">احراز هویت فعال است.</string>
     <string name="account_totp_setup_step1">این راز را در برنامه احراز هویت خود اسکن یا وارد کنید.</string>
     <string name="account_totp_setup_step2">کد ۶ رقمی نمایش داده شده توسط برنامه را وارد کنید.</string>
     <string name="account_totp_code">کد</string>
     <string name="account_totp_disable_message">دیگر نمی‌توانید با کد احراز هویت وارد شوید.</string>
     <string name="account_recovery_none">کدهای بازیابی تولید نشده است.</string>
-    <string name="account_recovery_count">%1$d کد بازیابی استفاده‌نشده.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d کد بازیابی باقی مانده است.</item>
+        <item quantity="other">%1$d کد بازیابی باقی مانده است.</item>
+    </plurals>
     <string name="account_recovery_generate">تولید کدها</string>
     <string name="account_recovery_regenerate">تولید مجدد کدها</string>
     <string name="account_recovery_regen_title">تولید مجدد کدهای بازیابی؟</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">آخرین دسترسی: %1$s</string>
     <string name="system_users_revoke_all_title">همه نشست‌ها لغو شوند؟</string>
     <string name="system_users_revoke_all_message">همه نشست‌های فعال این کاربر از سیستم خارج خواهند شد.</string>
-    <string name="system_users_pagination_status">نمایش %1$d–%2$d از %3$d کاربر</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">نمایش %1$d–%2$d از %3$d کاربر</item>
+        <item quantity="other">نمایش %1$d–%2$d از %3$d کاربر</item>
+    </plurals>
     <string name="account_title">حساب</string>
     <string name="account_section_identity">هویت</string>
     <string name="account_identity_identity">هویت</string>
@@ -347,10 +347,8 @@
     <string name="system_setting_hostname">نام میزبان اعلام‌شده به سرورهای دیگر</string>
     <string name="system_status_peer_id">شناسهٔ همتا</string>
     <string name="system_status_holepunch">سوراخ‌کاری</string>
-    <string name="system_status_holepunch_value">%1$d موفق · %2$d ناموفق</string>
     <string name="system_status_awaiting_routing">پیام‌های در انتظار مسیریابی</string>
     <string name="system_status_relay_service">سرویس رله</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d رزروها · %3$d مدارها · %4$d ردشده</string>
     <string name="route_target_select">انتخاب</string>
     <string name="account_data_description">یک نسخهٔ پشتیبان کامل دانلود کنید که می‌توانید روی این کارساز یا کارساز Mochi دیگری بازیابی کنید.</string>
     <string name="route_target_none">هدفی موجود نیست</string>
@@ -375,7 +373,10 @@
     <string name="accounts_device_seen">آخرین بازدید %1$s</string>
     <string name="notifprefs_device_app">%1$s · اپلیکیشن</string>
     <string name="notifprefs_device_push">%1$s · پوش</string>
-    <string name="notifprefs_test_partial">آزمایش به %1$d از %2$d مقصد ارسال شد</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">آزمایش به %1$d از %2$d مقصد ارسال شد</item>
+        <item quantity="other">آزمایش به %1$d از %2$d مقصد ارسال شد</item>
+    </plurals>
     <string name="notifprefs_test_none">هیچ مقصدی پیکربندی نشده است</string>
     <string name="notifprefs_transport_fcm">اعلان Android</string>
     <string name="notifprefs_no_destinations">هیچ مقصدی نیست</string>
@@ -394,4 +395,27 @@
     <string name="accounts_revoke_confirm">این کار دسترسی تقویم %1$s را لغو می‌کند. ورود با %2$s تا زمانی که در صفحهٔ ورود آن را جدا کنید باقی می‌ماند.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">تم ناشناخته</string>
+    <string name="system_documents_modified">ویرایش‌شده</string>
+    <string name="system_documents_discard_title">تغییرات دور انداخته شود؟</string>
+    <string name="system_documents_discard">دور انداختن</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d موفق</item>
+        <item quantity="other">%1$d موفق</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d ناموفق</item>
+        <item quantity="other">%1$d ناموفق</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d رزرو</item>
+        <item quantity="other">%1$d / %2$d رزرو</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d مدار</item>
+        <item quantity="other">%1$d مدار</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d ردشده</item>
+        <item quantity="other">%1$d ردشده</item>
+    </plurals>
 </resources>

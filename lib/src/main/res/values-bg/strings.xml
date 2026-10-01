@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Часова зона</string>
     <string name="settings_reset_to_defaults">Върни към подразбиране</string>
     <string name="settings_reset_confirm_title">Да нулирам ли предпочитанията?</string>
-    <string name="settings_reset_confirm_message">Това ще нулира всички предпочитания до стойностите им по подразбиране.</string>
+    <string name="settings_reset_confirm_message">Това ще нулира тези предпочитания до стойностите им по подразбиране.</string>
     <string name="settings_reset">Нулирай</string>
     <string name="settings_display_title">Показване</string>
     <string name="settings_display_reset">Върни към подразбиране</string>

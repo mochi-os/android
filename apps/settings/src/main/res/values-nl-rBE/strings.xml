@@ -100,13 +100,11 @@
     <string name="accounts_remove">Verwijderen</string>
     <string name="accounts_remove_title">Account verwijderen?</string>
     <string name="system_documents_title">Documenten</string>
-    <string name="system_documents_description">Serverregels, algemene voorwaarden en privacymelding die aan uw gebruikers worden getoond</string>
     <string name="system_documents_tab_rules">Serverregels</string>
     <string name="system_documents_tab_terms">Algemene voorwaarden</string>
     <string name="system_documents_tab_privacy">Privacy</string>
     <string name="system_documents_language">Taal</string>
     <string name="system_documents_no_language">Geen document beschikbaar voor deze taal.</string>
-    <string name="system_documents_customised">Aangepast</string>
     <string name="system_documents_using_default">Meegeleverde standaardversie in gebruik</string>
     <string name="system_documents_revert">Terugzetten naar standaard</string>
     <string name="system_documents_save">Opslaan</string>
@@ -176,7 +174,6 @@
     <string name="system_users_delete">Gebruiker verwijderen</string>
     <string name="system_users_delete_title">Gebruiker verwijderen?</string>
     <string name="system_users_manage_sessions">Sessies beheren</string>
-    <string name="system_users_sessions_description">Bekijk en trek actieve sessies in voor deze gebruiker.</string>
     <string name="system_users_sessions_empty">Deze gebruiker heeft geen actieve sessies.</string>
     <string name="system_users_revoke">Intrekken</string>
     <string name="system_users_revoke_all">Alle sessies intrekken</string>
@@ -186,7 +183,6 @@
     <string name="system_users_next">Volgende</string>
     <string name="system_users_empty">Geen gebruikers gevonden</string>
     <string name="system_users_empty_search">Geen gebruikers komen overeen met je zoekopdracht</string>
-    <string name="system_users_empty_search_hint">Probeer uw zoekcriteria aan te passen</string>
     <string name="system_users_toast_created">Gebruiker aangemaakt</string>
     <string name="system_users_toast_updated">Gebruiker bijgewerkt</string>
     <string name="system_users_toast_deleted">Gebruiker verwijderd</string>
@@ -205,17 +201,18 @@
     <string name="settings_home_terms">Servicevoorwaarden</string>
     <string name="account_passkeys_empty">Geen passkeys geregistreerd.</string>
     <string name="account_passkey_register_title">Passkey toevoegen</string>
-    <string name="account_passkey_register_message">Je toestel vraagt je om te bevestigen. De passkey is gebonden aan dit toestel en wordt gebruikt voor toekomstige aanmeldingen.</string>
     <string name="account_passkey_name_label">Naam (optioneel)</string>
     <string name="account_passkey_delete_message">\"%1$s\" zal je niet langer aanmelden.</string>
-    <string name="account_totp_description">Meld je aan met een 6-cijferige code uit een authenticator-app.</string>
     <string name="account_totp_enabled">Authenticator is ingeschakeld.</string>
     <string name="account_totp_setup_step1">Scan of voer deze geheime sleutel in je authenticator-app in.</string>
     <string name="account_totp_setup_step2">Voer de 6-cijferige code in die je app toont.</string>
     <string name="account_totp_code">Code</string>
     <string name="account_totp_disable_message">Je zal je niet meer kunnen aanmelden met een authenticator-code.</string>
     <string name="account_recovery_none">Geen herstelcodes gegenereerd.</string>
-    <string name="account_recovery_count">%1$d ongebruikte herstelcodes.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">Nog %1$d herstelcode over.</item>
+        <item quantity="other">Nog %1$d herstelcodes over.</item>
+    </plurals>
     <string name="account_recovery_generate">Codes genereren</string>
     <string name="account_recovery_regenerate">Codes opnieuw genereren</string>
     <string name="account_recovery_regen_title">Herstelcodes opnieuw genereren?</string>
@@ -263,7 +260,10 @@
     <string name="system_users_session_last_accessed">Laatst geopend: %1$s</string>
     <string name="system_users_revoke_all_title">Alle sessies intrekken?</string>
     <string name="system_users_revoke_all_message">Alle actieve sessies voor deze gebruiker worden afgemeld.</string>
-    <string name="system_users_pagination_status">%1$d–%2$d van %3$d gebruikers worden weergegeven</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">%1$d–%2$d van %3$d gebruiker wordt weergegeven</item>
+        <item quantity="other">%1$d–%2$d van %3$d gebruikers worden weergegeven</item>
+    </plurals>
 
     <string name="account_title">Account</string>
     <string name="account_section_identity">Identiteit</string>
@@ -302,7 +302,7 @@
         <item quantity="other">Test verzonden naar %1$d bestemmingen</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 sessie ingetrokken</item>
+        <item quantity="one">%1$d sessie ingetrokken</item>
         <item quantity="other">%1$d sessies ingetrokken</item>
     </plurals>
     <string name="login_title">Inloggen</string>
@@ -342,10 +342,8 @@
     <string name="system_setting_hostname">Hostnaam aangekondigd aan andere servers</string>
     <string name="system_status_peer_id">Peer-ID</string>
     <string name="system_status_holepunch">Doorboring</string>
-    <string name="system_status_holepunch_value">%1$d geslaagd · %2$d mislukt</string>
     <string name="system_status_awaiting_routing">Berichten die wachten op routering</string>
     <string name="system_status_relay_service">Relaisdienst</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d reserveringen · %3$d circuits · %4$d geweigerd</string>
     <string name="route_target_select">Selecteren</string>
     <string name="account_data_description">Download een volledige back-up die je kunt terugzetten op deze of een andere Mochi-server.</string>
     <string name="route_target_none">Geen doelen beschikbaar</string>
@@ -374,4 +372,31 @@
     <string name="notifprefs_no_destinations">Geen bestemmingen</string>
     <string name="account_data_generate">Wachtwoordzin genereren</string>
     <string name="system_settings_theme_unknown">Onbekend thema</string>
+    <string name="system_documents_modified">Gewijzigd</string>
+    <string name="system_documents_discard_title">Wijzigingen verwerpen?</string>
+    <string name="system_documents_discard">Verwerpen</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Test verzonden naar %1$d van %2$d bestemming</item>
+        <item quantity="other">Test verzonden naar %1$d van %2$d bestemmingen</item>
+    </plurals>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d geslaagd</item>
+        <item quantity="other">%1$d geslaagd</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d mislukt</item>
+        <item quantity="other">%1$d mislukt</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d reservering</item>
+        <item quantity="other">%1$d / %2$d reserveringen</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d circuit</item>
+        <item quantity="other">%1$d circuits</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d geweigerd</item>
+        <item quantity="other">%1$d geweigerd</item>
+    </plurals>
 </resources>

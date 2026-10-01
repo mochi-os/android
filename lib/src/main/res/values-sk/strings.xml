@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Časové pásmo</string>
     <string name="settings_reset_to_defaults">Obnoviť na predvolené</string>
     <string name="settings_reset_confirm_title">Obnoviť predvoľby?</string>
-    <string name="settings_reset_confirm_message">Týmto sa všetky predvoľby obnovia na predvolené hodnoty.</string>
+    <string name="settings_reset_confirm_message">Týmto sa tieto predvoľby obnovia na predvolené hodnoty.</string>
     <string name="settings_reset">Obnoviť</string>
     <string name="settings_display_title">Zobrazenie</string>
     <string name="settings_display_reset">Obnoviť na predvolené</string>

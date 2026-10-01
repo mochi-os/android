@@ -303,7 +303,7 @@
     <string name="settings_time_zone">Time zone</string>
     <string name="settings_reset_to_defaults">Reset to defaults</string>
     <string name="settings_reset_confirm_title">Reset preferences?</string>
-    <string name="settings_reset_confirm_message">This will reset all preferences to their default values.</string>
+    <string name="settings_reset_confirm_message">This will reset these preferences to their default values.</string>
     <string name="settings_reset">Reset</string>
 
     <!-- Display screen -->

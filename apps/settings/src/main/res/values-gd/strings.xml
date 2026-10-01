@@ -104,13 +104,11 @@
     <string name="accounts_remove">Thoir air falbh</string>
     <string name="accounts_remove_title">Thoir an cunntas air falbh?</string>
     <string name="system_documents_title">Sgrìobhainnean</string>
-    <string name="system_documents_description">Riaghailtean an fhrithealaiche, teirmichean is cùmhnantan, agus brath prìobhaideachd a chithear do na cleachdaichean agad</string>
     <string name="system_documents_tab_rules">Riaghailtean an fhrithealaiche</string>
     <string name="system_documents_tab_terms">Teirmichean is cùmhnantan</string>
     <string name="system_documents_tab_privacy">Prìobhaideachd</string>
     <string name="system_documents_language">Cànan</string>
     <string name="system_documents_no_language">Chan eil sgrìobhainn ri làimh airson a\' chànain seo.</string>
-    <string name="system_documents_customised">Air a ghnàthachadh</string>
     <string name="system_documents_using_default">A\' cleachdadh bunaiteach pacaichte</string>
     <string name="system_documents_revert">Aisig chun a\' bhun-tuiteamais</string>
     <string name="system_documents_save">Sàbhail</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Sguab às cleachdaiche</string>
     <string name="system_users_delete_title">Sguab às cleachdaiche?</string>
     <string name="system_users_manage_sessions">Stiùirich na seiseanan</string>
-    <string name="system_users_sessions_description">Seall is cùl-ghairm seiseanan gnìomhach airson a\' chleachdaiche seo.</string>
     <string name="system_users_sessions_empty">Chan eil seiseanan gnìomhach aig a\' chleachdaiche seo.</string>
     <string name="system_users_revoke">Cùl-ghairm</string>
     <string name="system_users_revoke_all">Cùl-ghairm gach seisean</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Air adhart</string>
     <string name="system_users_empty">Cha deach cleachdaichean a lorg</string>
     <string name="system_users_empty_search">Chan eil cleachdaichean a\' freagairt air do lorg</string>
-    <string name="system_users_empty_search_hint">Feuch ri na cumhachan luirg agad atharrachadh</string>
     <string name="system_users_toast_created">Cleachdaiche cruthaichte</string>
     <string name="system_users_toast_updated">Cleachdaiche ùraichte</string>
     <string name="system_users_toast_deleted">Cleachdaiche sguabte às</string>
@@ -211,17 +207,20 @@
     <string name="settings_home_terms">Cumhachan seirbheis</string>
     <string name="account_passkeys_empty">Chan eil iuchraichean inntrigidh clàraichte.</string>
     <string name="account_passkey_register_title">Cuir iuchair inntrigidh ris</string>
-    <string name="account_passkey_register_message">Iarraidh an t-uidheam agad ort dearbhadh. Tha an iuchair inntrigidh ceangailte ris an uidheam seo agus thèid a cleachdadh airson logaidhean a-steach san àm ri teachd.</string>
     <string name="account_passkey_name_label">Ainm (roghainneil)</string>
     <string name="account_passkey_delete_message">Cha logaich \"%1$s\" thu a-steach tuilleadh.</string>
-    <string name="account_totp_description">Log a-steach le còd 6 figear bho aplacaid dhearbhaidh.</string>
     <string name="account_totp_enabled">Tha an dearbhair air a chomasachadh.</string>
     <string name="account_totp_setup_step1">Sganaich no cuir a-steach an dìomhair seo san aplacaid dhearbhaidh agad.</string>
     <string name="account_totp_setup_step2">Cuir a-steach an còd 6 figear a tha an aplacaid agad a\' sealltainn.</string>
     <string name="account_totp_code">Còd</string>
     <string name="account_totp_disable_message">Cha bhi e comasach dhut log a-steach le còd dearbhair tuilleadh.</string>
     <string name="account_recovery_none">Cha deach còdan ath-bhuannachadh a chruthachadh.</string>
-    <string name="account_recovery_count">%1$d còdan ath-bhuannachadh gun chleachdadh.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d chòd ath-bhuannachadh air fhàgail.</item>
+        <item quantity="two">%1$d chòd ath-bhuannachadh air fhàgail.</item>
+        <item quantity="few">%1$d còdan ath-bhuannachadh air am fàgail.</item>
+        <item quantity="other">%1$d còd ath-bhuannachadh air fhàgail.</item>
+    </plurals>
     <string name="account_recovery_generate">Cruthaich còdan</string>
     <string name="account_recovery_regenerate">Ath-chruthaich còdan</string>
     <string name="account_recovery_regen_title">Ath-chruthaich còdan ath-bhuannachadh?</string>
@@ -270,7 +269,12 @@
     <string name="system_users_session_last_accessed">Inntrigeadh mu dheireadh: %1$s</string>
     <string name="system_users_revoke_all_title">Thoir air falbh a h-uile seasan?</string>
     <string name="system_users_revoke_all_message">Thèid a h-uile seasan beò aig a\' chleachdaiche seo a-mach.</string>
-    <string name="system_users_pagination_status">A\' sealltainn %1$d–%2$d à %3$d cleachdaichean</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">A\' sealltainn %1$d–%2$d à %3$d chleachdaiche</item>
+        <item quantity="two">A\' sealltainn %1$d–%2$d à %3$d chleachdaiche</item>
+        <item quantity="few">A\' sealltainn %1$d–%2$d à %3$d cleachdaichean</item>
+        <item quantity="other">A\' sealltainn %1$d–%2$d à %3$d cleachdaiche</item>
+    </plurals>
     <string name="account_title">Cunntas</string>
     <string name="account_section_identity">Dearbh-aithne</string>
     <string name="account_identity_identity">Dearbh-aithne</string>
@@ -351,10 +355,8 @@
     <string name="system_setting_hostname">Ainm an òstair ga fhoillseachadh do fhrithealaichean eile</string>
     <string name="system_status_peer_id">ID seise</string>
     <string name="system_status_holepunch">Tolladh</string>
-    <string name="system_status_holepunch_value">%1$d soirbheachail · %2$d dh’fhàillig</string>
     <string name="system_status_awaiting_routing">Teachdaireachdan a’ feitheamh air slighe</string>
     <string name="system_status_relay_service">Seirbheis ath-sheachadaidh</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d gleidheadh · %3$d cuairtean · %4$d air an diùltadh</string>
     <string name="route_target_select">Tagh</string>
     <string name="account_data_description">Luchdaich a-nuas lethbhreac-glèidhidh slàn as urrainn dhut aiseag air an fhrithealaiche Mochi seo no air fear eile.</string>
     <string name="route_target_none">Chan eil targaidean ri làimh</string>
@@ -379,7 +381,12 @@
     <string name="accounts_device_seen">Air fhaicinn mu dheireadh %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplacaid</string>
     <string name="notifprefs_device_push">%1$s · putadh</string>
-    <string name="notifprefs_test_partial">Chaidh an deuchainn a chur gu %1$d à %2$d cheann-uidhe</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Chaidh an deuchainn a chur gu %1$d à %2$d cheann-uidhe</item>
+        <item quantity="two">Chaidh an deuchainn a chur gu %1$d à %2$d cheann-uidhe</item>
+        <item quantity="few">Chaidh an deuchainn a chur gu %1$d à %2$d cinn-uidhe</item>
+        <item quantity="other">Chaidh an deuchainn a chur gu %1$d à %2$d ceann-uidhe</item>
+    </plurals>
     <string name="notifprefs_test_none">Cha deach cinn-uidhe a chur air dòigh</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
     <string name="notifprefs_no_destinations">Gun chinn-uidhe</string>
@@ -398,4 +405,37 @@
     <string name="accounts_revoke_confirm">Cuiridh seo às do inntrigeadh mìosachain %1$s. Mairidh an clàradh a-steach le %2$s gus an dì-cheangail thu e air duilleag a\' chlàraidh a-steach.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Ùrlar neo-aithnichte</string>
+    <string name="system_documents_modified">Air atharrachadh</string>
+    <string name="system_documents_discard_title">A bheil thu airson na h-atharraichean a thilgeil air falbh?</string>
+    <string name="system_documents_discard">Tilg air falbh</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d soirbheachail</item>
+        <item quantity="two">%1$d soirbheachail</item>
+        <item quantity="few">%1$d soirbheachail</item>
+        <item quantity="other">%1$d soirbheachail</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d dh\'fhàillig</item>
+        <item quantity="two">%1$d dh\'fhàillig</item>
+        <item quantity="few">%1$d dh\'fhàillig</item>
+        <item quantity="other">%1$d dh\'fhàillig</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d àite glèidhte</item>
+        <item quantity="two">%1$d / %2$d àite glèidhte</item>
+        <item quantity="few">%1$d / %2$d àiteachan glèidhte</item>
+        <item quantity="other">%1$d / %2$d àite glèidhte</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d chuairt</item>
+        <item quantity="two">%1$d chuairt</item>
+        <item quantity="few">%1$d cuairtean</item>
+        <item quantity="other">%1$d cuairt</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d air a dhiùltadh</item>
+        <item quantity="two">%1$d air an diùltadh</item>
+        <item quantity="few">%1$d air an diùltadh</item>
+        <item quantity="other">%1$d air an diùltadh</item>
+    </plurals>
 </resources>

@@ -103,7 +103,7 @@
     <string name="settings_time_zone">დროის სარტყელი</string>
     <string name="settings_reset_to_defaults">ნაგულისხმევზე გადაყენება</string>
     <string name="settings_reset_confirm_title">უპირატესობების გადაყენება?</string>
-    <string name="settings_reset_confirm_message">ეს დააბრუნებს ყველა პარამეტრს ნაგულისხმევ მნიშვნელობებზე.</string>
+    <string name="settings_reset_confirm_message">ეს დააბრუნებს ამ პარამეტრებს ნაგულისხმევ მნიშვნელობებზე.</string>
     <string name="settings_reset">გადაყენება</string>
     <string name="settings_display_title">ჩვენება</string>
     <string name="settings_display_reset">ნაგულისხმევზე გადაყენება</string>

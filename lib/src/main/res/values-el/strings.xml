@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Ζώνη ώρας</string>
     <string name="settings_reset_to_defaults">Επαναφορά στις προεπιλογές</string>
     <string name="settings_reset_confirm_title">Επαναφορά προτιμήσεων;</string>
-    <string name="settings_reset_confirm_message">Αυτό θα επαναφέρει όλες τις προτιμήσεις στις προεπιλεγμένες τιμές τους.</string>
+    <string name="settings_reset_confirm_message">Αυτό θα επαναφέρει αυτές τις προτιμήσεις στις προεπιλεγμένες τιμές τους.</string>
     <string name="settings_reset">Επαναφορά</string>
     <string name="settings_display_title">Εμφάνιση</string>
     <string name="settings_display_reset">Επαναφορά στις προεπιλογές</string>

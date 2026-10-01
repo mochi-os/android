@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Tijdzone</string>
     <string name="settings_reset_to_defaults">Resetten naar standaardwaarden</string>
     <string name="settings_reset_confirm_title">Voorkeuren resetten?</string>
-    <string name="settings_reset_confirm_message">Hiermee worden alle voorkeuren teruggezet naar hun standaardwaarden.</string>
+    <string name="settings_reset_confirm_message">Hiermee worden deze voorkeuren teruggezet naar hun standaardwaarden.</string>
     <string name="settings_reset">Resetten</string>
     <string name="settings_display_title">Weergave</string>
     <string name="settings_display_reset">Resetten naar standaardwaarden</string>

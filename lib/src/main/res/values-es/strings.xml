@@ -103,9 +103,9 @@
     <string name="settings_time_zone">Zona horaria</string>
     <string name="settings_reset_to_defaults">Restablecer a los valores predeterminados</string>
     <string name="settings_reset_confirm_title">¿Restablecer las preferencias?</string>
-    <string name="settings_reset_confirm_message">Esto restablecerá todas las preferencias a sus valores predeterminados.</string>
+    <string name="settings_reset_confirm_message">Esto restablecerá estas preferencias a sus valores predeterminados.</string>
     <string name="settings_reset">Restablecer</string>
-    <string name="settings_display_title">Mostrar</string>
+    <string name="settings_display_title">Pantalla</string>
     <string name="settings_display_reset">Restablecer a los valores predeterminados</string>
     <string name="settings_display_reset_confirm_title">¿Restablecer la visualización?</string>
     <string name="settings_display_reset_confirm_message">Esto restablecerá la configuración de visualización a sus valores predeterminados.</string>

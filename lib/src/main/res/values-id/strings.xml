@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Zona waktu</string>
     <string name="settings_reset_to_defaults">Reset ke default</string>
     <string name="settings_reset_confirm_title">Reset preferensi?</string>
-    <string name="settings_reset_confirm_message">Ini akan mengatur ulang semua preferensi ke nilai defaultnya.</string>
+    <string name="settings_reset_confirm_message">Ini akan mengatur ulang preferensi ini ke nilai defaultnya.</string>
     <string name="settings_reset">Setel ulang</string>
     <string name="settings_display_title">Tampilan</string>
     <string name="settings_display_reset">Reset ke default</string>

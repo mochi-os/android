@@ -104,13 +104,11 @@
     <string name="accounts_remove">لرې کول</string>
     <string name="accounts_remove_title">حساب لرې کړو؟</string>
     <string name="system_documents_title">سندونه</string>
-    <string name="system_documents_description">د Server قواعد، شرایط، او د محرمیت خبرتیا چې ستاسو کاروونکو ته ښودل کیږي</string>
     <string name="system_documents_tab_rules">د Server قواعد</string>
     <string name="system_documents_tab_terms">شرایط او مقررات</string>
     <string name="system_documents_tab_privacy">محرمیت</string>
     <string name="system_documents_language">ژبه</string>
     <string name="system_documents_no_language">د دې ژبې لپاره هیڅ سند شتون نه لري.</string>
-    <string name="system_documents_customised">دودیز شوی</string>
     <string name="system_documents_using_default">د بنډل شوي اصلي کارول</string>
     <string name="system_documents_revert">ډیفالټ ته بیرته راګرځول</string>
     <string name="system_documents_save">خوندي کول</string>
@@ -141,7 +139,7 @@
     <string name="system_setting_auth_totp">د TOTP تصدیق کوونکي اپ په کارولو سره لاګ ان</string>
     <string name="system_setting_auth_recovery">د بیرته راګرځولو کوډ په کارولو سره لاګ ان</string>
     <string name="system_setting_auth_oauth">د OAuth 2.0 په کارولو سره لاګ ان</string>
-    <string name="system_setting_default_theme">ډیفالټ تیم</string>
+    <string name="system_setting_default_theme">ډیفالټ ښکارندوی</string>
     <string name="system_setting_domains_verification">د ډومین تایید اړین دی</string>
     <string name="system_setting_email_from">د سیسټم بریښنالیکونو لپاره ډیفالټ پته</string>
     <string name="system_setting_oauth_public_url">د OAuth بیرته لارښوونو لپاره عامه URL</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">کاروونکی ړنګ کړئ</string>
     <string name="system_users_delete_title">کاروونکی ړنګ کړئ؟</string>
     <string name="system_users_manage_sessions">سیشنونه اداره کړئ</string>
-    <string name="system_users_sessions_description">د دې کاروونکي لپاره فعالې ناستې وګورئ او لغوه کړئ.</string>
     <string name="system_users_sessions_empty">دا کاروونکی فعال ناستې نه لري.</string>
     <string name="system_users_revoke">لغوه کول</string>
     <string name="system_users_revoke_all">ټولې ناستې لغوه کړئ</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">بل</string>
     <string name="system_users_empty">هیڅ کاروونکي ونه موندل شول</string>
     <string name="system_users_empty_search">هیڅ کاروونکي ستاسو د لټون سره سمون نه خوري</string>
-    <string name="system_users_empty_search_hint">د خپل لټون معیارونه سمول هڅه وکړئ</string>
     <string name="system_users_toast_created">کاروونکی جوړ شو</string>
     <string name="system_users_toast_updated">کاروونکی نوی شو</string>
     <string name="system_users_toast_deleted">کاروونکی حذف شو</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">د خدمت شرایط</string>
     <string name="account_passkeys_empty">هیڅ پاسکي نه دي راجستر شوي.</string>
     <string name="account_passkey_register_title">پاسکي اضافه کړئ</string>
-    <string name="account_passkey_register_message">ستاسو وسیله به ستاسو څخه د تایید غوښتنه وکړي، پاسکي د دې وسیلې سره تړل شوې او د راتلونکو لاسلیکونو لپاره کارول کیږي.</string>
     <string name="account_passkey_name_label">نوم (اختیاري)</string>
     <string name="account_passkey_delete_message">\"%1$s\" به نور تاسو ته اجازه ورنه کړي.</string>
-    <string name="account_totp_description">د تایید پروګرام څخه د 6 عددي کوډ سره ننوځئ.</string>
     <string name="account_totp_enabled">تصدیق کوونکی فعال دی.</string>
     <string name="account_totp_setup_step1">دا راز په خپل تایید پروګرام کې سکن کړئ یا داخل کړئ.</string>
     <string name="account_totp_setup_step2">هغه 6 عددي کوډ داخل کړئ چې ستاسو پروګرام یې ښیې.</string>
     <string name="account_totp_code">کوډ</string>
     <string name="account_totp_disable_message">تاسو به نور د تایید کوډ سره ننه وتلی شئ.</string>
     <string name="account_recovery_none">د بیا رغونې کوډونه نه دي جوړ شوي.</string>
-    <string name="account_recovery_count">%1$d نه کارول شوي د بیارغونې کوډونه.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d د بیارغونې کوډ پاتې دی.</item>
+        <item quantity="other">%1$d د بیارغونې کوډونه پاتې دي.</item>
+    </plurals>
     <string name="account_recovery_generate">کوډونه جوړ کړئ</string>
     <string name="account_recovery_regenerate">کوډونه بیا جوړ کړئ</string>
     <string name="account_recovery_regen_title">د بیارغونې کوډونه بیا جوړ کړئ؟</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">وروستی لاسرسی: %1$s</string>
     <string name="system_users_revoke_all_title">ټولې غونډې لغوه کړئ؟</string>
     <string name="system_users_revoke_all_message">د دې کارن ټولې فعالې غونډې به وتل وکړي.</string>
-    <string name="system_users_pagination_status">د %3$d کاروونکو څخه %1$d–%2$d ښودنه</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">د %3$d کاروونکي څخه %1$d–%2$d ښودل کېږي</item>
+        <item quantity="other">د %3$d کاروونکو څخه %1$d–%2$d ښودل کېږي</item>
+    </plurals>
     <string name="account_title">حساب</string>
     <string name="account_section_identity">هویت</string>
     <string name="account_identity_identity">هویت</string>
@@ -307,7 +307,7 @@
         <item quantity="other">ازموینه %1$d منزلونو ته واستول شوه</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 ناسته لغوه شوه</item>
+        <item quantity="one">%1$d ناسته لغوه شوه</item>
         <item quantity="other">%1$d ناستې لغوه شوې</item>
     </plurals>
     <string name="login_title">ننوتل</string>
@@ -347,10 +347,8 @@
     <string name="system_setting_hostname">نورو سرورونو ته اعلان شوی د کوربه نوم</string>
     <string name="system_status_peer_id">د همتا پېژند</string>
     <string name="system_status_holepunch">سوری کول</string>
-    <string name="system_status_holepunch_value">%1$d بریالي · %2$d ناکام</string>
     <string name="system_status_awaiting_routing">د لارښوونې په تمه پیغامونه</string>
     <string name="system_status_relay_service">د لېږد خدمت</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d خوندي کول · %3$d برخې · %4$d رد شوي</string>
     <string name="route_target_select">غوره کول</string>
     <string name="account_data_description">بشپړ بیک اپ ډاونلوډ کړئ چې تاسو یې پر دې یا بل Mochi سرور بحال کولی شئ.</string>
     <string name="route_target_none">هیڅ هدف نه لري</string>
@@ -375,7 +373,10 @@
     <string name="accounts_device_seen">وروستی ځل لیدل شوی %1$s</string>
     <string name="notifprefs_device_app">%1$s · اپ</string>
     <string name="notifprefs_device_push">%1$s · پوش</string>
-    <string name="notifprefs_test_partial">ازموینه %2$d موخو څخه %1$d ته ولېږل شوه</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">ازموینه له %2$d منزل څخه %1$d ته ولېږل شوه</item>
+        <item quantity="other">ازموینه له %2$d منزلونو څخه %1$d ته ولېږل شوه</item>
+    </plurals>
     <string name="notifprefs_test_none">هیڅ منزلونه نه دي تنظیم شوي</string>
     <string name="notifprefs_transport_fcm">د Android پوش</string>
     <string name="notifprefs_no_destinations">هیڅ منزلونه نشته</string>
@@ -394,4 +395,27 @@
     <string name="accounts_revoke_confirm">دا به د %1$s کليز لاسرسی لغوه کړي. د %2$s سره ننوتل به تر هغه پاتې وي چې تاسو یې د ننوتلو پاڼه کې جلا نه کړئ.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">نامعلوم ښکارندوی</string>
+    <string name="system_documents_modified">بدل شوی</string>
+    <string name="system_documents_discard_title">بدلونونه ړنګ شي؟</string>
+    <string name="system_documents_discard">ړنګول</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d بریالی</item>
+        <item quantity="other">%1$d بریالي</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d ناکام</item>
+        <item quantity="other">%1$d ناکام</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d ځای نیونه</item>
+        <item quantity="other">%1$d / %2$d ځای نیونې</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d سرکټ</item>
+        <item quantity="other">%1$d سرکټونه</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d رد شوی</item>
+        <item quantity="other">%1$d رد شوي</item>
+    </plurals>
 </resources>

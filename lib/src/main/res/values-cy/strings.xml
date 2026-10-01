@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Cylchfa amser</string>
     <string name="settings_reset_to_defaults">Ailosod i\'r diofynnau</string>
     <string name="settings_reset_confirm_title">Ailosod dewisiadau?</string>
-    <string name="settings_reset_confirm_message">Bydd hyn yn ailosod yr holl ddewisiadau i\'w gwerthoedd diofyn.</string>
+    <string name="settings_reset_confirm_message">Bydd hyn yn ailosod y dewisiadau hyn i\'w gwerthoedd diofyn.</string>
     <string name="settings_reset">Ailosod</string>
     <string name="settings_display_title">Arddangos</string>
     <string name="settings_display_reset">Ailosod i\'r diofynnau</string>

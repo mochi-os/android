@@ -104,13 +104,11 @@
     <string name="accounts_remove">Retire</string>
     <string name="accounts_remove_title">Retire kont?</string>
     <string name="system_documents_title">Dokiman</string>
-    <string name="system_documents_description">Règ sèvè, kondisyon ak konfidansyalite ki montre itilizatè ou yo</string>
     <string name="system_documents_tab_rules">Règ sèvè</string>
     <string name="system_documents_tab_terms">Kondisyon</string>
     <string name="system_documents_tab_privacy">Konfidansyalite</string>
     <string name="system_documents_language">Lang</string>
     <string name="system_documents_no_language">Pa gen dokiman disponib pou lang sa a.</string>
-    <string name="system_documents_customised">Pèsonalize</string>
     <string name="system_documents_using_default">Ap itilize defo enkli</string>
     <string name="system_documents_revert">Retounen nan default</string>
     <string name="system_documents_save">Sove</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Efase itilizatè</string>
     <string name="system_users_delete_title">Efase itilizatè?</string>
     <string name="system_users_manage_sessions">Jere sesyon</string>
-    <string name="system_users_sessions_description">Wè epi revoke sesyon aktif pou itilizatè sa.</string>
     <string name="system_users_sessions_empty">Itilizatè sa pa gen sesyon aktif.</string>
     <string name="system_users_revoke">Anile</string>
     <string name="system_users_revoke_all">Revoke tout sesyon</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Pwochen</string>
     <string name="system_users_empty">Pa gen itilizatè ki jwenn</string>
     <string name="system_users_empty_search">Pa gen itilizatè ki koresponn ak rechèch ou</string>
-    <string name="system_users_empty_search_hint">Eseye ajiste kritè rechèch ou</string>
     <string name="system_users_toast_created">Itilizatè kreye</string>
     <string name="system_users_toast_updated">Itilizatè mete ajou</string>
     <string name="system_users_toast_deleted">Itilizatè efase</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">Kondisyon sèvis</string>
     <string name="account_passkeys_empty">Pa gen passkey ki anrejistre.</string>
     <string name="account_passkey_register_title">Ajoute passkey</string>
-    <string name="account_passkey_register_message">Aparèy ou a ap mande w pou konfime. Passkey la mare ak aparèy sa a epi yo itilize pou koneksyon nan lavni.</string>
     <string name="account_passkey_name_label">Non (opsyonèl)</string>
     <string name="account_passkey_delete_message">\"%1$s\" pa pral konekte w ankò.</string>
-    <string name="account_totp_description">Konekte ak kòd 6 chif soti nan yon aplikasyon otantifikasyon.</string>
     <string name="account_totp_enabled">Otantifikatè aktive.</string>
     <string name="account_totp_setup_step1">Eskane oswa antre sekrè sa a nan aplikasyon otantifikasyon ou a.</string>
     <string name="account_totp_setup_step2">Antre kòd 6 chif aplikasyon ou montre a.</string>
     <string name="account_totp_code">Kòd</string>
     <string name="account_totp_disable_message">Ou pap kapab konekte ak kòd otantifikatè ankò.</string>
     <string name="account_recovery_none">Pa gen kòd rekiperasyon ki kreye.</string>
-    <string name="account_recovery_count">%1$d kòd rekiperasyon ki pa itilize.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d kòd rekiperasyon ki rete.</item>
+        <item quantity="other">%1$d kòd rekiperasyon ki rete.</item>
+    </plurals>
     <string name="account_recovery_generate">Jenere kòd</string>
     <string name="account_recovery_regenerate">Rejenere kòd</string>
     <string name="account_recovery_regen_title">Rejenere kòd rekiperasyon?</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">Dènye aksè: %1$s</string>
     <string name="system_users_revoke_all_title">Revoke tout sesyon?</string>
     <string name="system_users_revoke_all_message">Tout sesyon aktif itilizatè sa a ap deconnte.</string>
-    <string name="system_users_pagination_status">Montre %1$d–%2$d nan %3$d itilizatè</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Montre %1$d–%2$d nan %3$d itilizatè</item>
+        <item quantity="other">Montre %1$d–%2$d nan %3$d itilizatè</item>
+    </plurals>
     <string name="account_title">Kont</string>
     <string name="account_section_identity">Idantite</string>
     <string name="account_identity_identity">Idantite</string>
@@ -306,7 +306,7 @@
         <item quantity="other">Tès voye nan %1$d destinasyon</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 sesyon revoke</item>
+        <item quantity="one">%1$d sesyon revoke</item>
         <item quantity="other">%1$d sesyon revoke</item>
     </plurals>
     <string name="login_title">Koneksyon</string>
@@ -346,10 +346,8 @@
     <string name="system_setting_hostname">Non lame anonse bay lòt sèvè</string>
     <string name="system_status_peer_id">ID parèy</string>
     <string name="system_status_holepunch">Pèse twou</string>
-    <string name="system_status_holepunch_value">%1$d reyisi · %2$d echwe</string>
     <string name="system_status_awaiting_routing">Mesaj k ap tann acheminman</string>
     <string name="system_status_relay_service">Sèvis rele</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d rezèvasyon · %3$d sikui · %4$d refize</string>
     <string name="route_target_select">Chwazi</string>
     <string name="account_data_description">Telechaje yon sovgad konplè ou ka retabli sou sèvè sa a oswa sou yon lòt sèvè Mochi.</string>
     <string name="route_target_none">Pa gen sib ki disponib</string>
@@ -374,7 +372,10 @@
     <string name="accounts_device_seen">Dènye fwa yo wè l %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplikasyon</string>
     <string name="notifprefs_device_push">%1$s · push</string>
-    <string name="notifprefs_test_partial">Tès la voye bay %1$d sou %2$d destinasyon</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Tès la voye bay %1$d sou %2$d destinasyon</item>
+        <item quantity="other">Tès la voye bay %1$d sou %2$d destinasyon</item>
+    </plurals>
     <string name="notifprefs_test_none">Pa gen destinasyon konfigire</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
     <string name="notifprefs_no_destinations">Pa gen destinasyon</string>
@@ -393,4 +394,27 @@
     <string name="accounts_revoke_confirm">Sa ap retire aksè kalandriye %1$s. Koneksyon ak %2$s ap rete jiskaske ou dekonekte l nan paj Koneksyon an.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Tèm enkoni</string>
+    <string name="system_documents_modified">Modifye</string>
+    <string name="system_documents_discard_title">Jete chanjman yo?</string>
+    <string name="system_documents_discard">Jete</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d reyisi</item>
+        <item quantity="other">%1$d reyisi</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d echwe</item>
+        <item quantity="other">%1$d echwe</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d rezèvasyon</item>
+        <item quantity="other">%1$d / %2$d rezèvasyon</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d sikui</item>
+        <item quantity="other">%1$d sikui</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d refize</item>
+        <item quantity="other">%1$d refize</item>
+    </plurals>
 </resources>

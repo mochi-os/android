@@ -103,9 +103,9 @@
     <string name="settings_time_zone">Izoni yesikhathi</string>
     <string name="settings_reset_to_defaults">Setha kabusha kokuzenzakalelayo</string>
     <string name="settings_reset_confirm_title">Setha kabusha okuthandayo?</string>
-    <string name="settings_reset_confirm_message">Lokhu kuzosetha kabusha zonke izintandokazi zibe yizilinganiso ezizenzakalelayo.</string>
+    <string name="settings_reset_confirm_message">Lokhu kuzosetha kabusha lezi zintandokazi zibe yizilinganiso ezizenzakalelayo.</string>
     <string name="settings_reset">Setha kabusha</string>
-    <string name="settings_display_title">Bonisa</string>
+    <string name="settings_display_title">Isibonisi</string>
     <string name="settings_display_reset">Setha kabusha kokuzenzakalelayo</string>
     <string name="settings_display_reset_confirm_title">Buyisela isibonisi?</string>
     <string name="settings_display_reset_confirm_message">Lokhu kuzobuyisela izilungiselelo zesibonisi emananí awo azenzakalelayo.</string>

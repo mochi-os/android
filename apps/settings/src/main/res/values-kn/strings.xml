@@ -104,13 +104,11 @@
     <string name="accounts_remove">ತೆಗೆದುಹಾಕಿ</string>
     <string name="accounts_remove_title">ಖಾತೆ ತೆಗೆದುಹಾಕಬೇಕೆ?</string>
     <string name="system_documents_title">ಡಾಕ್ಯುಮೆಂಟ್‌ಗಳು</string>
-    <string name="system_documents_description">ನಿಮ್ಮ ಬಳಕೆದಾರರಿಗೆ ತೋರಿಸಲಾದ ಸರ್ವರ್ ನಿಯಮಗಳು, ನಿಯಮಗಳು ಮತ್ತು ಷರತ್ತುಗಳು, ಮತ್ತು ಗೌಪ್ಯತೆ ಸೂಚನೆ</string>
     <string name="system_documents_tab_rules">ಸರ್ವರ್ ನಿಯಮಗಳು</string>
     <string name="system_documents_tab_terms">ನಿಯಮಗಳು ಮತ್ತು ಷರತ್ತುಗಳು</string>
     <string name="system_documents_tab_privacy">ಗೌಪ್ಯತೆ</string>
     <string name="system_documents_language">ಭಾಷೆ</string>
     <string name="system_documents_no_language">ಈ ಭಾಷೆಗೆ ಯಾವುದೇ ಡಾಕ್ಯುಮೆಂಟ್ ಲಭ್ಯವಿಲ್ಲ.</string>
-    <string name="system_documents_customised">ಕಸ್ಟಮೈಸ್ ಮಾಡಲಾಗಿದೆ</string>
     <string name="system_documents_using_default">ಬಂಡಲ್ ಡೀಫಾಲ್ಟ್ ಬಳಸುತ್ತಿದೆ</string>
     <string name="system_documents_revert">ಡೀಫಾಲ್ಟ್‌ಗೆ ಮರಳಿಸಿ</string>
     <string name="system_documents_save">ಉಳಿಸಿ</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">ಬಳಕೆದಾರ ಅಳಿಸಿ</string>
     <string name="system_users_delete_title">ಬಳಕೆದಾರ ಅಳಿಸಬೇಕೆ?</string>
     <string name="system_users_manage_sessions">ಸೆಷನ್‌ಗಳನ್ನು ನಿರ್ವಹಿಸಿ</string>
-    <string name="system_users_sessions_description">ಈ ಬಳಕೆದಾರರ ಸಕ್ರಿಯ ಸೆಷನ್‌ಗಳನ್ನು ವೀಕ್ಷಿಸಿ ಮತ್ತು ರದ್ದುಗೊಳಿಸಿ.</string>
     <string name="system_users_sessions_empty">ಈ ಬಳಕೆದಾರರಿಗೆ ಯಾವುದೇ ಸಕ್ರಿಯ ಸೆಷನ್‌ಗಳಿಲ್ಲ.</string>
     <string name="system_users_revoke">ರದ್ದುಗೊಳಿಸಿ</string>
     <string name="system_users_revoke_all">ಎಲ್ಲಾ ಸೆಷನ್‌ಗಳನ್ನು ಹಿಂಪಡೆಯಿರಿ</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">ಮುಂದೆ</string>
     <string name="system_users_empty">ಯಾವುದೇ ಬಳಕೆದಾರರು ಸಿಗಲಿಲ್ಲ</string>
     <string name="system_users_empty_search">ಯಾವುದೇ ಬಳಕೆದಾರರು ನಿಮ್ಮ ಹುಡುಕಾಟಕ್ಕೆ ಹೊಂದಿಕೆಯಾಗುವುದಿಲ್ಲ</string>
-    <string name="system_users_empty_search_hint">ನಿಮ್ಮ ಹುಡುಕಾಟ ಮಾನದಂಡಗಳನ್ನು ಹೊಂದಿಸಲು ಪ್ರಯತ್ನಿಸಿ</string>
     <string name="system_users_toast_created">ಬಳಕೆದಾರ ರಚಿಸಲಾಗಿದೆ</string>
     <string name="system_users_toast_updated">ಬಳಕೆದಾರ ನವೀಕರಿಸಲಾಗಿದೆ</string>
     <string name="system_users_toast_deleted">ಬಳಕೆದಾರರನ್ನು ಅಳಿಸಲಾಗಿದೆ</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">ಸೇವಾ ನಿಬಂಧನೆಗಳು</string>
     <string name="account_passkeys_empty">ಯಾವುದೇ ಪಾಸ್‌ಕೀಗಳನ್ನು ನೋಂದಾಯಿಸಲಾಗಿಲ್ಲ.</string>
     <string name="account_passkey_register_title">ಪಾಸ್‌ಕೀ ಸೇರಿಸಿ</string>
-    <string name="account_passkey_register_message">ನಿಮ್ಮ ಸಾಧನವು ಖಚಿತಪಡಿಸಲು ಕೇಳುತ್ತದೆ. ಪಾಸ್‌ಕೀ ಈ ಸಾಧನಕ್ಕೆ ಜೋಡಣೆಯಾಗಿದೆ ಮತ್ತು ಭವಿಷ್ಯದ ಸೈನ್-ಇನ್‌ಗಳಿಗೆ ಬಳಸಲಾಗುತ್ತದೆ.</string>
     <string name="account_passkey_name_label">ಹೆಸರು (ಐಚ್ಛಿಕ)</string>
     <string name="account_passkey_delete_message">\"%1$s\" ಇನ್ನು ಮುಂದೆ ನಿಮ್ಮನ್ನು ಸೈನ್ ಇನ್ ಮಾಡುವುದಿಲ್ಲ.</string>
-    <string name="account_totp_description">ದೃಢೀಕರಣ ಅಪ್ಲಿಕೇಶನ್‌ನಿಂದ 6-ಅಂಕಿಯ ಕೋಡ್‌ನೊಂದಿಗೆ ಸೈನ್ ಇನ್ ಮಾಡಿ.</string>
     <string name="account_totp_enabled">ದೃಢೀಕರಿಸುವವರನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ.</string>
     <string name="account_totp_setup_step1">ಈ ರಹಸ್ಯವನ್ನು ನಿಮ್ಮ ದೃಢೀಕರಣ ಅಪ್ಲಿಕೇಶನ್‌ನಲ್ಲಿ ಸ್ಕ್ಯಾನ್ ಮಾಡಿ ಅಥವಾ ನಮೂದಿಸಿ.</string>
     <string name="account_totp_setup_step2">ನಿಮ್ಮ ಅಪ್ಲಿಕೇಶನ್ ತೋರಿಸುವ 6-ಅಂಕಿಯ ಕೋಡ್ ನಮೂದಿಸಿ.</string>
     <string name="account_totp_code">ಕೋಡ್</string>
     <string name="account_totp_disable_message">ನೀವು ಇನ್ನು ಮುಂದೆ ದೃಢೀಕರಣ ಕೋಡ್‌ನೊಂದಿಗೆ ಸೈನ್ ಇನ್ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
     <string name="account_recovery_none">ಯಾವುದೇ ಮರುಪಡೆಯುವ ಕೋಡ್‌ಗಳನ್ನು ರಚಿಸಲಾಗಿಲ್ಲ.</string>
-    <string name="account_recovery_count">%1$d ಬಳಸದ ಮರುಪಡೆಯುವ ಕೋಡ್‌ಗಳು.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d ಮರುಪಡೆಯುವ ಕೋಡ್ ಉಳಿದಿದೆ.</item>
+        <item quantity="other">%1$d ಮರುಪಡೆಯುವ ಕೋಡ್‌ಗಳು ಉಳಿದಿವೆ.</item>
+    </plurals>
     <string name="account_recovery_generate">ಕೋಡ್‌ಗಳನ್ನು ರಚಿಸಿ</string>
     <string name="account_recovery_regenerate">ಕೋಡ್‌ಗಳನ್ನು ಮರುಸೃಷ್ಟಿಸಿ</string>
     <string name="account_recovery_regen_title">ಮರುಪಡೆಯುವ ಕೋಡ್‌ಗಳನ್ನು ಮರುಸೃಷ್ಟಿಸಬೇಕೇ?</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">ಕೊನೆಯ ಪ್ರವೇಶ: %1$s</string>
     <string name="system_users_revoke_all_title">ಎಲ್ಲಾ ಸೆಷನ್‌ಗಳನ್ನು ರದ್ದುಗೊಳಿಸಬೇಕೇ?</string>
     <string name="system_users_revoke_all_message">ಈ ಬಳಕೆದಾರನ ಎಲ್ಲಾ ಸಕ್ರಿಯ ಸೆಷನ್‌ಗಳು ಸೈನ್ ಔಟ್ ಆಗುತ್ತವೆ.</string>
-    <string name="system_users_pagination_status">%3$d ಬಳಕೆದಾರರಲ್ಲಿ %1$d–%2$d ತೋರಿಸುತ್ತಿದೆ</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">%3$d ಬಳಕೆದಾರರಲ್ಲಿ %1$d–%2$d ತೋರಿಸಲಾಗುತ್ತಿದೆ</item>
+        <item quantity="other">%3$d ಬಳಕೆದಾರರಲ್ಲಿ %1$d–%2$d ತೋರಿಸಲಾಗುತ್ತಿದೆ</item>
+    </plurals>
     <string name="account_title">ಖಾತೆ</string>
     <string name="account_section_identity">ಗುರುತು</string>
     <string name="account_identity_identity">ಗುರುತು</string>
@@ -347,10 +347,8 @@
     <string name="system_setting_hostname">ಇತರ ಸರ್ವರ್‌ಗಳಿಗೆ ಪ್ರಕಟಿಸಲಾದ ಹೋಸ್ಟ್ ಹೆಸರು</string>
     <string name="system_status_peer_id">ಪೀರ್ ID</string>
     <string name="system_status_holepunch">ಹೋಲ್ ಪಂಚ್</string>
-    <string name="system_status_holepunch_value">%1$d ಯಶಸ್ವಿ · %2$d ವಿಫಲ</string>
     <string name="system_status_awaiting_routing">ರೂಟಿಂಗ್‌ಗಾಗಿ ಕಾಯುತ್ತಿರುವ ಸಂದೇಶಗಳು</string>
     <string name="system_status_relay_service">ರಿಲೇ ಸೇವೆ</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d ಕಾಯ್ದಿರಿಸುವಿಕೆಗಳು · %3$d ಸರ್ಕ್ಯೂಟ್‌ಗಳು · %4$d ತಿರಸ್ಕರಿಸಲಾಗಿದೆ</string>
     <string name="route_target_select">ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="account_data_description">ಈ ಅಥವಾ ಇನ್ನೊಂದು Mochi ಸರ್ವರ್‌ನಲ್ಲಿ ನೀವು ಮರುಸ್ಥಾಪಿಸಬಹುದಾದ ಸಂಪೂರ್ಣ ಬ್ಯಾಕಪ್ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ.</string>
     <string name="route_target_none">ಯಾವುದೇ ಗುರಿಗಳು ಲಭ್ಯವಿಲ್ಲ</string>
@@ -375,7 +373,10 @@
     <string name="accounts_device_seen">ಕೊನೆಯದಾಗಿ ಕಂಡದ್ದು %1$s</string>
     <string name="notifprefs_device_app">%1$s · ಆ್ಯಪ್</string>
     <string name="notifprefs_device_push">%1$s · ಪುಶ್</string>
-    <string name="notifprefs_test_partial">%2$dರಲ್ಲಿ %1$d ಗಮ್ಯಸ್ಥಾನಗಳಿಗೆ ಪರೀಕ್ಷೆ ಕಳುಹಿಸಲಾಗಿದೆ</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">ಪರೀಕ್ಷೆಯನ್ನು %2$d ಗಮ್ಯಸ್ಥಾನದ ಪೈಕಿ %1$dಕ್ಕೆ ಕಳುಹಿಸಲಾಗಿದೆ</item>
+        <item quantity="other">ಪರೀಕ್ಷೆಯನ್ನು %2$d ಗಮ್ಯಸ್ಥಾನಗಳ ಪೈಕಿ %1$dಕ್ಕೆ ಕಳುಹಿಸಲಾಗಿದೆ</item>
+    </plurals>
     <string name="notifprefs_test_none">ಯಾವುದೇ ಡೆಸ್ಟಿನೇಶನ್‌ಗಳನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಲಾಗಿಲ್ಲ</string>
     <string name="notifprefs_transport_fcm">Android ಪುಶ್</string>
     <string name="notifprefs_no_destinations">ಯಾವುದೇ ತಲುಪುವ ಸ್ಥಳಗಳಿಲ್ಲ</string>
@@ -394,4 +395,27 @@
     <string name="accounts_revoke_confirm">ಇದು %1$s ನ ಕ್ಯಾಲೆಂಡರ್ ಪ್ರವೇಶವನ್ನು ರದ್ದುಗೊಳಿಸುತ್ತದೆ. ಲಾಗಿನ್ ಪುಟದಲ್ಲಿ ಅನ್‌ಲಿಂಕ್ ಮಾಡುವವರೆಗೆ %2$s ನೊಂದಿಗೆ ಸೈನ್-ಇನ್ ಉಳಿಯುತ್ತದೆ.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">ಅಜ್ಞಾತ ಥೀಮ್</string>
+    <string name="system_documents_modified">ಮಾರ್ಪಡಿಸಲಾಗಿದೆ</string>
+    <string name="system_documents_discard_title">ಬದಲಾವಣೆಗಳನ್ನು ತಿರಸ್ಕರಿಸಬೇಕೇ?</string>
+    <string name="system_documents_discard">ತಿರಸ್ಕರಿಸಿ</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d ಯಶಸ್ವಿ</item>
+        <item quantity="other">%1$d ಯಶಸ್ವಿ</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d ವಿಫಲ</item>
+        <item quantity="other">%1$d ವಿಫಲ</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d ಕಾಯ್ದಿರಿಸುವಿಕೆ</item>
+        <item quantity="other">%1$d / %2$d ಕಾಯ್ದಿರಿಸುವಿಕೆಗಳು</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d ಸರ್ಕ್ಯೂಟ್</item>
+        <item quantity="other">%1$d ಸರ್ಕ್ಯೂಟ್‌ಗಳು</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d ತಿರಸ್ಕರಿಸಲಾಗಿದೆ</item>
+        <item quantity="other">%1$d ತಿರಸ್ಕರಿಸಲಾಗಿದೆ</item>
+    </plurals>
 </resources>

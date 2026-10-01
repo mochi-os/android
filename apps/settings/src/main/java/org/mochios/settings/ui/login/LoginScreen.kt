@@ -43,6 +43,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -53,6 +54,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.toClipEntry
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -159,9 +161,10 @@ fun LoginScreen(
             )
             HorizontalDivider()
 
+            val passkeyFallback = stringResource(R.string.login_method_passkey)
             PasskeysSection(
                 passkeys = state.passkeys,
-                onRegister = viewModel::registerPasskey,
+                onRegister = { name -> viewModel.registerPasskey(name, passkeyFallback) },
                 onRename = viewModel::renamePasskey,
                 onDelete = viewModel::deletePasskey,
             )
@@ -346,8 +349,12 @@ private fun PasskeysSection(
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
     } else {
+        // Keyed by id, so a row's rename and delete state stays with its
+        // passkey when the list re-sorts or loses a row above it.
         passkeys.forEach { p ->
-            PasskeyRow(p, onRename, onDelete)
+            key(p.id) {
+                PasskeyRow(p, onRename, onDelete)
+            }
         }
     }
     Spacer(Modifier.height(8.dp))
@@ -363,19 +370,12 @@ private fun PasskeysSection(
             onDismissRequest = { showRegister = false; draft = "" },
             title = stringResource(R.string.account_passkey_register_title),
             content = {
-                Column {
-                    Text(
-                        stringResource(R.string.account_passkey_register_message),
-                        style = MaterialTheme.typography.bodySmall,
-                    )
-                    Spacer(Modifier.height(8.dp))
-                    MochiTextField(
-                        value = draft,
-                        onValueChange = { draft = it },
-                        label = { Text(stringResource(R.string.account_passkey_name_label)) },
-                        singleLine = true,
-                    )
-                }
+                MochiTextField(
+                    value = draft,
+                    onValueChange = { draft = passkeyNameLimit(it) },
+                    label = { Text(stringResource(R.string.account_passkey_name_label)) },
+                    singleLine = true,
+                )
             },
             confirmText = stringResource(R.string.account_passkey_register),
             onConfirm = {
@@ -395,8 +395,9 @@ private fun PasskeyRow(
     onDelete: (String) -> Unit,
 ) {
     var renaming by remember { mutableStateOf(false) }
-    var draft by remember { mutableStateOf(passkey.name) }
+    var draft by remember { mutableStateOf("") }
     var confirmDelete by remember { mutableStateOf(false) }
+    val rename = passkeyRename(draft, passkey.name)
 
     MochiCard(modifier = Modifier.fillMaxWidth()) {
         Row(
@@ -407,7 +408,7 @@ private fun PasskeyRow(
                 if (renaming) {
                     MochiTextField(
                         value = draft,
-                        onValueChange = { draft = it },
+                        onValueChange = { draft = passkeyNameLimit(it) },
                         singleLine = true,
                         modifier = Modifier.fillMaxWidth(),
                     )
@@ -416,15 +417,20 @@ private fun PasskeyRow(
                 }
             }
             if (renaming) {
-                MochiTextButton(onClick = {
-                    onRename(passkey.id, draft.trim())
-                    renaming = false
-                }) { Text(stringResource(R.string.account_save)) }
-                MochiTextButton(onClick = { renaming = false; draft = passkey.name }) {
+                MochiTextButton(
+                    onClick = {
+                        rename?.let { onRename(passkey.id, it) }
+                        renaming = false
+                    },
+                    enabled = rename != null,
+                ) { Text(stringResource(R.string.account_save)) }
+                MochiTextButton(onClick = { renaming = false }) {
                     Text(stringResource(R.string.account_cancel))
                 }
             } else {
-                MochiIconButton(onClick = { renaming = true }) {
+                // Each rename starts from the name the passkey has now, not
+                // from text left behind by an abandoned or failed one.
+                MochiIconButton(onClick = { draft = passkey.name; renaming = true }) {
                     Icon(Icons.Default.Edit, contentDescription = stringResource(R.string.account_rename))
                 }
                 MochiIconButton(onClick = { confirmDelete = true }) {
@@ -459,12 +465,6 @@ private fun PasskeyRow(
 private fun TotpSection(enabled: Boolean, onSetup: () -> Unit, onDisable: () -> Unit) {
     var confirmDisable by remember { mutableStateOf(false) }
     SectionHeader(stringResource(R.string.account_section_totp))
-    Text(
-        stringResource(R.string.account_totp_description),
-        style = MaterialTheme.typography.bodySmall,
-        color = MaterialTheme.colorScheme.onSurfaceVariant,
-    )
-    Spacer(Modifier.height(6.dp))
     if (enabled) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Text(
@@ -580,7 +580,7 @@ private fun RecoveryCodesSection(count: Int, onGenerate: () -> Unit) {
     var confirm by remember { mutableStateOf(false) }
     SectionHeader(stringResource(R.string.account_section_recovery))
     Text(
-        if (count > 0) stringResource(R.string.account_recovery_count, count)
+        if (count > 0) pluralStringResource(R.plurals.account_recovery_count, count, count)
         else stringResource(R.string.account_recovery_none),
         style = MaterialTheme.typography.bodySmall,
         color = MaterialTheme.colorScheme.onSurfaceVariant,

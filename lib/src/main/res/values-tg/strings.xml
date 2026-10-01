@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Минтақаи вақт</string>
     <string name="settings_reset_to_defaults">Барқарорсозӣ ба қиматҳои нобаёнӣ</string>
     <string name="settings_reset_confirm_title">Афзалиятҳоро барқарор кардан?</string>
-    <string name="settings_reset_confirm_message">Ин ҳама афзалиятҳоро ба арзишҳои пешфарзи онҳо барқарор мекунад.</string>
+    <string name="settings_reset_confirm_message">Ин амал ин афзалиятҳоро ба арзишҳои пешфарзашон барқарор мекунад.</string>
     <string name="settings_reset">Барқарорсозӣ</string>
     <string name="settings_display_title">Намоиш</string>
     <string name="settings_display_reset">Барқарорсозӣ ба қиматҳои нобаёнӣ</string>

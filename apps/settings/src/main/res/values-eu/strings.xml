@@ -5,7 +5,7 @@
     <string name="settings_home_logout">Amaitu saioa</string>
     <string name="settings_home_account">Kontua</string>
     <string name="settings_home_preferences">Hobespenak</string>
-    <string name="settings_home_display">Bistaratu</string>
+    <string name="settings_home_display">Pantaila</string>
     <string name="settings_home_notification_prefs">Jakinarazpenen hobespenak</string>
     <string name="settings_home_accounts">Konektatutako kontuak</string>
     <string name="settings_home_interests">Interesak</string>
@@ -104,13 +104,11 @@
     <string name="accounts_remove">Kendu</string>
     <string name="accounts_remove_title">Kontua kendu?</string>
     <string name="system_documents_title">Dokumentuak</string>
-    <string name="system_documents_description">Zure erabiltzaileei erakusten zaizkien zerbitzariaren arauak, baldintzak eta pribatutasun-oharra</string>
     <string name="system_documents_tab_rules">Zerbitzariaren arauak</string>
     <string name="system_documents_tab_terms">Baldintzak</string>
     <string name="system_documents_tab_privacy">Pribatutasuna</string>
     <string name="system_documents_language">Hizkuntza</string>
     <string name="system_documents_no_language">Ez dago dokumenturik erabilgarri hizkuntza honetarako.</string>
-    <string name="system_documents_customised">Pertsonalizatua</string>
     <string name="system_documents_using_default">Pakete-lehenetsia erabiltzen</string>
     <string name="system_documents_revert">Itzuli lehenetsira</string>
     <string name="system_documents_save">Gorde</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Ezabatu erabiltzailea</string>
     <string name="system_users_delete_title">Ezabatu erabiltzailea?</string>
     <string name="system_users_manage_sessions">Kudeatu saioak</string>
-    <string name="system_users_sessions_description">Ikusi eta baliogabetu erabiltzaile honen saio aktiboak.</string>
     <string name="system_users_sessions_empty">Erabiltzaile honek ez du saio aktiborik.</string>
     <string name="system_users_revoke">Indargabetu</string>
     <string name="system_users_revoke_all">Indargabetu saio guztiak</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Hurrengoa</string>
     <string name="system_users_empty">Ez da erabiltzailerik aurkitu</string>
     <string name="system_users_empty_search">Ez dago zure bilaketarekin bat datorren erabiltzailerik</string>
-    <string name="system_users_empty_search_hint">Saiatu zure bilaketa-irizpideak doitzen</string>
     <string name="system_users_toast_created">Erabiltzailea sortu da</string>
     <string name="system_users_toast_updated">Erabiltzailea eguneratu da</string>
     <string name="system_users_toast_deleted">Erabiltzailea ezabatu da</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">Zerbitzuaren baldintzak</string>
     <string name="account_passkeys_empty">Ez dago erregistratutako sarbide-gakorik.</string>
     <string name="account_passkey_register_title">Sarbide-gako bat gehitu</string>
-    <string name="account_passkey_register_message">Zure gailuak baieztatzeko eskatuko dizu. Sarbide-gakoa gailu honetara lotuta dago eta etorkizuneko saio-hasteetarako erabiliko da.</string>
     <string name="account_passkey_name_label">Izena (aukerakoa)</string>
     <string name="account_passkey_delete_message">\"%1$s\"-ek ez du gehiago saioa hasiko.</string>
-    <string name="account_totp_description">Hasi saioa autentifikazio-aplikazio bateko 6 zifrako kodearekin.</string>
     <string name="account_totp_enabled">Autentifikatzailea gaituta dago.</string>
     <string name="account_totp_setup_step1">Eskaneatu edo sartu sekretu hau zure autentifikazio-aplikazioan.</string>
     <string name="account_totp_setup_step2">Sartu zure aplikazioak erakusten duen 6 zifrako kodea.</string>
     <string name="account_totp_code">Kodea</string>
     <string name="account_totp_disable_message">Ezin izango duzu autentifikatzailearen kodearekin saiorik hasi.</string>
     <string name="account_recovery_none">Ez da berreskuratze-koderik sortu.</string>
-    <string name="account_recovery_count">Erabili gabeko %1$d berreskuratze-kode.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d berreskuratze-kode geratzen da.</item>
+        <item quantity="other">%1$d berreskuratze-kode geratzen dira.</item>
+    </plurals>
     <string name="account_recovery_generate">Sortu kodeak</string>
     <string name="account_recovery_regenerate">Sortu berriro kodeak</string>
     <string name="account_recovery_regen_title">Sortu berriro berreskuratze-kodeak?</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">Azken atzipena: %1$s</string>
     <string name="system_users_revoke_all_title">Indargabetu saio guztiak?</string>
     <string name="system_users_revoke_all_message">Erabiltzaile honen saio aktibo guztiek saioa amaituko dute.</string>
-    <string name="system_users_pagination_status">%3$d erabiltzailetik %1$d–%2$d erakusten</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">%1$d–%2$d / %3$d erabiltzaile erakusten</item>
+        <item quantity="other">%1$d–%2$d / %3$d erabiltzaile erakusten</item>
+    </plurals>
     <string name="account_title">Kontua</string>
     <string name="account_section_identity">Identitatea</string>
     <string name="account_identity_identity">Identitatea</string>
@@ -307,7 +307,7 @@
         <item quantity="other">Proba %1$d helmugatara bidali da</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 saio baliogabetuta</item>
+        <item quantity="one">%1$d saio baliogabetuta</item>
         <item quantity="other">%1$d saio baliogabetuta</item>
     </plurals>
     <string name="login_title">Saio-hasiera</string>
@@ -347,10 +347,8 @@
     <string name="system_setting_hostname">Beste zerbitzariei iragarritako ostalari-izena</string>
     <string name="system_status_peer_id">Pareko IDa</string>
     <string name="system_status_holepunch">Zulaketa</string>
-    <string name="system_status_holepunch_value">%1$d ondo · %2$d huts</string>
     <string name="system_status_awaiting_routing">Bideratzearen zain dauden mezuak</string>
     <string name="system_status_relay_service">Errele-zerbitzua</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d erreserbak · %3$d zirkuituak · %4$d ukatuak</string>
     <string name="route_target_select">Hautatu</string>
     <string name="account_data_description">Deskargatu babeskopia osoa, zerbitzari honetan edo beste Mochi zerbitzari batean berreskuratu dezakezuna.</string>
     <string name="route_target_none">Ez dago helbururik erabilgarri</string>
@@ -375,7 +373,10 @@
     <string name="accounts_device_seen">Azkenekoz ikusia %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplikazioa</string>
     <string name="notifprefs_device_push">%1$s · push jakinarazpenak</string>
-    <string name="notifprefs_test_partial">Proba %2$d helburutik %1$d-era bidali da</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Proba bidali da: %1$d / %2$d helmuga</item>
+        <item quantity="other">Proba bidali da: %1$d / %2$d helmuga</item>
+    </plurals>
     <string name="notifprefs_test_none">Ez da helbururik konfiguratu</string>
     <string name="notifprefs_transport_fcm">Android push jakinarazpenak</string>
     <string name="notifprefs_no_destinations">Helmugarik ez</string>
@@ -394,4 +395,27 @@
     <string name="accounts_revoke_confirm">Honek %1$s kontuaren egutegirako sarbidea baliogabetuko du. %2$s bidezko saio-hasiera mantendu egingo da saioa hasteko orrian deslotu arte.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Gai ezezaguna</string>
+    <string name="system_documents_modified">Aldatua</string>
+    <string name="system_documents_discard_title">Aldaketak baztertu?</string>
+    <string name="system_documents_discard">Baztertu</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d arrakastatsu</item>
+        <item quantity="other">%1$d arrakastatsu</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d huts eginda</item>
+        <item quantity="other">%1$d huts eginda</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d erreserba</item>
+        <item quantity="other">%1$d / %2$d erreserba</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d zirkuitu</item>
+        <item quantity="other">%1$d zirkuitu</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d ukatuta</item>
+        <item quantity="other">%1$d ukatuta</item>
+    </plurals>
 </resources>

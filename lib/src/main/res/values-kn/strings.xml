@@ -103,7 +103,7 @@
     <string name="settings_time_zone">ಸಮಯ ವಲಯ</string>
     <string name="settings_reset_to_defaults">ಡೀಫಾಲ್ಟ್‌ಗಳಿಗೆ ರೀಸೆಟ್ ಮಾಡಿ</string>
     <string name="settings_reset_confirm_title">ಪ್ರಿಫರೆನ್ಸ್‌ಗಳನ್ನು ರೀಸೆಟ್ ಮಾಡಬೇಕೆ?</string>
-    <string name="settings_reset_confirm_message">ಇದು ಎಲ್ಲಾ ಆದ್ಯತೆಗಳನ್ನು ಅವುಗಳ ಡೀಫಾಲ್ಟ್ ಮೌಲ್ಯಗಳಿಗೆ ಮರುಹೊಂದಿಸುತ್ತದೆ.</string>
+    <string name="settings_reset_confirm_message">ಇದು ಈ ಆದ್ಯತೆಗಳನ್ನು ಅವುಗಳ ಡೀಫಾಲ್ಟ್ ಮೌಲ್ಯಗಳಿಗೆ ಮರುಹೊಂದಿಸುತ್ತದೆ.</string>
     <string name="settings_reset">ರೀಸೆಟ್ ಮಾಡಿ</string>
     <string name="settings_display_title">ಪ್ರದರ್ಶನ</string>
     <string name="settings_display_reset">ಡೀಫಾಲ್ಟ್‌ಗಳಿಗೆ ರೀಸೆಟ್ ಮಾಡಿ</string>

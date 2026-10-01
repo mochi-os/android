@@ -209,7 +209,6 @@
     <string name="settings_units_imperial">Imperiales</string>
     <string name="settings_units_usa">EE. UU.</string>
     <string name="settings_time_zone">Zona horaria</string>
-    <string name="settings_reset_confirm_message">Esto restablecerá todas las preferencias a sus valores predeterminados.</string>
     <string name="settings_display_reset_confirm_title">¿Restablecer la visualización?</string>
     <string name="settings_display_reset_confirm_message">Esto restablecerá los ajustes de visualización a sus valores predeterminados.</string>
     <string name="settings_theme_title">Tema</string>

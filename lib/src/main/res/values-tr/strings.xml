@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Saat dilimi</string>
     <string name="settings_reset_to_defaults">Varsayılanlara sıfırla</string>
     <string name="settings_reset_confirm_title">Tercihler sıfırlansın mı?</string>
-    <string name="settings_reset_confirm_message">Bu işlem tüm tercihleri varsayılan değerlerine sıfırlayacak.</string>
+    <string name="settings_reset_confirm_message">Bu işlem bu tercihleri varsayılan değerlerine sıfırlayacak.</string>
     <string name="settings_reset">Sıfırla</string>
     <string name="settings_display_title">Görünüm</string>
     <string name="settings_display_reset">Varsayılanlara sıfırla</string>

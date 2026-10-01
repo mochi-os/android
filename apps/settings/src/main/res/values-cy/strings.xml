@@ -104,13 +104,11 @@
     <string name="accounts_remove">Tynnu</string>
     <string name="accounts_remove_title">Tynnu cyfrif?</string>
     <string name="system_documents_title">Dogfennau</string>
-    <string name="system_documents_description">Rheolau\'r gweinydd, telerau ac amodau, a hysbysiad preifatrwydd a ddangosir i\'ch defnyddwyr</string>
     <string name="system_documents_tab_rules">Rheolau\'r gweinydd</string>
     <string name="system_documents_tab_terms">Telerau ac amodau</string>
     <string name="system_documents_tab_privacy">Preifatrwydd</string>
     <string name="system_documents_language">Iaith</string>
     <string name="system_documents_no_language">Dim dogfen ar gael ar gyfer yr iaith hon.</string>
-    <string name="system_documents_customised">Wedi\'i addasu</string>
     <string name="system_documents_using_default">Yn defnyddio\'r diofyn ynghlwm</string>
     <string name="system_documents_revert">Gwrthdroi i\'r diofyn</string>
     <string name="system_documents_save">Cadw</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Dileu defnyddiwr</string>
     <string name="system_users_delete_title">Dileu defnyddiwr?</string>
     <string name="system_users_manage_sessions">Rheoli sesiynau</string>
-    <string name="system_users_sessions_description">Gweld a diddymu sesiynau gweithredol ar gyfer y defnyddiwr hwn.</string>
     <string name="system_users_sessions_empty">Nid oes gan y defnyddiwr hwn unrhyw sesiynau gweithredol.</string>
     <string name="system_users_revoke">Dirymu</string>
     <string name="system_users_revoke_all">Dirymu pob sesiwn</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Nesaf</string>
     <string name="system_users_empty">Heb ddod o hyd i ddefnyddwyr</string>
     <string name="system_users_empty_search">Nid oes unrhyw ddefnyddwyr yn cyfateb i\'ch chwiliad</string>
-    <string name="system_users_empty_search_hint">Ceisiwch addasu eich meini prawf chwilio</string>
     <string name="system_users_toast_created">Defnyddiwr wedi\'i greu</string>
     <string name="system_users_toast_updated">Defnyddiwr wedi\'i ddiweddaru</string>
     <string name="system_users_toast_deleted">Defnyddiwr wedi\'i ddileu</string>
@@ -211,17 +207,22 @@
     <string name="settings_home_terms">Telerau gwasanaeth</string>
     <string name="account_passkeys_empty">Dim allweddi mynediad wedi\'u cofrestru.</string>
     <string name="account_passkey_register_title">Ychwanegu allwedd mynediad</string>
-    <string name="account_passkey_register_message">Bydd eich dyfais yn gofyn i chi gadarnhau. Mae\'r allwedd mynediad wedi\'i chlymu i\'r ddyfais hon ac yn cael ei defnyddio ar gyfer mewngofnodi yn y dyfodol.</string>
     <string name="account_passkey_name_label">Enw (dewisol)</string>
     <string name="account_passkey_delete_message">Ni fydd \"%1$s\" yn eich mewngofnodi mwyach.</string>
-    <string name="account_totp_description">Mewngofnodwch gyda chod 6 digid o ap dilysu.</string>
     <string name="account_totp_enabled">Mae\'r dilyswr wedi\'i alluogi.</string>
     <string name="account_totp_setup_step1">Sganiwch neu rhowch y gyfrinach hon yn eich ap dilysu.</string>
     <string name="account_totp_setup_step2">Rhowch y cod 6 digid mae eich ap yn ei ddangos.</string>
     <string name="account_totp_code">Cod</string>
     <string name="account_totp_disable_message">Ni fyddwch yn gallu mewngofnodi mwyach gyda chod dilyswr.</string>
     <string name="account_recovery_none">Dim codau adfer wedi\'u creu.</string>
-    <string name="account_recovery_count">%1$d codau adfer heb eu defnyddio.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="zero">%1$d cod adfer ar ôl.</item>
+        <item quantity="one">%1$d cod adfer ar ôl.</item>
+        <item quantity="two">%1$d god adfer ar ôl.</item>
+        <item quantity="few">%1$d chod adfer ar ôl.</item>
+        <item quantity="many">%1$d chod adfer ar ôl.</item>
+        <item quantity="other">%1$d cod adfer ar ôl.</item>
+    </plurals>
     <string name="account_recovery_generate">Creu codau</string>
     <string name="account_recovery_regenerate">Ail-greu codau</string>
     <string name="account_recovery_regen_title">Ail-greu codau adfer?</string>
@@ -270,7 +271,14 @@
     <string name="system_users_session_last_accessed">Cyrchwyd ddiwethaf: %1$s</string>
     <string name="system_users_revoke_all_title">Tynnu pob sesiwn?</string>
     <string name="system_users_revoke_all_message">Bydd holl sesiynau gweithredol y defnyddiwr hwn yn cael eu hallgofnodi.</string>
-    <string name="system_users_pagination_status">Yn dangos %1$d–%2$d o %3$d defnyddiwr</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="zero">Yn dangos %1$d–%2$d o %3$d defnyddiwr</item>
+        <item quantity="one">Yn dangos %1$d–%2$d o %3$d defnyddiwr</item>
+        <item quantity="two">Yn dangos %1$d–%2$d o %3$d ddefnyddiwr</item>
+        <item quantity="few">Yn dangos %1$d–%2$d o %3$d defnyddiwr</item>
+        <item quantity="many">Yn dangos %1$d–%2$d o %3$d defnyddiwr</item>
+        <item quantity="other">Yn dangos %1$d–%2$d o %3$d defnyddiwr</item>
+    </plurals>
     <string name="account_title">Cyfrif</string>
     <string name="account_section_identity">Hunaniaeth</string>
     <string name="account_identity_identity">Hunaniaeth</string>
@@ -311,12 +319,12 @@
         <item quantity="other">Anfonwyd y prawf i %1$d cyrchfan</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
+        <item quantity="zero">Diddymwyd %1$d sesiwn</item>
+        <item quantity="one">Diddymwyd %1$d sesiwn</item>
+        <item quantity="two">Diddymwyd %1$d sesiwn</item>
         <item quantity="few">Diddymwyd %1$d sesiwn</item>
         <item quantity="many">Diddymwyd %1$d sesiwn</item>
-        <item quantity="one">Diddymwyd 1 sesiwn</item>
         <item quantity="other">Diddymwyd %1$d sesiwn</item>
-        <item quantity="two">Diddymwyd %1$d sesiwn</item>
-        <item quantity="zero">Diddymwyd 1 sesiwn</item>
     </plurals>
     <string name="login_title">Mewngofnodi</string>
     <string name="login_section_methods">Dulliau mewngofnodi</string>
@@ -355,10 +363,8 @@
     <string name="system_setting_hostname">Enw gwesteiwr a gyhoeddir i weinyddion eraill</string>
     <string name="system_status_peer_id">ID cymar</string>
     <string name="system_status_holepunch">Tyllu</string>
-    <string name="system_status_holepunch_value">%1$d llwyddiant · %2$d methiant</string>
     <string name="system_status_awaiting_routing">Negeseuon yn aros am lwybro</string>
     <string name="system_status_relay_service">Gwasanaeth relái</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d archebion · %3$d cylchedau · %4$d gwrthodwyd</string>
     <string name="route_target_select">Dewis</string>
     <string name="account_data_description">Lawrlwythwch gopi wrth gefn cyflawn y gallwch ei adfer ar y gweinydd Mochi hwn neu ar un arall.</string>
     <string name="route_target_none">Dim targedau ar gael</string>
@@ -383,7 +389,14 @@
     <string name="accounts_device_seen">Gwelwyd ddiwethaf %1$s</string>
     <string name="notifprefs_device_app">%1$s · ap</string>
     <string name="notifprefs_device_push">%1$s · gwthio</string>
-    <string name="notifprefs_test_partial">Anfonwyd y prawf at %1$d o %2$d cyrchfan</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="zero">Anfonwyd y prawf at %1$d o %2$d cyrchfan</item>
+        <item quantity="one">Anfonwyd y prawf at %1$d o %2$d cyrchfan</item>
+        <item quantity="two">Anfonwyd y prawf at %1$d o %2$d gyrchfan</item>
+        <item quantity="few">Anfonwyd y prawf at %1$d o %2$d chyrchfan</item>
+        <item quantity="many">Anfonwyd y prawf at %1$d o %2$d chyrchfan</item>
+        <item quantity="other">Anfonwyd y prawf at %1$d o %2$d cyrchfan</item>
+    </plurals>
     <string name="notifprefs_test_none">Dim cyrchfannau wedi\'u ffurfweddu</string>
     <string name="notifprefs_transport_fcm">Gwthiad Android</string>
     <string name="notifprefs_no_destinations">Dim cyrchfannau</string>
@@ -402,4 +415,47 @@
     <string name="accounts_revoke_confirm">Bydd hyn yn diddymu mynediad %1$s at y calendr. Bydd mewngofnodi gyda %2$s yn aros nes i chi ei ddatgysylltu ar y dudalen fewngofnodi.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Thema anhysbys</string>
+    <string name="system_documents_modified">Wedi\'i newid</string>
+    <string name="system_documents_discard_title">Hepgor y newidiadau?</string>
+    <string name="system_documents_discard">Hepgor</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="zero">%1$d wedi llwyddo</item>
+        <item quantity="one">%1$d wedi llwyddo</item>
+        <item quantity="two">%1$d wedi llwyddo</item>
+        <item quantity="few">%1$d wedi llwyddo</item>
+        <item quantity="many">%1$d wedi llwyddo</item>
+        <item quantity="other">%1$d wedi llwyddo</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="zero">%1$d wedi methu</item>
+        <item quantity="one">%1$d wedi methu</item>
+        <item quantity="two">%1$d wedi methu</item>
+        <item quantity="few">%1$d wedi methu</item>
+        <item quantity="many">%1$d wedi methu</item>
+        <item quantity="other">%1$d wedi methu</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="zero">%1$d / %2$d archeb</item>
+        <item quantity="one">%1$d / %2$d archeb</item>
+        <item quantity="two">%1$d / %2$d archeb</item>
+        <item quantity="few">%1$d / %2$d archeb</item>
+        <item quantity="many">%1$d / %2$d archeb</item>
+        <item quantity="other">%1$d / %2$d archeb</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="zero">%1$d cylched</item>
+        <item quantity="one">%1$d cylched</item>
+        <item quantity="two">%1$d gylched</item>
+        <item quantity="few">%1$d cylched</item>
+        <item quantity="many">%1$d chylched</item>
+        <item quantity="other">%1$d cylched</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="zero">%1$d wedi\'u gwrthod</item>
+        <item quantity="one">%1$d wedi\'u gwrthod</item>
+        <item quantity="two">%1$d wedi\'u gwrthod</item>
+        <item quantity="few">%1$d wedi\'u gwrthod</item>
+        <item quantity="many">%1$d wedi\'u gwrthod</item>
+        <item quantity="other">%1$d wedi\'u gwrthod</item>
+    </plurals>
 </resources>

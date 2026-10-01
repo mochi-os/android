@@ -104,13 +104,11 @@
     <string name="accounts_remove">Aparma</string>
     <string name="accounts_remove_title">¿Cuenta aparma?</string>
     <string name="system_documents_title">Documentonaka</string>
-    <string name="system_documents_description">Servidor reglas, condicionanaka, ukat privacidad notificación apnaqirinakamar uñstayata</string>
     <string name="system_documents_tab_rules">Servidor reglas</string>
     <string name="system_documents_tab_terms">Términos ukat condicionanaka</string>
     <string name="system_documents_tab_privacy">Imantawi</string>
     <string name="system_documents_language">Aru</string>
     <string name="system_documents_no_language">Jan documento aka aru utjki.</string>
-    <string name="system_documents_customised">Sapa lurata</string>
     <string name="system_documents_using_default">Validacionax suyt\'awikiwa. Aka movimiento apayañam atxasipkamawa.</string>
     <string name="system_documents_revert">Default ukar kutintayama</string>
     <string name="system_documents_save">Imaña</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Usuario chhaqtayaña</string>
     <string name="system_users_delete_title">Usuario chhaqtayaña?</string>
     <string name="system_users_manage_sessions">Sesionanak apnaqaña</string>
-    <string name="system_users_sessions_description">Aka apnaqirin sesionanakap uñjam ukat jaytam.</string>
     <string name="system_users_sessions_empty">Aka wikix mä origen wikir suscribita, ukatpach machaqanak katuqi.</string>
     <string name="system_users_revoke">Aparma</string>
     <string name="system_users_revoke_all">Taqi sesionanak aparma</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Arkiri</string>
     <string name="system_users_empty">Usuarionak jan jikxatasiti</string>
     <string name="system_users_empty_search">Jan usuario thaqhawi taypi</string>
-    <string name="system_users_empty_search_hint">Thaqhañ términonak yapxat\'am yant\'am</string>
     <string name="system_users_toast_created">Apnaqiri lurata</string>
     <string name="system_users_toast_updated">Apnaqiri machaqachata</string>
     <string name="system_users_toast_deleted">Apnaqiri apaqata</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">Yanapt\'awi arsuwinaka</string>
     <string name="account_passkeys_empty">Janiw passkeyanaka qillqantatachuksa.</string>
     <string name="account_passkey_register_title">Passkey yapxatasiña</string>
-    <string name="account_passkey_register_message">Antaywaqamaxa siñani siwaqamaru. Passkeyax aka antaympiw chinjata, qhipa mantaña pachanakata apsutawa.</string>
     <string name="account_passkey_name_label">Suti (akllata)</string>
     <string name="account_passkey_delete_message">\"%1$s\" janiw mantantarakimti.</string>
-    <string name="account_totp_description">6 chiqacha codigompi mantañ autenticador app irananta.</string>
     <string name="account_totp_enabled">Autenticador wakichantata.</string>
     <string name="account_totp_setup_step1">Aka jamasata autenticador appman scanea jan ukax qillqantasi.</string>
     <string name="account_totp_setup_step2">Appax uñacht\'ayi 6 chiqacha codigo qillqantasi.</string>
     <string name="account_totp_code">Codigo</string>
     <string name="account_totp_disable_message">Janiw autenticador codigompi mantantarakimti.</string>
     <string name="account_recovery_none">Janiw recuperación codigonaksa lurataki.</string>
-    <string name="account_recovery_count">%1$d janiw apnaqata recuperación codigonaka.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d recuperación codigo qhiparaski.</item>
+        <item quantity="other">%1$d recuperación codigonaka qhiparaski.</item>
+    </plurals>
     <string name="account_recovery_generate">Codigonaka lurañ</string>
     <string name="account_recovery_regenerate">Codigonaka mä kutillarjama lurañ</string>
     <string name="account_recovery_regen_title">Recuperación codigonaka mä kutillarjama lurañ?</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">Qhipa apnaqaña: %1$s</string>
     <string name="system_users_revoke_all_title">Taqi sesiones q\'awtaña?</string>
     <string name="system_users_revoke_all_message">Aka apnaqirin taqi irnaqasiri sesionapax mistunini.</string>
-    <string name="system_users_pagination_status">%3$d apnaqirinakat %1$d–%2$d uñacht\'ayaski</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">%3$d apnaqirit %1$d–%2$d uñacht\'ayaski</item>
+        <item quantity="other">%3$d apnaqirinakat %1$d–%2$d uñacht\'ayaski</item>
+    </plurals>
     <string name="account_title">Cuenta</string>
     <string name="account_section_identity">Identidad</string>
     <string name="account_identity_identity">Identidad</string>
@@ -346,10 +346,8 @@
     <string name="system_setting_hostname">Yaqha servidoranakaru yatiyata hostname</string>
     <string name="system_status_peer_id">Masinaka ID</string>
     <string name="system_status_holepunch">Perforación</string>
-    <string name="system_status_holepunch_value">%1$d phuqhata · %2$d pantjata</string>
     <string name="system_status_awaiting_routing">Yatiyäwinaka apaña suyaskiri</string>
     <string name="system_status_relay_service">Relay servicio</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d reservanaka · %3$d circuitos · %4$d jarkʼata</string>
     <string name="route_target_select">Ajlliña</string>
     <string name="account_data_description">Aka Mochi servidoran jan ukax yaqha Mochi servidoran kuttayañ chiqa taqpach qhipa qillqa apsuma.</string>
     <string name="route_target_none">Janiw amtawinaka utjkiti</string>
@@ -374,7 +372,10 @@
     <string name="accounts_device_seen">Qhipa uñjata %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplicación</string>
     <string name="notifprefs_device_push">%1$s · push yatiyawi</string>
-    <string name="notifprefs_test_partial">Yant\'awi apayata: %1$d/%2$d</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Yant\'awi %2$d cheqat %1$d ukar khitanitawa</item>
+        <item quantity="other">Yant\'awi %2$d cheqanakat %1$d ukar khitanitawa</item>
+    </plurals>
     <string name="notifprefs_test_none">Jan destinonaka configuratati</string>
     <string name="notifprefs_transport_fcm">Android push yatiyawi</string>
     <string name="notifprefs_no_destinations">Janiwa kawkíri qhip</string>
@@ -393,4 +394,27 @@
     <string name="accounts_revoke_confirm">Akax %1$s calendarior mantañapwa apaqani. %2$s ukampi mantañax Mantañ laphin jan chinukatäkipanxa utjaskakiniwa.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Jan uñt\'ata tema</string>
+    <string name="system_documents_modified">Mayjt\'ayata</string>
+    <string name="system_documents_discard_title">¿Mayjt\'awinaka jaqsuñati?</string>
+    <string name="system_documents_discard">Jaqsuña</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d phuqhata</item>
+        <item quantity="other">%1$d phuqhata</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d pantjata</item>
+        <item quantity="other">%1$d pantjata</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d reserva</item>
+        <item quantity="other">%1$d / %2$d reservanaka</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d circuito</item>
+        <item quantity="other">%1$d circuitonaka</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d jark\'ata</item>
+        <item quantity="other">%1$d jark\'ata</item>
+    </plurals>
 </resources>

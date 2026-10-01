@@ -104,13 +104,11 @@
     <string name="accounts_remove">Жою</string>
     <string name="accounts_remove_title">Тіркелгіні жою керек пе?</string>
     <string name="system_documents_title">Құжаттар</string>
-    <string name="system_documents_description">Пайдаланушыларыңызға көрсетілетін сервер ережелері, шарттары және құпиялылық хабарламасы</string>
     <string name="system_documents_tab_rules">Сервер ережелері</string>
     <string name="system_documents_tab_terms">Шарттар мен ережелер</string>
     <string name="system_documents_tab_privacy">Құпиялылық</string>
     <string name="system_documents_language">Тіл</string>
     <string name="system_documents_no_language">Бұл тіл үшін құжат қолжетімсіз.</string>
-    <string name="system_documents_customised">Реттелді</string>
     <string name="system_documents_using_default">Жинақталған әдепкі пайдаланылуда</string>
     <string name="system_documents_revert">Әдепкі күйге қайтару</string>
     <string name="system_documents_save">Сақтау</string>
@@ -141,7 +139,7 @@
     <string name="system_setting_auth_totp">TOTP аутентификатор қолданбасы арқылы кіру</string>
     <string name="system_setting_auth_recovery">Қалпына келтіру коды арқылы кіру</string>
     <string name="system_setting_auth_oauth">OAuth 2.0 арқылы кіру</string>
-    <string name="system_setting_default_theme">Әдепкі тема</string>
+    <string name="system_setting_default_theme">Әдепкі тақырып</string>
     <string name="system_setting_domains_verification">Доменді растау керек</string>
     <string name="system_setting_email_from">Жүйелік хаттарға арналған әдепкі жіберуші мекенжайы</string>
     <string name="system_setting_oauth_public_url">OAuth қайта бағыттаулары үшін қоғамдық URL</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Пайдаланушыны жою</string>
     <string name="system_users_delete_title">Пайдаланушыны жою керек пе?</string>
     <string name="system_users_manage_sessions">Сеанстарды басқару</string>
-    <string name="system_users_sessions_description">Бұл пайдаланушы үшін белсенді сеанстарды көру және қайтарып алу.</string>
     <string name="system_users_sessions_empty">Бұл пайдаланушыда белсенді сеанстар жоқ.</string>
     <string name="system_users_revoke">Қайтарып алу</string>
     <string name="system_users_revoke_all">Барлық сеанстарды қайтарып алу</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Келесі</string>
     <string name="system_users_empty">Қолданушылар табылмады</string>
     <string name="system_users_empty_search">Іздеуіңізге сәйкес қолданушылар жоқ</string>
-    <string name="system_users_empty_search_hint">Іздеу шарттарын реттеуді көріңіз</string>
     <string name="system_users_toast_created">Пайдаланушы жасалды</string>
     <string name="system_users_toast_updated">Пайдаланушы жаңартылды</string>
     <string name="system_users_toast_deleted">Пайдаланушы жойылды</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">Қызмет шарттары</string>
     <string name="account_passkeys_empty">Тіркелген қол жеткізу кілттері жоқ.</string>
     <string name="account_passkey_register_title">Қол жеткізу кілтін қосу</string>
-    <string name="account_passkey_register_message">Сіздің құрылғыңыз растауды сұрайды. Қол жеткізу кілті осы құрылғыға байланысты және болашақ кірулерде қолданылады.</string>
     <string name="account_passkey_name_label">Атау (қалауы бойынша)</string>
     <string name="account_passkey_delete_message">\"%1$s\" енді сізді кіргізбейді.</string>
-    <string name="account_totp_description">Аутентификация қолданбасынан 6 саннан тұратын кодпен кіріңіз.</string>
     <string name="account_totp_enabled">Аутентификатор қосылған.</string>
     <string name="account_totp_setup_step1">Бұл құпияны аутентификация қолданбасында сканерлеңіз немесе енгізіңіз.</string>
     <string name="account_totp_setup_step2">Қолданбаңыз көрсетіп тұрған 6 саннан тұратын кодты енгізіңіз.</string>
     <string name="account_totp_code">Код</string>
     <string name="account_totp_disable_message">Сіз енді аутентификатор кодымен кіре алмайсыз.</string>
     <string name="account_recovery_none">Қалпына келтіру кодтары жасалмаған.</string>
-    <string name="account_recovery_count">%1$d пайдаланылмаған қалпына келтіру коды.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d қалпына келтіру коды қалды.</item>
+        <item quantity="other">%1$d қалпына келтіру коды қалды.</item>
+    </plurals>
     <string name="account_recovery_generate">Кодтар жасау</string>
     <string name="account_recovery_regenerate">Кодтарды қайта жасау</string>
     <string name="account_recovery_regen_title">Қалпына келтіру кодтарын қайта жасау керек пе?</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">Соңғы кіру: %1$s</string>
     <string name="system_users_revoke_all_title">Барлық сеанстарды қайтарып алу керек пе?</string>
     <string name="system_users_revoke_all_message">Осы пайдаланушының барлық белсенді сеанстары жабылады.</string>
-    <string name="system_users_pagination_status">%3$d пайдаланушыдан %1$d–%2$d көрсетілуде</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">%3$d пайдаланушыдан %1$d–%2$d көрсетілуде</item>
+        <item quantity="other">%3$d пайдаланушыдан %1$d–%2$d көрсетілуде</item>
+    </plurals>
     <string name="account_title">Тіркелгі</string>
     <string name="account_section_identity">Жеке басы</string>
     <string name="account_identity_identity">Жеке басы</string>
@@ -307,7 +307,7 @@
         <item quantity="other">Сынақ %1$d мекенжайға жіберілді</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 сеанс қайтарып алынды</item>
+        <item quantity="one">%1$d сеанс қайтарып алынды</item>
         <item quantity="other">%1$d сеанс қайтарып алынды</item>
     </plurals>
     <string name="login_title">Кіру</string>
@@ -347,10 +347,8 @@
     <string name="system_setting_hostname">Басқа серверлерге хабарланған хост атауы</string>
     <string name="system_status_peer_id">Тең дәрежелі ID</string>
     <string name="system_status_holepunch">Тесу</string>
-    <string name="system_status_holepunch_value">%1$d сәтті · %2$d сәтсіз</string>
     <string name="system_status_awaiting_routing">Бағдарлауды күтудегі хабарлар</string>
     <string name="system_status_relay_service">Реле қызметі</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d брондаулар · %3$d тізбектер · %4$d қабылданбады</string>
     <string name="route_target_select">Таңдау</string>
     <string name="account_data_description">Осы немесе басқа Mochi серверінде қалпына келтіруге болатын толық сақтық көшірмені жүктеп алыңыз.</string>
     <string name="route_target_none">Қолжетімді нысандар жоқ</string>
@@ -375,7 +373,10 @@
     <string name="accounts_device_seen">Соңғы рет көрінді %1$s</string>
     <string name="notifprefs_device_app">%1$s · қолданба</string>
     <string name="notifprefs_device_push">%1$s · Push хабарландырулары</string>
-    <string name="notifprefs_test_partial">Тест %2$d межеден %1$d-іне жіберілді</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Сынақ %2$d мекенжай ішінен %1$d мекенжайға жіберілді</item>
+        <item quantity="other">Сынақ %2$d мекенжай ішінен %1$d мекенжайға жіберілді</item>
+    </plurals>
     <string name="notifprefs_test_none">Бағыттар реттелмеген</string>
     <string name="notifprefs_transport_fcm">Android push хабарландыруы</string>
     <string name="notifprefs_no_destinations">Тағайындалған орындар жоқ</string>
@@ -394,4 +395,27 @@
     <string name="accounts_revoke_confirm">Бұл %1$s күнтізбесіне қатынасты жояды. %2$s арқылы кіру, оны Кіру бетінде ажыратқанға дейін сақталады.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Белгісіз тақырып</string>
+    <string name="system_documents_modified">Өзгертілген</string>
+    <string name="system_documents_discard_title">Өзгерістерді алып тастау керек пе?</string>
+    <string name="system_documents_discard">Алып тастау</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d сәтті</item>
+        <item quantity="other">%1$d сәтті</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d сәтсіз</item>
+        <item quantity="other">%1$d сәтсіз</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d брондау</item>
+        <item quantity="other">%1$d / %2$d брондау</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d тізбек</item>
+        <item quantity="other">%1$d тізбек</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d қабылданбады</item>
+        <item quantity="other">%1$d қабылданбады</item>
+    </plurals>
 </resources>

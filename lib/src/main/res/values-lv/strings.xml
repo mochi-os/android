@@ -103,9 +103,9 @@
     <string name="settings_time_zone">Laika josla</string>
     <string name="settings_reset_to_defaults">Atiestatīt uz noklusējumiem</string>
     <string name="settings_reset_confirm_title">Atiestatīt preferences?</string>
-    <string name="settings_reset_confirm_message">Tas atiestatīs visas preferences uz to noklusētajām vērtībām.</string>
+    <string name="settings_reset_confirm_message">Tas atiestatīs šīs preferences uz to noklusētajām vērtībām.</string>
     <string name="settings_reset">Atiestatīt</string>
-    <string name="settings_display_title">Attēlot</string>
+    <string name="settings_display_title">Attēlojums</string>
     <string name="settings_display_reset">Atiestatīt uz noklusējumiem</string>
     <string name="settings_display_reset_confirm_title">Atiestatīt displeju?</string>
     <string name="settings_display_reset_confirm_message">Tas atiestatīs displeja iestatījumus uz to noklusējuma vērtībām.</string>

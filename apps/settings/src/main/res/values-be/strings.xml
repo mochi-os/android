@@ -104,13 +104,11 @@
     <string name="accounts_remove">Выдаліць</string>
     <string name="accounts_remove_title">Выдаліць акаўнт?</string>
     <string name="system_documents_title">Дакументы</string>
-    <string name="system_documents_description">Правілы сервера, умовы і паведамленне аб канфідэнцыйнасці, якія паказваюцца карыстальнікам</string>
     <string name="system_documents_tab_rules">Правілы сервера</string>
     <string name="system_documents_tab_terms">Умовы і палажэнні</string>
     <string name="system_documents_tab_privacy">Канфідэнцыяльнасць</string>
     <string name="system_documents_language">Мова</string>
     <string name="system_documents_no_language">Дакумент для гэтай мовы недаступны.</string>
-    <string name="system_documents_customised">Наладжана</string>
     <string name="system_documents_using_default">Выкарыстоўваецца ўбудаванае значэнне па змаўчанні</string>
     <string name="system_documents_revert">Вярнуць да змаўчання</string>
     <string name="system_documents_save">Захаваць</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Выдаліць карыстальніка</string>
     <string name="system_users_delete_title">Выдаліць карыстальніка?</string>
     <string name="system_users_manage_sessions">Кіраваць сесіямі</string>
-    <string name="system_users_sessions_description">Паглядзіце і адклічце актыўныя сесіі для гэтага карыстальніка.</string>
     <string name="system_users_sessions_empty">У гэтага карыстальніка няма актыўных сесій.</string>
     <string name="system_users_revoke">Адклікаць</string>
     <string name="system_users_revoke_all">Адклікаць усе сесіі</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Далей</string>
     <string name="system_users_empty">Карыстальнікі не знойдзены</string>
     <string name="system_users_empty_search">Карыстальнікі, што адпавядаюць пошуку, не знойдзены</string>
-    <string name="system_users_empty_search_hint">Паспрабуйце наладзіць крытэрыі пошуку</string>
     <string name="system_users_toast_created">Карыстальнік створаны</string>
     <string name="system_users_toast_updated">Карыстальнік абноўлены</string>
     <string name="system_users_toast_deleted">Карыстальнік выдалены</string>
@@ -211,17 +207,20 @@
     <string name="settings_home_terms">Умовы выкарыстання</string>
     <string name="account_passkeys_empty">Няма зарэгістраваных ключоў доступу.</string>
     <string name="account_passkey_register_title">Дадаць ключ доступу</string>
-    <string name="account_passkey_register_message">Ваша прылада папросіць пацвердзіць. Ключ доступу прывязаны да гэтай прылады і выкарыстоўваецца для будучых уваходаў.</string>
     <string name="account_passkey_name_label">Назва (неабавязкова)</string>
     <string name="account_passkey_delete_message">\"%1$s\" больш не будзе ўваходзіць.</string>
-    <string name="account_totp_description">Увайдзіце з 6-значным кодам з дадатка-аўтэнтыфікатара.</string>
     <string name="account_totp_enabled">Аўтэнтыфікатар уключаны.</string>
     <string name="account_totp_setup_step1">Адсканіруйце або ўвядзіце гэты сакрэт у сваім дадатку-аўтэнтыфікатары.</string>
     <string name="account_totp_setup_step2">Увядзіце 6-значны код, які паказвае дадатак.</string>
     <string name="account_totp_code">Код</string>
     <string name="account_totp_disable_message">Вы больш не зможаце ўваходзіць з кодам аўтэнтыфікатара.</string>
     <string name="account_recovery_none">Коды аднаўлення не згенераваны.</string>
-    <string name="account_recovery_count">%1$d невыкарыстаных кодаў аднаўлення.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">Застаўся %1$d код аднаўлення.</item>
+        <item quantity="few">Засталося %1$d коды аднаўлення.</item>
+        <item quantity="many">Засталося %1$d кодаў аднаўлення.</item>
+        <item quantity="other">Засталося %1$d кода аднаўлення.</item>
+    </plurals>
     <string name="account_recovery_generate">Згенераваць коды</string>
     <string name="account_recovery_regenerate">Перастварыць коды</string>
     <string name="account_recovery_regen_title">Перастварыць коды аднаўлення?</string>
@@ -270,7 +269,12 @@
     <string name="system_users_session_last_accessed">Апошні доступ: %1$s</string>
     <string name="system_users_revoke_all_title">Адклікаць усе сеансы?</string>
     <string name="system_users_revoke_all_message">Усе актыўныя сеансы гэтага карыстальніка будуць выйсці.</string>
-    <string name="system_users_pagination_status">Паказана %1$d–%2$d з %3$d карыстальнікаў</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Паказана %1$d–%2$d з %3$d карыстальніка</item>
+        <item quantity="few">Паказана %1$d–%2$d з %3$d карыстальнікаў</item>
+        <item quantity="many">Паказана %1$d–%2$d з %3$d карыстальнікаў</item>
+        <item quantity="other">Паказана %1$d–%2$d з %3$d карыстальніка</item>
+    </plurals>
     <string name="account_title">Уліковы запіс</string>
     <string name="account_section_identity">Асоба</string>
     <string name="account_identity_identity">Асоба</string>
@@ -351,10 +355,8 @@
     <string name="system_setting_hostname">Імя хоста, абвешчанае іншым серверам</string>
     <string name="system_status_peer_id">ID піра</string>
     <string name="system_status_holepunch">Прабіванне</string>
-    <string name="system_status_holepunch_value">%1$d паспяхова · %2$d няўдала</string>
     <string name="system_status_awaiting_routing">Паведамленні ў чаканні маршрутызацыі</string>
     <string name="system_status_relay_service">Служба рэле</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d браніраванні · %3$d ланцугі · %4$d адхілена</string>
     <string name="route_target_select">Выбраць</string>
     <string name="account_data_description">Спампуйце поўную рэзервовую копію, якую можна аднавіць на гэтым або іншым серверы Mochi.</string>
     <string name="route_target_none">Няма даступных цэлей</string>
@@ -379,7 +381,12 @@
     <string name="accounts_device_seen">Апошні раз бачылі %1$s</string>
     <string name="notifprefs_device_app">%1$s · праграма</string>
     <string name="notifprefs_device_push">%1$s · пуш</string>
-    <string name="notifprefs_test_partial">Тэст адпраўлены на %1$d з %2$d прызначэнняў</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Тэст адпраўлены на %1$d з %2$d прызначэння</item>
+        <item quantity="few">Тэст адпраўлены на %1$d з %2$d прызначэнняў</item>
+        <item quantity="many">Тэст адпраўлены на %1$d з %2$d прызначэнняў</item>
+        <item quantity="other">Тэст адпраўлены на %1$d з %2$d прызначэння</item>
+    </plurals>
     <string name="notifprefs_test_none">Прызначэнні не настроены</string>
     <string name="notifprefs_transport_fcm">Пуш-апавяшчэнні для Android</string>
     <string name="notifprefs_no_destinations">Няма пунктаў прызначэння</string>
@@ -398,4 +405,37 @@
     <string name="accounts_revoke_confirm">Гэта адкліча доступ да календара для %1$s. Уваход праз %2$s застанецца, пакуль вы не адвяжаце яго на старонцы ўваходу.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Невядомая тэма</string>
+    <string name="system_documents_modified">Зменены</string>
+    <string name="system_documents_discard_title">Адхіліць змены?</string>
+    <string name="system_documents_discard">Адхіліць</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d паспяхова</item>
+        <item quantity="few">%1$d паспяхова</item>
+        <item quantity="many">%1$d паспяхова</item>
+        <item quantity="other">%1$d паспяхова</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d няўдала</item>
+        <item quantity="few">%1$d няўдала</item>
+        <item quantity="many">%1$d няўдала</item>
+        <item quantity="other">%1$d няўдала</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d браніраванне</item>
+        <item quantity="few">%1$d / %2$d браніраванні</item>
+        <item quantity="many">%1$d / %2$d браніраванняў</item>
+        <item quantity="other">%1$d / %2$d браніравання</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d ланцуг</item>
+        <item quantity="few">%1$d ланцугі</item>
+        <item quantity="many">%1$d ланцугоў</item>
+        <item quantity="other">%1$d ланцуга</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d адхілена</item>
+        <item quantity="few">%1$d адхілена</item>
+        <item quantity="many">%1$d адхілена</item>
+        <item quantity="other">%1$d адхілена</item>
+    </plurals>
 </resources>

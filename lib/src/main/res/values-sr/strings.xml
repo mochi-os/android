@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Временска зона</string>
     <string name="settings_reset_to_defaults">Ресетуј на подразумеване</string>
     <string name="settings_reset_confirm_title">Ресетовати поставке?</string>
-    <string name="settings_reset_confirm_message">Ово ће ресетовати све поставке на подразумеване вредности.</string>
+    <string name="settings_reset_confirm_message">Ово ће ресетовати ове поставке на подразумеване вредности.</string>
     <string name="settings_reset">Ресетуј</string>
     <string name="settings_display_title">Приказ</string>
     <string name="settings_display_reset">Ресетуј на подразумеване</string>

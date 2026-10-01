@@ -103,7 +103,7 @@
     <string name="settings_time_zone">시간대</string>
     <string name="settings_reset_to_defaults">기본값으로 재설정</string>
     <string name="settings_reset_confirm_title">환경설정을 재설정할까요?</string>
-    <string name="settings_reset_confirm_message">모든 환경설정이 기본값으로 재설정돼요.</string>
+    <string name="settings_reset_confirm_message">이 환경설정이 기본값으로 재설정돼요.</string>
     <string name="settings_reset">재설정</string>
     <string name="settings_display_title">표시</string>
     <string name="settings_display_reset">기본값으로 재설정</string>

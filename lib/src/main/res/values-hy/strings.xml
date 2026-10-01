@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Ժամային գոտի</string>
     <string name="settings_reset_to_defaults">Վերականգնել լռելյայն արժեքների</string>
     <string name="settings_reset_confirm_title">Վերականգնե՞լ նախընտրությունները։</string>
-    <string name="settings_reset_confirm_message">Սա կվերականգնի բոլոր նախընտրությունները իրենց կանխադրված արժեքներին:</string>
+    <string name="settings_reset_confirm_message">Սա այս նախընտրությունները կվերադարձնի իրենց կանխադրված արժեքներին։</string>
     <string name="settings_reset">Վերականգնել</string>
     <string name="settings_display_title">Ցուցադրում</string>
     <string name="settings_display_reset">Վերականգնել լռելյայն արժեքների</string>

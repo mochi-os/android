@@ -104,13 +104,11 @@
     <string name="accounts_remove">Eliminar</string>
     <string name="accounts_remove_title">Eliminar conta?</string>
     <string name="system_documents_title">Documentos</string>
-    <string name="system_documents_description">Regras do servidor, termos e condicións, e aviso de privacidade mostrados aos teus usuarios</string>
     <string name="system_documents_tab_rules">Regras do servidor</string>
     <string name="system_documents_tab_terms">Termos e condicións</string>
     <string name="system_documents_tab_privacy">Privacidade</string>
     <string name="system_documents_language">Idioma</string>
     <string name="system_documents_no_language">Non hai documento dispoñible para este idioma.</string>
-    <string name="system_documents_customised">Personalizado</string>
     <string name="system_documents_using_default">Usando predeterminado incluído</string>
     <string name="system_documents_revert">Reverter ao valor por defecto</string>
     <string name="system_documents_save">Gardar</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Eliminar usuario</string>
     <string name="system_users_delete_title">Eliminar usuario?</string>
     <string name="system_users_manage_sessions">Xestionar sesións</string>
-    <string name="system_users_sessions_description">Ver e revogar sesións activas para este usuario.</string>
     <string name="system_users_sessions_empty">Este usuario non ten sesións activas.</string>
     <string name="system_users_revoke">Revogar</string>
     <string name="system_users_revoke_all">Revogar todas as sesións</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Seguinte</string>
     <string name="system_users_empty">Non se atoparon usuarios</string>
     <string name="system_users_empty_search">Ningún usuario coincide coa túa busca</string>
-    <string name="system_users_empty_search_hint">Tenta axustar os teus criterios de busca</string>
     <string name="system_users_toast_created">Usuario creado</string>
     <string name="system_users_toast_updated">Usuario actualizado</string>
     <string name="system_users_toast_deleted">Usuario eliminado</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">Termos do servizo</string>
     <string name="account_passkeys_empty">Non hai claves de acceso rexistradas.</string>
     <string name="account_passkey_register_title">Engadir clave de acceso</string>
-    <string name="account_passkey_register_message">O teu dispositivo pediralles que confirmes. A clave de acceso está vinculada a este dispositivo e úsase para futuros inicios de sesión.</string>
     <string name="account_passkey_name_label">Nome (opcional)</string>
     <string name="account_passkey_delete_message">«%1$s» xa non te iniciará a sesión.</string>
-    <string name="account_totp_description">Inicia sesión cun código de 6 díxitos dunha aplicación de autenticación.</string>
     <string name="account_totp_enabled">O autenticador está activado.</string>
     <string name="account_totp_setup_step1">Escanea ou introduce este segredo na túa aplicación de autenticación.</string>
     <string name="account_totp_setup_step2">Introduce o código de 6 díxitos que mostra a túa aplicación.</string>
     <string name="account_totp_code">Código</string>
     <string name="account_totp_disable_message">Xa non poderás iniciar sesión cun código de autenticador.</string>
     <string name="account_recovery_none">Non se xeraron códigos de recuperación.</string>
-    <string name="account_recovery_count">%1$d códigos de recuperación non usados.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">Queda %1$d código de recuperación.</item>
+        <item quantity="other">Quedan %1$d códigos de recuperación.</item>
+    </plurals>
     <string name="account_recovery_generate">Xerar códigos</string>
     <string name="account_recovery_regenerate">Rexenerar códigos</string>
     <string name="account_recovery_regen_title">Rexenerar os códigos de recuperación?</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">Último acceso: %1$s</string>
     <string name="system_users_revoke_all_title">Revogar todas as sesións?</string>
     <string name="system_users_revoke_all_message">Todas as sesións activas deste usuario pecharán sesión.</string>
-    <string name="system_users_pagination_status">Mostrando %1$d–%2$d de %3$d usuarios</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Mostrando %1$d–%2$d de %3$d usuario</item>
+        <item quantity="other">Mostrando %1$d–%2$d de %3$d usuarios</item>
+    </plurals>
     <string name="account_title">Conta</string>
     <string name="account_section_identity">Identidade</string>
     <string name="account_identity_identity">Identidade</string>
@@ -307,7 +307,7 @@
         <item quantity="other">Proba enviada a %1$d destinos</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">Revogada 1 sesión</item>
+        <item quantity="one">Revogada %1$d sesión</item>
         <item quantity="other">Revogadas %1$d sesións</item>
     </plurals>
     <string name="login_title">Iniciar sesión</string>
@@ -347,10 +347,8 @@
     <string name="system_setting_hostname">Nome de host anunciado a outros servidores</string>
     <string name="system_status_peer_id">ID de par</string>
     <string name="system_status_holepunch">Perforación</string>
-    <string name="system_status_holepunch_value">%1$d con éxito · %2$d fallidas</string>
     <string name="system_status_awaiting_routing">Mensaxes á espera de encamiñamento</string>
     <string name="system_status_relay_service">Servizo de repetidor</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d reservas · %3$d circuítos · %4$d rexeitadas</string>
     <string name="route_target_select">Seleccionar</string>
     <string name="account_data_description">Descarga unha copia de seguridade completa que podes restaurar neste servidor Mochi ou noutro.</string>
     <string name="route_target_none">Non hai destinos dispoñibles</string>
@@ -375,7 +373,10 @@
     <string name="accounts_device_seen">Visto por última vez %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplicación</string>
     <string name="notifprefs_device_push">%1$s · push</string>
-    <string name="notifprefs_test_partial">Proba enviada a %1$d de %2$d destinos</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Proba enviada a %1$d de %2$d destino</item>
+        <item quantity="other">Proba enviada a %1$d de %2$d destinos</item>
+    </plurals>
     <string name="notifprefs_test_none">Non hai destinos configurados</string>
     <string name="notifprefs_transport_fcm">Push de Android</string>
     <string name="notifprefs_no_destinations">Sen destinos</string>
@@ -394,4 +395,27 @@
     <string name="accounts_revoke_confirm">Isto revogará o acceso ao calendario de %1$s. O inicio de sesión con %2$s mantense ata que o desligues na páxina de inicio de sesión.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Tema descoñecido</string>
+    <string name="system_documents_modified">Modificado</string>
+    <string name="system_documents_discard_title">Descartar os cambios?</string>
+    <string name="system_documents_discard">Descartar</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d con éxito</item>
+        <item quantity="other">%1$d con éxito</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d fallida</item>
+        <item quantity="other">%1$d fallidas</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d reserva</item>
+        <item quantity="other">%1$d / %2$d reservas</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d circuíto</item>
+        <item quantity="other">%1$d circuítos</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d rexeitada</item>
+        <item quantity="other">%1$d rexeitadas</item>
+    </plurals>
 </resources>

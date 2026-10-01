@@ -104,13 +104,11 @@
     <string name="accounts_remove">Rake</string>
     <string name="accounts_remove_title">Hesab rake?</string>
     <string name="system_documents_title">Belge</string>
-    <string name="system_documents_description">Qaîdeyên server, mercên bikaranînê û agahdariya nepenîtiyê ku ji bikarhênerên te re tê nîşandan</string>
     <string name="system_documents_tab_rules">Qaîdeyên server</string>
     <string name="system_documents_tab_terms">Mercên bikaranînê</string>
     <string name="system_documents_tab_privacy">Nepenî</string>
     <string name="system_documents_language">Ziman</string>
     <string name="system_documents_no_language">Ji bo vê zimanê tu belge peyda nabe.</string>
-    <string name="system_documents_customised">Taybetkirî</string>
     <string name="system_documents_using_default">Standarda hatî bi kar tîne</string>
     <string name="system_documents_revert">Vegere standardê</string>
     <string name="system_documents_save">Tomar bike</string>
@@ -141,7 +139,7 @@
     <string name="system_setting_auth_totp">Têketin bi karanîna sepana rastînkerê TOTP</string>
     <string name="system_setting_auth_recovery">Têketin bi karanîna koda vegerandinê</string>
     <string name="system_setting_auth_oauth">Têketin bi karanîna OAuth 2.0</string>
-    <string name="system_setting_default_theme">Themeya standard</string>
+    <string name="system_setting_default_theme">Temaya standard</string>
     <string name="system_setting_domains_verification">Verastkirina domainê pêwîst e</string>
     <string name="system_setting_email_from">Navnîşana standard a ji bo e-nameyên sîstemê</string>
     <string name="system_setting_oauth_public_url">URL ya giştî ji bo beralîkirinên OAuth</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Bikarhênerê jê bibe</string>
     <string name="system_users_delete_title">Bikarhênerê jê bibe?</string>
     <string name="system_users_manage_sessions">Danîştinan bi rê ve bibe</string>
-    <string name="system_users_sessions_description">Danişînên çalak ên ji bo vê bikarhêner bibîne û betal bike.</string>
     <string name="system_users_sessions_empty">Vê bikarhêner danişînên çalak tune ne.</string>
     <string name="system_users_revoke">Vekişîne</string>
     <string name="system_users_revoke_all">Hemû danişînan vekişîne</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Pêştir</string>
     <string name="system_users_empty">Tu bikarhêner nehatin dîtin</string>
     <string name="system_users_empty_search">Tu bikarhêner bi lêgerîna te re li hev nayên</string>
-    <string name="system_users_empty_search_hint">Krîterên lêgerîna xwe eyar bike</string>
     <string name="system_users_toast_created">Bikarhêner hat afirandin</string>
     <string name="system_users_toast_updated">Bikarhêner hat nûkirin</string>
     <string name="system_users_toast_deleted">Bikarhêner hat jêbirin</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">Mercên xizmetê</string>
     <string name="account_passkeys_empty">Tu mifteyên gihîştinê tomarkirî nin.</string>
     <string name="account_passkey_register_title">Mifteya gihîştinê zêde bike</string>
-    <string name="account_passkey_register_message">Cîhaza we dê ji we daxwaza pejirandinê bike. Mifteya gihîştinê bi vê cîhazê ve girêdayî ye û ji bo têketinên paşerojê tê bikar anîn.</string>
     <string name="account_passkey_name_label">Nav (vebijarkî)</string>
     <string name="account_passkey_delete_message">\"%1$s\" êdî we têxe nake.</string>
-    <string name="account_totp_description">Bi koda 6-reqemî ji bernameyek rastandinê re têkeve.</string>
     <string name="account_totp_enabled">Rastandêr çalakkirî ye.</string>
     <string name="account_totp_setup_step1">Vî veşartî di bernameya rastandinê ya xwe de bişopîne an binivîse.</string>
     <string name="account_totp_setup_step2">Koda 6-reqemî ya ku bername we nîşan dide têkevin.</string>
     <string name="account_totp_code">Kod</string>
     <string name="account_totp_disable_message">Hûn êdî bi koda rastandêrê re nikarin têkevin.</string>
     <string name="account_recovery_none">Tu kodên vegerandinê hatine çêkirin.</string>
-    <string name="account_recovery_count">%1$d kodên vegerandinê yên bikarnehatî.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d koda vegerandinê maye.</item>
+        <item quantity="other">%1$d kodên vegerandinê mane.</item>
+    </plurals>
     <string name="account_recovery_generate">Kodan çêbike</string>
     <string name="account_recovery_regenerate">Kodan ji nû ve çêbike</string>
     <string name="account_recovery_regen_title">Kodên vegerandinê ji nû ve çêbikin?</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">Gihîştina dawî: %1$s</string>
     <string name="system_users_revoke_all_title">Hemû danîştinan paşve bibin?</string>
     <string name="system_users_revoke_all_message">Hemû danîştinên çalak ên vê bikarhênerê dê derkevin.</string>
-    <string name="system_users_pagination_status">Nîşandide %1$d–%2$d ji %3$d bikarhêneran</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">%1$d–%2$d ji %3$d bikarhênerî tên nîşandan</item>
+        <item quantity="other">%1$d–%2$d ji %3$d bikarhêneran tên nîşandan</item>
+    </plurals>
     <string name="account_title">Hesab</string>
     <string name="account_section_identity">Nasname</string>
     <string name="account_identity_identity">Nasname</string>
@@ -307,7 +307,7 @@
         <item quantity="other">Test ji %1$d armancan re hat şandin</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 danişîn hat betalkirin</item>
+        <item quantity="one">%1$d danişîn hat betalkirin</item>
         <item quantity="other">%1$d danişîn hatin betalkirin</item>
     </plurals>
     <string name="login_title">Têketin</string>
@@ -347,10 +347,8 @@
     <string name="system_setting_hostname">Navê hostê yê ji serverên din re hatî ragihandin</string>
     <string name="system_status_peer_id">Nasnameya hevtayî</string>
     <string name="system_status_holepunch">Qulkirin</string>
-    <string name="system_status_holepunch_value">%1$d serketî · %2$d neserketî</string>
     <string name="system_status_awaiting_routing">Peyamên li benda rêvekirinê</string>
     <string name="system_status_relay_service">Servîsa relê</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d rezervasyon · %3$d gera · %4$d red kirin</string>
     <string name="route_target_select">Hilbijêre</string>
     <string name="account_data_description">Paşvegirtinek tevahî dakêşe ku tu dikarî li vê an li rajekarek din a Mochi vegerînî.</string>
     <string name="route_target_none">Tu armanc tune</string>
@@ -375,7 +373,10 @@
     <string name="accounts_device_seen">Cara dawî hat dîtin %1$s</string>
     <string name="notifprefs_device_app">%1$s · sepan</string>
     <string name="notifprefs_device_push">%1$s · agahdariya push</string>
-    <string name="notifprefs_test_partial">Test ji %2$d armancan bo %1$d hat şandin</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Test ji %2$d armancê bo %1$d hat şandin</item>
+        <item quantity="other">Test ji %2$d armancan bo %1$d hat şandin</item>
+    </plurals>
     <string name="notifprefs_test_none">Tu cîh nehatine mîhengkirin</string>
     <string name="notifprefs_transport_fcm">Push a Android</string>
     <string name="notifprefs_no_destinations">Armanc tune ne</string>
@@ -394,4 +395,27 @@
     <string name="accounts_revoke_confirm">Ev ê gihîştina salnameya %1$s betal bike. Têketina bi %2$s heta ku tu wê di rûpela Têketinê de venegirêdî dimîne.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Temaya nenas</string>
+    <string name="system_documents_modified">Guhertî</string>
+    <string name="system_documents_discard_title">Guhertin bên avêtin?</string>
+    <string name="system_documents_discard">Bavêje</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d serketî</item>
+        <item quantity="other">%1$d serketî</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d neserketî</item>
+        <item quantity="other">%1$d neserketî</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d rezervasyon</item>
+        <item quantity="other">%1$d / %2$d rezervasyon</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d girêdan</item>
+        <item quantity="other">%1$d girêdan</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d redkirî</item>
+        <item quantity="other">%1$d redkirî</item>
+    </plurals>
 </resources>

@@ -104,13 +104,11 @@
     <string name="accounts_remove">Kaldır</string>
     <string name="accounts_remove_title">Hesap kaldırılsın mı?</string>
     <string name="system_documents_title">Belgeler</string>
-    <string name="system_documents_description">Kullanıcılarınıza gösterilen sunucu kuralları, şartlar ve gizlilik bildirimi</string>
     <string name="system_documents_tab_rules">Sunucu kuralları</string>
     <string name="system_documents_tab_terms">Şartlar ve koşullar</string>
     <string name="system_documents_tab_privacy">Gizlilik</string>
     <string name="system_documents_language">Dil</string>
     <string name="system_documents_no_language">Bu dil için belge mevcut değil.</string>
-    <string name="system_documents_customised">Özelleştirildi</string>
     <string name="system_documents_using_default">Paket varsayılanı kullanılıyor</string>
     <string name="system_documents_revert">Varsayılana geri dön</string>
     <string name="system_documents_save">Kaydet</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Kullanıcıyı sil</string>
     <string name="system_users_delete_title">Kullanıcı silinsin mi?</string>
     <string name="system_users_manage_sessions">Oturumları yönet</string>
-    <string name="system_users_sessions_description">Bu kullanıcı için aktif oturumları görüntüle ve iptal et.</string>
     <string name="system_users_sessions_empty">Bu kullanıcının aktif oturumu yok.</string>
     <string name="system_users_revoke">İptal et</string>
     <string name="system_users_revoke_all">Tüm oturumları iptal et</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">İleri</string>
     <string name="system_users_empty">Kullanıcı bulunamadı</string>
     <string name="system_users_empty_search">Aramanızla eşleşen kullanıcı yok</string>
-    <string name="system_users_empty_search_hint">Arama kriterlerini ayarlamayı dene</string>
     <string name="system_users_toast_created">Kullanıcı oluşturuldu</string>
     <string name="system_users_toast_updated">Kullanıcı güncellendi</string>
     <string name="system_users_toast_deleted">Kullanıcı silindi</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">Hizmet koşulları</string>
     <string name="account_passkeys_empty">Kayıtlı geçiş anahtarı yok.</string>
     <string name="account_passkey_register_title">Geçiş anahtarı ekle</string>
-    <string name="account_passkey_register_message">Cihazınız onaylamanızı isteyecek. Geçiş anahtarı bu cihaza bağlıdır ve gelecekteki girişlerde kullanılır.</string>
     <string name="account_passkey_name_label">Ad (isteğe bağlı)</string>
     <string name="account_passkey_delete_message">\"%1$s\" artık sizi içeri almayacak.</string>
-    <string name="account_totp_description">Bir kimlik doğrulayıcı uygulamadan 6 haneli kodla giriş yapın.</string>
     <string name="account_totp_enabled">Kimlik doğrulayıcı etkin.</string>
     <string name="account_totp_setup_step1">Bu gizli kodu kimlik doğrulayıcı uygulamanıza tarayın veya girin.</string>
     <string name="account_totp_setup_step2">Uygulamanızın gösterdiği 6 haneli kodu girin.</string>
     <string name="account_totp_code">Kod</string>
     <string name="account_totp_disable_message">Kimlik doğrulayıcı koduyla giriş yapamayacaksınız.</string>
     <string name="account_recovery_none">Kurtarma kodu oluşturulmadı.</string>
-    <string name="account_recovery_count">%1$d kullanılmamış kurtarma kodu.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d kurtarma kodu kaldı.</item>
+        <item quantity="other">%1$d kurtarma kodu kaldı.</item>
+    </plurals>
     <string name="account_recovery_generate">Kod oluştur</string>
     <string name="account_recovery_regenerate">Kodları yeniden oluştur</string>
     <string name="account_recovery_regen_title">Kurtarma kodları yeniden oluşturulsun mu?</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">Son erişim: %1$s</string>
     <string name="system_users_revoke_all_title">Tüm oturumlar iptal edilsin mi?</string>
     <string name="system_users_revoke_all_message">Bu kullanıcının tüm aktif oturumları kapatılacak.</string>
-    <string name="system_users_pagination_status">%3$d kullanıcıdan %1$d–%2$d gösteriliyor</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">%3$d kullanıcıdan %1$d–%2$d gösteriliyor</item>
+        <item quantity="other">%3$d kullanıcıdan %1$d–%2$d gösteriliyor</item>
+    </plurals>
     <string name="account_title">Hesap</string>
     <string name="account_section_identity">Kimlik</string>
     <string name="account_identity_identity">Kimlik</string>
@@ -307,7 +307,7 @@
         <item quantity="other">Test %1$d hedefe gönderildi</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 oturum iptal edildi</item>
+        <item quantity="one">%1$d oturum iptal edildi</item>
         <item quantity="other">%1$d oturum iptal edildi</item>
     </plurals>
     <string name="login_title">Oturum aç</string>
@@ -347,10 +347,8 @@
     <string name="system_setting_hostname">Diğer sunuculara duyurulan ana bilgisayar adı</string>
     <string name="system_status_peer_id">Eş kimliği</string>
     <string name="system_status_holepunch">Delik açma</string>
-    <string name="system_status_holepunch_value">%1$d başarılı · %2$d başarısız</string>
     <string name="system_status_awaiting_routing">Yönlendirme bekleyen mesajlar</string>
     <string name="system_status_relay_service">Aktarma hizmeti</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d rezervasyonlar · %3$d devreler · %4$d reddedildi</string>
     <string name="route_target_select">Seç</string>
     <string name="account_data_description">Bu sunucuda veya başka bir Mochi sunucusunda geri yükleyebileceğiniz tam bir yedeği indirin.</string>
     <string name="route_target_none">Kullanılabilir hedef yok</string>
@@ -375,7 +373,10 @@
     <string name="accounts_device_seen">Son görülme %1$s</string>
     <string name="notifprefs_device_app">%1$s · uygulama</string>
     <string name="notifprefs_device_push">%1$s · anlık bildirim</string>
-    <string name="notifprefs_test_partial">Test %2$d hedeften %1$d tanesine gönderildi</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Test %2$d hedeften %1$d tanesine gönderildi</item>
+        <item quantity="other">Test %2$d hedeften %1$d tanesine gönderildi</item>
+    </plurals>
     <string name="notifprefs_test_none">Hedef yapılandırılmamış</string>
     <string name="notifprefs_transport_fcm">Android anlık bildirim</string>
     <string name="notifprefs_no_destinations">Hedef yok</string>
@@ -394,4 +395,27 @@
     <string name="accounts_revoke_confirm">Bu, %1$s hesabının takvim erişimini iptal eder. %2$s ile oturum açma, Giriş sayfasında bağlantıyı kaldırana kadar devam eder.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Bilinmeyen tema</string>
+    <string name="system_documents_modified">Değiştirildi</string>
+    <string name="system_documents_discard_title">Değişiklikler silinsin mi?</string>
+    <string name="system_documents_discard">Sil</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d başarılı</item>
+        <item quantity="other">%1$d başarılı</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d başarısız</item>
+        <item quantity="other">%1$d başarısız</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d rezervasyon</item>
+        <item quantity="other">%1$d / %2$d rezervasyon</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d devre</item>
+        <item quantity="other">%1$d devre</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d reddedildi</item>
+        <item quantity="other">%1$d reddedildi</item>
+    </plurals>
 </resources>

@@ -104,13 +104,11 @@
     <string name="accounts_remove">Elimină</string>
     <string name="accounts_remove_title">Elimini contul?</string>
     <string name="system_documents_title">Documente</string>
-    <string name="system_documents_description">Regulile serverului, termeni și condiții și notificarea de confidențialitate afișate utilizatorilor tăi</string>
     <string name="system_documents_tab_rules">Regulile serverului</string>
     <string name="system_documents_tab_terms">Termeni și condiții</string>
     <string name="system_documents_tab_privacy">Confidențialitate</string>
     <string name="system_documents_language">Limbă</string>
     <string name="system_documents_no_language">Niciun document disponibil pentru această limbă.</string>
-    <string name="system_documents_customised">Personalizat</string>
     <string name="system_documents_using_default">Se folosește valoarea implicită inclusă</string>
     <string name="system_documents_revert">Revino la implicit</string>
     <string name="system_documents_save">Salvează</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Șterge utilizatorul</string>
     <string name="system_users_delete_title">Ștergi utilizatorul?</string>
     <string name="system_users_manage_sessions">Gestionează sesiunile</string>
-    <string name="system_users_sessions_description">Vizualizează și revocă sesiunile active pentru acest utilizator.</string>
     <string name="system_users_sessions_empty">Acest utilizator nu are sesiuni active.</string>
     <string name="system_users_revoke">Revocă</string>
     <string name="system_users_revoke_all">Revocă toate sesiunile</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Următor</string>
     <string name="system_users_empty">Nu s-au găsit utilizatori</string>
     <string name="system_users_empty_search">Niciun utilizator nu corespunde căutării</string>
-    <string name="system_users_empty_search_hint">Încearcă să ajustezi criteriile de căutare</string>
     <string name="system_users_toast_created">Utilizator creat</string>
     <string name="system_users_toast_updated">Utilizator actualizat</string>
     <string name="system_users_toast_deleted">Utilizator șters</string>
@@ -211,17 +207,19 @@
     <string name="settings_home_terms">Termenii serviciului</string>
     <string name="account_passkeys_empty">Nu există chei de acces înregistrate.</string>
     <string name="account_passkey_register_title">Adăugare cheie de acces</string>
-    <string name="account_passkey_register_message">Dispozitivul vă va solicita confirmarea. Cheia de acces este legată de acest dispozitiv și folosită pentru conectările viitoare.</string>
     <string name="account_passkey_name_label">Nume (opțional)</string>
     <string name="account_passkey_delete_message">„%1$s\" nu vă va mai conecta.</string>
-    <string name="account_totp_description">Conectați-vă cu un cod din 6 cifre dintr-o aplicație de autentificare.</string>
     <string name="account_totp_enabled">Autentificatorul este activat.</string>
     <string name="account_totp_setup_step1">Scanați sau introduceți acest secret în aplicația dvs. de autentificare.</string>
     <string name="account_totp_setup_step2">Introduceți codul din 6 cifre afișat de aplicație.</string>
     <string name="account_totp_code">Cod</string>
     <string name="account_totp_disable_message">Nu vă veți mai putea conecta cu un cod de autentificare.</string>
     <string name="account_recovery_none">Nu au fost generate coduri de recuperare.</string>
-    <string name="account_recovery_count">%1$d coduri de recuperare neutilizate.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d cod de recuperare rămas.</item>
+        <item quantity="few">%1$d coduri de recuperare rămase.</item>
+        <item quantity="other">%1$d de coduri de recuperare rămase.</item>
+    </plurals>
     <string name="account_recovery_generate">Generează coduri</string>
     <string name="account_recovery_regenerate">Regenerează codurile</string>
     <string name="account_recovery_regen_title">Regenerare coduri de recuperare?</string>
@@ -270,7 +268,11 @@
     <string name="system_users_session_last_accessed">Ultimul acces: %1$s</string>
     <string name="system_users_revoke_all_title">Revocă toate sesiunile?</string>
     <string name="system_users_revoke_all_message">Toate sesiunile active ale acestui utilizator vor fi deconectate.</string>
-    <string name="system_users_pagination_status">Se afișează %1$d–%2$d din %3$d utilizatori</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Se afișează %1$d–%2$d din %3$d utilizator</item>
+        <item quantity="few">Se afișează %1$d–%2$d din %3$d utilizatori</item>
+        <item quantity="other">Se afișează %1$d–%2$d din %3$d de utilizatori</item>
+    </plurals>
     <string name="account_title">Cont</string>
     <string name="account_section_identity">Identitate</string>
     <string name="account_identity_identity">Identitate</string>
@@ -308,8 +310,8 @@
         <item quantity="other">Test trimis către %1$d de destinații</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
+        <item quantity="one">S-a revocat %1$d sesiune</item>
         <item quantity="few">S-au revocat %1$d sesiuni</item>
-        <item quantity="one">S-a revocat 1 sesiune</item>
         <item quantity="other">S-au revocat %1$d de sesiuni</item>
     </plurals>
     <string name="login_title">Autentificare</string>
@@ -349,10 +351,8 @@
     <string name="system_setting_hostname">Nume de gazdă anunțat altor servere</string>
     <string name="system_status_peer_id">ID partener</string>
     <string name="system_status_holepunch">Perforare</string>
-    <string name="system_status_holepunch_value">%1$d reușite · %2$d eșuate</string>
     <string name="system_status_awaiting_routing">Mesaje care așteaptă rutarea</string>
     <string name="system_status_relay_service">Serviciu de releu</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d rezervări · %3$d circuite · %4$d respinse</string>
     <string name="route_target_select">Selectează</string>
     <string name="account_data_description">Descarcă o copie de rezervă completă pe care o poți restaura pe acest server Mochi sau pe altul.</string>
     <string name="route_target_none">Nu există destinații disponibile</string>
@@ -377,7 +377,11 @@
     <string name="accounts_device_seen">Văzut ultima dată %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplicație</string>
     <string name="notifprefs_device_push">%1$s · notificări push</string>
-    <string name="notifprefs_test_partial">Testul a fost trimis către %1$d din %2$d destinații</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Test trimis către %1$d din %2$d destinație</item>
+        <item quantity="few">Test trimis către %1$d din %2$d destinații</item>
+        <item quantity="other">Test trimis către %1$d din %2$d de destinații</item>
+    </plurals>
     <string name="notifprefs_test_none">Nicio destinație configurată</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
     <string name="notifprefs_no_destinations">Fără destinații</string>
@@ -396,4 +400,32 @@
     <string name="accounts_revoke_confirm">Aceasta va revoca accesul la calendar al %1$s. Autentificarea cu %2$s rămâne până când o deconectezi din pagina de autentificare.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Temă necunoscută</string>
+    <string name="system_documents_modified">Modificat</string>
+    <string name="system_documents_discard_title">Renunți la modificări?</string>
+    <string name="system_documents_discard">Renunță</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d reușită</item>
+        <item quantity="few">%1$d reușite</item>
+        <item quantity="other">%1$d de reușite</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d eșec</item>
+        <item quantity="few">%1$d eșecuri</item>
+        <item quantity="other">%1$d de eșecuri</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d rezervare</item>
+        <item quantity="few">%1$d / %2$d rezervări</item>
+        <item quantity="other">%1$d / %2$d de rezervări</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d circuit</item>
+        <item quantity="few">%1$d circuite</item>
+        <item quantity="other">%1$d de circuite</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d respinsă</item>
+        <item quantity="few">%1$d respinse</item>
+        <item quantity="other">%1$d de respinse</item>
+    </plurals>
 </resources>

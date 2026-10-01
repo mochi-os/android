@@ -5,7 +5,7 @@
     <string name="settings_home_logout">Phuma</string>
     <string name="settings_home_account">I-akhawunti</string>
     <string name="settings_home_preferences">Okuthandwayo</string>
-    <string name="settings_home_display">Bonisa</string>
+    <string name="settings_home_display">Isibonisi</string>
     <string name="settings_home_notification_prefs">Okuthandwayo kwezaziso</string>
     <string name="settings_home_accounts">Ama-akhawunti axhunyiwe</string>
     <string name="settings_home_interests">Izintshisekelo</string>
@@ -104,13 +104,11 @@
     <string name="accounts_remove">Khipha</string>
     <string name="accounts_remove_title">Khipha i-akhawunti?</string>
     <string name="system_documents_title">Imibhalo</string>
-    <string name="system_documents_description">Imithetho yeseva, imibandela nemigomo, nesaziso sobumfihlo okuboniswa kubasebenzisi bakho</string>
     <string name="system_documents_tab_rules">Imithetho yeseva</string>
     <string name="system_documents_tab_terms">Imibandela nemigomo</string>
     <string name="system_documents_tab_privacy">Ubumfihlo</string>
     <string name="system_documents_language">Ulimi</string>
     <string name="system_documents_no_language">Ayikho idokhumenti etholakalayo yalolu limi.</string>
-    <string name="system_documents_customised">Okwenziwe ngokwezifiso</string>
     <string name="system_documents_using_default">Kusetshenziswa okuzenzakalelayo okuhlanganisiwe</string>
     <string name="system_documents_revert">Buyisela kokuzenzakalelayo</string>
     <string name="system_documents_save">Londoloza</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Susa umsebenzisi</string>
     <string name="system_users_delete_title">Susa umsebenzisi?</string>
     <string name="system_users_manage_sessions">Phatha amaseshini</string>
-    <string name="system_users_sessions_description">Buka futhi uhoxise amaseshini asebenzayo alo msebenzisi.</string>
     <string name="system_users_sessions_empty">Lo msebenzisi akanawo amaseshini asebenzayo.</string>
     <string name="system_users_revoke">Hoxisa</string>
     <string name="system_users_revoke_all">Hoxisa zonke iziseshini</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Okulandelayo</string>
     <string name="system_users_empty">Abakho abasebenzisi abatholakele</string>
     <string name="system_users_empty_search">Abakho abasebenzisi abafanele usesho lwakho</string>
-    <string name="system_users_empty_search_hint">Zama ukulungisa amakhrayitheriya akho okusesha</string>
     <string name="system_users_toast_created">Umsebenzisi udaliwe</string>
     <string name="system_users_toast_updated">Umsebenzisi ubuyekeziwe</string>
     <string name="system_users_toast_deleted">Umsebenzisi ususiwe</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">Imibandela yesevisi</string>
     <string name="account_passkeys_empty">Awekho amakhi okudlula abhalisiwe.</string>
     <string name="account_passkey_register_title">Engeza ikhi yokudlula</string>
-    <string name="account_passkey_register_message">Idivayisi yakho izokucela ukuthi uqinisekise. Ikhi yokudlula iboshelwe kule divayisi futhi isetshenziselwa ukungena okuzayo.</string>
     <string name="account_passkey_name_label">Igama (okukhethwayo)</string>
     <string name="account_passkey_delete_message">\"%1$s\" ngeke isakungenisa.</string>
-    <string name="account_totp_description">Ngena ngekhodi enezinombolo ezi-6 evela kuhlelo lokufakazela.</string>
     <string name="account_totp_enabled">Umfakazeli unikwe amandla.</string>
     <string name="account_totp_setup_step1">Skena noma ngenisa le mfihlo kuhlelo lakho lokufakazela.</string>
     <string name="account_totp_setup_step2">Ngenisa ikhodi enezinombolo ezi-6 ehlelo lakho elikukhombisayo.</string>
     <string name="account_totp_code">Ikhodi</string>
     <string name="account_totp_disable_message">Ngeke ukwazi ukungena ngekhodi yomfakazeli.</string>
     <string name="account_recovery_none">Awekho amakhodi okubuyisa enziwe.</string>
-    <string name="account_recovery_count">%1$d amakhodi okubuyisa angasetshenzisiwe.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">Amakhodi okubuyisa asele: %1$d.</item>
+        <item quantity="other">Amakhodi okubuyisa asele: %1$d.</item>
+    </plurals>
     <string name="account_recovery_generate">Khiqiza amakhodi</string>
     <string name="account_recovery_regenerate">Khiqiza amakhodi kabusha</string>
     <string name="account_recovery_regen_title">Khiqiza amakhodi okubuyisa kabusha?</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">Ukufinyelela kokugcina: %1$s</string>
     <string name="system_users_revoke_all_title">Hoxisa zonke izikhathi?</string>
     <string name="system_users_revoke_all_message">Zonke izikhathi ezisebenzayo zalo msebenzisi zizophuma.</string>
-    <string name="system_users_pagination_status">Ikhombisa %1$d–%2$d kwabasebenzisi abangu-%3$d</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Ikhombisa %1$d–%2$d komsebenzisi ongu-%3$d</item>
+        <item quantity="other">Ikhombisa %1$d–%2$d kwabasebenzisi abangu-%3$d</item>
+    </plurals>
     <string name="account_title">I-akhawunti</string>
     <string name="account_section_identity">Ubunikazi</string>
     <string name="account_identity_identity">Ubunikazi</string>
@@ -347,10 +347,8 @@
     <string name="system_setting_hostname">Igama lomsingathi elimenyezelwe kwamanye amaseva</string>
     <string name="system_status_peer_id">I-ID yontanga</string>
     <string name="system_status_holepunch">Ukubhoboza</string>
-    <string name="system_status_holepunch_value">%1$d kuphumelele · %2$d kuhlulekile</string>
     <string name="system_status_awaiting_routing">Imilayezo elindele ukuhanjiswa kwendlela</string>
     <string name="system_status_relay_service">Isevisi yokudlulisa</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d ukubhukha · %3$d izifunda · %4$d kwenqatshiwe</string>
     <string name="route_target_select">Khetha</string>
     <string name="account_data_description">Landa isipele esiphelele ongasibuyisela kule seva ye-Mochi noma kwenye.</string>
     <string name="route_target_none">Awekho amagondolozelo atholakalayo</string>
@@ -375,7 +373,10 @@
     <string name="accounts_device_seen">Igcine ukubonwa %1$s</string>
     <string name="notifprefs_device_app">%1$s · i-app</string>
     <string name="notifprefs_device_push">%1$s · i-push</string>
-    <string name="notifprefs_test_partial">Ukuhlolwa kuthunyelwe ku-%1$d kwezingu-%2$d izindawo</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Ukuhlolwa kuthunyelwe ku-%1$d kwendawo engu-%2$d</item>
+        <item quantity="other">Ukuhlolwa kuthunyelwe ku-%1$d kwezindawo ezingu-%2$d</item>
+    </plurals>
     <string name="notifprefs_test_none">Aziyikho izindawo zokuya kuzo ezicushiwe</string>
     <string name="notifprefs_transport_fcm">I-push ye-Android</string>
     <string name="notifprefs_no_destinations">Akukho zindawo zokuya</string>
@@ -394,4 +395,27 @@
     <string name="accounts_revoke_confirm">Lokhu kuzohoxisa ukufinyelela kwekhalenda kuka-%1$s. Ukungena nge-%2$s kuzohlala kuze kube yilapho uyisusa ekhasini lokuNgena.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Indikimba engaziwa</string>
+    <string name="system_documents_modified">Kushintshiwe</string>
+    <string name="system_documents_discard_title">Lahla izinguquko?</string>
+    <string name="system_documents_discard">Lahla</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d kuphumelele</item>
+        <item quantity="other">%1$d kuphumelele</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d kuhlulekile</item>
+        <item quantity="other">%1$d kuhlulekile</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d ukubhukha</item>
+        <item quantity="other">%1$d / %2$d ukubhukha</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d isekhethi</item>
+        <item quantity="other">%1$d amasekhethi</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d kwenqatshiwe</item>
+        <item quantity="other">%1$d kwenqatshiwe</item>
+    </plurals>
 </resources>

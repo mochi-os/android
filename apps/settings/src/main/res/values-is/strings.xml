@@ -104,13 +104,11 @@
     <string name="accounts_remove">Fjarlægja</string>
     <string name="accounts_remove_title">Fjarlægja reikning?</string>
     <string name="system_documents_title">Skjöl</string>
-    <string name="system_documents_description">Reglur þjóns, skilmálar og skilyrði og persónuverndartilkynning sem birtast notendum þínum</string>
     <string name="system_documents_tab_rules">Reglur þjónsins</string>
     <string name="system_documents_tab_terms">Skilmálar og skilyrði</string>
     <string name="system_documents_tab_privacy">Friðhelgi</string>
     <string name="system_documents_language">Tungumál</string>
     <string name="system_documents_no_language">Ekkert skjal í boði fyrir þetta tungumál.</string>
-    <string name="system_documents_customised">Sérsniðið</string>
     <string name="system_documents_using_default">Notar innbyggt sjálfgefið</string>
     <string name="system_documents_revert">Setja á sjálfgefið</string>
     <string name="system_documents_save">Vista</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Eyða notanda</string>
     <string name="system_users_delete_title">Eyða notanda?</string>
     <string name="system_users_manage_sessions">Stjórna setum</string>
-    <string name="system_users_sessions_description">Skoða og afturkalla virkar setur fyrir þennan notanda.</string>
     <string name="system_users_sessions_empty">Þessi notandi er ekki með neinar virkar setur.</string>
     <string name="system_users_revoke">Afturkalla</string>
     <string name="system_users_revoke_all">Afturkalla allar lotur</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Áfram</string>
     <string name="system_users_empty">Engir notendur fundust</string>
     <string name="system_users_empty_search">Engir notendur passa við leitina þína</string>
-    <string name="system_users_empty_search_hint">Reyndu að aðlaga leitarforsendur þínar</string>
     <string name="system_users_toast_created">Notandi búinn til</string>
     <string name="system_users_toast_updated">Notandi uppfærður</string>
     <string name="system_users_toast_deleted">Notanda eytt</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">Þjónustuskilmálar</string>
     <string name="account_passkeys_empty">Engir aðgangslyklar skráðir.</string>
     <string name="account_passkey_register_title">Bæta við aðgangslykli</string>
-    <string name="account_passkey_register_message">Tækið þitt mun biðja þig um að staðfesta. Aðgangslykillinn er bundinn við þetta tæki og notaður fyrir framtíðar innskráningar.</string>
     <string name="account_passkey_name_label">Nafn (valfrjálst)</string>
     <string name="account_passkey_delete_message">\"%1$s\" mun ekki lengur skrá þig inn.</string>
-    <string name="account_totp_description">Skráðu þig inn með 6-stafa kóða úr auðkenningarappi.</string>
     <string name="account_totp_enabled">Auðkenningarkerfið er virkjað.</string>
     <string name="account_totp_setup_step1">Skannaðu eða sláðu inn þennan leyndarmál í auðkenningarappinu þínu.</string>
     <string name="account_totp_setup_step2">Sláðu inn 6-stafa kóðann sem appið þitt sýnir.</string>
     <string name="account_totp_code">Kóði</string>
     <string name="account_totp_disable_message">Þú munt ekki lengur geta skráð þig inn með auðkenningarkóða.</string>
     <string name="account_recovery_none">Engir endurheimtarkóðar búnir til.</string>
-    <string name="account_recovery_count">%1$d ónotaðir endurheimtarkóðar.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d endurheimtarkóði eftir.</item>
+        <item quantity="other">%1$d endurheimtarkóðar eftir.</item>
+    </plurals>
     <string name="account_recovery_generate">Búa til kóða</string>
     <string name="account_recovery_regenerate">Endurnýja kóða</string>
     <string name="account_recovery_regen_title">Endurnýja endurheimtarkóða?</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">Síðast aðgangur: %1$s</string>
     <string name="system_users_revoke_all_title">Afturkalla allar setur?</string>
     <string name="system_users_revoke_all_message">Allar virkar setur þessa notanda verða skráðar út.</string>
-    <string name="system_users_pagination_status">Sýni %1$d–%2$d af %3$d notendum</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Sýni %1$d–%2$d af %3$d notanda</item>
+        <item quantity="other">Sýni %1$d–%2$d af %3$d notendum</item>
+    </plurals>
     <string name="account_title">Reikningur</string>
     <string name="account_section_identity">Auðkenni</string>
     <string name="account_identity_identity">Auðkenni</string>
@@ -347,10 +347,8 @@
     <string name="system_setting_hostname">Vélarheiti tilkynnt öðrum netþjónum</string>
     <string name="system_status_peer_id">Jafningja-ID</string>
     <string name="system_status_holepunch">Gatslátt</string>
-    <string name="system_status_holepunch_value">%1$d tókst · %2$d mistókst</string>
     <string name="system_status_awaiting_routing">Skilaboð sem bíða leiðarvals</string>
     <string name="system_status_relay_service">Endurvarpsþjónusta</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d frátektir · %3$d rásir · %4$d hafnað</string>
     <string name="route_target_select">Velja</string>
     <string name="account_data_description">Sæktu heildarafrit sem þú getur endurheimt á þessum eða öðrum Mochi-þjóni.</string>
     <string name="route_target_none">Engin skotmörk í boði</string>
@@ -375,7 +373,10 @@
     <string name="accounts_device_seen">Síðast séð %1$s</string>
     <string name="notifprefs_device_app">%1$s · forrit</string>
     <string name="notifprefs_device_push">%1$s · ýting</string>
-    <string name="notifprefs_test_partial">Prufa send á %1$d af %2$d áfangastöðum</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Prófun send á %1$d af %2$d áfangastað</item>
+        <item quantity="other">Prófun send á %1$d af %2$d áfangastöðum</item>
+    </plurals>
     <string name="notifprefs_test_none">Engir áfangastaðir stilltir</string>
     <string name="notifprefs_transport_fcm">Android-ýting</string>
     <string name="notifprefs_no_destinations">Engir áfangastaðir</string>
@@ -394,4 +395,27 @@
     <string name="accounts_revoke_confirm">Þetta afturkallar dagatalsaðgang %1$s. Innskráning með %2$s helst þar til þú aftengir hana á innskráningarsíðunni.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Óþekkt þema</string>
+    <string name="system_documents_modified">Breytt</string>
+    <string name="system_documents_discard_title">Henda breytingum?</string>
+    <string name="system_documents_discard">Henda</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d tókst</item>
+        <item quantity="other">%1$d tókust</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d mistókst</item>
+        <item quantity="other">%1$d mistókust</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d frátekt</item>
+        <item quantity="other">%1$d / %2$d frátektir</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d rás</item>
+        <item quantity="other">%1$d rásir</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d hafnað</item>
+        <item quantity="other">%1$d hafnað</item>
+    </plurals>
 </resources>

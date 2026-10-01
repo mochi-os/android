@@ -103,9 +103,9 @@
     <string name="settings_time_zone">តំបន់ម៉ោង</string>
     <string name="settings_reset_to_defaults">កំណត់ឡើងវិញទៅលំនាំដើម</string>
     <string name="settings_reset_confirm_title">កំណត់ចំណូលចិត្តឡើងវិញ?</string>
-    <string name="settings_reset_confirm_message">នេះនឹងកំណត់ឡើងវិញការកំណត់ចំណូលចិត្តទាំងអស់ទៅតម្លៃលំនាំដើមរបស់ពួកវា។</string>
+    <string name="settings_reset_confirm_message">នេះនឹងកំណត់ចំណូលចិត្តទាំងនេះឡើងវិញទៅតម្លៃលំនាំដើមរបស់វា។</string>
     <string name="settings_reset">កំណត់ឡើងវិញ</string>
-    <string name="settings_display_title">បង្ហាញ</string>
+    <string name="settings_display_title">ការបង្ហាញ</string>
     <string name="settings_display_reset">កំណត់ឡើងវិញទៅលំនាំដើម</string>
     <string name="settings_display_reset_confirm_title">កំណត់ការបង្ហាញឡើងវិញ?</string>
     <string name="settings_display_reset_confirm_message">នេះនឹងកំណត់ការកំណត់ការបង្ហាញឡើងវិញទៅតម្លៃលំនាំដើមរបស់ពួកវា។</string>

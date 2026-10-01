@@ -104,13 +104,11 @@
     <string name="accounts_remove">移除</string>
     <string name="accounts_remove_title">移除账户?</string>
     <string name="system_documents_title">文档</string>
-    <string name="system_documents_description">向您的用户展示的服务器规则、服务条款和隐私声明</string>
     <string name="system_documents_tab_rules">服务器规则</string>
     <string name="system_documents_tab_terms">服务条款</string>
     <string name="system_documents_tab_privacy">隐私</string>
     <string name="system_documents_language">语言</string>
     <string name="system_documents_no_language">该语言没有可用的文档。</string>
-    <string name="system_documents_customised">已自定义</string>
     <string name="system_documents_using_default">使用内置默认</string>
     <string name="system_documents_revert">恢复为默认</string>
     <string name="system_documents_save">保存</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">删除用户</string>
     <string name="system_users_delete_title">删除用户吗?</string>
     <string name="system_users_manage_sessions">管理会话</string>
-    <string name="system_users_sessions_description">查看并撤销此用户的活跃会话。</string>
     <string name="system_users_sessions_empty">此用户没有活跃会话。</string>
     <string name="system_users_revoke">撤销</string>
     <string name="system_users_revoke_all">撤销所有会话</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">下一步</string>
     <string name="system_users_empty">未找到用户</string>
     <string name="system_users_empty_search">没有用户与你的搜索匹配</string>
-    <string name="system_users_empty_search_hint">尝试调整您的搜索条件</string>
     <string name="system_users_toast_created">已创建用户</string>
     <string name="system_users_toast_updated">用户已更新</string>
     <string name="system_users_toast_deleted">用户已删除</string>
@@ -211,17 +207,17 @@
     <string name="settings_home_terms">服务条款</string>
     <string name="account_passkeys_empty">未注册任何通行密钥。</string>
     <string name="account_passkey_register_title">添加通行密钥</string>
-    <string name="account_passkey_register_message">您的设备将提示您确认。通行密钥与此设备绑定，用于将来的登录。</string>
     <string name="account_passkey_name_label">名称（可选）</string>
     <string name="account_passkey_delete_message">\"%1$s\"将不再能用于登录。</string>
-    <string name="account_totp_description">使用身份验证应用中的 6 位代码登录。</string>
     <string name="account_totp_enabled">身份验证器已启用。</string>
     <string name="account_totp_setup_step1">在您的身份验证应用中扫描或输入此密钥。</string>
     <string name="account_totp_setup_step2">输入应用显示的 6 位代码。</string>
     <string name="account_totp_code">验证码</string>
     <string name="account_totp_disable_message">您将无法使用身份验证代码登录。</string>
     <string name="account_recovery_none">未生成任何恢复代码。</string>
-    <string name="account_recovery_count">%1$d 个未使用的恢复代码。</string>
+    <plurals name="account_recovery_count">
+        <item quantity="other">剩余 %1$d 个恢复代码。</item>
+    </plurals>
     <string name="account_recovery_generate">生成代码</string>
     <string name="account_recovery_regenerate">重新生成代码</string>
     <string name="account_recovery_regen_title">重新生成恢复代码？</string>
@@ -270,7 +266,9 @@
     <string name="system_users_session_last_accessed">上次访问：%1$s</string>
     <string name="system_users_revoke_all_title">撤销所有会话？</string>
     <string name="system_users_revoke_all_message">此用户的所有活跃会话都将被注销。</string>
-    <string name="system_users_pagination_status">显示 %3$d 名用户中的第 %1$d–%2$d 名</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="other">显示 %3$d 名用户中的第 %1$d–%2$d 名</item>
+    </plurals>
     <string name="account_title">账户</string>
     <string name="account_section_identity">身份</string>
     <string name="account_identity_identity">身份</string>
@@ -346,10 +344,8 @@
     <string name="system_setting_hostname">向其他服务器通告的主机名</string>
     <string name="system_status_peer_id">对等节点 ID</string>
     <string name="system_status_holepunch">打洞穿透</string>
-    <string name="system_status_holepunch_value">%1$d 成功 · %2$d 失败</string>
     <string name="system_status_awaiting_routing">等待路由的消息</string>
     <string name="system_status_relay_service">中继服务</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d 预留 · %3$d 线路 · %4$d 拒绝</string>
     <string name="route_target_select">选择</string>
     <string name="account_data_description">下载完整备份，你可以在本服务器或其他 Mochi 服务器上还原。</string>
     <string name="route_target_none">没有可用的目标</string>
@@ -374,7 +370,9 @@
     <string name="accounts_device_seen">最后看到 %1$s</string>
     <string name="notifprefs_device_app">%1$s · 应用</string>
     <string name="notifprefs_device_push">%1$s · 推送</string>
-    <string name="notifprefs_test_partial">测试已发送至 %2$d 个目标中的 %1$d 个</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="other">测试已发送至 %2$d 个目标中的 %1$d 个</item>
+    </plurals>
     <string name="notifprefs_test_none">未配置目标</string>
     <string name="notifprefs_transport_fcm">Android 推送</string>
     <string name="notifprefs_no_destinations">没有目标</string>
@@ -393,4 +391,22 @@
     <string name="accounts_revoke_confirm">此操作将撤销 %1$s 的日历访问权限。使用 %2$s 登录会保留，直到你在登录页面解除关联。</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">未知主题</string>
+    <string name="system_documents_modified">已修改</string>
+    <string name="system_documents_discard_title">放弃更改？</string>
+    <string name="system_documents_discard">放弃</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="other">成功 %1$d 次</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="other">失败 %1$d 次</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="other">%1$d / %2$d 个预留</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="other">%1$d 条线路</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="other">拒绝 %1$d 次</item>
+    </plurals>
 </resources>

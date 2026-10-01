@@ -104,13 +104,11 @@
     <string name="accounts_remove">Видалити</string>
     <string name="accounts_remove_title">Видалити обліковий запис?</string>
     <string name="system_documents_title">Документи</string>
-    <string name="system_documents_description">Правила сервера, умови та правила і повідомлення про конфіденційність, які показуються вашим користувачам</string>
     <string name="system_documents_tab_rules">Правила сервера</string>
     <string name="system_documents_tab_terms">Умови та правила</string>
     <string name="system_documents_tab_privacy">Приватність</string>
     <string name="system_documents_language">Мова</string>
     <string name="system_documents_no_language">Документ цією мовою недоступний.</string>
-    <string name="system_documents_customised">Налаштовано</string>
     <string name="system_documents_using_default">Використовується вбудоване значення за замовчуванням</string>
     <string name="system_documents_revert">Повернути до стандартного</string>
     <string name="system_documents_save">Зберегти</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Видалити користувача</string>
     <string name="system_users_delete_title">Видалити користувача?</string>
     <string name="system_users_manage_sessions">Керування сеансами</string>
-    <string name="system_users_sessions_description">Переглянути та відкликати активні сесії цього користувача.</string>
     <string name="system_users_sessions_empty">У цього користувача немає активних сесій.</string>
     <string name="system_users_revoke">Відкликати</string>
     <string name="system_users_revoke_all">Відкликати всі сесії</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Далі</string>
     <string name="system_users_empty">Користувачів не знайдено</string>
     <string name="system_users_empty_search">Жоден користувач не відповідає вашому пошуку</string>
-    <string name="system_users_empty_search_hint">Спробуйте змінити критерії пошуку</string>
     <string name="system_users_toast_created">Користувача створено</string>
     <string name="system_users_toast_updated">Користувача оновлено</string>
     <string name="system_users_toast_deleted">Користувача видалено</string>
@@ -211,17 +207,20 @@
     <string name="settings_home_terms">Умови використання</string>
     <string name="account_passkeys_empty">Ключі доступу не зареєстровані.</string>
     <string name="account_passkey_register_title">Додати ключ доступу</string>
-    <string name="account_passkey_register_message">Ваш пристрій попросить підтвердити. Ключ доступу пов\'язаний із цим пристроєм і використовуватиметься для майбутніх входів.</string>
     <string name="account_passkey_name_label">Назва (необов\'язково)</string>
     <string name="account_passkey_delete_message">«%1$s» більше не зможе виконувати вхід.</string>
-    <string name="account_totp_description">Увійдіть за 6-значним кодом з додатку-автентифікатора.</string>
     <string name="account_totp_enabled">Автентифікатор увімкнено.</string>
     <string name="account_totp_setup_step1">Скануйте або введіть цей секрет у вашому додатку-автентифікаторі.</string>
     <string name="account_totp_setup_step2">Введіть 6-значний код, який показує додаток.</string>
     <string name="account_totp_code">Код</string>
     <string name="account_totp_disable_message">Ви більше не зможете входити з кодом автентифікатора.</string>
     <string name="account_recovery_none">Коди відновлення не згенеровано.</string>
-    <string name="account_recovery_count">Невикористаних кодів відновлення: %1$d.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">Залишився %1$d код відновлення.</item>
+        <item quantity="few">Залишилося %1$d коди відновлення.</item>
+        <item quantity="many">Залишилося %1$d кодів відновлення.</item>
+        <item quantity="other">Залишилося %1$d коду відновлення.</item>
+    </plurals>
     <string name="account_recovery_generate">Згенерувати коди</string>
     <string name="account_recovery_regenerate">Перегенерувати коди</string>
     <string name="account_recovery_regen_title">Перегенерувати коди відновлення?</string>
@@ -270,7 +269,12 @@
     <string name="system_users_session_last_accessed">Останній доступ: %1$s</string>
     <string name="system_users_revoke_all_title">Відкликати всі сеанси?</string>
     <string name="system_users_revoke_all_message">Усі активні сеанси цього користувача будуть завершені.</string>
-    <string name="system_users_pagination_status">Показано %1$d–%2$d з %3$d користувачів</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Показано %1$d–%2$d з %3$d користувача</item>
+        <item quantity="few">Показано %1$d–%2$d з %3$d користувачів</item>
+        <item quantity="many">Показано %1$d–%2$d з %3$d користувачів</item>
+        <item quantity="other">Показано %1$d–%2$d з %3$d користувача</item>
+    </plurals>
     <string name="account_title">Обліковий запис</string>
     <string name="account_section_identity">Ідентичність</string>
     <string name="account_identity_identity">Ідентичність</string>
@@ -351,10 +355,8 @@
     <string name="system_setting_hostname">Ім\'я хоста, оголошене іншим серверам</string>
     <string name="system_status_peer_id">ID пiра</string>
     <string name="system_status_holepunch">Пробивання</string>
-    <string name="system_status_holepunch_value">%1$d успішно · %2$d невдало</string>
     <string name="system_status_awaiting_routing">Повідомлення, що очікують маршрутизації</string>
     <string name="system_status_relay_service">Служба ретрансляції</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d резервування · %3$d ланцюги · %4$d відхилено</string>
     <string name="route_target_select">Вибрати</string>
     <string name="account_data_description">Завантажте повну резервну копію, яку можна відновити на цьому або іншому сервері Mochi.</string>
     <string name="route_target_none">Немає доступних цілей</string>
@@ -379,7 +381,12 @@
     <string name="accounts_device_seen">Востаннє бачено %1$s</string>
     <string name="notifprefs_device_app">%1$s · застосунок</string>
     <string name="notifprefs_device_push">%1$s · пуш</string>
-    <string name="notifprefs_test_partial">Тест надіслано до %1$d з %2$d призначень</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Тест надіслано на %1$d з %2$d адреси</item>
+        <item quantity="few">Тест надіслано на %1$d з %2$d адрес</item>
+        <item quantity="many">Тест надіслано на %1$d з %2$d адрес</item>
+        <item quantity="other">Тест надіслано на %1$d з %2$d адреси</item>
+    </plurals>
     <string name="notifprefs_test_none">Призначення не налаштовано</string>
     <string name="notifprefs_transport_fcm">Пуш для Android</string>
     <string name="notifprefs_no_destinations">Немає призначень</string>
@@ -398,4 +405,37 @@
     <string name="accounts_revoke_confirm">Це скасує доступ до календаря для %1$s. Вхід через %2$s залишиться, доки ви не від\'єднаєте його на сторінці входу.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Невідома тема</string>
+    <string name="system_documents_modified">Змінено</string>
+    <string name="system_documents_discard_title">Відхилити зміни?</string>
+    <string name="system_documents_discard">Відхилити</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d успішно</item>
+        <item quantity="few">%1$d успішно</item>
+        <item quantity="many">%1$d успішно</item>
+        <item quantity="other">%1$d успішно</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d невдало</item>
+        <item quantity="few">%1$d невдало</item>
+        <item quantity="many">%1$d невдало</item>
+        <item quantity="other">%1$d невдало</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d резервування</item>
+        <item quantity="few">%1$d / %2$d резервування</item>
+        <item quantity="many">%1$d / %2$d резервувань</item>
+        <item quantity="other">%1$d / %2$d резервування</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d ланцюг</item>
+        <item quantity="few">%1$d ланцюги</item>
+        <item quantity="many">%1$d ланцюгів</item>
+        <item quantity="other">%1$d ланцюга</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d відхилено</item>
+        <item quantity="few">%1$d відхилено</item>
+        <item quantity="many">%1$d відхилено</item>
+        <item quantity="other">%1$d відхилено</item>
+    </plurals>
 </resources>

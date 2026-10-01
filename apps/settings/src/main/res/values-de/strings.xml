@@ -104,13 +104,11 @@
     <string name="accounts_remove">Entfernen</string>
     <string name="accounts_remove_title">Konto entfernen?</string>
     <string name="system_documents_title">Dokumente</string>
-    <string name="system_documents_description">Serverregeln, Allgemeine Geschäftsbedingungen und Datenschutzhinweis, die Ihren Nutzern angezeigt werden</string>
     <string name="system_documents_tab_rules">Serverregeln</string>
     <string name="system_documents_tab_terms">Allgemeine Geschäftsbedingungen</string>
     <string name="system_documents_tab_privacy">Datenschutz</string>
     <string name="system_documents_language">Sprache</string>
     <string name="system_documents_no_language">Für diese Sprache ist kein Dokument verfügbar.</string>
-    <string name="system_documents_customised">Angepasst</string>
     <string name="system_documents_using_default">Integrierter Standard wird verwendet</string>
     <string name="system_documents_revert">Auf Standard zurücksetzen</string>
     <string name="system_documents_save">Speichern</string>
@@ -141,7 +139,7 @@
     <string name="system_setting_auth_totp">Anmeldung über TOTP-Authenticator-App</string>
     <string name="system_setting_auth_recovery">Anmeldung über Wiederherstellungscode</string>
     <string name="system_setting_auth_oauth">Anmeldung über OAuth 2.0</string>
-    <string name="system_setting_default_theme">Standard-Theme</string>
+    <string name="system_setting_default_theme">Standarddesign</string>
     <string name="system_setting_domains_verification">Domainverifizierung erforderlich</string>
     <string name="system_setting_email_from">Standard-Absenderadresse für Systemmails</string>
     <string name="system_setting_oauth_public_url">Öffentliche URL für OAuth-Weiterleitungen</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Benutzer löschen</string>
     <string name="system_users_delete_title">Benutzer löschen?</string>
     <string name="system_users_manage_sessions">Sitzungen verwalten</string>
-    <string name="system_users_sessions_description">Aktive Sitzungen für diesen Benutzer anzeigen und widerrufen.</string>
     <string name="system_users_sessions_empty">Dieser Benutzer hat keine aktiven Sitzungen.</string>
     <string name="system_users_revoke">Widerrufen</string>
     <string name="system_users_revoke_all">Alle Sitzungen widerrufen</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Weiter</string>
     <string name="system_users_empty">Keine Nutzer gefunden</string>
     <string name="system_users_empty_search">Keine Nutzer entsprechen Ihrer Suche</string>
-    <string name="system_users_empty_search_hint">Versuchen Sie, Ihre Suchkriterien anzupassen</string>
     <string name="system_users_toast_created">Benutzer erstellt</string>
     <string name="system_users_toast_updated">Benutzer aktualisiert</string>
     <string name="system_users_toast_deleted">Benutzer gelöscht</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">Nutzungsbedingungen</string>
     <string name="account_passkeys_empty">Keine Passkeys registriert.</string>
     <string name="account_passkey_register_title">Passkey hinzufügen</string>
-    <string name="account_passkey_register_message">Dein Gerät fordert dich zur Bestätigung auf. Der Passkey ist an dieses Gerät gebunden und wird für zukünftige Anmeldungen verwendet.</string>
     <string name="account_passkey_name_label">Name (optional)</string>
     <string name="account_passkey_delete_message">„%1$s\" wird dich nicht mehr anmelden.</string>
-    <string name="account_totp_description">Melde dich mit einem 6-stelligen Code aus einer Authenticator-App an.</string>
     <string name="account_totp_enabled">Authenticator ist aktiviert.</string>
     <string name="account_totp_setup_step1">Scanne oder gib dieses Geheimnis in deiner Authenticator-App ein.</string>
     <string name="account_totp_setup_step2">Gib den 6-stelligen Code ein, den deine App anzeigt.</string>
     <string name="account_totp_code">Code</string>
     <string name="account_totp_disable_message">Du kannst dich dann nicht mehr mit einem Authenticator-Code anmelden.</string>
     <string name="account_recovery_none">Keine Wiederherstellungscodes generiert.</string>
-    <string name="account_recovery_count">%1$d ungenutzte Wiederherstellungscodes.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d verbleibender Wiederherstellungscode.</item>
+        <item quantity="other">%1$d verbleibende Wiederherstellungscodes.</item>
+    </plurals>
     <string name="account_recovery_generate">Codes generieren</string>
     <string name="account_recovery_regenerate">Codes neu generieren</string>
     <string name="account_recovery_regen_title">Wiederherstellungscodes neu generieren?</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">Letzter Zugriff: %1$s</string>
     <string name="system_users_revoke_all_title">Alle Sitzungen widerrufen?</string>
     <string name="system_users_revoke_all_message">Alle aktiven Sitzungen dieses Benutzers werden abgemeldet.</string>
-    <string name="system_users_pagination_status">Zeige %1$d–%2$d von %3$d Benutzern</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Zeige %1$d–%2$d von %3$d Benutzer</item>
+        <item quantity="other">Zeige %1$d–%2$d von %3$d Benutzern</item>
+    </plurals>
     <string name="account_title">Konto</string>
     <string name="account_section_identity">Identität</string>
     <string name="account_identity_identity">Identität</string>
@@ -307,7 +307,7 @@
         <item quantity="other">Test an %1$d Ziele gesendet</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 Sitzung widerrufen</item>
+        <item quantity="one">%1$d Sitzung widerrufen</item>
         <item quantity="other">%1$d Sitzungen widerrufen</item>
     </plurals>
     <string name="login_title">Anmeldung</string>
@@ -347,10 +347,8 @@
     <string name="system_setting_hostname">Anderen Servern bekanntgegebener Hostname</string>
     <string name="system_status_peer_id">Peer-ID</string>
     <string name="system_status_holepunch">Hole Punching</string>
-    <string name="system_status_holepunch_value">%1$d erfolgreich · %2$d fehlgeschlagen</string>
     <string name="system_status_awaiting_routing">Nachrichten, die auf Routing warten</string>
     <string name="system_status_relay_service">Relaisdienst</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d Reservierungen · %3$d Verbindungen · %4$d abgelehnt</string>
     <string name="route_target_select">Auswählen</string>
     <string name="account_data_description">Laden Sie eine vollständige Sicherung herunter, die Sie auf diesem oder einem anderen Mochi-Server wiederherstellen können.</string>
     <string name="route_target_none">Keine Ziele verfügbar</string>
@@ -375,7 +373,10 @@
     <string name="accounts_device_seen">Zuletzt gesehen %1$s</string>
     <string name="notifprefs_device_app">%1$s · App</string>
     <string name="notifprefs_device_push">%1$s · Push</string>
-    <string name="notifprefs_test_partial">Test an %1$d von %2$d Zielen gesendet</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Test an %1$d von %2$d Ziel gesendet</item>
+        <item quantity="other">Test an %1$d von %2$d Zielen gesendet</item>
+    </plurals>
     <string name="notifprefs_test_none">Keine Ziele konfiguriert</string>
     <string name="notifprefs_transport_fcm">Android-Push</string>
     <string name="notifprefs_no_destinations">Keine Ziele</string>
@@ -393,5 +394,28 @@
     <string name="accounts_provider_caldav">Kalenderserver</string>
     <string name="accounts_revoke_confirm">Damit wird der Kalenderzugriff von %1$s widerrufen. Die Anmeldung mit %2$s bleibt bestehen, bis Sie sie auf der Anmeldeseite trennen.</string>
     <string name="accounts_capability_mcp">MCP</string>
-    <string name="system_settings_theme_unknown">Unbekanntes Theme</string>
+    <string name="system_settings_theme_unknown">Unbekanntes Design</string>
+    <string name="system_documents_modified">Geändert</string>
+    <string name="system_documents_discard_title">Änderungen verwerfen?</string>
+    <string name="system_documents_discard">Verwerfen</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d erfolgreich</item>
+        <item quantity="other">%1$d erfolgreich</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d fehlgeschlagen</item>
+        <item quantity="other">%1$d fehlgeschlagen</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d Reservierung</item>
+        <item quantity="other">%1$d / %2$d Reservierungen</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d Verbindung</item>
+        <item quantity="other">%1$d Verbindungen</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d abgelehnt</item>
+        <item quantity="other">%1$d abgelehnt</item>
+    </plurals>
 </resources>

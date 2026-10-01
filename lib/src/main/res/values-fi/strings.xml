@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Aikavyöhyke</string>
     <string name="settings_reset_to_defaults">Palauta oletuksiin</string>
     <string name="settings_reset_confirm_title">Palautetaanko mieltymykset?</string>
-    <string name="settings_reset_confirm_message">Tämä palauttaa kaikki asetukset oletusarvoihinsa.</string>
+    <string name="settings_reset_confirm_message">Tämä palauttaa nämä asetukset oletusarvoihinsa.</string>
     <string name="settings_reset">Nollaa</string>
     <string name="settings_display_title">Näyttö</string>
     <string name="settings_display_reset">Palauta oletuksiin</string>

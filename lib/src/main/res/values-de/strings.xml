@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Zeitzone</string>
     <string name="settings_reset_to_defaults">Auf Standardwerte zurücksetzen</string>
     <string name="settings_reset_confirm_title">Präferenzen zurücksetzen?</string>
-    <string name="settings_reset_confirm_message">Dadurch werden alle Einstellungen auf ihre Standardwerte zurückgesetzt.</string>
+    <string name="settings_reset_confirm_message">Dadurch werden diese Einstellungen auf ihre Standardwerte zurückgesetzt.</string>
     <string name="settings_reset">Zurücksetzen</string>
     <string name="settings_display_title">Anzeige</string>
     <string name="settings_display_reset">Auf Standardwerte zurücksetzen</string>
@@ -112,7 +112,7 @@
     <string name="settings_theme_title">Design</string>
     <string name="settings_theme_default">Standard</string>
     <string name="settings_background">Hintergrund</string>
-    <string name="settings_background_theme">Vom Theme</string>
+    <string name="settings_background_theme">Vom Design</string>
     <string name="settings_background_off">Keine</string>
     <string name="game_chat_empty">Noch keine Nachrichten</string>
     <string name="game_chat_input_placeholder">Nachricht eingeben…</string>
@@ -309,7 +309,7 @@
     <string name="game_select_title">Spiel auswählen</string>
     <string name="game_select_subtitle">Wähle ein Spiel in der Seitenleiste oder starte ein neues.</string>
     <string name="settings_card">Kartenstil</string>
-    <string name="settings_card_theme">Vom Theme</string>
+    <string name="settings_card_theme">Vom Design</string>
     <string name="settings_card_flat">Flach</string>
     <string name="settings_card_raised">Erhöht</string>
     <string name="error_server_https">Die Serveradresse muss mit https:// beginnen</string>

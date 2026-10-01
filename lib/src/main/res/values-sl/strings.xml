@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Časovni pas</string>
     <string name="settings_reset_to_defaults">Ponastavi na privzete vrednosti</string>
     <string name="settings_reset_confirm_title">Ponastavi nastavitve?</string>
-    <string name="settings_reset_confirm_message">S tem boste vse nastavitve ponastavili na privzete vrednosti.</string>
+    <string name="settings_reset_confirm_message">S tem boste te nastavitve ponastavili na privzete vrednosti.</string>
     <string name="settings_reset">Ponastavi</string>
     <string name="settings_display_title">Prikaz</string>
     <string name="settings_display_reset">Ponastavi na privzete vrednosti</string>

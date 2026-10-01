@@ -104,13 +104,11 @@
     <string name="accounts_remove">Հեռացնել</string>
     <string name="accounts_remove_title">Հեռացնե՞լ հաշիվը։</string>
     <string name="system_documents_title">Փաստաթղթեր</string>
-    <string name="system_documents_description">Սերվերի կանոնները, պայմանները և գաղտնիության ծանուցումը, որոնք ցուցադրվում են ձեր օգտատերերին</string>
     <string name="system_documents_tab_rules">Սերվերի կանոններ</string>
     <string name="system_documents_tab_terms">Պայմաններ և կանոններ</string>
     <string name="system_documents_tab_privacy">Գաղտնիություն</string>
     <string name="system_documents_language">Լեզու</string>
     <string name="system_documents_no_language">Այս լեզվի համար փաստաթուղթ հասանելի չէ։</string>
-    <string name="system_documents_customised">Հարմարեցված</string>
     <string name="system_documents_using_default">Օգտագործվում է ներդրված կանխադրվածը</string>
     <string name="system_documents_revert">Վերադարձնել լռելյայնին</string>
     <string name="system_documents_save">Պահպանել</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Ջնջել օգտատիրոջը</string>
     <string name="system_users_delete_title">Ջնջե՞լ օգտատիրոջը։</string>
     <string name="system_users_manage_sessions">Կառավարել աշխատաշրջանները</string>
-    <string name="system_users_sessions_description">Դիտել և չեղարկել ակտիվ սեսիաները այս օգտատիրոջ համար:</string>
     <string name="system_users_sessions_empty">Այս օգտատերը չունի ակտիվ սեսիաներ:</string>
     <string name="system_users_revoke">Հետ վերցնել</string>
     <string name="system_users_revoke_all">Հետ վերցնել բոլոր սեսսիաները</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Հաջորդ</string>
     <string name="system_users_empty">Օգտատերեր չեն գտնվել</string>
     <string name="system_users_empty_search">Ձեր որոնմանը համապատասխանող օգտատերեր չկան</string>
-    <string name="system_users_empty_search_hint">Փորձեք ճշգրտել ձեր որոնման չափանիշները</string>
     <string name="system_users_toast_created">Օգտատերը ստեղծվեց</string>
     <string name="system_users_toast_updated">Օգտատերը թարմացվեց</string>
     <string name="system_users_toast_deleted">Օգտատերը ջնջվեց</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">Ծառայության պայմաններ</string>
     <string name="account_passkeys_empty">Գրանցված անցումային բանալիներ չկան։</string>
     <string name="account_passkey_register_title">Ավելացնել անցումային բանալի</string>
-    <string name="account_passkey_register_message">Ձեր սարքը կխնդրի հաստատել։ Անցումային բանալին կապված է այս սարքին և օգտագործվում է ապագա մուտքերի համար։</string>
     <string name="account_passkey_name_label">Անուն (ընտրովի)</string>
     <string name="account_passkey_delete_message">\"%1$s\"-ը այլևս ձեզ չի մուտքագրի։</string>
-    <string name="account_totp_description">Մուտք գործեք նույնականացման հավելվածի 6-նիշ կոդով։</string>
     <string name="account_totp_enabled">Նույնականացուցիչը միացված է։</string>
     <string name="account_totp_setup_step1">Սկանավորեք կամ մուտքագրեք այս գաղտնիքը ձեր նույնականացման հավելվածում։</string>
     <string name="account_totp_setup_step2">Մուտքագրեք 6-նիշ կոդը, որը ցույց է տալիս ձեր հավելվածը։</string>
     <string name="account_totp_code">Կոդ</string>
     <string name="account_totp_disable_message">Դուք այլևս չեք կարողանա մուտք գործել նույնականացուցչի կոդով։</string>
     <string name="account_recovery_none">Վերականգնման կոդեր չեն ստեղծվել։</string>
-    <string name="account_recovery_count">%1$d չօգտագործված վերականգնման կոդ։</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">Մնացել է %1$d վերականգնման կոդ։</item>
+        <item quantity="other">Մնացել է %1$d վերականգնման կոդ։</item>
+    </plurals>
     <string name="account_recovery_generate">Ստեղծել կոդեր</string>
     <string name="account_recovery_regenerate">Վերարտադրել կոդեր</string>
     <string name="account_recovery_regen_title">Վերարտադրե՞լ վերականգնման կոդերը։</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">Վերջին մուտքը՝ %1$s</string>
     <string name="system_users_revoke_all_title">Հետ վերցնե՞լ բոլոր սեսսիաները։</string>
     <string name="system_users_revoke_all_message">Այս օգտատիրոջ բոլոր ակտիվ նիստերը կդուրս գան։</string>
-    <string name="system_users_pagination_status">Ցուցադրում է %1$d–%2$d %3$d օգտատիրոջից</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Ցուցադրվում է %1$d–%2$d՝ %3$d օգտատիրոջից</item>
+        <item quantity="other">Ցուցադրվում է %1$d–%2$d՝ %3$d օգտատիրոջից</item>
+    </plurals>
     <string name="account_title">Հաշիվ</string>
     <string name="account_section_identity">Ինքնություն</string>
     <string name="account_identity_identity">Ինքնություն</string>
@@ -347,10 +347,8 @@
     <string name="system_setting_hostname">Այլ սերվերներին հայտարարված հոսթի անունը</string>
     <string name="system_status_peer_id">Հասակակցի ID</string>
     <string name="system_status_holepunch">Անցքի բացում</string>
-    <string name="system_status_holepunch_value">%1$d հաջողված · %2$d ձախողված</string>
     <string name="system_status_awaiting_routing">Երթուղավորման սպասող հաղորդագրություններ</string>
     <string name="system_status_relay_service">Փոխանցման ծառայություն</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d ամրագրումներ · %3$d շղթաներ · %4$d մերժված</string>
     <string name="route_target_select">Ընտրել</string>
     <string name="account_data_description">Ներբեռնեք ամբողջական պահուստ, որը կարող եք վերականգնել այս կամ այլ Mochi սերվերում։</string>
     <string name="route_target_none">Հասանելի նպատակակետեր չկան</string>
@@ -375,7 +373,10 @@
     <string name="accounts_device_seen">Վերջին անգամ տեսնված %1$s</string>
     <string name="notifprefs_device_app">%1$s · հավելված</string>
     <string name="notifprefs_device_push">%1$s · պուշ-ծանուցումներ</string>
-    <string name="notifprefs_test_partial">Թեստն ուղարկվել է %1$d նպատակակետի՝ %2$d-ից</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Թեստն ուղարկվել է %1$d նպատակակետի՝ %2$d-ից</item>
+        <item quantity="other">Թեստն ուղարկվել է %1$d նպատակակետի՝ %2$d-ից</item>
+    </plurals>
     <string name="notifprefs_test_none">Կարգավորված ուղղություններ չկան</string>
     <string name="notifprefs_transport_fcm">Android պուշ-ծանուցումներ</string>
     <string name="notifprefs_no_destinations">Նպատակակետեր չկան</string>
@@ -394,4 +395,27 @@
     <string name="accounts_revoke_confirm">Սա կչեղարկի %1$s-ի օրացույցի հասանելիությունը։ %2$s-ով մուտքը կմնա, մինչև այն անջատեք Մուտքի էջում։</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Անհայտ թեմա</string>
+    <string name="system_documents_modified">Փոփոխված</string>
+    <string name="system_documents_discard_title">Հրաժարվե՞լ փոփոխություններից։</string>
+    <string name="system_documents_discard">Հրաժարվել</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d հաջողված</item>
+        <item quantity="other">%1$d հաջողված</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d ձախողված</item>
+        <item quantity="other">%1$d ձախողված</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d ամրագրում</item>
+        <item quantity="other">%1$d / %2$d ամրագրում</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d շղթա</item>
+        <item quantity="other">%1$d շղթա</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d մերժված</item>
+        <item quantity="other">%1$d մերժված</item>
+    </plurals>
 </resources>

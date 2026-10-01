@@ -103,9 +103,9 @@
     <string name="settings_time_zone">Wagt zonasy</string>
     <string name="settings_reset_to_defaults">Deslapky bahalara gaýtar</string>
     <string name="settings_reset_confirm_title">Saýlamalary täzeden başlat?</string>
-    <string name="settings_reset_confirm_message">Bu ähli isleglerini esasy bahalaryna ýapar.</string>
+    <string name="settings_reset_confirm_message">Bu şu sazlamalary deslapky bahalaryna gaýtarar.</string>
     <string name="settings_reset">Täzeden başlat</string>
-    <string name="settings_display_title">Görkezmek</string>
+    <string name="settings_display_title">Görkeziş</string>
     <string name="settings_display_reset">Deslapky bahalara gaýtar</string>
     <string name="settings_display_reset_confirm_title">Görkezişi täzeden bellemek?</string>
     <string name="settings_display_reset_confirm_message">Bu görkeziş sazlamalaryny olaryň öňünden bellenen bahalaryna täzeden bellär.</string>

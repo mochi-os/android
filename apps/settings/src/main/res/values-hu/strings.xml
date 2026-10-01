@@ -104,13 +104,11 @@
     <string name="accounts_remove">Eltávolítás</string>
     <string name="accounts_remove_title">Eltávolítja a fiókot?</string>
     <string name="system_documents_title">Dokumentumok</string>
-    <string name="system_documents_description">A felhasználóknak megjelenített szerverszabályzat, általános szerződési feltételek és adatvédelmi tájékoztató</string>
     <string name="system_documents_tab_rules">Szerverszabályzat</string>
     <string name="system_documents_tab_terms">Általános szerződési feltételek</string>
     <string name="system_documents_tab_privacy">Adatvédelem</string>
     <string name="system_documents_language">Nyelv</string>
     <string name="system_documents_no_language">Ehhez a nyelvhez nem érhető el dokumentum.</string>
-    <string name="system_documents_customised">Egyéni</string>
     <string name="system_documents_using_default">Beépített alapértelmezett használata</string>
     <string name="system_documents_revert">Visszaállítás alapértelmezettre</string>
     <string name="system_documents_save">Mentés</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Felhasználó törlése</string>
     <string name="system_users_delete_title">Törli a felhasználót?</string>
     <string name="system_users_manage_sessions">Munkamenetek kezelése</string>
-    <string name="system_users_sessions_description">A felhasználó aktív munkameneteinek megtekintése és visszavonása.</string>
     <string name="system_users_sessions_empty">Ennek a felhasználónak nincsenek aktív munkamenetei.</string>
     <string name="system_users_revoke">Visszavonás</string>
     <string name="system_users_revoke_all">Az összes munkamenet visszavonása</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Következő</string>
     <string name="system_users_empty">Nem találhatók felhasználók</string>
     <string name="system_users_empty_search">A keresésnek nincs egyező felhasználója</string>
-    <string name="system_users_empty_search_hint">Próbáld meg módosítani a keresési feltételeket</string>
     <string name="system_users_toast_created">Felhasználó létrehozva</string>
     <string name="system_users_toast_updated">Felhasználó frissítve</string>
     <string name="system_users_toast_deleted">Felhasználó törölve</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">Szolgáltatási feltételek</string>
     <string name="account_passkeys_empty">Nincsenek regisztrált hozzáférési kulcsok.</string>
     <string name="account_passkey_register_title">Hozzáférési kulcs hozzáadása</string>
-    <string name="account_passkey_register_message">Az eszköz megerősítést kér. A hozzáférési kulcs ehhez az eszközhöz van kötve, és a jövőbeli bejelentkezésekhez használható.</string>
     <string name="account_passkey_name_label">Név (nem kötelező)</string>
     <string name="account_passkey_delete_message">„%1$s\" többé nem fog bejelentkezni.</string>
-    <string name="account_totp_description">Jelentkezz be 6 jegyű kóddal egy hitelesítő alkalmazásból.</string>
     <string name="account_totp_enabled">A hitelesítő engedélyezve van.</string>
     <string name="account_totp_setup_step1">Szkennelje vagy adja meg ezt a titkot a hitelesítő alkalmazásban.</string>
     <string name="account_totp_setup_step2">Adja meg az alkalmazás által megjelenített 6 jegyű kódot.</string>
     <string name="account_totp_code">Kód</string>
     <string name="account_totp_disable_message">Többé nem fog tudni bejelentkezni hitelesítő kóddal.</string>
     <string name="account_recovery_none">Nincsenek generált helyreállítási kódok.</string>
-    <string name="account_recovery_count">%1$d nem használt helyreállítási kód.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d fennmaradó helyreállítási kód.</item>
+        <item quantity="other">%1$d fennmaradó helyreállítási kód.</item>
+    </plurals>
     <string name="account_recovery_generate">Kódok generálása</string>
     <string name="account_recovery_regenerate">Kódok újragenerálása</string>
     <string name="account_recovery_regen_title">Újragenerálja a helyreállítási kódokat?</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">Utolsó hozzáférés: %1$s</string>
     <string name="system_users_revoke_all_title">Visszavonja az összes munkamenetet?</string>
     <string name="system_users_revoke_all_message">A felhasználó minden aktív munkamenete kijelentkezik.</string>
-    <string name="system_users_pagination_status">%3$d felhasználóból %1$d–%2$d megjelenítése</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">%3$d felhasználóból %1$d–%2$d megjelenítése</item>
+        <item quantity="other">%3$d felhasználóból %1$d–%2$d megjelenítése</item>
+    </plurals>
     <string name="account_title">Fiók</string>
     <string name="account_section_identity">Azonosító</string>
     <string name="account_identity_identity">Azonosító</string>
@@ -307,7 +307,7 @@
         <item quantity="other">Teszt elküldve %1$d célhelyre</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 munkamenet visszavonva</item>
+        <item quantity="one">%1$d munkamenet visszavonva</item>
         <item quantity="other">%1$d munkamenet visszavonva</item>
     </plurals>
     <string name="login_title">Bejelentkezés</string>
@@ -347,10 +347,8 @@
     <string name="system_setting_hostname">Más kiszolgálóknak bejelentett gazdagépnév</string>
     <string name="system_status_peer_id">Társ azonosító</string>
     <string name="system_status_holepunch">Lyukasztás</string>
-    <string name="system_status_holepunch_value">%1$d sikeres · %2$d sikertelen</string>
     <string name="system_status_awaiting_routing">Útválasztásra váró üzenetek</string>
     <string name="system_status_relay_service">Továbbító szolgáltatás</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d foglalások · %3$d áramkörök · %4$d elutasítva</string>
     <string name="route_target_select">Kiválasztás</string>
     <string name="account_data_description">Töltsön le egy teljes biztonsági mentést, amelyet visszaállíthat ezen vagy egy másik Mochi-kiszolgálón.</string>
     <string name="route_target_none">Nincs elérhető cél</string>
@@ -375,7 +373,10 @@
     <string name="accounts_device_seen">Utoljára látva %1$s</string>
     <string name="notifprefs_device_app">%1$s · alkalmazás</string>
     <string name="notifprefs_device_push">%1$s · push értesítés</string>
-    <string name="notifprefs_test_partial">Teszt elküldve %1$d/%2$d célra</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Teszt elküldve %2$d célhelyből %1$d célhelyre</item>
+        <item quantity="other">Teszt elküldve %2$d célhelyből %1$d célhelyre</item>
+    </plurals>
     <string name="notifprefs_test_none">Nincsenek célok beállítva</string>
     <string name="notifprefs_transport_fcm">Android push értesítés</string>
     <string name="notifprefs_no_destinations">Nincsenek célok</string>
@@ -394,4 +395,27 @@
     <string name="accounts_revoke_confirm">Ezzel visszavonja %1$s naptárhozzáférését. A %2$s fiókkal való bejelentkezés megmarad, amíg a Bejelentkezés oldalon le nem választja.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Ismeretlen téma</string>
+    <string name="system_documents_modified">Módosítva</string>
+    <string name="system_documents_discard_title">Elveted a módosításokat?</string>
+    <string name="system_documents_discard">Elvetés</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d sikeres</item>
+        <item quantity="other">%1$d sikeres</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d sikertelen</item>
+        <item quantity="other">%1$d sikertelen</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d foglalás</item>
+        <item quantity="other">%1$d / %2$d foglalás</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d áramkör</item>
+        <item quantity="other">%1$d áramkör</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d elutasítva</item>
+        <item quantity="other">%1$d elutasítva</item>
+    </plurals>
 </resources>

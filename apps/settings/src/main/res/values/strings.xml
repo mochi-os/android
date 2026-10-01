@@ -36,13 +36,11 @@
     <string name="account_passkeys_empty">No passkeys registered.</string>
     <string name="account_passkey_register">Add passkey</string>
     <string name="account_passkey_register_title">Add a passkey</string>
-    <string name="account_passkey_register_message">Your device will prompt you to confirm. The passkey is bound to this device and used for future sign-ins.</string>
     <string name="account_passkey_name_label">Name (optional)</string>
     <string name="account_passkey_delete_title">Delete passkey?</string>
     <string name="account_passkey_delete_message">"%1$s" will no longer sign you in.</string>
 
     <string name="account_section_totp">Authenticator app</string>
-    <string name="account_totp_description">Sign in with a 6-digit code from an authenticator app.</string>
     <string name="account_totp_enabled">Authenticator is enabled.</string>
     <string name="account_totp_setup">Set up authenticator</string>
     <string name="account_totp_setup_title">Set up authenticator</string>
@@ -55,7 +53,10 @@
 
     <string name="account_section_recovery">Recovery codes</string>
     <string name="account_recovery_none">No recovery codes generated.</string>
-    <string name="account_recovery_count">%1$d remaining recovery codes.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d remaining recovery code.</item>
+        <item quantity="other">%1$d remaining recovery codes.</item>
+    </plurals>
     <string name="account_recovery_generate">Generate codes</string>
     <string name="account_recovery_regenerate">Regenerate codes</string>
     <string name="account_recovery_regen_title">Regenerate recovery codes?</string>
@@ -170,7 +171,10 @@
     <string name="notifprefs_device_push">%1$s · push</string>
     <string name="notifprefs_test">Test</string>
     <string name="notifprefs_test_none">No destinations configured</string>
-    <string name="notifprefs_test_partial">Test sent to %1$d of %2$d destinations</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Test sent to %1$d of %2$d destination</item>
+        <item quantity="other">Test sent to %1$d of %2$d destinations</item>
+    </plurals>
     <string name="notifprefs_edit">Edit</string>
     <string name="notifprefs_delete">Delete</string>
     <string name="notifprefs_remove">Remove</string>
@@ -213,9 +217,7 @@
     <string name="system_status_mesh">Broadcast mesh</string>
     <string name="system_status_broadcast">Last broadcast</string>
     <string name="system_status_holepunch">Hole punch</string>
-    <string name="system_status_holepunch_value">%1$d succeeded · %2$d failed</string>
     <string name="system_status_relay_service">Relay service</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d reservations · %3$d circuits · %4$d refused</string>
     <string name="system_status_awaiting_routing">Messages awaiting routing</string>
     <string name="system_status_queued_broadcasts">Queued broadcast messages</string>
 
@@ -259,13 +261,11 @@
 
     <!-- System documents -->
     <string name="system_documents_title">Documents</string>
-    <string name="system_documents_description">Server rules, terms and conditions, and privacy notice shown to your users</string>
     <string name="system_documents_tab_rules">Server rules</string>
     <string name="system_documents_tab_terms">Terms and conditions</string>
     <string name="system_documents_tab_privacy">Privacy</string>
     <string name="system_documents_language">Language</string>
     <string name="system_documents_no_language">No document available for this language.</string>
-    <string name="system_documents_customised">Customised</string>
     <string name="system_documents_using_default">Using bundled default</string>
     <string name="system_documents_last_edited">Last edited %1$s</string>
     <string name="system_documents_revert">Revert to default</string>
@@ -354,7 +354,6 @@
     <string name="system_users_delete_message">This will permanently delete the user "%1$s". This action cannot be undone.</string>
     <string name="system_users_manage_sessions">Manage sessions</string>
     <string name="system_users_sessions_title">Sessions for %1$s</string>
-    <string name="system_users_sessions_description">View and revoke active sessions for this user.</string>
     <string name="system_users_sessions_empty">This user has no active sessions.</string>
     <string name="system_users_session_last_accessed">Last accessed: %1$s</string>
     <string name="system_users_revoke">Revoke</string>
@@ -363,12 +362,14 @@
     <string name="system_users_revoke_all_message">All active sessions for this user will be signed out.</string>
     <string name="system_users_unknown_browser">Unknown browser</string>
     <string name="system_users_unknown">Unknown</string>
-    <string name="system_users_pagination_status">Showing %1$d–%2$d of %3$d users</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Showing %1$d–%2$d of %3$d user</item>
+        <item quantity="other">Showing %1$d–%2$d of %3$d users</item>
+    </plurals>
     <string name="system_users_previous">Previous</string>
     <string name="system_users_next">Next</string>
     <string name="system_users_empty">No users found</string>
     <string name="system_users_empty_search">No users match your search</string>
-    <string name="system_users_empty_search_hint">Try adjusting your search criteria</string>
     <string name="system_users_toast_created">User created</string>
     <string name="system_users_toast_updated">User updated</string>
     <string name="system_users_toast_deleted">User deleted</string>
@@ -386,7 +387,7 @@
         <item quantity="other">Test sent to %1$d destinations</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">Revoked 1 session</item>
+        <item quantity="one">Revoked %1$d session</item>
         <item quantity="other">Revoked %1$d sessions</item>
     </plurals>
     <string name="domain_add">Add domain</string>
@@ -432,4 +433,27 @@
     <string name="accounts_field_token">Access token</string>
     <string name="accounts_field_topic">Topic</string>
     <string name="accounts_field_secret">Signing secret</string>
+    <string name="system_documents_modified">Modified</string>
+    <string name="system_documents_discard_title">Discard changes?</string>
+    <string name="system_documents_discard">Discard</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d succeeded</item>
+        <item quantity="other">%1$d succeeded</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d failed</item>
+        <item quantity="other">%1$d failed</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d reservation</item>
+        <item quantity="other">%1$d / %2$d reservations</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d circuit</item>
+        <item quantity="other">%1$d circuits</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d refused</item>
+        <item quantity="other">%1$d refused</item>
+    </plurals>
 </resources>

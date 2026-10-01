@@ -104,13 +104,11 @@
     <string name="accounts_remove">Alih keluar</string>
     <string name="accounts_remove_title">Alih keluar akaun?</string>
     <string name="system_documents_title">Dokumen</string>
-    <string name="system_documents_description">Peraturan pelayan, terma dan syarat, dan notis privasi yang ditunjukkan kepada pengguna anda</string>
     <string name="system_documents_tab_rules">Peraturan pelayan</string>
     <string name="system_documents_tab_terms">Terma dan syarat</string>
     <string name="system_documents_tab_privacy">Privasi</string>
     <string name="system_documents_language">Bahasa</string>
     <string name="system_documents_no_language">Tiada dokumen tersedia untuk bahasa ini.</string>
-    <string name="system_documents_customised">Disesuaikan</string>
     <string name="system_documents_using_default">Menggunakan lalai terbungkus</string>
     <string name="system_documents_revert">Kembali kepada lalai</string>
     <string name="system_documents_save">Simpan</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Padam pengguna</string>
     <string name="system_users_delete_title">Padam pengguna?</string>
     <string name="system_users_manage_sessions">Urus sesi</string>
-    <string name="system_users_sessions_description">Lihat dan batalkan sesi aktif untuk pengguna ini.</string>
     <string name="system_users_sessions_empty">Pengguna ini tiada sesi aktif.</string>
     <string name="system_users_revoke">Batalkan</string>
     <string name="system_users_revoke_all">Batalkan semua sesi</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Seterusnya</string>
     <string name="system_users_empty">Tiada pengguna dijumpai</string>
     <string name="system_users_empty_search">Tiada pengguna sepadan dengan carian anda</string>
-    <string name="system_users_empty_search_hint">Cuba laraskan kriteria carian anda</string>
     <string name="system_users_toast_created">Pengguna dicipta</string>
     <string name="system_users_toast_updated">Pengguna dikemas kini</string>
     <string name="system_users_toast_deleted">Pengguna dipadam</string>
@@ -211,17 +207,17 @@
     <string name="settings_home_terms">Syarat perkhidmatan</string>
     <string name="account_passkeys_empty">Tiada passkey didaftarkan.</string>
     <string name="account_passkey_register_title">Tambah passkey</string>
-    <string name="account_passkey_register_message">Peranti anda akan meminta anda mengesahkan. Passkey terikat pada peranti ini dan digunakan untuk log masuk pada masa hadapan.</string>
     <string name="account_passkey_name_label">Nama (pilihan)</string>
     <string name="account_passkey_delete_message">\"%1$s\" tidak akan log masuk anda lagi.</string>
-    <string name="account_totp_description">Log masuk dengan kod 6 digit dari aplikasi pengesah.</string>
     <string name="account_totp_enabled">Pengesah didayakan.</string>
     <string name="account_totp_setup_step1">Imbas atau masukkan rahsia ini dalam aplikasi pengesah anda.</string>
     <string name="account_totp_setup_step2">Masukkan kod 6 digit yang dipaparkan oleh aplikasi anda.</string>
     <string name="account_totp_code">Kod</string>
     <string name="account_totp_disable_message">Anda tidak akan dapat log masuk dengan kod pengesah lagi.</string>
     <string name="account_recovery_none">Tiada kod pemulihan dijana.</string>
-    <string name="account_recovery_count">%1$d kod pemulihan tidak digunakan.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="other">%1$d kod pemulihan berbaki.</item>
+    </plurals>
     <string name="account_recovery_generate">Jana kod</string>
     <string name="account_recovery_regenerate">Jana semula kod</string>
     <string name="account_recovery_regen_title">Jana semula kod pemulihan?</string>
@@ -270,7 +266,9 @@
     <string name="system_users_session_last_accessed">Akses terakhir: %1$s</string>
     <string name="system_users_revoke_all_title">Batalkan semua sesi?</string>
     <string name="system_users_revoke_all_message">Semua sesi aktif pengguna ini akan dilog keluar.</string>
-    <string name="system_users_pagination_status">Memaparkan %1$d–%2$d daripada %3$d pengguna</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="other">Memaparkan %1$d–%2$d daripada %3$d pengguna</item>
+    </plurals>
     <string name="account_title">Akaun</string>
     <string name="account_section_identity">Identiti</string>
     <string name="account_identity_identity">Identiti</string>
@@ -346,10 +344,8 @@
     <string name="system_setting_hostname">Nama hos yang diumumkan kepada pelayan lain</string>
     <string name="system_status_peer_id">ID rakan</string>
     <string name="system_status_holepunch">Penembusan</string>
-    <string name="system_status_holepunch_value">%1$d berjaya · %2$d gagal</string>
     <string name="system_status_awaiting_routing">Mesej menunggu penghalaan</string>
     <string name="system_status_relay_service">Perkhidmatan geganti</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d tempahan · %3$d litar · %4$d ditolak</string>
     <string name="route_target_select">Pilih</string>
     <string name="account_data_description">Muat turun sandaran lengkap yang boleh anda pulihkan pada pelayan Mochi ini atau pelayan Mochi lain.</string>
     <string name="route_target_none">Tiada sasaran tersedia</string>
@@ -374,7 +370,9 @@
     <string name="accounts_device_seen">Kali terakhir dilihat %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplikasi</string>
     <string name="notifprefs_device_push">%1$s · push</string>
-    <string name="notifprefs_test_partial">Ujian dihantar ke %1$d daripada %2$d destinasi</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="other">Ujian dihantar ke %1$d daripada %2$d destinasi</item>
+    </plurals>
     <string name="notifprefs_test_none">Tiada destinasi dikonfigurasikan</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
     <string name="notifprefs_no_destinations">Tiada destinasi</string>
@@ -393,4 +391,22 @@
     <string name="accounts_revoke_confirm">Ini akan membatalkan akses kalendar %1$s. Log masuk dengan %2$s kekal sehingga anda menyahpaut di halaman Log masuk.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Tema tidak dikenali</string>
+    <string name="system_documents_modified">Diubah suai</string>
+    <string name="system_documents_discard_title">Buang perubahan?</string>
+    <string name="system_documents_discard">Buang</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="other">%1$d berjaya</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="other">%1$d gagal</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="other">%1$d / %2$d tempahan</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="other">%1$d litar</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="other">%1$d ditolak</item>
+    </plurals>
 </resources>

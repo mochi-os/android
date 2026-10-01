@@ -206,7 +206,7 @@
     <string name="settings_time_zone">時區</string>
     <string name="settings_reset_to_defaults">重設為預設值</string>
     <string name="settings_reset_confirm_title">重設偏好設定？</string>
-    <string name="settings_reset_confirm_message">這會將所有偏好設定重設為預設值。</string>
+    <string name="settings_reset_confirm_message">這會將這些偏好設定重設為預設值。</string>
     <string name="settings_reset">重設</string>
     <string name="settings_display_reset">重設為預設值</string>
     <string name="settings_display_reset_confirm_title">重設顯示設定？</string>

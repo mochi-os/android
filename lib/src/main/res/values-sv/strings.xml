@@ -103,9 +103,9 @@
     <string name="settings_time_zone">Tidszon</string>
     <string name="settings_reset_to_defaults">Återställ till standardvärden</string>
     <string name="settings_reset_confirm_title">Återställ inställningar?</string>
-    <string name="settings_reset_confirm_message">Detta återställer alla inställningar till deras standardvärden.</string>
+    <string name="settings_reset_confirm_message">Detta återställer dessa inställningar till deras standardvärden.</string>
     <string name="settings_reset">Återställ</string>
-    <string name="settings_display_title">Visa</string>
+    <string name="settings_display_title">Visning</string>
     <string name="settings_display_reset">Återställ till standardvärden</string>
     <string name="settings_display_reset_confirm_title">Återställ visning?</string>
     <string name="settings_display_reset_confirm_message">Detta återställer visningsinställningarna till deras standardvärden.</string>

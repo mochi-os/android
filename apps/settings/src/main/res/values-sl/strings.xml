@@ -104,13 +104,11 @@
     <string name="accounts_remove">Odstrani</string>
     <string name="accounts_remove_title">Odstrani račun?</string>
     <string name="system_documents_title">Dokumenti</string>
-    <string name="system_documents_description">Pravila strežnika, pogoji uporabe in obvestilo o zasebnosti, prikazano vašim uporabnikom</string>
     <string name="system_documents_tab_rules">Pravila strežnika</string>
     <string name="system_documents_tab_terms">Pogoji uporabe</string>
     <string name="system_documents_tab_privacy">Zasebnost</string>
     <string name="system_documents_language">Jezik</string>
     <string name="system_documents_no_language">Za ta jezik dokument ni na voljo.</string>
-    <string name="system_documents_customised">Prilagojeno</string>
     <string name="system_documents_using_default">Uporablja se priložena privzeta vrednost</string>
     <string name="system_documents_revert">Vrni na privzeto</string>
     <string name="system_documents_save">Shrani</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Izbriši uporabnika</string>
     <string name="system_users_delete_title">Izbriši uporabnika?</string>
     <string name="system_users_manage_sessions">Upravljaj seje</string>
-    <string name="system_users_sessions_description">Prikaži in prekliči aktivne seje za tega uporabnika.</string>
     <string name="system_users_sessions_empty">Ta uporabnik nima aktivnih sej.</string>
     <string name="system_users_revoke">Prekliči</string>
     <string name="system_users_revoke_all">Prekliči vse seje</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Naprej</string>
     <string name="system_users_empty">Uporabnikov ni mogoče najti</string>
     <string name="system_users_empty_search">Noben uporabnik ne ustreza vašemu iskanju</string>
-    <string name="system_users_empty_search_hint">Poskusi prilagoditi merila iskanja</string>
     <string name="system_users_toast_created">Uporabnik ustvarjen</string>
     <string name="system_users_toast_updated">Uporabnik posodobljen</string>
     <string name="system_users_toast_deleted">Uporabnik izbrisan</string>
@@ -211,17 +207,20 @@
     <string name="settings_home_terms">Pogoji storitve</string>
     <string name="account_passkeys_empty">Ni registriranih dostopnih ključev.</string>
     <string name="account_passkey_register_title">Dodaj dostopni ključ</string>
-    <string name="account_passkey_register_message">Vaša naprava vas bo prosila za potrditev. Dostopni ključ je vezan na to napravo in se uporablja za prihodnje prijave.</string>
     <string name="account_passkey_name_label">Ime (neobvezno)</string>
     <string name="account_passkey_delete_message">„%1$s\" vas ne bo več prijavil.</string>
-    <string name="account_totp_description">Prijavite se s 6-mestno kodo iz aplikacije za preverjanje pristnosti.</string>
     <string name="account_totp_enabled">Preverjevalnik je omogočen.</string>
     <string name="account_totp_setup_step1">Optično preberite ali vnesite to skrivnost v svoji aplikaciji za preverjanje pristnosti.</string>
     <string name="account_totp_setup_step2">Vnesite 6-mestno kodo, ki jo prikaže aplikacija.</string>
     <string name="account_totp_code">Koda</string>
     <string name="account_totp_disable_message">Ne boste se več mogli prijaviti s kodo preverjevalnika.</string>
     <string name="account_recovery_none">Obnovitvene kode niso bile ustvarjene.</string>
-    <string name="account_recovery_count">%1$d neuporabljenih obnovitvenih kod.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">Preostala je %1$d obnovitvena koda.</item>
+        <item quantity="two">Preostali sta %1$d obnovitveni kodi.</item>
+        <item quantity="few">Preostale so %1$d obnovitvene kode.</item>
+        <item quantity="other">Preostalo je %1$d obnovitvenih kod.</item>
+    </plurals>
     <string name="account_recovery_generate">Ustvari kode</string>
     <string name="account_recovery_regenerate">Znova ustvari kode</string>
     <string name="account_recovery_regen_title">Znova ustvariti obnovitvene kode?</string>
@@ -270,7 +269,12 @@
     <string name="system_users_session_last_accessed">Zadnji dostop: %1$s</string>
     <string name="system_users_revoke_all_title">Preklicati vse seje?</string>
     <string name="system_users_revoke_all_message">Vse aktivne seje tega uporabnika bodo odjavljene.</string>
-    <string name="system_users_pagination_status">Prikaz %1$d–%2$d od %3$d uporabnikov</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Prikaz %1$d–%2$d od %3$d uporabnika</item>
+        <item quantity="two">Prikaz %1$d–%2$d od %3$d uporabnikov</item>
+        <item quantity="few">Prikaz %1$d–%2$d od %3$d uporabnikov</item>
+        <item quantity="other">Prikaz %1$d–%2$d od %3$d uporabnikov</item>
+    </plurals>
     <string name="account_title">Račun</string>
     <string name="account_section_identity">Identiteta</string>
     <string name="account_identity_identity">Identiteta</string>
@@ -351,10 +355,8 @@
     <string name="system_setting_hostname">Ime gostitelja, objavljeno drugim strežnikom</string>
     <string name="system_status_peer_id">ID soležnika</string>
     <string name="system_status_holepunch">Preboj</string>
-    <string name="system_status_holepunch_value">%1$d uspešnih · %2$d neuspešnih</string>
     <string name="system_status_awaiting_routing">Sporočila, ki čakajo na usmerjanje</string>
     <string name="system_status_relay_service">Storitev releja</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d rezervacije · %3$d vezja · %4$d zavrnjeno</string>
     <string name="route_target_select">Izberi</string>
     <string name="account_data_description">Prenesite celotno varnostno kopijo, ki jo lahko obnovite na tem ali drugem strežniku Mochi.</string>
     <string name="route_target_none">Ni razpoložljivih ciljev</string>
@@ -379,7 +381,12 @@
     <string name="accounts_device_seen">Nazadnje viden %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplikacija</string>
     <string name="notifprefs_device_push">%1$s · push obvestila</string>
-    <string name="notifprefs_test_partial">Test poslan na %1$d od %2$d ciljev</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Preizkus poslan na %1$d od %2$d cilja</item>
+        <item quantity="two">Preizkus poslan na %1$d od %2$d ciljev</item>
+        <item quantity="few">Preizkus poslan na %1$d od %2$d ciljev</item>
+        <item quantity="other">Preizkus poslan na %1$d od %2$d ciljev</item>
+    </plurals>
     <string name="notifprefs_test_none">Ni nastavljenih ciljev</string>
     <string name="notifprefs_transport_fcm">Android push obvestila</string>
     <string name="notifprefs_no_destinations">Brez ciljev</string>
@@ -398,4 +405,37 @@
     <string name="accounts_revoke_confirm">S tem bo preklican dostop do koledarja za %1$s. Prijava z %2$s ostane, dokler je ne prekinete na strani za prijavo.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Neznana tema</string>
+    <string name="system_documents_modified">Spremenjeno</string>
+    <string name="system_documents_discard_title">Zavržem spremembe?</string>
+    <string name="system_documents_discard">Zavrzi</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d uspešen</item>
+        <item quantity="two">%1$d uspešna</item>
+        <item quantity="few">%1$d uspešni</item>
+        <item quantity="other">%1$d uspešnih</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d neuspešen</item>
+        <item quantity="two">%1$d neuspešna</item>
+        <item quantity="few">%1$d neuspešni</item>
+        <item quantity="other">%1$d neuspešnih</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d rezervacija</item>
+        <item quantity="two">%1$d / %2$d rezervaciji</item>
+        <item quantity="few">%1$d / %2$d rezervacije</item>
+        <item quantity="other">%1$d / %2$d rezervacij</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d vezje</item>
+        <item quantity="two">%1$d vezji</item>
+        <item quantity="few">%1$d vezja</item>
+        <item quantity="other">%1$d vezij</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d zavrnjena</item>
+        <item quantity="two">%1$d zavrnjeni</item>
+        <item quantity="few">%1$d zavrnjene</item>
+        <item quantity="other">%1$d zavrnjenih</item>
+    </plurals>
 </resources>

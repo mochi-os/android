@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Tímabelti</string>
     <string name="settings_reset_to_defaults">Endurstilla á sjálfgefið</string>
     <string name="settings_reset_confirm_title">Endurstilla kjörstillingar?</string>
-    <string name="settings_reset_confirm_message">Þetta mun endurstilla allar stillingar á sjálfgefin gildi.</string>
+    <string name="settings_reset_confirm_message">Þetta mun endurstilla þessar stillingar á sjálfgefin gildi.</string>
     <string name="settings_reset">Endurstilla</string>
     <string name="settings_display_title">Birting</string>
     <string name="settings_display_reset">Endurstilla á sjálfgefið</string>

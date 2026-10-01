@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Vremenska zona</string>
     <string name="settings_reset_to_defaults">Resetiraj na zadane</string>
     <string name="settings_reset_confirm_title">Resetirati postavke?</string>
-    <string name="settings_reset_confirm_message">Ovo će ponovno postaviti sve preferencije na zadane vrijednosti.</string>
+    <string name="settings_reset_confirm_message">Ovo će ponovno postaviti ove preferencije na zadane vrijednosti.</string>
     <string name="settings_reset">Resetiraj</string>
     <string name="settings_display_title">Prikaz</string>
     <string name="settings_display_reset">Resetiraj na zadane</string>

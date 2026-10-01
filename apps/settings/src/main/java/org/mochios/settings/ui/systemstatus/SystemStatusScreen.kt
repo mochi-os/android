@@ -45,6 +45,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.toClipEntry
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -177,23 +178,44 @@ fun SystemStatusScreen(
                         if (network.holepunch.success + network.holepunch.failure > 0) {
                             StatusRow(
                                 label = stringResource(R.string.system_status_holepunch),
-                                value = stringResource(
-                                    R.string.system_status_holepunch_value,
-                                    network.holepunch.success,
-                                    network.holepunch.failure,
-                                ),
+                                // Each count is its own phrase, so each noun
+                                // or participle agrees with its own number.
+                                value = listOf(
+                                    pluralStringResource(
+                                        R.plurals.system_status_holepunch_succeeded,
+                                        network.holepunch.success,
+                                        network.holepunch.success,
+                                    ),
+                                    pluralStringResource(
+                                        R.plurals.system_status_holepunch_failed,
+                                        network.holepunch.failure,
+                                        network.holepunch.failure,
+                                    ),
+                                ).joinToString(" · "),
                             )
                         }
                         if (network.relaying.active) {
                             StatusRow(
                                 label = stringResource(R.string.system_status_relay_service),
-                                value = stringResource(
-                                    R.string.system_status_relay_service_value,
-                                    network.relaying.reservations.held,
-                                    network.relaying.reservations.maximum,
-                                    network.relaying.circuits,
-                                    network.relaying.rejected,
-                                ),
+                                value = listOf(
+                                    // "3 / 10 reservations": the noun sits beside the maximum.
+                                    pluralStringResource(
+                                        R.plurals.system_status_relay_reservations,
+                                        network.relaying.reservations.maximum,
+                                        network.relaying.reservations.held,
+                                        network.relaying.reservations.maximum,
+                                    ),
+                                    pluralStringResource(
+                                        R.plurals.system_status_relay_circuits,
+                                        network.relaying.circuits,
+                                        network.relaying.circuits,
+                                    ),
+                                    pluralStringResource(
+                                        R.plurals.system_status_relay_refused,
+                                        network.relaying.rejected,
+                                        network.relaying.rejected,
+                                    ),
+                                ).joinToString(" · "),
                             )
                         }
                         StatusRow(

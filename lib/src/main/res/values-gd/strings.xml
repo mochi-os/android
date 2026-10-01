@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Roinn-tìde</string>
     <string name="settings_reset_to_defaults">Ath-shuidhich chun a\' bhun-tuiteamais</string>
     <string name="settings_reset_confirm_title">An ath-shuidhich na roghainnean?</string>
-    <string name="settings_reset_confirm_message">Ath-shuidhichidh seo a h-uile roghainn gu na luachan bunaiteach aca.</string>
+    <string name="settings_reset_confirm_message">Ath-shuidhichidh seo na roghainnean seo gu na luachan bunaiteach aca.</string>
     <string name="settings_reset">Ath-shuidhich</string>
     <string name="settings_display_title">Taisbeanadh</string>
     <string name="settings_display_reset">Ath-shuidhich chun a\' bhun-tuiteamais</string>

@@ -103,7 +103,7 @@
     <string name="settings_time_zone">የሰዓት ክልል</string>
     <string name="settings_reset_to_defaults">ወደ ነባሪዎች ዳግም አስጀምር</string>
     <string name="settings_reset_confirm_title">ምርጫዎች ዳግም ይጀመሩ?</string>
-    <string name="settings_reset_confirm_message">ይህ ሁሉንም ምርጫዎች ወደ ነባሪ ዋጋዎቻቸው ይመልሳል።</string>
+    <string name="settings_reset_confirm_message">ይህ እነዚህን ምርጫዎች ወደ ነባሪ ዋጋዎቻቸው ይመልሳል።</string>
     <string name="settings_reset">ዳግም አስጀምር</string>
     <string name="settings_display_title">ማሳያ</string>
     <string name="settings_display_reset">ወደ ነባሪዎች ዳግም አስጀምር</string>

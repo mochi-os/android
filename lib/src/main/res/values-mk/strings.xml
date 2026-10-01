@@ -103,9 +103,9 @@
     <string name="settings_time_zone">Временска зона</string>
     <string name="settings_reset_to_defaults">Ресетирај на стандардни</string>
     <string name="settings_reset_confirm_title">Да ги ресетираме преференците?</string>
-    <string name="settings_reset_confirm_message">Ова ќе ги ресетира сите преференци на нивните стандардни вредности.</string>
+    <string name="settings_reset_confirm_message">Ова ќе ги ресетира овие преференци на нивните стандардни вредности.</string>
     <string name="settings_reset">Ресетирај</string>
-    <string name="settings_display_title">Прикажи</string>
+    <string name="settings_display_title">Приказ</string>
     <string name="settings_display_reset">Ресетирај на стандардни</string>
     <string name="settings_display_reset_confirm_title">Ресетирање на приказот?</string>
     <string name="settings_display_reset_confirm_message">Ова ќе ги ресетира поставките за приказ на нивните стандардни вредности.</string>

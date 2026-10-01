@@ -103,7 +103,7 @@
     <string name="settings_time_zone">टाइम झोन</string>
     <string name="settings_reset_to_defaults">डीफॉल्टवर रीसेट करा</string>
     <string name="settings_reset_confirm_title">प्राधान्ये रीसेट करायची?</string>
-    <string name="settings_reset_confirm_message">यामुळे सर्व प्राधान्ये त्यांच्या डीफॉल्ट मूल्यांवर रीसेट होतील.</string>
+    <string name="settings_reset_confirm_message">यामुळे ही प्राधान्ये त्यांच्या डीफॉल्ट मूल्यांवर रीसेट होतील.</string>
     <string name="settings_reset">रीसेट करा</string>
     <string name="settings_display_title">प्रदर्शन</string>
     <string name="settings_display_reset">डीफॉल्टवर रीसेट करा</string>

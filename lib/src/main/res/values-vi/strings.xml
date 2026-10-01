@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Múi giờ</string>
     <string name="settings_reset_to_defaults">Đặt lại về mặc định</string>
     <string name="settings_reset_confirm_title">Đặt lại tuỳ chọn?</string>
-    <string name="settings_reset_confirm_message">Thao tác này sẽ đặt lại tất cả tùy chọn về giá trị mặc định.</string>
+    <string name="settings_reset_confirm_message">Thao tác này sẽ đặt lại các tùy chọn này về giá trị mặc định.</string>
     <string name="settings_reset">Đặt lại</string>
     <string name="settings_display_title">Hiển thị</string>
     <string name="settings_display_reset">Đặt lại về mặc định</string>

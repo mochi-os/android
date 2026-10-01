@@ -103,7 +103,7 @@
     <string name="settings_time_zone">时区</string>
     <string name="settings_reset_to_defaults">重置为默认值</string>
     <string name="settings_reset_confirm_title">重置偏好设置?</string>
-    <string name="settings_reset_confirm_message">这将把所有偏好重置为默认值。</string>
+    <string name="settings_reset_confirm_message">这将把这些偏好重置为默认值。</string>
     <string name="settings_reset">重置</string>
     <string name="settings_display_title">显示</string>
     <string name="settings_display_reset">重置为默认值</string>

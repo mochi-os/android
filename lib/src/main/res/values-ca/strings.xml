@@ -103,9 +103,9 @@
     <string name="settings_time_zone">Zona horària</string>
     <string name="settings_reset_to_defaults">Restableix als valors per defecte</string>
     <string name="settings_reset_confirm_title">Vols restablir les preferències?</string>
-    <string name="settings_reset_confirm_message">Això restablirà totes les preferències als seus valors per defecte.</string>
+    <string name="settings_reset_confirm_message">Això restablirà aquestes preferències als seus valors per defecte.</string>
     <string name="settings_reset">Restableix</string>
-    <string name="settings_display_title">Mostra</string>
+    <string name="settings_display_title">Pantalla</string>
     <string name="settings_display_reset">Restableix als valors per defecte</string>
     <string name="settings_display_reset_confirm_title">Restablir la visualització?</string>
     <string name="settings_display_reset_confirm_message">Això restablirà la configuració de visualització als seus valors per defecte.</string>

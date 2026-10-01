@@ -104,13 +104,11 @@
     <string name="accounts_remove">Olib tashlash</string>
     <string name="accounts_remove_title">Hisobni olib tashlasinmi?</string>
     <string name="system_documents_title">Hujjatlar</string>
-    <string name="system_documents_description">Foydalanuvchilarga koʻrsatiladigan server qoidalari, shartlari va maxfiylik bildirishnomasi</string>
     <string name="system_documents_tab_rules">Server qoidalari</string>
     <string name="system_documents_tab_terms">Shartlar va qoidalar</string>
     <string name="system_documents_tab_privacy">Maxfiylik</string>
     <string name="system_documents_language">Til</string>
     <string name="system_documents_no_language">Bu til uchun hujjat mavjud emas.</string>
-    <string name="system_documents_customised">Moslashtirilgan</string>
     <string name="system_documents_using_default">Birga keladigan standart ishlatilmoqda</string>
     <string name="system_documents_revert">Standartga qaytarish</string>
     <string name="system_documents_save">Saqlash</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">Foydalanuvchini oʻchirish</string>
     <string name="system_users_delete_title">Foydalanuvchi oʻchirilsinmi?</string>
     <string name="system_users_manage_sessions">Sessiyalarni boshqarish</string>
-    <string name="system_users_sessions_description">Ushbu foydalanuvchining faol sessiyalarini koʻrish va bekor qilish.</string>
     <string name="system_users_sessions_empty">Bu foydalanuvchining faol sessiyalari yoʻq.</string>
     <string name="system_users_revoke">Bekor qilish</string>
     <string name="system_users_revoke_all">Barcha seanslarni bekor qilish</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">Keyingi</string>
     <string name="system_users_empty">Foydalanuvchilar topilmadi</string>
     <string name="system_users_empty_search">Qidiruvingizga mos foydalanuvchilar yoʻq</string>
-    <string name="system_users_empty_search_hint">Qidiruv mezonlaringizni sozlashga harakat qiling</string>
     <string name="system_users_toast_created">Foydalanuvchi yaratildi</string>
     <string name="system_users_toast_updated">Foydalanuvchi yangilandi</string>
     <string name="system_users_toast_deleted">Foydalanuvchi oʻchirildi</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">Xizmat shartlari</string>
     <string name="account_passkeys_empty">Roʻyxatdan oʻtgan kalitlar yoʻq.</string>
     <string name="account_passkey_register_title">Kalit qoʻshish</string>
-    <string name="account_passkey_register_message">Qurilmangiz tasdiqlashni soʻraydi. Kalit ushbu qurilmaga bogʻlangan va keyingi kirishlar uchun ishlatiladi.</string>
     <string name="account_passkey_name_label">Nom (ixtiyoriy)</string>
     <string name="account_passkey_delete_message">\"%1$s\" sizni endi kiritmaydi.</string>
-    <string name="account_totp_description">Autentifikator ilovasidan 6 raqamli kod bilan kiring.</string>
     <string name="account_totp_enabled">Autentifikator yoqilgan.</string>
     <string name="account_totp_setup_step1">Ushbu sirni autentifikator ilovangizda skanerlang yoki kiriting.</string>
     <string name="account_totp_setup_step2">Ilovangiz koʻrsatadigan 6 raqamli kodni kiriting.</string>
     <string name="account_totp_code">Kod</string>
     <string name="account_totp_disable_message">Siz endi autentifikator kodi bilan kira olmaysiz.</string>
     <string name="account_recovery_none">Tiklash kodlari yaratilmagan.</string>
-    <string name="account_recovery_count">%1$d foydalanilmagan tiklash kodlari.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d ta tiklash kodi qoldi.</item>
+        <item quantity="other">%1$d ta tiklash kodi qoldi.</item>
+    </plurals>
     <string name="account_recovery_generate">Kodlar yaratish</string>
     <string name="account_recovery_regenerate">Kodlarni qayta yaratish</string>
     <string name="account_recovery_regen_title">Tiklash kodlarini qayta yaratasizmi?</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">Oxirgi kirish: %1$s</string>
     <string name="system_users_revoke_all_title">Barcha sessiyalarni bekor qilasizmi?</string>
     <string name="system_users_revoke_all_message">Bu foydalanuvchining barcha faol sessiyalaridan chiqiladi.</string>
-    <string name="system_users_pagination_status">%3$d foydalanuvchidan %1$d–%2$d koʻrsatilmoqda</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">%3$d foydalanuvchidan %1$d–%2$d koʻrsatilmoqda</item>
+        <item quantity="other">%3$d foydalanuvchidan %1$d–%2$d koʻrsatilmoqda</item>
+    </plurals>
     <string name="account_title">Hisob</string>
     <string name="account_section_identity">Identifikatsiya</string>
     <string name="account_identity_identity">Identifikatsiya</string>
@@ -307,7 +307,7 @@
         <item quantity="other">Sinov %1$d manzilga yuborildi</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 sessiya bekor qilindi</item>
+        <item quantity="one">%1$d sessiya bekor qilindi</item>
         <item quantity="other">%1$d sessiya bekor qilindi</item>
     </plurals>
     <string name="login_title">Kirish</string>
@@ -347,10 +347,8 @@
     <string name="system_setting_hostname">Boshqa serverlarga e\'lon qilingan xost nomi</string>
     <string name="system_status_peer_id">Tengdosh ID</string>
     <string name="system_status_holepunch">Teshish</string>
-    <string name="system_status_holepunch_value">%1$d muvaffaqiyatli · %2$d muvaffaqiyatsiz</string>
     <string name="system_status_awaiting_routing">Marshrutlashni kutayotgan xabarlar</string>
     <string name="system_status_relay_service">Relay xizmati</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d bronlar · %3$d zanjirlar · %4$d rad etilgan</string>
     <string name="route_target_select">Tanlash</string>
     <string name="account_data_description">Bu yoki boshqa Mochi serverida tiklashingiz mumkin boʻlgan toʻliq zaxira nusxasini yuklab oling.</string>
     <string name="route_target_none">Mavjud maqsadlar yoʻq</string>
@@ -375,7 +373,10 @@
     <string name="accounts_device_seen">Oxirgi marta ko‘rilgan %1$s</string>
     <string name="notifprefs_device_app">%1$s · ilova</string>
     <string name="notifprefs_device_push">%1$s · push bildirishnomalar</string>
-    <string name="notifprefs_test_partial">Sinov %2$d manzildan %1$d tasiga yuborildi</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Sinov %2$d manzildan %1$d tasiga yuborildi</item>
+        <item quantity="other">Sinov %2$d manzildan %1$d tasiga yuborildi</item>
+    </plurals>
     <string name="notifprefs_test_none">Manzillar sozlanmagan</string>
     <string name="notifprefs_transport_fcm">Android push bildirishnomalari</string>
     <string name="notifprefs_no_destinations">Manzillar yo\'q</string>
@@ -394,4 +395,27 @@
     <string name="accounts_revoke_confirm">Bu %1$s kalendariga kirishni bekor qiladi. %2$s bilan kirish, uni Kirish sahifasida uzmaguningizcha saqlanadi.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Nomaʼlum mavzu</string>
+    <string name="system_documents_modified">Oʻzgartirilgan</string>
+    <string name="system_documents_discard_title">Oʻzgarishlar tashlab yuborilsinmi?</string>
+    <string name="system_documents_discard">Tashlab yuborish</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d muvaffaqiyatli</item>
+        <item quantity="other">%1$d muvaffaqiyatli</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d muvaffaqiyatsiz</item>
+        <item quantity="other">%1$d muvaffaqiyatsiz</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d bron</item>
+        <item quantity="other">%1$d / %2$d bron</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d zanjir</item>
+        <item quantity="other">%1$d zanjir</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d rad etildi</item>
+        <item quantity="other">%1$d rad etildi</item>
+    </plurals>
 </resources>

@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Saa za eneo</string>
     <string name="settings_reset_to_defaults">Weka upya kwa chaguo-msingi</string>
     <string name="settings_reset_confirm_title">Weka upya mapendeleo?</string>
-    <string name="settings_reset_confirm_message">Hii itaweka upya mapendeleo yote kuwa thamani zao chaguo-msingi.</string>
+    <string name="settings_reset_confirm_message">Hii itaweka upya mapendeleo haya kuwa thamani zao chaguo-msingi.</string>
     <string name="settings_reset">Weka upya</string>
     <string name="settings_display_title">Onyesho</string>
     <string name="settings_display_reset">Weka upya kwa chaguo-msingi</string>

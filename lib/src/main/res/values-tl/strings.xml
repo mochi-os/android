@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Time zone</string>
     <string name="settings_reset_to_defaults">I-reset sa mga default</string>
     <string name="settings_reset_confirm_title">I-reset ang mga kagustuhan?</string>
-    <string name="settings_reset_confirm_message">Ire-reset nito ang lahat ng preference sa kanilang mga default value.</string>
+    <string name="settings_reset_confirm_message">Ire-reset nito ang mga preference na ito sa kanilang mga default value.</string>
     <string name="settings_reset">I-reset</string>
     <string name="settings_display_title">Display</string>
     <string name="settings_display_reset">I-reset sa mga default</string>

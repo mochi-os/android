@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Żona ta\' ħin</string>
     <string name="settings_reset_to_defaults">Irriżetta għal defaults</string>
     <string name="settings_reset_confirm_title">Tirriżetta l-preferenzi?</string>
-    <string name="settings_reset_confirm_message">Dan se jirrisettja l-preferenzi kollha għall-valuri default tagħhom.</string>
+    <string name="settings_reset_confirm_message">Dan se jirrisettja dawn il-preferenzi għall-valuri default tagħhom.</string>
     <string name="settings_reset">Irrisettja</string>
     <string name="settings_display_title">Wiri</string>
     <string name="settings_display_reset">Irriżetta għal defaults</string>

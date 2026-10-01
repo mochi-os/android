@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Fuso horario</string>
     <string name="settings_reset_to_defaults">Restablecer aos valores por defecto</string>
     <string name="settings_reset_confirm_title">Restablecer preferencias?</string>
-    <string name="settings_reset_confirm_message">Isto restablecerá todas as preferencias aos seus valores predeterminados.</string>
+    <string name="settings_reset_confirm_message">Isto restablecerá estas preferencias aos seus valores predeterminados.</string>
     <string name="settings_reset">Restablecer</string>
     <string name="settings_display_title">Pantalla</string>
     <string name="settings_display_reset">Restablecer aos valores por defecto</string>

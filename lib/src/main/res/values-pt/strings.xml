@@ -103,7 +103,7 @@
     <string name="settings_time_zone">Fuso horário</string>
     <string name="settings_reset_to_defaults">Repor predefinições</string>
     <string name="settings_reset_confirm_title">Repor preferências?</string>
-    <string name="settings_reset_confirm_message">Isto repõe todas as preferências para os respetivos valores predefinidos.</string>
+    <string name="settings_reset_confirm_message">Isto repõe estas preferências para os respetivos valores predefinidos.</string>
     <string name="settings_reset">Repor</string>
     <string name="settings_display_title">Apresentação</string>
     <string name="settings_display_reset">Repor predefinições</string>

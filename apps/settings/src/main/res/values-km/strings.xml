@@ -5,7 +5,7 @@
     <string name="settings_home_logout">ចាកចេញ</string>
     <string name="settings_home_account">គណនី</string>
     <string name="settings_home_preferences">ចំណូលចិត្ត</string>
-    <string name="settings_home_display">បង្ហាញ</string>
+    <string name="settings_home_display">ការបង្ហាញ</string>
     <string name="settings_home_notification_prefs">ចំណូលចិត្តការជូនដំណឹង</string>
     <string name="settings_home_accounts">គណនីដែលបានភ្ជាប់</string>
     <string name="settings_home_interests">ចំណាប់អារម្មណ៍</string>
@@ -104,13 +104,11 @@
     <string name="accounts_remove">យកចេញ</string>
     <string name="accounts_remove_title">យកគណនីចេញ?</string>
     <string name="system_documents_title">ឯកសារ</string>
-    <string name="system_documents_description">ច្បាប់ម៉ាស៊ីនមេ លក្ខខណ្ឌ និងគោលការណ៍ឯកជនភាពដែលបង្ហាញដល់អ្នកប្រើប្រាស់របស់អ្នក</string>
     <string name="system_documents_tab_rules">ច្បាប់ម៉ាស៊ីនមេ</string>
     <string name="system_documents_tab_terms">លក្ខខណ្ឌ</string>
     <string name="system_documents_tab_privacy">ឯកជនភាព</string>
     <string name="system_documents_language">ភាសា</string>
     <string name="system_documents_no_language">មិនមានឯកសារសម្រាប់ភាសានេះទេ។</string>
-    <string name="system_documents_customised">បានប្តូរតាមតម្រូវការ</string>
     <string name="system_documents_using_default">កំពុងប្រើលំនាំដើមដែលភ្ជាប់មកជាមួយ</string>
     <string name="system_documents_revert">ត្រឡប់ទៅលំនាំដើម</string>
     <string name="system_documents_save">រក្សាទុក</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">លុបអ្នកប្រើប្រាស់</string>
     <string name="system_users_delete_title">លុបអ្នកប្រើប្រាស់?</string>
     <string name="system_users_manage_sessions">គ្រប់គ្រងវគ្គ</string>
-    <string name="system_users_sessions_description">មើល និងដកហូតវគ្គសកម្មសម្រាប់អ្នកប្រើប្រាស់នេះ។</string>
     <string name="system_users_sessions_empty">អ្នកប្រើប្រាស់នេះមិនមានវគ្គសកម្មទេ។</string>
     <string name="system_users_revoke">ដកសិទ្ធិ</string>
     <string name="system_users_revoke_all">ដកវគ្គទាំងអស់</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">បន្ទាប់</string>
     <string name="system_users_empty">រកមិនឃើញអ្នកប្រើ</string>
     <string name="system_users_empty_search">មិនមានអ្នកប្រើត្រូវនឹងការស្វែងរករបស់អ្នក</string>
-    <string name="system_users_empty_search_hint">សាកល្បងកែតម្រូវលក្ខណៈវិនិច្ឆ័យស្វែងរករបស់អ្នក</string>
     <string name="system_users_toast_created">បានបង្កើតអ្នកប្រើប្រាស់</string>
     <string name="system_users_toast_updated">បានធ្វើបច្ចុប្បន្នភាពអ្នកប្រើប្រាស់</string>
     <string name="system_users_toast_deleted">បានលុបអ្នកប្រើប្រាស់</string>
@@ -211,17 +207,17 @@
     <string name="settings_home_terms">លក្ខខណ្ឌសេវាកម្ម</string>
     <string name="account_passkeys_empty">មិនមានសោចូលប្រើដែលបានចុះឈ្មោះទេ។</string>
     <string name="account_passkey_register_title">បន្ថែមសោចូលប្រើ</string>
-    <string name="account_passkey_register_message">ឧបករណ៍របស់អ្នកនឹងសុំឱ្យអ្នកបញ្ជាក់។ សោចូលប្រើត្រូវបានភ្ជាប់ទៅឧបករណ៍នេះហើយប្រើសម្រាប់ការចូលនាពេលអនាគត។</string>
     <string name="account_passkey_name_label">ឈ្មោះ (ស្រេចចិត្ត)</string>
     <string name="account_passkey_delete_message">\"%1$s\" នឹងលែងបញ្ចូលអ្នកទេ។</string>
-    <string name="account_totp_description">ចូលដោយលេខកូដ 6 ខ្ទង់ពីកម្មវិធីផ្ទៀងផ្ទាត់។</string>
     <string name="account_totp_enabled">ការផ្ទៀងផ្ទាត់ត្រូវបានបើក។</string>
     <string name="account_totp_setup_step1">ស្កេនឬបញ្ចូលសម្ងាត់នេះក្នុងកម្មវិធីផ្ទៀងផ្ទាត់របស់អ្នក។</string>
     <string name="account_totp_setup_step2">បញ្ចូលលេខកូដ 6 ខ្ទង់ដែលកម្មវិធីរបស់អ្នកបង្ហាញ។</string>
     <string name="account_totp_code">លេខកូដ</string>
     <string name="account_totp_disable_message">អ្នកនឹងលែងអាចចូលដោយលេខកូដផ្ទៀងផ្ទាត់ទេ។</string>
     <string name="account_recovery_none">គ្មានកូដស្ដារដែលត្រូវបានបង្កើតទេ។</string>
-    <string name="account_recovery_count">កូដស្ដារដែលមិនទាន់ប្រើ %1$d។</string>
+    <plurals name="account_recovery_count">
+        <item quantity="other">នៅសល់កូដស្ដារ %1$d។</item>
+    </plurals>
     <string name="account_recovery_generate">បង្កើតកូដ</string>
     <string name="account_recovery_regenerate">បង្កើតកូដឡើងវិញ</string>
     <string name="account_recovery_regen_title">បង្កើតកូដស្ដារឡើងវិញ?</string>
@@ -270,7 +266,9 @@
     <string name="system_users_session_last_accessed">ការចូលដំណើរការចុងក្រោយ៖ %1$s</string>
     <string name="system_users_revoke_all_title">ដកវគ្គទាំងអស់?</string>
     <string name="system_users_revoke_all_message">វគ្គដែលដំណើរការទាំងអស់របស់អ្នកប្រើនេះនឹងចេញ។</string>
-    <string name="system_users_pagination_status">បង្ហាញ %1$d–%2$d នៃ %3$d អ្នកប្រើ</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="other">បង្ហាញ %1$d–%2$d នៃ %3$d អ្នកប្រើ</item>
+    </plurals>
     <string name="account_title">គណនី</string>
     <string name="account_section_identity">អត្តសញ្ញាណ</string>
     <string name="account_identity_identity">អត្តសញ្ញាណ</string>
@@ -345,10 +343,8 @@
     <string name="system_setting_hostname">ឈ្មោះម៉ាស៊ីនដែលប្រកាសទៅម៉ាស៊ីនមេផ្សេងទៀត</string>
     <string name="system_status_peer_id">លេខសម្គាល់​​ភាគី</string>
     <string name="system_status_holepunch">ការទម្លុះ</string>
-    <string name="system_status_holepunch_value">%1$d បានជោគជ័យ · %2$d បានបរាជ័យ</string>
     <string name="system_status_awaiting_routing">សារកំពុងរង់ចាំការនាំផ្លូវ</string>
     <string name="system_status_relay_service">សេវាបញ្ជូនបន្ត</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d ការកក់ · %3$d សៀគ្វី · %4$d បានបដិសេធ</string>
     <string name="route_target_select">ជ្រើសរើស</string>
     <string name="account_data_description">ទាញយកការបម្រុងទុកពេញលេញដែលអ្នកអាចស្ដារឡើងវិញនៅលើម៉ាស៊ីនមេ Mochi នេះ ឬម៉ាស៊ីនមេផ្សេងទៀត។</string>
     <string name="route_target_none">មិនមានគោលដៅដែលអាចប្រើបានទេ</string>
@@ -373,7 +369,9 @@
     <string name="accounts_device_seen">ឃើញចុងក្រោយ %1$s</string>
     <string name="notifprefs_device_app">%1$s · កម្មវិធី</string>
     <string name="notifprefs_device_push">%1$s · ការជូនដំណឹងរុញ</string>
-    <string name="notifprefs_test_partial">បានផ្ញើការសាកល្បងទៅ %1$d ក្នុងចំណោម %2$d ទិសដៅ</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="other">បានផ្ញើការសាកល្បងទៅ %1$d ក្នុងចំណោម %2$d ទិសដៅ</item>
+    </plurals>
     <string name="notifprefs_test_none">មិនមានទិសដៅដែលបានកំណត់រចនាសម្ព័ន្ធ</string>
     <string name="notifprefs_transport_fcm">ការជូនដំណឹង Android</string>
     <string name="notifprefs_no_destinations">គ្មានគោលដៅ</string>
@@ -392,4 +390,22 @@
     <string name="accounts_revoke_confirm">នេះនឹងដកសិទ្ធិចូលប្រើប្រតិទិនរបស់ %1$s។ ការចូលដោយ %2$s នៅតែមានរហូតដល់អ្នកផ្តាច់វានៅលើទំព័រចូល។</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">រូបរាងមិនស្គាល់</string>
+    <string name="system_documents_modified">បានកែប្រែ</string>
+    <string name="system_documents_discard_title">បោះចោលការផ្លាស់ប្ដូរឬ?</string>
+    <string name="system_documents_discard">បោះចោល</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="other">%1$d បានជោគជ័យ</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="other">%1$d បានបរាជ័យ</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="other">%1$d / %2$d ការកក់</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="other">%1$d សៀគ្វី</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="other">%1$d បានបដិសេធ</item>
+    </plurals>
 </resources>

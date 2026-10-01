@@ -103,9 +103,9 @@
     <string name="settings_time_zone">เขตเวลา</string>
     <string name="settings_reset_to_defaults">รีเซ็ตเป็นค่าเริ่มต้น</string>
     <string name="settings_reset_confirm_title">รีเซ็ตการตั้งค่า?</string>
-    <string name="settings_reset_confirm_message">การกระทำนี้จะรีเซ็ตการตั้งค่าทั้งหมดเป็นค่าเริ่มต้น</string>
+    <string name="settings_reset_confirm_message">การกระทำนี้จะรีเซ็ตการตั้งค่าเหล่านี้เป็นค่าเริ่มต้น</string>
     <string name="settings_reset">รีเซ็ต</string>
-    <string name="settings_display_title">แสดงผล</string>
+    <string name="settings_display_title">การแสดงผล</string>
     <string name="settings_display_reset">รีเซ็ตเป็นค่าเริ่มต้น</string>
     <string name="settings_display_reset_confirm_title">รีเซ็ตการแสดงผล?</string>
     <string name="settings_display_reset_confirm_message">การดำเนินการนี้จะรีเซ็ตการตั้งค่าการแสดงผลกลับเป็นค่าเริ่มต้น</string>

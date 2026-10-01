@@ -104,13 +104,11 @@
     <string name="accounts_remove">हटाउनुहोस्</string>
     <string name="accounts_remove_title">खाता हटाउने?</string>
     <string name="system_documents_title">कागजातहरू</string>
-    <string name="system_documents_description">तपाईंका प्रयोगकर्ताहरूलाई देखाइने सर्भर नियमहरू, नियम र सर्तहरू, र गोपनीयता सूचना</string>
     <string name="system_documents_tab_rules">सर्भर नियमहरू</string>
     <string name="system_documents_tab_terms">नियम र सर्तहरू</string>
     <string name="system_documents_tab_privacy">गोपनीयता</string>
     <string name="system_documents_language">भाषा</string>
     <string name="system_documents_no_language">यस भाषाका लागि कुनै कागजात उपलब्ध छैन।</string>
-    <string name="system_documents_customised">अनुकूलित</string>
     <string name="system_documents_using_default">बन्डल गरिएको पूर्वनिर्धारित प्रयोग गरिँदै</string>
     <string name="system_documents_revert">पूर्वनिर्धारितमा फर्काउनुहोस्</string>
     <string name="system_documents_save">सुरक्षित गर्नुहोस्</string>
@@ -182,7 +180,6 @@
     <string name="system_users_delete">प्रयोगकर्ता मेटाउनुहोस्</string>
     <string name="system_users_delete_title">प्रयोगकर्ता मेटाउने?</string>
     <string name="system_users_manage_sessions">सत्रहरू व्यवस्थापन गर्नुहोस्</string>
-    <string name="system_users_sessions_description">यो प्रयोगकर्ताका लागि सक्रिय सेसनहरू हेर्नुहोस् र रद्द गर्नुहोस्।</string>
     <string name="system_users_sessions_empty">यो प्रयोगकर्ताको कुनै सक्रिय सेसन छैन।</string>
     <string name="system_users_revoke">रद्द गर्नुहोस्</string>
     <string name="system_users_revoke_all">सबै सत्रहरू खारेज गर्नुहोस्</string>
@@ -192,7 +189,6 @@
     <string name="system_users_next">अर्को</string>
     <string name="system_users_empty">कुनै प्रयोगकर्ता भेटिएन</string>
     <string name="system_users_empty_search">तपाईंको खोजसँग कुनै प्रयोगकर्ता मेल खाँदैन</string>
-    <string name="system_users_empty_search_hint">तपाईंको खोज मापदण्ड समायोजन गर्ने प्रयास गर्नुहोस्</string>
     <string name="system_users_toast_created">प्रयोगकर्ता सिर्जना गरियो</string>
     <string name="system_users_toast_updated">प्रयोगकर्ता अद्यावधिक गरियो</string>
     <string name="system_users_toast_deleted">प्रयोगकर्ता मेटाइयो</string>
@@ -211,17 +207,18 @@
     <string name="settings_home_terms">सेवाका सर्तहरू</string>
     <string name="account_passkeys_empty">कुनै पासकीहरू दर्ता गरिएको छैन।</string>
     <string name="account_passkey_register_title">पासकी थप्नुहोस्</string>
-    <string name="account_passkey_register_message">तपाईंको उपकरणले पुष्टि गर्न सोध्नेछ। पासकी यस उपकरणसँग बाँधिएको छ र भविष्यका साइन-इनहरूका लागि प्रयोग गरिनेछ।</string>
     <string name="account_passkey_name_label">नाम (वैकल्पिक)</string>
     <string name="account_passkey_delete_message">\"%1$s\" अब तपाईंलाई साइन इन गराउनेछैन।</string>
-    <string name="account_totp_description">प्रमाणीकरण एपबाट 6-अङ्कको कोडले साइन इन गर्नुहोस्।</string>
     <string name="account_totp_enabled">प्रमाणीकरणकर्ता सक्षम छ।</string>
     <string name="account_totp_setup_step1">यो गोप्य कुरा तपाईंको प्रमाणीकरण एपमा स्क्यान वा प्रविष्ट गर्नुहोस्।</string>
     <string name="account_totp_setup_step2">तपाईंको एपले देखाएको 6-अङ्कको कोड प्रविष्ट गर्नुहोस्।</string>
     <string name="account_totp_code">कोड</string>
     <string name="account_totp_disable_message">तपाईंले अब प्रमाणीकरणकर्ता कोडले साइन इन गर्न सक्नुहुनेछैन।</string>
     <string name="account_recovery_none">कुनै रिकभरी कोडहरू सिर्जना गरिएको छैन।</string>
-    <string name="account_recovery_count">%1$d प्रयोग नगरिएका रिकभरी कोडहरू।</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$d रिकभरी कोड बाँकी छ।</item>
+        <item quantity="other">%1$d रिकभरी कोडहरू बाँकी छन्।</item>
+    </plurals>
     <string name="account_recovery_generate">कोडहरू सिर्जना गर्नुहोस्</string>
     <string name="account_recovery_regenerate">कोडहरू पुनः सिर्जना गर्नुहोस्</string>
     <string name="account_recovery_regen_title">रिकभरी कोडहरू पुनः सिर्जना गर्ने?</string>
@@ -270,7 +267,10 @@
     <string name="system_users_session_last_accessed">अन्तिम पहुँच: %1$s</string>
     <string name="system_users_revoke_all_title">सबै सत्रहरू रद्द गर्ने?</string>
     <string name="system_users_revoke_all_message">यो प्रयोगकर्ताका सबै सक्रिय सत्रहरू साइन आउट गरिनेछन्।</string>
-    <string name="system_users_pagination_status">%3$d प्रयोगकर्ताहरूमा %1$d–%2$d देखाउँदै</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">%3$d प्रयोगकर्तामध्ये %1$d–%2$d देखाउँदै</item>
+        <item quantity="other">%3$d प्रयोगकर्ताहरूमध्ये %1$d–%2$d देखाउँदै</item>
+    </plurals>
     <string name="account_title">खाता</string>
     <string name="account_section_identity">पहिचान</string>
     <string name="account_identity_identity">पहिचान</string>
@@ -307,7 +307,7 @@
         <item quantity="other">%1$d गन्तव्यहरूमा परीक्षण पठाइयो</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 सत्र खारेज गरियो</item>
+        <item quantity="one">%1$d सत्र खारेज गरियो</item>
         <item quantity="other">%1$d सत्रहरू खारेज गरियो</item>
     </plurals>
     <string name="login_title">लग इन</string>
@@ -347,10 +347,8 @@
     <string name="system_setting_hostname">अन्य सर्भरहरूलाई घोषित होस्टनेम</string>
     <string name="system_status_peer_id">पियर ID</string>
     <string name="system_status_holepunch">होल पन्च</string>
-    <string name="system_status_holepunch_value">%1$d सफल · %2$d असफल</string>
     <string name="system_status_awaiting_routing">राउटिङको प्रतीक्षामा रहेका सन्देशहरू</string>
     <string name="system_status_relay_service">रिले सेवा</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d आरक्षणहरू · %3$d सर्किटहरू · %4$d अस्वीकृत</string>
     <string name="route_target_select">छान्नुहोस्</string>
     <string name="account_data_description">यो वा अन्य Mochi सर्भरमा पुनर्स्थापना गर्न सकिने पूर्ण ब्याकअप डाउनलोड गर्नुहोस्।</string>
     <string name="route_target_none">कुनै लक्ष्य उपलब्ध छैन</string>
@@ -375,7 +373,10 @@
     <string name="accounts_device_seen">पछिल्लो पटक देखिएको %1$s</string>
     <string name="notifprefs_device_app">%1$s · एप</string>
     <string name="notifprefs_device_push">%1$s · पुश</string>
-    <string name="notifprefs_test_partial">परीक्षण %2$d मध्ये %1$d गन्तव्यमा पठाइयो</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">परीक्षण %2$d गन्तव्यमध्ये %1$d मा पठाइयो</item>
+        <item quantity="other">परीक्षण %2$d गन्तव्यहरूमध्ये %1$d मा पठाइयो</item>
+    </plurals>
     <string name="notifprefs_test_none">कुनै गन्तव्य कन्फिगर गरिएको छैन</string>
     <string name="notifprefs_transport_fcm">Android पुश</string>
     <string name="notifprefs_no_destinations">कुनै गन्तव्य छैन</string>
@@ -394,4 +395,27 @@
     <string name="accounts_revoke_confirm">यसले %1$s को क्यालेन्डर पहुँच खारेज गर्नेछ। लगइन पृष्ठमा अनलिङ्क नगरेसम्म %2$s मार्फत साइन-इन रहनेछ।</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">अज्ञात थिम</string>
+    <string name="system_documents_modified">परिमार्जित</string>
+    <string name="system_documents_discard_title">परिवर्तनहरू हटाउने?</string>
+    <string name="system_documents_discard">हटाउनुहोस्</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$d सफल</item>
+        <item quantity="other">%1$d सफल</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$d असफल</item>
+        <item quantity="other">%1$d असफल</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$d / %2$d आरक्षण</item>
+        <item quantity="other">%1$d / %2$d आरक्षणहरू</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$d सर्किट</item>
+        <item quantity="other">%1$d सर्किटहरू</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$d अस्वीकृत</item>
+        <item quantity="other">%1$d अस्वीकृत</item>
+    </plurals>
 </resources>

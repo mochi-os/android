@@ -99,8 +99,9 @@ fun NotificationPrefsScreen(
     val snack = tested?.let { result ->
         when {
             result.total == 0 -> stringResource(R.string.notifprefs_test_none)
-            result.sent < result.total -> stringResource(
-                R.string.notifprefs_test_partial, result.sent, result.total
+            // The noun agrees with the total, the number it sits beside.
+            result.sent < result.total -> pluralStringResource(
+                R.plurals.notifprefs_test_partial, result.total, result.sent, result.total
             )
             else -> pluralStringResource(R.plurals.notifprefs_test_sent, result.sent, result.sent)
         }
@@ -264,7 +265,7 @@ private fun CategoryCard(
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     Text(
-                        text = category.label,
+                        text = category.shown,
                         style = MaterialTheme.typography.titleSmall,
                         fontWeight = FontWeight.SemiBold,
                         maxLines = 1,
@@ -459,7 +460,7 @@ private fun TopicRow(
             }
             Spacer(Modifier.height(8.dp))
             MochiDropdownField(
-                value = current?.label ?: unassigned,
+                value = current?.shown ?: unassigned,
                 expanded = menu,
                 onExpandedChange = { open -> menu = open },
                 modifier = Modifier.fillMaxWidth(),
@@ -474,7 +475,7 @@ private fun TopicRow(
                 )
                 for (category in categories.noNotificationsLast()) {
                     MochiDropdownMenuItem(
-                        text = { Text(category.label) },
+                        text = { Text(category.shown) },
                         onClick = {
                             menu = false
                             onSetCategory(topic, category.id)
@@ -500,20 +501,20 @@ private fun DeleteCategoryDialog(
     var menu by remember { mutableStateOf(false) }
     MochiAlertDialog(
         onDismissRequest = { if (!busy) onDismiss() },
-        title = stringResource(R.string.notifprefs_delete_title, category.label),
+        title = stringResource(R.string.notifprefs_delete_title, category.shown),
         content = {
             Column {
                 Text(stringResource(R.string.notifprefs_reassign_label))
                 Spacer(Modifier.height(8.dp))
                 MochiDropdownField(
-                    value = others.firstOrNull { other -> other.id == target }?.label.orEmpty(),
+                    value = others.firstOrNull { other -> other.id == target }?.shown.orEmpty(),
                     expanded = menu,
                     onExpandedChange = { open -> menu = open },
                     modifier = Modifier.fillMaxWidth(),
                 ) {
                     for (other in others.noNotificationsLast()) {
                         MochiDropdownMenuItem(
-                            text = { Text(other.label) },
+                            text = { Text(other.shown) },
                             onClick = {
                                 target = other.id
                                 menu = false

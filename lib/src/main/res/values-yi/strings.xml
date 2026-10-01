@@ -103,9 +103,9 @@
     <string name="settings_time_zone">צײַט־זאָנע</string>
     <string name="settings_reset_to_defaults">צוריקזעצן צו פֿאַרשטעלונגען</string>
     <string name="settings_reset_confirm_title">צוריקזעצן פֿאָרצוגן?</string>
-    <string name="settings_reset_confirm_message">דאָס וועט נײַ שטעלן אַלע פּרעפֿערענצן צו זייערע פֿאָרויסבאַשטימטע ווערטן.</string>
+    <string name="settings_reset_confirm_message">דאָס וועט נײַ שטעלן די דאָזיקע פּרעפֿערענצן צו זייערע פֿאָרויסבאַשטימטע ווערטן.</string>
     <string name="settings_reset">צוריקזעצן</string>
-    <string name="settings_display_title">ווײַזן</string>
+    <string name="settings_display_title">עקראַן</string>
     <string name="settings_display_reset">צוריקזעצן צו פֿאַרשטעלונגען</string>
     <string name="settings_display_reset_confirm_title">ריסעט דיספּלאַי?</string>
     <string name="settings_display_reset_confirm_message">דאָס וועט ריסעט די דיספּלאַי באַשטעטיקונגען צו זייער פעלער ווערט.</string>
