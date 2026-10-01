@@ -245,12 +245,16 @@ fun CalendarScreen(
                     enter = expandVertically(),
                     exit = shrinkVertically(),
                 ) {
-                    DatePanel(
-                        focus = uiState.focus,
-                        today = LocalDate.now(viewModel.timezone()),
-                        weekStart = viewModel.start(),
-                        onPick = viewModel::anchor,
-                    )
+                    val days = uiState.view != CalendarsSection.MONTH
+                    key(days) {
+                        DatePanel(
+                            focus = uiState.focus,
+                            today = LocalDate.now(viewModel.timezone()),
+                            weekStart = viewModel.start(),
+                            onPick = viewModel::anchor,
+                            days = days,
+                        )
+                    }
                 }
                 Box(modifier = Modifier.fillMaxWidth().weight(1f)) {
                     val error = uiState.error

@@ -71,7 +71,8 @@ private const val ROWS = 6
  * [focus], the day the user last chose, is circled and its month shown
  * whenever it moves; [today] is in the primary colour; [weekStart] counts
  * Sunday 0 to Saturday 6. A swipe that settles the small month on another
- * month picks that month's first day, as a tap on its chip does.
+ * month picks that month's first day, as a tap on its chip does. Without
+ * [days], as the month view wants, the panel is the chip row alone.
  */
 @Composable
 fun DatePanel(
@@ -80,14 +81,22 @@ fun DatePanel(
     weekStart: Int,
     onPick: (LocalDate) -> Unit,
     modifier: Modifier = Modifier,
+    days: Boolean = true,
 ) {
     val base = remember { YearMonth.from(focus) }
     val pager = rememberPagerState(initialPage = MONTH_CENTRE) { MONTH_PAGES }
     val chips = rememberLazyListState(initialFirstVisibleItemIndex = CHIP_REACH - 1)
     val locale = LocalConfiguration.current.locales[0]
-    val shown = base.plusMonths((pager.currentPage - MONTH_CENTRE).toLong())
+    val shown = if (days) {
+        base.plusMonths((pager.currentPage - MONTH_CENTRE).toLong())
+    } else {
+        YearMonth.from(focus)
+    }
 
     LaunchedEffect(YearMonth.from(focus)) {
+        if (!days) {
+            return@LaunchedEffect
+        }
         val target = MONTH_CENTRE + base.until(YearMonth.from(focus), ChronoUnit.MONTHS).toInt()
         if (pager.currentPage != target) {
             if (abs(pager.currentPage - target) <= SLIDE) {
@@ -99,6 +108,9 @@ fun DatePanel(
     }
     val picked by rememberUpdatedState(YearMonth.from(focus))
     LaunchedEffect(pager) {
+        if (!days) {
+            return@LaunchedEffect
+        }
         snapshotFlow { pager.settledPage }.collect { page ->
             val month = base.plusMonths((page - MONTH_CENTRE).toLong())
             if (month != picked) {
@@ -117,22 +129,13 @@ fun DatePanel(
             .background(MaterialTheme.colorScheme.surfaceContainer)
             .padding(top = 8.dp, bottom = 8.dp),
     ) {
-        Row(modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp)) {
-            for (column in 0 until 7) {
-                Text(
-                    text = weekday(weekStart, column).getDisplayName(TextStyle.NARROW, locale),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.weight(1f).padding(vertical = 4.dp),
-                    textAlign = TextAlign.Center,
-                )
+        if (days) {
+            HorizontalPager(state = pager, modifier = Modifier.fillMaxWidth()) { page ->
+                val month = base.plusMonths((page - MONTH_CENTRE).toLong())
+                Month(month, focus, today, weekStart, onPick)
             }
+            Spacer(Modifier.height(4.dp))
         }
-        HorizontalPager(state = pager, modifier = Modifier.fillMaxWidth()) { page ->
-            val month = base.plusMonths((page - MONTH_CENTRE).toLong())
-            Month(month, focus, today, weekStart, onPick)
-        }
-        Spacer(Modifier.height(4.dp))
         LazyRow(
             state = chips,
             contentPadding = PaddingValues(horizontal = 8.dp),
@@ -176,7 +179,7 @@ fun DatePanel(
     }
 }
 
-/** One month's days in six rows of seven, blank outside the month. */
+/** One month's weekday letters over its days in six rows of seven, blank outside the month. */
 @Composable
 private fun Month(
     month: YearMonth,
@@ -187,7 +190,19 @@ private fun Month(
 ) {
     val first = month.atDay(1)
     val lead = ((first.dayOfWeek.value % 7) - weekStart + 7) % 7
+    val locale = LocalConfiguration.current.locales[0]
     Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp)) {
+        Row(modifier = Modifier.fillMaxWidth()) {
+            for (column in 0 until 7) {
+                Text(
+                    text = weekday(weekStart, column).getDisplayName(TextStyle.NARROW, locale),
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.weight(1f).padding(vertical = 4.dp),
+                    textAlign = TextAlign.Center,
+                )
+            }
+        }
         for (row in 0 until ROWS) {
             Row(modifier = Modifier.fillMaxWidth()) {
                 for (column in 0 until 7) {
