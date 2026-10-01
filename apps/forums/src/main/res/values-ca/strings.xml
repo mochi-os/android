@@ -151,7 +151,7 @@
     <string name="forums_access_level_moderate">Modera</string>
     <string name="forums_members_search">Filtra els membres</string>
     <string name="forums_banner_description">Markdown que es mostra a la part superior del fòrum.</string>
-    <string name="forums_banner_placeholder">Us donem la benvinguda a aquest fòrum…</string>
+    <string name="forums_banner_placeholder">Introdueix el text del bàner (s\'admet Markdown)…</string>
     <string name="forums_ai_mode_label">Mode: %1$s</string>
     <string name="forums_ai_mode_heading">Mode IA</string>
     <string name="forums_ai_mode_off">Desactivat</string>
@@ -293,7 +293,7 @@
     <string name="forums_settings_ai_updated">S\'ha actualitzat la configuració d\'IA</string>
     <string name="forums_settings_forum_renamed">S\'ha canviat el nom del fòrum</string>
     <string name="forums_settings_name_clear_cd">Esborra el nom</string>
-    <string name="forums_settings_unsubscribe_section">Cancel·la la subscripció al fòrum</string>
+    <string name="forums_settings_unsubscribe_section">Dona\'t de baixa del fòrum</string>
     <string name="forums_share_link_title">Enllaç del fòrum</string>
     <string name="forums_find_found_by_url">Trobat per URL</string>
     <string name="forums_moderation_pending_posts">Publicacions pendents (%1$d)</string>

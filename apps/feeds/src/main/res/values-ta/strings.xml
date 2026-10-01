@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">ஒருபோதும் பெறப்படவில்லை</string>
     <string name="feeds_source_poll">வாக்கெடுப்பு</string>
     <string name="feeds_source_transform">AI மாற்றம்</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" ஐ அகற்றவா?</string>
-    <string name="feeds_remove_also_delete_posts">இறக்குமதி செய்யப்பட்ட இடுகைகளையும் நீக்கு</string>
+    <string name="feeds_remove_source_confirm">இது \"%1$s\" இலிருந்து உள்ளடக்கத்தை இறக்குமதி செய்வதை நிறுத்தும்.</string>
+    <string name="feeds_remove_also_delete_posts">இந்த மூலத்திலிருந்து இறக்குமதி செய்யப்பட்ட இடுகைகளையும் நீக்கு</string>
     <string name="feeds_suggested_credibility_title">பரிந்துரைக்கப்பட்ட நம்பகத்தன்மை</string>
     <string name="feeds_suggested_credibility_body">Mochi %1$d நம்பகத்தன்மையை பரிந்துரைக்கிறது. ஏற்கவா?</string>
     <string name="feeds_suggested_credibility_keep">தற்போதையதை வைத்திரு</string>

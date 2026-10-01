@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">Uusi</string>
     <string name="projects_settings_section_identity">Identiteetti</string>
     <string name="projects_settings_access_updated">Käyttöoikeus päivitetty</string>
-    <string name="projects_settings_access_revoked">Käyttöoikeus peruutettu</string>
+    <string name="projects_settings_access_revoked">Käyttöoikeus poistettu</string>
     <string name="projects_settings_section_access">Käyttöoikeuksien hallinta</string>
     <string name="projects_people_search">Hae henkilöitä</string>
     <string name="projects_settings_field_entity_id">Entiteetin tunnus</string>

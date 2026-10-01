@@ -557,7 +557,7 @@
     <string name="market_messages_send_failed">Tidak dapat mengirim pesan</string>
     <string name="market_messages_thread_title">Percakapan</string>
     <string name="market_messages_unread_badge">%1$d belum dibaca</string>
-    <string name="market_price_from">dari %1$s</string>
+    <string name="market_price_from">Dari %1$s</string>
     <string name="market_price_high_bid">Tawaran tertinggi: %1$s</string>
     <string name="market_price_instant_buy">beli langsung: %1$s</string>
     <string name="market_price_per_month">%1$s / bulan</string>

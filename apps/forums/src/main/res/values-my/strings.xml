@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">ထိန်းညှိပါ</string>
     <string name="forums_members_search">အဖွဲ့ဝင်များကို စစ်ထုတ်ပါ</string>
     <string name="forums_banner_description">ဖိုရမ်၏ ထိပ်တွင် ပြသမည့် Markdown။</string>
-    <string name="forums_banner_placeholder">ဤဖိုရမ်သို့ ကြိုဆိုပါသည်…</string>
+    <string name="forums_banner_placeholder">နဖူးစည်း စာသား ထည့်ပါ (Markdown ပံ့ပိုးသည်)…</string>
     <string name="forums_ai_mode_label">မုဒ်: %1$s</string>
     <string name="forums_ai_mode_heading">AI မုဒ်</string>
     <string name="forums_ai_mode_off">ပိတ်ထားသည်</string>

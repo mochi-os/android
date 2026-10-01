@@ -45,6 +45,8 @@
     <string name="route_delete_title">Жолды жою керек пе?</string>
     <string name="route_path">Жол</string>
     <string name="route_method">Әдіс</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Қолданба</string>
     <string name="route_method_entity">Нысан</string>
     <string name="route_method_redirect">Қайта бағыттау</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org сайтынан жүктеп алу</string>
     <string name="system_status_copy">Көшіру</string>
     <string name="system_status_peers">Тең деңгейлілер</string>
-    <string name="system_status_known">Белгілі</string>
+    <string name="system_status_peers_totals">Белгілі %1$s · Қосылған %2$s · Тарату торы %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Белгілі %1$s · Қосылған %2$s</string>
     <string name="system_status_peer_connected">Қосылды</string>
     <string name="system_status_peer_disconnected">Ажыратылды</string>
     <string name="system_status_peer_queued">Кезектегі хабарламалар</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">Сіз енді аутентификатор кодымен кіре алмайсыз.</string>
     <string name="account_recovery_none">Қалпына келтіру кодтары жасалмаған.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d қалпына келтіру коды қалды.</item>
-        <item quantity="other">%1$d қалпына келтіру коды қалды.</item>
+        <item quantity="one">%1$s қалпына келтіру коды қалды.</item>
+        <item quantity="other">%1$s қалпына келтіру коды қалды.</item>
     </plurals>
     <string name="account_recovery_generate">Кодтар жасау</string>
     <string name="account_recovery_regenerate">Кодтарды қайта жасау</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">Соңғы пайдаланылды %1$s</string>
     <string name="route_delete_message">Бұл \"%1$s\" жолы үшін бағытты жояды.</string>
     <string name="route_empty">Конфигурацияланған бағыттар жоқ.</string>
-    <string name="route_meta">Басымдылық %1$d · %2$s</string>
+    <string name="route_meta">Басымдылық %1$s · %2$s</string>
     <string name="interests_search_placeholder">Қосу үшін тақырыптарды іздеу…</string>
     <string name="interests_empty">Әзірше қызығушылықтар жоқ.</string>
     <string name="interests_summary_regenerate">Қысқаша мазмұнды қайта жасау</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">Барлық сеанстарды қайтарып алу керек пе?</string>
     <string name="system_users_revoke_all_message">Осы пайдаланушының барлық белсенді сеанстары жабылады.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">%3$d пайдаланушыдан %1$d–%2$d көрсетілуде</item>
-        <item quantity="other">%3$d пайдаланушыдан %1$d–%2$d көрсетілуде</item>
+        <item quantity="one">%3$s пайдаланушыдан %1$s–%2$s көрсетілуде</item>
+        <item quantity="other">%3$s пайдаланушыдан %1$s–%2$s көрсетілуде</item>
     </plurals>
     <string name="account_title">Тіркелгі</string>
     <string name="account_section_identity">Жеке басы</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS тексеру</string>
     <string name="settings_home_domains">Домендер</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Сынақ %1$d мекенжайға жіберілді</item>
-        <item quantity="other">Сынақ %1$d мекенжайға жіберілді</item>
+        <item quantity="one">Сынақ %1$s мекенжайға жіберілді</item>
+        <item quantity="other">Сынақ %1$s мекенжайға жіберілді</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$d сеанс қайтарып алынды</item>
-        <item quantity="other">%1$d сеанс қайтарып алынды</item>
+        <item quantity="one">%1$s сеанс қайтарып алынды</item>
+        <item quantity="other">%1$s сеанс қайтарып алынды</item>
     </plurals>
     <string name="login_title">Кіру</string>
     <string name="login_section_methods">Кіру әдістері</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">Қоғамдық</string>
     <string name="system_status_reachability_private">Жеке</string>
     <string name="system_status_reachability_unknown">Белгісіз</string>
-    <string name="system_status_relay">Реле арқылы</string>
-    <string name="system_status_mesh">Тарату торы</string>
+    <string name="system_status_reachability_relay">%1$s · реле арқылы</string>
     <string name="system_status_broadcast">Соңғы тарату</string>
     <string name="system_status_queued_broadcasts">Кезектегі тарату хабарлары</string>
     <string name="system_setting_hostname_publish">Хост атауы мен домендерді басқа серверлерге хабарлау</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">Соңғы рет көрінді %1$s</string>
     <string name="notifprefs_device_app">%1$s · қолданба</string>
     <string name="notifprefs_device_push">%1$s · Push хабарландырулары</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Сынақ %2$d мекенжай ішінен %1$d мекенжайға жіберілді</item>
-        <item quantity="other">Сынақ %2$d мекенжай ішінен %1$d мекенжайға жіберілді</item>
+        <item quantity="one">Сынақ %2$s мекенжай ішінен %1$s мекенжайға жіберілді</item>
+        <item quantity="other">Сынақ %2$s мекенжай ішінен %1$s мекенжайға жіберілді</item>
     </plurals>
     <string name="notifprefs_test_none">Бағыттар реттелмеген</string>
     <string name="notifprefs_transport_fcm">Android push хабарландыруы</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">Өзгерістерді алып тастау керек пе?</string>
     <string name="system_documents_discard">Алып тастау</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d сәтті</item>
-        <item quantity="other">%1$d сәтті</item>
+        <item quantity="one">%1$s сәтті</item>
+        <item quantity="other">%1$s сәтті</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d сәтсіз</item>
-        <item quantity="other">%1$d сәтсіз</item>
+        <item quantity="one">%1$s сәтсіз</item>
+        <item quantity="other">%1$s сәтсіз</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d брондау</item>
-        <item quantity="other">%1$d / %2$d брондау</item>
+        <item quantity="one">%1$s / %2$s брондау</item>
+        <item quantity="other">%1$s / %2$s брондау</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d тізбек</item>
-        <item quantity="other">%1$d тізбек</item>
+        <item quantity="one">%1$s тізбек</item>
+        <item quantity="other">%1$s тізбек</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d қабылданбады</item>
-        <item quantity="other">%1$d қабылданбады</item>
+        <item quantity="one">%1$s қабылданбады</item>
+        <item quantity="other">%1$s қабылданбады</item>
     </plurals>
 </resources>

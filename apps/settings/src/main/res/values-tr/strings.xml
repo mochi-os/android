@@ -45,6 +45,8 @@
     <string name="route_delete_title">Rota silinsin mi?</string>
     <string name="route_path">Yol</string>
     <string name="route_method">Yöntem</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Uygulama</string>
     <string name="route_method_entity">Varlık</string>
     <string name="route_method_redirect">Yönlendirme</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org adresinden indirin</string>
     <string name="system_status_copy">Kopyala</string>
     <string name="system_status_peers">Eşler</string>
-    <string name="system_status_known">Bilinen</string>
+    <string name="system_status_peers_totals">Bilinen %1$s · Bağlı %2$s · Yayın ağı %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Bilinen %1$s · Bağlı %2$s</string>
     <string name="system_status_peer_connected">Bağlandı</string>
     <string name="system_status_peer_disconnected">Bağlantı kesildi</string>
     <string name="system_status_peer_queued">Kuyruktaki mesajlar</string>
@@ -194,12 +197,12 @@
     <string name="system_users_toast_deleted">Kullanıcı silindi</string>
     <string name="system_users_toast_suspended">Kullanıcı askıya alındı</string>
     <string name="system_users_toast_suspension_removed">Askı kaldırıldı</string>
-    <string name="system_users_toast_session_revoked">Oturum iptal edildi</string>
+    <string name="system_users_toast_session_revoked">Oturum geçersiz kılındı</string>
     <string name="system_users_toast_create_failed">Kullanıcı oluşturulamadı</string>
     <string name="system_users_toast_update_failed">Kullanıcı güncellenemedi</string>
     <string name="system_users_toast_delete_failed">Kullanıcı silinemedi</string>
     <string name="system_users_toast_status_failed">Kullanıcı durumu güncellenemedi</string>
-    <string name="system_users_toast_revoke_failed">Oturum iptal edilemedi</string>
+    <string name="system_users_toast_revoke_failed">Oturum geçersiz kılınamadı</string>
 
     <string name="settings_home_sessions">Oturumlar</string>
     <string name="settings_home_privacy">Gizlilik politikası</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">Kimlik doğrulayıcı koduyla giriş yapamayacaksınız.</string>
     <string name="account_recovery_none">Kurtarma kodu oluşturulmadı.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d kurtarma kodu kaldı.</item>
-        <item quantity="other">%1$d kurtarma kodu kaldı.</item>
+        <item quantity="one">%1$s kurtarma kodu kaldı.</item>
+        <item quantity="other">%1$s kurtarma kodu kaldı.</item>
     </plurals>
     <string name="account_recovery_generate">Kod oluştur</string>
     <string name="account_recovery_regenerate">Kodları yeniden oluştur</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">Son kullanım %1$s</string>
     <string name="route_delete_message">Bu, \"%1$s\" yolu için rotayı kaldıracak.</string>
     <string name="route_empty">Yapılandırılmış rota yok.</string>
-    <string name="route_meta">Öncelik %1$d · %2$s</string>
+    <string name="route_meta">Öncelik %1$s · %2$s</string>
     <string name="interests_search_placeholder">Eklenecek konuları ara…</string>
     <string name="interests_empty">Henüz ilgi alanı yok.</string>
     <string name="interests_summary_regenerate">Özeti yeniden oluştur</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">Tüm oturumlar geçersiz kılınsın mı?</string>
     <string name="system_users_revoke_all_message">Bu kullanıcının tüm aktif oturumları kapatılacak.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">%3$d kullanıcıdan %1$d–%2$d gösteriliyor</item>
-        <item quantity="other">%3$d kullanıcıdan %1$d–%2$d gösteriliyor</item>
+        <item quantity="one">%3$s kullanıcıdan %1$s–%2$s gösteriliyor</item>
+        <item quantity="other">%3$s kullanıcıdan %1$s–%2$s gösteriliyor</item>
     </plurals>
     <string name="account_title">Hesap</string>
     <string name="account_section_identity">Kimlik</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS doğrula</string>
     <string name="settings_home_domains">Alan adları</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Test %1$d hedefe gönderildi</item>
-        <item quantity="other">Test %1$d hedefe gönderildi</item>
+        <item quantity="one">Test %1$s hedefe gönderildi</item>
+        <item quantity="other">Test %1$s hedefe gönderildi</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$d oturum iptal edildi</item>
-        <item quantity="other">%1$d oturum iptal edildi</item>
+        <item quantity="one">%1$s oturum geçersiz kılındı</item>
+        <item quantity="other">%1$s oturum geçersiz kılındı</item>
     </plurals>
     <string name="login_title">Oturum aç</string>
     <string name="login_section_methods">Oturum açma yöntemleri</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">Herkese açık</string>
     <string name="system_status_reachability_private">Özel</string>
     <string name="system_status_reachability_unknown">Bilinmiyor</string>
-    <string name="system_status_relay">Aktarıcı üzerinden</string>
-    <string name="system_status_mesh">Yayın mesh</string>
+    <string name="system_status_reachability_relay">%1$s · aktarıcı üzerinden</string>
     <string name="system_status_broadcast">Son yayın</string>
     <string name="system_status_queued_broadcasts">Kuyruktaki yayın mesajları</string>
     <string name="system_setting_hostname_publish">Ana bilgisayar adını ve alan adlarını diğer sunuculara duyur</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">Son görülme %1$s</string>
     <string name="notifprefs_device_app">%1$s · uygulama</string>
     <string name="notifprefs_device_push">%1$s · anlık bildirim</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Test %2$d hedeften %1$d tanesine gönderildi</item>
-        <item quantity="other">Test %2$d hedeften %1$d tanesine gönderildi</item>
+        <item quantity="one">Test %2$s hedeften %1$s tanesine gönderildi</item>
+        <item quantity="other">Test %2$s hedeften %1$s tanesine gönderildi</item>
     </plurals>
     <string name="notifprefs_test_none">Hedef yapılandırılmamış</string>
     <string name="notifprefs_transport_fcm">Android anlık bildirim</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">Değişiklikler atılsın mı?</string>
     <string name="system_documents_discard">At</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d başarılı</item>
-        <item quantity="other">%1$d başarılı</item>
+        <item quantity="one">%1$s başarılı</item>
+        <item quantity="other">%1$s başarılı</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d başarısız</item>
-        <item quantity="other">%1$d başarısız</item>
+        <item quantity="one">%1$s başarısız</item>
+        <item quantity="other">%1$s başarısız</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d rezervasyon</item>
-        <item quantity="other">%1$d / %2$d rezervasyon</item>
+        <item quantity="one">%1$s / %2$s rezervasyon</item>
+        <item quantity="other">%1$s / %2$s rezervasyon</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d devre</item>
-        <item quantity="other">%1$d devre</item>
+        <item quantity="one">%1$s devre</item>
+        <item quantity="other">%1$s devre</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d reddedildi</item>
-        <item quantity="other">%1$d reddedildi</item>
+        <item quantity="one">%1$s reddedildi</item>
+        <item quantity="other">%1$s reddedildi</item>
     </plurals>
 </resources>

@@ -33,14 +33,14 @@
     <string name="wikis_unsubscribe_confirm_title">Odjavi se</string>
     <string name="wikis_unsubscribe_success">Odjavljeno</string>
     <string name="wikis_subscribe_failed">Neuspešna naročnina</string>
-    <string name="wikis_rss_menu">RSS vir</string>
+    <string name="wikis_rss_menu">RSS kanal</string>
     <string name="wikis_rss_changes">Spremembe</string>
     <string name="wikis_rss_comments">Komentarji</string>
     <string name="wikis_rss_both">Spremembe in komentarji</string>
     <string name="wikis_rss_copied">RSS URL kopiran v odložišče</string>
     <string name="wikis_rss_failed">Neuspešno pridobivanje RSS žetona</string>
     <string name="wikis_rss_revoke">Odvzemi dostop</string>
-    <string name="wikis_rss_revoked">Dostop RSS preklican</string>
+    <string name="wikis_rss_revoked">Dostop RSS odvzet</string>
     <string name="wikis_find_title">Najdi wikije</string>
     <string name="wikis_find_no_results">Wikijev ni mogoče najti</string>
     <string name="wikis_find_recommended_section">Priporočeni wikiji</string>
@@ -295,9 +295,9 @@
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
         <item quantity="one">%d odgovor</item>
-        <item quantity="two">+%d več odgovorov</item>
-        <item quantity="few">+%d več odgovorov</item>
-        <item quantity="other">+%d več odgovorov</item>
+        <item quantity="two">še +%d odgovora</item>
+        <item quantity="few">še +%d odgovori</item>
+        <item quantity="other">še +%d odgovorov</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d stran</item>
@@ -330,21 +330,21 @@
         <item quantity="other">%d strani s to oznako</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Najdeno %1$d rezultat za »%2$s«</item>
-        <item quantity="two">Najdeno %1$d rezultata za »%2$s«</item>
-        <item quantity="few">Najdeno %1$d rezultati za »%2$s«</item>
-        <item quantity="other">Najdeno %1$d rezultatov za »%2$s«</item>
+        <item quantity="one">Najden %1$d rezultat za »%2$s«</item>
+        <item quantity="two">Najdena %1$d rezultata za »%2$s«</item>
+        <item quantity="few">Najdeni %1$d rezultati za »%2$s«</item>
+        <item quantity="other">Najdenih %1$d rezultatov za »%2$s«</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Napisa ni bilo mogoče shraniti</string>
     <string name="wikis_attachments_upload_types">Podprte datoteke: slike, PDF, DOC, DOCX, TXT in MD.</string>
     <string name="wikis_attachments_upload_limits">Velika nalaganja so lahko omejena s konfiguracijo vašega strežnika ali posredniškega strežnika.</string>
     <string name="wikis_rss_replace">Zamenjaj</string>
     <string name="wikis_rss_copied_new">Nov RSS URL kopiran v odložišče</string>
-    <string name="wikis_rss_exists">Ta URL vira je že bil izdan in ga ni mogoče znova prikazati.</string>
+    <string name="wikis_rss_exists">Ta URL kanala je že bil izdan in ga ni mogoče znova prikazati.</string>
     <plurals name="wikis_comments_truncated">
         <item quantity="one">Prikazan je prvi %1$d komentar.</item>
-        <item quantity="two">Prikazanih je prvih %1$d komentarjev.</item>
-        <item quantity="few">Prikazanih je prvih %1$d komentarjev.</item>
+        <item quantity="two">Prikazana sta prva %1$d komentarja.</item>
+        <item quantity="few">Prikazani so prvi %1$d komentarji.</item>
         <item quantity="other">Prikazanih je prvih %1$d komentarjev.</item>
     </plurals>
 </resources>

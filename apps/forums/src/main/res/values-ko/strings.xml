@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">모더레이션</string>
     <string name="forums_members_search">구성원 필터</string>
     <string name="forums_banner_description">포럼 상단에 표시되는 Markdown입니다.</string>
-    <string name="forums_banner_placeholder">이 포럼에 오신 것을 환영합니다…</string>
+    <string name="forums_banner_placeholder">배너 텍스트 입력(Markdown 지원)…</string>
     <string name="forums_ai_mode_label">모드: %1$s</string>
     <string name="forums_ai_mode_heading">AI 모드</string>
     <string name="forums_ai_mode_off">비활성화됨</string>
@@ -241,7 +241,7 @@
     <string name="forums_moderation_unit_days">일</string>
     <string name="forums_settings_banner_saved">배너가 저장되었습니다</string>
     <string name="forums_settings_access_updated">접근이 업데이트되었어요</string>
-    <string name="forums_settings_access_revoked">액세스가 취소되었습니다</string>
+    <string name="forums_settings_access_revoked">액세스가 철회되었습니다</string>
     <string name="forums_settings_member_removed">멤버가 제거되었어요</string>
     <string name="forums_settings_prompt_saved">프롬프트가 저장되었어요</string>
     <string name="forums_settings_section_identity">신원</string>
@@ -292,7 +292,7 @@
     <string name="forums_settings_ai_updated">AI 설정이 업데이트되었습니다</string>
     <string name="forums_settings_forum_renamed">포럼 이름이 변경되었어요</string>
     <string name="forums_settings_name_clear_cd">이름 지우기</string>
-    <string name="forums_settings_unsubscribe_section">포럼 구독 취소</string>
+    <string name="forums_settings_unsubscribe_section">포럼 구독 해지</string>
     <string name="forums_share_link_title">포럼 링크</string>
     <string name="forums_find_found_by_url">URL로 찾음</string>
     <string name="forums_moderation_pending_posts">대기 중인 게시물 (%1$d)</string>

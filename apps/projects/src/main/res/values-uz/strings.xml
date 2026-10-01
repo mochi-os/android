@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">Yangi</string>
     <string name="projects_settings_section_identity">Identifikatsiya</string>
     <string name="projects_settings_access_updated">Kirish yangilandi</string>
-    <string name="projects_settings_access_revoked">Kirish bekor qilindi</string>
+    <string name="projects_settings_access_revoked">Kirish huquqi qaytarib olindi</string>
     <string name="projects_settings_section_access">Kirishni boshqarish</string>
     <string name="projects_people_search">Odamlarni qidirish</string>
     <string name="projects_settings_field_entity_id">Obyekt ID</string>

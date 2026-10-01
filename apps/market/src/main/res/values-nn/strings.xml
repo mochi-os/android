@@ -559,7 +559,7 @@
     <string name="market_messages_send_failed">Kunne ikkje sende meldinga</string>
     <string name="market_messages_thread_title">Samtale</string>
     <string name="market_messages_unread_badge">%1$d ulesne</string>
-    <string name="market_price_from">frå %1$s</string>
+    <string name="market_price_from">Frå %1$s</string>
     <string name="market_price_high_bid">Høgaste bod: %1$s</string>
     <string name="market_price_instant_buy">kjøp no: %1$s</string>
     <string name="market_price_per_month">%1$s / månad</string>

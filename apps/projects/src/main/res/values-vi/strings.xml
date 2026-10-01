@@ -360,7 +360,7 @@
     <string name="projects_activity_commented">đã bình luận</string>
     <string name="projects_attachment_delete_confirm_message">Tệp đính kèm này sẽ bị xóa vĩnh viễn.</string>
     <string name="projects_attachment_delete_confirm_title">Xóa tệp đính kèm?</string>
-    <string name="projects_settings_unsubscribe_section">Hủy đăng ký dự án</string>
+    <string name="projects_settings_unsubscribe_section">Ngừng đăng ký dự án</string>
     <string name="projects_share_link_title">Chia sẻ dự án</string>
     <string name="projects_sort_filter_title">Sắp xếp và lọc</string>
     <string name="projects_create_prefix_hint">Dùng cho các ID dễ đọc như %1$s-1, %1$s-2</string>

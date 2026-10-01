@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">Lawula</string>
     <string name="forums_members_search">Hlunga amalungu</string>
     <string name="forums_banner_description">I-Markdown eboniswa phezulu kwenkundla.</string>
-    <string name="forums_banner_placeholder">Siyakwamukela kule nkundla…</string>
+    <string name="forums_banner_placeholder">Faka umbhalo webhena (i-markdown iyasekelwa)…</string>
     <string name="forums_ai_mode_label">Imodi: %1$s</string>
     <string name="forums_ai_mode_heading">Imodi ye-AI</string>
     <string name="forums_ai_mode_off">Kuvinjelwe</string>

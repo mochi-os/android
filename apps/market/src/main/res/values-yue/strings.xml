@@ -105,7 +105,7 @@
     <string name="market_checkout_shipping">運送</string>
     <string name="market_editor_shipping">運送</string>
     <string name="market_filter_delivery_shipping">運送</string>
-    <string name="market_listing_detail_shipping_heading">運送</string>
+    <string name="market_listing_detail_shipping_heading">運送選項</string>
     <string name="market_purchase_shipping_line">運送</string>
     <string name="market_sale_section_shipping">運送</string>
     <string name="market_dispute_dialog_evidence_role_seller">賣家</string>

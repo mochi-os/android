@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">Uus</string>
     <string name="projects_settings_section_identity">Identiteet</string>
     <string name="projects_settings_access_updated">Juurdepääs uuendatud</string>
-    <string name="projects_settings_access_revoked">Juurdepääs tühistati</string>
+    <string name="projects_settings_access_revoked">Juurdepääs võeti ära</string>
     <string name="projects_settings_section_access">Juurdepääsu haldus</string>
     <string name="projects_people_search">Otsi inimesi</string>
     <string name="projects_settings_field_entity_id">Olemi ID</string>

@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">An cire tushe</string>
     <string name="feeds_settings_source_polling">Ana bincike majiyar…</string>
     <string name="feeds_settings_access_updated">An sabunta damar shiga</string>
-    <string name="feeds_settings_access_revoked">An hana shiga</string>
+    <string name="feeds_settings_access_revoked">An janye damar shiga</string>
     <string name="feeds_settings_member_removed">An cire memba</string>
     <string name="feeds_settings_ai_mode_updated">An sabunta yanayin AI</string>
     <string name="feeds_settings_ai_account_updated">An sabunta asusun AI</string>
@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">Ba a taɓa ɗauko ba</string>
     <string name="feeds_source_poll">Duba</string>
     <string name="feeds_source_transform">Sauya AI</string>
-    <string name="feeds_remove_source_confirm">A cire \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Haka kuma a share posts da aka shigo da su</string>
+    <string name="feeds_remove_source_confirm">Wannan zai dakatar da shigo da abun ciki daga \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Haka kuma a share posts da aka shigo da su daga wannan tushen</string>
     <string name="feeds_suggested_credibility_title">Amincewar da aka ba da shawara</string>
     <string name="feeds_suggested_credibility_body">Mochi ya ba da shawarar amincewa na %1$d. A karɓa?</string>
     <string name="feeds_suggested_credibility_keep">Riƙe na yanzu</string>

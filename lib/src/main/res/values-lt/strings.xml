@@ -60,7 +60,7 @@
     <string name="notifications_empty">Pranešimų nėra</string>
     <string name="notifications_empty_unread">Viskas perskaityta</string>
     <string name="notifications_tab_unread">Neperskaityta</string>
-    <string name="notifications_tab_unread_count">Neperskaityti (%1$d)</string>
+    <string name="notifications_tab_unread_count">Neperskaityti (%1$s)</string>
     <string name="notifications_tab_all">Visi</string>
     <string name="notifications_mark_all_read">Pažymėti visus skaitytais</string>
     <string name="notifications_clear_all">Išvalyti viską</string>
@@ -305,8 +305,8 @@
     <string name="rss_revoke">Panaikinti prieigą</string>
     <string name="rss_revoke_title">Panaikinti RSS prieigą?</string>
     <string name="rss_revoke_message">Viskas, kas prenumeruoja šį srautą, nustos jį gauti. Vėliau galėsite nukopijuoti naują URL.</string>
-    <string name="rss_revoked">RSS prieiga atšaukta</string>
-    <string name="rss_revoke_failed">Nepavyko atšaukti RSS prieigos</string>
+    <string name="rss_revoked">RSS prieiga panaikinta</string>
+    <string name="rss_revoke_failed">Nepavyko panaikinti RSS prieigos</string>
     <string name="game_empty_title">Dar nėra games</string>
     <string name="game_select_title">Pasirinkite žaidimą</string>
     <string name="game_select_subtitle">Pasirinkite žaidimą šoninėje juostoje arba pradėkite naują.</string>

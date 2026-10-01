@@ -60,7 +60,7 @@
     <string name="notifications_empty">Sen notificacións</string>
     <string name="notifications_empty_unread">Estás ao día</string>
     <string name="notifications_tab_unread">Sen ler</string>
-    <string name="notifications_tab_unread_count">Sen ler (%1$d)</string>
+    <string name="notifications_tab_unread_count">Sen ler (%1$s)</string>
     <string name="notifications_tab_all">Todas</string>
     <string name="notifications_mark_all_read">Marcar todas lidas</string>
     <string name="notifications_clear_all">Borrar todo</string>
@@ -302,7 +302,7 @@
     <string name="rss_revoke_confirm">Revogar</string>
     <string name="rss_revoke">Revogar o acceso</string>
     <string name="rss_revoke_title">Revogar o acceso RSS?</string>
-    <string name="rss_revoke_message">Todo o subscrito a esta fonte deixará de recibila. Despois podes copiar un URL novo.</string>
+    <string name="rss_revoke_message">Todo o subscrito a este fío deixará de recibilo. Despois podes copiar un URL novo.</string>
     <string name="rss_revoked">Acceso RSS revogado</string>
     <string name="rss_revoke_failed">Non se puido revogar o acceso RSS</string>
     <string name="game_empty_title">Aínda non hai xogos</string>

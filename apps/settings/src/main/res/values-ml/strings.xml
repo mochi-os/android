@@ -45,6 +45,8 @@
     <string name="route_delete_title">റൂട്ട് ഇല്ലാതാക്കണോ?</string>
     <string name="route_path">പാത്ത്</string>
     <string name="route_method">രീതി</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">ആപ്പ്</string>
     <string name="route_method_entity">എന്റിറ്റി</string>
     <string name="route_method_redirect">റീഡയറക്ട്</string>
@@ -53,7 +55,7 @@
     <string name="route_disabled">പ്രവർത്തനരഹിതം</string>
     <string name="interests_title">താൽപ്പര്യങ്ങൾ</string>
     <string name="interests_summary_title">സംഗ്രഹം</string>
-    <string name="interests_remove">item നീക്കം ചെയ്യുക</string>
+    <string name="interests_remove">താൽപ്പര്യം നീക്കം ചെയ്യുക</string>
     <string name="notifprefs_title">അറിയിപ്പ് മുൻഗണനകൾ</string>
     <string name="notifprefs_tab_categories">വിഭാഗങ്ങൾ</string>
     <string name="notifprefs_tab_topics">വിഷയങ്ങൾ</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org-ൽ നിന്ന് ഡൗൺലോഡ് ചെയ്യുക</string>
     <string name="system_status_copy">പകർത്തുക</string>
     <string name="system_status_peers">പിയറുകൾ</string>
-    <string name="system_status_known">അറിയപ്പെടുന്നവ</string>
+    <string name="system_status_peers_totals">അറിയപ്പെടുന്നവ %1$s · കണക്റ്റ് ചെയ്തവ %2$s · ബ്രോഡ്കാസ്റ്റ് മെഷ് %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">അറിയപ്പെടുന്നവ %1$s · കണക്റ്റ് ചെയ്തവ %2$s</string>
     <string name="system_status_peer_connected">കണക്റ്റ് ചെയ്തു</string>
     <string name="system_status_peer_disconnected">വിച്ഛേദിച്ചു</string>
     <string name="system_status_peer_queued">ക്യൂവിലുള്ള സന്ദേശങ്ങൾ</string>
@@ -102,7 +105,7 @@
     <string name="accounts_settings">ക്രമീകരണങ്ങൾ</string>
     <string name="accounts_verify">സ്ഥിരീകരിക്കുക</string>
     <string name="accounts_remove">നീക്കം ചെയ്യുക</string>
-    <string name="accounts_remove_title">check-in നീക്കം ചെയ്യുക</string>
+    <string name="accounts_remove_title">അക്കൗണ്ട് നീക്കം ചെയ്യണോ?</string>
     <string name="system_documents_title">ഡോക്യുമെന്റുകൾ</string>
     <string name="system_documents_tab_rules">സെർവർ നിയമങ്ങൾ</string>
     <string name="system_documents_tab_terms">നിബന്ധനകളും വ്യവസ്ഥകളും</string>
@@ -131,8 +134,8 @@
     <string name="system_settings_save">സേവ് ചെയ്യുക</string>
     <string name="system_settings_clear">മായ്ക്കുക</string>
     <string name="system_settings_reset">പുനഃസജ്ജമാക്കുക</string>
-    <string name="system_settings_reset_to_default">ഡിഫോൾട്ടിലേക്ക് റീസെറ്റ് ചെയ്യണോ?</string>
-    <string name="system_settings_reset_title">ഡിഫോൾട്ടുകളിലേക്ക് റീസെറ്റ് ചെയ്യുക</string>
+    <string name="system_settings_reset_to_default">ഡിഫോൾട്ടിലേക്ക് പുനഃസജ്ജമാക്കുക</string>
+    <string name="system_settings_reset_title">ഡിഫോൾട്ടിലേക്ക് പുനഃസജ്ജമാക്കണോ?</string>
     <string name="system_setting_apps_install_user">ഉപയോക്താക്കൾക്ക് ആപ്പുകൾ ഇൻസ്റ്റാൾ ചെയ്യാൻ അനുവദിക്കുക</string>
     <string name="system_setting_auth_email">ഇമെയിൽ കോഡ് ഉപയോഗിച്ച് ലോഗിൻ ചെയ്യുക</string>
     <string name="system_setting_auth_passkey">പാസ്കീ ഉപയോഗിച്ച് ലോഗിൻ ചെയ്യുക</string>
@@ -176,7 +179,7 @@
     <string name="system_users_create_title">ഉപയോക്താവിനെ സൃഷ്ടിക്കുക</string>
     <string name="system_users_save_changes">മാറ്റങ്ങൾ സേവ് ചെയ്യുക</string>
     <string name="system_users_suspend">ഉപയോക്താവിനെ സസ്പെൻഡ് ചെയ്യുക</string>
-    <string name="system_users_remove_suspension">ടീം അംഗത്തെ നീക്കം ചെയ്യുക</string>
+    <string name="system_users_remove_suspension">സസ്പെൻഷൻ നീക്കം ചെയ്യുക</string>
     <string name="system_users_delete">ഉപയോക്താവിനെ ഇല്ലാതാക്കുക</string>
     <string name="system_users_delete_title">ഉപയോക്താവിനെ ഇല്ലാതാക്കണോ?</string>
     <string name="system_users_manage_sessions">സെഷനുകൾ മാനേജ് ചെയ്യുക</string>
@@ -194,12 +197,12 @@
     <string name="system_users_toast_deleted">ഉപയോക്താവിനെ ഇല്ലാതാക്കി</string>
     <string name="system_users_toast_suspended">ഉപയോക്താവിനെ സസ്പെൻഡ് ചെയ്തു</string>
     <string name="system_users_toast_suspension_removed">സസ്പെൻഷൻ നീക്കം ചെയ്തു</string>
-    <string name="system_users_toast_session_revoked">സെഷൻ റദ്ദാക്കി</string>
+    <string name="system_users_toast_session_revoked">സെഷൻ പിൻവലിച്ചു</string>
     <string name="system_users_toast_create_failed">ഉപയോക്താവിനെ സൃഷ്ടിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="system_users_toast_update_failed">ഉപയോക്താവിനെ പുതുക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="system_users_toast_delete_failed">ഉപയോക്താവിനെ ഇല്ലാതാക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="system_users_toast_status_failed">ഉപയോക്തൃ സ്റ്റാറ്റസ് പുതുക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
-    <string name="system_users_toast_revoke_failed">സെഷൻ റദ്ദാക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
+    <string name="system_users_toast_revoke_failed">സെഷൻ പിൻവലിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
 
     <string name="settings_home_sessions">സെഷനുകൾ</string>
     <string name="settings_home_privacy">സ്വകാര്യതാ നയം</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">നിങ്ങൾക്ക് ഇനി പ്രാമാണീകരണ കോഡ് ഉപയോഗിച്ച് സൈൻ ഇൻ ചെയ്യാൻ കഴിയില്ല.</string>
     <string name="account_recovery_none">വീണ്ടെടുക്കൽ കോഡുകൾ ജനറേറ്റ് ചെയ്തിട്ടില്ല.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d വീണ്ടെടുക്കൽ കോഡ് ശേഷിക്കുന്നു.</item>
-        <item quantity="other">%1$d വീണ്ടെടുക്കൽ കോഡുകൾ ശേഷിക്കുന്നു.</item>
+        <item quantity="one">%1$s വീണ്ടെടുക്കൽ കോഡ് ശേഷിക്കുന്നു.</item>
+        <item quantity="other">%1$s വീണ്ടെടുക്കൽ കോഡുകൾ ശേഷിക്കുന്നു.</item>
     </plurals>
     <string name="account_recovery_generate">കോഡുകൾ ജനറേറ്റ് ചെയ്യുക</string>
     <string name="account_recovery_regenerate">കോഡുകൾ വീണ്ടും ജനറേറ്റ് ചെയ്യുക</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">അവസാനം ഉപയോഗിച്ചത് %1$s</string>
     <string name="route_delete_message">ഇത് പാത \"%1$s\" നായുള്ള റൂട്ട് നീക്കം ചെയ്യും.</string>
     <string name="route_empty">റൂട്ടുകൾ കോൺഫിഗർ ചെയ്തിട്ടില്ല.</string>
-    <string name="route_meta">മുൻഗണന %1$d · %2$s</string>
+    <string name="route_meta">മുൻഗണന %1$s · %2$s</string>
     <string name="interests_search_placeholder">ചേർക്കാൻ വിഷയങ്ങൾ തിരയുക…</string>
     <string name="interests_empty">ഇതുവരെ താൽപ്പര്യങ്ങളില്ല.</string>
     <string name="interests_summary_regenerate">സംഗ്രഹം വീണ്ടും ജനറേറ്റ് ചെയ്യുക</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">എല്ലാ സെഷനുകളും പിൻവലിക്കണോ?</string>
     <string name="system_users_revoke_all_message">ഈ ഉപയോക്താവിന്റെ എല്ലാ സജീവ സെഷനുകളും സൈൻ ഔട്ട് ചെയ്യപ്പെടും.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">%3$d ഉപയോക്താവിൽ %1$d–%2$d കാണിക്കുന്നു</item>
-        <item quantity="other">%3$d ഉപയോക്താക്കളിൽ %1$d–%2$d കാണിക്കുന്നു</item>
+        <item quantity="one">%3$s ഉപയോക്താവിൽ %1$s–%2$s കാണിക്കുന്നു</item>
+        <item quantity="other">%3$s ഉപയോക്താക്കളിൽ %1$s–%2$s കാണിക്കുന്നു</item>
     </plurals>
     <string name="account_title">അക്കൗണ്ട്</string>
     <string name="account_section_identity">സ്വത്വം</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS സ്ഥിരീകരിക്കുക</string>
     <string name="settings_home_domains">ഡൊമെയിനുകൾ</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">%1$d ലക്ഷ്യസ്ഥാനത്തേക്ക് പരിശോധന അയച്ചു</item>
-        <item quantity="other">%1$d ലക്ഷ്യസ്ഥാനങ്ങളിലേക്ക് പരിശോധന അയച്ചു</item>
+        <item quantity="one">%1$s ലക്ഷ്യസ്ഥാനത്തേക്ക് പരിശോധന അയച്ചു</item>
+        <item quantity="other">%1$s ലക്ഷ്യസ്ഥാനങ്ങളിലേക്ക് പരിശോധന അയച്ചു</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$d സെഷൻ റദ്ദാക്കി</item>
-        <item quantity="other">%1$d സെഷനുകൾ റദ്ദാക്കി</item>
+        <item quantity="one">%1$s സെഷൻ പിൻവലിച്ചു</item>
+        <item quantity="other">%1$s സെഷനുകൾ പിൻവലിച്ചു</item>
     </plurals>
     <string name="login_title">ലോഗിൻ</string>
     <string name="login_section_methods">ലോഗിൻ രീതികൾ</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">പൊതു</string>
     <string name="system_status_reachability_private">സ്വകാര്യം</string>
     <string name="system_status_reachability_unknown">അജ്ഞാതം</string>
-    <string name="system_status_relay">റിലേ വഴി</string>
-    <string name="system_status_mesh">ബ്രോഡ്കാസ്റ്റ് മെഷ്</string>
+    <string name="system_status_reachability_relay">%1$s · റിലേ വഴി</string>
     <string name="system_status_broadcast">അവസാന ബ്രോഡ്കാസ്റ്റ്</string>
     <string name="system_status_queued_broadcasts">ക്യൂവിലുള്ള ബ്രോഡ്കാസ്റ്റ് സന്ദേശങ്ങൾ</string>
     <string name="system_setting_hostname_publish">ഹോസ്റ്റ്നാമവും ഡൊമെയ്‌നുകളും മറ്റ് സെർവറുകളെ അറിയിക്കുക</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">അവസാനം കണ്ടത് %1$s</string>
     <string name="notifprefs_device_app">%1$s · ആപ്പ്</string>
     <string name="notifprefs_device_push">%1$s · പുഷ്</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">%2$d ലക്ഷ്യസ്ഥാനത്തിൽ %1$d എണ്ണത്തിലേക്ക് പരിശോധന അയച്ചു</item>
-        <item quantity="other">%2$d ലക്ഷ്യസ്ഥാനങ്ങളിൽ %1$d എണ്ണത്തിലേക്ക് പരിശോധന അയച്ചു</item>
+        <item quantity="one">%2$s ലക്ഷ്യസ്ഥാനത്തിൽ %1$s എണ്ണത്തിലേക്ക് പരിശോധന അയച്ചു</item>
+        <item quantity="other">%2$s ലക്ഷ്യസ്ഥാനങ്ങളിൽ %1$s എണ്ണത്തിലേക്ക് പരിശോധന അയച്ചു</item>
     </plurals>
     <string name="notifprefs_test_none">ലക്ഷ്യസ്ഥാനങ്ങൾ കോൺഫിഗർ ചെയ്തിട്ടില്ല</string>
     <string name="notifprefs_transport_fcm">Android പുഷ്</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">മാറ്റങ്ങൾ ഉപേക്ഷിക്കണോ?</string>
     <string name="system_documents_discard">ഉപേക്ഷിക്കുക</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d വിജയിച്ചു</item>
-        <item quantity="other">%1$d വിജയിച്ചു</item>
+        <item quantity="one">%1$s വിജയിച്ചു</item>
+        <item quantity="other">%1$s വിജയിച്ചു</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d പരാജയപ്പെട്ടു</item>
-        <item quantity="other">%1$d പരാജയപ്പെട്ടു</item>
+        <item quantity="one">%1$s പരാജയപ്പെട്ടു</item>
+        <item quantity="other">%1$s പരാജയപ്പെട്ടു</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d റിസർവേഷൻ</item>
-        <item quantity="other">%1$d / %2$d റിസർവേഷനുകൾ</item>
+        <item quantity="one">%1$s / %2$s റിസർവേഷൻ</item>
+        <item quantity="other">%1$s / %2$s റിസർവേഷനുകൾ</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d സർക്യൂട്ട്</item>
-        <item quantity="other">%1$d സർക്യൂട്ടുകൾ</item>
+        <item quantity="one">%1$s സർക്യൂട്ട്</item>
+        <item quantity="other">%1$s സർക്യൂട്ടുകൾ</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d നിരസിച്ചു</item>
-        <item quantity="other">%1$d നിരസിച്ചു</item>
+        <item quantity="one">%1$s നിരസിച്ചു</item>
+        <item quantity="other">%1$s നിരസിച്ചു</item>
     </plurals>
 </resources>

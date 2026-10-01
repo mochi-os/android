@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">Á athainmniú…</string>
     <string name="wikis_rename_page_success">Leathanach athainmnithe</string>
     <string name="wikis_history_viewing">Ag féachaint ar stair %1$s, leagan reatha %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">Leagan %1$d</string>
     <string name="wikis_search_pages_placeholder">Cuardaigh leathanaigh de réir teidil nó ábhair…</string>
     <string name="wikis_search_no_results">Níor aimsíodh aon leathanach do “%1$s”. Bain triail as téarmaí cuardaigh eile.</string>
     <string name="wikis_search_updated">Nuashonraithe %1$s</string>
@@ -340,11 +340,11 @@
         <item quantity="other">%d leathanach leis an gclib seo</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">%1$d thoradh aimsithe do "%2$s"</item>
-        <item quantity="two">%1$d thoradh aimsithe do "%2$s"</item>
-        <item quantity="few">%1$d thoradh aimsithe do "%2$s"</item>
-        <item quantity="many">%1$d dtoradh aimsithe do "%2$s"</item>
-        <item quantity="other">%1$d toradh aimsithe do "%2$s"</item>
+        <item quantity="one">%1$d thoradh aimsithe do \"%2$s\"</item>
+        <item quantity="two">%1$d thoradh aimsithe do \"%2$s\"</item>
+        <item quantity="few">%1$d thoradh aimsithe do \"%2$s\"</item>
+        <item quantity="many">%1$d dtoradh aimsithe do \"%2$s\"</item>
+        <item quantity="other">%1$d toradh aimsithe do \"%2$s\"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Níorbh fhéidir an fhoscríbhinn a shábháil</string>
     <string name="wikis_attachments_upload_types">Comhaid tacaithe: íomhánna, PDF, DOC, DOCX, TXT, agus MD.</string>

@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">ڪڏهن به حاصل نه ڪيو</string>
     <string name="feeds_source_poll">پول</string>
     <string name="feeds_source_transform">AI تبديلي</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" هٽايو؟</string>
-    <string name="feeds_remove_also_delete_posts">درآمد ڪيل پوسٽون پڻ ڊاهيو</string>
+    <string name="feeds_remove_source_confirm">هي \"%1$s\" مان مواد درآمد ڪرڻ بند ڪري ڇڏيندو.</string>
+    <string name="feeds_remove_also_delete_posts">هن ذريعي مان درآمد ڪيل پوسٽون پڻ ڊاهيو</string>
     <string name="feeds_suggested_credibility_title">تجويز ڪيل اعتبار</string>
     <string name="feeds_suggested_credibility_body">Mochi %1$d جو اعتبار تجويز ڪري ٿو. قبول ڪريو؟</string>
     <string name="feeds_suggested_credibility_keep">موجوده رکو</string>

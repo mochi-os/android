@@ -45,6 +45,8 @@
     <string name="route_delete_title">Törli az útvonalat?</string>
     <string name="route_path">Útvonal</string>
     <string name="route_method">Módszer</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Alkalmazás</string>
     <string name="route_method_entity">Entitás</string>
     <string name="route_method_redirect">Átirányítás</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Letöltés a packages.mochi-os.org címről</string>
     <string name="system_status_copy">Másolás</string>
     <string name="system_status_peers">Társak</string>
-    <string name="system_status_known">Ismert</string>
+    <string name="system_status_peers_totals">Ismert %1$s · Csatlakoztatva %2$s · Közvetítési mesh %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Ismert %1$s · Csatlakoztatva %2$s</string>
     <string name="system_status_peer_connected">Csatlakoztatva</string>
     <string name="system_status_peer_disconnected">Leválasztva</string>
     <string name="system_status_peer_queued">Sorban álló üzenetek</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">Többé nem fog tudni bejelentkezni hitelesítő kóddal.</string>
     <string name="account_recovery_none">Nincsenek generált helyreállítási kódok.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d fennmaradó helyreállítási kód.</item>
-        <item quantity="other">%1$d fennmaradó helyreállítási kód.</item>
+        <item quantity="one">%1$s fennmaradó helyreállítási kód.</item>
+        <item quantity="other">%1$s fennmaradó helyreállítási kód.</item>
     </plurals>
     <string name="account_recovery_generate">Kódok generálása</string>
     <string name="account_recovery_regenerate">Kódok újragenerálása</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">Utoljára használva %1$s</string>
     <string name="route_delete_message">Ez eltávolítja az útvonalat a(z) „%1$s\" útvonalhoz.</string>
     <string name="route_empty">Nincsenek beállított útvonalak.</string>
-    <string name="route_meta">Prioritás %1$d · %2$s</string>
+    <string name="route_meta">Prioritás %1$s · %2$s</string>
     <string name="interests_search_placeholder">Hozzáadandó témák keresése…</string>
     <string name="interests_empty">Még nincsenek érdeklődési körök.</string>
     <string name="interests_summary_regenerate">Összegzés újragenerálása</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">Visszavonja az összes munkamenetet?</string>
     <string name="system_users_revoke_all_message">A felhasználó minden aktív munkamenete kijelentkezik.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">%3$d felhasználóból %1$d–%2$d megjelenítése</item>
-        <item quantity="other">%3$d felhasználóból %1$d–%2$d megjelenítése</item>
+        <item quantity="one">%3$s felhasználóból %1$s–%2$s megjelenítése</item>
+        <item quantity="other">%3$s felhasználóból %1$s–%2$s megjelenítése</item>
     </plurals>
     <string name="account_title">Fiók</string>
     <string name="account_section_identity">Azonosító</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS ellenőrzése</string>
     <string name="settings_home_domains">Tartományok</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Teszt elküldve %1$d célhelyre</item>
-        <item quantity="other">Teszt elküldve %1$d célhelyre</item>
+        <item quantity="one">Teszt elküldve %1$s célhelyre</item>
+        <item quantity="other">Teszt elküldve %1$s célhelyre</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$d munkamenet visszavonva</item>
-        <item quantity="other">%1$d munkamenet visszavonva</item>
+        <item quantity="one">%1$s munkamenet visszavonva</item>
+        <item quantity="other">%1$s munkamenet visszavonva</item>
     </plurals>
     <string name="login_title">Bejelentkezés</string>
     <string name="login_section_methods">Bejelentkezési módok</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">Nyilvános</string>
     <string name="system_status_reachability_private">Privát</string>
     <string name="system_status_reachability_unknown">Ismeretlen</string>
-    <string name="system_status_relay">Relén keresztül</string>
-    <string name="system_status_mesh">Közvetítési mesh</string>
+    <string name="system_status_reachability_relay">%1$s · továbbítón keresztül</string>
     <string name="system_status_broadcast">Utolsó közvetítés</string>
     <string name="system_status_queued_broadcasts">Sorban álló szórási üzenetek</string>
     <string name="system_setting_hostname_publish">Gazdagépnév és tartományok bejelentése más kiszolgálóknak</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">Utoljára látva %1$s</string>
     <string name="notifprefs_device_app">%1$s · alkalmazás</string>
     <string name="notifprefs_device_push">%1$s · push értesítés</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Teszt elküldve %2$d célhelyből %1$d célhelyre</item>
-        <item quantity="other">Teszt elküldve %2$d célhelyből %1$d célhelyre</item>
+        <item quantity="one">Teszt elküldve %2$s célhelyből %1$s célhelyre</item>
+        <item quantity="other">Teszt elküldve %2$s célhelyből %1$s célhelyre</item>
     </plurals>
     <string name="notifprefs_test_none">Nincsenek célok beállítva</string>
     <string name="notifprefs_transport_fcm">Android push értesítés</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">Elveted a módosításokat?</string>
     <string name="system_documents_discard">Elvetés</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d sikeres</item>
-        <item quantity="other">%1$d sikeres</item>
+        <item quantity="one">%1$s sikeres</item>
+        <item quantity="other">%1$s sikeres</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d sikertelen</item>
-        <item quantity="other">%1$d sikertelen</item>
+        <item quantity="one">%1$s sikertelen</item>
+        <item quantity="other">%1$s sikertelen</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d foglalás</item>
-        <item quantity="other">%1$d / %2$d foglalás</item>
+        <item quantity="one">%1$s / %2$s foglalás</item>
+        <item quantity="other">%1$s / %2$s foglalás</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d áramkör</item>
-        <item quantity="other">%1$d áramkör</item>
+        <item quantity="one">%1$s áramkör</item>
+        <item quantity="other">%1$s áramkör</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d elutasítva</item>
-        <item quantity="other">%1$d elutasítva</item>
+        <item quantity="one">%1$s elutasítva</item>
+        <item quantity="other">%1$s elutasítva</item>
     </plurals>
 </resources>

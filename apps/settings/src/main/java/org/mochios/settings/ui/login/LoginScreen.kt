@@ -62,6 +62,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.R as MochiR
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.util.webUri
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.MochiAlertDialog
@@ -576,11 +577,11 @@ private fun TotpSetupDialog(
 // ---------- Recovery codes ----------
 
 @Composable
-private fun RecoveryCodesSection(count: Int, onGenerate: () -> Unit) {
+internal fun RecoveryCodesSection(count: Int, onGenerate: () -> Unit) {
     var confirm by remember { mutableStateOf(false) }
     SectionHeader(stringResource(R.string.account_section_recovery))
     Text(
-        if (count > 0) pluralStringResource(R.plurals.account_recovery_count, count, count)
+        if (count > 0) pluralStringResource(R.plurals.account_recovery_count, count, LocalFormat.current.formatNumber(count))
         else stringResource(R.string.account_recovery_none),
         style = MaterialTheme.typography.bodySmall,
         color = MaterialTheme.colorScheme.onSurfaceVariant,

@@ -114,8 +114,8 @@
     <string name="feeds_source_poll">Hent</string>
     <string name="feeds_source_transform">KI-omforming</string>
     <string name="feeds_remove_source">Fjern kjelde?</string>
-    <string name="feeds_remove_source_confirm">Fjerna \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Slett òg importerte innlegg</string>
+    <string name="feeds_remove_source_confirm">Dette stoppar importen av innhald frå \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Slett òg innlegg importerte frå denne kjelda</string>
     <string name="feeds_suggested_credibility_title">Føreslått truverd</string>
     <string name="feeds_suggested_credibility_body">Mochi føreslår eit truverd på %1$d. Godta?</string>
     <string name="feeds_suggested_credibility_keep">Behald gjeldande</string>

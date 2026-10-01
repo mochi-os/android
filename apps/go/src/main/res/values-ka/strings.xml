@@ -54,8 +54,8 @@
     <string name="go_status_draw_text">ფრე</string>
     <string name="go_status_game_over">თამაში დასრულდა</string>
     <string name="go_status_opponent_move">%1$s-ის სვლა</string>
-    <string name="go_status_opponent_wins">%1$s თავი დანებდა — თქვენ იმარჯვებთ!</string>
-    <string name="go_status_resigned_opponent">%1$s-მა შემოგთავაზათ ფრე</string>
+    <string name="go_status_opponent_wins">%1$s იმარჯვებს</string>
+    <string name="go_status_resigned_opponent">%1$s დანებდა — თქვენ მოიგეთ!</string>
     <string name="go_status_resigned_self">თქვენ დათმეთ — %1$s იგებს</string>
     <string name="go_status_score">%1$s იგებს — შ:%2$s თ:%3$s</string>
     <string name="go_status_you_win">თქვენ გაიმარჯვეთ!</string>

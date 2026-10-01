@@ -45,6 +45,8 @@
     <string name="route_delete_title">வழித்தடத்தை நீக்கவா?</string>
     <string name="route_path">பாதை</string>
     <string name="route_method">முறை</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">பயன்பாடு</string>
     <string name="route_method_entity">அமைப்பு</string>
     <string name="route_method_redirect">திருப்பிவிடல்</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org இலிருந்து பதிவிறக்கு</string>
     <string name="system_status_copy">நகலெடு</string>
     <string name="system_status_peers">பீர்கள்</string>
-    <string name="system_status_known">அறியப்பட்டவை</string>
+    <string name="system_status_peers_totals">அறியப்பட்டவை %1$s · இணைக்கப்பட்டவை %2$s · ஒலிபரப்பு மெஷ் %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">அறியப்பட்டவை %1$s · இணைக்கப்பட்டவை %2$s</string>
     <string name="system_status_peer_connected">இணைக்கப்பட்டது</string>
     <string name="system_status_peer_disconnected">துண்டிக்கப்பட்டது</string>
     <string name="system_status_peer_queued">வரிசையில் உள்ள செய்திகள்</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">நீங்கள் இனி அங்கீகாரியர் குறியீட்டுடன் உள்நுழைய முடியாது.</string>
     <string name="account_recovery_none">மீட்பு குறியீடுகள் உருவாக்கப்படவில்லை.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d மீட்பு குறியீடு மீதமுள்ளது.</item>
-        <item quantity="other">%1$d மீட்பு குறியீடுகள் மீதமுள்ளன.</item>
+        <item quantity="one">%1$s மீட்பு குறியீடு மீதமுள்ளது.</item>
+        <item quantity="other">%1$s மீட்பு குறியீடுகள் மீதமுள்ளன.</item>
     </plurals>
     <string name="account_recovery_generate">குறியீடுகளை உருவாக்கு</string>
     <string name="account_recovery_regenerate">குறியீடுகளை மீண்டும் உருவாக்கு</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">கடைசியாக பயன்படுத்தப்பட்டது %1$s</string>
     <string name="route_delete_message">இது பாதை \"%1$s\" க்கான வழியை அகற்றும்.</string>
     <string name="route_empty">கட்டமைக்கப்பட்ட வழிகள் இல்லை.</string>
-    <string name="route_meta">முன்னுரிமை %1$d · %2$s</string>
+    <string name="route_meta">முன்னுரிமை %1$s · %2$s</string>
     <string name="interests_search_placeholder">சேர்க்க தலைப்புகளைத் தேடு…</string>
     <string name="interests_empty">இதுவரை ஆர்வங்கள் இல்லை.</string>
     <string name="interests_summary_regenerate">சுருக்கத்தை மீண்டும் உருவாக்கு</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">அனைத்து அமர்வுகளையும் திரும்பப் பெறவா?</string>
     <string name="system_users_revoke_all_message">இந்த பயனரின் அனைத்து செயலில் உள்ள அமர்வுகளும் வெளியேற்றப்படும்.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">%3$d பயனரில் %1$d–%2$d ஐ காட்டுகிறது</item>
-        <item quantity="other">%3$d பயனர்களில் %1$d–%2$d ஐ காட்டுகிறது</item>
+        <item quantity="one">%3$s பயனரில் %1$s–%2$s ஐ காட்டுகிறது</item>
+        <item quantity="other">%3$s பயனர்களில் %1$s–%2$s ஐ காட்டுகிறது</item>
     </plurals>
     <string name="account_title">கணக்கு</string>
     <string name="account_section_identity">அடையாளம்</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS ஐ சரிபார்க்கவும்</string>
     <string name="settings_home_domains">டொமைன்கள்</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">%1$d இலக்குக்கு சோதனை அனுப்பப்பட்டது</item>
-        <item quantity="other">%1$d இலக்குகளுக்கு சோதனை அனுப்பப்பட்டது</item>
+        <item quantity="one">%1$s இலக்குக்கு சோதனை அனுப்பப்பட்டது</item>
+        <item quantity="other">%1$s இலக்குகளுக்கு சோதனை அனுப்பப்பட்டது</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$d அமர்வு திரும்பப் பெறப்பட்டது</item>
-        <item quantity="other">%1$d அமர்வுகள் திரும்பப் பெறப்பட்டன</item>
+        <item quantity="one">%1$s அமர்வு திரும்பப் பெறப்பட்டது</item>
+        <item quantity="other">%1$s அமர்வுகள் திரும்பப் பெறப்பட்டன</item>
     </plurals>
     <string name="login_title">உள்நுழைவு</string>
     <string name="login_section_methods">உள்நுழைவு முறைகள்</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">பொது</string>
     <string name="system_status_reachability_private">தனிப்பட்டது</string>
     <string name="system_status_reachability_unknown">தெரியாதது</string>
-    <string name="system_status_relay">ரிலே வழியாக</string>
-    <string name="system_status_mesh">ஒலிபரப்பு மெஷ்</string>
+    <string name="system_status_reachability_relay">%1$s · ரிலே வழியாக</string>
     <string name="system_status_broadcast">கடைசி ஒலிபரப்பு</string>
     <string name="system_status_queued_broadcasts">வரிசையில் உள்ள ஒளிபரப்பு செய்திகள்</string>
     <string name="system_setting_hostname_publish">ஹோஸ்ட் பெயரையும் டொமைன்களையும் பிற சேவையகங்களுக்கு அறிவிக்கவும்</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">கடைசியாகக் காணப்பட்டது %1$s</string>
     <string name="notifprefs_device_app">%1$s · செயலி</string>
     <string name="notifprefs_device_push">%1$s · புஷ்</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">%2$d இலக்கில் %1$d-க்கு சோதனை அனுப்பப்பட்டது</item>
-        <item quantity="other">%2$d இலக்குகளில் %1$d-க்கு சோதனை அனுப்பப்பட்டது</item>
+        <item quantity="one">%2$s இலக்கில் %1$s-க்கு சோதனை அனுப்பப்பட்டது</item>
+        <item quantity="other">%2$s இலக்குகளில் %1$s-க்கு சோதனை அனுப்பப்பட்டது</item>
     </plurals>
     <string name="notifprefs_test_none">இலக்குகள் எதுவும் கட்டமைக்கப்படவில்லை</string>
     <string name="notifprefs_transport_fcm">Android புஷ்</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">மாற்றங்களை நிராகரிக்கவா?</string>
     <string name="system_documents_discard">நிராகரி</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d வெற்றி</item>
-        <item quantity="other">%1$d வெற்றி</item>
+        <item quantity="one">%1$s வெற்றி</item>
+        <item quantity="other">%1$s வெற்றி</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d தோல்வி</item>
-        <item quantity="other">%1$d தோல்வி</item>
+        <item quantity="one">%1$s தோல்வி</item>
+        <item quantity="other">%1$s தோல்வி</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d முன்பதிவு</item>
-        <item quantity="other">%1$d / %2$d முன்பதிவுகள்</item>
+        <item quantity="one">%1$s / %2$s முன்பதிவு</item>
+        <item quantity="other">%1$s / %2$s முன்பதிவுகள்</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d சுற்று</item>
-        <item quantity="other">%1$d சுற்றுகள்</item>
+        <item quantity="one">%1$s சுற்று</item>
+        <item quantity="other">%1$s சுற்றுகள்</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d மறுக்கப்பட்டது</item>
-        <item quantity="other">%1$d மறுக்கப்பட்டன</item>
+        <item quantity="one">%1$s மறுக்கப்பட்டது</item>
+        <item quantity="other">%1$s மறுக்கப்பட்டன</item>
     </plurals>
 </resources>

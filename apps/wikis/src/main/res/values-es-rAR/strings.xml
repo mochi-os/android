@@ -17,7 +17,6 @@
     <string name="wikis_comment_action_save">Guardá</string>
     <string name="wikis_comment_delete_confirm_title">Eliminá el comentario</string>
     <string name="wikis_comment_delete_confirm_message">¿Estás seguro de que querés eliminar este comentario? Esto también eliminará todas las respuestas. Esta acción no se puede deshacer.</string>
-    <string name="wikis_editor_title_new">Creá una página nueva</string>
     <string name="wikis_editor_delete">Eliminá la página</string>
     <string name="wikis_editor_save">Guardá</string>
     <string name="wikis_editor_create">Creá una página</string>

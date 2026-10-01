@@ -30,9 +30,9 @@
     <string name="wikis_recommended_section">Polecane wiki</string>
     <string name="wikis_subscribe_button">Subskrybuj</string>
     <string name="wikis_unsubscribe_action">Zrezygnuj z subskrypcji</string>
-    <string name="wikis_unsubscribing">Anulowanie subskrypcji…</string>
+    <string name="wikis_unsubscribing">Rezygnowanie z subskrypcji…</string>
     <string name="wikis_unsubscribe_confirm_title">Zrezygnuj z subskrypcji</string>
-    <string name="wikis_unsubscribe_success">Anulowano subskrypcję</string>
+    <string name="wikis_unsubscribe_success">Zrezygnowano z subskrypcji</string>
     <string name="wikis_subscribe_failed">Nie udało się zasubskrybować</string>
     <string name="wikis_rss_menu">Kanał RSS</string>
     <string name="wikis_rss_changes">Zmiany</string>
@@ -298,45 +298,45 @@
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
         <item quantity="one">%d odpowiedź</item>
-        <item quantity="few">+%d kolejnych odpowiedzi</item>
+        <item quantity="few">+%d kolejne odpowiedzi</item>
         <item quantity="many">+%d kolejnych odpowiedzi</item>
         <item quantity="other">+%d kolejnych odpowiedzi</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d strona</item>
-        <item quantity="few">%d stron</item>
+        <item quantity="few">%d strony</item>
         <item quantity="many">%d stron</item>
-        <item quantity="other">%d stron</item>
+        <item quantity="other">%d strony</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
         <item quantity="one">%d plik</item>
-        <item quantity="few">%d plików</item>
+        <item quantity="few">%d pliki</item>
         <item quantity="many">%d plików</item>
-        <item quantity="other">%d plików</item>
+        <item quantity="other">%d pliku</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
         <item quantity="one">%d obraz</item>
-        <item quantity="few">%d obrazów</item>
+        <item quantity="few">%d obrazy</item>
         <item quantity="many">%d obrazów</item>
-        <item quantity="other">%d obrazów</item>
+        <item quantity="other">%d obrazu</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
         <item quantity="one">%d dokument</item>
-        <item quantity="few">%d dokumentów</item>
+        <item quantity="few">%d dokumenty</item>
         <item quantity="many">%d dokumentów</item>
-        <item quantity="other">%d dokumentów</item>
+        <item quantity="other">%d dokumentu</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
         <item quantity="one">%d strona z tym tagiem</item>
-        <item quantity="few">%d stron z tym tagiem</item>
+        <item quantity="few">%d strony z tym tagiem</item>
         <item quantity="many">%d stron z tym tagiem</item>
-        <item quantity="other">%d stron z tym tagiem</item>
+        <item quantity="other">%d strony z tym tagiem</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Znaleziono %1$d wynik dla zapytania „%2$s"</item>
-        <item quantity="few">Znaleziono %1$d wyników dla zapytania „%2$s"</item>
-        <item quantity="many">Znaleziono %1$d wyników dla zapytania „%2$s"</item>
-        <item quantity="other">Znaleziono %1$d wyników dla zapytania „%2$s"</item>
+        <item quantity="one">Znaleziono %1$d wynik dla zapytania „%2$s”</item>
+        <item quantity="few">Znaleziono %1$d wyniki dla zapytania „%2$s”</item>
+        <item quantity="many">Znaleziono %1$d wyników dla zapytania „%2$s”</item>
+        <item quantity="other">Znaleziono %1$d wyniku dla zapytania „%2$s”</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Nie udało się zapisać podpisu</string>
     <string name="wikis_attachments_upload_types">Obsługiwane pliki: obrazy, PDF, DOC, DOCX, TXT i MD.</string>
@@ -346,7 +346,7 @@
     <string name="wikis_rss_exists">Ten adres URL kanału został już wydany i nie może zostać ponownie pokazany.</string>
     <plurals name="wikis_comments_truncated">
         <item quantity="one">Wyświetlany jest pierwszy %1$d komentarz.</item>
-        <item quantity="few">Wyświetlanych jest pierwszych %1$d komentarzy.</item>
+        <item quantity="few">Wyświetlane są pierwsze %1$d komentarze.</item>
         <item quantity="many">Wyświetlanych jest pierwszych %1$d komentarzy.</item>
         <item quantity="other">Wyświetlanych jest pierwszych %1$d komentarzy.</item>
     </plurals>

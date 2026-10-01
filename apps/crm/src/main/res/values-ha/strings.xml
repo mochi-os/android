@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">Sarrafa damar shiga</string>
     <string name="crm_settings_not_set">Ba a saita ba</string>
     <string name="crm_settings_access_updated">An sabunta damar shiga</string>
-    <string name="crm_settings_access_revoked">An hana shiga</string>
+    <string name="crm_settings_access_revoked">An janye damar shiga</string>
     <string name="crm_people_search">Nemo mutane</string>
     <string name="crm_access_tab_other">Sauran</string>
     <string name="crm_access_select_group">Zaɓi rukuni</string>

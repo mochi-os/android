@@ -725,8 +725,8 @@
     <string name="market_audit_account_stripe_onboarded">เริ่มใช้งาน Stripe แล้ว</string>
     <string name="market_audit_account_stripe_restricted">Stripe ถูกจำกัด</string>
     <string name="market_audit_account_suspended">ถูกระงับการเป็นผู้ขาย</string>
-    <string name="market_audit_account_unbanned">ยกเลิกการแบนแล้ว</string>
-    <string name="market_audit_account_unsuspended">ยกเลิกการระงับแล้ว</string>
+    <string name="market_audit_account_unbanned">ปลดแบนแล้ว</string>
+    <string name="market_audit_account_unsuspended">ปลดการระงับแล้ว</string>
     <string name="market_audit_auction_bid_placed">ประมูลแล้ว</string>
     <string name="market_audit_auction_created">สร้างการประมูลแล้ว</string>
     <string name="market_audit_auction_ended_sold">ขายการประมูลแล้ว</string>

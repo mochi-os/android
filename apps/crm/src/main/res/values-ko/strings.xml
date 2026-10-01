@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">접근 관리</string>
     <string name="crm_settings_not_set">설정되지 않음</string>
     <string name="crm_settings_access_updated">접근이 업데이트되었어요</string>
-    <string name="crm_settings_access_revoked">액세스가 취소되었습니다</string>
+    <string name="crm_settings_access_revoked">액세스가 철회되었습니다</string>
     <string name="crm_people_search">사람 검색</string>
     <string name="crm_access_tab_other">기타</string>
     <string name="crm_access_select_group">그룹 선택</string>
@@ -274,7 +274,7 @@
     <string name="crm_access_role_view">보기 전용</string>
     <string name="crm_access_role_none">접근 권한 없음</string>
     <string name="crm_all_crms">모든 CRM</string>
-    <string name="crm_settings_unsubscribe_section">CRM 구독 취소</string>
+    <string name="crm_settings_unsubscribe_section">CRM 구독 해지</string>
     <string name="crm_settings_updated">CRM이 업데이트되었습니다</string>
     <string name="crm_create_import_backup">백업에서 가져오기 (선택 사항)</string>
     <string name="crm_export">데이터 내보내기</string>

@@ -60,7 +60,7 @@
     <string name="notifications_empty">لا توجد إشعارات</string>
     <string name="notifications_empty_unread">لقد اطّلعت على كل شيء</string>
     <string name="notifications_tab_unread">غير المقروءة</string>
-    <string name="notifications_tab_unread_count">غير المقروءة (%1$d)</string>
+    <string name="notifications_tab_unread_count">غير المقروءة (%1$s)</string>
     <string name="notifications_tab_all">الكل</string>
     <string name="notifications_mark_all_read">وضع علامة مقروء على الكل</string>
     <string name="notifications_clear_all">مسح الكل</string>
@@ -290,7 +290,7 @@
         <item quantity="two">إظهار تعليقين آخرين على هذا المنشور</item>
         <item quantity="few">إظهار %1$d تعليقات أخرى على هذا المنشور</item>
         <item quantity="many">إظهار %1$d تعليقًا آخر على هذا المنشور</item>
-        <item quantity="other">إظهار %1$d تعليقات أخرى على هذا المنشور</item>
+        <item quantity="other">إظهار %1$d تعليق آخر على هذا المنشور</item>
     </plurals>
     <string name="lightbox_comments">التعليقات</string>
     <string name="common_attachment_unavailable">المرفق غير متاح مؤقتاً</string>
@@ -307,8 +307,8 @@
     <string name="rss_revoke">إبطال الوصول</string>
     <string name="rss_revoke_title">إبطال وصول RSS؟</string>
     <string name="rss_revoke_message">سيتوقف أي شيء مشترك في هذه التغذية عن تلقيها. يمكنك نسخ عنوان URL جديد بعد ذلك.</string>
-    <string name="rss_revoked">تم إلغاء وصول RSS</string>
-    <string name="rss_revoke_failed">فشل إلغاء وصول RSS</string>
+    <string name="rss_revoked">تم إبطال وصول RSS</string>
+    <string name="rss_revoke_failed">فشل إبطال وصول RSS</string>
     <string name="game_empty_title">لا توجد ألعاب بعد</string>
     <string name="game_select_title">اختر لعبة</string>
     <string name="game_select_subtitle">اختر لعبة من الشريط الجانبي أو ابدأ لعبة جديدة.</string>

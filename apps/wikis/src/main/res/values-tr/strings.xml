@@ -32,7 +32,7 @@
     <string name="wikis_unsubscribe_action">Abonelikten çık</string>
     <string name="wikis_unsubscribing">Abonelikten çıkılıyor…</string>
     <string name="wikis_unsubscribe_confirm_title">Abonelikten çık</string>
-    <string name="wikis_unsubscribe_success">Abonelik iptal edildi</string>
+    <string name="wikis_unsubscribe_success">Abonelikten çıkıldı</string>
     <string name="wikis_subscribe_failed">Abone olunamadı</string>
     <string name="wikis_rss_menu">RSS akışı</string>
     <string name="wikis_rss_changes">Değişiklikler</string>
@@ -41,7 +41,7 @@
     <string name="wikis_rss_copied">RSS URL\'si panoya kopyalandı</string>
     <string name="wikis_rss_failed">RSS belirteci alınamadı</string>
     <string name="wikis_rss_revoke">Erişimi kaldır</string>
-    <string name="wikis_rss_revoked">RSS erişimi iptal edildi</string>
+    <string name="wikis_rss_revoked">RSS erişimi geçersiz kılındı</string>
     <string name="wikis_find_title">Wiki bul</string>
     <string name="wikis_find_no_results">Wiki bulunamadı</string>
     <string name="wikis_find_recommended_section">Önerilen wiki\'ler</string>
@@ -319,8 +319,8 @@
         <item quantity="other">Bu etiketle %d sayfa</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">"%2$s" için %1$d sonuç bulundu</item>
-        <item quantity="other">"%2$s" için %1$d sonuç bulundu</item>
+        <item quantity="one">\"%2$s\" için %1$d sonuç bulundu</item>
+        <item quantity="other">\"%2$s\" için %1$d sonuç bulundu</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Resim yazısı kaydedilemedi</string>
     <string name="wikis_attachments_upload_types">Desteklenen dosyalar: görseller, PDF, DOC, DOCX, TXT ve MD.</string>

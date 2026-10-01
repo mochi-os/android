@@ -45,6 +45,8 @@
     <string name="route_delete_title">ລົບເສັ້ນທາງບໍ?</string>
     <string name="route_path">ເສັ້ນທາງ</string>
     <string name="route_method">ວິທີ</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">ແອັບ</string>
     <string name="route_method_entity">ເອັນຕິຕີ້</string>
     <string name="route_method_redirect">ປ່ຽນເສັ້ນທາງ</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">ດາວໂຫຼດຈາກ packages.mochi-os.org</string>
     <string name="system_status_copy">ສຳເນົາ</string>
     <string name="system_status_peers">ເພຍ</string>
-    <string name="system_status_known">ຮູ້ຈັກ</string>
+    <string name="system_status_peers_totals">ຮູ້ຈັກ %1$s · ເຊື່ອມຕໍ່ແລ້ວ %2$s · ເມສອອກອາກາດ %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">ຮູ້ຈັກ %1$s · ເຊື່ອມຕໍ່ແລ້ວ %2$s</string>
     <string name="system_status_peer_connected">ເຊື່ອມຕໍ່ແລ້ວ</string>
     <string name="system_status_peer_disconnected">ຕັດການເຊື່ອມຕໍ່ແລ້ວ</string>
     <string name="system_status_peer_queued">ຂໍ້ຄວາມໃນຄິວ</string>
@@ -176,7 +179,7 @@
     <string name="system_users_create_title">ສ້າງຜູ້ໃຊ້</string>
     <string name="system_users_save_changes">ບັນທຶກການປ່ຽນແປງ</string>
     <string name="system_users_suspend">ໂຈະຜູ້ໃຊ້</string>
-    <string name="system_users_remove_suspension">ລຶບການລະງັບ</string>
+    <string name="system_users_remove_suspension">ປົດການໂຈະ</string>
     <string name="system_users_delete">ລົບຜູ້ໃຊ້</string>
     <string name="system_users_delete_title">ລົບຜູ້ໃຊ້ບໍ?</string>
     <string name="system_users_manage_sessions">ຈັດການເຊດຊັນ</string>
@@ -193,7 +196,7 @@
     <string name="system_users_toast_updated">ຜູ້ໃຊ້ຖືກອັບເດດ</string>
     <string name="system_users_toast_deleted">ຜູ້ໃຊ້ຖືກລົບ</string>
     <string name="system_users_toast_suspended">ຜູ້ໃຊ້ຖືກໂຈະ</string>
-    <string name="system_users_toast_suspension_removed">ການໂຈະຖືກລົບແລ້ວ</string>
+    <string name="system_users_toast_suspension_removed">ປົດການໂຈະແລ້ວ</string>
     <string name="system_users_toast_session_revoked">ເຊດຊັນຖືກຖອນຄືນແລ້ວ</string>
     <string name="system_users_toast_create_failed">ສ້າງຜູ້ໃຊ້ລົ້ມເຫຼວ</string>
     <string name="system_users_toast_update_failed">ອັບເດດຜູ້ໃຊ້ລົ້ມເຫຼວ</string>
@@ -216,7 +219,7 @@
     <string name="account_totp_disable_message">ທ່ານຈະບໍ່ສາມາດເຂົ້າສູ່ລະບົບດ້ວຍລະຫັດການຢັ້ງຢືນອີກຕໍ່ໄປ.</string>
     <string name="account_recovery_none">ບໍ່ມີລະຫັດກູ້ຄືນທີ່ສ້າງຂຶ້ນ.</string>
     <plurals name="account_recovery_count">
-        <item quantity="other">ເຫຼືອລະຫັດກູ້ຄືນ %1$d ລະຫັດ.</item>
+        <item quantity="other">ເຫຼືອລະຫັດກູ້ຄືນ %1$s ລະຫັດ.</item>
     </plurals>
     <string name="account_recovery_generate">ສ້າງລະຫັດ</string>
     <string name="account_recovery_regenerate">ສ້າງລະຫັດໃໝ່</string>
@@ -233,7 +236,7 @@
     <string name="account_last_used">ໃຊ້ຄັ້ງສຸດທ້າຍ %1$s</string>
     <string name="route_delete_message">ນີ້ຈະລົບເສັ້ນທາງສຳລັບເສັ້ນທາງ \"%1$s\".</string>
     <string name="route_empty">ບໍ່ມີເສັ້ນທາງຖືກກໍານົດ.</string>
-    <string name="route_meta">ບູລິມະສິດ %1$d · %2$s</string>
+    <string name="route_meta">ບູລິມະສິດ %1$s · %2$s</string>
     <string name="interests_search_placeholder">ຄົ້ນຫາຫົວຂໍ້ເພື່ອເພີ່ມ…</string>
     <string name="interests_empty">ຍັງບໍ່ມີຄວາມສົນໃຈ.</string>
     <string name="interests_summary_regenerate">ສ້າງສະຫຼຸບໃໝ່</string>
@@ -267,7 +270,7 @@
     <string name="system_users_revoke_all_title">ຖອນເຊດຊັນທັງໝົດ?</string>
     <string name="system_users_revoke_all_message">ການກອງປະຊຸມທີ່ໃຊ້ງານທັງໝົດຂອງຜູ້ໃຊ້ນີ້ຈະອອກຈາກລະບົບ.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="other">ກຳລັງສະແດງ %1$d–%2$d ຈາກ %3$d ຜູ້ໃຊ້</item>
+        <item quantity="other">ກຳລັງສະແດງ %1$s–%2$s ຈາກ %3$s ຜູ້ໃຊ້</item>
     </plurals>
     <string name="account_title">ບັນຊີ</string>
     <string name="account_section_identity">ຕົວຕົນ</string>
@@ -301,10 +304,10 @@
     <string name="domain_verify">ຢືນຢັນ DNS</string>
     <string name="settings_home_domains">ໂດເມນ</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="other">ສົ່ງການທົດສອບໄປຫາ %1$d ປາຍທາງ</item>
+        <item quantity="other">ສົ່ງການທົດສອບໄປຫາ %1$s ປາຍທາງ</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="other">ຖອນຄືນ %1$d sessions</item>
+        <item quantity="other">ຖອນຄືນ %1$s sessions</item>
     </plurals>
     <string name="login_title">ເຂົ້າສູ່ລະບົບ</string>
     <string name="login_section_methods">ວິທີເຂົ້າສູ່ລະບົບ</string>
@@ -335,8 +338,7 @@
     <string name="system_status_reachability_public">ສາທາລະນະ</string>
     <string name="system_status_reachability_private">ສ່ວນຕົວ</string>
     <string name="system_status_reachability_unknown">ບໍ່ຮູ້ຈັກ</string>
-    <string name="system_status_relay">ຜ່ານຣີເລ</string>
-    <string name="system_status_mesh">ເມສອອກອາກາດ</string>
+    <string name="system_status_reachability_relay">%1$s · ຜ່ານຣີເລ</string>
     <string name="system_status_broadcast">ການອອກອາກາດຫຼ້າສຸດ</string>
     <string name="system_status_queued_broadcasts">ຂໍ້ຄວາມກະຈາຍສຽງໃນຄິວ</string>
     <string name="system_setting_hostname_publish">ປະກາດຊື່ໂຮສ ແລະ ໂດເມນໃຫ້ເຊີບເວີອື່ນ</string>
@@ -369,8 +371,10 @@
     <string name="accounts_device_seen">ເຫັນຫຼ້າສຸດ %1$s</string>
     <string name="notifprefs_device_app">%1$s · ແອັບ</string>
     <string name="notifprefs_device_push">%1$s · ການແຈ້ງເຕືອນແບບພຸຊ</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="other">ສົ່ງການທົດສອບໄປ %1$d ຈາກ %2$d ປາຍທາງ</item>
+        <item quantity="other">ສົ່ງການທົດສອບໄປ %1$s ຈາກ %2$s ປາຍທາງ</item>
     </plurals>
     <string name="notifprefs_test_none">ບໍ່ມີປາຍທາງທີ່ຕັ້ງຄ່າໄວ້</string>
     <string name="notifprefs_transport_fcm">ການແຈ້ງເຕືອນແບບພຸຊ Android</string>
@@ -394,18 +398,18 @@
     <string name="system_documents_discard_title">ຖິ້ມການປ່ຽນແປງບໍ?</string>
     <string name="system_documents_discard">ຖິ້ມ</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="other">%1$d ສຳເລັດ</item>
+        <item quantity="other">%1$s ສຳເລັດ</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="other">%1$d ລົ້ມເຫຼວ</item>
+        <item quantity="other">%1$s ລົ້ມເຫຼວ</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="other">%1$d / %2$d ການຈອງ</item>
+        <item quantity="other">%1$s / %2$s ການຈອງ</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="other">%1$d ວົງຈອນ</item>
+        <item quantity="other">%1$s ວົງຈອນ</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="other">%1$d ຖືກປະຕິເສດ</item>
+        <item quantity="other">%1$s ຖືກປະຕິເສດ</item>
     </plurals>
 </resources>

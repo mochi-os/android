@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">Yeni</string>
     <string name="projects_settings_section_identity">Şəxsiyyət</string>
     <string name="projects_settings_access_updated">Giriş yeniləndi</string>
-    <string name="projects_settings_access_revoked">İcaxə ləğv edildi</string>
+    <string name="projects_settings_access_revoked">Giriş geri çağırıldı</string>
     <string name="projects_settings_section_access">Giriş idarəetməsi</string>
     <string name="projects_people_search">İnsanları axtar</string>
     <string name="projects_settings_field_entity_id">Qurum ID</string>
@@ -352,7 +352,7 @@
     <string name="projects_all_projects">Bütün layihələr</string>
     <string name="projects_create_allow_search">Hər kəsə layihə axtarmağa icazə ver</string>
     <string name="projects_create_import_backup">Ehtiyat nüsxədən idxal (istəyə bağlı)</string>
-    <string name="projects_create_upload_json">Versiyanı yüklə</string>
+    <string name="projects_create_upload_json">.json faylı yüklə</string>
     <string name="projects_settings_not_set">Təyin edilməyib</string>
     <string name="projects_settings_updated">Layihə yeniləndi</string>
     <string name="projects_property_select">Seçin …</string>

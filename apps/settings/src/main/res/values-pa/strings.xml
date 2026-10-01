@@ -45,6 +45,8 @@
     <string name="route_delete_title">ਰੂਟ ਮਿਟਾਉਣਾ ਹੈ?</string>
     <string name="route_path">ਪਾਥ</string>
     <string name="route_method">ਤਰੀਕਾ</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">ਐਪ</string>
     <string name="route_method_entity">ਇਕਾਈ</string>
     <string name="route_method_redirect">ਰੀਡਾਇਰੈਕਟ</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org ਤੋਂ ਡਾਊਨਲੋਡ ਕਰੋ</string>
     <string name="system_status_copy">ਕਾਪੀ ਕਰੋ</string>
     <string name="system_status_peers">ਪੀਅਰ</string>
-    <string name="system_status_known">ਗਿਆਤ</string>
+    <string name="system_status_peers_totals">ਗਿਆਤ %1$s · ਜੁੜੇ %2$s · ਪ੍ਰਸਾਰਣ ਮੈਸ਼ %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">ਗਿਆਤ %1$s · ਜੁੜੇ %2$s</string>
     <string name="system_status_peer_connected">ਜੁੜਿਆ</string>
     <string name="system_status_peer_disconnected">ਡਿਸਕਨੈਕਟ ਹੋ ਗਿਆ</string>
     <string name="system_status_peer_queued">ਕਤਾਰ ਵਿੱਚ ਸੁਨੇਹੇ</string>
@@ -194,12 +197,12 @@
     <string name="system_users_toast_deleted">ਉਪਭੋਗਤਾ ਮਿਟਾਇਆ ਗਿਆ</string>
     <string name="system_users_toast_suspended">ਉਪਭੋਗਤਾ ਮੁਅੱਤਲ</string>
     <string name="system_users_toast_suspension_removed">ਮੁਅੱਤਲੀ ਹਟਾਈ</string>
-    <string name="system_users_toast_session_revoked">ਸੈਸ਼ਨ ਰੱਦ ਕੀਤਾ ਗਿਆ</string>
+    <string name="system_users_toast_session_revoked">ਸੈਸ਼ਨ ਵਾਪਸ ਲੈ ਲਿਆ ਗਿਆ</string>
     <string name="system_users_toast_create_failed">ਯੂਜ਼ਰ ਬਣਾਉਣ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="system_users_toast_update_failed">ਯੂਜ਼ਰ ਅੱਪਡੇਟ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="system_users_toast_delete_failed">ਯੂਜ਼ਰ ਮਿਟਾਉਣ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="system_users_toast_status_failed">ਯੂਜ਼ਰ ਸਟੇਟਸ ਅੱਪਡੇਟ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
-    <string name="system_users_toast_revoke_failed">ਸੈਸ਼ਨ ਰੱਦ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
+    <string name="system_users_toast_revoke_failed">ਸੈਸ਼ਨ ਵਾਪਸ ਲੈਣ ਵਿੱਚ ਅਸਫਲ</string>
 
     <string name="settings_home_sessions">ਸੈਸ਼ਨ</string>
     <string name="settings_home_privacy">ਗੋਪਨੀਯਤਾ ਨੀਤੀ</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">ਤੁਸੀਂ ਹੁਣ ਪ੍ਰਮਾਣਿਕਕਰਤਾ ਕੋਡ ਨਾਲ ਸਾਈਨ ਇਨ ਨਹੀਂ ਕਰ ਸਕੋਗੇ।</string>
     <string name="account_recovery_none">ਕੋਈ ਰਿਕਵਰੀ ਕੋਡ ਤਿਆਰ ਨਹੀਂ ਕੀਤੇ ਗਏ।</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d ਰਿਕਵਰੀ ਕੋਡ ਬਾਕੀ ਹੈ।</item>
-        <item quantity="other">%1$d ਰਿਕਵਰੀ ਕੋਡ ਬਾਕੀ ਹਨ।</item>
+        <item quantity="one">%1$s ਰਿਕਵਰੀ ਕੋਡ ਬਾਕੀ ਹੈ।</item>
+        <item quantity="other">%1$s ਰਿਕਵਰੀ ਕੋਡ ਬਾਕੀ ਹਨ।</item>
     </plurals>
     <string name="account_recovery_generate">ਕੋਡ ਤਿਆਰ ਕਰੋ</string>
     <string name="account_recovery_regenerate">ਕੋਡ ਮੁੜ-ਤਿਆਰ ਕਰੋ</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">ਆਖਰੀ ਵਾਰ ਵਰਤਿਆ %1$s</string>
     <string name="route_delete_message">ਇਹ ਮਾਰਗ \"%1$s\" ਲਈ ਰੂਟ ਹਟਾ ਦੇਵੇਗਾ।</string>
     <string name="route_empty">ਕੋਈ ਰੂਟ ਕੌਨਫਿਗਰ ਨਹੀਂ ਹਨ।</string>
-    <string name="route_meta">ਤਰਜੀਹ %1$d · %2$s</string>
+    <string name="route_meta">ਤਰਜੀਹ %1$s · %2$s</string>
     <string name="interests_search_placeholder">ਜੋੜਨ ਲਈ ਵਿਸ਼ੇ ਖੋਜੋ…</string>
     <string name="interests_empty">ਅਜੇ ਕੋਈ ਦਿਲਚਸਪੀ ਨਹੀਂ।</string>
     <string name="interests_summary_regenerate">ਸਾਰ ਮੁੜ ਤਿਆਰ ਕਰੋ</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">ਸਾਰੇ ਸੈਸ਼ਨ ਵਾਪਸ ਲਓ?</string>
     <string name="system_users_revoke_all_message">ਇਸ ਉਪਭੋਗਤਾ ਦੇ ਸਾਰੇ ਸਰਗਰਮ ਸੈਸ਼ਨ ਸਾਈਨ ਆਊਟ ਹੋ ਜਾਣਗੇ।</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">%3$d ਉਪਭੋਗਤਾ ਵਿੱਚੋਂ %1$d–%2$d ਦਿਖਾਏ ਜਾ ਰਹੇ ਹਨ</item>
-        <item quantity="other">%3$d ਉਪਭੋਗਤਾਵਾਂ ਵਿੱਚੋਂ %1$d–%2$d ਦਿਖਾਏ ਜਾ ਰਹੇ ਹਨ</item>
+        <item quantity="one">%3$s ਉਪਭੋਗਤਾ ਵਿੱਚੋਂ %1$s–%2$s ਦਿਖਾਏ ਜਾ ਰਹੇ ਹਨ</item>
+        <item quantity="other">%3$s ਉਪਭੋਗਤਾਵਾਂ ਵਿੱਚੋਂ %1$s–%2$s ਦਿਖਾਏ ਜਾ ਰਹੇ ਹਨ</item>
     </plurals>
     <string name="account_title">ਖਾਤਾ</string>
     <string name="account_section_identity">ਪਛਾਣ</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ</string>
     <string name="settings_home_domains">ਡੋਮੇਨ</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">%1$d ਟਿਕਾਣੇ \'ਤੇ ਟੈਸਟ ਭੇਜਿਆ ਗਿਆ</item>
-        <item quantity="other">%1$d ਟਿਕਾਣਿਆਂ \'ਤੇ ਟੈਸਟ ਭੇਜਿਆ ਗਿਆ</item>
+        <item quantity="one">%1$s ਟਿਕਾਣੇ \'ਤੇ ਟੈਸਟ ਭੇਜਿਆ ਗਿਆ</item>
+        <item quantity="other">%1$s ਟਿਕਾਣਿਆਂ \'ਤੇ ਟੈਸਟ ਭੇਜਿਆ ਗਿਆ</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$d ਸੈਸ਼ਨ ਰੱਦ ਕੀਤਾ</item>
-        <item quantity="other">%1$d ਸੈਸ਼ਨ ਰੱਦ ਕੀਤੇ</item>
+        <item quantity="one">%1$s ਸੈਸ਼ਨ ਵਾਪਸ ਲਿਆ</item>
+        <item quantity="other">%1$s ਸੈਸ਼ਨ ਵਾਪਸ ਲਏ</item>
     </plurals>
     <string name="login_title">ਲੌਗਇਨ</string>
     <string name="login_section_methods">ਲਾਗਇਨ ਤਰੀਕੇ</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">ਜਨਤਕ</string>
     <string name="system_status_reachability_private">ਨਿੱਜੀ</string>
     <string name="system_status_reachability_unknown">ਅਣਜਾਣ</string>
-    <string name="system_status_relay">ਰਿਲੇ ਰਾਹੀਂ</string>
-    <string name="system_status_mesh">ਪ੍ਰਸਾਰਣ ਮੈਸ਼</string>
+    <string name="system_status_reachability_relay">%1$s · ਰਿਲੇ ਰਾਹੀਂ</string>
     <string name="system_status_broadcast">ਆਖਰੀ ਪ੍ਰਸਾਰਣ</string>
     <string name="system_status_queued_broadcasts">ਕਤਾਰ ਵਿੱਚ ਪ੍ਰਸਾਰਣ ਸੁਨੇਹੇ</string>
     <string name="system_setting_hostname_publish">ਹੋਸਟਨੇਮ ਅਤੇ ਡੋਮੇਨ ਹੋਰ ਸਰਵਰਾਂ ਨੂੰ ਐਲਾਨੋ</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">ਆਖਰੀ ਵਾਰ ਦੇਖਿਆ %1$s</string>
     <string name="notifprefs_device_app">%1$s · ਐਪ</string>
     <string name="notifprefs_device_push">%1$s · ਪੁਸ਼</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">%2$d ਟਿਕਾਣੇ ਵਿੱਚੋਂ %1$d ਨੂੰ ਟੈਸਟ ਭੇਜਿਆ ਗਿਆ</item>
-        <item quantity="other">%2$d ਟਿਕਾਣਿਆਂ ਵਿੱਚੋਂ %1$d ਨੂੰ ਟੈਸਟ ਭੇਜਿਆ ਗਿਆ</item>
+        <item quantity="one">%2$s ਟਿਕਾਣੇ ਵਿੱਚੋਂ %1$s ਨੂੰ ਟੈਸਟ ਭੇਜਿਆ ਗਿਆ</item>
+        <item quantity="other">%2$s ਟਿਕਾਣਿਆਂ ਵਿੱਚੋਂ %1$s ਨੂੰ ਟੈਸਟ ਭੇਜਿਆ ਗਿਆ</item>
     </plurals>
     <string name="notifprefs_test_none">ਕੋਈ ਡੈਸਟੀਨੇਸ਼ਨ ਕੌਨਫਿਗਰ ਨਹੀਂ</string>
     <string name="notifprefs_transport_fcm">Android ਪੁਸ਼</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">ਕੀ ਤਬਦੀਲੀਆਂ ਛੱਡ ਦੇਣੀਆਂ ਹਨ?</string>
     <string name="system_documents_discard">ਛੱਡ ਦਿਓ</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d ਸਫਲ</item>
-        <item quantity="other">%1$d ਸਫਲ</item>
+        <item quantity="one">%1$s ਸਫਲ</item>
+        <item quantity="other">%1$s ਸਫਲ</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d ਅਸਫਲ</item>
-        <item quantity="other">%1$d ਅਸਫਲ</item>
+        <item quantity="one">%1$s ਅਸਫਲ</item>
+        <item quantity="other">%1$s ਅਸਫਲ</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d ਰਾਖਵਾਂਕਰਨ</item>
-        <item quantity="other">%1$d / %2$d ਰਾਖਵਾਂਕਰਨ</item>
+        <item quantity="one">%1$s / %2$s ਰਾਖਵਾਂਕਰਨ</item>
+        <item quantity="other">%1$s / %2$s ਰਾਖਵਾਂਕਰਨ</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d ਸਰਕਟ</item>
-        <item quantity="other">%1$d ਸਰਕਟ</item>
+        <item quantity="one">%1$s ਸਰਕਟ</item>
+        <item quantity="other">%1$s ਸਰਕਟ</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d ਨਾਮਨਜ਼ੂਰ</item>
-        <item quantity="other">%1$d ਨਾਮਨਜ਼ੂਰ</item>
+        <item quantity="one">%1$s ਨਾਮਨਜ਼ੂਰ</item>
+        <item quantity="other">%1$s ਨਾਮਨਜ਼ੂਰ</item>
     </plurals>
 </resources>

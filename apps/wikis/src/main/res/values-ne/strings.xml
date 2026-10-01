@@ -41,7 +41,7 @@
     <string name="wikis_rss_copied">RSS URL क्लिपबोर्डमा प्रतिलिपि गरियो</string>
     <string name="wikis_rss_failed">RSS टोकन प्राप्त गर्न असफल</string>
     <string name="wikis_rss_revoke">पहुँच फिर्ता लिनुहोस्</string>
-    <string name="wikis_rss_revoked">RSS पहुँच रद्द गरियो</string>
+    <string name="wikis_rss_revoked">RSS पहुँच फिर्ता लिइयो</string>
     <string name="wikis_find_title">विकीहरू खोज्नुहोस्</string>
     <string name="wikis_find_no_results">कुनै विकी भेटिएन</string>
     <string name="wikis_find_recommended_section">सिफारिस गरिएका विकीहरू</string>
@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">नाम परिवर्तन गर्दै…</string>
     <string name="wikis_rename_page_success">पृष्ठको नाम परिवर्तन गरियो</string>
     <string name="wikis_history_viewing">%1$s को इतिहास हेर्दै, हालको संस्करण %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">संस्करण %1$d</string>
     <string name="wikis_search_pages_placeholder">शीर्षक वा सामग्रीअनुसार पृष्ठहरू खोज्नुहोस्…</string>
     <string name="wikis_search_no_results">“%1$s” का लागि कुनै पृष्ठ फेला परेन। फरक खोज शब्दहरू प्रयास गर्नुहोस्।</string>
     <string name="wikis_search_updated">अद्यावधिक गरियो %1$s</string>

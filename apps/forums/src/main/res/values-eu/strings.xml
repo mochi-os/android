@@ -151,7 +151,7 @@
     <string name="forums_access_level_moderate">Moderatu</string>
     <string name="forums_members_search">Iragazi kideak</string>
     <string name="forums_banner_description">Foroaren goialdean erakusten den Markdown edukia.</string>
-    <string name="forums_banner_placeholder">Ongi etorri foro honetara…</string>
+    <string name="forums_banner_placeholder">Idatzi bannerraren testua (Markdown onartzen da)…</string>
     <string name="forums_ai_mode_label">Modua: %1$s</string>
     <string name="forums_ai_mode_heading">IA modua</string>
     <string name="forums_ai_mode_off">Desgaituta</string>

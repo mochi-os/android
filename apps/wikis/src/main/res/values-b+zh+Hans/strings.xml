@@ -32,7 +32,7 @@
     <string name="wikis_unsubscribe_action">退订</string>
     <string name="wikis_unsubscribing">正在退订…</string>
     <string name="wikis_unsubscribe_confirm_title">退订</string>
-    <string name="wikis_unsubscribe_success">已取消订阅</string>
+    <string name="wikis_unsubscribe_success">已退订</string>
     <string name="wikis_subscribe_failed">订阅失败</string>
     <string name="wikis_rss_menu">RSS 订阅源</string>
     <string name="wikis_rss_changes">更改</string>

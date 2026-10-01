@@ -151,7 +151,7 @@
     <string name="forums_access_level_moderate">Modereeri</string>
     <string name="forums_members_search">Filtreeri liikmeid</string>
     <string name="forums_banner_description">Foorumi ülaosas kuvatav Markdown.</string>
-    <string name="forums_banner_placeholder">Tere tulemast sellesse foorumisse…</string>
+    <string name="forums_banner_placeholder">Sisesta bänneri tekst (Markdown on toetatud)…</string>
     <string name="forums_ai_mode_label">Režiim: %1$s</string>
     <string name="forums_ai_mode_heading">AI režiim</string>
     <string name="forums_ai_mode_off">Keelatud</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">päeva</string>
     <string name="forums_settings_banner_saved">Bannär salvestatud</string>
     <string name="forums_settings_access_updated">Juurdepääs uuendatud</string>
-    <string name="forums_settings_access_revoked">Juurdepääs tühistati</string>
+    <string name="forums_settings_access_revoked">Juurdepääs võeti ära</string>
     <string name="forums_settings_member_removed">Liige eemaldatud</string>
     <string name="forums_settings_prompt_saved">Viip salvestatud</string>
     <string name="forums_settings_section_identity">Identiteet</string>

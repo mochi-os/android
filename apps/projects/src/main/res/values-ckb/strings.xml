@@ -40,11 +40,11 @@
     <string name="projects_settings_tab_people">خەڵک</string>
     <string name="projects_option_icon">ئایکۆن</string>
     <string name="projects_option_icon_placeholder">بۆ نموونە Check, Star, Flag</string>
-    <string name="projects_settings_unsubscribe">بەشداری هەڵبوەشێنەوە</string>
+    <string name="projects_settings_unsubscribe">لابردنی بەشداری</string>
     <string name="projects_settings_delete_project">سڕینەوەی پڕۆژە</string>
     <string name="projects_settings_delete_confirm_title">سڕینەوەی پڕۆژە</string>
-    <string name="projects_settings_unsubscribe_title">بەشداری هەڵبوەشێنەوە</string>
-    <string name="projects_settings_unsubscribe_message">ئایا دڵنیایت لە هەڵوەشاندنەوەی بەشداری ئەم پڕۆژەیە؟</string>
+    <string name="projects_settings_unsubscribe_title">لابردنی بەشداری</string>
+    <string name="projects_settings_unsubscribe_message">ئایا دڵنیایت لە لابردنی بەشداری ئەم پڕۆژەیە؟</string>
     <string name="projects_access_level_owner">خاوەن</string>
     <string name="projects_object_watch">چاودێری</string>
     <string name="projects_object_tab_properties">تایبەتمەندییەکان</string>
@@ -362,7 +362,7 @@
     <string name="projects_activity_commented">لێدوانی دا</string>
     <string name="projects_attachment_delete_confirm_message">ئەم هاوپێچە بە هەمیشەیی دەسڕدرێتەوە.</string>
     <string name="projects_attachment_delete_confirm_title">هاوپێچ بسڕدرێتەوە؟</string>
-    <string name="projects_settings_unsubscribe_section">بەشداری پڕۆژە ڕابگرە</string>
+    <string name="projects_settings_unsubscribe_section">لابردنی بەشداری لە پڕۆژە</string>
     <string name="projects_share_link_title">پڕۆژە هاوبەش بکە</string>
     <string name="projects_sort_filter_title">ڕیزکردن و پاڵاوتن</string>
     <string name="projects_create_prefix_hint">بۆ ناسنامەی خوێندنەوەیی وەک %1$s-1، %1$s-2 بەکاردێت</string>

@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">Sabon</string>
     <string name="projects_settings_section_identity">Asali</string>
     <string name="projects_settings_access_updated">An sabunta damar shiga</string>
-    <string name="projects_settings_access_revoked">An hana shiga</string>
+    <string name="projects_settings_access_revoked">An janye damar shiga</string>
     <string name="projects_settings_section_access">Sarrafa damar shiga</string>
     <string name="projects_people_search">Nemo mutane</string>
     <string name="projects_settings_field_entity_id">ID ɗin mahaɗi</string>

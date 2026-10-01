@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">ניהול גישה</string>
     <string name="crm_settings_not_set">לא הוגדר</string>
     <string name="crm_settings_access_updated">הגישה עודכנה</string>
-    <string name="crm_settings_access_revoked">הגישה בוטלה</string>
+    <string name="crm_settings_access_revoked">הגישה נשללה</string>
     <string name="crm_people_search">חיפוש אנשים</string>
     <string name="crm_access_tab_other">אחר</string>
     <string name="crm_access_select_group">בחר קבוצה</string>

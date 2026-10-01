@@ -52,6 +52,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.util.webUri
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
@@ -144,13 +145,13 @@ fun SystemStatusScreen(
                     }
                     val counts = state.counts
                     if (counts != null) {
-                        StatusRow(
+                        CountRow(
                             label = stringResource(R.string.system_status_users),
-                            value = counts.users.toString(),
+                            count = counts.users,
                         )
-                        StatusRow(
+                        CountRow(
                             label = stringResource(R.string.system_status_entities),
-                            value = counts.entities.toString(),
+                            count = counts.entities,
                         )
                     }
                     val network = state.network
@@ -162,11 +163,7 @@ fun SystemStatusScreen(
                         }
                         StatusRow(
                             label = stringResource(R.string.system_status_reachability),
-                            value = if (network.relay) {
-                                "$reachability · ${stringResource(R.string.system_status_relay)}"
-                            } else {
-                                reachability
-                            },
+                            value = reachabilityValue(reachability, network.relay),
                         )
                         if (network.last > 0) {
                             StatusRow(
@@ -178,57 +175,31 @@ fun SystemStatusScreen(
                         if (network.holepunch.success + network.holepunch.failure > 0) {
                             StatusRow(
                                 label = stringResource(R.string.system_status_holepunch),
-                                // Each count is its own phrase, so each noun
-                                // or participle agrees with its own number.
-                                value = listOf(
-                                    pluralStringResource(
-                                        R.plurals.system_status_holepunch_succeeded,
-                                        network.holepunch.success,
-                                        network.holepunch.success,
-                                    ),
-                                    pluralStringResource(
-                                        R.plurals.system_status_holepunch_failed,
-                                        network.holepunch.failure,
-                                        network.holepunch.failure,
-                                    ),
-                                ).joinToString(" · "),
+                                value = holepunchValue(network.holepunch.success, network.holepunch.failure),
                             )
                         }
                         if (network.relaying.active) {
                             StatusRow(
                                 label = stringResource(R.string.system_status_relay_service),
-                                value = listOf(
-                                    // "3 / 10 reservations": the noun sits beside the maximum.
-                                    pluralStringResource(
-                                        R.plurals.system_status_relay_reservations,
-                                        network.relaying.reservations.maximum,
-                                        network.relaying.reservations.held,
-                                        network.relaying.reservations.maximum,
-                                    ),
-                                    pluralStringResource(
-                                        R.plurals.system_status_relay_circuits,
-                                        network.relaying.circuits,
-                                        network.relaying.circuits,
-                                    ),
-                                    pluralStringResource(
-                                        R.plurals.system_status_relay_refused,
-                                        network.relaying.rejected,
-                                        network.relaying.rejected,
-                                    ),
-                                ).joinToString(" · "),
+                                value = relayingValue(
+                                    network.relaying.reservations.held,
+                                    network.relaying.reservations.maximum,
+                                    network.relaying.circuits,
+                                    network.relaying.rejected,
+                                ),
                             )
                         }
-                        StatusRow(
+                        CountRow(
                             label = stringResource(R.string.system_status_awaiting_routing),
-                            value = network.unresolved.toString(),
+                            count = network.unresolved,
                         )
-                        StatusRow(
+                        CountRow(
                             label = stringResource(R.string.system_status_peer_queued),
-                            value = state.peers.sumOf { it.queued }.toString(),
+                            count = state.peers.sumOf { it.queued },
                         )
-                        StatusRow(
+                        CountRow(
                             label = stringResource(R.string.system_status_queued_broadcasts),
-                            value = network.queued.toString(),
+                            count = network.queued,
                         )
                     }
                     val update = state.update
@@ -255,16 +226,8 @@ fun SystemStatusScreen(
                             fontWeight = FontWeight.SemiBold,
                             modifier = Modifier.padding(top = 8.dp),
                         )
-                        val knownLabel = stringResource(R.string.system_status_known)
-                        val connectedLabel = stringResource(R.string.system_status_peer_connected)
-                        val meshLabel = stringResource(R.string.system_status_mesh)
-                        val totals = mutableListOf(
-                            "$knownLabel ${state.peers.size}",
-                            "$connectedLabel ${state.peers.count { it.connected }}",
-                        )
-                        state.network?.let { totals.add("$meshLabel ${it.mesh}") }
                         Text(
-                            text = totals.joinToString(" · "),
+                            text = peerTotals(state.peers.size, state.peers.count { it.connected }, state.network?.mesh),
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
@@ -275,6 +238,47 @@ fun SystemStatusScreen(
         }
     }
 }
+
+/**
+ * Hole punches that worked and that failed. Each count is its own phrase, so
+ * each noun or participle agrees with its own number.
+ */
+@Composable
+internal fun holepunchValue(success: Int, failure: Int): String =
+    listOf(
+        pluralStringResource(R.plurals.system_status_holepunch_succeeded, success, number(success)),
+        pluralStringResource(R.plurals.system_status_holepunch_failed, failure, number(failure)),
+    ).joinToString(" · ")
+
+/** The relay service's load; "3 / 10 reservations" puts the noun beside the maximum. */
+@Composable
+internal fun relayingValue(held: Int, maximum: Int, circuits: Int, rejected: Int): String =
+    listOf(
+        pluralStringResource(R.plurals.system_status_relay_reservations, maximum, number(held), number(maximum)),
+        pluralStringResource(R.plurals.system_status_relay_circuits, circuits, number(circuits)),
+        pluralStringResource(R.plurals.system_status_relay_refused, rejected, number(rejected)),
+    ).joinToString(" · ")
+
+/** How the server is reached, noting when that is through a relay. */
+@Composable
+internal fun reachabilityValue(reachability: String, relay: Boolean): String =
+    if (relay) stringResource(R.string.system_status_reachability_relay, reachability) else reachability
+
+/**
+ * The peer counts over the list, as one phrase per language. A server that
+ * reports no network information has no broadcast mesh to count.
+ */
+@Composable
+internal fun peerTotals(known: Int, connected: Int, mesh: Int?): String =
+    if (mesh != null) {
+        stringResource(R.string.system_status_peers_totals, number(known), number(connected), number(mesh))
+    } else {
+        stringResource(R.string.system_status_peers_totals_without_mesh, number(known), number(connected))
+    }
+
+/** A count as the user writes numbers, grouped by their chosen separator. */
+@Composable
+private fun number(value: Int): String = LocalFormat.current.formatNumber(value)
 
 @Composable
 private fun PeerCard(peer: org.mochios.settings.api.PeerEntry) {
@@ -312,9 +316,9 @@ private fun PeerCard(peer: org.mochios.settings.api.PeerEntry) {
                     valueMono = true,
                 )
             }
-            StatusRow(
+            CountRow(
                 label = stringResource(R.string.system_status_peer_queued),
-                value = peer.queued.toString(),
+                count = peer.queued,
             )
             StatusRow(
                 label = stringResource(R.string.system_status_peer_oldest),
@@ -323,6 +327,12 @@ private fun PeerCard(peer: org.mochios.settings.api.PeerEntry) {
             )
         }
     }
+}
+
+/** A row whose value is a count, written as the user writes numbers. */
+@Composable
+internal fun CountRow(label: String, count: Int) {
+    StatusRow(label = label, value = number(count))
 }
 
 @Composable

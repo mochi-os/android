@@ -29,9 +29,9 @@
     <string name="wikis_recommended_section">Wikis recomendados</string>
     <string name="wikis_subscribe_button">Inscrever-se</string>
     <string name="wikis_unsubscribe_action">Remover inscrição</string>
-    <string name="wikis_unsubscribing">Cancelando inscrição…</string>
+    <string name="wikis_unsubscribing">Removendo inscrição…</string>
     <string name="wikis_unsubscribe_confirm_title">Remover inscrição</string>
-    <string name="wikis_unsubscribe_success">Inscrição cancelada</string>
+    <string name="wikis_unsubscribe_success">Inscrição removida</string>
     <string name="wikis_subscribe_failed">Falha ao assinar</string>
     <string name="wikis_rss_menu">Feed RSS</string>
     <string name="wikis_rss_changes">Alterações</string>

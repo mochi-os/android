@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">ກວດສອບ</string>
     <string name="forums_members_search">ກັ່ນຕອງສະມາຊິກ</string>
     <string name="forums_banner_description">Markdown ທີ່ສະແດງຢູ່ດ້ານເທິງຂອງກະດານສົນທະນາ.</string>
-    <string name="forums_banner_placeholder">ຍິນດີຕ້ອນຮັບສູ່ກະດານສົນທະນານີ້…</string>
+    <string name="forums_banner_placeholder">ປ້ອນຂໍ້ຄວາມປ້າຍ (ຮອງຮັບ Markdown)…</string>
     <string name="forums_ai_mode_label">ໂໝດ: %1$s</string>
     <string name="forums_ai_mode_heading">ໂໝດ AI</string>
     <string name="forums_ai_mode_off">ປິດໃຊ້ງານແລ້ວ</string>
@@ -185,7 +185,7 @@
     <string name="forums_settings_delete_message">ການກະທຳນີ້ຈະລຶບກະດານສົນທະນາ ແລະ ໂພສທັງໝົດຢ່າງຖາວອນ. ບໍ່ສາມາດກູ້ຄືນໄດ້.</string>
 
     <string name="forums_tag_interest_up">ເພີ່ມຄວາມສົນໃຈ</string>
-    <string name="forums_tag_interest_down">ຫຼຸດດອກເບ້ຍ</string>
+    <string name="forums_tag_interest_down">ຫຼຸດຄວາມສົນໃຈ</string>
     <string name="forums_tag_interest_remove">ລຶບຄວາມສົນໃຈ</string>
     <string name="forums_access_tab_users">ຜູ້ໃຊ້</string>
     <string name="forums_access_tab_groups">ກຸ່ມ</string>
@@ -292,7 +292,7 @@
     <string name="forums_settings_ai_updated">ອັບເດດການຕັ້ງຄ່າ AI ແລ້ວ</string>
     <string name="forums_settings_forum_renamed">ປ່ຽນຊື່ກະດານສົນທະນາແລ້ວ</string>
     <string name="forums_settings_name_clear_cd">ລ້າງຊື່</string>
-    <string name="forums_settings_unsubscribe_section">ຍົກເລີກການຕິດຕາມກະດານສົນທະນາ</string>
+    <string name="forums_settings_unsubscribe_section">ເຊົາຕິດຕາມກະດານສົນທະນາ</string>
     <string name="forums_share_link_title">ລິ້ງກະດານສົນທະນາ</string>
     <string name="forums_find_found_by_url">ພົບຜ່ານ URL</string>
     <string name="forums_moderation_pending_posts">ໂພສທີ່ລໍຖ້າ (%1$d)</string>

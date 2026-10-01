@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">ಪ್ರವೇಶ ನಿರ್ವಹಣೆ</string>
     <string name="crm_settings_not_set">ಸೆಟ್ ಮಾಡಲಾಗಿಲ್ಲ</string>
     <string name="crm_settings_access_updated">ಪ್ರವೇಶ ನವೀಕರಿಸಲಾಗಿದೆ</string>
-    <string name="crm_settings_access_revoked">ಪ್ರವೇಶವನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ</string>
+    <string name="crm_settings_access_revoked">ಪ್ರವೇಶವನ್ನು ಹಿಂಪಡೆಯಲಾಗಿದೆ</string>
     <string name="crm_people_search">ಜನರನ್ನು ಹುಡುಕಿ</string>
     <string name="crm_access_tab_other">ಇತರ</string>
     <string name="crm_access_select_group">ಗುಂಪನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>

@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">Moderatsiya qilish</string>
     <string name="forums_members_search">Aʼzolarni filtrlash</string>
     <string name="forums_banner_description">Forum yuqorisida koʻrsatiladigan Markdown.</string>
-    <string name="forums_banner_placeholder">Ushbu forumga xush kelibsiz…</string>
+    <string name="forums_banner_placeholder">Banner matnini kiriting (Markdown qoʻllab-quvvatlanadi)…</string>
     <string name="forums_ai_mode_label">Rejim: %1$s</string>
     <string name="forums_ai_mode_heading">AI rejimi</string>
     <string name="forums_ai_mode_off">Oʻchirilgan</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">kunlar</string>
     <string name="forums_settings_banner_saved">Banner saqlandi</string>
     <string name="forums_settings_access_updated">Kirish yangilandi</string>
-    <string name="forums_settings_access_revoked">Kirish bekor qilindi</string>
+    <string name="forums_settings_access_revoked">Kirish huquqi qaytarib olindi</string>
     <string name="forums_settings_member_removed">Aʼzo olib tashlandi</string>
     <string name="forums_settings_prompt_saved">Soʻrov saqlandi</string>
     <string name="forums_settings_section_identity">Identifikatsiya</string>

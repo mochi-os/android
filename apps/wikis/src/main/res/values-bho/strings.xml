@@ -30,9 +30,9 @@
     <string name="wikis_recommended_section">सिफारिश कइल विकी</string>
     <string name="wikis_subscribe_button">सदस्यता लीं</string>
     <string name="wikis_unsubscribe_action">सदस्यता खतम करीं</string>
-    <string name="wikis_unsubscribing">सदस्यता रद्द हो रहल बा…</string>
+    <string name="wikis_unsubscribing">सदस्यता खतम हो रहल बा…</string>
     <string name="wikis_unsubscribe_confirm_title">सदस्यता खतम करीं</string>
-    <string name="wikis_unsubscribe_success">सदस्यता रद्द भइल</string>
+    <string name="wikis_unsubscribe_success">सदस्यता खतम भइल</string>
     <string name="wikis_subscribe_failed">सब्सक्राइब करे में विफल</string>
     <string name="wikis_rss_menu">RSS फीड</string>
     <string name="wikis_rss_changes">बदलाव</string>
@@ -41,7 +41,7 @@
     <string name="wikis_rss_copied">RSS URL क्लिपबोर्ड पर कॉपी भइल</string>
     <string name="wikis_rss_failed">RSS टोकन पावे में विफल</string>
     <string name="wikis_rss_revoke">पहुँच वापस लीं</string>
-    <string name="wikis_rss_revoked">RSS पहुँच रद्द भइल</string>
+    <string name="wikis_rss_revoked">RSS पहुँच वापस ले लिहल गइल</string>
     <string name="wikis_find_title">विकी खोजीं</string>
     <string name="wikis_find_no_results">कौनो विकी ना मिलल</string>
     <string name="wikis_find_recommended_section">सिफारिश कइल विकी</string>
@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">नाम बदलल जा रहल बा…</string>
     <string name="wikis_rename_page_success">पन्ना के नाम बदलल गइल</string>
     <string name="wikis_history_viewing">%1$s के इतिहास देखल जा रहल बा, मौजूदा संस्करण %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">संस्करण %1$d</string>
     <string name="wikis_search_pages_placeholder">पन्ना के शीर्षक भा सामग्री से खोजीं…</string>
     <string name="wikis_search_no_results">“%1$s” खातिर कवनो पन्ना ना मिलल। दोसर खोज शब्द आजमाईं।</string>
     <string name="wikis_search_updated">अपडेट भइल %1$s</string>
@@ -319,8 +319,8 @@
         <item quantity="other">एह टैग के साथे %d पन्ना</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">"%2$s" खातिर %1$d परिणाम मिलल</item>
-        <item quantity="other">"%2$s" खातिर %1$d परिणाम मिलल</item>
+        <item quantity="one">\"%2$s\" खातिर %1$d परिणाम मिलल</item>
+        <item quantity="other">\"%2$s\" खातिर %1$d परिणाम मिलल</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">कैप्शन सहेजल ना जा सकल</string>
     <string name="wikis_attachments_upload_types">समर्थित फ़ाइल: छवि, PDF, DOC, DOCX, TXT, आ MD।</string>

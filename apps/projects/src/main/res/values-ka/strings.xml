@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="projects_auth_display_name">ნაჩვენები სახელი</string>
-    <string name="projects_auth_verification_failed">შემოწმების კოდი გაიგზავნა</string>
+    <string name="projects_auth_verification_failed">დადასტურება ვერ მოხერხდა</string>
     <string name="projects_list_title">პროექტები</string>
     <string name="projects_list_close_search">ძიების დახურვა</string>
     <string name="projects_list_search">ძიება</string>
@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">ახალი</string>
     <string name="projects_settings_section_identity">ვინაობა</string>
     <string name="projects_settings_access_updated">წვდომა განახლდა</string>
-    <string name="projects_settings_access_revoked">წვდომა გაუქმდა</string>
+    <string name="projects_settings_access_revoked">წვდომა გაწვეულია</string>
     <string name="projects_settings_section_access">წვდომის მართვა</string>
     <string name="projects_people_search">ხალხის ძებნა</string>
     <string name="projects_settings_field_entity_id">ერთეულის ID</string>
@@ -352,7 +352,7 @@
     <string name="projects_all_projects">ყველა პროექტი</string>
     <string name="projects_create_allow_search">ნებისმიერს პროექტის ძიების ნება დართე</string>
     <string name="projects_create_import_backup">იმპორტი სარეზერვო ასლიდან (არასავალდებულო)</string>
-    <string name="projects_create_upload_json">ატვირთვა</string>
+    <string name="projects_create_upload_json">.json ფაილის ატვირთვა</string>
     <string name="projects_settings_not_set">არ არის დაყენებული</string>
     <string name="projects_settings_updated">პროექტი განახლდა</string>
     <string name="projects_property_select">აირჩიეთ …</string>
@@ -360,10 +360,10 @@
     <string name="projects_activity_commented">დააკომენტარა</string>
     <string name="projects_attachment_delete_confirm_message">ეს დანართი სამუდამოდ წაიშლება.</string>
     <string name="projects_attachment_delete_confirm_title">წაიშალოს დანართი?</string>
-    <string name="projects_settings_unsubscribe_section">პროექტის გამოწერის გაუქმება</string>
+    <string name="projects_settings_unsubscribe_section">პროექტის გამოწერის შეწყვეტა</string>
     <string name="projects_share_link_title">პროექტის გაზიარება</string>
     <string name="projects_sort_filter_title">დალაგება და გაფილტვრა</string>
-    <string name="projects_create_prefix_hint">გამოიყენება წაკითხვადი ID-ებისთვის, როგorc %1$s-1, %1$s-2</string>
+    <string name="projects_create_prefix_hint">გამოიყენება წაკითხვადი ID-ებისთვის, როგორიცაა %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
         <item quantity="one">%1$d კონფლიქტური ფაილი</item>
         <item quantity="other">%1$d კონფლიქტური ფაილი</item>

@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">Yeni</string>
     <string name="projects_settings_section_identity">Kimlik</string>
     <string name="projects_settings_access_updated">Erişim güncellendi</string>
-    <string name="projects_settings_access_revoked">Erişim iptal edildi</string>
+    <string name="projects_settings_access_revoked">Erişim kaldırıldı</string>
     <string name="projects_settings_section_access">Erişim yönetimi</string>
     <string name="projects_people_search">Kişileri ara</string>
     <string name="projects_settings_field_entity_id">Varlık kimliği</string>

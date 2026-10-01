@@ -9,7 +9,6 @@
     <string name="feeds_settings_ai_mode_updated">AI 模式已更新</string>
     <string name="feeds_settings_ai_account_updated">AI 帳戶已更新</string>
     <string name="feeds_settings_prompt_reset">提示語已重設為預設</string>
-    <string name="feeds_post_select_feed">請選擇一個訊息來源</string>
     <string name="feeds_post_empty_content">請輸入文字或附上一個檔案</string>
 
     <string name="feeds_name">名稱</string>
@@ -35,17 +34,11 @@
     <string name="feeds_restore">還原</string>
     <string name="feeds_no_members">沒有成員</string>
 
-    <string name="notification_channel_feeds">資訊流通知</string>
-    <string name="feeds_title">資訊流</string>
-    <string name="feeds_find_feeds">尋找資訊流</string>
-    <string name="feeds_create_feed">建立資訊流</string>
     <string name="feeds_new_post">新貼文</string>
     <string name="feeds_all_feeds">全部資訊流</string>
-    <string name="feeds_search_placeholder">搜尋資訊流或貼上網址…</string>
     <string name="feeds_url_result">網址結果</string>
     <string name="feeds_search_results">搜尋結果</string>
     <string name="feeds_no_feeds_found">搵唔到資訊流</string>
-    <string name="feeds_feed_title_default">資訊流</string>
     <string name="feeds_mark_all_read">全部標為已讀</string>
     <string name="feeds_no_posts_yet">暫時未有貼文</string>
     <string name="feeds_all_caught_up">全部已讀完</string>
@@ -69,8 +62,6 @@
     <string name="feeds_attach_file">附加檔案</string>
     <string name="feeds_file">檔案</string>
     <string name="feeds_edit_post">編輯貼文</string>
-    <string name="feeds_select_feed">選擇資訊流</string>
-    <string name="feeds_feed_label">資訊流</string>
     <string name="feeds_loading_feeds">載入資訊流中…</string>
     <string name="feeds_add_files">新增檔案</string>
     <string name="feeds_check_in">打卡</string>
@@ -79,12 +70,8 @@
     <string name="feeds_sources_title">來源</string>
     <string name="feeds_sources_title_named">%1$s 嘅來源</string>
     <string name="feeds_tab_ai">AI</string>
-    <string name="feeds_feed_name">資訊流名稱</string>
     <string name="feeds_banner">橫額</string>
-    <string name="feeds_banner_description">顯示於資訊提供頂部的可選 Markdown 橫額。</string>
     <string name="feeds_clear">清除</string>
-    <string name="feeds_delete_feed">刪除資訊提供</string>
-    <string name="feeds_delete_feed_confirm">此操作將永久刪除資訊提供及其所有帖子，無法復原。</string>
     <string name="feeds_clipboard_label_rss">RSS 網址</string>
     <string name="feeds_add_source">新增來源</string>
     <string name="feeds_no_sources">沒有來源</string>
@@ -93,12 +80,8 @@
     <string name="feeds_edit_source">編輯來源</string>
     <string name="feeds_source_url">網址</string>
     <string name="feeds_source_type_rss">RSS</string>
-    <string name="feeds_source_type_feed_posts">Mochi 資訊提供</string>
     <string name="feeds_source_type_feed_memories">回憶</string>
-    <string name="feeds_source_transform">轉換</string>
-    <string name="feeds_remove_source">移除來源</string>
-    <string name="feeds_remove_source_confirm">要移除「%1$s」嗎？</string>
-    <string name="feeds_remove_also_delete_posts">同時刪除已匯入的帖子</string>
+    <string name="feeds_remove_also_delete_posts">同時刪除從此來源匯入的帖子</string>
     <string name="feeds_suggested_credibility_title">建議可信度</string>
     <string name="feeds_suggested_credibility_body">Mochi 建議可信度為 %1$d。是否接受？</string>
     <string name="feeds_suggested_credibility_keep">保留目前設定</string>
@@ -109,9 +92,7 @@
     <string name="feeds_ai_prompt_batch">批次處理</string>
     <string name="feeds_ai_prompt_rank">排名／評分</string>
     <string name="feeds_ai_prompt_credibility">可信度評估</string>
-    <string name="feeds_feed_not_found">找不到資訊提供</string>
     <string name="feeds_post_not_found">找不到帖子</string>
-    <string name="feeds_settings_feed_renamed">已重新命名資訊提供</string>
     <string name="feeds_settings_source_added">已新增來源</string>
     <string name="feeds_settings_source_updated">已更新來源</string>
     <string name="feeds_settings_source_removed">已移除來源</string>
@@ -137,15 +118,12 @@
     <string name="feeds_rss_mode_posts_comments">貼文和留言</string>
     <string name="feeds_access_add_title">新增存取權</string>
     <string name="feeds_permission_request_message">%1$s 請求以下權限：</string>
-    <string name="feeds_allow_search">允許任何人搜尋此資訊提供</string>
     <string name="feeds_post_content">貼文內容</string>
     <string name="feeds_enable_memories">啟用記憶</string>
     <string name="feeds_permission_request_title">權限請求</string>
-    <string name="feeds_unsubscribe_confirm">退訂資訊提供？</string>
     <string name="feeds_settings_title">%1$s 設定</string>
     <string name="feeds_source_transform_help">留空以停用。</string>
     <string name="feeds_settings_name_cancel_cd">取消編輯</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
     <string name="feeds_access_management">存取管理</string>
     <string name="feeds_settings_field_server">伺服器</string>
     <string name="feeds_access_anyone_desc">包括匿名用戶</string>
@@ -153,9 +131,7 @@
     <string name="feeds_create_first_post">建立第一則貼文</string>
     <string name="feeds_rss_mode_posts">貼文</string>
     <string name="feeds_source_last_checked">上次檢查 %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">取消訂閱資訊提供</string>
     <string name="feeds_source_transform_hint">翻譯成英文，並以項目符號顯示。</string>
-    <string name="feeds_source_url_hint_feed">資訊提供實體 ID 或指紋</string>
     <string name="feeds_source_credibility_label">可信度</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d 小時</item>
@@ -166,7 +142,6 @@
     <string name="feeds_source_polling_interval">每 %1$s 輪詢一次</string>
     <string name="feeds_access_level_react_full">點讚和查看</string>
     <string name="feeds_permission_allow">允許</string>
-    <string name="feeds_unsubscribe_confirm_message">你將不再收到此資訊提供的更新。你可以隨時重新訂閱。</string>
     <string name="feeds_access_select_rule">選擇存取規則</string>
     <string name="feeds_access_authenticated_desc">任何已登入的用戶</string>
     <string name="feeds_banner_hint">歡迎來到此論壇…</string>
@@ -174,7 +149,6 @@
     <string name="feeds_members_search">篩選成員</string>
     <string name="feeds_ai_prompt_default">預設</string>
     <string name="feeds_link">連結</string>
-    <string name="feeds_share_link_title">訂閱來源連結</string>
     <string name="feeds_ai_prompt_custom">自訂</string>
     <string name="feeds_ai_prompt_variables">變數：%1$s</string>
     <string name="feeds_interest_boosted">興趣已提高</string>

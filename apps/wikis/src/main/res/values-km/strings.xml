@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">កំពុងប្តូរឈ្មោះ…</string>
     <string name="wikis_rename_page_success">បានប្តូរឈ្មោះទំព័រ</string>
     <string name="wikis_history_viewing">កំពុងមើលប្រវត្តិសម្រាប់ %1$s កំណែបច្ចុប្បន្ន %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">កំណែ %1$d</string>
     <string name="wikis_search_pages_placeholder">ស្វែងរកទំព័រតាមចំណងជើង ឬមាតិកា…</string>
     <string name="wikis_search_no_results">រកមិនឃើញទំព័រសម្រាប់ “%1$s” ទេ។ សាកល្បងពាក្យស្វែងរកផ្សេង។</string>
     <string name="wikis_search_updated">បានធ្វើបច្ចុប្បន្នភាព %1$s</string>
@@ -312,7 +312,7 @@
         <item quantity="other">%d ទំព័រ ជាមួយស្លាកនេះ</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="other">បានរកឃើញ %1$d លទ្ធផល សម្រាប់ "%2$s"</item>
+        <item quantity="other">បានរកឃើញ %1$d លទ្ធផល សម្រាប់ \"%2$s\"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">មិនអាចរក្សាទុកចំណងជើងបានទេ</string>
     <string name="wikis_attachments_upload_types">ឯកសារដែលគាំទ្រ៖ រូបភាព, PDF, DOC, DOCX, TXT និង MD។</string>

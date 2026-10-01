@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">Bulchiinsa Seensaa</string>
     <string name="crm_settings_not_set">Hin qabamne</string>
     <string name="crm_settings_access_updated">Seensi haaromfame</string>
-    <string name="crm_settings_access_revoked">Seensi haqamee jira</string>
+    <string name="crm_settings_access_revoked">Argamni deebifatame</string>
     <string name="crm_people_search">Namoota barbaadi</string>
     <string name="crm_access_tab_other">Biraa</string>
     <string name="crm_access_select_group">Garee filadhu</string>

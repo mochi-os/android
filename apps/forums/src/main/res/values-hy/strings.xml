@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">Մոդերացնել</string>
     <string name="forums_members_search">Զտել անդամներին</string>
     <string name="forums_banner_description">Markdown, որը ցուցադրվում է ֆորումի վերևում:</string>
-    <string name="forums_banner_placeholder">Բարի գալուստ այս ֆորում…</string>
+    <string name="forums_banner_placeholder">Մուտքագրեք բաների տեքստը (Markdown-ն աջակցվում է)…</string>
     <string name="forums_ai_mode_label">Ռեժիմ՝ %1$s</string>
     <string name="forums_ai_mode_heading">AI ռեժիմ</string>
     <string name="forums_ai_mode_off">Անջատված է</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">օրեր</string>
     <string name="forums_settings_banner_saved">Պառատոմը պահպանված է</string>
     <string name="forums_settings_access_updated">Մուտքը թարմացված է</string>
-    <string name="forums_settings_access_revoked">Մուտքը հետ է կանչված</string>
+    <string name="forums_settings_access_revoked">Մուտքը հետ է վերցվել</string>
     <string name="forums_settings_member_removed">Անդամը հեռացվեց</string>
     <string name="forums_settings_prompt_saved">Հուշումը պահպանվեց</string>
     <string name="forums_settings_section_identity">Ինքնություն</string>

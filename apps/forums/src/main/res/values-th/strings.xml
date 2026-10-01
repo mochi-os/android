@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">ดูแล</string>
     <string name="forums_members_search">กรองสมาชิก</string>
     <string name="forums_banner_description">Markdown ที่แสดงด้านบนของฟอรัม</string>
-    <string name="forums_banner_placeholder">ยินดีต้อนรับสู่ฟอรัมนี้…</string>
+    <string name="forums_banner_placeholder">ป้อนข้อความแบนเนอร์ (รองรับ Markdown)…</string>
     <string name="forums_ai_mode_label">โหมด: %1$s</string>
     <string name="forums_ai_mode_heading">โหมด AI</string>
     <string name="forums_ai_mode_off">ปิดใช้งานแล้ว</string>

@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">Никога не е изтегляно</string>
     <string name="feeds_source_poll">Анкета</string>
     <string name="feeds_source_transform">AI преобразуване</string>
-    <string name="feeds_remove_source_confirm">Премахване на \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Изтрий и импортираните публикации</string>
+    <string name="feeds_remove_source_confirm">Това ще спре импортирането на съдържание от \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Изтрий и публикациите, импортирани от този източник</string>
     <string name="feeds_suggested_credibility_title">Предложена достоверност</string>
     <string name="feeds_suggested_credibility_body">Mochi предлага достоверност %1$d. Приемате ли?</string>
     <string name="feeds_suggested_credibility_keep">Запази текущата</string>

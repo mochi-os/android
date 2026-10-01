@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">إدارة الوصول</string>
     <string name="crm_settings_not_set">غير محدد</string>
     <string name="crm_settings_access_updated">تم تحديث الوصول</string>
-    <string name="crm_settings_access_revoked">تم إلغاء الوصول</string>
+    <string name="crm_settings_access_revoked">تم إبطال الوصول</string>
     <string name="crm_people_search">البحث عن أشخاص</string>
     <string name="crm_access_tab_other">أخرى</string>
     <string name="crm_access_select_group">اختر مجموعة</string>
@@ -274,7 +274,7 @@
     <string name="crm_access_role_view">عرض فقط</string>
     <string name="crm_access_role_none">لا يوجد وصول</string>
     <string name="crm_all_crms">جميع أنظمة CRM</string>
-    <string name="crm_settings_unsubscribe_section">إلغاء الاشتراك من CRM</string>
+    <string name="crm_settings_unsubscribe_section">إنهاء الاشتراك في CRM</string>
     <string name="crm_settings_updated">تم تحديث CRM</string>
     <string name="crm_create_import_backup">استيراد من نسخة احتياطية (اختياري)</string>
     <string name="crm_export">تصدير البيانات</string>

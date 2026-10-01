@@ -60,7 +60,7 @@
     <string name="notifications_empty">അറിയിപ്പുകളൊന്നുമില്ല</string>
     <string name="notifications_empty_unread">എല്ലാം കണ്ടുകഴിഞ്ഞു</string>
     <string name="notifications_tab_unread">വായിക്കാത്തവ</string>
-    <string name="notifications_tab_unread_count">വായിക്കാത്തവ (%1$d)</string>
+    <string name="notifications_tab_unread_count">വായിക്കാത്തവ (%1$s)</string>
     <string name="notifications_tab_all">എല്ലാം</string>
     <string name="notifications_mark_all_read">എല്ലാം വായിച്ചതായി അടയാളപ്പെടുത്തുക</string>
     <string name="notifications_clear_all">എല്ലാം മായ്ക്കുക</string>
@@ -101,12 +101,12 @@
     <string name="settings_units_metric">മെട്രിക്</string>
     <string name="settings_units_imperial">ഇംപീരിയൽ</string>
     <string name="settings_time_zone">സമയ മേഖല</string>
-    <string name="settings_reset_to_defaults">പിന്മാറുക</string>
-    <string name="settings_reset_confirm_title">ഡിഫോൾട്ടിലേക്ക് റീസെറ്റ് ചെയ്യുക</string>
+    <string name="settings_reset_to_defaults">ഡിഫോൾട്ടുകളിലേക്ക് പുനഃസജ്ജമാക്കുക</string>
+    <string name="settings_reset_confirm_title">മുൻഗണനകൾ പുനഃസജ്ജമാക്കണോ?</string>
     <string name="settings_reset_confirm_message">ഇത് ഈ മുൻഗണനകളെ അവയുടെ സ്ഥിരസ്ഥിതി മൂല്യങ്ങളിലേക്ക് റീസെറ്റ് ചെയ്യും.</string>
     <string name="settings_reset">പുനഃസജ്ജമാക്കുക</string>
     <string name="settings_display_title">പ്രദർശനം</string>
-    <string name="settings_display_reset">പിന്മാറുക</string>
+    <string name="settings_display_reset">ഡിഫോൾട്ടുകളിലേക്ക് പുനഃസജ്ജമാക്കുക</string>
     <string name="settings_display_reset_confirm_title">ഡിസ്പ്ലേ പുനഃക്രമീകരിക്കണോ?</string>
     <string name="settings_display_reset_confirm_message">ഇത് ഡിസ്പ്ലേ ക്രമീകരണങ്ങളെ അവയുടെ സ്ഥിരസ്ഥിതി മൂല്യങ്ങളിലേക്ക് പുനഃക്രമീകരിക്കും.</string>
     <string name="settings_theme_title">തീം</string>

@@ -60,7 +60,7 @@
     <string name="notifications_empty">දැනුම්දීම් නැත</string>
     <string name="notifications_empty_unread">සියල්ල කියවා අවසන්</string>
     <string name="notifications_tab_unread">නොකියවූ</string>
-    <string name="notifications_tab_unread_count">නොකියවූ (%1$d)</string>
+    <string name="notifications_tab_unread_count">නොකියවූ (%1$s)</string>
     <string name="notifications_tab_all">සියල්ල</string>
     <string name="notifications_mark_all_read">සියල්ල කියවූ ලෙස සලකුණු කරන්න</string>
     <string name="notifications_clear_all">සියල්ල හිස් කරන්න</string>
@@ -303,8 +303,8 @@
     <string name="rss_revoke">ප්‍රවේශය අහෝසි කරන්න</string>
     <string name="rss_revoke_title">RSS ප්‍රවේශය අහෝසි කරන්නද?</string>
     <string name="rss_revoke_message">මෙම සංග්‍රහයට දායක වූ සියල්ල එය ලැබීම නවත්වනු ඇත. පසුව ඔබට නව URL එකක් පිටපත් කළ හැකිය.</string>
-    <string name="rss_revoked">RSS ප්‍රවේශය අවලංගු කරන ලදී</string>
-    <string name="rss_revoke_failed">RSS ප්‍රවේශය අවලංගු කිරීමට අසමත් විය</string>
+    <string name="rss_revoked">RSS ප්‍රවේශය අහෝසි කරන ලදී</string>
+    <string name="rss_revoke_failed">RSS ප්‍රවේශය අහෝසි කිරීමට අසමත් විය</string>
     <string name="game_empty_title">තවම ක්‍රීඩා නැත</string>
     <string name="game_select_title">ක්‍රීඩාවක් තෝරන්න</string>
     <string name="game_select_subtitle">පැති තීරුවෙන් ක්‍රීඩාවක් තෝරන්න හෝ අලුත් එකක් අරඹන්න.</string>

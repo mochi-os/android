@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">पहुँच व्यवस्थापन</string>
     <string name="crm_settings_not_set">सेट गरिएको छैन</string>
     <string name="crm_settings_access_updated">पहुँच अद्यावधिक गरियो</string>
-    <string name="crm_settings_access_revoked">पहुँच रद्द गरियो</string>
+    <string name="crm_settings_access_revoked">पहुँच फिर्ता लिइयो</string>
     <string name="crm_people_search">मानिसहरू खोज्नुहोस्</string>
     <string name="crm_access_tab_other">अन्य</string>
     <string name="crm_access_select_group">समूह छान्नुहोस्</string>

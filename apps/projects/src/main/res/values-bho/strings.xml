@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">नया</string>
     <string name="projects_settings_section_identity">पहचान</string>
     <string name="projects_settings_access_updated">पहुंच अद्यतन कइल गइल</string>
-    <string name="projects_settings_access_revoked">पहुँच हटा देहल गइल</string>
+    <string name="projects_settings_access_revoked">पहुँच वापस ले लिहल गइल</string>
     <string name="projects_settings_section_access">पहुंच प्रबंधन</string>
     <string name="projects_people_search">लोग खोजीं</string>
     <string name="projects_settings_field_entity_id">एंटिटी ID</string>
@@ -360,7 +360,7 @@
     <string name="projects_activity_commented">टिप्पणी कइलस</string>
     <string name="projects_attachment_delete_confirm_message">ई संलग्नक हमेशा खातिर मिटा दिहल जाई।</string>
     <string name="projects_attachment_delete_confirm_title">संलग्नक मिटावल जाव?</string>
-    <string name="projects_settings_unsubscribe_section">परियोजना से सदस्यता छोड़ीं</string>
+    <string name="projects_settings_unsubscribe_section">परियोजना से सदस्यता खतम करीं</string>
     <string name="projects_share_link_title">परियोजना साझा करीं</string>
     <string name="projects_sort_filter_title">छाँटीं आ छानीं</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 जइसन पढ़े लायक ID खातिर इस्तेमाल होला</string>

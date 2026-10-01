@@ -41,7 +41,7 @@
     <string name="wikis_rss_copied">RSS URL түр санах ой руу хуулагдсан</string>
     <string name="wikis_rss_failed">RSS токен авч чадсангүй</string>
     <string name="wikis_rss_revoke">Хандалтыг хүчингүй болгох</string>
-    <string name="wikis_rss_revoked">RSS хандалтыг цуцаллаа</string>
+    <string name="wikis_rss_revoked">RSS хандалтыг хүчингүй болголоо</string>
     <string name="wikis_find_title">Wiki хайх</string>
     <string name="wikis_find_no_results">Wiki олдсонгүй</string>
     <string name="wikis_find_recommended_section">Зөвлөмжтэй wiki</string>
@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">Нэр өөрчилж байна…</string>
     <string name="wikis_rename_page_success">Хуудасны нэр өөрчлөгдсөн</string>
     <string name="wikis_history_viewing">%1$s-ийн түүхийг үзэж байна, одоогийн хувилбар %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">Хувилбар %1$d</string>
     <string name="wikis_search_pages_placeholder">Хуудсуудыг гарчиг эсвэл агуулгаар хайх…</string>
     <string name="wikis_search_no_results">“%1$s”-д тохирох хуудас олдсонгүй. Өөр хайлтын үг оролдоно уу.</string>
     <string name="wikis_search_updated">%1$s шинэчлэгдсэн</string>
@@ -319,8 +319,8 @@
         <item quantity="other">Энэ тэгтэй %d хуудас</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">"%2$s"-н хувьд %1$d үр дүн олдлоо</item>
-        <item quantity="other">"%2$s"-н хувьд %1$d үр дүн олдлоо</item>
+        <item quantity="one">\"%2$s\"-н хувьд %1$d үр дүн олдлоо</item>
+        <item quantity="other">\"%2$s\"-н хувьд %1$d үр дүн олдлоо</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Тайлбарыг хадгалж чадсангүй</string>
     <string name="wikis_attachments_upload_types">Дэмжигдсэн файлууд: зургууд, PDF, DOC, DOCX, TXT болон MD.</string>

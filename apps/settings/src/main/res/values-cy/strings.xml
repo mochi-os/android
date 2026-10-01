@@ -45,6 +45,8 @@
     <string name="route_delete_title">Dileu llwybr?</string>
     <string name="route_path">Llwybr</string>
     <string name="route_method">Dull</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Ap</string>
     <string name="route_method_entity">Endid</string>
     <string name="route_method_redirect">Ailgyfeirio</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Lawrlwytho o packages.mochi-os.org</string>
     <string name="system_status_copy">Copïo</string>
     <string name="system_status_peers">Cymheiriaid</string>
-    <string name="system_status_known">Hysbys</string>
+    <string name="system_status_peers_totals">Hysbys %1$s · Wedi cysylltu %2$s · Mesh darlledu %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Hysbys %1$s · Wedi cysylltu %2$s</string>
     <string name="system_status_peer_connected">Wedi cysylltu</string>
     <string name="system_status_peer_disconnected">Wedi datgysylltu</string>
     <string name="system_status_peer_queued">Negeseuon mewn ciw</string>
@@ -216,12 +219,12 @@
     <string name="account_totp_disable_message">Ni fyddwch yn gallu mewngofnodi mwyach gyda chod dilyswr.</string>
     <string name="account_recovery_none">Dim codau adfer wedi\'u creu.</string>
     <plurals name="account_recovery_count">
-        <item quantity="zero">%1$d cod adfer ar ôl.</item>
-        <item quantity="one">%1$d cod adfer ar ôl.</item>
-        <item quantity="two">%1$d god adfer ar ôl.</item>
-        <item quantity="few">%1$d chod adfer ar ôl.</item>
-        <item quantity="many">%1$d chod adfer ar ôl.</item>
-        <item quantity="other">%1$d cod adfer ar ôl.</item>
+        <item quantity="zero">%1$s cod adfer ar ôl.</item>
+        <item quantity="one">%1$s cod adfer ar ôl.</item>
+        <item quantity="two">%1$s god adfer ar ôl.</item>
+        <item quantity="few">%1$s chod adfer ar ôl.</item>
+        <item quantity="many">%1$s chod adfer ar ôl.</item>
+        <item quantity="other">%1$s cod adfer ar ôl.</item>
     </plurals>
     <string name="account_recovery_generate">Creu codau</string>
     <string name="account_recovery_regenerate">Ail-greu codau</string>
@@ -238,7 +241,7 @@
     <string name="account_last_used">Defnyddiwyd ddiwethaf %1$s</string>
     <string name="route_delete_message">Bydd hyn yn tynnu\'r llwybr ar gyfer y llwybr \"%1$s\".</string>
     <string name="route_empty">Dim llwybrau wedi\'u ffurfweddu.</string>
-    <string name="route_meta">Blaenoriaeth %1$d · %2$s</string>
+    <string name="route_meta">Blaenoriaeth %1$s · %2$s</string>
     <string name="interests_search_placeholder">Chwilio am bynciau i\'w hychwanegu…</string>
     <string name="interests_empty">Dim diddordebau eto.</string>
     <string name="interests_summary_regenerate">Ail-greu crynodeb</string>
@@ -272,12 +275,12 @@
     <string name="system_users_revoke_all_title">Tynnu pob sesiwn?</string>
     <string name="system_users_revoke_all_message">Bydd holl sesiynau gweithredol y defnyddiwr hwn yn cael eu hallgofnodi.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="zero">Yn dangos %1$d–%2$d o %3$d defnyddiwr</item>
-        <item quantity="one">Yn dangos %1$d–%2$d o %3$d defnyddiwr</item>
-        <item quantity="two">Yn dangos %1$d–%2$d o %3$d ddefnyddiwr</item>
-        <item quantity="few">Yn dangos %1$d–%2$d o %3$d defnyddiwr</item>
-        <item quantity="many">Yn dangos %1$d–%2$d o %3$d defnyddiwr</item>
-        <item quantity="other">Yn dangos %1$d–%2$d o %3$d defnyddiwr</item>
+        <item quantity="zero">Yn dangos %1$s–%2$s o %3$s defnyddiwr</item>
+        <item quantity="one">Yn dangos %1$s–%2$s o %3$s defnyddiwr</item>
+        <item quantity="two">Yn dangos %1$s–%2$s o %3$s ddefnyddiwr</item>
+        <item quantity="few">Yn dangos %1$s–%2$s o %3$s defnyddiwr</item>
+        <item quantity="many">Yn dangos %1$s–%2$s o %3$s defnyddiwr</item>
+        <item quantity="other">Yn dangos %1$s–%2$s o %3$s defnyddiwr</item>
     </plurals>
     <string name="account_title">Cyfrif</string>
     <string name="account_section_identity">Hunaniaeth</string>
@@ -311,20 +314,20 @@
     <string name="domain_verify">Dilysu DNS</string>
     <string name="settings_home_domains">Parthau</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="zero">Anfonwyd y prawf i %1$d cyrchfan</item>
-        <item quantity="one">Anfonwyd y prawf i %1$d cyrchfan</item>
-        <item quantity="two">Anfonwyd y prawf i %1$d gyrchfan</item>
-        <item quantity="few">Anfonwyd y prawf i %1$d chyrchfan</item>
-        <item quantity="many">Anfonwyd y prawf i %1$d chyrchfan</item>
-        <item quantity="other">Anfonwyd y prawf i %1$d cyrchfan</item>
+        <item quantity="zero">Anfonwyd y prawf i %1$s cyrchfan</item>
+        <item quantity="one">Anfonwyd y prawf i %1$s cyrchfan</item>
+        <item quantity="two">Anfonwyd y prawf i %1$s gyrchfan</item>
+        <item quantity="few">Anfonwyd y prawf i %1$s chyrchfan</item>
+        <item quantity="many">Anfonwyd y prawf i %1$s chyrchfan</item>
+        <item quantity="other">Anfonwyd y prawf i %1$s cyrchfan</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="zero">Diddymwyd %1$d sesiwn</item>
-        <item quantity="one">Diddymwyd %1$d sesiwn</item>
-        <item quantity="two">Diddymwyd %1$d sesiwn</item>
-        <item quantity="few">Diddymwyd %1$d sesiwn</item>
-        <item quantity="many">Diddymwyd %1$d sesiwn</item>
-        <item quantity="other">Diddymwyd %1$d sesiwn</item>
+        <item quantity="zero">Diddymwyd %1$s sesiwn</item>
+        <item quantity="one">Diddymwyd %1$s sesiwn</item>
+        <item quantity="two">Diddymwyd %1$s sesiwn</item>
+        <item quantity="few">Diddymwyd %1$s sesiwn</item>
+        <item quantity="many">Diddymwyd %1$s sesiwn</item>
+        <item quantity="other">Diddymwyd %1$s sesiwn</item>
     </plurals>
     <string name="login_title">Mewngofnodi</string>
     <string name="login_section_methods">Dulliau mewngofnodi</string>
@@ -355,8 +358,7 @@
     <string name="system_status_reachability_public">Cyhoeddus</string>
     <string name="system_status_reachability_private">Preifat</string>
     <string name="system_status_reachability_unknown">Anhysbys</string>
-    <string name="system_status_relay">Trwy relái</string>
-    <string name="system_status_mesh">Mesh darlledu</string>
+    <string name="system_status_reachability_relay">%1$s · trwy relái</string>
     <string name="system_status_broadcast">Darllediad diwethaf</string>
     <string name="system_status_queued_broadcasts">Negeseuon darlledu yn y ciw</string>
     <string name="system_setting_hostname_publish">Cyhoeddi enw\'r gwesteiwr a pharthau i weinyddion eraill</string>
@@ -389,13 +391,15 @@
     <string name="accounts_device_seen">Gwelwyd ddiwethaf %1$s</string>
     <string name="notifprefs_device_app">%1$s · ap</string>
     <string name="notifprefs_device_push">%1$s · gwthio</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="zero">Anfonwyd y prawf at %1$d o %2$d cyrchfan</item>
-        <item quantity="one">Anfonwyd y prawf at %1$d o %2$d cyrchfan</item>
-        <item quantity="two">Anfonwyd y prawf at %1$d o %2$d gyrchfan</item>
-        <item quantity="few">Anfonwyd y prawf at %1$d o %2$d chyrchfan</item>
-        <item quantity="many">Anfonwyd y prawf at %1$d o %2$d chyrchfan</item>
-        <item quantity="other">Anfonwyd y prawf at %1$d o %2$d cyrchfan</item>
+        <item quantity="zero">Anfonwyd y prawf at %1$s o %2$s cyrchfan</item>
+        <item quantity="one">Anfonwyd y prawf at %1$s o %2$s cyrchfan</item>
+        <item quantity="two">Anfonwyd y prawf at %1$s o %2$s gyrchfan</item>
+        <item quantity="few">Anfonwyd y prawf at %1$s o %2$s chyrchfan</item>
+        <item quantity="many">Anfonwyd y prawf at %1$s o %2$s chyrchfan</item>
+        <item quantity="other">Anfonwyd y prawf at %1$s o %2$s cyrchfan</item>
     </plurals>
     <string name="notifprefs_test_none">Dim cyrchfannau wedi\'u ffurfweddu</string>
     <string name="notifprefs_transport_fcm">Gwthiad Android</string>
@@ -419,43 +423,43 @@
     <string name="system_documents_discard_title">Hepgor y newidiadau?</string>
     <string name="system_documents_discard">Hepgor</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="zero">%1$d wedi llwyddo</item>
-        <item quantity="one">%1$d wedi llwyddo</item>
-        <item quantity="two">%1$d wedi llwyddo</item>
-        <item quantity="few">%1$d wedi llwyddo</item>
-        <item quantity="many">%1$d wedi llwyddo</item>
-        <item quantity="other">%1$d wedi llwyddo</item>
+        <item quantity="zero">%1$s wedi llwyddo</item>
+        <item quantity="one">%1$s wedi llwyddo</item>
+        <item quantity="two">%1$s wedi llwyddo</item>
+        <item quantity="few">%1$s wedi llwyddo</item>
+        <item quantity="many">%1$s wedi llwyddo</item>
+        <item quantity="other">%1$s wedi llwyddo</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="zero">%1$d wedi methu</item>
-        <item quantity="one">%1$d wedi methu</item>
-        <item quantity="two">%1$d wedi methu</item>
-        <item quantity="few">%1$d wedi methu</item>
-        <item quantity="many">%1$d wedi methu</item>
-        <item quantity="other">%1$d wedi methu</item>
+        <item quantity="zero">%1$s wedi methu</item>
+        <item quantity="one">%1$s wedi methu</item>
+        <item quantity="two">%1$s wedi methu</item>
+        <item quantity="few">%1$s wedi methu</item>
+        <item quantity="many">%1$s wedi methu</item>
+        <item quantity="other">%1$s wedi methu</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="zero">%1$d / %2$d archeb</item>
-        <item quantity="one">%1$d / %2$d archeb</item>
-        <item quantity="two">%1$d / %2$d archeb</item>
-        <item quantity="few">%1$d / %2$d archeb</item>
-        <item quantity="many">%1$d / %2$d archeb</item>
-        <item quantity="other">%1$d / %2$d archeb</item>
+        <item quantity="zero">%1$s / %2$s archeb</item>
+        <item quantity="one">%1$s / %2$s archeb</item>
+        <item quantity="two">%1$s / %2$s archeb</item>
+        <item quantity="few">%1$s / %2$s archeb</item>
+        <item quantity="many">%1$s / %2$s archeb</item>
+        <item quantity="other">%1$s / %2$s archeb</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="zero">%1$d cylched</item>
-        <item quantity="one">%1$d cylched</item>
-        <item quantity="two">%1$d gylched</item>
-        <item quantity="few">%1$d cylched</item>
-        <item quantity="many">%1$d chylched</item>
-        <item quantity="other">%1$d cylched</item>
+        <item quantity="zero">%1$s cylched</item>
+        <item quantity="one">%1$s cylched</item>
+        <item quantity="two">%1$s gylched</item>
+        <item quantity="few">%1$s cylched</item>
+        <item quantity="many">%1$s chylched</item>
+        <item quantity="other">%1$s cylched</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="zero">%1$d wedi\'u gwrthod</item>
-        <item quantity="one">%1$d wedi\'u gwrthod</item>
-        <item quantity="two">%1$d wedi\'u gwrthod</item>
-        <item quantity="few">%1$d wedi\'u gwrthod</item>
-        <item quantity="many">%1$d wedi\'u gwrthod</item>
-        <item quantity="other">%1$d wedi\'u gwrthod</item>
+        <item quantity="zero">%1$s wedi\'u gwrthod</item>
+        <item quantity="one">%1$s wedi\'u gwrthod</item>
+        <item quantity="two">%1$s wedi\'u gwrthod</item>
+        <item quantity="few">%1$s wedi\'u gwrthod</item>
+        <item quantity="many">%1$s wedi\'u gwrthod</item>
+        <item quantity="other">%1$s wedi\'u gwrthod</item>
     </plurals>
 </resources>

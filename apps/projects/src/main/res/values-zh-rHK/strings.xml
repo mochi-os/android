@@ -331,7 +331,6 @@
     <string name="projects_activity_commented">發表了留言</string>
     <string name="projects_attachment_delete_confirm_message">此附件將被永久刪除。</string>
     <string name="projects_attachment_delete_confirm_title">刪除附件?</string>
-    <string name="projects_settings_unsubscribe_section">取消訂閱專案</string>
     <string name="projects_share_link_title">分享專案</string>
     <string name="projects_sort_filter_title">排序與篩選</string>
     <string name="projects_create_prefix_hint">用於可讀的 ID，例如 %1$s-1、%1$s-2</string>

@@ -45,6 +45,8 @@
     <string name="route_delete_title">Smazat trasu?</string>
     <string name="route_path">Cesta</string>
     <string name="route_method">Metoda</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Aplikace</string>
     <string name="route_method_entity">Entita</string>
     <string name="route_method_redirect">Přesměrování</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Stáhnout z packages.mochi-os.org</string>
     <string name="system_status_copy">Kopírovat</string>
     <string name="system_status_peers">Vrstevníci</string>
-    <string name="system_status_known">Známé</string>
+    <string name="system_status_peers_totals">Známé %1$s · Připojené %2$s · Vysílací mesh %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Známé %1$s · Připojené %2$s</string>
     <string name="system_status_peer_connected">Připojeno</string>
     <string name="system_status_peer_disconnected">Odpojeno</string>
     <string name="system_status_peer_queued">Zprávy ve frontě</string>
@@ -176,7 +179,7 @@
     <string name="system_users_create_title">Vytvořit uživatele</string>
     <string name="system_users_save_changes">Uložit změny</string>
     <string name="system_users_suspend">Pozastavit uživatele</string>
-    <string name="system_users_remove_suspension">Zrušit pozastavení</string>
+    <string name="system_users_remove_suspension">Ukončit pozastavení</string>
     <string name="system_users_delete">Smazat uživatele</string>
     <string name="system_users_delete_title">Smazat uživatele?</string>
     <string name="system_users_manage_sessions">Spravovat relace</string>
@@ -193,13 +196,13 @@
     <string name="system_users_toast_updated">Uživatel aktualizován</string>
     <string name="system_users_toast_deleted">Uživatel smazán</string>
     <string name="system_users_toast_suspended">Uživatel pozastaven</string>
-    <string name="system_users_toast_suspension_removed">Pozastavení odstraněno</string>
+    <string name="system_users_toast_suspension_removed">Pozastavení ukončeno</string>
     <string name="system_users_toast_session_revoked">Relace odvolána</string>
     <string name="system_users_toast_create_failed">Nepodařilo se vytvořit uživatele</string>
     <string name="system_users_toast_update_failed">Nepodařilo se aktualizovat uživatele</string>
     <string name="system_users_toast_delete_failed">Nepodařilo se smazat uživatele</string>
     <string name="system_users_toast_status_failed">Nepodařilo se aktualizovat stav uživatele</string>
-    <string name="system_users_toast_revoke_failed">Nepodařilo se zrušit relaci</string>
+    <string name="system_users_toast_revoke_failed">Nepodařilo se odvolat relaci</string>
 
     <string name="settings_home_sessions">Relace</string>
     <string name="settings_home_privacy">Zásady ochrany osobních údajů</string>
@@ -216,9 +219,9 @@
     <string name="account_totp_disable_message">Již se nebudete moci přihlásit kódem autentizátoru.</string>
     <string name="account_recovery_none">Nebyly vygenerovány žádné obnovovací kódy.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">Zbývá %1$d obnovovací kód.</item>
-        <item quantity="few">Zbývají %1$d obnovovací kódy.</item>
-        <item quantity="other">Zbývá %1$d obnovovacích kódů.</item>
+        <item quantity="one">Zbývá %1$s obnovovací kód.</item>
+        <item quantity="few">Zbývají %1$s obnovovací kódy.</item>
+        <item quantity="other">Zbývá %1$s obnovovacích kódů.</item>
     </plurals>
     <string name="account_recovery_generate">Vygenerovat kódy</string>
     <string name="account_recovery_regenerate">Vygenerovat nové kódy</string>
@@ -235,7 +238,7 @@
     <string name="account_last_used">Naposledy použito %1$s</string>
     <string name="route_delete_message">Tímto se odstraní trasa pro cestu \"%1$s\".</string>
     <string name="route_empty">Nejsou nakonfigurovány žádné trasy.</string>
-    <string name="route_meta">Priorita %1$d · %2$s</string>
+    <string name="route_meta">Priorita %1$s · %2$s</string>
     <string name="interests_search_placeholder">Hledat témata k přidání…</string>
     <string name="interests_empty">Zatím žádné zájmy.</string>
     <string name="interests_summary_regenerate">Znovu vygenerovat souhrn</string>
@@ -269,9 +272,9 @@
     <string name="system_users_revoke_all_title">Odvolat všechny relace?</string>
     <string name="system_users_revoke_all_message">Všechny aktivní relace tohoto uživatele budou odhlášeny.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">Zobrazeno %1$d–%2$d z %3$d uživatele</item>
-        <item quantity="few">Zobrazeno %1$d–%2$d z %3$d uživatelů</item>
-        <item quantity="other">Zobrazeno %1$d–%2$d z %3$d uživatelů</item>
+        <item quantity="one">Zobrazeno %1$s–%2$s z %3$s uživatele</item>
+        <item quantity="few">Zobrazeno %1$s–%2$s z %3$s uživatelů</item>
+        <item quantity="other">Zobrazeno %1$s–%2$s z %3$s uživatelů</item>
     </plurals>
     <string name="account_title">Účet</string>
     <string name="account_section_identity">Identita</string>
@@ -305,15 +308,15 @@
     <string name="domain_verify">Ověřit DNS</string>
     <string name="settings_home_domains">Domény</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Test odeslán na %1$d cíl</item>
-        <item quantity="few">Test odeslán na %1$d cíle</item>
-        <item quantity="other">Test odeslán na %1$d cílů</item>
+        <item quantity="one">Test odeslán na %1$s cíl</item>
+        <item quantity="few">Test odeslán na %1$s cíle</item>
+        <item quantity="other">Test odeslán na %1$s cílů</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$d relace zrušena</item>
-        <item quantity="few">%1$d relace zrušeny</item>
-        <item quantity="many">%1$d relací zrušeno</item>
-        <item quantity="other">%1$d relací zrušeno</item>
+        <item quantity="one">%1$s relace odvolána</item>
+        <item quantity="few">%1$s relace odvolány</item>
+        <item quantity="many">%1$s relací odvoláno</item>
+        <item quantity="other">%1$s relací odvoláno</item>
     </plurals>
     <string name="login_title">Přihlášení</string>
     <string name="login_section_methods">Způsoby přihlášení</string>
@@ -344,8 +347,7 @@
     <string name="system_status_reachability_public">Veřejné</string>
     <string name="system_status_reachability_private">Soukromé</string>
     <string name="system_status_reachability_unknown">Neznámý</string>
-    <string name="system_status_relay">Přes relay</string>
-    <string name="system_status_mesh">Vysílací mesh</string>
+    <string name="system_status_reachability_relay">%1$s · přes relé</string>
     <string name="system_status_broadcast">Poslední vysílání</string>
     <string name="system_status_queued_broadcasts">Vysílané zprávy ve frontě</string>
     <string name="system_setting_hostname_publish">Oznamovat název hostitele a domény ostatním serverům</string>
@@ -378,10 +380,12 @@
     <string name="accounts_device_seen">Naposledy viděn %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplikace</string>
     <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Test odeslán do %1$d z %2$d cíle</item>
-        <item quantity="few">Test odeslán do %1$d z %2$d cílů</item>
-        <item quantity="other">Test odeslán do %1$d z %2$d cílů</item>
+        <item quantity="one">Test odeslán do %1$s z %2$s cíle</item>
+        <item quantity="few">Test odeslán do %1$s z %2$s cílů</item>
+        <item quantity="other">Test odeslán do %1$s z %2$s cílů</item>
     </plurals>
     <string name="notifprefs_test_none">Žádné nakonfigurované cíle</string>
     <string name="notifprefs_transport_fcm">Push oznámení pro Android</string>
@@ -405,28 +409,28 @@
     <string name="system_documents_discard_title">Zahodit změny?</string>
     <string name="system_documents_discard">Zahodit</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d úspěšný</item>
-        <item quantity="few">%1$d úspěšné</item>
-        <item quantity="other">%1$d úspěšných</item>
+        <item quantity="one">%1$s úspěšný</item>
+        <item quantity="few">%1$s úspěšné</item>
+        <item quantity="other">%1$s úspěšných</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d neúspěšný</item>
-        <item quantity="few">%1$d neúspěšné</item>
-        <item quantity="other">%1$d neúspěšných</item>
+        <item quantity="one">%1$s neúspěšný</item>
+        <item quantity="few">%1$s neúspěšné</item>
+        <item quantity="other">%1$s neúspěšných</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d rezervace</item>
-        <item quantity="few">%1$d / %2$d rezervace</item>
-        <item quantity="other">%1$d / %2$d rezervací</item>
+        <item quantity="one">%1$s / %2$s rezervace</item>
+        <item quantity="few">%1$s / %2$s rezervace</item>
+        <item quantity="other">%1$s / %2$s rezervací</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d okruh</item>
-        <item quantity="few">%1$d okruhy</item>
-        <item quantity="other">%1$d okruhů</item>
+        <item quantity="one">%1$s okruh</item>
+        <item quantity="few">%1$s okruhy</item>
+        <item quantity="other">%1$s okruhů</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d odmítnutý</item>
-        <item quantity="few">%1$d odmítnuté</item>
-        <item quantity="other">%1$d odmítnutých</item>
+        <item quantity="one">%1$s odmítnutý</item>
+        <item quantity="few">%1$s odmítnuté</item>
+        <item quantity="other">%1$s odmítnutých</item>
     </plurals>
 </resources>

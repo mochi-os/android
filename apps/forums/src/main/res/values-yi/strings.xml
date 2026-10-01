@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">מאָדערירן</string>
     <string name="forums_members_search">פֿילטרירן מיטגלידער</string>
     <string name="forums_banner_description">Markdown וואָס ווערט געוויזן אויבן אין פֿאָרום.</string>
-    <string name="forums_banner_placeholder">ברוכים הבאים צו דעם פֿאָרום…</string>
+    <string name="forums_banner_placeholder">אַרײַנשרײַבן באַנער־טעקסט (markdown ווערט געשטיצט)…</string>
     <string name="forums_ai_mode_label">מאָדע: %1$s</string>
     <string name="forums_ai_mode_heading">AI־מאָדע</string>
     <string name="forums_ai_mode_off">אומדערלויבט</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">טעג</string>
     <string name="forums_settings_banner_saved">באאנער געזיכערט</string>
     <string name="forums_settings_access_updated">צוטריט באַנײַט</string>
-    <string name="forums_settings_access_revoked">צוגאנג צונופגענומען</string>
+    <string name="forums_settings_access_revoked">צוטריט צוריקגענומען</string>
     <string name="forums_settings_member_removed">מיטגליד אַראָפּגענומען</string>
     <string name="forums_settings_prompt_saved">פּראָמפּט אויפֿגעהיט</string>
     <string name="forums_settings_section_identity">אידענטיטעט</string>

@@ -87,7 +87,6 @@
     <string name="market_checkout_shipping">Livraison</string>
     <string name="market_editor_shipping">Livraison</string>
     <string name="market_filter_delivery_shipping">Livraison</string>
-    <string name="market_listing_detail_shipping_heading">Livraison</string>
     <string name="market_purchase_shipping_line">Livraison</string>
     <string name="market_sale_section_shipping">Livraison</string>
     <string name="market_dispute_dialog_evidence_role_seller">Vendeur</string>
@@ -451,7 +450,6 @@
     <string name="market_messages_thread_title">Conversation</string>
     <string name="market_messages_unread_badge">%1$d non lus</string>
     <string name="market_open_sidebar">Ouvrir le menu</string>
-    <string name="market_price_from">à partir de %1$s</string>
     <string name="market_price_high_bid">Enchère la plus élevée : %1$s</string>
     <string name="market_price_instant_buy">achat immédiat : %1$s</string>
     <string name="market_price_per_month">%1$s / mois</string>

@@ -45,6 +45,8 @@
     <string name="route_delete_title">Rêgezê jê bibe?</string>
     <string name="route_path">Rê</string>
     <string name="route_method">Rêbaz</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Sepan</string>
     <string name="route_method_entity">Mîhengeh</string>
     <string name="route_method_redirect">Beralîkirin</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Ji packages.mochi-os.org daxe</string>
     <string name="system_status_copy">Kopî bike</string>
     <string name="system_status_peers">Hevpişk</string>
-    <string name="system_status_known">Naskirî</string>
+    <string name="system_status_peers_totals">Naskirî %1$s · Girêdayî %2$s · Tora weşanê %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Naskirî %1$s · Girêdayî %2$s</string>
     <string name="system_status_peer_connected">Girêdayî</string>
     <string name="system_status_peer_disconnected">Veqetandî</string>
     <string name="system_status_peer_queued">Peyamên di dorê de</string>
@@ -130,7 +133,7 @@
     <string name="system_settings_configured">Hatiye veavakirin</string>
     <string name="system_settings_save">Tomar bike</string>
     <string name="system_settings_clear">Paqij bike</string>
-    <string name="system_settings_reset">Bişkojka veguhastinê</string>
+    <string name="system_settings_reset">Ji nû ve saz bike</string>
     <string name="system_settings_reset_to_default">Ber bi standard ve veguhêze</string>
     <string name="system_settings_reset_title">Ber bi standard ve veguhêze?</string>
     <string name="system_setting_apps_install_user">Destûrê bide bikarhêneran ku sepanan saz bikin</string>
@@ -194,12 +197,12 @@
     <string name="system_users_toast_deleted">Bikarhêner hat jêbirin</string>
     <string name="system_users_toast_suspended">Bikarhêner hat sekinandin</string>
     <string name="system_users_toast_suspension_removed">Sekinandin hat rakirin</string>
-    <string name="system_users_toast_session_revoked">Danişîn betal kirin</string>
+    <string name="system_users_toast_session_revoked">Danişîn hate vekişandin</string>
     <string name="system_users_toast_create_failed">Çêkirina bikarhêner neserkeftî bû</string>
     <string name="system_users_toast_update_failed">Rojanekirina bikarhêner neserkeftî bû</string>
     <string name="system_users_toast_delete_failed">Jêbirina bikarhêner neserkeftî bû</string>
     <string name="system_users_toast_status_failed">Rojanekirina rewşa bikarhêner neserkeftî bû</string>
-    <string name="system_users_toast_revoke_failed">Betalkirina danîştinê neserkeftî bû</string>
+    <string name="system_users_toast_revoke_failed">Vekişandina danişînê bi ser neket</string>
 
     <string name="settings_home_sessions">Danîştin</string>
     <string name="settings_home_privacy">Polîtîkaya nepenîtiyê</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">Hûn êdî bi koda rastandêrê re nikarin têkevin.</string>
     <string name="account_recovery_none">Tu kodên vegerandinê hatine çêkirin.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d koda vegerandinê maye.</item>
-        <item quantity="other">%1$d kodên vegerandinê mane.</item>
+        <item quantity="one">%1$s koda vegerandinê maye.</item>
+        <item quantity="other">%1$s kodên vegerandinê mane.</item>
     </plurals>
     <string name="account_recovery_generate">Kodan çêbike</string>
     <string name="account_recovery_regenerate">Kodan ji nû ve çêbike</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">Bikaranîna dawî %1$s</string>
     <string name="route_delete_message">Ev dê riya rêya \"%1$s\" jêbibe.</string>
     <string name="route_empty">Tu rî mîhengkirî nin.</string>
-    <string name="route_meta">Pêşîn %1$d · %2$s</string>
+    <string name="route_meta">Pêşîn %1$s · %2$s</string>
     <string name="interests_search_placeholder">Mijar ji bo zêdekirinê bigere…</string>
     <string name="interests_empty">Hîn tu eleqe nin.</string>
     <string name="interests_summary_regenerate">Kurteyê ji nû ve biafirîne</string>
@@ -265,11 +268,11 @@
     <string name="system_users_delete_message">Ev dê bikarhêner \"%1$s\" her û her jêbibe. Ev kar nayê vegerandin.</string>
     <string name="system_users_sessions_title">Danîştinên %1$s</string>
     <string name="system_users_session_last_accessed">Gihîştina dawî: %1$s</string>
-    <string name="system_users_revoke_all_title">Hemû danîştinan paşve bibin?</string>
+    <string name="system_users_revoke_all_title">Hemû danişînan vekişîne?</string>
     <string name="system_users_revoke_all_message">Hemû danîştinên çalak ên vê bikarhênerê dê derkevin.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">%1$d–%2$d ji %3$d bikarhênerî tên nîşandan</item>
-        <item quantity="other">%1$d–%2$d ji %3$d bikarhêneran tên nîşandan</item>
+        <item quantity="one">%1$s–%2$s ji %3$s bikarhênerî tên nîşandan</item>
+        <item quantity="other">%1$s–%2$s ji %3$s bikarhêneran tên nîşandan</item>
     </plurals>
     <string name="account_title">Hesab</string>
     <string name="account_section_identity">Nasname</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS verifîke bike</string>
     <string name="settings_home_domains">Domain</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Test ji %1$d armancê re hat şandin</item>
-        <item quantity="other">Test ji %1$d armancan re hat şandin</item>
+        <item quantity="one">Test ji %1$s armancê re hat şandin</item>
+        <item quantity="other">Test ji %1$s armancan re hat şandin</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$d danişîn hat betalkirin</item>
-        <item quantity="other">%1$d danişîn hatin betalkirin</item>
+        <item quantity="one">%1$s danişîn hate vekişandin</item>
+        <item quantity="other">%1$s danişîn hatin vekişandin</item>
     </plurals>
     <string name="login_title">Têketin</string>
     <string name="login_section_methods">Rêbazên têketinê</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">Giştî</string>
     <string name="system_status_reachability_private">Taybet</string>
     <string name="system_status_reachability_unknown">Nediyar</string>
-    <string name="system_status_relay">Bi rêya relay</string>
-    <string name="system_status_mesh">Mesh-a weşanê</string>
+    <string name="system_status_reachability_relay">%1$s · bi rêya relê</string>
     <string name="system_status_broadcast">Weşana dawî</string>
     <string name="system_status_queued_broadcasts">Peyamên belavkirinê di rêzê de</string>
     <string name="system_setting_hostname_publish">Navê hostê û domeynan ji serverên din re ragihîne</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">Cara dawî hat dîtin %1$s</string>
     <string name="notifprefs_device_app">%1$s · sepan</string>
     <string name="notifprefs_device_push">%1$s · agahdariya push</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Test ji %2$d armancê bo %1$d hat şandin</item>
-        <item quantity="other">Test ji %2$d armancan bo %1$d hat şandin</item>
+        <item quantity="one">Test ji %2$s armancê bo %1$s hat şandin</item>
+        <item quantity="other">Test ji %2$s armancan bo %1$s hat şandin</item>
     </plurals>
     <string name="notifprefs_test_none">Tu cîh nehatine mîhengkirin</string>
     <string name="notifprefs_transport_fcm">Push a Android</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">Guhertin bên avêtin?</string>
     <string name="system_documents_discard">Bavêje</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d serketî</item>
-        <item quantity="other">%1$d serketî</item>
+        <item quantity="one">%1$s serketî</item>
+        <item quantity="other">%1$s serketî</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d neserketî</item>
-        <item quantity="other">%1$d neserketî</item>
+        <item quantity="one">%1$s neserketî</item>
+        <item quantity="other">%1$s neserketî</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d rezervasyon</item>
-        <item quantity="other">%1$d / %2$d rezervasyon</item>
+        <item quantity="one">%1$s / %2$s rezervasyon</item>
+        <item quantity="other">%1$s / %2$s rezervasyon</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d girêdan</item>
-        <item quantity="other">%1$d girêdan</item>
+        <item quantity="one">%1$s girêdan</item>
+        <item quantity="other">%1$s girêdan</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d redkirî</item>
-        <item quantity="other">%1$d redkirî</item>
+        <item quantity="one">%1$s redkirî</item>
+        <item quantity="other">%1$s redkirî</item>
     </plurals>
 </resources>

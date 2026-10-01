@@ -96,9 +96,9 @@
     <string name="wikis_delete_page_confirm">Șterge</string>
     <string name="wikis_delete_page_cancel">Anulează</string>
     <string name="wikis_delete_page_failed">Ștergerea paginii a eșuat</string>
-    <string name="wikis_revert_page_comment_label">Anulează modificarea comentariului</string>
+    <string name="wikis_revert_page_comment_label">Comentariu pentru restaurare</string>
     <string name="wikis_revert_page_confirm">Restaurează</string>
-    <string name="wikis_revert_page_failed">Restabilirea paginii a eșuat</string>
+    <string name="wikis_revert_page_failed">Restaurarea paginii a eșuat</string>
     <string name="wikis_rename_page_title">Redenumește pagina</string>
     <string name="wikis_rename_page_label">URL nou</string>
     <string name="wikis_rename_page_redirects">Creează redirecționare de la URL-ul vechi</string>
@@ -110,9 +110,9 @@
     <string name="wikis_history_title">Istoric</string>
     <string name="wikis_history_empty">Nu s-au găsit revizii</string>
     <string name="wikis_history_view_action">Vizualizează</string>
-    <string name="wikis_history_revert_action">Revino la această versiune</string>
+    <string name="wikis_history_revert_action">Restaurează această versiune</string>
     <string name="wikis_revision_current_badge">Curent</string>
-    <string name="wikis_revision_revert_to_this">Revino la această versiune</string>
+    <string name="wikis_revision_revert_to_this">Restaurează această versiune</string>
     <string name="wikis_changes_title">Modificări recente</string>
     <string name="wikis_changes_subtitle">Editări recente din toate paginile acestui wiki.</string>
     <string name="wikis_changes_empty">Încă nicio modificare</string>
@@ -339,6 +339,6 @@
     <plurals name="wikis_comments_truncated">
         <item quantity="one">Se afișează primul %1$d comentariu.</item>
         <item quantity="few">Se afișează primele %1$d comentarii.</item>
-        <item quantity="other">Se afișează primele %1$d comentarii.</item>
+        <item quantity="other">Se afișează primele %1$d de comentarii.</item>
     </plurals>
 </resources>

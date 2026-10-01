@@ -368,8 +368,8 @@
         <item quantity="one">%1$d fajl f\'kunflitt</item>
         <item quantity="two">%1$d fajls f\'kunflitt</item>
         <item quantity="few">%1$d fajls f\'kunflitt</item>
-        <item quantity="many">%1$d fajls f\'kunflitt</item>
-        <item quantity="other">%1$d fajls f\'kunflitt</item>
+        <item quantity="many">%1$d fajl f\'kunflitt</item>
+        <item quantity="other">%1$d fajl f\'kunflitt</item>
     </plurals>
     <string name="projects_design_export_saved">Id-disinn ġie salvat</string>
     <string name="projects_design_import_failed">Ma setax jinqara dak il-fajl</string>

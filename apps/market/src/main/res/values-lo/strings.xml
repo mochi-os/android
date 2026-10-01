@@ -725,8 +725,8 @@
     <string name="market_audit_account_stripe_onboarded">Stripe ເຂົ້າຮ່ວມແລ້ວ</string>
     <string name="market_audit_account_stripe_restricted">Stripe ຖືກຈຳກັດ</string>
     <string name="market_audit_account_suspended">ໂຈະໃນຖານະຜູ້ຂາຍ</string>
-    <string name="market_audit_account_unbanned">ຍົກເລີກການແບນແລ້ວ</string>
-    <string name="market_audit_account_unsuspended">ຍົກເລີກການໂຈະແລ້ວ</string>
+    <string name="market_audit_account_unbanned">ປົດການແບນແລ້ວ</string>
+    <string name="market_audit_account_unsuspended">ປົດການໂຈະແລ້ວ</string>
     <string name="market_audit_auction_bid_placed">ປະມູນແລ້ວ</string>
     <string name="market_audit_auction_created">ສ້າງການປະມູນແລ້ວ</string>
     <string name="market_audit_auction_ended_sold">ການປະມູນຂາຍແລ້ວ</string>

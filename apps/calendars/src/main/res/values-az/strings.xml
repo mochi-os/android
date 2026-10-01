@@ -161,7 +161,7 @@
     <string name="calendars_event_copied">Tədbir kopyalandı</string>
     <string name="calendars_scope_copy">Bu tədbiri kopyala</string>
     <string name="calendars_editor_copy_title">Tədbiri kopyala</string>
-    <string name="calendars_title_required">Yan paneli açıb-bağla</string>
+    <string name="calendars_title_required">Başlıq tələb olunur</string>
     <string name="calendars_link_submit">Əlaqələndir</string>
     <string name="calendars_link_sync">İndi sinxronlaşdır</string>
     <string name="calendars_link_grant">Təqvimə girişə icazə ver</string>

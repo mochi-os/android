@@ -60,7 +60,7 @@
     <string name="notifications_empty">Teavitusi pole</string>
     <string name="notifications_empty_unread">Oled kõigega kursis</string>
     <string name="notifications_tab_unread">Lugemata</string>
-    <string name="notifications_tab_unread_count">Lugemata (%1$d)</string>
+    <string name="notifications_tab_unread_count">Lugemata (%1$s)</string>
     <string name="notifications_tab_all">Kõik</string>
     <string name="notifications_mark_all_read">Märgi kõik loetuks</string>
     <string name="notifications_clear_all">Tühjenda kõik</string>
@@ -303,8 +303,8 @@
     <string name="rss_revoke">Eemalda juurdepääs</string>
     <string name="rss_revoke_title">Kas võtta RSS-i juurdepääs ära?</string>
     <string name="rss_revoke_message">Kõik, mis on selle voo tellinud, lakkab seda saamast. Pärast saad kopeerida uue URL-i.</string>
-    <string name="rss_revoked">RSS-juurdepääs tühistatud</string>
-    <string name="rss_revoke_failed">RSS-juurdepääsu tühistamine ebaõnnestus</string>
+    <string name="rss_revoked">RSS-i juurdepääs võeti ära</string>
+    <string name="rss_revoke_failed">RSS-i juurdepääsu äravõtmine ebaõnnestus</string>
     <string name="game_empty_title">Mänge veel pole</string>
     <string name="game_select_title">Vali mäng</string>
     <string name="game_select_subtitle">Vali külgribalt mäng või alusta uut.</string>

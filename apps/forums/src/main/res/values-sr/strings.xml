@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">Модерација</string>
     <string name="forums_members_search">Филтрирај чланове</string>
     <string name="forums_banner_description">Markdown приказан на врху форума.</string>
-    <string name="forums_banner_placeholder">Добро дошли на овај форум…</string>
+    <string name="forums_banner_placeholder">Унесите текст банера (подржан је Markdown)…</string>
     <string name="forums_ai_mode_label">Режим: %1$s</string>
     <string name="forums_ai_mode_heading">AI режим</string>
     <string name="forums_ai_mode_off">Онемогућено</string>
@@ -206,7 +206,7 @@
         <item quantity="few">%d нове објаве</item>
         <item quantity="other">%d нових објава</item>
     </plurals>
-    <string name="forums_rss_feed">RSS извор</string>
+    <string name="forums_rss_feed">RSS фид</string>
     <string name="forums_rss_mode_posts">Постови</string>
     <string name="forums_rss_mode_posts_comments">Постови и коментари</string>
     <string name="forums_rss_copied">RSS URL копиран у клипборд</string>
@@ -294,7 +294,7 @@
     <string name="forums_settings_ai_updated">AI подешавања ажурирана</string>
     <string name="forums_settings_forum_renamed">Форум преименован</string>
     <string name="forums_settings_name_clear_cd">Обриши назив</string>
-    <string name="forums_settings_unsubscribe_section">Одјава са форума</string>
+    <string name="forums_settings_unsubscribe_section">Прекини претплату на форум</string>
     <string name="forums_share_link_title">Веза форума</string>
     <string name="forums_find_found_by_url">Пронађено преко URL-а</string>
     <string name="forums_moderation_pending_posts">Објаве на чекању (%1$d)</string>

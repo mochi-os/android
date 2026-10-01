@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">મધ્યસ્થી</string>
     <string name="forums_members_search">સભ્યો ફિલ્ટર કરો</string>
     <string name="forums_banner_description">ફોરમની ટોચ પર બતાવેલ Markdown.</string>
-    <string name="forums_banner_placeholder">આ ફોરમમાં આપનું સ્વાગત છે…</string>
+    <string name="forums_banner_placeholder">બેનરનો ટેક્સ્ટ દાખલ કરો (Markdown સમર્થિત)…</string>
     <string name="forums_ai_mode_label">મોડ: %1$s</string>
     <string name="forums_ai_mode_heading">AI મોડ</string>
     <string name="forums_ai_mode_off">નિષ્ક્રિય</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">દિવસો</string>
     <string name="forums_settings_banner_saved">બેનર સાન્વ્યો</string>
     <string name="forums_settings_access_updated">ઍક્સેસ અપડેટ થયું</string>
-    <string name="forums_settings_access_revoked">એક્સેસ રદ કર્યો</string>
+    <string name="forums_settings_access_revoked">ઍક્સેસ પાછું ખેંચ્યું</string>
     <string name="forums_settings_member_removed">સભ્ય દૂર કર્યા</string>
     <string name="forums_settings_prompt_saved">પ્રોમ્પ્ટ સાચવ્યું</string>
     <string name="forums_settings_section_identity">ઓળખ</string>

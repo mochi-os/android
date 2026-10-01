@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">Anyar</string>
     <string name="projects_settings_section_identity">Identitas</string>
     <string name="projects_settings_access_updated">Akses dianyari</string>
-    <string name="projects_settings_access_revoked">Akses dibatalake</string>
+    <string name="projects_settings_access_revoked">Akses dicabut</string>
     <string name="projects_settings_section_access">Manajemen Akses</string>
     <string name="projects_people_search">Golek wong</string>
     <string name="projects_settings_field_entity_id">ID Entitas</string>

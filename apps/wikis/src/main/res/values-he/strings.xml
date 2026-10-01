@@ -41,7 +41,7 @@
     <string name="wikis_rss_copied">כתובת ה-URL של RSS הועתקה ללוח</string>
     <string name="wikis_rss_failed">קבלת טוקן RSS נכשלה</string>
     <string name="wikis_rss_revoke">שלול גישה</string>
-    <string name="wikis_rss_revoked">גישת RSS בוטלה</string>
+    <string name="wikis_rss_revoked">גישת RSS נשללה</string>
     <string name="wikis_find_title">חפש ויקיים</string>
     <string name="wikis_find_no_results">לא נמצאו ויקיים</string>
     <string name="wikis_find_recommended_section">ויקיים מומלצים</string>

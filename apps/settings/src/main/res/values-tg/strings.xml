@@ -45,6 +45,8 @@
     <string name="route_delete_title">Роҳро нест кунем?</string>
     <string name="route_path">Роҳ</string>
     <string name="route_method">Усул</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Барнома</string>
     <string name="route_method_entity">Объект</string>
     <string name="route_method_redirect">Тағйири масир</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Аз packages.mochi-os.org боргирӣ кунед</string>
     <string name="system_status_copy">Нусхабардорӣ</string>
     <string name="system_status_peers">Ҳамтарафҳо</string>
-    <string name="system_status_known">Маълум</string>
+    <string name="system_status_peers_totals">Маълум %1$s · Пайваст %2$s · Шабакаи пахш %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Маълум %1$s · Пайваст %2$s</string>
     <string name="system_status_peer_connected">Пайваст шуда</string>
     <string name="system_status_peer_disconnected">Ҷудо шуда</string>
     <string name="system_status_peer_queued">Паёмҳои дар навбат</string>
@@ -110,7 +113,7 @@
     <string name="system_documents_language">Забон</string>
     <string name="system_documents_no_language">Барои ин забон ҳуҷҷат дастрас нест.</string>
     <string name="system_documents_using_default">Пешфарзи бастабандишуда истифода мешавад</string>
-    <string name="system_documents_revert">Бекор кардан ба нобаёнӣ</string>
+    <string name="system_documents_revert">Бозгардонидан ба нобаёнӣ</string>
     <string name="system_documents_save">Захира</string>
     <string name="system_documents_saved">Ҳуҷҷат захира шуд</string>
     <string name="system_documents_save_failed">Захира кардани ҳуҷҷат ба анҷом нарасид</string>
@@ -194,12 +197,12 @@
     <string name="system_users_toast_deleted">Корбар нест карда шуд</string>
     <string name="system_users_toast_suspended">Корбар боздошта шуд</string>
     <string name="system_users_toast_suspension_removed">Боздорӣ хориҷ карда шуд</string>
-    <string name="system_users_toast_session_revoked">Сессия бекор карда шуд</string>
+    <string name="system_users_toast_session_revoked">Сессия бозхонд карда шуд</string>
     <string name="system_users_toast_create_failed">Эҷоди корбар ба анҷом нарасид</string>
     <string name="system_users_toast_update_failed">Навсозии корбар ба анҷом нарасид</string>
     <string name="system_users_toast_delete_failed">Ҳазфи корбар ба анҷом нарасид</string>
     <string name="system_users_toast_status_failed">Навсозии ҳолати корбар ба анҷом нарасид</string>
-    <string name="system_users_toast_revoke_failed">Лағви ҷаласа ба анҷом нарасид</string>
+    <string name="system_users_toast_revoke_failed">Бозхонд кардани сессия ба анҷом нарасид</string>
 
     <string name="settings_home_sessions">Сессияҳо</string>
     <string name="settings_home_privacy">Сиёсати махфият</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">Шумо дигар бо коди тасдиқкунанда ворид шуда наметавонед.</string>
     <string name="account_recovery_none">Кодҳои барқарорсозӣ эҷод нашудаанд.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d коди барқарорсозӣ боқӣ мондааст.</item>
-        <item quantity="other">%1$d коди барқарорсозӣ боқӣ мондааст.</item>
+        <item quantity="one">%1$s коди барқарорсозӣ боқӣ мондааст.</item>
+        <item quantity="other">%1$s коди барқарорсозӣ боқӣ мондааст.</item>
     </plurals>
     <string name="account_recovery_generate">Кодҳо эҷод кунед</string>
     <string name="account_recovery_regenerate">Кодҳоро аз нав эҷод кунед</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">Истифодаи охирин %1$s</string>
     <string name="route_delete_message">Ин роҳро барои масири \"%1$s\" нест мекунад.</string>
     <string name="route_empty">Роҳҳои танзимшуда нестанд.</string>
-    <string name="route_meta">Афзалият %1$d · %2$s</string>
+    <string name="route_meta">Афзалият %1$s · %2$s</string>
     <string name="interests_search_placeholder">Мавзӯъҳоро барои илова ҷустуҷӯ кунед…</string>
     <string name="interests_empty">Ҳанӯз шавқҳо нестанд.</string>
     <string name="interests_summary_regenerate">Хулосаро аз нав сохтан</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">Бозхонд кардани ҳамаи сессияҳо?</string>
     <string name="system_users_revoke_all_message">Ҳамаи сессияҳои фаъоли ин корбар баромад мекунанд.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">Нишон додани %1$d–%2$d аз %3$d корбар</item>
-        <item quantity="other">Нишон додани %1$d–%2$d аз %3$d корбар</item>
+        <item quantity="one">Нишон додани %1$s–%2$s аз %3$s корбар</item>
+        <item quantity="other">Нишон додани %1$s–%2$s аз %3$s корбар</item>
     </plurals>
     <string name="account_title">Ҳисоб</string>
     <string name="account_section_identity">Шахсият</string>
@@ -303,11 +306,11 @@
     <string name="domain_verify">Тасдиқи DNS</string>
     <string name="settings_home_domains">Доменҳо</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Санҷиш ба %1$d мақсад фиристода шуд</item>
-        <item quantity="other">Санҷиш ба %1$d мақсад фиристода шуд</item>
+        <item quantity="one">Санҷиш ба %1$s мақсад фиристода шуд</item>
+        <item quantity="other">Санҷиш ба %1$s мақсад фиристода шуд</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="other">%1$d сессия бекор карда шуд</item>
+        <item quantity="other">%1$s сессия бозхонд карда шуд</item>
     </plurals>
     <string name="login_title">Вуруд</string>
     <string name="login_section_methods">Усулҳои воридшавӣ</string>
@@ -338,8 +341,7 @@
     <string name="system_status_reachability_public">Ҷамъиятӣ</string>
     <string name="system_status_reachability_private">Хусусӣ</string>
     <string name="system_status_reachability_unknown">Номаълум</string>
-    <string name="system_status_relay">Тавассути реле</string>
-    <string name="system_status_mesh">Меши пахш</string>
+    <string name="system_status_reachability_relay">%1$s · тавассути реле</string>
     <string name="system_status_broadcast">Пахши охирин</string>
     <string name="system_status_queued_broadcasts">Паёмҳои пахши навбатӣ</string>
     <string name="system_setting_hostname_publish">Эълони номи ҳост ва доменҳо ба серверҳои дигар</string>
@@ -372,9 +374,11 @@
     <string name="accounts_device_seen">Бори охир дида шуд %1$s</string>
     <string name="notifprefs_device_app">%1$s · барнома</string>
     <string name="notifprefs_device_push">%1$s · пуш</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Санҷиш ба %1$d аз %2$d мақсад фиристода шуд</item>
-        <item quantity="other">Санҷиш ба %1$d аз %2$d мақсад фиристода шуд</item>
+        <item quantity="one">Санҷиш ба %1$s аз %2$s мақсад фиристода шуд</item>
+        <item quantity="other">Санҷиш ба %1$s аз %2$s мақсад фиристода шуд</item>
     </plurals>
     <string name="notifprefs_test_none">Ягон ҷои таъинот танзим нашудааст</string>
     <string name="notifprefs_transport_fcm">Огоҳиҳои пуш барои Android</string>
@@ -398,23 +402,23 @@
     <string name="system_documents_discard_title">Тағйирот партофта шаванд?</string>
     <string name="system_documents_discard">Партофтан</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d муваффақ</item>
-        <item quantity="other">%1$d муваффақ</item>
+        <item quantity="one">%1$s муваффақ</item>
+        <item quantity="other">%1$s муваффақ</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d ноком</item>
-        <item quantity="other">%1$d ноком</item>
+        <item quantity="one">%1$s ноком</item>
+        <item quantity="other">%1$s ноком</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d захира</item>
-        <item quantity="other">%1$d / %2$d захира</item>
+        <item quantity="one">%1$s / %2$s захира</item>
+        <item quantity="other">%1$s / %2$s захира</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d занҷир</item>
-        <item quantity="other">%1$d занҷир</item>
+        <item quantity="one">%1$s занҷир</item>
+        <item quantity="other">%1$s занҷир</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d рад шуд</item>
-        <item quantity="other">%1$d рад шуд</item>
+        <item quantity="one">%1$s рад шуд</item>
+        <item quantity="other">%1$s рад шуд</item>
     </plurals>
 </resources>

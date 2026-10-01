@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">ፈጽሞ አልተወሰደም</string>
     <string name="feeds_source_poll">ቅኝት</string>
     <string name="feeds_source_transform">AI ለውጥ</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" ይወገድ?</string>
-    <string name="feeds_remove_also_delete_posts">የተመጡ ልጥፎችን ደግሞ ሰርዝ</string>
+    <string name="feeds_remove_source_confirm">ይህ ከ\"%1$s\" ይዘት ማስመጣትን ያቆማል።</string>
+    <string name="feeds_remove_also_delete_posts">ከዚህ ምንጭ የመጡ ልጥፎችንም ሰርዝ</string>
     <string name="feeds_suggested_credibility_title">የተጠቆመ ታማኝነት</string>
     <string name="feeds_suggested_credibility_body">Mochi የ%1$d ታማኝነት ይጠቁማል። ይቀበሉ?</string>
     <string name="feeds_suggested_credibility_keep">ያለውን አቆይ</string>

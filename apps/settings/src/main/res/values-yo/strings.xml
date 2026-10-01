@@ -45,6 +45,8 @@
     <string name="route_delete_title">Pa ọ̀nà rẹ́?</string>
     <string name="route_path">Ọ̀nà</string>
     <string name="route_method">Ọ̀nà</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">App</string>
     <string name="route_method_entity">Ẹ̀ka</string>
     <string name="route_method_redirect">Ìdarí</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Gba lati packages.mochi-os.org</string>
     <string name="system_status_copy">Ṣe àdàkọ</string>
     <string name="system_status_peers">Àwọn èkànná</string>
-    <string name="system_status_known">Tí a mọ̀</string>
+    <string name="system_status_peers_totals">Tí a mọ̀ %1$s · Tí a so pọ̀ %2$s · Mesh ìgbóhùnsáfẹ́fẹ́ %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Tí a mọ̀ %1$s · Tí a so pọ̀ %2$s</string>
     <string name="system_status_peer_connected">Tí a so pọ̀</string>
     <string name="system_status_peer_disconnected">Ti ge asopọ̀</string>
     <string name="system_status_peer_queued">Àwọn ìfiránṣẹ́ nínú ìlà</string>
@@ -194,7 +197,7 @@
     <string name="system_users_toast_deleted">User ti pa rẹ́</string>
     <string name="system_users_toast_suspended">A ti dáwọ́ olùṣàmúlò dúró</string>
     <string name="system_users_toast_suspension_removed">Ìdúró ti yọ kúrò</string>
-    <string name="system_users_toast_session_revoked">Session ti fagi lé</string>
+    <string name="system_users_toast_session_revoked">A ti gba ìpàdé padà</string>
     <string name="system_users_toast_create_failed">Kò lè dá oníṣe</string>
     <string name="system_users_toast_update_failed">Kò lè mú oníṣe dòde</string>
     <string name="system_users_toast_delete_failed">Kò lè pa oníṣe rẹ́</string>
@@ -216,7 +219,7 @@
     <string name="account_totp_disable_message">O kò ní lè wọlé pẹ̀lú kóòdù àṣàfọ́jú mọ́.</string>
     <string name="account_recovery_none">Kò sí àwọn kóòdù ìgbàpadà tí a ṣe.</string>
     <plurals name="account_recovery_count">
-        <item quantity="other">Kóòdù ìgbàpadà %1$d ló kù.</item>
+        <item quantity="other">Kóòdù ìgbàpadà %1$s ló kù.</item>
     </plurals>
     <string name="account_recovery_generate">Ṣe àwọn kóòdù</string>
     <string name="account_recovery_regenerate">Ṣe àwọn kóòdù lẹ́ẹ̀kan sí</string>
@@ -233,7 +236,7 @@
     <string name="account_last_used">Lò gbẹyìn %1$s</string>
     <string name="route_delete_message">Èyí yóò mú ọ̀nà fún ọ̀nà \"%1$s\" kúrò.</string>
     <string name="route_empty">Kò sí àwọn ọ̀nà tí a tò.</string>
-    <string name="route_meta">Ìpataki %1$d · %2$s</string>
+    <string name="route_meta">Ìpataki %1$s · %2$s</string>
     <string name="interests_search_placeholder">Wá àwọn ohun láti fikún…</string>
     <string name="interests_empty">Kò sí àwọn ìfẹ́ síbẹ̀.</string>
     <string name="interests_summary_regenerate">Tún ìṣàkójọ dá</string>
@@ -267,7 +270,7 @@
     <string name="system_users_revoke_all_title">Gba gbogbo ìpàdé padà?</string>
     <string name="system_users_revoke_all_message">Gbogbo àwọn ìpàdé tó nṣiṣẹ́ ti olùmúlò yìí yóò jáde.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="other">Ń fi %1$d–%2$d nínú %3$d olùmúlò hàn</item>
+        <item quantity="other">Ń fi %1$s–%2$s nínú %3$s olùmúlò hàn</item>
     </plurals>
     <string name="account_title">Àkáǹtì</string>
     <string name="account_section_identity">Ìdánimọ̀</string>
@@ -301,11 +304,11 @@
     <string name="domain_verify">Ṣe ẹ̀rí DNS</string>
     <string name="settings_home_domains">Àwọn domain</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">A rán ìdánwò sí ibi %1$d</item>
-        <item quantity="other">A rán ìdánwò sí ibi %1$d</item>
+        <item quantity="one">A rán ìdánwò sí ibi %1$s</item>
+        <item quantity="other">A rán ìdánwò sí ibi %1$s</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="other">Gbé ìpàdé %1$d padà</item>
+        <item quantity="other">A ti gba ìpàdé %1$s padà</item>
     </plurals>
     <string name="login_title">Wọlé</string>
     <string name="login_section_methods">Àwọn ọ̀nà ìwọlé</string>
@@ -336,8 +339,7 @@
     <string name="system_status_reachability_public">Gbangba</string>
     <string name="system_status_reachability_private">Aṣírí</string>
     <string name="system_status_reachability_unknown">Aláìmọ̀</string>
-    <string name="system_status_relay">Nípasẹ̀ relay</string>
-    <string name="system_status_mesh">Mesh ìgbóhùnsáfẹ́fẹ́</string>
+    <string name="system_status_reachability_relay">%1$s · nípasẹ̀ àfisẹ́</string>
     <string name="system_status_broadcast">Ìgbóhùnsáfẹ́fẹ́ tó kẹ́yìn</string>
     <string name="system_status_queued_broadcasts">Àwọn iṣẹ́ ìgbóhùnsáfẹ́fẹ́ tó wà ní ìlà</string>
     <string name="system_setting_hostname_publish">Kéde orúkọ agbàlejò àti àwọn domain sí àwọn olupin míràn</string>
@@ -370,8 +372,10 @@
     <string name="accounts_device_seen">Tí a rí kẹ́yìn %1$s</string>
     <string name="notifprefs_device_app">%1$s · app</string>
     <string name="notifprefs_device_push">%1$s · ìfitónilétí push</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="other">A fi ìdánwò ránṣẹ́ sí %1$d nínú %2$d àyè</item>
+        <item quantity="other">A fi ìdánwò ránṣẹ́ sí %1$s nínú %2$s àyè</item>
     </plurals>
     <string name="notifprefs_test_none">A kò ṣètò àwọn ibi-àfojúsùn kankan</string>
     <string name="notifprefs_transport_fcm">Ìfitónilétí push Android</string>
@@ -395,18 +399,18 @@
     <string name="system_documents_discard_title">Sọ àwọn àyípadà nù?</string>
     <string name="system_documents_discard">Sọ nù</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="other">%1$d aṣeyọrí</item>
+        <item quantity="other">%1$s aṣeyọrí</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="other">%1$d kùnà</item>
+        <item quantity="other">%1$s kùnà</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="other">%1$d / %2$d àkọsílẹ̀</item>
+        <item quantity="other">%1$s / %2$s àkọsílẹ̀</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="other">%1$d àyíká</item>
+        <item quantity="other">%1$s àyíká</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="other">%1$d kọ̀</item>
+        <item quantity="other">%1$s kọ̀</item>
     </plurals>
 </resources>

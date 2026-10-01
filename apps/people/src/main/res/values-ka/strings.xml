@@ -8,7 +8,7 @@
     <string name="people_person_title">პიროვნება</string>
     <string name="people_friends_search_placeholder">ძიება…</string>
     <string name="people_friends_no_people_found">ხალხი ვერ მოიძებნა</string>
-    <string name="people_friends_try_adjusting">სცადეთ ფილტრების კორექტირება ან გასუფთავება</string>
+    <string name="people_friends_try_adjusting">სცადეთ ძიების შეცვლა</string>
     <string name="people_friends_pending">მოლოდინში</string>
     <string name="people_friends_received_tab">მიღებული</string>
     <string name="people_friends_sent_tab">გაგზავნილი</string>
@@ -120,7 +120,7 @@
     <string name="people_contacts_accept">მიღება</string>
     <string name="people_contacts_message">შეტყობინების გაგზავნა</string>
     <string name="people_contacts_no_people_found">ხალხი ვერ მოიძებნა</string>
-    <string name="people_contacts_try_adjusting">სცადეთ ფილტრების კორექტირება ან გასუფთავება</string>
+    <string name="people_contacts_try_adjusting">სცადეთ ძიების შეცვლა</string>
     <string name="people_contact_section_address">მისამართი</string>
     <string name="people_contact_section_detail">დეტალები</string>
     <string name="people_contact_name">სახელი</string>

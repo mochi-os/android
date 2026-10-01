@@ -326,9 +326,9 @@
         <item quantity="other">%d stranica s ovom oznakom</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Pronađeno %1$d rezultat za "%2$s"</item>
-        <item quantity="few">Pronađeno %1$d rezultata za "%2$s"</item>
-        <item quantity="other">Pronađeno %1$d rezultata za "%2$s"</item>
+        <item quantity="one">Pronađen %1$d rezultat za \"%2$s\"</item>
+        <item quantity="few">Pronađena %1$d rezultata za \"%2$s\"</item>
+        <item quantity="other">Pronađeno %1$d rezultata za \"%2$s\"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Opis nije bilo moguće spremiti</string>
     <string name="wikis_attachments_upload_types">Podržane datoteke: slike, PDF, DOC, DOCX, TXT i MD.</string>
@@ -338,7 +338,7 @@
     <string name="wikis_rss_exists">Ovaj URL kanala već je izdan i ne može se ponovno prikazati.</string>
     <plurals name="wikis_comments_truncated">
         <item quantity="one">Prikazuje se prvi %1$d komentar.</item>
-        <item quantity="few">Prikazuje se prvih %1$d komentara.</item>
+        <item quantity="few">Prikazuju se prva %1$d komentara.</item>
         <item quantity="other">Prikazuje se prvih %1$d komentara.</item>
     </plurals>
 </resources>

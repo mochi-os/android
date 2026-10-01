@@ -259,7 +259,7 @@
     <string name="crm_settings_section_access">Pengurusan Akses</string>
     <string name="crm_settings_not_set">Tidak ditetapkan</string>
     <string name="crm_settings_access_updated">Akses dikemas kini</string>
-    <string name="crm_settings_access_revoked">Akses dibatalkan</string>
+    <string name="crm_settings_access_revoked">Akses ditarik balik</string>
     <string name="crm_people_search">Cari orang</string>
     <string name="crm_access_tab_other">Lain-lain</string>
     <string name="crm_access_select_group">Pilih kumpulan</string>

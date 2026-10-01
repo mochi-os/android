@@ -60,7 +60,7 @@
     <string name="notifications_empty">Asnjë njoftim</string>
     <string name="notifications_empty_unread">S\'ke asgjë për të parë</string>
     <string name="notifications_tab_unread">Pa lexuar</string>
-    <string name="notifications_tab_unread_count">Të palexuara (%1$d)</string>
+    <string name="notifications_tab_unread_count">Të palexuara (%1$s)</string>
     <string name="notifications_tab_all">Të gjitha</string>
     <string name="notifications_mark_all_read">Shëno të gjitha si të lexuara</string>
     <string name="notifications_clear_all">Pastro të gjitha</string>
@@ -303,8 +303,8 @@
     <string name="rss_revoke">Revoko aksesin</string>
     <string name="rss_revoke_title">Të revokohet qasja RSS?</string>
     <string name="rss_revoke_message">Gjithçka e abonuar në këtë prurje do të ndalojë ta marrë. Më pas mund të kopjoni një URL të ri.</string>
-    <string name="rss_revoked">Aksesi RSS u anulua</string>
-    <string name="rss_revoke_failed">Anulimi i aksesit RSS dështoi</string>
+    <string name="rss_revoked">Qasja RSS u revokua</string>
+    <string name="rss_revoke_failed">Revokimi i qasjes RSS dështoi</string>
     <string name="game_empty_title">Ende pa lojëra</string>
     <string name="game_select_title">Zgjidh një lojë</string>
     <string name="game_select_subtitle">Zgjidh një lojë nga shiriti anësor ose nis një të re.</string>

@@ -69,7 +69,7 @@
     <string name="forums_banner_dismiss">ബാനർ ഒഴിവാക്കുക</string>
     <string name="forums_ai_mode_tag">ടാഗ് ചെയ്യുക</string>
     <string name="forums_ai_account_default">ഡിഫോൾട്ട് അക്കൗണ്ട്</string>
-    <string name="forums_ai_prompt_reset">ഡിഫോൾട്ടിലേക്ക് റീസെറ്റ് ചെയ്യണോ?</string>
+    <string name="forums_ai_prompt_reset">ഡിഫോൾട്ടിലേക്ക് പുനഃസജ്ജമാക്കുക</string>
     <string name="forums_settings_unsubscribe">അൺസബ്സ്ക്രൈബ് ചെയ്യുക</string>
     <string name="forums_moderation_title">മോഡറേഷൻ</string>
     <string name="forums_moderation_tab_queue">ക്യൂ</string>
@@ -88,9 +88,9 @@
     <string name="forums_moderation_restriction_type_banned">വിലക്കുക</string>
     <string name="forums_moderation_section_premoderation">മുൻ-മോഡറേഷൻ</string>
     <string name="forums_moderation_section_ratelimiting">റേറ്റ് പരിധി</string>
-    <string name="forums_moderation_require_posts">പുതിയ ഉപയോക്താക്കൾക്ക് അംഗീകാരം ആവശ്യപ്പെടുക</string>
-    <string name="forums_moderation_require_comments">പുതിയ പോസ്റ്റുകൾക്ക് അംഗീകാരം ആവശ്യപ്പെടുക</string>
-    <string name="forums_moderation_require_new_users">ഡൊമെയ്ൻ verification ആവശ്യപ്പെടുക</string>
+    <string name="forums_moderation_require_posts">പുതിയ പോസ്റ്റുകൾക്ക് അംഗീകാരം ആവശ്യപ്പെടുക</string>
+    <string name="forums_moderation_require_comments">പുതിയ അഭിപ്രായങ്ങൾക്ക് അംഗീകാരം ആവശ്യപ്പെടുക</string>
+    <string name="forums_moderation_require_new_users">പുതിയ ഉപയോക്താക്കൾക്ക് അംഗീകാരം ആവശ്യപ്പെടുക</string>
     <string name="forums_moderation_new_user_days">പുതിയ ഉപയോക്താവിന്റെ പരിധി:</string>
     <string name="forums_moderation_post_limit">പോസ്റ്റ് പരിധി</string>
     <string name="forums_moderation_comment_limit">അഭിപ്രായ പരിധി</string>
@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">മോഡറേറ്റ് ചെയ്യുക</string>
     <string name="forums_members_search">അംഗങ്ങളെ ഫിൽട്ടർ ചെയ്യുക</string>
     <string name="forums_banner_description">ഫോറത്തിന്റെ മുകളിൽ കാണിക്കുന്ന മാർക്ക്ഡൗൺ.</string>
-    <string name="forums_banner_placeholder">ഈ ഫോറത്തിലേക്ക് സ്വാഗതം…</string>
+    <string name="forums_banner_placeholder">ബാനർ ടെക്സ്റ്റ് നൽകുക (മാർക്ക്ഡൗൺ പിന്തുണയ്ക്കുന്നു)…</string>
     <string name="forums_ai_mode_label">മോഡ്: %1$s</string>
     <string name="forums_ai_mode_heading">AI മോഡ്</string>
     <string name="forums_ai_mode_off">പ്രവർത്തനരഹിതം</string>
@@ -185,8 +185,8 @@
     <string name="forums_settings_delete_message">ഇത് ഫോറവും അതിന്റെ എല്ലാ പോസ്റ്റുകളും ശാശ്വതമായി ഇല്ലാതാക്കും. ഇത് പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
 
     <string name="forums_tag_interest_up">താൽപ്പര്യം വർദ്ധിപ്പിക്കുക</string>
-    <string name="forums_tag_interest_down">പുതുക്കുക</string>
-    <string name="forums_tag_interest_remove">item നീക്കം ചെയ്യുക</string>
+    <string name="forums_tag_interest_down">താൽപ്പര്യം കുറയ്ക്കുക</string>
+    <string name="forums_tag_interest_remove">താൽപ്പര്യം നീക്കം ചെയ്യുക</string>
     <string name="forums_access_tab_users">ഉപയോക്താക്കൾ</string>
     <string name="forums_access_tab_groups">ഗ്രൂപ്പുകൾ</string>
     <string name="forums_access_tab_manual">മാനുവൽ</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">ദിവസങ്ങൾ</string>
     <string name="forums_settings_banner_saved">ബാനർ സേവ് ചെയ്തു</string>
     <string name="forums_settings_access_updated">ആക്സസ് അപ്ഡേറ്റ് ചെയ്തു</string>
-    <string name="forums_settings_access_revoked">ആക്സസ്സ് റദ്ദാക്കി</string>
+    <string name="forums_settings_access_revoked">ആക്‌സസ് പിൻവലിച്ചു</string>
     <string name="forums_settings_member_removed">അംഗത്തെ നീക്കം ചെയ്തു</string>
     <string name="forums_settings_prompt_saved">പ്രോംപ്റ്റ് സേവ് ചെയ്തു</string>
     <string name="forums_settings_section_identity">സ്വത്വം</string>

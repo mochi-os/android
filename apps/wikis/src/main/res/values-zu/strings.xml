@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">Iqamba kabusha…</string>
     <string name="wikis_rename_page_success">Ikhasi liqanjwe kabusha</string>
     <string name="wikis_history_viewing">Ubuka umlando we-%1$s, inguqulo yamanje %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">Inguqulo %1$d</string>
     <string name="wikis_search_pages_placeholder">Sesha amakhasi ngesihloko noma okuqukethwe…</string>
     <string name="wikis_search_no_results">Awekho amakhasi atholakele e-“%1$s”. Zama amagama ahlukile okusesha.</string>
     <string name="wikis_search_updated">Kubuyekeziwe %1$s</string>

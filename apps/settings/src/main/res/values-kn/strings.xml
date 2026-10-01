@@ -45,6 +45,8 @@
     <string name="route_delete_title">ರೂಟ್ ಅಳಿಸಬೇಕೆ?</string>
     <string name="route_path">ಪಥ</string>
     <string name="route_method">ವಿಧಾನ</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">ಆ್ಯಪ್</string>
     <string name="route_method_entity">ಸಂಸ್ಥೆ</string>
     <string name="route_method_redirect">ರಿಡೈರೆಕ್ಟ್</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org ನಿಂದ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ</string>
     <string name="system_status_copy">ನಕಲಿಸಿ</string>
     <string name="system_status_peers">ಸಮಾನರು</string>
-    <string name="system_status_known">ತಿಳಿದಿರುವ</string>
+    <string name="system_status_peers_totals">ತಿಳಿದಿರುವ %1$s · ಸಂಪರ್ಕಿತ %2$s · ಪ್ರಸಾರ ಮೆಶ್ %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">ತಿಳಿದಿರುವ %1$s · ಸಂಪರ್ಕಿತ %2$s</string>
     <string name="system_status_peer_connected">ಸಂಪರ್ಕಿತ</string>
     <string name="system_status_peer_disconnected">ಸಂಪರ್ಕ ಕಡಿತಗೊಂಡಿದೆ</string>
     <string name="system_status_peer_queued">ಸರದಿಯಲ್ಲಿರುವ ಸಂದೇಶಗಳು</string>
@@ -194,12 +197,12 @@
     <string name="system_users_toast_deleted">ಬಳಕೆದಾರರನ್ನು ಅಳಿಸಲಾಗಿದೆ</string>
     <string name="system_users_toast_suspended">ಬಳಕೆದಾರ ಅಮಾನತುಗೊಳಿಸಲಾಗಿದೆ</string>
     <string name="system_users_toast_suspension_removed">ಅಮಾನತು ತೆಗೆದುಹಾಕಲಾಗಿದೆ</string>
-    <string name="system_users_toast_session_revoked">ಸೆಷನ್ ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ</string>
+    <string name="system_users_toast_session_revoked">ಸೆಷನ್ ಹಿಂಪಡೆಯಲಾಗಿದೆ</string>
     <string name="system_users_toast_create_failed">ಬಳಕೆದಾರರನ್ನು ರಚಿಸಲು ವಿಫಲವಾಗಿದೆ</string>
     <string name="system_users_toast_update_failed">ಬಳಕೆದಾರರನ್ನು ಅಪ್‌ಡೇಟ್ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ</string>
     <string name="system_users_toast_delete_failed">ಬಳಕೆದಾರರನ್ನು ಅಳಿಸಲು ವಿಫಲವಾಗಿದೆ</string>
     <string name="system_users_toast_status_failed">ಬಳಕೆದಾರ ಸ್ಥಿತಿ ಅಪ್‌ಡೇಟ್ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ</string>
-    <string name="system_users_toast_revoke_failed">ಸೆಷನ್ ರದ್ದುಮಾಡಲು ವಿಫಲವಾಗಿದೆ</string>
+    <string name="system_users_toast_revoke_failed">ಸೆಷನ್ ಹಿಂಪಡೆಯಲು ವಿಫಲವಾಗಿದೆ</string>
 
     <string name="settings_home_sessions">ಸೆಷನ್‌ಗಳು</string>
     <string name="settings_home_privacy">ಗೌಪ್ಯತೆ ನೀತಿ</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">ನೀವು ಇನ್ನು ಮುಂದೆ ದೃಢೀಕರಣ ಕೋಡ್‌ನೊಂದಿಗೆ ಸೈನ್ ಇನ್ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
     <string name="account_recovery_none">ಯಾವುದೇ ಮರುಪಡೆಯುವ ಕೋಡ್‌ಗಳನ್ನು ರಚಿಸಲಾಗಿಲ್ಲ.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d ಮರುಪಡೆಯುವ ಕೋಡ್ ಉಳಿದಿದೆ.</item>
-        <item quantity="other">%1$d ಮರುಪಡೆಯುವ ಕೋಡ್‌ಗಳು ಉಳಿದಿವೆ.</item>
+        <item quantity="one">%1$s ಮರುಪಡೆಯುವ ಕೋಡ್ ಉಳಿದಿದೆ.</item>
+        <item quantity="other">%1$s ಮರುಪಡೆಯುವ ಕೋಡ್‌ಗಳು ಉಳಿದಿವೆ.</item>
     </plurals>
     <string name="account_recovery_generate">ಕೋಡ್‌ಗಳನ್ನು ರಚಿಸಿ</string>
     <string name="account_recovery_regenerate">ಕೋಡ್‌ಗಳನ್ನು ಮರುಸೃಷ್ಟಿಸಿ</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">ಕೊನೆಯದಾಗಿ ಬಳಸಲಾಗಿದೆ %1$s</string>
     <string name="route_delete_message">ಇದು ಮಾರ್ಗ \"%1$s\" ಗಾಗಿನ ಮಾರ್ಗವನ್ನು ತೆಗೆದುಹಾಕುತ್ತದೆ.</string>
     <string name="route_empty">ಯಾವುದೇ ಮಾರ್ಗಗಳನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಲಾಗಿಲ್ಲ.</string>
-    <string name="route_meta">ಆದ್ಯತೆ %1$d · %2$s</string>
+    <string name="route_meta">ಆದ್ಯತೆ %1$s · %2$s</string>
     <string name="interests_search_placeholder">ಸೇರಿಸಲು ವಿಷಯಗಳನ್ನು ಹುಡುಕಿ…</string>
     <string name="interests_empty">ಇನ್ನೂ ಯಾವುದೇ ಆಸಕ್ತಿಗಳಿಲ್ಲ.</string>
     <string name="interests_summary_regenerate">ಸಾರಾಂಶವನ್ನು ಮರುಸೃಷ್ಟಿಸಿ</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">ಎಲ್ಲಾ ಸೆಷನ್‌ಗಳನ್ನು ಹಿಂಪಡೆಯಬೇಕೇ?</string>
     <string name="system_users_revoke_all_message">ಈ ಬಳಕೆದಾರನ ಎಲ್ಲಾ ಸಕ್ರಿಯ ಸೆಷನ್‌ಗಳು ಸೈನ್ ಔಟ್ ಆಗುತ್ತವೆ.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">%3$d ಬಳಕೆದಾರರಲ್ಲಿ %1$d–%2$d ತೋರಿಸಲಾಗುತ್ತಿದೆ</item>
-        <item quantity="other">%3$d ಬಳಕೆದಾರರಲ್ಲಿ %1$d–%2$d ತೋರಿಸಲಾಗುತ್ತಿದೆ</item>
+        <item quantity="one">%3$s ಬಳಕೆದಾರರಲ್ಲಿ %1$s–%2$s ತೋರಿಸಲಾಗುತ್ತಿದೆ</item>
+        <item quantity="other">%3$s ಬಳಕೆದಾರರಲ್ಲಿ %1$s–%2$s ತೋರಿಸಲಾಗುತ್ತಿದೆ</item>
     </plurals>
     <string name="account_title">ಖಾತೆ</string>
     <string name="account_section_identity">ಗುರುತು</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS ಪರಿಶೀಲಿಸಿ</string>
     <string name="settings_home_domains">ಡೊಮೇನ್‌ಗಳು</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">%1$d ಗಮ್ಯಸ್ಥಾನಕ್ಕೆ ಪರೀಕ್ಷೆ ಕಳುಹಿಸಲಾಗಿದೆ</item>
-        <item quantity="other">%1$d ಗಮ್ಯಸ್ಥಾನಗಳಿಗೆ ಪರೀಕ್ಷೆ ಕಳುಹಿಸಲಾಗಿದೆ</item>
+        <item quantity="one">%1$s ಗಮ್ಯಸ್ಥಾನಕ್ಕೆ ಪರೀಕ್ಷೆ ಕಳುಹಿಸಲಾಗಿದೆ</item>
+        <item quantity="other">%1$s ಗಮ್ಯಸ್ಥಾನಗಳಿಗೆ ಪರೀಕ್ಷೆ ಕಳುಹಿಸಲಾಗಿದೆ</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$d ಸೆಷನ್ ಹಿಂಪಡೆಯಲಾಗಿದೆ</item>
-        <item quantity="other">%1$d ಸೆಷನ್‌ಗಳನ್ನು ಹಿಂಪಡೆಯಲಾಗಿದೆ</item>
+        <item quantity="one">%1$s ಸೆಷನ್ ಹಿಂಪಡೆಯಲಾಗಿದೆ</item>
+        <item quantity="other">%1$s ಸೆಷನ್‌ಗಳನ್ನು ಹಿಂಪಡೆಯಲಾಗಿದೆ</item>
     </plurals>
     <string name="login_title">ಲಾಗಿನ್</string>
     <string name="login_section_methods">ಲಾಗಿನ್ ವಿಧಾನಗಳು</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">ಸಾರ್ವಜನಿಕ</string>
     <string name="system_status_reachability_private">ಖಾಸಗಿ</string>
     <string name="system_status_reachability_unknown">ಅಜ್ಞಾತ</string>
-    <string name="system_status_relay">ರಿಲೇ ಮೂಲಕ</string>
-    <string name="system_status_mesh">ಪ್ರಸಾರ ಮೆಶ್</string>
+    <string name="system_status_reachability_relay">%1$s · ರಿಲೇ ಮೂಲಕ</string>
     <string name="system_status_broadcast">ಕೊನೆಯ ಪ್ರಸಾರ</string>
     <string name="system_status_queued_broadcasts">ಸರತಿಯಲ್ಲಿರುವ ಬ್ರಾಡ್‌ಕಾಸ್ಟ್ ಸಂದೇಶಗಳು</string>
     <string name="system_setting_hostname_publish">ಹೋಸ್ಟ್ ಹೆಸರು ಮತ್ತು ಡೊಮೇನ್‌ಗಳನ್ನು ಇತರ ಸರ್ವರ್‌ಗಳಿಗೆ ಪ್ರಕಟಿಸಿ</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">ಕೊನೆಯದಾಗಿ ಕಂಡದ್ದು %1$s</string>
     <string name="notifprefs_device_app">%1$s · ಆ್ಯಪ್</string>
     <string name="notifprefs_device_push">%1$s · ಪುಶ್</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">ಪರೀಕ್ಷೆಯನ್ನು %2$d ಗಮ್ಯಸ್ಥಾನದ ಪೈಕಿ %1$dಕ್ಕೆ ಕಳುಹಿಸಲಾಗಿದೆ</item>
-        <item quantity="other">ಪರೀಕ್ಷೆಯನ್ನು %2$d ಗಮ್ಯಸ್ಥಾನಗಳ ಪೈಕಿ %1$dಕ್ಕೆ ಕಳುಹಿಸಲಾಗಿದೆ</item>
+        <item quantity="one">ಪರೀಕ್ಷೆಯನ್ನು %2$s ಗಮ್ಯಸ್ಥಾನದ ಪೈಕಿ %1$sಕ್ಕೆ ಕಳುಹಿಸಲಾಗಿದೆ</item>
+        <item quantity="other">ಪರೀಕ್ಷೆಯನ್ನು %2$s ಗಮ್ಯಸ್ಥಾನಗಳ ಪೈಕಿ %1$sಕ್ಕೆ ಕಳುಹಿಸಲಾಗಿದೆ</item>
     </plurals>
     <string name="notifprefs_test_none">ಯಾವುದೇ ಡೆಸ್ಟಿನೇಶನ್‌ಗಳನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಲಾಗಿಲ್ಲ</string>
     <string name="notifprefs_transport_fcm">Android ಪುಶ್</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">ಬದಲಾವಣೆಗಳನ್ನು ತಿರಸ್ಕರಿಸಬೇಕೇ?</string>
     <string name="system_documents_discard">ತಿರಸ್ಕರಿಸಿ</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d ಯಶಸ್ವಿ</item>
-        <item quantity="other">%1$d ಯಶಸ್ವಿ</item>
+        <item quantity="one">%1$s ಯಶಸ್ವಿ</item>
+        <item quantity="other">%1$s ಯಶಸ್ವಿ</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d ವಿಫಲ</item>
-        <item quantity="other">%1$d ವಿಫಲ</item>
+        <item quantity="one">%1$s ವಿಫಲ</item>
+        <item quantity="other">%1$s ವಿಫಲ</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d ಕಾಯ್ದಿರಿಸುವಿಕೆ</item>
-        <item quantity="other">%1$d / %2$d ಕಾಯ್ದಿರಿಸುವಿಕೆಗಳು</item>
+        <item quantity="one">%1$s / %2$s ಕಾಯ್ದಿರಿಸುವಿಕೆ</item>
+        <item quantity="other">%1$s / %2$s ಕಾಯ್ದಿರಿಸುವಿಕೆಗಳು</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d ಸರ್ಕ್ಯೂಟ್</item>
-        <item quantity="other">%1$d ಸರ್ಕ್ಯೂಟ್‌ಗಳು</item>
+        <item quantity="one">%1$s ಸರ್ಕ್ಯೂಟ್</item>
+        <item quantity="other">%1$s ಸರ್ಕ್ಯೂಟ್‌ಗಳು</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d ತಿರಸ್ಕರಿಸಲಾಗಿದೆ</item>
-        <item quantity="other">%1$d ತಿರಸ್ಕರಿಸಲಾಗಿದೆ</item>
+        <item quantity="one">%1$s ತಿರಸ್ಕರಿಸಲಾಗಿದೆ</item>
+        <item quantity="other">%1$s ತಿರಸ್ಕರಿಸಲಾಗಿದೆ</item>
     </plurals>
 </resources>

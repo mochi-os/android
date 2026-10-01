@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">Nooit opgehaald</string>
     <string name="feeds_source_poll">Ophalen</string>
     <string name="feeds_source_transform">AI-transformatie</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" verwijderen?</string>
-    <string name="feeds_remove_also_delete_posts">Ook geïmporteerde berichten verwijderen</string>
+    <string name="feeds_remove_source_confirm">Hiermee stopt het importeren van inhoud uit \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Ook berichten verwijderen die uit deze bron zijn geïmporteerd</string>
     <string name="feeds_suggested_credibility_title">Voorgestelde geloofwaardigheid</string>
     <string name="feeds_suggested_credibility_body">Mochi stelt een geloofwaardigheid van %1$d voor. Accepteren?</string>
     <string name="feeds_suggested_credibility_keep">Huidige behouden</string>

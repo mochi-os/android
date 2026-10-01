@@ -356,7 +356,7 @@
     <string name="projects_activity_commented">comentou</string>
     <string name="projects_attachment_delete_confirm_message">Este anexo será excluído permanentemente.</string>
     <string name="projects_attachment_delete_confirm_title">Excluir o anexo?</string>
-    <string name="projects_settings_unsubscribe_section">Cancelar a inscrição no projeto</string>
+    <string name="projects_settings_unsubscribe_section">Remover inscrição do projeto</string>
     <string name="projects_share_link_title">Compartilhar projeto</string>
     <string name="projects_sort_filter_title">Ordenar e filtrar</string>
     <string name="projects_create_prefix_hint">Usado para IDs legíveis como %1$s-1, %1$s-2</string>

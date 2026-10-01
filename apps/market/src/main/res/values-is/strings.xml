@@ -277,7 +277,7 @@
     <string name="market_onboarding_dismiss">Hunsa</string>
     <string name="market_onboarding_title">Velkomin í Market</string>
     <string name="market_open_sidebar">Opna valmynd</string>
-    <string name="market_price_from">frá %1$s</string>
+    <string name="market_price_from">Frá %1$s</string>
     <string name="market_price_per_month">%1$s / mánuði</string>
     <string name="market_price_per_year">%1$s / ári</string>
     <string name="market_profile_biography">Um</string>

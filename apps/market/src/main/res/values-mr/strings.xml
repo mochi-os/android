@@ -726,7 +726,7 @@
     <string name="market_audit_account_stripe_restricted">Stripe प्रतिबंधित</string>
     <string name="market_audit_account_suspended">विक्रेता म्हणून निलंबित</string>
     <string name="market_audit_account_unbanned">अनबॅन केले</string>
-    <string name="market_audit_account_unsuspended">निलंबन रद्द केले</string>
+    <string name="market_audit_account_unsuspended">निलंबन मागे घेतले</string>
     <string name="market_audit_auction_bid_placed">बोली लावली</string>
     <string name="market_audit_auction_created">लिलाव तयार केला</string>
     <string name="market_audit_auction_ended_sold">लिलाव विकला</string>

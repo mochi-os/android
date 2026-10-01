@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">Umthombo ususiwe</string>
     <string name="feeds_settings_source_polling">Iyabuyisela umthombo…</string>
     <string name="feeds_settings_access_updated">Ufikelelo luhlaziyiwe</string>
-    <string name="feeds_settings_access_revoked">Ufikelelo lurhoxisiwe</string>
+    <string name="feeds_settings_access_revoked">Ufikelelo lususiwe</string>
     <string name="feeds_settings_member_removed">Ilungu lisusiwe</string>
     <string name="feeds_settings_ai_mode_updated">Imo ye-AI ihlaziyiwe</string>
     <string name="feeds_settings_ai_account_updated">I-akhawunti ye-AI ihlaziyiwe</string>
@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">Ayizange ithathwe</string>
     <string name="feeds_source_poll">Vota</string>
     <string name="feeds_source_transform">Utshintsho lwe-AI</string>
-    <string name="feeds_remove_source_confirm">Susa \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Cima nazo iiposti ezingenisiweyo</string>
+    <string name="feeds_remove_source_confirm">Oku kuya kuyeka ukungeniswa komxholo ovela ku-\"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Cima nazo iiposti ezingeniswe kulo mthombo</string>
     <string name="feeds_suggested_credibility_title">Ukuthembeka okucetyiswayo</string>
     <string name="feeds_suggested_credibility_body">I-Mochi icebisa ukuthembeka kwe-%1$d. Yamkela?</string>
     <string name="feeds_suggested_credibility_keep">Gcina okukhoyo</string>

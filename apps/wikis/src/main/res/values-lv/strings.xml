@@ -326,9 +326,9 @@
         <item quantity="other">%d lapas ar šo tagu</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="zero">Atrasti %1$d rezultātu priekš "%2$s"</item>
-        <item quantity="one">Atrasti %1$d rezultāts priekš "%2$s"</item>
-        <item quantity="other">Atrasti %1$d rezultāti priekš "%2$s"</item>
+        <item quantity="zero">Atrasti %1$d rezultātu priekš \"%2$s\"</item>
+        <item quantity="one">Atrasti %1$d rezultāts priekš \"%2$s\"</item>
+        <item quantity="other">Atrasti %1$d rezultāti priekš \"%2$s\"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Neizdevās saglabāt parakstu</string>
     <string name="wikis_attachments_upload_types">Atbalstītie faili: attēli, PDF, DOC, DOCX, TXT un MD.</string>

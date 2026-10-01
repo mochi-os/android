@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">नवीन</string>
     <string name="projects_settings_section_identity">ओळख</string>
     <string name="projects_settings_access_updated">प्रवेश अद्ययावत केला</string>
-    <string name="projects_settings_access_revoked">प्रवेश रद्द केला</string>
+    <string name="projects_settings_access_revoked">प्रवेश मागे घेतला</string>
     <string name="projects_settings_section_access">प्रवेश व्यवस्थापन</string>
     <string name="projects_people_search">लोक शोधा</string>
     <string name="projects_settings_field_entity_id">एंटिटी आयडी</string>

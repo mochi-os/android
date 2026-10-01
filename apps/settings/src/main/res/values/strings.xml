@@ -38,7 +38,7 @@
     <string name="account_passkey_register_title">Add a passkey</string>
     <string name="account_passkey_name_label">Name (optional)</string>
     <string name="account_passkey_delete_title">Delete passkey?</string>
-    <string name="account_passkey_delete_message">"%1$s" will no longer sign you in.</string>
+    <string name="account_passkey_delete_message">\"%1$s\" will no longer sign you in.</string>
 
     <string name="account_section_totp">Authenticator app</string>
     <string name="account_totp_enabled">Authenticator is enabled.</string>
@@ -54,8 +54,8 @@
     <string name="account_section_recovery">Recovery codes</string>
     <string name="account_recovery_none">No recovery codes generated.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d remaining recovery code.</item>
-        <item quantity="other">%1$d remaining recovery codes.</item>
+        <item quantity="one">%1$s remaining recovery code.</item>
+        <item quantity="other">%1$s remaining recovery codes.</item>
     </plurals>
     <string name="account_recovery_generate">Generate codes</string>
     <string name="account_recovery_regenerate">Regenerate codes</string>
@@ -122,7 +122,7 @@
     <string name="route_save">Save</string>
     <string name="route_delete">Delete route</string>
     <string name="route_delete_title">Delete route?</string>
-    <string name="route_delete_message">This will remove the route for path "%1$s".</string>
+    <string name="route_delete_message">This will remove the route for path \"%1$s\".</string>
     <string name="route_empty">No routes configured.</string>
     <string name="route_path">Path</string>
     <string name="route_target_app">App</string>
@@ -131,13 +131,15 @@
     <string name="route_target_select">Select</string>
     <string name="route_target_none">No targets available</string>
     <string name="route_method">Method</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">App</string>
     <string name="route_method_entity">Entity</string>
     <string name="route_method_redirect">Redirect</string>
     <string name="route_priority">Priority</string>
     <string name="route_enabled">Enabled</string>
     <string name="route_disabled">Disabled</string>
-    <string name="route_meta">Priority %1$d · %2$s</string>
+    <string name="route_meta">Priority %1$s · %2$s</string>
 
     <!-- Interests -->
     <string name="interests_title">Interests</string>
@@ -169,11 +171,13 @@
     <string name="notifprefs_dest_device">Device</string>
     <string name="notifprefs_device_app">%1$s · app</string>
     <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <string name="notifprefs_test">Test</string>
     <string name="notifprefs_test_none">No destinations configured</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Test sent to %1$d of %2$d destination</item>
-        <item quantity="other">Test sent to %1$d of %2$d destinations</item>
+        <item quantity="one">Test sent to %1$s of %2$s destination</item>
+        <item quantity="other">Test sent to %1$s of %2$s destinations</item>
     </plurals>
     <string name="notifprefs_edit">Edit</string>
     <string name="notifprefs_delete">Delete</string>
@@ -199,7 +203,8 @@
     <string name="system_status_copy">Copy</string>
     <string name="system_status_peers">Peers</string>
     <string name="system_status_peer_id">Peer ID</string>
-    <string name="system_status_known">Known</string>
+    <string name="system_status_peers_totals">Known %1$s · Connected %2$s · Broadcast mesh %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Known %1$s · Connected %2$s</string>
     <string name="system_status_peer_connected">Connected</string>
     <string name="system_status_peer_disconnected">Disconnected</string>
     <string name="system_status_peer_unreachable">Unreachable</string>
@@ -213,8 +218,7 @@
     <string name="system_status_reachability_public">Public</string>
     <string name="system_status_reachability_private">Private</string>
     <string name="system_status_reachability_unknown">Unknown</string>
-    <string name="system_status_relay">Via relay</string>
-    <string name="system_status_mesh">Broadcast mesh</string>
+    <string name="system_status_reachability_relay">%1$s · via relay</string>
     <string name="system_status_broadcast">Last broadcast</string>
     <string name="system_status_holepunch">Hole punch</string>
     <string name="system_status_relay_service">Relay service</string>
@@ -351,7 +355,7 @@
     <string name="system_users_remove_suspension">Remove suspension</string>
     <string name="system_users_delete">Delete user</string>
     <string name="system_users_delete_title">Delete user?</string>
-    <string name="system_users_delete_message">This will permanently delete the user "%1$s". This action cannot be undone.</string>
+    <string name="system_users_delete_message">This will permanently delete the user \"%1$s\". This action cannot be undone.</string>
     <string name="system_users_manage_sessions">Manage sessions</string>
     <string name="system_users_sessions_title">Sessions for %1$s</string>
     <string name="system_users_sessions_empty">This user has no active sessions.</string>
@@ -363,8 +367,8 @@
     <string name="system_users_unknown_browser">Unknown browser</string>
     <string name="system_users_unknown">Unknown</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">Showing %1$d–%2$d of %3$d user</item>
-        <item quantity="other">Showing %1$d–%2$d of %3$d users</item>
+        <item quantity="one">Showing %1$s–%2$s of %3$s user</item>
+        <item quantity="other">Showing %1$s–%2$s of %3$s users</item>
     </plurals>
     <string name="system_users_previous">Previous</string>
     <string name="system_users_next">Next</string>
@@ -383,12 +387,12 @@
     <string name="system_users_toast_revoke_failed">Failed to revoke session</string>
 
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Test sent to %1$d destination</item>
-        <item quantity="other">Test sent to %1$d destinations</item>
+        <item quantity="one">Test sent to %1$s destination</item>
+        <item quantity="other">Test sent to %1$s destinations</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">Revoked %1$d session</item>
-        <item quantity="other">Revoked %1$d sessions</item>
+        <item quantity="one">Revoked %1$s session</item>
+        <item quantity="other">Revoked %1$s sessions</item>
     </plurals>
     <string name="domain_add">Add domain</string>
     <string name="domain_add_title">Add domain</string>
@@ -402,7 +406,7 @@
     <string name="domain_delegations">Delegations</string>
     <string name="domain_delegations_empty">No delegations configured.</string>
     <string name="domain_delete">Delete domain</string>
-    <string name="domain_delete_message">This will permanently delete "%1$s" and all its routes.</string>
+    <string name="domain_delete_message">This will permanently delete \"%1$s\" and all its routes.</string>
     <string name="domain_delete_title">Delete domain?</string>
     <string name="domain_dns_hint">Create a TXT record:</string>
     <string name="domain_empty_admin">No domains configured.</string>
@@ -437,23 +441,23 @@
     <string name="system_documents_discard_title">Discard changes?</string>
     <string name="system_documents_discard">Discard</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d succeeded</item>
-        <item quantity="other">%1$d succeeded</item>
+        <item quantity="one">%1$s succeeded</item>
+        <item quantity="other">%1$s succeeded</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d failed</item>
-        <item quantity="other">%1$d failed</item>
+        <item quantity="one">%1$s failed</item>
+        <item quantity="other">%1$s failed</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d reservation</item>
-        <item quantity="other">%1$d / %2$d reservations</item>
+        <item quantity="one">%1$s / %2$s reservation</item>
+        <item quantity="other">%1$s / %2$s reservations</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d circuit</item>
-        <item quantity="other">%1$d circuits</item>
+        <item quantity="one">%1$s circuit</item>
+        <item quantity="other">%1$s circuits</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d refused</item>
-        <item quantity="other">%1$d refused</item>
+        <item quantity="one">%1$s refused</item>
+        <item quantity="other">%1$s refused</item>
     </plurals>
 </resources>

@@ -103,8 +103,6 @@
     <string name="feeds_source_never_fetched">Nooit opgehaald</string>
     <string name="feeds_source_poll">Pollen</string>
     <string name="feeds_source_transform">AI-transformatie</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" verwijderen?</string>
-    <string name="feeds_remove_also_delete_posts">Geïmporteerde berichten ook verwijderen</string>
     <string name="feeds_suggested_credibility_title">Voorgestelde geloofwaardigheid</string>
     <string name="feeds_suggested_credibility_body">Mochi stelt een geloofwaardigheid van %1$d voor. Accepteren?</string>
     <string name="feeds_suggested_credibility_keep">Huidige behouden</string>

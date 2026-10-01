@@ -88,7 +88,7 @@
     <string name="market_chargeback_reason_product_not_received">Məhsul alınmadı</string>
     <string name="market_chargeback_reason_product_unacceptable">Məhsul qəbuledilməzdir</string>
     <string name="market_chargeback_reason_subscription_canceled">Abunə ləğv edildi</string>
-    <string name="market_chargeback_reason_unrecognized">CRM-dən abunəlikdən çıxmaq?</string>
+    <string name="market_chargeback_reason_unrecognized">Tanınmayan ödəniş</string>
     <string name="market_checkout_address_city">Şəhər</string>
     <string name="market_checkout_address_country">Ölkə</string>
     <string name="market_checkout_address_heading">Çatdırılma ünvanı</string>
@@ -123,7 +123,7 @@
     <string name="market_checkout_start_failed">Ödənişə başlamaq mümkün olmadı</string>
     <string name="market_checkout_subscribe_button">Abunə ol</string>
     <string name="market_checkout_subscribe_failed">Abunə olmaq alınmadı</string>
-    <string name="market_checkout_subscribe_intro">Ala və ya sata bilməzsiniz.</string>
+    <string name="market_checkout_subscribe_intro">Abunə olursunuz</string>
     <string name="market_checkout_subscribe_title">Abunə ol</string>
     <string name="market_checkout_subscribing">Abunə olunur…</string>
     <string name="market_checkout_subscription_start_failed">Abunəliyə başlamaq mümkün olmadı</string>
@@ -405,7 +405,7 @@
     <string name="market_purchase_download_failed">Yükləmək alınmadı</string>
     <string name="market_purchase_download_many">%1$d faylınızı aşağıda yükləyin.</string>
     <string name="market_purchase_download_one">Faylınızı aşağıda yükləyin.</string>
-    <string name="market_purchase_download_section">Sizin rəyiniz</string>
+    <string name="market_purchase_download_section">Alışınız hazırdır</string>
     <string name="market_purchase_item">Element</string>
     <string name="market_purchase_message_seller">Satıcıya mesaj göndər</string>
     <string name="market_purchase_not_found">Sifariş tapılmadı</string>
@@ -538,7 +538,7 @@
     <string name="market_sale_ship_success">Göndərilmiş kimi işarələndi</string>
     <string name="market_sale_shipped_label">Göndərildi</string>
     <string name="market_sale_title">Satış</string>
-    <string name="market_sale_tracking_label">Səyahətdə</string>
+    <string name="market_sale_tracking_label">İzləmə nömrəsi</string>
     <string name="market_sale_tracking_url_label">İzləmə URL (istəyə bağlı)</string>
     <string name="market_sales_empty_subtitle">Dərc edilmiş elanlarınızdan sifarişlər burada görünür.</string>
     <string name="market_sales_empty_title">Hələ satış yoxdur</string>
@@ -620,7 +620,7 @@
     <string name="market_subscriptions_action_resubscribe">Yenidən abunə ol</string>
     <string name="market_subscriptions_action_resume">Davam et</string>
     <string name="market_subscriptions_actions_label">Abunə əməliyyatları</string>
-    <string name="market_subscriptions_cancel_body">Bu şərhi adi istifadəçilərdən gizlədəcək. Moderatorlar onu hələ də görə və sonra bərpa edə bilər.</string>
+    <string name="market_subscriptions_cancel_body">Bu, abunəliyinizi ləğv edəcək. Cari hesablaşma dövrünün sonunda girişinizi itirəcəksiniz.</string>
     <string name="market_subscriptions_cancel_confirm">Abunəliyi ləğv et</string>
     <string name="market_subscriptions_cancel_failed">Ləğv etmək alınmadı</string>
     <string name="market_subscriptions_cancel_title">Abunəliyi ləğv et</string>
@@ -780,7 +780,7 @@
     <string name="market_audit_subscription_resumed">Davam etdirildi</string>
     <string name="market_filter_currency">Valyuta</string>
     <string name="market_listings_remove_confirm">Sil</string>
-    <string name="market_listings_remove_message">İstifadəçilərin wiki-yə ilk dəfə daxil olduqda görəcəyi səhifə.</string>
+    <string name="market_listings_remove_message">Elan alıcılardan gizlədiləcək. Bunu geri qaytarmaq olmaz, lakin sonra onu yeni qaralama kimi yenidən elan edə bilərsiniz.</string>
     <string name="market_listings_remove_message_auction">Bu, hərracı ləğv edəcək. Elan alıcılardan gizlədiləcək; onu sonra yeni qaralama kimi yenidən yerləşdirə bilərsiniz.</string>
     <string name="market_listings_remove_title">Bu elanı silək?</string>
     <plurals name="market_listings_remove_message_bidders">

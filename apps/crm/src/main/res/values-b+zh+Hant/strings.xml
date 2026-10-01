@@ -274,7 +274,7 @@
     <string name="crm_access_role_view">僅檢視</string>
     <string name="crm_access_role_none">無存取權</string>
     <string name="crm_all_crms">所有 CRM</string>
-    <string name="crm_settings_unsubscribe_section">取消訂閱該 CRM</string>
+    <string name="crm_settings_unsubscribe_section">退訂 CRM</string>
     <string name="crm_settings_updated">已更新 CRM</string>
     <string name="crm_create_import_backup">從備份匯入（選用）</string>
     <string name="crm_export">匯出資料</string>

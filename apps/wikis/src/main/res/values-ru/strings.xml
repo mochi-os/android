@@ -298,45 +298,45 @@
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
         <item quantity="one">%d ответ</item>
-        <item quantity="few">ещё +%d ответов</item>
+        <item quantity="few">ещё +%d ответа</item>
         <item quantity="many">ещё +%d ответов</item>
-        <item quantity="other">ещё +%d ответов</item>
+        <item quantity="other">ещё +%d ответа</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d страница</item>
-        <item quantity="few">%d страниц</item>
+        <item quantity="few">%d страницы</item>
         <item quantity="many">%d страниц</item>
-        <item quantity="other">%d страниц</item>
+        <item quantity="other">%d страницы</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
         <item quantity="one">%d файл</item>
-        <item quantity="few">%d файлов</item>
+        <item quantity="few">%d файла</item>
         <item quantity="many">%d файлов</item>
-        <item quantity="other">%d файлов</item>
+        <item quantity="other">%d файла</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
         <item quantity="one">%d изображение</item>
-        <item quantity="few">%d изображений</item>
+        <item quantity="few">%d изображения</item>
         <item quantity="many">%d изображений</item>
-        <item quantity="other">%d изображений</item>
+        <item quantity="other">%d изображения</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
         <item quantity="one">%d документ</item>
-        <item quantity="few">%d документов</item>
+        <item quantity="few">%d документа</item>
         <item quantity="many">%d документов</item>
-        <item quantity="other">%d документов</item>
+        <item quantity="other">%d документа</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
         <item quantity="one">%d страница с этим тегом</item>
-        <item quantity="few">%d страниц с этим тегом</item>
+        <item quantity="few">%d страницы с этим тегом</item>
         <item quantity="many">%d страниц с этим тегом</item>
-        <item quantity="other">%d страниц с этим тегом</item>
+        <item quantity="other">%d страницы с этим тегом</item>
     </plurals>
     <plurals name="wikis_search_results_count">
         <item quantity="one">Найдено %1$d результат по запросу «%2$s»</item>
-        <item quantity="few">Найдено %1$d результатов по запросу «%2$s»</item>
+        <item quantity="few">Найдено %1$d результата по запросу «%2$s»</item>
         <item quantity="many">Найдено %1$d результатов по запросу «%2$s»</item>
-        <item quantity="other">Найдено %1$d результатов по запросу «%2$s»</item>
+        <item quantity="other">Найдено %1$d результата по запросу «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Не удалось сохранить подпись</string>
     <string name="wikis_attachments_upload_types">Поддерживаемые файлы: изображения, PDF, DOC, DOCX, TXT и MD.</string>
@@ -346,8 +346,8 @@
     <string name="wikis_rss_exists">Этот URL ленты уже выдан и не может быть показан снова.</string>
     <plurals name="wikis_comments_truncated">
         <item quantity="one">Показан первый %1$d комментарий.</item>
-        <item quantity="few">Показаны первые %1$d комментариев.</item>
+        <item quantity="few">Показаны первые %1$d комментария.</item>
         <item quantity="many">Показаны первые %1$d комментариев.</item>
-        <item quantity="other">Показаны первые %1$d комментариев.</item>
+        <item quantity="other">Показаны первые %1$d комментария.</item>
     </plurals>
 </resources>

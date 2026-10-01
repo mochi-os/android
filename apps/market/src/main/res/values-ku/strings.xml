@@ -64,7 +64,7 @@
     <string name="market_chargeback_reason_fraudulent">Sextekarî</string>
     <string name="market_chargeback_reason_general">Giştî</string>
     <string name="market_chargeback_reason_incorrect_account_details">Hûrgiliyên hesabê çewt</string>
-    <string name="market_chargeback_reason_insufficient_funds">Drav nayê pêwîstkirin</string>
+    <string name="market_chargeback_reason_insufficient_funds">Drav têrê nake</string>
     <string name="market_chargeback_reason_product_not_received">Berhem nehate stendin</string>
     <string name="market_chargeback_reason_product_unacceptable">Berhem ne qebûlbar e</string>
     <string name="market_chargeback_reason_subscription_canceled">Abonetî hat betalkirin</string>
@@ -271,7 +271,7 @@
     <string name="market_onboarding_dismiss">Red bike</string>
     <string name="market_onboarding_title">Bi xêr hatî bo Market</string>
     <string name="market_open_sidebar">Menûyê veke</string>
-    <string name="market_price_from">ji %1$s</string>
+    <string name="market_price_from">Ji %1$s</string>
     <string name="market_price_per_month">%1$s / meh</string>
     <string name="market_price_per_year">%1$s / sal</string>
     <string name="market_profile_biography">Derbarê</string>
@@ -295,7 +295,7 @@
     <string name="market_purchase_item">Xal</string>
     <string name="market_purchase_message_seller">Peyamê ji firoşkar re bişîne</string>
     <string name="market_purchase_not_found">Ferman nehat dîtin</string>
-    <string name="market_purchase_order_label">Ferman</string>
+    <string name="market_purchase_order_label">Siparîş</string>
     <string name="market_purchase_purchased">Hatiye kirîn</string>
     <string name="market_purchase_refund_done">Vegerandin hate xwestin</string>
     <string name="market_purchase_refund_failed">Daxwaza vegerandinê neserkeftî bû</string>
@@ -314,7 +314,7 @@
     <string name="market_purchase_seller">Firoşker</string>
     <string name="market_purchase_shipping_line">Şandin</string>
     <string name="market_purchase_summary">Kurteya fermanê</string>
-    <string name="market_purchase_title">Ferman</string>
+    <string name="market_purchase_title">Siparîş</string>
     <string name="market_purchase_total">Tevî</string>
     <string name="market_purchase_track">Pakêtê bişopîne</string>
     <string name="market_purchases_complete_purchase">Kirrîna xwe temam bike</string>

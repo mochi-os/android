@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">පාලනය</string>
     <string name="forums_members_search">සාමාජිකයන් පෙරහන් කරන්න</string>
     <string name="forums_banner_description">සංසදයේ ඉහළින් පෙන්වන Markdown.</string>
-    <string name="forums_banner_placeholder">මෙම සංසදයට සාදරයෙන් පිළිගනිමු…</string>
+    <string name="forums_banner_placeholder">බැනර් පෙළ ඇතුළත් කරන්න (Markdown සහාය දක්වයි)…</string>
     <string name="forums_ai_mode_label">ප්‍රකාරය: %1$s</string>
     <string name="forums_ai_mode_heading">AI ප්‍රකාරය</string>
     <string name="forums_ai_mode_off">අක්‍රියයි</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">දින</string>
     <string name="forums_settings_banner_saved">බ්‍යිනශව සහදො ගත්ති</string>
     <string name="forums_settings_access_updated">ප්‍රවේශය යාවත්කාලීන කරන ලදී</string>
-    <string name="forums_settings_access_revoked">ප්‍රවේශය අයිඪ ගත්ති</string>
+    <string name="forums_settings_access_revoked">ප්‍රවේශය අහෝසි කරන ලදී</string>
     <string name="forums_settings_member_removed">සාමාජිකයා ඉවත් කරන ලදී</string>
     <string name="forums_settings_prompt_saved">විමසුම සුරකින ලදී</string>
     <string name="forums_settings_section_identity">අනන්‍යතාවය</string>

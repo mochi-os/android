@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">स्रोत हटावल गइल</string>
     <string name="feeds_settings_source_polling">स्रोत टटोला जात बा…</string>
     <string name="feeds_settings_access_updated">पहुंच अद्यतन कइल गइल</string>
-    <string name="feeds_settings_access_revoked">पहुँच हटा देहल गइल</string>
+    <string name="feeds_settings_access_revoked">पहुँच वापस ले लिहल गइल</string>
     <string name="feeds_settings_member_removed">सदस्य हटल</string>
     <string name="feeds_settings_ai_mode_updated">AI मोड अपडेट भइल</string>
     <string name="feeds_settings_ai_account_updated">AI खाता अपडेट भइल</string>
@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">कबो ना लेहल गइल</string>
     <string name="feeds_source_poll">पोल</string>
     <string name="feeds_source_transform">AI रूपांतरण</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" के हटाईं?</string>
-    <string name="feeds_remove_also_delete_posts">आयात कइल पोस्ट भी मिटाईं</string>
+    <string name="feeds_remove_source_confirm">एह से \"%1$s\" से सामग्री के आयात बंद हो जाई।</string>
+    <string name="feeds_remove_also_delete_posts">एह स्रोत से आयात कइल पोस्ट भी मिटाईं</string>
     <string name="feeds_suggested_credibility_title">सुझावल विश्वसनीयता</string>
     <string name="feeds_suggested_credibility_body">Mochi %1$d के विश्वसनीयता सुझावत बा। स्वीकार करीं?</string>
     <string name="feeds_suggested_credibility_keep">अबही के राखीं</string>
@@ -167,7 +167,7 @@
     <string name="feeds_settings_name_edit_cd">नाम संपादित करीं</string>
     <string name="feeds_settings_section_identity">पहचान</string>
     <string name="feeds_unsubscribe">सदस्यता खतम करीं</string>
-    <string name="feeds_unsubscribed">सदस्यता रद्द भइल</string>
+    <string name="feeds_unsubscribed">सदस्यता खतम भइल</string>
     <string name="feeds_access_level_comment_full">टिप्पणी, प्रतिक्रिया, आ देखीं</string>
     <string name="feeds_rss_mode_posts_comments">पोस्ट आ टिप्पणी</string>
     <string name="feeds_access_add_title">पहुंच जोड़ीं</string>
@@ -187,7 +187,7 @@
     <string name="feeds_create_first_post">पहिला पोस्ट बनाईं</string>
     <string name="feeds_rss_mode_posts">पोस्ट</string>
     <string name="feeds_source_last_checked">अंतिम बेर %1$s के जाँचल गइल</string>
-    <string name="feeds_settings_unsubscribe_section">फ़ीड से सदस्यता रद्द करीं</string>
+    <string name="feeds_settings_unsubscribe_section">फीड से सदस्यता खतम करीं</string>
     <string name="feeds_source_transform_hint">अंग्रेजी में अनुवाद करीं, आ बुलेट बिंदु के रूप में देखाईं।</string>
     <string name="feeds_source_url_hint_feed">फीड एंटिटी ID भा फिंगरप्रिंट</string>
     <string name="feeds_source_credibility_label">विश्वसनीयता</string>

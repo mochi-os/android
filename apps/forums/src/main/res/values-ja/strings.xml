@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">モデレート</string>
     <string name="forums_members_search">メンバーを絞り込み</string>
     <string name="forums_banner_description">フォーラムの上部に表示される Markdown。</string>
-    <string name="forums_banner_placeholder">このフォーラムへようこそ…</string>
+    <string name="forums_banner_placeholder">バナーのテキストを入力（Markdown 対応）…</string>
     <string name="forums_ai_mode_label">モード: %1$s</string>
     <string name="forums_ai_mode_heading">AI モード</string>
     <string name="forums_ai_mode_off">無効</string>

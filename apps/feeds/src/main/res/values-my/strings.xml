@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">မဆွဲယူဖူးပါ</string>
     <string name="feeds_source_poll">ပိုလ်</string>
     <string name="feeds_source_transform">AI ပြောင်းလဲခြင်း</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" ကို ဖယ်ရှားမည်လား?</string>
-    <string name="feeds_remove_also_delete_posts">တင်သွင်းခဲ့သော ပို့စ်များကိုလည်း ဖျက်ပါ</string>
+    <string name="feeds_remove_source_confirm">၎င်းသည် \"%1$s\" မှ အကြောင်းအရာ တင်သွင်းခြင်းကို ရပ်တန့်ပါမည်။</string>
+    <string name="feeds_remove_also_delete_posts">ဤအရင်းအမြစ်မှ တင်သွင်းခဲ့သော ပို့စ်များကိုလည်း ဖျက်ပါ</string>
     <string name="feeds_suggested_credibility_title">အကြံပြုထားသော ယုံကြည်စိတ်ချရမှု</string>
     <string name="feeds_suggested_credibility_body">Mochi က ယုံကြည်စိတ်ချရမှု %1$d ကို အကြံပြုသည်။ လက်ခံမည်လား?</string>
     <string name="feeds_suggested_credibility_keep">လက်ရှိအတိုင်း ထားပါ</string>

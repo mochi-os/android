@@ -371,7 +371,7 @@
     <string name="market_onboarding_dismiss">Отфрли</string>
     <string name="market_onboarding_title">Добредојдовте на Пазарот</string>
     <string name="market_open_sidebar">Отвори мени</string>
-    <string name="market_price_from">од %1$s</string>
+    <string name="market_price_from">Од %1$s</string>
     <string name="market_price_high_bid">Највисока понуда: %1$s</string>
     <string name="market_price_instant_buy">веднашно купи: %1$s</string>
     <string name="market_price_per_month">%1$s / месец</string>

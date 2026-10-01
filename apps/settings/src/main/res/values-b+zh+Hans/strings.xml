@@ -45,6 +45,8 @@
     <string name="route_delete_title">删除路由吗?</string>
     <string name="route_path">路径</string>
     <string name="route_method">方式</string>
+    <string name="route_picker_value">%1$s：%2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">应用</string>
     <string name="route_method_entity">实体</string>
     <string name="route_method_redirect">重定向</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">从 packages.mochi-os.org 下载</string>
     <string name="system_status_copy">复制</string>
     <string name="system_status_peers">对等节点</string>
-    <string name="system_status_known">已知</string>
+    <string name="system_status_peers_totals">已知 %1$s · 已连接 %2$s · 广播网状网络 %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">已知 %1$s · 已连接 %2$s</string>
     <string name="system_status_peer_connected">已连接</string>
     <string name="system_status_peer_disconnected">已断开</string>
     <string name="system_status_peer_queued">队列中的消息</string>
@@ -216,7 +219,7 @@
     <string name="account_totp_disable_message">您将无法使用身份验证代码登录。</string>
     <string name="account_recovery_none">未生成任何恢复代码。</string>
     <plurals name="account_recovery_count">
-        <item quantity="other">剩余 %1$d 个恢复代码。</item>
+        <item quantity="other">剩余 %1$s 个恢复代码。</item>
     </plurals>
     <string name="account_recovery_generate">生成代码</string>
     <string name="account_recovery_regenerate">重新生成代码</string>
@@ -233,7 +236,7 @@
     <string name="account_last_used">最近使用 %1$s</string>
     <string name="route_delete_message">这将删除路径\"%1$s\"的路由。</string>
     <string name="route_empty">未配置任何路由。</string>
-    <string name="route_meta">优先级 %1$d · %2$s</string>
+    <string name="route_meta">优先级 %1$s · %2$s</string>
     <string name="interests_search_placeholder">搜索要添加的话题…</string>
     <string name="interests_empty">还没有兴趣。</string>
     <string name="interests_summary_regenerate">重新生成摘要</string>
@@ -267,7 +270,7 @@
     <string name="system_users_revoke_all_title">撤销所有会话？</string>
     <string name="system_users_revoke_all_message">此用户的所有活跃会话都将被注销。</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="other">显示 %3$d 名用户中的第 %1$d–%2$d 名</item>
+        <item quantity="other">显示 %3$s 名用户中的第 %1$s–%2$s 名</item>
     </plurals>
     <string name="account_title">账户</string>
     <string name="account_section_identity">身份</string>
@@ -301,11 +304,11 @@
     <string name="domain_verify">验证 DNS</string>
     <string name="settings_home_domains">域名</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">已向 %1$d 个目标发送测试</item>
-        <item quantity="other">已向 %1$d 个目标发送测试</item>
+        <item quantity="one">已向 %1$s 个目标发送测试</item>
+        <item quantity="other">已向 %1$s 个目标发送测试</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="other">已撤销 %1$d 个会话</item>
+        <item quantity="other">已撤销 %1$s 个会话</item>
     </plurals>
     <string name="login_title">登录</string>
     <string name="login_section_methods">登录方式</string>
@@ -336,8 +339,7 @@
     <string name="system_status_reachability_public">公开</string>
     <string name="system_status_reachability_private">私有</string>
     <string name="system_status_reachability_unknown">未知</string>
-    <string name="system_status_relay">经由中继</string>
-    <string name="system_status_mesh">广播网状网络</string>
+    <string name="system_status_reachability_relay">%1$s · 经由中继</string>
     <string name="system_status_broadcast">最后广播</string>
     <string name="system_status_queued_broadcasts">队列中的广播消息</string>
     <string name="system_setting_hostname_publish">向其他服务器通告主机名和域名</string>
@@ -370,8 +372,10 @@
     <string name="accounts_device_seen">最后看到 %1$s</string>
     <string name="notifprefs_device_app">%1$s · 应用</string>
     <string name="notifprefs_device_push">%1$s · 推送</string>
+    <string name="notifprefs_destination_rss">RSS：%1$s</string>
+    <string name="notifprefs_topic_title">%1$s：%2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="other">测试已发送至 %2$d 个目标中的 %1$d 个</item>
+        <item quantity="other">测试已发送至 %2$s 个目标中的 %1$s 个</item>
     </plurals>
     <string name="notifprefs_test_none">未配置目标</string>
     <string name="notifprefs_transport_fcm">Android 推送</string>
@@ -395,18 +399,18 @@
     <string name="system_documents_discard_title">放弃更改？</string>
     <string name="system_documents_discard">放弃</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="other">成功 %1$d 次</item>
+        <item quantity="other">成功 %1$s 次</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="other">失败 %1$d 次</item>
+        <item quantity="other">失败 %1$s 次</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="other">%1$d / %2$d 个预留</item>
+        <item quantity="other">%1$s / %2$s 个预留</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="other">%1$d 条线路</item>
+        <item quantity="other">%1$s 条线路</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="other">拒绝 %1$d 次</item>
+        <item quantity="other">拒绝 %1$s 次</item>
     </plurals>
 </resources>

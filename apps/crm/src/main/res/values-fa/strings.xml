@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">مدیریت دسترسی</string>
     <string name="crm_settings_not_set">تنظیم نشده</string>
     <string name="crm_settings_access_updated">دسترسی به‌روزرسانی شد</string>
-    <string name="crm_settings_access_revoked">دسترسی لغو شد</string>
+    <string name="crm_settings_access_revoked">دسترسی ابطال شد</string>
     <string name="crm_people_search">جستجوی افراد</string>
     <string name="crm_access_tab_other">سایر</string>
     <string name="crm_access_select_group">یک گروه انتخاب کنید</string>
@@ -274,7 +274,7 @@
     <string name="crm_access_role_view">فقط نمایش</string>
     <string name="crm_access_role_none">بدون دسترسی</string>
     <string name="crm_all_crms">همهٔ CRMها</string>
-    <string name="crm_settings_unsubscribe_section">لغو اشتراک از CRM</string>
+    <string name="crm_settings_unsubscribe_section">قطع اشتراک از CRM</string>
     <string name="crm_settings_updated">CRM به‌روزرسانی شد</string>
     <string name="crm_create_import_backup">وارد کردن از پشتیبان (اختیاری)</string>
     <string name="crm_export">خروجی داده‌ها</string>

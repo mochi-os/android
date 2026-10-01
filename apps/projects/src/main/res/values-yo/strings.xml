@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">Tuntun</string>
     <string name="projects_settings_section_identity">Ìdánimọ̀</string>
     <string name="projects_settings_access_updated">A ti ṣe àtúnyẹ̀wò ìwọlé</string>
-    <string name="projects_settings_access_revoked">Ati gba aṣèsẹbí</string>
+    <string name="projects_settings_access_revoked">A ti gba ìwọlé padà</string>
     <string name="projects_settings_section_access">Ìṣàkóso Ìwọlé</string>
     <string name="projects_people_search">Wa awọn eniyan</string>
     <string name="projects_settings_field_entity_id">ID Ẹ̀ka</string>

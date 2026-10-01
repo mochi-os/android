@@ -41,7 +41,7 @@
     <string name="wikis_rss_copied">RSS URL bufer ýadyna göçürildi</string>
     <string name="wikis_rss_failed">RSS tokeni alynmady</string>
     <string name="wikis_rss_revoke">Elýeterliligi yzyna al</string>
-    <string name="wikis_rss_revoked">RSS elýeterliligi ýatyryldy</string>
+    <string name="wikis_rss_revoked">RSS elýeterliligi yzyna alyndy</string>
     <string name="wikis_find_title">Wikileri tap</string>
     <string name="wikis_find_no_results">Wikiler tapylmady</string>
     <string name="wikis_find_recommended_section">Maslahat berilýän wikiler</string>
@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">Adyny üýtgedilýär…</string>
     <string name="wikis_rename_page_success">Sahypanyň ady üýtgedildi</string>
     <string name="wikis_history_viewing">%1$s taryhy görülýär, häzirki wersiýa %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">Wersiýa %1$d</string>
     <string name="wikis_search_pages_placeholder">Sahypalary at ýa-da mazmun boýunça gözle…</string>
     <string name="wikis_search_no_results">“%1$s” üçin sahypa tapylmady. Başga gözleg sözlerini synanyşyň.</string>
     <string name="wikis_search_updated">%1$s täzelendi</string>
@@ -319,8 +319,8 @@
         <item quantity="other">Bu bellik bilen %d sahypa</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">"%2$s" üçin %1$d netije tapyldy</item>
-        <item quantity="other">"%2$s" üçin %1$d netije tapyldy</item>
+        <item quantity="one">\"%2$s\" üçin %1$d netije tapyldy</item>
+        <item quantity="other">\"%2$s\" üçin %1$d netije tapyldy</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Düşündirişi ýatda saklap bolmady</string>
     <string name="wikis_attachments_upload_types">Goldanýan faýllar: suratlar, PDF, DOC, DOCX, TXT we MD.</string>

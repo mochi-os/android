@@ -557,7 +557,7 @@
     <string name="market_messages_send_failed">Không thể gửi tin nhắn</string>
     <string name="market_messages_thread_title">Cuộc trò chuyện</string>
     <string name="market_messages_unread_badge">%1$d chưa đọc</string>
-    <string name="market_price_from">từ %1$s</string>
+    <string name="market_price_from">Từ %1$s</string>
     <string name="market_price_high_bid">Giá đặt cao nhất: %1$s</string>
     <string name="market_price_instant_buy">mua ngay: %1$s</string>
     <string name="market_price_per_month">%1$s / tháng</string>

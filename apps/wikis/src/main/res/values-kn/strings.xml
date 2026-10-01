@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">ಮರುಹೆಸರಿಸಲಾಗುತ್ತಿದೆ…</string>
     <string name="wikis_rename_page_success">ಪುಟವನ್ನು ಮರುಹೆಸರಿಸಲಾಗಿದೆ</string>
     <string name="wikis_history_viewing">%1$s ಗಾಗಿ ಇತಿಹಾಸ ವೀಕ್ಷಿಸಲಾಗುತ್ತಿದೆ, ಪ್ರಸ್ತುತ ಆವೃತ್ತಿ %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">ಆವೃತ್ತಿ %1$d</string>
     <string name="wikis_search_pages_placeholder">ಶೀರ್ಷಿಕೆ ಅಥವಾ ವಿಷಯದ ಮೂಲಕ ಪುಟಗಳನ್ನು ಹುಡುಕಿ…</string>
     <string name="wikis_search_no_results">“%1$s” ಗಾಗಿ ಯಾವುದೇ ಪುಟ ಸಿಗಲಿಲ್ಲ. ಬೇರೆ ಹುಡುಕಾಟ ಪದಗಳನ್ನು ಪ್ರಯತ್ನಿಸಿ.</string>
     <string name="wikis_search_updated">ನವೀಕರಿಸಲಾಗಿದೆ %1$s</string>

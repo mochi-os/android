@@ -271,7 +271,7 @@
     <string name="market_onboarding_dismiss">Warrab</string>
     <string name="market_onboarding_title">Merħba fil-Market</string>
     <string name="market_open_sidebar">Iftaħ menu</string>
-    <string name="market_price_from">minn %1$s</string>
+    <string name="market_price_from">Minn %1$s</string>
     <string name="market_price_per_month">%1$s / xahar</string>
     <string name="market_price_per_year">%1$s / sena</string>
     <string name="market_profile_biography">Dwar</string>
@@ -788,14 +788,14 @@
         <item quantity="one">Dan se jikkanċella l-irkant u jinnotifika %1$d offerent attiv. L-elenku se jinħeba mix-xerrejja; tista’ terġa’ telenkah aktar tard bħala abbozz ġdid.</item>
         <item quantity="two">Dan se jikkanċella l-irkant u jinnotifika %1$d offerenti attivi. L-elenku se jinħeba mix-xerrejja; tista’ terġa’ telenkah aktar tard bħala abbozz ġdid.</item>
         <item quantity="few">Dan se jikkanċella l-irkant u jinnotifika %1$d offerenti attivi. L-elenku se jinħeba mix-xerrejja; tista’ terġa’ telenkah aktar tard bħala abbozz ġdid.</item>
-        <item quantity="many">Dan se jikkanċella l-irkant u jinnotifika %1$d offerenti attivi. L-elenku se jinħeba mix-xerrejja; tista’ terġa’ telenkah aktar tard bħala abbozz ġdid.</item>
-        <item quantity="other">Dan se jikkanċella l-irkant u jinnotifika %1$d offerenti attivi. L-elenku se jinħeba mix-xerrejja; tista’ terġa’ telenkah aktar tard bħala abbozz ġdid.</item>
+        <item quantity="many">Dan se jikkanċella l-irkant u jinnotifika %1$d offerent attiv. L-elenku se jinħeba mix-xerrejja; tista’ terġa’ telenkah aktar tard bħala abbozz ġdid.</item>
+        <item quantity="other">Dan se jikkanċella l-irkant u jinnotifika %1$d offerent attiv. L-elenku se jinħeba mix-xerrejja; tista’ terġa’ telenkah aktar tard bħala abbozz ġdid.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
         <item quantity="one">Dan se jikkanċella %1$d abbonament attiv fi tmiem il-perjodu ta’ ħlas attwali. L-abbonati se jiġu nnotifikati. L-elenku se jinħeba mix-xerrejja.</item>
         <item quantity="two">Dan se jikkanċella %1$d abbonamenti attivi fi tmiem il-perjodu ta’ ħlas attwali. L-abbonati se jiġu nnotifikati. L-elenku se jinħeba mix-xerrejja.</item>
         <item quantity="few">Dan se jikkanċella %1$d abbonamenti attivi fi tmiem il-perjodu ta’ ħlas attwali. L-abbonati se jiġu nnotifikati. L-elenku se jinħeba mix-xerrejja.</item>
-        <item quantity="many">Dan se jikkanċella %1$d abbonamenti attivi fi tmiem il-perjodu ta’ ħlas attwali. L-abbonati se jiġu nnotifikati. L-elenku se jinħeba mix-xerrejja.</item>
-        <item quantity="other">Dan se jikkanċella %1$d abbonamenti attivi fi tmiem il-perjodu ta’ ħlas attwali. L-abbonati se jiġu nnotifikati. L-elenku se jinħeba mix-xerrejja.</item>
+        <item quantity="many">Dan se jikkanċella %1$d abbonament attiv fi tmiem il-perjodu ta’ ħlas attwali. L-abbonati se jiġu nnotifikati. L-elenku se jinħeba mix-xerrejja.</item>
+        <item quantity="other">Dan se jikkanċella %1$d abbonament attiv fi tmiem il-perjodu ta’ ħlas attwali. L-abbonati se jiġu nnotifikati. L-elenku se jinħeba mix-xerrejja.</item>
     </plurals>
 </resources>

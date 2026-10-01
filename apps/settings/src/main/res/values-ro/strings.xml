@@ -45,6 +45,8 @@
     <string name="route_delete_title">Ștergi ruta?</string>
     <string name="route_path">Cale</string>
     <string name="route_method">Metodă</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Aplicație</string>
     <string name="route_method_entity">Entitate</string>
     <string name="route_method_redirect">Redirecționare</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Descarcă de pe packages.mochi-os.org</string>
     <string name="system_status_copy">Copiază</string>
     <string name="system_status_peers">Egali</string>
-    <string name="system_status_known">Cunoscuți</string>
+    <string name="system_status_peers_totals">Cunoscuți %1$s · Conectați %2$s · Mesh de difuzare %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Cunoscuți %1$s · Conectați %2$s</string>
     <string name="system_status_peer_connected">Conectat</string>
     <string name="system_status_peer_disconnected">Deconectat</string>
     <string name="system_status_peer_queued">Mesaje în coadă</string>
@@ -176,7 +179,7 @@
     <string name="system_users_create_title">Creează utilizator</string>
     <string name="system_users_save_changes">Salvează modificările</string>
     <string name="system_users_suspend">Suspendă utilizatorul</string>
-    <string name="system_users_remove_suspension">Elimină suspendarea</string>
+    <string name="system_users_remove_suspension">Ridică suspendarea</string>
     <string name="system_users_delete">Șterge utilizatorul</string>
     <string name="system_users_delete_title">Ștergi utilizatorul?</string>
     <string name="system_users_manage_sessions">Gestionează sesiunile</string>
@@ -193,7 +196,7 @@
     <string name="system_users_toast_updated">Utilizator actualizat</string>
     <string name="system_users_toast_deleted">Utilizator șters</string>
     <string name="system_users_toast_suspended">Utilizator suspendat</string>
-    <string name="system_users_toast_suspension_removed">Suspendare eliminată</string>
+    <string name="system_users_toast_suspension_removed">Suspendare ridicată</string>
     <string name="system_users_toast_session_revoked">Sesiune revocată</string>
     <string name="system_users_toast_create_failed">Crearea utilizatorului a eșuat</string>
     <string name="system_users_toast_update_failed">Actualizarea utilizatorului a eșuat</string>
@@ -216,9 +219,9 @@
     <string name="account_totp_disable_message">Nu vă veți mai putea conecta cu un cod de autentificare.</string>
     <string name="account_recovery_none">Nu au fost generate coduri de recuperare.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d cod de recuperare rămas.</item>
-        <item quantity="few">%1$d coduri de recuperare rămase.</item>
-        <item quantity="other">%1$d de coduri de recuperare rămase.</item>
+        <item quantity="one">%1$s cod de recuperare rămas.</item>
+        <item quantity="few">%1$s coduri de recuperare rămase.</item>
+        <item quantity="other">%1$s de coduri de recuperare rămase.</item>
     </plurals>
     <string name="account_recovery_generate">Generează coduri</string>
     <string name="account_recovery_regenerate">Regenerează codurile</string>
@@ -235,7 +238,7 @@
     <string name="account_last_used">Ultima utilizare %1$s</string>
     <string name="route_delete_message">Aceasta va elimina ruta pentru calea „%1$s\".</string>
     <string name="route_empty">Nicio rută configurată.</string>
-    <string name="route_meta">Prioritate %1$d · %2$s</string>
+    <string name="route_meta">Prioritate %1$s · %2$s</string>
     <string name="interests_search_placeholder">Căutați subiecte de adăugat…</string>
     <string name="interests_empty">Niciun interes încă.</string>
     <string name="interests_summary_regenerate">Regenerează sumarul</string>
@@ -269,9 +272,9 @@
     <string name="system_users_revoke_all_title">Revocă toate sesiunile?</string>
     <string name="system_users_revoke_all_message">Toate sesiunile active ale acestui utilizator vor fi deconectate.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">Se afișează %1$d–%2$d din %3$d utilizator</item>
-        <item quantity="few">Se afișează %1$d–%2$d din %3$d utilizatori</item>
-        <item quantity="other">Se afișează %1$d–%2$d din %3$d de utilizatori</item>
+        <item quantity="one">Se afișează %1$s–%2$s din %3$s utilizator</item>
+        <item quantity="few">Se afișează %1$s–%2$s din %3$s utilizatori</item>
+        <item quantity="other">Se afișează %1$s–%2$s din %3$s de utilizatori</item>
     </plurals>
     <string name="account_title">Cont</string>
     <string name="account_section_identity">Identitate</string>
@@ -305,14 +308,14 @@
     <string name="domain_verify">Verifică DNS</string>
     <string name="settings_home_domains">Domenii</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Test trimis către %1$d destinație</item>
-        <item quantity="few">Test trimis către %1$d destinații</item>
-        <item quantity="other">Test trimis către %1$d de destinații</item>
+        <item quantity="one">Test trimis către %1$s destinație</item>
+        <item quantity="few">Test trimis către %1$s destinații</item>
+        <item quantity="other">Test trimis către %1$s de destinații</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">S-a revocat %1$d sesiune</item>
-        <item quantity="few">S-au revocat %1$d sesiuni</item>
-        <item quantity="other">S-au revocat %1$d de sesiuni</item>
+        <item quantity="one">S-a revocat %1$s sesiune</item>
+        <item quantity="few">S-au revocat %1$s sesiuni</item>
+        <item quantity="other">S-au revocat %1$s de sesiuni</item>
     </plurals>
     <string name="login_title">Autentificare</string>
     <string name="login_section_methods">Metode de autentificare</string>
@@ -343,8 +346,7 @@
     <string name="system_status_reachability_public">Public</string>
     <string name="system_status_reachability_private">Privat</string>
     <string name="system_status_reachability_unknown">Necunoscut</string>
-    <string name="system_status_relay">Prin releu</string>
-    <string name="system_status_mesh">Mesh de difuzare</string>
+    <string name="system_status_reachability_relay">%1$s · prin releu</string>
     <string name="system_status_broadcast">Ultima difuzare</string>
     <string name="system_status_queued_broadcasts">Mesaje de difuzare în coadă</string>
     <string name="system_setting_hostname_publish">Anunță numele de gazdă și domeniile către alte servere</string>
@@ -377,10 +379,12 @@
     <string name="accounts_device_seen">Văzut ultima dată %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplicație</string>
     <string name="notifprefs_device_push">%1$s · notificări push</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Test trimis către %1$d din %2$d destinație</item>
-        <item quantity="few">Test trimis către %1$d din %2$d destinații</item>
-        <item quantity="other">Test trimis către %1$d din %2$d de destinații</item>
+        <item quantity="one">Test trimis către %1$s din %2$s destinație</item>
+        <item quantity="few">Test trimis către %1$s din %2$s destinații</item>
+        <item quantity="other">Test trimis către %1$s din %2$s de destinații</item>
     </plurals>
     <string name="notifprefs_test_none">Nicio destinație configurată</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
@@ -404,28 +408,28 @@
     <string name="system_documents_discard_title">Renunți la modificări?</string>
     <string name="system_documents_discard">Renunță</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d reușită</item>
-        <item quantity="few">%1$d reușite</item>
-        <item quantity="other">%1$d de reușite</item>
+        <item quantity="one">%1$s reușită</item>
+        <item quantity="few">%1$s reușite</item>
+        <item quantity="other">%1$s de reușite</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d eșec</item>
-        <item quantity="few">%1$d eșecuri</item>
-        <item quantity="other">%1$d de eșecuri</item>
+        <item quantity="one">%1$s eșec</item>
+        <item quantity="few">%1$s eșecuri</item>
+        <item quantity="other">%1$s de eșecuri</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d rezervare</item>
-        <item quantity="few">%1$d / %2$d rezervări</item>
-        <item quantity="other">%1$d / %2$d de rezervări</item>
+        <item quantity="one">%1$s / %2$s rezervare</item>
+        <item quantity="few">%1$s / %2$s rezervări</item>
+        <item quantity="other">%1$s / %2$s de rezervări</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d circuit</item>
-        <item quantity="few">%1$d circuite</item>
-        <item quantity="other">%1$d de circuite</item>
+        <item quantity="one">%1$s circuit</item>
+        <item quantity="few">%1$s circuite</item>
+        <item quantity="other">%1$s de circuite</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d respinsă</item>
-        <item quantity="few">%1$d respinse</item>
-        <item quantity="other">%1$d de respinse</item>
+        <item quantity="one">%1$s respinsă</item>
+        <item quantity="few">%1$s respinse</item>
+        <item quantity="other">%1$s de respinse</item>
     </plurals>
 </resources>

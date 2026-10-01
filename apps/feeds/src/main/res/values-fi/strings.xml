@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">Lähde poistettu</string>
     <string name="feeds_settings_source_polling">Lähdettä noudetaan…</string>
     <string name="feeds_settings_access_updated">Käyttöoikeus päivitetty</string>
-    <string name="feeds_settings_access_revoked">Käyttöoikeus peruutettu</string>
+    <string name="feeds_settings_access_revoked">Käyttöoikeus poistettu</string>
     <string name="feeds_settings_member_removed">Jäsen poistettu</string>
     <string name="feeds_settings_ai_mode_updated">Tekoälytila päivitetty</string>
     <string name="feeds_settings_ai_account_updated">Tekoälytili päivitetty</string>
@@ -113,8 +113,8 @@
     <string name="feeds_source_never_fetched">Ei koskaan haettu</string>
     <string name="feeds_source_poll">Kysely</string>
     <string name="feeds_source_transform">Tekoälymuunnos</string>
-    <string name="feeds_remove_source_confirm">Poistetaanko \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Poista myös tuodut julkaisut</string>
+    <string name="feeds_remove_source_confirm">Tämä lopettaa sisällön tuomisen lähteestä \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Poista myös tästä lähteestä tuodut julkaisut</string>
     <string name="feeds_suggested_credibility_title">Ehdotettu uskottavuus</string>
     <string name="feeds_suggested_credibility_body">Mochi ehdottaa uskottavuudeksi %1$d. Hyväksytäänkö?</string>
     <string name="feeds_suggested_credibility_keep">Säilytä nykyinen</string>

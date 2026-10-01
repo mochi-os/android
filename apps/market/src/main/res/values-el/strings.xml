@@ -557,7 +557,7 @@
     <string name="market_messages_send_failed">Δεν ήταν δυνατή η αποστολή μηνύματος</string>
     <string name="market_messages_thread_title">Συνομιλία</string>
     <string name="market_messages_unread_badge">%1$d μη αναγνωσμένα</string>
-    <string name="market_price_from">από %1$s</string>
+    <string name="market_price_from">Από %1$s</string>
     <string name="market_price_high_bid">Υψηλότερη προσφορά: %1$s</string>
     <string name="market_price_instant_buy">άμεση αγορά: %1$s</string>
     <string name="market_price_per_month">%1$s / μήνα</string>

@@ -114,7 +114,7 @@
     <string name="route_priority">Prioridad</string>
     <string name="route_enabled">Habilitada</string>
     <string name="route_disabled">Deshabilitada</string>
-    <string name="route_meta">Prioridad %1$d · %2$s</string>
+    <string name="route_meta">Prioridad %1$s · %2$s</string>
     <string name="interests_title">Intereses</string>
     <string name="interests_search_placeholder">Buscá temas para agregar…</string>
     <string name="interests_empty">Aún no hay intereses.</string>
@@ -126,7 +126,6 @@
     <string name="document_privacy_title">Política de privacidad</string>
     <string name="document_rules_title">Reglas</string>
     <string name="document_terms_title">Términos del servicio</string>
-    <string name="notifprefs_title">Notificaciones</string>
     <string name="notifprefs_tab_categories">Categorías</string>
     <string name="notifprefs_tab_topics">Temas</string>
     <string name="notifprefs_new_category">Nueva categoría</string>
@@ -142,7 +141,6 @@
     <string name="system_status_installing">Instalando %1$s…</string>
     <string name="system_status_copy">Copiar</string>
     <string name="system_status_peers">Pares</string>
-    <string name="system_status_known">Conocidos</string>
     <string name="system_status_peer_connected">Conectado</string>
     <string name="system_status_peer_disconnected">Desconectado</string>
     <string name="system_status_peer_queued">Mensajes en cola</string>
@@ -276,7 +274,6 @@
     <string name="domain_delegation_delete_message">%1$s ya no administrará rutas en este dominio.</string>
     <string name="domain_delegation_delete_title">¿Eliminás la delegación?</string>
     <string name="domain_delegation_path">Ruta</string>
-    <string name="domain_delegation_user">ID de usuario</string>
     <string name="domain_delegations">Delegaciones</string>
     <string name="domain_delegations_empty">No hay delegaciones configuradas.</string>
     <string name="domain_delete">Eliminá el dominio</string>
@@ -293,8 +290,8 @@
     <string name="domain_verify">Verificá el DNS</string>
     <string name="settings_home_domains">Dominios</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Prueba enviada a %1$d destino</item>
-        <item quantity="other">Prueba enviada a %1$d destinos</item>
+        <item quantity="one">Prueba enviada a %1$s destino</item>
+        <item quantity="other">Prueba enviada a %1$s destinos</item>
     </plurals>
     <string name="account_close_section">Cerrar cuenta</string>
     <string name="account_close_action">Cerrar cuenta</string>
@@ -315,8 +312,6 @@
     <string name="system_status_reachability_public">Público</string>
     <string name="system_status_reachability_private">Privado</string>
     <string name="system_status_reachability_unknown">Desconocido</string>
-    <string name="system_status_relay">Vía relay</string>
-    <string name="system_status_mesh">Malla de difusión</string>
     <string name="system_status_broadcast">Última difusión</string>
     <string name="system_status_queued_broadcasts">Mensajes de difusión en cola</string>
     <string name="system_setting_hostname_publish">Anunciar el nombre de host y los dominios a otros servidores</string>

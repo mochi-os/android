@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">Baharu</string>
     <string name="projects_settings_section_identity">Identiti</string>
     <string name="projects_settings_access_updated">Akses dikemas kini</string>
-    <string name="projects_settings_access_revoked">Akses dibatalkan</string>
+    <string name="projects_settings_access_revoked">Akses ditarik balik</string>
     <string name="projects_settings_section_access">Pengurusan Akses</string>
     <string name="projects_people_search">Cari orang</string>
     <string name="projects_settings_field_entity_id">ID Entiti</string>

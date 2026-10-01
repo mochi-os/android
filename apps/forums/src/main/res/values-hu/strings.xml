@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">Moderálás</string>
     <string name="forums_members_search">Tagok szűrése</string>
     <string name="forums_banner_description">A fórum tetején megjelenő Markdown.</string>
-    <string name="forums_banner_placeholder">Üdvözöljük ezen a fórumon…</string>
+    <string name="forums_banner_placeholder">Adja meg a szalaghirdetés szövegét (Markdown támogatott)…</string>
     <string name="forums_ai_mode_label">Mód: %1$s</string>
     <string name="forums_ai_mode_heading">MI mód</string>
     <string name="forums_ai_mode_off">Letiltva</string>

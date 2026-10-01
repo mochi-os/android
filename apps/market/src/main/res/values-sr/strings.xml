@@ -557,7 +557,7 @@
     <string name="market_messages_send_failed">Слање поруке није успело</string>
     <string name="market_messages_thread_title">Разговор</string>
     <string name="market_messages_unread_badge">%1$d непрочитаних</string>
-    <string name="market_price_from">од %1$s</string>
+    <string name="market_price_from">Од %1$s</string>
     <string name="market_price_high_bid">Највиша понуда: %1$s</string>
     <string name="market_price_instant_buy">тренутна куповина: %1$s</string>
     <string name="market_price_per_month">%1$s / месечно</string>

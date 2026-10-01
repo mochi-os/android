@@ -45,6 +45,8 @@
     <string name="route_delete_title">אויסמעקן וועג?</string>
     <string name="route_path">וועג</string>
     <string name="route_method">מעטאָד</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s ← %2$s</string>
     <string name="route_method_app">אַפּ</string>
     <string name="route_method_entity">ענטיטעט</string>
     <string name="route_method_redirect">רעדירעקט</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">לאָדט אַראָפּ פֿון packages.mochi-os.org</string>
     <string name="system_status_copy">קאָפּירן</string>
     <string name="system_status_peers">גלייכע</string>
-    <string name="system_status_known">באקאנט</string>
+    <string name="system_status_peers_totals">באַקאַנט %1$s · פֿאַרבונדן %2$s · בראָדקאַסט־נעץ %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">באַקאַנט %1$s · פֿאַרבונדן %2$s</string>
     <string name="system_status_peer_connected">פֿאַרבונדן</string>
     <string name="system_status_peer_disconnected">אפגעשניטן</string>
     <string name="system_status_peer_queued">מעלדונגען אין ריי</string>
@@ -194,12 +197,12 @@
     <string name="system_users_toast_deleted">באַניצער אויסגעמעקט</string>
     <string name="system_users_toast_suspended">באַניצער סוספּענדירט</string>
     <string name="system_users_toast_suspension_removed">סוספּענסיע אַראָפּגענומען</string>
-    <string name="system_users_toast_session_revoked">סעסיע אָפּגערופֿן</string>
+    <string name="system_users_toast_session_revoked">סעסיע צוריקגענומען</string>
     <string name="system_users_toast_create_failed">ניט געלונגען צו שאַפֿן באַניצער</string>
     <string name="system_users_toast_update_failed">ניט געלונגען צו דערהײַנטיקן באַניצער</string>
     <string name="system_users_toast_delete_failed">ניט געלונגען צו מעקן באַניצער</string>
     <string name="system_users_toast_status_failed">ניט געלונגען צו דערהײַנטיקן באַניצער־סטאַטוס</string>
-    <string name="system_users_toast_revoke_failed">ניט געלונגען צו אומקערן סעסיע</string>
+    <string name="system_users_toast_revoke_failed">ניט געלונגען צוריקצונעמען סעסיע</string>
 
     <string name="settings_home_sessions">סעסיעס</string>
     <string name="settings_home_privacy">פּריוואַטקייט פּאָליסי</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">איר וועט מער ניט קענען לאָגין מיט אַן אָטענטיקאַטאָר קאָד.</string>
     <string name="account_recovery_none">קײנע אױפֿשטעלן קאָדן זענען געשאַפֿן.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d איבעריקער אױפֿשטעלן קאָד.</item>
-        <item quantity="other">%1$d איבעריקע אױפֿשטעלן קאָדן.</item>
+        <item quantity="one">%1$s איבעריקער אױפֿשטעלן קאָד.</item>
+        <item quantity="other">%1$s איבעריקע אױפֿשטעלן קאָדן.</item>
     </plurals>
     <string name="account_recovery_generate">גענערירן קאָדן</string>
     <string name="account_recovery_regenerate">רעגענערירן קאָדן</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">לעצטע מאָל גענוצט %1$s</string>
     <string name="route_delete_message">דאָס וועט אַרױסנעמען די רוט פֿאַר וועג \"%1$s\".</string>
     <string name="route_empty">קײנע רעטעס פֿאַרקאָנפֿיגירט.</string>
-    <string name="route_meta">פּריאָריטעט %1$d · %2$s</string>
+    <string name="route_meta">פּריאָריטעט %1$s · %2$s</string>
     <string name="interests_search_placeholder">זוך טעמעס צוצולײגן…</string>
     <string name="interests_empty">קײנע אינטערעסן ביז איצט.</string>
     <string name="interests_summary_regenerate">סך־הכּל אויסשאַפֿן ווידער</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">צוריקנעמען אַלע סעסיעס?</string>
     <string name="system_users_revoke_all_message">אַלע אַקטיווע סעסיעס פֿון דעם באַניצער וועלן אַרויסגיין.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">ווײַזט %1$d–%2$d פֿון %3$d באַניצער</item>
-        <item quantity="other">ווײַזט %1$d–%2$d פֿון %3$d באַניצערס</item>
+        <item quantity="one">ווײַזט %1$s–%2$s פֿון %3$s באַניצער</item>
+        <item quantity="other">ווײַזט %1$s–%2$s פֿון %3$s באַניצערס</item>
     </plurals>
     <string name="account_title">קאָנטע</string>
     <string name="account_section_identity">אידענטיטעט</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">פֿאַריפֿיצירן DNS</string>
     <string name="settings_home_domains">דאָמיינס</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">פּרוּװ געשיקט צו %1$d דעסטינאַציע</item>
-        <item quantity="other">פּרוּװ געשיקט צו %1$d דעסטינאַציעס</item>
+        <item quantity="one">פּרוּװ געשיקט צו %1$s דעסטינאַציע</item>
+        <item quantity="other">פּרוּװ געשיקט צו %1$s דעסטינאַציעס</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">אָפּגערופֿן %1$d סעסיע</item>
-        <item quantity="other">אָפּגערופֿן %1$d סעסיעס</item>
+        <item quantity="one">צוריקגענומען %1$s סעסיע</item>
+        <item quantity="other">צוריקגענומען %1$s סעסיעס</item>
     </plurals>
     <string name="login_title">אַרײַנלאָג</string>
     <string name="login_section_methods">אַרײַנגאַנג מעטאָדן</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">עפֿנטלעך</string>
     <string name="system_status_reachability_private">פּריוואַט</string>
     <string name="system_status_reachability_unknown">אומבאַקאַנט</string>
-    <string name="system_status_relay">דורך רעלע</string>
-    <string name="system_status_mesh">בראָדקאַסט־נעץ</string>
+    <string name="system_status_reachability_relay">%1$s · דורך רעלע</string>
     <string name="system_status_broadcast">לעצטע בראָדקאַסט</string>
     <string name="system_status_queued_broadcasts">בראָדקאַסט מעלדונגען אין ריי</string>
     <string name="system_setting_hostname_publish">מעלדן האָסטנאָמען און דאָמענען צו אַנדערע סערווערס</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">לעצט געזען %1$s</string>
     <string name="notifprefs_device_app">%1$s · אַפּ</string>
     <string name="notifprefs_device_push">%1$s · פּוש</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">פּרוּװ געשיקט צו %1$d פֿון %2$d דעסטינאַציע</item>
-        <item quantity="other">פּרוּװ געשיקט צו %1$d פֿון %2$d דעסטינאַציעס</item>
+        <item quantity="one">פּרוּװ געשיקט צו %1$s פֿון %2$s דעסטינאַציע</item>
+        <item quantity="other">פּרוּװ געשיקט צו %1$s פֿון %2$s דעסטינאַציעס</item>
     </plurals>
     <string name="notifprefs_test_none">קיין דעסטינאַציעס קאָנפֿיגורירט</string>
     <string name="notifprefs_transport_fcm">Android פּוש</string>
@@ -386,7 +390,7 @@
     <string name="accounts_field_topic">טעמע</string>
     <string name="accounts_field_secret">אונטערשריפט סוד</string>
     <string name="account_totp_open">עפֿענען אין דער אויטענטיקאַציע־אַפּ</string>
-    <string name="accounts_revoke">רופֿט צוריק צוטריט</string>
+    <string name="accounts_revoke">צוריקנעמען צוטריט</string>
     <string name="accounts_capability_calendar">קאַלענדאַר</string>
     <string name="accounts_capability_notify">מעלדונגען</string>
     <string name="accounts_capability_ai">AI</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">אַװעקװאַרפֿן די ענדערונגען?</string>
     <string name="system_documents_discard">אַװעקװאַרפֿן</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d געלונגען</item>
-        <item quantity="other">%1$d געלונגען</item>
+        <item quantity="one">%1$s געלונגען</item>
+        <item quantity="other">%1$s געלונגען</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d דורכגעפֿאַלן</item>
-        <item quantity="other">%1$d דורכגעפֿאַלן</item>
+        <item quantity="one">%1$s דורכגעפֿאַלן</item>
+        <item quantity="other">%1$s דורכגעפֿאַלן</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d רעזערוואַציע</item>
-        <item quantity="other">%1$d / %2$d רעזערוואַציעס</item>
+        <item quantity="one">%1$s / %2$s רעזערוואַציע</item>
+        <item quantity="other">%1$s / %2$s רעזערוואַציעס</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d סערקאַט</item>
-        <item quantity="other">%1$d סערקאַטס</item>
+        <item quantity="one">%1$s סערקאַט</item>
+        <item quantity="other">%1$s סערקאַטס</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d אָפּגעזאָגט</item>
-        <item quantity="other">%1$d אָפּגעזאָגט</item>
+        <item quantity="one">%1$s אָפּגעזאָגט</item>
+        <item quantity="other">%1$s אָפּגעזאָגט</item>
     </plurals>
 </resources>

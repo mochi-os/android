@@ -557,7 +557,7 @@
     <string name="market_messages_send_failed">Sporočila ni bilo mogoče poslati</string>
     <string name="market_messages_thread_title">Pogovor</string>
     <string name="market_messages_unread_badge">%1$d neprebranih</string>
-    <string name="market_price_from">od %1$s</string>
+    <string name="market_price_from">Od %1$s</string>
     <string name="market_price_high_bid">Najvišja ponudba: %1$s</string>
     <string name="market_price_instant_buy">takojšen nakup: %1$s</string>
     <string name="market_price_per_month">%1$s / mesec</string>

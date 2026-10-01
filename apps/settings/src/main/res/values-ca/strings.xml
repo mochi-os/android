@@ -45,6 +45,8 @@
     <string name="route_delete_title">Vols suprimir la ruta?</string>
     <string name="route_path">Ruta</string>
     <string name="route_method">Mètode</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Aplicació</string>
     <string name="route_method_entity">Entitat</string>
     <string name="route_method_redirect">Redirecció</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Descarrega des de packages.mochi-os.org</string>
     <string name="system_status_copy">Copia</string>
     <string name="system_status_peers">Iguals</string>
-    <string name="system_status_known">Coneguts</string>
+    <string name="system_status_peers_totals">Coneguts %1$s · Connectats %2$s · Malla de difusió %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Coneguts %1$s · Connectats %2$s</string>
     <string name="system_status_peer_connected">Connectat</string>
     <string name="system_status_peer_disconnected">Desconnectat</string>
     <string name="system_status_peer_queued">Missatges en cua</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">Ja no podreu iniciar sessió amb un codi d\'autenticador.</string>
     <string name="account_recovery_none">No s\'han generat codis de recuperació.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">Queda %1$d codi de recuperació.</item>
-        <item quantity="other">Queden %1$d codis de recuperació.</item>
+        <item quantity="one">Queda %1$s codi de recuperació.</item>
+        <item quantity="other">Queden %1$s codis de recuperació.</item>
     </plurals>
     <string name="account_recovery_generate">Generar codis</string>
     <string name="account_recovery_regenerate">Regenerar codis</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">Darrer ús %1$s</string>
     <string name="route_delete_message">Això eliminarà la ruta per al camí «%1$s».</string>
     <string name="route_empty">No hi ha rutes configurades.</string>
-    <string name="route_meta">Prioritat %1$d · %2$s</string>
+    <string name="route_meta">Prioritat %1$s · %2$s</string>
     <string name="interests_search_placeholder">Cercar temes per afegir…</string>
     <string name="interests_empty">Encara no hi ha interessos.</string>
     <string name="interests_summary_regenerate">Regenera el resum</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">Revocar totes les sessions?</string>
     <string name="system_users_revoke_all_message">Totes les sessions actives d\'aquest usuari es tancaran.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">Mostrant %1$d–%2$d de %3$d usuari</item>
-        <item quantity="other">Mostrant %1$d–%2$d de %3$d usuaris</item>
+        <item quantity="one">Mostrant %1$s–%2$s de %3$s usuari</item>
+        <item quantity="other">Mostrant %1$s–%2$s de %3$s usuaris</item>
     </plurals>
     <string name="account_title">Compte</string>
     <string name="account_section_identity">Identitat</string>
@@ -303,13 +306,13 @@
     <string name="domain_verify">Verifica el DNS</string>
     <string name="settings_home_domains">Dominis</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Prova enviada a %1$d destinació</item>
-        <item quantity="other">Prova enviada a %1$d destinacions</item>
+        <item quantity="one">Prova enviada a %1$s destinació</item>
+        <item quantity="other">Prova enviada a %1$s destinacions</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">S\'ha revocat %1$d sessió</item>
-        <item quantity="many">S\'han revocat %1$d sessions</item>
-        <item quantity="other">S\'han revocat %1$d sessions</item>
+        <item quantity="one">S\'ha revocat %1$s sessió</item>
+        <item quantity="many">S\'han revocat %1$s sessions</item>
+        <item quantity="other">S\'han revocat %1$s sessions</item>
     </plurals>
     <string name="login_title">Inici de sessió</string>
     <string name="login_section_methods">Mètodes d\'inici de sessió</string>
@@ -340,8 +343,7 @@
     <string name="system_status_reachability_public">Públic</string>
     <string name="system_status_reachability_private">Privat</string>
     <string name="system_status_reachability_unknown">Desconegut</string>
-    <string name="system_status_relay">Mitjançant relay</string>
-    <string name="system_status_mesh">Malla de difusió</string>
+    <string name="system_status_reachability_relay">%1$s · mitjançant repetidor</string>
     <string name="system_status_broadcast">Última difusió</string>
     <string name="system_status_queued_broadcasts">Missatges de difusió en cua</string>
     <string name="system_setting_hostname_publish">Anuncia el nom d\'amfitrió i els dominis a altres servidors</string>
@@ -374,9 +376,11 @@
     <string name="accounts_device_seen">Vist per última vegada %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplicació</string>
     <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Prova enviada a %1$d de %2$d destinació</item>
-        <item quantity="other">Prova enviada a %1$d de %2$d destinacions</item>
+        <item quantity="one">Prova enviada a %1$s de %2$s destinació</item>
+        <item quantity="other">Prova enviada a %1$s de %2$s destinacions</item>
     </plurals>
     <string name="notifprefs_test_none">Cap destinació configurada</string>
     <string name="notifprefs_transport_fcm">Push d\'Android</string>
@@ -400,23 +404,23 @@
     <string name="system_documents_discard_title">Vols descartar els canvis?</string>
     <string name="system_documents_discard">Descarta</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d amb èxit</item>
-        <item quantity="other">%1$d amb èxit</item>
+        <item quantity="one">%1$s amb èxit</item>
+        <item quantity="other">%1$s amb èxit</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d fallit</item>
-        <item quantity="other">%1$d fallits</item>
+        <item quantity="one">%1$s fallit</item>
+        <item quantity="other">%1$s fallits</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d reserva</item>
-        <item quantity="other">%1$d / %2$d reserves</item>
+        <item quantity="one">%1$s / %2$s reserva</item>
+        <item quantity="other">%1$s / %2$s reserves</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d circuit</item>
-        <item quantity="other">%1$d circuits</item>
+        <item quantity="one">%1$s circuit</item>
+        <item quantity="other">%1$s circuits</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d rebutjada</item>
-        <item quantity="other">%1$d rebutjades</item>
+        <item quantity="one">%1$s rebutjada</item>
+        <item quantity="other">%1$s rebutjades</item>
     </plurals>
 </resources>

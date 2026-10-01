@@ -45,6 +45,8 @@
     <string name="route_delete_title">මාර්ගය මකන්නද?</string>
     <string name="route_path">මාර්ගය</string>
     <string name="route_method">ක්‍රමය</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">යෙදුම</string>
     <string name="route_method_entity">ආයතනය</string>
     <string name="route_method_redirect">යළි-යොමු කිරීම</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org වෙතින් බාගත කරන්න</string>
     <string name="system_status_copy">පිටපත් කරන්න</string>
     <string name="system_status_peers">සම</string>
-    <string name="system_status_known">දන්නා</string>
+    <string name="system_status_peers_totals">දන්නා %1$s · සම්බන්ධිත %2$s · විකාශ දැල් ජාලය %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">දන්නා %1$s · සම්බන්ධිත %2$s</string>
     <string name="system_status_peer_connected">සම්බන්ධිතයි</string>
     <string name="system_status_peer_disconnected">විසන්ධියි</string>
     <string name="system_status_peer_queued">පෝලිමේ පණිවිඩ</string>
@@ -194,12 +197,12 @@
     <string name="system_users_toast_deleted">පරිශීලකයා මකා දමන ලදී</string>
     <string name="system_users_toast_suspended">පරිශීලකයා තහනම් කළා</string>
     <string name="system_users_toast_suspension_removed">තහනම් කිරීම ඉවත් කළා</string>
-    <string name="system_users_toast_session_revoked">සැසිය අවලංගු කරන ලදී</string>
+    <string name="system_users_toast_session_revoked">සැසිය අහෝසි කරන ලදී</string>
     <string name="system_users_toast_create_failed">පරිශීලකයෙකු සෑදීමට අසමත් විය</string>
     <string name="system_users_toast_update_failed">පරිශීලකයා යාවත්කාලීන කිරීමට අසමත් විය</string>
     <string name="system_users_toast_delete_failed">පරිශීලකයා මැකීමට අසමත් විය</string>
     <string name="system_users_toast_status_failed">පරිශීලක තත්ත්වය යාවත්කාලීන කිරීමට අසමත් විය</string>
-    <string name="system_users_toast_revoke_failed">සැසිය අවලංගු කිරීමට අසමත් විය</string>
+    <string name="system_users_toast_revoke_failed">සැසිය අහෝසි කිරීමට අසමත් විය</string>
 
     <string name="settings_home_sessions">සැසි</string>
     <string name="settings_home_privacy">පෞද්ගලිකත්ව ප්‍රතිපත්තිය</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">ඔබට තවදුරටත් සත්‍යාපන කේතයක් සමඟ ඇතුළු විය නොහැක.</string>
     <string name="account_recovery_none">ප්‍රකෘතිමත් කේත නිර්මාණය කර නැත.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">ඉතිරිව ඇති ප්‍රකෘතිමත් කේත %1$d.</item>
-        <item quantity="other">ඉතිරිව ඇති ප්‍රකෘතිමත් කේත %1$d.</item>
+        <item quantity="one">ඉතිරිව ඇති ප්‍රකෘතිමත් කේත %1$s.</item>
+        <item quantity="other">ඉතිරිව ඇති ප්‍රකෘතිමත් කේත %1$s.</item>
     </plurals>
     <string name="account_recovery_generate">කේත නිර්මාණය කරන්න</string>
     <string name="account_recovery_regenerate">කේත නැවත නිර්මාණය කරන්න</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">අවසන් භාවිතය %1$s</string>
     <string name="route_delete_message">මෙය \"%1$s\" මාර්ගය සඳහා රාවුට් එක ඉවත් කරයි.</string>
     <string name="route_empty">වින්‍යාසගත මාර්ග නැත.</string>
-    <string name="route_meta">ප්‍රමුඛතාව %1$d · %2$s</string>
+    <string name="route_meta">ප්‍රමුඛතාව %1$s · %2$s</string>
     <string name="interests_search_placeholder">එකතු කිරීමට මාතෘකා සොයන්න…</string>
     <string name="interests_empty">තවම රුචිකම් නැත.</string>
     <string name="interests_summary_regenerate">සාරාංශය නැවත ජනනය කරන්න</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">සියලුම සැසි අහෝසි කරන්නද?</string>
     <string name="system_users_revoke_all_message">මෙම පරිශීලකයාගේ සියලුම සක්‍රීය සැසි බැහැර වේ.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">පරිශීලකයින් %3$dන් %1$d–%2$d පෙන්වමින්</item>
-        <item quantity="other">පරිශීලකයින් %3$dන් %1$d–%2$d පෙන්වමින්</item>
+        <item quantity="one">පරිශීලකයින් %3$sන් %1$s–%2$s පෙන්වමින්</item>
+        <item quantity="other">පරිශීලකයින් %3$sන් %1$s–%2$s පෙන්වමින්</item>
     </plurals>
     <string name="account_title">ගිණුම</string>
     <string name="account_section_identity">අනන්‍යතාවය</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS සත්‍යාපනය කරන්න</string>
     <string name="settings_home_domains">වසම්</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">ගමනාන්ත %1$d කට පරීක්ෂණය යවන ලදී</item>
-        <item quantity="other">ගමනාන්ත %1$d කට පරීක්ෂණය යවන ලදී</item>
+        <item quantity="one">ගමනාන්ත %1$s කට පරීක්ෂණය යවන ලදී</item>
+        <item quantity="other">ගමනාන්ත %1$s කට පරීක්ෂණය යවන ලදී</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">සැසි %1$d අවලංගු කළා</item>
-        <item quantity="other">සැසි %1$d ක් අවලංගු කළා</item>
+        <item quantity="one">සැසි %1$s ක් අහෝසි කළා</item>
+        <item quantity="other">සැසි %1$s ක් අහෝසි කළා</item>
     </plurals>
     <string name="login_title">පුරනය වීම</string>
     <string name="login_section_methods">පිවිසුම් ක්‍රම</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">ප්‍රසිද්ධ</string>
     <string name="system_status_reachability_private">පෞද්ගලික</string>
     <string name="system_status_reachability_unknown">නොදන්නා</string>
-    <string name="system_status_relay">රිලේ හරහා</string>
-    <string name="system_status_mesh">විකාශ දැල් ජාලය</string>
+    <string name="system_status_reachability_relay">%1$s · රිලේ හරහා</string>
     <string name="system_status_broadcast">අවසන් විකාශය</string>
     <string name="system_status_queued_broadcasts">පෝලිමේ ඇති විකාශන පණිවිඩ</string>
     <string name="system_setting_hostname_publish">සත්කාරක නාමය සහ වසම් වෙනත් සේවාදායකයන්ට නිවේදනය කරන්න</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">අවසන් වරට දුටුවේ %1$s</string>
     <string name="notifprefs_device_app">%1$s · යෙදුම</string>
     <string name="notifprefs_device_push">%1$s · පුෂ්</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">ගමනාන්ත %2$dන් %1$dකට පරීක්ෂණය යවන ලදී</item>
-        <item quantity="other">ගමනාන්ත %2$dන් %1$dකට පරීක්ෂණය යවන ලදී</item>
+        <item quantity="one">ගමනාන්ත %2$sන් %1$sකට පරීක්ෂණය යවන ලදී</item>
+        <item quantity="other">ගමනාන්ත %2$sන් %1$sකට පරීක්ෂණය යවන ලදී</item>
     </plurals>
     <string name="notifprefs_test_none">ගමනාන්ත සැකසී නැත</string>
     <string name="notifprefs_transport_fcm">Android තල්ලුව</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">වෙනස්කම් ඉවත ලන්නද?</string>
     <string name="system_documents_discard">ඉවත ලන්න</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d සාර්ථකයි</item>
-        <item quantity="other">%1$d සාර්ථකයි</item>
+        <item quantity="one">%1$s සාර්ථකයි</item>
+        <item quantity="other">%1$s සාර්ථකයි</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d අසාර්ථකයි</item>
-        <item quantity="other">%1$d අසාර්ථකයි</item>
+        <item quantity="one">%1$s අසාර්ථකයි</item>
+        <item quantity="other">%1$s අසාර්ථකයි</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d වෙන්කිරීම්</item>
-        <item quantity="other">%1$d / %2$d වෙන්කිරීම්</item>
+        <item quantity="one">%1$s / %2$s වෙන්කිරීම්</item>
+        <item quantity="other">%1$s / %2$s වෙන්කිරීම්</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d පරිපථ</item>
-        <item quantity="other">%1$d පරිපථ</item>
+        <item quantity="one">%1$s පරිපථ</item>
+        <item quantity="other">%1$s පරිපථ</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d ප්‍රතික්ෂේපිත</item>
-        <item quantity="other">%1$d ප්‍රතික්ෂේපිත</item>
+        <item quantity="one">%1$s ප්‍රතික්ෂේපිත</item>
+        <item quantity="other">%1$s ප්‍රතික්ෂේපිත</item>
     </plurals>
 </resources>

@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">Novo</string>
     <string name="projects_settings_section_identity">Identiteta</string>
     <string name="projects_settings_access_updated">Dostop posodobljen</string>
-    <string name="projects_settings_access_revoked">Dostop preklican</string>
+    <string name="projects_settings_access_revoked">Dostop odvzet</string>
     <string name="projects_settings_section_access">Upravljanje dostopa</string>
     <string name="projects_people_search">Iskanje oseb</string>
     <string name="projects_settings_field_entity_id">ID entitete</string>

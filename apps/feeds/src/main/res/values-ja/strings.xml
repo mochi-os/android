@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">未取得</string>
     <string name="feeds_source_poll">ポーリング</string>
     <string name="feeds_source_transform">AI 変換</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" を削除しますか？</string>
-    <string name="feeds_remove_also_delete_posts">インポートした投稿も削除する</string>
+    <string name="feeds_remove_source_confirm">\"%1$s\" からのコンテンツのインポートを停止します。</string>
+    <string name="feeds_remove_also_delete_posts">このソースからインポートした投稿も削除する</string>
     <string name="feeds_suggested_credibility_title">おすすめの信頼度</string>
     <string name="feeds_suggested_credibility_body">Mochi は信頼度 %1$d を提案しています。承認しますか？</string>
     <string name="feeds_suggested_credibility_keep">現在の値を維持</string>

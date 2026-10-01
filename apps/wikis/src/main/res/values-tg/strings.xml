@@ -41,7 +41,7 @@
     <string name="wikis_rss_copied">URL-и RSS ба буфер нусха карда шуд</string>
     <string name="wikis_rss_failed">Гирифтани токени RSS ба анҷом нарасид</string>
     <string name="wikis_rss_revoke">Дастрасиро бозхонд кунед</string>
-    <string name="wikis_rss_revoked">Дастрасии RSS бекор карда шуд</string>
+    <string name="wikis_rss_revoked">Дастрасии RSS бозхонд карда шуд</string>
     <string name="wikis_find_title">Викиҳоро ёбед</string>
     <string name="wikis_find_no_results">Ягон вики ёфт нашуд</string>
     <string name="wikis_find_recommended_section">Викиҳои тавсияшуда</string>
@@ -96,7 +96,7 @@
     <string name="wikis_delete_page_confirm">Нест кардан</string>
     <string name="wikis_delete_page_cancel">Бекор кардан</string>
     <string name="wikis_delete_page_failed">Ҳазфи саҳифа ба анҷом нарасид</string>
-    <string name="wikis_revert_page_comment_label">Бекор кардани шарҳ</string>
+    <string name="wikis_revert_page_comment_label">Шарҳи бозгардонӣ</string>
     <string name="wikis_revert_page_confirm">Бозгардонидан</string>
     <string name="wikis_revert_page_failed">Бозгардонии саҳифа ба анҷом нарасид</string>
     <string name="wikis_rename_page_title">Тағйири номи саҳифа</string>
@@ -110,9 +110,9 @@
     <string name="wikis_history_title">Таърих</string>
     <string name="wikis_history_empty">Ягон ревизия ёфт нашуд</string>
     <string name="wikis_history_view_action">Намоиш</string>
-    <string name="wikis_history_revert_action">Бекор кардан ба ин версия</string>
+    <string name="wikis_history_revert_action">Бозгардонидан ба ин версия</string>
     <string name="wikis_revision_current_badge">Ҷорӣ</string>
-    <string name="wikis_revision_revert_to_this">Бекор кардан ба ин версия</string>
+    <string name="wikis_revision_revert_to_this">Бозгардонидан ба ин версия</string>
     <string name="wikis_changes_title">Тағйиротҳои охирин</string>
     <string name="wikis_changes_subtitle">Таҳриротҳои охирин дар тамоми саҳифаҳои ин вики.</string>
     <string name="wikis_changes_empty">То ҳол ягон тағйирот нест</string>
@@ -248,12 +248,12 @@
     <string name="wikis_delete_page_success">Саҳифа нест карда шуд</string>
     <string name="wikis_revert_page_title">Бозгардонидани саҳифа</string>
     <string name="wikis_revert_page_message">Шумо мехоҳед %1$s-ро ба нусхаи %2$d баргардонед. Ин таҳрири нав бо мундариҷаи нусхаи %2$d эҷод мекунад.</string>
-    <string name="wikis_revert_page_default_comment">Ба нусхаи %1$d баргардонида шуд</string>
-    <string name="wikis_revert_page_success">Ба нусхаи %1$d баргардонида шуд</string>
+    <string name="wikis_revert_page_default_comment">Ба нусхаи %1$d бозгардонида шуд</string>
+    <string name="wikis_revert_page_success">Ба нусхаи %1$d бозгардонида шуд</string>
     <string name="wikis_rename_page_renaming">Тағйири ном…</string>
     <string name="wikis_rename_page_success">Номи саҳифа иваз карда шуд</string>
     <string name="wikis_history_viewing">Таърихи %1$s дида мешавад, нусхаи ҷорӣ %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">Версияи %1$d</string>
     <string name="wikis_search_pages_placeholder">Ҷустуҷӯи саҳифаҳо аз рӯи унвон ё мундариҷа…</string>
     <string name="wikis_search_no_results">Барои “%1$s” саҳифае ёфт нашуд. Калимаҳои дигари ҷустуҷӯро санҷед.</string>
     <string name="wikis_search_updated">Навсозӣ шуд: %1$s</string>
@@ -319,8 +319,8 @@
         <item quantity="other">%d саҳифа бо ин барчасп</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">%1$d натиҷа барои "%2$s" ёфт шуд</item>
-        <item quantity="other">%1$d натиҷа барои "%2$s" ёфт шуд</item>
+        <item quantity="one">%1$d натиҷа барои \"%2$s\" ёфт шуд</item>
+        <item quantity="other">%1$d натиҷа барои \"%2$s\" ёфт шуд</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Зернавис захира нашуд</string>
     <string name="wikis_attachments_upload_types">Файлҳои дастгиришаванда: тасвирҳо, PDF, DOC, DOCX, TXT ва MD.</string>

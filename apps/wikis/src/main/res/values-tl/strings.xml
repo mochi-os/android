@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">Pinapalitan ang pangalan…</string>
     <string name="wikis_rename_page_success">Pinalitan ang pangalan ng pahina</string>
     <string name="wikis_history_viewing">Tinitingnan ang kasaysayan ng %1$s, kasalukuyang bersyon %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">Bersyon %1$d</string>
     <string name="wikis_search_pages_placeholder">Maghanap ng mga pahina ayon sa pamagat o nilalaman…</string>
     <string name="wikis_search_no_results">Walang nahanap na pahina para sa “%1$s”. Sumubok ng ibang termino sa paghahanap.</string>
     <string name="wikis_search_updated">Na-update %1$s</string>

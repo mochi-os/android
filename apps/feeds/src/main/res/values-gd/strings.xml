@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">Cha deach a thoirt a-nuas a-riamh</string>
     <string name="feeds_source_poll">Cunntas-bheachd</string>
     <string name="feeds_source_transform">Cruth-atharrachadh AI</string>
-    <string name="feeds_remove_source_confirm">Thoir air falbh \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Sguab às na postaichean a chaidh ion-phortadh cuideachd</string>
+    <string name="feeds_remove_source_confirm">Sguiridh seo de dh\'ion-phortadh susbaint o \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Sguab às cuideachd na postaichean a chaidh ion-phortadh on tùs seo</string>
     <string name="feeds_suggested_credibility_title">Earbsachd a thathar a\' moladh</string>
     <string name="feeds_suggested_credibility_body">Tha Mochi a\' moladh earbsachd de %1$d. A bheil thu ag aontachadh?</string>
     <string name="feeds_suggested_credibility_keep">Cùm na tha ann</string>
@@ -225,7 +225,7 @@
         <item quantity="one">%1$d bheachd</item>
         <item quantity="two">%1$d bheachd</item>
         <item quantity="few">%1$d beachdan</item>
-        <item quantity="other">%1$d beachdan</item>
+        <item quantity="other">%1$d beachd</item>
     </plurals>
     <plurals name="feeds_attachment_count">
         <item quantity="one">%1$d cheanglachan</item>

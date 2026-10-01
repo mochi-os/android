@@ -88,7 +88,6 @@
     <string name="market_checkout_shipping">Versand</string>
     <string name="market_editor_shipping">Versand</string>
     <string name="market_filter_delivery_shipping">Versand</string>
-    <string name="market_listing_detail_shipping_heading">Versand</string>
     <string name="market_purchase_shipping_line">Versand</string>
     <string name="market_sale_section_shipping">Versand</string>
     <string name="market_dispute_dialog_evidence_role_seller">Verkäufer</string>
@@ -373,7 +372,6 @@
     <string name="market_messages_thread_title">Unterhaltung</string>
     <string name="market_messages_unread_badge">%1$d ungelesen</string>
     <string name="market_open_sidebar">Menü öffnen</string>
-    <string name="market_price_from">ab %1$s</string>
     <string name="market_price_high_bid">Höchstgebot: %1$s</string>
     <string name="market_price_instant_buy">Sofortkauf: %1$s</string>
     <string name="market_price_per_month">%1$s / Monat</string>

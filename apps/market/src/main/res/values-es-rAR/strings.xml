@@ -107,7 +107,6 @@
     <string name="market_checkout_shipping">Envío</string>
     <string name="market_editor_shipping">Envío</string>
     <string name="market_filter_delivery_shipping">Envío</string>
-    <string name="market_listing_detail_shipping_heading">Envío</string>
     <string name="market_purchase_shipping_line">Envío</string>
     <string name="market_sale_section_shipping">Envío</string>
     <string name="market_dispute_dialog_evidence_role_seller">Vendedor</string>
@@ -455,7 +454,6 @@
     <string name="market_messages_send_failed">No se pudo enviar el mensaje</string>
     <string name="market_messages_thread_title">Conversación</string>
     <string name="market_messages_unread_badge">%1$d sin leer</string>
-    <string name="market_price_from">desde %1$s</string>
     <string name="market_price_high_bid">Oferta más alta: %1$s</string>
     <string name="market_price_instant_buy">compra inmediata: %1$s</string>
     <string name="market_price_per_month">%1$s / mes</string>

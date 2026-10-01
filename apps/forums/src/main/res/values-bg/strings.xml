@@ -151,7 +151,7 @@
     <string name="forums_access_level_moderate">Модериране</string>
     <string name="forums_members_search">Филтриране на членове</string>
     <string name="forums_banner_description">Markdown, показан в горната част на форума.</string>
-    <string name="forums_banner_placeholder">Добре дошли в този форум…</string>
+    <string name="forums_banner_placeholder">Въведете текст на банера (поддържа се Markdown)…</string>
     <string name="forums_ai_mode_label">Режим: %1$s</string>
     <string name="forums_ai_mode_heading">Режим на ИИ</string>
     <string name="forums_ai_mode_off">Изключено</string>
@@ -185,7 +185,7 @@
     <string name="forums_settings_delete_message">Това ще изтрие завинаги форума и всички негови публикации. Това действие е необратимо.</string>
 
     <string name="forums_tag_interest_up">Усили интереса</string>
-    <string name="forums_tag_interest_down">Намали лихвата</string>
+    <string name="forums_tag_interest_down">Намали интереса</string>
     <string name="forums_tag_interest_remove">Премахни интерес</string>
     <string name="forums_access_tab_users">Потребители</string>
     <string name="forums_access_tab_groups">Групи</string>

@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">ප්‍රවේශ කළමනාකරණය</string>
     <string name="crm_settings_not_set">සකසා නැත</string>
     <string name="crm_settings_access_updated">ප්‍රවේශය යාවත්කාලීන කරන ලදී</string>
-    <string name="crm_settings_access_revoked">ප්‍රවේශය අයිඪ ගත්ති</string>
+    <string name="crm_settings_access_revoked">ප්‍රවේශය අහෝසි කරන ලදී</string>
     <string name="crm_people_search">පුද්ගලයන් සොයන්න</string>
     <string name="crm_access_tab_other">වෙනත්</string>
     <string name="crm_access_select_group">කණ්ඩායමක් තෝරන්න</string>

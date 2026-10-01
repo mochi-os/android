@@ -54,7 +54,7 @@
     <string name="account_section_recovery">復原碼</string>
     <string name="account_recovery_none">未產生任何復原碼。</string>
     <plurals name="account_recovery_count">
-        <item quantity="other">仲剩 %1$d 個復原碼。</item>
+        <item quantity="other">仲剩 %1$s 個復原碼。</item>
     </plurals>
     <string name="account_recovery_generate">產生復原碼</string>
     <string name="account_recovery_regenerate">重新產生復原碼</string>
@@ -91,13 +91,15 @@
     <string name="route_empty">未設定任何路由。</string>
     <string name="route_path">路徑</string>
     <string name="route_method">方式</string>
+    <string name="route_picker_value">%1$s：%2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">應用程式</string>
     <string name="route_method_entity">實體</string>
     <string name="route_method_redirect">重新導向</string>
     <string name="route_priority">優先次序</string>
     <string name="route_enabled">已啟用</string>
     <string name="route_disabled">已停用</string>
-    <string name="route_meta">優先次序 %1$d · %2$s</string>
+    <string name="route_meta">優先次序 %1$s · %2$s</string>
     <string name="interests_title">興趣</string>
     <string name="interests_search_placeholder">搜尋想新增嘅主題…</string>
     <string name="interests_empty">重未有任何興趣。</string>
@@ -135,7 +137,8 @@
     <string name="system_status_download_from_packages">由 packages.mochi-os.org 下載</string>
     <string name="system_status_copy">複製</string>
     <string name="system_status_peers">對等節點</string>
-    <string name="system_status_known">已知</string>
+    <string name="system_status_peers_totals">已知 %1$s · 已連接 %2$s · 廣播網狀網絡 %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">已知 %1$s · 已連接 %2$s</string>
     <string name="system_status_peer_connected">已連接</string>
     <string name="system_status_peer_disconnected">已斷開</string>
     <string name="system_status_peer_queued">排隊中嘅訊息</string>
@@ -255,7 +258,7 @@
     <string name="system_users_unknown_browser">未知瀏覽器</string>
     <string name="system_users_unknown">未知</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="other">顯示 %3$d 個用戶中嘅第 %1$d–%2$d 個</item>
+        <item quantity="other">顯示 %3$s 個用戶中嘅第 %1$s–%2$s 個</item>
     </plurals>
     <string name="system_users_previous">上一頁</string>
     <string name="system_users_next">下一頁</string>
@@ -310,11 +313,11 @@
     <string name="domain_verify">驗證 DNS</string>
     <string name="settings_home_domains">網域</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">已向 %1$d 個目標傳送測試</item>
-        <item quantity="other">已向 %1$d 個目標傳送測試</item>
+        <item quantity="one">已向 %1$s 個目標傳送測試</item>
+        <item quantity="other">已向 %1$s 個目標傳送測試</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="other">已撤銷 %1$d 個工作階段</item>
+        <item quantity="other">已撤銷 %1$s 個工作階段</item>
     </plurals>
     <string name="account_close_section">關閉帳戶</string>
     <string name="account_close_action">關閉帳戶</string>
@@ -337,8 +340,7 @@
     <string name="system_status_reachability_public">公開</string>
     <string name="system_status_reachability_private">私人</string>
     <string name="system_status_reachability_unknown">未知</string>
-    <string name="system_status_relay">經中繼</string>
-    <string name="system_status_mesh">廣播網狀網絡</string>
+    <string name="system_status_reachability_relay">%1$s · 經中繼</string>
     <string name="system_status_broadcast">最後廣播</string>
     <string name="system_status_queued_broadcasts">排隊嘅廣播訊息</string>
     <string name="system_setting_hostname_publish">向其他伺服器公告主機名稱和網域</string>
@@ -372,8 +374,10 @@
     <string name="accounts_test_failed">測試失敗</string>
     <string name="notifprefs_device_app">%1$s · 應用程式</string>
     <string name="notifprefs_device_push">%1$s · 推送</string>
+    <string name="notifprefs_destination_rss">RSS：%1$s</string>
+    <string name="notifprefs_topic_title">%1$s：%2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="other">測試已傳送至 %2$d 個目的地中嘅 %1$d 個</item>
+        <item quantity="other">測試已傳送至 %2$s 個目的地中嘅 %1$s 個</item>
     </plurals>
     <string name="notifprefs_test_none">未設定任何目的地</string>
     <string name="notifprefs_transport_fcm">Android 推送</string>
@@ -397,18 +401,18 @@
     <string name="system_documents_discard_title">要唔要捨棄變更？</string>
     <string name="system_documents_discard">捨棄</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="other">%1$d 個成功</item>
+        <item quantity="other">%1$s 個成功</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="other">%1$d 個失敗</item>
+        <item quantity="other">%1$s 個失敗</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="other">%1$d / %2$d 個預留</item>
+        <item quantity="other">%1$s / %2$s 個預留</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="other">%1$d 條線路</item>
+        <item quantity="other">%1$s 條線路</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="other">%1$d 個被拒</item>
+        <item quantity="other">%1$s 個被拒</item>
     </plurals>
 </resources>

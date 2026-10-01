@@ -45,6 +45,8 @@
     <string name="route_delete_title">Marshrut oʻchirilsinmi?</string>
     <string name="route_path">Yoʻl</string>
     <string name="route_method">Usul</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Ilova</string>
     <string name="route_method_entity">Obyekt</string>
     <string name="route_method_redirect">Yoʻnaltirish</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org dan yuklab oling</string>
     <string name="system_status_copy">Nusxalash</string>
     <string name="system_status_peers">Hamkorlar</string>
-    <string name="system_status_known">Ma\'lum</string>
+    <string name="system_status_peers_totals">Maʼlum %1$s · Ulangan %2$s · Translyatsiya tarmogʻi %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Maʼlum %1$s · Ulangan %2$s</string>
     <string name="system_status_peer_connected">Ulangan</string>
     <string name="system_status_peer_disconnected">Uzilgan</string>
     <string name="system_status_peer_queued">Navbatdagi xabarlar</string>
@@ -193,13 +196,13 @@
     <string name="system_users_toast_updated">Foydalanuvchi yangilandi</string>
     <string name="system_users_toast_deleted">Foydalanuvchi oʻchirildi</string>
     <string name="system_users_toast_suspended">Foydalanuvchi toʻxtatib qoʻyildi</string>
-    <string name="system_users_toast_suspension_removed">Toʻxtatib qoʻyish bekor qilindi</string>
-    <string name="system_users_toast_session_revoked">Sessiya bekor qilindi</string>
+    <string name="system_users_toast_suspension_removed">Toʻxtatib qoʻyish olib tashlandi</string>
+    <string name="system_users_toast_session_revoked">Seans qaytarib olindi</string>
     <string name="system_users_toast_create_failed">Foydalanuvchi yaratib boʻlmadi</string>
     <string name="system_users_toast_update_failed">Foydalanuvchini yangilab boʻlmadi</string>
     <string name="system_users_toast_delete_failed">Foydalanuvchini oʻchirib boʻlmadi</string>
     <string name="system_users_toast_status_failed">Foydalanuvchi holatini yangilab boʻlmadi</string>
-    <string name="system_users_toast_revoke_failed">Sessiyani bekor qilib boʻlmadi</string>
+    <string name="system_users_toast_revoke_failed">Seansni qaytarib olib boʻlmadi</string>
 
     <string name="settings_home_sessions">Seanslar</string>
     <string name="settings_home_privacy">Maxfiylik siyosati</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">Siz endi autentifikator kodi bilan kira olmaysiz.</string>
     <string name="account_recovery_none">Tiklash kodlari yaratilmagan.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d ta tiklash kodi qoldi.</item>
-        <item quantity="other">%1$d ta tiklash kodi qoldi.</item>
+        <item quantity="one">%1$s ta tiklash kodi qoldi.</item>
+        <item quantity="other">%1$s ta tiklash kodi qoldi.</item>
     </plurals>
     <string name="account_recovery_generate">Kodlar yaratish</string>
     <string name="account_recovery_regenerate">Kodlarni qayta yaratish</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">Oxirgi foydalanish %1$s</string>
     <string name="route_delete_message">Bu yoʻl \"%1$s\" uchun marshrutni olib tashlaydi.</string>
     <string name="route_empty">Sozlangan marshrutlar yoʻq.</string>
-    <string name="route_meta">Ustuvorlik %1$d · %2$s</string>
+    <string name="route_meta">Ustuvorlik %1$s · %2$s</string>
     <string name="interests_search_placeholder">Qoʻshish uchun mavzularni qidiring…</string>
     <string name="interests_empty">Hali qiziqishlar yoʻq.</string>
     <string name="interests_summary_regenerate">Qisqacha mazmunni qayta yaratish</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">Barcha seanslar qaytarib olinsinmi?</string>
     <string name="system_users_revoke_all_message">Bu foydalanuvchining barcha faol sessiyalaridan chiqiladi.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">%3$d foydalanuvchidan %1$d–%2$d koʻrsatilmoqda</item>
-        <item quantity="other">%3$d foydalanuvchidan %1$d–%2$d koʻrsatilmoqda</item>
+        <item quantity="one">%3$s foydalanuvchidan %1$s–%2$s koʻrsatilmoqda</item>
+        <item quantity="other">%3$s foydalanuvchidan %1$s–%2$s koʻrsatilmoqda</item>
     </plurals>
     <string name="account_title">Hisob</string>
     <string name="account_section_identity">Identifikatsiya</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS ni tasdiqlash</string>
     <string name="settings_home_domains">Domenlar</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Sinov %1$d manzilga yuborildi</item>
-        <item quantity="other">Sinov %1$d manzilga yuborildi</item>
+        <item quantity="one">Sinov %1$s manzilga yuborildi</item>
+        <item quantity="other">Sinov %1$s manzilga yuborildi</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$d sessiya bekor qilindi</item>
-        <item quantity="other">%1$d sessiya bekor qilindi</item>
+        <item quantity="one">%1$s seans qaytarib olindi</item>
+        <item quantity="other">%1$s seans qaytarib olindi</item>
     </plurals>
     <string name="login_title">Kirish</string>
     <string name="login_section_methods">Kirish usullari</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">Ommaviy</string>
     <string name="system_status_reachability_private">Shaxsiy</string>
     <string name="system_status_reachability_unknown">Nomaʼlum</string>
-    <string name="system_status_relay">Rele orqali</string>
-    <string name="system_status_mesh">Translyatsiya mesh</string>
+    <string name="system_status_reachability_relay">%1$s · rele orqali</string>
     <string name="system_status_broadcast">Oxirgi uzatish</string>
     <string name="system_status_queued_broadcasts">Navbatdagi eshittirish xabarlari</string>
     <string name="system_setting_hostname_publish">Xost nomi va domenlarni boshqa serverlarga e\'lon qilish</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">Oxirgi marta ko‘rilgan %1$s</string>
     <string name="notifprefs_device_app">%1$s · ilova</string>
     <string name="notifprefs_device_push">%1$s · push bildirishnomalar</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Sinov %2$d manzildan %1$d tasiga yuborildi</item>
-        <item quantity="other">Sinov %2$d manzildan %1$d tasiga yuborildi</item>
+        <item quantity="one">Sinov %2$s manzildan %1$s tasiga yuborildi</item>
+        <item quantity="other">Sinov %2$s manzildan %1$s tasiga yuborildi</item>
     </plurals>
     <string name="notifprefs_test_none">Manzillar sozlanmagan</string>
     <string name="notifprefs_transport_fcm">Android push bildirishnomalari</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">Oʻzgarishlar tashlab yuborilsinmi?</string>
     <string name="system_documents_discard">Tashlab yuborish</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d muvaffaqiyatli</item>
-        <item quantity="other">%1$d muvaffaqiyatli</item>
+        <item quantity="one">%1$s muvaffaqiyatli</item>
+        <item quantity="other">%1$s muvaffaqiyatli</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d muvaffaqiyatsiz</item>
-        <item quantity="other">%1$d muvaffaqiyatsiz</item>
+        <item quantity="one">%1$s muvaffaqiyatsiz</item>
+        <item quantity="other">%1$s muvaffaqiyatsiz</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d bron</item>
-        <item quantity="other">%1$d / %2$d bron</item>
+        <item quantity="one">%1$s / %2$s bron</item>
+        <item quantity="other">%1$s / %2$s bron</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d zanjir</item>
-        <item quantity="other">%1$d zanjir</item>
+        <item quantity="one">%1$s zanjir</item>
+        <item quantity="other">%1$s zanjir</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d rad etildi</item>
-        <item quantity="other">%1$d rad etildi</item>
+        <item quantity="one">%1$s rad etildi</item>
+        <item quantity="other">%1$s rad etildi</item>
     </plurals>
 </resources>

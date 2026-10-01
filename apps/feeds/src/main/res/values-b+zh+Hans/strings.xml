@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">从未获取</string>
     <string name="feeds_source_poll">轮询</string>
     <string name="feeds_source_transform">AI 转换</string>
-    <string name="feeds_remove_source_confirm">移除 \"%1$s\"？</string>
-    <string name="feeds_remove_also_delete_posts">同时删除已导入的帖子</string>
+    <string name="feeds_remove_source_confirm">这将停止从 \"%1$s\" 导入内容。</string>
+    <string name="feeds_remove_also_delete_posts">同时删除从此来源导入的帖子</string>
     <string name="feeds_suggested_credibility_title">推荐可信度</string>
     <string name="feeds_suggested_credibility_body">Mochi 推荐可信度为 %1$d。是否接受？</string>
     <string name="feeds_suggested_credibility_keep">保持当前</string>
@@ -166,7 +166,7 @@
     <string name="feeds_settings_name_edit_cd">编辑名称</string>
     <string name="feeds_settings_section_identity">身份</string>
     <string name="feeds_unsubscribe">退订</string>
-    <string name="feeds_unsubscribed">已取消订阅</string>
+    <string name="feeds_unsubscribed">已退订</string>
     <string name="feeds_access_level_comment_full">评论、点赞和查看</string>
     <string name="feeds_rss_mode_posts_comments">帖子和评论</string>
     <string name="feeds_access_add_title">添加访问权限</string>
@@ -186,7 +186,7 @@
     <string name="feeds_create_first_post">创建第一个帖子</string>
     <string name="feeds_rss_mode_posts">帖子</string>
     <string name="feeds_source_last_checked">上次检查 %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">取消订阅源</string>
+    <string name="feeds_settings_unsubscribe_section">退订订阅源</string>
     <string name="feeds_source_transform_hint">翻译为英语,并以要点形式显示。</string>
     <string name="feeds_source_url_hint_feed">源实体 ID 或指纹</string>
     <string name="feeds_source_credibility_label">可信度</string>

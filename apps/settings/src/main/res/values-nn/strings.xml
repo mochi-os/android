@@ -43,6 +43,8 @@
     <string name="route_delete_title">Slette rute?</string>
     <string name="route_path">Sti</string>
     <string name="route_method">Metode</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">App</string>
     <string name="route_method_entity">Entitet</string>
     <string name="route_method_redirect">Omdirigering</string>
@@ -79,7 +81,8 @@
     <string name="system_status_download_from_packages">Last ned frå packages.mochi-os.org</string>
     <string name="system_status_copy">Kopier</string>
     <string name="system_status_peers">Likemenn</string>
-    <string name="system_status_known">Kjende</string>
+    <string name="system_status_peers_totals">Kjende %1$s · Tilkopla %2$s · Kringkastingsmesh %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Kjende %1$s · Tilkopla %2$s</string>
     <string name="system_status_peer_connected">Tilkopla</string>
     <string name="system_status_peer_disconnected">Fråkopla</string>
     <string name="system_status_peer_queued">Meldingar i kø</string>
@@ -217,8 +220,8 @@
     <string name="account_totp_disable_message">Du vil ikkje kunne logge inn med ein autentiseringskode.</string>
     <string name="account_recovery_none">Ingen gjenopprettingskodar er genererte.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d gjenverande gjenopprettingskode.</item>
-        <item quantity="other">%1$d gjenverande gjenopprettingskodar.</item>
+        <item quantity="one">%1$s gjenverande gjenopprettingskode.</item>
+        <item quantity="other">%1$s gjenverande gjenopprettingskodar.</item>
     </plurals>
     <string name="account_recovery_generate">Generer kodar</string>
     <string name="account_recovery_regenerate">Generer kodar på nytt</string>
@@ -233,7 +236,7 @@
     <string name="account_last_used">Sist brukt %1$s</string>
     <string name="route_delete_message">Dette fjernar ruta for stien \"%1$s\".</string>
     <string name="route_empty">Ingen ruter er sette opp.</string>
-    <string name="route_meta">Prioritet %1$d · %2$s</string>
+    <string name="route_meta">Prioritet %1$s · %2$s</string>
     <string name="interests_search_placeholder">Søk etter emne å leggje til…</string>
     <string name="interests_empty">Ingen interesser enno.</string>
     <string name="interests_summary_regenerate">Generer samandrag på nytt</string>
@@ -272,8 +275,8 @@
     <string name="system_users_revoke_all_title">Tilbakekalle alle økter?</string>
     <string name="system_users_revoke_all_message">Alle aktive økter for denne brukaren vert logga ut.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">Viser %1$d–%2$d av %3$d brukar</item>
-        <item quantity="other">Viser %1$d–%2$d av %3$d brukarar</item>
+        <item quantity="one">Viser %1$s–%2$s av %3$s brukar</item>
+        <item quantity="other">Viser %1$s–%2$s av %3$s brukarar</item>
     </plurals>
 
     <string name="sessions_title">Økter</string>
@@ -305,12 +308,12 @@
     <string name="domain_verify">Stadfest DNS</string>
     <string name="settings_home_domains">Domene</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Test sendt til %1$d destinasjon</item>
-        <item quantity="other">Test sendt til %1$d destinasjonar</item>
+        <item quantity="one">Test sendt til %1$s destinasjon</item>
+        <item quantity="other">Test sendt til %1$s destinasjonar</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">Oppheva %1$d økt</item>
-        <item quantity="other">Oppheva %1$d økter</item>
+        <item quantity="one">Oppheva %1$s økt</item>
+        <item quantity="other">Oppheva %1$s økter</item>
     </plurals>
     <string name="login_title">Innlogging</string>
     <string name="login_method_email">E-postkode</string>
@@ -338,8 +341,7 @@
     <string name="system_status_reachability_public">Offentleg</string>
     <string name="system_status_reachability_private">Privat</string>
     <string name="system_status_reachability_unknown">Ukjend</string>
-    <string name="system_status_relay">Via relé</string>
-    <string name="system_status_mesh">Kringkastingsmesh</string>
+    <string name="system_status_reachability_relay">%1$s · via relé</string>
     <string name="system_status_broadcast">Siste kringkasting</string>
     <string name="system_status_queued_broadcasts">Kringkastingsmeldinger i kø</string>
     <string name="system_setting_hostname_publish">Annonser vertsnavn og domener til andre servere</string>
@@ -375,9 +377,11 @@
     <string name="accounts_device_seen">Sist sett %1$s</string>
     <string name="notifprefs_device_app">%1$s · app</string>
     <string name="notifprefs_device_push">%1$s · push-varsel</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Test sendt til %1$d av %2$d destinasjon</item>
-        <item quantity="other">Test sendt til %1$d av %2$d destinasjonar</item>
+        <item quantity="one">Test sendt til %1$s av %2$s destinasjon</item>
+        <item quantity="other">Test sendt til %1$s av %2$s destinasjonar</item>
     </plurals>
     <string name="notifprefs_test_none">Ingen mål er sette opp</string>
     <string name="notifprefs_transport_fcm">Android-push</string>
@@ -401,23 +405,23 @@
     <string name="system_documents_discard_title">Vil du forkaste endringane?</string>
     <string name="system_documents_discard">Forkast</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d vellukka</item>
-        <item quantity="other">%1$d vellukka</item>
+        <item quantity="one">%1$s vellukka</item>
+        <item quantity="other">%1$s vellukka</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d mislukka</item>
-        <item quantity="other">%1$d mislukka</item>
+        <item quantity="one">%1$s mislukka</item>
+        <item quantity="other">%1$s mislukka</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d reservasjon</item>
-        <item quantity="other">%1$d / %2$d reservasjonar</item>
+        <item quantity="one">%1$s / %2$s reservasjon</item>
+        <item quantity="other">%1$s / %2$s reservasjonar</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d krets</item>
-        <item quantity="other">%1$d kretsar</item>
+        <item quantity="one">%1$s krets</item>
+        <item quantity="other">%1$s kretsar</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d avvist</item>
-        <item quantity="other">%1$d avviste</item>
+        <item quantity="one">%1$s avvist</item>
+        <item quantity="other">%1$s avviste</item>
     </plurals>
 </resources>

@@ -73,4 +73,34 @@ class NotificationOrderTest {
             order,
         )
     }
+
+    /** A raw label key such as "notifications.topic_x" used to be shown as-is, unlike the web. */
+    @Test
+    fun `a raw label key falls back to the humanised topic`() {
+        assertEquals(
+            "Post comment new",
+            topicLabel(topic("f", "Feeds", "notifications.topic_x", key = "post_comment/new")),
+        )
+        assertEquals("Assigned", topicLabel(topic("p", "Projects", "", key = "_assigned_")))
+    }
+
+    @Test
+    fun `a real label is kept`() {
+        assertEquals("Comment added", topicLabel(topic("f", "Feeds", "Comment added", key = "comment/new")))
+        assertEquals("Status: done", topicLabel(topic("p", "Projects", "Status: done", key = "status")))
+    }
+
+    /** The topics used to be sorted by the raw label key rather than the name shown. */
+    @Test
+    fun `topics sort by the humanised topic when the label is a raw key`() {
+        val topics = listOf(
+            topic("p", "Projects", "aaa.topic_zulu", key = "zulu_crossing"),
+            topic("p", "Projects", "Middle", key = "middle"),
+            topic("p", "Projects", "zzz.topic_alpha", key = "alpha/beta"),
+        )
+        assertEquals(
+            listOf("Alpha beta", "Middle", "Zulu crossing"),
+            topics.grouped().single().map { topic -> topicLabel(topic) },
+        )
+    }
 }

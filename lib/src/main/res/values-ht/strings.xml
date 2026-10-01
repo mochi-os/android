@@ -60,7 +60,7 @@
     <string name="notifications_empty">Pa gen notifikasyon</string>
     <string name="notifications_empty_unread">Ou wè tout bagay deja</string>
     <string name="notifications_tab_unread">Pa li</string>
-    <string name="notifications_tab_unread_count">Poko li (%1$d)</string>
+    <string name="notifications_tab_unread_count">Poko li (%1$s)</string>
     <string name="notifications_tab_all">Tout</string>
     <string name="notifications_mark_all_read">Make tout kòm li</string>
     <string name="notifications_clear_all">Efase tout</string>
@@ -303,8 +303,8 @@
     <string name="rss_revoke">Revoke aksè</string>
     <string name="rss_revoke_title">Retire aksè RSS la?</string>
     <string name="rss_revoke_message">Tout sa ki abòne nan fil sa a ap sispann resevwa l. Ou ka kopye yon nouvo URL apre.</string>
-    <string name="rss_revoked">Aksè RSS revoke</string>
-    <string name="rss_revoke_failed">Echwe pou revoke aksè RSS</string>
+    <string name="rss_revoked">Aksè RSS retire</string>
+    <string name="rss_revoke_failed">Echwe pou retire aksè RSS</string>
     <string name="game_empty_title">Poko gen jwèt</string>
     <string name="game_select_title">Chwazi yon jwèt</string>
     <string name="game_select_subtitle">Chwazi yon jwèt nan ba sou kote a oswa kòmanse yon nouvo.</string>

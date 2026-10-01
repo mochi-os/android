@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">נײַ</string>
     <string name="projects_settings_section_identity">אידענטיטעט</string>
     <string name="projects_settings_access_updated">צוטריט באַנײַט</string>
-    <string name="projects_settings_access_revoked">צוגאנג צונופגענומען</string>
+    <string name="projects_settings_access_revoked">צוטריט צוריקגענומען</string>
     <string name="projects_settings_section_access">צוטריט פֿאַרוואַלטונג</string>
     <string name="projects_people_search">זוך מענטשן</string>
     <string name="projects_settings_field_entity_id">ענטיטעט־ID</string>

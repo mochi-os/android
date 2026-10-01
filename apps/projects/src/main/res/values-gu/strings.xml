@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">નવું</string>
     <string name="projects_settings_section_identity">ઓળખ</string>
     <string name="projects_settings_access_updated">ઍક્સેસ અપડેટ થયું</string>
-    <string name="projects_settings_access_revoked">એક્સેસ રદ કર્યો</string>
+    <string name="projects_settings_access_revoked">ઍક્સેસ પાછું ખેંચ્યું</string>
     <string name="projects_settings_section_access">ઍક્સેસ વ્યવસ્થાપન</string>
     <string name="projects_people_search">લોકો શોધો</string>
     <string name="projects_settings_field_entity_id">એન્ટિટી ID</string>

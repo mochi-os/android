@@ -274,7 +274,7 @@
     <string name="crm_access_role_view">Chỉ xem</string>
     <string name="crm_access_role_none">Không có quyền truy cập</string>
     <string name="crm_all_crms">Tất cả CRM</string>
-    <string name="crm_settings_unsubscribe_section">Hủy đăng ký CRM</string>
+    <string name="crm_settings_unsubscribe_section">Ngừng đăng ký CRM</string>
     <string name="crm_settings_updated">Đã cập nhật CRM</string>
     <string name="crm_create_import_backup">Nhập từ bản sao lưu (tùy chọn)</string>
     <string name="crm_export">Xuất dữ liệu</string>

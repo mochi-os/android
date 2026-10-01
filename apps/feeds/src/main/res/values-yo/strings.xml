@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">Orísun ti yọ kúrò</string>
     <string name="feeds_settings_source_polling">Ẹ́kò ìgbòkànà ti ṣègbà…</string>
     <string name="feeds_settings_access_updated">A ti ṣe àtúnyẹ̀wò ìwọlé</string>
-    <string name="feeds_settings_access_revoked">Ati gba aṣèsẹbí</string>
+    <string name="feeds_settings_access_revoked">A ti gba ìwọlé padà</string>
     <string name="feeds_settings_member_removed">Ọmọ ẹgbẹ́ ti yọ kúrò</string>
     <string name="feeds_settings_ai_mode_updated">Àpọn AI ti se imudoju</string>
     <string name="feeds_settings_ai_account_updated">Akàntí AI ti se imudoju</string>
@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">Kò gbé wọlé rí</string>
     <string name="feeds_source_poll">Ìbéèrè</string>
     <string name="feeds_source_transform">Ìyípadà AI</string>
-    <string name="feeds_remove_source_confirm">Yọ \"%1$s\" kúrò?</string>
-    <string name="feeds_remove_also_delete_posts">Pa àwọn ìfìwéránṣẹ́ tí a kó wọlé pẹ̀lú</string>
+    <string name="feeds_remove_source_confirm">Èyí yóò dá kíkó àkóónú wọlé láti \"%1$s\" dúró.</string>
+    <string name="feeds_remove_also_delete_posts">Pa àwọn ìfìwéránṣẹ́ tí a kó wọlé láti orísun yìí pẹ̀lú</string>
     <string name="feeds_suggested_credibility_title">Ìgbẹ́kẹ̀lé tí a dámọ̀ràn</string>
     <string name="feeds_suggested_credibility_body">Mochi dámọ̀ràn ìgbẹ́kẹ̀lé ti %1$d. Gbà?</string>
     <string name="feeds_suggested_credibility_keep">Pa èyí tí ó wà mọ́</string>

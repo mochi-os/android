@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">سرچینه لرې شوه</string>
     <string name="feeds_settings_source_polling">د سرچینې پوښتنه …</string>
     <string name="feeds_settings_access_updated">لاسرسی نوی شو</string>
-    <string name="feeds_settings_access_revoked">لاسرسی پرېګدل و</string>
+    <string name="feeds_settings_access_revoked">لاسرسی بیرته واخیستل شو</string>
     <string name="feeds_settings_member_removed">غړی لیرې شو</string>
     <string name="feeds_settings_ai_mode_updated">د AI حالت تازه شو</string>
     <string name="feeds_settings_ai_account_updated">د AI حساب تازه شو</string>
@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">هیڅکله نه دي راوړل شوي</string>
     <string name="feeds_source_poll">پلټنه</string>
     <string name="feeds_source_transform">د AI بدلون</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" لرې کړئ؟</string>
-    <string name="feeds_remove_also_delete_posts">راوړل شوې لیکنې هم ړنګې کړئ</string>
+    <string name="feeds_remove_source_confirm">دا به له \"%1$s\" څخه د منځپانګې راوړل ودروي.</string>
+    <string name="feeds_remove_also_delete_posts">هغه لیکنې هم ړنګې کړئ چې له دې سرچینې راوړل شوې دي</string>
     <string name="feeds_suggested_credibility_title">وړاندیز شوی اعتبار</string>
     <string name="feeds_suggested_credibility_body">Mochi د %1$d اعتبار وړاندیز کوي. منئ یې؟</string>
     <string name="feeds_suggested_credibility_keep">اوسنی وساتئ</string>
@@ -167,7 +167,7 @@
     <string name="feeds_settings_name_edit_cd">د نوم سمول</string>
     <string name="feeds_settings_section_identity">هویت</string>
     <string name="feeds_unsubscribe">له ګډون وتل</string>
-    <string name="feeds_unsubscribed">ګډون لغوه شو</string>
+    <string name="feeds_unsubscribed">له ګډون ووتلئ</string>
     <string name="feeds_access_level_comment_full">تبصره، عکس العمل، او لیدنه</string>
     <string name="feeds_rss_mode_posts_comments">لیکنې او تبصرې</string>
     <string name="feeds_access_add_title">لاسرسی اضافه کړئ</string>
@@ -187,7 +187,7 @@
     <string name="feeds_create_first_post">لومړی پوسټ جوړ کړئ</string>
     <string name="feeds_rss_mode_posts">لیکنې</string>
     <string name="feeds_source_last_checked">وروستی ځل %1$s کتل شوی</string>
-    <string name="feeds_settings_unsubscribe_section">د فیډ څخه ګډون لغوه کول</string>
+    <string name="feeds_settings_unsubscribe_section">د فیډ له ګډون وتل</string>
     <string name="feeds_source_transform_hint">انګلیسي ته وژباړئ، او د نښه شویو ټکو په توګه وښیه.</string>
     <string name="feeds_source_url_hint_feed">د فیډ موجودیت ID یا د ګوتو نښه</string>
     <string name="feeds_source_credibility_label">اعتبار</string>

@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">Hernoem tans…</string>
     <string name="wikis_rename_page_success">Bladsy hernoem</string>
     <string name="wikis_history_viewing">Bekyk geskiedenis vir %1$s, huidige weergawe %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">Weergawe %1$d</string>
     <string name="wikis_search_pages_placeholder">Soek bladsye volgens titel of inhoud…</string>
     <string name="wikis_search_no_results">Geen bladsye vir “%1$s” gevind nie. Probeer ander soekterme.</string>
     <string name="wikis_search_updated">Opgedateer %1$s</string>

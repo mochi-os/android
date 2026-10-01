@@ -32,7 +32,7 @@
     <string name="wikis_unsubscribe_action">Disiscriviti</string>
     <string name="wikis_unsubscribing">Disiscrizione in corso…</string>
     <string name="wikis_unsubscribe_confirm_title">Disiscriviti</string>
-    <string name="wikis_unsubscribe_success">Iscrizione annullata</string>
+    <string name="wikis_unsubscribe_success">Disiscrizione effettuata</string>
     <string name="wikis_subscribe_failed">Impossibile iscriversi</string>
     <string name="wikis_rss_menu">Feed RSS</string>
     <string name="wikis_rss_changes">Modifiche</string>

@@ -13,7 +13,7 @@
     <string name="auth_privacy_public">საჯარო</string>
     <string name="auth_privacy_private">პირადი</string>
     <string name="auth_link_privacy">კონფიდენციალურობა</string>
-    <string name="auth_use_different_account">გამოიყენეთ *.domain.com wildcard დომენებისთვის</string>
+    <string name="auth_use_different_account">სხვა ანგარიშის გამოყენება</string>
     <string name="auth_error_suspended_title">ანგარიში შეჩერებულია</string>
     <string name="common_back">უკან</string>
     <string name="common_close">დახურვა</string>
@@ -60,7 +60,7 @@
     <string name="notifications_empty">შეტყობინებები არ არის</string>
     <string name="notifications_empty_unread">ყველაფერი წაკითხულია</string>
     <string name="notifications_tab_unread">წაუკითხავი</string>
-    <string name="notifications_tab_unread_count">წაუკითხავი (%1$d)</string>
+    <string name="notifications_tab_unread_count">წაუკითხავი (%1$s)</string>
     <string name="notifications_tab_all">ყველა</string>
     <string name="notifications_mark_all_read">ყველას წაკითხულად მონიშვნა</string>
     <string name="notifications_clear_all">ყველაფრის გასუფთავება</string>
@@ -173,7 +173,7 @@
     <string name="place_picker_name">ადგილის სახელი</string>
     <string name="place_origin">საწყისი</string>
     <string name="place_destination">დანიშნულება</string>
-    <string name="discovery_no_results_hint">სცადეთ ფილტრების კორექტირება ან გასუფთავება</string>
+    <string name="discovery_no_results_hint">სცადეთ საძიებო სიტყვების შეცვლა</string>
     <string name="access_no_rules">წვდომის წესები არ არის</string>
     <string name="access_add_rule_title">წვდომის წესის დამატება</string>
     <string name="access_level_manage">მართვა</string>
@@ -303,8 +303,8 @@
     <string name="rss_revoke">წვდომის გაწვევა</string>
     <string name="rss_revoke_title">RSS წვდომის გაწვევა?</string>
     <string name="rss_revoke_message">ყველაფერი, რაც ამ არხზეა გამოწერილი, შეწყვეტს მის მიღებას. შემდეგ შეგიძლიათ დააკოპიროთ ახალი URL.</string>
-    <string name="rss_revoked">RSS წვდომა გაუქმდა</string>
-    <string name="rss_revoke_failed">RSS წვდომის გაუქმება ვერ მოხერხდა</string>
+    <string name="rss_revoked">RSS წვდომა გაწვეულია</string>
+    <string name="rss_revoke_failed">RSS წვდომის გაწვევა ვერ მოხერხდა</string>
     <string name="game_empty_title">თამაშები ჯერ არ არის</string>
     <string name="game_select_title">აირჩიეთ თამაში</string>
     <string name="game_select_subtitle">აირჩიეთ თამაში გვერდით პანელზე ან დაიწყეთ ახალი.</string>

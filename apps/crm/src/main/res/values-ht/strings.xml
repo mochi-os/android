@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">Jesyon Aksè</string>
     <string name="crm_settings_not_set">Pa defini</string>
     <string name="crm_settings_access_updated">Aksè mete ajou</string>
-    <string name="crm_settings_access_revoked">Akè retire</string>
+    <string name="crm_settings_access_revoked">Aksè retire</string>
     <string name="crm_people_search">Chèche moun</string>
     <string name="crm_access_tab_other">Lòt</string>
     <string name="crm_access_select_group">Chwazi yon gwoup</string>

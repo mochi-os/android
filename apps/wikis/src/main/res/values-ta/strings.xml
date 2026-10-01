@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">மறுபெயரிடுகிறது…</string>
     <string name="wikis_rename_page_success">பக்கம் மறுபெயரிடப்பட்டது</string>
     <string name="wikis_history_viewing">%1$s இன் வரலாற்றைப் பார்க்கிறீர்கள், தற்போதைய பதிப்பு %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">பதிப்பு %1$d</string>
     <string name="wikis_search_pages_placeholder">தலைப்பு அல்லது உள்ளடக்கத்தால் பக்கங்களைத் தேடு…</string>
     <string name="wikis_search_no_results">“%1$s” க்கு பக்கங்கள் எதுவும் கிடைக்கவில்லை. வேறு தேடல் சொற்களை முயற்சிக்கவும்.</string>
     <string name="wikis_search_updated">புதுப்பிக்கப்பட்டது %1$s</string>

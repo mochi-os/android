@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">పేరు మారుస్తోంది…</string>
     <string name="wikis_rename_page_success">పేజీ పేరు మార్చబడింది</string>
     <string name="wikis_history_viewing">%1$s కోసం చరిత్రను చూస్తున్నారు, ప్రస్తుత వెర్షన్ %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">వెర్షన్ %1$d</string>
     <string name="wikis_search_pages_placeholder">శీర్షిక లేదా కంటెంట్ ద్వారా పేజీలను వెతకండి…</string>
     <string name="wikis_search_no_results">“%1$s” కోసం పేజీలు కనుగొనబడలేదు. వేరే శోధన పదాలను ప్రయత్నించండి.</string>
     <string name="wikis_search_updated">నవీకరించబడింది %1$s</string>

@@ -30,11 +30,11 @@
     <string name="wikis_recommended_section">Препоручени wiki-ји</string>
     <string name="wikis_subscribe_button">Претплати се</string>
     <string name="wikis_unsubscribe_action">Прекини претплату</string>
-    <string name="wikis_unsubscribing">Отказивање претплате…</string>
+    <string name="wikis_unsubscribing">Прекидање претплате…</string>
     <string name="wikis_unsubscribe_confirm_title">Прекини претплату</string>
-    <string name="wikis_unsubscribe_success">Претплата отказана</string>
+    <string name="wikis_unsubscribe_success">Претплата прекинута</string>
     <string name="wikis_subscribe_failed">Претплата није успела</string>
-    <string name="wikis_rss_menu">RSS извор</string>
+    <string name="wikis_rss_menu">RSS фид</string>
     <string name="wikis_rss_changes">Измене</string>
     <string name="wikis_rss_comments">Коментари</string>
     <string name="wikis_rss_both">Измене и коментари</string>
@@ -297,7 +297,7 @@
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
         <item quantity="one">%d одговор</item>
-        <item quantity="few">+%d додатних одговора</item>
+        <item quantity="few">+%d додатна одговора</item>
         <item quantity="other">+%d додатних одговора</item>
     </plurals>
     <plurals name="wikis_tags_count">
@@ -326,8 +326,8 @@
         <item quantity="other">%d страница са овом ознаком</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Пронађено %1$d резултат за „%2$s“</item>
-        <item quantity="few">Пронађено %1$d резултата за „%2$s“</item>
+        <item quantity="one">Пронађен %1$d резултат за „%2$s“</item>
+        <item quantity="few">Пронађена %1$d резултата за „%2$s“</item>
         <item quantity="other">Пронађено %1$d резултата за „%2$s“</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Натпис није могуће сачувати</string>
@@ -338,7 +338,7 @@
     <string name="wikis_rss_exists">Овај URL канала је већ издат и не може се поново приказати.</string>
     <plurals name="wikis_comments_truncated">
         <item quantity="one">Приказује се први %1$d коментар.</item>
-        <item quantity="few">Приказује се првих %1$d коментара.</item>
+        <item quantity="few">Приказују се прва %1$d коментара.</item>
         <item quantity="other">Приказује се првих %1$d коментара.</item>
     </plurals>
 </resources>

@@ -90,7 +90,7 @@
     <string name="route_priority">Priorität</string>
     <string name="route_enabled">Aktiviert</string>
     <string name="route_disabled">Deaktiviert</string>
-    <string name="route_meta">Priorität %1$d · %2$s</string>
+    <string name="route_meta">Priorität %1$s · %2$s</string>
     <string name="interests_title">Interèssä</string>
     <string name="interests_search_placeholder">Thèmä zum hinzuefüegä suechä…</string>
     <string name="interests_empty">No kei Interèssä.</string>
@@ -103,7 +103,6 @@
     <string name="document_privacy_title">Datenschutzerklärung</string>
     <string name="document_rules_title">Regeln</string>
     <string name="document_terms_title">Nutzungsbedingungen</string>
-    <string name="notifprefs_title">Benachrichtigungen</string>
     <string name="notifprefs_tab_categories">Kategorien</string>
     <string name="notifprefs_tab_topics">Themen</string>
     <string name="notifprefs_add_category">Kategorie hinzufügen</string>
@@ -127,7 +126,6 @@
     <string name="system_status_download_from_packages">Von packages.mochi-os.org herunterladen</string>
     <string name="system_status_copy">Kopieren</string>
     <string name="system_status_peers">Peers</string>
-    <string name="system_status_known">Bekannt</string>
     <string name="system_status_peer_connected">Verbunden</string>
     <string name="system_status_peer_disconnected">Getrennt</string>
     <string name="system_status_peer_queued">Nachrichten in Warteschlange</string>
@@ -274,7 +272,6 @@
     <string name="domain_delegation_delete_message">%1$s wird kei Routä meh uf dèrä Domänä verwaltä.</string>
     <string name="domain_delegation_delete_title">Delegation lösche?</string>
     <string name="domain_delegation_path">Pfad</string>
-    <string name="domain_delegation_user">Benutzer-ID</string>
     <string name="domain_delegations">Delegationä</string>
     <string name="domain_delegations_empty">Kei Delegationä konfiguriert.</string>
     <string name="domain_delete">Domänä lösche</string>
@@ -291,8 +288,8 @@
     <string name="domain_verify">DNS verifizierä</string>
     <string name="settings_home_domains">Domains</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Test an %1$d Ziel gesendet</item>
-        <item quantity="other">Test an %1$d Ziele gesendet</item>
+        <item quantity="one">Test an %1$s Ziel gesendet</item>
+        <item quantity="other">Test an %1$s Ziele gesendet</item>
     </plurals>
     <string name="account_close_section">Konto schliessen</string>
     <string name="account_close_action">Konto schliessen</string>
@@ -313,8 +310,6 @@
     <string name="system_status_reachability_public">Öffentlich</string>
     <string name="system_status_reachability_private">Privat</string>
     <string name="system_status_reachability_unknown">Unbekannt</string>
-    <string name="system_status_relay">Über Relay</string>
-    <string name="system_status_mesh">Broadcast-Mesh</string>
     <string name="system_status_broadcast">Letzter Broadcast</string>
     <string name="system_status_queued_broadcasts">Broadcast-Nachrichten in Warteschlange</string>
     <string name="system_setting_hostname_publish">Hostname und Domains anderen Servern bekanntgeben</string>

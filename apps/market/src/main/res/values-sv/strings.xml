@@ -557,7 +557,7 @@
     <string name="market_messages_send_failed">Kunde inte skicka meddelandet</string>
     <string name="market_messages_thread_title">Konversation</string>
     <string name="market_messages_unread_badge">%1$d olästa</string>
-    <string name="market_price_from">från %1$s</string>
+    <string name="market_price_from">Från %1$s</string>
     <string name="market_price_high_bid">Högsta bud: %1$s</string>
     <string name="market_price_instant_buy">köp direkt: %1$s</string>
     <string name="market_price_per_month">%1$s / månad</string>

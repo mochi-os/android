@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">Modhnaigh</string>
     <string name="forums_members_search">Scag baill</string>
     <string name="forums_banner_description">Markdown a thaispeántar ag barr an fhóraim.</string>
-    <string name="forums_banner_placeholder">Fáilte chuig an bhfóram seo…</string>
+    <string name="forums_banner_placeholder">Cuir isteach téacs na meirge (tacaítear le markdown)…</string>
     <string name="forums_ai_mode_label">Mód: %1$s</string>
     <string name="forums_ai_mode_heading">Mód IS</string>
     <string name="forums_ai_mode_off">Díchumasaithe</string>

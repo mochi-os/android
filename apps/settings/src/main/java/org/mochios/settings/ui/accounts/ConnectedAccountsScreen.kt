@@ -292,7 +292,7 @@ fun ConnectedAccountsScreen(
 // A device with the transport of the push account registered from it, and a
 // Forget action that takes that account with the device.
 @Composable
-private fun DeviceRow(
+internal fun DeviceRow(
     device: Device,
     accounts: List<ConnectedAccount>,
     onForget: () -> Unit,
@@ -312,7 +312,7 @@ private fun DeviceRow(
                 val transports = accounts.map { providerTypeLabel(it.type) }
                 if (transports.isNotEmpty()) {
                     Text(
-                        transports.joinToString(", "),
+                        format.formatList(transports),
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
@@ -331,7 +331,7 @@ private fun DeviceRow(
 }
 
 @Composable
-private fun AccountRow(
+internal fun AccountRow(
     account: ConnectedAccount,
     providers: List<Provider>,
     onVerify: () -> Unit,
@@ -347,9 +347,9 @@ private fun AccountRow(
     val notifyCapable = provider?.capabilities?.contains("notify") == true
     // An account the user signed in through carries what it has been granted
     // so far, which is the useful thing to say about it: "Sign-in" alone, or
-    // "Sign-in, Calendar" once a calendar has been linked through it.
+    // "Sign-in and Calendar" once a calendar has been linked through it.
     val oauth = provider?.flow == "oauth"
-    val granted = account.granted.map { capability -> capabilityLabel(capability) }.joinToString(", ")
+    val granted = LocalFormat.current.formatList(account.granted.map { capability -> capabilityLabel(capability) })
     val revocable = oauth && account.granted.any { it != CAPABILITY_LOGIN }
     val loginOnly = oauth && account.granted == listOf(CAPABILITY_LOGIN)
     var menu by remember { mutableStateOf(false) }

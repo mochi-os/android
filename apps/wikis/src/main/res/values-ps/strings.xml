@@ -30,9 +30,9 @@
     <string name="wikis_recommended_section">سپارښتل شوي wikis</string>
     <string name="wikis_subscribe_button">ګډون وکړئ</string>
     <string name="wikis_unsubscribe_action">له ګډون وتل</string>
-    <string name="wikis_unsubscribing">ګډون لغوه کیږي…</string>
+    <string name="wikis_unsubscribing">له ګډون وتل روان دي…</string>
     <string name="wikis_unsubscribe_confirm_title">له ګډون وتل</string>
-    <string name="wikis_unsubscribe_success">ګډون لغوه شو</string>
+    <string name="wikis_unsubscribe_success">له ګډون ووتلئ</string>
     <string name="wikis_subscribe_failed">د ګډون پاتې راغلل</string>
     <string name="wikis_rss_menu">RSS فیډ</string>
     <string name="wikis_rss_changes">بدلونونه</string>
@@ -41,7 +41,7 @@
     <string name="wikis_rss_copied">د RSS URL کلیپبورډ ته کاپي شو</string>
     <string name="wikis_rss_failed">د RSS ټوکن ترلاسه کولو پاتې راغلل</string>
     <string name="wikis_rss_revoke">لاسرسی بیرته واخلئ</string>
-    <string name="wikis_rss_revoked">د RSS لاسرسی لغوه شو</string>
+    <string name="wikis_rss_revoked">د RSS لاسرسی بیرته واخیستل شو</string>
     <string name="wikis_find_title">ویکیانه ومومئ</string>
     <string name="wikis_find_no_results">هیڅ wikis ونه موندل شوې</string>
     <string name="wikis_find_recommended_section">سپارښتل شوي wikis</string>
@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">نوم بدلیږي…</string>
     <string name="wikis_rename_page_success">د پاڼې نوم بدل شو</string>
     <string name="wikis_history_viewing">د %1$s تاریخچه لیدل کیږي، اوسنۍ نسخه %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">نسخه %1$d</string>
     <string name="wikis_search_pages_placeholder">پاڼې د سرلیک یا منځپانګې له مخې ولټوئ…</string>
     <string name="wikis_search_no_results">د “%1$s” لپاره پاڼې ونه موندل شوې. نور د لټون کلمې وآزمویئ.</string>
     <string name="wikis_search_updated">تازه شو %1$s</string>
@@ -319,8 +319,8 @@
         <item quantity="other">%d پاڼې له دې ټاګ سره</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">د "%2$s" لپاره %1$d پایله وموندل شو</item>
-        <item quantity="other">د "%2$s" لپاره %1$d پایلې وموندل شو</item>
+        <item quantity="one">د \"%2$s\" لپاره %1$d پایله وموندل شو</item>
+        <item quantity="other">د \"%2$s\" لپاره %1$d پایلې وموندل شو</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">تشریح خوندي نشوه</string>
     <string name="wikis_attachments_upload_types">ملاتړ شوي فایلونه: انځورونه، PDF، DOC، DOCX، TXT، او MD.</string>

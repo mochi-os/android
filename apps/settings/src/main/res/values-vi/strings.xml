@@ -45,6 +45,8 @@
     <string name="route_delete_title">Xóa tuyến?</string>
     <string name="route_path">Đường dẫn</string>
     <string name="route_method">Phương thức</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Ứng dụng</string>
     <string name="route_method_entity">Thực thể</string>
     <string name="route_method_redirect">Chuyển hướng</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Tải xuống từ packages.mochi-os.org</string>
     <string name="system_status_copy">Sao chép</string>
     <string name="system_status_peers">Ngang hàng</string>
-    <string name="system_status_known">Đã biết</string>
+    <string name="system_status_peers_totals">Đã biết %1$s · Đã kết nối %2$s · Lưới phát sóng %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Đã biết %1$s · Đã kết nối %2$s</string>
     <string name="system_status_peer_connected">Đã kết nối</string>
     <string name="system_status_peer_disconnected">Đã ngắt kết nối</string>
     <string name="system_status_peer_queued">Tin nhắn trong hàng đợi</string>
@@ -216,7 +219,7 @@
     <string name="account_totp_disable_message">Bạn sẽ không thể đăng nhập bằng mã xác thực nữa.</string>
     <string name="account_recovery_none">Chưa tạo mã khôi phục.</string>
     <plurals name="account_recovery_count">
-        <item quantity="other">Còn %1$d mã khôi phục.</item>
+        <item quantity="other">Còn %1$s mã khôi phục.</item>
     </plurals>
     <string name="account_recovery_generate">Tạo mã</string>
     <string name="account_recovery_regenerate">Tạo lại mã</string>
@@ -233,7 +236,7 @@
     <string name="account_last_used">Lần cuối sử dụng %1$s</string>
     <string name="route_delete_message">Việc này sẽ xóa tuyến cho đường dẫn \"%1$s\".</string>
     <string name="route_empty">Không có tuyến nào được cấu hình.</string>
-    <string name="route_meta">Mức ưu tiên %1$d · %2$s</string>
+    <string name="route_meta">Mức ưu tiên %1$s · %2$s</string>
     <string name="interests_search_placeholder">Tìm kiếm chủ đề để thêm…</string>
     <string name="interests_empty">Chưa có sở thích nào.</string>
     <string name="interests_summary_regenerate">Tạo lại tóm tắt</string>
@@ -267,7 +270,7 @@
     <string name="system_users_revoke_all_title">Thu hồi tất cả các phiên?</string>
     <string name="system_users_revoke_all_message">Tất cả các phiên hoạt động của người dùng này sẽ bị đăng xuất.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="other">Hiển thị %1$d–%2$d trong %3$d người dùng</item>
+        <item quantity="other">Hiển thị %1$s–%2$s trong %3$s người dùng</item>
     </plurals>
     <string name="account_title">Tài khoản</string>
     <string name="account_section_identity">Danh tính</string>
@@ -301,11 +304,11 @@
     <string name="domain_verify">Xác minh DNS</string>
     <string name="settings_home_domains">Tên miền</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Đã gửi thử nghiệm đến %1$d đích</item>
-        <item quantity="other">Đã gửi thử nghiệm đến %1$d đích</item>
+        <item quantity="one">Đã gửi thử nghiệm đến %1$s đích</item>
+        <item quantity="other">Đã gửi thử nghiệm đến %1$s đích</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="other">Đã thu hồi %1$d phiên</item>
+        <item quantity="other">Đã thu hồi %1$s phiên</item>
     </plurals>
     <string name="login_title">Đăng nhập</string>
     <string name="login_section_methods">Phương thức đăng nhập</string>
@@ -336,8 +339,7 @@
     <string name="system_status_reachability_public">Công khai</string>
     <string name="system_status_reachability_private">Riêng tư</string>
     <string name="system_status_reachability_unknown">Không rõ</string>
-    <string name="system_status_relay">Qua relay</string>
-    <string name="system_status_mesh">Lưới phát sóng</string>
+    <string name="system_status_reachability_relay">%1$s · qua chuyển tiếp</string>
     <string name="system_status_broadcast">Bản phát gần nhất</string>
     <string name="system_status_queued_broadcasts">Tin nhắn quảng bá trong hàng đợi</string>
     <string name="system_setting_hostname_publish">Thông báo tên máy chủ và các miền cho máy chủ khác</string>
@@ -370,8 +372,10 @@
     <string name="accounts_device_seen">Lần cuối nhìn thấy %1$s</string>
     <string name="notifprefs_device_app">%1$s · ứng dụng</string>
     <string name="notifprefs_device_push">%1$s · thông báo đẩy</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="other">Đã gửi thử nghiệm đến %1$d trong số %2$d đích</item>
+        <item quantity="other">Đã gửi thử nghiệm đến %1$s trong số %2$s đích</item>
     </plurals>
     <string name="notifprefs_test_none">Chưa cấu hình điểm đến</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
@@ -395,18 +399,18 @@
     <string name="system_documents_discard_title">Loại bỏ thay đổi?</string>
     <string name="system_documents_discard">Loại bỏ</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="other">%1$d thành công</item>
+        <item quantity="other">%1$s thành công</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="other">%1$d thất bại</item>
+        <item quantity="other">%1$s thất bại</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="other">%1$d / %2$d đặt chỗ</item>
+        <item quantity="other">%1$s / %2$s đặt chỗ</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="other">%1$d mạch</item>
+        <item quantity="other">%1$s mạch</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="other">%1$d bị từ chối</item>
+        <item quantity="other">%1$s bị từ chối</item>
     </plurals>
 </resources>

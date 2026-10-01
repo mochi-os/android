@@ -45,6 +45,8 @@
     <string name="route_delete_title">Efase wout?</string>
     <string name="route_path">Chemen</string>
     <string name="route_method">Metòd</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Aplikasyon</string>
     <string name="route_method_entity">Antite</string>
     <string name="route_method_redirect">Redireksyon</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Telechaje soti nan packages.mochi-os.org</string>
     <string name="system_status_copy">Kopye</string>
     <string name="system_status_peers">Patnè yo</string>
-    <string name="system_status_known">Konnen</string>
+    <string name="system_status_peers_totals">Konnen %1$s · Konekte %2$s · Rezo difizyon %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Konnen %1$s · Konekte %2$s</string>
     <string name="system_status_peer_connected">Konekte</string>
     <string name="system_status_peer_disconnected">Dekonekte</string>
     <string name="system_status_peer_queued">Mesaj nan keu</string>
@@ -176,7 +179,7 @@
     <string name="system_users_create_title">Kreye itilizatè</string>
     <string name="system_users_save_changes">Sove chanjman</string>
     <string name="system_users_suspend">Sispann itilizatè</string>
-    <string name="system_users_remove_suspension">Retire sispansyon</string>
+    <string name="system_users_remove_suspension">Leve sispansyon</string>
     <string name="system_users_delete">Efase itilizatè</string>
     <string name="system_users_delete_title">Efase itilizatè?</string>
     <string name="system_users_manage_sessions">Jere sesyon</string>
@@ -193,13 +196,13 @@
     <string name="system_users_toast_updated">Itilizatè mete ajou</string>
     <string name="system_users_toast_deleted">Itilizatè efase</string>
     <string name="system_users_toast_suspended">Itilizatè sispann</string>
-    <string name="system_users_toast_suspension_removed">Sispansyon retire</string>
-    <string name="system_users_toast_session_revoked">Sesyon revoke</string>
+    <string name="system_users_toast_suspension_removed">Sispansyon leve</string>
+    <string name="system_users_toast_session_revoked">Sesyon retire</string>
     <string name="system_users_toast_create_failed">Echwe pou kreye itilizatè</string>
     <string name="system_users_toast_update_failed">Echwe pou mete ajou itilizatè</string>
     <string name="system_users_toast_delete_failed">Echwe pou efase itilizatè</string>
     <string name="system_users_toast_status_failed">Echwe pou mete ajou estati itilizatè</string>
-    <string name="system_users_toast_revoke_failed">Echwe pou revoke sesyon</string>
+    <string name="system_users_toast_revoke_failed">Echwe pou retire sesyon</string>
 
     <string name="settings_home_sessions">Sesyon yo</string>
     <string name="settings_home_privacy">Politik konfidansyalite</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">Ou pap kapab konekte ak kòd otantifikatè ankò.</string>
     <string name="account_recovery_none">Pa gen kòd rekiperasyon ki kreye.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d kòd rekiperasyon ki rete.</item>
-        <item quantity="other">%1$d kòd rekiperasyon ki rete.</item>
+        <item quantity="one">%1$s kòd rekiperasyon ki rete.</item>
+        <item quantity="other">%1$s kòd rekiperasyon ki rete.</item>
     </plurals>
     <string name="account_recovery_generate">Jenere kòd</string>
     <string name="account_recovery_regenerate">Rejenere kòd</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">Dènye itilizasyon %1$s</string>
     <string name="route_delete_message">Sa pral retire wout pou chemen \"%1$s\".</string>
     <string name="route_empty">Pa gen wout konfigire.</string>
-    <string name="route_meta">Priyorite %1$d · %2$s</string>
+    <string name="route_meta">Priyorite %1$s · %2$s</string>
     <string name="interests_search_placeholder">Chèche sijè pou ajoute…</string>
     <string name="interests_empty">Poko gen enterè.</string>
     <string name="interests_summary_regenerate">Rejenere rezime a</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">Revoke tout sesyon?</string>
     <string name="system_users_revoke_all_message">Tout sesyon aktif itilizatè sa a ap deconnte.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">Montre %1$d–%2$d nan %3$d itilizatè</item>
-        <item quantity="other">Montre %1$d–%2$d nan %3$d itilizatè</item>
+        <item quantity="one">Montre %1$s–%2$s nan %3$s itilizatè</item>
+        <item quantity="other">Montre %1$s–%2$s nan %3$s itilizatè</item>
     </plurals>
     <string name="account_title">Kont</string>
     <string name="account_section_identity">Idantite</string>
@@ -303,11 +306,11 @@
     <string name="domain_verify">Verifye DNS</string>
     <string name="settings_home_domains">Domèn yo</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="other">Tès voye nan %1$d destinasyon</item>
+        <item quantity="other">Tès voye nan %1$s destinasyon</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$d sesyon revoke</item>
-        <item quantity="other">%1$d sesyon revoke</item>
+        <item quantity="one">%1$s sesyon revoke</item>
+        <item quantity="other">%1$s sesyon revoke</item>
     </plurals>
     <string name="login_title">Koneksyon</string>
     <string name="login_section_methods">Metòd koneksyon</string>
@@ -338,8 +341,7 @@
     <string name="system_status_reachability_public">Piblik</string>
     <string name="system_status_reachability_private">Prive</string>
     <string name="system_status_reachability_unknown">Enkoni</string>
-    <string name="system_status_relay">Atravè relè</string>
-    <string name="system_status_mesh">Mesh difizyon</string>
+    <string name="system_status_reachability_relay">%1$s · atravè relè</string>
     <string name="system_status_broadcast">Dènye difizyon</string>
     <string name="system_status_queued_broadcasts">Mesaj difizyon nan ranje</string>
     <string name="system_setting_hostname_publish">Anonse non lame a ak domèn yo bay lòt sèvè</string>
@@ -372,9 +374,11 @@
     <string name="accounts_device_seen">Dènye fwa yo wè l %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplikasyon</string>
     <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Tès la voye bay %1$d sou %2$d destinasyon</item>
-        <item quantity="other">Tès la voye bay %1$d sou %2$d destinasyon</item>
+        <item quantity="one">Tès la voye bay %1$s sou %2$s destinasyon</item>
+        <item quantity="other">Tès la voye bay %1$s sou %2$s destinasyon</item>
     </plurals>
     <string name="notifprefs_test_none">Pa gen destinasyon konfigire</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
@@ -398,23 +402,23 @@
     <string name="system_documents_discard_title">Jete chanjman yo?</string>
     <string name="system_documents_discard">Jete</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d reyisi</item>
-        <item quantity="other">%1$d reyisi</item>
+        <item quantity="one">%1$s reyisi</item>
+        <item quantity="other">%1$s reyisi</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d echwe</item>
-        <item quantity="other">%1$d echwe</item>
+        <item quantity="one">%1$s echwe</item>
+        <item quantity="other">%1$s echwe</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d rezèvasyon</item>
-        <item quantity="other">%1$d / %2$d rezèvasyon</item>
+        <item quantity="one">%1$s / %2$s rezèvasyon</item>
+        <item quantity="other">%1$s / %2$s rezèvasyon</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d sikui</item>
-        <item quantity="other">%1$d sikui</item>
+        <item quantity="one">%1$s sikui</item>
+        <item quantity="other">%1$s sikui</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d refize</item>
-        <item quantity="other">%1$d refize</item>
+        <item quantity="one">%1$s refize</item>
+        <item quantity="other">%1$s refize</item>
     </plurals>
 </resources>

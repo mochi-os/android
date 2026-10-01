@@ -277,7 +277,7 @@
     <string name="market_onboarding_dismiss">Descartar</string>
     <string name="market_onboarding_title">Benvido a Market</string>
     <string name="market_open_sidebar">Abrir menú</string>
-    <string name="market_price_from">desde %1$s</string>
+    <string name="market_price_from">Desde %1$s</string>
     <string name="market_price_per_month">%1$s / mes</string>
     <string name="market_price_per_year">%1$s / ano</string>
     <string name="market_profile_biography">Sobre</string>

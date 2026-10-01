@@ -2,7 +2,7 @@
 <resources>
 
     <string name="forums_auth_display_name">ნაჩვენები სახელი</string>
-    <string name="forums_auth_verification_failed">შემოწმების კოდი გაიგზავნა</string>
+    <string name="forums_auth_verification_failed">დადასტურება ვერ მოხერხდა</string>
     <string name="forums_list_title">ფორუმები</string>
     <string name="forums_list_find">ფორუმების ძიება</string>
     <string name="forums_list_logout">გასვლა</string>
@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">მოდერაცია</string>
     <string name="forums_members_search">წევრების ფილტრი</string>
     <string name="forums_banner_description">Markdown, რომელიც ნაჩვენებია ფორუმის თავში.</string>
-    <string name="forums_banner_placeholder">კეთილი იყოს თქვენი მობრძანება ამ ფორუმზე…</string>
+    <string name="forums_banner_placeholder">შეიყვანეთ ბანერის ტექსტი (მხარდაჭერილია Markdown)…</string>
     <string name="forums_ai_mode_label">რეჟიმი: %1$s</string>
     <string name="forums_ai_mode_heading">AI რეჟიმი</string>
     <string name="forums_ai_mode_off">გათიშულია</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">დღე</string>
     <string name="forums_settings_banner_saved">ბანერი შენახულია</string>
     <string name="forums_settings_access_updated">წვდომა განახლდა</string>
-    <string name="forums_settings_access_revoked">წვდომა გაუქმდა</string>
+    <string name="forums_settings_access_revoked">წვდომა გაწვეულია</string>
     <string name="forums_settings_member_removed">წევრი წაიშალა</string>
     <string name="forums_settings_prompt_saved">მოთხოვნა შენახულია</string>
     <string name="forums_settings_section_identity">ვინაობა</string>
@@ -293,7 +293,7 @@
     <string name="forums_settings_ai_updated">AI პარამეტრები განახლდა</string>
     <string name="forums_settings_forum_renamed">ფორუმს გადაერქვა სახელი</string>
     <string name="forums_settings_name_clear_cd">სახელის გასუფთავება</string>
-    <string name="forums_settings_unsubscribe_section">ფორუმიდან გამოწერის გაუქმება</string>
+    <string name="forums_settings_unsubscribe_section">ფორუმის გამოწერის შეწყვეტა</string>
     <string name="forums_share_link_title">ფორუმის ბმული</string>
     <string name="forums_find_found_by_url">ნაპოვნია URL-ით</string>
     <string name="forums_moderation_pending_posts">მოლოდინში მყოფი პოსტები (%1$d)</string>

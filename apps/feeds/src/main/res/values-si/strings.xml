@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">මූලාරම්භය ඉවත් කරන ලදී</string>
     <string name="feeds_settings_source_polling">මුලින෍ජරය බජැර ඪය්ඩෙොන අච්​ජිරහය ගත්ති ​ ​ ​ ​…</string>
     <string name="feeds_settings_access_updated">ප්‍රවේශය යාවත්කාලීන කරන ලදී</string>
-    <string name="feeds_settings_access_revoked">ප්‍රවේශය අයිඪ ගත්ති</string>
+    <string name="feeds_settings_access_revoked">ප්‍රවේශය අහෝසි කරන ලදී</string>
     <string name="feeds_settings_member_removed">සාමාජිකයා ඉවත් කරන ලදී</string>
     <string name="feeds_settings_ai_mode_updated">AI විදීඇගඅවහ ජොෝව නවඨවා ගත්ති</string>
     <string name="feeds_settings_ai_account_updated">AI ගිණුම ජොෝව නවඨවා ගත්ති</string>
@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">කිසිදිනක ලබාගෙන නැත</string>
     <string name="feeds_source_poll">පෝලය</string>
     <string name="feeds_source_transform">AI පරිවර්තනය</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" ඉවත් කරන්නද?</string>
-    <string name="feeds_remove_also_delete_posts">ආයාත කළ පළ කිරීම් ද මකන්න</string>
+    <string name="feeds_remove_source_confirm">මෙය \"%1$s\" වෙතින් අන්තර්ගතය ආයාත කිරීම නවත්වයි.</string>
+    <string name="feeds_remove_also_delete_posts">මෙම මූලාශ්‍රයෙන් ආයාත කළ පළ කිරීම් ද මකන්න</string>
     <string name="feeds_suggested_credibility_title">යෝජිත විශ්වසනීයත්වය</string>
     <string name="feeds_suggested_credibility_body">Mochi විසින් %1$d ක විශ්වසනීයත්වයක් යෝජනා කරයි. පිළිගන්නවාද?</string>
     <string name="feeds_suggested_credibility_keep">වර්තමානය තබාගන්න</string>

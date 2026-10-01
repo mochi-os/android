@@ -45,7 +45,9 @@
     <string name="route_delete_title">Supprimer la route ?</string>
     <string name="route_path">Chemin</string>
     <string name="route_method">Méthode</string>
-    <string name="route_method_app">Apparence</string>
+    <string name="route_picker_value">%1$s : %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
+    <string name="route_method_app">Application</string>
     <string name="route_method_entity">Entité</string>
     <string name="route_method_redirect">Redirection</string>
     <string name="route_priority">Priorité</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Télécharger depuis packages.mochi-os.org</string>
     <string name="system_status_copy">Copier</string>
     <string name="system_status_peers">Pairs</string>
-    <string name="system_status_known">Connus</string>
+    <string name="system_status_peers_totals">Connus %1$s · Connectés %2$s · Maillage de diffusion %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Connus %1$s · Connectés %2$s</string>
     <string name="system_status_peer_connected">Connecté</string>
     <string name="system_status_peer_disconnected">Déconnecté</string>
     <string name="system_status_peer_queued">Messages en file d\'attente</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">Vous ne pourrez plus vous connecter avec un code d\'authentificateur.</string>
     <string name="account_recovery_none">Aucun code de récupération généré.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d code de récupération restant.</item>
-        <item quantity="other">%1$d codes de récupération restants.</item>
+        <item quantity="one">%1$s code de récupération restant.</item>
+        <item quantity="other">%1$s codes de récupération restants.</item>
     </plurals>
     <string name="account_recovery_generate">Générer des codes</string>
     <string name="account_recovery_regenerate">Regénérer les codes</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">Dernière utilisation %1$s</string>
     <string name="route_delete_message">Cela supprimera la route pour le chemin « %1$s ».</string>
     <string name="route_empty">Aucune route configurée.</string>
-    <string name="route_meta">Priorité %1$d · %2$s</string>
+    <string name="route_meta">Priorité %1$s · %2$s</string>
     <string name="interests_search_placeholder">Rechercher des sujets à ajouter…</string>
     <string name="interests_empty">Aucun centre d\'intérêt pour le moment.</string>
     <string name="interests_summary_regenerate">Régénérer le résumé</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">Révoquer toutes les sessions ?</string>
     <string name="system_users_revoke_all_message">Toutes les sessions actives de cet utilisateur seront déconnectées.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">Affichage de %1$d–%2$d sur %3$d utilisateur</item>
-        <item quantity="other">Affichage de %1$d–%2$d sur %3$d utilisateurs</item>
+        <item quantity="one">Affichage de %1$s–%2$s sur %3$s utilisateur</item>
+        <item quantity="other">Affichage de %1$s–%2$s sur %3$s utilisateurs</item>
     </plurals>
     <string name="account_title">Compte</string>
     <string name="account_section_identity">Identité</string>
@@ -303,13 +306,13 @@
     <string name="domain_verify">Vérifier le DNS</string>
     <string name="settings_home_domains">Domaines</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Test envoyé à %1$d destination</item>
-        <item quantity="other">Test envoyé à %1$d destinations</item>
+        <item quantity="one">Test envoyé à %1$s destination</item>
+        <item quantity="other">Test envoyé à %1$s destinations</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="many">%1$d sessions révoquées</item>
-        <item quantity="one">%1$d session révoquée</item>
-        <item quantity="other">%1$d sessions révoquées</item>
+        <item quantity="many">%1$s sessions révoquées</item>
+        <item quantity="one">%1$s session révoquée</item>
+        <item quantity="other">%1$s sessions révoquées</item>
     </plurals>
     <string name="login_title">Connexion</string>
     <string name="login_section_methods">Méthodes de connexion</string>
@@ -323,7 +326,7 @@
     <string name="account_close_confirm_title">Fermer votre compte ?</string>
     <string name="account_close_confirm_body">La suppression de votre compte sera planifiée et vous serez déconnecté. Vous pouvez l\'annuler à tout moment avant la date de suppression en vous reconnectant.</string>
     <string name="account_data_download">Télécharger</string>
-    <string name="route_target_app">Apparence</string>
+    <string name="route_target_app">Application</string>
     <string name="route_target_entity">Entité</string>
     <string name="route_target_url">URL</string>
     <string name="account_data_section">Vos données</string>
@@ -340,8 +343,7 @@
     <string name="system_status_reachability_public">Public</string>
     <string name="system_status_reachability_private">Privé</string>
     <string name="system_status_reachability_unknown">Inconnu</string>
-    <string name="system_status_relay">Via relais</string>
-    <string name="system_status_mesh">Maillage de diffusion</string>
+    <string name="system_status_reachability_relay">%1$s · via relais</string>
     <string name="system_status_broadcast">Dernière diffusion</string>
     <string name="system_status_queued_broadcasts">Messages de diffusion en file d\'attente</string>
     <string name="system_setting_hostname_publish">Annoncer le nom d\'hôte et les domaines aux autres serveurs</string>
@@ -374,9 +376,11 @@
     <string name="accounts_device_seen">Vu pour la dernière fois %1$s</string>
     <string name="notifprefs_device_app">%1$s · appli</string>
     <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_destination_rss">RSS : %1$s</string>
+    <string name="notifprefs_topic_title">%1$s : %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Test envoyé à %1$d sur %2$d destination</item>
-        <item quantity="other">Test envoyé à %1$d sur %2$d destinations</item>
+        <item quantity="one">Test envoyé à %1$s sur %2$s destination</item>
+        <item quantity="other">Test envoyé à %1$s sur %2$s destinations</item>
     </plurals>
     <string name="notifprefs_test_none">Aucune destination configurée</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
@@ -400,23 +404,23 @@
     <string name="system_documents_discard_title">Abandonner les modifications ?</string>
     <string name="system_documents_discard">Abandonner</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d réussi</item>
-        <item quantity="other">%1$d réussis</item>
+        <item quantity="one">%1$s réussi</item>
+        <item quantity="other">%1$s réussis</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d échoué</item>
-        <item quantity="other">%1$d échoués</item>
+        <item quantity="one">%1$s échoué</item>
+        <item quantity="other">%1$s échoués</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d réservation</item>
-        <item quantity="other">%1$d / %2$d réservations</item>
+        <item quantity="one">%1$s / %2$s réservation</item>
+        <item quantity="other">%1$s / %2$s réservations</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d circuit</item>
-        <item quantity="other">%1$d circuits</item>
+        <item quantity="one">%1$s circuit</item>
+        <item quantity="other">%1$s circuits</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d refusée</item>
-        <item quantity="other">%1$d refusées</item>
+        <item quantity="one">%1$s refusée</item>
+        <item quantity="other">%1$s refusées</item>
     </plurals>
 </resources>

@@ -5,7 +5,7 @@
     <string name="go_action_more">Fosgail gnìomhan a\' gheama</string>
     <string name="go_action_offer_draw">Tairg co-ionnan</string>
     <string name="go_action_open_chat">Fosgail panail na cabadaich</string>
-    <string name="go_action_pass">Soirbheachail</string>
+    <string name="go_action_pass">Leig seachad</string>
     <string name="go_action_rematch">Geama ùr</string>
     <string name="go_action_resign">Leig seachad</string>
     <string name="go_app_title">Go</string>
@@ -39,7 +39,7 @@
     <string name="go_new_game_komi_label">Komi</string>
     <string name="go_new_game_komi_range_error">Feumaidh e a bhith eadar 0 agus 10</string>
     <string name="go_new_game_start">Tòisich an geama</string>
-    <string name="go_pass_confirm">Soirbheachail</string>
+    <string name="go_pass_confirm">Leig seachad</string>
     <string name="go_pass_end_confirm">Crìochnaich an geama</string>
     <string name="go_pass_end_message">Leig %1$s seachad cuideachd. Dearbhaidh seo crìoch a\' gheama agus sgòraidh e am bòrd.</string>
     <string name="go_pass_end_title">Crìochnaich an geama?</string>

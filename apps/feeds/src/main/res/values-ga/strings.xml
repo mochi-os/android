@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">Riamh faighte</string>
     <string name="feeds_source_poll">Vótáil</string>
     <string name="feeds_source_transform">Trasfhoirmiú AI</string>
-    <string name="feeds_remove_source_confirm">Bain \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Scrios postálacha iompórtáilte freisin</string>
+    <string name="feeds_remove_source_confirm">Stopfaidh sé seo iompórtáil ábhair ó \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Scrios freisin postálacha a iompórtáladh ón bhfoinse seo</string>
     <string name="feeds_suggested_credibility_title">Inchreidteacht mholta</string>
     <string name="feeds_suggested_credibility_body">Molann Mochi inchreidteacht %1$d. Glac leis?</string>
     <string name="feeds_suggested_credibility_keep">Coinnigh an ceann reatha</string>

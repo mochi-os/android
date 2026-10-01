@@ -105,8 +105,6 @@
     <string name="feeds_source_never_fetched">Nunca obtenido</string>
     <string name="feeds_source_poll">Sondear</string>
     <string name="feeds_source_transform">Transformación con IA</string>
-    <string name="feeds_remove_source_confirm">¿Eliminar \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">También eliminar publicaciones importadas</string>
     <string name="feeds_suggested_credibility_title">Credibilidad sugerida</string>
     <string name="feeds_suggested_credibility_body">Mochi sugiere una credibilidad de %1$d. ¿Aceptar?</string>
     <string name="feeds_suggested_credibility_keep">Mantener actual</string>
@@ -166,7 +164,6 @@
     <string name="feeds_settings_field_server">Servidor</string>
     <string name="feeds_settings_name_edit_cd">Editar nombre</string>
     <string name="feeds_settings_section_identity">Identidad</string>
-    <string name="feeds_unsubscribed">Suscripción cancelada</string>
     <string name="feeds_access_level_comment_full">Comentar, reaccionar y ver</string>
     <string name="feeds_rss_mode_posts_comments">Publicaciones y comentarios</string>
     <string name="feeds_access_add_title">Añadir acceso</string>
@@ -185,7 +182,6 @@
     <string name="feeds_create_first_post">Crear la primera publicación</string>
     <string name="feeds_rss_mode_posts">Publicaciones</string>
     <string name="feeds_source_last_checked">Última verificación: %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">Cancelar suscripción a la fuente</string>
     <string name="feeds_source_transform_hint">Traducir al inglés y mostrar como viñetas.</string>
     <string name="feeds_source_url_hint_feed">ID de entidad del feed o huella</string>
     <string name="feeds_source_credibility_label">Credibilidad</string>

@@ -96,9 +96,9 @@
     <string name="wikis_delete_page_confirm">Slet</string>
     <string name="wikis_delete_page_cancel">Annuller</string>
     <string name="wikis_delete_page_failed">Kunne ikke slette side</string>
-    <string name="wikis_revert_page_comment_label">Tilbagefør kommentar</string>
+    <string name="wikis_revert_page_comment_label">Kommentar til gendannelse</string>
     <string name="wikis_revert_page_confirm">Gendan</string>
-    <string name="wikis_revert_page_failed">Kunne ikke tilbageføre side</string>
+    <string name="wikis_revert_page_failed">Kunne ikke gendanne side</string>
     <string name="wikis_rename_page_title">Omdøb side</string>
     <string name="wikis_rename_page_label">Ny URL</string>
     <string name="wikis_rename_page_redirects">Opret omdirigering fra gammel URL</string>
@@ -110,9 +110,9 @@
     <string name="wikis_history_title">Historik</string>
     <string name="wikis_history_empty">Ingen revisioner fundet</string>
     <string name="wikis_history_view_action">Vis</string>
-    <string name="wikis_history_revert_action">Tilbagefør til denne version</string>
+    <string name="wikis_history_revert_action">Gendan til denne version</string>
     <string name="wikis_revision_current_badge">Aktuel</string>
-    <string name="wikis_revision_revert_to_this">Tilbagefør til denne version</string>
+    <string name="wikis_revision_revert_to_this">Gendan til denne version</string>
     <string name="wikis_changes_title">Nylige ændringer</string>
     <string name="wikis_changes_subtitle">Nylige redigeringer på tværs af alle sider i denne wiki.</string>
     <string name="wikis_changes_empty">Ingen ændringer endnu</string>

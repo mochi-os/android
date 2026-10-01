@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">Aldri hentet</string>
     <string name="feeds_source_poll">Spør</string>
     <string name="feeds_source_transform">KI-transformering</string>
-    <string name="feeds_remove_source_confirm">Fjerne \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Slett også importerte innlegg</string>
+    <string name="feeds_remove_source_confirm">Dette stopper importen av innhold fra \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Slett også innlegg importert fra denne kilden</string>
     <string name="feeds_suggested_credibility_title">Foreslått troverdighet</string>
     <string name="feeds_suggested_credibility_body">Mochi foreslår en troverdighet på %1$d. Godta?</string>
     <string name="feeds_suggested_credibility_keep">Behold nåværende</string>

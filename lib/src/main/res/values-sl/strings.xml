@@ -60,7 +60,7 @@
     <string name="notifications_empty">Brez obvestil</string>
     <string name="notifications_empty_unread">Vse je prebrano</string>
     <string name="notifications_tab_unread">Neprebrano</string>
-    <string name="notifications_tab_unread_count">Neprebrano (%1$d)</string>
+    <string name="notifications_tab_unread_count">Neprebrano (%1$s)</string>
     <string name="notifications_tab_all">Vse</string>
     <string name="notifications_mark_all_read">Označi vse prebrano</string>
     <string name="notifications_clear_all">Počisti vse</string>
@@ -304,9 +304,9 @@
     <string name="rss_revoke_confirm">Odvzemi</string>
     <string name="rss_revoke">Odvzemi dostop</string>
     <string name="rss_revoke_title">Ali želite odvzeti dostop RSS?</string>
-    <string name="rss_revoke_message">Vse, kar je naročeno na ta vir, ga ne bo več prejemalo. Nato lahko kopirate nov URL.</string>
-    <string name="rss_revoked">Dostop RSS preklican</string>
-    <string name="rss_revoke_failed">Preklic dostopa RSS ni uspel</string>
+    <string name="rss_revoke_message">Vse, kar je naročeno na ta kanal, ga ne bo več prejemalo. Nato lahko kopirate nov URL.</string>
+    <string name="rss_revoked">Dostop RSS odvzet</string>
+    <string name="rss_revoke_failed">Odvzem dostopa RSS ni uspel</string>
     <string name="game_empty_title">Še ni iger</string>
     <string name="game_select_title">Izberite igro</string>
     <string name="game_select_subtitle">Izberite igro v stranski vrstici ali začnite novo.</string>

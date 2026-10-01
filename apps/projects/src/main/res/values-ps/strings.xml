@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">نوی</string>
     <string name="projects_settings_section_identity">هویت</string>
     <string name="projects_settings_access_updated">لاسرسی نوی شو</string>
-    <string name="projects_settings_access_revoked">لاسرسی پرېګدل و</string>
+    <string name="projects_settings_access_revoked">لاسرسی بیرته واخیستل شو</string>
     <string name="projects_settings_section_access">د لاسرسي اداره</string>
     <string name="projects_people_search">خلک ولټوئ</string>
     <string name="projects_settings_field_entity_id">د موجودیت ID</string>
@@ -360,7 +360,7 @@
     <string name="projects_activity_commented">تبصره یې وکړه</string>
     <string name="projects_attachment_delete_confirm_message">دا ضمیمه به د تل لپاره ړنګه شي.</string>
     <string name="projects_attachment_delete_confirm_title">ضمیمه ړنګه شي؟</string>
-    <string name="projects_settings_unsubscribe_section">د پروژې ګډون بند کړئ</string>
+    <string name="projects_settings_unsubscribe_section">د پروژې له ګډون وتل</string>
     <string name="projects_share_link_title">پروژه شریکه کړئ</string>
     <string name="projects_sort_filter_title">ترتیب او فلټر</string>
     <string name="projects_create_prefix_hint">د لوستلو وړ پېژندونو لپاره کارول کېږي لکه %1$s-1، %1$s-2</string>

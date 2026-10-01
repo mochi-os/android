@@ -27,7 +27,7 @@
     <string name="words_detail_action_rematch">እንደገና ተወዳደር</string>
     <string name="words_detail_action_delete">ጨዋታ ሰርዝ</string>
     <string name="words_detail_chat_title">ውይይት</string>
-    <string name="words_detail_recall">አስታውስ</string>
+    <string name="words_detail_recall">ወደኋላ መልስ</string>
     <string name="words_detail_submit">ያቅርቡ</string>
     <string name="words_detail_cancel">ይቅር</string>
     <string name="words_detail_exchange">ለውጥ</string>

@@ -60,7 +60,7 @@
     <string name="notifications_empty">कवनो सूचना नइखे</string>
     <string name="notifications_empty_unread">सब पढ़ल हो गइल</string>
     <string name="notifications_tab_unread">अनपढ़ल</string>
-    <string name="notifications_tab_unread_count">अनपढ़ल (%1$d)</string>
+    <string name="notifications_tab_unread_count">अनपढ़ल (%1$s)</string>
     <string name="notifications_tab_all">सब</string>
     <string name="notifications_mark_all_read">सब पढ़ल चिह्नित करीं</string>
     <string name="notifications_clear_all">सब साफ करीं</string>
@@ -303,8 +303,8 @@
     <string name="rss_revoke">पहुँच वापस लीं</string>
     <string name="rss_revoke_title">RSS पहुँच वापस लीं?</string>
     <string name="rss_revoke_message">एह फीड के सब्सक्राइब कइल कवनो चीज़ ओकरा के मिलल बंद हो जाई। बाद में रउआ नया URL कॉपी कर सकीलें।</string>
-    <string name="rss_revoked">RSS पहुँच रद्द भइल</string>
-    <string name="rss_revoke_failed">RSS पहुँच रद्द करे में विफल</string>
+    <string name="rss_revoked">RSS पहुँच वापस ले लिहल गइल</string>
+    <string name="rss_revoke_failed">RSS पहुँच वापस लेवे में विफल</string>
     <string name="game_empty_title">अबहीं तक कौनो खेल नइखे</string>
     <string name="game_select_title">खेल चुनीं</string>
     <string name="game_select_subtitle">साइडबार से खेल चुनीं भा नया खेल शुरू करीं।</string>

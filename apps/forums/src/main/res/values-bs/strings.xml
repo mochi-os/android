@@ -151,7 +151,7 @@
     <string name="forums_access_level_moderate">Moderiraj</string>
     <string name="forums_members_search">Filtriraj članove</string>
     <string name="forums_banner_description">Markdown prikazan na vrhu foruma.</string>
-    <string name="forums_banner_placeholder">Dobro došli na ovaj forum…</string>
+    <string name="forums_banner_placeholder">Unesite tekst banera (podržan je Markdown)…</string>
     <string name="forums_ai_mode_label">Način: %1$s</string>
     <string name="forums_ai_mode_heading">AI način</string>
     <string name="forums_ai_mode_off">Onemogućeno</string>
@@ -294,7 +294,7 @@
     <string name="forums_settings_ai_updated">AI postavke ažurirane</string>
     <string name="forums_settings_forum_renamed">Forum preimenovan</string>
     <string name="forums_settings_name_clear_cd">Očisti naziv</string>
-    <string name="forums_settings_unsubscribe_section">Odjava s foruma</string>
+    <string name="forums_settings_unsubscribe_section">Prekini pretplatu na forum</string>
     <string name="forums_share_link_title">Veza foruma</string>
     <string name="forums_find_found_by_url">Pronađeno putem URL-a</string>
     <string name="forums_moderation_pending_posts">Objave na čekanju (%1$d)</string>

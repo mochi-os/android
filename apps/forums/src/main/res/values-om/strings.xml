@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">To\'achuu</string>
     <string name="forums_members_search">Miseensota gulaali</string>
     <string name="forums_banner_description">Markdown gubbaa marichaa irratti mul\'atu.</string>
-    <string name="forums_banner_placeholder">Marii kanatti baga nagaan dhuftan…</string>
+    <string name="forums_banner_placeholder">Barreeffama baanaraa galchi (markdown ni deeggarama)…</string>
     <string name="forums_ai_mode_label">Haalata: %1$s</string>
     <string name="forums_ai_mode_heading">Haalata AI</string>
     <string name="forums_ai_mode_off">Cufame</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">guyyoota</string>
     <string name="forums_settings_banner_saved">Baanara olkaa\'amee jira</string>
     <string name="forums_settings_access_updated">Seensi haaromfame</string>
-    <string name="forums_settings_access_revoked">Seensi haqamee jira</string>
+    <string name="forums_settings_access_revoked">Argamni deebifatame</string>
     <string name="forums_settings_member_removed">Miseensi haqame</string>
     <string name="forums_settings_prompt_saved">Gaaffii olkaa\'ame</string>
     <string name="forums_settings_section_identity">Eenyummaa</string>

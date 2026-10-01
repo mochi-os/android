@@ -60,7 +60,7 @@
     <string name="notifications_empty">Мэдэгдэл алга</string>
     <string name="notifications_empty_unread">Бүгдийг үзсэн</string>
     <string name="notifications_tab_unread">Уншаагүй</string>
-    <string name="notifications_tab_unread_count">Уншаагүй (%1$d)</string>
+    <string name="notifications_tab_unread_count">Уншаагүй (%1$s)</string>
     <string name="notifications_tab_all">Бүгд</string>
     <string name="notifications_mark_all_read">Бүгдийг уншсан гэж тэмдэглэх</string>
     <string name="notifications_clear_all">Бүгдийг цэвэрлэх</string>
@@ -303,8 +303,8 @@
     <string name="rss_revoke">Хандалтыг хүчингүй болгох</string>
     <string name="rss_revoke_title">RSS хандалтыг хүчингүй болгох уу?</string>
     <string name="rss_revoke_message">Энэ хангамжид бүртгүүлсэн бүх зүйл хүлээн авахаа болино. Дараа нь та шинэ URL хуулж болно.</string>
-    <string name="rss_revoked">RSS хандалтыг цуцаллаа</string>
-    <string name="rss_revoke_failed">RSS хандалтыг цуцалж чадсангүй</string>
+    <string name="rss_revoked">RSS хандалтыг хүчингүй болголоо</string>
+    <string name="rss_revoke_failed">RSS хандалтыг хүчингүй болгож чадсангүй</string>
     <string name="game_empty_title">Тоглоом алга</string>
     <string name="game_select_title">Тоглоом сонгох</string>
     <string name="game_select_subtitle">Хажуугийн самбараас тоглоом сонгох эсвэл шинийг эхлүүлнэ үү.</string>

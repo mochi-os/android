@@ -45,6 +45,8 @@
     <string name="route_delete_title">روٹ حذف کریں؟</string>
     <string name="route_path">پاتھ</string>
     <string name="route_method">طریقہ</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s ← %2$s</string>
     <string name="route_method_app">ایپ</string>
     <string name="route_method_entity">اینٹٹی</string>
     <string name="route_method_redirect">ری ڈائریکٹ</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org سے ڈاؤن لوڈ کریں</string>
     <string name="system_status_copy">کاپی کریں</string>
     <string name="system_status_peers">ساتھی</string>
-    <string name="system_status_known">معلوم</string>
+    <string name="system_status_peers_totals">معلوم %1$s · منسلک %2$s · نشریاتی میش %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">معلوم %1$s · منسلک %2$s</string>
     <string name="system_status_peer_connected">کنیکٹ ہو گیا</string>
     <string name="system_status_peer_disconnected">منقطع</string>
     <string name="system_status_peer_queued">قطار میں پیغامات</string>
@@ -194,12 +197,12 @@
     <string name="system_users_toast_deleted">صارف حذف کر دیا گیا</string>
     <string name="system_users_toast_suspended">صارف معطل کر دیا</string>
     <string name="system_users_toast_suspension_removed">معطلی ہٹا دی گئی</string>
-    <string name="system_users_toast_session_revoked">سیشن منسوخ کر دیا گیا</string>
+    <string name="system_users_toast_session_revoked">سیشن واپس لے لیا گیا</string>
     <string name="system_users_toast_create_failed">صارف بنانے میں ناکامی</string>
     <string name="system_users_toast_update_failed">صارف اپڈیٹ کرنے میں ناکامی</string>
     <string name="system_users_toast_delete_failed">صارف حذف کرنے میں ناکامی</string>
     <string name="system_users_toast_status_failed">صارف کا اسٹیٹس اپڈیٹ کرنے میں ناکامی</string>
-    <string name="system_users_toast_revoke_failed">سیشن منسوخ کرنے میں ناکامی</string>
+    <string name="system_users_toast_revoke_failed">سیشن واپس لینے میں ناکامی</string>
 
     <string name="settings_home_sessions">سیشنز</string>
     <string name="settings_home_privacy">رازداری کی پالیسی</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">آپ تصدیق کنندہ کوڈ سے سائن ان نہیں کر سکیں گے۔</string>
     <string name="account_recovery_none">کوئی بازیابی کوڈز پیدا نہیں ہوئے۔</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d بازیابی کوڈ باقی ہے۔</item>
-        <item quantity="other">%1$d بازیابی کوڈز باقی ہیں۔</item>
+        <item quantity="one">%1$s بازیابی کوڈ باقی ہے۔</item>
+        <item quantity="other">%1$s بازیابی کوڈز باقی ہیں۔</item>
     </plurals>
     <string name="account_recovery_generate">کوڈز پیدا کریں</string>
     <string name="account_recovery_regenerate">کوڈز دوبارہ پیدا کریں</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">آخری استعمال %1$s</string>
     <string name="route_delete_message">یہ راستے \"%1$s\" کا روٹ ہٹا دے گا۔</string>
     <string name="route_empty">کوئی روٹس کنفیگر نہیں ہیں۔</string>
-    <string name="route_meta">ترجیح %1$d · %2$s</string>
+    <string name="route_meta">ترجیح %1$s · %2$s</string>
     <string name="interests_search_placeholder">شامل کرنے کے لیے موضوعات تلاش کریں…</string>
     <string name="interests_empty">ابھی تک کوئی دلچسپیاں نہیں۔</string>
     <string name="interests_summary_regenerate">خلاصہ دوبارہ بنائیں</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">تمام سیشنز واپس لیں؟</string>
     <string name="system_users_revoke_all_message">اس صارف کے تمام فعال سیشنز سائن آؤٹ ہو جائیں گے۔</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">%3$d صارف میں سے %1$d–%2$d دکھائے جا رہے ہیں</item>
-        <item quantity="other">%3$d صارفین میں سے %1$d–%2$d دکھائے جا رہے ہیں</item>
+        <item quantity="one">%3$s صارف میں سے %1$s–%2$s دکھائے جا رہے ہیں</item>
+        <item quantity="other">%3$s صارفین میں سے %1$s–%2$s دکھائے جا رہے ہیں</item>
     </plurals>
     <string name="account_title">اکاؤنٹ</string>
     <string name="account_section_identity">شناخت</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS تصدیق کریں</string>
     <string name="settings_home_domains">ڈومینز</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">%1$d منزل پر ٹیسٹ بھیجا گیا</item>
-        <item quantity="other">%1$d منزلوں پر ٹیسٹ بھیجا گیا</item>
+        <item quantity="one">%1$s منزل پر ٹیسٹ بھیجا گیا</item>
+        <item quantity="other">%1$s منزلوں پر ٹیسٹ بھیجا گیا</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$d سیشن منسوخ کیا</item>
-        <item quantity="other">%1$d سیشنز منسوخ کیے</item>
+        <item quantity="one">%1$s سیشن واپس لیا گیا</item>
+        <item quantity="other">%1$s سیشنز واپس لیے گئے</item>
     </plurals>
     <string name="login_title">لاگ ان</string>
     <string name="login_section_methods">لاگ ان کے طریقے</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">عوامی</string>
     <string name="system_status_reachability_private">نجی</string>
     <string name="system_status_reachability_unknown">نامعلوم</string>
-    <string name="system_status_relay">ریلے کے ذریعے</string>
-    <string name="system_status_mesh">نشریاتی میش</string>
+    <string name="system_status_reachability_relay">%1$s · ریلے کے ذریعے</string>
     <string name="system_status_broadcast">آخری نشریات</string>
     <string name="system_status_queued_broadcasts">قطار میں نشریاتی پیغامات</string>
     <string name="system_setting_hostname_publish">ہوسٹ نام اور ڈومینز کا دوسرے سرورز کو اعلان کریں</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">آخری بار دیکھا گیا %1$s</string>
     <string name="notifprefs_device_app">%1$s · ایپ</string>
     <string name="notifprefs_device_push">%1$s · پش</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">ٹیسٹ %2$d منزل میں سے %1$d کو بھیجا گیا</item>
-        <item quantity="other">ٹیسٹ %2$d منزلوں میں سے %1$d کو بھیجا گیا</item>
+        <item quantity="one">ٹیسٹ %2$s منزل میں سے %1$s کو بھیجا گیا</item>
+        <item quantity="other">ٹیسٹ %2$s منزلوں میں سے %1$s کو بھیجا گیا</item>
     </plurals>
     <string name="notifprefs_test_none">کوئی منزلیں کنفیگر نہیں ہیں</string>
     <string name="notifprefs_transport_fcm">Android پش</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">تبدیلیاں رد کریں؟</string>
     <string name="system_documents_discard">رد کریں</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d کامیاب</item>
-        <item quantity="other">%1$d کامیاب</item>
+        <item quantity="one">%1$s کامیاب</item>
+        <item quantity="other">%1$s کامیاب</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d ناکام</item>
-        <item quantity="other">%1$d ناکام</item>
+        <item quantity="one">%1$s ناکام</item>
+        <item quantity="other">%1$s ناکام</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d ریزرویشن</item>
-        <item quantity="other">%1$d / %2$d ریزرویشنز</item>
+        <item quantity="one">%1$s / %2$s ریزرویشن</item>
+        <item quantity="other">%1$s / %2$s ریزرویشنز</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d سرکٹ</item>
-        <item quantity="other">%1$d سرکٹس</item>
+        <item quantity="one">%1$s سرکٹ</item>
+        <item quantity="other">%1$s سرکٹس</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d مسترد</item>
-        <item quantity="other">%1$d مسترد</item>
+        <item quantity="one">%1$s مسترد</item>
+        <item quantity="other">%1$s مسترد</item>
     </plurals>
 </resources>

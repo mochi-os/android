@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">សម្របសម្រួល</string>
     <string name="forums_members_search">ច្រោះសមាជិក</string>
     <string name="forums_banner_description">Markdown ដែលបង្ហាញនៅផ្នែកខាងលើនៃវេទិកា។</string>
-    <string name="forums_banner_placeholder">សូមស្វាគមន៍មកកាន់វេទិកានេះ…</string>
+    <string name="forums_banner_placeholder">បញ្ចូលអត្ថបទបដា (គាំទ្រ Markdown)…</string>
     <string name="forums_ai_mode_label">របៀប: %1$s</string>
     <string name="forums_ai_mode_heading">របៀប AI</string>
     <string name="forums_ai_mode_off">បិទ</string>

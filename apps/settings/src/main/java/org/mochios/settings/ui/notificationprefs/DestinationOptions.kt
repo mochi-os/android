@@ -56,7 +56,10 @@ internal fun destinationOptions(
             add(DestinationRow(type = "account", target = acc.id) to (if (push && name != transport) "$name · $transport" else name))
         }
         for (feed in available.feeds) {
-            add(DestinationRow(type = "rss", target = feed.id) to feed.name)
+            add(
+                DestinationRow(type = "rss", target = feed.id) to
+                    stringResource(R.string.notifprefs_destination_rss, feed.name)
+            )
         }
     }.sortedWith(compareBy(NaturalCompare) { option -> option.second })
 }

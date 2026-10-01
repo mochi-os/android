@@ -45,6 +45,8 @@
     <string name="route_delete_title">حذف المسار؟</string>
     <string name="route_path">المسار</string>
     <string name="route_method">الطريقة</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s ← %2$s</string>
     <string name="route_method_app">التطبيق</string>
     <string name="route_method_entity">الكيان</string>
     <string name="route_method_redirect">إعادة توجيه</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">تنزيل من packages.mochi-os.org</string>
     <string name="system_status_copy">نسخ</string>
     <string name="system_status_peers">الأنداد</string>
-    <string name="system_status_known">معروف</string>
+    <string name="system_status_peers_totals">معروف %1$s · متصل %2$s · شبكة البث %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">معروف %1$s · متصل %2$s</string>
     <string name="system_status_peer_connected">متصل</string>
     <string name="system_status_peer_disconnected">غير متصل</string>
     <string name="system_status_peer_queued">الرسائل في قائمة الانتظار</string>
@@ -176,7 +179,7 @@
     <string name="system_users_create_title">إنشاء مستخدم</string>
     <string name="system_users_save_changes">حفظ التغييرات</string>
     <string name="system_users_suspend">تعليق المستخدم</string>
-    <string name="system_users_remove_suspension">إزالة التعليق</string>
+    <string name="system_users_remove_suspension">رفع التعليق</string>
     <string name="system_users_delete">حذف المستخدم</string>
     <string name="system_users_delete_title">حذف المستخدم؟</string>
     <string name="system_users_manage_sessions">إدارة الجلسات</string>
@@ -193,13 +196,13 @@
     <string name="system_users_toast_updated">تم تحديث المستخدم</string>
     <string name="system_users_toast_deleted">تم حذف المستخدم</string>
     <string name="system_users_toast_suspended">تم تعليق المستخدم</string>
-    <string name="system_users_toast_suspension_removed">تمت إزالة التعليق</string>
-    <string name="system_users_toast_session_revoked">تم إلغاء الجلسة</string>
+    <string name="system_users_toast_suspension_removed">تم رفع التعليق</string>
+    <string name="system_users_toast_session_revoked">تم إبطال الجلسة</string>
     <string name="system_users_toast_create_failed">فشل إنشاء المستخدم</string>
     <string name="system_users_toast_update_failed">فشل تحديث المستخدم</string>
     <string name="system_users_toast_delete_failed">فشل حذف المستخدم</string>
     <string name="system_users_toast_status_failed">فشل تحديث حالة المستخدم</string>
-    <string name="system_users_toast_revoke_failed">فشل إلغاء الجلسة</string>
+    <string name="system_users_toast_revoke_failed">فشل إبطال الجلسة</string>
 
     <string name="settings_home_sessions">الجلسات</string>
     <string name="settings_home_privacy">سياسة الخصوصية</string>
@@ -216,12 +219,12 @@
     <string name="account_totp_disable_message">لن تتمكن من تسجيل الدخول برمز المصادقة.</string>
     <string name="account_recovery_none">لم يتم إنشاء رموز استرداد.</string>
     <plurals name="account_recovery_count">
-        <item quantity="zero">%1$d رمز استرداد متبقٍ.</item>
-        <item quantity="one">%1$d رمز استرداد متبقٍ.</item>
-        <item quantity="two">%1$d رمزا استرداد متبقيان.</item>
-        <item quantity="few">%1$d رموز استرداد متبقية.</item>
-        <item quantity="many">%1$d رمز استرداد متبقٍ.</item>
-        <item quantity="other">%1$d رمز استرداد متبقٍ.</item>
+        <item quantity="zero">%1$s رمز استرداد متبقٍ.</item>
+        <item quantity="one">%1$s رمز استرداد متبقٍ.</item>
+        <item quantity="two">%1$s رمزا استرداد متبقيان.</item>
+        <item quantity="few">%1$s رموز استرداد متبقية.</item>
+        <item quantity="many">%1$s رمز استرداد متبقٍ.</item>
+        <item quantity="other">%1$s رمز استرداد متبقٍ.</item>
     </plurals>
     <string name="account_recovery_generate">إنشاء رموز</string>
     <string name="account_recovery_regenerate">إعادة إنشاء الرموز</string>
@@ -238,7 +241,7 @@
     <string name="account_last_used">آخر استخدام %1$s</string>
     <string name="route_delete_message">سيؤدي هذا إلى إزالة المسار للمسار \"%1$s\".</string>
     <string name="route_empty">لا توجد مسارات مُهيأة.</string>
-    <string name="route_meta">الأولوية %1$d · %2$s</string>
+    <string name="route_meta">الأولوية %1$s · %2$s</string>
     <string name="interests_search_placeholder">ابحث عن مواضيع لإضافتها…</string>
     <string name="interests_empty">لا توجد اهتمامات بعد.</string>
     <string name="interests_summary_regenerate">إعادة إنشاء الملخص</string>
@@ -272,12 +275,12 @@
     <string name="system_users_revoke_all_title">إبطال جميع الجلسات؟</string>
     <string name="system_users_revoke_all_message">سيتم تسجيل خروج جميع الجلسات النشطة لهذا المستخدم.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="zero">عرض %1$d–%2$d من %3$d مستخدم</item>
-        <item quantity="one">عرض %1$d–%2$d من %3$d مستخدم</item>
-        <item quantity="two">عرض %1$d–%2$d من %3$d مستخدمَين</item>
-        <item quantity="few">عرض %1$d–%2$d من %3$d مستخدمين</item>
-        <item quantity="many">عرض %1$d–%2$d من %3$d مستخدمًا</item>
-        <item quantity="other">عرض %1$d–%2$d من %3$d مستخدم</item>
+        <item quantity="zero">عرض %1$s–%2$s من %3$s مستخدم</item>
+        <item quantity="one">عرض %1$s–%2$s من %3$s مستخدم</item>
+        <item quantity="two">عرض %1$s–%2$s من %3$s مستخدمَين</item>
+        <item quantity="few">عرض %1$s–%2$s من %3$s مستخدمين</item>
+        <item quantity="many">عرض %1$s–%2$s من %3$s مستخدمًا</item>
+        <item quantity="other">عرض %1$s–%2$s من %3$s مستخدم</item>
     </plurals>
     <string name="account_title">الحساب</string>
     <string name="account_section_identity">الهوية</string>
@@ -314,17 +317,17 @@
         <item quantity="zero">لم يتم إرسال الاختبار إلى أي وجهة</item>
         <item quantity="one">تم إرسال الاختبار إلى وجهة واحدة</item>
         <item quantity="two">تم إرسال الاختبار إلى وجهتين</item>
-        <item quantity="few">تم إرسال الاختبار إلى %1$d وجهات</item>
-        <item quantity="many">تم إرسال الاختبار إلى %1$d وجهة</item>
-        <item quantity="other">تم إرسال الاختبار إلى %1$d وجهة</item>
+        <item quantity="few">تم إرسال الاختبار إلى %1$s وجهات</item>
+        <item quantity="many">تم إرسال الاختبار إلى %1$s وجهة</item>
+        <item quantity="other">تم إرسال الاختبار إلى %1$s وجهة</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="few">تم إلغاء %1$d جلسات</item>
-        <item quantity="many">تم إلغاء %1$d جلسة</item>
-        <item quantity="one">تم إلغاء جلسة واحدة</item>
-        <item quantity="other">تم إلغاء %1$d جلسة</item>
-        <item quantity="two">تم إلغاء جلستين</item>
-        <item quantity="zero">لم يتم إلغاء أي جلسة</item>
+        <item quantity="few">تم إبطال %1$s جلسات</item>
+        <item quantity="many">تم إبطال %1$s جلسة</item>
+        <item quantity="one">تم إبطال جلسة واحدة</item>
+        <item quantity="other">تم إبطال %1$s جلسة</item>
+        <item quantity="two">تم إبطال جلستين</item>
+        <item quantity="zero">لم يتم إبطال أي جلسة</item>
     </plurals>
     <string name="login_title">تسجيل الدخول</string>
     <string name="login_section_methods">طرق تسجيل الدخول</string>
@@ -355,8 +358,7 @@
     <string name="system_status_reachability_public">عام</string>
     <string name="system_status_reachability_private">خاص</string>
     <string name="system_status_reachability_unknown">غير معروف</string>
-    <string name="system_status_relay">عبر المرحّل</string>
-    <string name="system_status_mesh">شبكة البث</string>
+    <string name="system_status_reachability_relay">%1$s · عبر المرحّل</string>
     <string name="system_status_broadcast">آخر بث</string>
     <string name="system_status_queued_broadcasts">رسائل البث في قائمة الانتظار</string>
     <string name="system_setting_hostname_publish">الإعلان عن اسم المضيف والنطاقات للخوادم الأخرى</string>
@@ -389,13 +391,15 @@
     <string name="accounts_device_seen">آخر ظهور %1$s</string>
     <string name="notifprefs_device_app">%1$s · تطبيق</string>
     <string name="notifprefs_device_push">%1$s · إشعارات فورية</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="zero">تم إرسال الاختبار إلى %1$d من أصل %2$d وجهة</item>
-        <item quantity="one">تم إرسال الاختبار إلى %1$d من أصل %2$d وجهة</item>
-        <item quantity="two">تم إرسال الاختبار إلى %1$d من أصل %2$d وجهتين</item>
-        <item quantity="few">تم إرسال الاختبار إلى %1$d من أصل %2$d وجهات</item>
-        <item quantity="many">تم إرسال الاختبار إلى %1$d من أصل %2$d وجهة</item>
-        <item quantity="other">تم إرسال الاختبار إلى %1$d من أصل %2$d وجهة</item>
+        <item quantity="zero">تم إرسال الاختبار إلى %1$s من أصل %2$s وجهة</item>
+        <item quantity="one">تم إرسال الاختبار إلى %1$s من أصل %2$s وجهة</item>
+        <item quantity="two">تم إرسال الاختبار إلى %1$s من أصل %2$s وجهتين</item>
+        <item quantity="few">تم إرسال الاختبار إلى %1$s من أصل %2$s وجهات</item>
+        <item quantity="many">تم إرسال الاختبار إلى %1$s من أصل %2$s وجهة</item>
+        <item quantity="other">تم إرسال الاختبار إلى %1$s من أصل %2$s وجهة</item>
     </plurals>
     <string name="notifprefs_test_none">لم يتم تكوين وجهات</string>
     <string name="notifprefs_transport_fcm">إشعار Android</string>
@@ -419,43 +423,43 @@
     <string name="system_documents_discard_title">تجاهل التغييرات؟</string>
     <string name="system_documents_discard">تجاهل</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="zero">%1$d ناجحة</item>
-        <item quantity="one">%1$d ناجحة</item>
-        <item quantity="two">%1$d ناجحتان</item>
-        <item quantity="few">%1$d ناجحة</item>
-        <item quantity="many">%1$d ناجحة</item>
-        <item quantity="other">%1$d ناجحة</item>
+        <item quantity="zero">%1$s ناجحة</item>
+        <item quantity="one">%1$s ناجحة</item>
+        <item quantity="two">%1$s ناجحتان</item>
+        <item quantity="few">%1$s ناجحة</item>
+        <item quantity="many">%1$s ناجحة</item>
+        <item quantity="other">%1$s ناجحة</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="zero">%1$d فاشلة</item>
-        <item quantity="one">%1$d فاشلة</item>
-        <item quantity="two">%1$d فاشلتان</item>
-        <item quantity="few">%1$d فاشلة</item>
-        <item quantity="many">%1$d فاشلة</item>
-        <item quantity="other">%1$d فاشلة</item>
+        <item quantity="zero">%1$s فاشلة</item>
+        <item quantity="one">%1$s فاشلة</item>
+        <item quantity="two">%1$s فاشلتان</item>
+        <item quantity="few">%1$s فاشلة</item>
+        <item quantity="many">%1$s فاشلة</item>
+        <item quantity="other">%1$s فاشلة</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="zero">%1$d / %2$d حجز</item>
-        <item quantity="one">%1$d / %2$d حجز</item>
-        <item quantity="two">%1$d / %2$d حجزان</item>
-        <item quantity="few">%1$d / %2$d حجوزات</item>
-        <item quantity="many">%1$d / %2$d حجزًا</item>
-        <item quantity="other">%1$d / %2$d حجز</item>
+        <item quantity="zero">%1$s / %2$s حجز</item>
+        <item quantity="one">%1$s / %2$s حجز</item>
+        <item quantity="two">%1$s / %2$s حجزان</item>
+        <item quantity="few">%1$s / %2$s حجوزات</item>
+        <item quantity="many">%1$s / %2$s حجزًا</item>
+        <item quantity="other">%1$s / %2$s حجز</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="zero">%1$d دائرة</item>
-        <item quantity="one">%1$d دائرة</item>
-        <item quantity="two">%1$d دائرتان</item>
-        <item quantity="few">%1$d دوائر</item>
-        <item quantity="many">%1$d دائرة</item>
-        <item quantity="other">%1$d دائرة</item>
+        <item quantity="zero">%1$s دائرة</item>
+        <item quantity="one">%1$s دائرة</item>
+        <item quantity="two">%1$s دائرتان</item>
+        <item quantity="few">%1$s دوائر</item>
+        <item quantity="many">%1$s دائرة</item>
+        <item quantity="other">%1$s دائرة</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="zero">%1$d مرفوضة</item>
-        <item quantity="one">%1$d مرفوضة</item>
-        <item quantity="two">%1$d مرفوضتان</item>
-        <item quantity="few">%1$d مرفوضة</item>
-        <item quantity="many">%1$d مرفوضة</item>
-        <item quantity="other">%1$d مرفوضة</item>
+        <item quantity="zero">%1$s مرفوضة</item>
+        <item quantity="one">%1$s مرفوضة</item>
+        <item quantity="two">%1$s مرفوضتان</item>
+        <item quantity="few">%1$s مرفوضة</item>
+        <item quantity="many">%1$s مرفوضة</item>
+        <item quantity="other">%1$s مرفوضة</item>
     </plurals>
 </resources>

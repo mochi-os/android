@@ -6,7 +6,7 @@
     <string name="staff_accounts_action_ban_title">حظر الحساب</string>
     <string name="staff_accounts_action_suspend_title">تعليق الحساب</string>
     <string name="staff_accounts_action_unban_title">رفع الحظر</string>
-    <string name="staff_accounts_action_unsuspend_title">رفع الإيقاف</string>
+    <string name="staff_accounts_action_unsuspend_title">رفع التعليق</string>
     <string name="staff_accounts_any_seller">الكل</string>
     <string name="staff_accounts_any_status">الكل</string>
     <string name="staff_accounts_ban">حظر</string>
@@ -61,8 +61,8 @@
     <string name="staff_audit_action_account_stripe_onboarded">تم الانضمام إلى Stripe</string>
     <string name="staff_audit_action_account_stripe_restricted">Stripe مقيد</string>
     <string name="staff_audit_action_account_suspended">معلق كبائع</string>
-    <string name="staff_audit_action_account_unbanned">تم إلغاء الحظر</string>
-    <string name="staff_audit_action_account_unsuspended">تم إلغاء التعليق</string>
+    <string name="staff_audit_action_account_unbanned">تم رفع الحظر</string>
+    <string name="staff_audit_action_account_unsuspended">تم رفع التعليق</string>
     <string name="staff_audit_action_auction_bid_placed">تم تقديم المزايدة</string>
     <string name="staff_audit_action_auction_cancelled">تم إلغاء المزاد</string>
     <string name="staff_audit_action_auction_created">تم إنشاء المزاد</string>

@@ -151,7 +151,7 @@
     <string name="forums_access_level_moderate">পরিমিত</string>
     <string name="forums_members_search">সদস্য ফিল্টার করুন</string>
     <string name="forums_banner_description">ফোরামের শীর্ষে দেখানো মার্কডাউন।</string>
-    <string name="forums_banner_placeholder">এই ফোরামে স্বাগতম…</string>
+    <string name="forums_banner_placeholder">ব্যানারের টেক্সট লিখুন (মার্কডাউন সমর্থিত)…</string>
     <string name="forums_ai_mode_label">মোড: %1$s</string>
     <string name="forums_ai_mode_heading">AI মোড</string>
     <string name="forums_ai_mode_off">নিষ্ক্রিয়</string>

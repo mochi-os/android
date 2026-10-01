@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">Erişim yönetimi</string>
     <string name="crm_settings_not_set">Ayarlanmamış</string>
     <string name="crm_settings_access_updated">Erişim güncellendi</string>
-    <string name="crm_settings_access_revoked">Erişim iptal edildi</string>
+    <string name="crm_settings_access_revoked">Erişim kaldırıldı</string>
     <string name="crm_people_search">Kişileri ara</string>
     <string name="crm_access_tab_other">Diğer</string>
     <string name="crm_access_select_group">Bir grup seçin</string>

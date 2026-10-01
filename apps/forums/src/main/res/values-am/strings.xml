@@ -151,7 +151,7 @@
     <string name="forums_access_level_moderate">አወያይ</string>
     <string name="forums_members_search">አባላትን አጣራ</string>
     <string name="forums_banner_description">በመድረኩ አናት ላይ የሚታይ Markdown።</string>
-    <string name="forums_banner_placeholder">ወደዚህ መድረክ እንኳን ደህና መጡ…</string>
+    <string name="forums_banner_placeholder">የሰንደቅ ጽሑፍ ያስገቡ (Markdown ይደገፋል)…</string>
     <string name="forums_ai_mode_label">ሁነታ፦ %1$s</string>
     <string name="forums_ai_mode_heading">የAI ሁነታ</string>
     <string name="forums_ai_mode_off">ተሰናክሏል</string>

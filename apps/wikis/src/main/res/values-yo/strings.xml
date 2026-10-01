@@ -41,7 +41,7 @@
     <string name="wikis_rss_copied">A ti ṣàdàkọ URL RSS sí clipboard</string>
     <string name="wikis_rss_failed">Kò lè rí token RSS</string>
     <string name="wikis_rss_revoke">Gba ìwọlé padà</string>
-    <string name="wikis_rss_revoked">Ìwọlé RSS ti fagilé</string>
+    <string name="wikis_rss_revoked">A ti gba ìwọlé RSS padà</string>
     <string name="wikis_find_title">Wa àwọn wiki</string>
     <string name="wikis_find_no_results">A kò rí wiki kankan</string>
     <string name="wikis_find_recommended_section">Àwọn wiki tí a dábàá</string>
@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">Ó ń tún orúkọ sọ…</string>
     <string name="wikis_rename_page_success">A ti tún ojú-ìwé sọ lórúkọ</string>
     <string name="wikis_history_viewing">Ń wo ìtàn fún %1$s, ẹ̀dà lọ́wọ́lọ́wọ́ %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">Ẹ̀dà %1$d</string>
     <string name="wikis_search_pages_placeholder">Wá àwọn ojú-ìwé nípa àkọlé tàbí àkóónú…</string>
     <string name="wikis_search_no_results">Kò sí ojú-ìwé fún “%1$s”. Gbìyànjú àwọn ọ̀rọ̀ ìwádìí mìíràn.</string>
     <string name="wikis_search_updated">A ṣe àtúnṣe ní %1$s</string>

@@ -360,7 +360,7 @@
     <string name="projects_activity_commented">comentou</string>
     <string name="projects_attachment_delete_confirm_message">Este anexo eliminarase permanentemente.</string>
     <string name="projects_attachment_delete_confirm_title">Eliminar o anexo?</string>
-    <string name="projects_settings_unsubscribe_section">Cancelar a subscrición ao proxecto</string>
+    <string name="projects_settings_unsubscribe_section">Anular a subscrición ao proxecto</string>
     <string name="projects_share_link_title">Compartir o proxecto</string>
     <string name="projects_sort_filter_title">Ordenar e filtrar</string>
     <string name="projects_create_prefix_hint">Úsase para identificadores lexibles como %1$s-1, %1$s-2</string>

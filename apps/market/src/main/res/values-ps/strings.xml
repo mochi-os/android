@@ -68,7 +68,7 @@
     <string name="market_chargeback_reason_product_not_received">محصول نه دی ترلاسه شوی</string>
     <string name="market_chargeback_reason_product_unacceptable">محصول د منلو وړ نه دی</string>
     <string name="market_chargeback_reason_subscription_canceled">ګډون لغوه شو</string>
-    <string name="market_chargeback_reason_unrecognized">نه پېژندل شوی توان</string>
+    <string name="market_chargeback_reason_unrecognized">ناپېژندل شوې تادیه</string>
     <string name="market_checkout_address_city">ښار</string>
     <string name="market_checkout_address_country">هیواد</string>
     <string name="market_checkout_address_heading">د لېږد پته</string>

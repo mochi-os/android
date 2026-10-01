@@ -271,7 +271,7 @@
     <string name="market_onboarding_dismiss">Cashisa</string>
     <string name="market_onboarding_title">Siyakwamukela kuMarket</string>
     <string name="market_open_sidebar">Vula imenyu</string>
-    <string name="market_price_from">kusukela ku-%1$s</string>
+    <string name="market_price_from">Kusukela ku-%1$s</string>
     <string name="market_price_per_month">%1$s / inyanga</string>
     <string name="market_price_per_year">%1$s / unyaka</string>
     <string name="market_profile_biography">Mayelana</string>

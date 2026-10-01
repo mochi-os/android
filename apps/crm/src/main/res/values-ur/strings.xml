@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">رسائی کا انتظام</string>
     <string name="crm_settings_not_set">سیٹ نہیں ہے</string>
     <string name="crm_settings_access_updated">رسائی اپ ڈیٹ ہو گئی</string>
-    <string name="crm_settings_access_revoked">رسائی منسوخ کر دی گئی</string>
+    <string name="crm_settings_access_revoked">رسائی واپس لے لی گئی</string>
     <string name="crm_people_search">لوگ تلاش کریں</string>
     <string name="crm_access_tab_other">دیگر</string>
     <string name="crm_access_select_group">ایک گروپ منتخب کریں</string>

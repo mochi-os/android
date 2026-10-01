@@ -632,7 +632,7 @@
     <string name="market_messages_send_failed">Съобщението не може да бъде изпратено</string>
     <string name="market_messages_thread_title">Разговор</string>
     <string name="market_messages_unread_badge">%1$d непрочетени</string>
-    <string name="market_price_from">от %1$s</string>
+    <string name="market_price_from">От %1$s</string>
     <string name="market_price_high_bid">Най-висока оферта: %1$s</string>
     <string name="market_price_instant_buy">незабавна покупка: %1$s</string>
     <string name="market_price_per_month">%1$s / месец</string>

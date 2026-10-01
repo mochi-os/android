@@ -85,7 +85,7 @@
     <string name="projects_request_merge_dialog_title">Муттаҳид кардан</string>
     <string name="projects_request_method">Усул</string>
     <string name="projects_request_method_merge">Муттаҳид кардан</string>
-    <string name="projects_request_field_repository">Рамзгузорӣ</string>
+    <string name="projects_request_field_repository">Анбор</string>
     <string name="projects_request_field_source">Шохаи манбаъ</string>
     <string name="projects_request_field_title">Сарлавҳа</string>
     <string name="projects_request_field_description">Тавсиф</string>
@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">Нав</string>
     <string name="projects_settings_section_identity">Шахсият</string>
     <string name="projects_settings_access_updated">Дастрасӣ навсозӣ шуд</string>
-    <string name="projects_settings_access_revoked">Дастрасӣ бекор карда шуд</string>
+    <string name="projects_settings_access_revoked">Дастрасӣ бозхонд карда шуд</string>
     <string name="projects_settings_section_access">Идоракунии дастрасӣ</string>
     <string name="projects_people_search">Ҷустуҷӯи одамон</string>
     <string name="projects_settings_field_entity_id">ID-и объект</string>

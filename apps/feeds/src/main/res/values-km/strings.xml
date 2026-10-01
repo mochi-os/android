@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">មិនដែលបានទាញយក</string>
     <string name="feeds_source_poll">ការស្ទង់មតិ</string>
     <string name="feeds_source_transform">ការបំលែង AI</string>
-    <string name="feeds_remove_source_confirm">លុប \"%1$s\" ឬទេ?</string>
-    <string name="feeds_remove_also_delete_posts">លុបការបង្ហោះដែលបាននាំចូលផងដែរ</string>
+    <string name="feeds_remove_source_confirm">វានឹងបញ្ឈប់ការនាំចូលមាតិកាពី \"%1$s\"។</string>
+    <string name="feeds_remove_also_delete_posts">លុបការបង្ហោះដែលបាននាំចូលពីប្រភពនេះផងដែរ</string>
     <string name="feeds_suggested_credibility_title">ភាពអាចទុកចិត្តបានដែលបានណែនាំ</string>
     <string name="feeds_suggested_credibility_body">Mochi ណែនាំភាពអាចទុកចិត្តបាន %1$d។ ទទួលយកឬទេ?</string>
     <string name="feeds_suggested_credibility_keep">រក្សាបច្ចុប្បន្ន</string>

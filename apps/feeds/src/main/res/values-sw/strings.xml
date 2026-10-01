@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">Haijawahi kupakuliwa</string>
     <string name="feeds_source_poll">Pigia kura</string>
     <string name="feeds_source_transform">Mabadiliko ya AI</string>
-    <string name="feeds_remove_source_confirm">Ondoa \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Pia futa machapisho yaliyoletwa</string>
+    <string name="feeds_remove_source_confirm">Hii itasimamisha kuleta maudhui kutoka \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Pia futa machapisho yaliyoletwa kutoka chanzo hiki</string>
     <string name="feeds_suggested_credibility_title">Uaminifu uliopendekezwa</string>
     <string name="feeds_suggested_credibility_body">Mochi inapendekeza uaminifu wa %1$d. Kubali?</string>
     <string name="feeds_suggested_credibility_keep">Weka wa sasa</string>

@@ -14,7 +14,9 @@ placeholder syntax ({name} or ICU markup, which Android never substitutes);
 fallback awareness (a region catalogue judged against its parent); plural
 completeness (a quantity the language needs, which Android silently serves from
 `other`); locale coverage (an empty locale directory, and keys the source has
-dropped). Every check reads every xml file in a values directory, because
+dropped); bare double quotes (the resource compiler takes an unescaped " as
+quoting and drops it, so "%1$s" shows without its quotes and „%2$s" loses its
+closing one). Every check reads every xml file in a values directory, because
 Android merges them all.
 
 Usage:
@@ -325,6 +327,40 @@ def check_values(module_dir: Path) -> tuple[list[str], list[str]]:
     return arguments, placeholders
 
 
+# A value's text, element by element: every <string> and every plural <item>.
+TEXT_RE = re.compile(r'<(string|item)(?=[\s>])[^>]*>(.*?)</\1>', re.S)
+COMMENT_RE = re.compile(r'<!--.*?-->', re.S)
+
+
+def bare_quote(value: str) -> bool:
+    """Whether the value holds a double quote the compiler would swallow.
+
+    A value wholly wrapped in quotes is the one deliberate use, to keep
+    leading or trailing spaces, and CDATA is taken literally.
+    """
+    if value.startswith("<![CDATA["):
+        return False
+    bare = [i for i, c in enumerate(value) if c == '"' and (i == 0 or value[i - 1] != "\\")]
+    if len(bare) == 2 and bare[0] == 0 and bare[1] == len(value) - 1:
+        return False
+    return bool(bare)
+
+
+def check_quotes(module_dir: Path) -> list[str]:
+    """Return values, in any catalogue the source included, with a bare quote."""
+    res = module_dir / "src" / "main" / "res"
+    if not res.is_dir():
+        return []
+    findings = []
+    for vd in sorted(res.iterdir()):
+        if not vd.is_dir() or not (vd.name == "values" or vd.name.startswith("values-")):
+            continue
+        for match in TEXT_RE.finditer(COMMENT_RE.sub("", read_catalogues(vd))):
+            if bare_quote(match.group(2)):
+                findings.append(f"{vd.name}: {match.group(2).strip()[:48]}")
+    return findings
+
+
 def check_overlays(module_dir: Path) -> list[str]:
     """Return findings for English regional overlays, which OVERLAY_RE otherwise skips.
 
@@ -422,7 +458,8 @@ def main():
         overlays = check_overlays(module)
         plurals = check_plurals(module)
         silent, stale = check_coverage(module)
-        if not any((problems, arguments, placeholders, overlays, plurals, silent, stale)):
+        quotes = check_quotes(module)
+        if not any((problems, arguments, placeholders, overlays, plurals, silent, stale, quotes)):
             print(f"{module}: ok")
             continue
         any_problems = True
@@ -454,6 +491,10 @@ def main():
         if stale:
             print(f"{module}: {len(stale)} locale(s) define keys the source dropped", file=sys.stderr)
             for finding in stale[:10]:
+                print(f"  {finding}", file=sys.stderr)
+        if quotes:
+            print(f"{module}: {len(quotes)} value(s) hold a bare \" the compiler drops; write \\\"", file=sys.stderr)
+            for finding in quotes[:10]:
                 print(f"  {finding}", file=sys.stderr)
 
     if any_problems and args.strict:

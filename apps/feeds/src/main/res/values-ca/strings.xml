@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="feeds_title">Canals</string>
-    <string name="feeds_find_feeds">Cerca fonts</string>
+    <string name="feeds_find_feeds">Cerca canals</string>
     <string name="feeds_create_feed">Crea un canal</string>
     <string name="feeds_new_post">Publicació nova</string>
     <string name="feeds_all_feeds">Tots els canals</string>
     <string name="feeds_name">Nom</string>
     <string name="feeds_create">Crea</string>
     <string name="feeds_no_feeds_found">No s\'ha trobat cap canal</string>
-    <string name="feeds_feed_title_default">Font</string>
+    <string name="feeds_feed_title_default">Canal</string>
     <string name="feeds_mark_all_read">Marca-ho tot com a llegit</string>
     <string name="feeds_settings">Configuració</string>
     <string name="feeds_no_posts_yet">Encara no hi ha publicacions</string>
@@ -30,7 +30,7 @@
     <string name="feeds_edit_post">Edita la publicació</string>
     <string name="feeds_save_label">Desa</string>
     <string name="feeds_post_action">Publica</string>
-    <string name="feeds_feed_label">Font</string>
+    <string name="feeds_feed_label">Canal</string>
     <string name="feeds_add_files">Afegeix fitxers</string>
     <string name="feeds_restore">Restaura</string>
     <string name="feeds_check_in">Registre d\'entrada</string>
@@ -40,7 +40,7 @@
     <string name="feeds_tab_access">Accés</string>
     <string name="feeds_tab_members">Membres</string>
     <string name="feeds_tab_ai">IA</string>
-    <string name="feeds_feed_name">Nom de la font</string>
+    <string name="feeds_feed_name">Nom del canal</string>
     <string name="feeds_save_name">Desa el nom</string>
     <string name="feeds_banner">Bàner</string>
     <string name="feeds_banner_description">Bàner Markdown opcional que es mostra a la part superior del canal.</string>
@@ -55,7 +55,7 @@
     <string name="feeds_source_url">URL</string>
     <string name="feeds_source_type">Tipus</string>
     <string name="feeds_source_type_rss">RSS</string>
-    <string name="feeds_source_type_feed_posts">Font de Mochi</string>
+    <string name="feeds_source_type_feed_posts">Canal de Mochi</string>
     <string name="feeds_source_type_feed_memories">Records</string>
     <string name="feeds_remove_source">Vols eliminar la font?</string>
     <string name="feeds_suggested_credibility_accept">Accepta</string>
@@ -65,11 +65,11 @@
     <string name="feeds_ai_mode_off">Desactivat</string>
     <string name="feeds_ai_mode_tag">Etiqueta</string>
     <string name="feeds_ai_mode_tag_deduplicate">Etiqueta + deduplica</string>
-    <string name="feeds_feed_not_found">No s\'ha trobat la font</string>
+    <string name="feeds_feed_not_found">No s\'ha trobat el canal</string>
     <string name="feeds_post_not_found">Publicació no trobada</string>
     <string name="feeds_post_select_feed">Seleccioneu un feed</string>
     <string name="feeds_post_empty_content">Introduïu text o adjunteu un fitxer</string>
-    <string name="feeds_settings_feed_renamed">Font reanomenada</string>
+    <string name="feeds_settings_feed_renamed">Canal reanomenat</string>
     <string name="feeds_settings_banner_saved">Bandera desada</string>
     <string name="feeds_settings_source_added">Origen afegit</string>
     <string name="feeds_settings_source_updated">Origen actualitzat</string>
@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">Mai obtingut</string>
     <string name="feeds_source_poll">Sondeig</string>
     <string name="feeds_source_transform">Transformació amb IA</string>
-    <string name="feeds_remove_source_confirm">Voleu eliminar \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Suprimeix també les publicacions importades</string>
+    <string name="feeds_remove_source_confirm">Això deixarà d\'importar contingut de \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Suprimeix també les publicacions importades d\'aquesta font</string>
     <string name="feeds_suggested_credibility_title">Credibilitat suggerida</string>
     <string name="feeds_suggested_credibility_body">Mochi suggereix una credibilitat de %1$d. Accepteu-la?</string>
     <string name="feeds_suggested_credibility_keep">Mantén l\'actual</string>
@@ -169,7 +169,7 @@
     <string name="feeds_settings_name_edit_cd">Edita el nom</string>
     <string name="feeds_settings_section_identity">Identitat</string>
     <string name="feeds_unsubscribe">Dona\'t de baixa</string>
-    <string name="feeds_unsubscribed">Subscripció cancel·lada</string>
+    <string name="feeds_unsubscribed">T\'has donat de baixa</string>
     <string name="feeds_access_level_comment_full">Comentar, reaccionar i veure</string>
     <string name="feeds_rss_mode_posts_comments">Publicacions i comentaris</string>
     <string name="feeds_access_add_title">Afegeix accés</string>
@@ -178,7 +178,7 @@
     <string name="feeds_post_content">Contingut de la publicació</string>
     <string name="feeds_enable_memories">Activa records</string>
     <string name="feeds_permission_request_title">Sol·licitud de permís</string>
-    <string name="feeds_unsubscribe_confirm">Vols donar-te de baixa de la font?</string>
+    <string name="feeds_unsubscribe_confirm">Vols donar-te de baixa del canal?</string>
     <string name="feeds_settings_title">Configuració de %1$s</string>
     <string name="feeds_source_transform_help">Deixa-ho en blanc per desactivar.</string>
     <string name="feeds_settings_name_cancel_cd">Cancel·la l\'edició</string>
@@ -189,9 +189,9 @@
     <string name="feeds_create_first_post">Crea la primera publicació</string>
     <string name="feeds_rss_mode_posts">Publicacions</string>
     <string name="feeds_source_last_checked">Última comprovació: %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">Cancel·la la subscripció al canal</string>
+    <string name="feeds_settings_unsubscribe_section">Dona\'t de baixa del canal</string>
     <string name="feeds_source_transform_hint">Tradueix a l\'anglès i mostra com a llista amb pics.</string>
-    <string name="feeds_source_url_hint_feed">ID d\'entitat o empremta de la font</string>
+    <string name="feeds_source_url_hint_feed">ID d\'entitat o empremta del canal</string>
     <string name="feeds_source_credibility_label">Credibilitat</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d hora</item>
@@ -204,7 +204,7 @@
     <string name="feeds_source_polling_interval">Consulta cada %1$s</string>
     <string name="feeds_access_level_react_full">Reaccionar i veure</string>
     <string name="feeds_permission_allow">Permet</string>
-    <string name="feeds_unsubscribe_confirm_message">Deixaràs de rebre actualitzacions d\'aquesta font. Pots tornar-te a subscriure en qualsevol moment.</string>
+    <string name="feeds_unsubscribe_confirm_message">Deixaràs de rebre actualitzacions d\'aquest canal. Pots tornar-te a subscriure en qualsevol moment.</string>
     <string name="feeds_access_select_rule">Selecciona la regla d\'accés</string>
     <string name="feeds_access_authenticated_desc">Qualsevol persona que hagi iniciat sessió</string>
     <string name="feeds_banner_hint">Us donem la benvinguda a aquest fòrum…</string>
@@ -232,7 +232,7 @@
         <item quantity="other">fa %1$d anys, avui</item>
     </plurals>
     <string name="feeds_block">Bloqueja</string>
-    <string name="feeds_removed_from_feed">T\'han eliminat d\'aquesta font</string>
-    <string name="feeds_feed_deleted">Aquesta font s\'ha suprimit</string>
+    <string name="feeds_removed_from_feed">T\'han eliminat d\'aquest canal</string>
+    <string name="feeds_feed_deleted">Aquest canal s\'ha suprimit</string>
     <string name="feeds_settings_member_blocked">Membre bloquejat</string>
 </resources>

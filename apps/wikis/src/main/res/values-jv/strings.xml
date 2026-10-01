@@ -32,7 +32,7 @@
     <string name="wikis_unsubscribe_action">Mandheg langganan</string>
     <string name="wikis_unsubscribing">Lagi mandheg langganan…</string>
     <string name="wikis_unsubscribe_confirm_title">Mandheg langganan</string>
-    <string name="wikis_unsubscribe_success">Wis mbatalaké langganan</string>
+    <string name="wikis_unsubscribe_success">Wis mandheg langganan</string>
     <string name="wikis_subscribe_failed">Gagal langganan</string>
     <string name="wikis_rss_menu">Feed RSS</string>
     <string name="wikis_rss_changes">Owah-owahan</string>
@@ -41,7 +41,7 @@
     <string name="wikis_rss_copied">URL RSS disalin menyang clipboard</string>
     <string name="wikis_rss_failed">Gagal njupuk token RSS</string>
     <string name="wikis_rss_revoke">Cabut akses</string>
-    <string name="wikis_rss_revoked">Akses RSS dibatalake</string>
+    <string name="wikis_rss_revoked">Akses RSS dicabut</string>
     <string name="wikis_find_title">Golèk wiki</string>
     <string name="wikis_find_no_results">Ora ana wiki ditemokaké</string>
     <string name="wikis_find_recommended_section">Wiki disaranaké</string>
@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">Ngowahi jeneng…</string>
     <string name="wikis_rename_page_success">Jeneng kaca diowahi</string>
     <string name="wikis_history_viewing">Ndeleng riwayat kanggo %1$s, versi saiki %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">Versi %1$d</string>
     <string name="wikis_search_pages_placeholder">Golek kaca miturut judhul utawa isi…</string>
     <string name="wikis_search_no_results">Ora ana kaca kanggo “%1$s”. Coba tembung panggolekan liya.</string>
     <string name="wikis_search_updated">Dianyari %1$s</string>
@@ -312,7 +312,7 @@
         <item quantity="other">%d halaman kanthi tag iki</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="other">Ditemokaké %1$d asil kanggo "%2$s"</item>
+        <item quantity="other">Ditemokaké %1$d asil kanggo \"%2$s\"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Ora bisa nyimpen katrangan</string>
     <string name="wikis_attachments_upload_types">File sing didhukung: gambar, PDF, DOC, DOCX, TXT, lan MD.</string>

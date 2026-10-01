@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">جديد</string>
     <string name="projects_settings_section_identity">الهوية</string>
     <string name="projects_settings_access_updated">تم تحديث الوصول</string>
-    <string name="projects_settings_access_revoked">تم إلغاء الوصول</string>
+    <string name="projects_settings_access_revoked">تم إبطال الوصول</string>
     <string name="projects_settings_section_access">إدارة الوصول</string>
     <string name="projects_people_search">البحث عن أشخاص</string>
     <string name="projects_settings_field_entity_id">معرّف الكيان</string>
@@ -360,7 +360,7 @@
     <string name="projects_activity_commented">علّق</string>
     <string name="projects_attachment_delete_confirm_message">سيتم حذف هذا المرفق نهائيًا.</string>
     <string name="projects_attachment_delete_confirm_title">حذف المرفق؟</string>
-    <string name="projects_settings_unsubscribe_section">إلغاء الاشتراك في المشروع</string>
+    <string name="projects_settings_unsubscribe_section">إنهاء الاشتراك في المشروع</string>
     <string name="projects_share_link_title">مشاركة المشروع</string>
     <string name="projects_sort_filter_title">فرز وتصفية</string>
     <string name="projects_create_prefix_hint">يُستخدم لمعرّفات مقروءة مثل %1$s-1 و%1$s-2</string>

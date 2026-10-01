@@ -45,6 +45,8 @@
     <string name="route_delete_title">Cima indlela?</string>
     <string name="route_path">Indlela</string>
     <string name="route_method">Indlela</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">I-app</string>
     <string name="route_method_entity">Iqumrhu</string>
     <string name="route_method_redirect">Hambisa</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Khuphela kwi-packages.mochi-os.org</string>
     <string name="system_status_copy">Kotshela</string>
     <string name="system_status_peers">Abalinganayo</string>
-    <string name="system_status_known">Eyaziwayo</string>
+    <string name="system_status_peers_totals">Eyaziwayo %1$s · Edibeneyo %2$s · I-mesh yosasazo %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Eyaziwayo %1$s · Edibeneyo %2$s</string>
     <string name="system_status_peer_connected">Idibene</string>
     <string name="system_status_peer_disconnected">Iqhawukile</string>
     <string name="system_status_peer_queued">Imiyalezo kuluhlu lokulinda</string>
@@ -194,12 +197,12 @@
     <string name="system_users_toast_deleted">Umsebenzisi ucinyiwe</string>
     <string name="system_users_toast_suspended">Umsebenzisi unqunyanyisiwe</string>
     <string name="system_users_toast_suspension_removed">Ukunqunyanyiswa kususiwe</string>
-    <string name="system_users_toast_session_revoked">Iseshoni irhoxisiwe</string>
+    <string name="system_users_toast_session_revoked">Iseshoni isusiwe</string>
     <string name="system_users_toast_create_failed">Ayiphumelelanga ukudala umsebenzisi</string>
     <string name="system_users_toast_update_failed">Ayiphumelelanga ukuhlaziya umsebenzisi</string>
     <string name="system_users_toast_delete_failed">Ayiphumelelanga ukucima umsebenzisi</string>
     <string name="system_users_toast_status_failed">Ayiphumelelanga ukuhlaziya isimo somsebenzisi</string>
-    <string name="system_users_toast_revoke_failed">Ayiphumelelanga ukurhoxisa iseshini</string>
+    <string name="system_users_toast_revoke_failed">Ayiphumelelanga ukususa iseshoni</string>
 
     <string name="settings_home_sessions">Iiseshoni</string>
     <string name="settings_home_privacy">Umgaqo-nkqubo wabucala</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">Akusayi kukwazi ukungena ngekhowudi yomqinisekisi.</string>
     <string name="account_recovery_none">Akukho zikhowudi zokubuyisela ezenziweyo.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">Ikhowudi yokubuyisela e-%1$d eseleyo.</item>
-        <item quantity="other">Iikhowudi zokubuyisela ezi-%1$d eziseleyo.</item>
+        <item quantity="one">Ikhowudi yokubuyisela e-%1$s eseleyo.</item>
+        <item quantity="other">Iikhowudi zokubuyisela ezi-%1$s eziseleyo.</item>
     </plurals>
     <string name="account_recovery_generate">Yenza iikhowudi</string>
     <string name="account_recovery_regenerate">Yenza kwakhona iikhowudi</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">Isetyenziswe kokokugqibela %1$s</string>
     <string name="route_delete_message">Oku kuya kususa indlela yendlela \"%1$s\".</string>
     <string name="route_empty">Akukho zindlela zicwangcisiweyo.</string>
-    <string name="route_meta">Okubalulekileyo %1$d · %2$s</string>
+    <string name="route_meta">Okubalulekileyo %1$s · %2$s</string>
     <string name="interests_search_placeholder">Khangela izihloko ukuze ongezelele…</string>
     <string name="interests_empty">Akukho mdla okwangoku.</string>
     <string name="interests_summary_regenerate">Velisa isishwankathelo kwakhona</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">Susa zonke iiseshoni?</string>
     <string name="system_users_revoke_all_message">Zonke iiseshoni ezisebenzayo zalo msebenzisi ziya kuphuma.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">Ibonisa %1$d–%2$d kumsebenzisi o-%3$d</item>
-        <item quantity="other">Ibonisa %1$d–%2$d kubasebenzisi abangu-%3$d</item>
+        <item quantity="one">Ibonisa %1$s–%2$s kumsebenzisi o-%3$s</item>
+        <item quantity="other">Ibonisa %1$s–%2$s kubasebenzisi abangu-%3$s</item>
     </plurals>
     <string name="account_title">I-akhawunti</string>
     <string name="account_section_identity">Isazisi</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">Qinisekisa i-DNS</string>
     <string name="settings_home_domains">Iidomeyini</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Uvavanyo luthunyelwe kwindawo e-%1$d</item>
-        <item quantity="other">Uvavanyo luthunyelwe kwiindawo ezi-%1$d</item>
+        <item quantity="one">Uvavanyo luthunyelwe kwindawo e-%1$s</item>
+        <item quantity="other">Uvavanyo luthunyelwe kwiindawo ezi-%1$s</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">Kurhoxiswe iseshoni eyi-%1$d</item>
-        <item quantity="other">Kurhoxiswe iiseshoni ezi-%1$d</item>
+        <item quantity="one">Kususwe iseshoni eyi-%1$s</item>
+        <item quantity="other">Kususwe iiseshoni ezi-%1$s</item>
     </plurals>
     <string name="login_title">Ngena</string>
     <string name="login_section_methods">Iindlela zokungena</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">Esidlangalaleni</string>
     <string name="system_status_reachability_private">Yangasese</string>
     <string name="system_status_reachability_unknown">Akwaziwa</string>
-    <string name="system_status_relay">Nge-relay</string>
-    <string name="system_status_mesh">I-mesh yosasazo</string>
+    <string name="system_status_reachability_relay">%1$s · ngokudlulisa</string>
     <string name="system_status_broadcast">Usasazo lokugqibela</string>
     <string name="system_status_queued_broadcasts">Imiyalezo yosasazo ekulayinini</string>
     <string name="system_setting_hostname_publish">Yazisa igama lomamkeli needomeyini kwezinye iiseva</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">Igqibele ukubonwa %1$s</string>
     <string name="notifprefs_device_app">%1$s · i-app</string>
     <string name="notifprefs_device_push">%1$s · izaziso ze-push</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Uvavanyo luthunyelwe kwi-%1$d kwindawo e-%2$d</item>
-        <item quantity="other">Uvavanyo luthunyelwe kwi-%1$d kwiindawo ezi-%2$d</item>
+        <item quantity="one">Uvavanyo luthunyelwe kwi-%1$s kwindawo e-%2$s</item>
+        <item quantity="other">Uvavanyo luthunyelwe kwi-%1$s kwiindawo ezi-%2$s</item>
     </plurals>
     <string name="notifprefs_test_none">Akukho ndawo zibekiweyo</string>
     <string name="notifprefs_transport_fcm">I-push ye-Android</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">Lahla utshintsho?</string>
     <string name="system_documents_discard">Lahla</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d kuphumelele</item>
-        <item quantity="other">%1$d kuphumelele</item>
+        <item quantity="one">%1$s kuphumelele</item>
+        <item quantity="other">%1$s kuphumelele</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d kusilele</item>
-        <item quantity="other">%1$d kusilele</item>
+        <item quantity="one">%1$s kusilele</item>
+        <item quantity="other">%1$s kusilele</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d ukubhukisha</item>
-        <item quantity="other">%1$d / %2$d ukubhukisha</item>
+        <item quantity="one">%1$s / %2$s ukubhukisha</item>
+        <item quantity="other">%1$s / %2$s ukubhukisha</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d isekethe</item>
-        <item quantity="other">%1$d iisekethe</item>
+        <item quantity="one">%1$s isekethe</item>
+        <item quantity="other">%1$s iisekethe</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d yaliwe</item>
-        <item quantity="other">%1$d zaliwe</item>
+        <item quantity="one">%1$s yaliwe</item>
+        <item quantity="other">%1$s zaliwe</item>
     </plurals>
 </resources>

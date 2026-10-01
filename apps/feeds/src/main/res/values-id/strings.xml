@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">Belum pernah diambil</string>
     <string name="feeds_source_poll">Polling</string>
     <string name="feeds_source_transform">Transformasi AI</string>
-    <string name="feeds_remove_source_confirm">Hapus \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Hapus juga kiriman yang diimpor</string>
+    <string name="feeds_remove_source_confirm">Ini akan menghentikan impor konten dari \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Hapus juga kiriman yang diimpor dari sumber ini</string>
     <string name="feeds_suggested_credibility_title">Kredibilitas yang disarankan</string>
     <string name="feeds_suggested_credibility_body">Mochi menyarankan kredibilitas %1$d. Terima?</string>
     <string name="feeds_suggested_credibility_keep">Pertahankan saat ini</string>

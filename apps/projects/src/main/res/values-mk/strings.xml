@@ -360,7 +360,7 @@
     <string name="projects_activity_commented">коментираше</string>
     <string name="projects_attachment_delete_confirm_message">Овој прилог ќе биде трајно избришан.</string>
     <string name="projects_attachment_delete_confirm_title">Да се избрише прилогот?</string>
-    <string name="projects_settings_unsubscribe_section">Откажи претплата на проектот</string>
+    <string name="projects_settings_unsubscribe_section">Отпиши се од проектот</string>
     <string name="projects_share_link_title">Сподели проект</string>
     <string name="projects_sort_filter_title">Подредување и филтер</string>
     <string name="projects_create_prefix_hint">Се користи за читливи ID како %1$s-1, %1$s-2</string>

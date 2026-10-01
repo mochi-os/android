@@ -151,7 +151,7 @@
     <string name="forums_access_level_moderate">Moderovat</string>
     <string name="forums_members_search">Filtrovat členy</string>
     <string name="forums_banner_description">Markdown zobrazený v horní části fóra.</string>
-    <string name="forums_banner_placeholder">Vítejte na tomto fóru…</string>
+    <string name="forums_banner_placeholder">Zadejte text banneru (podporuje Markdown)…</string>
     <string name="forums_ai_mode_label">Režim: %1$s</string>
     <string name="forums_ai_mode_heading">Režim AI</string>
     <string name="forums_ai_mode_off">Zakázáno</string>

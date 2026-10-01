@@ -29,9 +29,9 @@
     <string name="wikis_recommended_section">Препорачани wiki</string>
     <string name="wikis_subscribe_button">Претплати се</string>
     <string name="wikis_unsubscribe_action">Отпиши се</string>
-    <string name="wikis_unsubscribing">Се откажува претплатата…</string>
+    <string name="wikis_unsubscribing">Отпишување…</string>
     <string name="wikis_unsubscribe_confirm_title">Отпиши се</string>
-    <string name="wikis_unsubscribe_success">Претплатата е откажана</string>
+    <string name="wikis_unsubscribe_success">Се отпишавте</string>
     <string name="wikis_subscribe_failed">Неуспешна претплата</string>
     <string name="wikis_rss_menu">RSS канал</string>
     <string name="wikis_rss_changes">Промени</string>

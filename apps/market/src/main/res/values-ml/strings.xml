@@ -282,7 +282,7 @@
     <string name="market_profile_verified">സ്ഥിരീകരിച്ചു</string>
     <string name="market_purchase_audit_section">പ്രവർത്തനം</string>
     <string name="market_purchase_confirm_delivery">രസീത് സ്ഥിരീകരിക്കുക</string>
-    <string name="market_purchase_confirm_done">ഇമെയിൽ വഴി ഒരു സ്ഥിരീകരണ കോഡ് സ്വീകരിക്കുക</string>
+    <string name="market_purchase_confirm_done">ലഭിച്ചതായി സ്ഥിരീകരിച്ചു</string>
     <string name="market_purchase_confirm_failed">സ്ഥിരീകരിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="market_purchase_continue_payment">പേയ്മെന്റ് തുടരുക</string>
     <string name="market_purchase_delivery">ഡെലിവറി</string>
@@ -297,10 +297,10 @@
     <string name="market_purchase_not_found">ഓർഡർ കണ്ടെത്തിയില്ല</string>
     <string name="market_purchase_order_label">ഓർഡർ</string>
     <string name="market_purchase_purchased">വാങ്ങിയത്</string>
-    <string name="market_purchase_refund_done">റീഫണ്ട് നൽകി</string>
+    <string name="market_purchase_refund_done">റീഫണ്ട് അഭ്യർത്ഥിച്ചു</string>
     <string name="market_purchase_refund_failed">റീഫണ്ട് അഭ്യർത്ഥിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="market_purchase_refunded">റീഫണ്ട് ചെയ്തു</string>
-    <string name="market_purchase_refunded_partial">വീണ്ടും ജനറേറ്റ് ചെയ്യുക</string>
+    <string name="market_purchase_refunded_partial">റീഫണ്ട് ചെയ്തു (ഭാഗികം)</string>
     <string name="market_purchase_request_refund">റീഫണ്ട് അഭ്യർത്ഥിക്കുക</string>
     <string name="market_purchase_review_body">അവലോകനം</string>
     <string name="market_purchase_review_failed">അവലോകനം സമർപ്പിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
@@ -348,7 +348,7 @@
     <string name="market_report_dialog_failed">റിപ്പോർട്ട് സമർപ്പിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="market_report_dialog_reason_label">കാരണം</string>
     <string name="market_report_dialog_submit">സമർപ്പിക്കുക</string>
-    <string name="market_report_dialog_success">ഈ ലിസ്റ്റിങ് റിപ്പോർട്ട് ചെയ്യുക</string>
+    <string name="market_report_dialog_success">റിപ്പോർട്ട് സമർപ്പിച്ചു</string>
     <string name="market_report_dialog_title">ലിസ്റ്റിംഗ് റിപ്പോർട്ട് ചെയ്യുക</string>
     <string name="market_report_reason_counterfeit">വ്യാജം</string>
     <string name="market_report_reason_inappropriate">അനുചിതമായ ഉള്ളടക്കം</string>
@@ -394,7 +394,7 @@
     <string name="market_search_placeholder">മാർക്കറ്റിൽ തിരയുക</string>
     <string name="market_section_categories">വിഭാഗങ്ങൾ ബ്രൗസ് ചെയ്യുക</string>
     <string name="market_section_listings">സമീപകാല ലിസ്റ്റിംഗുകൾ</string>
-    <string name="market_section_recent">ശുപാർശകൾ</string>
+    <string name="market_section_recent">അടുത്തിടെ കണ്ടവ</string>
     <string name="market_ship_dialog_cancel">റദ്ദാക്കുക</string>
     <string name="market_ship_dialog_submit">സ്ഥിരീകരിക്കുക</string>
     <string name="market_ship_dialog_title">ഷിപ്പ് ചെയ്തതായി അടയാളപ്പെടുത്തുക</string>
@@ -707,7 +707,7 @@
     <string name="market_editor_start_time_next">അടുത്തത്</string>
     <string name="market_editor_start_time_clear">മായ്ക്കുക</string>
     <string name="market_listing_detail_buy_now_label">ഇപ്പോൾ വാങ്ങുക</string>
-    <string name="market_section_recently_viewed">ശുപാർശകൾ</string>
+    <string name="market_section_recently_viewed">അടുത്തിടെ കണ്ടവ</string>
     <string name="market_recently_viewed_clear">എല്ലാം മായ്ക്കുക</string>
     <string name="market_listings_create">സൃഷ്ടിക്കുക</string>
     <string name="market_bid_dialog_ceiling_label">പരമാവധി ലേലം (ഓപ്ഷണൽ)</string>
@@ -733,9 +733,9 @@
     <string name="market_audit_auction_ended_unsold">ലേലം വിൽക്കാതെ അവസാനിച്ചു</string>
     <string name="market_audit_auction_opened">ലേലം തുറന്നു</string>
     <string name="market_audit_auction_payment_overdue">ലേല പേയ്മെന്റ് കാലാവധി കഴിഞ്ഞു</string>
-    <string name="market_audit_dispute_opened">റീഫണ്ട് നൽകി</string>
-    <string name="market_audit_dispute_resolved_buyer">റീഫണ്ട് നിരസിച്ചു</string>
-    <string name="market_audit_dispute_resolved_seller">റീഫണ്ട് നൽകി</string>
+    <string name="market_audit_dispute_opened">റീഫണ്ട് അഭ്യർത്ഥിച്ചു</string>
+    <string name="market_audit_dispute_resolved_buyer">റീഫണ്ട് അംഗീകരിച്ചു</string>
+    <string name="market_audit_dispute_resolved_seller">റീഫണ്ട് നിരസിച്ചു</string>
     <string name="market_audit_dispute_responded">വിൽപ്പനക്കാരൻ പ്രതികരിച്ചു</string>
     <string name="market_audit_listing_appeal_decided">അപ്പീൽ തീരുമാനിച്ചു</string>
     <string name="market_audit_listing_appeal_submitted">അപ്പീൽ സമർപ്പിച്ചു</string>
@@ -745,7 +745,7 @@
     <string name="market_audit_listing_deleted">ലിസ്റ്റിംഗ് ഇല്ലാതാക്കി</string>
     <string name="market_audit_listing_expired">കാലഹരണപ്പെട്ടു</string>
     <string name="market_audit_listing_published">ലിസ്റ്റിംഗ് പ്രസിദ്ധീകരിച്ചു</string>
-    <string name="market_audit_listing_rejected">ആപേക്ഷികം (5m, 3h, 2d)</string>
+    <string name="market_audit_listing_rejected">സ്റ്റാഫ് നിരസിച്ചു</string>
     <string name="market_audit_listing_relisted">വീണ്ടും ലിസ്റ്റ് ചെയ്തു</string>
     <string name="market_audit_listing_removed">നീക്കംചെയ്തു</string>
     <string name="market_audit_listing_updated">ലിസ്റ്റിംഗ് എഡിറ്റ് ചെയ്തു</string>
@@ -760,7 +760,7 @@
     <string name="market_audit_order_payment_failed">പേയ്മെന്റ് പരാജയപ്പെട്ടു</string>
     <string name="market_audit_order_refunded">റീഫണ്ട് ചെയ്തു</string>
     <string name="market_audit_order_shipped">ഷിപ്പ് ചെയ്തു</string>
-    <string name="market_audit_report_actioned">റിപ്പോർട്ട് ചരിത്രം</string>
+    <string name="market_audit_report_actioned">റിപ്പോർട്ടിൽ നടപടി സ്വീകരിച്ചു</string>
     <string name="market_audit_report_created">റിപ്പോർട്ട് ചെയ്തു</string>
     <string name="market_audit_review_created">അവലോകനം സമർപ്പിച്ചു</string>
     <string name="market_audit_review_hide">അവലോകനം മറച്ചു</string>

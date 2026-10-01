@@ -70,9 +70,9 @@
     <string name="staff_audit_action_category_updated">വിഭാഗം അപ്ഡേറ്റ് ചെയ്തു</string>
     <string name="staff_audit_action_config_thresholds_updated">മോഡറേഷൻ പരിധികൾ അപ്ഡേറ്റ് ചെയ്തു</string>
     <string name="staff_audit_action_config_updated">കോൺഫിഗ് അപ്ഡേറ്റ് ചെയ്തു</string>
-    <string name="staff_audit_action_dispute_opened">റീഫണ്ട് നൽകി</string>
-    <string name="staff_audit_action_dispute_resolved_buyer">റീഫണ്ട് നിരസിച്ചു</string>
-    <string name="staff_audit_action_dispute_resolved_seller">റീഫണ്ട് നൽകി</string>
+    <string name="staff_audit_action_dispute_opened">റീഫണ്ട് അഭ്യർത്ഥിച്ചു</string>
+    <string name="staff_audit_action_dispute_resolved_buyer">റീഫണ്ട് അംഗീകരിച്ചു</string>
+    <string name="staff_audit_action_dispute_resolved_seller">റീഫണ്ട് നിരസിച്ചു</string>
     <string name="staff_audit_action_dispute_responded">വിൽപ്പനക്കാരൻ പ്രതികരിച്ചു</string>
     <string name="staff_audit_action_listing_appeal_decided">അപ്പീൽ തീരുമാനിച്ചു</string>
     <string name="staff_audit_action_listing_appeal_submitted">അപ്പീൽ സമർപ്പിച്ചു</string>
@@ -81,7 +81,7 @@
     <string name="staff_audit_action_listing_deleted">ലിസ്റ്റിംഗ് ഇല്ലാതാക്കി</string>
     <string name="staff_audit_action_listing_expired">കാലഹരണപ്പെട്ടു</string>
     <string name="staff_audit_action_listing_published">ലിസ്റ്റിംഗ് പ്രസിദ്ധീകരിച്ചു</string>
-    <string name="staff_audit_action_listing_rejected">ആപേക്ഷികം (5m, 3h, 2d)</string>
+    <string name="staff_audit_action_listing_rejected">സ്റ്റാഫ് നിരസിച്ചു</string>
     <string name="staff_audit_action_listing_relisted">വീണ്ടും ലിസ്റ്റ് ചെയ്തു</string>
     <string name="staff_audit_action_listing_removed">നീക്കംചെയ്തു</string>
     <string name="staff_audit_action_listing_updated">ലിസ്റ്റിംഗ് എഡിറ്റ് ചെയ്തു</string>
@@ -96,7 +96,7 @@
     <string name="staff_audit_action_order_payment_failed">പേയ്മെന്റ് പരാജയപ്പെട്ടു</string>
     <string name="staff_audit_action_order_refunded">റീഫണ്ട് ചെയ്തു</string>
     <string name="staff_audit_action_order_shipped">ഷിപ്പ് ചെയ്തു</string>
-    <string name="staff_audit_action_report_actioned">റിപ്പോർട്ട് ചരിത്രം</string>
+    <string name="staff_audit_action_report_actioned">റിപ്പോർട്ടിൽ നടപടി സ്വീകരിച്ചു</string>
     <string name="staff_audit_action_report_created">റിപ്പോർട്ട് ചെയ്തു</string>
     <string name="staff_audit_action_review_created">അവലോകനം സമർപ്പിച്ചു</string>
     <string name="staff_audit_action_review_hide">അവലോകനം മറച്ചു</string>
@@ -208,7 +208,7 @@
     <string name="staff_disputes_meta_listing">ലിസ്റ്റിംഗ്</string>
     <string name="staff_disputes_meta_reason">കാരണം</string>
     <string name="staff_disputes_meta_refunded">റീഫണ്ട് ചെയ്തു</string>
-    <string name="staff_disputes_meta_refunded_partial">വീണ്ടും ജനറേറ്റ് ചെയ്യുക</string>
+    <string name="staff_disputes_meta_refunded_partial">റീഫണ്ട് ചെയ്തു (ഭാഗികം)</string>
     <string name="staff_disputes_meta_seller_no_response">വിൽപ്പനക്കാരൻ ഇതുവരെ പ്രതികരിച്ചിട്ടില്ല.</string>
     <string name="staff_disputes_meta_total">ആകെ</string>
     <string name="staff_disputes_notes_label">കുറിപ്പുകൾ</string>
@@ -217,11 +217,11 @@
     <string name="staff_disputes_reason_not_received">ലഭിച്ചില്ല</string>
     <string name="staff_disputes_reason_other">മറ്റുള്ളവ</string>
     <string name="staff_disputes_reason_unauthorised">അനുവദിച്ചിട്ടില്ല</string>
-    <string name="staff_disputes_refund_must_be_positive">റീഫണ്ട് അംഗീകരിച്ചു</string>
-    <string name="staff_disputes_resolution_buyer">വിൽക്കുന്നയാൾക്കായി പരിഹരിക്കുക</string>
+    <string name="staff_disputes_refund_must_be_positive">റീഫണ്ട് തുക പൂജ്യത്തേക്കാൾ കൂടുതലായിരിക്കണം</string>
+    <string name="staff_disputes_resolution_buyer">വാങ്ങുന്നയാൾക്കായി പരിഹരിക്കുക</string>
     <string name="staff_disputes_resolution_label">പരിഹാരം</string>
     <string name="staff_disputes_resolution_placeholder">പരിഹാരം തിരഞ്ഞെടുക്കുക</string>
-    <string name="staff_disputes_resolution_seller">merge ചെയ്യുന്നതിന് മുമ്പ് ഈ conflicts മാനുവലായി പരിഹരിക്കുക.</string>
+    <string name="staff_disputes_resolution_seller">വിൽപ്പനക്കാരനായി പരിഹരിക്കുക</string>
     <string name="staff_disputes_resolve">പരിഹരിക്കുക</string>
     <string name="staff_disputes_resolved_toast">തർക്കം പരിഹരിച്ചു</string>
     <string name="staff_disputes_resolving">പരിഹരിക്കുന്നു…</string>
@@ -387,8 +387,8 @@
     <string name="staff_team_dialog_role_placeholder">റോൾ തിരഞ്ഞെടുക്കുക</string>
     <string name="staff_team_empty">ടീം അംഗങ്ങളാരുമില്ല</string>
     <string name="staff_team_remove_confirm">നീക്കം ചെയ്യുക</string>
-    <string name="staff_team_remove_desc">യാത്രാ വഴി നീക്കം ചെയ്യുക</string>
-    <string name="staff_team_remove_title">നിങ്ങളുടെ sidebar-ൽ നിന്ന് ഈ ഫോറം നീക്കം ചെയ്യുക.</string>
+    <string name="staff_team_remove_desc">ഈ അംഗത്തെ സ്റ്റാഫ് ടീമിൽ നിന്ന് നീക്കം ചെയ്യണോ?</string>
+    <string name="staff_team_remove_title">ടീം അംഗത്തെ നീക്കം ചെയ്യുക</string>
     <string name="staff_team_role_admin">അഡ്മിൻ</string>
     <string name="staff_team_role_moderator">മോഡറേറ്റർ</string>
     <string name="staff_team_role_support">പിന്തുണ</string>

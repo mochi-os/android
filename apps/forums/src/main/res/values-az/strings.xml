@@ -94,7 +94,7 @@
     <string name="forums_moderation_new_user_days">Yeni istifadəçi həddi:</string>
     <string name="forums_moderation_post_limit">Post limiti</string>
     <string name="forums_moderation_comment_limit">Şərh limiti</string>
-    <string name="forums_moderation_limit_window">Qazandı</string>
+    <string name="forums_moderation_limit_window">Pəncərə müddəti</string>
     <string name="forums_report_reason">Səbəb</string>
     <string name="forums_report_details">Təfərrüatlar</string>
     <string name="forums_report_submit">Hesabatı təqdim et</string>
@@ -151,7 +151,7 @@
     <string name="forums_access_level_moderate">Moderasiya</string>
     <string name="forums_members_search">Üzvləri filtrlə</string>
     <string name="forums_banner_description">Forumun yuxarısında göstərilən Markdown.</string>
-    <string name="forums_banner_placeholder">Bu foruma xoş gəlmisiniz…</string>
+    <string name="forums_banner_placeholder">Banner mətnini daxil edin (markdown dəstəklənir)…</string>
     <string name="forums_ai_mode_label">Rejim: %1$s</string>
     <string name="forums_ai_mode_heading">AI rejimi</string>
     <string name="forums_ai_mode_off">Söndürülmüşdür</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">gün</string>
     <string name="forums_settings_banner_saved">Banner yadda saxlandı</string>
     <string name="forums_settings_access_updated">Giriş yeniləndi</string>
-    <string name="forums_settings_access_revoked">İcaxə ləğv edildi</string>
+    <string name="forums_settings_access_revoked">Giriş geri çağırıldı</string>
     <string name="forums_settings_member_removed">Üzv silindi</string>
     <string name="forums_settings_prompt_saved">Sorğu saxlanıldı</string>
     <string name="forums_settings_section_identity">Şəxsiyyət</string>

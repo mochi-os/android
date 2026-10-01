@@ -32,7 +32,7 @@
     <string name="wikis_unsubscribe_action">გამოწერის შეწყვეტა</string>
     <string name="wikis_unsubscribing">გამოწერის შეწყვეტა მიმდინარეობს...</string>
     <string name="wikis_unsubscribe_confirm_title">გამოწერის შეწყვეტა</string>
-    <string name="wikis_unsubscribe_success">გამოწერა გაუქმებულია</string>
+    <string name="wikis_unsubscribe_success">გამოწერა შეწყვეტილია</string>
     <string name="wikis_subscribe_failed">გამოწერა ვერ მოხერხდა</string>
     <string name="wikis_rss_menu">RSS ფიდი</string>
     <string name="wikis_rss_changes">ცვლილებები</string>
@@ -41,7 +41,7 @@
     <string name="wikis_rss_copied">RSS URL დაკოპირდა</string>
     <string name="wikis_rss_failed">RSS ტოკენის მიღება ვერ მოხერხდა</string>
     <string name="wikis_rss_revoke">წვდომის გაწვევა</string>
-    <string name="wikis_rss_revoked">RSS წვდომა გაუქმდა</string>
+    <string name="wikis_rss_revoked">RSS წვდომა გაწვეულია</string>
     <string name="wikis_find_title">ვიკების ძიება</string>
     <string name="wikis_find_no_results">ვიკიები ვერ მოიძებნა</string>
     <string name="wikis_find_recommended_section">რეკომენდებული ვიკიები</string>
@@ -134,7 +134,7 @@
     <string name="wikis_tags_empty_title">ტეგები ვერ მოიძებნა</string>
     <string name="wikis_tags_empty_description">დაამატეთ ტეგები გვერდების დასაჯგუფებლად თქვენს wiki-ში.</string>
     <string name="wikis_tag_pages_empty_title">ამ ტეგით გვერდები ვერ მოიძებნა</string>
-    <string name="wikis_tag_pages_empty_description">სცადეთ სხვა ძიების ტერმინი ან ფილტრი.</string>
+    <string name="wikis_tag_pages_empty_description">სცადეთ სხვა ტეგი.</string>
     <string name="wikis_tag_pages_all_tags_action">ყველა ტეგი</string>
     <string name="wikis_tag_manager_add_failed">ტეგის დამატება ვერ მოხერხდა</string>
     <string name="wikis_tag_manager_remove_failed">ტეგის წაშლა ვერ მოხერხდა</string>
@@ -164,7 +164,7 @@
     <string name="wikis_attachments_delete_failed">დანართის წაშლა ვერ მოხერხდა</string>
     <string name="wikis_attachments_empty_title">დანართები ჯერ არ არის</string>
     <string name="wikis_attachments_no_results_title">თქვენი ძიების შესაბამისი დანართები არ არის</string>
-    <string name="wikis_attachments_no_results_description">სცადეთ სხვა ძიების ტერმინი</string>
+    <string name="wikis_attachments_no_results_description">სცადეთ სხვა საძიებო სიტყვა ან ფილტრი.</string>
     <string name="wikis_settings_title">პარამეტრები</string>
     <string name="wikis_settings_tab_settings">პარამეტრები</string>
     <string name="wikis_settings_tab_redirects">გადამისამართებები</string>
@@ -177,7 +177,7 @@
     <string name="wikis_settings_name_edit_cd">სახელის რედაქტირება</string>
     <string name="wikis_settings_name_invalid_char">სახელი ვერ შეიცავს &lt; ან &gt; სიმბოლოებს</string>
     <string name="wikis_settings_name_too_long">სახელი უნდა იყოს 100 სიმბოლო ან ნაკლები</string>
-    <string name="wikis_settings_name_required">ვიკის ერთეულის ID</string>
+    <string name="wikis_settings_name_required">ვიკის სახელი სავალდებულოა</string>
     <string name="wikis_settings_name_saved">ვიკი გადაერქვა</string>
     <string name="wikis_settings_name_save_failed">ვიკის გადარქმევა ვერ მოხერხდა</string>
     <string name="wikis_settings_section_subscription">გამოწერა</string>
@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">სახელი იცვლება…</string>
     <string name="wikis_rename_page_success">გვერდი გადაერქვა</string>
     <string name="wikis_history_viewing">%1$s-ის ისტორიის ნახვა, მიმდინარე ვერსია %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">ვერსია %1$d</string>
     <string name="wikis_search_pages_placeholder">გვერდების ძებნა სათაურით ან შიგთავსით…</string>
     <string name="wikis_search_no_results">„%1$s“-ისთვის გვერდები ვერ მოიძებნა. სცადეთ სხვა საძიებო სიტყვები.</string>
     <string name="wikis_search_updated">განახლდა %1$s</string>
@@ -299,12 +299,12 @@
         <item quantity="other">%d პასუხი</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d ფაილი</item>
-        <item quantity="other">%d ფაილი</item>
+        <item quantity="one">%d გვერდი</item>
+        <item quantity="other">%d გვერდი</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d ფაილი ატვირთულია</item>
-        <item quantity="other">%d ფაილი ატვირთულია</item>
+        <item quantity="one">%d ფაილი</item>
+        <item quantity="other">%d ფაილი</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
         <item quantity="one">%d სურათი</item>
@@ -315,12 +315,12 @@
         <item quantity="other">%d დოკუმენტი</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d ფაილი ამ ტეგით</item>
-        <item quantity="other">%d ფაილი ამ ტეგით</item>
+        <item quantity="one">%d გვერდი ამ ტეგით</item>
+        <item quantity="other">%d გვერდი ამ ტეგით</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">ნაპოვნია %1$d პოსტი „%2$s“-ისთვის</item>
-        <item quantity="other">ნაპოვნია %1$d პოსტი „%2$s“-ისთვის</item>
+        <item quantity="one">ნაპოვნია %1$d შედეგი \"%2$s\"-ისთვის</item>
+        <item quantity="other">ნაპოვნია %1$d შედეგი \"%2$s\"-ისთვის</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">წარწერის შენახვა ვერ მოხერხდა</string>
     <string name="wikis_attachments_upload_types">მხარდაჭერილი ფაილები: სურათები, PDF, DOC, DOCX, TXT და MD.</string>

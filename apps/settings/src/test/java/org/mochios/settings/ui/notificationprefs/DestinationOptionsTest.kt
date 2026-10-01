@@ -41,4 +41,19 @@ class DestinationOptionsTest {
             options.map { (row, _) -> row }.filter { it.type == "rss" }.map { it.target },
         )
     }
+
+    /** An RSS row used to read as the bare feed name, unlike the web's "RSS: <name>". */
+    @Test
+    fun `an RSS destination reads as RSS and the feed's name`() {
+        val available = DestinationsAvailable(
+            feeds = listOf(DestinationFeed(id = "news", name = "News")),
+        )
+        var options: List<Pair<DestinationRow, String>> = emptyList()
+        rule.setContent { options = destinationOptions(available) }
+        rule.waitForIdle()
+        assertEquals(
+            listOf("RSS: News"),
+            options.filter { (row, _) -> row.type == "rss" }.map { (_, label) -> label },
+        )
+    }
 }

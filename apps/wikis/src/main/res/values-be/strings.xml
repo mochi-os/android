@@ -289,15 +289,15 @@
     <string name="wikis_revision_changes_from">Змены з версіі %1$d → %2$d</string>
     <plurals name="wikis_page_action_comments">
         <item quantity="one">%d каментарый</item>
-        <item quantity="few">%d каментарыя</item>
+        <item quantity="few">%d каментарыі</item>
         <item quantity="many">%d каментарыяў</item>
         <item quantity="other">%d каментарыя</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
         <item quantity="one">%d адказ</item>
-        <item quantity="few">+%d больш адказаў</item>
-        <item quantity="many">+%d больш адказаў</item>
-        <item quantity="other">+%d больш адказаў</item>
+        <item quantity="few">яшчэ +%d адказы</item>
+        <item quantity="many">яшчэ +%d адказаў</item>
+        <item quantity="other">яшчэ +%d адказу</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d старонка</item>
@@ -343,8 +343,8 @@
     <string name="wikis_rss_exists">Гэты URL стужкі ўжо выдадзены і не можа быць паказаны зноў.</string>
     <plurals name="wikis_comments_truncated">
         <item quantity="one">Паказваецца першы %1$d каментарый.</item>
-        <item quantity="few">Паказваюцца першыя %1$d каментарыяў.</item>
+        <item quantity="few">Паказваюцца першыя %1$d каментарыі.</item>
         <item quantity="many">Паказваюцца першыя %1$d каментарыяў.</item>
-        <item quantity="other">Паказваюцца першыя %1$d каментарыяў.</item>
+        <item quantity="other">Паказваюцца першыя %1$d каментарыя.</item>
     </plurals>
 </resources>

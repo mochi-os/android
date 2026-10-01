@@ -69,9 +69,9 @@
     <string name="wikis_recommended_section">推薦 wiki</string>
     <string name="wikis_unsubscribing">緊退訂…</string>
     <string name="wikis_unsubscribe_confirm_message">你確定要退訂 %1$s 嗎?</string>
-    <string name="wikis_unsubscribe_success">已取消訂閱</string>
+    <string name="wikis_unsubscribe_success">已退訂</string>
     <string name="wikis_subscribe_failed">訂閱失敗</string>
-    <string name="wikis_rss_menu">RSS 訊息來源</string>
+    <string name="wikis_rss_menu">RSS 訂閱源</string>
     <string name="wikis_rss_changes">變更</string>
     <string name="wikis_rss_comments">留言</string>
     <string name="wikis_rss_both">變更同留言</string>

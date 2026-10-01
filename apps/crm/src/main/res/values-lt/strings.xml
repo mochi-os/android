@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">Prieigos valdymas</string>
     <string name="crm_settings_not_set">Nenustatyta</string>
     <string name="crm_settings_access_updated">Prieiga atnaujinta</string>
-    <string name="crm_settings_access_revoked">Prieiga atšaukta</string>
+    <string name="crm_settings_access_revoked">Prieiga panaikinta</string>
     <string name="crm_people_search">Ieškoti žmonių</string>
     <string name="crm_access_tab_other">Kita</string>
     <string name="crm_access_select_group">Pasirinkite grupę</string>

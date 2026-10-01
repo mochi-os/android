@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">د لاسرسي اداره</string>
     <string name="crm_settings_not_set">نه دی ټاکل شوی</string>
     <string name="crm_settings_access_updated">لاسرسی نوی شو</string>
-    <string name="crm_settings_access_revoked">لاسرسی پرېګدل و</string>
+    <string name="crm_settings_access_revoked">لاسرسی بیرته واخیستل شو</string>
     <string name="crm_people_search">خلک ولټوئ</string>
     <string name="crm_access_tab_other">نور</string>
     <string name="crm_access_select_group">یوه ډله وټاکئ</string>
@@ -274,7 +274,7 @@
     <string name="crm_access_role_view">یوازې لیدل</string>
     <string name="crm_access_role_none">د لاسرسي اجازه نشته</string>
     <string name="crm_all_crms">ټول CRM</string>
-    <string name="crm_settings_unsubscribe_section">له CRM څخه ګډون لغوه کړئ</string>
+    <string name="crm_settings_unsubscribe_section">د CRM له ګډون وتل</string>
     <string name="crm_settings_updated">CRM تازه شو</string>
     <string name="crm_create_import_backup">له بیک اپ څخه وارد کړئ (اختیاري)</string>
     <string name="crm_export">ډاټا صادرول</string>

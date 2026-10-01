@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">Upravljanje dostopa</string>
     <string name="crm_settings_not_set">Ni nastavljeno</string>
     <string name="crm_settings_access_updated">Dostop posodobljen</string>
-    <string name="crm_settings_access_revoked">Dostop preklican</string>
+    <string name="crm_settings_access_revoked">Dostop odvzet</string>
     <string name="crm_people_search">Iskanje oseb</string>
     <string name="crm_access_tab_other">Drugo</string>
     <string name="crm_access_select_group">Izberite skupino</string>

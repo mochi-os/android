@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">Sarrafa</string>
     <string name="forums_members_search">Tace mambobi</string>
     <string name="forums_banner_description">Markdown da ake nunawa a saman taron tattaunawa.</string>
-    <string name="forums_banner_placeholder">Barka da zuwa wannan taron tattaunawa…</string>
+    <string name="forums_banner_placeholder">Shigar da rubutun tuta (ana tallafawa markdown)…</string>
     <string name="forums_ai_mode_label">Yanayi: %1$s</string>
     <string name="forums_ai_mode_heading">Yanayin AI</string>
     <string name="forums_ai_mode_off">An kashe</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">kwanaki</string>
     <string name="forums_settings_banner_saved">An ajiye fastoci</string>
     <string name="forums_settings_access_updated">An sabunta damar shiga</string>
-    <string name="forums_settings_access_revoked">An hana shiga</string>
+    <string name="forums_settings_access_revoked">An janye damar shiga</string>
     <string name="forums_settings_member_removed">An cire memba</string>
     <string name="forums_settings_prompt_saved">An adana prompt</string>
     <string name="forums_settings_section_identity">Asali</string>

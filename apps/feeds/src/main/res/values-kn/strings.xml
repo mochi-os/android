@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">ಮೂಲ ತೆಗೆದುಹಾಕಲಾಗಿದೆ</string>
     <string name="feeds_settings_source_polling">ಮೂಲವನ್ನು ವಿಚಾರವಾಗುತ್ತಿದೆ…</string>
     <string name="feeds_settings_access_updated">ಪ್ರವೇಶ ನವೀಕರಿಸಲಾಗಿದೆ</string>
-    <string name="feeds_settings_access_revoked">ಪ್ರವೇಶವನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ</string>
+    <string name="feeds_settings_access_revoked">ಪ್ರವೇಶವನ್ನು ಹಿಂಪಡೆಯಲಾಗಿದೆ</string>
     <string name="feeds_settings_member_removed">ಸದಸ್ಯ ತೆಗೆದುಹಾಕಲಾಗಿದೆ</string>
     <string name="feeds_settings_ai_mode_updated">AI ವಿಧಾನವನ್ನು ನವೀಕರಿಸಲಾಗಿದೆ</string>
     <string name="feeds_settings_ai_account_updated">AI ಖಾತೆಯನ್ನು ನವೀಕರಿಸಲಾಗಿದೆ</string>
@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">ಎಂದಿಗೂ ತರಲಾಗಿಲ್ಲ</string>
     <string name="feeds_source_poll">ಪೋಲ್</string>
     <string name="feeds_source_transform">AI ರೂಪಾಂತರ</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" ಅನ್ನು ತೆಗೆದುಹಾಕಬೇಕೆ?</string>
-    <string name="feeds_remove_also_delete_posts">ಆಮದು ಮಾಡಿದ ಪೋಸ್ಟ್‌ಗಳನ್ನು ಸಹ ಅಳಿಸಿ</string>
+    <string name="feeds_remove_source_confirm">ಇದು \"%1$s\" ನಿಂದ ವಿಷಯವನ್ನು ಆಮದು ಮಾಡುವುದನ್ನು ನಿಲ್ಲಿಸುತ್ತದೆ.</string>
+    <string name="feeds_remove_also_delete_posts">ಈ ಮೂಲದಿಂದ ಆಮದು ಮಾಡಿದ ಪೋಸ್ಟ್‌ಗಳನ್ನು ಸಹ ಅಳಿಸಿ</string>
     <string name="feeds_suggested_credibility_title">ಸೂಚಿಸಲಾದ ವಿಶ್ವಾಸಾರ್ಹತೆ</string>
     <string name="feeds_suggested_credibility_body">Mochi %1$d ವಿಶ್ವಾಸಾರ್ಹತೆಯನ್ನು ಸೂಚಿಸುತ್ತದೆ. ಒಪ್ಪಿಕೊಳ್ಳಬೇಕೆ?</string>
     <string name="feeds_suggested_credibility_keep">ಪ್ರಸ್ತುತದನ್ನು ಉಳಿಸಿಕೊಳ್ಳಿ</string>

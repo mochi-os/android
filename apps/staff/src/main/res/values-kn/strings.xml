@@ -115,7 +115,7 @@
     <string name="staff_audit_action_subscription_chargeback_won">ಚಾರ್ಜ್‌ಬ್ಯಾಕ್ ತಿರಸ್ಕರಿಸಲಾಗಿದೆ</string>
     <string name="staff_audit_action_subscription_created">ಸಬ್‌ಸ್ಕ್ರಿಪ್ಶನ್ ರಚಿಸಲಾಗಿದೆ</string>
     <string name="staff_audit_action_subscription_past_due">ಪಾವತಿಯ ಗಡುವು ಮುಗಿದಿದೆ</string>
-    <string name="staff_audit_action_subscription_paused">ಪಾಸ್ ಮಾಡಲಾಗಿದೆ</string>
+    <string name="staff_audit_action_subscription_paused">ವಿರಾಮಗೊಳಿಸಲಾಗಿದೆ</string>
     <string name="staff_audit_action_subscription_reactivated">ಮರುಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ</string>
     <string name="staff_audit_action_subscription_resumed">ಮುಂದುವರಿಸಲಾಗಿದೆ</string>
     <string name="staff_audit_actor_system">ಸಿಸ್ಟಮ್</string>

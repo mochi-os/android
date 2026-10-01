@@ -45,6 +45,8 @@
     <string name="route_delete_title">ลบเส้นทางหรือไม่?</string>
     <string name="route_path">เส้นทาง</string>
     <string name="route_method">วิธี</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">แอป</string>
     <string name="route_method_entity">เอนทิตี</string>
     <string name="route_method_redirect">เปลี่ยนเส้นทาง</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">ดาวน์โหลดจาก packages.mochi-os.org</string>
     <string name="system_status_copy">คัดลอก</string>
     <string name="system_status_peers">พีร์</string>
-    <string name="system_status_known">รู้จัก</string>
+    <string name="system_status_peers_totals">รู้จัก %1$s · เชื่อมต่อแล้ว %2$s · เมชบรอดแคสต์ %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">รู้จัก %1$s · เชื่อมต่อแล้ว %2$s</string>
     <string name="system_status_peer_connected">เชื่อมต่อแล้ว</string>
     <string name="system_status_peer_disconnected">ตัดการเชื่อมต่อแล้ว</string>
     <string name="system_status_peer_queued">ข้อความในคิว</string>
@@ -176,7 +179,7 @@
     <string name="system_users_create_title">สร้างผู้ใช้</string>
     <string name="system_users_save_changes">บันทึกการเปลี่ยนแปลง</string>
     <string name="system_users_suspend">ระงับผู้ใช้</string>
-    <string name="system_users_remove_suspension">ยกเลิกการระงับ</string>
+    <string name="system_users_remove_suspension">ปลดการระงับ</string>
     <string name="system_users_delete">ลบผู้ใช้</string>
     <string name="system_users_delete_title">ลบผู้ใช้หรือไม่?</string>
     <string name="system_users_manage_sessions">จัดการเซสชัน</string>
@@ -193,7 +196,7 @@
     <string name="system_users_toast_updated">อัปเดตผู้ใช้แล้ว</string>
     <string name="system_users_toast_deleted">ลบผู้ใช้แล้ว</string>
     <string name="system_users_toast_suspended">ผู้ใช้ถูกระงับ</string>
-    <string name="system_users_toast_suspension_removed">ลบการระงับแล้ว</string>
+    <string name="system_users_toast_suspension_removed">ปลดการระงับแล้ว</string>
     <string name="system_users_toast_session_revoked">เพิกถอนเซสชันแล้ว</string>
     <string name="system_users_toast_create_failed">ไม่สามารถสร้างผู้ใช้ได้</string>
     <string name="system_users_toast_update_failed">ไม่สามารถอัปเดตผู้ใช้ได้</string>
@@ -216,7 +219,7 @@
     <string name="account_totp_disable_message">คุณจะไม่สามารถเข้าสู่ระบบด้วยรหัสยืนยันตัวตนได้อีก</string>
     <string name="account_recovery_none">ไม่ได้สร้างรหัสกู้คืน</string>
     <plurals name="account_recovery_count">
-        <item quantity="other">เหลือรหัสกู้คืน %1$d รหัส</item>
+        <item quantity="other">เหลือรหัสกู้คืน %1$s รหัส</item>
     </plurals>
     <string name="account_recovery_generate">สร้างรหัส</string>
     <string name="account_recovery_regenerate">สร้างรหัสใหม่</string>
@@ -233,7 +236,7 @@
     <string name="account_last_used">ใช้ล่าสุด %1$s</string>
     <string name="route_delete_message">การกระทำนี้จะลบเส้นทางสำหรับเส้นทาง \"%1$s\"</string>
     <string name="route_empty">ไม่มีเส้นทางที่กำหนดค่าไว้</string>
-    <string name="route_meta">ความสำคัญ %1$d · %2$s</string>
+    <string name="route_meta">ความสำคัญ %1$s · %2$s</string>
     <string name="interests_search_placeholder">ค้นหาหัวข้อเพื่อเพิ่ม…</string>
     <string name="interests_empty">ยังไม่มีความสนใจ</string>
     <string name="interests_summary_regenerate">สร้างสรุปใหม่</string>
@@ -267,7 +270,7 @@
     <string name="system_users_revoke_all_title">เพิกถอนทุกเซสชัน?</string>
     <string name="system_users_revoke_all_message">เซสชันที่ใช้งานอยู่ทั้งหมดของผู้ใช้นี้จะถูกออกจากระบบ</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="other">แสดง %1$d–%2$d จาก %3$d ผู้ใช้</item>
+        <item quantity="other">แสดง %1$s–%2$s จาก %3$s ผู้ใช้</item>
     </plurals>
     <string name="account_title">บัญชี</string>
     <string name="account_section_identity">ตัวตน</string>
@@ -301,11 +304,11 @@
     <string name="domain_verify">ตรวจสอบ DNS</string>
     <string name="settings_home_domains">โดเมน</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">ส่งการทดสอบไปยัง %1$d ปลายทางแล้ว</item>
-        <item quantity="other">ส่งการทดสอบไปยัง %1$d ปลายทางแล้ว</item>
+        <item quantity="one">ส่งการทดสอบไปยัง %1$s ปลายทางแล้ว</item>
+        <item quantity="other">ส่งการทดสอบไปยัง %1$s ปลายทางแล้ว</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="other">เพิกถอน %1$d เซสชัน</item>
+        <item quantity="other">เพิกถอน %1$s เซสชัน</item>
     </plurals>
     <string name="login_title">เข้าสู่ระบบ</string>
     <string name="login_section_methods">วิธีการเข้าสู่ระบบ</string>
@@ -336,8 +339,7 @@
     <string name="system_status_reachability_public">สาธารณะ</string>
     <string name="system_status_reachability_private">ส่วนตัว</string>
     <string name="system_status_reachability_unknown">ไม่ทราบ</string>
-    <string name="system_status_relay">ผ่านรีเลย์</string>
-    <string name="system_status_mesh">เมชบรอดแคสต์</string>
+    <string name="system_status_reachability_relay">%1$s · ผ่านรีเลย์</string>
     <string name="system_status_broadcast">บรอดแคสต์ล่าสุด</string>
     <string name="system_status_queued_broadcasts">ข้อความบรอดแคสต์ในคิว</string>
     <string name="system_setting_hostname_publish">ประกาศชื่อโฮสต์และโดเมนไปยังเซิร์ฟเวอร์อื่น</string>
@@ -370,8 +372,10 @@
     <string name="accounts_device_seen">เห็นล่าสุด %1$s</string>
     <string name="notifprefs_device_app">%1$s · แอป</string>
     <string name="notifprefs_device_push">%1$s · พุช</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="other">ส่งการทดสอบไปยัง %1$d จาก %2$d ปลายทางแล้ว</item>
+        <item quantity="other">ส่งการทดสอบไปยัง %1$s จาก %2$s ปลายทางแล้ว</item>
     </plurals>
     <string name="notifprefs_test_none">ยังไม่ได้ตั้งค่าปลายทาง</string>
     <string name="notifprefs_transport_fcm">พุช Android</string>
@@ -395,18 +399,18 @@
     <string name="system_documents_discard_title">ละทิ้งการเปลี่ยนแปลงใช่ไหม?</string>
     <string name="system_documents_discard">ละทิ้ง</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="other">%1$d สำเร็จ</item>
+        <item quantity="other">%1$s สำเร็จ</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="other">%1$d ล้มเหลว</item>
+        <item quantity="other">%1$s ล้มเหลว</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="other">%1$d / %2$d การจอง</item>
+        <item quantity="other">%1$s / %2$s การจอง</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="other">%1$d วงจร</item>
+        <item quantity="other">%1$s วงจร</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="other">%1$d ถูกปฏิเสธ</item>
+        <item quantity="other">%1$s ถูกปฏิเสธ</item>
     </plurals>
 </resources>

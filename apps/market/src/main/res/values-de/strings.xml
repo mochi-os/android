@@ -625,7 +625,7 @@
     <string name="market_messages_send_failed">Nachricht konnte nicht gesendet werden</string>
     <string name="market_messages_thread_title">Gespräch</string>
     <string name="market_messages_unread_badge">%1$d ungelesen</string>
-    <string name="market_price_from">ab %1$s</string>
+    <string name="market_price_from">Ab %1$s</string>
     <string name="market_price_high_bid">Höchstgebot: %1$s</string>
     <string name="market_price_instant_buy">Sofortkauf: %1$s</string>
     <string name="market_price_per_month">%1$s / Monat</string>

@@ -87,8 +87,8 @@
     <string name="feeds_move_up">Mozgatás felfelé</string>
     <string name="feeds_move_down">Mozgatás lefelé</string>
 
-    <string name="notification_channel_feeds">Hírforrás-értesítések</string>
-    <string name="feeds_search_placeholder">Hírforrás keresése vagy URL beillesztése…</string>
+    <string name="notification_channel_feeds">Hírfolyam-értesítések</string>
+    <string name="feeds_search_placeholder">Hírfolyam keresése vagy URL beillesztése…</string>
     <string name="feeds_url_result">URL-találat</string>
     <string name="feeds_search_results">Keresési eredmények</string>
     <string name="feeds_unread_only">Csak olvasatlanok</string>
@@ -104,16 +104,16 @@
     <string name="feeds_anonymous">Névtelen</string>
     <string name="feeds_replying_to_author">Válasz neki: %1$s</string>
     <string name="feeds_attach_file">Fájl csatolása</string>
-    <string name="feeds_select_feed">Válasszon hírforrást</string>
-    <string name="feeds_loading_feeds">Hírforrások betöltése…</string>
+    <string name="feeds_select_feed">Válasszon hírfolyamot</string>
+    <string name="feeds_loading_feeds">Hírfolyamok betöltése…</string>
     <string name="feeds_sources_title_named">%1$s forrásai</string>
-    <string name="feeds_delete_feed_confirm">Ez véglegesen törli a hírforrást és az összes bejegyzését. A művelet nem vonható vissza.</string>
+    <string name="feeds_delete_feed_confirm">Ez véglegesen törli a hírfolyamot és az összes bejegyzését. A művelet nem vonható vissza.</string>
     <string name="feeds_clipboard_label_rss">RSS-URL</string>
     <string name="feeds_source_never_fetched">Még nem volt lekérés</string>
     <string name="feeds_source_poll">Lekérdezés</string>
     <string name="feeds_source_transform">MI-átalakítás</string>
-    <string name="feeds_remove_source_confirm">Eltávolítja: \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Az importált bejegyzések is törölve legyenek</string>
+    <string name="feeds_remove_source_confirm">Ezzel leáll a tartalom importálása innen: \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Az ebből a forrásból importált bejegyzések is törlődjenek</string>
     <string name="feeds_suggested_credibility_title">Javasolt hitelesség</string>
     <string name="feeds_suggested_credibility_body">A Mochi %1$d hitelességet javasol. Elfogadja?</string>
     <string name="feeds_suggested_credibility_keep">Jelenlegi megtartása</string>
@@ -187,7 +187,7 @@
     <string name="feeds_create_first_post">Első bejegyzés létrehozása</string>
     <string name="feeds_rss_mode_posts">Bejegyzések</string>
     <string name="feeds_source_last_checked">Utoljára ellenőrizve: %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">Leiratkozás a hírforrásról</string>
+    <string name="feeds_settings_unsubscribe_section">Leiratkozás a hírfolyamról</string>
     <string name="feeds_source_transform_hint">Fordítsa angolra, és jelenítse meg felsorolásként.</string>
     <string name="feeds_source_url_hint_feed">Hírfolyam entitás azonosító vagy ujjlenyomat</string>
     <string name="feeds_source_credibility_label">Hitelesség</string>

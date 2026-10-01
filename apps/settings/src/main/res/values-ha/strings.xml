@@ -45,6 +45,8 @@
     <string name="route_delete_title">Goge hanya?</string>
     <string name="route_path">Hanya</string>
     <string name="route_method">Hanya</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Manhaja</string>
     <string name="route_method_entity">Hukuma</string>
     <string name="route_method_redirect">Karkatarwa</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Sauke daga packages.mochi-os.org</string>
     <string name="system_status_copy">Kwafi</string>
     <string name="system_status_peers">Takwarori</string>
-    <string name="system_status_known">Sananne</string>
+    <string name="system_status_peers_totals">Sananne %1$s · An haɗa %2$s · Ragar watsawa %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Sananne %1$s · An haɗa %2$s</string>
     <string name="system_status_peer_connected">An haɗa</string>
     <string name="system_status_peer_disconnected">An cire haɗi</string>
     <string name="system_status_peer_queued">Saƙonni a jerin gwano</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">Ba za ka iya shiga da lambar mai tabbatarwa ba.</string>
     <string name="account_recovery_none">Babu lambobin dawowa da aka ƙirƙira.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">Lambar dawowa %1$d ta rage.</item>
-        <item quantity="other">Lambobin dawowa %1$d sun rage.</item>
+        <item quantity="one">Lambar dawowa %1$s ta rage.</item>
+        <item quantity="other">Lambobin dawowa %1$s sun rage.</item>
     </plurals>
     <string name="account_recovery_generate">Ƙirƙira lambobi</string>
     <string name="account_recovery_regenerate">Sake ƙirƙira lambobi</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">Amfani na ƙarshe %1$s</string>
     <string name="route_delete_message">Wannan zai cire hanya don hanyar \"%1$s\".</string>
     <string name="route_empty">Babu hanyoyin da aka saita.</string>
-    <string name="route_meta">Fifiko %1$d · %2$s</string>
+    <string name="route_meta">Fifiko %1$s · %2$s</string>
     <string name="interests_search_placeholder">Bincika batutuwa don ƙarawa…</string>
     <string name="interests_empty">Babu sha\'awa tukuna.</string>
     <string name="interests_summary_regenerate">Sake samar da taƙaitawa</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">Janye duk zaman?</string>
     <string name="system_users_revoke_all_message">Duk zaman da ke aiki na wannan mai amfani za su fita.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">Ana nuna %1$d–%2$d daga cikin mai amfani %3$d</item>
-        <item quantity="other">Ana nuna %1$d–%2$d daga cikin masu amfani %3$d</item>
+        <item quantity="one">Ana nuna %1$s–%2$s daga cikin mai amfani %3$s</item>
+        <item quantity="other">Ana nuna %1$s–%2$s daga cikin masu amfani %3$s</item>
     </plurals>
     <string name="account_title">Asusu</string>
     <string name="account_section_identity">Asali</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">Tabbatar da DNS</string>
     <string name="settings_home_domains">Yankuna</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">An aika gwaji zuwa wuri %1$d</item>
-        <item quantity="other">An aika gwaji zuwa wurare %1$d</item>
+        <item quantity="one">An aika gwaji zuwa wuri %1$s</item>
+        <item quantity="other">An aika gwaji zuwa wurare %1$s</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">An soke %1$d zaman</item>
-        <item quantity="other">An soke zama %1$d</item>
+        <item quantity="one">An janye zama %1$s</item>
+        <item quantity="other">An janye zama %1$s</item>
     </plurals>
     <string name="login_title">Shiga</string>
     <string name="login_section_methods">Hanyoyin shiga</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">Na jama\'a</string>
     <string name="system_status_reachability_private">Na sirri</string>
     <string name="system_status_reachability_unknown">Ba a sani ba</string>
-    <string name="system_status_relay">Ta hanyar relay</string>
-    <string name="system_status_mesh">Mesh na watsawa</string>
+    <string name="system_status_reachability_relay">%1$s · ta hanyar relay</string>
     <string name="system_status_broadcast">Watsa na ƙarshe</string>
     <string name="system_status_queued_broadcasts">Saƙonnin watsa labarai a layi</string>
     <string name="system_setting_hostname_publish">Sanar da sunan host da yankuna ga sauran sabar</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">Ganin ƙarshe %1$s</string>
     <string name="notifprefs_device_app">%1$s · manhaja</string>
     <string name="notifprefs_device_push">%1$s · tura</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">An aika gwaji zuwa %1$d daga cikin wuri %2$d</item>
-        <item quantity="other">An aika gwaji zuwa %1$d daga cikin wurare %2$d</item>
+        <item quantity="one">An aika gwaji zuwa %1$s daga cikin wuri %2$s</item>
+        <item quantity="other">An aika gwaji zuwa %1$s daga cikin wurare %2$s</item>
     </plurals>
     <string name="notifprefs_test_none">Ba a saita destinations ba</string>
     <string name="notifprefs_transport_fcm">Tura ta Android</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">A watsar da canje-canjen?</string>
     <string name="system_documents_discard">Watsar</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d nasara</item>
-        <item quantity="other">%1$d nasara</item>
+        <item quantity="one">%1$s nasara</item>
+        <item quantity="other">%1$s nasara</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d kasawa</item>
-        <item quantity="other">%1$d kasawa</item>
+        <item quantity="one">%1$s kasawa</item>
+        <item quantity="other">%1$s kasawa</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d ajiyewa</item>
-        <item quantity="other">%1$d / %2$d ajiyewa</item>
+        <item quantity="one">%1$s / %2$s ajiyewa</item>
+        <item quantity="other">%1$s / %2$s ajiyewa</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d da\'ira</item>
-        <item quantity="other">%1$d da\'irori</item>
+        <item quantity="one">%1$s da\'ira</item>
+        <item quantity="other">%1$s da\'irori</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d an ƙi</item>
-        <item quantity="other">%1$d an ƙi</item>
+        <item quantity="one">%1$s an ƙi</item>
+        <item quantity="other">%1$s an ƙi</item>
     </plurals>
 </resources>

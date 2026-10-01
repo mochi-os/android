@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">Allikas eemaldatud</string>
     <string name="feeds_settings_source_polling">Allika küsitlemine…</string>
     <string name="feeds_settings_access_updated">Juurdepääs uuendatud</string>
-    <string name="feeds_settings_access_revoked">Juurdepääs tühistati</string>
+    <string name="feeds_settings_access_revoked">Juurdepääs võeti ära</string>
     <string name="feeds_settings_member_removed">Liige eemaldatud</string>
     <string name="feeds_settings_ai_mode_updated">AI režiim uuendatud</string>
     <string name="feeds_settings_ai_account_updated">AI konto uuendatud</string>
@@ -113,8 +113,8 @@
     <string name="feeds_source_never_fetched">Pole kunagi toodud</string>
     <string name="feeds_source_poll">Pärimine</string>
     <string name="feeds_source_transform">AI teisendus</string>
-    <string name="feeds_remove_source_confirm">Eemalda \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Kustuta ka imporditud postitused</string>
+    <string name="feeds_remove_source_confirm">See peatab sisu importimise allikast \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Kustuta ka sellest allikast imporditud postitused</string>
     <string name="feeds_suggested_credibility_title">Soovitatud usaldusväärsus</string>
     <string name="feeds_suggested_credibility_body">Mochi soovitab usaldusväärsust %1$d. Kas nõustud?</string>
     <string name="feeds_suggested_credibility_keep">Säilita praegune</string>
@@ -167,7 +167,7 @@
     <string name="feeds_settings_name_edit_cd">Muuda nime</string>
     <string name="feeds_settings_section_identity">Identiteet</string>
     <string name="feeds_unsubscribe">Loobu tellimusest</string>
-    <string name="feeds_unsubscribed">Tellimus tühistatud</string>
+    <string name="feeds_unsubscribed">Tellimusest loobutud</string>
     <string name="feeds_access_level_comment_full">Kommenteeri, reageeri ja vaata</string>
     <string name="feeds_rss_mode_posts_comments">Postitused ja kommentaarid</string>
     <string name="feeds_access_add_title">Lisa juurdepääs</string>
@@ -187,7 +187,7 @@
     <string name="feeds_create_first_post">Loo esimene postitus</string>
     <string name="feeds_rss_mode_posts">Postitused</string>
     <string name="feeds_source_last_checked">Viimati kontrollitud %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">Tühista voo tellimus</string>
+    <string name="feeds_settings_unsubscribe_section">Loobu voo tellimusest</string>
     <string name="feeds_source_transform_hint">Tõlgi inglise keelde ja näita täpploendina.</string>
     <string name="feeds_source_url_hint_feed">Voo olemi ID või sõrmejälg</string>
     <string name="feeds_source_credibility_label">Usaldusväärsus</string>

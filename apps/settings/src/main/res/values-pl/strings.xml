@@ -45,6 +45,8 @@
     <string name="route_delete_title">Usunąć trasę?</string>
     <string name="route_path">Ścieżka</string>
     <string name="route_method">Metoda</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Aplikacja</string>
     <string name="route_method_entity">Encja</string>
     <string name="route_method_redirect">Przekierowanie</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Pobierz z packages.mochi-os.org</string>
     <string name="system_status_copy">Kopiuj</string>
     <string name="system_status_peers">Węzły</string>
-    <string name="system_status_known">Znane</string>
+    <string name="system_status_peers_totals">Znane %1$s · Połączone %2$s · Mesh rozgłoszeniowy %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Znane %1$s · Połączone %2$s</string>
     <string name="system_status_peer_connected">Połączono</string>
     <string name="system_status_peer_disconnected">Rozłączono</string>
     <string name="system_status_peer_queued">Wiadomości w kolejce</string>
@@ -216,10 +219,10 @@
     <string name="account_totp_disable_message">Nie będziesz mógł logować się kodem uwierzytelniającym.</string>
     <string name="account_recovery_none">Nie wygenerowano kodów odzyskiwania.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">Pozostał %1$d kod odzyskiwania.</item>
-        <item quantity="few">Pozostały %1$d kody odzyskiwania.</item>
-        <item quantity="many">Pozostało %1$d kodów odzyskiwania.</item>
-        <item quantity="other">Pozostało %1$d kodu odzyskiwania.</item>
+        <item quantity="one">Pozostał %1$s kod odzyskiwania.</item>
+        <item quantity="few">Pozostały %1$s kody odzyskiwania.</item>
+        <item quantity="many">Pozostało %1$s kodów odzyskiwania.</item>
+        <item quantity="other">Pozostało %1$s kodu odzyskiwania.</item>
     </plurals>
     <string name="account_recovery_generate">Wygeneruj kody</string>
     <string name="account_recovery_regenerate">Wygeneruj nowe kody</string>
@@ -236,7 +239,7 @@
     <string name="account_last_used">Ostatnio użyty %1$s</string>
     <string name="route_delete_message">To usunie trasę dla ścieżki „%1$s\".</string>
     <string name="route_empty">Brak skonfigurowanych tras.</string>
-    <string name="route_meta">Priorytet %1$d · %2$s</string>
+    <string name="route_meta">Priorytet %1$s · %2$s</string>
     <string name="interests_search_placeholder">Szukaj tematów do dodania…</string>
     <string name="interests_empty">Brak zainteresowań.</string>
     <string name="interests_summary_regenerate">Wygeneruj podsumowanie ponownie</string>
@@ -270,10 +273,10 @@
     <string name="system_users_revoke_all_title">Unieważnić wszystkie sesje?</string>
     <string name="system_users_revoke_all_message">Wszystkie aktywne sesje tego użytkownika zostaną wylogowane.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">Wyświetlanie %1$d–%2$d z %3$d użytkownika</item>
-        <item quantity="few">Wyświetlanie %1$d–%2$d z %3$d użytkowników</item>
-        <item quantity="many">Wyświetlanie %1$d–%2$d z %3$d użytkowników</item>
-        <item quantity="other">Wyświetlanie %1$d–%2$d z %3$d użytkownika</item>
+        <item quantity="one">Wyświetlanie %1$s–%2$s z %3$s użytkownika</item>
+        <item quantity="few">Wyświetlanie %1$s–%2$s z %3$s użytkowników</item>
+        <item quantity="many">Wyświetlanie %1$s–%2$s z %3$s użytkowników</item>
+        <item quantity="other">Wyświetlanie %1$s–%2$s z %3$s użytkownika</item>
     </plurals>
     <string name="account_title">Konto</string>
     <string name="account_section_identity">Tożsamość</string>
@@ -307,16 +310,16 @@
     <string name="domain_verify">Zweryfikuj DNS</string>
     <string name="settings_home_domains">Domeny</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Test wysłany do %1$d miejsca docelowego</item>
-        <item quantity="few">Test wysłany do %1$d miejsc docelowych</item>
-        <item quantity="many">Test wysłany do %1$d miejsc docelowych</item>
-        <item quantity="other">Test wysłany do %1$d miejsca docelowego</item>
+        <item quantity="one">Test wysłany do %1$s miejsca docelowego</item>
+        <item quantity="few">Test wysłany do %1$s miejsc docelowych</item>
+        <item quantity="many">Test wysłany do %1$s miejsc docelowych</item>
+        <item quantity="other">Test wysłany do %1$s miejsca docelowego</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">Unieważniono %1$d sesję</item>
-        <item quantity="few">Unieważniono %1$d sesje</item>
-        <item quantity="many">Unieważniono %1$d sesji</item>
-        <item quantity="other">Unieważniono %1$d sesji</item>
+        <item quantity="one">Unieważniono %1$s sesję</item>
+        <item quantity="few">Unieważniono %1$s sesje</item>
+        <item quantity="many">Unieważniono %1$s sesji</item>
+        <item quantity="other">Unieważniono %1$s sesji</item>
     </plurals>
     <string name="login_title">Logowanie</string>
     <string name="login_section_methods">Metody logowania</string>
@@ -347,8 +350,7 @@
     <string name="system_status_reachability_public">Publiczny</string>
     <string name="system_status_reachability_private">Prywatny</string>
     <string name="system_status_reachability_unknown">Nieznany</string>
-    <string name="system_status_relay">Przez przekaźnik</string>
-    <string name="system_status_mesh">Mesh rozgłoszeniowy</string>
+    <string name="system_status_reachability_relay">%1$s · przez przekaźnik</string>
     <string name="system_status_broadcast">Ostatnia transmisja</string>
     <string name="system_status_queued_broadcasts">Komunikaty rozgłoszeniowe w kolejce</string>
     <string name="system_setting_hostname_publish">Ogłaszaj nazwę hosta i domeny innym serwerom</string>
@@ -381,11 +383,13 @@
     <string name="accounts_device_seen">Ostatnio widziany %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplikacja</string>
     <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Test wysłano do %1$d z %2$d miejsca docelowego</item>
-        <item quantity="few">Test wysłano do %1$d z %2$d miejsc docelowych</item>
-        <item quantity="many">Test wysłano do %1$d z %2$d miejsc docelowych</item>
-        <item quantity="other">Test wysłano do %1$d z %2$d miejsca docelowego</item>
+        <item quantity="one">Test wysłano do %1$s z %2$s miejsca docelowego</item>
+        <item quantity="few">Test wysłano do %1$s z %2$s miejsc docelowych</item>
+        <item quantity="many">Test wysłano do %1$s z %2$s miejsc docelowych</item>
+        <item quantity="other">Test wysłano do %1$s z %2$s miejsca docelowego</item>
     </plurals>
     <string name="notifprefs_test_none">Nie skonfigurowano miejsc docelowych</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
@@ -409,33 +413,33 @@
     <string name="system_documents_discard_title">Odrzucić zmiany?</string>
     <string name="system_documents_discard">Odrzuć</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d udana</item>
-        <item quantity="few">%1$d udane</item>
-        <item quantity="many">%1$d udanych</item>
-        <item quantity="other">%1$d udanej</item>
+        <item quantity="one">%1$s udana</item>
+        <item quantity="few">%1$s udane</item>
+        <item quantity="many">%1$s udanych</item>
+        <item quantity="other">%1$s udanej</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d nieudana</item>
-        <item quantity="few">%1$d nieudane</item>
-        <item quantity="many">%1$d nieudanych</item>
-        <item quantity="other">%1$d nieudanej</item>
+        <item quantity="one">%1$s nieudana</item>
+        <item quantity="few">%1$s nieudane</item>
+        <item quantity="many">%1$s nieudanych</item>
+        <item quantity="other">%1$s nieudanej</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d rezerwacja</item>
-        <item quantity="few">%1$d / %2$d rezerwacje</item>
-        <item quantity="many">%1$d / %2$d rezerwacji</item>
-        <item quantity="other">%1$d / %2$d rezerwacji</item>
+        <item quantity="one">%1$s / %2$s rezerwacja</item>
+        <item quantity="few">%1$s / %2$s rezerwacje</item>
+        <item quantity="many">%1$s / %2$s rezerwacji</item>
+        <item quantity="other">%1$s / %2$s rezerwacji</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d obwód</item>
-        <item quantity="few">%1$d obwody</item>
-        <item quantity="many">%1$d obwodów</item>
-        <item quantity="other">%1$d obwodu</item>
+        <item quantity="one">%1$s obwód</item>
+        <item quantity="few">%1$s obwody</item>
+        <item quantity="many">%1$s obwodów</item>
+        <item quantity="other">%1$s obwodu</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d odrzucone</item>
-        <item quantity="few">%1$d odrzucone</item>
-        <item quantity="many">%1$d odrzuconych</item>
-        <item quantity="other">%1$d odrzuconego</item>
+        <item quantity="one">%1$s odrzucone</item>
+        <item quantity="few">%1$s odrzucone</item>
+        <item quantity="many">%1$s odrzuconych</item>
+        <item quantity="other">%1$s odrzuconego</item>
     </plurals>
 </resources>

@@ -155,6 +155,13 @@ class Format(val preferences: UserPreferences, private val clock: Clock = Platfo
     }
 
     /**
+     * Items joined as the app's language writes a list ("A, B, and C",
+     * "A、B和C"). Mirrors the web's `formatList`.
+     */
+    fun formatList(items: List<String>): String =
+        android.icu.text.ListFormatter.getInstance(Locale.getDefault()).format(items)
+
+    /**
      * Bytes → "1.2 MB". Number portion uses the user's number format; unit
      * suffixes ("B", "KB", "MB", "GB") stay in Latin to match web.
      */

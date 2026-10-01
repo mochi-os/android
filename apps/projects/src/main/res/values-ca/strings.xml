@@ -360,7 +360,7 @@
     <string name="projects_activity_commented">ha comentat</string>
     <string name="projects_attachment_delete_confirm_message">Aquest fitxer adjunt se suprimirà permanentment.</string>
     <string name="projects_attachment_delete_confirm_title">Voleu suprimir l\'adjunt?</string>
-    <string name="projects_settings_unsubscribe_section">Cancel·la la subscripció al projecte</string>
+    <string name="projects_settings_unsubscribe_section">Dona\'t de baixa del projecte</string>
     <string name="projects_share_link_title">Comparteix el projecte</string>
     <string name="projects_sort_filter_title">Ordena i filtra</string>
     <string name="projects_create_prefix_hint">S\'utilitza per a identificadors llegibles com %1$s-1, %1$s-2</string>

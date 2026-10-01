@@ -30,9 +30,9 @@
     <string name="wikis_recommended_section">Wikis recomendados</string>
     <string name="wikis_subscribe_button">Suscribirse</string>
     <string name="wikis_unsubscribe_action">Anular suscripción</string>
-    <string name="wikis_unsubscribing">Cancelando suscripción…</string>
+    <string name="wikis_unsubscribing">Anulando suscripción…</string>
     <string name="wikis_unsubscribe_confirm_title">Anular suscripción</string>
-    <string name="wikis_unsubscribe_success">Suscripción cancelada</string>
+    <string name="wikis_unsubscribe_success">Suscripción anulada</string>
     <string name="wikis_subscribe_failed">Error al suscribirse</string>
     <string name="wikis_rss_menu">Feed RSS</string>
     <string name="wikis_rss_changes">Cambios</string>

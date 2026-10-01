@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">Naujas</string>
     <string name="projects_settings_section_identity">Tapatybė</string>
     <string name="projects_settings_access_updated">Prieiga atnaujinta</string>
-    <string name="projects_settings_access_revoked">Prieiga atšaukta</string>
+    <string name="projects_settings_access_revoked">Prieiga panaikinta</string>
     <string name="projects_settings_section_access">Prieigos valdymas</string>
     <string name="projects_people_search">Ieškoti žmonių</string>
     <string name="projects_settings_field_entity_id">Subjekto ID</string>

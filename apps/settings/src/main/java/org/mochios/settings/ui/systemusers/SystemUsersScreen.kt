@@ -119,10 +119,7 @@ fun SystemUsersScreen(
         topBar = {
             TopAppBar(
                 title = {
-                    val title = stringResource(R.string.system_users_title)
-                    Text(
-                        if (state.count > 0) "$title (${state.count})" else title,
-                    )
+                    Text(usersTitle(state.count))
                 },
                 navigationIcon = {
                     MochiIconButton(onClick = onBack) {
@@ -295,11 +292,11 @@ fun SystemUsersScreen(
 }
 
 @Composable
-private fun systemUsersToastMessages(revokedCount: Int): Map<SystemUsersToast, String> {
+internal fun systemUsersToastMessages(revokedCount: Int): Map<SystemUsersToast, String> {
     val plural = pluralStringResource(
         R.plurals.system_users_sessions_revoked,
         revokedCount.coerceAtLeast(0),
-        revokedCount,
+        LocalFormat.current.formatNumber(revokedCount),
     )
     return mapOf(
         SystemUsersToast.USER_CREATED to stringResource(R.string.system_users_toast_created),
@@ -666,7 +663,7 @@ private fun SessionRow(
 }
 
 @Composable
-private fun PaginationBar(
+internal fun PaginationBar(
     offset: Int,
     limit: Int,
     count: Int,
@@ -676,10 +673,17 @@ private fun PaginationBar(
 ) {
     val from = offset + 1
     val to = minOf(offset + limit, count)
+    val format = LocalFormat.current
     Column(modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp)) {
         Text(
             // The noun agrees with the total, the number it sits beside.
-            text = pluralStringResource(R.plurals.system_users_pagination_status, count, from, to, count),
+            text = pluralStringResource(
+                R.plurals.system_users_pagination_status,
+                count,
+                format.formatNumber(from),
+                format.formatNumber(to),
+                format.formatNumber(count),
+            ),
             style = MaterialTheme.typography.labelMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
@@ -700,6 +704,13 @@ private fun PaginationBar(
             }
         }
     }
+}
+
+/** The page title, with the number of users beside it once there are any. */
+@Composable
+internal fun usersTitle(count: Int): String {
+    val title = stringResource(R.string.system_users_title)
+    return if (count > 0) "$title (${LocalFormat.current.formatNumber(count)})" else title
 }
 
 @OptIn(ExperimentalMaterial3Api::class)

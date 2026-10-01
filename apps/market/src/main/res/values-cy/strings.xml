@@ -371,7 +371,7 @@
     <string name="market_onboarding_dismiss">Diystyru</string>
     <string name="market_onboarding_title">Croeso i Market</string>
     <string name="market_open_sidebar">Agor dewislen</string>
-    <string name="market_price_from">o %1$s</string>
+    <string name="market_price_from">O %1$s</string>
     <string name="market_price_high_bid">Cynnig uchaf: %1$s</string>
     <string name="market_price_instant_buy">prynu ar unwaith: %1$s</string>
     <string name="market_price_per_month">%1$s / mis</string>

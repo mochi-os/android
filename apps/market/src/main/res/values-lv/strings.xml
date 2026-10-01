@@ -557,7 +557,7 @@
     <string name="market_messages_send_failed">Neizdevās nosūtīt ziņojumu</string>
     <string name="market_messages_thread_title">Saruna</string>
     <string name="market_messages_unread_badge">%1$d nelasīti</string>
-    <string name="market_price_from">no %1$s</string>
+    <string name="market_price_from">No %1$s</string>
     <string name="market_price_high_bid">Augstākais piedāvājums: %1$s</string>
     <string name="market_price_instant_buy">tūlītējais pirkums: %1$s</string>
     <string name="market_price_per_month">%1$s / mēnesī</string>

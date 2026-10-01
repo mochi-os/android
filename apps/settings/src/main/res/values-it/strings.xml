@@ -45,6 +45,8 @@
     <string name="route_delete_title">Eliminare la rotta?</string>
     <string name="route_path">Percorso</string>
     <string name="route_method">Metodo</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">App</string>
     <string name="route_method_entity">Entità</string>
     <string name="route_method_redirect">Reindirizzamento</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Scarica da packages.mochi-os.org</string>
     <string name="system_status_copy">Copia</string>
     <string name="system_status_peers">Peer</string>
-    <string name="system_status_known">Conosciuti</string>
+    <string name="system_status_peers_totals">Conosciuti %1$s · Connessi %2$s · Mesh di trasmissione %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Conosciuti %1$s · Connessi %2$s</string>
     <string name="system_status_peer_connected">Connesso</string>
     <string name="system_status_peer_disconnected">Disconnesso</string>
     <string name="system_status_peer_queued">Messaggi in coda</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">Non potrai più accedere con un codice di autenticatore.</string>
     <string name="account_recovery_none">Nessun codice di recupero generato.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d codice di recupero rimanente.</item>
-        <item quantity="other">%1$d codici di recupero rimanenti.</item>
+        <item quantity="one">%1$s codice di recupero rimanente.</item>
+        <item quantity="other">%1$s codici di recupero rimanenti.</item>
     </plurals>
     <string name="account_recovery_generate">Genera codici</string>
     <string name="account_recovery_regenerate">Rigenera codici</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">Ultimo uso %1$s</string>
     <string name="route_delete_message">Questo rimuoverà il percorso per il path «%1$s».</string>
     <string name="route_empty">Nessun percorso configurato.</string>
-    <string name="route_meta">Priorità %1$d · %2$s</string>
+    <string name="route_meta">Priorità %1$s · %2$s</string>
     <string name="interests_search_placeholder">Cerca argomenti da aggiungere…</string>
     <string name="interests_empty">Ancora nessun interesse.</string>
     <string name="interests_summary_regenerate">Rigenera riepilogo</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">Revocare tutte le sessioni?</string>
     <string name="system_users_revoke_all_message">Tutte le sessioni attive di questo utente verranno disconnesse.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">Visualizzazione di %1$d–%2$d su %3$d utente</item>
-        <item quantity="other">Visualizzazione di %1$d–%2$d su %3$d utenti</item>
+        <item quantity="one">Visualizzazione di %1$s–%2$s su %3$s utente</item>
+        <item quantity="other">Visualizzazione di %1$s–%2$s su %3$s utenti</item>
     </plurals>
     <string name="account_title">Account</string>
     <string name="account_section_identity">Identità</string>
@@ -303,13 +306,13 @@
     <string name="domain_verify">Verifica DNS</string>
     <string name="settings_home_domains">Domini</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Test inviato a %1$d destinazione</item>
-        <item quantity="other">Test inviato a %1$d destinazioni</item>
+        <item quantity="one">Test inviato a %1$s destinazione</item>
+        <item quantity="other">Test inviato a %1$s destinazioni</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">Revocata %1$d sessione</item>
-        <item quantity="many">Revocate %1$d sessioni</item>
-        <item quantity="other">Revocate %1$d sessioni</item>
+        <item quantity="one">Revocata %1$s sessione</item>
+        <item quantity="many">Revocate %1$s sessioni</item>
+        <item quantity="other">Revocate %1$s sessioni</item>
     </plurals>
     <string name="login_title">Accedi</string>
     <string name="login_section_methods">Metodi di accesso</string>
@@ -340,8 +343,7 @@
     <string name="system_status_reachability_public">Pubblico</string>
     <string name="system_status_reachability_private">Privato</string>
     <string name="system_status_reachability_unknown">Sconosciuto</string>
-    <string name="system_status_relay">Tramite relay</string>
-    <string name="system_status_mesh">Mesh di trasmissione</string>
+    <string name="system_status_reachability_relay">%1$s · tramite inoltro</string>
     <string name="system_status_broadcast">Ultima trasmissione</string>
     <string name="system_status_queued_broadcasts">Messaggi broadcast in coda</string>
     <string name="system_setting_hostname_publish">Annuncia il nome host e i domini agli altri server</string>
@@ -374,9 +376,11 @@
     <string name="accounts_device_seen">Visto l\'ultima volta %1$s</string>
     <string name="notifprefs_device_app">%1$s · app</string>
     <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Test inviato a %1$d su %2$d destinazione</item>
-        <item quantity="other">Test inviato a %1$d su %2$d destinazioni</item>
+        <item quantity="one">Test inviato a %1$s su %2$s destinazione</item>
+        <item quantity="other">Test inviato a %1$s su %2$s destinazioni</item>
     </plurals>
     <string name="notifprefs_test_none">Nessuna destinazione configurata</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
@@ -400,23 +404,23 @@
     <string name="system_documents_discard_title">Scartare le modifiche?</string>
     <string name="system_documents_discard">Scarta</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d riuscito</item>
-        <item quantity="other">%1$d riusciti</item>
+        <item quantity="one">%1$s riuscito</item>
+        <item quantity="other">%1$s riusciti</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d fallito</item>
-        <item quantity="other">%1$d falliti</item>
+        <item quantity="one">%1$s fallito</item>
+        <item quantity="other">%1$s falliti</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d prenotazione</item>
-        <item quantity="other">%1$d / %2$d prenotazioni</item>
+        <item quantity="one">%1$s / %2$s prenotazione</item>
+        <item quantity="other">%1$s / %2$s prenotazioni</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d circuito</item>
-        <item quantity="other">%1$d circuiti</item>
+        <item quantity="one">%1$s circuito</item>
+        <item quantity="other">%1$s circuiti</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d rifiutata</item>
-        <item quantity="other">%1$d rifiutate</item>
+        <item quantity="one">%1$s rifiutata</item>
+        <item quantity="other">%1$s rifiutate</item>
     </plurals>
 </resources>

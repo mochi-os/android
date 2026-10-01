@@ -60,7 +60,7 @@
     <string name="notifications_empty">אין התראות</string>
     <string name="notifications_empty_unread">אתה מעודכן</string>
     <string name="notifications_tab_unread">לא נקראו</string>
-    <string name="notifications_tab_unread_count">לא נקראו (%1$d)</string>
+    <string name="notifications_tab_unread_count">לא נקראו (%1$s)</string>
     <string name="notifications_tab_all">הכול</string>
     <string name="notifications_mark_all_read">סמן הכול כנקרא</string>
     <string name="notifications_clear_all">נקה הכול</string>
@@ -305,8 +305,8 @@
     <string name="rss_revoke">שלול גישה</string>
     <string name="rss_revoke_title">לשלול את הגישה ל-RSS?</string>
     <string name="rss_revoke_message">כל מה שרשום להזנה הזו יפסיק לקבל אותה. אפשר להעתיק כתובת חדשה לאחר מכן.</string>
-    <string name="rss_revoked">גישת RSS בוטלה</string>
-    <string name="rss_revoke_failed">ביטול גישת RSS נכשל</string>
+    <string name="rss_revoked">גישת RSS נשללה</string>
+    <string name="rss_revoke_failed">שלילת גישת RSS נכשלה</string>
     <string name="game_empty_title">עדיין אין משחקים</string>
     <string name="game_select_title">בחר משחק</string>
     <string name="game_select_subtitle">בחר משחק מסרגל הצד או התחל משחק חדש.</string>

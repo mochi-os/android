@@ -113,8 +113,8 @@
     <string name="feeds_source_never_fetched">Nie abgerufen</string>
     <string name="feeds_source_poll">Abfrage</string>
     <string name="feeds_source_transform">KI-Transformation</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" entfernen?</string>
-    <string name="feeds_remove_also_delete_posts">Importierte Beiträge ebenfalls löschen</string>
+    <string name="feeds_remove_source_confirm">Dadurch wird der Import von Inhalten aus \"%1$s\" beendet.</string>
+    <string name="feeds_remove_also_delete_posts">Aus dieser Quelle importierte Beiträge ebenfalls löschen</string>
     <string name="feeds_suggested_credibility_title">Vorgeschlagene Glaubwürdigkeit</string>
     <string name="feeds_suggested_credibility_body">Mochi schlägt eine Glaubwürdigkeit von %1$d vor. Akzeptieren?</string>
     <string name="feeds_suggested_credibility_keep">Aktuelle beibehalten</string>

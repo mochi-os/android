@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="feeds_title">Viri</string>
-    <string name="feeds_find_feeds">Najdi vire</string>
-    <string name="feeds_create_feed">Ustvari vir</string>
+    <string name="feeds_title">Kanali</string>
+    <string name="feeds_find_feeds">Najdi kanale</string>
+    <string name="feeds_create_feed">Ustvari kanal</string>
     <string name="feeds_new_post">Nova objava</string>
-    <string name="feeds_all_feeds">Vsi viri</string>
+    <string name="feeds_all_feeds">Vsi kanali</string>
     <string name="feeds_name">Ime</string>
     <string name="feeds_create">Ustvari</string>
-    <string name="feeds_no_feeds_found">Virov ni mogoče najti</string>
-    <string name="feeds_feed_title_default">Vir</string>
+    <string name="feeds_no_feeds_found">Kanalov ni mogoče najti</string>
+    <string name="feeds_feed_title_default">Kanal</string>
     <string name="feeds_mark_all_read">Označi vse prebrano</string>
     <string name="feeds_settings">Nastavitve</string>
     <string name="feeds_no_posts_yet">Še ni objav</string>
@@ -30,7 +30,7 @@
     <string name="feeds_edit_post">Uredi objavo</string>
     <string name="feeds_save_label">Shrani</string>
     <string name="feeds_post_action">Objavi</string>
-    <string name="feeds_feed_label">Vir</string>
+    <string name="feeds_feed_label">Kanal</string>
     <string name="feeds_add_files">Dodaj datoteke</string>
     <string name="feeds_restore">Obnovi</string>
     <string name="feeds_check_in">Prijava</string>
@@ -40,12 +40,12 @@
     <string name="feeds_tab_access">Dostop</string>
     <string name="feeds_tab_members">Člani</string>
     <string name="feeds_tab_ai">AI</string>
-    <string name="feeds_feed_name">Ime vira</string>
+    <string name="feeds_feed_name">Ime kanala</string>
     <string name="feeds_save_name">Shrani ime</string>
     <string name="feeds_banner">Pasica</string>
-    <string name="feeds_banner_description">Neobvezna markdown pasica, prikazana na vrhu vašega vira.</string>
+    <string name="feeds_banner_description">Neobvezna markdown pasica, prikazana na vrhu vašega kanala.</string>
     <string name="feeds_clear">Počisti</string>
-    <string name="feeds_delete_feed">Izbriši vir</string>
+    <string name="feeds_delete_feed">Izbriši kanal</string>
     <string name="feeds_no_members">Brez članov</string>
     <string name="feeds_user">Uporabnik</string>
     <string name="feeds_access_no_groups">Ni razpoložljivih skupin</string>
@@ -55,7 +55,7 @@
     <string name="feeds_source_url">URL</string>
     <string name="feeds_source_type">Vrsta</string>
     <string name="feeds_source_type_rss">RSS</string>
-    <string name="feeds_source_type_feed_posts">Mochi vir</string>
+    <string name="feeds_source_type_feed_posts">Mochi kanal</string>
     <string name="feeds_source_type_feed_memories">Spomini</string>
     <string name="feeds_remove_source">Odstrani vir?</string>
     <string name="feeds_suggested_credibility_accept">Sprejmi</string>
@@ -65,18 +65,18 @@
     <string name="feeds_ai_mode_off">Onemogočeno</string>
     <string name="feeds_ai_mode_tag">Označi</string>
     <string name="feeds_ai_mode_tag_deduplicate">Označi + odstrani dvojnike</string>
-    <string name="feeds_feed_not_found">Vir ni najden</string>
+    <string name="feeds_feed_not_found">Kanal ni najden</string>
     <string name="feeds_post_not_found">Objave ni mogoče najti</string>
-    <string name="feeds_post_select_feed">Izberite vir</string>
+    <string name="feeds_post_select_feed">Izberite kanal</string>
     <string name="feeds_post_empty_content">Vnesite besedilo ali pripnite datoteko</string>
-    <string name="feeds_settings_feed_renamed">Vir preimenovan</string>
+    <string name="feeds_settings_feed_renamed">Kanal preimenovan</string>
     <string name="feeds_settings_banner_saved">Pasica shranjena</string>
     <string name="feeds_settings_source_added">Vir dodan</string>
     <string name="feeds_settings_source_updated">Vir posodobljen</string>
     <string name="feeds_settings_source_removed">Vir odstranjen</string>
     <string name="feeds_settings_source_polling">Poizvedovanje vira…</string>
     <string name="feeds_settings_access_updated">Dostop posodobljen</string>
-    <string name="feeds_settings_access_revoked">Dostop preklican</string>
+    <string name="feeds_settings_access_revoked">Dostop odvzet</string>
     <string name="feeds_settings_member_removed">Član odstranjen</string>
     <string name="feeds_settings_ai_mode_updated">Način UI posodobljen</string>
     <string name="feeds_settings_ai_account_updated">Račun UI posodobljen</string>
@@ -86,8 +86,8 @@
     <string name="feeds_move_up">Premakni navzgor</string>
     <string name="feeds_move_down">Premakni navzdol</string>
 
-    <string name="notification_channel_feeds">Obvestila virov</string>
-    <string name="feeds_search_placeholder">Iskanje virov ali prilepite URL…</string>
+    <string name="notification_channel_feeds">Obvestila kanalov</string>
+    <string name="feeds_search_placeholder">Iskanje kanalov ali prilepite URL…</string>
     <string name="feeds_url_result">Rezultat URL-ja</string>
     <string name="feeds_search_results">Rezultati iskanja</string>
     <string name="feeds_unread_only">Samo neprebrano</string>
@@ -104,16 +104,16 @@
     <string name="feeds_replying_to_author">Odgovor na %1$s</string>
     <string name="feeds_attach_file">Priloži datoteko</string>
     <string name="feeds_file">Datoteka</string>
-    <string name="feeds_select_feed">Izberite vir</string>
-    <string name="feeds_loading_feeds">Nalaganje virov…</string>
+    <string name="feeds_select_feed">Izberite kanal</string>
+    <string name="feeds_loading_feeds">Nalaganje kanalov…</string>
     <string name="feeds_sources_title_named">Viri za %1$s</string>
-    <string name="feeds_delete_feed_confirm">S tem boste trajno izbrisali vir in vse njegove objave. Tega ni mogoče razveljaviti.</string>
+    <string name="feeds_delete_feed_confirm">S tem boste trajno izbrisali kanal in vse njegove objave. Tega ni mogoče razveljaviti.</string>
     <string name="feeds_clipboard_label_rss">URL RSS</string>
     <string name="feeds_source_never_fetched">Nikoli preneseno</string>
     <string name="feeds_source_poll">Anketa</string>
     <string name="feeds_source_transform">AI preoblikovanje</string>
-    <string name="feeds_remove_source_confirm">Odstrani \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Izbriši tudi uvožene objave</string>
+    <string name="feeds_remove_source_confirm">S tem se bo ustavil uvoz vsebine iz \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Izbriši tudi objave, uvožene iz tega vira</string>
     <string name="feeds_suggested_credibility_title">Predlagana verodostojnost</string>
     <string name="feeds_suggested_credibility_body">Mochi predlaga verodostojnost %1$d. Sprejmete?</string>
     <string name="feeds_suggested_credibility_keep">Obdrži trenutno</string>
@@ -159,7 +159,7 @@
     <string name="feeds_access_subject_authenticated">Overjeni uporabniki</string>
     <string name="feeds_markdown_supported">Markdown podprt</string>
     <string name="feeds_permission_deny">Zavrni</string>
-    <string name="feeds_rss_feed">RSS vir</string>
+    <string name="feeds_rss_feed">RSS kanal</string>
     <string name="feeds_notifications_post">Nove objave</string>
     <string name="feeds_follow_thread">Spremljaj nit</string>
     <string name="feeds_unfollow_thread">Prenehaj spremljati nit</string>
@@ -174,11 +174,11 @@
     <string name="feeds_rss_mode_posts_comments">Objave in komentarji</string>
     <string name="feeds_access_add_title">Dodaj dostop</string>
     <string name="feeds_permission_request_message">%1$s zahteva naslednje dovoljenje:</string>
-    <string name="feeds_allow_search">Dovoli vsem iskanje vira</string>
+    <string name="feeds_allow_search">Dovoli vsem iskanje kanala</string>
     <string name="feeds_post_content">Vsebina objave</string>
     <string name="feeds_enable_memories">Omogoči spomine</string>
     <string name="feeds_permission_request_title">Zahteva za dovoljenje</string>
-    <string name="feeds_unsubscribe_confirm">Odjava od vira?</string>
+    <string name="feeds_unsubscribe_confirm">Odjava od kanala?</string>
     <string name="feeds_settings_title">Nastavitve %1$s</string>
     <string name="feeds_source_transform_help">Pustite prazno, da onemogočite.</string>
     <string name="feeds_settings_name_cancel_cd">Prekliči urejanje</string>
@@ -189,9 +189,9 @@
     <string name="feeds_create_first_post">Ustvari prvo objavo</string>
     <string name="feeds_rss_mode_posts">Objave</string>
     <string name="feeds_source_last_checked">Nazadnje preverjeno %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">Odjavi se od vira</string>
+    <string name="feeds_settings_unsubscribe_section">Odjavi se od kanala</string>
     <string name="feeds_source_transform_hint">Prevedi v angleščino in prikaži kot alineje.</string>
-    <string name="feeds_source_url_hint_feed">ID entitete ali prstni odtis vira</string>
+    <string name="feeds_source_url_hint_feed">ID entitete ali prstni odtis kanala</string>
     <string name="feeds_source_credibility_label">Verodostojnost</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d ura</item>
@@ -208,7 +208,7 @@
     <string name="feeds_source_polling_interval">Preverjanje vsakih %1$s</string>
     <string name="feeds_access_level_react_full">React in pogled</string>
     <string name="feeds_permission_allow">Dovoli</string>
-    <string name="feeds_unsubscribe_confirm_message">Ne boš več prejemal posodobitev iz tega vira. Kadar koli se lahko znova naročiš.</string>
+    <string name="feeds_unsubscribe_confirm_message">Ne boš več prejemal posodobitev iz tega kanala. Kadar koli se lahko znova naročiš.</string>
     <string name="feeds_access_select_rule">Izberite pravilo dostopa</string>
     <string name="feeds_access_authenticated_desc">Vsi, ki so prijavljeni</string>
     <string name="feeds_banner_hint">Dobrodošli na tem forumu…</string>
@@ -218,7 +218,7 @@
     <string name="feeds_ai_prompt_custom">Po meri</string>
     <string name="feeds_ai_prompt_variables">Spremenljivke: %1$s</string>
     <string name="feeds_link">Povezava</string>
-    <string name="feeds_share_link_title">Povezava vira</string>
+    <string name="feeds_share_link_title">Povezava kanala</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$d komentar</item>
         <item quantity="two">%1$d komentarja</item>
@@ -239,12 +239,12 @@
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
         <item quantity="one">pred %1$d letom danes</item>
-        <item quantity="two">pred %1$d leti danes</item>
+        <item quantity="two">pred %1$d letoma danes</item>
         <item quantity="few">pred %1$d leti danes</item>
         <item quantity="other">pred %1$d leti danes</item>
     </plurals>
     <string name="feeds_block">Blokiraj</string>
-    <string name="feeds_removed_from_feed">Odstranjeni ste bili iz tega vira</string>
-    <string name="feeds_feed_deleted">Ta vir je bil izbrisan</string>
+    <string name="feeds_removed_from_feed">Odstranjeni ste bili iz tega kanala</string>
+    <string name="feeds_feed_deleted">Ta kanal je bil izbrisan</string>
     <string name="feeds_settings_member_blocked">Član je blokiran</string>
 </resources>

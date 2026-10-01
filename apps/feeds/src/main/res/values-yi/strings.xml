@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">מקור אַראָפּגענומען</string>
     <string name="feeds_settings_source_polling">ווערט פערזיכטער קוועלע…</string>
     <string name="feeds_settings_access_updated">צוטריט באַנײַט</string>
-    <string name="feeds_settings_access_revoked">צוגאנג צונופגענומען</string>
+    <string name="feeds_settings_access_revoked">צוטריט צוריקגענומען</string>
     <string name="feeds_settings_member_removed">מיטגליד אַראָפּגענומען</string>
     <string name="feeds_settings_ai_mode_updated">AI אופנעיחטונג אפגעטעט זיך</string>
     <string name="feeds_settings_ai_account_updated">AI חשבון אפגעטעט זיך</string>
@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">קײן מאָל נישט געהאָלט</string>
     <string name="feeds_source_poll">פֿרעגן</string>
     <string name="feeds_source_transform">AI טראַנספֿאָרמירן</string>
-    <string name="feeds_remove_source_confirm">אַראָפּנעמען \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">אױך אױסמעקן אַרײַנגעבראַכטע פּאָסטן</string>
+    <string name="feeds_remove_source_confirm">דאָס וועט אָפּשטעלן דעם אימפּאָרט פֿון אינהאַלט פֿון \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">אויך אויסמעקן פּאָסטן וואָס זענען אַרײַנגעבראַכט געוואָרן פֿון דעם מקור</string>
     <string name="feeds_suggested_credibility_title">פֿאָרגעלײגטע גלױבװירדיקײט</string>
     <string name="feeds_suggested_credibility_body">Mochi לײגט פֿאָר אַ גלױבװירדיקײט פֿון %1$d. אָננעמען?</string>
     <string name="feeds_suggested_credibility_keep">האַלטן איצטיק</string>

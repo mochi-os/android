@@ -45,6 +45,8 @@
     <string name="route_delete_title">رستو ختم ڪجي؟</string>
     <string name="route_path">رستو</string>
     <string name="route_method">طريقو</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s ← %2$s</string>
     <string name="route_method_app">ايپ</string>
     <string name="route_method_entity">اينٽٽي</string>
     <string name="route_method_redirect">ريڊائريڪٽ</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org تان ڊائون لوڊ ڪريو</string>
     <string name="system_status_copy">ڪاپي ڪريو</string>
     <string name="system_status_peers">هم پايا</string>
-    <string name="system_status_known">سڃاتل</string>
+    <string name="system_status_peers_totals">سڃاتل %1$s · ڳنڍيل %2$s · نشريات ميش %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">سڃاتل %1$s · ڳنڍيل %2$s</string>
     <string name="system_status_peer_connected">ڳنڍيل</string>
     <string name="system_status_peer_disconnected">ڳنڍيل ناهي</string>
     <string name="system_status_peer_queued">قطار ۾ پيغام</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">اوهان وري تصديق ڪندڙ جي ڪوڊ سان سائن ان نه ڪري سگهندا.</string>
     <string name="account_recovery_none">بحالي جا ڪي ڪوڊ نه ٺاهيا ويا.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d بحالي ڪوڊ باقي آهي.</item>
-        <item quantity="other">%1$d بحالي ڪوڊ باقي آهن.</item>
+        <item quantity="one">%1$s بحالي ڪوڊ باقي آهي.</item>
+        <item quantity="other">%1$s بحالي ڪوڊ باقي آهن.</item>
     </plurals>
     <string name="account_recovery_generate">ڪوڊ ٺاهيو</string>
     <string name="account_recovery_regenerate">ڪوڊ ٻيهر ٺاهيو</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">آخري استعمال %1$s</string>
     <string name="route_delete_message">هي رستي \"%1$s\" لاء روٽ هٽائيندو.</string>
     <string name="route_empty">ڪي به رستا ترتيب ڏنل نه آهن.</string>
-    <string name="route_meta">اوليت %1$d · %2$s</string>
+    <string name="route_meta">اوليت %1$s · %2$s</string>
     <string name="interests_search_placeholder">شامل ڪرڻ لاء موضوع ڳوليو…</string>
     <string name="interests_empty">اڃا تائين ڪا دلچسپي نه آهي.</string>
     <string name="interests_summary_regenerate">خلاصو ٻيهر ٺاهيو</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">سڀ سيشن رد ڪجن؟</string>
     <string name="system_users_revoke_all_message">هن يوزر جا سڀ فعال سيشن سائن آئوٽ ٿيندا.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">%3$d يوزر مان %1$d–%2$d ڏيکاري رهيو آهي</item>
-        <item quantity="other">%3$d يوزرز مان %1$d–%2$d ڏيکاري رهيو آهي</item>
+        <item quantity="one">%3$s يوزر مان %1$s–%2$s ڏيکاري رهيو آهي</item>
+        <item quantity="other">%3$s يوزرز مان %1$s–%2$s ڏيکاري رهيو آهي</item>
     </plurals>
     <string name="account_title">اڪائونٽ</string>
     <string name="account_section_identity">سڃاڻپ</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS تصديق ڪريو</string>
     <string name="settings_home_domains">ڊومينز</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">ٽيسٽ %1$d منزل ڏانھن موڪليو ويو</item>
-        <item quantity="other">ٽيسٽ %1$d منزلن ڏانھن موڪليو ويو</item>
+        <item quantity="one">ٽيسٽ %1$s منزل ڏانھن موڪليو ويو</item>
+        <item quantity="other">ٽيسٽ %1$s منزلن ڏانھن موڪليو ويو</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$d سيشن منسوخ ٿيو</item>
-        <item quantity="other">%1$d سيشن منسوخ ٿيا</item>
+        <item quantity="one">%1$s سيشن منسوخ ٿيو</item>
+        <item quantity="other">%1$s سيشن منسوخ ٿيا</item>
     </plurals>
     <string name="login_title">لاگ ان</string>
     <string name="login_section_methods">لاگ ان جا طريقا</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">عوامي</string>
     <string name="system_status_reachability_private">نجي</string>
     <string name="system_status_reachability_unknown">اڻڄاتل</string>
-    <string name="system_status_relay">رلي ذريعي</string>
-    <string name="system_status_mesh">نشريات ميش</string>
+    <string name="system_status_reachability_relay">%1$s · ريلي ذريعي</string>
     <string name="system_status_broadcast">آخري نشريات</string>
     <string name="system_status_queued_broadcasts">قطار ۾ نشرياتي پيغام</string>
     <string name="system_setting_hostname_publish">ٻين سرورن کي هوسٽ جو نالو ۽ ڊومينز جو اعلان ڪريو</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">آخري ڀيرو ڏٺو ويو %1$s</string>
     <string name="notifprefs_device_app">%1$s · ايپ</string>
     <string name="notifprefs_device_push">%1$s · پش</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">آزمائش %2$d منزل مان %1$d ڏانهن موڪلي وئي</item>
-        <item quantity="other">آزمائش %2$d منزلن مان %1$d ڏانهن موڪلي وئي</item>
+        <item quantity="one">آزمائش %2$s منزل مان %1$s ڏانهن موڪلي وئي</item>
+        <item quantity="other">آزمائش %2$s منزلن مان %1$s ڏانهن موڪلي وئي</item>
     </plurals>
     <string name="notifprefs_test_none">ڪي منزلون ترتيب نه ڏنيون ويون</string>
     <string name="notifprefs_transport_fcm">Android پش</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">تبديليون رد ڪجن؟</string>
     <string name="system_documents_discard">رد ڪريو</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d ڪامياب</item>
-        <item quantity="other">%1$d ڪامياب</item>
+        <item quantity="one">%1$s ڪامياب</item>
+        <item quantity="other">%1$s ڪامياب</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d ناڪام</item>
-        <item quantity="other">%1$d ناڪام</item>
+        <item quantity="one">%1$s ناڪام</item>
+        <item quantity="other">%1$s ناڪام</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d رزرويشن</item>
-        <item quantity="other">%1$d / %2$d رزرويشن</item>
+        <item quantity="one">%1$s / %2$s رزرويشن</item>
+        <item quantity="other">%1$s / %2$s رزرويشن</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d سرڪٽ</item>
-        <item quantity="other">%1$d سرڪٽ</item>
+        <item quantity="one">%1$s سرڪٽ</item>
+        <item quantity="other">%1$s سرڪٽ</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d رد ٿيل</item>
-        <item quantity="other">%1$d رد ٿيل</item>
+        <item quantity="one">%1$s رد ٿيل</item>
+        <item quantity="other">%1$s رد ٿيل</item>
     </plurals>
 </resources>

@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">Kaynak kaldırıldı</string>
     <string name="feeds_settings_source_polling">Kaynak yoklaınıyor…</string>
     <string name="feeds_settings_access_updated">Erişim güncellendi</string>
-    <string name="feeds_settings_access_revoked">Erişim iptal edildi</string>
+    <string name="feeds_settings_access_revoked">Erişim kaldırıldı</string>
     <string name="feeds_settings_member_removed">Üye kaldırıldı</string>
     <string name="feeds_settings_ai_mode_updated">AI modu güncellendi</string>
     <string name="feeds_settings_ai_account_updated">AI hesabı güncellendi</string>
@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">Hiç alınmadı</string>
     <string name="feeds_source_poll">Sorgula</string>
     <string name="feeds_source_transform">AI dönüşümü</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" kaldırılsın mı?</string>
-    <string name="feeds_remove_also_delete_posts">İçe aktarılan gönderiler de silinsin</string>
+    <string name="feeds_remove_source_confirm">Bu, \"%1$s\" kaynağından içerik aktarımını durduracak.</string>
+    <string name="feeds_remove_also_delete_posts">Bu kaynaktan içe aktarılan gönderiler de silinsin</string>
     <string name="feeds_suggested_credibility_title">Önerilen güvenilirlik</string>
     <string name="feeds_suggested_credibility_body">Mochi %1$d güvenilirlik öneriyor. Kabul edilsin mi?</string>
     <string name="feeds_suggested_credibility_keep">Mevcut değeri koru</string>
@@ -167,7 +167,7 @@
     <string name="feeds_settings_name_edit_cd">Adı düzenle</string>
     <string name="feeds_settings_section_identity">Kimlik</string>
     <string name="feeds_unsubscribe">Abonelikten çık</string>
-    <string name="feeds_unsubscribed">Abonelik iptal edildi</string>
+    <string name="feeds_unsubscribed">Abonelikten çıkıldı</string>
     <string name="feeds_access_level_comment_full">Yorum yap, tepki ver ve görüntüle</string>
     <string name="feeds_rss_mode_posts_comments">Gönderiler ve yorumlar</string>
     <string name="feeds_access_add_title">Erişim ekle</string>
@@ -187,7 +187,7 @@
     <string name="feeds_create_first_post">İlk gönderiyi oluştur</string>
     <string name="feeds_rss_mode_posts">Gönderiler</string>
     <string name="feeds_source_last_checked">Son kontrol %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">Akış aboneliğini iptal et</string>
+    <string name="feeds_settings_unsubscribe_section">Akış aboneliğinden çık</string>
     <string name="feeds_source_transform_hint">İngilizceye çevir ve madde işaretleri olarak göster.</string>
     <string name="feeds_source_url_hint_feed">Akış varlık kimliği veya parmak izi</string>
     <string name="feeds_source_credibility_label">Güvenilirlik</string>

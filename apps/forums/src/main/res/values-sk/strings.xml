@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">Moderovať</string>
     <string name="forums_members_search">Filtrovať členov</string>
     <string name="forums_banner_description">Markdown zobrazený v hornej časti fóra.</string>
-    <string name="forums_banner_placeholder">Vitajte na tomto fóre…</string>
+    <string name="forums_banner_placeholder">Zadajte text bannera (podporuje Markdown)…</string>
     <string name="forums_ai_mode_label">Režim: %1$s</string>
     <string name="forums_ai_mode_heading">Režim AI</string>
     <string name="forums_ai_mode_off">Vypnuté</string>
@@ -244,7 +244,7 @@
     <string name="forums_moderation_unit_days">dni</string>
     <string name="forums_settings_banner_saved">Banner uložený</string>
     <string name="forums_settings_access_updated">Prístup aktualizovaný</string>
-    <string name="forums_settings_access_revoked">Prístup zrušený</string>
+    <string name="forums_settings_access_revoked">Prístup odvolaný</string>
     <string name="forums_settings_member_removed">Člen odstránený</string>
     <string name="forums_settings_prompt_saved">Prompt uložený</string>
     <string name="forums_settings_section_identity">Identita</string>

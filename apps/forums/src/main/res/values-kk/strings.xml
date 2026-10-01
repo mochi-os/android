@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">Модерациялау</string>
     <string name="forums_members_search">Мүшелерді сүзу</string>
     <string name="forums_banner_description">Форумның жоғарғы жағында көрсетілетін Markdown.</string>
-    <string name="forums_banner_placeholder">Бұл форумға қош келдіңіз…</string>
+    <string name="forums_banner_placeholder">Баннер мәтінін енгізіңіз (Markdown қолдау көрсетіледі)…</string>
     <string name="forums_ai_mode_label">Режим: %1$s</string>
     <string name="forums_ai_mode_heading">AI режимі</string>
     <string name="forums_ai_mode_off">Өшірілген</string>

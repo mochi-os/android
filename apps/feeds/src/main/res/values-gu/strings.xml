@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">સ્રોત દૂર કર્યો</string>
     <string name="feeds_settings_source_polling">સ્રોત પોલ કરી રાષ્યુંછે…</string>
     <string name="feeds_settings_access_updated">ઍક્સેસ અપડેટ થયું</string>
-    <string name="feeds_settings_access_revoked">એક્સેસ રદ કર્યો</string>
+    <string name="feeds_settings_access_revoked">ઍક્સેસ પાછું ખેંચ્યું</string>
     <string name="feeds_settings_member_removed">સભ્ય દૂર કર્યા</string>
     <string name="feeds_settings_ai_mode_updated">AI મોડ અપડેટ કર્યો</string>
     <string name="feeds_settings_ai_account_updated">AI ખાતું અપડેટ કર્યું</string>
@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">ક્યારેય મેળવ્યું નથી</string>
     <string name="feeds_source_poll">પોલ</string>
     <string name="feeds_source_transform">AI પરિવર્તન</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" દૂર કરવું છે?</string>
-    <string name="feeds_remove_also_delete_posts">આયાત કરેલી પોસ્ટ પણ કાઢી નાખો</string>
+    <string name="feeds_remove_source_confirm">આ \"%1$s\" માંથી સામગ્રીની આયાત બંધ કરશે.</string>
+    <string name="feeds_remove_also_delete_posts">આ સ્ત્રોતમાંથી આયાત કરેલી પોસ્ટ પણ કાઢી નાખો</string>
     <string name="feeds_suggested_credibility_title">સૂચવેલી વિશ્વસનીયતા</string>
     <string name="feeds_suggested_credibility_body">Mochi %1$d ની વિશ્વસનીયતા સૂચવે છે. સ્વીકારશો?</string>
     <string name="feeds_suggested_credibility_keep">વર્તમાન રાખો</string>

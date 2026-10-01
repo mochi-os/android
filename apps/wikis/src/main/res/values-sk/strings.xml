@@ -41,7 +41,7 @@
     <string name="wikis_rss_copied">URL RSS skopírovaná do schránky</string>
     <string name="wikis_rss_failed">Nepodarilo sa získať RSS token</string>
     <string name="wikis_rss_revoke">Odvolať prístup</string>
-    <string name="wikis_rss_revoked">Prístup RSS zrušený</string>
+    <string name="wikis_rss_revoked">Prístup RSS odvolaný</string>
     <string name="wikis_find_title">Nájsť wiki</string>
     <string name="wikis_find_no_results">Nenašli sa žiadne wiki</string>
     <string name="wikis_find_recommended_section">Odporúčané wiki</string>
@@ -333,10 +333,10 @@
         <item quantity="other">%d stránok s týmto tagom</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Nájdené %1$d výsledok pre „%2$s“</item>
+        <item quantity="one">Nájdený %1$d výsledok pre „%2$s“</item>
         <item quantity="few">Nájdené %1$d výsledky pre „%2$s“</item>
         <item quantity="many">Nájdené %1$d výsledkov pre „%2$s“</item>
-        <item quantity="other">Nájdené %1$d výsledkov pre „%2$s“</item>
+        <item quantity="other">Nájdených %1$d výsledkov pre „%2$s“</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Popis sa nepodarilo uložiť</string>
     <string name="wikis_attachments_upload_types">Podporované súbory: obrázky, PDF, DOC, DOCX, TXT a MD.</string>
@@ -346,7 +346,7 @@
     <string name="wikis_rss_exists">Táto URL kanála už bola vydaná a nedá sa znova zobraziť.</string>
     <plurals name="wikis_comments_truncated">
         <item quantity="one">Zobrazuje sa prvý %1$d komentár.</item>
-        <item quantity="few">Zobrazuje sa prvých %1$d komentárov.</item>
+        <item quantity="few">Zobrazujú sa prvé %1$d komentáre.</item>
         <item quantity="many">Zobrazuje sa prvých %1$d komentárov.</item>
         <item quantity="other">Zobrazuje sa prvých %1$d komentárov.</item>
     </plurals>

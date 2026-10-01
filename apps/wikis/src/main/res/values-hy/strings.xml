@@ -41,7 +41,7 @@
     <string name="wikis_rss_copied">RSS URL-ը պատճենվեց սեղմատախտակին</string>
     <string name="wikis_rss_failed">Չհաջողվեց ստանալ RSS տոկենը</string>
     <string name="wikis_rss_revoke">Հետ վերցնել մուտքը</string>
-    <string name="wikis_rss_revoked">RSS մուտքը չեղարկվել է</string>
+    <string name="wikis_rss_revoked">RSS մուտքը հետ է վերցվել</string>
     <string name="wikis_find_title">Գտնել wiki-ներ</string>
     <string name="wikis_find_no_results">Wiki-ներ չեն գտնվել</string>
     <string name="wikis_find_recommended_section">Առաջարկվող wiki-ներ</string>
@@ -74,7 +74,7 @@
     <string name="wikis_editor_save">Պահպանել</string>
     <string name="wikis_editor_saving">Պահպանում…</string>
     <string name="wikis_editor_create">Ստեղծել էջ</string>
-    <string name="wikis_editor_creating">Արժանահավատություն</string>
+    <string name="wikis_editor_creating">Ստեղծվում է…</string>
     <string name="wikis_editor_title_label">Վերնագիր</string>
     <string name="wikis_editor_slug_label">Էջի URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
@@ -132,7 +132,7 @@
     <string name="wikis_redirect_delete_confirm_title">Ջնջե՞լ վերահղումը։</string>
     <string name="wikis_tags_title">Բոլոր պիտակները</string>
     <string name="wikis_tags_empty_title">Թեգեր չեն գտնվել</string>
-    <string name="wikis_tags_empty_description">Ավելացնել թիմի անդամ</string>
+    <string name="wikis_tags_empty_description">Ավելացրեք պիտակներ՝ ձեր վիքիի էջերը խմբավորելու համար։</string>
     <string name="wikis_tag_pages_empty_title">Այս թեգով էջեր չեն գտնվել</string>
     <string name="wikis_tag_pages_empty_description">Փորձեք այլ թեգ:</string>
     <string name="wikis_tag_pages_all_tags_action">Բոլոր պիտակները</string>
@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">Վերանվանվում է…</string>
     <string name="wikis_rename_page_success">Էջը վերանվանվեց</string>
     <string name="wikis_history_viewing">Դիտվում է %1$s-ի պատմությունը, ընթացիկ տարբերակը՝ %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">Տարբերակ %1$d</string>
     <string name="wikis_search_pages_placeholder">Որոնել էջեր վերնագրով կամ բովանդակությամբ…</string>
     <string name="wikis_search_no_results">«%1$s»-ի համար էջեր չեն գտնվել։ Փորձեք այլ որոնման բառեր։</string>
     <string name="wikis_search_updated">Թարմացվեց %1$s</string>

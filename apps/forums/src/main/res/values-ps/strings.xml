@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">اعتدال</string>
     <string name="forums_members_search">د غړو فلټر</string>
     <string name="forums_banner_description">مارک‌ډاون چې د فورم په سر کې ښودل کیږي.</string>
-    <string name="forums_banner_placeholder">دې فورم ته ښه راغلاست…</string>
+    <string name="forums_banner_placeholder">د بینر متن ولیکئ (مارک‌ډاون ملاتړ کیږي)…</string>
     <string name="forums_ai_mode_label">حالت: %1$s</string>
     <string name="forums_ai_mode_heading">د AI حالت</string>
     <string name="forums_ai_mode_off">غیرفعال شوی</string>
@@ -185,7 +185,7 @@
     <string name="forums_settings_delete_message">دا به فورم او ټول پوسټونه یې په دایمي توګه ړنګ کړي. دا نه شي بېرته راګرځیدلی.</string>
 
     <string name="forums_tag_interest_up">دلچسپي ډیره کړه</string>
-    <string name="forums_tag_interest_down">د سود کمول</string>
+    <string name="forums_tag_interest_down">د علاقې کمول</string>
     <string name="forums_tag_interest_remove">علاقه لرې کړئ</string>
     <string name="forums_access_tab_users">کاروونکي</string>
     <string name="forums_access_tab_groups">ګروپونه</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">ورځې</string>
     <string name="forums_settings_banner_saved">پلکات حفظ شو</string>
     <string name="forums_settings_access_updated">لاسرسی نوی شو</string>
-    <string name="forums_settings_access_revoked">لاسرسی پرېګدل و</string>
+    <string name="forums_settings_access_revoked">لاسرسی بیرته واخیستل شو</string>
     <string name="forums_settings_member_removed">غړی لیرې شو</string>
     <string name="forums_settings_prompt_saved">پرامپټ خوندي شو</string>
     <string name="forums_settings_section_identity">هویت</string>
@@ -293,7 +293,7 @@
     <string name="forums_settings_ai_updated">د AI تنظیمات تازه شول</string>
     <string name="forums_settings_forum_renamed">د فورم نوم بدل شو</string>
     <string name="forums_settings_name_clear_cd">نوم پاک کړئ</string>
-    <string name="forums_settings_unsubscribe_section">له فورم څخه ګډون لغوه کړئ</string>
+    <string name="forums_settings_unsubscribe_section">د فورم له ګډون وتل</string>
     <string name="forums_share_link_title">د فورم لینک</string>
     <string name="forums_find_found_by_url">د URL له لارې وموندل شو</string>
     <string name="forums_moderation_pending_posts">پاتې پوسټونه (%1$d)</string>

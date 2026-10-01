@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">Endurnefni…</string>
     <string name="wikis_rename_page_success">Síða endurnefnd</string>
     <string name="wikis_history_viewing">Skoða feril fyrir %1$s, núverandi útgáfa %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">Útgáfa %1$d</string>
     <string name="wikis_search_pages_placeholder">Leita að síðum eftir titli eða efni…</string>
     <string name="wikis_search_no_results">Engar síður fundust fyrir „%1$s“. Prófaðu önnur leitarorð.</string>
     <string name="wikis_search_updated">Uppfært %1$s</string>

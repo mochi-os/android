@@ -557,7 +557,7 @@
     <string name="market_messages_send_failed">Impossible d\'envoyer le message</string>
     <string name="market_messages_thread_title">Conversation</string>
     <string name="market_messages_unread_badge">%1$d non lus</string>
-    <string name="market_price_from">à partir de %1$s</string>
+    <string name="market_price_from">À partir de %1$s</string>
     <string name="market_price_high_bid">Enchère la plus haute : %1$s</string>
     <string name="market_price_instant_buy">achat immédiat : %1$s</string>
     <string name="market_price_per_month">%1$s / mois</string>

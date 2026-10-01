@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">Ìṣàkóso Ìwọlé</string>
     <string name="crm_settings_not_set">A kò ṣètò</string>
     <string name="crm_settings_access_updated">A ti ṣe àtúnyẹ̀wò ìwọlé</string>
-    <string name="crm_settings_access_revoked">Ati gba aṣèsẹbí</string>
+    <string name="crm_settings_access_revoked">A ti gba ìwọlé padà</string>
     <string name="crm_people_search">Wa awọn eniyan</string>
     <string name="crm_access_tab_other">Mìíràn</string>
     <string name="crm_access_select_group">Yan ẹgbẹ́ kan</string>

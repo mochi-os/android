@@ -45,6 +45,8 @@
     <string name="route_delete_title">လမ်းကြောင်း ဖျက်မလား?</string>
     <string name="route_path">လမ်းကြောင်း</string>
     <string name="route_method">နည်းလမ်း</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">အက်ပ်</string>
     <string name="route_method_entity">အရာ</string>
     <string name="route_method_redirect">လမ်းကြောင်းလွှဲ</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org မှ ဒေါင်းလုဒ်လုပ်ပါ</string>
     <string name="system_status_copy">ကူးမည်</string>
     <string name="system_status_peers">ပီယာများ</string>
-    <string name="system_status_known">သိရှိ</string>
+    <string name="system_status_peers_totals">သိရှိ %1$s · ချိတ်ဆက်ပြီး %2$s · ထုတ်လွှင့်မှု မက်ရှ် %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">သိရှိ %1$s · ချိတ်ဆက်ပြီး %2$s</string>
     <string name="system_status_peer_connected">ချိတ်ဆက်ပြီး</string>
     <string name="system_status_peer_disconnected">ချိတ်ဆက်မှု ပြတ်တောက်ပြီး</string>
     <string name="system_status_peer_queued">တန်းစီထားသော မက်ဆေ့ဂျ်များ</string>
@@ -216,7 +219,7 @@
     <string name="account_totp_disable_message">စစ်မှန်ကြောင်းအတည်ပြုသူ ကုဒ်ဖြင့် ထပ်မံ ဝင်နိုင်တော့မည် မဟုတ်ပါ။</string>
     <string name="account_recovery_none">ပြန်လည်ရယူသည့် ကုဒ်များ မထုတ်ထားပါ။</string>
     <plurals name="account_recovery_count">
-        <item quantity="other">ပြန်လည်ရယူသည့် ကုဒ် %1$d ခု ကျန်ပါသည်။</item>
+        <item quantity="other">ပြန်လည်ရယူသည့် ကုဒ် %1$s ခု ကျန်ပါသည်။</item>
     </plurals>
     <string name="account_recovery_generate">ကုဒ်များ ထုတ်ပါ</string>
     <string name="account_recovery_regenerate">ကုဒ်များ ပြန်ထုတ်ပါ</string>
@@ -233,7 +236,7 @@
     <string name="account_last_used">နောက်ဆုံး အသုံးပြုခဲ့သည် %1$s</string>
     <string name="route_delete_message">ဤသည် လမ်းကြောင်း \"%1$s\" အတွက် လမ်းကြောင်းကို ဖယ်ရှားပါမည်။</string>
     <string name="route_empty">စီစဉ်ထားသော လမ်းကြောင်းများ မရှိပါ။</string>
-    <string name="route_meta">ဦးစားပေး %1$d · %2$s</string>
+    <string name="route_meta">ဦးစားပေး %1$s · %2$s</string>
     <string name="interests_search_placeholder">ထည့်ရန် ခေါင်းစဉ်များ ရှာဖွေပါ…</string>
     <string name="interests_empty">စိတ်ဝင်စားမှုများ မရှိသေးပါ။</string>
     <string name="interests_summary_regenerate">အကျဉ်းချုပ် ပြန်ထုတ်</string>
@@ -267,7 +270,7 @@
     <string name="system_users_revoke_all_title">အစည်းအဝေးအားလုံး ပယ်ဖျက်မလား?</string>
     <string name="system_users_revoke_all_message">ဤအသုံးပြုသူ၏ လှုပ်ရှားနေသော အစည်းအဝေး အားလုံးမှ ထွက်သွားပါမည်။</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="other">အသုံးပြုသူ %3$d ဦးအနက် %1$d–%2$d ကို ပြသနေသည်</item>
+        <item quantity="other">အသုံးပြုသူ %3$s ဦးအနက် %1$s–%2$s ကို ပြသနေသည်</item>
     </plurals>
     <string name="account_title">အကောင့်</string>
     <string name="account_section_identity">ကိုယ်ပိုင်</string>
@@ -301,10 +304,10 @@
     <string name="domain_verify">DNS အတည်ပြုမည်</string>
     <string name="settings_home_domains">Domain များ</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="other">ဦးတည်ရာ %1$d ခုသို့ စမ်းသပ်ချက် ပို့ပြီး</item>
+        <item quantity="other">ဦးတည်ရာ %1$s ခုသို့ စမ်းသပ်ချက် ပို့ပြီး</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="other">Session %1$d ခုကို ရုပ်သိမ်းပြီး</item>
+        <item quantity="other">Session %1$s ခုကို ရုပ်သိမ်းပြီး</item>
     </plurals>
     <string name="login_title">ဝင်ရောက်ခြင်း</string>
     <string name="login_section_methods">လော့ဂ်အင်နည်းလမ်းများ</string>
@@ -335,8 +338,7 @@
     <string name="system_status_reachability_public">အများသုံး</string>
     <string name="system_status_reachability_private">သီးသန့်</string>
     <string name="system_status_reachability_unknown">မသိရသော</string>
-    <string name="system_status_relay">ထပ်ဆင့်ပို့မှု မှတဆင့်</string>
-    <string name="system_status_mesh">ထုတ်လွှင့်မှု မက်ရှ်</string>
+    <string name="system_status_reachability_relay">%1$s · ထပ်ဆင့်ပို့မှု မှတဆင့်</string>
     <string name="system_status_broadcast">နောက်ဆုံး ထုတ်လွှင့်မှု</string>
     <string name="system_status_queued_broadcasts">တန်းစီထားသော ထုတ်လွှင့်မက်ဆေ့ဂျ်များ</string>
     <string name="system_setting_hostname_publish">Host အမည်နှင့် ဒိုမိန်းများကို အခြားဆာဗာများသို့ ကြေညာရန်</string>
@@ -369,8 +371,10 @@
     <string name="accounts_device_seen">နောက်ဆုံးတွေ့ %1$s</string>
     <string name="notifprefs_device_app">%1$s · အက်ပ်</string>
     <string name="notifprefs_device_push">%1$s · တွန်းပို့</string>
+    <string name="notifprefs_destination_rss">RSS - %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="other">စမ်းသပ်မှုကို ဦးတည်ရာ %2$d ခုအနက် %1$d ခုသို့ ပို့ပြီးပါပြီ</item>
+        <item quantity="other">စမ်းသပ်မှုကို ဦးတည်ရာ %2$s ခုအနက် %1$s ခုသို့ ပို့ပြီးပါပြီ</item>
     </plurals>
     <string name="notifprefs_test_none">destination များ မသတ်မှတ်ထားပါ</string>
     <string name="notifprefs_transport_fcm">Android တွန်းပို့ အကြောင်းကြားချက်</string>
@@ -394,18 +398,18 @@
     <string name="system_documents_discard_title">အပြောင်းအလဲများကို ဖျက်ပစ်မလား။</string>
     <string name="system_documents_discard">ဖျက်ပစ်ရန်</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="other">%1$d အောင်မြင်</item>
+        <item quantity="other">%1$s အောင်မြင်</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="other">%1$d မအောင်မြင်</item>
+        <item quantity="other">%1$s မအောင်မြင်</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="other">%1$d / %2$d ကြိုတင်နေရာယူမှု</item>
+        <item quantity="other">%1$s / %2$s ကြိုတင်နေရာယူမှု</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="other">%1$d လမ်းကြောင်း</item>
+        <item quantity="other">%1$s လမ်းကြောင်း</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="other">%1$d ငြင်းပယ်</item>
+        <item quantity="other">%1$s ငြင်းပယ်</item>
     </plurals>
 </resources>

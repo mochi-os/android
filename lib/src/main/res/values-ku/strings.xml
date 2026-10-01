@@ -60,7 +60,7 @@
     <string name="notifications_empty">Tu agahdarî tune</string>
     <string name="notifications_empty_unread">Te hemû xwendin</string>
     <string name="notifications_tab_unread">Nexwendî</string>
-    <string name="notifications_tab_unread_count">Nexwendî (%1$d)</string>
+    <string name="notifications_tab_unread_count">Nexwendî (%1$s)</string>
     <string name="notifications_tab_all">Hemû</string>
     <string name="notifications_mark_all_read">Hemû wek xwendî nîşan bike</string>
     <string name="notifications_clear_all">Hemûyan paqij bike</string>
@@ -104,7 +104,7 @@
     <string name="settings_reset_to_defaults">Ber bi standardan ve veguhêze</string>
     <string name="settings_reset_confirm_title">Tercihan veguhêze?</string>
     <string name="settings_reset_confirm_message">Ev dê van tercîhan ji nû ve bo nirxên standard ên wan saz bike.</string>
-    <string name="settings_reset">Bişkojka veguhastinê</string>
+    <string name="settings_reset">Ji nû ve saz bike</string>
     <string name="settings_display_title">Xuyabûn</string>
     <string name="settings_display_reset">Ber bi standardan ve veguhêze</string>
     <string name="settings_display_reset_confirm_title">Pêşandanê vegerîne?</string>
@@ -302,9 +302,9 @@
     <string name="rss_revoke_confirm">Vekişîne</string>
     <string name="rss_revoke">Gihîştinê vekişîne</string>
     <string name="rss_revoke_title">Gihîştina RSS were vekişandin?</string>
-    <string name="rss_revoke_message">Her tiştê ku li vê xwarinê abone ye dê wergirtinê rawestîne. Piştre tu dikarî URLyeke nû jiber bigirî.</string>
-    <string name="rss_revoked">Gihîştina RSS betal kirin</string>
-    <string name="rss_revoke_failed">Betalkirina gihîştina RSS bi ser neket</string>
+    <string name="rss_revoke_message">Her tiştê ku li vê feedê abone ye dê wergirtinê rawestîne. Piştre tu dikarî URLyeke nû jiber bigirî.</string>
+    <string name="rss_revoked">Gihîştina RSS hate vekişandin</string>
+    <string name="rss_revoke_failed">Vekişandina gihîştina RSS bi ser neket</string>
     <string name="game_empty_title">Hêj tu lîstik tune</string>
     <string name="game_select_title">Lîstikekê hilbijêre</string>
     <string name="game_select_subtitle">Ji darikê kêlekê lîstikekê hilbijêre an jî ya nû dest pê bike.</string>

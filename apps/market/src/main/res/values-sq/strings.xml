@@ -271,7 +271,7 @@
     <string name="market_onboarding_dismiss">Hidhe</string>
     <string name="market_onboarding_title">Mirë se vini në Market</string>
     <string name="market_open_sidebar">Hap menynë</string>
-    <string name="market_price_from">nga %1$s</string>
+    <string name="market_price_from">Nga %1$s</string>
     <string name="market_price_per_month">%1$s / muaj</string>
     <string name="market_price_per_year">%1$s / vit</string>
     <string name="market_profile_biography">Rreth</string>

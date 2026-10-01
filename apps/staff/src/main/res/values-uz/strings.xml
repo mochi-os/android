@@ -5,8 +5,8 @@
     <string name="launcher_staff">Mochi xodimlari</string>
     <string name="staff_accounts_action_ban_title">Hisobni bloklash</string>
     <string name="staff_accounts_action_suspend_title">Hisobni toʻxtatib qoʻyish</string>
-    <string name="staff_accounts_action_unban_title">Taqiqni bekor qilish</string>
-    <string name="staff_accounts_action_unsuspend_title">Toʻxtatishni bekor qilish</string>
+    <string name="staff_accounts_action_unban_title">Banni olib tashlash</string>
+    <string name="staff_accounts_action_unsuspend_title">Toʻxtatib qoʻyishni olib tashlash</string>
     <string name="staff_accounts_any_seller">Hammasi</string>
     <string name="staff_accounts_any_status">Hammasi</string>
     <string name="staff_accounts_ban">Bloklash</string>
@@ -33,10 +33,10 @@
     <string name="staff_accounts_suspend">Toʻxtatib qoʻyish</string>
     <string name="staff_accounts_suspended_toast">Hisob toʻxtatildi</string>
     <string name="staff_accounts_unban">Banni olib tashlash</string>
-    <string name="staff_accounts_unbanned_toast">Hisob blokdan chiqarildi</string>
+    <string name="staff_accounts_unbanned_toast">Hisob bani olib tashlandi</string>
     <string name="staff_accounts_unnamed">Nomsiz</string>
     <string name="staff_accounts_unsuspend">Toʻxtatib qoʻyishni olib tashlash</string>
-    <string name="staff_accounts_unsuspended_toast">Hisob faollashtirildi</string>
+    <string name="staff_accounts_unsuspended_toast">Hisobni toʻxtatib qoʻyish olib tashlandi</string>
     <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_appeals_cancel">Bekor qilish</string>
     <string name="staff_appeals_decide">Hal qilish</string>
@@ -61,8 +61,8 @@
     <string name="staff_audit_action_account_stripe_onboarded">Stripe sozlandi</string>
     <string name="staff_audit_action_account_stripe_restricted">Stripe cheklangan</string>
     <string name="staff_audit_action_account_suspended">Sotuvchi sifatida toʻxtatib qoʻyilgan</string>
-    <string name="staff_audit_action_account_unbanned">Bani bekor qilingan</string>
-    <string name="staff_audit_action_account_unsuspended">Toʻxtatib qoʻyish bekor qilindi</string>
+    <string name="staff_audit_action_account_unbanned">Ban olib tashlandi</string>
+    <string name="staff_audit_action_account_unsuspended">Toʻxtatib qoʻyish olib tashlandi</string>
     <string name="staff_audit_action_auction_bid_placed">Taklif qabul qilindi</string>
     <string name="staff_audit_action_auction_cancelled">Auksion bekor qilindi</string>
     <string name="staff_audit_action_auction_created">Auksion yaratildi</string>

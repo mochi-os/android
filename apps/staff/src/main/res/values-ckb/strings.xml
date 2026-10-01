@@ -6,7 +6,7 @@
     <string name="staff_accounts_action_ban_title">بلۆککردنی هەژمار</string>
     <string name="staff_accounts_action_suspend_title">هەژمار ڕابگرە</string>
     <string name="staff_accounts_action_unban_title">لابردنی قەدەغەکردن</string>
-    <string name="staff_accounts_action_unsuspend_title">لابردنی هەڵپەسێردن</string>
+    <string name="staff_accounts_action_unsuspend_title">لابردنی ڕاگرتن</string>
     <string name="staff_accounts_any_seller">هەموو</string>
     <string name="staff_accounts_any_status">هەموو</string>
     <string name="staff_accounts_ban">بلۆککردن</string>
@@ -33,7 +33,7 @@
     <string name="staff_accounts_suspend">ڕاگرتن</string>
     <string name="staff_accounts_suspended_toast">هەژمار ڕاگیراوە</string>
     <string name="staff_accounts_unban">لابردنی قەدەغە</string>
-    <string name="staff_accounts_unbanned_toast">بلۆکی هەژمار لابرا</string>
+    <string name="staff_accounts_unbanned_toast">قەدەغەی هەژمار لابرا</string>
     <string name="staff_accounts_unnamed">بێ ناو</string>
     <string name="staff_accounts_unsuspend">لابردنی ڕاگرتن</string>
     <string name="staff_accounts_unsuspended_toast">ڕاگیرانی هەژمار لابرا</string>
@@ -60,8 +60,8 @@
     <string name="staff_audit_action_account_stripe_onboarded">Stripe بەکارخرا</string>
     <string name="staff_audit_action_account_stripe_restricted">Stripe سنووردارکراوە</string>
     <string name="staff_audit_action_account_suspended">وەک فرۆشیار ڕاگیراوە</string>
-    <string name="staff_audit_action_account_unbanned">قەدەغە هەڵوەشایەوە</string>
-    <string name="staff_audit_action_account_unsuspended">ڕاگرتن هەڵوەشایەوە</string>
+    <string name="staff_audit_action_account_unbanned">قەدەغە لابرا</string>
+    <string name="staff_audit_action_account_unsuspended">ڕاگرتن لابرا</string>
     <string name="staff_audit_action_auction_bid_placed">نرخ دانرا</string>
     <string name="staff_audit_action_auction_created">مەزایدە دروستکرا</string>
     <string name="staff_audit_action_auction_ended_sold">مەزایدە فرۆشرا</string>
@@ -140,7 +140,7 @@
     <string name="staff_categories_dialog_name">ناو</string>
     <string name="staff_categories_dialog_parent">باوان</string>
     <string name="staff_categories_dialog_parent_none">هیچ</string>
-    <string name="staff_categories_dialog_physical">لەشی</string>
+    <string name="staff_categories_dialog_physical">فیزیکی</string>
     <string name="staff_categories_dialog_position">شوێن</string>
     <string name="staff_categories_dialog_save">پاشەکەوتکردن</string>
     <string name="staff_categories_dialog_saving">پاشەکەوتکردن…</string>
@@ -153,7 +153,7 @@
     <string name="staff_categories_type_both">هەردووکیان</string>
     <string name="staff_categories_type_digital">دیجیتاڵ</string>
     <string name="staff_categories_type_none">—</string>
-    <string name="staff_categories_type_physical">لەشی</string>
+    <string name="staff_categories_type_physical">فیزیکی</string>
     <string name="staff_channel_name">ستاف</string>
     <string name="staff_config_field_auto_approve">سنووری پەسەندکردنی خۆکار</string>
     <string name="staff_config_field_hold">سنووری ڕاگرتن</string>

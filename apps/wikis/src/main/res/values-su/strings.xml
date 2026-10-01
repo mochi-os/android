@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">Nuju ngaganti ngaran…</string>
     <string name="wikis_rename_page_success">Kaca diganti ngaran</string>
     <string name="wikis_history_viewing">Ningali sajarah pikeun %1$s, vérsi ayeuna %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">Vérsi %1$d</string>
     <string name="wikis_search_pages_placeholder">Sungsi kaca dumasar judul atawa eusi…</string>
     <string name="wikis_search_no_results">Teu aya kaca pikeun “%1$s”. Cobian kecap paluruhan séjén.</string>
     <string name="wikis_search_updated">Diropéa %1$s</string>
@@ -319,8 +319,8 @@
         <item quantity="other">%d halaman ku tag ieu</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Manggih %1$d hasil pikeun "%2$s"</item>
-        <item quantity="other">Manggih %1$d hasil pikeun "%2$s"</item>
+        <item quantity="one">Manggih %1$d hasil pikeun \"%2$s\"</item>
+        <item quantity="other">Manggih %1$d hasil pikeun \"%2$s\"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Katerangan teu tiasa disimpen</string>
     <string name="wikis_attachments_upload_types">Berkas anu didukung: gambar, PDF, DOC, DOCX, TXT, jeung MD.</string>

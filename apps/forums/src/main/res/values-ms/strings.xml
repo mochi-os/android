@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">Sederhana</string>
     <string name="forums_members_search">Tapis ahli</string>
     <string name="forums_banner_description">Markdown yang dipaparkan di bahagian atas forum.</string>
-    <string name="forums_banner_placeholder">Selamat datang ke forum ini…</string>
+    <string name="forums_banner_placeholder">Masukkan teks sepanduk (markdown disokong)…</string>
     <string name="forums_ai_mode_label">Mod: %1$s</string>
     <string name="forums_ai_mode_heading">Mod AI</string>
     <string name="forums_ai_mode_off">Dilumpuhkan</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">hari</string>
     <string name="forums_settings_banner_saved">Sepanduk disimpan</string>
     <string name="forums_settings_access_updated">Akses dikemas kini</string>
-    <string name="forums_settings_access_revoked">Akses dibatalkan</string>
+    <string name="forums_settings_access_revoked">Akses ditarik balik</string>
     <string name="forums_settings_member_removed">Ahli dialih keluar</string>
     <string name="forums_settings_prompt_saved">Gesaan disimpan</string>
     <string name="forums_settings_section_identity">Identiti</string>

@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">Moderera</string>
     <string name="forums_members_search">Filtrera medlemmar</string>
     <string name="forums_banner_description">Markdown som visas högst upp i forumet.</string>
-    <string name="forums_banner_placeholder">Välkommen till det här forumet…</string>
+    <string name="forums_banner_placeholder">Ange bannertext (markdown stöds)…</string>
     <string name="forums_ai_mode_label">Läge: %1$s</string>
     <string name="forums_ai_mode_heading">AI-läge</string>
     <string name="forums_ai_mode_off">Inaktiverad</string>

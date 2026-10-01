@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">تمت إزالة المصدر</string>
     <string name="feeds_settings_source_polling">جار استطلاع المصدر…</string>
     <string name="feeds_settings_access_updated">تم تحديث الوصول</string>
-    <string name="feeds_settings_access_revoked">تم إلغاء الوصول</string>
+    <string name="feeds_settings_access_revoked">تم إبطال الوصول</string>
     <string name="feeds_settings_member_removed">تمت إزالة العضو</string>
     <string name="feeds_settings_ai_mode_updated">تم تحديث وضع الذكاء الاصطناعي</string>
     <string name="feeds_settings_ai_account_updated">تم تحديث حساب الذكاء الاصطناعي</string>
@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">لم يتم الجلب مطلقًا</string>
     <string name="feeds_source_poll">استطلاع</string>
     <string name="feeds_source_transform">تحويل بالذكاء الاصطناعي</string>
-    <string name="feeds_remove_source_confirm">إزالة \"%1$s\"؟</string>
-    <string name="feeds_remove_also_delete_posts">حذف المنشورات المستوردة أيضًا</string>
+    <string name="feeds_remove_source_confirm">سيؤدي هذا إلى إيقاف استيراد المحتوى من \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">حذف المنشورات المستوردة من هذا المصدر أيضًا</string>
     <string name="feeds_suggested_credibility_title">المصداقية المقترحة</string>
     <string name="feeds_suggested_credibility_body">تقترح Mochi مصداقية %1$d. هل تقبل؟</string>
     <string name="feeds_suggested_credibility_keep">الإبقاء على الحالية</string>
@@ -171,7 +171,7 @@
     <string name="feeds_settings_name_edit_cd">تعديل الاسم</string>
     <string name="feeds_settings_section_identity">الهوية</string>
     <string name="feeds_unsubscribe">إنهاء الاشتراك</string>
-    <string name="feeds_unsubscribed">تم إلغاء الاشتراك</string>
+    <string name="feeds_unsubscribed">تم إنهاء الاشتراك</string>
     <string name="feeds_access_level_comment_full">التعليق والتفاعل والعرض</string>
     <string name="feeds_rss_mode_posts_comments">المنشورات والتعليقات</string>
     <string name="feeds_access_add_title">إضافة وصول</string>
@@ -191,7 +191,7 @@
     <string name="feeds_create_first_post">أنشئ المنشور الأول</string>
     <string name="feeds_rss_mode_posts">المنشورات</string>
     <string name="feeds_source_last_checked">آخر فحص %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">إلغاء الاشتراك من التغذية</string>
+    <string name="feeds_settings_unsubscribe_section">إنهاء الاشتراك في التغذية</string>
     <string name="feeds_source_transform_hint">ترجم إلى الإنجليزية، واعرض كنقاط.</string>
     <string name="feeds_source_url_hint_feed">معرف كيان التغذية أو البصمة</string>
     <string name="feeds_source_credibility_label">المصداقية</string>
@@ -226,12 +226,12 @@
     <string name="feeds_link">رابط</string>
     <string name="feeds_share_link_title">رابط الموجز</string>
     <plurals name="feeds_comment_count">
-        <item quantity="zero">%1$d تعليقات</item>
+        <item quantity="zero">%1$d تعليق</item>
         <item quantity="one">تعليق واحد</item>
-        <item quantity="two">%1$d تعليقات</item>
+        <item quantity="two">تعليقان</item>
         <item quantity="few">%1$d تعليقات</item>
-        <item quantity="many">%1$d تعليقات</item>
-        <item quantity="other">%1$d تعليقات</item>
+        <item quantity="many">%1$d تعليقًا</item>
+        <item quantity="other">%1$d تعليق</item>
     </plurals>
     <plurals name="feeds_attachment_count">
         <item quantity="zero">لا مرفقات</item>

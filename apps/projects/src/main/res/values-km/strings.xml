@@ -91,7 +91,7 @@
     <string name="projects_request_field_description">ការពិពណ៌នា</string>
     <string name="projects_request_field_draft">សេចក្ដីព្រាង</string>
     <string name="projects_request_create_action">បង្កើត</string>
-    <string name="projects_diff_unified">បំពេញ</string>
+    <string name="projects_diff_unified">រួមបញ្ចូលគ្នា</string>
     <string name="projects_diff_split">បំបែក</string>
     <string name="projects_diff_empty">មិនមានភាពខុសគ្នា</string>
     <string name="projects_board_unassigned">មិនបានកំណត់</string>

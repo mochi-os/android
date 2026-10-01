@@ -94,10 +94,6 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi-Feed</string>
     <string name="feeds_source_type_feed_memories">Erinnerungen</string>
-    <string name="feeds_source_transform">Umwandeln</string>
-    <string name="feeds_remove_source">Quelle entfernen</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" entfernen?</string>
-    <string name="feeds_remove_also_delete_posts">Importierte Beiträge ebenfalls löschen</string>
     <string name="feeds_suggested_credibility_title">Vorgeschlagene Glaubwürdigkeit</string>
     <string name="feeds_suggested_credibility_body">Mochi schlägt eine Glaubwürdigkeit von %1$d vor. Übernehmen?</string>
     <string name="feeds_suggested_credibility_keep">Aktuellen Wert behalten</string>

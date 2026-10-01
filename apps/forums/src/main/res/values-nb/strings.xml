@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">Moderer</string>
     <string name="forums_members_search">Filtrer medlemmer</string>
     <string name="forums_banner_description">Markdown vises øverst i forumet.</string>
-    <string name="forums_banner_placeholder">Velkommen til dette forumet…</string>
+    <string name="forums_banner_placeholder">Skriv inn bannertekst (markdown støttes)…</string>
     <string name="forums_ai_mode_label">Modus: %1$s</string>
     <string name="forums_ai_mode_heading">AI-modus</string>
     <string name="forums_ai_mode_off">Deaktivert</string>

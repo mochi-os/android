@@ -151,7 +151,7 @@
     <string name="forums_access_level_moderate">Modereer</string>
     <string name="forums_members_search">Filter lede</string>
     <string name="forums_banner_description">Markdown wat boaan die forum vertoon word.</string>
-    <string name="forums_banner_placeholder">Welkom by hierdie forum…</string>
+    <string name="forums_banner_placeholder">Voer baniertekst in (markdown word ondersteun)…</string>
     <string name="forums_ai_mode_label">Modus: %1$s</string>
     <string name="forums_ai_mode_heading">KI-modus</string>
     <string name="forums_ai_mode_off">Gedeaktiveer</string>

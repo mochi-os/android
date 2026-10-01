@@ -32,7 +32,7 @@
     <string name="wikis_unsubscribe_action">Anular subscrição</string>
     <string name="wikis_unsubscribing">A anular subscrição…</string>
     <string name="wikis_unsubscribe_confirm_title">Anular subscrição</string>
-    <string name="wikis_unsubscribe_success">Subscrição cancelada</string>
+    <string name="wikis_unsubscribe_success">Subscrição anulada</string>
     <string name="wikis_subscribe_failed">Falha ao subscrever</string>
     <string name="wikis_rss_menu">Feed RSS</string>
     <string name="wikis_rss_changes">Alterações</string>
@@ -327,7 +327,7 @@
     <string name="wikis_attachments_upload_limits">O carregamento de ficheiros grandes pode ser limitado pela configuração do seu servidor ou proxy.</string>
     <string name="wikis_rss_replace">Substituir</string>
     <string name="wikis_rss_copied_new">Novo URL RSS copiado para a área de transferência</string>
-    <string name="wikis_rss_exists">Este URL de fonte já foi emitido e não pode ser mostrado novamente.</string>
+    <string name="wikis_rss_exists">Este URL de feed já foi emitido e não pode ser mostrado novamente.</string>
     <plurals name="wikis_comments_truncated">
         <item quantity="one">A mostrar o primeiro %1$d comentário.</item>
         <item quantity="other">A mostrar os primeiros %1$d comentários.</item>

@@ -31,8 +31,6 @@
     <string name="forums_settings_delete">Eliminá el foro</string>
     <string name="forums_settings_delete_title">Eliminá el foro</string>
 
-    <string name="forums_create_name">Nombre</string>
-    <string name="forums_create_action">Crear</string>
     <string name="forums_access_level_view">Ver</string>
     <string name="forums_access_level_vote">Votar</string>
     <string name="forums_access_level_none">Ninguno</string>
@@ -113,7 +111,7 @@
     <string name="forums_members_search">Filtrar miembros</string>
     <string name="forums_members_empty">Sin miembros</string>
     <string name="forums_banner_description">Markdown que se muestra en la parte superior del foro.</string>
-    <string name="forums_banner_placeholder">Bienvenido a este foro…</string>
+    <string name="forums_banner_placeholder">Ingresá el texto del banner (admite Markdown)…</string>
     <string name="forums_banner_dismiss">Descartar banner</string>
     <string name="forums_ai_mode_label">Modo: %1$s</string>
     <string name="forums_ai_mode_heading">Modo IA</string>
@@ -190,7 +188,6 @@
     <string name="forums_saved_title">Guardado</string>
     <string name="forums_saved_remove">Quitar de guardados</string>
     <string name="forums_saved_clear_all">Borrar todo</string>
-    <string name="forums_rss_feed">Fuente RSS</string>
     <string name="forums_rss_mode_posts">Posteos</string>
     <string name="forums_rss_mode_posts_comments">Posteos y comentarios</string>
     <string name="forums_rss_copied">URL RSS copiada al portapapeles</string>
@@ -247,7 +244,6 @@
     <string name="forums_ai_prompt_score_label">Prompt de puntuación</string>
     <string name="forums_ai_prompt_custom">Personalizado</string>
     <string name="forums_ai_prompt_variables">Variables: %1$s</string>
-    <string name="forums_settings_unsubscribe_section">Cancelar la suscripción al foro</string>
     <string name="forums_moderation_settings_updated">Ajustes de moderación actualizados</string>
     <string name="forums_moderation_queue_empty_subtitle">Se han revisado todas las publicaciones y comentarios</string>
     <string name="forums_moderation_mute_title">¿Silenciar a %1$s?</string>

@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">Nouvo</string>
     <string name="projects_settings_section_identity">Idantite</string>
     <string name="projects_settings_access_updated">Aksè mete ajou</string>
-    <string name="projects_settings_access_revoked">Akè retire</string>
+    <string name="projects_settings_access_revoked">Aksè retire</string>
     <string name="projects_settings_section_access">Jesyon Aksè</string>
     <string name="projects_people_search">Chèche moun</string>
     <string name="projects_settings_field_entity_id">ID Antite</string>

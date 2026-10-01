@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">צוטריט פֿאַרוואַלטונג</string>
     <string name="crm_settings_not_set">ניט געשטעלט</string>
     <string name="crm_settings_access_updated">צוטריט באַנײַט</string>
-    <string name="crm_settings_access_revoked">צוגאנג צונופגענומען</string>
+    <string name="crm_settings_access_revoked">צוטריט צוריקגענומען</string>
     <string name="crm_people_search">זוך מענטשן</string>
     <string name="crm_access_tab_other">אַנדער</string>
     <string name="crm_access_select_group">קלייַבט אויס אַ גרופּע</string>

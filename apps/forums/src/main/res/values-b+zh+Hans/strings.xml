@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">审核</string>
     <string name="forums_members_search">筛选成员</string>
     <string name="forums_banner_description">显示在论坛顶部的 Markdown 内容。</string>
-    <string name="forums_banner_placeholder">欢迎来到本论坛…</string>
+    <string name="forums_banner_placeholder">输入横幅文本（支持 Markdown）…</string>
     <string name="forums_ai_mode_label">模式:%1$s</string>
     <string name="forums_ai_mode_heading">AI 模式</string>
     <string name="forums_ai_mode_off">已禁用</string>
@@ -292,7 +292,7 @@
     <string name="forums_settings_ai_updated">AI 设置已更新</string>
     <string name="forums_settings_forum_renamed">论坛已重命名</string>
     <string name="forums_settings_name_clear_cd">清除名称</string>
-    <string name="forums_settings_unsubscribe_section">取消订阅论坛</string>
+    <string name="forums_settings_unsubscribe_section">退订论坛</string>
     <string name="forums_share_link_title">论坛链接</string>
     <string name="forums_find_found_by_url">通过网址找到</string>
     <string name="forums_moderation_pending_posts">待处理帖子 (%1$d)</string>

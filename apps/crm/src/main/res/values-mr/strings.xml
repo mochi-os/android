@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">प्रवेश व्यवस्थापन</string>
     <string name="crm_settings_not_set">सेट केलेले नाही</string>
     <string name="crm_settings_access_updated">प्रवेश अद्ययावत केला</string>
-    <string name="crm_settings_access_revoked">प्रवेश रद्द केला</string>
+    <string name="crm_settings_access_revoked">प्रवेश मागे घेतला</string>
     <string name="crm_people_search">लोक शोधा</string>
     <string name="crm_access_tab_other">इतर</string>
     <string name="crm_access_select_group">एक गट निवडा</string>

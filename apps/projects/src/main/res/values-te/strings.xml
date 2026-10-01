@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">కొత్తది</string>
     <string name="projects_settings_section_identity">గుర్తింపు</string>
     <string name="projects_settings_access_updated">యాక్సెస్ నవీకరించబడింది</string>
-    <string name="projects_settings_access_revoked">ప్రవేశీఙీ రద్దు చేయబడింది</string>
+    <string name="projects_settings_access_revoked">యాక్సెస్ ఉపసంహరించబడింది</string>
     <string name="projects_settings_section_access">యాక్సెస్ నిర్వహణ</string>
     <string name="projects_people_search">వ్యక్తులను వెతకండి</string>
     <string name="projects_settings_field_entity_id">ఎంటిటీ ID</string>

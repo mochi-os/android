@@ -30,9 +30,9 @@
     <string name="wikis_recommended_section">Preporučeni wikiji</string>
     <string name="wikis_subscribe_button">Pretplati se</string>
     <string name="wikis_unsubscribe_action">Prekini pretplatu</string>
-    <string name="wikis_unsubscribing">Otkazujem pretplatu…</string>
+    <string name="wikis_unsubscribing">Prekidam pretplatu…</string>
     <string name="wikis_unsubscribe_confirm_title">Prekini pretplatu</string>
-    <string name="wikis_unsubscribe_success">Pretplata otkazana</string>
+    <string name="wikis_unsubscribe_success">Pretplata prekinuta</string>
     <string name="wikis_subscribe_failed">Pretplata nije uspjela</string>
     <string name="wikis_rss_menu">RSS kanal</string>
     <string name="wikis_rss_changes">Izmjene</string>
@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">Preimenovanje…</string>
     <string name="wikis_rename_page_success">Stranica preimenovana</string>
     <string name="wikis_history_viewing">Pregled historije za %1$s, trenutna verzija %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">Verzija %1$d</string>
     <string name="wikis_search_pages_placeholder">Traži stranice po naslovu ili sadržaju…</string>
     <string name="wikis_search_no_results">Nema stranica za “%1$s”. Pokušajte s drugim pojmovima.</string>
     <string name="wikis_search_updated">Ažurirano %1$s</string>
@@ -326,9 +326,9 @@
         <item quantity="other">%d stranica s ovim tagom</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Pronađeno %1$d rezultat za "%2$s"</item>
-        <item quantity="few">Pronađeno %1$d rezultata za "%2$s"</item>
-        <item quantity="other">Pronađeno %1$d rezultata za "%2$s"</item>
+        <item quantity="one">Pronađen %1$d rezultat za \"%2$s\"</item>
+        <item quantity="few">Pronađena %1$d rezultata za \"%2$s\"</item>
+        <item quantity="other">Pronađeno %1$d rezultata za \"%2$s\"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Spremanje opisa nije uspjelo</string>
     <string name="wikis_attachments_upload_types">Podržane datoteke: slike, PDF, DOC, DOCX, TXT i MD.</string>
@@ -338,7 +338,7 @@
     <string name="wikis_rss_exists">Ovaj URL kanala je već izdat i ne može se ponovo prikazati.</string>
     <plurals name="wikis_comments_truncated">
         <item quantity="one">Prikazuje se prvi %1$d komentar.</item>
-        <item quantity="few">Prikazuje se prvih %1$d komentara.</item>
+        <item quantity="few">Prikazuju se prva %1$d komentara.</item>
         <item quantity="other">Prikazuje se prvih %1$d komentara.</item>
     </plurals>
 </resources>

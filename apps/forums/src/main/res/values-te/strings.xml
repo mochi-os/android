@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">మోడరేట్</string>
     <string name="forums_members_search">సభ్యులను ఫిల్టర్ చేయండి</string>
     <string name="forums_banner_description">ఫోరమ్ ఎగువన చూపబడే మార్క్‌డౌన్.</string>
-    <string name="forums_banner_placeholder">ఈ ఫోరమ్‌కు స్వాగతం…</string>
+    <string name="forums_banner_placeholder">బ్యానర్ వచనాన్ని నమోదు చేయండి (మార్క్‌డౌన్‌కు మద్దతు ఉంది)…</string>
     <string name="forums_ai_mode_label">మోడ్: %1$s</string>
     <string name="forums_ai_mode_heading">AI మోడ్</string>
     <string name="forums_ai_mode_off">నిలిపివేయబడింది</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">రోజులు</string>
     <string name="forums_settings_banner_saved">బ్యానర్ సేవ్ చేయబడింది</string>
     <string name="forums_settings_access_updated">యాక్సెస్ నవీకరించబడింది</string>
-    <string name="forums_settings_access_revoked">ప్రవేశీఙీ రద్దు చేయబడింది</string>
+    <string name="forums_settings_access_revoked">యాక్సెస్ ఉపసంహరించబడింది</string>
     <string name="forums_settings_member_removed">సభ్యుడు తొలగించబడ్డారు</string>
     <string name="forums_settings_prompt_saved">ప్రాంప్ట్ సేవ్ చేయబడింది</string>
     <string name="forums_settings_section_identity">గుర్తింపు</string>

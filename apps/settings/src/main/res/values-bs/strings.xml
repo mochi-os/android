@@ -45,6 +45,8 @@
     <string name="route_delete_title">Obrisati rutu?</string>
     <string name="route_path">Putanja</string>
     <string name="route_method">Metoda</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Aplikacija</string>
     <string name="route_method_entity">Entitet</string>
     <string name="route_method_redirect">Preusmjerenje</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Preuzmite sa packages.mochi-os.org</string>
     <string name="system_status_copy">Kopiraj</string>
     <string name="system_status_peers">Ravnopravni</string>
-    <string name="system_status_known">Poznato</string>
+    <string name="system_status_peers_totals">Poznato %1$s · Povezano %2$s · Mreža emitiranja %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Poznato %1$s · Povezano %2$s</string>
     <string name="system_status_peer_connected">Povezano</string>
     <string name="system_status_peer_disconnected">Nije povezano</string>
     <string name="system_status_peer_queued">Poruke u redu čekanja</string>
@@ -216,9 +219,9 @@
     <string name="account_totp_disable_message">Više se nećete moći prijaviti s kodom autentikatora.</string>
     <string name="account_recovery_none">Kodovi za oporavak nisu generirani.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">Preostao je %1$d kod za oporavak.</item>
-        <item quantity="few">Preostala su %1$d koda za oporavak.</item>
-        <item quantity="other">Preostalo je %1$d kodova za oporavak.</item>
+        <item quantity="one">Preostao je %1$s kod za oporavak.</item>
+        <item quantity="few">Preostala su %1$s koda za oporavak.</item>
+        <item quantity="other">Preostalo je %1$s kodova za oporavak.</item>
     </plurals>
     <string name="account_recovery_generate">Generiši kodove</string>
     <string name="account_recovery_regenerate">Regeneriši kodove</string>
@@ -235,7 +238,7 @@
     <string name="account_last_used">Zadnji put korišteno %1$s</string>
     <string name="route_delete_message">Ovo će ukloniti rutu za putanju \"%1$s\".</string>
     <string name="route_empty">Nema konfigurisanih ruta.</string>
-    <string name="route_meta">Prioritet %1$d · %2$s</string>
+    <string name="route_meta">Prioritet %1$s · %2$s</string>
     <string name="interests_search_placeholder">Pretražite teme za dodavanje…</string>
     <string name="interests_empty">Još nema interesovanja.</string>
     <string name="interests_summary_regenerate">Regeneriši sažetak</string>
@@ -269,9 +272,9 @@
     <string name="system_users_revoke_all_title">Opozvati sve sesije?</string>
     <string name="system_users_revoke_all_message">Sve aktivne sesije ovog korisnika će biti odjavljene.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">Prikaz %1$d–%2$d od %3$d korisnika</item>
-        <item quantity="few">Prikaz %1$d–%2$d od %3$d korisnika</item>
-        <item quantity="other">Prikaz %1$d–%2$d od %3$d korisnika</item>
+        <item quantity="one">Prikaz %1$s–%2$s od %3$s korisnika</item>
+        <item quantity="few">Prikaz %1$s–%2$s od %3$s korisnika</item>
+        <item quantity="other">Prikaz %1$s–%2$s od %3$s korisnika</item>
     </plurals>
     <string name="account_title">Račun</string>
     <string name="account_section_identity">Identitet</string>
@@ -305,14 +308,14 @@
     <string name="domain_verify">Verifikuj DNS</string>
     <string name="settings_home_domains">Domene</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Test poslan na %1$d odredište</item>
-        <item quantity="few">Test poslan na %1$d odredišta</item>
-        <item quantity="other">Test poslan na %1$d odredišta</item>
+        <item quantity="one">Test poslan na %1$s odredište</item>
+        <item quantity="few">Test poslan na %1$s odredišta</item>
+        <item quantity="other">Test poslan na %1$s odredišta</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="few">Opozvane %1$d sesije</item>
-        <item quantity="one">Opozvana %1$d sesija</item>
-        <item quantity="other">Opozvano %1$d sesija</item>
+        <item quantity="few">Opozvane %1$s sesije</item>
+        <item quantity="one">Opozvana %1$s sesija</item>
+        <item quantity="other">Opozvano %1$s sesija</item>
     </plurals>
     <string name="login_title">Prijava</string>
     <string name="login_section_methods">Načini prijave</string>
@@ -343,8 +346,7 @@
     <string name="system_status_reachability_public">Javno</string>
     <string name="system_status_reachability_private">Privatno</string>
     <string name="system_status_reachability_unknown">Nepoznato</string>
-    <string name="system_status_relay">Putem releja</string>
-    <string name="system_status_mesh">Mesh emitiranja</string>
+    <string name="system_status_reachability_relay">%1$s · putem releja</string>
     <string name="system_status_broadcast">Posljednje emitiranje</string>
     <string name="system_status_queued_broadcasts">Emitirane poruke na čekanju</string>
     <string name="system_setting_hostname_publish">Objavi ime hosta i domene drugim serverima</string>
@@ -377,10 +379,12 @@
     <string name="accounts_device_seen">Zadnji put viđen %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplikacija</string>
     <string name="notifprefs_device_push">%1$s · push obavijesti</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Test poslan na %1$d od %2$d odredišta</item>
-        <item quantity="few">Test poslan na %1$d od %2$d odredišta</item>
-        <item quantity="other">Test poslan na %1$d od %2$d odredišta</item>
+        <item quantity="one">Test poslan na %1$s od %2$s odredišta</item>
+        <item quantity="few">Test poslan na %1$s od %2$s odredišta</item>
+        <item quantity="other">Test poslan na %1$s od %2$s odredišta</item>
     </plurals>
     <string name="notifprefs_test_none">Nema konfigurisanih odredišta</string>
     <string name="notifprefs_transport_fcm">Android push obavijesti</string>
@@ -404,28 +408,28 @@
     <string name="system_documents_discard_title">Odbaciti izmjene?</string>
     <string name="system_documents_discard">Odbaci</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d uspješan</item>
-        <item quantity="few">%1$d uspješna</item>
-        <item quantity="other">%1$d uspješnih</item>
+        <item quantity="one">%1$s uspješan</item>
+        <item quantity="few">%1$s uspješna</item>
+        <item quantity="other">%1$s uspješnih</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d neuspješan</item>
-        <item quantity="few">%1$d neuspješna</item>
-        <item quantity="other">%1$d neuspješnih</item>
+        <item quantity="one">%1$s neuspješan</item>
+        <item quantity="few">%1$s neuspješna</item>
+        <item quantity="other">%1$s neuspješnih</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d rezervacija</item>
-        <item quantity="few">%1$d / %2$d rezervacije</item>
-        <item quantity="other">%1$d / %2$d rezervacija</item>
+        <item quantity="one">%1$s / %2$s rezervacija</item>
+        <item quantity="few">%1$s / %2$s rezervacije</item>
+        <item quantity="other">%1$s / %2$s rezervacija</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d kolo</item>
-        <item quantity="few">%1$d kola</item>
-        <item quantity="other">%1$d kola</item>
+        <item quantity="one">%1$s kolo</item>
+        <item quantity="few">%1$s kola</item>
+        <item quantity="other">%1$s kola</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d odbijen</item>
-        <item quantity="few">%1$d odbijena</item>
-        <item quantity="other">%1$d odbijenih</item>
+        <item quantity="one">%1$s odbijen</item>
+        <item quantity="few">%1$s odbijena</item>
+        <item quantity="other">%1$s odbijenih</item>
     </plurals>
 </resources>

@@ -41,7 +41,7 @@
     <string name="wikis_rss_copied">RSS URL ක්ලිප්බෝඩ් වෙත පිටපත් කරන ලදී</string>
     <string name="wikis_rss_failed">RSS ටෝකනය ලබා ගැනීමට අසමත් විය</string>
     <string name="wikis_rss_revoke">ප්‍රවේශය අහෝසි කරන්න</string>
-    <string name="wikis_rss_revoked">RSS ප්‍රවේශය අවලංගු කරන ලදී</string>
+    <string name="wikis_rss_revoked">RSS ප්‍රවේශය අහෝසි කරන ලදී</string>
     <string name="wikis_find_title">විකි සොයන්න</string>
     <string name="wikis_find_no_results">wikis හමු නොවීය</string>
     <string name="wikis_find_recommended_section">නිර්දේශිත wikis</string>
@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">නැවත නම් කරමින්…</string>
     <string name="wikis_rename_page_success">පිටුව නැවත නම් කරන ලදී</string>
     <string name="wikis_history_viewing">%1$s සඳහා ඉතිහාසය බලමින්, වත්මන් අනුවාදය %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">අනුවාදය %1$d</string>
     <string name="wikis_search_pages_placeholder">මාතෘකාව හෝ අන්තර්ගතය අනුව පිටු සොයන්න…</string>
     <string name="wikis_search_no_results">“%1$s” සඳහා පිටු හමු නොවීය. වෙනත් සෙවුම් පද උත්සාහ කරන්න.</string>
     <string name="wikis_search_updated">යාවත්කාලීන කළේ: %1$s</string>

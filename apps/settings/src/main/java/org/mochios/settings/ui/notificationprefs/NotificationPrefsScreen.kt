@@ -60,6 +60,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
@@ -97,16 +98,7 @@ fun NotificationPrefsScreen(
             viewModel.testSent.collect { tested = it }
         }
     }
-    val snack = tested?.let { result ->
-        when {
-            result.total == 0 -> stringResource(R.string.notifprefs_test_none)
-            // The noun agrees with the total, the number it sits beside.
-            result.sent < result.total -> pluralStringResource(
-                R.plurals.notifprefs_test_partial, result.total, result.sent, result.total
-            )
-            else -> pluralStringResource(R.plurals.notifprefs_test_sent, result.sent, result.sent)
-        }
-    }
+    val snack = tested?.let { result -> testMessage(result) }
 
     var deleting by remember { mutableStateOf<NotifCategory?>(null) }
 
@@ -423,6 +415,22 @@ private fun TopicsList(
     }
 }
 
+/** What a test send reached. The noun agrees with the total, the number it sits beside. */
+@Composable
+internal fun testMessage(result: TestResult): String {
+    val format = LocalFormat.current
+    return when {
+        result.total == 0 -> stringResource(R.string.notifprefs_test_none)
+        result.sent < result.total -> pluralStringResource(
+            R.plurals.notifprefs_test_partial,
+            result.total,
+            format.formatNumber(result.sent),
+            format.formatNumber(result.total),
+        )
+        else -> pluralStringResource(R.plurals.notifprefs_test_sent, result.sent, format.formatNumber(result.sent))
+    }
+}
+
 /**
  * Categories as every list of them reads: by the name shown, naturally, with
  * the "No notifications" pseudo-category last. The default keeps its place.
@@ -448,13 +456,31 @@ internal fun List<NotifTopic>.grouped(): List<List<NotifTopic>> =
         }
         .sortedWith(compareBy(NaturalCompare) { group -> group.first().app.name })
 
-/** What happened, falling back to the raw key. */
-private fun topicLabel(topic: NotifTopic): String = topic.label.ifBlank { topic.topic }
+/**
+ * A raw label key (dotted, lowercase) reaches the topics table when an app
+ * labels a topic before adding the key; the calling app's labels are not
+ * reachable here, so such a label falls back to the humanised topic name.
+ */
+private val rawLabelKey = Regex("^[a-z0-9_]+(\\.[a-z0-9_]+)+$", RegexOption.IGNORE_CASE)
+
+internal fun isRawLabelKey(label: String): Boolean = rawLabelKey.matches(label)
+
+/** A topic key as words: "/" and "_" become spaces, the first letter capitalised. */
+internal fun humanizeTopic(topic: String): String {
+    val flat = topic.replace(Regex("[/_]"), " ").trim()
+    if (flat.isEmpty()) return topic
+    return flat.replaceFirstChar { first -> first.uppercase() }
+}
+
+/** What happened, falling back to the humanised topic key. */
+internal fun topicLabel(topic: NotifTopic): String =
+    if (topic.label.isNotBlank() && !isRawLabelKey(topic.label)) topic.label else humanizeTopic(topic.topic)
 
 /** A topic reads as "what happened: which thing". */
-private fun topicTitle(topic: NotifTopic): String {
+@Composable
+internal fun topicTitle(topic: NotifTopic): String {
     val label = topicLabel(topic)
-    return if (topic.name.isNotBlank()) "$label: ${topic.name}" else label
+    return if (topic.name.isNotBlank()) stringResource(R.string.notifprefs_topic_title, label, topic.name) else label
 }
 
 @Composable

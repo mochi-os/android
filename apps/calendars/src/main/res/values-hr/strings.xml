@@ -99,7 +99,7 @@
     <string name="calendars_repeat_forever">Zauvijek</string>
     <string name="calendars_reminder_time">U vrijeme događaja</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d minuta prije</item>
+        <item quantity="one">%1$d minutu prije</item>
         <item quantity="few">%1$d minute prije</item>
         <item quantity="other">%1$d minuta prije</item>
     </plurals>

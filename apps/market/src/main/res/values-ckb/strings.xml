@@ -61,7 +61,7 @@
     <string name="market_chargeback_reason_customer_initiated">لەلایەن کڕیارەوە دەستپێکرا</string>
     <string name="market_chargeback_reason_debit_not_authorized">قەرز ڕێگەپێنەدراو</string>
     <string name="market_chargeback_reason_duplicate">بارکردنی دووبارە</string>
-    <string name="market_chargeback_reason_fraudulent">گرفتکارانە</string>
+    <string name="market_chargeback_reason_fraudulent">فێڵاوی</string>
     <string name="market_chargeback_reason_general">گشتی</string>
     <string name="market_chargeback_reason_incorrect_account_details">وردەکارییەکانی هەژمار هەڵە</string>
     <string name="market_chargeback_reason_insufficient_funds">پارە بەس نییە</string>
@@ -166,7 +166,7 @@
     <string name="market_editor_title_required">پێش زیادکردنی وێنە یان فایلەکان ناونیشانێک بنووسە</string>
     <string name="market_editor_type">جۆری لیست</string>
     <string name="market_editor_type_digital">دیجیتاڵ</string>
-    <string name="market_editor_type_physical">لەشی</string>
+    <string name="market_editor_type_physical">فیزیکی</string>
     <string name="market_editor_zone_cancel">هەڵوەشاندنەوە</string>
     <string name="market_editor_zone_country_au">ئوسترالیا</string>
     <string name="market_editor_zone_country_ca">کەنەدا</string>
@@ -213,7 +213,7 @@
     <string name="market_filter_title">پاڵاوتنەکان</string>
     <string name="market_filter_type">جۆر</string>
     <string name="market_filter_type_digital">دیجیتاڵ</string>
-    <string name="market_filter_type_physical">لەشی</string>
+    <string name="market_filter_type_physical">فیزیکی</string>
     <string name="market_listing_detail_already_reported">ڕاپۆرت کرا</string>
     <string name="market_listing_detail_assets_heading">سامانی دیجیتاڵ</string>
     <string name="market_listing_detail_bids_heading">مێژووی نرخدان</string>
@@ -331,7 +331,7 @@
     <string name="market_refund_dialog_description_label">وەسف</string>
     <string name="market_refund_dialog_failed">گەڕانەوەی پارە سەرکەوتوو نەبوو</string>
     <string name="market_refund_dialog_reason_duplicate">دووبارە</string>
-    <string name="market_refund_dialog_reason_fraud">گرفتکارانە</string>
+    <string name="market_refund_dialog_reason_fraud">فێڵاوی</string>
     <string name="market_refund_dialog_reason_label">هۆکار</string>
     <string name="market_refund_dialog_reason_other">هیتر</string>
     <string name="market_refund_dialog_submit">گەڕاندنەوەی پارە</string>
@@ -468,7 +468,7 @@
     <string name="market_subscriptions_title">بەشدارییەکان</string>
     <string name="market_title">بازاڕ</string>
     <string name="market_type_digital">دیجیتاڵ</string>
-    <string name="market_type_physical">لەشی</string>
+    <string name="market_type_physical">فیزیکی</string>
     <string name="market_warnings_title">ئاگادارکردنەوەکان</string>
 
     <string name="market_account_save_failed">نەتوانرا گۆڕانکارییەکان پاشەکەوت بکرێن</string>
@@ -725,8 +725,8 @@
     <string name="market_audit_account_stripe_onboarded">Stripe بەکارخرا</string>
     <string name="market_audit_account_stripe_restricted">Stripe سنووردارکراوە</string>
     <string name="market_audit_account_suspended">وەک فرۆشیار ڕاگیراوە</string>
-    <string name="market_audit_account_unbanned">قەدەغە هەڵوەشایەوە</string>
-    <string name="market_audit_account_unsuspended">ڕاگرتن هەڵوەشایەوە</string>
+    <string name="market_audit_account_unbanned">قەدەغە لابرا</string>
+    <string name="market_audit_account_unsuspended">ڕاگرتن لابرا</string>
     <string name="market_audit_auction_bid_placed">نرخ دانرا</string>
     <string name="market_audit_auction_created">مەزایدە دروستکرا</string>
     <string name="market_audit_auction_ended_sold">مەزایدە فرۆشرا</string>

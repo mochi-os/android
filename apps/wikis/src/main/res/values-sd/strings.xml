@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">نالو تبديل ٿي رهيو آهي…</string>
     <string name="wikis_rename_page_success">صفحي جو نالو تبديل ٿيو</string>
     <string name="wikis_history_viewing">%1$s جي تاريخ ڏسي رهيا آھيو، موجوده نسخو %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">ورجن %1$d</string>
     <string name="wikis_search_pages_placeholder">صفحن کي عنوان يا مواد ذريعي ڳوليو…</string>
     <string name="wikis_search_no_results">“%1$s” لاءِ ڪو صفحو نه مليو. مختلف ڳولا لفظ آزمايو.</string>
     <string name="wikis_search_updated">اپڊيٽ ٿيو %1$s</string>
@@ -319,8 +319,8 @@
         <item quantity="other">ھن ٽيگ سان %d صفحا</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">"%2$s" لاءِ %1$d نتيجو مليا</item>
-        <item quantity="other">"%2$s" لاءِ %1$d نتيجا مليا</item>
+        <item quantity="one">\"%2$s\" لاءِ %1$d نتيجو مليا</item>
+        <item quantity="other">\"%2$s\" لاءِ %1$d نتيجا مليا</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">ڪيپشن محفوظ نه ٿي سگهيو</string>
     <string name="wikis_attachments_upload_types">سهڪاري فائلون: تصويرون، PDF، DOC، DOCX، TXT، ۽ MD.</string>

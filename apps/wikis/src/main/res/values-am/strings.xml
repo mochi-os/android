@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">ስም በመቀየር ላይ…</string>
     <string name="wikis_rename_page_success">የገጹ ስም ተቀይሯል</string>
     <string name="wikis_history_viewing">የ%1$s ታሪክ በማየት ላይ፣ የአሁኑ ስሪት %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">ስሪት %1$d</string>
     <string name="wikis_search_pages_placeholder">ገጾችን በርዕስ ወይም በይዘት ይፈልጉ…</string>
     <string name="wikis_search_no_results">ለ“%1$s” ምንም ገጽ አልተገኘም። ሌላ የፍለጋ ቃል ይሞክሩ።</string>
     <string name="wikis_search_updated">ዘምኗል %1$s</string>

@@ -725,8 +725,8 @@
     <string name="market_audit_account_stripe_onboarded">تم الانضمام إلى Stripe</string>
     <string name="market_audit_account_stripe_restricted">Stripe مقيد</string>
     <string name="market_audit_account_suspended">معلق كبائع</string>
-    <string name="market_audit_account_unbanned">تم إلغاء الحظر</string>
-    <string name="market_audit_account_unsuspended">تم إلغاء التعليق</string>
+    <string name="market_audit_account_unbanned">تم رفع الحظر</string>
+    <string name="market_audit_account_unsuspended">تم رفع التعليق</string>
     <string name="market_audit_auction_bid_placed">تم تقديم المزايدة</string>
     <string name="market_audit_auction_created">تم إنشاء المزاد</string>
     <string name="market_audit_auction_ended_sold">تم بيع المزاد</string>

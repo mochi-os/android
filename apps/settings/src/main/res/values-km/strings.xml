@@ -45,6 +45,8 @@
     <string name="route_delete_title">លុបផ្លូវ?</string>
     <string name="route_path">ផ្លូវ</string>
     <string name="route_method">វិធីសាស្ត្រ</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">កម្មវិធី</string>
     <string name="route_method_entity">អង្គភាព</string>
     <string name="route_method_redirect">ការបញ្ជូនបន្ត</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">ទាញយកពី packages.mochi-os.org</string>
     <string name="system_status_copy">ចម្លង</string>
     <string name="system_status_peers">មិត្តស្មើ</string>
-    <string name="system_status_known">ស្គាល់</string>
+    <string name="system_status_peers_totals">ស្គាល់ %1$s · បានភ្ជាប់ %2$s · បណ្ដាញសំណាញ់ផ្សាយ %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">ស្គាល់ %1$s · បានភ្ជាប់ %2$s</string>
     <string name="system_status_peer_connected">បានភ្ជាប់</string>
     <string name="system_status_peer_disconnected">បានផ្ដាច់</string>
     <string name="system_status_peer_queued">សារក្នុងជួរ</string>
@@ -216,7 +219,7 @@
     <string name="account_totp_disable_message">អ្នកនឹងលែងអាចចូលដោយលេខកូដផ្ទៀងផ្ទាត់ទេ។</string>
     <string name="account_recovery_none">គ្មានកូដស្ដារដែលត្រូវបានបង្កើតទេ។</string>
     <plurals name="account_recovery_count">
-        <item quantity="other">នៅសល់កូដស្ដារ %1$d។</item>
+        <item quantity="other">នៅសល់កូដស្ដារ %1$s។</item>
     </plurals>
     <string name="account_recovery_generate">បង្កើតកូដ</string>
     <string name="account_recovery_regenerate">បង្កើតកូដឡើងវិញ</string>
@@ -233,7 +236,7 @@
     <string name="account_last_used">ប្រើចុងក្រោយ %1$s</string>
     <string name="route_delete_message">វានឹងលុបផ្លូវសម្រាប់ផ្លូវ \"%1$s\"។</string>
     <string name="route_empty">គ្មានផ្លូវដែលបានកំណត់ទេ។</string>
-    <string name="route_meta">អាទិភាព %1$d · %2$s</string>
+    <string name="route_meta">អាទិភាព %1$s · %2$s</string>
     <string name="interests_search_placeholder">ស្វែងរកប្រធានបទដើម្បីបន្ថែម…</string>
     <string name="interests_empty">មិនទាន់មានចំណាប់អារម្មណ៍ទេ។</string>
     <string name="interests_summary_regenerate">បង្កើតសង្ខេបឡើងវិញ</string>
@@ -267,7 +270,7 @@
     <string name="system_users_revoke_all_title">ដកវគ្គទាំងអស់?</string>
     <string name="system_users_revoke_all_message">វគ្គដែលដំណើរការទាំងអស់របស់អ្នកប្រើនេះនឹងចេញ។</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="other">បង្ហាញ %1$d–%2$d នៃ %3$d អ្នកប្រើ</item>
+        <item quantity="other">បង្ហាញ %1$s–%2$s នៃ %3$s អ្នកប្រើ</item>
     </plurals>
     <string name="account_title">គណនី</string>
     <string name="account_section_identity">អត្តសញ្ញាណ</string>
@@ -301,10 +304,10 @@
     <string name="domain_verify">ផ្ទៀងផ្ទាត់ DNS</string>
     <string name="settings_home_domains">ដែន</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="other">បានផ្ញើការសាកល្បងទៅកាន់ទិសដៅ %1$d </item>
+        <item quantity="other">បានផ្ញើការសាកល្បងទៅកាន់ទិសដៅ %1$s </item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="other">បានដកហូត %1$d វគ្គ</item>
+        <item quantity="other">បានដកហូត %1$s វគ្គ</item>
     </plurals>
     <string name="login_title">ចូល</string>
     <string name="login_section_methods">វិធីសាស្ត្រចូល</string>
@@ -335,8 +338,7 @@
     <string name="system_status_reachability_public">សាធារណៈ</string>
     <string name="system_status_reachability_private">ឯកជន</string>
     <string name="system_status_reachability_unknown">មិនស្គាល់</string>
-    <string name="system_status_relay">តាមរយៈម៉ាស៊ីនបញ្ជូនបន្ត</string>
-    <string name="system_status_mesh">បណ្ដាញសំណាញ់ផ្សាយ</string>
+    <string name="system_status_reachability_relay">%1$s · តាមរយៈម៉ាស៊ីនបញ្ជូនបន្ត</string>
     <string name="system_status_broadcast">ការផ្សាយចុងក្រោយ</string>
     <string name="system_status_queued_broadcasts">សារផ្សាយក្នុងជួរ</string>
     <string name="system_setting_hostname_publish">ប្រកាសឈ្មោះម៉ាស៊ីន និងដែនទៅម៉ាស៊ីនមេផ្សេងទៀត</string>
@@ -369,8 +371,10 @@
     <string name="accounts_device_seen">ឃើញចុងក្រោយ %1$s</string>
     <string name="notifprefs_device_app">%1$s · កម្មវិធី</string>
     <string name="notifprefs_device_push">%1$s · ការជូនដំណឹងរុញ</string>
+    <string name="notifprefs_destination_rss">RSS៖ %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="other">បានផ្ញើការសាកល្បងទៅ %1$d ក្នុងចំណោម %2$d ទិសដៅ</item>
+        <item quantity="other">បានផ្ញើការសាកល្បងទៅ %1$s ក្នុងចំណោម %2$s ទិសដៅ</item>
     </plurals>
     <string name="notifprefs_test_none">មិនមានទិសដៅដែលបានកំណត់រចនាសម្ព័ន្ធ</string>
     <string name="notifprefs_transport_fcm">ការជូនដំណឹង Android</string>
@@ -394,18 +398,18 @@
     <string name="system_documents_discard_title">បោះចោលការផ្លាស់ប្ដូរឬ?</string>
     <string name="system_documents_discard">បោះចោល</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="other">%1$d បានជោគជ័យ</item>
+        <item quantity="other">%1$s បានជោគជ័យ</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="other">%1$d បានបរាជ័យ</item>
+        <item quantity="other">%1$s បានបរាជ័យ</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="other">%1$d / %2$d ការកក់</item>
+        <item quantity="other">%1$s / %2$s ការកក់</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="other">%1$d សៀគ្វី</item>
+        <item quantity="other">%1$s សៀគ្វី</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="other">%1$d បានបដិសេធ</item>
+        <item quantity="other">%1$s បានបដិសេធ</item>
     </plurals>
 </resources>

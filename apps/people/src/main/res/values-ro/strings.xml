@@ -180,7 +180,7 @@
     <string name="people_books_create">Creează agendă</string>
     <string name="people_books_delete">Șterge agenda</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Ștergeți %1$s și cele %2$d contact din ea?</item>
+        <item quantity="one">Ștergeți %1$s și %2$d contact din ea?</item>
         <item quantity="few">Ștergeți %1$s și cele %2$d contacte din ea?</item>
         <item quantity="other">Ștergeți %1$s și cele %2$d de contacte din ea?</item>
     </plurals>

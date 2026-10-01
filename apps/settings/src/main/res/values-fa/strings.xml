@@ -45,6 +45,8 @@
     <string name="route_delete_title">حذف مسیر؟</string>
     <string name="route_path">مسیر</string>
     <string name="route_method">روش</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s ← %2$s</string>
     <string name="route_method_app">برنامه</string>
     <string name="route_method_entity">موجودیت</string>
     <string name="route_method_redirect">تغییر مسیر</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">دانلود از packages.mochi-os.org</string>
     <string name="system_status_copy">کپی</string>
     <string name="system_status_peers">همتاها</string>
-    <string name="system_status_known">شناخته‌شده</string>
+    <string name="system_status_peers_totals">شناخته‌شده %1$s · متصل %2$s · مش پخش %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">شناخته‌شده %1$s · متصل %2$s</string>
     <string name="system_status_peer_connected">متصل</string>
     <string name="system_status_peer_disconnected">قطع شده</string>
     <string name="system_status_peer_queued">پیام‌های در صف</string>
@@ -194,12 +197,12 @@
     <string name="system_users_toast_deleted">کاربر حذف شد</string>
     <string name="system_users_toast_suspended">کاربر تعلیق شد</string>
     <string name="system_users_toast_suspension_removed">تعلیق برداشته شد</string>
-    <string name="system_users_toast_session_revoked">نشست لغو شد</string>
+    <string name="system_users_toast_session_revoked">نشست ابطال شد</string>
     <string name="system_users_toast_create_failed">ایجاد کاربر ناموفق بود</string>
     <string name="system_users_toast_update_failed">به‌روزرسانی کاربر ناموفق بود</string>
     <string name="system_users_toast_delete_failed">حذف کاربر ناموفق بود</string>
     <string name="system_users_toast_status_failed">به‌روزرسانی وضعیت کاربر ناموفق بود</string>
-    <string name="system_users_toast_revoke_failed">لغو جلسه ناموفق بود</string>
+    <string name="system_users_toast_revoke_failed">ابطال نشست ناموفق بود</string>
 
     <string name="settings_home_sessions">نشست‌ها</string>
     <string name="settings_home_privacy">سیاست حریم خصوصی</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">دیگر نمی‌توانید با کد احراز هویت وارد شوید.</string>
     <string name="account_recovery_none">کدهای بازیابی تولید نشده است.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d کد بازیابی باقی مانده است.</item>
-        <item quantity="other">%1$d کد بازیابی باقی مانده است.</item>
+        <item quantity="one">%1$s کد بازیابی باقی مانده است.</item>
+        <item quantity="other">%1$s کد بازیابی باقی مانده است.</item>
     </plurals>
     <string name="account_recovery_generate">تولید کدها</string>
     <string name="account_recovery_regenerate">تولید مجدد کدها</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">آخرین استفاده %1$s</string>
     <string name="route_delete_message">این مسیر برای مسیر «%1$s» را حذف می‌کند.</string>
     <string name="route_empty">هیچ مسیری پیکربندی نشده است.</string>
-    <string name="route_meta">اولویت %1$d · %2$s</string>
+    <string name="route_meta">اولویت %1$s · %2$s</string>
     <string name="interests_search_placeholder">جستجوی موضوعات برای افزودن…</string>
     <string name="interests_empty">هنوز هیچ علاقه‌مندی وجود ندارد.</string>
     <string name="interests_summary_regenerate">تولید مجدد خلاصه</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">ابطال همه نشست‌ها؟</string>
     <string name="system_users_revoke_all_message">همه نشست‌های فعال این کاربر از سیستم خارج خواهند شد.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">نمایش %1$d–%2$d از %3$d کاربر</item>
-        <item quantity="other">نمایش %1$d–%2$d از %3$d کاربر</item>
+        <item quantity="one">نمایش %1$s–%2$s از %3$s کاربر</item>
+        <item quantity="other">نمایش %1$s–%2$s از %3$s کاربر</item>
     </plurals>
     <string name="account_title">حساب</string>
     <string name="account_section_identity">هویت</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">تأیید DNS</string>
     <string name="settings_home_domains">دامنه‌ها</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">آزمایش به %1$d مقصد ارسال شد</item>
-        <item quantity="other">آزمایش به %1$d مقصد ارسال شد</item>
+        <item quantity="one">آزمایش به %1$s مقصد ارسال شد</item>
+        <item quantity="other">آزمایش به %1$s مقصد ارسال شد</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$d نشست لغو شد</item>
-        <item quantity="other">%1$d نشست لغو شد</item>
+        <item quantity="one">%1$s نشست ابطال شد</item>
+        <item quantity="other">%1$s نشست ابطال شد</item>
     </plurals>
     <string name="login_title">ورود</string>
     <string name="login_section_methods">روش‌های ورود</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">عمومی</string>
     <string name="system_status_reachability_private">خصوصی</string>
     <string name="system_status_reachability_unknown">ناشناخته</string>
-    <string name="system_status_relay">از طریق رله</string>
-    <string name="system_status_mesh">مش پخش</string>
+    <string name="system_status_reachability_relay">%1$s · از طریق رله</string>
     <string name="system_status_broadcast">آخرین پخش</string>
     <string name="system_status_queued_broadcasts">پیام‌های پخش در صف</string>
     <string name="system_setting_hostname_publish">اعلام نام میزبان و دامنه‌ها به سرورهای دیگر</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">آخرین بازدید %1$s</string>
     <string name="notifprefs_device_app">%1$s · اپلیکیشن</string>
     <string name="notifprefs_device_push">%1$s · پوش</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">آزمایش به %1$d از %2$d مقصد ارسال شد</item>
-        <item quantity="other">آزمایش به %1$d از %2$d مقصد ارسال شد</item>
+        <item quantity="one">آزمایش به %1$s از %2$s مقصد ارسال شد</item>
+        <item quantity="other">آزمایش به %1$s از %2$s مقصد ارسال شد</item>
     </plurals>
     <string name="notifprefs_test_none">هیچ مقصدی پیکربندی نشده است</string>
     <string name="notifprefs_transport_fcm">اعلان Android</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">تغییرات دور انداخته شود؟</string>
     <string name="system_documents_discard">دور انداختن</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d موفق</item>
-        <item quantity="other">%1$d موفق</item>
+        <item quantity="one">%1$s موفق</item>
+        <item quantity="other">%1$s موفق</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d ناموفق</item>
-        <item quantity="other">%1$d ناموفق</item>
+        <item quantity="one">%1$s ناموفق</item>
+        <item quantity="other">%1$s ناموفق</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d رزرو</item>
-        <item quantity="other">%1$d / %2$d رزرو</item>
+        <item quantity="one">%1$s / %2$s رزرو</item>
+        <item quantity="other">%1$s / %2$s رزرو</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d مدار</item>
-        <item quantity="other">%1$d مدار</item>
+        <item quantity="one">%1$s مدار</item>
+        <item quantity="other">%1$s مدار</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d ردشده</item>
-        <item quantity="other">%1$d ردشده</item>
+        <item quantity="one">%1$s ردشده</item>
+        <item quantity="other">%1$s ردشده</item>
     </plurals>
 </resources>

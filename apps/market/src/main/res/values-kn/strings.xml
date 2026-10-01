@@ -425,7 +425,7 @@
     <string name="market_status_delivered">ತಲುಪಿಸಲಾಗಿದೆ</string>
     <string name="market_status_disputed">ವಿವಾದಿತ</string>
     <string name="market_status_paid">ಪಾವತಿಸಲಾಗಿದೆ</string>
-    <string name="market_status_paused">ಪಾಸ್ ಮಾಡಲಾಗಿದೆ</string>
+    <string name="market_status_paused">ವಿರಾಮಗೊಳಿಸಲಾಗಿದೆ</string>
     <string name="market_status_pending">ಬಾಕಿ ಇದೆ</string>
     <string name="market_status_refunded">ರಿಫಂಡ್ ಮಾಡಲಾಗಿದೆ</string>
     <string name="market_status_shipped">ರವಾನಿಸಲಾಗಿದೆ</string>
@@ -459,7 +459,7 @@
     <string name="market_subscriptions_cancels_period_end">ಪ್ರಸ್ತುತ ಅವಧಿಯ ಕೊನೆಯಲ್ಲಿ ರದ್ದು</string>
     <string name="market_subscriptions_empty">ಯಾವುದೇ ಸಬ್‌ಸ್ಕ್ರಿಪ್ಷನ್‌ಗಳಿಲ್ಲ</string>
     <string name="market_subscriptions_empty_body">ಸಬ್‌ಸ್ಕ್ರಿಪ್ಶನ್‌ಗಳು ಮರುಕಳಿಸುವ ಖರೀದಿಗಳಾಗಿವೆ — ಮಾರಾಟಗಾರರು ಅವುಗಳನ್ನು ಮಾಸಿಕ ಅಥವಾ ವಾರ್ಷಿಕ ಬೆಲೆಯೊಂದಿಗೆ ಲಿಸ್ಟ್ ಮಾಡುತ್ತಾರೆ.</string>
-    <string name="market_subscriptions_pause_failed">ಪಾಸ್ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ</string>
+    <string name="market_subscriptions_pause_failed">ವಿರಾಮಗೊಳಿಸಲು ವಿಫಲವಾಗಿದೆ</string>
     <string name="market_subscriptions_paused">ಸಬ್‌ಸ್ಕ್ರಿಪ್ಶನ್ ವಿರಾಮಗೊಳಿಸಲಾಗಿದೆ</string>
     <string name="market_subscriptions_reactivate_failed">ಮರು-ಸಕ್ರಿಯಗೊಳಿಸಲು ವಿಫಲವಾಗಿದೆ</string>
     <string name="market_subscriptions_reactivated">ಸಬ್‌ಸ್ಕ್ರಿಪ್ಶನ್ ಮರು-ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ</string>
@@ -776,7 +776,7 @@
     <string name="market_audit_subscription_chargeback_won">ಚಾರ್ಜ್‌ಬ್ಯಾಕ್ ತಿರಸ್ಕರಿಸಲಾಗಿದೆ</string>
     <string name="market_audit_subscription_created">ಸಬ್‌ಸ್ಕ್ರಿಪ್ಶನ್ ರಚಿಸಲಾಗಿದೆ</string>
     <string name="market_audit_subscription_past_due">ಪಾವತಿಯ ಗಡುವು ಮುಗಿದಿದೆ</string>
-    <string name="market_audit_subscription_paused">ಪಾಸ್ ಮಾಡಲಾಗಿದೆ</string>
+    <string name="market_audit_subscription_paused">ವಿರಾಮಗೊಳಿಸಲಾಗಿದೆ</string>
     <string name="market_audit_subscription_reactivated">ಮರುಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ</string>
     <string name="market_audit_subscription_resumed">ಮುಂದುವರಿಸಲಾಗಿದೆ</string>
     <string name="market_filter_currency">ಕರೆನ್ಸಿ</string>

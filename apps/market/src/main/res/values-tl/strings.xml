@@ -271,7 +271,7 @@
     <string name="market_onboarding_dismiss">I-dismiss</string>
     <string name="market_onboarding_title">Maligayang pagdating sa Market</string>
     <string name="market_open_sidebar">Buksan ang menu</string>
-    <string name="market_price_from">mula sa %1$s</string>
+    <string name="market_price_from">Mula sa %1$s</string>
     <string name="market_price_per_month">%1$s / buwan</string>
     <string name="market_price_per_year">%1$s / taon</string>
     <string name="market_profile_biography">Tungkol sa</string>

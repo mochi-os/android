@@ -151,7 +151,7 @@
     <string name="forums_access_level_moderate">Мадэраваць</string>
     <string name="forums_members_search">Фільтр удзельнікаў</string>
     <string name="forums_banner_description">Markdown, які паказваецца ў верхняй частцы форуму.</string>
-    <string name="forums_banner_placeholder">Сардэчна запрашаем на гэты форум…</string>
+    <string name="forums_banner_placeholder">Увядзіце тэкст банера (падтрымліваецца Markdown)…</string>
     <string name="forums_ai_mode_label">Рэжым: %1$s</string>
     <string name="forums_ai_mode_heading">Рэжым AI</string>
     <string name="forums_ai_mode_off">Адключана</string>

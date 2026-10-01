@@ -6,7 +6,7 @@
     <string name="staff_accounts_action_ban_title">Արգելել հաշիվը</string>
     <string name="staff_accounts_action_suspend_title">Կասեցնել հաշիվը</string>
     <string name="staff_accounts_action_unban_title">Հանել արգելքը</string>
-    <string name="staff_accounts_action_unsuspend_title">Հանել կասեցումը</string>
+    <string name="staff_accounts_action_unsuspend_title">Վերացնել կասեցումը</string>
     <string name="staff_accounts_any_seller">Բոլորը</string>
     <string name="staff_accounts_any_status">Բոլորը</string>
     <string name="staff_accounts_ban">Արգելել</string>
@@ -36,7 +36,7 @@
     <string name="staff_accounts_unbanned_toast">Հաշվի արգելքը հանված է</string>
     <string name="staff_accounts_unnamed">Անանուն</string>
     <string name="staff_accounts_unsuspend">Վերացնել կասեցումը</string>
-    <string name="staff_accounts_unsuspended_toast">Հաշվի կասեցումը հանված է</string>
+    <string name="staff_accounts_unsuspended_toast">Հաշվի կասեցումը վերացվել է</string>
     <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_appeals_cancel">Չեղարկել</string>
     <string name="staff_appeals_decide">Որոշել</string>
@@ -62,7 +62,7 @@
     <string name="staff_audit_action_account_stripe_restricted">Stripe-ը սահմանափակված է</string>
     <string name="staff_audit_action_account_suspended">Կասեցված է որպես վաճառող</string>
     <string name="staff_audit_action_account_unbanned">Արգելքը հանվեց</string>
-    <string name="staff_audit_action_account_unsuspended">Կասեցումը չեղարկվեց</string>
+    <string name="staff_audit_action_account_unsuspended">Կասեցումը վերացվեց</string>
     <string name="staff_audit_action_auction_bid_placed">Հայտը ներկայացվեց</string>
     <string name="staff_audit_action_auction_cancelled">Աճուրդը չեղարկված է</string>
     <string name="staff_audit_action_auction_created">Աճուրդը ստեղծվեց</string>
@@ -137,7 +137,7 @@
     <string name="staff_categories_delete_title">Ջնջել կատեգորիան</string>
     <string name="staff_categories_dialog_active">Ակտիվ</string>
     <string name="staff_categories_dialog_create_title">Ստեղծել կատեգորիա</string>
-    <string name="staff_categories_dialog_creating">Արժանահավատություն</string>
+    <string name="staff_categories_dialog_creating">Ստեղծվում է…</string>
     <string name="staff_categories_dialog_digital">Թվային</string>
     <string name="staff_categories_dialog_edit_title">Խմբագրել կատեգորիան</string>
     <string name="staff_categories_dialog_icon">Պատկերակ</string>

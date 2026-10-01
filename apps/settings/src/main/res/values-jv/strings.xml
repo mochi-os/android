@@ -45,6 +45,8 @@
     <string name="route_delete_title">Busak rute?</string>
     <string name="route_path">Path</string>
     <string name="route_method">Metode</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Aplikasi</string>
     <string name="route_method_entity">Entitas</string>
     <string name="route_method_redirect">Redirect</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Download saka packages.mochi-os.org</string>
     <string name="system_status_copy">Salin</string>
     <string name="system_status_peers">Kanca</string>
-    <string name="system_status_known">Dikenal</string>
+    <string name="system_status_peers_totals">Dikenal %1$s · Wis nyambung %2$s · Mesh siaran %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Dikenal %1$s · Wis nyambung %2$s</string>
     <string name="system_status_peer_connected">Wis nyambung</string>
     <string name="system_status_peer_disconnected">Pedhot</string>
     <string name="system_status_peer_queued">Pesen ing antrean</string>
@@ -194,12 +197,12 @@
     <string name="system_users_toast_deleted">Panganggo dibusak</string>
     <string name="system_users_toast_suspended">Panganggo disetop</string>
     <string name="system_users_toast_suspension_removed">Setop dibatalaké</string>
-    <string name="system_users_toast_session_revoked">Sesi dibatalaké</string>
+    <string name="system_users_toast_session_revoked">Sesi dicabut</string>
     <string name="system_users_toast_create_failed">Gagal nggawé pangguna</string>
     <string name="system_users_toast_update_failed">Gagal nganyari pangguna</string>
     <string name="system_users_toast_delete_failed">Gagal mbusak pangguna</string>
     <string name="system_users_toast_status_failed">Gagal nganyari status pangguna</string>
-    <string name="system_users_toast_revoke_failed">Gagal mbatalké sesi</string>
+    <string name="system_users_toast_revoke_failed">Gagal nyabut sesi</string>
 
     <string name="settings_home_sessions">Sesi</string>
     <string name="settings_home_privacy">Kabijakan privasi</string>
@@ -216,7 +219,7 @@
     <string name="account_totp_disable_message">Sampeyan ora bisa mlebu nganggo kode otentikator menèh.</string>
     <string name="account_recovery_none">Ora ana kode pemulihan sing digawe.</string>
     <plurals name="account_recovery_count">
-        <item quantity="other">Isih ana %1$d kode pemulihan.</item>
+        <item quantity="other">Isih ana %1$s kode pemulihan.</item>
     </plurals>
     <string name="account_recovery_generate">Gawe kode</string>
     <string name="account_recovery_regenerate">Gawe ulang kode</string>
@@ -233,7 +236,7 @@
     <string name="account_last_used">Pungkasan dianggo %1$s</string>
     <string name="route_delete_message">Iki bakal mbusak rute kanggo path \"%1$s\".</string>
     <string name="route_empty">Ora ana rute sing dikonfigurasi.</string>
-    <string name="route_meta">Prioritas %1$d · %2$s</string>
+    <string name="route_meta">Prioritas %1$s · %2$s</string>
     <string name="interests_search_placeholder">Goleki topik kanggo ditambahake…</string>
     <string name="interests_empty">Durung ana minat.</string>
     <string name="interests_summary_regenerate">Gawé manèh ringkesan</string>
@@ -267,7 +270,7 @@
     <string name="system_users_revoke_all_title">Cabut kabeh sesi?</string>
     <string name="system_users_revoke_all_message">Kabeh sesi aktif pangguna iki bakal metu.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="other">Nuduhake %1$d–%2$d saka %3$d pangguna</item>
+        <item quantity="other">Nuduhake %1$s–%2$s saka %3$s pangguna</item>
     </plurals>
     <string name="account_title">Akun</string>
     <string name="account_section_identity">Identitas</string>
@@ -301,10 +304,10 @@
     <string name="domain_verify">Verifikasi DNS</string>
     <string name="settings_home_domains">Domain</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="other">Tes dikirim menyang %1$d tujuan</item>
+        <item quantity="other">Tes dikirim menyang %1$s tujuan</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="other">Mbatalaké %1$d sesi</item>
+        <item quantity="other">%1$s sesi dicabut</item>
     </plurals>
     <string name="login_title">Mlebu</string>
     <string name="login_section_methods">Cara mlebu</string>
@@ -335,8 +338,7 @@
     <string name="system_status_reachability_public">Publik</string>
     <string name="system_status_reachability_private">Privat</string>
     <string name="system_status_reachability_unknown">Ora dimangerteni</string>
-    <string name="system_status_relay">Liwat relay</string>
-    <string name="system_status_mesh">Mesh siaran</string>
+    <string name="system_status_reachability_relay">%1$s · liwat relay</string>
     <string name="system_status_broadcast">Siaran pungkasan</string>
     <string name="system_status_queued_broadcasts">Pesen siaran ing antrian</string>
     <string name="system_setting_hostname_publish">Umumake jeneng host lan domain menyang server liyane</string>
@@ -369,8 +371,10 @@
     <string name="accounts_device_seen">Pungkasan katon %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplikasi</string>
     <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="other">Tes dikirim menyang %1$d saka %2$d tujuan</item>
+        <item quantity="other">Tes dikirim menyang %1$s saka %2$s tujuan</item>
     </plurals>
     <string name="notifprefs_test_none">Ora ana tujuan disetel</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
@@ -394,18 +398,18 @@
     <string name="system_documents_discard_title">Buwang owahan?</string>
     <string name="system_documents_discard">Buwang</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="other">%1$d kasil</item>
+        <item quantity="other">%1$s kasil</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="other">%1$d gagal</item>
+        <item quantity="other">%1$s gagal</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="other">%1$d / %2$d reservasi</item>
+        <item quantity="other">%1$s / %2$s reservasi</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="other">%1$d sirkuit</item>
+        <item quantity="other">%1$s sirkuit</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="other">%1$d ditolak</item>
+        <item quantity="other">%1$s ditolak</item>
     </plurals>
 </resources>

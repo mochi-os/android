@@ -151,7 +151,7 @@
     <string name="forums_access_level_moderate">Moderieren</string>
     <string name="forums_members_search">Mitglieder filtern</string>
     <string name="forums_banner_description">Markdown, das oben im Forum angezeigt wird.</string>
-    <string name="forums_banner_placeholder">Willkommen in diesem Forum…</string>
+    <string name="forums_banner_placeholder">Bannertext eingeben (Markdown wird unterstützt)…</string>
     <string name="forums_ai_mode_label">Modus: %1$s</string>
     <string name="forums_ai_mode_heading">KI-Modus</string>
     <string name="forums_ai_mode_off">Deaktiviert</string>

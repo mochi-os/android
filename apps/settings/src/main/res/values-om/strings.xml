@@ -45,6 +45,8 @@
     <string name="route_delete_title">Karaa haqu?</string>
     <string name="route_path">Daandii</string>
     <string name="route_method">Mala</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Appii</string>
     <string name="route_method_entity">Qaama</string>
     <string name="route_method_redirect">Deebi\'iinsa</string>
@@ -72,7 +74,7 @@
     <string name="notifprefs_topics_empty">Hanga ammaatti mata dureewwan hin jiran</string>
     <string name="settings_home_system_status">Haala</string>
     <string name="system_status_title">Haala</string>
-    <string name="system_status_version">Fooyya\'iinsa</string>
+    <string name="system_status_version">Vershinii</string>
     <string name="system_status_started">Jalqabameera</string>
     <string name="system_status_update">Haaromsi</string>
     <string name="system_status_refresh">Haaromsi</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org irraa buufadhu</string>
     <string name="system_status_copy">Garagalchi</string>
     <string name="system_status_peers">Hiriyoota</string>
-    <string name="system_status_known">Beekamaa</string>
+    <string name="system_status_peers_totals">Beekamaa %1$s · Walitti hidhame %2$s · Mesh tamsaasaa %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Beekamaa %1$s · Walitti hidhame %2$s</string>
     <string name="system_status_peer_connected">Walitti hidhame</string>
     <string name="system_status_peer_disconnected">Hidhaan citeera</string>
     <string name="system_status_peer_queued">Ergaawwan tartiiba keessaa</string>
@@ -194,12 +197,12 @@
     <string name="system_users_toast_deleted">Fayyadamaan haqameera</string>
     <string name="system_users_toast_suspended">Fayyadamaan hidhameera</string>
     <string name="system_users_toast_suspension_removed">Hidhamuun haqameera</string>
-    <string name="system_users_toast_session_revoked">Yeroon turtii haqameera</string>
+    <string name="system_users_toast_session_revoked">Galiin deebifatameera</string>
     <string name="system_users_toast_create_failed">Fayyadamaa uumuu hin dandeenye</string>
     <string name="system_users_toast_update_failed">Fayyadamaa haaromsuu hin dandeenye</string>
     <string name="system_users_toast_delete_failed">Fayyadamaa haquu hin dandeenye</string>
     <string name="system_users_toast_status_failed">Haala fayyadamaa haaromsuu hin dandeenye</string>
-    <string name="system_users_toast_revoke_failed">Sessenii haquu hin dandeenye</string>
+    <string name="system_users_toast_revoke_failed">Galii deebifachuu hin dandeenye</string>
 
     <string name="settings_home_sessions">Yeroowwan turtii</string>
     <string name="settings_home_privacy">Imaammata iccitii</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">Siif hin danda\'amu lakkoofsa mirkaneessaa fayyadamtee seenuu.</string>
     <string name="account_recovery_none">Lakkoofsi deebii uumamee hin jiru.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">Lakkoofsi deebii %1$d hafeera.</item>
-        <item quantity="other">Lakkoofsonni deebii %1$d hafaniiru.</item>
+        <item quantity="one">Lakkoofsi deebii %1$s hafeera.</item>
+        <item quantity="other">Lakkoofsonni deebii %1$s hafaniiru.</item>
     </plurals>
     <string name="account_recovery_generate">Lakkoofsa uumi</string>
     <string name="account_recovery_regenerate">Lakkoofsa irra deebi\'i</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">Yeroo dhumaa fayyadamame %1$s</string>
     <string name="route_delete_message">Kunis karoora karoora \"%1$s\" haqa.</string>
     <string name="route_empty">Karoorawwan qaroomfaman hin jiran.</string>
-    <string name="route_meta">Dursinsii %1$d · %2$s</string>
+    <string name="route_meta">Dursinsii %1$s · %2$s</string>
     <string name="interests_search_placeholder">Mataduree dabaluuf barbaadi…</string>
     <string name="interests_empty">Hammataan ammayyuu hin jiru.</string>
     <string name="interests_summary_regenerate">Cuunfaa deebisanii uumuu</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">Galiiwwan hunda deebifachuu?</string>
     <string name="system_users_revoke_all_message">Mariiwwan dalagaa fayyadamtuu kanaa hundi ni ba\'u.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">Fayyadamaa %3$d keessaa %1$d–%2$d agarsiisa</item>
-        <item quantity="other">Fayyadamtoota %3$d keessaa %1$d–%2$d agarsiisa</item>
+        <item quantity="one">Fayyadamaa %3$s keessaa %1$s–%2$s agarsiisa</item>
+        <item quantity="other">Fayyadamtoota %3$s keessaa %1$s–%2$s agarsiisa</item>
     </plurals>
     <string name="account_title">Akkaawuntii</string>
     <string name="account_section_identity">Eenyummaa</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS Mirkaneessi</string>
     <string name="settings_home_domains">Domeeniwwan</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Qorannoon gara bakka %1$d ergameera</item>
-        <item quantity="other">Qorannoon gara bakkeewwan %1$d ergameera</item>
+        <item quantity="one">Qorannoon gara bakka %1$s ergameera</item>
+        <item quantity="other">Qorannoon gara bakkeewwan %1$s ergameera</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">Yeroo turtii %1$d kaafame</item>
-        <item quantity="other">Yeroowwan turtii %1$d kaafaman</item>
+        <item quantity="one">Galii %1$s deebifatame</item>
+        <item quantity="other">Galiiwwan %1$s deebifataman</item>
     </plurals>
     <string name="login_title">Galchuu</string>
     <string name="login_section_methods">Mala seenii</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">Ifa</string>
     <string name="system_status_reachability_private">Dhuunfaa</string>
     <string name="system_status_reachability_unknown">Hin beekamu</string>
-    <string name="system_status_relay">Karaa relay</string>
-    <string name="system_status_mesh">Mesh tamsaasaa</string>
+    <string name="system_status_reachability_relay">%1$s · karaa daddabarsaa</string>
     <string name="system_status_broadcast">Tamsaasa dhumaa</string>
     <string name="system_status_queued_broadcasts">Ergaawwan tamsaasaa sarara keessa</string>
     <string name="system_setting_hostname_publish">Maqaa keessummeessaa fi domeenota serveroota birootti beeksisi</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">Yeroo dhumaaf mul\'ate %1$s</string>
     <string name="notifprefs_device_app">%1$s · appii</string>
     <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Qorannoon bakka %2$d keessaa %1$dtti ergame</item>
-        <item quantity="other">Qorannoon bakkeewwan %2$d keessaa %1$dtti ergame</item>
+        <item quantity="one">Qorannoon bakka %2$s keessaa %1$stti ergame</item>
+        <item quantity="other">Qorannoon bakkeewwan %2$s keessaa %1$stti ergame</item>
     </plurals>
     <string name="notifprefs_test_none">Galmi qindaa\'e hin jiru</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">Jijjiiramoota gatuu?</string>
     <string name="system_documents_discard">Gati</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d milkaa\'e</item>
-        <item quantity="other">%1$d milkaa\'an</item>
+        <item quantity="one">%1$s milkaa\'e</item>
+        <item quantity="other">%1$s milkaa\'an</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d kufe</item>
-        <item quantity="other">%1$d kufan</item>
+        <item quantity="one">%1$s kufe</item>
+        <item quantity="other">%1$s kufan</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d qabannoo</item>
-        <item quantity="other">%1$d / %2$d qabannoo</item>
+        <item quantity="one">%1$s / %2$s qabannoo</item>
+        <item quantity="other">%1$s / %2$s qabannoo</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d geengoo</item>
-        <item quantity="other">%1$d geengoo</item>
+        <item quantity="one">%1$s geengoo</item>
+        <item quantity="other">%1$s geengoo</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d didame</item>
-        <item quantity="other">%1$d didaman</item>
+        <item quantity="one">%1$s didame</item>
+        <item quantity="other">%1$s didaman</item>
     </plurals>
 </resources>

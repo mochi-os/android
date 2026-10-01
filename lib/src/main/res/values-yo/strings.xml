@@ -60,7 +60,7 @@
     <string name="notifications_empty">Kò sí ìfìtọ́nisí</string>
     <string name="notifications_empty_unread">O ti ka gbogbo rẹ̀ tán</string>
     <string name="notifications_tab_unread">Àìkà</string>
-    <string name="notifications_tab_unread_count">Àìkà (%1$d)</string>
+    <string name="notifications_tab_unread_count">Àìkà (%1$s)</string>
     <string name="notifications_tab_all">Gbogbo</string>
     <string name="notifications_mark_all_read">Sàmì sí gbogbo gẹ́gẹ́ bí kíkà</string>
     <string name="notifications_clear_all">Pa gbogbo rẹ̀ rẹ́</string>
@@ -208,7 +208,7 @@
     <string name="oem_hint_allow">Gba ẹ̀yìn láàyè</string>
     <string name="oem_hint_dismiss">Má fi hàn mọ́</string>
     <string name="about_title">Oníbàárà Mochi</string>
-    <string name="about_version">Ìtumọ̀ %1$s</string>
+    <string name="about_version">Ẹ̀dà %1$s</string>
     <string name="about_check_updates">Yẹ àwọn ìmúdójúìwọ̀n wò</string>
     <string name="about_up_to_date">Ó ti wà ní tuntun</string>
     <string name="about_check_downloading">Ẹ̀yà %1$s wà, ń gbà sílẹ̀…</string>
@@ -303,8 +303,8 @@
     <string name="rss_revoke">Gba ìwọlé padà</string>
     <string name="rss_revoke_title">Gba àǹfààní RSS padà?</string>
     <string name="rss_revoke_message">Gbogbo ohun tí ó forúkọsílẹ̀ sí ìjẹun yìí yóò dáwọ́ gbígbà rẹ̀ dúró. O lè ṣe àdàkọ URL tuntun lẹ́yìn náà.</string>
-    <string name="rss_revoked">Ìwọlé RSS ti fagilé</string>
-    <string name="rss_revoke_failed">Ìkùnà láti fagilé ìwọlé RSS</string>
+    <string name="rss_revoked">A ti gba ìwọlé RSS padà</string>
+    <string name="rss_revoke_failed">Kò lè gba ìwọlé RSS padà</string>
     <string name="game_empty_title">Kò sí eré síbẹ̀</string>
     <string name="game_select_title">Yan eré kan</string>
     <string name="game_select_subtitle">Yan eré kan láti inú ọ̀pá ẹ̀gbẹ́ tàbí bẹ̀rẹ̀ eré tuntun.</string>

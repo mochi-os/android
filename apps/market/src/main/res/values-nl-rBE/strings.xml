@@ -544,7 +544,6 @@
     <string name="market_messages_send_failed">Kon bericht niet verzenden</string>
     <string name="market_messages_thread_title">Gesprek</string>
     <string name="market_messages_unread_badge">%1$d ongelezen</string>
-    <string name="market_price_from">vanaf %1$s</string>
     <string name="market_price_high_bid">Hoogste bod: %1$s</string>
     <string name="market_price_instant_buy">direct kopen: %1$s</string>
     <string name="market_price_per_month">%1$s / maand</string>

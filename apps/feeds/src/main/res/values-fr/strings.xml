@@ -113,8 +113,8 @@
     <string name="feeds_source_never_fetched">Jamais récupéré</string>
     <string name="feeds_source_poll">Interroger</string>
     <string name="feeds_source_transform">Transformation par l\'IA</string>
-    <string name="feeds_remove_source_confirm">Supprimer \"%1$s\" ?</string>
-    <string name="feeds_remove_also_delete_posts">Supprimer aussi les publications importées</string>
+    <string name="feeds_remove_source_confirm">L\'importation du contenu depuis \"%1$s\" sera arrêtée.</string>
+    <string name="feeds_remove_also_delete_posts">Supprimer aussi les publications importées depuis cette source</string>
     <string name="feeds_suggested_credibility_title">Crédibilité suggérée</string>
     <string name="feeds_suggested_credibility_body">Mochi suggère une crédibilité de %1$d. Accepter ?</string>
     <string name="feeds_suggested_credibility_keep">Conserver l\'actuelle</string>

@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">Moderim</string>
     <string name="forums_members_search">Filtroni anëtarët</string>
     <string name="forums_banner_description">Markdown që shfaqet në krye të forumit.</string>
-    <string name="forums_banner_placeholder">Mirë se vini në këtë forum…</string>
+    <string name="forums_banner_placeholder">Futni tekstin e banerit (mbështetet Markdown)…</string>
     <string name="forums_ai_mode_label">Mënyra: %1$s</string>
     <string name="forums_ai_mode_heading">Mënyra e AI-së</string>
     <string name="forums_ai_mode_off">I çaktivizuar</string>

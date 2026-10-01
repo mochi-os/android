@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">Манбаъ хориҷ карда шуд</string>
     <string name="feeds_settings_source_polling">Сарчашма пурсида шуда истадааст…</string>
     <string name="feeds_settings_access_updated">Дастрасӣ навсозӣ шуд</string>
-    <string name="feeds_settings_access_revoked">Дастрасӣ бекор карда шуд</string>
+    <string name="feeds_settings_access_revoked">Дастрасӣ бозхонд карда шуд</string>
     <string name="feeds_settings_member_removed">Узв бартараф шуд</string>
     <string name="feeds_settings_ai_mode_updated">Режими AI нав карда шуд</string>
     <string name="feeds_settings_ai_account_updated">Ҳисоби AI нав карда шуд</string>
@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">Ҳеҷ гоҳ боргирӣ нашудааст</string>
     <string name="feeds_source_poll">Пурсиш</string>
     <string name="feeds_source_transform">Табдилдиҳии AI</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\"-ро тоза мекунед?</string>
-    <string name="feeds_remove_also_delete_posts">Ҳамчунин паёмҳои воридшударо нест кунед</string>
+    <string name="feeds_remove_source_confirm">Ин воридкунии мундариҷа аз \"%1$s\"-ро қатъ мекунад.</string>
+    <string name="feeds_remove_also_delete_posts">Ҳамчунин паёмҳое, ки аз ин манбаъ ворид шудаанд, нест карда шаванд</string>
     <string name="feeds_suggested_credibility_title">Эътимоднокии пешниҳодшуда</string>
     <string name="feeds_suggested_credibility_body">Mochi эътимоднокии %1$d-ро пешниҳод мекунад. Қабул мекунед?</string>
     <string name="feeds_suggested_credibility_keep">Ҷориро нигоҳ доред</string>

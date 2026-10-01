@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">Модератсия</string>
     <string name="forums_members_search">Филтр кардани аъзоён</string>
     <string name="forums_banner_description">Markdown, ки дар болои форум нишон дода мешавад.</string>
-    <string name="forums_banner_placeholder">Хуш омадед ба ин форум…</string>
+    <string name="forums_banner_placeholder">Матни баннерро ворид кунед (Markdown дастгирӣ мешавад)…</string>
     <string name="forums_ai_mode_label">Реҷа: %1$s</string>
     <string name="forums_ai_mode_heading">Реҷаи AI</string>
     <string name="forums_ai_mode_off">Ғайрифаъолшуда</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">рӯзҳо</string>
     <string name="forums_settings_banner_saved">Баннер захира шуд</string>
     <string name="forums_settings_access_updated">Дастрасӣ навсозӣ шуд</string>
-    <string name="forums_settings_access_revoked">Дастрасӣ бекор карда шуд</string>
+    <string name="forums_settings_access_revoked">Дастрасӣ бозхонд карда шуд</string>
     <string name="forums_settings_member_removed">Узв бартараф шуд</string>
     <string name="forums_settings_prompt_saved">Дархост захира шуд</string>
     <string name="forums_settings_section_identity">Шахсият</string>

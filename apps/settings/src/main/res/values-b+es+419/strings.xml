@@ -79,7 +79,6 @@
     <string name="system_status_download_from_packages">Descargar desde packages.mochi-os.org</string>
     <string name="system_status_copy">Copiar</string>
     <string name="system_status_peers">Pares</string>
-    <string name="system_status_known">Conocidos</string>
     <string name="system_status_peer_connected">Conectado</string>
     <string name="system_status_peer_disconnected">Desconectado</string>
     <string name="system_status_peer_queued">Mensajes en cola</string>
@@ -214,8 +213,8 @@
     <string name="account_totp_disable_message">No podrás iniciar sesión con un código de autenticación.</string>
     <string name="account_recovery_none">No se han generado códigos de recuperación.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">Queda %1$d código de recuperación.</item>
-        <item quantity="other">Quedan %1$d códigos de recuperación.</item>
+        <item quantity="one">Queda %1$s código de recuperación.</item>
+        <item quantity="other">Quedan %1$s códigos de recuperación.</item>
     </plurals>
     <string name="account_recovery_generate">Generar códigos</string>
     <string name="account_recovery_regenerate">Regenerar códigos</string>
@@ -230,7 +229,7 @@
     <string name="account_last_used">Último uso %1$s</string>
     <string name="route_delete_message">Esto quitará la ruta de la ubicación \"%1$s\".</string>
     <string name="route_empty">No hay rutas configuradas.</string>
-    <string name="route_meta">Prioridad %1$d · %2$s</string>
+    <string name="route_meta">Prioridad %1$s · %2$s</string>
     <string name="interests_search_placeholder">Busca temas para agregar…</string>
     <string name="interests_empty">Aún no hay intereses.</string>
     <string name="interests_summary_regenerate">Regenerar resumen</string>
@@ -263,8 +262,8 @@
     <string name="system_users_revoke_all_title">¿Revocar todas las sesiones?</string>
     <string name="system_users_revoke_all_message">Se cerrará la sesión de todas las sesiones activas de este usuario.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">Mostrando %1$d–%2$d de %3$d usuario</item>
-        <item quantity="other">Mostrando %1$d–%2$d de %3$d usuarios</item>
+        <item quantity="one">Mostrando %1$s–%2$s de %3$s usuario</item>
+        <item quantity="other">Mostrando %1$s–%2$s de %3$s usuarios</item>
     </plurals>
 
     <string name="account_title">Cuenta</string>
@@ -301,13 +300,13 @@
     <string name="domain_verify">Verificar DNS</string>
     <string name="settings_home_domains">Dominios</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Prueba enviada a %1$d destino</item>
-        <item quantity="other">Prueba enviada a %1$d destinos</item>
+        <item quantity="one">Prueba enviada a %1$s destino</item>
+        <item quantity="other">Prueba enviada a %1$s destinos</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">Se revocó %1$d sesión</item>
-        <item quantity="many">Se revocaron %1$d sesiones</item>
-        <item quantity="other">Se revocaron %1$d sesiones</item>
+        <item quantity="one">Se revocó %1$s sesión</item>
+        <item quantity="many">Se revocaron %1$s sesiones</item>
+        <item quantity="other">Se revocaron %1$s sesiones</item>
     </plurals>
     <string name="login_title">Iniciar sesión</string>
     <string name="login_section_methods">Métodos de inicio de sesión</string>
@@ -338,8 +337,6 @@
     <string name="system_status_reachability_public">Público</string>
     <string name="system_status_reachability_private">Privado</string>
     <string name="system_status_reachability_unknown">Desconocido</string>
-    <string name="system_status_relay">Vía relay</string>
-    <string name="system_status_mesh">Malla de difusión</string>
     <string name="system_status_broadcast">Última difusión</string>
     <string name="system_status_queued_broadcasts">Mensajes de difusión en cola</string>
     <string name="system_setting_hostname_publish">Anunciar el nombre de host y los dominios a otros servidores</string>
@@ -373,8 +370,8 @@
     <string name="notifprefs_device_app">%1$s · app</string>
     <string name="notifprefs_device_push">%1$s · push</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Prueba enviada a %1$d de %2$d destino</item>
-        <item quantity="other">Prueba enviada a %1$d de %2$d destinos</item>
+        <item quantity="one">Prueba enviada a %1$s de %2$s destino</item>
+        <item quantity="other">Prueba enviada a %1$s de %2$s destinos</item>
     </plurals>
     <string name="notifprefs_test_none">No hay destinos configurados</string>
     <string name="notifprefs_transport_fcm">Push de Android</string>
@@ -386,23 +383,23 @@
     <string name="system_documents_discard_title">¿Descartar los cambios?</string>
     <string name="system_documents_discard">Descartar</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d con éxito</item>
-        <item quantity="other">%1$d con éxito</item>
+        <item quantity="one">%1$s con éxito</item>
+        <item quantity="other">%1$s con éxito</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d fallida</item>
-        <item quantity="other">%1$d fallidas</item>
+        <item quantity="one">%1$s fallida</item>
+        <item quantity="other">%1$s fallidas</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d reserva</item>
-        <item quantity="other">%1$d / %2$d reservas</item>
+        <item quantity="one">%1$s / %2$s reserva</item>
+        <item quantity="other">%1$s / %2$s reservas</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d circuito</item>
-        <item quantity="other">%1$d circuitos</item>
+        <item quantity="one">%1$s circuito</item>
+        <item quantity="other">%1$s circuitos</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d rechazada</item>
-        <item quantity="other">%1$d rechazadas</item>
+        <item quantity="one">%1$s rechazada</item>
+        <item quantity="other">%1$s rechazadas</item>
     </plurals>
 </resources>

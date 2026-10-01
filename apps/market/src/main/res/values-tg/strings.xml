@@ -555,7 +555,7 @@
     <string name="market_messages_send_failed">Фиристодани паём имкон надошт</string>
     <string name="market_messages_thread_title">Сӯҳбат</string>
     <string name="market_messages_unread_badge">%1$d хонданашуда</string>
-    <string name="market_price_from">аз %1$s</string>
+    <string name="market_price_from">Аз %1$s</string>
     <string name="market_price_high_bid">Пешниҳоди баланд: %1$s</string>
     <string name="market_price_instant_buy">хариди фаврӣ: %1$s</string>
     <string name="market_price_per_month">%1$s / моҳ</string>

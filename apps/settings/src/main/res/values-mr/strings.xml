@@ -45,6 +45,8 @@
     <string name="route_delete_title">रूट हटवायचा?</string>
     <string name="route_path">पथ</string>
     <string name="route_method">पद्धत</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">अॅप</string>
     <string name="route_method_entity">एंटिटी</string>
     <string name="route_method_redirect">रीडायरेक्ट</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org वरून डाउनलोड करा</string>
     <string name="system_status_copy">कॉपी करा</string>
     <string name="system_status_peers">समकक्ष</string>
-    <string name="system_status_known">ज्ञात</string>
+    <string name="system_status_peers_totals">ज्ञात %1$s · कनेक्ट केलेले %2$s · प्रसारण मेश %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">ज्ञात %1$s · कनेक्ट केलेले %2$s</string>
     <string name="system_status_peer_connected">कनेक्ट केले</string>
     <string name="system_status_peer_disconnected">डिस्कनेक्ट केले</string>
     <string name="system_status_peer_queued">रांगेतील संदेश</string>
@@ -176,7 +179,7 @@
     <string name="system_users_create_title">वापरकर्ता तयार करा</string>
     <string name="system_users_save_changes">बदल जतन करा</string>
     <string name="system_users_suspend">वापरकर्ता निलंबित करा</string>
-    <string name="system_users_remove_suspension">निलंबन काढा</string>
+    <string name="system_users_remove_suspension">निलंबन मागे घ्या</string>
     <string name="system_users_delete">वापरकर्ता हटवा</string>
     <string name="system_users_delete_title">वापरकर्ता हटवायचा?</string>
     <string name="system_users_manage_sessions">सेशन्स व्यवस्थापित करा</string>
@@ -193,13 +196,13 @@
     <string name="system_users_toast_updated">वापरकर्ता अद्ययावत केला</string>
     <string name="system_users_toast_deleted">वापरकर्ता हटवला</string>
     <string name="system_users_toast_suspended">वापरकर्ता निलंबित</string>
-    <string name="system_users_toast_suspension_removed">निलंबन काढले</string>
-    <string name="system_users_toast_session_revoked">सेशन रद्द केले</string>
+    <string name="system_users_toast_suspension_removed">निलंबन मागे घेतले</string>
+    <string name="system_users_toast_session_revoked">सेशन मागे घेतले</string>
     <string name="system_users_toast_create_failed">वापरकर्ता तयार करण्यात अयशस्वी</string>
     <string name="system_users_toast_update_failed">वापरकर्ता अद्यतनित करण्यात अयशस्वी</string>
     <string name="system_users_toast_delete_failed">वापरकर्ता हटवण्यात अयशस्वी</string>
     <string name="system_users_toast_status_failed">वापरकर्त्याची स्थिती अद्यतनित करण्यात अयशस्वी</string>
-    <string name="system_users_toast_revoke_failed">सेशन रद्द करण्यात अयशस्वी</string>
+    <string name="system_users_toast_revoke_failed">सेशन मागे घेण्यात अयशस्वी</string>
 
     <string name="settings_home_sessions">सेशन्स</string>
     <string name="settings_home_privacy">गोपनीयता धोरण</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">तुम्ही यापुढे प्रमाणकर्ता कोडसह साइन इन करू शकणार नाही.</string>
     <string name="account_recovery_none">पुनर्प्राप्ती कोड तयार केले नाहीत.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d पुनर्प्राप्ती कोड शिल्लक आहे.</item>
-        <item quantity="other">%1$d पुनर्प्राप्ती कोड शिल्लक आहेत.</item>
+        <item quantity="one">%1$s पुनर्प्राप्ती कोड शिल्लक आहे.</item>
+        <item quantity="other">%1$s पुनर्प्राप्ती कोड शिल्लक आहेत.</item>
     </plurals>
     <string name="account_recovery_generate">कोड तयार करा</string>
     <string name="account_recovery_regenerate">कोड पुन्हा तयार करा</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">शेवटचे वापरले %1$s</string>
     <string name="route_delete_message">हे मार्ग \"%1$s\" साठीचा मार्ग काढून टाकेल.</string>
     <string name="route_empty">मार्ग कॉन्फिगर केलेले नाहीत.</string>
-    <string name="route_meta">प्राधान्य %1$d · %2$s</string>
+    <string name="route_meta">प्राधान्य %1$s · %2$s</string>
     <string name="interests_search_placeholder">जोडण्यासाठी विषय शोधा…</string>
     <string name="interests_empty">अद्याप कोणत्याही आवडी नाहीत.</string>
     <string name="interests_summary_regenerate">सारांश पुन्हा निर्माण करा</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">सर्व सेशन्स मागे घ्यायचे?</string>
     <string name="system_users_revoke_all_message">या वापरकर्त्याचे सर्व सक्रिय सेशन्स साइन आउट होतील.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">%3$d वापरकर्त्यापैकी %1$d–%2$d दर्शवित आहे</item>
-        <item quantity="other">%3$d वापरकर्त्यांपैकी %1$d–%2$d दर्शवित आहे</item>
+        <item quantity="one">%3$s वापरकर्त्यापैकी %1$s–%2$s दर्शवित आहे</item>
+        <item quantity="other">%3$s वापरकर्त्यांपैकी %1$s–%2$s दर्शवित आहे</item>
     </plurals>
     <string name="account_title">खाते</string>
     <string name="account_section_identity">ओळख</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS सत्यापित करा</string>
     <string name="settings_home_domains">डोमेन</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">%1$d गंतव्यावर चाचणी पाठवली</item>
-        <item quantity="other">%1$d गंतव्यांवर चाचणी पाठवली</item>
+        <item quantity="one">%1$s गंतव्यावर चाचणी पाठवली</item>
+        <item quantity="other">%1$s गंतव्यांवर चाचणी पाठवली</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$d सत्र रद्द केले</item>
-        <item quantity="other">%1$d सत्रे रद्द केली</item>
+        <item quantity="one">%1$s सेशन मागे घेतले</item>
+        <item quantity="other">%1$s सेशन्स मागे घेतले</item>
     </plurals>
     <string name="login_title">लॉगिन</string>
     <string name="login_section_methods">लॉगिन पद्धती</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">सार्वजनिक</string>
     <string name="system_status_reachability_private">खाजगी</string>
     <string name="system_status_reachability_unknown">अज्ञात</string>
-    <string name="system_status_relay">रिलेद्वारे</string>
-    <string name="system_status_mesh">प्रसारण मेश</string>
+    <string name="system_status_reachability_relay">%1$s · रिलेद्वारे</string>
     <string name="system_status_broadcast">शेवटचे प्रसारण</string>
     <string name="system_status_queued_broadcasts">रांगेतील प्रसारण संदेश</string>
     <string name="system_setting_hostname_publish">होस्टनेम आणि डोमेन इतर सर्व्हरना जाहीर करा</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">शेवटचे पाहिले %1$s</string>
     <string name="notifprefs_device_app">%1$s · अॅप</string>
     <string name="notifprefs_device_push">%1$s · पुश</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">%2$d गंतव्यापैकी %1$d वर चाचणी पाठवली</item>
-        <item quantity="other">%2$d गंतव्यांपैकी %1$d वर चाचणी पाठवली</item>
+        <item quantity="one">%2$s गंतव्यापैकी %1$s वर चाचणी पाठवली</item>
+        <item quantity="other">%2$s गंतव्यांपैकी %1$s वर चाचणी पाठवली</item>
     </plurals>
     <string name="notifprefs_test_none">डेस्टिनेशन्स कॉन्फिगर केलेले नाहीत</string>
     <string name="notifprefs_transport_fcm">Android पुश</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">बदल टाकून द्यायचे?</string>
     <string name="system_documents_discard">टाकून द्या</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d यशस्वी</item>
-        <item quantity="other">%1$d यशस्वी</item>
+        <item quantity="one">%1$s यशस्वी</item>
+        <item quantity="other">%1$s यशस्वी</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d अयशस्वी</item>
-        <item quantity="other">%1$d अयशस्वी</item>
+        <item quantity="one">%1$s अयशस्वी</item>
+        <item quantity="other">%1$s अयशस्वी</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d आरक्षण</item>
-        <item quantity="other">%1$d / %2$d आरक्षणे</item>
+        <item quantity="one">%1$s / %2$s आरक्षण</item>
+        <item quantity="other">%1$s / %2$s आरक्षणे</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d सर्किट</item>
-        <item quantity="other">%1$d सर्किट</item>
+        <item quantity="one">%1$s सर्किट</item>
+        <item quantity="other">%1$s सर्किट</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d नाकारले</item>
-        <item quantity="other">%1$d नाकारले</item>
+        <item quantity="one">%1$s नाकारले</item>
+        <item quantity="other">%1$s नाकारले</item>
     </plurals>
 </resources>

@@ -86,7 +86,7 @@
     <string name="market_checkout_delivery_shipping">ਸ਼ਿਪਿੰਗ</string>
     <string name="market_checkout_get_free">ਮੁਫ਼ਤ ਪ੍ਰਾਪਤ ਕਰੋ</string>
     <string name="market_checkout_item">ਆਈਟਮ</string>
-    <string name="market_checkout_listing_not_found">ਟੈਮਪਲੇਟ ਲੋਡ ਹੋ ਰਹੇ ਹਨ...</string>
+    <string name="market_checkout_listing_not_found">ਲਿਸਟਿੰਗ ਨਹੀਂ ਮਿਲੀ</string>
     <string name="market_checkout_pay_button">Stripe ਨਾਲ ਪੈਸੇ ਦਿਓ</string>
     <string name="market_checkout_payment_failed">ਪੇਮੈਂਟ ਚੈੱਕਆਊਟ ਸ਼ੁਰੂ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕੀ — ਵਿਕਰੇਤਾ ਨੇ ਪੇਮੈਂਟ ਸੈੱਟਅੱਪ ਪੂਰਾ ਨਹੀਂ ਕੀਤਾ ਹੋ ਸਕਦਾ</string>
     <string name="market_checkout_processing">ਪ੍ਰਕਿਰਿਆ ਜਾਰੀ ਹੈ…</string>
@@ -227,7 +227,7 @@
     <string name="market_listing_detail_location_heading">ਟਿਕਾਣਾ</string>
     <string name="market_listing_detail_message">ਸੁਨੇਹਾ ਭੇਜੋ</string>
     <string name="market_listing_detail_message_seller">ਵਿਕਰੇਤਾ ਨੂੰ ਸੁਨੇਹਾ ਭੇਜੋ</string>
-    <string name="market_listing_detail_not_found">ਟੈਮਪਲੇਟ ਲੋਡ ਹੋ ਰਹੇ ਹਨ...</string>
+    <string name="market_listing_detail_not_found">ਲਿਸਟਿੰਗ ਨਹੀਂ ਮਿਲੀ</string>
     <string name="market_listing_detail_place_bid">ਬੋਲੀ ਲਗਾਓ</string>
     <string name="market_listing_detail_relist">ਮੁੜ-ਸੂਚੀਬੱਧ ਕਰੋ</string>
     <string name="market_listing_detail_report">ਲਿਸਟਿੰਗ ਰਿਪੋਰਟ ਕਰੋ</string>
@@ -666,7 +666,7 @@
     <string name="market_seller_checking">ਜਾਂਚ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ…</string>
     <string name="market_seller_connect_stripe">Stripe ਜੋੜੋ</string>
     <string name="market_seller_connecting">ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ…</string>
-    <string name="market_seller_fee_loading">Mochi ਵਿੱਚ ਲਾਗਇਨ ਕਰੋ</string>
+    <string name="market_seller_fee_loading">ਫ਼ੀਸ ਦੇ ਵੇਰਵੇ ਲੋਡ ਹੋ ਰਹੇ ਹਨ…</string>
     <string name="market_seller_fee_value">ਪ੍ਰਤੀ ਵਿਕਰੀ %1$s%%</string>
     <string name="market_seller_future_controls_body">ਹੋਰ ਵਿਕਰੇਤਾ ਖਾਤਾ ਨਿਯੰਤਰਣ ਉਪਲਬਧ ਹੋਣ \'ਤੇ ਇੱਥੇ ਦਿਖਾਈ ਦੇਣਗੇ।</string>
     <string name="market_seller_future_controls_title">ਭਵਿੱਖ ਦੇ ਵਿਕਰੇਤਾ ਨਿਯੰਤਰਣ</string>
@@ -703,7 +703,7 @@
     <string name="market_editor_stock_units">ਯੂਨਿਟਾਂ ਦੀ ਗਿਣਤੀ</string>
     <string name="market_editor_stock_unlimited">ਅਸੀਮਤ</string>
     <string name="market_editor_start_time">ਸ਼ੁਰੂ ਹੋਣ ਦਾ ਸਮਾਂ</string>
-    <string name="market_editor_start_time_help">ਲਿੰਕ</string>
+    <string name="market_editor_start_time_help">ਪ੍ਰਕਾਸ਼ਿਤ ਕਰਨ \'ਤੇ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਖਾਲੀ ਛੱਡੋ।</string>
     <string name="market_editor_start_time_next">ਅਗਲਾ</string>
     <string name="market_editor_start_time_clear">ਸਾਫ਼ ਕਰੋ</string>
     <string name="market_listing_detail_buy_now_label">ਹੁਣੇ ਖਰੀਦੋ</string>
@@ -741,7 +741,7 @@
     <string name="market_audit_listing_appeal_submitted">ਅਪੀਲ ਜਮ੍ਹਾਂ ਕੀਤੀ ਗਈ</string>
     <string name="market_audit_listing_approved">ਸਟਾਫ ਦੁਆਰਾ ਮਨਜ਼ੂਰ</string>
     <string name="market_audit_listing_cleared">ਵਿਕਰੇਤਾ ਦੀ ਸੂਚੀ ਵਿੱਚੋਂ ਹਟਾਇਆ ਗਿਆ</string>
-    <string name="market_audit_listing_created">ਫ਼ੀਸ ਦੇ ਵੇਰਵੇ ਲੋਡ ਹੋ ਰਹੇ ਹਨ...</string>
+    <string name="market_audit_listing_created">ਲਿਸਟਿੰਗ ਬਣਾਈ ਗਈ</string>
     <string name="market_audit_listing_deleted">ਲਿਸਟਿੰਗ ਮਿਟਾਈ ਗਈ</string>
     <string name="market_audit_listing_expired">ਸਮਾਪਤ</string>
     <string name="market_audit_listing_published">ਲਿਸਟਿੰਗ ਪ੍ਰਕਾਸ਼ਿਤ ਕੀਤੀ ਗਈ</string>

@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">ಹೊಸ</string>
     <string name="projects_settings_section_identity">ಗುರುತು</string>
     <string name="projects_settings_access_updated">ಪ್ರವೇಶ ನವೀಕರಿಸಲಾಗಿದೆ</string>
-    <string name="projects_settings_access_revoked">ಪ್ರವೇಶವನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ</string>
+    <string name="projects_settings_access_revoked">ಪ್ರವೇಶವನ್ನು ಹಿಂಪಡೆಯಲಾಗಿದೆ</string>
     <string name="projects_settings_section_access">ಪ್ರವೇಶ ನಿರ್ವಹಣೆ</string>
     <string name="projects_people_search">ಜನರನ್ನು ಹುಡುಕಿ</string>
     <string name="projects_settings_field_entity_id">ಎಂಟಿಟಿ ID</string>

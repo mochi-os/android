@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">Шинэ</string>
     <string name="projects_settings_section_identity">Танилт</string>
     <string name="projects_settings_access_updated">Хандалт шинэчлэгдсэн</string>
-    <string name="projects_settings_access_revoked">Нэвтрэх эрхийг цуцалсан</string>
+    <string name="projects_settings_access_revoked">Хандалтыг хүчингүй болголоо</string>
     <string name="projects_settings_section_access">Хандалтын удирдлага</string>
     <string name="projects_people_search">Хүмүүсийг хайх</string>
     <string name="projects_settings_field_entity_id">Нэгжийн ID</string>

@@ -557,7 +557,7 @@
     <string name="market_messages_send_failed">Nepavyko išsiųsti žinutės</string>
     <string name="market_messages_thread_title">Pokalbis</string>
     <string name="market_messages_unread_badge">%1$d neskaityta</string>
-    <string name="market_price_from">nuo %1$s</string>
+    <string name="market_price_from">Nuo %1$s</string>
     <string name="market_price_high_bid">Aukščiausias pasiūlymas: %1$s</string>
     <string name="market_price_instant_buy">iškart pirkti: %1$s</string>
     <string name="market_price_per_month">%1$s / mėn.</string>

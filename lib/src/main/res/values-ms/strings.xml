@@ -60,7 +60,7 @@
     <string name="notifications_empty">Tiada pemberitahuan</string>
     <string name="notifications_empty_unread">Semua sudah dibaca</string>
     <string name="notifications_tab_unread">Belum dibaca</string>
-    <string name="notifications_tab_unread_count">Belum dibaca (%1$d)</string>
+    <string name="notifications_tab_unread_count">Belum dibaca (%1$s)</string>
     <string name="notifications_tab_all">Semua</string>
     <string name="notifications_mark_all_read">Tanda semua dibaca</string>
     <string name="notifications_clear_all">Kosongkan semua</string>
@@ -303,8 +303,8 @@
     <string name="rss_revoke">Tarik balik akses</string>
     <string name="rss_revoke_title">Tarik balik akses RSS?</string>
     <string name="rss_revoke_message">Apa-apa yang melanggan suapan ini akan berhenti menerimanya. Anda boleh menyalin URL baharu selepas itu.</string>
-    <string name="rss_revoked">Akses RSS dibatalkan</string>
-    <string name="rss_revoke_failed">Gagal membatalkan akses RSS</string>
+    <string name="rss_revoked">Akses RSS ditarik balik</string>
+    <string name="rss_revoke_failed">Gagal menarik balik akses RSS</string>
     <string name="game_empty_title">Tiada permainan lagi</string>
     <string name="game_select_title">Pilih permainan</string>
     <string name="game_select_subtitle">Pilih permainan daripada bar sisi atau mulakan yang baharu.</string>

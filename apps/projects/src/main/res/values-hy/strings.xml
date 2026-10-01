@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">Նոր</string>
     <string name="projects_settings_section_identity">Ինքնություն</string>
     <string name="projects_settings_access_updated">Մուտքը թարմացված է</string>
-    <string name="projects_settings_access_revoked">Մուտքը հետ է կանչված</string>
+    <string name="projects_settings_access_revoked">Մուտքը հետ է վերցվել</string>
     <string name="projects_settings_section_access">Մուտքի կառավարում</string>
     <string name="projects_people_search">Փնտրել մարդկանց</string>
     <string name="projects_settings_field_entity_id">Էնտիտետի ID</string>

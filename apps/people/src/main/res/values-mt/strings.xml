@@ -183,8 +183,8 @@
         <item quantity="one">Tħassar %1$s u l-%2$d kuntatt tiegħu?</item>
         <item quantity="two">Tħassar %1$s u ż-%2$d kuntatti tiegħu?</item>
         <item quantity="few">Tħassar %1$s u l-%2$d kuntatti tiegħu?</item>
-        <item quantity="many">Tħassar %1$s u l-%2$d kuntatti tiegħu?</item>
-        <item quantity="other">Tħassar %1$s u l-%2$d kuntatti tiegħu?</item>
+        <item quantity="many">Tħassar %1$s u l-%2$d kuntatt tiegħu?</item>
+        <item quantity="other">Tħassar %1$s u l-%2$d kuntatt tiegħu?</item>
     </plurals>
     <string name="people_welcome_body">Sib ħbieb madwar Mochi u ikkomunika magħhom. Agħfas Żid kuntatt biex tibgħat stedina.</string>
     <string name="people_person_state_contact">Fil-kuntatti</string>

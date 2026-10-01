@@ -151,7 +151,7 @@
     <string name="forums_access_level_moderate">Valvo</string>
     <string name="forums_members_search">Suodata jäseniä</string>
     <string name="forums_banner_description">Foorumin yläosassa näytettävä Markdown-teksti.</string>
-    <string name="forums_banner_placeholder">Tervetuloa tälle foorumille…</string>
+    <string name="forums_banner_placeholder">Kirjoita bannerin teksti (Markdown on tuettu)…</string>
     <string name="forums_ai_mode_label">Tila: %1$s</string>
     <string name="forums_ai_mode_heading">Tekoälytila</string>
     <string name="forums_ai_mode_off">Pois käytöstä</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">päivää</string>
     <string name="forums_settings_banner_saved">Banneri tallennettu</string>
     <string name="forums_settings_access_updated">Käyttöoikeus päivitetty</string>
-    <string name="forums_settings_access_revoked">Käyttöoikeus peruutettu</string>
+    <string name="forums_settings_access_revoked">Käyttöoikeus poistettu</string>
     <string name="forums_settings_member_removed">Jäsen poistettu</string>
     <string name="forums_settings_prompt_saved">Kehote tallennettu</string>
     <string name="forums_settings_section_identity">Identiteetti</string>

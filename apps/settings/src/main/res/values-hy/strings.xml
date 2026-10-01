@@ -45,6 +45,8 @@
     <string name="route_delete_title">Ջնջե՞լ երթուղին։</string>
     <string name="route_path">Ուղի</string>
     <string name="route_method">Եղանակ</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Հավելված</string>
     <string name="route_method_entity">Էություն</string>
     <string name="route_method_redirect">Վերահղում</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Ներբեռնել packages.mochi-os.org-ից</string>
     <string name="system_status_copy">Պատճենել</string>
     <string name="system_status_peers">Հասակակիցներ</string>
-    <string name="system_status_known">Հայտնի</string>
+    <string name="system_status_peers_totals">Հայտնի %1$s · Միացված %2$s · Հեռարձակման ցանց %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Հայտնի %1$s · Միացված %2$s</string>
     <string name="system_status_peer_connected">Միացված</string>
     <string name="system_status_peer_disconnected">Անջատված</string>
     <string name="system_status_peer_queued">Հերթում գտնվող հաղորդագրություններ</string>
@@ -176,7 +179,7 @@
     <string name="system_users_create_title">Ստեղծել օգտատեր</string>
     <string name="system_users_save_changes">Պահպանել փոփոխությունները</string>
     <string name="system_users_suspend">Կասեցնել օգտատիրոջը</string>
-    <string name="system_users_remove_suspension">Հեռացնել կասեցումը</string>
+    <string name="system_users_remove_suspension">Վերացնել կասեցումը</string>
     <string name="system_users_delete">Ջնջել օգտատիրոջը</string>
     <string name="system_users_delete_title">Ջնջե՞լ օգտատիրոջը։</string>
     <string name="system_users_manage_sessions">Կառավարել աշխատաշրջանները</string>
@@ -193,13 +196,13 @@
     <string name="system_users_toast_updated">Օգտատերը թարմացվեց</string>
     <string name="system_users_toast_deleted">Օգտատերը ջնջվեց</string>
     <string name="system_users_toast_suspended">Օգտատերը կասեցվեց</string>
-    <string name="system_users_toast_suspension_removed">Կասեցումը հանվեց</string>
-    <string name="system_users_toast_session_revoked">Սեսիան չեղարկվել է</string>
+    <string name="system_users_toast_suspension_removed">Կասեցումը վերացվեց</string>
+    <string name="system_users_toast_session_revoked">Սեսսիան հետ է վերցվել</string>
     <string name="system_users_toast_create_failed">Չհաջողվեց ստեղծել օգտատիրոջը</string>
     <string name="system_users_toast_update_failed">Չհաջողվեց թարմացնել օգտատիրոջը</string>
     <string name="system_users_toast_delete_failed">Չհաջողվեց ջնջել օգտատիրոջը</string>
     <string name="system_users_toast_status_failed">Չհաջողվեց թարմացնել օգտատիրոջ կարգավիճակը</string>
-    <string name="system_users_toast_revoke_failed">Չհաջողվեց հետ կանչել նիստը</string>
+    <string name="system_users_toast_revoke_failed">Չհաջողվեց հետ վերցնել սեսսիան</string>
 
     <string name="settings_home_sessions">Սեսիաներ</string>
     <string name="settings_home_privacy">Գաղտնիության քաղաքականություն</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">Դուք այլևս չեք կարողանա մուտք գործել նույնականացուցչի կոդով։</string>
     <string name="account_recovery_none">Վերականգնման կոդեր չեն ստեղծվել։</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">Մնացել է %1$d վերականգնման կոդ։</item>
-        <item quantity="other">Մնացել է %1$d վերականգնման կոդ։</item>
+        <item quantity="one">Մնացել է %1$s վերականգնման կոդ։</item>
+        <item quantity="other">Մնացել է %1$s վերականգնման կոդ։</item>
     </plurals>
     <string name="account_recovery_generate">Ստեղծել կոդեր</string>
     <string name="account_recovery_regenerate">Վերարտադրել կոդեր</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">Վերջին օգտագործումը %1$s</string>
     <string name="route_delete_message">Սա կհեռացնի երթուղին \"%1$s\" ուղու համար:</string>
     <string name="route_empty">Կարգավորված ուղիներ չկան։</string>
-    <string name="route_meta">Առաջնահերթություն %1$d · %2$s</string>
+    <string name="route_meta">Առաջնահերթություն %1$s · %2$s</string>
     <string name="interests_search_placeholder">Փնտրել թեմաներ ավելացնելու համար…</string>
     <string name="interests_empty">Դեռևս հետաքրքրություններ չկան։</string>
     <string name="interests_summary_regenerate">Վերագեներացնել ամփոփումը</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">Հետ վերցնե՞լ բոլոր սեսսիաները։</string>
     <string name="system_users_revoke_all_message">Այս օգտատիրոջ բոլոր ակտիվ նիստերը կդուրս գան։</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">Ցուցադրվում է %1$d–%2$d՝ %3$d օգտատիրոջից</item>
-        <item quantity="other">Ցուցադրվում է %1$d–%2$d՝ %3$d օգտատիրոջից</item>
+        <item quantity="one">Ցուցադրվում է %1$s–%2$s՝ %3$s օգտատիրոջից</item>
+        <item quantity="other">Ցուցադրվում է %1$s–%2$s՝ %3$s օգտատիրոջից</item>
     </plurals>
     <string name="account_title">Հաշիվ</string>
     <string name="account_section_identity">Ինքնություն</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">Ստուգել DNS</string>
     <string name="settings_home_domains">Տիրույթներ</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Փորձնական հաղորդագրությունն ուղարկվել է %1$d հասցեի</item>
-        <item quantity="other">Փորձնական հաղորդագրությունն ուղարկվել է %1$d հասցեի</item>
+        <item quantity="one">Փորձնական հաղորդագրությունն ուղարկվել է %1$s հասցեի</item>
+        <item quantity="other">Փորձնական հաղորդագրությունն ուղարկվել է %1$s հասցեի</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">Չեղարկվեց %1$d սեսիա</item>
-        <item quantity="other">Չեղարկվեցին %1$d սեսիա</item>
+        <item quantity="one">Հետ վերցվեց %1$s սեսսիա</item>
+        <item quantity="other">Հետ վերցվեցին %1$s սեսսիա</item>
     </plurals>
     <string name="login_title">Մուտք</string>
     <string name="login_section_methods">Մուտքի եղանակներ</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">Հանրային</string>
     <string name="system_status_reachability_private">Մասնավոր</string>
     <string name="system_status_reachability_unknown">Անհայտ</string>
-    <string name="system_status_relay">Ռելեի միջոցով</string>
-    <string name="system_status_mesh">Հեռարձակման ցանց</string>
+    <string name="system_status_reachability_relay">%1$s · ռելեի միջոցով</string>
     <string name="system_status_broadcast">Վերջին հեռարձակում</string>
     <string name="system_status_queued_broadcasts">Հերթում գտնվող հեռարձակման հաղորդագրություններ</string>
     <string name="system_setting_hostname_publish">Հայտարարել հոսթի անունը և դոմենները այլ սերվերներին</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">Վերջին անգամ տեսնված %1$s</string>
     <string name="notifprefs_device_app">%1$s · հավելված</string>
     <string name="notifprefs_device_push">%1$s · պուշ-ծանուցումներ</string>
+    <string name="notifprefs_destination_rss">RSS՝ %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Թեստն ուղարկվել է %1$d նպատակակետի՝ %2$d-ից</item>
-        <item quantity="other">Թեստն ուղարկվել է %1$d նպատակակետի՝ %2$d-ից</item>
+        <item quantity="one">Թեստն ուղարկվել է %1$s նպատակակետի՝ %2$s-ից</item>
+        <item quantity="other">Թեստն ուղարկվել է %1$s նպատակակետի՝ %2$s-ից</item>
     </plurals>
     <string name="notifprefs_test_none">Կարգավորված ուղղություններ չկան</string>
     <string name="notifprefs_transport_fcm">Android պուշ-ծանուցումներ</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">Հրաժարվե՞լ փոփոխություններից։</string>
     <string name="system_documents_discard">Հրաժարվել</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d հաջողված</item>
-        <item quantity="other">%1$d հաջողված</item>
+        <item quantity="one">%1$s հաջողված</item>
+        <item quantity="other">%1$s հաջողված</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d ձախողված</item>
-        <item quantity="other">%1$d ձախողված</item>
+        <item quantity="one">%1$s ձախողված</item>
+        <item quantity="other">%1$s ձախողված</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d ամրագրում</item>
-        <item quantity="other">%1$d / %2$d ամրագրում</item>
+        <item quantity="one">%1$s / %2$s ամրագրում</item>
+        <item quantity="other">%1$s / %2$s ամրագրում</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d շղթա</item>
-        <item quantity="other">%1$d շղթա</item>
+        <item quantity="one">%1$s շղթա</item>
+        <item quantity="other">%1$s շղթա</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d մերժված</item>
-        <item quantity="other">%1$d մերժված</item>
+        <item quantity="one">%1$s մերժված</item>
+        <item quantity="other">%1$s մերժված</item>
     </plurals>
 </resources>

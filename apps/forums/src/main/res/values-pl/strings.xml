@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">Moderowanie</string>
     <string name="forums_members_search">Filtruj członków</string>
     <string name="forums_banner_description">Markdown wyświetlany na górze forum.</string>
-    <string name="forums_banner_placeholder">Witamy na tym forum…</string>
+    <string name="forums_banner_placeholder">Wpisz tekst banera (obsługiwany jest Markdown)…</string>
     <string name="forums_ai_mode_label">Tryb: %1$s</string>
     <string name="forums_ai_mode_heading">Tryb AI</string>
     <string name="forums_ai_mode_off">Wyłączony</string>
@@ -295,7 +295,7 @@
     <string name="forums_settings_ai_updated">Zaktualizowano ustawienia AI</string>
     <string name="forums_settings_forum_renamed">Zmieniono nazwę forum</string>
     <string name="forums_settings_name_clear_cd">Wyczyść nazwę</string>
-    <string name="forums_settings_unsubscribe_section">Anuluj subskrypcję forum</string>
+    <string name="forums_settings_unsubscribe_section">Zrezygnuj z subskrypcji forum</string>
     <string name="forums_share_link_title">Link do forum</string>
     <string name="forums_find_found_by_url">Znaleziono po adresie URL</string>
     <string name="forums_moderation_pending_posts">Oczekujące wpisy (%1$d)</string>

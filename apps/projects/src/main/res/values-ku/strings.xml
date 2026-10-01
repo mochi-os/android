@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">Nû</string>
     <string name="projects_settings_section_identity">Nasname</string>
     <string name="projects_settings_access_updated">Gihîştin hat nûkirin</string>
-    <string name="projects_settings_access_revoked">Gihiştin hate betalkirin</string>
+    <string name="projects_settings_access_revoked">Gihîştin hate vekişandin</string>
     <string name="projects_settings_section_access">Birêvebirina gihîştinê</string>
     <string name="projects_people_search">Li kesan bigere</string>
     <string name="projects_settings_field_entity_id">Nasnameya mîhengehê</string>

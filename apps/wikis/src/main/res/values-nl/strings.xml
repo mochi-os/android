@@ -319,8 +319,8 @@
         <item quantity="other">%d pagina\'s met deze tag</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">%1$d resultaat gevonden voor "%2$s"</item>
-        <item quantity="other">%1$d resultaten gevonden voor "%2$s"</item>
+        <item quantity="one">%1$d resultaat gevonden voor \"%2$s\"</item>
+        <item quantity="other">%1$d resultaten gevonden voor \"%2$s\"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Bijschrift kan niet worden opgeslagen</string>
     <string name="wikis_attachments_upload_types">Ondersteunde bestanden: afbeeldingen, PDF, DOC, DOCX, TXT en MD.</string>

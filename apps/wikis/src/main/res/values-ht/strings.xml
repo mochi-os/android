@@ -41,7 +41,7 @@
     <string name="wikis_rss_copied">URL RSS kopye nan clipboard</string>
     <string name="wikis_rss_failed">Echwe pou jwenn token RSS</string>
     <string name="wikis_rss_revoke">Revoke aksè</string>
-    <string name="wikis_rss_revoked">Aksè RSS revoke</string>
+    <string name="wikis_rss_revoked">Aksè RSS retire</string>
     <string name="wikis_find_title">Jwenn wiki</string>
     <string name="wikis_find_no_results">Pa gen wiki ki jwenn</string>
     <string name="wikis_find_recommended_section">Wiki rekòmande</string>
@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">Ap rebatize…</string>
     <string name="wikis_rename_page_success">Paj la rebatize</string>
     <string name="wikis_history_viewing">Ap gade istwa pou %1$s, vèsyon aktyèl %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">Vèsyon %1$d</string>
     <string name="wikis_search_pages_placeholder">Chèche paj yo pa tit oswa kontni…</string>
     <string name="wikis_search_no_results">Nou pa jwenn paj pou “%1$s”. Eseye lòt tèm rechèch.</string>
     <string name="wikis_search_updated">Mete ajou %1$s</string>
@@ -312,7 +312,7 @@
         <item quantity="other">%d paj ak tag sa</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="other">Jwenn %1$d rezilta pou "%2$s"</item>
+        <item quantity="other">Jwenn %1$d rezilta pou \"%2$s\"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Nou pa t ka anrejistre lejand lan</string>
     <string name="wikis_attachments_upload_types">Fichye ki sipòte: imaj, PDF, DOC, DOCX, TXT, ak MD.</string>

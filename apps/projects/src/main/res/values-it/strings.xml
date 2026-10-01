@@ -360,7 +360,7 @@
     <string name="projects_activity_commented">ha commentato</string>
     <string name="projects_attachment_delete_confirm_message">Questo allegato verrà eliminato definitivamente.</string>
     <string name="projects_attachment_delete_confirm_title">Eliminare l\'allegato?</string>
-    <string name="projects_settings_unsubscribe_section">Annulla l\'iscrizione al progetto</string>
+    <string name="projects_settings_unsubscribe_section">Disiscriviti dal progetto</string>
     <string name="projects_share_link_title">Condividi progetto</string>
     <string name="projects_sort_filter_title">Ordina e filtra</string>
     <string name="projects_create_prefix_hint">Usato per ID leggibili come %1$s-1, %1$s-2</string>

@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">Rêvebirin</string>
     <string name="forums_members_search">Endaman parz bike</string>
     <string name="forums_banner_description">Markdown ku li jora forumê tê nîşandan.</string>
-    <string name="forums_banner_placeholder">Bi xêr hatî vê forumê…</string>
+    <string name="forums_banner_placeholder">Nivîsa banerê binivîse (markdown tê piştgirîkirin)…</string>
     <string name="forums_ai_mode_label">Mod: %1$s</string>
     <string name="forums_ai_mode_heading">Moda AI</string>
     <string name="forums_ai_mode_off">Neçalak</string>
@@ -205,7 +205,7 @@
         <item quantity="one">%d şandiyê nû</item>
         <item quantity="other">%d şandiyên nû</item>
     </plurals>
-    <string name="forums_rss_feed">Pelê RSS</string>
+    <string name="forums_rss_feed">Feeda RSS</string>
     <string name="forums_rss_mode_posts">Poste</string>
     <string name="forums_rss_mode_posts_comments">Poste û şîrove</string>
     <string name="forums_rss_copied">URL ya RSS hate kopîkirin</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">roj</string>
     <string name="forums_settings_banner_saved">Pankart hate tomarkirin</string>
     <string name="forums_settings_access_updated">Gihîştin hat nûkirin</string>
-    <string name="forums_settings_access_revoked">Gihiştin hate betalkirin</string>
+    <string name="forums_settings_access_revoked">Gihîştin hate vekişandin</string>
     <string name="forums_settings_member_removed">Endam hat rakirin</string>
     <string name="forums_settings_prompt_saved">Daxwaz hate tomarkirin</string>
     <string name="forums_settings_section_identity">Nasname</string>

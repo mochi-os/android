@@ -27,7 +27,7 @@
     <string name="wikis_empty_title">നിങ്ങളുടെ ആദ്യ വിക്കി ആരംഭിക്കുക</string>
     <string name="wikis_empty_subtitle">സബ്‌സ്‌ക്രൈബ് ചെയ്യാൻ ഒരു വിക്കി തിരയുക, അല്ലെങ്കിൽ നിങ്ങളുടെ സ്വന്തം ഡോക്യുമെന്റേഷൻ പ്രസിദ്ധീകരിക്കാൻ ഒന്ന് സൃഷ്ടിക്കുക.</string>
     <string name="wikis_create_button">വിക്കി സൃഷ്ടിക്കുക</string>
-    <string name="wikis_recommended_section">റിക്കവറി കോഡുകൾ</string>
+    <string name="wikis_recommended_section">ശുപാർശ ചെയ്യുന്ന വിക്കികൾ</string>
     <string name="wikis_subscribe_button">സബ്സ്ക്രൈബ് ചെയ്യുക</string>
     <string name="wikis_unsubscribe_action">അൺസബ്സ്ക്രൈബ് ചെയ്യുക</string>
     <string name="wikis_unsubscribing">അൺസബ്സ്ക്രൈബ് ചെയ്യുന്നു…</string>
@@ -44,7 +44,7 @@
     <string name="wikis_rss_revoked">RSS ആക്‌സസ് പിൻവലിച്ചു</string>
     <string name="wikis_find_title">വിക്കികൾ കണ്ടെത്തുക</string>
     <string name="wikis_find_no_results">വിക്കികളൊന്നും കണ്ടെത്തിയില്ല</string>
-    <string name="wikis_find_recommended_section">റിക്കവറി കോഡുകൾ</string>
+    <string name="wikis_find_recommended_section">ശുപാർശ ചെയ്യുന്ന വിക്കികൾ</string>
     <string name="wikis_join_title">വിക്കി റെപ്ലിക്കേറ്റ് ചെയ്യുക</string>
     <string name="wikis_join_or_id">അല്ലെങ്കിൽ ID നേരിട്ട് നൽകുക</string>
     <string name="wikis_join_id_label">വിക്കി എന്റിറ്റി ID</string>
@@ -114,7 +114,7 @@
     <string name="wikis_revision_current_badge">നിലവിലുള്ളത്</string>
     <string name="wikis_revision_revert_to_this">ഈ പതിപ്പിലേക്ക് റിവേർട്ട് ചെയ്യുക</string>
     <string name="wikis_changes_title">സമീപകാല മാറ്റങ്ങൾ</string>
-    <string name="wikis_changes_subtitle">സമീപകാല ലിസ്റ്റിങ്ങുകൾ</string>
+    <string name="wikis_changes_subtitle">ഈ വിക്കിയിലെ എല്ലാ പേജുകളിലെയും സമീപകാല എഡിറ്റുകൾ.</string>
     <string name="wikis_changes_empty">മാറ്റങ്ങളൊന്നും ഇതുവരെ ഇല്ല</string>
     <string name="wikis_search_empty_query">ഒരു തിരയൽ പദം നൽകുക</string>
     <string name="wikis_redirects_title">റീഡയറക്ടുകൾ</string>
@@ -213,7 +213,7 @@
     <string name="wikis_replicas_empty_title">റെപ്ലിക്കകളൊന്നും ഇതുവരെ ഇല്ല</string>
     <string name="wikis_replicas_empty_message">മറ്റ് വിക്കികൾ ഈ വിക്കി പകർത്തുമ്പോൾ, അവ ഇവിടെ ദൃശ്യമാകും.</string>
     <string name="wikis_replicas_never_synced">ഒരിക്കലുമില്ല</string>
-    <string name="wikis_replicas_remove_confirm_title">അവലോകനം നീക്കം ചെയ്യണോ?</string>
+    <string name="wikis_replicas_remove_confirm_title">പകർപ്പ് നീക്കം ചെയ്യണോ?</string>
     <string name="wikis_replicas_remove_confirm_action">നീക്കം ചെയ്യുക</string>
     <string name="wikis_replicas_remove_failed">റെപ്ലിക്ക നീക്കം ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു</string>
 
@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">പുനർനാമകരണം ചെയ്യുന്നു…</string>
     <string name="wikis_rename_page_success">പേജ് പുനർനാമകരണം ചെയ്തു</string>
     <string name="wikis_history_viewing">%1$s-ന്റെ ചരിത്രം കാണുന്നു, നിലവിലെ പതിപ്പ് %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">പതിപ്പ് %1$d</string>
     <string name="wikis_search_pages_placeholder">തലക്കെട്ട് അല്ലെങ്കിൽ ഉള്ളടക്കം അനുസരിച്ച് പേജുകൾ തിരയുക…</string>
     <string name="wikis_search_no_results">“%1$s” എന്നതിന് പേജുകളൊന്നും കണ്ടെത്തിയില്ല. മറ്റ് തിരയൽ പദങ്ങൾ ശ്രമിക്കുക.</string>
     <string name="wikis_search_updated">%1$s അപ്ഡേറ്റ് ചെയ്തു</string>

@@ -120,8 +120,8 @@
     <string name="feeds_source_never_fetched">Ніколі не атрымлівалася</string>
     <string name="feeds_source_poll">Апытванне</string>
     <string name="feeds_source_transform">Пераўтварэнне AI</string>
-    <string name="feeds_remove_source_confirm">Выдаліць \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Таксама выдаліць імпартаваныя допісы</string>
+    <string name="feeds_remove_source_confirm">Гэта спыніць імпарт змесціва з \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Таксама выдаліць допісы, імпартаваныя з гэтай крыніцы</string>
     <string name="feeds_suggested_credibility_title">Прапанаваны ўзровень даверу</string>
     <string name="feeds_suggested_credibility_body">Mochi прапануе ўзровень даверу %1$d. Прыняць?</string>
     <string name="feeds_suggested_credibility_keep">Пакінуць бягучы</string>
@@ -223,7 +223,7 @@
     <string name="feeds_share_link_title">Спасылка на стужку</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$d каментарый</item>
-        <item quantity="few">%1$d каментарыя</item>
+        <item quantity="few">%1$d каментарыі</item>
         <item quantity="many">%1$d каментарыяў</item>
         <item quantity="other">%1$d каментарыя</item>
     </plurals>

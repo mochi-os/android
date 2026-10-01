@@ -151,7 +151,7 @@
     <string name="forums_access_level_moderate">إشراف</string>
     <string name="forums_members_search">تصفية الأعضاء</string>
     <string name="forums_banner_description">نص Markdown يُعرض في أعلى المنتدى.</string>
-    <string name="forums_banner_placeholder">مرحبًا بك في هذا المنتدى…</string>
+    <string name="forums_banner_placeholder">أدخل نص اللافتة (يدعم Markdown)…</string>
     <string name="forums_ai_mode_label">الوضع: %1$s</string>
     <string name="forums_ai_mode_heading">وضع الذكاء الاصطناعي</string>
     <string name="forums_ai_mode_off">معطّل</string>
@@ -246,7 +246,7 @@
     <string name="forums_moderation_unit_days">أيام</string>
     <string name="forums_settings_banner_saved">تم حفظ اللافتة</string>
     <string name="forums_settings_access_updated">تم تحديث الوصول</string>
-    <string name="forums_settings_access_revoked">تم إلغاء الوصول</string>
+    <string name="forums_settings_access_revoked">تم إبطال الوصول</string>
     <string name="forums_settings_member_removed">تمت إزالة العضو</string>
     <string name="forums_settings_prompt_saved">تم حفظ الموجه</string>
     <string name="forums_settings_section_identity">الهوية</string>
@@ -297,7 +297,7 @@
     <string name="forums_settings_ai_updated">تم تحديث إعدادات الذكاء الاصطناعي</string>
     <string name="forums_settings_forum_renamed">تمت إعادة تسمية المنتدى</string>
     <string name="forums_settings_name_clear_cd">مسح الاسم</string>
-    <string name="forums_settings_unsubscribe_section">إلغاء الاشتراك في المنتدى</string>
+    <string name="forums_settings_unsubscribe_section">إنهاء الاشتراك في المنتدى</string>
     <string name="forums_share_link_title">رابط المنتدى</string>
     <string name="forums_find_found_by_url">تم العثور عليه عبر الرابط</string>
     <string name="forums_moderation_pending_posts">منشورات معلقة (%1$d)</string>

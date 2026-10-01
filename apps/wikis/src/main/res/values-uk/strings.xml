@@ -298,45 +298,45 @@
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
         <item quantity="one">%d відповідь</item>
-        <item quantity="few">ще +%d відповідей</item>
+        <item quantity="few">ще +%d відповіді</item>
         <item quantity="many">ще +%d відповідей</item>
-        <item quantity="other">ще +%d відповідей</item>
+        <item quantity="other">ще +%d відповіді</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d сторінка</item>
-        <item quantity="few">%d сторінок</item>
+        <item quantity="few">%d сторінки</item>
         <item quantity="many">%d сторінок</item>
-        <item quantity="other">%d сторінок</item>
+        <item quantity="other">%d сторінки</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
         <item quantity="one">%d файл</item>
-        <item quantity="few">%d файлів</item>
+        <item quantity="few">%d файли</item>
         <item quantity="many">%d файлів</item>
-        <item quantity="other">%d файлів</item>
+        <item quantity="other">%d файлу</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
         <item quantity="one">%d зображення</item>
-        <item quantity="few">%d зображень</item>
+        <item quantity="few">%d зображення</item>
         <item quantity="many">%d зображень</item>
-        <item quantity="other">%d зображень</item>
+        <item quantity="other">%d зображення</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
         <item quantity="one">%d документ</item>
-        <item quantity="few">%d документів</item>
+        <item quantity="few">%d документи</item>
         <item quantity="many">%d документів</item>
-        <item quantity="other">%d документів</item>
+        <item quantity="other">%d документа</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
         <item quantity="one">%d сторінка із цим тегом</item>
-        <item quantity="few">%d сторінок із цим тегом</item>
+        <item quantity="few">%d сторінки із цим тегом</item>
         <item quantity="many">%d сторінок із цим тегом</item>
-        <item quantity="other">%d сторінок із цим тегом</item>
+        <item quantity="other">%d сторінки із цим тегом</item>
     </plurals>
     <plurals name="wikis_search_results_count">
         <item quantity="one">Знайдено %1$d результат за запитом «%2$s»</item>
-        <item quantity="few">Знайдено %1$d результатів за запитом «%2$s»</item>
+        <item quantity="few">Знайдено %1$d результати за запитом «%2$s»</item>
         <item quantity="many">Знайдено %1$d результатів за запитом «%2$s»</item>
-        <item quantity="other">Знайдено %1$d результатів за запитом «%2$s»</item>
+        <item quantity="other">Знайдено %1$d результату за запитом «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Не вдалося зберегти підпис</string>
     <string name="wikis_attachments_upload_types">Підтримувані файли: зображення, PDF, DOC, DOCX, TXT та MD.</string>
@@ -346,8 +346,8 @@
     <string name="wikis_rss_exists">Цей URL стрічки вже видано і не може бути показаний знову.</string>
     <plurals name="wikis_comments_truncated">
         <item quantity="one">Показано перший %1$d коментар.</item>
-        <item quantity="few">Показано перші %1$d коментарів.</item>
+        <item quantity="few">Показано перші %1$d коментарі.</item>
         <item quantity="many">Показано перші %1$d коментарів.</item>
-        <item quantity="other">Показано перші %1$d коментарів.</item>
+        <item quantity="other">Показано перші %1$d коментаря.</item>
     </plurals>
 </resources>

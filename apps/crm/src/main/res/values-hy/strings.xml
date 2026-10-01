@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">Մուտքի կառավարում</string>
     <string name="crm_settings_not_set">Չի սահմանված</string>
     <string name="crm_settings_access_updated">Մուտքը թարմացված է</string>
-    <string name="crm_settings_access_revoked">Մուտքը հետ է կանչված</string>
+    <string name="crm_settings_access_revoked">Մուտքը հետ է վերցվել</string>
     <string name="crm_people_search">Փնտրել մարդկանց</string>
     <string name="crm_access_tab_other">Այլ</string>
     <string name="crm_access_select_group">Ընտրեք խումբ</string>

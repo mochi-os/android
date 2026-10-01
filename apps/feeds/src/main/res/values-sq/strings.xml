@@ -86,8 +86,8 @@
     <string name="feeds_move_up">Lëviz lart</string>
     <string name="feeds_move_down">Lëviz poshtë</string>
 
-    <string name="notification_channel_feeds">Njoftime për burimet</string>
-    <string name="feeds_search_placeholder">Kërkoni burime ose ngjisni URL-në…</string>
+    <string name="notification_channel_feeds">Njoftime për feed-et</string>
+    <string name="feeds_search_placeholder">Kërkoni feed-e ose ngjisni URL-në…</string>
     <string name="feeds_url_result">Rezultat URL-je</string>
     <string name="feeds_search_results">Rezultatet e kërkimit</string>
     <string name="feeds_unread_only">Vetëm të palexuara</string>
@@ -104,16 +104,16 @@
     <string name="feeds_replying_to_author">Po i përgjigjeni %1$s</string>
     <string name="feeds_attach_file">Bashkëngjit skedar</string>
     <string name="feeds_file">Skedar</string>
-    <string name="feeds_select_feed">Zgjidhni një burim</string>
-    <string name="feeds_loading_feeds">Po ngarkohen burimet…</string>
+    <string name="feeds_select_feed">Zgjidhni një feed</string>
+    <string name="feeds_loading_feeds">Po ngarkohen feed-et…</string>
     <string name="feeds_sources_title_named">Burimet e %1$s</string>
-    <string name="feeds_delete_feed_confirm">Ky veprim do ta fshijë përgjithmonë burimin dhe të gjitha postimet e tij. Nuk mund të zhbëhet.</string>
+    <string name="feeds_delete_feed_confirm">Ky veprim do ta fshijë përgjithmonë feed-in dhe të gjitha postimet e tij. Nuk mund të zhbëhet.</string>
     <string name="feeds_clipboard_label_rss">URL RSS</string>
     <string name="feeds_source_never_fetched">Asnjëherë e marrë</string>
     <string name="feeds_source_poll">Sondazh</string>
     <string name="feeds_source_transform">Transformim AI</string>
-    <string name="feeds_remove_source_confirm">Të hiqet \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Fshi gjithashtu postimet e importuara</string>
+    <string name="feeds_remove_source_confirm">Kjo do të ndalojë importimin e përmbajtjes nga \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Fshi gjithashtu postimet e importuara nga ky burim</string>
     <string name="feeds_suggested_credibility_title">Besueshmëri e sugjeruar</string>
     <string name="feeds_suggested_credibility_body">Mochi sugjeron një besueshmëri prej %1$d. Pranoni?</string>
     <string name="feeds_suggested_credibility_keep">Mbaj aktualen</string>
@@ -187,7 +187,7 @@
     <string name="feeds_create_first_post">Krijo postimin e parë</string>
     <string name="feeds_rss_mode_posts">Postimet</string>
     <string name="feeds_source_last_checked">Kontrolluar për herë të fundit %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">Çabonohu nga burimi</string>
+    <string name="feeds_settings_unsubscribe_section">Çabonohu nga feed-i</string>
     <string name="feeds_source_transform_hint">Përkthe në anglisht dhe shfaq si pika me yje.</string>
     <string name="feeds_source_url_hint_feed">ID ose gjurmë e entitetit të feed</string>
     <string name="feeds_source_credibility_label">Besueshmëria</string>

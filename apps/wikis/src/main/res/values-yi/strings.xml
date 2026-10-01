@@ -40,8 +40,8 @@
     <string name="wikis_rss_both">ענדערונגען און קאָמענטאַרן</string>
     <string name="wikis_rss_copied">RSS URL קאָפּירט צו קלעמברעט</string>
     <string name="wikis_rss_failed">ניט געלונגען צו באַקומען RSS־טאָקען</string>
-    <string name="wikis_rss_revoke">רופֿט צוריק צוטריט</string>
-    <string name="wikis_rss_revoked">RSS צוטריט צוריקגערופֿן</string>
+    <string name="wikis_rss_revoke">צוריקנעמען צוטריט</string>
+    <string name="wikis_rss_revoked">RSS צוטריט צוריקגענומען</string>
     <string name="wikis_find_title">געפֿינען וויקיס</string>
     <string name="wikis_find_no_results">קיין וויקיס ניט געפֿונען</string>
     <string name="wikis_find_recommended_section">רעקאָמענדירטע וויקיס</string>
@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">טויפֿט איבער…</string>
     <string name="wikis_rename_page_success">זײַטל איבערגעטויפֿט</string>
     <string name="wikis_history_viewing">קוקן געשיכטע פֿאַר %1$s, איצטיקע ווערסיע %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">ווערסיע %1$d</string>
     <string name="wikis_search_pages_placeholder">זוכט בלעטער לויט טיטל אָדער אינהאַלט…</string>
     <string name="wikis_search_no_results">קיין בלעטער נישט געפֿונען פֿאַר „%1$s“. פּרוּווט אַנדערע זוך־ווערטער.</string>
     <string name="wikis_search_updated">באַנײַט %1$s</string>

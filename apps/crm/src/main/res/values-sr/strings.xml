@@ -274,7 +274,7 @@
     <string name="crm_access_role_view">Само приказ</string>
     <string name="crm_access_role_none">Нема приступа</string>
     <string name="crm_all_crms">Сви CRM-ови</string>
-    <string name="crm_settings_unsubscribe_section">Откажи претплату на CRM</string>
+    <string name="crm_settings_unsubscribe_section">Прекини претплату на CRM</string>
     <string name="crm_settings_updated">CRM је ажуриран</string>
     <string name="crm_create_import_backup">Увоз из резервне копије (опционо)</string>
     <string name="crm_export">Извези податке</string>

@@ -45,6 +45,8 @@
     <string name="route_delete_title">Tħassar rotta?</string>
     <string name="route_path">Mogħdija</string>
     <string name="route_method">Metodu</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Applikazzjoni</string>
     <string name="route_method_entity">Entità</string>
     <string name="route_method_redirect">Ridirezzjoni</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Niżżel minn packages.mochi-os.org</string>
     <string name="system_status_copy">Ikkupja</string>
     <string name="system_status_peers">Pari</string>
-    <string name="system_status_known">Magħrufa</string>
+    <string name="system_status_peers_totals">Magħrufa %1$s · Konnessi %2$s · Mesh tax-xandir %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Magħrufa %1$s · Konnessi %2$s</string>
     <string name="system_status_peer_connected">Konness</string>
     <string name="system_status_peer_disconnected">Skonness</string>
     <string name="system_status_peer_queued">Messaġġi fil-kju</string>
@@ -216,11 +219,11 @@
     <string name="account_totp_disable_message">M\'għadekx tista\' tidħol b\'kodiċi tal-awtentikatur.</string>
     <string name="account_recovery_none">Ebda kodiċijiet ta\' rkupru ġġenerati.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">Fadal %1$d kodiċi ta\' rkupru.</item>
-        <item quantity="two">Fadal %1$d kodiċijiet ta\' rkupru.</item>
-        <item quantity="few">Fadal %1$d kodiċijiet ta\' rkupru.</item>
-        <item quantity="many">Fadal %1$d kodiċi ta\' rkupru.</item>
-        <item quantity="other">Fadal %1$d kodiċi ta\' rkupru.</item>
+        <item quantity="one">Fadal %1$s kodiċi ta\' rkupru.</item>
+        <item quantity="two">Fadal %1$s kodiċijiet ta\' rkupru.</item>
+        <item quantity="few">Fadal %1$s kodiċijiet ta\' rkupru.</item>
+        <item quantity="many">Fadal %1$s kodiċi ta\' rkupru.</item>
+        <item quantity="other">Fadal %1$s kodiċi ta\' rkupru.</item>
     </plurals>
     <string name="account_recovery_generate">Iġġenera kodiċijiet</string>
     <string name="account_recovery_regenerate">Irriġenera kodiċijiet</string>
@@ -237,7 +240,7 @@
     <string name="account_last_used">L-aħħar uża %1$s</string>
     <string name="route_delete_message">Dan se jneħħi r-rotta għall-passaġġ \"%1$s\".</string>
     <string name="route_empty">L-ebda rotot konfigurati.</string>
-    <string name="route_meta">Prijorità %1$d · %2$s</string>
+    <string name="route_meta">Prijorità %1$s · %2$s</string>
     <string name="interests_search_placeholder">Fittex suġġetti biex iżżid…</string>
     <string name="interests_empty">Għadek l-ebda interessi.</string>
     <string name="interests_summary_regenerate">Iġġenera s-sommarju mill-ġdid</string>
@@ -271,11 +274,11 @@
     <string name="system_users_revoke_all_title">Irrevoka s-sessjonijiet kollha?</string>
     <string name="system_users_revoke_all_message">Is-sessjonijiet attivi kollha ta\' dan l-utent se joħroġu.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">Juri %1$d–%2$d minn %3$d utent</item>
-        <item quantity="two">Juri %1$d–%2$d minn %3$d utenti</item>
-        <item quantity="few">Juri %1$d–%2$d minn %3$d utenti</item>
-        <item quantity="many">Juri %1$d–%2$d minn %3$d utent</item>
-        <item quantity="other">Juri %1$d–%2$d minn %3$d utent</item>
+        <item quantity="one">Juri %1$s–%2$s minn %3$s utent</item>
+        <item quantity="two">Juri %1$s–%2$s minn %3$s utenti</item>
+        <item quantity="few">Juri %1$s–%2$s minn %3$s utenti</item>
+        <item quantity="many">Juri %1$s–%2$s minn %3$s utent</item>
+        <item quantity="other">Juri %1$s–%2$s minn %3$s utent</item>
     </plurals>
     <string name="account_title">Kont</string>
     <string name="account_section_identity">Identità</string>
@@ -309,18 +312,18 @@
     <string name="domain_verify">Ivverifika DNS</string>
     <string name="settings_home_domains">Dominji</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">It-test intbagħat lil %1$d destinazzjoni</item>
-        <item quantity="two">It-test intbagħat lil %1$d destinazzjonijiet</item>
-        <item quantity="few">It-test intbagħat lil %1$d destinazzjonijiet</item>
-        <item quantity="many">It-test intbagħat lil %1$d destinazzjonijiet</item>
-        <item quantity="other">It-test intbagħat lil %1$d destinazzjonijiet</item>
+        <item quantity="one">It-test intbagħat lil %1$s destinazzjoni</item>
+        <item quantity="two">It-test intbagħat lil %1$s destinazzjonijiet</item>
+        <item quantity="few">It-test intbagħat lil %1$s destinazzjonijiet</item>
+        <item quantity="many">It-test intbagħat lil %1$s destinazzjoni</item>
+        <item quantity="other">It-test intbagħat lil %1$s destinazzjoni</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">Revokat %1$d sessjoni</item>
-        <item quantity="two">Revokati %1$d sessjonijiet</item>
-        <item quantity="few">Revokati %1$d sessjonijiet</item>
-        <item quantity="many">Revokati %1$d sessjonijiet</item>
-        <item quantity="other">Revokati %1$d sessjonijiet</item>
+        <item quantity="one">Revokat %1$s sessjoni</item>
+        <item quantity="two">Revokati %1$s sessjonijiet</item>
+        <item quantity="few">Revokati %1$s sessjonijiet</item>
+        <item quantity="many">Revokati %1$s sessjoni</item>
+        <item quantity="other">Revokati %1$s sessjoni</item>
     </plurals>
     <string name="login_title">Dħul</string>
     <string name="login_section_methods">Metodi tal-login</string>
@@ -351,8 +354,7 @@
     <string name="system_status_reachability_public">Pubbliku</string>
     <string name="system_status_reachability_private">Privat</string>
     <string name="system_status_reachability_unknown">Mhux magħruf</string>
-    <string name="system_status_relay">Permezz ta\' relay</string>
-    <string name="system_status_mesh">Mesh tax-xandir</string>
+    <string name="system_status_reachability_relay">%1$s · permezz ta\' relay</string>
     <string name="system_status_broadcast">L-aħħar xandira</string>
     <string name="system_status_queued_broadcasts">Messaġġi tax-xandir fil-kju</string>
     <string name="system_setting_hostname_publish">Ħabbar isem il-host u d-dominji lil servers oħra</string>
@@ -385,12 +387,14 @@
     <string name="accounts_device_seen">L-aħħar li deher %1$s</string>
     <string name="notifprefs_device_app">%1$s · applikazzjoni</string>
     <string name="notifprefs_device_push">%1$s · notifika push</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">It-test intbagħat lil %1$d minn %2$d destinazzjoni</item>
-        <item quantity="two">It-test intbagħat lil %1$d minn %2$d destinazzjonijiet</item>
-        <item quantity="few">It-test intbagħat lil %1$d minn %2$d destinazzjonijiet</item>
-        <item quantity="many">It-test intbagħat lil %1$d minn %2$d destinazzjoni</item>
-        <item quantity="other">It-test intbagħat lil %1$d minn %2$d destinazzjoni</item>
+        <item quantity="one">It-test intbagħat lil %1$s minn %2$s destinazzjoni</item>
+        <item quantity="two">It-test intbagħat lil %1$s minn %2$s destinazzjonijiet</item>
+        <item quantity="few">It-test intbagħat lil %1$s minn %2$s destinazzjonijiet</item>
+        <item quantity="many">It-test intbagħat lil %1$s minn %2$s destinazzjoni</item>
+        <item quantity="other">It-test intbagħat lil %1$s minn %2$s destinazzjoni</item>
     </plurals>
     <string name="notifprefs_test_none">L-ebda destinazzjonijiet ikkonfigurati</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
@@ -414,38 +418,38 @@
     <string name="system_documents_discard_title">Tarmi l-bidliet?</string>
     <string name="system_documents_discard">Armi</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d irnexxa</item>
-        <item quantity="two">%1$d irnexxew</item>
-        <item quantity="few">%1$d irnexxew</item>
-        <item quantity="many">%1$d irnexxew</item>
-        <item quantity="other">%1$d irnexxew</item>
+        <item quantity="one">%1$s irnexxa</item>
+        <item quantity="two">%1$s irnexxew</item>
+        <item quantity="few">%1$s irnexxew</item>
+        <item quantity="many">%1$s irnexxew</item>
+        <item quantity="other">%1$s irnexxew</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d falla</item>
-        <item quantity="two">%1$d fallew</item>
-        <item quantity="few">%1$d fallew</item>
-        <item quantity="many">%1$d fallew</item>
-        <item quantity="other">%1$d fallew</item>
+        <item quantity="one">%1$s falla</item>
+        <item quantity="two">%1$s fallew</item>
+        <item quantity="few">%1$s fallew</item>
+        <item quantity="many">%1$s fallew</item>
+        <item quantity="other">%1$s fallew</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d riżervazzjoni</item>
-        <item quantity="two">%1$d / %2$d riżervazzjonijiet</item>
-        <item quantity="few">%1$d / %2$d riżervazzjonijiet</item>
-        <item quantity="many">%1$d / %2$d riżervazzjoni</item>
-        <item quantity="other">%1$d / %2$d riżervazzjoni</item>
+        <item quantity="one">%1$s / %2$s riżervazzjoni</item>
+        <item quantity="two">%1$s / %2$s riżervazzjonijiet</item>
+        <item quantity="few">%1$s / %2$s riżervazzjonijiet</item>
+        <item quantity="many">%1$s / %2$s riżervazzjoni</item>
+        <item quantity="other">%1$s / %2$s riżervazzjoni</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d ċirkwit</item>
-        <item quantity="two">%1$d ċirkwiti</item>
-        <item quantity="few">%1$d ċirkwiti</item>
-        <item quantity="many">%1$d ċirkwit</item>
-        <item quantity="other">%1$d ċirkwit</item>
+        <item quantity="one">%1$s ċirkwit</item>
+        <item quantity="two">%1$s ċirkwiti</item>
+        <item quantity="few">%1$s ċirkwiti</item>
+        <item quantity="many">%1$s ċirkwit</item>
+        <item quantity="other">%1$s ċirkwit</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d miċħuda</item>
-        <item quantity="two">%1$d miċħuda</item>
-        <item quantity="few">%1$d miċħuda</item>
-        <item quantity="many">%1$d miċħuda</item>
-        <item quantity="other">%1$d miċħuda</item>
+        <item quantity="one">%1$s miċħuda</item>
+        <item quantity="two">%1$s miċħuda</item>
+        <item quantity="few">%1$s miċħuda</item>
+        <item quantity="many">%1$s miċħuda</item>
+        <item quantity="other">%1$s miċħuda</item>
     </plurals>
 </resources>

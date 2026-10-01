@@ -45,6 +45,8 @@
     <string name="route_delete_title">Route verwijderen?</string>
     <string name="route_path">Pad</string>
     <string name="route_method">Methode</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">App</string>
     <string name="route_method_entity">Entiteit</string>
     <string name="route_method_redirect">Omleiding</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Downloaden van packages.mochi-os.org</string>
     <string name="system_status_copy">Kopiëren</string>
     <string name="system_status_peers">Peers</string>
-    <string name="system_status_known">Bekend</string>
+    <string name="system_status_peers_totals">Bekend %1$s · Verbonden %2$s · Broadcast-mesh %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Bekend %1$s · Verbonden %2$s</string>
     <string name="system_status_peer_connected">Verbonden</string>
     <string name="system_status_peer_disconnected">Verbinding verbroken</string>
     <string name="system_status_peer_queued">Berichten in wachtrij</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">Je kunt dan niet meer aanmelden met een authenticator-code.</string>
     <string name="account_recovery_none">Geen herstelcodes gegenereerd.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">Nog %1$d herstelcode over.</item>
-        <item quantity="other">Nog %1$d herstelcodes over.</item>
+        <item quantity="one">Nog %1$s herstelcode over.</item>
+        <item quantity="other">Nog %1$s herstelcodes over.</item>
     </plurals>
     <string name="account_recovery_generate">Codes genereren</string>
     <string name="account_recovery_regenerate">Codes opnieuw genereren</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">Laatst gebruikt %1$s</string>
     <string name="route_delete_message">Hiermee wordt de route voor pad «%1$s» verwijderd.</string>
     <string name="route_empty">Geen routes geconfigureerd.</string>
-    <string name="route_meta">Prioriteit %1$d · %2$s</string>
+    <string name="route_meta">Prioriteit %1$s · %2$s</string>
     <string name="interests_search_placeholder">Onderwerpen om toe te voegen zoeken…</string>
     <string name="interests_empty">Nog geen interesses.</string>
     <string name="interests_summary_regenerate">Samenvatting opnieuw genereren</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">Alle sessies intrekken?</string>
     <string name="system_users_revoke_all_message">Alle actieve sessies van deze gebruiker worden afgemeld.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">%1$d–%2$d van %3$d gebruiker weergegeven</item>
-        <item quantity="other">%1$d–%2$d van %3$d gebruikers weergegeven</item>
+        <item quantity="one">%1$s–%2$s van %3$s gebruiker weergegeven</item>
+        <item quantity="other">%1$s–%2$s van %3$s gebruikers weergegeven</item>
     </plurals>
     <string name="account_title">Account</string>
     <string name="account_section_identity">Identiteit</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS verifiëren</string>
     <string name="settings_home_domains">Domeinen</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Test verzonden naar %1$d bestemming</item>
-        <item quantity="other">Test verzonden naar %1$d bestemmingen</item>
+        <item quantity="one">Test verzonden naar %1$s bestemming</item>
+        <item quantity="other">Test verzonden naar %1$s bestemmingen</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$d sessie ingetrokken</item>
-        <item quantity="other">%1$d sessies ingetrokken</item>
+        <item quantity="one">%1$s sessie ingetrokken</item>
+        <item quantity="other">%1$s sessies ingetrokken</item>
     </plurals>
     <string name="login_title">Inloggen</string>
     <string name="login_section_methods">Aanmeldmethoden</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">Openbaar</string>
     <string name="system_status_reachability_private">Privé</string>
     <string name="system_status_reachability_unknown">Onbekend</string>
-    <string name="system_status_relay">Via relay</string>
-    <string name="system_status_mesh">Broadcast-mesh</string>
+    <string name="system_status_reachability_relay">%1$s · via relais</string>
     <string name="system_status_broadcast">Laatste uitzending</string>
     <string name="system_status_queued_broadcasts">Broadcastberichten in wachtrij</string>
     <string name="system_setting_hostname_publish">Hostnaam en domeinen aankondigen aan andere servers</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">Laatst gezien %1$s</string>
     <string name="notifprefs_device_app">%1$s · app</string>
     <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Test verzonden naar %1$d van %2$d bestemming</item>
-        <item quantity="other">Test verzonden naar %1$d van %2$d bestemmingen</item>
+        <item quantity="one">Test verzonden naar %1$s van %2$s bestemming</item>
+        <item quantity="other">Test verzonden naar %1$s van %2$s bestemmingen</item>
     </plurals>
     <string name="notifprefs_test_none">Geen bestemmingen geconfigureerd</string>
     <string name="notifprefs_transport_fcm">Android-push</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">Wijzigingen verwerpen?</string>
     <string name="system_documents_discard">Verwerpen</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d geslaagd</item>
-        <item quantity="other">%1$d geslaagd</item>
+        <item quantity="one">%1$s geslaagd</item>
+        <item quantity="other">%1$s geslaagd</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d mislukt</item>
-        <item quantity="other">%1$d mislukt</item>
+        <item quantity="one">%1$s mislukt</item>
+        <item quantity="other">%1$s mislukt</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d reservering</item>
-        <item quantity="other">%1$d / %2$d reserveringen</item>
+        <item quantity="one">%1$s / %2$s reservering</item>
+        <item quantity="other">%1$s / %2$s reserveringen</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d circuit</item>
-        <item quantity="other">%1$d circuits</item>
+        <item quantity="one">%1$s circuit</item>
+        <item quantity="other">%1$s circuits</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d geweigerd</item>
-        <item quantity="other">%1$d geweigerd</item>
+        <item quantity="one">%1$s geweigerd</item>
+        <item quantity="other">%1$s geweigerd</item>
     </plurals>
 </resources>

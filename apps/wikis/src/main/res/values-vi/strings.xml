@@ -32,7 +32,7 @@
     <string name="wikis_unsubscribe_action">Ngừng đăng ký</string>
     <string name="wikis_unsubscribing">Đang ngừng đăng ký…</string>
     <string name="wikis_unsubscribe_confirm_title">Ngừng đăng ký</string>
-    <string name="wikis_unsubscribe_success">Đã hủy đăng ký</string>
+    <string name="wikis_unsubscribe_success">Đã ngừng đăng ký</string>
     <string name="wikis_subscribe_failed">Không đăng ký được</string>
     <string name="wikis_rss_menu">Feed RSS</string>
     <string name="wikis_rss_changes">Thay đổi</string>

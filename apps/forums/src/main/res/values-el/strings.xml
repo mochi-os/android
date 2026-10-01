@@ -151,7 +151,7 @@
     <string name="forums_access_level_moderate">Συντονισμός</string>
     <string name="forums_members_search">Φιλτράρισμα μελών</string>
     <string name="forums_banner_description">Markdown που εμφανίζεται στην κορυφή του φόρουμ.</string>
-    <string name="forums_banner_placeholder">Καλώς ορίσατε σε αυτό το φόρουμ…</string>
+    <string name="forums_banner_placeholder">Εισαγάγετε το κείμενο του πανό (υποστηρίζεται Markdown)…</string>
     <string name="forums_ai_mode_label">Λειτουργία: %1$s</string>
     <string name="forums_ai_mode_heading">Λειτουργία AI</string>
     <string name="forums_ai_mode_off">Απενεργοποιημένο</string>

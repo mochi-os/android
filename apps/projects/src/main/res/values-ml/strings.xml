@@ -109,7 +109,7 @@
     <string name="projects_design_tab_views">കാഴ്ചകൾ</string>
     <string name="projects_design_import_dialog_title">ഡിസൈൻ ഇംപോർട്ട് ചെയ്യുക</string>
     <string name="projects_design_import_choose_template">ഒരു ടെംപ്ലേറ്റ് തിരഞ്ഞെടുക്കുക</string>
-    <string name="projects_design_replace_title">മാറ്റിസ്ഥാപിക്കുന്നു...</string>
+    <string name="projects_design_replace_title">ഡിസൈൻ മാറ്റിസ്ഥാപിക്കണോ?</string>
     <string name="projects_design_replace">മാറ്റിസ്ഥാപിക്കുക</string>
     <string name="projects_classes_add">ക്ലാസ് ചേർക്കുക</string>
     <string name="projects_classes_add_dialog_title">ക്ലാസ് ചേർക്കുക</string>
@@ -325,7 +325,7 @@
     <string name="projects_create_object_title">പുതിയത്</string>
     <string name="projects_settings_section_identity">സ്വത്വം</string>
     <string name="projects_settings_access_updated">ആക്സസ് അപ്ഡേറ്റ് ചെയ്തു</string>
-    <string name="projects_settings_access_revoked">ആക്സസ്സ് റദ്ദാക്കി</string>
+    <string name="projects_settings_access_revoked">ആക്‌സസ് പിൻവലിച്ചു</string>
     <string name="projects_settings_section_access">ആക്സസ് മാനേജ്മെന്റ്</string>
     <string name="projects_people_search">ആളുകളെ തിരയുക</string>
     <string name="projects_settings_field_entity_id">എന്റിറ്റി ID</string>

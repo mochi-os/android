@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">Modereren</string>
     <string name="forums_members_search">Leden filteren</string>
     <string name="forums_banner_description">Markdown weergegeven bovenaan het forum.</string>
-    <string name="forums_banner_placeholder">Welkom op dit forum…</string>
+    <string name="forums_banner_placeholder">Voer bannertekst in (markdown wordt ondersteund)…</string>
     <string name="forums_ai_mode_label">Modus: %1$s</string>
     <string name="forums_ai_mode_heading">AI-modus</string>
     <string name="forums_ai_mode_off">Uitgeschakeld</string>

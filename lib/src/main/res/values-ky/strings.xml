@@ -60,7 +60,7 @@
     <string name="notifications_empty">Эскертмелер жок</string>
     <string name="notifications_empty_unread">Баары окулду</string>
     <string name="notifications_tab_unread">Окулбаган</string>
-    <string name="notifications_tab_unread_count">Окулбаган (%1$d)</string>
+    <string name="notifications_tab_unread_count">Окулбаган (%1$s)</string>
     <string name="notifications_tab_all">Баары</string>
     <string name="notifications_mark_all_read">Баарын окулду деп белгилөө</string>
     <string name="notifications_clear_all">Баарын тазалоо</string>

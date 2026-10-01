@@ -68,7 +68,7 @@
     <string name="projects_links_no_matches">Сәйкес нысандар жоқ</string>
     <string name="projects_field_yes">Иә</string>
     <string name="projects_field_no">Жоқ</string>
-    <string name="projects_field_type_checkbox">Жалаушалар</string>
+    <string name="projects_field_type_checkbox">Белгілеу ұяшығы</string>
     <string name="projects_comment_save">Сақтау</string>
     <string name="projects_comment_empty">Әлі пікірлер жоқ</string>
     <string name="projects_comment_attach">Файлдар тіркеу</string>

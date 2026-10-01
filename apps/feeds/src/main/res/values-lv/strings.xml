@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">Nekad nav iegūts</string>
     <string name="feeds_source_poll">Aptaujāt</string>
     <string name="feeds_source_transform">AI transformācija</string>
-    <string name="feeds_remove_source_confirm">Noņemt \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Arī dzēst importētos ierakstus</string>
+    <string name="feeds_remove_source_confirm">Tas apturēs satura importēšanu no \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Arī dzēst no šī avota importētos ierakstus</string>
     <string name="feeds_suggested_credibility_title">Ieteiktā uzticamība</string>
     <string name="feeds_suggested_credibility_body">Mochi iesaka uzticamību %1$d. Pieņemt?</string>
     <string name="feeds_suggested_credibility_keep">Paturēt pašreizējo</string>

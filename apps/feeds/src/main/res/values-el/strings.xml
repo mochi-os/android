@@ -113,8 +113,8 @@
     <string name="feeds_source_never_fetched">Καμία λήψη</string>
     <string name="feeds_source_poll">Δημοσκόπηση</string>
     <string name="feeds_source_transform">Μετασχηματισμός AI</string>
-    <string name="feeds_remove_source_confirm">Αφαίρεση \"%1$s\";</string>
-    <string name="feeds_remove_also_delete_posts">Διαγραφή και των εισαγόμενων αναρτήσεων</string>
+    <string name="feeds_remove_source_confirm">Αυτό θα σταματήσει την εισαγωγή περιεχομένου από \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Διαγραφή και των αναρτήσεων που εισήχθησαν από αυτή την πηγή</string>
     <string name="feeds_suggested_credibility_title">Προτεινόμενη αξιοπιστία</string>
     <string name="feeds_suggested_credibility_body">Το Mochi προτείνει αξιοπιστία %1$d. Αποδοχή;</string>
     <string name="feeds_suggested_credibility_keep">Διατήρηση τρέχουσας</string>

@@ -7,7 +7,7 @@
     <string name="feeds_all_feeds">Сви фидови</string>
     <string name="feeds_name">Назив</string>
     <string name="feeds_create">Креирај</string>
-    <string name="feeds_no_feeds_found">Нема пронађених извора</string>
+    <string name="feeds_no_feeds_found">Нема пронађених фидова</string>
     <string name="feeds_feed_title_default">Фид</string>
     <string name="feeds_mark_all_read">Означи све прочитаним</string>
     <string name="feeds_settings">Подешавања</string>
@@ -86,8 +86,8 @@
     <string name="feeds_move_up">Помери горе</string>
     <string name="feeds_move_down">Помери доле</string>
 
-    <string name="notification_channel_feeds">Обавештења извора</string>
-    <string name="feeds_search_placeholder">Претражите изворе или налепите URL…</string>
+    <string name="notification_channel_feeds">Обавештења фидова</string>
+    <string name="feeds_search_placeholder">Претражите фидове или налепите URL…</string>
     <string name="feeds_url_result">Резултат URL-а</string>
     <string name="feeds_search_results">Резултати претраге</string>
     <string name="feeds_unread_only">Само непрочитано</string>
@@ -104,16 +104,16 @@
     <string name="feeds_replying_to_author">Одговор на %1$s</string>
     <string name="feeds_attach_file">Приложи датотеку</string>
     <string name="feeds_file">Датотека</string>
-    <string name="feeds_select_feed">Изаберите извор</string>
-    <string name="feeds_loading_feeds">Учитавање извора…</string>
+    <string name="feeds_select_feed">Изаберите фид</string>
+    <string name="feeds_loading_feeds">Учитавање фидова…</string>
     <string name="feeds_sources_title_named">Извори: %1$s</string>
-    <string name="feeds_delete_feed_confirm">Ово ће трајно обрисати извор и све његове објаве. Ова радња се не може поништити.</string>
+    <string name="feeds_delete_feed_confirm">Ово ће трајно обрисати фид и све његове објаве. Ова радња се не може поништити.</string>
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">Никада преузето</string>
     <string name="feeds_source_poll">Провера</string>
     <string name="feeds_source_transform">AI трансформација</string>
-    <string name="feeds_remove_source_confirm">Уклонити \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Обриши и увезене објаве</string>
+    <string name="feeds_remove_source_confirm">Ово ће зауставити увоз садржаја из \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Обриши и објаве увезене из овог извора</string>
     <string name="feeds_suggested_credibility_title">Предложена веродостојност</string>
     <string name="feeds_suggested_credibility_body">Mochi предлаже веродостојност од %1$d. Прихватити?</string>
     <string name="feeds_suggested_credibility_keep">Задржи тренутно</string>
@@ -158,7 +158,7 @@
     <string name="feeds_access_subject_authenticated">Аутентификовани корисници</string>
     <string name="feeds_markdown_supported">Markdown подржан</string>
     <string name="feeds_permission_deny">Одбиј</string>
-    <string name="feeds_rss_feed">RSS извор</string>
+    <string name="feeds_rss_feed">RSS фид</string>
     <string name="feeds_notifications_post">Нови постови</string>
     <string name="feeds_follow_thread">Прати тему</string>
     <string name="feeds_unfollow_thread">Престани да пратиш тему</string>
@@ -168,7 +168,7 @@
     <string name="feeds_settings_name_edit_cd">Уреди назив</string>
     <string name="feeds_settings_section_identity">Идентитет</string>
     <string name="feeds_unsubscribe">Прекини претплату</string>
-    <string name="feeds_unsubscribed">Претплата отказана</string>
+    <string name="feeds_unsubscribed">Претплата прекинута</string>
     <string name="feeds_access_level_comment_full">Коментариши, реагуј и прегледај</string>
     <string name="feeds_rss_mode_posts_comments">Постови и коментари</string>
     <string name="feeds_access_add_title">Додај приступ</string>
@@ -188,7 +188,7 @@
     <string name="feeds_create_first_post">Креирај прву објаву</string>
     <string name="feeds_rss_mode_posts">Постови</string>
     <string name="feeds_source_last_checked">Последња провера %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">Откажи претплату на фид</string>
+    <string name="feeds_settings_unsubscribe_section">Прекини претплату на фид</string>
     <string name="feeds_source_transform_hint">Преведи на енглески и прикажи као ставке листе.</string>
     <string name="feeds_source_url_hint_feed">ID ентитета или отисак прста фида</string>
     <string name="feeds_source_credibility_label">Веродостојност</string>

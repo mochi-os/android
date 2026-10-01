@@ -32,7 +32,7 @@
     <string name="wikis_unsubscribe_action">قطع اشتراک</string>
     <string name="wikis_unsubscribing">در حال قطع اشتراک…</string>
     <string name="wikis_unsubscribe_confirm_title">قطع اشتراک</string>
-    <string name="wikis_unsubscribe_success">لغو اشتراک شد</string>
+    <string name="wikis_unsubscribe_success">اشتراک قطع شد</string>
     <string name="wikis_subscribe_failed">اشتراک ناموفق بود</string>
     <string name="wikis_rss_menu">فید RSS</string>
     <string name="wikis_rss_changes">تغییرات</string>
@@ -41,7 +41,7 @@
     <string name="wikis_rss_copied">URL RSS در کلیپ‌بورد کپی شد</string>
     <string name="wikis_rss_failed">دریافت توکن RSS ناموفق بود</string>
     <string name="wikis_rss_revoke">ابطال دسترسی</string>
-    <string name="wikis_rss_revoked">دسترسی RSS لغو شد</string>
+    <string name="wikis_rss_revoked">دسترسی RSS ابطال شد</string>
     <string name="wikis_find_title">یافتن ویکی‌ها</string>
     <string name="wikis_find_no_results">ویکی‌ای یافت نشد</string>
     <string name="wikis_find_recommended_section">ویکی‌های توصیه‌شده</string>

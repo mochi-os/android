@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">Hindi pa nakukuha</string>
     <string name="feeds_source_poll">Kunin ngayon</string>
     <string name="feeds_source_transform">Pag-transform ng AI</string>
-    <string name="feeds_remove_source_confirm">Tanggalin ang \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Tanggalin din ang mga na-import na post</string>
+    <string name="feeds_remove_source_confirm">Ititigil nito ang pag-import ng nilalaman mula sa \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Tanggalin din ang mga post na na-import mula sa source na ito</string>
     <string name="feeds_suggested_credibility_title">Iminumungkahing kredibilidad</string>
     <string name="feeds_suggested_credibility_body">Nagmumungkahi ang Mochi ng kredibilidad na %1$d. Tatanggapin?</string>
     <string name="feeds_suggested_credibility_keep">Panatilihin ang kasalukuyan</string>

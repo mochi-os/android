@@ -154,7 +154,7 @@ fun NotificationsScreen(
                 tabs = listOf(
                     MochiTab(
                         if (unreadCount > 0) {
-                            stringResource(R.string.notifications_tab_unread_count, unreadCount)
+                            stringResource(R.string.notifications_tab_unread_count, LocalFormat.current.formatNumber(unreadCount))
                         } else {
                             stringResource(R.string.notifications_tab_unread)
                         },
@@ -234,7 +234,7 @@ fun NotificationsScreen(
 }
 
 @Composable
-private fun NotificationCard(
+internal fun NotificationCard(
     notification: MochiNotification,
     topic: NotifTopic?,
     categories: List<NotifCategory>,
@@ -293,7 +293,7 @@ private fun NotificationCard(
                             .padding(horizontal = 6.dp),
                     ) {
                         Text(
-                            text = "×${notification.count}",
+                            text = "×${format.formatNumber(notification.count)}",
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.onSecondaryContainer,
                         )

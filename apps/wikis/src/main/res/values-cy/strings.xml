@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">Wrthi\'n ailenwi…</string>
     <string name="wikis_rename_page_success">Tudalen wedi\'i hailenwi</string>
     <string name="wikis_history_viewing">Gweld hanes %1$s, fersiwn gyfredol %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">Fersiwn %1$d</string>
     <string name="wikis_search_pages_placeholder">Chwilio tudalennau yn ôl teitl neu gynnwys…</string>
     <string name="wikis_search_no_results">Ni chanfuwyd tudalennau ar gyfer “%1$s”. Rhowch gynnig ar dermau chwilio gwahanol.</string>
     <string name="wikis_search_updated">Diweddarwyd %1$s</string>
@@ -310,7 +310,7 @@
         <item quantity="zero">%d tudalen</item>
         <item quantity="one">%d dudalen</item>
         <item quantity="two">%d dudalen</item>
-        <item quantity="few">%d thudalen</item>
+        <item quantity="few">%d tudalen</item>
         <item quantity="many">%d thudalen</item>
         <item quantity="other">%d tudalen</item>
     </plurals>
@@ -342,17 +342,17 @@
         <item quantity="zero">%d tudalen gyda\'r tag hwn</item>
         <item quantity="one">%d dudalen gyda\'r tag hwn</item>
         <item quantity="two">%d dudalen gyda\'r tag hwn</item>
-        <item quantity="few">%d thudalen gyda\'r tag hwn</item>
+        <item quantity="few">%d tudalen gyda\'r tag hwn</item>
         <item quantity="many">%d thudalen gyda\'r tag hwn</item>
         <item quantity="other">%d tudalen gyda\'r tag hwn</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="zero">Daethpwyd o hyd i %1$d canlyniad ar gyfer "%2$s"</item>
-        <item quantity="one">Daethpwyd o hyd i %1$d canlyniad ar gyfer "%2$s"</item>
-        <item quantity="two">Daethpwyd o hyd i %1$d ganlyniad ar gyfer "%2$s"</item>
-        <item quantity="few">Daethpwyd o hyd i %1$d chanlyniad ar gyfer "%2$s"</item>
-        <item quantity="many">Daethpwyd o hyd i %1$d chanlyniad ar gyfer "%2$s"</item>
-        <item quantity="other">Daethpwyd o hyd i %1$d canlyniad ar gyfer "%2$s"</item>
+        <item quantity="zero">Daethpwyd o hyd i %1$d canlyniad ar gyfer \"%2$s\"</item>
+        <item quantity="one">Daethpwyd o hyd i %1$d canlyniad ar gyfer \"%2$s\"</item>
+        <item quantity="two">Daethpwyd o hyd i %1$d ganlyniad ar gyfer \"%2$s\"</item>
+        <item quantity="few">Daethpwyd o hyd i %1$d chanlyniad ar gyfer \"%2$s\"</item>
+        <item quantity="many">Daethpwyd o hyd i %1$d chanlyniad ar gyfer \"%2$s\"</item>
+        <item quantity="other">Daethpwyd o hyd i %1$d canlyniad ar gyfer \"%2$s\"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Methwyd cadw\'r capsiwn</string>
     <string name="wikis_attachments_upload_types">Ffeiliau a gefnogir: delweddau, PDF, DOC, DOCX, TXT, ac MD.</string>

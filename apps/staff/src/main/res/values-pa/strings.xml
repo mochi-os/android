@@ -77,7 +77,7 @@
     <string name="staff_audit_action_listing_appeal_decided">ਅਪੀਲ ਉੱਤੇ ਫੈਸਲਾ ਹੋਇਆ</string>
     <string name="staff_audit_action_listing_appeal_submitted">ਅਪੀਲ ਜਮ੍ਹਾਂ ਕੀਤੀ ਗਈ</string>
     <string name="staff_audit_action_listing_approved">ਸਟਾਫ ਦੁਆਰਾ ਮਨਜ਼ੂਰ</string>
-    <string name="staff_audit_action_listing_created">ਫ਼ੀਸ ਦੇ ਵੇਰਵੇ ਲੋਡ ਹੋ ਰਹੇ ਹਨ...</string>
+    <string name="staff_audit_action_listing_created">ਲਿਸਟਿੰਗ ਬਣਾਈ ਗਈ</string>
     <string name="staff_audit_action_listing_deleted">ਲਿਸਟਿੰਗ ਮਿਟਾਈ ਗਈ</string>
     <string name="staff_audit_action_listing_expired">ਸਮਾਪਤ</string>
     <string name="staff_audit_action_listing_published">ਲਿਸਟਿੰਗ ਪ੍ਰਕਾਸ਼ਿਤ ਕੀਤੀ ਗਈ</string>
@@ -243,7 +243,7 @@
     <string name="staff_listings_any_moderation">ਕੋਈ ਵੀ ਮੋਡਰੇਸ਼ਨ</string>
     <string name="staff_listings_any_status">ਕੋਈ ਵੀ ਸਥਿਤੀ</string>
     <string name="staff_listings_approve">ਮਨਜ਼ੂਰ ਕਰੋ</string>
-    <string name="staff_listings_approved_toast">ਐਪ ਲੋਡ ਹੋ ਰਹੀ ਹੈ...</string>
+    <string name="staff_listings_approved_toast">ਲਿਸਟਿੰਗ ਮਨਜ਼ੂਰ ਹੋ ਗਈ</string>
     <string name="staff_listings_cancel">ਰੱਦ ਕਰੋ</string>
     <string name="staff_listings_empty">ਕੋਈ ਲਿਸਟਿੰਗ ਨਹੀਂ</string>
     <string name="staff_listings_filter_moderation_label">ਸੰਚਾਲਨ</string>
@@ -258,7 +258,7 @@
     <string name="staff_listings_price_placeholder">—</string>
     <string name="staff_listings_reason_label">ਕਾਰਨ</string>
     <string name="staff_listings_reject">ਅਸਵੀਕਾਰ ਕਰੋ</string>
-    <string name="staff_listings_rejected_toast">ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...</string>
+    <string name="staff_listings_rejected_toast">ਲਿਸਟਿੰਗ ਰੱਦ ਕੀਤੀ ਗਈ</string>
     <string name="staff_listings_remove">ਹਟਾਓ</string>
     <string name="staff_listings_removed_toast">ਲਿਸਟਿੰਗ ਹਟਾਈ ਗਈ</string>
     <string name="staff_listings_search_clear">ਖੋਜ ਸਾਫ਼ ਕਰੋ</string>

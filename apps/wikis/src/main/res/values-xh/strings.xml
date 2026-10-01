@@ -41,7 +41,7 @@
     <string name="wikis_rss_copied">I-URL ye-RSS ikhutshelwe ku-clipboard</string>
     <string name="wikis_rss_failed">Ayiphumelelanga ukufumana ithokheni ye-RSS</string>
     <string name="wikis_rss_revoke">Susa ufikelelo</string>
-    <string name="wikis_rss_revoked">Ufikelelo lwe-RSS lurhoxisiwe</string>
+    <string name="wikis_rss_revoked">Ufikelelo lwe-RSS lususiwe</string>
     <string name="wikis_find_title">Fumana iiwiki</string>
     <string name="wikis_find_no_results">Akukho zi-wiki zifumanekileyo</string>
     <string name="wikis_find_recommended_section">Iindululo zee-wiki</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Sele uza kucima iphepha “%1$s” (%2$s). Esi senzo sinokubuyiselwa ngokubuyisela kwimbali.</string>
     <string name="wikis_delete_page_success">Iphepha licinyiwe</string>
     <string name="wikis_revert_page_title">Buyisela iphepha</string>
-    <string name="wikis_revert_page_message">Sele uza kubuyisela i-%1$s kuhlobo %2$d. Oku kuya kudala uhlaziyo olutsha ngesiqulatho sohlobo %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Kubuyiselwe kuhlobo %1$d</string>
-    <string name="wikis_revert_page_success">Kubuyiselwe kuhlobo %1$d</string>
+    <string name="wikis_revert_page_message">Sele uza kubuyisela i-%1$s kwinguqulelo %2$d. Oku kuya kudala uhlaziyo olutsha ngesiqulatho senguqulelo %2$d.</string>
+    <string name="wikis_revert_page_default_comment">Kubuyiselwe kwinguqulelo %1$d</string>
+    <string name="wikis_revert_page_success">Kubuyiselwe kwinguqulelo %1$d</string>
     <string name="wikis_rename_page_renaming">Kutshintshwa igama…</string>
     <string name="wikis_rename_page_success">Igama lephepha litshintshiwe</string>
-    <string name="wikis_history_viewing">Ujonga imbali ye-%1$s, uhlobo lwangoku %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_history_viewing">Ujonga imbali ye-%1$s, inguqulelo yangoku %2$d</string>
+    <string name="wikis_revision_version_badge">Inguqulelo %1$d</string>
     <string name="wikis_search_pages_placeholder">Khangela amaphepha ngesihloko okanye isiqulatho…</string>
     <string name="wikis_search_no_results">Akukho maphepha afunyenweyo e-“%1$s”. Zama amagama ahlukileyo okukhangela.</string>
     <string name="wikis_search_updated">Ihlaziyiwe %1$s</string>

@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">மட்டுப்படுத்து</string>
     <string name="forums_members_search">உறுப்பினர்களை வடிகட்டவும்</string>
     <string name="forums_banner_description">மன்றத்தின் மேல் காட்டப்படும் மார்க்டவுன்.</string>
-    <string name="forums_banner_placeholder">இந்த மன்றத்திற்கு வரவேற்கிறோம்…</string>
+    <string name="forums_banner_placeholder">பேனர் உரையை உள்ளிடவும் (மார்க்டவுன் ஆதரிக்கப்படுகிறது)…</string>
     <string name="forums_ai_mode_label">முறை: %1$s</string>
     <string name="forums_ai_mode_heading">AI முறை</string>
     <string name="forums_ai_mode_off">முடக்கப்பட்டது</string>

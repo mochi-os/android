@@ -45,6 +45,8 @@
     <string name="route_delete_title">Ýoly pozmaly?</string>
     <string name="route_path">Ýol</string>
     <string name="route_method">Usul</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Programma</string>
     <string name="route_method_entity">Essas</string>
     <string name="route_method_redirect">Gönükdirmek</string>
@@ -72,7 +74,7 @@
     <string name="notifprefs_topics_empty">Heniz mowzuklar ýok</string>
     <string name="settings_home_system_status">Ýagdaý</string>
     <string name="system_status_title">Ýagdaý</string>
-    <string name="system_status_version">Görnüş</string>
+    <string name="system_status_version">Wersiýa</string>
     <string name="system_status_started">Başlandy</string>
     <string name="system_status_update">Täzele</string>
     <string name="system_status_refresh">Täzele</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org sahypasyndan ýükläp alyň</string>
     <string name="system_status_copy">Nusgalamak</string>
     <string name="system_status_peers">Deňler</string>
-    <string name="system_status_known">Belli</string>
+    <string name="system_status_peers_totals">Belli %1$s · Baglanan %2$s · Ýaýlym tory %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Belli %1$s · Baglanan %2$s</string>
     <string name="system_status_peer_connected">Baglandy</string>
     <string name="system_status_peer_disconnected">Aýryldy</string>
     <string name="system_status_peer_queued">Nobatdaky habarlar</string>
@@ -194,12 +197,12 @@
     <string name="system_users_toast_deleted">Ulanyjy pozuldy</string>
     <string name="system_users_toast_suspended">Ulanyjy togtadyldy</string>
     <string name="system_users_toast_suspension_removed">Togtatma aýryldy</string>
-    <string name="system_users_toast_session_revoked">Sessiýa ýatyryldy</string>
+    <string name="system_users_toast_session_revoked">Sessiýa yzyna alyndy</string>
     <string name="system_users_toast_create_failed">Ulanyjy döredilmedi</string>
     <string name="system_users_toast_update_failed">Ulanyjy täzelenmedi</string>
     <string name="system_users_toast_delete_failed">Ulanyjy pozulmady</string>
     <string name="system_users_toast_status_failed">Ulanyjynyň ýagdaýy täzelenmedi</string>
-    <string name="system_users_toast_revoke_failed">Sessiýa ýatyrylmady</string>
+    <string name="system_users_toast_revoke_failed">Sessiýany yzyna almak başartmady</string>
 
     <string name="settings_home_sessions">Sessiýalar</string>
     <string name="settings_home_privacy">Şahsy maglumat syýasaty</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">Indi tassyklaýjy kody bilen girip bilmersiňiz.</string>
     <string name="account_recovery_none">Dikeldiş kodlary döredilmedi.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d dikeldiş kody galdy.</item>
-        <item quantity="other">%1$d dikeldiş kody galdy.</item>
+        <item quantity="one">%1$s dikeldiş kody galdy.</item>
+        <item quantity="other">%1$s dikeldiş kody galdy.</item>
     </plurals>
     <string name="account_recovery_generate">Kodlary döret</string>
     <string name="account_recovery_regenerate">Kodlary täzeden döret</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">Iň soňky ulanyş %1$s</string>
     <string name="route_delete_message">Bu \"%1$s\" ýolu üçin marşruty aýyrar.</string>
     <string name="route_empty">Sazlanan ýollar ýok.</string>
-    <string name="route_meta">Ileri tutulma %1$d · %2$s</string>
+    <string name="route_meta">Ileri tutulma %1$s · %2$s</string>
     <string name="interests_search_placeholder">Goşmak üçin temalary gözläň…</string>
     <string name="interests_empty">Heniz gyzyklanmalar ýok.</string>
     <string name="interests_summary_regenerate">Gysgaça beýany gaýtadan döret</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">Ähli sessiýalar yzyna alynsynmy?</string>
     <string name="system_users_revoke_all_message">Bu ulanyjynyň ähli işjeň sessiýalary çykyp gider.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">%3$d ulanyjydan %1$d–%2$d görkezilýär</item>
-        <item quantity="other">%3$d ulanyjydan %1$d–%2$d görkezilýär</item>
+        <item quantity="one">%3$s ulanyjydan %1$s–%2$s görkezilýär</item>
+        <item quantity="other">%3$s ulanyjydan %1$s–%2$s görkezilýär</item>
     </plurals>
     <string name="account_title">Hasap</string>
     <string name="account_section_identity">Şahsyýet</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS tassykla</string>
     <string name="settings_home_domains">Domenler</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Synag %1$d barmaga iberildi</item>
-        <item quantity="other">Synag %1$d barmaga iberildi</item>
+        <item quantity="one">Synag %1$s barmaga iberildi</item>
+        <item quantity="other">Synag %1$s barmaga iberildi</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$d sessiýa ýatyryldy</item>
-        <item quantity="other">%1$d sessiýa ýatyryldy</item>
+        <item quantity="one">%1$s sessiýa yzyna alyndy</item>
+        <item quantity="other">%1$s sessiýa yzyna alyndy</item>
     </plurals>
     <string name="login_title">Giriş</string>
     <string name="login_section_methods">Girmek usullary</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">Köpçülige açyk</string>
     <string name="system_status_reachability_private">Şahsy</string>
     <string name="system_status_reachability_unknown">Näbelli</string>
-    <string name="system_status_relay">Releý arkaly</string>
-    <string name="system_status_mesh">Ýaýlym mesh</string>
+    <string name="system_status_reachability_relay">%1$s · releý arkaly</string>
     <string name="system_status_broadcast">Soňky ýaýlym</string>
     <string name="system_status_queued_broadcasts">Nobatdaky ýaýlym habarlary</string>
     <string name="system_setting_hostname_publish">Host adyny we domenleri beýleki serwerlere yglan et</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">Soňky gezek görüldi %1$s</string>
     <string name="notifprefs_device_app">%1$s · programma</string>
     <string name="notifprefs_device_push">%1$s · push bildirişleri</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Synag %2$d barjak ýerden %1$d-sine iberildi</item>
-        <item quantity="other">Synag %2$d barjak ýerden %1$d-sine iberildi</item>
+        <item quantity="one">Synag %2$s barjak ýerden %1$s-sine iberildi</item>
+        <item quantity="other">Synag %2$s barjak ýerden %1$s-sine iberildi</item>
     </plurals>
     <string name="notifprefs_test_none">Mejburyýet ýerleri düzülmedi</string>
     <string name="notifprefs_transport_fcm">Android push bildirişleri</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">Üýtgeşmeler taşlansynmy?</string>
     <string name="system_documents_discard">Taşla</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d şowly</item>
-        <item quantity="other">%1$d şowly</item>
+        <item quantity="one">%1$s şowly</item>
+        <item quantity="other">%1$s şowly</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d şowsuz</item>
-        <item quantity="other">%1$d şowsuz</item>
+        <item quantity="one">%1$s şowsuz</item>
+        <item quantity="other">%1$s şowsuz</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d bron</item>
-        <item quantity="other">%1$d / %2$d bron</item>
+        <item quantity="one">%1$s / %2$s bron</item>
+        <item quantity="other">%1$s / %2$s bron</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d zynjyr</item>
-        <item quantity="other">%1$d zynjyr</item>
+        <item quantity="one">%1$s zynjyr</item>
+        <item quantity="other">%1$s zynjyr</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d ret edildi</item>
-        <item quantity="other">%1$d ret edildi</item>
+        <item quantity="one">%1$s ret edildi</item>
+        <item quantity="other">%1$s ret edildi</item>
     </plurals>
 </resources>

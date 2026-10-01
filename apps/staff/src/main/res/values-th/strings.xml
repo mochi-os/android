@@ -5,8 +5,8 @@
     <string name="launcher_staff">ทีมงาน Mochi</string>
     <string name="staff_accounts_action_ban_title">แบนบัญชี</string>
     <string name="staff_accounts_action_suspend_title">ระงับบัญชี</string>
-    <string name="staff_accounts_action_unban_title">ยกเลิกการแบน</string>
-    <string name="staff_accounts_action_unsuspend_title">ยกเลิกการระงับ</string>
+    <string name="staff_accounts_action_unban_title">ปลดแบน</string>
+    <string name="staff_accounts_action_unsuspend_title">ปลดการระงับ</string>
     <string name="staff_accounts_any_seller">ทั้งหมด</string>
     <string name="staff_accounts_any_status">ทั้งหมด</string>
     <string name="staff_accounts_ban">แบน</string>
@@ -33,10 +33,10 @@
     <string name="staff_accounts_suspend">ระงับ</string>
     <string name="staff_accounts_suspended_toast">ระงับบัญชีแล้ว</string>
     <string name="staff_accounts_unban">ปลดแบน</string>
-    <string name="staff_accounts_unbanned_toast">ยกเลิกการแบนบัญชีแล้ว</string>
+    <string name="staff_accounts_unbanned_toast">ปลดแบนบัญชีแล้ว</string>
     <string name="staff_accounts_unnamed">ไม่มีชื่อ</string>
     <string name="staff_accounts_unsuspend">ปลดการระงับ</string>
-    <string name="staff_accounts_unsuspended_toast">ยกเลิกการระงับบัญชีแล้ว</string>
+    <string name="staff_accounts_unsuspended_toast">ปลดการระงับบัญชีแล้ว</string>
     <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_appeals_cancel">ยกเลิก</string>
     <string name="staff_appeals_decide">ตัดสินใจ</string>
@@ -61,8 +61,8 @@
     <string name="staff_audit_action_account_stripe_onboarded">เริ่มใช้งาน Stripe แล้ว</string>
     <string name="staff_audit_action_account_stripe_restricted">Stripe ถูกจำกัด</string>
     <string name="staff_audit_action_account_suspended">ถูกระงับการเป็นผู้ขาย</string>
-    <string name="staff_audit_action_account_unbanned">ยกเลิกการแบนแล้ว</string>
-    <string name="staff_audit_action_account_unsuspended">ยกเลิกการระงับแล้ว</string>
+    <string name="staff_audit_action_account_unbanned">ปลดแบนแล้ว</string>
+    <string name="staff_audit_action_account_unsuspended">ปลดการระงับแล้ว</string>
     <string name="staff_audit_action_auction_bid_placed">ประมูลแล้ว</string>
     <string name="staff_audit_action_auction_cancelled">ยกเลิกการประมูลแล้ว</string>
     <string name="staff_audit_action_auction_created">สร้างการประมูลแล้ว</string>

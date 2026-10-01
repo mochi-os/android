@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">Nikad dohvaćeno</string>
     <string name="feeds_source_poll">Anketa</string>
     <string name="feeds_source_transform">AI transformacija</string>
-    <string name="feeds_remove_source_confirm">Ukloniti \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Također izbriši uvezene objave</string>
+    <string name="feeds_remove_source_confirm">Time će se zaustaviti uvoz sadržaja iz \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Također izbriši objave uvezene iz ovog izvora</string>
     <string name="feeds_suggested_credibility_title">Predložena vjerodostojnost</string>
     <string name="feeds_suggested_credibility_body">Mochi predlaže vjerodostojnost %1$d. Prihvaćate?</string>
     <string name="feeds_suggested_credibility_keep">Zadrži trenutno</string>
@@ -222,7 +222,7 @@
         <item quantity="other">%1$d komentara</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d priloga</item>
+        <item quantity="one">%1$d prilog</item>
         <item quantity="few">%1$d priloga</item>
         <item quantity="other">%1$d priloga</item>
     </plurals>

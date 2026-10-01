@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">Никогда не обновлялось</string>
     <string name="feeds_source_poll">Опрос</string>
     <string name="feeds_source_transform">Преобразование ИИ</string>
-    <string name="feeds_remove_source_confirm">Удалить \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Также удалить импортированные публикации</string>
+    <string name="feeds_remove_source_confirm">Импорт содержимого из \"%1$s\" будет остановлен.</string>
+    <string name="feeds_remove_also_delete_posts">Также удалить публикации, импортированные из этого источника</string>
     <string name="feeds_suggested_credibility_title">Предлагаемая достоверность</string>
     <string name="feeds_suggested_credibility_body">Mochi предлагает достоверность %1$d. Принять?</string>
     <string name="feeds_suggested_credibility_keep">Оставить текущую</string>

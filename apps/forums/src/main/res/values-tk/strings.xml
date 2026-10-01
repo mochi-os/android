@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">Moderasiýa</string>
     <string name="forums_members_search">Agzalary süzmek</string>
     <string name="forums_banner_description">Forumyň ýokarsynda görkezilýän Markdown.</string>
-    <string name="forums_banner_placeholder">Bu foruma hoş geldiňiz…</string>
+    <string name="forums_banner_placeholder">Baner tekstini giriziň (markdown goldanylýar)…</string>
     <string name="forums_ai_mode_label">Režim: %1$s</string>
     <string name="forums_ai_mode_heading">AI režimi</string>
     <string name="forums_ai_mode_off">Öçürildi</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">günler</string>
     <string name="forums_settings_banner_saved">Baner saýlanyldy</string>
     <string name="forums_settings_access_updated">Giriş täzelendi</string>
-    <string name="forums_settings_access_revoked">Giriş ret edildi</string>
+    <string name="forums_settings_access_revoked">Elýeterlilik yzyna alyndy</string>
     <string name="forums_settings_member_removed">Agza aýryldy</string>
     <string name="forums_settings_prompt_saved">Soraw saklandy</string>
     <string name="forums_settings_section_identity">Şahsyýet</string>

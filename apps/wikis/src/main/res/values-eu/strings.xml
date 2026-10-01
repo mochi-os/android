@@ -316,8 +316,8 @@
         <item quantity="other">Etiketa hau duen %d orri</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">%1$d emaitza aurkitu dira "%2$s" bilatzean</item>
-        <item quantity="other">%1$d emaitza aurkitu dira "%2$s" bilatzean</item>
+        <item quantity="one">%1$d emaitza aurkitu dira \"%2$s\" bilatzean</item>
+        <item quantity="other">%1$d emaitza aurkitu dira \"%2$s\" bilatzean</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Ezin izan da epigrafea gorde</string>
     <string name="wikis_attachments_upload_types">Onartutako fitxategiak: irudiak, PDF, DOC, DOCX, TXT eta MD.</string>

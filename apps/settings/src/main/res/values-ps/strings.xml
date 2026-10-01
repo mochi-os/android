@@ -45,6 +45,8 @@
     <string name="route_delete_title">لاره ړنګه کړئ؟</string>
     <string name="route_path">لاره</string>
     <string name="route_method">میتود</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s ← %2$s</string>
     <string name="route_method_app">اپلیکیشن</string>
     <string name="route_method_entity">موجودیت</string>
     <string name="route_method_redirect">بیرته لارښوونه</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">د packages.mochi-os.org څخه ډاونلوډ کړئ</string>
     <string name="system_status_copy">کاپي کړئ</string>
     <string name="system_status_peers">ملګري</string>
-    <string name="system_status_known">پېژندل شوي</string>
+    <string name="system_status_peers_totals">پېژندل شوي %1$s · وصل شوي %2$s · د خپرونې شبکه %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">پېژندل شوي %1$s · وصل شوي %2$s</string>
     <string name="system_status_peer_connected">وصل شو</string>
     <string name="system_status_peer_disconnected">پرېکړل شوی</string>
     <string name="system_status_peer_queued">په کتار کې پیغامونه</string>
@@ -194,12 +197,12 @@
     <string name="system_users_toast_deleted">کاروونکی حذف شو</string>
     <string name="system_users_toast_suspended">کاروونکی ودرول شو</string>
     <string name="system_users_toast_suspension_removed">ودرول لرې شول</string>
-    <string name="system_users_toast_session_revoked">ناسته لغوه شوه</string>
+    <string name="system_users_toast_session_revoked">ناسته بیرته واخیستل شوه</string>
     <string name="system_users_toast_create_failed">د کاروونکي جوړولو پاتې راغلل</string>
     <string name="system_users_toast_update_failed">د کاروونکي تازه کولو پاتې راغلل</string>
     <string name="system_users_toast_delete_failed">د کاروونکي حذف کولو پاتې راغلل</string>
     <string name="system_users_toast_status_failed">د کاروونکي حالت تازه کولو پاتې راغلل</string>
-    <string name="system_users_toast_revoke_failed">د سیشن د لغوه کولو پاتې راغلل</string>
+    <string name="system_users_toast_revoke_failed">د ناستې بیرته اخیستل ناکام شول</string>
 
     <string name="settings_home_sessions">ناستې</string>
     <string name="settings_home_privacy">د محرمیت تګلاره</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">تاسو به نور د تایید کوډ سره ننه وتلی شئ.</string>
     <string name="account_recovery_none">د بیا رغونې کوډونه نه دي جوړ شوي.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d د بیارغونې کوډ پاتې دی.</item>
-        <item quantity="other">%1$d د بیارغونې کوډونه پاتې دي.</item>
+        <item quantity="one">%1$s د بیارغونې کوډ پاتې دی.</item>
+        <item quantity="other">%1$s د بیارغونې کوډونه پاتې دي.</item>
     </plurals>
     <string name="account_recovery_generate">کوډونه جوړ کړئ</string>
     <string name="account_recovery_regenerate">کوډونه بیا جوړ کړئ</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">وروستی کارول %1$s</string>
     <string name="route_delete_message">دا به د \"%1$s\" لارې لپاره روټ لرې کړي.</string>
     <string name="route_empty">هیڅ لارې نه دي تنظیم شوي.</string>
-    <string name="route_meta">لومړیتوب %1$d · %2$s</string>
+    <string name="route_meta">لومړیتوب %1$s · %2$s</string>
     <string name="interests_search_placeholder">د اضافه کولو لپاره موضوعات لټوئ…</string>
     <string name="interests_empty">تر اوسه هیڅ علاقې نشته.</string>
     <string name="interests_summary_regenerate">لنډیز بیا جوړول</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">ټولې ناستې بیرته واخلو؟</string>
     <string name="system_users_revoke_all_message">د دې کارن ټولې فعالې غونډې به وتل وکړي.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">د %3$d کاروونکي څخه %1$d–%2$d ښودل کېږي</item>
-        <item quantity="other">د %3$d کاروونکو څخه %1$d–%2$d ښودل کېږي</item>
+        <item quantity="one">د %3$s کاروونکي څخه %1$s–%2$s ښودل کېږي</item>
+        <item quantity="other">د %3$s کاروونکو څخه %1$s–%2$s ښودل کېږي</item>
     </plurals>
     <string name="account_title">حساب</string>
     <string name="account_section_identity">هویت</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS تصدیق</string>
     <string name="settings_home_domains">ډومینونه</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">ازموینه %1$d منزل ته واستول شوه</item>
-        <item quantity="other">ازموینه %1$d منزلونو ته واستول شوه</item>
+        <item quantity="one">ازموینه %1$s منزل ته واستول شوه</item>
+        <item quantity="other">ازموینه %1$s منزلونو ته واستول شوه</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$d ناسته لغوه شوه</item>
-        <item quantity="other">%1$d ناستې لغوه شوې</item>
+        <item quantity="one">%1$s ناسته بیرته واخیستل شوه</item>
+        <item quantity="other">%1$s ناستې بیرته واخیستل شوې</item>
     </plurals>
     <string name="login_title">ننوتل</string>
     <string name="login_section_methods">د ننوتلو لارې</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">عامه</string>
     <string name="system_status_reachability_private">خصوصي</string>
     <string name="system_status_reachability_unknown">نامعلوم</string>
-    <string name="system_status_relay">د ریلې له لارې</string>
-    <string name="system_status_mesh">د خپرونې جالي شبکه</string>
+    <string name="system_status_reachability_relay">%1$s · د ریلې له لارې</string>
     <string name="system_status_broadcast">وروستۍ خپرونه</string>
     <string name="system_status_queued_broadcasts">په کتار کې د خپرونې پیغامونه</string>
     <string name="system_setting_hostname_publish">د کوربه نوم او ډومینونه نورو سرورونو ته اعلان کړئ</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">وروستی ځل لیدل شوی %1$s</string>
     <string name="notifprefs_device_app">%1$s · اپ</string>
     <string name="notifprefs_device_push">%1$s · پوش</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">ازموینه له %2$d منزل څخه %1$d ته ولېږل شوه</item>
-        <item quantity="other">ازموینه له %2$d منزلونو څخه %1$d ته ولېږل شوه</item>
+        <item quantity="one">ازموینه له %2$s منزل څخه %1$s ته ولېږل شوه</item>
+        <item quantity="other">ازموینه له %2$s منزلونو څخه %1$s ته ولېږل شوه</item>
     </plurals>
     <string name="notifprefs_test_none">هیڅ منزلونه نه دي تنظیم شوي</string>
     <string name="notifprefs_transport_fcm">د Android پوش</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">بدلونونه ړنګ شي؟</string>
     <string name="system_documents_discard">ړنګول</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d بریالی</item>
-        <item quantity="other">%1$d بریالي</item>
+        <item quantity="one">%1$s بریالی</item>
+        <item quantity="other">%1$s بریالي</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d ناکام</item>
-        <item quantity="other">%1$d ناکام</item>
+        <item quantity="one">%1$s ناکام</item>
+        <item quantity="other">%1$s ناکام</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d ځای نیونه</item>
-        <item quantity="other">%1$d / %2$d ځای نیونې</item>
+        <item quantity="one">%1$s / %2$s ځای نیونه</item>
+        <item quantity="other">%1$s / %2$s ځای نیونې</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d سرکټ</item>
-        <item quantity="other">%1$d سرکټونه</item>
+        <item quantity="one">%1$s سرکټ</item>
+        <item quantity="other">%1$s سرکټونه</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d رد شوی</item>
-        <item quantity="other">%1$d رد شوي</item>
+        <item quantity="one">%1$s رد شوی</item>
+        <item quantity="other">%1$s رد شوي</item>
     </plurals>
 </resources>

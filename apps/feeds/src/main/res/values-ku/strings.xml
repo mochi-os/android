@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="feeds_title">Çavkanî</string>
+    <string name="feeds_title">Feed</string>
     <string name="feeds_find_feeds">Feedan bibîne</string>
     <string name="feeds_create_feed">Feed çêbike</string>
     <string name="feeds_new_post">Posta nû</string>
     <string name="feeds_all_feeds">Hemû feed</string>
     <string name="feeds_name">Nav</string>
     <string name="feeds_create">Çêbike</string>
-    <string name="feeds_no_feeds_found">Tu pel nehatin dîtin</string>
+    <string name="feeds_no_feeds_found">Tu feed nehatin dîtin</string>
     <string name="feeds_feed_title_default">Feed</string>
     <string name="feeds_mark_all_read">Hemû wek xwendî nîşan bike</string>
     <string name="feeds_settings">Mîheng</string>
@@ -43,7 +43,7 @@
     <string name="feeds_feed_name">Navê feedê</string>
     <string name="feeds_save_name">Navê tomar bike</string>
     <string name="feeds_banner">Pankart</string>
-    <string name="feeds_banner_description">Bannera markdown a vebijarkî ku li serê pelê te tê nîşandan.</string>
+    <string name="feeds_banner_description">Bannera markdown a vebijarkî ku li serê feeda te tê nîşandan.</string>
     <string name="feeds_clear">Paqij bike</string>
     <string name="feeds_delete_feed">Feedê jê bibe</string>
     <string name="feeds_no_members">Tu endam tune</string>
@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">Çavkanî hat rakirin</string>
     <string name="feeds_settings_source_polling">Çavkanî tê xwendin…</string>
     <string name="feeds_settings_access_updated">Gihîştin hat nûkirin</string>
-    <string name="feeds_settings_access_revoked">Gihiştin hate betalkirin</string>
+    <string name="feeds_settings_access_revoked">Gihîştin hate vekişandin</string>
     <string name="feeds_settings_member_removed">Endam hat rakirin</string>
     <string name="feeds_settings_ai_mode_updated">Modêla AI hate nûkirin</string>
     <string name="feeds_settings_ai_account_updated">Hesabê AI hate nûkirin</string>
@@ -86,8 +86,8 @@
     <string name="feeds_move_up">Bibe jor</string>
     <string name="feeds_move_down">Bibe jêr</string>
 
-    <string name="notification_channel_feeds">Agahdariyên kanalan</string>
-    <string name="feeds_search_placeholder">Li kanalan bigere an URL têxe…</string>
+    <string name="notification_channel_feeds">Agahdariyên feedan</string>
+    <string name="feeds_search_placeholder">Li feedan bigere an URL têxe…</string>
     <string name="feeds_url_result">Encama URL</string>
     <string name="feeds_search_results">Encamên lêgerînê</string>
     <string name="feeds_unread_only">Tenê nexwendî</string>
@@ -104,16 +104,16 @@
     <string name="feeds_replying_to_author">Bersiva %1$s tê dayîn</string>
     <string name="feeds_attach_file">Pelê pêve bike</string>
     <string name="feeds_file">Pel</string>
-    <string name="feeds_select_feed">Kanalekê hilbijêre</string>
-    <string name="feeds_loading_feeds">Kanal tên barkirin…</string>
+    <string name="feeds_select_feed">Feedekê hilbijêre</string>
+    <string name="feeds_loading_feeds">Feed tên barkirin…</string>
     <string name="feeds_sources_title_named">Çavkaniyên %1$s</string>
-    <string name="feeds_delete_feed_confirm">Ev ê kanalê û hemû şandiyên wê her û her jê bibe. Ev nayê vegerandin.</string>
+    <string name="feeds_delete_feed_confirm">Ev ê feedê û hemû şandiyên wê her û her jê bibe. Ev nayê vegerandin.</string>
     <string name="feeds_clipboard_label_rss">URLa RSS</string>
     <string name="feeds_source_never_fetched">Qet nehatiye anîn</string>
     <string name="feeds_source_poll">Lêpirsîn</string>
     <string name="feeds_source_transform">Veguherandina AI</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" rake?</string>
-    <string name="feeds_remove_also_delete_posts">Şandiyên hatî anîn jî jê bibe</string>
+    <string name="feeds_remove_source_confirm">Ev ê anîna naverokê ji \"%1$s\" rawestîne.</string>
+    <string name="feeds_remove_also_delete_posts">Şandiyên ku ji vê çavkaniyê hatine anîn jî jê bibe</string>
     <string name="feeds_suggested_credibility_title">Pêbaweriya pêşniyazkirî</string>
     <string name="feeds_suggested_credibility_body">Mochi pêbaweriyek %1$d pêşniyaz dike. Qebûl dikî?</string>
     <string name="feeds_suggested_credibility_keep">Ya niha bihêle</string>
@@ -157,7 +157,7 @@
     <string name="feeds_access_subject_authenticated">Bikarhênerên pejirandî</string>
     <string name="feeds_markdown_supported">Markdown tê piştgirîkirin</string>
     <string name="feeds_permission_deny">Red bike</string>
-    <string name="feeds_rss_feed">Pelê RSS</string>
+    <string name="feeds_rss_feed">Feeda RSS</string>
     <string name="feeds_notifications_post">Postên nû</string>
     <string name="feeds_follow_thread">Mijarê bişopîne</string>
     <string name="feeds_unfollow_thread">Şopandina mijarê rawestîne</string>

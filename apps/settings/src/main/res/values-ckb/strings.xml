@@ -45,6 +45,8 @@
     <string name="route_delete_title">ڕێچکە بسڕەوە؟</string>
     <string name="route_path">ڕێگا</string>
     <string name="route_method">ڕێگا</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s ← %2$s</string>
     <string name="route_method_app">ئەپ</string>
     <string name="route_method_entity">ئەنتیتی</string>
     <string name="route_method_redirect">ڕەوانەکردنەوە</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">داگرتن لە packages.mochi-os.org</string>
     <string name="system_status_copy">کۆپیکردن</string>
     <string name="system_status_peers">هاوتاکان</string>
-    <string name="system_status_known">ناسراو</string>
+    <string name="system_status_peers_totals">ناسراو %1$s · پەیوەستکراو %2$s · تۆڕی بڵاوکردنەوە %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">ناسراو %1$s · پەیوەستکراو %2$s</string>
     <string name="system_status_peer_connected">پەیوەستکراو</string>
     <string name="system_status_peer_disconnected">پەیوەست نییە</string>
     <string name="system_status_peer_queued">پەیامەکانی ناو ڕیز</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">چیتر ناتوانیت بە کۆدی پشتڕاستکەرەوە بێیتە ژوورەوە.</string>
     <string name="account_recovery_none">کۆدی گەڕاندنەوە دروست نەکراوە.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d کۆدی گەڕاندنەوە ماوە.</item>
-        <item quantity="other">%1$d کۆدی گەڕاندنەوە ماوە.</item>
+        <item quantity="one">%1$s کۆدی گەڕاندنەوە ماوە.</item>
+        <item quantity="other">%1$s کۆدی گەڕاندنەوە ماوە.</item>
     </plurals>
     <string name="account_recovery_generate">کۆدەکان دروست بکە</string>
     <string name="account_recovery_regenerate">کۆدەکان دوبارە دروست بکە</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">کۆتا بەکارھێنان %1$s</string>
     <string name="route_delete_message">ئەمە ڕێگای \"%1$s\" لادەبات.</string>
     <string name="route_empty">ڕێگایەک ڕێکخراو نییە.</string>
-    <string name="route_meta">پێشینەیی %1$d · %2$s</string>
+    <string name="route_meta">پێشینەیی %1$s · %2$s</string>
     <string name="interests_search_placeholder">بابەت بگەڕێ بۆ زیادکردن…</string>
     <string name="interests_empty">ھێشتا ھیچ ئارەزوویەک نییە.</string>
     <string name="interests_summary_regenerate">دروستکردنەوەی پوختە</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">ھەموو دانیشتنەکان ھەڵبوەشێنرێتەوە؟</string>
     <string name="system_users_revoke_all_message">ھەموو دانیشتنە چالاکەکانی ئەم بەکارھێنەرە دەربەرکراو دەبن.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">پیشاندانی %1$d–%2$d لە %3$d بەکارھێنەر</item>
-        <item quantity="other">پیشاندانی %1$d–%2$d لە %3$d بەکارھێنەر</item>
+        <item quantity="one">پیشاندانی %1$s–%2$s لە %3$s بەکارھێنەر</item>
+        <item quantity="other">پیشاندانی %1$s–%2$s لە %3$s بەکارھێنەر</item>
     </plurals>
     <string name="account_title">هەژمار</string>
     <string name="account_section_identity">ناسنامە</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS پشتڕاستبکە</string>
     <string name="settings_home_domains">دۆمەینەکان</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">تاقیکردنەوە بۆ %1$d مەبەست نێردرا</item>
-        <item quantity="other">تاقیکردنەوە بۆ %1$d مەبەست نێردرا</item>
+        <item quantity="one">تاقیکردنەوە بۆ %1$s مەبەست نێردرا</item>
+        <item quantity="other">تاقیکردنەوە بۆ %1$s مەبەست نێردرا</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$d دانیشتن هەڵوەشایەوە</item>
-        <item quantity="other">%1$d دانیشتن هەڵوەشایەوە</item>
+        <item quantity="one">%1$s دانیشتن هەڵوەشایەوە</item>
+        <item quantity="other">%1$s دانیشتن هەڵوەشایەوە</item>
     </plurals>
     <string name="login_title">چوونەژوورەوە</string>
     <string name="login_section_methods">شێوازەکانی چوونەژوورەوە</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">گشتی</string>
     <string name="system_status_reachability_private">تایبەت</string>
     <string name="system_status_reachability_unknown">نەناسراو</string>
-    <string name="system_status_relay">لە ڕێگەی گواستنەوە</string>
-    <string name="system_status_mesh">تۆڕی بڵاوکردنەوە</string>
+    <string name="system_status_reachability_relay">%1$s · لە ڕێگەی گواستنەوە</string>
     <string name="system_status_broadcast">دوایین بڵاوکردنەوە</string>
     <string name="system_status_queued_broadcasts">نامە بڵاوکراوەکانی ڕیزکراو</string>
     <string name="system_setting_hostname_publish">ناوی هۆست و دۆمەینەکان بە ڕاژەکارەکانی تر ڕابگەیەنە</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">دوایین جار بینرا %1$s</string>
     <string name="notifprefs_device_app">%1$s · ئەپ</string>
     <string name="notifprefs_device_push">%1$s · پوش</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">تاقیکردنەوە نێردرا بۆ %1$d لە %2$d مەبەست</item>
-        <item quantity="other">تاقیکردنەوە نێردرا بۆ %1$d لە %2$d مەبەست</item>
+        <item quantity="one">تاقیکردنەوە نێردرا بۆ %1$s لە %2$s مەبەست</item>
+        <item quantity="other">تاقیکردنەوە نێردرا بۆ %1$s لە %2$s مەبەست</item>
     </plurals>
     <string name="notifprefs_test_none">هیچ گەیشتنگایەک ڕێکنەخراوە</string>
     <string name="notifprefs_transport_fcm">پاڵنانی Android</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">گۆڕانکارییەکان فڕێبدرێن؟</string>
     <string name="system_documents_discard">فڕێدان</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d سەرکەوتوو</item>
-        <item quantity="other">%1$d سەرکەوتوو</item>
+        <item quantity="one">%1$s سەرکەوتوو</item>
+        <item quantity="other">%1$s سەرکەوتوو</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d شکستخواردوو</item>
-        <item quantity="other">%1$d شکستخواردوو</item>
+        <item quantity="one">%1$s شکستخواردوو</item>
+        <item quantity="other">%1$s شکستخواردوو</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d حیجزکردن</item>
-        <item quantity="other">%1$d / %2$d حیجزکردن</item>
+        <item quantity="one">%1$s / %2$s حیجزکردن</item>
+        <item quantity="other">%1$s / %2$s حیجزکردن</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d بازنە</item>
-        <item quantity="other">%1$d بازنە</item>
+        <item quantity="one">%1$s بازنە</item>
+        <item quantity="other">%1$s بازنە</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d ڕەتکراوە</item>
-        <item quantity="other">%1$d ڕەتکراوە</item>
+        <item quantity="one">%1$s ڕەتکراوە</item>
+        <item quantity="other">%1$s ڕەتکراوە</item>
     </plurals>
 </resources>

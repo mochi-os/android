@@ -41,7 +41,7 @@
     <string name="wikis_rss_copied">An kwafi URL ɗin RSS zuwa clipboard</string>
     <string name="wikis_rss_failed">An gaza samun RSS token</string>
     <string name="wikis_rss_revoke">Janye damar shiga</string>
-    <string name="wikis_rss_revoked">An soke damar shiga RSS</string>
+    <string name="wikis_rss_revoked">An janye damar shiga RSS</string>
     <string name="wikis_find_title">Nemo wikis</string>
     <string name="wikis_find_no_results">Babu wikis da aka samu</string>
     <string name="wikis_find_recommended_section">Wikis da aka ba da shawara</string>
@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">Ana sake suna…</string>
     <string name="wikis_rename_page_success">An sake sunan shafi</string>
     <string name="wikis_history_viewing">Ana duba tarihin %1$s, sigar yanzu %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">Sigar %1$d</string>
     <string name="wikis_search_pages_placeholder">Nemi shafuka ta take ko abun ciki…</string>
     <string name="wikis_search_no_results">Ba a sami shafuka don “%1$s” ba. Gwada wasu kalmomin bincike.</string>
     <string name="wikis_search_updated">An sabunta %1$s</string>

@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">Kirishni boshqarish</string>
     <string name="crm_settings_not_set">Oʻrnatilmagan</string>
     <string name="crm_settings_access_updated">Kirish yangilandi</string>
-    <string name="crm_settings_access_revoked">Kirish bekor qilindi</string>
+    <string name="crm_settings_access_revoked">Kirish huquqi qaytarib olindi</string>
     <string name="crm_people_search">Odamlarni qidirish</string>
     <string name="crm_access_tab_other">Boshqa</string>
     <string name="crm_access_select_group">Guruhni tanlang</string>

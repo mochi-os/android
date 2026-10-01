@@ -275,7 +275,7 @@
     <string name="market_onboarding_dismiss">Dún</string>
     <string name="market_onboarding_title">Fáilte go Market</string>
     <string name="market_open_sidebar">Oscail roghchlár</string>
-    <string name="market_price_from">ó %1$s</string>
+    <string name="market_price_from">Ó %1$s</string>
     <string name="market_price_per_month">%1$s / mí</string>
     <string name="market_price_per_year">%1$s / bliain</string>
     <string name="market_profile_biography">Faoi</string>

@@ -76,7 +76,7 @@
     <string name="crm_design_export_saved">დიზაინი შენახულია</string>
     <string name="crm_design_import_failed">ამ ფაილის წაკითხვა ვერ მოხერხდა</string>
     <string name="crm_design_or_upload_json">ან ატვირთეთ ფაილი</string>
-    <string name="crm_design_upload_json">ატვირთვა</string>
+    <string name="crm_design_upload_json">.json ფაილის ატვირთვა</string>
     <string name="crm_design_tab_classes">კლასები</string>
     <string name="crm_design_tab_views">ხედები</string>
     <string name="crm_design_import_dialog_title">დიზაინის იმპორტი</string>
@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">წვდომის მართვა</string>
     <string name="crm_settings_not_set">არ არის დაყენებული</string>
     <string name="crm_settings_access_updated">წვდომა განახლდა</string>
-    <string name="crm_settings_access_revoked">წვდომა გაუქმდა</string>
+    <string name="crm_settings_access_revoked">წვდომა გაწვეულია</string>
     <string name="crm_people_search">ხალხის ძებნა</string>
     <string name="crm_access_tab_other">სხვა</string>
     <string name="crm_access_select_group">აირჩიეთ ჯგუფი</string>
@@ -274,7 +274,7 @@
     <string name="crm_access_role_view">მხოლოდ ნახვა</string>
     <string name="crm_access_role_none">წვდომა არ არის</string>
     <string name="crm_all_crms">ყველა CRM</string>
-    <string name="crm_settings_unsubscribe_section">CRM-ის გამოწერის გაუქმება</string>
+    <string name="crm_settings_unsubscribe_section">CRM-ის გამოწერის შეწყვეტა</string>
     <string name="crm_settings_updated">CRM განახლდა</string>
     <string name="crm_create_import_backup">იმპორტი სარეზერვო ასლიდან (არასავალდებულო)</string>
     <string name="crm_export">მონაცემების ექსპორტი</string>

@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">نیا</string>
     <string name="projects_settings_section_identity">شناخت</string>
     <string name="projects_settings_access_updated">رسائی اپ ڈیٹ ہو گئی</string>
-    <string name="projects_settings_access_revoked">رسائی منسوخ کر دی گئی</string>
+    <string name="projects_settings_access_revoked">رسائی واپس لے لی گئی</string>
     <string name="projects_settings_section_access">رسائی کا انتظام</string>
     <string name="projects_people_search">لوگ تلاش کریں</string>
     <string name="projects_settings_field_entity_id">اینٹٹی ID</string>

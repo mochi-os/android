@@ -45,6 +45,8 @@
     <string name="route_delete_title">刪除路由?</string>
     <string name="route_path">路徑</string>
     <string name="route_method">方法</string>
+    <string name="route_picker_value">%1$s：%2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">應用程式</string>
     <string name="route_method_entity">實體</string>
     <string name="route_method_redirect">重新導向</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">從 packages.mochi-os.org 下載</string>
     <string name="system_status_copy">複製</string>
     <string name="system_status_peers">對等節點</string>
-    <string name="system_status_known">已知</string>
+    <string name="system_status_peers_totals">已知 %1$s · 已連結 %2$s · 廣播網狀網路 %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">已知 %1$s · 已連結 %2$s</string>
     <string name="system_status_peer_connected">已連結</string>
     <string name="system_status_peer_disconnected">已斷線</string>
     <string name="system_status_peer_queued">佇列中的訊息</string>
@@ -216,7 +219,7 @@
     <string name="account_totp_disable_message">您將無法使用驗證器代碼登入。</string>
     <string name="account_recovery_none">尚未產生復原代碼。</string>
     <plurals name="account_recovery_count">
-        <item quantity="other">剩餘 %1$d 個復原代碼。</item>
+        <item quantity="other">剩餘 %1$s 個復原代碼。</item>
     </plurals>
     <string name="account_recovery_generate">產生代碼</string>
     <string name="account_recovery_regenerate">重新產生代碼</string>
@@ -233,7 +236,7 @@
     <string name="account_last_used">上次使用 %1$s</string>
     <string name="route_delete_message">這會移除路徑\"%1$s\"的路由。</string>
     <string name="route_empty">未設定任何路由。</string>
-    <string name="route_meta">優先順序 %1$d · %2$s</string>
+    <string name="route_meta">優先順序 %1$s · %2$s</string>
     <string name="interests_search_placeholder">搜尋要新增的主題…</string>
     <string name="interests_empty">還沒有興趣。</string>
     <string name="interests_summary_regenerate">重新產生摘要</string>
@@ -267,7 +270,7 @@
     <string name="system_users_revoke_all_title">撤銷所有工作階段？</string>
     <string name="system_users_revoke_all_message">此使用者所有使用中的工作階段都會被登出。</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="other">顯示 %3$d 位使用者中的第 %1$d–%2$d 位</item>
+        <item quantity="other">顯示 %3$s 位使用者中的第 %1$s–%2$s 位</item>
     </plurals>
     <string name="account_title">帳戶</string>
     <string name="account_section_identity">身分</string>
@@ -301,11 +304,11 @@
     <string name="domain_verify">驗證 DNS</string>
     <string name="settings_home_domains">網域</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">已向 %1$d 個目標傳送測試</item>
-        <item quantity="other">已向 %1$d 個目標傳送測試</item>
+        <item quantity="one">已向 %1$s 個目標傳送測試</item>
+        <item quantity="other">已向 %1$s 個目標傳送測試</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="other">已撤銷 %1$d 個工作階段</item>
+        <item quantity="other">已撤銷 %1$s 個工作階段</item>
     </plurals>
     <string name="login_title">登入</string>
     <string name="login_section_methods">登入方式</string>
@@ -336,8 +339,7 @@
     <string name="system_status_reachability_public">公開</string>
     <string name="system_status_reachability_private">私人</string>
     <string name="system_status_reachability_unknown">未知</string>
-    <string name="system_status_relay">經由中繼</string>
-    <string name="system_status_mesh">廣播網狀網路</string>
+    <string name="system_status_reachability_relay">%1$s · 經由中繼</string>
     <string name="system_status_broadcast">最後廣播</string>
     <string name="system_status_queued_broadcasts">佇列中的廣播訊息</string>
     <string name="system_setting_hostname_publish">向其他伺服器公告主機名稱和網域</string>
@@ -370,8 +372,10 @@
     <string name="accounts_device_seen">最後看到 %1$s</string>
     <string name="notifprefs_device_app">%1$s · 應用程式</string>
     <string name="notifprefs_device_push">%1$s · 推播</string>
+    <string name="notifprefs_destination_rss">RSS：%1$s</string>
+    <string name="notifprefs_topic_title">%1$s：%2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="other">測試已傳送至 %2$d 個目的地中的 %1$d 個</item>
+        <item quantity="other">測試已傳送至 %2$s 個目的地中的 %1$s 個</item>
     </plurals>
     <string name="notifprefs_test_none">未設定目的地</string>
     <string name="notifprefs_transport_fcm">Android 推播</string>
@@ -395,18 +399,18 @@
     <string name="system_documents_discard_title">捨棄變更？</string>
     <string name="system_documents_discard">捨棄</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="other">成功 %1$d 次</item>
+        <item quantity="other">成功 %1$s 次</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="other">失敗 %1$d 次</item>
+        <item quantity="other">失敗 %1$s 次</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="other">%1$d / %2$d 個預留</item>
+        <item quantity="other">%1$s / %2$s 個預留</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="other">%1$d 條線路</item>
+        <item quantity="other">%1$s 條線路</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="other">拒絕 %1$d 次</item>
+        <item quantity="other">拒絕 %1$s 次</item>
     </plurals>
 </resources>

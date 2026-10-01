@@ -56,7 +56,7 @@
     <string name="crm_links_no_matches">Сәйкес нысандар жоқ</string>
     <string name="crm_field_yes">Иә</string>
     <string name="crm_field_no">Жоқ</string>
-    <string name="crm_field_type_checkbox">Жалаушалар</string>
+    <string name="crm_field_type_checkbox">Белгілеу ұяшығы</string>
     <string name="crm_comment_empty">Әлі пікірлер жоқ</string>
     <string name="crm_comment_attach">Файлдар тіркеу</string>
     <string name="crm_property_remove">Жою</string>

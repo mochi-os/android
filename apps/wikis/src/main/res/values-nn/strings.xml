@@ -311,8 +311,8 @@
         <item quantity="other">%d sider med denne etiketten</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Fann %1$d resultat for "%2$s"</item>
-        <item quantity="other">Fann %1$d resultat for "%2$s"</item>
+        <item quantity="one">Fann %1$d resultat for \"%2$s\"</item>
+        <item quantity="other">Fann %1$d resultat for \"%2$s\"</item>
     </plurals>
     <string name="wikis_revision_compare">Samanlikn endringar</string>
     <string name="wikis_revision_author">etter %1$s</string>

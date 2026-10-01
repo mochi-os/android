@@ -32,7 +32,7 @@
     <string name="wikis_unsubscribe_action">ເຊົາຕິດຕາມ</string>
     <string name="wikis_unsubscribing">ກຳລັງເຊົາຕິດຕາມ…</string>
     <string name="wikis_unsubscribe_confirm_title">ເຊົາຕິດຕາມ</string>
-    <string name="wikis_unsubscribe_success">ຍົກເລີກການສະໝັກສະມາຊິກແລ້ວ</string>
+    <string name="wikis_unsubscribe_success">ເຊົາຕິດຕາມແລ້ວ</string>
     <string name="wikis_subscribe_failed">ສະໝັກລົ້ມເຫຼວ</string>
     <string name="wikis_rss_menu">ຟີດ RSS</string>
     <string name="wikis_rss_changes">ການປ່ຽນແປງ</string>
@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">ກຳລັງປ່ຽນຊື່…</string>
     <string name="wikis_rename_page_success">ປ່ຽນຊື່ໜ້າແລ້ວ</string>
     <string name="wikis_history_viewing">ກຳລັງເບິ່ງປະຫວັດຂອງ %1$s, ເວີຊັນປັດຈຸບັນ %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">ເວີຊັນ %1$d</string>
     <string name="wikis_search_pages_placeholder">ຄົ້ນຫາໜ້າຕາມຫົວຂໍ້ ຫຼື ເນື້ອຫາ…</string>
     <string name="wikis_search_no_results">ບໍ່ພົບໜ້າສຳລັບ “%1$s”. ລອງຄຳຄົ້ນຫາອື່ນ.</string>
     <string name="wikis_search_updated">ອັບເດດແລ້ວ %1$s</string>
@@ -312,7 +312,7 @@
         <item quantity="other">%d ໜ້າ ກັບ tag ນີ້</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="other">ພົບ %1$d ຜົນ ສຳລັບ "%2$s"</item>
+        <item quantity="other">ພົບ %1$d ຜົນ ສຳລັບ \"%2$s\"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">ບໍ່ສາມາດບັນທຶກຄຳບັນຍາຍໄດ້</string>
     <string name="wikis_attachments_upload_types">ໄຟລ໌ທີ່ຮອງຮັບ: ຮູບພາບ, PDF, DOC, DOCX, TXT, ແລະ MD.</string>

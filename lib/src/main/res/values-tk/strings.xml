@@ -60,7 +60,7 @@
     <string name="notifications_empty">Bildirişler ýok</string>
     <string name="notifications_empty_unread">Hemmesini gördüňiz</string>
     <string name="notifications_tab_unread">Okalmadyk</string>
-    <string name="notifications_tab_unread_count">Okalmadyk (%1$d)</string>
+    <string name="notifications_tab_unread_count">Okalmadyk (%1$s)</string>
     <string name="notifications_tab_all">Hemmesi</string>
     <string name="notifications_mark_all_read">Hemmesini okaldy diýip belgile</string>
     <string name="notifications_clear_all">Hemmesini arassalamak</string>
@@ -303,8 +303,8 @@
     <string name="rss_revoke">Elýeterliligi yzyna al</string>
     <string name="rss_revoke_title">RSS elýeterliligi yzyna alynsynmy?</string>
     <string name="rss_revoke_message">Bu akyma ýazylan ähli zat ony almagy bes eder. Soňra täze URL göçürip bilersiňiz.</string>
-    <string name="rss_revoked">RSS elýeterliligi ýatyryldy</string>
-    <string name="rss_revoke_failed">RSS elýeterliligini ýatyrmak başartmady</string>
+    <string name="rss_revoked">RSS elýeterliligi yzyna alyndy</string>
+    <string name="rss_revoke_failed">RSS elýeterliligini yzyna almak başartmady</string>
     <string name="game_empty_title">Heniz oýunlar ýok</string>
     <string name="game_select_title">Oýun saýlaň</string>
     <string name="game_select_subtitle">Gapdal panelden oýun saýlaň ýa-da täze oýun başlaň.</string>

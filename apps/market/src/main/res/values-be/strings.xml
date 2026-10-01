@@ -371,7 +371,7 @@
     <string name="market_onboarding_dismiss">Закрыць</string>
     <string name="market_onboarding_title">Сардэчна запрашаем на Рынак</string>
     <string name="market_open_sidebar">Адкрыць меню</string>
-    <string name="market_price_from">ад %1$s</string>
+    <string name="market_price_from">Ад %1$s</string>
     <string name="market_price_high_bid">Найвышэйшая стаўка: %1$s</string>
     <string name="market_price_instant_buy">імгненная купля: %1$s</string>
     <string name="market_price_per_month">%1$s / месяц</string>

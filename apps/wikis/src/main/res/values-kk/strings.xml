@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">Атауы өзгертілуде…</string>
     <string name="wikis_rename_page_success">Бет атауы өзгертілді</string>
     <string name="wikis_history_viewing">%1$s тарихы қаралуда, ағымдағы нұсқа %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">Нұсқа %1$d</string>
     <string name="wikis_search_pages_placeholder">Беттерді тақырып немесе мазмұн бойынша іздеу…</string>
     <string name="wikis_search_no_results">“%1$s” үшін бет табылмады. Басқа іздеу сөздерін қолданып көріңіз.</string>
     <string name="wikis_search_updated">Жаңартылды: %1$s</string>

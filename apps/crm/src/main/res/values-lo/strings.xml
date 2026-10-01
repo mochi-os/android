@@ -274,7 +274,7 @@
     <string name="crm_access_role_view">ເບິ່ງເທົ່ານັ້ນ</string>
     <string name="crm_access_role_none">ບໍ່ມີການເຂົ້າເຖິງ</string>
     <string name="crm_all_crms">CRM ທັງໝົດ</string>
-    <string name="crm_settings_unsubscribe_section">ຍົກເລີກການສະໝັກ CRM</string>
+    <string name="crm_settings_unsubscribe_section">ເຊົາຕິດຕາມ CRM</string>
     <string name="crm_settings_updated">ອັບເດດ CRM ແລ້ວ</string>
     <string name="crm_create_import_backup">ນຳເຂົ້າຈາກສຳຮອງຂໍ້ມູນ (ບໍ່ບັງຄັບ)</string>
     <string name="crm_export">ສົ່ງອອກຂໍ້ມູນ</string>

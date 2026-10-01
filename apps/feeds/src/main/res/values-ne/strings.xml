@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">स्रोत हटाइयो</string>
     <string name="feeds_settings_source_polling">स्रोत बिंटहरूू हुँदैछ…</string>
     <string name="feeds_settings_access_updated">पहुँच अद्यावधिक गरियो</string>
-    <string name="feeds_settings_access_revoked">पहुँच रद्द गरियो</string>
+    <string name="feeds_settings_access_revoked">पहुँच फिर्ता लिइयो</string>
     <string name="feeds_settings_member_removed">सदस्य हटाइयो</string>
     <string name="feeds_settings_ai_mode_updated">AI मोड अपडेट गरियो</string>
     <string name="feeds_settings_ai_account_updated">AI खाता अपडेट गरियो</string>
@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">कहिल्यै प्राप्त गरिएको छैन</string>
     <string name="feeds_source_poll">पोल</string>
     <string name="feeds_source_transform">AI रूपान्तरण</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" हटाउने?</string>
-    <string name="feeds_remove_also_delete_posts">आयात गरिएका पोस्टहरू पनि मेटाउनुहोस्</string>
+    <string name="feeds_remove_source_confirm">यसले \"%1$s\" बाट सामग्री आयात गर्न रोक्नेछ।</string>
+    <string name="feeds_remove_also_delete_posts">यो स्रोतबाट आयात गरिएका पोस्टहरू पनि मेटाउनुहोस्</string>
     <string name="feeds_suggested_credibility_title">सुझाव गरिएको विश्वसनीयता</string>
     <string name="feeds_suggested_credibility_body">Mochi ले %1$d विश्वसनीयताको सुझाव दिन्छ। स्वीकार गर्ने?</string>
     <string name="feeds_suggested_credibility_keep">हालको राख्नुहोस्</string>

@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">Sumber dibusak</string>
     <string name="feeds_settings_source_polling">Mlebu sumber…</string>
     <string name="feeds_settings_access_updated">Akses dianyari</string>
-    <string name="feeds_settings_access_revoked">Akses dibatalake</string>
+    <string name="feeds_settings_access_revoked">Akses dicabut</string>
     <string name="feeds_settings_member_removed">Anggota dibusak</string>
     <string name="feeds_settings_ai_mode_updated">Mode AI dianyari</string>
     <string name="feeds_settings_ai_account_updated">Akun AI dianyari</string>
@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">Durung tau dijupuk</string>
     <string name="feeds_source_poll">Jajak</string>
     <string name="feeds_source_transform">Transformasi AI</string>
-    <string name="feeds_remove_source_confirm">Busak \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Uga busak kiriman sing diimpor</string>
+    <string name="feeds_remove_source_confirm">Iki bakal mungkasi impor konten saka \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Uga busak kiriman sing diimpor saka sumber iki</string>
     <string name="feeds_suggested_credibility_title">Kredibilitas sing disaranake</string>
     <string name="feeds_suggested_credibility_body">Mochi nyaranake kredibilitas %1$d. Setuju?</string>
     <string name="feeds_suggested_credibility_keep">Tetep sing saiki</string>
@@ -167,7 +167,7 @@
     <string name="feeds_settings_name_edit_cd">Owahi jeneng</string>
     <string name="feeds_settings_section_identity">Identitas</string>
     <string name="feeds_unsubscribe">Mandheg langganan</string>
-    <string name="feeds_unsubscribed">Wis mbatalaké langganan</string>
+    <string name="feeds_unsubscribed">Wis mandheg langganan</string>
     <string name="feeds_access_level_comment_full">Komentar, reaksi, lan ndelok</string>
     <string name="feeds_rss_mode_posts_comments">Postingan lan komentar</string>
     <string name="feeds_access_add_title">Tambah akses</string>
@@ -187,7 +187,7 @@
     <string name="feeds_create_first_post">Gawé post pertama</string>
     <string name="feeds_rss_mode_posts">Postingan</string>
     <string name="feeds_source_last_checked">Pungkasan dipriksa %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">Mbatalaké langganan saka feed</string>
+    <string name="feeds_settings_unsubscribe_section">Mandheg langganan feed</string>
     <string name="feeds_source_transform_hint">Terjemahaké menyang Inggris, lan tampilake minangka poin-poin.</string>
     <string name="feeds_source_url_hint_feed">ID entitas utawa fingerprint feed</string>
     <string name="feeds_source_credibility_label">Krédibilitas</string>

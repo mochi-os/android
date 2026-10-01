@@ -33,11 +33,11 @@
     <string name="crm_settings_tab_people">خەڵک</string>
     <string name="crm_option_icon">ئایکۆن</string>
     <string name="crm_option_icon_placeholder">بۆ نموونە Check, Star, Flag</string>
-    <string name="crm_settings_unsubscribe">بەشداری هەڵبوەشێنەوە</string>
+    <string name="crm_settings_unsubscribe">لابردنی بەشداری</string>
     <string name="crm_settings_delete_crm">سڕینەوەی CRM</string>
     <string name="crm_settings_delete_confirm_title">سڕینەوەی CRM</string>
-    <string name="crm_settings_unsubscribe_title">بەشداری هەڵبوەشێنەوە</string>
-    <string name="crm_settings_unsubscribe_message">ئایا دڵنیایت لە هەڵوەشاندنەوەی بەشداری ئەم CRMـە؟</string>
+    <string name="crm_settings_unsubscribe_title">لابردنی بەشداری</string>
+    <string name="crm_settings_unsubscribe_message">ئایا دڵنیایت لە لابردنی بەشداری ئەم CRMـە؟</string>
     <string name="crm_access_level_owner">خاوەن</string>
     <string name="crm_object_watch">چاودێری</string>
     <string name="crm_object_tab_properties">تایبەتمەندییەکان</string>
@@ -274,7 +274,7 @@
     <string name="crm_access_role_view">تەنها بینین</string>
     <string name="crm_access_role_none">دەستڕاگەیشتن نییە</string>
     <string name="crm_all_crms">هەموو CRMـەکان</string>
-    <string name="crm_settings_unsubscribe_section">بەشداری CRM هەڵوەشێنەوە</string>
+    <string name="crm_settings_unsubscribe_section">لابردنی بەشداری لە CRM</string>
     <string name="crm_settings_updated">CRM نوێکرایەوە</string>
     <string name="crm_create_import_backup">لە باکئەپەوە هاوردە بکە (ئارەزوومەندانە)</string>
     <string name="crm_export">هەناردەکردنی داتا</string>

@@ -557,7 +557,7 @@
     <string name="market_messages_send_failed">Не удалось отправить сообщение</string>
     <string name="market_messages_thread_title">Переписка</string>
     <string name="market_messages_unread_badge">Непрочитанных: %1$d</string>
-    <string name="market_price_from">от %1$s</string>
+    <string name="market_price_from">От %1$s</string>
     <string name="market_price_high_bid">Высшая ставка: %1$s</string>
     <string name="market_price_instant_buy">купить сейчас: %1$s</string>
     <string name="market_price_per_month">%1$s / месяц</string>

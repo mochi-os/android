@@ -557,7 +557,7 @@
     <string name="market_messages_send_failed">Viestiä ei voitu lähettää</string>
     <string name="market_messages_thread_title">Keskustelu</string>
     <string name="market_messages_unread_badge">%1$d lukematonta</string>
-    <string name="market_price_from">alkaen %1$s</string>
+    <string name="market_price_from">Alkaen %1$s</string>
     <string name="market_price_high_bid">Korkein tarjous: %1$s</string>
     <string name="market_price_instant_buy">osta heti: %1$s</string>
     <string name="market_price_per_month">%1$s / kuukausi</string>

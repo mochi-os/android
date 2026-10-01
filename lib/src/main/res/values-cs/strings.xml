@@ -60,7 +60,7 @@
     <string name="notifications_empty">Žádná oznámení</string>
     <string name="notifications_empty_unread">Vše máte přečteno</string>
     <string name="notifications_tab_unread">Nepřečtené</string>
-    <string name="notifications_tab_unread_count">Nepřečtené (%1$d)</string>
+    <string name="notifications_tab_unread_count">Nepřečtené (%1$s)</string>
     <string name="notifications_tab_all">Vše</string>
     <string name="notifications_mark_all_read">Označit vše jako přečtené</string>
     <string name="notifications_clear_all">Vymazat vše</string>
@@ -247,7 +247,7 @@
     <string name="reactivation_body">Váš účet je naplánován ke smazání. Nyní můžete smazání zrušit a obnovit plný přístup.</string>
     <string name="reactivation_body_dated">Váš účet a všechna jeho data budou trvale smazána dne %1$s. Nyní můžete smazání zrušit a obnovit plný přístup.</string>
     <string name="reactivation_reactivate">Znovu aktivovat můj účet</string>
-    <string name="reactivation_sign_out">Pokračovat ve zrušení a odhlásit se</string>
+    <string name="reactivation_sign_out">Pokračovat v uzavírání a odhlásit se</string>
     <string name="common_play">Přehrát</string>
     <string name="common_pause">Pozastavit</string>
     <string name="common_opening_file">Otevírání souboru…</string>
@@ -305,8 +305,8 @@
     <string name="rss_revoke">Odvolat přístup</string>
     <string name="rss_revoke_title">Odvolat přístup RSS?</string>
     <string name="rss_revoke_message">Vše, co je k tomuto kanálu přihlášeno, jej přestane dostávat. Poté můžete zkopírovat novou adresu URL.</string>
-    <string name="rss_revoked">Přístup RSS zrušen</string>
-    <string name="rss_revoke_failed">Zrušení přístupu RSS se nezdařilo</string>
+    <string name="rss_revoked">Přístup RSS odvolán</string>
+    <string name="rss_revoke_failed">Odvolání přístupu RSS se nezdařilo</string>
     <string name="game_empty_title">Zatím žádné hry</string>
     <string name="game_select_title">Vyberte hru</string>
     <string name="game_select_subtitle">Vyberte hru v postranním panelu nebo začněte novou.</string>

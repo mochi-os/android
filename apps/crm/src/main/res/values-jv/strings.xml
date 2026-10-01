@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">Manajemen Akses</string>
     <string name="crm_settings_not_set">Ora disetel</string>
     <string name="crm_settings_access_updated">Akses dianyari</string>
-    <string name="crm_settings_access_revoked">Akses dibatalake</string>
+    <string name="crm_settings_access_revoked">Akses dicabut</string>
     <string name="crm_people_search">Golek wong</string>
     <string name="crm_access_tab_other">Liyané</string>
     <string name="crm_access_select_group">Pilih grup</string>

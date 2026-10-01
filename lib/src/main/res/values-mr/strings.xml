@@ -60,7 +60,7 @@
     <string name="notifications_empty">सूचना नाहीत</string>
     <string name="notifications_empty_unread">सर्व पाहून झाले</string>
     <string name="notifications_tab_unread">न वाचलेले</string>
-    <string name="notifications_tab_unread_count">न वाचलेले (%1$d)</string>
+    <string name="notifications_tab_unread_count">न वाचलेले (%1$s)</string>
     <string name="notifications_tab_all">सर्व</string>
     <string name="notifications_mark_all_read">सर्व वाचलेले चिन्हांकित करा</string>
     <string name="notifications_clear_all">सर्व साफ करा</string>
@@ -303,8 +303,8 @@
     <string name="rss_revoke">प्रवेश मागे घ्या</string>
     <string name="rss_revoke_title">RSS प्रवेश मागे घ्यायचा?</string>
     <string name="rss_revoke_message">या फीडची सदस्यता घेतलेले सर्व काही ते मिळणे थांबवेल. नंतर तुम्ही नवीन URL कॉपी करू शकता.</string>
-    <string name="rss_revoked">RSS प्रवेश रद्द केला</string>
-    <string name="rss_revoke_failed">RSS प्रवेश रद्द करण्यात अयशस्वी</string>
+    <string name="rss_revoked">RSS प्रवेश मागे घेतला</string>
+    <string name="rss_revoke_failed">RSS प्रवेश मागे घेण्यात अयशस्वी</string>
     <string name="game_empty_title">अद्याप गेम्स नाहीत</string>
     <string name="game_select_title">गेम निवडा</string>
     <string name="game_select_subtitle">साइडबारमधून गेम निवडा किंवा नवीन गेम सुरू करा.</string>

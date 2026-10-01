@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">Modere</string>
     <string name="forums_members_search">Filtre manm</string>
     <string name="forums_banner_description">Markdown ki parèt anwo fowòm nan.</string>
-    <string name="forums_banner_placeholder">Byenveni nan fowòm sa a…</string>
+    <string name="forums_banner_placeholder">Antre tèks banyè a (markdown sipòte)…</string>
     <string name="forums_ai_mode_label">Mòd: %1$s</string>
     <string name="forums_ai_mode_heading">Mòd AI</string>
     <string name="forums_ai_mode_off">Dezaktive</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">jou</string>
     <string name="forums_settings_banner_saved">Banyè anrejistre</string>
     <string name="forums_settings_access_updated">Aksè mete ajou</string>
-    <string name="forums_settings_access_revoked">Akè retire</string>
+    <string name="forums_settings_access_revoked">Aksè retire</string>
     <string name="forums_settings_member_removed">Manm retire</string>
     <string name="forums_settings_prompt_saved">Prompt sove</string>
     <string name="forums_settings_section_identity">Idantite</string>

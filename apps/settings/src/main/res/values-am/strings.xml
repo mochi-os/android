@@ -45,6 +45,8 @@
     <string name="route_delete_title">መንገድ ይሰረዝ?</string>
     <string name="route_path">መንገድ</string>
     <string name="route_method">ዘዴ</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">መተግበሪያ</string>
     <string name="route_method_entity">አካል</string>
     <string name="route_method_redirect">ድጋሚ ማዘዋወር</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">ከ packages.mochi-os.org አውርድ</string>
     <string name="system_status_copy">ቅዳ</string>
     <string name="system_status_peers">አቻዎች</string>
-    <string name="system_status_known">የታወቁ</string>
+    <string name="system_status_peers_totals">የታወቁ %1$s · የተገናኙ %2$s · የስርጭት መረብ %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">የታወቁ %1$s · የተገናኙ %2$s</string>
     <string name="system_status_peer_connected">ተገናኝቷል</string>
     <string name="system_status_peer_disconnected">ተቋርጧል</string>
     <string name="system_status_peer_queued">በሰልፍ ላይ ያሉ መልዕክቶች</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">ከአሁን በኋላ በማረጋገጫ ኮድ መግባት አይችሉም።</string>
     <string name="account_recovery_none">የመልሶ ማግኛ ኮዶች አልተፈጠሩም።</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d ቀሪ የመልሶ ማግኛ ኮድ።</item>
-        <item quantity="other">%1$d ቀሪ የመልሶ ማግኛ ኮዶች።</item>
+        <item quantity="one">%1$s ቀሪ የመልሶ ማግኛ ኮድ።</item>
+        <item quantity="other">%1$s ቀሪ የመልሶ ማግኛ ኮዶች።</item>
     </plurals>
     <string name="account_recovery_generate">ኮዶችን ፍጠር</string>
     <string name="account_recovery_regenerate">ኮዶችን ዳግም ፍጠር</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">መጨረሻ የተጠቀመው %1$s</string>
     <string name="route_delete_message">ይህ ለ \"%1$s\" መንገድ ሩትን ያስወግዳል።</string>
     <string name="route_empty">የተዋቀሩ መንገዶች የሉም።</string>
-    <string name="route_meta">ቅድሚያ %1$d · %2$s</string>
+    <string name="route_meta">ቅድሚያ %1$s · %2$s</string>
     <string name="interests_search_placeholder">ለመጨመር ርዕሶችን ይፈልጉ…</string>
     <string name="interests_empty">እስካሁን ምንም ፍላጎቶች የሉም።</string>
     <string name="interests_summary_regenerate">ማጠቃለያውን እንደገና ፍጠር</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">ሁሉንም ክፍለ ጊዜዎች ሰርዝ?</string>
     <string name="system_users_revoke_all_message">የዚህ ተጠቃሚ ሁሉም ንቁ ክፍለ ጊዜዎች ይወጣሉ።</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">ከ%3$d ተጠቃሚ ውስጥ %1$d–%2$d በማሳየት ላይ</item>
-        <item quantity="other">ከ%3$d ተጠቃሚዎች ውስጥ %1$d–%2$d በማሳየት ላይ</item>
+        <item quantity="one">ከ%3$s ተጠቃሚ ውስጥ %1$s–%2$s በማሳየት ላይ</item>
+        <item quantity="other">ከ%3$s ተጠቃሚዎች ውስጥ %1$s–%2$s በማሳየት ላይ</item>
     </plurals>
     <string name="account_title">መለያ</string>
     <string name="account_section_identity">ማንነት</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS ያረጋግጡ</string>
     <string name="settings_home_domains">ዶሜኖች</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">ሙከራ ወደ %1$d መድረሻ ተልኳል</item>
-        <item quantity="other">ሙከራ ወደ %1$d መድረሻዎች ተልኳል</item>
+        <item quantity="one">ሙከራ ወደ %1$s መድረሻ ተልኳል</item>
+        <item quantity="other">ሙከራ ወደ %1$s መድረሻዎች ተልኳል</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$d ክፍለ ጊዜ ተሰርዟል</item>
-        <item quantity="other">%1$d ክፍለ ጊዜዎች ተሰርዘዋል</item>
+        <item quantity="one">%1$s ክፍለ ጊዜ ተሰርዟል</item>
+        <item quantity="other">%1$s ክፍለ ጊዜዎች ተሰርዘዋል</item>
     </plurals>
     <string name="login_title">ግባ</string>
     <string name="login_section_methods">የመግቢያ ዘዴዎች</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">ሕዝባዊ</string>
     <string name="system_status_reachability_private">የግል</string>
     <string name="system_status_reachability_unknown">ያልታወቀ</string>
-    <string name="system_status_relay">በሪሌይ በኩል</string>
-    <string name="system_status_mesh">የስርጭት መሽ</string>
+    <string name="system_status_reachability_relay">%1$s · በሪሌይ በኩል</string>
     <string name="system_status_broadcast">የመጨረሻ ስርጭት</string>
     <string name="system_status_queued_broadcasts">በወረፋ ላይ ያሉ የስርጭት መልዕክቶች</string>
     <string name="system_setting_hostname_publish">የአስተናጋጅ ስም እና ጎራዎችን ለሌሎች አገልጋዮች አሳውቅ</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">መጨረሻ የታየው %1$s</string>
     <string name="notifprefs_device_app">%1$s · መተግበሪያ</string>
     <string name="notifprefs_device_push">%1$s · ግፋ</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">ሙከራው ከ%2$d መድረሻ ወደ %1$d ተልኳል</item>
-        <item quantity="other">ሙከራው ከ%2$d መድረሻዎች ወደ %1$d ተልኳል</item>
+        <item quantity="one">ሙከራው ከ%2$s መድረሻ ወደ %1$s ተልኳል</item>
+        <item quantity="other">ሙከራው ከ%2$s መድረሻዎች ወደ %1$s ተልኳል</item>
     </plurals>
     <string name="notifprefs_test_none">ምንም መድረሻዎች አልተዋቀሩም</string>
     <string name="notifprefs_transport_fcm">የAndroid ግፋ</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">ለውጦቹ ይጣሉ?</string>
     <string name="system_documents_discard">ጣል</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d ተሳክቷል</item>
-        <item quantity="other">%1$d ተሳክቷል</item>
+        <item quantity="one">%1$s ተሳክቷል</item>
+        <item quantity="other">%1$s ተሳክቷል</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d አልተሳካም</item>
-        <item quantity="other">%1$d አልተሳካም</item>
+        <item quantity="one">%1$s አልተሳካም</item>
+        <item quantity="other">%1$s አልተሳካም</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d ቦታ ማስያዣ</item>
-        <item quantity="other">%1$d / %2$d ቦታ ማስያዣዎች</item>
+        <item quantity="one">%1$s / %2$s ቦታ ማስያዣ</item>
+        <item quantity="other">%1$s / %2$s ቦታ ማስያዣዎች</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d ዙረት</item>
-        <item quantity="other">%1$d ዙረቶች</item>
+        <item quantity="one">%1$s ዙረት</item>
+        <item quantity="other">%1$s ዙረቶች</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d ተከልክሏል</item>
-        <item quantity="other">%1$d ተከልክሏል</item>
+        <item quantity="one">%1$s ተከልክሏል</item>
+        <item quantity="other">%1$s ተከልክሏል</item>
     </plurals>
 </resources>

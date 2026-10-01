@@ -112,7 +112,7 @@
     <string name="feeds_source_never_fetched">Akukaze kulandwe</string>
     <string name="feeds_source_poll">Inhlolovo</string>
     <string name="feeds_source_transform">Ukuguqula nge-AI</string>
-    <string name="feeds_remove_source_confirm">Susa \"%1$s\"?</string>
+    <string name="feeds_remove_source_confirm">Lokhu kuzomisa ukungeniswa kokuqukethwe okuvela ku-\"%1$s\".</string>
     <string name="feeds_remove_also_delete_posts">Susa futhi okuthunyelwe okungeniswe kulo mthombo</string>
     <string name="feeds_suggested_credibility_title">Ukwethenjwa okusikiselwayo</string>
     <string name="feeds_suggested_credibility_body">I-Mochi isikisela ukwethenjwa kuka-%1$d. Uyamukela?</string>

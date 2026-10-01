@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">새로 만들기</string>
     <string name="projects_settings_section_identity">신원</string>
     <string name="projects_settings_access_updated">접근이 업데이트되었어요</string>
-    <string name="projects_settings_access_revoked">액세스가 취소되었습니다</string>
+    <string name="projects_settings_access_revoked">액세스가 철회되었습니다</string>
     <string name="projects_settings_section_access">접근 관리</string>
     <string name="projects_people_search">사람 검색</string>
     <string name="projects_settings_field_entity_id">엔티티 ID</string>
@@ -360,7 +360,7 @@
     <string name="projects_activity_commented">댓글 남김</string>
     <string name="projects_attachment_delete_confirm_message">이 첨부 파일은 영구적으로 삭제됩니다.</string>
     <string name="projects_attachment_delete_confirm_title">첨부 파일을 삭제할까요?</string>
-    <string name="projects_settings_unsubscribe_section">프로젝트 구독 취소</string>
+    <string name="projects_settings_unsubscribe_section">프로젝트 구독 해지</string>
     <string name="projects_share_link_title">프로젝트 공유</string>
     <string name="projects_sort_filter_title">정렬 및 필터</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 같은 읽기 쉬운 ID에 사용됩니다</string>

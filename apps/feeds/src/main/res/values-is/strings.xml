@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">Aldrei sótt</string>
     <string name="feeds_source_poll">Sækja</string>
     <string name="feeds_source_transform">Gervigreindarumbreyting</string>
-    <string name="feeds_remove_source_confirm">Fjarlægja \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Eyða einnig innfluttum færslum</string>
+    <string name="feeds_remove_source_confirm">Þetta stöðvar innflutning efnis frá \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Eyða einnig færslum sem voru fluttar inn frá þessari uppsprettu</string>
     <string name="feeds_suggested_credibility_title">Tillagður trúverðugleiki</string>
     <string name="feeds_suggested_credibility_body">Mochi stingur upp á trúverðugleika %1$d. Samþykkja?</string>
     <string name="feeds_suggested_credibility_keep">Halda núverandi</string>

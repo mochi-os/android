@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">Juurdepääsu haldus</string>
     <string name="crm_settings_not_set">Pole määratud</string>
     <string name="crm_settings_access_updated">Juurdepääs uuendatud</string>
-    <string name="crm_settings_access_revoked">Juurdepääs tühistati</string>
+    <string name="crm_settings_access_revoked">Juurdepääs võeti ära</string>
     <string name="crm_people_search">Otsi inimesi</string>
     <string name="crm_access_tab_other">Muu</string>
     <string name="crm_access_select_group">Valige rühm</string>
@@ -274,7 +274,7 @@
     <string name="crm_access_role_view">Ainult vaatamine</string>
     <string name="crm_access_role_none">Juurdepääs puudub</string>
     <string name="crm_all_crms">Kõik CRM-id</string>
-    <string name="crm_settings_unsubscribe_section">Lõpeta CRM-i tellimus</string>
+    <string name="crm_settings_unsubscribe_section">Loobu CRM-i tellimusest</string>
     <string name="crm_settings_updated">CRM uuendatud</string>
     <string name="crm_create_import_backup">Impordi varukoopiast (valikuline)</string>
     <string name="crm_export">Ekspordi andmed</string>

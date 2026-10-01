@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">Çeşme aýryldy</string>
     <string name="feeds_settings_source_polling">Çeşme ümsi eşitlenen…</string>
     <string name="feeds_settings_access_updated">Giriş täzelendi</string>
-    <string name="feeds_settings_access_revoked">Giriş ret edildi</string>
+    <string name="feeds_settings_access_revoked">Elýeterlilik yzyna alyndy</string>
     <string name="feeds_settings_member_removed">Agza aýryldy</string>
     <string name="feeds_settings_ai_mode_updated">AI režimi täzelendi</string>
     <string name="feeds_settings_ai_account_updated">AI hasaby täzelendi</string>
@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">Hiç haçan alynmady</string>
     <string name="feeds_source_poll">Sorag</string>
     <string name="feeds_source_transform">AI öwürmek</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" aýrylsynmy?</string>
-    <string name="feeds_remove_also_delete_posts">Import edilen ýazgylary hem poz</string>
+    <string name="feeds_remove_source_confirm">Bu \"%1$s\" çeşmesinden mazmun importyny togtadar.</string>
+    <string name="feeds_remove_also_delete_posts">Bu çeşmeden import edilen ýazgylary hem poz</string>
     <string name="feeds_suggested_credibility_title">Teklip edilýän ynamlylyk</string>
     <string name="feeds_suggested_credibility_body">Mochi %1$d ynamlylygyny teklip edýär. Kabul edýärsiňizmi?</string>
     <string name="feeds_suggested_credibility_keep">Häzirkini sakla</string>

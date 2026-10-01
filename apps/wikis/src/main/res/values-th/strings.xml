@@ -32,7 +32,7 @@
     <string name="wikis_unsubscribe_action">เลิกติดตาม</string>
     <string name="wikis_unsubscribing">กำลังเลิกติดตาม…</string>
     <string name="wikis_unsubscribe_confirm_title">เลิกติดตาม</string>
-    <string name="wikis_unsubscribe_success">ยกเลิกการติดตามแล้ว</string>
+    <string name="wikis_unsubscribe_success">เลิกติดตามแล้ว</string>
     <string name="wikis_subscribe_failed">ไม่สามารถสมัครติดตามได้</string>
     <string name="wikis_rss_menu">ฟีด RSS</string>
     <string name="wikis_rss_changes">การเปลี่ยนแปลง</string>

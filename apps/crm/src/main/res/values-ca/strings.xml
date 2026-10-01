@@ -276,7 +276,7 @@
     <string name="crm_access_role_view">Només visualització</string>
     <string name="crm_access_role_none">Sense accés</string>
     <string name="crm_all_crms">Tots els CRM</string>
-    <string name="crm_settings_unsubscribe_section">Cancel·la la subscripció al CRM</string>
+    <string name="crm_settings_unsubscribe_section">Dona\'t de baixa del CRM</string>
     <string name="crm_settings_updated">S\'ha actualitzat el CRM</string>
     <string name="crm_create_import_backup">Importa des d\'una còpia de seguretat (opcional)</string>
     <string name="crm_export">Exporta les dades</string>

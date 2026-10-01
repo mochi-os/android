@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">ਸਰੋਤ ਹਟਾਇਆ ਗਿਆ</string>
     <string name="feeds_settings_source_polling">ਸਰੋਤ ਪੋਲ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…</string>
     <string name="feeds_settings_access_updated">ਪਹੁੰਚ ਅੱਪਡੇਟ ਕੀਤੀ ਗਈ</string>
-    <string name="feeds_settings_access_revoked">ਪਹੁੰਚ ਰੱਦ ਕੀਤੀ ਗਈ</string>
+    <string name="feeds_settings_access_revoked">ਪਹੁੰਚ ਵਾਪਸ ਲੈ ਲਈ ਗਈ</string>
     <string name="feeds_settings_member_removed">ਮੈਂਬਰ ਹਟਾਇਆ ਗਿਆ</string>
     <string name="feeds_settings_ai_mode_updated">AI ਮੋਡ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ</string>
     <string name="feeds_settings_ai_account_updated">AI ਖਾਤਾ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ</string>
@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">ਕਦੇ ਨਹੀਂ ਲਿਆ</string>
     <string name="feeds_source_poll">ਪੋਲ</string>
     <string name="feeds_source_transform">AI ਤਬਦੀਲੀ</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" ਨੂੰ ਹਟਾਉਣਾ ਹੈ?</string>
-    <string name="feeds_remove_also_delete_posts">ਆਯਾਤ ਕੀਤੀਆਂ ਪੋਸਟਾਂ ਵੀ ਮਿਟਾਓ</string>
+    <string name="feeds_remove_source_confirm">ਇਹ \"%1$s\" ਤੋਂ ਸਮੱਗਰੀ ਆਯਾਤ ਕਰਨਾ ਬੰਦ ਕਰ ਦੇਵੇਗਾ।</string>
+    <string name="feeds_remove_also_delete_posts">ਇਸ ਸਰੋਤ ਤੋਂ ਆਯਾਤ ਕੀਤੀਆਂ ਪੋਸਟਾਂ ਵੀ ਮਿਟਾਓ</string>
     <string name="feeds_suggested_credibility_title">ਸੁਝਾਈ ਭਰੋਸੇਯੋਗਤਾ</string>
     <string name="feeds_suggested_credibility_body">Mochi %1$d ਦੀ ਭਰੋਸੇਯੋਗਤਾ ਦਾ ਸੁਝਾਅ ਦਿੰਦਾ ਹੈ। ਮੰਨਣਾ ਹੈ?</string>
     <string name="feeds_suggested_credibility_keep">ਮੌਜੂਦਾ ਰੱਖੋ</string>
@@ -167,7 +167,7 @@
     <string name="feeds_settings_name_edit_cd">ਨਾਮ ਸੰਪਾਦਿਤ ਕਰੋ</string>
     <string name="feeds_settings_section_identity">ਪਛਾਣ</string>
     <string name="feeds_unsubscribe">ਗਾਹਕੀ ਖਤਮ ਕਰੋ</string>
-    <string name="feeds_unsubscribed">ਗਾਹਕੀ ਰੱਦ ਕੀਤੀ</string>
+    <string name="feeds_unsubscribed">ਗਾਹਕੀ ਖਤਮ ਕੀਤੀ</string>
     <string name="feeds_access_level_comment_full">ਟਿੱਪਣੀ ਕਰੋ, ਪ੍ਰਤੀਕਿਰਿਆ ਦਿਓ ਅਤੇ ਦੇਖੋ</string>
     <string name="feeds_rss_mode_posts_comments">ਪੋਸਟਾਂ ਅਤੇ ਟਿੱਪਣੀਆਂ</string>
     <string name="feeds_access_add_title">ਪਹੁੰਚ ਜੋੜੋ</string>
@@ -178,7 +178,7 @@
     <string name="feeds_permission_request_title">ਇਜਾਜ਼ਤ ਬੇਨਤੀ</string>
     <string name="feeds_unsubscribe_confirm">ਫੀਡ ਤੋਂ ਗਾਹਕੀ ਖਤਮ ਕਰਨੀ ਹੈ?</string>
     <string name="feeds_settings_title">%1$s ਸੈਟਿੰਗਾਂ</string>
-    <string name="feeds_source_transform_help">ਲਿਸਟਿੰਗ ID</string>
+    <string name="feeds_source_transform_help">ਬੰਦ ਕਰਨ ਲਈ ਖਾਲੀ ਛੱਡੋ।</string>
     <string name="feeds_settings_name_cancel_cd">ਸੋਧਣਾ ਰੱਦ ਕਰੋ</string>
     <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
     <string name="feeds_access_management">ਪਹੁੰਚ ਪ੍ਰਬੰਧਨ</string>
@@ -187,7 +187,7 @@
     <string name="feeds_create_first_post">ਪਹਿਲੀ ਪੋਸਟ ਬਣਾਓ</string>
     <string name="feeds_rss_mode_posts">ਪੋਸਟਾਂ</string>
     <string name="feeds_source_last_checked">ਆਖਰੀ ਜਾਂਚ %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">ਫੀਡ ਤੋਂ ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
+    <string name="feeds_settings_unsubscribe_section">ਫੀਡ ਤੋਂ ਗਾਹਕੀ ਖਤਮ ਕਰੋ</string>
     <string name="feeds_source_transform_hint">ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਅਨੁਵਾਦ ਕਰੋ, ਅਤੇ ਬੁਲੇਟ ਪੁਆਇੰਟ ਵਜੋਂ ਦਿਖਾਓ।</string>
     <string name="feeds_source_url_hint_feed">ਫੀਡ ਇਕਾਈ ID ਜਾਂ ਫਿੰਗਰਪ੍ਰਿੰਟ</string>
     <string name="feeds_source_credibility_label">ਭਰੋਸੇਯੋਗਤਾ</string>

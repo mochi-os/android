@@ -45,6 +45,8 @@
     <string name="route_delete_title">Ta bort rutt?</string>
     <string name="route_path">Sökväg</string>
     <string name="route_method">Metod</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">App</string>
     <string name="route_method_entity">Entitet</string>
     <string name="route_method_redirect">Omdirigering</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Hämta från packages.mochi-os.org</string>
     <string name="system_status_copy">Kopiera</string>
     <string name="system_status_peers">Peers</string>
-    <string name="system_status_known">Kända</string>
+    <string name="system_status_peers_totals">Kända %1$s · Anslutna %2$s · Broadcast-mesh %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Kända %1$s · Anslutna %2$s</string>
     <string name="system_status_peer_connected">Ansluten</string>
     <string name="system_status_peer_disconnected">Frånkopplad</string>
     <string name="system_status_peer_queued">Meddelanden i kö</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">Du kan inte längre logga in med en autentiseringskod.</string>
     <string name="account_recovery_none">Inga återställningskoder genererade.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d återstående återställningskod.</item>
-        <item quantity="other">%1$d återstående återställningskoder.</item>
+        <item quantity="one">%1$s återstående återställningskod.</item>
+        <item quantity="other">%1$s återstående återställningskoder.</item>
     </plurals>
     <string name="account_recovery_generate">Generera koder</string>
     <string name="account_recovery_regenerate">Återskapa koder</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">Senast använd %1$s</string>
     <string name="route_delete_message">Detta tar bort rutten för sökvägen \"%1$s\".</string>
     <string name="route_empty">Inga rutter konfigurerade.</string>
-    <string name="route_meta">Prioritet %1$d · %2$s</string>
+    <string name="route_meta">Prioritet %1$s · %2$s</string>
     <string name="interests_search_placeholder">Sök ämnen att lägga till…</string>
     <string name="interests_empty">Inga intressen ännu.</string>
     <string name="interests_summary_regenerate">Generera om sammanfattningen</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">Återkalla alla sessioner?</string>
     <string name="system_users_revoke_all_message">Alla aktiva sessioner för denna användare loggas ut.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">Visar %1$d–%2$d av %3$d användare</item>
-        <item quantity="other">Visar %1$d–%2$d av %3$d användare</item>
+        <item quantity="one">Visar %1$s–%2$s av %3$s användare</item>
+        <item quantity="other">Visar %1$s–%2$s av %3$s användare</item>
     </plurals>
     <string name="account_title">Konto</string>
     <string name="account_section_identity">Identitet</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">Verifiera DNS</string>
     <string name="settings_home_domains">Domäner</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Test skickat till %1$d destination</item>
-        <item quantity="other">Test skickat till %1$d destinationer</item>
+        <item quantity="one">Test skickat till %1$s destination</item>
+        <item quantity="other">Test skickat till %1$s destinationer</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$d session återkallad</item>
-        <item quantity="other">%1$d sessioner återkallade</item>
+        <item quantity="one">%1$s session återkallad</item>
+        <item quantity="other">%1$s sessioner återkallade</item>
     </plurals>
     <string name="login_title">Logga in</string>
     <string name="login_section_methods">Inloggningsmetoder</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">Offentlig</string>
     <string name="system_status_reachability_private">Privat</string>
     <string name="system_status_reachability_unknown">Okänd</string>
-    <string name="system_status_relay">Via relä</string>
-    <string name="system_status_mesh">Broadcast-mesh</string>
+    <string name="system_status_reachability_relay">%1$s · via relä</string>
     <string name="system_status_broadcast">Senaste utsändning</string>
     <string name="system_status_queued_broadcasts">Sändningsmeddelanden i kö</string>
     <string name="system_setting_hostname_publish">Annonsera värdnamn och domäner till andra servrar</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">Senast sedd %1$s</string>
     <string name="notifprefs_device_app">%1$s · app</string>
     <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Test skickat till %1$d av %2$d destination</item>
-        <item quantity="other">Test skickat till %1$d av %2$d destinationer</item>
+        <item quantity="one">Test skickat till %1$s av %2$s destination</item>
+        <item quantity="other">Test skickat till %1$s av %2$s destinationer</item>
     </plurals>
     <string name="notifprefs_test_none">Inga destinationer konfigurerade</string>
     <string name="notifprefs_transport_fcm">Android-push</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">Kasta ändringarna?</string>
     <string name="system_documents_discard">Kasta</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d lyckades</item>
-        <item quantity="other">%1$d lyckades</item>
+        <item quantity="one">%1$s lyckades</item>
+        <item quantity="other">%1$s lyckades</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d misslyckades</item>
-        <item quantity="other">%1$d misslyckades</item>
+        <item quantity="one">%1$s misslyckades</item>
+        <item quantity="other">%1$s misslyckades</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d reservation</item>
-        <item quantity="other">%1$d / %2$d reservationer</item>
+        <item quantity="one">%1$s / %2$s reservation</item>
+        <item quantity="other">%1$s / %2$s reservationer</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d krets</item>
-        <item quantity="other">%1$d kretsar</item>
+        <item quantity="one">%1$s krets</item>
+        <item quantity="other">%1$s kretsar</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d nekad</item>
-        <item quantity="other">%1$d nekade</item>
+        <item quantity="one">%1$s nekad</item>
+        <item quantity="other">%1$s nekade</item>
     </plurals>
 </resources>

@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">नया</string>
     <string name="projects_settings_section_identity">पहचान</string>
     <string name="projects_settings_access_updated">एक्सेस अपडेट किया गया</string>
-    <string name="projects_settings_access_revoked">पहुँच रद्द कर दी गई</string>
+    <string name="projects_settings_access_revoked">पहुँच वापस ले ली गई</string>
     <string name="projects_settings_section_access">एक्सेस प्रबंधन</string>
     <string name="projects_people_search">लोग खोजें</string>
     <string name="projects_settings_field_entity_id">एंटिटी ID</string>

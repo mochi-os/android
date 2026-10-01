@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">Mai recuperato</string>
     <string name="feeds_source_poll">Frequenza</string>
     <string name="feeds_source_transform">Trasformazione IA</string>
-    <string name="feeds_remove_source_confirm">Rimuovere \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Elimina anche i post importati</string>
+    <string name="feeds_remove_source_confirm">Questo interromperà l\'importazione dei contenuti da \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Elimina anche i post importati da questa sorgente</string>
     <string name="feeds_suggested_credibility_title">Credibilità suggerita</string>
     <string name="feeds_suggested_credibility_body">Mochi suggerisce una credibilità di %1$d. Accettare?</string>
     <string name="feeds_suggested_credibility_keep">Mantieni attuale</string>
@@ -167,7 +167,7 @@
     <string name="feeds_settings_name_edit_cd">Modifica nome</string>
     <string name="feeds_settings_section_identity">Identità</string>
     <string name="feeds_unsubscribe">Disiscriviti</string>
-    <string name="feeds_unsubscribed">Iscrizione annullata</string>
+    <string name="feeds_unsubscribed">Disiscrizione effettuata</string>
     <string name="feeds_access_level_comment_full">Commenta, reagisci e visualizza</string>
     <string name="feeds_rss_mode_posts_comments">Post e commenti</string>
     <string name="feeds_access_add_title">Aggiungi accesso</string>
@@ -187,7 +187,7 @@
     <string name="feeds_create_first_post">Crea il primo post</string>
     <string name="feeds_rss_mode_posts">Post</string>
     <string name="feeds_source_last_checked">Ultimo controllo %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">Annulla iscrizione al feed</string>
+    <string name="feeds_settings_unsubscribe_section">Disiscriviti dal feed</string>
     <string name="feeds_source_transform_hint">Traduci in inglese e mostra come elenco puntato.</string>
     <string name="feeds_source_url_hint_feed">ID entità feed o impronta</string>
     <string name="feeds_source_credibility_label">Credibilità</string>

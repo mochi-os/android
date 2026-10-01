@@ -45,6 +45,8 @@
     <string name="route_delete_title">Izbriši pot?</string>
     <string name="route_path">Pot</string>
     <string name="route_method">Metoda</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Aplikacija</string>
     <string name="route_method_entity">Entiteta</string>
     <string name="route_method_redirect">Preusmeritev</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Prenesite s packages.mochi-os.org</string>
     <string name="system_status_copy">Kopiraj</string>
     <string name="system_status_peers">Vrstniki</string>
-    <string name="system_status_known">Znani</string>
+    <string name="system_status_peers_totals">Znani %1$s · Povezani %2$s · Oddajni mesh %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Znani %1$s · Povezani %2$s</string>
     <string name="system_status_peer_connected">Povezano</string>
     <string name="system_status_peer_disconnected">Prekinjena povezava</string>
     <string name="system_status_peer_queued">Sporočila v čakalni vrsti</string>
@@ -194,12 +197,12 @@
     <string name="system_users_toast_deleted">Uporabnik izbrisan</string>
     <string name="system_users_toast_suspended">Uporabnik začasno ustavljen</string>
     <string name="system_users_toast_suspension_removed">Ustavitev odstranjena</string>
-    <string name="system_users_toast_session_revoked">Seja preklicana</string>
+    <string name="system_users_toast_session_revoked">Seja odvzeta</string>
     <string name="system_users_toast_create_failed">Neuspešno ustvarjanje uporabnika</string>
     <string name="system_users_toast_update_failed">Neuspešna posodobitev uporabnika</string>
     <string name="system_users_toast_delete_failed">Neuspešno brisanje uporabnika</string>
     <string name="system_users_toast_status_failed">Neuspešna posodobitev stanja uporabnika</string>
-    <string name="system_users_toast_revoke_failed">Neuspešen preklic seje</string>
+    <string name="system_users_toast_revoke_failed">Neuspešen odvzem seje</string>
 
     <string name="settings_home_sessions">Seje</string>
     <string name="settings_home_privacy">Pravilnik o zasebnosti</string>
@@ -216,10 +219,10 @@
     <string name="account_totp_disable_message">Ne boste se več mogli prijaviti s kodo preverjevalnika.</string>
     <string name="account_recovery_none">Obnovitvene kode niso bile ustvarjene.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">Preostala je %1$d obnovitvena koda.</item>
-        <item quantity="two">Preostali sta %1$d obnovitveni kodi.</item>
-        <item quantity="few">Preostale so %1$d obnovitvene kode.</item>
-        <item quantity="other">Preostalo je %1$d obnovitvenih kod.</item>
+        <item quantity="one">Preostala je %1$s obnovitvena koda.</item>
+        <item quantity="two">Preostali sta %1$s obnovitveni kodi.</item>
+        <item quantity="few">Preostale so %1$s obnovitvene kode.</item>
+        <item quantity="other">Preostalo je %1$s obnovitvenih kod.</item>
     </plurals>
     <string name="account_recovery_generate">Ustvari kode</string>
     <string name="account_recovery_regenerate">Znova ustvari kode</string>
@@ -236,7 +239,7 @@
     <string name="account_last_used">Nazadnje uporabljeno %1$s</string>
     <string name="route_delete_message">To bo odstranilo pot za pot „%1$s\".</string>
     <string name="route_empty">Ni konfiguriranih poti.</string>
-    <string name="route_meta">Prioriteta %1$d · %2$s</string>
+    <string name="route_meta">Prioriteta %1$s · %2$s</string>
     <string name="interests_search_placeholder">Iskanje tem za dodajanje…</string>
     <string name="interests_empty">Še ni interesov.</string>
     <string name="interests_summary_regenerate">Znova ustvari povzetek</string>
@@ -270,10 +273,10 @@
     <string name="system_users_revoke_all_title">Odvzeti vse seje?</string>
     <string name="system_users_revoke_all_message">Vse aktivne seje tega uporabnika bodo odjavljene.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">Prikaz %1$d–%2$d od %3$d uporabnika</item>
-        <item quantity="two">Prikaz %1$d–%2$d od %3$d uporabnikov</item>
-        <item quantity="few">Prikaz %1$d–%2$d od %3$d uporabnikov</item>
-        <item quantity="other">Prikaz %1$d–%2$d od %3$d uporabnikov</item>
+        <item quantity="one">Prikaz %1$s–%2$s od %3$s uporabnika</item>
+        <item quantity="two">Prikaz %1$s–%2$s od %3$s uporabnikov</item>
+        <item quantity="few">Prikaz %1$s–%2$s od %3$s uporabnikov</item>
+        <item quantity="other">Prikaz %1$s–%2$s od %3$s uporabnikov</item>
     </plurals>
     <string name="account_title">Račun</string>
     <string name="account_section_identity">Identiteta</string>
@@ -307,16 +310,16 @@
     <string name="domain_verify">Preveri DNS</string>
     <string name="settings_home_domains">Domene</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Preizkus poslan na %1$d cilj</item>
-        <item quantity="two">Preizkus poslan na %1$d cilja</item>
-        <item quantity="few">Preizkus poslan na %1$d cilje</item>
-        <item quantity="other">Preizkus poslan na %1$d ciljev</item>
+        <item quantity="one">Preizkus poslan na %1$s cilj</item>
+        <item quantity="two">Preizkus poslan na %1$s cilja</item>
+        <item quantity="few">Preizkus poslan na %1$s cilje</item>
+        <item quantity="other">Preizkus poslan na %1$s ciljev</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="few">Preklicane %1$d seje</item>
-        <item quantity="one">Preklicana %1$d seja</item>
-        <item quantity="other">Preklicanih %1$d sej</item>
-        <item quantity="two">Preklicani %1$d seji</item>
+        <item quantity="few">Odvzete %1$s seje</item>
+        <item quantity="one">Odvzeta %1$s seja</item>
+        <item quantity="other">Odvzetih %1$s sej</item>
+        <item quantity="two">Odvzeti %1$s seji</item>
     </plurals>
     <string name="login_title">Prijava</string>
     <string name="login_section_methods">Načini prijave</string>
@@ -347,8 +350,7 @@
     <string name="system_status_reachability_public">Javno</string>
     <string name="system_status_reachability_private">Zasebno</string>
     <string name="system_status_reachability_unknown">Neznano</string>
-    <string name="system_status_relay">Prek releja</string>
-    <string name="system_status_mesh">Oddajni mesh</string>
+    <string name="system_status_reachability_relay">%1$s · prek releja</string>
     <string name="system_status_broadcast">Zadnje oddajanje</string>
     <string name="system_status_queued_broadcasts">Oddajna sporočila v čakalni vrsti</string>
     <string name="system_setting_hostname_publish">Objavi ime gostitelja in domene drugim strežnikom</string>
@@ -381,11 +383,13 @@
     <string name="accounts_device_seen">Nazadnje viden %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplikacija</string>
     <string name="notifprefs_device_push">%1$s · push obvestila</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Preizkus poslan na %1$d od %2$d cilja</item>
-        <item quantity="two">Preizkus poslan na %1$d od %2$d ciljev</item>
-        <item quantity="few">Preizkus poslan na %1$d od %2$d ciljev</item>
-        <item quantity="other">Preizkus poslan na %1$d od %2$d ciljev</item>
+        <item quantity="one">Preizkus poslan na %1$s od %2$s cilja</item>
+        <item quantity="two">Preizkus poslan na %1$s od %2$s ciljev</item>
+        <item quantity="few">Preizkus poslan na %1$s od %2$s ciljev</item>
+        <item quantity="other">Preizkus poslan na %1$s od %2$s ciljev</item>
     </plurals>
     <string name="notifprefs_test_none">Ni nastavljenih ciljev</string>
     <string name="notifprefs_transport_fcm">Android push obvestila</string>
@@ -409,33 +413,33 @@
     <string name="system_documents_discard_title">Zavržem spremembe?</string>
     <string name="system_documents_discard">Zavrzi</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d uspešen</item>
-        <item quantity="two">%1$d uspešna</item>
-        <item quantity="few">%1$d uspešni</item>
-        <item quantity="other">%1$d uspešnih</item>
+        <item quantity="one">%1$s uspešen</item>
+        <item quantity="two">%1$s uspešna</item>
+        <item quantity="few">%1$s uspešni</item>
+        <item quantity="other">%1$s uspešnih</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d neuspešen</item>
-        <item quantity="two">%1$d neuspešna</item>
-        <item quantity="few">%1$d neuspešni</item>
-        <item quantity="other">%1$d neuspešnih</item>
+        <item quantity="one">%1$s neuspešen</item>
+        <item quantity="two">%1$s neuspešna</item>
+        <item quantity="few">%1$s neuspešni</item>
+        <item quantity="other">%1$s neuspešnih</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d rezervacija</item>
-        <item quantity="two">%1$d / %2$d rezervaciji</item>
-        <item quantity="few">%1$d / %2$d rezervacije</item>
-        <item quantity="other">%1$d / %2$d rezervacij</item>
+        <item quantity="one">%1$s / %2$s rezervacija</item>
+        <item quantity="two">%1$s / %2$s rezervaciji</item>
+        <item quantity="few">%1$s / %2$s rezervacije</item>
+        <item quantity="other">%1$s / %2$s rezervacij</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d vezje</item>
-        <item quantity="two">%1$d vezji</item>
-        <item quantity="few">%1$d vezja</item>
-        <item quantity="other">%1$d vezij</item>
+        <item quantity="one">%1$s vezje</item>
+        <item quantity="two">%1$s vezji</item>
+        <item quantity="few">%1$s vezja</item>
+        <item quantity="other">%1$s vezij</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d zavrnjena</item>
-        <item quantity="two">%1$d zavrnjeni</item>
-        <item quantity="few">%1$d zavrnjene</item>
-        <item quantity="other">%1$d zavrnjenih</item>
+        <item quantity="one">%1$s zavrnjena</item>
+        <item quantity="two">%1$s zavrnjeni</item>
+        <item quantity="few">%1$s zavrnjene</item>
+        <item quantity="other">%1$s zavrnjenih</item>
     </plurals>
 </resources>

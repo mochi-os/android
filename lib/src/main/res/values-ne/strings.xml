@@ -60,12 +60,12 @@
     <string name="notifications_empty">कुनै सूचना छैन</string>
     <string name="notifications_empty_unread">सबै हेरिसक्नुभयो</string>
     <string name="notifications_tab_unread">नपढिएका</string>
-    <string name="notifications_tab_unread_count">नपढिएका (%1$d)</string>
+    <string name="notifications_tab_unread_count">नपढिएका (%1$s)</string>
     <string name="notifications_tab_all">सबै</string>
     <string name="notifications_mark_all_read">सबै पढिएको चिन्ह लगाउनुहोस्</string>
     <string name="notifications_clear_all">सबै खाली गर्नुहोस्</string>
     <string name="settings_title">सेटिङहरू</string>
-    <string name="settings_appearance">उपस्थिति</string>
+    <string name="settings_appearance">रूप</string>
     <string name="settings_appearance_light">उज्यालो</string>
     <string name="settings_appearance_dark">अँध्यारो</string>
     <string name="settings_density">घनत्व</string>
@@ -303,8 +303,8 @@
     <string name="rss_revoke">पहुँच फिर्ता लिनुहोस्</string>
     <string name="rss_revoke_title">RSS पहुँच फिर्ता लिने?</string>
     <string name="rss_revoke_message">यो फिड सदस्यता लिएका सबैले यो प्राप्त गर्न बन्द गर्नेछन्। त्यसपछि तपाईं नयाँ URL प्रतिलिपि गर्न सक्नुहुन्छ।</string>
-    <string name="rss_revoked">RSS पहुँच रद्द गरियो</string>
-    <string name="rss_revoke_failed">RSS पहुँच रद्द गर्न असफल</string>
+    <string name="rss_revoked">RSS पहुँच फिर्ता लिइयो</string>
+    <string name="rss_revoke_failed">RSS पहुँच फिर्ता लिन असफल</string>
     <string name="game_empty_title">अहिलेसम्म कुनै खेल छैन</string>
     <string name="game_select_title">खेल छान्नुहोस्</string>
     <string name="game_select_subtitle">साइडबारबाट खेल छान्नुहोस् वा नयाँ खेल सुरु गर्नुहोस्।</string>

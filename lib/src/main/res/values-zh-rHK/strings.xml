@@ -161,7 +161,7 @@
     <string name="notifications_empty">沒有通知</string>
     <string name="notifications_empty_unread">全部已看完</string>
     <string name="notifications_tab_unread">未讀</string>
-    <string name="notifications_tab_unread_count">未讀 (%1$d)</string>
+    <string name="notifications_tab_unread_count">未讀 (%1$s)</string>
     <string name="notifications_tab_all">全部</string>
     <string name="notifications_mark_all_read">全部標記為已讀</string>
     <string name="notifications_clear_all">清除全部</string>
@@ -271,7 +271,6 @@
     <string name="rss_revoke_confirm">撤銷</string>
     <string name="rss_revoke">撤銷存取權</string>
     <string name="rss_revoke_title">撤銷 RSS 存取權？</string>
-    <string name="rss_revoke_message">任何訂閱此資訊來源的程式將無法再接收更新。你之後可以複製新的網址。</string>
     <string name="rss_revoked">已撤銷 RSS 存取權</string>
     <string name="rss_revoke_failed">撤銷 RSS 存取權失敗</string>
     <string name="settings_card">卡片樣式</string>

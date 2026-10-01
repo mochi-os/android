@@ -45,6 +45,8 @@
     <string name="route_delete_title">રૂટ કાઢી નાખવો છે?</string>
     <string name="route_path">પાથ</string>
     <string name="route_method">પદ્ધતિ</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">એપ્લિકેશન</string>
     <string name="route_method_entity">સંસ્થા</string>
     <string name="route_method_redirect">રિડાયરેક્ટ</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org માંથી ડાઉનલોડ કરો</string>
     <string name="system_status_copy">કૉપિ કરો</string>
     <string name="system_status_peers">પીઅર્સ</string>
-    <string name="system_status_known">જાણીતા</string>
+    <string name="system_status_peers_totals">જાણીતા %1$s · જોડાયેલ %2$s · પ્રસારણ મેશ %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">જાણીતા %1$s · જોડાયેલ %2$s</string>
     <string name="system_status_peer_connected">જોડાયેલ</string>
     <string name="system_status_peer_disconnected">ડિસ્કનેક્ટેડ</string>
     <string name="system_status_peer_queued">કતારમાં સંદેશા</string>
@@ -194,12 +197,12 @@
     <string name="system_users_toast_deleted">વપરાશકર્તા કાઢી નાખ્યો</string>
     <string name="system_users_toast_suspended">વપરાશકર્તા સસ્પેન્ડ કર્યો</string>
     <string name="system_users_toast_suspension_removed">સસ્પેન્શન દૂર કર્યું</string>
-    <string name="system_users_toast_session_revoked">સત્ર રદ કર્યું</string>
+    <string name="system_users_toast_session_revoked">સત્ર પાછું ખેંચ્યું</string>
     <string name="system_users_toast_create_failed">યુઝર બનાવવામાં નિષ્ફળ</string>
     <string name="system_users_toast_update_failed">યુઝર અપડેટ કરવામાં નિષ્ફળ</string>
     <string name="system_users_toast_delete_failed">યુઝર કાઢી નાખવામાં નિષ્ફળ</string>
     <string name="system_users_toast_status_failed">યુઝર સ્ટેટસ અપડેટ કરવામાં નિષ્ફળ</string>
-    <string name="system_users_toast_revoke_failed">સેશન રદ કરવામાં નિષ્ફળ</string>
+    <string name="system_users_toast_revoke_failed">સત્ર પાછું ખેંચવામાં નિષ્ફળ</string>
 
     <string name="settings_home_sessions">સત્રો</string>
     <string name="settings_home_privacy">ગોપનીયતા નીતિ</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">તમે હવે પ્રમાણીકરણ કોડ સાથે સાઇન ઇન કરી શકશો નહીં.</string>
     <string name="account_recovery_none">કોઈ પુનઃપ્રાપ્તિ કોડ બનાવ્યા નથી.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d પુનઃપ્રાપ્તિ કોડ બાકી છે.</item>
-        <item quantity="other">%1$d પુનઃપ્રાપ્તિ કોડ બાકી છે.</item>
+        <item quantity="one">%1$s પુનઃપ્રાપ્તિ કોડ બાકી છે.</item>
+        <item quantity="other">%1$s પુનઃપ્રાપ્તિ કોડ બાકી છે.</item>
     </plurals>
     <string name="account_recovery_generate">કોડ બનાવો</string>
     <string name="account_recovery_regenerate">કોડ ફરીથી બનાવો</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">છેલ્લે ઉપયોગ કર્યો %1$s</string>
     <string name="route_delete_message">આ માર્ગ \"%1$s\" માટેનો રૂટ દૂર કરશે.</string>
     <string name="route_empty">કોઈ માર્ગ રૂપરેખાંકિત નથી.</string>
-    <string name="route_meta">પ્રાથમિકતા %1$d · %2$s</string>
+    <string name="route_meta">પ્રાથમિકતા %1$s · %2$s</string>
     <string name="interests_search_placeholder">ઉમેરવા માટેના વિષયો શોધો…</string>
     <string name="interests_empty">હજુ સુધી કોઈ રસ નથી.</string>
     <string name="interests_summary_regenerate">સારાંશ ફરી જનરેટ કરો</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">બધા સત્રો પાછા ખેંચવા છે?</string>
     <string name="system_users_revoke_all_message">આ વપરાશકર્તાના તમામ સક્રિય સત્રો સાઇન આઉટ થશે.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">%3$d વપરાશકર્તામાંથી %1$d–%2$d દર્શાવી રહ્યું છે</item>
-        <item quantity="other">%3$d વપરાશકર્તાઓમાંથી %1$d–%2$d દર્શાવી રહ્યું છે</item>
+        <item quantity="one">%3$s વપરાશકર્તામાંથી %1$s–%2$s દર્શાવી રહ્યું છે</item>
+        <item quantity="other">%3$s વપરાશકર્તાઓમાંથી %1$s–%2$s દર્શાવી રહ્યું છે</item>
     </plurals>
     <string name="account_title">ખાતું</string>
     <string name="account_section_identity">ઓળખ</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS ચકાસો</string>
     <string name="settings_home_domains">ડોમેન્સ</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">%1$d ગંતવ્ય પર પરીક્ષણ મોકલાયું</item>
-        <item quantity="other">%1$d ગંતવ્યો પર પરીક્ષણ મોકલાયું</item>
+        <item quantity="one">%1$s ગંતવ્ય પર પરીક્ષણ મોકલાયું</item>
+        <item quantity="other">%1$s ગંતવ્યો પર પરીક્ષણ મોકલાયું</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$d સત્ર રદ કર્યું</item>
-        <item quantity="other">%1$d સત્રો રદ કર્યા</item>
+        <item quantity="one">%1$s સત્ર પાછું ખેંચ્યું</item>
+        <item quantity="other">%1$s સત્રો પાછા ખેંચ્યા</item>
     </plurals>
     <string name="login_title">લોગિન</string>
     <string name="login_section_methods">લૉગિન પદ્ધતિઓ</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">જાહેર</string>
     <string name="system_status_reachability_private">ખાનગી</string>
     <string name="system_status_reachability_unknown">અજાણ્યું</string>
-    <string name="system_status_relay">રિલે દ્વારા</string>
-    <string name="system_status_mesh">પ્રસારણ મેશ</string>
+    <string name="system_status_reachability_relay">%1$s · રિલે દ્વારા</string>
     <string name="system_status_broadcast">છેલ્લું પ્રસારણ</string>
     <string name="system_status_queued_broadcasts">કતારમાં બ્રોડકાસ્ટ સંદેશા</string>
     <string name="system_setting_hostname_publish">હોસ્ટનેમ અને ડોમેન્સ અન્ય સર્વરોને જાહેર કરો</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">છેલ્લે જોવાયું %1$s</string>
     <string name="notifprefs_device_app">%1$s · ઍપ</string>
     <string name="notifprefs_device_push">%1$s · પુશ</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">%2$d ગંતવ્યમાંથી %1$d પર પરીક્ષણ મોકલાયું</item>
-        <item quantity="other">%2$d ગંતવ્યોમાંથી %1$d પર પરીક્ષણ મોકલાયું</item>
+        <item quantity="one">%2$s ગંતવ્યમાંથી %1$s પર પરીક્ષણ મોકલાયું</item>
+        <item quantity="other">%2$s ગંતવ્યોમાંથી %1$s પર પરીક્ષણ મોકલાયું</item>
     </plurals>
     <string name="notifprefs_test_none">કોઈ ડેસ્ટિનેશન્સ કન્ફિગર કર્યા નથી</string>
     <string name="notifprefs_transport_fcm">Android પુશ</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">ફેરફારો છોડી દઈએ?</string>
     <string name="system_documents_discard">છોડી દો</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d સફળ</item>
-        <item quantity="other">%1$d સફળ</item>
+        <item quantity="one">%1$s સફળ</item>
+        <item quantity="other">%1$s સફળ</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d નિષ્ફળ</item>
-        <item quantity="other">%1$d નિષ્ફળ</item>
+        <item quantity="one">%1$s નિષ્ફળ</item>
+        <item quantity="other">%1$s નિષ્ફળ</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d આરક્ષણ</item>
-        <item quantity="other">%1$d / %2$d આરક્ષણો</item>
+        <item quantity="one">%1$s / %2$s આરક્ષણ</item>
+        <item quantity="other">%1$s / %2$s આરક્ષણો</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d સર્કિટ</item>
-        <item quantity="other">%1$d સર્કિટ</item>
+        <item quantity="one">%1$s સર્કિટ</item>
+        <item quantity="other">%1$s સર્કિટ</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d નકારેલ</item>
-        <item quantity="other">%1$d નકારેલ</item>
+        <item quantity="one">%1$s નકારેલ</item>
+        <item quantity="other">%1$s નકારેલ</item>
     </plurals>
 </resources>

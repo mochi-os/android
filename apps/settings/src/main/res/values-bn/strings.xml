@@ -45,6 +45,8 @@
     <string name="route_delete_title">রুট মুছবেন?</string>
     <string name="route_path">পাথ</string>
     <string name="route_method">পদ্ধতি</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">অ্যাপ</string>
     <string name="route_method_entity">সত্তা</string>
     <string name="route_method_redirect">রিডাইরেক্ট</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org থেকে ডাউনলোড করুন</string>
     <string name="system_status_copy">কপি করুন</string>
     <string name="system_status_peers">পিয়ারসমূহ</string>
-    <string name="system_status_known">পরিচিত</string>
+    <string name="system_status_peers_totals">পরিচিত %1$s · সংযুক্ত %2$s · সম্প্রচার মেশ %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">পরিচিত %1$s · সংযুক্ত %2$s</string>
     <string name="system_status_peer_connected">সংযুক্ত</string>
     <string name="system_status_peer_disconnected">সংযোগ বিচ্ছিন্ন</string>
     <string name="system_status_peer_queued">সারিতে থাকা বার্তা</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">আপনি আর প্রমাণীকরণ কোড দিয়ে সাইন ইন করতে পারবেন না।</string>
     <string name="account_recovery_none">কোনো পুনরুদ্ধার কোড তৈরি করা হয়নি।</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$dটি পুনরুদ্ধার কোড বাকি আছে।</item>
-        <item quantity="other">%1$dটি পুনরুদ্ধার কোড বাকি আছে।</item>
+        <item quantity="one">%1$sটি পুনরুদ্ধার কোড বাকি আছে।</item>
+        <item quantity="other">%1$sটি পুনরুদ্ধার কোড বাকি আছে।</item>
     </plurals>
     <string name="account_recovery_generate">কোড তৈরি করুন</string>
     <string name="account_recovery_regenerate">কোড পুনরায় তৈরি করুন</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">শেষ ব্যবহার %1$s</string>
     <string name="route_delete_message">এটি \"%1$s\" পথের রুট মুছে ফেলবে।</string>
     <string name="route_empty">কোনো রুট কনফিগার করা নেই।</string>
-    <string name="route_meta">অগ্রাধিকার %1$d · %2$s</string>
+    <string name="route_meta">অগ্রাধিকার %1$s · %2$s</string>
     <string name="interests_search_placeholder">যোগ করার জন্য বিষয় অনুসন্ধান করুন…</string>
     <string name="interests_empty">এখনো কোনো আগ্রহ নেই।</string>
     <string name="interests_summary_regenerate">সারসংক্ষেপ পুনরায় তৈরি করুন</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">সমস্ত সেশন প্রত্যাহার করবেন?</string>
     <string name="system_users_revoke_all_message">এই ব্যবহারকারীর সমস্ত সক্রিয় সেশন সাইন আউট হবে।</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">%3$d জন ব্যবহারকারীর মধ্যে %1$d–%2$d দেখানো হচ্ছে</item>
-        <item quantity="other">%3$d জন ব্যবহারকারীর মধ্যে %1$d–%2$d দেখানো হচ্ছে</item>
+        <item quantity="one">%3$s জন ব্যবহারকারীর মধ্যে %1$s–%2$s দেখানো হচ্ছে</item>
+        <item quantity="other">%3$s জন ব্যবহারকারীর মধ্যে %1$s–%2$s দেখানো হচ্ছে</item>
     </plurals>
     <string name="account_title">অ্যাকাউন্ট</string>
     <string name="account_section_identity">পরিচয়</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS যাচাই করুন</string>
     <string name="settings_home_domains">ডোমেইনসমূহ</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">%1$d গন্তব্যে পরীক্ষা পাঠানো হয়েছে</item>
-        <item quantity="other">%1$d গন্তব্যে পরীক্ষা পাঠানো হয়েছে</item>
+        <item quantity="one">%1$s গন্তব্যে পরীক্ষা পাঠানো হয়েছে</item>
+        <item quantity="other">%1$s গন্তব্যে পরীক্ষা পাঠানো হয়েছে</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$dটি সেশন প্রত্যাহার করা হয়েছে</item>
-        <item quantity="other">%1$d সেশন প্রত্যাহার করা হয়েছে</item>
+        <item quantity="one">%1$sটি সেশন প্রত্যাহার করা হয়েছে</item>
+        <item quantity="other">%1$s সেশন প্রত্যাহার করা হয়েছে</item>
     </plurals>
     <string name="login_title">লগইন</string>
     <string name="login_section_methods">লগইন পদ্ধতি</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">সর্বজনীন</string>
     <string name="system_status_reachability_private">প্রাইভেট</string>
     <string name="system_status_reachability_unknown">অজানা</string>
-    <string name="system_status_relay">রিলের মাধ্যমে</string>
-    <string name="system_status_mesh">সম্প্রচার মেশ</string>
+    <string name="system_status_reachability_relay">%1$s · রিলের মাধ্যমে</string>
     <string name="system_status_broadcast">সর্বশেষ সম্প্রচার</string>
     <string name="system_status_queued_broadcasts">সারিবদ্ধ ব্রডকাস্ট বার্তা</string>
     <string name="system_setting_hostname_publish">অন্যান্য সার্ভারে হোস্টনেম ও ডোমেইন ঘোষণা করুন</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">সর্বশেষ দেখা %1$s</string>
     <string name="notifprefs_device_app">%1$s · অ্যাপ</string>
     <string name="notifprefs_device_push">%1$s · পুশ</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">%2$dটির মধ্যে %1$dটি গন্তব্যে পরীক্ষা পাঠানো হয়েছে</item>
-        <item quantity="other">%2$dটির মধ্যে %1$dটি গন্তব্যে পরীক্ষা পাঠানো হয়েছে</item>
+        <item quantity="one">%2$sটির মধ্যে %1$sটি গন্তব্যে পরীক্ষা পাঠানো হয়েছে</item>
+        <item quantity="other">%2$sটির মধ্যে %1$sটি গন্তব্যে পরীক্ষা পাঠানো হয়েছে</item>
     </plurals>
     <string name="notifprefs_test_none">কোনো গন্তব্য কনফিগার করা নেই</string>
     <string name="notifprefs_transport_fcm">Android পুশ</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">পরিবর্তনগুলি বাদ দেবেন?</string>
     <string name="system_documents_discard">বাদ দিন</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d সফল</item>
-        <item quantity="other">%1$d সফল</item>
+        <item quantity="one">%1$s সফল</item>
+        <item quantity="other">%1$s সফল</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d ব্যর্থ</item>
-        <item quantity="other">%1$d ব্যর্থ</item>
+        <item quantity="one">%1$s ব্যর্থ</item>
+        <item quantity="other">%1$s ব্যর্থ</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d সংরক্ষণ</item>
-        <item quantity="other">%1$d / %2$d সংরক্ষণ</item>
+        <item quantity="one">%1$s / %2$s সংরক্ষণ</item>
+        <item quantity="other">%1$s / %2$s সংরক্ষণ</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d সার্কিট</item>
-        <item quantity="other">%1$d সার্কিট</item>
+        <item quantity="one">%1$s সার্কিট</item>
+        <item quantity="other">%1$s সার্কিট</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d প্রত্যাখ্যাত</item>
-        <item quantity="other">%1$d প্রত্যাখ্যাত</item>
+        <item quantity="one">%1$s প্রত্যাখ্যাত</item>
+        <item quantity="other">%1$s প্রত্যাখ্যাত</item>
     </plurals>
 </resources>

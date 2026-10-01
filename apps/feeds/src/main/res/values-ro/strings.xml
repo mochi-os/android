@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">Niciodată preluat</string>
     <string name="feeds_source_poll">Interogare</string>
     <string name="feeds_source_transform">Transformare AI</string>
-    <string name="feeds_remove_source_confirm">Eliminați \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Ștergeți și postările importate</string>
+    <string name="feeds_remove_source_confirm">Aceasta va opri importul de conținut din \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Șterge și postările importate din această sursă</string>
     <string name="feeds_suggested_credibility_title">Credibilitate sugerată</string>
     <string name="feeds_suggested_credibility_body">Mochi sugerează o credibilitate de %1$d. Acceptați?</string>
     <string name="feeds_suggested_credibility_keep">Păstrați actuala</string>

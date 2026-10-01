@@ -76,7 +76,7 @@
     <string name="crm_design_export_saved">Dizayn saxlanıldı</string>
     <string name="crm_design_import_failed">Həmin fayl oxuna bilmədi</string>
     <string name="crm_design_or_upload_json">Yaxud fayl yükləyin</string>
-    <string name="crm_design_upload_json">Versiyanı yüklə</string>
+    <string name="crm_design_upload_json">.json faylı yüklə</string>
     <string name="crm_design_tab_classes">Siniflər</string>
     <string name="crm_design_tab_views">Görünüşlər</string>
     <string name="crm_design_import_dialog_title">Dizaynı idxal et</string>
@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">Giriş idarəetməsi</string>
     <string name="crm_settings_not_set">Təyin edilməyib</string>
     <string name="crm_settings_access_updated">Giriş yeniləndi</string>
-    <string name="crm_settings_access_revoked">İcaxə ləğv edildi</string>
+    <string name="crm_settings_access_revoked">Giriş geri çağırıldı</string>
     <string name="crm_people_search">İnsanları axtar</string>
     <string name="crm_access_tab_other">Digər</string>
     <string name="crm_access_select_group">Qrup seçin</string>

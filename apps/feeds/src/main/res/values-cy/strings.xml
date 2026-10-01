@@ -113,8 +113,8 @@
     <string name="feeds_source_never_fetched">Heb ei nôl erioed</string>
     <string name="feeds_source_poll">Pôl</string>
     <string name="feeds_source_transform">Trawsnewid AI</string>
-    <string name="feeds_remove_source_confirm">Tynnu \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Hefyd dileu postiadau a fewnforiwyd</string>
+    <string name="feeds_remove_source_confirm">Bydd hyn yn rhoi\'r gorau i fewnforio cynnwys o \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Hefyd dileu postiadau a fewnforiwyd o\'r ffynhonnell hon</string>
     <string name="feeds_suggested_credibility_title">Hygrededd a awgrymir</string>
     <string name="feeds_suggested_credibility_body">Mae Mochi yn awgrymu hygrededd o %1$d. Derbyn?</string>
     <string name="feeds_suggested_credibility_keep">Cadw\'r presennol</string>

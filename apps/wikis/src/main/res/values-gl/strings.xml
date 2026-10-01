@@ -29,9 +29,9 @@
     <string name="wikis_recommended_section">Wikis recomendadas</string>
     <string name="wikis_subscribe_button">Subscribirse</string>
     <string name="wikis_unsubscribe_action">Anular subscrición</string>
-    <string name="wikis_unsubscribing">Cancelando subscrición…</string>
+    <string name="wikis_unsubscribing">Anulando a subscrición…</string>
     <string name="wikis_unsubscribe_confirm_title">Anular subscrición</string>
-    <string name="wikis_unsubscribe_success">Subscrición cancelada</string>
+    <string name="wikis_unsubscribe_success">Subscrición anulada</string>
     <string name="wikis_subscribe_failed">Non se puido subscribir</string>
     <string name="wikis_rss_menu">Feed RSS</string>
     <string name="wikis_rss_changes">Cambios</string>
@@ -316,15 +316,15 @@
         <item quantity="other">%d páxinas con esta etiqueta</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Atopáronse %1$d resultado para "%2$s"</item>
-        <item quantity="other">Atopáronse %1$d resultados para "%2$s"</item>
+        <item quantity="one">Atopáronse %1$d resultado para \"%2$s\"</item>
+        <item quantity="other">Atopáronse %1$d resultados para \"%2$s\"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Non se puido gardar a lenda</string>
     <string name="wikis_attachments_upload_types">Ficheiros admitidos: imaxes, PDF, DOC, DOCX, TXT e MD.</string>
     <string name="wikis_attachments_upload_limits">A configuración do teu servidor ou proxy pode limitar as cargas grandes.</string>
     <string name="wikis_rss_replace">Substituír</string>
     <string name="wikis_rss_copied_new">Nova URL RSS copiada ao portapapeis</string>
-    <string name="wikis_rss_exists">Este URL de fonte xa se emitiu e non se pode mostrar de novo.</string>
+    <string name="wikis_rss_exists">Este URL de fío xa se emitiu e non se pode mostrar de novo.</string>
     <plurals name="wikis_comments_truncated">
         <item quantity="one">Amosando o primeiro %1$d comentario.</item>
         <item quantity="other">Amosando os primeiros %1$d comentarios.</item>

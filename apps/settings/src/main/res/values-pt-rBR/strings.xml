@@ -76,7 +76,8 @@
     <string name="system_status_download_from_packages">Baixar de packages.mochi-os.org</string>
     <string name="system_status_copy">Copiar</string>
     <string name="system_status_peers">Pares</string>
-    <string name="system_status_known">Conhecidos</string>
+    <string name="system_status_peers_totals">Conhecidos %1$s · Conectados %2$s · Malha de transmissão %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Conhecidos %1$s · Conectados %2$s</string>
     <string name="system_status_peer_connected">Conectado</string>
     <string name="system_status_peer_disconnected">Desconectado</string>
     <string name="system_status_peer_queued">Mensagens na fila</string>
@@ -210,8 +211,8 @@
     <string name="account_totp_disable_message">Você não poderá entrar com um código de autenticador.</string>
     <string name="account_recovery_none">Nenhum código de recuperação gerado.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d código de recuperação restante.</item>
-        <item quantity="other">%1$d códigos de recuperação restantes.</item>
+        <item quantity="one">%1$s código de recuperação restante.</item>
+        <item quantity="other">%1$s códigos de recuperação restantes.</item>
     </plurals>
     <string name="account_recovery_generate">Gerar códigos</string>
     <string name="account_recovery_regenerate">Gerar códigos novamente</string>
@@ -226,7 +227,7 @@
     <string name="account_last_used">Último uso em %1$s</string>
     <string name="route_delete_message">Isto removerá a rota para o caminho \"%1$s\".</string>
     <string name="route_empty">Nenhuma rota configurada.</string>
-    <string name="route_meta">Prioridade %1$d · %2$s</string>
+    <string name="route_meta">Prioridade %1$s · %2$s</string>
     <string name="interests_search_placeholder">Pesquisar tópicos para adicionar…</string>
     <string name="interests_empty">Nenhum interesse ainda.</string>
     <string name="interests_summary_regenerate">Gerar resumo novamente</string>
@@ -259,8 +260,8 @@
     <string name="system_users_revoke_all_title">Revogar todas as sessões?</string>
     <string name="system_users_revoke_all_message">Todas as sessões ativas deste usuário serão desconectadas.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">Exibindo %1$d–%2$d de %3$d usuário</item>
-        <item quantity="other">Exibindo %1$d–%2$d de %3$d usuários</item>
+        <item quantity="one">Exibindo %1$s–%2$s de %3$s usuário</item>
+        <item quantity="other">Exibindo %1$s–%2$s de %3$s usuários</item>
     </plurals>
 
     <string name="account_title">Conta</string>
@@ -297,13 +298,13 @@
     <string name="domain_verify">Verificar DNS</string>
     <string name="settings_home_domains">Domínios</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Teste enviado para %1$d destino</item>
-        <item quantity="other">Teste enviado para %1$d destinos</item>
+        <item quantity="one">Teste enviado para %1$s destino</item>
+        <item quantity="other">Teste enviado para %1$s destinos</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="many">%1$d sessões revogadas</item>
-        <item quantity="one">%1$d sessão revogada</item>
-        <item quantity="other">%1$d sessões revogadas</item>
+        <item quantity="many">%1$s sessões revogadas</item>
+        <item quantity="one">%1$s sessão revogada</item>
+        <item quantity="other">%1$s sessões revogadas</item>
     </plurals>
     <string name="login_title">Entrar</string>
     <string name="login_section_methods">Métodos de login</string>
@@ -333,8 +334,7 @@
     <string name="system_status_reachability_public">Público</string>
     <string name="system_status_reachability_private">Privado</string>
     <string name="system_status_reachability_unknown">Desconhecido</string>
-    <string name="system_status_relay">Via relay</string>
-    <string name="system_status_mesh">Malha de transmissão</string>
+    <string name="system_status_reachability_relay">%1$s · via retransmissão</string>
     <string name="system_status_broadcast">Última transmissão</string>
     <string name="system_status_queued_broadcasts">Mensagens de transmissão na fila</string>
     <string name="system_setting_hostname_publish">Anunciar o nome de host e os domínios a outros servidores</string>
@@ -367,8 +367,8 @@
     <string name="notifprefs_device_app">%1$s · app</string>
     <string name="notifprefs_device_push">%1$s · push</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Teste enviado para %1$d de %2$d destino</item>
-        <item quantity="other">Teste enviado para %1$d de %2$d destinos</item>
+        <item quantity="one">Teste enviado para %1$s de %2$s destino</item>
+        <item quantity="other">Teste enviado para %1$s de %2$s destinos</item>
     </plurals>
     <string name="notifprefs_test_none">Nenhum destino configurado</string>
     <string name="notifprefs_transport_fcm">Push do Android</string>
@@ -380,23 +380,23 @@
     <string name="system_documents_discard_title">Descartar alterações?</string>
     <string name="system_documents_discard">Descartar</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d com êxito</item>
-        <item quantity="other">%1$d com êxito</item>
+        <item quantity="one">%1$s com êxito</item>
+        <item quantity="other">%1$s com êxito</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d com falha</item>
-        <item quantity="other">%1$d com falha</item>
+        <item quantity="one">%1$s com falha</item>
+        <item quantity="other">%1$s com falha</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d reserva</item>
-        <item quantity="other">%1$d / %2$d reservas</item>
+        <item quantity="one">%1$s / %2$s reserva</item>
+        <item quantity="other">%1$s / %2$s reservas</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d circuito</item>
-        <item quantity="other">%1$d circuitos</item>
+        <item quantity="one">%1$s circuito</item>
+        <item quantity="other">%1$s circuitos</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d recusada</item>
-        <item quantity="other">%1$d recusadas</item>
+        <item quantity="one">%1$s recusada</item>
+        <item quantity="other">%1$s recusadas</item>
     </plurals>
 </resources>

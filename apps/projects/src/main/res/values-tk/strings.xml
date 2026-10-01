@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">Täze</string>
     <string name="projects_settings_section_identity">Şahsyýet</string>
     <string name="projects_settings_access_updated">Giriş täzelendi</string>
-    <string name="projects_settings_access_revoked">Giriş ret edildi</string>
+    <string name="projects_settings_access_revoked">Elýeterlilik yzyna alyndy</string>
     <string name="projects_settings_section_access">Giriş dolandyryşy</string>
     <string name="projects_people_search">Adamlary gözle</string>
     <string name="projects_settings_field_entity_id">Essas ID</string>

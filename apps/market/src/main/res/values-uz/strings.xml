@@ -725,8 +725,8 @@
     <string name="market_audit_account_stripe_onboarded">Stripe sozlandi</string>
     <string name="market_audit_account_stripe_restricted">Stripe cheklangan</string>
     <string name="market_audit_account_suspended">Sotuvchi sifatida toʻxtatib qoʻyilgan</string>
-    <string name="market_audit_account_unbanned">Bani bekor qilingan</string>
-    <string name="market_audit_account_unsuspended">Toʻxtatib qoʻyish bekor qilindi</string>
+    <string name="market_audit_account_unbanned">Ban olib tashlandi</string>
+    <string name="market_audit_account_unsuspended">Toʻxtatib qoʻyish olib tashlandi</string>
     <string name="market_audit_auction_bid_placed">Taklif qabul qilindi</string>
     <string name="market_audit_auction_created">Auksion yaratildi</string>
     <string name="market_audit_auction_ended_sold">Auksion sotildi</string>

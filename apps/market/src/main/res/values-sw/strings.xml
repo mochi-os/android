@@ -557,7 +557,7 @@
     <string name="market_messages_send_failed">Imeshindwa kutuma ujumbe</string>
     <string name="market_messages_thread_title">Mazungumzo</string>
     <string name="market_messages_unread_badge">%1$d hazijasomwa</string>
-    <string name="market_price_from">kuanzia %1$s</string>
+    <string name="market_price_from">Kuanzia %1$s</string>
     <string name="market_price_high_bid">Zabuni ya juu: %1$s</string>
     <string name="market_price_instant_buy">ununuzi wa papo hapo: %1$s</string>
     <string name="market_price_per_month">%1$s / mwezi</string>

@@ -45,6 +45,8 @@
     <string name="route_delete_title">Futa njia?</string>
     <string name="route_path">Njia</string>
     <string name="route_method">Mbinu</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Programu</string>
     <string name="route_method_entity">Kitengo</string>
     <string name="route_method_redirect">Elekeza</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Pakua kutoka packages.mochi-os.org</string>
     <string name="system_status_copy">Nakili</string>
     <string name="system_status_peers">Rika</string>
-    <string name="system_status_known">Zinazojulikana</string>
+    <string name="system_status_peers_totals">Zinazojulikana %1$s · Zilizounganishwa %2$s · Mesh ya matangazo %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Zinazojulikana %1$s · Zilizounganishwa %2$s</string>
     <string name="system_status_peer_connected">Imeunganishwa</string>
     <string name="system_status_peer_disconnected">Imetenganishwa</string>
     <string name="system_status_peer_queued">Jumbe kwenye foleni</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">Hutaweza tena kuingia kwa kutumia msimbo wa kithibitishaji.</string>
     <string name="account_recovery_none">Hakuna misimbo ya kurejesha iliyozalishwa.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">Msimbo %1$d wa kurejesha umesalia.</item>
-        <item quantity="other">Misimbo %1$d ya kurejesha imesalia.</item>
+        <item quantity="one">Msimbo %1$s wa kurejesha umesalia.</item>
+        <item quantity="other">Misimbo %1$s ya kurejesha imesalia.</item>
     </plurals>
     <string name="account_recovery_generate">Zalisha misimbo</string>
     <string name="account_recovery_regenerate">Zalisha tena misimbo</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">Mara ya mwisho kutumika %1$s</string>
     <string name="route_delete_message">Hii itaondoa njia ya njia \"%1$s\".</string>
     <string name="route_empty">Hakuna njia zilizowekwa.</string>
-    <string name="route_meta">Kipaumbele %1$d · %2$s</string>
+    <string name="route_meta">Kipaumbele %1$s · %2$s</string>
     <string name="interests_search_placeholder">Tafuta mada za kuongeza…</string>
     <string name="interests_empty">Bado hakuna maslahi.</string>
     <string name="interests_summary_regenerate">Zalisha muhtasari upya</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">Batilisha vipindi vyote vya kazi?</string>
     <string name="system_users_revoke_all_message">Vipindi vyote vya kazi vilivyo hai vya mtumiaji huyu vitatoka.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">Inaonyesha %1$d–%2$d kati ya mtumiaji %3$d</item>
-        <item quantity="other">Inaonyesha %1$d–%2$d kati ya watumiaji %3$d</item>
+        <item quantity="one">Inaonyesha %1$s–%2$s kati ya mtumiaji %3$s</item>
+        <item quantity="other">Inaonyesha %1$s–%2$s kati ya watumiaji %3$s</item>
     </plurals>
     <string name="account_title">Akaunti</string>
     <string name="account_section_identity">Utambulisho</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">Thibitisha DNS</string>
     <string name="settings_home_domains">Vikoa</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Jaribio limetumwa kwa marudio %1$d</item>
-        <item quantity="other">Jaribio limetumwa kwa marudio %1$d</item>
+        <item quantity="one">Jaribio limetumwa kwa marudio %1$s</item>
+        <item quantity="other">Jaribio limetumwa kwa marudio %1$s</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">Imefuta kipindi %1$d</item>
-        <item quantity="other">Imefuta vipindi %1$d</item>
+        <item quantity="one">Imefuta kipindi %1$s</item>
+        <item quantity="other">Imefuta vipindi %1$s</item>
     </plurals>
     <string name="login_title">Ingia</string>
     <string name="login_section_methods">Mbinu za kuingia</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">Ya umma</string>
     <string name="system_status_reachability_private">Ya faragha</string>
     <string name="system_status_reachability_unknown">Haijulikani</string>
-    <string name="system_status_relay">Kupitia relay</string>
-    <string name="system_status_mesh">Mesh ya matangazo</string>
+    <string name="system_status_reachability_relay">%1$s · kupitia rele</string>
     <string name="system_status_broadcast">Matangazo ya mwisho</string>
     <string name="system_status_queued_broadcasts">Ujumbe wa matangazo kwenye foleni</string>
     <string name="system_setting_hostname_publish">Tangaza jina la mwenyeji na vikoa kwa seva nyingine</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">Ilionekana mara ya mwisho %1$s</string>
     <string name="notifprefs_device_app">%1$s · programu</string>
     <string name="notifprefs_device_push">%1$s · arifa za push</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Jaribio limetumwa kwa %1$d kati ya kituo %2$d</item>
-        <item quantity="other">Jaribio limetumwa kwa %1$d kati ya vituo %2$d</item>
+        <item quantity="one">Jaribio limetumwa kwa %1$s kati ya kituo %2$s</item>
+        <item quantity="other">Jaribio limetumwa kwa %1$s kati ya vituo %2$s</item>
     </plurals>
     <string name="notifprefs_test_none">Hakuna marudio yaliyosanidiwa</string>
     <string name="notifprefs_transport_fcm">Push ya Android</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">Tupa mabadiliko?</string>
     <string name="system_documents_discard">Tupa</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d ilifaulu</item>
-        <item quantity="other">%1$d zilifaulu</item>
+        <item quantity="one">%1$s ilifaulu</item>
+        <item quantity="other">%1$s zilifaulu</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d ilishindwa</item>
-        <item quantity="other">%1$d zilishindwa</item>
+        <item quantity="one">%1$s ilishindwa</item>
+        <item quantity="other">%1$s zilishindwa</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d uhifadhi</item>
-        <item quantity="other">%1$d / %2$d uhifadhi</item>
+        <item quantity="one">%1$s / %2$s uhifadhi</item>
+        <item quantity="other">%1$s / %2$s uhifadhi</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d saketi</item>
-        <item quantity="other">%1$d saketi</item>
+        <item quantity="one">%1$s saketi</item>
+        <item quantity="other">%1$s saketi</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d iliyokataliwa</item>
-        <item quantity="other">%1$d zilizokataliwa</item>
+        <item quantity="one">%1$s iliyokataliwa</item>
+        <item quantity="other">%1$s zilizokataliwa</item>
     </plurals>
 </resources>

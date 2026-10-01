@@ -276,7 +276,7 @@
     <string name="crm_access_role_view">Solo lectura</string>
     <string name="crm_access_role_none">Sin acceso</string>
     <string name="crm_all_crms">Todos los CRM</string>
-    <string name="crm_settings_unsubscribe_section">Cancelar suscripción al CRM</string>
+    <string name="crm_settings_unsubscribe_section">Anular la suscripción al CRM</string>
     <string name="crm_settings_updated">CRM actualizado</string>
     <string name="crm_create_import_backup">Importar desde copia de seguridad (opcional)</string>
     <string name="crm_export">Exportar datos</string>

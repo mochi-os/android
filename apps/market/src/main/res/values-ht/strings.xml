@@ -284,7 +284,7 @@
     <string name="market_onboarding_dismiss">Fèmen</string>
     <string name="market_onboarding_title">Byenveni nan Market</string>
     <string name="market_open_sidebar">Ouvri meni</string>
-    <string name="market_price_from">depi %1$s</string>
+    <string name="market_price_from">Depi %1$s</string>
     <string name="market_price_per_month">%1$s / mwa</string>
     <string name="market_price_per_year">%1$s / ane</string>
     <string name="market_profile_biography">Konsènan</string>
@@ -473,7 +473,7 @@
     <string name="market_subscriptions_empty">Pa gen abònman</string>
     <string name="market_subscriptions_empty_body">Abònman se acha rekiran — vandè yo lis yo ak pri pa mwa oswa pa ane.</string>
     <string name="market_subscriptions_pause_failed">Echwe pou pause</string>
-    <string name="market_subscriptions_paused">Abònman pa</string>
+    <string name="market_subscriptions_paused">Abònman an an pòz</string>
     <string name="market_subscriptions_reactivate_failed">Echwe pou reaktive</string>
     <string name="market_subscriptions_reactivated">Abònman reaktive</string>
     <string name="market_subscriptions_resume_failed">Echwe pou repran</string>
@@ -725,8 +725,8 @@
     <string name="market_audit_account_stripe_onboarded">Stripe konfigire</string>
     <string name="market_audit_account_stripe_restricted">Stripe restriksyone</string>
     <string name="market_audit_account_suspended">Sispann kòm vandè</string>
-    <string name="market_audit_account_unbanned">Defande</string>
-    <string name="market_audit_account_unsuspended">Sispansyon anile</string>
+    <string name="market_audit_account_unbanned">Entèdiksyon leve</string>
+    <string name="market_audit_account_unsuspended">Sispansyon leve</string>
     <string name="market_audit_auction_bid_placed">Enchè plase</string>
     <string name="market_audit_auction_created">Lavant kreye</string>
     <string name="market_audit_auction_ended_sold">Lavant vann</string>

@@ -45,6 +45,8 @@
     <string name="route_delete_title">रास्ता मेटाईं?</string>
     <string name="route_path">पथ</string>
     <string name="route_method">विधि</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">ऐप</string>
     <string name="route_method_entity">एंटिटी</string>
     <string name="route_method_redirect">रीडायरेक्ट</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org से डाउनलोड करीं</string>
     <string name="system_status_copy">कॉपी करीं</string>
     <string name="system_status_peers">साथी लोग</string>
-    <string name="system_status_known">ज्ञात</string>
+    <string name="system_status_peers_totals">ज्ञात %1$s · जुड़ल %2$s · प्रसारण मेश %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">ज्ञात %1$s · जुड़ल %2$s</string>
     <string name="system_status_peer_connected">जुड़ल बा</string>
     <string name="system_status_peer_disconnected">जुड़ल नइखे</string>
     <string name="system_status_peer_queued">कतार में संदेश</string>
@@ -194,12 +197,12 @@
     <string name="system_users_toast_deleted">उपयोगकर्ता हटावल गइल</string>
     <string name="system_users_toast_suspended">उपयोगकर्ता निलंबित</string>
     <string name="system_users_toast_suspension_removed">निलंबन हटावल गइल</string>
-    <string name="system_users_toast_session_revoked">सत्र निरस्त भइल</string>
+    <string name="system_users_toast_session_revoked">सत्र वापस ले लिहल गइल</string>
     <string name="system_users_toast_create_failed">यूजर बनावे में विफल</string>
     <string name="system_users_toast_update_failed">यूजर अपडेट करे में विफल</string>
     <string name="system_users_toast_delete_failed">यूजर मेटावे में विफल</string>
     <string name="system_users_toast_status_failed">यूजर के स्थिति अपडेट करे में विफल</string>
-    <string name="system_users_toast_revoke_failed">सत्र रद्द करे में विफल</string>
+    <string name="system_users_toast_revoke_failed">सत्र वापस लेवे में विफल</string>
 
     <string name="settings_home_sessions">सत्र</string>
     <string name="settings_home_privacy">गोपनीयता नीति</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">रउआ अब प्रमाणक कोड से साइन इन ना कर सकेम।</string>
     <string name="account_recovery_none">कौनो रिकवरी कोड ना बनल बा।</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d रिकवरी कोड बाकी बा।</item>
-        <item quantity="other">%1$d रिकवरी कोड बाकी बा।</item>
+        <item quantity="one">%1$s रिकवरी कोड बाकी बा।</item>
+        <item quantity="other">%1$s रिकवरी कोड बाकी बा।</item>
     </plurals>
     <string name="account_recovery_generate">कोड बनाईं</string>
     <string name="account_recovery_regenerate">कोड फेर से बनाईं</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">आखिरी इस्तेमाल %1$s</string>
     <string name="route_delete_message">ई \"%1$s\" रास्ता खातिर रूट मिटा दी।</string>
     <string name="route_empty">कौनो रास्ता कॉन्फिगर नइखे।</string>
-    <string name="route_meta">प्राथमिकता %1$d · %2$s</string>
+    <string name="route_meta">प्राथमिकता %1$s · %2$s</string>
     <string name="interests_search_placeholder">जोड़े खातिर विषय खोजीं…</string>
     <string name="interests_empty">अबहीं तकले कौनो रुचि ना बा।</string>
     <string name="interests_summary_regenerate">सारांश फेर से बनाईं</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">सबन सत्र वापस लीं?</string>
     <string name="system_users_revoke_all_message">एह उपयोगकर्ता के सबन सक्रिय सत्र साइन आउट हो जाई।</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">%3$d उपयोगकर्ता में से %1$d–%2$d देखावल जा रहल बा</item>
-        <item quantity="other">%3$d उपयोगकर्ता में से %1$d–%2$d देखावल जा रहल बा</item>
+        <item quantity="one">%3$s उपयोगकर्ता में से %1$s–%2$s देखावल जा रहल बा</item>
+        <item quantity="other">%3$s उपयोगकर्ता में से %1$s–%2$s देखावल जा रहल बा</item>
     </plurals>
     <string name="account_title">खाता</string>
     <string name="account_section_identity">पहचान</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS सत्यापित करीं</string>
     <string name="settings_home_domains">डोमेन</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">%1$d गंतव्य पर टेस्ट भेजल गइल</item>
-        <item quantity="other">%1$d गंतव्य पर टेस्ट भेजल गइल</item>
+        <item quantity="one">%1$s गंतव्य पर टेस्ट भेजल गइल</item>
+        <item quantity="other">%1$s गंतव्य पर टेस्ट भेजल गइल</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$d सत्र निरस्त कइल गइल</item>
-        <item quantity="other">%1$d सत्र निरस्त कइल गइल</item>
+        <item quantity="one">%1$s सत्र वापस ले लिहल गइल</item>
+        <item quantity="other">%1$s सत्र वापस ले लिहल गइल</item>
     </plurals>
     <string name="login_title">लॉगिन</string>
     <string name="login_section_methods">लॉगिन के तरीका</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">सार्वजनिक</string>
     <string name="system_status_reachability_private">निजी</string>
     <string name="system_status_reachability_unknown">अनजान</string>
-    <string name="system_status_relay">रिले के जरिए</string>
-    <string name="system_status_mesh">प्रसारण मेश</string>
+    <string name="system_status_reachability_relay">%1$s · रिले के जरिए</string>
     <string name="system_status_broadcast">आखिरी प्रसारण</string>
     <string name="system_status_queued_broadcasts">कतार में प्रसारण संदेश</string>
     <string name="system_setting_hostname_publish">होस्टनेम आ डोमेन दोसरा सर्वर सभ के बतावल जाव</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">आखिरी बेर देखल गइल %1$s</string>
     <string name="notifprefs_device_app">%1$s · ऐप</string>
     <string name="notifprefs_device_push">%1$s · पुश</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">परीक्षण %2$d में से %1$d गंतव्य पर भेजल गइल</item>
-        <item quantity="other">परीक्षण %2$d में से %1$d गंतव्य पर भेजल गइल</item>
+        <item quantity="one">परीक्षण %2$s में से %1$s गंतव्य पर भेजल गइल</item>
+        <item quantity="other">परीक्षण %2$s में से %1$s गंतव्य पर भेजल गइल</item>
     </plurals>
     <string name="notifprefs_test_none">कौनो गंतव्य सेट नइखे</string>
     <string name="notifprefs_transport_fcm">Android पुश</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">बदलाव छोड़ दीं?</string>
     <string name="system_documents_discard">छोड़ीं</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d सफल</item>
-        <item quantity="other">%1$d सफल</item>
+        <item quantity="one">%1$s सफल</item>
+        <item quantity="other">%1$s सफल</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d विफल</item>
-        <item quantity="other">%1$d विफल</item>
+        <item quantity="one">%1$s विफल</item>
+        <item quantity="other">%1$s विफल</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d आरक्षण</item>
-        <item quantity="other">%1$d / %2$d आरक्षण</item>
+        <item quantity="one">%1$s / %2$s आरक्षण</item>
+        <item quantity="other">%1$s / %2$s आरक्षण</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d सर्किट</item>
-        <item quantity="other">%1$d सर्किट</item>
+        <item quantity="one">%1$s सर्किट</item>
+        <item quantity="other">%1$s सर्किट</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d अस्वीकृत</item>
-        <item quantity="other">%1$d अस्वीकृत</item>
+        <item quantity="one">%1$s अस्वीकृत</item>
+        <item quantity="other">%1$s अस्वीकृत</item>
     </plurals>
 </resources>

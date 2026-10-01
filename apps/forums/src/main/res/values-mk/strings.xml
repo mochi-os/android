@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">Модерирај</string>
     <string name="forums_members_search">Филтрирај членови</string>
     <string name="forums_banner_description">Markdown прикажан на врвот на форумот.</string>
-    <string name="forums_banner_placeholder">Добредојдовте на овој форум…</string>
+    <string name="forums_banner_placeholder">Внесете текст на банерот (поддржан е Markdown)…</string>
     <string name="forums_ai_mode_label">Режим: %1$s</string>
     <string name="forums_ai_mode_heading">AI режим</string>
     <string name="forums_ai_mode_off">Оневозможено</string>
@@ -293,7 +293,7 @@
     <string name="forums_settings_ai_updated">Поставките за ВИ се ажурирани</string>
     <string name="forums_settings_forum_renamed">Форумот е преименуван</string>
     <string name="forums_settings_name_clear_cd">Исчисти го името</string>
-    <string name="forums_settings_unsubscribe_section">Откажи претплата на форумот</string>
+    <string name="forums_settings_unsubscribe_section">Отпиши се од форумот</string>
     <string name="forums_share_link_title">Врска на форумот</string>
     <string name="forums_find_found_by_url">Пронајдено преку URL</string>
     <string name="forums_moderation_pending_posts">Објави на чекање (%1$d)</string>

@@ -45,6 +45,8 @@
     <string name="route_delete_title">Да се избрише рутата?</string>
     <string name="route_path">Патека</string>
     <string name="route_method">Метод</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Апликација</string>
     <string name="route_method_entity">Ентитет</string>
     <string name="route_method_redirect">Пренасочување</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Преземете од packages.mochi-os.org</string>
     <string name="system_status_copy">Копирај</string>
     <string name="system_status_peers">Рамноправни</string>
-    <string name="system_status_known">Познати</string>
+    <string name="system_status_peers_totals">Познати %1$s · Поврзани %2$s · Мрежа за емитување %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Познати %1$s · Поврзани %2$s</string>
     <string name="system_status_peer_connected">Поврзано</string>
     <string name="system_status_peer_disconnected">Исклучено</string>
     <string name="system_status_peer_queued">Пораки во ред на чекање</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">Повеќе нема да можете да се најавите со код од автентикаторот.</string>
     <string name="account_recovery_none">Не се генерирани кодови за обновување.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">Преостанува %1$d код за обновување.</item>
-        <item quantity="other">Преостануваат %1$d кодови за обновување.</item>
+        <item quantity="one">Преостанува %1$s код за обновување.</item>
+        <item quantity="other">Преостануваат %1$s кодови за обновување.</item>
     </plurals>
     <string name="account_recovery_generate">Генерирај кодови</string>
     <string name="account_recovery_regenerate">Регенерирај кодови</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">Последно користен %1$s</string>
     <string name="route_delete_message">Ова ќе ја отстрани патеката за патот „%1$s\".</string>
     <string name="route_empty">Нема конфигурирани патеки.</string>
-    <string name="route_meta">Приоритет %1$d · %2$s</string>
+    <string name="route_meta">Приоритет %1$s · %2$s</string>
     <string name="interests_search_placeholder">Барај теми за додавање…</string>
     <string name="interests_empty">Сè уште нема интереси.</string>
     <string name="interests_summary_regenerate">Регенерирај резиме</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">Отповикај ги сите сесии?</string>
     <string name="system_users_revoke_all_message">Сите активни сесии на овој корисник ќе бидат одјавени.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">Се прикажуваат %1$d–%2$d од %3$d корисник</item>
-        <item quantity="other">Се прикажуваат %1$d–%2$d од %3$d корисници</item>
+        <item quantity="one">Се прикажуваат %1$s–%2$s од %3$s корисник</item>
+        <item quantity="other">Се прикажуваат %1$s–%2$s од %3$s корисници</item>
     </plurals>
     <string name="account_title">Сметка</string>
     <string name="account_section_identity">Идентитет</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">Потврди DNS</string>
     <string name="settings_home_domains">Домени</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Тестот е испратен до %1$d дестинација</item>
-        <item quantity="other">Тестот е испратен до %1$d дестинации</item>
+        <item quantity="one">Тестот е испратен до %1$s дестинација</item>
+        <item quantity="other">Тестот е испратен до %1$s дестинации</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">Отповикана %1$d сесија</item>
-        <item quantity="other">Отповикани %1$d сесии</item>
+        <item quantity="one">Отповикана %1$s сесија</item>
+        <item quantity="other">Отповикани %1$s сесии</item>
     </plurals>
     <string name="login_title">Најава</string>
     <string name="login_section_methods">Методи за најавување</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">Јавно</string>
     <string name="system_status_reachability_private">Приватно</string>
     <string name="system_status_reachability_unknown">Непознато</string>
-    <string name="system_status_relay">Преку реле</string>
-    <string name="system_status_mesh">Меш мрежа за емитување</string>
+    <string name="system_status_reachability_relay">%1$s · преку реле</string>
     <string name="system_status_broadcast">Последно емитување</string>
     <string name="system_status_queued_broadcasts">Емитувани пораки на чекање</string>
     <string name="system_setting_hostname_publish">Објавувај го името на хостот и домените на други сервери</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">Последен пат виден %1$s</string>
     <string name="notifprefs_device_app">%1$s · апликација</string>
     <string name="notifprefs_device_push">%1$s · пуш</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Тестот е испратен до %1$d од %2$d дестинација</item>
-        <item quantity="other">Тестот е испратен до %1$d од %2$d дестинации</item>
+        <item quantity="one">Тестот е испратен до %1$s од %2$s дестинација</item>
+        <item quantity="other">Тестот е испратен до %1$s од %2$s дестинации</item>
     </plurals>
     <string name="notifprefs_test_none">Не се конфигурирани одредишта</string>
     <string name="notifprefs_transport_fcm">Пуш за Android</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">Да се отфрлат промените?</string>
     <string name="system_documents_discard">Отфрли</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d успешен</item>
-        <item quantity="other">%1$d успешни</item>
+        <item quantity="one">%1$s успешен</item>
+        <item quantity="other">%1$s успешни</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d неуспешен</item>
-        <item quantity="other">%1$d неуспешни</item>
+        <item quantity="one">%1$s неуспешен</item>
+        <item quantity="other">%1$s неуспешни</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d резервација</item>
-        <item quantity="other">%1$d / %2$d резервации</item>
+        <item quantity="one">%1$s / %2$s резервација</item>
+        <item quantity="other">%1$s / %2$s резервации</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d коло</item>
-        <item quantity="other">%1$d кола</item>
+        <item quantity="one">%1$s коло</item>
+        <item quantity="other">%1$s кола</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d одбиено</item>
-        <item quantity="other">%1$d одбиени</item>
+        <item quantity="one">%1$s одбиено</item>
+        <item quantity="other">%1$s одбиени</item>
     </plurals>
 </resources>

@@ -45,6 +45,8 @@
     <string name="route_delete_title">Hapus ruté?</string>
     <string name="route_path">Jalur</string>
     <string name="route_method">Métode</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Aplikasi</string>
     <string name="route_method_entity">Éntitas</string>
     <string name="route_method_redirect">Pangalihan</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Unduh ti packages.mochi-os.org</string>
     <string name="system_status_copy">Salin</string>
     <string name="system_status_peers">Sasama</string>
-    <string name="system_status_known">Dipikawanoh</string>
+    <string name="system_status_peers_totals">Dipikawanoh %1$s · Tersambung %2$s · Mesh siaran %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Dipikawanoh %1$s · Tersambung %2$s</string>
     <string name="system_status_peer_connected">Tersambung</string>
     <string name="system_status_peer_disconnected">Pegat</string>
     <string name="system_status_peer_queued">Pesen dina antrean</string>
@@ -216,7 +219,7 @@
     <string name="account_totp_disable_message">Anjeun moal tiasa asup deui ku kode otentikator.</string>
     <string name="account_recovery_none">Henteu aya kode pamulihan nu dijieun.</string>
     <plurals name="account_recovery_count">
-        <item quantity="other">Sésana %1$d kode pamulihan.</item>
+        <item quantity="other">Sésana %1$s kode pamulihan.</item>
     </plurals>
     <string name="account_recovery_generate">Jieun kode</string>
     <string name="account_recovery_regenerate">Jieun kode deui</string>
@@ -233,7 +236,7 @@
     <string name="account_last_used">Pamungkas dipake %1$s</string>
     <string name="route_delete_message">Ieu bakal nyabut rute pikeun jalan \"%1$s\".</string>
     <string name="route_empty">Henteu aya rute nu dikonfigurasi.</string>
-    <string name="route_meta">Prioritas %1$d · %2$s</string>
+    <string name="route_meta">Prioritas %1$s · %2$s</string>
     <string name="interests_search_placeholder">Téangan topik pikeun ditambihkeun…</string>
     <string name="interests_empty">Tacan aya kapentingan.</string>
     <string name="interests_summary_regenerate">Jieun deui ringkesan</string>
@@ -267,7 +270,7 @@
     <string name="system_users_revoke_all_title">Cabut sadayana sési?</string>
     <string name="system_users_revoke_all_message">Sadaya sési aktip pamaké ieu bakal kaluar.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="other">Nembongkeun %1$d–%2$d ti %3$d pamaké</item>
+        <item quantity="other">Nembongkeun %1$s–%2$s ti %3$s pamaké</item>
     </plurals>
     <string name="account_title">Akun</string>
     <string name="account_section_identity">Identitas</string>
@@ -301,11 +304,11 @@
     <string name="domain_verify">Verifikasi DNS</string>
     <string name="settings_home_domains">Doméin</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Tés dikirim ka %1$d tujuan</item>
-        <item quantity="other">Tés dikirim ka %1$d tujuan</item>
+        <item quantity="one">Tés dikirim ka %1$s tujuan</item>
+        <item quantity="other">Tés dikirim ka %1$s tujuan</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="other">Dicabut %1$d sési</item>
+        <item quantity="other">Dicabut %1$s sési</item>
     </plurals>
     <string name="login_title">Asup</string>
     <string name="login_section_methods">Cara asup</string>
@@ -336,8 +339,7 @@
     <string name="system_status_reachability_public">Publik</string>
     <string name="system_status_reachability_private">Pribadi</string>
     <string name="system_status_reachability_unknown">Teu dipikanyaho</string>
-    <string name="system_status_relay">Ngaliwatan relay</string>
-    <string name="system_status_mesh">Mesh siaran</string>
+    <string name="system_status_reachability_relay">%1$s · ngaliwatan relay</string>
     <string name="system_status_broadcast">Siaran pamungkas</string>
     <string name="system_status_queued_broadcasts">Talatah siaran dina antrian</string>
     <string name="system_setting_hostname_publish">Umumkeun ngaran host jeung domain ka server séjén</string>
@@ -370,8 +372,10 @@
     <string name="accounts_device_seen">Pamungkas katémbong %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplikasi</string>
     <string name="notifprefs_device_push">%1$s · béwara</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="other">Tés dikirim ka %1$d tina %2$d tujuan</item>
+        <item quantity="other">Tés dikirim ka %1$s tina %2$s tujuan</item>
     </plurals>
     <string name="notifprefs_test_none">Teu aya tujuan dikonfigurasi</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
@@ -395,18 +399,18 @@
     <string name="system_documents_discard_title">Piceun parobahan?</string>
     <string name="system_documents_discard">Piceun</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="other">%1$d hasil</item>
+        <item quantity="other">%1$s hasil</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="other">%1$d gagal</item>
+        <item quantity="other">%1$s gagal</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="other">%1$d / %2$d reservasi</item>
+        <item quantity="other">%1$s / %2$s reservasi</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="other">%1$d sirkuit</item>
+        <item quantity="other">%1$s sirkuit</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="other">%1$d ditolak</item>
+        <item quantity="other">%1$s ditolak</item>
     </plurals>
 </resources>

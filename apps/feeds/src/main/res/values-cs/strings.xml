@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">Nikdy nenačteno</string>
     <string name="feeds_source_poll">Dotaz</string>
     <string name="feeds_source_transform">Transformace AI</string>
-    <string name="feeds_remove_source_confirm">Odebrat \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Smazat také importované příspěvky</string>
+    <string name="feeds_remove_source_confirm">Tímto se zastaví import obsahu z \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Smazat také příspěvky importované z tohoto zdroje</string>
     <string name="feeds_suggested_credibility_title">Navrhovaná důvěryhodnost</string>
     <string name="feeds_suggested_credibility_body">Mochi navrhuje důvěryhodnost %1$d. Přijmout?</string>
     <string name="feeds_suggested_credibility_keep">Ponechat aktuální</string>
@@ -169,7 +169,7 @@
     <string name="feeds_settings_name_edit_cd">Upravit název</string>
     <string name="feeds_settings_section_identity">Identita</string>
     <string name="feeds_unsubscribe">Odhlásit odběr</string>
-    <string name="feeds_unsubscribed">Odběr zrušen</string>
+    <string name="feeds_unsubscribed">Odběr odhlášen</string>
     <string name="feeds_access_level_comment_full">Komentovat, reagovat a zobrazit</string>
     <string name="feeds_rss_mode_posts_comments">Příspěvky a komentáře</string>
     <string name="feeds_access_add_title">Přidat přístup</string>
@@ -189,7 +189,7 @@
     <string name="feeds_create_first_post">Vytvořit první příspěvek</string>
     <string name="feeds_rss_mode_posts">Příspěvky</string>
     <string name="feeds_source_last_checked">Naposledy zkontrolováno %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">Zrušit odběr kanálu</string>
+    <string name="feeds_settings_unsubscribe_section">Odhlásit odběr kanálu</string>
     <string name="feeds_source_transform_hint">Přeložit do angličtiny a zobrazit jako odrážky.</string>
     <string name="feeds_source_url_hint_feed">ID entity feedu nebo otisk</string>
     <string name="feeds_source_credibility_label">Důvěryhodnost</string>

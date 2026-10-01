@@ -4,8 +4,8 @@
     <string name="launcher_staff">Mochi ພະນັກງານ</string>
     <string name="staff_accounts_action_ban_title">ແບນບັນຊີ</string>
     <string name="staff_accounts_action_suspend_title">ໂຈະບັນຊີ</string>
-    <string name="staff_accounts_action_unban_title">ຍົກເລີກການຫ້າມ</string>
-    <string name="staff_accounts_action_unsuspend_title">ຍົກເລີກການລະງັບ</string>
+    <string name="staff_accounts_action_unban_title">ປົດການແບນ</string>
+    <string name="staff_accounts_action_unsuspend_title">ປົດການໂຈະ</string>
     <string name="staff_accounts_any_seller">ທັງໝົດ</string>
     <string name="staff_accounts_any_status">ທັງໝົດ</string>
     <string name="staff_accounts_ban">ແບນ</string>
@@ -30,10 +30,10 @@
     <string name="staff_accounts_suspend">ໂຈະ</string>
     <string name="staff_accounts_suspended_toast">ບັນຊີຖືກລະງັບ</string>
     <string name="staff_accounts_unban">ປົດການແບນ</string>
-    <string name="staff_accounts_unbanned_toast">ຍົກເລີກການແບນບັນຊີແລ້ວ</string>
+    <string name="staff_accounts_unbanned_toast">ປົດການແບນບັນຊີແລ້ວ</string>
     <string name="staff_accounts_unnamed">ບໍ່ມີຊື່</string>
     <string name="staff_accounts_unsuspend">ປົດການໂຈະ</string>
-    <string name="staff_accounts_unsuspended_toast">ຍົກເລີກການລະງັບບັນຊີແລ້ວ</string>
+    <string name="staff_accounts_unsuspended_toast">ປົດການໂຈະບັນຊີແລ້ວ</string>
     <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_appeals_cancel">ຍົກເລີກ</string>
     <string name="staff_appeals_decide">ຕັດສິນ</string>
@@ -57,8 +57,8 @@
     <string name="staff_audit_action_account_stripe_onboarded">Stripe ເຂົ້າຮ່ວມແລ້ວ</string>
     <string name="staff_audit_action_account_stripe_restricted">Stripe ຖືກຈຳກັດ</string>
     <string name="staff_audit_action_account_suspended">ໂຈະໃນຖານະຜູ້ຂາຍ</string>
-    <string name="staff_audit_action_account_unbanned">ຍົກເລີກການແບນແລ້ວ</string>
-    <string name="staff_audit_action_account_unsuspended">ຍົກເລີກການໂຈະແລ້ວ</string>
+    <string name="staff_audit_action_account_unbanned">ປົດການແບນແລ້ວ</string>
+    <string name="staff_audit_action_account_unsuspended">ປົດການໂຈະແລ້ວ</string>
     <string name="staff_audit_action_auction_bid_placed">ປະມູນແລ້ວ</string>
     <string name="staff_audit_action_auction_created">ສ້າງການປະມູນແລ້ວ</string>
     <string name="staff_audit_action_auction_ended_sold">ການປະມູນຂາຍແລ້ວ</string>

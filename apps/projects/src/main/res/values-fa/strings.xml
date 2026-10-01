@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">جدید</string>
     <string name="projects_settings_section_identity">هویت</string>
     <string name="projects_settings_access_updated">دسترسی به‌روزرسانی شد</string>
-    <string name="projects_settings_access_revoked">دسترسی لغو شد</string>
+    <string name="projects_settings_access_revoked">دسترسی ابطال شد</string>
     <string name="projects_settings_section_access">مدیریت دسترسی</string>
     <string name="projects_people_search">جستجوی افراد</string>
     <string name="projects_settings_field_entity_id">شناسه موجودیت</string>
@@ -360,7 +360,7 @@
     <string name="projects_activity_commented">نظر داد</string>
     <string name="projects_attachment_delete_confirm_message">این پیوست برای همیشه حذف خواهد شد.</string>
     <string name="projects_attachment_delete_confirm_title">پیوست حذف شود؟</string>
-    <string name="projects_settings_unsubscribe_section">لغو اشتراک پروژه</string>
+    <string name="projects_settings_unsubscribe_section">قطع اشتراک از پروژه</string>
     <string name="projects_share_link_title">اشتراک‌گذاری پروژه</string>
     <string name="projects_sort_filter_title">مرتب‌سازی و پالایش</string>
     <string name="projects_create_prefix_hint">برای شناسه‌های خوانا مانند %1$s-1 و %1$s-2 استفاده می‌شود</string>

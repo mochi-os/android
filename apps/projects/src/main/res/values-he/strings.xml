@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">חדש</string>
     <string name="projects_settings_section_identity">זהות</string>
     <string name="projects_settings_access_updated">הגישה עודכנה</string>
-    <string name="projects_settings_access_revoked">הגישה בוטלה</string>
+    <string name="projects_settings_access_revoked">הגישה נשללה</string>
     <string name="projects_settings_section_access">ניהול גישה</string>
     <string name="projects_people_search">חיפוש אנשים</string>
     <string name="projects_settings_field_entity_id">מזהה ישות</string>

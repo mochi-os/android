@@ -30,9 +30,9 @@
     <string name="wikis_recommended_section">Doporučená wiki</string>
     <string name="wikis_subscribe_button">Odebírat</string>
     <string name="wikis_unsubscribe_action">Odhlásit odběr</string>
-    <string name="wikis_unsubscribing">Ruší se odběr…</string>
+    <string name="wikis_unsubscribing">Odhlašování odběru…</string>
     <string name="wikis_unsubscribe_confirm_title">Odhlásit odběr</string>
-    <string name="wikis_unsubscribe_success">Odběr zrušen</string>
+    <string name="wikis_unsubscribe_success">Odběr odhlášen</string>
     <string name="wikis_subscribe_failed">Nepodařilo se přihlásit k odběru</string>
     <string name="wikis_rss_menu">RSS kanál</string>
     <string name="wikis_rss_changes">Změny</string>
@@ -41,7 +41,7 @@
     <string name="wikis_rss_copied">URL RSS zkopírována do schránky</string>
     <string name="wikis_rss_failed">Nepodařilo se získat RSS token</string>
     <string name="wikis_rss_revoke">Odvolat přístup</string>
-    <string name="wikis_rss_revoked">Přístup RSS zrušen</string>
+    <string name="wikis_rss_revoked">Přístup RSS odvolán</string>
     <string name="wikis_find_title">Najít wiki</string>
     <string name="wikis_find_no_results">Žádné wiki nenalezeny</string>
     <string name="wikis_find_recommended_section">Doporučená wiki</string>
@@ -298,38 +298,38 @@
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
         <item quantity="one">%d odpověď</item>
-        <item quantity="few">+%d dalších odpovědí</item>
+        <item quantity="few">+%d další odpovědi</item>
         <item quantity="other">+%d dalších odpovědí</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d stránka</item>
-        <item quantity="few">%d stránek</item>
+        <item quantity="few">%d stránky</item>
         <item quantity="other">%d stránek</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
         <item quantity="one">%d soubor</item>
-        <item quantity="few">%d souborů</item>
+        <item quantity="few">%d soubory</item>
         <item quantity="other">%d souborů</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
         <item quantity="one">%d obrázek</item>
-        <item quantity="few">%d obrázků</item>
+        <item quantity="few">%d obrázky</item>
         <item quantity="other">%d obrázků</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
         <item quantity="one">%d dokument</item>
-        <item quantity="few">%d dokumentů</item>
+        <item quantity="few">%d dokumenty</item>
         <item quantity="other">%d dokumentů</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
         <item quantity="one">%d stránka s tímto tagem</item>
-        <item quantity="few">%d stránek s tímto tagem</item>
+        <item quantity="few">%d stránky s tímto tagem</item>
         <item quantity="other">%d stránek s tímto tagem</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Nalezeno %1$d výsledek pro „%2$s"</item>
-        <item quantity="few">Nalezeno %1$d výsledků pro „%2$s"</item>
-        <item quantity="other">Nalezeno %1$d výsledků pro „%2$s"</item>
+        <item quantity="one">Nalezen %1$d výsledek pro „%2$s“</item>
+        <item quantity="few">Nalezeny %1$d výsledky pro „%2$s“</item>
+        <item quantity="other">Nalezeno %1$d výsledků pro „%2$s“</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Popisek se nepodařilo uložit</string>
     <string name="wikis_attachments_upload_types">Podporované soubory: obrázky, PDF, DOC, DOCX, TXT a MD.</string>
@@ -339,7 +339,7 @@
     <string name="wikis_rss_exists">Tato URL kanálu již byla vydána a nelze ji znovu zobrazit.</string>
     <plurals name="wikis_comments_truncated">
         <item quantity="one">Zobrazuje se první %1$d komentář.</item>
-        <item quantity="few">Zobrazuje se prvních %1$d komentářů.</item>
+        <item quantity="few">Zobrazují se první %1$d komentáře.</item>
         <item quantity="many">Zobrazuje se prvních %1$d komentářů.</item>
         <item quantity="other">Zobrazuje se prvních %1$d komentářů.</item>
     </plurals>

@@ -90,8 +90,8 @@
     <string name="feeds_move_down">Mover abajo</string>
     <string name="feeds_ai_account">Cuenta de IA</string>
 
-    <string name="notification_channel_feeds">Notificaciones de fuentes</string>
-    <string name="feeds_search_placeholder">Buscar fuentes o pegar URL…</string>
+    <string name="notification_channel_feeds">Notificaciones de feeds</string>
+    <string name="feeds_search_placeholder">Buscar feeds o pegar URL…</string>
     <string name="feeds_url_result">Resultado de URL</string>
     <string name="feeds_search_results">Resultados de búsqueda</string>
     <string name="feeds_unread_only">Solo no leídos</string>
@@ -105,16 +105,16 @@
     <string name="feeds_anonymous">Anónimo</string>
     <string name="feeds_replying_to_author">Respondiendo a %1$s</string>
     <string name="feeds_attach_file">Adjuntar archivo</string>
-    <string name="feeds_select_feed">Selecciona una fuente</string>
-    <string name="feeds_loading_feeds">Cargando fuentes…</string>
+    <string name="feeds_select_feed">Selecciona un feed</string>
+    <string name="feeds_loading_feeds">Cargando feeds…</string>
     <string name="feeds_sources_title_named">Fuentes de %1$s</string>
-    <string name="feeds_delete_feed_confirm">Esto eliminará permanentemente la fuente y todas sus publicaciones. No se puede deshacer.</string>
+    <string name="feeds_delete_feed_confirm">Esto eliminará permanentemente el feed y todas sus publicaciones. No se puede deshacer.</string>
     <string name="feeds_clipboard_label_rss">URL de RSS</string>
     <string name="feeds_source_never_fetched">Nunca obtenida</string>
     <string name="feeds_source_poll">Sondeo</string>
     <string name="feeds_source_transform">Transformación con IA</string>
-    <string name="feeds_remove_source_confirm">¿Eliminar \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Eliminar también las publicaciones importadas</string>
+    <string name="feeds_remove_source_confirm">Esto dejará de importar contenido de \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Eliminar también las publicaciones importadas de esta fuente</string>
     <string name="feeds_suggested_credibility_title">Credibilidad sugerida</string>
     <string name="feeds_suggested_credibility_body">Mochi sugiere una credibilidad de %1$d. ¿Aceptar?</string>
     <string name="feeds_suggested_credibility_keep">Mantener actual</string>
@@ -167,7 +167,7 @@
     <string name="feeds_settings_name_edit_cd">Editar nombre</string>
     <string name="feeds_settings_section_identity">Identidad</string>
     <string name="feeds_unsubscribe">Anular suscripción</string>
-    <string name="feeds_unsubscribed">Suscripción cancelada</string>
+    <string name="feeds_unsubscribed">Suscripción anulada</string>
     <string name="feeds_access_level_comment_full">Comentar, reaccionar y ver</string>
     <string name="feeds_rss_mode_posts_comments">Publicaciones y comentarios</string>
     <string name="feeds_access_add_title">Añadir acceso</string>
@@ -187,7 +187,7 @@
     <string name="feeds_create_first_post">Crear la primera publicación</string>
     <string name="feeds_rss_mode_posts">Publicaciones</string>
     <string name="feeds_source_last_checked">Última comprobación: %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">Cancelar suscripción de la fuente</string>
+    <string name="feeds_settings_unsubscribe_section">Anular la suscripción al feed</string>
     <string name="feeds_source_transform_hint">Traduce al inglés y muestra en forma de viñetas.</string>
     <string name="feeds_source_url_hint_feed">ID de entidad del canal o huella digital</string>
     <string name="feeds_source_credibility_label">Credibilidad</string>

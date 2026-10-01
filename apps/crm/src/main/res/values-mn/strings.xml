@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">Хандалтын удирдлага</string>
     <string name="crm_settings_not_set">Тохируулаагүй</string>
     <string name="crm_settings_access_updated">Хандалт шинэчлэгдсэн</string>
-    <string name="crm_settings_access_revoked">Нэвтрэх эрхийг цуцалсан</string>
+    <string name="crm_settings_access_revoked">Хандалтыг хүчингүй болголоо</string>
     <string name="crm_people_search">Хүмүүсийг хайх</string>
     <string name="crm_access_tab_other">Бусад</string>
     <string name="crm_access_select_group">Бүлэг сонгоно уу</string>

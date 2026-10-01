@@ -42,7 +42,7 @@
     <string name="chat_settings_add_member_empty">Ez dago gehitzeko lagunik</string>
     <string name="chat_settings_remove_member_message">Kendu %1$s txat honetatik?</string>
     <string name="chat_settings_leave_message">Txat honetatik irten nahi duzu? Gainerako kideek ez dituzte zure mezuak gehiago ikusiko.</string>
-    <string name="chat_settings_leave_and_delete">Utzi eta ezabatu lokalki</string>
+    <string name="chat_settings_leave_and_delete">Irten eta ezabatu lokalki</string>
     <string name="chat_settings_delete">Ezabatu lokalki</string>
     <string name="chat_settings_delete_message">Honek txata eta bere mezuak gailu honetatik bakarrik kentzen ditu.</string>
 

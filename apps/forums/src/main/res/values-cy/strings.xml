@@ -151,7 +151,7 @@
     <string name="forums_access_level_moderate">Cymedroli</string>
     <string name="forums_members_search">Hidlo aelodau</string>
     <string name="forums_banner_description">Markdown a ddangosir ar frig y fforwm.</string>
-    <string name="forums_banner_placeholder">Croeso i\'r fforwm hwn…</string>
+    <string name="forums_banner_placeholder">Rhowch destun y faner (cefnogir markdown)…</string>
     <string name="forums_ai_mode_label">Modd: %1$s</string>
     <string name="forums_ai_mode_heading">Modd AI</string>
     <string name="forums_ai_mode_off">Wedi\'i analluogi</string>

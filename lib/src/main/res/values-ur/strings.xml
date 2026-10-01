@@ -60,7 +60,7 @@
     <string name="notifications_empty">کوئی اطلاعات نہیں</string>
     <string name="notifications_empty_unread">آپ سب دیکھ چکے ہیں</string>
     <string name="notifications_tab_unread">غیر پڑھی</string>
-    <string name="notifications_tab_unread_count">غیر پڑھی (%1$d)</string>
+    <string name="notifications_tab_unread_count">غیر پڑھی (%1$s)</string>
     <string name="notifications_tab_all">تمام</string>
     <string name="notifications_mark_all_read">سب کو پڑھا ہوا نشان زد کریں</string>
     <string name="notifications_clear_all">سب صاف کریں</string>
@@ -303,8 +303,8 @@
     <string name="rss_revoke">رسائی واپس لیں</string>
     <string name="rss_revoke_title">RSS رسائی واپس لیں؟</string>
     <string name="rss_revoke_message">اس فیڈ کو سبسکرائب کرنے والی ہر چیز اسے وصول کرنا بند کر دے گی۔ بعد میں آپ نیا URL کاپی کر سکتے ہیں۔</string>
-    <string name="rss_revoked">RSS رسائی منسوخ کر دی گئی</string>
-    <string name="rss_revoke_failed">RSS رسائی منسوخ کرنے میں ناکام</string>
+    <string name="rss_revoked">RSS رسائی واپس لے لی گئی</string>
+    <string name="rss_revoke_failed">RSS رسائی واپس لینے میں ناکام</string>
     <string name="game_empty_title">ابھی تک کوئی گیمز نہیں</string>
     <string name="game_select_title">گیم منتخب کریں</string>
     <string name="game_select_subtitle">سائیڈبار سے گیم منتخب کریں یا نیا گیم شروع کریں۔</string>

@@ -45,6 +45,8 @@
     <string name="route_delete_title">Hapus rute?</string>
     <string name="route_path">Jalur</string>
     <string name="route_method">Metode</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Aplikasi</string>
     <string name="route_method_entity">Entitas</string>
     <string name="route_method_redirect">Pengalihan</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Unduh dari packages.mochi-os.org</string>
     <string name="system_status_copy">Salin</string>
     <string name="system_status_peers">Rekan</string>
-    <string name="system_status_known">Dikenal</string>
+    <string name="system_status_peers_totals">Dikenal %1$s · Terhubung %2$s · Mesh siaran %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Dikenal %1$s · Terhubung %2$s</string>
     <string name="system_status_peer_connected">Terhubung</string>
     <string name="system_status_peer_disconnected">Terputus</string>
     <string name="system_status_peer_queued">Pesan dalam antrean</string>
@@ -216,7 +219,7 @@
     <string name="account_totp_disable_message">Anda tidak akan dapat lagi masuk dengan kode autentikator.</string>
     <string name="account_recovery_none">Tidak ada kode pemulihan yang dibuat.</string>
     <plurals name="account_recovery_count">
-        <item quantity="other">%1$d kode pemulihan tersisa.</item>
+        <item quantity="other">%1$s kode pemulihan tersisa.</item>
     </plurals>
     <string name="account_recovery_generate">Buat kode</string>
     <string name="account_recovery_regenerate">Buat ulang kode</string>
@@ -233,7 +236,7 @@
     <string name="account_last_used">Terakhir digunakan %1$s</string>
     <string name="route_delete_message">Ini akan menghapus rute untuk jalur \"%1$s\".</string>
     <string name="route_empty">Tidak ada rute yang dikonfigurasi.</string>
-    <string name="route_meta">Prioritas %1$d · %2$s</string>
+    <string name="route_meta">Prioritas %1$s · %2$s</string>
     <string name="interests_search_placeholder">Cari topik untuk ditambahkan…</string>
     <string name="interests_empty">Belum ada minat.</string>
     <string name="interests_summary_regenerate">Buat ulang ringkasan</string>
@@ -267,7 +270,7 @@
     <string name="system_users_revoke_all_title">Cabut semua sesi?</string>
     <string name="system_users_revoke_all_message">Semua sesi aktif pengguna ini akan keluar.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="other">Menampilkan %1$d–%2$d dari %3$d pengguna</item>
+        <item quantity="other">Menampilkan %1$s–%2$s dari %3$s pengguna</item>
     </plurals>
     <string name="account_title">Akun</string>
     <string name="account_section_identity">Identitas</string>
@@ -301,11 +304,11 @@
     <string name="domain_verify">Verifikasi DNS</string>
     <string name="settings_home_domains">Domain</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Uji coba dikirim ke %1$d tujuan</item>
-        <item quantity="other">Uji coba dikirim ke %1$d tujuan</item>
+        <item quantity="one">Uji coba dikirim ke %1$s tujuan</item>
+        <item quantity="other">Uji coba dikirim ke %1$s tujuan</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="other">%1$d sesi dicabut</item>
+        <item quantity="other">%1$s sesi dicabut</item>
     </plurals>
     <string name="login_title">Masuk</string>
     <string name="login_section_methods">Metode masuk</string>
@@ -336,8 +339,7 @@
     <string name="system_status_reachability_public">Publik</string>
     <string name="system_status_reachability_private">Pribadi</string>
     <string name="system_status_reachability_unknown">Tidak diketahui</string>
-    <string name="system_status_relay">Melalui relay</string>
-    <string name="system_status_mesh">Mesh siaran</string>
+    <string name="system_status_reachability_relay">%1$s · melalui relai</string>
     <string name="system_status_broadcast">Siaran terakhir</string>
     <string name="system_status_queued_broadcasts">Pesan siaran dalam antrean</string>
     <string name="system_setting_hostname_publish">Umumkan nama host dan domain ke server lain</string>
@@ -370,8 +372,10 @@
     <string name="accounts_device_seen">Terakhir terlihat %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplikasi</string>
     <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="other">Uji coba dikirim ke %1$d dari %2$d tujuan</item>
+        <item quantity="other">Uji coba dikirim ke %1$s dari %2$s tujuan</item>
     </plurals>
     <string name="notifprefs_test_none">Tidak ada tujuan yang dikonfigurasi</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
@@ -395,18 +399,18 @@
     <string name="system_documents_discard_title">Buang perubahan?</string>
     <string name="system_documents_discard">Buang</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="other">%1$d berhasil</item>
+        <item quantity="other">%1$s berhasil</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="other">%1$d gagal</item>
+        <item quantity="other">%1$s gagal</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="other">%1$d / %2$d reservasi</item>
+        <item quantity="other">%1$s / %2$s reservasi</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="other">%1$d sirkuit</item>
+        <item quantity="other">%1$s sirkuit</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="other">%1$d ditolak</item>
+        <item quantity="other">%1$s ditolak</item>
     </plurals>
 </resources>

@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">منبع حذف شد</string>
     <string name="feeds_settings_source_polling">در حال دریافت منبع…</string>
     <string name="feeds_settings_access_updated">دسترسی به‌روزرسانی شد</string>
-    <string name="feeds_settings_access_revoked">دسترسی لغو شد</string>
+    <string name="feeds_settings_access_revoked">دسترسی ابطال شد</string>
     <string name="feeds_settings_member_removed">عضو حذف شد</string>
     <string name="feeds_settings_ai_mode_updated">حالت هوش مصنوعی به‌روز شد</string>
     <string name="feeds_settings_ai_account_updated">حساب هوش مصنوعی به‌روز شد</string>
@@ -113,8 +113,8 @@
     <string name="feeds_source_never_fetched">هرگز دریافت نشده</string>
     <string name="feeds_source_poll">بازرسی</string>
     <string name="feeds_source_transform">تبدیل با هوش مصنوعی</string>
-    <string name="feeds_remove_source_confirm">حذف \"%1$s\"؟</string>
-    <string name="feeds_remove_also_delete_posts">نوشته‌های وارد شده نیز حذف شوند</string>
+    <string name="feeds_remove_source_confirm">این کار وارد کردن محتوا از \"%1$s\" را متوقف می‌کند.</string>
+    <string name="feeds_remove_also_delete_posts">نوشته‌هایی که از این منبع وارد شده‌اند نیز حذف شوند</string>
     <string name="feeds_suggested_credibility_title">اعتبار پیشنهادی</string>
     <string name="feeds_suggested_credibility_body">Mochi اعتبار %1$d را پیشنهاد می‌کند. می‌پذیرید؟</string>
     <string name="feeds_suggested_credibility_keep">حفظ مقدار فعلی</string>
@@ -167,7 +167,7 @@
     <string name="feeds_settings_name_edit_cd">ویرایش نام</string>
     <string name="feeds_settings_section_identity">هویت</string>
     <string name="feeds_unsubscribe">قطع اشتراک</string>
-    <string name="feeds_unsubscribed">لغو اشتراک شد</string>
+    <string name="feeds_unsubscribed">اشتراک قطع شد</string>
     <string name="feeds_access_level_comment_full">نظر دادن، واکنش نشان دادن و دیدن</string>
     <string name="feeds_rss_mode_posts_comments">پست‌ها و نظرات</string>
     <string name="feeds_access_add_title">افزودن دسترسی</string>
@@ -187,7 +187,7 @@
     <string name="feeds_create_first_post">اولین پست را بسازید</string>
     <string name="feeds_rss_mode_posts">پست‌ها</string>
     <string name="feeds_source_last_checked">آخرین بررسی %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">لغو اشتراک از فید</string>
+    <string name="feeds_settings_unsubscribe_section">قطع اشتراک از فید</string>
     <string name="feeds_source_transform_hint">به انگلیسی ترجمه کنید و به‌صورت فهرست نقطه‌ای نمایش دهید.</string>
     <string name="feeds_source_url_hint_feed">شناسه موجودیت یا اثر انگشت فید</string>
     <string name="feeds_source_credibility_label">اعتبار</string>

@@ -60,7 +60,7 @@
     <string name="notifications_empty">Нема обавештења</string>
     <string name="notifications_empty_unread">Све сте прегледали</string>
     <string name="notifications_tab_unread">Непрочитано</string>
-    <string name="notifications_tab_unread_count">Непрочитано (%1$d)</string>
+    <string name="notifications_tab_unread_count">Непрочитано (%1$s)</string>
     <string name="notifications_tab_all">Све</string>
     <string name="notifications_mark_all_read">Означи све прочитаним</string>
     <string name="notifications_clear_all">Очисти све</string>
@@ -303,7 +303,7 @@
     <string name="rss_revoke_confirm">Опозови</string>
     <string name="rss_revoke">Опозови приступ</string>
     <string name="rss_revoke_title">Опозвати RSS приступ?</string>
-    <string name="rss_revoke_message">Све што је претплаћено на овај извор престаће да га прима. Затим можете копирати нови URL.</string>
+    <string name="rss_revoke_message">Све што је претплаћено на овај фид престаће да га прима. Затим можете копирати нови URL.</string>
     <string name="rss_revoked">RSS приступ опозван</string>
     <string name="rss_revoke_failed">Опозивање RSS приступа није успело</string>
     <string name="game_empty_title">Још нема игара</string>

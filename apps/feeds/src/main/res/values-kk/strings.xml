@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">Ешқашан алынбаған</string>
     <string name="feeds_source_poll">Сұрау жиілігі</string>
     <string name="feeds_source_transform">AI түрлендіру</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" дереккөзін жою?</string>
-    <string name="feeds_remove_also_delete_posts">Импортталған жазбаларды да жою</string>
+    <string name="feeds_remove_source_confirm">Бұл \"%1$s\" дереккөзінен мазмұн импорттауды тоқтатады.</string>
+    <string name="feeds_remove_also_delete_posts">Осы дереккөзден импортталған жазбаларды да жою</string>
     <string name="feeds_suggested_credibility_title">Ұсынылған сенімділік</string>
     <string name="feeds_suggested_credibility_body">Mochi %1$d сенімділігін ұсынады. Қабылдайсыз ба?</string>
     <string name="feeds_suggested_credibility_keep">Ағымдағыны сақтау</string>

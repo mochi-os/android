@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">Tacan kungsi dicokot</string>
     <string name="feeds_source_poll">Cokot</string>
     <string name="feeds_source_transform">Robah ku AI</string>
-    <string name="feeds_remove_source_confirm">Cabut \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Pupus ogé kintunan nu diimpor</string>
+    <string name="feeds_remove_source_confirm">Ieu bakal ngeureunkeun impor eusi ti \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Pupus ogé kintunan nu diimpor ti sumber ieu</string>
     <string name="feeds_suggested_credibility_title">Kredibilitas nu disarankeun</string>
     <string name="feeds_suggested_credibility_body">Mochi nyarankeun kredibilitas %1$d. Tampi?</string>
     <string name="feeds_suggested_credibility_keep">Tahan nu ayeuna</string>

@@ -151,7 +151,7 @@
     <string name="forums_access_level_moderate">نظارت</string>
     <string name="forums_members_search">فیلتر اعضا</string>
     <string name="forums_banner_description">متن مارک‌داون که در بالای انجمن نمایش داده می‌شود.</string>
-    <string name="forums_banner_placeholder">به این انجمن خوش آمدید…</string>
+    <string name="forums_banner_placeholder">متن بنر را وارد کنید (از مارک‌داون پشتیبانی می‌شود)…</string>
     <string name="forums_ai_mode_label">حالت: %1$s</string>
     <string name="forums_ai_mode_heading">حالت هوش مصنوعی</string>
     <string name="forums_ai_mode_off">غیرفعال</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">روز</string>
     <string name="forums_settings_banner_saved">بنر ذخیره شد</string>
     <string name="forums_settings_access_updated">دسترسی به‌روزرسانی شد</string>
-    <string name="forums_settings_access_revoked">دسترسی لغو شد</string>
+    <string name="forums_settings_access_revoked">دسترسی ابطال شد</string>
     <string name="forums_settings_member_removed">عضو حذف شد</string>
     <string name="forums_settings_prompt_saved">پرامپت ذخیره شد</string>
     <string name="forums_settings_section_identity">هویت</string>
@@ -293,7 +293,7 @@
     <string name="forums_settings_ai_updated">تنظیمات هوش مصنوعی به‌روزرسانی شد</string>
     <string name="forums_settings_forum_renamed">نام انجمن تغییر کرد</string>
     <string name="forums_settings_name_clear_cd">پاک کردن نام</string>
-    <string name="forums_settings_unsubscribe_section">لغو اشتراک انجمن</string>
+    <string name="forums_settings_unsubscribe_section">قطع اشتراک از انجمن</string>
     <string name="forums_share_link_title">پیوند انجمن</string>
     <string name="forums_find_found_by_url">یافت‌شده با نشانی اینترنتی</string>
     <string name="forums_moderation_pending_posts">فرسته‌های در انتظار (%1$d)</string>

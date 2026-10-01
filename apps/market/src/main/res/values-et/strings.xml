@@ -557,7 +557,7 @@
     <string name="market_messages_send_failed">Sõnumi saatmine ebaõnnestus</string>
     <string name="market_messages_thread_title">Vestlus</string>
     <string name="market_messages_unread_badge">%1$d lugemata</string>
-    <string name="market_price_from">alates %1$s</string>
+    <string name="market_price_from">Alates %1$s</string>
     <string name="market_price_high_bid">Kõrgeim pakkumine: %1$s</string>
     <string name="market_price_instant_buy">kohene ost: %1$s</string>
     <string name="market_price_per_month">%1$s / kuu</string>
@@ -725,8 +725,8 @@
     <string name="market_audit_account_stripe_onboarded">Stripe seadistatud</string>
     <string name="market_audit_account_stripe_restricted">Stripe piiratud</string>
     <string name="market_audit_account_suspended">Peatatud müüjana</string>
-    <string name="market_audit_account_unbanned">Bann tühistatud</string>
-    <string name="market_audit_account_unsuspended">Peatamine tühistatud</string>
+    <string name="market_audit_account_unbanned">Bann eemaldatud</string>
+    <string name="market_audit_account_unsuspended">Peatamine eemaldatud</string>
     <string name="market_audit_auction_bid_placed">Pakkumine tehtud</string>
     <string name="market_audit_auction_created">Oksjon loodud</string>
     <string name="market_audit_auction_ended_sold">Oksjon müüdud</string>

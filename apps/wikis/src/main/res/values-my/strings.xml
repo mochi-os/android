@@ -110,9 +110,9 @@
     <string name="wikis_history_title">မှတ်တမ်း</string>
     <string name="wikis_history_empty">ပြန်လည်ပြင်ဆင်မှုများ မတွေ့ပါ</string>
     <string name="wikis_history_view_action">ကြည့်ရှုမည်</string>
-    <string name="wikis_history_revert_action">ဤ version သို့ ပြန်ပြင်</string>
+    <string name="wikis_history_revert_action">ဤ ဗားရှင်းသို့ ပြန်ပြင်</string>
     <string name="wikis_revision_current_badge">လက်ရှိ</string>
-    <string name="wikis_revision_revert_to_this">ဤ version သို့ ပြန်ပြင်</string>
+    <string name="wikis_revision_revert_to_this">ဤ ဗားရှင်းသို့ ပြန်ပြင်</string>
     <string name="wikis_changes_title">လတ်တလော ပြောင်းလဲမှုများ</string>
     <string name="wikis_changes_subtitle">ဤ wiki ရှိ စာမျက်နှာအားလုံး၏ လတ်တလော ပြင်ဆင်မှုများ။</string>
     <string name="wikis_changes_empty">ပြောင်းလဲမှုများ မရှိသေးပါ</string>
@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">အမည်ပြောင်းနေသည်…</string>
     <string name="wikis_rename_page_success">စာမျက်နှာ အမည်ပြောင်းပြီးပါပြီ</string>
     <string name="wikis_history_viewing">%1$s ၏ မှတ်တမ်းကို ကြည့်နေသည်၊ လက်ရှိဗားရှင်း %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">ဗားရှင်း %1$d</string>
     <string name="wikis_search_pages_placeholder">ခေါင်းစဉ် သို့မဟုတ် အကြောင်းအရာဖြင့် စာမျက်နှာများ ရှာရန်…</string>
     <string name="wikis_search_no_results">“%1$s” အတွက် စာမျက်နှာ မတွေ့ပါ။ အခြားရှာဖွေမှုစကားလုံးများ စမ်းကြည့်ပါ။</string>
     <string name="wikis_search_updated">%1$s တွင် အပ်ဒိတ်လုပ်ပြီး</string>
@@ -312,7 +312,7 @@
         <item quantity="other">ဤ tag ပါသော စာမျက်နှာ %d</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="other">"%2$s" အတွက် ရလဒ် %1$d ခု တွေ့ရသည်</item>
+        <item quantity="other">\"%2$s\" အတွက် ရလဒ် %1$d ခု တွေ့ရသည်</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">စာတန်းကို သိမ်းဆည်း၍မရပါ</string>
     <string name="wikis_attachments_upload_types">ပံ့ပိုးထားသော ဖိုင်များ - ပုံများ၊ PDF၊ DOC၊ DOCX၊ TXT နှင့် MD။</string>

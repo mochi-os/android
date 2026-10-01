@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">কখনো আনা হয়নি</string>
     <string name="feeds_source_poll">পোল</string>
     <string name="feeds_source_transform">AI রূপান্তর</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" সরাবেন?</string>
-    <string name="feeds_remove_also_delete_posts">আমদানি করা পোস্টগুলিও মুছুন</string>
+    <string name="feeds_remove_source_confirm">এটি \"%1$s\" থেকে কনটেন্ট আমদানি বন্ধ করবে।</string>
+    <string name="feeds_remove_also_delete_posts">এই উৎস থেকে আমদানি করা পোস্টগুলিও মুছুন</string>
     <string name="feeds_suggested_credibility_title">প্রস্তাবিত বিশ্বাসযোগ্যতা</string>
     <string name="feeds_suggested_credibility_body">Mochi %1$d বিশ্বাসযোগ্যতার পরামর্শ দিচ্ছে। গ্রহণ করবেন?</string>
     <string name="feeds_suggested_credibility_keep">বর্তমান রাখুন</string>

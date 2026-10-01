@@ -45,6 +45,8 @@
     <string name="route_delete_title">Marşrut silinsin?</string>
     <string name="route_path">Yol</string>
     <string name="route_method">Metod</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Tətbiq</string>
     <string name="route_method_entity">Qurum</string>
     <string name="route_method_redirect">Yönləndirmə</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org saytından yükləyin</string>
     <string name="system_status_copy">Kopyala</string>
     <string name="system_status_peers">Taylar</string>
-    <string name="system_status_known">Məlum</string>
+    <string name="system_status_peers_totals">Məlum %1$s · Qoşulu %2$s · Yayım şəbəkəsi %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Məlum %1$s · Qoşulu %2$s</string>
     <string name="system_status_peer_connected">Qoşuldu</string>
     <string name="system_status_peer_disconnected">Bağlantı kəsilib</string>
     <string name="system_status_peer_queued">Növbədəki mesajlar</string>
@@ -109,7 +112,7 @@
     <string name="system_documents_tab_privacy">Məxfilik</string>
     <string name="system_documents_language">Dil</string>
     <string name="system_documents_no_language">Bu dil üçün sənəd mövcud deyil.</string>
-    <string name="system_documents_using_default">Yoxlama müvəqqəti olaraq oflayndır. Yenə də təqdim edə bilərsiniz.</string>
+    <string name="system_documents_using_default">Daxili standart istifadə olunur</string>
     <string name="system_documents_revert">Standarta geri qaytar</string>
     <string name="system_documents_save">Saxla</string>
     <string name="system_documents_saved">Sənəd saxlanıldı</string>
@@ -180,10 +183,10 @@
     <string name="system_users_delete">İstifadəçini sil</string>
     <string name="system_users_delete_title">İstifadəçi silinsin?</string>
     <string name="system_users_manage_sessions">Sessiyaları idarə et</string>
-    <string name="system_users_sessions_empty">Bu səhifənin yolu olacaq. Kiçik hərflər, rəqəmlər və tirelər istifadə edin.</string>
+    <string name="system_users_sessions_empty">Bu istifadəçinin aktiv sessiyası yoxdur.</string>
     <string name="system_users_revoke">Geri çağır</string>
     <string name="system_users_revoke_all">Bütün sessiyaları geri çağır</string>
-    <string name="system_users_unknown_browser">Limitsiz</string>
+    <string name="system_users_unknown_browser">Naməlum brauzer</string>
     <string name="system_users_unknown">Naməlum</string>
     <string name="system_users_previous">Əvvəlki</string>
     <string name="system_users_next">Növbəti</string>
@@ -194,12 +197,12 @@
     <string name="system_users_toast_deleted">İstifadəçi silindi</string>
     <string name="system_users_toast_suspended">İstifadəçi dayandırıldı</string>
     <string name="system_users_toast_suspension_removed">Dayandırma götürüldü</string>
-    <string name="system_users_toast_session_revoked">Sessiya ləğv edildi</string>
+    <string name="system_users_toast_session_revoked">Sessiya geri çağırıldı</string>
     <string name="system_users_toast_create_failed">İstifadəçi yaratmaq alınmadı</string>
     <string name="system_users_toast_update_failed">İstifadəçini yeniləmək alınmadı</string>
     <string name="system_users_toast_delete_failed">İstifadəçini silmək alınmadı</string>
     <string name="system_users_toast_status_failed">İstifadəçi statusunu yeniləmək alınmadı</string>
-    <string name="system_users_toast_revoke_failed">Sessiyanı ləğv etmək alınmadı</string>
+    <string name="system_users_toast_revoke_failed">Sessiyanı geri çağırmaq alınmadı</string>
 
     <string name="settings_home_sessions">Sessiyalar</string>
     <string name="settings_home_privacy">Məxfilik siyasəti</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">Artıq autentifikator kodu ilə daxil ola bilməyəcəksiniz.</string>
     <string name="account_recovery_none">Bərpa kodları yaradılmayıb.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d bərpa kodu qalıb.</item>
-        <item quantity="other">%1$d bərpa kodu qalıb.</item>
+        <item quantity="one">%1$s bərpa kodu qalıb.</item>
+        <item quantity="other">%1$s bərpa kodu qalıb.</item>
     </plurals>
     <string name="account_recovery_generate">Kod yarat</string>
     <string name="account_recovery_regenerate">Kodu yenidən yarat</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">Son istifadə %1$s</string>
     <string name="route_delete_message">Bu \"%1$s\" yolu üçün marşrutu çıxaracaq.</string>
     <string name="route_empty">Konfiqurasiya edilmiş marşrut yoxdur.</string>
-    <string name="route_meta">Prioritet %1$d · %2$s</string>
+    <string name="route_meta">Prioritet %1$s · %2$s</string>
     <string name="interests_search_placeholder">Əlavə etmək üçün mövzu axtarın…</string>
     <string name="interests_empty">Hələ maraq yoxdur.</string>
     <string name="interests_summary_regenerate">Xülasəni yenidən yarat</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">Bütün sessiyalar geri çağırılsın?</string>
     <string name="system_users_revoke_all_message">Bu istifadəçinin bütün aktiv sessiyalarından çıxış ediləcək.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">%3$d istifadəçidən %1$d–%2$d göstərilir</item>
-        <item quantity="other">%3$d istifadəçidən %1$d–%2$d göstərilir</item>
+        <item quantity="one">%3$s istifadəçidən %1$s–%2$s göstərilir</item>
+        <item quantity="other">%3$s istifadəçidən %1$s–%2$s göstərilir</item>
     </plurals>
     <string name="account_title">Hesab</string>
     <string name="account_section_identity">Şəxsiyyət</string>
@@ -294,7 +297,7 @@
     <string name="domain_delete_title">Domen silinsin?</string>
     <string name="domain_dns_hint">TXT qeyd yaradın:</string>
     <string name="domain_empty_admin">Konfiqurasiya edilmiş domen yoxdur.</string>
-    <string name="domain_empty_user">Hələ heç bir lentiniz yoxdur.</string>
+    <string name="domain_empty_user">Heç bir domenə girişiniz yoxdur.</string>
     <string name="domain_https">Avtomatik HTTPS</string>
     <string name="domain_name">Domen</string>
     <string name="domain_status_pending">DNS yoxlaması gözləyir</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS-i yoxla</string>
     <string name="settings_home_domains">Domenlər</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Test %1$d ünvana göndərildi</item>
-        <item quantity="other">Test %1$d ünvana göndərildi</item>
+        <item quantity="one">Test %1$s ünvana göndərildi</item>
+        <item quantity="other">Test %1$s ünvana göndərildi</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$d sessiya ləğv edildi</item>
-        <item quantity="other">%1$d sessiya ləğv edildi</item>
+        <item quantity="one">%1$s sessiya geri çağırıldı</item>
+        <item quantity="other">%1$s sessiya geri çağırıldı</item>
     </plurals>
     <string name="login_title">Giriş</string>
     <string name="login_section_methods">Giriş üsulları</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">Açıq</string>
     <string name="system_status_reachability_private">Şəxsi</string>
     <string name="system_status_reachability_unknown">Naməlum</string>
-    <string name="system_status_relay">Relay vasitəsilə</string>
-    <string name="system_status_mesh">Yayım mesh</string>
+    <string name="system_status_reachability_relay">%1$s · relay vasitəsilə</string>
     <string name="system_status_broadcast">Son yayım</string>
     <string name="system_status_queued_broadcasts">Növbədəki yayım mesajları</string>
     <string name="system_setting_hostname_publish">Host adını və domenləri digər serverlərə bildir</string>
@@ -361,7 +363,7 @@
     <string name="accounts_provider_web">Mochi veb</string>
     <string name="accounts_verified">Hesab təsdiqləndi</string>
     <string name="accounts_verify_invalid">Etibarsız doğrulama kodu</string>
-    <string name="accounts_verify_sent">Yoxlanıldı</string>
+    <string name="accounts_verify_sent">Təsdiq kodu göndərildi</string>
     <string name="accounts_test_failed">Test uğursuz oldu</string>
     <string name="accounts_test_sent">Test göndərildi</string>
     <string name="account_oauth_link_failed">Hesab əlaqələndirilə bilmədi</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">Son görülmə %1$s</string>
     <string name="notifprefs_device_app">%1$s · tətbiq</string>
     <string name="notifprefs_device_push">%1$s · push bildirişi</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Test %2$d ünvandan %1$d ünvana göndərildi</item>
-        <item quantity="other">Test %2$d ünvandan %1$d ünvana göndərildi</item>
+        <item quantity="one">Test %2$s ünvandan %1$s ünvana göndərildi</item>
+        <item quantity="other">Test %2$s ünvandan %1$s ünvana göndərildi</item>
     </plurals>
     <string name="notifprefs_test_none">Konfiqurasiya edilmiş təyinat yoxdur</string>
     <string name="notifprefs_transport_fcm">Android push bildirişi</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">Dəyişikliklər atılsın?</string>
     <string name="system_documents_discard">At</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d uğurlu</item>
-        <item quantity="other">%1$d uğurlu</item>
+        <item quantity="one">%1$s uğurlu</item>
+        <item quantity="other">%1$s uğurlu</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d uğursuz</item>
-        <item quantity="other">%1$d uğursuz</item>
+        <item quantity="one">%1$s uğursuz</item>
+        <item quantity="other">%1$s uğursuz</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d rezervasiya</item>
-        <item quantity="other">%1$d / %2$d rezervasiya</item>
+        <item quantity="one">%1$s / %2$s rezervasiya</item>
+        <item quantity="other">%1$s / %2$s rezervasiya</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d dövrə</item>
-        <item quantity="other">%1$d dövrə</item>
+        <item quantity="one">%1$s dövrə</item>
+        <item quantity="other">%1$s dövrə</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d rədd edildi</item>
-        <item quantity="other">%1$d rədd edildi</item>
+        <item quantity="one">%1$s rədd edildi</item>
+        <item quantity="other">%1$s rədd edildi</item>
     </plurals>
 </resources>

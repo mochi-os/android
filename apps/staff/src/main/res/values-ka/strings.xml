@@ -90,7 +90,7 @@
     <string name="staff_audit_action_listing_relisted">ხელახლა გამოცხადებული</string>
     <string name="staff_audit_action_listing_removed">წაშლილი</string>
     <string name="staff_audit_action_listing_updated">განცხადება რედაქტირდა</string>
-    <string name="staff_audit_action_listing_warning">გაფრთხილებულია</string>
+    <string name="staff_audit_action_listing_warning">გაფრთხილება გაიცა</string>
     <string name="staff_audit_action_order_cancelled">გაუქმდა</string>
     <string name="staff_audit_action_order_chargeback">გადახდის გასაჩივრება მიღებულია</string>
     <string name="staff_audit_action_order_chargeback_lost">გადახდის გასაჩივრება დაკმაყოფილდა</string>

@@ -60,7 +60,7 @@
     <string name="notifications_empty">Akukho zaziso</string>
     <string name="notifications_empty_unread">Sele uzifundile zonke</string>
     <string name="notifications_tab_unread">Ezingafundwanga</string>
-    <string name="notifications_tab_unread_count">Ezingafundwanga (%1$d)</string>
+    <string name="notifications_tab_unread_count">Ezingafundwanga (%1$s)</string>
     <string name="notifications_tab_all">Zonke</string>
     <string name="notifications_mark_all_read">Phawula konke ukuba kufundiwe</string>
     <string name="notifications_clear_all">Cima konke</string>
@@ -303,8 +303,8 @@
     <string name="rss_revoke">Susa ufikelelo</string>
     <string name="rss_revoke_title">Susa ufikelelo lwe-RSS?</string>
     <string name="rss_revoke_message">Nantoni na ebhalisele olu suselo iya kuyeka ukulufumana. Ungakhuphela i-URL entsha emva koko.</string>
-    <string name="rss_revoked">Ufikelelo lwe-RSS lurhoxisiwe</string>
-    <string name="rss_revoke_failed">Ayiphumelelanga ukurhoxisa ufikelelo lwe-RSS</string>
+    <string name="rss_revoked">Ufikelelo lwe-RSS lususiwe</string>
+    <string name="rss_revoke_failed">Ayiphumelelanga ukususa ufikelelo lwe-RSS</string>
     <string name="game_empty_title">Akukho midlalo okwangoku</string>
     <string name="game_select_title">Khetha umdlalo</string>
     <string name="game_select_subtitle">Khetha umdlalo kwibha esecaleni okanye uqale omtsha.</string>

@@ -371,7 +371,7 @@
     <string name="market_onboarding_dismiss">Sluit</string>
     <string name="market_onboarding_title">Welkom by Market</string>
     <string name="market_open_sidebar">Maak kieslys oop</string>
-    <string name="market_price_from">vanaf %1$s</string>
+    <string name="market_price_from">Vanaf %1$s</string>
     <string name="market_price_high_bid">Hoogste bod: %1$s</string>
     <string name="market_price_instant_buy">onmiddellik koop: %1$s</string>
     <string name="market_price_per_month">%1$s / maand</string>

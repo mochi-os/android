@@ -557,7 +557,7 @@
     <string name="market_messages_send_failed">Mesajul nu a putut fi trimis</string>
     <string name="market_messages_thread_title">Conversație</string>
     <string name="market_messages_unread_badge">%1$d necitite</string>
-    <string name="market_price_from">de la %1$s</string>
+    <string name="market_price_from">De la %1$s</string>
     <string name="market_price_high_bid">Cea mai mare ofertă: %1$s</string>
     <string name="market_price_instant_buy">cumpărare instantanee: %1$s</string>
     <string name="market_price_per_month">%1$s / lună</string>
@@ -725,8 +725,8 @@
     <string name="market_audit_account_stripe_onboarded">Stripe înregistrat</string>
     <string name="market_audit_account_stripe_restricted">Stripe restricționat</string>
     <string name="market_audit_account_suspended">Suspendat ca vânzător</string>
-    <string name="market_audit_account_unbanned">Interdicție anulată</string>
-    <string name="market_audit_account_unsuspended">Suspendare anulată</string>
+    <string name="market_audit_account_unbanned">Interdicție ridicată</string>
+    <string name="market_audit_account_unsuspended">Suspendare ridicată</string>
     <string name="market_audit_auction_bid_placed">Ofertă plasată</string>
     <string name="market_audit_auction_created">Licitație creată</string>
     <string name="market_audit_auction_ended_sold">Licitație vândută</string>

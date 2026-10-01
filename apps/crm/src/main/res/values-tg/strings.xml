@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">Идоракунии дастрасӣ</string>
     <string name="crm_settings_not_set">Танзим нашудааст</string>
     <string name="crm_settings_access_updated">Дастрасӣ навсозӣ шуд</string>
-    <string name="crm_settings_access_revoked">Дастрасӣ бекор карда шуд</string>
+    <string name="crm_settings_access_revoked">Дастрасӣ бозхонд карда шуд</string>
     <string name="crm_people_search">Ҷустуҷӯи одамон</string>
     <string name="crm_access_tab_other">Дигар</string>
     <string name="crm_access_select_group">Гурӯҳро интихоб кунед</string>

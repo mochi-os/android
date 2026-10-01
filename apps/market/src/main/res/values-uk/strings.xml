@@ -557,7 +557,7 @@
     <string name="market_messages_send_failed">Не вдалося надіслати повідомлення</string>
     <string name="market_messages_thread_title">Розмова</string>
     <string name="market_messages_unread_badge">%1$d непрочитаних</string>
-    <string name="market_price_from">від %1$s</string>
+    <string name="market_price_from">Від %1$s</string>
     <string name="market_price_high_bid">Найвища ставка: %1$s</string>
     <string name="market_price_instant_buy">миттєва купівля: %1$s</string>
     <string name="market_price_per_month">%1$s / місяць</string>

@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">Ṣàkóso</string>
     <string name="forums_members_search">Yẹ àwọn ọmọ ẹgbẹ́ wò</string>
     <string name="forums_banner_description">Markdown tí ó hàn ní orí àpérò.</string>
-    <string name="forums_banner_placeholder">Káàbọ̀ sí àpérò yìí…</string>
+    <string name="forums_banner_placeholder">Tẹ ọ̀rọ̀ àsíá sí (a ṣe àtìlẹ́yìn fún markdown)…</string>
     <string name="forums_ai_mode_label">Ipo: %1$s</string>
     <string name="forums_ai_mode_heading">Ipo AI</string>
     <string name="forums_ai_mode_off">Tí a ti pa</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">ọjọ́</string>
     <string name="forums_settings_banner_saved">Tààánà ti fọwọ sí</string>
     <string name="forums_settings_access_updated">A ti ṣe àtúnyẹ̀wò ìwọlé</string>
-    <string name="forums_settings_access_revoked">Ati gba aṣèsẹbí</string>
+    <string name="forums_settings_access_revoked">A ti gba ìwọlé padà</string>
     <string name="forums_settings_member_removed">Ọmọ ẹgbẹ́ ti yọ kúrò</string>
     <string name="forums_settings_prompt_saved">A ti tọ́jú prompt</string>
     <string name="forums_settings_section_identity">Ìdánimọ̀</string>

@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">ਪਹੁੰਚ ਪ੍ਰਬੰਧਨ</string>
     <string name="crm_settings_not_set">ਸੈੱਟ ਨਹੀਂ</string>
     <string name="crm_settings_access_updated">ਪਹੁੰਚ ਅੱਪਡੇਟ ਕੀਤੀ ਗਈ</string>
-    <string name="crm_settings_access_revoked">ਪਹੁੰਚ ਰੱਦ ਕੀਤੀ ਗਈ</string>
+    <string name="crm_settings_access_revoked">ਪਹੁੰਚ ਵਾਪਸ ਲੈ ਲਈ ਗਈ</string>
     <string name="crm_people_search">ਲੋਕ ਖੋਜੋ</string>
     <string name="crm_access_tab_other">ਹੋਰ</string>
     <string name="crm_access_select_group">ਇੱਕ ਗਰੁੱਪ ਚੁਣੋ</string>
@@ -274,7 +274,7 @@
     <string name="crm_access_role_view">ਸਿਰਫ਼ ਦੇਖੋ</string>
     <string name="crm_access_role_none">ਪਹੁੰਚ ਨਹੀਂ</string>
     <string name="crm_all_crms">ਸਾਰੇ CRM</string>
-    <string name="crm_settings_unsubscribe_section">CRM ਤੋਂ ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
+    <string name="crm_settings_unsubscribe_section">CRM ਤੋਂ ਗਾਹਕੀ ਖਤਮ ਕਰੋ</string>
     <string name="crm_settings_updated">CRM ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ</string>
     <string name="crm_create_import_backup">ਬੈਕਅੱਪ ਤੋਂ ਇੰਪੋਰਟ ਕਰੋ (ਵਿਕਲਪਿਕ)</string>
     <string name="crm_export">ਡਾਟਾ ਐਕਸਪੋਰਟ ਕਰੋ</string>

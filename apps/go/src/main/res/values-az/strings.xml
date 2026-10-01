@@ -20,7 +20,7 @@
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">Qəbul et</string>
     <string name="go_draw_decline">Rədd et</string>
-    <string name="go_draw_offered_received">%1$s qazandı</string>
+    <string name="go_draw_offered_received">%1$s heç-heçə təklif etdi</string>
     <string name="go_draw_offered_waiting">Heç-heçə təklif edildi — %1$s gözlənilir</string>
     <string name="go_error_delete_failed">Oyunu silmək alınmadı</string>
     <string name="go_error_draw_accept_failed">Heç-heçəni qəbul etmək alınmadı</string>
@@ -41,7 +41,7 @@
     <string name="go_new_game_start">Oyuna başla</string>
     <string name="go_pass_confirm">Pas</string>
     <string name="go_pass_end_confirm">Oyunu bitir</string>
-    <string name="go_pass_end_message">%1$s təslim oldu — qazandınız!</string>
+    <string name="go_pass_end_message">%1$s də pas dedi. Təsdiqləsəniz, oyun bitəcək və lövhə hesablanacaq.</string>
     <string name="go_pass_end_title">Oyunu bitirmək?</string>
     <string name="go_pass_message">Növbənizi keçin və rəqibinizə ötürün.</string>
     <string name="go_pass_title">Növbəni ötür?</string>
@@ -54,8 +54,8 @@
     <string name="go_status_draw_text">Heç-heçə</string>
     <string name="go_status_game_over">Oyun bitdi</string>
     <string name="go_status_opponent_move">%1$s-in gedişi</string>
-    <string name="go_status_opponent_wins">%1$s - Şərhlər</string>
-    <string name="go_status_resigned_opponent">%1$s gedişi</string>
+    <string name="go_status_opponent_wins">%1$s qazandı</string>
+    <string name="go_status_resigned_opponent">%1$s təslim oldu — siz qazandınız!</string>
     <string name="go_status_resigned_self">Siz təslim oldunuz — %1$s qazanır</string>
     <string name="go_status_score">%1$s qalib — B:%2$s W:%3$s</string>
     <string name="go_status_you_win">Siz qazandınız!</string>
@@ -72,7 +72,7 @@
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Qaranın birinci başlamasını kompensasiya etmək üçün Ağın hesabına əlavə edilən xallar</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go lövhəsi, sizin gedişiniz. Naviqasiya üçün ox düymələrindən və ağ daş qoymaq üçün Enter və ya Space-dən istifadə edin.</string>
+    <string name="go_board_a11y">%1$d×%1$d Go lövhəsi</string>
     <string name="go_board_a11y_turn_black">%1$d×%1$d Go lövhəsi, qara daş qoymaq növbəsi sizindir</string>
     <string name="go_board_a11y_turn_white">%1$d×%1$d Go lövhəsi, ağ daş qoymaq növbəsi sizindir</string>
     <string name="go_status_scoring">Sayım — hesabla razılaşın və ya oyunu davam etdirin</string>

@@ -6,7 +6,7 @@
     <string name="staff_accounts_action_ban_title">Бүртгэлд хориг тавих</string>
     <string name="staff_accounts_action_suspend_title">Дансыг түр зогсоох</string>
     <string name="staff_accounts_action_unban_title">Хорио цуцлах</string>
-    <string name="staff_accounts_action_unsuspend_title">Түр зогсоосныг цуцлах</string>
+    <string name="staff_accounts_action_unsuspend_title">Түр зогсоолтыг арилгах</string>
     <string name="staff_accounts_any_seller">Бүгд</string>
     <string name="staff_accounts_any_status">Бүгд</string>
     <string name="staff_accounts_ban">Хориглох</string>
@@ -36,7 +36,7 @@
     <string name="staff_accounts_unbanned_toast">Бүртгэлийн хорио цуцлагдсан</string>
     <string name="staff_accounts_unnamed">Нэргүй</string>
     <string name="staff_accounts_unsuspend">Түр зогсоолтыг арилгах</string>
-    <string name="staff_accounts_unsuspended_toast">Бүртгэлийн түр зогсоолтыг цуцалсан</string>
+    <string name="staff_accounts_unsuspended_toast">Бүртгэлийн түр зогсоолтыг арилгалаа</string>
     <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_appeals_cancel">Цуцлах</string>
     <string name="staff_appeals_decide">Шийдэх</string>
@@ -62,7 +62,7 @@
     <string name="staff_audit_action_account_stripe_restricted">Stripe хязгаарлагдсан</string>
     <string name="staff_audit_action_account_suspended">Худалдагчаар түр зогсоосон</string>
     <string name="staff_audit_action_account_unbanned">Хоригоос гаргасан</string>
-    <string name="staff_audit_action_account_unsuspended">Түр зогсоолт цуцлагдсан</string>
+    <string name="staff_audit_action_account_unsuspended">Түр зогсоолтыг арилгалаа</string>
     <string name="staff_audit_action_auction_bid_placed">Санал гаргасан</string>
     <string name="staff_audit_action_auction_cancelled">Дуудлага худалдаа цуцлагдсан</string>
     <string name="staff_audit_action_auction_created">Дуудлага худалдаа үүсгэсэн</string>

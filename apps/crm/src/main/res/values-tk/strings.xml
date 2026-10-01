@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">Giriş dolandyryşy</string>
     <string name="crm_settings_not_set">Bellenilmedik</string>
     <string name="crm_settings_access_updated">Giriş täzelendi</string>
-    <string name="crm_settings_access_revoked">Giriş ret edildi</string>
+    <string name="crm_settings_access_revoked">Elýeterlilik yzyna alyndy</string>
     <string name="crm_people_search">Adamlary gözle</string>
     <string name="crm_access_tab_other">Beýleki</string>
     <string name="crm_access_select_group">Topar saýlaň</string>

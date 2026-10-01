@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">A\' cur ainm ùr air…</string>
     <string name="wikis_rename_page_success">Chaidh ainm ùr a chur air an duilleag</string>
     <string name="wikis_history_viewing">A’ sealltainn eachdraidh %1$s, tionndadh làithreach %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">Tionndadh %1$d</string>
     <string name="wikis_search_pages_placeholder">Lorg duilleagan a rèir tiotail no susbaint…</string>
     <string name="wikis_search_no_results">Cha do lorgadh duilleagan airson “%1$s”. Feuch briathran-luirg eile.</string>
     <string name="wikis_search_updated">Air ùrachadh %1$s</string>
@@ -294,7 +294,7 @@
         <item quantity="one">%d bheachd</item>
         <item quantity="two">%d bheachd</item>
         <item quantity="few">%d beachdan</item>
-        <item quantity="other">%d beachdan</item>
+        <item quantity="other">%d beachd</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
         <item quantity="one">%d fhreagairt</item>
@@ -306,37 +306,37 @@
         <item quantity="one">%d duilleag</item>
         <item quantity="two">%d dhuilleag</item>
         <item quantity="few">%d duilleagan</item>
-        <item quantity="other">%d duilleagan</item>
+        <item quantity="other">%d duilleag</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
         <item quantity="one">%d faidhle</item>
         <item quantity="two">%d fhaidhle</item>
         <item quantity="few">%d faidhlichean</item>
-        <item quantity="other">%d faidhlichean</item>
+        <item quantity="other">%d faidhle</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
         <item quantity="one">%d dealbh</item>
         <item quantity="two">%d dhealbh</item>
         <item quantity="few">%d dealbhan</item>
-        <item quantity="other">%d dealbhan</item>
+        <item quantity="other">%d dealbh</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
         <item quantity="one">%d sgrìobhainn</item>
         <item quantity="two">%d sgrìobhainn</item>
         <item quantity="few">%d sgrìobhainnean</item>
-        <item quantity="other">%d sgrìobhainnean</item>
+        <item quantity="other">%d sgrìobhainn</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
         <item quantity="one">%d duilleag leis an taga seo</item>
         <item quantity="two">%d dhuilleag leis an taga seo</item>
         <item quantity="few">%d duilleagan leis an taga seo</item>
-        <item quantity="other">%d duilleagan leis an taga seo</item>
+        <item quantity="other">%d duilleag leis an taga seo</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Fhuaras %1$d toradh airson "%2$s"</item>
-        <item quantity="two">Fhuaras %1$d thoradh airson "%2$s"</item>
-        <item quantity="few">Fhuaras %1$d toraidhean airson "%2$s"</item>
-        <item quantity="other">Fhuaras %1$d toraidhean airson "%2$s"</item>
+        <item quantity="one">Fhuaras %1$d toradh airson \"%2$s\"</item>
+        <item quantity="two">Fhuaras %1$d thoradh airson \"%2$s\"</item>
+        <item quantity="few">Fhuaras %1$d toraidhean airson \"%2$s\"</item>
+        <item quantity="other">Fhuaras %1$d toradh airson \"%2$s\"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Cha b\' urrainn dhuinn an caipsean a shàbhaladh</string>
     <string name="wikis_attachments_upload_types">Faidhlichean ris an cuirear taic: dealbhan, PDF, DOC, DOCX, TXT, agus MD.</string>
@@ -348,6 +348,6 @@
         <item quantity="one">A\' sealltainn a\' chiad %1$d bheachd.</item>
         <item quantity="two">A\' sealltainn a\' chiad %1$d beachdan.</item>
         <item quantity="few">A\' sealltainn a\' chiad %1$d beachdan.</item>
-        <item quantity="other">A\' sealltainn a\' chiad %1$d beachdan.</item>
+        <item quantity="other">A\' sealltainn a\' chiad %1$d beachd.</item>
     </plurals>
 </resources>

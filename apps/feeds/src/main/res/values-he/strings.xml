@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">המקור הוסר</string>
     <string name="feeds_settings_source_polling">בודק את המקור…</string>
     <string name="feeds_settings_access_updated">הגישה עודכנה</string>
-    <string name="feeds_settings_access_revoked">הגישה בוטלה</string>
+    <string name="feeds_settings_access_revoked">הגישה נשללה</string>
     <string name="feeds_settings_member_removed">החבר הוסר</string>
     <string name="feeds_settings_ai_mode_updated">מצב הבינה המלאכותית עודכן</string>
     <string name="feeds_settings_ai_account_updated">חשבון הבינה המלאכותית עודכן</string>
@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">מעולם לא נמשך</string>
     <string name="feeds_source_poll">תשאול</string>
     <string name="feeds_source_transform">המרת AI</string>
-    <string name="feeds_remove_source_confirm">להסיר את \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">מחק גם את הפוסטים המיובאים</string>
+    <string name="feeds_remove_source_confirm">פעולה זו תפסיק את ייבוא התוכן מ-\"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">מחק גם את הפוסטים שיובאו ממקור זה</string>
     <string name="feeds_suggested_credibility_title">אמינות מוצעת</string>
     <string name="feeds_suggested_credibility_body">Mochi מציע אמינות של %1$d. לקבל?</string>
     <string name="feeds_suggested_credibility_keep">השאר את הנוכחי</string>

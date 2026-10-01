@@ -120,8 +120,8 @@
     <string name="feeds_source_never_fetched">هەرگیز نەهێنراوە</string>
     <string name="feeds_source_poll">ڕاپرسی</string>
     <string name="feeds_source_transform">گۆڕانی AI</string>
-    <string name="feeds_remove_source_confirm">لابردنی \"%1$s\"؟</string>
-    <string name="feeds_remove_also_delete_posts">هەروەها بابەتە هاوردەکراوەکانیش بسڕەوە</string>
+    <string name="feeds_remove_source_confirm">ئەمە هاوردەکردنی ناوەڕۆک لە \"%1$s\" ڕادەگرێت.</string>
+    <string name="feeds_remove_also_delete_posts">هەروەها ئەو بابەتانەش بسڕەوە کە لەم سەرچاوەیەوە هاوردە کراون</string>
     <string name="feeds_suggested_credibility_title">متمانەی پێشنیارکراو</string>
     <string name="feeds_suggested_credibility_body">موچی متمانەی %1$d پێشنیار دەکات. وەردەگیرێت؟</string>
     <string name="feeds_suggested_credibility_keep">هەمانە بهێڵەرەوە</string>
@@ -168,8 +168,8 @@
     <string name="feeds_settings_field_server">ڕاژەکار</string>
     <string name="feeds_settings_name_edit_cd">دەستکاری ناو</string>
     <string name="feeds_settings_section_identity">ناسنامە</string>
-    <string name="feeds_unsubscribe">بەشداری هەڵبوەشێنەوە</string>
-    <string name="feeds_unsubscribed">بەشداری هەڵوەشایەوە</string>
+    <string name="feeds_unsubscribe">لابردنی بەشداری</string>
+    <string name="feeds_unsubscribed">بەشداری لابرا</string>
     <string name="feeds_access_level_comment_full">لێدوان، کاردانەوە و بینین</string>
     <string name="feeds_rss_mode_posts_comments">پۆستەکان و بۆچوونەکان</string>
     <string name="feeds_access_add_title">زیادکردنی دەستڕاگەیشتن</string>
@@ -178,7 +178,7 @@
     <string name="feeds_post_content">ناوەڕۆکی پۆست</string>
     <string name="feeds_enable_memories">چالاککردنی یادەوەرییەکان</string>
     <string name="feeds_permission_request_title">داواکاری مۆڵەت</string>
-    <string name="feeds_unsubscribe_confirm">بەشداریت لە فیدەکە هەڵبوەشێنیتەوە؟</string>
+    <string name="feeds_unsubscribe_confirm">بەشداری لە فیدەکە لاببرێت؟</string>
     <string name="feeds_settings_title">ڕێکخستنەکانی %1$s</string>
     <string name="feeds_source_transform_help">بۆ ناچالاککردن بەتاڵی بهێڵە.</string>
     <string name="feeds_settings_name_cancel_cd">هەڵوەشاندنەوەی دەستکاریکردن</string>
@@ -189,7 +189,7 @@
     <string name="feeds_create_first_post">یەکەم پۆست دروست بکە</string>
     <string name="feeds_rss_mode_posts">پۆستەکان</string>
     <string name="feeds_source_last_checked">دوایین پشکنین %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">بەشداری لە فید هەڵبوەشێنەوە</string>
+    <string name="feeds_settings_unsubscribe_section">لابردنی بەشداری لە فید</string>
     <string name="feeds_source_transform_hint">وەربگێڕە بۆ ئینگلیزی، و وەک خاڵی بچووک پیشانبدە.</string>
     <string name="feeds_source_url_hint_feed">ناسنامەی ئەنتیتی یان فینگەرپرینتی فید</string>
     <string name="feeds_source_credibility_label">متمانە</string>

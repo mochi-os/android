@@ -537,7 +537,7 @@
     <string name="market_sale_ship_submitting">Тэмдэглэж байна…</string>
     <string name="market_sale_ship_success">Илгээгдсэн гэж тэмдэглэгдсэн</string>
     <string name="market_sale_shipped_label">Илгээгдсэн</string>
-    <string name="market_sale_title">Хямдрал</string>
+    <string name="market_sale_title">Борлуулалт</string>
     <string name="market_sale_tracking_label">Хяналтын дугаар</string>
     <string name="market_sale_tracking_url_label">Дагах URL (заавал биш)</string>
     <string name="market_sales_empty_subtitle">Танай нийтэлсэн зараас захиалгууд энд харагдана.</string>
@@ -725,7 +725,7 @@
     <string name="market_audit_account_stripe_restricted">Stripe хязгаарлагдсан</string>
     <string name="market_audit_account_suspended">Худалдагчаар түр зогсоосон</string>
     <string name="market_audit_account_unbanned">Хоригоос гаргасан</string>
-    <string name="market_audit_account_unsuspended">Түр зогсоолт цуцлагдсан</string>
+    <string name="market_audit_account_unsuspended">Түр зогсоолтыг арилгалаа</string>
     <string name="market_audit_auction_bid_placed">Санал гаргасан</string>
     <string name="market_audit_auction_created">Дуудлага худалдаа үүсгэсэн</string>
     <string name="market_audit_auction_ended_sold">Дуудлага худалдаа зарагдсан</string>

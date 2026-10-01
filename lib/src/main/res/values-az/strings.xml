@@ -13,7 +13,7 @@
     <string name="auth_privacy_public">Açıq</string>
     <string name="auth_privacy_private">Şəxsi</string>
     <string name="auth_link_privacy">Məxfilik</string>
-    <string name="auth_use_different_account">Təhlükəsizlik açarı, barmaq izi və ya üz tanıma istifadə edin.</string>
+    <string name="auth_use_different_account">Başqa hesabdan istifadə et</string>
     <string name="auth_error_suspended_title">Hesab dayandırıldı</string>
     <string name="common_back">Geri</string>
     <string name="common_close">Bağla</string>
@@ -60,7 +60,7 @@
     <string name="notifications_empty">Bildiriş yoxdur</string>
     <string name="notifications_empty_unread">Hamısını oxudunuz</string>
     <string name="notifications_tab_unread">Oxunmamış</string>
-    <string name="notifications_tab_unread_count">Oxunmamış (%1$d)</string>
+    <string name="notifications_tab_unread_count">Oxunmamış (%1$s)</string>
     <string name="notifications_tab_all">Hamısı</string>
     <string name="notifications_mark_all_read">Hamısını oxunmuş işarələ</string>
     <string name="notifications_clear_all">Hamısını təmizlə</string>
@@ -115,7 +115,7 @@
     <string name="settings_background_theme">Temadan</string>
     <string name="settings_background_off">Heç biri</string>
     <string name="game_chat_empty">Hələ mesaj yoxdur</string>
-    <string name="game_chat_input_placeholder">Axtarmaq üçün yazın...</string>
+    <string name="game_chat_input_placeholder">Mesaj yazın…</string>
     <string name="game_chat_send">Mesaj göndər</string>
     <string name="game_chat_subject_you">Siz</string>
 
@@ -303,8 +303,8 @@
     <string name="rss_revoke">Girişi geri çağır</string>
     <string name="rss_revoke_title">RSS girişi geri çağırılsın?</string>
     <string name="rss_revoke_message">Bu lentə abunə olan hər şey onu almağı dayandıracaq. Sonra yeni URL kopyalaya bilərsiniz.</string>
-    <string name="rss_revoked">RSS girişi ləğv edildi</string>
-    <string name="rss_revoke_failed">RSS girişini ləğv etmək alınmadı</string>
+    <string name="rss_revoked">RSS girişi geri çağırıldı</string>
+    <string name="rss_revoke_failed">RSS girişini geri çağırmaq alınmadı</string>
     <string name="game_empty_title">Hələ oyun yoxdur</string>
     <string name="game_select_title">Oyun seçin</string>
     <string name="game_select_subtitle">Yan paneldən oyun seçin və ya yeni oyun başladın.</string>

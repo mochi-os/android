@@ -726,7 +726,7 @@
     <string name="market_audit_account_stripe_restricted">Stripe-ը սահմանափակված է</string>
     <string name="market_audit_account_suspended">Կասեցված է որպես վաճառող</string>
     <string name="market_audit_account_unbanned">Արգելքը հանվեց</string>
-    <string name="market_audit_account_unsuspended">Կասեցումը չեղարկվեց</string>
+    <string name="market_audit_account_unsuspended">Կասեցումը վերացվեց</string>
     <string name="market_audit_auction_bid_placed">Հայտը ներկայացվեց</string>
     <string name="market_audit_auction_created">Աճուրդը ստեղծվեց</string>
     <string name="market_audit_auction_ended_sold">Աճուրդը վաճառված է</string>

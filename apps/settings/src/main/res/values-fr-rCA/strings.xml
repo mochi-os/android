@@ -90,13 +90,12 @@
     <string name="route_empty">Aucune route configurée.</string>
     <string name="route_path">Chemin</string>
     <string name="route_method">Méthode</string>
-    <string name="route_method_app">Application</string>
     <string name="route_method_entity">Entité</string>
     <string name="route_method_redirect">Redirection</string>
     <string name="route_priority">Priorité</string>
     <string name="route_enabled">Activée</string>
     <string name="route_disabled">Désactivée</string>
-    <string name="route_meta">Priorité %1$d · %2$s</string>
+    <string name="route_meta">Priorité %1$s · %2$s</string>
     <string name="interests_title">Centres d\'intérêt</string>
     <string name="interests_search_placeholder">Rechercher des sujets à ajouter…</string>
     <string name="interests_empty">Aucun centre d\'intérêt pour l\'instant.</string>
@@ -109,7 +108,6 @@
     <string name="document_privacy_title">Politique de confidentialité</string>
     <string name="document_rules_title">Règles</string>
     <string name="document_terms_title">Conditions d\'utilisation</string>
-    <string name="notifprefs_title">Notifications</string>
     <string name="notifprefs_tab_categories">Catégories</string>
     <string name="notifprefs_tab_topics">Sujets</string>
     <string name="notifprefs_add_category">Ajouter une catégorie</string>
@@ -133,7 +131,6 @@
     <string name="system_status_download_from_packages">Télécharger depuis packages.mochi-os.org</string>
     <string name="system_status_copy">Copier</string>
     <string name="system_status_peers">Pairs</string>
-    <string name="system_status_known">Connus</string>
     <string name="system_status_peer_connected">Connecté</string>
     <string name="system_status_peer_disconnected">Déconnecté</string>
     <string name="system_status_peer_queued">Messages en file d\'attente</string>
@@ -279,7 +276,6 @@
     <string name="domain_delegation_delete_message">%1$s ne gérera plus les routes de ce domaine.</string>
     <string name="domain_delegation_delete_title">Supprimer la délégation?</string>
     <string name="domain_delegation_path">Chemin</string>
-    <string name="domain_delegation_user">Identifiant d\'utilisateur</string>
     <string name="domain_delegations">Délégations</string>
     <string name="domain_delegations_empty">Aucune délégation configurée.</string>
     <string name="domain_delete">Supprimer le domaine</string>
@@ -301,7 +297,6 @@
     <string name="account_close_confirm_title">Fermer votre compte ?</string>
     <string name="account_close_confirm_body">La suppression de votre compte sera planifiée et vous serez déconnecté. Vous pouvez l\'annuler en tout temps avant la date de suppression en vous reconnectant.</string>
     <string name="account_data_download">Télécharger</string>
-    <string name="route_target_app">Application</string>
     <string name="route_target_entity">Entité</string>
     <string name="route_target_url">URL</string>
     <string name="account_data_section">Vos données</string>
@@ -316,8 +311,6 @@
     <string name="system_status_reachability_public">Public</string>
     <string name="system_status_reachability_private">Privé</string>
     <string name="system_status_reachability_unknown">Inconnu</string>
-    <string name="system_status_relay">Via relais</string>
-    <string name="system_status_mesh">Maillage de diffusion</string>
     <string name="system_status_broadcast">Dernière diffusion</string>
     <string name="system_status_queued_broadcasts">Messages de diffusion en file d\'attente</string>
     <string name="system_setting_hostname_publish">Annoncer le nom d\'hôte et les domaines aux autres serveurs</string>
@@ -327,8 +320,8 @@
     <string name="system_status_awaiting_routing">Messages en attente de routage</string>
     <string name="system_status_relay_service">Service de relais</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Test envoyé à %1$d destination</item>
-        <item quantity="other">Test envoyé à %1$d destinations</item>
+        <item quantity="one">Test envoyé à %1$s destination</item>
+        <item quantity="other">Test envoyé à %1$s destinations</item>
     </plurals>
     <string name="login_title">Connexion</string>
     <string name="login_section_methods">Méthodes de connexion</string>

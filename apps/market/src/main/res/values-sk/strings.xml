@@ -557,7 +557,7 @@
     <string name="market_messages_send_failed">Správu sa nepodarilo odoslať</string>
     <string name="market_messages_thread_title">Konverzácia</string>
     <string name="market_messages_unread_badge">%1$d neprečítaných</string>
-    <string name="market_price_from">od %1$s</string>
+    <string name="market_price_from">Od %1$s</string>
     <string name="market_price_high_bid">Najvyššia ponuka: %1$s</string>
     <string name="market_price_instant_buy">okamžitý nákup: %1$s</string>
     <string name="market_price_per_month">%1$s / mesiac</string>
@@ -725,8 +725,8 @@
     <string name="market_audit_account_stripe_onboarded">Stripe nakonfigurovaný</string>
     <string name="market_audit_account_stripe_restricted">Stripe obmedzený</string>
     <string name="market_audit_account_suspended">Pozastavený ako predajca</string>
-    <string name="market_audit_account_unbanned">Zákaz zrušený</string>
-    <string name="market_audit_account_unsuspended">Pozastavenie zrušené</string>
+    <string name="market_audit_account_unbanned">Zákaz odvolaný</string>
+    <string name="market_audit_account_unsuspended">Pozastavenie ukončené</string>
     <string name="market_audit_auction_bid_placed">Ponuka podaná</string>
     <string name="market_audit_auction_created">Aukcia vytvorená</string>
     <string name="market_audit_auction_ended_sold">Aukcia predaná</string>

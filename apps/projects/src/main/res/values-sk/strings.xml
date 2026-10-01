@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">Nový</string>
     <string name="projects_settings_section_identity">Identita</string>
     <string name="projects_settings_access_updated">Prístup aktualizovaný</string>
-    <string name="projects_settings_access_revoked">Prístup zrušený</string>
+    <string name="projects_settings_access_revoked">Prístup odvolaný</string>
     <string name="projects_settings_section_access">Správa prístupu</string>
     <string name="projects_people_search">Hľadať ľudí</string>
     <string name="projects_settings_field_entity_id">ID entity</string>

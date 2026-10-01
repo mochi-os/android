@@ -40,7 +40,7 @@
     <string name="wikis_rss_copied">URL e RSS u kopjua në clipboard</string>
     <string name="wikis_rss_failed">Marrja e token RSS dështoi</string>
     <string name="wikis_rss_revoke">Revoko aksesin</string>
-    <string name="wikis_rss_revoked">Aksesi RSS u anulua</string>
+    <string name="wikis_rss_revoked">Qasja RSS u revokua</string>
     <string name="wikis_find_title">Gjej wikis</string>
     <string name="wikis_find_no_results">S\'u gjet asnjë wiki</string>
     <string name="wikis_find_recommended_section">Wiki të rekomanduara</string>
@@ -316,8 +316,8 @@
         <item quantity="other">%d faqe me këtë etiketë</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">U gjetën %1$d rezultat për "%2$s"</item>
-        <item quantity="other">U gjetën %1$d rezultate për "%2$s"</item>
+        <item quantity="one">U gjetën %1$d rezultat për \"%2$s\"</item>
+        <item quantity="other">U gjetën %1$d rezultate për \"%2$s\"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Legjenda nuk u ruajt dot</string>
     <string name="wikis_attachments_upload_types">Skedarët e mbështetur: imazhe, PDF, DOC, DOCX, TXT dhe MD.</string>

@@ -41,7 +41,7 @@
     <string name="wikis_rss_copied">RSS URL ક્લિપબોર્ડ પર કૉપિ થઈ</string>
     <string name="wikis_rss_failed">RSS ટોકન મેળવવામાં નિષ્ફળ</string>
     <string name="wikis_rss_revoke">ઍક્સેસ પાછું ખેંચો</string>
-    <string name="wikis_rss_revoked">RSS ઍક્સેસ રદ કરી</string>
+    <string name="wikis_rss_revoked">RSS ઍક્સેસ પાછું ખેંચ્યું</string>
     <string name="wikis_find_title">વિકિઓ શોધો</string>
     <string name="wikis_find_no_results">કોઈ wikis મળ્યા નથી</string>
     <string name="wikis_find_recommended_section">ભલામણ કરેલ wikis</string>
@@ -253,7 +253,7 @@
     <string name="wikis_rename_page_renaming">નામ બદલી રહ્યા છીએ…</string>
     <string name="wikis_rename_page_success">પેજનું નામ બદલ્યું</string>
     <string name="wikis_history_viewing">%1$s નો ઇતિહાસ જોઈ રહ્યા છીએ, વર્તમાન સંસ્કરણ %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">આવૃત્તિ %1$d</string>
     <string name="wikis_search_pages_placeholder">શીર્ષક કે સામગ્રી દ્વારા પૃષ્ઠો શોધો…</string>
     <string name="wikis_search_no_results">“%1$s” માટે કોઈ પૃષ્ઠ મળ્યું નથી. અલગ શોધ શબ્દો અજમાવો.</string>
     <string name="wikis_search_updated">%1$s અપડેટ કર્યું</string>

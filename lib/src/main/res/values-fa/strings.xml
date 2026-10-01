@@ -60,7 +60,7 @@
     <string name="notifications_empty">اعلانی وجود ندارد</string>
     <string name="notifications_empty_unread">همه‌چیز را دیده‌اید</string>
     <string name="notifications_tab_unread">خوانده‌نشده</string>
-    <string name="notifications_tab_unread_count">خوانده‌نشده (%1$d)</string>
+    <string name="notifications_tab_unread_count">خوانده‌نشده (%1$s)</string>
     <string name="notifications_tab_all">همه</string>
     <string name="notifications_mark_all_read">علامت‌گذاری همه خوانده‌شده</string>
     <string name="notifications_clear_all">پاک کردن همه</string>
@@ -303,8 +303,8 @@
     <string name="rss_revoke">ابطال دسترسی</string>
     <string name="rss_revoke_title">دسترسی RSS ابطال شود؟</string>
     <string name="rss_revoke_message">هر چیزی که مشترک این خوراک است دیگر آن را دریافت نمی‌کند. پس از آن می‌توانید نشانی جدیدی کپی کنید.</string>
-    <string name="rss_revoked">دسترسی RSS لغو شد</string>
-    <string name="rss_revoke_failed">لغو دسترسی RSS ناموفق بود</string>
+    <string name="rss_revoked">دسترسی RSS ابطال شد</string>
+    <string name="rss_revoke_failed">ابطال دسترسی RSS ناموفق بود</string>
     <string name="game_empty_title">هنوز بازی‌ای وجود ندارد</string>
     <string name="game_select_title">یک بازی انتخاب کنید</string>
     <string name="game_select_subtitle">از نوار کناری یک بازی انتخاب کنید یا بازی جدیدی شروع کنید.</string>

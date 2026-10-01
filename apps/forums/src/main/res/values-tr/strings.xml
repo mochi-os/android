@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">Moderasyon</string>
     <string name="forums_members_search">Üyeleri filtrele</string>
     <string name="forums_banner_description">Forumun üstünde gösterilen Markdown.</string>
-    <string name="forums_banner_placeholder">Bu foruma hoş geldiniz…</string>
+    <string name="forums_banner_placeholder">Banner metnini girin (Markdown desteklenir)…</string>
     <string name="forums_ai_mode_label">Mod: %1$s</string>
     <string name="forums_ai_mode_heading">Yapay zekâ modu</string>
     <string name="forums_ai_mode_off">Devre dışı</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">gün</string>
     <string name="forums_settings_banner_saved">Banner kaydedildi</string>
     <string name="forums_settings_access_updated">Erişim güncellendi</string>
-    <string name="forums_settings_access_revoked">Erişim iptal edildi</string>
+    <string name="forums_settings_access_revoked">Erişim kaldırıldı</string>
     <string name="forums_settings_member_removed">Üye kaldırıldı</string>
     <string name="forums_settings_prompt_saved">İstem kaydedildi</string>
     <string name="forums_settings_section_identity">Kimlik</string>

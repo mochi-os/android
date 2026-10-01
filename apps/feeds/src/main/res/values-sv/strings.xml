@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">Aldrig hämtad</string>
     <string name="feeds_source_poll">Avsökning</string>
     <string name="feeds_source_transform">AI-omvandling</string>
-    <string name="feeds_remove_source_confirm">Ta bort \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Radera även importerade inlägg</string>
+    <string name="feeds_remove_source_confirm">Detta stoppar importen av innehåll från \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Radera även inlägg som importerats från den här källan</string>
     <string name="feeds_suggested_credibility_title">Föreslagen trovärdighet</string>
     <string name="feeds_suggested_credibility_body">Mochi föreslår en trovärdighet på %1$d. Acceptera?</string>
     <string name="feeds_suggested_credibility_keep">Behåll nuvarande</string>

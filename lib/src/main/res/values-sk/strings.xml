@@ -60,7 +60,7 @@
     <string name="notifications_empty">Žiadne notifikácie</string>
     <string name="notifications_empty_unread">Máte všetko prečítané</string>
     <string name="notifications_tab_unread">Neprečítané</string>
-    <string name="notifications_tab_unread_count">Neprečítané (%1$d)</string>
+    <string name="notifications_tab_unread_count">Neprečítané (%1$s)</string>
     <string name="notifications_tab_all">Všetko</string>
     <string name="notifications_mark_all_read">Označiť všetko ako prečítané</string>
     <string name="notifications_clear_all">Vymazať všetko</string>
@@ -305,8 +305,8 @@
     <string name="rss_revoke">Odvolať prístup</string>
     <string name="rss_revoke_title">Odvolať prístup RSS?</string>
     <string name="rss_revoke_message">Všetko, čo je prihlásené na tento kanál, ho prestane dostávať. Potom môžete skopírovať novú adresu URL.</string>
-    <string name="rss_revoked">Prístup RSS zrušený</string>
-    <string name="rss_revoke_failed">Zrušenie prístupu RSS zlyhalo</string>
+    <string name="rss_revoked">Prístup RSS odvolaný</string>
+    <string name="rss_revoke_failed">Odvolanie prístupu RSS zlyhalo</string>
     <string name="game_empty_title">Zatiaľ žiadne hry</string>
     <string name="game_select_title">Vyberte hru</string>
     <string name="game_select_subtitle">Vyberte hru na bočnom paneli alebo začnite novú.</string>

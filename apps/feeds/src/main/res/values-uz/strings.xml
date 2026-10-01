@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">Manba olib tashlandi</string>
     <string name="feeds_settings_source_polling">Manba soʻraladi…</string>
     <string name="feeds_settings_access_updated">Kirish yangilandi</string>
-    <string name="feeds_settings_access_revoked">Kirish bekor qilindi</string>
+    <string name="feeds_settings_access_revoked">Kirish huquqi qaytarib olindi</string>
     <string name="feeds_settings_member_removed">Aʼzo olib tashlandi</string>
     <string name="feeds_settings_ai_mode_updated">AI rejimi yangilandi</string>
     <string name="feeds_settings_ai_account_updated">AI hisobi yangilandi</string>
@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">Hech qachon olinmagan</string>
     <string name="feeds_source_poll">So\'rov</string>
     <string name="feeds_source_transform">AI oʻzgartirish</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" olib tashlansinmi?</string>
-    <string name="feeds_remove_also_delete_posts">Import qilingan postlar ham o\'chirilsin</string>
+    <string name="feeds_remove_source_confirm">Bu \"%1$s\" manbasidan kontent importini toʻxtatadi.</string>
+    <string name="feeds_remove_also_delete_posts">Ushbu manbadan import qilingan postlar ham oʻchirilsin</string>
     <string name="feeds_suggested_credibility_title">Tavsiya etilgan ishonchlilik</string>
     <string name="feeds_suggested_credibility_body">Mochi %1$d ishonchlilikni tavsiya qiladi. Qabul qilasizmi?</string>
     <string name="feeds_suggested_credibility_keep">Joriyni saqlab qolish</string>

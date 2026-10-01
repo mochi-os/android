@@ -45,6 +45,8 @@
     <string name="route_delete_title">Dzēst maršrutu?</string>
     <string name="route_path">Ceļš</string>
     <string name="route_method">Metode</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Lietotne</string>
     <string name="route_method_entity">Entītija</string>
     <string name="route_method_redirect">Pāradresācija</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Lejupielādēt no packages.mochi-os.org</string>
     <string name="system_status_copy">Kopēt</string>
     <string name="system_status_peers">Vienlīdzīgie</string>
-    <string name="system_status_known">Zināmie</string>
+    <string name="system_status_peers_totals">Zināmie %1$s · Savienotie %2$s · Apraides mesh %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Zināmie %1$s · Savienotie %2$s</string>
     <string name="system_status_peer_connected">Savienots</string>
     <string name="system_status_peer_disconnected">Atvienots</string>
     <string name="system_status_peer_queued">Ziņojumi rindā</string>
@@ -216,9 +219,9 @@
     <string name="account_totp_disable_message">Jūs vairs nevarēsiet pierakstīties ar autentifikatora kodu.</string>
     <string name="account_recovery_none">Atkopšanas kodi nav ģenerēti.</string>
     <plurals name="account_recovery_count">
-        <item quantity="zero">Atlikuši %1$d atkopšanas kodi.</item>
-        <item quantity="one">Atlicis %1$d atkopšanas kods.</item>
-        <item quantity="other">Atlikuši %1$d atkopšanas kodi.</item>
+        <item quantity="zero">Atlikuši %1$s atkopšanas kodi.</item>
+        <item quantity="one">Atlicis %1$s atkopšanas kods.</item>
+        <item quantity="other">Atlikuši %1$s atkopšanas kodi.</item>
     </plurals>
     <string name="account_recovery_generate">Ģenerēt kodus</string>
     <string name="account_recovery_regenerate">Pārģenerēt kodus</string>
@@ -235,7 +238,7 @@
     <string name="account_last_used">Pēdējoreiz lietots %1$s</string>
     <string name="route_delete_message">Tas noņems maršrutu ceļam \"%1$s\".</string>
     <string name="route_empty">Nav konfigurētu maršrutu.</string>
-    <string name="route_meta">Prioritāte %1$d · %2$s</string>
+    <string name="route_meta">Prioritāte %1$s · %2$s</string>
     <string name="interests_search_placeholder">Meklēt tēmas, ko pievienot…</string>
     <string name="interests_empty">Vēl nav interešu.</string>
     <string name="interests_summary_regenerate">Pārģenerēt kopsavilkumu</string>
@@ -269,9 +272,9 @@
     <string name="system_users_revoke_all_title">Atsaukt visas sesijas?</string>
     <string name="system_users_revoke_all_message">Visas aktīvās šī lietotāja sesijas tiks izrakstītas.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="zero">Rāda %1$d–%2$d no %3$d lietotājiem</item>
-        <item quantity="one">Rāda %1$d–%2$d no %3$d lietotāja</item>
-        <item quantity="other">Rāda %1$d–%2$d no %3$d lietotājiem</item>
+        <item quantity="zero">Rāda %1$s–%2$s no %3$s lietotājiem</item>
+        <item quantity="one">Rāda %1$s–%2$s no %3$s lietotāja</item>
+        <item quantity="other">Rāda %1$s–%2$s no %3$s lietotājiem</item>
     </plurals>
     <string name="account_title">Konts</string>
     <string name="account_section_identity">Identitāte</string>
@@ -305,14 +308,14 @@
     <string name="domain_verify">Verificēt DNS</string>
     <string name="settings_home_domains">Domēni</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="zero">Tests nosūtīts uz %1$d galamērķiem</item>
-        <item quantity="one">Tests nosūtīts uz %1$d galamērķi</item>
-        <item quantity="other">Tests nosūtīts uz %1$d galamērķiem</item>
+        <item quantity="zero">Tests nosūtīts uz %1$s galamērķiem</item>
+        <item quantity="one">Tests nosūtīts uz %1$s galamērķi</item>
+        <item quantity="other">Tests nosūtīts uz %1$s galamērķiem</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">Atsaukta %1$d sesija</item>
-        <item quantity="other">Atsauktas %1$d sesijas</item>
-        <item quantity="zero">Atsauktas %1$d sesijas</item>
+        <item quantity="one">Atsaukta %1$s sesija</item>
+        <item quantity="other">Atsauktas %1$s sesijas</item>
+        <item quantity="zero">Atsauktas %1$s sesijas</item>
     </plurals>
     <string name="login_title">Pierakstīšanās</string>
     <string name="login_section_methods">Pieteikšanās metodes</string>
@@ -343,8 +346,7 @@
     <string name="system_status_reachability_public">Publisks</string>
     <string name="system_status_reachability_private">Privāts</string>
     <string name="system_status_reachability_unknown">Nezināms</string>
-    <string name="system_status_relay">Caur releju</string>
-    <string name="system_status_mesh">Apraides mesh</string>
+    <string name="system_status_reachability_relay">%1$s · caur releju</string>
     <string name="system_status_broadcast">Pēdējā apraide</string>
     <string name="system_status_queued_broadcasts">Rindā esošie apraides ziņojumi</string>
     <string name="system_setting_hostname_publish">Paziņot resursdatora nosaukumu un domēnus citiem serveriem</string>
@@ -377,10 +379,12 @@
     <string name="accounts_device_seen">Pēdējoreiz redzēts %1$s</string>
     <string name="notifprefs_device_app">%1$s · lietotne</string>
     <string name="notifprefs_device_push">%1$s · push paziņojumi</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="zero">Tests nosūtīts uz %1$d no %2$d galamērķiem</item>
-        <item quantity="one">Tests nosūtīts uz %1$d no %2$d galamērķa</item>
-        <item quantity="other">Tests nosūtīts uz %1$d no %2$d galamērķiem</item>
+        <item quantity="zero">Tests nosūtīts uz %1$s no %2$s galamērķiem</item>
+        <item quantity="one">Tests nosūtīts uz %1$s no %2$s galamērķa</item>
+        <item quantity="other">Tests nosūtīts uz %1$s no %2$s galamērķiem</item>
     </plurals>
     <string name="notifprefs_test_none">Galamērķi nav konfigurēti</string>
     <string name="notifprefs_transport_fcm">Android push paziņojumi</string>
@@ -404,28 +408,28 @@
     <string name="system_documents_discard_title">Atmest izmaiņas?</string>
     <string name="system_documents_discard">Atmest</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="zero">%1$d veiksmīgi</item>
-        <item quantity="one">%1$d veiksmīgs</item>
-        <item quantity="other">%1$d veiksmīgi</item>
+        <item quantity="zero">%1$s veiksmīgi</item>
+        <item quantity="one">%1$s veiksmīgs</item>
+        <item quantity="other">%1$s veiksmīgi</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="zero">%1$d neveiksmīgi</item>
-        <item quantity="one">%1$d neveiksmīgs</item>
-        <item quantity="other">%1$d neveiksmīgi</item>
+        <item quantity="zero">%1$s neveiksmīgi</item>
+        <item quantity="one">%1$s neveiksmīgs</item>
+        <item quantity="other">%1$s neveiksmīgi</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="zero">%1$d / %2$d rezervācijas</item>
-        <item quantity="one">%1$d / %2$d rezervācija</item>
-        <item quantity="other">%1$d / %2$d rezervācijas</item>
+        <item quantity="zero">%1$s / %2$s rezervācijas</item>
+        <item quantity="one">%1$s / %2$s rezervācija</item>
+        <item quantity="other">%1$s / %2$s rezervācijas</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="zero">%1$d ķēdes</item>
-        <item quantity="one">%1$d ķēde</item>
-        <item quantity="other">%1$d ķēdes</item>
+        <item quantity="zero">%1$s ķēdes</item>
+        <item quantity="one">%1$s ķēde</item>
+        <item quantity="other">%1$s ķēdes</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="zero">%1$d noraidīti</item>
-        <item quantity="one">%1$d noraidīts</item>
-        <item quantity="other">%1$d noraidīti</item>
+        <item quantity="zero">%1$s noraidīti</item>
+        <item quantity="one">%1$s noraidīts</item>
+        <item quantity="other">%1$s noraidīti</item>
     </plurals>
 </resources>

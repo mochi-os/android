@@ -60,7 +60,7 @@
     <string name="notifications_empty">L-ebda notifiki</string>
     <string name="notifications_empty_unread">Aġġornat kollox</string>
     <string name="notifications_tab_unread">Mhux moqri</string>
-    <string name="notifications_tab_unread_count">Mhux maqru (%1$d)</string>
+    <string name="notifications_tab_unread_count">Mhux maqru (%1$s)</string>
     <string name="notifications_tab_all">Kollha</string>
     <string name="notifications_mark_all_read">Immarka kollox maqru</string>
     <string name="notifications_clear_all">Naddaf kollox</string>
@@ -289,8 +289,8 @@
         <item quantity="one">Uri kumment ieħor fuq dan il-post</item>
         <item quantity="two">Uri %1$d kummenti oħra fuq dan il-post</item>
         <item quantity="few">Uri %1$d kummenti oħra fuq dan il-post</item>
-        <item quantity="many">Uri %1$d kumment oħra fuq dan il-post</item>
-        <item quantity="other">Uri %1$d kummenti oħra fuq dan il-post</item>
+        <item quantity="many">Uri %1$d kumment ieħor fuq dan il-post</item>
+        <item quantity="other">Uri %1$d kumment ieħor fuq dan il-post</item>
     </plurals>
     <string name="lightbox_comments">Kummenti</string>
     <string name="common_attachment_unavailable">Anness mhux disponibbli temporanjament</string>

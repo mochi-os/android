@@ -94,10 +94,6 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Feed de Mochi</string>
     <string name="feeds_source_type_feed_memories">Recuerdos</string>
-    <string name="feeds_source_transform">Transformar</string>
-    <string name="feeds_remove_source">Eliminar fuente</string>
-    <string name="feeds_remove_source_confirm">¿Eliminar \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">También eliminar las publicaciones importadas</string>
     <string name="feeds_suggested_credibility_title">Credibilidad sugerida</string>
     <string name="feeds_suggested_credibility_body">Mochi sugiere una credibilidad de %1$d. ¿Aceptar?</string>
     <string name="feeds_suggested_credibility_keep">Mantener la actual</string>
@@ -141,7 +137,6 @@
     <string name="feeds_settings_field_fingerprint">Huella digital</string>
     <string name="feeds_settings_name_edit_cd">Editá el nombre</string>
     <string name="feeds_settings_section_identity">Identidad</string>
-    <string name="feeds_unsubscribed">Suscripción cancelada</string>
     <string name="feeds_access_level_comment_full">Comentar, reaccionar y ver</string>
     <string name="feeds_rss_mode_posts_comments">Posteos y comentarios</string>
     <string name="feeds_access_add_title">Agregá acceso</string>
@@ -161,7 +156,6 @@
     <string name="feeds_create_first_post">Creá el primer posteo</string>
     <string name="feeds_rss_mode_posts">Posteos</string>
     <string name="feeds_source_last_checked">Última verificación: %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">Cancelá la suscripción al feed</string>
     <string name="feeds_source_transform_hint">Traducí al inglés y mostralo como viñetas.</string>
     <string name="feeds_source_url_hint_feed">ID de entidad del feed o huella digital</string>
     <string name="feeds_source_credibility_label">Credibilidad</string>

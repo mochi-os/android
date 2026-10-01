@@ -45,6 +45,8 @@
     <string name="route_delete_title">Sguab às slighe?</string>
     <string name="route_path">Slighe</string>
     <string name="route_method">Dòigh</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Aplacaid</string>
     <string name="route_method_entity">Aonad</string>
     <string name="route_method_redirect">Ath-stiùireadh</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Luchdaich a-nuas o packages.mochi-os.org</string>
     <string name="system_status_copy">Dèan lethbhreac</string>
     <string name="system_status_peers">Co-aoisean</string>
-    <string name="system_status_known">Aithnichte</string>
+    <string name="system_status_peers_totals">Aithnichte %1$s · Ceangailte %2$s · Mogal craolaidh %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Aithnichte %1$s · Ceangailte %2$s</string>
     <string name="system_status_peer_connected">Ceangailte</string>
     <string name="system_status_peer_disconnected">Gun cheangal</string>
     <string name="system_status_peer_queued">Teachdaireachdan sa chiutha</string>
@@ -216,10 +219,10 @@
     <string name="account_totp_disable_message">Cha bhi e comasach dhut log a-steach le còd dearbhair tuilleadh.</string>
     <string name="account_recovery_none">Cha deach còdan ath-bhuannachadh a chruthachadh.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d chòd ath-bhuannachadh air fhàgail.</item>
-        <item quantity="two">%1$d chòd ath-bhuannachadh air fhàgail.</item>
-        <item quantity="few">%1$d còdan ath-bhuannachadh air am fàgail.</item>
-        <item quantity="other">%1$d còd ath-bhuannachadh air fhàgail.</item>
+        <item quantity="one">%1$s chòd ath-bhuannachadh air fhàgail.</item>
+        <item quantity="two">%1$s chòd ath-bhuannachadh air fhàgail.</item>
+        <item quantity="few">%1$s còdan ath-bhuannachadh air am fàgail.</item>
+        <item quantity="other">%1$s còd ath-bhuannachadh air fhàgail.</item>
     </plurals>
     <string name="account_recovery_generate">Cruthaich còdan</string>
     <string name="account_recovery_regenerate">Ath-chruthaich còdan</string>
@@ -236,7 +239,7 @@
     <string name="account_last_used">Chleachdte mu dheireadh %1$s</string>
     <string name="route_delete_message">Bheir seo air falbh an t-slighe airson na slighe \"%1$s\".</string>
     <string name="route_empty">Chan eil slighean air an rèiteachadh.</string>
-    <string name="route_meta">Prìomhachas %1$d · %2$s</string>
+    <string name="route_meta">Prìomhachas %1$s · %2$s</string>
     <string name="interests_search_placeholder">Lorg cuspairean ri chur ris…</string>
     <string name="interests_empty">Chan eil ùidhean fhathast.</string>
     <string name="interests_summary_regenerate">Ath-ghin an geàrr-iomradh</string>
@@ -270,10 +273,10 @@
     <string name="system_users_revoke_all_title">Thoir air falbh a h-uile seasan?</string>
     <string name="system_users_revoke_all_message">Thèid a h-uile seasan beò aig a\' chleachdaiche seo a-mach.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">A\' sealltainn %1$d–%2$d à %3$d chleachdaiche</item>
-        <item quantity="two">A\' sealltainn %1$d–%2$d à %3$d chleachdaiche</item>
-        <item quantity="few">A\' sealltainn %1$d–%2$d à %3$d cleachdaichean</item>
-        <item quantity="other">A\' sealltainn %1$d–%2$d à %3$d cleachdaiche</item>
+        <item quantity="one">A\' sealltainn %1$s–%2$s à %3$s chleachdaiche</item>
+        <item quantity="two">A\' sealltainn %1$s–%2$s à %3$s chleachdaiche</item>
+        <item quantity="few">A\' sealltainn %1$s–%2$s à %3$s cleachdaichean</item>
+        <item quantity="other">A\' sealltainn %1$s–%2$s à %3$s cleachdaiche</item>
     </plurals>
     <string name="account_title">Cunntas</string>
     <string name="account_section_identity">Dearbh-aithne</string>
@@ -307,16 +310,16 @@
     <string name="domain_verify">Dearbh DNS</string>
     <string name="settings_home_domains">Àrainnean</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Chaidh an deuchainn a chur gu %1$d cheann-uidhe</item>
-        <item quantity="two">Chaidh an deuchainn a chur gu %1$d cheann-uidhe</item>
-        <item quantity="few">Chaidh an deuchainn a chur gu %1$d cinn-uidhe</item>
-        <item quantity="other">Chaidh an deuchainn a chur gu %1$d ceann-uidhe</item>
+        <item quantity="one">Chaidh an deuchainn a chur gu %1$s cheann-uidhe</item>
+        <item quantity="two">Chaidh an deuchainn a chur gu %1$s cheann-uidhe</item>
+        <item quantity="few">Chaidh an deuchainn a chur gu %1$s cinn-uidhe</item>
+        <item quantity="other">Chaidh an deuchainn a chur gu %1$s ceann-uidhe</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="few">Cùl-ghairmte %1$d seiseanan</item>
-        <item quantity="one">Cùl-ghairmte %1$d sheisean</item>
-        <item quantity="other">Cùl-ghairmte %1$d seiseanan</item>
-        <item quantity="two">Cùl-ghairmte %1$d sheisean</item>
+        <item quantity="few">Cùl-ghairmte %1$s seiseanan</item>
+        <item quantity="one">Cùl-ghairmte %1$s sheisean</item>
+        <item quantity="other">Cùl-ghairmte %1$s seisean</item>
+        <item quantity="two">Cùl-ghairmte %1$s sheisean</item>
     </plurals>
     <string name="login_title">Clàradh a-steach</string>
     <string name="login_section_methods">Dòighean clàraidh a-steach</string>
@@ -347,8 +350,7 @@
     <string name="system_status_reachability_public">Poblach</string>
     <string name="system_status_reachability_private">Prìobhaideach</string>
     <string name="system_status_reachability_unknown">Neo-aithnichte</string>
-    <string name="system_status_relay">Tro ath-sheachadan</string>
-    <string name="system_status_mesh">Mogal craolaidh</string>
+    <string name="system_status_reachability_relay">%1$s · tro ath-sheachadan</string>
     <string name="system_status_broadcast">An craoladh mu dheireadh</string>
     <string name="system_status_queued_broadcasts">Teachdaireachdan craolaidh sa chiudha</string>
     <string name="system_setting_hostname_publish">Foillsich ainm an òstair agus na h-àrainnean do fhrithealaichean eile</string>
@@ -381,11 +383,13 @@
     <string name="accounts_device_seen">Air fhaicinn mu dheireadh %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplacaid</string>
     <string name="notifprefs_device_push">%1$s · putadh</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Chaidh an deuchainn a chur gu %1$d à %2$d cheann-uidhe</item>
-        <item quantity="two">Chaidh an deuchainn a chur gu %1$d à %2$d cheann-uidhe</item>
-        <item quantity="few">Chaidh an deuchainn a chur gu %1$d à %2$d cinn-uidhe</item>
-        <item quantity="other">Chaidh an deuchainn a chur gu %1$d à %2$d ceann-uidhe</item>
+        <item quantity="one">Chaidh an deuchainn a chur gu %1$s à %2$s cheann-uidhe</item>
+        <item quantity="two">Chaidh an deuchainn a chur gu %1$s à %2$s cheann-uidhe</item>
+        <item quantity="few">Chaidh an deuchainn a chur gu %1$s à %2$s cinn-uidhe</item>
+        <item quantity="other">Chaidh an deuchainn a chur gu %1$s à %2$s ceann-uidhe</item>
     </plurals>
     <string name="notifprefs_test_none">Cha deach cinn-uidhe a chur air dòigh</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
@@ -409,33 +413,33 @@
     <string name="system_documents_discard_title">A bheil thu airson na h-atharraichean a thilgeil air falbh?</string>
     <string name="system_documents_discard">Tilg air falbh</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d soirbheachail</item>
-        <item quantity="two">%1$d soirbheachail</item>
-        <item quantity="few">%1$d soirbheachail</item>
-        <item quantity="other">%1$d soirbheachail</item>
+        <item quantity="one">%1$s soirbheachail</item>
+        <item quantity="two">%1$s soirbheachail</item>
+        <item quantity="few">%1$s soirbheachail</item>
+        <item quantity="other">%1$s soirbheachail</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d dh\'fhàillig</item>
-        <item quantity="two">%1$d dh\'fhàillig</item>
-        <item quantity="few">%1$d dh\'fhàillig</item>
-        <item quantity="other">%1$d dh\'fhàillig</item>
+        <item quantity="one">%1$s dh\'fhàillig</item>
+        <item quantity="two">%1$s dh\'fhàillig</item>
+        <item quantity="few">%1$s dh\'fhàillig</item>
+        <item quantity="other">%1$s dh\'fhàillig</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d àite glèidhte</item>
-        <item quantity="two">%1$d / %2$d àite glèidhte</item>
-        <item quantity="few">%1$d / %2$d àiteachan glèidhte</item>
-        <item quantity="other">%1$d / %2$d àite glèidhte</item>
+        <item quantity="one">%1$s / %2$s àite glèidhte</item>
+        <item quantity="two">%1$s / %2$s àite glèidhte</item>
+        <item quantity="few">%1$s / %2$s àiteachan glèidhte</item>
+        <item quantity="other">%1$s / %2$s àite glèidhte</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d chuairt</item>
-        <item quantity="two">%1$d chuairt</item>
-        <item quantity="few">%1$d cuairtean</item>
-        <item quantity="other">%1$d cuairt</item>
+        <item quantity="one">%1$s chuairt</item>
+        <item quantity="two">%1$s chuairt</item>
+        <item quantity="few">%1$s cuairtean</item>
+        <item quantity="other">%1$s cuairt</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d air a dhiùltadh</item>
-        <item quantity="two">%1$d air an diùltadh</item>
-        <item quantity="few">%1$d air an diùltadh</item>
-        <item quantity="other">%1$d air an diùltadh</item>
+        <item quantity="one">%1$s air a dhiùltadh</item>
+        <item quantity="two">%1$s air an diùltadh</item>
+        <item quantity="few">%1$s air an diùltadh</item>
+        <item quantity="other">%1$s air an diùltadh</item>
     </plurals>
 </resources>

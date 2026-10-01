@@ -151,7 +151,7 @@
     <string name="forums_access_level_moderate">Moderar</string>
     <string name="forums_members_search">Filtrar miembros</string>
     <string name="forums_banner_description">Markdown mostrado en la parte superior del foro.</string>
-    <string name="forums_banner_placeholder">Bienvenido a este foro…</string>
+    <string name="forums_banner_placeholder">Introduce el texto del banner (admite Markdown)…</string>
     <string name="forums_ai_mode_label">Modo: %1$s</string>
     <string name="forums_ai_mode_heading">Modo de IA</string>
     <string name="forums_ai_mode_off">Desactivado</string>
@@ -293,7 +293,7 @@
     <string name="forums_settings_ai_updated">Ajustes de IA actualizados</string>
     <string name="forums_settings_forum_renamed">Foro renombrado</string>
     <string name="forums_settings_name_clear_cd">Borrar nombre</string>
-    <string name="forums_settings_unsubscribe_section">Cancelar la suscripción al foro</string>
+    <string name="forums_settings_unsubscribe_section">Anular la suscripción al foro</string>
     <string name="forums_share_link_title">Enlace del foro</string>
     <string name="forums_find_found_by_url">Encontrado por URL</string>
     <string name="forums_moderation_pending_posts">Publicaciones pendientes (%1$d)</string>

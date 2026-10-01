@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">سورس ہٹا دیا گیا</string>
     <string name="feeds_settings_source_polling">ماخذ دیکھا جا رہا ہے…</string>
     <string name="feeds_settings_access_updated">رسائی اپ ڈیٹ ہو گئی</string>
-    <string name="feeds_settings_access_revoked">رسائی منسوخ کر دی گئی</string>
+    <string name="feeds_settings_access_revoked">رسائی واپس لے لی گئی</string>
     <string name="feeds_settings_member_removed">ممبر ہٹا دیا گیا</string>
     <string name="feeds_settings_ai_mode_updated">AI موڈ اپڈیٹ کردیا گیا</string>
     <string name="feeds_settings_ai_account_updated">AI اکاؤنٹ اپڈیٹ کردیا گیا</string>
@@ -112,8 +112,8 @@
     <string name="feeds_source_never_fetched">کبھی حاصل نہیں کیا گیا</string>
     <string name="feeds_source_poll">پول</string>
     <string name="feeds_source_transform">AI تبدیلی</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" کو ہٹائیں؟</string>
-    <string name="feeds_remove_also_delete_posts">درآمد شدہ پوسٹس بھی حذف کریں</string>
+    <string name="feeds_remove_source_confirm">اس سے \"%1$s\" سے مواد کی درآمد رک جائے گی۔</string>
+    <string name="feeds_remove_also_delete_posts">اس سورس سے درآمد شدہ پوسٹس بھی حذف کریں</string>
     <string name="feeds_suggested_credibility_title">تجویز کردہ اعتبار</string>
     <string name="feeds_suggested_credibility_body">Mochi %1$d کے اعتبار کی تجویز کرتا ہے۔ قبول کریں؟</string>
     <string name="feeds_suggested_credibility_keep">موجودہ رکھیں</string>

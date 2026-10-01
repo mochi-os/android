@@ -60,7 +60,7 @@
     <string name="notifications_empty">Нет уведомлений</string>
     <string name="notifications_empty_unread">Вы всё просмотрели</string>
     <string name="notifications_tab_unread">Непрочитанные</string>
-    <string name="notifications_tab_unread_count">Непрочитанные (%1$d)</string>
+    <string name="notifications_tab_unread_count">Непрочитанные (%1$s)</string>
     <string name="notifications_tab_all">Все</string>
     <string name="notifications_mark_all_read">Отметить все прочитанным</string>
     <string name="notifications_clear_all">Очистить всё</string>

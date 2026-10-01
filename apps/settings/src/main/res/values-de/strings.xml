@@ -45,6 +45,8 @@
     <string name="route_delete_title">Route löschen?</string>
     <string name="route_path">Pfad</string>
     <string name="route_method">Methode</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">App</string>
     <string name="route_method_entity">Entität</string>
     <string name="route_method_redirect">Weiterleitung</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Von packages.mochi-os.org herunterladen</string>
     <string name="system_status_copy">Kopieren</string>
     <string name="system_status_peers">Peers</string>
-    <string name="system_status_known">Bekannt</string>
+    <string name="system_status_peers_totals">Bekannt %1$s · Verbunden %2$s · Broadcast-Mesh %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Bekannt %1$s · Verbunden %2$s</string>
     <string name="system_status_peer_connected">Verbunden</string>
     <string name="system_status_peer_disconnected">Getrennt</string>
     <string name="system_status_peer_queued">Nachrichten in Warteschlange</string>
@@ -216,8 +219,8 @@
     <string name="account_totp_disable_message">Du kannst dich dann nicht mehr mit einem Authenticator-Code anmelden.</string>
     <string name="account_recovery_none">Keine Wiederherstellungscodes generiert.</string>
     <plurals name="account_recovery_count">
-        <item quantity="one">%1$d verbleibender Wiederherstellungscode.</item>
-        <item quantity="other">%1$d verbleibende Wiederherstellungscodes.</item>
+        <item quantity="one">%1$s verbleibender Wiederherstellungscode.</item>
+        <item quantity="other">%1$s verbleibende Wiederherstellungscodes.</item>
     </plurals>
     <string name="account_recovery_generate">Codes generieren</string>
     <string name="account_recovery_regenerate">Codes neu generieren</string>
@@ -234,7 +237,7 @@
     <string name="account_last_used">Zuletzt verwendet %1$s</string>
     <string name="route_delete_message">Dies entfernt die Route für den Pfad „%1$s\".</string>
     <string name="route_empty">Keine Routen konfiguriert.</string>
-    <string name="route_meta">Priorität %1$d · %2$s</string>
+    <string name="route_meta">Priorität %1$s · %2$s</string>
     <string name="interests_search_placeholder">Themen zum Hinzufügen suchen…</string>
     <string name="interests_empty">Noch keine Interessen.</string>
     <string name="interests_summary_regenerate">Zusammenfassung neu generieren</string>
@@ -268,8 +271,8 @@
     <string name="system_users_revoke_all_title">Alle Sitzungen widerrufen?</string>
     <string name="system_users_revoke_all_message">Alle aktiven Sitzungen dieses Benutzers werden abgemeldet.</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="one">Zeige %1$d–%2$d von %3$d Benutzer</item>
-        <item quantity="other">Zeige %1$d–%2$d von %3$d Benutzern</item>
+        <item quantity="one">Zeige %1$s–%2$s von %3$s Benutzer</item>
+        <item quantity="other">Zeige %1$s–%2$s von %3$s Benutzern</item>
     </plurals>
     <string name="account_title">Konto</string>
     <string name="account_section_identity">Identität</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS verifizieren</string>
     <string name="settings_home_domains">Domains</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Test an %1$d Ziel gesendet</item>
-        <item quantity="other">Test an %1$d Ziele gesendet</item>
+        <item quantity="one">Test an %1$s Ziel gesendet</item>
+        <item quantity="other">Test an %1$s Ziele gesendet</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$d Sitzung widerrufen</item>
-        <item quantity="other">%1$d Sitzungen widerrufen</item>
+        <item quantity="one">%1$s Sitzung widerrufen</item>
+        <item quantity="other">%1$s Sitzungen widerrufen</item>
     </plurals>
     <string name="login_title">Anmeldung</string>
     <string name="login_section_methods">Anmeldemethoden</string>
@@ -339,8 +342,7 @@
     <string name="system_status_reachability_public">Öffentlich</string>
     <string name="system_status_reachability_private">Privat</string>
     <string name="system_status_reachability_unknown">Unbekannt</string>
-    <string name="system_status_relay">Über Relay</string>
-    <string name="system_status_mesh">Broadcast-Mesh</string>
+    <string name="system_status_reachability_relay">%1$s · über Relais</string>
     <string name="system_status_broadcast">Letzter Broadcast</string>
     <string name="system_status_queued_broadcasts">Broadcast-Nachrichten in Warteschlange</string>
     <string name="system_setting_hostname_publish">Hostname und Domains anderen Servern bekanntgeben</string>
@@ -373,9 +375,11 @@
     <string name="accounts_device_seen">Zuletzt gesehen %1$s</string>
     <string name="notifprefs_device_app">%1$s · App</string>
     <string name="notifprefs_device_push">%1$s · Push</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="one">Test an %1$d von %2$d Ziel gesendet</item>
-        <item quantity="other">Test an %1$d von %2$d Zielen gesendet</item>
+        <item quantity="one">Test an %1$s von %2$s Ziel gesendet</item>
+        <item quantity="other">Test an %1$s von %2$s Zielen gesendet</item>
     </plurals>
     <string name="notifprefs_test_none">Keine Ziele konfiguriert</string>
     <string name="notifprefs_transport_fcm">Android-Push</string>
@@ -399,23 +403,23 @@
     <string name="system_documents_discard_title">Änderungen verwerfen?</string>
     <string name="system_documents_discard">Verwerfen</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="one">%1$d erfolgreich</item>
-        <item quantity="other">%1$d erfolgreich</item>
+        <item quantity="one">%1$s erfolgreich</item>
+        <item quantity="other">%1$s erfolgreich</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="one">%1$d fehlgeschlagen</item>
-        <item quantity="other">%1$d fehlgeschlagen</item>
+        <item quantity="one">%1$s fehlgeschlagen</item>
+        <item quantity="other">%1$s fehlgeschlagen</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="one">%1$d / %2$d Reservierung</item>
-        <item quantity="other">%1$d / %2$d Reservierungen</item>
+        <item quantity="one">%1$s / %2$s Reservierung</item>
+        <item quantity="other">%1$s / %2$s Reservierungen</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="one">%1$d Verbindung</item>
-        <item quantity="other">%1$d Verbindungen</item>
+        <item quantity="one">%1$s Verbindung</item>
+        <item quantity="other">%1$s Verbindungen</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="one">%1$d abgelehnt</item>
-        <item quantity="other">%1$d abgelehnt</item>
+        <item quantity="one">%1$s abgelehnt</item>
+        <item quantity="other">%1$s abgelehnt</item>
     </plurals>
 </resources>

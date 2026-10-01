@@ -113,8 +113,8 @@
     <string name="feeds_source_never_fetched">Inoiz ez eskuratua</string>
     <string name="feeds_source_poll">Galdetu</string>
     <string name="feeds_source_transform">AA bihurketa</string>
-    <string name="feeds_remove_source_confirm">Kendu \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Ezabatu inportatutako argitalpenak ere</string>
+    <string name="feeds_remove_source_confirm">Honek \"%1$s\" iturritik edukia inportatzeari utziko dio.</string>
+    <string name="feeds_remove_also_delete_posts">Ezabatu iturri honetatik inportatutako argitalpenak ere</string>
     <string name="feeds_suggested_credibility_title">Iradokitako sinesgarritasuna</string>
     <string name="feeds_suggested_credibility_body">Mochik %1$d(e)ko sinesgarritasuna iradokitzen du. Onartu?</string>
     <string name="feeds_suggested_credibility_keep">Mantendu unekoa</string>

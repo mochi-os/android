@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">ಮಾಡರೇಟ್</string>
     <string name="forums_members_search">ಸದಸ್ಯರನ್ನು ಫಿಲ್ಟರ್ ಮಾಡಿ</string>
     <string name="forums_banner_description">ಫೋರಂನ ಮೇಲ್ಭಾಗದಲ್ಲಿ ತೋರಿಸಲಾಗುವ ಮಾರ್ಕ್‌ಡೌನ್.</string>
-    <string name="forums_banner_placeholder">ಈ ಫೋರಂಗೆ ಸ್ವಾಗತ…</string>
+    <string name="forums_banner_placeholder">ಬ್ಯಾನರ್ ಪಠ್ಯವನ್ನು ನಮೂದಿಸಿ (ಮಾರ್ಕ್‌ಡೌನ್ ಬೆಂಬಲಿತ)…</string>
     <string name="forums_ai_mode_label">ಮೋಡ್: %1$s</string>
     <string name="forums_ai_mode_heading">AI ಮೋಡ್</string>
     <string name="forums_ai_mode_off">ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">ದಿನಗಳು</string>
     <string name="forums_settings_banner_saved">ಬ್ಯಾನರ್ ಸುರಕ್ಷಿತವಾಗಿದೆ</string>
     <string name="forums_settings_access_updated">ಪ್ರವೇಶ ನವೀಕರಿಸಲಾಗಿದೆ</string>
-    <string name="forums_settings_access_revoked">ಪ್ರವೇಶವನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ</string>
+    <string name="forums_settings_access_revoked">ಪ್ರವೇಶವನ್ನು ಹಿಂಪಡೆಯಲಾಗಿದೆ</string>
     <string name="forums_settings_member_removed">ಸದಸ್ಯ ತೆಗೆದುಹಾಕಲಾಗಿದೆ</string>
     <string name="forums_settings_prompt_saved">ಪ್ರಾಂಪ್ಟ್ ಉಳಿಸಲಾಗಿದೆ</string>
     <string name="forums_settings_section_identity">ಗುರುತು</string>

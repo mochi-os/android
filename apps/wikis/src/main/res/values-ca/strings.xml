@@ -32,7 +32,7 @@
     <string name="wikis_unsubscribe_action">Dona\'t de baixa</string>
     <string name="wikis_unsubscribing">S\'està donant de baixa…</string>
     <string name="wikis_unsubscribe_confirm_title">Dona\'t de baixa</string>
-    <string name="wikis_unsubscribe_success">Subscripció cancel·lada</string>
+    <string name="wikis_unsubscribe_success">T\'has donat de baixa</string>
     <string name="wikis_subscribe_failed">No s\'ha pogut subscriure</string>
     <string name="wikis_rss_menu">Canal RSS</string>
     <string name="wikis_rss_changes">Canvis</string>
@@ -319,8 +319,8 @@
         <item quantity="other">%d pàgines amb aquesta etiqueta</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">S\'han trobat %1$d resultat per a "%2$s"</item>
-        <item quantity="other">S\'han trobat %1$d resultats per a "%2$s"</item>
+        <item quantity="one">S\'han trobat %1$d resultat per a \"%2$s\"</item>
+        <item quantity="other">S\'han trobat %1$d resultats per a \"%2$s\"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">No s\'ha pogut desar la llegenda</string>
     <string name="wikis_attachments_upload_types">Fitxers admesos: imatges, PDF, DOC, DOCX, TXT i MD.</string>

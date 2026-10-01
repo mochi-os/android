@@ -45,7 +45,9 @@
     <string name="route_delete_title">ルートを削除しますか？</string>
     <string name="route_path">パス</string>
     <string name="route_method">メソッド</string>
-    <string name="route_method_app">外観</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
+    <string name="route_method_app">アプリ</string>
     <string name="route_method_entity">エンティティ</string>
     <string name="route_method_redirect">リダイレクト</string>
     <string name="route_priority">優先度</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org からダウンロード</string>
     <string name="system_status_copy">コピー</string>
     <string name="system_status_peers">ピア</string>
-    <string name="system_status_known">既知</string>
+    <string name="system_status_peers_totals">既知 %1$s · 接続済み %2$s · ブロードキャストメッシュ %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">既知 %1$s · 接続済み %2$s</string>
     <string name="system_status_peer_connected">接続済み</string>
     <string name="system_status_peer_disconnected">切断済み</string>
     <string name="system_status_peer_queued">キュー内のメッセージ</string>
@@ -216,7 +219,7 @@
     <string name="account_totp_disable_message">認証アプリのコードでサインインできなくなります。</string>
     <string name="account_recovery_none">回復コードは生成されていません。</string>
     <plurals name="account_recovery_count">
-        <item quantity="other">残りの回復コードは %1$d 個です。</item>
+        <item quantity="other">残りの回復コードは %1$s 個です。</item>
     </plurals>
     <string name="account_recovery_generate">コードを生成</string>
     <string name="account_recovery_regenerate">コードを再生成</string>
@@ -233,7 +236,7 @@
     <string name="account_last_used">最終使用 %1$s</string>
     <string name="route_delete_message">パス「%1$s」のルートが削除されます。</string>
     <string name="route_empty">ルートが設定されていません。</string>
-    <string name="route_meta">優先度 %1$d · %2$s</string>
+    <string name="route_meta">優先度 %1$s · %2$s</string>
     <string name="interests_search_placeholder">追加するトピックを検索…</string>
     <string name="interests_empty">まだ興味がありません。</string>
     <string name="interests_summary_regenerate">要約を再生成</string>
@@ -267,7 +270,7 @@
     <string name="system_users_revoke_all_title">すべてのセッションを失効させますか？</string>
     <string name="system_users_revoke_all_message">このユーザーのすべてのアクティブなセッションがサインアウトされます。</string>
     <plurals name="system_users_pagination_status">
-        <item quantity="other">%3$d 人中 %1$d–%2$d 人を表示</item>
+        <item quantity="other">%3$s 人中 %1$s–%2$s 人を表示</item>
     </plurals>
     <string name="account_title">アカウント</string>
     <string name="account_section_identity">アイデンティティ</string>
@@ -301,11 +304,11 @@
     <string name="domain_verify">DNSを確認</string>
     <string name="settings_home_domains">ドメイン</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">%1$d 件の宛先にテストを送信しました</item>
-        <item quantity="other">%1$d 件の宛先にテストを送信しました</item>
+        <item quantity="one">%1$s 件の宛先にテストを送信しました</item>
+        <item quantity="other">%1$s 件の宛先にテストを送信しました</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="other">%1$d件のセッションを取り消しました</item>
+        <item quantity="other">%1$s件のセッションを取り消しました</item>
     </plurals>
     <string name="login_title">ログイン</string>
     <string name="login_section_methods">ログイン方法</string>
@@ -319,7 +322,7 @@
     <string name="account_close_confirm_title">アカウントを閉鎖しますか？</string>
     <string name="account_close_confirm_body">お客様のアカウントは削除予定となり、サインアウトされます。削除日より前であれば、再度ログインすることでいつでも取り消すことができます。</string>
     <string name="account_data_download">ダウンロード</string>
-    <string name="route_target_app">外観</string>
+    <string name="route_target_app">アプリ</string>
     <string name="route_target_entity">エンティティ</string>
     <string name="route_target_url">URL</string>
     <string name="account_data_section">あなたのデータ</string>
@@ -336,8 +339,7 @@
     <string name="system_status_reachability_public">公開</string>
     <string name="system_status_reachability_private">非公開</string>
     <string name="system_status_reachability_unknown">不明</string>
-    <string name="system_status_relay">リレー経由</string>
-    <string name="system_status_mesh">ブロードキャストメッシュ</string>
+    <string name="system_status_reachability_relay">%1$s · リレー経由</string>
     <string name="system_status_broadcast">最後のブロードキャスト</string>
     <string name="system_status_queued_broadcasts">キュー内のブロードキャストメッセージ</string>
     <string name="system_setting_hostname_publish">ホスト名とドメインを他のサーバーに通知する</string>
@@ -370,8 +372,10 @@
     <string name="accounts_device_seen">最終確認 %1$s</string>
     <string name="notifprefs_device_app">%1$s · アプリ</string>
     <string name="notifprefs_device_push">%1$s · プッシュ</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
     <plurals name="notifprefs_test_partial">
-        <item quantity="other">テストを%2$d件中%1$d件の宛先に送信しました</item>
+        <item quantity="other">テストを%2$s件中%1$s件の宛先に送信しました</item>
     </plurals>
     <string name="notifprefs_test_none">送信先が設定されていません</string>
     <string name="notifprefs_transport_fcm">Android プッシュ</string>
@@ -395,18 +399,18 @@
     <string name="system_documents_discard_title">変更を破棄しますか？</string>
     <string name="system_documents_discard">破棄</string>
     <plurals name="system_status_holepunch_succeeded">
-        <item quantity="other">成功 %1$d</item>
+        <item quantity="other">成功 %1$s</item>
     </plurals>
     <plurals name="system_status_holepunch_failed">
-        <item quantity="other">失敗 %1$d</item>
+        <item quantity="other">失敗 %1$s</item>
     </plurals>
     <plurals name="system_status_relay_reservations">
-        <item quantity="other">予約 %1$d / %2$d</item>
+        <item quantity="other">予約 %1$s / %2$s</item>
     </plurals>
     <plurals name="system_status_relay_circuits">
-        <item quantity="other">回線 %1$d</item>
+        <item quantity="other">回線 %1$s</item>
     </plurals>
     <plurals name="system_status_relay_refused">
-        <item quantity="other">拒否 %1$d</item>
+        <item quantity="other">拒否 %1$s</item>
     </plurals>
 </resources>

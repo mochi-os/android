@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">Umsjón</string>
     <string name="forums_members_search">Sía meðlimi</string>
     <string name="forums_banner_description">Markdown sem birtist efst á spjallborðinu.</string>
-    <string name="forums_banner_placeholder">Velkomin á þetta spjallborð…</string>
+    <string name="forums_banner_placeholder">Sláðu inn texta borðans (markdown er stutt)…</string>
     <string name="forums_ai_mode_label">Hamur: %1$s</string>
     <string name="forums_ai_mode_heading">Gervigreindarhamur</string>
     <string name="forums_ai_mode_off">Slökkt</string>
