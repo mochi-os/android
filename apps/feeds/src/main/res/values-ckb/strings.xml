@@ -216,7 +216,7 @@
     <string name="feeds_link">بەستەر</string>
     <string name="feeds_share_link_title">بەستەری فید</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">١ لێدوان</item>
+        <item quantity="one">%1$d لێدوان</item>
         <item quantity="other">%1$d لێدوان</item>
     </plurals>
     <plurals name="feeds_attachment_count">

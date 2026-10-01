@@ -9,9 +9,9 @@
     <string name="settings_home_notification_prefs">Yatiyäwi munañanaka</string>
     <string name="settings_home_accounts">Chinjat cuentanaka</string>
     <string name="settings_home_interests">Interesanaka</string>
-    <string name="account_section_passkeys">Passkeyanaka</string>
-    <string name="account_passkey_register">Passkey yapxataña</string>
-    <string name="account_passkey_delete_title">Passkey chhaqtayaña?</string>
+    <string name="account_section_passkeys">Mantañ llawinaka</string>
+    <string name="account_passkey_register">Mantañ llawi yapxataña</string>
+    <string name="account_passkey_delete_title">Mantañ llawi chhaqtayañati?</string>
     <string name="account_section_totp">Autenticador aplicación</string>
     <string name="account_totp_setup">Autenticador wakichaña</string>
     <string name="account_totp_setup_title">Autenticador wakichaña</string>
@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">¿Default ukar kutintayama?</string>
     <string name="system_setting_apps_install_user">Usuarionakar appnak instalañ iyawsaña</string>
     <string name="system_setting_auth_email">Email código ukamp mantaña</string>
-    <string name="system_setting_auth_passkey">Passkey ukamp mantaña</string>
+    <string name="system_setting_auth_passkey">Mantañ llawimpi mantaña</string>
     <string name="system_setting_auth_totp">TOTP authenticator app ukamp mantaña</string>
     <string name="system_setting_auth_recovery">Recuperación código ukamp mantaña</string>
     <string name="system_setting_auth_oauth">OAuth 2.0 ukamp mantaña</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">Imantasita kamachiwi</string>
     <string name="settings_home_rules">Kamachinaka</string>
     <string name="settings_home_terms">Yanapt\'awi arsuwinaka</string>
-    <string name="account_passkeys_empty">Janiw passkeyanaka qillqantatachuksa.</string>
-    <string name="account_passkey_register_title">Passkey yapxatasiña</string>
+    <string name="account_passkeys_empty">Janiw mantañ llawinakax qillqantatäkiti.</string>
+    <string name="account_passkey_register_title">Mä mantañ llawi yapxataña</string>
     <string name="account_passkey_name_label">Suti (akllata)</string>
     <string name="account_passkey_delete_message">\"%1$s\" janiw mantantarakimti.</string>
     <string name="account_totp_enabled">Autenticador wakichantata.</string>

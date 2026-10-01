@@ -20,7 +20,7 @@
     <string name="account_section_recovery">വീണ്ടെടുക്കൽ കോഡുകൾ</string>
     <string name="account_recovery_codes_title">വീണ്ടെടുക്കൽ കോഡുകൾ</string>
     <string name="sessions_unknown_agent">അജ്ഞാത ഉപകരണം</string>
-    <string name="sessions_revoke_title">സെഷൻ റദ്ദാക്കണോ?</string>
+    <string name="sessions_revoke_title">സെഷൻ പിൻവലിക്കണോ?</string>
     <string name="account_section_oauth">മൂന്നാം കക്ഷി ലോഗിൻ</string>
     <string name="account_oauth_link">അക്കൗണ്ട് ലിങ്ക് ചെയ്യുക</string>
     <string name="account_unlink">അൺലിങ്ക് ചെയ്യുക</string>
@@ -29,7 +29,7 @@
     <string name="account_done">പൂർത്തിയായി</string>
     <string name="account_delete">ഇല്ലാതാക്കുക</string>
     <string name="account_rename">പുനർനാമകരണം ചെയ്യുക</string>
-    <string name="sessions_revoke">റദ്ദാക്കുക</string>
+    <string name="sessions_revoke">പിൻവലിക്കുക</string>
     <string name="account_disable">പ്രവർത്തനരഹിതമാക്കുക</string>
     <string name="account_copy">പകർത്തുക</string>
     <string name="account_copy_all">എല്ലാം പകർത്തുക</string>
@@ -181,8 +181,8 @@
     <string name="system_users_delete_title">ഉപയോക്താവിനെ ഇല്ലാതാക്കണോ?</string>
     <string name="system_users_manage_sessions">സെഷനുകൾ മാനേജ് ചെയ്യുക</string>
     <string name="system_users_sessions_empty">ഈ ഉപയോക്താവിന് സജീവ സെഷനുകൾ ഒന്നുമില്ല.</string>
-    <string name="system_users_revoke">റദ്ദാക്കുക</string>
-    <string name="system_users_revoke_all">എല്ലാ സെഷനുകളും റദ്ദാക്കുക</string>
+    <string name="system_users_revoke">പിൻവലിക്കുക</string>
+    <string name="system_users_revoke_all">എല്ലാ സെഷനുകളും പിൻവലിക്കുക</string>
     <string name="system_users_unknown_browser">അജ്ഞാത ബ്രൗസർ</string>
     <string name="system_users_unknown">അജ്ഞാതം</string>
     <string name="system_users_previous">മുമ്പത്തേത്</string>
@@ -265,7 +265,7 @@
     <string name="system_users_delete_message">ഇത് ശാശ്വതമായി ഉപയോക്താവ് \"%1$s\" നെ ഇല്ലാതാക്കും. ഈ പ്രവർത്തനം പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
     <string name="system_users_sessions_title">%1$s ന്റെ സെഷനുകൾ</string>
     <string name="system_users_session_last_accessed">അവസാന ആക്സസ്: %1$s</string>
-    <string name="system_users_revoke_all_title">എല്ലാ സെഷനുകളും റദ്ദാക്കണോ?</string>
+    <string name="system_users_revoke_all_title">എല്ലാ സെഷനുകളും പിൻവലിക്കണോ?</string>
     <string name="system_users_revoke_all_message">ഈ ഉപയോക്താവിന്റെ എല്ലാ സജീവ സെഷനുകളും സൈൻ ഔട്ട് ചെയ്യപ്പെടും.</string>
     <plurals name="system_users_pagination_status">
         <item quantity="one">%3$d ഉപയോക്താവിൽ %1$d–%2$d കാണിക്കുന്നു</item>

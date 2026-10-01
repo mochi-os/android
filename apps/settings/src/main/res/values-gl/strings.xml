@@ -11,7 +11,7 @@
     <string name="settings_home_interests">Intereses</string>
     <string name="account_section_passkeys">Chaves de acceso</string>
     <string name="account_passkey_register">Engadir chave de acceso</string>
-    <string name="account_passkey_delete_title">Eliminar chave de acceso?</string>
+    <string name="account_passkey_delete_title">Eliminar a chave de acceso?</string>
     <string name="account_section_totp">Aplicación de autenticación</string>
     <string name="account_totp_setup">Configurar autenticador</string>
     <string name="account_totp_setup_title">Configurar autenticador</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">Política de privacidade</string>
     <string name="settings_home_rules">Regras</string>
     <string name="settings_home_terms">Termos do servizo</string>
-    <string name="account_passkeys_empty">Non hai claves de acceso rexistradas.</string>
-    <string name="account_passkey_register_title">Engadir clave de acceso</string>
+    <string name="account_passkeys_empty">Non hai chaves de acceso rexistradas.</string>
+    <string name="account_passkey_register_title">Engadir unha chave de acceso</string>
     <string name="account_passkey_name_label">Nome (opcional)</string>
     <string name="account_passkey_delete_message">«%1$s» xa non te iniciará a sesión.</string>
     <string name="account_totp_enabled">O autenticador está activado.</string>

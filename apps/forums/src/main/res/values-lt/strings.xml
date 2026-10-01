@@ -6,8 +6,8 @@
     <string name="forums_list_title">Forumai</string>
     <string name="forums_list_find">Rasti forumus</string>
     <string name="forums_list_logout">Atsijungti</string>
-    <string name="forums_list_unsubscribe">Atšaukti prenumeratą</string>
-    <string name="forums_list_unsubscribe_title">Atšaukti prenumeratą</string>
+    <string name="forums_list_unsubscribe">Atsisakyti prenumeratos</string>
+    <string name="forums_list_unsubscribe_title">Atsisakyti prenumeratos</string>
     <string name="forums_create_title">Sukurti forumą</string>
     <string name="forums_create_name">Forumo pavadinimas</string>
     <string name="forums_create_privacy">Privatumas</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">Žymėti</string>
     <string name="forums_ai_account_default">Numatytoji paskyra</string>
     <string name="forums_ai_prompt_reset">Atstatyti į numatytąjį</string>
-    <string name="forums_settings_unsubscribe">Atšaukti prenumeratą</string>
+    <string name="forums_settings_unsubscribe">Atsisakyti prenumeratos</string>
     <string name="forums_moderation_title">Moderavimas</string>
     <string name="forums_moderation_tab_queue">Eilė</string>
     <string name="forums_moderation_tab_reports">Pranešimai</string>

@@ -40,7 +40,7 @@
     <string name="discovery_recommended">Rekòmande</string>
     <string name="access_add_rule">Ajoute yon règ</string>
     <string name="access_owner">Pwopriyetè</string>
-    <string name="access_revoke">Anile</string>
+    <string name="access_revoke">Retire</string>
     <string name="access_level_comment">Kòmante</string>
     <string name="access_level_view">Wè</string>
     <string name="access_level_none">Okenn</string>
@@ -148,7 +148,7 @@
     <string name="auth_next">Pwochen</string>
     <string name="auth_or_log_in_with">Oswa konekte ak</string>
     <string name="auth_passkey">Kle aksè</string>
-    <string name="auth_use_passkey">Sèvi ak yon passkey</string>
+    <string name="auth_use_passkey">Sèvi ak yon kle aksè</string>
     <string name="auth_email_me_a_code">Voye yon kòd ban mwen pa imèl</string>
     <string name="auth_or_enter_authenticator_code">Oswa antre kòd otantifikatè a</string>
     <string name="auth_log_in">Konekte</string>
@@ -230,14 +230,14 @@
     <string name="stepup_email_placeholder">Antre kòd la ki nan imel ou</string>
     <string name="stepup_totp_label">Kòd otantifikatè</string>
     <string name="stepup_totp_placeholder">Antre kòd otantifikatè ou</string>
-    <string name="stepup_use_passkey">Sèvi ak passkey ou</string>
+    <string name="stepup_use_passkey">Sèvi ak kle aksè ou</string>
     <string name="stepup_send_email">Voye imèl</string>
     <string name="stepup_resend_email">Voye imèl la ankò</string>
     <string name="stepup_verify">Verifye</string>
     <string name="stepup_continue_with">Kontinye ak %1$s</string>
     <string name="stepup_error_start">Nou pa t kapab kòmanse re-otantifikasyon an. Tanpri eseye ankò.</string>
     <string name="stepup_error_code">Kòd sa a pa kòrèk oswa li ekspire.</string>
-    <string name="stepup_error_passkey">Verifikasyon passkey la echwe. Tanpri eseye ankò.</string>
+    <string name="stepup_error_passkey">Verifikasyon kle aksè a echwe. Tanpri eseye ankò.</string>
     <string name="stepup_error_oauth">Nou pa t kapab verifye ak kont sa a. Tanpri eseye ankò.</string>
     <string name="game_system_resign">%1$s bay legen</string>
     <string name="game_system_draw_offer">%1$s ofri yon egalite</string>
@@ -299,9 +299,9 @@
     <string name="format_code">Kòd</string>
     <string name="format_list">Lis ak pwen</string>
     <string name="common_preview">Apèsi</string>
-    <string name="rss_revoke_confirm">Anile</string>
+    <string name="rss_revoke_confirm">Retire</string>
     <string name="rss_revoke">Revoke aksè</string>
-    <string name="rss_revoke_title">Revoke aksè RSS la?</string>
+    <string name="rss_revoke_title">Retire aksè RSS la?</string>
     <string name="rss_revoke_message">Tout sa ki abòne nan fil sa a ap sispann resevwa l. Ou ka kopye yon nouvo URL apre.</string>
     <string name="rss_revoked">Aksè RSS revoke</string>
     <string name="rss_revoke_failed">Echwe pou revoke aksè RSS</string>

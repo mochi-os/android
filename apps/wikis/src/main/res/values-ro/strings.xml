@@ -97,7 +97,7 @@
     <string name="wikis_delete_page_cancel">Anulează</string>
     <string name="wikis_delete_page_failed">Ștergerea paginii a eșuat</string>
     <string name="wikis_revert_page_comment_label">Anulează modificarea comentariului</string>
-    <string name="wikis_revert_page_confirm">Anulează modificarea</string>
+    <string name="wikis_revert_page_confirm">Restaurează</string>
     <string name="wikis_revert_page_failed">Restabilirea paginii a eșuat</string>
     <string name="wikis_rename_page_title">Redenumește pagina</string>
     <string name="wikis_rename_page_label">URL nou</string>
@@ -246,7 +246,7 @@
     <string name="wikis_insert_dialog_empty">Încă nu există atașamente. Încarcă un fișier pentru a începe.</string>
     <string name="wikis_delete_page_message">Sunteți pe cale să ștergeți pagina „%1$s\" (%2$s). Această acțiune poate fi anulată prin restaurare din istoric.</string>
     <string name="wikis_delete_page_success">Pagină ștearsă</string>
-    <string name="wikis_revert_page_title">Anulează modificarea paginii</string>
+    <string name="wikis_revert_page_title">Restaurează pagina</string>
     <string name="wikis_revert_page_message">Sunteți pe cale să restaurați %1$s la versiunea %2$d. Aceasta va crea o nouă revizie cu conținutul versiunii %2$d.</string>
     <string name="wikis_revert_page_default_comment">Restaurat la versiunea %1$d</string>
     <string name="wikis_revert_page_success">Restaurat la versiunea %1$d</string>

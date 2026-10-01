@@ -145,7 +145,7 @@
     <string name="auth_login_title">Mochi\'ге кирүү</string>
     <string name="auth_next">Кийинки</string>
     <string name="auth_or_log_in_with">Же мунун жардамы менен кириңиз</string>
-    <string name="auth_passkey">Мүмкүндүк ачкычы</string>
+    <string name="auth_passkey">Кирүү ачкычы</string>
     <string name="auth_use_passkey">Кирүү ачкычын колдонуу</string>
     <string name="auth_email_me_a_code">Мага кодду электрондук почта менен жөнөтүңүз</string>
     <string name="auth_or_enter_authenticator_code">Же аутентификатор кодун киргизиңиз</string>
@@ -301,7 +301,7 @@
     <string name="common_preview">Алдын ала көрүү</string>
     <string name="rss_revoke_confirm">Кайтарып алуу</string>
     <string name="rss_revoke">Мүмкүнчүлүктү кайтарып алуу</string>
-    <string name="rss_revoke_title">RSS кирүүсү жокко чыгарылсынбы?</string>
+    <string name="rss_revoke_title">RSS кирүүсү кайтарылып алынсынбы?</string>
     <string name="rss_revoke_message">Бул тасмага жазылган нерселердин баары аны алууну токтотот. Андан кийин жаңы URL көчүрө аласыз.</string>
     <string name="rss_revoked">RSS мүмкүнчүлүгү кайтарылды</string>
     <string name="rss_revoke_failed">RSS мүмкүнчүлүгүн кайтарып алуу ишке ашкан жок</string>

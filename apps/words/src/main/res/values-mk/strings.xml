@@ -22,7 +22,7 @@
     <string name="words_detail_action_pass">Премини</string>
     <string name="words_detail_action_exchange">Размени плочки</string>
     <string name="words_detail_action_cancel_exchange">Откажи размена</string>
-    <string name="words_detail_action_resign">Откажи се</string>
+    <string name="words_detail_action_resign">Предај се</string>
     <string name="words_detail_action_rematch">Реванш</string>
     <string name="words_detail_action_delete">Избриши игра</string>
     <string name="words_detail_chat_title">Разговор</string>
@@ -31,7 +31,7 @@
     <string name="words_detail_cancel">Откажи</string>
     <string name="words_detail_exchange">Размена</string>
     <string name="words_detail_blank_title">Избери буква</string>
-    <string name="words_detail_resign_title">Да се откажете од играта?</string>
+    <string name="words_detail_resign_title">Да ја предадете играта?</string>
     <string name="words_detail_resign_message">Сигурен ли си дека сакаш да се повлечеш?</string>
     <string name="words_channel_name">Зборови известувања</string>
     <string name="words_channel_description">Известувања за потези, размени и резултати од партии.</string>

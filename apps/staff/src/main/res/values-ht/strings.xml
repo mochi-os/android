@@ -35,7 +35,7 @@
     <string name="staff_accounts_unban">Defann</string>
     <string name="staff_accounts_unbanned_toast">Kont pa entèdi ankò</string>
     <string name="staff_accounts_unnamed">San non</string>
-    <string name="staff_accounts_unsuspend">Anile sispansyon</string>
+    <string name="staff_accounts_unsuspend">Leve sispansyon</string>
     <string name="staff_accounts_unsuspended_toast">Kont pa sispann ankò</string>
     <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_appeals_cancel">Anile</string>

@@ -142,7 +142,7 @@
     <string name="auth_next">دواتر</string>
     <string name="auth_or_log_in_with">یان بەمە بچۆ ژوورەوە</string>
     <string name="auth_passkey">پاسکی</string>
-    <string name="auth_use_passkey">پاسکیەک بەکاربهێنە</string>
+    <string name="auth_use_passkey">پاسکییەک بەکاربهێنە</string>
     <string name="auth_email_me_a_code">کۆدێکم بۆ بنێرە بە ئیمەیڵ</string>
     <string name="auth_or_enter_authenticator_code">یان کۆدی پشتڕاستکەرەوە بنووسە</string>
     <string name="auth_log_in">چوونەژوورەوە</string>
@@ -230,14 +230,14 @@
     <string name="stepup_email_placeholder">ئەو کۆدە بنووسە کە لە ئیمەیڵەکەتدا هاتووە</string>
     <string name="stepup_totp_label">کۆدی پشتڕاستکەرەوە</string>
     <string name="stepup_totp_placeholder">کۆدی ڕاستاندنەکەت بنووسە</string>
-    <string name="stepup_use_passkey">کلیلی تێپەڕبوونەکەت بەکاربهێنە</string>
+    <string name="stepup_use_passkey">پاسکییەکەت بەکاربهێنە</string>
     <string name="stepup_send_email">ئیمەیڵ بنێرە</string>
     <string name="stepup_resend_email">ئیمەیڵ دووبارە بنێرە</string>
     <string name="stepup_verify">پشتڕاستبکە</string>
     <string name="stepup_continue_with">بەردەوامبە بە %1$s</string>
     <string name="stepup_error_start">نەکرا ڕاستاندنەوە دەست پێ بکات. تکایە دووبارە هەوڵ بدەرەوە.</string>
     <string name="stepup_error_code">ئەو کۆدە هەڵەیە یان بەسەرچووە.</string>
-    <string name="stepup_error_passkey">پشتڕاستکردنەوەی کلیلی تێپەڕبوون سەرکەوتوو نەبوو. تکایە دووبارە هەوڵ بدەرەوە.</string>
+    <string name="stepup_error_passkey">پشتڕاستکردنەوەی پاسکی سەرکەوتوو نەبوو. تکایە دووبارە هەوڵ بدەرەوە.</string>
     <string name="stepup_error_oauth">نەتوانرا بەو هەژمارە پشتڕاست بکرێتەوە. تکایە دووبارە هەوڵ بدەرەوە.</string>
     <string name="game_system_resign">%1$s وازی هێنا</string>
     <string name="game_system_draw_offer">%1$s پێشنیاری یەکسانی کرد</string>

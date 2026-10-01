@@ -9,7 +9,7 @@
     <string name="settings_home_notification_prefs">اطلاعن جون ترجيحون</string>
     <string name="settings_home_accounts">ڳنڍيل اڪائونٽ</string>
     <string name="settings_home_interests">دلچسپيون</string>
-    <string name="account_section_passkeys">پاسي ڪيز</string>
+    <string name="account_section_passkeys">پاس ڪيز</string>
     <string name="account_passkey_register">پاس ڪيءَ شامل ڪريو</string>
     <string name="account_passkey_delete_title">پاس ڪيءَ ختم ڪجي؟</string>
     <string name="account_section_totp">تصديق ڪندڙ ايپ</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">رازداري جي پاليسي</string>
     <string name="settings_home_rules">قاعدا</string>
     <string name="settings_home_terms">خدمت جون شرطون</string>
-    <string name="account_passkeys_empty">ڪا به رجسٽر ٿيل پاسڪي نه آهي.</string>
-    <string name="account_passkey_register_title">پاسڪي شامل ڪريو</string>
+    <string name="account_passkeys_empty">ڪا به رجسٽر ٿيل پاس ڪي نه آهي.</string>
+    <string name="account_passkey_register_title">پاس ڪي شامل ڪريو</string>
     <string name="account_passkey_name_label">نالو (اختياري)</string>
     <string name="account_passkey_delete_message">\"%1$s\" هاڻي اوهان کي سائن ان نه ڪندو.</string>
     <string name="account_totp_enabled">تصديق ڪندڙ فعال آهي.</string>
@@ -265,7 +265,7 @@
     <string name="system_users_delete_message">هي مستقل طور تي يوزر \"%1$s\" کي حذف ڪندو. هي عمل واپس نه ٿو ٿي سگهي.</string>
     <string name="system_users_sessions_title">%1$s جا سيشن</string>
     <string name="system_users_session_last_accessed">آخري رسائي: %1$s</string>
-    <string name="system_users_revoke_all_title">سڀ سيشن منسوخ ڪجن؟</string>
+    <string name="system_users_revoke_all_title">سڀ سيشن رد ڪجن؟</string>
     <string name="system_users_revoke_all_message">هن يوزر جا سڀ فعال سيشن سائن آئوٽ ٿيندا.</string>
     <plurals name="system_users_pagination_status">
         <item quantity="one">%3$d يوزر مان %1$d–%2$d ڏيکاري رهيو آهي</item>
@@ -313,7 +313,7 @@
     <string name="login_title">لاگ ان</string>
     <string name="login_section_methods">لاگ ان جا طريقا</string>
     <string name="login_method_email">اي ميل ڪوڊ</string>
-    <string name="login_method_passkey">پاس ڪيئي</string>
+    <string name="login_method_passkey">پاس ڪي</string>
     <string name="login_method_totp">تصديق ڪندڙ ايپ</string>
     <string name="login_method_oauth">ٽئين پارٽي لاگ ان</string>
     <string name="login_method_recovery">بحالي ڪوڊ</string>
@@ -392,7 +392,7 @@
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">لاگ ان</string>
     <string name="accounts_provider_caldav">ڪئلينڊر سرور</string>
-    <string name="accounts_revoke_confirm">هي %1$s جي ڪئلينڊر رسائي منسوخ ڪندو. %2$s سان سائن-اِن تيستائين رهندو جيستائين توهان لاگ اِن صفحي تي ان کي الڳ نه ڪريو.</string>
+    <string name="accounts_revoke_confirm">هي %1$s جي ڪئلينڊر رسائي واپس وٺندو. %2$s سان سائن-اِن تيستائين رهندو جيستائين توهان لاگ اِن صفحي تي ان کي الڳ نه ڪريو.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">اڻڄاتل ٿيم</string>
     <string name="system_documents_modified">تبديل ٿيل</string>

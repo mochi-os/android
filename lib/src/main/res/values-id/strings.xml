@@ -105,7 +105,7 @@
     <string name="settings_reset_confirm_title">Reset preferensi?</string>
     <string name="settings_reset_confirm_message">Ini akan mengatur ulang preferensi ini ke nilai defaultnya.</string>
     <string name="settings_reset">Setel ulang</string>
-    <string name="settings_display_title">Tampilan</string>
+    <string name="settings_display_title">Layar</string>
     <string name="settings_display_reset">Reset ke default</string>
     <string name="settings_display_reset_confirm_title">Setel ulang tampilan?</string>
     <string name="settings_display_reset_confirm_message">Ini akan menyetel ulang pengaturan tampilan ke nilai defaultnya.</string>
@@ -144,7 +144,7 @@
     <string name="auth_next">Berikutnya</string>
     <string name="auth_or_log_in_with">Atau masuk dengan</string>
     <string name="auth_passkey">Kunci sandi</string>
-    <string name="auth_use_passkey">Gunakan passkey</string>
+    <string name="auth_use_passkey">Gunakan kunci sandi</string>
     <string name="auth_email_me_a_code">Kirimi saya kode lewat email</string>
     <string name="auth_or_enter_authenticator_code">Atau masukkan kode autentikator</string>
     <string name="auth_log_in">Masuk</string>

@@ -6,8 +6,8 @@
     <string name="forums_list_title">المنتديات</string>
     <string name="forums_list_find">البحث عن المنتديات</string>
     <string name="forums_list_logout">تسجيل الخروج</string>
-    <string name="forums_list_unsubscribe">إلغاء الاشتراك</string>
-    <string name="forums_list_unsubscribe_title">إلغاء الاشتراك</string>
+    <string name="forums_list_unsubscribe">إنهاء الاشتراك</string>
+    <string name="forums_list_unsubscribe_title">إنهاء الاشتراك</string>
     <string name="forums_create_title">إنشاء منتدى</string>
     <string name="forums_create_name">اسم المنتدى</string>
     <string name="forums_create_privacy">الخصوصية</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">وسم</string>
     <string name="forums_ai_account_default">الحساب الافتراضي</string>
     <string name="forums_ai_prompt_reset">إعادة تعيين إلى الافتراضي</string>
-    <string name="forums_settings_unsubscribe">إلغاء الاشتراك</string>
+    <string name="forums_settings_unsubscribe">إنهاء الاشتراك</string>
     <string name="forums_moderation_title">الإشراف</string>
     <string name="forums_moderation_tab_queue">قائمة الانتظار</string>
     <string name="forums_moderation_tab_reports">التقارير</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_enter_code_sent">أدخل الرمز المرسل إلى %1$s</string>
     <string name="forums_auth_create_identity">أنشئ هويتك</string>
     <string name="forums_list_empty">لا توجد منتديات بعد</string>
-    <string name="forums_list_unsubscribe_message">هل أنت متأكد من أنك تريد إلغاء الاشتراك في هذا المنتدى؟</string>
+    <string name="forums_list_unsubscribe_message">هل أنت متأكد من أنك تريد إنهاء الاشتراك في هذا المنتدى؟</string>
     <string name="forums_find_search_placeholder">ابحث في المنتديات أو الصق عنوان URL</string>
     <string name="forums_find_search_hint">ابحث عن منتديات للاشتراك فيها</string>
     <string name="forums_post_body_field">المحتوى</string>

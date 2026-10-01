@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">Återställ till standard?</string>
     <string name="system_setting_apps_install_user">Tillåt användare att installera appar</string>
     <string name="system_setting_auth_email">Logga in med e-postkod</string>
-    <string name="system_setting_auth_passkey">Logga in med passkey</string>
+    <string name="system_setting_auth_passkey">Logga in med nyckel</string>
     <string name="system_setting_auth_totp">Logga in med TOTP-autentiseringsapp</string>
     <string name="system_setting_auth_recovery">Logga in med återställningskod</string>
     <string name="system_setting_auth_oauth">Logga in med OAuth 2.0</string>

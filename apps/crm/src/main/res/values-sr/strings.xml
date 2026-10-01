@@ -33,10 +33,10 @@
     <string name="crm_settings_tab_people">Људи</string>
     <string name="crm_option_icon">Икона</string>
     <string name="crm_option_icon_placeholder">нпр. Check, Star, Flag</string>
-    <string name="crm_settings_unsubscribe">Откажи претплату</string>
+    <string name="crm_settings_unsubscribe">Прекини претплату</string>
     <string name="crm_settings_delete_crm">Обриши CRM</string>
     <string name="crm_settings_delete_confirm_title">Обриши CRM</string>
-    <string name="crm_settings_unsubscribe_title">Откажи претплату</string>
+    <string name="crm_settings_unsubscribe_title">Прекини претплату</string>
     <string name="crm_settings_unsubscribe_message">Да ли сте сигурни да желите да се одјавите са овог CRM-а?</string>
     <string name="crm_access_level_owner">Власник</string>
     <string name="crm_object_watch">Прати</string>

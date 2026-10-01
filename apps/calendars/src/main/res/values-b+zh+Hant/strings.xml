@@ -89,7 +89,7 @@
     <string name="calendars_event_delete_message">此操作無法復原。</string>
     <string name="calendars_scope_edit">變更此活動還是所有活動？</string>
     <string name="calendars_scope_delete">刪除此活動還是所有活動？</string>
-    <string name="calendars_scope_one">此活動</string>
+    <string name="calendars_scope_one">僅此活動</string>
     <string name="calendars_scope_all">所有活動</string>
     <string name="calendars_repeat_daily">每天</string>
     <string name="calendars_repeat_weekly">每週</string>

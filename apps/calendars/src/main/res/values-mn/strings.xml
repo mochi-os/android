@@ -29,7 +29,7 @@
     <string name="calendars_day_friday">Баасан</string>
     <string name="calendars_day_saturday">Бямба</string>
     <string name="calendars_link_replace">Солих</string>
-    <string name="calendars_link_revoke">Цуцлах</string>
+    <string name="calendars_link_revoke">Хүчингүй болгох</string>
     <string name="calendars_permission_allow">Зөвшөөрөх</string>
     <string name="calendars_permission_deny">Татгалзах</string>
     <string name="calendars_sync_title">Энэ утастай синк хийх</string>
@@ -189,6 +189,6 @@
     <string name="calendars_span_day">%1$s, %2$s - %3$s</string>
     <string name="calendars_polled_current">Хуанли шинэчлэгдсэн байна</string>
     <string name="calendars_polled_synced">Хуанли синк хийгдлээ</string>
-    <string name="calendars_link_revoke_title">Хуанлийн хаягийг цуцлах уу?</string>
+    <string name="calendars_link_revoke_title">Хуанлийн хаягийг хүчингүй болгох уу?</string>
     <string name="calendars_link_revoke_message">Энэ хаягийг захиалсан календарууд шинэчлэгдэхээ болино.</string>
 </resources>

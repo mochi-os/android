@@ -40,10 +40,10 @@
     <string name="projects_settings_tab_people">خلک</string>
     <string name="projects_option_icon">آیکون</string>
     <string name="projects_option_icon_placeholder">لکه چېنه Check، Star، Flag</string>
-    <string name="projects_settings_unsubscribe">ګډون لغوه کول</string>
+    <string name="projects_settings_unsubscribe">له ګډون وتل</string>
     <string name="projects_settings_delete_project">پروژه ړنګه کړئ</string>
     <string name="projects_settings_delete_confirm_title">پروژه ړنګه کړئ</string>
-    <string name="projects_settings_unsubscribe_title">ګډون لغوه کول</string>
+    <string name="projects_settings_unsubscribe_title">له ګډون وتل</string>
     <string name="projects_settings_unsubscribe_message">ایا تاسو ډاډه یاست چې غواړئ د دې پروژې ګډون ختم کړئ؟</string>
     <string name="projects_access_level_owner">مالک</string>
     <string name="projects_object_watch">وګورئ</string>

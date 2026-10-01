@@ -230,14 +230,14 @@
     <string name="stepup_email_placeholder">Cuir isteach an cód ó do ríomhphost</string>
     <string name="stepup_totp_label">Cód fíordheimhnitheora</string>
     <string name="stepup_totp_placeholder">Cuir isteach cód d\'aip fhíordheimhnithe</string>
-    <string name="stepup_use_passkey">Úsáid d\'eochair rochtana</string>
+    <string name="stepup_use_passkey">Úsáid do phasluiche</string>
     <string name="stepup_send_email">Seol ríomhphost</string>
     <string name="stepup_resend_email">Seol an ríomhphost arís</string>
     <string name="stepup_verify">Fíoraigh</string>
     <string name="stepup_continue_with">Lean ar aghaidh le %1$s</string>
     <string name="stepup_error_start">Níorbh fhéidir an t-athfhíordheimhniú a thosú. Bain triail eile as.</string>
     <string name="stepup_error_code">Tá an cód sin mícheart nó tá sé imithe in éag.</string>
-    <string name="stepup_error_passkey">Theip ar fhíorú na heochrach rochtana. Bain triail eile as.</string>
+    <string name="stepup_error_passkey">Theip ar fhíorú an phasluiche. Bain triail eile as.</string>
     <string name="stepup_error_oauth">Níorbh fhéidir fíorú leis an gcuntas sin. Bain triail eile as le do thoil.</string>
     <string name="game_system_resign">Ghéill %1$s</string>
     <string name="game_system_draw_offer">Thairg %1$s cothrom</string>

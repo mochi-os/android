@@ -35,7 +35,7 @@
     <string name="staff_accounts_unban">Հանել արգելքը</string>
     <string name="staff_accounts_unbanned_toast">Հաշվի արգելքը հանված է</string>
     <string name="staff_accounts_unnamed">Անանուն</string>
-    <string name="staff_accounts_unsuspend">Չեղարկել կասեցումը</string>
+    <string name="staff_accounts_unsuspend">Վերացնել կասեցումը</string>
     <string name="staff_accounts_unsuspended_toast">Հաշվի կասեցումը հանված է</string>
     <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_appeals_cancel">Չեղարկել</string>

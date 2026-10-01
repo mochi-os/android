@@ -40,7 +40,7 @@
     <string name="discovery_recommended">Tavsiya etiladi</string>
     <string name="access_add_rule">Qoida qoʻshish</string>
     <string name="access_owner">Egasi</string>
-    <string name="access_revoke">Bekor qilish</string>
+    <string name="access_revoke">Qaytarib olish</string>
     <string name="access_level_comment">Izoh qoldirish</string>
     <string name="access_level_view">Koʻrish</string>
     <string name="access_level_none">Hech qanday</string>
@@ -237,7 +237,7 @@
     <string name="stepup_continue_with">%1$s bilan davom etish</string>
     <string name="stepup_error_start">Qayta autentifikatsiyani boshlab bo\'lmadi. Iltimos, qaytadan urinib ko\'ring.</string>
     <string name="stepup_error_code">Bu kod noto\'g\'ri yoki muddati o\'tgan.</string>
-    <string name="stepup_error_passkey">Kirish kaliti tasdig\'i muvaffaqiyatsiz tugadi. Iltimos, qaytadan urinib ko\'ring.</string>
+    <string name="stepup_error_passkey">Kirish kaliti tasdigʻi muvaffaqiyatsiz tugadi. Iltimos, qaytadan urinib koʻring.</string>
     <string name="stepup_error_oauth">Ushbu hisob bilan tasdiqlab bo‘lmadi. Iltimos, qayta urinib ko‘ring.</string>
     <string name="game_system_resign">%1$s taslim bo‘ldi</string>
     <string name="game_system_draw_offer">%1$s durang taklif qildi</string>
@@ -300,9 +300,9 @@
     <string name="format_code">Kod</string>
     <string name="format_list">Belgili roʻyxat</string>
     <string name="common_preview">Oldindan koʻrish</string>
-    <string name="rss_revoke_confirm">Bekor qilish</string>
-    <string name="rss_revoke">Kirishni bekor qilish</string>
-    <string name="rss_revoke_title">RSS kirishi bekor qilinsinmi?</string>
+    <string name="rss_revoke_confirm">Qaytarib olish</string>
+    <string name="rss_revoke">Kirish huquqini qaytarib olish</string>
+    <string name="rss_revoke_title">RSS kirishi qaytarib olinsinmi?</string>
     <string name="rss_revoke_message">Bu tasmaga obuna boʻlgan hamma narsa uni olishni toʻxtatadi. Keyin yangi URL nusxalashingiz mumkin.</string>
     <string name="rss_revoked">RSS kirishi bekor qilindi</string>
     <string name="rss_revoke_failed">RSS kirishini bekor qilib bo\'lmadi</string>

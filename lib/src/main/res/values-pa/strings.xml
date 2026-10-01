@@ -40,7 +40,7 @@
     <string name="discovery_recommended">ਸਿਫ਼ਾਰਸ਼ ਕੀਤੇ</string>
     <string name="access_add_rule">ਨਿਯਮ ਜੋੜੋ</string>
     <string name="access_owner">ਮਾਲਕ</string>
-    <string name="access_revoke">ਰੱਦ ਕਰੋ</string>
+    <string name="access_revoke">ਵਾਪਸ ਲਓ</string>
     <string name="access_level_comment">ਟਿੱਪਣੀ ਕਰੋ</string>
     <string name="access_level_view">ਦੇਖੋ</string>
     <string name="access_level_none">ਕੋਈ ਨਹੀਂ</string>
@@ -299,9 +299,9 @@
     <string name="format_code">ਕੋਡ</string>
     <string name="format_list">ਬੁਲੇਟ ਸੂਚੀ</string>
     <string name="common_preview">ਪ੍ਰੀਵਿਊ</string>
-    <string name="rss_revoke_confirm">ਰੱਦ ਕਰੋ</string>
-    <string name="rss_revoke">ਪਹੁੰਚ ਰੱਦ ਕਰੋ</string>
-    <string name="rss_revoke_title">RSS ਪਹੁੰਚ ਰੱਦ ਕਰਨੀ ਹੈ?</string>
+    <string name="rss_revoke_confirm">ਵਾਪਸ ਲਓ</string>
+    <string name="rss_revoke">ਪਹੁੰਚ ਵਾਪਸ ਲਓ</string>
+    <string name="rss_revoke_title">RSS ਪਹੁੰਚ ਵਾਪਸ ਲੈਣੀ ਹੈ?</string>
     <string name="rss_revoke_message">ਇਸ ਫੀਡ ਦੀ ਗਾਹਕੀ ਲੈਣ ਵਾਲਾ ਸਭ ਕੁਝ ਇਸਨੂੰ ਪ੍ਰਾਪਤ ਕਰਨਾ ਬੰਦ ਕਰ ਦੇਵੇਗਾ। ਬਾਅਦ ਵਿੱਚ ਤੁਸੀਂ ਨਵਾਂ URL ਕਾਪੀ ਕਰ ਸਕਦੇ ਹੋ।</string>
     <string name="rss_revoked">RSS ਪਹੁੰਚ ਰੱਦ ਕੀਤੀ ਗਈ</string>
     <string name="rss_revoke_failed">RSS ਪਹੁੰਚ ਰੱਦ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>

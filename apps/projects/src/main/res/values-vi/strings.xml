@@ -40,11 +40,11 @@
     <string name="projects_settings_tab_people">Mọi người</string>
     <string name="projects_option_icon">Biểu tượng</string>
     <string name="projects_option_icon_placeholder">ví dụ Check, Star, Flag</string>
-    <string name="projects_settings_unsubscribe">Hủy đăng ký</string>
+    <string name="projects_settings_unsubscribe">Ngừng đăng ký</string>
     <string name="projects_settings_delete_project">Xóa dự án</string>
     <string name="projects_settings_delete_confirm_title">Xóa dự án</string>
-    <string name="projects_settings_unsubscribe_title">Hủy đăng ký</string>
-    <string name="projects_settings_unsubscribe_message">Bạn có chắc muốn hủy đăng ký dự án này?</string>
+    <string name="projects_settings_unsubscribe_title">Ngừng đăng ký</string>
+    <string name="projects_settings_unsubscribe_message">Bạn có chắc muốn ngừng đăng ký dự án này?</string>
     <string name="projects_access_level_owner">Chủ sở hữu</string>
     <string name="projects_object_watch">Theo dõi</string>
     <string name="projects_object_tab_properties">Thuộc tính</string>

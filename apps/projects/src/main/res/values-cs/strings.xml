@@ -40,10 +40,10 @@
     <string name="projects_settings_tab_people">Lidé</string>
     <string name="projects_option_icon">Ikona</string>
     <string name="projects_option_icon_placeholder">např. Check, Star, Flag</string>
-    <string name="projects_settings_unsubscribe">Zrušit odběr</string>
+    <string name="projects_settings_unsubscribe">Odhlásit odběr</string>
     <string name="projects_settings_delete_project">Smazat projekt</string>
     <string name="projects_settings_delete_confirm_title">Smazat projekt</string>
-    <string name="projects_settings_unsubscribe_title">Zrušit odběr</string>
+    <string name="projects_settings_unsubscribe_title">Odhlásit odběr</string>
     <string name="projects_settings_unsubscribe_message">Opravdu se chcete odhlásit z odběru tohoto projektu?</string>
     <string name="projects_access_level_owner">Vlastník</string>
     <string name="projects_object_watch">Sledovat</string>

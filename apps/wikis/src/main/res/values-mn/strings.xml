@@ -40,7 +40,7 @@
     <string name="wikis_rss_both">Өөрчлөлтүүд ба сэтгэгдлүүд</string>
     <string name="wikis_rss_copied">RSS URL түр санах ой руу хуулагдсан</string>
     <string name="wikis_rss_failed">RSS токен авч чадсангүй</string>
-    <string name="wikis_rss_revoke">Хандалтыг цуцлах</string>
+    <string name="wikis_rss_revoke">Хандалтыг хүчингүй болгох</string>
     <string name="wikis_rss_revoked">RSS хандалтыг цуцаллаа</string>
     <string name="wikis_find_title">Wiki хайх</string>
     <string name="wikis_find_no_results">Wiki олдсонгүй</string>

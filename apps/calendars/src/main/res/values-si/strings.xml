@@ -29,7 +29,7 @@
     <string name="calendars_day_friday">සිකුරාදා</string>
     <string name="calendars_day_saturday">සෙනසුරාදා</string>
     <string name="calendars_link_replace">ප්‍රතිස්ථාපනය</string>
-    <string name="calendars_link_revoke">අවලංගු කරන්න</string>
+    <string name="calendars_link_revoke">අහෝසි කරන්න</string>
     <string name="calendars_permission_allow">ඉඩ දෙන්න</string>
     <string name="calendars_permission_deny">ප්‍රතික්ෂේප කරන්න</string>
     <string name="calendars_sync_title">මෙම දුරකථනයට සමමුහුර්ත කරන්න</string>
@@ -189,6 +189,6 @@
     <string name="calendars_span_day">%1$s, %2$s සිට %3$s දක්වා</string>
     <string name="calendars_polled_current">දින දර්ශනය යාවත්කාලීනයි</string>
     <string name="calendars_polled_synced">දින දර්ශනය සමමුහුර්ත කළා</string>
-    <string name="calendars_link_revoke_title">දින දර්ශනයේ ලිපිනය අවලංගු කරන්නද?</string>
+    <string name="calendars_link_revoke_title">දින දර්ශනයේ ලිපිනය අහෝසි කරන්නද?</string>
     <string name="calendars_link_revoke_message">මෙම ලිපිනයට දායක වූ දින දර්ශන යාවත්කාලීන වීම නවතිනු ඇත.</string>
 </resources>

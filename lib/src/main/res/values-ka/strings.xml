@@ -40,7 +40,7 @@
     <string name="discovery_recommended">რეკომენდებული</string>
     <string name="access_add_rule">წესის დამატება</string>
     <string name="access_owner">მფლობელი</string>
-    <string name="access_revoke">გაუქმება</string>
+    <string name="access_revoke">გაწვევა</string>
     <string name="access_level_comment">კომენტირება</string>
     <string name="access_level_view">ნახვა</string>
     <string name="access_level_none">არცერთი</string>
@@ -146,7 +146,7 @@
     <string name="auth_next">შემდეგი</string>
     <string name="auth_or_log_in_with">ან შედით</string>
     <string name="auth_passkey">წვდომის გასაღები</string>
-    <string name="auth_use_passkey">გამოიყენეთ გასაღები</string>
+    <string name="auth_use_passkey">გამოიყენეთ წვდომის გასაღები</string>
     <string name="auth_email_me_a_code">გამომიგზავნეთ კოდი ელფოსტით</string>
     <string name="auth_or_enter_authenticator_code">ან შეიყვანეთ ავთენტიფიკატორის კოდი</string>
     <string name="auth_log_in">შესვლა</string>
@@ -299,9 +299,9 @@
     <string name="format_code">კოდი</string>
     <string name="format_list">მარკირებული სია</string>
     <string name="common_preview">გადახედვა</string>
-    <string name="rss_revoke_confirm">გაუქმება</string>
-    <string name="rss_revoke">წვდომის გაუქმება</string>
-    <string name="rss_revoke_title">გაუქმდეს RSS წვდომა?</string>
+    <string name="rss_revoke_confirm">გაწვევა</string>
+    <string name="rss_revoke">წვდომის გაწვევა</string>
+    <string name="rss_revoke_title">RSS წვდომის გაწვევა?</string>
     <string name="rss_revoke_message">ყველაფერი, რაც ამ არხზეა გამოწერილი, შეწყვეტს მის მიღებას. შემდეგ შეგიძლიათ დააკოპიროთ ახალი URL.</string>
     <string name="rss_revoked">RSS წვდომა გაუქმდა</string>
     <string name="rss_revoke_failed">RSS წვდომის გაუქმება ვერ მოხერხდა</string>

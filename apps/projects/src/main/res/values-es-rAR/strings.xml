@@ -9,11 +9,9 @@
     <string name="projects_find_subscribe">Suscribite</string>
     <string name="projects_create_object">Creá un objeto</string>
     <string name="projects_search">Buscá</string>
-    <string name="projects_settings_unsubscribe">Cancelá la suscripción</string>
     <string name="projects_settings_delete_project">Eliminá el proyecto</string>
     <string name="projects_settings_delete_confirm_title">Eliminá el proyecto</string>
-    <string name="projects_settings_unsubscribe_title">Cancelá la suscripción</string>
-    <string name="projects_settings_unsubscribe_message">¿Estás seguro de que querés cancelar la suscripción a este proyecto?</string>
+    <string name="projects_settings_unsubscribe_message">¿Estás seguro de que querés anular la suscripción a este proyecto?</string>
     <string name="projects_parent_search_placeholder">Buscá</string>
     <string name="projects_links_add">Agregá un enlace</string>
     <string name="projects_comment_save">Guardá</string>

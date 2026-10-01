@@ -40,7 +40,7 @@
     <string name="discovery_recommended">Soovitatud</string>
     <string name="access_add_rule">Lisa reegel</string>
     <string name="access_owner">Omanik</string>
-    <string name="access_revoke">Tühista</string>
+    <string name="access_revoke">Võta ära</string>
     <string name="access_level_comment">Kommenteeri</string>
     <string name="access_level_view">Vaata</string>
     <string name="access_level_none">Puudub</string>
@@ -299,9 +299,9 @@
     <string name="format_code">Kood</string>
     <string name="format_list">Täpploend</string>
     <string name="common_preview">Eelvaade</string>
-    <string name="rss_revoke_confirm">Tühista</string>
-    <string name="rss_revoke">Tühista juurdepääs</string>
-    <string name="rss_revoke_title">Kas tühistada RSS-i juurdepääs?</string>
+    <string name="rss_revoke_confirm">Võta ära</string>
+    <string name="rss_revoke">Eemalda juurdepääs</string>
+    <string name="rss_revoke_title">Kas võtta RSS-i juurdepääs ära?</string>
     <string name="rss_revoke_message">Kõik, mis on selle voo tellinud, lakkab seda saamast. Pärast saad kopeerida uue URL-i.</string>
     <string name="rss_revoked">RSS-juurdepääs tühistatud</string>
     <string name="rss_revoke_failed">RSS-juurdepääsu tühistamine ebaõnnestus</string>

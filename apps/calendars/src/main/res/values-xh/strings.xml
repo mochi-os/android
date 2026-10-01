@@ -29,7 +29,7 @@
     <string name="calendars_day_friday">ULwesihlanu</string>
     <string name="calendars_day_saturday">Umgqibelo</string>
     <string name="calendars_link_replace">Ngenisa endaweni</string>
-    <string name="calendars_link_revoke">Rhoxisa</string>
+    <string name="calendars_link_revoke">Susa</string>
     <string name="calendars_permission_allow">Vumela</string>
     <string name="calendars_permission_deny">Yala</string>
     <string name="calendars_sync_title">Ngqamanisa nale fowuni</string>
@@ -189,6 +189,6 @@
     <string name="calendars_span_day">%1$s, ukusuka ku-%2$s ukuya ku-%3$s</string>
     <string name="calendars_polled_current">Ikhalenda ihlaziyiwe</string>
     <string name="calendars_polled_synced">Ikhalenda ilungelelanisiwe</string>
-    <string name="calendars_link_revoke_title">Ufuna ukurhoxisa idilesi yekhalenda?</string>
+    <string name="calendars_link_revoke_title">Ufuna ukususa idilesi yekhalenda?</string>
     <string name="calendars_link_revoke_message">Iikhalenda ezibhalisele kule dilesi ziza kuyeka ukuhlaziywa.</string>
 </resources>

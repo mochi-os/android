@@ -40,7 +40,7 @@
     <string name="discovery_recommended">Suositeltu</string>
     <string name="access_add_rule">Lisää sääntö</string>
     <string name="access_owner">Omistaja</string>
-    <string name="access_revoke">Peruuta</string>
+    <string name="access_revoke">Mitätöi</string>
     <string name="access_level_comment">Kommentoi</string>
     <string name="access_level_view">Näytä</string>
     <string name="access_level_none">Ei mitään</string>
@@ -299,9 +299,9 @@
     <string name="format_code">Koodi</string>
     <string name="format_list">Luettelomerkit</string>
     <string name="common_preview">Esikatselu</string>
-    <string name="rss_revoke_confirm">Peruuta</string>
-    <string name="rss_revoke">Peruuta käyttöoikeus</string>
-    <string name="rss_revoke_title">Kumotaanko RSS-käyttöoikeus?</string>
+    <string name="rss_revoke_confirm">Mitätöi</string>
+    <string name="rss_revoke">Poista käyttöoikeus</string>
+    <string name="rss_revoke_title">Mitätöidäänkö RSS-käyttöoikeus?</string>
     <string name="rss_revoke_message">Kaikki tätä syötettä tilaavat lakkaavat vastaanottamasta sitä. Voit kopioida uuden URL-osoitteen jälkeenpäin.</string>
     <string name="rss_revoked">RSS-käyttöoikeus peruutettu</string>
     <string name="rss_revoke_failed">RSS-käyttöoikeuden peruuttaminen epäonnistui</string>

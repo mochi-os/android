@@ -29,7 +29,7 @@
     <string name="calendars_day_friday">პარასკევი</string>
     <string name="calendars_day_saturday">შაბათი</string>
     <string name="calendars_link_replace">ჩანაცვლება</string>
-    <string name="calendars_link_revoke">გაუქმება</string>
+    <string name="calendars_link_revoke">გაწვევა</string>
     <string name="calendars_permission_allow">დაშვება</string>
     <string name="calendars_permission_deny">უარყოფა</string>
     <string name="calendars_sync_title">სინქრონიზება ამ ტელეფონთან</string>
@@ -189,6 +189,6 @@
     <string name="calendars_span_day">%1$s, %2$s-დან %3$s-მდე</string>
     <string name="calendars_polled_current">კალენდარი განახლებულია</string>
     <string name="calendars_polled_synced">კალენდარი დასინქრონდა</string>
-    <string name="calendars_link_revoke_title">გაუქმდეს კალენდრის მისამართი?</string>
+    <string name="calendars_link_revoke_title">კალენდრის მისამართის გაწვევა?</string>
     <string name="calendars_link_revoke_message">ამ მისამართზე გამოწერილი კალენდრები აღარ განახლდება.</string>
 </resources>

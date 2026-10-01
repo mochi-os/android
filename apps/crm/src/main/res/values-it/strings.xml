@@ -33,11 +33,11 @@
     <string name="crm_settings_tab_people">Persone</string>
     <string name="crm_option_icon">Icona</string>
     <string name="crm_option_icon_placeholder">es. Check, Star, Flag</string>
-    <string name="crm_settings_unsubscribe">Annulla iscrizione</string>
+    <string name="crm_settings_unsubscribe">Disiscriviti</string>
     <string name="crm_settings_delete_crm">Elimina CRM</string>
     <string name="crm_settings_delete_confirm_title">Elimina CRM</string>
-    <string name="crm_settings_unsubscribe_title">Annulla iscrizione</string>
-    <string name="crm_settings_unsubscribe_message">Sei sicuro di voler annullare l\'iscrizione a questo CRM?</string>
+    <string name="crm_settings_unsubscribe_title">Disiscriviti</string>
+    <string name="crm_settings_unsubscribe_message">Sei sicuro di volerti disiscrivere da questo CRM?</string>
     <string name="crm_access_level_owner">Proprietario</string>
     <string name="crm_object_watch">Segui</string>
     <string name="crm_object_tab_properties">Proprietà</string>

@@ -9,9 +9,9 @@
     <string name="settings_home_notification_prefs">Keutamaan pemberitahuan</string>
     <string name="settings_home_accounts">Akaun disambungkan</string>
     <string name="settings_home_interests">Minat</string>
-    <string name="account_section_passkeys">Passkey</string>
-    <string name="account_passkey_register">Tambah passkey</string>
-    <string name="account_passkey_delete_title">Padam passkey?</string>
+    <string name="account_section_passkeys">Kunci laluan</string>
+    <string name="account_passkey_register">Tambah kunci laluan</string>
+    <string name="account_passkey_delete_title">Padam kunci laluan?</string>
     <string name="account_section_totp">Apl authenticator</string>
     <string name="account_totp_setup">Sediakan pengesah</string>
     <string name="account_totp_setup_title">Sediakan pengesah</string>
@@ -20,7 +20,7 @@
     <string name="account_section_recovery">Kod pemulihan</string>
     <string name="account_recovery_codes_title">Kod pemulihan</string>
     <string name="sessions_unknown_agent">Peranti tidak diketahui</string>
-    <string name="sessions_revoke_title">Batalkan sesi?</string>
+    <string name="sessions_revoke_title">Tarik balik sesi?</string>
     <string name="account_section_oauth">Log masuk pihak ketiga</string>
     <string name="account_oauth_link">Pautkan akaun</string>
     <string name="account_unlink">Nyahpaut</string>
@@ -29,7 +29,7 @@
     <string name="account_done">Selesai</string>
     <string name="account_delete">Padam</string>
     <string name="account_rename">Namakan semula</string>
-    <string name="sessions_revoke">Batalkan</string>
+    <string name="sessions_revoke">Tarik balik</string>
     <string name="account_disable">Lumpuhkan</string>
     <string name="account_copy">Salin</string>
     <string name="account_copy_all">Salin semua</string>
@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">Tetapkan semula kepada lalai?</string>
     <string name="system_setting_apps_install_user">Benarkan pengguna memasang apl</string>
     <string name="system_setting_auth_email">Log masuk menggunakan kod e-mel</string>
-    <string name="system_setting_auth_passkey">Log masuk menggunakan passkey</string>
+    <string name="system_setting_auth_passkey">Log masuk menggunakan kunci laluan</string>
     <string name="system_setting_auth_totp">Log masuk menggunakan aplikasi pengesah TOTP</string>
     <string name="system_setting_auth_recovery">Log masuk menggunakan kod pemulihan</string>
     <string name="system_setting_auth_oauth">Log masuk menggunakan OAuth 2.0</string>
@@ -181,8 +181,8 @@
     <string name="system_users_delete_title">Padam pengguna?</string>
     <string name="system_users_manage_sessions">Urus sesi</string>
     <string name="system_users_sessions_empty">Pengguna ini tiada sesi aktif.</string>
-    <string name="system_users_revoke">Batalkan</string>
-    <string name="system_users_revoke_all">Batalkan semua sesi</string>
+    <string name="system_users_revoke">Tarik balik</string>
+    <string name="system_users_revoke_all">Tarik balik semua sesi</string>
     <string name="system_users_unknown_browser">Pelayar tidak diketahui</string>
     <string name="system_users_unknown">Tidak diketahui</string>
     <string name="system_users_previous">Sebelumnya</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">Polisi privasi</string>
     <string name="settings_home_rules">Peraturan</string>
     <string name="settings_home_terms">Syarat perkhidmatan</string>
-    <string name="account_passkeys_empty">Tiada passkey didaftarkan.</string>
-    <string name="account_passkey_register_title">Tambah passkey</string>
+    <string name="account_passkeys_empty">Tiada kunci laluan didaftarkan.</string>
+    <string name="account_passkey_register_title">Tambah kunci laluan</string>
     <string name="account_passkey_name_label">Nama (pilihan)</string>
     <string name="account_passkey_delete_message">\"%1$s\" tidak akan log masuk anda lagi.</string>
     <string name="account_totp_enabled">Pengesah didayakan.</string>
@@ -264,7 +264,7 @@
     <string name="system_users_delete_message">Ini akan memadam secara kekal pengguna \"%1$s\". Tindakan ini tidak boleh dibuat asal.</string>
     <string name="system_users_sessions_title">Sesi %1$s</string>
     <string name="system_users_session_last_accessed">Akses terakhir: %1$s</string>
-    <string name="system_users_revoke_all_title">Batalkan semua sesi?</string>
+    <string name="system_users_revoke_all_title">Tarik balik semua sesi?</string>
     <string name="system_users_revoke_all_message">Semua sesi aktif pengguna ini akan dilog keluar.</string>
     <plurals name="system_users_pagination_status">
         <item quantity="other">Memaparkan %1$d–%2$d daripada %3$d pengguna</item>
@@ -382,13 +382,13 @@
     <string name="accounts_field_topic">Topik</string>
     <string name="accounts_field_secret">Rahsia tandatangan</string>
     <string name="account_totp_open">Buka dalam apl pengesah</string>
-    <string name="accounts_revoke">Batalkan akses</string>
+    <string name="accounts_revoke">Tarik balik akses</string>
     <string name="accounts_capability_calendar">Kalendar</string>
     <string name="accounts_capability_notify">Pemberitahuan</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Log masuk</string>
     <string name="accounts_provider_caldav">Pelayan kalendar</string>
-    <string name="accounts_revoke_confirm">Ini akan membatalkan akses kalendar %1$s. Log masuk dengan %2$s kekal sehingga anda menyahpaut di halaman Log masuk.</string>
+    <string name="accounts_revoke_confirm">Ini akan menarik balik akses kalendar %1$s. Log masuk dengan %2$s kekal sehingga anda menyahpaut di halaman Log masuk.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Tema tidak dikenali</string>
     <string name="system_documents_modified">Diubah suai</string>

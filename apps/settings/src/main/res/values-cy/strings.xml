@@ -10,8 +10,8 @@
     <string name="settings_home_accounts">Cyfrifon cysylltiedig</string>
     <string name="settings_home_interests">Diddordebau</string>
     <string name="account_section_passkeys">Pasallweddi</string>
-    <string name="account_passkey_register">Ychwanegu allwedd basg</string>
-    <string name="account_passkey_delete_title">Dileu allwedd basg?</string>
+    <string name="account_passkey_register">Ychwanegu pasallwedd</string>
+    <string name="account_passkey_delete_title">Dileu\'r basallwedd?</string>
     <string name="account_section_totp">App dilyswr</string>
     <string name="account_totp_setup">Gosod dilysydd</string>
     <string name="account_totp_setup_title">Gosod dilysydd</string>
@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">Ailosod i\'r diofyn?</string>
     <string name="system_setting_apps_install_user">Caniatáu i ddefnyddwyr osod apiau</string>
     <string name="system_setting_auth_email">Mewngofnodi gan ddefnyddio cod e-bost</string>
-    <string name="system_setting_auth_passkey">Mewngofnodi gan ddefnyddio allwedd mynediad</string>
+    <string name="system_setting_auth_passkey">Mewngofnodi gan ddefnyddio pasallwedd</string>
     <string name="system_setting_auth_totp">Mewngofnodi gan ddefnyddio ap dilysu TOTP</string>
     <string name="system_setting_auth_recovery">Mewngofnodi gan ddefnyddio cod adfer</string>
     <string name="system_setting_auth_oauth">Mewngofnodi gan ddefnyddio OAuth 2.0</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">Polisi preifatrwydd</string>
     <string name="settings_home_rules">Rheolau</string>
     <string name="settings_home_terms">Telerau gwasanaeth</string>
-    <string name="account_passkeys_empty">Dim allweddi mynediad wedi\'u cofrestru.</string>
-    <string name="account_passkey_register_title">Ychwanegu allwedd mynediad</string>
+    <string name="account_passkeys_empty">Dim pasallweddi wedi\'u cofrestru.</string>
+    <string name="account_passkey_register_title">Ychwanegu pasallwedd</string>
     <string name="account_passkey_name_label">Enw (dewisol)</string>
     <string name="account_passkey_delete_message">Ni fydd \"%1$s\" yn eich mewngofnodi mwyach.</string>
     <string name="account_totp_enabled">Mae\'r dilyswr wedi\'i alluogi.</string>

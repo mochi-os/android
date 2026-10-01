@@ -40,7 +40,7 @@
     <string name="discovery_recommended">Yaadachifame</string>
     <string name="access_add_rule">Seera dabaluu</string>
     <string name="access_owner">Abbaa qabeenyaa</string>
-    <string name="access_revoke">Haqi</string>
+    <string name="access_revoke">Deebifadhu</string>
     <string name="access_level_comment">Yaada kenni</string>
     <string name="access_level_view">Daawwadhu</string>
     <string name="access_level_none">Tokko illee</string>
@@ -146,7 +146,7 @@
     <string name="auth_next">Itti aanu</string>
     <string name="auth_or_log_in_with">Yookaan kanaan seeni</string>
     <string name="auth_passkey">Passkey</string>
-    <string name="auth_use_passkey">Furtuu darbii fayyadami</string>
+    <string name="auth_use_passkey">Passkey fayyadami</string>
     <string name="auth_email_me_a_code">Koodii imeeliidhaan naaf ergi</string>
     <string name="auth_or_enter_authenticator_code">Yookaan koodii Authenticator galchi</string>
     <string name="auth_log_in">Seeni</string>
@@ -299,9 +299,9 @@
     <string name="format_code">Koodii</string>
     <string name="format_list">Tarree qabxii</string>
     <string name="common_preview">Dursanii ilaaluu</string>
-    <string name="rss_revoke_confirm">Haqi</string>
-    <string name="rss_revoke">Argama haqi</string>
-    <string name="rss_revoke_title">Argaa RSS haqamuu?</string>
+    <string name="rss_revoke_confirm">Deebifadhu</string>
+    <string name="rss_revoke">Argama deebifadhu</string>
+    <string name="rss_revoke_title">Argaa RSS deebifachuu?</string>
     <string name="rss_revoke_message">Wanti kamiyyuu feed kana ajaje fudhachuu ni dhaaba. Booda URL haaraa garagalchuu dandeessa.</string>
     <string name="rss_revoked">Argamni RSS haqameera</string>
     <string name="rss_revoke_failed">Argama RSS haquun hin milkoofne</string>

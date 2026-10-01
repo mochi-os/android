@@ -166,7 +166,7 @@
     <string name="feeds_settings_field_server">Сервер</string>
     <string name="feeds_settings_name_edit_cd">Уреди име</string>
     <string name="feeds_settings_section_identity">Идентитет</string>
-    <string name="feeds_unsubscribe">Откажи претплата</string>
+    <string name="feeds_unsubscribe">Отпиши се</string>
     <string name="feeds_unsubscribed">Претплатата е откажана</string>
     <string name="feeds_access_level_comment_full">Коментирај, реагирај и прегледај</string>
     <string name="feeds_rss_mode_posts_comments">Објави и коментари</string>

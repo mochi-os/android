@@ -230,14 +230,14 @@
     <string name="stepup_email_placeholder">Rhowch y cod o\'ch e-bost</string>
     <string name="stepup_totp_label">Cod dilyswr</string>
     <string name="stepup_totp_placeholder">Rhowch god eich ap dilysu</string>
-    <string name="stepup_use_passkey">Defnyddiwch eich allwedd mynediad</string>
+    <string name="stepup_use_passkey">Defnyddiwch eich pasallwedd</string>
     <string name="stepup_send_email">Anfon e-bost</string>
     <string name="stepup_resend_email">Ailanfon yr e-bost</string>
     <string name="stepup_verify">Dilysu</string>
     <string name="stepup_continue_with">Parhau gyda %1$s</string>
     <string name="stepup_error_start">Methwyd dechrau ailddilysu. Rhowch gynnig arall arni.</string>
     <string name="stepup_error_code">Mae\'r cod hwnnw\'n anghywir neu wedi dod i ben.</string>
-    <string name="stepup_error_passkey">Methodd dilysu\'r allwedd mynediad. Rhowch gynnig arall arni.</string>
+    <string name="stepup_error_passkey">Methodd dilysu\'r basallwedd. Rhowch gynnig arall arni.</string>
     <string name="stepup_error_oauth">Methwyd dilysu gyda\'r cyfrif hwnnw. Rhowch gynnig arall arni.</string>
     <string name="game_system_resign">Ildiodd %1$s</string>
     <string name="game_system_draw_offer">Cynigiodd %1$s gyfartal</string>

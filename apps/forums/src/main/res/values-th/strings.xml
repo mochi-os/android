@@ -6,8 +6,8 @@
     <string name="forums_list_title">ฟอรัม</string>
     <string name="forums_list_find">ค้นหาฟอรัม</string>
     <string name="forums_list_logout">ออกจากระบบ</string>
-    <string name="forums_list_unsubscribe">ยกเลิกการติดตาม</string>
-    <string name="forums_list_unsubscribe_title">ยกเลิกการติดตาม</string>
+    <string name="forums_list_unsubscribe">เลิกติดตาม</string>
+    <string name="forums_list_unsubscribe_title">เลิกติดตาม</string>
     <string name="forums_create_title">สร้างฟอรัม</string>
     <string name="forums_create_name">ชื่อฟอรัม</string>
     <string name="forums_create_privacy">ความเป็นส่วนตัว</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">แท็ก</string>
     <string name="forums_ai_account_default">บัญชีเริ่มต้น</string>
     <string name="forums_ai_prompt_reset">รีเซ็ตเป็นค่าเริ่มต้น</string>
-    <string name="forums_settings_unsubscribe">ยกเลิกการติดตาม</string>
+    <string name="forums_settings_unsubscribe">เลิกติดตาม</string>
     <string name="forums_moderation_title">การกลั่นกรอง</string>
     <string name="forums_moderation_tab_queue">คิว</string>
     <string name="forums_moderation_tab_reports">รายงาน</string>
@@ -137,7 +137,7 @@
     <string name="forums_auth_enter_code_sent">ป้อนรหัสที่ส่งไปยัง %1$s</string>
     <string name="forums_auth_create_identity">สร้างตัวตนของคุณ</string>
     <string name="forums_list_empty">ยังไม่มีฟอรัม</string>
-    <string name="forums_list_unsubscribe_message">คุณแน่ใจหรือไม่ว่าต้องการยกเลิกการติดตามฟอรัมนี้?</string>
+    <string name="forums_list_unsubscribe_message">คุณแน่ใจหรือไม่ว่าต้องการเลิกติดตามฟอรัมนี้?</string>
     <string name="forums_find_search_placeholder">ค้นหาฟอรัมหรือวาง URL</string>
     <string name="forums_find_search_hint">ค้นหาฟอรัมเพื่อติดตาม</string>
     <string name="forums_post_delete_message">คุณแน่ใจหรือไม่ว่าต้องการลบโพสต์นี้? การกระทำนี้ไม่สามารถยกเลิกได้</string>

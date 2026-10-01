@@ -65,6 +65,7 @@ import org.mochios.android.ui.components.MochiTab
 import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.settings.api.NotifCategory
 import org.mochios.settings.api.NotifTopic
+import org.mochios.settings.ui.notificationprefs.ordered
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -318,7 +319,7 @@ private fun NotificationCard(
  * notification preferences.
  */
 @Composable
-private fun CategoryPicker(
+internal fun CategoryPicker(
     topic: NotifTopic,
     categories: List<NotifCategory>,
     onSetCategory: (NotifTopic, String?) -> Unit,
@@ -326,12 +327,7 @@ private fun CategoryPicker(
     var menu by remember { mutableStateOf(false) }
     // "No notifications" is the seeded id "0" and belongs at the end as the
     // opt-out; the rest read alphabetically, which is where a reader looks.
-    val ordered = remember(categories) {
-        categories.sortedWith(
-            compareBy<NotifCategory> { it.id == "0" }
-                .thenBy(String.CASE_INSENSITIVE_ORDER) { it.label },
-        )
-    }
+    val ordered = remember(categories) { categories.ordered() }
     Box {
         MochiIconButton(onClick = { menu = true }) {
             Icon(
@@ -350,7 +346,7 @@ private fun CategoryPicker(
             )
             for (category in ordered) {
                 MochiDropdownMenuItem(
-                    text = { Text(category.label) },
+                    text = { Text(category.shown) },
                     onClick = {
                         menu = false
                         onSetCategory(topic, category.id)

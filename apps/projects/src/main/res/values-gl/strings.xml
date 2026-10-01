@@ -40,11 +40,11 @@
     <string name="projects_settings_tab_people">Persoas</string>
     <string name="projects_option_icon">Icona</string>
     <string name="projects_option_icon_placeholder">p.ex. Check, Star, Flag</string>
-    <string name="projects_settings_unsubscribe">Cancelar subscrición</string>
+    <string name="projects_settings_unsubscribe">Anular subscrición</string>
     <string name="projects_settings_delete_project">Eliminar proxecto</string>
     <string name="projects_settings_delete_confirm_title">Eliminar proxecto</string>
-    <string name="projects_settings_unsubscribe_title">Cancelar subscrición</string>
-    <string name="projects_settings_unsubscribe_message">Seguro que queres cancelar a subscrición a este proxecto?</string>
+    <string name="projects_settings_unsubscribe_title">Anular subscrición</string>
+    <string name="projects_settings_unsubscribe_message">Seguro que queres anular a subscrición a este proxecto?</string>
     <string name="projects_access_level_owner">Propietario</string>
     <string name="projects_object_watch">Vixiar</string>
     <string name="projects_object_tab_properties">Propiedades</string>

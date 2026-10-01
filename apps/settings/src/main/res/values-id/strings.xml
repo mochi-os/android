@@ -5,13 +5,13 @@
     <string name="settings_home_logout">Keluar</string>
     <string name="settings_home_account">Akun</string>
     <string name="settings_home_preferences">Preferensi</string>
-    <string name="settings_home_display">Tampilan</string>
+    <string name="settings_home_display">Layar</string>
     <string name="settings_home_notification_prefs">Preferensi notifikasi</string>
     <string name="settings_home_accounts">Akun yang terhubung</string>
     <string name="settings_home_interests">Minat</string>
-    <string name="account_section_passkeys">Passkey</string>
-    <string name="account_passkey_register">Tambah passkey</string>
-    <string name="account_passkey_delete_title">Hapus passkey?</string>
+    <string name="account_section_passkeys">Kunci sandi</string>
+    <string name="account_passkey_register">Tambah kunci sandi</string>
+    <string name="account_passkey_delete_title">Hapus kunci sandi?</string>
     <string name="account_section_totp">Aplikasi authenticator</string>
     <string name="account_totp_setup">Siapkan autentikator</string>
     <string name="account_totp_setup_title">Siapkan autentikator</string>
@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">Reset ke default?</string>
     <string name="system_setting_apps_install_user">Izinkan pengguna memasang aplikasi</string>
     <string name="system_setting_auth_email">Masuk menggunakan kode email</string>
-    <string name="system_setting_auth_passkey">Masuk menggunakan passkey</string>
+    <string name="system_setting_auth_passkey">Masuk menggunakan kunci sandi</string>
     <string name="system_setting_auth_totp">Masuk menggunakan aplikasi autentikator TOTP</string>
     <string name="system_setting_auth_recovery">Masuk menggunakan kode pemulihan</string>
     <string name="system_setting_auth_oauth">Masuk menggunakan OAuth 2.0</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">Kebijakan privasi</string>
     <string name="settings_home_rules">Aturan</string>
     <string name="settings_home_terms">Ketentuan layanan</string>
-    <string name="account_passkeys_empty">Tidak ada passkey yang terdaftar.</string>
-    <string name="account_passkey_register_title">Tambahkan passkey</string>
+    <string name="account_passkeys_empty">Tidak ada kunci sandi yang terdaftar.</string>
+    <string name="account_passkey_register_title">Tambahkan kunci sandi</string>
     <string name="account_passkey_name_label">Nama (opsional)</string>
     <string name="account_passkey_delete_message">\"%1$s\" tidak akan lagi memasukkan Anda.</string>
     <string name="account_totp_enabled">Autentikator aktif.</string>

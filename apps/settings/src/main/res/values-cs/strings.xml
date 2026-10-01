@@ -10,8 +10,8 @@
     <string name="settings_home_accounts">Připojené účty</string>
     <string name="settings_home_interests">Zájmy</string>
     <string name="account_section_passkeys">Přístupové klíče</string>
-    <string name="account_passkey_register">Přidat passkey</string>
-    <string name="account_passkey_delete_title">Smazat passkey?</string>
+    <string name="account_passkey_register">Přidat přístupový klíč</string>
+    <string name="account_passkey_delete_title">Smazat přístupový klíč?</string>
     <string name="account_section_totp">Autentizační aplikace</string>
     <string name="account_totp_setup">Nastavit autentizátor</string>
     <string name="account_totp_setup_title">Nastavit autentizátor</string>
@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">Obnovit na výchozí?</string>
     <string name="system_setting_apps_install_user">Povolit uživatelům instalovat aplikace</string>
     <string name="system_setting_auth_email">Přihlášení pomocí e-mailového kódu</string>
-    <string name="system_setting_auth_passkey">Přihlášení pomocí passkey</string>
+    <string name="system_setting_auth_passkey">Přihlášení pomocí přístupového klíče</string>
     <string name="system_setting_auth_totp">Přihlášení pomocí aplikace TOTP</string>
     <string name="system_setting_auth_recovery">Přihlášení pomocí obnovovacího kódu</string>
     <string name="system_setting_auth_oauth">Přihlášení pomocí OAuth 2.0</string>
@@ -182,7 +182,7 @@
     <string name="system_users_manage_sessions">Spravovat relace</string>
     <string name="system_users_sessions_empty">Tento uživatel nemá žádné aktivní relace.</string>
     <string name="system_users_revoke">Odvolat</string>
-    <string name="system_users_revoke_all">Zrušit všechny relace</string>
+    <string name="system_users_revoke_all">Odvolat všechny relace</string>
     <string name="system_users_unknown_browser">Neznámý prohlížeč</string>
     <string name="system_users_unknown">Neznámý</string>
     <string name="system_users_previous">Předchozí</string>
@@ -266,7 +266,7 @@
     <string name="system_users_delete_message">Tímto se trvale smaže uživatel \"%1$s\". Tuto akci nelze vrátit zpět.</string>
     <string name="system_users_sessions_title">Relace uživatele %1$s</string>
     <string name="system_users_session_last_accessed">Poslední přístup: %1$s</string>
-    <string name="system_users_revoke_all_title">Zrušit všechny relace?</string>
+    <string name="system_users_revoke_all_title">Odvolat všechny relace?</string>
     <string name="system_users_revoke_all_message">Všechny aktivní relace tohoto uživatele budou odhlášeny.</string>
     <plurals name="system_users_pagination_status">
         <item quantity="one">Zobrazeno %1$d–%2$d z %3$d uživatele</item>
@@ -322,9 +322,9 @@
     <string name="login_method_totp">Autentizační aplikace</string>
     <string name="login_method_oauth">Přihlášení třetí strany</string>
     <string name="login_method_recovery">Obnovovací kódy</string>
-    <string name="account_close_section">Zrušit účet</string>
-    <string name="account_close_action">Zrušit účet</string>
-    <string name="account_close_confirm_title">Zrušit váš účet?</string>
+    <string name="account_close_section">Uzavřít účet</string>
+    <string name="account_close_action">Uzavřít účet</string>
+    <string name="account_close_confirm_title">Uzavřít váš účet?</string>
     <string name="account_close_confirm_body">Váš účet bude naplánován ke smazání a budete odhlášeni. Smazání můžete kdykoli před datem smazání zrušit opětovným přihlášením.</string>
     <string name="account_data_download">Stáhnout</string>
     <string name="route_target_app">Aplikace</string>
@@ -392,13 +392,13 @@
     <string name="accounts_field_topic">Téma</string>
     <string name="accounts_field_secret">Tajný klíč pro podpis</string>
     <string name="account_totp_open">Otevřít v ověřovací aplikaci</string>
-    <string name="accounts_revoke">Zrušit přístup</string>
+    <string name="accounts_revoke">Odvolat přístup</string>
     <string name="accounts_capability_calendar">Kalendář</string>
     <string name="accounts_capability_notify">Oznámení</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Přihlášení</string>
     <string name="accounts_provider_caldav">Kalendářový server</string>
-    <string name="accounts_revoke_confirm">Tím se zruší přístup ke kalendáři pro %1$s. Přihlašování přes %2$s zůstane, dokud ho neodpojíte na stránce přihlášení.</string>
+    <string name="accounts_revoke_confirm">Tím se odvolá přístup ke kalendáři pro %1$s. Přihlašování přes %2$s zůstane, dokud ho neodpojíte na stránce přihlášení.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Neznámý motiv</string>
     <string name="system_documents_modified">Upraveno</string>

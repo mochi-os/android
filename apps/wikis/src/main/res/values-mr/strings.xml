@@ -40,7 +40,7 @@
     <string name="wikis_rss_both">बदल आणि टिप्पण्या</string>
     <string name="wikis_rss_copied">RSS URL क्लिपबोर्डवर कॉपी केले</string>
     <string name="wikis_rss_failed">RSS टोकन मिळवण्यात अयशस्वी</string>
-    <string name="wikis_rss_revoke">प्रवेश रद्द करा</string>
+    <string name="wikis_rss_revoke">प्रवेश मागे घ्या</string>
     <string name="wikis_rss_revoked">RSS प्रवेश रद्द केला</string>
     <string name="wikis_find_title">विकीज शोधा</string>
     <string name="wikis_find_no_results">विकीज सापडले नाहीत</string>

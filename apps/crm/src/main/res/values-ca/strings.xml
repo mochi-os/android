@@ -33,11 +33,11 @@
     <string name="crm_settings_tab_people">Persones</string>
     <string name="crm_option_icon">Icona</string>
     <string name="crm_option_icon_placeholder">p. ex. Check, Star, Flag</string>
-    <string name="crm_settings_unsubscribe">Cancel·la la subscripció</string>
+    <string name="crm_settings_unsubscribe">Dona\'t de baixa</string>
     <string name="crm_settings_delete_crm">Suprimeix el CRM</string>
     <string name="crm_settings_delete_confirm_title">Suprimeix el CRM</string>
-    <string name="crm_settings_unsubscribe_title">Cancel·la la subscripció</string>
-    <string name="crm_settings_unsubscribe_message">Segur que vols cancel·lar la subscripció a aquest CRM?</string>
+    <string name="crm_settings_unsubscribe_title">Dona\'t de baixa</string>
+    <string name="crm_settings_unsubscribe_message">Segur que vols donar-te de baixa d\'aquest CRM?</string>
     <string name="crm_access_level_owner">Propietari</string>
     <string name="crm_object_watch">Segueix</string>
     <string name="crm_object_tab_properties">Propietats</string>

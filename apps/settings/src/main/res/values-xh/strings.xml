@@ -9,9 +9,9 @@
     <string name="settings_home_notification_prefs">Iinkethelo zezaziso</string>
     <string name="settings_home_accounts">Ii-akhawunti ezidibeneyo</string>
     <string name="settings_home_interests">Imidla</string>
-    <string name="account_section_passkeys">Ii-passkey</string>
-    <string name="account_passkey_register">Yongeza i-passkey</string>
-    <string name="account_passkey_delete_title">Cima i-passkey?</string>
+    <string name="account_section_passkeys">Izitshixo zokungena</string>
+    <string name="account_passkey_register">Yongeza isitshixo sokungena</string>
+    <string name="account_passkey_delete_title">Cima isitshixo sokungena?</string>
     <string name="account_section_totp">I-app yokuqinisekisa</string>
     <string name="account_totp_setup">Misela isiqinisekisi</string>
     <string name="account_totp_setup_title">Misela isiqinisekisi</string>
@@ -20,7 +20,7 @@
     <string name="account_section_recovery">Iikhowudi zokubuyisa</string>
     <string name="account_recovery_codes_title">Iikhowudi zokubuyisa</string>
     <string name="sessions_unknown_agent">Isixhobo esingaziwayo</string>
-    <string name="sessions_revoke_title">Rhoxisa iseshoni?</string>
+    <string name="sessions_revoke_title">Susa iseshoni?</string>
     <string name="account_section_oauth">Ungeniso lwabanye</string>
     <string name="account_oauth_link">Dibanisa iakhawunti</string>
     <string name="account_unlink">Yahlula</string>
@@ -29,7 +29,7 @@
     <string name="account_done">Kwenziwe</string>
     <string name="account_delete">Cima</string>
     <string name="account_rename">Guqula igama</string>
-    <string name="sessions_revoke">Rhoxisa</string>
+    <string name="sessions_revoke">Susa</string>
     <string name="account_disable">Cima</string>
     <string name="account_copy">Kotshela</string>
     <string name="account_copy_all">Kotshela konke</string>
@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">Buyisela kumiselweyo?</string>
     <string name="system_setting_apps_install_user">Vumela abasebenzisi ukufaka ii-apps</string>
     <string name="system_setting_auth_email">Ngena usebenzisa ikhowudi ye-imeyile</string>
-    <string name="system_setting_auth_passkey">Ngena usebenzisa i-passkey</string>
+    <string name="system_setting_auth_passkey">Ngena usebenzisa isitshixo sokungena</string>
     <string name="system_setting_auth_totp">Ngena usebenzisa usetyenziso lwe-TOTP authenticator</string>
     <string name="system_setting_auth_recovery">Ngena usebenzisa ikhowudi yokubuyisa</string>
     <string name="system_setting_auth_oauth">Ngena usebenzisa i-OAuth 2.0</string>
@@ -181,8 +181,8 @@
     <string name="system_users_delete_title">Cima umsebenzisi?</string>
     <string name="system_users_manage_sessions">Lawula iiseshini</string>
     <string name="system_users_sessions_empty">Lo msebenzisi akanazo iiseshoni ezisebenzayo.</string>
-    <string name="system_users_revoke">Rhoxisa</string>
-    <string name="system_users_revoke_all">Rhoxisa zonke iiseshoni</string>
+    <string name="system_users_revoke">Susa</string>
+    <string name="system_users_revoke_all">Susa zonke iiseshoni</string>
     <string name="system_users_unknown_browser">Ibhrawuza engaziwayo</string>
     <string name="system_users_unknown">Akwaziwa</string>
     <string name="system_users_previous">Engaphambili</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">Umgaqo-nkqubo wabucala</string>
     <string name="settings_home_rules">Imithetho</string>
     <string name="settings_home_terms">Imimiselo yenkonzo</string>
-    <string name="account_passkeys_empty">Akukho passkey ebhalisiweyo.</string>
-    <string name="account_passkey_register_title">Yongeza i-passkey</string>
+    <string name="account_passkeys_empty">Akukho zitshixo zokungena zibhalisiweyo.</string>
+    <string name="account_passkey_register_title">Yongeza isitshixo sokungena</string>
     <string name="account_passkey_name_label">Igama (akukho mthethweni)</string>
     <string name="account_passkey_delete_message">\"%1$s\" akusayi kukungenisa.</string>
     <string name="account_totp_enabled">Umqinisekisi unikiwe amandla.</string>
@@ -386,13 +386,13 @@
     <string name="accounts_field_topic">Umxholo</string>
     <string name="accounts_field_secret">Imfihlo yokusayina</string>
     <string name="account_totp_open">Vula kwi-app yokuqinisekisa</string>
-    <string name="accounts_revoke">Rhoxisa ufikelelo</string>
+    <string name="accounts_revoke">Susa ufikelelo</string>
     <string name="accounts_capability_calendar">Ikhalenda</string>
     <string name="accounts_capability_notify">Izaziso</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Ukungena</string>
     <string name="accounts_provider_caldav">Iseva yekhalenda</string>
-    <string name="accounts_revoke_confirm">Oku kuya kurhoxisa ufikelelo lwekhalenda luka-%1$s. Ukungena nge-%2$s kuya kuhlala kude ukhulule unxulumano kwiphepha lokuNgena.</string>
+    <string name="accounts_revoke_confirm">Oku kuya kususa ufikelelo lwekhalenda luka-%1$s. Ukungena nge-%2$s kuya kuhlala kude ukhulule unxulumano kwiphepha lokuNgena.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Itimu engaziwayo</string>
     <string name="system_documents_modified">Kuguqulwe</string>

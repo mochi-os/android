@@ -29,7 +29,7 @@
     <string name="calendars_day_friday">Jumaat</string>
     <string name="calendars_day_saturday">Sabtu</string>
     <string name="calendars_link_replace">Ganti</string>
-    <string name="calendars_link_revoke">Batalkan</string>
+    <string name="calendars_link_revoke">Tarik balik</string>
     <string name="calendars_permission_allow">Benarkan</string>
     <string name="calendars_permission_deny">Tolak</string>
     <string name="calendars_sync_title">Segerakkan ke telefon ini</string>
@@ -185,6 +185,6 @@
     <string name="calendars_span_day">%1$s, %2$s hingga %3$s</string>
     <string name="calendars_polled_current">Kalendar sudah terkini</string>
     <string name="calendars_polled_synced">Kalendar disegerakkan</string>
-    <string name="calendars_link_revoke_title">Batalkan alamat kalendar?</string>
+    <string name="calendars_link_revoke_title">Tarik balik alamat kalendar?</string>
     <string name="calendars_link_revoke_message">Kalendar yang melanggan alamat ini akan berhenti dikemas kini.</string>
 </resources>

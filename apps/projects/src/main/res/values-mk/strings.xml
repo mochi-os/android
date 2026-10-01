@@ -40,10 +40,10 @@
     <string name="projects_settings_tab_people">Луѓе</string>
     <string name="projects_option_icon">Икона</string>
     <string name="projects_option_icon_placeholder">напр. Check, Star, Flag</string>
-    <string name="projects_settings_unsubscribe">Откажи претплата</string>
+    <string name="projects_settings_unsubscribe">Отпиши се</string>
     <string name="projects_settings_delete_project">Избриши проект</string>
     <string name="projects_settings_delete_confirm_title">Избриши проект</string>
-    <string name="projects_settings_unsubscribe_title">Откажи претплата</string>
+    <string name="projects_settings_unsubscribe_title">Отпиши се</string>
     <string name="projects_settings_unsubscribe_message">Сигурен ли си дека сакаш да се одјавиш од овој проект?</string>
     <string name="projects_access_level_owner">Сопственик</string>
     <string name="projects_object_watch">Следи</string>

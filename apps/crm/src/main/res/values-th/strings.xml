@@ -33,11 +33,11 @@
     <string name="crm_settings_tab_people">ผู้คน</string>
     <string name="crm_option_icon">ไอคอน</string>
     <string name="crm_option_icon_placeholder">เช่น Check, Star, Flag</string>
-    <string name="crm_settings_unsubscribe">ยกเลิกการติดตาม</string>
+    <string name="crm_settings_unsubscribe">เลิกติดตาม</string>
     <string name="crm_settings_delete_crm">ลบ CRM</string>
     <string name="crm_settings_delete_confirm_title">ลบ CRM</string>
-    <string name="crm_settings_unsubscribe_title">ยกเลิกการติดตาม</string>
-    <string name="crm_settings_unsubscribe_message">คุณแน่ใจหรือไม่ว่าต้องการยกเลิกการสมัครสมาชิก CRM นี้?</string>
+    <string name="crm_settings_unsubscribe_title">เลิกติดตาม</string>
+    <string name="crm_settings_unsubscribe_message">คุณแน่ใจหรือไม่ว่าต้องการเลิกติดตาม CRM นี้?</string>
     <string name="crm_access_level_owner">เจ้าของ</string>
     <string name="crm_object_watch">ติดตาม</string>
     <string name="crm_object_tab_properties">คุณสมบัติ</string>

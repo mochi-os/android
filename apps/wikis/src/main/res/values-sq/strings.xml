@@ -39,7 +39,7 @@
     <string name="wikis_rss_both">Ndryshimet dhe komentet</string>
     <string name="wikis_rss_copied">URL e RSS u kopjua në clipboard</string>
     <string name="wikis_rss_failed">Marrja e token RSS dështoi</string>
-    <string name="wikis_rss_revoke">Anulo aksesin</string>
+    <string name="wikis_rss_revoke">Revoko aksesin</string>
     <string name="wikis_rss_revoked">Aksesi RSS u anulua</string>
     <string name="wikis_find_title">Gjej wikis</string>
     <string name="wikis_find_no_results">S\'u gjet asnjë wiki</string>

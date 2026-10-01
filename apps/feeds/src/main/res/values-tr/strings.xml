@@ -166,7 +166,7 @@
     <string name="feeds_settings_field_server">Sunucu</string>
     <string name="feeds_settings_name_edit_cd">Adı düzenle</string>
     <string name="feeds_settings_section_identity">Kimlik</string>
-    <string name="feeds_unsubscribe">Aboneliği iptal et</string>
+    <string name="feeds_unsubscribe">Abonelikten çık</string>
     <string name="feeds_unsubscribed">Abonelik iptal edildi</string>
     <string name="feeds_access_level_comment_full">Yorum yap, tepki ver ve görüntüle</string>
     <string name="feeds_rss_mode_posts_comments">Gönderiler ve yorumlar</string>
@@ -176,7 +176,7 @@
     <string name="feeds_post_content">Gönderi içeriği</string>
     <string name="feeds_enable_memories">Anıları etkinleştir</string>
     <string name="feeds_permission_request_title">İzin isteği</string>
-    <string name="feeds_unsubscribe_confirm">Akış aboneliği iptal edilsin mi?</string>
+    <string name="feeds_unsubscribe_confirm">Akış aboneliğinden çıkılsın mı?</string>
     <string name="feeds_settings_title">%1$s ayarları</string>
     <string name="feeds_source_transform_help">Devre dışı bırakmak için boş bırakın.</string>
     <string name="feeds_settings_name_cancel_cd">Düzenlemeyi iptal et</string>

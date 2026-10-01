@@ -32,10 +32,10 @@
     <string name="staff_accounts_submitting">Odosielanie…</string>
     <string name="staff_accounts_suspend">Pozastaviť</string>
     <string name="staff_accounts_suspended_toast">Účet pozastavený</string>
-    <string name="staff_accounts_unban">Zrušiť zákaz</string>
+    <string name="staff_accounts_unban">Odvolať zákaz</string>
     <string name="staff_accounts_unbanned_toast">Blokovanie účtu zrušené</string>
     <string name="staff_accounts_unnamed">Bez názvu</string>
-    <string name="staff_accounts_unsuspend">Zrušiť pozastavenie</string>
+    <string name="staff_accounts_unsuspend">Ukončiť pozastavenie</string>
     <string name="staff_accounts_unsuspended_toast">Pozastavenie účtu zrušené</string>
     <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_appeals_cancel">Zrušiť</string>

@@ -6,12 +6,9 @@
     <string name="wikis_page_action_rename">Renombrá</string>
     <string name="wikis_page_action_delete">Eliminá</string>
     <string name="wikis_page_action_search">Buscá</string>
-    <string name="wikis_page_action_unsubscribe">Cancelá la suscripción</string>
     <string name="wikis_empty_subtitle">Buscá una wiki para suscribirte, o creá una para publicar tu propia documentación.</string>
     <string name="wikis_create_button">Creá una wiki</string>
     <string name="wikis_subscribe_button">Suscribite</string>
-    <string name="wikis_unsubscribe_action">Cancelá la suscripción</string>
-    <string name="wikis_unsubscribe_confirm_title">Cancelá la suscripción</string>
     <string name="wikis_create_title">Creá una wiki</string>
     <string name="wikis_create_privacy_label">Permití que cualquiera busque la wiki</string>
     <string name="wikis_comment_replying_to">Respondiendo a %1$s</string>

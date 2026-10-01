@@ -9,7 +9,7 @@
     <string name="settings_home_notification_prefs">Хабарландыру параметрлері</string>
     <string name="settings_home_accounts">Қосылған тіркелгілер</string>
     <string name="settings_home_interests">Қызығушылықтар</string>
-    <string name="account_section_passkeys">Passkey-лер</string>
+    <string name="account_section_passkeys">Кіру кілттері</string>
     <string name="account_passkey_register">Кіру кілтін қосу</string>
     <string name="account_passkey_delete_title">Кіру кілтін жою керек пе?</string>
     <string name="account_section_totp">Аутентификатор қолданбасы</string>
@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">Әдепкіге қайтару керек пе?</string>
     <string name="system_setting_apps_install_user">Пайдаланушыларға қолданбаларды орнатуға рұқсат ету</string>
     <string name="system_setting_auth_email">Электрондық пошта коды арқылы кіру</string>
-    <string name="system_setting_auth_passkey">Кілт арқылы кіру</string>
+    <string name="system_setting_auth_passkey">Кіру кілті арқылы кіру</string>
     <string name="system_setting_auth_totp">TOTP аутентификатор қолданбасы арқылы кіру</string>
     <string name="system_setting_auth_recovery">Қалпына келтіру коды арқылы кіру</string>
     <string name="system_setting_auth_oauth">OAuth 2.0 арқылы кіру</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">Құпиялылық саясаты</string>
     <string name="settings_home_rules">Ережелер</string>
     <string name="settings_home_terms">Қызмет шарттары</string>
-    <string name="account_passkeys_empty">Тіркелген қол жеткізу кілттері жоқ.</string>
-    <string name="account_passkey_register_title">Қол жеткізу кілтін қосу</string>
+    <string name="account_passkeys_empty">Тіркелген кіру кілттері жоқ.</string>
+    <string name="account_passkey_register_title">Кіру кілтін қосу</string>
     <string name="account_passkey_name_label">Атау (қалауы бойынша)</string>
     <string name="account_passkey_delete_message">\"%1$s\" енді сізді кіргізбейді.</string>
     <string name="account_totp_enabled">Аутентификатор қосылған.</string>

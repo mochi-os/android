@@ -7,6 +7,7 @@ package org.mochios.settings.ui.notificationprefs
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
+import org.mochios.android.util.NaturalCompare
 import org.mochios.settings.R
 import org.mochios.settings.api.DestinationRow
 import org.mochios.settings.api.DestinationsAvailable
@@ -57,5 +58,5 @@ internal fun destinationOptions(
         for (feed in available.feeds) {
             add(DestinationRow(type = "rss", target = feed.id) to feed.name)
         }
-    }.sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { option -> option.second })
+    }.sortedWith(compareBy(NaturalCompare) { option -> option.second })
 }

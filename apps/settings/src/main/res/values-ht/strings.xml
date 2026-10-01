@@ -9,9 +9,9 @@
     <string name="settings_home_notification_prefs">Preferans notifikasyon</string>
     <string name="settings_home_accounts">Kont konekte</string>
     <string name="settings_home_interests">Enterè</string>
-    <string name="account_section_passkeys">Paskey</string>
-    <string name="account_passkey_register">Ajoute passkey</string>
-    <string name="account_passkey_delete_title">Efase passkey?</string>
+    <string name="account_section_passkeys">Kle aksè yo</string>
+    <string name="account_passkey_register">Ajoute kle aksè</string>
+    <string name="account_passkey_delete_title">Efase kle aksè a?</string>
     <string name="account_section_totp">App otantifikatè</string>
     <string name="account_totp_setup">Konfigire otantifikatè</string>
     <string name="account_totp_setup_title">Konfigire otantifikatè</string>
@@ -20,7 +20,7 @@
     <string name="account_section_recovery">Kòd rekiperasyon</string>
     <string name="account_recovery_codes_title">Kòd rekiperasyon</string>
     <string name="sessions_unknown_agent">Aparèy enkoni</string>
-    <string name="sessions_revoke_title">Revoke sesyon?</string>
+    <string name="sessions_revoke_title">Retire sesyon an?</string>
     <string name="account_section_oauth">Koneksyon twazyèm pati</string>
     <string name="account_oauth_link">Lye kont</string>
     <string name="account_unlink">Dekonekte</string>
@@ -29,7 +29,7 @@
     <string name="account_done">Fini</string>
     <string name="account_delete">Efase</string>
     <string name="account_rename">Rebatize</string>
-    <string name="sessions_revoke">Anile</string>
+    <string name="sessions_revoke">Retire</string>
     <string name="account_disable">Dezaktive</string>
     <string name="account_copy">Kopye</string>
     <string name="account_copy_all">Kopye tout</string>
@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">Reset nan default?</string>
     <string name="system_setting_apps_install_user">Pèmèt itilizatè enstale app</string>
     <string name="system_setting_auth_email">Konekte ak kòd imèl</string>
-    <string name="system_setting_auth_passkey">Konekte ak passkey</string>
+    <string name="system_setting_auth_passkey">Konekte ak kle aksè</string>
     <string name="system_setting_auth_totp">Konekte ak app otantifikatè TOTP</string>
     <string name="system_setting_auth_recovery">Konekte ak kòd rekiperasyon</string>
     <string name="system_setting_auth_oauth">Konekte ak OAuth 2.0</string>
@@ -181,7 +181,7 @@
     <string name="system_users_delete_title">Efase itilizatè?</string>
     <string name="system_users_manage_sessions">Jere sesyon</string>
     <string name="system_users_sessions_empty">Itilizatè sa pa gen sesyon aktif.</string>
-    <string name="system_users_revoke">Anile</string>
+    <string name="system_users_revoke">Retire</string>
     <string name="system_users_revoke_all">Revoke tout sesyon</string>
     <string name="system_users_unknown_browser">Navigatè enkoni</string>
     <string name="system_users_unknown">Enkoni</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">Politik konfidansyalite</string>
     <string name="settings_home_rules">Règ</string>
     <string name="settings_home_terms">Kondisyon sèvis</string>
-    <string name="account_passkeys_empty">Pa gen passkey ki anrejistre.</string>
-    <string name="account_passkey_register_title">Ajoute passkey</string>
+    <string name="account_passkeys_empty">Pa gen kle aksè ki anrejistre.</string>
+    <string name="account_passkey_register_title">Ajoute yon kle aksè</string>
     <string name="account_passkey_name_label">Non (opsyonèl)</string>
     <string name="account_passkey_delete_message">\"%1$s\" pa pral konekte w ankò.</string>
     <string name="account_totp_enabled">Otantifikatè aktive.</string>

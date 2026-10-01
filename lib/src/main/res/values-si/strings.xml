@@ -40,7 +40,7 @@
     <string name="discovery_recommended">නිර්දේශිත</string>
     <string name="access_add_rule">නියමයක් එක් කරන්න</string>
     <string name="access_owner">හිමිකරු</string>
-    <string name="access_revoke">අවලංගු කරන්න</string>
+    <string name="access_revoke">අහෝසි කරන්න</string>
     <string name="access_level_comment">අදහස් දක්වන්න</string>
     <string name="access_level_view">බලන්න</string>
     <string name="access_level_none">කිසිවක් නැත</string>
@@ -145,7 +145,7 @@
     <string name="auth_login_title">Mochi වෙත පුරන්න</string>
     <string name="auth_next">ඊළඟ</string>
     <string name="auth_or_log_in_with">හෝ මේ සමඟ පුරන්න</string>
-    <string name="auth_passkey">ප්‍රවේශ යතුර</string>
+    <string name="auth_passkey">මුරයතුර</string>
     <string name="auth_use_passkey">මුරයතුරක් භාවිතා කරන්න</string>
     <string name="auth_email_me_a_code">මට කේතයක් ඊමේල් කරන්න</string>
     <string name="auth_or_enter_authenticator_code">හෝ සත්‍යාපන කේතය ඇතුළත් කරන්න</string>
@@ -299,9 +299,9 @@
     <string name="format_code">කේතය</string>
     <string name="format_list">බුලට් ලැයිස්තුව</string>
     <string name="common_preview">පෙරදසුන</string>
-    <string name="rss_revoke_confirm">අවලංගු කරන්න</string>
-    <string name="rss_revoke">ප්‍රවේශය අවලංගු කරන්න</string>
-    <string name="rss_revoke_title">RSS ප්‍රවේශය අවලංගු කරන්නද?</string>
+    <string name="rss_revoke_confirm">අහෝසි කරන්න</string>
+    <string name="rss_revoke">ප්‍රවේශය අහෝසි කරන්න</string>
+    <string name="rss_revoke_title">RSS ප්‍රවේශය අහෝසි කරන්නද?</string>
     <string name="rss_revoke_message">මෙම සංග්‍රහයට දායක වූ සියල්ල එය ලැබීම නවත්වනු ඇත. පසුව ඔබට නව URL එකක් පිටපත් කළ හැකිය.</string>
     <string name="rss_revoked">RSS ප්‍රවේශය අවලංගු කරන ලදී</string>
     <string name="rss_revoke_failed">RSS ප්‍රවේශය අවලංගු කිරීමට අසමත් විය</string>

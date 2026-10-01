@@ -40,10 +40,10 @@
     <string name="projects_settings_tab_people">Žmonės</string>
     <string name="projects_option_icon">Piktograma</string>
     <string name="projects_option_icon_placeholder">pvz. Check, Star, Flag</string>
-    <string name="projects_settings_unsubscribe">Atšaukti prenumeratą</string>
+    <string name="projects_settings_unsubscribe">Atsisakyti prenumeratos</string>
     <string name="projects_settings_delete_project">Ištrinti projektą</string>
     <string name="projects_settings_delete_confirm_title">Ištrinti projektą</string>
-    <string name="projects_settings_unsubscribe_title">Atšaukti prenumeratą</string>
+    <string name="projects_settings_unsubscribe_title">Atsisakyti prenumeratos</string>
     <string name="projects_settings_unsubscribe_message">Ar tikrai norite atsisakyti šio projekto prenumeratos?</string>
     <string name="projects_access_level_owner">Savininkas</string>
     <string name="projects_object_watch">Stebėti</string>

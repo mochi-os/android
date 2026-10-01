@@ -29,7 +29,7 @@
     <string name="calendars_day_friday">Ọjọ́ Ẹ̀tì</string>
     <string name="calendars_day_saturday">Ọjọ́ Àbámẹ́ta</string>
     <string name="calendars_link_replace">Rọ́pò</string>
-    <string name="calendars_link_revoke">Fagi lé</string>
+    <string name="calendars_link_revoke">Gbà padà</string>
     <string name="calendars_permission_allow">Gbà láàyè</string>
     <string name="calendars_permission_deny">Kọ̀</string>
     <string name="calendars_sync_title">Ṣe àmúṣiṣẹ́pọ̀ sí fóònù yìí</string>
@@ -185,6 +185,6 @@
     <string name="calendars_span_day">%1$s, láti %2$s sí %3$s</string>
     <string name="calendars_polled_current">Kàlẹ́ńdà ti wà ní tuntun</string>
     <string name="calendars_polled_synced">A ti mú kàlẹ́ńdà bá ara mu</string>
-    <string name="calendars_link_revoke_title">Ṣé kí a fagilé àdírẹ́sì kàlẹ́ńdà?</string>
+    <string name="calendars_link_revoke_title">Ṣé kí a gba àdírẹ́sì kàlẹ́ńdà padà?</string>
     <string name="calendars_link_revoke_message">Àwọn kàlẹ́ńdà tí wọ́n forúkọ sílẹ̀ fún àdírẹ́sì yìí kò ní ṣe ìmúdójúìwọ̀n mọ́.</string>
 </resources>

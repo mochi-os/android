@@ -29,7 +29,7 @@
     <string name="calendars_day_friday">शुक्रवार</string>
     <string name="calendars_day_saturday">शनिवार</string>
     <string name="calendars_link_replace">बदलें</string>
-    <string name="calendars_link_revoke">रद्द करें</string>
+    <string name="calendars_link_revoke">वापस लें</string>
     <string name="calendars_permission_allow">अनुमति दें</string>
     <string name="calendars_permission_deny">अस्वीकार करें</string>
     <string name="calendars_sync_title">इस फ़ोन पर सिंक करें</string>
@@ -189,6 +189,6 @@
     <string name="calendars_span_day">%1$s, %2$s से %3$s तक</string>
     <string name="calendars_polled_current">कैलेंडर अद्यतित है</string>
     <string name="calendars_polled_synced">कैलेंडर सिंक हो गया</string>
-    <string name="calendars_link_revoke_title">कैलेंडर का पता रद्द करें?</string>
+    <string name="calendars_link_revoke_title">कैलेंडर का पता वापस लें?</string>
     <string name="calendars_link_revoke_message">इस पते की सदस्यता लेने वाले कैलेंडर अद्यतन होना बंद कर देंगे।</string>
 </resources>

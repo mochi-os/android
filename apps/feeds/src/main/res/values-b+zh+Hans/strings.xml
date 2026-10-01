@@ -165,7 +165,7 @@
     <string name="feeds_settings_field_server">服务器</string>
     <string name="feeds_settings_name_edit_cd">编辑名称</string>
     <string name="feeds_settings_section_identity">身份</string>
-    <string name="feeds_unsubscribe">取消订阅</string>
+    <string name="feeds_unsubscribe">退订</string>
     <string name="feeds_unsubscribed">已取消订阅</string>
     <string name="feeds_access_level_comment_full">评论、点赞和查看</string>
     <string name="feeds_rss_mode_posts_comments">帖子和评论</string>
@@ -175,7 +175,7 @@
     <string name="feeds_post_content">帖子内容</string>
     <string name="feeds_enable_memories">启用记忆</string>
     <string name="feeds_permission_request_title">权限请求</string>
-    <string name="feeds_unsubscribe_confirm">取消订阅该订阅源？</string>
+    <string name="feeds_unsubscribe_confirm">退订该订阅源？</string>
     <string name="feeds_settings_title">%1$s 设置</string>
     <string name="feeds_source_transform_help">留空以禁用。</string>
     <string name="feeds_settings_name_cancel_cd">取消编辑</string>

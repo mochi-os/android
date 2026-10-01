@@ -29,7 +29,7 @@
     <string name="calendars_day_friday">Anna</string>
     <string name="calendars_day_saturday">Şenbe</string>
     <string name="calendars_link_replace">Çalşyr</string>
-    <string name="calendars_link_revoke">Ýatyr</string>
+    <string name="calendars_link_revoke">Yzyna al</string>
     <string name="calendars_permission_allow">Rugsat ber</string>
     <string name="calendars_permission_deny">Ret etmek</string>
     <string name="calendars_sync_title">Bu telefon bilen sinhronlaşdyr</string>
@@ -189,6 +189,6 @@
     <string name="calendars_span_day">%1$s, %2$s bilen %3$s aralygy</string>
     <string name="calendars_polled_current">Senenama täzelenen</string>
     <string name="calendars_polled_synced">Senenama sinhronlaşdyryldy</string>
-    <string name="calendars_link_revoke_title">Senenamanyň salgysy ýatyrylsynmy?</string>
+    <string name="calendars_link_revoke_title">Senenamanyň salgysy yzyna alynsynmy?</string>
     <string name="calendars_link_revoke_message">Bu salga ýazylan kalendarlar mundan beýläk täzelenmez.</string>
 </resources>

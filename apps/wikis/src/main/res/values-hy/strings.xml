@@ -40,7 +40,7 @@
     <string name="wikis_rss_both">Փոփոխություններ և մեկնաբանություններ</string>
     <string name="wikis_rss_copied">RSS URL-ը պատճենվեց սեղմատախտակին</string>
     <string name="wikis_rss_failed">Չհաջողվեց ստանալ RSS տոկենը</string>
-    <string name="wikis_rss_revoke">Չեղարկել մուտքը</string>
+    <string name="wikis_rss_revoke">Հետ վերցնել մուտքը</string>
     <string name="wikis_rss_revoked">RSS մուտքը չեղարկվել է</string>
     <string name="wikis_find_title">Գտնել wiki-ներ</string>
     <string name="wikis_find_no_results">Wiki-ներ չեն գտնվել</string>

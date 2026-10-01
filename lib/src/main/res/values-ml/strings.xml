@@ -40,7 +40,7 @@
     <string name="discovery_recommended">ശുപാർശ ചെയ്തത്</string>
     <string name="access_add_rule">നിയമം ചേർക്കുക</string>
     <string name="access_owner">ഉടമ</string>
-    <string name="access_revoke">റദ്ദാക്കുക</string>
+    <string name="access_revoke">പിൻവലിക്കുക</string>
     <string name="access_level_comment">അഭിപ്രായമിടുക</string>
     <string name="access_level_view">കാണുക</string>
     <string name="access_level_none">ഒന്നുമില്ല</string>
@@ -230,14 +230,14 @@
     <string name="stepup_email_placeholder">നിങ്ങളുടെ ഇമെയിലിലെ കോഡ് നൽകുക</string>
     <string name="stepup_totp_label">ഓതന്റിക്കേറ്റർ കോഡ്</string>
     <string name="stepup_totp_placeholder">നിങ്ങളുടെ ഓതെന്റിക്കേറ്റർ കോഡ് നൽകുക</string>
-    <string name="stepup_use_passkey">നിങ്ങളുടെ പാസ്‌കീ ഉപയോഗിക്കുക</string>
+    <string name="stepup_use_passkey">നിങ്ങളുടെ പാസ്കീ ഉപയോഗിക്കുക</string>
     <string name="stepup_send_email">ഇമെയിൽ അയയ്ക്കുക</string>
     <string name="stepup_resend_email">ഇമെയിൽ വീണ്ടും അയയ്ക്കുക</string>
     <string name="stepup_verify">സ്ഥിരീകരിക്കുക</string>
     <string name="stepup_continue_with">%1$s ഉപയോഗിച്ച് തുടരുക</string>
     <string name="stepup_error_start">വീണ്ടും പരിശോധന ആരംഭിക്കാനായില്ല. ദയവായി വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="stepup_error_code">ആ കോഡ് തെറ്റാണ് അല്ലെങ്കിൽ കാലഹരണപ്പെട്ടു.</string>
-    <string name="stepup_error_passkey">പാസ്‌കീ പരിശോധന പരാജയപ്പെട്ടു. ദയവായി വീണ്ടും ശ്രമിക്കുക.</string>
+    <string name="stepup_error_passkey">പാസ്കീ പരിശോധന പരാജയപ്പെട്ടു. ദയവായി വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="stepup_error_oauth">ആ അക്കൗണ്ട് ഉപയോഗിച്ച് പരിശോധിക്കാനായില്ല. വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="game_system_resign">%1$s കീഴടങ്ങി</string>
     <string name="game_system_draw_offer">%1$s സമനില വാഗ്ദാനം ചെയ്തു</string>
@@ -299,9 +299,9 @@
     <string name="format_code">കോഡ്</string>
     <string name="format_list">ബുള്ളറ്റ് ലിസ്റ്റ്</string>
     <string name="common_preview">പ്രിവ്യൂ</string>
-    <string name="rss_revoke_confirm">റദ്ദാക്കുക</string>
+    <string name="rss_revoke_confirm">പിൻവലിക്കുക</string>
     <string name="rss_revoke">ആക്‌സസ് പിൻവലിക്കുക</string>
-    <string name="rss_revoke_title">RSS ആക്‌സസ് റദ്ദാക്കണോ?</string>
+    <string name="rss_revoke_title">RSS ആക്‌സസ് പിൻവലിക്കണോ?</string>
     <string name="rss_revoke_message">ഈ ഫീഡ് സബ്‌സ്‌ക്രൈബ് ചെയ്ത എല്ലാം അത് ലഭിക്കുന്നത് നിർത്തും. പിന്നീട് നിങ്ങൾക്ക് ഒരു പുതിയ URL പകർത്താം.</string>
     <string name="rss_revoked">RSS ആക്‌സസ് പിൻവലിച്ചു</string>
     <string name="rss_revoke_failed">RSS ആക്‌സസ് പിൻവലിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>

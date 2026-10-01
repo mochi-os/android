@@ -6,8 +6,8 @@
     <string name="forums_list_title">论坛</string>
     <string name="forums_list_find">查找论坛</string>
     <string name="forums_list_logout">退出登录</string>
-    <string name="forums_list_unsubscribe">取消订阅</string>
-    <string name="forums_list_unsubscribe_title">取消订阅</string>
+    <string name="forums_list_unsubscribe">退订</string>
+    <string name="forums_list_unsubscribe_title">退订</string>
     <string name="forums_create_title">创建论坛</string>
     <string name="forums_create_name">论坛名称</string>
     <string name="forums_create_privacy">隐私</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">标记</string>
     <string name="forums_ai_account_default">默认账户</string>
     <string name="forums_ai_prompt_reset">重置为默认</string>
-    <string name="forums_settings_unsubscribe">取消订阅</string>
+    <string name="forums_settings_unsubscribe">退订</string>
     <string name="forums_moderation_title">审核</string>
     <string name="forums_moderation_tab_queue">队列</string>
     <string name="forums_moderation_tab_reports">举报</string>
@@ -137,7 +137,7 @@
     <string name="forums_auth_enter_code_sent">请输入发送至 %1$s 的验证码</string>
     <string name="forums_auth_create_identity">创建您的身份</string>
     <string name="forums_list_empty">暂无论坛</string>
-    <string name="forums_list_unsubscribe_message">确定要取消订阅此论坛吗?</string>
+    <string name="forums_list_unsubscribe_message">确定要退订此论坛吗?</string>
     <string name="forums_find_search_placeholder">搜索论坛或粘贴网址</string>
     <string name="forums_find_search_hint">搜索要订阅的论坛</string>
     <string name="forums_post_delete_message">确定要删除此帖子吗?此操作无法撤销。</string>

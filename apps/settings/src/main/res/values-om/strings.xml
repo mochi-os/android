@@ -20,7 +20,7 @@
     <string name="account_section_recovery">Koodiwwan deebii</string>
     <string name="account_recovery_codes_title">Koodiwwan deebii</string>
     <string name="sessions_unknown_agent">Meeshaa hin beekamne</string>
-    <string name="sessions_revoke_title">Galii haquuf?</string>
+    <string name="sessions_revoke_title">Galii deebifachuu?</string>
     <string name="account_section_oauth">Seensa qooda sadaffaa</string>
     <string name="account_oauth_link">Akkaawuntii hidhi</string>
     <string name="account_unlink">Hidhuu kaasi</string>
@@ -29,7 +29,7 @@
     <string name="account_done">Xumurame</string>
     <string name="account_delete">Haqi</string>
     <string name="account_rename">Maqaa jijjiiri</string>
-    <string name="sessions_revoke">Haqi</string>
+    <string name="sessions_revoke">Deebifadhu</string>
     <string name="account_disable">Cufi</string>
     <string name="account_copy">Garagalchi</string>
     <string name="account_copy_all">Hunda garagalchi</string>
@@ -181,8 +181,8 @@
     <string name="system_users_delete_title">Fayyadamaa haqu?</string>
     <string name="system_users_manage_sessions">Sessenota bulchi</string>
     <string name="system_users_sessions_empty">Fayyadamaan kun yeroo turtii ka\'aa hin qabu.</string>
-    <string name="system_users_revoke">Haqi</string>
-    <string name="system_users_revoke_all">Galiiwwan hunda haqi</string>
+    <string name="system_users_revoke">Deebifadhu</string>
+    <string name="system_users_revoke_all">Galiiwwan hunda deebifadhu</string>
     <string name="system_users_unknown_browser">Brawuzaarii hin beekamne</string>
     <string name="system_users_unknown">Hin beekamu</string>
     <string name="system_users_previous">Duraa</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">Imaammata iccitii</string>
     <string name="settings_home_rules">Seerota</string>
     <string name="settings_home_terms">Haalota tajaajilaa</string>
-    <string name="account_passkeys_empty">Furtuwwan seensaa galmaa\'an hin jiran.</string>
-    <string name="account_passkey_register_title">Furtuu seensaa dabaluu</string>
+    <string name="account_passkeys_empty">Passkey-wwan galmaa\'an hin jiran.</string>
+    <string name="account_passkey_register_title">Passkey dabaluu</string>
     <string name="account_passkey_name_label">Maqaa (filannoodhaan)</string>
     <string name="account_passkey_delete_message">\"%1$s\" siif galchuu hin danda\'u.</string>
     <string name="account_totp_enabled">Mirkaneessaan hojiirra oolfameera.</string>
@@ -265,7 +265,7 @@
     <string name="system_users_delete_message">Kunis dhaabbii fayyadamtuu \"%1$s\" haqa. Hojii kana deebisuun hin danda\'amu.</string>
     <string name="system_users_sessions_title">Mariiwwan %1$s</string>
     <string name="system_users_session_last_accessed">Argachuu dhumaa: %1$s</string>
-    <string name="system_users_revoke_all_title">Marii hunda kaasuu?</string>
+    <string name="system_users_revoke_all_title">Galiiwwan hunda deebifachuu?</string>
     <string name="system_users_revoke_all_message">Mariiwwan dalagaa fayyadamtuu kanaa hundi ni ba\'u.</string>
     <plurals name="system_users_pagination_status">
         <item quantity="one">Fayyadamaa %3$d keessaa %1$d–%2$d agarsiisa</item>
@@ -386,13 +386,13 @@
     <string name="accounts_field_topic">Mata duree</string>
     <string name="accounts_field_secret">Iccitii mallattoo</string>
     <string name="account_totp_open">Appii mirkaneessaa keessatti bani</string>
-    <string name="accounts_revoke">Argama haqi</string>
+    <string name="accounts_revoke">Argama deebifadhu</string>
     <string name="accounts_capability_calendar">Kaalaandarii</string>
     <string name="accounts_capability_notify">Beeksisaalee</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Seensa</string>
     <string name="accounts_provider_caldav">Sarvarii kaalaandarii</string>
-    <string name="accounts_revoke_confirm">Kun qaqqabummaa kaalaandarii %1$s ni haqa. %2$s waliin seensi hamma fuula Seensaa irratti hiiktutti ni tura.</string>
+    <string name="accounts_revoke_confirm">Kun qaqqabummaa kaalaandarii %1$s ni deebifata. %2$s waliin seensi hamma fuula Seensaa irratti hiiktutti ni tura.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Bifa hin beekamne</string>
     <string name="system_documents_modified">Jijjiirame</string>

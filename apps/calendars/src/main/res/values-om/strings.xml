@@ -29,7 +29,7 @@
     <string name="calendars_day_friday">Jimaata</string>
     <string name="calendars_day_saturday">Sanbata</string>
     <string name="calendars_link_replace">Bakka buusi</string>
-    <string name="calendars_link_revoke">Haqi</string>
+    <string name="calendars_link_revoke">Deebifadhu</string>
     <string name="calendars_permission_allow">Hayyami</string>
     <string name="calendars_permission_deny">Dhorki</string>
     <string name="calendars_sync_title">Bilbila kana waliin walsimsiisi</string>
@@ -189,6 +189,6 @@
     <string name="calendars_span_day">%1$s, %2$s hanga %3$s</string>
     <string name="calendars_polled_current">Kaalaandariin haaraadha</string>
     <string name="calendars_polled_synced">Kaalaandariin walsimsiifame</string>
-    <string name="calendars_link_revoke_title">Teessoo kaalaandarii haquu barbaaddaa?</string>
+    <string name="calendars_link_revoke_title">Teessoo kaalaandarii deebifachuu barbaaddaa?</string>
     <string name="calendars_link_revoke_message">Kaalandariileen teessoo kana irratti galmaa\'an kana booda hin haaromfaman.</string>
 </resources>

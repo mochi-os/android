@@ -5,7 +5,7 @@
     <string name="settings_home_logout">Metu</string>
     <string name="settings_home_account">Akun</string>
     <string name="settings_home_preferences">Preferensi</string>
-    <string name="settings_home_display">Tampilan</string>
+    <string name="settings_home_display">Layar</string>
     <string name="settings_home_notification_prefs">Préferènsi notifikasi</string>
     <string name="settings_home_accounts">Akun sing nyambung</string>
     <string name="settings_home_interests">Minat</string>
@@ -381,13 +381,13 @@
     <string name="accounts_field_topic">Topik</string>
     <string name="accounts_field_secret">Rahasia tandha tangan</string>
     <string name="account_totp_open">Bukak ing aplikasi authenticator</string>
-    <string name="accounts_revoke">Batalake akses</string>
+    <string name="accounts_revoke">Cabut akses</string>
     <string name="accounts_capability_calendar">Kalender</string>
     <string name="accounts_capability_notify">Notifikasi</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Mlebu</string>
     <string name="accounts_provider_caldav">Server kalender</string>
-    <string name="accounts_revoke_confirm">Iki bakal mbatalaké akses kalender %1$s. Mlebu nganggo %2$s tetep nganti sampeyan ngeculaké tautané ing kaca Mlebu.</string>
+    <string name="accounts_revoke_confirm">Iki bakal nyabut akses kalender %1$s. Mlebu nganggo %2$s tetep nganti sampeyan ngeculaké tautané ing kaca Mlebu.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Tema ora dikenal</string>
     <string name="system_documents_modified">Diowahi</string>

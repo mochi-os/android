@@ -9,7 +9,7 @@
     <string name="settings_home_notification_prefs">အကြောင်းကြားချက် ဦးစားပေးချက်များ</string>
     <string name="settings_home_accounts">ချိတ်ဆက်ထားသော အကောင့်များ</string>
     <string name="settings_home_interests">စိတ်ဝင်စားမှုများ</string>
-    <string name="account_section_passkeys">Passkey များ</string>
+    <string name="account_section_passkeys">ဝင်ရောက်ခွင့်သော့များ</string>
     <string name="account_passkey_register">ဝင်ရောက်ခွင့်သော့ ထည့်မည်</string>
     <string name="account_passkey_delete_title">ဝင်ရောက်ခွင့်သော့ ဖျက်မလား?</string>
     <string name="account_section_totp">အထောက်အထားစိစစ်သည့် အက်ပ်</string>
@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">ပုံသေသို့ ပြန်ထားမလား?</string>
     <string name="system_setting_apps_install_user">သုံးစွဲသူများကို app များ ထည့်သွင်းခွင့်ပြုမည်</string>
     <string name="system_setting_auth_email">အီးမေးလ် ကုဒ်ဖြင့် ဝင်</string>
-    <string name="system_setting_auth_passkey">ပတ်စကီးဖြင့် ဝင်</string>
+    <string name="system_setting_auth_passkey">ဝင်ရောက်ခွင့်သော့ဖြင့် ဝင်</string>
     <string name="system_setting_auth_totp">TOTP အထောက်အထား အက်ပ်ဖြင့် ဝင်</string>
     <string name="system_setting_auth_recovery">ပြန်လည်ရယူရေး ကုဒ်ဖြင့် ဝင်</string>
     <string name="system_setting_auth_oauth">OAuth 2.0 ဖြင့် ဝင်</string>
@@ -205,7 +205,7 @@
     <string name="settings_home_privacy">ကိုယ်ရေးကိုယ်တာမူဝါဒ</string>
     <string name="settings_home_rules">စည်းမျဉ်းများ</string>
     <string name="settings_home_terms">ဝန်ဆောင်မှု စည်းမျဉ်းများ</string>
-    <string name="account_passkeys_empty">မှတ်ပုံတင်ထားသော passkey မရှိပါ။</string>
+    <string name="account_passkeys_empty">မှတ်ပုံတင်ထားသော ဝင်ရောက်ခွင့်သော့ မရှိပါ။</string>
     <string name="account_passkey_register_title">ဝင်ရောက်ခွင့်သော့ ထည့်ပါ</string>
     <string name="account_passkey_name_label">အမည် (ရွေးချယ်နိုင်)</string>
     <string name="account_passkey_delete_message">\"%1$s\" သင့်ကို ထပ်မံ ဝင်မရောက်စေတော့ပါ။</string>

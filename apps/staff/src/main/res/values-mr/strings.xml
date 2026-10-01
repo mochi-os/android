@@ -32,7 +32,7 @@
     <string name="staff_accounts_unban">अनबॅन करा</string>
     <string name="staff_accounts_unbanned_toast">खाते अप्रतिबंधित केले</string>
     <string name="staff_accounts_unnamed">नावाशिवाय</string>
-    <string name="staff_accounts_unsuspend">निलंबन रद्द करा</string>
+    <string name="staff_accounts_unsuspend">निलंबन मागे घ्या</string>
     <string name="staff_accounts_unsuspended_toast">खाते निलंबन रद्द केले</string>
     <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_appeals_cancel">रद्द करा</string>

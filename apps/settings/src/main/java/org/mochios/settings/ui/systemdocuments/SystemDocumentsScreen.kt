@@ -5,6 +5,7 @@
 
 package org.mochios.settings.ui.systemdocuments
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -38,6 +39,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -92,70 +94,30 @@ fun SystemDocumentsScreen(
     }
 
     StepUpHost(viewModel.stepUp)
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text(stringResource(R.string.system_documents_title)) },
-                navigationIcon = {
-                    MochiIconButton(onClick = onBack) {
-                        Icon(
-                            Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = stringResource(MochiR.string.common_back),
-                        )
-                    }
-                },
-            )
-        },
-        snackbarHost = { SnackbarHost(snackbarHostState) },
-    ) { padding ->
-        Box(modifier = Modifier.fillMaxSize().padding(padding)) {
-            when {
-                state.isLoading -> CircularProgressIndicator(
-                    modifier = Modifier.align(Alignment.Center),
-                )
-                state.error != null -> Box(modifier = Modifier.align(Alignment.Center)) {
-                    ErrorState(error = state.error!!, onRetry = viewModel::refresh)
-                }
-                else -> Content(
-                    state = state,
-                    onTabChange = viewModel::setTab,
-                    onLanguageChange = viewModel::setLanguage,
-                    onOpen = viewModel::load,
-                    onSave = viewModel::save,
-                )
-            }
-        }
-    }
+    SystemDocumentsEditor(
+        state = state,
+        snackbarHostState = snackbarHostState,
+        onBack = onBack,
+        onRetry = viewModel::refresh,
+        onTabChange = viewModel::setTab,
+        onLanguageChange = viewModel::setLanguage,
+        onOpen = viewModel::load,
+        onSave = viewModel::save,
+    )
 }
 
 /**
- * Holds a tab or language switch that would drop unsaved edits until the user
- * discards them or keeps editing.
+ * The screen fed by [SystemDocumentsScreen]'s view model. The editor's text and
+ * the guard live here, above the top bar, so the back arrow and the system back
+ * see unsaved edits as a tab or language switch does.
  */
-internal class SwitchGuard {
-    var pending by mutableStateOf<(() -> Unit)?>(null)
-        private set
-
-    /** Run [action] now, or, when [dirty], hold it for [discard]. */
-    fun request(dirty: Boolean, action: () -> Unit) {
-        if (dirty) pending = action else action()
-    }
-
-    fun discard() {
-        val action = pending
-        pending = null
-        action?.invoke()
-    }
-
-    fun keep() {
-        pending = null
-    }
-}
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun Content(
+internal fun SystemDocumentsEditor(
     state: SystemDocumentsUiState,
+    snackbarHostState: SnackbarHostState,
+    onBack: () -> Unit,
+    onRetry: () -> Unit,
     onTabChange: (DocumentKind) -> Unit,
     onLanguageChange: (String) -> Unit,
     onOpen: (name: String, language: String) -> Unit,
@@ -180,22 +142,118 @@ private fun Content(
         ?: languages.firstOrNull { it == "en" }
         ?: languages.firstOrNull()
 
-    LaunchedEffect(state.tab, activeLanguage) {
-        if (activeLanguage != null) onOpen(state.tab.value, activeLanguage)
-    }
     val document = state.current?.takeIf {
         it.name == state.tab.value && it.language == activeLanguage
     }
 
-    // The editor's text, held here so a tab or language switch can see unsaved
-    // edits. It resets whenever the upstream document (name/language/body)
-    // changes, mirroring the web useEffect that snaps the textarea to the
-    // refetched body after a save.
-    var draft by remember(document?.name, document?.language, document?.body) {
+    // The editor's text. It resets whenever the upstream document
+    // (name/language/body) changes, mirroring the web useEffect that snaps the
+    // textarea to the refetched body after a save, and is saved with the
+    // screen's state so a rotation keeps it.
+    var draft by rememberSaveable(document?.name, document?.language, document?.body) {
         mutableStateOf(document?.body.orEmpty())
     }
     val dirty = document != null && draft != document.body
     val guard = remember { SwitchGuard() }
+
+    BackHandler(enabled = dirty) { guard.request(true, onBack) }
+
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text(stringResource(R.string.system_documents_title)) },
+                navigationIcon = {
+                    MochiIconButton(onClick = { guard.request(dirty, onBack) }) {
+                        Icon(
+                            Icons.AutoMirrored.Filled.ArrowBack,
+                            contentDescription = stringResource(MochiR.string.common_back),
+                        )
+                    }
+                },
+            )
+        },
+        snackbarHost = { SnackbarHost(snackbarHostState) },
+    ) { padding ->
+        Box(modifier = Modifier.fillMaxSize().padding(padding)) {
+            when {
+                state.isLoading -> CircularProgressIndicator(
+                    modifier = Modifier.align(Alignment.Center),
+                )
+                state.error != null -> Box(modifier = Modifier.align(Alignment.Center)) {
+                    ErrorState(error = state.error, onRetry = onRetry)
+                }
+                else -> Content(
+                    state = state,
+                    languages = languages,
+                    activeLanguage = activeLanguage,
+                    document = document,
+                    draft = draft,
+                    onDraftChange = { draft = it },
+                    dirty = dirty,
+                    guard = guard,
+                    onTabChange = onTabChange,
+                    onLanguageChange = onLanguageChange,
+                    onOpen = onOpen,
+                    onSave = onSave,
+                )
+            }
+        }
+    }
+
+    if (guard.pending != null) {
+        MochiAlertDialog(
+            onDismissRequest = guard::keep,
+            title = stringResource(R.string.system_documents_discard_title),
+            confirmText = stringResource(R.string.system_documents_discard),
+            onConfirm = guard::discard,
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
+        )
+    }
+}
+
+/**
+ * Holds a tab or language switch, or leaving the screen, that would drop
+ * unsaved edits until the user discards them or keeps editing.
+ */
+internal class SwitchGuard {
+    var pending by mutableStateOf<(() -> Unit)?>(null)
+        private set
+
+    /** Run [action] now, or, when [dirty], hold it for [discard]. */
+    fun request(dirty: Boolean, action: () -> Unit) {
+        if (dirty) pending = action else action()
+    }
+
+    fun discard() {
+        val action = pending
+        pending = null
+        action?.invoke()
+    }
+
+    fun keep() {
+        pending = null
+    }
+}
+
+@Composable
+private fun Content(
+    state: SystemDocumentsUiState,
+    languages: List<String>,
+    activeLanguage: String?,
+    document: SystemDocument?,
+    draft: String,
+    onDraftChange: (String) -> Unit,
+    dirty: Boolean,
+    guard: SwitchGuard,
+    onTabChange: (DocumentKind) -> Unit,
+    onLanguageChange: (String) -> Unit,
+    onOpen: (name: String, language: String) -> Unit,
+    onSave: (name: String, language: String, body: String) -> Unit,
+) {
+    LaunchedEffect(state.tab, activeLanguage) {
+        if (activeLanguage != null) onOpen(state.tab.value, activeLanguage)
+    }
 
     Column(modifier = Modifier.fillMaxSize()) {
         MochiTabRow(
@@ -245,23 +303,12 @@ private fun Content(
                 DocumentEditor(
                     document = document,
                     body = draft,
-                    onBodyChange = { draft = it },
+                    onBodyChange = onDraftChange,
                     isSaving = state.savingKey == "${document.name}/${document.language}",
                     onSave = { body -> onSave(document.name, document.language, body) },
                 )
             }
         }
-    }
-
-    if (guard.pending != null) {
-        MochiAlertDialog(
-            onDismissRequest = guard::keep,
-            title = stringResource(R.string.system_documents_discard_title),
-            confirmText = stringResource(R.string.system_documents_discard),
-            onConfirm = guard::discard,
-            destructive = true,
-            dismissText = stringResource(MochiR.string.common_cancel),
-        )
     }
 }
 

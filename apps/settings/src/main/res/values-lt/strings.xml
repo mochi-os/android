@@ -20,7 +20,7 @@
     <string name="account_section_recovery">Atkūrimo kodai</string>
     <string name="account_recovery_codes_title">Atkūrimo kodai</string>
     <string name="sessions_unknown_agent">Nežinomas įrenginys</string>
-    <string name="sessions_revoke_title">Atšaukti sesiją?</string>
+    <string name="sessions_revoke_title">Panaikinti sesiją?</string>
     <string name="account_section_oauth">Trečiosios šalies prisijungimas</string>
     <string name="account_oauth_link">Susieti paskyrą</string>
     <string name="account_unlink">Atsieti</string>
@@ -29,7 +29,7 @@
     <string name="account_done">Atlikta</string>
     <string name="account_delete">Ištrinti</string>
     <string name="account_rename">Pervadinti</string>
-    <string name="sessions_revoke">Atšaukti</string>
+    <string name="sessions_revoke">Panaikinti</string>
     <string name="account_disable">Išjungti</string>
     <string name="account_copy">Kopijuoti</string>
     <string name="account_copy_all">Kopijuoti viską</string>
@@ -181,8 +181,8 @@
     <string name="system_users_delete_title">Ištrinti vartotoją?</string>
     <string name="system_users_manage_sessions">Tvarkyti seansus</string>
     <string name="system_users_sessions_empty">Šis vartotojas neturi aktyvių sesijų.</string>
-    <string name="system_users_revoke">Atšaukti</string>
-    <string name="system_users_revoke_all">Atšaukti visas sesijas</string>
+    <string name="system_users_revoke">Panaikinti</string>
+    <string name="system_users_revoke_all">Panaikinti visas sesijas</string>
     <string name="system_users_unknown_browser">Nežinoma naršyklė</string>
     <string name="system_users_unknown">Nežinoma</string>
     <string name="system_users_previous">Ankstesnis</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">Privatumo politika</string>
     <string name="settings_home_rules">Taisyklės</string>
     <string name="settings_home_terms">Paslaugos sąlygos</string>
-    <string name="account_passkeys_empty">Nėra užregistruotų prieigos raktų.</string>
-    <string name="account_passkey_register_title">Pridėti prieigos raktą</string>
+    <string name="account_passkeys_empty">Nėra užregistruotų slaptarakčių.</string>
+    <string name="account_passkey_register_title">Pridėti slaptaraktį</string>
     <string name="account_passkey_name_label">Pavadinimas (neprivaloma)</string>
     <string name="account_passkey_delete_message">\"%1$s\" daugiau jūsų neprijungs.</string>
     <string name="account_totp_enabled">Autentifikatorius įjungtas.</string>
@@ -266,7 +266,7 @@
     <string name="system_users_delete_message">Tai visam laikui ištrins naudotoją \"%1$s\". Šio veiksmo negalima atšaukti.</string>
     <string name="system_users_sessions_title">%1$s seansai</string>
     <string name="system_users_session_last_accessed">Paskutinė prieiga: %1$s</string>
-    <string name="system_users_revoke_all_title">Atšaukti visus seansus?</string>
+    <string name="system_users_revoke_all_title">Panaikinti visas sesijas?</string>
     <string name="system_users_revoke_all_message">Visi šio naudotojo aktyvūs seansai bus atjungti.</string>
     <plurals name="system_users_pagination_status">
         <item quantity="one">Rodoma %1$d–%2$d iš %3$d naudotojo</item>
@@ -393,7 +393,7 @@
     <string name="accounts_field_topic">Tema</string>
     <string name="accounts_field_secret">Pasirašymo paslaptis</string>
     <string name="account_totp_open">Atidaryti autentifikavimo programoje</string>
-    <string name="accounts_revoke">Atšaukti prieigą</string>
+    <string name="accounts_revoke">Panaikinti prieigą</string>
     <string name="accounts_capability_calendar">Kalendorius</string>
     <string name="accounts_capability_notify">Pranešimai</string>
     <string name="accounts_capability_ai">DI</string>

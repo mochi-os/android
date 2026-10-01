@@ -197,7 +197,7 @@
     <string name="auth_next">Volgende</string>
     <string name="auth_or_log_in_with">Of meld aan met</string>
     <string name="auth_passkey">Toegangsleutel</string>
-    <string name="auth_use_passkey">Gebruik \'n wagsleutel</string>
+    <string name="auth_use_passkey">Gebruik \'n toegangsleutel</string>
     <string name="auth_email_me_a_code">E-pos my \'n kode</string>
     <string name="auth_or_enter_authenticator_code">Of voer verifikator-kode in</string>
     <string name="auth_log_in">Meld aan</string>
@@ -232,14 +232,14 @@
     <string name="stepup_email_placeholder">Voer die kode uit jou e-pos in</string>
     <string name="stepup_totp_label">Verifikasiekode</string>
     <string name="stepup_totp_placeholder">Voer jou verifikator-kode in</string>
-    <string name="stepup_use_passkey">Gebruik jou wagsleutel</string>
+    <string name="stepup_use_passkey">Gebruik jou toegangsleutel</string>
     <string name="stepup_send_email">Stuur e-pos</string>
     <string name="stepup_resend_email">Stuur e-pos weer</string>
     <string name="stepup_verify">Verifieer</string>
     <string name="stepup_continue_with">Gaan voort met %1$s</string>
     <string name="stepup_error_start">Kon nie herverifikasie begin nie. Probeer asseblief weer.</string>
     <string name="stepup_error_code">Daardie kode is verkeerd of het verval.</string>
-    <string name="stepup_error_passkey">Wagsleutel-verifikasie het misluk. Probeer asseblief weer.</string>
+    <string name="stepup_error_passkey">Toegangsleutelverifikasie het misluk. Probeer asseblief weer.</string>
     <string name="stepup_error_oauth">Kon nie met daardie rekening verifieer nie. Probeer asseblief weer.</string>
     <string name="game_system_resign">%1$s het oorgegee</string>
     <string name="game_system_draw_offer">%1$s het \'n gelykop aangebied</string>

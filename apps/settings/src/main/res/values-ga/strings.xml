@@ -10,8 +10,8 @@
     <string name="settings_home_accounts">Cuntais cheangailte</string>
     <string name="settings_home_interests">Suimeanna</string>
     <string name="account_section_passkeys">Pasluichí</string>
-    <string name="account_passkey_register">Cuir eochair phasála leis</string>
-    <string name="account_passkey_delete_title">Scrios eochair phasála?</string>
+    <string name="account_passkey_register">Cuir pasluiche leis</string>
+    <string name="account_passkey_delete_title">Scrios an pasluiche?</string>
     <string name="account_section_totp">Aip fhíordheimhnitheora</string>
     <string name="account_totp_setup">Socraigh fíordheimhneoir</string>
     <string name="account_totp_setup_title">Socraigh fíordheimhneoir</string>
@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">Athshocraigh chuig réamhshocrú?</string>
     <string name="system_setting_apps_install_user">Ceadaigh d\'úsáideoirí aipeanna a shuiteáil</string>
     <string name="system_setting_auth_email">Logáil isteach ag baint úsáide as cód ríomhphoist</string>
-    <string name="system_setting_auth_passkey">Logáil isteach ag baint úsáide as pasleathar</string>
+    <string name="system_setting_auth_passkey">Logáil isteach ag baint úsáide as pasluiche</string>
     <string name="system_setting_auth_totp">Logáil isteach ag baint úsáide as aip fíordheimhnitheora TOTP</string>
     <string name="system_setting_auth_recovery">Logáil isteach ag baint úsáide as cód aisghabhála</string>
     <string name="system_setting_auth_oauth">Logáil isteach ag baint úsáide as OAuth 2.0</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">Polasaí príobháideachta</string>
     <string name="settings_home_rules">Rialacha</string>
     <string name="settings_home_terms">Téarmaí seirbhíse</string>
-    <string name="account_passkeys_empty">Níl aon eochair phasaí cláraithe.</string>
-    <string name="account_passkey_register_title">Cuir eochair phasaí leis</string>
+    <string name="account_passkeys_empty">Níl aon phasluiche cláraithe.</string>
+    <string name="account_passkey_register_title">Cuir pasluiche leis</string>
     <string name="account_passkey_name_label">Ainm (roghnach)</string>
     <string name="account_passkey_delete_message">Ní shíneoidh \"%1$s\" isteach thú a thuilleadh.</string>
     <string name="account_totp_enabled">Tá an fíordheimhneoir cumasaithe.</string>
@@ -268,7 +268,7 @@
     <string name="system_users_delete_message">Scriosfaidh sé seo an t-úsáideoir \"%1$s\" go buan. Ní féidir an gníomh seo a chealú.</string>
     <string name="system_users_sessions_title">Seisiúin do %1$s</string>
     <string name="system_users_session_last_accessed">Rochtain dheireanach: %1$s</string>
-    <string name="system_users_revoke_all_title">Cealaigh gach seisiún?</string>
+    <string name="system_users_revoke_all_title">Cúlghair gach seisiún?</string>
     <string name="system_users_revoke_all_message">Síneofar amach gach seisiún gníomhach den úsáideoir seo.</string>
     <plurals name="system_users_pagination_status">
         <item quantity="one">Ag taispeáint %1$d–%2$d as %3$d úsáideoir</item>
@@ -407,7 +407,7 @@
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Logáil isteach</string>
     <string name="accounts_provider_caldav">Freastalaí féilire</string>
-    <string name="accounts_revoke_confirm">Cuirfidh sé seo rochtain %1$s ar an bhféilire ar ceal. Fanfaidh síniú isteach le %2$s go dtí go ndínascfaidh tú é ar an leathanach sínithe isteach.</string>
+    <string name="accounts_revoke_confirm">Cúlghairfidh sé seo rochtain %1$s ar an bhféilire. Fanfaidh síniú isteach le %2$s go dtí go ndínascfaidh tú é ar an leathanach sínithe isteach.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Téama anaithnid</string>
     <string name="system_documents_modified">Athraithe</string>

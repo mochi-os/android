@@ -166,7 +166,7 @@
     <string name="feeds_settings_field_server">सर्वर</string>
     <string name="feeds_settings_name_edit_cd">नाम संपादित करीं</string>
     <string name="feeds_settings_section_identity">पहचान</string>
-    <string name="feeds_unsubscribe">सदस्यता रद्द करीं</string>
+    <string name="feeds_unsubscribe">सदस्यता खतम करीं</string>
     <string name="feeds_unsubscribed">सदस्यता रद्द भइल</string>
     <string name="feeds_access_level_comment_full">टिप्पणी, प्रतिक्रिया, आ देखीं</string>
     <string name="feeds_rss_mode_posts_comments">पोस्ट आ टिप्पणी</string>
@@ -176,7 +176,7 @@
     <string name="feeds_post_content">पोस्ट सामग्री</string>
     <string name="feeds_enable_memories">यादें चालू करीं</string>
     <string name="feeds_permission_request_title">अनुमति अनुरोध</string>
-    <string name="feeds_unsubscribe_confirm">फीड से अनसब्सक्राइब करीं?</string>
+    <string name="feeds_unsubscribe_confirm">फीड से सदस्यता खतम करीं?</string>
     <string name="feeds_settings_title">%1$s सेटिंग</string>
     <string name="feeds_source_transform_help">बंद करे खातिर खाली छोड़ीं।</string>
     <string name="feeds_settings_name_cancel_cd">संपादन रद्द करीं</string>

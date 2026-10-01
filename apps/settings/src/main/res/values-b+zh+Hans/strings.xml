@@ -23,7 +23,7 @@
     <string name="sessions_revoke_title">撤销会话?</string>
     <string name="account_section_oauth">第三方登录</string>
     <string name="account_oauth_link">关联账户</string>
-    <string name="account_unlink">取消链接</string>
+    <string name="account_unlink">解除关联</string>
     <string name="account_cancel">取消</string>
     <string name="account_save">保存</string>
     <string name="account_done">完成</string>

@@ -20,7 +20,7 @@
     <string name="account_section_recovery">אומקער קאָדן</string>
     <string name="account_recovery_codes_title">אומקער קאָדן</string>
     <string name="sessions_unknown_agent">אומבאַקאַנטער מיטל</string>
-    <string name="sessions_revoke_title">אָפּזאָגן סעסיע?</string>
+    <string name="sessions_revoke_title">צוריקנעמען סעסיע?</string>
     <string name="account_section_oauth">דריט־פּאַרטיי לאָגין</string>
     <string name="account_oauth_link">פֿאַרבינדן קאָנטע</string>
     <string name="account_unlink">אָפּקניפּן</string>
@@ -29,7 +29,7 @@
     <string name="account_done">געטאָן</string>
     <string name="account_delete">אויסמעקן</string>
     <string name="account_rename">איבערטויפֿן</string>
-    <string name="sessions_revoke">אָפּזאָגן</string>
+    <string name="sessions_revoke">צוריקנעמען</string>
     <string name="account_disable">אומדערלויבן</string>
     <string name="account_copy">קאָפּירן</string>
     <string name="account_copy_all">קאָפּירן אַלץ</string>
@@ -181,8 +181,8 @@
     <string name="system_users_delete_title">אויסמעקן באַניצער?</string>
     <string name="system_users_manage_sessions">פֿירן סעסיעס</string>
     <string name="system_users_sessions_empty">דער באַניצער האָט נישט קיין אַקטיווע סעסיעס.</string>
-    <string name="system_users_revoke">אָפּזאָגן</string>
-    <string name="system_users_revoke_all">אָפּזאָגן אַלע סעסיעס</string>
+    <string name="system_users_revoke">צוריקנעמען</string>
+    <string name="system_users_revoke_all">צוריקנעמען אַלע סעסיעס</string>
     <string name="system_users_unknown_browser">אומבאַקאַנטער ברויזער</string>
     <string name="system_users_unknown">אומבאַקאַנט</string>
     <string name="system_users_previous">פֿריִער</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">פּריוואַטקייט פּאָליסי</string>
     <string name="settings_home_rules">כללים</string>
     <string name="settings_home_terms">דינסט באדינגונגען</string>
-    <string name="account_passkeys_empty">קײנע פּאַסקיז רעגיסטרירט.</string>
-    <string name="account_passkey_register_title">לייגן פּאַסקי</string>
+    <string name="account_passkeys_empty">קיין פּאַסקייס רעגיסטרירט.</string>
+    <string name="account_passkey_register_title">צולייגן אַ פּאַסקיי</string>
     <string name="account_passkey_name_label">נאָמען (אַפּציאָנעל)</string>
     <string name="account_passkey_delete_message">\"%1$s\" וועט אייך מער ניט אַרײַנלאָזן.</string>
     <string name="account_totp_enabled">אָטענטיקאַטאָר איז ענייבלד.</string>
@@ -265,7 +265,7 @@
     <string name="system_users_delete_message">דאָס וועט אױסמעקן באַניצער \"%1$s\" פֿאַר אייביק. די אַקציע קען ניט אַנטו\'ט ווערן.</string>
     <string name="system_users_sessions_title">סעסיעס פֿאַר %1$s</string>
     <string name="system_users_session_last_accessed">לעצטע צוטריט: %1$s</string>
-    <string name="system_users_revoke_all_title">רעוואָקירן אַלע סעסיעס?</string>
+    <string name="system_users_revoke_all_title">צוריקנעמען אַלע סעסיעס?</string>
     <string name="system_users_revoke_all_message">אַלע אַקטיווע סעסיעס פֿון דעם באַניצער וועלן אַרויסגיין.</string>
     <plurals name="system_users_pagination_status">
         <item quantity="one">ווײַזט %1$d–%2$d פֿון %3$d באַניצער</item>

@@ -265,7 +265,7 @@
     <string name="system_users_delete_message">ई हमेशा खातिर उपयोगकर्ता \"%1$s\" के मिटा दी। ई काम पीछे ना ले जा सकेला।</string>
     <string name="system_users_sessions_title">%1$s के सत्र</string>
     <string name="system_users_session_last_accessed">आखिरी पहुँच: %1$s</string>
-    <string name="system_users_revoke_all_title">सबन सत्र रद्द करीं?</string>
+    <string name="system_users_revoke_all_title">सबन सत्र वापस लीं?</string>
     <string name="system_users_revoke_all_message">एह उपयोगकर्ता के सबन सक्रिय सत्र साइन आउट हो जाई।</string>
     <plurals name="system_users_pagination_status">
         <item quantity="one">%3$d उपयोगकर्ता में से %1$d–%2$d देखावल जा रहल बा</item>
@@ -386,7 +386,7 @@
     <string name="accounts_field_topic">विषय</string>
     <string name="accounts_field_secret">हस्ताक्षर गुप्त कुंजी</string>
     <string name="account_totp_open">ऑथेंटिकेटर ऐप में खोलीं</string>
-    <string name="accounts_revoke">पहुँच रद्द करीं</string>
+    <string name="accounts_revoke">पहुँच वापस लीं</string>
     <string name="accounts_capability_calendar">कैलेंडर</string>
     <string name="accounts_capability_notify">सूचना</string>
     <string name="accounts_capability_ai">AI</string>

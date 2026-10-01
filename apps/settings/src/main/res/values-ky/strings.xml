@@ -265,7 +265,7 @@
     <string name="system_users_delete_message">Бул \"%1$s\" колдонуучусун биротоло жок кылат. Бул аракетти жокко чыгаруу мүмкүн эмес.</string>
     <string name="system_users_sessions_title">%1$s сессиялары</string>
     <string name="system_users_session_last_accessed">Акыркы кирүү: %1$s</string>
-    <string name="system_users_revoke_all_title">Бардык сессияларды жокко чыгарууну каалайсызбы?</string>
+    <string name="system_users_revoke_all_title">Бардык сессияларды кайтарып алууну каалайсызбы?</string>
     <string name="system_users_revoke_all_message">Бул колдонуучунун бардык активдүү сессиялары чыгат.</string>
     <plurals name="system_users_pagination_status">
         <item quantity="one">%3$d колдонуучудан %1$d–%2$d көрсөтүлүүдө</item>
@@ -313,7 +313,7 @@
     <string name="login_title">Кирүү</string>
     <string name="login_section_methods">Кирүү ыкмалары</string>
     <string name="login_method_email">Электрондук почта коду</string>
-    <string name="login_method_passkey">Мүмкүндүк ачкычы</string>
+    <string name="login_method_passkey">Кирүү ачкычы</string>
     <string name="login_method_totp">Аутентификатор колдонмосу</string>
     <string name="login_method_oauth">Үчүнчү жактын кирүүсү</string>
     <string name="login_method_recovery">Калыбына келтирүү коддору</string>
@@ -392,7 +392,7 @@
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Кирүү</string>
     <string name="accounts_provider_caldav">Календарь сервери</string>
-    <string name="accounts_revoke_confirm">Бул %1$s календарына кирүүнү жокко чыгарат. %2$s аркылуу кирүү, аны Кирүү барагында ажыратмайынча сакталат.</string>
+    <string name="accounts_revoke_confirm">Бул %1$s календарына кирүүнү кайтарып алат. %2$s аркылуу кирүү, аны Кирүү барагында ажыратмайынча сакталат.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Белгисиз тема</string>
     <string name="system_documents_modified">Өзгөртүлгөн</string>

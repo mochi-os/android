@@ -32,10 +32,10 @@
     <string name="staff_accounts_submitting">دەنێردرێت…</string>
     <string name="staff_accounts_suspend">ڕاگرتن</string>
     <string name="staff_accounts_suspended_toast">هەژمار ڕاگیراوە</string>
-    <string name="staff_accounts_unban">هەڵوەشاندنەوەی قەدەغە</string>
+    <string name="staff_accounts_unban">لابردنی قەدەغە</string>
     <string name="staff_accounts_unbanned_toast">بلۆکی هەژمار لابرا</string>
     <string name="staff_accounts_unnamed">بێ ناو</string>
-    <string name="staff_accounts_unsuspend">هەڵوەشاندنەوەی ڕاگرتن</string>
+    <string name="staff_accounts_unsuspend">لابردنی ڕاگرتن</string>
     <string name="staff_accounts_unsuspended_toast">ڕاگیرانی هەژمار لابرا</string>
     <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_appeals_cancel">هەڵوەشاندنەوە</string>

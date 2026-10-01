@@ -168,7 +168,7 @@
     <string name="feeds_settings_field_server">Serwer</string>
     <string name="feeds_settings_name_edit_cd">Edytuj nazwę</string>
     <string name="feeds_settings_section_identity">Tożsamość</string>
-    <string name="feeds_unsubscribe">Anuluj subskrypcję</string>
+    <string name="feeds_unsubscribe">Zrezygnuj z subskrypcji</string>
     <string name="feeds_unsubscribed">Anulowano subskrypcję</string>
     <string name="feeds_access_level_comment_full">Komentuj, reaguj i przeglądaj</string>
     <string name="feeds_rss_mode_posts_comments">Wpisy i komentarze</string>
@@ -178,7 +178,7 @@
     <string name="feeds_post_content">Treść wpisu</string>
     <string name="feeds_enable_memories">Włącz wspomnienia</string>
     <string name="feeds_permission_request_title">Prośba o uprawnienie</string>
-    <string name="feeds_unsubscribe_confirm">Anulować subskrypcję kanału?</string>
+    <string name="feeds_unsubscribe_confirm">Zrezygnować z subskrypcji kanału?</string>
     <string name="feeds_settings_title">Ustawienia %1$s</string>
     <string name="feeds_source_transform_help">Pozostaw puste, aby wyłączyć.</string>
     <string name="feeds_settings_name_cancel_cd">Anuluj edycję</string>

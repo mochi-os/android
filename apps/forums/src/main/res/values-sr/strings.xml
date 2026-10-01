@@ -6,8 +6,8 @@
     <string name="forums_list_title">Форуми</string>
     <string name="forums_list_find">Пронађи форуме</string>
     <string name="forums_list_logout">Одјави се</string>
-    <string name="forums_list_unsubscribe">Откажи претплату</string>
-    <string name="forums_list_unsubscribe_title">Откажи претплату</string>
+    <string name="forums_list_unsubscribe">Прекини претплату</string>
+    <string name="forums_list_unsubscribe_title">Прекини претплату</string>
     <string name="forums_create_title">Креирај форум</string>
     <string name="forums_create_name">Назив форума</string>
     <string name="forums_create_privacy">Приватност</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">Означи</string>
     <string name="forums_ai_account_default">Подразумевани налог</string>
     <string name="forums_ai_prompt_reset">Ресетуј на подразумевано</string>
-    <string name="forums_settings_unsubscribe">Откажи претплату</string>
+    <string name="forums_settings_unsubscribe">Прекини претплату</string>
     <string name="forums_moderation_title">Модерација</string>
     <string name="forums_moderation_tab_queue">Ред</string>
     <string name="forums_moderation_tab_reports">Пријаве</string>

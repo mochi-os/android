@@ -40,7 +40,7 @@
     <string name="wikis_rss_both">Dəyişikliklər və şərhlər</string>
     <string name="wikis_rss_copied">RSS URL panelə kopyalandı</string>
     <string name="wikis_rss_failed">RSS tokenini almaq alınmadı</string>
-    <string name="wikis_rss_revoke">Girişi ləğv et</string>
+    <string name="wikis_rss_revoke">Girişi geri çağır</string>
     <string name="wikis_rss_revoked">RSS girişi ləğv edildi</string>
     <string name="wikis_find_title">Wikiləri tap</string>
     <string name="wikis_find_no_results">Wiki tapılmadı</string>

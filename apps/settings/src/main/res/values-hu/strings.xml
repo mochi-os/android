@@ -9,9 +9,9 @@
     <string name="settings_home_notification_prefs">Értesítési beállítások</string>
     <string name="settings_home_accounts">Csatlakoztatott fiókok</string>
     <string name="settings_home_interests">Érdeklődések</string>
-    <string name="account_section_passkeys">Passkey-ek</string>
-    <string name="account_passkey_register">Belépési kulcs hozzáadása</string>
-    <string name="account_passkey_delete_title">Törli a belépési kulcsot?</string>
+    <string name="account_section_passkeys">Hozzáférési kulcsok</string>
+    <string name="account_passkey_register">Hozzáférési kulcs hozzáadása</string>
+    <string name="account_passkey_delete_title">Törli a hozzáférési kulcsot?</string>
     <string name="account_section_totp">Hitelesítő alkalmazás</string>
     <string name="account_totp_setup">Hitelesítő beállítása</string>
     <string name="account_totp_setup_title">Hitelesítő beállítása</string>
@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">Visszaállítja alapértelmezettre?</string>
     <string name="system_setting_apps_install_user">A felhasználók telepíthetnek alkalmazásokat</string>
     <string name="system_setting_auth_email">Bejelentkezés e-mail kóddal</string>
-    <string name="system_setting_auth_passkey">Bejelentkezés passkey-jel</string>
+    <string name="system_setting_auth_passkey">Bejelentkezés hozzáférési kulccsal</string>
     <string name="system_setting_auth_totp">Bejelentkezés TOTP hitelesítő alkalmazással</string>
     <string name="system_setting_auth_recovery">Bejelentkezés helyreállítási kóddal</string>
     <string name="system_setting_auth_oauth">Bejelentkezés OAuth 2.0 használatával</string>
@@ -313,7 +313,7 @@
     <string name="login_title">Bejelentkezés</string>
     <string name="login_section_methods">Bejelentkezési módok</string>
     <string name="login_method_email">E-mail kód</string>
-    <string name="login_method_passkey">Azonosítókulcs</string>
+    <string name="login_method_passkey">Hozzáférési kulcs</string>
     <string name="login_method_totp">Hitelesítő alkalmazás</string>
     <string name="login_method_oauth">Harmadik fél általi bejelentkezés</string>
     <string name="login_method_recovery">Helyreállítási kódok</string>

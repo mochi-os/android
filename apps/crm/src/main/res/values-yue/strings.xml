@@ -23,8 +23,8 @@
     <string name="crm_create_object_type">類型</string>
     <string name="crm_field_type">類型</string>
     <string name="crm_views_type">類型</string>
-    <string name="crm_settings_unsubscribe">取消訂閱</string>
-    <string name="crm_settings_unsubscribe_title">取消訂閱</string>
+    <string name="crm_settings_unsubscribe">退訂</string>
+    <string name="crm_settings_unsubscribe_title">退訂</string>
     <string name="crm_board_new">新增</string>
     <string name="crm_field_type_user">用戶</string>
     <string name="crm_access_level_owner">擁有者</string>
@@ -101,7 +101,7 @@
     <string name="crm_settings_delete_crm">刪除 CRM</string>
     <string name="crm_settings_delete_confirm_title">刪除 CRM</string>
     <string name="crm_settings_delete_confirm_message">你確定要刪除呢個 CRM？所有物件、留言同設定都會被永久移除。</string>
-    <string name="crm_settings_unsubscribe_message">你確定要取消訂閱呢個 CRM？</string>
+    <string name="crm_settings_unsubscribe_message">你確定要退訂呢個 CRM？</string>
     <string name="crm_object_unwatch">取消關注</string>
     <string name="crm_object_tab_properties">屬性</string>
     <string name="crm_object_delete_title">刪除物件</string>

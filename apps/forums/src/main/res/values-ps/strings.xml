@@ -6,8 +6,8 @@
     <string name="forums_list_title">فورمونه</string>
     <string name="forums_list_find">فورمونه ومومئ</string>
     <string name="forums_list_logout">لاګ آوټ</string>
-    <string name="forums_list_unsubscribe">ګډون لغوه کول</string>
-    <string name="forums_list_unsubscribe_title">ګډون لغوه کول</string>
+    <string name="forums_list_unsubscribe">له ګډون وتل</string>
+    <string name="forums_list_unsubscribe_title">له ګډون وتل</string>
     <string name="forums_create_title">فورم جوړ کړئ</string>
     <string name="forums_create_name">د فورم نوم</string>
     <string name="forums_create_privacy">محرمیت</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">ټاګ کول</string>
     <string name="forums_ai_account_default">ډیفالټ حساب</string>
     <string name="forums_ai_prompt_reset">ډیفالټ ته بیرته تنظیم کړئ</string>
-    <string name="forums_settings_unsubscribe">ګډون لغوه کول</string>
+    <string name="forums_settings_unsubscribe">له ګډون وتل</string>
     <string name="forums_moderation_title">څارنه</string>
     <string name="forums_moderation_tab_queue">کتار</string>
     <string name="forums_moderation_tab_reports">راپورونه</string>
@@ -137,7 +137,7 @@
     <string name="forums_auth_enter_code_sent">هغه کوډ دننه کړئ چې %1$s ته لیږل شوی</string>
     <string name="forums_auth_create_identity">خپله پېژندنه جوړه کړئ</string>
     <string name="forums_list_empty">تر اوسه هیڅ فورمونه نشته</string>
-    <string name="forums_list_unsubscribe_message">ایا تاسو ډاډه یاست چې له دې فورم څخه غواړئ ګډون لغوه کړئ؟</string>
+    <string name="forums_list_unsubscribe_message">ایا تاسو ډاډه یاست چې غواړئ د دې فورم له ګډون ووځئ؟</string>
     <string name="forums_find_search_placeholder">د فورمونو لټون یا URL پیسټ کړئ</string>
     <string name="forums_find_search_hint">د ګډون لپاره د فورمونو لټون وکړئ</string>
     <string name="forums_post_delete_message">ایا تاسو ډاډه یاست چې غواړئ دا پوسټ ړنګ کړئ؟ دا نه شي بېرته راګرځیدلی.</string>

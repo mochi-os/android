@@ -230,14 +230,14 @@
     <string name="stepup_email_placeholder">Introduce o código do teu correo</string>
     <string name="stepup_totp_label">Código de autenticación</string>
     <string name="stepup_totp_placeholder">Introduce o código do autenticador</string>
-    <string name="stepup_use_passkey">Usa a túa clave de acceso</string>
+    <string name="stepup_use_passkey">Usa a túa chave de acceso</string>
     <string name="stepup_send_email">Enviar correo</string>
     <string name="stepup_resend_email">Reenviar o correo</string>
     <string name="stepup_verify">Verificar</string>
     <string name="stepup_continue_with">Continuar con %1$s</string>
     <string name="stepup_error_start">Non se puido iniciar a reautenticación. Téntao de novo.</string>
     <string name="stepup_error_code">Ese código é incorrecto ou caducou.</string>
-    <string name="stepup_error_passkey">Fallou a verificación da clave de acceso. Téntao de novo.</string>
+    <string name="stepup_error_passkey">Fallou a verificación da chave de acceso. Téntao de novo.</string>
     <string name="stepup_error_oauth">Non se puido verificar con esa conta. Téntao de novo.</string>
     <string name="game_system_resign">%1$s abandonou</string>
     <string name="game_system_draw_offer">%1$s ofreceu táboas</string>

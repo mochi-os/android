@@ -168,7 +168,7 @@
     <string name="feeds_settings_field_server">Serveris</string>
     <string name="feeds_settings_name_edit_cd">Redaguoti pavadinimą</string>
     <string name="feeds_settings_section_identity">Tapatybė</string>
-    <string name="feeds_unsubscribe">Atšaukti prenumeratą</string>
+    <string name="feeds_unsubscribe">Atsisakyti prenumeratos</string>
     <string name="feeds_unsubscribed">Prenumerata atšaukta</string>
     <string name="feeds_access_level_comment_full">Komentuoti, reaguoti ir peržiūrėti</string>
     <string name="feeds_rss_mode_posts_comments">Įrašai ir komentarai</string>

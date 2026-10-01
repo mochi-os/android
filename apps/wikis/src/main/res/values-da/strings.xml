@@ -97,7 +97,7 @@
     <string name="wikis_delete_page_cancel">Annuller</string>
     <string name="wikis_delete_page_failed">Kunne ikke slette side</string>
     <string name="wikis_revert_page_comment_label">Tilbagefør kommentar</string>
-    <string name="wikis_revert_page_confirm">Annuller ændring</string>
+    <string name="wikis_revert_page_confirm">Gendan</string>
     <string name="wikis_revert_page_failed">Kunne ikke tilbageføre side</string>
     <string name="wikis_rename_page_title">Omdøb side</string>
     <string name="wikis_rename_page_label">Ny URL</string>
@@ -246,7 +246,7 @@
     <string name="wikis_insert_dialog_empty">Ingen vedhæftninger endnu. Upload en fil for at komme i gang.</string>
     <string name="wikis_delete_page_message">Du er ved at slette siden \"%1$s\" (%2$s). Denne handling kan fortrydes ved at gendanne fra historikken.</string>
     <string name="wikis_delete_page_success">Side slettet</string>
-    <string name="wikis_revert_page_title">Tilbagefør side</string>
+    <string name="wikis_revert_page_title">Gendan side</string>
     <string name="wikis_revert_page_message">Du er ved at gendanne %1$s til version %2$d. Dette opretter en ny revision med indholdet fra version %2$d.</string>
     <string name="wikis_revert_page_default_comment">Gendannet til version %1$d</string>
     <string name="wikis_revert_page_success">Gendannet til version %1$d</string>

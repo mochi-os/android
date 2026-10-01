@@ -10,8 +10,8 @@
     <string name="settings_home_accounts">Mba\'etekuéra oñembojuajúva</string>
     <string name="settings_home_interests">Oikotevevakuéra</string>
     <string name="account_section_passkeys">Jeike rape kuéra</string>
-    <string name="account_passkey_register">Embojuaju passkey</string>
-    <string name="account_passkey_delete_title">Hundi passkey?</string>
+    <string name="account_passkey_register">Embojuaju jeike rape</string>
+    <string name="account_passkey_delete_title">Embogue jeike rape?</string>
     <string name="account_section_totp">Tekorosã tembiporu\'i</string>
     <string name="account_totp_setup">Emboguata authenticator</string>
     <string name="account_totp_setup_title">Emboguata authenticator</string>
@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">Embojevy ypy peguávape?</string>
     <string name="system_setting_apps_install_user">Eipysyrõ puruhárape oinstalá hag̃ua app</string>
     <string name="system_setting_auth_email">Login email código ndive</string>
-    <string name="system_setting_auth_passkey">Login passkey ndive</string>
+    <string name="system_setting_auth_passkey">Eike jeike rape reheve</string>
     <string name="system_setting_auth_totp">Login TOTP autenticador app ndive</string>
     <string name="system_setting_auth_recovery">Login recuperación código ndive</string>
     <string name="system_setting_auth_oauth">Login OAuth 2.0 ndive</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">Ñemoñe\'ẽ ñembyatyrã</string>
     <string name="settings_home_rules">Tekoita</string>
     <string name="settings_home_terms">Mba\'eapo rape</string>
-    <string name="account_passkeys_empty">Ndaipori passkey oñembyaty.</string>
-    <string name="account_passkey_register_title">Passkey moĩve</string>
+    <string name="account_passkeys_empty">Ndaipóri jeike rape kuéra oñemboheraguapýva.</string>
+    <string name="account_passkey_register_title">Embojuaju peteĩ jeike rape</string>
     <string name="account_passkey_name_label">Téra (oĩva\'erã)</string>
     <string name="account_passkey_delete_message">\"%1$s\" ndoike mo\'ã véima.</string>
     <string name="account_totp_enabled">Autenticador oikóma.</string>

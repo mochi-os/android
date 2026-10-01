@@ -145,8 +145,8 @@
     <string name="auth_login_title">Jelentkezzen be a Mochiba</string>
     <string name="auth_next">Következő</string>
     <string name="auth_or_log_in_with">Vagy jelentkezzen be ezzel</string>
-    <string name="auth_passkey">Azonosítókulcs</string>
-    <string name="auth_use_passkey">Azonosítókulcs használata</string>
+    <string name="auth_passkey">Hozzáférési kulcs</string>
+    <string name="auth_use_passkey">Hozzáférési kulcs használata</string>
     <string name="auth_email_me_a_code">Kérek kódot e-mailben</string>
     <string name="auth_or_enter_authenticator_code">Vagy adja meg a hitelesítő kódot</string>
     <string name="auth_log_in">Bejelentkezés</string>

@@ -165,7 +165,7 @@
     <string name="feeds_settings_field_server">서버</string>
     <string name="feeds_settings_name_edit_cd">이름 편집</string>
     <string name="feeds_settings_section_identity">신원</string>
-    <string name="feeds_unsubscribe">구독 취소</string>
+    <string name="feeds_unsubscribe">구독 해지</string>
     <string name="feeds_unsubscribed">구독이 취소되었어요</string>
     <string name="feeds_access_level_comment_full">댓글, 반응 및 보기</string>
     <string name="feeds_rss_mode_posts_comments">게시물 및 댓글</string>
@@ -175,7 +175,7 @@
     <string name="feeds_post_content">게시물 내용</string>
     <string name="feeds_enable_memories">메모리 사용</string>
     <string name="feeds_permission_request_title">권한 요청</string>
-    <string name="feeds_unsubscribe_confirm">피드 구독을 취소할까요?</string>
+    <string name="feeds_unsubscribe_confirm">피드 구독을 해지할까요?</string>
     <string name="feeds_settings_title">%1$s 설정</string>
     <string name="feeds_source_transform_help">비활성화하려면 비워 두세요.</string>
     <string name="feeds_settings_name_cancel_cd">편집 취소</string>

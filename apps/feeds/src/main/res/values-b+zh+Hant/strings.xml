@@ -165,7 +165,7 @@
     <string name="feeds_settings_field_server">伺服器</string>
     <string name="feeds_settings_name_edit_cd">編輯名稱</string>
     <string name="feeds_settings_section_identity">身分</string>
-    <string name="feeds_unsubscribe">取消訂閱</string>
+    <string name="feeds_unsubscribe">退訂</string>
     <string name="feeds_unsubscribed">已取消訂閱</string>
     <string name="feeds_access_level_comment_full">評論、點讚和查看</string>
     <string name="feeds_rss_mode_posts_comments">貼文和留言</string>
@@ -175,7 +175,7 @@
     <string name="feeds_post_content">貼文內容</string>
     <string name="feeds_enable_memories">啟用記憶</string>
     <string name="feeds_permission_request_title">權限請求</string>
-    <string name="feeds_unsubscribe_confirm">取消訂閱此訊息來源？</string>
+    <string name="feeds_unsubscribe_confirm">退訂此訊息來源？</string>
     <string name="feeds_settings_title">%1$s 設定</string>
     <string name="feeds_source_transform_help">留空以停用。</string>
     <string name="feeds_settings_name_cancel_cd">取消編輯</string>

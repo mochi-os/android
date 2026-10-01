@@ -40,11 +40,11 @@
     <string name="projects_settings_tab_people">Kişiler</string>
     <string name="projects_option_icon">Simge</string>
     <string name="projects_option_icon_placeholder">ör. Check, Star, Flag</string>
-    <string name="projects_settings_unsubscribe">Aboneliği iptal et</string>
+    <string name="projects_settings_unsubscribe">Abonelikten çık</string>
     <string name="projects_settings_delete_project">Projeyi sil</string>
     <string name="projects_settings_delete_confirm_title">Projeyi sil</string>
-    <string name="projects_settings_unsubscribe_title">Aboneliği iptal et</string>
-    <string name="projects_settings_unsubscribe_message">Bu proje aboneliğini iptal etmek istediğinizden emin misiniz?</string>
+    <string name="projects_settings_unsubscribe_title">Abonelikten çık</string>
+    <string name="projects_settings_unsubscribe_message">Bu proje aboneliğinden çıkmak istediğinizden emin misiniz?</string>
     <string name="projects_access_level_owner">Sahip</string>
     <string name="projects_object_watch">İzle</string>
     <string name="projects_object_tab_properties">Özellikler</string>

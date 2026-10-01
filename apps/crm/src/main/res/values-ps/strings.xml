@@ -33,10 +33,10 @@
     <string name="crm_settings_tab_people">خلک</string>
     <string name="crm_option_icon">آیکون</string>
     <string name="crm_option_icon_placeholder">لکه چېنه Check، Star، Flag</string>
-    <string name="crm_settings_unsubscribe">ګډون لغوه کول</string>
+    <string name="crm_settings_unsubscribe">له ګډون وتل</string>
     <string name="crm_settings_delete_crm">CRM ړنګ کړئ</string>
     <string name="crm_settings_delete_confirm_title">CRM ړنګ کړئ</string>
-    <string name="crm_settings_unsubscribe_title">ګډون لغوه کول</string>
+    <string name="crm_settings_unsubscribe_title">له ګډون وتل</string>
     <string name="crm_settings_unsubscribe_message">ایا تاسو ډاډه یاست چې غواړئ د دې CRM ګډون ختم کړئ؟</string>
     <string name="crm_access_level_owner">مالک</string>
     <string name="crm_object_watch">وګورئ</string>

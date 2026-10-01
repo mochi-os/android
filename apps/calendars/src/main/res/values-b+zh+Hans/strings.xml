@@ -89,7 +89,7 @@
     <string name="calendars_event_delete_message">此操作无法撤销。</string>
     <string name="calendars_scope_edit">更改此活动还是所有活动？</string>
     <string name="calendars_scope_delete">删除此活动还是所有活动？</string>
-    <string name="calendars_scope_one">此活动</string>
+    <string name="calendars_scope_one">仅此活动</string>
     <string name="calendars_scope_all">所有活动</string>
     <string name="calendars_repeat_daily">每天</string>
     <string name="calendars_repeat_weekly">每周</string>

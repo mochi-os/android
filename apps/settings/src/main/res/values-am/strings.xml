@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">የግል መረጃ ፖሊሲ</string>
     <string name="settings_home_rules">ህጎች</string>
     <string name="settings_home_terms">የአገልግሎት ውሎች</string>
-    <string name="account_passkeys_empty">የተመዘገቡ የመግቢያ ቁልፎች የሉም።</string>
-    <string name="account_passkey_register_title">የመግቢያ ቁልፍ ጨምር</string>
+    <string name="account_passkeys_empty">ምንም ፓስኪዎች አልተመዘገቡም።</string>
+    <string name="account_passkey_register_title">ፓስኪ ጨምር</string>
     <string name="account_passkey_name_label">ስም (አማራጭ)</string>
     <string name="account_passkey_delete_message">\"%1$s\" ከአሁን በኋላ አያስገባዎትም።</string>
     <string name="account_totp_enabled">አረጋጋጭ ነቅቷል።</string>

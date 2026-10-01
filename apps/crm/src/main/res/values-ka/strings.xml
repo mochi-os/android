@@ -33,11 +33,11 @@
     <string name="crm_settings_tab_people">ადამიანები</string>
     <string name="crm_option_icon">ხატულა</string>
     <string name="crm_option_icon_placeholder">მაგალითად. Check, Star, Flag</string>
-    <string name="crm_settings_unsubscribe">გამოწერის გაუქმება</string>
+    <string name="crm_settings_unsubscribe">გამოწერის შეწყვეტა</string>
     <string name="crm_settings_delete_crm">CRM-ის წაშლა</string>
     <string name="crm_settings_delete_confirm_title">CRM-ის წაშლა</string>
-    <string name="crm_settings_unsubscribe_title">გამოწერის გაუქმება</string>
-    <string name="crm_settings_unsubscribe_message">დარწმუნებული ხართ, რომ გსურთ ამ CRM-დან გამოწერის გაუქმება?</string>
+    <string name="crm_settings_unsubscribe_title">გამოწერის შეწყვეტა</string>
+    <string name="crm_settings_unsubscribe_message">დარწმუნებული ხართ, რომ გსურთ ამ CRM-დან გამოწერის შეწყვეტა?</string>
     <string name="crm_access_level_owner">მფლობელი</string>
     <string name="crm_object_watch">თვალყურის დევნება</string>
     <string name="crm_object_tab_properties">თვისებები</string>

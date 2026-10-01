@@ -29,7 +29,7 @@
     <string name="calendars_day_friday">الجمعة</string>
     <string name="calendars_day_saturday">السبت</string>
     <string name="calendars_link_replace">استبدال</string>
-    <string name="calendars_link_revoke">إلغاء</string>
+    <string name="calendars_link_revoke">إبطال</string>
     <string name="calendars_permission_allow">السماح</string>
     <string name="calendars_permission_deny">رفض</string>
     <string name="calendars_sync_title">المزامنة مع هذا الهاتف</string>
@@ -205,6 +205,6 @@
     <string name="calendars_span_day">%1$s، %2$s إلى %3$s</string>
     <string name="calendars_polled_current">التقويم محدَّث</string>
     <string name="calendars_polled_synced">تمت مزامنة التقويم</string>
-    <string name="calendars_link_revoke_title">إلغاء عنوان التقويم؟</string>
+    <string name="calendars_link_revoke_title">إبطال عنوان التقويم؟</string>
     <string name="calendars_link_revoke_message">ستتوقف التقويمات المشتركة في هذا العنوان عن التحديث.</string>
 </resources>

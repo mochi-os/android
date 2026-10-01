@@ -166,7 +166,7 @@
     <string name="feeds_settings_field_server">سرور</string>
     <string name="feeds_settings_name_edit_cd">ویرایش نام</string>
     <string name="feeds_settings_section_identity">هویت</string>
-    <string name="feeds_unsubscribe">لغو اشتراک</string>
+    <string name="feeds_unsubscribe">قطع اشتراک</string>
     <string name="feeds_unsubscribed">لغو اشتراک شد</string>
     <string name="feeds_access_level_comment_full">نظر دادن، واکنش نشان دادن و دیدن</string>
     <string name="feeds_rss_mode_posts_comments">پست‌ها و نظرات</string>
@@ -176,7 +176,7 @@
     <string name="feeds_post_content">محتوای پست</string>
     <string name="feeds_enable_memories">فعال‌سازی خاطرات</string>
     <string name="feeds_permission_request_title">درخواست مجوز</string>
-    <string name="feeds_unsubscribe_confirm">لغو اشتراک از فید؟</string>
+    <string name="feeds_unsubscribe_confirm">قطع اشتراک از فید؟</string>
     <string name="feeds_settings_title">تنظیمات %1$s</string>
     <string name="feeds_source_transform_help">برای غیرفعال‌سازی خالی بگذارید.</string>
     <string name="feeds_settings_name_cancel_cd">لغو ویرایش</string>

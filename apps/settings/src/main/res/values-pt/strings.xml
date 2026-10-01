@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">Repor predefinição?</string>
     <string name="system_setting_apps_install_user">Permitir que os utilizadores instalem aplicações</string>
     <string name="system_setting_auth_email">Iniciar sessão com código por e-mail</string>
-    <string name="system_setting_auth_passkey">Iniciar sessão com passkey</string>
+    <string name="system_setting_auth_passkey">Iniciar sessão com chave de acesso</string>
     <string name="system_setting_auth_totp">Iniciar sessão com aplicação autenticadora TOTP</string>
     <string name="system_setting_auth_recovery">Iniciar sessão com código de recuperação</string>
     <string name="system_setting_auth_oauth">Iniciar sessão com OAuth 2.0</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">Política de privacidade</string>
     <string name="settings_home_rules">Regras</string>
     <string name="settings_home_terms">Termos de serviço</string>
-    <string name="account_passkeys_empty">Nenhuma passkey registada.</string>
-    <string name="account_passkey_register_title">Adicionar passkey</string>
+    <string name="account_passkeys_empty">Nenhuma chave de acesso registada.</string>
+    <string name="account_passkey_register_title">Adicionar uma chave de acesso</string>
     <string name="account_passkey_name_label">Nome (opcional)</string>
     <string name="account_passkey_delete_message">«%1$s» já não o vai autenticar.</string>
     <string name="account_totp_enabled">Autenticador ativo.</string>

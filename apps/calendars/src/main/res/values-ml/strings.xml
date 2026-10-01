@@ -29,7 +29,7 @@
     <string name="calendars_day_friday">വെള്ളിയാഴ്ച</string>
     <string name="calendars_day_saturday">ശനിയാഴ്ച</string>
     <string name="calendars_link_replace">മാറ്റിസ്ഥാപിക്കുക</string>
-    <string name="calendars_link_revoke">റദ്ദാക്കുക</string>
+    <string name="calendars_link_revoke">പിൻവലിക്കുക</string>
     <string name="calendars_permission_allow">അനുവദിക്കുക</string>
     <string name="calendars_permission_deny">നിഷേധിക്കുക</string>
     <string name="calendars_sync_title">ഈ ഫോണിലേക്ക് സിങ്ക് ചെയ്യുക</string>

@@ -6,8 +6,8 @@
     <string name="forums_list_title">Forumi</string>
     <string name="forums_list_find">Pronađi forume</string>
     <string name="forums_list_logout">Odjavi se</string>
-    <string name="forums_list_unsubscribe">Otkaži pretplatu</string>
-    <string name="forums_list_unsubscribe_title">Otkaži pretplatu</string>
+    <string name="forums_list_unsubscribe">Prekini pretplatu</string>
+    <string name="forums_list_unsubscribe_title">Prekini pretplatu</string>
     <string name="forums_create_title">Kreiraj forum</string>
     <string name="forums_create_name">Naziv foruma</string>
     <string name="forums_create_privacy">Privatnost</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">Označi</string>
     <string name="forums_ai_account_default">Podrazumijevani račun</string>
     <string name="forums_ai_prompt_reset">Vrati na zadano</string>
-    <string name="forums_settings_unsubscribe">Otkaži pretplatu</string>
+    <string name="forums_settings_unsubscribe">Prekini pretplatu</string>
     <string name="forums_moderation_title">Moderacija</string>
     <string name="forums_moderation_tab_queue">Red</string>
     <string name="forums_moderation_tab_reports">Prijave</string>

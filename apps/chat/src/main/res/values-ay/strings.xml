@@ -17,8 +17,8 @@
     <string name="chat_settings_add_member_search">Amigonak thaqhama</string>
     <string name="chat_settings_remove_member">Aparma</string>
     <string name="chat_settings_remove_member_title">Miembro aparma</string>
-    <string name="chat_settings_leave">Chat jaytaña</string>
-    <string name="chat_settings_leave_title">Chat jaytaña</string>
+    <string name="chat_settings_leave">Chatat mistuña</string>
+    <string name="chat_settings_leave_title">Chatat mistuña</string>
     <string name="chat_settings_delete_title">Chat chhaqtayaña</string>
     <string name="chat_members_empty">Jan miembronaka</string>
     <string name="chat_members_you">Juma</string>

@@ -166,7 +166,7 @@
     <string name="feeds_settings_field_server">Servidor</string>
     <string name="feeds_settings_name_edit_cd">Suti askichaña</string>
     <string name="feeds_settings_section_identity">Identidad</string>
-    <string name="feeds_unsubscribe">Suscripción jaytaña</string>
+    <string name="feeds_unsubscribe">Suscripción apaqaña</string>
     <string name="feeds_unsubscribed">Suscripción jaytata</string>
     <string name="feeds_access_level_comment_full">Comentaña, reaccionaña, ukat uñakipaña</string>
     <string name="feeds_rss_mode_posts_comments">Qillqatanak comentarionakampi</string>
@@ -176,7 +176,7 @@
     <string name="feeds_post_content">Qillqata contenido</string>
     <string name="feeds_enable_memories">Memorianak yatichaña</string>
     <string name="feeds_permission_request_title">Permiso mayisiwi</string>
-    <string name="feeds_unsubscribe_confirm">Feedat suscripción apsuñati?</string>
+    <string name="feeds_unsubscribe_confirm">¿Feedat suscripción apaqañati?</string>
     <string name="feeds_settings_title">%1$s wakichäwinaka</string>
     <string name="feeds_source_transform_help">Jaytañataki wakischa jaytaña.</string>
     <string name="feeds_settings_name_cancel_cd">Askichäwi chhaqtayaña</string>

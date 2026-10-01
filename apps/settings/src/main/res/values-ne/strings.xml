@@ -20,7 +20,7 @@
     <string name="account_section_recovery">रिकभरी कोडहरू</string>
     <string name="account_recovery_codes_title">रिकभरी कोडहरू</string>
     <string name="sessions_unknown_agent">अज्ञात उपकरण</string>
-    <string name="sessions_revoke_title">सेसन रद्द गर्ने हो?</string>
+    <string name="sessions_revoke_title">सेसन फिर्ता लिने हो?</string>
     <string name="account_section_oauth">तेस्रो पक्षको लगइन</string>
     <string name="account_oauth_link">खाता लिङ्क गर्नुहोस्</string>
     <string name="account_unlink">अनलिंक गर्नुहोस्</string>
@@ -29,7 +29,7 @@
     <string name="account_done">सम्पन्न</string>
     <string name="account_delete">मेटाउनुहोस्</string>
     <string name="account_rename">नाम परिवर्तन गर्नुहोस्</string>
-    <string name="sessions_revoke">रद्द गर्नुहोस्</string>
+    <string name="sessions_revoke">फिर्ता लिनुहोस्</string>
     <string name="account_disable">निष्क्रिय गर्नुहोस्</string>
     <string name="account_copy">प्रतिलिपि</string>
     <string name="account_copy_all">सबै प्रतिलिपि गर्नुहोस्</string>
@@ -181,8 +181,8 @@
     <string name="system_users_delete_title">प्रयोगकर्ता मेटाउने?</string>
     <string name="system_users_manage_sessions">सत्रहरू व्यवस्थापन गर्नुहोस्</string>
     <string name="system_users_sessions_empty">यो प्रयोगकर्ताको कुनै सक्रिय सेसन छैन।</string>
-    <string name="system_users_revoke">रद्द गर्नुहोस्</string>
-    <string name="system_users_revoke_all">सबै सत्रहरू खारेज गर्नुहोस्</string>
+    <string name="system_users_revoke">फिर्ता लिनुहोस्</string>
+    <string name="system_users_revoke_all">सबै सत्रहरू फिर्ता लिनुहोस्</string>
     <string name="system_users_unknown_browser">अज्ञात ब्राउजर</string>
     <string name="system_users_unknown">अज्ञात</string>
     <string name="system_users_previous">अघिल्लो</string>
@@ -265,7 +265,7 @@
     <string name="system_users_delete_message">यसले प्रयोगकर्ता \"%1$s\" लाई स्थायी रूपमा मेटाउनेछ। यो कार्य पूर्ववत गर्न सकिँदैन।</string>
     <string name="system_users_sessions_title">%1$s का सत्रहरू</string>
     <string name="system_users_session_last_accessed">अन्तिम पहुँच: %1$s</string>
-    <string name="system_users_revoke_all_title">सबै सत्रहरू रद्द गर्ने?</string>
+    <string name="system_users_revoke_all_title">सबै सत्रहरू फिर्ता लिने?</string>
     <string name="system_users_revoke_all_message">यो प्रयोगकर्ताका सबै सक्रिय सत्रहरू साइन आउट गरिनेछन्।</string>
     <plurals name="system_users_pagination_status">
         <item quantity="one">%3$d प्रयोगकर्तामध्ये %1$d–%2$d देखाउँदै</item>
@@ -386,7 +386,7 @@
     <string name="accounts_field_topic">विषय</string>
     <string name="accounts_field_secret">हस्ताक्षर गोप्य</string>
     <string name="account_totp_open">प्रमाणीकरण एपमा खोल्नुहोस्</string>
-    <string name="accounts_revoke">पहुँच रद्द गर्नुहोस्</string>
+    <string name="accounts_revoke">पहुँच फिर्ता लिनुहोस्</string>
     <string name="accounts_capability_calendar">क्यालेन्डर</string>
     <string name="accounts_capability_notify">सूचनाहरू</string>
     <string name="accounts_capability_ai">AI</string>

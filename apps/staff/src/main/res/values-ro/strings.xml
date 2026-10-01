@@ -32,10 +32,10 @@
     <string name="staff_accounts_submitting">Se trimite…</string>
     <string name="staff_accounts_suspend">Suspendă</string>
     <string name="staff_accounts_suspended_toast">Cont suspendat</string>
-    <string name="staff_accounts_unban">Anulează interdicția</string>
+    <string name="staff_accounts_unban">Ridică interdicția</string>
     <string name="staff_accounts_unbanned_toast">Cont deblocat</string>
     <string name="staff_accounts_unnamed">Fără nume</string>
-    <string name="staff_accounts_unsuspend">Anulează suspendarea</string>
+    <string name="staff_accounts_unsuspend">Ridică suspendarea</string>
     <string name="staff_accounts_unsuspended_toast">Cont resuspendat</string>
     <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_appeals_cancel">Anulează</string>

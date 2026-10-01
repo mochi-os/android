@@ -22,16 +22,16 @@
     <string name="wikis_page_action_recent_changes">Hiljutised muudatused</string>
     <string name="wikis_page_action_new_page">Uus leht</string>
     <string name="wikis_page_action_settings">Seaded</string>
-    <string name="wikis_page_action_unsubscribe">Tühista tellimus</string>
+    <string name="wikis_page_action_unsubscribe">Loobu tellimusest</string>
     <string name="wikis_title">Vikid</string>
     <string name="wikis_empty_title">Alusta oma esimest wikit</string>
     <string name="wikis_empty_subtitle">Otsi vikit, et tellida, või loo uus, et avaldada oma dokumentatsioon.</string>
     <string name="wikis_create_button">Loo wiki</string>
     <string name="wikis_recommended_section">Soovitatud vikid</string>
     <string name="wikis_subscribe_button">Telli</string>
-    <string name="wikis_unsubscribe_action">Tühista tellimus</string>
-    <string name="wikis_unsubscribing">Tühistan tellimust…</string>
-    <string name="wikis_unsubscribe_confirm_title">Tühista tellimus</string>
+    <string name="wikis_unsubscribe_action">Loobu tellimusest</string>
+    <string name="wikis_unsubscribing">Loobun tellimusest…</string>
+    <string name="wikis_unsubscribe_confirm_title">Loobu tellimusest</string>
     <string name="wikis_unsubscribe_success">Tellimus tühistatud</string>
     <string name="wikis_subscribe_failed">Tellimine ebaõnnestus</string>
     <string name="wikis_rss_menu">RSS-voog</string>
@@ -40,7 +40,7 @@
     <string name="wikis_rss_both">Muudatused ja kommentaarid</string>
     <string name="wikis_rss_copied">RSS URL kopeeritud lõikepuhvrisse</string>
     <string name="wikis_rss_failed">RSS-tokeni hankimine ebaõnnestus</string>
-    <string name="wikis_rss_revoke">Tühista juurdepääs</string>
+    <string name="wikis_rss_revoke">Eemalda juurdepääs</string>
     <string name="wikis_rss_revoked">RSS-juurdepääs tühistatud</string>
     <string name="wikis_find_title">Otsi wikisid</string>
     <string name="wikis_find_no_results">Vikisid ei leitud</string>
@@ -97,7 +97,7 @@
     <string name="wikis_delete_page_cancel">Tühista</string>
     <string name="wikis_delete_page_failed">Lehe kustutamine ebaõnnestus</string>
     <string name="wikis_revert_page_comment_label">Tühista kommentaari muudatused</string>
-    <string name="wikis_revert_page_confirm">Tühista muudatused</string>
+    <string name="wikis_revert_page_confirm">Taasta</string>
     <string name="wikis_revert_page_failed">Lehe taastamine ebaõnnestus</string>
     <string name="wikis_rename_page_title">Nimeta leht ümber</string>
     <string name="wikis_rename_page_label">Uus URL</string>
@@ -230,7 +230,7 @@
     <string name="wikis_page_action_share">Link</string>
     <string name="wikis_open_sidebar">Ava külgriba</string>
     <string name="wikis_search_placeholder">Otsi wikit…</string>
-    <string name="wikis_unsubscribe_confirm_message">Kas oled kindel, et soovid tellimust %1$s tühistada?</string>
+    <string name="wikis_unsubscribe_confirm_message">Kas oled kindel, et soovid tellimusest %1$s loobuda?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Otsi nime, ID, sõrmejälje või URL järgi…</string>
     <string name="wikis_join_search_button">Otsi wikist…</string>

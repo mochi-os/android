@@ -10,8 +10,8 @@
     <string name="settings_home_accounts">Povezani računi</string>
     <string name="settings_home_interests">Interesi</string>
     <string name="account_section_passkeys">Pristupni ključevi</string>
-    <string name="account_passkey_register">Dodaj passkey</string>
-    <string name="account_passkey_delete_title">Obrisati passkey?</string>
+    <string name="account_passkey_register">Dodaj pristupni ključ</string>
+    <string name="account_passkey_delete_title">Obrisati pristupni ključ?</string>
     <string name="account_section_totp">Authenticator aplikacija</string>
     <string name="account_totp_setup">Postavi autentifikator</string>
     <string name="account_totp_setup_title">Postavi autentifikator</string>
@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">Vratiti na zadano?</string>
     <string name="system_setting_apps_install_user">Dozvoli korisnicima da instaliraju aplikacije</string>
     <string name="system_setting_auth_email">Prijava koristeći email kod</string>
-    <string name="system_setting_auth_passkey">Prijava koristeći passkey</string>
+    <string name="system_setting_auth_passkey">Prijava pomoću pristupnog ključa</string>
     <string name="system_setting_auth_totp">Prijava koristeći TOTP authenticator aplikaciju</string>
     <string name="system_setting_auth_recovery">Prijava koristeći kod za oporavak</string>
     <string name="system_setting_auth_oauth">Prijava koristeći OAuth 2.0</string>

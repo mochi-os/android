@@ -40,7 +40,7 @@
     <string name="discovery_recommended">تجویز کردہ</string>
     <string name="access_add_rule">قاعدہ شامل کریں</string>
     <string name="access_owner">مالک</string>
-    <string name="access_revoke">منسوخ کریں</string>
+    <string name="access_revoke">واپس لیں</string>
     <string name="access_level_comment">تبصرہ کریں</string>
     <string name="access_level_view">دیکھیں</string>
     <string name="access_level_none">کوئی نہیں</string>
@@ -299,9 +299,9 @@
     <string name="format_code">کوڈ</string>
     <string name="format_list">نکاتی فہرست</string>
     <string name="common_preview">پیش منظر</string>
-    <string name="rss_revoke_confirm">منسوخ کریں</string>
-    <string name="rss_revoke">رسائی منسوخ کریں</string>
-    <string name="rss_revoke_title">RSS رسائی منسوخ کریں؟</string>
+    <string name="rss_revoke_confirm">واپس لیں</string>
+    <string name="rss_revoke">رسائی واپس لیں</string>
+    <string name="rss_revoke_title">RSS رسائی واپس لیں؟</string>
     <string name="rss_revoke_message">اس فیڈ کو سبسکرائب کرنے والی ہر چیز اسے وصول کرنا بند کر دے گی۔ بعد میں آپ نیا URL کاپی کر سکتے ہیں۔</string>
     <string name="rss_revoked">RSS رسائی منسوخ کر دی گئی</string>
     <string name="rss_revoke_failed">RSS رسائی منسوخ کرنے میں ناکام</string>

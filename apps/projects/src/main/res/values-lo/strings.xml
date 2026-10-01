@@ -40,11 +40,11 @@
     <string name="projects_settings_tab_people">ບຸກຄົນ</string>
     <string name="projects_option_icon">ໄອຄອນ</string>
     <string name="projects_option_icon_placeholder">ເຊັ່ນ Check, Star, Flag</string>
-    <string name="projects_settings_unsubscribe">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
+    <string name="projects_settings_unsubscribe">ເຊົາຕິດຕາມ</string>
     <string name="projects_settings_delete_project">ລົບໂຄງການ</string>
     <string name="projects_settings_delete_confirm_title">ລົບໂຄງການ</string>
-    <string name="projects_settings_unsubscribe_title">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
-    <string name="projects_settings_unsubscribe_message">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການຍົກເລີກການສະໝັກສະມາຊິກຈາກໂຄງການນີ້?</string>
+    <string name="projects_settings_unsubscribe_title">ເຊົາຕິດຕາມ</string>
+    <string name="projects_settings_unsubscribe_message">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການເຊົາຕິດຕາມໂຄງການນີ້?</string>
     <string name="projects_access_level_owner">ເຈົ້າຂອງ</string>
     <string name="projects_object_watch">ເບິ່ງ</string>
     <string name="projects_object_tab_properties">ຄຸນສົມບັດ</string>

@@ -9,7 +9,7 @@
     <string name="settings_home_notification_prefs">Преференции за известувања</string>
     <string name="settings_home_accounts">Поврзани сметки</string>
     <string name="settings_home_interests">Интереси</string>
-    <string name="account_section_passkeys">Passkey-и</string>
+    <string name="account_section_passkeys">Клучеви за пристап</string>
     <string name="account_passkey_register">Додај клуч за пристап</string>
     <string name="account_passkey_delete_title">Да се избрише клучот за пристап?</string>
     <string name="account_section_totp">Апликација за автентикација</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">Политика за приватност</string>
     <string name="settings_home_rules">Правила</string>
     <string name="settings_home_terms">Услови за услуга</string>
-    <string name="account_passkeys_empty">Нема регистрирани пристапни клучеви.</string>
-    <string name="account_passkey_register_title">Додај пристапен клуч</string>
+    <string name="account_passkeys_empty">Нема регистрирани клучеви за пристап.</string>
+    <string name="account_passkey_register_title">Додај клуч за пристап</string>
     <string name="account_passkey_name_label">Име (опционално)</string>
     <string name="account_passkey_delete_message">„%1$s\" повеќе нема да ве најавува.</string>
     <string name="account_totp_enabled">Автентикаторот е овозможен.</string>
@@ -265,7 +265,7 @@
     <string name="system_users_delete_message">Ова трајно ќе го избрише корисникот „%1$s\". Оваа акција не може да се откаже.</string>
     <string name="system_users_sessions_title">Сесии на %1$s</string>
     <string name="system_users_session_last_accessed">Последен пристап: %1$s</string>
-    <string name="system_users_revoke_all_title">Откажи ги сите сесии?</string>
+    <string name="system_users_revoke_all_title">Отповикај ги сите сесии?</string>
     <string name="system_users_revoke_all_message">Сите активни сесии на овој корисник ќе бидат одјавени.</string>
     <plurals name="system_users_pagination_status">
         <item quantity="one">Се прикажуваат %1$d–%2$d од %3$d корисник</item>

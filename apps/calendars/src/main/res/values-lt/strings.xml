@@ -29,7 +29,7 @@
     <string name="calendars_day_friday">Penktadienis</string>
     <string name="calendars_day_saturday">Šeštadienis</string>
     <string name="calendars_link_replace">Pakeisti</string>
-    <string name="calendars_link_revoke">Atšaukti</string>
+    <string name="calendars_link_revoke">Panaikinti</string>
     <string name="calendars_permission_allow">Leisti</string>
     <string name="calendars_permission_deny">Atmesti</string>
     <string name="calendars_sync_title">Sinchronizuoti su šiuo telefonu</string>
@@ -196,6 +196,6 @@
     <string name="calendars_span_day">%1$s, nuo %2$s iki %3$s</string>
     <string name="calendars_polled_current">Kalendorius atnaujintas</string>
     <string name="calendars_polled_synced">Kalendorius sinchronizuotas</string>
-    <string name="calendars_link_revoke_title">Atšaukti kalendoriaus adresą?</string>
+    <string name="calendars_link_revoke_title">Panaikinti kalendoriaus adresą?</string>
     <string name="calendars_link_revoke_message">Kalendoriai, užsiprenumeravę šį adresą, nebebus atnaujinami.</string>
 </resources>

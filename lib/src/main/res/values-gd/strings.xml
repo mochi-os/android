@@ -230,14 +230,14 @@
     <string name="stepup_email_placeholder">Cuir a-steach an còd on phost-d agad</string>
     <string name="stepup_totp_label">Còd dearbhachaidh</string>
     <string name="stepup_totp_placeholder">Cuir a-steach còd na h-aplacaid dearbhaidh agad</string>
-    <string name="stepup_use_passkey">Cleachd an iuchair-inntrigidh agad</string>
+    <string name="stepup_use_passkey">Cleachd am pasgair agad</string>
     <string name="stepup_send_email">Cuir post-d</string>
     <string name="stepup_resend_email">Cuir am post-d a-rithist</string>
     <string name="stepup_verify">Dearbh</string>
     <string name="stepup_continue_with">Lean air adhart le %1$s</string>
     <string name="stepup_error_start">Cha b\' urrainn ath-dhearbhadh a thòiseachadh. Feuch ris a-rithist.</string>
     <string name="stepup_error_code">Tha an còd sin ceàrr no air a dhol à bann.</string>
-    <string name="stepup_error_passkey">Dh\'fhàillig dearbhadh na h-iuchrach-inntrigidh. Feuch ris a-rithist.</string>
+    <string name="stepup_error_passkey">Dh\'fhàillig dearbhadh a\' phasgair. Feuch ris a-rithist.</string>
     <string name="stepup_error_oauth">Cha b\' urrainn dearbhadh leis a\' chunntas sin. Feuch ris a-rithist.</string>
     <string name="game_system_resign">Ghèill %1$s</string>
     <string name="game_system_draw_offer">Thairg %1$s geall-cothrom</string>

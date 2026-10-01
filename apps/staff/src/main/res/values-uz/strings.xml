@@ -32,10 +32,10 @@
     <string name="staff_accounts_submitting">Yuborilmoqda…</string>
     <string name="staff_accounts_suspend">Toʻxtatib qoʻyish</string>
     <string name="staff_accounts_suspended_toast">Hisob toʻxtatildi</string>
-    <string name="staff_accounts_unban">Banni bekor qilish</string>
+    <string name="staff_accounts_unban">Banni olib tashlash</string>
     <string name="staff_accounts_unbanned_toast">Hisob blokdan chiqarildi</string>
     <string name="staff_accounts_unnamed">Nomsiz</string>
-    <string name="staff_accounts_unsuspend">Toʻxtatib qoʻyishni bekor qilish</string>
+    <string name="staff_accounts_unsuspend">Toʻxtatib qoʻyishni olib tashlash</string>
     <string name="staff_accounts_unsuspended_toast">Hisob faollashtirildi</string>
     <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_appeals_cancel">Bekor qilish</string>

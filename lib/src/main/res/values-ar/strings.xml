@@ -40,7 +40,7 @@
     <string name="discovery_recommended">موصى به</string>
     <string name="access_add_rule">إضافة قاعدة</string>
     <string name="access_owner">المالك</string>
-    <string name="access_revoke">إلغاء</string>
+    <string name="access_revoke">إبطال</string>
     <string name="access_level_comment">تعليق</string>
     <string name="access_level_view">عرض</string>
     <string name="access_level_none">لا شيء</string>
@@ -303,9 +303,9 @@
     <string name="format_code">تعليمات برمجية</string>
     <string name="format_list">قائمة نقطية</string>
     <string name="common_preview">معاينة</string>
-    <string name="rss_revoke_confirm">إلغاء</string>
-    <string name="rss_revoke">إلغاء الوصول</string>
-    <string name="rss_revoke_title">إلغاء وصول RSS؟</string>
+    <string name="rss_revoke_confirm">إبطال</string>
+    <string name="rss_revoke">إبطال الوصول</string>
+    <string name="rss_revoke_title">إبطال وصول RSS؟</string>
     <string name="rss_revoke_message">سيتوقف أي شيء مشترك في هذه التغذية عن تلقيها. يمكنك نسخ عنوان URL جديد بعد ذلك.</string>
     <string name="rss_revoked">تم إلغاء وصول RSS</string>
     <string name="rss_revoke_failed">فشل إلغاء وصول RSS</string>

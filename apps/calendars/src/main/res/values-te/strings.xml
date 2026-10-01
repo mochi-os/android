@@ -29,7 +29,7 @@
     <string name="calendars_day_friday">శుక్రవారం</string>
     <string name="calendars_day_saturday">శనివారం</string>
     <string name="calendars_link_replace">భర్తీ చేయండి</string>
-    <string name="calendars_link_revoke">రద్దు చేయండి</string>
+    <string name="calendars_link_revoke">ఉపసంహరించండి</string>
     <string name="calendars_permission_allow">అనుమతించండి</string>
     <string name="calendars_permission_deny">నిరాకరించండి</string>
     <string name="calendars_sync_title">ఈ ఫోన్‌కు సింక్ చేయండి</string>

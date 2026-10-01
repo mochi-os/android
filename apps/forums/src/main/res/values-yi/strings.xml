@@ -236,7 +236,7 @@
     <string name="forums_clear">רייניקן</string>
     <string name="forums_ai_account_label">קאָנטע</string>
     <string name="forums_ai_prompt_default">סטאַנדאַרד</string>
-    <string name="forums_moderation_reject">אָפּזאָגן</string>
+    <string name="forums_moderation_reject">אָפּוואַרפֿן</string>
     <string name="forums_moderation_report_by">פֿון %1$s</string>
     <string name="forums_moderation_restriction_state_banned">פֿאַרבאָטן</string>
     <string name="forums_moderation_unit_days">טעג</string>

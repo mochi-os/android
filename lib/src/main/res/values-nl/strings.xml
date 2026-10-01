@@ -144,7 +144,7 @@
     <string name="auth_next">Volgende</string>
     <string name="auth_or_log_in_with">Of aanmelden met</string>
     <string name="auth_passkey">Toegangssleutel</string>
-    <string name="auth_use_passkey">Een passkey gebruiken</string>
+    <string name="auth_use_passkey">Een toegangssleutel gebruiken</string>
     <string name="auth_email_me_a_code">Stuur me een code per e-mail</string>
     <string name="auth_or_enter_authenticator_code">Of voer een authenticatorcode in</string>
     <string name="auth_log_in">Inloggen</string>
@@ -230,14 +230,14 @@
     <string name="stepup_email_placeholder">Voer de code uit je e-mail in</string>
     <string name="stepup_totp_label">Authenticator-code</string>
     <string name="stepup_totp_placeholder">Voer je authenticatorcode in</string>
-    <string name="stepup_use_passkey">Gebruik je passkey</string>
+    <string name="stepup_use_passkey">Gebruik je toegangssleutel</string>
     <string name="stepup_send_email">E-mail verzenden</string>
     <string name="stepup_resend_email">E-mail opnieuw verzenden</string>
     <string name="stepup_verify">Verifiëren</string>
     <string name="stepup_continue_with">Doorgaan met %1$s</string>
     <string name="stepup_error_start">Kon de herauthenticatie niet starten. Probeer het opnieuw.</string>
     <string name="stepup_error_code">Die code is onjuist of verlopen.</string>
-    <string name="stepup_error_passkey">Verificatie met passkey is mislukt. Probeer het opnieuw.</string>
+    <string name="stepup_error_passkey">Verificatie met toegangssleutel is mislukt. Probeer het opnieuw.</string>
     <string name="stepup_error_oauth">Kan niet verifiëren met dat account. Probeer het opnieuw.</string>
     <string name="game_system_resign">%1$s gaf op</string>
     <string name="game_system_draw_offer">%1$s bood remise aan</string>

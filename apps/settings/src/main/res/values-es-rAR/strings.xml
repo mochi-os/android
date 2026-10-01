@@ -2,8 +2,8 @@
 <resources>
 
     <string name="settings_home_logout">Cerrá sesión</string>
-    <string name="account_passkey_register">Agregá una passkey</string>
-    <string name="account_passkey_delete_title">¿Eliminás la passkey?</string>
+    <string name="account_passkey_register">Agregá una clave de acceso</string>
+    <string name="account_passkey_delete_title">¿Eliminás la clave de acceso?</string>
     <string name="account_totp_setup">Configurá el autenticador</string>
     <string name="account_totp_setup_title">Configurá el autenticador</string>
     <string name="account_totp_verify">Verificá</string>
@@ -191,7 +191,7 @@
     <string name="system_settings_reset_message">Esto restablecerá \"%1$s\" a su valor predeterminado (%2$s).</string>
     <string name="system_settings_reset_message_empty">Esto restablecerá \"%1$s\" a su valor predeterminado (vacío).</string>
     <string name="system_setting_auth_email">Inicio de sesión con código por correo electrónico</string>
-    <string name="system_setting_auth_passkey">Inicio de sesión con llave de acceso</string>
+    <string name="system_setting_auth_passkey">Inicio de sesión con clave de acceso</string>
     <string name="system_setting_auth_totp">Inicio de sesión con app de autenticación TOTP</string>
     <string name="system_setting_auth_recovery">Inicio de sesión con código de recuperación</string>
     <string name="system_setting_auth_oauth">Inicio de sesión con OAuth 2.0</string>

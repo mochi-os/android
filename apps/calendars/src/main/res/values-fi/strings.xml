@@ -29,7 +29,7 @@
     <string name="calendars_day_friday">Perjantai</string>
     <string name="calendars_day_saturday">Lauantai</string>
     <string name="calendars_link_replace">Korvaa</string>
-    <string name="calendars_link_revoke">Peruuta</string>
+    <string name="calendars_link_revoke">Mitätöi</string>
     <string name="calendars_permission_allow">Salli</string>
     <string name="calendars_permission_deny">Estä</string>
     <string name="calendars_sync_title">Synkronoi tähän puhelimeen</string>
@@ -189,6 +189,6 @@
     <string name="calendars_span_day">%1$s, %2$s–%3$s</string>
     <string name="calendars_polled_current">Kalenteri on ajan tasalla</string>
     <string name="calendars_polled_synced">Kalenteri synkronoitu</string>
-    <string name="calendars_link_revoke_title">Peruutetaanko kalenterin osoite?</string>
+    <string name="calendars_link_revoke_title">Mitätöidäänkö kalenterin osoite?</string>
     <string name="calendars_link_revoke_message">Tämän osoitteen tilanneet kalenterit lakkaavat päivittymästä.</string>
 </resources>

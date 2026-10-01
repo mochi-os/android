@@ -32,10 +32,10 @@
     <string name="staff_accounts_submitting">กำลังส่ง…</string>
     <string name="staff_accounts_suspend">ระงับ</string>
     <string name="staff_accounts_suspended_toast">ระงับบัญชีแล้ว</string>
-    <string name="staff_accounts_unban">ยกเลิกการแบน</string>
+    <string name="staff_accounts_unban">ปลดแบน</string>
     <string name="staff_accounts_unbanned_toast">ยกเลิกการแบนบัญชีแล้ว</string>
     <string name="staff_accounts_unnamed">ไม่มีชื่อ</string>
-    <string name="staff_accounts_unsuspend">ยกเลิกการระงับ</string>
+    <string name="staff_accounts_unsuspend">ปลดการระงับ</string>
     <string name="staff_accounts_unsuspended_toast">ยกเลิกการระงับบัญชีแล้ว</string>
     <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_appeals_cancel">ยกเลิก</string>

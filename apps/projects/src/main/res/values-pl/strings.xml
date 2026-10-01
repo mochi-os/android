@@ -40,11 +40,11 @@
     <string name="projects_settings_tab_people">Osoby</string>
     <string name="projects_option_icon">Ikona</string>
     <string name="projects_option_icon_placeholder">np. Check, Star, Flag</string>
-    <string name="projects_settings_unsubscribe">Anuluj subskrypcję</string>
+    <string name="projects_settings_unsubscribe">Zrezygnuj z subskrypcji</string>
     <string name="projects_settings_delete_project">Usuń projekt</string>
     <string name="projects_settings_delete_confirm_title">Usuń projekt</string>
-    <string name="projects_settings_unsubscribe_title">Anuluj subskrypcję</string>
-    <string name="projects_settings_unsubscribe_message">Czy na pewno chcesz anulować subskrypcję tego projektu?</string>
+    <string name="projects_settings_unsubscribe_title">Zrezygnuj z subskrypcji</string>
+    <string name="projects_settings_unsubscribe_message">Czy na pewno chcesz zrezygnować z subskrypcji tego projektu?</string>
     <string name="projects_access_level_owner">Właściciel</string>
     <string name="projects_object_watch">Obserwuj</string>
     <string name="projects_object_tab_properties">Właściwości</string>

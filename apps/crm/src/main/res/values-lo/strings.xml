@@ -33,11 +33,11 @@
     <string name="crm_settings_tab_people">ບຸກຄົນ</string>
     <string name="crm_option_icon">ໄອຄອນ</string>
     <string name="crm_option_icon_placeholder">ເຊັ່ນ Check, Star, Flag</string>
-    <string name="crm_settings_unsubscribe">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
+    <string name="crm_settings_unsubscribe">ເຊົາຕິດຕາມ</string>
     <string name="crm_settings_delete_crm">ລົບ CRM</string>
     <string name="crm_settings_delete_confirm_title">ລົບ CRM</string>
-    <string name="crm_settings_unsubscribe_title">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
-    <string name="crm_settings_unsubscribe_message">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການຍົກເລີກການສະໝັກສະມາຊິກຈາກ CRM ນີ້?</string>
+    <string name="crm_settings_unsubscribe_title">ເຊົາຕິດຕາມ</string>
+    <string name="crm_settings_unsubscribe_message">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການເຊົາຕິດຕາມ CRM ນີ້?</string>
     <string name="crm_access_level_owner">ເຈົ້າຂອງ</string>
     <string name="crm_object_watch">ເບິ່ງ</string>
     <string name="crm_object_tab_properties">ຄຸນສົມບັດ</string>

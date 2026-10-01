@@ -23,7 +23,7 @@
     <string name="sessions_revoke_title">เพิกถอนเซสชัน?</string>
     <string name="account_section_oauth">เข้าสู่ระบบบุคคลที่สาม</string>
     <string name="account_oauth_link">เชื่อมโยงบัญชี</string>
-    <string name="account_unlink">ยกเลิกการเชื่อมโยง</string>
+    <string name="account_unlink">เลิกเชื่อมโยง</string>
     <string name="account_cancel">ยกเลิก</string>
     <string name="account_save">บันทึก</string>
     <string name="account_done">เสร็จสิ้น</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">นโยบายความเป็นส่วนตัว</string>
     <string name="settings_home_rules">กฎ</string>
     <string name="settings_home_terms">ข้อกำหนดในการให้บริการ</string>
-    <string name="account_passkeys_empty">ไม่มีคีย์ผ่านที่ลงทะเบียน</string>
-    <string name="account_passkey_register_title">เพิ่มคีย์ผ่าน</string>
+    <string name="account_passkeys_empty">ไม่มีพาสคีย์ที่ลงทะเบียน</string>
+    <string name="account_passkey_register_title">เพิ่มพาสคีย์</string>
     <string name="account_passkey_name_label">ชื่อ (ไม่บังคับ)</string>
     <string name="account_passkey_delete_message">\"%1$s\" จะไม่ลงชื่อเข้าใช้ให้คุณอีก</string>
     <string name="account_totp_enabled">ตัวยืนยันตัวตนเปิดใช้งานอยู่</string>
@@ -228,7 +228,7 @@
     <string name="sessions_revoke_message">อุปกรณ์ที่ใช้เซสชันนี้จะถูกออกจากระบบ</string>
     <string name="account_oauth_empty">ไม่มีบัญชีที่เชื่อมโยง</string>
     <string name="account_oauth_link_title">เชื่อมโยงผู้ให้บริการ</string>
-    <string name="account_oauth_unlink_title">ยกเลิกการเชื่อมโยงบัญชี?</string>
+    <string name="account_oauth_unlink_title">เลิกเชื่อมโยงบัญชี?</string>
     <string name="account_oauth_unlink_message">คุณจะไม่สามารถเข้าสู่ระบบด้วย %1$s ได้</string>
     <string name="account_last_used">ใช้ล่าสุด %1$s</string>
     <string name="route_delete_message">การกระทำนี้จะลบเส้นทางสำหรับเส้นทาง \"%1$s\"</string>
@@ -388,7 +388,7 @@
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">เข้าสู่ระบบ</string>
     <string name="accounts_provider_caldav">เซิร์ฟเวอร์ปฏิทิน</string>
-    <string name="accounts_revoke_confirm">การดำเนินการนี้จะเพิกถอนการเข้าถึงปฏิทินของ %1$s การลงชื่อเข้าใช้ด้วย %2$s จะยังคงอยู่จนกว่าคุณจะยกเลิกการเชื่อมโยงในหน้าเข้าสู่ระบบ</string>
+    <string name="accounts_revoke_confirm">การดำเนินการนี้จะเพิกถอนการเข้าถึงปฏิทินของ %1$s การลงชื่อเข้าใช้ด้วย %2$s จะยังคงอยู่จนกว่าคุณจะเลิกเชื่อมโยงในหน้าเข้าสู่ระบบ</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">ธีมที่ไม่รู้จัก</string>
     <string name="system_documents_modified">แก้ไขแล้ว</string>

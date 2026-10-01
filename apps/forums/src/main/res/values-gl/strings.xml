@@ -6,8 +6,8 @@
     <string name="forums_list_title">Foros</string>
     <string name="forums_list_find">Buscar foros</string>
     <string name="forums_list_logout">Pechar sesión</string>
-    <string name="forums_list_unsubscribe">Cancelar subscrición</string>
-    <string name="forums_list_unsubscribe_title">Cancelar subscrición</string>
+    <string name="forums_list_unsubscribe">Anular subscrición</string>
+    <string name="forums_list_unsubscribe_title">Anular subscrición</string>
     <string name="forums_create_title">Crear foro</string>
     <string name="forums_create_name">Nome do foro</string>
     <string name="forums_create_privacy">Privacidade</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">Etiquetar</string>
     <string name="forums_ai_account_default">Conta predeterminada</string>
     <string name="forums_ai_prompt_reset">Restablecer ao valor por defecto</string>
-    <string name="forums_settings_unsubscribe">Cancelar subscrición</string>
+    <string name="forums_settings_unsubscribe">Anular subscrición</string>
     <string name="forums_moderation_title">Moderación</string>
     <string name="forums_moderation_tab_queue">Cola</string>
     <string name="forums_moderation_tab_reports">Informes</string>

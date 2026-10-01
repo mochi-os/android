@@ -40,7 +40,7 @@
     <string name="wikis_rss_both">Jijjiiramootaa fi yaadawwan</string>
     <string name="wikis_rss_copied">URL RSS kilipboordiitti garagalfame</string>
     <string name="wikis_rss_failed">Mallattoo RSS argachuu hin dandeenye</string>
-    <string name="wikis_rss_revoke">Argama haqi</string>
+    <string name="wikis_rss_revoke">Argama deebifadhu</string>
     <string name="wikis_rss_revoked">Argamni RSS haqameera</string>
     <string name="wikis_find_title">Wikis argi</string>
     <string name="wikis_find_no_results">Wikiin hin argamne</string>

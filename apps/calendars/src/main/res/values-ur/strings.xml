@@ -29,7 +29,7 @@
     <string name="calendars_day_friday">جمعہ</string>
     <string name="calendars_day_saturday">ہفتہ</string>
     <string name="calendars_link_replace">بدلیں</string>
-    <string name="calendars_link_revoke">منسوخ کریں</string>
+    <string name="calendars_link_revoke">واپس لیں</string>
     <string name="calendars_permission_allow">اجازت دیں</string>
     <string name="calendars_permission_deny">مسترد کریں</string>
     <string name="calendars_sync_title">اس فون کے ساتھ سنک کریں</string>
@@ -189,6 +189,6 @@
     <string name="calendars_span_day">%1$s، %2$s سے %3$s تک</string>
     <string name="calendars_polled_current">کیلنڈر تازہ ترین ہے</string>
     <string name="calendars_polled_synced">کیلنڈر سنک ہو گیا</string>
-    <string name="calendars_link_revoke_title">کیلنڈر کا پتہ منسوخ کریں؟</string>
+    <string name="calendars_link_revoke_title">کیلنڈر کا پتہ واپس لیں؟</string>
     <string name="calendars_link_revoke_message">جن کیلنڈرز نے اس پتے کی رکنیت لی ہے وہ اب تازہ نہیں ہوں گے۔</string>
 </resources>

@@ -145,8 +145,8 @@
     <string name="auth_login_title">Mochi ۾ لاگ ان ٿيو</string>
     <string name="auth_next">اڳيون</string>
     <string name="auth_or_log_in_with">يا ھن سان لاگ ان ٿيو</string>
-    <string name="auth_passkey">پاس ڪيئي</string>
-    <string name="auth_use_passkey">ھڪ پاس ڪي استعمال ڪريو</string>
+    <string name="auth_passkey">پاس ڪي</string>
+    <string name="auth_use_passkey">هڪ پاس ڪي استعمال ڪريو</string>
     <string name="auth_email_me_a_code">مون کي اي ميل تي ڪوڊ موڪليو</string>
     <string name="auth_or_enter_authenticator_code">يا تصديق ڪندڙ ڪوڊ داخل ڪريو</string>
     <string name="auth_log_in">لاگ ان</string>
@@ -301,7 +301,7 @@
     <string name="common_preview">پيش نظر</string>
     <string name="rss_revoke_confirm">رد ڪريو</string>
     <string name="rss_revoke">رسائي واپس وٺو</string>
-    <string name="rss_revoke_title">RSS رسائي منسوخ ڪجي؟</string>
+    <string name="rss_revoke_title">RSS رسائي رد ڪجي؟</string>
     <string name="rss_revoke_message">هن فيڊ جي رڪنيت وٺندڙ سڀ ڪجهه ان کي حاصل ڪرڻ بند ڪري ڇڏيندو. بعد ۾ توهان نئون URL ڪاپي ڪري سگهو ٿا.</string>
     <string name="rss_revoked">RSS رسائي واپس ورتي وئي</string>
     <string name="rss_revoke_failed">RSS رسائي واپس وٺڻ ۾ ناڪام</string>

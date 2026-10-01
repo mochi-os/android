@@ -6,8 +6,8 @@
     <string name="forums_list_title">Diễn đàn</string>
     <string name="forums_list_find">Tìm diễn đàn</string>
     <string name="forums_list_logout">Đăng xuất</string>
-    <string name="forums_list_unsubscribe">Hủy đăng ký</string>
-    <string name="forums_list_unsubscribe_title">Hủy đăng ký</string>
+    <string name="forums_list_unsubscribe">Ngừng đăng ký</string>
+    <string name="forums_list_unsubscribe_title">Ngừng đăng ký</string>
     <string name="forums_create_title">Tạo diễn đàn</string>
     <string name="forums_create_name">Tên diễn đàn</string>
     <string name="forums_create_privacy">Quyền riêng tư</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">Gắn thẻ</string>
     <string name="forums_ai_account_default">Tài khoản mặc định</string>
     <string name="forums_ai_prompt_reset">Đặt lại về mặc định</string>
-    <string name="forums_settings_unsubscribe">Hủy đăng ký</string>
+    <string name="forums_settings_unsubscribe">Ngừng đăng ký</string>
     <string name="forums_moderation_title">Kiểm duyệt</string>
     <string name="forums_moderation_tab_queue">Hàng đợi</string>
     <string name="forums_moderation_tab_reports">Báo cáo</string>
@@ -137,7 +137,7 @@
     <string name="forums_auth_enter_code_sent">Nhập mã đã gửi đến %1$s</string>
     <string name="forums_auth_create_identity">Tạo danh tính của bạn</string>
     <string name="forums_list_empty">Chưa có diễn đàn nào</string>
-    <string name="forums_list_unsubscribe_message">Bạn có chắc chắn muốn hủy đăng ký diễn đàn này không?</string>
+    <string name="forums_list_unsubscribe_message">Bạn có chắc chắn muốn ngừng đăng ký diễn đàn này không?</string>
     <string name="forums_find_search_placeholder">Tìm kiếm diễn đàn hoặc dán URL</string>
     <string name="forums_find_search_hint">Tìm kiếm diễn đàn để đăng ký</string>
     <string name="forums_post_delete_message">Bạn có chắc chắn muốn xóa bài đăng này không? Hành động này không thể hoàn tác.</string>

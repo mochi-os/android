@@ -33,10 +33,10 @@
     <string name="crm_settings_tab_people">Lidé</string>
     <string name="crm_option_icon">Ikona</string>
     <string name="crm_option_icon_placeholder">např. Check, Star, Flag</string>
-    <string name="crm_settings_unsubscribe">Zrušit odběr</string>
+    <string name="crm_settings_unsubscribe">Odhlásit odběr</string>
     <string name="crm_settings_delete_crm">Smazat CRM</string>
     <string name="crm_settings_delete_confirm_title">Smazat CRM</string>
-    <string name="crm_settings_unsubscribe_title">Zrušit odběr</string>
+    <string name="crm_settings_unsubscribe_title">Odhlásit odběr</string>
     <string name="crm_settings_unsubscribe_message">Opravdu se chcete odhlásit z odběru tohoto CRM?</string>
     <string name="crm_access_level_owner">Vlastník</string>
     <string name="crm_object_watch">Sledovat</string>

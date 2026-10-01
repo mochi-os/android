@@ -6,8 +6,8 @@
     <string name="forums_list_title">Forum</string>
     <string name="forums_list_find">Golèk forum</string>
     <string name="forums_list_logout">Metu</string>
-    <string name="forums_list_unsubscribe">Mbatalaké langganan</string>
-    <string name="forums_list_unsubscribe_title">Mbatalaké langganan</string>
+    <string name="forums_list_unsubscribe">Mandheg langganan</string>
+    <string name="forums_list_unsubscribe_title">Mandheg langganan</string>
     <string name="forums_create_title">Gawé forum</string>
     <string name="forums_create_name">Jeneng forum</string>
     <string name="forums_create_privacy">Privasi</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account_default">Akun standar</string>
     <string name="forums_ai_prompt_reset">Reset menyang default</string>
-    <string name="forums_settings_unsubscribe">Mbatalaké langganan</string>
+    <string name="forums_settings_unsubscribe">Mandheg langganan</string>
     <string name="forums_moderation_title">Moderasi</string>
     <string name="forums_moderation_tab_queue">Antrian</string>
     <string name="forums_moderation_tab_reports">Laporan</string>
@@ -136,7 +136,7 @@
     <string name="forums_auth_enter_code_sent">Lebetaken kode ingkang dipun kintun dhateng %1$s</string>
     <string name="forums_auth_create_identity">Damel identitas panjenengan</string>
     <string name="forums_list_empty">Dereng wonten forum</string>
-    <string name="forums_list_unsubscribe_message">Panjenengan saestu badhe mbatalaken langganan saking forum punika?</string>
+    <string name="forums_list_unsubscribe_message">Panjenengan saestu badhe kendel langganan saking forum punika?</string>
     <string name="forums_find_search_placeholder">Madosi forum utawi tempelaken URL</string>
     <string name="forums_find_search_hint">Madosi forum kangge dipun langgani</string>
     <string name="forums_post_delete_message">Panjenengan saestu badhe mbusek kiriman punika? Boten saged dipun wangsulaken.</string>

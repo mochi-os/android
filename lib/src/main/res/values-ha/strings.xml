@@ -230,7 +230,7 @@
     <string name="stepup_email_placeholder">Shigar da lambar daga imel ɗinka</string>
     <string name="stepup_totp_label">Code na authenticator</string>
     <string name="stepup_totp_placeholder">Shigar da lambar mai tantancewarka</string>
-    <string name="stepup_use_passkey">Yi amfani da maɓallin shiganka</string>
+    <string name="stepup_use_passkey">Yi amfani da maɓallin shiga naka</string>
     <string name="stepup_send_email">Aika email</string>
     <string name="stepup_resend_email">Sake aika imel</string>
     <string name="stepup_verify">Tabbatar</string>
@@ -300,7 +300,7 @@
     <string name="format_list">Jerin ɗigo</string>
     <string name="common_preview">Duba</string>
     <string name="rss_revoke_confirm">Janyewa</string>
-    <string name="rss_revoke">Soke damar shiga</string>
+    <string name="rss_revoke">Janye damar shiga</string>
     <string name="rss_revoke_title">A janye damar RSS?</string>
     <string name="rss_revoke_message">Duk abin da ya biyan kuɗin wannan ciyarwar zai daina karɓarta. Za ka iya kwafi sabon URL bayan haka.</string>
     <string name="rss_revoked">An soke damar shiga RSS</string>

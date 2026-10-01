@@ -93,9 +93,8 @@
     <string name="sessions_revoke_title">撤銷工作階段?</string>
     <string name="sessions_revoke_message">使用此工作階段的裝置將會被登出。</string>
     <string name="account_oauth_link_title">連結提供者</string>
-    <string name="account_oauth_unlink_title">取消連結帳戶?</string>
+    <string name="account_oauth_unlink_title">解除連結帳戶?</string>
     <string name="account_oauth_unlink_message">你將無法使用 %1$s 登入。</string>
-    <string name="account_unlink">取消連結</string>
     <string name="account_done">完成</string>
     <string name="account_rename">重新命名</string>
     <string name="account_disable">停用</string>

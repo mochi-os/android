@@ -189,6 +189,6 @@
     <string name="calendars_span_day">%1$s, %2$s से %3$s तक</string>
     <string name="calendars_polled_current">कैलेंडर अपडेट बा</string>
     <string name="calendars_polled_synced">कैलेंडर सिंक हो गइल</string>
-    <string name="calendars_link_revoke_title">कैलेंडर के पता रद्द करीं?</string>
+    <string name="calendars_link_revoke_title">कैलेंडर के पता वापस लीं?</string>
     <string name="calendars_link_revoke_message">एह पता के सदस्यता लेले कैलेंडर अब अद्यतन ना होई।</string>
 </resources>

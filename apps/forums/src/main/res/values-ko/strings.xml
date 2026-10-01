@@ -6,8 +6,8 @@
     <string name="forums_list_title">포럼</string>
     <string name="forums_list_find">포럼 찾기</string>
     <string name="forums_list_logout">로그아웃</string>
-    <string name="forums_list_unsubscribe">구독 취소</string>
-    <string name="forums_list_unsubscribe_title">구독 취소</string>
+    <string name="forums_list_unsubscribe">구독 해지</string>
+    <string name="forums_list_unsubscribe_title">구독 해지</string>
     <string name="forums_create_title">포럼 생성</string>
     <string name="forums_create_name">포럼 이름</string>
     <string name="forums_create_privacy">개인정보</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">태그</string>
     <string name="forums_ai_account_default">기본 계정</string>
     <string name="forums_ai_prompt_reset">기본값으로 재설정</string>
-    <string name="forums_settings_unsubscribe">구독 취소</string>
+    <string name="forums_settings_unsubscribe">구독 해지</string>
     <string name="forums_moderation_title">모더레이션</string>
     <string name="forums_moderation_tab_queue">대기열</string>
     <string name="forums_moderation_tab_reports">신고</string>
@@ -137,7 +137,7 @@
     <string name="forums_auth_enter_code_sent">%1$s(으)로 전송된 코드를 입력하세요</string>
     <string name="forums_auth_create_identity">신원 만들기</string>
     <string name="forums_list_empty">아직 포럼이 없습니다</string>
-    <string name="forums_list_unsubscribe_message">이 포럼의 구독을 취소하시겠습니까?</string>
+    <string name="forums_list_unsubscribe_message">이 포럼의 구독을 해지하시겠습니까?</string>
     <string name="forums_find_search_placeholder">포럼을 검색하거나 URL을 붙여넣으세요</string>
     <string name="forums_find_search_hint">구독할 포럼을 검색하세요</string>
     <string name="forums_post_delete_message">이 게시물을 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.</string>

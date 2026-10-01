@@ -20,7 +20,7 @@
     <string name="account_section_recovery">د بیرته راګرځولو کوډونه</string>
     <string name="account_recovery_codes_title">د بیرته راګرځولو کوډونه</string>
     <string name="sessions_unknown_agent">نامعلوم ډیوایس</string>
-    <string name="sessions_revoke_title">ناسته لغوه کړو؟</string>
+    <string name="sessions_revoke_title">ناسته بیرته واخلو؟</string>
     <string name="account_section_oauth">د دریمې ډلې ننوتل</string>
     <string name="account_oauth_link">حساب وصل کړئ</string>
     <string name="account_unlink">بې وصله کول</string>
@@ -29,7 +29,7 @@
     <string name="account_done">ترسره شو</string>
     <string name="account_delete">ړنګ کړئ</string>
     <string name="account_rename">بیا نومول</string>
-    <string name="sessions_revoke">لغوه کول</string>
+    <string name="sessions_revoke">بیرته اخیستل</string>
     <string name="account_disable">غیرفعال کړئ</string>
     <string name="account_copy">کاپي کړئ</string>
     <string name="account_copy_all">ټول کاپي کړئ</string>
@@ -181,8 +181,8 @@
     <string name="system_users_delete_title">کاروونکی ړنګ کړئ؟</string>
     <string name="system_users_manage_sessions">سیشنونه اداره کړئ</string>
     <string name="system_users_sessions_empty">دا کاروونکی فعال ناستې نه لري.</string>
-    <string name="system_users_revoke">لغوه کول</string>
-    <string name="system_users_revoke_all">ټولې ناستې لغوه کړئ</string>
+    <string name="system_users_revoke">بیرته اخیستل</string>
+    <string name="system_users_revoke_all">ټولې ناستې بیرته واخلئ</string>
     <string name="system_users_unknown_browser">نامعلوم براوزر</string>
     <string name="system_users_unknown">نامعلوم</string>
     <string name="system_users_previous">تېر</string>
@@ -265,7 +265,7 @@
     <string name="system_users_delete_message">دا به دایمي توګه کارن \"%1$s\" حذف کړي. دا عمل بیرته نشي راګرځېدلی.</string>
     <string name="system_users_sessions_title">د %1$s غونډې</string>
     <string name="system_users_session_last_accessed">وروستی لاسرسی: %1$s</string>
-    <string name="system_users_revoke_all_title">ټولې غونډې لغوه کړئ؟</string>
+    <string name="system_users_revoke_all_title">ټولې ناستې بیرته واخلو؟</string>
     <string name="system_users_revoke_all_message">د دې کارن ټولې فعالې غونډې به وتل وکړي.</string>
     <plurals name="system_users_pagination_status">
         <item quantity="one">د %3$d کاروونکي څخه %1$d–%2$d ښودل کېږي</item>
@@ -386,13 +386,13 @@
     <string name="accounts_field_topic">موضوع</string>
     <string name="accounts_field_secret">د لاسلیک راز</string>
     <string name="account_totp_open">په تصدیق کوونکي اپ کې خلاص کړئ</string>
-    <string name="accounts_revoke">لاسرسی لغوه کړئ</string>
+    <string name="accounts_revoke">لاسرسی بیرته واخلئ</string>
     <string name="accounts_capability_calendar">کليز</string>
     <string name="accounts_capability_notify">خبرتیاوې</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">ننوتل</string>
     <string name="accounts_provider_caldav">د کليز سرور</string>
-    <string name="accounts_revoke_confirm">دا به د %1$s کليز لاسرسی لغوه کړي. د %2$s سره ننوتل به تر هغه پاتې وي چې تاسو یې د ننوتلو پاڼه کې جلا نه کړئ.</string>
+    <string name="accounts_revoke_confirm">دا به د %1$s کليز لاسرسی بیرته واخلي. د %2$s سره ننوتل به تر هغه پاتې وي چې تاسو یې د ننوتلو پاڼه کې جلا نه کړئ.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">نامعلوم ښکارندوی</string>
     <string name="system_documents_modified">بدل شوی</string>

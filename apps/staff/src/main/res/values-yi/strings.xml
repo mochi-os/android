@@ -237,7 +237,7 @@
     <string name="staff_filter_label_status">סטאַטוס</string>
     <string name="staff_filter_label_type">טיפּ</string>
     <string name="staff_listings_action_approve_title">באַשטעטיקן ליסטינג</string>
-    <string name="staff_listings_action_reject_title">אָפּזאָגן ליסטיגקײַט</string>
+    <string name="staff_listings_action_reject_title">אָפּוואַרפֿן ליסטיגקײַט</string>
     <string name="staff_listings_action_remove_title">אַראָפּנעמען ליסטיגקײַט</string>
     <string name="staff_listings_any_moderation">וועלכע ניט איז מאָדעראַציע</string>
     <string name="staff_listings_any_status">וועלכן ניט איז סטאַטוס</string>
@@ -256,7 +256,7 @@
     <string name="staff_listings_notes_label">נאָטיצן</string>
     <string name="staff_listings_price_placeholder">—</string>
     <string name="staff_listings_reason_label">סיבה</string>
-    <string name="staff_listings_reject">אָפּזאָגן</string>
+    <string name="staff_listings_reject">אָפּוואַרפֿן</string>
     <string name="staff_listings_rejected_toast">רשימה אָפּגעזאָגט</string>
     <string name="staff_listings_remove">אַראָפּנעמען</string>
     <string name="staff_listings_removed_toast">רשימה אַראָפּגענומען</string>

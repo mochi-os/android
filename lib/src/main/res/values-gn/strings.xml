@@ -148,7 +148,7 @@
     <string name="auth_next">Tenondeve</string>
     <string name="auth_or_log_in_with">Térã eike kóva reheve</string>
     <string name="auth_passkey">Jeike rape</string>
-    <string name="auth_use_passkey">Eipuru passkey</string>
+    <string name="auth_use_passkey">Eipuru peteĩ jeike rape</string>
     <string name="auth_email_me_a_code">Emondo chéve peteĩ código email rupive</string>
     <string name="auth_or_enter_authenticator_code">Térã emoinge autenticador código</string>
     <string name="auth_log_in">Eike</string>
@@ -230,14 +230,14 @@
     <string name="stepup_email_placeholder">Emoinge code ne email-pegua</string>
     <string name="stepup_totp_label">Authenticator código</string>
     <string name="stepup_totp_placeholder">Emoinge nde código autenticador rehegua</string>
-    <string name="stepup_use_passkey">Eipuru nde passkey</string>
+    <string name="stepup_use_passkey">Eipuru nde jeike rape</string>
     <string name="stepup_send_email">Emondo email</string>
     <string name="stepup_resend_email">Embou jey ñe\'ẽveve</string>
     <string name="stepup_verify">Ehesa\'ỹijo</string>
     <string name="stepup_continue_with">Eku tenonde %1$s ndive</string>
     <string name="stepup_error_start">Ndaikatúi oñepyrũ ñemoneʼẽ jey. Eñehaʼã jey.</string>
     <string name="stepup_error_code">Upe código ndoikoporãi térã hiʼaravoʼimáma.</string>
-    <string name="stepup_error_passkey">Passkey ñemyatã ndoikói. Eñehaʼã jey.</string>
+    <string name="stepup_error_passkey">Jeike rape ñemoañete ndoikói. Eñehaʼã jey.</string>
     <string name="stepup_error_oauth">Ndaikatúi ojehechajey upe mba\'ete ndive. Eha\'ã jey.</string>
     <string name="game_system_resign">%1$s oñembotove</string>
     <string name="game_system_draw_offer">%1$s oikuave\'ẽ pe\'ã</string>

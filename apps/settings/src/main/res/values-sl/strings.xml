@@ -10,8 +10,8 @@
     <string name="settings_home_accounts">Povezani računi</string>
     <string name="settings_home_interests">Zanimanja</string>
     <string name="account_section_passkeys">Geslo-ključi</string>
-    <string name="account_passkey_register">Dodaj geslo</string>
-    <string name="account_passkey_delete_title">Izbriši geslo?</string>
+    <string name="account_passkey_register">Dodaj geslo-ključ</string>
+    <string name="account_passkey_delete_title">Izbriši geslo-ključ?</string>
     <string name="account_section_totp">Aplikacija za avtentikacijo</string>
     <string name="account_totp_setup">Nastavi avtentikator</string>
     <string name="account_totp_setup_title">Nastavi avtentikator</string>
@@ -20,7 +20,7 @@
     <string name="account_section_recovery">Obnovitvene kode</string>
     <string name="account_recovery_codes_title">Obnovitvene kode</string>
     <string name="sessions_unknown_agent">Neznana naprava</string>
-    <string name="sessions_revoke_title">Prekliči sejo?</string>
+    <string name="sessions_revoke_title">Odvzeti sejo?</string>
     <string name="account_section_oauth">Prijava tretje osebe</string>
     <string name="account_oauth_link">Poveži račun</string>
     <string name="account_unlink">Odstrani povezavo</string>
@@ -29,7 +29,7 @@
     <string name="account_done">Končano</string>
     <string name="account_delete">Izbriši</string>
     <string name="account_rename">Preimenuj</string>
-    <string name="sessions_revoke">Prekliči</string>
+    <string name="sessions_revoke">Odvzemi</string>
     <string name="account_disable">Onemogoči</string>
     <string name="account_copy">Kopiraj</string>
     <string name="account_copy_all">Kopiraj vse</string>
@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">Ponastavi na privzeto?</string>
     <string name="system_setting_apps_install_user">Dovoli uporabnikom namestitev aplikacij</string>
     <string name="system_setting_auth_email">Prijava z e-poštno kodo</string>
-    <string name="system_setting_auth_passkey">Prijava s ključem</string>
+    <string name="system_setting_auth_passkey">Prijava z geslo-ključem</string>
     <string name="system_setting_auth_totp">Prijava z aplikacijo overitelja TOTP</string>
     <string name="system_setting_auth_recovery">Prijava z obnovitveno kodo</string>
     <string name="system_setting_auth_oauth">Prijava z OAuth 2.0</string>
@@ -181,8 +181,8 @@
     <string name="system_users_delete_title">Izbriši uporabnika?</string>
     <string name="system_users_manage_sessions">Upravljaj seje</string>
     <string name="system_users_sessions_empty">Ta uporabnik nima aktivnih sej.</string>
-    <string name="system_users_revoke">Prekliči</string>
-    <string name="system_users_revoke_all">Prekliči vse seje</string>
+    <string name="system_users_revoke">Odvzemi</string>
+    <string name="system_users_revoke_all">Odvzemi vse seje</string>
     <string name="system_users_unknown_browser">Neznan brskalnik</string>
     <string name="system_users_unknown">Neznano</string>
     <string name="system_users_previous">Prejšnje</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">Pravilnik o zasebnosti</string>
     <string name="settings_home_rules">Pravila</string>
     <string name="settings_home_terms">Pogoji storitve</string>
-    <string name="account_passkeys_empty">Ni registriranih dostopnih ključev.</string>
-    <string name="account_passkey_register_title">Dodaj dostopni ključ</string>
+    <string name="account_passkeys_empty">Ni registriranih geslo-ključev.</string>
+    <string name="account_passkey_register_title">Dodaj geslo-ključ</string>
     <string name="account_passkey_name_label">Ime (neobvezno)</string>
     <string name="account_passkey_delete_message">„%1$s\" vas ne bo več prijavil.</string>
     <string name="account_totp_enabled">Preverjevalnik je omogočen.</string>
@@ -267,7 +267,7 @@
     <string name="system_users_delete_message">To bo trajno izbrisalo uporabnika „%1$s\". Tega dejanja ni mogoče razveljaviti.</string>
     <string name="system_users_sessions_title">Seje uporabnika %1$s</string>
     <string name="system_users_session_last_accessed">Zadnji dostop: %1$s</string>
-    <string name="system_users_revoke_all_title">Preklicati vse seje?</string>
+    <string name="system_users_revoke_all_title">Odvzeti vse seje?</string>
     <string name="system_users_revoke_all_message">Vse aktivne seje tega uporabnika bodo odjavljene.</string>
     <plurals name="system_users_pagination_status">
         <item quantity="one">Prikaz %1$d–%2$d od %3$d uporabnika</item>
@@ -396,13 +396,13 @@
     <string name="accounts_field_topic">Tema</string>
     <string name="accounts_field_secret">Skrivnost za podpisovanje</string>
     <string name="account_totp_open">Odpri v aplikaciji za preverjanje pristnosti</string>
-    <string name="accounts_revoke">Prekliči dostop</string>
+    <string name="accounts_revoke">Odvzemi dostop</string>
     <string name="accounts_capability_calendar">Koledar</string>
     <string name="accounts_capability_notify">Obvestila</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Prijava</string>
     <string name="accounts_provider_caldav">Koledarski strežnik</string>
-    <string name="accounts_revoke_confirm">S tem bo preklican dostop do koledarja za %1$s. Prijava z %2$s ostane, dokler je ne prekinete na strani za prijavo.</string>
+    <string name="accounts_revoke_confirm">S tem bo odvzet dostop do koledarja za %1$s. Prijava z %2$s ostane, dokler je ne prekinete na strani za prijavo.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Neznana tema</string>
     <string name="system_documents_modified">Spremenjeno</string>

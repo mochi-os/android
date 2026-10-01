@@ -40,7 +40,7 @@
     <string name="wikis_rss_both">වෙනස්කම් සහ අදහස්</string>
     <string name="wikis_rss_copied">RSS URL ක්ලිප්බෝඩ් වෙත පිටපත් කරන ලදී</string>
     <string name="wikis_rss_failed">RSS ටෝකනය ලබා ගැනීමට අසමත් විය</string>
-    <string name="wikis_rss_revoke">ප්‍රවේශය අවලංගු කරන්න</string>
+    <string name="wikis_rss_revoke">ප්‍රවේශය අහෝසි කරන්න</string>
     <string name="wikis_rss_revoked">RSS ප්‍රවේශය අවලංගු කරන ලදී</string>
     <string name="wikis_find_title">විකි සොයන්න</string>
     <string name="wikis_find_no_results">wikis හමු නොවීය</string>

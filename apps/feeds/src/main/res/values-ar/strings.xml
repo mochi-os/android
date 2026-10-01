@@ -170,7 +170,7 @@
     <string name="feeds_settings_field_server">الخادم</string>
     <string name="feeds_settings_name_edit_cd">تعديل الاسم</string>
     <string name="feeds_settings_section_identity">الهوية</string>
-    <string name="feeds_unsubscribe">إلغاء الاشتراك</string>
+    <string name="feeds_unsubscribe">إنهاء الاشتراك</string>
     <string name="feeds_unsubscribed">تم إلغاء الاشتراك</string>
     <string name="feeds_access_level_comment_full">التعليق والتفاعل والعرض</string>
     <string name="feeds_rss_mode_posts_comments">المنشورات والتعليقات</string>
@@ -180,7 +180,7 @@
     <string name="feeds_post_content">محتوى المنشور</string>
     <string name="feeds_enable_memories">تمكين الذكريات</string>
     <string name="feeds_permission_request_title">طلب إذن</string>
-    <string name="feeds_unsubscribe_confirm">إلغاء الاشتراك في التغذية؟</string>
+    <string name="feeds_unsubscribe_confirm">إنهاء الاشتراك في التغذية؟</string>
     <string name="feeds_settings_title">إعدادات %1$s</string>
     <string name="feeds_source_transform_help">اتركه فارغًا للتعطيل.</string>
     <string name="feeds_settings_name_cancel_cd">إلغاء التعديل</string>

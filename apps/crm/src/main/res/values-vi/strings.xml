@@ -33,11 +33,11 @@
     <string name="crm_settings_tab_people">Mọi người</string>
     <string name="crm_option_icon">Biểu tượng</string>
     <string name="crm_option_icon_placeholder">ví dụ Check, Star, Flag</string>
-    <string name="crm_settings_unsubscribe">Hủy đăng ký</string>
+    <string name="crm_settings_unsubscribe">Ngừng đăng ký</string>
     <string name="crm_settings_delete_crm">Xóa CRM</string>
     <string name="crm_settings_delete_confirm_title">Xóa CRM</string>
-    <string name="crm_settings_unsubscribe_title">Hủy đăng ký</string>
-    <string name="crm_settings_unsubscribe_message">Bạn có chắc muốn hủy đăng ký CRM này?</string>
+    <string name="crm_settings_unsubscribe_title">Ngừng đăng ký</string>
+    <string name="crm_settings_unsubscribe_message">Bạn có chắc muốn ngừng đăng ký CRM này?</string>
     <string name="crm_access_level_owner">Chủ sở hữu</string>
     <string name="crm_object_watch">Theo dõi</string>
     <string name="crm_object_tab_properties">Thuộc tính</string>

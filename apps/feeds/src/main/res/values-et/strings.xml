@@ -166,7 +166,7 @@
     <string name="feeds_settings_field_server">Server</string>
     <string name="feeds_settings_name_edit_cd">Muuda nime</string>
     <string name="feeds_settings_section_identity">Identiteet</string>
-    <string name="feeds_unsubscribe">Tühista tellimus</string>
+    <string name="feeds_unsubscribe">Loobu tellimusest</string>
     <string name="feeds_unsubscribed">Tellimus tühistatud</string>
     <string name="feeds_access_level_comment_full">Kommenteeri, reageeri ja vaata</string>
     <string name="feeds_rss_mode_posts_comments">Postitused ja kommentaarid</string>

@@ -6,8 +6,8 @@
     <string name="forums_list_title">फोरम</string>
     <string name="forums_list_find">फोरम खोजीं</string>
     <string name="forums_list_logout">लॉग आउट</string>
-    <string name="forums_list_unsubscribe">सदस्यता रद्द करीं</string>
-    <string name="forums_list_unsubscribe_title">सदस्यता रद्द करीं</string>
+    <string name="forums_list_unsubscribe">सदस्यता खतम करीं</string>
+    <string name="forums_list_unsubscribe_title">सदस्यता खतम करीं</string>
     <string name="forums_create_title">फोरम बनाईं</string>
     <string name="forums_create_name">फोरम के नाम</string>
     <string name="forums_create_privacy">गोपनीयता</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">टैग करीं</string>
     <string name="forums_ai_account_default">डिफ़ॉल्ट खाता</string>
     <string name="forums_ai_prompt_reset">डिफ़ॉल्ट पर रीसेट करीं</string>
-    <string name="forums_settings_unsubscribe">सदस्यता रद्द करीं</string>
+    <string name="forums_settings_unsubscribe">सदस्यता खतम करीं</string>
     <string name="forums_moderation_title">मॉडरेशन</string>
     <string name="forums_moderation_tab_queue">कतार</string>
     <string name="forums_moderation_tab_reports">रिपोर्ट</string>

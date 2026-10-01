@@ -40,11 +40,11 @@
     <string name="projects_settings_tab_people">ผู้คน</string>
     <string name="projects_option_icon">ไอคอน</string>
     <string name="projects_option_icon_placeholder">เช่น Check, Star, Flag</string>
-    <string name="projects_settings_unsubscribe">ยกเลิกการติดตาม</string>
+    <string name="projects_settings_unsubscribe">เลิกติดตาม</string>
     <string name="projects_settings_delete_project">ลบโครงการ</string>
     <string name="projects_settings_delete_confirm_title">ลบโครงการ</string>
-    <string name="projects_settings_unsubscribe_title">ยกเลิกการติดตาม</string>
-    <string name="projects_settings_unsubscribe_message">คุณแน่ใจหรือไม่ว่าต้องการยกเลิกการสมัครสมาชิกโครงการนี้?</string>
+    <string name="projects_settings_unsubscribe_title">เลิกติดตาม</string>
+    <string name="projects_settings_unsubscribe_message">คุณแน่ใจหรือไม่ว่าต้องการเลิกติดตามโครงการนี้?</string>
     <string name="projects_access_level_owner">เจ้าของ</string>
     <string name="projects_object_watch">ติดตาม</string>
     <string name="projects_object_tab_properties">คุณสมบัติ</string>

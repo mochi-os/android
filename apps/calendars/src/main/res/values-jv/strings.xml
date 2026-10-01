@@ -185,6 +185,6 @@
     <string name="calendars_span_day">%1$s, %2$s nganti %3$s</string>
     <string name="calendars_polled_current">Kalender wis paling anyar</string>
     <string name="calendars_polled_synced">Kalender wis disinkronisasi</string>
-    <string name="calendars_link_revoke_title">Batalake alamat kalender?</string>
+    <string name="calendars_link_revoke_title">Cabut alamat kalender?</string>
     <string name="calendars_link_revoke_message">Kalèndher sing langganan alamat iki bakal mandheg dianyari.</string>
 </resources>

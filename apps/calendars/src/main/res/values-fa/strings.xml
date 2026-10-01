@@ -29,7 +29,7 @@
     <string name="calendars_day_friday">جمعه</string>
     <string name="calendars_day_saturday">شنبه</string>
     <string name="calendars_link_replace">جایگزینی</string>
-    <string name="calendars_link_revoke">لغو</string>
+    <string name="calendars_link_revoke">ابطال</string>
     <string name="calendars_permission_allow">اجازه</string>
     <string name="calendars_permission_deny">رد</string>
     <string name="calendars_sync_title">همگام‌سازی با این تلفن</string>

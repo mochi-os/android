@@ -189,6 +189,6 @@
     <string name="calendars_span_day">%1$s، %2$s کان %3$s</string>
     <string name="calendars_polled_current">ڪئلينڊر تازو آهي</string>
     <string name="calendars_polled_synced">ڪئلينڊر سنڪ ٿي ويو</string>
-    <string name="calendars_link_revoke_title">ڪئلينڊر جو پتو منسوخ ڪجي؟</string>
+    <string name="calendars_link_revoke_title">ڪئلينڊر جو پتو رد ڪجي؟</string>
     <string name="calendars_link_revoke_message">هن پتي جي رڪنيت وارا ڪئلينڊر تازه ٿيڻ بند ٿي ويندا.</string>
 </resources>

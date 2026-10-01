@@ -302,7 +302,7 @@
     <string name="format_list">Zoznam s odrážkami</string>
     <string name="common_preview">Náhľad</string>
     <string name="rss_revoke_confirm">Odvolať</string>
-    <string name="rss_revoke">Zrušiť prístup</string>
+    <string name="rss_revoke">Odvolať prístup</string>
     <string name="rss_revoke_title">Odvolať prístup RSS?</string>
     <string name="rss_revoke_message">Všetko, čo je prihlásené na tento kanál, ho prestane dostávať. Potom môžete skopírovať novú adresu URL.</string>
     <string name="rss_revoked">Prístup RSS zrušený</string>

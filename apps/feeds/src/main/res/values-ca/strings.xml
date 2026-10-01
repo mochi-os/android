@@ -168,7 +168,7 @@
     <string name="feeds_settings_field_server">Servidor</string>
     <string name="feeds_settings_name_edit_cd">Edita el nom</string>
     <string name="feeds_settings_section_identity">Identitat</string>
-    <string name="feeds_unsubscribe">Cancel·la la subscripció</string>
+    <string name="feeds_unsubscribe">Dona\'t de baixa</string>
     <string name="feeds_unsubscribed">Subscripció cancel·lada</string>
     <string name="feeds_access_level_comment_full">Comentar, reaccionar i veure</string>
     <string name="feeds_rss_mode_posts_comments">Publicacions i comentaris</string>
@@ -178,7 +178,7 @@
     <string name="feeds_post_content">Contingut de la publicació</string>
     <string name="feeds_enable_memories">Activa records</string>
     <string name="feeds_permission_request_title">Sol·licitud de permís</string>
-    <string name="feeds_unsubscribe_confirm">Vols cancel·lar la subscripció a la font?</string>
+    <string name="feeds_unsubscribe_confirm">Vols donar-te de baixa de la font?</string>
     <string name="feeds_settings_title">Configuració de %1$s</string>
     <string name="feeds_source_transform_help">Deixa-ho en blanc per desactivar.</string>
     <string name="feeds_settings_name_cancel_cd">Cancel·la l\'edició</string>

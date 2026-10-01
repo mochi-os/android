@@ -6,8 +6,8 @@
     <string name="forums_list_title">Forumlar</string>
     <string name="forums_list_find">Forum bul</string>
     <string name="forums_list_logout">Oturumu kapat</string>
-    <string name="forums_list_unsubscribe">Aboneliği iptal et</string>
-    <string name="forums_list_unsubscribe_title">Aboneliği iptal et</string>
+    <string name="forums_list_unsubscribe">Abonelikten çık</string>
+    <string name="forums_list_unsubscribe_title">Abonelikten çık</string>
     <string name="forums_create_title">Forum oluştur</string>
     <string name="forums_create_name">Forum adı</string>
     <string name="forums_create_privacy">Gizlilik</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">Etiketle</string>
     <string name="forums_ai_account_default">Varsayılan hesap</string>
     <string name="forums_ai_prompt_reset">Varsayılana sıfırla</string>
-    <string name="forums_settings_unsubscribe">Aboneliği iptal et</string>
+    <string name="forums_settings_unsubscribe">Abonelikten çık</string>
     <string name="forums_moderation_title">Denetim</string>
     <string name="forums_moderation_tab_queue">Kuyruk</string>
     <string name="forums_moderation_tab_reports">Raporlar</string>

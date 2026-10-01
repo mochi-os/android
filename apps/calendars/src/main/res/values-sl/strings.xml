@@ -29,7 +29,7 @@
     <string name="calendars_day_friday">Petek</string>
     <string name="calendars_day_saturday">Sobota</string>
     <string name="calendars_link_replace">Zamenjaj</string>
-    <string name="calendars_link_revoke">Prekliči</string>
+    <string name="calendars_link_revoke">Odvzemi</string>
     <string name="calendars_permission_allow">Dovoli</string>
     <string name="calendars_permission_deny">Zavrni</string>
     <string name="calendars_sync_title">Sinhroniziraj s tem telefonom</string>
@@ -197,6 +197,6 @@
     <string name="calendars_span_day">%1$s, %2$s do %3$s</string>
     <string name="calendars_polled_current">Koledar je posodobljen</string>
     <string name="calendars_polled_synced">Koledar sinhroniziran</string>
-    <string name="calendars_link_revoke_title">Preklicati naslov koledarja?</string>
+    <string name="calendars_link_revoke_title">Odvzeti naslov koledarja?</string>
     <string name="calendars_link_revoke_message">Koledarji, naročeni na ta naslov, se ne bodo več posodabljali.</string>
 </resources>

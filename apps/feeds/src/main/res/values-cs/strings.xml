@@ -168,7 +168,7 @@
     <string name="feeds_settings_field_server">Server</string>
     <string name="feeds_settings_name_edit_cd">Upravit název</string>
     <string name="feeds_settings_section_identity">Identita</string>
-    <string name="feeds_unsubscribe">Zrušit odběr</string>
+    <string name="feeds_unsubscribe">Odhlásit odběr</string>
     <string name="feeds_unsubscribed">Odběr zrušen</string>
     <string name="feeds_access_level_comment_full">Komentovat, reagovat a zobrazit</string>
     <string name="feeds_rss_mode_posts_comments">Příspěvky a komentáře</string>
@@ -178,7 +178,7 @@
     <string name="feeds_post_content">Obsah příspěvku</string>
     <string name="feeds_enable_memories">Povolit vzpomínky</string>
     <string name="feeds_permission_request_title">Žádost o oprávnění</string>
-    <string name="feeds_unsubscribe_confirm">Zrušit odběr kanálu?</string>
+    <string name="feeds_unsubscribe_confirm">Odhlásit odběr kanálu?</string>
     <string name="feeds_settings_title">Nastavení %1$s</string>
     <string name="feeds_source_transform_help">Ponechte prázdné pro zakázání.</string>
     <string name="feeds_settings_name_cancel_cd">Zrušit úpravy</string>

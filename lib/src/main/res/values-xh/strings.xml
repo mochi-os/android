@@ -40,7 +40,7 @@
     <string name="discovery_recommended">Iyacetyiswa</string>
     <string name="access_add_rule">Yongeza umthetho</string>
     <string name="access_owner">Umnini</string>
-    <string name="access_revoke">Rhoxisa</string>
+    <string name="access_revoke">Susa</string>
     <string name="access_level_comment">Phawula</string>
     <string name="access_level_view">Bonisa</string>
     <string name="access_level_none">Akukho nanye</string>
@@ -146,7 +146,7 @@
     <string name="auth_next">Okulandelayo</string>
     <string name="auth_or_log_in_with">Okanye ngena nge</string>
     <string name="auth_passkey">Isitshixo sokungena</string>
-    <string name="auth_use_passkey">Sebenzisa i-passkey</string>
+    <string name="auth_use_passkey">Sebenzisa isitshixo sokungena</string>
     <string name="auth_email_me_a_code">Ndithumelele ikhowudi nge-imeyile</string>
     <string name="auth_or_enter_authenticator_code">Okanye faka ikhowudi yokuqinisekisa</string>
     <string name="auth_log_in">Ngena</string>
@@ -230,14 +230,14 @@
     <string name="stepup_email_placeholder">Faka ikhowudi evela kwi-imeyile yakho</string>
     <string name="stepup_totp_label">Ikhowudi yokuqinisekisa</string>
     <string name="stepup_totp_placeholder">Faka ikhowudi yakho yesiqinisekisi</string>
-    <string name="stepup_use_passkey">Sebenzisa i-passkey yakho</string>
+    <string name="stepup_use_passkey">Sebenzisa isitshixo sakho sokungena</string>
     <string name="stepup_send_email">Thumela i-imeyile</string>
     <string name="stepup_resend_email">Thumela kwakhona i-imeyile</string>
     <string name="stepup_verify">Qinisekisa</string>
     <string name="stepup_continue_with">Qhubeka nge-%1$s</string>
     <string name="stepup_error_start">Ayikwazanga ukuqalisa ukuqinisekiswa kwakhona. Nceda uzame kwakhona.</string>
     <string name="stepup_error_code">Loo khowudi ayichanekanga okanye iphelelwe lixesha.</string>
-    <string name="stepup_error_passkey">Ukuqinisekiswa kwe-passkey akuphumelelanga. Nceda uzame kwakhona.</string>
+    <string name="stepup_error_passkey">Ukuqinisekiswa kwesitshixo sokungena akuphumelelanga. Nceda uzame kwakhona.</string>
     <string name="stepup_error_oauth">Akukwazekanga ukuqinisekisa ngaloo akhawunti. Nceda uzame kwakhona.</string>
     <string name="game_system_resign">%1$s unikele</string>
     <string name="game_system_draw_offer">%1$s ucebise ukulingana</string>
@@ -299,9 +299,9 @@
     <string name="format_code">Ikhowudi</string>
     <string name="format_list">Uluhlu lwamachaphaza</string>
     <string name="common_preview">Phicotha</string>
-    <string name="rss_revoke_confirm">Rhoxisa</string>
-    <string name="rss_revoke">Rhoxisa ufikelelo</string>
-    <string name="rss_revoke_title">Rhoxisa ufikelelo lwe-RSS?</string>
+    <string name="rss_revoke_confirm">Susa</string>
+    <string name="rss_revoke">Susa ufikelelo</string>
+    <string name="rss_revoke_title">Susa ufikelelo lwe-RSS?</string>
     <string name="rss_revoke_message">Nantoni na ebhalisele olu suselo iya kuyeka ukulufumana. Ungakhuphela i-URL entsha emva koko.</string>
     <string name="rss_revoked">Ufikelelo lwe-RSS lurhoxisiwe</string>
     <string name="rss_revoke_failed">Ayiphumelelanga ukurhoxisa ufikelelo lwe-RSS</string>

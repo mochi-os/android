@@ -9,9 +9,9 @@
     <string name="settings_home_notification_prefs">Willay akllakuna</string>
     <string name="settings_home_accounts">Tinkichisqa cuentas</string>
     <string name="settings_home_interests">Munakuykuna</string>
-    <string name="account_section_passkeys">Passkeykuna</string>
-    <string name="account_passkey_register">Passkey yapay</string>
-    <string name="account_passkey_delete_title">Passkey wischuy?</string>
+    <string name="account_section_passkeys">Yaykuna llavekuna</string>
+    <string name="account_passkey_register">Yaykuna llaveta yapay</string>
+    <string name="account_passkey_delete_title">Yaykuna llaveta pichay?</string>
     <string name="account_section_totp">Autenticador aplicación</string>
     <string name="account_totp_setup">Autenticadorta wakichiy</string>
     <string name="account_totp_setup_title">Autenticadorta wakichiy</string>
@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">Por defectoman kutichiy?</string>
     <string name="system_setting_apps_install_user">Runakuna apps churayta saqiy</string>
     <string name="system_setting_auth_email">Email código-wan yaykuy</string>
-    <string name="system_setting_auth_passkey">Passkey-wan yaykuy</string>
+    <string name="system_setting_auth_passkey">Yaykuna llavewan yaykuy</string>
     <string name="system_setting_auth_totp">TOTP authenticator app-wan yaykuy</string>
     <string name="system_setting_auth_recovery">Hampikuy código-wan yaykuy</string>
     <string name="system_setting_auth_oauth">OAuth 2.0-wan yaykuy</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">Pakana kamachiy</string>
     <string name="settings_home_rules">Kamachiykuna</string>
     <string name="settings_home_terms">Yanapay rimaykuna</string>
-    <string name="account_passkeys_empty">Mana ima passkey qillqasqachu kachkan.</string>
-    <string name="account_passkey_register_title">Passkey yapay</string>
+    <string name="account_passkeys_empty">Manam ima yaykuna llavepas qillqasqachu kachkan.</string>
+    <string name="account_passkey_register_title">Huk yaykuna llaveta yapay</string>
     <string name="account_passkey_name_label">Suti (akllay)</string>
     <string name="account_passkey_delete_message">\"%1$s\" mana hukmanchu yaykuchisunkichu.</string>
     <string name="account_totp_enabled">Autenticador rikch\'arichkasqa.</string>

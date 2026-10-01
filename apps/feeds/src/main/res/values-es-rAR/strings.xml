@@ -141,7 +141,6 @@
     <string name="feeds_settings_field_fingerprint">Huella digital</string>
     <string name="feeds_settings_name_edit_cd">Editá el nombre</string>
     <string name="feeds_settings_section_identity">Identidad</string>
-    <string name="feeds_unsubscribe">Cancelá la suscripción</string>
     <string name="feeds_unsubscribed">Suscripción cancelada</string>
     <string name="feeds_access_level_comment_full">Comentar, reaccionar y ver</string>
     <string name="feeds_rss_mode_posts_comments">Posteos y comentarios</string>
@@ -151,7 +150,6 @@
     <string name="feeds_post_content">Contenido del posteo</string>
     <string name="feeds_enable_memories">Habilitá los recuerdos</string>
     <string name="feeds_permission_request_title">Solicitud de permiso</string>
-    <string name="feeds_unsubscribe_confirm">¿Cancelar la suscripción al feed?</string>
     <string name="feeds_settings_title">Configuración de %1$s</string>
     <string name="feeds_source_transform_help">Dejalo vacío para desactivar.</string>
     <string name="feeds_settings_name_cancel_cd">Cancelá la edición</string>

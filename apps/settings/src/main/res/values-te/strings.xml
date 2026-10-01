@@ -20,7 +20,7 @@
     <string name="account_section_recovery">రికవరీ కోడ్‌లు</string>
     <string name="account_recovery_codes_title">రికవరీ కోడ్‌లు</string>
     <string name="sessions_unknown_agent">తెలియని పరికరం</string>
-    <string name="sessions_revoke_title">సెషన్‌ను రద్దు చేయాలా?</string>
+    <string name="sessions_revoke_title">సెషన్‌ను ఉపసంహరించాలా?</string>
     <string name="account_section_oauth">థర్డ్-పార్టీ లాగిన్</string>
     <string name="account_oauth_link">ఖాతాను లింక్ చేయండి</string>
     <string name="account_unlink">అన్‌లింక్ చేయండి</string>
@@ -29,7 +29,7 @@
     <string name="account_done">పూర్తయింది</string>
     <string name="account_delete">తొలగించండి</string>
     <string name="account_rename">పేరు మార్చండి</string>
-    <string name="sessions_revoke">రద్దు చేయండి</string>
+    <string name="sessions_revoke">ఉపసంహరించండి</string>
     <string name="account_disable">నిలిపివేయండి</string>
     <string name="account_copy">కాపీ చేయండి</string>
     <string name="account_copy_all">అన్నీ కాపీ చేయండి</string>
@@ -181,8 +181,8 @@
     <string name="system_users_delete_title">వినియోగదారుని తొలగించాలా?</string>
     <string name="system_users_manage_sessions">సెషన్‌లను నిర్వహించండి</string>
     <string name="system_users_sessions_empty">ఈ యూజర్‌కు యాక్టివ్ సెషన్‌లు లేవు.</string>
-    <string name="system_users_revoke">రద్దు చేయండి</string>
-    <string name="system_users_revoke_all">అన్ని సెషన్‌లను రద్దు చేయండి</string>
+    <string name="system_users_revoke">ఉపసంహరించండి</string>
+    <string name="system_users_revoke_all">అన్ని సెషన్‌లను ఉపసంహరించండి</string>
     <string name="system_users_unknown_browser">తెలియని బ్రౌజర్</string>
     <string name="system_users_unknown">తెలియదు</string>
     <string name="system_users_previous">మునుపటి</string>
@@ -265,7 +265,7 @@
     <string name="system_users_delete_message">ఇది శాశ్వతంగా వినియోగదారు \"%1$s\"ని తొలగిస్తుంది. ఈ చర్యను రద్దు చేయడం సాధ్యం కాదు.</string>
     <string name="system_users_sessions_title">%1$s యొక్క సెషన్‌లు</string>
     <string name="system_users_session_last_accessed">చివరి యాక్సెస్: %1$s</string>
-    <string name="system_users_revoke_all_title">అన్ని సెషన్‌లను రద్దు చేయాలా?</string>
+    <string name="system_users_revoke_all_title">అన్ని సెషన్‌లను ఉపసంహరించాలా?</string>
     <string name="system_users_revoke_all_message">ఈ వినియోగదారు యొక్క అన్ని క్రియాశీల సెషన్‌లు సైన్ అవుట్ అవుతాయి.</string>
     <plurals name="system_users_pagination_status">
         <item quantity="one">%3$d వినియోగదారులో %1$d–%2$d చూపుతోంది</item>

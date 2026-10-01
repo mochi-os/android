@@ -40,11 +40,11 @@
     <string name="projects_settings_tab_people">Wong</string>
     <string name="projects_option_icon">Ikon</string>
     <string name="projects_option_icon_placeholder">tuladha Check, Star, Flag</string>
-    <string name="projects_settings_unsubscribe">Mbatalaké langganan</string>
+    <string name="projects_settings_unsubscribe">Mandheg langganan</string>
     <string name="projects_settings_delete_project">Busak proyek</string>
     <string name="projects_settings_delete_confirm_title">Busak proyek</string>
-    <string name="projects_settings_unsubscribe_title">Mbatalaké langganan</string>
-    <string name="projects_settings_unsubscribe_message">Sampéyan yakin arep mbatalaké langganan saka proyek iki?</string>
+    <string name="projects_settings_unsubscribe_title">Mandheg langganan</string>
+    <string name="projects_settings_unsubscribe_message">Sampéyan yakin arep mandheg langganan saka proyek iki?</string>
     <string name="projects_access_level_owner">Sing duwé</string>
     <string name="projects_object_watch">Tonton</string>
     <string name="projects_object_tab_properties">Properti</string>

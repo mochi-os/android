@@ -6,8 +6,8 @@
     <string name="forums_list_title">Foronaka</string>
     <string name="forums_list_find">Foronak jikxataña</string>
     <string name="forums_list_logout">Mistuña</string>
-    <string name="forums_list_unsubscribe">Suscripción jaytaña</string>
-    <string name="forums_list_unsubscribe_title">Suscripción jaytaña</string>
+    <string name="forums_list_unsubscribe">Suscripción apaqaña</string>
+    <string name="forums_list_unsubscribe_title">Suscripción apaqaña</string>
     <string name="forums_create_title">Forum luraña</string>
     <string name="forums_create_name">Foron sutipa</string>
     <string name="forums_create_privacy">Imantawi</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">Chimpuña</string>
     <string name="forums_ai_account_default">Default cuenta</string>
     <string name="forums_ai_prompt_reset">Default ukar kutintayama</string>
-    <string name="forums_settings_unsubscribe">Suscripción jaytaña</string>
+    <string name="forums_settings_unsubscribe">Suscripción apaqaña</string>
     <string name="forums_moderation_title">Moderación</string>
     <string name="forums_moderation_tab_queue">Cola</string>
     <string name="forums_moderation_tab_reports">Reportenaka</string>

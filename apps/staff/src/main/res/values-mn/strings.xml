@@ -35,7 +35,7 @@
     <string name="staff_accounts_unban">Хоригоос гаргах</string>
     <string name="staff_accounts_unbanned_toast">Бүртгэлийн хорио цуцлагдсан</string>
     <string name="staff_accounts_unnamed">Нэргүй</string>
-    <string name="staff_accounts_unsuspend">Түр зогсоолтыг цуцлах</string>
+    <string name="staff_accounts_unsuspend">Түр зогсоолтыг арилгах</string>
     <string name="staff_accounts_unsuspended_toast">Бүртгэлийн түр зогсоолтыг цуцалсан</string>
     <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_appeals_cancel">Цуцлах</string>

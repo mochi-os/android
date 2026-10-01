@@ -69,6 +69,7 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTab
 import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.util.NaturalCompare
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.DestinationsAvailable
@@ -227,7 +228,7 @@ private fun CategoriesList(
     onDelete: (NotifCategory) -> Unit,
     onTest: (NotifCategory) -> Unit,
 ) {
-    val visible = categories.filter { category -> category.id != "0" }
+    val visible = categories.filter { category -> category.id != "0" }.ordered()
     LazyColumn(
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp),
@@ -384,19 +385,19 @@ private fun TopicsList(
         }
         return
     }
-    val byApp = topics
-        .groupBy { topic -> topic.app.name }
-        .toSortedMap(String.CASE_INSENSITIVE_ORDER)
+    val groups = topics.grouped()
     var isFirstGroup = true
     LazyColumn(
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
-        for ((appName, appTopics) in byApp) {
+        for (group in groups) {
+            val app = group.first().app
+            val appName = app.name
             val leadsWithSpace = !isFirstGroup
             isFirstGroup = false
             if (appName.isNotBlank()) {
-                item("app/$appName") {
+                item("app/${app.id}") {
                     Column(modifier = Modifier.fillMaxWidth()) {
                         if (leadsWithSpace) {
                             Spacer(Modifier.height(16.dp))
@@ -410,10 +411,7 @@ private fun TopicsList(
                     }
                 }
             }
-            val sorted = appTopics.sortedWith(
-                compareBy(String.CASE_INSENSITIVE_ORDER) { topic -> topicTitle(topic) }
-            )
-            items(sorted, key = { topic -> "${topic.app.id}/${topic.topic}/${topic.`object`}" }) { topic ->
+            items(group, key = { topic -> "${topic.app.id}/${topic.topic}/${topic.`object`}" }) { topic ->
                 TopicRow(
                     topic = topic,
                     categories = categories,
@@ -425,13 +423,37 @@ private fun TopicsList(
     }
 }
 
-/** The "No notifications" pseudo-category is listed last, never among the real ones. */
-private fun List<NotifCategory>.noNotificationsLast(): List<NotifCategory> =
-    sortedBy { category -> if (category.id == "0") 1 else 0 }
+/**
+ * Categories as every list of them reads: by the name shown, naturally, with
+ * the "No notifications" pseudo-category last. The default keeps its place.
+ */
+internal fun List<NotifCategory>.ordered(): List<NotifCategory> =
+    sortedWith(
+        compareBy<NotifCategory> { category -> category.id == "0" }
+            .thenBy(NaturalCompare) { category -> category.shown },
+    )
 
-/** A topic reads as "what happened: which thing", falling back to the raw key. */
+/**
+ * Topics grouped by the app they come from, the apps in order of name and each
+ * app's topics by what happened, then by which thing.
+ */
+internal fun List<NotifTopic>.grouped(): List<List<NotifTopic>> =
+    groupBy { topic -> topic.app.id }
+        .values
+        .map { group ->
+            group.sortedWith(
+                compareBy<NotifTopic, String>(NaturalCompare) { topic -> topicLabel(topic) }
+                    .thenBy(NaturalCompare) { topic -> topic.name },
+            )
+        }
+        .sortedWith(compareBy(NaturalCompare) { group -> group.first().app.name })
+
+/** What happened, falling back to the raw key. */
+private fun topicLabel(topic: NotifTopic): String = topic.label.ifBlank { topic.topic }
+
+/** A topic reads as "what happened: which thing". */
 private fun topicTitle(topic: NotifTopic): String {
-    val label = topic.label.ifBlank { topic.topic }
+    val label = topicLabel(topic)
     return if (topic.name.isNotBlank()) "$label: ${topic.name}" else label
 }
 
@@ -473,7 +495,7 @@ private fun TopicRow(
                     },
                     selected = topic.category.isNullOrEmpty(),
                 )
-                for (category in categories.noNotificationsLast()) {
+                for (category in categories.ordered()) {
                     MochiDropdownMenuItem(
                         text = { Text(category.shown) },
                         onClick = {
@@ -512,7 +534,7 @@ private fun DeleteCategoryDialog(
                     onExpandedChange = { open -> menu = open },
                     modifier = Modifier.fillMaxWidth(),
                 ) {
-                    for (other in others.noNotificationsLast()) {
+                    for (other in others.ordered()) {
                         MochiDropdownMenuItem(
                             text = { Text(other.shown) },
                             onClick = {

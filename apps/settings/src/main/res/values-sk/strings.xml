@@ -10,8 +10,8 @@
     <string name="settings_home_accounts">Pripojené účty</string>
     <string name="settings_home_interests">Záujmy</string>
     <string name="account_section_passkeys">Prístupové kľúče</string>
-    <string name="account_passkey_register">Pridať passkey</string>
-    <string name="account_passkey_delete_title">Odstrániť passkey?</string>
+    <string name="account_passkey_register">Pridať prístupový kľúč</string>
+    <string name="account_passkey_delete_title">Odstrániť prístupový kľúč?</string>
     <string name="account_section_totp">Autentifikačná aplikácia</string>
     <string name="account_totp_setup">Nastaviť autentifikátor</string>
     <string name="account_totp_setup_title">Nastaviť autentifikátor</string>
@@ -266,7 +266,7 @@
     <string name="system_users_delete_message">Týmto sa natrvalo zmaže používateľ \"%1$s\". Túto akciu nemožno vrátiť späť.</string>
     <string name="system_users_sessions_title">Relácie používateľa %1$s</string>
     <string name="system_users_session_last_accessed">Posledný prístup: %1$s</string>
-    <string name="system_users_revoke_all_title">Zrušiť všetky relácie?</string>
+    <string name="system_users_revoke_all_title">Odvolať všetky relácie?</string>
     <string name="system_users_revoke_all_message">Všetky aktívne relácie tohto používateľa budú odhlásené.</string>
     <plurals name="system_users_pagination_status">
         <item quantity="one">Zobrazené %1$d–%2$d z %3$d používateľa</item>
@@ -393,13 +393,13 @@
     <string name="accounts_field_topic">Téma</string>
     <string name="accounts_field_secret">Tajný kľúč podpisu</string>
     <string name="account_totp_open">Otvoriť v overovacej aplikácii</string>
-    <string name="accounts_revoke">Zrušiť prístup</string>
+    <string name="accounts_revoke">Odvolať prístup</string>
     <string name="accounts_capability_calendar">Kalendár</string>
     <string name="accounts_capability_notify">Notifikácie</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Prihlásenie</string>
     <string name="accounts_provider_caldav">Kalendárový server</string>
-    <string name="accounts_revoke_confirm">Týmto sa zruší prístup ku kalendáru pre %1$s. Prihlasovanie cez %2$s zostane, kým ho neodpojíte na stránke prihlásenia.</string>
+    <string name="accounts_revoke_confirm">Týmto sa odvolá prístup ku kalendáru pre %1$s. Prihlasovanie cez %2$s zostane, kým ho neodpojíte na stránke prihlásenia.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Neznámy motív</string>
     <string name="system_documents_modified">Upravené</string>

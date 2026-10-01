@@ -33,11 +33,11 @@
     <string name="crm_settings_tab_people">Wong</string>
     <string name="crm_option_icon">Ikon</string>
     <string name="crm_option_icon_placeholder">tuladha Check, Star, Flag</string>
-    <string name="crm_settings_unsubscribe">Mbatalaké langganan</string>
+    <string name="crm_settings_unsubscribe">Mandheg langganan</string>
     <string name="crm_settings_delete_crm">Busak CRM</string>
     <string name="crm_settings_delete_confirm_title">Busak CRM</string>
-    <string name="crm_settings_unsubscribe_title">Mbatalaké langganan</string>
-    <string name="crm_settings_unsubscribe_message">Sampéyan yakin arep mbatalaké langganan saka CRM iki?</string>
+    <string name="crm_settings_unsubscribe_title">Mandheg langganan</string>
+    <string name="crm_settings_unsubscribe_message">Sampéyan yakin arep mandheg langganan saka CRM iki?</string>
     <string name="crm_access_level_owner">Sing duwé</string>
     <string name="crm_object_watch">Tonton</string>
     <string name="crm_object_tab_properties">Properti</string>

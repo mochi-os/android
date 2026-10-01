@@ -10,8 +10,8 @@
     <string name="settings_home_accounts">Asusai da aka haɗa</string>
     <string name="settings_home_interests">Abubuwan sha\'awa</string>
     <string name="account_section_passkeys">Makullan shiga</string>
-    <string name="account_passkey_register">Ƙara passkey</string>
-    <string name="account_passkey_delete_title">Goge passkey?</string>
+    <string name="account_passkey_register">Ƙara maɓallin shiga</string>
+    <string name="account_passkey_delete_title">Share maɓallin shiga?</string>
     <string name="account_section_totp">Manhajar tabbatarwa</string>
     <string name="account_totp_setup">Saita authenticator</string>
     <string name="account_totp_setup_title">Saita authenticator</string>
@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">A mayar zuwa asali?</string>
     <string name="system_setting_apps_install_user">Ba masu amfani damar shigar da apps</string>
     <string name="system_setting_auth_email">Shiga ta amfani da lambar imel</string>
-    <string name="system_setting_auth_passkey">Shiga ta amfani da passkey</string>
+    <string name="system_setting_auth_passkey">Shiga ta amfani da maɓallin shiga</string>
     <string name="system_setting_auth_totp">Shiga ta amfani da app na TOTP authenticator</string>
     <string name="system_setting_auth_recovery">Shiga ta amfani da lambar dawowa</string>
     <string name="system_setting_auth_oauth">Shiga ta amfani da OAuth 2.0</string>
@@ -182,7 +182,7 @@
     <string name="system_users_manage_sessions">Sarrafa sessions</string>
     <string name="system_users_sessions_empty">Wannan mai amfani ba shi da sessions masu aiki.</string>
     <string name="system_users_revoke">Janyewa</string>
-    <string name="system_users_revoke_all">Soke duk zama</string>
+    <string name="system_users_revoke_all">Janye duk zama</string>
     <string name="system_users_unknown_browser">Mai bincike da ba a sani ba</string>
     <string name="system_users_unknown">Ba a sani ba</string>
     <string name="system_users_previous">Na baya</string>
@@ -205,7 +205,7 @@
     <string name="settings_home_privacy">Manufar sirri</string>
     <string name="settings_home_rules">Dokoki</string>
     <string name="settings_home_terms">Sharuɗɗan sabis</string>
-    <string name="account_passkeys_empty">Babu maɓallin shiga da aka rajista.</string>
+    <string name="account_passkeys_empty">Babu makullan shiga da aka yi wa rajista.</string>
     <string name="account_passkey_register_title">Ƙara maɓallin shiga</string>
     <string name="account_passkey_name_label">Suna (na zaɓi)</string>
     <string name="account_passkey_delete_message">\"%1$s\" ba zai shigar da kai ba.</string>
@@ -265,7 +265,7 @@
     <string name="system_users_delete_message">Wannan zai goge mai amfani \"%1$s\" har abada. Ba za a iya gyara wannan aikin ba.</string>
     <string name="system_users_sessions_title">Zaman %1$s</string>
     <string name="system_users_session_last_accessed">Samun dama na ƙarshe: %1$s</string>
-    <string name="system_users_revoke_all_title">Soke duk zaman?</string>
+    <string name="system_users_revoke_all_title">Janye duk zaman?</string>
     <string name="system_users_revoke_all_message">Duk zaman da ke aiki na wannan mai amfani za su fita.</string>
     <plurals name="system_users_pagination_status">
         <item quantity="one">Ana nuna %1$d–%2$d daga cikin mai amfani %3$d</item>
@@ -386,13 +386,13 @@
     <string name="accounts_field_topic">Batu</string>
     <string name="accounts_field_secret">Sirrin sa hannu</string>
     <string name="account_totp_open">Buɗe a manhajar tantancewa</string>
-    <string name="accounts_revoke">Soke damar shiga</string>
+    <string name="accounts_revoke">Janye damar shiga</string>
     <string name="accounts_capability_calendar">Kalanda</string>
     <string name="accounts_capability_notify">Sanarwa</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Shiga</string>
     <string name="accounts_provider_caldav">Sabar kalanda</string>
-    <string name="accounts_revoke_confirm">Wannan zai soke izinin kalanda na %1$s. Shiga da %2$s zai ci gaba har sai ka cire haɗin sa a shafin Shiga.</string>
+    <string name="accounts_revoke_confirm">Wannan zai janye izinin kalanda na %1$s. Shiga da %2$s zai ci gaba har sai ka cire haɗin sa a shafin Shiga.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Jigo da ba a sani ba</string>
     <string name="system_documents_modified">An gyara</string>

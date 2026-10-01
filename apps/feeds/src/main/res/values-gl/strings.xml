@@ -166,7 +166,7 @@
     <string name="feeds_settings_field_server">Servidor</string>
     <string name="feeds_settings_name_edit_cd">Editar nome</string>
     <string name="feeds_settings_section_identity">Identidade</string>
-    <string name="feeds_unsubscribe">Cancelar subscrición</string>
+    <string name="feeds_unsubscribe">Anular subscrición</string>
     <string name="feeds_unsubscribed">Subscrición cancelada</string>
     <string name="feeds_access_level_comment_full">Comentar, reaccionar e ver</string>
     <string name="feeds_rss_mode_posts_comments">Publicacións e comentarios</string>
@@ -176,7 +176,7 @@
     <string name="feeds_post_content">Contido da publicación</string>
     <string name="feeds_enable_memories">Activar memorias</string>
     <string name="feeds_permission_request_title">Solicitude de permiso</string>
-    <string name="feeds_unsubscribe_confirm">Cancelar a subscrición á fonte?</string>
+    <string name="feeds_unsubscribe_confirm">Anular a subscrición á fonte?</string>
     <string name="feeds_settings_title">Configuración de %1$s</string>
     <string name="feeds_source_transform_help">Deixa baleiro para desactivar.</string>
     <string name="feeds_settings_name_cancel_cd">Cancelar a edición</string>

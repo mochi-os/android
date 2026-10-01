@@ -17,8 +17,8 @@
     <string name="chat_settings_add_member_search">Bilatu lagunak</string>
     <string name="chat_settings_remove_member">Kendu</string>
     <string name="chat_settings_remove_member_title">Kendu kidea</string>
-    <string name="chat_settings_leave">Utzi txata</string>
-    <string name="chat_settings_leave_title">Utzi txata</string>
+    <string name="chat_settings_leave">Irten txatetik</string>
+    <string name="chat_settings_leave_title">Irten txatetik</string>
     <string name="chat_settings_delete_title">Ezabatu txata</string>
     <string name="chat_members_empty">Kiderik ez</string>
     <string name="chat_members_you">Zu</string>
@@ -41,7 +41,7 @@
     <string name="chat_settings_rename">Berrizendatu txata</string>
     <string name="chat_settings_add_member_empty">Ez dago gehitzeko lagunik</string>
     <string name="chat_settings_remove_member_message">Kendu %1$s txat honetatik?</string>
-    <string name="chat_settings_leave_message">Txat hau utzi nahi duzu? Gainerako kideek ez dituzte zure mezuak gehiago ikusiko.</string>
+    <string name="chat_settings_leave_message">Txat honetatik irten nahi duzu? Gainerako kideek ez dituzte zure mezuak gehiago ikusiko.</string>
     <string name="chat_settings_leave_and_delete">Utzi eta ezabatu lokalki</string>
     <string name="chat_settings_delete">Ezabatu lokalki</string>
     <string name="chat_settings_delete_message">Honek txata eta bere mezuak gailu honetatik bakarrik kentzen ditu.</string>

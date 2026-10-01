@@ -40,10 +40,10 @@
     <string name="projects_settings_tab_people">ਲੋਕ</string>
     <string name="projects_option_icon">ਆਈਕਨ</string>
     <string name="projects_option_icon_placeholder">ਉਦਾ. Check, Star, Flag</string>
-    <string name="projects_settings_unsubscribe">ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
+    <string name="projects_settings_unsubscribe">ਗਾਹਕੀ ਖਤਮ ਕਰੋ</string>
     <string name="projects_settings_delete_project">ਪ੍ਰੋਜੈਕਟ ਮਿਟਾਓ</string>
     <string name="projects_settings_delete_confirm_title">ਪ੍ਰੋਜੈਕਟ ਮਿਟਾਓ</string>
-    <string name="projects_settings_unsubscribe_title">ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
+    <string name="projects_settings_unsubscribe_title">ਗਾਹਕੀ ਖਤਮ ਕਰੋ</string>
     <string name="projects_settings_unsubscribe_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਹੋ ਕਿ ਤੁਸੀਂ ਇਸ ਪ੍ਰੋਜੈਕਟ ਤੋਂ ਅਨਸਬਸਕ੍ਰਾਈਬ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
     <string name="projects_access_level_owner">ਮਾਲਕ</string>
     <string name="projects_object_watch">ਦੇਖੋ</string>

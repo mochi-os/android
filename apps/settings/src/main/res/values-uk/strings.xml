@@ -402,7 +402,7 @@
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Вхід</string>
     <string name="accounts_provider_caldav">Сервер календарів</string>
-    <string name="accounts_revoke_confirm">Це скасує доступ до календаря для %1$s. Вхід через %2$s залишиться, доки ви не від\'єднаєте його на сторінці входу.</string>
+    <string name="accounts_revoke_confirm">Це відкличе доступ до календаря для %1$s. Вхід через %2$s залишиться, доки ви не від\'єднаєте його на сторінці входу.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Невідома тема</string>
     <string name="system_documents_modified">Змінено</string>

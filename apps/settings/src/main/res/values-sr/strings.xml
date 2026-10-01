@@ -9,7 +9,7 @@
     <string name="settings_home_notification_prefs">Подешавања обавештења</string>
     <string name="settings_home_accounts">Повезани налози</string>
     <string name="settings_home_interests">Интересовања</string>
-    <string name="account_section_passkeys">Passkey-еви</string>
+    <string name="account_section_passkeys">Приступни кључеви</string>
     <string name="account_passkey_register">Додај приступни кључ</string>
     <string name="account_passkey_delete_title">Обрисати приступни кључ?</string>
     <string name="account_section_totp">Апликација за аутентификацију</string>

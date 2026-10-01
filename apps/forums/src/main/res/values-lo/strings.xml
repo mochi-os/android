@@ -6,8 +6,8 @@
     <string name="forums_list_title">ກະດານສົນທະນາ</string>
     <string name="forums_list_find">ຄົ້ນຫາກະດານສົນທະນາ</string>
     <string name="forums_list_logout">ອອກຈາກລະບົບ</string>
-    <string name="forums_list_unsubscribe">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
-    <string name="forums_list_unsubscribe_title">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
+    <string name="forums_list_unsubscribe">ເຊົາຕິດຕາມ</string>
+    <string name="forums_list_unsubscribe_title">ເຊົາຕິດຕາມ</string>
     <string name="forums_create_title">ສ້າງກະດານສົນທະນາ</string>
     <string name="forums_create_name">ຊື່ກະດານສົນທະນາ</string>
     <string name="forums_create_privacy">ຄວາມເປັນສ່ວນຕົວ</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">ຕິດແທັກ</string>
     <string name="forums_ai_account_default">ບັນຊີເລີ່ມຕົ້ນ</string>
     <string name="forums_ai_prompt_reset">ຣີເຊັດເປັນຄ່າເລີ່ມຕົ້ນ</string>
-    <string name="forums_settings_unsubscribe">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
+    <string name="forums_settings_unsubscribe">ເຊົາຕິດຕາມ</string>
     <string name="forums_moderation_title">ການກວດກາ</string>
     <string name="forums_moderation_tab_queue">ຄິວ</string>
     <string name="forums_moderation_tab_reports">ລາຍງານ</string>
@@ -137,7 +137,7 @@
     <string name="forums_auth_enter_code_sent">ປ້ອນລະຫັດທີ່ສົ່ງໄປຫາ %1$s</string>
     <string name="forums_auth_create_identity">ສ້າງຕົວຕົນຂອງທ່ານ</string>
     <string name="forums_list_empty">ຍັງບໍ່ມີກະດານສົນທະນາ</string>
-    <string name="forums_list_unsubscribe_message">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການຍົກເລີກການຕິດຕາມກະດານສົນທະນານີ້?</string>
+    <string name="forums_list_unsubscribe_message">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການເຊົາຕິດຕາມກະດານສົນທະນານີ້?</string>
     <string name="forums_find_search_placeholder">ຄົ້ນຫາກະດານສົນທະນາ ຫຼື ວາງ URL</string>
     <string name="forums_find_search_hint">ຄົ້ນຫາກະດານສົນທະນາເພື່ອຕິດຕາມ</string>
     <string name="forums_post_delete_message">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການລຶບໂພສນີ້? ການກະທຳນີ້ບໍ່ສາມາດກູ້ຄືນໄດ້.</string>

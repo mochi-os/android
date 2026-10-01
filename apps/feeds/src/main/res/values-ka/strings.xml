@@ -166,7 +166,7 @@
     <string name="feeds_settings_field_server">სერვერი</string>
     <string name="feeds_settings_name_edit_cd">სახელის რედაქტირება</string>
     <string name="feeds_settings_section_identity">ვინაობა</string>
-    <string name="feeds_unsubscribe">გამოწერის გაუქმება</string>
+    <string name="feeds_unsubscribe">გამოწერის შეწყვეტა</string>
     <string name="feeds_unsubscribed">გამოწერა გაუქმებულია</string>
     <string name="feeds_access_level_comment_full">კომენტარი, რეაქცია და ნახვა</string>
     <string name="feeds_rss_mode_posts_comments">პოსტები და კომენტარები</string>
@@ -176,7 +176,7 @@
     <string name="feeds_post_content">პოსტის შინაარსი</string>
     <string name="feeds_enable_memories">მეხსიერების ჩართვა</string>
     <string name="feeds_permission_request_title">ნებართვის მოთხოვნა</string>
-    <string name="feeds_unsubscribe_confirm">ფიდის გამოწერის გაუქმება?</string>
+    <string name="feeds_unsubscribe_confirm">ფიდის გამოწერის შეწყვეტა?</string>
     <string name="feeds_settings_title">%1$s-ის პარამეტრები</string>
     <string name="feeds_source_transform_help">დატოვეთ ცარიელი გამოსართავად.</string>
     <string name="feeds_settings_name_cancel_cd">რედაქტირების გაუქმება</string>

@@ -33,10 +33,10 @@
     <string name="crm_settings_tab_people">लोग</string>
     <string name="crm_option_icon">आइकन</string>
     <string name="crm_option_icon_placeholder">जईसे. Check, Star, Flag</string>
-    <string name="crm_settings_unsubscribe">सदस्यता रद्द करीं</string>
+    <string name="crm_settings_unsubscribe">सदस्यता खतम करीं</string>
     <string name="crm_settings_delete_crm">CRM मेटाईं</string>
     <string name="crm_settings_delete_confirm_title">CRM मेटाईं</string>
-    <string name="crm_settings_unsubscribe_title">सदस्यता रद्द करीं</string>
+    <string name="crm_settings_unsubscribe_title">सदस्यता खतम करीं</string>
     <string name="crm_settings_unsubscribe_message">का रउआ एह CRM से सदस्यता वापस लेवे चाहत बानी?</string>
     <string name="crm_access_level_owner">मालिक</string>
     <string name="crm_object_watch">देखीं</string>

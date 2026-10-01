@@ -33,10 +33,10 @@
     <string name="crm_settings_tab_people">Žmonės</string>
     <string name="crm_option_icon">Piktograma</string>
     <string name="crm_option_icon_placeholder">pvz. Check, Star, Flag</string>
-    <string name="crm_settings_unsubscribe">Atšaukti prenumeratą</string>
+    <string name="crm_settings_unsubscribe">Atsisakyti prenumeratos</string>
     <string name="crm_settings_delete_crm">Ištrinti CRM</string>
     <string name="crm_settings_delete_confirm_title">Ištrinti CRM</string>
-    <string name="crm_settings_unsubscribe_title">Atšaukti prenumeratą</string>
+    <string name="crm_settings_unsubscribe_title">Atsisakyti prenumeratos</string>
     <string name="crm_settings_unsubscribe_message">Ar tikrai norite atsisakyti šio CRM prenumeratos?</string>
     <string name="crm_access_level_owner">Savininkas</string>
     <string name="crm_object_watch">Stebėti</string>

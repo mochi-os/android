@@ -300,7 +300,7 @@
     <string name="format_list">Lîsteya xalan</string>
     <string name="common_preview">Pêşbînî</string>
     <string name="rss_revoke_confirm">Vekişîne</string>
-    <string name="rss_revoke">Gihîştinê betal bike</string>
+    <string name="rss_revoke">Gihîştinê vekişîne</string>
     <string name="rss_revoke_title">Gihîştina RSS were vekişandin?</string>
     <string name="rss_revoke_message">Her tiştê ku li vê xwarinê abone ye dê wergirtinê rawestîne. Piştre tu dikarî URLyeke nû jiber bigirî.</string>
     <string name="rss_revoked">Gihîştina RSS betal kirin</string>

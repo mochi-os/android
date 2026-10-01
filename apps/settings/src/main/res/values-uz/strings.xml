@@ -9,9 +9,9 @@
     <string name="settings_home_notification_prefs">Bildirishnoma sozlamalari</string>
     <string name="settings_home_accounts">Ulangan hisoblar</string>
     <string name="settings_home_interests">Qiziqishlar</string>
-    <string name="account_section_passkeys">Passkey’lar</string>
-    <string name="account_passkey_register">Passkey qoʻshish</string>
-    <string name="account_passkey_delete_title">Passkey oʻchirilsinmi?</string>
+    <string name="account_section_passkeys">Kirish kalitlari</string>
+    <string name="account_passkey_register">Kirish kaliti qoʻshish</string>
+    <string name="account_passkey_delete_title">Kirish kaliti oʻchirilsinmi?</string>
     <string name="account_section_totp">Autentifikator ilova</string>
     <string name="account_totp_setup">Autentifikatorni sozlash</string>
     <string name="account_totp_setup_title">Autentifikatorni sozlash</string>
@@ -20,7 +20,7 @@
     <string name="account_section_recovery">Tiklash kodlari</string>
     <string name="account_recovery_codes_title">Tiklash kodlari</string>
     <string name="sessions_unknown_agent">Nomaʼlum qurilma</string>
-    <string name="sessions_revoke_title">Seans bekor qilinsinmi?</string>
+    <string name="sessions_revoke_title">Seans qaytarib olinsinmi?</string>
     <string name="account_section_oauth">Uchinchi tomon kirishi</string>
     <string name="account_oauth_link">Hisobni bogʻlash</string>
     <string name="account_unlink">Bogʻlamani yechish</string>
@@ -29,7 +29,7 @@
     <string name="account_done">Bajarildi</string>
     <string name="account_delete">Oʻchirish</string>
     <string name="account_rename">Nomini oʻzgartirish</string>
-    <string name="sessions_revoke">Bekor qilish</string>
+    <string name="sessions_revoke">Qaytarib olish</string>
     <string name="account_disable">Oʻchirish</string>
     <string name="account_copy">Nusxalash</string>
     <string name="account_copy_all">Hammasini nusxalash</string>
@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">Standartga qaytarilsinmi?</string>
     <string name="system_setting_apps_install_user">Foydalanuvchilarga ilovalar oʻrnatishga ruxsat berish</string>
     <string name="system_setting_auth_email">Email kodi yordamida kirish</string>
-    <string name="system_setting_auth_passkey">Passkey yordamida kirish</string>
+    <string name="system_setting_auth_passkey">Kirish kaliti yordamida tizimga kirish</string>
     <string name="system_setting_auth_totp">TOTP autentifikator ilovasi yordamida kirish</string>
     <string name="system_setting_auth_recovery">Tiklash kodi yordamida kirish</string>
     <string name="system_setting_auth_oauth">OAuth 2.0 yordamida kirish</string>
@@ -181,8 +181,8 @@
     <string name="system_users_delete_title">Foydalanuvchi oʻchirilsinmi?</string>
     <string name="system_users_manage_sessions">Sessiyalarni boshqarish</string>
     <string name="system_users_sessions_empty">Bu foydalanuvchining faol sessiyalari yoʻq.</string>
-    <string name="system_users_revoke">Bekor qilish</string>
-    <string name="system_users_revoke_all">Barcha seanslarni bekor qilish</string>
+    <string name="system_users_revoke">Qaytarib olish</string>
+    <string name="system_users_revoke_all">Barcha seanslarni qaytarib olish</string>
     <string name="system_users_unknown_browser">Nomaʼlum brauzer</string>
     <string name="system_users_unknown">Nomaʼlum</string>
     <string name="system_users_previous">Oldingisi</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">Maxfiylik siyosati</string>
     <string name="settings_home_rules">Qoidalar</string>
     <string name="settings_home_terms">Xizmat shartlari</string>
-    <string name="account_passkeys_empty">Roʻyxatdan oʻtgan kalitlar yoʻq.</string>
-    <string name="account_passkey_register_title">Kalit qoʻshish</string>
+    <string name="account_passkeys_empty">Roʻyxatdan oʻtgan kirish kalitlari yoʻq.</string>
+    <string name="account_passkey_register_title">Kirish kaliti qoʻshish</string>
     <string name="account_passkey_name_label">Nom (ixtiyoriy)</string>
     <string name="account_passkey_delete_message">\"%1$s\" sizni endi kiritmaydi.</string>
     <string name="account_totp_enabled">Autentifikator yoqilgan.</string>
@@ -265,7 +265,7 @@
     <string name="system_users_delete_message">Bu doimiy ravishda \"%1$s\" foydalanuvchisini oʻchiradi. Bu amalni qaytarib boʻlmaydi.</string>
     <string name="system_users_sessions_title">%1$s sessiyalari</string>
     <string name="system_users_session_last_accessed">Oxirgi kirish: %1$s</string>
-    <string name="system_users_revoke_all_title">Barcha sessiyalarni bekor qilasizmi?</string>
+    <string name="system_users_revoke_all_title">Barcha seanslar qaytarib olinsinmi?</string>
     <string name="system_users_revoke_all_message">Bu foydalanuvchining barcha faol sessiyalaridan chiqiladi.</string>
     <plurals name="system_users_pagination_status">
         <item quantity="one">%3$d foydalanuvchidan %1$d–%2$d koʻrsatilmoqda</item>
@@ -386,13 +386,13 @@
     <string name="accounts_field_topic">Mavzu</string>
     <string name="accounts_field_secret">Imzo maxfiy kaliti</string>
     <string name="account_totp_open">Autentifikator ilovasida ochish</string>
-    <string name="accounts_revoke">Kirishni bekor qilish</string>
+    <string name="accounts_revoke">Kirish huquqini qaytarib olish</string>
     <string name="accounts_capability_calendar">Kalendar</string>
     <string name="accounts_capability_notify">Bildirishnomalar</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Kirish</string>
     <string name="accounts_provider_caldav">Kalendar serveri</string>
-    <string name="accounts_revoke_confirm">Bu %1$s kalendariga kirishni bekor qiladi. %2$s bilan kirish, uni Kirish sahifasida uzmaguningizcha saqlanadi.</string>
+    <string name="accounts_revoke_confirm">Bu %1$s kalendariga kirish huquqini qaytarib oladi. %2$s bilan kirish, uni Kirish sahifasida uzmaguningizcha saqlanadi.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Nomaʼlum mavzu</string>
     <string name="system_documents_modified">Oʻzgartirilgan</string>

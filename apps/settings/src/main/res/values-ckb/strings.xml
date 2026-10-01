@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">ڕێنماییەکانی پاراستنی نهێنی</string>
     <string name="settings_home_rules">ڕێساکان</string>
     <string name="settings_home_terms">مەرجەکانی خزمەتگوزاری</string>
-    <string name="account_passkeys_empty">ھیچ کلیلێکی چوونەژوورەوە تۆمار نەکراوە.</string>
-    <string name="account_passkey_register_title">کلیلی چوونەژوورەوە زیاد بکە</string>
+    <string name="account_passkeys_empty">هیچ پاسکییەک تۆمار نەکراوە.</string>
+    <string name="account_passkey_register_title">پاسکییەک زیاد بکە</string>
     <string name="account_passkey_name_label">ناو (ھەڵبژاردن)</string>
     <string name="account_passkey_delete_message">\"%1$s\" چیتر تۆ ناھێنێتە ژوورەوە.</string>
     <string name="account_totp_enabled">پشتڕاستکەرەوە چالاککراوە.</string>

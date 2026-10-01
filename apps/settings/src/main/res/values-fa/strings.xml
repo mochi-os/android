@@ -20,7 +20,7 @@
     <string name="account_section_recovery">کدهای بازیابی</string>
     <string name="account_recovery_codes_title">کدهای بازیابی</string>
     <string name="sessions_unknown_agent">دستگاه ناشناخته</string>
-    <string name="sessions_revoke_title">لغو نشست؟</string>
+    <string name="sessions_revoke_title">ابطال نشست؟</string>
     <string name="account_section_oauth">ورود شخص ثالث</string>
     <string name="account_oauth_link">اتصال حساب</string>
     <string name="account_unlink">قطع پیوند</string>
@@ -29,7 +29,7 @@
     <string name="account_done">انجام شد</string>
     <string name="account_delete">حذف</string>
     <string name="account_rename">تغییر نام</string>
-    <string name="sessions_revoke">لغو</string>
+    <string name="sessions_revoke">ابطال</string>
     <string name="account_disable">غیرفعال کردن</string>
     <string name="account_copy">کپی</string>
     <string name="account_copy_all">کپی همه</string>
@@ -181,8 +181,8 @@
     <string name="system_users_delete_title">حذف کاربر؟</string>
     <string name="system_users_manage_sessions">مدیریت جلسات</string>
     <string name="system_users_sessions_empty">این کاربر هیچ نشست فعالی ندارد.</string>
-    <string name="system_users_revoke">لغو</string>
-    <string name="system_users_revoke_all">لغو همه نشست‌ها</string>
+    <string name="system_users_revoke">ابطال</string>
+    <string name="system_users_revoke_all">ابطال همه نشست‌ها</string>
     <string name="system_users_unknown_browser">مرورگر ناشناخته</string>
     <string name="system_users_unknown">ناشناخته</string>
     <string name="system_users_previous">قبلی</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">سیاست حریم خصوصی</string>
     <string name="settings_home_rules">قوانین</string>
     <string name="settings_home_terms">شرایط خدمات</string>
-    <string name="account_passkeys_empty">هیچ کلید عبوری ثبت نشده است.</string>
-    <string name="account_passkey_register_title">افزودن کلید عبور</string>
+    <string name="account_passkeys_empty">هیچ پسکی‌ای ثبت نشده است.</string>
+    <string name="account_passkey_register_title">افزودن پسکی</string>
     <string name="account_passkey_name_label">نام (اختیاری)</string>
     <string name="account_passkey_delete_message">«%1$s» دیگر شما را وارد نخواهد کرد.</string>
     <string name="account_totp_enabled">احراز هویت فعال است.</string>
@@ -265,7 +265,7 @@
     <string name="system_users_delete_message">این به طور دائم کاربر «%1$s» را حذف می‌کند. این عمل قابل بازگشت نیست.</string>
     <string name="system_users_sessions_title">نشست‌های %1$s</string>
     <string name="system_users_session_last_accessed">آخرین دسترسی: %1$s</string>
-    <string name="system_users_revoke_all_title">همه نشست‌ها لغو شوند؟</string>
+    <string name="system_users_revoke_all_title">ابطال همه نشست‌ها؟</string>
     <string name="system_users_revoke_all_message">همه نشست‌های فعال این کاربر از سیستم خارج خواهند شد.</string>
     <plurals name="system_users_pagination_status">
         <item quantity="one">نمایش %1$d–%2$d از %3$d کاربر</item>
@@ -386,13 +386,13 @@
     <string name="accounts_field_topic">موضوع</string>
     <string name="accounts_field_secret">راز امضا</string>
     <string name="account_totp_open">باز کردن در برنامه احراز هویت</string>
-    <string name="accounts_revoke">لغو دسترسی</string>
+    <string name="accounts_revoke">ابطال دسترسی</string>
     <string name="accounts_capability_calendar">تقویم</string>
     <string name="accounts_capability_notify">اطلاعیه‌ها</string>
     <string name="accounts_capability_ai">هوش مصنوعی</string>
     <string name="accounts_capability_login">ورود</string>
     <string name="accounts_provider_caldav">سرور تقویم</string>
-    <string name="accounts_revoke_confirm">این کار دسترسی تقویم %1$s را لغو می‌کند. ورود با %2$s تا زمانی که در صفحهٔ ورود آن را جدا کنید باقی می‌ماند.</string>
+    <string name="accounts_revoke_confirm">این کار دسترسی تقویم %1$s را ابطال می‌کند. ورود با %2$s تا زمانی که در صفحهٔ ورود آن را جدا کنید باقی می‌ماند.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">تم ناشناخته</string>
     <string name="system_documents_modified">ویرایش‌شده</string>

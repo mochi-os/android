@@ -214,7 +214,7 @@
     <string name="feeds_link">लिङ्क</string>
     <string name="feeds_share_link_title">फिड लिङ्क</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">१ टिप्पणी</item>
+        <item quantity="one">%1$d टिप्पणी</item>
         <item quantity="other">%1$d टिप्पणीहरू</item>
     </plurals>
     <plurals name="feeds_attachment_count">

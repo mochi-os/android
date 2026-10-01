@@ -40,7 +40,7 @@
     <string name="discovery_recommended">Тавсияшуда</string>
     <string name="access_add_rule">Қоида илова кардан</string>
     <string name="access_owner">Соҳиб</string>
-    <string name="access_revoke">Бекор кардан</string>
+    <string name="access_revoke">Бозхонд кардан</string>
     <string name="access_level_comment">Шарҳ</string>
     <string name="access_level_view">Намоиш</string>
     <string name="access_level_none">Ҳеҷ кадом</string>
@@ -299,9 +299,9 @@
     <string name="format_code">Код</string>
     <string name="format_list">Рӯйхати нишонадор</string>
     <string name="common_preview">Пешнамоиш</string>
-    <string name="rss_revoke_confirm">Бекор кардан</string>
-    <string name="rss_revoke">Дастрасиро бекор кунед</string>
-    <string name="rss_revoke_title">Дастрасии RSS бекор карда шавад?</string>
+    <string name="rss_revoke_confirm">Бозхонд кардан</string>
+    <string name="rss_revoke">Дастрасиро бозхонд кунед</string>
+    <string name="rss_revoke_title">Дастрасии RSS бозхонд карда шавад?</string>
     <string name="rss_revoke_message">Ҳама чизе, ки ба ин ҷараён обуна шудааст, гирифтани онро қатъ мекунад. Пас аз он шумо метавонед URL-и навро нусха бардоред.</string>
     <string name="rss_revoked">Дастрасии RSS бекор карда шуд</string>
     <string name="rss_revoke_failed">Бекор кардани дастрасии RSS ноком шуд</string>

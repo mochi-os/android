@@ -33,11 +33,11 @@
     <string name="crm_settings_tab_people">الأشخاص</string>
     <string name="crm_option_icon">أيقونة</string>
     <string name="crm_option_icon_placeholder">مثل Check، Star، Flag</string>
-    <string name="crm_settings_unsubscribe">إلغاء الاشتراك</string>
+    <string name="crm_settings_unsubscribe">إنهاء الاشتراك</string>
     <string name="crm_settings_delete_crm">حذف CRM</string>
     <string name="crm_settings_delete_confirm_title">حذف CRM</string>
-    <string name="crm_settings_unsubscribe_title">إلغاء الاشتراك</string>
-    <string name="crm_settings_unsubscribe_message">هل أنت متأكد من إلغاء الاشتراك من نظام CRM هذا؟</string>
+    <string name="crm_settings_unsubscribe_title">إنهاء الاشتراك</string>
+    <string name="crm_settings_unsubscribe_message">هل أنت متأكد من إنهاء الاشتراك في نظام CRM هذا؟</string>
     <string name="crm_access_level_owner">المالك</string>
     <string name="crm_object_watch">متابعة</string>
     <string name="crm_object_tab_properties">الخصائص</string>

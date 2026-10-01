@@ -29,7 +29,7 @@
     <string name="calendars_day_friday">פֿרײַטיק</string>
     <string name="calendars_day_saturday">שבת</string>
     <string name="calendars_link_replace">פארטוישן</string>
-    <string name="calendars_link_revoke">אָפּזאָגן</string>
+    <string name="calendars_link_revoke">צוריקנעמען</string>
     <string name="calendars_permission_allow">דערלויבן</string>
     <string name="calendars_permission_deny">אָפּזאָגן</string>
     <string name="calendars_sync_title">סינכראָניזירן מיט דעם טעלעפֿאָן</string>
@@ -189,6 +189,6 @@
     <string name="calendars_span_day">%1$s, %2$s ביז %3$s</string>
     <string name="calendars_polled_current">קאַלענדאַר איז אַקטועל</string>
     <string name="calendars_polled_synced">קאַלענדאַר סינכראָניזירט</string>
-    <string name="calendars_link_revoke_title">אָפּרופֿן דעם קאַלענדאַר־אַדרעס?</string>
+    <string name="calendars_link_revoke_title">צוריקנעמען דעם קאַלענדאַר־אַדרעס?</string>
     <string name="calendars_link_revoke_message">קאַלענדאַרן וואָס זענען אַבאָנירט אויף דעם אַדרעס וועלן מער ניט ווערן דערהיינטיקט.</string>
 </resources>

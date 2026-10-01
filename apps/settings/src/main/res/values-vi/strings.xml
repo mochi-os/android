@@ -9,9 +9,9 @@
     <string name="settings_home_notification_prefs">Tùy chọn thông báo</string>
     <string name="settings_home_accounts">Tài khoản đã kết nối</string>
     <string name="settings_home_interests">Sở thích</string>
-    <string name="account_section_passkeys">Passkey</string>
-    <string name="account_passkey_register">Thêm passkey</string>
-    <string name="account_passkey_delete_title">Xóa passkey?</string>
+    <string name="account_section_passkeys">Mã khóa</string>
+    <string name="account_passkey_register">Thêm mã khóa</string>
+    <string name="account_passkey_delete_title">Xóa mã khóa?</string>
     <string name="account_section_totp">Ứng dụng xác thực</string>
     <string name="account_totp_setup">Thiết lập trình xác thực</string>
     <string name="account_totp_setup_title">Thiết lập trình xác thực</string>
@@ -23,7 +23,7 @@
     <string name="sessions_revoke_title">Thu hồi phiên?</string>
     <string name="account_section_oauth">Đăng nhập bên thứ ba</string>
     <string name="account_oauth_link">Liên kết tài khoản</string>
-    <string name="account_unlink">Hủy liên kết</string>
+    <string name="account_unlink">Gỡ liên kết</string>
     <string name="account_cancel">Hủy</string>
     <string name="account_save">Lưu</string>
     <string name="account_done">Xong</string>
@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">Đặt lại về mặc định?</string>
     <string name="system_setting_apps_install_user">Cho phép người dùng cài đặt ứng dụng</string>
     <string name="system_setting_auth_email">Đăng nhập bằng mã email</string>
-    <string name="system_setting_auth_passkey">Đăng nhập bằng passkey</string>
+    <string name="system_setting_auth_passkey">Đăng nhập bằng mã khóa</string>
     <string name="system_setting_auth_totp">Đăng nhập bằng ứng dụng xác thực TOTP</string>
     <string name="system_setting_auth_recovery">Đăng nhập bằng mã khôi phục</string>
     <string name="system_setting_auth_oauth">Đăng nhập bằng OAuth 2.0</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">Chính sách quyền riêng tư</string>
     <string name="settings_home_rules">Quy tắc</string>
     <string name="settings_home_terms">Điều khoản dịch vụ</string>
-    <string name="account_passkeys_empty">Không có khóa truy cập nào được đăng ký.</string>
-    <string name="account_passkey_register_title">Thêm khóa truy cập</string>
+    <string name="account_passkeys_empty">Không có mã khóa nào được đăng ký.</string>
+    <string name="account_passkey_register_title">Thêm mã khóa</string>
     <string name="account_passkey_name_label">Tên (tùy chọn)</string>
     <string name="account_passkey_delete_message">\"%1$s\" sẽ không còn đăng nhập cho bạn.</string>
     <string name="account_totp_enabled">Trình xác thực đã được bật.</string>
@@ -228,7 +228,7 @@
     <string name="sessions_revoke_message">Thiết bị đang sử dụng phiên này sẽ bị đăng xuất.</string>
     <string name="account_oauth_empty">Chưa liên kết tài khoản</string>
     <string name="account_oauth_link_title">Liên kết nhà cung cấp</string>
-    <string name="account_oauth_unlink_title">Hủy liên kết tài khoản?</string>
+    <string name="account_oauth_unlink_title">Gỡ liên kết tài khoản?</string>
     <string name="account_oauth_unlink_message">Bạn sẽ không thể đăng nhập bằng %1$s.</string>
     <string name="account_last_used">Lần cuối sử dụng %1$s</string>
     <string name="route_delete_message">Việc này sẽ xóa tuyến cho đường dẫn \"%1$s\".</string>
@@ -388,7 +388,7 @@
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Đăng nhập</string>
     <string name="accounts_provider_caldav">Máy chủ lịch</string>
-    <string name="accounts_revoke_confirm">Thao tác này sẽ thu hồi quyền truy cập lịch của %1$s. Việc đăng nhập bằng %2$s vẫn còn cho đến khi bạn hủy liên kết trên trang Đăng nhập.</string>
+    <string name="accounts_revoke_confirm">Thao tác này sẽ thu hồi quyền truy cập lịch của %1$s. Việc đăng nhập bằng %2$s vẫn còn cho đến khi bạn gỡ liên kết trên trang Đăng nhập.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Giao diện không xác định</string>
     <string name="system_documents_modified">Đã sửa đổi</string>

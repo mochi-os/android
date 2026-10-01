@@ -165,7 +165,7 @@
     <string name="feeds_settings_field_server">ເຊີບເວີ</string>
     <string name="feeds_settings_name_edit_cd">ແກ້ໄຂຊື່</string>
     <string name="feeds_settings_section_identity">ຕົວຕົນ</string>
-    <string name="feeds_unsubscribe">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
+    <string name="feeds_unsubscribe">ເຊົາຕິດຕາມ</string>
     <string name="feeds_unsubscribed">ຍົກເລີກການສະໝັກສະມາຊິກແລ້ວ</string>
     <string name="feeds_access_level_comment_full">ຄຳເຫັນ, ໂຕ້ຕອບ, ແລະ ເບິ່ງ</string>
     <string name="feeds_rss_mode_posts_comments">ໂພສແລະຄຳເຫັນ</string>

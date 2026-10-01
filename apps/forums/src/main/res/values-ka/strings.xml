@@ -6,8 +6,8 @@
     <string name="forums_list_title">ფორუმები</string>
     <string name="forums_list_find">ფორუმების ძიება</string>
     <string name="forums_list_logout">გასვლა</string>
-    <string name="forums_list_unsubscribe">გამოწერის გაუქმება</string>
-    <string name="forums_list_unsubscribe_title">გამოწერის გაუქმება</string>
+    <string name="forums_list_unsubscribe">გამოწერის შეწყვეტა</string>
+    <string name="forums_list_unsubscribe_title">გამოწერის შეწყვეტა</string>
     <string name="forums_create_title">ფორუმის შექმნა</string>
     <string name="forums_create_name">ფორუმის სახელი</string>
     <string name="forums_create_privacy">კონფიდენციალურობა</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">ტეგების მინიჭება</string>
     <string name="forums_ai_account_default">ნაგულისხმევი ანგარიში</string>
     <string name="forums_ai_prompt_reset">ნაგულისხმევზე გადაყენება</string>
-    <string name="forums_settings_unsubscribe">გამოწერის გაუქმება</string>
+    <string name="forums_settings_unsubscribe">გამოწერის შეწყვეტა</string>
     <string name="forums_moderation_title">მოდერაცია</string>
     <string name="forums_moderation_tab_queue">რიგი</string>
     <string name="forums_moderation_tab_reports">საჩივრები</string>
@@ -137,7 +137,7 @@
     <string name="forums_auth_enter_code_sent">შეიყვანეთ კოდი, რომელიც გაიგზავნა მისამართზე %1$s</string>
     <string name="forums_auth_create_identity">შექმენით თქვენი იდენტობა</string>
     <string name="forums_list_empty">ფორუმები ჯერ არ არის</string>
-    <string name="forums_list_unsubscribe_message">ნამდვილად გსურთ ამ ფორუმის გამოწერის გაუქმება?</string>
+    <string name="forums_list_unsubscribe_message">ნამდვილად გსურთ ამ ფორუმის გამოწერის შეწყვეტა?</string>
     <string name="forums_find_search_placeholder">მოძებნეთ ფორუმები ან ჩასვით URL</string>
     <string name="forums_find_search_hint">მოძებნეთ ფორუმები გამოსაწერად</string>
     <string name="forums_post_delete_message">ნამდვილად გსურთ ამ პოსტის წაშლა? ეს ქმედება შეუქცევადია.</string>

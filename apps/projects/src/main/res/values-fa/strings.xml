@@ -40,11 +40,11 @@
     <string name="projects_settings_tab_people">افراد</string>
     <string name="projects_option_icon">آیکون</string>
     <string name="projects_option_icon_placeholder">مثلاً Check، Star، Flag</string>
-    <string name="projects_settings_unsubscribe">لغو اشتراک</string>
+    <string name="projects_settings_unsubscribe">قطع اشتراک</string>
     <string name="projects_settings_delete_project">حذف پروژه</string>
     <string name="projects_settings_delete_confirm_title">حذف پروژه</string>
-    <string name="projects_settings_unsubscribe_title">لغو اشتراک</string>
-    <string name="projects_settings_unsubscribe_message">آیا از لغو اشتراک این پروژه مطمئن هستید؟</string>
+    <string name="projects_settings_unsubscribe_title">قطع اشتراک</string>
+    <string name="projects_settings_unsubscribe_message">آیا از قطع اشتراک این پروژه مطمئن هستید؟</string>
     <string name="projects_access_level_owner">مالک</string>
     <string name="projects_object_watch">تماشا</string>
     <string name="projects_object_tab_properties">ویژگی‌ها</string>

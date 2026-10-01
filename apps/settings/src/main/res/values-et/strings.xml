@@ -20,7 +20,7 @@
     <string name="account_section_recovery">Taastekoodid</string>
     <string name="account_recovery_codes_title">Taastekoodid</string>
     <string name="sessions_unknown_agent">Tundmatu seade</string>
-    <string name="sessions_revoke_title">Kas tühistada sessioon?</string>
+    <string name="sessions_revoke_title">Kas võtta sessioon ära?</string>
     <string name="account_section_oauth">Kolmanda osapoole sisselogimine</string>
     <string name="account_oauth_link">Lingi konto</string>
     <string name="account_unlink">Eemalda link</string>
@@ -29,7 +29,7 @@
     <string name="account_done">Tehtud</string>
     <string name="account_delete">Kustuta</string>
     <string name="account_rename">Nimeta ümber</string>
-    <string name="sessions_revoke">Tühista</string>
+    <string name="sessions_revoke">Võta ära</string>
     <string name="account_disable">Keela</string>
     <string name="account_copy">Kopeeri</string>
     <string name="account_copy_all">Kopeeri kõik</string>
@@ -181,8 +181,8 @@
     <string name="system_users_delete_title">Kustutada kasutaja?</string>
     <string name="system_users_manage_sessions">Halda seansse</string>
     <string name="system_users_sessions_empty">Sellel kasutajal pole aktiivseid sessioone.</string>
-    <string name="system_users_revoke">Tühista</string>
-    <string name="system_users_revoke_all">Tühista kõik sessioonid</string>
+    <string name="system_users_revoke">Võta ära</string>
+    <string name="system_users_revoke_all">Lõpeta kõik sessioonid</string>
     <string name="system_users_unknown_browser">Tundmatu brauser</string>
     <string name="system_users_unknown">Tundmatu</string>
     <string name="system_users_previous">Eelmine</string>
@@ -265,7 +265,7 @@
     <string name="system_users_delete_message">See kustutab jäädavalt kasutaja \"%1$s\". Seda toimingut ei saa tagasi võtta.</string>
     <string name="system_users_sessions_title">%1$s seansid</string>
     <string name="system_users_session_last_accessed">Viimane juurdepääs: %1$s</string>
-    <string name="system_users_revoke_all_title">Tühista kõik seansid?</string>
+    <string name="system_users_revoke_all_title">Kas lõpetada kõik sessioonid?</string>
     <string name="system_users_revoke_all_message">Kõik selle kasutaja aktiivsed seansid logitakse välja.</string>
     <plurals name="system_users_pagination_status">
         <item quantity="one">Kuvatakse %1$d–%2$d / %3$d kasutaja</item>
@@ -386,13 +386,13 @@
     <string name="accounts_field_topic">Teema</string>
     <string name="accounts_field_secret">Allkirjastamise saladus</string>
     <string name="account_totp_open">Ava autentimisrakenduses</string>
-    <string name="accounts_revoke">Tühista juurdepääs</string>
+    <string name="accounts_revoke">Eemalda juurdepääs</string>
     <string name="accounts_capability_calendar">Kalender</string>
     <string name="accounts_capability_notify">Teavitused</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Sisselogimine</string>
     <string name="accounts_provider_caldav">Kalendriserver</string>
-    <string name="accounts_revoke_confirm">See tühistab %1$s kalendri juurdepääsu. Sisselogimine %2$s kaudu jääb alles, kuni selle sisselogimislehel lahutate.</string>
+    <string name="accounts_revoke_confirm">See eemaldab %1$s kalendri juurdepääsu. Sisselogimine %2$s kaudu jääb alles, kuni selle sisselogimislehel lahutate.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Tundmatu teema</string>
     <string name="system_documents_modified">Muudetud</string>

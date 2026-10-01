@@ -9,9 +9,9 @@
     <string name="settings_home_notification_prefs">Mapendeleo ya arifa</string>
     <string name="settings_home_accounts">Akaunti zilizounganishwa</string>
     <string name="settings_home_interests">Mivuto</string>
-    <string name="account_section_passkeys">Passkey</string>
-    <string name="account_passkey_register">Ongeza ufunguo wa kupita</string>
-    <string name="account_passkey_delete_title">Futa ufunguo wa kupita?</string>
+    <string name="account_section_passkeys">Pasiki</string>
+    <string name="account_passkey_register">Ongeza pasiki</string>
+    <string name="account_passkey_delete_title">Futa pasiki?</string>
     <string name="account_section_totp">Programu ya mthibitishaji</string>
     <string name="account_totp_setup">Sanidi kithibitishaji</string>
     <string name="account_totp_setup_title">Sanidi kithibitishaji</string>
@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">Weka upya kwa chaguo-msingi?</string>
     <string name="system_setting_apps_install_user">Ruhusu watumiaji kusakinisha programu</string>
     <string name="system_setting_auth_email">Ingia kwa kutumia msimbo wa barua pepe</string>
-    <string name="system_setting_auth_passkey">Ingia kwa kutumia passkey</string>
+    <string name="system_setting_auth_passkey">Ingia kwa kutumia pasiki</string>
     <string name="system_setting_auth_totp">Ingia kwa kutumia programu ya kithibitishaji ya TOTP</string>
     <string name="system_setting_auth_recovery">Ingia kwa kutumia msimbo wa kurejesha</string>
     <string name="system_setting_auth_oauth">Ingia kwa kutumia OAuth 2.0</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">Sera ya faragha</string>
     <string name="settings_home_rules">Sheria</string>
     <string name="settings_home_terms">Masharti ya huduma</string>
-    <string name="account_passkeys_empty">Hakuna passkey zilizosajiliwa.</string>
-    <string name="account_passkey_register_title">Ongeza passkey</string>
+    <string name="account_passkeys_empty">Hakuna pasiki zilizosajiliwa.</string>
+    <string name="account_passkey_register_title">Ongeza pasiki</string>
     <string name="account_passkey_name_label">Jina (hiari)</string>
     <string name="account_passkey_delete_message">\"%1$s\" haitakuingiza tena.</string>
     <string name="account_totp_enabled">Kithibitishaji kimewashwa.</string>

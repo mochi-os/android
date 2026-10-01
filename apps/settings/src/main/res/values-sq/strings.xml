@@ -10,8 +10,8 @@
     <string name="settings_home_accounts">Llogaritë e lidhura</string>
     <string name="settings_home_interests">Interesat</string>
     <string name="account_section_passkeys">Kyçet</string>
-    <string name="account_passkey_register">Shto passkey</string>
-    <string name="account_passkey_delete_title">Të fshihet passkey?</string>
+    <string name="account_passkey_register">Shto kyç</string>
+    <string name="account_passkey_delete_title">Të fshihet kyçi?</string>
     <string name="account_section_totp">Aplikacion autentikues</string>
     <string name="account_totp_setup">Konfiguro autentikuesin</string>
     <string name="account_totp_setup_title">Konfiguro autentikuesin</string>
@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">Të rivendoset në parazgjedhje?</string>
     <string name="system_setting_apps_install_user">Lejo përdoruesit të instalojnë aplikacione</string>
     <string name="system_setting_auth_email">Kyçu duke përdorur kodin me email</string>
-    <string name="system_setting_auth_passkey">Kyçu duke përdorur passkey</string>
+    <string name="system_setting_auth_passkey">Hyrje me kyç</string>
     <string name="system_setting_auth_totp">Kyçu duke përdorur aplikacionin autentikues TOTP</string>
     <string name="system_setting_auth_recovery">Kyçu duke përdorur kodin e rikuperimit</string>
     <string name="system_setting_auth_oauth">Kyçu duke përdorur OAuth 2.0</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">Politika e privatësisë</string>
     <string name="settings_home_rules">Rregullat</string>
     <string name="settings_home_terms">Kushtet e shërbimit</string>
-    <string name="account_passkeys_empty">Nuk ka çelësa kalimi të regjistruar.</string>
-    <string name="account_passkey_register_title">Shto çelës kalimi</string>
+    <string name="account_passkeys_empty">Nuk ka kyçe të regjistruar.</string>
+    <string name="account_passkey_register_title">Shto kyç</string>
     <string name="account_passkey_name_label">Emri (opsional)</string>
     <string name="account_passkey_delete_message">\"%1$s\" nuk do t\'ju lejojë më të hyni.</string>
     <string name="account_totp_enabled">Vërtetuesi është aktivizuar.</string>
@@ -265,7 +265,7 @@
     <string name="system_users_delete_message">Kjo do të fshijë përgjithmonë përdoruesin \"%1$s\". Ky veprim nuk mund të zhbëhet.</string>
     <string name="system_users_sessions_title">Sesionet e %1$s</string>
     <string name="system_users_session_last_accessed">Aksesi i fundit: %1$s</string>
-    <string name="system_users_revoke_all_title">Të anulohen të gjitha sesionet?</string>
+    <string name="system_users_revoke_all_title">Të revokohen të gjitha sesionet?</string>
     <string name="system_users_revoke_all_message">Të gjitha sesionet aktive të këtij përdoruesi do të dalin.</string>
     <plurals name="system_users_pagination_status">
         <item quantity="one">Duke shfaqur %1$d–%2$d nga %3$d përdorues</item>
@@ -386,7 +386,7 @@
     <string name="accounts_field_topic">Tema</string>
     <string name="accounts_field_secret">Sekreti i nënshkrimit</string>
     <string name="account_totp_open">Hap në aplikacionin e vërtetimit</string>
-    <string name="accounts_revoke">Anulo aksesin</string>
+    <string name="accounts_revoke">Revoko aksesin</string>
     <string name="accounts_capability_calendar">Kalendari</string>
     <string name="accounts_capability_notify">Njoftime</string>
     <string name="accounts_capability_ai">AI</string>

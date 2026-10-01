@@ -189,6 +189,6 @@
     <string name="calendars_span_day">%1$s, %2$s ilə %3$s arası</string>
     <string name="calendars_polled_current">Təqvim güncəldir</string>
     <string name="calendars_polled_synced">Təqvim sinxronlaşdırıldı</string>
-    <string name="calendars_link_revoke_title">Təqvim ünvanı ləğv edilsin?</string>
+    <string name="calendars_link_revoke_title">Təqvim ünvanı geri çağırılsın?</string>
     <string name="calendars_link_revoke_message">Bu ünvana abunə olan təqvimlər yenilənməyi dayandıracaq.</string>
 </resources>

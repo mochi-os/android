@@ -10,8 +10,8 @@
     <string name="settings_home_accounts">Cunntasan ceangailte</string>
     <string name="settings_home_interests">Ùidhean</string>
     <string name="account_section_passkeys">Pasgairean</string>
-    <string name="account_passkey_register">Cuir iuchair-fhaclair ris</string>
-    <string name="account_passkey_delete_title">Sguab às iuchair-fhaclair?</string>
+    <string name="account_passkey_register">Cuir pasgair ris</string>
+    <string name="account_passkey_delete_title">Sguab às am pasgair?</string>
     <string name="account_section_totp">Aplacaid dhearbhachaidh</string>
     <string name="account_totp_setup">Suidhich dearbhaichear</string>
     <string name="account_totp_setup_title">Suidhich dearbhaichear</string>
@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">An ath-shuidhich chun a\' bhun-tuiteamais?</string>
     <string name="system_setting_apps_install_user">Ceadaich do chleachdaichean aplacaidean a stàladh</string>
     <string name="system_setting_auth_email">Clàradh le còd puist-d</string>
-    <string name="system_setting_auth_passkey">Clàradh le iuchair</string>
+    <string name="system_setting_auth_passkey">Log a-steach le pasgair</string>
     <string name="system_setting_auth_totp">Clàradh le app dearbhaiche TOTP</string>
     <string name="system_setting_auth_recovery">Clàradh le còd aiseig</string>
     <string name="system_setting_auth_oauth">Clàradh le OAuth 2.0</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">Poileasaidh prìobhaideachd</string>
     <string name="settings_home_rules">Riaghailtean</string>
     <string name="settings_home_terms">Cumhachan seirbheis</string>
-    <string name="account_passkeys_empty">Chan eil iuchraichean inntrigidh clàraichte.</string>
-    <string name="account_passkey_register_title">Cuir iuchair inntrigidh ris</string>
+    <string name="account_passkeys_empty">Chan eil pasgairean clàraichte.</string>
+    <string name="account_passkey_register_title">Cuir pasgair ris</string>
     <string name="account_passkey_name_label">Ainm (roghainneil)</string>
     <string name="account_passkey_delete_message">Cha logaich \"%1$s\" thu a-steach tuilleadh.</string>
     <string name="account_totp_enabled">Tha an dearbhair air a chomasachadh.</string>

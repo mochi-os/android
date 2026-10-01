@@ -40,7 +40,7 @@
     <string name="discovery_recommended">ಶಿಫಾರಸು ಮಾಡಲಾಗಿದೆ</string>
     <string name="access_add_rule">ನಿಯಮ ಸೇರಿಸಿ</string>
     <string name="access_owner">ಮಾಲೀಕ</string>
-    <string name="access_revoke">ರದ್ದುಗೊಳಿಸಿ</string>
+    <string name="access_revoke">ಹಿಂಪಡೆಯಿರಿ</string>
     <string name="access_level_comment">ಕಾಮೆಂಟ್ ಮಾಡಿ</string>
     <string name="access_level_view">ವೀಕ್ಷಿಸಿ</string>
     <string name="access_level_none">ಯಾವುದೂ ಇಲ್ಲ</string>
@@ -299,9 +299,9 @@
     <string name="format_code">ಕೋಡ್</string>
     <string name="format_list">ಬುಲೆಟ್ ಪಟ್ಟಿ</string>
     <string name="common_preview">ಪ್ರಿವ್ಯೂ</string>
-    <string name="rss_revoke_confirm">ರದ್ದುಗೊಳಿಸಿ</string>
+    <string name="rss_revoke_confirm">ಹಿಂಪಡೆಯಿರಿ</string>
     <string name="rss_revoke">ಪ್ರವೇಶವನ್ನು ಹಿಂಪಡೆಯಿರಿ</string>
-    <string name="rss_revoke_title">RSS ಪ್ರವೇಶವನ್ನು ರದ್ದುಗೊಳಿಸುವುದೇ?</string>
+    <string name="rss_revoke_title">RSS ಪ್ರವೇಶವನ್ನು ಹಿಂಪಡೆಯುವುದೇ?</string>
     <string name="rss_revoke_message">ಈ ಫೀಡ್‌ಗೆ ಚಂದಾದಾರರಾದ ಎಲ್ಲವೂ ಅದನ್ನು ಸ್ವೀಕರಿಸುವುದನ್ನು ನಿಲ್ಲಿಸುತ್ತದೆ. ನಂತರ ನೀವು ಹೊಸ URL ಅನ್ನು ನಕಲಿಸಬಹುದು.</string>
     <string name="rss_revoked">RSS ಪ್ರವೇಶವನ್ನು ಹಿಂಪಡೆಯಲಾಗಿದೆ</string>
     <string name="rss_revoke_failed">RSS ಪ್ರವೇಶವನ್ನು ಹಿಂಪಡೆಯಲು ವಿಫಲವಾಗಿದೆ</string>

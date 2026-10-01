@@ -89,7 +89,7 @@
     <string name="calendars_event_delete_message">この操作は取り消せません。</string>
     <string name="calendars_scope_edit">この予定を変更しますか、すべての予定を変更しますか？</string>
     <string name="calendars_scope_delete">この予定を削除しますか、すべての予定を削除しますか？</string>
-    <string name="calendars_scope_one">この予定</string>
+    <string name="calendars_scope_one">この予定のみ</string>
     <string name="calendars_scope_all">すべての予定</string>
     <string name="calendars_repeat_daily">毎日</string>
     <string name="calendars_repeat_weekly">毎週</string>

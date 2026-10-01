@@ -20,7 +20,7 @@
     <string name="account_section_recovery">קודי שחזור</string>
     <string name="account_recovery_codes_title">קודי שחזור</string>
     <string name="sessions_unknown_agent">מכשיר לא ידוע</string>
-    <string name="sessions_revoke_title">לבטל הפעלה?</string>
+    <string name="sessions_revoke_title">לשלול הפעלה?</string>
     <string name="account_section_oauth">התחברות צד שלישי</string>
     <string name="account_oauth_link">קשר חשבון</string>
     <string name="account_unlink">בטל קישור</string>
@@ -29,7 +29,7 @@
     <string name="account_done">בוצע</string>
     <string name="account_delete">מחק</string>
     <string name="account_rename">שנה שם</string>
-    <string name="sessions_revoke">בטל</string>
+    <string name="sessions_revoke">שלול</string>
     <string name="account_disable">השבת</string>
     <string name="account_copy">העתק</string>
     <string name="account_copy_all">העתק הכול</string>
@@ -181,8 +181,8 @@
     <string name="system_users_delete_title">למחוק משתמש?</string>
     <string name="system_users_manage_sessions">ניהול הפעלות</string>
     <string name="system_users_sessions_empty">למשתמש זה אין הפעלות פעילות.</string>
-    <string name="system_users_revoke">בטל</string>
-    <string name="system_users_revoke_all">בטל את כל ההפעלות</string>
+    <string name="system_users_revoke">שלול</string>
+    <string name="system_users_revoke_all">שלול את כל ההפעלות</string>
     <string name="system_users_unknown_browser">דפדפן לא ידוע</string>
     <string name="system_users_unknown">לא ידוע</string>
     <string name="system_users_previous">הקודם</string>
@@ -266,7 +266,7 @@
     <string name="system_users_delete_message">פעולה זו תמחק לצמיתות את המשתמש \"%1$s\". לא ניתן לבטל פעולה זו.</string>
     <string name="system_users_sessions_title">הפעלות של %1$s</string>
     <string name="system_users_session_last_accessed">גישה אחרונה: %1$s</string>
-    <string name="system_users_revoke_all_title">לבטל את כל ההפעלות?</string>
+    <string name="system_users_revoke_all_title">לשלול את כל ההפעלות?</string>
     <string name="system_users_revoke_all_message">כל ההפעלות הפעילות של משתמש זה יתנתקו.</string>
     <plurals name="system_users_pagination_status">
         <item quantity="one">מציג %1$d–%2$d מתוך %3$d משתמש</item>
@@ -393,13 +393,13 @@
     <string name="accounts_field_topic">נושא</string>
     <string name="accounts_field_secret">סוד חתימה</string>
     <string name="account_totp_open">פתיחה באפליקציית האימות</string>
-    <string name="accounts_revoke">בטל גישה</string>
+    <string name="accounts_revoke">שלול גישה</string>
     <string name="accounts_capability_calendar">יומן</string>
     <string name="accounts_capability_notify">התראות</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">התחברות</string>
     <string name="accounts_provider_caldav">שרת יומנים</string>
-    <string name="accounts_revoke_confirm">פעולה זו תבטל את גישת היומן של %1$s. הכניסה עם %2$s תישאר עד שתנתק אותה בדף הכניסה.</string>
+    <string name="accounts_revoke_confirm">פעולה זו תשלול את גישת היומן של %1$s. הכניסה עם %2$s תישאר עד שתנתק אותה בדף הכניסה.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">ערכת נושא לא ידועה</string>
     <string name="system_documents_modified">שונה</string>

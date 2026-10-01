@@ -6,8 +6,8 @@
     <string name="forums_list_title">Forum</string>
     <string name="forums_list_find">Trova forum</string>
     <string name="forums_list_logout">Esci</string>
-    <string name="forums_list_unsubscribe">Annulla iscrizione</string>
-    <string name="forums_list_unsubscribe_title">Annulla iscrizione</string>
+    <string name="forums_list_unsubscribe">Disiscriviti</string>
+    <string name="forums_list_unsubscribe_title">Disiscriviti</string>
     <string name="forums_create_title">Crea forum</string>
     <string name="forums_create_name">Nome del forum</string>
     <string name="forums_create_privacy">Privacy</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">Assegna tag</string>
     <string name="forums_ai_account_default">Account predefinito</string>
     <string name="forums_ai_prompt_reset">Reimposta ai valori predefiniti</string>
-    <string name="forums_settings_unsubscribe">Annulla iscrizione</string>
+    <string name="forums_settings_unsubscribe">Disiscriviti</string>
     <string name="forums_moderation_title">Moderazione</string>
     <string name="forums_moderation_tab_queue">Coda</string>
     <string name="forums_moderation_tab_reports">Segnalazioni</string>
@@ -137,7 +137,7 @@
     <string name="forums_auth_enter_code_sent">Inserisci il codice inviato a %1$s</string>
     <string name="forums_auth_create_identity">Crea la tua identità</string>
     <string name="forums_list_empty">Nessun forum ancora</string>
-    <string name="forums_list_unsubscribe_message">Vuoi davvero annullare l\'iscrizione a questo forum?</string>
+    <string name="forums_list_unsubscribe_message">Vuoi davvero disiscriverti da questo forum?</string>
     <string name="forums_find_search_placeholder">Cerca forum o incolla URL</string>
     <string name="forums_find_search_hint">Cerca forum a cui iscriverti</string>
     <string name="forums_post_delete_message">Vuoi davvero eliminare questo post? L\'operazione non può essere annullata.</string>

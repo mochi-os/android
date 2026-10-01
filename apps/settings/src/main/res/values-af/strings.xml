@@ -9,9 +9,9 @@
     <string name="settings_home_notification_prefs">Kennisgewing-voorkeure</string>
     <string name="settings_home_accounts">Verbinde rekeninge</string>
     <string name="settings_home_interests">Belange</string>
-    <string name="account_section_passkeys">Wagwoordsleutels</string>
-    <string name="account_passkey_register">Voeg sleutelpas by</string>
-    <string name="account_passkey_delete_title">Verwyder sleutelpas?</string>
+    <string name="account_section_passkeys">Toegangsleutels</string>
+    <string name="account_passkey_register">Voeg toegangsleutel by</string>
+    <string name="account_passkey_delete_title">Verwyder toegangsleutel?</string>
     <string name="account_section_totp">Verifikasie-app</string>
     <string name="account_totp_setup">Stel verifikasie-program op</string>
     <string name="account_totp_setup_title">Stel verifikasie-program op</string>
@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">Stel terug na verstek?</string>
     <string name="system_setting_apps_install_user">Laat gebruikers toe om apps te installeer</string>
     <string name="system_setting_auth_email">Meld aan met e-poskode</string>
-    <string name="system_setting_auth_passkey">Meld aan met passkey</string>
+    <string name="system_setting_auth_passkey">Meld aan met toegangsleutel</string>
     <string name="system_setting_auth_totp">Meld aan met TOTP-verifikasieprogram</string>
     <string name="system_setting_auth_recovery">Meld aan met herstelkode</string>
     <string name="system_setting_auth_oauth">Meld aan met OAuth 2.0</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">Privaatheidsbeleid</string>
     <string name="settings_home_rules">Reëls</string>
     <string name="settings_home_terms">Diensbepalings</string>
-    <string name="account_passkeys_empty">Geen toegangssleutels geregistreer nie.</string>
-    <string name="account_passkey_register_title">Voeg toegangssleutel by</string>
+    <string name="account_passkeys_empty">Geen toegangsleutels geregistreer nie.</string>
+    <string name="account_passkey_register_title">Voeg \'n toegangsleutel by</string>
     <string name="account_passkey_name_label">Naam (opsioneel)</string>
     <string name="account_passkey_delete_message">\"%1$s\" sal jou nie meer aanteken nie.</string>
     <string name="account_totp_enabled">Verifieerder is geaktiveer.</string>

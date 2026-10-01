@@ -29,7 +29,7 @@
     <string name="calendars_day_friday">جمعه</string>
     <string name="calendars_day_saturday">شنبه</string>
     <string name="calendars_link_replace">بدلول</string>
-    <string name="calendars_link_revoke">لغوه کول</string>
+    <string name="calendars_link_revoke">بیرته اخیستل</string>
     <string name="calendars_permission_allow">اجازه ورکړئ</string>
     <string name="calendars_permission_deny">رد کړئ</string>
     <string name="calendars_sync_title">له دې موبایل سره همغږي کړئ</string>
@@ -189,6 +189,6 @@
     <string name="calendars_span_day">%1$s، %2$s تر %3$s</string>
     <string name="calendars_polled_current">کليز تازه دی</string>
     <string name="calendars_polled_synced">کليز همغږی شو</string>
-    <string name="calendars_link_revoke_title">د کليز پته لغوه کړئ؟</string>
+    <string name="calendars_link_revoke_title">د کليز پته بیرته واخلئ؟</string>
     <string name="calendars_link_revoke_message">هغه کليزونه چې دې پتې ته ګډون لري نور به نه تازه کیږي.</string>
 </resources>

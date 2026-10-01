@@ -165,7 +165,7 @@
     <string name="feeds_settings_field_server">Máy chủ</string>
     <string name="feeds_settings_name_edit_cd">Sửa tên</string>
     <string name="feeds_settings_section_identity">Danh tính</string>
-    <string name="feeds_unsubscribe">Hủy đăng ký</string>
+    <string name="feeds_unsubscribe">Ngừng đăng ký</string>
     <string name="feeds_unsubscribed">Đã hủy đăng ký</string>
     <string name="feeds_access_level_comment_full">Bình luận, phản ứng và xem</string>
     <string name="feeds_rss_mode_posts_comments">Bài viết và bình luận</string>
@@ -175,7 +175,7 @@
     <string name="feeds_post_content">Nội dung bài viết</string>
     <string name="feeds_enable_memories">Bật bộ nhớ</string>
     <string name="feeds_permission_request_title">Yêu cầu quyền</string>
-    <string name="feeds_unsubscribe_confirm">Hủy đăng ký nguồn cấp?</string>
+    <string name="feeds_unsubscribe_confirm">Ngừng đăng ký nguồn cấp?</string>
     <string name="feeds_settings_title">Cài đặt %1$s</string>
     <string name="feeds_source_transform_help">Để trống để tắt.</string>
     <string name="feeds_settings_name_cancel_cd">Hủy chỉnh sửa</string>

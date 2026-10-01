@@ -9,7 +9,7 @@
     <string name="settings_home_notification_prefs">Мэдэгдлийн тохиргоо</string>
     <string name="settings_home_accounts">Холбогдсон бүртгэлүүд</string>
     <string name="settings_home_interests">Сонирхлууд</string>
-    <string name="account_section_passkeys">Passkey-ууд</string>
+    <string name="account_section_passkeys">Нэвтрэх түлхүүрүүд</string>
     <string name="account_passkey_register">Нэвтрэх түлхүүр нэмэх</string>
     <string name="account_passkey_delete_title">Нэвтрэх түлхүүр устгах уу?</string>
     <string name="account_section_totp">Баталгаажуулагч апп</string>
@@ -20,7 +20,7 @@
     <string name="account_section_recovery">Сэргээх кодууд</string>
     <string name="account_recovery_codes_title">Сэргээх кодууд</string>
     <string name="sessions_unknown_agent">Үл мэдэгдэх төхөөрөмж</string>
-    <string name="sessions_revoke_title">Сесс цуцлах уу?</string>
+    <string name="sessions_revoke_title">Сессийг хүчингүй болгох уу?</string>
     <string name="account_section_oauth">Гуравдагч талын нэвтрэлт</string>
     <string name="account_oauth_link">Бүртгэл холбох</string>
     <string name="account_unlink">Холбоо тасалах</string>
@@ -29,7 +29,7 @@
     <string name="account_done">Дууссан</string>
     <string name="account_delete">Устгах</string>
     <string name="account_rename">Нэр өөрчлөх</string>
-    <string name="sessions_revoke">Цуцлах</string>
+    <string name="sessions_revoke">Хүчингүй болгох</string>
     <string name="account_disable">Идэвхгүй болгох</string>
     <string name="account_copy">Хуулах</string>
     <string name="account_copy_all">Бүгдийг хуулах</string>
@@ -181,8 +181,8 @@
     <string name="system_users_delete_title">Хэрэглэгч устгах уу?</string>
     <string name="system_users_manage_sessions">Сешн удирдах</string>
     <string name="system_users_sessions_empty">Энэ хэрэглэгч идэвхтэй сесстэй биш байна.</string>
-    <string name="system_users_revoke">Цуцлах</string>
-    <string name="system_users_revoke_all">Бүх сесс цуцлах</string>
+    <string name="system_users_revoke">Хүчингүй болгох</string>
+    <string name="system_users_revoke_all">Бүх сессийг хүчингүй болгох</string>
     <string name="system_users_unknown_browser">Үл мэдэгдэх хөтөч</string>
     <string name="system_users_unknown">Үл мэдэгдэх</string>
     <string name="system_users_previous">Өмнөх</string>
@@ -265,7 +265,7 @@
     <string name="system_users_delete_message">Энэ нь \"%1$s\" хэрэглэгчийг бүрмөсөн устгана. Энэ үйлдлийг буцаах боломжгүй.</string>
     <string name="system_users_sessions_title">%1$s-ийн сесс</string>
     <string name="system_users_session_last_accessed">Сүүлийн хандалт: %1$s</string>
-    <string name="system_users_revoke_all_title">Бүх сессийг цуцлах уу?</string>
+    <string name="system_users_revoke_all_title">Бүх сессийг хүчингүй болгох уу?</string>
     <string name="system_users_revoke_all_message">Энэ хэрэглэгчийн идэвхтэй бүх сесс гарна.</string>
     <plurals name="system_users_pagination_status">
         <item quantity="one">%3$d хэрэглэгчээс %1$d–%2$d харагдаж байна</item>
@@ -386,13 +386,13 @@
     <string name="accounts_field_topic">Сэдэв</string>
     <string name="accounts_field_secret">Гарын үсгийн нууц</string>
     <string name="account_totp_open">Баталгаажуулагч аппад нээх</string>
-    <string name="accounts_revoke">Хандалтыг цуцлах</string>
+    <string name="accounts_revoke">Хандалтыг хүчингүй болгох</string>
     <string name="accounts_capability_calendar">Хуанли</string>
     <string name="accounts_capability_notify">Мэдэгдлүүд</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Нэвтрэх</string>
     <string name="accounts_provider_caldav">Хуанлийн сервер</string>
-    <string name="accounts_revoke_confirm">Энэ нь %1$s-ийн хуанлийн хандалтыг цуцална. %2$s-ээр нэвтрэх нь Нэвтрэх хуудсан дээр салгах хүртэл хэвээр байна.</string>
+    <string name="accounts_revoke_confirm">Энэ нь %1$s-ийн хуанлийн хандалтыг хүчингүй болгоно. %2$s-ээр нэвтрэх нь Нэвтрэх хуудсан дээр салгах хүртэл хэвээр байна.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Тодорхойгүй загвар</string>
     <string name="system_documents_modified">Өөрчилсөн</string>

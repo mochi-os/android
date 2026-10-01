@@ -7,9 +7,6 @@
     <string name="settings_home_display">Weergave</string>
     <string name="settings_home_accounts">Gekoppelde accounts</string>
     <string name="settings_home_interests">Interesses</string>
-    <string name="account_section_passkeys">Toegangssleutels</string>
-    <string name="account_passkey_register">Passkey toevoegen</string>
-    <string name="account_passkey_delete_title">Passkey verwijderen?</string>
     <string name="account_section_totp">Authenticator-app</string>
     <string name="account_totp_setup">Authenticator instellen</string>
     <string name="account_totp_setup_title">Authenticator instellen</string>
@@ -131,7 +128,6 @@
     <string name="system_settings_reset_title">Terugzetten naar standaard?</string>
     <string name="system_setting_apps_install_user">Gebruikers toestaan apps te installeren</string>
     <string name="system_setting_auth_email">Inloggen met e-mailcode</string>
-    <string name="system_setting_auth_passkey">Inloggen met passkey</string>
     <string name="system_setting_auth_totp">Inloggen met TOTP-authenticator-app</string>
     <string name="system_setting_auth_recovery">Inloggen met herstelcode</string>
     <string name="system_setting_auth_oauth">Inloggen met OAuth 2.0</string>
@@ -199,8 +195,6 @@
     <string name="settings_home_privacy">Privacybeleid</string>
     <string name="settings_home_rules">Regels</string>
     <string name="settings_home_terms">Servicevoorwaarden</string>
-    <string name="account_passkeys_empty">Geen passkeys geregistreerd.</string>
-    <string name="account_passkey_register_title">Passkey toevoegen</string>
     <string name="account_passkey_name_label">Naam (optioneel)</string>
     <string name="account_passkey_delete_message">\"%1$s\" zal je niet langer aanmelden.</string>
     <string name="account_totp_enabled">Authenticator is ingeschakeld.</string>
@@ -308,7 +302,6 @@
     <string name="login_title">Inloggen</string>
     <string name="login_section_methods">Aanmeldmethoden</string>
     <string name="login_method_email">E-mailcode</string>
-    <string name="login_method_passkey">Toegangssleutel</string>
     <string name="login_method_totp">Authenticator-app</string>
     <string name="login_method_oauth">Inloggen via derden</string>
     <string name="login_method_recovery">Herstelcodes</string>

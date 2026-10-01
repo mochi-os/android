@@ -146,7 +146,7 @@
     <string name="auth_next">Tjetri</string>
     <string name="auth_or_log_in_with">Ose hyni me</string>
     <string name="auth_passkey">Kyç</string>
-    <string name="auth_use_passkey">Përdorni një çelës hyrjeje</string>
+    <string name="auth_use_passkey">Përdor një kyç</string>
     <string name="auth_email_me_a_code">Më dërgo një kod me email</string>
     <string name="auth_or_enter_authenticator_code">Ose vendosni kodin e autentikuesit</string>
     <string name="auth_log_in">Kyçu</string>
@@ -230,14 +230,14 @@
     <string name="stepup_email_placeholder">Vendosni kodin nga email-i juaj</string>
     <string name="stepup_totp_label">Kodi i autentikuesit</string>
     <string name="stepup_totp_placeholder">Vendosni kodin e aplikacionit të vërtetimit</string>
-    <string name="stepup_use_passkey">Përdorni çelësin tuaj të hyrjes</string>
+    <string name="stepup_use_passkey">Përdorni kyçin tuaj</string>
     <string name="stepup_send_email">Dërgo email</string>
     <string name="stepup_resend_email">Ridërgo email-in</string>
     <string name="stepup_verify">Verifiko</string>
     <string name="stepup_continue_with">Vazhdo me %1$s</string>
     <string name="stepup_error_start">Rivërtetimi nuk mund të niste. Ju lutemi provoni përsëri.</string>
     <string name="stepup_error_code">Ai kod është i pasaktë ose ka skaduar.</string>
-    <string name="stepup_error_passkey">Verifikimi i çelësit të hyrjes dështoi. Ju lutemi provoni përsëri.</string>
+    <string name="stepup_error_passkey">Verifikimi i kyçit dështoi. Ju lutemi provoni përsëri.</string>
     <string name="stepup_error_oauth">Nuk u verifikua dot me atë llogari. Ju lutemi provoni përsëri.</string>
     <string name="game_system_resign">%1$s dorëzoi</string>
     <string name="game_system_draw_offer">%1$s ofroi barazim</string>
@@ -300,7 +300,7 @@
     <string name="format_list">Listë me pika</string>
     <string name="common_preview">Pamja paraprake</string>
     <string name="rss_revoke_confirm">Revoko</string>
-    <string name="rss_revoke">Anulo aksesin</string>
+    <string name="rss_revoke">Revoko aksesin</string>
     <string name="rss_revoke_title">Të revokohet qasja RSS?</string>
     <string name="rss_revoke_message">Gjithçka e abonuar në këtë prurje do të ndalojë ta marrë. Më pas mund të kopjoni një URL të ri.</string>
     <string name="rss_revoked">Aksesi RSS u anulua</string>

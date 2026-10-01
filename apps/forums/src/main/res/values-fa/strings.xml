@@ -6,8 +6,8 @@
     <string name="forums_list_title">انجمن‌ها</string>
     <string name="forums_list_find">یافتن انجمن‌ها</string>
     <string name="forums_list_logout">خروج</string>
-    <string name="forums_list_unsubscribe">لغو اشتراک</string>
-    <string name="forums_list_unsubscribe_title">لغو اشتراک</string>
+    <string name="forums_list_unsubscribe">قطع اشتراک</string>
+    <string name="forums_list_unsubscribe_title">قطع اشتراک</string>
     <string name="forums_create_title">ساخت انجمن</string>
     <string name="forums_create_name">نام انجمن</string>
     <string name="forums_create_privacy">حریم خصوصی</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">برچسب‌گذاری</string>
     <string name="forums_ai_account_default">حساب پیش‌فرض</string>
     <string name="forums_ai_prompt_reset">بازنشانی به پیش‌فرض</string>
-    <string name="forums_settings_unsubscribe">لغو اشتراک</string>
+    <string name="forums_settings_unsubscribe">قطع اشتراک</string>
     <string name="forums_moderation_title">نظارت</string>
     <string name="forums_moderation_tab_queue">صف</string>
     <string name="forums_moderation_tab_reports">گزارش‌ها</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_enter_code_sent">کد ارسال‌شده به %1$s را وارد کنید</string>
     <string name="forums_auth_create_identity">هویت خود را ایجاد کنید</string>
     <string name="forums_list_empty">هنوز انجمنی وجود ندارد</string>
-    <string name="forums_list_unsubscribe_message">آیا مطمئن هستید که می‌خواهید اشتراک این انجمن را لغو کنید؟</string>
+    <string name="forums_list_unsubscribe_message">آیا مطمئن هستید که می‌خواهید اشتراک این انجمن را قطع کنید؟</string>
     <string name="forums_find_search_placeholder">جستجوی انجمن‌ها یا چسباندن نشانی اینترنتی</string>
     <string name="forums_find_search_hint">برای اشتراک، انجمن‌ها را جستجو کنید</string>
     <string name="forums_post_body_field">متن</string>

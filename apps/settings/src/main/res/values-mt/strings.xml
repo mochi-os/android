@@ -10,8 +10,8 @@
     <string name="settings_home_accounts">Kontijiet konnessi</string>
     <string name="settings_home_interests">Interessi</string>
     <string name="account_section_passkeys">Ċwievet tal-aċċess</string>
-    <string name="account_passkey_register">Żid passkey</string>
-    <string name="account_passkey_delete_title">Tħassar passkey?</string>
+    <string name="account_passkey_register">Żid ċavetta tal-aċċess</string>
+    <string name="account_passkey_delete_title">Tħassar iċ-ċavetta tal-aċċess?</string>
     <string name="account_section_totp">App tal-awtentikazzjoni</string>
     <string name="account_totp_setup">Issettja awtentikatur</string>
     <string name="account_totp_setup_title">Issettja awtentikatur</string>
@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">Tirriżetta għal default?</string>
     <string name="system_setting_apps_install_user">Ippermetti utenti jinstallaw apps</string>
     <string name="system_setting_auth_email">Idħol billi tuża kodiċi tal-email</string>
-    <string name="system_setting_auth_passkey">Idħol billi tuża passkey</string>
+    <string name="system_setting_auth_passkey">Idħol billi tuża ċavetta tal-aċċess</string>
     <string name="system_setting_auth_totp">Idħol billi tuża l-app awtentikatur TOTP</string>
     <string name="system_setting_auth_recovery">Idħol billi tuża kodiċi tal-irkupru</string>
     <string name="system_setting_auth_oauth">Idħol billi tuża OAuth 2.0</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">Politika tal-privatezza</string>
     <string name="settings_home_rules">Regoli</string>
     <string name="settings_home_terms">Termini tas-servizz</string>
-    <string name="account_passkeys_empty">L-ebda passkey reġistrata.</string>
-    <string name="account_passkey_register_title">Żid passkey</string>
+    <string name="account_passkeys_empty">L-ebda ċavetta tal-aċċess reġistrata.</string>
+    <string name="account_passkey_register_title">Żid ċavetta tal-aċċess</string>
     <string name="account_passkey_name_label">Isem (opzjonali)</string>
     <string name="account_passkey_delete_message">\"%1$s\" mhux se jdaħħlek aktar.</string>
     <string name="account_totp_enabled">L-awtentikatur huwa abilitat.</string>

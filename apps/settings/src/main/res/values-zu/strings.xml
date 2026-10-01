@@ -9,9 +9,9 @@
     <string name="settings_home_notification_prefs">Okuthandwayo kwezaziso</string>
     <string name="settings_home_accounts">Ama-akhawunti axhunyiwe</string>
     <string name="settings_home_interests">Izintshisekelo</string>
-    <string name="account_section_passkeys">Ama-passkey</string>
-    <string name="account_passkey_register">Engeza i-passkey</string>
-    <string name="account_passkey_delete_title">Susa i-passkey?</string>
+    <string name="account_section_passkeys">Okhiye bokungena</string>
+    <string name="account_passkey_register">Engeza ukhiye wokungena</string>
+    <string name="account_passkey_delete_title">Susa ukhiye wokungena?</string>
     <string name="account_section_totp">I-app yokuqinisekisa</string>
     <string name="account_totp_setup">Setha umqinisekisi</string>
     <string name="account_totp_setup_title">Setha umqinisekisi</string>
@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">Setha kabusha kokuzenzakalelayo?</string>
     <string name="system_setting_apps_install_user">Vumela abasebenzisi ukuthi bafake ama-app</string>
     <string name="system_setting_auth_email">Ngena usebenzisa ikhodi ye-imeyili</string>
-    <string name="system_setting_auth_passkey">Ngena usebenzisa i-passkey</string>
+    <string name="system_setting_auth_passkey">Ngena usebenzisa ukhiye wokungena</string>
     <string name="system_setting_auth_totp">Ngena usebenzisa i-app yesiqinisekisi se-TOTP</string>
     <string name="system_setting_auth_recovery">Ngena usebenzisa ikhodi yokubuyisela</string>
     <string name="system_setting_auth_oauth">Ngena usebenzisa i-OAuth 2.0</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">Inqubomgomo yobumfihlo</string>
     <string name="settings_home_rules">Imithetho</string>
     <string name="settings_home_terms">Imibandela yesevisi</string>
-    <string name="account_passkeys_empty">Awekho amakhi okudlula abhalisiwe.</string>
-    <string name="account_passkey_register_title">Engeza ikhi yokudlula</string>
+    <string name="account_passkeys_empty">Abekho okhiye bokungena ababhalisiwe.</string>
+    <string name="account_passkey_register_title">Engeza ukhiye wokungena</string>
     <string name="account_passkey_name_label">Igama (okukhethwayo)</string>
     <string name="account_passkey_delete_message">\"%1$s\" ngeke isakungenisa.</string>
     <string name="account_totp_enabled">Umfakazeli unikwe amandla.</string>

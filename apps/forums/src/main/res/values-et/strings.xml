@@ -6,8 +6,8 @@
     <string name="forums_list_title">Foorumid</string>
     <string name="forums_list_find">Otsi foorumeid</string>
     <string name="forums_list_logout">Logi välja</string>
-    <string name="forums_list_unsubscribe">Tühista tellimus</string>
-    <string name="forums_list_unsubscribe_title">Tühista tellimus</string>
+    <string name="forums_list_unsubscribe">Loobu tellimusest</string>
+    <string name="forums_list_unsubscribe_title">Loobu tellimusest</string>
     <string name="forums_create_title">Loo foorum</string>
     <string name="forums_create_name">Foorumi nimi</string>
     <string name="forums_create_privacy">Privaatsus</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">Sildi lisamine</string>
     <string name="forums_ai_account_default">Vaikimisi konto</string>
     <string name="forums_ai_prompt_reset">Lähtesta vaikeväärtusele</string>
-    <string name="forums_settings_unsubscribe">Tühista tellimus</string>
+    <string name="forums_settings_unsubscribe">Loobu tellimusest</string>
     <string name="forums_moderation_title">Modereerimine</string>
     <string name="forums_moderation_tab_queue">Järjekord</string>
     <string name="forums_moderation_tab_reports">Raportid</string>

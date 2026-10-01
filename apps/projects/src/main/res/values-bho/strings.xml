@@ -40,10 +40,10 @@
     <string name="projects_settings_tab_people">लोग</string>
     <string name="projects_option_icon">आइकन</string>
     <string name="projects_option_icon_placeholder">जईसे. Check, Star, Flag</string>
-    <string name="projects_settings_unsubscribe">सदस्यता रद्द करीं</string>
+    <string name="projects_settings_unsubscribe">सदस्यता खतम करीं</string>
     <string name="projects_settings_delete_project">परियोजना मेटाईं</string>
     <string name="projects_settings_delete_confirm_title">परियोजना मेटाईं</string>
-    <string name="projects_settings_unsubscribe_title">सदस्यता रद्द करीं</string>
+    <string name="projects_settings_unsubscribe_title">सदस्यता खतम करीं</string>
     <string name="projects_settings_unsubscribe_message">का रउआ एह परियोजना से सदस्यता वापस लेवे चाहत बानी?</string>
     <string name="projects_access_level_owner">मालिक</string>
     <string name="projects_object_watch">देखीं</string>

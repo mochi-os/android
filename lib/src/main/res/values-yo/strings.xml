@@ -40,7 +40,7 @@
     <string name="discovery_recommended">Tí a dábàá</string>
     <string name="access_add_rule">Fi ofin kun</string>
     <string name="access_owner">Onílé</string>
-    <string name="access_revoke">Fagi lé</string>
+    <string name="access_revoke">Gbà padà</string>
     <string name="access_level_comment">Fi àlàyé sílẹ̀</string>
     <string name="access_level_view">Wo</string>
     <string name="access_level_none">Kòsí</string>
@@ -146,7 +146,7 @@
     <string name="auth_next">Tó kàn</string>
     <string name="auth_or_log_in_with">Tàbí wọlé pẹ̀lú</string>
     <string name="auth_passkey">Kọ́kọ́rọ́-ìwọlé</string>
-    <string name="auth_use_passkey">Lo passkey</string>
+    <string name="auth_use_passkey">Lo kọ́kọ́rọ́-ìwọlé kan</string>
     <string name="auth_email_me_a_code">Fi kóòdù ránṣẹ́ sí mi nípasẹ̀ ímeèlì</string>
     <string name="auth_or_enter_authenticator_code">Tàbí tẹ kóòdù olùfọwọ́sí sí</string>
     <string name="auth_log_in">Wọlé</string>
@@ -230,14 +230,14 @@
     <string name="stepup_email_placeholder">Tẹ koodu láti inú ímeèlì rẹ</string>
     <string name="stepup_totp_label">Kóòdù olùfọwọ́sí</string>
     <string name="stepup_totp_placeholder">Tẹ kóòdù authenticator rẹ</string>
-    <string name="stepup_use_passkey">Lo passkey rẹ</string>
+    <string name="stepup_use_passkey">Lo kọ́kọ́rọ́-ìwọlé rẹ</string>
     <string name="stepup_send_email">Fi ímeèlì ránṣẹ́</string>
     <string name="stepup_resend_email">Tún ìmélì náà ránṣẹ́</string>
     <string name="stepup_verify">Jẹ́rìí sí</string>
     <string name="stepup_continue_with">Tẹ̀síwájú pẹ̀lú %1$s</string>
     <string name="stepup_error_start">Kò lè bẹ̀rẹ̀ ìjẹ́rìísí-padà. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i.</string>
     <string name="stepup_error_code">Kóòdù yẹn kò tọ̀nà tàbí ó ti pé.</string>
-    <string name="stepup_error_passkey">Ìjẹ́rìísí passkey kùnà. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i.</string>
+    <string name="stepup_error_passkey">Ìjẹ́rìísí kọ́kọ́rọ́-ìwọlé kùnà. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i.</string>
     <string name="stepup_error_oauth">A kò lè fọwọ́sí pẹ̀lú àkàùntì yẹn. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kansí.</string>
     <string name="game_system_resign">%1$s jọwọ́ ara rẹ̀</string>
     <string name="game_system_draw_offer">%1$s dábàá ìfòyebánilọ́pọ̀</string>
@@ -299,9 +299,9 @@
     <string name="format_code">Kóòdù</string>
     <string name="format_list">Àkójọ oníàmì</string>
     <string name="common_preview">Àkíyèsí ṣáájú</string>
-    <string name="rss_revoke_confirm">Fagi lé</string>
-    <string name="rss_revoke">Fagilé ìwọlé</string>
-    <string name="rss_revoke_title">Fagilé àǹfààní RSS?</string>
+    <string name="rss_revoke_confirm">Gbà padà</string>
+    <string name="rss_revoke">Gba ìwọlé padà</string>
+    <string name="rss_revoke_title">Gba àǹfààní RSS padà?</string>
     <string name="rss_revoke_message">Gbogbo ohun tí ó forúkọsílẹ̀ sí ìjẹun yìí yóò dáwọ́ gbígbà rẹ̀ dúró. O lè ṣe àdàkọ URL tuntun lẹ́yìn náà.</string>
     <string name="rss_revoked">Ìwọlé RSS ti fagilé</string>
     <string name="rss_revoke_failed">Ìkùnà láti fagilé ìwọlé RSS</string>

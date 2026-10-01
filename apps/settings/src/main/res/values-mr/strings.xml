@@ -20,7 +20,7 @@
     <string name="account_section_recovery">रिकव्हरी कोड्स</string>
     <string name="account_recovery_codes_title">रिकव्हरी कोड्स</string>
     <string name="sessions_unknown_agent">अज्ञात डिव्हाइस</string>
-    <string name="sessions_revoke_title">सेशन रद्द करायचे?</string>
+    <string name="sessions_revoke_title">सेशन मागे घ्यायचे?</string>
     <string name="account_section_oauth">तृतीय पक्ष लॉगिन</string>
     <string name="account_oauth_link">खाते लिंक करा</string>
     <string name="account_unlink">अनलिंक करा</string>
@@ -29,7 +29,7 @@
     <string name="account_done">पूर्ण</string>
     <string name="account_delete">हटवा</string>
     <string name="account_rename">पुन्हा नाव द्या</string>
-    <string name="sessions_revoke">रद्द करा</string>
+    <string name="sessions_revoke">मागे घ्या</string>
     <string name="account_disable">बंद करा</string>
     <string name="account_copy">कॉपी करा</string>
     <string name="account_copy_all">सर्व कॉपी करा</string>
@@ -181,8 +181,8 @@
     <string name="system_users_delete_title">वापरकर्ता हटवायचा?</string>
     <string name="system_users_manage_sessions">सेशन्स व्यवस्थापित करा</string>
     <string name="system_users_sessions_empty">या वापरकर्त्याकडे कोणतेही सक्रिय सेशन्स नाहीत.</string>
-    <string name="system_users_revoke">रद्द करा</string>
-    <string name="system_users_revoke_all">सर्व सेशन्स रद्द करा</string>
+    <string name="system_users_revoke">मागे घ्या</string>
+    <string name="system_users_revoke_all">सर्व सेशन्स मागे घ्या</string>
     <string name="system_users_unknown_browser">अज्ञात ब्राउझर</string>
     <string name="system_users_unknown">अज्ञात</string>
     <string name="system_users_previous">मागील</string>
@@ -265,7 +265,7 @@
     <string name="system_users_delete_message">हे कायमस्वरूपी वापरकर्ता \"%1$s\" हटवेल. ही क्रिया पूर्ववत केली जाऊ शकत नाही.</string>
     <string name="system_users_sessions_title">%1$s चे सेशन्स</string>
     <string name="system_users_session_last_accessed">शेवटचा प्रवेश: %1$s</string>
-    <string name="system_users_revoke_all_title">सर्व सेशन्स रद्द करायचे?</string>
+    <string name="system_users_revoke_all_title">सर्व सेशन्स मागे घ्यायचे?</string>
     <string name="system_users_revoke_all_message">या वापरकर्त्याचे सर्व सक्रिय सेशन्स साइन आउट होतील.</string>
     <plurals name="system_users_pagination_status">
         <item quantity="one">%3$d वापरकर्त्यापैकी %1$d–%2$d दर्शवित आहे</item>
@@ -386,13 +386,13 @@
     <string name="accounts_field_topic">विषय</string>
     <string name="accounts_field_secret">स्वाक्षरी गुप्त की</string>
     <string name="account_totp_open">ऑथेंटिकेटर ॲपमध्ये उघडा</string>
-    <string name="accounts_revoke">प्रवेश रद्द करा</string>
+    <string name="accounts_revoke">प्रवेश मागे घ्या</string>
     <string name="accounts_capability_calendar">कॅलेंडर</string>
     <string name="accounts_capability_notify">सूचना</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">लॉगिन</string>
     <string name="accounts_provider_caldav">कॅलेंडर सर्व्हर</string>
-    <string name="accounts_revoke_confirm">यामुळे %1$s चा कॅलेंडर प्रवेश रद्द होईल. लॉगिन पृष्ठावर अनलिंक करेपर्यंत %2$s सह साइन-इन राहील.</string>
+    <string name="accounts_revoke_confirm">यामुळे %1$s चा कॅलेंडर प्रवेश मागे घेतला जाईल. लॉगिन पृष्ठावर अनलिंक करेपर्यंत %2$s सह साइन-इन राहील.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">अज्ञात थीम</string>
     <string name="system_documents_modified">सुधारित</string>

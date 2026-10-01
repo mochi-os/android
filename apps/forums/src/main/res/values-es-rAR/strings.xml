@@ -2,8 +2,6 @@
 <resources>
 
     <string name="forums_list_logout">Cerrá sesión</string>
-    <string name="forums_list_unsubscribe">Cancelá la suscripción</string>
-    <string name="forums_list_unsubscribe_title">Cancelá la suscripción</string>
     <string name="forums_create_title">Creá un foro</string>
     <string name="forums_find_subscribe">Suscribite</string>
     <string name="forums_post_edit">Editá el posteo</string>
@@ -19,7 +17,6 @@
     <string name="forums_comment_remove">Quitá</string>
     <string name="forums_comment_restore">Restaurá</string>
     <string name="forums_ai_prompt_reset">Reiniciá a los valores predeterminados</string>
-    <string name="forums_settings_unsubscribe">Cancelá la suscripción</string>
     <string name="forums_moderation_restriction_remove">Quitá</string>
     <string name="forums_moderation_restriction_type_muted">Silenciá</string>
     <string name="forums_report_submit">Enviá la denuncia</string>
@@ -62,7 +59,7 @@
     <string name="forums_list_title">Foros</string>
     <string name="forums_list_find">Encontrar foros</string>
     <string name="forums_list_empty">Todavía no hay foros</string>
-    <string name="forums_list_unsubscribe_message">¿Estás seguro de que querés cancelar la suscripción a este foro?</string>
+    <string name="forums_list_unsubscribe_message">¿Estás seguro de que querés anular la suscripción a este foro?</string>
     <string name="forums_create_private">Privado</string>
     <string name="forums_create_public">Público</string>
     <string name="forums_find_title">Encontrar foros</string>

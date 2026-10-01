@@ -29,7 +29,7 @@
     <string name="calendars_day_friday">ਸ਼ੁੱਕਰਵਾਰ</string>
     <string name="calendars_day_saturday">ਸ਼ਨੀਵਾਰ</string>
     <string name="calendars_link_replace">ਬਦਲੋ</string>
-    <string name="calendars_link_revoke">ਰੱਦ ਕਰੋ</string>
+    <string name="calendars_link_revoke">ਵਾਪਸ ਲਓ</string>
     <string name="calendars_permission_allow">ਇਜਾਜ਼ਤ ਦਿਓ</string>
     <string name="calendars_permission_deny">ਇਨਕਾਰ ਕਰੋ</string>
     <string name="calendars_sync_title">ਇਸ ਫ਼ੋਨ ਨਾਲ ਸਿੰਕ ਕਰੋ</string>
@@ -189,6 +189,6 @@
     <string name="calendars_span_day">%1$s, %2$s ਤੋਂ %3$s ਤੱਕ</string>
     <string name="calendars_polled_current">ਕੈਲੰਡਰ ਅੱਪਡੇਟ ਹੈ</string>
     <string name="calendars_polled_synced">ਕੈਲੰਡਰ ਸਿੰਕ ਹੋ ਗਿਆ</string>
-    <string name="calendars_link_revoke_title">ਕੈਲੰਡਰ ਦਾ ਪਤਾ ਰੱਦ ਕਰਨਾ ਹੈ?</string>
+    <string name="calendars_link_revoke_title">ਕੈਲੰਡਰ ਦਾ ਪਤਾ ਵਾਪਸ ਲੈਣਾ ਹੈ?</string>
     <string name="calendars_link_revoke_message">ਇਸ ਪਤੇ ਦੀ ਗਾਹਕੀ ਵਾਲੇ ਕੈਲੰਡਰ ਹੁਣ ਨਵਿਆਏ ਨਹੀਂ ਜਾਣਗੇ।</string>
 </resources>

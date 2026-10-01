@@ -40,11 +40,11 @@
     <string name="projects_settings_tab_people">聯絡人</string>
     <string name="projects_option_icon">圖示</string>
     <string name="projects_option_icon_placeholder">例如 Check, Star, Flag</string>
-    <string name="projects_settings_unsubscribe">取消訂閱</string>
+    <string name="projects_settings_unsubscribe">退訂</string>
     <string name="projects_settings_delete_project">刪除專案</string>
     <string name="projects_settings_delete_confirm_title">刪除專案</string>
-    <string name="projects_settings_unsubscribe_title">取消訂閱</string>
-    <string name="projects_settings_unsubscribe_message">您確定要取消訂閱此專案嗎?</string>
+    <string name="projects_settings_unsubscribe_title">退訂</string>
+    <string name="projects_settings_unsubscribe_message">您確定要退訂此專案嗎?</string>
     <string name="projects_access_level_owner">擁有者</string>
     <string name="projects_object_watch">關注</string>
     <string name="projects_object_tab_properties">屬性</string>

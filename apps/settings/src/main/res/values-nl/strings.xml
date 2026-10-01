@@ -10,8 +10,8 @@
     <string name="settings_home_accounts">Verbonden accounts</string>
     <string name="settings_home_interests">Interesses</string>
     <string name="account_section_passkeys">Toegangssleutels</string>
-    <string name="account_passkey_register">Passkey toevoegen</string>
-    <string name="account_passkey_delete_title">Passkey verwijderen?</string>
+    <string name="account_passkey_register">Toegangssleutel toevoegen</string>
+    <string name="account_passkey_delete_title">Toegangssleutel verwijderen?</string>
     <string name="account_section_totp">Authenticator-app</string>
     <string name="account_totp_setup">Authenticator instellen</string>
     <string name="account_totp_setup_title">Authenticator instellen</string>
@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">Resetten naar standaard?</string>
     <string name="system_setting_apps_install_user">Gebruikers toestaan apps te installeren</string>
     <string name="system_setting_auth_email">Inloggen met e-mailcode</string>
-    <string name="system_setting_auth_passkey">Inloggen met passkey</string>
+    <string name="system_setting_auth_passkey">Inloggen met toegangssleutel</string>
     <string name="system_setting_auth_totp">Inloggen met TOTP-authenticator-app</string>
     <string name="system_setting_auth_recovery">Inloggen met herstelcode</string>
     <string name="system_setting_auth_oauth">Inloggen met OAuth 2.0</string>

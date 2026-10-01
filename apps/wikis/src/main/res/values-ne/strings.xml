@@ -40,7 +40,7 @@
     <string name="wikis_rss_both">परिवर्तन र टिप्पणीहरू</string>
     <string name="wikis_rss_copied">RSS URL क्लिपबोर्डमा प्रतिलिपि गरियो</string>
     <string name="wikis_rss_failed">RSS टोकन प्राप्त गर्न असफल</string>
-    <string name="wikis_rss_revoke">पहुँच रद्द गर्नुहोस्</string>
+    <string name="wikis_rss_revoke">पहुँच फिर्ता लिनुहोस्</string>
     <string name="wikis_rss_revoked">RSS पहुँच रद्द गरियो</string>
     <string name="wikis_find_title">विकीहरू खोज्नुहोस्</string>
     <string name="wikis_find_no_results">कुनै विकी भेटिएन</string>
@@ -291,7 +291,7 @@
     <string name="wikis_revision_compare_failed">तुलनाका लागि अघिल्लो संस्करण लोड गर्न सकिएन।</string>
     <string name="wikis_revision_changes_from">संस्करण %1$d → %2$d बाटका परिवर्तनहरू</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">१ टिप्पणी</item>
+        <item quantity="one">%d टिप्पणी</item>
         <item quantity="other">%d टिप्पणीहरू</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">

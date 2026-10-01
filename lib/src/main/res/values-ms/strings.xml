@@ -40,7 +40,7 @@
     <string name="discovery_recommended">Disyorkan</string>
     <string name="access_add_rule">Tambah peraturan</string>
     <string name="access_owner">Pemilik</string>
-    <string name="access_revoke">Batalkan</string>
+    <string name="access_revoke">Tarik balik</string>
     <string name="access_level_comment">Komen</string>
     <string name="access_level_view">Lihat</string>
     <string name="access_level_none">Tiada</string>
@@ -299,9 +299,9 @@
     <string name="format_code">Kod</string>
     <string name="format_list">Senarai bulet</string>
     <string name="common_preview">Pratonton</string>
-    <string name="rss_revoke_confirm">Batalkan</string>
-    <string name="rss_revoke">Batalkan akses</string>
-    <string name="rss_revoke_title">Batalkan akses RSS?</string>
+    <string name="rss_revoke_confirm">Tarik balik</string>
+    <string name="rss_revoke">Tarik balik akses</string>
+    <string name="rss_revoke_title">Tarik balik akses RSS?</string>
     <string name="rss_revoke_message">Apa-apa yang melanggan suapan ini akan berhenti menerimanya. Anda boleh menyalin URL baharu selepas itu.</string>
     <string name="rss_revoked">Akses RSS dibatalkan</string>
     <string name="rss_revoke_failed">Gagal membatalkan akses RSS</string>

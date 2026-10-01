@@ -40,7 +40,7 @@
     <string name="wikis_rss_both">Тағйирот ва шарҳҳо</string>
     <string name="wikis_rss_copied">URL-и RSS ба буфер нусха карда шуд</string>
     <string name="wikis_rss_failed">Гирифтани токени RSS ба анҷом нарасид</string>
-    <string name="wikis_rss_revoke">Дастрасиро бекор кунед</string>
+    <string name="wikis_rss_revoke">Дастрасиро бозхонд кунед</string>
     <string name="wikis_rss_revoked">Дастрасии RSS бекор карда шуд</string>
     <string name="wikis_find_title">Викиҳоро ёбед</string>
     <string name="wikis_find_no_results">Ягон вики ёфт нашуд</string>
@@ -97,7 +97,7 @@
     <string name="wikis_delete_page_cancel">Бекор кардан</string>
     <string name="wikis_delete_page_failed">Ҳазфи саҳифа ба анҷом нарасид</string>
     <string name="wikis_revert_page_comment_label">Бекор кардани шарҳ</string>
-    <string name="wikis_revert_page_confirm">Бекор кардан</string>
+    <string name="wikis_revert_page_confirm">Бозгардонидан</string>
     <string name="wikis_revert_page_failed">Бозгардонии саҳифа ба анҷом нарасид</string>
     <string name="wikis_rename_page_title">Тағйири номи саҳифа</string>
     <string name="wikis_rename_page_label">URL-и нав</string>
@@ -246,7 +246,7 @@
     <string name="wikis_insert_dialog_empty">Ҳанӯз замима нест. Барои оғоз файл бор кунед.</string>
     <string name="wikis_delete_page_message">Шумо мехоҳед саҳифаи “%1$s” (%2$s)-ро нест кунед. Ин амалро бо барқарорсозӣ аз таърих бекор кардан мумкин аст.</string>
     <string name="wikis_delete_page_success">Саҳифа нест карда шуд</string>
-    <string name="wikis_revert_page_title">Баргардондани саҳифа</string>
+    <string name="wikis_revert_page_title">Бозгардонидани саҳифа</string>
     <string name="wikis_revert_page_message">Шумо мехоҳед %1$s-ро ба нусхаи %2$d баргардонед. Ин таҳрири нав бо мундариҷаи нусхаи %2$d эҷод мекунад.</string>
     <string name="wikis_revert_page_default_comment">Ба нусхаи %1$d баргардонида шуд</string>
     <string name="wikis_revert_page_success">Ба нусхаи %1$d баргардонида шуд</string>

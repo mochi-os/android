@@ -10,8 +10,8 @@
     <string name="settings_home_accounts">Yhdistetyt tilit</string>
     <string name="settings_home_interests">Kiinnostuksen kohteet</string>
     <string name="account_section_passkeys">Avainkoodit</string>
-    <string name="account_passkey_register">Lisää avain</string>
-    <string name="account_passkey_delete_title">Poistetaanko avain?</string>
+    <string name="account_passkey_register">Lisää avainkoodi</string>
+    <string name="account_passkey_delete_title">Poistetaanko avainkoodi?</string>
     <string name="account_section_totp">Todennussovellus</string>
     <string name="account_totp_setup">Aseta todennussovellus</string>
     <string name="account_totp_setup_title">Aseta todennussovellus</string>
@@ -20,7 +20,7 @@
     <string name="account_section_recovery">Palautuskoodit</string>
     <string name="account_recovery_codes_title">Palautuskoodit</string>
     <string name="sessions_unknown_agent">Tuntematon laite</string>
-    <string name="sessions_revoke_title">Peruutetaanko istunto?</string>
+    <string name="sessions_revoke_title">Mitätöidäänkö istunto?</string>
     <string name="account_section_oauth">Kolmannen osapuolen kirjautuminen</string>
     <string name="account_oauth_link">Linkitä tili</string>
     <string name="account_unlink">Poista liitos</string>
@@ -29,7 +29,7 @@
     <string name="account_done">Valmis</string>
     <string name="account_delete">Poista</string>
     <string name="account_rename">Nimeä uudelleen</string>
-    <string name="sessions_revoke">Peruuta</string>
+    <string name="sessions_revoke">Mitätöi</string>
     <string name="account_disable">Poista käytöstä</string>
     <string name="account_copy">Kopioi</string>
     <string name="account_copy_all">Kopioi kaikki</string>
@@ -181,8 +181,8 @@
     <string name="system_users_delete_title">Poistetaanko käyttäjä?</string>
     <string name="system_users_manage_sessions">Hallitse istuntoja</string>
     <string name="system_users_sessions_empty">Tällä käyttäjällä ei ole aktiivisia istuntoja.</string>
-    <string name="system_users_revoke">Peruuta</string>
-    <string name="system_users_revoke_all">Peruuta kaikki istunnot</string>
+    <string name="system_users_revoke">Mitätöi</string>
+    <string name="system_users_revoke_all">Mitätöi kaikki istunnot</string>
     <string name="system_users_unknown_browser">Tuntematon selain</string>
     <string name="system_users_unknown">Tuntematon</string>
     <string name="system_users_previous">Edellinen</string>
@@ -265,7 +265,7 @@
     <string name="system_users_delete_message">Tämä poistaa pysyvästi käyttäjän \"%1$s\". Tätä toimintoa ei voi peruuttaa.</string>
     <string name="system_users_sessions_title">Käyttäjän %1$s istunnot</string>
     <string name="system_users_session_last_accessed">Viimeisin käyttö: %1$s</string>
-    <string name="system_users_revoke_all_title">Peruutetaanko kaikki istunnot?</string>
+    <string name="system_users_revoke_all_title">Mitätöidäänkö kaikki istunnot?</string>
     <string name="system_users_revoke_all_message">Kaikki tämän käyttäjän aktiiviset istunnot kirjataan ulos.</string>
     <plurals name="system_users_pagination_status">
         <item quantity="one">Näytetään %1$d–%2$d / %3$d käyttäjä</item>
@@ -386,13 +386,13 @@
     <string name="accounts_field_topic">Aihe</string>
     <string name="accounts_field_secret">Allekirjoitussalaisuus</string>
     <string name="account_totp_open">Avaa todennussovelluksessa</string>
-    <string name="accounts_revoke">Peruuta käyttöoikeus</string>
+    <string name="accounts_revoke">Poista käyttöoikeus</string>
     <string name="accounts_capability_calendar">Kalenteri</string>
     <string name="accounts_capability_notify">Ilmoitukset</string>
     <string name="accounts_capability_ai">Tekoäly</string>
     <string name="accounts_capability_login">Kirjautuminen</string>
     <string name="accounts_provider_caldav">Kalenteripalvelin</string>
-    <string name="accounts_revoke_confirm">Tämä peruuttaa tilin %1$s kalenterin käyttöoikeuden. Kirjautuminen tilillä %2$s säilyy, kunnes poistat sen linkityksen kirjautumissivulla.</string>
+    <string name="accounts_revoke_confirm">Tämä poistaa tilin %1$s kalenterin käyttöoikeuden. Kirjautuminen tilillä %2$s säilyy, kunnes poistat sen linkityksen kirjautumissivulla.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Tuntematon teema</string>
     <string name="system_documents_modified">Muokattu</string>

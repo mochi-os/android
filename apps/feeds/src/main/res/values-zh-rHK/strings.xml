@@ -133,7 +133,6 @@
     <string name="feeds_access_subject_authenticated">已驗證用戶</string>
     <string name="feeds_markdown_supported">支援 Markdown</string>
     <string name="feeds_permission_deny">拒絕</string>
-    <string name="feeds_unsubscribe">取消訂閱</string>
     <string name="feeds_access_level_comment_full">評論、點讚和查看</string>
     <string name="feeds_rss_mode_posts_comments">貼文和留言</string>
     <string name="feeds_access_add_title">新增存取權</string>
@@ -142,7 +141,7 @@
     <string name="feeds_post_content">貼文內容</string>
     <string name="feeds_enable_memories">啟用記憶</string>
     <string name="feeds_permission_request_title">權限請求</string>
-    <string name="feeds_unsubscribe_confirm">取消訂閱資訊提供？</string>
+    <string name="feeds_unsubscribe_confirm">退訂資訊提供？</string>
     <string name="feeds_settings_title">%1$s 設定</string>
     <string name="feeds_source_transform_help">留空以停用。</string>
     <string name="feeds_settings_name_cancel_cd">取消編輯</string>

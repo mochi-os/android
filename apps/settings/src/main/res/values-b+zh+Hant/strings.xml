@@ -10,8 +10,8 @@
     <string name="settings_home_accounts">已連結帳戶</string>
     <string name="settings_home_interests">興趣</string>
     <string name="account_section_passkeys">通行密鑰</string>
-    <string name="account_passkey_register">新增通行金鑰</string>
-    <string name="account_passkey_delete_title">刪除通行金鑰?</string>
+    <string name="account_passkey_register">新增通行密鑰</string>
+    <string name="account_passkey_delete_title">刪除通行密鑰?</string>
     <string name="account_section_totp">驗證器應用程式</string>
     <string name="account_totp_setup">設定驗證器</string>
     <string name="account_totp_setup_title">設定驗證器</string>
@@ -23,7 +23,7 @@
     <string name="sessions_revoke_title">撤銷工作階段？</string>
     <string name="account_section_oauth">第三方登入</string>
     <string name="account_oauth_link">連結帳號</string>
-    <string name="account_unlink">取消連結</string>
+    <string name="account_unlink">解除連結</string>
     <string name="account_cancel">取消</string>
     <string name="account_save">儲存</string>
     <string name="account_done">完成</string>

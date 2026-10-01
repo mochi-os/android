@@ -10,8 +10,8 @@
     <string name="settings_home_accounts">Forbundne konti</string>
     <string name="settings_home_interests">Interesser</string>
     <string name="account_section_passkeys">Adgangsnøgler</string>
-    <string name="account_passkey_register">Tilføj passkey</string>
-    <string name="account_passkey_delete_title">Slet passkey?</string>
+    <string name="account_passkey_register">Tilføj adgangsnøgle</string>
+    <string name="account_passkey_delete_title">Slet adgangsnøgle?</string>
     <string name="account_section_totp">Authenticator-app</string>
     <string name="account_totp_setup">Opsæt autentifikator</string>
     <string name="account_totp_setup_title">Opsæt autentifikator</string>

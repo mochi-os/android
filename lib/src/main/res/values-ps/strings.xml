@@ -40,7 +40,7 @@
     <string name="discovery_recommended">سپارښتل شوی</string>
     <string name="access_add_rule">قاعده اضافه کړئ</string>
     <string name="access_owner">مالک</string>
-    <string name="access_revoke">لغوه کول</string>
+    <string name="access_revoke">بیرته اخیستل</string>
     <string name="access_level_comment">تبصره وکړئ</string>
     <string name="access_level_view">وګورئ</string>
     <string name="access_level_none">هیڅوک</string>
@@ -299,9 +299,9 @@
     <string name="format_code">کوډ</string>
     <string name="format_list">د ټکو لړلیک</string>
     <string name="common_preview">مخکتنه</string>
-    <string name="rss_revoke_confirm">لغوه کول</string>
-    <string name="rss_revoke">لاسرسی لغوه کړئ</string>
-    <string name="rss_revoke_title">د RSS لاسرسی لغوه شي؟</string>
+    <string name="rss_revoke_confirm">بیرته اخیستل</string>
+    <string name="rss_revoke">لاسرسی بیرته واخلئ</string>
+    <string name="rss_revoke_title">د RSS لاسرسی بیرته واخیستل شي؟</string>
     <string name="rss_revoke_message">هر څه چې دې فیډ ته ګډون کړی، ترلاسه کول به ودروي. وروسته تاسو کولی شئ نوی URL کاپي کړئ.</string>
     <string name="rss_revoked">د RSS لاسرسی لغوه شو</string>
     <string name="rss_revoke_failed">د RSS لاسرسي لغوه کول ناکام شول</string>

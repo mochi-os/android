@@ -40,7 +40,7 @@
     <string name="wikis_rss_both">Àwọn ìyípadà àti àwọn àlàyé</string>
     <string name="wikis_rss_copied">A ti ṣàdàkọ URL RSS sí clipboard</string>
     <string name="wikis_rss_failed">Kò lè rí token RSS</string>
-    <string name="wikis_rss_revoke">Fagilé ìwọlé</string>
+    <string name="wikis_rss_revoke">Gba ìwọlé padà</string>
     <string name="wikis_rss_revoked">Ìwọlé RSS ti fagilé</string>
     <string name="wikis_find_title">Wa àwọn wiki</string>
     <string name="wikis_find_no_results">A kò rí wiki kankan</string>

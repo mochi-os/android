@@ -7,9 +7,7 @@
     <string name="settings_home_display">Tela</string>
     <string name="settings_home_accounts">Contas conectadas</string>
     <string name="settings_home_interests">Interesses</string>
-    <string name="account_section_passkeys">Chaves de acesso</string>
-    <string name="account_passkey_register">Adicionar passkey</string>
-    <string name="account_passkey_delete_title">Excluir passkey?</string>
+    <string name="account_passkey_delete_title">Excluir chave de acesso?</string>
     <string name="account_section_totp">Aplicativo autenticador</string>
     <string name="account_totp_setup">Configurar autenticador</string>
     <string name="account_totp_setup_title">Configurar autenticador</string>
@@ -132,7 +130,7 @@
     <string name="system_settings_reset_title">Redefinir para o padrão?</string>
     <string name="system_setting_apps_install_user">Permitir que usuários instalem aplicativos</string>
     <string name="system_setting_auth_email">Entrar usando código por e-mail</string>
-    <string name="system_setting_auth_passkey">Entrar usando passkey</string>
+    <string name="system_setting_auth_passkey">Entrar usando chave de acesso</string>
     <string name="system_setting_auth_totp">Entrar usando aplicativo autenticador TOTP</string>
     <string name="system_setting_auth_recovery">Entrar usando código de recuperação</string>
     <string name="system_setting_auth_oauth">Entrar usando OAuth 2.0</string>
@@ -203,7 +201,6 @@
     <string name="settings_home_rules">Regras</string>
     <string name="settings_home_terms">Termos de serviço</string>
     <string name="account_passkeys_empty">Nenhuma chave de acesso registrada.</string>
-    <string name="account_passkey_register_title">Adicionar uma chave de acesso</string>
     <string name="account_passkey_name_label">Nome (opcional)</string>
     <string name="account_passkey_delete_message">\"%1$s\" não será mais usada para entrar.</string>
     <string name="account_totp_enabled">O autenticador está ativado.</string>
@@ -311,7 +308,6 @@
     <string name="login_title">Entrar</string>
     <string name="login_section_methods">Métodos de login</string>
     <string name="login_method_email">Código por e-mail</string>
-    <string name="login_method_passkey">Chave de acesso</string>
     <string name="login_method_totp">Aplicativo autenticador</string>
     <string name="login_method_oauth">Login de terceiros</string>
     <string name="login_method_recovery">Códigos de recuperação</string>

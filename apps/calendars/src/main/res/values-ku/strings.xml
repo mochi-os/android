@@ -189,6 +189,6 @@
     <string name="calendars_span_day">%1$s, ji %2$s heta %3$s</string>
     <string name="calendars_polled_current">Salname nûjen e</string>
     <string name="calendars_polled_synced">Salname hat hevdemkirin</string>
-    <string name="calendars_link_revoke_title">Navnîşana salnameyê were betalkirin?</string>
+    <string name="calendars_link_revoke_title">Navnîşana salnameyê were vekişandin?</string>
     <string name="calendars_link_revoke_message">Salnameyên ku bi vê navnîşanê ve abone ne dê êdî nûve nebin.</string>
 </resources>

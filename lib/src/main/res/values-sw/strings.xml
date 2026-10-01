@@ -144,7 +144,7 @@
     <string name="auth_next">Inayofuata</string>
     <string name="auth_or_log_in_with">Au ingia kwa kutumia</string>
     <string name="auth_passkey">Pasiki</string>
-    <string name="auth_use_passkey">Tumia ufunguo wa kupita</string>
+    <string name="auth_use_passkey">Tumia pasiki</string>
     <string name="auth_email_me_a_code">Nitumie msimbo kwa barua pepe</string>
     <string name="auth_or_enter_authenticator_code">Au weka msimbo wa mthibitishaji</string>
     <string name="auth_log_in">Ingia</string>
@@ -230,14 +230,14 @@
     <string name="stepup_email_placeholder">Weka msimbo kutoka kwa barua pepe yako</string>
     <string name="stepup_totp_label">Msimbo wa mthibitishaji</string>
     <string name="stepup_totp_placeholder">Weka msimbo wako wa kithibitishaji</string>
-    <string name="stepup_use_passkey">Tumia ufunguo wako</string>
+    <string name="stepup_use_passkey">Tumia pasiki yako</string>
     <string name="stepup_send_email">Tuma barua pepe</string>
     <string name="stepup_resend_email">Tuma barua pepe tena</string>
     <string name="stepup_verify">Thibitisha</string>
     <string name="stepup_continue_with">Endelea na %1$s</string>
     <string name="stepup_error_start">Imeshindwa kuanza uthibitishaji upya. Tafadhali jaribu tena.</string>
     <string name="stepup_error_code">Msimbo huo si sahihi au umekwisha muda wake.</string>
-    <string name="stepup_error_passkey">Uthibitishaji wa ufunguo umeshindwa. Tafadhali jaribu tena.</string>
+    <string name="stepup_error_passkey">Uthibitishaji wa pasiki umeshindwa. Tafadhali jaribu tena.</string>
     <string name="stepup_error_oauth">Imeshindwa kuthibitisha kwa akaunti hiyo. Tafadhali jaribu tena.</string>
     <string name="game_system_resign">%1$s alijiuzulu</string>
     <string name="game_system_draw_offer">%1$s alipendekeza sare</string>

@@ -22,16 +22,16 @@
     <string name="wikis_page_action_recent_changes">Nedávné změny</string>
     <string name="wikis_page_action_new_page">Nová stránka</string>
     <string name="wikis_page_action_settings">Nastavení</string>
-    <string name="wikis_page_action_unsubscribe">Zrušit odběr</string>
+    <string name="wikis_page_action_unsubscribe">Odhlásit odběr</string>
     <string name="wikis_title">Wiki</string>
     <string name="wikis_empty_title">Začněte svou první wiki</string>
     <string name="wikis_empty_subtitle">Vyhledejte wiki k odběru, nebo vytvořte vlastní pro publikování vlastní dokumentace.</string>
     <string name="wikis_create_button">Vytvořit wiki</string>
     <string name="wikis_recommended_section">Doporučená wiki</string>
     <string name="wikis_subscribe_button">Odebírat</string>
-    <string name="wikis_unsubscribe_action">Zrušit odběr</string>
+    <string name="wikis_unsubscribe_action">Odhlásit odběr</string>
     <string name="wikis_unsubscribing">Ruší se odběr…</string>
-    <string name="wikis_unsubscribe_confirm_title">Zrušit odběr</string>
+    <string name="wikis_unsubscribe_confirm_title">Odhlásit odběr</string>
     <string name="wikis_unsubscribe_success">Odběr zrušen</string>
     <string name="wikis_subscribe_failed">Nepodařilo se přihlásit k odběru</string>
     <string name="wikis_rss_menu">RSS kanál</string>
@@ -40,7 +40,7 @@
     <string name="wikis_rss_both">Změny a komentáře</string>
     <string name="wikis_rss_copied">URL RSS zkopírována do schránky</string>
     <string name="wikis_rss_failed">Nepodařilo se získat RSS token</string>
-    <string name="wikis_rss_revoke">Zrušit přístup</string>
+    <string name="wikis_rss_revoke">Odvolat přístup</string>
     <string name="wikis_rss_revoked">Přístup RSS zrušen</string>
     <string name="wikis_find_title">Najít wiki</string>
     <string name="wikis_find_no_results">Žádné wiki nenalezeny</string>
@@ -230,7 +230,7 @@
     <string name="wikis_page_action_share">Odkaz</string>
     <string name="wikis_open_sidebar">Otevřít boční panel</string>
     <string name="wikis_search_placeholder">Hledat wiki…</string>
-    <string name="wikis_unsubscribe_confirm_message">Opravdu chcete zrušit odběr %1$s?</string>
+    <string name="wikis_unsubscribe_confirm_message">Opravdu chcete odhlásit odběr %1$s?</string>
     <string name="wikis_clipboard_label_rss">RSS URL wiki</string>
     <string name="wikis_find_search_placeholder">Hledat podle názvu, ID, otisku nebo URL…</string>
     <string name="wikis_join_search_button">Hledat wiki…</string>

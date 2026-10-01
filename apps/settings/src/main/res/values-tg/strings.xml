@@ -10,8 +10,8 @@
     <string name="settings_home_accounts">Ҳисобҳои пайвастшуда</string>
     <string name="settings_home_interests">Шавқҳо</string>
     <string name="account_section_passkeys">Калидҳои дастрасӣ</string>
-    <string name="account_passkey_register">Иловаи калиди гузар</string>
-    <string name="account_passkey_delete_title">Калиди гузарро нест кунем?</string>
+    <string name="account_passkey_register">Калиди дастрасӣ илова кунед</string>
+    <string name="account_passkey_delete_title">Калиди дастрасиро нест кунем?</string>
     <string name="account_section_totp">Барномаи аутентификатор</string>
     <string name="account_totp_setup">Аутентификаторро танзим кунед</string>
     <string name="account_totp_setup_title">Аутентификаторро танзим кунед</string>
@@ -20,7 +20,7 @@
     <string name="account_section_recovery">Рамзҳои барқарорсозӣ</string>
     <string name="account_recovery_codes_title">Рамзҳои барқарорсозӣ</string>
     <string name="sessions_unknown_agent">Дастгоҳи номаълум</string>
-    <string name="sessions_revoke_title">Сессияро бекор кардан?</string>
+    <string name="sessions_revoke_title">Сессияро бозхонд кардан?</string>
     <string name="account_section_oauth">Воридшавӣ аз тариқи тарафи сеюм</string>
     <string name="account_oauth_link">Пайвасткунии ҳисоб</string>
     <string name="account_unlink">Қатъи пайвастшавӣ</string>
@@ -29,7 +29,7 @@
     <string name="account_done">Иҷро шуд</string>
     <string name="account_delete">Нест кардан</string>
     <string name="account_rename">Тағйири ном</string>
-    <string name="sessions_revoke">Бекор кардан</string>
+    <string name="sessions_revoke">Бозхонд кардан</string>
     <string name="account_disable">Ғайрифаъол кардан</string>
     <string name="account_copy">Нусхабардорӣ</string>
     <string name="account_copy_all">Нусхабардории ҳама</string>
@@ -181,8 +181,8 @@
     <string name="system_users_delete_title">Корбарро нест кунем?</string>
     <string name="system_users_manage_sessions">Идоракунии ҷаласаҳо</string>
     <string name="system_users_sessions_empty">Ин корбар сессияҳои фаъол надорад.</string>
-    <string name="system_users_revoke">Бекор кардан</string>
-    <string name="system_users_revoke_all">Бекор кардани ҳамаи сессияҳо</string>
+    <string name="system_users_revoke">Бозхонд кардан</string>
+    <string name="system_users_revoke_all">Бозхонд кардани ҳамаи сессияҳо</string>
     <string name="system_users_unknown_browser">Браузери номаълум</string>
     <string name="system_users_unknown">Номаълум</string>
     <string name="system_users_previous">Қаблӣ</string>
@@ -265,7 +265,7 @@
     <string name="system_users_delete_message">Ин корбари \"%1$s\" ро ҳамеша нест мекунад. Ин амалро бекор кардан мумкин нест.</string>
     <string name="system_users_sessions_title">Сессияҳои %1$s</string>
     <string name="system_users_session_last_accessed">Дастрасии охирин: %1$s</string>
-    <string name="system_users_revoke_all_title">Ҳамаи сессияҳоро бекор кунед?</string>
+    <string name="system_users_revoke_all_title">Бозхонд кардани ҳамаи сессияҳо?</string>
     <string name="system_users_revoke_all_message">Ҳамаи сессияҳои фаъоли ин корбар баромад мекунанд.</string>
     <plurals name="system_users_pagination_status">
         <item quantity="one">Нишон додани %1$d–%2$d аз %3$d корбар</item>
@@ -385,13 +385,13 @@
     <string name="accounts_field_topic">Мавзӯъ</string>
     <string name="accounts_field_secret">Сирри имзо</string>
     <string name="account_totp_open">Дар барномаи аутентификатор кушодан</string>
-    <string name="accounts_revoke">Дастрасиро бекор кунед</string>
+    <string name="accounts_revoke">Дастрасиро бозхонд кунед</string>
     <string name="accounts_capability_calendar">Тақвим</string>
     <string name="accounts_capability_notify">Огоҳиҳо</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Воридшавӣ</string>
     <string name="accounts_provider_caldav">Сервери тақвим</string>
-    <string name="accounts_revoke_confirm">Ин дастрасии тақвими %1$s-ро бекор мекунад. Воридшавӣ бо %2$s то он даме ки шумо онро дар саҳифаи воридшавӣ ҷудо накунед, боқӣ мемонад.</string>
+    <string name="accounts_revoke_confirm">Ин дастрасии тақвими %1$s-ро бозхонд мекунад. Воридшавӣ бо %2$s то он даме ки шумо онро дар саҳифаи воридшавӣ ҷудо накунед, боқӣ мемонад.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Мавзӯи номаълум</string>
     <string name="system_documents_modified">Тағйирёфта</string>

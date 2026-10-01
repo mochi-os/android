@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">Polîtîkaya nepenîtiyê</string>
     <string name="settings_home_rules">Rêbaz</string>
     <string name="settings_home_terms">Mercên xizmetê</string>
-    <string name="account_passkeys_empty">Tu mifteyên gihîştinê tomarkirî nin.</string>
-    <string name="account_passkey_register_title">Mifteya gihîştinê zêde bike</string>
+    <string name="account_passkeys_empty">Tu passkey nehatine tomarkirin.</string>
+    <string name="account_passkey_register_title">Passkeyekê zêde bike</string>
     <string name="account_passkey_name_label">Nav (vebijarkî)</string>
     <string name="account_passkey_delete_message">\"%1$s\" êdî we têxe nake.</string>
     <string name="account_totp_enabled">Rastandêr çalakkirî ye.</string>
@@ -386,13 +386,13 @@
     <string name="accounts_field_topic">Mijar</string>
     <string name="accounts_field_secret">Veşariya îmzeyê</string>
     <string name="account_totp_open">Di sepana rastandinê de veke</string>
-    <string name="accounts_revoke">Gihîştinê betal bike</string>
+    <string name="accounts_revoke">Gihîştinê vekişîne</string>
     <string name="accounts_capability_calendar">Salname</string>
     <string name="accounts_capability_notify">Agahdarî</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Têketin</string>
     <string name="accounts_provider_caldav">Servera salnameyê</string>
-    <string name="accounts_revoke_confirm">Ev ê gihîştina salnameya %1$s betal bike. Têketina bi %2$s heta ku tu wê di rûpela Têketinê de venegirêdî dimîne.</string>
+    <string name="accounts_revoke_confirm">Ev ê gihîştina salnameya %1$s vekişîne. Têketina bi %2$s heta ku tu wê di rûpela Têketinê de venegirêdî dimîne.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Temaya nenas</string>
     <string name="system_documents_modified">Guhertî</string>

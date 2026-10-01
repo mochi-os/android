@@ -5,13 +5,13 @@
     <string name="settings_home_logout">Kaluar</string>
     <string name="settings_home_account">Akun</string>
     <string name="settings_home_preferences">Préferénsi</string>
-    <string name="settings_home_display">Tampilan</string>
+    <string name="settings_home_display">Layar</string>
     <string name="settings_home_notification_prefs">Preferénsi bewara</string>
     <string name="settings_home_accounts">Akun tersambung</string>
     <string name="settings_home_interests">Minat</string>
-    <string name="account_section_passkeys">Passkey</string>
-    <string name="account_passkey_register">Tambah passkey</string>
-    <string name="account_passkey_delete_title">Hapus passkey?</string>
+    <string name="account_section_passkeys">Konci akses</string>
+    <string name="account_passkey_register">Tambihkeun konci akses</string>
+    <string name="account_passkey_delete_title">Pupus konci akses?</string>
     <string name="account_section_totp">Aplikasi authenticator</string>
     <string name="account_totp_setup">Pasang authenticator</string>
     <string name="account_totp_setup_title">Pasang authenticator</string>
@@ -135,7 +135,7 @@
     <string name="system_settings_reset_title">Setel ulang ka baku?</string>
     <string name="system_setting_apps_install_user">Idinkeun pamaké masang aplikasi</string>
     <string name="system_setting_auth_email">Asup nganggo kode surélék</string>
-    <string name="system_setting_auth_passkey">Asup nganggo passkey</string>
+    <string name="system_setting_auth_passkey">Asup nganggo konci akses</string>
     <string name="system_setting_auth_totp">Asup nganggo aplikasi TOTP authenticator</string>
     <string name="system_setting_auth_recovery">Asup nganggo kode pamulihan</string>
     <string name="system_setting_auth_oauth">Asup nganggo OAuth 2.0</string>
@@ -205,8 +205,8 @@
     <string name="settings_home_privacy">Kawijakan privasi</string>
     <string name="settings_home_rules">Aturan</string>
     <string name="settings_home_terms">Sarat layanan</string>
-    <string name="account_passkeys_empty">Henteu aya passkey nu didaptarkeun.</string>
-    <string name="account_passkey_register_title">Tambihkeun passkey</string>
+    <string name="account_passkeys_empty">Henteu aya konci akses nu didaptarkeun.</string>
+    <string name="account_passkey_register_title">Tambihkeun konci akses</string>
     <string name="account_passkey_name_label">Ngaran (pilihan)</string>
     <string name="account_passkey_delete_message">\"%1$s\" moal ngasupkeun anjeun deui.</string>
     <string name="account_totp_enabled">Otentikator diaktipkeun.</string>
@@ -388,7 +388,7 @@
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Asup</string>
     <string name="accounts_provider_caldav">Server kalénder</string>
-    <string name="accounts_revoke_confirm">Ieu bakal ngabatalkeun aksés kalénder %1$s. Asup ku %2$s tetep aya nepi ka anjeun nyoplokkeun tumbuna dina kaca Asup.</string>
+    <string name="accounts_revoke_confirm">Ieu bakal nyabut aksés kalénder %1$s. Asup ku %2$s tetep aya nepi ka anjeun nyoplokkeun tumbuna dina kaca Asup.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Téma teu dipikawanoh</string>
     <string name="system_documents_modified">Dirobah</string>

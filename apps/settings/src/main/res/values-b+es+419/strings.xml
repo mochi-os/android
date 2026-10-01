@@ -8,8 +8,7 @@
     <string name="settings_home_accounts">Cuentas conectadas</string>
     <string name="settings_home_interests">Intereses</string>
     <string name="account_section_passkeys">Claves de acceso</string>
-    <string name="account_passkey_register">Añadir passkey</string>
-    <string name="account_passkey_delete_title">¿Eliminar passkey?</string>
+    <string name="account_passkey_register">Agregar clave de acceso</string>
     <string name="account_section_totp">App de autenticación</string>
     <string name="account_totp_setup">Configurar autenticador</string>
     <string name="account_totp_setup_title">Configurar autenticador</string>
@@ -205,8 +204,7 @@
     <string name="settings_home_privacy">Política de privacidad</string>
     <string name="settings_home_rules">Reglas</string>
     <string name="settings_home_terms">Términos del servicio</string>
-    <string name="account_passkeys_empty">No hay llaves de acceso registradas.</string>
-    <string name="account_passkey_register_title">Agregar una llave de acceso</string>
+    <string name="account_passkey_register_title">Agregar una clave de acceso</string>
     <string name="account_passkey_name_label">Nombre (opcional)</string>
     <string name="account_passkey_delete_message">\"%1$s\" ya no te permitirá iniciar sesión.</string>
     <string name="account_totp_enabled">La aplicación de autenticación está habilitada.</string>

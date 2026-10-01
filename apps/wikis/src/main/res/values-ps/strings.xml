@@ -22,16 +22,16 @@
     <string name="wikis_page_action_recent_changes">وروستي بدلونونه</string>
     <string name="wikis_page_action_new_page">نوې پاڼه</string>
     <string name="wikis_page_action_settings">تنظیمات</string>
-    <string name="wikis_page_action_unsubscribe">ګډون لغوه کول</string>
+    <string name="wikis_page_action_unsubscribe">له ګډون وتل</string>
     <string name="wikis_title">ویکي ګانې</string>
     <string name="wikis_empty_title">خپل لومړی wiki پیل کړئ</string>
     <string name="wikis_empty_subtitle">د ګډون لپاره د wiki لټون وکړئ، یا د خپلې اسنادو خپرولو لپاره یو جوړ کړئ.</string>
     <string name="wikis_create_button">ویکي جوړ کړئ</string>
     <string name="wikis_recommended_section">سپارښتل شوي wikis</string>
     <string name="wikis_subscribe_button">ګډون وکړئ</string>
-    <string name="wikis_unsubscribe_action">ګډون لغوه کول</string>
+    <string name="wikis_unsubscribe_action">له ګډون وتل</string>
     <string name="wikis_unsubscribing">ګډون لغوه کیږي…</string>
-    <string name="wikis_unsubscribe_confirm_title">ګډون لغوه کول</string>
+    <string name="wikis_unsubscribe_confirm_title">له ګډون وتل</string>
     <string name="wikis_unsubscribe_success">ګډون لغوه شو</string>
     <string name="wikis_subscribe_failed">د ګډون پاتې راغلل</string>
     <string name="wikis_rss_menu">RSS فیډ</string>
@@ -40,7 +40,7 @@
     <string name="wikis_rss_both">بدلونونه او تبصرې</string>
     <string name="wikis_rss_copied">د RSS URL کلیپبورډ ته کاپي شو</string>
     <string name="wikis_rss_failed">د RSS ټوکن ترلاسه کولو پاتې راغلل</string>
-    <string name="wikis_rss_revoke">لاسرسی لغوه کړئ</string>
+    <string name="wikis_rss_revoke">لاسرسی بیرته واخلئ</string>
     <string name="wikis_rss_revoked">د RSS لاسرسی لغوه شو</string>
     <string name="wikis_find_title">ویکیانه ومومئ</string>
     <string name="wikis_find_no_results">هیڅ wikis ونه موندل شوې</string>
@@ -230,7 +230,7 @@
     <string name="wikis_page_action_share">لینک</string>
     <string name="wikis_open_sidebar">د څنګ بار خلاص کړئ</string>
     <string name="wikis_search_placeholder">د wiki لټون…</string>
-    <string name="wikis_unsubscribe_confirm_message">ایا تاسو ډاډه یاست چې د %1$s ګډون لغوه کړئ؟</string>
+    <string name="wikis_unsubscribe_confirm_message">ایا تاسو ډاډه یاست چې د %1$s له ګډون ووځئ؟</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">د نوم، ID، ګوتنښې یا URL له مخې ولټوئ…</string>
     <string name="wikis_join_search_button">د wiki لټون…</string>

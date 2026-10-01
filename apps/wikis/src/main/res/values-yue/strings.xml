@@ -28,9 +28,9 @@
     <string name="wikis_replicas_remove_confirm_action">移除</string>
     <string name="wikis_open_sidebar">開啟側欄</string>
     <string name="wikis_editor_title_label">標題</string>
-    <string name="wikis_page_action_unsubscribe">取消訂閱</string>
-    <string name="wikis_unsubscribe_action">取消訂閱</string>
-    <string name="wikis_unsubscribe_confirm_title">取消訂閱</string>
+    <string name="wikis_page_action_unsubscribe">退訂</string>
+    <string name="wikis_unsubscribe_action">退訂</string>
+    <string name="wikis_unsubscribe_confirm_title">退訂</string>
     <string name="wikis_access_add_subject_label">用戶</string>
 
     <string name="launcher_wikis">Mochi Wiki</string>
@@ -67,8 +67,8 @@
     <string name="wikis_create_button">建立 wiki</string>
     <string name="wikis_search_placeholder">搜尋 wiki…</string>
     <string name="wikis_recommended_section">推薦 wiki</string>
-    <string name="wikis_unsubscribing">緊取消訂閱…</string>
-    <string name="wikis_unsubscribe_confirm_message">你確定要取消訂閱 %1$s 嗎?</string>
+    <string name="wikis_unsubscribing">緊退訂…</string>
+    <string name="wikis_unsubscribe_confirm_message">你確定要退訂 %1$s 嗎?</string>
     <string name="wikis_unsubscribe_success">已取消訂閱</string>
     <string name="wikis_subscribe_failed">訂閱失敗</string>
     <string name="wikis_rss_menu">RSS 訊息來源</string>

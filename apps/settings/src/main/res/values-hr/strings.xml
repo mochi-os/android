@@ -9,9 +9,9 @@
     <string name="settings_home_notification_prefs">Postavke obavijesti</string>
     <string name="settings_home_accounts">Povezani računi</string>
     <string name="settings_home_interests">Interesi</string>
-    <string name="account_section_passkeys">Passkeyevi</string>
-    <string name="account_passkey_register">Dodaj passkey</string>
-    <string name="account_passkey_delete_title">Obrisati passkey?</string>
+    <string name="account_section_passkeys">Pristupni ključevi</string>
+    <string name="account_passkey_register">Dodaj pristupni ključ</string>
+    <string name="account_passkey_delete_title">Obrisati pristupni ključ?</string>
     <string name="account_section_totp">Aplikacija autentifikatora</string>
     <string name="account_totp_setup">Postavi autentifikator</string>
     <string name="account_totp_setup_title">Postavi autentifikator</string>

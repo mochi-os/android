@@ -33,10 +33,10 @@
     <string name="crm_settings_tab_people">Jaqinaka</string>
     <string name="crm_option_icon">Icono</string>
     <string name="crm_option_icon_placeholder">kunjamati. Check, Star, Flag</string>
-    <string name="crm_settings_unsubscribe">Suscripción jaytaña</string>
+    <string name="crm_settings_unsubscribe">Suscripción apaqaña</string>
     <string name="crm_settings_delete_crm">CRM chhaqtayaña</string>
     <string name="crm_settings_delete_confirm_title">CRM chhaqtayaña</string>
-    <string name="crm_settings_unsubscribe_title">Suscripción jaytaña</string>
+    <string name="crm_settings_unsubscribe_title">Suscripción apaqaña</string>
     <string name="crm_settings_unsubscribe_message">Chiqpach aka CRMt mistuña munta?</string>
     <string name="crm_access_level_owner">Dueño</string>
     <string name="crm_object_watch">Uñch\'ukita</string>

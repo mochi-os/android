@@ -40,7 +40,7 @@
     <string name="discovery_recommended">מומלץ</string>
     <string name="access_add_rule">הוסף כלל</string>
     <string name="access_owner">בעלים</string>
-    <string name="access_revoke">בטל</string>
+    <string name="access_revoke">שלול</string>
     <string name="access_level_comment">הגב</string>
     <string name="access_level_view">הצג</string>
     <string name="access_level_none">ללא</string>
@@ -301,9 +301,9 @@
     <string name="format_code">קוד</string>
     <string name="format_list">רשימת תבליטים</string>
     <string name="common_preview">תצוגה מקדימה</string>
-    <string name="rss_revoke_confirm">בטל</string>
-    <string name="rss_revoke">בטל גישה</string>
-    <string name="rss_revoke_title">לבטל את הגישה ל-RSS?</string>
+    <string name="rss_revoke_confirm">שלול</string>
+    <string name="rss_revoke">שלול גישה</string>
+    <string name="rss_revoke_title">לשלול את הגישה ל-RSS?</string>
     <string name="rss_revoke_message">כל מה שרשום להזנה הזו יפסיק לקבל אותה. אפשר להעתיק כתובת חדשה לאחר מכן.</string>
     <string name="rss_revoked">גישת RSS בוטלה</string>
     <string name="rss_revoke_failed">ביטול גישת RSS נכשל</string>

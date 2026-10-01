@@ -40,7 +40,7 @@
     <string name="discovery_recommended">ભલામણ કરેલ</string>
     <string name="access_add_rule">નિયમ ઉમેરો</string>
     <string name="access_owner">માલિક</string>
-    <string name="access_revoke">રદ કરો</string>
+    <string name="access_revoke">પાછું ખેંચો</string>
     <string name="access_level_comment">ટિપ્પણી કરો</string>
     <string name="access_level_view">જુઓ</string>
     <string name="access_level_none">કોઈ નહીં</string>
@@ -299,9 +299,9 @@
     <string name="format_code">કોડ</string>
     <string name="format_list">બુલેટ યાદી</string>
     <string name="common_preview">પ્રિવ્યૂ</string>
-    <string name="rss_revoke_confirm">રદ કરો</string>
-    <string name="rss_revoke">ઍક્સેસ રદ કરો</string>
-    <string name="rss_revoke_title">RSS ઍક્સેસ રદ કરવો છે?</string>
+    <string name="rss_revoke_confirm">પાછું ખેંચો</string>
+    <string name="rss_revoke">ઍક્સેસ પાછું ખેંચો</string>
+    <string name="rss_revoke_title">RSS ઍક્સેસ પાછું ખેંચવું છે?</string>
     <string name="rss_revoke_message">આ ફીડ પર સબ્સ્ક્રાઇબ થયેલું બધું તે મળવાનું બંધ કરશે. પછી તમે નવું URL કૉપિ કરી શકો છો.</string>
     <string name="rss_revoked">RSS ઍક્સેસ રદ કરી</string>
     <string name="rss_revoke_failed">RSS ઍક્સેસ રદ કરવામાં નિષ્ફળ</string>

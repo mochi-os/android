@@ -40,11 +40,11 @@
     <string name="projects_settings_tab_people">사람</string>
     <string name="projects_option_icon">아이콘</string>
     <string name="projects_option_icon_placeholder">예: Check, Star, Flag</string>
-    <string name="projects_settings_unsubscribe">구독 취소</string>
+    <string name="projects_settings_unsubscribe">구독 해지</string>
     <string name="projects_settings_delete_project">프로젝트 삭제</string>
     <string name="projects_settings_delete_confirm_title">프로젝트 삭제</string>
-    <string name="projects_settings_unsubscribe_title">구독 취소</string>
-    <string name="projects_settings_unsubscribe_message">이 프로젝트 구독을 취소할까요?</string>
+    <string name="projects_settings_unsubscribe_title">구독 해지</string>
+    <string name="projects_settings_unsubscribe_message">이 프로젝트 구독을 해지할까요?</string>
     <string name="projects_access_level_owner">소유자</string>
     <string name="projects_object_watch">관찰</string>
     <string name="projects_object_tab_properties">속성</string>

@@ -33,11 +33,11 @@
     <string name="crm_settings_tab_people">聯絡人</string>
     <string name="crm_option_icon">圖示</string>
     <string name="crm_option_icon_placeholder">例如 Check, Star, Flag</string>
-    <string name="crm_settings_unsubscribe">取消訂閱</string>
+    <string name="crm_settings_unsubscribe">退訂</string>
     <string name="crm_settings_delete_crm">刪除 CRM</string>
     <string name="crm_settings_delete_confirm_title">刪除 CRM</string>
-    <string name="crm_settings_unsubscribe_title">取消訂閱</string>
-    <string name="crm_settings_unsubscribe_message">您確定要取消訂閱此 CRM 嗎?</string>
+    <string name="crm_settings_unsubscribe_title">退訂</string>
+    <string name="crm_settings_unsubscribe_message">您確定要退訂此 CRM 嗎?</string>
     <string name="crm_access_level_owner">擁有者</string>
     <string name="crm_object_watch">關注</string>
     <string name="crm_object_tab_properties">屬性</string>

@@ -6,8 +6,8 @@
     <string name="forums_list_title">Fóra</string>
     <string name="forums_list_find">Najít fóra</string>
     <string name="forums_list_logout">Odhlásit se</string>
-    <string name="forums_list_unsubscribe">Zrušit odběr</string>
-    <string name="forums_list_unsubscribe_title">Zrušit odběr</string>
+    <string name="forums_list_unsubscribe">Odhlásit odběr</string>
+    <string name="forums_list_unsubscribe_title">Odhlásit odběr</string>
     <string name="forums_create_title">Vytvořit fórum</string>
     <string name="forums_create_name">Název fóra</string>
     <string name="forums_create_privacy">Soukromí</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">Štítkování</string>
     <string name="forums_ai_account_default">Výchozí účet</string>
     <string name="forums_ai_prompt_reset">Obnovit na výchozí</string>
-    <string name="forums_settings_unsubscribe">Zrušit odběr</string>
+    <string name="forums_settings_unsubscribe">Odhlásit odběr</string>
     <string name="forums_moderation_title">Moderování</string>
     <string name="forums_moderation_tab_queue">Fronta</string>
     <string name="forums_moderation_tab_reports">Hlášení</string>

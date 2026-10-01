@@ -20,7 +20,7 @@
     <string name="account_section_recovery">रिकवरी कोड्स</string>
     <string name="account_recovery_codes_title">रिकवरी कोड्स</string>
     <string name="sessions_unknown_agent">अज्ञात डिवाइस</string>
-    <string name="sessions_revoke_title">सेशन रद्द करें?</string>
+    <string name="sessions_revoke_title">सेशन वापस लें?</string>
     <string name="account_section_oauth">तृतीय-पक्ष लॉगिन</string>
     <string name="account_oauth_link">खाता लिंक करें</string>
     <string name="account_unlink">अनलिंक करें</string>
@@ -29,7 +29,7 @@
     <string name="account_done">पूर्ण</string>
     <string name="account_delete">हटाएँ</string>
     <string name="account_rename">नाम बदलें</string>
-    <string name="sessions_revoke">रद्द करें</string>
+    <string name="sessions_revoke">वापस लें</string>
     <string name="account_disable">अक्षम करें</string>
     <string name="account_copy">कॉपी करें</string>
     <string name="account_copy_all">सब कॉपी करें</string>
@@ -181,8 +181,8 @@
     <string name="system_users_delete_title">उपयोगकर्ता हटाएँ?</string>
     <string name="system_users_manage_sessions">सेशन्स प्रबंधित करें</string>
     <string name="system_users_sessions_empty">इस यूज़र के पास कोई सक्रिय सेशन नहीं है।</string>
-    <string name="system_users_revoke">रद्द करें</string>
-    <string name="system_users_revoke_all">सभी सत्रों को निरस्त करें</string>
+    <string name="system_users_revoke">वापस लें</string>
+    <string name="system_users_revoke_all">सभी सत्र वापस लें</string>
     <string name="system_users_unknown_browser">अज्ञात ब्राउज़र</string>
     <string name="system_users_unknown">अज्ञात</string>
     <string name="system_users_previous">पिछला</string>
@@ -265,7 +265,7 @@
     <string name="system_users_delete_message">यह स्थायी रूप से उपयोगकर्ता \"%1$s\" को हटा देगा। यह क्रिया पूर्ववत नहीं की जा सकती।</string>
     <string name="system_users_sessions_title">%1$s के लिए सत्र</string>
     <string name="system_users_session_last_accessed">अंतिम पहुंच: %1$s</string>
-    <string name="system_users_revoke_all_title">सभी सत्र निरस्त करें?</string>
+    <string name="system_users_revoke_all_title">सभी सत्र वापस लें?</string>
     <string name="system_users_revoke_all_message">इस उपयोगकर्ता के सभी सक्रिय सत्र साइन आउट हो जाएंगे।</string>
     <plurals name="system_users_pagination_status">
         <item quantity="one">%3$d उपयोगकर्ता में से %1$d–%2$d दिखाए जा रहे हैं</item>
@@ -386,13 +386,13 @@
     <string name="accounts_field_topic">विषय</string>
     <string name="accounts_field_secret">हस्ताक्षर गुप्त कुंजी</string>
     <string name="account_totp_open">प्रमाणक ऐप में खोलें</string>
-    <string name="accounts_revoke">पहुँच रद्द करें</string>
+    <string name="accounts_revoke">पहुँच वापस लें</string>
     <string name="accounts_capability_calendar">कैलेंडर</string>
     <string name="accounts_capability_notify">नोटिफ़िकेशन</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">साइन-इन</string>
     <string name="accounts_provider_caldav">कैलेंडर सर्वर</string>
-    <string name="accounts_revoke_confirm">इससे %1$s का कैलेंडर एक्सेस रद्द हो जाएगा। %2$s से साइन-इन तब तक बना रहेगा जब तक आप लॉगिन पेज पर इसे अनलिंक नहीं करते।</string>
+    <string name="accounts_revoke_confirm">इससे %1$s का कैलेंडर एक्सेस वापस ले लिया जाएगा। %2$s से साइन-इन तब तक बना रहेगा जब तक आप लॉगिन पेज पर इसे अनलिंक नहीं करते।</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">अज्ञात थीम</string>
     <string name="system_documents_modified">संशोधित</string>

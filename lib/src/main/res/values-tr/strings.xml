@@ -40,7 +40,7 @@
     <string name="discovery_recommended">Önerilen</string>
     <string name="access_add_rule">Kural ekle</string>
     <string name="access_owner">Sahip</string>
-    <string name="access_revoke">İptal et</string>
+    <string name="access_revoke">Geçersiz kıl</string>
     <string name="access_level_comment">Yorum yap</string>
     <string name="access_level_view">Görüntüle</string>
     <string name="access_level_none">Yok</string>
@@ -299,9 +299,9 @@
     <string name="format_code">Kod</string>
     <string name="format_list">Madde işaretli liste</string>
     <string name="common_preview">Önizleme</string>
-    <string name="rss_revoke_confirm">İptal et</string>
-    <string name="rss_revoke">Erişimi iptal et</string>
-    <string name="rss_revoke_title">RSS erişimi iptal edilsin mi?</string>
+    <string name="rss_revoke_confirm">Geçersiz kıl</string>
+    <string name="rss_revoke">Erişimi kaldır</string>
+    <string name="rss_revoke_title">RSS erişimi geçersiz kılınsın mı?</string>
     <string name="rss_revoke_message">Bu akışa abone olan her şey almayı durduracak. Sonrasında yeni bir URL kopyalayabilirsiniz.</string>
     <string name="rss_revoked">RSS erişimi iptal edildi</string>
     <string name="rss_revoke_failed">RSS erişimi iptal edilemedi</string>

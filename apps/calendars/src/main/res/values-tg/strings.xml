@@ -29,7 +29,7 @@
     <string name="calendars_day_friday">Ҷумъа</string>
     <string name="calendars_day_saturday">Шанбе</string>
     <string name="calendars_link_replace">Иваз кардан</string>
-    <string name="calendars_link_revoke">Бекор кардан</string>
+    <string name="calendars_link_revoke">Бозхонд кардан</string>
     <string name="calendars_permission_allow">Иҷозат додан</string>
     <string name="calendars_permission_deny">Рад кардан</string>
     <string name="calendars_sync_title">Ҳамоҳангсозӣ бо ин телефон</string>
@@ -189,6 +189,6 @@
     <string name="calendars_span_day">%1$s, аз %2$s то %3$s</string>
     <string name="calendars_polled_current">Тақвим навтарин аст</string>
     <string name="calendars_polled_synced">Тақвим ҳамоҳанг шуд</string>
-    <string name="calendars_link_revoke_title">Суроғаи тақвим бекор карда шавад?</string>
+    <string name="calendars_link_revoke_title">Суроғаи тақвим бозхонд карда шавад?</string>
     <string name="calendars_link_revoke_message">Тақвимҳое, ки ба ин суроға обуна шудаанд, дигар навсозӣ намешаванд.</string>
 </resources>

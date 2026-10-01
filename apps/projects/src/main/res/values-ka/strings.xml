@@ -40,11 +40,11 @@
     <string name="projects_settings_tab_people">ადამიანები</string>
     <string name="projects_option_icon">ხატულა</string>
     <string name="projects_option_icon_placeholder">მაგალითად. Check, Star, Flag</string>
-    <string name="projects_settings_unsubscribe">გამოწერის გაუქმება</string>
+    <string name="projects_settings_unsubscribe">გამოწერის შეწყვეტა</string>
     <string name="projects_settings_delete_project">პროექტის წაშლა</string>
     <string name="projects_settings_delete_confirm_title">პროექტის წაშლა</string>
-    <string name="projects_settings_unsubscribe_title">გამოწერის გაუქმება</string>
-    <string name="projects_settings_unsubscribe_message">დარწმუნებული ხართ, რომ გსურთ ამ პროექტიდან გამოწერის გაუქმება?</string>
+    <string name="projects_settings_unsubscribe_title">გამოწერის შეწყვეტა</string>
+    <string name="projects_settings_unsubscribe_message">დარწმუნებული ხართ, რომ გსურთ ამ პროექტიდან გამოწერის შეწყვეტა?</string>
     <string name="projects_access_level_owner">მფლობელი</string>
     <string name="projects_object_watch">თვალყურის დევნება</string>
     <string name="projects_object_tab_properties">თვისებები</string>

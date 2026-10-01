@@ -29,7 +29,7 @@
     <string name="calendars_day_friday">Juma</string>
     <string name="calendars_day_saturday">Shanba</string>
     <string name="calendars_link_replace">Almashtirish</string>
-    <string name="calendars_link_revoke">Bekor qilish</string>
+    <string name="calendars_link_revoke">Qaytarib olish</string>
     <string name="calendars_permission_allow">Ruxsat berish</string>
     <string name="calendars_permission_deny">Rad etish</string>
     <string name="calendars_sync_title">Bu telefon bilan sinxronlash</string>
@@ -189,6 +189,6 @@
     <string name="calendars_span_day">%1$s, %2$s – %3$s</string>
     <string name="calendars_polled_current">Kalendar yangilangan</string>
     <string name="calendars_polled_synced">Kalendar sinxronlandi</string>
-    <string name="calendars_link_revoke_title">Kalendar manzili bekor qilinsinmi?</string>
+    <string name="calendars_link_revoke_title">Kalendar manzili qaytarib olinsinmi?</string>
     <string name="calendars_link_revoke_message">Bu manzilga obuna boʻlgan kalendarlar endi yangilanmaydi.</string>
 </resources>

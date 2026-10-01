@@ -40,7 +40,7 @@
     <string name="discovery_recommended">सुझाया गया</string>
     <string name="access_add_rule">नियम जोड़ें</string>
     <string name="access_owner">स्वामी</string>
-    <string name="access_revoke">रद्द करें</string>
+    <string name="access_revoke">वापस लें</string>
     <string name="access_level_comment">टिप्पणी करें</string>
     <string name="access_level_view">देखें</string>
     <string name="access_level_none">कोई नहीं</string>
@@ -299,9 +299,9 @@
     <string name="format_code">कोड</string>
     <string name="format_list">बुलेट सूची</string>
     <string name="common_preview">प्रीव्यू</string>
-    <string name="rss_revoke_confirm">रद्द करें</string>
-    <string name="rss_revoke">पहुँच रद्द करें</string>
-    <string name="rss_revoke_title">RSS पहुँच रद्द करें?</string>
+    <string name="rss_revoke_confirm">वापस लें</string>
+    <string name="rss_revoke">पहुँच वापस लें</string>
+    <string name="rss_revoke_title">RSS पहुँच वापस लें?</string>
     <string name="rss_revoke_message">इस फ़ीड की सदस्यता लेने वाली हर चीज़ इसे मिलना बंद हो जाएगी। बाद में आप नया URL कॉपी कर सकते हैं।</string>
     <string name="rss_revoked">RSS पहुँच रद्द की गई</string>
     <string name="rss_revoke_failed">RSS पहुँच रद्द करने में विफल</string>

@@ -152,7 +152,6 @@
     <string name="auth_next">Siguiente</string>
     <string name="auth_or_log_in_with">O inicia sesión con</string>
     <string name="auth_passkey">Clave de acceso</string>
-    <string name="auth_use_passkey">Usa una llave de acceso</string>
     <string name="auth_email_me_a_code">Envíame un código por correo</string>
     <string name="auth_or_enter_authenticator_code">O ingresa el código del autenticador</string>
     <string name="auth_log_in">Iniciar sesión</string>
@@ -230,14 +229,13 @@
     <string name="stepup_email_placeholder">Ingresa el código de tu correo electrónico</string>
     <string name="stepup_totp_label">Código del autenticador</string>
     <string name="stepup_totp_placeholder">Ingresa el código de tu aplicación de autenticación</string>
-    <string name="stepup_use_passkey">Usa tu llave de acceso</string>
     <string name="stepup_send_email">Enviar correo</string>
     <string name="stepup_resend_email">Reenviar correo</string>
     <string name="stepup_verify">Verificar</string>
     <string name="stepup_continue_with">Continuar con %1$s</string>
     <string name="stepup_error_start">No se pudo iniciar la reautenticación. Inténtalo de nuevo.</string>
     <string name="stepup_error_code">Ese código es incorrecto o expiró.</string>
-    <string name="stepup_error_passkey">Falló la verificación con la llave de acceso. Inténtalo de nuevo.</string>
+    <string name="stepup_error_passkey">Falló la verificación con la clave de acceso. Inténtalo de nuevo.</string>
     <string name="stepup_error_oauth">No se pudo verificar con esa cuenta. Vuelve a intentarlo.</string>
     <string name="game_system_resign">%1$s abandonó</string>
     <string name="game_system_draw_offer">%1$s ofreció tablas</string>

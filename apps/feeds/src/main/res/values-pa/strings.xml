@@ -166,7 +166,7 @@
     <string name="feeds_settings_field_server">ਸਰਵਰ</string>
     <string name="feeds_settings_name_edit_cd">ਨਾਮ ਸੰਪਾਦਿਤ ਕਰੋ</string>
     <string name="feeds_settings_section_identity">ਪਛਾਣ</string>
-    <string name="feeds_unsubscribe">ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
+    <string name="feeds_unsubscribe">ਗਾਹਕੀ ਖਤਮ ਕਰੋ</string>
     <string name="feeds_unsubscribed">ਗਾਹਕੀ ਰੱਦ ਕੀਤੀ</string>
     <string name="feeds_access_level_comment_full">ਟਿੱਪਣੀ ਕਰੋ, ਪ੍ਰਤੀਕਿਰਿਆ ਦਿਓ ਅਤੇ ਦੇਖੋ</string>
     <string name="feeds_rss_mode_posts_comments">ਪੋਸਟਾਂ ਅਤੇ ਟਿੱਪਣੀਆਂ</string>
@@ -176,7 +176,7 @@
     <string name="feeds_post_content">ਪੋਸਟ ਸਮੱਗਰੀ</string>
     <string name="feeds_enable_memories">ਯਾਦਾਂ ਨੂੰ ਸਮਰੱਥ ਕਰੋ</string>
     <string name="feeds_permission_request_title">ਇਜਾਜ਼ਤ ਬੇਨਤੀ</string>
-    <string name="feeds_unsubscribe_confirm">ਫੀਡ ਤੋਂ ਅਨਸਬਸਕ੍ਰਾਈਬ ਕਰਨਾ ਹੈ?</string>
+    <string name="feeds_unsubscribe_confirm">ਫੀਡ ਤੋਂ ਗਾਹਕੀ ਖਤਮ ਕਰਨੀ ਹੈ?</string>
     <string name="feeds_settings_title">%1$s ਸੈਟਿੰਗਾਂ</string>
     <string name="feeds_source_transform_help">ਲਿਸਟਿੰਗ ID</string>
     <string name="feeds_settings_name_cancel_cd">ਸੋਧਣਾ ਰੱਦ ਕਰੋ</string>

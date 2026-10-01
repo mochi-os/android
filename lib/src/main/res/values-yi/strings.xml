@@ -40,7 +40,7 @@
     <string name="discovery_recommended">רעקאָמענדירט</string>
     <string name="access_add_rule">צוגעבן כלל</string>
     <string name="access_owner">אייגנטימער</string>
-    <string name="access_revoke">אָפּזאָגן</string>
+    <string name="access_revoke">צוריקנעמען</string>
     <string name="access_level_comment">קאָמענטיר</string>
     <string name="access_level_view">באַקוקן</string>
     <string name="access_level_none">קיינס</string>
@@ -146,7 +146,7 @@
     <string name="auth_next">ווײַטער</string>
     <string name="auth_or_log_in_with">אָדער אַרײַנגײן מיט</string>
     <string name="auth_passkey">פּאַסקיי</string>
-    <string name="auth_use_passkey">ניצט אַ דורכשליסל</string>
+    <string name="auth_use_passkey">ניצט אַ פּאַסקיי</string>
     <string name="auth_email_me_a_code">שיקט מיר אַ קאָד אױף בליצפּאָסט</string>
     <string name="auth_or_enter_authenticator_code">אָדער גיט אַרײַן דעם אויטענטיפֿיקאַטאָר־קאָד</string>
     <string name="auth_log_in">אַרײַנקומען</string>
@@ -299,9 +299,9 @@
     <string name="format_code">קאָד</string>
     <string name="format_list">רשימה מיט פּינטלעך</string>
     <string name="common_preview">פֿאָרזע</string>
-    <string name="rss_revoke_confirm">אָפּזאָגן</string>
+    <string name="rss_revoke_confirm">צוריקנעמען</string>
     <string name="rss_revoke">רופֿט צוריק צוטריט</string>
-    <string name="rss_revoke_title">אַנולירן RSS צוטריט?</string>
+    <string name="rss_revoke_title">צוריקנעמען RSS צוטריט?</string>
     <string name="rss_revoke_message">אַלץ וואָס איז אַבאָנירט אויף דעם פֿיד וועט אויפֿהערן עס צו באַקומען. איר קענט קאָפּירן אַ נייַעם URL דערנאָך.</string>
     <string name="rss_revoked">RSS צוטריט צוריקגערופֿן</string>
     <string name="rss_revoke_failed">דורכפֿאַל צו רופֿן צוריק RSS צוטריט</string>

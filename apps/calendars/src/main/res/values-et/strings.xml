@@ -29,7 +29,7 @@
     <string name="calendars_day_friday">Reede</string>
     <string name="calendars_day_saturday">Laupäev</string>
     <string name="calendars_link_replace">Asenda</string>
-    <string name="calendars_link_revoke">Tühista</string>
+    <string name="calendars_link_revoke">Võta ära</string>
     <string name="calendars_permission_allow">Luba</string>
     <string name="calendars_permission_deny">Keeldu</string>
     <string name="calendars_sync_title">Sünkroniseeri selle telefoniga</string>
@@ -189,6 +189,6 @@
     <string name="calendars_span_day">%1$s, %2$s kuni %3$s</string>
     <string name="calendars_polled_current">Kalender on ajakohane</string>
     <string name="calendars_polled_synced">Kalender sünkroniseeritud</string>
-    <string name="calendars_link_revoke_title">Kas tühistada kalendri aadress?</string>
+    <string name="calendars_link_revoke_title">Kas võtta kalendri aadress ära?</string>
     <string name="calendars_link_revoke_message">Selle aadressi tellinud kalendrid ei uuene enam.</string>
 </resources>

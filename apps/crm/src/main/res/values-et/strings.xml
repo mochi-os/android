@@ -33,10 +33,10 @@
     <string name="crm_settings_tab_people">Inimesed</string>
     <string name="crm_option_icon">Ikoon</string>
     <string name="crm_option_icon_placeholder">näiteks Check, Star, Flag</string>
-    <string name="crm_settings_unsubscribe">Tühista tellimus</string>
+    <string name="crm_settings_unsubscribe">Loobu tellimusest</string>
     <string name="crm_settings_delete_crm">Kustuta CRM</string>
     <string name="crm_settings_delete_confirm_title">Kustuta CRM</string>
-    <string name="crm_settings_unsubscribe_title">Tühista tellimus</string>
+    <string name="crm_settings_unsubscribe_title">Loobu tellimusest</string>
     <string name="crm_settings_unsubscribe_message">Kas oled kindel, et soovid sellest CRM-ist lahti tellida?</string>
     <string name="crm_access_level_owner">Omanik</string>
     <string name="crm_object_watch">Jälgi</string>

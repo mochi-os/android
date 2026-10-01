@@ -189,6 +189,6 @@
     <string name="calendars_span_day">%1$s, %2$s-ից մինչև %3$s</string>
     <string name="calendars_polled_current">Օրացույցը թարմ է</string>
     <string name="calendars_polled_synced">Օրացույցը համաժամանակեցվեց</string>
-    <string name="calendars_link_revoke_title">Չեղարկե՞լ օրացույցի հասցեն</string>
+    <string name="calendars_link_revoke_title">Հետ վերցնե՞լ օրացույցի հասցեն</string>
     <string name="calendars_link_revoke_message">Այս հասցեին բաժանորդագրված օրացույցներն այլևս չեն թարմացվի։</string>
 </resources>

@@ -89,7 +89,7 @@
     <string name="calendars_event_delete_message">การดำเนินการนี้ย้อนกลับไม่ได้</string>
     <string name="calendars_scope_edit">เปลี่ยนเฉพาะกิจกรรมนี้หรือทุกกิจกรรม</string>
     <string name="calendars_scope_delete">ลบเฉพาะกิจกรรมนี้หรือทุกกิจกรรม</string>
-    <string name="calendars_scope_one">กิจกรรมนี้</string>
+    <string name="calendars_scope_one">เฉพาะกิจกรรมนี้</string>
     <string name="calendars_scope_all">กิจกรรมทั้งหมด</string>
     <string name="calendars_repeat_daily">รายวัน</string>
     <string name="calendars_repeat_weekly">รายสัปดาห์</string>
