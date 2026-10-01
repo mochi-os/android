@@ -7,6 +7,7 @@ package org.mochios.calendars.ui.calendar
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -21,7 +22,7 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.FilterChip
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -60,10 +61,10 @@ private const val ROWS = 6
 /**
  * The date picker that drops down under the toolbar's title, as in Google
  * Calendar: a small month that swipes to the months either side, and a row of
- * month chips under it. A tap on a day calls [onPick] with it, and a tap on a
- * chip with that month's first day; the panel stays open, so several dates can
- * be looked at in turn. [anchor] is circled and
- * its month shown whenever it moves; [today] is in the primary colour;
+ * month chips under it, with each year's number before its January. A tap
+ * on a day calls [onPick] with it, and a tap on a chip with that month's first
+ * day; the panel stays open, so several dates can be looked at in turn.
+ * [anchor] is circled and its month shown whenever it moves; [today] is in the primary colour;
  * [weekStart] counts Sunday 0 to Saturday 6.
  */
 @Composable
@@ -120,34 +121,34 @@ fun DatePanel(
         LazyRow(
             state = chips,
             contentPadding = PaddingValues(horizontal = 8.dp),
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
             modifier = Modifier.fillMaxWidth(),
         ) {
             items(2 * CHIP_REACH + 1) { index ->
                 val month = base.plusMonths((index - CHIP_REACH).toLong())
                 val current = month == shown
-                val label = month.month.getDisplayName(TextStyle.SHORT, locale) +
-                    if (month.year != shown.year || month.monthValue == 1) " ${month.year}" else ""
-                Text(
-                    text = label,
-                    style = MaterialTheme.typography.labelLarge,
-                    fontWeight = if (current) FontWeight.Bold else FontWeight.Normal,
-                    color = if (current) {
-                        MaterialTheme.colorScheme.onSecondaryContainer
-                    } else {
-                        MaterialTheme.colorScheme.onSurfaceVariant
-                    },
-                    modifier = Modifier
-                        .clip(RoundedCornerShape(50))
-                        .then(
-                            if (current) {
-                                Modifier.background(MaterialTheme.colorScheme.secondaryContainer)
-                            } else {
-                                Modifier
-                            },
+                Row(
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    if (month.monthValue == 1) {
+                        Text(
+                            text = month.year.toString(),
+                            style = MaterialTheme.typography.labelLarge,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
-                        .clickable { onPick(month.atDay(1)) }
-                        .padding(horizontal = 12.dp, vertical = 6.dp),
-                )
+                    }
+                    FilterChip(
+                        selected = current,
+                        onClick = { onPick(month.atDay(1)) },
+                        label = {
+                            Text(
+                                text = month.month.getDisplayName(TextStyle.SHORT, locale),
+                                fontWeight = if (current) FontWeight.Bold else FontWeight.Normal,
+                            )
+                        },
+                    )
+                }
             }
         }
     }
