@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -64,6 +65,7 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
@@ -490,13 +492,24 @@ private fun View(
             }
         }
 
-        HorizontalPager(state = pager, modifier = Modifier.fillMaxSize()) { page ->
-            val shown = if (page == target) {
-                state
-            } else {
-                state.copy(anchor = step(state.view, base, page - SWIPE_CENTRE))
+        val timed = state.view == CalendarsSection.DAY || state.view == CalendarsSection.WEEK
+        var top by remember { mutableStateOf(0.dp) }
+        Row(modifier = Modifier.fillMaxSize()) {
+            if (timed) {
+                HourGutter(top, scroll)
             }
-            Page(shown, viewModel, selected, scroll, onOpen, onNewEvent, onMove, onMoveDay)
+            HorizontalPager(state = pager, modifier = Modifier.weight(1f).fillMaxHeight()) { page ->
+                val shown = if (page == target) {
+                    state
+                } else {
+                    state.copy(anchor = step(state.view, base, page - SWIPE_CENTRE))
+                }
+                Page(shown, viewModel, selected, scroll, onOpen, onNewEvent, onMove, onMoveDay) { offset ->
+                    if (page == pager.currentPage) {
+                        top = offset
+                    }
+                }
+            }
         }
     }
 }
@@ -512,6 +525,7 @@ private const val SWIPE_CENTRE = SWIPE_PAGES / 2
  * with [selected] tinted. [scroll] is the time grid's vertical position. [onMove] is a block dragged
  * or resized in a time grid, with the occurrence's new ends; [onMoveDay] a
  * chip dropped on a day in a month grid, with the occurrence's new first day.
+ * [onTop] is how far down a time grid's hours start, for the hour gutter.
  */
 @Composable
 private fun Page(
@@ -523,6 +537,7 @@ private fun Page(
     onNewEvent: (Long, Boolean?) -> Unit,
     onMove: (Instance, Long, Long) -> Unit,
     onMoveDay: (Instance, LocalDate) -> Unit,
+    onTop: (Dp) -> Unit = {},
 ) {
     // A tap on a cell names a day and, in a time grid, an hour; the editor
     // wants the moment, measured in the user's own zone rather than the
@@ -541,6 +556,7 @@ private fun Page(
             onMove = onMove,
             scroll = scroll,
             selected = selected,
+            onTop = onTop,
         )
         CalendarsSection.WEEK -> {
             TimeGrid(
@@ -553,6 +569,7 @@ private fun Page(
                 scroll = scroll,
                 stacked = true,
                 selected = selected,
+                onTop = onTop,
             )
         }
         CalendarsSection.MULTIWEEK -> MonthGrid(

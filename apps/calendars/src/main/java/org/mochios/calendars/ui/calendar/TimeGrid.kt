@@ -18,6 +18,7 @@ import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -35,6 +36,7 @@ import androidx.compose.material.icons.outlined.History
 import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.material.icons.outlined.Repeat
 import androidx.compose.material.icons.outlined.RepeatOne
+import androidx.compose.material3.DividerDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -67,6 +69,7 @@ import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.LayoutCoordinates
 import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.layout.positionInParent
 import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalDensity
@@ -183,6 +186,11 @@ private data class Drop(val day: LocalDate, val cut: Cut, val start: Long, val f
  *
  * With [stacked], each column header puts the weekday above the day number,
  * as the week view does; otherwise it reads on one line, as in the day view.
+ *
+ * The hour labels are not part of the grid: [HourGutter] draws them beside
+ * the pager, so a swipe moves the days and leaves the hours where they are.
+ * [onTop] is told how far down the grid its hours start, below the headings
+ * and the all-day band, for the gutter to line up with.
  */
 @Composable
 fun TimeGrid(
@@ -195,8 +203,8 @@ fun TimeGrid(
     scroll: ScrollState,
     stacked: Boolean = false,
     selected: Instance? = null,
+    onTop: (Dp) -> Unit = {},
 ) {
-    val format = LocalFormat.current
     val today = LocalDate.now(viewModel.timezone())
     val columns = LocalConfiguration.current.screenWidthDp.dp - GUTTER
     val width = columns / days.size.coerceAtLeast(1)
@@ -266,7 +274,6 @@ fun TimeGrid(
 
     Column(modifier = Modifier.fillMaxSize()) {
         Row(modifier = Modifier.fillMaxWidth()) {
-            Spacer(Modifier.width(GUTTER))
             for (day in days) {
                 DayHeading(day, today, width, stacked, Modifier.clickable { viewModel.open(day) })
             }
@@ -277,22 +284,13 @@ fun TimeGrid(
             modifier = Modifier
                 .fillMaxWidth()
                 .weight(1f)
-                .onGloballyPositioned { viewport = it.rectInRoot() }
+                .onGloballyPositioned { coordinates ->
+                    viewport = coordinates.rectInRoot()
+                    onTop(with(density) { coordinates.positionInParent().y.toDp() })
+                }
                 .verticalScroll(scroll),
         ) {
             Row(modifier = Modifier.fillMaxWidth()) {
-                Column(modifier = Modifier.width(GUTTER)) {
-                    for (hour in 0 until 24) {
-                        Box(modifier = Modifier.height(HOUR).fillMaxWidth(), contentAlignment = Alignment.TopEnd) {
-                            Text(
-                                text = format.formatHour(hour),
-                                style = MaterialTheme.typography.labelSmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                modifier = Modifier.padding(end = 6.dp),
-                            )
-                        }
-                    }
-                }
                 for (day in days) {
                     DayColumn(
                         day = day,
@@ -323,6 +321,33 @@ fun TimeGrid(
                             }
                         },
                         onCancel = { lift = null },
+                    )
+                }
+            }
+        }
+    }
+}
+
+/**
+ * The hour labels down the left of the day and week views, which stay put
+ * while the pager beside them swipes. [top] is how far down the grid's hours
+ * start, and [scroll] is the grid's own vertical position, so the labels move
+ * with the hours they name.
+ */
+@Composable
+fun HourGutter(top: Dp, scroll: ScrollState, modifier: Modifier = Modifier) {
+    val format = LocalFormat.current
+    Column(modifier = modifier.width(GUTTER).fillMaxHeight()) {
+        Spacer(Modifier.height((top - DividerDefaults.Thickness).coerceAtLeast(0.dp)))
+        HorizontalDivider()
+        Column(modifier = Modifier.weight(1f).verticalScroll(scroll)) {
+            for (hour in 0 until 24) {
+                Box(modifier = Modifier.height(HOUR).fillMaxWidth(), contentAlignment = Alignment.TopEnd) {
+                    Text(
+                        text = format.formatHour(hour),
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.padding(end = 6.dp),
                     )
                 }
             }
@@ -424,7 +449,6 @@ private fun AllDayBand(
     val rows = days.maxOfOrNull { byDay[it].orEmpty().count { instance -> instance.allday } } ?: 0
     if (rows == 0) return
     Row(modifier = Modifier.fillMaxWidth().heightIn(max = BAND * 4)) {
-        Spacer(Modifier.width(GUTTER))
         for (day in days) {
             Column(
                 modifier = Modifier.width(width).padding(horizontal = 1.dp),
