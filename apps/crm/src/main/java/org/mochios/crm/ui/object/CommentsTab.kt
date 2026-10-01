@@ -22,11 +22,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateListOf
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -40,6 +35,7 @@ import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarAttachments
 import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.MentionSuggestion
+import org.mochios.android.ui.components.CommentDrafts
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.ReplyComposerBanner
 import org.mochios.crm.R
@@ -48,6 +44,10 @@ import org.mochios.crm.R
 fun CommentsTab(
     comments: List<Comment>,
     crmId: String,
+    /** Holds the unsent comment and any edit under way, past this tab's own life. */
+    drafts: CommentDrafts,
+    /** The object commented on, which the unsent comment is kept under. */
+    target: String,
     onCreateComment: (String, String?, List<Uri>) -> Unit,
     resolveFileName: suspend (Uri) -> String,
     onUpdateComment: (String, String) -> Unit,
@@ -58,9 +58,7 @@ fun CommentsTab(
     // "/crm/<crm>/-/comment/<comment.id>/asset/avatar".
     avatarUrlBuilder: ((Comment) -> String?)? = null
 ) {
-    var newComment by remember { mutableStateOf("") }
-    var replyToId by remember { mutableStateOf<String?>(null) }
-    val pendingFiles = remember { mutableStateListOf<Uri>() }
+    val draft = drafts.draft(target)
     val defaultName = stringResource(R.string.crm_attachment_default_name)
 
     Column(modifier = Modifier.fillMaxSize()) {
@@ -92,7 +90,8 @@ fun CommentsTab(
                         depth = 0,
                         crmId = crmId,
                         avatarUrlBuilder = avatarUrlBuilder,
-                        onReply = { id, _ -> replyToId = id },
+                        drafts = drafts,
+                        onReply = { id, _ -> drafts.update(target) { it.copy(reply = id) } },
                         onEdit = onUpdateComment,
                         onDelete = onDeleteComment
                     )
@@ -100,23 +99,22 @@ fun CommentsTab(
             }
         }
 
-        val replyTarget = replyToId?.let { id -> findComment(comments, id) }
+        val replyTarget = draft.reply?.let { id -> findComment(comments, id) }
         ComposeBar(
-            value = newComment,
-            onValueChange = { value -> newComment = value },
+            value = draft.text,
+            onValueChange = { value -> drafts.update(target) { it.copy(text = value) } },
             onSend = {
-                onCreateComment(newComment, replyToId, pendingFiles.toList())
-                newComment = ""
-                replyToId = null
-                pendingFiles.clear()
+                val sending = drafts.draft(target)
+                onCreateComment(sending.text, sending.reply, sending.files)
+                drafts.clear(target)
             },
             placeholder = stringResource(R.string.crm_comment_placeholder),
             sendLabel = stringResource(R.string.crm_comment_send),
             requireText = true,
             attachments = ComposeBarAttachments(
-                pending = pendingFiles.toList(),
-                onAdd = { uris -> pendingFiles.addAll(uris) },
-                onRemove = { uri -> pendingFiles.remove(uri) },
+                pending = draft.files,
+                onAdd = { uris -> drafts.update(target) { it.copy(files = it.files + uris) } },
+                onRemove = { uri -> drafts.update(target) { it.copy(files = it.files - uri) } },
                 resolveFileName = resolveFileName,
                 addLabel = stringResource(R.string.crm_comment_attach),
                 fallbackLabel = defaultName,
@@ -132,7 +130,7 @@ fun CommentsTab(
                         ),
                         preview = comment.markdownSource.ifBlank { comment.text },
                         cancelLabel = stringResource(R.string.crm_comment_clear_reply),
-                        onCancel = { replyToId = null },
+                        onCancel = { drafts.update(target) { it.copy(reply = null) } },
                     )
                 }
             },
@@ -163,12 +161,12 @@ private fun CommentItem(
     depth: Int,
     crmId: String,
     avatarUrlBuilder: ((Comment) -> String?)?,
+    drafts: CommentDrafts,
     onReply: (String, String) -> Unit,
     onEdit: (String, String) -> Unit,
     onDelete: (String) -> Unit
 ) {
-    var isEditing by remember { mutableStateOf(false) }
-    var editText by remember(comment.id) { mutableStateOf(comment.text) }
+    val edit = drafts.edit(comment.id)
 
     SharedCommentItem(
         name = comment.name,
@@ -185,21 +183,18 @@ private fun CommentItem(
         attachmentThumbnailUrl = { att ->
             att.thumbnailUrl ?: "/crm/$crmId/-/attachments/${att.id}/thumbnail"
         },
-        isEditing = isEditing,
-        editText = editText,
-        onEditTextChange = { value -> editText = value },
+        isEditing = edit != null,
+        editText = edit ?: comment.text,
+        onEditTextChange = { value -> drafts.edit(comment.id, value) },
         onSaveEdit = {
-            onEdit(comment.id, editText)
-            isEditing = false
+            drafts.edit(comment.id)?.let { text -> onEdit(comment.id, text) }
+            drafts.edit(comment.id, null)
         },
-        onCancelEdit = { isEditing = false }
+        onCancelEdit = { drafts.edit(comment.id, null) }
     ) {
         CommentActions(
             onReply = { onReply(comment.id, comment.name) },
-            onEdit = {
-                editText = comment.text
-                isEditing = true
-            },
+            onEdit = { drafts.edit(comment.id, comment.text) },
             onDelete = { onDelete(comment.id) },
         )
     }
@@ -210,6 +205,7 @@ private fun CommentItem(
             depth = depth + 1,
             crmId = crmId,
             avatarUrlBuilder = avatarUrlBuilder,
+            drafts = drafts,
             onReply = onReply,
             onEdit = onEdit,
             onDelete = onDelete

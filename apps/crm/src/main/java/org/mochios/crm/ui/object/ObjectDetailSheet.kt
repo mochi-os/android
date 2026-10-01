@@ -26,7 +26,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
-import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -45,7 +44,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
-import org.mochios.android.ui.components.MochiBottomSheet
+import org.mochios.android.ui.components.MochiEditorSheet
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
@@ -77,7 +76,6 @@ fun ObjectDetailSheet(
     onNavigateToObject: (String) -> Unit = {},
     viewModel: ObjectDetailViewModel = hiltViewModel()
 ) {
-    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     val uiState by viewModel.uiState.collectAsState()
     val context = LocalContext.current
     var showOverflow by remember { mutableStateOf(false) }
@@ -104,10 +102,7 @@ fun ObjectDetailSheet(
         }
     }
 
-    MochiBottomSheet(
-        onDismissRequest = onDismiss,
-        sheetState = sheetState
-    ) {
+    MochiEditorSheet(onDismissRequest = onDismiss) {
         when {
             uiState.isLoading && uiState.obj == null -> {
                 Box(
@@ -239,6 +234,8 @@ fun ObjectDetailSheet(
                         1 -> CommentsTab(
                             comments = uiState.comments,
                             crmId = crmId,
+                            drafts = viewModel.drafts,
+                            target = obj.id,
                             onCreateComment = { content, parent, uris ->
                                 viewModel.createComment(content, parent, uris)
                             },
