@@ -28,6 +28,13 @@
     <string name="forums_rss_mode_posts_comments">Posts and comments</string>
     <string name="forums_rss_copied">RSS URL copied to clipboard</string>
     <string name="forums_rss_clipboard_label">Forum RSS URL</string>
+
+    <!-- Forum overflow menu: activity notifications submenu -->
+    <string name="forums_notifications_post">New posts</string>
+    <string name="forums_notifications_reply">Replies to you</string>
+    <string name="forums_notifications_comment">All replies</string>
+    <string name="forums_follow_thread">Follow thread</string>
+    <string name="forums_unfollow_thread">Unfollow thread</string>
     <string name="forums_link">Link</string>
     <string name="forums_share_link_title">Forum link</string>
 

@@ -316,4 +316,8 @@
     <string name="device_name_fallback">อุปกรณ์มือถือ</string>
     <string name="account_error_token_type">ไม่รองรับประเภทโทเค็นนี้</string>
     <string name="account_error_caller">ไม่อนุญาตผู้เรียก</string>
+    <string name="zone_sea">ในทะเล</string>
+    <string name="access_remove">ลบ</string>
+    <string name="access_remove_title">ลบสิทธิ์การเข้าถึง?</string>
+    <string name="access_remove_message">นำกฎการเข้าถึงสำหรับ \"%1$s\" ออกหรือไม่</string>
 </resources>

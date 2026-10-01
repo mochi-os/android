@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Jeneng operator</string>
     <string name="system_setting_operator_email">Email operator</string>
     <string name="system_setting_operator_jurisdiction">Yurisdiksi operator</string>
-    <string name="system_setting_server_started">Server wis miwiti</string>
-    <string name="system_setting_server_version">Versi server</string>
     <string name="system_setting_signup_enabled">Idini pendaftaran anyar</string>
     <string name="system_users_title">Panganggo</string>
     <string name="system_users_col_user">Panganggo</string>
@@ -393,4 +391,5 @@
     <string name="accounts_provider_caldav">Server kalender</string>
     <string name="accounts_revoke_confirm">Iki bakal mbatalaké akses kalender %1$s. Mlebu nganggo %2$s tetep nganti sampeyan ngeculaké tautané ing kaca Mlebu.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Tema ora dikenal</string>
 </resources>

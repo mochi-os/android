@@ -49,9 +49,17 @@ data class SystemSettingsServer(
     val fingerprint: String = "",
 )
 
+/** A theme the default_theme setting may name. */
+data class SystemTheme(
+    val id: String = "",
+    val label: String = "",
+)
+
 data class SystemSettingsData(
     val settings: List<SystemSetting> = emptyList(),
     val server: SystemSettingsServer = SystemSettingsServer(),
+    /** The themes default_theme may name, so it is picked by label. */
+    val themes: List<SystemTheme> = emptyList(),
 )
 
 interface SystemSettingsApi {

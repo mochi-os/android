@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Nama pengendali</string>
     <string name="system_setting_operator_email">E-mel pengendali</string>
     <string name="system_setting_operator_jurisdiction">Bidang kuasa pengendali</string>
-    <string name="system_setting_server_started">Pelayan dimulakan</string>
-    <string name="system_setting_server_version">Versi pelayan</string>
     <string name="system_setting_signup_enabled">Benarkan pendaftaran baharu</string>
     <string name="system_users_title">Pengguna</string>
     <string name="system_users_col_user">Pengguna</string>
@@ -394,4 +392,5 @@
     <string name="accounts_provider_caldav">Pelayan kalendar</string>
     <string name="accounts_revoke_confirm">Ini akan membatalkan akses kalendar %1$s. Log masuk dengan %2$s kekal sehingga anda menyahpaut di halaman Log masuk.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Tema tidak dikenali</string>
 </resources>

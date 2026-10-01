@@ -2,12 +2,12 @@
 <resources>
     <string name="feeds_title">Feed-iiwwan</string>
     <string name="feeds_find_feeds">Feed-iiwwan argi</string>
-    <string name="feeds_create_feed">Sora uumi</string>
+    <string name="feeds_create_feed">Feed uumi</string>
     <string name="feeds_new_post">Maxxansa haaraa</string>
-    <string name="feeds_all_feeds">Soraawwan hundi</string>
+    <string name="feeds_all_feeds">Feed-iiwwan hundi</string>
     <string name="feeds_name">Maqaa</string>
     <string name="feeds_create">Uumi</string>
-    <string name="feeds_no_feeds_found">Feedin hin argamne</string>
+    <string name="feeds_no_feeds_found">Feed-iiwwan hin argamne</string>
     <string name="feeds_feed_title_default">Feed</string>
     <string name="feeds_mark_all_read">Hunda dubbifame</string>
     <string name="feeds_settings">Qindaa\'inoota</string>
@@ -45,7 +45,7 @@
     <string name="feeds_banner">Bannerii</string>
     <string name="feeds_banner_description">Bannarii markdown filannoo gubbaa feed kee irratti mul\'atu.</string>
     <string name="feeds_clear">Cilliisi</string>
-    <string name="feeds_delete_feed">Sora haqi</string>
+    <string name="feeds_delete_feed">Feed haqi</string>
     <string name="feeds_no_members">Miseensonni hin jiran</string>
     <string name="feeds_user">Fayyadamaa</string>
     <string name="feeds_access_no_groups">Garreen hin jiran</string>
@@ -67,7 +67,7 @@
     <string name="feeds_ai_mode_tag_deduplicate">Tag + dachaa haqi</string>
     <string name="feeds_feed_not_found">Feed hin argamne</string>
     <string name="feeds_post_not_found">Maxxansi hin argamne</string>
-    <string name="feeds_post_select_feed">Maaloo feedii filadhaa</string>
+    <string name="feeds_post_select_feed">Maaloo feed filadhaa</string>
     <string name="feeds_post_empty_content">Maaloo barreeffama galchaa ykn faayilii itti dabalaa</string>
     <string name="feeds_settings_feed_renamed">Feed moggaafame</string>
     <string name="feeds_settings_banner_saved">Baanara olkaa\'amee jira</string>
@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">Maddi haqameera</string>
     <string name="feeds_settings_source_polling">Madda gaafachuu…</string>
     <string name="feeds_settings_access_updated">Seensi haaromfame</string>
-    <string name="feeds_settings_access_revoked">Galmaa\'iinsi haqamee jira</string>
+    <string name="feeds_settings_access_revoked">Seensi haqamee jira</string>
     <string name="feeds_settings_member_removed">Miseensi haqame</string>
     <string name="feeds_settings_ai_mode_updated">Haalli AI haaromfameera</string>
     <string name="feeds_settings_ai_account_updated">Akaawuntiin AI haaromfameera</string>
@@ -86,8 +86,8 @@
     <string name="feeds_move_up">Gubbatti dabarsi</string>
     <string name="feeds_move_down">Gadi dabarsi</string>
 
-    <string name="notification_channel_feeds">Beeksisawwan feeds</string>
-    <string name="feeds_search_placeholder">Feeds barbaadi yookaan URL maxxansi…</string>
+    <string name="notification_channel_feeds">Beeksisawwan feed-iiwwanii</string>
+    <string name="feeds_search_placeholder">Feed-iiwwan barbaadi yookaan URL maxxansi…</string>
     <string name="feeds_url_result">Bu\'aa URL</string>
     <string name="feeds_search_results">Bu\'aawwan barbaachaa</string>
     <string name="feeds_unread_only">Kan hin dubbifamne qofa</string>
@@ -105,7 +105,7 @@
     <string name="feeds_attach_file">Faayilii maxxansi</string>
     <string name="feeds_file">Faayilii</string>
     <string name="feeds_select_feed">Feed filadhu</string>
-    <string name="feeds_loading_feeds">Feeds fe\'amaa jiru…</string>
+    <string name="feeds_loading_feeds">Feed-iiwwan fe\'amaa jiru…</string>
     <string name="feeds_sources_title_named">Maddoota %1$s</string>
     <string name="feeds_delete_feed_confirm">Kun feed kana fi barreeffamoota isaa hunda bara baraan ni haqa. Kun deebi\'ee hin argamu.</string>
     <string name="feeds_clipboard_label_rss">URL RSS</string>
@@ -157,23 +157,26 @@
     <string name="feeds_access_subject_authenticated">Fayyadamtoota mirkanaa\'an</string>
     <string name="feeds_markdown_supported">Markdown deeggarama</string>
     <string name="feeds_permission_deny">Dhorki</string>
-    <string name="feeds_rss_feed">Fiidii RSS</string>
-    <string name="feeds_settings_field_entity_id">ID Iddoo</string>
+    <string name="feeds_rss_feed">Feed RSS</string>
+    <string name="feeds_notifications_post">Maxxansoota haaraa</string>
+    <string name="feeds_follow_thread">Sarara hordofi</string>
+    <string name="feeds_unfollow_thread">Sarara hordofuu dhiisi</string>
+    <string name="feeds_settings_field_entity_id">ID Qaamaa</string>
     <string name="feeds_settings_field_fingerprint">Maxxansa quba</string>
     <string name="feeds_settings_field_server">Sarvarii</string>
     <string name="feeds_settings_name_edit_cd">Maqaa sirreessi</string>
     <string name="feeds_settings_section_identity">Eenyummaa</string>
     <string name="feeds_unsubscribe">Galaa\'uu kaasi</string>
     <string name="feeds_unsubscribed">Galaa\'uun kaafameera</string>
-    <string name="feeds_access_level_comment_full">Yaada, deebii, fi mul\'isi</string>
+    <string name="feeds_access_level_comment_full">Yaada, deebii miiraa, fi mul\'isi</string>
     <string name="feeds_rss_mode_posts_comments">Maxxansoota fi yaadawwan</string>
     <string name="feeds_access_add_title">Seensa dabali</string>
     <string name="feeds_permission_request_message">%1$s hayyama armaan gadii gaafachaa jira:</string>
-    <string name="feeds_allow_search">Eenyu iyyuu sora barbaaduu hayyami</string>
+    <string name="feeds_allow_search">Eenyu iyyuu feed barbaaduu hayyami</string>
     <string name="feeds_post_content">Qabiyyee maxxansaa</string>
     <string name="feeds_enable_memories">Yaadannoo dandeessisi</string>
     <string name="feeds_permission_request_title">Iyyannoo hayyamaa</string>
-    <string name="feeds_unsubscribe_confirm">Feedii hordofuu dhiisuu?</string>
+    <string name="feeds_unsubscribe_confirm">Feed hordofuu dhiisuu?</string>
     <string name="feeds_settings_title">Qindaa\'ina %1$s</string>
     <string name="feeds_source_transform_help">Dhaamsuuf duwwaa kaa\'i.</string>
     <string name="feeds_settings_name_cancel_cd">Gulaaluu dhiisi</string>
@@ -184,9 +187,9 @@
     <string name="feeds_create_first_post">Maxxansa jalqabaa uumi</string>
     <string name="feeds_rss_mode_posts">Maxxansoota</string>
     <string name="feeds_source_last_checked">Yeroo dhumaaf kan ilaalame %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">Marsaa irraa galaa\'uu kaasi</string>
+    <string name="feeds_settings_unsubscribe_section">Feed irraa galaa\'uu kaasi</string>
     <string name="feeds_source_transform_hint">Gara Ingilizii hiiki, akka qabxiitti agarsiisi.</string>
-    <string name="feeds_source_url_hint_feed">ID iddoo Feed yookiin maxxansa quba</string>
+    <string name="feeds_source_url_hint_feed">ID qaama Feed yookiin maxxansa quba</string>
     <string name="feeds_source_credibility_label">Amanamummaa</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">sa\'aatii %1$d</item>
@@ -197,9 +200,9 @@
         <item quantity="other">daqiiqaawwan %1$d</item>
     </plurals>
     <string name="feeds_source_polling_interval">Tokkoon tokkoon %1$s ni sakatta\'ama</string>
-    <string name="feeds_access_level_react_full">React fi ilaaluu</string>
+    <string name="feeds_access_level_react_full">Deebii miiraa kennuu fi ilaaluu</string>
     <string name="feeds_permission_allow">Hayyami</string>
-    <string name="feeds_unsubscribe_confirm_message">Feedii kana irraa haaromsa argachuu ni dhaabda. Yeroo barbaaddetti irra deebitee hordofuu dandeessa.</string>
+    <string name="feeds_unsubscribe_confirm_message">Feed kana irraa haaromsa argachuu ni dhaabda. Yeroo barbaaddetti irra deebitee hordofuu dandeessa.</string>
     <string name="feeds_access_select_rule">Seera itti seenumsaa fili</string>
     <string name="feeds_access_authenticated_desc">Nama seenee jiru kamiyyuu</string>
     <string name="feeds_banner_hint">Marii kanatti baga nagaan dhuftan…</string>

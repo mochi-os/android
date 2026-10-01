@@ -318,4 +318,8 @@
     <string name="device_name_fallback">Urządzenie mobilne</string>
     <string name="account_error_token_type">Nieobsługiwany typ tokena</string>
     <string name="account_error_caller">Wywołujący nie ma uprawnień</string>
+    <string name="zone_sea">Na morzu</string>
+    <string name="access_remove">Usuń</string>
+    <string name="access_remove_title">Usunąć dostęp?</string>
+    <string name="access_remove_message">Usunąć regułę dostępu dla „%1$s”?</string>
 </resources>

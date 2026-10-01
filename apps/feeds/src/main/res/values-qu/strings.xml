@@ -158,6 +158,9 @@
     <string name="feeds_markdown_supported">Markdown haypaqsi</string>
     <string name="feeds_permission_deny">Mana saqiy</string>
     <string name="feeds_rss_feed">Canal RSS</string>
+    <string name="feeds_notifications_post">Musuq qillqakuna</string>
+    <string name="feeds_follow_thread">Rimanakuyta qatiy</string>
+    <string name="feeds_unfollow_thread">Rimanakuy qatiyta saqiy</string>
     <string name="feeds_settings_field_entity_id">Entidad ID</string>
     <string name="feeds_settings_field_fingerprint">Ruk\'ana unancha</string>
     <string name="feeds_settings_field_server">Servidor</string>

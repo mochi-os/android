@@ -239,8 +239,6 @@
     <string name="system_setting_operator_name">營運者名稱</string>
     <string name="system_setting_operator_email">營運者電郵</string>
     <string name="system_setting_operator_jurisdiction">營運者司法管轄區</string>
-    <string name="system_setting_server_started">伺服器啟動時間</string>
-    <string name="system_setting_server_version">伺服器版本</string>
     <string name="system_setting_signup_enabled">允許新用戶註冊</string>
     <string name="settings_home_system_users">用戶(伺服器)</string>
     <string name="system_users_add_user">新增用戶</string>

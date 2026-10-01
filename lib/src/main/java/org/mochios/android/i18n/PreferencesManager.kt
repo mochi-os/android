@@ -68,8 +68,8 @@ class PreferencesManager @Inject internal constructor(
     val format: Format get() = Format(_preferences.value)
 
     /**
-     * Persist one preference and refresh [preferences]. An empty [value] resets
-     * it to the server default. Throws on failure.
+     * Persist one preference and refresh [preferences]. The server skips an
+     * empty [value]; [resetKeys] clears a preference. Throws on failure.
      */
     suspend fun setPreference(key: String, value: String) {
         val token = settingsToken() ?: throw IllegalStateException("settings token unavailable")

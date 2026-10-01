@@ -27,6 +27,8 @@ data class DisplayUiState(
     val defaultThemeId: String? = null,
     val error: MochiError? = null,
     val isSaving: Boolean = false,
+    /** A reset in flight; its confirmation stays open until it answers. */
+    val isResetting: Boolean = false,
 )
 
 @HiltViewModel
@@ -79,22 +81,28 @@ class DisplayViewModel @Inject constructor(
     }
 
     /** Reset only the supplied keys to their server defaults. */
-    fun reset(keys: List<String>) {
+    fun reset(keys: List<String>, onSuccess: () -> Unit) {
+        if (_uiState.value.isResetting) return
+        _uiState.value = _uiState.value.copy(isResetting = true, error = null)
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isSaving = true, error = null)
             try {
                 preferences.resetKeys(keys)
                 _uiState.value = _uiState.value.copy(
-                    isSaving = false,
+                    isResetting = false,
                     values = preferences.rawPreferences(),
                     themes = preferences.availableThemes(),
                     defaultThemeId = preferences.defaultTheme(),
                 )
                 cacheActiveThemeAnchors()
+                onSuccess()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isSaving = false, error = e.toMochiError())
+                _uiState.value = _uiState.value.copy(isResetting = false, error = e.toMochiError())
             }
         }
+    }
+
+    fun clearError() {
+        _uiState.value = _uiState.value.copy(error = null)
     }
 
     /**

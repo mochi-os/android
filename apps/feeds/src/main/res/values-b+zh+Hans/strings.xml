@@ -157,6 +157,9 @@
     <string name="feeds_markdown_supported">支持 Markdown</string>
     <string name="feeds_permission_deny">拒绝</string>
     <string name="feeds_rss_feed">RSS 订阅源</string>
+    <string name="feeds_notifications_post">新帖子</string>
+    <string name="feeds_follow_thread">关注话题</string>
+    <string name="feeds_unfollow_thread">取消关注话题</string>
     <string name="feeds_settings_field_entity_id">实体 ID</string>
     <string name="feeds_settings_field_fingerprint">指纹</string>
     <string name="feeds_settings_field_server">服务器</string>

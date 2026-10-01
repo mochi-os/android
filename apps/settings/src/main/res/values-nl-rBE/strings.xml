@@ -154,8 +154,6 @@
     <string name="system_setting_operator_name">Naam uitbater</string>
     <string name="system_setting_operator_email">E-mailadres uitbater</string>
     <string name="system_setting_operator_jurisdiction">Rechtsgebied uitbater</string>
-    <string name="system_setting_server_started">Server gestart</string>
-    <string name="system_setting_server_version">Serverversie</string>
     <string name="system_setting_signup_enabled">Nieuwe registraties toestaan</string>
     <string name="system_users_title">Gebruikers</string>
     <string name="system_users_add_user">Gebruiker toevoegen</string>
@@ -375,4 +373,5 @@
     <string name="notifprefs_transport_fcm">Android-push</string>
     <string name="notifprefs_no_destinations">Geen bestemmingen</string>
     <string name="account_data_generate">Wachtwoordzin genereren</string>
+    <string name="system_settings_theme_unknown">Onbekend thema</string>
 </resources>

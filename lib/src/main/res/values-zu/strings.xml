@@ -304,7 +304,7 @@
     <string name="rss_revoke_title">Hoxisa ukufinyelela kwe-RSS?</string>
     <string name="rss_revoke_message">Konke okubhalisele lo mfudlana kuzoyeka ukukuthola. Ungakopisha i-URL entsha ngemva kwalokho.</string>
     <string name="rss_revoked">Ukufinyelela kwe-RSS kubuyiselwe</string>
-    <string name="rss_revoke_failed">Yehlulekile ukubuyisela ukufinyelela kwe-RSS</string>
+    <string name="rss_revoke_failed">Kuhlulekile ukubuyisela ukufinyelela kwe-RSS</string>
     <string name="game_empty_title">Ayikho imidlalo okwamanje</string>
     <string name="game_select_title">Khetha umdlalo</string>
     <string name="game_select_subtitle">Khetha umdlalo kubha eseceleni noma qala omusha.</string>
@@ -316,4 +316,8 @@
     <string name="device_name_fallback">Idivayisi yeselula</string>
     <string name="account_error_token_type">Uhlobo lwethokheni olungasekelwe</string>
     <string name="account_error_caller">Umshayeli akavunyelwe</string>
+    <string name="zone_sea">Olwandle</string>
+    <string name="access_remove">Khipha</string>
+    <string name="access_remove_title">Khipha ukufinyelela?</string>
+    <string name="access_remove_message">Susa umthetho wokufinyelela we-\"%1$s\"?</string>
 </resources>

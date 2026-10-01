@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Luo</string>
     <string name="calendars_subscribe_submit">Tilaa</string>
     <string name="calendars_subscribe_url">Osoite</string>
-    <string name="calendars_connect_device">Yhdistä laite</string>
+    <string name="calendars_connect_device">Yhdistetyt laitteet</string>
     <string name="calendars_preferences">Mieltymykset</string>
     <string name="calendars_name">Nimi</string>
     <string name="calendars_rename">Nimeä uudelleen</string>
@@ -11,7 +11,6 @@
     <string name="calendars_view">Näkymä</string>
     <string name="calendars_view_list">Luettelo</string>
     <string name="calendars_list_search">Haku</string>
-    <string name="calendars_event_untitled">Nimetön</string>
     <string name="calendars_event_title">Otsikko</string>
     <string name="calendars_event_location">Sijainti</string>
     <string name="calendars_event_description">Kuvaus</string>
@@ -37,9 +36,10 @@
     <string name="calendars_sync_never">Ei vielä synkronoitu</string>
     <string name="calendars_sync_time">Viimeksi synkronoitu %1$s</string>
     <string name="calendars_sync_transport">Palvelimeen ei saatu yhteyttä</string>
-    <string name="calendars_device_title">Yhdistä laite</string>
+    <string name="calendars_device_title">Yhdistetyt laitteet</string>
     <string name="calendars_device_name">Laitteen nimi</string>
     <string name="calendars_device_create">Luo</string>
+    <string name="calendars_device_add">Lisää laite</string>
     <string name="calendars_device_server">Palvelin</string>
     <string name="calendars_device_address">Osoite</string>
     <string name="calendars_device_username">Käyttäjätunnus</string>
@@ -61,21 +61,20 @@
     <string name="calendars_poll">Tarkista nyt</string>
     <string name="calendars_delete_title">Poistetaanko %1$s?</string>
     <string name="calendars_delete_message">Sen tapahtumat poistetaan samalla.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d tapahtuma päivitetty</item>
-        <item quantity="other">%1$d tapahtumaa päivitetty</item>
-    </plurals>
+    <string name="calendars_remove">Poista</string>
+    <string name="calendars_remove_title">Poistetaanko %1$s Mochista?</string>
+    <string name="calendars_remove_message">Sen tapahtumat säilyvät alkuperäisessä kalenterissa.</string>
     <string name="calendars_today">Tänään</string>
     <string name="calendars_view_week">Viikko</string>
     <string name="calendars_view_multiweek">Monta viikkoa</string>
     <string name="calendars_view_month">Kuukausi</string>
     <string name="calendars_workweek">Työviikko</string>
+    <string name="calendars_range">%1$s – %2$s</string>
     <string name="calendars_truncated">Kaikkia tämän aikavälin tapahtumia ei näytetä.</string>
     <string name="calendars_list_empty">Ei tapahtumia</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d lisää</item>
-        <item quantity="other">+%1$d lisää</item>
-    </plurals>
+    <string name="calendars_untitled">(Ei otsikkoa)</string>
+    <string name="calendars_status_cancelled">Peruttu</string>
+    <string name="calendars_status_tentative">Alustava</string>
     <string name="calendars_event_new">Uusi tapahtuma</string>
     <string name="calendars_event_edit">Muokkaa tapahtumaa</string>
     <string name="calendars_event_calendar">Kalenteri</string>
@@ -97,9 +96,20 @@
     <string name="calendars_repeat_count">Toistokerrat</string>
     <string name="calendars_repeat_forever">Ikuisesti</string>
     <string name="calendars_reminder_time">Tapahtuman alkaessa</string>
-    <string name="calendars_reminder_minutes">%1$d minuuttia ennen</string>
-    <string name="calendars_reminder_hour">1 tunti ennen</string>
-    <string name="calendars_reminder_day">1 päivä ennen</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d minuutti ennen</item>
+        <item quantity="other">%1$d minuuttia ennen</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d tunti ennen</item>
+        <item quantity="other">%1$d tuntia ennen</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d päivä ennen</item>
+        <item quantity="other">%1$d päivää ennen</item>
+    </plurals>
+    <string name="calendars_reminder_add">Lisää muistutus</string>
+    <string name="calendars_reminder_remove">Poista muistutus</string>
     <string name="calendars_hours_start">Työajan alku</string>
     <string name="calendars_hours_finish">Työajan loppu</string>
     <string name="calendars_hours_invalid">Työajan on päätyttävä sen alkamisen jälkeen.</string>
@@ -108,16 +118,18 @@
     <string name="calendars_multiweek_previous">Edeltävät viikot</string>
     <string name="calendars_default_duration">Tapahtuman oletuspituus</string>
     <string name="calendars_default_reminder">Oletusmuistutus</string>
+    <string name="calendars_default_calendar">Oletuskalenteri</string>
+    <string name="calendars_preferences_allday">Koko päivän tapahtumat</string>
+    <string name="calendars_allday_first">Alussa</string>
+    <string name="calendars_allday_last">Lopussa</string>
     <string name="calendars_link_title">Kalenterilinkki</string>
     <string name="calendars_link_copy">Kopioi linkki</string>
     <string name="calendars_link_once">Kopioi se nyt: sitä ei voi näyttää uudelleen.</string>
     <string name="calendars_link_exists">Tälle kalenterille on jo linkki.</string>
     <string name="calendars_permission_title">Sallitaanko käyttöoikeus?</string>
     <string name="calendars_permission_message">%1$s pyytää:</string>
-    <string name="calendars_sync_permission">Kalenterin käyttöoikeus tarvitaan</string>
     <string name="calendars_sync_authorization">Kirjaudu uudelleen sisään jatkaaksesi synkronointia</string>
     <string name="calendars_device_warning">Kopioi salasana nyt: sitä ei voi näyttää uudelleen.</string>
-    <string name="calendars_device_list">Yhdistetyt laitteet</string>
     <string name="calendars_device_empty">Ei yhdistettyjä laitteita</string>
     <string name="calendars_device_used">viimeksi käytetty %1$s</string>
     <string name="calendars_device_never">ei koskaan</string>
@@ -167,9 +179,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Kalenteri</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google-tilit eivät ole käytössä tällä palvelimella. Ota ne käyttöön kohdassa Asetukset, Järjestelmäasetukset.</string>
     <string name="calendars_subscribe_google_connect">Et ole yhdistänyt Google-tiliä.</string>
     <string name="calendars_subscribe_google_connect_action">Yhdistä Google</string>
     <string name="calendars_grant_failed">Kalenterin käyttöoikeutta ei myönnetty</string>
+    <string name="calendars_event_exception">Muutettu toistokerta</string>
+    <string name="calendars_span_day">%1$s, %2$s–%3$s</string>
+    <string name="calendars_polled_current">Kalenteri on ajan tasalla</string>
+    <string name="calendars_polled_synced">Kalenteri synkronoitu</string>
+    <string name="calendars_link_revoke_title">Peruutetaanko kalenterin osoite?</string>
+    <string name="calendars_link_revoke_message">Tämän osoitteen tilanneet kalenterit lakkaavat päivittymästä.</string>
 </resources>

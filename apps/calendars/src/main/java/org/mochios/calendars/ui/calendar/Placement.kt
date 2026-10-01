@@ -48,6 +48,23 @@ fun zoneOf(named: String?, user: ZoneId): ZoneId {
 fun clockZone(named: String?, zones: Boolean): String? = named?.takeIf { zones && it.isNotBlank() }
 
 /**
+ * A timed occurrence's span as the day and week views read it, "09:00 to
+ * 10:00": each end by [clock], in its own zone when [zones] is on, the two
+ * put together by [join], which is the locale's own range wording. One with
+ * no length reads its start alone.
+ */
+fun interval(
+    instance: Instance,
+    zones: Boolean,
+    clock: (Long, String?) -> String,
+    join: (String, String) -> String,
+): String {
+    val start = clock(instance.start, clockZone(instance.zone?.start, zones))
+    if (instance.finish <= instance.start) return start
+    return join(start, clock(instance.finish, clockZone(instance.zone?.finish, zones)))
+}
+
+/**
  * Each end of a timed occurrence at its wall-clock time. With [zones] on,
  * an end reads in the zone it was written in; otherwise both read in the
  * [user]'s. A finish on the stroke of midnight belongs to the day before.

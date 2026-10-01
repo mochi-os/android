@@ -218,6 +218,11 @@
     <string name="forums_all_forums">វេទិកាទាំងអស់</string>
     <string name="forums_create_allow_search">អនុញ្ញាតឱ្យអ្នកណាម្នាក់ស្វែងរកវេទិកា</string>
     <string name="forums_rss_clipboard_label">URL RSS វេទិកា</string>
+    <string name="forums_notifications_post">ប្រកាសថ្មី</string>
+    <string name="forums_notifications_reply">ការឆ្លើយតបមកអ្នក</string>
+    <string name="forums_notifications_comment">ការឆ្លើយតបទាំងអស់</string>
+    <string name="forums_follow_thread">តាមដានខ្សែប្រធានបទ</string>
+    <string name="forums_unfollow_thread">ឈប់តាមដានខ្សែប្រធានបទ</string>
     <string name="forums_tab_moderation">ការសម្របសម្រួល</string>
     <string name="forums_access_level_view_full">មើលតែប៉ុណ្ណោះ</string>
     <string name="forums_access_level_none_full">គ្មានសិទ្ធិចូលប្រើ</string>

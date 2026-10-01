@@ -110,7 +110,8 @@ fun SessionsScreen(
                         SessionRow(
                             session = session,
                             isCurrent = session.current,
-                            onRevoke = { viewModel.revoke(session.id) },
+                            revoking = state.revoking == session.id,
+                            onRevoke = { onSuccess -> viewModel.revoke(session.id, onSuccess) },
                         )
                     }
                 }
@@ -120,7 +121,12 @@ fun SessionsScreen(
 }
 
 @Composable
-private fun SessionRow(session: Session, isCurrent: Boolean, onRevoke: () -> Unit) {
+private fun SessionRow(
+    session: Session,
+    isCurrent: Boolean,
+    revoking: Boolean,
+    onRevoke: (onSuccess: () -> Unit) -> Unit,
+) {
     val format = LocalFormat.current
     var confirm by remember(session.id) { mutableStateOf(false) }
     MochiCard(modifier = Modifier.fillMaxWidth()) {
@@ -163,17 +169,18 @@ private fun SessionRow(session: Session, isCurrent: Boolean, onRevoke: () -> Uni
         }
     }
     if (confirm) {
+        // Stays open, its button spinning, until the revoke answers; only
+        // success closes it.
         MochiAlertDialog(
-            onDismissRequest = { confirm = false },
+            onDismissRequest = { if (!revoking) confirm = false },
             title = stringResource(R.string.sessions_revoke_title),
             text = stringResource(R.string.sessions_revoke_message),
             confirmText = stringResource(R.string.sessions_revoke),
-            onConfirm = {
-                confirm = false
-                onRevoke()
-            },
+            onConfirm = { onRevoke { confirm = false } },
+            confirmLoading = revoking,
             destructive = true,
             dismissText = stringResource(R.string.account_cancel),
+            dismissEnabled = !revoking,
         )
     }
 }

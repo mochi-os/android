@@ -178,7 +178,7 @@
     <string name="access_no_rules">Gun riaghailtean inntrigidh</string>
     <string name="access_add_rule_title">Cuir ris riaghailt inntrigidh</string>
     <string name="access_level_manage">Stiùirich</string>
-    <string name="access_level_react">Dèan freagairt</string>
+    <string name="access_level_react">Dèan ath-bhualadh</string>
     <string name="notifications_clear">Falamhaich na brathan</string>
     <string name="entity_avatar_alt">Avatar airson %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
@@ -194,7 +194,7 @@
     <string name="format_time_days_short">%1$dl</string>
     <string name="format_time_weeks_short">%1$ds</string>
     <string name="format_time_months_short">%1$dmì</string>
-    <string name="reaction_add">Cuir freagairt ris</string>
+    <string name="reaction_add">Cuir ath-bhualadh ris</string>
     <string name="push_service_channel">Putadh Mochi</string>
     <string name="push_service_channel_description">A\' cumail Mochi ceangailte gus brathan fhaighinn</string>
     <string name="push_service_group">Seirbheis cùl-raoin</string>
@@ -318,4 +318,8 @@
     <string name="device_name_fallback">Inneal-làimhe</string>
     <string name="account_error_token_type">Seòrsa tòcain gun taic</string>
     <string name="account_error_caller">Chan eil cead aig an neach-gairm</string>
+    <string name="zone_sea">Aig muir</string>
+    <string name="access_remove">Thoir air falbh</string>
+    <string name="access_remove_title">Thoir an cothrom air falbh?</string>
+    <string name="access_remove_message">A bheil thu airson riaghailt inntrigidh \"%1$s\" a thoirt air falbh?</string>
 </resources>

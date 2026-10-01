@@ -19,6 +19,7 @@ import org.mochios.calendars.model.InstancesResponse
 import org.mochios.calendars.model.LinkResponse
 import org.mochios.calendars.model.Multiweek
 import org.mochios.calendars.model.PollResponse
+import org.mochios.calendars.model.RefreshResponse
 import org.mochios.calendars.model.PreferencesResponse
 import org.mochios.calendars.model.GrantResponse
 import org.mochios.calendars.model.RemoteResponse
@@ -106,6 +107,8 @@ data class PreferencesRequest(
     val reminder: Int? = null,
     val view: String? = null,
     val zones: Boolean? = null,
+    val calendar: String? = null,
+    val allday: String? = null,
 )
 
 /**
@@ -204,6 +207,9 @@ interface CalendarsApi {
         // contract-ok: the handler reads colour through colour_input.
         @Field("colour") colour: String,
     ): Response<ApiResponse<CalendarResponse>>
+
+    @POST("-/calendars/refresh")
+    suspend fun refreshCalendars(): Response<ApiResponse<RefreshResponse>>
 
     @FormUrlEncoded
     @POST("-/calendars/poll")

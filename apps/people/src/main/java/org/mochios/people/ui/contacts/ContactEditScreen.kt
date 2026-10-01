@@ -143,15 +143,29 @@ fun ContactEditScreen(
 
     if (uiState.unfriendRequested) {
         val contact = uiState.contact
+        // The confirmation stays up while the unfriend runs and after it
+        // fails, saying why, so it can be tried again.
         MochiAlertDialog(
             onDismissRequest = { viewModel.cancelUnfriend() },
             title = stringResource(R.string.people_contacts_unfriend),
-            text = stringResource(R.string.people_contacts_unfriend_confirm, contact?.name.orEmpty()),
             confirmText = stringResource(R.string.people_contacts_unfriend),
             onConfirm = { viewModel.confirmUnfriend() },
+            confirmLoading = uiState.isToggling,
             destructive = true,
             dismissText = stringResource(R.string.people_common_cancel),
-        )
+        ) {
+            Column {
+                Text(stringResource(R.string.people_contacts_unfriend_confirm, contact?.name.orEmpty()))
+                uiState.error?.let { failure ->
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(
+                        text = failure.userMessage(),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.error,
+                    )
+                }
+            }
+        }
     }
 
     if (uiState.deleteRequested) {
@@ -320,7 +334,9 @@ private fun ContactFields(
     onChange: (ContactForm) -> Unit,
     action: (@Composable () -> Unit)? = null,
 ) {
-    val types = CONTACT_TYPES.map { type -> type to stringResource(typeLabel(type)) }
+    val emailTypes = EMAIL_TYPES.map { type -> type to stringResource(typeLabel(type)) }
+    val phoneTypes = PHONE_TYPES.map { type -> type to stringResource(typeLabel(type)) }
+    val addressTypes = ADDRESS_TYPES.map { type -> type to stringResource(typeLabel(type)) }
 
     if (action != null) {
         action()
@@ -389,7 +405,7 @@ private fun ContactFields(
             TypedEntryRow(
                 icon = Icons.Outlined.Email,
                 entry = entry,
-                types = types,
+                types = emailTypes,
                 keyboardType = KeyboardType.Email,
                 placeholder = stringResource(R.string.people_contact_email),
                 onChange = { updated ->
@@ -404,7 +420,7 @@ private fun ContactFields(
             TypedEntryRow(
                 icon = Icons.Outlined.Phone,
                 entry = entry,
-                types = types,
+                types = phoneTypes,
                 keyboardType = KeyboardType.Phone,
                 placeholder = stringResource(R.string.people_contact_phone),
                 onChange = { updated ->
@@ -419,7 +435,7 @@ private fun ContactFields(
             AddressRows(
                 icon = Icons.Outlined.Place,
                 address = address,
-                types = types,
+                types = addressTypes,
                 onChange = { updated ->
                     onChange(form.copy(addresses = form.addresses.replaced(index, updated)))
                 },

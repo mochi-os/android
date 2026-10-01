@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Emri i operatorit</string>
     <string name="system_setting_operator_email">Email i operatorit</string>
     <string name="system_setting_operator_jurisdiction">Juridiksioni i operatorit</string>
-    <string name="system_setting_server_started">Serveri filloi</string>
-    <string name="system_setting_server_version">Versioni i serverit</string>
     <string name="system_setting_signup_enabled">Lejo regjistrime të reja</string>
     <string name="system_users_title">Përdoruesit</string>
     <string name="system_users_col_user">Përdoruesi</string>
@@ -395,4 +393,5 @@
     <string name="accounts_provider_caldav">Server kalendari</string>
     <string name="accounts_revoke_confirm">Kjo do të revokojë qasjen në kalendar të %1$s. Hyrja me %2$s mbetet derisa ta shkëputni në faqen e hyrjes.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Temë e panjohur</string>
 </resources>

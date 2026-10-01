@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Alle forums</string>
     <string name="forums_create_allow_search">Laat enigiemand toe om die forum te soek</string>
     <string name="forums_rss_clipboard_label">Forum RSS-URL</string>
+    <string name="forums_notifications_post">Nuwe plasings</string>
+    <string name="forums_notifications_reply">Antwoorde aan jou</string>
+    <string name="forums_notifications_comment">Alle antwoorde</string>
+    <string name="forums_follow_thread">Volg draad</string>
+    <string name="forums_unfollow_thread">Ontvolg draad</string>
     <string name="forums_tab_moderation">Moderering</string>
     <string name="forums_access_level_view_full">Slegs bekyk</string>
     <string name="forums_access_level_none_full">Geen toegang</string>

@@ -160,8 +160,6 @@
     <string name="system_setting_operator_name">Nombre del operador</string>
     <string name="system_setting_operator_email">Correo del operador</string>
     <string name="system_setting_operator_jurisdiction">Jurisdicción del operador</string>
-    <string name="system_setting_server_started">Servidor iniciado</string>
-    <string name="system_setting_server_version">Versión del servidor</string>
     <string name="system_setting_signup_enabled">Permitir nuevos registros</string>
     <string name="system_users_title">Usuarios</string>
     <string name="system_users_add_user">Agregar usuario</string>
@@ -384,4 +382,5 @@
     <string name="notifprefs_no_destinations">Sin destinos</string>
     <string name="account_data_generate">Generar frase de contraseña</string>
     <string name="account_totp_open">Abrir en la app de autenticación</string>
+    <string name="system_settings_theme_unknown">Tema desconocido</string>
 </resources>

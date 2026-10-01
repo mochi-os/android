@@ -9,7 +9,9 @@ package org.mochios.people.model
  * A friendship invitation waiting on one side or the other. [id] is the other
  * person's entity id and [identity] the local identity the invite belongs to;
  * [direction] is `from` for one received and `to` for one sent, which the list
- * it arrives in also says.
+ * it arrives in also says. [name] is the sender's own claim; a received invite
+ * also carries what the sender cannot choose, their [fingerprint] and the
+ * directory's name for them in [directory] (empty when it does not list them).
  */
 data class FriendInvite(
     val identity: String = "",
@@ -17,4 +19,6 @@ data class FriendInvite(
     val direction: String = "",
     val name: String = "",
     val updated: Long = 0,
+    val fingerprint: String = "",
+    val directory: String = "",
 )

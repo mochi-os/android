@@ -210,8 +210,6 @@
     <string name="system_setting_operator_name">Name des Betreibers</string>
     <string name="system_setting_operator_email">E-Mail des Betreibers</string>
     <string name="system_setting_operator_jurisdiction">Gerichtsstand des Betreibers</string>
-    <string name="system_setting_server_started">Server gestartet</string>
-    <string name="system_setting_server_version">Serverversion</string>
     <string name="system_setting_signup_enabled">Neue Registrierungen erlauben</string>
     <string name="settings_home_system_users">Benutzer (Server)</string>
     <string name="system_users_title">Benutzer</string>

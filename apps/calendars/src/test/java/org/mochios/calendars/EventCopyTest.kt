@@ -76,7 +76,7 @@ class EventCopyTest {
         assertEquals("Room 1", form.location)
         assertEquals("Notes", form.description)
         assertEquals(Zone(LONDON, LONDON), form.zone)
-        assertEquals(15, form.reminder)
+        assertEquals(listOf(15), form.reminders)
         assertEquals(Frequency.NEVER, form.recurrence.frequency)
         assertNull(form.recurrence.rule)
 
@@ -91,12 +91,16 @@ class EventCopyTest {
     }
 
     @Test
-    fun `a copy of one overridden occurrence is the override, sounding the master's reminder`() {
+    fun `a copy of one overridden occurrence is the override, reminders and all`() {
         val form = copied(listOf(master(), later()), FIFTH, Scope.ONE, LONDON)!!
         assertEquals("Later", form.title)
         assertEquals(at(2026, 9, 20, 14), form.start)
         assertEquals(at(2026, 9, 20, 15), form.finish)
-        assertEquals(15, form.reminder)
+        // The override replaces its occurrence whole: with no reminder of its
+        // own it has none, and with one it has its own, not the master's.
+        assertEquals(emptyList<Int>(), form.reminders)
+        val own = later().copy(components = listOf(CalendarsMapping.alarm(60, "Later")))
+        assertEquals(listOf(60), copied(listOf(master(), own), FIFTH, Scope.ONE, LONDON)!!.reminders)
         assertEquals(Frequency.NEVER, form.recurrence.frequency)
         assertNull(form.recurrence.rule)
     }
@@ -112,7 +116,7 @@ class EventCopyTest {
         assertEquals(rule, form.recurrence.rule)
         assertEquals(Frequency.MONTHLY, form.recurrence.frequency)
         assertFalse(form.recurrence.expressible)
-        assertEquals(15, form.reminder)
+        assertEquals(listOf(15), form.reminders)
         assertEquals(rule, components(form, emptyList(), Scope.ALL).single().value("RRULE"))
     }
 
@@ -141,8 +145,23 @@ class EventCopyTest {
         assertEquals("LHR", form.location)
         assertEquals("BA 117", form.description)
         assertEquals(Zone(LONDON, "America/New_York"), form.zone)
-        assertEquals(30, form.reminder)
+        assertEquals(listOf(30), form.reminders)
         assertEquals(Frequency.NEVER, form.recurrence.frequency)
+    }
+
+    @Test
+    fun `a copy keeps an HTML description's markup, and opens on its text`() {
+        val html = "Gate <b>12</b><br>Seat 2A"
+        val described = master().let { stored ->
+            stored.copy(properties = stored.properties.filterNot { it.name == "DESCRIPTION" } + property("DESCRIPTION", html))
+        }
+        val form = copied(listOf(described), SECOND, Scope.ONE, LONDON)!!
+        assertEquals("Gate 12\nSeat 2A", form.description)
+        assertEquals(html, components(form, emptyList(), Scope.ALL)[0].value("DESCRIPTION"))
+
+        val listed = copied(Instance(summary = "Flight", description = html, start = FIRST, finish = FIRST + 3_600), SYDNEY, 15)
+        assertEquals("Gate 12\nSeat 2A", listed.description)
+        assertEquals(html, components(listed, emptyList(), Scope.ALL)[0].value("DESCRIPTION"))
     }
 
     @Test

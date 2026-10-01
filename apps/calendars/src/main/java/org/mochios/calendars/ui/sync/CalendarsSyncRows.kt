@@ -50,19 +50,13 @@ import org.mochios.android.R as MochiR
 fun CalendarsSyncRows(viewModel: CalendarsSyncViewModel = hiltViewModel()) {
     val state by viewModel.state.collectAsState()
     val context = LocalContext.current
-    var denied by rememberSaveable { mutableStateOf(false) }
     var choosing by rememberSaveable { mutableStateOf(false) }
 
     val launcher = rememberLauncherForActivityResult(
         ActivityResultContracts.RequestMultiplePermissions(),
     ) { results ->
         viewModel.refresh()
-        if (CalendarsSync.PERMISSIONS.all { results[it] == true }) {
-            denied = false
-            viewModel.enable()
-        } else {
-            denied = true
-        }
+        if (CalendarsSync.PERMISSIONS.all { results[it] == true }) viewModel.enable()
     }
 
     val on = state.enabled && state.permitted
@@ -77,7 +71,7 @@ fun CalendarsSyncRows(viewModel: CalendarsSyncViewModel = hiltViewModel()) {
                 else -> launcher.launch(CalendarsSync.PERMISSIONS)
             }
         },
-        status = status(state, denied),
+        status = status(state),
     )
     if (on) {
         DrawerActionRow(
@@ -121,9 +115,8 @@ fun CalendarsSyncRows(viewModel: CalendarsSyncViewModel = hiltViewModel()) {
 
 /** The line under the switch: what is happening, what went wrong, or when it last synced. */
 @Composable
-private fun status(state: CalendarsSyncState, denied: Boolean): String? {
-    if (!state.permitted && (state.enabled || denied)) return stringResource(R.string.calendars_sync_permission)
-    if (!state.enabled) return null
+private fun status(state: CalendarsSyncState): String? {
+    if (!state.enabled || !state.permitted) return null
     if (state.running) return stringResource(R.string.calendars_sync_running)
     return when (state.failure) {
         SyncFailure.AUTHORIZATION -> stringResource(R.string.calendars_sync_authorization)

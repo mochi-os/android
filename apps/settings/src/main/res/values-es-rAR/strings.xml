@@ -222,8 +222,6 @@
     <string name="system_setting_operator_name">Nombre del operador</string>
     <string name="system_setting_operator_email">Correo electrónico del operador</string>
     <string name="system_setting_operator_jurisdiction">Jurisdicción del operador</string>
-    <string name="system_setting_server_started">Servidor iniciado</string>
-    <string name="system_setting_server_version">Versión del servidor</string>
     <string name="settings_home_system_users">Usuarios (servidor)</string>
     <string name="system_users_title">Usuarios</string>
     <string name="system_users_add_user">Agregar usuario</string>

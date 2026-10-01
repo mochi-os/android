@@ -20,6 +20,7 @@ import org.mochios.forums.ui.post.PostScreen
 import org.mochios.forums.ui.router.ForumsRouter
 import org.mochios.forums.ui.saved.SavedScreen
 import org.mochios.forums.ui.settings.ForumSettingsScreen
+import java.net.URLEncoder
 
 object ForumsApp {
     const val HOME = "forums/router"
@@ -33,7 +34,9 @@ object ForumsApp {
     // A single route composes and edits: an edit carries the target post's id as
     // an optional query arg, a new post omits it.
     const val NEW_POST = "forums/forum/{forumId}/new?postId={postId}"
-    const val FIND_FORUMS = "forums/discover"
+    // [link] is an optional mochi:// share link to resolve on arrival, which is
+    // how a notification about a forum the user does not hold reaches it.
+    const val FIND_FORUMS = "forums/discover?link={link}"
     const val CREATE_FORUM = "forums/create"
     const val FORUM_SETTINGS = "forums/forum/{forumId}/settings"
     const val MODERATION = "forums/forum/{forumId}/moderation"
@@ -44,6 +47,22 @@ object ForumsApp {
     fun newPost(forumId: String, postId: String? = null) =
         if (postId.isNullOrEmpty()) "forums/forum/$forumId/new"
         else "forums/forum/$forumId/new?postId=$postId"
+    fun findForums(link: String? = null) =
+        if (link.isNullOrEmpty()) "forums/discover" else "forums/discover?link=${URLEncoder.encode(link, Charsets.UTF_8)}"
+
+    /**
+     * The screen a `/forums/<forum>[/<post>][?server=<peer>]` link opens: a
+     * forum named with its owner's [server] is one the user does not hold, so
+     * discovery resolves it from the share link and offers to subscribe;
+     * otherwise the post when there is one, else the forum. Null for the bare
+     * app link.
+     */
+    fun linkRoute(forumId: String?, postId: String?, server: String?): String? = when {
+        forumId.isNullOrEmpty() -> null
+        !server.isNullOrEmpty() -> findForums("mochi://$server/$forumId")
+        !postId.isNullOrEmpty() -> post(forumId, postId)
+        else -> forum(forumId)
+    }
     fun forumSettings(forumId: String) = "forums/forum/$forumId/settings"
     fun moderation(forumId: String) = "forums/forum/$forumId/moderation"
 }
@@ -83,7 +102,7 @@ fun NavGraphBuilder.forumsNavGraph(
             },
             onPostClick = { fId, pId -> navController.navigate(ForumsApp.post(fId, pId)) },
             onNewPost = { fId -> navController.navigate(ForumsApp.newPost(fId)) },
-            onFindForums = { navController.navigate(ForumsApp.FIND_FORUMS) },
+            onFindForums = { navController.navigate(ForumsApp.findForums()) },
             onCreateForum = { navController.navigate(ForumsApp.CREATE_FORUM) },
             onSettings = { fId -> navController.navigate(ForumsApp.forumSettings(fId)) },
             onModeration = { fId -> navController.navigate(ForumsApp.moderation(fId)) },
@@ -157,7 +176,13 @@ fun NavGraphBuilder.forumsNavGraph(
         )
     }
 
-    composable(ForumsApp.FIND_FORUMS) {
+    composable(
+        route = ForumsApp.FIND_FORUMS,
+        arguments = listOf(navArgument("link") {
+            type = NavType.StringType
+            defaultValue = ""
+        }),
+    ) {
         FindForumsScreen(
             onBack = { navController.popBackStack() },
             // Drop discovery from the back stack and open the forum just joined,

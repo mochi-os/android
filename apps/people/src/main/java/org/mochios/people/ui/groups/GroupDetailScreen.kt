@@ -67,6 +67,8 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
+import org.mochios.android.format.formatFingerprint
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.people.R
 import org.mochios.people.model.GroupMember
 import org.mochios.people.model.GroupMemberType
@@ -234,7 +236,11 @@ fun GroupDetailScreen(
             title = stringResource(R.string.people_member_remove_title),
             text = stringResource(
                 R.string.people_member_remove_confirm,
-                pendingRemoval.name,
+                memberLabel(
+                    pendingRemoval,
+                    stringResource(R.string.people_member_unknown_person),
+                    stringResource(R.string.people_member_deleted_group),
+                ),
             ),
             confirmText = stringResource(R.string.people_member_remove),
             onConfirm = { viewModel.removeMember(pendingRemoval) },
@@ -276,17 +282,14 @@ private fun GroupDetailContent(
         item("desc-row") {
             EditableRow(
                 label = stringResource(R.string.people_group_description),
-                value = group.description.ifBlank {
-                    stringResource(R.string.people_group_description_optional)
-                },
-                placeholder = group.description.isBlank(),
+                value = group.description,
                 onClick = viewModel::openEditDescription,
             )
         }
         item("members-count") {
             FieldRow(
                 label = stringResource(R.string.people_group_members_count),
-                value = state.members.size.toString(),
+                value = LocalFormat.current.formatNumber(state.members.size),
             )
         }
 
@@ -298,11 +301,6 @@ private fun GroupDetailContent(
                 Text(
                     text = stringResource(R.string.people_group_members),
                     style = MaterialTheme.typography.titleMedium,
-                )
-                Text(
-                    text = stringResource(R.string.people_group_members_description),
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
         }
@@ -365,7 +363,6 @@ private fun GroupDetailContent(
 private fun EditableRow(
     label: String,
     value: String,
-    placeholder: Boolean = false,
     onClick: () -> Unit,
 ) {
     Row(
@@ -385,11 +382,6 @@ private fun EditableRow(
             Text(
                 text = value,
                 style = MaterialTheme.typography.bodyLarge,
-                color = if (placeholder) {
-                    MaterialTheme.colorScheme.onSurfaceVariant
-                } else {
-                    MaterialTheme.colorScheme.onSurface
-                },
             )
         }
         Icon(
@@ -423,11 +415,29 @@ private fun FieldRow(label: String, value: String) {
     }
 }
 
+/**
+ * The name a member row shows: its own, or for a member the server could not
+ * name - a person it cannot look up, a nested group since deleted - a label
+ * saying which.
+ */
+internal fun memberLabel(member: GroupMember, unknown: String, deleted: String): String =
+    member.name.ifEmpty {
+        when (member.type) {
+            GroupMemberType.USER -> unknown
+            GroupMemberType.GROUP -> deleted
+        }
+    }
+
 @Composable
 private fun MemberRow(
     member: GroupMember,
     onRemove: () -> Unit,
 ) {
+    val label = memberLabel(
+        member,
+        stringResource(R.string.people_member_unknown_person),
+        stringResource(R.string.people_member_deleted_group),
+    )
     val typeLabel = stringResource(
         when (member.type) {
             GroupMemberType.USER -> R.string.people_member_type_user
@@ -442,7 +452,7 @@ private fun MemberRow(
     ) {
         when (member.type) {
             GroupMemberType.USER -> EntityAvatar(
-                name = member.name,
+                name = label,
                 seed = member.member,
                 size = 32.dp,
             )
@@ -458,13 +468,21 @@ private fun MemberRow(
             }
         }
         Spacer(Modifier.width(12.dp))
-        Text(
-            text = member.name,
-            modifier = Modifier.weight(1f),
-            style = MaterialTheme.typography.bodyLarge,
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis,
-        )
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = label,
+                style = MaterialTheme.typography.bodyLarge,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
+            if (member.name.isEmpty() && member.fingerprint.isNotEmpty()) {
+                Text(
+                    text = formatFingerprint(member.fingerprint),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+        }
         Spacer(Modifier.width(8.dp))
         AssistChip(
             onClick = {},
@@ -487,7 +505,7 @@ private fun MemberRow(
                 Icons.Default.Close,
                 contentDescription = stringResource(
                     R.string.people_member_remove_with_name,
-                    member.name,
+                    label,
                 ),
                 tint = MaterialTheme.colorScheme.onSurfaceVariant,
             )

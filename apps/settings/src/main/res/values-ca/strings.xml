@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Nom de l\'operador</string>
     <string name="system_setting_operator_email">Correu de l\'operador</string>
     <string name="system_setting_operator_jurisdiction">Jurisdicció de l\'operador</string>
-    <string name="system_setting_server_started">Servidor iniciat</string>
-    <string name="system_setting_server_version">Versió del servidor</string>
     <string name="system_setting_signup_enabled">Permet nous registres</string>
     <string name="system_users_title">Usuaris</string>
     <string name="system_users_col_user">Usuari</string>
@@ -396,4 +394,5 @@
     <string name="accounts_provider_caldav">Servidor de calendari</string>
     <string name="accounts_revoke_confirm">Això revocarà l\'accés al calendari de %1$s. L\'inici de sessió amb %2$s es manté fins que el desenllaceu a la pàgina d\'inici de sessió.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Tema desconegut</string>
 </resources>

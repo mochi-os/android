@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Түзүү</string>
     <string name="calendars_subscribe_submit">Жазылуу</string>
     <string name="calendars_subscribe_url">Дарек</string>
-    <string name="calendars_connect_device">Түзмөк туташтыруу</string>
+    <string name="calendars_connect_device">Туташтырылган түзмөктөр</string>
     <string name="calendars_preferences">Жөндөөлөр</string>
     <string name="calendars_name">Аты</string>
     <string name="calendars_rename">Атын өзгөртүү</string>
@@ -11,7 +11,6 @@
     <string name="calendars_view">Көрүнүш</string>
     <string name="calendars_view_list">Тизме</string>
     <string name="calendars_list_search">Издөө</string>
-    <string name="calendars_event_untitled">Аталышсыз</string>
     <string name="calendars_event_title">Аталышы</string>
     <string name="calendars_event_location">Жайгашкан жери</string>
     <string name="calendars_event_description">Сүрөттөмө</string>
@@ -37,9 +36,10 @@
     <string name="calendars_sync_never">Азырынча синхрондоштурула элек</string>
     <string name="calendars_sync_time">Акыркы синхрондоо: %1$s</string>
     <string name="calendars_sync_transport">Серверге жетүү мүмкүн болбоду</string>
-    <string name="calendars_device_title">Түзмөк туташтыруу</string>
+    <string name="calendars_device_title">Туташтырылган түзмөктөр</string>
     <string name="calendars_device_name">Түзмөктүн аты</string>
     <string name="calendars_device_create">Түзүү</string>
+    <string name="calendars_device_add">Түзмөк кошуу</string>
     <string name="calendars_device_server">Сервер</string>
     <string name="calendars_device_address">Дарек</string>
     <string name="calendars_device_username">Колдонуучунун аты</string>
@@ -61,21 +61,20 @@
     <string name="calendars_poll">Азыр текшерүү</string>
     <string name="calendars_delete_title">%1$s өчүрүлсүнбү?</string>
     <string name="calendars_delete_message">Анын иш-чаралары да аны менен бирге өчүрүлөт.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d иш-чара жаңыланды</item>
-        <item quantity="other">%1$d иш-чара жаңыланды</item>
-    </plurals>
+    <string name="calendars_remove">Алуу</string>
+    <string name="calendars_remove_title">%1$s Mochi-ден алып салынсынбы?</string>
+    <string name="calendars_remove_message">Анын иш-чаралары баштапкы календарда калат.</string>
     <string name="calendars_today">Бүгүн</string>
     <string name="calendars_view_week">Жума</string>
     <string name="calendars_view_multiweek">Бир нече жума</string>
     <string name="calendars_view_month">Ай</string>
     <string name="calendars_workweek">Жумуш жумасы</string>
+    <string name="calendars_range">%1$s - %2$s</string>
     <string name="calendars_truncated">Бул аралыктагы кээ бир иш-чаралар көрсөтүлгөн жок.</string>
     <string name="calendars_list_empty">Иш-чаралар жок</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d дагы</item>
-        <item quantity="other">+%1$d дагы</item>
-    </plurals>
+    <string name="calendars_untitled">(Аталышы жок)</string>
+    <string name="calendars_status_cancelled">Жокко чыгарылды</string>
+    <string name="calendars_status_tentative">Алдын ала</string>
     <string name="calendars_event_new">Жаңы иш-чара</string>
     <string name="calendars_event_edit">Иш-чараны түзөтүү</string>
     <string name="calendars_event_calendar">Календарь</string>
@@ -97,9 +96,20 @@
     <string name="calendars_repeat_count">Кайталануулардын саны</string>
     <string name="calendars_repeat_forever">Түбөлүккө</string>
     <string name="calendars_reminder_time">Иш-чаранын убагында</string>
-    <string name="calendars_reminder_minutes">%1$d мүнөт мурун</string>
-    <string name="calendars_reminder_hour">1 саат мурун</string>
-    <string name="calendars_reminder_day">1 күн мурун</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d мүнөт мурун</item>
+        <item quantity="other">%1$d мүнөт мурун</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d саат мурун</item>
+        <item quantity="other">%1$d саат мурун</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d күн мурун</item>
+        <item quantity="other">%1$d күн мурун</item>
+    </plurals>
+    <string name="calendars_reminder_add">Эскертме кошуу</string>
+    <string name="calendars_reminder_remove">Эскертмени алып салуу</string>
     <string name="calendars_hours_start">Жумуш убактысынын башталышы</string>
     <string name="calendars_hours_finish">Жумуш убактысынын аякташы</string>
     <string name="calendars_hours_invalid">Иш убактысы башталгандан кийин аяктоосу керек.</string>
@@ -108,16 +118,18 @@
     <string name="calendars_multiweek_previous">Мурунку жумалар</string>
     <string name="calendars_default_duration">Иш-чаранын демейки узактыгы</string>
     <string name="calendars_default_reminder">Демейки эскертме</string>
+    <string name="calendars_default_calendar">Демейки календарь</string>
+    <string name="calendars_preferences_allday">Күн бою иш-чаралар</string>
+    <string name="calendars_allday_first">Башында</string>
+    <string name="calendars_allday_last">Аягында</string>
     <string name="calendars_link_title">Календардын шилтемеси</string>
     <string name="calendars_link_copy">Шилтемени көчүрүү</string>
     <string name="calendars_link_once">Аны азыр көчүрүп алыңыз: аны кайра көрсөтүү мүмкүн эмес.</string>
     <string name="calendars_link_exists">Бул календарь үчүн шилтеме мурунтан эле бар.</string>
     <string name="calendars_permission_title">Мүмкүнчүлүк берилсинби?</string>
     <string name="calendars_permission_message">%1$s мына буларды сурап жатат:</string>
-    <string name="calendars_sync_permission">Календарга мүмкүнчүлүк керек</string>
     <string name="calendars_sync_authorization">Шайкештирүүнү улантуу үчүн кайра кириңиз</string>
     <string name="calendars_device_warning">Сырсөздү азыр көчүрүп алыңыз: аны кайра көрсөтүү мүмкүн эмес.</string>
-    <string name="calendars_device_list">Туташтырылган түзмөктөр</string>
     <string name="calendars_device_empty">Туташтырылган түзмөктөр жок</string>
     <string name="calendars_device_used">Акыркы колдонуу %1$s</string>
     <string name="calendars_device_never">Эч качан</string>
@@ -167,9 +179,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Календарь</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Бул серверде Google аккаунттары иштетилген эмес. Аларды Жөндөөлөр, Системалык жөндөөлөр бөлүмүнөн иштетиңиз.</string>
     <string name="calendars_subscribe_google_connect">Сиз Google аккаунтун туташтырган жоксуз.</string>
     <string name="calendars_subscribe_google_connect_action">Google\'га туташуу</string>
     <string name="calendars_grant_failed">Календарга жетүү берилген жок</string>
+    <string name="calendars_event_exception">Өзгөртүлгөн кайталануу</string>
+    <string name="calendars_span_day">%1$s, %2$s - %3$s</string>
+    <string name="calendars_polled_current">Календарь жаңыртылган</string>
+    <string name="calendars_polled_synced">Календарь синхрондоштурулду</string>
+    <string name="calendars_link_revoke_title">Календардын дарегин кайтарып алуу керекпи?</string>
+    <string name="calendars_link_revoke_message">Бул дарекке жазылган календарлар мындан ары жаңыланбай калат.</string>
 </resources>

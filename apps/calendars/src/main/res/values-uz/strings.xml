@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Yaratish</string>
     <string name="calendars_subscribe_submit">Obuna boʻlish</string>
     <string name="calendars_subscribe_url">Manzil</string>
-    <string name="calendars_connect_device">Qurilma ulash</string>
+    <string name="calendars_connect_device">Ulangan qurilmalar</string>
     <string name="calendars_preferences">Sozlamalar</string>
     <string name="calendars_name">Nomi</string>
     <string name="calendars_rename">Nomini oʻzgartirish</string>
@@ -11,7 +11,6 @@
     <string name="calendars_view">Koʻrinish</string>
     <string name="calendars_view_list">Roʻyxat</string>
     <string name="calendars_list_search">Qidirish</string>
-    <string name="calendars_event_untitled">Sarlavhasiz</string>
     <string name="calendars_event_title">Sarlavha</string>
     <string name="calendars_event_location">Joylashuv</string>
     <string name="calendars_event_description">Tavsif</string>
@@ -37,9 +36,10 @@
     <string name="calendars_sync_never">Hali sinxronlanmagan</string>
     <string name="calendars_sync_time">Oxirgi sinxronlash: %1$s</string>
     <string name="calendars_sync_transport">Serverga ulanib bo\'lmadi</string>
-    <string name="calendars_device_title">Qurilma ulash</string>
+    <string name="calendars_device_title">Ulangan qurilmalar</string>
     <string name="calendars_device_name">Qurilma nomi</string>
     <string name="calendars_device_create">Yaratish</string>
+    <string name="calendars_device_add">Qurilma qoʻshish</string>
     <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Manzil</string>
     <string name="calendars_device_username">Foydalanuvchi nomi</string>
@@ -61,13 +61,20 @@
     <string name="calendars_poll">Hozir tekshirish</string>
     <string name="calendars_delete_title">%1$s oʻchirilsinmi?</string>
     <string name="calendars_delete_message">Uning tadbirlari ham u bilan birga oʻchiriladi.</string>
+    <string name="calendars_remove">Olib tashlash</string>
+    <string name="calendars_remove_title">%1$s Mochi’dan olib tashlansinmi?</string>
+    <string name="calendars_remove_message">Uning tadbirlari asl kalendarda qoladi.</string>
     <string name="calendars_today">Bugun</string>
     <string name="calendars_view_week">Hafta</string>
     <string name="calendars_view_multiweek">Bir necha hafta</string>
     <string name="calendars_view_month">Oy</string>
     <string name="calendars_workweek">Ish haftasi</string>
+    <string name="calendars_range">%1$s dan %2$s gacha</string>
     <string name="calendars_truncated">Bu oraliqdagi ayrim tadbirlar koʻrsatilmagan.</string>
     <string name="calendars_list_empty">Tadbirlar yoʻq</string>
+    <string name="calendars_untitled">(Sarlavhasiz)</string>
+    <string name="calendars_status_cancelled">Bekor qilindi</string>
+    <string name="calendars_status_tentative">Taxminiy</string>
     <string name="calendars_event_new">Yangi tadbir</string>
     <string name="calendars_event_edit">Tadbirni tahrirlash</string>
     <string name="calendars_event_calendar">Kalendar</string>
@@ -89,9 +96,20 @@
     <string name="calendars_repeat_count">Takrorlar soni</string>
     <string name="calendars_repeat_forever">Doimiy</string>
     <string name="calendars_reminder_time">Tadbir vaqtida</string>
-    <string name="calendars_reminder_minutes">%1$d daqiqa oldin</string>
-    <string name="calendars_reminder_hour">1 soat oldin</string>
-    <string name="calendars_reminder_day">1 kun oldin</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d daqiqa oldin</item>
+        <item quantity="other">%1$d daqiqa oldin</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d soat oldin</item>
+        <item quantity="other">%1$d soat oldin</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d kun oldin</item>
+        <item quantity="other">%1$d kun oldin</item>
+    </plurals>
+    <string name="calendars_reminder_add">Eslatma qoʻshish</string>
+    <string name="calendars_reminder_remove">Eslatmani olib tashlash</string>
     <string name="calendars_hours_start">Ish vaqti boshlanishi</string>
     <string name="calendars_hours_finish">Ish vaqti tugashi</string>
     <string name="calendars_hours_invalid">Ish vaqti boshlangandan keyin tugashi kerak.</string>
@@ -100,30 +118,24 @@
     <string name="calendars_multiweek_previous">Oldingi haftalar</string>
     <string name="calendars_default_duration">Tadbirning standart davomiyligi</string>
     <string name="calendars_default_reminder">Standart eslatma</string>
+    <string name="calendars_default_calendar">Standart kalendar</string>
+    <string name="calendars_preferences_allday">Kun boʻyi tadbirlar</string>
+    <string name="calendars_allday_first">Boshida</string>
+    <string name="calendars_allday_last">Oxirida</string>
     <string name="calendars_link_title">Kalendar havolasi</string>
     <string name="calendars_link_copy">Havolani nusxalash</string>
     <string name="calendars_link_once">Uni hozir nusxalang: u boshqa koʻrsatilmaydi.</string>
     <string name="calendars_link_exists">Bu kalendar uchun havola allaqachon mavjud.</string>
     <string name="calendars_permission_title">Ruxsat berilsinmi?</string>
     <string name="calendars_permission_message">%1$s soʻramoqda:</string>
-    <string name="calendars_sync_permission">Kalendarga ruxsat kerak</string>
     <string name="calendars_sync_authorization">Sinxronlashni davom ettirish uchun qayta kiring</string>
     <string name="calendars_device_warning">Parolni hozir nusxalang: u boshqa koʻrsatilmaydi.</string>
-    <string name="calendars_device_list">Ulangan qurilmalar</string>
     <string name="calendars_device_empty">Ulangan qurilma yoʻq</string>
     <string name="calendars_device_used">oxirgi foydalanilgan %1$s</string>
     <string name="calendars_device_never">hech qachon</string>
     <string name="calendars_device_deleted">Qurilma olib tashlandi</string>
     <string name="calendars_device_delete_title">Bu qurilma olib tashlansinmi?</string>
     <string name="calendars_device_delete_message">Sinxronlash uchun uni qayta sozlash kerak boʻladi.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d tadbir yangilandi</item>
-        <item quantity="other">%1$d tadbir yangilandi</item>
-    </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">yana +%1$d</item>
-        <item quantity="other">yana +%1$d</item>
-    </plurals>
     <string name="calendars_sync_choose">Sinxronlanadigan kalendarlar</string>
     <string name="calendars_poll_large">Kalendar juda katta</string>
     <string name="calendars_poll_invalid">Manzil kalendar qaytarmadi</string>
@@ -167,9 +179,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Taqvim</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Bu serverda Google hisoblari yoqilmagan. Ularni Sozlamalar, Tizim sozlamalari boʻlimida yoqing.</string>
     <string name="calendars_subscribe_google_connect">Siz Google hisobini ulamagansiz.</string>
     <string name="calendars_subscribe_google_connect_action">Google\'ni ulash</string>
     <string name="calendars_grant_failed">Kalendarga kirish berilmadi</string>
+    <string name="calendars_event_exception">Oʻzgartirilgan takror</string>
+    <string name="calendars_span_day">%1$s, %2$s – %3$s</string>
+    <string name="calendars_polled_current">Kalendar yangilangan</string>
+    <string name="calendars_polled_synced">Kalendar sinxronlandi</string>
+    <string name="calendars_link_revoke_title">Kalendar manzili bekor qilinsinmi?</string>
+    <string name="calendars_link_revoke_message">Bu manzilga obuna boʻlgan kalendarlar endi yangilanmaydi.</string>
 </resources>

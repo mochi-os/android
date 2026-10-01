@@ -317,4 +317,8 @@
     <string name="device_name_fallback">Dispositivo mobile</string>
     <string name="account_error_token_type">Tipo di token non supportato</string>
     <string name="account_error_caller">Chiamante non autorizzato</string>
+    <string name="zone_sea">In mare</string>
+    <string name="access_remove">Rimuovi</string>
+    <string name="access_remove_title">Rimuovere l\'accesso?</string>
+    <string name="access_remove_message">Rimuovere la regola di accesso per «%1$s»?</string>
 </resources>

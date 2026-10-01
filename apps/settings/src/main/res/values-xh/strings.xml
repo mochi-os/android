@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Igama lomqhubi</string>
     <string name="system_setting_operator_email">I-imeyile yomqhubi</string>
     <string name="system_setting_operator_jurisdiction">Igunya lomqhubi</string>
-    <string name="system_setting_server_started">Iseva iqalisiwe</string>
-    <string name="system_setting_server_version">Inguqulelo yeseva</string>
     <string name="system_setting_signup_enabled">Vumela ukubhaliswa okutsha</string>
     <string name="system_users_title">Abasebenzisi</string>
     <string name="system_users_col_user">Umsebenzisi</string>
@@ -395,4 +393,5 @@
     <string name="accounts_provider_caldav">Iseva yekhalenda</string>
     <string name="accounts_revoke_confirm">Oku kuya kurhoxisa ufikelelo lwekhalenda luka-%1$s. Ukungena nge-%2$s kuya kuhlala kude ukhulule unxulumano kwiphepha lokuNgena.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Itimu engaziwayo</string>
 </resources>

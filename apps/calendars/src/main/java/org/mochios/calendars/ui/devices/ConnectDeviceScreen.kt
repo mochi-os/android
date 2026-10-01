@@ -15,7 +15,6 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -26,7 +25,6 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Smartphone
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -44,7 +42,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -56,8 +53,8 @@ import org.mochios.android.ui.components.CopyButton
 import org.mochios.android.ui.components.DataChip
 import org.mochios.android.ui.components.InlineErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
-import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiFab
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
@@ -67,10 +64,10 @@ import org.mochios.calendars.model.DeviceToken
 import org.mochios.android.R as MochiR
 
 /**
- * Connect a device: name it, create its password, and copy the server,
- * calendar URL, username and password into the device's calendar account.
- * The password is shown once, here; below it every connected device with
- * when it was created and last used, each deletable alone.
+ * The connected devices: the server, address and username every device's
+ * calendar account takes, then each device with when it was created and last
+ * used, each deletable alone. Add device names a new one and shows its
+ * password, once.
  *
  * Only device credentials are listed. The tokens an ICS link mints belong to
  * one calendar and are replaced or revoked from its own menu, so showing them
@@ -110,6 +107,13 @@ fun ConnectDeviceScreen(
                 },
             )
         },
+        floatingActionButton = {
+            if (uiState.token == null) {
+                MochiFab(onClick = viewModel::startAdd) {
+                    Icon(Icons.Default.Add, contentDescription = stringResource(R.string.calendars_device_add))
+                }
+            }
+        },
     ) { padding ->
         LazyColumn(
             modifier = Modifier
@@ -118,13 +122,16 @@ fun ConnectDeviceScreen(
             contentPadding = PaddingValues(16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {
-            item(key = "create") {
-                CreateSection(
-                    name = uiState.name,
-                    creating = uiState.isCreating,
-                    onNameChange = viewModel::setName,
-                    onCreate = viewModel::create,
-                )
+            // The same for every device, so on show until a new password
+            // brings its own copy of them.
+            if (uiState.token == null) {
+                item(key = "details") {
+                    DetailsSection(
+                        server = uiState.server,
+                        address = uiState.address,
+                        username = uiState.username,
+                    )
+                }
             }
             uiState.token?.let { token ->
                 item(key = "credentials") {
@@ -136,13 +143,6 @@ fun ConnectDeviceScreen(
                         onDone = viewModel::done,
                     )
                 }
-            }
-            item(key = "heading") {
-                Text(
-                    text = stringResource(R.string.calendars_device_list),
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.SemiBold,
-                )
             }
             val error = uiState.error
             when {
@@ -182,18 +182,40 @@ fun ConnectDeviceScreen(
             confirmLoading = uiState.isDeleting,
             destructive = true,
             dismissText = stringResource(MochiR.string.common_cancel),
+            dismissEnabled = !uiState.isDeleting,
+        )
+    }
+
+    if (uiState.adding) {
+        AddDeviceDialog(
+            name = uiState.name,
+            creating = uiState.isCreating,
+            onNameChange = viewModel::setName,
+            onCreate = viewModel::create,
+            onDismiss = viewModel::cancelAdd,
         )
     }
 }
 
+/** A new device's name, asked for before its password is made. */
 @Composable
-private fun CreateSection(
+private fun AddDeviceDialog(
     name: String,
     creating: Boolean,
     onNameChange: (String) -> Unit,
     onCreate: () -> Unit,
+    onDismiss: () -> Unit,
 ) {
-    Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+    MochiAlertDialog(
+        onDismissRequest = onDismiss,
+        title = stringResource(R.string.calendars_device_add),
+        confirmText = stringResource(R.string.calendars_device_create),
+        onConfirm = onCreate,
+        confirmEnabled = name.isNotBlank(),
+        confirmLoading = creating,
+        dismissText = stringResource(MochiR.string.common_cancel),
+        dismissEnabled = !creating,
+    ) {
         MochiTextField(
             value = name,
             onValueChange = onNameChange,
@@ -204,25 +226,25 @@ private fun CreateSection(
             keyboardActions = KeyboardActions(onDone = { onCreate() }),
             modifier = Modifier.fillMaxWidth(),
         )
-        MochiButton(
-            onClick = onCreate,
-            enabled = name.isNotBlank() && !creating,
-            modifier = Modifier.align(Alignment.End),
+    }
+}
+
+/**
+ * What every device's account asks for besides its password: the server, the
+ * address and the username.
+ */
+@Composable
+private fun DetailsSection(server: String, address: String, username: String) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
+        Column(
+            modifier = Modifier.padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            if (creating) {
-                CircularProgressIndicator(
-                    modifier = Modifier.size(ButtonDefaults.IconSize),
-                    strokeWidth = 2.dp,
-                )
-            } else {
-                Icon(
-                    Icons.Default.Add,
-                    contentDescription = null,
-                    modifier = Modifier.size(ButtonDefaults.IconSize),
-                )
+            CredentialRow(stringResource(R.string.calendars_device_server), server)
+            CredentialRow(stringResource(R.string.calendars_device_address), address)
+            if (username.isNotEmpty()) {
+                CredentialRow(stringResource(R.string.calendars_device_username), username)
             }
-            Spacer(Modifier.width(ButtonDefaults.IconSpacing))
-            Text(stringResource(R.string.calendars_device_create))
         }
     }
 }

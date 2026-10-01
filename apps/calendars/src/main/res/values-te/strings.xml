@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">సృష్టించండి</string>
     <string name="calendars_subscribe_submit">చందా చేరండి</string>
     <string name="calendars_subscribe_url">చిరునామా</string>
-    <string name="calendars_connect_device">పరికరాన్ని కనెక్ట్ చేయండి</string>
+    <string name="calendars_connect_device">కనెక్ట్ చేసిన పరికరాలు</string>
     <string name="calendars_preferences">ప్రాధాన్యతలు</string>
     <string name="calendars_name">పేరు</string>
     <string name="calendars_rename">పేరు మార్చండి</string>
@@ -11,7 +11,6 @@
     <string name="calendars_view">వీక్షణ</string>
     <string name="calendars_view_list">జాబితా</string>
     <string name="calendars_list_search">శోధన</string>
-    <string name="calendars_event_untitled">శీర్షికలేని</string>
     <string name="calendars_event_title">శీర్షిక</string>
     <string name="calendars_event_location">స్థానం</string>
     <string name="calendars_event_description">వివరణ</string>
@@ -37,9 +36,10 @@
     <string name="calendars_sync_never">ఇంకా సింక్ చేయలేదు</string>
     <string name="calendars_sync_time">చివరి సింక్: %1$s</string>
     <string name="calendars_sync_transport">సర్వర్‌ను చేరుకోలేకపోయింది</string>
-    <string name="calendars_device_title">పరికరాన్ని కనెక్ట్ చేయండి</string>
+    <string name="calendars_device_title">కనెక్ట్ చేసిన పరికరాలు</string>
     <string name="calendars_device_name">పరికరం పేరు</string>
     <string name="calendars_device_create">సృష్టించండి</string>
+    <string name="calendars_device_add">పరికరాన్ని జోడించండి</string>
     <string name="calendars_device_server">సర్వర్</string>
     <string name="calendars_device_address">చిరునామా</string>
     <string name="calendars_device_username">వినియోగదారు పేరు</string>
@@ -61,13 +61,20 @@
     <string name="calendars_poll">ఇప్పుడే తనిఖీ చేయండి</string>
     <string name="calendars_delete_title">%1$sను తొలగించాలా?</string>
     <string name="calendars_delete_message">దాని ఈవెంట్‌లు కూడా దానితో పాటు తొలగించబడతాయి.</string>
+    <string name="calendars_remove">తొలగించండి</string>
+    <string name="calendars_remove_title">%1$s ను Mochi నుండి తొలగించాలా?</string>
+    <string name="calendars_remove_message">దాని ఈవెంట్‌లు అసలు క్యాలెండర్‌లోనే ఉంటాయి.</string>
     <string name="calendars_today">ఈ రోజు</string>
     <string name="calendars_view_week">వారం</string>
     <string name="calendars_view_multiweek">అనేక వారాలు</string>
     <string name="calendars_view_month">నెల</string>
     <string name="calendars_workweek">పని వారం</string>
+    <string name="calendars_range">%1$s నుండి %2$s వరకు</string>
     <string name="calendars_truncated">ఈ పరిధిలోని కొన్ని ఈవెంట్‌లు చూపబడలేదు.</string>
     <string name="calendars_list_empty">ఈవెంట్‌లు లేవు</string>
+    <string name="calendars_untitled">(శీర్షిక లేదు)</string>
+    <string name="calendars_status_cancelled">రద్దు చేయబడింది</string>
+    <string name="calendars_status_tentative">తాత్కాలికం</string>
     <string name="calendars_event_new">కొత్త ఈవెంట్</string>
     <string name="calendars_event_edit">ఈవెంట్‌ను సవరించండి</string>
     <string name="calendars_event_calendar">క్యాలెండర్</string>
@@ -89,9 +96,20 @@
     <string name="calendars_repeat_count">పునరావృత్తులు</string>
     <string name="calendars_repeat_forever">ఎప్పటికీ</string>
     <string name="calendars_reminder_time">సమయానికి</string>
-    <string name="calendars_reminder_minutes">%1$d నిమిషాల ముందు</string>
-    <string name="calendars_reminder_hour">1 గంట ముందు</string>
-    <string name="calendars_reminder_day">1 రోజు ముందు</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d నిమిషం ముందు</item>
+        <item quantity="other">%1$d నిమిషాల ముందు</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d గంట ముందు</item>
+        <item quantity="other">%1$d గంటల ముందు</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d రోజు ముందు</item>
+        <item quantity="other">%1$d రోజుల ముందు</item>
+    </plurals>
+    <string name="calendars_reminder_add">రిమైండర్‌ను జోడించండి</string>
+    <string name="calendars_reminder_remove">రిమైండర్‌ను తొలగించండి</string>
     <string name="calendars_hours_start">పని గంటల ప్రారంభం</string>
     <string name="calendars_hours_finish">పని గంటల ముగింపు</string>
     <string name="calendars_hours_invalid">పని గంటలు ప్రారంభమైన తర్వాత ముగియాలి.</string>
@@ -100,30 +118,24 @@
     <string name="calendars_multiweek_previous">ముందు వారాలు</string>
     <string name="calendars_default_duration">డిఫాల్ట్ ఈవెంట్ నిడివి</string>
     <string name="calendars_default_reminder">డిఫాల్ట్ రిమైండర్</string>
+    <string name="calendars_default_calendar">డిఫాల్ట్ క్యాలెండర్</string>
+    <string name="calendars_preferences_allday">రోజంతా ఈవెంట్‌లు</string>
+    <string name="calendars_allday_first">ప్రారంభంలో</string>
+    <string name="calendars_allday_last">చివరలో</string>
     <string name="calendars_link_title">క్యాలెండర్ లింక్</string>
     <string name="calendars_link_copy">లింక్‌ను కాపీ చేయి</string>
     <string name="calendars_link_once">ఇప్పుడే కాపీ చేయండి: ఇది మళ్లీ చూపబడదు.</string>
     <string name="calendars_link_exists">ఈ క్యాలెండర్‌కు ఇప్పటికే ఒక లింక్ ఉంది.</string>
     <string name="calendars_permission_title">యాక్సెస్‌ను అనుమతించాలా?</string>
     <string name="calendars_permission_message">%1$s అడుగుతోంది:</string>
-    <string name="calendars_sync_permission">క్యాలెండర్ యాక్సెస్ అవసరం</string>
     <string name="calendars_sync_authorization">సింక్ కొనసాగించడానికి మళ్లీ సైన్ ఇన్ చేయండి</string>
     <string name="calendars_device_warning">పాస్‌వర్డ్‌ను ఇప్పుడే కాపీ చేయండి: ఇది మళ్లీ చూపబడదు.</string>
-    <string name="calendars_device_list">కనెక్ట్ చేసిన పరికరాలు</string>
     <string name="calendars_device_empty">ఏ పరికరం కనెక్ట్ కాలేదు</string>
     <string name="calendars_device_used">చివరిగా ఉపయోగించినది %1$s</string>
     <string name="calendars_device_never">ఎప్పుడూ లేదు</string>
     <string name="calendars_device_deleted">పరికరం తీసివేయబడింది</string>
     <string name="calendars_device_delete_title">ఈ పరికరాన్ని తీసివేయాలా?</string>
     <string name="calendars_device_delete_message">సింక్ చేయడానికి దీన్ని మళ్లీ సెటప్ చేయాల్సి ఉంటుంది.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d ఈవెంట్ నవీకరించబడింది</item>
-        <item quantity="other">%1$d ఈవెంట్‌లు నవీకరించబడ్డాయి</item>
-    </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d మరిన్ని</item>
-        <item quantity="other">+%1$d మరిన్ని</item>
-    </plurals>
     <string name="calendars_sync_choose">సింక్ చేయాల్సిన క్యాలెండర్‌లు</string>
     <string name="calendars_poll_large">క్యాలెండర్ చాలా పెద్దది</string>
     <string name="calendars_poll_invalid">చిరునామా క్యాలెండర్‌ను అందించలేదు</string>
@@ -167,9 +179,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google క్యాలెండర్</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">ఈ సర్వర్‌లో Google ఖాతాలు ప్రారంభించబడలేదు. వాటిని సెట్టింగ్‌లు, సిస్టమ్ సెట్టింగ్‌లు లో ప్రారంభించండి.</string>
     <string name="calendars_subscribe_google_connect">మీరు Google ఖాతాను కనెక్ట్ చేయలేదు.</string>
     <string name="calendars_subscribe_google_connect_action">Google కనెక్ట్ చేయండి</string>
     <string name="calendars_grant_failed">క్యాలెండర్ యాక్సెస్ ఇవ్వబడలేదు</string>
+    <string name="calendars_event_exception">మార్చిన పునరావృత్తి</string>
+    <string name="calendars_span_day">%1$s, %2$s నుండి %3$s వరకు</string>
+    <string name="calendars_polled_current">క్యాలెండర్ తాజాగా ఉంది</string>
+    <string name="calendars_polled_synced">క్యాలెండర్ సింక్ చేయబడింది</string>
+    <string name="calendars_link_revoke_title">క్యాలెండర్ చిరునామాను ఉపసంహరించాలా?</string>
+    <string name="calendars_link_revoke_message">ఈ చిరునామాకు చందా చేసిన క్యాలెండర్‌లు ఇకపై నవీకరించబడవు.</string>
 </resources>

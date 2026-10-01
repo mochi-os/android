@@ -18,7 +18,8 @@ data class Multiweek(val weeks: Int = 4, val previous: Int = 0)
  * in minutes and [reminder] the default reminder in minutes before the start,
  * -1 for none. [view] is the view the app opens on. [zones] shows each event
  * at its own wall-clock time, each end in the zone it was written in, rather
- * than in the user's zone.
+ * than in the user's zone. [allday] is where a day's all-day events go among
+ * its timed ones in the month and multiweek views, "first" or "last".
  */
 data class Preferences(
     val hours: Hours = Hours(),
@@ -28,7 +29,24 @@ data class Preferences(
     val reminder: Int = 15,
     val view: String = "month",
     val zones: Boolean = false,
+    /**
+     * The calendar a new event opens on; blank, or one the user can no longer
+     * write to, means the built-in default calendar.
+     */
+    val calendar: String = "",
+    val allday: String = "first",
 )
+
+/**
+ * The calendar a new event opens on: the one the preferences name while the
+ * user can still write to it, else the built-in default calendar, else the
+ * first the user can write to. The web client chooses the same way.
+ */
+fun defaultCalendar(calendars: List<Calendar>, preference: String): String {
+    val writable = calendars.filterNot { it.readonly }
+    return (writable.firstOrNull { it.id == preference } ?: writable.firstOrNull { it.default } ?: writable.firstOrNull())
+        ?.id.orEmpty()
+}
 
 /** The body of `-/preferences/get` and `-/preferences/set`. */
 data class PreferencesResponse(val preferences: Preferences = Preferences())
@@ -66,10 +84,9 @@ data class DeviceToken(
     }
 }
 
-/** The body of `-/token/list`. */
-data class TokensResponse(val tokens: List<DeviceToken> = emptyList())
+/** The body of `-/token/list`: the devices, and the username every device enters. */
+data class TokensResponse(val tokens: List<DeviceToken> = emptyList(), val username: String = "")
 
-/** The body of `-/token/create`: the credential, shown once. */
 /** `-/token/create`: the device's password, shown this once, and the username to enter beside it. */
 data class TokenResponse(val token: String = "", val username: String = "")
 

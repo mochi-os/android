@@ -219,6 +219,11 @@
     <string name="forums_all_forums">සියලු සංසද</string>
     <string name="forums_create_allow_search">ඕනෑම කෙනෙකුට සංසදය සෙවීමට ඉඩ දෙන්න</string>
     <string name="forums_rss_clipboard_label">සංසද RSS URL</string>
+    <string name="forums_notifications_post">නව පළ කිරීම්</string>
+    <string name="forums_notifications_reply">ඔබට පිළිතුරු</string>
+    <string name="forums_notifications_comment">සියලු පිළිතුරු</string>
+    <string name="forums_follow_thread">තන්තුව අනුගමනය කරන්න</string>
+    <string name="forums_unfollow_thread">තන්තුව අනුගමනය කිරීම නවත්වන්න</string>
     <string name="forums_tab_moderation">පාලනය</string>
     <string name="forums_access_level_view_full">බැලීම පමණි</string>
     <string name="forums_access_level_none_full">ප්‍රවේශය නැත</string>

@@ -223,6 +223,24 @@ class CalendarsMappingTest {
     }
 
     @Test
+    fun `a duration a phone app wrote without its T goes up in the form the server reads`() {
+        val row = CalendarsMapping.rows(event(timed(rrule = "FREQ=WEEKLY;BYDAY=TU")), 7).single()
+        fun up(duration: String) = CalendarsMapping.components(
+            listOf(EventRow(row.values + (Events.DURATION to duration))),
+        ).single().value("DURATION")
+        assertEquals("PT3600S", up("P3600S"))
+        assertEquals("PT90M", up("P90M"))
+        assertEquals("PT2H", up("p2h"))
+        assertEquals("P1DT3600S", up("P1D3600S"))
+        assertEquals("-PT900S", up("-P900S"))
+        // Already in form, or days and weeks alone: sent as they are.
+        assertEquals("PT1H", up("PT1H"))
+        assertEquals("P1DT2H", up("P1DT2H"))
+        assertEquals("P1D", up("P1D"))
+        assertEquals("P2W", up("P2W"))
+    }
+
+    @Test
     fun `a duration reads as the seconds it names`() {
         assertEquals(3_600L, CalendarsMapping.seconds("PT1H"))
         assertEquals(900L, CalendarsMapping.seconds("PT15M"))

@@ -158,6 +158,9 @@
     <string name="feeds_markdown_supported">Markdown disokong</string>
     <string name="feeds_permission_deny">Tolak</string>
     <string name="feeds_rss_feed">Suapan RSS</string>
+    <string name="feeds_notifications_post">Hantaran baharu</string>
+    <string name="feeds_follow_thread">Ikuti bebenang</string>
+    <string name="feeds_unfollow_thread">Berhenti mengikuti bebenang</string>
     <string name="feeds_settings_field_entity_id">ID Entiti</string>
     <string name="feeds_settings_field_fingerprint">Cap jari</string>
     <string name="feeds_settings_field_server">Pelayan</string>

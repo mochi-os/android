@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Créer</string>
     <string name="calendars_subscribe_submit">S\'abonner</string>
     <string name="calendars_subscribe_url">Adresse</string>
-    <string name="calendars_connect_device">Connecter un appareil</string>
+    <string name="calendars_connect_device">Appareils connectés</string>
     <string name="calendars_preferences">Préférences</string>
     <string name="calendars_name">Nom</string>
     <string name="calendars_rename">Renommer</string>
@@ -11,7 +11,6 @@
     <string name="calendars_view">Vue</string>
     <string name="calendars_view_list">Liste</string>
     <string name="calendars_list_search">Rechercher</string>
-    <string name="calendars_event_untitled">Sans titre</string>
     <string name="calendars_event_title">Titre</string>
     <string name="calendars_event_location">Lieu</string>
     <string name="calendars_event_description">Description</string>
@@ -37,9 +36,10 @@
     <string name="calendars_sync_never">Pas encore synchronisé</string>
     <string name="calendars_sync_time">Dernière synchronisation : %1$s</string>
     <string name="calendars_sync_transport">Impossible de joindre le serveur</string>
-    <string name="calendars_device_title">Connecter un appareil</string>
+    <string name="calendars_device_title">Appareils connectés</string>
     <string name="calendars_device_name">Nom de l\'appareil</string>
     <string name="calendars_device_create">Créer</string>
+    <string name="calendars_device_add">Ajouter un appareil</string>
     <string name="calendars_device_server">Serveur</string>
     <string name="calendars_device_address">Adresse</string>
     <string name="calendars_device_username">Nom d\'utilisateur</string>
@@ -61,21 +61,20 @@
     <string name="calendars_poll">Vérifier maintenant</string>
     <string name="calendars_delete_title">Supprimer %1$s ?</string>
     <string name="calendars_delete_message">Ses événements sont supprimés avec lui.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d événement mis à jour</item>
-        <item quantity="other">%1$d événements mis à jour</item>
-    </plurals>
+    <string name="calendars_remove">Retirer</string>
+    <string name="calendars_remove_title">Retirer %1$s de Mochi ?</string>
+    <string name="calendars_remove_message">Ses événements restent dans le calendrier d\'origine.</string>
     <string name="calendars_today">Aujourd\'hui</string>
     <string name="calendars_view_week">Semaine</string>
     <string name="calendars_view_multiweek">Plusieurs semaines</string>
     <string name="calendars_view_month">Mois</string>
     <string name="calendars_workweek">Semaine de travail</string>
+    <string name="calendars_range">%1$s à %2$s</string>
     <string name="calendars_truncated">Certains événements de cette plage ne sont pas affichés.</string>
     <string name="calendars_list_empty">Aucun événement</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d autre</item>
-        <item quantity="other">+%1$d autres</item>
-    </plurals>
+    <string name="calendars_untitled">(Sans titre)</string>
+    <string name="calendars_status_cancelled">Annulé</string>
+    <string name="calendars_status_tentative">Provisoire</string>
     <string name="calendars_event_new">Nouvel événement</string>
     <string name="calendars_event_edit">Modifier l\'événement</string>
     <string name="calendars_event_calendar">Calendrier</string>
@@ -97,9 +96,20 @@
     <string name="calendars_repeat_count">Occurrences</string>
     <string name="calendars_repeat_forever">Toujours</string>
     <string name="calendars_reminder_time">À l\'heure</string>
-    <string name="calendars_reminder_minutes">%1$d minutes avant</string>
-    <string name="calendars_reminder_hour">1 heure avant</string>
-    <string name="calendars_reminder_day">1 jour avant</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d minute avant</item>
+        <item quantity="other">%1$d minutes avant</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d heure avant</item>
+        <item quantity="other">%1$d heures avant</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d jour avant</item>
+        <item quantity="other">%1$d jours avant</item>
+    </plurals>
+    <string name="calendars_reminder_add">Ajouter un rappel</string>
+    <string name="calendars_reminder_remove">Retirer le rappel</string>
     <string name="calendars_hours_start">Début des heures de travail</string>
     <string name="calendars_hours_finish">Fin des heures de travail</string>
     <string name="calendars_hours_invalid">Les heures de travail doivent se terminer après leur début.</string>
@@ -108,16 +118,18 @@
     <string name="calendars_multiweek_previous">Semaines précédentes</string>
     <string name="calendars_default_duration">Durée d\'événement par défaut</string>
     <string name="calendars_default_reminder">Rappel par défaut</string>
+    <string name="calendars_default_calendar">Calendrier par défaut</string>
+    <string name="calendars_preferences_allday">Événements sur toute la journée</string>
+    <string name="calendars_allday_first">En premier</string>
+    <string name="calendars_allday_last">En dernier</string>
     <string name="calendars_link_title">Lien du calendrier</string>
     <string name="calendars_link_copy">Copier le lien</string>
     <string name="calendars_link_once">Copiez-le maintenant : il ne pourra plus être affiché.</string>
     <string name="calendars_link_exists">Un lien existe déjà pour ce calendrier.</string>
     <string name="calendars_permission_title">Autoriser l\'accès ?</string>
     <string name="calendars_permission_message">%1$s demande :</string>
-    <string name="calendars_sync_permission">L\'accès au calendrier est nécessaire</string>
     <string name="calendars_sync_authorization">Reconnectez-vous pour continuer la synchronisation</string>
     <string name="calendars_device_warning">Copiez le mot de passe maintenant : il ne pourra plus être affiché.</string>
-    <string name="calendars_device_list">Appareils connectés</string>
     <string name="calendars_device_empty">Aucun appareil connecté</string>
     <string name="calendars_device_used">dernière utilisation %1$s</string>
     <string name="calendars_device_never">jamais</string>
@@ -167,9 +179,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Identifiant Apple</string>
     <string name="calendars_subscribe_google">Google Agenda</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Les comptes Google ne sont pas activés sur ce serveur. Activez-les dans Paramètres, Paramètres système.</string>
     <string name="calendars_subscribe_google_connect">Vous n\'avez pas connecté de compte Google.</string>
     <string name="calendars_subscribe_google_connect_action">Connecter Google</string>
     <string name="calendars_grant_failed">L\'accès au calendrier n\'a pas été accordé</string>
+    <string name="calendars_event_exception">Occurrence modifiée</string>
+    <string name="calendars_span_day">%1$s, de %2$s à %3$s</string>
+    <string name="calendars_polled_current">Calendrier à jour</string>
+    <string name="calendars_polled_synced">Calendrier synchronisé</string>
+    <string name="calendars_link_revoke_title">Révoquer l\'adresse du calendrier ?</string>
+    <string name="calendars_link_revoke_message">Les calendriers abonnés à cette adresse ne seront plus mis à jour.</string>
 </resources>

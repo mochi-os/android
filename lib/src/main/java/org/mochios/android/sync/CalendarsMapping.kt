@@ -259,7 +259,7 @@ object CalendarsMapping {
             finish != null -> properties.add(
                 stamp("DTEND", number(finish), (values[Events.EVENT_END_TIMEZONE] as? String) ?: zone, allday),
             )
-            duration != null -> properties.add(property("DURATION", duration))
+            duration != null -> properties.add(property("DURATION", standard(duration)))
         }
 
         text(values[Events.RRULE])?.let { properties.add(property("RRULE", it)) }
@@ -433,6 +433,21 @@ object CalendarsMapping {
             }
         }
         return if (negative) -total else total
+    }
+
+    /**
+     * A duration in the form RFC 5545 writes it, which is all the server
+     * reads. The provider can hold one without the T that comes before a
+     * count of hours, minutes or seconds - "P3600S" - as phone calendar apps
+     * write them, so such a value gains its T. An M is minutes, since a
+     * duration has no months. Days, weeks and a value already in form pass
+     * through unchanged.
+     */
+    private fun standard(duration: String): String {
+        val match = Regex("^([+-]?)P((?:\\d+[WD])*)((?:\\d+[HMS])+)$", RegexOption.IGNORE_CASE)
+            .find(duration.trim()) ?: return duration
+        val (sign, days, time) = match.destructured
+        return "${sign}P${days}T$time".uppercase()
     }
 
     /** The span between two moments as a duration the provider parses. */

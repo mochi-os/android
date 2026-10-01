@@ -316,4 +316,8 @@
     <string name="device_name_fallback">Mobil enjam</string>
     <string name="account_error_token_type">Goldanylmaýan token görnüşi</string>
     <string name="account_error_caller">Çagyryja rugsat berilmeýär</string>
+    <string name="zone_sea">Deňizde</string>
+    <string name="access_remove">Aýyr</string>
+    <string name="access_remove_title">Girişi aýyrmak?</string>
+    <string name="access_remove_message">\"%1$s\" üçin giriş düzgüni aýrylsynmy?</string>
 </resources>

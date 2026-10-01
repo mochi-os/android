@@ -219,6 +219,11 @@
     <string name="forums_all_forums">அனைத்து மன்றங்கள்</string>
     <string name="forums_create_allow_search">யாரும் மன்றத்தைத் தேட அனுமதிக்கவும்</string>
     <string name="forums_rss_clipboard_label">மன்ற RSS URL</string>
+    <string name="forums_notifications_post">புதிய பதிவுகள்</string>
+    <string name="forums_notifications_reply">உங்களுக்கான பதில்கள்</string>
+    <string name="forums_notifications_comment">அனைத்து பதில்கள்</string>
+    <string name="forums_follow_thread">இழையைப் பின்தொடர்</string>
+    <string name="forums_unfollow_thread">இழையைப் பின்தொடர்வதை நிறுத்து</string>
     <string name="forums_tab_moderation">மட்டுறுத்தல்</string>
     <string name="forums_access_level_view_full">காட்சி மட்டும்</string>
     <string name="forums_access_level_none_full">அணுகல் இல்லை</string>

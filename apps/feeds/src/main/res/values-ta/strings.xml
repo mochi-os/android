@@ -158,6 +158,9 @@
     <string name="feeds_markdown_supported">Markdown ஆதரிக்கப்படுகிறது</string>
     <string name="feeds_permission_deny">மறு</string>
     <string name="feeds_rss_feed">RSS ஃபீட்</string>
+    <string name="feeds_notifications_post">புதிய பதிவுகள்</string>
+    <string name="feeds_follow_thread">இழையைப் பின்தொடர்</string>
+    <string name="feeds_unfollow_thread">இழையைப் பின்தொடர்வதை நிறுத்து</string>
     <string name="feeds_settings_field_entity_id">எண்ட்டிட்டி ID</string>
     <string name="feeds_settings_field_fingerprint">கைரேகை</string>
     <string name="feeds_settings_field_server">சர்வர்</string>

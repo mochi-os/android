@@ -73,6 +73,7 @@ import java.time.LocalDate
 import kotlin.math.abs
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LabeledSelectField
 import org.mochios.android.ui.components.MochiDropdownMenu
@@ -90,6 +91,7 @@ import org.mochios.calendars.ui.dialogs.DeleteCalendarDialog
 import org.mochios.calendars.ui.dialogs.LinkDialog
 import org.mochios.calendars.ui.dialogs.PreferencesDialog
 import org.mochios.calendars.ui.dialogs.RenameCalendarDialog
+import org.mochios.calendars.ui.dialogs.RevokeLinkDialog
 import org.mochios.calendars.ui.dialogs.ScopeDialog
 import org.mochios.calendars.ui.editor.Scope
 import org.mochios.calendars.ui.router.CalendarsSection
@@ -116,6 +118,7 @@ fun CalendarScreen(
     onCopyOccurrence: (Instance) -> Unit,
     copied: Boolean = false,
     onCopiedShown: () -> Unit = {},
+    onLogout: () -> Unit = {},
     viewModel: CalendarViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -133,9 +136,14 @@ fun CalendarScreen(
     var colouring by remember { mutableStateOf<Calendar?>(null) }
     var deleting by remember { mutableStateOf<Calendar?>(null) }
     var linking by remember { mutableStateOf<Calendar?>(null) }
+    var revoking by remember { mutableStateOf<Calendar?>(null) }
     var preferences by remember { mutableStateOf(false) }
+    var about by remember { mutableStateOf(false) }
 
-    DisposableRefresh(lifecycle) { viewModel.load(refreshing = true, reset = false) }
+    DisposableRefresh(lifecycle) {
+        viewModel.load(refreshing = true, reset = false)
+        viewModel.refresh()
+    }
 
     LaunchedEffect(Unit) {
         // Each message on its own, so a move's "Undo" waiting to be tapped
@@ -145,10 +153,8 @@ fun CalendarScreen(
                 when (event) {
                     is CalendarEvent.Failed -> snackbar.showSnackbar(event.error.userMessage())
                     is CalendarEvent.Polled -> snackbar.showSnackbar(
-                        resources.getQuantityString(
-                            R.plurals.calendars_polled,
-                            event.changed,
-                            event.changed,
+                        resources.getString(
+                            if (event.linked) R.string.calendars_polled_synced else R.string.calendars_polled_current,
                         ),
                     )
                     CalendarEvent.Moved -> {
@@ -202,6 +208,8 @@ fun CalendarScreen(
         onSubscribe = onSubscribe,
         onPreferences = { preferences = true },
         onConnectDevice = onConnectDevice,
+        onLogout = onLogout,
+        onAbout = { about = true },
     ) {
         Scaffold(
             topBar = {
@@ -218,7 +226,7 @@ fun CalendarScreen(
             },
             snackbarHost = { SnackbarHost(snackbar) },
             floatingActionButton = {
-                MochiFab(onClick = { onNewEvent(0, null) }) {
+                MochiFab(onClick = { onNewEvent(viewModel.creation(), null) }) {
                     Icon(Icons.Default.Add, contentDescription = stringResource(R.string.calendars_event_new))
                 }
             },
@@ -273,6 +281,7 @@ fun CalendarScreen(
                                 View(
                                     uiState,
                                     viewModel,
+                                    selected = selected,
                                     onOpen = { instance ->
                                         if (instance.editable) {
                                             onEditEvent(instance.event, if (instance.recurring) instance.start else 0)
@@ -400,13 +409,28 @@ fun CalendarScreen(
             onReplace = { viewModel.openLink(calendar.id, regenerate = true) },
             onRevoke = {
                 linking = null
+                viewModel.closeLink()
+                revoking = calendar
+            },
+        )
+    }
+    revoking?.let { calendar ->
+        RevokeLinkDialog(
+            onDismiss = { revoking = null },
+            onConfirm = {
+                revoking = null
                 viewModel.revokeLink(calendar.id)
             },
         )
     }
+    if (about) {
+        AboutDialog(onDismiss = { about = false })
+    }
+
     if (preferences) {
         PreferencesDialog(
             preferences = uiState.preferences,
+            calendars = uiState.calendars,
             saving = false,
             onDismiss = { preferences = false },
             onConfirm = {
@@ -425,12 +449,14 @@ private class Move(val instance: Instance, val run: (Scope) -> Unit)
  * a pager, so a swipe brings the period either side in under the finger, as
  * Google Calendar does, and settling on it moves the anchor there. The today
  * button slides the pager the same way. The list view scrolls on its own and
- * is drawn as it is.
+ * is drawn as it is. The occurrence whose summary is open, [selected], is
+ * tinted in each.
  */
 @Composable
 private fun View(
     state: CalendarUiState,
     viewModel: CalendarViewModel,
+    selected: Instance?,
     onOpen: (Instance) -> Unit,
     onNewEvent: (Long, Boolean?) -> Unit,
     onMove: (Instance, Long, Long) -> Unit,
@@ -438,7 +464,7 @@ private fun View(
 ) {
     val scroll = rememberHourScroll(state.preferences.hours.start)
     if (state.view == CalendarsSection.LIST) {
-        Page(state, viewModel, scroll, onOpen, onNewEvent, onMove, onMoveDay)
+        Page(state, viewModel, selected, scroll, onOpen, onNewEvent, onMove, onMoveDay)
         return
     }
     key(state.view) {
@@ -470,7 +496,7 @@ private fun View(
             } else {
                 state.copy(anchor = step(state.view, base, page - SWIPE_CENTRE))
             }
-            Page(shown, viewModel, scroll, onOpen, onNewEvent, onMove, onMoveDay)
+            Page(shown, viewModel, selected, scroll, onOpen, onNewEvent, onMove, onMoveDay)
         }
     }
 }
@@ -482,8 +508,8 @@ private const val SWIPE_PAGES = Int.MAX_VALUE
 private const val SWIPE_CENTRE = SWIPE_PAGES / 2
 
 /**
- * One page of the view the state names, drawn from the same occurrence list.
- * [scroll] is the time grid's vertical position. [onMove] is a block dragged
+ * One page of the view the state names, drawn from the same occurrence list,
+ * with [selected] tinted. [scroll] is the time grid's vertical position. [onMove] is a block dragged
  * or resized in a time grid, with the occurrence's new ends; [onMoveDay] a
  * chip dropped on a day in a month grid, with the occurrence's new first day.
  */
@@ -491,6 +517,7 @@ private const val SWIPE_CENTRE = SWIPE_PAGES / 2
 private fun Page(
     state: CalendarUiState,
     viewModel: CalendarViewModel,
+    selected: Instance?,
     scroll: ScrollState,
     onOpen: (Instance) -> Unit,
     onNewEvent: (Long, Boolean?) -> Unit,
@@ -513,6 +540,7 @@ private fun Page(
             onCreate = { day, hour -> onNewEvent(moment(day, hour), false) },
             onMove = onMove,
             scroll = scroll,
+            selected = selected,
         )
         CalendarsSection.WEEK -> {
             TimeGrid(
@@ -524,6 +552,7 @@ private fun Page(
                 onMove = onMove,
                 scroll = scroll,
                 stacked = true,
+                selected = selected,
             )
         }
         CalendarsSection.MULTIWEEK -> MonthGrid(
@@ -532,8 +561,9 @@ private fun Page(
             state = state,
             viewModel = viewModel,
             onOpen = onOpen,
-            onCreate = { day -> onNewEvent(moment(day, 9), null) },
+            onCreate = { day -> onNewEvent(viewModel.creation(day), null) },
             onMove = onMoveDay,
+            selected = selected,
         )
         CalendarsSection.MONTH -> MonthGrid(
             weeks = viewModel.weeks(state),
@@ -541,8 +571,9 @@ private fun Page(
             state = state,
             viewModel = viewModel,
             onOpen = onOpen,
-            onCreate = { day -> onNewEvent(moment(day, 9), null) },
+            onCreate = { day -> onNewEvent(viewModel.creation(day), null) },
             onMove = onMoveDay,
+            selected = selected,
         )
         // The list view opens on the anchor day and pages on as the reader
         // scrolls, so it has no range to pick — only something to search.
@@ -556,7 +587,7 @@ private fun Page(
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp, vertical = 8.dp),
             )
-            AgendaList(state, viewModel, onOpen)
+            AgendaList(state, viewModel, onOpen, selected)
         }
     }
 }

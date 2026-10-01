@@ -13,6 +13,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
+import androidx.compose.ui.graphics.layer.GraphicsLayer
 
 /**
  * Drag-and-drop state shared by [Modifier.draggableItem] and
@@ -49,6 +50,13 @@ class DragState(
     var targetEdge: DragEdge by mutableStateOf(DragEdge.On)
         private set
 
+    /**
+     * The dragged item as it looked when the drag began, for a host that draws
+     * it under the pointer; null when no drag is active.
+     */
+    var ghost: DragGhost? by mutableStateOf(null)
+        private set
+
     /** Registered drop targets, keyed by stable item id. */
     private val targets = mutableStateMapOf<String, DropTargetEntry>()
 
@@ -67,9 +75,10 @@ class DragState(
     }
 
     /** Begin a drag; the caller usually fires this from a long-press. */
-    fun startDrag(itemId: String, position: Offset) {
+    fun startDrag(itemId: String, position: Offset, ghost: DragGhost? = null) {
         draggingItemId = itemId
         dragOffset = position
+        this.ghost = ghost
         recomputeTarget()
     }
 
@@ -77,6 +86,16 @@ class DragState(
     fun updateDrag(position: Offset) {
         if (draggingItemId == null) return
         dragOffset = position
+        recomputeTarget()
+    }
+
+    /**
+     * Re-pick the target under a pointer that has not moved, for a host that
+     * scrolls or rescales the targets beneath it: without this, a release after
+     * an edge auto-scroll drops on whatever was under the pointer before it.
+     */
+    fun refresh() {
+        if (draggingItemId == null) return
         recomputeTarget()
     }
 
@@ -107,6 +126,7 @@ class DragState(
         draggingItemId = null
         targetItemId = null
         targetEdge = DragEdge.On
+        ghost = null
     }
 
     private fun recomputeTarget() {
@@ -136,6 +156,15 @@ class DragState(
         targetEdge = bestEdge
     }
 }
+
+/**
+ * A picture of a dragged item: [layer] holds its drawing, and [grab] is where
+ * in it the drag began, so a host can keep that point under the pointer.
+ */
+class DragGhost(
+    val layer: GraphicsLayer,
+    val grab: Offset,
+)
 
 /** Position of the pointer relative to a drop target's bounds. */
 enum class DragEdge {

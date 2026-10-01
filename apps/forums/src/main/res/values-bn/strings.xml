@@ -219,6 +219,11 @@
     <string name="forums_all_forums">সব ফোরাম</string>
     <string name="forums_create_allow_search">যে কাউকে ফোরাম অনুসন্ধান করার অনুমতি দিন</string>
     <string name="forums_rss_clipboard_label">ফোরাম RSS URL</string>
+    <string name="forums_notifications_post">নতুন পোস্ট</string>
+    <string name="forums_notifications_reply">আপনাকে দেওয়া উত্তর</string>
+    <string name="forums_notifications_comment">সব উত্তর</string>
+    <string name="forums_follow_thread">থ্রেড অনুসরণ করুন</string>
+    <string name="forums_unfollow_thread">থ্রেড অনুসরণ বন্ধ করুন</string>
     <string name="forums_tab_moderation">মডারেশন</string>
     <string name="forums_access_level_view_full">শুধুমাত্র দেখুন</string>
     <string name="forums_access_level_none_full">অ্যাক্সেস নেই</string>

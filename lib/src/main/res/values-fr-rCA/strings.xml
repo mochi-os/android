@@ -272,4 +272,5 @@
     <string name="format_link">Lien</string>
     <string name="common_preview">Aperçu</string>
     <string name="rss_revoke_confirm">Révoquer</string>
+    <string name="access_remove">Supprimer</string>
 </resources>

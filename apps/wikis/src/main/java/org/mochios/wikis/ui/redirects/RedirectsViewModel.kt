@@ -27,6 +27,8 @@ data class RedirectsUiState(
     val isLoading: Boolean = true,
     val redirects: List<Redirect> = emptyList(),
     val error: MochiError? = null,
+    /** The source of the redirect being deleted; its confirmation stays open until the server answers. */
+    val deleting: String? = null,
 )
 
 data class RedirectsSnackbar(
@@ -92,10 +94,14 @@ class RedirectsViewModel @Inject constructor(
         }
     }
 
-    fun delete(source: String) {
+    fun delete(source: String, onSuccess: () -> Unit) {
+        if (_uiState.value.deleting != null) return
+        _uiState.value = _uiState.value.copy(deleting = source)
         viewModelScope.launch {
             try {
                 repository.deleteRedirect(wikiId, source)
+                _uiState.value = _uiState.value.copy(deleting = null)
+                onSuccess()
                 _snackbar.emit(
                     RedirectsSnackbar(
                         R.string.wikis_redirect_deleted_success,
@@ -104,7 +110,7 @@ class RedirectsViewModel @Inject constructor(
                 )
                 load()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _uiState.value = _uiState.value.copy(deleting = null, error = e.toMochiError())
                 _snackbar.emit(RedirectsSnackbar(R.string.wikis_redirect_delete_failed))
             }
         }

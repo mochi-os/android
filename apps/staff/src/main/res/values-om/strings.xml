@@ -66,7 +66,7 @@
     <string name="staff_audit_action_category_created">Ramaddiin uumame</string>
     <string name="staff_audit_action_category_deleted">Ramaddiin haqame</string>
     <string name="staff_audit_action_category_updated">Ramaddiin haaromfame</string>
-    <string name="staff_audit_action_config_thresholds_updated">Daangaaleen toattaachuu toattaachame</string>
+    <string name="staff_audit_action_config_thresholds_updated">Daangaaleen to\'annaa haaromfaman</string>
     <string name="staff_audit_action_config_updated">Qindaa\'inni haaromfame</string>
     <string name="staff_audit_action_dispute_opened">Deebiin kaffaltii gaafatame</string>
     <string name="staff_audit_action_dispute_resolved_buyer">Deebiin kaffaltii mirkanaa\'e</string>
@@ -102,8 +102,8 @@
     <string name="staff_audit_action_review_responded">Deebiin maxxanfame</string>
     <string name="staff_audit_action_review_restore">Gamaaggami deebifame</string>
     <string name="staff_audit_action_review_revealed">Gamaaggami mul\'ifame</string>
-    <string name="staff_audit_action_staff_team_added">Miseensa qajeelchaa dabalameera</string>
-    <string name="staff_audit_action_staff_team_removed">Miseensa qajeelchaa haqameera</string>
+    <string name="staff_audit_action_staff_team_added">Miseensa hojjettootaa dabalameera</string>
+    <string name="staff_audit_action_staff_team_removed">Miseensa hojjettootaa haqameera</string>
     <string name="staff_audit_action_subscription_activated">Galaa\'iinsi ka\'eera</string>
     <string name="staff_audit_action_subscription_active">Gara sochiitti deebi\'e</string>
     <string name="staff_audit_action_subscription_cancel_scheduled">Haquu yeroon eeggame</string>
@@ -323,7 +323,7 @@
     <string name="staff_reviews_role_buyer">Bittaa</string>
     <string name="staff_reviews_role_seller">Gurguraa</string>
     <string name="staff_reviews_toast_removed">Gamaaggami haqame</string>
-    <string name="staff_reviews_toast_update_failed">Madaallii toattaachuu hin dandeenye</string>
+    <string name="staff_reviews_toast_update_failed">Madaallii haaromsuu hin dandeenye</string>
     <string name="staff_reviews_toast_updated">Gamaaggami haaromfame</string>
     <string name="staff_sidebar_accounts">Akkaawuntiilee</string>
     <string name="staff_sidebar_appeals">Iyyannoolee</string>
@@ -334,7 +334,7 @@
     <string name="staff_sidebar_listings">Tarreeffamtoota</string>
     <string name="staff_sidebar_management">Bulchiinsa</string>
     <string name="staff_sidebar_market">Gabaa</string>
-    <string name="staff_sidebar_moderation">Galmee toattaachuu</string>
+    <string name="staff_sidebar_moderation">Galmee to\'annaa</string>
     <string name="staff_sidebar_overview">Cuunfaa</string>
     <string name="staff_sidebar_reports">Gabaasawwan</string>
     <string name="staff_sidebar_reviews">Gamaaggamoota</string>
@@ -354,7 +354,7 @@
     <string name="staff_status_hidden">Dhokse</string>
     <string name="staff_status_hold">Qabi</string>
     <string name="staff_status_manual">Harkaan</string>
-    <string name="staff_status_moderator">Toattaachaa</string>
+    <string name="staff_status_moderator">To\'ataa</string>
     <string name="staff_status_open">Banaa</string>
     <string name="staff_status_pending">Eegaa jira</string>
     <string name="staff_status_published">Maxxansame</string>
@@ -386,7 +386,7 @@
     <string name="staff_team_remove_desc">Miseensa kana garee hojjettootaa irraa haquuf?</string>
     <string name="staff_team_remove_title">Miseensa garee haqi</string>
     <string name="staff_team_role_admin">Bulchaa</string>
-    <string name="staff_team_role_moderator">Toattaachaa</string>
+    <string name="staff_team_role_moderator">To\'ataa</string>
     <string name="staff_team_role_support">Deeggarsa</string>
     <string name="staff_team_toast_add_failed">Miseensa dabaluu hin dandeenye</string>
     <string name="staff_team_toast_removed">Miseensi haqame</string>
@@ -402,7 +402,7 @@
     <string name="staff_appeals_reason_label">Sababa ol\'iyyannoo gurguraa</string>
     <string name="staff_audit_action_staff_team_role_changed">Gahee hojjetaa jijjiirame</string>
     <string name="staff_categories_delete_desc">“%1$s” haqi? Kun deebifamuu hin danda\'u.</string>
-    <string name="staff_disputes_dialog_title_chargeback">Deebii kaffaltii: %1$s</string>
+    <string name="staff_disputes_dialog_title_chargeback">Chaargii deebi\'e: %1$s</string>
     <string name="staff_disputes_dialog_title_view">Mormii ilaali</string>
     <string name="staff_disputes_meta_buyer_details">Odeeffannoo bitataa</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">Stripe biratti qabame</string>

@@ -14,4 +14,9 @@
     <string name="calendars_subscribe_google_connect">No ha conectado ninguna cuenta de Google.</string>
     <string name="calendars_subscribe_google_connect_action">Conectar Google</string>
     <string name="calendars_grant_failed">No se concedió el acceso al calendario</string>
+    <string name="calendars_span_day">%1$s, %2$s a %3$s</string>
+    <string name="calendars_polled_current">Calendario actualizado</string>
+    <string name="calendars_polled_synced">Calendario sincronizado</string>
+    <string name="calendars_link_revoke_title">¿Revocar la dirección del calendario?</string>
+    <string name="calendars_link_revoke_message">Los calendarios suscritos a esta dirección dejarán de actualizarse.</string>
 </resources>

@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Ainm an oibreora</string>
     <string name="system_setting_operator_email">Ríomhphost an oibreora</string>
     <string name="system_setting_operator_jurisdiction">Dlínse an oibreora</string>
-    <string name="system_setting_server_started">Tosaíodh an freastalaí</string>
-    <string name="system_setting_server_version">Leagan an fhreastalaí</string>
     <string name="system_setting_signup_enabled">Ceadaigh clárúcháin nua</string>
     <string name="system_users_title">Úsáideoirí</string>
     <string name="system_users_col_user">Úsáideoir</string>
@@ -401,4 +399,5 @@
     <string name="accounts_provider_caldav">Freastalaí féilire</string>
     <string name="accounts_revoke_confirm">Cuirfidh sé seo rochtain %1$s ar an bhféilire ar ceal. Fanfaidh síniú isteach le %2$s go dtí go ndínascfaidh tú é ar an leathanach sínithe isteach.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Téama anaithnid</string>
 </resources>

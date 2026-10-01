@@ -223,6 +223,11 @@
     <string name="forums_all_forums">所有論壇</string>
     <string name="forums_create_allow_search">容許任何人搜尋論壇</string>
     <string name="forums_rss_clipboard_label">論壇 RSS 網址</string>
+    <string name="forums_notifications_post">新帖文</string>
+    <string name="forums_notifications_reply">畀你嘅回覆</string>
+    <string name="forums_notifications_comment">所有回覆</string>
+    <string name="forums_follow_thread">追蹤討論串</string>
+    <string name="forums_unfollow_thread">取消追蹤討論串</string>
     <string name="forums_tab_moderation">審核</string>
     <string name="forums_access_level_view_full">只可檢視</string>
     <string name="forums_access_level_none_full">無權限</string>

@@ -318,4 +318,8 @@
     <string name="device_name_fallback">Mobilenhed</string>
     <string name="account_error_token_type">Ikke-understøttet tokentype</string>
     <string name="account_error_caller">Kalderen har ikke tilladelse</string>
+    <string name="zone_sea">Til søs</string>
+    <string name="access_remove">Fjern</string>
+    <string name="access_remove_title">Fjern adgang?</string>
+    <string name="access_remove_message">Fjern adgangsregel for \"%1$s\"?</string>
 </resources>

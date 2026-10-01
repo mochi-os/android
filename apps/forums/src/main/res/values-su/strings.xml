@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Sadaya forum</string>
     <string name="forums_create_allow_search">Idinan saha waé néangan forum</string>
     <string name="forums_rss_clipboard_label">URL RSS forum</string>
+    <string name="forums_notifications_post">Pos anyar</string>
+    <string name="forums_notifications_reply">Balesan ka anjeun</string>
+    <string name="forums_notifications_comment">Sadaya balesan</string>
+    <string name="forums_follow_thread">Turutan utas</string>
+    <string name="forums_unfollow_thread">Eureun nuturkeun utas</string>
     <string name="forums_tab_moderation">Moderasi</string>
     <string name="forums_access_level_view_full">Tingali wungkul</string>
     <string name="forums_access_level_none_full">Teu boga aksés</string>

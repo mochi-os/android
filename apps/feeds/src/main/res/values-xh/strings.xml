@@ -158,6 +158,9 @@
     <string name="feeds_markdown_supported">I-Markdown iyaxhaswa</string>
     <string name="feeds_permission_deny">Yala</string>
     <string name="feeds_rss_feed">Ifidi ye-RSS</string>
+    <string name="feeds_notifications_post">Iimpapasho ezintsha</string>
+    <string name="feeds_follow_thread">Landela umsonto</string>
+    <string name="feeds_unfollow_thread">Yeka ukulandela umsonto</string>
     <string name="feeds_settings_field_entity_id">I-ID yequmrhu</string>
     <string name="feeds_settings_field_fingerprint">Uphawu lomnwe</string>
     <string name="feeds_settings_field_server">Iseva</string>

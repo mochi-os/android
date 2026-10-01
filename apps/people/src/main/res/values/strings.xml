@@ -110,6 +110,7 @@
     <string name="people_invitations_empty_hint">New invitations will appear here</string>
     <string name="people_invitations_accept">Accept</string>
     <string name="people_invitations_decline">Decline</string>
+    <string name="people_invitations_listed_as">Listed as %1$s</string>
     <string name="people_invitations_toast_accepted">Accepted invitation from %1$s</string>
     <string name="people_invitations_toast_declined">Declined invitation from %1$s</string>
     <string name="people_invitations_toast_cancelled">Cancelled invitation to %1$s</string>
@@ -135,12 +136,10 @@
     <!-- Group fields -->
     <string name="people_group_name">Group name</string>
     <string name="people_group_description">Description</string>
-    <string name="people_group_description_optional">Optional description</string>
     <string name="people_group_name_required">Name is required</string>
     <string name="people_group_actions">Group actions</string>
     <string name="people_group_members">Members</string>
     <string name="people_group_members_count">Members count</string>
-    <string name="people_group_members_description">Users and groups that belong to this group</string>
     <string name="people_group_no_members">No members</string>
     <string name="people_group_delete">Delete group</string>
     <string name="people_group_delete_confirm">Delete group \"%1$s\"? This cannot be undone.</string>
@@ -153,9 +152,10 @@
     <string name="people_member_remove_confirm">Are you sure you want to remove %1$s from this group?</string>
     <string name="people_member_remove_with_name">Remove %1$s</string>
     <string name="people_member_search_placeholder">Enter name to search…</string>
-    <string name="people_member_search_hint">Enter a name to find people you want to add</string>
     <string name="people_member_type_user">User</string>
     <string name="people_member_type_group">Group</string>
+    <string name="people_member_unknown_person">Unknown person</string>
+    <string name="people_member_deleted_group">Deleted group</string>
     <string name="people_groups_add_member_confirm_title">Add to group</string>
     <string name="people_groups_add_member_confirm_action">Add to group</string>
 
@@ -169,7 +169,6 @@
     <string name="people_profile_identity">Identity</string>
     <string name="people_profile_accent">Accent</string>
     <string name="people_profile_directory_listing">Allow others to find you in directory</string>
-    <string name="people_profile_markdown_supported">Markdown supported</string>
     <string name="people_profile_preview">Preview</string>
     <string name="people_profile_upload_avatar">Upload avatar</string>
     <string name="people_profile_upload">Upload</string>
@@ -216,9 +215,10 @@
     <string name="people_profile_too_long">Profile is too long</string>
 
     <!-- Connect device (CardDAV) -->
-    <string name="people_device_title">Connect device</string>
+    <string name="people_device_title">Connected devices</string>
     <string name="people_device_name">Device name</string>
     <string name="people_device_create">Create</string>
+    <string name="people_device_add">Add device</string>
     <string name="people_device_server">Server</string>
     <string name="people_device_address">Address book URL</string>
     <string name="people_device_username">Username</string>
@@ -226,14 +226,13 @@
     <string name="people_device_copy">Copy %1$s</string>
     <string name="people_device_warning">Save this password now. It cannot be shown again.</string>
     <string name="people_device_done">Done</string>
-    <string name="people_device_list">Devices</string>
     <string name="people_device_empty">No devices connected.</string>
     <string name="people_device_created">Created %1$s</string>
     <string name="people_device_used">Last used %1$s</string>
     <string name="people_device_never">Never</string>
     <string name="people_device_delete">Delete device</string>
     <string name="people_device_delete_title">Delete device?</string>
-    <string name="people_device_delete_message">The device will no longer be able to sync contacts.</string>
+    <string name="people_device_delete_message">The device will no longer be able to sync contacts or calendars.</string>
     <string name="people_device_deleted">Device deleted</string>
 
     <!-- Sync to this phone (contacts sync adapter) -->

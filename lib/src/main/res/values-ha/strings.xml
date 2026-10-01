@@ -18,7 +18,7 @@
     <string name="common_back">Komawa</string>
     <string name="common_close">Rufe</string>
     <string name="common_cancel">Soke</string>
-    <string name="common_filter">Filter</string>
+    <string name="common_filter">Tacewa</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Cire matatar</string>
     <string name="common_confirm">Tabbatar</string>
@@ -316,4 +316,8 @@
     <string name="device_name_fallback">Na\'urar wayar hannu</string>
     <string name="account_error_token_type">Nau\'in alama da ba a tallafawa</string>
     <string name="account_error_caller">Ba a yarda mai kira ba</string>
+    <string name="zone_sea">A teku</string>
+    <string name="access_remove">Cire</string>
+    <string name="access_remove_title">A cire damar shiga?</string>
+    <string name="access_remove_message">A cire ka\'idar shiga don \"%1$s\"?</string>
 </resources>

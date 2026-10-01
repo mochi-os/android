@@ -140,6 +140,9 @@
     <string name="access_no_rules">No access rules</string>
     <string name="access_owner">Owner</string>
     <string name="access_revoke">Revoke</string>
+    <string name="access_remove_title">Remove access?</string>
+    <string name="access_remove_message">Remove access rule for \"%1$s\"?</string>
+    <string name="access_remove">Remove</string>
     <string name="access_add_rule_title">Add access rule</string>
     <string name="access_level_manage">Manage</string>
     <string name="access_level_comment">Comment</string>
@@ -381,4 +384,6 @@
     <string name="account_error_caller">Caller not allowed</string>
     <string name="account_error_token_type">Unsupported token type</string>
     <string name="device_name_fallback">Mobile device</string>
+    <string name="zone_sea">At sea</string>
+    <string name="zone_attribution" translatable="false">© OpenStreetMap contributors</string>
 </resources>

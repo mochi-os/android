@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">ຊື່ຜູ້ປະຕິບັດງານ</string>
     <string name="system_setting_operator_email">ອີເມລຜູ້ປະຕິບັດງານ</string>
     <string name="system_setting_operator_jurisdiction">ເຂດອຳນາດຜູ້ປະຕິບັດງານ</string>
-    <string name="system_setting_server_started">ເຊີບເວີເລີ່ມຕົ້ນແລ້ວ</string>
-    <string name="system_setting_server_version">ເວີຊັນເຊີບເວີ</string>
     <string name="system_setting_signup_enabled">ອະນຸຍາດການລົງທະບຽນໃໝ່</string>
     <string name="system_users_title">ຜູ້ໃຊ້</string>
     <string name="system_users_col_user">ຜູ້ໃຊ້</string>
@@ -393,4 +391,5 @@
     <string name="accounts_provider_caldav">ເຊີບເວີປະຕິທິນ</string>
     <string name="accounts_revoke_confirm">ນີ້ຈະຖອນການເຂົ້າເຖິງປະຕິທິນຂອງ %1$s. ການເຂົ້າສູ່ລະບົບດ້ວຍ %2$s ຈະຍັງຄົງຢູ່ຈົນກວ່າທ່ານຈະຕັດການເຊື່ອມຕໍ່ໃນໜ້າເຂົ້າສູ່ລະບົບ.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">ຮູບແບບທີ່ບໍ່ຮູ້ຈັກ</string>
 </resources>

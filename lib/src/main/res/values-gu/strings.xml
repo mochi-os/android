@@ -316,4 +316,8 @@
     <string name="device_name_fallback">મોબાઇલ ઉપકરણ</string>
     <string name="account_error_token_type">અસમર્થિત ટોકન પ્રકાર</string>
     <string name="account_error_caller">કૉલરને મંજૂરી નથી</string>
+    <string name="zone_sea">સમુદ્રમાં</string>
+    <string name="access_remove">દૂર કરો</string>
+    <string name="access_remove_title">ઍક્સેસ દૂર કરો?</string>
+    <string name="access_remove_message">\"%1$s\" માટે ઍક્સેસ નિયમ દૂર કરીએ?</string>
 </resources>

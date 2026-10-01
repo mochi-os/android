@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">שם המפעיל</string>
     <string name="system_setting_operator_email">דוא\"ל המפעיל</string>
     <string name="system_setting_operator_jurisdiction">תחום שיפוט של המפעיל</string>
-    <string name="system_setting_server_started">השרת הופעל</string>
-    <string name="system_setting_server_version">גרסת השרת</string>
     <string name="system_setting_signup_enabled">אפשר הרשמות חדשות</string>
     <string name="system_users_title">משתמשים</string>
     <string name="system_users_col_user">משתמש</string>
@@ -399,4 +397,5 @@
     <string name="accounts_provider_caldav">שרת יומנים</string>
     <string name="accounts_revoke_confirm">פעולה זו תבטל את גישת היומן של %1$s. הכניסה עם %2$s תישאר עד שתנתק אותה בדף הכניסה.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">ערכת נושא לא ידועה</string>
 </resources>

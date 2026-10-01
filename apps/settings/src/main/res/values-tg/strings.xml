@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Номи оператор</string>
     <string name="system_setting_operator_email">Почтаи электронии оператор</string>
     <string name="system_setting_operator_jurisdiction">Юрисдиксияи оператор</string>
-    <string name="system_setting_server_started">Сервер оғоз карда шуд</string>
-    <string name="system_setting_server_version">Версияи сервер</string>
     <string name="system_setting_signup_enabled">Иҷозати бақайдгирии нав</string>
     <string name="system_users_title">Корбарон</string>
     <string name="system_users_col_user">Корбар</string>
@@ -394,4 +392,5 @@
     <string name="accounts_provider_caldav">Сервери тақвим</string>
     <string name="accounts_revoke_confirm">Ин дастрасии тақвими %1$s-ро бекор мекунад. Воридшавӣ бо %2$s то он даме ки шумо онро дар саҳифаи воридшавӣ ҷудо накунед, боқӣ мемонад.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Мавзӯи номаълум</string>
 </resources>

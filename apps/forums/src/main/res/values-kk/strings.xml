@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Барлық форумдар</string>
     <string name="forums_create_allow_search">Кез келген адамға форумды іздеуге рұқсат ету</string>
     <string name="forums_rss_clipboard_label">Форумның RSS URL мекенжайы</string>
+    <string name="forums_notifications_post">Жаңа жазбалар</string>
+    <string name="forums_notifications_reply">Сізге келген жауаптар</string>
+    <string name="forums_notifications_comment">Барлық жауаптар</string>
+    <string name="forums_follow_thread">Тақырыпты бақылау</string>
+    <string name="forums_unfollow_thread">Тақырыпты бақылауды тоқтату</string>
     <string name="forums_tab_moderation">Модерация</string>
     <string name="forums_access_level_view_full">Тек көру</string>
     <string name="forums_access_level_none_full">Қолжетімсіз</string>

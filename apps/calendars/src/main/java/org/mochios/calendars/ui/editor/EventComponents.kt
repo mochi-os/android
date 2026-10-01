@@ -9,10 +9,16 @@ import org.mochios.android.sync.CalendarsMapping
 import org.mochios.android.sync.EventComponent
 import org.mochios.android.sync.EventProperty
 import org.mochios.android.sync.property
+import org.mochios.android.util.Zones
+import org.mochios.android.util.descriptionText
+import org.mochios.calendars.model.Hours
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.Zone
 import org.mochios.calendars.storage.Memory
 import java.time.Instant
+import java.time.LocalDate
+import java.time.LocalDateTime
+import java.time.LocalTime
 import java.time.ZoneId
 import java.time.ZoneOffset
 
@@ -28,10 +34,15 @@ enum class Scope {
 
 /**
  * What the editor's fields say, as far as building an event's tree needs it.
- * [start] and [finish] are epoch seconds and [reminder] minutes before the
- * start, -1 for none. [zone] is the zone each end is written in: a flight is
+ * [start] and [finish] are epoch seconds and [reminders] each reminder the
+ * editor can say, in minutes before the start. [zone] is the zone each end is written in: a flight is
  * 10:00 Europe/London to 13:00 America/New_York, though most events have the
  * same zone at both ends.
+ *
+ * [description] is the description as text, which the editor shows and
+ * edits; [original] is the description as the event holds it, which may be
+ * HTML, as a Google calendar's is. While [description] still reads as its
+ * text, the event keeps [original] as it was, markup and all.
  *
  * [occurrence] is the occurrence the user opened, epoch seconds, 0 when the
  * event does not repeat; [series] is the master's own start. The form shows
@@ -46,8 +57,9 @@ data class EventForm(
     val zone: Zone = Zone(),
     val location: String = "",
     val description: String = "",
+    val original: String = "",
     val recurrence: Recurrence = Recurrence(),
-    val reminder: Int = -1,
+    val reminders: List<Int> = emptyList(),
     val occurrence: Long = 0,
     val series: Long = 0,
 )
@@ -65,12 +77,12 @@ fun written(component: EventComponent, user: String): Zone {
 }
 
 /**
- * Whether either end reads in another zone than the [user]'s own, which is
- * when the editor shows the zones without being asked. A blank end reads in
- * the user's zone.
+ * Whether either end reads in another zone than the [user]'s own, under any
+ * of its names, which is when the editor shows the zones without being
+ * asked. A blank end reads in the user's zone.
  */
-fun foreign(zone: Zone, user: String): Boolean =
-    zone.start.ifBlank { user } != user || zone.finish.ifBlank { user } != user
+fun foreign(zone: Zone, user: String, registry: Zones.Registry = Zones.Platform): Boolean =
+    !Zones.same(zone.start.ifBlank { user }, user, registry) || !Zones.same(zone.finish.ifBlank { user }, user, registry)
 
 /**
  * The zone a moment of the form is shown and picked in. An all-day day is
@@ -94,10 +106,11 @@ fun following(begins: Long, ends: Long): Long {
 
 /**
  * The pair after the start zone is set to [start]: the finish zone follows
- * while the two are still equal, and stops once it has been set apart.
+ * while the two are one zone, under whichever names, and stops once it has
+ * been set apart.
  */
-fun follow(zone: Zone, start: String): Zone =
-    Zone(start, if (zone.finish == zone.start) start else zone.finish)
+fun follow(zone: Zone, start: String, registry: Zones.Registry = Zones.Platform): Zone =
+    Zone(start, if (Zones.same(zone.finish, zone.start, registry)) start else zone.finish)
 
 /**
  * What a blank new form starts with, from the [memory] of the last new event
@@ -142,7 +155,8 @@ private val MANAGED = setOf(
  * sent it, whose properties the editor has no field for are kept. [user] is
  * the zone an override's end reads in when it names none.
  *
- * [Scope.ALL] rewrites the master and keeps every override; a series whose
+ * [Scope.ALL] rewrites the master and keeps every override but that of the
+ * occurrence the form was opened on, which the form replaces; a series whose
  * start moved takes its overrides and listed dates along by the same
  * distance. [Scope.ONE] keeps the master as it stands and replaces just the
  * override for the occurrence the user opened, adding one when there was
@@ -168,9 +182,10 @@ fun components(
         val head = component(form, master, recurrence = true, occurrence = 0, start = start)
         val first = master?.let { begins(it) } ?: 0L
         val shift = if (first == 0L) 0L else start - first
-        if (shift == 0L) return listOf(head) + overrides
+        val kept = unopened(overrides, form)
+        if (shift == 0L) return listOf(head) + kept
         return listOf(relisted(head, master!!, Long.MIN_VALUE, shift)) +
-            carried(overrides, head, Long.MIN_VALUE, shift, user)
+            carried(kept, head, Long.MIN_VALUE, shift, user)
     }
     val replaced = component(
         form,
@@ -197,7 +212,6 @@ fun draft(component: EventComponent, user: String, occurrence: Long = 0): EventF
     val length = component.property("DTEND")?.let { CalendarsMapping.moment(it) / 1000 - start }
         ?: component.value("DURATION").takeIf { it.isNotBlank() }?.let { CalendarsMapping.seconds(it) }
         ?: if (allday) 86_400L else 0L
-    val alarm = component.components.firstOrNull { it.name.equals("VALARM", ignoreCase = true) }
     val form = EventForm(
         title = component.value("SUMMARY"),
         start = start,
@@ -205,9 +219,10 @@ fun draft(component: EventComponent, user: String, occurrence: Long = 0): EventF
         allday = allday,
         zone = written(component, user),
         location = component.value("LOCATION"),
-        description = component.value("DESCRIPTION"),
+        description = descriptionText(component.value("DESCRIPTION")),
+        original = component.value("DESCRIPTION"),
         recurrence = recurrence(component.value("RRULE")),
-        reminder = alarm?.property("TRIGGER")?.let { minutes(it.value) } ?: -1,
+        reminders = alarms(component).mapNotNull(::alarmMinutes).distinct(),
     )
     return if (occurrence > 0 && start != 0L) shifted(form, occurrence - start) else form
 }
@@ -242,10 +257,9 @@ fun instant(form: EventForm, user: String): Long {
 /**
  * The form a copy of a stored event opens on, as a new event of its own.
  * With [Scope.ONE] it is the occurrence at [occurrence] alone: its own
- * override, or the master moved onto it, with the repeat cleared, and an
- * override without a reminder of its own sounding the master's, as the
- * editor shows it. With any other scope it is the master, its repeat kept
- * as written. Null when the event has no master to copy.
+ * override, reminders and all, or the master moved onto it, with the repeat
+ * cleared. With any other scope it is the master, its repeat kept as written.
+ * Null when the event has no master to copy.
  */
 fun copied(carried: List<EventComponent>, occurrence: Long, scope: Scope, user: String): EventForm? {
     val events = carried.filter { it.name.equals("VEVENT", ignoreCase = true) }
@@ -254,10 +268,7 @@ fun copied(carried: List<EventComponent>, occurrence: Long, scope: Scope, user: 
     if (scope != Scope.ONE || occurrence == 0L) return whole
     val override = events.firstOrNull { it.exception() && matches(it, occurrence) }
     val own = if (override != null) draft(override, user) else draft(master, user, occurrence)
-    return own.copy(
-        recurrence = Recurrence(),
-        reminder = if (own.reminder >= 0) own.reminder else whole.reminder,
-    )
+    return own.copy(recurrence = Recurrence())
 }
 
 /**
@@ -285,8 +296,9 @@ fun copied(instance: Instance, user: String, reminder: Int): EventForm {
         allday = instance.allday,
         zone = Zone(begins, ends),
         location = instance.location,
-        description = instance.description,
-        reminder = reminder,
+        description = descriptionText(instance.description),
+        original = instance.description,
+        reminders = defaultReminders(reminder),
     )
 }
 
@@ -331,9 +343,11 @@ fun truncated(carried: List<EventComponent>, occurrence: Long): List<EventCompon
  * the series as it now goes on from there, so the form's dates are where
  * this occurrence lands. The old overrides and listed dates from the cut
  * onwards move to the new event, shifted as the form shifted the occurrence,
- * and its rule keeps the old one's end; a `COUNT` is left for the server to
- * shorten by the occurrences the old event keeps. Null when the occurrence
- * is the series' first, which makes the edit one of the whole series.
+ * except the override of the occurrence the form was opened on, which the
+ * form replaces. The new rule keeps the old one's end; a `COUNT` is left for
+ * the server to shorten by the occurrences the old event keeps. Null when
+ * the occurrence is the series' first, which makes the edit one of the whole
+ * series.
  */
 fun split(
     carried: List<EventComponent>,
@@ -347,9 +361,18 @@ fun split(
     val shift = form.start - occurrence
     val head = component(form, master, recurrence = true, occurrence = 0, start = form.start)
     val after = listOf(relisted(head, master, occurrence, shift)) +
-        carried(events.filter { it.exception() }, head, occurrence, shift, user)
+        carried(unopened(events.filter { it.exception() }, form), head, occurrence, shift, user)
     return before to after
 }
+
+/**
+ * The overrides less the one of the occurrence the editor's form was opened
+ * on, which the form replaces when it is saved to the whole series or to it
+ * and the ones after it. A drag's form names no occurrence, and a dragged
+ * occurrence's override moves along with it.
+ */
+private fun unopened(overrides: List<EventComponent>, form: EventForm): List<EventComponent> =
+    if (form.occurrence > 0) overrides.filterNot { matches(it, form.occurrence) } else overrides
 
 /** The instant a master begins, 0 for one without a readable `DTSTART`. */
 private fun begins(master: EventComponent): Long =
@@ -476,6 +499,39 @@ fun excluded(carried: List<EventComponent>, occurrence: Long): List<EventCompone
     return listOf(master.copy(properties = master.properties + exdate)) + kept
 }
 
+/**
+ * One occurrence of a series as an event of its own: the form over the
+ * occurrence's own override or, failing one, the master, with nothing of the
+ * series on it.
+ */
+fun single(form: EventForm, carried: List<EventComponent>): List<EventComponent> {
+    val events = carried.filter { it.name.equals("VEVENT", ignoreCase = true) }
+    val own = events.firstOrNull { it.exception() && matches(it, form.occurrence) }
+        ?: events.firstOrNull { !it.exception() }
+    return listOf(component(form, own, recurrence = false, occurrence = 0, start = form.start))
+}
+
+/**
+ * One occurrence of a series moved to another calendar: [create] makes it an
+ * event of its own there, then [exclude] takes it out of the series. The copy
+ * is taken back if the series cannot be written, so the occurrence is never
+ * left in both calendars.
+ */
+suspend fun <T> moveOccurrence(
+    create: suspend () -> T,
+    exclude: suspend () -> Unit,
+    delete: suspend (T) -> Unit,
+): T {
+    val created = create()
+    try {
+        exclude()
+    } catch (e: Exception) {
+        runCatching { delete(created) }
+        throw e
+    }
+    return created
+}
+
 /** Whether an override replaces the occurrence starting at [occurrence]. */
 fun matches(override: EventComponent, occurrence: Long): Boolean =
     override.property("RECURRENCE-ID")?.let { CalendarsMapping.moment(it) / 1000 } == occurrence
@@ -505,7 +561,8 @@ private fun component(
     properties.add(CalendarsMapping.stamp("DTSTART", start * 1000, zone, form.allday))
     properties.add(CalendarsMapping.stamp("DTEND", finish * 1000, ends, form.allday))
     if (form.location.isNotBlank()) properties.add(property("LOCATION", form.location.trim()))
-    if (form.description.isNotBlank()) properties.add(property("DESCRIPTION", form.description.trim()))
+    val description = if (form.description == descriptionText(form.original)) form.original else form.description.trim()
+    if (description.isNotBlank()) properties.add(property("DESCRIPTION", description))
     if (recurrence) {
         val rule = form.recurrence.rule()
         if (rule != null) {
@@ -519,11 +576,33 @@ private fun component(
         val allday = carried?.property("RECURRENCE-ID")?.let { CalendarsMapping.date(it) } ?: form.allday
         properties.add(CalendarsMapping.stamp("RECURRENCE-ID", occurrence * 1000, zone, allday))
     }
-    val nested = carried?.components?.filterNot { it.name.equals("VALARM", ignoreCase = true) }.orEmpty()
-    val alarms = if (form.reminder >= 0) {
-        listOf(CalendarsMapping.alarm(form.reminder, form.title.trim()))
-    } else {
-        emptyList()
-    }
+    // The alarms the reminder setting cannot say are kept as they are; the
+    // ones it can are replaced by it.
+    val nested = carried?.components?.filterNot {
+        it.name.equals("VALARM", ignoreCase = true) && (it.property("TRIGGER") == null || alarmMinutes(it) != null)
+    }.orEmpty()
+    val alarms = form.reminders.distinct().map { CalendarsMapping.alarm(it, form.title.trim()) }
     return EventComponent("VEVENT", properties, nested + alarms)
 }
+
+/**
+ * Where a new event with no time of its own starts on [day]: at the next
+ * whole hour when [day] is [today], at the start of the working [hours] on
+ * any other day, and at tomorrow's working hours once today has no whole hour
+ * left. The web client starts one the same way.
+ */
+fun defaultStart(day: LocalDate, today: LocalDate, now: LocalTime, hours: Hours): LocalDateTime {
+    val working = hours.start.coerceIn(0, 23)
+    if (day != today) return day.atTime(working, 0)
+    val next = now.hour + 1
+    if (next > 23) return today.plusDays(1).atTime(working, 0)
+    return today.atTime(next, 0)
+}
+
+/**
+ * The day "New event" lands on: [today] when it is on screen, the [days] from
+ * [from], and otherwise [anchor], the day the view is on, since a user paging
+ * through another week is planning that week.
+ */
+fun creationDay(today: LocalDate, anchor: LocalDate, from: LocalDate, days: Long): LocalDate =
+    if (!today.isBefore(from) && today.isBefore(from.plusDays(days))) today else anchor

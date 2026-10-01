@@ -223,8 +223,6 @@
     <string name="system_setting_operator_name">營運者名稱</string>
     <string name="system_setting_operator_email">營運者電郵</string>
     <string name="system_setting_operator_jurisdiction">營運者司法管轄區</string>
-    <string name="system_setting_server_started">伺服器啟動時間</string>
-    <string name="system_setting_server_version">伺服器版本</string>
     <string name="system_setting_signup_enabled">允許新用戶註冊</string>
     <string name="settings_home_system_users">用戶（伺服器）</string>
     <string name="system_users_title">用戶</string>
@@ -396,4 +394,5 @@
     <string name="accounts_provider_caldav">日曆伺服器</string>
     <string name="accounts_revoke_confirm">咁樣會撤銷 %1$s 嘅日曆存取權。用 %2$s 登入會保留，直到你喺登入頁面解除連結為止。</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">未知主題</string>
 </resources>

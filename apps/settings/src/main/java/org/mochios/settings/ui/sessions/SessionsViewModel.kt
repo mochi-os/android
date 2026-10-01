@@ -24,6 +24,8 @@ data class SessionsUiState(
     val error: MochiError? = null,
     /** Sorted accessed-desc; the server flags the caller's own session. */
     val sessions: List<Session> = emptyList(),
+    /** The session being revoked; its confirmation stays open until the server answers. */
+    val revoking: String? = null,
 )
 
 @HiltViewModel
@@ -49,13 +51,17 @@ class SessionsViewModel @Inject constructor(
         }
     }
 
-    fun revoke(id: String) {
+    fun revoke(id: String, onSuccess: () -> Unit) {
+        if (_uiState.value.revoking != null) return
+        _uiState.value = _uiState.value.copy(revoking = id)
         viewModelScope.launch {
             try {
                 api.revokeSession(id).unwrapRaw()
+                _uiState.value = _uiState.value.copy(revoking = null)
+                onSuccess()
                 refresh()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _uiState.value = _uiState.value.copy(revoking = null, error = e.toMochiError())
             }
         }
     }

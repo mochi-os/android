@@ -14,6 +14,8 @@ import org.mochios.calendars.navigation.CalendarsApp
 import org.mochios.calendars.ui.editor.Scope
 import org.mochios.calendars.ui.router.CalendarsSection
 import org.mochios.calendars.ui.router.calendarsView
+import org.mochios.calendars.ui.router.sharedView
+import org.junit.Assert.assertNull
 
 /**
  * The token the router stores and reads back, and the routes the module
@@ -46,6 +48,20 @@ class CalendarsRouterTest {
     }
 
     /** The tokens are the same names the server's `view` preference uses. */
+    @Test
+    fun `a view chosen here is saved as the one a new device opens on`() {
+        val request = sharedView(CalendarsSection.WEEK, CalendarsSection.MONTH)
+        assertEquals(CalendarsSection.WEEK, request?.view)
+        assertNull("nothing else is sent, so no other preference changes", request?.calendar)
+        assertNull(request?.hours)
+    }
+
+    @Test
+    fun `the view already saved, or no view at all, is not sent`() {
+        assertNull(sharedView(CalendarsSection.MONTH, CalendarsSection.MONTH))
+        assertNull(sharedView("agenda", CalendarsSection.MONTH))
+    }
+
     @Test
     fun `the view tokens are the server's own`() {
         assertEquals(

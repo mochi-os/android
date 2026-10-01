@@ -219,6 +219,11 @@
     <string name="forums_all_forums">ټول فورمونه</string>
     <string name="forums_create_allow_search">هرچا ته اجازه ورکړئ چې فورم ولټوي</string>
     <string name="forums_rss_clipboard_label">د فورم RSS پته</string>
+    <string name="forums_notifications_post">نوې لیکنې</string>
+    <string name="forums_notifications_reply">تاسو ته ځوابونه</string>
+    <string name="forums_notifications_comment">ټول ځوابونه</string>
+    <string name="forums_follow_thread">موضوع تعقیب کړئ</string>
+    <string name="forums_unfollow_thread">د موضوع تعقیب بند کړئ</string>
     <string name="forums_tab_moderation">څارنه</string>
     <string name="forums_access_level_view_full">یوازې لیدل</string>
     <string name="forums_access_level_none_full">د لاسرسي اجازه نشته</string>

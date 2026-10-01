@@ -219,6 +219,11 @@
     <string name="forums_all_forums">سڀ فورم</string>
     <string name="forums_create_allow_search">ڪنهن کي به فورم ڳولڻ جي اجازت ڏيو</string>
     <string name="forums_rss_clipboard_label">فورم RSS URL</string>
+    <string name="forums_notifications_post">نيون پوسٽون</string>
+    <string name="forums_notifications_reply">توهان کي جواب</string>
+    <string name="forums_notifications_comment">سڀ جواب</string>
+    <string name="forums_follow_thread">سلسلي جي پيروي ڪريو</string>
+    <string name="forums_unfollow_thread">سلسلي جي پيروي ختم ڪريو</string>
     <string name="forums_tab_moderation">نگراني</string>
     <string name="forums_access_level_view_full">صرف ڏسڻ</string>
     <string name="forums_access_level_none_full">ڪو رسائي نه</string>

@@ -158,6 +158,9 @@
     <string name="feeds_markdown_supported">Markdown సపోర్ట్ చేయబడుతుంది</string>
     <string name="feeds_permission_deny">నిరాకరించండి</string>
     <string name="feeds_rss_feed">RSS ఫీడ్</string>
+    <string name="feeds_notifications_post">కొత్త పోస్ట్‌లు</string>
+    <string name="feeds_follow_thread">థ్రెడ్‌ను అనుసరించు</string>
+    <string name="feeds_unfollow_thread">థ్రెడ్‌ను అనుసరించడం ఆపు</string>
     <string name="feeds_settings_field_entity_id">ఎంటిటీ ID</string>
     <string name="feeds_settings_field_fingerprint">వేలిముద్ర</string>
     <string name="feeds_settings_field_server">సర్వర్</string>

@@ -303,4 +303,7 @@
     <string name="settings_card_flat">Plano</string>
     <string name="settings_card_raised">Elevado</string>
     <string name="update_install">Instalar</string>
+    <string name="access_remove">Remover</string>
+    <string name="access_remove_title">Remover acesso?</string>
+    <string name="access_remove_message">Remover a regra de acesso de \"%1$s\"?</string>
 </resources>

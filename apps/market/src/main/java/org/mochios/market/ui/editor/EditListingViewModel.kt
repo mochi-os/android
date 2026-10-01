@@ -97,6 +97,8 @@ data class EditUiState(
     val publishStatus: SaveStatus = SaveStatus.IDLE,
     val isUploadingPhoto: Boolean = false,
     val isUploadingAsset: Boolean = false,
+    // True while a delete is in flight; the confirmation stays open until it answers.
+    val isDeleting: Boolean = false,
     val stripeOnboarded: Boolean? = null,
     val error: MochiError? = null,
 )
@@ -435,13 +437,16 @@ class EditListingViewModel @Inject constructor(
 
     fun deleteListing() {
         val id = _state.value.listingId
-        if (id.isEmpty()) return
+        if (id.isEmpty() || _state.value.isDeleting) return
+        _state.value = _state.value.copy(isDeleting = true)
         viewModelScope.launch {
             try {
                 repository.deleteListing(id)
                 _events.emit(EditListingEvent.Deleted)
             } catch (e: Exception) {
                 _events.emit(EditListingEvent.Error(e.toMochiError()))
+            } finally {
+                _state.value = _state.value.copy(isDeleting = false)
             }
         }
     }

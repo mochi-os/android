@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">बनाईं</string>
     <string name="calendars_subscribe_submit">सदस्यता लीं</string>
     <string name="calendars_subscribe_url">पता</string>
-    <string name="calendars_connect_device">उपकरण जोड़ीं</string>
+    <string name="calendars_connect_device">जुड़ल उपकरण</string>
     <string name="calendars_preferences">वरीयता</string>
     <string name="calendars_name">नाम</string>
     <string name="calendars_rename">नाम बदलीं</string>
@@ -11,7 +11,6 @@
     <string name="calendars_view">दृश्य</string>
     <string name="calendars_view_list">सूची</string>
     <string name="calendars_list_search">खोजीं</string>
-    <string name="calendars_event_untitled">बेशीर्षक</string>
     <string name="calendars_event_title">शीर्षक</string>
     <string name="calendars_event_location">स्थान</string>
     <string name="calendars_event_description">विवरण</string>
@@ -37,9 +36,10 @@
     <string name="calendars_sync_never">अबहीं ले सिंक नइखे भइल</string>
     <string name="calendars_sync_time">आखिरी बेर सिंक भइल %1$s</string>
     <string name="calendars_sync_transport">सर्वर ले ना पहुँचल जा सकल</string>
-    <string name="calendars_device_title">उपकरण जोड़ीं</string>
+    <string name="calendars_device_title">जुड़ल उपकरण</string>
     <string name="calendars_device_name">उपकरण के नाम</string>
     <string name="calendars_device_create">बनाईं</string>
+    <string name="calendars_device_add">उपकरण शामिल करीं</string>
     <string name="calendars_device_server">सर्वर</string>
     <string name="calendars_device_address">पता</string>
     <string name="calendars_device_username">उपयोगकर्ता नाम</string>
@@ -61,21 +61,20 @@
     <string name="calendars_poll">अबहीं जाँचीं</string>
     <string name="calendars_delete_title">%1$s के मेटाईं?</string>
     <string name="calendars_delete_message">एकरा के कार्यक्रम सब भी एकरे संगे मेटा जइहें।</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d कार्यक्रम अपडेट भइल</item>
-        <item quantity="other">%1$d कार्यक्रम अपडेट भइलें</item>
-    </plurals>
+    <string name="calendars_remove">हटाईं</string>
+    <string name="calendars_remove_title">%1$s के Mochi से हटाईं?</string>
+    <string name="calendars_remove_message">एकर कार्यक्रम मूल कैलेंडर में बनल रही।</string>
     <string name="calendars_today">आज</string>
     <string name="calendars_view_week">हफ्ता</string>
     <string name="calendars_view_multiweek">कई हफ्ता</string>
     <string name="calendars_view_month">महीना</string>
     <string name="calendars_workweek">काम के हफ्ता</string>
+    <string name="calendars_range">%1$s से %2$s तक</string>
     <string name="calendars_truncated">ई दायरा के कुछ कार्यक्रम ना देखावल जात बाड़ें।</string>
     <string name="calendars_list_empty">कवनो कार्यक्रम नइखे</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d अउरी</item>
-        <item quantity="other">+%1$d अउरी</item>
-    </plurals>
+    <string name="calendars_untitled">(बिना शीर्षक)</string>
+    <string name="calendars_status_cancelled">रद्द</string>
+    <string name="calendars_status_tentative">अस्थायी</string>
     <string name="calendars_event_new">नया कार्यक्रम</string>
     <string name="calendars_event_edit">कार्यक्रम संपादित करीं</string>
     <string name="calendars_event_calendar">कैलेंडर</string>
@@ -97,9 +96,20 @@
     <string name="calendars_repeat_count">दोहराव के संख्या</string>
     <string name="calendars_repeat_forever">हमेशा</string>
     <string name="calendars_reminder_time">ठीक समय पर</string>
-    <string name="calendars_reminder_minutes">%1$d मिनट पहिले</string>
-    <string name="calendars_reminder_hour">1 घंटा पहिले</string>
-    <string name="calendars_reminder_day">1 दिन पहिले</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d मिनट पहिले</item>
+        <item quantity="other">%1$d मिनट पहिले</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d घंटा पहिले</item>
+        <item quantity="other">%1$d घंटा पहिले</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d दिन पहिले</item>
+        <item quantity="other">%1$d दिन पहिले</item>
+    </plurals>
+    <string name="calendars_reminder_add">रिमाइंडर जोड़ीं</string>
+    <string name="calendars_reminder_remove">रिमाइंडर हटाईं</string>
     <string name="calendars_hours_start">काम के घंटा के शुरुआत</string>
     <string name="calendars_hours_finish">काम के घंटा के अंत</string>
     <string name="calendars_hours_invalid">काम के घंटा शुरू होखला के बाद खतम होखे के चाहीं।</string>
@@ -108,16 +118,18 @@
     <string name="calendars_multiweek_previous">पहिले के हफ्ता</string>
     <string name="calendars_default_duration">कार्यक्रम के डिफ़ॉल्ट लंबाई</string>
     <string name="calendars_default_reminder">डिफ़ॉल्ट रिमाइंडर</string>
+    <string name="calendars_default_calendar">डिफ़ॉल्ट कैलेंडर</string>
+    <string name="calendars_preferences_allday">पूरा दिन के कार्यक्रम</string>
+    <string name="calendars_allday_first">सुरुआत में</string>
+    <string name="calendars_allday_last">आखिर में</string>
     <string name="calendars_link_title">कैलेंडर लिंक</string>
     <string name="calendars_link_copy">लिंक कॉपी करीं</string>
     <string name="calendars_link_once">अबहीं कॉपी कर लीं: ई फेर से ना देखावल जाई।</string>
     <string name="calendars_link_exists">ई कैलेंडर खातिर पहिलहीं एगो लिंक बा।</string>
     <string name="calendars_permission_title">पहुंच के अनुमति दीं?</string>
     <string name="calendars_permission_message">%1$s ई मांगत बा:</string>
-    <string name="calendars_sync_permission">कैलेंडर के पहुंच चाहीं</string>
     <string name="calendars_sync_authorization">सिंक जारी राखे खातिर फेर से साइन इन करीं</string>
     <string name="calendars_device_warning">पासवर्ड अबहीं कॉपी कर लीं: ई फेर से ना देखावल जाई।</string>
-    <string name="calendars_device_list">जुड़ल उपकरण</string>
     <string name="calendars_device_empty">कवनो उपकरण जुड़ल नइखे</string>
     <string name="calendars_device_used">आखिरी इस्तेमाल %1$s</string>
     <string name="calendars_device_never">कबो ना</string>
@@ -167,9 +179,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google कैलेंडर</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">एह सर्वर पर Google खाता चालू नइखे कइल गइल। एकरा के सेटिंग सब, सिस्टम सेटिंग सब में चालू करीं।</string>
     <string name="calendars_subscribe_google_connect">रउआ कौनो Google खाता ना जोड़ले बानी।</string>
     <string name="calendars_subscribe_google_connect_action">Google से जुड़ीं</string>
     <string name="calendars_grant_failed">कैलेंडर के पहुँच ना मिलल</string>
+    <string name="calendars_event_exception">बदलल गइल दोहराव</string>
+    <string name="calendars_span_day">%1$s, %2$s से %3$s तक</string>
+    <string name="calendars_polled_current">कैलेंडर अपडेट बा</string>
+    <string name="calendars_polled_synced">कैलेंडर सिंक हो गइल</string>
+    <string name="calendars_link_revoke_title">कैलेंडर के पता रद्द करीं?</string>
+    <string name="calendars_link_revoke_message">एह पता के सदस्यता लेले कैलेंडर अब अद्यतन ना होई।</string>
 </resources>

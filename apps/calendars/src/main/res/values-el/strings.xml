@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Δημιουργία</string>
     <string name="calendars_subscribe_submit">Εγγραφή</string>
     <string name="calendars_subscribe_url">Διεύθυνση</string>
-    <string name="calendars_connect_device">Σύνδεση συσκευής</string>
+    <string name="calendars_connect_device">Συνδεδεμένες συσκευές</string>
     <string name="calendars_preferences">Προτιμήσεις</string>
     <string name="calendars_name">Όνομα</string>
     <string name="calendars_rename">Μετονομασία</string>
@@ -11,7 +11,6 @@
     <string name="calendars_view">Προβολή</string>
     <string name="calendars_view_list">Λίστα</string>
     <string name="calendars_list_search">Αναζήτηση</string>
-    <string name="calendars_event_untitled">Χωρίς τίτλο</string>
     <string name="calendars_event_title">Τίτλος</string>
     <string name="calendars_event_location">Τοποθεσία</string>
     <string name="calendars_event_description">Περιγραφή</string>
@@ -37,9 +36,10 @@
     <string name="calendars_sync_never">Δεν έχει συγχρονιστεί ακόμα</string>
     <string name="calendars_sync_time">Τελευταίος συγχρονισμός %1$s</string>
     <string name="calendars_sync_transport">Δεν ήταν δυνατή η σύνδεση με τον διακομιστή</string>
-    <string name="calendars_device_title">Σύνδεση συσκευής</string>
+    <string name="calendars_device_title">Συνδεδεμένες συσκευές</string>
     <string name="calendars_device_name">Όνομα συσκευής</string>
     <string name="calendars_device_create">Δημιουργία</string>
+    <string name="calendars_device_add">Προσθήκη συσκευής</string>
     <string name="calendars_device_server">Διακομιστής</string>
     <string name="calendars_device_address">Διεύθυνση</string>
     <string name="calendars_device_username">Όνομα χρήστη</string>
@@ -61,21 +61,20 @@
     <string name="calendars_poll">Έλεγχος τώρα</string>
     <string name="calendars_delete_title">Διαγραφή %1$s;</string>
     <string name="calendars_delete_message">Τα συμβάντα του διαγράφονται μαζί του.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">Ενημερώθηκε %1$d συμβάν</item>
-        <item quantity="other">Ενημερώθηκαν %1$d συμβάντα</item>
-    </plurals>
+    <string name="calendars_remove">Αφαίρεση</string>
+    <string name="calendars_remove_title">Αφαίρεση του %1$s από το Mochi;</string>
+    <string name="calendars_remove_message">Τα συμβάντα του παραμένουν στο αρχικό ημερολόγιο.</string>
     <string name="calendars_today">Σήμερα</string>
     <string name="calendars_view_week">Εβδομάδα</string>
     <string name="calendars_view_multiweek">Πολλές εβδομάδες</string>
     <string name="calendars_view_month">Μήνας</string>
     <string name="calendars_workweek">Εργάσιμη εβδομάδα</string>
+    <string name="calendars_range">%1$s έως %2$s</string>
     <string name="calendars_truncated">Ορισμένα συμβάντα σε αυτό το εύρος δεν εμφανίζονται.</string>
     <string name="calendars_list_empty">Δεν υπάρχουν συμβάντα</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d ακόμη</item>
-        <item quantity="other">+%1$d ακόμη</item>
-    </plurals>
+    <string name="calendars_untitled">(Χωρίς τίτλο)</string>
+    <string name="calendars_status_cancelled">Ακυρώθηκε</string>
+    <string name="calendars_status_tentative">Με επιφύλαξη</string>
     <string name="calendars_event_new">Νέο συμβάν</string>
     <string name="calendars_event_edit">Επεξεργασία συμβάντος</string>
     <string name="calendars_event_calendar">Ημερολόγιο</string>
@@ -97,9 +96,20 @@
     <string name="calendars_repeat_count">Επαναλήψεις</string>
     <string name="calendars_repeat_forever">Για πάντα</string>
     <string name="calendars_reminder_time">Την ώρα του συμβάντος</string>
-    <string name="calendars_reminder_minutes">%1$d λεπτά πριν</string>
-    <string name="calendars_reminder_hour">1 ώρα πριν</string>
-    <string name="calendars_reminder_day">1 ημέρα πριν</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d λεπτό πριν</item>
+        <item quantity="other">%1$d λεπτά πριν</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d ώρα πριν</item>
+        <item quantity="other">%1$d ώρες πριν</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d ημέρα πριν</item>
+        <item quantity="other">%1$d ημέρες πριν</item>
+    </plurals>
+    <string name="calendars_reminder_add">Προσθήκη υπενθύμισης</string>
+    <string name="calendars_reminder_remove">Αφαίρεση υπενθύμισης</string>
     <string name="calendars_hours_start">Έναρξη ωραρίου εργασίας</string>
     <string name="calendars_hours_finish">Λήξη ωραρίου εργασίας</string>
     <string name="calendars_hours_invalid">Το ωράριο εργασίας πρέπει να λήγει μετά την έναρξή του.</string>
@@ -108,16 +118,18 @@
     <string name="calendars_multiweek_previous">Προηγούμενες εβδομάδες</string>
     <string name="calendars_default_duration">Προεπιλεγμένη διάρκεια συμβάντος</string>
     <string name="calendars_default_reminder">Προεπιλεγμένη υπενθύμιση</string>
+    <string name="calendars_default_calendar">Προεπιλεγμένο ημερολόγιο</string>
+    <string name="calendars_preferences_allday">Ολοήμερα συμβάντα</string>
+    <string name="calendars_allday_first">Στην αρχή</string>
+    <string name="calendars_allday_last">Στο τέλος</string>
     <string name="calendars_link_title">Σύνδεσμος ημερολογίου</string>
     <string name="calendars_link_copy">Αντιγραφή συνδέσμου</string>
     <string name="calendars_link_once">Αντιγράψτε τον τώρα: δεν μπορεί να εμφανιστεί ξανά.</string>
     <string name="calendars_link_exists">Υπάρχει ήδη σύνδεσμος για αυτό το ημερολόγιο.</string>
     <string name="calendars_permission_title">Να επιτραπεί η πρόσβαση;</string>
     <string name="calendars_permission_message">Το %1$s ζητά:</string>
-    <string name="calendars_sync_permission">Απαιτείται πρόσβαση στο ημερολόγιο</string>
     <string name="calendars_sync_authorization">Συνδεθείτε ξανά για να συνεχιστεί ο συγχρονισμός</string>
     <string name="calendars_device_warning">Αντιγράψτε τον κωδικό πρόσβασης τώρα: δεν μπορεί να εμφανιστεί ξανά.</string>
-    <string name="calendars_device_list">Συνδεδεμένες συσκευές</string>
     <string name="calendars_device_empty">Δεν υπάρχουν συνδεδεμένες συσκευές</string>
     <string name="calendars_device_used">τελευταία χρήση %1$s</string>
     <string name="calendars_device_never">ποτέ</string>
@@ -167,9 +179,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Ημερολόγιο Google</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Οι λογαριασμοί Google δεν έχουν ενεργοποιηθεί σε αυτόν τον διακομιστή. Ενεργοποιήστε τους από Ρυθμίσεις, Ρυθμίσεις συστήματος.</string>
     <string name="calendars_subscribe_google_connect">Δεν έχετε συνδέσει λογαριασμό Google.</string>
     <string name="calendars_subscribe_google_connect_action">Σύνδεση με Google</string>
     <string name="calendars_grant_failed">Δεν δόθηκε πρόσβαση στο ημερολόγιο</string>
+    <string name="calendars_event_exception">Τροποποιημένη επανάληψη</string>
+    <string name="calendars_span_day">%1$s, %2$s έως %3$s</string>
+    <string name="calendars_polled_current">Το ημερολόγιο είναι ενημερωμένο</string>
+    <string name="calendars_polled_synced">Το ημερολόγιο συγχρονίστηκε</string>
+    <string name="calendars_link_revoke_title">Ανάκληση της διεύθυνσης του ημερολογίου;</string>
+    <string name="calendars_link_revoke_message">Τα ημερολόγια που έχουν εγγραφεί σε αυτή τη διεύθυνση θα σταματήσουν να ενημερώνονται.</string>
 </resources>

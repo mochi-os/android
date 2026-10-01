@@ -18,7 +18,7 @@
     <string name="common_back">Natrag</string>
     <string name="common_close">Zatvori</string>
     <string name="common_cancel">Odustani</string>
-    <string name="common_filter">Filter</string>
+    <string name="common_filter">Filtar</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Ukloni filtar</string>
     <string name="common_confirm">Potvrdi</string>
@@ -317,4 +317,8 @@
     <string name="device_name_fallback">Mobilni uređaj</string>
     <string name="account_error_token_type">Nepodržana vrsta tokena</string>
     <string name="account_error_caller">Pozivatelju nije dopušteno</string>
+    <string name="zone_sea">Na moru</string>
+    <string name="access_remove">Ukloni</string>
+    <string name="access_remove_title">Ukloniti pristup?</string>
+    <string name="access_remove_message">Ukloniti pravilo pristupa za „%1$s”?</string>
 </resources>

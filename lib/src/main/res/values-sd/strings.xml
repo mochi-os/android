@@ -316,4 +316,8 @@
     <string name="device_name_fallback">موبائل ڊوائيس</string>
     <string name="account_error_token_type">غير حمايت ٿيل ٽوڪن جو قسم</string>
     <string name="account_error_caller">ڪال ڪندڙ کي اجازت ناهي</string>
+    <string name="zone_sea">سمنڊ ۾</string>
+    <string name="access_remove">هٽايو</string>
+    <string name="access_remove_title">رسائي هٽائجي؟</string>
+    <string name="access_remove_message">\"%1$s\" لاءِ رسائي جو قاعدو هٽايو؟</string>
 </resources>

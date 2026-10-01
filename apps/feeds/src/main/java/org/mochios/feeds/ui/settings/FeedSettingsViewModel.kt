@@ -83,6 +83,23 @@ class FeedSettingsViewModel @Inject constructor(
     private val _addSourceError = MutableStateFlow<MochiError?>(null)
     val addSourceError: StateFlow<MochiError?> = _addSourceError.asStateFlow()
 
+    // True while a source request is in flight: the dialog that sent it stays
+    // open with its button spinning until the server answers, and closes only
+    // on success, so a failure keeps what the user entered.
+    private val _isAddingSource = MutableStateFlow(false)
+    val isAddingSource: StateFlow<Boolean> = _isAddingSource.asStateFlow()
+
+    private val _isSavingSource = MutableStateFlow(false)
+    val isSavingSource: StateFlow<Boolean> = _isSavingSource.asStateFlow()
+
+    // The same for deleting the feed and unsubscribing from it; success leaves
+    // the settings screen, which takes the confirmation with it.
+    private val _isDeletingFeed = MutableStateFlow(false)
+    val isDeletingFeed: StateFlow<Boolean> = _isDeletingFeed.asStateFlow()
+
+    private val _isUnsubscribing = MutableStateFlow(false)
+    val isUnsubscribing: StateFlow<Boolean> = _isUnsubscribing.asStateFlow()
+
     // Access tab
     private val _accessRules = MutableStateFlow<List<AccessRule>>(emptyList())
     val accessRules: StateFlow<List<AccessRule>> = _accessRules.asStateFlow()
@@ -190,24 +207,32 @@ class FeedSettingsViewModel @Inject constructor(
     }
 
     fun deleteFeed(onSuccess: () -> Unit) {
+        if (_isDeletingFeed.value) return
+        _isDeletingFeed.value = true
         viewModelScope.launch {
             try {
                 repository.deleteFeed(entityId())
                 onSuccess()
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
+            } finally {
+                _isDeletingFeed.value = false
             }
         }
     }
 
     /** Unsubscribe the viewer from this feed, then leave the settings screen. */
     fun unsubscribe(onSuccess: () -> Unit) {
+        if (_isUnsubscribing.value) return
+        _isUnsubscribing.value = true
         viewModelScope.launch {
             try {
                 repository.unsubscribeFeed(entityId())
                 onSuccess()
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
+            } finally {
+                _isUnsubscribing.value = false
             }
         }
     }
@@ -252,6 +277,8 @@ class FeedSettingsViewModel @Inject constructor(
     }
 
     fun addSource(url: String, type: String, onSuccess: () -> Unit = {}) {
+        if (_isAddingSource.value) return
+        _isAddingSource.value = true
         viewModelScope.launch {
             _addSourceError.value = null
             try {
@@ -275,6 +302,8 @@ class FeedSettingsViewModel @Inject constructor(
                 // Surface inline in the add dialog rather than the snackbar so
                 // the user can correct the URL and retry.
                 _addSourceError.value = e.toMochiError()
+            } finally {
+                _isAddingSource.value = false
             }
         }
     }
@@ -321,15 +350,20 @@ class FeedSettingsViewModel @Inject constructor(
         _pendingPermission.value = null
     }
 
+    /** Save the suggested score; the dialog closes once the save answers. */
     fun acceptSuggestedCredibility() {
         val pending = _suggestedCredibility.value ?: return
-        _suggestedCredibility.value = null
+        if (_isSavingSource.value) return
+        _isSavingSource.value = true
         viewModelScope.launch {
             try {
                 repository.editSource(feedId, pending.sourceId, credibility = pending.suggested)
                 loadSources()
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
+            } finally {
+                _suggestedCredibility.value = null
+                _isSavingSource.value = false
             }
         }
     }
@@ -338,26 +372,42 @@ class FeedSettingsViewModel @Inject constructor(
         _suggestedCredibility.value = null
     }
 
-    fun editSource(id: String, name: String?, credibility: Int?, transform: String?) {
+    fun editSource(
+        id: String,
+        name: String?,
+        credibility: Int?,
+        transform: String?,
+        onSuccess: () -> Unit
+    ) {
+        if (_isSavingSource.value) return
+        _isSavingSource.value = true
         viewModelScope.launch {
             try {
                 repository.editSource(feedId, id, name, credibility, transform)
                 _actionMessage.value = R.string.feeds_settings_source_updated
+                onSuccess()
                 loadSources()
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
+            } finally {
+                _isSavingSource.value = false
             }
         }
     }
 
-    fun removeSource(id: String, deletePosts: Boolean) {
+    fun removeSource(id: String, deletePosts: Boolean, onSuccess: () -> Unit) {
+        if (_isSavingSource.value) return
+        _isSavingSource.value = true
         viewModelScope.launch {
             try {
                 repository.removeSource(feedId, id, deletePosts)
                 _actionMessage.value = R.string.feeds_settings_source_removed
+                onSuccess()
                 loadSources()
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
+            } finally {
+                _isSavingSource.value = false
             }
         }
     }
@@ -424,25 +474,31 @@ class FeedSettingsViewModel @Inject constructor(
         }
     }
 
-    fun setAccess(subject: String, level: String) {
+    /** [onDone] reports whether the grant succeeded, so the add dialog can close or stay. */
+    fun setAccess(subject: String, level: String, onDone: (Boolean) -> Unit = {}) {
         viewModelScope.launch {
             try {
                 repository.setAccess(accessFeedId(), subject, level)
+                onDone(true)
                 _actionMessage.value = R.string.feeds_settings_access_updated
                 loadAccessRules()
             } catch (e: Exception) {
+                onDone(false)
                 _error.value = e.toMochiError()
             }
         }
     }
 
-    fun revokeAccess(subject: String) {
+    /** [onDone] reports whether the revoke succeeded, so its confirmation can close or stay. */
+    fun revokeAccess(subject: String, onDone: (Boolean) -> Unit = {}) {
         viewModelScope.launch {
             try {
                 repository.revokeAccess(accessFeedId(), subject)
+                onDone(true)
                 _actionMessage.value = R.string.feeds_settings_access_revoked
                 loadAccessRules()
             } catch (e: Exception) {
+                onDone(false)
                 _error.value = e.toMochiError()
             }
         }

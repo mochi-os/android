@@ -222,6 +222,11 @@
     <string name="forums_all_forums">Gach fóram</string>
     <string name="forums_create_allow_search">Ceadaigh d\'aon duine cuardach a dhéanamh ar an bhfóram</string>
     <string name="forums_rss_clipboard_label">URL RSS an fhóraim</string>
+    <string name="forums_notifications_post">Postálacha nua</string>
+    <string name="forums_notifications_reply">Freagraí chugat</string>
+    <string name="forums_notifications_comment">Gach freagra</string>
+    <string name="forums_follow_thread">Lean an snáithe</string>
+    <string name="forums_unfollow_thread">Stop ag leanúint an tsnáithe</string>
     <string name="forums_tab_moderation">Modhnóireacht</string>
     <string name="forums_access_level_view_full">Féach amháin</string>
     <string name="forums_access_level_none_full">Gan rochtain</string>

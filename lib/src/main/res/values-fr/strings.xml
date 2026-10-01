@@ -317,4 +317,8 @@
     <string name="device_name_fallback">Appareil mobile</string>
     <string name="account_error_token_type">Type de jeton non pris en charge</string>
     <string name="account_error_caller">Appelant non autorisé</string>
+    <string name="zone_sea">En mer</string>
+    <string name="access_remove">Retirer</string>
+    <string name="access_remove_title">Supprimer l\'accès ?</string>
+    <string name="access_remove_message">Supprimer la règle d\'accès pour « %1$s » ?</string>
 </resources>

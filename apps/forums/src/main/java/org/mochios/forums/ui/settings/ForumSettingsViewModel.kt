@@ -169,29 +169,35 @@ class ForumSettingsViewModel @Inject constructor(
         }
     }
 
-    fun setAccess(target: String, level: String) {
+    /** [onDone] reports whether the grant succeeded, so the add dialog can close or stay. */
+    fun setAccess(target: String, level: String, onDone: (Boolean) -> Unit = {}) {
         viewModelScope.launch {
             try {
                 repository.setAccess(forumId, target, level)
+                onDone(true)
                 _uiState.value = _uiState.value.copy(
                     actionMessage = R.string.forums_settings_access_updated,
                 )
                 loadAccess()
             } catch (e: Exception) {
+                onDone(false)
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
         }
     }
 
-    fun revokeAccess(target: String) {
+    /** [onDone] reports whether the revoke succeeded, so its confirmation can close or stay. */
+    fun revokeAccess(target: String, onDone: (Boolean) -> Unit = {}) {
         viewModelScope.launch {
             try {
                 repository.revokeAccess(forumId, target)
+                onDone(true)
                 _uiState.value = _uiState.value.copy(
                     actionMessage = R.string.forums_settings_access_revoked,
                 )
                 loadAccess()
             } catch (e: Exception) {
+                onDone(false)
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
         }

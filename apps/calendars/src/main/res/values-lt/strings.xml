@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Sukurti</string>
     <string name="calendars_subscribe_submit">Prenumeruoti</string>
     <string name="calendars_subscribe_url">Adresas</string>
-    <string name="calendars_connect_device">Prijungti įrenginį</string>
+    <string name="calendars_connect_device">Prijungti įrenginiai</string>
     <string name="calendars_preferences">Nuostatos</string>
     <string name="calendars_name">Pavadinimas</string>
     <string name="calendars_rename">Pervadinti</string>
@@ -11,7 +11,6 @@
     <string name="calendars_view">Rodinys</string>
     <string name="calendars_view_list">Sąrašas</string>
     <string name="calendars_list_search">Ieškoti</string>
-    <string name="calendars_event_untitled">Be pavadinimo</string>
     <string name="calendars_event_title">Pavadinimas</string>
     <string name="calendars_event_location">Vieta</string>
     <string name="calendars_event_description">Aprašymas</string>
@@ -37,9 +36,10 @@
     <string name="calendars_sync_never">Dar nesinchronizuota</string>
     <string name="calendars_sync_time">Paskutinė sinchronizacija: %1$s</string>
     <string name="calendars_sync_transport">Nepavyko pasiekti serverio</string>
-    <string name="calendars_device_title">Prijungti įrenginį</string>
+    <string name="calendars_device_title">Prijungti įrenginiai</string>
     <string name="calendars_device_name">Įrenginio pavadinimas</string>
     <string name="calendars_device_create">Sukurti</string>
+    <string name="calendars_device_add">Pridėti įrenginį</string>
     <string name="calendars_device_server">Serveris</string>
     <string name="calendars_device_address">Adresas</string>
     <string name="calendars_device_username">Vartotojo vardas</string>
@@ -61,23 +61,20 @@
     <string name="calendars_poll">Tikrinti dabar</string>
     <string name="calendars_delete_title">Ištrinti %1$s?</string>
     <string name="calendars_delete_message">Kartu su juo ištrinami ir jo įvykiai.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">atnaujintas %1$d įvykis</item>
-        <item quantity="few">atnaujinti %1$d įvykiai</item>
-        <item quantity="other">atnaujinta %1$d įvykių</item>
-    </plurals>
+    <string name="calendars_remove">Šalinti</string>
+    <string name="calendars_remove_title">Šalinti %1$s iš Mochi?</string>
+    <string name="calendars_remove_message">Jo įvykiai lieka pradiniame kalendoriuje.</string>
     <string name="calendars_today">Šiandien</string>
     <string name="calendars_view_week">Savaitė</string>
     <string name="calendars_view_multiweek">Kelios savaitės</string>
     <string name="calendars_view_month">Mėnuo</string>
     <string name="calendars_workweek">Darbo savaitė</string>
+    <string name="calendars_range">nuo %1$s iki %2$s</string>
     <string name="calendars_truncated">Kai kurie šio intervalo įvykiai nerodomi.</string>
     <string name="calendars_list_empty">Įvykių nėra</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d daugiau</item>
-        <item quantity="few">+%1$d daugiau</item>
-        <item quantity="other">+%1$d daugiau</item>
-    </plurals>
+    <string name="calendars_untitled">(Be pavadinimo)</string>
+    <string name="calendars_status_cancelled">Atšaukta</string>
+    <string name="calendars_status_tentative">Nepatvirtinta</string>
     <string name="calendars_event_new">Naujas įvykis</string>
     <string name="calendars_event_edit">Redaguoti įvykį</string>
     <string name="calendars_event_calendar">Kalendorius</string>
@@ -99,9 +96,26 @@
     <string name="calendars_repeat_count">Pasikartojimai</string>
     <string name="calendars_repeat_forever">Visam laikui</string>
     <string name="calendars_reminder_time">Įvykio metu</string>
-    <string name="calendars_reminder_minutes">prieš %1$d min.</string>
-    <string name="calendars_reminder_hour">prieš 1 valandą</string>
-    <string name="calendars_reminder_day">prieš 1 dieną</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">prieš %1$d minutę</item>
+        <item quantity="few">prieš %1$d minutes</item>
+        <item quantity="many">prieš %1$d minutės</item>
+        <item quantity="other">prieš %1$d minučių</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">prieš %1$d valandą</item>
+        <item quantity="few">prieš %1$d valandas</item>
+        <item quantity="many">prieš %1$d valandos</item>
+        <item quantity="other">prieš %1$d valandų</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">prieš %1$d dieną</item>
+        <item quantity="few">prieš %1$d dienas</item>
+        <item quantity="many">prieš %1$d dienos</item>
+        <item quantity="other">prieš %1$d dienų</item>
+    </plurals>
+    <string name="calendars_reminder_add">Pridėti priminimą</string>
+    <string name="calendars_reminder_remove">Šalinti priminimą</string>
     <string name="calendars_hours_start">Darbo laiko pradžia</string>
     <string name="calendars_hours_finish">Darbo laiko pabaiga</string>
     <string name="calendars_hours_invalid">Darbo laikas turi baigtis po jo pradžios.</string>
@@ -110,16 +124,18 @@
     <string name="calendars_multiweek_previous">Ankstesnės savaitės</string>
     <string name="calendars_default_duration">Numatytasis įvykio ilgis</string>
     <string name="calendars_default_reminder">Numatytasis priminimas</string>
+    <string name="calendars_default_calendar">Numatytasis kalendorius</string>
+    <string name="calendars_preferences_allday">Visos dienos įvykiai</string>
+    <string name="calendars_allday_first">Pradžioje</string>
+    <string name="calendars_allday_last">Pabaigoje</string>
     <string name="calendars_link_title">Kalendoriaus nuoroda</string>
     <string name="calendars_link_copy">Kopijuoti nuorodą</string>
     <string name="calendars_link_once">Nukopijuokite ją dabar: jos nebus galima parodyti dar kartą.</string>
     <string name="calendars_link_exists">Šiam kalendoriui nuoroda jau yra.</string>
     <string name="calendars_permission_title">Leisti prieigą?</string>
     <string name="calendars_permission_message">%1$s prašo:</string>
-    <string name="calendars_sync_permission">Reikia prieigos prie kalendoriaus</string>
     <string name="calendars_sync_authorization">Prisijunkite iš naujo, kad sinchronizavimas tęstųsi</string>
     <string name="calendars_device_warning">Nukopijuokite slaptažodį dabar: jo nebus galima parodyti dar kartą.</string>
-    <string name="calendars_device_list">Prijungti įrenginiai</string>
     <string name="calendars_device_empty">Nėra prijungtų įrenginių</string>
     <string name="calendars_device_used">Paskutinį kartą naudota %1$s</string>
     <string name="calendars_device_never">niekada</string>
@@ -170,9 +186,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google kalendorius</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google paskyros šiame serveryje neįjungtos. Įjunkite jas skiltyje Nustatymai, Sistemos nustatymai.</string>
     <string name="calendars_subscribe_google_connect">Neprijungėte Google paskyros.</string>
     <string name="calendars_subscribe_google_connect_action">Prijungti Google</string>
     <string name="calendars_grant_failed">Prieiga prie kalendoriaus nesuteikta</string>
+    <string name="calendars_event_exception">Pakeistas pasikartojimas</string>
+    <string name="calendars_span_day">%1$s, nuo %2$s iki %3$s</string>
+    <string name="calendars_polled_current">Kalendorius atnaujintas</string>
+    <string name="calendars_polled_synced">Kalendorius sinchronizuotas</string>
+    <string name="calendars_link_revoke_title">Atšaukti kalendoriaus adresą?</string>
+    <string name="calendars_link_revoke_message">Kalendoriai, užsiprenumeravę šį adresą, nebebus atnaujinami.</string>
 </resources>

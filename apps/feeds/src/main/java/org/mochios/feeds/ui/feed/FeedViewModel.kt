@@ -30,6 +30,7 @@ import org.mochios.android.util.appendDistinct
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.model.WebSocketEvent
 import org.mochios.feeds.R
+import org.mochios.feeds.api.FeedNotificationSettings
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.Permissions
 import org.mochios.feeds.model.Post
@@ -118,9 +119,18 @@ class FeedViewModel @Inject constructor(
     private val _feedInfo = MutableStateFlow<Feed?>(null)
     val feedInfo: StateFlow<Feed?> = _feedInfo.asStateFlow()
 
+    /** The user's notification switches for this feed; null until loaded, for
+     *  the aggregate, and for a feed they do not hold. */
+    private val _notifications = MutableStateFlow<FeedNotificationSettings?>(null)
+    val notifications: StateFlow<FeedNotificationSettings?> = _notifications.asStateFlow()
+
     private val _permissions = MutableStateFlow(Permissions())
     val permissions: StateFlow<Permissions> = _permissions.asStateFlow()
 
+    // True while an unsubscribe is in flight; the confirmation stays open with
+    // its button spinning until the server answers.
+    private val _isUnsubscribing = MutableStateFlow(false)
+    val isUnsubscribing: StateFlow<Boolean> = _isUnsubscribing.asStateFlow()
 
     // One-shot interest-thumb feedback (boosted/reduced/removed, or the error).
     private val _interestFeedback = MutableSharedFlow<InterestFeedback>(extraBufferCapacity = 8)
@@ -224,6 +234,7 @@ class FeedViewModel @Inject constructor(
 
     init {
         loadFeed()
+        loadNotifications()
         subscribeToWebSocket()
         viewModelScope.launch { savedRepository.load() }
         viewModelScope.launch { _currentUserId.value = sessionManager.getBoundIdentity() }
@@ -266,6 +277,8 @@ class FeedViewModel @Inject constructor(
 
     /** Unsubscribe the viewer from this feed, then signal the screen to leave it. */
     fun unsubscribe() {
+        if (_isUnsubscribing.value) return
+        _isUnsubscribing.value = true
         viewModelScope.launch {
             try {
                 val feed = feedInfo.value
@@ -279,6 +292,8 @@ class FeedViewModel @Inject constructor(
                 _actionEvents.emit(FeedActionEvent.Unsubscribed)
             } catch (e: Exception) {
                 _actionEvents.emit(FeedActionEvent.Failure(e.toMochiError()))
+            } finally {
+                _isUnsubscribing.value = false
             }
         }
     }
@@ -287,6 +302,29 @@ class FeedViewModel @Inject constructor(
     // bell clears on web and other devices when the feed is opened — matching
     // web's entity-feed-page. The local system tray is dismissed separately in
     // FeedScreen. Skipped for the all-feeds aggregate (no real feed entity).
+    private fun loadNotifications() {
+        if (isAllFeeds || feedId.isBlank()) return
+        viewModelScope.launch {
+            try {
+                _notifications.value = repository.getNotifications(feedId)
+            } catch (_: Exception) {
+                // The menu leaves the switches out until they load.
+            }
+        }
+    }
+
+    /** Turn this feed's new-post notifications on or off. */
+    fun setPostNotifications(enabled: Boolean) {
+        if (isAllFeeds || feedId.isBlank()) return
+        viewModelScope.launch {
+            try {
+                _notifications.value = repository.setNotification(feedId, "post", enabled)
+            } catch (e: Exception) {
+                _actionEvents.emit(FeedActionEvent.Failure(e.toMochiError()))
+            }
+        }
+    }
+
     fun clearNotifications() {
         if (isAllFeeds || feedId.isBlank()) return
         viewModelScope.launch {

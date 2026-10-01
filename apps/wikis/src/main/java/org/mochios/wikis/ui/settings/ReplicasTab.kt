@@ -98,20 +98,21 @@ fun ReplicasTab(
 
     val toRemove = pendingRemove
     if (toRemove != null) {
+        // Stays open, its button spinning, until the removal answers; only
+        // success closes it.
         MochiAlertDialog(
-            onDismissRequest = { pendingRemove = null },
+            onDismissRequest = { if (!state.isRemoving) pendingRemove = null },
             title = stringResource(R.string.wikis_replicas_remove_confirm_title),
             text = stringResource(
                 R.string.wikis_replicas_remove_confirm_message,
                 toRemove.name ?: toRemove.id,
             ),
             confirmText = stringResource(R.string.wikis_replicas_remove_confirm_action),
-            onConfirm = {
-                viewModel.remove(toRemove.id)
-                pendingRemove = null
-            },
+            onConfirm = { viewModel.remove(toRemove.id) { pendingRemove = null } },
+            confirmLoading = state.isRemoving,
             destructive = true,
             dismissText = stringResource(MochiR.string.common_cancel),
+            dismissEnabled = !state.isRemoving,
         )
     }
 }

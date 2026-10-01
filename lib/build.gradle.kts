@@ -32,6 +32,14 @@ android {
         // (and anything carried in their query) into release logcat.
         buildConfig = true
     }
+
+    // Robolectric runs the Compose UI tests on the JVM against the merged
+    // resources and manifest.
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+        }
+    }
 }
 
 
@@ -91,4 +99,8 @@ dependencies {
 
     testImplementation(libs.junit)
     testImplementation(libs.okhttp.mockwebserver)
+    testImplementation(platform(libs.compose.bom))
+    testImplementation(libs.compose.ui.test.junit4)
+    testImplementation(libs.compose.ui.test.manifest)
+    testImplementation(libs.robolectric)
 }

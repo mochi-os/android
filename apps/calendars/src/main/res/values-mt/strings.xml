@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Oħloq</string>
     <string name="calendars_subscribe_submit">Abbona</string>
     <string name="calendars_subscribe_url">Indirizz</string>
-    <string name="calendars_connect_device">Qabbad apparat</string>
+    <string name="calendars_connect_device">Apparati mqabbda</string>
     <string name="calendars_preferences">Preferenzi</string>
     <string name="calendars_name">Isem</string>
     <string name="calendars_rename">Irrinomina</string>
@@ -11,7 +11,6 @@
     <string name="calendars_view">Veduta</string>
     <string name="calendars_view_list">Lista</string>
     <string name="calendars_list_search">Fittex</string>
-    <string name="calendars_event_untitled">Bla titlu</string>
     <string name="calendars_event_title">Titlu</string>
     <string name="calendars_event_location">Post</string>
     <string name="calendars_event_description">Deskrizzjoni</string>
@@ -37,9 +36,10 @@
     <string name="calendars_sync_never">Għadu mhux sinkronizzat</string>
     <string name="calendars_sync_time">L-aħħar sinkronizzazzjoni: %1$s</string>
     <string name="calendars_sync_transport">Ma rnexxiex jilħaq is-server</string>
-    <string name="calendars_device_title">Qabbad apparat</string>
+    <string name="calendars_device_title">Apparati mqabbda</string>
     <string name="calendars_device_name">Isem l-apparat</string>
     <string name="calendars_device_create">Oħloq</string>
+    <string name="calendars_device_add">Żid apparat</string>
     <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Indirizz</string>
     <string name="calendars_device_username">Isem tal-utent</string>
@@ -61,27 +61,20 @@
     <string name="calendars_poll">Iċċekkja issa</string>
     <string name="calendars_delete_title">Tħassar %1$s?</string>
     <string name="calendars_delete_message">L-avvenimenti tiegħu jitħassru miegħu.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d avveniment aġġornat</item>
-        <item quantity="two">%1$d avvenimenti aġġornati</item>
-        <item quantity="few">%1$d avvenimenti aġġornati</item>
-        <item quantity="many">%1$d avveniment aġġornat</item>
-        <item quantity="other">%1$d avveniment aġġornat</item>
-    </plurals>
+    <string name="calendars_remove">Neħħi</string>
+    <string name="calendars_remove_title">Tneħħi %1$s minn Mochi?</string>
+    <string name="calendars_remove_message">L-avvenimenti tiegħu jibqgħu fil-kalendarju oriġinali.</string>
     <string name="calendars_today">Illum</string>
     <string name="calendars_view_week">Ġimgħa</string>
     <string name="calendars_view_multiweek">Diversi ġimgħat</string>
     <string name="calendars_view_month">Xahar</string>
     <string name="calendars_workweek">Ġimgħa tax-xogħol</string>
+    <string name="calendars_range">minn %1$s sa %2$s</string>
     <string name="calendars_truncated">Xi avvenimenti f\'din il-firxa mhumiex murija.</string>
     <string name="calendars_list_empty">L-ebda avvenimenti</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d ieħor</item>
-        <item quantity="two">+%1$d oħra</item>
-        <item quantity="few">+%1$d oħra</item>
-        <item quantity="many">+%1$d oħra</item>
-        <item quantity="other">+%1$d oħra</item>
-    </plurals>
+    <string name="calendars_untitled">(L-ebda titlu)</string>
+    <string name="calendars_status_cancelled">Ikkanċellat</string>
+    <string name="calendars_status_tentative">Provviżorju</string>
     <string name="calendars_event_new">Avveniment ġdid</string>
     <string name="calendars_event_edit">Editja l-avveniment</string>
     <string name="calendars_event_calendar">Kalendarju</string>
@@ -103,9 +96,29 @@
     <string name="calendars_repeat_count">Okkorrenzi</string>
     <string name="calendars_repeat_forever">Għal dejjem</string>
     <string name="calendars_reminder_time">Fil-ħin tal-avveniment</string>
-    <string name="calendars_reminder_minutes">%1$d minuti qabel</string>
-    <string name="calendars_reminder_hour">1 siegħa qabel</string>
-    <string name="calendars_reminder_day">1 jum qabel</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d minuta qabel</item>
+        <item quantity="two">%1$d minuti qabel</item>
+        <item quantity="few">%1$d minuti qabel</item>
+        <item quantity="many">%1$d minuta qabel</item>
+        <item quantity="other">%1$d minuta qabel</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d siegħa qabel</item>
+        <item quantity="two">sagħtejn qabel</item>
+        <item quantity="few">%1$d sigħat qabel</item>
+        <item quantity="many">%1$d siegħa qabel</item>
+        <item quantity="other">%1$d siegħa qabel</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d jum qabel</item>
+        <item quantity="two">jumejn qabel</item>
+        <item quantity="few">%1$d ijiem qabel</item>
+        <item quantity="many">%1$d jum qabel</item>
+        <item quantity="other">%1$d jum qabel</item>
+    </plurals>
+    <string name="calendars_reminder_add">Żid tfakkira</string>
+    <string name="calendars_reminder_remove">Neħħi t-tfakkira</string>
     <string name="calendars_hours_start">Bidu tal-ħin tax-xogħol</string>
     <string name="calendars_hours_finish">Tmiem il-ħin tax-xogħol</string>
     <string name="calendars_hours_invalid">Il-ħinijiet tax-xogħol iridu jintemmu wara li jibdew.</string>
@@ -114,16 +127,18 @@
     <string name="calendars_multiweek_previous">Ġimgħat qabel</string>
     <string name="calendars_default_duration">Tul prestabbilit tal-avveniment</string>
     <string name="calendars_default_reminder">Tfakkira prestabbilita</string>
+    <string name="calendars_default_calendar">Kalendarju prestabbilit</string>
+    <string name="calendars_preferences_allday">Avvenimenti tal-ġurnata kollha</string>
+    <string name="calendars_allday_first">Fil-bidu</string>
+    <string name="calendars_allday_last">Fl-aħħar</string>
     <string name="calendars_link_title">Ħolqa tal-kalendarju</string>
     <string name="calendars_link_copy">Ikkupja l-ħolqa</string>
     <string name="calendars_link_once">Ikkupjaha issa: ma tistax tintwera mill-ġdid.</string>
     <string name="calendars_link_exists">Diġà teżisti ħolqa għal dan il-kalendarju.</string>
     <string name="calendars_permission_title">Tippermetti l-aċċess?</string>
     <string name="calendars_permission_message">%1$s qed jitlob:</string>
-    <string name="calendars_sync_permission">Hemm bżonn aċċess għall-kalendarju</string>
     <string name="calendars_sync_authorization">Erġa\' idħol biex tkompli tissinkronizza</string>
     <string name="calendars_device_warning">Ikkupja l-password issa: ma tistax tintwera mill-ġdid.</string>
-    <string name="calendars_device_list">Apparati mqabbda</string>
     <string name="calendars_device_empty">L-ebda apparat mhu mqabbad</string>
     <string name="calendars_device_used">L-aħħar uża %1$s</string>
     <string name="calendars_device_never">qatt</string>
@@ -176,9 +191,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Kalendarju Google</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Il-kontijiet ta\' Google mhumiex attivati fuq dan is-server. Attivahom taħt Settings, Settings tas-sistema.</string>
     <string name="calendars_subscribe_google_connect">Ma qabbadtx kont ta\' Google.</string>
     <string name="calendars_subscribe_google_connect_action">Qabbad Google</string>
     <string name="calendars_grant_failed">L-aċċess għall-kalendarju ma ngħatax</string>
+    <string name="calendars_event_exception">Okkorrenza mibdula</string>
+    <string name="calendars_span_day">%1$s, minn %2$s sa %3$s</string>
+    <string name="calendars_polled_current">Il-kalendarju huwa aġġornat</string>
+    <string name="calendars_polled_synced">Il-kalendarju ġie sinkronizzat</string>
+    <string name="calendars_link_revoke_title">Tirrevoka l-indirizz tal-kalendarju?</string>
+    <string name="calendars_link_revoke_message">Il-kalendarji abbonati għal dan l-indirizz ma jibqgħux jiġu aġġornati.</string>
 </resources>

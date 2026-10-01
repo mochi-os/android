@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Operador suti</string>
     <string name="system_setting_operator_email">Operador email</string>
     <string name="system_setting_operator_jurisdiction">Operador jurisdicción</string>
-    <string name="system_setting_server_started">Servidor qalltawayi</string>
-    <string name="system_setting_server_version">Servidor versión</string>
     <string name="system_setting_signup_enabled">Machaq signupanak iyawsaña</string>
     <string name="system_users_title">Apnaqirinaka</string>
     <string name="system_users_col_user">Apnaqiri</string>
@@ -394,4 +392,5 @@
     <string name="accounts_provider_caldav">Calendario servidor</string>
     <string name="accounts_revoke_confirm">Akax %1$s calendarior mantañapwa apaqani. %2$s ukampi mantañax Mantañ laphin jan chinukatäkipanxa utjaskakiniwa.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Jan uñt\'ata tema</string>
 </resources>

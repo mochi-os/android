@@ -158,6 +158,9 @@
     <string name="feeds_markdown_supported">Markdown tuettu</string>
     <string name="feeds_permission_deny">Estä</string>
     <string name="feeds_rss_feed">RSS-syöte</string>
+    <string name="feeds_notifications_post">Uudet julkaisut</string>
+    <string name="feeds_follow_thread">Seuraa ketjua</string>
+    <string name="feeds_unfollow_thread">Lopeta ketjun seuraaminen</string>
     <string name="feeds_settings_field_entity_id">Entiteetin tunnus</string>
     <string name="feeds_settings_field_fingerprint">Sormenjälki</string>
     <string name="feeds_settings_field_server">Palvelin</string>

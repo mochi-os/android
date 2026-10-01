@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Nome dell\'operatore</string>
     <string name="system_setting_operator_email">Email dell\'operatore</string>
     <string name="system_setting_operator_jurisdiction">Giurisdizione dell\'operatore</string>
-    <string name="system_setting_server_started">Server avviato</string>
-    <string name="system_setting_server_version">Versione del server</string>
     <string name="system_setting_signup_enabled">Consenti nuove registrazioni</string>
     <string name="system_users_title">Utenti</string>
     <string name="system_users_col_user">Utente</string>
@@ -396,4 +394,5 @@
     <string name="accounts_provider_caldav">Server di calendario</string>
     <string name="accounts_revoke_confirm">Questa azione revocherà l\'accesso al calendario di %1$s. L\'accesso con %2$s resta finché non lo scolleghi nella pagina di accesso.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Tema sconosciuto</string>
 </resources>

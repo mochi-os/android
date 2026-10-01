@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Όλα τα φόρουμ</string>
     <string name="forums_create_allow_search">Να επιτρέπεται σε οποιονδήποτε να αναζητά το φόρουμ</string>
     <string name="forums_rss_clipboard_label">Διεύθυνση RSS φόρουμ</string>
+    <string name="forums_notifications_post">Νέες αναρτήσεις</string>
+    <string name="forums_notifications_reply">Απαντήσεις σε εσάς</string>
+    <string name="forums_notifications_comment">Όλες οι απαντήσεις</string>
+    <string name="forums_follow_thread">Παρακολούθηση νήματος</string>
+    <string name="forums_unfollow_thread">Διακοπή παρακολούθησης νήματος</string>
     <string name="forums_tab_moderation">Συντονισμός</string>
     <string name="forums_access_level_view_full">Μόνο προβολή</string>
     <string name="forums_access_level_none_full">Χωρίς πρόσβαση</string>

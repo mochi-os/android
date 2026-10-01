@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Barcha forumlar</string>
     <string name="forums_create_allow_search">Har kimga forumni qidirishga ruxsat berish</string>
     <string name="forums_rss_clipboard_label">Forum RSS manzili</string>
+    <string name="forums_notifications_post">Yangi postlar</string>
+    <string name="forums_notifications_reply">Sizga javoblar</string>
+    <string name="forums_notifications_comment">Barcha javoblar</string>
+    <string name="forums_follow_thread">Mavzuni kuzatish</string>
+    <string name="forums_unfollow_thread">Mavzuni kuzatishni to‘xtatish</string>
     <string name="forums_tab_moderation">Moderatsiya</string>
     <string name="forums_access_level_view_full">Faqat koʻrish</string>
     <string name="forums_access_level_none_full">Ruxsat yoʻq</string>

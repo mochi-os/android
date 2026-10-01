@@ -67,6 +67,9 @@ class ContactEditViewModel @Inject constructor(
 
     val creating: Boolean = contactId.isBlank()
 
+    /** The address book a new contact was started from; blank for the default. */
+    private val start: String = savedStateHandle.get<String>("book").orEmpty()
+
     private val _uiState = MutableStateFlow(ContactEditUiState())
     val uiState: StateFlow<ContactEditUiState> = _uiState.asStateFlow()
 
@@ -131,7 +134,7 @@ class ContactEditViewModel @Inject constructor(
     }
 
     fun requestUnfriend() {
-        _uiState.value = _uiState.value.copy(unfriendRequested = true)
+        _uiState.value = _uiState.value.copy(unfriendRequested = true, error = null)
     }
 
     fun cancelUnfriend() {
@@ -140,20 +143,24 @@ class ContactEditViewModel @Inject constructor(
 
     fun confirmUnfriend() {
         val contact = _uiState.value.contact ?: return
-        _uiState.value = _uiState.value.copy(unfriendRequested = false)
-        toggle { repository.removeFriend(contact.person) }
+        if (_uiState.value.isToggling) return
+        toggle(settle = ContactEditUiState::unfriended) { repository.removeFriend(contact.person) }
     }
 
-    private fun toggle(block: suspend () -> Unit) {
+    private fun toggle(
+        settle: ContactEditUiState.(MochiError?) -> ContactEditUiState = ContactEditUiState::toggled,
+        block: suspend () -> Unit,
+    ) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isToggling = true, error = null)
-            try {
+            val failure = try {
                 block()
                 refresh()
-                _uiState.value = _uiState.value.copy(isToggling = false)
+                null
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isToggling = false, error = e.toMochiError())
+                e.toMochiError()
             }
+            _uiState.value = _uiState.value.settle(failure)
         }
     }
 
@@ -165,11 +172,10 @@ class ContactEditViewModel @Inject constructor(
         try {
             val books = repository.listBooks()
             val form = _uiState.value.form
-            // A new contact lands in the default book unless the user picks
-            // another, so the field shows where it is going from the start.
-            val book = form.book.ifBlank {
-                books.firstOrNull { it.isDefault }?.id.orEmpty()
-            }
+            // A new contact lands in the book it was started from, else the
+            // default one, unless the user picks another; the field shows where
+            // it is going from the start.
+            val book = form.book.ifBlank { startBook(books, start) }
             _uiState.value = _uiState.value.copy(books = books, form = form.copy(book = book))
         } catch (_: Exception) {
             // The book picker is one field of many: without the list it shows
@@ -262,3 +268,22 @@ class ContactEditViewModel @Inject constructor(
         }
     }
 }
+
+/** The state a friend-switch request leaves: its failure, if it had one. */
+internal fun ContactEditUiState.toggled(failure: MochiError?): ContactEditUiState =
+    copy(isToggling = false, error = failure)
+
+/**
+ * The state an unfriend leaves. The confirmation closes once it is done, and
+ * stays up after a failure, saying why, so it can be tried again.
+ */
+internal fun ContactEditUiState.unfriended(failure: MochiError?): ContactEditUiState =
+    if (failure == null) {
+        copy(isToggling = false, error = null, unfriendRequested = false)
+    } else {
+        copy(isToggling = false, error = failure)
+    }
+
+/** The book a new contact goes in: the one it was started from, else the default one. */
+internal fun startBook(books: List<Book>, start: String): String =
+    (books.firstOrNull { it.id == start } ?: books.firstOrNull { it.isDefault })?.id.orEmpty()

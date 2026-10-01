@@ -13,17 +13,71 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.res.stringResource
 import org.mochios.android.R
+import android.icu.text.DateIntervalFormat
+import android.icu.text.DateTimePatternGenerator
+import android.icu.util.DateInterval
+import android.icu.util.ULocale
 import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.ZoneOffset
 import java.util.Date
 import java.util.Locale
 import java.util.TimeZone
+import java.util.concurrent.ConcurrentHashMap
+
+/**
+ * How the platform writes a moment in the user's language: the pattern the
+ * language writes a skeleton with, such as "hm" for a 12-hour clock or "Hm"
+ * for a 24-hour one, and a moment or a span of days written by it. Tests stand
+ * in for the platform, whose ICU is not there on the JVM.
+ */
+interface Clock {
+    /** The language's pattern for [skeleton]. */
+    fun pattern(skeleton: String): String
+
+    /** [millis] written in [pattern], read in [zone], in the digits 0 to 9. */
+    fun write(pattern: String, millis: Long, zone: TimeZone): String
+
+    /** The days from [from] to [to], as the language writes a span of them by [skeleton]. */
+    fun span(skeleton: String, from: Long, to: Long, zone: TimeZone): String
+}
+
+/**
+ * The phone's own ICU, in the language the app speaks. Its digits are 0 to 9
+ * whatever the language's own, as the web and the server write a time.
+ */
+object PlatformClock : Clock {
+    private val patterns = ConcurrentHashMap<String, String>()
+
+    private fun locale(): ULocale = ULocale.forLocale(Locale.getDefault()).setKeywordValue("numbers", "latn")
+
+    override fun pattern(skeleton: String): String {
+        val locale = Locale.getDefault()
+        return patterns.getOrPut("${locale.toLanguageTag()} $skeleton") {
+            DateTimePatternGenerator.getInstance(locale).getBestPattern(skeleton)
+        }
+    }
+
+    override fun write(pattern: String, millis: Long, zone: TimeZone): String {
+        val format = android.icu.text.SimpleDateFormat(pattern, locale())
+        format.timeZone = android.icu.util.TimeZone.getTimeZone(zone.id)
+        return format.format(Date(millis))
+    }
+
+    override fun span(skeleton: String, from: Long, to: Long, zone: TimeZone): String {
+        val format = DateIntervalFormat.getInstance(skeleton, locale())
+        format.timeZone = android.icu.util.TimeZone.getTimeZone(zone.id)
+        return format.format(DateInterval(from, to), StringBuffer(), java.text.FieldPosition(0)).toString()
+    }
+}
 
 /**
  * Locale-aware formatters over [UserPreferences]. The plain formatters are pure
  * and safe to reuse; only [formatTimestamp] needs Composable scope, since its
- * relative strings come from `stringResource`.
+ * relative strings come from `stringResource`. Times are written the way the
+ * user's language writes them, through [clock], on the clock the user chose.
  */
-class Format(val preferences: UserPreferences) {
+class Format(val preferences: UserPreferences, private val clock: Clock = PlatformClock) {
 
     /**
      * Epoch seconds → user-format date (no time). [zone] is an IANA zone to
@@ -39,36 +93,44 @@ class Format(val preferences: UserPreferences) {
 
     /**
      * Epoch seconds → user-format time of day, without seconds: what a
-     * calendar grid, an agenda row and a time picker show. [zone] reads the
-     * clock in another IANA zone than the user's; blank or unknown means the
-     * user's.
+     * calendar grid, an agenda row and a time picker show, as the user's
+     * language writes it: "15:04", "3:04 PM", "午後3:04", "15.04". [zone]
+     * reads the clock in another IANA zone than the user's; blank or unknown
+     * means the user's.
      */
     fun formatTime(epochSeconds: Long, zone: String? = null): String {
         if (epochSeconds <= 0) return ""
-        val pattern = when (preferences.timeFormat) {
-            TimeFormat.H12 -> "h:mm a"
-            TimeFormat.H24 -> "HH:mm"
-        }
-        val formatter = SimpleDateFormat(pattern, Locale.getDefault())
-        formatter.timeZone = zoneOf(zone)
-        return formatter.format(Date(epochToMillis(epochSeconds)))
+        return clock.write(clock.pattern(twelve("hm", "Hm")), epochToMillis(epochSeconds), zoneOf(zone))
     }
 
     /**
      * The label on a time grid's hour row: "09:00", or "9 AM" where the user
-     * reads a twelve-hour clock. [hour] is 0 to 24.
+     * reads a twelve-hour clock, each as the user's language writes it.
+     * [hour] is 0 to 24.
      */
     fun formatHour(hour: Int): String {
         val clamped = hour.coerceIn(0, 24) % 24
-        val pattern = when (preferences.timeFormat) {
-            TimeFormat.H12 -> "h a"
-            TimeFormat.H24 -> "HH:mm"
-        }
-        // Through the formatter rather than by hand, so the half-day marker is
-        // the locale's own word rather than an English literal.
-        val formatter = SimpleDateFormat(pattern, Locale.getDefault())
-        formatter.timeZone = TimeZone.getTimeZone("UTC")
-        return formatter.format(Date(clamped * 3_600_000L))
+        return clock.write(clock.pattern(twelve("h", "Hm")), clamped * 3_600_000L, TimeZone.getTimeZone("UTC"))
+    }
+
+    /**
+     * Epoch seconds → the long date the calendar's headings and an event's
+     * summary give: "Monday 28 September 2026", as the user's language writes
+     * it. [zone] reads the day in another IANA zone than the user's.
+     */
+    fun formatLongDate(epochSeconds: Long, zone: String? = null): String {
+        if (epochSeconds <= 0) return ""
+        return clock.write(clock.pattern("EEEEdMMMMy"), epochToMillis(epochSeconds), zoneOf(zone))
+    }
+
+    /**
+     * A run of days as the user's language writes one: "14 – 20 September
+     * 2026", "28 September – 2 October 2026". The days are dates, read in no
+     * zone.
+     */
+    fun formatDayRange(first: LocalDate, last: LocalDate): String {
+        val noon = { day: LocalDate -> day.atTime(12, 0).toInstant(ZoneOffset.UTC).toEpochMilli() }
+        return clock.span("dMMMMy", noon(first), noon(last), TimeZone.getTimeZone("UTC"))
     }
 
     /**
@@ -144,15 +206,12 @@ class Format(val preferences: UserPreferences) {
         return sdf.format(date)
     }
 
-    private fun formatTimeInternal(date: Date, tz: TimeZone = timeZone): String {
-        val pattern = when (preferences.timeFormat) {
-            TimeFormat.H12 -> "h:mm:ss a"
-            TimeFormat.H24 -> "HH:mm:ss"
-        }
-        val sdf = SimpleDateFormat(pattern, Locale.getDefault())
-        sdf.timeZone = tz
-        return sdf.format(date)
-    }
+    private fun formatTimeInternal(date: Date, tz: TimeZone = timeZone): String =
+        clock.write(clock.pattern(twelve("hms", "Hms")), date.time, tz)
+
+    /** The [skeleton] for a twelve-hour clock where the user reads one, else [otherwise]. */
+    private fun twelve(skeleton: String, otherwise: String): String =
+        if (preferences.timeFormat == TimeFormat.H12) skeleton else otherwise
 
     private fun formatNumberInternal(value: Double, decimals: Int?): String {
         val abs = kotlin.math.abs(value)

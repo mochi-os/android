@@ -316,4 +316,8 @@
     <string name="device_name_fallback">Mobiles Gerät</string>
     <string name="account_error_token_type">Nicht unterstützter Tokentyp</string>
     <string name="account_error_caller">Aufrufer nicht zugelassen</string>
+    <string name="zone_sea">Auf See</string>
+    <string name="access_remove">Entfernen</string>
+    <string name="access_remove_title">Zugriff entfernen?</string>
+    <string name="access_remove_message">Zugriffsregel für „%1$s“ entfernen?</string>
 </resources>

@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Unda</string>
     <string name="calendars_subscribe_submit">Jiunge</string>
     <string name="calendars_subscribe_url">Anwani</string>
-    <string name="calendars_connect_device">Unganisha kifaa</string>
+    <string name="calendars_connect_device">Vifaa vilivyounganishwa</string>
     <string name="calendars_preferences">Mapendeleo</string>
     <string name="calendars_name">Jina</string>
     <string name="calendars_rename">Badilisha jina</string>
@@ -11,7 +11,6 @@
     <string name="calendars_view">Mwonekano</string>
     <string name="calendars_view_list">Orodha</string>
     <string name="calendars_list_search">Tafuta</string>
-    <string name="calendars_event_untitled">Bila kichwa</string>
     <string name="calendars_event_title">Kichwa</string>
     <string name="calendars_event_location">Eneo</string>
     <string name="calendars_event_description">Maelezo</string>
@@ -37,9 +36,10 @@
     <string name="calendars_sync_never">Bado haijasawazishwa</string>
     <string name="calendars_sync_time">Usawazishaji wa mwisho: %1$s</string>
     <string name="calendars_sync_transport">Haikuweza kufikia seva</string>
-    <string name="calendars_device_title">Unganisha kifaa</string>
+    <string name="calendars_device_title">Vifaa vilivyounganishwa</string>
     <string name="calendars_device_name">Jina la kifaa</string>
     <string name="calendars_device_create">Unda</string>
+    <string name="calendars_device_add">Ongeza kifaa</string>
     <string name="calendars_device_server">Seva</string>
     <string name="calendars_device_address">Anwani</string>
     <string name="calendars_device_username">Jina la mtumiaji</string>
@@ -61,13 +61,20 @@
     <string name="calendars_poll">Angalia sasa</string>
     <string name="calendars_delete_title">Ufute %1$s?</string>
     <string name="calendars_delete_message">Matukio yake yatafutwa pamoja nayo.</string>
+    <string name="calendars_remove">Ondoa</string>
+    <string name="calendars_remove_title">Uondoe %1$s kutoka Mochi?</string>
+    <string name="calendars_remove_message">Matukio yake yanabaki kwenye kalenda ya asili.</string>
     <string name="calendars_today">Leo</string>
     <string name="calendars_view_week">Wiki</string>
     <string name="calendars_view_multiweek">Wiki kadhaa</string>
     <string name="calendars_view_month">Mwezi</string>
     <string name="calendars_workweek">Wiki ya kazi</string>
+    <string name="calendars_range">%1$s hadi %2$s</string>
     <string name="calendars_truncated">Baadhi ya matukio katika kipindi hiki hayajaonyeshwa.</string>
     <string name="calendars_list_empty">Hakuna matukio</string>
+    <string name="calendars_untitled">(Bila kichwa)</string>
+    <string name="calendars_status_cancelled">Imeghairiwa</string>
+    <string name="calendars_status_tentative">Ya muda</string>
     <string name="calendars_event_new">Tukio jipya</string>
     <string name="calendars_event_edit">Hariri tukio</string>
     <string name="calendars_event_calendar">Kalenda</string>
@@ -89,9 +96,20 @@
     <string name="calendars_repeat_count">Idadi ya marudio</string>
     <string name="calendars_repeat_forever">Milele</string>
     <string name="calendars_reminder_time">Wakati wa tukio</string>
-    <string name="calendars_reminder_minutes">Dakika %1$d kabla</string>
-    <string name="calendars_reminder_hour">Saa 1 kabla</string>
-    <string name="calendars_reminder_day">Siku 1 kabla</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">dakika %1$d kabla</item>
+        <item quantity="other">dakika %1$d kabla</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">saa %1$d kabla</item>
+        <item quantity="other">saa %1$d kabla</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">siku %1$d kabla</item>
+        <item quantity="other">siku %1$d kabla</item>
+    </plurals>
+    <string name="calendars_reminder_add">Ongeza kikumbusho</string>
+    <string name="calendars_reminder_remove">Ondoa kikumbusho</string>
     <string name="calendars_hours_start">Saa za kazi zinaanza</string>
     <string name="calendars_hours_finish">Saa za kazi zinaisha</string>
     <string name="calendars_hours_invalid">Saa za kazi lazima ziishe baada ya kuanza.</string>
@@ -100,30 +118,24 @@
     <string name="calendars_multiweek_previous">Wiki zilizotangulia</string>
     <string name="calendars_default_duration">Urefu chaguomsingi wa tukio</string>
     <string name="calendars_default_reminder">Kikumbusho chaguo-msingi</string>
+    <string name="calendars_default_calendar">Kalenda chaguo-msingi</string>
+    <string name="calendars_preferences_allday">Matukio ya siku nzima</string>
+    <string name="calendars_allday_first">Mwanzoni</string>
+    <string name="calendars_allday_last">Mwishoni</string>
     <string name="calendars_link_title">Kiungo cha kalenda</string>
     <string name="calendars_link_copy">Nakili kiungo</string>
     <string name="calendars_link_once">Nakili sasa: hakiwezi kuonyeshwa tena.</string>
     <string name="calendars_link_exists">Tayari kuna kiungo cha kalenda hii.</string>
     <string name="calendars_permission_title">Uruhusu ufikiaji?</string>
     <string name="calendars_permission_message">%1$s inaomba:</string>
-    <string name="calendars_sync_permission">Ufikiaji wa kalenda unahitajika</string>
     <string name="calendars_sync_authorization">Ingia tena ili kuendelea kusawazisha</string>
     <string name="calendars_device_warning">Nakili nenosiri sasa: haliwezi kuonyeshwa tena.</string>
-    <string name="calendars_device_list">Vifaa vilivyounganishwa</string>
     <string name="calendars_device_empty">Hakuna kifaa kilichounganishwa</string>
     <string name="calendars_device_used">kilitumika mwisho %1$s</string>
     <string name="calendars_device_never">kamwe</string>
     <string name="calendars_device_deleted">Kifaa kimeondolewa</string>
     <string name="calendars_device_delete_title">Uondoe kifaa hiki?</string>
     <string name="calendars_device_delete_message">Itabidi kisanidiwe upya ili kusawazisha.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">Tukio %1$d limesasishwa</item>
-        <item quantity="other">Matukio %1$d yamesasishwa</item>
-    </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d zaidi</item>
-        <item quantity="other">+%1$d zaidi</item>
-    </plurals>
     <string name="calendars_sync_choose">Kalenda za kusawazisha</string>
     <string name="calendars_poll_large">Kalenda ni kubwa mno</string>
     <string name="calendars_poll_invalid">Anwani haikurudisha kalenda</string>
@@ -167,9 +179,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Kalenda ya Google</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Akaunti za Google hazijawashwa kwenye seva hii. Ziwashe katika Mipangilio, Mipangilio ya mfumo.</string>
     <string name="calendars_subscribe_google_connect">Hujaunganisha akaunti ya Google.</string>
     <string name="calendars_subscribe_google_connect_action">Unganisha Google</string>
     <string name="calendars_grant_failed">Ufikiaji wa kalenda haukutolewa</string>
+    <string name="calendars_event_exception">Marudio yaliyobadilishwa</string>
+    <string name="calendars_span_day">%1$s, %2$s hadi %3$s</string>
+    <string name="calendars_polled_current">Kalenda imesasishwa</string>
+    <string name="calendars_polled_synced">Kalenda imesawazishwa</string>
+    <string name="calendars_link_revoke_title">Je, ubatilishe anwani ya kalenda?</string>
+    <string name="calendars_link_revoke_message">Kalenda zilizojisajili kwenye anwani hii zitaacha kusasishwa.</string>
 </resources>

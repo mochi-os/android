@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Үүсгэх</string>
     <string name="calendars_subscribe_submit">Захиалах</string>
     <string name="calendars_subscribe_url">Хаяг</string>
-    <string name="calendars_connect_device">Төхөөрөмж холбох</string>
+    <string name="calendars_connect_device">Холбогдсон төхөөрөмжүүд</string>
     <string name="calendars_preferences">Тохиргоонууд</string>
     <string name="calendars_name">Нэр</string>
     <string name="calendars_rename">Нэр өөрчлөх</string>
@@ -11,7 +11,6 @@
     <string name="calendars_view">Харагдац</string>
     <string name="calendars_view_list">Жагсаалт</string>
     <string name="calendars_list_search">Хайх</string>
-    <string name="calendars_event_untitled">Гарчиггүй</string>
     <string name="calendars_event_title">Гарчиг</string>
     <string name="calendars_event_location">Байршил</string>
     <string name="calendars_event_description">Тайлбар</string>
@@ -37,9 +36,10 @@
     <string name="calendars_sync_never">Одоогоор синк хийгээгүй</string>
     <string name="calendars_sync_time">Сүүлд синк хийсэн: %1$s</string>
     <string name="calendars_sync_transport">Серверт холбогдож чадсангүй</string>
-    <string name="calendars_device_title">Төхөөрөмж холбох</string>
+    <string name="calendars_device_title">Холбогдсон төхөөрөмжүүд</string>
     <string name="calendars_device_name">Төхөөрөмжийн нэр</string>
     <string name="calendars_device_create">Үүсгэх</string>
+    <string name="calendars_device_add">Төхөөрөмж нэмэх</string>
     <string name="calendars_device_server">Сервер</string>
     <string name="calendars_device_address">Хаяг</string>
     <string name="calendars_device_username">Хэрэглэгчийн нэр</string>
@@ -61,21 +61,20 @@
     <string name="calendars_poll">Одоо шалгах</string>
     <string name="calendars_delete_title">%1$s-г устгах уу?</string>
     <string name="calendars_delete_message">Түүний үйл явдлууд хамт устана.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d үйл явдлыг шинэчиллээ</item>
-        <item quantity="other">%1$d үйл явдлыг шинэчиллээ</item>
-    </plurals>
+    <string name="calendars_remove">Хасах</string>
+    <string name="calendars_remove_title">%1$s-г Mochi-оос хасах уу?</string>
+    <string name="calendars_remove_message">Түүн дэх үйл явдлууд эх хуанлидаа хэвээр үлдэнэ.</string>
     <string name="calendars_today">Өнөөдөр</string>
     <string name="calendars_view_week">Долоо хоног</string>
     <string name="calendars_view_multiweek">Хэд хэдэн долоо хоног</string>
     <string name="calendars_view_month">Сар</string>
     <string name="calendars_workweek">Ажлын долоо хоног</string>
+    <string name="calendars_range">%1$s - %2$s</string>
     <string name="calendars_truncated">Энэ мужийн зарим үйл явдлыг харуулаагүй байна.</string>
     <string name="calendars_list_empty">Үйл явдал алга</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d илүү</item>
-        <item quantity="other">+%1$d илүү</item>
-    </plurals>
+    <string name="calendars_untitled">(Гарчиггүй)</string>
+    <string name="calendars_status_cancelled">Цуцалсан</string>
+    <string name="calendars_status_tentative">Урьдчилсан</string>
     <string name="calendars_event_new">Шинэ үйл явдал</string>
     <string name="calendars_event_edit">Үйл явдал засах</string>
     <string name="calendars_event_calendar">Хуанли</string>
@@ -97,9 +96,20 @@
     <string name="calendars_repeat_count">Давталтын тоо</string>
     <string name="calendars_repeat_forever">Үүрд</string>
     <string name="calendars_reminder_time">Үйл явдлын үед</string>
-    <string name="calendars_reminder_minutes">%1$d минутын өмнө</string>
-    <string name="calendars_reminder_hour">1 цагийн өмнө</string>
-    <string name="calendars_reminder_day">1 өдрийн өмнө</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d минутын өмнө</item>
+        <item quantity="other">%1$d минутын өмнө</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d цагийн өмнө</item>
+        <item quantity="other">%1$d цагийн өмнө</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d өдрийн өмнө</item>
+        <item quantity="other">%1$d өдрийн өмнө</item>
+    </plurals>
+    <string name="calendars_reminder_add">Сануулга нэмэх</string>
+    <string name="calendars_reminder_remove">Сануулга хасах</string>
     <string name="calendars_hours_start">Ажлын цагийн эхлэл</string>
     <string name="calendars_hours_finish">Ажлын цагийн төгсгөл</string>
     <string name="calendars_hours_invalid">Ажлын цаг эхэлснээс хойш дуусах ёстой.</string>
@@ -108,16 +118,18 @@
     <string name="calendars_multiweek_previous">Өмнөх долоо хоног</string>
     <string name="calendars_default_duration">Үйл явдлын үндсэн үргэлжлэх хугацаа</string>
     <string name="calendars_default_reminder">Үндсэн сануулга</string>
+    <string name="calendars_default_calendar">Үндсэн хуанли</string>
+    <string name="calendars_preferences_allday">Өдөржингийн үйл явдал</string>
+    <string name="calendars_allday_first">Эхэнд</string>
+    <string name="calendars_allday_last">Төгсгөлд</string>
     <string name="calendars_link_title">Хуанлийн холбоос</string>
     <string name="calendars_link_copy">Холбоосыг хуулах</string>
     <string name="calendars_link_once">Одоо хуулж авна уу: дахин харуулах боломжгүй.</string>
     <string name="calendars_link_exists">Энэ хуанлийн хувьд холбоос аль хэдийн байна.</string>
     <string name="calendars_permission_title">Хандахыг зөвшөөрөх үү?</string>
     <string name="calendars_permission_message">%1$s дараахыг хүсэж байна:</string>
-    <string name="calendars_sync_permission">Хуанлид хандах эрх шаардлагатай</string>
     <string name="calendars_sync_authorization">Синк үргэлжлүүлэхийн тулд дахин нэвтэрнэ үү</string>
     <string name="calendars_device_warning">Нууц үгийг одоо хуулж авна уу: дахин харуулах боломжгүй.</string>
-    <string name="calendars_device_list">Холбогдсон төхөөрөмжүүд</string>
     <string name="calendars_device_empty">Холбогдсон төхөөрөмж байхгүй</string>
     <string name="calendars_device_used">Сүүлд ашигласан %1$s</string>
     <string name="calendars_device_never">Хэзээ ч</string>
@@ -167,9 +179,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Календарь</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Энэ сервер дээр Google бүртгэлүүд идэвхжээгүй байна. Тэдгээрийг Тохиргоо, Системийн тохиргоо хэсэгт идэвхжүүлнэ үү.</string>
     <string name="calendars_subscribe_google_connect">Та Google бүртгэл холбоогүй байна.</string>
     <string name="calendars_subscribe_google_connect_action">Google-т холбогдох</string>
     <string name="calendars_grant_failed">Хуанлийн хандалт олгогдсонгүй</string>
+    <string name="calendars_event_exception">Өөрчлөгдсөн давталт</string>
+    <string name="calendars_span_day">%1$s, %2$s - %3$s</string>
+    <string name="calendars_polled_current">Хуанли шинэчлэгдсэн байна</string>
+    <string name="calendars_polled_synced">Хуанли синк хийгдлээ</string>
+    <string name="calendars_link_revoke_title">Хуанлийн хаягийг цуцлах уу?</string>
+    <string name="calendars_link_revoke_message">Энэ хаягийг захиалсан календарууд шинэчлэгдэхээ болино.</string>
 </resources>

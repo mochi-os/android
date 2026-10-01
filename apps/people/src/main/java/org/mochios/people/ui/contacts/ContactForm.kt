@@ -32,18 +32,23 @@ const val TYPE_WORK = "work"
 const val TYPE_MOBILE = "mobile"
 const val TYPE_OTHER = "other"
 
-/** The types a typed value may carry, in the order the picker lists them. */
-val CONTACT_TYPES = listOf(TYPE_HOME, TYPE_WORK, TYPE_MOBILE, TYPE_OTHER)
+/** The types each kind of value may carry, in the order its picker lists them. */
+val EMAIL_TYPES = listOf(TYPE_HOME, TYPE_WORK, TYPE_OTHER)
+val PHONE_TYPES = listOf(TYPE_MOBILE, TYPE_HOME, TYPE_WORK, TYPE_OTHER)
+val ADDRESS_TYPES = listOf(TYPE_HOME, TYPE_WORK, TYPE_OTHER)
 
 /**
- * One email address, phone number or link, with its `TYPE` and whatever other
- * parameters came with it. An empty [type] means the property had no `TYPE`,
- * and none is written back.
+ * One email address, phone number or link. [type] is the editor's choice, one
+ * of the kind's types; [params] are every parameter the property came with,
+ * `TYPE` included, so its other type values (pref, voice, fax) survive a save.
+ * [group] ties it to its siblings, as `item1.EMAIL` to the `item1.X-ABLabel`
+ * that names it.
  */
 data class TypedEntry(
     val value: String = "",
     val type: String = "",
     val params: Map<String, List<String>> = emptyMap(),
+    val group: String? = null,
 )
 
 /**
@@ -60,11 +65,22 @@ data class AddressEntry(
     val pobox: String = "",
     val extended: String = "",
     val params: Map<String, List<String>> = emptyMap(),
+    val group: String? = null,
 ) {
     val empty: Boolean
         get() = listOf(street, city, region, postcode, country, pobox, extended)
             .all { it.isBlank() }
 }
+
+/**
+ * A single-valued property as the card held it: its parameters and group, and
+ * its value as the form writes it back when left alone.
+ */
+data class Original(
+    val params: Map<String, List<String>> = emptyMap(),
+    val group: String? = null,
+    val value: String = "",
+)
 
 /** The editable state of a contact. [name] is `FN` and is required. */
 data class ContactForm(
@@ -84,10 +100,25 @@ data class ContactForm(
     val url: TypedEntry = TypedEntry(),
     val note: String = "",
     val book: String = "",
+    /**
+     * Every instance past the first of a property the form has one field
+     * for, kept for the round trip: a card may hold two URLs or NOTEs, and a
+     * save replaces all of them.
+     */
+    val extras: List<ContactProperty> = emptyList(),
+    /**
+     * The first instance of each property the form has one field for, by
+     * name, so its parameters and group survive a save (LANGUAGE on FN,
+     * SORT-AS on N, Apple's X-APPLE-OMIT-YEAR on a birthday without its year).
+     */
+    val originals: Map<String, Original> = emptyMap(),
 ) {
     val valid: Boolean
         get() = name.isNotBlank()
 }
+
+/** The properties the form shows one instance of. */
+private val SINGLE = setOf("FN", "N", "NICKNAME", "BDAY", "ORG", "TITLE", "URL", "NOTE")
 
 /** The form a card reads as, with [book] the address book it sits in. */
 fun contactForm(card: List<ContactProperty>?, book: String = ""): ContactForm {
@@ -95,9 +126,16 @@ fun contactForm(card: List<ContactProperty>?, book: String = ""): ContactForm {
     val emails = mutableListOf<TypedEntry>()
     val phones = mutableListOf<TypedEntry>()
     val addresses = mutableListOf<AddressEntry>()
+    val extras = mutableListOf<ContactProperty>()
+    val seen = mutableSetOf<String>()
     for (property in card.orEmpty()) {
-        when (property.name.uppercase()) {
-            "FN" -> if (form.name.isBlank()) form = form.copy(name = property.value)
+        val name = property.name.uppercase()
+        if (name in SINGLE && !seen.add(name)) {
+            extras.add(property)
+            continue
+        }
+        when (name) {
+            "FN" -> form = form.copy(name = property.value)
             "N" -> {
                 val parts = splitComponents(property.value)
                 form = form.copy(
@@ -108,9 +146,9 @@ fun contactForm(card: List<ContactProperty>?, book: String = ""): ContactForm {
                     suffix = parts.component(4),
                 )
             }
-            "NICKNAME" -> if (form.nickname.isBlank()) form = form.copy(nickname = property.value)
-            "EMAIL" -> emails.add(typedEntry(property))
-            "TEL" -> phones.add(typedEntry(property))
+            "NICKNAME" -> form = form.copy(nickname = property.value)
+            "EMAIL" -> emails.add(typedEntry(property, EMAIL_TYPES))
+            "TEL" -> phones.add(typedEntry(property, PHONE_TYPES))
             "ADR" -> {
                 val parts = splitComponents(property.value)
                 addresses.add(
@@ -122,19 +160,43 @@ fun contactForm(card: List<ContactProperty>?, book: String = ""): ContactForm {
                         region = parts.component(4),
                         postcode = parts.component(5),
                         country = parts.component(6),
-                        type = property.type,
-                        params = property.otherParams,
+                        type = typeOf(property.params, ADDRESS_TYPES),
+                        params = property.params,
+                        group = property.group,
                     )
                 )
             }
-            "BDAY" -> if (form.birthday.isBlank()) form = form.copy(birthday = property.value)
-            "ORG" -> if (form.organisation.isBlank()) form = form.copy(organisation = property.value)
-            "TITLE" -> if (form.title.isBlank()) form = form.copy(title = property.value)
-            "URL" -> if (form.url.value.isBlank()) form = form.copy(url = typedEntry(property))
-            "NOTE" -> if (form.note.isBlank()) form = form.copy(note = property.value)
+            "BDAY" -> form = form.copy(birthday = property.value)
+            "ORG" -> form = form.copy(organisation = property.value)
+            "TITLE" -> form = form.copy(title = property.value)
+            "URL" -> form = form.copy(url = TypedEntry(value = property.value))
+            "NOTE" -> form = form.copy(note = property.value)
         }
     }
-    return form.copy(emails = emails, phones = phones, addresses = addresses)
+    form = form.copy(emails = emails, phones = phones, addresses = addresses, extras = extras)
+    val written = form.singles()
+    val originals = mutableMapOf<String, Original>()
+    for (property in card.orEmpty()) {
+        val name = property.name.uppercase()
+        if (name !in SINGLE || name in originals) continue
+        originals[name] = Original(property.params, property.group, written[name].orEmpty())
+    }
+    return form.copy(originals = originals)
+}
+
+/** The value each single-valued field writes, by property name. */
+private fun ContactForm.singles(): Map<String, String> {
+    val structured = listOf(family, given, additional, prefix, suffix)
+    return mapOf(
+        "FN" to name.trim(),
+        "N" to if (structured.any { it.isNotBlank() }) joinComponents(structured) else "",
+        "NICKNAME" to nickname.trim(),
+        "BDAY" to birthday.trim(),
+        "ORG" to organisation.trim(),
+        "TITLE" to title.trim(),
+        "URL" to url.value.trim(),
+        "NOTE" to note.trim(),
+    )
 }
 
 /**
@@ -144,19 +206,51 @@ fun contactForm(card: List<ContactProperty>?, book: String = ""): ContactForm {
  */
 fun ContactForm.properties(): List<ContactProperty> {
     val out = mutableListOf<ContactProperty>()
-    if (name.isNotBlank()) out.add(ContactProperty("FN", emptyMap(), name.trim()))
-    val structured = listOf(family, given, additional, prefix, suffix)
-    if (structured.any { it.isNotBlank() }) {
-        out.add(ContactProperty("N", emptyMap(), joinComponents(structured)))
+    val written = singles()
+    // A single field keeps the parameters and group its property came with. A
+    // changed value drops the two that described the old one: its sort key
+    // and its value type, which a date picked in the field no longer is.
+    fun single(name: String) {
+        val value = written[name].orEmpty()
+        if (value.isBlank()) return
+        val original = originals[name]
+        if (original == null) {
+            out.add(ContactProperty(name, emptyMap(), value))
+            return
+        }
+        val params = if (value == original.value) {
+            original.params
+        } else {
+            original.params.filterKeys {
+                !it.equals("SORT-AS", ignoreCase = true) && !it.equals("VALUE", ignoreCase = true)
+            }
+        }
+        out.add(ContactProperty(name, params, value, original.group))
     }
-    if (nickname.isNotBlank()) out.add(ContactProperty("NICKNAME", emptyMap(), nickname.trim()))
+    single("FN")
+    single("N")
+    single("NICKNAME")
     for (email in emails) {
         if (email.value.isBlank()) continue
-        out.add(ContactProperty("EMAIL", email.parameters(), email.value.trim()))
+        out.add(
+            ContactProperty(
+                "EMAIL",
+                withType(email.params, email.type, EMAIL_TYPES),
+                email.value.trim(),
+                email.group,
+            )
+        )
     }
     for (phone in phones) {
         if (phone.value.isBlank()) continue
-        out.add(ContactProperty("TEL", phone.parameters(), phone.value.trim()))
+        out.add(
+            ContactProperty(
+                "TEL",
+                withType(phone.params, phone.type, PHONE_TYPES),
+                phone.value.trim(),
+                phone.group,
+            )
+        )
     }
     for (address in addresses) {
         if (address.empty) continue
@@ -172,38 +266,85 @@ fun ContactForm.properties(): List<ContactProperty> {
         out.add(
             ContactProperty(
                 "ADR",
-                parameters(address.type, address.params),
+                withType(address.params, address.type, ADDRESS_TYPES),
                 joinComponents(components),
+                address.group,
             )
         )
     }
-    if (birthday.isNotBlank()) out.add(ContactProperty("BDAY", emptyMap(), birthday.trim()))
-    if (organisation.isNotBlank()) out.add(ContactProperty("ORG", emptyMap(), organisation.trim()))
-    if (title.isNotBlank()) out.add(ContactProperty("TITLE", emptyMap(), title.trim()))
-    if (url.value.isNotBlank()) {
-        out.add(ContactProperty("URL", url.parameters(), url.value.trim()))
-    }
-    if (note.isNotBlank()) out.add(ContactProperty("NOTE", emptyMap(), note.trim()))
+    single("BDAY")
+    single("ORG")
+    single("TITLE")
+    single("URL")
+    single("NOTE")
+    out.addAll(extras)
     return out
 }
 
-private fun typedEntry(property: ContactProperty) =
-    TypedEntry(value = property.value, type = property.type, params = property.otherParams)
+private fun typedEntry(property: ContactProperty, allowed: List<String>) = TypedEntry(
+    value = property.value,
+    type = typeOf(property.params, allowed),
+    params = property.params,
+    group = property.group,
+)
 
-/** The property's `TYPE`, lowercased; empty when it carries none. */
-private val ContactProperty.type: String
-    get() = params.entries
-        .firstOrNull { it.key.equals("TYPE", ignoreCase = true) }
-        ?.value?.firstOrNull()?.lowercase()
-        .orEmpty()
+/** The `TYPE` values of [params], under whatever case the key arrived in. */
+private fun types(params: Map<String, List<String>>): List<String> =
+    params.entries.firstOrNull { it.key.equals("TYPE", ignoreCase = true) }?.value.orEmpty()
 
-/** Every parameter except `TYPE`, which the editor owns. */
-private val ContactProperty.otherParams: Map<String, List<String>>
-    get() = params.filterKeys { !it.equals("TYPE", ignoreCase = true) }
+/**
+ * The editor's type for a property: the first of its `TYPE` values the kind
+ * offers, CELL read as mobile; Other when it has none of them or no type.
+ */
+internal fun typeOf(params: Map<String, List<String>>, allowed: List<String>): String {
+    for (value in types(params)) {
+        val folded = value.lowercase()
+        val mapped = if (folded == "cell") TYPE_MOBILE else folded
+        if (mapped in allowed) return mapped
+    }
+    return TYPE_OTHER
+}
 
-private fun TypedEntry.parameters() = parameters(type, params)
+/**
+ * The vCard `TYPE` value a choice writes. vCard has no "other": an Other value
+ * is written with no type of its own, and mobile is vCard's CELL.
+ */
+private fun token(type: String): String? = when (type) {
+    TYPE_MOBILE -> "cell"
+    TYPE_OTHER, "" -> null
+    else -> type
+}
 
-private fun parameters(type: String, others: Map<String, List<String>>) =
-    if (type.isBlank()) others else others + ("TYPE" to listOf(type))
+/**
+ * The parameters with the chosen type in place of the one the property had.
+ * The editor owns the tokens of the kind's choices, and the "mobile" and
+ * "other" it wrote before, which a save corrects; the owned value is replaced
+ * where it stood, and kept as written when it already says the chosen type.
+ * Every other `TYPE` value stays.
+ */
+internal fun withType(
+    params: Map<String, List<String>>,
+    type: String,
+    allowed: List<String>,
+): Map<String, List<String>> {
+    val owned = setOf("mobile", "other") + allowed.mapNotNull(::token)
+    val chosen = token(type)
+    val values = mutableListOf<String>()
+    var placed = false
+    for (value in types(params)) {
+        val folded = value.lowercase()
+        if (folded !in owned) {
+            values.add(value)
+            continue
+        }
+        if (placed || chosen == null) continue
+        values.add(if (folded == chosen) value else chosen)
+        placed = true
+    }
+    if (chosen != null && !placed) values.add(chosen)
+    val key = params.keys.firstOrNull { it.equals("TYPE", ignoreCase = true) } ?: "TYPE"
+    val rest = params.filterKeys { !it.equals("TYPE", ignoreCase = true) }
+    return if (values.isEmpty()) rest else rest + (key to values)
+}
 
 private fun List<String>.component(index: Int) = getOrNull(index).orEmpty()

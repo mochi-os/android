@@ -25,7 +25,7 @@ class ContactFormTest {
         ContactProperty("NICKNAME", emptyMap(), "Ada"),
         ContactProperty("EMAIL", mapOf("TYPE" to listOf("home")), "ada@example.org"),
         ContactProperty("EMAIL", mapOf("TYPE" to listOf("work")), "a.lovelace@example.com"),
-        ContactProperty("TEL", mapOf("TYPE" to listOf("mobile")), "+44 7700 900000"),
+        ContactProperty("TEL", mapOf("TYPE" to listOf("cell")), "+44 7700 900000"),
         ContactProperty(
             "ADR",
             mapOf("TYPE" to listOf("home")),
@@ -158,9 +158,146 @@ class ContactFormTest {
     }
 
     @Test
+    fun `every instance past the first of a single-field property survives a save`() {
+        val card = listOf(
+            ContactProperty("FN", emptyMap(), "Ada Lovelace"),
+            ContactProperty("FN", mapOf("LANGUAGE" to listOf("fr")), "Ada Lovelace (fr)"),
+            ContactProperty("URL", emptyMap(), "https://example.org/ada"),
+            ContactProperty("URL", mapOf("TYPE" to listOf("work")), "https://example.com/engine"),
+            ContactProperty("NOTE", emptyMap(), "First"),
+            ContactProperty("NOTE", emptyMap(), "Second"),
+        )
+        val written = contactForm(card).properties()
+        for (kept in card) assertTrue("$kept kept", kept in written)
+    }
+
+    @Test
+    fun `editing the first URL leaves the second as it was`() {
+        val form = contactForm(
+            listOf(
+                ContactProperty("FN", emptyMap(), "Ada Lovelace"),
+                ContactProperty("URL", emptyMap(), "https://example.org/ada"),
+                ContactProperty("URL", emptyMap(), "https://example.com/engine"),
+            )
+        )
+        val edited = form.copy(url = form.url.copy(value = "https://example.net/new"))
+        assertEquals(
+            listOf("https://example.net/new", "https://example.com/engine"),
+            edited.properties().filter { it.name == "URL" }.map { it.value },
+        )
+    }
+
+    private fun phone(vararg types: String) = contactForm(
+        listOf(
+            ContactProperty("FN", emptyMap(), "Ada"),
+            ContactProperty("TEL", mapOf("TYPE" to types.toList()), "1"),
+        )
+    )
+
+    private fun ContactForm.written(name: String) = properties().first { it.name == name }
+
+    @Test
+    fun `a mobile number is written as vCard CELL`() {
+        val form = ContactForm(name = "Ada", phones = listOf(TypedEntry(value = "1", type = TYPE_MOBILE)))
+        assertEquals(mapOf("TYPE" to listOf("cell")), form.written("TEL").params)
+    }
+
+    @Test
+    fun `CELL reads as mobile, and the mobile this client used to write is corrected`() {
+        assertEquals(TYPE_MOBILE, phone("CELL").phones[0].type)
+        assertEquals(mapOf("TYPE" to listOf("cell")), phone("mobile").written("TEL").params)
+    }
+
+    @Test
+    fun `every other TYPE value stays, as written, when the type is unchanged`() {
+        assertEquals(
+            mapOf("TYPE" to listOf("CELL", "VOICE", "pref")),
+            phone("CELL", "VOICE", "pref").written("TEL").params,
+        )
+    }
+
+    @Test
+    fun `a changed type swaps only its own value`() {
+        val form = phone("CELL", "VOICE", "pref")
+        val changed = form.copy(phones = listOf(form.phones[0].copy(type = TYPE_WORK)))
+        assertEquals(mapOf("TYPE" to listOf("work", "VOICE", "pref")), changed.written("TEL").params)
+    }
+
+    @Test
+    fun `a fax stays a fax`() {
+        val form = phone("FAX", "WORK")
+        assertEquals(TYPE_WORK, form.phones[0].type)
+        val changed = form.copy(phones = listOf(form.phones[0].copy(type = TYPE_HOME)))
+        assertEquals(mapOf("TYPE" to listOf("FAX", "home")), changed.written("TEL").params)
+    }
+
+    @Test
+    fun `an untyped value stays untyped, and Other writes no type`() {
+        val form = contactForm(
+            listOf(
+                ContactProperty("FN", emptyMap(), "Ada"),
+                ContactProperty("EMAIL", emptyMap(), "ada@example.org"),
+            )
+        )
+        assertEquals(TYPE_OTHER, form.emails[0].type)
+        assertEquals(emptyMap<String, List<String>>(), form.written("EMAIL").params)
+        assertEquals(emptyMap<String, List<String>>(), phone("other").written("TEL").params)
+    }
+
+    @Test
+    fun `an email is never offered as mobile`() {
+        assertTrue(TYPE_MOBILE !in EMAIL_TYPES)
+        assertTrue(TYPE_MOBILE !in ADDRESS_TYPES)
+        assertTrue(TYPE_MOBILE in PHONE_TYPES)
+    }
+
+    @Test
+    fun `a single field keeps the parameters its property came with`() {
+        val card = listOf(
+            ContactProperty("FN", mapOf("LANGUAGE" to listOf("en")), "Ada Lovelace"),
+            ContactProperty("N", mapOf("SORT-AS" to listOf("Lovelace,Ada")), "Lovelace;Ada;;;"),
+            ContactProperty("BDAY", mapOf("X-APPLE-OMIT-YEAR" to listOf("1604")), "1604-12-10"),
+            ContactProperty("URL", mapOf("TYPE" to listOf("work", "pref")), "https://example.org"),
+            ContactProperty("NOTE", mapOf("LANGUAGE" to listOf("en")), "Hi"),
+        )
+        val written = contactForm(card).properties()
+        for (kept in card) assertTrue("$kept kept", kept in written)
+    }
+
+    @Test
+    fun `a changed value drops the sort key and value type that described the old one`() {
+        val form = contactForm(
+            listOf(
+                ContactProperty("FN", emptyMap(), "Ada"),
+                ContactProperty(
+                    "N",
+                    mapOf("SORT-AS" to listOf("Lovelace,Ada"), "LANGUAGE" to listOf("en")),
+                    "Lovelace;Ada;;;",
+                ),
+                ContactProperty("BDAY", mapOf("VALUE" to listOf("text")), "circa 1800"),
+            )
+        )
+        val changed = form.copy(family = "Byron", birthday = "1800-01-01")
+        assertEquals(mapOf("LANGUAGE" to listOf("en")), changed.written("N").params)
+        assertEquals(emptyMap<String, List<String>>(), changed.written("BDAY").params)
+    }
+
+    @Test
+    fun `each property keeps its group`() {
+        val card = listOf(
+            ContactProperty("FN", emptyMap(), "Ada", "item9"),
+            ContactProperty("EMAIL", emptyMap(), "ada@example.org", "item1"),
+            ContactProperty("TEL", mapOf("TYPE" to listOf("cell")), "1", "item2"),
+            ContactProperty("ADR", emptyMap(), ";;12 Long Street;;;;", "item3"),
+        )
+        assertEquals(card, contactForm(card).properties())
+    }
+
+    @Test
     fun `a separator inside a component survives the round trip`() {
         val value = joinComponents(listOf("a;b", "c\\d", "e"))
-        assertEquals("a\\;b;c\\\\d;e", value)
+        // Only the separator is escaped; the backslash stays as it is.
+        assertEquals("a\\;b;c\\d;e", value)
         assertEquals(listOf("a;b", "c\\d", "e"), splitComponents(value))
     }
 }

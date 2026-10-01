@@ -561,11 +561,11 @@
     <string name="market_listing_detail_seller_suspended_cta_hint">Ukuthenga kukhutshaziwe ngenkathi i-akhawunti yomthengisi ikhawulelwe.</string>
     <string name="market_listing_photo">Isithombe sohlu</string>
     <string name="market_listing_unsave">Susa kokulondoloziwe</string>
-    <string name="market_listings_delete_failed">Yehlulekile ukususa uhlu</string>
+    <string name="market_listings_delete_failed">Kuhlulekile ukususa uhlu</string>
     <string name="market_listings_delete_message">Lokhu kususa unyazi olubhaliwe ku-akhawunti yakho unomphela.</string>
     <string name="market_listings_delete_title">Susa uhlu?</string>
     <string name="market_listings_empty_subtitle">Thepha Uhlu olusha ukuze udale into yakho yokuqala.</string>
-    <string name="market_listings_load_failed">Yehlulekile ukulayisha izinhlu zakho</string>
+    <string name="market_listings_load_failed">Kuhlulekile ukulayisha izinhlu zakho</string>
     <string name="market_listings_search_placeholder">Sesha izinhlu zakho</string>
     <string name="market_messages_inbox_empty_subtitle">Lapho uthumela umyalezo kumthengisi (noma umthengi ekuthumela umyalezo) ingxoxo izovela lapha.</string>
     <string name="market_messages_inbox_empty_title">Azikho izingxoxo okwamanje</string>
@@ -624,7 +624,7 @@
     <string name="market_sale_tracking_url_label">I-URL yokulandelela (okuzikhethelayo)</string>
     <string name="market_sales_empty_subtitle">Ama-oda avela ezinhluweni zakho ezishicilelwe avela lapha.</string>
     <string name="market_sales_empty_title">Azikho izinto ezithengisiwe okwamanje</string>
-    <string name="market_sales_load_failed">Yehlulekile ukulayisha ukuthengisa kwakho</string>
+    <string name="market_sales_load_failed">Kuhlulekile ukulayisha ukuthengisa kwakho</string>
     <string name="market_saved_clear">Sula konke okulondoloziwe</string>
     <string name="market_saved_empty_subtitle">Thepha isithonjana sebhukhmakhi kunoma yiluphi uhlu ukuze ululondoloze ukuze ulusebenzise kamuva.</string>
     <string name="market_saved_empty_title">Azikho izinhlu ezilondoloziwe</string>
@@ -716,7 +716,7 @@
     <string name="market_listing_checkout_in_progress">Unenkokhelo eqhubekayo kwalolu hlu.</string>
     <string name="market_listing_checkout_cancel">Khansela ukukhokha</string>
     <string name="market_listing_checkout_cancelled">Ukukhokha kukhanseliwe</string>
-    <string name="market_listing_checkout_cancel_failed">Yehlulekile ukukhansela ukukhokha</string>
+    <string name="market_listing_checkout_cancel_failed">Kuhlulekile ukukhansela ukukhokha</string>
     <string name="market_account_stripe_connected">I-Stripe ixhumekile</string>
     <string name="market_audit_account_banned">Kuvinjelwe</string>
     <string name="market_audit_account_seller_activated">Umthengisi ucushiwe</string>

@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Όνομα διαχειριστή</string>
     <string name="system_setting_operator_email">Email διαχειριστή</string>
     <string name="system_setting_operator_jurisdiction">Δικαιοδοσία διαχειριστή</string>
-    <string name="system_setting_server_started">Ο διακομιστής ξεκίνησε</string>
-    <string name="system_setting_server_version">Έκδοση διακομιστή</string>
     <string name="system_setting_signup_enabled">Να επιτρέπονται νέες εγγραφές</string>
     <string name="system_users_title">Χρήστες</string>
     <string name="system_users_col_user">Χρήστης</string>
@@ -395,4 +393,5 @@
     <string name="accounts_provider_caldav">Διακομιστής ημερολογίου</string>
     <string name="accounts_revoke_confirm">Αυτό θα ανακαλέσει την πρόσβαση στο ημερολόγιο του %1$s. Η σύνδεση με %2$s παραμένει μέχρι να την αποσυνδέσετε στη σελίδα σύνδεσης.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Άγνωστο θέμα</string>
 </resources>

@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">运营者名称</string>
     <string name="system_setting_operator_email">运营者邮箱</string>
     <string name="system_setting_operator_jurisdiction">运营者司法管辖区</string>
-    <string name="system_setting_server_started">服务器已启动</string>
-    <string name="system_setting_server_version">服务器版本</string>
     <string name="system_setting_signup_enabled">允许新用户注册</string>
     <string name="system_users_title">用户</string>
     <string name="system_users_col_user">用户</string>
@@ -394,4 +392,5 @@
     <string name="accounts_provider_caldav">日历服务器</string>
     <string name="accounts_revoke_confirm">此操作将撤销 %1$s 的日历访问权限。使用 %2$s 登录会保留，直到你在登录页面解除关联。</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">未知主题</string>
 </resources>

@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Operatora nosaukums</string>
     <string name="system_setting_operator_email">Operatora e-pasts</string>
     <string name="system_setting_operator_jurisdiction">Operatora jurisdikcija</string>
-    <string name="system_setting_server_started">Serveris startēts</string>
-    <string name="system_setting_server_version">Servera versija</string>
     <string name="system_setting_signup_enabled">Atļaut jaunas reģistrācijas</string>
     <string name="system_users_title">Lietotāji</string>
     <string name="system_users_col_user">Lietotājs</string>
@@ -397,4 +395,5 @@
     <string name="accounts_provider_caldav">Kalendāra serveris</string>
     <string name="accounts_revoke_confirm">Tādējādi tiks atsaukta %1$s piekļuve kalendāram. Pieteikšanās ar %2$s saglabāsies, līdz to atsaistīsiet pieteikšanās lapā.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Nezināma tēma</string>
 </resources>

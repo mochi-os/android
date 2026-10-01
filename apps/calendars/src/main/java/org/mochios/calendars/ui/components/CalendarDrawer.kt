@@ -20,11 +20,13 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.selection.toggleable
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material.icons.outlined.ContentCopy
 import androidx.compose.material.icons.outlined.ErrorOutline
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material.icons.outlined.Palette
@@ -62,6 +64,7 @@ import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.calendars.R
+import org.mochios.android.R as MochiR
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.ui.calendar.toColour
 import org.mochios.calendars.ui.sync.CalendarsSyncRows
@@ -80,8 +83,8 @@ enum class CalendarAction {
  * The calendars app's drawer. There is no "All calendars" row: the view is
  * always the overlay of the checked calendars, so each row is a checkbox in
  * the calendar's own colour rather than a link. Each row carries an overflow
- * menu; beneath them sit Create, Subscribe, Connect device, Preferences
- * and the phone-sync switch.
+ * menu; beneath them sit Create, Subscribe, Connect device, the phone-sync
+ * switch, Preferences, Log out and About.
  */
 @Composable
 fun CalendarDrawer(
@@ -94,6 +97,8 @@ fun CalendarDrawer(
     onSubscribe: () -> Unit,
     onPreferences: () -> Unit,
     onConnectDevice: () -> Unit,
+    onLogout: () -> Unit,
+    onAbout: () -> Unit,
     content: @Composable () -> Unit,
 ) {
     val scope = rememberCoroutineScope()
@@ -139,6 +144,7 @@ fun CalendarDrawer(
                                 onConnectDevice()
                             },
                         )
+                        CalendarsSyncRows()
                         DrawerActionRow(
                             title = stringResource(R.string.calendars_preferences),
                             icon = Icons.Outlined.Settings,
@@ -147,7 +153,22 @@ fun CalendarDrawer(
                                 onPreferences()
                             },
                         )
-                        CalendarsSyncRows()
+                        DrawerActionRow(
+                            title = stringResource(MochiR.string.common_logout),
+                            icon = Icons.AutoMirrored.Outlined.Logout,
+                            onClick = {
+                                scope.launch { drawerState.close() }
+                                onLogout()
+                            },
+                        )
+                        DrawerActionRow(
+                            title = stringResource(MochiR.string.about_label),
+                            icon = Icons.Outlined.Info,
+                            onClick = {
+                                scope.launch { drawerState.close() }
+                                onAbout()
+                            },
+                        )
                     }
                 }
             }
@@ -291,7 +312,13 @@ private fun CalendarRow(
                 }
                 if (!calendar.default && !calendar.birthdays) {
                     MochiDropdownMenuItem(
-                        text = { Text(stringResource(R.string.calendars_delete)) },
+                        text = {
+                            Text(
+                                stringResource(
+                                    if (calendar.linked || calendar.subscription) R.string.calendars_remove else R.string.calendars_delete,
+                                ),
+                            )
+                        },
                         leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
                         destructive = true,
                         onClick = {

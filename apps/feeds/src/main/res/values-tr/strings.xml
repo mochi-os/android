@@ -158,6 +158,9 @@
     <string name="feeds_markdown_supported">Markdown destekli</string>
     <string name="feeds_permission_deny">Reddet</string>
     <string name="feeds_rss_feed">RSS akışı</string>
+    <string name="feeds_notifications_post">Yeni gönderiler</string>
+    <string name="feeds_follow_thread">Konuyu takip et</string>
+    <string name="feeds_unfollow_thread">Konuyu takip etmeyi bırak</string>
     <string name="feeds_settings_field_entity_id">Varlık kimliği</string>
     <string name="feeds_settings_field_fingerprint">Parmak izi</string>
     <string name="feeds_settings_field_server">Sunucu</string>

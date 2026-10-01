@@ -29,6 +29,7 @@ import org.mochios.android.util.appendDistinct
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.forums.R
 import org.mochios.forums.api.ForumTagCount
+import org.mochios.forums.api.NotificationSettings
 import org.mochios.forums.model.Forum
 import org.mochios.forums.model.Post
 import org.mochios.forums.model.rejectMessage
@@ -55,6 +56,9 @@ data class ForumUiState(
     /** Shown in place of the forum once its owner removed this user from it,
      *  or deleted it, while the screen was open. The replica is already gone. */
     @StringRes val gone: Int? = null,
+    /** The user's activity notifications for this forum; null until loaded,
+     *  and for the aggregate, which has no single forum to notify about. */
+    val notifications: NotificationSettings? = null,
 )
 
 /**
@@ -132,6 +136,7 @@ class ForumViewModel @Inject constructor(
         load()
         loadTags()
         clearNotifications()
+        loadNotifications()
         viewModelScope.launch { savedRepository.load() }
         observeOwnPosts()
     }
@@ -163,6 +168,32 @@ class ForumViewModel @Inject constructor(
                 repository.clearNotifications(forumId)
             } catch (_: Exception) {
                 // Best-effort — a failed clear shouldn't disrupt the forum view.
+            }
+        }
+    }
+
+    private fun loadNotifications() {
+        if (forumId.isBlank() || isAll) return
+        viewModelScope.launch {
+            try {
+                val settings = repository.getNotifications(forumId)
+                _uiState.value = _uiState.value.copy(notifications = settings)
+            } catch (_: Exception) {
+                // The menu leaves the notifications out until they load.
+            }
+        }
+    }
+
+    /** Turn one of this forum's activity notifications on or off: [kind] is
+     *  "post", "reply" or "comment". */
+    fun setNotification(kind: String, enabled: Boolean) {
+        if (forumId.isBlank() || isAll) return
+        viewModelScope.launch {
+            try {
+                val settings = repository.setNotification(forumId, kind, enabled)
+                _uiState.value = _uiState.value.copy(notifications = settings)
+            } catch (e: Exception) {
+                _events.emit(ForumEvent.ShowError(e.toMochiError()))
             }
         }
     }

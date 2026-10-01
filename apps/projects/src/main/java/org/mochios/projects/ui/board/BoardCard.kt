@@ -43,8 +43,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
-import androidx.compose.ui.draw.scale
-import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
@@ -178,12 +176,9 @@ fun BoardCard(
         }
     } else Modifier
 
-    val visualModifier = if (isBeingDragged) {
-        Modifier
-            .shadow(elevation = 8.dp, shape = MaterialTheme.shapes.small)
-            .scale(1.05f)
-            .alpha(0.9f)
-    } else Modifier
+    // The board draws the lifted card under the pointer; this one stands in
+    // for it where it came from.
+    val visualModifier = if (isBeingDragged) Modifier.alpha(0.4f) else Modifier
 
     MochiCard(
         modifier = Modifier

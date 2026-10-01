@@ -220,6 +220,11 @@
     <string name="forums_all_forums">Visi forumi</string>
     <string name="forums_create_allow_search">Atļaut ikvienam meklēt forumu</string>
     <string name="forums_rss_clipboard_label">Foruma RSS URL</string>
+    <string name="forums_notifications_post">Jauni ieraksti</string>
+    <string name="forums_notifications_reply">Atbildes jums</string>
+    <string name="forums_notifications_comment">Visas atbildes</string>
+    <string name="forums_follow_thread">Sekot pavedienam</string>
+    <string name="forums_unfollow_thread">Pārtraukt sekot pavedienam</string>
     <string name="forums_tab_moderation">Moderēšana</string>
     <string name="forums_access_level_view_full">Tikai skatīt</string>
     <string name="forums_access_level_none_full">Nav piekļuves</string>

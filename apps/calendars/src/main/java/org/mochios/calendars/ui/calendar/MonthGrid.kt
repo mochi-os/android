@@ -6,15 +6,16 @@
 package org.mochios.calendars.ui.calendar
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectDragGesturesAfterLongPress
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -22,10 +23,13 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.relocation.BringIntoViewRequester
+import androidx.compose.foundation.relocation.bringIntoViewRequester
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -33,11 +37,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.withFrameNanos
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
@@ -46,28 +52,34 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
+import androidx.compose.ui.input.nestedscroll.NestedScrollSource
+import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.LayoutCoordinates
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalHapticFeedback
-import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.IntOffset
+import androidx.compose.ui.unit.Velocity
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
 import org.mochios.android.i18n.LocalFormat
-import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Instance
 import java.time.LocalDate
 import java.time.temporal.ChronoUnit
 import kotlin.math.roundToInt
 
-/** How many chips a cell shows before it collapses the rest into "+N more". */
-private const val CHIPS = 3
+/** The space between a cell's entries. */
+private val STEP = 2.dp
+
+/** The space between an agenda row's dot, title and time. */
+private val SPACE = 10.dp
 
 /**
  * A chip lifted by a long press: which occurrence, the day of the cell it
@@ -78,15 +90,21 @@ private data class Hold(val instance: Instance, val day: LocalDate, val grab: Of
 
 /**
  * The month and multiweek views: [weeks] rows of seven days, each cell
- * holding its occurrences as chips. In the month view days outside [month]
- * are dimmed but drawn; in the multiweek view [month] is null and every day
- * reads the same.
+ * holding every one of its occurrences from its own top: one-line bars for
+ * the all-day and multi-day ones, and two lines on the cell for each of the
+ * rest, the title above the time and marks. The bars come first unless the
+ * user put all-day events last; each group scrolls within the cell when it
+ * holds more than the cell has room for. In the month view days outside
+ * [month] are dimmed but drawn; in the multiweek view [month] is null and
+ * every day reads the same.
  *
  * A tap on a chip opens its summary, a tap on empty cell space starts an
  * event on that day, and the day number opens the day view. A long press
  * lifts a chip, which then follows the finger from cell to cell; letting go
  * on another day asks [onMove] to move the occurrence so that its first day
- * moves by as many days.
+ * moves by as many days, and that day's cell scrolls to show it once it
+ * lands there. The occurrence whose summary is open, [selected], is drawn in
+ * the primary colour's tint.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -98,9 +116,10 @@ fun MonthGrid(
     onOpen: (Instance) -> Unit,
     onCreate: (LocalDate) -> Unit,
     onMove: (Instance, LocalDate) -> Unit,
+    selected: Instance? = null,
 ) {
     val today = LocalDate.now(viewModel.timezone())
-    var listing by remember { mutableStateOf<LocalDate?>(null) }
+    val format = LocalFormat.current
     val byDay = remember(state.instances, state.hidden, weeks, state.preferences.zones) {
         weeks.flatMap { week -> (0 until 7).map { week.plusDays(it.toLong()) } }
             .associateWith { day -> state.visible.filter { viewModel.covers(it, day) } }
@@ -113,6 +132,9 @@ fun MonthGrid(
     var finger by remember { mutableStateOf(Offset.Zero) }
     var origin by remember { mutableStateOf(Offset.Zero) }
     val cells = remember { mutableStateMapOf<LocalDate, Rect>() }
+    // The day a chip was last dropped on and its event, which that day's
+    // cell scrolls into view when the moved occurrence arrives there.
+    var landed by remember(weeks) { mutableStateOf<Pair<LocalDate, String>?>(null) }
     fun under(): LocalDate? = cells.entries.firstOrNull { it.value.contains(finger) }?.key
     val target = if (lift != null) under() else null
     val density = LocalDensity.current
@@ -139,23 +161,30 @@ fun MonthGrid(
                         Cell(
                             day = day,
                             today = today,
+                            allday = state.preferences.allday,
                             outside = month != null && day.monthValue != month,
                             instances = occurrences,
+                            viewModel = viewModel,
                             lifted = lift?.instance,
+                            selected = selected,
                             targeted = target == day && lift?.day != day,
                             modifier = Modifier.weight(1f),
                             onDay = { viewModel.open(day) },
                             onCreate = { onCreate(day) },
                             onOpen = onOpen,
-                            onMore = { listing = day },
+                            landing = landed?.takeIf { it.first == day }?.second,
                             onPlaced = { cells[day] = it },
-                            onLift = { instance, grab, width -> lift = Hold(instance, day, grab, width) },
+                            onLift = { instance, grab, width ->
+                                landed = null
+                                lift = Hold(instance, day, grab, width)
+                            },
                             onDrag = { finger = it },
                             onDrop = {
                                 val lifted = lift
                                 lift = null
                                 val dropped = under()
                                 if (lifted != null && dropped != null && dropped != lifted.day) {
+                                    landed = dropped to lifted.instance.event
                                     val shift = ChronoUnit.DAYS.between(lifted.day, dropped)
                                     onMove(lifted.instance, viewModel.day(lifted.instance).plusDays(shift))
                                 }
@@ -167,7 +196,11 @@ fun MonthGrid(
                 HorizontalDivider()
             }
         }
+        // The carried chip always sits on the neutral surface, which its
+        // shadow needs to read as lifted, even when it was lifted from an
+        // entry drawn on the cell itself; it keeps that entry's two lines.
         lift?.let { lifted ->
+            val look = look(lifted.instance, viewModel.day(lifted.instance), viewModel.finish(lifted.instance), lifted.day)
             Box(
                 modifier = Modifier
                     .offset {
@@ -179,26 +212,17 @@ fun MonthGrid(
                     .width(with(density) { lifted.width.toDp() })
                     .zIndex(1f),
             ) {
-                Chip(lifted.instance, Modifier.fillMaxWidth().shadow(6.dp, RoundedCornerShape(4.dp))) {}
-            }
-        }
-    }
-
-    val listed = listing
-    if (listed != null) {
-        MochiBottomSheet(onDismissRequest = { listing = null }) {
-            Text(
-                text = LocalFormat.current.formatDate(listed.atStartOfDay(viewModel.timezone()).toEpochSecond()),
-                style = MaterialTheme.typography.titleMedium,
-                modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
-            )
-            LazyColumn(modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp)) {
-                items(byDay[listed].orEmpty(), key = { it.event + it.start }) { instance ->
-                    AgendaRow(instance, viewModel) {
-                        listing = null
-                        onOpen(instance)
-                    }
-                }
+                Chip(
+                    lifted.instance,
+                    Modifier.fillMaxWidth().shadow(6.dp, corners()),
+                    stacked = !look.bar,
+                    raised = true,
+                    time = if (look.time) {
+                        format.formatTime(lifted.instance.start, clockZone(lifted.instance.zone?.start, viewModel.zones()))
+                    } else {
+                        null
+                    },
+                ) {}
             }
         }
     }
@@ -208,15 +232,18 @@ fun MonthGrid(
 private fun Cell(
     day: LocalDate,
     today: LocalDate,
+    allday: String,
     outside: Boolean,
     instances: List<Instance>,
+    viewModel: CalendarViewModel,
     lifted: Instance?,
+    selected: Instance?,
     targeted: Boolean,
     modifier: Modifier,
     onDay: () -> Unit,
     onCreate: () -> Unit,
     onOpen: (Instance) -> Unit,
-    onMore: () -> Unit,
+    landing: String?,
     onPlaced: (Rect) -> Unit,
     onLift: (Instance, Offset, Float) -> Unit,
     onDrag: (Offset) -> Unit,
@@ -224,6 +251,8 @@ private fun Cell(
     onCancel: () -> Unit,
 ) {
     val current = day == today
+    val format = LocalFormat.current
+    val zones = viewModel.zones()
     val tint = MaterialTheme.colorScheme.primary.copy(alpha = 0.1f)
     Column(
         modifier = modifier
@@ -261,32 +290,133 @@ private fun Cell(
                 )
             }
         }
-        Column(
-            modifier = Modifier.padding(start = 2.dp, end = 2.dp, bottom = 2.dp),
-            verticalArrangement = Arrangement.spacedBy(1.dp),
-        ) {
-            for (instance in instances.take(CHIPS)) {
-                val own = lifted != null && lifted.event == instance.event && lifted.start == instance.start
-                Chip(
-                    instance,
-                    Modifier.fillMaxWidth().padding(top = 1.dp).alpha(if (own) 0.4f else 1f),
-                    lift = Modifier.lift(instance, onLift, onDrag, onDrop, onCancel),
-                ) { onOpen(instance) }
+        // The bars and the timed entries stack from the top of the cell in the
+        // order the user chose, each group scrolling on its own. The upper one
+        // is held so that one entry of the lower stays in view.
+        val entries = instances.map { it to look(it, viewModel.day(it), viewModel.finish(it), day) }
+        val line = leading(MaterialTheme.typography.labelSmall)
+        val pair = leading(MaterialTheme.typography.labelSmall.packed()) * 2
+        val groups = stack(
+            Group(entries.filter { it.second.bar }, line),
+            Group(entries.filterNot { it.second.bar }, pair),
+            allday,
+        ).filter { it.entries.isNotEmpty() }
+
+        @Composable
+        fun Entry(instance: Instance, look: Look) {
+            val requester = remember { BringIntoViewRequester() }
+            if (landing == instance.event) {
+                LaunchedEffect(instance.event, instance.start) {
+                    // Once the cell has laid the entry out, so there is somewhere to scroll to.
+                    withFrameNanos { }
+                    requester.bringIntoView()
+                }
             }
-            if (instances.size > CHIPS) {
-                Text(
-                    text = pluralStringResource(
-                        R.plurals.calendars_more,
-                        instances.size - CHIPS,
-                        instances.size - CHIPS,
-                    ),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.clickable(onClick = onMore).padding(start = 3.dp),
-                )
+            Chip(
+                instance,
+                Modifier
+                    .fillMaxWidth()
+                    .bringIntoViewRequester(requester)
+                    .alpha(opacity(carried = same(instance, lifted), over = viewModel.past(instance), cancelled = instance.cancelled)),
+                stacked = !look.bar,
+                time = if (look.time) format.formatTime(instance.start, clockZone(instance.zone?.start, zones)) else null,
+                chosen = same(instance, selected),
+                lift = Modifier.lift(instance, onLift, onDrag, onDrop, onCancel),
+            ) { onOpen(instance) }
+        }
+
+        BoxWithConstraints(
+            modifier = Modifier
+                .weight(1f)
+                .fillMaxWidth()
+                .padding(start = 2.dp, end = 2.dp, top = 1.dp, bottom = 2.dp),
+        ) {
+            val upper = groups.getOrNull(0)
+            val lower = groups.getOrNull(1)
+            val held = upper?.let {
+                band(it.entries.size, it.height.value, STEP.value, maxHeight.value, lower?.height?.value ?: 0f, below = lower != null)
+            }
+            Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.spacedBy(STEP)) {
+                for ((index, group) in groups.withIndex()) {
+                    val last = index == groups.size - 1
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .then(
+                                when {
+                                    last -> Modifier.weight(1f)
+                                    held != null -> Modifier.height(held.dp)
+                                    else -> Modifier
+                                },
+                            )
+                            .nestedScroll(Contained)
+                            .verticalScroll(rememberScrollState()),
+                        verticalArrangement = Arrangement.spacedBy(STEP),
+                    ) {
+                        for ((instance, look) in group.entries) {
+                            key(instance.event, instance.start) { Entry(instance, look) }
+                        }
+                    }
+                }
             }
         }
     }
+}
+
+/** One of a cell's two groups: its entries, and how tall each one is. */
+private data class Group(val entries: List<Pair<Instance, Look>>, val height: Dp)
+
+/**
+ * A cell's [bars] and its timed [lines] in the order they stack from its
+ * top: the bars first, unless the user put all-day events "last".
+ */
+fun <T> stack(bars: T, lines: T, allday: String): List<T> =
+    if (allday == "last") listOf(lines, bars) else listOf(bars, lines)
+
+/**
+ * Keeps a cell's scrolling to the cell: whatever its list cannot take, at
+ * either end, goes no further, so a swipe in a cell never reaches the pull
+ * that reloads the other views, which the month grid does not have.
+ */
+private object Contained : NestedScrollConnection {
+    override fun onPostScroll(consumed: Offset, available: Offset, source: NestedScrollSource): Offset = available
+
+    override suspend fun onPostFling(consumed: Velocity, available: Velocity): Velocity = available
+}
+
+/**
+ * How an occurrence is drawn in a month or multiweek cell: as a one-line
+ * [bar] held at the top of the cell, or as a two-line entry in the list that
+ * scrolls beneath, and whether it says its start [time].
+ */
+data class Look(val bar: Boolean, val time: Boolean)
+
+/**
+ * How an occurrence running from its [first] day to its [last] is drawn in
+ * the cell for [day]. An all-day one is a bar with no time. A timed one that
+ * crosses midnight is a bar too, with its start time on its first day only.
+ * A timed one within a day is a line with its start time.
+ */
+fun look(instance: Instance, first: LocalDate, last: LocalDate, day: LocalDate): Look = when {
+    instance.allday -> Look(bar = true, time = false)
+    first != last -> Look(bar = true, time = day == first)
+    else -> Look(bar = false, time = true)
+}
+
+/**
+ * The height a cell's upper group is held to, in the same unit as [room], or
+ * null when it needs no holding: [count] entries, each [line] tall and [gap]
+ * apart, take their own height while that leaves room beneath for one
+ * [entry] of the group [below] when there is one, or fits the cell when there
+ * is none. Past that they are held to what is left, and never to less than
+ * one entry, and scroll within it.
+ */
+fun band(count: Int, line: Float, gap: Float, room: Float, entry: Float, below: Boolean): Float? {
+    if (count == 0) return null
+    val natural = count * line + (count - 1) * gap
+    val limit = if (below) room - gap - entry else room
+    if (natural <= limit) return null
+    return maxOf(limit, line)
 }
 
 /**
@@ -331,7 +461,7 @@ private fun Modifier.lift(
 
 /**
  * The list view: occurrences under a heading per day, each row showing its
- * time, its calendar's colour, its title and where it is.
+ * calendar's dot, its title, its marks, its start time and where it is.
  *
  * It opens on the anchor day and pages on as the reader scrolls — a further
  * page when the foot comes into view, an earlier one on a pull or a scroll
@@ -343,6 +473,7 @@ fun AgendaList(
     state: CalendarUiState,
     viewModel: CalendarViewModel,
     onOpen: (Instance) -> Unit,
+    selected: Instance? = null,
 ) {
     val format = LocalFormat.current
     val today = LocalDate.now(viewModel.timezone())
@@ -414,7 +545,7 @@ fun AgendaList(
                 )
             }
             items(occurrences, key = { "${day}-${it.event}-${it.start}" }) { instance ->
-                AgendaRow(instance, viewModel) { onOpen(instance) }
+                AgendaRow(instance, viewModel, chosen = same(instance, selected)) { onOpen(instance) }
             }
         }
         if (state.paging) {
@@ -435,64 +566,41 @@ private fun Paging() {
 }
 
 /**
- * One agenda row: time or "All day", the calendar's colour, title and place.
- * The clock reads in each end's own zone when the views show events in
- * theirs.
+ * One agenda row: the calendar's dot, the title, its marks and, for a timed
+ * occurrence, its start's clock at the far end, read in the start's own zone
+ * when the views show events in theirs; where it is goes beneath. A past or
+ * cancelled occurrence is faded, and the row is tinted in the primary colour
+ * while its summary is open, [chosen].
  */
 @Composable
-fun AgendaRow(instance: Instance, viewModel: CalendarViewModel, onClick: () -> Unit) {
+fun AgendaRow(instance: Instance, viewModel: CalendarViewModel, chosen: Boolean = false, onClick: () -> Unit) {
     val format = LocalFormat.current
     val zones = viewModel.zones()
-    val colour = instance.colour.toColour(MaterialTheme.colorScheme.primary)
-    Row(
+    Column(
         modifier = Modifier
             .fillMaxWidth()
+            .then(if (chosen) Modifier.background(MaterialTheme.colorScheme.primary.copy(alpha = TINT)) else Modifier)
             .clickable(onClick = onClick)
-            .padding(horizontal = 16.dp, vertical = 8.dp),
-        verticalAlignment = Alignment.CenterVertically,
+            .padding(horizontal = 16.dp, vertical = 8.dp)
+            .alpha(opacity(carried = false, over = viewModel.past(instance), cancelled = instance.cancelled)),
     ) {
-        Box(
-            modifier = Modifier
-                .width(10.dp)
-                .padding(end = 4.dp)
-                .clip(CircleShape)
-                .background(colour)
-                .border(1.dp, colour, CircleShape)
-                .fillMaxSize(),
+        Line(
+            instance = instance,
+            time = if (instance.allday) null else format.formatTime(instance.start, clockZone(instance.zone?.start, zones)),
+            style = MaterialTheme.typography.bodyLarge,
+            clock = MaterialTheme.typography.bodyMedium,
+            gap = SPACE,
+            glyph = 16.dp,
         )
-        Column(modifier = Modifier.width(76.dp)) {
+        if (instance.location.isNotBlank()) {
             Text(
-                text = if (instance.allday) {
-                    stringResource(R.string.calendars_event_allday)
-                } else {
-                    format.formatTime(instance.start, clockZone(instance.zone?.start, zones))
-                },
-                style = MaterialTheme.typography.labelMedium,
-            )
-            if (!instance.allday && instance.finish > instance.start) {
-                Text(
-                    text = format.formatTime(instance.finish, clockZone(instance.zone?.finish, zones)),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-            }
-        }
-        Column(modifier = Modifier.weight(1f).padding(start = 8.dp)) {
-            Text(
-                text = instance.summary.ifBlank { stringResource(R.string.calendars_event_untitled) },
-                style = MaterialTheme.typography.bodyLarge,
+                text = instance.location,
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
                 maxLines = 1,
                 overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
+                modifier = Modifier.padding(start = DOT + SPACE),
             )
-            if (instance.location.isNotBlank()) {
-                Text(
-                    text = instance.location,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    maxLines = 1,
-                    overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
-                )
-            }
         }
     }
 }

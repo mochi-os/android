@@ -38,7 +38,9 @@ data class Forum(
     @SerializedName("moderation_posts") val moderationPosts: Int = 0,
     @SerializedName("moderation_comments") val moderationComments: Int = 0,
     val members: Int = 0,
-    val populated: Int = 0,
+    /** 0 while a new subscription's initial posts are still arriving. A
+     *  response without it is a forum with nothing left to wait for. */
+    val populated: Int = 1,
     val synced: Long = 0,
 )
 

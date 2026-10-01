@@ -52,6 +52,8 @@ data class PostUiState(
     /** Shown in place of the thread once the forum's owner removed this user
      *  from it, or deleted it, while the screen was open. */
     @StringRes val gone: Int? = null,
+    /** Whether the user follows the post; null where they cannot. */
+    val following: Boolean? = null,
 )
 
 @HiltViewModel
@@ -147,6 +149,7 @@ class PostViewModel @Inject constructor(
                     canVote = r.can_vote,
                     canComment = r.can_comment,
                     canModerate = r.can_moderate,
+                    following = r.following,
                     isLoading = false
                 )
                 subscribeWebSocket(r.forum.fingerprint)
@@ -176,6 +179,7 @@ class PostViewModel @Inject constructor(
                     canVote = r.can_vote,
                     canComment = r.can_comment,
                     canModerate = r.can_moderate,
+                    following = r.following,
                     isRefreshing = false,
                     error = null
                 )
@@ -296,6 +300,7 @@ class PostViewModel @Inject constructor(
         }
     }
 
+    fun setFollowing(following: Boolean) = moderate { repository.followPost(forumId, postId, following) }
     fun pinPost() = moderate { repository.pinPost(forumId, postId) }
     fun unpinPost() = moderate { repository.unpinPost(forumId, postId) }
     fun lockPost() = moderate { repository.lockPost(forumId, postId) }

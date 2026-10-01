@@ -275,7 +275,7 @@
     <string name="wikis_settings_name_save_cd">Londoloza igama</string>
     <string name="wikis_settings_name_cancel_cd">Khansela ukuhlela</string>
     <string name="wikis_access_level_label">Imvume</string>
-    <string name="wikis_access_set_failed">Yehlulekile ukubuyekeza ukufinyelela</string>
+    <string name="wikis_access_set_failed">Kuhlulekile ukubuyekeza ukufinyelela</string>
     <string name="wikis_replicas_col_subscribed">Kubhalisiwe: %1$s</string>
     <string name="wikis_replicas_col_synced">Ukuvumelanisa kokugcina: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Lokhu kuzoyeka ukuthumela izibuyekezo ku-“%1$s”. Bangaphinda baphindaphinde uma befuna.</string>
@@ -322,7 +322,7 @@
         <item quantity="one">Kutholakale Umphumela %1$d ku-«%2$s»</item>
         <item quantity="other">Kutholakale Imiphumela %1$d ku-«%2$s»</item>
     </plurals>
-    <string name="wikis_attachments_caption_save_failed">Yehlulekile ukulondoloza umbhalo ochazayo</string>
+    <string name="wikis_attachments_caption_save_failed">Kuhlulekile ukulondoloza umbhalo ochazayo</string>
     <string name="wikis_attachments_upload_types">Amafayela asekelwayo: izithombe, i-PDF, i-DOC, i-DOCX, i-TXT, ne-MD.</string>
     <string name="wikis_attachments_upload_limits">Ukulayishwa okukhulu kungase kunciphiswe ukulungiselelwa kweseva noma i-proxy yakho.</string>
     <string name="wikis_rss_replace">Buyisela</string>

@@ -82,11 +82,8 @@ object ContactsSync {
     }
 
     /** The framework account for a Mochi identity, or null when none is registered. */
-    fun account(context: Context, identity: String?): Account? {
-        if (identity.isNullOrBlank()) return null
-        if (MochiAccount.byIdentity(context, identity) == null) return null
-        return Account(identity, MochiAccount.TYPE)
-    }
+    fun account(context: Context, identity: String?): Account? =
+        MochiAccount.account(context, identity)
 
     fun enabled(account: Account): Boolean =
         ContentResolver.getIsSyncable(account, AUTHORITY) > 0 &&

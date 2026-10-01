@@ -28,6 +28,7 @@ import org.mochios.android.util.NaturalCompare
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.Preferences
+import org.mochios.calendars.model.tint
 import org.mochios.calendars.repository.CalendarsRepository
 import org.mochios.calendars.repository.EventChangedException
 import org.mochios.calendars.storage.VisibilityStore
@@ -35,6 +36,8 @@ import org.mochios.calendars.ui.editor.EventForm
 import org.mochios.calendars.ui.editor.Scope
 import org.mochios.calendars.ui.editor.advanced
 import org.mochios.calendars.ui.editor.components
+import org.mochios.calendars.ui.editor.creationDay
+import org.mochios.calendars.ui.editor.defaultStart
 import org.mochios.calendars.ui.editor.draft
 import org.mochios.calendars.ui.editor.instant
 import org.mochios.calendars.ui.editor.matches
@@ -42,8 +45,11 @@ import org.mochios.calendars.ui.editor.split
 import org.mochios.calendars.ui.router.CALENDARS_FEATURE
 import org.mochios.calendars.ui.router.CalendarsSection
 import org.mochios.calendars.ui.router.calendarsView
+import org.mochios.calendars.ui.router.sharedView
+import java.time.Instant
 import java.time.LocalDate
 import java.time.ZoneId
+import java.time.ZonedDateTime
 import java.time.temporal.ChronoUnit
 import javax.inject.Inject
 
@@ -94,7 +100,8 @@ data class LinkState(
 /** Something the screen has to say once rather than hold in its state. */
 sealed class CalendarEvent {
     data class Failed(val error: MochiError) : CalendarEvent()
-    data class Polled(val changed: Int) : CalendarEvent()
+    /** A manual poll finished; a linked calendar's is a two-way sync, and says so. */
+    data class Polled(val linked: Boolean) : CalendarEvent()
 
     /** An occurrence was moved, and [CalendarViewModel.undo] puts it back. */
     data object Moved : CalendarEvent()
@@ -132,6 +139,10 @@ class CalendarViewModel @Inject constructor(
 
     /** True until the user has picked a view on this device. */
     private var untouched = LastViewedStore.get(context, CALENDARS_FEATURE).isNullOrBlank()
+
+    // Redraws whenever the calendars shown change: from the drawer, or from
+    // the editor showing a hidden calendar an event was just saved into.
+    private val unwatch = VisibilityStore.watch(context) { shade() }
 
     init {
         val view = calendarsView(LastViewedStore.get(context, CALENDARS_FEATURE).orEmpty())
@@ -297,10 +308,17 @@ class CalendarViewModel @Inject constructor(
         }
     }
 
-    /** Occurrences in the order every view draws them. */
-    private fun ordered(instances: List<Instance>): List<Instance> = instances.sortedWith(
-        compareBy<Instance> { it.start }.thenByDescending { it.allday }.thenBy(NaturalCompare) { it.summary },
-    )
+    /**
+     * Occurrences in the order every view draws them, each in the colour it
+     * is drawn in: its event's own, or its calendar's when it has none or
+     * one that will not parse.
+     */
+    private fun ordered(instances: List<Instance>): List<Instance> {
+        val colours = _uiState.value.calendars.associate { it.id to it.colour }
+        return instances
+            .map { it.copy(colour = tint(it.colour, colours[it.calendar])) }
+            .sortedWith(compareBy<Instance> { it.start }.thenByDescending { it.allday }.thenBy(NaturalCompare) { it.summary })
+    }
 
     // ---- the toolbar ----
 
@@ -308,7 +326,22 @@ class CalendarViewModel @Inject constructor(
         if (value == _uiState.value.view) return
         _uiState.value = _uiState.value.copy(view = value)
         remember(value)
+        share(value)
         load()
+    }
+
+    /**
+     * Saves the view as the one a new browser or device opens on. This
+     * device keeps its own either way, so a failure changes nothing it shows.
+     */
+    private fun share(view: String) {
+        val request = sharedView(view, _uiState.value.preferences.view) ?: return
+        viewModelScope.launch {
+            try {
+                _uiState.value = _uiState.value.copy(preferences = repository.setPreferences(request))
+            } catch (_: Exception) {
+            }
+        }
     }
 
     /** Records the view so the next launch on this device opens on it. */
@@ -339,12 +372,14 @@ class CalendarViewModel @Inject constructor(
 
     fun toggle(calendar: String) {
         VisibilityStore.toggle(context, calendar)
-        shade()
     }
 
     fun only(calendar: String) {
         VisibilityStore.only(context, calendar, _uiState.value.calendars.map { it.id })
-        shade()
+    }
+
+    override fun onCleared() {
+        unwatch()
     }
 
     /**
@@ -373,10 +408,21 @@ class CalendarViewModel @Inject constructor(
      * call — so the drawer's line under the calendar is only right once the
      * list has been read again, which the repository's own announcement does.
      */
+    /** Another server's changes, pulled in as the screen comes into view. */
+    fun refresh() {
+        viewModelScope.launch {
+            try {
+                repository.refreshCalendars()
+            } catch (e: Exception) {
+                // The scheduled poll carries on; nothing to tell the user.
+            }
+        }
+    }
+
     fun poll(calendar: String) {
         viewModelScope.launch {
             try {
-                _events.tryEmit(CalendarEvent.Polled(repository.pollCalendar(calendar)))
+                _events.tryEmit(CalendarEvent.Polled(repository.pollCalendar(calendar).calendar.linked))
             } catch (e: Exception) {
                 _events.tryEmit(CalendarEvent.Failed(e.toMochiError()))
             }
@@ -404,6 +450,9 @@ class CalendarViewModel @Inject constructor(
                 duration = value.duration,
                 reminder = value.reminder,
                 zones = value.zones,
+                // Blank only when no calendar could be offered, which is no choice.
+                calendar = value.calendar.ifEmpty { null },
+                allday = value.allday,
             ),
         )
         _uiState.value = _uiState.value.copy(preferences = saved)
@@ -569,6 +618,25 @@ class CalendarViewModel @Inject constructor(
     /** The server the link's address is built on, as the session holds it. */
     private suspend fun server(): String = sessionManager.serverUrl.first().trimEnd('/')
 
+    // ---- new events ----
+
+    /**
+     * Where a new event with no time of its own starts, in epoch seconds: on
+     * [day] when a day cell was tapped, and otherwise on the day "New event"
+     * lands on, today when today is on screen and else the day the view is on.
+     */
+    fun creation(day: LocalDate? = null, state: CalendarUiState = _uiState.value): Long {
+        val now = ZonedDateTime.now(zone)
+        val today = now.toLocalDate()
+        val chosen = day ?: run {
+            val (first, last) = range(state)
+            val from = Instant.ofEpochSecond(first).atZone(zone).toLocalDate()
+            val until = Instant.ofEpochSecond(last).atZone(zone).toLocalDate()
+            creationDay(today, state.anchor, from, ChronoUnit.DAYS.between(from, until))
+        }
+        return defaultStart(chosen, today, now.toLocalTime(), state.preferences.hours).atZone(zone).toEpochSecond()
+    }
+
     // ---- ranges ----
 
     /**
@@ -672,6 +740,10 @@ class CalendarViewModel @Inject constructor(
     /** The block a timed occurrence puts on [day], null when it does not touch the day. */
     fun cut(instance: Instance, day: LocalDate): Cut? = cut(instance, day, zone, zones)
 
+    /** Whether an occurrence is over, which the views draw faded. */
+    fun past(instance: Instance): Boolean =
+        past(instance, finish(instance), Instant.now().epochSecond, LocalDate.now(zone))
+
     /** Whether an occurrence touches [day], a multi-day one on every day it spans. */
     fun covers(instance: Instance, day: LocalDate): Boolean {
         val from = day(instance)
@@ -734,3 +806,11 @@ fun steps(
  */
 fun last(date: LocalDate, start: Long, finish: Long): LocalDate =
     date.plusDays(maxOf(1L, Math.round((finish - start) / 86400.0)) - 1)
+
+/**
+ * Whether an occurrence is over: a timed one once its finish, epoch seconds,
+ * is before [now], and an all-day one once its [last] day is before [today].
+ * A timed one with no length is over once its start is.
+ */
+fun past(instance: Instance, last: LocalDate, now: Long, today: LocalDate): Boolean =
+    if (instance.allday) last.isBefore(today) else maxOf(instance.start, instance.finish) < now

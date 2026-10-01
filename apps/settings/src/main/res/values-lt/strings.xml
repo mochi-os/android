@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Operatoriaus pavadinimas</string>
     <string name="system_setting_operator_email">Operatoriaus el. paštas</string>
     <string name="system_setting_operator_jurisdiction">Operatoriaus jurisdikcija</string>
-    <string name="system_setting_server_started">Serveris paleistas</string>
-    <string name="system_setting_server_version">Serverio versija</string>
     <string name="system_setting_signup_enabled">Leisti naujas registracijas</string>
     <string name="system_users_title">Vartotojai</string>
     <string name="system_users_col_user">Vartotojas</string>
@@ -399,4 +397,5 @@
     <string name="accounts_provider_caldav">Kalendorių serveris</string>
     <string name="accounts_revoke_confirm">Tai panaikins %1$s prieigą prie kalendoriaus. Prisijungimas naudojant %2$s išliks, kol atsiesite jį prisijungimo puslapyje.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Nežinoma tema</string>
 </resources>

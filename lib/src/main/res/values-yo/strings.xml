@@ -316,4 +316,8 @@
     <string name="device_name_fallback">Ẹ̀rọ alágbèéká</string>
     <string name="account_error_token_type">Irú àmì tí kò ní àtìlẹ́yìn</string>
     <string name="account_error_caller">A kò gba olùpè láàyè</string>
+    <string name="zone_sea">Lórí òkun</string>
+    <string name="access_remove">Yọ kúrò</string>
+    <string name="access_remove_title">Yọ àyè kúrò?</string>
+    <string name="access_remove_message">Yọ òfin ìwọlé fún \"%1$s\" kúrò?</string>
 </resources>

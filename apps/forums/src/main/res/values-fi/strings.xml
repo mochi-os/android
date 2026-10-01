@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Kaikki foorumit</string>
     <string name="forums_create_allow_search">Salli kenen tahansa hakea foorumia</string>
     <string name="forums_rss_clipboard_label">Foorumin RSS-osoite</string>
+    <string name="forums_notifications_post">Uudet julkaisut</string>
+    <string name="forums_notifications_reply">Vastaukset sinulle</string>
+    <string name="forums_notifications_comment">Kaikki vastaukset</string>
+    <string name="forums_follow_thread">Seuraa ketjua</string>
+    <string name="forums_unfollow_thread">Lopeta ketjun seuraaminen</string>
     <string name="forums_tab_moderation">Moderointi</string>
     <string name="forums_access_level_view_full">Vain katselu</string>
     <string name="forums_access_level_none_full">Ei käyttöoikeutta</string>

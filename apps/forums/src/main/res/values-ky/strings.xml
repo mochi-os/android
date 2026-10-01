@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Бардык форумдар</string>
     <string name="forums_create_allow_search">Ар кимге форумду издөөгө уруксат берүү</string>
     <string name="forums_rss_clipboard_label">Форумдун RSS URL дареги</string>
+    <string name="forums_notifications_post">Жаңы посттор</string>
+    <string name="forums_notifications_reply">Сизге келген жооптор</string>
+    <string name="forums_notifications_comment">Бардык жооптор</string>
+    <string name="forums_follow_thread">Жипке көз салуу</string>
+    <string name="forums_unfollow_thread">Жипке көз салууну токтотуу</string>
     <string name="forums_tab_moderation">Модерация</string>
     <string name="forums_access_level_view_full">Көрүү гана</string>
     <string name="forums_access_level_none_full">Кирүү жок</string>

@@ -12,7 +12,7 @@
     <string name="calendars_subscribe">Subscribe to calendar</string>
     <string name="calendars_subscribe_submit">Subscribe</string>
     <string name="calendars_subscribe_url">Address</string>
-    <string name="calendars_connect_device">Connect device</string>
+    <string name="calendars_connect_device">Connected devices</string>
     <string name="calendars_preferences">Preferences</string>
     <string name="calendars_name">Name</string>
     <string name="calendars_colour">Colour</string>
@@ -28,10 +28,11 @@
     <string name="calendars_poll_missing">The calendar is gone from its server</string>
     <string name="calendars_delete_title">Delete %1$s?</string>
     <string name="calendars_delete_message">Its events are deleted with it.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">%1$d event updated</item>
-        <item quantity="other">%1$d events updated</item>
-    </plurals>
+    <string name="calendars_remove">Remove</string>
+    <string name="calendars_remove_title">Remove %1$s from Mochi?</string>
+    <string name="calendars_remove_message">Its events stay in the original calendar.</string>
+    <string name="calendars_polled_current">Calendar up to date</string>
+    <string name="calendars_polled_synced">Calendar synced</string>
 
     <!-- Toolbar and views -->
     <string name="calendars_today">Today</string>
@@ -42,16 +43,14 @@
     <string name="calendars_view_month">Month</string>
     <string name="calendars_view_list">List</string>
     <string name="calendars_workweek">Work week</string>
+    <string name="calendars_range">%1$s to %2$s</string>
+    <string name="calendars_span_day">%1$s, %2$s to %3$s</string>
     <string name="calendars_truncated">Some events in this range are not shown.</string>
     <string name="calendars_list_empty">No events</string>
     <string name="calendars_list_search">Search</string>
     <plurals name="calendars_minutes">
         <item quantity="one">%1$d minute</item>
         <item quantity="other">%1$d minutes</item>
-    </plurals>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d more</item>
-        <item quantity="other">+%1$d more</item>
     </plurals>
 
     <!-- Events -->
@@ -60,7 +59,9 @@
     <string name="calendars_editor_copy_title">Copy event</string>
     <string name="calendars_event_copy">Copy</string>
     <string name="calendars_event_copied">Event copied</string>
-    <string name="calendars_event_untitled">Untitled</string>
+    <string name="calendars_untitled">(No title)</string>
+    <string name="calendars_status_cancelled">Cancelled</string>
+    <string name="calendars_status_tentative">Tentative</string>
     <string name="calendars_event_title">Title</string>
     <string name="calendars_title_required">Title is required</string>
     <string name="calendars_event_calendar">Calendar</string>
@@ -76,6 +77,7 @@
     <string name="calendars_event_reminder">Reminder</string>
     <string name="calendars_event_description">Description</string>
     <string name="calendars_event_recurring">Repeats</string>
+    <string name="calendars_event_exception">Changed occurrence</string>
     <string name="calendars_event_delete_title">Delete %1$s?</string>
     <string name="calendars_event_delete_message">This cannot be undone.</string>
     <string name="calendars_scope_edit">Change this event or all events?</string>
@@ -104,9 +106,20 @@
     <!-- Reminders -->
     <string name="calendars_reminder_none">None</string>
     <string name="calendars_reminder_time">At the time</string>
-    <string name="calendars_reminder_minutes">%1$d minutes before</string>
-    <string name="calendars_reminder_hour">1 hour before</string>
-    <string name="calendars_reminder_day">1 day before</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">%1$d minute before</item>
+        <item quantity="other">%1$d minutes before</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">%1$d hour before</item>
+        <item quantity="other">%1$d hours before</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">%1$d day before</item>
+        <item quantity="other">%1$d days before</item>
+    </plurals>
+    <string name="calendars_reminder_add">Add reminder</string>
+    <string name="calendars_reminder_remove">Remove reminder</string>
 
     <!-- Preferences -->
     <string name="calendars_hours_start">Working hours start</string>
@@ -124,6 +137,10 @@
     <string name="calendars_multiweek_previous">Weeks before</string>
     <string name="calendars_default_duration">Default event length</string>
     <string name="calendars_default_reminder">Default reminder</string>
+    <string name="calendars_default_calendar">Default calendar</string>
+    <string name="calendars_preferences_allday">All-day events</string>
+    <string name="calendars_allday_first">First</string>
+    <string name="calendars_allday_last">Last</string>
     <string name="calendars_preferences_zones">Show events in their own time zone</string>
 
     <!-- ICS link -->
@@ -133,6 +150,8 @@
     <string name="calendars_link_exists">A link already exists for this calendar.</string>
     <string name="calendars_link_replace">Replace</string>
     <string name="calendars_link_revoke">Revoke</string>
+    <string name="calendars_link_revoke_title">Revoke the calendar address?</string>
+    <string name="calendars_link_revoke_message">Calendars subscribed to this address will stop updating.</string>
 
     <!-- Subscribe wizard -->
     <string name="calendars_subscribe_google">Google Calendar</string>
@@ -142,7 +161,6 @@
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_password_apple">App-specific password</string>
     <string name="calendars_subscribe_server_url">Server address</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_username">Username</string>
     <string name="calendars_subscribe_password">Password</string>
     <string name="calendars_subscribe_connect">Connect</string>
@@ -172,14 +190,14 @@
     <string name="calendars_sync_running">Syncing…</string>
     <string name="calendars_sync_never">Not synced yet</string>
     <string name="calendars_sync_time">Last synced %1$s</string>
-    <string name="calendars_sync_permission">Calendar access is needed</string>
     <string name="calendars_sync_authorization">Sign in again to keep syncing</string>
     <string name="calendars_sync_transport">Could not reach the server</string>
 
     <!-- Connect device -->
-    <string name="calendars_device_title">Connect device</string>
+    <string name="calendars_device_title">Connected devices</string>
     <string name="calendars_device_name">Device name</string>
     <string name="calendars_device_create">Create</string>
+    <string name="calendars_device_add">Add device</string>
     <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Address</string>
     <string name="calendars_device_username">Username</string>
@@ -187,7 +205,6 @@
     <string name="calendars_device_copy">Copy %1$s</string>
     <string name="calendars_device_warning">Copy the password now: it cannot be shown again.</string>
     <string name="calendars_device_done">Done</string>
-    <string name="calendars_device_list">Connected devices</string>
     <string name="calendars_device_empty">No devices connected</string>
     <string name="calendars_device_created">Created %1$s</string>
     <string name="calendars_device_used">last used %1$s</string>

@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Gawé</string>
     <string name="calendars_subscribe_submit">Langganan</string>
     <string name="calendars_subscribe_url">Alamat</string>
-    <string name="calendars_connect_device">Sambungake piranti</string>
+    <string name="calendars_connect_device">Piranti sing kasambung</string>
     <string name="calendars_preferences">Preferensi</string>
     <string name="calendars_name">Jeneng</string>
     <string name="calendars_rename">Owahi jeneng</string>
@@ -11,7 +11,6 @@
     <string name="calendars_view">Tampilan</string>
     <string name="calendars_view_list">Daftar</string>
     <string name="calendars_list_search">Goleki</string>
-    <string name="calendars_event_untitled">Tanpa judul</string>
     <string name="calendars_event_title">Judul</string>
     <string name="calendars_event_location">Lokasi</string>
     <string name="calendars_event_description">Katrangan</string>
@@ -37,9 +36,10 @@
     <string name="calendars_sync_never">Durung disinkronaké</string>
     <string name="calendars_sync_time">Pungkasan disinkronaké %1$s</string>
     <string name="calendars_sync_transport">Ora bisa nyambung menyang server</string>
-    <string name="calendars_device_title">Sambungake piranti</string>
+    <string name="calendars_device_title">Piranti sing kasambung</string>
     <string name="calendars_device_name">Jeneng piranti</string>
     <string name="calendars_device_create">Gawé</string>
+    <string name="calendars_device_add">Tambah piranti</string>
     <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Alamat</string>
     <string name="calendars_device_username">Jeneng panganggo</string>
@@ -61,19 +61,20 @@
     <string name="calendars_poll">Priksa saiki</string>
     <string name="calendars_delete_title">Busak %1$s?</string>
     <string name="calendars_delete_message">Acara-acarané uga bakal kabusak.</string>
-    <plurals name="calendars_polled">
-        <item quantity="other">%1$d acara dianyari</item>
-    </plurals>
+    <string name="calendars_remove">Cabut</string>
+    <string name="calendars_remove_title">Cabut %1$s saka Mochi?</string>
+    <string name="calendars_remove_message">Acarané tetep ana ing kalender asliné.</string>
     <string name="calendars_today">Dina iki</string>
     <string name="calendars_view_week">Minggu</string>
     <string name="calendars_view_multiweek">Pirang-pirang minggu</string>
     <string name="calendars_view_month">Sasi</string>
     <string name="calendars_workweek">Minggu kerja</string>
+    <string name="calendars_range">%1$s nganti %2$s</string>
     <string name="calendars_truncated">Sawetara acara ing rentang iki ora ditampilake.</string>
     <string name="calendars_list_empty">Ora ana acara</string>
-    <plurals name="calendars_more">
-        <item quantity="other">+%1$d liyané</item>
-    </plurals>
+    <string name="calendars_untitled">(Tanpa judul)</string>
+    <string name="calendars_status_cancelled">Dibatalaké</string>
+    <string name="calendars_status_tentative">Sementara</string>
     <string name="calendars_event_new">Acara anyar</string>
     <string name="calendars_event_edit">Owahi acara</string>
     <string name="calendars_event_calendar">Kalender</string>
@@ -95,9 +96,17 @@
     <string name="calendars_repeat_count">Pengulangan</string>
     <string name="calendars_repeat_forever">Salawasé</string>
     <string name="calendars_reminder_time">Pas wektuné</string>
-    <string name="calendars_reminder_minutes">%1$d menit sadurungé</string>
-    <string name="calendars_reminder_hour">1 jam sadurungé</string>
-    <string name="calendars_reminder_day">1 dina sadurungé</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="other">%1$d menit sadurungé</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="other">%1$d jam sadurungé</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="other">%1$d dina sadurungé</item>
+    </plurals>
+    <string name="calendars_reminder_add">Tambah pangeling-eling</string>
+    <string name="calendars_reminder_remove">Cabut pangeling-eling</string>
     <string name="calendars_hours_start">Wiwitan jam kerja</string>
     <string name="calendars_hours_finish">Pungkasan jam kerja</string>
     <string name="calendars_hours_invalid">Jam kerja kudu rampung sawisé wiwitané.</string>
@@ -106,16 +115,18 @@
     <string name="calendars_multiweek_previous">Minggu sadurungé</string>
     <string name="calendars_default_duration">Dawa acara standar</string>
     <string name="calendars_default_reminder">Pangeling-eling standar</string>
+    <string name="calendars_default_calendar">Kalender standar</string>
+    <string name="calendars_preferences_allday">Acara sedina muput</string>
+    <string name="calendars_allday_first">Ing wiwitan</string>
+    <string name="calendars_allday_last">Ing pungkasan</string>
     <string name="calendars_link_title">Tautan kalender</string>
     <string name="calendars_link_copy">Salin tautan</string>
     <string name="calendars_link_once">Salin saiki: ora bisa ditampilake manèh.</string>
     <string name="calendars_link_exists">Tautan kanggo kalender iki wis ana.</string>
     <string name="calendars_permission_title">Idini akses?</string>
     <string name="calendars_permission_message">%1$s njaluk:</string>
-    <string name="calendars_sync_permission">Butuh akses kalender</string>
     <string name="calendars_sync_authorization">Mlebu manèh supaya sinkronisasi terus mlaku</string>
     <string name="calendars_device_warning">Salin tembung sandhi saiki: ora bisa ditampilake manèh.</string>
-    <string name="calendars_device_list">Piranti sing kasambung</string>
     <string name="calendars_device_empty">Ora ana piranti sing kasambung</string>
     <string name="calendars_device_used">Pungkasan dianggo %1$s</string>
     <string name="calendars_device_never">ora tau</string>
@@ -164,9 +175,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">ID Apple</string>
     <string name="calendars_subscribe_google">Google Kalender</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Akun Google durung diaktifaké ing server iki. Aktifaké ing Setelan, Setelan sistem.</string>
     <string name="calendars_subscribe_google_connect">Sampeyan durung nyambungaké akun Google.</string>
     <string name="calendars_subscribe_google_connect_action">Sambungake Google</string>
     <string name="calendars_grant_failed">Akses kalender ora diwenehake</string>
+    <string name="calendars_event_exception">Pengulangan sing diowahi</string>
+    <string name="calendars_span_day">%1$s, %2$s nganti %3$s</string>
+    <string name="calendars_polled_current">Kalender wis paling anyar</string>
+    <string name="calendars_polled_synced">Kalender wis disinkronisasi</string>
+    <string name="calendars_link_revoke_title">Batalake alamat kalender?</string>
+    <string name="calendars_link_revoke_message">Kalèndher sing langganan alamat iki bakal mandheg dianyari.</string>
 </resources>

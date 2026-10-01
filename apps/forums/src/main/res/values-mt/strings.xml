@@ -222,6 +222,11 @@
     <string name="forums_all_forums">Il-fora kollha</string>
     <string name="forums_create_allow_search">Ħalli lil kulħadd ifittex il-forum</string>
     <string name="forums_rss_clipboard_label">URL RSS tal-forum</string>
+    <string name="forums_notifications_post">Posts ġodda</string>
+    <string name="forums_notifications_reply">Tweġibiet lilek</string>
+    <string name="forums_notifications_comment">It-tweġibiet kollha</string>
+    <string name="forums_follow_thread">Segwi d-diskussjoni</string>
+    <string name="forums_unfollow_thread">Tibqax issegwi d-diskussjoni</string>
     <string name="forums_tab_moderation">Moderazzjoni</string>
     <string name="forums_access_level_view_full">Ara biss</string>
     <string name="forums_access_level_none_full">L-ebda aċċess</string>

@@ -5,6 +5,7 @@
 
 package org.mochios.settings.ui.preferences
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -26,9 +27,12 @@ import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -40,12 +44,15 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.R
+import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.ZonePicker
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.Zones
 import java.util.Locale
 
 /** Public, shared by the dropdown row. Display screen owns its own dropdown. */
@@ -155,18 +162,10 @@ private fun prefSchema(
     ),
 )
 
-private val TIMEZONE_OPTIONS: List<String> by lazy {
-    val zones = java.util.TimeZone.getAvailableIDs()
-        .filter { it.contains('/') } // drop short aliases like "EST"
-        .sorted()
-    zones
-}
-
-/** The zone rows, with the localised automatic row in front. */
+/** The automatic choice, which follows the device; the picker lists the zones themselves. */
 @Composable
 private fun timezoneOptions(): List<Pair<String, String>> =
-    listOf("auto" to stringResource(R.string.settings_value_auto)) +
-        TIMEZONE_OPTIONS.map { it to it }
+    listOf("auto" to stringResource(R.string.settings_value_auto))
 
 /**
  * Overrides where the platform's display name is not Mochi's wording; mirrors
@@ -201,6 +200,8 @@ private fun scriptBucket(native: String): Int {
 }
 
 /**
+ * The automatic choice is stored as "auto", as the web stores it: the server
+ * skips a blank value, so a blank could never clear a language once set.
  * [current] is included even if the server does not list it, so a saved value
  * never vanishes from the picker.
  */
@@ -209,8 +210,8 @@ internal fun languageOptions(
     current: String,
     defaultLabel: String,
 ): List<Pair<String, String>> {
-    val installed = (tags + current.takeIf { it.isNotBlank() }.orEmpty())
-        .filter { it.isNotBlank() }
+    val installed = (tags + current)
+        .filter { it.isNotBlank() && !it.equals("auto", ignoreCase = true) }
         .distinct()
     val sorted = installed
         .map { it to languageName(it) }
@@ -218,7 +219,7 @@ internal fun languageOptions(
             compareBy<Pair<String, String>> { scriptBucket(it.second) }
                 .thenComparing({ it.second }, NaturalCompare),
         )
-    return listOf("" to defaultLabel) + sorted
+    return listOf("auto" to defaultLabel) + sorted
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -232,8 +233,18 @@ fun UserSettingsScreen(
         languages = uiState.languages,
         currentLanguage = uiState.values["language"].orEmpty(),
     )
+    val snackbar = remember { SnackbarHostState() }
+    // A failed load, save or reset is shown over the settings, which stay put.
+    LaunchedEffect(uiState.error) {
+        val failure = uiState.error
+        if (failure != null) {
+            snackbar.showSnackbar(failure.userMessage())
+            viewModel.clearError()
+        }
+    }
 
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbar) },
         topBar = {
             TopAppBar(
                 title = { Text(stringResource(R.string.settings_title)) },
@@ -261,11 +272,22 @@ fun UserSettingsScreen(
             verticalArrangement = Arrangement.spacedBy(4.dp),
         ) {
             items(schema, key = { it.key }) { spec ->
-                PrefRow(
-                    spec = spec,
-                    current = uiState.values[spec.key] ?: "",
-                    onChange = { value -> viewModel.set(spec.key, value) },
-                )
+                val stored = uiState.values[spec.key] ?: ""
+                if (spec.key == "timezone") {
+                    ZoneRow(
+                        label = spec.label,
+                        // A stored zone may carry a name the list knows by another.
+                        current = if (stored.isEmpty() || stored == "auto") "auto" else Zones.current(stored),
+                        automatic = spec.options.first().second,
+                        onChange = { value -> viewModel.set(spec.key, value) },
+                    )
+                } else {
+                    PrefRow(
+                        spec = spec,
+                        current = stored,
+                        onChange = { value -> viewModel.set(spec.key, value) },
+                    )
+                }
             }
             item(key = "reset") {
                 Spacer(Modifier.height(16.dp))
@@ -280,17 +302,61 @@ fun UserSettingsScreen(
 
         if (showResetConfirm) {
             MochiAlertDialog(
-                onDismissRequest = { showResetConfirm = false },
+                onDismissRequest = { if (!uiState.isResetting) showResetConfirm = false },
                 title = stringResource(R.string.settings_reset_confirm_title),
                 text = stringResource(R.string.settings_reset_confirm_message),
                 confirmText = stringResource(R.string.settings_reset),
                 onConfirm = {
-                    showResetConfirm = false
-                    viewModel.reset(REGIONAL_PREF_KEYS)
+                    viewModel.reset(REGIONAL_PREF_KEYS) { showResetConfirm = false }
                 },
+                confirmLoading = uiState.isResetting,
                 dismissText = stringResource(R.string.common_cancel),
+                dismissEnabled = !uiState.isResetting,
             )
         }
+    }
+}
+
+/**
+ * The time zone row: the zone chosen, by its current name and its offset from
+ * UTC, or the automatic choice; a tap opens the picker with the map, as the
+ * web's does.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun ZoneRow(label: String, current: String, automatic: String, onChange: (String) -> Unit) {
+    var picking by remember { mutableStateOf(false) }
+    val shown = if (current == "auto") automatic else "${Zones.label(current)} (${Zones.offset(current)})"
+    Column(modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp)) {
+        Text(
+            text = label,
+            style = MaterialTheme.typography.titleSmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+        Spacer(Modifier.height(4.dp))
+        Box {
+            MochiTextField(
+                value = shown,
+                onValueChange = {},
+                readOnly = true,
+                trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = picking) },
+                modifier = Modifier.fillMaxWidth(),
+            )
+            // Over the field, which would otherwise take the tap for itself.
+            Box(modifier = Modifier.matchParentSize().clickable { picking = true })
+        }
+    }
+    if (picking) {
+        ZonePicker(
+            title = label,
+            selected = current,
+            automatic = automatic,
+            onDismiss = { picking = false },
+            onSelect = {
+                picking = false
+                onChange(it)
+            },
+        )
     }
 }
 

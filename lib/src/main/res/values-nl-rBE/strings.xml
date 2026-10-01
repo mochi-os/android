@@ -297,4 +297,7 @@
     <string name="settings_card_flat">Plat</string>
     <string name="settings_card_raised">Verhoogd</string>
     <string name="update_install">Installeren</string>
+    <string name="access_remove">Verwijderen</string>
+    <string name="access_remove_title">Toegang verwijderen?</string>
+    <string name="access_remove_message">Toegangsregel voor \"%1$s\" verwijderen?</string>
 </resources>

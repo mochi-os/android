@@ -66,6 +66,16 @@ data class PostDetailResponse(
     val permissions: Permissions = Permissions()
 )
 
+/**
+ * The user's notification switches for a feed they hold, answered by
+ * `{feedId}/-/notifications` and its `set`: [post] is every new post, on
+ * unless turned off.
+ */
+data class FeedNotificationSettings(val post: Boolean = true)
+
+/** Response of `{feedId}/-/{postId}/follow` and `unfollow`. */
+data class FollowResponse(val following: Boolean = false)
+
 data class PostImageResponse(
     val image: String = ""
 )
@@ -120,11 +130,6 @@ data class AddSourceRequest(
 
 data class RecommendationsResponse(
     val feeds: List<Feed> = emptyList()
-)
-
-data class ProbeResponse(
-    val feed: Feed? = null,
-    val type: String = ""
 )
 
 data class RssTokenResponse(
@@ -213,10 +218,12 @@ interface FeedsApi {
     @GET("-/recommendations")
     suspend fun getRecommendations(): Response<ApiResponse<RecommendationsResponse>>
 
+    // Answers a directory-like entry for the feed: id, name, fingerprint, and
+    // the server or share-link peer that subscribe then pins.
     @GET("-/probe")
     suspend fun probeUrl(
         @Query("url") url: String
-    ): Response<ApiResponse<ProbeResponse>>
+    ): Response<ApiResponse<Feed>>
 
     @POST("-/subscribe")
     suspend fun subscribe(
@@ -533,6 +540,32 @@ interface FeedsApi {
     suspend fun clearNotifications(
         @Path("feedId") feedId: String
     ): Response<ApiResponse<SuccessResponse>>
+
+    @GET("{feedId}/-/notifications")
+    suspend fun getNotifications(
+        @Path("feedId") feedId: String
+    ): Response<ApiResponse<FeedNotificationSettings>>
+
+    // kind is "post"; enabled is "true" or "false".
+    @FormUrlEncoded
+    @POST("{feedId}/-/notifications/set")
+    suspend fun setNotification(
+        @Path("feedId") feedId: String,
+        @Field("kind") kind: String,
+        @Field("enabled") enabled: String
+    ): Response<ApiResponse<FeedNotificationSettings>>
+
+    @POST("{feedId}/-/{postId}/follow")
+    suspend fun followPost(
+        @Path("feedId") feedId: String,
+        @Path("postId") postId: String
+    ): Response<ApiResponse<FollowResponse>>
+
+    @POST("{feedId}/-/{postId}/unfollow")
+    suspend fun unfollowPost(
+        @Path("feedId") feedId: String,
+        @Path("postId") postId: String
+    ): Response<ApiResponse<FollowResponse>>
 
     // --- Members ---
 

@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Kõik foorumid</string>
     <string name="forums_create_allow_search">Luba kõigil foorumit otsida</string>
     <string name="forums_rss_clipboard_label">Foorumi RSS-URL</string>
+    <string name="forums_notifications_post">Uued postitused</string>
+    <string name="forums_notifications_reply">Vastused teile</string>
+    <string name="forums_notifications_comment">Kõik vastused</string>
+    <string name="forums_follow_thread">Jälgi lõime</string>
+    <string name="forums_unfollow_thread">Lõpeta lõime jälgimine</string>
     <string name="forums_tab_moderation">Modereerimine</string>
     <string name="forums_access_level_view_full">Ainult vaatamine</string>
     <string name="forums_access_level_none_full">Juurdepääs puudub</string>

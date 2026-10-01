@@ -34,11 +34,16 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButtonTone
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.characters
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Hours
 import org.mochios.calendars.model.Multiweek
 import org.mochios.calendars.model.Preferences
+import org.mochios.calendars.model.defaultCalendar
+import org.mochios.calendars.ui.editor.REMINDER_LEADS
+import org.mochios.calendars.ui.editor.reminderLeads
 import org.mochios.android.R as MochiR
 
 /** Renames a calendar. */
@@ -61,7 +66,7 @@ fun RenameCalendarDialog(
         content = {
             MochiTextField(
                 value = name,
-                onValueChange = { name = it },
+                onValueChange = { name = characters(it, NAME_MAXIMUM) },
                 label = { Text(stringResource(R.string.calendars_name)) },
                 singleLine = true,
                 modifier = Modifier.fillMaxWidth(),
@@ -146,14 +151,33 @@ fun LinkDialog(
     )
 }
 
+/** Confirms revoking a calendar's ICS link, which stops every subscriber's copy updating. */
+@Composable
+fun RevokeLinkDialog(
+    onDismiss: () -> Unit,
+    onConfirm: () -> Unit,
+) {
+    MochiAlertDialog(
+        onDismissRequest = onDismiss,
+        title = stringResource(R.string.calendars_link_revoke_title),
+        text = stringResource(R.string.calendars_link_revoke_message),
+        confirmText = stringResource(R.string.calendars_link_revoke),
+        onConfirm = onConfirm,
+        destructive = true,
+        dismissText = stringResource(MochiR.string.common_cancel),
+    )
+}
+
 /**
  * The preferences the views read: the working hours they shade, the work
- * days, how many weeks a multiweek view shows, the default event length and
- * the default reminder. Shared with the web, so a change here shows there.
+ * days, how many weeks a multiweek view shows, the default event length, the
+ * default reminder and the calendar a new event goes in, chosen from
+ * [calendars]. Shared with the web, so a change here shows there.
  */
 @Composable
 fun PreferencesDialog(
     preferences: Preferences,
+    calendars: List<Calendar>,
     saving: Boolean,
     onDismiss: () -> Unit,
     onConfirm: (Preferences) -> Unit,
@@ -166,6 +190,11 @@ fun PreferencesDialog(
     var duration by rememberSaveable { mutableIntStateOf(preferences.duration) }
     var reminder by rememberSaveable { mutableIntStateOf(preferences.reminder) }
     var zones by rememberSaveable { mutableStateOf(preferences.zones) }
+    var allday by rememberSaveable { mutableStateOf(preferences.allday) }
+    // The calendars a new event can go in, the built-in default first.
+    val writable = calendars.filterNot { it.readonly }
+        .sortedWith(compareByDescending<Calendar> { it.default }.thenBy(NaturalCompare) { it.name })
+    var calendar by rememberSaveable { mutableStateOf(defaultCalendar(writable, preferences.calendar)) }
 
     val hours = (0..23).map { it.toString() to it.toString().padStart(2, '0') + ":00" }
     val ends = (1..24).map { it.toString() to it.toString().padStart(2, '0') + ":00" }
@@ -193,6 +222,8 @@ fun PreferencesDialog(
                     reminder = reminder,
                     view = preferences.view,
                     zones = zones,
+                    calendar = calendar,
+                    allday = allday,
                 ),
             )
         },
@@ -254,6 +285,16 @@ fun PreferencesDialog(
                     onSelect = { previous = it.toIntOrNull() ?: previous },
                 )
                 LabeledSelectField(
+                    label = stringResource(R.string.calendars_preferences_allday),
+                    placeholder = "",
+                    options = listOf(
+                        "first" to stringResource(R.string.calendars_allday_first),
+                        "last" to stringResource(R.string.calendars_allday_last),
+                    ),
+                    selected = allday,
+                    onSelect = { allday = it },
+                )
+                LabeledSelectField(
                     label = stringResource(R.string.calendars_default_duration),
                     placeholder = "",
                     // Zero is a real choice: an event that ends when it starts.
@@ -270,6 +311,13 @@ fun PreferencesDialog(
                     selected = reminder.toString(),
                     onSelect = { reminder = it.toIntOrNull() ?: reminder },
                 )
+                LabeledSelectField(
+                    label = stringResource(R.string.calendars_default_calendar),
+                    placeholder = "",
+                    options = writable.map { it.id to it.name },
+                    selected = calendar,
+                    onSelect = { calendar = it },
+                )
                 LabeledSwitchRow(
                     label = stringResource(R.string.calendars_preferences_zones),
                     checked = zones,
@@ -280,17 +328,25 @@ fun PreferencesDialog(
     )
 }
 
-/** The reminder choices, as value-to-label pairs for a select. */
+/** The default reminder's choices, none among them, as value-to-label pairs for a select. */
 @Composable
-fun reminderOptions(): List<Pair<String, String>> = listOf(
-    "-1" to stringResource(R.string.calendars_reminder_none),
-    "0" to stringResource(R.string.calendars_reminder_time),
-    "5" to stringResource(R.string.calendars_reminder_minutes, 5),
-    "15" to stringResource(R.string.calendars_reminder_minutes, 15),
-    "30" to stringResource(R.string.calendars_reminder_minutes, 30),
-    "60" to stringResource(R.string.calendars_reminder_hour),
-    "1440" to stringResource(R.string.calendars_reminder_day),
-)
+fun reminderOptions(): List<Pair<String, String>> =
+    listOf("-1" to stringResource(R.string.calendars_reminder_none)) +
+        REMINDER_LEADS.map { it.toString() to reminderLabel(it) }
+
+/** The choices for one of an event's reminders, as value-to-label pairs for a select. */
+@Composable
+fun reminderChoices(current: Int): List<Pair<String, String>> =
+    reminderLeads(current).map { it.toString() to reminderLabel(it) }
+
+/** A reminder as the editor names it: at the time, or so long before the start. */
+@Composable
+fun reminderLabel(minutes: Int): String = when {
+    minutes == 0 -> stringResource(R.string.calendars_reminder_time)
+    minutes % 1440 == 0 -> pluralStringResource(R.plurals.calendars_reminder_days, minutes / 1440, minutes / 1440)
+    minutes % 60 == 0 -> pluralStringResource(R.plurals.calendars_reminder_hours, minutes / 60, minutes / 60)
+    else -> pluralStringResource(R.plurals.calendars_reminder_minutes, minutes, minutes)
+}
 
 /**
  * "This event", "This and following" or "All events" for a recurring
@@ -335,7 +391,11 @@ fun ScopeDialog(
     )
 }
 
-/** Confirms deleting a calendar, saying that its events go with it. */
+/**
+ * Confirms deleting a calendar, saying that its events go with it. A linked or
+ * subscribed calendar is only removed from Mochi: the original and its events
+ * stay where they are.
+ */
 @Composable
 fun DeleteCalendarDialog(
     calendar: Calendar,
@@ -343,11 +403,16 @@ fun DeleteCalendarDialog(
     onDismiss: () -> Unit,
     onConfirm: () -> Unit,
 ) {
+    val detached = calendar.linked || calendar.subscription
     MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = stringResource(R.string.calendars_delete_title, calendar.name),
-        text = stringResource(R.string.calendars_delete_message),
-        confirmText = stringResource(R.string.calendars_delete),
+        title = if (detached) {
+            stringResource(R.string.calendars_remove_title, calendar.name)
+        } else {
+            stringResource(R.string.calendars_delete_title, calendar.name)
+        },
+        text = stringResource(if (detached) R.string.calendars_remove_message else R.string.calendars_delete_message),
+        confirmText = stringResource(if (detached) R.string.calendars_remove else R.string.calendars_delete),
         onConfirm = onConfirm,
         confirmLoading = deleting,
         destructive = true,

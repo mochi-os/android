@@ -215,8 +215,6 @@
     <string name="system_setting_fcm_service_account">Fichier de clé privée Firebase</string>
     <string name="system_setting_operator_name">Nom de l\'opérateur</string>
     <string name="system_setting_operator_jurisdiction">Juridiction de l\'opérateur</string>
-    <string name="system_setting_server_started">Serveur démarré</string>
-    <string name="system_setting_server_version">Version du serveur</string>
     <string name="system_setting_signup_enabled">Permettre les nouvelles inscriptions</string>
     <string name="settings_home_system_users">Utilisateurs (serveur)</string>
     <string name="system_users_title">Utilisateurs</string>

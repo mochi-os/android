@@ -209,10 +209,10 @@ fun NotificationPrefsScreen(
         DeleteCategoryDialog(
             category = cat,
             others = others,
+            busy = state.isDeletingCategory,
             onDismiss = { deleting = null },
             onConfirm = { reassignTo ->
-                viewModel.deleteCategory(cat.id, reassignTo)
-                deleting = null
+                viewModel.deleteCategory(cat.id, reassignTo) { deleting = null }
             },
         )
     }
@@ -491,6 +491,7 @@ private fun TopicRow(
 private fun DeleteCategoryDialog(
     category: NotifCategory,
     others: List<NotifCategory>,
+    busy: Boolean,
     onDismiss: () -> Unit,
     onConfirm: (String) -> Unit,
 ) {
@@ -498,7 +499,7 @@ private fun DeleteCategoryDialog(
     var target by remember { mutableStateOf(preferred?.id ?: "0") }
     var menu by remember { mutableStateOf(false) }
     MochiAlertDialog(
-        onDismissRequest = onDismiss,
+        onDismissRequest = { if (!busy) onDismiss() },
         title = stringResource(R.string.notifprefs_delete_title, category.label),
         content = {
             Column {
@@ -525,8 +526,10 @@ private fun DeleteCategoryDialog(
         },
         confirmText = stringResource(R.string.notifprefs_delete),
         onConfirm = { onConfirm(target) },
+        confirmLoading = busy,
         destructive = true,
         dismissText = stringResource(MochiR.string.common_cancel),
+        dismissEnabled = !busy,
     )
 }
 

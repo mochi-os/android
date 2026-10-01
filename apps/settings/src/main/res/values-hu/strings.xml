@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Üzemeltető neve</string>
     <string name="system_setting_operator_email">Üzemeltető e-mail-címe</string>
     <string name="system_setting_operator_jurisdiction">Üzemeltető joghatósága</string>
-    <string name="system_setting_server_started">A kiszolgáló elindult</string>
-    <string name="system_setting_server_version">Kiszolgáló verziója</string>
     <string name="system_setting_signup_enabled">Új regisztrációk engedélyezése</string>
     <string name="system_users_title">Felhasználók</string>
     <string name="system_users_col_user">Felhasználó</string>
@@ -395,4 +393,5 @@
     <string name="accounts_provider_caldav">Naptárkiszolgáló</string>
     <string name="accounts_revoke_confirm">Ezzel visszavonja %1$s naptárhozzáférését. A %2$s fiókkal való bejelentkezés megmarad, amíg a Bejelentkezés oldalon le nem választja.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Ismeretlen téma</string>
 </resources>

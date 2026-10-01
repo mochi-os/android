@@ -220,6 +220,11 @@
     <string name="forums_all_forums">Svi forumi</string>
     <string name="forums_create_allow_search">Dopusti svima pretraživanje foruma</string>
     <string name="forums_rss_clipboard_label">RSS URL foruma</string>
+    <string name="forums_notifications_post">Nove objave</string>
+    <string name="forums_notifications_reply">Odgovori vama</string>
+    <string name="forums_notifications_comment">Svi odgovori</string>
+    <string name="forums_follow_thread">Prati temu</string>
+    <string name="forums_unfollow_thread">Prestani pratiti temu</string>
     <string name="forums_tab_moderation">Moderiranje</string>
     <string name="forums_access_level_view_full">Samo pregled</string>
     <string name="forums_access_level_none_full">Nema pristupa</string>

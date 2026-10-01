@@ -92,7 +92,8 @@ data class ContactsBatchResponse(val contacts: List<Contact> = emptyList())
 /** `-/token/create`: the device's password, returned this once, and the username to enter beside it. */
 data class TokenResponse(val token: String = "", val username: String = "")
 
-data class TokensResponse(val tokens: List<DeviceToken> = emptyList())
+/** The body of `-/token/list`: the devices, and the username every device enters. */
+data class TokensResponse(val tokens: List<DeviceToken> = emptyList(), val username: String = "")
 
 data class SearchUsersResponse(val results: List<User> = emptyList())
 
@@ -209,6 +210,8 @@ interface PeopleApi {
         @Field("name") name: String,
         /** An existing card to link to the person first, so it becomes the friend itself. */
         @Field("contact") contact: String? = null,
+        /** The address book a contact the invite makes goes in; the default one when null. */
+        @Field("book") book: String? = null,
     ): Response<ApiResponse<EmptyResponse>>
 
     @FormUrlEncoded

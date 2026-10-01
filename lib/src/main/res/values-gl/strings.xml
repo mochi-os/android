@@ -316,4 +316,8 @@
     <string name="device_name_fallback">Dispositivo móbil</string>
     <string name="account_error_token_type">Tipo de testemuño non admitido</string>
     <string name="account_error_caller">Quen chama non ten permiso</string>
+    <string name="zone_sea">No mar</string>
+    <string name="access_remove">Eliminar</string>
+    <string name="access_remove_title">Eliminar acceso?</string>
+    <string name="access_remove_message">Quitar a regra de acceso para «%1$s»?</string>
 </resources>

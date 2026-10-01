@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">نام اپراتور</string>
     <string name="system_setting_operator_email">ایمیل اپراتور</string>
     <string name="system_setting_operator_jurisdiction">حوزه قضایی اپراتور</string>
-    <string name="system_setting_server_started">سرور آغاز به کار کرد</string>
-    <string name="system_setting_server_version">نسخه سرور</string>
     <string name="system_setting_signup_enabled">اجازهٔ ثبت‌نام‌های جدید</string>
     <string name="system_users_title">کاربران</string>
     <string name="system_users_col_user">کاربر</string>
@@ -395,4 +393,5 @@
     <string name="accounts_provider_caldav">سرور تقویم</string>
     <string name="accounts_revoke_confirm">این کار دسترسی تقویم %1$s را لغو می‌کند. ورود با %2$s تا زمانی که در صفحهٔ ورود آن را جدا کنید باقی می‌ماند.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">تم ناشناخته</string>
 </resources>

@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Lahat ng forum</string>
     <string name="forums_create_allow_search">Payagan ang sinuman na hanapin ang forum</string>
     <string name="forums_rss_clipboard_label">RSS URL ng forum</string>
+    <string name="forums_notifications_post">Mga bagong post</string>
+    <string name="forums_notifications_reply">Mga tugon sa iyo</string>
+    <string name="forums_notifications_comment">Lahat ng tugon</string>
+    <string name="forums_follow_thread">Sundan ang thread</string>
+    <string name="forums_unfollow_thread">Itigil ang pagsunod sa thread</string>
     <string name="forums_tab_moderation">Moderasyon</string>
     <string name="forums_access_level_view_full">Tingnan lamang</string>
     <string name="forums_access_level_none_full">Walang access</string>

@@ -155,6 +155,7 @@
     <string name="feeds_markdown_supported">Markdown suportado</string>
     <string name="feeds_permission_deny">Negar</string>
     <string name="feeds_rss_feed">Feed RSS</string>
+    <string name="feeds_notifications_post">Novas postagens</string>
     <string name="feeds_settings_field_entity_id">ID da entidade</string>
     <string name="feeds_settings_field_fingerprint">Impressão digital</string>
     <string name="feeds_settings_field_server">Servidor</string>

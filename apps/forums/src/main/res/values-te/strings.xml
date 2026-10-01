@@ -219,6 +219,11 @@
     <string name="forums_all_forums">అన్ని ఫోరమ్‌లు</string>
     <string name="forums_create_allow_search">ఎవరైనా ఫోరమ్‌ను వెతకడానికి అనుమతించండి</string>
     <string name="forums_rss_clipboard_label">ఫోరమ్ RSS URL</string>
+    <string name="forums_notifications_post">కొత్త పోస్ట్‌లు</string>
+    <string name="forums_notifications_reply">మీకు ప్రత్యుత్తరాలు</string>
+    <string name="forums_notifications_comment">అన్ని ప్రత్యుత్తరాలు</string>
+    <string name="forums_follow_thread">థ్రెడ్‌ను అనుసరించు</string>
+    <string name="forums_unfollow_thread">థ్రెడ్‌ను అనుసరించడం ఆపు</string>
     <string name="forums_tab_moderation">మోడరేషన్</string>
     <string name="forums_access_level_view_full">వీక్షణ మాత్రమే</string>
     <string name="forums_access_level_none_full">యాక్సెస్ లేదు</string>

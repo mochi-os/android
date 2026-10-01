@@ -316,4 +316,8 @@
     <string name="device_name_fallback">Мобилно устройство</string>
     <string name="account_error_token_type">Неподдържан тип токен</string>
     <string name="account_error_caller">Извикващият няма право</string>
+    <string name="zone_sea">В морето</string>
+    <string name="access_remove">Премахни</string>
+    <string name="access_remove_title">Премахни достъпа?</string>
+    <string name="access_remove_message">Да се премахне ли правилото за достъп за „%1$s“?</string>
 </resources>

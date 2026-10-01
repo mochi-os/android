@@ -4,6 +4,7 @@
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 package org.mochios.calendars
 
+import com.google.gson.Gson
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
@@ -39,5 +40,12 @@ class InstanceTest {
         val midnight = 1790035200L // 2026-09-22T00:00Z, as a server expanding in UTC sends it
         assertEquals(LocalDate.of(2026, 9, 22), last(LocalDate.of(2026, 9, 22), midnight, midnight + 86400))
         assertEquals(LocalDate.of(2026, 9, 23), last(LocalDate.of(2026, 9, 22), midnight, midnight + 2 * 86400))
+    }
+
+    /** A core that knows about reminders says so; one that predates the field leaves it out. */
+    @Test
+    fun anOccurrenceSaysWhetherItHasAReminder() {
+        assertTrue(Gson().fromJson("""{"event":"01a0c3f2","alarm":true}""", Instance::class.java).alarm)
+        assertFalse(Gson().fromJson("""{"event":"01a0c3f2"}""", Instance::class.java).alarm)
     }
 }

@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">İşletmeci adı</string>
     <string name="system_setting_operator_email">İşletmeci e-postası</string>
     <string name="system_setting_operator_jurisdiction">İşletmeci yargı yetkisi</string>
-    <string name="system_setting_server_started">Sunucu başlatıldı</string>
-    <string name="system_setting_server_version">Sunucu sürümü</string>
     <string name="system_setting_signup_enabled">Yeni kayıtlara izin ver</string>
     <string name="system_users_title">Kullanıcılar</string>
     <string name="system_users_col_user">Kullanıcı</string>
@@ -395,4 +393,5 @@
     <string name="accounts_provider_caldav">Takvim sunucusu</string>
     <string name="accounts_revoke_confirm">Bu, %1$s hesabının takvim erişimini iptal eder. %2$s ile oturum açma, Giriş sayfasında bağlantıyı kaldırana kadar devam eder.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Bilinmeyen tema</string>
 </resources>

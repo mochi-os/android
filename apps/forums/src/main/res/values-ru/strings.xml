@@ -221,6 +221,11 @@
     <string name="forums_all_forums">Все форумы</string>
     <string name="forums_create_allow_search">Разрешить всем искать форум</string>
     <string name="forums_rss_clipboard_label">RSS-адрес форума</string>
+    <string name="forums_notifications_post">Новые публикации</string>
+    <string name="forums_notifications_reply">Ответы вам</string>
+    <string name="forums_notifications_comment">Все ответы</string>
+    <string name="forums_follow_thread">Следить за темой</string>
+    <string name="forums_unfollow_thread">Не следить за темой</string>
     <string name="forums_tab_moderation">Модерация</string>
     <string name="forums_access_level_view_full">Только просмотр</string>
     <string name="forums_access_level_none_full">Нет доступа</string>

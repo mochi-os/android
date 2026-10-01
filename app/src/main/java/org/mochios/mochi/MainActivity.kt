@@ -742,13 +742,21 @@ open class MainActivity : ComponentActivity() {
         val id = parts.getOrNull(1)
         when (firstSegment) {
             "feeds" -> {
+                val route = FeedsApp.linkRoute(id, parts.getOrNull(2), parseQueryParam(query, "link"))
+                if (route == null || id == null) {
+                    navController.navigate(FeedsApp.HOME) { launchSingleTop = true }
+                    return
+                }
+                if (navController.isAt(route)) return
+                if (id == "find") {
+                    navController.navigate(route) { launchSingleTop = true }
+                    return
+                }
                 // Feeds' HOME is the router, which resolves the last-viewed feed
                 // and pops itself; left under a deep-linked feed it traps Back in
                 // a resolve loop, so the feed replaces it rather than stacking on
-                // top of it.
-                if (id == null) {
-                    navController.navigate(FeedsApp.HOME) { launchSingleTop = true }
-                } else if (!navController.isAt(FeedsApp.feed(id))) {
+                // top of it. A post opens over its feed, so Back returns there.
+                if (!navController.isAt(FeedsApp.feed(id))) {
                     val popTo = if (navController.holds(FeedsApp.ROUTER)) {
                         FeedsApp.ROUTER
                     } else {
@@ -758,6 +766,9 @@ open class MainActivity : ComponentActivity() {
                         popUpTo(popTo) { inclusive = true }
                         launchSingleTop = true
                     }
+                }
+                if (route != FeedsApp.feed(id)) {
+                    navController.navigate(route) { launchSingleTop = true }
                 }
             }
             "chat" -> {
@@ -774,9 +785,10 @@ open class MainActivity : ComponentActivity() {
                 if (id != null) navController.navigate(ChatApp.chat(id)) { launchSingleTop = true }
             }
             "forums" -> {
-                if (id != null && navController.isAt(ForumsApp.forum(id))) return
+                val route = ForumsApp.linkRoute(id, parts.getOrNull(2), parseQueryParam(query, "server"))
+                if (route != null && navController.isAt(route)) return
                 navController.openAppHome(ForumsApp.HOME)
-                if (id != null) navController.navigate(ForumsApp.forum(id)) { launchSingleTop = true }
+                if (route != null) navController.navigate(route) { launchSingleTop = true }
             }
             "projects" -> {
                 navController.openAppHome(ProjectsApp.HOME)
@@ -888,11 +900,9 @@ open class MainActivity : ComponentActivity() {
             }
             "calendars" -> {
                 navController.openAppHome(CalendarsApp.HOME)
-                // A reminder names the event it is for, and the second segment
-                // is the occurrence it names when the event repeats.
-                if (id != null && id != "views") {
-                    val occurrence = parts.getOrNull(2)?.toLongOrNull() ?: 0
-                    navController.navigate(CalendarsApp.event(id, occurrence)) { launchSingleTop = true }
+                // A reminder names the event it is for and its occurrence.
+                CalendarsApp.linked(path, query)?.let { route ->
+                    navController.navigate(route) { launchSingleTop = true }
                 }
             }
         }

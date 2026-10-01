@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Majukwaa yote</string>
     <string name="forums_create_allow_search">Ruhusu mtu yeyote kutafuta baraza</string>
     <string name="forums_rss_clipboard_label">URL ya RSS ya baraza</string>
+    <string name="forums_notifications_post">Machapisho mapya</string>
+    <string name="forums_notifications_reply">Majibu kwako</string>
+    <string name="forums_notifications_comment">Majibu yote</string>
+    <string name="forums_follow_thread">Fuata mfululizo</string>
+    <string name="forums_unfollow_thread">Acha kufuata mfululizo</string>
     <string name="forums_tab_moderation">Udhibiti</string>
     <string name="forums_access_level_view_full">Tazama tu</string>
     <string name="forums_access_level_none_full">Hakuna ufikiaji</string>

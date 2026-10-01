@@ -217,6 +217,7 @@
     <string name="forums_all_forums">Alle forums</string>
     <string name="forums_create_allow_search">Iedereen toestaan naar het forum te zoeken</string>
     <string name="forums_rss_clipboard_label">RSS-URL van forum</string>
+    <string name="forums_notifications_post">Nieuwe berichten</string>
     <string name="forums_tab_moderation">Moderatie</string>
     <string name="forums_access_level_view_full">Alleen-lezen</string>
     <string name="forums_access_level_none_full">Geen toegang</string>

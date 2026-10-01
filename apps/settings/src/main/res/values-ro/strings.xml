@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Nume operator</string>
     <string name="system_setting_operator_email">Email operator</string>
     <string name="system_setting_operator_jurisdiction">Jurisdicție operator</string>
-    <string name="system_setting_server_started">Serverul a pornit</string>
-    <string name="system_setting_server_version">Versiunea serverului</string>
     <string name="system_setting_signup_enabled">Permite înscrieri noi</string>
     <string name="system_users_title">Utilizatori</string>
     <string name="system_users_col_user">Utilizator</string>
@@ -397,4 +395,5 @@
     <string name="accounts_provider_caldav">Server de calendar</string>
     <string name="accounts_revoke_confirm">Aceasta va revoca accesul la calendar al %1$s. Autentificarea cu %2$s rămâne până când o deconectezi din pagina de autentificare.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Temă necunoscută</string>
 </resources>

@@ -218,6 +218,11 @@
     <string name="forums_all_forums">ກະດານສົນທະນາທັງໝົດ</string>
     <string name="forums_create_allow_search">ອະນຸຍາດໃຫ້ທຸກຄົນຄົ້ນຫາກະດານສົນທະນາ</string>
     <string name="forums_rss_clipboard_label">URL RSS ຂອງກະດານສົນທະນາ</string>
+    <string name="forums_notifications_post">ໂພສໃໝ່</string>
+    <string name="forums_notifications_reply">ການຕອບກັບຫາທ່ານ</string>
+    <string name="forums_notifications_comment">ການຕອບກັບທັງໝົດ</string>
+    <string name="forums_follow_thread">ຕິດຕາມກະທູ້</string>
+    <string name="forums_unfollow_thread">ເຊົາຕິດຕາມກະທູ້</string>
     <string name="forums_tab_moderation">ການກວດກາ</string>
     <string name="forums_access_level_view_full">ເບິ່ງເທົ່ານັ້ນ</string>
     <string name="forums_access_level_none_full">ບໍ່ມີການເຂົ້າເຖິງ</string>

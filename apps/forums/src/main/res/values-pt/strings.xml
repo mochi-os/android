@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Todos os fóruns</string>
     <string name="forums_create_allow_search">Permitir que qualquer pessoa pesquise o fórum</string>
     <string name="forums_rss_clipboard_label">URL RSS do fórum</string>
+    <string name="forums_notifications_post">Novas publicações</string>
+    <string name="forums_notifications_reply">Respostas a si</string>
+    <string name="forums_notifications_comment">Todas as respostas</string>
+    <string name="forums_follow_thread">Seguir tópico</string>
+    <string name="forums_unfollow_thread">Deixar de seguir tópico</string>
     <string name="forums_tab_moderation">Moderação</string>
     <string name="forums_access_level_view_full">Apenas visualização</string>
     <string name="forums_access_level_none_full">Sem acesso</string>

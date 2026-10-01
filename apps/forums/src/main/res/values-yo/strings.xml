@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Gbogbo àwọn forum</string>
     <string name="forums_create_allow_search">Gba ẹnikẹ́ni láàyè láti wá àpéjọ</string>
     <string name="forums_rss_clipboard_label">RSS URL àpéjọ</string>
+    <string name="forums_notifications_post">Àwọn ìfìránṣẹ́ tuntun</string>
+    <string name="forums_notifications_reply">Àwọn ìdáhùn sí ọ</string>
+    <string name="forums_notifications_comment">Gbogbo ìdáhùn</string>
+    <string name="forums_follow_thread">Tẹ̀lé òwò ìjíròrò</string>
+    <string name="forums_unfollow_thread">Dẹ́kun títẹ̀lé òwò ìjíròrò</string>
     <string name="forums_tab_moderation">Ìṣàkóso</string>
     <string name="forums_access_level_view_full">Wíwò nìkan</string>
     <string name="forums_access_level_none_full">Kò sí àyè</string>

@@ -15,7 +15,7 @@
     <string name="market_account_seller_step_stripe_desc">Bittootaarraa kaffaltii fudhachuuf herrega Stripe walqunnamsiisi</string>
     <string name="market_account_seller_fees_heading">Kaffaltii:</string>
     <string name="market_account_seller_fees_mochi">Mochi gurgurtaa tokkoon tokkoon %1$s%% fudhata.</string>
-    <string name="market_account_seller_fees_stripe">Stripe gurmaa\'ina ofii isaa daldala tokkoon tokkoon fi kaffaltii dhaabbataa deebii kaffaltii tokkoon tokkoon ni kaffalchiisa. Gatiiwwan ammaa maallaqaa fi naannoo keetiif Dashboard Stripe kee keessatti tarreeffamaniiru.</string>
+    <string name="market_account_seller_fees_stripe">Stripe gurmaa\'ina ofii isaa daldala tokkoon tokkoon fi kaffaltii dhaabbataa chaargii deebi\'e tokkoon tokkoon ni kaffalchiisa. Gatiiwwan ammaa maallaqaa fi naannoo keetiif Dashboard Stripe kee keessatti tarreeffamaniiru.</string>
     <string name="market_account_seller_connect">Stripe Walitti Hidhi</string>
     <string name="market_account_seller_step_stripe_title">Stripe Walitti Hidhi</string>
     <string name="market_account_seller_check_status">Haala mirkaneessi</string>
@@ -85,7 +85,7 @@
     <string name="market_checkout_delivery_pickup">Fudhachuu</string>
     <string name="market_checkout_delivery_shipping">Geejjiba</string>
     <string name="market_checkout_get_free">Bilisaan argadhu</string>
-    <string name="market_checkout_item">Iddoo</string>
+    <string name="market_checkout_item">Meeshaa</string>
     <string name="market_checkout_listing_not_found">Tarreeffamni hin argamne</string>
     <string name="market_checkout_pay_button">Stripe tin kaffalaa</string>
     <string name="market_checkout_payment_failed">Kaffaltiin jalqabamuu hin dandeenye — gurguraan qindaa\'ina kaffaltii xumuruu dhiisuu danda\'a</string>
@@ -182,7 +182,7 @@
     <string name="market_editor_zone_region">Naannoo</string>
     <string name="market_editor_zone_worldwide">Addunyaa irraa</string>
     <string name="market_empty_title">Bu\'aan hin jiru</string>
-    <string name="market_fee_preview_item">Iddoo</string>
+    <string name="market_fee_preview_item">Meeshaa</string>
     <string name="market_fee_preview_payout">Kaffaltii kee</string>
     <string name="market_filter_all">Hunda</string>
     <string name="market_filter_apply">Raawwadhu</string>
@@ -288,11 +288,11 @@
     <string name="market_purchase_delivery">Geejjiba</string>
     <string name="market_purchase_dispute_details">Bal\'ina kee</string>
     <string name="market_purchase_dispute_reason">Sababa</string>
-    <string name="market_purchase_dispute_resolution">Furmaata qajeelchaa</string>
+    <string name="market_purchase_dispute_resolution">Furmaata hojjettootaa</string>
     <string name="market_purchase_dispute_title">Iyyannoo deebii kaffaltii</string>
     <string name="market_purchase_download_failed">Buufachuu hin dandeenye</string>
     <string name="market_purchase_download_section">Bittaan keessan qophaa\'eera</string>
-    <string name="market_purchase_item">Iddoo</string>
+    <string name="market_purchase_item">Meeshaa</string>
     <string name="market_purchase_message_seller">Gurgurtaa ergaaf ergi</string>
     <string name="market_purchase_not_found">Ajajni hin argamne</string>
     <string name="market_purchase_order_label">Ajaja</string>
@@ -581,8 +581,8 @@
     <string name="market_profile_rating_breakdown">Bal\'ina madaallii</string>
     <string name="market_profile_sales_count">Gurgurtaa %1$d</string>
     <string name="market_profile_stars_value">Urjii %1$d</string>
-    <string name="market_purchase_dispute_chargeback">Deebii kaffaltii %1$s</string>
-    <string name="market_purchase_dispute_chargeback_body">Baankiin kee ajaja kana irratti deebii kaffaltii galmeesseera. Stripe falmii kana gurgurtaa waliin qabateera; bu\'aan isaa yeroo murtaa\'u asitti mul\'ata.</string>
+    <string name="market_purchase_dispute_chargeback">Chaargii deebi\'e %1$s</string>
+    <string name="market_purchase_dispute_chargeback_body">Baankiin kee ajaja kana irratti chaargii deebi\'e galmeesseera. Stripe falmii kana gurgurtaa waliin qabateera; bu\'aan isaa yeroo murtaa\'u asitti mul\'ata.</string>
     <string name="market_purchase_dispute_response">Deebii gurgurtaa</string>
     <string name="market_purchase_download_many">Faayiloota kee %1$d gadi buusi.</string>
     <string name="market_purchase_download_one">Faayilii kee gadi buusi.</string>
@@ -610,7 +610,7 @@
     <string name="market_sale_carrier_custom_label">Maqaa geejjibsiisaa</string>
     <string name="market_sale_dispute_evidence_due">Ragaan kan dhihaatu %1$s</string>
     <string name="market_sale_dispute_state_responded">Murtii eegaa jira</string>
-    <string name="market_sale_dispute_stripe_reason">Sababii deebii kaffaltii Stripe: %1$s</string>
+    <string name="market_sale_dispute_stripe_reason">Sababii chaargii deebi\'e Stripe: %1$s</string>
     <string name="market_sale_fee_gross">Walumaa galatti</string>
     <string name="market_sale_fee_mochi">Kaffaltii Mochi</string>
     <string name="market_sale_fee_payout">Kaffaltii dhumaa</string>

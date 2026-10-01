@@ -106,14 +106,14 @@ class InvitationsViewModel @Inject constructor(
     }
 
     fun filteredReceived(): List<FriendInvite> {
-        val q = _uiState.value.searchQuery.lowercase()
+        val q = _uiState.value.searchQuery.trim().lowercase()
         val list = _uiState.value.received
         if (q.isBlank()) return list
         return list.filter { it.name.lowercase().contains(q) }
     }
 
     fun filteredSent(): List<FriendInvite> {
-        val q = _uiState.value.searchQuery.lowercase()
+        val q = _uiState.value.searchQuery.trim().lowercase()
         val list = _uiState.value.sent
         if (q.isBlank()) return list
         return list.filter { it.name.lowercase().contains(q) }

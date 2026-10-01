@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Ngaran operator</string>
     <string name="system_setting_operator_email">Surélék operator</string>
     <string name="system_setting_operator_jurisdiction">Yurisdiksi operator</string>
-    <string name="system_setting_server_started">Server dimimitian</string>
-    <string name="system_setting_server_version">Versi server</string>
     <string name="system_setting_signup_enabled">Idinkeun signup anyar</string>
     <string name="system_users_title">Pamaké</string>
     <string name="system_users_col_user">Pamaké</string>
@@ -394,4 +392,5 @@
     <string name="accounts_provider_caldav">Server kalénder</string>
     <string name="accounts_revoke_confirm">Ieu bakal ngabatalkeun aksés kalénder %1$s. Asup ku %2$s tetep aya nepi ka anjeun nyoplokkeun tumbuna dina kaca Asup.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Téma teu dipikawanoh</string>
 </resources>

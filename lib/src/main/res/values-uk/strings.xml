@@ -318,4 +318,8 @@
     <string name="device_name_fallback">Мобільний пристрій</string>
     <string name="account_error_token_type">Непідтримуваний тип токена</string>
     <string name="account_error_caller">Викликачу не дозволено</string>
+    <string name="zone_sea">У морі</string>
+    <string name="access_remove">Видалити</string>
+    <string name="access_remove_title">Видалити доступ?</string>
+    <string name="access_remove_message">Вилучити правило доступу для «%1$s»?</string>
 </resources>

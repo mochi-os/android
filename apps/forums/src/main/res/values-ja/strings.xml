@@ -218,6 +218,11 @@
     <string name="forums_all_forums">すべてのフォーラム</string>
     <string name="forums_create_allow_search">誰でもフォーラムを検索できるようにする</string>
     <string name="forums_rss_clipboard_label">フォーラムのRSS URL</string>
+    <string name="forums_notifications_post">新しい投稿</string>
+    <string name="forums_notifications_reply">あなたへの返信</string>
+    <string name="forums_notifications_comment">すべての返信</string>
+    <string name="forums_follow_thread">スレッドをフォロー</string>
+    <string name="forums_unfollow_thread">スレッドのフォローを解除</string>
     <string name="forums_tab_moderation">モデレーション</string>
     <string name="forums_access_level_view_full">閲覧のみ</string>
     <string name="forums_access_level_none_full">アクセスなし</string>

@@ -219,6 +219,11 @@
     <string name="forums_all_forums">هەموو فۆڕەمەکان</string>
     <string name="forums_create_allow_search">ڕێگە بدە بە هەرکەسێک فۆڕەم بگەڕێت</string>
     <string name="forums_rss_clipboard_label">RSS URL ی فۆڕەم</string>
+    <string name="forums_notifications_post">پۆستی نوێ</string>
+    <string name="forums_notifications_reply">وەڵامەکان بۆ تۆ</string>
+    <string name="forums_notifications_comment">هەموو وەڵامەکان</string>
+    <string name="forums_follow_thread">شوێنکەوتنی زنجیرە</string>
+    <string name="forums_unfollow_thread">وازهێنان لە شوێنکەوتنی زنجیرە</string>
     <string name="forums_tab_moderation">چاودێری</string>
     <string name="forums_access_level_view_full">تەنها بینین</string>
     <string name="forums_access_level_none_full">دەستڕاگەیشتن نییە</string>

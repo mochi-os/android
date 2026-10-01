@@ -109,10 +109,10 @@
     <string name="settings_display_reset">Gara durtiitti deebisi</string>
     <string name="settings_display_reset_confirm_title">Agarsiisa deebisuu?</string>
     <string name="settings_display_reset_confirm_message">Kun qindaa\'inoota agarsiisa gara gatiiwwan isaanii durtiitti ni deebisa.</string>
-    <string name="settings_theme_title">Akeeka</string>
+    <string name="settings_theme_title">Bifa</string>
     <string name="settings_theme_default">Idilee</string>
     <string name="settings_background">Duubbee</string>
-    <string name="settings_background_theme">Akeeka irraa</string>
+    <string name="settings_background_theme">Bifa irraa</string>
     <string name="settings_background_off">Tokko illee</string>
     <string name="game_chat_empty">Hanga ammaatti ergaawwan hin jiran</string>
     <string name="game_chat_input_placeholder">Ergaa barreessi…</string>
@@ -177,7 +177,7 @@
     <string name="access_no_rules">Seerri seensaa hin jiru</string>
     <string name="access_add_rule_title">Seera seensaa dabali</string>
     <string name="access_level_manage">Bulchi</string>
-    <string name="access_level_react">Deebii kenni</string>
+    <string name="access_level_react">Deebii miiraa kenni</string>
     <string name="notifications_clear">Beeksisa qulqulleessi</string>
     <string name="entity_avatar_alt">Awwaataara %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
@@ -217,7 +217,7 @@
     <string name="notifications_clear_all_title">Beeksisawwan hunda haquu?</string>
     <string name="notifications_clear_all_message">Kun beeksisa hunda ni haqa. Deebisanii argachuun hin danda\'amu.</string>
     <string name="settings_value_auto">Ofumaan</string>
-    <string name="settings_value_theme">Haalata durtii</string>
+    <string name="settings_value_theme">Durtii bifaa</string>
     <string name="settings_radius">Raadiyeesii golee</string>
     <string name="settings_timestamp_display">Agarsiisa yeroo</string>
     <string name="settings_timestamp_relative">Walqabataa</string>
@@ -302,18 +302,22 @@
     <string name="rss_revoke_confirm">Haqi</string>
     <string name="rss_revoke">Argama haqi</string>
     <string name="rss_revoke_title">Argaa RSS haqamuu?</string>
-    <string name="rss_revoke_message">Wanti kamiyyuu nyaata kana ajaje fudhachuu ni dhaaba. Booda URL haaraa garagalchuu dandeessa.</string>
+    <string name="rss_revoke_message">Wanti kamiyyuu feed kana ajaje fudhachuu ni dhaaba. Booda URL haaraa garagalchuu dandeessa.</string>
     <string name="rss_revoked">Argamni RSS haqameera</string>
     <string name="rss_revoke_failed">Argama RSS haquun hin milkoofne</string>
     <string name="game_empty_title">Hanga ammaatti taphaaleen hin jiran</string>
     <string name="game_select_title">Taphaa filadhu</string>
     <string name="game_select_subtitle">Bar cinaacha irraa taphaa filadhu yookaan haaraa jalqabi.</string>
     <string name="settings_card">Akkaataa kaardii</string>
-    <string name="settings_card_theme">Akeeka irraa</string>
+    <string name="settings_card_theme">Bifa irraa</string>
     <string name="settings_card_flat">Diriiraa</string>
     <string name="settings_card_raised">Ol kaafame</string>
     <string name="error_server_https">Teessoon sarvarii https:// jalqabuu qaba</string>
     <string name="device_name_fallback">Meeshaa mobaayilii</string>
     <string name="account_error_token_type">Gosti toksinii hin deggeramne</string>
     <string name="account_error_caller">Waamichi hin hayyamamne</string>
+    <string name="zone_sea">Galaana irratti</string>
+    <string name="access_remove">Haqi</string>
+    <string name="access_remove_title">Itti seenumsa haquuf?</string>
+    <string name="access_remove_message">Seera argannoo \"%1$s\" haquu?</string>
 </resources>

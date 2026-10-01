@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Orúkọ olùṣiṣẹ́</string>
     <string name="system_setting_operator_email">Ímeèlì olùṣiṣẹ́</string>
     <string name="system_setting_operator_jurisdiction">Agbègbè òfin olùṣiṣẹ́</string>
-    <string name="system_setting_server_started">Server ti bẹ̀rẹ̀</string>
-    <string name="system_setting_server_version">Ẹ̀dà server</string>
     <string name="system_setting_signup_enabled">Jẹ́ kí àwọn ìforúkọsílẹ̀ tuntun</string>
     <string name="system_users_title">Àwọn user</string>
     <string name="system_users_col_user">Olùmúlò</string>
@@ -394,4 +392,5 @@
     <string name="accounts_provider_caldav">Sáfà kàlẹ́ńdà</string>
     <string name="accounts_revoke_confirm">Èyí yóò fagilé ìwọlé kàlẹ́ńdà ti %1$s. Ìwọlé pẹ̀lú %2$s yóò dúró títí tí ìwọ yóò fi tú u sílẹ̀ ní ojú-ìwé Ìwọlé.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Theme àìmọ̀</string>
 </resources>

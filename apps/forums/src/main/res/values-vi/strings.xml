@@ -218,6 +218,11 @@
     <string name="forums_all_forums">Tất cả diễn đàn</string>
     <string name="forums_create_allow_search">Cho phép bất kỳ ai tìm kiếm diễn đàn</string>
     <string name="forums_rss_clipboard_label">URL RSS của diễn đàn</string>
+    <string name="forums_notifications_post">Bài viết mới</string>
+    <string name="forums_notifications_reply">Phản hồi cho bạn</string>
+    <string name="forums_notifications_comment">Tất cả phản hồi</string>
+    <string name="forums_follow_thread">Theo dõi chủ đề</string>
+    <string name="forums_unfollow_thread">Bỏ theo dõi chủ đề</string>
     <string name="forums_tab_moderation">Kiểm duyệt</string>
     <string name="forums_access_level_view_full">Chỉ xem</string>
     <string name="forums_access_level_none_full">Không có quyền truy cập</string>

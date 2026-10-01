@@ -28,13 +28,14 @@ import org.mochios.calendars.api.PreferencesRequest
 import org.mochios.calendars.model.AccountsResponse
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.CalendarAccount
-import org.mochios.calendars.model.DeviceToken
 import org.mochios.calendars.model.TokenResponse
+import org.mochios.calendars.model.TokensResponse
 import org.mochios.calendars.model.Event
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.LinkResponse
 import org.mochios.calendars.model.Preferences
 import org.mochios.calendars.model.GrantResponse
+import org.mochios.calendars.model.PollResponse
 import org.mochios.calendars.model.RemoteCalendar
 import org.mochios.calendars.ui.calendar.Bounds
 import org.mochios.calendars.ui.editor.excluded
@@ -209,8 +210,15 @@ class CalendarsRepository @Inject constructor(
      * Fetches a subscription or syncs a linked calendar now, answering how
      * many events moved.
      */
-    suspend fun pollCalendar(calendar: String): Int = call {
-        api.pollCalendar(calendar).unwrap().changed
+    /**
+     * Sync the linked calendars someone is looking at; the server skips any
+     * synced in the last minute. A change is announced, so the screens reload.
+     */
+    suspend fun refreshCalendars(): Boolean =
+        call { api.refreshCalendars().unwrap().changed }.also { if (it) announce() }
+
+    suspend fun pollCalendar(calendar: String): PollResponse = call {
+        api.pollCalendar(calendar).unwrap()
     }.also { announce() }
 
     /** Resolve a permission key to its human label. */
@@ -357,7 +365,7 @@ class CalendarsRepository @Inject constructor(
 
     suspend fun createToken(name: String): TokenResponse = call { api.createToken(name).unwrap() }
 
-    suspend fun listTokens(): List<DeviceToken> = call { api.listTokens().unwrap().tokens }
+    suspend fun listTokens(): TokensResponse = call { api.listTokens().unwrap() }
 
     suspend fun deleteToken(hash: String) {
         call { api.deleteToken(hash).unwrap() }

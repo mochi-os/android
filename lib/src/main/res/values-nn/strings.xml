@@ -316,4 +316,8 @@
     <string name="device_name_fallback">Mobil eining</string>
     <string name="account_error_token_type">Tokentypen er ikkje støtta</string>
     <string name="account_error_caller">Kallaren har ikkje løyve</string>
+    <string name="zone_sea">Til sjøs</string>
+    <string name="access_remove">Fjern</string>
+    <string name="access_remove_title">Fjern tilgang?</string>
+    <string name="access_remove_message">Fjerne tilgangsregel for «%1$s»?</string>
 </resources>

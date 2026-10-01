@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Nieuwe uitnodigingen verschijnen hier</string>
     <string name="people_invitations_accept">Accepteren</string>
     <string name="people_invitations_decline">Weigeren</string>
+    <string name="people_invitations_listed_as">Vermeld als %1$s</string>
     <string name="people_invitations_toast_policy">Uitnodigingsbeleid bijgewerkt</string>
     <string name="people_invite_settings">Uitnodigingsinstellingen</string>
     <string name="people_invite_settings_notify_me">Stuur me een melding</string>
@@ -31,21 +32,20 @@
     <string name="people_groups_not_found">Groep niet gevonden</string>
     <string name="people_group_name">Groepsnaam</string>
     <string name="people_group_description">Beschrijving</string>
-    <string name="people_group_description_optional">Optionele beschrijving</string>
     <string name="people_group_name_required">Naam is verplicht</string>
     <string name="people_group_actions">Groepsacties</string>
     <string name="people_group_members">Leden</string>
     <string name="people_group_members_count">Aantal leden</string>
-    <string name="people_group_members_description">Gebruikers en groepen die tot deze groep behoren</string>
     <string name="people_group_no_members">Geen leden</string>
     <string name="people_group_delete">Groep verwijderen</string>
     <string name="people_member_add">Lid toevoegen</string>
     <string name="people_member_add_hint">Voeg gebruikers of groepen toe om te beginnen</string>
     <string name="people_member_remove">Lid verwijderen</string>
     <string name="people_member_remove_title">Lid verwijderen</string>
-    <string name="people_member_search_hint">Geef een naam in om mensen te vinden die je wilt toevoegen</string>
     <string name="people_member_type_user">Gebruiker</string>
     <string name="people_member_type_group">Groep</string>
+    <string name="people_member_unknown_person">Onbekende persoon</string>
+    <string name="people_member_deleted_group">Verwijderde groep</string>
     <string name="people_profile_save">Opslaan</string>
     <string name="people_profile_saving">Opslaan…</string>
     <string name="people_profile_save_failed">Opslaan mislukt</string>
@@ -55,7 +55,6 @@
     <string name="people_profile_identity">Identiteit</string>
     <string name="people_profile_accent">Accent</string>
     <string name="people_profile_directory_listing">Anderen toestaan u te vinden in de directory</string>
-    <string name="people_profile_markdown_supported">Markdown ondersteund</string>
     <string name="people_profile_preview">Voorbeeld</string>
     <string name="people_profile_upload_avatar">Avatar uploaden</string>
     <string name="people_profile_upload">Uploaden</string>
@@ -149,11 +148,9 @@
     <string name="people_device_server">Server</string>
     <string name="people_device_username">Gebruikersnaam</string>
     <string name="people_device_done">Klaar</string>
-    <string name="people_device_list">Apparaten</string>
     <string name="people_device_used">Laatst gebruikt %1$s</string>
     <string name="people_device_never">Nooit</string>
     <string name="people_sync_now">Nu synchroniseren</string>
-    <string name="people_device_title">Apparaat koppelen</string>
     <string name="people_device_name">Apparaatnaam</string>
     <string name="people_device_address">URL van het adresboek</string>
     <string name="people_device_password">Wachtwoord</string>
@@ -163,7 +160,7 @@
     <string name="people_device_created">Aangemaakt %1$s</string>
     <string name="people_device_delete">Apparaat verwijderen</string>
     <string name="people_device_delete_title">Apparaat verwijderen?</string>
-    <string name="people_device_delete_message">Het apparaat kan dan geen contacten meer synchroniseren.</string>
+    <string name="people_device_delete_message">Het apparaat kan dan geen contacten of agenda\'s meer synchroniseren.</string>
     <string name="people_device_deleted">Apparaat verwijderd</string>
     <string name="people_contact_friend">Mochi-vriend</string>
 </resources>

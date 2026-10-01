@@ -318,4 +318,8 @@
     <string name="device_name_fallback">מכשיר נייד</string>
     <string name="account_error_token_type">סוג אסימון שאינו נתמך</string>
     <string name="account_error_caller">הקורא אינו מורשה</string>
+    <string name="zone_sea">בים</string>
+    <string name="access_remove">הסר</string>
+    <string name="access_remove_title">להסיר גישה?</string>
+    <string name="access_remove_message">להסיר את כלל הגישה עבור \"%1$s\"?</string>
 </resources>

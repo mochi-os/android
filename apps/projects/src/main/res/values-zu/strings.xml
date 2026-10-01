@@ -177,7 +177,7 @@
 
     <string name="notification_channel_projects">Izaziso zamaphrojekthi</string>
     <string name="projects_auth_brand">Mochi Amaphrojekthi</string>
-    <string name="projects_auth_create_identity_failed">Yehlulekile ukudala ubunikazi</string>
+    <string name="projects_auth_create_identity_failed">Kuhlulekile ukudala ubunikazi</string>
     <string name="projects_auth_mfa_unsupported">I-MFA ayikasekelwa kuhlelo lokusebenza lweselula</string>
     <string name="projects_auth_enter_code_sent">Faka ikhodi ethunyelwe ku-%1$s</string>
     <string name="projects_auth_create_identity">Dala ubunikazi bakho</string>

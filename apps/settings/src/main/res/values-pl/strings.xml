@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Nazwa operatora</string>
     <string name="system_setting_operator_email">E-mail operatora</string>
     <string name="system_setting_operator_jurisdiction">Jurysdykcja operatora</string>
-    <string name="system_setting_server_started">Serwer uruchomiony</string>
-    <string name="system_setting_server_version">Wersja serwera</string>
     <string name="system_setting_signup_enabled">Zezwól na nowe rejestracje</string>
     <string name="system_users_title">Użytkownicy</string>
     <string name="system_users_col_user">Użytkownik</string>
@@ -399,4 +397,5 @@
     <string name="accounts_provider_caldav">Serwer kalendarza</string>
     <string name="accounts_revoke_confirm">Spowoduje to odebranie dostępu do kalendarza dla %1$s. Logowanie przez %2$s pozostanie, dopóki nie odłączysz go na stronie logowania.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Nieznany motyw</string>
 </resources>

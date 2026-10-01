@@ -219,6 +219,11 @@
     <string name="forums_all_forums">Բոլոր ֆորումները</string>
     <string name="forums_create_allow_search">Թույլատրել բոլորին որոնել ֆորում</string>
     <string name="forums_rss_clipboard_label">Ֆորումի RSS URL</string>
+    <string name="forums_notifications_post">Նոր գրառումներ</string>
+    <string name="forums_notifications_reply">Ձեզ ուղղված պատասխաններ</string>
+    <string name="forums_notifications_comment">Բոլոր պատասխանները</string>
+    <string name="forums_follow_thread">Հետևել թեմային</string>
+    <string name="forums_unfollow_thread">Դադարել հետևել թեմային</string>
     <string name="forums_tab_moderation">Մոդերացիա</string>
     <string name="forums_access_level_view_full">Միայն դիտել</string>
     <string name="forums_access_level_none_full">Մուտք չկա</string>

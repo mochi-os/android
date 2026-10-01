@@ -3,7 +3,7 @@
     <string name="calendars_create_submit">Uumi</string>
     <string name="calendars_subscribe_submit">Galaa\'i</string>
     <string name="calendars_subscribe_url">Teessoo</string>
-    <string name="calendars_connect_device">Meeshaa walqabsiisi</string>
+    <string name="calendars_connect_device">Meeshaalee walqabsiifaman</string>
     <string name="calendars_preferences">Filannoowwan</string>
     <string name="calendars_name">Maqaa</string>
     <string name="calendars_rename">Maqaa jijjiiri</string>
@@ -11,7 +11,6 @@
     <string name="calendars_view">Mul\'ata</string>
     <string name="calendars_view_list">Tarree</string>
     <string name="calendars_list_search">Barbaadi</string>
-    <string name="calendars_event_untitled">Mata dureen hin qabne</string>
     <string name="calendars_event_title">Mata duree</string>
     <string name="calendars_event_location">Iddoo</string>
     <string name="calendars_event_description">Ibsa</string>
@@ -37,9 +36,10 @@
     <string name="calendars_sync_never">Ammallee hin walsimsiifamne</string>
     <string name="calendars_sync_time">Yeroo dhumaa walsimsiifame: %1$s</string>
     <string name="calendars_sync_transport">Sarvarii bira gahuu hin dandeenye</string>
-    <string name="calendars_device_title">Meeshaa walqabsiisi</string>
+    <string name="calendars_device_title">Meeshaalee walqabsiifaman</string>
     <string name="calendars_device_name">Maqaa meeshaa</string>
     <string name="calendars_device_create">Uumi</string>
+    <string name="calendars_device_add">Meeshaa dabali</string>
     <string name="calendars_device_server">Sarvarii</string>
     <string name="calendars_device_address">Teessoo</string>
     <string name="calendars_device_username">Maqaa fayyadamaa</string>
@@ -61,21 +61,20 @@
     <string name="calendars_poll">Amma sakatta\'i</string>
     <string name="calendars_delete_title">%1$s haquu?</string>
     <string name="calendars_delete_message">Taateewwan isaa isa waliin ni haqamu.</string>
-    <plurals name="calendars_polled">
-        <item quantity="one">taateen %1$d haaromfameera</item>
-        <item quantity="other">taateewwan %1$d haaromfamaniiru</item>
-    </plurals>
+    <string name="calendars_remove">Haqi</string>
+    <string name="calendars_remove_title">%1$s Mochi irraa haquu?</string>
+    <string name="calendars_remove_message">Taateewwan isaa kaalaandarii jalqabaa keessatti hafu.</string>
     <string name="calendars_today">Har\'a</string>
     <string name="calendars_view_week">Torbee</string>
     <string name="calendars_view_multiweek">Torbeewwan hedduu</string>
     <string name="calendars_view_month">Ji\'a</string>
     <string name="calendars_workweek">Torbee hojii</string>
+    <string name="calendars_range">%1$s hanga %2$s</string>
     <string name="calendars_truncated">Taateewwan yeroo kana keessaa tokko tokko hin agarsiifamne.</string>
     <string name="calendars_list_empty">Taateewwan hin jiran</string>
-    <plurals name="calendars_more">
-        <item quantity="one">+%1$d dabalataa</item>
-        <item quantity="other">+%1$d dabalataa</item>
-    </plurals>
+    <string name="calendars_untitled">(Mata duree hin qabu)</string>
+    <string name="calendars_status_cancelled">Haqame</string>
+    <string name="calendars_status_tentative">Hin mirkanoofne</string>
     <string name="calendars_event_new">Taatee haaraa</string>
     <string name="calendars_event_edit">Taatee sirreessi</string>
     <string name="calendars_event_calendar">Kaalaandarii</string>
@@ -97,9 +96,20 @@
     <string name="calendars_repeat_count">Baay\'ina irra deebi\'uu</string>
     <string name="calendars_repeat_forever">Bara baraan</string>
     <string name="calendars_reminder_time">Yeroo taateen jalqabu</string>
-    <string name="calendars_reminder_minutes">daqiiqaa %1$d dura</string>
-    <string name="calendars_reminder_hour">sa\'aatii 1 dura</string>
-    <string name="calendars_reminder_day">guyyaa 1 dura</string>
+    <plurals name="calendars_reminder_minutes">
+        <item quantity="one">daqiiqaa %1$d dura</item>
+        <item quantity="other">daqiiqaa %1$d dura</item>
+    </plurals>
+    <plurals name="calendars_reminder_hours">
+        <item quantity="one">sa\'aatii %1$d dura</item>
+        <item quantity="other">sa\'aatii %1$d dura</item>
+    </plurals>
+    <plurals name="calendars_reminder_days">
+        <item quantity="one">guyyaa %1$d dura</item>
+        <item quantity="other">guyyoota %1$d dura</item>
+    </plurals>
+    <string name="calendars_reminder_add">Yaadachiisa dabali</string>
+    <string name="calendars_reminder_remove">Yaadachiisa haqi</string>
     <string name="calendars_hours_start">Jalqaba sa\'aatii hojii</string>
     <string name="calendars_hours_finish">Xumura sa\'aatii hojii</string>
     <string name="calendars_hours_invalid">Sa\'aatiin hojii erga jalqabee booda xumuramuu qaba.</string>
@@ -108,16 +118,18 @@
     <string name="calendars_multiweek_previous">Torbeewwan duraa</string>
     <string name="calendars_default_duration">Dheerina taatee idilee</string>
     <string name="calendars_default_reminder">Yaadachiisa idilee</string>
+    <string name="calendars_default_calendar">Kaalaandarii idilee</string>
+    <string name="calendars_preferences_allday">Taateewwan guyyaa guutuu</string>
+    <string name="calendars_allday_first">Jalqaba irratti</string>
+    <string name="calendars_allday_last">Dhuma irratti</string>
     <string name="calendars_link_title">Hidhaa kaalaandarii</string>
     <string name="calendars_link_copy">Hidhaa garagalchi</string>
     <string name="calendars_link_once">Amma garagalchi: lammata mul\'achuu hin danda\'u.</string>
     <string name="calendars_link_exists">Kaalaandarii kanaaf hidhaan duraan jira.</string>
     <string name="calendars_permission_title">Qaqqabummaa eeyyamuu?</string>
     <string name="calendars_permission_message">%1$s kana gaafata:</string>
-    <string name="calendars_sync_permission">Qaqqabummaan kaalaandarii barbaachisaadha</string>
     <string name="calendars_sync_authorization">Wal simsiisuu itti fufuuf irra deebi\'ii seeni</string>
     <string name="calendars_device_warning">Jecha darbii amma garagalchi: lammata mul\'achuu hin danda\'u.</string>
-    <string name="calendars_device_list">Meeshaalee walqabsiifaman</string>
     <string name="calendars_device_empty">Meeshaan walqabsiifame hin jiru</string>
     <string name="calendars_device_used">Yeroo dhumaa fayyadamame %1$s</string>
     <string name="calendars_device_never">gonkumaa</string>
@@ -167,9 +179,14 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Kaalandarii Google</string>
-    <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Akkaawuntiiwwan Google sarvarii kana irratti hin dandeessifamne. Qindaa\'inoota, Qindaa\'inoota sirnaa keessatti isaan dandeessisi.</string>
     <string name="calendars_subscribe_google_connect">Akkaawuntii Google hin walqabsiifne.</string>
     <string name="calendars_subscribe_google_connect_action">Google wal qunnamsiisi</string>
     <string name="calendars_grant_failed">Seensi kaalaandarii hin kennamne</string>
+    <string name="calendars_event_exception">Taatee jijjiirame</string>
+    <string name="calendars_span_day">%1$s, %2$s hanga %3$s</string>
+    <string name="calendars_polled_current">Kaalaandariin haaraadha</string>
+    <string name="calendars_polled_synced">Kaalaandariin walsimsiifame</string>
+    <string name="calendars_link_revoke_title">Teessoo kaalaandarii haquu barbaaddaa?</string>
+    <string name="calendars_link_revoke_message">Kaalandariileen teessoo kana irratti galmaa\'an kana booda hin haaromfaman.</string>
 </resources>

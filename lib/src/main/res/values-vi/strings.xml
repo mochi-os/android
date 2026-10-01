@@ -317,4 +317,8 @@
     <string name="device_name_fallback">Thiết bị di động</string>
     <string name="account_error_token_type">Loại mã thông báo không được hỗ trợ</string>
     <string name="account_error_caller">Bên gọi không được phép</string>
+    <string name="zone_sea">Trên biển</string>
+    <string name="access_remove">Xoá</string>
+    <string name="access_remove_title">Xoá quyền truy cập?</string>
+    <string name="access_remove_message">Xóa quy tắc truy cập cho \"%1$s\"?</string>
 </resources>

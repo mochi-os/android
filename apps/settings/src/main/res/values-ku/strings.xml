@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Navê operator</string>
     <string name="system_setting_operator_email">Emaila operator</string>
     <string name="system_setting_operator_jurisdiction">Hiqûqa operator</string>
-    <string name="system_setting_server_started">Server dest pê kir</string>
-    <string name="system_setting_server_version">Guhertoya server</string>
     <string name="system_setting_signup_enabled">Destûrê bide tomarkirinên nû</string>
     <string name="system_users_title">Bikarhêner</string>
     <string name="system_users_col_user">Bikarhêner</string>
@@ -395,4 +393,5 @@
     <string name="accounts_provider_caldav">Servera salnameyê</string>
     <string name="accounts_revoke_confirm">Ev ê gihîştina salnameya %1$s betal bike. Têketina bi %2$s heta ku tu wê di rûpela Têketinê de venegirêdî dimîne.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Temaya nenas</string>
 </resources>

@@ -54,5 +54,8 @@ data class CalendarsResponse(val calendars: List<Calendar> = emptyList())
 /** The body of every action that answers one calendar. */
 data class CalendarResponse(val calendar: Calendar = Calendar())
 
-/** The body of `-/calendars/poll`: how many events the poll moved. */
-data class PollResponse(val changed: Int = 0, val calendar: Calendar = Calendar())
+/** The body of `-/calendars/poll`: whether the poll changed anything, and the calendar after it. */
+data class PollResponse(val changed: Boolean = false, val calendar: Calendar = Calendar())
+
+/** `-/calendars/refresh`: whether syncing the stale linked calendars changed anything. */
+data class RefreshResponse(val changed: Boolean = false)

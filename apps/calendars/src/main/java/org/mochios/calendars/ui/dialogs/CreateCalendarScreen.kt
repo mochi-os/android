@@ -30,6 +30,7 @@ import org.mochios.android.ui.components.ColorPicker
 import org.mochios.android.ui.components.CreateEntityForm
 import org.mochios.android.ui.components.CreateEntityScaffold
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.util.characters
 import org.mochios.calendars.R
 import org.mochios.calendars.repository.CalendarsRepository
 import javax.inject.Inject
@@ -45,6 +46,9 @@ data class CreateCalendarUiState(
     val created: String? = null,
 )
 
+/** The server refuses a calendar name longer than this, in characters. */
+const val NAME_MAXIMUM = 100
+
 @HiltViewModel
 class CreateCalendarViewModel @Inject constructor(
     private val repository: CalendarsRepository,
@@ -54,7 +58,7 @@ class CreateCalendarViewModel @Inject constructor(
     val uiState: StateFlow<CreateCalendarUiState> = _uiState.asStateFlow()
 
     fun setName(value: String) {
-        _uiState.value = _uiState.value.copy(name = value, error = null)
+        _uiState.value = _uiState.value.copy(name = characters(value, NAME_MAXIMUM), error = null)
     }
 
     fun setColour(value: String) {

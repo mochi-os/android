@@ -17,6 +17,7 @@
     <string name="people_invitations_empty_hint">Las nuevas invitaciones aparecerán aquí</string>
     <string name="people_invitations_accept">Aceptar</string>
     <string name="people_invitations_decline">Rechazar</string>
+    <string name="people_invitations_listed_as">En el directorio como %1$s</string>
     <string name="people_invitations_toast_policy">Política de invitaciones actualizada</string>
     <string name="people_invite_settings">Configuración de invitaciones</string>
     <string name="people_invite_settings_notify_me">Avisarme</string>
@@ -31,21 +32,20 @@
     <string name="people_groups_not_found">Grupo no encontrado</string>
     <string name="people_group_name">Nombre del grupo</string>
     <string name="people_group_description">Descripción</string>
-    <string name="people_group_description_optional">Descripción opcional</string>
     <string name="people_group_name_required">El nombre es obligatorio</string>
     <string name="people_group_actions">Acciones de grupo</string>
     <string name="people_group_members">Miembros</string>
     <string name="people_group_members_count">Cantidad de miembros</string>
-    <string name="people_group_members_description">Usuarios y grupos que pertenecen a este grupo</string>
     <string name="people_group_no_members">No hay miembros</string>
     <string name="people_group_delete">Eliminar grupo</string>
     <string name="people_member_add">Añadir miembro</string>
     <string name="people_member_add_hint">Añade usuarios o grupos para empezar</string>
     <string name="people_member_remove">Eliminar miembro</string>
     <string name="people_member_remove_title">Eliminar miembro</string>
-    <string name="people_member_search_hint">Ingresa un nombre para encontrar personas que quieras agregar</string>
     <string name="people_member_type_user">Usuario</string>
     <string name="people_member_type_group">Grupo</string>
+    <string name="people_member_unknown_person">Persona desconocida</string>
+    <string name="people_member_deleted_group">Grupo eliminado</string>
     <string name="people_profile_save">Guardar</string>
     <string name="people_profile_saving">Guardando…</string>
     <string name="people_profile_save_failed">Error al guardar</string>
@@ -55,7 +55,6 @@
     <string name="people_profile_identity">Identidad</string>
     <string name="people_profile_accent">Acento</string>
     <string name="people_profile_directory_listing">Permitir que otros te encuentren en el directorio</string>
-    <string name="people_profile_markdown_supported">Markdown compatible</string>
     <string name="people_profile_preview">Vista previa</string>
     <string name="people_profile_upload_avatar">Subir avatar</string>
     <string name="people_profile_upload">Subir</string>
@@ -150,11 +149,9 @@
     <string name="people_device_server">Servidor</string>
     <string name="people_device_username">Nombre de usuario</string>
     <string name="people_device_done">Hecho</string>
-    <string name="people_device_list">Dispositivos</string>
     <string name="people_device_used">Último uso %1$s</string>
     <string name="people_device_never">Nunca</string>
     <string name="people_sync_now">Sincronizar ahora</string>
-    <string name="people_device_title">Conectar un dispositivo</string>
     <string name="people_device_name">Nombre del dispositivo</string>
     <string name="people_device_address">URL de la libreta de direcciones</string>
     <string name="people_device_password">Contraseña</string>
@@ -164,7 +161,7 @@
     <string name="people_device_created">Creado %1$s</string>
     <string name="people_device_delete">Eliminar dispositivo</string>
     <string name="people_device_delete_title">¿Eliminar el dispositivo?</string>
-    <string name="people_device_delete_message">El dispositivo ya no podrá sincronizar contactos.</string>
+    <string name="people_device_delete_message">El dispositivo ya no podrá sincronizar contactos ni calendarios.</string>
     <string name="people_device_deleted">Dispositivo eliminado</string>
     <string name="people_contact_friend">Amigo de Mochi</string>
 </resources>

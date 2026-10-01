@@ -295,6 +295,7 @@
     <string name="system_settings_reset_title">Reset to default?</string>
     <string name="system_settings_reset_message">This will reset \"%1$s\" to its default value (%2$s).</string>
     <string name="system_settings_reset_message_empty">This will reset \"%1$s\" to its default (empty).</string>
+    <string name="system_settings_theme_unknown">Unknown theme</string>
     <string name="system_setting_apps_install_user">Allow users to install apps</string>
     <string name="system_setting_auth_email">Login using email code</string>
     <string name="system_setting_auth_passkey">Login using passkey</string>
@@ -321,8 +322,6 @@
     <string name="system_setting_operator_name">Operator name</string>
     <string name="system_setting_operator_email">Operator email</string>
     <string name="system_setting_operator_jurisdiction">Operator jurisdiction</string>
-    <string name="system_setting_server_started">Server started</string>
-    <string name="system_setting_server_version">Server version</string>
     <string name="system_setting_signup_enabled">Allow new signups</string>
     <string name="system_setting_hostname">Hostname announced to other servers</string>
     <string name="system_setting_hostname_publish">Announce hostname and domains to other servers</string>

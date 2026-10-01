@@ -316,4 +316,8 @@
     <string name="device_name_fallback">Mobiilseade</string>
     <string name="account_error_token_type">Toetamata loasiku tüüp</string>
     <string name="account_error_caller">Kutsujal pole luba</string>
+    <string name="zone_sea">Merel</string>
+    <string name="access_remove">Eemalda</string>
+    <string name="access_remove_title">Kas eemaldada juurdepääs?</string>
+    <string name="access_remove_message">Kas eemaldada juurdepääsureegel „%1$s“ jaoks?</string>
 </resources>

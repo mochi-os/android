@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">ឈ្មោះប្រតិបត្តិករ</string>
     <string name="system_setting_operator_email">អ៊ីមែលរបស់ប្រតិបត្តិករ</string>
     <string name="system_setting_operator_jurisdiction">យុត្តាធិការរបស់ប្រតិបត្តិករ</string>
-    <string name="system_setting_server_started">ម៉ាស៊ីនមេបានចាប់ផ្តើម</string>
-    <string name="system_setting_server_version">កំណែម៉ាស៊ីនមេ</string>
     <string name="system_setting_signup_enabled">អនុញ្ញាតការចុះឈ្មោះថ្មី</string>
     <string name="system_users_title">អ្នកប្រើប្រាស់</string>
     <string name="system_users_col_user">អ្នកប្រើប្រាស់</string>
@@ -393,4 +391,5 @@
     <string name="accounts_provider_caldav">ម៉ាស៊ីនមេប្រតិទិន</string>
     <string name="accounts_revoke_confirm">នេះនឹងដកសិទ្ធិចូលប្រើប្រតិទិនរបស់ %1$s។ ការចូលដោយ %2$s នៅតែមានរហូតដល់អ្នកផ្តាច់វានៅលើទំព័រចូល។</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">រូបរាងមិនស្គាល់</string>
 </resources>

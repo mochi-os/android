@@ -21,10 +21,13 @@ import org.mochios.android.i18n.PreferencesManager
 import org.mochios.android.sync.CalendarsMapping
 import org.mochios.android.sync.EventComponent
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.descriptionText
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Event
+import org.mochios.calendars.model.Hours
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.Zone
+import org.mochios.calendars.model.defaultCalendar
 import org.mochios.calendars.repository.CalendarsRepository
 import org.mochios.calendars.repository.EventChangedException
 import org.mochios.calendars.storage.Memory
@@ -66,8 +69,10 @@ data class EditorUiState(
     val revealed: Boolean = false,
     val location: String = "",
     val description: String = "",
+    /** The description as the event holds it, which [description] shows as text. */
+    val original: String = "",
     val recurrence: Recurrence = Recurrence(),
-    val reminder: Int = 15,
+    val reminders: List<Int> = emptyList(),
     val etag: String = "",
     val recurring: Boolean = false,
     /**
@@ -165,17 +170,17 @@ class EventEditViewModel @Inject constructor(
                 val begins = when {
                     memory.allday -> day(if (start > 0) start else Instant.now().epochSecond)
                     start > 0 -> start
-                    else -> nextHour()
+                    else -> opening(preferences?.hours ?: Hours())
                 }
                 val length = if (memory.allday) 86_400L else 60L * (preferences?.duration ?: 60)
                 _uiState.value = EditorUiState(
                     calendars = calendars,
-                    calendar = preferred(calendars),
+                    calendar = preferred(calendars, preferences?.calendar.orEmpty()),
                     allday = memory.allday,
                     start = begins,
                     finish = begins + length,
                     zone = memory.zone,
-                    reminder = preferences?.reminder ?: 15,
+                    reminders = defaultReminders(preferences?.reminder ?: 15),
                     isLoading = false,
                 )
                 return@launch
@@ -201,7 +206,8 @@ class EventEditViewModel @Inject constructor(
             try {
                 val loaded = repository.getEvent(event)
                 val form = copied(loaded.components, occurrence, scope, zone) ?: EventForm()
-                open(form, calendars, calendars.firstOrNull { it.id == loaded.calendar }?.id ?: preferred(calendars))
+                val preference = runCatching { repository.getPreferences().calendar }.getOrNull().orEmpty()
+                open(form, calendars, calendars.firstOrNull { it.id == loaded.calendar }?.id ?: preferred(calendars, preference))
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }
@@ -218,7 +224,7 @@ class EventEditViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             val calendars = calendars() ?: return@launch
             val preferences = runCatching { repository.getPreferences() }.getOrNull()
-            open(copied(instance, zone, preferences?.reminder ?: 15), calendars, preferred(calendars))
+            open(copied(instance, zone, preferences?.reminder ?: 15), calendars, preferred(calendars, preferences?.calendar.orEmpty()))
         }
     }
 
@@ -235,8 +241,9 @@ class EventEditViewModel @Inject constructor(
             zone = form.zone,
             location = form.location,
             description = form.description,
+            original = form.original,
             recurrence = form.recurrence,
-            reminder = form.reminder,
+            reminders = form.reminders,
             isLoading = false,
         )
     }
@@ -261,12 +268,9 @@ class EventEditViewModel @Inject constructor(
         MemoryStore.memory(context, Memory(allday = state.allday, zone = form(state).zone))
     }
 
-    /** The calendar a new event lands in: the one last written to, else the default, else the first. */
-    private fun preferred(calendars: List<Calendar>): String =
-        VisibilityStore.recent(context)
-            ?.takeIf { recent -> calendars.any { it.id == recent } }
-            ?: calendars.firstOrNull { it.default }?.id
-            ?: calendars.firstOrNull()?.id.orEmpty()
+    /** The calendar a new event lands in: the one the preferences name, else the built-in default. */
+    private fun preferred(calendars: List<Calendar>, preference: String): String =
+        defaultCalendar(calendars, preference)
 
     /** The form for a loaded event, showing the occurrence the user opened. */
     private fun fill(loaded: Event, moment: Long, calendars: List<Calendar>) {
@@ -293,8 +297,9 @@ class EventEditViewModel @Inject constructor(
         // rather than the series', which is the one the master declares.
         val begins = if (override == null && occurrence > 0) occurrence else declared
         val ends = begins + length
-        val alarm = shown.components.firstOrNull { it.name.equals("VALARM", ignoreCase = true) }
-            ?: master?.components?.firstOrNull { it.name.equals("VALARM", ignoreCase = true) }
+        // An override replaces its occurrence whole: its reminders are its own,
+        // and one with none has none.
+        val alarms = alarms(shown)
         _uiState.value = EditorUiState(
             event = loaded.id,
             occurrence = occurrence,
@@ -307,9 +312,10 @@ class EventEditViewModel @Inject constructor(
             finish = ends,
             zone = written(shown, zone),
             location = shown.value("LOCATION"),
-            description = shown.value("DESCRIPTION"),
+            description = descriptionText(shown.value("DESCRIPTION")),
+            original = shown.value("DESCRIPTION"),
             recurrence = recurrence(master?.value("RRULE")),
-            reminder = alarm?.property("TRIGGER")?.let { minutes(it.value) } ?: -1,
+            reminders = alarms.mapNotNull(::alarmMinutes).distinct(),
             etag = loaded.etag,
             recurring = master?.property("RRULE") != null || master?.property("RDATE") != null,
             series = master?.property("DTSTART")?.let { CalendarsMapping.moment(it) / 1000 } ?: 0,
@@ -327,7 +333,13 @@ class EventEditViewModel @Inject constructor(
 
     fun description(value: String) = edit { copy(description = value) }
 
-    fun reminder(value: Int) = edit { copy(reminder = value) }
+    /** Sets the reminder at [index] to [minutes] before the start. */
+    fun reminder(index: Int, minutes: Int) =
+        edit { copy(reminders = reminders.mapIndexed { at, each -> if (at == index) minutes else each }) }
+
+    fun addReminder() = edit { copy(reminders = reminders + nextReminder(reminders)) }
+
+    fun removeReminder(index: Int) = edit { copy(reminders = reminders.filterIndexed { at, _ -> at != index }) }
 
     fun recurrence(value: Recurrence) = edit { copy(recurrence = recurrence.revised(value)) }
 
@@ -445,7 +457,7 @@ class EventEditViewModel @Inject constructor(
             _uiState.value = state.copy(isSaving = true, error = null)
             try {
                 val saved = write(state, scope, state.etag)
-                VisibilityStore.recent(context, saved.calendar)
+                VisibilityStore.reveal(context, saved.calendar)
                 remember(state)
                 _uiState.value = _uiState.value.copy(isSaving = false, saved = true)
             } catch (_: EventChangedException) {
@@ -455,7 +467,7 @@ class EventEditViewModel @Inject constructor(
                     val fresh = repository.getEvent(state.event.orEmpty())
                     carried = fresh
                     val saved = write(state.copy(etag = fresh.etag), scope, fresh.etag)
-                    VisibilityStore.recent(context, saved.calendar)
+                    VisibilityStore.reveal(context, saved.calendar)
                     _uiState.value = _uiState.value.copy(isSaving = false, saved = true)
                 } catch (e: Exception) {
                     _uiState.value = _uiState.value.copy(isSaving = false, error = e.toMochiError())
@@ -474,6 +486,16 @@ class EventEditViewModel @Inject constructor(
      */
     private suspend fun write(state: EditorUiState, scope: Scope, etag: String): Event {
         if (state.event == null) return repository.createEvent(state.calendar, components(state, scope))
+        // One occurrence taken to another calendar leaves the series behind
+        // and becomes an event of its own there.
+        val home = carried?.calendar
+        if (scope == Scope.ONE && state.recurring && state.occurrence > 0 && home != null && state.calendar != home) {
+            return moveOccurrence(
+                create = { repository.createEvent(state.calendar, single(form(state), carried?.components.orEmpty())) },
+                exclude = { repository.excludeOccurrence(state.event, state.occurrence) },
+                delete = { created -> repository.deleteEvent(created.id, created.etag) },
+            )
+        }
         if (scope == Scope.FOLLOWING && state.recurring) {
             val halves = split(carried?.components.orEmpty(), form(state), state.occurrence, zone)
             if (halves != null) {
@@ -526,20 +548,22 @@ class EventEditViewModel @Inject constructor(
         zone = Zone(state.zone.start.ifBlank { zone }, state.zone.finish.ifBlank { zone }),
         location = state.location,
         description = state.description,
+        original = state.original,
         recurrence = state.recurrence,
-        reminder = state.reminder,
+        reminders = state.reminders,
         occurrence = state.occurrence,
         series = state.series,
     )
 
-    /** The next whole hour, in the user's zone, for a new event with no time. */
-    private fun nextHour(): Long =
-        java.time.ZonedDateTime.now(runCatching { ZoneId.of(zone) }.getOrDefault(ZoneId.systemDefault()))
-            .plusHours(1)
-            .withMinute(0)
-            .withSecond(0)
-            .withNano(0)
-            .toEpochSecond()
+    /**
+     * Where a new event opened with no time at all starts: today's next whole
+     * hour, or tomorrow's working [hours] once today has none left.
+     */
+    private fun opening(hours: Hours): Long {
+        val id = runCatching { ZoneId.of(zone) }.getOrDefault(ZoneId.systemDefault())
+        val now = java.time.ZonedDateTime.now(id)
+        return defaultStart(now.toLocalDate(), now.toLocalDate(), now.toLocalTime(), hours).atZone(id).toEpochSecond()
+    }
 
     /** The day [moment] falls on in the user's zone, at its UTC midnight, which is how an all-day form holds a day. */
     private fun day(moment: Long): Long =
@@ -548,6 +572,25 @@ class EventEditViewModel @Inject constructor(
             .toLocalDate()
             .atStartOfDay(ZoneOffset.UTC)
             .toEpochSecond()
+}
+
+/** The component's `VALARM`s. */
+fun alarms(component: EventComponent): List<EventComponent> =
+    component.components.filter { it.name.equals("VALARM", ignoreCase = true) }
+
+/**
+ * The minutes before the start an alarm fires, when the reminder setting can
+ * say it: a duration relative to the start, at or before it. An alarm relative
+ * to the end, after the start or at a fixed time is null; the editor leaves it
+ * as it is.
+ */
+fun alarmMinutes(alarm: EventComponent): Int? {
+    val trigger = alarm.property("TRIGGER") ?: return null
+    if (trigger.parameter("RELATED").equals("END", ignoreCase = true)) return null
+    if (trigger.parameter("VALUE").equals("DATE-TIME", ignoreCase = true)) return null
+    val value = trigger.value.trim()
+    if (!value.startsWith("-P") && !value.startsWith("P")) return null
+    return minutes(value).takeIf { it >= 0 }
 }
 
 /** A `TRIGGER` as minutes before the start, -1 when it says something else. */

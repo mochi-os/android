@@ -34,7 +34,7 @@
     <string name="wikis_unsubscribe_confirm_title">Galaa\'uu kaasi</string>
     <string name="wikis_unsubscribe_success">Galaa\'uun kaafameera</string>
     <string name="wikis_subscribe_failed">Galmaa\'uu hin dandeenye</string>
-    <string name="wikis_rss_menu">Fiidii RSS</string>
+    <string name="wikis_rss_menu">Feed RSS</string>
     <string name="wikis_rss_changes">Jijjiiramoota</string>
     <string name="wikis_rss_comments">Yaadawwan</string>
     <string name="wikis_rss_both">Jijjiiramootaa fi yaadawwan</string>
@@ -172,7 +172,7 @@
     <string name="wikis_settings_tab_replicas">Dachaalee</string>
     <string name="wikis_settings_section_identity">Eenyummaa</string>
     <string name="wikis_settings_field_name">Maqaa</string>
-    <string name="wikis_settings_field_entity_id">ID Iddoo</string>
+    <string name="wikis_settings_field_entity_id">ID Qaamaa</string>
     <string name="wikis_settings_field_fingerprint">Maxxansa quba</string>
     <string name="wikis_settings_name_edit_cd">Maqaa sirreessi</string>
     <string name="wikis_settings_name_invalid_char">Maqaan arfiilee &lt; ykn &gt; qabaachuu hin danda\'u</string>
@@ -188,7 +188,7 @@
     <string name="wikis_settings_section_home">Fuula manaa</string>
     <string name="wikis_settings_field_home_label">Akka mana fayyadami</string>
     <string name="wikis_settings_home_saved">Qindaa\'inoonni olkaa\'amaniiru</string>
-    <string name="wikis_settings_home_save_failed">Filannoo olkaa\'uu hin dandeenye</string>
+    <string name="wikis_settings_home_save_failed">Qindaa\'ina olkaa\'uu hin dandeenye</string>
     <string name="wikis_settings_section_delete">Wikii haqi</string>
     <string name="wikis_settings_delete_action">Wikii haqi</string>
     <string name="wikis_settings_delete_confirm_title">Dhugumatti mirkanaa\'oo dha?</string>
@@ -209,7 +209,7 @@
     <string name="wikis_access_no_groups">Garreen hin jiran</string>
     <string name="wikis_access_set_success">Seensi haaromfame</string>
     <string name="wikis_access_revoke_success">Seensi haqame</string>
-    <string name="wikis_access_revoke_failed">Carraa fudhatamuu haquu hin dandeenye</string>
+    <string name="wikis_access_revoke_failed">Seensa haquu hin dandeenye</string>
     <string name="wikis_replicas_empty_title">Hanga ammaatti dachaaleen hin jiran</string>
     <string name="wikis_replicas_empty_message">Yeroo wikiwwan kaan wiki kana irra deebi\'an, asitti mul\'atu.</string>
     <string name="wikis_replicas_never_synced">Gonkumaa</string>
@@ -281,7 +281,7 @@
     <string name="wikis_replicas_remove_confirm_message">Kun “%1$s”f haaromsa erguu ni dhaaba. Yoo barbaadan irra deebi\'anii baay\'isuu danda\'u.</string>
     <string name="wikis_replicas_removed_success">Dachaan haqameera</string>
     <string name="wikis_load_more">Caalaa fe\'i</string>
-    <string name="wikis_access_change_level">Sadarkaa seensaa</string>
+    <string name="wikis_access_change_level">Sadarkaa seensaa jijjiiri</string>
     <string name="wikis_access_subject_anyone">Nama kamiyyuu</string>
     <string name="wikis_access_subject_authenticated">Fayyadamtoota mirkanaa\'an</string>
 
@@ -327,7 +327,7 @@
     <string name="wikis_attachments_upload_limits">Ol-kaa\'umsi guddaan qindaa\'ina sarvarii ykn proxy keetiin daangeffamuu danda\'a.</string>
     <string name="wikis_rss_replace">Bakka buusi</string>
     <string name="wikis_rss_copied_new">URL RSS haaraa kilipboordiitti garagalfame</string>
-    <string name="wikis_rss_exists">URL nyaataa kun duraan kennameera, ammas agarsiisuu hin danda\'amu.</string>
+    <string name="wikis_rss_exists">URL feed kun duraan kennameera, ammas agarsiisuu hin danda\'amu.</string>
     <plurals name="wikis_comments_truncated">
         <item quantity="one">Yaada %1$d jalqabaa agarsiisaa jira.</item>
         <item quantity="other">Yaadota %1$d jalqabaa agarsiisaa jira.</item>

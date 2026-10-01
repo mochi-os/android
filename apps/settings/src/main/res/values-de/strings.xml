@@ -161,8 +161,6 @@
     <string name="system_setting_operator_name">Name des Betreibers</string>
     <string name="system_setting_operator_email">E-Mail des Betreibers</string>
     <string name="system_setting_operator_jurisdiction">Gerichtsstand des Betreibers</string>
-    <string name="system_setting_server_started">Server gestartet</string>
-    <string name="system_setting_server_version">Server-Version</string>
     <string name="system_setting_signup_enabled">Neue Anmeldungen erlauben</string>
     <string name="system_users_title">Benutzer</string>
     <string name="system_users_col_user">Benutzer</string>
@@ -395,4 +393,5 @@
     <string name="accounts_provider_caldav">Kalenderserver</string>
     <string name="accounts_revoke_confirm">Damit wird der Kalenderzugriff von %1$s widerrufen. Die Anmeldung mit %2$s bleibt bestehen, bis Sie sie auf der Anmeldeseite trennen.</string>
     <string name="accounts_capability_mcp">MCP</string>
+    <string name="system_settings_theme_unknown">Unbekanntes Theme</string>
 </resources>

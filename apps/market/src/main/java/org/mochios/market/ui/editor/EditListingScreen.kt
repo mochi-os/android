@@ -396,16 +396,18 @@ fun EditListingScreen(
     }
 
     if (showDeleteConfirm) {
+        // Stays open, its button spinning, until the delete answers: success
+        // leaves the editor, a failure leaves the confirmation up.
         MochiAlertDialog(
-            onDismissRequest = { showDeleteConfirm = false },
+            onDismissRequest = { if (!state.isDeleting) showDeleteConfirm = false },
             title = stringResource(R.string.market_editor_delete_confirm_title),
             text = stringResource(R.string.market_editor_delete_confirm_message),
             confirmText = stringResource(R.string.market_editor_delete),
-            onConfirm = {
-                showDeleteConfirm = false
-                viewModel.deleteListing()
-            },
+            onConfirm = { viewModel.deleteListing() },
+            confirmLoading = state.isDeleting,
+            destructive = true,
             dismissText = stringResource(R.string.market_editor_zone_cancel),
+            dismissEnabled = !state.isDeleting,
         )
     }
 

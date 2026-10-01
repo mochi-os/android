@@ -316,4 +316,8 @@
     <string name="device_name_fallback">ජංගම උපාංගය</string>
     <string name="account_error_token_type">සහාය නොදක්වන ටෝකන වර්ගය</string>
     <string name="account_error_caller">අමතන්නාට අවසර නැත</string>
+    <string name="zone_sea">මුහුදේ</string>
+    <string name="access_remove">ඉවත් කරන්න</string>
+    <string name="access_remove_title">ප්‍රවේශය ඉවත් කරන්නද?</string>
+    <string name="access_remove_message">\"%1$s\" සඳහා ප්‍රවේශ නීතිය ඉවත් කරන්නද?</string>
 </resources>
